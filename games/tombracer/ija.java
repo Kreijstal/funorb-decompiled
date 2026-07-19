@@ -55,6 +55,9 @@ abstract class ija extends vg {
     }
 
     public static void a(byte param0) {
+        if (param0 <= 2) {
+            return;
+        }
         field_i = null;
     }
 
@@ -64,10 +67,6 @@ abstract class ija extends vg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Name";
     }
 }

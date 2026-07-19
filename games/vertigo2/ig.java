@@ -15,7 +15,7 @@ abstract class ig {
         var3 = Vertigo2.field_L ? 1 : 0;
         if (param0 != 9790) {
           ig.a(false, 96, 75, 14, 14, -20, -1);
-          if (q.field_y <= 0) {
+          if (-1 <= (q.field_y ^ -1)) {
             if (!ag.b(49)) {
               L0: {
                 var2 = 1;
@@ -67,7 +67,7 @@ abstract class ig {
                 }
                 return;
               } else {
-                ap.a((java.awt.Canvas) (Object) dc.field_L, -8228);
+                ap.a(dc.field_L, -8228);
                 var2 = 2;
                 if (t.field_m == null) {
                   if (!rr.field_C) {
@@ -98,7 +98,7 @@ abstract class ig {
                   return;
                 }
               } else {
-                ap.a((java.awt.Canvas) (Object) dc.field_L, -8228);
+                ap.a(dc.field_L, -8228);
                 var2 = 2;
                 if (t.field_m == null) {
                   L4: {
@@ -117,7 +117,7 @@ abstract class ig {
             }
           }
         } else {
-          if (q.field_y <= 0) {
+          if (-1 <= (q.field_y ^ -1)) {
             if (!ag.b(49)) {
               var2 = 1;
               if (t.field_m == null) {
@@ -160,7 +160,7 @@ abstract class ig {
                   return;
                 }
               } else {
-                ap.a((java.awt.Canvas) (Object) dc.field_L, -8228);
+                ap.a(dc.field_L, -8228);
                 var2 = 2;
                 if (t.field_m == null) {
                   if (!rr.field_C) {
@@ -177,7 +177,7 @@ abstract class ig {
               dc.field_L = id.a(0, 0, (byte) 94, 640, gi.field_s, 480);
               if (null != dc.field_L) {
                 L5: {
-                  ap.a((java.awt.Canvas) (Object) dc.field_L, -8228);
+                  ap.a(dc.field_L, -8228);
                   var2 = 2;
                   if (t.field_m != null) {
                     break L5;
@@ -236,8 +236,9 @@ abstract class ig {
     abstract java.net.Socket b(int param0) throws IOException;
 
     final static bk a(String param0, boolean param1) {
+        bk discarded$2 = null;
         RuntimeException var2 = null;
-        Object var3 = null;
+        String var3 = null;
         bk stackIn_6_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -262,8 +263,8 @@ abstract class ig {
               if (!param1) {
                 break L1;
               } else {
-                var3 = null;
-                bk discarded$2 = ig.a((String) null, true);
+                var3 = (String) null;
+                discarded$2 = ig.a((String) null, true);
                 break L1;
               }
             }
@@ -271,7 +272,7 @@ abstract class ig {
               if (!cl.field_c.a((byte) -82)) {
                 break L2;
               } else {
-                if (param0.equals((Object) (Object) cl.field_c.d((byte) 105))) {
+                if (param0.equals(cl.field_c.d((byte) 105))) {
                   break L2;
                 } else {
                   cl.field_c = qc.a(0, param0);
@@ -287,23 +288,23 @@ abstract class ig {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_0 = (RuntimeException) (var2);
             stackOut_7_1 = new StringBuilder().append("ig.F(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -311,7 +312,7 @@ abstract class ig {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
         }
         return stackIn_6_0;
     }
@@ -319,17 +320,13 @@ abstract class ig {
     final java.net.Socket a(byte param0) throws IOException {
         if (param0 != -39) {
           ig.a(29);
-          return new java.net.Socket(((ig) this).field_a, ((ig) this).field_b);
+          return new java.net.Socket(this.field_a, this.field_b);
         } else {
-          return new java.net.Socket(((ig) this).field_a, ((ig) this).field_b);
+          return new java.net.Socket(this.field_a, this.field_b);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Encouraging rule breaking";
     }
 }

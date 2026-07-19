@@ -13,33 +13,55 @@ final class aj {
         if (param0 > -108) {
             return 89;
         }
-        return 1 + ((aj) this).field_b;
+        return 1 + this.field_b;
     }
 
     final void b(int param0, int param1) {
-        this.a(param0 + -2, param1, ((aj) this).field_b + param0);
+        this.a(param0 + -2, param1, this.field_b + param0);
     }
 
     private final int a(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = Bounce.field_N;
-        var3 = ((aj) this).field_d.length;
-        L0: while (true) {
-          if (param0 < var3) {
-            return var3;
-          } else {
-            if (((aj) this).field_c) {
-              if (var3 == 0) {
-                var3 = 1;
-                continue L0;
+        var3 = this.field_d.length;
+        if (param1 >= 66) {
+          L0: while (true) {
+            if (param0 < var3) {
+              return var3;
+            } else {
+              if (this.field_c) {
+                if (var3 == 0) {
+                  var3 = 1;
+                  continue L0;
+                } else {
+                  var3 = var3 * this.field_a;
+                  continue L0;
+                }
               } else {
-                var3 = var3 * ((aj) this).field_a;
+                var3 = var3 + this.field_a;
                 continue L0;
               }
+            }
+          }
+        } else {
+          this.field_b = -94;
+          L1: while (true) {
+            if (param0 < var3) {
+              return var3;
             } else {
-              var3 = var3 + ((aj) this).field_a;
-              continue L0;
+              if (this.field_c) {
+                if (var3 == 0) {
+                  var3 = 1;
+                  continue L1;
+                } else {
+                  var3 = var3 * this.field_a;
+                  continue L1;
+                }
+              } else {
+                var3 = var3 + this.field_a;
+                continue L1;
+              }
             }
           }
         }
@@ -47,18 +69,18 @@ final class aj {
 
     final int a(byte param0, int param1) {
         int var3 = 0;
-        if (param1 > ((aj) this).field_b) {
+        if (param1 > this.field_b) {
           throw new ArrayIndexOutOfBoundsException(param1);
         } else {
           var3 = 66 % ((param0 - 60) / 41);
-          return ((aj) this).field_d[param1];
+          return this.field_d[param1];
         }
     }
 
     private final void a(int param0, int param1, int param2) {
         L0: {
-          if (param2 > ((aj) this).field_b) {
-            ((aj) this).field_b = param2;
+          if (param2 > this.field_b) {
+            this.field_b = param2;
             break L0;
           } else {
             break L0;
@@ -66,26 +88,26 @@ final class aj {
         }
         if (param0 != -1) {
           L1: {
-            ((aj) this).field_b = -4;
-            if (((aj) this).field_d.length <= param2) {
+            this.field_b = -4;
+            if (this.field_d.length <= param2) {
               this.b(param2, true);
               break L1;
             } else {
               break L1;
             }
           }
-          ((aj) this).field_d[param2] = param1;
+          this.field_d[param2] = param1;
           return;
         } else {
           L2: {
-            if (((aj) this).field_d.length <= param2) {
+            if (this.field_d.length <= param2) {
               this.b(param2, true);
               break L2;
             } else {
               break L2;
             }
           }
-          ((aj) this).field_d[param2] = param1;
+          this.field_d[param2] = param1;
           return;
         }
     }
@@ -100,30 +122,37 @@ final class aj {
     }
 
     private final void b(int param0, boolean param1) {
-        int[] var4 = new int[this.a(param0, 88)];
-        int[] var3 = var4;
-        cb.a(((aj) this).field_d, 0, var4, 0, ((aj) this).field_d.length);
-        ((aj) this).field_d = var4;
+        int[] var3 = null;
+        int[] var4 = null;
+        if (!param1) {
+          return;
+        } else {
+          var4 = new int[this.a(param0, 88)];
+          var3 = var4;
+          cb.a(this.field_d, 0, var4, 0, this.field_d.length);
+          this.field_d = var4;
+          return;
+        }
     }
 
     final void a(int param0, boolean param1) {
-        if (param0 >= 0) {
-          if (param0 <= ((aj) this).field_b) {
-            if (param0 == ((aj) this).field_b) {
-              ((aj) this).field_b = ((aj) this).field_b - 1;
+        if ((param0 ^ -1) <= -1) {
+          if (param0 <= this.field_b) {
+            if (param0 == this.field_b) {
+              this.field_b = this.field_b - 1;
               if (param1) {
                 return;
               } else {
-                field_e = null;
+                field_e = (String[]) null;
                 return;
               }
             } else {
-              cb.a(((aj) this).field_d, param0 + 1, ((aj) this).field_d, param0, ((aj) this).field_b - param0);
-              ((aj) this).field_b = ((aj) this).field_b - 1;
+              cb.a(this.field_d, param0 + 1, this.field_d, param0, this.field_b - param0);
+              this.field_b = this.field_b - 1;
               if (param1) {
                 return;
               } else {
-                field_e = null;
+                field_e = (String[]) null;
                 return;
               }
             }
@@ -140,10 +169,6 @@ final class aj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
     }
 }

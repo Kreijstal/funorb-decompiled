@@ -15,28 +15,35 @@ final class ek {
         try {
           L0: {
             var1_int = fb.field_b[0];
-            var2 = 1;
+            var2 = param0;
             L1: while (true) {
               if (var2 >= fb.field_b.length) {
                 break L0;
               } else {
                 var3 = fb.field_b[var2];
-                fk.a(he.field_a, var2 << 4, he.field_a, var1_int, var3);
+                fk.a(he.field_a, var2 << -1789013244, he.field_a, var1_int, var3);
                 var1_int = var1_int + var3;
                 var2++;
-                continue L1;
+                if (var4 == 0) {
+                  continue L1;
+                } else {
+                  return;
+                }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var1, "ek.A(" + 1 + ')');
+          throw fc.a((Throwable) ((Object) var1), "ek.A(" + param0 + ')');
         }
     }
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 < 41) {
+            field_a = (String) null;
+        }
     }
 
     static {

@@ -71,9 +71,9 @@ public class ui {
     }
 
     public static File a(String param0, byte param1) {
-        Object var3 = null;
+        String var3 = null;
         if (param1 != -83) {
-          var3 = null;
+          var3 = (String) null;
           ui.a((byte) -20, -119, (String) null);
           return ui.a((byte) -47, field_d, param0, field_b);
         } else {
@@ -82,10 +82,6 @@ public class ui {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = false;
         field_c = new Hashtable(16);
     }

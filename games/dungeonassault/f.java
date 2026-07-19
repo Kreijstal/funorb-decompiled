@@ -14,7 +14,7 @@ final class f {
         field_e = null;
         field_b = null;
         if (!param0) {
-          field_b = null;
+          field_b = (String) null;
           field_a = null;
           field_c = null;
           return;
@@ -26,35 +26,107 @@ final class f {
     }
 
     final static boolean a(byte param0) {
-        return !im.field_b.b(36);
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        if (param0 >= -19) {
+          L0: {
+            field_c = (String) null;
+            if (im.field_b.b(36)) {
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = 1;
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+          return stackIn_8_0 != 0;
+        } else {
+          L1: {
+            if (im.field_b.b(36)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
+        }
     }
 
     final static int a(int param0, int param1, int param2) {
         if (null == nl.field_g) {
           return -1;
         } else {
-          if (wk.field_h <= param0) {
-            if (param0 < wk.field_h + nl.field_g.field_y) {
-              if (param1 < fo.field_b) {
-                if (param0 >= rm.field_T) {
-                  if (param0 < nl.field_g.field_y + rm.field_T) {
-                    if (param1 >= mi.field_f) {
-                      if (nl.field_g.field_v + mi.field_f <= param1) {
-                        return -1;
+          if (param2 == 1) {
+            L0: {
+              if (wk.field_h > param0) {
+                break L0;
+              } else {
+                if (param0 >= wk.field_h + nl.field_g.field_y) {
+                  break L0;
+                } else {
+                  if (param1 < fo.field_b) {
+                    break L0;
+                  } else {
+                    if (fo.field_b + nl.field_g.field_v <= param1) {
+                      if (param0 >= rm.field_T) {
+                        if (param0 < nl.field_g.field_y + rm.field_T) {
+                          if (param1 >= mi.field_f) {
+                            if (nl.field_g.field_v + mi.field_f <= param1) {
+                              return -1;
+                            } else {
+                              return 1;
+                            }
+                          } else {
+                            return -1;
+                          }
+                        } else {
+                          return -1;
+                        }
                       } else {
-                        return 1;
+                        return -1;
                       }
                     } else {
-                      return -1;
+                      return 0;
                     }
-                  } else {
-                    return -1;
                   }
-                } else {
-                  return -1;
                 }
+              }
+            }
+            L1: {
+              if (param0 < rm.field_T) {
+                break L1;
               } else {
-                if (fo.field_b + nl.field_g.field_v <= param1) {
+                if (param0 >= nl.field_g.field_y + rm.field_T) {
+                  break L1;
+                } else {
+                  if (param1 < mi.field_f) {
+                    break L1;
+                  } else {
+                    if (nl.field_g.field_v + mi.field_f <= param1) {
+                      break L1;
+                    } else {
+                      return 1;
+                    }
+                  }
+                }
+              }
+            }
+            return -1;
+          } else {
+            field_f = (cn) null;
+            if (wk.field_h <= param0) {
+              if (param0 < wk.field_h + nl.field_g.field_y) {
+                if (param1 < fo.field_b) {
                   if (param0 >= rm.field_T) {
                     if (param0 < nl.field_g.field_y + rm.field_T) {
                       if (param1 >= mi.field_f) {
@@ -73,17 +145,55 @@ final class f {
                     return -1;
                   }
                 } else {
-                  return 0;
+                  if (fo.field_b + nl.field_g.field_v <= param1) {
+                    if (param0 >= rm.field_T) {
+                      if (param0 < nl.field_g.field_y + rm.field_T) {
+                        if (param1 >= mi.field_f) {
+                          if (nl.field_g.field_v + mi.field_f <= param1) {
+                            return -1;
+                          } else {
+                            return 1;
+                          }
+                        } else {
+                          return -1;
+                        }
+                      } else {
+                        return -1;
+                      }
+                    } else {
+                      return -1;
+                    }
+                  } else {
+                    return 0;
+                  }
+                }
+              } else {
+                if (param0 >= rm.field_T) {
+                  if (param0 < nl.field_g.field_y + rm.field_T) {
+                    if (param1 >= mi.field_f) {
+                      if (nl.field_g.field_v + mi.field_f > param1) {
+                        return 1;
+                      } else {
+                        return -1;
+                      }
+                    } else {
+                      return -1;
+                    }
+                  } else {
+                    return -1;
+                  }
+                } else {
+                  return -1;
                 }
               }
             } else {
               if (param0 >= rm.field_T) {
                 if (param0 < nl.field_g.field_y + rm.field_T) {
                   if (param1 >= mi.field_f) {
-                    if (nl.field_g.field_v + mi.field_f > param1) {
-                      return 1;
-                    } else {
+                    if (nl.field_g.field_v + mi.field_f <= param1) {
                       return -1;
+                    } else {
+                      return 1;
                     }
                   } else {
                     return -1;
@@ -94,24 +204,6 @@ final class f {
               } else {
                 return -1;
               }
-            }
-          } else {
-            if (param0 >= rm.field_T) {
-              if (param0 < nl.field_g.field_y + rm.field_T) {
-                if (param1 >= mi.field_f) {
-                  if (nl.field_g.field_v + mi.field_f <= param1) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  return -1;
-                }
-              } else {
-                return -1;
-              }
-            } else {
-              return -1;
             }
           }
         }
@@ -126,14 +218,14 @@ final class f {
         var4 = DungeonAssault.field_K;
         try {
           L0: {
-            var2_int = 12;
-            var3 = (jd) (Object) ta.field_f.e(-24172);
+            var2_int = -12 / ((param1 - -9) / 36);
+            var3 = (jd) ((Object) ta.field_f.e(-24172));
             L1: while (true) {
               if (var3 == null) {
                 break L0;
               } else {
-                o.a(2, 62, var3);
-                var3 = (jd) (Object) ta.field_f.a(4);
+                o.a(param0, 62, var3);
+                var3 = (jd) ((Object) ta.field_f.a(4));
                 continue L1;
               }
             }
@@ -141,15 +233,11 @@ final class f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var2, "f.C(" + 2 + ',' + -50 + ')');
+          throw vk.a((Throwable) ((Object) var2), "f.C(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "<%0>: <col=<%1>><%2></col>";
         field_c = "DUNGEON BUILDER";
         field_e = "A large, snarling wolf; it's grey fur is matted with blood.<br><br>If this monster detects a raider, its howl will alert monsters in adjacent rooms, increasing their <%detect> by 2.";

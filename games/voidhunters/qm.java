@@ -4,12 +4,13 @@
 final class qm extends rqa {
     final static mab a(byte param0, java.awt.Component param1, int param2, int param3) {
         try {
+            mab discarded$2 = null;
             Class var4 = null;
             Throwable var4_ref = null;
             RuntimeException var4_ref2 = null;
             mab var5 = null;
             sib var5_ref = null;
-            Object var6 = null;
+            java.awt.Component var6 = null;
             mab stackIn_3_0 = null;
             sib stackIn_5_0 = null;
             RuntimeException stackIn_7_0 = null;
@@ -31,61 +32,67 @@ final class qm extends rqa {
             StringBuilder stackOut_7_1 = null;
             String stackOut_7_2 = null;
             try {
-              try {
-                L0: {
-                  var4 = Class.forName("on");
-                  if (param0 == 3) {
-                    break L0;
-                  } else {
-                    var6 = null;
-                    mab discarded$2 = qm.a((byte) 35, (java.awt.Component) null, -53, 89);
-                    break L0;
+              L0: {
+                try {
+                  L1: {
+                    L2: {
+                      var4 = Class.forName("on");
+                      if (param0 == 3) {
+                        break L2;
+                      } else {
+                        var6 = (java.awt.Component) null;
+                        discarded$2 = qm.a((byte) 35, (java.awt.Component) null, -53, 89);
+                        break L2;
+                      }
+                    }
+                    var5 = (mab) (var4.newInstance());
+                    var5.a(param3, param2, param1, (byte) 61);
+                    stackOut_2_0 = (mab) (var5);
+                    stackIn_3_0 = stackOut_2_0;
+                    break L1;
                   }
+                } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var4_ref = decompiledCaughtException;
+                  var5_ref = new sib();
+                  ((mab) ((Object) var5_ref)).a(param3, param2, param1, (byte) 67);
+                  stackOut_4_0 = (sib) (var5_ref);
+                  stackIn_5_0 = stackOut_4_0;
+                  return (mab) ((Object) stackIn_5_0);
                 }
-                var5 = (mab) var4.newInstance();
-                var5.a(param3, param2, param1, (byte) 61);
-                stackOut_2_0 = (mab) var5;
-                stackIn_3_0 = stackOut_2_0;
-                return stackIn_3_0;
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var4_ref = decompiledCaughtException;
-                var5_ref = new sib();
-                ((mab) (Object) var5_ref).a(param3, param2, param1, (byte) 67);
-                stackOut_4_0 = (sib) var5_ref;
-                stackIn_5_0 = stackOut_4_0;
-                return (mab) (Object) stackIn_5_0;
+                break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L1: {
+              L3: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var4_ref2;
+                stackOut_6_0 = (RuntimeException) (var4_ref2);
                 stackOut_6_1 = new StringBuilder().append("qm.B(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
-                  break L1;
+                  break L3;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
                   stackIn_9_2 = stackOut_7_2;
-                  break L1;
+                  break L3;
                 }
               }
-              throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ',' + param3 + ')');
+              throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ',' + param3 + ')');
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -99,7 +106,7 @@ final class qm extends rqa {
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -108,9 +115,10 @@ final class qm extends rqa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         nc stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        nc stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -123,36 +131,38 @@ final class qm extends rqa {
           L0: {
             si.a(44, 62, param0[0].a(99));
             if (param1 < -119) {
-              stackOut_3_0 = new nc((Object) (Object) "void");
+              stackOut_3_0 = new nc("void");
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (nc) null;
               stackIn_2_0 = stackOut_1_0;
-              return (nc) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("qm.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -160,9 +170,13 @@ final class qm extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     static {

@@ -11,7 +11,7 @@ class bia extends bw {
     }
 
     public static void a(int param0) {
-        int var1 = 10;
+        int var1 = 10 / ((param0 - -27) / 54);
         field_i = null;
         field_h = null;
         field_g = null;
@@ -22,7 +22,7 @@ class bia extends bw {
         pf var4 = null;
         int var5 = 0;
         if (param0 < 23) {
-          field_h = null;
+          field_h = (kv[]) null;
           var4 = sja.field_fb;
           var4.c(param2, (byte) 116);
           var4.field_g = var4.field_g + 1;
@@ -44,10 +44,6 @@ class bia extends bw {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new ws();
         field_f = new boolean[]{true, true, false, false, false, false, false, false, true, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, true, false, true, false, false, false, false, true, true, false, true, true, false};
     }

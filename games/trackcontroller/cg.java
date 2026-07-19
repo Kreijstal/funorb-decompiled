@@ -14,14 +14,15 @@ final class cg {
         field_d = null;
         field_f = null;
         field_e = null;
+        if (param0 < 55) {
+            field_e = (String) null;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "cg.A(";
         field_d = "Unpacking graphics";
         field_e = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";

@@ -39,38 +39,38 @@ final class cq extends am {
               if (param1 == 35) {
                 break L1;
               } else {
-                ((cq) this).field_x = -23;
+                this.field_x = -23;
                 break L1;
               }
             }
             L2: {
               var5 = param2;
-              if (var5 == 0) {
-                ((cq) this).field_s = param0.i(7088);
+              if (-1 == (var5 ^ -1)) {
+                this.field_s = param0.i(7088);
                 break L2;
               } else {
                 if (var5 != 1) {
                   if (2 == var5) {
-                    ((cq) this).field_t = param0.i(7088);
+                    this.field_t = param0.i(7088);
                     break L2;
                   } else {
-                    if (var5 != 3) {
+                    if (-4 != (var5 ^ -1)) {
                       if (var5 == 4) {
                         var4_int = param0.e((byte) 62);
-                        ((cq) this).field_z[0] = ie.a(var4_int << 4, 267386880);
-                        ((cq) this).field_z[1] = ie.a(4080, var4_int >> 4);
-                        ((cq) this).field_z[2] = ie.a(255, var4_int) >> 12;
+                        this.field_z[0] = ie.a(var4_int << -1608898396, 267386880);
+                        this.field_z[1] = ie.a(4080, var4_int >> 734328804);
+                        this.field_z[2] = ie.a(255, var4_int) >> -698708980;
                         break L2;
                       } else {
                         break L2;
                       }
                     } else {
-                      ((cq) this).field_v = param0.i(7088);
+                      this.field_v = param0.i(7088);
                       break L2;
                     }
                   }
                 } else {
-                  ((cq) this).field_x = param0.i(7088);
+                  this.field_x = param0.i(7088);
                   break L2;
                 }
               }
@@ -81,23 +81,23 @@ final class cq extends am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var4;
+            stackOut_17_0 = (RuntimeException) (var4);
             stackOut_17_1 = new StringBuilder().append("cq.H(");
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L3;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -105,7 +105,7 @@ final class cq extends am {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class cq extends am {
             java.net.URL var2 = null;
             Exception var2_ref = null;
             RuntimeException var2_ref2 = null;
-            Object var3 = null;
+            java.applet.Applet var3 = null;
             RuntimeException stackIn_6_0 = null;
             StringBuilder stackIn_6_1 = null;
             RuntimeException stackIn_7_0 = null;
@@ -149,7 +149,7 @@ final class cq extends am {
                       if (param0) {
                         break L2;
                       } else {
-                        var3 = null;
+                        var3 = (java.applet.Applet) null;
                         cq.a(false, (java.applet.Applet) null);
                         break L2;
                       }
@@ -170,23 +170,23 @@ final class cq extends am {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_5_0 = (RuntimeException) var2_ref2;
+                stackOut_5_0 = (RuntimeException) (var2_ref2);
                 stackOut_5_1 = new StringBuilder().append("cq.C(").append(param0).append(',');
                 stackIn_7_0 = stackOut_5_0;
                 stackIn_7_1 = stackOut_5_1;
                 stackIn_6_0 = stackOut_5_0;
                 stackIn_6_1 = stackOut_5_1;
                 if (param1 == null) {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "null";
                   stackIn_8_0 = stackOut_7_0;
                   stackIn_8_1 = stackOut_7_1;
                   stackIn_8_2 = stackOut_7_2;
                   break L4;
                 } else {
-                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+                  stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
                   stackOut_6_2 = "{...}";
                   stackIn_8_0 = stackOut_6_0;
                   stackIn_8_1 = stackOut_6_1;
@@ -194,7 +194,7 @@ final class cq extends am {
                   break L4;
                 }
               }
-              throw rb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+              throw rb.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -223,52 +223,36 @@ final class cq extends am {
         int[] var29 = null;
         int[] var32 = null;
         int[] var33 = null;
-        int[][] var35 = null;
-        int[] var37 = null;
+        int[][] var38 = null;
+        int[] var39 = null;
         int[] var40 = null;
         int[] var41 = null;
-        int[][] var42 = null;
-        int[][] var43 = null;
-        int[] var44 = null;
-        int[] var45 = null;
-        int[] var46 = null;
-        int[] var47 = null;
-        int[] var48 = null;
-        int[] var49 = null;
         L0: {
           var16 = Torquing.field_u;
           if (param0 == -29116) {
             break L0;
           } else {
-            field_w = null;
+            field_w = (t) null;
             break L0;
           }
         }
         L1: {
-          var43 = ((cq) this).field_r.a(15142, param1);
-          var35 = var43;
-          var27 = var35;
+          var27 = this.field_r.a(15142, param1);
           var19 = var27;
           var17 = var19;
           var3 = var17;
-          if (((cq) this).field_r.field_b) {
-            var42 = ((cq) this).c(24066, param1, 0);
-            var44 = var42[0];
-            var46 = var42[1];
-            var47 = var42[2];
-            var45 = var43[0];
-            var37 = var45;
-            var29 = var37;
+          if (this.field_r.field_b) {
+            var38 = this.c(24066, param1, 0);
+            var39 = var38[0];
+            var40 = var38[1];
+            var41 = var38[2];
+            var29 = var27[0];
             var21 = var29;
             var8 = var21;
-            var48 = var43[1];
-            var40 = var48;
-            var32 = var40;
+            var32 = var27[1];
             var24 = var32;
             var9 = var24;
-            var49 = var43[2];
-            var41 = var49;
-            var33 = var41;
+            var33 = var27[2];
             var25 = var33;
             var10 = var25;
             var11 = 0;
@@ -277,8 +261,8 @@ final class cq extends am {
                 break L1;
               } else {
                 L3: {
-                  var13 = var44[var11];
-                  var12 = var13 + -((cq) this).field_z[0];
+                  var13 = var39[var11];
+                  var12 = var13 + -this.field_z[0];
                   if (0 <= var12) {
                     break L3;
                   } else {
@@ -286,22 +270,22 @@ final class cq extends am {
                     break L3;
                   }
                 }
-                if (((cq) this).field_s < var12) {
-                  var45 = var43[0];
-                  var46 = var42[1];
-                  var48 = var43[1];
-                  var45[var11] = var13;
-                  var9[var11] = var46[var11];
-                  var10[var11] = var47[var11];
+                if (this.field_s < var12) {
+                  var29 = var27[0];
+                  var32 = var27[1];
+                  var40 = var38[1];
+                  var29[var11] = var13;
+                  var9[var11] = var40[var11];
+                  var10[var11] = var41[var11];
                   var11++;
                   continue L2;
                 } else {
                   L4: {
-                    var45 = var43[0];
-                    var46 = var42[1];
-                    var48 = var43[1];
-                    var14 = var46[var11];
-                    var12 = var14 - ((cq) this).field_z[1];
+                    var29 = var27[0];
+                    var32 = var27[1];
+                    var40 = var38[1];
+                    var14 = var40[var11];
+                    var12 = var14 - this.field_z[1];
                     if (var12 < 0) {
                       var12 = -var12;
                       break L4;
@@ -309,34 +293,34 @@ final class cq extends am {
                       break L4;
                     }
                   }
-                  if (((cq) this).field_s >= var12) {
+                  if (this.field_s >= var12) {
                     L5: {
-                      var15 = var47[var11];
-                      var12 = -((cq) this).field_z[2] + var15;
-                      if (var12 >= 0) {
+                      var15 = var41[var11];
+                      var12 = -this.field_z[2] + var15;
+                      if (-1 >= (var12 ^ -1)) {
                         break L5;
                       } else {
                         var12 = -var12;
                         break L5;
                       }
                     }
-                    if (((cq) this).field_s >= var12) {
-                      var8[var11] = ((cq) this).field_v * var13 >> 12;
-                      var9[var11] = var14 * ((cq) this).field_t >> 12;
-                      var10[var11] = ((cq) this).field_x * var15 >> 12;
+                    if (this.field_s >= var12) {
+                      var8[var11] = this.field_v * var13 >> -537926708;
+                      var9[var11] = var14 * this.field_t >> -1339901236;
+                      var10[var11] = this.field_x * var15 >> 1015642764;
                       var11++;
                       continue L2;
                     } else {
-                      var45[var11] = var13;
-                      var48[var11] = var14;
-                      var49[var11] = var15;
+                      var29[var11] = var13;
+                      var32[var11] = var14;
+                      var33[var11] = var15;
                       var11++;
                       continue L2;
                     }
                   } else {
-                    var45[var11] = var13;
-                    var48[var11] = var14;
-                    var10[var11] = var47[var11];
+                    var29[var11] = var13;
+                    var32[var11] = var14;
+                    var10[var11] = var41[var11];
                     var11++;
                     continue L2;
                   }
@@ -354,41 +338,56 @@ final class cq extends am {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_7_0 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_8_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_2_0 = 0;
         var4 = Torquing.field_u;
         try {
           L0: {
-            var3_int = 0;
-            L1: while (true) {
-              if (param1 <= 0) {
-                stackOut_6_0 = var3_int;
-                stackIn_7_0 = stackOut_6_0;
-                break L0;
-              } else {
-                var3_int = 1 & param0 | var3_int << 1;
-                param0 = param0 >>> 1;
-                param1--;
-                continue L1;
+            if (param2 > 119) {
+              var3_int = 0;
+              L1: while (true) {
+                if (param1 <= 0) {
+                  stackOut_7_0 = var3_int;
+                  stackIn_8_0 = stackOut_7_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  var3_int = 1 & param0 | var3_int << -526281919;
+                  param0 = param0 >>> 1;
+                  param1--;
+                  continue L1;
+                }
               }
+            } else {
+              stackOut_2_0 = -88;
+              stackIn_3_0 = stackOut_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var3, "cq.D(" + param0 + ',' + param1 + ',' + 125 + ')');
+          throw rb.a((Throwable) ((Object) var3), "cq.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_7_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_8_0;
+        }
     }
 
     public cq() {
         super(1, false);
-        ((cq) this).field_s = 409;
-        ((cq) this).field_x = 4096;
-        ((cq) this).field_z = new int[3];
-        ((cq) this).field_v = 4096;
-        ((cq) this).field_t = 4096;
+        this.field_s = 409;
+        this.field_x = 4096;
+        this.field_z = new int[3];
+        this.field_v = 4096;
+        this.field_t = 4096;
     }
 
     static {

@@ -14,7 +14,7 @@ final class oe {
     private static String field_z;
 
     public static void a(int param0) {
-        field_g = null;
+        field_g = (int[][]) null;
         field_h = null;
         field_b = null;
         field_d = null;
@@ -26,10 +26,6 @@ final class oe {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "oe.A(";
         field_b = "Game options changed (<%0>)";
         field_a = 0L;

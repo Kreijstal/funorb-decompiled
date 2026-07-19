@@ -34,7 +34,7 @@ final class lk extends km {
         if (param0 != 0) {
           L0: {
             lk.e((byte) -9);
-            if (((lk) this).a(1)) {
+            if (this.a(1)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -47,7 +47,7 @@ final class lk extends km {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((lk) this).a(1)) {
+            if (this.a(1)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -63,16 +63,17 @@ final class lk extends km {
 
     final void a(String param0, String param1, int param2) {
         CharSequence var5 = null;
+        String discarded$0 = null;
         try {
-            ((lk) this).field_Eb = param0;
+            this.field_Eb = param0;
             if (param2 != 0) {
-                ((lk) this).field_Nb = null;
+                this.field_Nb = (String) null;
             }
-            ((lk) this).field_Nb = param1;
-            var5 = (CharSequence) (Object) ((lk) this).field_Nb;
-            String discarded$0 = c.a(var5, true);
+            this.field_Nb = param1;
+            var5 = (CharSequence) ((Object) this.field_Nb);
+            discarded$0 = c.a(var5, true);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "lk.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "lk.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -94,6 +95,7 @@ final class lk extends km {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -117,10 +119,10 @@ final class lk extends km {
         String stackOut_21_2 = null;
         try {
           L0: {
-            if (((lk) this).field_Sb == param1.field_Sb) {
+            if (this.field_Sb == param1.field_Sb) {
               if (param0 >= 1) {
                 L1: {
-                  if (((lk) this).field_Xb) {
+                  if (this.field_Xb) {
                     stackOut_8_0 = 0;
                     stackIn_9_0 = stackOut_8_0;
                     break L1;
@@ -149,12 +151,13 @@ final class lk extends km {
                   }
                 }
                 if (stackIn_12_0 != stackIn_12_1) {
-                  stackOut_14_0 = ((lk) this).field_Xb;
+                  stackOut_14_0 = this.field_Xb;
                   stackIn_15_0 = stackOut_14_0;
-                  return stackIn_15_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   L3: {
-                    if (~param1.field_Ib >= ~((lk) this).field_Ib) {
+                    if ((param1.field_Ib ^ -1L) >= (this.field_Ib ^ -1L)) {
                       stackOut_18_0 = 0;
                       stackIn_19_0 = stackOut_18_0;
                       break L3;
@@ -164,40 +167,43 @@ final class lk extends km {
                       break L3;
                     }
                   }
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 }
               } else {
                 stackOut_4_0 = 1;
                 stackIn_5_0 = stackOut_4_0;
-                return stackIn_5_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
-              stackOut_1_0 = ((lk) this).field_Sb;
+              stackOut_1_0 = this.field_Sb;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var3;
+            stackOut_20_0 = (RuntimeException) (var3);
             stackOut_20_1 = new StringBuilder().append("lk.A(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L4;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -205,9 +211,21 @@ final class lk extends km {
               break L4;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
         }
-        return stackIn_19_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_5_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_15_0;
+            } else {
+              return stackIn_19_0 != 0;
+            }
+          }
+        }
     }
 
     public static void e(byte param0) {
@@ -222,14 +240,15 @@ final class lk extends km {
     lk(String param0, String param1, long param2) {
         super(0L, (km) null);
         CharSequence var6 = null;
+        String discarded$0 = null;
         try {
-            ((lk) this).field_Ob = param2;
-            ((lk) this).field_Nb = param0;
-            ((lk) this).field_Eb = param1;
-            var6 = (CharSequence) (Object) ((lk) this).field_Nb;
-            String discarded$0 = c.a(var6, true);
+            this.field_Ob = param2;
+            this.field_Nb = param0;
+            this.field_Eb = param1;
+            var6 = (CharSequence) ((Object) this.field_Nb);
+            discarded$0 = c.a(var6, true);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

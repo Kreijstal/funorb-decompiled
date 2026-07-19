@@ -11,19 +11,18 @@ final class ur {
     }
 
     ur(int param0) {
-        ((ur) this).field_c = param0;
+        this.field_c = param0;
     }
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != -17614) {
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Mute this player for 48 hours";
     }
 }

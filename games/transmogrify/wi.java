@@ -21,8 +21,9 @@ final class wi implements ui {
     private int field_h;
 
     final static int b(int param0) {
+        int discarded$0 = 0;
         if (param0 >= -5) {
-            int discarded$0 = wi.b(35);
+            discarded$0 = wi.b(35);
             return (int)(1000000000L / fg.field_j);
         }
         return (int)(1000000000L / fg.field_j);
@@ -31,10 +32,11 @@ final class wi implements ui {
     public static void a(int param0) {
         field_d = null;
         field_e = null;
-        int var1 = 0;
+        int var1 = -57 % ((param0 - 3) / 47);
     }
 
     public final void a(int param0, int param1, boolean param2, byte param3, qg param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -66,16 +68,16 @@ final class wi implements ui {
             L1: {
               if (!(param4 instanceof bf)) {
                 stackOut_2_0 = null;
-                stackIn_3_0 = (qg) (Object) stackOut_2_0;
+                stackIn_3_0 = (qg) ((Object) stackOut_2_0);
                 break L1;
               } else {
-                stackOut_1_0 = (qg) param4;
+                stackOut_1_0 = (qg) (param4);
                 stackIn_3_0 = stackOut_1_0;
                 break L1;
               }
             }
             L2: {
-              var12 = (bf) (Object) stackIn_3_0;
+              var12 = (bf) ((Object) stackIn_3_0);
               if (var12 != null) {
                 param2 = param2 & var12.field_t;
                 break L2;
@@ -93,23 +95,23 @@ final class wi implements ui {
               }
             }
             L4: {
-              sb.a(param4.field_p + param0, param4.field_n + param1, param4.field_l, param4.field_h, ((wi) this).field_k);
-              var8 = param0 - (-param4.field_p + -((wi) this).field_b);
-              var9 = param4.field_n + param1 + ((wi) this).field_g;
-              sb.c(var8, var9, ((wi) this).field_n, ((wi) this).field_c, 5592405);
-              sb.a(var8, var9, ((wi) this).field_n, ((wi) this).field_c, var7);
+              sb.a(param4.field_p + param0, param4.field_n + param1, param4.field_l, param4.field_h, this.field_k);
+              var8 = param0 - (-param4.field_p + -this.field_b);
+              var9 = param4.field_n + param1 + this.field_g;
+              sb.c(var8, var9, this.field_n, this.field_c, 5592405);
+              sb.a(var8, var9, this.field_n, this.field_c, var7);
               if (!var12.field_y) {
                 break L4;
               } else {
-                sb.e(var8, var9, var8 - -((wi) this).field_n, ((wi) this).field_c + var9, 1);
-                sb.e(var8 - -((wi) this).field_n, var9, var8, var9 + ((wi) this).field_c, 1);
+                sb.e(var8, var9, var8 - -this.field_n, this.field_c + var9, 1);
+                sb.e(var8 - -this.field_n, var9, var8, var9 + this.field_c, 1);
                 break L4;
               }
             }
             var10 = -41 % ((51 - param3) / 47);
-            if (null != ((wi) this).field_i) {
-              var11 = ((wi) this).field_a + (((wi) this).field_n - -((wi) this).field_b);
-              int discarded$1 = ((wi) this).field_i.a(param4.field_k, param4.field_p + (param0 + var11), ((wi) this).field_h + param1 + param4.field_n, param4.field_l + -((wi) this).field_a + -var11, param4.field_h - (((wi) this).field_a << 1), ((wi) this).field_j, ((wi) this).field_l, ((wi) this).field_o, ((wi) this).field_m, 0);
+            if (null != this.field_i) {
+              var11 = this.field_a + (this.field_n - -this.field_b);
+              discarded$1 = this.field_i.a(param4.field_k, param4.field_p + (param0 + var11), this.field_h + param1 + param4.field_n, param4.field_l + -this.field_a + -var11, param4.field_h - (this.field_a << -1429484863), this.field_j, this.field_l, this.field_o, this.field_m, 0);
               break L0;
             } else {
               return;
@@ -119,23 +121,23 @@ final class wi implements ui {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var6;
+            stackOut_15_0 = (RuntimeException) (var6);
             stackOut_15_1 = new StringBuilder().append("wi.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param4 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -143,34 +145,30 @@ final class wi implements ui {
               break L5;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
     }
 
     wi(kg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        ((wi) this).field_o = 1;
-        ((wi) this).field_m = 1;
+        this.field_o = 1;
+        this.field_m = 1;
         try {
-            ((wi) this).field_l = param4;
-            ((wi) this).field_c = param7;
-            ((wi) this).field_n = param8;
-            ((wi) this).field_g = param6;
-            ((wi) this).field_k = param9;
-            ((wi) this).field_j = param3;
-            ((wi) this).field_h = param2;
-            ((wi) this).field_i = param0;
-            ((wi) this).field_a = param1;
-            ((wi) this).field_b = param5;
+            this.field_l = param4;
+            this.field_c = param7;
+            this.field_n = param8;
+            this.field_g = param6;
+            this.field_k = param9;
+            this.field_j = param3;
+            this.field_h = param2;
+            this.field_i = param0;
+            this.field_a = param1;
+            this.field_b = param5;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[8192];
         field_f = null;
     }

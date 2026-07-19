@@ -10,12 +10,12 @@ final class gl {
 
     final String a(int param0) {
         int var2 = 87 % ((param0 - 53) / 55);
-        return ((gl) this).field_a;
+        return this.field_a;
     }
 
     final boolean a(byte param0) {
         int var2 = -118 / ((param0 - 29) / 41);
-        return ((gl) this).field_d;
+        return this.field_d;
     }
 
     final static void a(int param0, int param1) {
@@ -31,6 +31,9 @@ final class gl {
 
     public static void a(boolean param0) {
         field_e = null;
+        if (!param0) {
+            gl.a(-75, -111);
+        }
     }
 
     gl(String param0, boolean param1) {
@@ -63,7 +66,7 @@ final class gl {
         try {
           L0: {
             L1: {
-              ((gl) this).field_a = param0;
+              this.field_a = param0;
               stackOut_1_0 = this;
               stackIn_3_0 = stackOut_1_0;
               stackIn_2_0 = stackOut_1_0;
@@ -82,18 +85,18 @@ final class gl {
               }
             }
             L2: {
-              ((gl) this).field_d = stackIn_4_1 != 0;
-              if (null != ((gl) this).field_a) {
+              ((gl) (this)).field_d = stackIn_4_1 != 0;
+              if (null != this.field_a) {
                 break L2;
               } else {
-                ((gl) this).field_a = "";
+                this.field_a = "";
                 break L2;
               }
             }
-            if (0 != ((gl) this).field_a.length()) {
+            if (0 != this.field_a.length()) {
               break L0;
             } else {
-              ((gl) this).field_d = false;
+              this.field_d = false;
               return;
             }
           }
@@ -101,23 +104,23 @@ final class gl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("gl.<init>(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -125,15 +128,11 @@ final class gl {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
     }
 }

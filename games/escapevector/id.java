@@ -17,8 +17,11 @@ final class id {
             em.d();
             kb.field_d = 0;
             fi.a(-124);
+            if (param0 < 115) {
+                id.b(109);
+            }
             var2 = var1.b();
-            for (var3 = 0; var3 < 15; var3++) {
+            for (var3 = 0; (var3 ^ -1) > -16; var3++) {
                 var2.e(-2, -2, 16777215);
                 em.d(4, 4, 0, 0, 540, 140);
             }
@@ -26,34 +29,36 @@ final class id {
             var1.g(0, 0);
             dl.a((byte) 116);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "id.D(" + 120 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "id.D(" + param0 + ')');
         }
     }
 
     final static void a(int param0, int param1) {
-        jn.field_c = 33;
-        jn.field_a = 21845;
-        jn.field_e = 133;
+        jn.field_c = 100 * param1 / 150;
+        jn.field_a = (param1 << 58191824) / 150;
+        jn.field_e = param0 * param1 / 150;
     }
 
     public static void b(int param0) {
-        field_b = null;
+        field_b = (byte[][]) null;
+        if (param0 != -17129) {
+            return;
+        }
         field_a = null;
     }
 
     final static int a(int param0) {
         ak var1 = rc.field_a;
-        if (aj.b(-126)) {
+        if (param0 != 0) {
+            field_b = (byte[][]) null;
+        }
+        if (aj.b(param0 ^ -126)) {
             return var1.a(1, 0);
         }
         return var1.a(1, 0);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new byte[50][];
     }
 }

@@ -8,18 +8,19 @@ final class oca extends rna implements ntb {
         try {
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "oca.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "oca.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void b(byte param0, tv param1) {
+        String discarded$0 = null;
         try {
             if (param0 <= 54) {
-                String discarded$0 = ((oca) this).a(-78);
+                discarded$0 = this.a(-78);
             }
             super.b((byte) 63, param1);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "oca.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "oca.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -46,7 +47,7 @@ final class oca extends rna implements ntb {
         try {
           L0: {
             if (param1 != 26964) {
-              field_a = null;
+              field_a = (dpb) null;
               stackOut_2_0 = null;
               stackIn_3_0 = stackOut_2_0;
               break L0;
@@ -58,23 +59,23 @@ final class oca extends rna implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("oca.I(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -82,9 +83,9 @@ final class oca extends rna implements ntb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return (ucb) (Object) stackIn_3_0;
+        return (ucb) ((Object) stackIn_3_0);
     }
 
     public static void b(int param0) {
@@ -124,23 +125,23 @@ final class oca extends rna implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_0 = (RuntimeException) (var3);
             stackOut_2_1 = new StringBuilder().append("oca.C(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -148,7 +149,7 @@ final class oca extends rna implements ntb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -160,36 +161,36 @@ final class oca extends rna implements ntb {
             }
             super.b(param0, -110);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "oca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "oca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void a(tv param0, int param1) {
         try {
             if (param1 >= -19) {
-                field_a = null;
+                field_a = (dpb) null;
             }
             super.a(param0, -68);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "oca.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "oca.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(int param0, int[] param1, rsb param2) {
         try {
             if (param0 != 1) {
-                Object var5 = null;
-                ((oca) this).a((faa) null, true);
+                faa var5 = (faa) null;
+                this.a((faa) null, true);
             }
             param2.field_g.e(0).c((byte) 55);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "oca.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "oca.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final String a(int param0) {
         if (param0 != -1325) {
-            return null;
+            return (String) null;
         }
         return "Remove this event";
     }
@@ -198,10 +199,6 @@ final class oca extends rna implements ntb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new dpb();
     }
 }

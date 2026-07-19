@@ -43,23 +43,23 @@ final class nb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_0 = (RuntimeException) (var3);
             stackOut_2_1 = new StringBuilder().append("nb.B(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -67,23 +67,19 @@ final class nb {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }
 
     public static void a(int param0) {
         field_c = null;
-        int var1 = 8;
+        int var1 = -8 / ((20 - param0) / 59);
         field_h = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new lg();
         field_h = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
         field_e = 0;

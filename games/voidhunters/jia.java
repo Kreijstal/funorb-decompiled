@@ -8,7 +8,14 @@ final class jia extends rqa {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
         int var14 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var14 = VoidHunters.field_G;
         try {
@@ -29,18 +36,67 @@ final class jia extends rqa {
                 break L1;
               }
             }
-            break L0;
+            if (param2 > 91) {
+              var8 = -var6_int + -param3 + hca.field_o.field_hb;
+              var9 = var8 / 2;
+              var10 = param3 + param0 + var9;
+              var11 = 0;
+              var12 = 0;
+              L2: while (true) {
+                if (6 <= var12) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  L3: {
+                    L4: {
+                      if (var12 >= 5) {
+                        break L4;
+                      } else {
+                        if (ul.field_b[var12] == null) {
+                          break L3;
+                        } else {
+                          break L4;
+                        }
+                      }
+                    }
+                    var13 = var11 * (-4 + hca.field_o.field_G) / (1 + fb.field_o) + 3;
+                    var11++;
+                    var7 = 3 + (var11 * (2 + (hca.field_o.field_G + -6)) / (1 + fb.field_o) - 2) - var13;
+                    if (var12 < 5) {
+                      ul.field_b[var12].a(var6_int, -100, var8, var13, var7);
+                      hpa.field_o[var12].a(param3, -110, -param3 + var9, 0, var7);
+                      vh.field_c[var12].a(var9, -27, param0, param4, -param4 + (var7 - param4));
+                      lob.field_c[var12].a(var10, 127, -var10 + (-param3 + var8), param4, var7 - (param4 + param4));
+                      break L3;
+                    } else {
+                      nlb.field_o.a(var6_int, -120, var8, var13, var7);
+                      break L3;
+                    }
+                  }
+                  var12++;
+                  continue L2;
+                }
+              }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var6, "jia.C(" + param0 + ',' + param1 + ',' + 96 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) var6), "jia.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -49,9 +105,10 @@ final class jia extends rqa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         nc stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        nc stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -64,36 +121,38 @@ final class jia extends rqa {
           L0: {
             ama.field_o = param0[0].d(0);
             if (param1 <= -119) {
-              stackOut_3_0 = new nc((Object) (Object) "void");
+              stackOut_3_0 = new nc("void");
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (nc) null;
               stackIn_2_0 = stackOut_1_0;
-              return (nc) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("jia.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -101,9 +160,13 @@ final class jia extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     jia(String param0, Class[] param1, String param2) {
@@ -112,16 +175,45 @@ final class jia extends rqa {
 
     final static int a(int param0, byte param1) {
         int var2 = 0;
-        if (param0 == 0) {
+        L0: {
+          var2 = 0;
+          if (param0 != 0) {
+            break L0;
+          } else {
             var2 = kib.field_d;
+            break L0;
+          }
         }
-        if (param0 == 1) {
+        L1: {
+          if (-2 != (param0 ^ -1)) {
+            break L1;
+          } else {
             var2 = idb.field_p;
+            break L1;
+          }
         }
-        if (!(param0 != 2)) {
-            var2 = lla.field_h;
+        if (param1 != 19) {
+          L2: {
+            field_o = -2;
+            if ((param0 ^ -1) == -3) {
+              var2 = lla.field_h;
+              break L2;
+            } else {
+              break L2;
+            }
+          }
+          return var2;
+        } else {
+          L3: {
+            if ((param0 ^ -1) == -3) {
+              var2 = lla.field_h;
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          return var2;
         }
-        return var2;
     }
 
     final static int a(int param0, int param1) {
@@ -136,8 +228,8 @@ final class jia extends rqa {
         ff.field_o.field_g = ff.field_o.field_g + 1;
         if (param0 < -60) {
           vwa.field_p = var2;
-          if (param1 != 51) {
-            if (param1 == 50) {
+          if (-52 != (param1 ^ -1)) {
+            if ((param1 ^ -1) == -51) {
               ff.field_o.field_k = 5;
               if (2 > ff.field_o.field_g) {
                 L0: {
@@ -151,15 +243,13 @@ final class jia extends rqa {
                     }
                   }
                 }
-                if (ff.field_o.field_g >= 4) {
+                if ((ff.field_o.field_g ^ -1) <= -5) {
                   return 1;
                 } else {
                   return -1;
                 }
               } else {
-                if (param1 == 51) {
-                  return 2;
-                } else {
+                if ((param1 ^ -1) != -52) {
                   L1: {
                     if (ff.field_o.field_g < 2) {
                       break L1;
@@ -171,11 +261,13 @@ final class jia extends rqa {
                       }
                     }
                   }
-                  if (ff.field_o.field_g >= 4) {
+                  if ((ff.field_o.field_g ^ -1) <= -5) {
                     return 1;
                   } else {
                     return -1;
                   }
+                } else {
+                  return 2;
                 }
               }
             } else {
@@ -192,15 +284,13 @@ final class jia extends rqa {
                     }
                   }
                 }
-                if (ff.field_o.field_g >= 4) {
+                if ((ff.field_o.field_g ^ -1) <= -5) {
                   return 1;
                 } else {
                   return -1;
                 }
               } else {
-                if (param1 == 51) {
-                  return 2;
-                } else {
+                if ((param1 ^ -1) != -52) {
                   L3: {
                     if (ff.field_o.field_g < 2) {
                       break L3;
@@ -212,11 +302,13 @@ final class jia extends rqa {
                       }
                     }
                   }
-                  if (ff.field_o.field_g >= 4) {
+                  if ((ff.field_o.field_g ^ -1) <= -5) {
                     return 1;
                   } else {
                     return -1;
                   }
+                } else {
+                  return 2;
                 }
               }
             }
@@ -234,15 +326,13 @@ final class jia extends rqa {
                   }
                 }
               }
-              if (ff.field_o.field_g >= 4) {
+              if ((ff.field_o.field_g ^ -1) <= -5) {
                 return 1;
               } else {
                 return -1;
               }
             } else {
-              if (param1 == 51) {
-                return 2;
-              } else {
+              if ((param1 ^ -1) != -52) {
                 L5: {
                   if (ff.field_o.field_g < 2) {
                     break L5;
@@ -254,27 +344,29 @@ final class jia extends rqa {
                     }
                   }
                 }
-                if (ff.field_o.field_g >= 4) {
+                if ((ff.field_o.field_g ^ -1) <= -5) {
                   return 1;
                 } else {
                   return -1;
                 }
+              } else {
+                return 2;
               }
             }
           }
         } else {
           field_o = -4;
           vwa.field_p = var2;
-          if (param1 != 51) {
-            if (param1 == 50) {
+          if (-52 != (param1 ^ -1)) {
+            if ((param1 ^ -1) == -51) {
               ff.field_o.field_k = 5;
               if (2 <= ff.field_o.field_g) {
-                if (param1 == 51) {
+                if ((param1 ^ -1) == -52) {
                   return 2;
                 } else {
                   if (ff.field_o.field_g >= 2) {
                     if (param1 != 50) {
-                      if (ff.field_o.field_g >= 4) {
+                      if ((ff.field_o.field_g ^ -1) <= -5) {
                         return 1;
                       } else {
                         return -1;
@@ -283,7 +375,7 @@ final class jia extends rqa {
                       return 5;
                     }
                   } else {
-                    if (ff.field_o.field_g >= 4) {
+                    if ((ff.field_o.field_g ^ -1) <= -5) {
                       return 1;
                     } else {
                       return -1;
@@ -302,7 +394,7 @@ final class jia extends rqa {
                     }
                   }
                 }
-                if (ff.field_o.field_g >= 4) {
+                if ((ff.field_o.field_g ^ -1) <= -5) {
                   return 1;
                 } else {
                   return -1;
@@ -311,12 +403,12 @@ final class jia extends rqa {
             } else {
               ff.field_o.field_k = 1;
               if (2 <= ff.field_o.field_g) {
-                if (param1 == 51) {
+                if ((param1 ^ -1) == -52) {
                   return 2;
                 } else {
                   if (ff.field_o.field_g >= 2) {
                     if (param1 != 50) {
-                      if (ff.field_o.field_g >= 4) {
+                      if ((ff.field_o.field_g ^ -1) <= -5) {
                         return 1;
                       } else {
                         return -1;
@@ -325,7 +417,7 @@ final class jia extends rqa {
                       return 5;
                     }
                   } else {
-                    if (ff.field_o.field_g >= 4) {
+                    if ((ff.field_o.field_g ^ -1) <= -5) {
                       return 1;
                     } else {
                       return -1;
@@ -344,7 +436,7 @@ final class jia extends rqa {
                     }
                   }
                 }
-                if (ff.field_o.field_g >= 4) {
+                if ((ff.field_o.field_g ^ -1) <= -5) {
                   return 1;
                 } else {
                   return -1;
@@ -354,12 +446,12 @@ final class jia extends rqa {
           } else {
             ff.field_o.field_k = 2;
             if (2 <= ff.field_o.field_g) {
-              if (param1 == 51) {
+              if ((param1 ^ -1) == -52) {
                 return 2;
               } else {
                 if (ff.field_o.field_g >= 2) {
                   if (param1 != 50) {
-                    if (ff.field_o.field_g >= 4) {
+                    if ((ff.field_o.field_g ^ -1) <= -5) {
                       return 1;
                     } else {
                       return -1;
@@ -368,7 +460,7 @@ final class jia extends rqa {
                     return 5;
                   }
                 } else {
-                  if (ff.field_o.field_g >= 4) {
+                  if ((ff.field_o.field_g ^ -1) <= -5) {
                     return 1;
                   } else {
                     return -1;
@@ -387,7 +479,7 @@ final class jia extends rqa {
                   }
                 }
               }
-              if (ff.field_o.field_g >= 4) {
+              if ((ff.field_o.field_g ^ -1) <= -5) {
                 return 1;
               } else {
                 return -1;

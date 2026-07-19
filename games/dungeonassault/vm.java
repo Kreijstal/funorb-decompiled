@@ -13,98 +13,98 @@ final class vm {
     private int[] field_f;
 
     final void e() {
-        ((vm) this).field_a.field_o = -1;
+        this.field_a.field_o = -1;
     }
 
     final boolean g() {
-        return ((vm) this).field_a.field_m != null;
+        return this.field_a.field_m != null;
     }
 
     final void d(int param0) {
-        ((vm) this).field_a.field_o = ((vm) this).field_f[param0];
+        this.field_a.field_o = this.field_f[param0];
     }
 
     final void c() {
-        ((vm) this).field_a.field_m = null;
-        ((vm) this).field_i = null;
-        ((vm) this).field_f = null;
-        ((vm) this).field_d = null;
-        ((vm) this).field_e = null;
+        this.field_a.field_m = null;
+        this.field_i = null;
+        this.field_f = null;
+        this.field_d = null;
+        this.field_e = null;
     }
 
     private final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        int var3 = 0;
+        int var4 = 0;
         if (param1 == 255) {
-            var3 = ((vm) this).field_a.c(true);
-            var4 = ((vm) this).field_a.e(-651413500);
+            var3 = this.field_a.c(true);
+            var4 = this.field_a.e(-651413500);
             if (var3 == 47) {
-                ((vm) this).field_a.field_o = ((vm) this).field_a.field_o + var4;
+                this.field_a.field_o = this.field_a.field_o + var4;
                 return 1;
             }
             if (var3 == 81) {
-                var5 = ((vm) this).field_a.f(-116);
+                var5 = this.field_a.f(-116);
                 var4 -= 3;
-                var6 = ((vm) this).field_d[param0];
-                ((vm) this).field_b = ((vm) this).field_b + (long)var6 * (long)(((vm) this).field_h - var5);
-                ((vm) this).field_h = var5;
-                ((vm) this).field_a.field_o = ((vm) this).field_a.field_o + var4;
+                var6 = this.field_d[param0];
+                this.field_b = this.field_b + (long)var6 * (long)(this.field_h - var5);
+                this.field_h = var5;
+                this.field_a.field_o = this.field_a.field_o + var4;
                 return 2;
             }
-            ((vm) this).field_a.field_o = ((vm) this).field_a.field_o + var4;
+            this.field_a.field_o = this.field_a.field_o + var4;
             return 3;
         }
         var3 = field_g[param1 - 128];
         var4 = param1;
         if (var3 >= 1) {
-            var4 = var4 | ((vm) this).field_a.c(true) << 8;
+            var4 = var4 | this.field_a.c(true) << 8;
         }
         if (var3 >= 2) {
-            var4 = var4 | ((vm) this).field_a.c(true) << 16;
+            var4 = var4 | this.field_a.c(true) << 16;
         }
         return var4;
     }
 
     final void b(int param0) {
-        int var2 = ((vm) this).field_a.e(-651413500);
-        ((vm) this).field_d[param0] = ((vm) this).field_d[param0] + var2;
+        int var2 = this.field_a.e(-651413500);
+        this.field_d[param0] = this.field_d[param0] + var2;
     }
 
     final void a(byte[] param0) {
         int var4 = 0;
         int var5 = 0;
-        ((vm) this).field_a.field_m = param0;
-        ((vm) this).field_a.field_o = 10;
-        int var2 = ((vm) this).field_a.k(0);
-        ((vm) this).field_c = ((vm) this).field_a.k(0);
-        ((vm) this).field_h = 500000;
-        ((vm) this).field_i = new int[var2];
+        this.field_a.field_m = param0;
+        this.field_a.field_o = 10;
+        int var2 = this.field_a.k(0);
+        this.field_c = this.field_a.k(0);
+        this.field_h = 500000;
+        this.field_i = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-            var4 = ((vm) this).field_a.h(-62);
-            var5 = ((vm) this).field_a.h(-61);
+            var4 = this.field_a.h(-62);
+            var5 = this.field_a.h(-61);
             if (var4 == 1297379947) {
-                ((vm) this).field_i[var3] = ((vm) this).field_a.field_o;
+                this.field_i[var3] = this.field_a.field_o;
                 var3++;
             }
-            ((vm) this).field_a.field_o = ((vm) this).field_a.field_o + var5;
+            this.field_a.field_o = this.field_a.field_o + var5;
         }
-        ((vm) this).field_b = 0L;
-        ((vm) this).field_f = new int[var2];
+        this.field_b = 0L;
+        this.field_f = new int[var2];
         int var6 = 0;
         var3 = var6;
         while (var6 < var2) {
-            ((vm) this).field_f[var6] = ((vm) this).field_i[var6];
+            this.field_f[var6] = this.field_i[var6];
             var6++;
         }
-        ((vm) this).field_d = new int[var2];
-        ((vm) this).field_e = new int[var2];
+        this.field_d = new int[var2];
+        this.field_e = new int[var2];
     }
 
     final int a() {
-        return ((vm) this).field_f.length;
+        return this.field_f.length;
     }
 
     final int b() {
@@ -112,7 +112,7 @@ final class vm {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        var1 = ((vm) this).field_f.length;
+        var1 = this.field_f.length;
         var2 = -1;
         var3 = 2147483647;
         var4 = 0;
@@ -120,10 +120,10 @@ final class vm {
           if (var4 >= var1) {
             return var2;
           } else {
-            if (((vm) this).field_f[var4] >= 0) {
-              if (((vm) this).field_d[var4] < var3) {
+            if (this.field_f[var4] >= 0) {
+              if (this.field_d[var4] < var3) {
                 var2 = var4;
-                var3 = ((vm) this).field_d[var4];
+                var3 = this.field_d[var4];
                 var4++;
                 continue L0;
               } else {
@@ -139,19 +139,19 @@ final class vm {
     }
 
     final void a(int param0) {
-        ((vm) this).field_f[param0] = ((vm) this).field_a.field_o;
+        this.field_f[param0] = this.field_a.field_o;
     }
 
     final void a(long param0) {
         int var4 = 0;
-        ((vm) this).field_b = param0;
-        int var3 = ((vm) this).field_f.length;
+        this.field_b = param0;
+        int var3 = this.field_f.length;
         for (var4 = 0; var4 < var3; var4++) {
-            ((vm) this).field_d[var4] = 0;
-            ((vm) this).field_e[var4] = 0;
-            ((vm) this).field_a.field_o = ((vm) this).field_i[var4];
-            ((vm) this).b(var4);
-            ((vm) this).field_f[var4] = ((vm) this).field_a.field_o;
+            this.field_d[var4] = 0;
+            this.field_e[var4] = 0;
+            this.field_a.field_o = this.field_i[var4];
+            this.b(var4);
+            this.field_f[var4] = this.field_a.field_o;
         }
     }
 
@@ -165,14 +165,14 @@ final class vm {
         int var3 = 0;
         int var4 = 0;
         L0: {
-          var2 = ((vm) this).field_a.field_m[((vm) this).field_a.field_o];
+          var2 = this.field_a.field_m[this.field_a.field_o];
           if (var2 >= 0) {
-            var2 = ((vm) this).field_e[param0];
+            var2 = this.field_e[param0];
             break L0;
           } else {
             var2 = var2 & 255;
-            ((vm) this).field_e[param0] = var2;
-            ((vm) this).field_a.field_o = ((vm) this).field_a.field_o + 1;
+            this.field_e[param0] = var2;
+            this.field_a.field_o = this.field_a.field_o + 1;
             break L0;
           }
         }
@@ -188,7 +188,7 @@ final class vm {
           }
         }
         L2: {
-          var3 = ((vm) this).field_a.e(-651413500);
+          var3 = this.field_a.e(-651413500);
           if (var2 != 247) {
             break L2;
           } else {
@@ -197,7 +197,7 @@ final class vm {
             } else {
               L3: {
                 L4: {
-                  var4 = ((vm) this).field_a.field_m[((vm) this).field_a.field_o] & 255;
+                  var4 = this.field_a.field_m[this.field_a.field_o] & 255;
                   if (var4 < 241) {
                     break L4;
                   } else {
@@ -233,13 +233,13 @@ final class vm {
                   }
                 }
               }
-              ((vm) this).field_a.field_o = ((vm) this).field_a.field_o + 1;
-              ((vm) this).field_e[param0] = var4;
+              this.field_a.field_o = this.field_a.field_o + 1;
+              this.field_e[param0] = var4;
               return this.a(param0, var4);
             }
           }
         }
-        ((vm) this).field_a.field_o = ((vm) this).field_a.field_o + var3;
+        this.field_a.field_o = this.field_a.field_o + var3;
         return 0;
     }
 
@@ -248,14 +248,14 @@ final class vm {
     }
 
     final long e(int param0) {
-        return ((vm) this).field_b + (long)param0 * (long)((vm) this).field_h;
+        return this.field_b + (long)param0 * (long)this.field_h;
     }
 
     final boolean f() {
         int var2 = 0;
-        int var1 = ((vm) this).field_f.length;
+        int var1 = this.field_f.length;
         for (var2 = 0; var2 < var1; var2++) {
-            if (((vm) this).field_f[var2] >= 0) {
+            if (this.field_f[var2] >= 0) {
                 return false;
             }
         }
@@ -263,19 +263,15 @@ final class vm {
     }
 
     vm() {
-        ((vm) this).field_a = new ec((byte[]) null);
+        this.field_a = new ec((byte[]) null);
     }
 
     vm(byte[] param0) {
-        ((vm) this).field_a = new ec((byte[]) null);
-        ((vm) this).a(param0);
+        this.field_a = new ec((byte[]) null);
+        this.a(param0);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_g = new byte[]{(byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 0, (byte) 1, (byte) 2, (byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+        field_g = new byte[]{(byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 0, (byte) 1, (byte) 2, (byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
     }
 }

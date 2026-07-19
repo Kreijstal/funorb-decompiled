@@ -14,7 +14,7 @@ final class di {
     }
 
     final static int a(byte param0, int param1) {
-        int var2 = 0;
+        int var2 = 25 % ((param0 - 66) / 58);
         return mg.field_f[param1 & 2047];
     }
 
@@ -30,10 +30,6 @@ final class di {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Return to lobby";
         field_b = "<%0> must play 1 more rated game before playing with the current options.";
         field_c = "Cancel";

@@ -14,7 +14,7 @@ final class cm extends l {
         field_g = null;
         field_h = null;
         field_j = null;
-        int var1 = -84;
+        int var1 = 84 / ((56 - param0) / 52);
     }
 
     final static void a(int param0) {
@@ -43,34 +43,30 @@ final class cm extends l {
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
-        int[] var22 = null;
-        int[] var23 = null;
         RuntimeException decompiledCaughtException = null;
         var19 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
             lh.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
             var1_int = ph.field_n.length;
-            var23 = new int[var1_int];
-            var22 = var23;
-            var21 = var22;
+            var21 = new int[var1_int];
             var20 = var21;
             var2 = var20;
             var3 = 0;
             L1: while (true) {
               if (var3 >= var1_int) {
                 L2: {
-                  var3 = lh.field_a[9] >> 8;
-                  var4 = lh.field_a[10] >> 8;
-                  var5 = lh.field_a[11] >> 8;
-                  var6 = kf.field_e << 4;
+                  var3 = lh.field_a[9] >> -1109551576;
+                  var4 = lh.field_a[10] >> 1548687624;
+                  var5 = lh.field_a[param0] >> -1592545112;
+                  var6 = kf.field_e << 1746064324;
                   var7 = 0;
-                  var8 = id.a(var6, 32) >> 8;
-                  var9 = nf.a(21855, var6) >> 8;
-                  if (nl.field_u == -1) {
+                  var8 = id.a(var6, 32) >> 1484737960;
+                  var9 = nf.a(21855, var6) >> -743244984;
+                  if ((nl.field_u ^ -1) == 0) {
                     break L2;
                   } else {
-                    if (hk.field_Jb != -1) {
+                    if ((hk.field_Jb ^ -1) != 0) {
                       var8 = 240 + -hk.field_Jb;
                       var9 = -128;
                       var7 = -320 + nl.field_u;
@@ -100,12 +96,12 @@ final class cm extends l {
                     var17_int = 1;
                     L4: while (true) {
                       if (var17_int >= ph.field_n.length) {
-                        var23[var16] = -2147483648;
+                        var21[var16] = -2147483648;
                         var17 = ph.field_n[var16];
                         hh.a((byte) 104, var16);
                         var18 = 0;
                         L5: while (true) {
-                          if (var18 >= 3) {
+                          if ((var18 ^ -1) <= -4) {
                             fe.a(gl.field_c, true, true, var17, false, lh.field_a, false);
                             gf.a(var13, var7, var14, var12, var17, var9, var8, -22085);
                             var15++;
@@ -117,15 +113,14 @@ final class cm extends l {
                           }
                         }
                       } else {
-                        L6: {
-                          if (var23[var16] >= var23[var17_int]) {
-                            break L6;
-                          } else {
-                            break L6;
-                          }
+                        if (var21[var16] < var21[var17_int]) {
+                          var16 = var17_int;
+                          var17_int++;
+                          continue L4;
+                        } else {
+                          var17_int++;
+                          continue L4;
                         }
-                        var17_int++;
-                        continue L4;
                       }
                     }
                   }
@@ -134,16 +129,16 @@ final class cm extends l {
                 var4_ref_wm = ph.field_n[var3];
                 var4_ref_wm.b((byte) 127);
                 hh.a((byte) 87, var3);
-                var5 = var4_ref_wm.field_C + var4_ref_wm.field_U >> 1;
-                var6 = var4_ref_wm.field_T + var4_ref_wm.field_g >> 1;
-                var7 = var4_ref_wm.field_p + var4_ref_wm.field_L >> 1;
-                var8 = lh.field_a[9] >> 2;
-                var9 = lh.field_a[10] >> 2;
-                var10_int = lh.field_a[11] >> 2;
-                var11 = var9 * gl.field_c[4] + (gl.field_c[3] * var8 - -(gl.field_c[5] * var10_int)) >> 14;
-                var12 = gl.field_c[8] * var10_int + var9 * gl.field_c[7] + gl.field_c[6] * var8 >> 14;
-                var13 = var9 * gl.field_c[10] + (gl.field_c[9] * var8 + var10_int * gl.field_c[11]) >> 14;
-                var2[var3] = var7 * var13 + var11 * var5 - -(var6 * var12) >> 16;
+                var5 = var4_ref_wm.field_C + var4_ref_wm.field_U >> -410535455;
+                var6 = var4_ref_wm.field_T + var4_ref_wm.field_g >> -1654027711;
+                var7 = var4_ref_wm.field_p + var4_ref_wm.field_L >> 679779457;
+                var8 = lh.field_a[9] >> -1479201246;
+                var9 = lh.field_a[10] >> -1209109150;
+                var10_int = lh.field_a[11] >> -1475376318;
+                var11 = var9 * gl.field_c[4] + (gl.field_c[3] * var8 - -(gl.field_c[5] * var10_int)) >> -1358492082;
+                var12 = gl.field_c[8] * var10_int + var9 * gl.field_c[7] + gl.field_c[6] * var8 >> -1984031634;
+                var13 = var9 * gl.field_c[10] + (gl.field_c[9] * var8 + var10_int * gl.field_c[11]) >> 730680110;
+                var2[var3] = var7 * var13 + var11 * var5 - -(var6 * var12) >> -480988848;
                 var3++;
                 continue L1;
               }
@@ -152,7 +147,7 @@ final class cm extends l {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "cm.D(" + 11 + ')');
+          throw kg.a((Throwable) ((Object) var1), "cm.D(" + param0 + ')');
         }
     }
 
@@ -164,22 +159,22 @@ final class cm extends l {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
@@ -195,10 +190,10 @@ final class cm extends l {
                     break L2;
                   }
                 }
-                ub.a(hf.field_v, var3_int != 0, wm.a((byte) 98), qe.g(11108), -126);
+                ub.a(hf.field_v, var3_int != 0, wm.a((byte) 98), qe.g(11108), param1 ^ 83);
                 break L1;
               } else {
-                if (nm.c(2)) {
+                if (nm.c(param1 ^ -45)) {
                   if (j.field_l == 0) {
                     wb.a(false, (byte) 119, param2);
                     td.a(-30179, param0, 0, 0);
@@ -215,53 +210,60 @@ final class cm extends l {
                 }
               }
             }
+            L3: {
+              if (param1 == -47) {
+                break L3;
+              } else {
+                field_h = (km) null;
+                break L3;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("cm.C(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_14_0 = (RuntimeException) (var3);
+            stackOut_14_1 = new StringBuilder().append("cm.C(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L3;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L3;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L4;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + -47 + ',' + param2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(byte param0, int param1, int param2) {
         hg var3 = gk.field_g;
         var3.g(param2, 8);
-        var3.a(3, 70);
+        var3.a(3, param0 ^ 82);
         var3.a(8, -76);
+        if (param0 != 20) {
+            return;
+        }
         var3.a((byte) -107, param1);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Unrated game";
         field_i = "Public";
         field_j = "Hotseat/Singleplayer";

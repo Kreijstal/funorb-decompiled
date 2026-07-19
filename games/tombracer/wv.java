@@ -15,6 +15,7 @@ abstract class wv extends dfa {
     boolean field_o;
 
     void a(byte param0, boolean param1) {
+        int discarded$2 = 0;
         RuntimeException runtimeException = null;
         int var3_int = 0;
         fna var4 = null;
@@ -66,11 +67,11 @@ abstract class wv extends dfa {
             L1: while (true) {
               L2: {
                 L3: {
-                  if (~((wv) this).field_k.field_i >= ~var3_int) {
+                  if ((this.field_k.field_i ^ -1) >= (var3_int ^ -1)) {
                     break L3;
                   } else {
-                    var4 = ((wv) this).field_m[var3_int];
-                    stackOut_3_0 = ((wv) this).c(var3_int, param0 + 28);
+                    var4 = this.field_m[var3_int];
+                    stackOut_3_0 = this.c(var3_int, param0 + 28);
                     stackIn_16_0 = stackOut_3_0 ? 1 : 0;
                     stackIn_4_0 = stackOut_3_0;
                     if (var5 != 0) {
@@ -81,9 +82,9 @@ abstract class wv extends dfa {
                           break L4;
                         } else {
                           L5: {
-                            stackOut_7_0 = (fna) var4;
-                            stackOut_7_1 = ((wv) this).a(param0 + 15, var3_int);
-                            stackOut_7_2 = ((wv) this).b(var4.field_g, -30487);
+                            stackOut_7_0 = (fna) (var4);
+                            stackOut_7_1 = this.a(param0 + 15, var3_int);
+                            stackOut_7_2 = this.b(var4.field_g, -30487);
                             stackOut_7_3 = 1;
                             stackIn_12_0 = stackOut_7_0;
                             stackIn_12_1 = stackOut_7_1;
@@ -93,8 +94,8 @@ abstract class wv extends dfa {
                             stackIn_8_1 = stackOut_7_1;
                             stackIn_8_2 = stackOut_7_2;
                             stackIn_8_3 = stackOut_7_3;
-                            if (((wv) this).field_k.field_h != var3_int) {
-                              stackOut_12_0 = (fna) (Object) stackIn_12_0;
+                            if (this.field_k.field_h != var3_int) {
+                              stackOut_12_0 = (fna) ((Object) stackIn_12_0);
                               stackOut_12_1 = stackIn_12_1;
                               stackOut_12_2 = stackIn_12_2;
                               stackOut_12_3 = stackIn_12_3;
@@ -106,7 +107,7 @@ abstract class wv extends dfa {
                               stackIn_13_4 = stackOut_12_4;
                               break L5;
                             } else {
-                              stackOut_8_0 = (fna) (Object) stackIn_8_0;
+                              stackOut_8_0 = (fna) ((Object) stackIn_8_0);
                               stackOut_8_1 = stackIn_8_1;
                               stackOut_8_2 = stackIn_8_2;
                               stackOut_8_3 = stackIn_8_3;
@@ -114,7 +115,7 @@ abstract class wv extends dfa {
                               stackIn_10_1 = stackOut_8_1;
                               stackIn_10_2 = stackOut_8_2;
                               stackIn_10_3 = stackOut_8_3;
-                              stackOut_10_0 = (fna) (Object) stackIn_10_0;
+                              stackOut_10_0 = (fna) ((Object) stackIn_10_0);
                               stackOut_10_1 = stackIn_10_1;
                               stackOut_10_2 = stackIn_10_2;
                               stackOut_10_3 = stackIn_10_3;
@@ -148,7 +149,7 @@ abstract class wv extends dfa {
                 if (stackIn_16_0 == -28) {
                   break L6;
                 } else {
-                  int discarded$2 = this.f(-3, -5);
+                  discarded$2 = this.f(-3, -5);
                   break L6;
                 }
               }
@@ -158,11 +159,14 @@ abstract class wv extends dfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) runtimeException, "wv.I(" + param0 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "wv.I(" + param0 + ',' + param1 + ')');
         }
     }
 
     void b(boolean param0, boolean param1, int param2) {
+        vb discarded$3 = null;
+        boolean discarded$4 = false;
+        vb discarded$5 = null;
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -173,6 +177,7 @@ abstract class wv extends dfa {
         int var10 = 0;
         int var11 = 0;
         int stackIn_44_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_43_0 = 0;
         int stackOut_41_0 = 0;
@@ -183,17 +188,17 @@ abstract class wv extends dfa {
               if (0 > param2) {
                 break L1;
               } else {
-                if (((wv) this).field_m.length <= param2) {
+                if (this.field_m.length <= param2) {
                   break L1;
                 } else {
                   L2: {
-                    var4_int = ((wv) this).field_m[param2].field_g;
-                    var5 = ((wv) this).field_k.a(param0) ? 1 : 0;
+                    var4_int = this.field_m[param2].field_g;
+                    var5 = this.field_k.a(param0) ? 1 : 0;
                     if (var5 == 0) {
                       break L2;
                     } else {
-                      vb discarded$3 = dsa.a(-80);
-                      boolean discarded$4 = this.a(var4_int, param1, (byte) 119);
+                      discarded$3 = dsa.a(-80);
+                      discarded$4 = this.a(var4_int, param1, (byte) 119);
                       break L2;
                     }
                   }
@@ -212,7 +217,7 @@ abstract class wv extends dfa {
                             }
                           }
                         }
-                        if (var8 != 6) {
+                        if (-7 != (var8 ^ -1)) {
                           break L3;
                         } else {
                           if (var11 == 0) {
@@ -224,10 +229,10 @@ abstract class wv extends dfa {
                       }
                       L7: {
                         var6 = 0;
-                        if (!((wv) this).field_k.a(0)) {
+                        if (!this.field_k.a(0)) {
                           break L7;
                         } else {
-                          if (tk.a(-22636) <= 0) {
+                          if (-1 <= (tk.a(-22636) ^ -1)) {
                             break L7;
                           } else {
                             qfa.a(0, 20815);
@@ -237,10 +242,10 @@ abstract class wv extends dfa {
                         }
                       }
                       L8: {
-                        if (!((wv) this).field_k.f(75)) {
+                        if (!this.field_k.f(75)) {
                           break L8;
                         } else {
-                          if (~tk.a(-22636) > ~uha.e((byte) 71)) {
+                          if ((tk.a(-22636) ^ -1) > (uha.e((byte) 71) ^ -1)) {
                             var6 = 1;
                             qfa.a(uha.e((byte) 126), 20815);
                             break L8;
@@ -250,15 +255,15 @@ abstract class wv extends dfa {
                         }
                       }
                       L9: {
-                        if (!((wv) this).field_k.a((byte) -128)) {
+                        if (!this.field_k.a((byte) -128)) {
                           break L9;
                         } else {
                           L10: {
                             L11: {
-                              var8 = -24 + (aaa.a(false) >> 1);
+                              var8 = -24 + (aaa.a(false) >> 170903489);
                               var9 = -var8 + jba.field_j;
-                              var10 = var9 << 1;
-                              if (var10 <= 0) {
+                              var10 = var9 << 631622689;
+                              if ((var10 ^ -1) >= -1) {
                                 break L11;
                               } else {
                                 if (uha.e((byte) 68) > var10) {
@@ -277,7 +282,7 @@ abstract class wv extends dfa {
                             break L10;
                           }
                           L12: {
-                            if (~tk.a(-22636) == ~var10) {
+                            if ((tk.a(-22636) ^ -1) == (var10 ^ -1)) {
                               stackOut_43_0 = 0;
                               stackIn_44_0 = stackOut_43_0;
                               break L12;
@@ -293,7 +298,7 @@ abstract class wv extends dfa {
                         }
                       }
                       L13: {
-                        if (!((wv) this).field_k.d(96)) {
+                        if (!this.field_k.d(96)) {
                           break L13;
                         } else {
                           if (0 >= tk.a(-22636)) {
@@ -306,10 +311,10 @@ abstract class wv extends dfa {
                         }
                       }
                       L14: {
-                        if (!((wv) this).field_k.e(94)) {
+                        if (!this.field_k.e(94)) {
                           break L14;
                         } else {
-                          if (~tk.a(-22636) <= ~uha.e((byte) 87)) {
+                          if ((tk.a(-22636) ^ -1) <= (uha.e((byte) 87) ^ -1)) {
                             break L14;
                           } else {
                             var6 = 1;
@@ -322,17 +327,17 @@ abstract class wv extends dfa {
                         break L3;
                       } else {
                         L15: {
-                          if (!((wv) this).field_k.a((byte) -127)) {
+                          if (!this.field_k.a((byte) -127)) {
                             break L15;
                           } else {
-                            if (jba.field_j % 5 != 0) {
+                            if (-1 != (jba.field_j % 5 ^ -1)) {
                               break L3;
                             } else {
                               break L15;
                             }
                           }
                         }
-                        vb discarded$5 = it.a(255, 198);
+                        discarded$5 = it.a(255, 198);
                         if (var11 == 0) {
                           break L3;
                         } else {
@@ -342,7 +347,7 @@ abstract class wv extends dfa {
                     }
                     L16: {
                       var7 = uha.e((byte) 124);
-                      if (((wv) this).field_k.a(0)) {
+                      if (this.field_k.a(0)) {
                         mqa.a(0, (byte) -118);
                         break L16;
                       } else {
@@ -350,7 +355,7 @@ abstract class wv extends dfa {
                       }
                     }
                     L17: {
-                      if (((wv) this).field_k.f(-6)) {
+                      if (this.field_k.f(-6)) {
                         mqa.a(var7, (byte) 124);
                         break L17;
                       } else {
@@ -358,14 +363,14 @@ abstract class wv extends dfa {
                       }
                     }
                     L18: {
-                      if (!((wv) this).field_k.a((byte) -128)) {
+                      if (!this.field_k.a((byte) -128)) {
                         break L18;
                       } else {
                         L19: {
-                          var8 = -24 + (aaa.a(false) >> 1);
+                          var8 = -24 + (aaa.a(false) >> -1977773567);
                           var9 = -var8 + jba.field_j;
-                          var10 = var9 << 1;
-                          if (var10 > 0) {
+                          var10 = var9 << -1087021439;
+                          if (-1 > (var10 ^ -1)) {
                             break L19;
                           } else {
                             mqa.a(0, (byte) 121);
@@ -393,37 +398,46 @@ abstract class wv extends dfa {
                       }
                     }
                     L21: {
-                      if (((wv) this).field_k.d(96)) {
+                      if (this.field_k.d(96)) {
                         bv.d((byte) -55);
                         break L21;
                       } else {
                         break L21;
                       }
                     }
-                    if (((wv) this).field_k.e(97)) {
+                    if (this.field_k.e(97)) {
                       ila.a(true);
                       break L3;
                     } else {
                       break L3;
                     }
                   }
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var4, "wv.V(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) var4), "wv.V(" + param0 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     boolean b(int param0, int param1) {
+        int discarded$2 = 0;
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         int stackIn_7_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_6_0 = 0;
         boolean stackOut_4_0 = false;
@@ -433,26 +447,32 @@ abstract class wv extends dfa {
               if (param1 == -30487) {
                 break L1;
               } else {
-                int discarded$2 = this.b(-53, false, -31);
+                discarded$2 = this.b(-53, false, -31);
                 break L1;
               }
             }
             if (param0 != 28) {
               stackOut_6_0 = 1;
               stackIn_7_0 = stackOut_6_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_4_0 = vpa.a(param1 ^ -30555);
               stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3, "wv.T(" + param0 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) var3), "wv.T(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_7_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0;
+        } else {
+          return stackIn_7_0 != 0;
+        }
     }
 
     wv(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -474,13 +494,13 @@ abstract class wv extends dfa {
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
-        ((wv) this).field_o = true;
+        this.field_o = true;
         try {
           L0: {
             L1: {
-              ((wv) this).field_g = param1;
-              ((wv) this).field_i = param4;
-              ((wv) this).field_f = param2;
+              this.field_g = param1;
+              this.field_i = param4;
+              this.field_f = param2;
               if (null != param5) {
                 break L1;
               } else {
@@ -488,31 +508,31 @@ abstract class wv extends dfa {
                 break L1;
               }
             }
-            ((wv) this).field_n = param3;
-            ((wv) this).a(22174, param5);
+            this.field_n = param3;
+            this.a(22174, param5);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) runtimeException;
+            stackOut_5_0 = (RuntimeException) (runtimeException);
             stackOut_5_1 = new StringBuilder().append("wv.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param5 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
@@ -520,11 +540,12 @@ abstract class wv extends dfa {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
     int a(byte param0, int param1) {
+        boolean discarded$2 = false;
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -535,18 +556,18 @@ abstract class wv extends dfa {
               if (param0 >= 111) {
                 break L1;
               } else {
-                boolean discarded$2 = ((wv) this).b(61);
+                discarded$2 = this.b(61);
                 break L1;
               }
             }
-            stackOut_3_0 = ((wv) this).field_g;
+            stackOut_3_0 = this.field_g;
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3, "wv.F(" + param0 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) var3), "wv.F(" + param0 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -567,6 +588,7 @@ abstract class wv extends dfa {
         boolean stackIn_12_1 = false;
         int stackIn_12_2 = 0;
         Object stackIn_28_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_5_0 = null;
         fna stackOut_6_0 = null;
@@ -589,7 +611,7 @@ abstract class wv extends dfa {
                 L2: {
                   L3: {
                     L4: {
-                      if (((wv) this).field_k.field_i <= var4_int) {
+                      if (this.field_k.field_i <= var4_int) {
                         break L4;
                       } else {
                         stackOut_5_0 = this;
@@ -599,14 +621,14 @@ abstract class wv extends dfa {
                           break L3;
                         } else {
                           L5: {
-                            stackOut_6_0 = ((wv) this).field_m[var4_int];
+                            stackOut_6_0 = ((wv) (this)).field_m[var4_int];
                             stackOut_6_1 = param0;
                             stackIn_11_0 = stackOut_6_0;
                             stackIn_11_1 = stackOut_6_1;
                             stackIn_7_0 = stackOut_6_0;
                             stackIn_7_1 = stackOut_6_1;
-                            if (~((wv) this).field_k.field_h != ~var4_int) {
-                              stackOut_11_0 = (fna) (Object) stackIn_11_0;
+                            if ((this.field_k.field_h ^ -1) != (var4_int ^ -1)) {
+                              stackOut_11_0 = (fna) ((Object) stackIn_11_0);
                               stackOut_11_1 = stackIn_11_1;
                               stackOut_11_2 = 0;
                               stackIn_12_0 = stackOut_11_0;
@@ -614,11 +636,11 @@ abstract class wv extends dfa {
                               stackIn_12_2 = stackOut_11_2;
                               break L5;
                             } else {
-                              stackOut_7_0 = (fna) (Object) stackIn_7_0;
+                              stackOut_7_0 = (fna) ((Object) stackIn_7_0);
                               stackOut_7_1 = stackIn_7_1;
                               stackIn_9_0 = stackOut_7_0;
                               stackIn_9_1 = stackOut_7_1;
-                              stackOut_9_0 = (fna) (Object) stackIn_9_0;
+                              stackOut_9_0 = (fna) ((Object) stackIn_9_0);
                               stackOut_9_1 = stackIn_9_1;
                               stackOut_9_2 = 1;
                               stackIn_12_0 = stackOut_9_0;
@@ -629,10 +651,10 @@ abstract class wv extends dfa {
                           }
                           L6: {
                             ((fna) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_12_2 != 0, param1, 6);
-                            if (6 != ((wv) this).field_m[var4_int].field_g) {
+                            if (6 != this.field_m[var4_int].field_g) {
                               break L6;
                             } else {
-                              ((wv) this).field_m[var4_int].field_i = ((wv) this).field_m[var4_int + -1].field_i + 33;
+                              this.field_m[var4_int].field_i = this.field_m[var4_int + -1].field_i + 33;
                               break L6;
                             }
                           }
@@ -649,7 +671,7 @@ abstract class wv extends dfa {
                       if (param2 == 15283) {
                         break L7;
                       } else {
-                        ((wv) this).c(34);
+                        this.c(34);
                         break L7;
                       }
                     }
@@ -662,7 +684,7 @@ abstract class wv extends dfa {
                         if (vda.field_q) {
                           break L2;
                         } else {
-                          ((wv) this).field_k.a(this.b(lba.field_p, true, jm.field_m), 71, this.b(sta.field_B, true, jba.field_j));
+                          this.field_k.a(this.b(lba.field_p, true, jm.field_m), 71, this.b(sta.field_B, true, jba.field_j));
                           stackOut_26_0 = this;
                           stackIn_28_0 = stackOut_26_0;
                           break L3;
@@ -670,10 +692,10 @@ abstract class wv extends dfa {
                       }
                     }
                   }
-                  if (((wv) this).field_k.field_h == -1) {
+                  if (((wv) (this)).field_k.field_h == -1) {
                     break L2;
                   } else {
-                    ((wv) this).b(false, true, ((wv) this).field_k.field_h);
+                    this.b(false, true, this.field_k.field_h);
                     break L2;
                   }
                 }
@@ -685,10 +707,10 @@ abstract class wv extends dfa {
                       break L8;
                     } else {
                       L9: {
-                        if (((wv) this).field_c == 7) {
+                        if (-8 == (this.field_c ^ -1)) {
                           break L9;
                         } else {
-                          if (8 != ((wv) this).field_c) {
+                          if (8 != this.field_c) {
                             break L8;
                           } else {
                             break L9;
@@ -704,7 +726,7 @@ abstract class wv extends dfa {
                           if (rba.field_a.field_k.a(param2 ^ 15283, rba.field_a.l(param2 ^ 15336)) == null) {
                             break L8;
                           } else {
-                            var4_ref = (w) (Object) rba.field_a.field_k.a(0, rba.field_a.l(param2 ^ 15326)).field_G;
+                            var4_ref = (w) ((Object) rba.field_a.field_k.a(0, rba.field_a.l(param2 ^ 15326)).field_G);
                             if (var4_ref == null) {
                               break L8;
                             } else {
@@ -717,16 +739,23 @@ abstract class wv extends dfa {
                     }
                   }
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var4, "wv.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) var4), "wv.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -741,23 +770,24 @@ abstract class wv extends dfa {
               if (param1 == -48) {
                 break L1;
               } else {
-                ((wv) this).field_m = null;
+                this.field_m = (fna[]) null;
                 break L1;
               }
             }
-            stackOut_3_0 = ((wv) this).field_f;
+            stackOut_3_0 = this.field_f;
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3, "wv.O(" + param0 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) var3), "wv.O(" + param0 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
 
     final boolean b(int param0) {
+        int discarded$2 = 0;
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -768,7 +798,7 @@ abstract class wv extends dfa {
               if (param0 == 31923) {
                 break L1;
               } else {
-                int discarded$2 = ((wv) this).g(-42, 120);
+                discarded$2 = this.g(-42, 120);
                 break L1;
               }
             }
@@ -779,7 +809,7 @@ abstract class wv extends dfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "wv.L(" + param0 + ')');
+          throw tba.a((Throwable) ((Object) var2), "wv.L(" + param0 + ')');
         }
         return stackIn_4_0 != 0;
     }
@@ -789,6 +819,7 @@ abstract class wv extends dfa {
         int stackIn_17_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_22_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_21_0 = 0;
         int stackOut_19_0 = 0;
@@ -799,13 +830,13 @@ abstract class wv extends dfa {
               if (4 == param1) {
                 break L1;
               } else {
-                if (param1 == 13) {
+                if (-14 == (param1 ^ -1)) {
                   break L1;
                 } else {
                   if (14 == param1) {
                     break L1;
                   } else {
-                    if (param1 == 6) {
+                    if ((param1 ^ -1) == -7) {
                       break L1;
                     } else {
                       if (30 == param1) {
@@ -815,11 +846,13 @@ abstract class wv extends dfa {
                           if (param0 <= -64) {
                             stackOut_21_0 = 0;
                             stackIn_22_0 = stackOut_21_0;
+                            decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
                             stackOut_19_0 = 0;
                             stackIn_20_0 = stackOut_19_0;
-                            return stackIn_20_0 != 0;
+                            decompiledRegionSelector0 = 1;
+                            break L0;
                           }
                         } else {
                           break L1;
@@ -832,14 +865,23 @@ abstract class wv extends dfa {
             }
             stackOut_16_0 = 1;
             stackIn_17_0 = stackOut_16_0;
-            return stackIn_17_0 != 0;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3, "wv.U(" + param0 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) var3), "wv.U(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_22_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_17_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_20_0 != 0;
+          } else {
+            return stackIn_22_0 != 0;
+          }
+        }
     }
 
     final boolean a(boolean param0, wv param1) {
@@ -869,12 +911,12 @@ abstract class wv extends dfa {
               if (param0) {
                 break L1;
               } else {
-                ((wv) this).field_i = 44;
+                this.field_i = 44;
                 break L1;
               }
             }
             L2: {
-              if (~((wv) this).field_p <= ~param1.field_p) {
+              if ((this.field_p ^ -1) <= (param1.field_p ^ -1)) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
                 break L2;
@@ -890,23 +932,23 @@ abstract class wv extends dfa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_0 = (RuntimeException) (var3);
             stackOut_8_1 = new StringBuilder().append("wv.R(").append(param0).append(',');
             stackIn_11_0 = stackOut_8_0;
             stackIn_11_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_12_0 = stackOut_9_0;
               stackIn_12_1 = stackOut_9_1;
@@ -914,7 +956,7 @@ abstract class wv extends dfa {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -969,6 +1011,7 @@ abstract class wv extends dfa {
         int stackIn_325_0 = 0;
         int stackIn_327_0 = 0;
         int stackIn_329_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_195_0 = 0;
@@ -1020,15 +1063,16 @@ abstract class wv extends dfa {
         try {
           L0: {
             if (param2 > 117) {
-              if (!((wv) this).b(param0, -30487)) {
+              if (!this.b(param0, -30487)) {
                 stackOut_7_0 = 1;
                 stackIn_8_0 = stackOut_7_0;
-                return stackIn_8_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 L1: {
                   L2: {
                     var7 = param0;
-                    if (var7 != 22) {
+                    if ((var7 ^ -1) != -23) {
                       break L2;
                     } else {
                       if (var8 == 0) {
@@ -1038,11 +1082,12 @@ abstract class wv extends dfa {
                       }
                     }
                   }
-                  if (var7 == 1) {
+                  if (-2 == (var7 ^ -1)) {
                     ira.a(param1, 9, (byte) -16);
                     stackOut_195_0 = 1;
                     stackIn_196_0 = stackOut_195_0;
-                    return stackIn_196_0 != 0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   } else {
                     L3: {
                       if (2 != var7) {
@@ -1051,7 +1096,8 @@ abstract class wv extends dfa {
                         if (var8 == 0) {
                           stackOut_197_0 = 1;
                           stackIn_198_0 = stackOut_197_0;
-                          return stackIn_198_0 != 0;
+                          decompiledRegionSelector0 = 4;
+                          break L0;
                         } else {
                           break L3;
                         }
@@ -1081,16 +1127,17 @@ abstract class wv extends dfa {
                           }
                           stackOut_205_0 = 1;
                           stackIn_206_0 = stackOut_205_0;
-                          return stackIn_206_0 != 0;
+                          decompiledRegionSelector0 = 5;
+                          break L0;
                         } else {
                           break L4;
                         }
                       }
                     }
-                    if (var7 == 12) {
+                    if ((var7 ^ -1) == -13) {
                       L7: {
                         L8: {
-                          if (((wv) this).field_c == 7) {
+                          if (this.field_c == 7) {
                             break L8;
                           } else {
                             ira.a(param1, 4, (byte) -11);
@@ -1106,7 +1153,8 @@ abstract class wv extends dfa {
                       }
                       stackOut_213_0 = 1;
                       stackIn_214_0 = stackOut_213_0;
-                      return stackIn_214_0 != 0;
+                      decompiledRegionSelector0 = 6;
+                      break L0;
                     } else {
                       L9: {
                         if (35 != var7) {
@@ -1128,7 +1176,8 @@ abstract class wv extends dfa {
                                       ira.a(param1, -1, (byte) 105);
                                       stackOut_227_0 = 1;
                                       stackIn_228_0 = stackOut_227_0;
-                                      return stackIn_228_0 != 0;
+                                      decompiledRegionSelector0 = 8;
+                                      break L0;
                                     } else {
                                       break L10;
                                     }
@@ -1138,7 +1187,8 @@ abstract class wv extends dfa {
                             }
                             stackOut_225_0 = 1;
                             stackIn_226_0 = stackOut_225_0;
-                            return stackIn_226_0 != 0;
+                            decompiledRegionSelector0 = 7;
+                            break L0;
                           } else {
                             break L9;
                           }
@@ -1156,7 +1206,8 @@ abstract class wv extends dfa {
                         }
                         stackOut_232_0 = 1;
                         stackIn_233_0 = stackOut_232_0;
-                        return stackIn_233_0 != 0;
+                        decompiledRegionSelector0 = 9;
+                        break L0;
                       } else {
                         L12: {
                           if (13 != var7) {
@@ -1166,7 +1217,8 @@ abstract class wv extends dfa {
                               ira.a(param1, 5, (byte) -112);
                               stackOut_234_0 = 1;
                               stackIn_235_0 = stackOut_234_0;
-                              return stackIn_235_0 != 0;
+                              decompiledRegionSelector0 = 10;
+                              break L0;
                             } else {
                               break L12;
                             }
@@ -1176,7 +1228,8 @@ abstract class wv extends dfa {
                           ira.a(param1, 6, (byte) 82);
                           stackOut_236_0 = 1;
                           stackIn_237_0 = stackOut_236_0;
-                          return stackIn_237_0 != 0;
+                          decompiledRegionSelector0 = 11;
+                          break L0;
                         } else {
                           L13: {
                             if (var7 != 0) {
@@ -1186,56 +1239,62 @@ abstract class wv extends dfa {
                                 ira.a(param1, 0, (byte) -17);
                                 stackOut_238_0 = 1;
                                 stackIn_239_0 = stackOut_238_0;
-                                return stackIn_239_0 != 0;
+                                decompiledRegionSelector0 = 12;
+                                break L0;
                               } else {
                                 break L13;
                               }
                             }
                           }
                           L14: {
-                            if (var7 != 4) {
+                            if (-5 != (var7 ^ -1)) {
                               break L14;
                             } else {
                               if (var8 == 0) {
                                 ira.a(param1, 2, (byte) 85);
                                 stackOut_240_0 = 1;
                                 stackIn_241_0 = stackOut_240_0;
-                                return stackIn_241_0 != 0;
+                                decompiledRegionSelector0 = 13;
+                                break L0;
                               } else {
                                 break L14;
                               }
                             }
                           }
-                          if (var7 == 8) {
+                          if (-9 == (var7 ^ -1)) {
                             ira.a(param1, 3, (byte) -101);
                             stackOut_242_0 = 1;
                             stackIn_243_0 = stackOut_242_0;
-                            return stackIn_243_0 != 0;
+                            decompiledRegionSelector0 = 14;
+                            break L0;
                           } else {
                             L15: {
-                              if (var7 == 5) {
+                              if ((var7 ^ -1) == -6) {
                                 break L15;
                               } else {
                                 if (var7 == 6) {
                                   break L15;
                                 } else {
-                                  if (var7 == 7) {
+                                  if (-8 == (var7 ^ -1)) {
                                     tfa.e((byte) -122);
                                     stackOut_246_0 = 1;
                                     stackIn_247_0 = stackOut_246_0;
-                                    return stackIn_247_0 != 0;
+                                    decompiledRegionSelector0 = 16;
+                                    break L0;
                                   } else {
                                     if (var7 == 9) {
                                       hha.a(di.a(94), (byte) -112);
                                       stackOut_248_0 = 1;
                                       stackIn_249_0 = stackOut_248_0;
-                                      return stackIn_249_0 != 0;
+                                      decompiledRegionSelector0 = 17;
+                                      break L0;
                                     } else {
-                                      if (var7 == 16) {
+                                      if ((var7 ^ -1) == -17) {
                                         rba.field_a.b(param1, true, 0);
                                         stackOut_250_0 = 1;
                                         stackIn_251_0 = stackOut_250_0;
-                                        return stackIn_251_0 != 0;
+                                        decompiledRegionSelector0 = 18;
+                                        break L0;
                                       } else {
                                         L16: {
                                           if (41 != var7) {
@@ -1259,17 +1318,19 @@ abstract class wv extends dfa {
                                               }
                                               stackOut_255_0 = 1;
                                               stackIn_256_0 = stackOut_255_0;
-                                              return stackIn_256_0 != 0;
+                                              decompiledRegionSelector0 = 19;
+                                              break L0;
                                             } else {
                                               break L16;
                                             }
                                           }
                                         }
-                                        if (var7 == 15) {
+                                        if (-16 == (var7 ^ -1)) {
                                           ira.a(param1, -1, (byte) 107);
                                           stackOut_257_0 = 1;
                                           stackIn_258_0 = stackOut_257_0;
-                                          return stackIn_258_0 != 0;
+                                          decompiledRegionSelector0 = 20;
+                                          break L0;
                                         } else {
                                           L18: {
                                             if (17 != var7) {
@@ -1279,7 +1340,8 @@ abstract class wv extends dfa {
                                                 ira.a(param1, 7, (byte) -101);
                                                 stackOut_259_0 = 1;
                                                 stackIn_260_0 = stackOut_259_0;
-                                                return stackIn_260_0 != 0;
+                                                decompiledRegionSelector0 = 21;
+                                                break L0;
                                               } else {
                                                 break L18;
                                               }
@@ -1293,55 +1355,60 @@ abstract class wv extends dfa {
                                                 ira.a(param1, 8, (byte) -109);
                                                 stackOut_261_0 = 1;
                                                 stackIn_262_0 = stackOut_261_0;
-                                                return stackIn_262_0 != 0;
+                                                decompiledRegionSelector0 = 22;
+                                                break L0;
                                               } else {
                                                 break L19;
                                               }
                                             }
                                           }
                                           L20: {
-                                            if (var7 != 23) {
+                                            if ((var7 ^ -1) != -24) {
                                               break L20;
                                             } else {
                                               if (var8 == 0) {
-                                                ((pk) (Object) uw.field_g[3]).b((byte) 94, 0);
+                                                ((pk) ((Object) uw.field_g[3])).b((byte) 94, 0);
                                                 stackOut_263_0 = 1;
                                                 stackIn_264_0 = stackOut_263_0;
-                                                return stackIn_264_0 != 0;
+                                                decompiledRegionSelector0 = 23;
+                                                break L0;
                                               } else {
                                                 break L20;
                                               }
                                             }
                                           }
-                                          if (var7 == 24) {
-                                            ((pk) (Object) uw.field_g[3]).b((byte) 84, 1);
+                                          if (-25 == (var7 ^ -1)) {
+                                            ((pk) ((Object) uw.field_g[3])).b((byte) 84, 1);
                                             stackOut_265_0 = 1;
                                             stackIn_266_0 = stackOut_265_0;
-                                            return stackIn_266_0 != 0;
+                                            decompiledRegionSelector0 = 24;
+                                            break L0;
                                           } else {
                                             L21: {
-                                              if (var7 != 25) {
+                                              if ((var7 ^ -1) != -26) {
                                                 break L21;
                                               } else {
                                                 if (var8 == 0) {
-                                                  ((pk) (Object) uw.field_g[3]).b((byte) 126, 2);
+                                                  ((pk) ((Object) uw.field_g[3])).b((byte) 126, 2);
                                                   stackOut_267_0 = 1;
                                                   stackIn_268_0 = stackOut_267_0;
-                                                  return stackIn_268_0 != 0;
+                                                  decompiledRegionSelector0 = 25;
+                                                  break L0;
                                                 } else {
                                                   break L21;
                                                 }
                                               }
                                             }
                                             L22: {
-                                              if (var7 != 26) {
+                                              if ((var7 ^ -1) != -27) {
                                                 break L22;
                                               } else {
                                                 if (var8 == 0) {
-                                                  ((qp) (Object) uw.field_g[5]).h(18608, 0);
+                                                  ((qp) ((Object) uw.field_g[5])).h(18608, 0);
                                                   stackOut_269_0 = 1;
                                                   stackIn_270_0 = stackOut_269_0;
-                                                  return stackIn_270_0 != 0;
+                                                  decompiledRegionSelector0 = 26;
+                                                  break L0;
                                                 } else {
                                                   break L22;
                                                 }
@@ -1352,10 +1419,11 @@ abstract class wv extends dfa {
                                                 break L23;
                                               } else {
                                                 if (var8 == 0) {
-                                                  ((qp) (Object) uw.field_g[5]).h(18608, 1);
+                                                  ((qp) ((Object) uw.field_g[5])).h(18608, 1);
                                                   stackOut_271_0 = 1;
                                                   stackIn_272_0 = stackOut_271_0;
-                                                  return stackIn_272_0 != 0;
+                                                  decompiledRegionSelector0 = 27;
+                                                  break L0;
                                                 } else {
                                                   break L23;
                                                 }
@@ -1371,10 +1439,10 @@ abstract class wv extends dfa {
                                                       break L25;
                                                     } else {
                                                       L26: {
-                                                        if (((wv) this).field_c == 10) {
+                                                        if ((this.field_c ^ -1) == -11) {
                                                           break L26;
                                                         } else {
-                                                          jm.field_n = ((wv) this).field_c;
+                                                          jm.field_n = this.field_c;
                                                           if (var8 == 0) {
                                                             break L25;
                                                           } else {
@@ -1413,7 +1481,8 @@ abstract class wv extends dfa {
                                                   ts.a((byte) -63, ura.field_a, true);
                                                   stackOut_294_0 = 1;
                                                   stackIn_295_0 = stackOut_294_0;
-                                                  return stackIn_295_0 != 0;
+                                                  decompiledRegionSelector0 = 28;
+                                                  break L0;
                                                 } else {
                                                   break L24;
                                                 }
@@ -1428,7 +1497,8 @@ abstract class wv extends dfa {
                                                   ira.a(param1, 0, (byte) -107);
                                                   stackOut_296_0 = 1;
                                                   stackIn_297_0 = stackOut_296_0;
-                                                  return stackIn_297_0 != 0;
+                                                  decompiledRegionSelector0 = 29;
+                                                  break L0;
                                                 } else {
                                                   break L29;
                                                 }
@@ -1438,41 +1508,46 @@ abstract class wv extends dfa {
                                               fsa.a(0, baa.field_e);
                                               stackOut_298_0 = 1;
                                               stackIn_299_0 = stackOut_298_0;
-                                              return stackIn_299_0 != 0;
+                                              decompiledRegionSelector0 = 30;
+                                              break L0;
                                             } else {
                                               if (37 == var7) {
                                                 fsa.a(0, tia.field_d);
                                                 stackOut_300_0 = 1;
                                                 stackIn_301_0 = stackOut_300_0;
-                                                return stackIn_301_0 != 0;
+                                                decompiledRegionSelector0 = 31;
+                                                break L0;
                                               } else {
-                                                if (var7 == 38) {
+                                                if (-39 == (var7 ^ -1)) {
                                                   fsa.a(0, kva.field_s);
                                                   stackOut_302_0 = 1;
                                                   stackIn_303_0 = stackOut_302_0;
-                                                  return stackIn_303_0 != 0;
+                                                  decompiledRegionSelector0 = 32;
+                                                  break L0;
                                                 } else {
                                                   L30: {
-                                                    if (var7 != 39) {
+                                                    if (-40 != (var7 ^ -1)) {
                                                       break L30;
                                                     } else {
                                                       if (var8 == 0) {
                                                         ksa.a(true, ska.field_r);
                                                         stackOut_304_0 = 1;
                                                         stackIn_305_0 = stackOut_304_0;
-                                                        return stackIn_305_0 != 0;
+                                                        decompiledRegionSelector0 = 33;
+                                                        break L0;
                                                       } else {
                                                         break L30;
                                                       }
                                                     }
                                                   }
-                                                  if (var7 == 40) {
+                                                  if ((var7 ^ -1) == -41) {
                                                     ksa.a(true, vk.field_d);
                                                     stackOut_306_0 = 1;
                                                     stackIn_307_0 = stackOut_306_0;
-                                                    return stackIn_307_0 != 0;
+                                                    decompiledRegionSelector0 = 34;
+                                                    break L0;
                                                   } else {
-                                                    if (var7 == 29) {
+                                                    if (-30 == (var7 ^ -1)) {
                                                       L31: {
                                                         if (jc.field_M) {
                                                           stackOut_311_0 = 0;
@@ -1487,7 +1562,8 @@ abstract class wv extends dfa {
                                                       jc.field_M = stackIn_312_0 != 0;
                                                       stackOut_312_0 = 1;
                                                       stackIn_313_0 = stackOut_312_0;
-                                                      return stackIn_313_0 != 0;
+                                                      decompiledRegionSelector0 = 35;
+                                                      break L0;
                                                     } else {
                                                       L32: {
                                                         if (30 != var7) {
@@ -1508,13 +1584,14 @@ abstract class wv extends dfa {
                                                             rsa.field_s = stackIn_318_0 != 0;
                                                             stackOut_318_0 = 1;
                                                             stackIn_319_0 = stackOut_318_0;
-                                                            return stackIn_319_0 != 0;
+                                                            decompiledRegionSelector0 = 36;
+                                                            break L0;
                                                           } else {
                                                             break L32;
                                                           }
                                                         }
                                                       }
-                                                      if (var7 == 31) {
+                                                      if ((var7 ^ -1) == -32) {
                                                         L34: {
                                                           if (ara.field_wb) {
                                                             stackOut_323_0 = 0;
@@ -1529,7 +1606,8 @@ abstract class wv extends dfa {
                                                         ara.field_wb = stackIn_324_0 != 0;
                                                         stackOut_324_0 = 1;
                                                         stackIn_325_0 = stackOut_324_0;
-                                                        return stackIn_325_0 != 0;
+                                                        decompiledRegionSelector0 = 37;
+                                                        break L0;
                                                       } else {
                                                         L35: {
                                                           L36: {
@@ -1560,9 +1638,10 @@ abstract class wv extends dfa {
                                                             if (10 == var7) {
                                                               break L35;
                                                             } else {
-                                                              if (var7 != 11) {
+                                                              if ((var7 ^ -1) != -12) {
                                                                 stackOut_328_0 = 0;
                                                                 stackIn_329_0 = stackOut_328_0;
+                                                                decompiledRegionSelector0 = 39;
                                                                 break L0;
                                                               } else {
                                                                 if (var8 == 0) {
@@ -1576,7 +1655,8 @@ abstract class wv extends dfa {
                                                         }
                                                         stackOut_326_0 = 1;
                                                         stackIn_327_0 = stackOut_326_0;
-                                                        return stackIn_327_0 != 0;
+                                                        decompiledRegionSelector0 = 38;
+                                                        break L0;
                                                       }
                                                     }
                                                   }
@@ -1593,7 +1673,8 @@ abstract class wv extends dfa {
                             }
                             stackOut_244_0 = 1;
                             stackIn_245_0 = stackOut_244_0;
-                            return stackIn_245_0 != 0;
+                            decompiledRegionSelector0 = 15;
+                            break L0;
                           }
                         }
                       }
@@ -1603,20 +1684,178 @@ abstract class wv extends dfa {
                 caa.a((byte) 105);
                 stackOut_193_0 = 1;
                 stackIn_194_0 = stackOut_193_0;
-                return stackIn_194_0 != 0;
+                decompiledRegionSelector0 = 2;
+                break L0;
               }
             } else {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var4, "wv.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) var4), "wv.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_329_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_194_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_196_0 != 0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_198_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_206_0 != 0;
+                  } else {
+                    if (decompiledRegionSelector0 == 6) {
+                      return stackIn_214_0 != 0;
+                    } else {
+                      if (decompiledRegionSelector0 == 7) {
+                        return stackIn_226_0 != 0;
+                      } else {
+                        if (decompiledRegionSelector0 == 8) {
+                          return stackIn_228_0 != 0;
+                        } else {
+                          if (decompiledRegionSelector0 == 9) {
+                            return stackIn_233_0 != 0;
+                          } else {
+                            if (decompiledRegionSelector0 == 10) {
+                              return stackIn_235_0 != 0;
+                            } else {
+                              if (decompiledRegionSelector0 == 11) {
+                                return stackIn_237_0 != 0;
+                              } else {
+                                if (decompiledRegionSelector0 == 12) {
+                                  return stackIn_239_0 != 0;
+                                } else {
+                                  if (decompiledRegionSelector0 == 13) {
+                                    return stackIn_241_0 != 0;
+                                  } else {
+                                    if (decompiledRegionSelector0 == 14) {
+                                      return stackIn_243_0 != 0;
+                                    } else {
+                                      if (decompiledRegionSelector0 == 15) {
+                                        return stackIn_245_0 != 0;
+                                      } else {
+                                        if (decompiledRegionSelector0 == 16) {
+                                          return stackIn_247_0 != 0;
+                                        } else {
+                                          if (decompiledRegionSelector0 == 17) {
+                                            return stackIn_249_0 != 0;
+                                          } else {
+                                            if (decompiledRegionSelector0 == 18) {
+                                              return stackIn_251_0 != 0;
+                                            } else {
+                                              if (decompiledRegionSelector0 == 19) {
+                                                return stackIn_256_0 != 0;
+                                              } else {
+                                                if (decompiledRegionSelector0 == 20) {
+                                                  return stackIn_258_0 != 0;
+                                                } else {
+                                                  if (decompiledRegionSelector0 == 21) {
+                                                    return stackIn_260_0 != 0;
+                                                  } else {
+                                                    if (decompiledRegionSelector0 == 22) {
+                                                      return stackIn_262_0 != 0;
+                                                    } else {
+                                                      if (decompiledRegionSelector0 == 23) {
+                                                        return stackIn_264_0 != 0;
+                                                      } else {
+                                                        if (decompiledRegionSelector0 == 24) {
+                                                          return stackIn_266_0 != 0;
+                                                        } else {
+                                                          if (decompiledRegionSelector0 == 25) {
+                                                            return stackIn_268_0 != 0;
+                                                          } else {
+                                                            if (decompiledRegionSelector0 == 26) {
+                                                              return stackIn_270_0 != 0;
+                                                            } else {
+                                                              if (decompiledRegionSelector0 == 27) {
+                                                                return stackIn_272_0 != 0;
+                                                              } else {
+                                                                if (decompiledRegionSelector0 == 28) {
+                                                                  return stackIn_295_0 != 0;
+                                                                } else {
+                                                                  if (decompiledRegionSelector0 == 29) {
+                                                                    return stackIn_297_0 != 0;
+                                                                  } else {
+                                                                    if (decompiledRegionSelector0 == 30) {
+                                                                      return stackIn_299_0 != 0;
+                                                                    } else {
+                                                                      if (decompiledRegionSelector0 == 31) {
+                                                                        return stackIn_301_0 != 0;
+                                                                      } else {
+                                                                        if (decompiledRegionSelector0 == 32) {
+                                                                          return stackIn_303_0 != 0;
+                                                                        } else {
+                                                                          if (decompiledRegionSelector0 == 33) {
+                                                                            return stackIn_305_0 != 0;
+                                                                          } else {
+                                                                            if (decompiledRegionSelector0 == 34) {
+                                                                              return stackIn_307_0 != 0;
+                                                                            } else {
+                                                                              if (decompiledRegionSelector0 == 35) {
+                                                                                return stackIn_313_0 != 0;
+                                                                              } else {
+                                                                                if (decompiledRegionSelector0 == 36) {
+                                                                                  return stackIn_319_0 != 0;
+                                                                                } else {
+                                                                                  if (decompiledRegionSelector0 == 37) {
+                                                                                    return stackIn_325_0 != 0;
+                                                                                  } else {
+                                                                                    if (decompiledRegionSelector0 == 38) {
+                                                                                      return stackIn_327_0 != 0;
+                                                                                    } else {
+                                                                                      return stackIn_329_0 != 0;
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     private final int f(int param0, int param1) {
@@ -1625,6 +1864,7 @@ abstract class wv extends dfa {
         int stackIn_22_0 = 0;
         int stackIn_78_0 = 0;
         int stackIn_80_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_15_0 = 0;
         int stackOut_79_0 = 0;
@@ -1636,22 +1876,23 @@ abstract class wv extends dfa {
               if (param0 == 0) {
                 break L1;
               } else {
-                ((wv) this).b(false, false, 19);
+                this.b(false, false, 19);
                 break L1;
               }
             }
             L2: {
-              if (((wv) this).field_c == 0) {
+              if ((this.field_c ^ -1) == -1) {
                 if (3 == param1) {
                   break L2;
                 } else {
                   if (param1 == 21) {
                     break L2;
                   } else {
-                    if (param1 != 9) {
+                    if (-10 != (param1 ^ -1)) {
                       stackOut_15_0 = 1;
                       stackIn_16_0 = stackOut_15_0;
-                      return stackIn_16_0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     } else {
                       break L2;
                     }
@@ -1667,22 +1908,22 @@ abstract class wv extends dfa {
               } else {
                 if (27 != param1) {
                   L4: {
-                    if (param1 == 1) {
+                    if (-2 == (param1 ^ -1)) {
                       break L4;
                     } else {
                       if (4 == param1) {
                         break L4;
                       } else {
-                        if (param1 == 8) {
+                        if (-9 == (param1 ^ -1)) {
                           break L4;
                         } else {
                           if (param1 == 13) {
                             break L4;
                           } else {
-                            if (param1 == 12) {
+                            if (-13 == (param1 ^ -1)) {
                               break L4;
                             } else {
-                              if (param1 == 30) {
+                              if (-31 == (param1 ^ -1)) {
                                 break L4;
                               } else {
                                 if (31 == param1) {
@@ -1694,16 +1935,16 @@ abstract class wv extends dfa {
                                     if (param1 == 7) {
                                       break L4;
                                     } else {
-                                      if (param1 == 20) {
+                                      if ((param1 ^ -1) == -21) {
                                         break L4;
                                       } else {
-                                        if (param1 == 6) {
+                                        if (-7 == (param1 ^ -1)) {
                                           break L4;
                                         } else {
-                                          if (param1 == 5) {
+                                          if ((param1 ^ -1) == -6) {
                                             break L4;
                                           } else {
-                                            if (param1 == 15) {
+                                            if (-16 == (param1 ^ -1)) {
                                               break L4;
                                             } else {
                                               if (18 == param1) {
@@ -1715,14 +1956,15 @@ abstract class wv extends dfa {
                                                   if (33 == param1) {
                                                     break L4;
                                                   } else {
-                                                    if (param1 == 35) {
+                                                    if (-36 == (param1 ^ -1)) {
                                                       break L4;
                                                     } else {
-                                                      if (param1 == 41) {
+                                                      if ((param1 ^ -1) == -42) {
                                                         break L4;
                                                       } else {
                                                         stackOut_79_0 = 0;
                                                         stackIn_80_0 = stackOut_79_0;
+                                                        decompiledRegionSelector0 = 3;
                                                         break L0;
                                                       }
                                                     }
@@ -1745,7 +1987,8 @@ abstract class wv extends dfa {
                   }
                   stackOut_77_0 = 2;
                   stackIn_78_0 = stackOut_77_0;
-                  return stackIn_78_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   break L3;
                 }
@@ -1753,14 +1996,27 @@ abstract class wv extends dfa {
             }
             stackOut_21_0 = 3;
             stackIn_22_0 = stackOut_21_0;
-            return stackIn_22_0;
+            decompiledRegionSelector0 = 1;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3, "wv.M(" + param0 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) var3), "wv.M(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_80_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_16_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_22_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_78_0;
+            } else {
+              return stackIn_80_0;
+            }
+          }
+        }
     }
 
     void a(int param0, int param1, boolean param2) {
@@ -1771,15 +2027,15 @@ abstract class wv extends dfa {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            ((wv) this).field_k.a(param2, param0 + 29954, param1, this.b(sta.field_B, true, jba.field_j));
+            this.field_k.a(param2, param0 + 29954, param1, this.b(sta.field_B, true, jba.field_j));
             var4_int = param0;
             L1: while (true) {
               L2: {
                 L3: {
-                  if (var4_int >= ((wv) this).field_m.length) {
+                  if (var4_int >= this.field_m.length) {
                     break L3;
                   } else {
-                    ((wv) this).field_m[var4_int].c(1701110401);
+                    this.field_m[var4_int].c(1701110401);
                     var4_int++;
                     if (var5 != 0) {
                       break L2;
@@ -1801,17 +2057,17 @@ abstract class wv extends dfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) runtimeException, "wv.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "wv.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     void a(byte param0) {
         try {
             if (param0 <= 78) {
-                ((wv) this).field_n = 36;
+                this.field_n = 36;
             }
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wv.B(" + param0 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "wv.B(" + param0 + ')');
         }
     }
 
@@ -1835,7 +2091,7 @@ abstract class wv extends dfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "wv.S(" + param0 + ')');
+          throw tba.a((Throwable) ((Object) var1), "wv.S(" + param0 + ')');
         }
     }
 
@@ -1854,10 +2110,10 @@ abstract class wv extends dfa {
                   break L2;
                 } else {
                   L3: {
-                    if (((wv) this).field_o) {
+                    if (this.field_o) {
                       break L3;
                     } else {
-                      ((wv) this).field_k.a(0, param2 ^ -123);
+                      this.field_k.a(0, param2 ^ -123);
                       if (var5 == 0) {
                         break L1;
                       } else {
@@ -1865,7 +2121,7 @@ abstract class wv extends dfa {
                       }
                     }
                   }
-                  ((wv) this).field_k.c(117);
+                  this.field_k.c(117);
                   if (var5 == 0) {
                     break L1;
                   } else {
@@ -1873,14 +2129,14 @@ abstract class wv extends dfa {
                   }
                 }
               }
-              ((wv) this).c(-6);
+              this.c(-6);
               break L1;
             }
             L4: {
               if (param2 == 1) {
                 break L4;
               } else {
-                ((wv) this).field_n = 76;
+                this.field_n = 76;
                 break L4;
               }
             }
@@ -1896,7 +2152,7 @@ abstract class wv extends dfa {
                 }
               }
             }
-            ((wv) this).b(false, false, ((wv) this).field_k.field_h);
+            this.b(false, false, this.field_k.field_h);
             stackOut_22_0 = 1;
             stackIn_23_0 = stackOut_22_0;
             break L0;
@@ -1904,7 +2160,7 @@ abstract class wv extends dfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var4, "wv.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) var4), "wv.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_23_0 != 0;
     }
@@ -1913,7 +2169,7 @@ abstract class wv extends dfa {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        Object stackIn_3_0 = null;
+        String stackIn_3_0 = null;
         StringBuilder stackIn_12_0 = null;
         StringBuilder stackIn_14_0 = null;
         StringBuilder stackIn_16_0 = null;
@@ -1930,6 +2186,7 @@ abstract class wv extends dfa {
         StringBuilder stackIn_31_0 = null;
         String stackIn_31_1 = null;
         String stackIn_33_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         StringBuilder stackOut_11_0 = null;
         StringBuilder stackOut_16_0 = null;
@@ -1950,7 +2207,7 @@ abstract class wv extends dfa {
         StringBuilder stackOut_28_0 = null;
         String stackOut_28_1 = null;
         String stackOut_32_0 = null;
-        Object stackOut_2_0 = null;
+        String stackOut_2_0 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -1973,15 +2230,15 @@ abstract class wv extends dfa {
                             stackIn_16_0 = stackOut_11_0;
                             stackIn_12_0 = stackOut_11_0;
                             if (!ara.field_wb) {
-                              stackOut_16_0 = (StringBuilder) (Object) stackIn_16_0;
+                              stackOut_16_0 = (StringBuilder) ((Object) stackIn_16_0);
                               stackOut_16_1 = nv.field_h.toLowerCase();
                               stackIn_17_0 = stackOut_16_0;
                               stackIn_17_1 = stackOut_16_1;
                               break L4;
                             } else {
-                              stackOut_12_0 = (StringBuilder) (Object) stackIn_12_0;
+                              stackOut_12_0 = (StringBuilder) ((Object) stackIn_12_0);
                               stackIn_14_0 = stackOut_12_0;
-                              stackOut_14_0 = (StringBuilder) (Object) stackIn_14_0;
+                              stackOut_14_0 = (StringBuilder) ((Object) stackIn_14_0);
                               stackOut_14_1 = ra.field_H.toLowerCase();
                               stackIn_17_0 = stackOut_14_0;
                               stackIn_17_1 = stackOut_14_1;
@@ -2002,15 +2259,15 @@ abstract class wv extends dfa {
                       stackIn_23_0 = stackOut_18_0;
                       stackIn_19_0 = stackOut_18_0;
                       if (rsa.field_s) {
-                        stackOut_23_0 = (StringBuilder) (Object) stackIn_23_0;
+                        stackOut_23_0 = (StringBuilder) ((Object) stackIn_23_0);
                         stackOut_23_1 = ra.field_H.toLowerCase();
                         stackIn_24_0 = stackOut_23_0;
                         stackIn_24_1 = stackOut_23_1;
                         break L5;
                       } else {
-                        stackOut_19_0 = (StringBuilder) (Object) stackIn_19_0;
+                        stackOut_19_0 = (StringBuilder) ((Object) stackIn_19_0);
                         stackIn_21_0 = stackOut_19_0;
-                        stackOut_21_0 = (StringBuilder) (Object) stackIn_21_0;
+                        stackOut_21_0 = (StringBuilder) ((Object) stackIn_21_0);
                         stackOut_21_1 = nv.field_h.toLowerCase();
                         stackIn_24_0 = stackOut_21_0;
                         stackIn_24_1 = stackOut_21_1;
@@ -2030,15 +2287,15 @@ abstract class wv extends dfa {
                   stackIn_30_0 = stackOut_25_0;
                   stackIn_26_0 = stackOut_25_0;
                   if (jc.field_M) {
-                    stackOut_30_0 = (StringBuilder) (Object) stackIn_30_0;
+                    stackOut_30_0 = (StringBuilder) ((Object) stackIn_30_0);
                     stackOut_30_1 = ra.field_H.toLowerCase();
                     stackIn_31_0 = stackOut_30_0;
                     stackIn_31_1 = stackOut_30_1;
                     break L6;
                   } else {
-                    stackOut_26_0 = (StringBuilder) (Object) stackIn_26_0;
+                    stackOut_26_0 = (StringBuilder) ((Object) stackIn_26_0);
                     stackIn_28_0 = stackOut_26_0;
-                    stackOut_28_0 = (StringBuilder) (Object) stackIn_28_0;
+                    stackOut_28_0 = (StringBuilder) ((Object) stackIn_28_0);
                     stackOut_28_1 = nv.field_h.toLowerCase();
                     stackIn_31_0 = stackOut_28_0;
                     stackIn_31_1 = stackOut_28_1;
@@ -2048,21 +2305,27 @@ abstract class wv extends dfa {
                 var3 = stackIn_31_1;
                 break L1;
               }
-              stackOut_32_0 = (String) var3;
+              stackOut_32_0 = (String) (var3);
               stackIn_33_0 = stackOut_32_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = null;
+              stackOut_2_0 = (String) null;
               stackIn_3_0 = stackOut_2_0;
-              return (String) (Object) stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3_ref, "wv.G(" + param0 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) var3_ref), "wv.G(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_33_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_33_0;
+        }
     }
 
     int e(int param0, int param1) {
@@ -2076,18 +2339,18 @@ abstract class wv extends dfa {
               if (param1 >= 121) {
                 break L1;
               } else {
-                ((wv) this).b(false, false, 75);
+                this.b(false, false, 75);
                 break L1;
               }
             }
-            stackOut_3_0 = ((wv) this).field_m[param0].d(11919);
+            stackOut_3_0 = this.field_m[param0].d(11919);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3, "wv.P(" + param0 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) var3), "wv.P(" + param0 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -2096,6 +2359,7 @@ abstract class wv extends dfa {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
@@ -2104,28 +2368,34 @@ abstract class wv extends dfa {
             if (param0 == -13) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3, "wv.E(" + param0 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) var3), "wv.E(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_4_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_4_0 != 0;
+        }
     }
 
     final void a(int param0) {
         try {
             if (param0 >= -102) {
-                field_h = null;
+                field_h = (String) null;
             }
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wv.Q(" + param0 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "wv.Q(" + param0 + ')');
         }
     }
 
@@ -2134,6 +2404,7 @@ abstract class wv extends dfa {
         int stackIn_2_0 = 0;
         boolean stackIn_13_0 = false;
         int stackIn_15_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_12_0 = false;
         int stackOut_14_0 = 0;
@@ -2142,16 +2413,17 @@ abstract class wv extends dfa {
           L0: {
             if (param1 == 0) {
               L1: {
-                if (param0 < 0) {
+                if ((param0 ^ -1) > -1) {
                   break L1;
                 } else {
-                  if (~param0 <= ~((wv) this).field_m.length) {
+                  if ((param0 ^ -1) <= (this.field_m.length ^ -1)) {
                     break L1;
                   } else {
-                    if (28 == ((wv) this).field_m[param0].field_g) {
+                    if (28 == this.field_m[param0].field_g) {
                       stackOut_12_0 = vpa.a(83);
                       stackIn_13_0 = stackOut_12_0;
-                      return stackIn_13_0;
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     } else {
                       break L1;
                     }
@@ -2160,19 +2432,29 @@ abstract class wv extends dfa {
               }
               stackOut_14_0 = 1;
               stackIn_15_0 = stackOut_14_0;
+              decompiledRegionSelector0 = 2;
               break L0;
             } else {
               stackOut_1_0 = 0;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3, "wv.N(" + param0 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) var3), "wv.N(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_15_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_13_0;
+          } else {
+            return stackIn_15_0 != 0;
+          }
+        }
     }
 
     int g(int param0, int param1) {
@@ -2186,18 +2468,18 @@ abstract class wv extends dfa {
               if (param1 == 30) {
                 break L1;
               } else {
-                ((wv) this).field_g = -17;
+                this.field_g = -17;
                 break L1;
               }
             }
-            stackOut_3_0 = ((wv) this).field_n - -(((wv) this).field_i * param0) + -((wv) this).e(param0, 126);
+            stackOut_3_0 = this.field_n - -(this.field_i * param0) + -this.e(param0, 126);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3, "wv.D(" + param0 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) var3), "wv.D(" + param0 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -2221,7 +2503,7 @@ abstract class wv extends dfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "wv.K(" + param0 + ')');
+          throw tba.a((Throwable) ((Object) var2), "wv.K(" + param0 + ')');
         }
     }
 
@@ -2234,6 +2516,7 @@ abstract class wv extends dfa {
         boolean stackIn_15_0 = false;
         int stackIn_22_0 = 0;
         int stackIn_25_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_8_0 = 0;
         boolean stackOut_14_0 = false;
@@ -2244,18 +2527,19 @@ abstract class wv extends dfa {
         try {
           L0: {
             L1: {
-              if (((wv) this).field_k.field_h < 0) {
+              if (this.field_k.field_h < 0) {
                 break L1;
               } else {
-                if (!((wv) this).c(((wv) this).field_k.field_h, 0)) {
+                if (!this.c(this.field_k.field_h, 0)) {
                   break L1;
                 } else {
-                  if (!((wv) this).field_m[((wv) this).field_k.field_h].a(-30323, param2, param0)) {
+                  if (!this.field_m[this.field_k.field_h].a(-30323, param2, param0)) {
                     break L1;
                   } else {
-                    stackOut_8_0 = ((wv) this).field_k.field_h;
+                    stackOut_8_0 = this.field_k.field_h;
                     stackIn_9_0 = stackOut_8_0;
-                    return stackIn_9_0;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   }
                 }
               }
@@ -2265,10 +2549,10 @@ abstract class wv extends dfa {
               L2: while (true) {
                 L3: {
                   L4: {
-                    if (~((wv) this).field_m.length >= ~var4_int) {
+                    if ((this.field_m.length ^ -1) >= (var4_int ^ -1)) {
                       break L4;
                     } else {
-                      stackOut_14_0 = ((wv) this).c(var4_int, 0);
+                      stackOut_14_0 = this.c(var4_int, 0);
                       stackIn_25_0 = stackOut_14_0 ? 1 : 0;
                       stackIn_15_0 = stackOut_14_0;
                       if (var5 != 0) {
@@ -2278,12 +2562,13 @@ abstract class wv extends dfa {
                           if (!stackIn_15_0) {
                             break L5;
                           } else {
-                            if (!((wv) this).field_m[var4_int].a(-30323, param2, param0)) {
+                            if (!this.field_m[var4_int].a(-30323, param2, param0)) {
                               break L5;
                             } else {
                               stackOut_21_0 = var4_int;
                               stackIn_22_0 = stackOut_21_0;
-                              return stackIn_22_0;
+                              decompiledRegionSelector0 = 3;
+                              break L0;
                             }
                           }
                         }
@@ -2300,23 +2585,40 @@ abstract class wv extends dfa {
                   stackIn_25_0 = stackOut_24_0;
                   break L3;
                 }
+                decompiledRegionSelector0 = 2;
                 break L0;
               }
             } else {
               stackOut_11_0 = -7;
               stackIn_12_0 = stackOut_11_0;
-              return stackIn_12_0;
+              decompiledRegionSelector0 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var4, "wv.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) var4), "wv.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_25_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_9_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_12_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_25_0;
+            } else {
+              return stackIn_22_0;
+            }
+          }
+        }
     }
 
     final void a(int param0, int[] param1) {
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         RuntimeException var3 = null;
         int var3_int = 0;
         Object var4 = null;
@@ -2337,6 +2639,7 @@ abstract class wv extends dfa {
         RuntimeException stackIn_67_0 = null;
         StringBuilder stackIn_67_1 = null;
         String stackIn_67_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_5_1 = 0;
@@ -2353,7 +2656,7 @@ abstract class wv extends dfa {
         var10 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            ((wv) this).field_m = new fna[param1.length];
+            this.field_m = new fna[param1.length];
             var3_int = 0;
             if (param0 == 22174) {
               var4 = null;
@@ -2368,14 +2671,14 @@ abstract class wv extends dfa {
                     L4: {
                       L5: {
                         L6: {
-                          if (~param1.length >= ~var9) {
+                          if ((param1.length ^ -1) >= (var9 ^ -1)) {
                             break L6;
                           } else {
-                            ((wv) this).field_m[var9] = new fna(param1[var9], ((wv) this).b(param1[var9], (byte) 125), this.f(0, param1[var9]), this.d(-72, param1[var9]));
-                            ((wv) this).field_m[var9].field_b = ((wv) this).a((byte) 119, var9) - -((wv) this).a(var9, (byte) -48) >> 1;
-                            ((wv) this).field_m[var9].c(1701110401);
+                            this.field_m[var9] = new fna(param1[var9], this.b(param1[var9], (byte) 125), this.f(0, param1[var9]), this.d(-72, param1[var9]));
+                            this.field_m[var9].field_b = this.a((byte) 119, var9) - -this.a(var9, (byte) -48) >> -738345023;
+                            this.field_m[var9].c(1701110401);
                             stackOut_5_0 = -38;
-                            stackOut_5_1 = ~param1[var9];
+                            stackOut_5_1 = param1[var9] ^ -1;
                             stackIn_43_0 = stackOut_5_0;
                             stackIn_43_1 = stackOut_5_1;
                             stackIn_6_0 = stackOut_5_0;
@@ -2385,7 +2688,7 @@ abstract class wv extends dfa {
                                 if (stackIn_43_0 >= stackIn_43_1) {
                                   break L4;
                                 } else {
-                                  ((wv) this).field_m[var9].field_i = ((wv) this).g(var9, param0 ^ 22144);
+                                  this.field_m[var9].field_i = this.g(var9, param0 ^ 22144);
                                   var9++;
                                   if (var10 != 0) {
                                     break L3;
@@ -2411,7 +2714,7 @@ abstract class wv extends dfa {
                                     if (36 == param1[var9]) {
                                       break L9;
                                     } else {
-                                      if (param1[var9] == 38) {
+                                      if ((param1[var9] ^ -1) == -39) {
                                         break L9;
                                       } else {
                                         break L8;
@@ -2423,21 +2726,21 @@ abstract class wv extends dfa {
                                   if (null != var6) {
                                     break L10;
                                   } else {
-                                    var6 = (Object) (Object) new int[3];
+                                    var6 = new int[3];
                                     break L10;
                                   }
                                 }
-                                int incrementValue$3 = var5;
+                                incrementValue$3 = var5;
                                 var5++;
-                                ((int[]) var6)[incrementValue$3] = var9;
+                                ((int[]) (var6))[incrementValue$3] = var9;
                                 break L8;
                               }
                               L11: {
                                 L12: {
-                                  if (param1[var9] == 39) {
+                                  if ((param1[var9] ^ -1) == -40) {
                                     break L12;
                                   } else {
-                                    if (param1[var9] == 40) {
+                                    if ((param1[var9] ^ -1) == -41) {
                                       break L12;
                                     } else {
                                       break L11;
@@ -2448,13 +2751,13 @@ abstract class wv extends dfa {
                                   if (var8 != null) {
                                     break L13;
                                   } else {
-                                    var8 = (Object) (Object) new int[2];
+                                    var8 = new int[2];
                                     break L13;
                                   }
                                 }
-                                int incrementValue$4 = var7;
+                                incrementValue$4 = var7;
                                 var7++;
-                                ((int[]) var8)[incrementValue$4] = var9;
+                                ((int[]) (var8))[incrementValue$4] = var9;
                                 break L11;
                               }
                               L14: {
@@ -2471,15 +2774,15 @@ abstract class wv extends dfa {
                                 }
                                 L16: {
                                   if (null == var4) {
-                                    var4 = (Object) (Object) new int[2];
+                                    var4 = new int[2];
                                     break L16;
                                   } else {
                                     break L16;
                                   }
                                 }
-                                int incrementValue$5 = var3_int;
+                                incrementValue$5 = var3_int;
                                 var3_int++;
-                                ((int[]) var4)[incrementValue$5] = var9;
+                                ((int[]) (var4))[incrementValue$5] = var9;
                                 break L14;
                               }
                               var9++;
@@ -2500,7 +2803,7 @@ abstract class wv extends dfa {
                           if (stackIn_43_0 >= stackIn_43_1) {
                             break L4;
                           } else {
-                            ((wv) this).field_m[var9].field_i = ((wv) this).g(var9, param0 ^ 22144);
+                            this.field_m[var9].field_i = this.g(var9, param0 ^ 22144);
                             var9++;
                             if (var10 != 0) {
                               break L3;
@@ -2522,12 +2825,12 @@ abstract class wv extends dfa {
                       break L2;
                     }
                   }
-                  oh.a((byte) -91, new fna[3]);
+                  oh.a((byte) -91, new fna[]{this.field_m[((int[]) (var6))[0]], this.field_m[((int[]) (var6))[1]], this.field_m[((int[]) (var6))[2]]});
                   break L2;
                 }
                 L18: {
                   if (var8 != null) {
-                    oh.a((byte) -91, new fna[2]);
+                    oh.a((byte) -91, new fna[]{this.field_m[((int[]) (var8))[0]], this.field_m[((int[]) (var8))[1]]});
                     break L18;
                   } else {
                     break L18;
@@ -2537,38 +2840,40 @@ abstract class wv extends dfa {
                   if (null == var4) {
                     break L19;
                   } else {
-                    oh.a((byte) -91, new fna[2]);
+                    oh.a((byte) -91, new fna[]{this.field_m[((int[]) (var4))[0]], this.field_m[((int[]) (var4))[1]]});
                     break L19;
                   }
                 }
-                ((wv) this).field_k = new ko(((wv) this).field_m.length);
+                this.field_k = new ko(this.field_m.length);
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L20: {
             var3 = decompiledCaughtException;
-            stackOut_63_0 = (RuntimeException) var3;
+            stackOut_63_0 = (RuntimeException) (var3);
             stackOut_63_1 = new StringBuilder().append("wv.W(").append(param0).append(',');
             stackIn_66_0 = stackOut_63_0;
             stackIn_66_1 = stackOut_63_1;
             stackIn_64_0 = stackOut_63_0;
             stackIn_64_1 = stackOut_63_1;
             if (param1 == null) {
-              stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
-              stackOut_66_1 = (StringBuilder) (Object) stackIn_66_1;
+              stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
               stackOut_66_2 = "null";
               stackIn_67_0 = stackOut_66_0;
               stackIn_67_1 = stackOut_66_1;
               stackIn_67_2 = stackOut_66_2;
               break L20;
             } else {
-              stackOut_64_0 = (RuntimeException) (Object) stackIn_64_0;
-              stackOut_64_1 = (StringBuilder) (Object) stackIn_64_1;
+              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
               stackOut_64_2 = "{...}";
               stackIn_67_0 = stackOut_64_0;
               stackIn_67_1 = stackOut_64_1;
@@ -2576,15 +2881,16 @@ abstract class wv extends dfa {
               break L20;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_67_0, stackIn_67_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_67_0), stackIn_67_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = 0;
         field_h = "The previous occupant of the temple put too much money in the Spinning Disc of Death vending machines, and now they won't stop.";
     }

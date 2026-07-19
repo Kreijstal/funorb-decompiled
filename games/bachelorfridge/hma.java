@@ -7,20 +7,30 @@ final class hma {
 
     public final int[] listmodes() {
         int var3 = 0;
-        java.awt.DisplayMode[] var4 = ((hma) this).field_a.getDisplayModes();
+        java.awt.DisplayMode[] var4 = this.field_a.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << 2];
+        int[] var2 = new int[var4.length << 1455166370];
         for (var3 = 0; var3 < var4.length; var3++) {
-            var2[var3 << 2] = var4[var3].getWidth();
-            var2[(var3 << 2) - -1] = var4[var3].getHeight();
-            var2[(var3 << 2) - -2] = var4[var3].getBitDepth();
-            var2[3 + (var3 << 2)] = var4[var3].getRefreshRate();
+            var2[var3 << 1351882946] = var4[var3].getWidth();
+            var2[(var3 << -1091874430) - -1] = var4[var3].getHeight();
+            var2[(var3 << 1202278978) - -2] = var4[var3].getBitDepth();
+            var2[3 + (var3 << 265425858)] = var4[var3].getRefreshRate();
         }
         return var2;
     }
 
     private final void a(int param0, java.awt.Frame param1) {
-        ((hma) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
+        java.awt.Frame var4 = null;
+        L0: {
+          this.field_a.setFullScreenWindow((java.awt.Window) ((Object) param1));
+          if (param0 == 265425858) {
+            break L0;
+          } else {
+            var4 = (java.awt.Frame) null;
+            this.enter((java.awt.Frame) null, 70, -42, 21, 21);
+            break L0;
+          }
+        }
     }
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
@@ -29,8 +39,8 @@ final class hma {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ((hma) this).field_b = ((hma) this).field_a.getDisplayMode();
-        if (((hma) this).field_b != null) {
+        this.field_b = this.field_a.getDisplayMode();
+        if (this.field_b != null) {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
@@ -38,8 +48,8 @@ final class hma {
             if (param4 != 0) {
               break L0;
             } else {
-              var6 = ((hma) this).field_b.getRefreshRate();
-              var7 = ((hma) this).field_a.getDisplayModes();
+              var6 = this.field_b.getRefreshRate();
+              var7 = this.field_a.getDisplayModes();
               var8 = 0;
               var9 = 0;
               L1: while (true) {
@@ -87,7 +97,7 @@ final class hma {
               }
             }
           }
-          ((hma) this).field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+          this.field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
           return;
         } else {
           throw new NullPointerException();
@@ -95,12 +105,12 @@ final class hma {
     }
 
     public final void exit() {
-        if (!(null == ((hma) this).field_b)) {
-            ((hma) this).field_a.setDisplayMode(((hma) this).field_b);
-            if (!(((hma) this).field_a.getDisplayMode().equals(((hma) this).field_b))) {
+        if (!(null == this.field_b)) {
+            this.field_a.setDisplayMode(this.field_b);
+            if (!(this.field_a.getDisplayMode().equals(this.field_b))) {
                 throw new RuntimeException("");
             }
-            ((hma) this).field_b = null;
+            this.field_b = null;
         }
         this.a(265425858, (java.awt.Frame) null);
     }
@@ -112,8 +122,8 @@ final class hma {
         int var4 = 0;
         java.awt.GraphicsDevice var5 = null;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
-        ((hma) this).field_a = var1.getDefaultScreenDevice();
-        if (((hma) this).field_a.isFullScreenSupported()) {
+        this.field_a = var1.getDefaultScreenDevice();
+        if (this.field_a.isFullScreenSupported()) {
           return;
         } else {
           var2 = var1.getScreenDevices();
@@ -126,7 +136,7 @@ final class hma {
               var5 = var3[var4];
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
-                  ((hma) this).field_a = var5;
+                  this.field_a = var5;
                   return;
                 } else {
                   var4++;

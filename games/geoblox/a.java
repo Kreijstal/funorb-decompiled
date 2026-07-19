@@ -22,10 +22,6 @@ final class a {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "a.A(";
         field_c = new int[8192];
         field_a = new String[]{"Welcome to Geoblox!", "The controls", "How to play", "Bonuses", "Special geoblox", "Special geoblox cont."};

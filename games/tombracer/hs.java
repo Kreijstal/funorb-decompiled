@@ -76,23 +76,23 @@ final class hs {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_0 = (RuntimeException) (var2);
             stackOut_10_1 = new StringBuilder().append("hs.A(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -100,13 +100,13 @@ final class hs {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
         return stackIn_9_0 != 0;
     }
 
     final static void a(boolean param0, byte param1) {
-        int var2 = 109;
+        int var2 = 109 / ((-1 - param1) / 54);
         if (!(era.field_d == null)) {
             bea.d(bea.field_b, bea.field_h, -bea.field_b + bea.field_d, -bea.field_h + bea.field_k);
             era.field_d.b(64, param0);
@@ -114,16 +114,15 @@ final class hs {
     }
 
     public static void a(int param0) {
+        if (param0 != 32768) {
+            hs.a(false, (byte) -65);
+        }
         field_b = null;
         field_d = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         long var6 = 0L;
         long var4 = 0L;
@@ -131,15 +130,15 @@ final class hs {
         int var3 = 0;
         int var1 = 0;
         field_a = new int[98304];
-        for (var0 = 92682; var0 >= 46341; var0--) {
-            var6 = (long)(1 + (var0 << 1));
-            var4 = (long)(-1 + (var0 << 1));
-            var2 = (int)((var4 * var4 >> 18) + -32768L);
-            var3 = (int)((var6 * var6 >> 18) + -32768L);
+        for (var0 = 92682; (var0 ^ -1) <= -46342; var0--) {
+            var6 = (long)(1 + (var0 << 275828993));
+            var4 = (long)(-1 + (var0 << 1684793089));
+            var2 = (int)((var4 * var4 >> -212534126) + -32768L);
+            var3 = (int)((var6 * var6 >> -99973230) + -32768L);
             if (!(var3 < field_a.length)) {
                 var3 = -1 + field_a.length;
             }
-            for (var1 = var2 < 0 ? 0 : var2; var1 <= var3; var1++) {
+            for (var1 = (var2 ^ -1) > -1 ? 0 : var2; var1 <= var3; var1++) {
                 field_a[var1] = var0;
             }
         }

@@ -9,13 +9,12 @@ final class rh {
     }
 
     final static void a(int param0) {
+        if (param0 >= -3) {
+            field_a = 45;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 348;
     }
 }

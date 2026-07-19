@@ -14,18 +14,19 @@ final class p {
     public static void a(int param0) {
         field_d = null;
         field_b = null;
-        field_e = null;
-        field_g = null;
-        field_f = null;
-        field_a = null;
-        field_c = null;
+        if (param0 != -24869) {
+          return;
+        } else {
+          field_e = null;
+          field_g = null;
+          field_f = null;
+          field_a = null;
+          field_c = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "p.A(";
         field_a = new se[100];
         field_g = "Enter the name you'd prefer. This is the name displayed to other players.";

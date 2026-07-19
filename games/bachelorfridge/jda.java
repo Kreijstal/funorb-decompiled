@@ -8,21 +8,22 @@ final class jda extends iga {
 
     final wba a(byte param0) {
         if (param0 != -106) {
-            field_g = null;
+            field_g = (wba) null;
             return bs.field_g;
         }
         return bs.field_g;
     }
 
     final void a(lu param0, boolean param1) {
+        wba discarded$0 = null;
         try {
             if (param1) {
-                wba discarded$0 = ((jda) this).a((byte) -118);
+                discarded$0 = this.a((byte) -118);
             }
-            param0.a(((jda) this).field_f, 70);
-            param0.a(-117, ((jda) this).field_e);
+            param0.a(this.field_f, 70);
+            param0.a(-117, this.field_e);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "jda.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "jda.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -37,18 +38,14 @@ final class jda extends iga {
 
     jda(String param0, String param1) {
         try {
-            ((jda) this).field_f = param0;
-            ((jda) this).field_e = param1;
+            this.field_f = param0;
+            this.field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "jda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "jda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new wba(0);
     }
 }

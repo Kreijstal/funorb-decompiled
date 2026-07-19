@@ -10,10 +10,10 @@ abstract class qb extends ne {
     abstract qb c();
 
     final void a(int[] param0, int param1, int param2) {
-        if (((qb) this).field_i) {
-            ((qb) this).b(param0, param1, param2);
+        if (this.field_i) {
+            this.b(param0, param1, param2);
         } else {
-            ((qb) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class qb extends ne {
     abstract int a();
 
     protected qb() {
-        ((qb) this).field_i = true;
+        this.field_i = true;
     }
 }

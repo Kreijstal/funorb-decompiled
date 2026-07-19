@@ -8,10 +8,11 @@ final class ts {
 
     final static void a(int param0) {
         Object var1 = null;
+        Object var1_ref = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        var1 = (Object) (Object) wj.field_q;
-        synchronized (var1) {
+        var1_ref = wj.field_q;
+        synchronized (var1_ref) {
           L0: {
             hu.field_b = am.field_q;
             rpa.field_b = rpa.field_b + 1;
@@ -21,10 +22,14 @@ final class ts {
             hda.field_a = false;
             pba.field_o = ro.field_a;
             oq.field_H = cma.field_a;
-            qs.field_a = nlb.field_p;
-            ro.field_a = 0;
-            ds.field_g = tda.field_K;
-            break L0;
+            if (param0 == 1001) {
+              qs.field_a = nlb.field_p;
+              ro.field_a = 0;
+              ds.field_g = tda.field_K;
+              break L0;
+            } else {
+              return;
+            }
           }
         }
     }
@@ -34,24 +39,30 @@ final class ts {
         var2.h(24335, param1);
         var2.c(0, 1);
         var2.c(0, 1);
+        if (param0) {
+            ts.a(-12);
+        }
     }
 
     ts(qfa param0, long param1, int param2) {
         try {
-            ((ts) this).field_b = param0;
-            ((ts) this).field_c = param1;
+            this.field_b = param0;
+            this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ts.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ts.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(java.awt.Component param0, int param1) {
+        if (param1 != 1) {
+            return;
+        }
         try {
-            param0.addMouseListener((java.awt.event.MouseListener) (Object) wj.field_q);
-            param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) wj.field_q);
-            param0.addFocusListener((java.awt.event.FocusListener) (Object) wj.field_q);
+            param0.addMouseListener(wj.field_q);
+            param0.addMouseMotionListener(wj.field_q);
+            param0.addFocusListener(wj.field_q);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ts.B(" + (param0 != null ? "{...}" : "null") + ',' + 1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ts.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -74,6 +85,7 @@ final class ts {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
@@ -95,13 +107,14 @@ final class ts {
         try {
           L0: {
             if (param1.field_n == null) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               var3_int = 0;
               if (param0 > 55) {
                 L1: while (true) {
                   L2: {
-                    if (var3_int >= 50) {
+                    if ((var3_int ^ -1) <= -51) {
                       break L2;
                     } else {
                       if (param1.field_n.peekEvent() == null) {
@@ -117,7 +130,7 @@ final class ts {
                     L3: {
                       L4: {
                         if (param2 != null) {
-                          param1.field_n.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
+                          param1.field_n.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
                           break L4;
                         } else {
                           break L4;
@@ -132,10 +145,12 @@ final class ts {
                       break L5;
                     }
                   }
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -143,23 +158,23 @@ final class ts {
           decompiledCaughtException = decompiledCaughtParameter1;
           L6: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var3_ref;
+            stackOut_15_0 = (RuntimeException) (var3_ref);
             stackOut_15_1 = new StringBuilder().append("ts.E(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -168,23 +183,23 @@ final class ts {
             }
           }
           L7: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
             stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param2 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L7;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -192,24 +207,32 @@ final class ts {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     public static void a(byte param0) {
+        if (param0 <= 7) {
+            return;
+        }
         field_a = null;
     }
 
     protected final void finalize() throws Throwable {
-        ((ts) this).field_b.a((byte) 18, ((ts) this).field_c);
+        this.field_b.a((byte) 18, this.field_c);
         super.finalize();
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Withdraw invitation to <%0> to join this game";
     }
 }

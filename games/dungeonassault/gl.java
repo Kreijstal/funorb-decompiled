@@ -28,6 +28,7 @@ final class gl extends ok {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
@@ -55,7 +56,7 @@ final class gl extends ok {
                 L2: {
                   param0 = tg.a('_', param0, 3, "");
                   var3 = sh.a((byte) -124, param2);
-                  if (param0.indexOf(param2) != -1) {
+                  if ((param0.indexOf(param2) ^ -1) != 0) {
                     break L2;
                   } else {
                     if (param0.indexOf(var3) == -1) {
@@ -71,34 +72,36 @@ final class gl extends ok {
                 stackIn_8_0 = stackOut_6_0;
                 break L1;
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 0;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3_ref;
+            stackOut_9_0 = (RuntimeException) (var3_ref);
             stackOut_9_1 = new StringBuilder().append("gl.A(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -107,23 +110,23 @@ final class gl extends ok {
             }
           }
           L4: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -131,15 +134,22 @@ final class gl extends ok {
               break L4;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
-        return stackIn_8_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_8_0 != 0;
+        }
     }
 
     public static void c(byte param0) {
         field_Jb = null;
         field_Ib = null;
         field_Gb = null;
+        if (param0 != -105) {
+            return;
+        }
         field_Hb = null;
         field_Kb = null;
     }
@@ -150,10 +160,6 @@ final class gl extends ok {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Jb = "Continue";
         field_Lb = false;
         field_Hb = "Incapacitated";

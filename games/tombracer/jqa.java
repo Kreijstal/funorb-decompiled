@@ -20,11 +20,15 @@ final class jqa implements Runnable {
     private int field_m;
 
     protected final void finalize() {
-        ((jqa) this).a((byte) 105);
+        this.a((byte) 105);
     }
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 < -64) {
+            return;
+        }
+        field_g = 33;
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
@@ -33,35 +37,40 @@ final class jqa implements Runnable {
         int var6 = 0;
         Throwable var7 = null;
         int var8 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
+        int var9 = 0;
+        int var10 = 0;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
+        int decompiledRegionSelector0 = 0;
+        int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            if (((jqa) this).field_a) {
-              return;
+            if (this.field_a) {
+              decompiledRegionSelector1 = 0;
+              break L0;
             } else {
-              if (((jqa) this).field_f) {
-                ((jqa) this).field_f = false;
+              if (this.field_f) {
+                this.field_f = false;
                 throw new IOException();
               } else {
                 L1: {
-                  if (((jqa) this).field_c == null) {
-                    ((jqa) this).field_c = new byte[((jqa) this).field_d];
+                  if (this.field_c == null) {
+                    this.field_c = new byte[this.field_d];
                     break L1;
                   } else {
                     break L1;
@@ -72,96 +81,162 @@ final class jqa implements Runnable {
                   L2: {
                     var6 = 0;
                     L3: while (true) {
-                      if (var6 >= param2) {
-                        L4: {
-                          if (((jqa) this).field_j != null) {
-                            break L4;
+                      L4: {
+                        if (var6 >= param2) {
+                          break L4;
+                        } else {
+                          this.field_c[this.field_m] = param0[var6 + param1];
+                          this.field_m = (1 + this.field_m) % this.field_d;
+                          var10 = (this.field_d + this.field_k - 100) % this.field_d ^ -1;
+                          var9 = this.field_m ^ -1;
+                          if (var8 != 0) {
+                            if (var9 >= var10) {
+                              decompiledRegionSelector0 = 0;
+                              break L2;
+                            } else {
+                              decompiledRegionSelector0 = 1;
+                              break L2;
+                            }
                           } else {
-                            ((jqa) this).field_j = ((jqa) this).field_i.a((Runnable) this, 425, 3);
-                            break L4;
+                            if (var9 != var10) {
+                              var6++;
+                              if (var8 == 0) {
+                                continue L3;
+                              } else {
+                                break L4;
+                              }
+                            } else {
+                              throw new IOException();
+                            }
                           }
                         }
-                        this.notifyAll();
-                        break L2;
-                      } else {
-                        ((jqa) this).field_c[((jqa) this).field_m] = param0[var6 + param1];
-                        ((jqa) this).field_m = (1 + ((jqa) this).field_m) % ((jqa) this).field_d;
-                        if (((jqa) this).field_m != (((jqa) this).field_d + ((jqa) this).field_k - 100) % ((jqa) this).field_d) {
-                          var6++;
-                          continue L3;
+                      }
+                      L5: {
+                        if (this.field_j != null) {
+                          break L5;
                         } else {
-                          throw new IOException();
+                          this.field_j = this.field_i.a((Runnable) (this), 425, 3);
+                          break L5;
                         }
                       }
+                      this.notifyAll();
+                      decompiledRegionSelector0 = 2;
+                      break L2;
                     }
                   }
                 }
-                L5: {
-                  if (param3 >= 99) {
-                    break L5;
+                L6: {
+                  if (decompiledRegionSelector0 == 0) {
+                    break L6;
                   } else {
-                    ((jqa) this).field_k = 121;
-                    break L5;
+                    L7: {
+                      if (decompiledRegionSelector0 == 1) {
+                        break L7;
+                      } else {
+                        if (param3 >= 99) {
+                          break L6;
+                        } else {
+                          break L7;
+                        }
+                      }
+                    }
+                    this.field_k = 121;
+                    return;
                   }
                 }
+                decompiledRegionSelector1 = 1;
                 break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L8: {
             var5 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var5;
-            stackOut_25_1 = new StringBuilder().append("jqa.H(");
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackOut_29_0 = (RuntimeException) (var5);
+            stackOut_29_1 = new StringBuilder().append("jqa.H(");
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
-              break L6;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L8;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
-              break L6;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
+              break L8;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector1 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final int d(int param0) throws IOException {
-        if (!(!((jqa) this).field_a)) {
-            return 0;
+        int discarded$2 = 0;
+        Random var3 = null;
+        if (this.field_a) {
+          return 0;
+        } else {
+          if (param0 != -2147483648) {
+            var3 = (Random) null;
+            discarded$2 = jqa.a(-72, (Random) null, -100);
+            return this.field_h.read();
+          } else {
+            return this.field_h.read();
+          }
         }
-        if (param0 != -2147483648) {
-            Object var3 = null;
-            int discarded$0 = jqa.a(-72, (Random) null, -100);
-        }
-        return ((jqa) this).field_h.read();
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        if (!(pda.a(param9, param4, param6, 256, param7, param3, param0, param8, param2))) {
-            return 0;
+        int var10 = 0;
+        int var11 = 0;
+        if (!pda.a(param9, param4, param6, 256, param7, param3, param0, param8, param2)) {
+          return 0;
+        } else {
+          if (param1 != 1) {
+            L0: {
+              field_b = (jea) null;
+              var10 = ova.a(param7, param8, true, param9, param6);
+              var11 = ova.a(param4, param3, true, param0, param2);
+              if (-1 > (param5 ^ -1)) {
+                var10 = var10 + (1 << param5 - 1);
+                var11 = var11 + (1 << -1 + param5);
+                break L0;
+              } else {
+                break L0;
+              }
+            }
+            return (var10 >> param5) * (var11 >> param5);
+          } else {
+            L1: {
+              var10 = ova.a(param7, param8, true, param9, param6);
+              var11 = ova.a(param4, param3, true, param0, param2);
+              if (-1 > (param5 ^ -1)) {
+                var10 = var10 + (1 << param5 - 1);
+                var11 = var11 + (1 << -1 + param5);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            return (var10 >> param5) * (var11 >> param5);
+          }
         }
-        int var10 = ova.a(param7, param8, true, param9, param6);
-        int var11 = ova.a(param4, param3, true, param0, param2);
-        if (!(param5 <= 0)) {
-            var10 = var10 + (1 << param5 - 1);
-            var11 = var11 + (1 << -1 + param5);
-        }
-        return (var10 >> param5) * (var11 >> param5);
     }
 
     jqa(java.net.Socket param0, fia param1) throws IOException {
@@ -169,15 +244,20 @@ final class jqa implements Runnable {
     }
 
     final void b(int param0) throws IOException {
-        if (((jqa) this).field_a) {
-            return;
-        }
-        if (((jqa) this).field_f) {
-            ((jqa) this).field_f = false;
+        if (!this.field_a) {
+          if (!this.field_f) {
+            if (param0 >= 79) {
+              return;
+            } else {
+              this.a((byte) 122);
+              return;
+            }
+          } else {
+            this.field_f = false;
             throw new IOException();
-        }
-        if (param0 < 79) {
-            ((jqa) this).a((byte) 122);
+          }
+        } else {
+          return;
         }
     }
 
@@ -185,88 +265,106 @@ final class jqa implements Runnable {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            if (!((jqa) this).field_a) {
+            if (!this.field_a) {
               if (param0 == 0) {
                 L1: while (true) {
-                  if (param3 <= 0) {
+                  if ((param3 ^ -1) >= -1) {
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    var5_int = ((jqa) this).field_h.read(param2, param1, param3);
-                    if (var5_int > 0) {
-                      param3 = param3 - var5_int;
-                      param1 = param1 + var5_int;
-                      continue L1;
+                    var5_int = this.field_h.read(param2, param1, param3);
+                    if (var6 == 0) {
+                      if (-1 > (var5_int ^ -1)) {
+                        param3 = param3 - var5_int;
+                        param1 = param1 + var5_int;
+                        continue L1;
+                      } else {
+                        throw new EOFException();
+                      }
                     } else {
-                      throw new EOFException();
+                      return;
                     }
                   }
                 }
               } else {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var5;
-            stackOut_10_1 = new StringBuilder().append("jqa.E(").append(param0).append(',').append(param1).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackOut_12_0 = (RuntimeException) (var5);
+            stackOut_12_1 = new StringBuilder().append("jqa.E(").append(param0).append(',').append(param1).append(',');
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
               break L2;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param3 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     final int c(int param0) throws IOException {
-        if (((jqa) this).field_a) {
+        if (this.field_a) {
             return 0;
         }
         if (param0 != 0) {
-            ((jqa) this).a((byte) 47);
+            this.a((byte) 47);
+            return this.field_h.available();
         }
-        return ((jqa) this).field_h.available();
+        return this.field_h.available();
     }
 
     public final void run() {
@@ -280,7 +378,7 @@ final class jqa implements Runnable {
             InterruptedException var4 = null;
             Throwable var5 = null;
             int var6 = 0;
-            Object var7 = null;
+            String var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var6 = TombRacer.field_G ? 1 : 0;
@@ -291,32 +389,52 @@ final class jqa implements Runnable {
                   synchronized (var3_ref) {
                     L2: {
                       L3: {
-                        if (((jqa) this).field_m == ((jqa) this).field_k) {
-                          if (((jqa) this).field_a) {
-                            decompiledRegionSelector0 = 0;
-                            break L2;
-                          } else {
-                            {
-                              L4: {
-                                this.wait();
+                        if (this.field_m == this.field_k) {
+                          L4: {
+                            if (this.field_a) {
+                              if (var6 == 0) {
+                                decompiledRegionSelector0 = 0;
+                                break L2;
+                              } else {
                                 break L4;
                               }
+                            } else {
+                              break L4;
                             }
-                            break L3;
                           }
+                          try {
+                            L5: {
+                              this.wait();
+                              break L5;
+                            }
+                          } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                            decompiledCaughtException = decompiledCaughtParameter0;
+                            L6: {
+                              var4 = (InterruptedException) (Object) decompiledCaughtException;
+                              break L6;
+                            }
+                          }
+                          break L3;
                         } else {
                           break L3;
                         }
                       }
-                      L6: {
-                        var2 = ((jqa) this).field_k;
-                        if (((jqa) this).field_k > ((jqa) this).field_m) {
-                          var1_int = ((jqa) this).field_d - ((jqa) this).field_k;
-                          break L6;
-                        } else {
-                          var1_int = -((jqa) this).field_k + ((jqa) this).field_m;
-                          break L6;
+                      L7: {
+                        L8: {
+                          var2 = this.field_k;
+                          if (this.field_k > this.field_m) {
+                            break L8;
+                          } else {
+                            var1_int = -this.field_k + this.field_m;
+                            if (var6 == 0) {
+                              break L7;
+                            } else {
+                              break L8;
+                            }
+                          }
                         }
+                        var1_int = this.field_d - this.field_k;
+                        break L7;
                       }
                       decompiledRegionSelector0 = 1;
                       break L2;
@@ -324,76 +442,76 @@ final class jqa implements Runnable {
                   }
                   if (decompiledRegionSelector0 == 0) {
                     try {
-                      L7: {
-                        L8: {
-                          if (null == ((jqa) this).field_h) {
-                            break L8;
-                          } else {
-                            ((jqa) this).field_h.close();
-                            break L8;
-                          }
-                        }
-                        L9: {
-                          if (((jqa) this).field_l == null) {
-                            break L9;
-                          } else {
-                            ((jqa) this).field_l.close();
-                            break L9;
-                          }
-                        }
+                      L9: {
                         L10: {
-                          if (null == ((jqa) this).field_e) {
+                          if (null == this.field_h) {
                             break L10;
                           } else {
-                            ((jqa) this).field_e.close();
+                            this.field_h.close();
                             break L10;
                           }
                         }
-                        break L7;
+                        L11: {
+                          if (this.field_l == null) {
+                            break L11;
+                          } else {
+                            this.field_l.close();
+                            break L11;
+                          }
+                        }
+                        L12: {
+                          if (null == this.field_e) {
+                            break L12;
+                          } else {
+                            this.field_e.close();
+                            break L12;
+                          }
+                        }
+                        break L9;
                       }
                     } catch (java.io.IOException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
-                      L11: {
+                      L13: {
                         var1 = (IOException) (Object) decompiledCaughtException;
-                        break L11;
+                        break L13;
                       }
                     }
-                    ((jqa) this).field_c = null;
+                    this.field_c = null;
                     break L0;
                   } else {
-                    if (var1_int > 0) {
-                      try {
-                        L12: {
-                          ((jqa) this).field_l.write(((jqa) this).field_c, var2, var1_int);
-                          break L12;
-                        }
-                      } catch (java.lang.Exception decompiledCaughtParameter2) {
-                        decompiledCaughtException = decompiledCaughtParameter2;
-                        L13: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
-                          ((jqa) this).field_f = true;
-                          break L13;
-                        }
-                      }
-                      ((jqa) this).field_k = (((jqa) this).field_k - -var1_int) % ((jqa) this).field_d;
+                    if (-1 > (var1_int ^ -1)) {
                       try {
                         L14: {
-                          L15: {
-                            if (((jqa) this).field_m != ((jqa) this).field_k) {
-                              break L15;
-                            } else {
-                              ((jqa) this).field_l.flush();
-                              break L15;
-                            }
-                          }
+                          this.field_l.write(this.field_c, var2, var1_int);
                           break L14;
                         }
-                      } catch (java.lang.Exception decompiledCaughtParameter3) {
-                        decompiledCaughtException = decompiledCaughtParameter3;
-                        L16: {
+                      } catch (java.io.IOException decompiledCaughtParameter2) {
+                        decompiledCaughtException = decompiledCaughtParameter2;
+                        L15: {
                           var3 = (IOException) (Object) decompiledCaughtException;
-                          ((jqa) this).field_f = true;
+                          this.field_f = true;
+                          break L15;
+                        }
+                      }
+                      this.field_k = (this.field_k - -var1_int) % this.field_d;
+                      try {
+                        L16: {
+                          L17: {
+                            if (this.field_m != this.field_k) {
+                              break L17;
+                            } else {
+                              this.field_l.flush();
+                              break L17;
+                            }
+                          }
                           break L16;
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter3) {
+                        decompiledCaughtException = decompiledCaughtParameter3;
+                        L18: {
+                          var3 = (IOException) (Object) decompiledCaughtException;
+                          this.field_f = true;
+                          break L18;
                         }
                       }
                       continue L1;
@@ -405,11 +523,11 @@ final class jqa implements Runnable {
               }
             } catch (java.lang.Exception decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
-              L17: {
+              L19: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
-                var7 = null;
-                ssa.a((String) null, (byte) 122, (Throwable) (Object) var1_ref);
-                break L17;
+                var7 = (String) null;
+                ssa.a((String) null, (byte) 122, (Throwable) ((Object) var1_ref));
+                break L19;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -433,6 +551,7 @@ final class jqa implements Runnable {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_10_0 = 0;
@@ -451,9 +570,10 @@ final class jqa implements Runnable {
             } else {
               var3_int = -43 % ((param2 - -14) / 57);
               if (cla.a(9181, param0)) {
-                stackOut_5_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param0 >> 32);
+                stackOut_5_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param0 >> 625570336);
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
+                decompiledRegionSelector0 = 0;
+                break L0;
               } else {
                 var4 = -2147483648 - (int)(4294967296L % (long)param0);
                 L1: while (true) {
@@ -461,6 +581,7 @@ final class jqa implements Runnable {
                   if (var4 > var5) {
                     stackOut_10_0 = oea.a(var5, param0, -127);
                     stackIn_11_0 = stackOut_10_0;
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     continue L1;
@@ -473,23 +594,23 @@ final class jqa implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var3;
+            stackOut_12_0 = (RuntimeException) (var3);
             stackOut_12_1 = new StringBuilder().append("jqa.A(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -497,87 +618,127 @@ final class jqa implements Runnable {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ')');
         }
-        return stackIn_11_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0;
+        } else {
+          return stackIn_11_0;
+        }
     }
 
     final void a(byte param0) {
-        InterruptedException interruptedException = null;
-        Object var2 = null;
-        Throwable var3 = null;
-        int var4 = 0;
-        Throwable decompiledCaughtException = null;
-        var4 = TombRacer.field_G ? 1 : 0;
-        if (!((jqa) this).field_a) {
-          var2 = this;
-          synchronized (var2) {
-            L0: {
-              ((jqa) this).field_a = true;
-              this.notifyAll();
-              break L0;
-            }
-          }
-          L1: {
-            if (((jqa) this).field_j == null) {
-              break L1;
-            } else {
-              L2: while (true) {
-                if (((jqa) this).field_j.field_b != 0) {
-                  if (1 != ((jqa) this).field_j.field_b) {
-                    break L1;
-                  } else {
-                    try {
-                      L3: {
-                        ((Thread) ((jqa) this).field_j.field_f).join();
-                        break L3;
-                      }
-                    } catch (java.lang.Exception decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L4: {
-                        interruptedException = (InterruptedException) (Object) decompiledCaughtException;
-                        break L4;
-                      }
-                    }
-                    break L1;
-                  }
-                } else {
-                  vja.a(0, 1L);
-                  continue L2;
+        try {
+            InterruptedException var2 = null;
+            Object var2_ref = null;
+            Throwable var3 = null;
+            int var4 = 0;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            var4 = TombRacer.field_G ? 1 : 0;
+            if (!this.field_a) {
+              var2_ref = this;
+              synchronized (var2_ref) {
+                L0: {
+                  this.field_a = true;
+                  this.notifyAll();
+                  break L0;
                 }
               }
-            }
-          }
-          L5: {
-            if (param0 == 105) {
-              break L5;
+              if (this.field_j != null) {
+                L1: while (true) {
+                  if (-1 != (this.field_j.field_b ^ -1)) {
+                    L2: {
+                      if (1 != this.field_j.field_b) {
+                        break L2;
+                      } else {
+                        try {
+                          L3: {
+                            ((Thread) (this.field_j.field_f)).join();
+                            decompiledRegionSelector0 = 0;
+                            break L3;
+                          }
+                        } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                          decompiledCaughtException = decompiledCaughtParameter0;
+                          L4: {
+                            var2 = (InterruptedException) (Object) decompiledCaughtException;
+                            decompiledRegionSelector0 = 1;
+                            break L4;
+                          }
+                        }
+                        if (decompiledRegionSelector0 == 0) {
+                          if (param0 == 105) {
+                            this.field_j = null;
+                            return;
+                          } else {
+                            this.field_c = (byte[]) null;
+                            this.field_j = null;
+                            return;
+                          }
+                        } else {
+                          break L2;
+                        }
+                      }
+                    }
+                    if (param0 == 105) {
+                      this.field_j = null;
+                      return;
+                    } else {
+                      this.field_c = (byte[]) null;
+                      this.field_j = null;
+                      return;
+                    }
+                  } else {
+                    vja.a(0, 1L);
+                    if (var4 == 0) {
+                      continue L1;
+                    } else {
+                      if (param0 == 105) {
+                        this.field_j = null;
+                        return;
+                      } else {
+                        this.field_c = (byte[]) null;
+                        this.field_j = null;
+                        return;
+                      }
+                    }
+                  }
+                }
+              } else {
+                if (param0 == 105) {
+                  this.field_j = null;
+                  return;
+                } else {
+                  this.field_c = (byte[]) null;
+                  this.field_j = null;
+                  return;
+                }
+              }
             } else {
-              ((jqa) this).field_c = null;
-              break L5;
+              return;
             }
-          }
-          ((jqa) this).field_j = null;
-          return;
-        } else {
-          return;
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     private jqa(java.net.Socket param0, fia param1, int param2) throws IOException {
-        ((jqa) this).field_k = 0;
-        ((jqa) this).field_a = false;
-        ((jqa) this).field_f = false;
-        ((jqa) this).field_m = 0;
+        this.field_k = 0;
+        this.field_a = false;
+        this.field_f = false;
+        this.field_m = 0;
         try {
-            ((jqa) this).field_i = param1;
-            ((jqa) this).field_e = param0;
-            ((jqa) this).field_e.setSoTimeout(30000);
-            ((jqa) this).field_e.setTcpNoDelay(true);
-            ((jqa) this).field_h = ((jqa) this).field_e.getInputStream();
-            ((jqa) this).field_l = ((jqa) this).field_e.getOutputStream();
-            ((jqa) this).field_d = param2;
+            this.field_i = param1;
+            this.field_e = param0;
+            this.field_e.setSoTimeout(30000);
+            this.field_e.setTcpNoDelay(true);
+            this.field_h = this.field_e.getInputStream();
+            this.field_l = this.field_e.getOutputStream();
+            this.field_d = param2;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "jqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "jqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

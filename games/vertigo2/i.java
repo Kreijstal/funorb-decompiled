@@ -29,6 +29,10 @@ final class i {
     }
 
     final int[] d() {
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int var1 = 0;
         int[] var2 = null;
         int var3 = 0;
@@ -39,31 +43,31 @@ final class i {
         L0: {
           var1 = this.c();
           var2 = new int[var1 * this.b()];
-          if (((i) this).field_e == null) {
+          if (this.field_e == null) {
             var3 = 0;
             L1: while (true) {
-              if (var3 >= ((i) this).field_i) {
+              if (var3 >= this.field_i) {
                 break L0;
               } else {
-                var4 = var3 * ((i) this).field_h;
-                var5 = ((i) this).field_g + (var3 + ((i) this).field_d) * var1;
+                var4 = var3 * this.field_h;
+                var5 = this.field_g + (var3 + this.field_d) * var1;
                 var6 = 0;
                 L2: while (true) {
-                  if (var6 >= ((i) this).field_h) {
+                  if (var6 >= this.field_h) {
                     var3++;
                     continue L1;
                   } else {
-                    int incrementValue$12 = var4;
+                    incrementValue$12 = var4;
                     var4++;
-                    var7 = ((i) this).field_f[((i) this).field_c[incrementValue$12] & 255];
+                    var7 = this.field_f[this.field_c[incrementValue$12] & 255];
                     if (var7 == 0) {
-                      int incrementValue$13 = var5;
+                      incrementValue$13 = var5;
                       var5++;
                       var2[incrementValue$13] = 0;
                       var6++;
                       continue L2;
                     } else {
-                      int incrementValue$14 = var5;
+                      incrementValue$14 = var5;
                       var5++;
                       var2[incrementValue$14] = -16777216 | var7;
                       var6++;
@@ -76,20 +80,20 @@ final class i {
           } else {
             var3 = 0;
             L3: while (true) {
-              if (var3 >= ((i) this).field_i) {
+              if (var3 >= this.field_i) {
                 break L0;
               } else {
-                var4 = var3 * ((i) this).field_h;
-                var5 = ((i) this).field_g + (var3 + ((i) this).field_d) * var1;
+                var4 = var3 * this.field_h;
+                var5 = this.field_g + (var3 + this.field_d) * var1;
                 var6 = 0;
                 L4: while (true) {
-                  if (var6 >= ((i) this).field_h) {
+                  if (var6 >= this.field_h) {
                     var3++;
                     continue L3;
                   } else {
-                    int incrementValue$15 = var5;
+                    incrementValue$15 = var5;
                     var5++;
-                    var2[incrementValue$15] = ((i) this).field_e[var4] << 24 | ((i) this).field_f[((i) this).field_c[var4] & 255];
+                    var2[incrementValue$15] = this.field_e[var4] << 24 | this.field_f[this.field_c[var4] & 255];
                     var4++;
                     var6++;
                     continue L4;
@@ -103,6 +107,10 @@ final class i {
     }
 
     final void a() {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var1 = 0;
         int var2 = 0;
         byte[] var3 = null;
@@ -115,10 +123,10 @@ final class i {
         L0: {
           var1 = this.c();
           var2 = this.b();
-          if (((i) this).field_h != var1) {
+          if (this.field_h != var1) {
             break L0;
           } else {
-            if (((i) this).field_i != var2) {
+            if (this.field_i != var2) {
               break L0;
             } else {
               return;
@@ -127,25 +135,25 @@ final class i {
         }
         L1: {
           var3 = new byte[var1 * var2];
-          if (((i) this).field_e == null) {
+          if (this.field_e == null) {
             var4 = 0;
             L2: while (true) {
-              if (var4 >= ((i) this).field_i) {
+              if (var4 >= this.field_i) {
                 break L1;
               } else {
-                var5 = var4 * ((i) this).field_h;
-                var6 = (var4 + ((i) this).field_d) * var1 + ((i) this).field_g;
+                var5 = var4 * this.field_h;
+                var6 = (var4 + this.field_d) * var1 + this.field_g;
                 var7 = 0;
                 L3: while (true) {
-                  if (var7 >= ((i) this).field_h) {
+                  if (var7 >= this.field_h) {
                     var4++;
                     continue L2;
                   } else {
-                    int incrementValue$4 = var6;
+                    incrementValue$4 = var6;
                     var6++;
-                    int incrementValue$5 = var5;
+                    incrementValue$5 = var5;
                     var5++;
-                    var3[incrementValue$4] = ((i) this).field_c[incrementValue$5];
+                    var3[incrementValue$4] = this.field_c[incrementValue$5];
                     var7++;
                     continue L3;
                   }
@@ -156,24 +164,24 @@ final class i {
             var4_ref_byte__ = new byte[var1 * var2];
             var5 = 0;
             L4: while (true) {
-              if (var5 >= ((i) this).field_i) {
-                ((i) this).field_e = var4_ref_byte__;
+              if (var5 >= this.field_i) {
+                this.field_e = var4_ref_byte__;
                 break L1;
               } else {
-                var6 = var5 * ((i) this).field_h;
-                var7 = (var5 + ((i) this).field_d) * var1 + ((i) this).field_g;
+                var6 = var5 * this.field_h;
+                var7 = (var5 + this.field_d) * var1 + this.field_g;
                 var8 = 0;
                 L5: while (true) {
-                  if (var8 >= ((i) this).field_h) {
+                  if (var8 >= this.field_h) {
                     var5++;
                     continue L4;
                   } else {
-                    var3[var7] = ((i) this).field_c[var6];
-                    int incrementValue$6 = var7;
+                    var3[var7] = this.field_c[var6];
+                    incrementValue$6 = var7;
                     var7++;
-                    int incrementValue$7 = var6;
+                    incrementValue$7 = var6;
                     var6++;
-                    var4_ref_byte__[incrementValue$6] = ((i) this).field_e[incrementValue$7];
+                    var4_ref_byte__[incrementValue$6] = this.field_e[incrementValue$7];
                     var8++;
                     continue L5;
                   }
@@ -182,16 +190,18 @@ final class i {
             }
           }
         }
-        ((i) this).field_b = 0;
-        ((i) this).field_d = 0;
-        ((i) this).field_a = 0;
-        ((i) this).field_g = 0;
-        ((i) this).field_h = var1;
-        ((i) this).field_i = var2;
-        ((i) this).field_c = var3;
+        this.field_b = 0;
+        this.field_d = 0;
+        this.field_a = 0;
+        this.field_g = 0;
+        this.field_h = var1;
+        this.field_i = var2;
+        this.field_c = var3;
     }
 
     private final static i[] a(byte[] param0) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         ed var1 = null;
         int var2 = 0;
         i[] var3 = null;
@@ -211,8 +221,6 @@ final class i {
         int var15 = 0;
         int[] var16 = null;
         int[] var17 = null;
-        int[] var18 = null;
-        int[] var19 = null;
         int stackIn_48_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_50_0 = 0;
@@ -258,9 +266,7 @@ final class i {
                             L5: while (true) {
                               if (var7_int >= var2) {
                                 var1.field_u = param0.length - 7 - var2 * 8 - (var6 - 1) * 3;
-                                var19 = new int[var6];
-                                var18 = var19;
-                                var17 = var18;
+                                var17 = new int[var6];
                                 var16 = var17;
                                 var7 = var16;
                                 var8 = 1;
@@ -299,7 +305,7 @@ final class i {
                                                               continue L11;
                                                             } else {
                                                               L13: {
-                                                                byte dupTemp$2 = var1.g(82);
+                                                                dupTemp$2 = var1.g(82);
                                                                 var9.field_e[var13 + var14 * var9.field_h] = dupTemp$2;
                                                                 var15 = dupTemp$2;
                                                                 stackOut_61_0 = var12;
@@ -350,7 +356,7 @@ final class i {
                                                           break L9;
                                                         } else {
                                                           L17: {
-                                                            byte dupTemp$3 = var1.g(109);
+                                                            dupTemp$3 = var1.g(109);
                                                             var9.field_e[var13] = dupTemp$3;
                                                             var14 = dupTemp$3;
                                                             stackOut_47_0 = var12;
@@ -436,8 +442,8 @@ final class i {
                                     }
                                   } else {
                                     var7[var8] = var1.m(0);
-                                    if (var19[var8] == 0) {
-                                      var19[var8] = 1;
+                                    if (var17[var8] == 0) {
+                                      var17[var8] = 1;
                                       var8++;
                                       continue L6;
                                     } else {
@@ -487,10 +493,10 @@ final class i {
     }
 
     private final int b() {
-        return ((i) this).field_i + ((i) this).field_d + ((i) this).field_b;
+        return this.field_i + this.field_d + this.field_b;
     }
 
     private final int c() {
-        return ((i) this).field_h + ((i) this).field_g + ((i) this).field_a;
+        return this.field_h + this.field_g + this.field_a;
     }
 }

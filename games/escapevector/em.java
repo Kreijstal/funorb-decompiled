@@ -23,6 +23,12 @@ final class em {
     }
 
     final static void g(int param0, int param1, int param2, int param3, int param4) {
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -44,180 +50,189 @@ final class em {
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
-        L0: {
-          if (param2 >= 0) {
-            break L0;
-          } else {
-            param2 = -param2;
-            break L0;
-          }
-        }
-        L1: {
-          var5 = 208;
-          var6 = 7344;
-          var7 = 4896;
-          var8 = 12240;
-          var12 = param1 - param2;
-          if (var12 >= field_k) {
-            break L1;
-          } else {
-            var12 = field_k;
-            break L1;
-          }
-        }
-        L2: {
-          var13 = param1 + param2 + 1;
-          if (var13 <= field_j) {
-            break L2;
-          } else {
-            var13 = field_j;
-            break L2;
-          }
-        }
-        L3: {
-          var14 = var12;
-          var15 = param2 * param2;
-          var16 = 0;
-          var17 = param1 - var14;
-          var18 = var17 * var17;
-          var19 = var18 - var17;
-          if (param1 <= var13) {
-            break L3;
-          } else {
-            param1 = var13;
-            break L3;
-          }
-        }
-        L4: while (true) {
-          if (var14 >= param1) {
-            var16 = param2;
-            var17 = -var17;
-            var19 = var17 * var17 + var15;
-            var18 = var19 - var16;
-            var19 = var19 - var17;
-            L5: while (true) {
-              if (var14 >= var13) {
-                return;
+        if (param4 != 0) {
+          if (param4 != 256) {
+            L0: {
+              if (param2 >= 0) {
+                break L0;
               } else {
-                L6: while (true) {
-                  L7: {
-                    if (var19 <= var15) {
-                      break L7;
-                    } else {
-                      if (var18 <= var15) {
-                        break L7;
-                      } else {
-                        int incrementValue$6 = var16;
-                        var16--;
-                        var19 = var19 - (incrementValue$6 + var16);
-                        var18 = var18 - (var16 + var16);
-                        continue L6;
+                param2 = -param2;
+                break L0;
+              }
+            }
+            L1: {
+              var5 = 256 - param4;
+              var6 = (param3 >> 16 & 255) * param4;
+              var7 = (param3 >> 8 & 255) * param4;
+              var8 = (param3 & 255) * param4;
+              var12 = param1 - param2;
+              if (var12 >= field_k) {
+                break L1;
+              } else {
+                var12 = field_k;
+                break L1;
+              }
+            }
+            L2: {
+              var13 = param1 + param2 + 1;
+              if (var13 <= field_j) {
+                break L2;
+              } else {
+                var13 = field_j;
+                break L2;
+              }
+            }
+            L3: {
+              var14 = var12;
+              var15 = param2 * param2;
+              var16 = 0;
+              var17 = param1 - var14;
+              var18 = var17 * var17;
+              var19 = var18 - var17;
+              if (param1 <= var13) {
+                break L3;
+              } else {
+                param1 = var13;
+                break L3;
+              }
+            }
+            L4: while (true) {
+              if (var14 >= param1) {
+                var16 = param2;
+                var17 = -var17;
+                var19 = var17 * var17 + var15;
+                var18 = var19 - var16;
+                var19 = var19 - var17;
+                L5: while (true) {
+                  if (var14 >= var13) {
+                    return;
+                  } else {
+                    L6: while (true) {
+                      L7: {
+                        if (var19 <= var15) {
+                          break L7;
+                        } else {
+                          if (var18 <= var15) {
+                            break L7;
+                          } else {
+                            incrementValue$6 = var16;
+                            var16--;
+                            var19 = var19 - (incrementValue$6 + var16);
+                            var18 = var18 - (var16 + var16);
+                            continue L6;
+                          }
+                        }
+                      }
+                      L8: {
+                        var20 = param0 - var16;
+                        if (var20 >= field_a) {
+                          break L8;
+                        } else {
+                          var20 = field_a;
+                          break L8;
+                        }
+                      }
+                      L9: {
+                        var21 = param0 + var16;
+                        if (var21 <= field_b - 1) {
+                          break L9;
+                        } else {
+                          var21 = field_b - 1;
+                          break L9;
+                        }
+                      }
+                      var25 = var20 + var14 * field_l;
+                      var22 = var25;
+                      var23 = var20;
+                      L10: while (true) {
+                        if (var23 > var21) {
+                          var14++;
+                          var19 = var19 + (var17 + var17);
+                          incrementValue$7 = var17;
+                          var17++;
+                          var18 = var18 + (incrementValue$7 + var17);
+                          continue L5;
+                        } else {
+                          var9 = (field_i[var25] >> 16 & 255) * var5;
+                          var10 = (field_i[var25] >> 8 & 255) * var5;
+                          var11 = (field_i[var25] & 255) * var5;
+                          var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
+                          incrementValue$8 = var25;
+                          var25++;
+                          field_i[incrementValue$8] = var24;
+                          var23++;
+                          continue L10;
+                        }
                       }
                     }
                   }
-                  L8: {
-                    var20 = param0 - var16;
-                    if (var20 >= field_a) {
-                      break L8;
+                }
+              } else {
+                L11: while (true) {
+                  L12: {
+                    if (var19 <= var15) {
+                      break L12;
                     } else {
-                      var20 = field_a;
-                      break L8;
+                      if (var18 > var15) {
+                        L13: {
+                          var20 = param0 - var16 + 1;
+                          if (var20 >= field_a) {
+                            break L13;
+                          } else {
+                            var20 = field_a;
+                            break L13;
+                          }
+                        }
+                        L14: {
+                          var21 = param0 + var16;
+                          if (var21 <= field_b) {
+                            break L14;
+                          } else {
+                            var21 = field_b;
+                            break L14;
+                          }
+                        }
+                        var22 = var20 + var14 * field_l;
+                        var23 = var20;
+                        L15: while (true) {
+                          if (var23 >= var21) {
+                            var14++;
+                            incrementValue$9 = var17;
+                            var17--;
+                            var18 = var18 - (incrementValue$9 + var17);
+                            var19 = var19 - (var17 + var17);
+                            continue L4;
+                          } else {
+                            var9 = (field_i[var22] >> 16 & 255) * var5;
+                            var10 = (field_i[var22] >> 8 & 255) * var5;
+                            var11 = (field_i[var22] & 255) * var5;
+                            var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
+                            incrementValue$10 = var22;
+                            var22++;
+                            field_i[incrementValue$10] = var24;
+                            var23++;
+                            continue L15;
+                          }
+                        }
+                      } else {
+                        break L12;
+                      }
                     }
                   }
-                  L9: {
-                    var21 = param0 + var16;
-                    if (var21 <= field_b - 1) {
-                      break L9;
-                    } else {
-                      var21 = field_b - 1;
-                      break L9;
-                    }
-                  }
-                  var25 = var20 + var14 * field_l;
-                  var22 = var25;
-                  var23 = var20;
-                  L10: while (true) {
-                    if (var23 > var21) {
-                      var14++;
-                      var19 = var19 + (var17 + var17);
-                      int incrementValue$7 = var17;
-                      var17++;
-                      var18 = var18 + (incrementValue$7 + var17);
-                      continue L5;
-                    } else {
-                      var9 = (field_i[var25] >> 16 & 255) * var5;
-                      var10 = (field_i[var25] >> 8 & 255) * var5;
-                      var11 = (field_i[var25] & 255) * var5;
-                      var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-                      int incrementValue$8 = var25;
-                      var25++;
-                      field_i[incrementValue$8] = var24;
-                      var23++;
-                      continue L10;
-                    }
-                  }
+                  var18 = var18 + (var16 + var16);
+                  incrementValue$11 = var16;
+                  var16++;
+                  var19 = var19 + (incrementValue$11 + var16);
+                  continue L11;
                 }
               }
             }
           } else {
-            L11: while (true) {
-              L12: {
-                if (var19 <= var15) {
-                  break L12;
-                } else {
-                  if (var18 > var15) {
-                    L13: {
-                      var20 = param0 - var16 + 1;
-                      if (var20 >= field_a) {
-                        break L13;
-                      } else {
-                        var20 = field_a;
-                        break L13;
-                      }
-                    }
-                    L14: {
-                      var21 = param0 + var16;
-                      if (var21 <= field_b) {
-                        break L14;
-                      } else {
-                        var21 = field_b;
-                        break L14;
-                      }
-                    }
-                    var22 = var20 + var14 * field_l;
-                    var23 = var20;
-                    L15: while (true) {
-                      if (var23 >= var21) {
-                        var14++;
-                        int incrementValue$9 = var17;
-                        var17--;
-                        var18 = var18 - (incrementValue$9 + var17);
-                        var19 = var19 - (var17 + var17);
-                        continue L4;
-                      } else {
-                        var9 = (field_i[var22] >> 16 & 255) * var5;
-                        var10 = (field_i[var22] >> 8 & 255) * var5;
-                        var11 = (field_i[var22] & 255) * var5;
-                        var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-                        int incrementValue$10 = var22;
-                        var22++;
-                        field_i[incrementValue$10] = var24;
-                        var23++;
-                        continue L15;
-                      }
-                    }
-                  } else {
-                    break L12;
-                  }
-                }
-              }
-              var18 = var18 + (var16 + var16);
-              int incrementValue$11 = var16;
-              var16++;
-              var19 = var19 + (incrementValue$11 + var16);
-              continue L11;
-            }
+            em.d(param0, param1, param2, param3);
+            return;
           }
+        } else {
+          return;
         }
     }
 
@@ -225,6 +240,7 @@ final class em {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int incrementValue$0 = 0;
         if (param0 < field_a) {
             param2 = param2 - (field_a - param0);
             param0 = field_a;
@@ -247,7 +263,7 @@ final class em {
             for (var10 = -param2; var10 < 0; var10++) {
                 var11 = field_i[var8];
                 var11 = ((var11 & 16711935) * var6 >> 8 & 16711935) + ((var11 & 65280) * var6 >> 8 & 65280);
-                int incrementValue$0 = var8;
+                incrementValue$0 = var8;
                 var8++;
                 field_i[incrementValue$0] = param4 + var11;
             }
@@ -310,6 +326,7 @@ final class em {
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$1 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -374,7 +391,7 @@ final class em {
                 var10++;
                 continue L4;
               } else {
-                int incrementValue$1 = var9;
+                incrementValue$1 = var9;
                 var9++;
                 field_i[incrementValue$1] = var13;
                 var14++;
@@ -386,8 +403,8 @@ final class em {
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        em.a(field_i, 0, 0 * field_l, 4, 0, 540, field_l - 540, 140);
-        em.a(field_i, 0, 0 * field_l, 4, 0, 140, field_l - 540, 0, 540);
+        em.a(field_i, 0, param2 + param3 * field_l, param0, param2, param4, field_l - param4, param5);
+        em.a(field_i, 0, param2 + param3 * field_l, param1, param3, param5, field_l - param4, param2, param4);
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4) {
@@ -395,8 +412,8 @@ final class em {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            em.c(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
-            em.f(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
+            em.c(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+            em.f(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
@@ -418,6 +435,7 @@ final class em {
         int var10 = 0;
         int var11 = 0;
         int var14 = 0;
+        int incrementValue$0 = 0;
         if (param1 >= field_k) {
             if (param1 >= field_j) {
                 return;
@@ -439,7 +457,7 @@ final class em {
                 var10 = (field_i[var12] >> 8 & 255) * var5;
                 var11 = (field_i[var12] & 255) * var5;
                 var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-                int incrementValue$0 = var12;
+                incrementValue$0 = var12;
                 var12++;
                 field_i[incrementValue$0] = var14;
             }
@@ -450,6 +468,7 @@ final class em {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = 0;
+        int incrementValue$0 = 0;
         if (param0 < field_a) {
             param2 = param2 - (field_a - param0);
             param0 = field_a;
@@ -468,7 +487,7 @@ final class em {
         int var6 = param0 + param1 * field_l;
         for (var7 = -param3; var7 < 0; var7++) {
             for (var8 = -param2; var8 < 0; var8++) {
-                int incrementValue$0 = var6;
+                incrementValue$0 = var6;
                 var6++;
                 field_i[incrementValue$0] = param4;
             }
@@ -505,6 +524,7 @@ final class em {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int incrementValue$0 = 0;
         if (param0 < field_a) {
             param2 = param2 - (field_a - param0);
             param0 = field_a;
@@ -531,7 +551,7 @@ final class em {
                     var9 = var7 >> 8 & 255;
                     var10 = var7 & 255;
                     var11 = (var10 + var8) / 3 + var9 >> 1;
-                    int incrementValue$0 = var4;
+                    incrementValue$0 = var4;
                     var4++;
                     field_i[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
                 }
@@ -575,6 +595,12 @@ final class em {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -592,8 +618,8 @@ final class em {
         int var22 = 0;
         int var23 = 0;
         L0: {
-          var8 = 1820;
-          var9 = -535;
+          var8 = 16384 / (2 * param3 + 1);
+          var9 = 1 + param3 - param5 - param4;
           if (0 >= var9) {
             break L0;
           } else {
@@ -602,7 +628,7 @@ final class em {
           }
         }
         L1: {
-          var10 = field_l - 544;
+          var10 = field_l - param4 - param5 - param3;
           if (0 >= var10) {
             break L1;
           } else {
@@ -612,7 +638,7 @@ final class em {
         }
         L2: {
           var11 = 0;
-          var12 = 5;
+          var12 = param4 + param3 + 1;
           if (field_l >= var12) {
             break L2;
           } else {
@@ -621,7 +647,7 @@ final class em {
             break L2;
           }
         }
-        var13 = -140;
+        var13 = -param7;
         L3: while (true) {
           if (var13 >= 0) {
             return;
@@ -630,9 +656,9 @@ final class em {
               var14 = 0;
               var15 = 0;
               var16 = 0;
-              var17 = param2 - 4;
-              var18 = var17 - 9;
-              var19 = -4;
+              var17 = param2 - param3;
+              var18 = var17 - (param3 << 1) - 1;
+              var19 = param4 - param3;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -646,10 +672,10 @@ final class em {
             L5: while (true) {
               if (var19 >= var12) {
                 var18 = var18 + var11;
-                int incrementValue$6 = param2;
+                incrementValue$6 = param2;
                 param2++;
                 param0[incrementValue$6] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
-                var19 = -539;
+                var19 = 1 - param5;
                 L6: while (true) {
                   if (var19 >= var9) {
                     L7: while (true) {
@@ -661,7 +687,7 @@ final class em {
                             continue L3;
                           } else {
                             L9: {
-                              int incrementValue$7 = var18;
+                              incrementValue$7 = var18;
                               var18++;
                               param1 = param0[incrementValue$7];
                               var14 = var14 - (param1 >> 16 & 255);
@@ -709,7 +735,7 @@ final class em {
                                 break L11;
                               }
                             }
-                            int incrementValue$8 = param2;
+                            incrementValue$8 = param2;
                             param2++;
                             param0[incrementValue$8] = (var21 << 16) + (var22 << 8) + var23;
                             var19++;
@@ -718,7 +744,7 @@ final class em {
                         }
                       } else {
                         L12: {
-                          int incrementValue$9 = var18;
+                          incrementValue$9 = var18;
                           var18++;
                           param1 = param0[incrementValue$9];
                           var14 = var14 - (param1 >> 16 & 255);
@@ -779,7 +805,7 @@ final class em {
                             break L17;
                           }
                         }
-                        int incrementValue$10 = param2;
+                        incrementValue$10 = param2;
                         param2++;
                         param0[incrementValue$10] = (var21 << 16) + (var22 << 8) + var23;
                         var19++;
@@ -789,7 +815,7 @@ final class em {
                   } else {
                     L18: {
                       var18++;
-                      if (540 + var19 + 4 >= field_b) {
+                      if (param4 + param5 + var19 + param3 >= field_b) {
                         break L18;
                       } else {
                         param1 = param0[var17];
@@ -804,7 +830,7 @@ final class em {
                     var21 = var14 / var20;
                     var22 = var15 / var20;
                     var23 = var16 / var20;
-                    int incrementValue$11 = param2;
+                    incrementValue$11 = param2;
                     param2++;
                     param0[incrementValue$11] = (var21 << 16) + (var22 << 8) + var23;
                     var19++;
@@ -827,11 +853,11 @@ final class em {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        em.c(param0, param1, param2, 16711680, param5);
-        em.c(param0, param1 + param3 - 1, param2, 16711680, param5);
+        em.c(param0, param1, param2, param4, param5);
+        em.c(param0, param1 + param3 - 1, param2, param4, param5);
         if (param3 >= 3) {
-            em.f(param0, param1 + 1, param3 - 2, 16711680, param5);
-            em.f(param0 + param2 - 1, param1 + 1, param3 - 2, 16711680, param5);
+            em.f(param0, param1 + 1, param3 - 2, param4, param5);
+            em.f(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
             return;
         }
     }
@@ -992,6 +1018,15 @@ final class em {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         int[] var9 = null;
         int[] var10 = null;
         int[] var11 = null;
@@ -1013,12 +1048,6 @@ final class em {
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
-        int[] var30 = null;
-        int[] var31 = null;
-        int[] var32 = null;
-        int[] var33 = null;
-        int[] var34 = null;
-        int[] var35 = null;
         int[] stackIn_37_0 = null;
         int stackIn_37_1 = 0;
         int[] stackIn_38_0 = null;
@@ -1069,39 +1098,33 @@ final class em {
             if (field_h == null) {
               break L1;
             } else {
-              if (field_h.length >= 540) {
+              if (field_h.length >= param8) {
                 break L0;
               } else {
                 break L1;
               }
             }
           }
-          field_h = new int[540];
-          field_e = new int[540];
-          field_g = new int[540];
+          field_h = new int[param8];
+          field_e = new int[param8];
+          field_g = new int[param8];
           break L0;
         }
         L2: {
-          var33 = field_h;
-          var30 = var33;
-          var27 = var30;
+          var27 = field_h;
           var24 = var27;
           var9 = var24;
-          var34 = field_e;
-          var31 = var34;
-          var28 = var31;
+          var28 = field_e;
           var25 = var28;
           var10 = var25;
-          var35 = field_g;
-          var32 = var35;
-          var29 = var32;
+          var29 = field_g;
           var26 = var29;
           var11 = var26;
-          qg.a(var33, 0, 540);
-          qg.a(var34, 0, 540);
-          qg.a(var35, 0, 540);
-          var12 = 1820;
-          var13 = -4;
+          qg.a(var27, 0, param8);
+          qg.a(var28, 0, param8);
+          qg.a(var29, 0, param8);
+          var12 = 16384 / (2 * param3 + 1);
+          var13 = param4 - param3;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -1110,8 +1133,8 @@ final class em {
           }
         }
         L3: {
-          var14 = var13 * field_l;
-          var15 = 4;
+          var14 = param7 + var13 * field_l;
+          var15 = param4 + param3;
           var16 = 0;
           if (var15 < field_d) {
             break L3;
@@ -1127,11 +1150,11 @@ final class em {
             var14 = var14 + var16 * field_l;
             var18 = 0;
             L5: while (true) {
-              if (var18 >= 540) {
+              if (var18 >= param8) {
                 L6: {
                   param2 = param2 + param6;
-                  var13 = -139;
-                  var18 = -135;
+                  var13 = 1 - param5;
+                  var18 = 1 + param3 - param5 - param4;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -1140,7 +1163,7 @@ final class em {
                   }
                 }
                 L7: {
-                  var19 = -4 * field_l;
+                  var19 = param7 + (param4 - param3) * field_l;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -1151,7 +1174,7 @@ final class em {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_d - 144;
+                      var18 = field_d - param4 - param5 - param3;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -1167,20 +1190,20 @@ final class em {
                           } else {
                             var20 = 0;
                             L12: while (true) {
-                              if (var20 >= 540) {
+                              if (var20 >= param8) {
                                 var19 = var19 + param6;
                                 var17--;
                                 var20 = 0;
                                 L13: while (true) {
-                                  if (var20 >= 540) {
+                                  if (var20 >= param8) {
                                     param2 = param2 + param6;
                                     var13++;
                                     continue L11;
                                   } else {
                                     L14: {
-                                      var21 = var33[var20] / var17;
-                                      var22 = var34[var20] / var17;
-                                      var23 = var35[var20] / var17;
+                                      var21 = var27[var20] / var17;
+                                      var22 = var28[var20] / var17;
+                                      var23 = var29[var20] / var17;
                                       if (var21 >= 0) {
                                         if (var21 <= 255) {
                                           break L14;
@@ -1219,7 +1242,7 @@ final class em {
                                         break L16;
                                       }
                                     }
-                                    int incrementValue$9 = param2;
+                                    incrementValue$9 = param2;
                                     param2++;
                                     param0[incrementValue$9] = (var21 << 16) + (var22 << 8) + var23;
                                     var20++;
@@ -1227,7 +1250,7 @@ final class em {
                                   }
                                 }
                               } else {
-                                int incrementValue$10 = var19;
+                                incrementValue$10 = var19;
                                 var19++;
                                 param1 = param0[incrementValue$10];
                                 var9[var20] = var9[var20] - (param1 >> 16 & 255);
@@ -1242,23 +1265,23 @@ final class em {
                       } else {
                         var20 = 0;
                         L17: while (true) {
-                          if (var20 >= 540) {
+                          if (var20 >= param8) {
                             var19 = var19 + param6;
                             var20 = 0;
                             L18: while (true) {
-                              if (var20 >= 540) {
+                              if (var20 >= param8) {
                                 var14 = var14 + param6;
                                 var20 = 0;
                                 L19: while (true) {
-                                  if (var20 >= 540) {
+                                  if (var20 >= param8) {
                                     param2 = param2 + param6;
                                     var13++;
                                     continue L10;
                                   } else {
                                     L20: {
-                                      var21 = var33[var20] * var12 >> 14;
-                                      var22 = var34[var20] * var12 >> 14;
-                                      var23 = var35[var20] * var12 >> 14;
+                                      var21 = var27[var20] * var12 >> 14;
+                                      var22 = var28[var20] * var12 >> 14;
+                                      var23 = var29[var20] * var12 >> 14;
                                       if (var21 <= 255) {
                                         break L20;
                                       } else {
@@ -1282,7 +1305,7 @@ final class em {
                                         break L22;
                                       }
                                     }
-                                    int incrementValue$11 = param2;
+                                    incrementValue$11 = param2;
                                     param2++;
                                     param0[incrementValue$11] = (var21 << 16) + (var22 << 8) + var23;
                                     var20++;
@@ -1290,7 +1313,7 @@ final class em {
                                   }
                                 }
                               } else {
-                                int incrementValue$12 = var14;
+                                incrementValue$12 = var14;
                                 var14++;
                                 param1 = param0[incrementValue$12];
                                 var9[var20] = var9[var20] + (param1 >> 16 & 255);
@@ -1302,18 +1325,18 @@ final class em {
                             }
                           } else {
                             L23: {
-                              int incrementValue$13 = var19;
+                              incrementValue$13 = var19;
                               var19++;
                               param1 = param0[incrementValue$13];
-                              var21 = var33[var20] - (param1 >> 16 & 255);
-                              stackOut_36_0 = (int[]) var9;
+                              var21 = var27[var20] - (param1 >> 16 & 255);
+                              stackOut_36_0 = (int[]) (var9);
                               stackOut_36_1 = var20;
                               stackIn_38_0 = stackOut_36_0;
                               stackIn_38_1 = stackOut_36_1;
                               stackIn_37_0 = stackOut_36_0;
                               stackIn_37_1 = stackOut_36_1;
                               if (var21 >= 0) {
-                                stackOut_38_0 = (int[]) (Object) stackIn_38_0;
+                                stackOut_38_0 = (int[]) ((Object) stackIn_38_0);
                                 stackOut_38_1 = stackIn_38_1;
                                 stackOut_38_2 = var21;
                                 stackIn_39_0 = stackOut_38_0;
@@ -1321,7 +1344,7 @@ final class em {
                                 stackIn_39_2 = stackOut_38_2;
                                 break L23;
                               } else {
-                                stackOut_37_0 = (int[]) (Object) stackIn_37_0;
+                                stackOut_37_0 = (int[]) ((Object) stackIn_37_0);
                                 stackOut_37_1 = stackIn_37_1;
                                 stackOut_37_2 = 0;
                                 stackIn_39_0 = stackOut_37_0;
@@ -1332,15 +1355,15 @@ final class em {
                             }
                             L24: {
                               stackIn_39_0[stackIn_39_1] = stackIn_39_2;
-                              var21 = var34[var20] - (param1 >> 8 & 255);
-                              stackOut_39_0 = (int[]) var10;
+                              var21 = var28[var20] - (param1 >> 8 & 255);
+                              stackOut_39_0 = (int[]) (var10);
                               stackOut_39_1 = var20;
                               stackIn_41_0 = stackOut_39_0;
                               stackIn_41_1 = stackOut_39_1;
                               stackIn_40_0 = stackOut_39_0;
                               stackIn_40_1 = stackOut_39_1;
                               if (var21 >= 0) {
-                                stackOut_41_0 = (int[]) (Object) stackIn_41_0;
+                                stackOut_41_0 = (int[]) ((Object) stackIn_41_0);
                                 stackOut_41_1 = stackIn_41_1;
                                 stackOut_41_2 = var21;
                                 stackIn_42_0 = stackOut_41_0;
@@ -1348,7 +1371,7 @@ final class em {
                                 stackIn_42_2 = stackOut_41_2;
                                 break L24;
                               } else {
-                                stackOut_40_0 = (int[]) (Object) stackIn_40_0;
+                                stackOut_40_0 = (int[]) ((Object) stackIn_40_0);
                                 stackOut_40_1 = stackIn_40_1;
                                 stackOut_40_2 = 0;
                                 stackIn_42_0 = stackOut_40_0;
@@ -1359,15 +1382,15 @@ final class em {
                             }
                             L25: {
                               stackIn_42_0[stackIn_42_1] = stackIn_42_2;
-                              var21 = var35[var20] - (param1 & 255);
-                              stackOut_42_0 = (int[]) var11;
+                              var21 = var29[var20] - (param1 & 255);
+                              stackOut_42_0 = (int[]) (var11);
                               stackOut_42_1 = var20;
                               stackIn_44_0 = stackOut_42_0;
                               stackIn_44_1 = stackOut_42_1;
                               stackIn_43_0 = stackOut_42_0;
                               stackIn_43_1 = stackOut_42_1;
                               if (var21 >= 0) {
-                                stackOut_44_0 = (int[]) (Object) stackIn_44_0;
+                                stackOut_44_0 = (int[]) ((Object) stackIn_44_0);
                                 stackOut_44_1 = stackIn_44_1;
                                 stackOut_44_2 = var21;
                                 stackIn_45_0 = stackOut_44_0;
@@ -1375,7 +1398,7 @@ final class em {
                                 stackIn_45_2 = stackOut_44_2;
                                 break L25;
                               } else {
-                                stackOut_43_0 = (int[]) (Object) stackIn_43_0;
+                                stackOut_43_0 = (int[]) ((Object) stackIn_43_0);
                                 stackOut_43_1 = stackIn_43_1;
                                 stackOut_43_2 = 0;
                                 stackIn_45_0 = stackOut_43_0;
@@ -1393,18 +1416,18 @@ final class em {
                     }
                   } else {
                     L26: {
-                      if (var13 + 144 >= field_j) {
+                      if (var13 + param4 + param5 + param3 >= field_j) {
                         var14 = var14 + field_l;
                         break L26;
                       } else {
                         var20 = 0;
                         L27: while (true) {
-                          if (var20 >= 540) {
+                          if (var20 >= param8) {
                             var14 = var14 + param6;
                             var17++;
                             break L26;
                           } else {
-                            int incrementValue$14 = var14;
+                            incrementValue$14 = var14;
                             var14++;
                             param1 = param0[incrementValue$14];
                             var9[var20] = var9[var20] + (param1 >> 16 & 255);
@@ -1418,15 +1441,15 @@ final class em {
                     }
                     var20 = 0;
                     L28: while (true) {
-                      if (var20 >= 540) {
+                      if (var20 >= param8) {
                         param2 = param2 + param6;
                         var13++;
                         continue L8;
                       } else {
-                        var21 = var33[var20] / var17;
-                        var22 = var34[var20] / var17;
-                        var23 = var35[var20] / var17;
-                        int incrementValue$15 = param2;
+                        var21 = var27[var20] / var17;
+                        var22 = var28[var20] / var17;
+                        var23 = var29[var20] / var17;
+                        incrementValue$15 = param2;
                         param2++;
                         param0[incrementValue$15] = (var21 << 16) + (var22 << 8) + var23;
                         var20++;
@@ -1436,9 +1459,9 @@ final class em {
                   }
                 }
               } else {
-                int incrementValue$16 = param2;
+                incrementValue$16 = param2;
                 param2++;
-                param0[incrementValue$16] = (var33[var18] / var17 << 16) + (var34[var18] / var17 << 8) + var35[var18] / var17;
+                param0[incrementValue$16] = (var27[var18] / var17 << 16) + (var28[var18] / var17 << 8) + var29[var18] / var17;
                 var18++;
                 continue L5;
               }
@@ -1446,12 +1469,12 @@ final class em {
           } else {
             var18 = 0;
             L29: while (true) {
-              if (var18 >= 540) {
+              if (var18 >= param8) {
                 var14 = var14 + param6;
                 var13++;
                 continue L4;
               } else {
-                int incrementValue$17 = var14;
+                incrementValue$17 = var14;
                 var14++;
                 param1 = param0[incrementValue$17];
                 var9[var18] = var9[var18] + (param1 >> 16 & 255);
@@ -1529,6 +1552,12 @@ final class em {
     }
 
     final static void d(int param0, int param1, int param2, int param3) {
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1601,7 +1630,7 @@ final class em {
                         if (var10 <= var7) {
                           break L7;
                         } else {
-                          int incrementValue$6 = var8;
+                          incrementValue$6 = var8;
                           var8--;
                           var11 = var11 - (incrementValue$6 + var8);
                           var10 = var10 - (var8 + var8);
@@ -1633,12 +1662,12 @@ final class em {
                       if (var15 > var13) {
                         var6++;
                         var11 = var11 + (var9 + var9);
-                        int incrementValue$7 = var9;
+                        incrementValue$7 = var9;
                         var9++;
                         var10 = var10 + (incrementValue$7 + var9);
                         continue L5;
                       } else {
-                        int incrementValue$8 = var14;
+                        incrementValue$8 = var14;
                         var14++;
                         field_i[incrementValue$8] = param3;
                         var15++;
@@ -1678,13 +1707,13 @@ final class em {
                       L15: while (true) {
                         if (var15 >= var13) {
                           var6++;
-                          int incrementValue$9 = var9;
+                          incrementValue$9 = var9;
                           var9--;
                           var10 = var10 - (incrementValue$9 + var9);
                           var11 = var11 - (var9 + var9);
                           continue L4;
                         } else {
-                          int incrementValue$10 = var14;
+                          incrementValue$10 = var14;
                           var14++;
                           field_i[incrementValue$10] = param3;
                           var15++;
@@ -1697,7 +1726,7 @@ final class em {
                   }
                 }
                 var10 = var10 + (var8 + var8);
-                int incrementValue$11 = var8;
+                incrementValue$11 = var8;
                 var8++;
                 var11 = var11 + (incrementValue$11 + var8);
                 continue L11;
@@ -1731,6 +1760,8 @@ final class em {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1789,7 +1820,7 @@ final class em {
                                       field_i[var7] = param3;
                                       L5: while (true) {
                                         L6: {
-                                          int incrementValue$2 = var9;
+                                          incrementValue$2 = var9;
                                           var9++;
                                           var10 = var10 + (incrementValue$2 + var9);
                                           var4 = var4 - field_l;
@@ -1892,7 +1923,7 @@ final class em {
                             }
                             L10: while (true) {
                               L11: {
-                                int incrementValue$3 = var9;
+                                incrementValue$3 = var9;
                                 var9++;
                                 var10 = var10 + (incrementValue$3 + var9);
                                 var4 = var4 - field_l;
@@ -2116,47 +2147,52 @@ final class em {
     }
 
     final static void d() {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
         int var0 = 0;
         int var1 = field_l * field_d - 7;
         while (var0 < var1) {
-            int incrementValue$0 = var0;
+            incrementValue$0 = var0;
             var0++;
             field_i[incrementValue$0] = 0;
-            int incrementValue$1 = var0;
+            incrementValue$1 = var0;
             var0++;
             field_i[incrementValue$1] = 0;
-            int incrementValue$2 = var0;
+            incrementValue$2 = var0;
             var0++;
             field_i[incrementValue$2] = 0;
-            int incrementValue$3 = var0;
+            incrementValue$3 = var0;
             var0++;
             field_i[incrementValue$3] = 0;
-            int incrementValue$4 = var0;
+            incrementValue$4 = var0;
             var0++;
             field_i[incrementValue$4] = 0;
-            int incrementValue$5 = var0;
+            incrementValue$5 = var0;
             var0++;
             field_i[incrementValue$5] = 0;
-            int incrementValue$6 = var0;
+            incrementValue$6 = var0;
             var0++;
             field_i[incrementValue$6] = 0;
-            int incrementValue$7 = var0;
+            incrementValue$7 = var0;
             var0++;
             field_i[incrementValue$7] = 0;
         }
         var1 += 7;
         while (var0 < var1) {
-            int incrementValue$8 = var0;
+            incrementValue$8 = var0;
             var0++;
             field_i[incrementValue$8] = 0;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = 0;
         field_b = 0;
         field_k = 0;

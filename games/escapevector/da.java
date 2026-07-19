@@ -8,12 +8,21 @@ final class da {
     static String field_a;
 
     final static void a(byte param0) {
-        if (!(nf.field_u)) {
-            throw new IllegalStateException();
+        if (!nf.field_u) {
+          throw new IllegalStateException();
+        } else {
+          c.field_u = true;
+          if (param0 != -112) {
+            field_d = (String[]) null;
+            ic.a((byte) -123, false);
+            ff.field_e = 0;
+            return;
+          } else {
+            ic.a((byte) -123, false);
+            ff.field_e = 0;
+            return;
+          }
         }
-        c.field_u = true;
-        ic.a((byte) -123, false);
-        ff.field_e = 0;
     }
 
     final static boolean c(byte param0) {
@@ -41,7 +50,7 @@ final class da {
     }
 
     final static te b(byte param0) {
-        int var2 = 0;
+        int var2 = 85 % ((param0 - -46) / 39);
         te var1 = new te(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], qe.field_a[0], qk.field_f);
         of.a(false);
         return var1;
@@ -49,6 +58,9 @@ final class da {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != 0) {
+            return;
+        }
         field_d = null;
         field_a = null;
         field_c = null;
@@ -81,12 +93,12 @@ final class da {
               if (param1 <= -96) {
                 break L1;
               } else {
-                field_b = null;
+                field_b = (ta) null;
                 break L1;
               }
             }
             L2: {
-              if (param0.j(1, 8) != 1) {
+              if ((param0.j(1, 8) ^ -1) != -2) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
@@ -102,23 +114,23 @@ final class da {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_0 = (RuntimeException) (var2);
             stackOut_6_1 = new StringBuilder().append("da.B(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -126,16 +138,12 @@ final class da {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_5_0 != 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new String[]{"redsandstone", "venus", "moon", "alien", "virtual", "tutorial"};
         field_a = "Achievements";
     }

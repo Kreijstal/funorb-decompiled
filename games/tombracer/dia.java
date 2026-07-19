@@ -9,6 +9,12 @@ final class dia extends ela {
 
     public static void a(boolean param0) {
         field_o = null;
+        if (!param0) {
+            field_r = (float[]) null;
+            field_p = null;
+            field_r = null;
+            return;
+        }
         field_p = null;
         field_r = null;
     }
@@ -16,6 +22,13 @@ final class dia extends ela {
     final static ka a(boolean param0, int param1, boolean param2, byte param3) {
         if (param0) {
             return ola.field_Ib[param1];
+        }
+        if (param3 < 119) {
+            field_q = 'ﾶ';
+            if (!(!param2)) {
+                return mma.field_b[param1];
+            }
+            return jma.field_a[param1];
         }
         if (!(!param2)) {
             return mma.field_b[param1];
@@ -25,7 +38,7 @@ final class dia extends ela {
 
     final bfa a(bfa[] param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        bfa stackIn_2_0 = null;
         bfa stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -34,9 +47,10 @@ final class dia extends ela {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         bfa stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        bfa stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -48,36 +62,38 @@ final class dia extends ela {
         try {
           L0: {
             if (param1 == 0) {
-              stackOut_3_0 = new bfa((Object) (Object) sj.a((byte) 120));
+              stackOut_3_0 = new bfa(sj.a((byte) 120));
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (bfa) null;
               stackIn_2_0 = stackOut_1_0;
-              return (bfa) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("dia.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -85,9 +101,13 @@ final class dia extends ela {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     dia(String param0, Class[] param1, String param2) {
@@ -95,10 +115,6 @@ final class dia extends ela {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = new float[2];
         field_r = new float[4];
         field_q = ',';

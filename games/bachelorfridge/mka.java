@@ -49,7 +49,7 @@ final class mka extends bw {
                 break L1;
               }
             }
-            stackOut_2_0 = (sna) var8;
+            stackOut_2_0 = (sna) (var8);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -57,23 +57,23 @@ final class mka extends bw {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var8_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var8_ref;
+            stackOut_4_0 = (RuntimeException) (var8_ref);
             stackOut_4_1 = new StringBuilder().append("mka.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param4 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -81,7 +81,7 @@ final class mka extends bw {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
         return stackIn_3_0;
     }
@@ -96,20 +96,16 @@ final class mka extends bw {
 
     mka(mka param0, int param1, int param2, int param3) {
         try {
-            ((mka) this).field_l = param3;
-            ((mka) this).field_k = param1;
-            ((mka) this).field_h = param0;
-            ((mka) this).field_g = param2;
+            this.field_l = param3;
+            this.field_k = param1;
+            this.field_h = param0;
+            this.field_g = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "mka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "mka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new String[]{"Sausage", "Bacon", "Chinese Takeaway", "Indian Takeaway", "Eggs", "Brussel Sprouts", "Milk", "Cheddar", "Strawberry Moose", "Southern Fried Chicken", "Mystery Meat", "Butter", "Baked Beans", "Pet Food", "Pizza", "Sushi", "Cake", "Tuna", "Espresso", "Cola", "Open Beer", "Trainer", "Banana", "Tofu", "Jam", "Cereal", "Gingerbread Man", "Pickled Onions", "Burger", "Fruit Juice", "Kebab", "Glow Sticks", "Caviar", "Passion fruit", "Roast Beef", "Yorkshire Pudding", "Turkey", "Pork Pie", "Tea", "Scone", "Carrot", "Haggis", "Hot Cross Buns", "Kippers", "Shellfish", "Energy Drink", "Cucumber", "Mince Pie", "Stilton cheese", "Doughnut"};
         field_j = true;
         field_f = new eaa();

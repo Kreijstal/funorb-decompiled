@@ -6,13 +6,13 @@ final class ss extends bd {
     static String[] field_s;
 
     ss(int param0, int param1, int param2, int param3) {
-        ((ss) this).field_m = param3;
+        this.field_m = param3;
     }
 
     public static void a(byte param0) {
         field_t = null;
         field_s = null;
-        int var1 = -80;
+        int var1 = -80 / ((48 - param0) / 47);
     }
 
     final void a(int param0, ha param1) {
@@ -39,7 +39,7 @@ final class ss extends bd {
               if (param0 == 64) {
                 break L1;
               } else {
-                field_s = null;
+                field_s = (String[]) null;
                 break L1;
               }
             }
@@ -49,23 +49,23 @@ final class ss extends bd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ss.C(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -73,15 +73,11 @@ final class ss extends bd {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = new at();
         field_s = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
     }

@@ -23,14 +23,13 @@ final class jq {
         field_c = null;
         field_d = null;
         field_e = null;
+        if (param0) {
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "<%0> would need a rating of <%1> to play with the current options.";
         field_b = "Ball-in-hand";
         field_g = 0;

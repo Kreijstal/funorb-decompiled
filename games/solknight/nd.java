@@ -17,7 +17,7 @@ public class nd {
 
     public static File a(String param0, int param1) {
         if (param1 != -19154) {
-            return null;
+            return (File) null;
         }
         return nd.a(field_a, param0, field_d, (byte) -75);
     }
@@ -95,10 +95,6 @@ public class nd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_c = new Hashtable(16);
     }

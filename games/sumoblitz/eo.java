@@ -28,20 +28,16 @@ final class eo {
         int var18 = 0;
         int[] var19 = null;
         int[] var22 = null;
-        int[] var25 = null;
-        int[] var28 = null;
-        float[] var29 = null;
-        float[] var30 = null;
+        float[] var27 = null;
+        float[] var28 = null;
         var4 = 0;
         L0: while (true) {
           if (var4 >= param1) {
             if (!param2) {
-              var4 = q.field_I[((eo) this).field_d].field_c;
-              var5 = ((eo) this).field_b - ((eo) this).field_a;
-              var6 = var5 / ((eo) this).field_g;
-              var28 = new int[var6];
-              var25 = var28;
-              var22 = var25;
+              var4 = q.field_I[this.field_d].field_c;
+              var5 = this.field_b - this.field_a;
+              var6 = var5 / this.field_g;
+              var22 = new int[var6];
               var19 = var22;
               var7 = var19;
               var8 = 0;
@@ -59,7 +55,7 @@ final class eo {
                         if (var8 != 0) {
                           break L3;
                         } else {
-                          var10 = q.field_I[((eo) this).field_d].b();
+                          var10 = q.field_I[this.field_d].b();
                           var11 = var4 - 1;
                           L4: while (true) {
                             if (var11 < 0) {
@@ -69,44 +65,44 @@ final class eo {
                                 if (var9 + var11 >= var6) {
                                   break L5;
                                 } else {
-                                  var7[var9 + var11] = var10 % ((eo) this).field_c;
+                                  var7[var9 + var11] = var10 % this.field_c;
                                   break L5;
                                 }
                               }
-                              var10 = var10 / ((eo) this).field_c;
+                              var10 = var10 / this.field_c;
                               var11--;
                               continue L4;
                             }
                           }
                         }
                       }
-                      var28 = var25;
+                      var22 = var19;
                       var10 = 0;
                       L6: while (true) {
                         if (var10 >= var4) {
                           continue L2;
                         } else {
                           L7: {
-                            var11 = var28[var9];
-                            var12 = ((eo) this).field_f[var11 * 8 + var8];
+                            var11 = var22[var9];
+                            var12 = this.field_f[var11 * 8 + var8];
                             if (var12 < 0) {
                               break L7;
                             } else {
-                              var13 = ((eo) this).field_a + var9 * ((eo) this).field_g;
+                              var13 = this.field_a + var9 * this.field_g;
                               var14 = q.field_I[var12];
-                              if (((eo) this).field_e != 0) {
+                              if (this.field_e != 0) {
                                 var15 = 0;
                                 L8: while (true) {
-                                  if (var15 >= ((eo) this).field_g) {
+                                  if (var15 >= this.field_g) {
                                     break L7;
                                   } else {
-                                    var30 = var14.c();
+                                    var28 = var14.c();
                                     var17 = 0;
                                     L9: while (true) {
                                       if (var17 >= var14.field_c) {
                                         continue L8;
                                       } else {
-                                        param0[var13 + var15] = param0[var13 + var15] + var30[var17];
+                                        param0[var13 + var15] = param0[var13 + var15] + var28[var17];
                                         var15++;
                                         var17++;
                                         continue L9;
@@ -115,20 +111,20 @@ final class eo {
                                   }
                                 }
                               } else {
-                                var15 = ((eo) this).field_g / var14.field_c;
+                                var15 = this.field_g / var14.field_c;
                                 var16 = 0;
                                 L10: while (true) {
                                   if (var16 >= var15) {
                                     break L7;
                                   } else {
-                                    var29 = var14.c();
+                                    var27 = var14.c();
                                     var18 = 0;
                                     L11: while (true) {
                                       if (var18 >= var14.field_c) {
                                         var16++;
                                         continue L10;
                                       } else {
-                                        param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var29[var18];
+                                        param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
                                         var18++;
                                         continue L11;
                                       }
@@ -163,18 +159,18 @@ final class eo {
     }
 
     eo() {
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ((eo) this).field_e = q.a(16);
-        ((eo) this).field_a = q.a(24);
-        ((eo) this).field_b = q.a(24);
-        ((eo) this).field_g = q.a(24) + 1;
-        ((eo) this).field_c = q.a(6) + 1;
-        ((eo) this).field_d = q.a(8);
-        int[] var1 = new int[((eo) this).field_c];
-        for (var2 = 0; var2 < ((eo) this).field_c; var2++) {
+        int var2 = 0;
+        this.field_e = q.a(16);
+        this.field_a = q.a(24);
+        this.field_b = q.a(24);
+        this.field_g = q.a(24) + 1;
+        this.field_c = q.a(6) + 1;
+        this.field_d = q.a(8);
+        int[] var1 = new int[this.field_c];
+        for (var2 = 0; var2 < this.field_c; var2++) {
             var3 = 0;
             var4 = q.a(3);
             var5 = q.b() != 0 ? 1 : 0;
@@ -183,11 +179,11 @@ final class eo {
             }
             var1[var2] = var3 << 3 | var4;
         }
-        ((eo) this).field_f = new int[((eo) this).field_c * 8];
+        this.field_f = new int[this.field_c * 8];
         int var6 = 0;
         var2 = var6;
-        while (var6 < ((eo) this).field_c * 8) {
-            ((eo) this).field_f[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? q.a(8) : -1;
+        while (var6 < this.field_c * 8) {
+            this.field_f[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? q.a(8) : -1;
             var6++;
         }
     }

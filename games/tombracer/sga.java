@@ -11,26 +11,29 @@ final class sga extends hha {
         if (param0 >= -7) {
             return -69;
         }
-        if (!(!((sga) this).field_m)) {
+        if (!(!this.field_m)) {
             return 0;
         }
         return 100;
     }
 
     final byte[] b(byte param0) {
-        if (((sga) this).field_m) {
+        if (this.field_m) {
           throw new RuntimeException();
         } else {
           if (param0 != -126) {
-            ((sga) this).field_o = null;
-            return ((sga) this).field_p;
+            this.field_o = (ppa) null;
+            return this.field_p;
           } else {
-            return ((sga) this).field_p;
+            return this.field_p;
           }
         }
     }
 
     public static void c(byte param0) {
+        if (param0 >= -100) {
+            return;
+        }
         field_n = null;
     }
 
@@ -38,10 +41,6 @@ final class sga extends hha {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = new su(6, 0, 4, 2);
     }
 }

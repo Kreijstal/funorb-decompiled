@@ -34,6 +34,7 @@ final class ok {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_12_0 = 0;
         int stackOut_8_0 = 0;
@@ -62,18 +63,21 @@ final class ok {
                     } else {
                       stackOut_12_0 = eh.a(var4, param2, -510336929);
                       stackIn_13_0 = stackOut_12_0;
+                      decompiledRegionSelector0 = 2;
                       break L0;
                     }
                   }
                 } else {
                   stackOut_8_0 = -54;
                   stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               } else {
-                stackOut_5_0 = (int)((long)param2 * (4294967295L & (long)param0.nextInt()) >> 32);
+                stackOut_5_0 = (int)((long)param2 * (4294967295L & (long)param0.nextInt()) >> -516798880);
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
+                decompiledRegionSelector0 = 0;
+                break L0;
               }
             }
           }
@@ -81,23 +85,23 @@ final class ok {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3;
+            stackOut_14_0 = (RuntimeException) (var3);
             stackOut_14_1 = new StringBuilder().append("ok.B(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -105,16 +109,20 @@ final class ok {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_13_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0;
+          } else {
+            return stackIn_13_0;
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Unable to delete name - system busy";
         field_c = "Suggested names: ";
         field_a = "You are invited to <%0>'s game.";

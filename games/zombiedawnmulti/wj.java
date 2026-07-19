@@ -39,14 +39,14 @@ final class wj extends br {
               if (param0 == 3) {
                 break L1;
               } else {
-                field_f = null;
+                field_f = (String) null;
                 break L1;
               }
             }
             var3 = new kf();
-            ((dl) (Object) var3).field_f = param1;
-            ((dl) (Object) var3).field_b = param2;
-            stackOut_2_0 = (kf) var3;
+            ((dl) ((Object) var3)).field_f = param1;
+            ((dl) ((Object) var3)).field_b = param2;
+            stackOut_2_0 = (kf) (var3);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -54,23 +54,23 @@ final class wj extends br {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_0 = (RuntimeException) (var3_ref);
             stackOut_4_1 = new StringBuilder().append("wj.B(").append(param0).append(',').append(param1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -78,42 +78,52 @@ final class wj extends br {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
-        return (dl) (Object) stackIn_3_0;
+        return (dl) ((Object) stackIn_3_0);
     }
 
     public static void a(int param0) {
-        field_h = null;
-        field_k = null;
-        field_l = null;
-        field_j = null;
-        field_f = null;
-        field_i = null;
+        if (param0 != -6298) {
+          field_i = (ub) null;
+          field_h = null;
+          field_k = null;
+          field_l = null;
+          field_j = null;
+          field_f = null;
+          field_i = null;
+          return;
+        } else {
+          field_h = null;
+          field_k = null;
+          field_l = null;
+          field_j = null;
+          field_f = null;
+          field_i = null;
+          return;
+        }
     }
 
     final static void b(boolean param0, int param1) {
+        dl discarded$0 = null;
         nb.field_a.a(39, 0, 0);
         if (param1 >= -109) {
-            Object var3 = null;
-            dl discarded$0 = wj.a((byte) 68, -37, (String) null);
+            String var3 = (String) null;
+            discarded$0 = wj.a((byte) 68, -37, (String) null);
         }
     }
 
     wj(int param0) {
+        we discarded$0 = null;
         if (df.field_H) {
-            ((wj) this).field_m = uj.a(ei.field_a[param0], 100, 256);
-            we discarded$0 = tf.a(((wj) this).field_m, (byte) -93);
+            this.field_m = uj.a(ei.field_a[param0], 100, 256);
+            discarded$0 = tf.a(this.field_m, (byte) -93);
         }
         if (93 == param0) {
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "to return to the normal view.";
         field_k = "Show all lobby chat";
         field_n = false;

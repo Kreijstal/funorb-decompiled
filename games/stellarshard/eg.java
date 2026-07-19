@@ -22,6 +22,7 @@ final class eg {
         int var2 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_10_0 = 0;
         int stackOut_7_0 = 0;
@@ -38,15 +39,17 @@ final class eg {
             }
             var1_int = 0;
             L2: while (true) {
-              if (var1_int >= 3000) {
+              if ((var1_int ^ -1) <= -3001) {
                 stackOut_10_0 = -1;
                 stackIn_11_0 = stackOut_10_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (null == wk.field_b[var1_int]) {
                   stackOut_7_0 = var1_int;
                   stackIn_8_0 = stackOut_7_0;
-                  return stackIn_8_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   var1_int++;
                   continue L2;
@@ -57,16 +60,16 @@ final class eg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "eg.B(" + param0 + ')');
+          throw ma.a((Throwable) ((Object) var1), "eg.B(" + param0 + ')');
         }
-        return stackIn_11_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_8_0;
+        } else {
+          return stackIn_11_0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new String[]{"Showing by rating", "Showing by win percentage"};
         field_c = "Change display name";
         field_b = new oj();

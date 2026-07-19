@@ -20,14 +20,14 @@ final class vg {
                 param2.a((byte) 65);
             }
             int var6 = -92 % ((param1 - 34) / 51);
-            var5 = ((vg) this).field_g[(int)(param0 & (long)(-1 + ((vg) this).field_h))];
+            var5 = this.field_g[(int)(param0 & (long)(-1 + this.field_h))];
             param2.field_k = var5;
             param2.field_l = var5.field_l;
             param2.field_l.field_k = param2;
             param2.field_i = param0;
             param2.field_k.field_l = param2;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "vg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "vg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,38 +36,38 @@ final class vg {
         rc var3 = null;
         int var4 = 0;
         var4 = Geoblox.field_C;
-        if (null != ((vg) this).field_c) {
-          var2 = ((vg) this).field_g[(int)(((vg) this).field_e & (long)(-1 + ((vg) this).field_h))];
+        if (null != this.field_c) {
+          var2 = this.field_g[(int)(this.field_e & (long)(-1 + this.field_h))];
           if (param0 != -29925) {
-            ((vg) this).field_g = null;
+            this.field_g = (rc[]) null;
             L0: while (true) {
-              if (((vg) this).field_c != var2) {
-                if (((vg) this).field_e == ((vg) this).field_c.field_i) {
-                  var3 = ((vg) this).field_c;
-                  ((vg) this).field_c = ((vg) this).field_c.field_k;
+              if (this.field_c != var2) {
+                if (this.field_e == this.field_c.field_i) {
+                  var3 = this.field_c;
+                  this.field_c = this.field_c.field_k;
                   return var3;
                 } else {
-                  ((vg) this).field_c = ((vg) this).field_c.field_k;
+                  this.field_c = this.field_c.field_k;
                   continue L0;
                 }
               } else {
-                ((vg) this).field_c = null;
+                this.field_c = null;
                 return null;
               }
             }
           } else {
             L1: while (true) {
-              if (((vg) this).field_c != var2) {
-                if (((vg) this).field_e == ((vg) this).field_c.field_i) {
-                  var3 = ((vg) this).field_c;
-                  ((vg) this).field_c = ((vg) this).field_c.field_k;
+              if (this.field_c != var2) {
+                if (this.field_e == this.field_c.field_i) {
+                  var3 = this.field_c;
+                  this.field_c = this.field_c.field_k;
                   return var3;
                 } else {
-                  ((vg) this).field_c = ((vg) this).field_c.field_k;
+                  this.field_c = this.field_c.field_k;
                   continue L1;
                 }
               } else {
-                ((vg) this).field_c = null;
+                this.field_c = null;
                 return null;
               }
             }
@@ -82,21 +82,21 @@ final class vg {
         rc var5 = null;
         int var6 = 0;
         var6 = Geoblox.field_C;
-        ((vg) this).field_e = param0;
-        var4 = ((vg) this).field_g[(int)(param0 & (long)(param1 + ((vg) this).field_h))];
-        ((vg) this).field_c = var4.field_k;
+        this.field_e = param0;
+        var4 = this.field_g[(int)(param0 & (long)(param1 + this.field_h))];
+        this.field_c = var4.field_k;
         L0: while (true) {
-          if (var4 != ((vg) this).field_c) {
-            if (param0 == ((vg) this).field_c.field_i) {
-              var5 = ((vg) this).field_c;
-              ((vg) this).field_c = ((vg) this).field_c.field_k;
+          if (var4 != this.field_c) {
+            if (param0 == this.field_c.field_i) {
+              var5 = this.field_c;
+              this.field_c = this.field_c.field_k;
               return var5;
             } else {
-              ((vg) this).field_c = ((vg) this).field_c.field_k;
+              this.field_c = this.field_c.field_k;
               continue L0;
             }
           } else {
-            ((vg) this).field_c = null;
+            this.field_c = null;
             return null;
           }
         }
@@ -104,6 +104,9 @@ final class vg {
 
     public static void a(boolean param0) {
         field_i = null;
+        if (!param0) {
+            return;
+        }
         field_f = null;
         field_d = null;
         field_j = null;
@@ -111,16 +114,17 @@ final class vg {
     }
 
     vg(int param0) {
+        rc dupTemp$2 = null;
         int var2 = 0;
         rc var3 = null;
-        ((vg) this).field_g = new rc[param0];
-        ((vg) this).field_h = param0;
+        this.field_g = new rc[param0];
+        this.field_h = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            rc dupTemp$2 = new rc();
+            dupTemp$2 = new rc();
             var3 = dupTemp$2;
-            ((vg) this).field_g[var2] = dupTemp$2;
+            this.field_g[var2] = dupTemp$2;
             var3.field_k = var3;
             var3.field_l = var3;
             var2++;
@@ -132,10 +136,6 @@ final class vg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new boolean[33];
         field_d = "Please wait...";
     }

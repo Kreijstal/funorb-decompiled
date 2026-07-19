@@ -9,14 +9,13 @@ class hq extends eta {
     }
 
     public static void b(int param0) {
+        if (param0 != -6682) {
+            return;
+        }
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "hq.A(";
         field_b = new int[]{122, 112, 224, 147, 235, 294, 141, 248, 180};
     }

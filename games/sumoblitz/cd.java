@@ -15,20 +15,25 @@ final class cd {
             fq.field_f.b(0);
             return true;
         }
-        field_c = null;
+        if (param0) {
+            field_c = (ri[]) null;
+            return false;
+        }
         return false;
     }
 
     public static void a(byte param0) {
+        if (param0 >= -82) {
+            field_d = -61;
+            field_c = null;
+            field_f = null;
+            return;
+        }
         field_c = null;
         field_f = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new int[4];
     }
 }

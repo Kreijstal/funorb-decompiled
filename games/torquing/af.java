@@ -18,15 +18,18 @@ abstract class af {
             jh.field_z = 0;
             so.b(119);
             var2 = var1.c();
-            for (var3 = 0; var3 < 15; var3++) {
+            for (var3 = 0; -16 < (var3 ^ -1); var3++) {
                 var2.b(-2, -2, 16777215);
                 ph.d(4, 4, 0, 0, 540, 140);
+            }
+            if (!param0) {
+                af.a(-61);
             }
             ff.field_c.e();
             var1.c(0, 0);
             r.a(126);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "af.C(" + true + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "af.C(" + param0 + ')');
         }
     }
 
@@ -41,10 +44,6 @@ abstract class af {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Connection lost - attempting to reconnect";
         field_b = "?";
     }

@@ -9,13 +9,28 @@ final class bl {
     static int[] field_c;
 
     final static boolean b(int param0) {
-        if (null == oba.field_e) {
+        if (param0 == 0) {
+          if (null != oba.field_e) {
+            if (!km.field_p.a(param0 + 0)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (!km.field_p.a(0)) {
+          }
+        } else {
+          bl.a(-92, 118);
+          if (null != oba.field_e) {
+            if (!km.field_p.a(param0 + 0)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -31,7 +46,7 @@ final class bl {
         try {
           L0: {
             L1: {
-              bea.c(param3, param1, 1 + param0, 10000536);
+              bea.c(param3, param1, param4 + param0, 10000536);
               bea.c(param3, param2 + param1, param0 - -1, 12105912);
               var5_int = 1;
               if (var5_int + param1 >= bea.field_h) {
@@ -56,36 +71,47 @@ final class bl {
                 break L0;
               } else {
                 var8 = var7 * 48 / param2 + 152;
-                var9 = var8 << 16 | var8 << 8 | var8;
+                var9 = var8 << -1662844688 | var8 << -230884408 | var8;
                 bea.field_l[param3 + (var7 + param1) * bea.field_g] = var9;
                 bea.field_l[param0 + ((var7 + param1) * bea.field_g + param3)] = var9;
                 var7++;
-                continue L3;
+                if (var10 == 0) {
+                  continue L3;
+                } else {
+                  return;
+                }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var5, "bl.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + 1 + ')');
+          throw tba.a((Throwable) ((Object) var5), "bl.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 <= 83) {
+            field_a = (is) null;
+            field_c = null;
+            field_b = null;
+            return;
+        }
         field_c = null;
         field_b = null;
     }
 
     final static void a(int param0, int param1) {
         try {
+            IOException iOException = null;
             Throwable decompiledCaughtException = null;
             L0: {
               if (oba.field_e == null) {
                 break L0;
               } else {
                 L1: {
-                  if (param0 < 0) {
+                  if (-1 < (param0 ^ -1)) {
                     break L1;
                   } else {
                     if (uga.field_n == km.field_p) {
@@ -96,7 +122,7 @@ final class bl {
                   }
                 }
                 L2: {
-                  if (ql.field_k.field_h != 0) {
+                  if (param1 != (ql.field_k.field_h ^ -1)) {
                     break L2;
                   } else {
                     if (mha.field_D - -10000L < bva.b((byte) -107)) {
@@ -109,11 +135,18 @@ final class bl {
                 }
                 L3: {
                   if (ql.field_k.field_h > 0) {
-                    {
+                    try {
                       L4: {
-                        oba.field_e.a(ql.field_k.field_g, 0, ql.field_k.field_h, 118);
+                        oba.field_e.a(ql.field_k.field_g, 0, ql.field_k.field_h, param1 + 119);
                         mha.field_D = bva.b((byte) -107);
                         break L4;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L5: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        dea.a(60);
+                        break L5;
                       }
                     }
                     ql.field_k.field_h = 0;
@@ -134,10 +167,6 @@ final class bl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Invite more players, or alternatively try changing the '<%0>' setting.";
         field_c = new int[]{0, 0, 1024, 0, 512, 0, -512, 0, 0, 0, 0, 0, 0};
     }

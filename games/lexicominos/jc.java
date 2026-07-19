@@ -8,9 +8,9 @@ final class jc extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            ((jc) this).field_a.paint(param0);
+            this.field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "jc.paint(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "jc.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -21,22 +21,27 @@ final class jc extends java.awt.Canvas {
     }
 
     public static void a(int param0) {
+        if (param0 >= -14) {
+            field_b = (ge) null;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
     public final void update(java.awt.Graphics param0) {
         try {
-            ((jc) this).field_a.update(param0);
+            this.field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "jc.update(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "jc.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     jc(java.awt.Component param0) {
         try {
-            ((jc) this).field_a = param0;
+            this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "jc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "jc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

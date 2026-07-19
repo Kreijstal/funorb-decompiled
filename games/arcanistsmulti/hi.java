@@ -13,7 +13,10 @@ final class hi {
 
     public static void a(byte param0) {
         field_e = null;
-        field_b = null;
+        field_b = (int[][]) null;
+        if (param0 < 16) {
+            return;
+        }
         field_c = null;
         field_f = null;
         field_h = null;
@@ -26,38 +29,34 @@ final class hi {
             hi.a(23, true);
             var2 = null;
             if (param1) {
-              var2 = (Object) (Object) new wd();
+              var2 = new wd();
               break L0;
             } else {
-              var2 = (Object) (Object) new rd();
+              var2 = new rd();
               break L0;
             }
           }
-          jk.a(-113, new v((qi) var2));
+          jk.a(-113, new v((qi) (var2)));
           return;
         } else {
           L1: {
             var2 = null;
             if (param1) {
-              var2 = (Object) (Object) new wd();
+              var2 = new wd();
               break L1;
             } else {
-              var2 = (Object) (Object) new rd();
+              var2 = new rd();
               break L1;
             }
           }
-          jk.a(-113, new v((qi) var2));
+          jk.a(-113, new v((qi) (var2)));
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Unpacking graphics";
-        field_b = new int[][]{new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3]};
+        field_b = new int[][]{new int[]{255, 204, 153}, new int[]{255, 153, 102}, new int[]{198, 138, 72}, new int[]{124, 84, 39}, new int[]{255, 253, 253}, new int[]{153, 0, 255}, new int[]{0, 153, 204}, new int[]{64, 255, 0}};
         field_h = new so(1);
         field_f = new int[]{3, 4, 5};
         field_e = new StringBuilder(80);

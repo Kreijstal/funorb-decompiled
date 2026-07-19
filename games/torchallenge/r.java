@@ -13,6 +13,8 @@ final class r {
     private ni[] field_e;
 
     final static String a(int param0, int param1, byte[] param2, byte param3) {
+        String discarded$4 = null;
+        int incrementValue$5 = 0;
         char[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -20,11 +22,9 @@ final class r {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        Object var10 = null;
+        byte[] var10 = null;
         char[] var11 = null;
         char[] var12 = null;
-        char[] var13 = null;
-        char[] var14 = null;
         String stackIn_15_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -46,9 +46,7 @@ final class r {
         var9 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
-            var14 = new char[param0];
-            var13 = var14;
-            var12 = var13;
+            var12 = new char[param0];
             var11 = var12;
             var4 = var11;
             var5 = 0;
@@ -59,12 +57,12 @@ final class r {
                   if (param3 == 8) {
                     break L2;
                   } else {
-                    var10 = null;
-                    String discarded$4 = r.a(-89, -120, (byte[]) null, (byte) -36);
+                    var10 = (byte[]) null;
+                    discarded$4 = r.a(-89, -120, (byte[]) null, (byte) -36);
                     break L2;
                   }
                 }
-                stackOut_14_0 = new String(var14, 0, var5);
+                stackOut_14_0 = new String(var12, 0, var5);
                 stackIn_15_0 = stackOut_14_0;
                 break L0;
               } else {
@@ -72,10 +70,10 @@ final class r {
                   var7 = 255 & param2[var6 + param1];
                   if (var7 != 0) {
                     L4: {
-                      if (var7 < 128) {
+                      if ((var7 ^ -1) > -129) {
                         break L4;
                       } else {
-                        if (var7 >= 160) {
+                        if (-161 >= (var7 ^ -1)) {
                           break L4;
                         } else {
                           L5: {
@@ -92,7 +90,7 @@ final class r {
                         }
                       }
                     }
-                    int incrementValue$5 = var5;
+                    incrementValue$5 = var5;
                     var5++;
                     var4[incrementValue$5] = (char)var7;
                     break L3;
@@ -109,23 +107,23 @@ final class r {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var4_ref;
+            stackOut_16_0 = (RuntimeException) (var4_ref);
             stackOut_16_1 = new StringBuilder().append("r.A(").append(param0).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -133,29 +131,32 @@ final class r {
               break L6;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param3 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param3 + ')');
         }
         return stackIn_15_0;
     }
 
     public static void a(byte param0) {
-        field_i = null;
-        field_h = null;
+        field_i = (boolean[][][]) null;
+        if (param0 <= 22) {
+            field_i = (boolean[][][]) null;
+        }
+        field_h = (int[][]) null;
         field_a = null;
     }
 
     private final void a(int param0, int param1, ni param2) {
         float var4_float = 0.0f;
         try {
-            var4_float = (float)(((r) this).field_b + param1) + (float)param0 / 100.0f;
+            var4_float = (float)(this.field_b + param1) + (float)param0 / 100.0f;
             if (param0 != 0) {
-                ((r) this).field_c = param2.field_j + " - " + param0 + "%";
+                this.field_c = param2.field_j + " - " + param0 + "%";
             } else {
-                ((r) this).field_c = param2.field_g;
+                this.field_c = param2.field_g;
             }
-            ((r) this).field_d = var4_float * (float)((r) this).field_f / (float)(1 + ((r) this).field_g);
+            this.field_d = var4_float * (float)this.field_f / (float)(1 + this.field_g);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "r.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "r.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -164,15 +165,15 @@ final class r {
         ni var4 = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         L0: while (true) {
-          if (((r) this).field_b >= ((r) this).field_g) {
+          if (this.field_b >= this.field_g) {
             if (param0 == 0) {
               return true;
             } else {
-              field_a = null;
+              field_a = (int[]) null;
               return true;
             }
           } else {
-            var4 = ((r) this).field_e[((r) this).field_b];
+            var4 = this.field_e[this.field_b];
             if (!var4.field_a.b(-7957)) {
               this.a(0, 1, var4);
               return false;
@@ -202,7 +203,7 @@ final class r {
                 }
               }
               L3: {
-                if (var4.field_c >= 0) {
+                if ((var4.field_c ^ -1) <= -1) {
                   break L3;
                 } else {
                   if (var4.field_e != null) {
@@ -221,7 +222,7 @@ final class r {
                   }
                 }
               }
-              ((r) this).field_b = ((r) this).field_b + 1;
+              this.field_b = this.field_b + 1;
               continue L0;
             }
           }
@@ -233,11 +234,7 @@ final class r {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_i = new boolean[][][]{new boolean[7][], new boolean[7][], new boolean[7][]};
+        field_i = new boolean[][][]{new boolean[][]{new boolean[]{false, true, false}, new boolean[]{true, false}, new boolean[]{true, false}, new boolean[]{true, false, false, false, false, false}, new boolean[]{true, false}, new boolean[]{false}, new boolean[]{true, false, false, false, false, false}}, new boolean[][]{new boolean[]{true, false}, new boolean[]{false, false, true, false}, new boolean[]{false, false, true, false, false, false}, new boolean[]{false, true, false, false, false, false}, new boolean[]{false, false, true, false, false}, new boolean[]{false, true, false, false, false}, new boolean[]{false}}, new boolean[][]{new boolean[]{false, true, false}, new boolean[]{false, true}, new boolean[]{false, false, true, false}, new boolean[]{false, false, false, true, false, false}, new boolean[]{false, true, false}, new boolean[]{false}, new boolean[]{false, false, false, true, false, false}}};
         field_a = new int[]{10, 20, 30};
     }
 }

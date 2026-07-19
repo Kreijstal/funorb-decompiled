@@ -7,50 +7,51 @@ final class pk extends en {
 
     final void i(int param0) {
         int var4 = TetraLink.field_J;
-        tg var2 = new tg(((pk) this).field_N);
-        ld var3 = (ld) (Object) var2.a(true);
+        tg var2 = new tg(this.field_N);
+        ld var3 = (ld) ((Object) var2.a(true));
         if (param0 != 0) {
             return;
         }
         while (var3 != null) {
             var3.field_K = false;
-            var3 = (ld) (Object) var2.b((byte) -58);
+            var3 = (ld) ((Object) var2.b((byte) -58));
         }
-        ((pk) this).field_J = null;
+        this.field_J = null;
     }
 
     final void a(na param0, boolean param1) {
         ld var3 = null;
+        boolean discarded$0 = false;
         try {
             if (!(param0 instanceof ld)) {
                 throw new IllegalArgumentException();
             }
             if (param1) {
-                field_O = null;
+                field_O = (wd) null;
             }
-            var3 = (ld) (Object) param0;
-            ((pk) this).field_N.a((mc) (Object) var3, -25);
+            var3 = (ld) ((Object) param0);
+            this.field_N.a(var3, -25);
             var3.field_K = true;
-            boolean discarded$0 = var3.a((na) this, -384169950);
+            discarded$0 = var3.a((na) (this), -384169950);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "pk.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "pk.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void j(int param0) {
         int var4 = TetraLink.field_J;
-        tg var2 = new tg(((pk) this).field_N);
+        tg var2 = new tg(this.field_N);
         if (param0 != 0) {
             return;
         }
-        ld var3 = (ld) (Object) var2.a(true);
+        ld var3 = (ld) ((Object) var2.a(true));
         while (var3 != null) {
-            if (!(!var3.l(~param0))) {
+            if (!(!var3.l(param0 ^ -1))) {
                 var3.b(false);
             }
-            var3 = (ld) (Object) var2.b((byte) -58);
+            var3 = (ld) ((Object) var2.b((byte) -58));
         }
-        ((pk) this).field_J = (na) (Object) ((pk) this).a(false);
+        this.field_J = (na) ((Object) this.a(false));
     }
 
     final ld a(boolean param0) {
@@ -59,12 +60,12 @@ final class pk extends en {
         int var4 = 0;
         L0: {
           var4 = TetraLink.field_J;
-          var2 = new tg(((pk) this).field_N);
-          var3 = (ld) (Object) var2.a(true);
+          var2 = new tg(this.field_N);
+          var3 = (ld) ((Object) var2.a(true));
           if (!param0) {
             break L0;
           } else {
-            ((pk) this).i(85);
+            this.i(85);
             break L0;
           }
         }
@@ -73,7 +74,7 @@ final class pk extends en {
             if (var3.field_K) {
               return var3;
             } else {
-              var3 = (ld) (Object) var2.b((byte) -58);
+              var3 = (ld) ((Object) var2.b((byte) -58));
               continue L1;
             }
           } else {
@@ -83,6 +84,7 @@ final class pk extends en {
     }
 
     final static byte[] a(byte[] param0, byte param1) {
+        int discarded$1 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -96,11 +98,7 @@ final class pk extends en {
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
-        byte[] var14 = null;
-        byte[] var15 = null;
-        byte[] var16 = null;
-        byte[] var17 = null;
-        Object stackIn_2_0 = null;
+        byte[] stackIn_2_0 = null;
         byte[] stackIn_22_0 = null;
         byte[] stackIn_24_0 = null;
         RuntimeException stackIn_26_0 = null;
@@ -110,10 +108,11 @@ final class pk extends en {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         byte[] stackOut_23_0 = null;
         byte[] stackOut_21_0 = null;
-        Object stackOut_1_0 = null;
+        byte[] stackOut_1_0 = null;
         RuntimeException stackOut_25_0 = null;
         StringBuilder stackOut_25_1 = null;
         RuntimeException stackOut_27_0 = null;
@@ -144,14 +143,13 @@ final class pk extends en {
                     }
                   }
                   if (0 == var3) {
-                    var17 = new byte[var4];
-                    var15 = var17;
-                    var13 = var15;
+                    var13 = new byte[var4];
                     var11 = var13;
                     var5 = var11;
-                    var9.b(var4, 0, var17, 2);
-                    stackOut_23_0 = (byte[]) var5;
+                    var9.b(var4, 0, var13, 2);
+                    stackOut_23_0 = (byte[]) (var5);
                     stackIn_24_0 = stackOut_23_0;
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
                     L3: {
@@ -171,28 +169,27 @@ final class pk extends en {
                           }
                         }
                         L5: {
-                          var16 = new byte[var5_int];
-                          var14 = var16;
-                          var12 = var14;
+                          var12 = new byte[var5_int];
                           var10 = var12;
                           var6 = var10;
-                          if (var3 == 1) {
-                            int discarded$1 = sl.a(var16, var5_int, param0, var4, 9);
+                          if ((var3 ^ -1) == -2) {
+                            discarded$1 = sl.a(var12, var5_int, param0, var4, 9);
                             break L5;
                           } else {
-                            var7 = (Object) (Object) oc.field_z;
+                            var7 = oc.field_z;
                             synchronized (var7) {
                               L6: {
-                                oc.field_z.a((byte) 114, var16, var9);
+                                oc.field_z.a((byte) 114, var12, var9);
                                 break L6;
                               }
                             }
                             break L5;
                           }
                         }
-                        stackOut_21_0 = (byte[]) var6;
+                        stackOut_21_0 = (byte[]) (var6);
                         stackIn_22_0 = stackOut_21_0;
-                        return stackIn_22_0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       }
                     }
                     throw new RuntimeException();
@@ -201,32 +198,33 @@ final class pk extends en {
               }
               throw new RuntimeException();
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (byte[]) null;
               stackIn_2_0 = stackOut_1_0;
-              return (byte[]) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var2;
+            stackOut_25_0 = (RuntimeException) (var2);
             stackOut_25_1 = new StringBuilder().append("pk.M(");
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -234,20 +232,28 @@ final class pk extends en {
               break L7;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ')');
         }
-        return stackIn_24_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_22_0;
+          } else {
+            return stackIn_24_0;
+          }
+        }
     }
 
     public pk() {
         super(0, 0, i.field_e, bi.field_a, (kg) null, (dn) null);
-        ((pk) this).field_N = new je();
+        this.field_N = new je();
     }
 
     public static void h(int param0) {
         field_O = null;
         if (param0 != -2) {
-            Object var2 = null;
+            java.applet.Applet var2 = (java.applet.Applet) null;
             pk.a(-112, (java.applet.Applet) null);
         }
     }
@@ -255,7 +261,7 @@ final class pk extends en {
     final static void a(int param0, java.applet.Applet param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
-        Object var3 = null;
+        java.applet.Applet var3 = null;
         CharSequence var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -281,7 +287,7 @@ final class pk extends en {
               if (param0 < -32) {
                 break L1;
               } else {
-                var3 = null;
+                var3 = (java.applet.Applet) null;
                 pk.a(35, (java.applet.Applet) null);
                 break L1;
               }
@@ -290,7 +296,7 @@ final class pk extends en {
               if (var2 == null) {
                 break L2;
               } else {
-                var4 = (CharSequence) (Object) var2;
+                var4 = (CharSequence) ((Object) var2);
                 if (0L == il.a(-23718, var4)) {
                   break L2;
                 } else {
@@ -306,23 +312,23 @@ final class pk extends en {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2_ref;
+            stackOut_6_0 = (RuntimeException) (var2_ref);
             stackOut_6_1 = new StringBuilder().append("pk.H(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -330,7 +336,7 @@ final class pk extends en {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -343,23 +349,23 @@ final class pk extends en {
         tg var2 = null;
         ld var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        na var5 = null;
         L0: {
           var4 = TetraLink.field_J;
-          var2 = new tg(((pk) this).field_N);
-          var3 = (ld) (Object) var2.a(true);
+          var2 = new tg(this.field_N);
+          var3 = (ld) ((Object) var2.a(true));
           if (param0 == 9) {
             break L0;
           } else {
-            var5 = null;
-            ((pk) this).a((na) null, true);
+            var5 = (na) null;
+            this.a((na) null, true);
             break L0;
           }
         }
         L1: while (true) {
           if (var3 != null) {
             if (!var3.field_K) {
-              var3 = (ld) (Object) var2.b((byte) -58);
+              var3 = (ld) ((Object) var2.b((byte) -58));
               continue L1;
             } else {
               return var3.d((byte) 5);
@@ -372,32 +378,32 @@ final class pk extends en {
 
     final void a(int param0, int param1, int param2, int param3) {
         int var7 = TetraLink.field_J;
-        if (!(null == ((pk) this).field_H)) {
-            ((pk) this).field_H.a((na) this, param1, param2, true, true);
+        if (!(null == this.field_H)) {
+            this.field_H.a((na) (this), param1, param2, true, true);
         }
-        tg var5 = new tg(((pk) this).field_N);
+        tg var5 = new tg(this.field_N);
         if (param0 != 0) {
             return;
         }
-        na var6 = (na) (Object) var5.b(param0 ^ -115);
+        na var6 = (na) ((Object) var5.b(param0 ^ -115));
         while (var6 != null) {
-            var6.a(0, param1 + ((pk) this).field_t, param2 - -((pk) this).field_w, param3);
-            var6 = (na) (Object) var5.a((byte) -66);
+            var6.a(0, param1 + this.field_t, param2 - -this.field_w, param3);
+            var6 = (na) ((Object) var5.a((byte) -66));
         }
     }
 
     final void e(byte param0) {
         int var4 = TetraLink.field_J;
-        tg var2 = new tg(((pk) this).field_N);
+        tg var2 = new tg(this.field_N);
         if (param0 != -110) {
-            ((pk) this).a(18, -69, -122, 50);
+            this.a(18, -69, -122, 50);
         }
-        ld var3 = (ld) (Object) var2.a(true);
+        ld var3 = (ld) ((Object) var2.a(true));
         while (var3 != null) {
             if (var3.h(param0 ^ -652390206)) {
                 var3.b(false);
             }
-            var3 = (ld) (Object) var2.b((byte) -58);
+            var3 = (ld) ((Object) var2.b((byte) -58));
         }
     }
 

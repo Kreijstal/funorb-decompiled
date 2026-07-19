@@ -10,14 +10,13 @@ final class uia {
     }
 
     public static void a(int param0) {
+        if (param0 != -4353) {
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "uia.A(";
         field_b = 0;
         field_a = "Vision range";

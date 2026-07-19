@@ -13,27 +13,31 @@ final class al {
     int field_i;
 
     final static boolean a(byte param0) {
+        if (param0 != 2) {
+            al.a(-100);
+            return ph.field_E == null ? mb.field_d : true;
+        }
         return ph.field_E == null ? mb.field_d : true;
     }
 
     public static void a(int param0) {
+        int discarded$0 = 0;
         field_d = null;
         field_h = null;
         field_a = null;
         if (param0 != 31753) {
-            int discarded$0 = al.a(false);
+            discarded$0 = al.a(false);
         }
     }
 
     final static int a(boolean param0) {
+        if (param0) {
+            return -37;
+        }
         return aq.field_s;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
         field_f = true;
     }

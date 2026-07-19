@@ -8,9 +8,9 @@ final class eg extends td {
     eg(int param0, aga param1, nq param2) {
         super(param0, param1);
         try {
-            ((eg) this).field_j = param2;
+            this.field_j = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "eg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "eg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,6 +37,7 @@ final class eg extends td {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         fia stackOut_11_0 = null;
         ew stackOut_3_0 = null;
@@ -51,9 +52,9 @@ final class eg extends td {
         try {
           L0: {
             L1: {
-              var6 = ((eg) this).field_h.a(param1 ^ 48, param0);
+              var6 = this.field_h.a(param1 ^ 48, param0);
               var7 = var6;
-              var4 = ((eg) this).field_j.a(79, param0);
+              var4 = this.field_j.a(79, param0);
               if (var4 == null) {
                 break L1;
               } else {
@@ -61,12 +62,12 @@ final class eg extends td {
                   break L1;
                 } else {
                   L2: {
-                    var5 = new fia(((eg) this).field_g, new nq(var7));
-                    var5.field_o.a((bw) (Object) new iv(new nq(var4), false, 1, 0, 32), true);
+                    var5 = new fia(this.field_g, new nq(var7));
+                    var5.field_o.a(new iv(new nq(var4), false, 1, 0, 32), true);
                     if (param1 == 3) {
                       break L2;
                     } else {
-                      field_p = null;
+                      field_p = (jla[]) null;
                       break L2;
                     }
                   }
@@ -85,37 +86,39 @@ final class eg extends td {
                     param0.field_T.field_u[var6.field_D] = true;
                     break L3;
                   }
-                  stackOut_11_0 = (fia) var5;
+                  stackOut_11_0 = (fia) (var5);
                   stackIn_12_0 = stackOut_11_0;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 }
               }
             }
             stackOut_3_0 = new ew(new nq(var7));
             stackIn_4_0 = stackOut_3_0;
-            return (ii) (Object) stackIn_4_0;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_0 = (RuntimeException) (var3);
             stackOut_13_1 = new StringBuilder().append("eg.A(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -123,16 +126,16 @@ final class eg extends td {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ')');
         }
-        return (ii) (Object) stackIn_12_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (ii) ((Object) stackIn_4_0);
+        } else {
+          return (ii) ((Object) stackIn_12_0);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = new jla[16];
         field_q = "Drawn";
     }

@@ -16,7 +16,7 @@ final class dm {
         int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
         var1 = -28 % ((param0 - -5) / 62);
-        if (kh.field_n >= 10) {
+        if ((kh.field_n ^ -1) <= -11) {
           if (tl.field_l) {
             return false;
           } else {
@@ -46,7 +46,7 @@ final class dm {
         if (!(0 != var1.length())) {
             var1 = dc.a(-118);
         }
-        int var2 = 0;
+        int var2 = 28 % ((-38 - param0) / 38);
         if (!(0 != var1.length())) {
             var1 = fb.field_a;
         }
@@ -73,6 +73,7 @@ final class dm {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
@@ -97,7 +98,7 @@ final class dm {
               if (param2 <= param1[param4]) {
                 param1[param4] = param2;
                 var6 = new a(param4);
-                var7 = (a) (Object) param0.e(-24172);
+                var7 = (a) ((Object) param0.e(-24172));
                 var8 = -120 / ((74 - param3) / 46);
                 L1: while (true) {
                   L2: {
@@ -105,49 +106,52 @@ final class dm {
                       break L2;
                     } else {
                       if (param1[var7.field_j] > param2) {
-                        so.a((byte) 60, (ne) (Object) var7, (ne) (Object) var6);
+                        so.a((byte) 60, var7, var6);
                         break L2;
                       } else {
-                        var7 = (a) (Object) param0.a(4);
+                        var7 = (a) ((Object) param0.a(4));
                         continue L1;
                       }
                     }
                   }
                   if (var7 != null) {
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    param0.a((ne) (Object) var6, false);
+                    param0.a(var6, false);
                     return;
                   }
                 }
               } else {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var6_ref;
+            stackOut_14_0 = (RuntimeException) (var6_ref);
             stackOut_14_1 = new StringBuilder().append("dm.D(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -156,23 +160,23 @@ final class dm {
             }
           }
           L4: {
-            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+            stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
             stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L4;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -180,7 +184,16 @@ final class dm {
               break L4;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -188,17 +201,23 @@ final class dm {
         field_g = null;
         field_b = null;
         field_d = null;
-        field_a = null;
-        field_c = null;
-        field_e = null;
-        field_f = null;
+        if (param0 != 0) {
+          field_c = (String) null;
+          field_a = null;
+          field_c = null;
+          field_e = null;
+          field_f = null;
+          return;
+        } else {
+          field_a = null;
+          field_c = null;
+          field_e = null;
+          field_f = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new String[]{"First Strike", "Always attacks first."};
         field_c = "Blinded";
         field_b = "The floor of this room is covered in blood, and the sound of machinery creaking echoes ominously overhead.";

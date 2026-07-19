@@ -12,31 +12,75 @@ final class aj {
     String field_e;
 
     public static void a(int param0) {
+        ci discarded$0 = null;
         field_b = null;
         field_d = null;
+        if (param0 != 0) {
+            lh var2 = (lh) null;
+            discarded$0 = aj.a(-104, 12, 19, -21, -33, 26, (lh) null, 114, 23, (byte) 6, -99, -41, -16);
+        }
     }
 
     final static void a(boolean param0, boolean param1) {
-        qa.field_f = param0 ? new id(jf.field_d, ao.field_b) : new id(sg.field_b, de.field_d);
+        id stackIn_3_0 = null;
+        id stackOut_2_0 = null;
+        id stackOut_1_0 = null;
+        L0: {
+          if (!param0) {
+            stackOut_2_0 = new id(sg.field_b, de.field_d);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = new id(jf.field_d, ao.field_b);
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
+          }
+        }
+        qa.field_f = stackIn_3_0;
         fm.field_T = new ci(0L, (ci) null);
-        fm.field_T.a((byte) 127, (ci) (Object) qa.field_f.field_a);
+        fm.field_T.a((byte) 127, qa.field_f.field_a);
         fm.field_T.a((byte) 123, sc.field_d);
         ah.field_i = new ci(0L, ki.field_P);
-        dn.field_c = new ci(0L, (ci) null);
-        ah.field_i.a((byte) 123, qf.field_f);
-        ah.field_i.a((byte) 126, dn.field_c);
-        dn.field_c.a((byte) 126, bh.field_G);
-        dn.field_c.a((byte) 123, hn.field_d);
-        cf.a(122, param0);
+        if (!param1) {
+          aj.a(false, true);
+          dn.field_c = new ci(0L, (ci) null);
+          ah.field_i.a((byte) 123, qf.field_f);
+          ah.field_i.a((byte) 126, dn.field_c);
+          dn.field_c.a((byte) 126, bh.field_G);
+          dn.field_c.a((byte) 123, hn.field_d);
+          cf.a(122, param0);
+          return;
+        } else {
+          dn.field_c = new ci(0L, (ci) null);
+          ah.field_i.a((byte) 123, qf.field_f);
+          ah.field_i.a((byte) 126, dn.field_c);
+          dn.field_c.a((byte) 126, bh.field_G);
+          dn.field_c.a((byte) 123, hn.field_d);
+          cf.a(122, param0);
+          return;
+        }
     }
 
     final static void a(byte param0) {
-        ci.field_J = tk.field_h.d(0);
-        CharSequence var2 = (CharSequence) (Object) ci.field_J;
-        cc.field_A = ad.a(var2, -2);
+        CharSequence var2 = null;
+        CharSequence var3 = null;
+        ci.field_J = tk.field_h.d(param0 ^ 49);
+        if (param0 != 49) {
+          field_d = (String) null;
+          var2 = (CharSequence) ((Object) ci.field_J);
+          cc.field_A = ad.a(var2, -2);
+          return;
+        } else {
+          var3 = (CharSequence) ((Object) ci.field_J);
+          cc.field_A = ad.a(var3, -2);
+          return;
+        }
     }
 
     final static ci a(boolean param0) {
+        if (param0) {
+            return (ci) null;
+        }
         return uc.b(-17260);
     }
 
@@ -73,7 +117,7 @@ final class aj {
             var13.field_D = tf.a(param8, (byte) -46, param3);
             var13.field_xb = param6;
             var13.field_ib = param4;
-            stackOut_0_0 = (ci) var13;
+            stackOut_0_0 = (ci) (var13);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -81,23 +125,23 @@ final class aj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var13_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var13_ref;
+            stackOut_2_0 = (RuntimeException) (var13_ref);
             stackOut_2_1 = new StringBuilder().append("aj.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param6 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -105,20 +149,16 @@ final class aj {
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
         return stackIn_1_0;
     }
 
     aj(boolean param0) {
-        ((aj) this).field_h = param0 ? true : false;
+        this.field_h = param0 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Year";
         field_b = "Connection lost. <%0>";
     }

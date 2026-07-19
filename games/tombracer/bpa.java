@@ -13,10 +13,6 @@ final class bpa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bpa.A(";
         field_a = "Down down, deeper and down. Tread with care near bottomless pits; a tumble means instant death.";
     }

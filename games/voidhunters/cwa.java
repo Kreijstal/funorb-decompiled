@@ -8,17 +8,16 @@ final class cwa {
     private static String field_z;
 
     public static void a(byte param0) {
+        if (param0 != 74) {
+            return;
+        }
         field_a = null;
         field_c = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "cwa.A(";
-        field_a = (dja) (Object) new cla();
+        field_a = (dja) ((Object) new cla());
     }
 }

@@ -10,13 +10,13 @@ final class kha extends bw {
     static int field_k;
 
     final void c(byte param0) {
-        ((kha) this).field_g = ((kha) this).field_g - 1;
+        this.field_g = this.field_g - 1;
         int var2 = 41 % ((param0 - -14) / 40);
     }
 
     kha(int param0, int param1) {
-        ((kha) this).field_g = param1;
-        ((kha) this).field_h = param0;
+        this.field_g = param1;
+        this.field_h = param0;
     }
 
     public static void a(int param0) {
@@ -31,15 +31,11 @@ final class kha extends bw {
     }
 
     final void d(byte param0) {
-        ((kha) this).field_g = ((kha) this).field_g + 1;
+        this.field_g = this.field_g + 1;
         int var2 = 115 / ((-80 - param0) / 46);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "No Awards";
     }
 }

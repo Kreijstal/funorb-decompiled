@@ -20,10 +20,11 @@ final class qf {
     }
 
     public static void a(int param0) {
+        boolean discarded$0 = false;
         field_b = null;
         field_a = null;
         if (param0 <= 126) {
-            boolean discarded$0 = qf.a(false);
+            discarded$0 = qf.a(false);
             field_d = null;
             return;
         }
@@ -63,24 +64,38 @@ final class qf {
     final static String a(String param0, int param1, String param2, String param3) {
         int var4 = 0;
         int var5 = 0;
-        var5 = Terraphoenix.field_V;
-        var4 = param0.indexOf(param2);
-        L0: while (true) {
-          if (var4 == -1) {
-            return param0;
+        String stackIn_5_0 = null;
+        String stackIn_6_0 = null;
+        String stackOut_4_0 = null;
+        L0: {
+          var5 = Terraphoenix.field_V;
+          var4 = param0.indexOf(param2);
+          if (param1 == 0) {
+            break L0;
           } else {
+            field_c = -116;
+            break L0;
+          }
+        }
+        L1: while (true) {
+          if (0 != (var4 ^ -1)) {
             param0 = param0.substring(0, var4) + param3 + param0.substring(var4 - -param2.length());
-            var4 = param0.indexOf(param2, param3.length() + var4);
-            continue L0;
+            stackOut_4_0 = (String) (param0);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_5_0 = stackOut_4_0;
+            if (var5 == 0) {
+              var4 = ((String) (Object) stackIn_6_0).indexOf(param2, param3.length() + var4);
+              continue L1;
+            } else {
+              return stackIn_5_0;
+            }
+          } else {
+            return param0;
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Play the game without logging in just yet";
         field_d = new im();
         field_a = "You are not currently logged in to the<nbsp>game.";

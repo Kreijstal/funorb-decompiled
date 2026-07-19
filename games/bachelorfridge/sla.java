@@ -13,10 +13,6 @@ final class sla {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "sla.A(";
     }
 }

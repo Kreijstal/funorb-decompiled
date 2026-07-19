@@ -13,17 +13,20 @@ abstract class ik {
 
     final static void a(String param0, byte param1) {
         try {
+            if (param1 < 33) {
+                ik.b(-9);
+            }
             if (null != rd.field_j) {
                 rd.field_j.field_pc.b(87);
             }
             if (!(null == bc.field_a)) {
                 bc.field_a.field_pc.b(93);
             }
-            Object var3 = null;
+            Throwable var3 = (Throwable) null;
             af.a((Throwable) null, -63, param0);
             dj.a((byte) -124);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ik.B(" + (param0 != null ? "{...}" : "null") + ',' + 40 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "ik.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -44,7 +47,7 @@ abstract class ik {
     }
 
     ik(int param0) {
-        ((ik) this).field_c = param0;
+        this.field_c = param0;
     }
 
     abstract void a(int param0, vh param1);
@@ -53,14 +56,10 @@ abstract class ik {
         if (param2 != -1700635440) {
             return 126;
         }
-        return (int)(param0 * param1 >> 16);
+        return (int)(param0 * param1 >> -1700635440);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "<%0> has withdrawn the request to join.";
     }
 }

@@ -30,7 +30,7 @@ final class wf {
               if (param1 == -19073) {
                 break L1;
               } else {
-                field_a = null;
+                field_a = (String) null;
                 break L1;
               }
             }
@@ -42,23 +42,23 @@ final class wf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("wf.C(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -66,7 +66,7 @@ final class wf {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -75,18 +75,18 @@ final class wf {
         gi var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        Object var4 = null;
+        java.applet.Applet var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = Main.field_T;
         try {
           L0: {
             L1: {
               mf.field_i = param0;
-              var2 = (gi) (Object) aj.field_s.a((byte) 74);
+              var2 = (gi) ((Object) aj.field_s.a((byte) 74));
               if (param1 < -9) {
                 break L1;
               } else {
-                var4 = null;
+                var4 = (java.applet.Applet) null;
                 wf.a((byte) -32, (java.applet.Applet) null);
                 break L1;
               }
@@ -104,7 +104,7 @@ final class wf {
                     break L3;
                   }
                 }
-                var2 = (gi) (Object) aj.field_s.b((byte) -111);
+                var2 = (gi) ((Object) aj.field_s.b((byte) -111));
                 continue L2;
               }
             }
@@ -112,7 +112,7 @@ final class wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2_ref, "wf.A(" + param0 + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) var2_ref), "wf.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -120,24 +120,26 @@ final class wf {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
+        byte[] discarded$0 = null;
         try {
             rc.field_m = true;
             var2 = "tuhstatbut";
             var3 = "rvnadlm";
             var4 = -1L;
             if (param0 > -81) {
-                Object var6 = null;
-                byte[] discarded$0 = wf.a((String) null, -37);
+                String var6 = (String) null;
+                discarded$0 = wf.a((String) null, -37);
             }
             uh.a(var4, 100, var2, var3, param1);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "wf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "wf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
+        kc[] discarded$0 = null;
         if (param0 != 3) {
-            kc[] discarded$0 = wf.a(-101, -45, 29, 105, 103);
+            discarded$0 = wf.a(-101, -45, 29, 105, 103);
             field_a = null;
             return;
         }
@@ -154,10 +156,6 @@ final class wf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Change display name";
     }
 }

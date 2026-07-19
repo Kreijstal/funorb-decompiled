@@ -7,7 +7,7 @@ final class ja extends ao implements e {
     private final native void la();
 
     public final void w(boolean param0) {
-        this.AA(((ja) this).field_nativeid, param0);
+        this.AA(this.field_nativeid, param0);
     }
 
     private final native void AA(long param0, boolean param1);
@@ -17,8 +17,8 @@ final class ja extends ao implements e {
     }
 
     protected final void finalize() {
-        if (((ja) this).field_nativeid != 0L) {
-            vk.a((e) this, -115);
+        if (this.field_nativeid != 0L) {
+            vk.a((e) (this), -115);
         }
     }
 }

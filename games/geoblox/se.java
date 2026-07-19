@@ -14,7 +14,7 @@ final class se extends hf {
     public static void b(int param0) {
         field_m = null;
         if (param0 < 120) {
-            field_i = null;
+            field_i = (String) null;
             field_i = null;
             return;
         }
@@ -26,10 +26,6 @@ final class se extends hf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Creating your account";
         field_m = "Create a free Account";
     }

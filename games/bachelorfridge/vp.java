@@ -36,10 +36,10 @@ final class vp {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((vp) this).field_b[var4] != null) {
-                    var5 = ((vp) this).field_b[var4].field_b * 22050 / 1000;
-                    var6 = ((vp) this).field_b[var4].field_m * 22050 / 1000;
-                    var13 = ((vp) this).field_b[var4].a(var5, ((vp) this).field_b[var4].field_b);
+                  if (this.field_b[var4] != null) {
+                    var5 = this.field_b[var4].field_b * 22050 / 1000;
+                    var6 = this.field_b[var4].field_m * 22050 / 1000;
+                    var13 = this.field_b[var4].a(var5, this.field_b[var4].field_b);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -70,9 +70,9 @@ final class vp {
               return new byte[]{};
             }
           } else {
-            if (((vp) this).field_b[var2] != null) {
-              if (((vp) this).field_b[var2].field_b + ((vp) this).field_b[var2].field_m > var1) {
-                var1 = ((vp) this).field_b[var2].field_b + ((vp) this).field_b[var2].field_m;
+            if (this.field_b[var2] != null) {
+              if (this.field_b[var2].field_b + this.field_b[var2].field_m > var1) {
+                var1 = this.field_b[var2].field_b + this.field_b[var2].field_m;
                 var2++;
                 continue L0;
               } else {
@@ -89,25 +89,25 @@ final class vp {
 
     final be b() {
         byte[] var1 = this.a();
-        return new be(22050, var1, 22050 * ((vp) this).field_c / 1000, 22050 * ((vp) this).field_a / 1000);
+        return new be(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
     private vp(lu param0) {
         int var2 = 0;
         int var3 = 0;
-        ((vp) this).field_b = new sda[10];
+        this.field_b = new sda[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((vp) this).field_c = param0.e((byte) 113);
-            ((vp) this).field_a = param0.e((byte) 47);
+            this.field_c = param0.e((byte) 113);
+            this.field_a = param0.e((byte) 47);
             return;
           } else {
             var3 = param0.b(16711935);
             if (var3 != 0) {
               param0.field_g = param0.field_g - 1;
-              ((vp) this).field_b[var2] = new sda();
-              ((vp) this).field_b[var2].a(param0);
+              this.field_b[var2] = new sda();
+              this.field_b[var2].a(param0);
               var2++;
               continue L0;
             } else {

@@ -7,14 +7,10 @@ final class nka {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = 128;
+        int var1 = -128 / ((param0 - -22) / 43);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "nka.A(";
         field_a = "Connection lost. <%0>";
     }

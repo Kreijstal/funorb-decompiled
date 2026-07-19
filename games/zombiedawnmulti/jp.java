@@ -40,13 +40,13 @@ final class jp {
             L2: {
               var1 = null;
               var2 = null;
-              if (va.field_a != 0) {
+              if ((va.field_a ^ -1) != -1) {
                 break L2;
               } else {
                 if (ej.field_n == null) {
                   break L2;
                 } else {
-                  var2 = (Object) (Object) bc.field_d;
+                  var2 = bc.field_d;
                   break L2;
                 }
               }
@@ -61,7 +61,7 @@ final class jp {
                       if (kj.a((byte) -94, ql.field_a)) {
                         break L5;
                       } else {
-                        var2 = (Object) (Object) vl.a(ta.field_jb, new String[1], 2);
+                        var2 = vl.a(ta.field_jb, new String[]{qf.field_g}, 2);
                         if (var10 == 0) {
                           break L4;
                         } else {
@@ -69,11 +69,11 @@ final class jp {
                         }
                       }
                     }
-                    var2 = (Object) (Object) vl.a(hn.field_k, new String[1], 2);
+                    var2 = vl.a(hn.field_k, new String[]{qf.field_g}, 2);
                     break L4;
                   }
                   if (ee.field_b) {
-                    vm.a((String) null, 0, (String) null, (String) var2, 2, 0);
+                    vm.a((String) null, 0, (String) null, (String) (var2), 2, 0);
                     ub.n(33423425);
                     break L3;
                   } else {
@@ -92,7 +92,7 @@ final class jp {
                   break L6;
                 } else {
                   if (null == lj.field_v) {
-                    var2 = (Object) (Object) ch.field_a;
+                    var2 = ch.field_a;
                     break L6;
                   } else {
                     break L6;
@@ -105,7 +105,7 @@ final class jp {
                 if (var2 == null) {
                   break L8;
                 } else {
-                  wh.a(6, wj.field_g, 0, (String) var2, (String) null);
+                  wh.a(6, wj.field_g, 0, (String) (var2), (String) null);
                   if (var10 == 0) {
                     break L7;
                   } else {
@@ -121,14 +121,14 @@ final class jp {
                   var5 = "|";
                   var6 = va.field_a;
                   var7 = 0;
-                  if (var6 != 2) {
+                  if (-3 != (var6 ^ -1)) {
                     break L10;
                   } else {
                     L11: {
-                      var4 = vl.a(v.field_c, new String[1], 2);
-                      var8 = vl.a(lc.field_n, new String[1], param0 + 106);
+                      var4 = vl.a(v.field_c, new String[]{qf.field_g}, 2);
+                      var8 = vl.a(lc.field_n, new String[]{var3}, param0 + 106);
                       var7 = -485 + ua.field_E.field_zb + (ec.field_b.field_zb - (-w.field_A.a(var8) + w.field_A.a(var4)));
-                      if (var7 < 0) {
+                      if (-1 < (var7 ^ -1)) {
                         var7 = 0;
                         break L11;
                       } else {
@@ -143,7 +143,7 @@ final class jp {
                   }
                 }
                 L12: {
-                  if (var6 != 0) {
+                  if ((var6 ^ -1) != -1) {
                     break L12;
                   } else {
                     L13: {
@@ -176,7 +176,7 @@ final class jp {
                           }
                         }
                       }
-                      var4 = "[" + vl.a(ae.field_g, new String[1], 2) + "] ";
+                      var4 = "[" + vl.a(ae.field_g, new String[]{mh.field_c.field_Nb}, 2) + "] ";
                       break L12;
                     } else {
                       break L12;
@@ -226,20 +226,20 @@ final class jp {
                     if (!ec.field_b.field_L) {
                       break L18;
                     } else {
-                      if (~var9 >= ~(-ec.field_b.field_w + bd.field_g)) {
+                      if ((var9 ^ -1) >= (-ec.field_b.field_w + bd.field_g ^ -1)) {
                         break L18;
                       } else {
                         if (nh.field_m) {
-                          var1 = (Object) (Object) "Broken!";
+                          var1 = "Broken!";
                           break L18;
                         } else {
-                          var1 = (Object) (Object) cf.field_v;
+                          var1 = cf.field_v;
                           break L18;
                         }
                       }
                     }
                   }
-                  if (ec.field_b.field_T == 0) {
+                  if (-1 == (ec.field_b.field_T ^ -1)) {
                     break L9;
                   } else {
                     if (ec.field_b.field_U < var9) {
@@ -265,7 +265,7 @@ final class jp {
                 }
               }
               if (ua.field_E.field_L) {
-                var1 = (Object) (Object) vl.a(jg.field_b, new String[2], param0 + 106);
+                var1 = vl.a(jg.field_b, new String[]{var3, qf.field_g}, param0 + 106);
                 break L7;
               } else {
                 break L7;
@@ -277,10 +277,10 @@ final class jp {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Object) (Object) decompiledCaughtException;
-          throw fa.a((Throwable) var1, "jp.B(" + param0 + ')');
+          var1 = decompiledCaughtException;
+          throw fa.a((Throwable) (var1), "jp.B(" + param0 + ')');
         }
-        return (String) (Object) stackIn_104_0;
+        return (String) ((Object) stackIn_104_0);
     }
 
     public static void b(byte param0) {
@@ -290,15 +290,11 @@ final class jp {
             field_b = null;
             field_c = null;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "jp.A(" + param0 + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "jp.A(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new th();
         field_a = "Best";
         field_e = -1;

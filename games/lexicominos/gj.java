@@ -12,13 +12,18 @@ final class gj extends rh {
     final Object c(byte param0) {
         if (param0 != 30) {
             gj.d(70);
-            return ((gj) this).field_v;
+            return this.field_v;
         }
-        return ((gj) this).field_v;
+        return this.field_v;
     }
 
     final static db[] a(int param0, int param1, boolean param2, int param3) {
-        return wb.a(param0, param1, 1, param3, 3);
+        if (param2) {
+          field_s = (byte[][]) null;
+          return wb.a(param0, param1, 1, param3, 3);
+        } else {
+          return wb.a(param0, param1, 1, param3, 3);
+        }
     }
 
     final boolean d(byte param0) {
@@ -28,7 +33,7 @@ final class gj extends rh {
 
     public static void d(int param0) {
         field_w = null;
-        field_s = null;
+        field_s = (byte[][]) null;
         field_u = null;
         if (param0 != -8601) {
             gj.d(-12);
@@ -41,17 +46,13 @@ final class gj extends rh {
     gj(Object param0, int param1) {
         super(param1);
         try {
-            ((gj) this).field_v = param0;
+            this.field_v = param0;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = new int[128];
         field_s = new byte[50][];
         field_u = "Visit the Account Management section on the main site to view.";

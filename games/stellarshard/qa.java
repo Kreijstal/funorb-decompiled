@@ -35,12 +35,12 @@ final class qa {
         Exception var18 = null;
         Throwable decompiledCaughtException = null;
         L0: {
-          field_s = 0;
-          field_m = 2;
+          field_s = param0;
+          field_m = param1;
           field_r = param2;
-          field_n = 128;
-          field_g = 128;
-          field_b = 128;
+          field_n = param9;
+          field_g = param10;
+          field_b = param11;
           var12 = cc.field_n;
           var13 = cc.field_p;
           var14 = 0;
@@ -210,6 +210,15 @@ final class qa {
     }
 
     private final static void b() {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         int var0 = 0;
         int var1 = 0;
         int var2 = 0;
@@ -242,7 +251,7 @@ final class qa {
                 var9 = (field_f - var3) * field_p[var5 - var3];
                 field_h[var2] = var0 + (var6 + ((field_c[2] - var6) * var9 >> 16) << 9) / field_f;
                 field_e[var2] = var1 + (var7 + ((field_k[2] - var7) * var9 >> 16) << 9) / field_f;
-                int incrementValue$9 = var2;
+                incrementValue$9 = var2;
                 var2++;
                 field_d[incrementValue$9] = var8 + ((field_b - var8) * var9 >> 16);
                 break L1;
@@ -254,7 +263,7 @@ final class qa {
               var9 = (field_f - var3) * field_p[var4 - var3];
               field_h[var2] = var0 + (var6 + ((field_c[1] - var6) * var9 >> 16) << 9) / field_f;
               field_e[var2] = var1 + (var7 + ((field_k[1] - var7) * var9 >> 16) << 9) / field_f;
-              int incrementValue$10 = var2;
+              incrementValue$10 = var2;
               var2++;
               field_d[incrementValue$10] = var8 + ((field_g - var8) * var9 >> 16);
               break L0;
@@ -262,7 +271,7 @@ final class qa {
           } else {
             field_h[var2] = field_q[0];
             field_e[var2] = field_a[0];
-            int incrementValue$11 = var2;
+            incrementValue$11 = var2;
             var2++;
             field_d[incrementValue$11] = field_n;
             break L0;
@@ -280,7 +289,7 @@ final class qa {
                 var9 = (field_f - var4) * field_p[var3 - var4];
                 field_h[var2] = var0 + (var6 + ((field_c[0] - var6) * var9 >> 16) << 9) / field_f;
                 field_e[var2] = var1 + (var7 + ((field_k[0] - var7) * var9 >> 16) << 9) / field_f;
-                int incrementValue$12 = var2;
+                incrementValue$12 = var2;
                 var2++;
                 field_d[incrementValue$12] = var8 + ((field_n - var8) * var9 >> 16);
                 break L3;
@@ -292,7 +301,7 @@ final class qa {
               var9 = (field_f - var4) * field_p[var5 - var4];
               field_h[var2] = var0 + (var6 + ((field_c[2] - var6) * var9 >> 16) << 9) / field_f;
               field_e[var2] = var1 + (var7 + ((field_k[2] - var7) * var9 >> 16) << 9) / field_f;
-              int incrementValue$13 = var2;
+              incrementValue$13 = var2;
               var2++;
               field_d[incrementValue$13] = var8 + ((field_b - var8) * var9 >> 16);
               break L2;
@@ -300,7 +309,7 @@ final class qa {
           } else {
             field_h[var2] = field_q[1];
             field_e[var2] = field_a[1];
-            int incrementValue$14 = var2;
+            incrementValue$14 = var2;
             var2++;
             field_d[incrementValue$14] = field_g;
             break L2;
@@ -318,7 +327,7 @@ final class qa {
                 var9 = (field_f - var5) * field_p[var4 - var5];
                 field_h[var2] = var0 + (var6 + ((field_c[1] - var6) * var9 >> 16) << 9) / field_f;
                 field_e[var2] = var1 + (var7 + ((field_k[1] - var7) * var9 >> 16) << 9) / field_f;
-                int incrementValue$15 = var2;
+                incrementValue$15 = var2;
                 var2++;
                 field_d[incrementValue$15] = var8 + ((field_g - var8) * var9 >> 16);
                 break L5;
@@ -330,7 +339,7 @@ final class qa {
               var9 = (field_f - var5) * field_p[var3 - var5];
               field_h[var2] = var0 + (var6 + ((field_c[0] - var6) * var9 >> 16) << 9) / field_f;
               field_e[var2] = var1 + (var7 + ((field_k[0] - var7) * var9 >> 16) << 9) / field_f;
-              int incrementValue$16 = var2;
+              incrementValue$16 = var2;
               var2++;
               field_d[incrementValue$16] = var8 + ((field_n - var8) * var9 >> 16);
               break L4;
@@ -338,7 +347,7 @@ final class qa {
           } else {
             field_h[var2] = field_q[2];
             field_e[var2] = field_a[2];
-            int incrementValue$17 = var2;
+            incrementValue$17 = var2;
             var2++;
             field_d[incrementValue$17] = field_b;
             break L4;
@@ -595,10 +604,6 @@ final class qa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = cc.field_l;
         field_o = new int[3];
         field_v = new int[3];

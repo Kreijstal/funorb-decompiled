@@ -15,15 +15,11 @@ final class t {
         if (!(uc.field_kb != null)) {
             uc.field_kb = new ik(cl.field_T, 20, 0, 0, 0, 11579568, -1, 0, 0, cl.field_T.field_E, -1, 2147483647, true);
         }
-        int var1 = 0;
+        int var1 = 28 % ((param0 - 69) / 52);
         return uc.field_kb;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new db(270, 70);
     }
 }

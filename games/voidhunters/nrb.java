@@ -9,7 +9,7 @@ final class nrb implements wwa {
         try {
             int var6_int = 34 % ((-27 - param0) / 35);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "nrb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "nrb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -22,10 +22,6 @@ final class nrb implements wwa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         blb discarded$0 = new blb();
         field_a = "Decline invitation to <%0>'s game";
     }

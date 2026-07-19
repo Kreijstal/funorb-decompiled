@@ -11,16 +11,16 @@ final class hb {
     final fc a(int param0, int param1) {
         fc var3 = null;
         byte[] var4 = null;
-        var3 = (fc) ((hb) this).field_c.a((long)param1, (byte) 95);
+        var3 = (fc) (this.field_c.a((long)param1, (byte) 95));
         if (var3 != null) {
           return var3;
         } else {
           L0: {
-            if (param1 < 32768) {
-              var4 = ((hb) this).field_a.a(false, 1, param1);
+            if (-32769 < (param1 ^ -1)) {
+              var4 = this.field_a.a(false, 1, param1);
               break L0;
             } else {
-              var4 = ((hb) this).field_d.a(false, 1, 32767 & param1);
+              var4 = this.field_d.a(false, 1, 32767 & param1);
               break L0;
             }
           }
@@ -41,9 +41,9 @@ final class hb {
               break L2;
             }
           }
-          ((hb) this).field_c.a(6565, (long)param1, (Object) (Object) var3);
+          this.field_c.a(6565, (long)param1, var3);
           if (param0 != 25461) {
-            return null;
+            return (fc) null;
           } else {
             return var3;
           }
@@ -52,18 +52,31 @@ final class hb {
 
     public static void a(int param0) {
         field_e = null;
-        int var1 = 48;
+        int var1 = 97 / ((-10 - param0) / 39);
     }
 
     final static ea a(int param0, int param1, int param2) {
+        ea var3 = null;
         int var4 = 0;
-        int var5 = MinerDisturbance.field_ab;
-        ea var6 = new ea(param0, param0);
-        ea var3 = var6;
-        for (var4 = 0; var3.field_D.length > var4; var4++) {
-            var6.field_D[var4] = param2;
+        int var5 = 0;
+        ea var6 = null;
+        var5 = MinerDisturbance.field_ab;
+        if (param1 != 32768) {
+          return (ea) null;
+        } else {
+          var6 = new ea(param0, param0);
+          var3 = var6;
+          var4 = 0;
+          L0: while (true) {
+            if (var3.field_D.length <= var4) {
+              return var3;
+            } else {
+              var6.field_D[var4] = param2;
+              var4++;
+              continue L0;
+            }
+          }
         }
-        return var3;
     }
 
     private hb() throws Throwable {
@@ -71,10 +84,6 @@ final class hb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0;
     }
 }

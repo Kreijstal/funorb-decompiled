@@ -13,8 +13,11 @@ final class nk {
     private static String field_z;
 
     public static void a(int param0) {
-        field_b = null;
+        field_b = (byte[][]) null;
         field_f = null;
+        if (param0 != 250) {
+            return;
+        }
         field_g = null;
         field_d = null;
         field_a = null;
@@ -22,10 +25,6 @@ final class nk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "nk.A(";
         field_h = 256;
         field_g = new String[]{"£3.20", "€4.25", "US$ 5.00", "Can$ 4.95", "Aus$ 6.50", "Krn 29.95", "", "Rp 160", "Rng 17.95", "NZ$ 7.95", "SG$ 6.95", "Krn 44.95", "R$ 7,00"};

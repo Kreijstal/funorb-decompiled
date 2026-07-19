@@ -22,17 +22,50 @@ abstract class ng {
             }
             var1[var2] = new tg(se.field_C, fk.field_e, cl.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], var5);
         }
+        if (param0 > -47) {
+            return (tg[]) null;
+        }
         vb.a((byte) 122);
         return var1;
     }
 
     final static boolean a(int param0) {
-        return vd.field_b != null && vd.field_b.b((byte) 121);
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
+        L0: {
+          if (param0 > 108) {
+            break L0;
+          } else {
+            ng.b(51);
+            break L0;
+          }
+        }
+        L1: {
+          L2: {
+            if (vd.field_b == null) {
+              break L2;
+            } else {
+              if (!vd.field_b.b((byte) 121)) {
+                break L2;
+              } else {
+                stackOut_4_0 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                break L1;
+              }
+            }
+          }
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L1;
+        }
+        return stackIn_6_0 != 0;
     }
 
     abstract sb b(byte param0);
 
     final static void a(int param0, int param1, int param2) {
+        tg[] discarded$1 = null;
         L0: {
           L1: {
             if (null == bl.field_e) {
@@ -79,79 +112,87 @@ abstract class ng {
           break L4;
         }
         L6: {
-          L7: {
+          if (param0 == -15936) {
+            break L6;
+          } else {
+            discarded$1 = ng.a((byte) -73);
+            break L6;
+          }
+        }
+        L7: {
+          L8: {
             if (gk.field_i == null) {
-              break L7;
+              break L8;
             } else {
               if (gk.field_i.length < param2) {
-                break L7;
+                break L8;
               } else {
-                break L6;
+                break L7;
               }
             }
           }
           gk.field_i = new int[2 * param2];
-          break L6;
+          break L7;
         }
-        L8: {
-          L9: {
+        L9: {
+          L10: {
             if (th.field_c == null) {
-              break L9;
+              break L10;
             } else {
               if (th.field_c.length < param2) {
-                break L9;
+                break L10;
               } else {
-                break L8;
+                break L9;
               }
             }
           }
           th.field_c = new int[2 * param2];
-          break L8;
+          break L9;
         }
-        L10: {
-          L11: {
+        L11: {
+          L12: {
             if (null == ij.field_b) {
-              break L11;
+              break L12;
             } else {
               if (param2 <= ij.field_b.length) {
-                break L10;
-              } else {
                 break L11;
-              }
-            }
-          }
-          ij.field_b = new int[2 * param2];
-          break L10;
-        }
-        L12: {
-          L13: {
-            if (w.field_f == null) {
-              break L13;
-            } else {
-              if (param1 + param2 > w.field_f.length) {
-                break L13;
               } else {
                 break L12;
               }
             }
           }
-          w.field_f = new int[2 * (param2 - -param1)];
-          break L12;
+          ij.field_b = new int[2 * param2];
+          break L11;
         }
-        L14: {
-          L15: {
-            if (pg.field_a == null) {
-              break L15;
+        L13: {
+          L14: {
+            if (w.field_f == null) {
+              break L14;
             } else {
-              if (pg.field_a.length >= param2) {
+              if (param1 + param2 > w.field_f.length) {
                 break L14;
               } else {
+                break L13;
+              }
+            }
+          }
+          w.field_f = new int[2 * (param2 - -param1)];
+          break L13;
+        }
+        L15: {
+          L16: {
+            if (pg.field_a == null) {
+              break L16;
+            } else {
+              if (pg.field_a.length >= param2) {
                 break L15;
+              } else {
+                break L16;
               }
             }
           }
           pg.field_a = new boolean[param2 * 2];
-          break L14;
+          break L15;
         }
         mg.field_n = 2147483647;
         va.field_b = 2147483647;
@@ -163,6 +204,9 @@ abstract class ng {
     abstract void a(boolean param0, wi param1);
 
     public static void b(int param0) {
+        if (param0 != 2) {
+            return;
+        }
         field_a = null;
     }
 
@@ -175,61 +219,75 @@ abstract class ng {
         char[] var6 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_24_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_26_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_7_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_13_0 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_15_0 = 0;
         var5 = Bounce.field_N;
         try {
           L0: {
             if (Character.isISOControl(param1)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (md.a(106, param1)) {
                 stackOut_7_0 = 1;
                 stackIn_8_0 = stackOut_7_0;
-                return stackIn_8_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
-                var6 = a.field_b;
-                var2 = var6;
+                L1: {
+                  var6 = a.field_b;
+                  var2 = var6;
+                  if (param0 == -95) {
+                    break L1;
+                  } else {
+                    field_a = (boolean[]) null;
+                    break L1;
+                  }
+                }
                 var3 = 0;
-                L1: while (true) {
+                L2: while (true) {
                   if (var6.length <= var3) {
                     var2 = nh.field_O;
                     var3 = 0;
-                    L2: while (true) {
+                    L3: while (true) {
                       if (var2.length <= var3) {
-                        stackOut_23_0 = 0;
-                        stackIn_24_0 = stackOut_23_0;
+                        stackOut_25_0 = 0;
+                        stackIn_26_0 = stackOut_25_0;
+                        decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
                         var4 = var2[var3];
                         if (param1 == var4) {
-                          stackOut_20_0 = 1;
-                          stackIn_21_0 = stackOut_20_0;
-                          return stackIn_21_0 != 0;
+                          stackOut_22_0 = 1;
+                          stackIn_23_0 = stackOut_22_0;
+                          decompiledRegionSelector0 = 3;
+                          break L0;
                         } else {
                           var3++;
-                          continue L2;
+                          continue L3;
                         }
                       }
                     }
                   } else {
                     var4 = var6[var3];
                     if (param1 == var4) {
-                      stackOut_13_0 = 1;
-                      stackIn_14_0 = stackOut_13_0;
-                      return stackIn_14_0 != 0;
+                      stackOut_15_0 = 1;
+                      stackIn_16_0 = stackOut_15_0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     } else {
                       var3++;
-                      continue L1;
+                      continue L2;
                     }
                   }
                 }
@@ -239,16 +297,28 @@ abstract class ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var2_ref, "ng.D(" + -95 + ',' + param1 + ')');
+          throw ii.a((Throwable) ((Object) var2_ref), "ng.D(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_24_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_16_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_23_0 != 0;
+              } else {
+                return stackIn_26_0 != 0;
+              }
+            }
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new boolean[112];
         field_b = false;
     }

@@ -12,29 +12,32 @@ final class ek extends ht {
 
     ek(fr param0, int param1, int param2, int param3, int param4) {
         super(param0, 32879, param1, param4 * (param2 * param3), false);
-        ((ek) this).field_n = -1;
-        ((ek) this).field_m = -1;
+        this.field_n = -1;
+        this.field_m = -1;
         try {
-            ((ek) this).field_p = param2;
-            ((ek) this).field_q = param3;
-            ((ek) this).field_o = param4;
-            ((ek) this).field_d.a(63, (ht) this);
-            jaggl.OpenGL.glTexImage3Dub(((ek) this).field_c, 0, ((ek) this).field_a, ((ek) this).field_p, ((ek) this).field_q, ((ek) this).field_o, 0, be.a(false, ((ek) this).field_a), 5121, (byte[]) null, 0);
-            ((ek) this).a(true, 0);
+            this.field_p = param2;
+            this.field_q = param3;
+            this.field_o = param4;
+            this.field_d.a(63, (ht) (this));
+            jaggl.OpenGL.glTexImage3Dub(this.field_c, 0, this.field_a, this.field_p, this.field_q, this.field_o, 0, be.a(false, this.field_a), 5121, (byte[]) null, 0);
+            this.a(true, 0);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ek.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "ek.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void d(int param0) {
+        if (param0 != -21551) {
+            return;
+        }
         field_k = null;
     }
 
     public final void a(int param0) {
-        jaggl.OpenGL.glFramebufferTexture3DEXT(((ek) this).field_n, ((ek) this).field_m, ((ek) this).field_c, 0, 0, 0);
-        ((ek) this).field_n = -1;
+        jaggl.OpenGL.glFramebufferTexture3DEXT(this.field_n, this.field_m, this.field_c, 0, 0, 0);
+        this.field_n = -1;
         int var2 = -76 / ((44 - param0) / 58);
-        ((ek) this).field_m = -1;
+        this.field_m = -1;
     }
 
     final static void a(String param0, int param1) {
@@ -42,26 +45,26 @@ final class ek extends ht {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_17_0 = 0;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        String stackIn_42_2 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_15_0 = 0;
         int stackOut_14_0 = 0;
         int stackOut_12_0 = 0;
         int stackOut_10_0 = 0;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        RuntimeException stackOut_44_0 = null;
+        StringBuilder stackOut_44_1 = null;
+        String stackOut_44_2 = null;
+        RuntimeException stackOut_43_0 = null;
+        StringBuilder stackOut_43_1 = null;
+        String stackOut_43_2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
@@ -70,7 +73,7 @@ final class ek extends ht {
               if (tm.field_d != -1) {
                 break L1;
               } else {
-                if (dm.field_e != -1) {
+                if (0 != (dm.field_e ^ -1)) {
                   break L1;
                 } else {
                   dm.field_e = pi.field_e;
@@ -82,7 +85,7 @@ final class ek extends ht {
             L2: {
               L3: {
                 if (param0 != null) {
-                  if (!param0.equals((Object) (Object) hp.field_l)) {
+                  if (!param0.equals(hp.field_l)) {
                     break L3;
                   } else {
                     break L2;
@@ -124,17 +127,24 @@ final class ek extends ht {
                   qf.field_a = 0;
                   break L5;
                 } else {
-                  if (up.field_d) {
-                    qf.field_a = fn.field_s;
+                  L6: {
+                    if (up.field_d) {
+                      break L6;
+                    } else {
+                      if (var2_int == 0) {
+                        qf.field_a = 0;
+                        break L5;
+                      } else {
+                        break L6;
+                      }
+                    }
+                  }
+                  qf.field_a = fn.field_s;
+                  if (var3 == 0) {
                     break L5;
                   } else {
-                    if (var2_int == 0) {
-                      qf.field_a = 0;
-                      break L5;
-                    } else {
-                      qf.field_a = fn.field_s;
-                      break L5;
-                    }
+                    qf.field_a = 0;
+                    break L5;
                   }
                 }
               }
@@ -148,40 +158,45 @@ final class ek extends ht {
                   break L2;
                 } else {
                   up.field_d = true;
-                  break L2;
-                }
-              }
-            }
-            L6: {
-              hp.field_l = param0;
-              var2_int = 0;
-              if (up.field_d) {
-                break L6;
-              } else {
-                if (qf.field_a >= fn.field_s) {
-                  break L6;
-                } else {
-                  if (sl.field_d) {
-                    qf.field_a = 0;
-                    za.field_k = dm.field_e;
-                    hq.field_b = tm.field_d;
-                    break L6;
+                  if (var3 == 0) {
+                    break L2;
                   } else {
-                    break L6;
+                    up.field_d = false;
+                    break L2;
                   }
                 }
               }
             }
             L7: {
-              if (!up.field_d) {
+              hp.field_l = param0;
+              var2_int = -62 % ((-74 - param1) / 35);
+              if (up.field_d) {
                 break L7;
               } else {
-                if (qf.field_a != fe.field_T) {
+                if (qf.field_a >= fn.field_s) {
                   break L7;
+                } else {
+                  if (sl.field_d) {
+                    qf.field_a = 0;
+                    za.field_k = dm.field_e;
+                    hq.field_b = tm.field_d;
+                    break L7;
+                  } else {
+                    break L7;
+                  }
+                }
+              }
+            }
+            L8: {
+              if (!up.field_d) {
+                break L8;
+              } else {
+                if (qf.field_a != fe.field_T) {
+                  break L8;
                 } else {
                   qf.field_a = 0;
                   up.field_d = false;
-                  break L7;
+                  break L8;
                 }
               }
             }
@@ -191,74 +206,81 @@ final class ek extends ht {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L9: {
             var2 = decompiledCaughtException;
-            stackOut_39_0 = (RuntimeException) var2;
-            stackOut_39_1 = new StringBuilder().append("ek.B(");
-            stackIn_41_0 = stackOut_39_0;
-            stackIn_41_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+            stackOut_42_0 = (RuntimeException) (var2);
+            stackOut_42_1 = new StringBuilder().append("ek.B(");
+            stackIn_44_0 = stackOut_42_0;
+            stackIn_44_1 = stackOut_42_1;
+            stackIn_43_0 = stackOut_42_0;
+            stackIn_43_1 = stackOut_42_1;
             if (param0 == null) {
-              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
-              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
-              stackOut_41_2 = "null";
-              stackIn_42_0 = stackOut_41_0;
-              stackIn_42_1 = stackOut_41_1;
-              stackIn_42_2 = stackOut_41_2;
-              break L8;
+              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackOut_44_2 = "null";
+              stackIn_45_0 = stackOut_44_0;
+              stackIn_45_1 = stackOut_44_1;
+              stackIn_45_2 = stackOut_44_2;
+              break L9;
             } else {
-              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
-              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
-              stackOut_40_2 = "{...}";
-              stackIn_42_0 = stackOut_40_0;
-              stackIn_42_1 = stackOut_40_1;
-              stackIn_42_2 = stackOut_40_2;
-              break L8;
+              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackOut_43_2 = "{...}";
+              stackIn_45_0 = stackOut_43_0;
+              stackIn_45_1 = stackOut_43_1;
+              stackIn_45_2 = stackOut_43_2;
+              break L9;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ',' + -124 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_45_0), stackIn_45_2 + ',' + param1 + ')');
         }
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        ((ek) this).field_d.a(param1 ^ 36, (ht) this);
-        jaggl.OpenGL.glCopyTexSubImage3D(((ek) this).field_c, 0, param0, param2, param3, param7, param6, param5, param4);
+        this.field_d.a(param1 ^ 36, (ht) (this));
+        jaggl.OpenGL.glCopyTexSubImage3D(this.field_c, 0, param0, param2, param3, param7, param6, param5, param4);
         jaggl.OpenGL.glFlush();
         if (param1 != 80) {
-            ((ek) this).field_n = 57;
+            this.field_n = 57;
         }
     }
 
     ek(fr param0, int param1, int param2, int param3, int param4, byte[] param5, int param6) {
         super(param0, 32879, param1, param3 * param2 * param4, false);
-        ((ek) this).field_n = -1;
-        ((ek) this).field_m = -1;
+        this.field_n = -1;
+        this.field_m = -1;
         try {
-            ((ek) this).field_p = param2;
-            ((ek) this).field_q = param3;
-            ((ek) this).field_o = param4;
-            ((ek) this).field_d.a(72, (ht) this);
+            this.field_p = param2;
+            this.field_q = param3;
+            this.field_o = param4;
+            this.field_d.a(72, (ht) (this));
             jaggl.OpenGL.glPixelStorei(3317, 1);
-            jaggl.OpenGL.glTexImage3Dub(((ek) this).field_c, 0, ((ek) this).field_a, ((ek) this).field_p, ((ek) this).field_q, ((ek) this).field_o, 0, param6, 5121, param5, 0);
+            jaggl.OpenGL.glTexImage3Dub(this.field_c, 0, this.field_a, this.field_p, this.field_q, this.field_o, 0, param6, 5121, param5, 0);
             jaggl.OpenGL.glPixelStorei(3317, 4);
-            ((ek) this).a(true, 0);
+            this.a(true, 0);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ek.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "ek.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
     final static void b(boolean param0, int param1) {
-        mf var2 = mf.a(rc.field_l[0], 100, 96);
-        var2.c(-1);
-        dj discarded$0 = qq.a(18416, var2);
+        dj discarded$4 = null;
+        dj discarded$5 = null;
+        mf var2 = null;
+        var2 = mf.a(rc.field_l[param1], 100, 96);
+        if (!param0) {
+          ek.b(true, 27);
+          var2.c(-1);
+          discarded$4 = qq.a(18416, var2);
+          return;
+        } else {
+          var2.c(-1);
+          discarded$5 = qq.a(18416, var2);
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = 0;
     }
 }

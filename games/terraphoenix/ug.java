@@ -9,14 +9,13 @@ final class ug {
 
     public static void a(int param0) {
         field_a = null;
-        field_c = null;
+        field_c = (byte[][]) null;
+        if (param0 != -11978) {
+            field_a = (String[]) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ug.A(";
         field_a = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
     }

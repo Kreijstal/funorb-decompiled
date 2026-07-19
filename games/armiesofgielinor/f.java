@@ -20,29 +20,28 @@ final class f extends uq {
         field_A = null;
         field_D = null;
         field_C = null;
+        if (!param0) {
+            f.c(true);
+        }
     }
 
     final Object b(boolean param0) {
         if (param0) {
-            return null;
+            return (Object) null;
         }
-        return ((f) this).field_B;
+        return this.field_B;
     }
 
     f(Object param0, int param1) {
         super(param1);
         try {
-            ((f) this).field_B = param0;
+            this.field_B = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_D = new int[]{83};
         field_A = "Type your age in years";
     }

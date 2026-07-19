@@ -7,15 +7,15 @@ final class of implements be {
 
     public of() throws Exception {
         int var1 = 0;
-        ((of) this).field_b = new com.ms.directX.DSBufferDesc[2];
-        ((of) this).field_a = new com.ms.directX.DSCursors[2];
+        this.field_b = new com.ms.directX.DSBufferDesc[2];
+        this.field_a = new com.ms.directX.DSCursors[2];
         com.ms.directX.DirectSound discarded$0 = new com.ms.directX.DirectSound();
         com.ms.directX.WaveFormatEx discarded$1 = new com.ms.directX.WaveFormatEx();
         for (var1 = 0; var1 < 2; var1++) {
-            ((of) this).field_b[var1] = new com.ms.directX.DSBufferDesc();
+            this.field_b[var1] = new com.ms.directX.DSBufferDesc();
         }
         for (var1 = 0; var1 < 2; var1++) {
-            ((of) this).field_a[var1] = new com.ms.directX.DSCursors();
+            this.field_a[var1] = new com.ms.directX.DSCursors();
         }
     }
 }

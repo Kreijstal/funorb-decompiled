@@ -13,11 +13,15 @@ final class p extends ta {
 
     public static void b(int param0) {
         field_x = null;
+        if (param0 != 29841) {
+            field_w = (t) null;
+        }
         field_w = null;
         field_t = null;
     }
 
     private final void a(int param0, int param1, fj param2) {
+        int[] array$1 = null;
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -45,15 +49,15 @@ final class p extends ta {
         try {
           L0: {
             L1: {
-              if (param0 == 1) {
-                ((p) this).field_r = kc.a('<', param2.h((byte) 122), 0);
+              if (param0 == param1) {
+                this.field_r = kc.a('<', param2.h((byte) 122), 0);
                 break L1;
               } else {
                 if (param0 != 2) {
                   if (param0 == 3) {
                     var4_int = param2.i((byte) -101);
-                    ((p) this).field_s = new int[var4_int][];
-                    ((p) this).field_q = new int[var4_int];
+                    this.field_s = new int[var4_int][];
+                    this.field_q = new int[var4_int];
                     var5 = 0;
                     L2: while (true) {
                       if (var5 >= var4_int) {
@@ -63,14 +67,15 @@ final class p extends ta {
                           var6 = param2.i(7088);
                           var7 = ni.a(89, var6);
                           if (var7 != null) {
-                            ((p) this).field_q[var5] = var6;
-                            ((p) this).field_s[var5] = new int[var7.field_a];
+                            this.field_q[var5] = var6;
+                            array$1 = new int[var7.field_a];
+                            this.field_s[var5] = array$1;
                             var8 = 0;
                             L4: while (true) {
                               if (var7.field_a <= var8) {
                                 break L3;
                               } else {
-                                ((p) this).field_s[var5][var8] = param2.i(7088);
+                                this.field_s[var5][var8] = param2.i(7088);
                                 var8++;
                                 continue L4;
                               }
@@ -92,13 +97,13 @@ final class p extends ta {
                   }
                 } else {
                   var4_int = param2.i((byte) -101);
-                  ((p) this).field_v = new int[var4_int];
+                  this.field_v = new int[var4_int];
                   var5 = 0;
                   L5: while (true) {
                     if (var4_int <= var5) {
                       break L1;
                     } else {
-                      ((p) this).field_v[var5] = param2.i(7088);
+                      this.field_v[var5] = param2.i(7088);
                       var5++;
                       continue L5;
                     }
@@ -112,23 +117,23 @@ final class p extends ta {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var4;
-            stackOut_19_1 = new StringBuilder().append("p.A(").append(param0).append(',').append(1).append(',');
+            stackOut_19_0 = (RuntimeException) (var4);
+            stackOut_19_1 = new StringBuilder().append("p.A(").append(param0).append(',').append(param1).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param2 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -136,7 +141,7 @@ final class p extends ta {
               break L6;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
         }
     }
 
@@ -151,6 +156,7 @@ final class p extends ta {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
@@ -167,6 +173,7 @@ final class p extends ta {
               L1: while (true) {
                 var3_int = param0.i((byte) -101);
                 if (var3_int == 0) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   this.a(var3_int, 1, param0);
@@ -174,30 +181,31 @@ final class p extends ta {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_0 = (RuntimeException) (var3);
             stackOut_6_1 = new StringBuilder().append("p.D(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -205,7 +213,12 @@ final class p extends ta {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -228,39 +241,43 @@ final class p extends ta {
         }
         go.b(param0 + -3499);
         if (param0 != 3499) {
-            field_x = null;
+            field_x = (fn) null;
         }
         return var1;
     }
 
     final void d(byte param0) {
         int var2 = 0;
+        t[] discarded$0 = null;
         int var3 = Torquing.field_u;
-        if (((p) this).field_v != null) {
-            for (var2 = 0; var2 < ((p) this).field_v.length; var2++) {
-                ((p) this).field_v[var2] = gm.a(((p) this).field_v[var2], 32768);
+        if (this.field_v != null) {
+            for (var2 = 0; var2 < this.field_v.length; var2++) {
+                this.field_v[var2] = gm.a(this.field_v[var2], 32768);
             }
         }
         if (param0 >= -28) {
-            t[] discarded$0 = p.a(-61);
+            discarded$0 = p.a(-61);
         }
     }
 
     final String c(byte param0) {
+        t[] discarded$0 = null;
         int var3 = 0;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
         int var4 = Torquing.field_u;
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
-        if (null == ((p) this).field_r) {
+        if (null == this.field_r) {
             return "";
         }
         if (param0 >= -126) {
-            t[] discarded$0 = p.a(18);
+            discarded$0 = p.a(18);
         }
-        StringBuilder discarded$1 = var5.append(((p) this).field_r[0]);
-        for (var3 = 1; var3 < ((p) this).field_r.length; var3++) {
-            StringBuilder discarded$2 = var2.append("...");
-            StringBuilder discarded$3 = var5.append(((p) this).field_r[var3]);
+        StringBuilder discarded$1 = var5.append(this.field_r[0]);
+        for (var3 = 1; var3 < this.field_r.length; var3++) {
+            discarded$2 = var2.append("...");
+            discarded$3 = var5.append(this.field_r[var3]);
         }
         return var2.toString();
     }
@@ -269,10 +286,6 @@ final class p extends ta {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = new ce();
         field_u = 50;
     }

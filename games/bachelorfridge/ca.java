@@ -9,16 +9,12 @@ final class ca extends kda {
 
     public static void c(int param0) {
         field_d = null;
-        int var1 = 0;
+        int var1 = 71 % ((param0 - 1) / 60);
         field_e = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ca.A(";
         field_e = new String[]{"angry", "norm", "shy"};
         field_d = "Year";

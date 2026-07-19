@@ -18,53 +18,58 @@ final class rj implements Runnable {
         lb var2 = null;
         Throwable var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        String var5 = null;
         Throwable decompiledCaughtException = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
-        ((rj) this).field_a = true;
+        this.field_a = true;
         try {
-          L0: while (true) {
-            if (((rj) this).field_g) {
-              ((rj) this).field_a = false;
-              return;
-            } else {
-              var1_int = 0;
-              L1: while (true) {
-                if (2 <= var1_int) {
-                  ao.a(10L, 1);
-                  mb.a(-75, (Object) null, ((rj) this).field_f);
-                  continue L0;
-                } else {
-                  L2: {
-                    var2 = ((rj) this).field_b[var1_int];
-                    if (var2 != null) {
-                      var2.g();
-                      var1_int++;
-                      break L2;
-                    } else {
-                      var1_int++;
-                      break L2;
+          L0: {
+            try {
+              L1: {
+                L2: while (true) {
+                  if (this.field_g) {
+                    break L1;
+                  } else {
+                    var1_int = 0;
+                    L3: while (true) {
+                      if (2 <= var1_int) {
+                        ao.a(10L, 1);
+                        mb.a(-75, (Object) null, this.field_f);
+                        continue L2;
+                      } else {
+                        L4: {
+                          var2 = this.field_b[var1_int];
+                          if (var2 != null) {
+                            var2.g();
+                            break L4;
+                          } else {
+                            break L4;
+                          }
+                        }
+                        var1_int++;
+                        continue L3;
+                      }
                     }
                   }
-                  var1_int++;
-                  continue L1;
                 }
               }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = (Exception) (Object) decompiledCaughtException;
+              var5 = (String) null;
+              jh.a((Throwable) ((Object) var1), (String) null, (byte) 20);
+              this.field_a = false;
+              return;
             }
+            break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Exception) (Object) decompiledCaughtException;
-          var5 = null;
-          jh.a((Throwable) (Object) var1, (String) null, (byte) 20);
-          ((rj) this).field_a = false;
-          return;
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
-          ((rj) this).field_a = false;
+          this.field_a = false;
           throw rj.<RuntimeException>$cfr$sneakyThrow(var3);
         }
+        this.field_a = false;
     }
 
     public static void a(byte param0) {
@@ -79,16 +84,12 @@ final class rj implements Runnable {
     }
 
     rj() {
-        ((rj) this).field_b = new lb[2];
-        ((rj) this).field_g = false;
-        ((rj) this).field_a = false;
+        this.field_b = new lb[2];
+        this.field_g = false;
+        this.field_a = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "<%0> has joined your game.";
         field_d = "Rebounding for Beginners";
         field_e = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

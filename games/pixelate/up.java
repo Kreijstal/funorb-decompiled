@@ -41,44 +41,44 @@ final class up {
 
     final void a(boolean param0, int param1) {
         if (!param0) {
-            ((up) this).field_b = ((up) this).field_b - 20;
+            this.field_b = this.field_b - 20;
         } else {
-            ((up) this).field_b = ((up) this).field_b + 20;
+            this.field_b = this.field_b + 20;
         }
-        if (((up) this).field_b < 0) {
-            ((up) this).field_b = 0;
+        if ((this.field_b ^ -1) > -1) {
+            this.field_b = 0;
         }
         if (param1 != 20) {
-            ((up) this).c(-100);
+            this.c(-100);
         }
-        if (!(((up) this).field_b <= 255)) {
-            ((up) this).field_b = 255;
+        if (!((this.field_b ^ -1) >= -256)) {
+            this.field_b = 255;
         }
     }
 
     final void c(int param0) {
-        ((up) this).field_b = 0;
+        this.field_b = 0;
         if (param0 > -90) {
-            field_k = null;
+            field_k = (int[]) null;
         }
     }
 
     final void a(int param0) {
         int var3 = 0;
-        if (!(((up) this).field_b != 0)) {
+        if (!(this.field_b != 0)) {
             return;
         }
         if (param0 != -25330) {
-            ((up) this).a(false, 110);
+            this.a(false, 110);
         }
-        if (null == ((up) this).field_l) {
+        if (null == this.field_l) {
             this.b(16);
         }
-        int var2 = (-((up) this).field_b + 255) / 10;
-        ((up) this).field_l.a(-var2 + 80, 180, ((up) this).field_b);
+        int var2 = (-this.field_b + 255) / 10;
+        this.field_l.a(-var2 + 80, 180, this.field_b);
         if (uo.field_j <= 0) {
-            if (!(10 > ((up) this).field_m)) {
-                var3 = 3 * ((up) this).field_b >> 2;
+            if (!(10 > this.field_m)) {
+                var3 = 3 * this.field_b >> -2035067678;
                 hd.field_w.a(-var2 + 96, 196, var3);
                 hd.field_w.b(-var2 + 96, 196, var3);
             }
@@ -89,12 +89,12 @@ final class up {
         int var7 = 0;
         int var8 = 0;
         int var9 = Pixelate.field_H ? 1 : 0;
-        hh var10 = lk.field_o[((up) this).field_m];
+        hh var10 = lk.field_o[this.field_m];
         hh var11 = var10;
-        jj var3 = rj.field_C[gd.field_e[((up) this).field_m].field_a];
-        ((up) this).field_l = new tf(160, 160);
-        ((up) this).field_l.c();
-        int var4 = 16 * (5 - var11.field_f);
+        jj var3 = rj.field_C[gd.field_e[this.field_m].field_a];
+        this.field_l = new tf(160, 160);
+        this.field_l.c();
+        int var4 = param0 * (5 - var11.field_f);
         int var5 = (-var11.field_a + 5) * 16;
         boolean[] var6 = ad.a(var11, 21922);
         for (var7 = 0; var7 < var11.field_a; var7++) {
@@ -102,19 +102,15 @@ final class up {
                 var3.field_k[!var6[var7 * var10.field_f + var8] ? 0 : 1].f(var8 * 32 + var4, 32 * var7 + var5);
             }
         }
-        qa.field_f.a(19692);
+        qa.field_f.a(param0 + 19676);
     }
 
     up(int param0) {
-        ((up) this).field_b = 0;
-        ((up) this).field_m = param0;
+        this.field_b = 0;
+        this.field_m = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_q = "Play the game without logging in just yet";
         field_i = new int[10];

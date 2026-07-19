@@ -10,21 +10,25 @@ final class dka {
     final static qaa a(byte param0) {
         try {
             Throwable var1 = null;
-            qaa stackIn_2_0 = null;
+            qaa stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            qaa stackOut_1_0 = null;
-            try {
-              L0: {
-                stackOut_1_0 = (qaa) Class.forName("hfa").newInstance();
-                stackIn_2_0 = stackOut_1_0;
-                break L0;
+            qaa stackOut_2_0 = null;
+            if (param0 <= -61) {
+              try {
+                L0: {
+                  stackOut_2_0 = (qaa) (Class.forName("hfa").newInstance());
+                  stackIn_3_0 = stackOut_2_0;
+                  break L0;
+                }
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var1 = decompiledCaughtException;
+                return null;
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = decompiledCaughtException;
-              return null;
+              return stackIn_3_0;
+            } else {
+              return (qaa) null;
             }
-            return stackIn_2_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -35,15 +39,14 @@ final class dka {
     public static void b(byte param0) {
         field_a = null;
         field_c = null;
+        if (param0 != 7) {
+            return;
+        }
         field_d = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Rated game";
         field_c = "Icons";
         field_d = "Hide players in <%0>'s game";

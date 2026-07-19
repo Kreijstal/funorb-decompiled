@@ -26,20 +26,20 @@ class wj extends kk {
 
     final void a(byte param0, oa param1) {
         try {
-            param1.b(1908720528, ((wj) this).field_m);
+            param1.b(1908720528, this.field_m);
             if (param0 > -50) {
                 wj.b(-65);
             }
-            param1.a((byte) 112, ((wj) this).field_n);
+            param1.a((byte) 112, this.field_n);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "wj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "wj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void c(int param0) {
         field_k = null;
         if (param0 != 480) {
-          field_j = null;
+          field_j = (ib) null;
           field_l = null;
           field_i = null;
           field_j = null;
@@ -53,8 +53,9 @@ class wj extends kk {
     }
 
     nk a(int param0) {
+        nk discarded$0 = null;
         if (param0 != -184) {
-            nk discarded$0 = ((wj) this).a(52);
+            discarded$0 = this.a(52);
             return vc.field_G;
         }
         return vc.field_G;
@@ -62,18 +63,14 @@ class wj extends kk {
 
     wj(long param0, String param1) {
         try {
-            ((wj) this).field_n = param1;
-            ((wj) this).field_m = param0;
+            this.field_n = param1;
+            this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "wj.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "wj.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
         field_l = "Type your age in years";
         field_i = "Email is valid";

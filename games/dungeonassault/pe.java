@@ -34,25 +34,41 @@ final class pe extends ne {
     }
 
     final static cn[] a(int param0, int param1, int param2, int param3, int param4) {
+        cn dupTemp$4 = null;
+        cn dupTemp$5 = null;
         cn[] var5 = null;
         cn[] var6 = null;
         var6 = new cn[9];
         var5 = var6;
-        cn dupTemp$4 = bl.a(false, param0, 1);
-        var6[6] = dupTemp$4;
-        var5[3] = dupTemp$4;
-        var5[2] = dupTemp$4;
-        var5[1] = dupTemp$4;
-        var5[0] = dupTemp$4;
-        cn dupTemp$5 = bl.a(false, param3, 1);
-        var6[8] = dupTemp$5;
-        var5[7] = dupTemp$5;
-        var5[5] = dupTemp$5;
-        if (param1 != 0) {
-          var6[4] = bl.a(false, param1, 64);
-          return var5;
+        cn dupTemp$3 = bl.a(false, param0, param4);
+        var6[6] = dupTemp$3;
+        var5[3] = dupTemp$3;
+        var5[2] = dupTemp$3;
+        var5[1] = dupTemp$3;
+        var5[0] = dupTemp$3;
+        if (param2 > 3) {
+          dupTemp$4 = bl.a(false, param3, param4);
+          var6[8] = dupTemp$4;
+          var5[7] = dupTemp$4;
+          var5[5] = dupTemp$4;
+          if (-1 != (param1 ^ -1)) {
+            var6[4] = bl.a(false, param1, 64);
+            return var5;
+          } else {
+            return var5;
+          }
         } else {
-          return var5;
+          field_l = (rk) null;
+          dupTemp$5 = bl.a(false, param3, param4);
+          var6[8] = dupTemp$5;
+          var5[7] = dupTemp$5;
+          var5[5] = dupTemp$5;
+          if (-1 == (param1 ^ -1)) {
+            return var5;
+          } else {
+            var6[4] = bl.a(false, param1, 64);
+            return var5;
+          }
         }
     }
 
@@ -72,6 +88,7 @@ final class pe extends ne {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_15_0 = 0;
@@ -92,20 +109,23 @@ final class pe extends ne {
               if (param0 == null) {
                 stackOut_5_0 = 0;
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 var3_int = param0.length();
-                if (var3_int < 12) {
-                  var4 = 0;
+                if (-13 < (var3_int ^ -1)) {
+                  var4 = -116 % ((param2 - 21) / 53);
                   if (!jc.a(param1, -101)) {
                     stackOut_15_0 = 1;
                     stackIn_16_0 = stackOut_15_0;
+                    decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
                     if (0 == var3_int) {
                       stackOut_13_0 = 0;
                       stackIn_14_0 = stackOut_13_0;
-                      return stackIn_14_0 != 0;
+                      decompiledRegionSelector0 = 3;
+                      break L0;
                     } else {
                       return true;
                     }
@@ -113,36 +133,38 @@ final class pe extends ne {
                 } else {
                   stackOut_8_0 = 0;
                   stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0 != 0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               }
             } else {
               stackOut_1_0 = 0;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var3;
+            stackOut_17_0 = (RuntimeException) (var3);
             stackOut_17_1 = new StringBuilder().append("pe.B(");
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L1;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -150,9 +172,25 @@ final class pe extends ne {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ',' + -105 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_16_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_9_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_14_0 != 0;
+              } else {
+                return stackIn_16_0 != 0;
+              }
+            }
+          }
+        }
     }
 
     private pe() throws Throwable {
@@ -160,10 +198,6 @@ final class pe extends ne {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "A large, wolf-like creature with brown-black hair and horns.";
         field_j = new fd(3);
         field_n = "ACCEPT";

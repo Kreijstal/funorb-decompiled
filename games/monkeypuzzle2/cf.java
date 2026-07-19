@@ -7,6 +7,9 @@ final class cf {
     static boolean field_c;
 
     public static void b(byte param0) {
+        if (param0 < 120) {
+            field_b = (lk) null;
+        }
         field_b = null;
         field_a = null;
     }
@@ -33,7 +36,7 @@ final class cf {
           if (param0 >= 1) {
             break L2;
           } else {
-            field_b = null;
+            field_b = (lk) null;
             break L2;
           }
         }
@@ -43,79 +46,111 @@ final class cf {
         le[] var1 = null;
         int var2 = 0;
         int var3 = 0;
-        byte[] var5 = null;
         int var6 = 0;
         int[] var6_ref_int__ = null;
         int var7 = 0;
         int var8 = 0;
-        byte[] var9 = null;
         int[] var10 = null;
-        byte[] var12 = null;
-        int[] var13 = null;
-        byte[] var16 = null;
-        int[] var17 = null;
-        byte[] var20 = null;
-        int[] var21 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        int[] var25 = null;
-        int[] var26 = null;
-        var8 = MonkeyPuzzle2.field_F ? 1 : 0;
+        int[] var12 = null;
+        int[] var14 = null;
+        byte[] var17 = null;
+        byte[] var18 = null;
+        boolean stackIn_5_0 = false;
+        int stackIn_22_0 = 0;
+        int stackOut_21_0 = 0;
+        boolean stackOut_4_0 = false;
+        L0: {
+          var8 = MonkeyPuzzle2.field_F ? 1 : 0;
+          if (param0 == 16) {
+            break L0;
+          } else {
+            cf.a((byte) 37);
+            break L0;
+          }
+        }
         var1 = new le[eg.field_c];
         var2 = 0;
-        L0: while (true) {
-          if (var2 >= eg.field_c) {
-            gb.a(-54);
-            return var1;
-          } else {
-            var3 = da.field_c[var2] * ra.field_ab[var2];
-            var23 = cb.field_b[var2];
-            if (!j.field_d[var2]) {
-              var10 = new int[var3];
-              var26 = var10;
-              var6 = 0;
-              L1: while (true) {
-                if (var3 <= var6) {
-                  var1[var2] = new le(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var26);
-                  var2++;
-                  continue L0;
-                } else {
-                  var10[var6] = fk.field_d[ch.a(255, (int) var23[var6])];
-                  var6++;
-                  continue L1;
-                }
-              }
+        L1: while (true) {
+          L2: {
+            if (var2 >= eg.field_c) {
+              stackOut_21_0 = -54;
+              stackIn_22_0 = stackOut_21_0;
+              break L2;
             } else {
-              var24 = jj.field_E[var2];
-              var20 = var24;
-              var16 = var20;
-              var12 = var16;
-              var9 = var12;
-              var5 = var9;
-              var25 = new int[var3];
-              var21 = var25;
-              var17 = var21;
-              var13 = var17;
-              var6_ref_int__ = var13;
-              var7 = 0;
-              L2: while (true) {
-                if (var7 >= var3) {
-                  var1[var2] = (le) (Object) new ae(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var25);
+              var3 = da.field_c[var2] * ra.field_ab[var2];
+              var17 = cb.field_b[var2];
+              stackOut_4_0 = j.field_d[var2];
+              stackIn_22_0 = stackOut_4_0 ? 1 : 0;
+              stackIn_5_0 = stackOut_4_0;
+              if (var8 != 0) {
+                break L2;
+              } else {
+                L3: {
+                  L4: {
+                    L5: {
+                      if (!stackIn_5_0) {
+                        break L5;
+                      } else {
+                        var18 = jj.field_E[var2];
+                        var14 = new int[var3];
+                        var12 = var14;
+                        var6_ref_int__ = var12;
+                        var7 = 0;
+                        L6: while (true) {
+                          L7: {
+                            if (var7 >= var3) {
+                              var1[var2] = (le) ((Object) new ae(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var14));
+                              break L7;
+                            } else {
+                              var6_ref_int__[var7] = bd.a(fk.field_d[ch.a(255, (int) var17[var7])], ch.a(var18[var7] << -1472808104, -16777216));
+                              var7++;
+                              if (var8 != 0) {
+                                break L7;
+                              } else {
+                                continue L6;
+                              }
+                            }
+                          }
+                          if (var8 == 0) {
+                            break L4;
+                          } else {
+                            break L5;
+                          }
+                        }
+                      }
+                    }
+                    var10 = new int[var3];
+                    var6 = 0;
+                    L8: while (true) {
+                      if (var3 <= var6) {
+                        var1[var2] = new le(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var10);
+                        break L4;
+                      } else {
+                        var10[var6] = fk.field_d[ch.a(255, (int) var17[var6])];
+                        var6++;
+                        if (var8 != 0) {
+                          break L3;
+                        } else {
+                          continue L8;
+                        }
+                      }
+                    }
+                  }
                   var2++;
-                  continue L0;
-                } else {
-                  var6_ref_int__[var7] = bd.a(fk.field_d[ch.a(255, (int) var23[var7])], ch.a(var24[var7] << 24, -16777216));
-                  var7++;
-                  continue L2;
+                  break L3;
                 }
+                continue L1;
               }
             }
           }
+          gb.a(stackIn_22_0);
+          return var1;
         }
     }
 
     final static cc a(int param0) {
         try {
+            le[] discarded$2 = null;
             Throwable var1 = null;
             cc stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
@@ -126,11 +161,11 @@ final class cf {
                   if (param0 == 255) {
                     break L1;
                   } else {
-                    le[] discarded$2 = cf.c((byte) 16);
+                    discarded$2 = cf.c((byte) 16);
                     break L1;
                   }
                 }
-                stackOut_2_0 = (cc) Class.forName("nb").newInstance();
+                stackOut_2_0 = (cc) (Class.forName("nb").newInstance());
                 stackIn_3_0 = stackOut_2_0;
                 break L0;
               }
@@ -148,10 +183,6 @@ final class cf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         int var1 = 0;
         field_b = new lk();
@@ -161,8 +192,8 @@ final class cf {
             if (!(255 >= var1)) {
                 var1 = 255;
             }
-            field_a[var0] = ch.a(16746712, var1 << 16);
-            field_a[var0] = bd.a(field_a[var0], ch.a(var0 * var0 >> 5, 1962934527) << 8);
+            field_a[var0] = ch.a(16746712, var1 << 138009392);
+            field_a[var0] = bd.a(field_a[var0], ch.a(var0 * var0 >> -1260120827, 1962934527) << -1808416344);
         }
     }
 }

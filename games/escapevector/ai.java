@@ -25,8 +25,9 @@ public class ai {
     }
 
     public static void a(String param0, int param1, int param2) {
+        File discarded$2 = null;
         Exception var3 = null;
-        Object var4 = null;
+        String var4 = null;
         Throwable decompiledCaughtException = null;
         field_c = param1;
         field_a = param0;
@@ -36,8 +37,8 @@ public class ai {
               if (param2 <= -12) {
                 break L1;
               } else {
-                var4 = null;
-                File discarded$2 = ai.a((String) null, 107, 50, (String) null);
+                var4 = (String) null;
+                discarded$2 = ai.a((String) null, 107, 50, (String) null);
                 break L1;
               }
             }
@@ -84,10 +85,6 @@ public class ai {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = false;
         field_d = new Hashtable(16);
     }

@@ -13,7 +13,7 @@ final class kc {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 16574) {
-          field_c = null;
+          field_c = (String) null;
           field_f = null;
           field_e = null;
           field_c = null;
@@ -29,10 +29,6 @@ final class kc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "kc.A(";
         field_e = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
         field_c = "You can store your earned Achievements by logging in or creating a free account.<br><br>You will be given an opportunity to do this at the end of your current game, even if you select 'End Game' from the pause menu.";

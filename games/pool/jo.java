@@ -11,8 +11,8 @@ class jo extends ob {
     final void c(int param0) {
         L0: {
           super.c(92);
-          if (((jo) this).field_K != null) {
-            ((jo) this).field_K.c(qh.field_l + -((jo) this).field_K.field_z >> 1, 80);
+          if (this.field_K != null) {
+            this.field_K.c(qh.field_l + -this.field_K.field_z >> 207734273, 80);
             break L0;
           } else {
             break L0;
@@ -59,7 +59,7 @@ class jo extends ob {
         int stackOut_2_2 = 0;
         if (param0 >= -11) {
           L0: {
-            ((jo) this).field_K = null;
+            this.field_K = (dd) null;
             stackOut_5_0 = -3405;
             stackOut_5_1 = -1;
             stackIn_7_0 = stackOut_5_0;
@@ -120,63 +120,71 @@ class jo extends ob {
     final static wc a(String[] args, int param1) {
         wc var2 = null;
         RuntimeException var2_ref = null;
-        wc stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        wc stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        wc stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        wc stackOut_2_0 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
+            L1: {
+              if (param1 == 57) {
+                break L1;
+              } else {
+                jo.g(-2, 69);
+                break L1;
+              }
+            }
             var2 = new wc(false);
             var2.field_c = args;
-            stackOut_0_0 = (wc) var2;
-            stackIn_1_0 = stackOut_0_0;
+            stackOut_2_0 = (wc) (var2);
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("jo.EA(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackOut_4_0 = (RuntimeException) (var2_ref);
+            stackOut_4_1 = new StringBuilder().append("jo.EA(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (args == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 57 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     final static void f(byte param0) {
@@ -199,8 +207,8 @@ class jo extends ob {
         var1.field_p = true;
         var1.field_x = 365;
         int var2 = 240;
-        var1.field_C = -20 + (qh.field_l >> 1);
-        var1.field_t = (qh.field_l >> 1) + -var2 + -20;
+        var1.field_C = -20 + (qh.field_l >> -54264319);
+        var1.field_t = (qh.field_l >> -602396383) + -var2 + -20;
         ob var6 = s.field_c[7];
         var6.a(40, 85, -10);
         var6.field_q = true;
@@ -228,14 +236,14 @@ class jo extends ob {
         var11.field_p = true;
         var11.a(-320 + qh.field_l, 140, 160, 300, 0);
         var11.field_s = 30;
-        var11.field_C = 240 + qh.field_l >> 1;
+        var11.field_C = 240 + qh.field_l >> 766920577;
         var11.field_x = 200;
-        var11.field_t = -240 + qh.field_l >> 1;
+        var11.field_t = -240 + qh.field_l >> 353398017;
         var11.field_q = false;
         ob var12 = s.field_c[2];
         var12.a(-320 + qh.field_l, 140, 160, 280, 0);
-        var12.field_C = qh.field_l - -240 >> 1;
-        var12.field_t = qh.field_l - 240 >> 1;
+        var12.field_C = qh.field_l - -240 >> -981420255;
+        var12.field_t = qh.field_l - 240 >> -1691023167;
         var12.field_p = true;
         var12.field_q = true;
         var12.field_s = 50;
@@ -261,7 +269,7 @@ class jo extends ob {
         var1 = s.field_c[23];
         var1.field_l = false;
         var1 = s.field_c[21];
-        int var3 = -122;
+        int var3 = 122 / ((param0 - -66) / 32);
         var1.field_l = true;
         ob var13 = s.field_c[19];
         var13.field_q = true;
@@ -283,7 +291,7 @@ class jo extends ob {
 
     final static int c(int param0, int param1, int param2) {
         if (param1 != -54264319) {
-            field_I = null;
+            field_I = (String[]) null;
             return param2 << param0;
         }
         return param2 << param0;
@@ -380,7 +388,7 @@ class jo extends ob {
                   L5: {
                     hh.field_a = se.field_l;
                     pa.field_H = wn.field_i;
-                    if (param1 == -1) {
+                    if ((param1 ^ -1) == 0) {
                       if (var2 == 0) {
                         break L5;
                       } else {
@@ -463,7 +471,7 @@ class jo extends ob {
                     L8: {
                       hh.field_a = se.field_l;
                       pa.field_H = wn.field_i;
-                      if (param1 == -1) {
+                      if ((param1 ^ -1) == 0) {
                         if (var2 == 0) {
                           break L8;
                         } else {
@@ -495,7 +503,7 @@ class jo extends ob {
                   } else {
                     hh.field_a = 0;
                     pa.field_H = wn.field_i;
-                    if (param1 == -1) {
+                    if ((param1 ^ -1) == 0) {
                       if (var2 == 0) {
                         L9: {
                           pm.field_p = gg.field_f;
@@ -662,7 +670,7 @@ class jo extends ob {
             } else {
               hh.field_a = 0;
               pa.field_H = wn.field_i;
-              if (param1 == -1) {
+              if ((param1 ^ -1) == 0) {
                 if (var2 == 0) {
                   L17: {
                     pm.field_p = gg.field_f;
@@ -805,7 +813,7 @@ class jo extends ob {
             }
           }
         } else {
-          field_I = null;
+          field_I = (String[]) null;
           if (ac.field_m != param1) {
             if (!oa.field_j) {
               if (hh.field_a < se.field_l) {
@@ -852,7 +860,7 @@ class jo extends ob {
                   }
                   L24: {
                     pa.field_H = wn.field_i;
-                    if (param1 == -1) {
+                    if ((param1 ^ -1) == 0) {
                       if (var2 == 0) {
                         break L24;
                       } else {
@@ -962,7 +970,7 @@ class jo extends ob {
                 L27: {
                   L28: {
                     pa.field_H = wn.field_i;
-                    if (param1 == -1) {
+                    if ((param1 ^ -1) == 0) {
                       if (var2 == 0) {
                         break L28;
                       } else {
@@ -1037,7 +1045,7 @@ class jo extends ob {
               }
               L33: {
                 pa.field_H = wn.field_i;
-                if (param1 == -1) {
+                if ((param1 ^ -1) == 0) {
                   if (var2 == 0) {
                     break L33;
                   } else {
@@ -1183,6 +1191,9 @@ class jo extends ob {
     }
 
     public static void f(int param0) {
+        if (param0 != 8) {
+            return;
+        }
         field_I = null;
         field_L = null;
     }
@@ -1190,9 +1201,9 @@ class jo extends ob {
     jo(dd param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
         try {
-            ((jo) this).field_n = false;
+            this.field_n = false;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "jo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "jo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1200,15 +1211,15 @@ class jo extends ob {
         int var4 = 0;
         int var5 = 0;
         var5 = Pool.field_O;
-        var4 = ((jo) this).field_h[param2];
-        if (var4 != 54) {
-          if (var4 != 55) {
+        var4 = this.field_h[param2];
+        if ((var4 ^ -1) != -55) {
+          if (-56 != (var4 ^ -1)) {
             if (56 != var4) {
               if (var4 != 57) {
                 if (58 != var4) {
                   L0: {
                     if (59 != var4) {
-                      if (var4 != 60) {
+                      if (-61 != (var4 ^ -1)) {
                         super.b(-16470, param1, param2);
                         if (param0 == -16470) {
                           return;
@@ -1217,7 +1228,7 @@ class jo extends ob {
                           return;
                         }
                       } else {
-                        if (!((jo) this).field_B.b((byte) 125)) {
+                        if (!this.field_B.b((byte) 125)) {
                           break L0;
                         } else {
                           ac.a(256, true, true, jh.field_d);
@@ -1230,7 +1241,7 @@ class jo extends ob {
                         }
                       }
                     } else {
-                      if (!((jo) this).field_B.b((byte) 73)) {
+                      if (!this.field_B.b((byte) 73)) {
                         break L0;
                       } else {
                         ac.a(256, true, true, ul.field_m);
@@ -1250,7 +1261,7 @@ class jo extends ob {
                     return;
                   }
                 } else {
-                  if (((jo) this).field_B.b((byte) 62)) {
+                  if (this.field_B.b((byte) 62)) {
                     ac.a(param0 + 16726, true, true, nn.field_b[4].field_b);
                     if (param0 == -16470) {
                       return;
@@ -1268,73 +1279,73 @@ class jo extends ob {
                   }
                 }
               } else {
-                if (((jo) this).field_B.b((byte) 56)) {
+                if (this.field_B.b((byte) 56)) {
                   ac.a(param0 ^ -16726, true, true, nn.field_b[3].field_b);
-                  if (param0 != -16470) {
-                    jo.g(-10, -105);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
                   if (param0 == -16470) {
                     return;
                   } else {
                     jo.g(-10, -105);
                     return;
                   }
+                } else {
+                  if (param0 != -16470) {
+                    jo.g(-10, -105);
+                    return;
+                  } else {
+                    return;
+                  }
                 }
               }
             } else {
-              if (((jo) this).field_B.b((byte) 54)) {
+              if (this.field_B.b((byte) 54)) {
                 ac.a(param0 ^ -16726, true, true, nn.field_b[2].field_b);
-                if (param0 == -16470) {
+                if (param0 != -16470) {
+                  jo.g(-10, -105);
                   return;
                 } else {
-                  jo.g(-10, -105);
                   return;
                 }
               } else {
-                if (param0 == -16470) {
+                if (param0 != -16470) {
+                  jo.g(-10, -105);
                   return;
                 } else {
-                  jo.g(-10, -105);
                   return;
                 }
               }
             }
           } else {
-            if (((jo) this).field_B.b((byte) 115)) {
+            if (this.field_B.b((byte) 115)) {
               ac.a(256, true, true, nn.field_b[1].field_b);
-              if (param0 == -16470) {
+              if (param0 != -16470) {
+                jo.g(-10, -105);
                 return;
               } else {
-                jo.g(-10, -105);
                 return;
               }
             } else {
-              if (param0 == -16470) {
+              if (param0 != -16470) {
+                jo.g(-10, -105);
                 return;
               } else {
-                jo.g(-10, -105);
                 return;
               }
             }
           }
         } else {
-          if (((jo) this).field_B.b((byte) 54)) {
+          if (this.field_B.b((byte) 54)) {
             ac.a(param0 ^ -16726, true, true, nn.field_b[0].field_b);
-            if (param0 == -16470) {
+            if (param0 != -16470) {
+              jo.g(-10, -105);
               return;
             } else {
-              jo.g(-10, -105);
               return;
             }
           } else {
-            if (param0 == -16470) {
+            if (param0 != -16470) {
+              jo.g(-10, -105);
               return;
             } else {
-              jo.g(-10, -105);
               return;
             }
           }
@@ -1342,10 +1353,6 @@ class jo extends ob {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_L = "Message lobby";
         field_J = 0;
         field_I = new String[]{"Player 1", "Player 2", "Player 3", "Player 4", "Player 5", "Player 6", "Player 7", "Player 8"};

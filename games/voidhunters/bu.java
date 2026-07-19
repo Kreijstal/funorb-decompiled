@@ -11,10 +11,6 @@ abstract class bu extends bkb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bu.<init>()";
     }
 }

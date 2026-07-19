@@ -47,10 +47,16 @@ final class te extends kj {
                 }
                 L4: {
                   if (null != f.field_a) {
-                    {
+                    try {
                       L5: {
                         f.field_a.d(-120);
                         break L5;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L6: {
+                        var1 = (IOException) (Object) decompiledCaughtException;
+                        break L6;
                       }
                     }
                     break L4;
@@ -66,16 +72,20 @@ final class te extends kj {
                     } else {
                       L8: {
                         if (fr.field_m[var1_int] != null) {
-                          {
+                          try {
                             L9: {
                               fr.field_m[var1_int].d(-7);
-                              var1_int++;
                               break L9;
+                            }
+                          } catch (java.io.IOException decompiledCaughtParameter1) {
+                            decompiledCaughtException = decompiledCaughtParameter1;
+                            L10: {
+                              var2 = (IOException) (Object) decompiledCaughtException;
+                              break L10;
                             }
                           }
                           break L8;
                         } else {
-                          var1_int++;
                           break L8;
                         }
                       }
@@ -90,7 +100,7 @@ final class te extends kj {
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw pe.a((Throwable) (Object) var1_ref, "te.J(" + param0 + ')');
+              throw pe.a((Throwable) ((Object) var1_ref), "te.J(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -115,31 +125,32 @@ final class te extends kj {
         var2 = lka.field_E[param0][7];
         var2 = var2.trim();
         var2 = var2.toLowerCase();
-        if (var2.equals((Object) (Object) "")) {
+        if (var2.equals("")) {
           return 0;
         } else {
-          return ((ji) (Object) dl.field_h.a(true, (long)var2.hashCode())).field_h;
+          return ((ji) ((Object) dl.field_h.a(true, (long)var2.hashCode()))).field_h;
         }
     }
 
     final boolean b(int param0) {
+        boolean discarded$5 = false;
         L0: {
-          if (((te) this).field_g == 60) {
+          if ((this.field_g ^ -1) == -61) {
             jja.a(192, -1, 25);
             break L0;
           } else {
             break L0;
           }
         }
-        int fieldTemp$4 = ((te) this).field_g - 1;
-        ((te) this).field_g = ((te) this).field_g - 1;
+        int fieldTemp$4 = this.field_g - 1;
+        this.field_g = this.field_g - 1;
         if (fieldTemp$4 < 0) {
-          ((te) this).field_e.field_h.b((byte) 106, 35, ((te) this).field_d, ((te) this).field_c);
+          this.field_e.field_h.b((byte) 106, 35, this.field_d, this.field_c);
           jja.a(128, -1, 24);
           return true;
         } else {
           if (param0 <= 21) {
-            boolean discarded$5 = ((te) this).b(1);
+            discarded$5 = this.b(1);
             return false;
           } else {
             return false;
@@ -148,6 +159,10 @@ final class te extends kj {
     }
 
     final static int d(byte param0) {
+        if (param0 != 89) {
+            field_f = (String) null;
+            return dfa.field_b - rs.field_a;
+        }
         return dfa.field_b - rs.field_a;
     }
 
@@ -156,18 +171,18 @@ final class te extends kj {
         ee var5 = null;
         int var6 = 0;
         int var7 = 0;
-        var4 = ((te) this).field_g * ((-(((te) this).field_g * 655360) + 52428800 >> 16) + 400) / 80;
+        var4 = this.field_g * ((-(this.field_g * 655360) + 52428800 >> -1986239376) + 400) / 80;
         if (param1 != 0) {
-          ((te) this).field_h = -112;
+          this.field_h = -112;
           var5 = sv.field_c;
-          var6 = -(((te) this).field_g * ((te) this).field_i / 80) + param2;
-          var7 = -var4 + (param0 + -(((te) this).field_h * ((te) this).field_g / 80));
+          var6 = -(this.field_g * this.field_i / 80) + param2;
+          var7 = -var4 + (param0 + -(this.field_h * this.field_g / 80));
           var5.a(var6, var7 + -64);
           return;
         } else {
           var5 = sv.field_c;
-          var6 = -(((te) this).field_g * ((te) this).field_i / 80) + param2;
-          var7 = -var4 + (param0 + -(((te) this).field_h * ((te) this).field_g / 80));
+          var6 = -(this.field_g * this.field_i / 80) + param2;
+          var7 = -var4 + (param0 + -(this.field_h * this.field_g / 80));
           var5.a(var6, var7 + -64);
           return;
         }
@@ -176,11 +191,11 @@ final class te extends kj {
     te(gj param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
-            ((te) this).field_g = 80;
-            ((te) this).field_i = kla.a(129, m.field_a, -2147483648) - 64;
-            ((te) this).field_h = -32 + kla.a(65, m.field_a, -2147483648);
+            this.field_g = 80;
+            this.field_i = kla.a(129, m.field_a, -2147483648) - 64;
+            this.field_h = -32 + kla.a(65, m.field_a, -2147483648);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -191,10 +206,6 @@ final class te extends kj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Location";
     }
 }

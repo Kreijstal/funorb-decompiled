@@ -10,12 +10,20 @@ final class og {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        L0: {
+          if (param0 <= -79) {
+            break L0;
+          } else {
+            og.a((byte) -45);
+            break L0;
+          }
+        }
         if (ub.field_e != null) {
-          var1 = (Object) (Object) ub.field_e;
+          var1 = ub.field_e;
           synchronized (var1) {
-            L0: {
+            L1: {
               ub.field_e = null;
-              break L0;
+              break L1;
             }
           }
           return;
@@ -26,6 +34,9 @@ final class og {
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 > -61) {
+            return;
+        }
         field_c = null;
     }
 
@@ -35,22 +46,28 @@ final class og {
         }
         cl.a(118, false, 4);
         if (param0 != -5213) {
-            field_c = null;
+            field_c = (String) null;
         }
     }
 
     final static int a(boolean param0) {
-        qd[] var1 = new qd[]{};
-        qd[] var2 = hl.field_v.a(var1, -21636, fg.field_Ob);
-        var1 = var2;
-        return var2.length * 36;
+        qd[] var1 = null;
+        qd[] var2 = null;
+        if (!param0) {
+          og.b(124);
+          var1 = new qd[]{};
+          var2 = hl.field_v.a(var1, -21636, fg.field_Ob);
+          var1 = var2;
+          return var2.length * 36;
+        } else {
+          var1 = new qd[]{};
+          var2 = hl.field_v.a(var1, -21636, fg.field_Ob);
+          var1 = var2;
+          return var2.length * 36;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Hide game chat";
         field_c = "Waiting for fonts";
     }

@@ -16,10 +16,6 @@ final class ch {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ch.A(";
     }
 }

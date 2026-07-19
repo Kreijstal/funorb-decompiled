@@ -48,11 +48,14 @@ final class te extends ak {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2, "te.E(" + param0 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) var2), "te.E(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, int param1) {
+        if (param1 != -2671) {
+            field_Nb = (ea) null;
+        }
         u.field_h = param0;
     }
 
@@ -60,33 +63,36 @@ final class te extends ak {
         int var3 = 0;
         lo var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
-        lo[] var6 = ((te) this).field_Sb;
+        lo[] var6 = this.field_Sb;
         lo[] var2 = var6;
         if (param0 != 17872) {
-            ((te) this).field_Hb = null;
+            this.field_Hb = (char[]) null;
         }
         for (var3 = 0; var6.length > var3; var3++) {
             var4 = var6[var3];
             var4.field_U = false;
             var4.field_P = 0;
         }
-        if (!(null == ((te) this).field_Pb)) {
-            ((te) this).field_Pb.l(17872);
-            ((te) this).field_Pb.c(2779);
+        if (!(null == this.field_Pb)) {
+            this.field_Pb.l(17872);
+            this.field_Pb.c(2779);
         }
-        ((te) this).field_Pb = null;
-        ((te) this).field_Lb = -1;
+        this.field_Pb = null;
+        this.field_Lb = -1;
         this.a(12, (byte) -85);
     }
 
     final static void a(byte param0, java.awt.Component param1) {
-        param1.removeMouseListener((java.awt.event.MouseListener) (Object) fj.field_c);
-        param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) fj.field_c);
+        param1.removeMouseListener(fj.field_c);
+        param1.removeMouseMotionListener(fj.field_c);
+        if (param0 != -47) {
+            return;
+        }
         try {
-            param1.removeFocusListener((java.awt.event.FocusListener) (Object) fj.field_c);
+            param1.removeFocusListener(fj.field_c);
             jm.field_o = 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "te.A(" + -47 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -96,11 +102,11 @@ final class te extends ak {
         int var9 = 0;
         L0: {
           var9 = Pixelate.field_H ? 1 : 0;
-          ((te) this).field_Fb = 2 * param3 + ((te) this).field_Rb;
-          ((te) this).a(param0 - ((te) this).field_Ob, ((te) this).field_Ob, param1, 256, ((te) this).field_Fb);
-          if (param5 != ((te) this).field_Ub) {
-            ((te) this).field_Ub = param5;
-            this.a(((te) this).field_Kb, (byte) -79);
+          this.field_Fb = 2 * param3 + this.field_Rb;
+          this.a(param0 - this.field_Ob, this.field_Ob, param1, 256, this.field_Fb);
+          if (param5 != this.field_Ub) {
+            this.field_Ub = param5;
+            this.a(this.field_Kb, (byte) -79);
             break L0;
           } else {
             break L0;
@@ -110,28 +116,28 @@ final class te extends ak {
           if (param4 == -94) {
             break L1;
           } else {
-            ((te) this).field_Gb = null;
+            this.field_Gb = (te[]) null;
             break L1;
           }
         }
         var7 = 0;
         L2: while (true) {
-          if (var7 >= ((te) this).field_Mb) {
+          if (var7 >= this.field_Mb) {
             L3: {
-              if (((te) this).field_Lb == -1) {
+              if ((this.field_Lb ^ -1) == 0) {
                 break L3;
               } else {
-                if (((te) this).field_Gb[((te) this).field_Lb] == null) {
+                if (this.field_Gb[this.field_Lb] == null) {
                   break L3;
                 } else {
-                  var7 = ((te) this).field_Gb[((te) this).field_Lb].field_Mb;
-                  var8 = ((te) this).field_Jb * (var7 + ((te) this).field_Lb) + ((te) this).field_S;
+                  var7 = this.field_Gb[this.field_Lb].field_Mb;
+                  var8 = this.field_Jb * (var7 + this.field_Lb) + this.field_S;
                   L4: while (true) {
                     if (var8 <= param0) {
-                      ((te) this).field_Gb[((te) this).field_Lb].a(var8, param1 + ((te) this).field_Fb, param2, param3, (byte) -94, ((te) this).field_Sb[((te) this).field_Lb].field_gb);
+                      this.field_Gb[this.field_Lb].a(var8, param1 + this.field_Fb, param2, param3, (byte) -94, this.field_Sb[this.field_Lb].field_gb);
                       break L3;
                     } else {
-                      var8 = var8 - ((te) this).field_Jb;
+                      var8 = var8 - this.field_Jb;
                       continue L4;
                     }
                   }
@@ -140,7 +146,7 @@ final class te extends ak {
             }
             return;
           } else {
-            ((te) this).field_Sb[var7].a(((te) this).field_Jb, param3, param2, ((te) this).field_Sb[var7].field_S, 0, ((te) this).field_Fb, param4 + -2147483554);
+            this.field_Sb[var7].a(this.field_Jb, param3, param2, this.field_Sb[var7].field_S, 0, this.field_Fb, param4 + -2147483554);
             var7++;
             continue L2;
           }
@@ -157,7 +163,7 @@ final class te extends ak {
         int stackOut_1_0 = 0;
         L0: {
           var7 = Pixelate.field_H ? 1 : 0;
-          if (ke.field_a != 85) {
+          if ((ke.field_a ^ -1) != -86) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -168,13 +174,13 @@ final class te extends ak {
           }
         }
         var4 = stackIn_3_0;
-        if (null != ((te) this).field_Pb) {
+        if (null != this.field_Pb) {
           L1: {
             if (var4 == 0) {
               break L1;
             } else {
-              if (((te) this).field_Pb.field_Lb == -1) {
-                ((te) this).l(17872);
+              if (this.field_Pb.field_Lb == -1) {
+                this.l(17872);
                 this.a(0, (byte) -82);
                 return true;
               } else {
@@ -182,13 +188,13 @@ final class te extends ak {
               }
             }
           }
-          return ((te) this).field_Pb.a(param0, 0, param2);
+          return this.field_Pb.a(param0, 0, param2);
         } else {
           L2: {
-            if (null != ((te) this).field_Pb) {
+            if (null != this.field_Pb) {
               break L2;
             } else {
-              if ((Object) (Object) bo.field_h != this) {
+              if (bo.field_h != this) {
                 break L2;
               } else {
                 if (var4 == 0) {
@@ -215,10 +221,10 @@ final class te extends ak {
               }
               var6 = 0;
               L5: while (true) {
-                if (((te) this).field_Hb.length <= var6) {
+                if (this.field_Hb.length <= var6) {
                   break L3;
                 } else {
-                  if (var5 != ((te) this).field_Hb[var6]) {
+                  if (var5 != this.field_Hb[var6]) {
                     var6++;
                     continue L5;
                   } else {
@@ -251,13 +257,13 @@ final class te extends ak {
         var6 = Pixelate.field_H ? 1 : 0;
         var4_int = 0;
         L0: while (true) {
-          if (((te) this).field_Sb.length <= var4_int) {
+          if (this.field_Sb.length <= var4_int) {
             L1: {
-              if (((te) this).field_Lb != param1) {
-                var7 = ((te) this).field_Gb[((te) this).field_Lb];
+              if (this.field_Lb != param1) {
+                var7 = this.field_Gb[this.field_Lb];
                 var4 = var7;
                 if (var4 != null) {
-                  var7.b(param0, param1, param2);
+                  var7.b(param0, param1 + 0, param2);
                   break L1;
                 } else {
                   break L1;
@@ -267,8 +273,8 @@ final class te extends ak {
               }
             }
             L2: {
-              if (((te) this).field_Kb > 0) {
-                this.a(-1 + ((te) this).field_Kb, (byte) -106);
+              if (-1 > (this.field_Kb ^ -1)) {
+                this.a(-1 + this.field_Kb, (byte) -106);
                 break L2;
               } else {
                 break L2;
@@ -276,21 +282,21 @@ final class te extends ak {
             }
             return;
           } else {
-            var5 = ((te) this).field_Sb[var4_int];
+            var5 = this.field_Sb[var4_int];
             if (1 == var5.field_P) {
               L3: {
                 this.a(var4_int, param2, 118, param0);
-                stackOut_4_0 = (lo) var5;
+                stackOut_4_0 = (lo) (var5);
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_5_0 = stackOut_4_0;
-                if (((te) this).field_Lb != var4_int) {
-                  stackOut_6_0 = (lo) (Object) stackIn_6_0;
+                if (this.field_Lb != var4_int) {
+                  stackOut_6_0 = (lo) ((Object) stackIn_6_0);
                   stackOut_6_1 = 0;
                   stackIn_7_0 = stackOut_6_0;
                   stackIn_7_1 = stackOut_6_1;
                   break L3;
                 } else {
-                  stackOut_5_0 = (lo) (Object) stackIn_5_0;
+                  stackOut_5_0 = (lo) ((Object) stackIn_5_0);
                   stackOut_5_1 = 1;
                   stackIn_7_0 = stackOut_5_0;
                   stackIn_7_1 = stackOut_5_1;
@@ -309,6 +315,9 @@ final class te extends ak {
     }
 
     final static int n(int param0) {
+        if (param0 != 0) {
+            return 100;
+        }
         return ba.field_f;
     }
 
@@ -317,18 +326,18 @@ final class te extends ak {
         lo var5 = null;
         int var6 = Pixelate.field_H ? 1 : 0;
         int var2 = 0;
-        lo[] var3 = ((te) this).field_Sb;
+        lo[] var3 = this.field_Sb;
         if (param0 != 14685) {
             return false;
         }
         for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
-            var2 = var2 | (var5.field_P != 0 ? 1 : 0);
+            var2 = var2 | (-1 != (var5.field_P ^ -1) ? 1 : 0);
         }
         if (var2 == 0) {
-            if (((te) this).field_Lb != -1) {
-                if (!(((te) this).field_Gb[((te) this).field_Lb] == null)) {
-                    var2 = ((te) this).field_Gb[((te) this).field_Lb].m(param0) ? 1 : 0;
+            if ((this.field_Lb ^ -1) != 0) {
+                if (!(this.field_Gb[this.field_Lb] == null)) {
+                    var2 = this.field_Gb[this.field_Lb].m(param0 + 0) ? 1 : 0;
                 }
             }
         }
@@ -451,60 +460,60 @@ final class te extends ak {
         RuntimeException stackOut_32_0 = null;
         StringBuilder stackOut_32_1 = null;
         String stackOut_32_2 = null;
-        ((te) this).field_Lb = -1;
+        this.field_Lb = -1;
         try {
           L0: {
-            ((te) this).field_Hb = param7;
-            ((te) this).field_Tb = param5;
-            ((te) this).field_Gb = param4;
-            ((te) this).field_Mb = ((te) this).field_Tb.length;
+            this.field_Hb = param7;
+            this.field_Tb = param5;
+            this.field_Gb = param4;
+            this.field_Mb = this.field_Tb.length;
             var17 = param3.field_Db;
             var18 = var17;
-            ((te) this).field_Jb = var18.field_w + (2 + var18.field_z);
-            ((te) this).field_Rb = 0;
-            ((te) this).field_Ob = ((te) this).field_Jb * ((te) this).field_Mb;
-            ((te) this).field_Sb = new lo[((te) this).field_Mb];
+            this.field_Jb = var18.field_w + (2 + var18.field_z);
+            this.field_Rb = 0;
+            this.field_Ob = this.field_Jb * this.field_Mb;
+            this.field_Sb = new lo[this.field_Mb];
             var11 = "<col=999999>";
             var12 = "</col>";
             var13 = 0;
             L1: while (true) {
-              if (var13 >= ((te) this).field_Mb) {
-                ((te) this).field_Rb = ((te) this).field_Rb + (10 + fe.field_b.field_A);
+              if (var13 >= this.field_Mb) {
+                this.field_Rb = this.field_Rb + (10 + fe.field_b.field_A);
                 this.a(12, (byte) -85);
                 break L0;
               } else {
                 L2: {
-                  if (((te) this).field_Hb[var13] <= 0) {
+                  if (this.field_Hb[var13] <= 0) {
                     break L2;
                   } else {
-                    param6[var13] = var11 + ig.a(124, ((te) this).field_Hb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+                    param6[var13] = var11 + ig.a(124, this.field_Hb[var13]).toUpperCase() + ": " + var12 + param6[var13];
                     break L2;
                   }
                 }
                 L3: {
                   L4: {
                     var14 = null;
-                    if (null != ((te) this).field_Gb[var13]) {
+                    if (null != this.field_Gb[var13]) {
                       break L4;
                     } else {
-                      if (-1 != ((te) this).field_Tb[var13]) {
+                      if (-1 != this.field_Tb[var13]) {
                         break L3;
                       } else {
                         break L4;
                       }
                     }
                   }
-                  var14 = (Object) (Object) fe.field_b;
+                  var14 = fe.field_b;
                   break L3;
                 }
                 L5: {
-                  ((te) this).field_Sb[var13] = new lo(0L, param2, (ak) null, param3, (tf) var14, param6[var13]);
-                  ((te) this).a((ak) (Object) ((te) this).field_Sb[var13], (byte) 26);
+                  this.field_Sb[var13] = new lo(0L, param2, (ak) null, param3, (tf) (var14), param6[var13]);
+                  this.a(this.field_Sb[var13], (byte) 26);
                   var15 = var17.c(param6[var13]);
-                  if (var15 <= ((te) this).field_Rb) {
+                  if (var15 <= this.field_Rb) {
                     break L5;
                   } else {
-                    ((te) this).field_Rb = var15;
+                    this.field_Rb = var15;
                     break L5;
                   }
                 }
@@ -517,23 +526,23 @@ final class te extends ak {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var10 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var10;
+            stackOut_13_0 = (RuntimeException) (var10);
             stackOut_13_1 = new StringBuilder().append("te.<init>(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L6;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -542,23 +551,23 @@ final class te extends ak {
             }
           }
           L7: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L7;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -567,23 +576,23 @@ final class te extends ak {
             }
           }
           L8: {
-            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+            stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
             stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param3 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L8;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -592,23 +601,23 @@ final class te extends ak {
             }
           }
           L9: {
-            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+            stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
             stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param4 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L9;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -617,23 +626,23 @@ final class te extends ak {
             }
           }
           L10: {
-            stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+            stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
             stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param5 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L10;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -642,23 +651,23 @@ final class te extends ak {
             }
           }
           L11: {
-            stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+            stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
             stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
             stackIn_29_1 = stackOut_28_1;
             if (param6 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "null";
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
               break L11;
             } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "{...}";
               stackIn_31_0 = stackOut_29_0;
               stackIn_31_1 = stackOut_29_1;
@@ -667,23 +676,23 @@ final class te extends ak {
             }
           }
           L12: {
-            stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+            stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
             stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param7 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L12;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
@@ -691,7 +700,7 @@ final class te extends ak {
               break L12;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');
         }
     }
 
@@ -699,45 +708,47 @@ final class te extends ak {
         if (param0 != -16200) {
             return 111;
         }
-        return ((te) this).field_Fb - -(((te) this).field_Pb != null ? ((te) this).field_Pb.k(-16200) : 0);
+        return this.field_Fb - -(this.field_Pb != null ? this.field_Pb.k(-16200) : 0);
     }
 
     private final void a(int param0, byte param1) {
+        boolean discarded$0 = false;
         int var5 = 0;
         int var3 = 0;
         int var4 = 0;
         int var6 = Pixelate.field_H ? 1 : 0;
-        ((te) this).field_Kb = param0;
+        this.field_Kb = param0;
         if (param1 > -73) {
-            boolean discarded$0 = ((te) this).m(-111);
+            discarded$0 = this.m(-111);
         }
-        for (var5 = 0; var5 < ((te) this).field_Mb; var5++) {
-            var3 = var5 * ((te) this).field_Jb;
-            var4 = ((te) this).field_Kb * ((te) this).field_Kb;
-            ((te) this).field_Sb[var5].field_S = ((-((te) this).field_gb + ((te) this).field_Ub) * var4 + (-var4 + 144) * var3) / 144;
+        for (var5 = 0; var5 < this.field_Mb; var5++) {
+            var3 = var5 * this.field_Jb;
+            var4 = this.field_Kb * this.field_Kb;
+            this.field_Sb[var5].field_S = ((-this.field_gb + this.field_Ub) * var4 + (-var4 + 144) * var3) / 144;
         }
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
+        boolean discarded$1 = false;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        Object var8 = null;
+        String var8 = null;
         L0: {
           var7 = Pixelate.field_H ? 1 : 0;
-          if (((te) this).field_Lb != param0) {
-            if (((te) this).field_Gb[param0] != null) {
-              ((te) this).l(17872);
+          if (this.field_Lb != param0) {
+            if (this.field_Gb[param0] != null) {
+              this.l(17872);
               this.a(0, (byte) -96);
-              ((te) this).field_Lb = param0;
-              ((te) this).field_Pb = ((te) this).field_Gb[((te) this).field_Lb];
-              oc.a(((te) this).field_Pb, true);
-              ((te) this).field_Pb.a(12, (byte) -104);
+              this.field_Lb = param0;
+              this.field_Pb = this.field_Gb[this.field_Lb];
+              oc.a(this.field_Pb, true);
+              this.field_Pb.a(12, (byte) -104);
               break L0;
             } else {
-              if (-1 != ((te) this).field_Tb[param0]) {
+              if (-1 != this.field_Tb[param0]) {
                 L1: {
-                  var5 = 32768 | ((te) this).field_Tb[param0];
+                  var5 = 32768 | this.field_Tb[param0];
                   var6 = ce.field_d;
                   if (var6 != 0) {
                     break L1;
@@ -751,14 +762,14 @@ final class te extends ak {
                   }
                 }
                 L2: {
-                  if (kl.a(var6, 0) == 2) {
+                  if ((kl.a(var6, 0) ^ -1) == -3) {
                     am.a(1, -26931, var6, param1);
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                var8 = null;
+                var8 = (String) null;
                 dg.a(true, ce.field_d, var5, (String) null, jo.field_k, param3);
                 di.a(var5, fp.field_e, jo.field_k, (byte) 9, ce.field_d);
                 mj.a(false);
@@ -771,7 +782,7 @@ final class te extends ak {
               }
             }
           } else {
-            ((te) this).l(17872);
+            this.l(17872);
             this.a(0, (byte) -118);
             break L0;
           }
@@ -780,7 +791,7 @@ final class te extends ak {
           if (param2 > 54) {
             break L3;
           } else {
-            boolean discarded$1 = ((te) this).a(-128, -51, 10);
+            discarded$1 = this.a(-128, -51, 10);
             break L3;
           }
         }
@@ -788,16 +799,15 @@ final class te extends ak {
 
     public static void j(int param0) {
         field_Qb = null;
+        if (param0 != 1) {
+            field_Eb = (String) null;
+        }
         field_Eb = null;
         field_Nb = null;
         field_Ib = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Eb = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
         field_Ib = "Please log in to access this feature.";
         field_Nb = new ea(2);

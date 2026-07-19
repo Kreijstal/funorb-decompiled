@@ -10,7 +10,7 @@ final class cc implements bf {
         RuntimeException var6 = null;
         int var7 = 0;
         o var8 = null;
-        Object var9 = null;
+        ub var9 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -36,8 +36,8 @@ final class cc implements bf {
               if (param3) {
                 break L1;
               } else {
-                var9 = null;
-                ((cc) this).a(0, 116, (ub) null, true, true);
+                var9 = (ub) null;
+                this.a(0, 116, (ub) null, true, true);
                 break L1;
               }
             }
@@ -46,8 +46,8 @@ final class cc implements bf {
               if (!(param2 instanceof pl)) {
                 break L2;
               } else {
-                if (((pl) (Object) param2).field_z) {
-                  var8.a(1 + var6_int + (param2.field_r + -var8.field_x >> 1), (param2.field_n - var8.field_s >> 1) + (var7 - -1), 256);
+                if (((pl) ((Object) param2)).field_z) {
+                  var8.a(1 + var6_int + (param2.field_r + -var8.field_x >> -754482847), (param2.field_n - var8.field_s >> 1819292129) + (var7 - -1), 256);
                   break L2;
                 } else {
                   break L2;
@@ -65,23 +65,23 @@ final class cc implements bf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var6;
+            stackOut_9_0 = (RuntimeException) (var6);
             stackOut_9_1 = new StringBuilder().append("cc.B(").append(param0).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -89,21 +89,17 @@ final class cc implements bf {
               break L3;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param3 + ',' + param4 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(byte param0) {
         field_b = null;
-        int var1 = -38;
+        int var1 = 38 / ((param0 - 13) / 57);
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "World:<col=ffff00>1</col> Stage:<col=ffff00>1";
     }
 }

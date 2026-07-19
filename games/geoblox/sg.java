@@ -17,22 +17,18 @@ final class sg {
           field_f = null;
           field_a = null;
           field_b = null;
-          field_c = null;
+          field_c = (byte[][][]) null;
           return;
         } else {
           field_f = null;
           field_a = null;
           field_b = null;
-          field_c = null;
+          field_c = (byte[][][]) null;
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "sg.A(";
         field_b = new tf();
         field_f = "Bubble Bonus!";

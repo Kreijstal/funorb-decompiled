@@ -8,13 +8,13 @@ public final class gv {
         if (param1 != -1) {
             return true;
         }
-        return param0 < 0 ? true : false;
+        return (param0 ^ -1) > -1 ? true : false;
     }
 
     public final static boolean b(int param0, int param1) {
         if (param1 > -39) {
             return false;
         }
-        return param0 >= 0 ? true : false;
+        return (param0 ^ -1) <= -1 ? true : false;
     }
 }

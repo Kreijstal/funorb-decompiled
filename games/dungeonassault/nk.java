@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 class nk extends hf implements vg {
     private uc field_Bb;
     static String field_Lb;
@@ -18,6 +16,8 @@ class nk extends hf implements vg {
     private boolean field_Eb;
 
     final void a(int param0, String param1, int param2) {
+        ck discarded$2 = null;
+        ck discarded$3 = null;
         RuntimeException var4 = null;
         int var5 = 0;
         kc var6 = null;
@@ -42,6 +42,7 @@ class nk extends hf implements vg {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
         Object stackOut_5_0 = null;
@@ -70,12 +71,12 @@ class nk extends hf implements vg {
         var5 = DungeonAssault.field_K;
         try {
           L0: {
-            if (!((nk) this).field_Eb) {
+            if (!this.field_Eb) {
               L1: {
                 stackOut_3_0 = this;
                 stackIn_5_0 = stackOut_3_0;
                 stackIn_4_0 = stackOut_3_0;
-                if (param2 != 256) {
+                if (-257 != (param2 ^ -1)) {
                   stackOut_5_0 = this;
                   stackOut_5_1 = 0;
                   stackIn_6_0 = stackOut_5_0;
@@ -90,25 +91,25 @@ class nk extends hf implements vg {
                 }
               }
               L2: {
-                ((nk) this).field_Db = stackIn_6_1 != 0;
+                ((nk) (this)).field_Db = stackIn_6_1 != 0;
                 if (param0 == 26889) {
                   break L2;
                 } else {
-                  field_Fb = null;
+                  field_Fb = (int[]) null;
                   break L2;
                 }
               }
               L3: {
-                ((nk) this).field_Eb = true;
-                ((nk) this).field_Bb.b(4210752, (byte) 94, 8405024);
-                var6 = new kc((nk) this, ((nk) this).field_Cb, param1);
+                this.field_Eb = true;
+                this.field_Bb.b(4210752, (byte) 94, 8405024);
+                var6 = new kc((nk) (this), this.field_Cb, param1);
                 if (param2 != 5) {
-                  if (param2 == 256) {
-                    ck discarded$2 = var6.a(kn.field_a, (pg) this, (byte) -80);
+                  if ((param2 ^ -1) == -257) {
+                    discarded$2 = var6.a(kn.field_a, (pg) (this), (byte) -80);
                     break L3;
                   } else {
                     L4: {
-                      stackOut_11_0 = (kc) var6;
+                      stackOut_11_0 = (kc) (var6);
                       stackOut_11_1 = -1;
                       stackOut_11_2 = 6824;
                       stackIn_13_0 = stackOut_11_0;
@@ -117,8 +118,8 @@ class nk extends hf implements vg {
                       stackIn_12_0 = stackOut_11_0;
                       stackIn_12_1 = stackOut_11_1;
                       stackIn_12_2 = stackOut_11_2;
-                      if (!((nk) this).field_Mb) {
-                        stackOut_13_0 = (kc) (Object) stackIn_13_0;
+                      if (!this.field_Mb) {
+                        stackOut_13_0 = (kc) ((Object) stackIn_13_0);
                         stackOut_13_1 = stackIn_13_1;
                         stackOut_13_2 = stackIn_13_2;
                         stackOut_13_3 = gk.field_O;
@@ -128,7 +129,7 @@ class nk extends hf implements vg {
                         stackIn_14_3 = stackOut_13_3;
                         break L4;
                       } else {
-                        stackOut_12_0 = (kc) (Object) stackIn_12_0;
+                        stackOut_12_0 = (kc) ((Object) stackIn_12_0);
                         stackOut_12_1 = stackIn_12_1;
                         stackOut_12_2 = stackIn_12_2;
                         stackOut_12_3 = kn.field_a;
@@ -154,12 +155,12 @@ class nk extends hf implements vg {
                     var6.a(8, 6824, ho.field_f);
                     break L5;
                   } else {
-                    if (param2 != 6) {
+                    if (-7 != (param2 ^ -1)) {
                       if (9 == param2) {
-                        ck discarded$3 = var6.a(df.field_a, (pg) this, (byte) -97);
+                        discarded$3 = var6.a(df.field_a, (pg) (this), (byte) -97);
                         break L5;
                       } else {
-                        ((nk) this).b(1, (lm) (Object) var6);
+                        this.b(1, var6);
                         return;
                       }
                     } else {
@@ -172,33 +173,35 @@ class nk extends hf implements vg {
                   break L5;
                 }
               }
-              ((nk) this).b(1, (lm) (Object) var6);
+              this.b(1, var6);
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var4;
+            stackOut_27_0 = (RuntimeException) (var4);
             stackOut_27_1 = new StringBuilder().append("nk.M(").append(param0).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
             stackIn_28_1 = stackOut_27_1;
             if (param1 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "null";
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
               break L6;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "{...}";
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
@@ -206,7 +209,12 @@ class nk extends hf implements vg {
               break L6;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -222,6 +230,7 @@ class nk extends hf implements vg {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         boolean stackOut_7_0 = false;
@@ -236,20 +245,23 @@ class nk extends hf implements vg {
         String stackOut_10_2 = null;
         try {
           L0: {
-            if (param2 == 13) {
-              ((nk) this).j((byte) 115);
+            if (-14 == (param2 ^ -1)) {
+              this.j((byte) 115);
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param3 >= 55) {
                 stackOut_7_0 = super.a(param0, param1, param2, (byte) 92);
                 stackIn_8_0 = stackOut_7_0;
+                decompiledRegionSelector0 = 2;
                 break L0;
               } else {
                 stackOut_5_0 = 0;
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -257,23 +269,23 @@ class nk extends hf implements vg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var5;
+            stackOut_9_0 = (RuntimeException) (var5);
             stackOut_9_1 = new StringBuilder().append("nk.W(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L1;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -281,20 +293,29 @@ class nk extends hf implements vg {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_8_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0 != 0;
+          } else {
+            return stackIn_8_0;
+          }
+        }
     }
 
     final void j(byte param0) {
-        Object var3 = null;
-        if (!((nk) this).field_T) {
+        boolean discarded$2 = false;
+        lm var3 = null;
+        if (!this.field_T) {
           return;
         } else {
           if (param0 >= 48) {
-            ((nk) this).field_T = false;
-            if (!((nk) this).field_Mb) {
-              if (((nk) this).field_Gb) {
+            this.field_T = false;
+            if (!this.field_Mb) {
+              if (this.field_Gb) {
                 np.d((byte) 95);
                 return;
               } else {
@@ -305,11 +326,11 @@ class nk extends hf implements vg {
               return;
             }
           } else {
-            var3 = null;
-            boolean discarded$2 = ((nk) this).a((lm) null, 'ﾷ', 86, (byte) -102);
-            ((nk) this).field_T = false;
-            if (!((nk) this).field_Mb) {
-              if (!((nk) this).field_Gb) {
+            var3 = (lm) null;
+            discarded$2 = this.a((lm) null, 'ﾷ', 86, (byte) -102);
+            this.field_T = false;
+            if (!this.field_Mb) {
+              if (!this.field_Gb) {
                 return;
               } else {
                 np.d((byte) 95);
@@ -334,18 +355,18 @@ class nk extends hf implements vg {
     }
 
     nk(ji param0, se param1, String param2, boolean param3, boolean param4) {
-        super(param0, (lm) (Object) new kc((nk) null, param1, param2), 77, 10, 10);
+        super(param0, new kc((nk) null, param1, param2), 77, 10, 10);
         try {
-            ((nk) this).field_Mb = param3 ? true : false;
-            ((nk) this).field_Cb = param1;
-            ((nk) this).field_Eb = false;
-            ((nk) this).field_Db = false;
-            ((nk) this).field_Gb = param4 ? true : false;
-            ((nk) this).field_Bb = new uc(13, 50, 274, 30, 15, 2113632, 4210752);
-            ((nk) this).field_Bb.field_R = true;
-            ((nk) this).b((byte) -63, (lm) (Object) ((nk) this).field_Bb);
+            this.field_Mb = param3 ? true : false;
+            this.field_Cb = param1;
+            this.field_Eb = false;
+            this.field_Db = false;
+            this.field_Gb = param4 ? true : false;
+            this.field_Bb = new uc(13, 50, 274, 30, 15, 2113632, 4210752);
+            this.field_Bb.field_R = true;
+            this.b((byte) -63, (lm) (this.field_Bb));
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -368,55 +389,57 @@ class nk extends hf implements vg {
         StringBuilder stackOut_7_1 = null;
         String stackOut_7_2 = null;
         try {
-          if (param1 == 98) {
-            if (((nk) this).field_Db) {
-              sn.a(param1 ^ 60, 3);
-              ((nk) this).j((byte) 123);
-              return;
+          L0: {
+            if (param1 == 98) {
+              if (this.field_Db) {
+                sn.a(param1 ^ 60, 3);
+                this.j((byte) 123);
+                return;
+              } else {
+                oe.a("tochangedisplayname.ws", m.c(true), (byte) 96);
+                return;
+              }
             } else {
-              oe.a("tochangedisplayname.ws", m.c(true), (byte) 96);
-              return;
+              break L0;
             }
-          } else {
-            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L0: {
+          L1: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var6;
+            stackOut_6_0 = (RuntimeException) (var6);
             stackOut_6_1 = new StringBuilder().append("nk.FA(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L0;
+              break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
               stackIn_9_2 = stackOut_7_2;
-              break L0;
+              break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void o(int param0) {
-        ((nk) this).field_Bb.b(param0, (byte) 94, 2121792);
-        kc var2 = new kc((nk) this, ((nk) this).field_Cb, gd.field_J);
+        this.field_Bb.b(param0, (byte) 94, 2121792);
+        kc var2 = new kc((nk) (this), this.field_Cb, gd.field_J);
         var2.a(15, 6824, me.field_c);
-        ((nk) this).b(param0 + -4210751, (lm) (Object) var2);
+        this.b(param0 + -4210751, var2);
     }
 
     final static void a(String param0, byte param1) {
@@ -448,7 +471,7 @@ class nk extends hf implements vg {
         try {
           L0: {
             L1: {
-              if (mm.field_q != -1) {
+              if ((mm.field_q ^ -1) != 0) {
                 break L1;
               } else {
                 if (vl.field_m == -1) {
@@ -470,7 +493,7 @@ class nk extends hf implements vg {
                     break L2;
                   }
                 } else {
-                  if (param0.equals((Object) (Object) vj.field_c)) {
+                  if (param0.equals(vj.field_c)) {
                     break L2;
                   } else {
                     break L3;
@@ -570,7 +593,7 @@ class nk extends hf implements vg {
               }
             }
             vl.field_m = -1;
-            var2_int = 0;
+            var2_int = 76 % ((param1 - -27) / 44);
             mm.field_q = -1;
             break L0;
           }
@@ -578,23 +601,23 @@ class nk extends hf implements vg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_42_0 = (RuntimeException) var2;
+            stackOut_42_0 = (RuntimeException) (var2);
             stackOut_42_1 = new StringBuilder().append("nk.O(");
             stackIn_44_0 = stackOut_42_0;
             stackIn_44_1 = stackOut_42_1;
             stackIn_43_0 = stackOut_42_0;
             stackIn_43_1 = stackOut_42_1;
             if (param0 == null) {
-              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
-              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
+              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
               stackOut_44_2 = "null";
               stackIn_45_0 = stackOut_44_0;
               stackIn_45_1 = stackOut_44_1;
               stackIn_45_2 = stackOut_44_2;
               break L9;
             } else {
-              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
-              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
               stackOut_43_2 = "{...}";
               stackIn_45_0 = stackOut_43_0;
               stackIn_45_1 = stackOut_43_1;
@@ -602,15 +625,11 @@ class nk extends hf implements vg {
               break L9;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + ',' + 23 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_45_0), stackIn_45_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Lb = "Exit without saving";
         field_Hb = false;
         field_Fb = new int[]{18, 10, 19, 24, 25, 26, 27};

@@ -7,8 +7,9 @@ abstract class c extends vg implements fo {
     static String field_h;
 
     int a(int param0, byte param1) {
+        boolean discarded$0 = false;
         if (param1 != -39) {
-            boolean discarded$0 = ((c) this).h(10);
+            discarded$0 = this.h(10);
             return param0;
         }
         return param0;
@@ -23,44 +24,47 @@ abstract class c extends vg implements fo {
         int var6 = 0;
         int var7 = 0;
         Object stackIn_3_0 = null;
-        boolean[] stackIn_12_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
+        boolean[] stackIn_11_0 = null;
+        boolean[] stackIn_14_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        boolean[] stackOut_11_0 = null;
+        boolean[] stackOut_13_0 = null;
+        boolean[] stackOut_10_0 = null;
         Object stackOut_2_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
         RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
         String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            var4_int = param3.b((byte) 44, 8);
+            var4_int = param3.b((byte) 44, param0);
             if (var4_int != 0) {
               L1: {
                 L2: {
@@ -80,78 +84,94 @@ abstract class c extends vg implements fo {
               var5 = 0;
               var6 = 100 / ((16 - param2) / 40);
               L3: while (true) {
-                if (var4_int <= var5) {
-                  stackOut_11_0 = (boolean[]) param1;
-                  stackIn_12_0 = stackOut_11_0;
-                  break L0;
-                } else {
-                  param1[var5] = uha.a(5907, param3);
-                  var5++;
-                  continue L3;
+                L4: {
+                  if (var4_int <= var5) {
+                    stackOut_13_0 = (boolean[]) (param1);
+                    stackIn_14_0 = stackOut_13_0;
+                    break L4;
+                  } else {
+                    stackOut_10_0 = (boolean[]) (param1);
+                    stackIn_14_0 = stackOut_10_0;
+                    stackIn_11_0 = stackOut_10_0;
+                    if (var7 != 0) {
+                      break L4;
+                    } else {
+                      stackIn_11_0[var5] = uha.a(5907, param3);
+                      var5++;
+                      continue L3;
+                    }
+                  }
                 }
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
               stackOut_2_0 = null;
               stackIn_3_0 = stackOut_2_0;
-              return (boolean[]) (Object) stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var4 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var4;
-            stackOut_13_1 = new StringBuilder().append("c.GB(").append(8).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
-            if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L4;
-            } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              break L4;
-            }
-          }
           L5: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param2).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
-            if (param3 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+            var4 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) (var4);
+            stackOut_15_1 = new StringBuilder().append("c.GB(").append(param0).append(',');
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          L6: {
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param2).append(',');
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param3 == null) {
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L6;
+            } else {
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L6;
+            }
+          }
+          throw tba.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
         }
-        return stackIn_12_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (boolean[]) ((Object) stackIn_3_0);
+        } else {
+          return stackIn_14_0;
+        }
     }
 
     abstract void a(uw param0, int param1);
@@ -159,6 +179,9 @@ abstract class c extends vg implements fo {
     public static void m(int param0) {
         field_g = null;
         field_f = null;
+        if (param0 <= 54) {
+            return;
+        }
         field_h = null;
     }
 
@@ -174,10 +197,6 @@ abstract class c extends vg implements fo {
     abstract c d(boolean param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new int[1024];
         field_h = "Login: ";
         field_f = new java.math.BigInteger("65537");

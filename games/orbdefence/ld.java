@@ -13,8 +13,20 @@ final class ld {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         int var12 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_23_1 = 0;
+        int stackIn_31_0 = 0;
+        int stackIn_31_1 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int stackOut_30_0 = 0;
+        int stackOut_30_1 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_22_1 = 0;
         var12 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -53,10 +65,10 @@ final class ld {
               }
             }
             L5: {
-              if (param0 <= 0) {
+              if (-1 <= (param0 ^ -1)) {
                 break L5;
               } else {
-                if (param5 <= 0) {
+                if ((param5 ^ -1) >= -1) {
                   break L5;
                 } else {
                   if (param1 >= 77) {
@@ -65,46 +77,100 @@ final class ld {
                     param3 = -param5;
                     L6: while (true) {
                       if (0 <= param3) {
+                        decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
-                        param4 = -param0;
-                        L7: while (true) {
-                          if (param4 >= 0) {
-                            var6_int = var6_int + var7;
-                            param3++;
-                            continue L6;
-                          } else {
+                        if (var12 == 0) {
+                          param4 = -param0;
+                          L7: while (true) {
                             L8: {
-                              var8 = ul.field_b[var6_int];
-                              if ((var8 >> 8 & 255) <= 64) {
+                              if ((param4 ^ -1) <= -1) {
+                                stackOut_30_0 = var6_int;
+                                stackOut_30_1 = var7;
+                                stackIn_31_0 = stackOut_30_0;
+                                stackIn_31_1 = stackOut_30_1;
                                 break L8;
                               } else {
-                                break L8;
+                                var8 = ul.field_b[var6_int];
+                                stackOut_22_0 = var8 >> -38368440 & 255 ^ -1;
+                                stackOut_22_1 = param2 ^ -1;
+                                stackIn_31_0 = stackOut_22_0;
+                                stackIn_31_1 = stackOut_22_1;
+                                stackIn_23_0 = stackOut_22_0;
+                                stackIn_23_1 = stackOut_22_1;
+                                if (var12 != 0) {
+                                  break L8;
+                                } else {
+                                  L9: {
+                                    if (stackIn_23_0 >= stackIn_23_1) {
+                                      break L9;
+                                    } else {
+                                      if ((16711680 & var8) >> 1407952816 > (255 & var8 >> 845100680)) {
+                                        break L9;
+                                      } else {
+                                        L10: {
+                                          var9 = -60 + ((16711680 & var8) >> 2079752207);
+                                          if (-256 > (var9 ^ -1)) {
+                                            var9 = 255;
+                                            break L10;
+                                          } else {
+                                            break L10;
+                                          }
+                                        }
+                                        var10 = var8 & 65280;
+                                        var10 = 65280 & (var10 >> 1115715617) - (var10 >> 572847461);
+                                        var11 = (255 & var8) >> 141290819;
+                                        ul.field_b[var6_int] = ge.a(ge.a(var10, var9 << -2020863344), var11);
+                                        break L9;
+                                      }
+                                    }
+                                  }
+                                  var6_int++;
+                                  param4++;
+                                  continue L7;
+                                }
                               }
                             }
-                            var6_int++;
-                            param4++;
-                            continue L7;
+                            var6_int = stackIn_31_0 + stackIn_31_1;
+                            param3++;
+                            continue L6;
                           }
+                        } else {
+                          return;
                         }
                       }
                     }
                   } else {
-                    return;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var6, "ld.C(" + param0 + ',' + param1 + ',' + 64 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw dd.a((Throwable) ((Object) var6), "ld.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     final static boolean a(byte param0) {
+        if (param0 != 85) {
+            ld.a(8, -18, 124, -3, 46, 45);
+            return true;
+        }
         return true;
     }
 
@@ -113,36 +179,58 @@ final class ld {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int stackIn_5_0 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_6_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_5_0 = 0;
         var5 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
-            var4 = -108;
+            var4 = -108 / ((-53 - param2) / 51);
             var3_int = 0;
             L1: while (true) {
-              if (param1 <= 0) {
-                stackOut_4_0 = var3_int;
-                stackIn_5_0 = stackOut_4_0;
-                break L0;
-              } else {
-                var3_int = var3_int << 1 | 1 & param0;
-                param1--;
-                param0 = param0 >>> 1;
-                continue L1;
+              L2: {
+                L3: {
+                  if (param1 <= 0) {
+                    break L3;
+                  } else {
+                    var3_int = var3_int << -1594980095 | 1 & param0;
+                    param1--;
+                    stackOut_3_0 = param0 >>> 1;
+                    stackIn_6_0 = stackOut_3_0;
+                    stackIn_4_0 = stackOut_3_0;
+                    if (var5 != 0) {
+                      break L2;
+                    } else {
+                      param0 = stackIn_4_0;
+                      if (var5 == 0) {
+                        continue L1;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                }
+                stackOut_5_0 = var3_int;
+                stackIn_6_0 = stackOut_5_0;
+                break L2;
               }
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var3, "ld.B(" + param0 + ',' + param1 + ',' + -125 + ')');
+          throw dd.a((Throwable) ((Object) var3), "ld.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_5_0;
+        return stackIn_6_0;
     }
 
     public static void a(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_c = null;
         field_e = null;
         field_d = null;
@@ -150,10 +238,6 @@ final class ld {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Quit to website";
         field_c = "Waiting for instruments";
     }

@@ -14,21 +14,21 @@ final class nmb extends hrb {
         int var5 = 0;
         var5 = VoidHunters.field_G;
         if (param0 == 0) {
-          if (~((nmb) this).field_g > ~((nmb) this).field_e) {
-            ((nmb) this).field_d = ((nmb) this).field_d + (-((nmb) this).field_g + ((nmb) this).field_e);
-            ((nmb) this).field_g = ((nmb) this).field_g + (-((nmb) this).field_g + ((nmb) this).field_e);
-            ((nmb) this).field_e = ((nmb) this).field_e + param1;
+          if ((this.field_g ^ -1L) > (this.field_e ^ -1L)) {
+            this.field_d = this.field_d + (-this.field_g + this.field_e);
+            this.field_g = this.field_g + (-this.field_g + this.field_e);
+            this.field_e = this.field_e + param1;
             return 1;
           } else {
             var4 = 0;
             L0: while (true) {
               L1: {
                 var4++;
-                ((nmb) this).field_e = ((nmb) this).field_e + param1;
+                this.field_e = this.field_e + param1;
                 if (var4 >= 10) {
                   break L1;
                 } else {
-                  if (((nmb) this).field_g > ((nmb) this).field_e) {
+                  if (this.field_g > this.field_e) {
                     continue L0;
                   } else {
                     break L1;
@@ -36,10 +36,10 @@ final class nmb extends hrb {
                 }
               }
               L2: {
-                if (((nmb) this).field_e >= ((nmb) this).field_g) {
+                if (this.field_e >= this.field_g) {
                   break L2;
                 } else {
-                  ((nmb) this).field_e = ((nmb) this).field_g;
+                  this.field_e = this.field_g;
                   break L2;
                 }
               }
@@ -60,7 +60,7 @@ final class nmb extends hrb {
             if (gha.field_q == null) {
               break L0;
             } else {
-              var1 = (Object) (Object) gha.field_q;
+              var1 = gha.field_q;
               synchronized (var1) {
                 L1: {
                   gha.field_q = null;
@@ -77,12 +77,12 @@ final class nmb extends hrb {
     }
 
     final long a(byte param0) {
-        ((nmb) this).field_g = ((nmb) this).field_g + this.c(-110);
+        this.field_g = this.field_g + this.c(-110);
         if (param0 != -81) {
-            ((nmb) this).field_h = 67;
+            this.field_h = 67;
         }
-        if (((nmb) this).field_g < ((nmb) this).field_e) {
-            return (-((nmb) this).field_g + ((nmb) this).field_e) / 1000000L;
+        if (this.field_g < this.field_e) {
+            return (-this.field_g + this.field_e) / 1000000L;
         }
         return 0L;
     }
@@ -96,6 +96,7 @@ final class nmb extends hrb {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_2_0 = null;
         StringBuilder stackOut_2_1 = null;
@@ -107,30 +108,36 @@ final class nmb extends hrb {
         String stackOut_3_2 = null;
         try {
           L0: {
-            kpb.field_q.a((f) (Object) param1.field_e);
-            break L0;
+            kpb.field_q.a(param1.field_e);
+            if (param0 < -73) {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 1;
+              break L0;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("nmb.F(").append(-91).append(',');
+            stackOut_2_0 = (RuntimeException) (var2);
+            stackOut_2_1 = new StringBuilder().append("nmb.F(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -138,7 +145,12 @@ final class nmb extends hrb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -148,21 +160,21 @@ final class nmb extends hrb {
     }
 
     nmb() {
-        ((nmb) this).field_f = new long[10];
-        ((nmb) this).field_g = 0L;
-        ((nmb) this).field_d = 0L;
-        ((nmb) this).field_e = 0L;
-        ((nmb) this).field_c = 0;
-        ((nmb) this).field_h = 1;
-        ((nmb) this).field_g = System.nanoTime();
-        ((nmb) this).field_e = System.nanoTime();
+        this.field_f = new long[10];
+        this.field_g = 0L;
+        this.field_d = 0L;
+        this.field_e = 0L;
+        this.field_c = 0;
+        this.field_h = 1;
+        this.field_g = System.nanoTime();
+        this.field_e = System.nanoTime();
     }
 
     final void a(int param0) {
-        if (!(((nmb) this).field_g >= ((nmb) this).field_e)) {
-            ((nmb) this).field_g = ((nmb) this).field_g + (-((nmb) this).field_g + ((nmb) this).field_e);
+        if (!(this.field_g >= this.field_e)) {
+            this.field_g = this.field_g + (-this.field_g + this.field_e);
         }
-        ((nmb) this).field_d = 0L;
+        this.field_d = 0L;
         if (param0 >= -78) {
             nmb.d(13);
         }
@@ -172,22 +184,25 @@ final class nmb extends hrb {
         int var8 = 0;
         int var9 = VoidHunters.field_G;
         long var2 = System.nanoTime();
-        long var4 = var2 + -((nmb) this).field_d;
-        ((nmb) this).field_d = var2;
+        long var4 = var2 + -this.field_d;
+        this.field_d = var2;
         if (-5000000000L < var4) {
-            if (!(var4 >= 5000000000L)) {
-                ((nmb) this).field_f[((nmb) this).field_c] = var4;
-                ((nmb) this).field_c = (((nmb) this).field_c + 1) % 10;
-                if (((nmb) this).field_h < 1) {
-                    ((nmb) this).field_h = ((nmb) this).field_h + 1;
+            if (!(-5000000001L >= (var4 ^ -1L))) {
+                this.field_f[this.field_c] = var4;
+                this.field_c = (this.field_c + 1) % 10;
+                if ((this.field_h ^ -1) > -2) {
+                    this.field_h = this.field_h + 1;
                 }
             }
         }
-        long var6 = 0L;
-        for (var8 = 1; var8 <= ((nmb) this).field_h; var8++) {
-            var6 = var6 + ((nmb) this).field_f[(10 + ((nmb) this).field_c + -var8) % 10];
+        if (param0 >= -71) {
+            this.field_g = 79L;
         }
-        return var6 / (long)((nmb) this).field_h;
+        long var6 = 0L;
+        for (var8 = 1; var8 <= this.field_h; var8++) {
+            var6 = var6 + this.field_f[(10 + this.field_c + -var8) % 10];
+        }
+        return var6 / (long)this.field_h;
     }
 
     static {

@@ -13,7 +13,7 @@ final class ga {
         field_c = null;
         field_e = null;
         if (param0 != -44) {
-            Object var2 = null;
+            java.applet.Applet var2 = (java.applet.Applet) null;
             ga.a((java.applet.Applet) null, (byte) -46);
         }
     }
@@ -33,164 +33,194 @@ final class ga {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_38_0 = 0;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
+        int stackIn_23_0 = 0;
+        int stackIn_28_0 = 0;
+        int stackIn_34_0 = 0;
+        int stackIn_39_0 = 0;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
-        String stackIn_42_2 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_43_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_37_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_24_0 = 0;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
+        int stackOut_38_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_33_0 = 0;
+        int stackOut_27_0 = 0;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        String stackOut_42_2 = null;
         RuntimeException stackOut_41_0 = null;
         StringBuilder stackOut_41_1 = null;
         String stackOut_41_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
         var12 = wizardrun.field_H;
         try {
           L0: {
-            var4_int = 0;
-            var5 = 0;
-            var6 = 0;
-            var7 = param0.length();
-            var8 = 22;
-            var9 = 0;
-            L1: while (true) {
-              if (var7 <= var9) {
-                stackOut_37_0 = var5;
-                stackIn_38_0 = stackOut_37_0;
-                break L0;
+            L1: {
+              if (-3 < (param1 ^ -1)) {
+                break L1;
               } else {
-                L2: {
-                  L3: {
-                    var10 = param0.charAt(var9);
-                    if (var9 != 0) {
-                      break L3;
+                if (-37 <= (param1 ^ -1)) {
+                  var4_int = 0;
+                  var5 = 0;
+                  var6 = 0;
+                  var7 = param0.length();
+                  var8 = -22 / ((-39 - param2) / 59);
+                  var9 = 0;
+                  L2: while (true) {
+                    if (var7 <= var9) {
+                      stackOut_38_0 = var5;
+                      stackIn_39_0 = stackOut_38_0;
+                      decompiledRegionSelector0 = 3;
+                      break L0;
                     } else {
-                      if (var10 != 45) {
-                        if (var10 != 43) {
-                          break L3;
-                        } else {
-                          var9++;
-                          break L2;
+                      L3: {
+                        L4: {
+                          var10 = param0.charAt(var9);
+                          if (var9 != 0) {
+                            break L4;
+                          } else {
+                            if (var10 != 45) {
+                              if (var10 != 43) {
+                                break L4;
+                              } else {
+                                if (!param3) {
+                                  break L4;
+                                } else {
+                                  break L3;
+                                }
+                              }
+                            } else {
+                              var4_int = 1;
+                              break L3;
+                            }
+                          }
                         }
-                      } else {
-                        var4_int = 1;
-                        var9++;
-                        break L2;
+                        L5: {
+                          L6: {
+                            if (var10 < 48) {
+                              break L6;
+                            } else {
+                              if (var10 > 57) {
+                                break L6;
+                              } else {
+                                var10 -= 48;
+                                break L5;
+                              }
+                            }
+                          }
+                          L7: {
+                            if (var10 < 65) {
+                              break L7;
+                            } else {
+                              if (var10 <= 90) {
+                                var10 -= 55;
+                                break L5;
+                              } else {
+                                break L7;
+                              }
+                            }
+                          }
+                          if (var10 < 97) {
+                            stackOut_22_0 = 0;
+                            stackIn_23_0 = stackOut_22_0;
+                            decompiledRegionSelector0 = 0;
+                            break L0;
+                          } else {
+                            if (var10 <= 122) {
+                              var10 -= 87;
+                              break L5;
+                            } else {
+                              return false;
+                            }
+                          }
+                        }
+                        if (var10 < param1) {
+                          L8: {
+                            if (var4_int != 0) {
+                              var10 = -var10;
+                              break L8;
+                            } else {
+                              break L8;
+                            }
+                          }
+                          var11 = var10 + var6 * param1;
+                          if (var6 == var11 / param1) {
+                            var5 = 1;
+                            var6 = var11;
+                            break L3;
+                          } else {
+                            stackOut_33_0 = 0;
+                            stackIn_34_0 = stackOut_33_0;
+                            decompiledRegionSelector0 = 2;
+                            break L0;
+                          }
+                        } else {
+                          stackOut_27_0 = 0;
+                          stackIn_28_0 = stackOut_27_0;
+                          decompiledRegionSelector0 = 1;
+                          break L0;
+                        }
                       }
+                      var9++;
+                      continue L2;
                     }
                   }
-                  L4: {
-                    L5: {
-                      if (var10 < 48) {
-                        break L5;
-                      } else {
-                        if (var10 > 57) {
-                          break L5;
-                        } else {
-                          var10 -= 48;
-                          break L4;
-                        }
-                      }
-                    }
-                    L6: {
-                      if (var10 < 65) {
-                        break L6;
-                      } else {
-                        if (var10 <= 90) {
-                          var10 -= 55;
-                          break L4;
-                        } else {
-                          break L6;
-                        }
-                      }
-                    }
-                    if (var10 < 97) {
-                      stackOut_19_0 = 0;
-                      stackIn_20_0 = stackOut_19_0;
-                      return stackIn_20_0 != 0;
-                    } else {
-                      if (var10 <= 122) {
-                        var10 -= 87;
-                        break L4;
-                      } else {
-                        return false;
-                      }
-                    }
-                  }
-                  if (var10 < 10) {
-                    L7: {
-                      if (var4_int != 0) {
-                        var10 = -var10;
-                        break L7;
-                      } else {
-                        break L7;
-                      }
-                    }
-                    var11 = var10 + var6 * 10;
-                    if (var6 == var11 / 10) {
-                      var5 = 1;
-                      var6 = var11;
-                      break L2;
-                    } else {
-                      stackOut_30_0 = 0;
-                      stackIn_31_0 = stackOut_30_0;
-                      return stackIn_31_0 != 0;
-                    }
-                  } else {
-                    stackOut_24_0 = 0;
-                    stackIn_25_0 = stackOut_24_0;
-                    return stackIn_25_0 != 0;
-                  }
+                } else {
+                  break L1;
                 }
-                var9++;
-                continue L1;
               }
             }
+            throw new IllegalArgumentException("" + param1);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L9: {
             var4 = decompiledCaughtException;
-            stackOut_39_0 = (RuntimeException) var4;
-            stackOut_39_1 = new StringBuilder().append("ga.B(");
-            stackIn_41_0 = stackOut_39_0;
-            stackIn_41_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+            stackOut_40_0 = (RuntimeException) (var4);
+            stackOut_40_1 = new StringBuilder().append("ga.B(");
+            stackIn_42_0 = stackOut_40_0;
+            stackIn_42_1 = stackOut_40_1;
+            stackIn_41_0 = stackOut_40_0;
+            stackIn_41_1 = stackOut_40_1;
             if (param0 == null) {
-              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
-              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
-              stackOut_41_2 = "null";
-              stackIn_42_0 = stackOut_41_0;
-              stackIn_42_1 = stackOut_41_1;
-              stackIn_42_2 = stackOut_41_2;
-              break L8;
+              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
+              stackOut_42_2 = "null";
+              stackIn_43_0 = stackOut_42_0;
+              stackIn_43_1 = stackOut_42_1;
+              stackIn_43_2 = stackOut_42_2;
+              break L9;
             } else {
-              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
-              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
-              stackOut_40_2 = "{...}";
-              stackIn_42_0 = stackOut_40_0;
-              stackIn_42_1 = stackOut_40_1;
-              stackIn_42_2 = stackOut_40_2;
-              break L8;
+              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
+              stackOut_41_2 = "{...}";
+              stackIn_43_0 = stackOut_41_0;
+              stackIn_43_1 = stackOut_41_1;
+              stackIn_43_2 = stackOut_41_2;
+              break L9;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ',' + 10 + ',' + 58 + ',' + true + ')');
+          throw bd.a((Throwable) ((Object) stackIn_43_0), stackIn_43_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_38_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_23_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_28_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_34_0 != 0;
+            } else {
+              return stackIn_39_0 != 0;
+            }
+          }
+        }
     }
 
     final static void a(java.applet.Applet param0, byte param1) {
@@ -234,7 +264,7 @@ final class ga {
                     var4 = var2;
                     var3 = var2.indexOf('?');
                     var4 = "reload.ws";
-                    if (var3 < 0) {
+                    if ((var3 ^ -1) > -1) {
                       break L2;
                     } else {
                       var4 = var4 + var2.substring(var3);
@@ -256,23 +286,23 @@ final class ga {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_8_0 = (RuntimeException) var2_ref2;
+                stackOut_8_0 = (RuntimeException) (var2_ref2);
                 stackOut_8_1 = new StringBuilder().append("ga.A(");
                 stackIn_10_0 = stackOut_8_0;
                 stackIn_10_1 = stackOut_8_1;
                 stackIn_9_0 = stackOut_8_0;
                 stackIn_9_1 = stackOut_8_1;
                 if (param0 == null) {
-                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
                   stackOut_10_2 = "null";
                   stackIn_11_0 = stackOut_10_0;
                   stackIn_11_1 = stackOut_10_1;
                   stackIn_11_2 = stackOut_10_2;
                   break L3;
                 } else {
-                  stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-                  stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+                  stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+                  stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
                   stackOut_9_2 = "{...}";
                   stackIn_11_0 = stackOut_9_0;
                   stackIn_11_1 = stackOut_9_1;
@@ -280,7 +310,7 @@ final class ga {
                   break L3;
                 }
               }
-              throw bd.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
+              throw bd.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -290,10 +320,6 @@ final class ga {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new ae();
         field_a = false;
         field_d = new rj(1);

@@ -15,10 +15,6 @@ final class mc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mc.A(";
     }
 }

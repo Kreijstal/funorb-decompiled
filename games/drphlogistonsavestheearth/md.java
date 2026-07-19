@@ -16,13 +16,12 @@ final class md {
         field_e = null;
         field_a = null;
         field_f = null;
+        if (param0 != 75) {
+            field_b = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "md.A(";
         field_c = new int[75];
         field_e = new vd();

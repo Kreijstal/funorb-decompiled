@@ -38,10 +38,6 @@ final class jba implements wwa {
         int[] var25 = null;
         int[][] var26 = null;
         int[] var27 = null;
-        int[][] var28 = null;
-        int[] var29 = null;
-        int[][] var30 = null;
-        int[] var31 = null;
         wfb stackIn_32_0 = null;
         Object stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -83,22 +79,20 @@ final class jba implements wwa {
               if (param0 != null) {
                 var20 = param0[0];
                 var22 = var20;
-                var8 = (Object) (Object) var22;
+                var8 = var22;
                 var9_int = 0;
                 L2: while (true) {
                   if (var9_int >= var20.length / 2) {
                     var9_int = 0;
                     L3: while (true) {
                       if (var9_int >= var22.length) {
-                        var30 = new int[-1 + param0.length][];
-                        var28 = var30;
-                        var26 = var28;
+                        var26 = new int[-1 + param0.length][];
                         var23 = var26;
                         var21 = var23;
                         var9 = var21;
                         var10 = 0;
                         L4: while (true) {
-                          if (var30.length <= var10) {
+                          if (var26.length <= var10) {
                             param0 = var9;
                             break L1;
                           } else {
@@ -108,7 +102,7 @@ final class jba implements wwa {
                           }
                         }
                       } else {
-                        ((int[]) var8)[var9_int] = ((int[]) var8)[var9_int] >> 4;
+                        ((int[]) (var8))[var9_int] = ((int[]) (var8))[var9_int] >> 4;
                         var9_int++;
                         continue L3;
                       }
@@ -133,40 +127,38 @@ final class jba implements wwa {
             }
             L5: {
               if (var8 == null) {
-                var8 = (Object) (Object) tka.a(param1, (byte) 55, param5, param2, param3);
+                var8 = tka.a(param1, (byte) 55, param5, param2, param3);
                 break L5;
               } else {
                 break L5;
               }
             }
             L6: {
-              var24 = new wfb((int[]) var8, 0, 0);
+              var24 = new wfb((int[]) (var8), 0, 0);
               var24.a(4, 102, false);
               if (param0 == null) {
                 var24.field_w = new int[3][];
                 var10_ref = var8;
-                var11 = new Random((long)((int[]) var8)[0]);
-                var12 = hob.a(var11, (int)param5, 121) + -((int)param5 >> 1) << 3;
-                var13 = hob.a(var11, (int)param5, 119) - ((int)param5 >> 1) << 3;
+                var11 = new Random((long)((int[]) (var8))[0]);
+                var12 = hob.a(var11, (int)param5, 121) + -((int)param5 >> -767461247) << -181363549;
+                var13 = hob.a(var11, (int)param5, 119) - ((int)param5 >> -1104729887) << 1331144035;
                 var14 = 0;
                 L7: while (true) {
                   if (3 <= var14) {
                     break L6;
                   } else {
-                    var15 = new Random((long)((int[]) var10_ref)[1]);
-                    var31 = tka.a(param1, (byte) 55, param5 * 2L / (long)(2 + var14), param2, var15);
-                    var29 = var31;
-                    var27 = var29;
+                    var15 = new Random((long)((int[]) (var10_ref))[1]);
+                    var27 = tka.a(param1, (byte) 55, param5 * 2L / (long)(2 + var14), param2, var15);
                     var25 = var27;
                     var16 = var25;
                     var17 = 0;
                     L8: while (true) {
-                      if (var17 >= var31.length) {
+                      if (var17 >= var27.length) {
                         var17 = 0;
                         L9: while (true) {
-                          if (var17 >= var31.length) {
-                            var24.field_w[var14] = var31;
-                            var10_ref = (Object) (Object) var16;
+                          if (var17 >= var27.length) {
+                            var24.field_w[var14] = var27;
+                            var10_ref = var16;
                             var14++;
                             continue L7;
                           } else {
@@ -175,14 +167,14 @@ final class jba implements wwa {
                             var18 = 0;
                             L10: while (true) {
                               L11: {
-                                if (var18 >= 100) {
+                                if ((var18 ^ -1) <= -101) {
                                   break L11;
                                 } else {
-                                  if (fra.a((int[]) var10_ref, var16[var17 + 1], 2, var31[var17])) {
+                                  if (fra.a((int[]) (var10_ref), var16[var17 + 1], 2, var27[var17])) {
                                     break L11;
                                   } else {
-                                    var16[var17] = var31[var17] * 200 >> 8;
-                                    var16[1 + var17] = var16[var17 - -1] * 200 >> 8;
+                                    var16[var17] = var27[var17] * 200 >> -198628536;
+                                    var16[1 + var17] = var16[var17 - -1] * 200 >> -1287533688;
                                     var18++;
                                     continue L10;
                                   }
@@ -212,14 +204,14 @@ final class jba implements wwa {
             var24.a(121, 8);
             var24.field_B = 16;
             var24.field_r = true;
-            stackOut_31_0 = (wfb) var24;
+            stackOut_31_0 = (wfb) (var24);
             stackIn_32_0 = stackOut_31_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L12: {
-            var8 = (Object) (Object) decompiledCaughtException;
+            var8 = decompiledCaughtException;
             stackOut_33_0 = var8;
             stackOut_33_1 = new StringBuilder().append("jba.C(");
             stackIn_35_0 = stackOut_33_0;
@@ -228,7 +220,7 @@ final class jba implements wwa {
             stackIn_34_1 = stackOut_33_1;
             if (param0 == null) {
               stackOut_35_0 = stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackOut_35_2 = "null";
               stackIn_36_0 = stackOut_35_0;
               stackIn_36_1 = stackOut_35_1;
@@ -236,7 +228,7 @@ final class jba implements wwa {
               break L12;
             } else {
               stackOut_34_0 = stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "{...}";
               stackIn_36_0 = stackOut_34_0;
               stackIn_36_1 = stackOut_34_1;
@@ -253,7 +245,7 @@ final class jba implements wwa {
             stackIn_37_1 = stackOut_36_1;
             if (param3 == null) {
               stackOut_38_0 = stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
               stackOut_38_2 = "null";
               stackIn_39_0 = stackOut_38_0;
               stackIn_39_1 = stackOut_38_1;
@@ -261,7 +253,7 @@ final class jba implements wwa {
               break L13;
             } else {
               stackOut_37_0 = stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
               stackOut_37_2 = "{...}";
               stackIn_39_0 = stackOut_37_0;
               stackIn_39_1 = stackOut_37_1;
@@ -269,7 +261,7 @@ final class jba implements wwa {
               break L13;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + param4 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_39_0), stackIn_39_2 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_32_0;
     }
@@ -308,17 +300,17 @@ final class jba implements wwa {
             L1: {
               if (!(param1 instanceof v)) {
                 stackOut_3_0 = null;
-                stackIn_4_0 = (shb) (Object) stackOut_3_0;
+                stackIn_4_0 = (shb) ((Object) stackOut_3_0);
                 break L1;
               } else {
-                stackOut_2_0 = (shb) param1;
+                stackOut_2_0 = (shb) (param1);
                 stackIn_4_0 = stackOut_2_0;
                 break L1;
               }
             }
             L2: {
-              var13 = (v) (Object) stackIn_4_0;
-              dma.d(param2 + param1.field_g, param1.field_r + param3, param1.field_h, param1.field_f, ((jba) this).field_e);
+              var13 = (v) ((Object) stackIn_4_0);
+              dma.d(param2 + param1.field_g, param1.field_r + param3, param1.field_h, param1.field_f, this.field_e);
               if (var13 == null) {
                 break L2;
               } else {
@@ -328,14 +320,14 @@ final class jba implements wwa {
             var7 = param1.field_h - var13.field_C * 2;
             var8 = var13.field_C + (param1.field_g + param2);
             var9 = var13.field_F + (param1.field_r + param3);
-            dma.a(var8, var9, var8 + var7, var9, ((jba) this).field_f);
+            dma.a(var8, var9, var8 + var7, var9, this.field_f);
             var10 = var13.a(0) - 1;
             var11 = 112 / ((-27 - param0) / 35);
             L3: while (true) {
               if (0 > var10) {
                 L4: {
-                  if (null != ((jba) this).field_g) {
-                    ((jba) this).field_g.a(var13.field_j, var7 / 2 + var8, var13.field_F + (((jba) this).field_g.field_H + var9), ((jba) this).field_a, ((jba) this).field_i);
+                  if (null != this.field_g) {
+                    this.field_g.a(var13.field_j, var7 / 2 + var8, var13.field_F + (this.field_g.field_H + var9), this.field_a, this.field_i);
                     break L4;
                   } else {
                     break L4;
@@ -343,7 +335,7 @@ final class jba implements wwa {
                 }
                 break L0;
               } else {
-                dma.f(var8 + var7 * var13.a(-115, var10) / var13.e(-111), var9, ((jba) this).field_c, ((jba) this).field_d);
+                dma.f(var8 + var7 * var13.a(-115, var10) / var13.e(-111), var9, this.field_c, this.field_d);
                 var10--;
                 continue L3;
               }
@@ -353,23 +345,23 @@ final class jba implements wwa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var6;
+            stackOut_12_0 = (RuntimeException) (var6);
             stackOut_12_1 = new StringBuilder().append("jba.A(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -377,26 +369,29 @@ final class jba implements wwa {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_h = null;
         field_b = null;
+        if (!param0) {
+            field_b = (llb) null;
+        }
     }
 
     jba(no param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            ((jba) this).field_e = param4;
-            ((jba) this).field_g = param0;
-            ((jba) this).field_c = param5;
-            ((jba) this).field_f = param3;
-            ((jba) this).field_i = param2;
-            ((jba) this).field_d = param6;
-            ((jba) this).field_a = param1;
+            this.field_e = param4;
+            this.field_g = param0;
+            this.field_c = param5;
+            this.field_f = param3;
+            this.field_i = param2;
+            this.field_d = param6;
+            this.field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "jba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "jba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

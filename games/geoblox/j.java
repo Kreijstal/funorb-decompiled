@@ -13,6 +13,9 @@ final class j extends mi {
     final static void e(int param0) {
         wg.field_i.field_b = 0;
         wg.field_i.field_q = 0;
+        if (param0 != -21754) {
+            field_lb = (String) null;
+        }
     }
 
     j() {
@@ -31,10 +34,6 @@ final class j extends mi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_gb = 80;
         field_jb = "Warning: if you quit, you will lose any game you are in the middle of!";
     }

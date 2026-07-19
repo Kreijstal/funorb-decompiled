@@ -14,14 +14,14 @@ abstract class tk {
 
     final void b(int param0) {
         int var2 = -68 % ((param0 - -20) / 46);
-        ki.a(((tk) this).field_g, ((tk) this).field_d, ((tk) this).field_b);
+        ki.a(this.field_g, this.field_d, this.field_b);
     }
 
     abstract void a(int param0, int param1, java.awt.Graphics param2, int param3);
 
     public static void a(int param0) {
         field_f = null;
-        int var1 = 0;
+        int var1 = -112 % ((-81 - param0) / 42);
         field_a = null;
     }
 

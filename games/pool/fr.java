@@ -15,11 +15,11 @@ final class fr extends ma {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (param1 != 0) {
+        if (-1 != (param1 ^ -1)) {
           if (0 < param1) {
             L0: {
               var2 = 1;
-              if (param1 <= 65535) {
+              if (-65536 <= (param1 ^ -1)) {
                 break L0;
               } else {
                 param1 = param1 >> 16;
@@ -37,7 +37,7 @@ final class fr extends ma {
               }
             }
             L2: {
-              if (param1 <= 15) {
+              if ((param1 ^ -1) >= -16) {
                 break L2;
               } else {
                 param1 = param1 >> 4;
@@ -86,7 +86,7 @@ final class fr extends ma {
                 }
               }
               L7: {
-                if (param1 >= -16) {
+                if ((param1 ^ -1) <= 15) {
                   break L7;
                 } else {
                   param1 = param1 >> 4;
@@ -104,7 +104,7 @@ final class fr extends ma {
                 }
               }
               L9: {
-                if (param1 >= -2) {
+                if ((param1 ^ -1) <= 1) {
                   break L9;
                 } else {
                   var2++;
@@ -125,7 +125,7 @@ final class fr extends ma {
                 }
               }
               L11: {
-                if (param1 >= -16) {
+                if ((param1 ^ -1) <= 15) {
                   break L11;
                 } else {
                   param1 = param1 >> 4;
@@ -143,7 +143,7 @@ final class fr extends ma {
                 }
               }
               L13: {
-                if (param1 >= -2) {
+                if ((param1 ^ -1) <= 1) {
                   break L13;
                 } else {
                   var2++;
@@ -162,10 +162,11 @@ final class fr extends ma {
     final static void a(int param0, kg param1, int param2) {
         oq var6 = null;
         int var4 = 0;
+        int discarded$0 = 0;
         try {
             var6 = ej.field_j;
             oq var3 = var6;
-            var6.b(false, 6);
+            var6.b(false, param2);
             var6.field_v = var6.field_v + 1;
             var4 = var6.field_v;
             var6.a(1, false);
@@ -175,13 +176,13 @@ final class fr extends ma {
             } else {
                 var6.a(0, false);
             }
-            int var5 = 48;
-            int discarded$0 = var6.d(-1, var4);
+            int var5 = 48 / ((param0 - 52) / 40);
+            discarded$0 = var6.d(-1, var4);
             var6.field_v = var6.field_v - 4;
             param1.field_o = var6.b(true);
             var6.b(-var4 + var6.field_v, true);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "fr.D(" + 98 + ',' + (param1 != null ? "{...}" : "null") + ',' + 6 + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "fr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -207,29 +208,26 @@ final class fr extends ma {
     }
 
     public static void c(byte param0) {
+        int discarded$0 = 0;
         field_m = null;
         field_q = null;
         field_o = null;
         if (param0 < 39) {
-            int discarded$0 = fr.a(-16, 120);
+            discarded$0 = fr.a(-16, 120);
         }
     }
 
     fr(long param0, int param1, byte[] param2) {
         try {
-            ((fr) this).field_p = param0;
-            ((fr) this).field_l = param2;
-            ((fr) this).field_r = param1;
+            this.field_p = param0;
+            this.field_l = param2;
+            this.field_r = param1;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "fr.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "fr.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Please check if address is correct";
         field_o = new nl();
         field_q = "Who can join";

@@ -12,17 +12,23 @@ final class l {
     private static String field_z;
 
     public static void a(int param0) {
-        field_d = null;
-        field_f = null;
-        field_c = null;
-        field_b = null;
+        if (param0 != 19545) {
+          field_b = (String) null;
+          field_d = null;
+          field_f = null;
+          field_c = null;
+          field_b = null;
+          return;
+        } else {
+          field_d = null;
+          field_f = null;
+          field_c = null;
+          field_b = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "l.A(";
         field_b = "This password contains your email address, and would be easy to guess";
         field_e = 204;

@@ -9,8 +9,8 @@ final class i extends ka implements e {
     public final native void w(boolean param0);
 
     protected final void finalize() {
-        if (((i) this).field_nativeid != 0L) {
-            vk.a((e) this, 101);
+        if (this.field_nativeid != 0L) {
+            vk.a((e) (this), 101);
         }
     }
 

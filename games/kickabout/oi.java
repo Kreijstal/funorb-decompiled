@@ -14,7 +14,7 @@ final class oi extends gn {
         int var1 = 0;
         var1 = 66 % ((param0 - -43) / 35);
         if (!jd.f(-1)) {
-          if (eq.field_d <= 0) {
+          if (-1 <= (eq.field_d ^ -1)) {
             return false;
           } else {
             return true;
@@ -28,9 +28,18 @@ final class oi extends gn {
         field_h = null;
         field_e = null;
         field_f = null;
-        field_i = null;
-        field_k = null;
-        field_g = null;
+        if (param0) {
+          oi.a(-54);
+          field_i = null;
+          field_k = null;
+          field_g = null;
+          return;
+        } else {
+          field_i = null;
+          field_k = null;
+          field_g = null;
+          return;
+        }
     }
 
     final static void a(int param0) {
@@ -45,14 +54,10 @@ final class oi extends gn {
     }
 
     oi(int param0) {
-        ((oi) this).field_j = param0;
+        this.field_j = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Show lobby chat from my friends";
         field_k = "Invite more players, or alternatively try changing the following settings:  ";
     }

@@ -12,8 +12,9 @@ final class mm {
     static String field_a;
 
     final static String a(char param0, int param1) {
+        String discarded$0 = null;
         if (param1 != 0) {
-            String discarded$0 = mm.a('ￛ', -125);
+            discarded$0 = mm.a('ￛ', -125);
             return String.valueOf(param0);
         }
         return String.valueOf(param0);
@@ -23,14 +24,13 @@ final class mm {
         field_d = null;
         field_a = null;
         field_h = null;
+        if (param0 != 12797) {
+            return;
+        }
         field_g = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Creating your account";
         field_h = "Visit the Account Management section on the main site to view.";
         field_c = 0;

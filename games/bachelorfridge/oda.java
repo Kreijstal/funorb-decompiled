@@ -38,20 +38,28 @@ final class oda {
         try {
           L0: {
             L1: {
-              if (param1 != param5) {
+              if (param4 > 122) {
                 break L1;
               } else {
+                field_a = (String) null;
+                break L1;
+              }
+            }
+            L2: {
+              if (param1 != param5) {
+                break L2;
+              } else {
                 if (param7 != param3) {
-                  break L1;
+                  break L2;
                 } else {
                   if (param9 != param6) {
-                    break L1;
+                    break L2;
                   } else {
                     if (param2 == param0) {
                       oe.a(param3, param8, -117, param9, param0, param5);
                       return;
                     } else {
-                      break L1;
+                      break L2;
                     }
                   }
                 }
@@ -72,38 +80,39 @@ final class oda {
             var22 = -var12 + var14;
             var23 = -var13 + var15;
             var24 = 128;
-            L2: while (true) {
+            L3: while (true) {
               if (4096 < var24) {
                 break L0;
               } else {
-                var25 = var24 * var24 >> 12;
-                var26 = var24 * var25 >> 12;
+                var25 = var24 * var24 >> -2078974164;
+                var26 = var24 * var25 >> -720570900;
                 var27 = var26 * var18;
                 var28 = var19 * var26;
                 var29 = var20 * var25;
                 var30 = var21 * var25;
                 var31 = var22 * var24;
                 var32 = var24 * var23;
-                var33 = (var31 + (var27 + var29) >> 12) + param5;
-                var34 = (var30 + (var28 - -var32) >> 12) + param3;
+                var33 = (var31 + (var27 + var29) >> -1602436020) + param5;
+                var34 = (var30 + (var28 - -var32) >> -705481812) + param3;
                 oe.a(var11, param8, -88, var33, var34, var10_int);
                 var10_int = var33;
                 var11 = var34;
                 var24 += 128;
-                continue L2;
+                continue L3;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var10, "oda.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + 123 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw pe.a((Throwable) ((Object) var10), "oda.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
     final static pp a(int param0, lu param1) {
+        pp discarded$2 = null;
         RuntimeException var2 = null;
-        Object var3 = null;
+        lu var3 = null;
         kq stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -128,8 +137,8 @@ final class oda {
               if (param0 <= -30) {
                 break L1;
               } else {
-                var3 = null;
-                pp discarded$2 = oda.a(-17, (lu) null);
+                var3 = (lu) null;
+                discarded$2 = oda.a(-17, (lu) null);
                 break L1;
               }
             }
@@ -141,23 +150,23 @@ final class oda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("oda.D(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -165,9 +174,9 @@ final class oda {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
-        return (pp) (Object) stackIn_3_0;
+        return (pp) ((Object) stackIn_3_0);
     }
 
     final static void a(int param0) {
@@ -175,29 +184,46 @@ final class oda {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (null != vv.field_e) {
-          var1 = (Object) (Object) vv.field_e;
+          var1 = vv.field_e;
           synchronized (var1) {
             L0: {
               vv.field_e = null;
               break L0;
             }
           }
+          L1: {
+            if (param0 == -705481812) {
+              break L1;
+            } else {
+              field_a = (String) null;
+              break L1;
+            }
+          }
           return;
         } else {
+          L2: {
+            if (param0 == -705481812) {
+              break L2;
+            } else {
+              field_a = (String) null;
+              break L2;
+            }
+          }
           return;
         }
     }
 
     public static void b(int param0) {
+        pp discarded$0 = null;
         field_a = null;
         field_b = null;
+        if (param0 != 14124) {
+            lu var2 = (lu) null;
+            discarded$0 = oda.a(-77, (lu) null);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Average rating";
         field_b = "Invite more players, or alternatively try changing the following settings:  ";
     }

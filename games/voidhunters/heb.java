@@ -3,8 +3,9 @@
  */
 final class heb extends rqa {
     final nc a(nc[] param0, int param1) {
+        nc discarded$2 = null;
         RuntimeException var3 = null;
-        Object var4 = null;
+        nc[] var4 = null;
         nc stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -30,12 +31,12 @@ final class heb extends rqa {
               if (param1 <= -119) {
                 break L1;
               } else {
-                var4 = null;
-                nc discarded$2 = ((heb) this).a((nc[]) null, 99);
+                var4 = (nc[]) null;
+                discarded$2 = this.a((nc[]) null, 99);
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -43,23 +44,23 @@ final class heb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("heb.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -67,14 +68,15 @@ final class heb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     final static String a(int param0, String param1, int param2) {
+        String discarded$1 = null;
         RuntimeException var3 = null;
-        Object var4 = null;
+        String var4 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_10_0 = null;
@@ -94,6 +96,7 @@ final class heb extends rqa {
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
         String stackIn_48_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_2_0 = null;
         String stackOut_9_0 = null;
@@ -117,54 +120,63 @@ final class heb extends rqa {
         String stackOut_46_2 = null;
         try {
           L0: {
-            if (param0 == 1) {
-              stackOut_2_0 = isa.a(ub.field_g, new String[1], 90);
+            if (-2 == (param0 ^ -1)) {
+              stackOut_2_0 = isa.a(ub.field_g, new String[]{param1}, 90);
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param0 != 2) {
-                if (param0 == 3) {
-                  stackOut_9_0 = isa.a(wu.field_e, new String[1], param2 ^ -3290);
+                if (-4 == (param0 ^ -1)) {
+                  stackOut_9_0 = isa.a(wu.field_e, new String[]{param1}, param2 ^ -3290);
                   stackIn_10_0 = stackOut_9_0;
-                  return stackIn_10_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   if (param0 == 4) {
-                    stackOut_13_0 = isa.a(og.field_s, new String[1], 108);
+                    stackOut_13_0 = isa.a(og.field_s, new String[]{param1}, 108);
                     stackIn_14_0 = stackOut_13_0;
-                    return stackIn_14_0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   } else {
-                    if (param0 != 5) {
-                      if (param0 == 6) {
-                        stackOut_20_0 = isa.a(fpb.field_b, new String[1], 111);
+                    if ((param0 ^ -1) != -6) {
+                      if ((param0 ^ -1) == -7) {
+                        stackOut_20_0 = isa.a(fpb.field_b, new String[]{param1}, 111);
                         stackIn_21_0 = stackOut_20_0;
-                        return stackIn_21_0;
+                        decompiledRegionSelector0 = 5;
+                        break L0;
                       } else {
-                        if (param0 == 7) {
-                          stackOut_24_0 = isa.a(btb.field_c, new String[1], param2 ^ -3268);
+                        if (-8 == (param0 ^ -1)) {
+                          stackOut_24_0 = isa.a(btb.field_c, new String[]{param1}, param2 ^ -3268);
                           stackIn_25_0 = stackOut_24_0;
-                          return stackIn_25_0;
+                          decompiledRegionSelector0 = 6;
+                          break L0;
                         } else {
                           if (8 != param0) {
                             if (param0 == 11) {
-                              stackOut_31_0 = isa.a(ar.field_a, new String[1], 72);
+                              stackOut_31_0 = isa.a(ar.field_a, new String[]{param1}, 72);
                               stackIn_32_0 = stackOut_31_0;
-                              return stackIn_32_0;
+                              decompiledRegionSelector0 = 8;
+                              break L0;
                             } else {
-                              if (param0 == 12) {
-                                stackOut_35_0 = isa.a(ddb.field_o, new String[1], 123);
+                              if ((param0 ^ -1) == -13) {
+                                stackOut_35_0 = isa.a(ddb.field_o, new String[]{param1}, 123);
                                 stackIn_36_0 = stackOut_35_0;
-                                return stackIn_36_0;
+                                decompiledRegionSelector0 = 9;
+                                break L0;
                               } else {
                                 if (13 == param0) {
-                                  stackOut_39_0 = isa.a(rv.field_b, new String[1], 110);
+                                  stackOut_39_0 = isa.a(rv.field_b, new String[]{param1}, 110);
                                   stackIn_40_0 = stackOut_39_0;
-                                  return stackIn_40_0;
+                                  decompiledRegionSelector0 = 10;
+                                  break L0;
                                 } else {
                                   if (param2 != -3223) {
-                                    var4 = null;
-                                    String discarded$1 = heb.a(42, (String) null, -110);
+                                    var4 = (String) null;
+                                    discarded$1 = heb.a(42, (String) null, -110);
                                     stackOut_43_0 = null;
                                     stackIn_44_0 = stackOut_43_0;
+                                    decompiledRegionSelector0 = 11;
                                     break L0;
                                   } else {
                                     return null;
@@ -173,23 +185,26 @@ final class heb extends rqa {
                               }
                             }
                           } else {
-                            stackOut_27_0 = isa.a(acb.field_o, new String[1], 90);
+                            stackOut_27_0 = isa.a(acb.field_o, new String[]{param1}, 90);
                             stackIn_28_0 = stackOut_27_0;
-                            return stackIn_28_0;
+                            decompiledRegionSelector0 = 7;
+                            break L0;
                           }
                         }
                       }
                     } else {
-                      stackOut_16_0 = isa.a(eaa.field_o, new String[1], 120);
+                      stackOut_16_0 = isa.a(eaa.field_o, new String[]{param1}, 120);
                       stackIn_17_0 = stackOut_16_0;
-                      return stackIn_17_0;
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     }
                   }
                 }
               } else {
-                stackOut_5_0 = isa.a(dgb.field_a, new String[1], 104);
+                stackOut_5_0 = isa.a(dgb.field_a, new String[]{param1}, 104);
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -197,23 +212,23 @@ final class heb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_45_0 = (RuntimeException) var3;
+            stackOut_45_0 = (RuntimeException) (var3);
             stackOut_45_1 = new StringBuilder().append("heb.B(").append(param0).append(',');
             stackIn_47_0 = stackOut_45_0;
             stackIn_47_1 = stackOut_45_1;
             stackIn_46_0 = stackOut_45_0;
             stackIn_46_1 = stackOut_45_1;
             if (param1 == null) {
-              stackOut_47_0 = (RuntimeException) (Object) stackIn_47_0;
-              stackOut_47_1 = (StringBuilder) (Object) stackIn_47_1;
+              stackOut_47_0 = (RuntimeException) ((Object) stackIn_47_0);
+              stackOut_47_1 = (StringBuilder) ((Object) stackIn_47_1);
               stackOut_47_2 = "null";
               stackIn_48_0 = stackOut_47_0;
               stackIn_48_1 = stackOut_47_1;
               stackIn_48_2 = stackOut_47_2;
               break L1;
             } else {
-              stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
-              stackOut_46_1 = (StringBuilder) (Object) stackIn_46_1;
+              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
               stackOut_46_2 = "{...}";
               stackIn_48_0 = stackOut_46_0;
               stackIn_48_1 = stackOut_46_1;
@@ -221,9 +236,53 @@ final class heb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_48_0), stackIn_48_2 + ',' + param2 + ')');
         }
-        return (String) (Object) stackIn_44_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_10_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_14_0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_17_0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_21_0;
+                  } else {
+                    if (decompiledRegionSelector0 == 6) {
+                      return stackIn_25_0;
+                    } else {
+                      if (decompiledRegionSelector0 == 7) {
+                        return stackIn_28_0;
+                      } else {
+                        if (decompiledRegionSelector0 == 8) {
+                          return stackIn_32_0;
+                        } else {
+                          if (decompiledRegionSelector0 == 9) {
+                            return stackIn_36_0;
+                          } else {
+                            if (decompiledRegionSelector0 == 10) {
+                              return stackIn_40_0;
+                            } else {
+                              return (String) ((Object) stackIn_44_0);
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     heb(String param0, Class[] param1, String param2) {

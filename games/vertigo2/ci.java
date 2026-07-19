@@ -15,10 +15,6 @@ final class ci {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ci.A(";
         field_a = 64;
         field_c = "Show chat (1 unread message)";

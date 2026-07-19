@@ -9,243 +9,282 @@ final class ej {
     static int field_c;
 
     public static void a(byte param0) {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            L1: {
-              if (param0 == -43) {
-                break L1;
-              } else {
-                field_d = -126;
-                break L1;
-              }
-            }
-            field_a = null;
-            field_e = null;
-            field_b = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1, "ej.B(" + param0 + ')');
+        if (param0 != -43) {
+          field_d = -126;
+          field_a = null;
+          field_e = null;
+          field_b = null;
+          return;
+        } else {
+          field_a = null;
+          field_e = null;
+          field_b = null;
+          return;
         }
     }
 
     final synchronized static byte[] a(int param0, int param1) {
-        RuntimeException var2 = null;
-        byte[] var2_array = null;
-        int var2_int = 0;
+        int fieldTemp$25 = 0;
+        byte[][] fieldTemp$26 = null;
+        int fieldTemp$27 = 0;
+        int fieldTemp$28 = 0;
+        int fieldTemp$29 = 0;
+        byte[][] fieldTemp$30 = null;
+        int fieldTemp$31 = 0;
+        byte[] var2_ref_byte__ = null;
+        int var2 = 0;
         byte[] var3 = null;
-        byte[] stackIn_5_0 = null;
-        byte[] stackIn_11_0 = null;
-        byte[] stackIn_17_0 = null;
-        byte[] stackIn_33_0 = null;
-        byte[] stackIn_36_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_4_0 = null;
-        byte[] stackOut_10_0 = null;
-        byte[] stackOut_16_0 = null;
-        byte[] stackOut_32_0 = null;
-        byte[] stackOut_35_0 = null;
-        try {
-          L0: {
-            L1: {
-              if (param0 != 100) {
-                break L1;
-              } else {
-                if (0 >= p.field_U) {
-                  break L1;
-                } else {
-                  int fieldTemp$4 = p.field_U - 1;
-                  p.field_U = p.field_U - 1;
-                  var2_array = ec.field_f[fieldTemp$4];
-                  ec.field_f[p.field_U] = null;
-                  stackOut_4_0 = (byte[]) var2_array;
-                  stackIn_5_0 = stackOut_4_0;
-                  return stackIn_5_0;
-                }
-              }
-            }
-            L2: {
+        if ((param0 ^ -1) == -101) {
+          if (0 >= p.field_U) {
+            L0: {
               if (param0 != 5000) {
-                break L2;
+                break L0;
               } else {
                 if (dj.field_d <= 0) {
-                  break L2;
+                  break L0;
                 } else {
-                  int fieldTemp$5 = dj.field_d - 1;
+                  fieldTemp$25 = dj.field_d - 1;
                   dj.field_d = dj.field_d - 1;
-                  var2_array = wl.field_g[fieldTemp$5];
+                  var2_ref_byte__ = wl.field_g[fieldTemp$25];
                   wl.field_g[dj.field_d] = null;
-                  stackOut_10_0 = (byte[]) var2_array;
-                  stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0;
+                  return var2_ref_byte__;
                 }
               }
             }
-            L3: {
-              if (param0 != 30000) {
-                break L3;
+            L1: {
+              if ((param0 ^ -1) != -30001) {
+                break L1;
               } else {
-                if (id.field_a <= 0) {
-                  break L3;
+                if ((id.field_a ^ -1) >= -1) {
+                  break L1;
                 } else {
-                  byte[][] fieldTemp$6 = qh.field_a;
-                  int fieldTemp$7 = id.field_a - 1;
+                  fieldTemp$26 = qh.field_a;
+                  fieldTemp$27 = id.field_a - 1;
                   id.field_a = id.field_a - 1;
-                  var2_array = fieldTemp$6[fieldTemp$7];
+                  var2_ref_byte__ = fieldTemp$26[fieldTemp$27];
                   qh.field_a[id.field_a] = null;
-                  stackOut_16_0 = (byte[]) var2_array;
-                  stackIn_17_0 = stackOut_16_0;
-                  return stackIn_17_0;
+                  return var2_ref_byte__;
                 }
               }
             }
-            L4: {
-              if (param1 == 1) {
-                break L4;
-              } else {
-                field_e = null;
-                break L4;
-              }
-            }
-            L5: {
+            if (param1 == 1) {
               if (th.field_a != null) {
-                var2_int = 0;
-                L6: while (true) {
-                  if (~mj.field_a.length >= ~var2_int) {
-                    break L5;
+                var2 = 0;
+                L2: while (true) {
+                  if (mj.field_a.length <= var2) {
+                    return new byte[param0];
                   } else {
-                    L7: {
-                      if (param0 != mj.field_a[var2_int]) {
-                        break L7;
+                    if (param0 == mj.field_a[var2]) {
+                      if (0 < pe.field_C[var2]) {
+                        pe.field_C[var2] = pe.field_C[var2] - 1;
+                        var3 = th.field_a[var2][pe.field_C[var2] - 1];
+                        th.field_a[var2][pe.field_C[var2]] = null;
+                        return var3;
                       } else {
-                        if (0 >= pe.field_C[var2_int]) {
-                          break L7;
-                        } else {
-                          pe.field_C[var2_int] = pe.field_C[var2_int] - 1;
-                          var3 = th.field_a[var2_int][pe.field_C[var2_int] - 1];
-                          th.field_a[var2_int][pe.field_C[var2_int]] = null;
-                          stackOut_32_0 = (byte[]) var3;
-                          stackIn_33_0 = stackOut_32_0;
-                          return stackIn_33_0;
-                        }
+                        var2++;
+                        continue L2;
                       }
+                    } else {
+                      var2++;
+                      continue L2;
                     }
-                    var2_int++;
-                    continue L6;
                   }
                 }
               } else {
-                break L5;
+                return new byte[param0];
+              }
+            } else {
+              field_e = (String) null;
+              if (th.field_a != null) {
+                var2 = 0;
+                L3: while (true) {
+                  if (mj.field_a.length <= var2) {
+                    return new byte[param0];
+                  } else {
+                    if (param0 == mj.field_a[var2]) {
+                      if (0 < pe.field_C[var2]) {
+                        pe.field_C[var2] = pe.field_C[var2] - 1;
+                        var3 = th.field_a[var2][pe.field_C[var2] - 1];
+                        th.field_a[var2][pe.field_C[var2]] = null;
+                        return var3;
+                      } else {
+                        var2++;
+                        continue L3;
+                      }
+                    } else {
+                      var2++;
+                      continue L3;
+                    }
+                  }
+                }
+              } else {
+                return new byte[param0];
               }
             }
-            stackOut_35_0 = new byte[param0];
-            stackIn_36_0 = stackOut_35_0;
-            break L0;
+          } else {
+            fieldTemp$28 = p.field_U - 1;
+            p.field_U = p.field_U - 1;
+            var2_ref_byte__ = ec.field_f[fieldTemp$28];
+            ec.field_f[p.field_U] = null;
+            return var2_ref_byte__;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var2, "ej.C(" + param0 + ',' + param1 + ')');
+        } else {
+          L4: {
+            if (param0 != 5000) {
+              break L4;
+            } else {
+              if (dj.field_d <= 0) {
+                break L4;
+              } else {
+                fieldTemp$29 = dj.field_d - 1;
+                dj.field_d = dj.field_d - 1;
+                var2_ref_byte__ = wl.field_g[fieldTemp$29];
+                wl.field_g[dj.field_d] = null;
+                return var2_ref_byte__;
+              }
+            }
+          }
+          L5: {
+            if ((param0 ^ -1) != -30001) {
+              break L5;
+            } else {
+              if ((id.field_a ^ -1) >= -1) {
+                break L5;
+              } else {
+                fieldTemp$30 = qh.field_a;
+                fieldTemp$31 = id.field_a - 1;
+                id.field_a = id.field_a - 1;
+                var2_ref_byte__ = fieldTemp$30[fieldTemp$31];
+                qh.field_a[id.field_a] = null;
+                return var2_ref_byte__;
+              }
+            }
+          }
+          if (param1 == 1) {
+            if (th.field_a != null) {
+              var2 = 0;
+              L6: while (true) {
+                if (mj.field_a.length > var2) {
+                  if (param0 == mj.field_a[var2]) {
+                    if (0 < pe.field_C[var2]) {
+                      pe.field_C[var2] = pe.field_C[var2] - 1;
+                      var3 = th.field_a[var2][pe.field_C[var2] - 1];
+                      th.field_a[var2][pe.field_C[var2]] = null;
+                      return var3;
+                    } else {
+                      var2++;
+                      continue L6;
+                    }
+                  } else {
+                    var2++;
+                    continue L6;
+                  }
+                } else {
+                  return new byte[param0];
+                }
+              }
+            } else {
+              return new byte[param0];
+            }
+          } else {
+            field_e = (String) null;
+            if (th.field_a != null) {
+              var2 = 0;
+              L7: while (true) {
+                if (mj.field_a.length > var2) {
+                  if (param0 == mj.field_a[var2]) {
+                    if (0 < pe.field_C[var2]) {
+                      pe.field_C[var2] = pe.field_C[var2] - 1;
+                      var3 = th.field_a[var2][pe.field_C[var2] - 1];
+                      th.field_a[var2][pe.field_C[var2]] = null;
+                      return var3;
+                    } else {
+                      var2++;
+                      continue L7;
+                    }
+                  } else {
+                    var2++;
+                    continue L7;
+                  }
+                } else {
+                  return new byte[param0];
+                }
+              }
+            } else {
+              return new byte[param0];
+            }
+          }
         }
-        return stackIn_36_0;
     }
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_4_1 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_11_1 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_19_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_15_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_3_1 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_10_1 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_16_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_12_0 = 0;
         var4 = wizardrun.field_H;
         try {
           L0: {
             var3_int = 1;
             L1: while (true) {
-              L2: {
-                L3: {
-                  if (param2 <= 1) {
-                    break L3;
-                  } else {
-                    stackOut_3_0 = -1;
-                    stackOut_3_1 = ~(param2 & 1);
-                    stackIn_11_0 = stackOut_3_0;
-                    stackIn_11_1 = stackOut_3_1;
-                    stackIn_4_0 = stackOut_3_0;
-                    stackIn_4_1 = stackOut_3_1;
-                    if (var4 != 0) {
-                      break L2;
-                    } else {
-                      L4: {
-                        if (stackIn_4_0 != stackIn_4_1) {
-                          var3_int = var3_int * param0;
-                          break L4;
-                        } else {
-                          break L4;
-                        }
-                      }
-                      param0 = param0 * param0;
-                      param2 = param2 >> 1;
-                      if (var4 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                }
-                stackOut_10_0 = ~param2;
-                stackOut_10_1 = -2;
-                stackIn_11_0 = stackOut_10_0;
-                stackIn_11_1 = stackOut_10_1;
-                break L2;
-              }
-              if (stackIn_11_0 == stackIn_11_1) {
-                stackOut_13_0 = param0 * var3_int;
-                stackIn_14_0 = stackOut_13_0;
-                return stackIn_14_0;
-              } else {
-                if (param1 == -1) {
-                  stackOut_18_0 = var3_int;
-                  stackIn_19_0 = stackOut_18_0;
+              if (param2 <= 1) {
+                if ((param2 ^ -1) == -2) {
+                  stackOut_9_0 = param0 * var3_int;
+                  stackIn_10_0 = stackOut_9_0;
+                  decompiledRegionSelector0 = 0;
                   break L0;
                 } else {
-                  stackOut_16_0 = -47;
-                  stackIn_17_0 = stackOut_16_0;
-                  return stackIn_17_0;
+                  if (param1 == -1) {
+                    stackOut_14_0 = var3_int;
+                    stackIn_15_0 = stackOut_14_0;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
+                  } else {
+                    stackOut_12_0 = -47;
+                    stackIn_13_0 = stackOut_12_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
+                  }
                 }
+              } else {
+                L2: {
+                  if (-1 != (param2 & 1 ^ -1)) {
+                    var3_int = var3_int * param0;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                param0 = param0 * param0;
+                param2 = param2 >> 1;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var3, "ej.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw bd.a((Throwable) ((Object) var3), "ej.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_19_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_10_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_13_0;
+          } else {
+            return stackIn_15_0;
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new ga();
         field_e = "Loading music";
     }

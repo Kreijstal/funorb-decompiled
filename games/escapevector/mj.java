@@ -11,6 +11,12 @@ final class mj {
 
     final static int a(int param0, int param1, String param2, String param3, boolean param4, boolean param5) {
         try {
+            int discarded$6 = 0;
+            int discarded$7 = 0;
+            int discarded$8 = 0;
+            int discarded$9 = 0;
+            Object discarded$10 = null;
+            Object discarded$11 = null;
             RuntimeException var6 = null;
             int var6_int = 0;
             String var6_ref = null;
@@ -43,6 +49,7 @@ final class mj {
             RuntimeException stackIn_111_0 = null;
             StringBuilder stackIn_111_1 = null;
             String stackIn_111_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             int stackOut_4_0 = 0;
             int stackOut_35_0 = 0;
@@ -82,7 +89,8 @@ final class mj {
                     } else {
                       stackOut_4_0 = -1;
                       stackIn_5_0 = stackOut_4_0;
-                      return stackIn_5_0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   } else {
                     break L1;
@@ -167,7 +175,8 @@ final class mj {
                                 e.field_c = false;
                                 stackOut_35_0 = var6_int;
                                 stackIn_36_0 = stackOut_35_0;
-                                return stackIn_36_0;
+                                decompiledRegionSelector0 = 2;
+                                break L0;
                               }
                             } else {
                               break L7;
@@ -190,7 +199,7 @@ final class mj {
                         L9: {
                           mg.field_d = om.field_g.i(-800509813);
                           mg.field_b = om.field_g.e(0);
-                          int discarded$6 = om.field_g.e(0);
+                          discarded$6 = om.field_g.e(0);
                           s.field_x = om.field_g.f(1952);
                           var6_ref = om.field_g.d(-15208);
                           var7 = om.field_g.e(0);
@@ -218,7 +227,7 @@ final class mj {
                             }
                             L12: {
                               dl.field_a = stackIn_48_0 != 0;
-                              if ((4 & var7) == 0) {
+                              if (-1 == (4 & var7 ^ -1)) {
                                 stackOut_50_0 = 0;
                                 stackIn_51_0 = stackOut_50_0;
                                 break L12;
@@ -238,9 +247,9 @@ final class mj {
                         }
                         L13: {
                           if (jc.field_b) {
-                            int discarded$7 = om.field_g.e(param0 ^ 1);
-                            int discarded$8 = om.field_g.e(0);
-                            int discarded$9 = om.field_g.g(param0 + -5054);
+                            discarded$7 = om.field_g.e(param0 ^ 1);
+                            discarded$8 = om.field_g.e(0);
+                            discarded$9 = om.field_g.g(param0 + -5054);
                             kb.field_e = om.field_g.f(1952);
                             lf.field_K = new byte[kb.field_e];
                             var8 = 0;
@@ -259,7 +268,7 @@ final class mj {
                         }
                         L15: {
                           ck.field_r = om.field_g.c(false);
-                          var11 = (CharSequence) (Object) ck.field_r;
+                          var11 = (CharSequence) ((Object) ck.field_r);
                           cc.field_k = sf.a(-83, var11);
                           am.field_g = om.field_g.e(param0 + -1);
                           al.field_d = ck.field_t;
@@ -294,7 +303,7 @@ final class mj {
                               } else {
                                 try {
                                   L19: {
-                                    Object discarded$10 = sd.a(oc.d((byte) -107), "unzap", param0 + -29156);
+                                    discarded$10 = sd.a(oc.d((byte) -107), "unzap", param0 + -29156);
                                     break L19;
                                   }
                                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -310,7 +319,7 @@ final class mj {
                           }
                           try {
                             L21: {
-                              Object discarded$11 = sd.a((byte) 116, oc.d((byte) -128), new Object[1], "zap");
+                              discarded$11 = sd.a((byte) 116, oc.d((byte) -128), new Object[]{jb.a(mg.field_d, (byte) 29)}, "zap");
                               break L21;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -323,7 +332,7 @@ final class mj {
                           break L17;
                         }
                         L23: {
-                          if (s.field_x > 0) {
+                          if ((s.field_x ^ -1) < -1) {
                             ej.field_d = true;
                             break L23;
                           } else {
@@ -333,11 +342,12 @@ final class mj {
                         om.field_c.a(rh.field_O, (byte) 107);
                         var8 = 0;
                         L24: while (true) {
-                          if (var8 >= 4) {
+                          if (-5 >= (var8 ^ -1)) {
                             om.field_g.a(rh.field_O, (byte) 85);
                             stackOut_80_0 = cd.field_v;
                             stackIn_81_0 = stackOut_80_0;
-                            return stackIn_81_0;
+                            decompiledRegionSelector0 = 3;
+                            break L0;
                           } else {
                             rh.field_O[var8] = rh.field_O[var8] + 50;
                             var8++;
@@ -358,7 +368,7 @@ final class mj {
                       if (ll.d(param0 + 10549)) {
                         L26: {
                           nm.a(16);
-                          if (cd.field_v != 7) {
+                          if ((cd.field_v ^ -1) != -8) {
                             break L26;
                           } else {
                             if (e.field_c) {
@@ -367,12 +377,13 @@ final class mj {
                               e.field_c = true;
                               stackOut_87_0 = -1;
                               stackIn_88_0 = stackOut_87_0;
-                              return stackIn_88_0;
+                              decompiledRegionSelector0 = 4;
+                              break L0;
                             }
                           }
                         }
                         L27: {
-                          if (cd.field_v == 7) {
+                          if ((cd.field_v ^ -1) == -8) {
                             cd.field_v = 3;
                             break L27;
                           } else {
@@ -383,7 +394,8 @@ final class mj {
                         e.field_c = false;
                         stackOut_92_0 = cd.field_v;
                         stackIn_93_0 = stackOut_92_0;
-                        return stackIn_93_0;
+                        decompiledRegionSelector0 = 5;
+                        break L0;
                       } else {
                         break L25;
                       }
@@ -404,7 +416,8 @@ final class mj {
                         e.field_c = false;
                         stackOut_101_0 = 3;
                         stackIn_102_0 = stackOut_101_0;
-                        return stackIn_102_0;
+                        decompiledRegionSelector0 = 6;
+                        break L0;
                       } else {
                         var6_int = ej.field_b;
                         ej.field_b = sj.field_i;
@@ -418,34 +431,36 @@ final class mj {
                   }
                   stackOut_103_0 = -1;
                   stackIn_104_0 = stackOut_103_0;
+                  decompiledRegionSelector0 = 7;
                   break L0;
                 } else {
                   stackOut_7_0 = 2;
                   stackIn_8_0 = stackOut_7_0;
-                  return stackIn_8_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               L30: {
                 var6 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_105_0 = (RuntimeException) var6;
+                stackOut_105_0 = (RuntimeException) (var6);
                 stackOut_105_1 = new StringBuilder().append("mj.B(").append(param0).append(',').append(param1).append(',');
                 stackIn_107_0 = stackOut_105_0;
                 stackIn_107_1 = stackOut_105_1;
                 stackIn_106_0 = stackOut_105_0;
                 stackIn_106_1 = stackOut_105_1;
                 if (param2 == null) {
-                  stackOut_107_0 = (RuntimeException) (Object) stackIn_107_0;
-                  stackOut_107_1 = (StringBuilder) (Object) stackIn_107_1;
+                  stackOut_107_0 = (RuntimeException) ((Object) stackIn_107_0);
+                  stackOut_107_1 = (StringBuilder) ((Object) stackIn_107_1);
                   stackOut_107_2 = "null";
                   stackIn_108_0 = stackOut_107_0;
                   stackIn_108_1 = stackOut_107_1;
                   stackIn_108_2 = stackOut_107_2;
                   break L30;
                 } else {
-                  stackOut_106_0 = (RuntimeException) (Object) stackIn_106_0;
-                  stackOut_106_1 = (StringBuilder) (Object) stackIn_106_1;
+                  stackOut_106_0 = (RuntimeException) ((Object) stackIn_106_0);
+                  stackOut_106_1 = (StringBuilder) ((Object) stackIn_106_1);
                   stackOut_106_2 = "{...}";
                   stackIn_108_0 = stackOut_106_0;
                   stackIn_108_1 = stackOut_106_1;
@@ -454,23 +469,23 @@ final class mj {
                 }
               }
               L31: {
-                stackOut_108_0 = (RuntimeException) (Object) stackIn_108_0;
+                stackOut_108_0 = (RuntimeException) ((Object) stackIn_108_0);
                 stackOut_108_1 = ((StringBuilder) (Object) stackIn_108_1).append(stackIn_108_2).append(',');
                 stackIn_110_0 = stackOut_108_0;
                 stackIn_110_1 = stackOut_108_1;
                 stackIn_109_0 = stackOut_108_0;
                 stackIn_109_1 = stackOut_108_1;
                 if (param3 == null) {
-                  stackOut_110_0 = (RuntimeException) (Object) stackIn_110_0;
-                  stackOut_110_1 = (StringBuilder) (Object) stackIn_110_1;
+                  stackOut_110_0 = (RuntimeException) ((Object) stackIn_110_0);
+                  stackOut_110_1 = (StringBuilder) ((Object) stackIn_110_1);
                   stackOut_110_2 = "null";
                   stackIn_111_0 = stackOut_110_0;
                   stackIn_111_1 = stackOut_110_1;
                   stackIn_111_2 = stackOut_110_2;
                   break L31;
                 } else {
-                  stackOut_109_0 = (RuntimeException) (Object) stackIn_109_0;
-                  stackOut_109_1 = (StringBuilder) (Object) stackIn_109_1;
+                  stackOut_109_0 = (RuntimeException) ((Object) stackIn_109_0);
+                  stackOut_109_1 = (StringBuilder) ((Object) stackIn_109_1);
                   stackOut_109_2 = "{...}";
                   stackIn_111_0 = stackOut_109_0;
                   stackIn_111_1 = stackOut_109_1;
@@ -478,9 +493,37 @@ final class mj {
                   break L31;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_111_0, stackIn_111_2 + ',' + param4 + ',' + param5 + ')');
+              throw t.a((Throwable) ((Object) stackIn_111_0), stackIn_111_2 + ',' + param4 + ',' + param5 + ')');
             }
-            return stackIn_104_0;
+            if (decompiledRegionSelector0 == 0) {
+              return stackIn_5_0;
+            } else {
+              if (decompiledRegionSelector0 == 1) {
+                return stackIn_8_0;
+              } else {
+                if (decompiledRegionSelector0 == 2) {
+                  return stackIn_36_0;
+                } else {
+                  if (decompiledRegionSelector0 == 3) {
+                    return stackIn_81_0;
+                  } else {
+                    if (decompiledRegionSelector0 == 4) {
+                      return stackIn_88_0;
+                    } else {
+                      if (decompiledRegionSelector0 == 5) {
+                        return stackIn_93_0;
+                      } else {
+                        if (decompiledRegionSelector0 == 6) {
+                          return stackIn_102_0;
+                        } else {
+                          return stackIn_104_0;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -492,30 +535,31 @@ final class mj {
         field_a = null;
         field_b = null;
         field_f = null;
+        if (!param0) {
+            field_e = (String[]) null;
+        }
         field_e = null;
         field_c = null;
     }
 
     final static mf a(int param0, int param1) {
+        boolean discarded$0 = false;
         if (param1 >= -122) {
-            boolean discarded$0 = mj.a((byte) 58);
+            discarded$0 = mj.a((byte) 58);
         }
         return ji.a(false, param0, false, 1, true, (byte) 114);
     }
 
     final static boolean a(byte param0) {
+        int discarded$0 = 0;
         if (param0 < 54) {
-            Object var2 = null;
-            int discarded$0 = mj.a(100, -96, (String) null, (String) null, false, true);
+            String var2 = (String) null;
+            discarded$0 = mj.a(100, -96, (String) null, (String) null, false, true);
         }
         return tb.field_D;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new ed(320, 24);
         field_a = "Unfortunately you are not eligible to create an account.";
         field_c = " - thrust";

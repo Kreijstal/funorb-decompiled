@@ -11,12 +11,12 @@ final class kc extends mg {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((kc) this).field_r;
-          param1 = param1 + ((kc) this).field_x;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_x;
           var4 = param0 + param1 * df.field_e;
           var5 = 0;
-          var6 = ((kc) this).field_p;
-          var7 = ((kc) this).field_w;
+          var6 = this.field_p;
+          var7 = this.field_w;
           var8 = df.field_e - var7;
           var9 = 0;
           if (param1 >= df.field_g) {
@@ -68,7 +68,7 @@ final class kc extends mg {
             break L4;
           } else {
             if (var6 > 0) {
-              kc.b(df.field_d, ((kc) this).field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+              kc.b(df.field_d, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -78,6 +78,8 @@ final class kc extends mg {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -99,7 +101,7 @@ final class kc extends mg {
                 param6++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var14 = param2 >>> 24;
@@ -122,7 +124,7 @@ final class kc extends mg {
                   }
                   var16 = 256 - var14;
                   var17 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
                   param5++;
@@ -135,6 +137,8 @@ final class kc extends mg {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -168,7 +172,7 @@ final class kc extends mg {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
                 param2 = param1[incrementValue$2];
                 var17 = param2 >>> 24;
@@ -203,7 +207,7 @@ final class kc extends mg {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
-                  int incrementValue$3 = param4;
+                  incrementValue$3 = param4;
                   param4++;
                   param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
@@ -224,12 +228,12 @@ final class kc extends mg {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((kc) this).field_r;
-          param1 = param1 + ((kc) this).field_x;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_x;
           var4 = param0 + param1 * df.field_e;
           var5 = 0;
-          var6 = ((kc) this).field_p;
-          var7 = ((kc) this).field_w;
+          var6 = this.field_p;
+          var7 = this.field_w;
           var8 = df.field_e - var7;
           var9 = 0;
           if (param1 >= df.field_g) {
@@ -281,7 +285,7 @@ final class kc extends mg {
             break L4;
           } else {
             if (var6 > 0) {
-              kc.d(df.field_d, ((kc) this).field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+              kc.d(df.field_d, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -303,12 +307,12 @@ final class kc extends mg {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((kc) this).field_r;
-          param1 = param1 + ((kc) this).field_x;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_x;
           var3 = param0 + param1 * df.field_e;
           var4 = 0;
-          var5 = ((kc) this).field_p;
-          var6 = ((kc) this).field_w;
+          var5 = this.field_p;
+          var6 = this.field_w;
           var7 = df.field_e - var6;
           var8 = 0;
           if (param1 >= df.field_g) {
@@ -360,7 +364,7 @@ final class kc extends mg {
             break L4;
           } else {
             if (var5 > 0) {
-              kc.c(df.field_d, ((kc) this).field_B, 0, var4, var3, var6, var5, var7, var8);
+              kc.c(df.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -382,12 +386,12 @@ final class kc extends mg {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((kc) this).field_r;
-          param1 = param1 + ((kc) this).field_x;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_x;
           var4 = param0 + param1 * df.field_e;
           var5 = 0;
-          var6 = ((kc) this).field_p;
-          var7 = ((kc) this).field_w;
+          var6 = this.field_p;
+          var7 = this.field_w;
           var8 = df.field_e - var7;
           var9 = 0;
           if (param1 >= df.field_g) {
@@ -439,7 +443,7 @@ final class kc extends mg {
             break L4;
           } else {
             if (var6 > 0) {
-              kc.b(0, 0, 0, df.field_d, ((kc) this).field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+              kc.b(0, 0, 0, df.field_d, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -449,6 +453,8 @@ final class kc extends mg {
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var14 = 0;
         param8 = -param10;
         L0: while (true) {
@@ -463,7 +469,7 @@ final class kc extends mg {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -478,7 +484,7 @@ final class kc extends mg {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -499,12 +505,12 @@ final class kc extends mg {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((kc) this).field_r;
-          param1 = param1 + ((kc) this).field_x;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_x;
           var4 = param0 + param1 * df.field_e;
           var5 = 0;
-          var6 = ((kc) this).field_p;
-          var7 = ((kc) this).field_w;
+          var6 = this.field_p;
+          var7 = this.field_w;
           var8 = df.field_e - var7;
           var9 = 0;
           if (param1 >= df.field_g) {
@@ -556,7 +562,7 @@ final class kc extends mg {
             break L4;
           } else {
             if (var6 > 0) {
-              kc.c(df.field_d, ((kc) this).field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+              kc.c(df.field_d, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -574,12 +580,12 @@ final class kc extends mg {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((kc) this).field_r;
-          param1 = param1 + ((kc) this).field_x;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_x;
           var3 = param0 + param1 * df.field_e;
           var4 = 0;
-          var5 = ((kc) this).field_p;
-          var6 = ((kc) this).field_w;
+          var5 = this.field_p;
+          var6 = this.field_w;
           var7 = df.field_e - var6;
           var8 = 0;
           if (param1 >= df.field_g) {
@@ -631,7 +637,7 @@ final class kc extends mg {
             break L4;
           } else {
             if (var5 > 0) {
-              kc.c(df.field_d, ((kc) this).field_B, 0, var4, var3, var6, var5, var7, var8);
+              kc.c(df.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -641,6 +647,8 @@ final class kc extends mg {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -661,7 +669,7 @@ final class kc extends mg {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -672,7 +680,7 @@ final class kc extends mg {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
@@ -689,17 +697,19 @@ final class kc extends mg {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int incrementValue$0 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = -param5; var11 < 0; var11++) {
                 var12 = (param1[param3] >>> 24) * param9 >> 8;
                 var13 = 256 - var12;
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
                 var14 = param1[incrementValue$0];
                 var15 = param0[param4];
-                int incrementValue$1 = param4;
+                incrementValue$1 = param4;
                 param4++;
                 param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
             }
@@ -756,10 +766,10 @@ final class kc extends mg {
         int stackOut_19_1 = 0;
         int stackOut_19_2 = 0;
         L0: {
-          var3 = ((kc) this).field_w >> 1;
-          var4 = ((kc) this).field_p >> 1;
-          param0 = param0 + ((kc) this).field_r / 2;
-          param1 = param1 + ((kc) this).field_x / 2;
+          var3 = this.field_w >> 1;
+          var4 = this.field_p >> 1;
+          param0 = param0 + this.field_r / 2;
+          param1 = param1 + this.field_x / 2;
           if (param0 >= df.field_i) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -773,7 +783,7 @@ final class kc extends mg {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= df.field_k) {
-            stackOut_5_0 = ((kc) this).field_w - 2;
+            stackOut_5_0 = this.field_w - 2;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -797,7 +807,7 @@ final class kc extends mg {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= df.field_h) {
-            stackOut_11_0 = ((kc) this).field_p - 2;
+            stackOut_11_0 = this.field_p - 2;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -812,7 +822,7 @@ final class kc extends mg {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((kc) this).field_w + var5;
+            var10 = var9 * this.field_w + var5;
             var11 = (param1 + (var9 >> 1)) * df.field_e + (param0 + (var5 >> 1));
             var12 = var5;
             L5: while (true) {
@@ -848,14 +858,14 @@ final class kc extends mg {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = ((kc) this).field_B;
+                      stackOut_18_0 = this.field_B;
                       stackOut_18_1 = var10 + (var19 & 1);
                       stackIn_20_0 = stackOut_18_0;
                       stackIn_20_1 = stackOut_18_1;
                       stackIn_19_0 = stackOut_18_0;
                       stackIn_19_1 = stackOut_18_1;
                       if ((var19 & 2) != 0) {
-                        stackOut_20_0 = (int[]) (Object) stackIn_20_0;
+                        stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
                         stackOut_20_1 = stackIn_20_1;
                         stackOut_20_2 = 0;
                         stackIn_21_0 = stackOut_20_0;
@@ -863,9 +873,9 @@ final class kc extends mg {
                         stackIn_21_2 = stackOut_20_2;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) (Object) stackIn_19_0;
+                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
                         stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = ((kc) this).field_w;
+                        stackOut_19_2 = this.field_w;
                         stackIn_21_0 = stackOut_19_0;
                         stackIn_21_1 = stackOut_19_1;
                         stackIn_21_2 = stackOut_19_2;

@@ -32,9 +32,9 @@ final class hp extends br {
         field_l = null;
         field_o = null;
         if (param0 != 120) {
-            field_i = null;
+            field_i = (String) null;
         }
-        field_j = null;
+        field_j = (int[][]) null;
         field_h = null;
     }
 
@@ -52,6 +52,7 @@ final class hp extends br {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_10_0 = 0;
@@ -69,9 +70,10 @@ final class hp extends br {
               throw new IllegalArgumentException();
             } else {
               if (l.a(param2, -62)) {
-                stackOut_5_0 = (int)((long)param2 * (4294967295L & (long)param1.nextInt()) >> 32);
+                stackOut_5_0 = (int)((long)param2 * (4294967295L & (long)param1.nextInt()) >> -33536928);
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
+                decompiledRegionSelector0 = 0;
+                break L0;
               } else {
                 var4 = 32 / ((param0 - -31) / 34);
                 var3_int = -2147483648 - (int)(4294967296L % (long)param2);
@@ -80,6 +82,7 @@ final class hp extends br {
                   if (var5 < var3_int) {
                     stackOut_10_0 = gd.a(var5, (byte) -87, param2);
                     stackIn_11_0 = stackOut_10_0;
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     continue L1;
@@ -92,23 +95,23 @@ final class hp extends br {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var3;
+            stackOut_12_0 = (RuntimeException) (var3);
             stackOut_12_1 = new StringBuilder().append("hp.A(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -116,9 +119,13 @@ final class hp extends br {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ')');
         }
-        return stackIn_11_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0;
+        } else {
+          return stackIn_11_0;
+        }
     }
 
     final static boolean a(String param0, int param1) {
@@ -169,23 +176,23 @@ final class hp extends br {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_0 = (RuntimeException) (var2);
             stackOut_6_1 = new StringBuilder().append("hp.C(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -193,7 +200,7 @@ final class hp extends br {
               break L3;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -203,10 +210,6 @@ final class hp extends br {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var2 = 0;
         int var3 = 0;
         field_s = new int[8192];
@@ -222,14 +225,14 @@ final class hp extends br {
         var2 = var4;
         while (field_j[0].length > var4) {
             var3 = 16 * var4;
-            field_j[0][var4] = cr.b(tq.b(var3, 255), tq.b(-1174404865, var3) << 8);
-            field_j[1][var4] = cr.b(var3 << 16, var3 << 8);
-            field_j[2][var4] = cr.b(tq.b(255, var3 / 2), tq.b(var3, -234880769) << 8);
+            field_j[0][var4] = cr.b(tq.b(var3, 255), tq.b(-1174404865, var3) << -2032090264);
+            field_j[1][var4] = cr.b(var3 << 439995216, var3 << -1097930392);
+            field_j[2][var4] = cr.b(tq.b(255, var3 / 2), tq.b(var3, -234880769) << 328002696);
             field_j[3][var4] = var3 * 65793;
-            field_j[4][var4] = cr.b(tq.b(1744830974, var3) << 7, var3 << 16);
-            field_j[5][var4] = var3 << 16;
-            field_j[6][var4] = var3 << 16;
-            field_j[7][var4] = cr.b(cr.b(tq.b(var3, 1020) << 6, tq.b(var3 << 14, 16718971)), var3);
+            field_j[4][var4] = cr.b(tq.b(1744830974, var3) << 472535687, var3 << -796533744);
+            field_j[5][var4] = var3 << 102725008;
+            field_j[6][var4] = var3 << -159380176;
+            field_j[7][var4] = cr.b(cr.b(tq.b(var3, 1020) << -503876826, tq.b(var3 << -1776550898, 16718971)), var3);
             var4++;
         }
         field_i = "You can ask to join this game";

@@ -19,21 +19,21 @@ final class ia extends pv {
     }
 
     final boolean b(boolean param0) {
-        int fieldTemp$2 = ((ia) this).field_g + 1;
-        ((ia) this).field_g = ((ia) this).field_g + 1;
+        int fieldTemp$2 = this.field_g + 1;
+        this.field_g = this.field_g + 1;
         if (fieldTemp$2 > this.d(300)) {
           this.b(-1);
           return true;
         } else {
-          if (1 != ((ia) this).field_g) {
+          if (1 != this.field_g) {
             if (!param0) {
               return true;
             } else {
               return false;
             }
           } else {
-            ((ia) this).field_f.field_v.a((byte) 77, ((ia) this).field_f.field_g.field_o.field_b, 0);
-            fia.c(3, ((ia) this).field_f.field_g.field_o.field_e);
+            this.field_f.field_v.a((byte) 77, this.field_f.field_g.field_o.field_b, 0);
+            fia.c(3, this.field_f.field_g.field_o.field_e);
             if (!param0) {
               return true;
             } else {
@@ -55,26 +55,26 @@ final class ia extends pv {
     }
 
     private final int d(int param0) {
+        if (param0 != 300) {
+            field_k = (Random) null;
+            return 300;
+        }
         return 300;
     }
 
     private final void b(int param0) {
-        ((ia) this).field_f.field_y = -1;
+        this.field_f.field_y = param0;
     }
 
     ia(jfa param0) {
         try {
-            ((ia) this).field_f = param0;
+            this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ia.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new String[]{"Meaty", "Dairy", "Sugary", "Bready", "Spooky", "Bouncy", "Fizzy", "Fishy", "Spicy", "Savoury"};
         field_k = new Random();
     }

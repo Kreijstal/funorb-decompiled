@@ -5,6 +5,9 @@ final class uc {
     static String field_a;
 
     public static void a(int param0) {
+        if (param0 != 0) {
+            field_a = (String) null;
+        }
         field_a = null;
     }
 
@@ -18,6 +21,7 @@ final class uc {
         boolean[] var5 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_4_0 = 0;
@@ -29,9 +33,10 @@ final class uc {
             var2 = 0;
             L1: while (true) {
               if (var2 >= var5.length) {
-                var1_int = -15;
+                var1_int = 15 / ((param0 - -54) / 33);
                 stackOut_7_0 = 0;
                 stackIn_8_0 = stackOut_7_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 var3 = var5[var2] ? 1 : 0;
@@ -41,7 +46,8 @@ final class uc {
                 } else {
                   stackOut_4_0 = 1;
                   stackIn_5_0 = stackOut_4_0;
-                  return stackIn_5_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             }
@@ -49,16 +55,16 @@ final class uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1_ref, "uc.B(" + -116 + ')');
+          throw rta.a((Throwable) ((Object) var1_ref), "uc.B(" + param0 + ')');
         }
-        return stackIn_8_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0 != 0;
+        } else {
+          return stackIn_8_0 != 0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Name is available";
     }
 }

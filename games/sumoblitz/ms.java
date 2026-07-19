@@ -2,8 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.io.*;
-import java.net.URL;
-import java.lang.String;
 
 class ms {
     static String field_c;
@@ -24,20 +22,23 @@ class ms {
         field_j = null;
         field_f = null;
         field_e = null;
+        if (param0 < 71) {
+            field_j = (String[]) null;
+        }
     }
 
     final void b(boolean param0) {
-        if (null != ((ms) this).field_g) {
-          ((ms) this).field_g.field_b = ((ms) this).field_b;
-          ((ms) this).field_b.field_g = ((ms) this).field_g;
+        if (null != this.field_g) {
+          this.field_g.field_b = this.field_b;
+          this.field_b.field_g = this.field_g;
           if (param0) {
-            ((ms) this).b(false);
-            ((ms) this).field_g = null;
-            ((ms) this).field_b = null;
+            this.b(false);
+            this.field_g = null;
+            this.field_b = null;
             return;
           } else {
-            ((ms) this).field_g = null;
-            ((ms) this).field_b = null;
+            this.field_g = null;
+            this.field_b = null;
             return;
           }
         } else {
@@ -47,6 +48,7 @@ class ms {
 
     final static void a(String param0, Throwable param1, int param2) {
         try {
+            int discarded$1 = 0;
             Exception var3 = null;
             String var3_ref = null;
             jr var4 = null;
@@ -75,6 +77,7 @@ class ms {
             java.net.URL stackIn_15_4 = null;
             StringBuilder stackIn_15_5 = null;
             String stackIn_15_6 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             wi stackOut_12_0 = null;
             int stackOut_12_1 = 0;
@@ -134,7 +137,7 @@ class ms {
                     if (param2 == 0) {
                       break L4;
                     } else {
-                      field_e = null;
+                      field_e = (cc) null;
                       break L4;
                     }
                   }
@@ -158,12 +161,12 @@ class ms {
                     stackIn_13_4 = stackOut_12_4;
                     stackIn_13_5 = stackOut_12_5;
                     if (dv.field_c != null) {
-                      stackOut_14_0 = (wi) (Object) stackIn_14_0;
+                      stackOut_14_0 = (wi) ((Object) stackIn_14_0);
                       stackOut_14_1 = stackIn_14_1;
                       stackOut_14_2 = null;
                       stackOut_14_3 = null;
-                      stackOut_14_4 = (java.net.URL) (Object) stackIn_14_4;
-                      stackOut_14_5 = (StringBuilder) (Object) stackIn_14_5;
+                      stackOut_14_4 = (java.net.URL) ((Object) stackIn_14_4);
+                      stackOut_14_5 = (StringBuilder) ((Object) stackIn_14_5);
                       stackOut_14_6 = dv.field_c;
                       stackIn_15_0 = stackOut_14_0;
                       stackIn_15_1 = stackOut_14_1;
@@ -174,12 +177,12 @@ class ms {
                       stackIn_15_6 = stackOut_14_6;
                       break L5;
                     } else {
-                      stackOut_13_0 = (wi) (Object) stackIn_13_0;
+                      stackOut_13_0 = (wi) ((Object) stackIn_13_0);
                       stackOut_13_1 = stackIn_13_1;
                       stackOut_13_2 = null;
                       stackOut_13_3 = null;
-                      stackOut_13_4 = (java.net.URL) (Object) stackIn_13_4;
-                      stackOut_13_5 = (StringBuilder) (Object) stackIn_13_5;
+                      stackOut_13_4 = (java.net.URL) ((Object) stackIn_13_4);
+                      stackOut_13_5 = (StringBuilder) ((Object) stackIn_13_5);
                       stackOut_13_6 = "" + km.field_k;
                       stackIn_15_0 = stackOut_13_0;
                       stackIn_15_1 = stackOut_13_1;
@@ -193,33 +196,52 @@ class ms {
                   }
                   var4 = ((wi) (Object) stackIn_15_0).a((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, stackIn_15_6 + "&v1=" + wi.field_u + "&v2=" + wi.field_q + "&e=" + var10));
                   L6: while (true) {
-                    if (var4.field_c != 0) {
-                      L7: {
-                        if (var4.field_c != 1) {
-                          break L7;
+                    L7: {
+                      L8: {
+                        if (var4.field_c != 0) {
+                          break L8;
                         } else {
-                          var5 = (DataInputStream) var4.field_d;
-                          int discarded$1 = var5.read();
-                          var5.close();
-                          break L7;
+                          tg.a(1L, (byte) 73);
+                          if (var6 != 0) {
+                            break L7;
+                          } else {
+                            if (var6 == 0) {
+                              continue L6;
+                            } else {
+                              break L8;
+                            }
+                          }
                         }
                       }
-                      break L0;
-                    } else {
-                      tg.a(1L, (byte) 73);
-                      continue L6;
+                      if (var4.field_c != 1) {
+                        break L7;
+                      } else {
+                        var5 = (DataInputStream) (var4.field_d);
+                        discarded$1 = var5.read();
+                        var5.close();
+                        break L7;
+                      }
                     }
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L8: {
+              L9: {
                 var3 = (Exception) (Object) decompiledCaughtException;
-                break L8;
+                decompiledRegionSelector0 = 1;
+                break L9;
               }
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -230,14 +252,14 @@ class ms {
 
     final boolean a(boolean param0) {
         if (!param0) {
-          if (null == ((ms) this).field_g) {
+          if (null == this.field_g) {
             return false;
           } else {
             return true;
           }
         } else {
-          field_i = null;
-          if (null == ((ms) this).field_g) {
+          field_i = (String) null;
+          if (null == this.field_g) {
             return false;
           } else {
             return true;
@@ -246,17 +268,25 @@ class ms {
     }
 
     final static nj[] b(int param0) {
-        if (!(null != uo.field_e)) {
-            uo.field_e = hg.a(110, new int[2]);
+        Throwable var2 = null;
+        L0: {
+          if (null == uo.field_e) {
+            uo.field_e = hg.a(110, new int[]{1, 0});
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        return uo.field_e;
+        if (param0 != -16754) {
+          var2 = (Throwable) null;
+          ms.a((String) null, (Throwable) null, 74);
+          return uo.field_e;
+        } else {
+          return uo.field_e;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
         field_a = true;
         field_c = "Fullscreen play is an option available to subscribing members only. For more details see the website.";

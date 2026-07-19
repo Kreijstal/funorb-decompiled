@@ -6,6 +6,9 @@ final class ce {
     static boolean field_b;
 
     public static void a(byte param0) {
+        if (param0 != -55) {
+            return;
+        }
         field_a = null;
     }
 
@@ -15,9 +18,9 @@ final class ce {
 
     final boolean a(int param0) {
         if (param0 > 98) {
-          if ((Object) (Object) qi.field_a != this) {
-            if ((Object) (Object) p.field_t != this) {
-              if (this == (Object) (Object) w.field_cb) {
+          if (qi.field_a != this) {
+            if (p.field_t != this) {
+              if (this == w.field_cb) {
                 return true;
               } else {
                 return false;
@@ -34,10 +37,6 @@ final class ce {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Please send me news and updates (I can unsubscribe at any time)";
         field_b = false;
     }

@@ -16,7 +16,7 @@ final class mh {
 
     final sk b() {
         byte[] var1 = this.a();
-        return new sk(22050, var1, 22050 * ((mh) this).field_c / 1000, 22050 * ((mh) this).field_b / 1000);
+        return new sk(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
     private final byte[] a() {
@@ -41,10 +41,10 @@ final class mh {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((mh) this).field_a[var4] != null) {
-                    var5 = ((mh) this).field_a[var4].field_y * 22050 / 1000;
-                    var6 = ((mh) this).field_a[var4].field_j * 22050 / 1000;
-                    var13 = ((mh) this).field_a[var4].a(var5, ((mh) this).field_a[var4].field_y);
+                  if (this.field_a[var4] != null) {
+                    var5 = this.field_a[var4].field_y * 22050 / 1000;
+                    var6 = this.field_a[var4].field_j * 22050 / 1000;
+                    var13 = this.field_a[var4].a(var5, this.field_a[var4].field_y);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -75,9 +75,9 @@ final class mh {
               return new byte[]{};
             }
           } else {
-            if (((mh) this).field_a[var2] != null) {
-              if (((mh) this).field_a[var2].field_y + ((mh) this).field_a[var2].field_j > var1) {
-                var1 = ((mh) this).field_a[var2].field_y + ((mh) this).field_a[var2].field_j;
+            if (this.field_a[var2] != null) {
+              if (this.field_a[var2].field_y + this.field_a[var2].field_j > var1) {
+                var1 = this.field_a[var2].field_y + this.field_a[var2].field_j;
                 var2++;
                 continue L0;
               } else {
@@ -95,19 +95,19 @@ final class mh {
     private mh(gi param0) {
         int var2 = 0;
         int var3 = 0;
-        ((mh) this).field_a = new p[10];
+        this.field_a = new p[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((mh) this).field_c = param0.c((byte) -60);
-            ((mh) this).field_b = param0.c((byte) -60);
+            this.field_c = param0.c((byte) -60);
+            this.field_b = param0.c((byte) -60);
             return;
           } else {
             var3 = param0.f((byte) -114);
             if (var3 != 0) {
               param0.field_p = param0.field_p - 1;
-              ((mh) this).field_a[var2] = new p();
-              ((mh) this).field_a[var2].a(param0);
+              this.field_a[var2] = new p();
+              this.field_a[var2].a(param0);
               var2++;
               continue L0;
             } else {

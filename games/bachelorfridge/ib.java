@@ -16,7 +16,7 @@ final class ib {
         int var7 = 0;
         var7 = BachelorFridge.field_y;
         var2 = 0;
-        var3 = ((ib) this).field_b;
+        var3 = this.field_b;
         var5 = 10 % ((54 - param0) / 44);
         var4 = 0;
         L0: while (true) {
@@ -56,7 +56,7 @@ final class ib {
               if (param0) {
                 break L1;
               } else {
-                field_d = null;
+                field_d = (be[]) null;
                 break L1;
               }
             }
@@ -82,10 +82,10 @@ final class ib {
                       } else {
                         L6: {
                           var3 = mu.field_l[dp.field_o.field_g];
-                          if (var3 == 2) {
+                          if (-3 == (var3 ^ -1)) {
                             break L6;
                           } else {
-                            if (var3 == 5) {
+                            if ((var3 ^ -1) == -6) {
                               break L6;
                             } else {
                               break L4;
@@ -100,7 +100,7 @@ final class ib {
                   if (var2 == 0) {
                     break L4;
                   } else {
-                    if (ub.field_j != 2) {
+                    if ((ub.field_j ^ -1) != -3) {
                       qja.a(0);
                       break L4;
                     } else {
@@ -112,10 +112,10 @@ final class ib {
                   if (0 != var3) {
                     break L7;
                   } else {
-                    if (ub.field_j == 2) {
+                    if ((ub.field_j ^ -1) == -3) {
                       var4 = f.b((byte) 73) - ph.field_P;
                       var6 = (int)((10999L + -var4) / 1000L);
-                      if (var6 > 0) {
+                      if (-1 > (var6 ^ -1)) {
                         break L7;
                       } else {
                         tfa.a(5, 1, true);
@@ -140,7 +140,7 @@ final class ib {
                     break L8;
                   }
                 }
-                if (gf.field_k != 13) {
+                if (-14 != (gf.field_k ^ -1)) {
                   continue L2;
                 } else {
                   var2 = 1;
@@ -152,13 +152,16 @@ final class ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "ib.C(" + param0 + ')');
+          throw pe.a((Throwable) ((Object) var1), "ib.C(" + param0 + ')');
         }
         return stackIn_27_0;
     }
 
     public static void a(int param0) {
         field_d = null;
+        if (param0 > -71) {
+            field_d = (be[]) null;
+        }
     }
 
     final int b(byte param0) {
@@ -172,12 +175,12 @@ final class ib {
           if (param0 >= 58) {
             break L0;
           } else {
-            ((ib) this).field_a = 80;
+            this.field_a = 80;
             break L0;
           }
         }
         var2 = 0;
-        var3 = ((ib) this).field_b;
+        var3 = this.field_b;
         var4 = 0;
         L1: while (true) {
           if (var3.length <= var4) {
@@ -202,17 +205,18 @@ final class ib {
     }
 
     final boolean a(byte param0, int param1) {
+        int discarded$2 = 0;
         aga[] var3 = null;
         int var4 = 0;
         aga var5 = null;
         int var6 = 0;
         L0: {
           var6 = BachelorFridge.field_y;
-          var3 = ((ib) this).field_b;
+          var3 = this.field_b;
           if (param0 <= -19) {
             break L0;
           } else {
-            int discarded$2 = ib.a(false);
+            discarded$2 = ib.a(false);
             break L0;
           }
         }
@@ -247,23 +251,19 @@ final class ib {
             return;
         }
         try {
-            param1.field_u = ((ib) this).field_a;
-            ((ib) this).field_b[((ib) this).field_a] = param1;
-            ((ib) this).field_a = ((ib) this).field_a + 1;
+            param1.field_u = this.field_a;
+            this.field_b[this.field_a] = param1;
+            this.field_a = this.field_a + 1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ib.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ib.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     ib(int param0) {
-        ((ib) this).field_b = new aga[7];
+        this.field_b = new aga[7];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new be[38];
     }
 }

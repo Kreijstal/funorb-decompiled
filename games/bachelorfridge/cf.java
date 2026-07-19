@@ -12,7 +12,7 @@ final class cf {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 0) {
-            field_a = null;
+            field_a = (String) null;
             field_b = null;
             return;
         }
@@ -74,10 +74,6 @@ final class cf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "OUT";
     }
 }

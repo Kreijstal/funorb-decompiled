@@ -16,7 +16,7 @@ final class nga extends vo {
 
     final void a(byte param0, int param1, int param2) {
         if (param0 > -70) {
-            field_j = null;
+            field_j = (String) null;
         }
     }
 
@@ -37,38 +37,45 @@ final class nga extends vo {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = ((nga) this).field_k * param0 >> 12;
-        int var5 = ((nga) this).field_l * param0 >> 12;
-        int var6 = param2 * ((nga) this).field_h >> 12;
-        int var7 = param2 * ((nga) this).field_m >> 12;
-        pna.a(var7, ((nga) this).field_f, param1 ^ param1, var5, var4, var6);
+        int var4 = this.field_k * param0 >> 516311724;
+        int var5 = this.field_l * param0 >> 1787356268;
+        int var6 = param2 * this.field_h >> 2023069004;
+        int var7 = param2 * this.field_m >> -1096410612;
+        pna.a(var7, this.field_f, param1 ^ param1, var5, var4, var6);
     }
 
     public static void a(int param0) {
+        int discarded$2 = 0;
         field_i = null;
         field_j = null;
-        field_g = null;
+        if (param0 != -20804) {
+          discarded$2 = nga.a(56, 107, (byte) -3, 87);
+          field_g = null;
+          return;
+        } else {
+          field_g = null;
+          return;
+        }
     }
 
     nga(int param0, int param1, int param2, int param3, int param4, int param5) {
         super(-1, param4, param5);
-        ((nga) this).field_m = param3;
-        ((nga) this).field_l = param2;
-        ((nga) this).field_k = param0;
-        ((nga) this).field_h = param1;
+        this.field_m = param3;
+        this.field_l = param2;
+        this.field_k = param0;
+        this.field_h = param1;
     }
 
     final static void b(byte param0) {
         fda.field_i = lia.a(5);
+        if (param0 != 113) {
+            return;
+        }
         gja.field_m = new rp();
         nw.a(true, true, (byte) -107);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "You are not currently logged in to the game.";
         field_i = vv.a((byte) 109);
     }

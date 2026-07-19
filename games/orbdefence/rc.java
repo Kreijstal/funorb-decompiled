@@ -18,26 +18,32 @@ final class rc {
 
     final static boolean b(int param0) {
         int var1 = 0;
-        if (ne.field_b == null) {
+        var1 = 51 % ((-1 - param0) / 32);
+        if (ne.field_b != null) {
+          if (!ne.field_b.b(95)) {
             return false;
+          } else {
+            return true;
+          }
+        } else {
+          return false;
         }
-        if (!ne.field_b.b(95)) {
-            return false;
-        }
-        return true;
     }
 
     public static void a(int param0) {
+        boolean discarded$0 = false;
         field_a = null;
+        if (param0 >= -116) {
+            discarded$0 = rc.b(7);
+            field_m = null;
+            field_i = null;
+            return;
+        }
         field_m = null;
         field_i = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = new ba(0, 2, 2, 1);
         field_i = "Fullscreen";
     }

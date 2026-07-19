@@ -13,20 +13,22 @@ final class qg extends gn {
 
     final void a(byte param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7) {
         try {
-            ((qg) this).field_j = param5;
-            ((qg) this).field_h = param3;
+            this.field_j = param5;
+            this.field_h = param3;
             int var9_int = -116 % ((param0 - -20) / 50);
-            ((qg) this).field_l = param1;
-            ((qg) this).field_f = param6;
-            ((qg) this).field_g = param4;
-            ((qg) this).field_e = param2;
-            ((qg) this).field_i = param7;
+            this.field_l = param1;
+            this.field_f = param6;
+            this.field_g = param4;
+            this.field_e = param2;
+            this.field_i = param7;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "qg.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "qg.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
+        boolean discarded$2 = false;
+        boolean discarded$3 = false;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -49,7 +51,7 @@ final class qg extends gn {
         int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
         var12 = null;
-        var12_ref = (ob) (Object) et.field_d.field_V;
+        var12_ref = (ob) ((Object) et.field_d.field_V);
         if (param3 != var12_ref.field_t) {
           L0: {
             var5 = var12_ref.field_t;
@@ -78,12 +80,12 @@ final class qg extends gn {
           }
           L2: {
             var8 = stackIn_36_0;
-            var9 = (param3 >> 16) - var12_ref.a(true);
-            var10 = (param1 >> 16) + -var12_ref.c(879306160);
+            var9 = (param3 >> 342846288) - var12_ref.a(true);
+            var10 = (param1 >> 845550992) + -var12_ref.c(879306160);
             if (param0 == 2235) {
               break L2;
             } else {
-              boolean discarded$2 = qg.a(-120, 112, -101, 49);
+              discarded$2 = qg.a(-120, 112, -101, 49);
               break L2;
             }
           }
@@ -92,8 +94,8 @@ final class qg extends gn {
             L3: {
               L4: {
                 L5: {
-                  var6 = var6 + (param2 * var10 << 16) / var11;
-                  var5 = var5 + (param2 * var9 << 16) / var11;
+                  var6 = var6 + (param2 * var10 << -1415138256) / var11;
+                  var5 = var5 + (param2 * var9 << 1362325424) / var11;
                   if (var8 == 0) {
                     break L5;
                   } else {
@@ -178,12 +180,12 @@ final class qg extends gn {
             }
             L9: {
               var8 = stackIn_9_0;
-              var9 = (param3 >> 16) - var12_ref.a(true);
-              var10 = (param1 >> 16) + -var12_ref.c(879306160);
+              var9 = (param3 >> 342846288) - var12_ref.a(true);
+              var10 = (param1 >> 845550992) + -var12_ref.c(879306160);
               if (param0 == 2235) {
                 break L9;
               } else {
-                boolean discarded$3 = qg.a(-120, 112, -101, 49);
+                discarded$3 = qg.a(-120, 112, -101, 49);
                 break L9;
               }
             }
@@ -192,8 +194,8 @@ final class qg extends gn {
               L10: {
                 L11: {
                   L12: {
-                    var6 = var6 + (param2 * var10 << 16) / var11;
-                    var5 = var5 + (param2 * var9 << 16) / var11;
+                    var6 = var6 + (param2 * var10 << -1415138256) / var11;
+                    var5 = var5 + (param2 * var9 << 1362325424) / var11;
                     if (var8 == 0) {
                       break L12;
                     } else {
@@ -274,12 +276,12 @@ final class qg extends gn {
             }
             var1 = ni.field_m.b((byte) 72);
             while (var1 != null) {
-                var1.f(-106);
+                var1.f(param0 + -106);
                 var1 = ni.field_m.a(0);
             }
-            ts.field_d = 0;
+            ts.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "qg.A(" + 0 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "qg.A(" + param0 + ')');
         }
     }
 

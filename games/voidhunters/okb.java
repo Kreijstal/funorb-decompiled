@@ -1,9 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import jagdx.IDirect3DDevice;
-import jagdx.IDirect3DIndexBuffer;
-
 final class okb implements vca {
     private boolean field_c;
     private mj field_b;
@@ -15,18 +12,18 @@ final class okb implements vca {
 
     public final void a(int param0) {
         L0: {
-          if (null != ((okb) this).field_d) {
-            ((okb) this).field_d = null;
+          if (null != this.field_d) {
+            this.field_d = null;
             break L0;
           } else {
             break L0;
           }
         }
-        ((okb) this).field_f = 0;
+        this.field_f = 0;
         if (param0 >= -84) {
           return;
         } else {
-          ((okb) this).field_g = 0;
+          this.field_g = 0;
           return;
         }
     }
@@ -88,12 +85,12 @@ final class okb implements vca {
         int stackOut_9_2 = 0;
         int stackOut_9_3 = 0;
         int stackOut_9_4 = 0;
-        ((okb) this).field_g = ((okb) this).field_b.field_h * param1;
+        this.field_g = this.field_b.field_h * param1;
         if (param0 == 25427) {
-          if (((okb) this).field_g > ((okb) this).field_f) {
+          if (this.field_g > this.field_f) {
             L0: {
               var4 = 8;
-              if (((okb) this).field_e) {
+              if (this.field_e) {
                 var3 = 0;
                 var4 = var4 | 512;
                 break L0;
@@ -102,11 +99,11 @@ final class okb implements vca {
                 break L0;
               }
             }
-            if (null != ((okb) this).field_d) {
+            if (null != this.field_d) {
               L1: {
                 stackOut_12_0 = this;
-                stackOut_12_1 = ((okb) this).field_a.field_Mc;
-                stackOut_12_2 = ((okb) this).field_g;
+                stackOut_12_1 = this.field_a.field_Mc;
+                stackOut_12_2 = this.field_g;
                 stackOut_12_3 = var4;
                 stackIn_14_0 = stackOut_12_0;
                 stackIn_14_1 = stackOut_12_1;
@@ -116,9 +113,9 @@ final class okb implements vca {
                 stackIn_13_1 = stackOut_12_1;
                 stackIn_13_2 = stackOut_12_2;
                 stackIn_13_3 = stackOut_12_3;
-                if (((okb) this).field_b == mj.field_e) {
+                if (this.field_b == mj.field_e) {
                   stackOut_14_0 = this;
-                  stackOut_14_1 = (jagdx.IDirect3DDevice) (Object) stackIn_14_1;
+                  stackOut_14_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_14_1);
                   stackOut_14_2 = stackIn_14_2;
                   stackOut_14_3 = stackIn_14_3;
                   stackOut_14_4 = 101;
@@ -130,7 +127,7 @@ final class okb implements vca {
                   break L1;
                 } else {
                   stackOut_13_0 = this;
-                  stackOut_13_1 = (jagdx.IDirect3DDevice) (Object) stackIn_13_1;
+                  stackOut_13_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_13_1);
                   stackOut_13_2 = stackIn_13_2;
                   stackOut_13_3 = stackIn_13_3;
                   stackOut_13_4 = 102;
@@ -142,14 +139,14 @@ final class okb implements vca {
                   break L1;
                 }
               }
-              ((okb) this).field_d = ((jagdx.IDirect3DDevice) (Object) stackIn_15_1).a(stackIn_15_2, stackIn_15_3, stackIn_15_4, var3, ((okb) this).field_d);
-              ((okb) this).field_f = ((okb) this).field_g;
+              ((okb) (this)).field_d = ((jagdx.IDirect3DDevice) (Object) stackIn_15_1).a(stackIn_15_2, stackIn_15_3, stackIn_15_4, var3, this.field_d);
+              this.field_f = this.field_g;
               return;
             } else {
               L2: {
                 stackOut_8_0 = this;
-                stackOut_8_1 = ((okb) this).field_a.field_Mc;
-                stackOut_8_2 = ((okb) this).field_g;
+                stackOut_8_1 = this.field_a.field_Mc;
+                stackOut_8_2 = this.field_g;
                 stackOut_8_3 = var4;
                 stackIn_10_0 = stackOut_8_0;
                 stackIn_10_1 = stackOut_8_1;
@@ -159,9 +156,9 @@ final class okb implements vca {
                 stackIn_9_1 = stackOut_8_1;
                 stackIn_9_2 = stackOut_8_2;
                 stackIn_9_3 = stackOut_8_3;
-                if (((okb) this).field_b == mj.field_e) {
+                if (this.field_b == mj.field_e) {
                   stackOut_10_0 = this;
-                  stackOut_10_1 = (jagdx.IDirect3DDevice) (Object) stackIn_10_1;
+                  stackOut_10_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_10_1);
                   stackOut_10_2 = stackIn_10_2;
                   stackOut_10_3 = stackIn_10_3;
                   stackOut_10_4 = 101;
@@ -173,7 +170,7 @@ final class okb implements vca {
                   break L2;
                 } else {
                   stackOut_9_0 = this;
-                  stackOut_9_1 = (jagdx.IDirect3DDevice) (Object) stackIn_9_1;
+                  stackOut_9_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_9_1);
                   stackOut_9_2 = stackIn_9_2;
                   stackOut_9_3 = stackIn_9_3;
                   stackOut_9_4 = 102;
@@ -185,8 +182,8 @@ final class okb implements vca {
                   break L2;
                 }
               }
-              ((okb) this).field_d = ((jagdx.IDirect3DDevice) (Object) stackIn_11_1).a(stackIn_11_2, stackIn_11_3, stackIn_11_4, var3, ((okb) this).field_d);
-              ((okb) this).field_f = ((okb) this).field_g;
+              ((okb) (this)).field_d = ((jagdx.IDirect3DDevice) (Object) stackIn_11_1).a(stackIn_11_2, stackIn_11_3, stackIn_11_4, var3, this.field_d);
+              this.field_f = this.field_g;
               return;
             }
           } else {
@@ -199,12 +196,12 @@ final class okb implements vca {
 
     public final boolean b(int param0) {
         int var2 = 0;
-        if (((okb) this).field_c) {
-          if (!jagdx.hea.b(((okb) this).field_d.Unlock(), (byte) 90)) {
+        if (this.field_c) {
+          if (!jagdx.hea.b(this.field_d.Unlock(), (byte) 90)) {
             var2 = 14 / ((13 - param0) / 37);
             return false;
           } else {
-            ((okb) this).field_c = false;
+            this.field_c = false;
             return true;
           }
         } else {
@@ -214,6 +211,7 @@ final class okb implements vca {
     }
 
     public final jaclib.memory.Buffer a(byte param0, boolean param1) {
+        boolean discarded$6 = false;
         jagdx.IDirect3DIndexBuffer stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         int stackIn_6_2 = 0;
@@ -257,13 +255,13 @@ final class okb implements vca {
         int stackOut_6_2 = 0;
         int stackOut_6_3 = 0;
         if (param0 < -23) {
-          if (null != ((okb) this).field_d) {
-            param1 = param1 & ((okb) this).field_e;
-            if (!((okb) this).field_c) {
+          if (null != this.field_d) {
+            param1 = param1 & this.field_e;
+            if (!this.field_c) {
               L0: {
-                stackOut_16_0 = ((okb) this).field_d;
+                stackOut_16_0 = this.field_d;
                 stackOut_16_1 = 0;
-                stackOut_16_2 = ((okb) this).field_f;
+                stackOut_16_2 = this.field_f;
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_18_2 = stackOut_16_2;
@@ -271,7 +269,7 @@ final class okb implements vca {
                 stackIn_17_1 = stackOut_16_1;
                 stackIn_17_2 = stackOut_16_2;
                 if (!param1) {
-                  stackOut_18_0 = (jagdx.IDirect3DIndexBuffer) (Object) stackIn_18_0;
+                  stackOut_18_0 = (jagdx.IDirect3DIndexBuffer) ((Object) stackIn_18_0);
                   stackOut_18_1 = stackIn_18_1;
                   stackOut_18_2 = stackIn_18_2;
                   stackOut_18_3 = 0;
@@ -281,7 +279,7 @@ final class okb implements vca {
                   stackIn_19_3 = stackOut_18_3;
                   break L0;
                 } else {
-                  stackOut_17_0 = (jagdx.IDirect3DIndexBuffer) (Object) stackIn_17_0;
+                  stackOut_17_0 = (jagdx.IDirect3DIndexBuffer) ((Object) stackIn_17_0);
                   stackOut_17_1 = stackIn_17_1;
                   stackOut_17_2 = stackIn_17_2;
                   stackOut_17_3 = 8192;
@@ -292,11 +290,11 @@ final class okb implements vca {
                   break L0;
                 }
               }
-              if (!jagdx.hea.b(((jagdx.IDirect3DIndexBuffer) (Object) stackIn_19_0).Lock(stackIn_19_1, stackIn_19_2, stackIn_19_3, ((okb) this).field_a.field_Kc), (byte) 37)) {
+              if (!jagdx.hea.b(((jagdx.IDirect3DIndexBuffer) (Object) stackIn_19_0).Lock(stackIn_19_1, stackIn_19_2, stackIn_19_3, this.field_a.field_Kc), (byte) 37)) {
                 return null;
               } else {
-                ((okb) this).field_c = true;
-                return (jaclib.memory.Buffer) (Object) ((okb) this).field_a.field_Kc;
+                this.field_c = true;
+                return (jaclib.memory.Buffer) ((Object) this.field_a.field_Kc);
               }
             } else {
               return null;
@@ -305,14 +303,14 @@ final class okb implements vca {
             return null;
           }
         } else {
-          boolean discarded$6 = ((okb) this).b(-118);
-          if (null != ((okb) this).field_d) {
-            param1 = param1 & ((okb) this).field_e;
-            if (!((okb) this).field_c) {
+          discarded$6 = this.b(-118);
+          if (null != this.field_d) {
+            param1 = param1 & this.field_e;
+            if (!this.field_c) {
               L1: {
-                stackOut_5_0 = ((okb) this).field_d;
+                stackOut_5_0 = this.field_d;
                 stackOut_5_1 = 0;
-                stackOut_5_2 = ((okb) this).field_f;
+                stackOut_5_2 = this.field_f;
                 stackIn_7_0 = stackOut_5_0;
                 stackIn_7_1 = stackOut_5_1;
                 stackIn_7_2 = stackOut_5_2;
@@ -320,7 +318,7 @@ final class okb implements vca {
                 stackIn_6_1 = stackOut_5_1;
                 stackIn_6_2 = stackOut_5_2;
                 if (!param1) {
-                  stackOut_7_0 = (jagdx.IDirect3DIndexBuffer) (Object) stackIn_7_0;
+                  stackOut_7_0 = (jagdx.IDirect3DIndexBuffer) ((Object) stackIn_7_0);
                   stackOut_7_1 = stackIn_7_1;
                   stackOut_7_2 = stackIn_7_2;
                   stackOut_7_3 = 0;
@@ -330,7 +328,7 @@ final class okb implements vca {
                   stackIn_8_3 = stackOut_7_3;
                   break L1;
                 } else {
-                  stackOut_6_0 = (jagdx.IDirect3DIndexBuffer) (Object) stackIn_6_0;
+                  stackOut_6_0 = (jagdx.IDirect3DIndexBuffer) ((Object) stackIn_6_0);
                   stackOut_6_1 = stackIn_6_1;
                   stackOut_6_2 = stackIn_6_2;
                   stackOut_6_3 = 8192;
@@ -341,11 +339,11 @@ final class okb implements vca {
                   break L1;
                 }
               }
-              if (!jagdx.hea.b(((jagdx.IDirect3DIndexBuffer) (Object) stackIn_8_0).Lock(stackIn_8_1, stackIn_8_2, stackIn_8_3, ((okb) this).field_a.field_Kc), (byte) 37)) {
+              if (!jagdx.hea.b(((jagdx.IDirect3DIndexBuffer) (Object) stackIn_8_0).Lock(stackIn_8_1, stackIn_8_2, stackIn_8_3, this.field_a.field_Kc), (byte) 37)) {
                 return null;
               } else {
-                ((okb) this).field_c = true;
-                return (jaclib.memory.Buffer) (Object) ((okb) this).field_a.field_Kc;
+                this.field_c = true;
+                return (jaclib.memory.Buffer) ((Object) this.field_a.field_Kc);
               }
             } else {
               return null;
@@ -357,9 +355,9 @@ final class okb implements vca {
     }
 
     okb(nla param0, mj param1, boolean param2) {
-        ((okb) this).field_c = false;
-        ((okb) this).field_b = param1;
-        ((okb) this).field_e = param2 ? true : false;
-        ((okb) this).field_a = param0;
+        this.field_c = false;
+        this.field_b = param1;
+        this.field_e = param2 ? true : false;
+        this.field_a = param0;
     }
 }

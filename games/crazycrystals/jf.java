@@ -7,10 +7,16 @@ final class jf {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != 0) {
+            field_a = 1;
+        }
     }
 
     final static wm a(int param0, int param1, int param2, int param3, int param4) {
         int var5 = kh.field_c;
+        if (param2 != 0) {
+            return (wm) null;
+        }
         int var6 = kh.field_b;
         int var7 = kh.field_g;
         if (!(param3 <= var7)) {
@@ -37,10 +43,6 @@ final class jf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
     }
 }

@@ -7,13 +7,15 @@ final class nc extends m {
 
     nc(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
         super(param0, param1, param2, param3, param4);
-        ((nc) this).field_L = new byte[256][];
-        ((nc) this).field_L = param6;
-        ((nc) this).field_K = new int[4][];
-        ((nc) this).field_K[0] = param5;
+        this.field_L = new byte[256][];
+        this.field_L = param6;
+        this.field_K = new int[4][];
+        this.field_K[0] = param5;
     }
 
     private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+        int incrementValue$50 = 0;
+        int incrementValue$51 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -33,7 +35,7 @@ final class nc extends m {
                 var12++;
                 continue L0;
               } else {
-                int incrementValue$50 = param4;
+                incrementValue$50 = param4;
                 param4++;
                 param0 = param2[incrementValue$50];
                 if (param2[incrementValue$50] == 0) {
@@ -43,7 +45,7 @@ final class nc extends m {
                 } else {
                   var14 = param1[param5];
                   var15 = param3[param0 & 255];
-                  int incrementValue$51 = param5;
+                  incrementValue$51 = param5;
                   param5++;
                   param1[incrementValue$51] = ((var15 & 16711935) * param10 + (var14 & 16711935) * var11 & -16711936) + ((var15 & 65280) * param10 + (var14 & 65280) * var11 & 16711680) >> 8;
                   var13++;
@@ -117,10 +119,10 @@ final class nc extends m {
             if (param4 > 0) {
               L5: {
                 if (!param6) {
-                  nc.a(0, vb.field_c, ((nc) this).field_L[param0], ((nc) this).field_K[param5], var11, var8, param3, param4, var9, var10);
+                  nc.a(0, vb.field_c, this.field_L[param0], this.field_K[param5], var11, var8, param3, param4, var9, var10);
                   break L5;
                 } else {
-                  bg.a(vb.field_c, ((nc) this).field_L[param0], param5, var11, var8, param3, param4, var9, var10);
+                  bg.a(vb.field_c, this.field_L[param0], param5, var11, var8, param3, param4, var9, var10);
                   break L5;
                 }
               }
@@ -194,10 +196,10 @@ final class nc extends m {
             if (param4 > 0) {
               L5: {
                 if (!param7) {
-                  nc.a(0, vb.field_c, ((nc) this).field_L[param0], ((nc) this).field_K[param5], var12, var9, param3, param4, var10, var11, param6);
+                  nc.a(0, vb.field_c, this.field_L[param0], this.field_K[param5], var12, var9, param3, param4, var10, var11, param6);
                   break L5;
                 } else {
-                  bg.a(vb.field_c, ((nc) this).field_L[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+                  bg.a(vb.field_c, this.field_L[param0], param5, var12, var9, param3, param4, var10, var11, param6);
                   break L5;
                 }
               }
@@ -244,10 +246,20 @@ final class nc extends m {
     }
 
     final int e(int param0) {
-        return nc.a(((nc) this).field_K[0], param0);
+        return nc.a(this.field_K[0], param0);
     }
 
     private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -269,7 +281,7 @@ final class nc extends m {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4++;
                     param0 = param2[incrementValue$10];
                     if (param2[incrementValue$10] == 0) {
@@ -277,7 +289,7 @@ final class nc extends m {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param1[incrementValue$11] = param3[param0 & 255];
                       var12++;
@@ -287,48 +299,48 @@ final class nc extends m {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4++;
                   param0 = param2[incrementValue$12];
                   if (param2[incrementValue$12] == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param1[incrementValue$13] = param3[param0 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4++;
                   param0 = param2[incrementValue$14];
                   if (param2[incrementValue$14] == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param1[incrementValue$15] = param3[param0 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4++;
                   param0 = param2[incrementValue$16];
                   if (param2[incrementValue$16] == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param1[incrementValue$17] = param3[param0 & 255];
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4++;
                 param0 = param2[incrementValue$18];
                 if (param2[incrementValue$18] == 0) {
@@ -336,7 +348,7 @@ final class nc extends m {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param1[incrementValue$19] = param3[param0 & 255];
                   var12++;

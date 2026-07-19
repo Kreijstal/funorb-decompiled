@@ -13,7 +13,7 @@ abstract class di extends af implements pa {
 
     final static vg f(int param0) {
         if (param0 != -25177) {
-            return null;
+            return (vg) null;
         }
         return cf.field_a;
     }
@@ -21,6 +21,7 @@ abstract class di extends af implements pa {
     abstract String a(String param0, int param1);
 
     public final boolean a(byte param0) {
+        im discarded$2 = null;
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -28,16 +29,16 @@ abstract class di extends af implements pa {
           if (param0 == 117) {
             break L0;
           } else {
-            im discarded$2 = ((di) this).e(-90);
+            discarded$2 = this.e(-90);
             break L0;
           }
         }
         L1: {
           L2: {
-            if (null == ((di) this).field_j.field_o) {
+            if (null == this.field_j.field_o) {
               break L2;
             } else {
-              if (((di) this).field_j.field_o.length() != 0) {
+              if (this.field_j.field_o.length() != 0) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
                 break L1;
@@ -54,6 +55,7 @@ abstract class di extends af implements pa {
     }
 
     public final void a(ej param0, byte param1) {
+        vg discarded$2 = null;
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -75,11 +77,11 @@ abstract class di extends af implements pa {
           L0: {
             L1: {
               if (param1 != 83) {
-                vg discarded$2 = di.f(-63);
-                ((di) this).c((byte) 106);
+                discarded$2 = di.f(-63);
+                this.c((byte) 106);
                 break L1;
               } else {
-                ((di) this).c((byte) 106);
+                this.c((byte) 106);
                 break L1;
               }
             }
@@ -89,23 +91,23 @@ abstract class di extends af implements pa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("di.N(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -113,7 +115,7 @@ abstract class di extends af implements pa {
               break L2;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
@@ -121,11 +123,11 @@ abstract class di extends af implements pa {
         if (param0 != 0) {
             field_e = 120;
         }
-        return ((di) this).b(((di) this).field_j.field_o, 0);
+        return this.b(this.field_j.field_o, 0);
     }
 
     public static void d(byte param0) {
-        int var1 = 0;
+        int var1 = -109 % ((72 - param0) / 50);
         field_h = null;
         field_i = null;
         field_g = null;
@@ -142,42 +144,46 @@ abstract class di extends af implements pa {
         int var4 = 0;
         rh[] var5 = null;
         var4 = Terraphoenix.field_V;
-        var5 = ch.c(-104);
+        var5 = ch.c(param0 ^ -71);
         var2 = var5;
         var3 = 0;
-        L0: while (true) {
-          if (var3 < var5.length) {
-            if (param1 == var5[var3].field_e) {
-              return var5[var3];
+        if (param0 == 33) {
+          L0: while (true) {
+            if (var3 < var5.length) {
+              if (param1 == var5[var3].field_e) {
+                return var5[var3];
+              } else {
+                var3++;
+                continue L0;
+              }
             } else {
-              var3++;
-              continue L0;
+              return null;
             }
-          } else {
-            return null;
           }
+        } else {
+          return (rh) null;
         }
     }
 
     di(ej param0) {
         try {
-            ((di) this).field_j = param0;
+            this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "di.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final String c(int param0) {
         if (param0 != 0) {
-            field_h = null;
+            field_h = (String[]) null;
         }
-        return ((di) this).a(((di) this).field_j.field_o, -81);
+        return this.a(this.field_j.field_o, -81);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         ja.c((byte) -120);
         if (param2 != 16105) {
-            field_k = null;
+            field_k = (ci) null;
         }
         l.i(param4, param1, param0, param3);
     }
@@ -206,7 +212,7 @@ abstract class di extends af implements pa {
               if (!param1) {
                 break L1;
               } else {
-                field_h = null;
+                field_h = (String[]) null;
                 break L1;
               }
             }
@@ -216,23 +222,23 @@ abstract class di extends af implements pa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("di.T(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -240,15 +246,11 @@ abstract class di extends af implements pa {
               break L2;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = new String[]{"RoF: Best", "RoF: High", "RoF: Normal", "RoF: Slow", "RoF: Very Slow"};
         field_g = "Move to level ";
     }

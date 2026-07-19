@@ -11,7 +11,7 @@ class kd {
     kd field_c;
 
     final boolean a(boolean param0) {
-        if (null == ((kd) this).field_c) {
+        if (null == this.field_c) {
             return false;
         }
         if (param0) {
@@ -21,16 +21,16 @@ class kd {
     }
 
     final void b(byte param0) {
-        if (((kd) this).field_c == null) {
+        if (this.field_c == null) {
           return;
         } else {
-          ((kd) this).field_c.field_f = ((kd) this).field_f;
-          ((kd) this).field_f.field_c = ((kd) this).field_c;
-          ((kd) this).field_c = null;
+          this.field_c.field_f = this.field_f;
+          this.field_f.field_c = this.field_c;
+          this.field_c = null;
           if (param0 >= -115) {
             return;
           } else {
-            ((kd) this).field_f = null;
+            this.field_f = null;
             return;
           }
         }
@@ -52,10 +52,6 @@ class kd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[8192];
         field_g = new int[8192];
     }

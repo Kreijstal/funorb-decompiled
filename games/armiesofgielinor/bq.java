@@ -19,10 +19,6 @@ final class bq {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bq.A(";
         field_d = "ESC - cancel private message";
         field_a = "Kick";

@@ -23,10 +23,6 @@ final class oh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "oh.A(";
         field_e = "This weapon upgrade enables#you to pelt your target with a#relentless stream of blasts.";
         field_a = new int[8192];

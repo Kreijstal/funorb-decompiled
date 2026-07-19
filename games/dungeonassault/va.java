@@ -9,17 +9,17 @@ final class va extends ap {
     int field_m;
 
     va(int param0, byte[] param1, int param2, int param3) {
-        ((va) this).field_n = param0;
-        ((va) this).field_k = param1;
-        ((va) this).field_l = param2;
-        ((va) this).field_m = param3;
+        this.field_n = param0;
+        this.field_k = param1;
+        this.field_l = param2;
+        this.field_m = param3;
     }
 
     va(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((va) this).field_n = param0;
-        ((va) this).field_k = param1;
-        ((va) this).field_l = param2;
-        ((va) this).field_m = param3;
-        ((va) this).field_j = param4 ? true : false;
+        this.field_n = param0;
+        this.field_k = param1;
+        this.field_l = param2;
+        this.field_m = param3;
+        this.field_j = param4 ? true : false;
     }
 }

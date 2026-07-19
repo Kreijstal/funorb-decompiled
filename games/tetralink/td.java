@@ -16,55 +16,56 @@ final class td {
 
     final void b(bh param0) {
         int var2 = 0;
-        ((td) this).field_f = param0.d((byte) -99);
-        ((td) this).field_c = new int[((td) this).field_f];
-        ((td) this).field_d = new int[((td) this).field_f];
-        for (var2 = 0; var2 < ((td) this).field_f; var2++) {
-            ((td) this).field_c[var2] = param0.e(127);
-            ((td) this).field_d[var2] = param0.e(127);
+        this.field_f = param0.d((byte) -99);
+        this.field_c = new int[this.field_f];
+        this.field_d = new int[this.field_f];
+        for (var2 = 0; var2 < this.field_f; var2++) {
+            this.field_c[var2] = param0.e(127);
+            this.field_d[var2] = param0.e(127);
         }
     }
 
     final void a(bh param0) {
-        ((td) this).field_b = param0.d((byte) -99);
-        ((td) this).field_i = param0.f(97);
-        ((td) this).field_j = param0.f(-108);
-        ((td) this).b(param0);
+        this.field_b = param0.d((byte) -99);
+        this.field_i = param0.f(97);
+        this.field_j = param0.f(-108);
+        this.b(param0);
     }
 
     final int a(int param0) {
-        if (((td) this).field_k >= ((td) this).field_e) {
-            int fieldTemp$0 = ((td) this).field_h;
-            ((td) this).field_h = ((td) this).field_h + 1;
-            ((td) this).field_a = ((td) this).field_d[fieldTemp$0] << 15;
-            if (((td) this).field_h >= ((td) this).field_f) {
-                ((td) this).field_h = ((td) this).field_f - 1;
+        int fieldTemp$0 = 0;
+        if (this.field_k >= this.field_e) {
+            fieldTemp$0 = this.field_h;
+            this.field_h = this.field_h + 1;
+            this.field_a = this.field_d[fieldTemp$0] << 15;
+            if (this.field_h >= this.field_f) {
+                this.field_h = this.field_f - 1;
             }
-            ((td) this).field_e = (int)((double)((td) this).field_c[((td) this).field_h] / 65536.0 * (double)param0);
-            if (((td) this).field_e > ((td) this).field_k) {
-                ((td) this).field_g = ((((td) this).field_d[((td) this).field_h] << 15) - ((td) this).field_a) / (((td) this).field_e - ((td) this).field_k);
+            this.field_e = (int)((double)this.field_c[this.field_h] / 65536.0 * (double)param0);
+            if (this.field_e > this.field_k) {
+                this.field_g = ((this.field_d[this.field_h] << 15) - this.field_a) / (this.field_e - this.field_k);
             }
         }
-        ((td) this).field_a = ((td) this).field_a + ((td) this).field_g;
-        ((td) this).field_k = ((td) this).field_k + 1;
-        return ((td) this).field_a - ((td) this).field_g >> 15;
+        this.field_a = this.field_a + this.field_g;
+        this.field_k = this.field_k + 1;
+        return this.field_a - this.field_g >> 15;
     }
 
     final void a() {
-        ((td) this).field_e = 0;
-        ((td) this).field_h = 0;
-        ((td) this).field_g = 0;
-        ((td) this).field_a = 0;
-        ((td) this).field_k = 0;
+        this.field_e = 0;
+        this.field_h = 0;
+        this.field_g = 0;
+        this.field_a = 0;
+        this.field_k = 0;
     }
 
     td() {
-        ((td) this).field_f = 2;
-        ((td) this).field_c = new int[2];
-        ((td) this).field_d = new int[2];
-        ((td) this).field_c[0] = 0;
-        ((td) this).field_c[1] = 65535;
-        ((td) this).field_d[0] = 0;
-        ((td) this).field_d[1] = 65535;
+        this.field_f = 2;
+        this.field_c = new int[2];
+        this.field_d = new int[2];
+        this.field_c[0] = 0;
+        this.field_c[1] = 65535;
+        this.field_d[0] = 0;
+        this.field_d[1] = 65535;
     }
 }

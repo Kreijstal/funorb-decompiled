@@ -27,10 +27,6 @@ final class tf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new p();
     }
 }

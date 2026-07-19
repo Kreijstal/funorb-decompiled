@@ -11,6 +11,47 @@ final class pb extends pg {
     static String field_l;
 
     final static void a(int param0) {
+        int discarded$45 = 0;
+        int discarded$46 = 0;
+        int discarded$47 = 0;
+        int discarded$48 = 0;
+        int discarded$49 = 0;
+        int discarded$50 = 0;
+        int discarded$51 = 0;
+        int discarded$52 = 0;
+        int discarded$53 = 0;
+        int discarded$54 = 0;
+        int discarded$55 = 0;
+        int discarded$56 = 0;
+        int discarded$57 = 0;
+        int discarded$58 = 0;
+        int discarded$59 = 0;
+        int discarded$60 = 0;
+        int discarded$61 = 0;
+        int discarded$62 = 0;
+        int discarded$63 = 0;
+        int discarded$64 = 0;
+        int discarded$65 = 0;
+        int discarded$66 = 0;
+        int discarded$67 = 0;
+        int discarded$68 = 0;
+        int discarded$69 = 0;
+        int discarded$70 = 0;
+        int discarded$71 = 0;
+        int discarded$72 = 0;
+        int discarded$73 = 0;
+        int discarded$74 = 0;
+        int discarded$75 = 0;
+        int discarded$76 = 0;
+        int discarded$77 = 0;
+        int discarded$78 = 0;
+        int discarded$79 = 0;
+        int discarded$80 = 0;
+        int discarded$81 = 0;
+        int discarded$82 = 0;
+        int discarded$83 = 0;
+        int discarded$84 = 0;
+        int discarded$85 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -51,34 +92,34 @@ final class pb extends pg {
           var6 = var2 + 160;
           var7 = 320;
           wm.field_H[6].c(var6, var4, var7, var5);
-          int discarded$45 = mc.field_b.a(sn.field_L, var6, var4 - -32, var7, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
+          discarded$45 = mc.field_b.a(sn.field_L, var6, var4 - -32, var7, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
           if ((2 & ch.field_b) <= 0) {
             if (p.field_j == null) {
               L1: {
                 var4 = -mc.field_b.field_C - 32 + (64 + (128 + (bo.field_d + 32)));
-                int discarded$46 = mc.field_b.a("Orb coins to purchase", var6 + 64, var4, var7 - 80, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
+                discarded$46 = mc.field_b.a("Orb coins to purchase", var6 + 32 - -32, var4, var7 - 80, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
                 ih.field_e.c(var6 + 16, -16 + mc.field_b.field_C / 2 + var4 + 16);
-                int discarded$47 = mc.field_b.a(Integer.toString(cb.field_f), var6 - -16, 16 + (mc.field_b.field_C / 2 + (var4 + -16)), 32, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-                if ((ch.field_b & 2) <= 0) {
+                discarded$47 = mc.field_b.a(Integer.toString(cb.field_f), var6 - -16, 16 + (mc.field_b.field_C / 2 + (var4 + -16)), 32, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                if (-1 <= (ch.field_b & 2 ^ -1)) {
                   break L1;
                 } else {
                   mc.field_b.a("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
                   var1 += 16;
                   var4 = 64 + (128 + bo.field_d + 32);
                   wm.field_H[6].c(var2 + 16, var4 - -16, 216, 32);
-                  int discarded$48 = mc.field_b.a("Purchase", var2 - -16, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                  discarded$48 = mc.field_b.a("Purchase", var2 - -16, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                   break L1;
                 }
               }
               L2: {
-                if ((ch.field_b & 4) <= 0) {
+                if (-1 <= (ch.field_b & 4 ^ -1)) {
                   break L2;
                 } else {
                   mc.field_b.a("SHOW PURCHASE", 32, var1, 16777215, 0);
                   var1 += 16;
                   var4 = 64 + (32 + bo.field_d) - -128;
                   wm.field_H[15].c(var2 - -16, 16 + var4, 216, 32);
-                  int discarded$49 = mc.field_b.a("Purchase", var2 - -16, 16 + var4, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                  discarded$49 = mc.field_b.a("Purchase", var2 - -16, 16 + var4, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                   break L2;
                 }
               }
@@ -88,12 +129,12 @@ final class pb extends pg {
                 } else {
                   mc.field_b.a("SHOW CONFIRM", 32, var1, 16777215, 0);
                   var1 += 16;
-                  var4 = bo.field_d + 224;
+                  var4 = bo.field_d + 32 + 192;
                   var5 = 100;
                   wm.field_H[15].c(var2 + 16, 16 + var4, var5, 32);
-                  int discarded$50 = mc.field_b.a("Yes", var2 + 16, var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                  discarded$50 = mc.field_b.a("Yes", var2 + 16, var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                   wm.field_H[15].c(240 + var2 + 16 - (24 - -var5), 16 + var4, var5, 32);
-                  int discarded$51 = mc.field_b.a("No", -var5 + (-8 + (var2 + 240)), var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                  discarded$51 = mc.field_b.a("No", -var5 + (-8 + (var2 + 240)), var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                   break L3;
                 }
               }
@@ -105,31 +146,31 @@ final class pb extends pg {
                   var1 += 16;
                   var4 = 128 + (bo.field_d - -32) + 64;
                   wm.field_H[6].c(328, var4 - -16, 216, 32);
-                  int discarded$52 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-                  int discarded$53 = mc.field_b.a("Please wait for confirmation of your purchase.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+                  discarded$52 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                  discarded$53 = mc.field_b.a("Please wait for confirmation of your purchase.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
                   break L4;
                 }
               }
               if (param0 != 2341) {
                 L5: {
                   pb.a(-26);
-                  if ((ch.field_b & 32) <= 0) {
+                  if ((ch.field_b & 32 ^ -1) >= -1) {
                     break L5;
                   } else {
                     mc.field_b.a("SHOW COMPLETE", 32, var1, 16777215, 0);
                     var1 += 16;
                     var4 = 64 + (128 + bo.field_d) - -32;
-                    int discarded$54 = mc.field_b.a("Purchase completed.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+                    discarded$54 = mc.field_b.a("Purchase completed.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
                     break L5;
                   }
                 }
                 L6: {
-                  if ((ch.field_b & 64) > 0) {
+                  if ((ch.field_b & 64 ^ -1) < -1) {
                     mc.field_b.a("SHOW EXIT", 32, var1, 16777215, 0);
                     var1 += 16;
-                    var4 = bo.field_d + 224;
+                    var4 = bo.field_d + 160 + 64;
                     wm.field_H[15].c(328, 16 + var4, 216, 32);
-                    int discarded$55 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                    discarded$55 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                     break L6;
                   } else {
                     break L6;
@@ -138,23 +179,23 @@ final class pb extends pg {
                 return;
               } else {
                 L7: {
-                  if ((ch.field_b & 32) <= 0) {
+                  if ((ch.field_b & 32 ^ -1) >= -1) {
                     break L7;
                   } else {
                     mc.field_b.a("SHOW COMPLETE", 32, var1, 16777215, 0);
                     var1 += 16;
                     var4 = 64 + (128 + bo.field_d) - -32;
-                    int discarded$56 = mc.field_b.a("Purchase completed.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+                    discarded$56 = mc.field_b.a("Purchase completed.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
                     break L7;
                   }
                 }
                 L8: {
-                  if ((ch.field_b & 64) > 0) {
+                  if ((ch.field_b & 64 ^ -1) < -1) {
                     mc.field_b.a("SHOW EXIT", 32, var1, 16777215, 0);
                     var1 += 16;
-                    var4 = bo.field_d + 224;
+                    var4 = bo.field_d + 160 + 64;
                     wm.field_H[15].c(328, 16 + var4, 216, 32);
-                    int discarded$57 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                    discarded$57 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                     break L8;
                   } else {
                     break L8;
@@ -164,31 +205,31 @@ final class pb extends pg {
               }
             } else {
               L9: {
-                int discarded$58 = mc.field_b.a(p.field_j, var6, 64 + var4, var7, 80, 16777215, 0, 1, 1, mc.field_b.field_C);
+                discarded$58 = mc.field_b.a(p.field_j, var6, 64 + var4, var7, 80, 16777215, 0, 1, 1, mc.field_b.field_C);
                 var4 = -mc.field_b.field_C - 32 + (64 + (128 + (bo.field_d + 32)));
-                int discarded$59 = mc.field_b.a("Orb coins to purchase", var6 + 64, var4, var7 - 80, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
+                discarded$59 = mc.field_b.a("Orb coins to purchase", var6 + 32 - -32, var4, var7 - 80, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
                 ih.field_e.c(var6 + 16, -16 + mc.field_b.field_C / 2 + var4 + 16);
-                int discarded$60 = mc.field_b.a(Integer.toString(cb.field_f), var6 - -16, 16 + (mc.field_b.field_C / 2 + (var4 + -16)), 32, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-                if ((ch.field_b & 2) <= 0) {
+                discarded$60 = mc.field_b.a(Integer.toString(cb.field_f), var6 - -16, 16 + (mc.field_b.field_C / 2 + (var4 + -16)), 32, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                if (-1 <= (ch.field_b & 2 ^ -1)) {
                   break L9;
                 } else {
                   mc.field_b.a("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
                   var1 += 16;
                   var4 = 64 + (128 + bo.field_d + 32);
                   wm.field_H[6].c(var2 + 16, var4 - -16, 216, 32);
-                  int discarded$61 = mc.field_b.a("Purchase", var2 - -16, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                  discarded$61 = mc.field_b.a("Purchase", var2 - -16, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                   break L9;
                 }
               }
               L10: {
-                if ((ch.field_b & 4) <= 0) {
+                if (-1 <= (ch.field_b & 4 ^ -1)) {
                   break L10;
                 } else {
                   mc.field_b.a("SHOW PURCHASE", 32, var1, 16777215, 0);
                   var1 += 16;
                   var4 = 64 + (32 + bo.field_d) - -128;
                   wm.field_H[15].c(var2 - -16, 16 + var4, 216, 32);
-                  int discarded$62 = mc.field_b.a("Purchase", var2 - -16, 16 + var4, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                  discarded$62 = mc.field_b.a("Purchase", var2 - -16, 16 + var4, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                   break L10;
                 }
               }
@@ -198,12 +239,12 @@ final class pb extends pg {
                 } else {
                   mc.field_b.a("SHOW CONFIRM", 32, var1, 16777215, 0);
                   var1 += 16;
-                  var4 = bo.field_d + 224;
+                  var4 = bo.field_d + 32 + 192;
                   var5 = 100;
                   wm.field_H[15].c(var2 + 16, 16 + var4, var5, 32);
-                  int discarded$63 = mc.field_b.a("Yes", var2 + 16, var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                  discarded$63 = mc.field_b.a("Yes", var2 + 16, var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                   wm.field_H[15].c(240 + var2 + 16 - (24 - -var5), 16 + var4, var5, 32);
-                  int discarded$64 = mc.field_b.a("No", -var5 + (-8 + (var2 + 240)), var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                  discarded$64 = mc.field_b.a("No", -var5 + (-8 + (var2 + 240)), var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                   break L11;
                 }
               }
@@ -215,8 +256,8 @@ final class pb extends pg {
                   var1 += 16;
                   var4 = 128 + (bo.field_d - -32) + 64;
                   wm.field_H[6].c(328, var4 - -16, 216, 32);
-                  int discarded$65 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-                  int discarded$66 = mc.field_b.a("Please wait for confirmation of your purchase.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+                  discarded$65 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                  discarded$66 = mc.field_b.a("Please wait for confirmation of your purchase.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
                   break L12;
                 }
               }
@@ -229,23 +270,23 @@ final class pb extends pg {
                 }
               }
               L14: {
-                if ((ch.field_b & 32) <= 0) {
+                if ((ch.field_b & 32 ^ -1) >= -1) {
                   break L14;
                 } else {
                   mc.field_b.a("SHOW COMPLETE", 32, var1, 16777215, 0);
                   var1 += 16;
                   var4 = 64 + (128 + bo.field_d) - -32;
-                  int discarded$67 = mc.field_b.a("Purchase completed.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+                  discarded$67 = mc.field_b.a("Purchase completed.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
                   break L14;
                 }
               }
               L15: {
-                if ((ch.field_b & 64) > 0) {
+                if ((ch.field_b & 64 ^ -1) < -1) {
                   mc.field_b.a("SHOW EXIT", 32, var1, 16777215, 0);
                   var1 += 16;
-                  var4 = bo.field_d + 224;
+                  var4 = bo.field_d + 160 + 64;
                   wm.field_H[15].c(328, 16 + var4, 216, 32);
-                  int discarded$68 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                  discarded$68 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                   break L15;
                 } else {
                   break L15;
@@ -255,28 +296,28 @@ final class pb extends pg {
             }
           } else {
             L16: {
-              int discarded$69 = mc.field_b.a("This item is only availiable to members.", var6, 64 + var4, var7, 80, 16777215, 0, 1, 1, mc.field_b.field_C);
+              discarded$69 = mc.field_b.a("This item is only availiable to members.", var6, 64 + var4, var7, 80, 16777215, 0, 1, 1, mc.field_b.field_C);
               ii.field_d.f(var6 - (-(var7 / 2) + 16), 80 + (var4 - -64));
-              if ((ch.field_b & 2) <= 0) {
+              if (-1 <= (ch.field_b & 2 ^ -1)) {
                 break L16;
               } else {
                 mc.field_b.a("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
                 var1 += 16;
                 var4 = 64 + (128 + bo.field_d + 32);
                 wm.field_H[6].c(var2 + 16, var4 - -16, 216, 32);
-                int discarded$70 = mc.field_b.a("Purchase", var2 - -16, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                discarded$70 = mc.field_b.a("Purchase", var2 - -16, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                 break L16;
               }
             }
             L17: {
-              if ((ch.field_b & 4) <= 0) {
+              if (-1 <= (ch.field_b & 4 ^ -1)) {
                 break L17;
               } else {
                 mc.field_b.a("SHOW PURCHASE", 32, var1, 16777215, 0);
                 var1 += 16;
                 var4 = 64 + (32 + bo.field_d) - -128;
                 wm.field_H[15].c(var2 - -16, 16 + var4, 216, 32);
-                int discarded$71 = mc.field_b.a("Purchase", var2 - -16, 16 + var4, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                discarded$71 = mc.field_b.a("Purchase", var2 - -16, 16 + var4, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                 break L17;
               }
             }
@@ -286,12 +327,12 @@ final class pb extends pg {
               } else {
                 mc.field_b.a("SHOW CONFIRM", 32, var1, 16777215, 0);
                 var1 += 16;
-                var4 = bo.field_d + 224;
+                var4 = bo.field_d + 32 + 192;
                 var5 = 100;
                 wm.field_H[15].c(var2 + 16, 16 + var4, var5, 32);
-                int discarded$72 = mc.field_b.a("Yes", var2 + 16, var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                discarded$72 = mc.field_b.a("Yes", var2 + 16, var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                 wm.field_H[15].c(240 + var2 + 16 - (24 - -var5), 16 + var4, var5, 32);
-                int discarded$73 = mc.field_b.a("No", -var5 + (-8 + (var2 + 240)), var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                discarded$73 = mc.field_b.a("No", -var5 + (-8 + (var2 + 240)), var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                 break L18;
               }
             }
@@ -303,8 +344,8 @@ final class pb extends pg {
                 var1 += 16;
                 var4 = 128 + (bo.field_d - -32) + 64;
                 wm.field_H[6].c(328, var4 - -16, 216, 32);
-                int discarded$74 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-                int discarded$75 = mc.field_b.a("Please wait for confirmation of your purchase.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+                discarded$74 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                discarded$75 = mc.field_b.a("Please wait for confirmation of your purchase.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
                 break L19;
               }
             }
@@ -317,23 +358,23 @@ final class pb extends pg {
               }
             }
             L21: {
-              if ((ch.field_b & 32) <= 0) {
+              if ((ch.field_b & 32 ^ -1) >= -1) {
                 break L21;
               } else {
                 mc.field_b.a("SHOW COMPLETE", 32, var1, 16777215, 0);
                 var1 += 16;
                 var4 = 64 + (128 + bo.field_d) - -32;
-                int discarded$76 = mc.field_b.a("Purchase completed.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+                discarded$76 = mc.field_b.a("Purchase completed.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
                 break L21;
               }
             }
             L22: {
-              if ((ch.field_b & 64) > 0) {
+              if ((ch.field_b & 64 ^ -1) < -1) {
                 mc.field_b.a("SHOW EXIT", 32, var1, 16777215, 0);
                 var1 += 16;
-                var4 = bo.field_d + 224;
+                var4 = bo.field_d + 160 + 64;
                 wm.field_H[15].c(328, 16 + var4, 216, 32);
-                int discarded$77 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+                discarded$77 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
                 break L22;
               } else {
                 break L22;
@@ -343,26 +384,26 @@ final class pb extends pg {
           }
         } else {
           L23: {
-            if ((ch.field_b & 2) <= 0) {
+            if (-1 <= (ch.field_b & 2 ^ -1)) {
               break L23;
             } else {
               mc.field_b.a("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
               var1 += 16;
               var4 = 64 + (128 + bo.field_d + 32);
               wm.field_H[6].c(var2 + 16, var4 - -16, 216, 32);
-              int discarded$78 = mc.field_b.a("Purchase", var2 - -16, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+              discarded$78 = mc.field_b.a("Purchase", var2 - -16, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
               break L23;
             }
           }
           L24: {
-            if ((ch.field_b & 4) <= 0) {
+            if (-1 <= (ch.field_b & 4 ^ -1)) {
               break L24;
             } else {
               mc.field_b.a("SHOW PURCHASE", 32, var1, 16777215, 0);
               var1 += 16;
               var4 = 64 + (32 + bo.field_d) - -128;
               wm.field_H[15].c(var2 - -16, 16 + var4, 216, 32);
-              int discarded$79 = mc.field_b.a("Purchase", var2 - -16, 16 + var4, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+              discarded$79 = mc.field_b.a("Purchase", var2 - -16, 16 + var4, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
               break L24;
             }
           }
@@ -372,12 +413,12 @@ final class pb extends pg {
             } else {
               mc.field_b.a("SHOW CONFIRM", 32, var1, 16777215, 0);
               var1 += 16;
-              var4 = bo.field_d + 224;
+              var4 = bo.field_d + 32 + 192;
               var5 = 100;
               wm.field_H[15].c(var2 + 16, 16 + var4, var5, 32);
-              int discarded$80 = mc.field_b.a("Yes", var2 + 16, var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+              discarded$80 = mc.field_b.a("Yes", var2 + 16, var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
               wm.field_H[15].c(240 + var2 + 16 - (24 - -var5), 16 + var4, var5, 32);
-              int discarded$81 = mc.field_b.a("No", -var5 + (-8 + (var2 + 240)), var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+              discarded$81 = mc.field_b.a("No", -var5 + (-8 + (var2 + 240)), var4 - -16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
               break L25;
             }
           }
@@ -389,8 +430,8 @@ final class pb extends pg {
               var1 += 16;
               var4 = 128 + (bo.field_d - -32) + 64;
               wm.field_H[6].c(328, var4 - -16, 216, 32);
-              int discarded$82 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-              int discarded$83 = mc.field_b.a("Please wait for confirmation of your purchase.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+              discarded$82 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+              discarded$83 = mc.field_b.a("Please wait for confirmation of your purchase.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
               break L26;
             }
           }
@@ -403,23 +444,23 @@ final class pb extends pg {
             }
           }
           L28: {
-            if ((ch.field_b & 32) <= 0) {
+            if ((ch.field_b & 32 ^ -1) >= -1) {
               break L28;
             } else {
               mc.field_b.a("SHOW COMPLETE", 32, var1, 16777215, 0);
               var1 += 16;
               var4 = 64 + (128 + bo.field_d) - -32;
-              int discarded$84 = mc.field_b.a("Purchase completed.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
+              discarded$84 = mc.field_b.a("Purchase completed.", 16 + var2, var4, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
               break L28;
             }
           }
           L29: {
-            if ((ch.field_b & 64) > 0) {
+            if ((ch.field_b & 64 ^ -1) < -1) {
               mc.field_b.a("SHOW EXIT", 32, var1, 16777215, 0);
               var1 += 16;
-              var4 = bo.field_d + 224;
+              var4 = bo.field_d + 160 + 64;
               wm.field_H[15].c(328, 16 + var4, 216, 32);
-              int discarded$85 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
+              discarded$85 = mc.field_b.a("Cancel", 328, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
               break L29;
             } else {
               break L29;
@@ -431,6 +472,12 @@ final class pb extends pg {
 
     public static void a(byte param0) {
         field_l = null;
+        if (param0 < 52) {
+            field_h = -34;
+            field_i = null;
+            field_m = null;
+            return;
+        }
         field_i = null;
         field_m = null;
     }
@@ -438,13 +485,14 @@ final class pb extends pg {
     final static void a(int param0, int param1, f param2) {
         ab var6 = null;
         int var4 = 0;
+        int discarded$0 = 0;
         try {
             var6 = he.field_e;
             ab var3 = var6;
             var6.b((byte) -80, param1);
             var6.field_g = var6.field_g + 1;
             if (param0 != 32) {
-                Object var5 = null;
+                f var5 = (f) null;
                 pb.a(-102, -101, (f) null);
             }
             var4 = var6.field_g;
@@ -455,12 +503,12 @@ final class pb extends pg {
             } else {
                 var6.f(0, (byte) -92);
             }
-            int discarded$0 = var6.a(true, var4);
+            discarded$0 = var6.a(true, var4);
             var6.field_g = var6.field_g - 4;
             param2.field_j = var6.d(-10674);
             var6.b(var6.field_g + -var4, (byte) 43);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "pb.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "pb.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -468,10 +516,6 @@ final class pb extends pg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = new vn();
         field_i = "<%0> is offering an unrated rematch.";
         field_h = 0;

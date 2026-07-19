@@ -13,24 +13,26 @@ final class qh extends d implements ih, cg {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        Object stackIn_2_0 = null;
+        String stackIn_2_0 = null;
         String stackIn_7_0 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         String stackOut_6_0 = null;
-        Object stackOut_1_0 = null;
+        String stackOut_1_0 = null;
         try {
           L0: {
-            var2_int = ((qh) this).field_m.g((byte) 12);
+            var2_int = this.field_m.g((byte) 12);
             if (param0 == 0) {
               L1: {
-                var3 = ((qh) this).field_m.a(false);
-                var4 = ((qh) this).field_m.f((byte) 94);
+                var3 = this.field_m.a(false);
+                var4 = this.field_m.f((byte) 94);
                 var5 = df.a(true);
                 if (var4 < 1890) {
                   break L1;
                 } else {
                   if (var4 <= var5 - 3) {
                     if (!fk.a(var4, (byte) -40, var2_int, var3)) {
+                      decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
                       return null;
@@ -40,60 +42,83 @@ final class qh extends d implements ih, cg {
                   }
                 }
               }
-              stackOut_6_0 = sk.a(new String[2], fm.field_d, param0 + 122);
+              stackOut_6_0 = sk.a(new String[]{"1890", Integer.toString(-3 + var5)}, fm.field_d, param0 + 122);
               stackIn_7_0 = stackOut_6_0;
-              return stackIn_7_0;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (String) null;
               stackIn_2_0 = stackOut_1_0;
-              return (String) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            decompiledRegionSelector0 = 2;
             break L2;
           }
         }
-        return nm.field_y;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0;
+          } else {
+            return nm.field_y;
+          }
+        }
     }
 
     public final void a(byte param0, nn param1) {
         try {
             int var3_int = -10 / ((-18 - param0) / 63);
-            ((qh) this).a(125);
+            this.a(125);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "qh.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "qh.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(int param0, int param1, byte param2, int param3, int param4, boolean param5, int param6) {
-        if (!ak.a(3058)) {
-            return param5;
-        }
-        we.a(param5, 15, -2, 13);
-        if (null == hd.field_s) {
-            ej.a(param5, 13, (byte) 107);
-            mn.a(param5, -1, 14);
+        L0: {
+          if (!ak.a(3058)) {
+            break L0;
+          } else {
+            L1: {
+              we.a(param5, param0, param2 + 28, param4);
+              if (null == hd.field_s) {
+                break L1;
+              } else {
+                if (!hd.field_s.a(param4, param1, param5, (byte) 53, param6)) {
+                  break L1;
+                } else {
+                  param5 = false;
+                  gg.c((byte) 43);
+                  break L1;
+                }
+              }
+            }
+            ej.a(param5, param4, (byte) 107);
+            mn.a(param5, -1, param3);
             param5 = false;
-            return param5;
+            break L0;
+          }
         }
-        if (!hd.field_s.a(13, 11, param5, (byte) 53, 0)) {
-            ej.a(param5, 13, (byte) 107);
-            mn.a(param5, -1, 14);
-            param5 = false;
-            return param5;
+        if (param2 != -30) {
+          return true;
+        } else {
+          return param5;
         }
-        param5 = false;
-        gg.c((byte) 43);
-        ej.a(param5, 13, (byte) 107);
-        mn.a(param5, -1, 14);
-        param5 = false;
-        return param5;
     }
 
     public static void d(byte param0) {
+        if (param0 != -34) {
+            field_k = false;
+            field_l = null;
+            return;
+        }
         field_l = null;
     }
 
@@ -103,7 +128,7 @@ final class qh extends d implements ih, cg {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        Object var12 = null;
+        rb var12 = null;
         pf var13 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -138,7 +163,7 @@ final class qh extends d implements ih, cg {
         String stackOut_7_2 = null;
         try {
           L0: {
-            gd.a(param0.field_Rb, 255, param0.field_Yb, -1, param6, (int[]) null, param0.field_Nb, (hl) (Object) param0, -1);
+            gd.a(param0.field_Rb, 255, param0.field_Yb, -1, param6, (int[]) null, param0.field_Nb, param0, -1);
             hd.field_s.a(19, true);
             hd.field_s.a(0, (int[]) null, true);
             hd.field_s.a(true);
@@ -151,7 +176,7 @@ final class qh extends d implements ih, cg {
             if (param3 < -48) {
               break L0;
             } else {
-              var12 = null;
+              var12 = (rb) null;
               qh.a((gd) null, 6, 79, 49, 30, -92, (rb) null);
               return;
             }
@@ -160,23 +185,23 @@ final class qh extends d implements ih, cg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var7;
+            stackOut_3_0 = (RuntimeException) (var7);
             stackOut_3_1 = new StringBuilder().append("qh.B(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -185,23 +210,23 @@ final class qh extends d implements ih, cg {
             }
           }
           L2: {
-            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param6 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -209,7 +234,7 @@ final class qh extends d implements ih, cg {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
@@ -217,25 +242,37 @@ final class qh extends d implements ih, cg {
         if (param0 != 13074) {
             return false;
         }
-        return ((qh) this).field_m.h(-30886);
+        return this.field_m.h(-30886);
     }
 
     final static void a(boolean param0, byte param1, int param2, ri param3, int param4) {
         try {
-            bn.field_c.a(param3, 1048576, false, 256, 1000000, (byte) -128);
-            int var5_int = -120;
+            bn.field_c.a(param3, param2, !param0 ? true : false, param4, 1000000, (byte) -128);
+            int var5_int = 120 / ((param1 - -1) / 47);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "qh.D(" + true + ',' + -56 + ',' + 1048576 + ',' + (param3 != null ? "{...}" : "null") + ',' + 256 + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "qh.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        ck.field_bb.a((byte) -85, 640, 0, param3, param0);
-        if (gl.field_o != null) {
-          gl.field_o.a(param5, param3, param5 + -d.field_e, param1, param3, 0);
-          return;
+        rb var8 = null;
+        ck.field_bb.a((byte) -85, param2, param6, param3, param0);
+        if (param4 == 1000000) {
+          if (gl.field_o != null) {
+            gl.field_o.a(param5, param3, param5 + -d.field_e, param1, param3, 0);
+            return;
+          } else {
+            return;
+          }
         } else {
-          return;
+          var8 = (rb) null;
+          qh.a((gd) null, -102, -101, -48, -5, -49, (rb) null);
+          if (gl.field_o == null) {
+            return;
+          } else {
+            gl.field_o.a(param5, param3, param5 + -d.field_e, param1, param3, 0);
+            return;
+          }
         }
     }
 
@@ -263,7 +300,7 @@ final class qh extends d implements ih, cg {
               if (param1 == 101) {
                 break L1;
               } else {
-                ((qh) this).field_m = null;
+                this.field_m = (hn) null;
                 break L1;
               }
             }
@@ -273,23 +310,23 @@ final class qh extends d implements ih, cg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("qh.P(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -297,7 +334,7 @@ final class qh extends d implements ih, cg {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -317,41 +354,51 @@ final class qh extends d implements ih, cg {
         jk stackOut_9_0 = null;
         try {
           L0: {
-            var2_int = ((qh) this).field_m.g((byte) 12);
-            var3 = ((qh) this).field_m.a(param0);
-            var4 = ((qh) this).field_m.f((byte) 66);
+            var2_int = this.field_m.g((byte) 12);
+            var3 = this.field_m.a(param0);
+            var4 = this.field_m.f((byte) 66);
             var5 = df.a(true);
-            if (var4 < 1890) {
+            if ((var4 ^ -1) > -1891) {
               stackOut_2_0 = db.field_h;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (var4 > -3 + var5) {
                 stackOut_6_0 = db.field_h;
                 stackIn_7_0 = stackOut_6_0;
-                return stackIn_7_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (fk.a(var4, (byte) -40, var2_int, var3)) {
-                  decompiledRegionSelector0 = 0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   stackOut_9_0 = db.field_h;
                   stackIn_10_0 = stackOut_9_0;
-                  decompiledRegionSelector0 = 1;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 }
               }
             }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return db.field_h;
         }
         if (decompiledRegionSelector0 == 0) {
-          return pf.field_a;
+          return stackIn_3_0;
         } else {
-          return stackIn_10_0;
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return pf.field_a;
+            } else {
+              return stackIn_10_0;
+            }
+          }
         }
     }
 
@@ -359,10 +406,6 @@ final class qh extends d implements ih, cg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "<%0> wants to join";
     }
 }

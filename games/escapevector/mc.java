@@ -13,13 +13,12 @@ final class mc {
         field_c = null;
         field_b = null;
         field_a = null;
+        if (param0 != 8123) {
+            field_d = (ed[]) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mc.A(";
         field_c = new ka();
         field_b = new hf();

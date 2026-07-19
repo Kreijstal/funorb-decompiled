@@ -20,10 +20,6 @@ final class m {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "m.A(";
         field_a = "Your rating is <%0>";
         field_d = false;

@@ -26,7 +26,7 @@ final class kb {
               break L0;
             }
           }
-          q.field_N.b((lk) (Object) q.field_A, false);
+          q.field_N.b(q.field_A, false);
           return;
         } else {
           L1: {
@@ -38,16 +38,12 @@ final class kb {
               break L1;
             }
           }
-          q.field_N.b((lk) (Object) q.field_A, false);
+          q.field_N.b(q.field_A, false);
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new uf();
     }
 }

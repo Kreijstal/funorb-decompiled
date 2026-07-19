@@ -17,11 +17,12 @@ class gh extends uc {
             }
             super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "gh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "gh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void d(int param0) {
+        int fieldTemp$5 = 0;
         pc var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -44,7 +45,7 @@ class gh extends uc {
                 break L0;
               } else {
                 var1.g(8, 15514);
-                int fieldTemp$5 = var1.field_m + 1;
+                fieldTemp$5 = var1.field_m + 1;
                 var1.field_m = var1.field_m + 1;
                 var2 = fieldTemp$5;
                 ao.a(var1, -20);
@@ -56,13 +57,16 @@ class gh extends uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1_ref, "gh.B(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) var1_ref), "gh.B(" + param0 + ')');
         }
     }
 
     public static void c(int param0) {
         field_q = null;
         field_s = null;
+        if (param0 >= -72) {
+            return;
+        }
         field_w = null;
         field_u = null;
         field_r = null;
@@ -75,21 +79,21 @@ class gh extends uc {
             Throwable var2 = null;
             Runtime var2_ref = null;
             Long var3 = null;
-            Object var4 = null;
+            Object[] var4 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
                 L1: {
-                  var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
+                  var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
                   if (var1 == null) {
                     break L1;
                   } else {
                     try {
                       L2: {
                         var2_ref = Runtime.getRuntime();
-                        var4 = null;
-                        var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
+                        var4 = (Object[]) null;
+                        var3 = (Long) (var1.invoke((Object) (var2_ref), (Object[]) null));
                         ri.field_h = (int)(var3.longValue() / 1048576L) + 1;
                         decompiledRegionSelector0 = 0;
                         break L2;
@@ -103,7 +107,12 @@ class gh extends uc {
                       }
                     }
                     if (decompiledRegionSelector0 == 0) {
-                      return;
+                      if (param0 != 90) {
+                        gh.d(-108);
+                        return;
+                      } else {
+                        return;
+                      }
                     } else {
                       break L1;
                     }
@@ -117,6 +126,12 @@ class gh extends uc {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
                 break L4;
               }
+            }
+            if (param0 == 90) {
+              return;
+            } else {
+              gh.d(-108);
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -134,10 +149,6 @@ class gh extends uc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = new int[8192];
         field_s = new wm(14, 0, 4, 1);
         field_w = new String[]{"Welcome to Pixelate!", null, "Alternate Controls", null, null, null};

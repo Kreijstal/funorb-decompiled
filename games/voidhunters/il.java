@@ -8,6 +8,7 @@ final class il extends le {
     private int field_j;
 
     final void a(int param0, int param1, ds param2) {
+        int[] discarded$1 = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -33,24 +34,24 @@ final class il extends le {
             L1: {
               var4_int = param0;
               if (0 != var4_int) {
-                if (var4_int != 1) {
-                  if (var4_int == 2) {
-                    ((il) this).field_j = param2.e(1869);
+                if ((var4_int ^ -1) != -2) {
+                  if (-3 == (var4_int ^ -1)) {
+                    this.field_j = param2.e(1869);
                     break L1;
                   } else {
-                    if (var4_int != 3) {
+                    if ((var4_int ^ -1) != -4) {
                       break L1;
                     } else {
-                      ((il) this).field_i = param2.e(1869);
+                      this.field_i = param2.e(1869);
                       break L1;
                     }
                   }
                 } else {
-                  ((il) this).field_k = param2.e(1869);
+                  this.field_k = param2.e(1869);
                   break L1;
                 }
               } else {
-                ((il) this).field_l = param2.e(1869);
+                this.field_l = param2.e(1869);
                 break L1;
               }
             }
@@ -58,7 +59,7 @@ final class il extends le {
               if (param1 <= -60) {
                 break L2;
               } else {
-                int[] discarded$1 = ((il) this).a(-126, false);
+                discarded$1 = this.a(-126, false);
                 break L2;
               }
             }
@@ -68,23 +69,23 @@ final class il extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var4;
+            stackOut_15_0 = (RuntimeException) (var4);
             stackOut_15_1 = new StringBuilder().append("il.F(").append(param0).append(',').append(param1).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param2 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -92,7 +93,7 @@ final class il extends le {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
     }
 
@@ -123,8 +124,6 @@ final class il extends le {
         int[] var31 = null;
         int[] var32 = null;
         int[] var33 = null;
-        int[] var34 = null;
-        int[] var35 = null;
         int stackIn_20_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_19_0 = 0;
@@ -136,7 +135,7 @@ final class il extends le {
               dda.a(param3, 74);
               var7_int = 0;
               var8 = param3 + -param6;
-              if (var8 < 0) {
+              if ((var8 ^ -1) > -1) {
                 var8 = 0;
                 break L1;
               } else {
@@ -150,15 +149,13 @@ final class il extends le {
               var12 = -var8;
               var13 = -1;
               var14 = -1;
-              var35 = rba.field_b[param5];
-              var34 = var35;
-              var33 = var34;
+              var33 = rba.field_b[param5];
               var26 = var33;
               var15 = var26;
               var16 = -var8 + param4;
               ww.a(param1, var16, var15, (byte) 75, param4 + -param3);
               var17 = param4 + var8;
-              ww.a(param0, var17, var35, (byte) 75, var16);
+              ww.a(param0, var17, var33, (byte) 75, var16);
               if (param2 <= 0) {
                 break L2;
               } else {
@@ -166,7 +163,7 @@ final class il extends le {
                 break L2;
               }
             }
-            ww.a(param1, param3 + param4, var35, (byte) 75, var17);
+            ww.a(param1, param3 + param4, var33, (byte) 75, var17);
             L3: while (true) {
               if (var9 <= var7_int) {
                 break L0;
@@ -176,13 +173,13 @@ final class il extends le {
                   var13 += 2;
                   var10 = var10 + var13;
                   var12 = var12 + var14;
-                  if (var12 < 0) {
+                  if ((var12 ^ -1) > -1) {
                     break L4;
                   } else {
                     if (1 <= var11) {
                       dw.field_a[var11] = var7_int;
                       var11--;
-                      var12 = var12 - (var11 << 1);
+                      var12 = var12 - (var11 << -1622200991);
                       break L4;
                     } else {
                       break L4;
@@ -195,7 +192,7 @@ final class il extends le {
                     break L5;
                   } else {
                     var9--;
-                    var10 = var10 - (var9 << 1);
+                    var10 = var10 - (var9 << 1438461889);
                     if (var9 < var8) {
                       var29 = rba.field_b[var9 + param5];
                       var30 = rba.field_b[param5 - var9];
@@ -259,16 +256,16 @@ final class il extends le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var7, "il.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw rta.a((Throwable) ((Object) var7), "il.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     public il() {
         super(0, true);
-        ((il) this).field_k = 20;
-        ((il) this).field_i = 0;
-        ((il) this).field_l = 1365;
-        ((il) this).field_j = 0;
+        this.field_k = 20;
+        this.field_i = 0;
+        this.field_l = 1365;
+        this.field_j = 0;
     }
 
     final int[] a(int param0, boolean param1) {
@@ -303,9 +300,9 @@ final class il extends le {
         var14 = VoidHunters.field_G;
         if (param1) {
           L0: {
-            var15 = ((il) this).field_f.a((byte) 16, param0);
+            var15 = this.field_f.a((byte) 16, param0);
             var3 = var15;
-            if (!((il) this).field_f.field_e) {
+            if (!this.field_f.field_e) {
               break L0;
             } else {
               var4 = 0;
@@ -313,41 +310,41 @@ final class il extends le {
                 if (var4 >= hob.field_d) {
                   break L0;
                 } else {
-                  var5 = ((il) this).field_j + (grb.field_l[var4] << 12) / ((il) this).field_l;
-                  var6 = ((il) this).field_i + (sj.field_p[param0] << 12) / ((il) this).field_l;
+                  var5 = this.field_j + (grb.field_l[var4] << -2141664500) / this.field_l;
+                  var6 = this.field_i + (sj.field_p[param0] << 909458988) / this.field_l;
                   var7 = var5;
                   var8 = var6;
                   var9 = var5;
                   var10 = var6;
-                  var11 = var5 * var5 >> 12;
-                  var12 = var6 * var6 >> 12;
+                  var11 = var5 * var5 >> -1837378996;
+                  var12 = var6 * var6 >> 224328940;
                   var13 = 0;
                   L2: while (true) {
                     L3: {
-                      if (var11 - -var12 >= 16384) {
+                      if ((var11 - -var12 ^ -1) <= -16385) {
                         break L3;
                       } else {
-                        if (((il) this).field_k <= var13) {
+                        if (this.field_k <= var13) {
                           break L3;
                         } else {
-                          var10 = var8 + 2 * (var10 * var9 >> 12);
+                          var10 = var8 + 2 * (var10 * var9 >> 1550652876);
                           var9 = var7 + -var12 + var11;
-                          var12 = var10 * var10 >> 12;
-                          var11 = var9 * var9 >> 12;
+                          var12 = var10 * var10 >> -1294602324;
+                          var11 = var9 * var9 >> 1068127020;
                           var13++;
                           continue L2;
                         }
                       }
                     }
                     L4: {
-                      stackOut_9_0 = (int[]) var15;
+                      stackOut_9_0 = (int[]) (var15);
                       stackOut_9_1 = var4;
                       stackIn_11_0 = stackOut_9_0;
                       stackIn_11_1 = stackOut_9_1;
                       stackIn_10_0 = stackOut_9_0;
                       stackIn_10_1 = stackOut_9_1;
-                      if (var13 >= -1 + ((il) this).field_k) {
-                        stackOut_11_0 = (int[]) (Object) stackIn_11_0;
+                      if (var13 >= -1 + this.field_k) {
+                        stackOut_11_0 = (int[]) ((Object) stackIn_11_0);
                         stackOut_11_1 = stackIn_11_1;
                         stackOut_11_2 = 0;
                         stackIn_12_0 = stackOut_11_0;
@@ -355,9 +352,9 @@ final class il extends le {
                         stackIn_12_2 = stackOut_11_2;
                         break L4;
                       } else {
-                        stackOut_10_0 = (int[]) (Object) stackIn_10_0;
+                        stackOut_10_0 = (int[]) ((Object) stackIn_10_0);
                         stackOut_10_1 = stackIn_10_1;
-                        stackOut_10_2 = (var13 << 12) / ((il) this).field_k;
+                        stackOut_10_2 = (var13 << 875452364) / this.field_k;
                         stackIn_12_0 = stackOut_10_0;
                         stackIn_12_1 = stackOut_10_1;
                         stackIn_12_2 = stackOut_10_2;
@@ -374,7 +371,7 @@ final class il extends le {
           }
           return var15;
         } else {
-          return null;
+          return (int[]) null;
         }
     }
 

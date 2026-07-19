@@ -6,25 +6,25 @@ final class af {
 
     final static void a(boolean param0, tc param1, int param2, int param3, java.awt.Component param4, int param5, int param6, qg param7) {
         try {
-            vn.a(22050, true, 10);
-            int var8_int = 0;
-            ub.field_n = vn.a(param7, param4, 0, 22050);
-            hm.field_n = vn.a(param7, param4, 1, 2048);
+            vn.a(param2, param0, 10);
+            int var8_int = 6 % ((-86 - param5) / 39);
+            ub.field_n = vn.a(param7, param4, 0, param3);
+            hm.field_n = vn.a(param7, param4, 1, param6);
             wa.field_j = new mb();
-            kc.field_U = 2048;
-            hm.field_n.a((qb) (Object) wa.field_j);
+            kc.field_U = param6;
+            hm.field_n.a(wa.field_j);
             ek.field_b = param1;
             ek.field_b.a(ql.field_d, 256);
-            ub.field_n.a((qb) (Object) ek.field_b);
+            ub.field_n.a(ek.field_b);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "af.A(" + true + ',' + (param1 != null ? "{...}" : "null") + ',' + 22050 + ',' + 22050 + ',' + (param4 != null ? "{...}" : "null") + ',' + -126 + ',' + 2048 + ',' + (param7 != null ? "{...}" : "null") + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "af.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 != 0) {
-            field_a = null;
+            field_a = (String) null;
         }
     }
 
@@ -40,6 +40,7 @@ final class af {
         int[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = DungeonAssault.field_K;
         try {
@@ -81,7 +82,7 @@ final class af {
                       var6 = 0;
                       var2 = var6;
                       L5: while (true) {
-                        if (var6 >= 8) {
+                        if (-9 >= (var6 ^ -1)) {
                           wa.field_a = false;
                           break L3;
                         } else {
@@ -98,23 +99,26 @@ final class af {
                   }
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) runtimeException, "af.B(" + param0 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "af.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Monster";
     }
 }

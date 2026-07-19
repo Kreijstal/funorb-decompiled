@@ -10,6 +10,7 @@ final class vva extends bob {
     private phb[] field_q;
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -65,7 +66,7 @@ final class vva extends bob {
             L2: {
               var6_int = stackIn_6_0;
               if (param1 instanceof htb) {
-                param4 = param4 & ((htb) (Object) param1).field_x;
+                param4 = param4 & ((htb) ((Object) param1)).field_x;
                 break L2;
               } else {
                 break L2;
@@ -73,16 +74,16 @@ final class vva extends bob {
             }
             L3: {
               if (!param4) {
-                stackOut_13_0 = ((vva) this).field_p;
+                stackOut_13_0 = this.field_p;
                 stackIn_14_0 = stackOut_13_0;
                 break L3;
               } else {
                 if (var6_int != 0) {
-                  stackOut_12_0 = ((vva) this).field_t;
+                  stackOut_12_0 = this.field_t;
                   stackIn_14_0 = stackOut_12_0;
                   break L3;
                 } else {
-                  stackOut_11_0 = ((vva) this).field_s;
+                  stackOut_11_0 = this.field_s;
                   stackIn_14_0 = stackOut_11_0;
                   break L3;
                 }
@@ -90,7 +91,7 @@ final class vva extends bob {
             }
             L4: {
               var8 = stackIn_14_0;
-              qt.a(((vva) this).field_q, var8, param1.field_r + (param3 - -(-((vva) this).field_q[0].field_n + param1.field_f >> 1)), param1.field_h, param2 - -param1.field_g, true);
+              qt.a(this.field_q, var8, param1.field_r + (param3 - -(-this.field_q[0].field_n + param1.field_f >> -656633055)), param1.field_h, param2 - -param1.field_g, true);
               if (!param4) {
                 stackOut_16_0 = 7105644;
                 stackIn_17_0 = stackOut_16_0;
@@ -102,30 +103,30 @@ final class vva extends bob {
               }
             }
             var9 = stackIn_17_0;
-            int discarded$1 = ((vva) this).field_d.a(param1.field_j, param2 - -param1.field_g, param1.field_r + param3 - 2, param1.field_h, param1.field_f, var9, -1, 1, 1, ((vva) this).field_d.field_k);
+            discarded$1 = this.field_d.a(param1.field_j, param2 - -param1.field_g, param1.field_r + param3 - 2, param1.field_h, param1.field_f, var9, -1, 1, 1, this.field_d.field_k);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var6;
+            stackOut_19_0 = (RuntimeException) (var6);
             stackOut_19_1 = new StringBuilder().append("vva.A(").append(param0).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L5;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -133,7 +134,7 @@ final class vva extends bob {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -142,16 +143,19 @@ final class vva extends bob {
     }
 
     public static void a(byte param0) {
+        if (param0 != 121) {
+            return;
+        }
         field_r = null;
         field_u = null;
     }
 
     private vva(int param0, int param1, int param2) {
-        ((vva) this).field_s = param0;
-        ((vva) this).field_q = eia.field_o;
-        ((vva) this).field_p = param2;
-        ((vva) this).field_d = vob.field_r;
-        ((vva) this).field_t = param1;
+        this.field_s = param0;
+        this.field_q = eia.field_o;
+        this.field_p = param2;
+        this.field_d = vob.field_r;
+        this.field_t = param1;
     }
 
     static {

@@ -18,16 +18,16 @@ final class ht implements Iterable {
                 param0.c((byte) -109);
             }
             if (param1 >= -14) {
-                field_a = null;
+                field_a = (String) null;
             }
-            var5 = ((ht) this).field_e[(int)((long)(((ht) this).field_d + -1) & param2)];
+            var5 = this.field_e[(int)((long)(this.field_d + -1) & param2)];
             param0.field_d = var5;
             param0.field_b = var5.field_b;
             param0.field_b.field_d = param0;
             param0.field_d.field_b = param0;
             param0.field_a = param2;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ht.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "ht.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -37,30 +37,30 @@ final class ht implements Iterable {
         int var6 = 0;
         var6 = Kickabout.field_G;
         if (param1 >= 1) {
-          var4 = ((ht) this).field_e[(int)(param0 & (long)(-1 + ((ht) this).field_d))];
-          ((ht) this).field_f = var4.field_d;
+          var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_d))];
+          this.field_f = var4.field_d;
           L0: while (true) {
-            if (var4 != ((ht) this).field_f) {
-              if (param0 == ((ht) this).field_f.field_a) {
-                var5 = ((ht) this).field_f;
-                ((ht) this).field_f = ((ht) this).field_f.field_d;
+            if (var4 != this.field_f) {
+              if (param0 == this.field_f.field_a) {
+                var5 = this.field_f;
+                this.field_f = this.field_f.field_d;
                 return var5;
               } else {
-                ((ht) this).field_f = ((ht) this).field_f.field_d;
+                this.field_f = this.field_f.field_d;
                 continue L0;
               }
             } else {
-              ((ht) this).field_f = null;
+              this.field_f = null;
               return null;
             }
           }
         } else {
-          return null;
+          return (gn) null;
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new ov((ht) this);
+        return (Iterator) ((Object) new ov((ht) (this)));
     }
 
     final static void a(boolean param0, byte param1) {
@@ -282,7 +282,7 @@ final class ht implements Iterable {
                                     break L12;
                                   }
                                 }
-                                hw.field_i = (int)hw.field_f >> 3;
+                                hw.field_i = (int)hw.field_f >> -291727741;
                                 return;
                               }
                             }
@@ -290,10 +290,10 @@ final class ht implements Iterable {
                           sp.i(-320);
                           if (0.0 != fw.field_G) {
                             fw.field_G = fw.field_G * -0.9;
-                            hw.field_i = (int)hw.field_f >> 3;
+                            hw.field_i = (int)hw.field_f >> -291727741;
                             return;
                           } else {
-                            hw.field_i = (int)hw.field_f >> 3;
+                            hw.field_i = (int)hw.field_f >> -291727741;
                             return;
                           }
                         }
@@ -360,7 +360,7 @@ final class ht implements Iterable {
                             break L17;
                           }
                         }
-                        hw.field_i = (int)hw.field_f >> 3;
+                        hw.field_i = (int)hw.field_f >> -291727741;
                         return;
                       }
                     }
@@ -399,18 +399,18 @@ final class ht implements Iterable {
                             break L20;
                           }
                         }
-                        hw.field_i = (int)hw.field_f >> 3;
+                        hw.field_i = (int)hw.field_f >> -291727741;
                         return;
                       }
                     }
                   }
                   sp.i(-320);
                   if (0.0 == fw.field_G) {
-                    hw.field_i = (int)hw.field_f >> 3;
+                    hw.field_i = (int)hw.field_f >> -291727741;
                     return;
                   } else {
                     fw.field_G = fw.field_G * -0.9;
-                    hw.field_i = (int)hw.field_f >> 3;
+                    hw.field_i = (int)hw.field_f >> -291727741;
                     return;
                   }
                 } else {
@@ -436,7 +436,7 @@ final class ht implements Iterable {
                         break L22;
                       }
                     }
-                    hw.field_i = (int)hw.field_f >> 3;
+                    hw.field_i = (int)hw.field_f >> -291727741;
                     return;
                   } else {
                     L23: {
@@ -449,7 +449,7 @@ final class ht implements Iterable {
                         break L23;
                       }
                     }
-                    hw.field_i = (int)hw.field_f >> 3;
+                    hw.field_i = (int)hw.field_f >> -291727741;
                     return;
                   }
                 }
@@ -540,7 +540,7 @@ final class ht implements Iterable {
                     break L31;
                   }
                 }
-                hw.field_i = (int)hw.field_f >> 3;
+                hw.field_i = (int)hw.field_f >> -291727741;
                 return;
               }
             } else {
@@ -605,7 +605,7 @@ final class ht implements Iterable {
                                 break L37;
                               }
                             }
-                            hw.field_i = (int)hw.field_f >> 3;
+                            hw.field_i = (int)hw.field_f >> -291727741;
                             return;
                           }
                         }
@@ -613,10 +613,10 @@ final class ht implements Iterable {
                       sp.i(-320);
                       if (0.0 != fw.field_G) {
                         fw.field_G = fw.field_G * -0.9;
-                        hw.field_i = (int)hw.field_f >> 3;
+                        hw.field_i = (int)hw.field_f >> -291727741;
                         return;
                       } else {
-                        hw.field_i = (int)hw.field_f >> 3;
+                        hw.field_i = (int)hw.field_f >> -291727741;
                         return;
                       }
                     } else {
@@ -684,7 +684,7 @@ final class ht implements Iterable {
                         break L42;
                       }
                     }
-                    hw.field_i = (int)hw.field_f >> 3;
+                    hw.field_i = (int)hw.field_f >> -291727741;
                     return;
                   } else {
                     jr.field_Gb = cq.field_f;
@@ -723,7 +723,7 @@ final class ht implements Iterable {
                           break L45;
                         }
                       }
-                      hw.field_i = (int)hw.field_f >> 3;
+                      hw.field_i = (int)hw.field_f >> -291727741;
                       return;
                     }
                   }
@@ -731,10 +731,10 @@ final class ht implements Iterable {
                 sp.i(-320);
                 if (0.0 != fw.field_G) {
                   fw.field_G = fw.field_G * -0.9;
-                  hw.field_i = (int)hw.field_f >> 3;
+                  hw.field_i = (int)hw.field_f >> -291727741;
                   return;
                 } else {
-                  hw.field_i = (int)hw.field_f >> 3;
+                  hw.field_i = (int)hw.field_f >> -291727741;
                   return;
                 }
               } else {
@@ -760,7 +760,7 @@ final class ht implements Iterable {
                       break L47;
                     }
                   }
-                  hw.field_i = (int)hw.field_f >> 3;
+                  hw.field_i = (int)hw.field_f >> -291727741;
                   return;
                 } else {
                   L48: {
@@ -773,7 +773,7 @@ final class ht implements Iterable {
                       break L48;
                     }
                   }
-                  hw.field_i = (int)hw.field_f >> 3;
+                  hw.field_i = (int)hw.field_f >> -291727741;
                   return;
                 }
               }
@@ -854,7 +854,7 @@ final class ht implements Iterable {
                       break L54;
                     }
                   }
-                  hw.field_i = (int)hw.field_f >> 3;
+                  hw.field_i = (int)hw.field_f >> -291727741;
                   return;
                 } else {
                   L55: {
@@ -915,7 +915,7 @@ final class ht implements Iterable {
                       break L59;
                     }
                   }
-                  hw.field_i = (int)hw.field_f >> 3;
+                  hw.field_i = (int)hw.field_f >> -291727741;
                   return;
                 }
               } else {
@@ -973,7 +973,7 @@ final class ht implements Iterable {
                     break L64;
                   }
                 }
-                hw.field_i = (int)hw.field_f >> 3;
+                hw.field_i = (int)hw.field_f >> -291727741;
                 return;
               }
             } else {
@@ -1063,13 +1063,13 @@ final class ht implements Iterable {
                   break L72;
                 }
               }
-              hw.field_i = (int)hw.field_f >> 3;
+              hw.field_i = (int)hw.field_f >> -291727741;
               return;
             }
           }
         } else {
           L73: {
-            field_c = null;
+            field_c = (sj) null;
             var8 = la.field_d - hw.field_f;
             var10 = Math.sqrt(var4 * var4 + var6 * var6 + var8 * var8);
             if (var10 <= 0.0001) {
@@ -1227,20 +1227,21 @@ final class ht implements Iterable {
               break L84;
             }
           }
-          hw.field_i = (int)hw.field_f >> 3;
+          hw.field_i = (int)hw.field_f >> -291727741;
           return;
         }
     }
 
     ht(int param0) {
         int var2 = 0;
+        gn dupTemp$0 = null;
         gn var3 = null;
-        ((ht) this).field_e = new gn[param0];
-        ((ht) this).field_d = param0;
+        this.field_e = new gn[param0];
+        this.field_d = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            gn dupTemp$0 = new gn();
+            dupTemp$0 = new gn();
             var3 = dupTemp$0;
-            ((ht) this).field_e[var2] = dupTemp$0;
+            this.field_e[var2] = dupTemp$0;
             var3.field_d = var3;
             var3.field_b = var3;
         }
@@ -1248,15 +1249,17 @@ final class ht implements Iterable {
 
     public static void a(boolean param0) {
         field_b = null;
+        if (param0) {
+            field_c = (sj) null;
+            field_c = null;
+            field_a = null;
+            return;
+        }
         field_c = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "type in name and press 'Enter' to search for team";
     }
 }

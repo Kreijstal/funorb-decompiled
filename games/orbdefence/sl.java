@@ -6,6 +6,9 @@ final class sl extends sf {
     static String field_Z;
 
     final static void a(int param0, hj param1) {
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        hj[] discarded$5 = null;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -15,22 +18,27 @@ final class sl extends sf {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_14_0 = 0;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        int stackOut_5_0 = 0;
+        int stackOut_13_0 = 0;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var9 = OrbDefence.field_D ? 1 : 0;
         try {
           L0: {
@@ -44,161 +52,321 @@ final class sl extends sf {
               var6 = (3 & param1.field_p) + var2_int * (3 & param1.field_u);
               var7 = 0;
               L1: while (true) {
-                if (var7 >= param1.field_k) {
-                  L2: {
-                    if (param0 == 2408) {
-                      break L2;
+                L2: {
+                  L3: {
+                    if (var7 >= param1.field_k) {
+                      break L3;
                     } else {
-                      hj[] discarded$3 = sl.d((byte) -106);
-                      break L2;
+                      stackOut_5_0 = 0;
+                      stackIn_14_0 = stackOut_5_0;
+                      stackIn_6_0 = stackOut_5_0;
+                      if (var9 != 0) {
+                        break L2;
+                      } else {
+                        var8 = stackIn_6_0;
+                        L4: while (true) {
+                          L5: {
+                            L6: {
+                              if (param1.field_o <= var8) {
+                                break L6;
+                              } else {
+                                incrementValue$3 = var6;
+                                var6++;
+                                incrementValue$4 = var5;
+                                var5++;
+                                var4[incrementValue$3] = param1.field_v[incrementValue$4];
+                                var8++;
+                                if (var9 != 0) {
+                                  break L5;
+                                } else {
+                                  if (var9 == 0) {
+                                    continue L4;
+                                  } else {
+                                    break L6;
+                                  }
+                                }
+                              }
+                            }
+                            var6 = var6 + (var2_int - param1.field_o);
+                            var7++;
+                            break L5;
+                          }
+                          if (var9 == 0) {
+                            continue L1;
+                          } else {
+                            break L3;
+                          }
+                        }
+                      }
                     }
                   }
-                  param1.field_u = param1.field_u & -4;
-                  param1.field_p = param1.field_p & -4;
-                  param1.field_k = var3;
-                  param1.field_o = var2_int;
-                  param1.field_v = var4;
-                  break L0;
-                } else {
-                  var8 = 0;
-                  L3: while (true) {
-                    if (param1.field_o <= var8) {
-                      var6 = var6 + (var2_int - param1.field_o);
-                      var7++;
-                      continue L1;
-                    } else {
-                      int incrementValue$4 = var6;
-                      var6++;
-                      int incrementValue$5 = var5;
-                      var5++;
-                      var4[incrementValue$4] = param1.field_v[incrementValue$5];
-                      var8++;
-                      continue L3;
-                    }
+                  stackOut_13_0 = param0;
+                  stackIn_14_0 = stackOut_13_0;
+                  break L2;
+                }
+                L7: {
+                  if (stackIn_14_0 == 2408) {
+                    break L7;
+                  } else {
+                    discarded$5 = sl.d((byte) -106);
+                    break L7;
                   }
                 }
+                param1.field_u = param1.field_u & -4;
+                param1.field_p = param1.field_p & -4;
+                param1.field_k = var3;
+                param1.field_o = var2_int;
+                param1.field_v = var4;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L8: {
             var2 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var2;
-            stackOut_13_1 = new StringBuilder().append("sl.C(").append(param0).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackOut_18_0 = (RuntimeException) (var2);
+            stackOut_18_1 = new StringBuilder().append("sl.C(").append(param0).append(',');
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L4;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L8;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              break L4;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L8;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void c(byte param0) {
         field_Z = null;
+        if (param0 >= 118) {
+            return;
+        }
+        hj var2 = (hj) null;
+        sl.a(16, (hj) null);
     }
 
     final static hj[] d(byte param0) {
         hj[] var1 = null;
         int var2 = 0;
         int var3 = 0;
-        byte[] var5 = null;
         int var6 = 0;
         int[] var6_ref_int__ = null;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
-        byte[] var10 = null;
+        hj var9 = null;
         int[] var11 = null;
-        byte[] var13 = null;
-        int[] var14 = null;
-        byte[] var17 = null;
-        int[] var18 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
-        byte[] var24 = null;
-        byte[] var25 = null;
-        int[] var26 = null;
-        int[] var27 = null;
-        L0: {
-          var8 = OrbDefence.field_D ? 1 : 0;
-          var1 = new hj[ec.field_K];
-          var2 = 0;
-          if (param0 < -82) {
-            break L0;
-          } else {
-            var9 = null;
-            sl.a(16, (hj) null);
-            break L0;
-          }
-        }
-        L1: while (true) {
-          if (var2 >= ec.field_K) {
-            md.a((byte) -127);
-            return var1;
-          } else {
-            var3 = wh.field_b[var2] * m.field_a[var2];
-            var24 = fl.field_a[var2];
-            if (!ha.field_g[var2]) {
-              var11 = new int[var3];
-              var27 = var11;
-              var6 = 0;
-              L2: while (true) {
-                if (var6 >= var3) {
-                  var1[var2] = new hj(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var27);
-                  var2++;
-                  continue L1;
+        int[] var13 = null;
+        int[] var15 = null;
+        byte[] var28 = null;
+        byte[] var29 = null;
+        byte[] var30 = null;
+        byte[] var31 = null;
+        boolean stackIn_4_0 = false;
+        int stackIn_23_0 = 0;
+        boolean stackIn_26_0 = false;
+        int stackIn_45_0 = 0;
+        boolean stackOut_25_0 = false;
+        int stackOut_44_0 = 0;
+        boolean stackOut_3_0 = false;
+        int stackOut_22_0 = 0;
+        var8 = OrbDefence.field_D ? 1 : 0;
+        var1 = new hj[ec.field_K];
+        var2 = 0;
+        if (param0 < -82) {
+          L0: while (true) {
+            L1: {
+              L2: {
+                if (var2 >= ec.field_K) {
+                  break L2;
                 } else {
-                  var11[var6] = vc.field_g[vi.a(255, (int) var24[var6])];
-                  var6++;
-                  continue L2;
+                  var3 = wh.field_b[var2] * m.field_a[var2];
+                  var28 = fl.field_a[var2];
+                  stackOut_25_0 = ha.field_g[var2];
+                  stackIn_45_0 = stackOut_25_0 ? 1 : 0;
+                  stackIn_26_0 = stackOut_25_0;
+                  if (var8 != 0) {
+                    break L1;
+                  } else {
+                    L3: {
+                      L4: {
+                        L5: {
+                          if (!stackIn_26_0) {
+                            break L5;
+                          } else {
+                            var29 = md.field_i[var2];
+                            var15 = new int[var3];
+                            var13 = var15;
+                            var6_ref_int__ = var13;
+                            var7 = 0;
+                            L6: while (true) {
+                              L7: {
+                                if (var7 >= var3) {
+                                  var1[var2] = (hj) ((Object) new ra(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var15));
+                                  break L7;
+                                } else {
+                                  var6_ref_int__[var7] = ge.a(vc.field_g[vi.a(255, (int) var28[var7])], vi.a(-16777216, var29[var7] << 862549368));
+                                  var7++;
+                                  if (var8 != 0) {
+                                    break L7;
+                                  } else {
+                                    continue L6;
+                                  }
+                                }
+                              }
+                              if (var8 == 0) {
+                                break L4;
+                              } else {
+                                break L5;
+                              }
+                            }
+                          }
+                        }
+                        var11 = new int[var3];
+                        var6 = 0;
+                        L8: while (true) {
+                          if (var6 >= var3) {
+                            var1[var2] = new hj(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var11);
+                            break L4;
+                          } else {
+                            var11[var6] = vc.field_g[vi.a(255, (int) var28[var6])];
+                            var6++;
+                            if (var8 != 0) {
+                              break L3;
+                            } else {
+                              continue L8;
+                            }
+                          }
+                        }
+                      }
+                      var2++;
+                      break L3;
+                    }
+                    if (var8 == 0) {
+                      continue L0;
+                    } else {
+                      break L2;
+                    }
+                  }
                 }
               }
-            } else {
-              var25 = md.field_i[var2];
-              var21 = var25;
-              var17 = var21;
-              var13 = var17;
-              var10 = var13;
-              var5 = var10;
-              var26 = new int[var3];
-              var22 = var26;
-              var18 = var22;
-              var14 = var18;
-              var6_ref_int__ = var14;
-              var7 = 0;
-              L3: while (true) {
-                if (var7 >= var3) {
-                  var1[var2] = (hj) (Object) new ra(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var26);
-                  var2++;
-                  continue L1;
-                } else {
-                  var6_ref_int__[var7] = ge.a(vc.field_g[vi.a(255, (int) var24[var7])], vi.a(-16777216, var25[var7] << 24));
-                  var7++;
-                  continue L3;
-                }
-              }
+              stackOut_44_0 = -127;
+              stackIn_45_0 = stackOut_44_0;
+              break L1;
             }
+            md.a((byte) stackIn_45_0);
+            return var1;
+          }
+        } else {
+          var9 = (hj) null;
+          sl.a(16, (hj) null);
+          L9: while (true) {
+            L10: {
+              L11: {
+                if (var2 >= ec.field_K) {
+                  break L11;
+                } else {
+                  var3 = wh.field_b[var2] * m.field_a[var2];
+                  var30 = fl.field_a[var2];
+                  stackOut_3_0 = ha.field_g[var2];
+                  stackIn_23_0 = stackOut_3_0 ? 1 : 0;
+                  stackIn_4_0 = stackOut_3_0;
+                  if (var8 != 0) {
+                    break L10;
+                  } else {
+                    L12: {
+                      L13: {
+                        L14: {
+                          if (!stackIn_4_0) {
+                            break L14;
+                          } else {
+                            var31 = md.field_i[var2];
+                            var15 = new int[var3];
+                            var13 = var15;
+                            var6_ref_int__ = var13;
+                            var7 = 0;
+                            L15: while (true) {
+                              L16: {
+                                if (var7 >= var3) {
+                                  var1[var2] = (hj) ((Object) new ra(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var15));
+                                  break L16;
+                                } else {
+                                  var6_ref_int__[var7] = ge.a(vc.field_g[vi.a(255, (int) var30[var7])], vi.a(-16777216, var31[var7] << 862549368));
+                                  var7++;
+                                  if (var8 != 0) {
+                                    break L16;
+                                  } else {
+                                    continue L15;
+                                  }
+                                }
+                              }
+                              if (var8 == 0) {
+                                break L13;
+                              } else {
+                                break L14;
+                              }
+                            }
+                          }
+                        }
+                        var11 = new int[var3];
+                        var6 = 0;
+                        L17: while (true) {
+                          if (var6 >= var3) {
+                            var1[var2] = new hj(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var11);
+                            break L13;
+                          } else {
+                            var11[var6] = vc.field_g[vi.a(255, (int) var30[var6])];
+                            var6++;
+                            if (var8 != 0) {
+                              break L12;
+                            } else {
+                              continue L17;
+                            }
+                          }
+                        }
+                      }
+                      var2++;
+                      break L12;
+                    }
+                    if (var8 == 0) {
+                      continue L9;
+                    } else {
+                      break L11;
+                    }
+                  }
+                }
+              }
+              stackOut_22_0 = -127;
+              stackIn_23_0 = stackOut_22_0;
+              break L10;
+            }
+            md.a((byte) stackIn_23_0);
+            return var1;
           }
         }
     }
@@ -209,10 +377,6 @@ final class sl extends sf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_ab = -1;
         field_Z = "CONGRATULATIONS!<br><br>You have managed to defeat all the Norbs thus far. To continue you must become a member!";
     }

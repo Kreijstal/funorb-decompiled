@@ -17,14 +17,14 @@ class bw {
     }
 
     final void a(boolean param0) {
-        if (((bw) this).field_e != null) {
+        if (this.field_e != null) {
           if (param0) {
             return;
           } else {
-            ((bw) this).field_e.field_b = ((bw) this).field_b;
-            ((bw) this).field_b.field_e = ((bw) this).field_e;
-            ((bw) this).field_e = null;
-            ((bw) this).field_b = null;
+            this.field_e.field_b = this.field_b;
+            this.field_b.field_e = this.field_e;
+            this.field_e = null;
+            this.field_b = null;
             return;
           }
         } else {
@@ -33,21 +33,17 @@ class bw {
     }
 
     final boolean a(byte param0) {
-        if (!(null != ((bw) this).field_e)) {
+        if (!(null != this.field_e)) {
             return false;
         }
         if (param0 != -106) {
-            field_a = null;
+            field_a = (sna) null;
             return true;
         }
         return true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "<%0> would need a rating of <%1> to play with the current options.";
     }
 }

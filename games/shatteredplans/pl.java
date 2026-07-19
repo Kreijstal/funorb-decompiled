@@ -18,7 +18,7 @@ final class pl {
             return;
           }
         } else {
-          field_a = null;
+          field_a = (String) null;
           if (bq.field_h != null) {
             if (!bq.field_h.c(param0, -1)) {
               return;
@@ -43,10 +43,6 @@ final class pl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "You are offering to draw.";
         field_a = "Offensive account name";
     }

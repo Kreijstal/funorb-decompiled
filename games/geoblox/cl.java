@@ -31,6 +31,7 @@ final class cl {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         sl stackOut_7_0 = null;
         Object stackOut_9_0 = null;
@@ -57,13 +58,14 @@ final class cl {
                 if (si.field_g != va.field_e) {
                   break L2;
                 } else {
-                  if (!param1.equals((Object) (Object) cg.field_k)) {
+                  if (!param1.equals(cg.field_k)) {
                     break L2;
                   } else {
                     si.field_g = uf.field_l;
                     stackOut_7_0 = me.field_g;
                     stackIn_8_0 = stackOut_7_0;
-                    return stackIn_8_0;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   }
                 }
               }
@@ -72,6 +74,7 @@ final class cl {
               me.field_g = null;
               stackOut_9_0 = null;
               stackIn_10_0 = stackOut_9_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               return null;
@@ -81,23 +84,23 @@ final class cl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var2;
+            stackOut_11_0 = (RuntimeException) (var2);
             stackOut_11_1 = new StringBuilder().append("cl.A(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -105,16 +108,16 @@ final class cl {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
-        return (sl) (Object) stackIn_10_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_8_0;
+        } else {
+          return (sl) ((Object) stackIn_10_0);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 10;
         field_d = "Continue";
     }

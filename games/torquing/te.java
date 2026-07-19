@@ -34,42 +34,34 @@ final class te extends am {
         int[][][] var30 = null;
         int[][] var37 = null;
         int[][][] var38 = null;
-        int[][] var45 = null;
-        int[][][] var46 = null;
-        int[][] var48 = null;
+        int[][] var46 = null;
+        int[] var47 = null;
+        int[] var48 = null;
         int[] var49 = null;
-        int[] var50 = null;
-        int[] var51 = null;
-        int[][] var52 = null;
-        int[][] var53 = null;
-        int[][][] var54 = null;
-        int[][] var55 = null;
+        int[][] var50 = null;
+        int[][] var51 = null;
         var23 = Torquing.field_u;
         if (param0 == -29116) {
           L0: {
-            var53 = ((te) this).field_r.a(15142, param1);
-            var45 = var53;
-            var37 = var45;
+            var37 = this.field_r.a(15142, param1);
             var29 = var37;
             var3 = var29;
-            if (!((te) this).field_r.field_b) {
+            if (!this.field_r.field_b) {
               break L0;
             } else {
-              var4 = ((te) this).field_u + ((te) this).field_u + 1;
+              var4 = this.field_u + this.field_u + 1;
               var5 = 65536 / var4;
-              var6 = ((te) this).field_s + ((te) this).field_s + 1;
+              var6 = this.field_s + this.field_s + 1;
               var7 = 65536 / var6;
-              var54 = new int[var4][][];
-              var46 = var54;
-              var38 = var46;
+              var38 = new int[var4][][];
               var30 = var38;
               var8 = var30;
-              var9_int = param1 + -((te) this).field_u;
+              var9_int = param1 + -this.field_u;
               L1: while (true) {
-                if (var9_int > param1 - -((te) this).field_u) {
-                  var9 = var53[0];
-                  var10 = var53[1];
-                  var11 = var53[2];
+                if (var9_int > param1 - -this.field_u) {
+                  var9 = var37[0];
+                  var10 = var37[1];
+                  var11 = var37[2];
                   var12 = 0;
                   L2: while (true) {
                     if (ci.field_c <= var12) {
@@ -81,16 +73,16 @@ final class te extends am {
                       var16 = 0;
                       L3: while (true) {
                         if (var4 <= var16) {
-                          var9[var12] = var5 * var13 >> 16;
-                          var10[var12] = var5 * var14 >> 16;
-                          var11[var12] = var15 * var5 >> 16;
+                          var9[var12] = var5 * var13 >> -819634224;
+                          var10[var12] = var5 * var14 >> 2092952912;
+                          var11[var12] = var15 * var5 >> -963991344;
                           var12++;
                           continue L2;
                         } else {
-                          var55 = var54[var16];
-                          var14 = var14 + var55[1][var12];
-                          var15 = var15 + var55[2][var12];
-                          var13 = var13 + var55[0][var12];
+                          var51 = var38[var16];
+                          var14 = var14 + var51[1][var12];
+                          var15 = var15 + var51[2][var12];
+                          var13 = var13 + var51[0][var12];
                           var16++;
                           continue L3;
                         }
@@ -98,47 +90,47 @@ final class te extends am {
                     }
                   }
                 } else {
-                  var48 = ((te) this).c(24066, vp.field_I & var9_int, 0);
-                  var52 = new int[3][ci.field_c];
+                  var46 = this.c(24066, vp.field_I & var9_int, 0);
+                  var50 = new int[3][ci.field_c];
                   var12 = 0;
                   var13 = 0;
                   var14 = 0;
-                  var49 = var48[0];
-                  var50 = var48[1];
-                  var51 = var48[2];
-                  var18_int = -((te) this).field_s;
+                  var47 = var46[0];
+                  var48 = var46[1];
+                  var49 = var46[2];
+                  var18_int = -this.field_s;
                   L4: while (true) {
-                    if (var18_int > ((te) this).field_s) {
-                      var18 = var52[0];
-                      var19 = var52[1];
-                      var20 = var52[2];
+                    if (var18_int > this.field_s) {
+                      var18 = var50[0];
+                      var19 = var50[1];
+                      var20 = var50[2];
                       var21 = 0;
                       L5: while (true) {
                         if (ci.field_c <= var21) {
-                          var8[-param1 + ((te) this).field_u + var9_int] = var52;
+                          var8[-param1 + this.field_u + var9_int] = var50;
                           var9_int++;
                           continue L1;
                         } else {
-                          var18[var21] = var7 * var12 >> 16;
-                          var19[var21] = var7 * var13 >> 16;
-                          var20[var21] = var14 * var7 >> 16;
-                          var22 = jh.field_A & var21 - ((te) this).field_s;
-                          var13 = var13 - var50[var22];
+                          var18[var21] = var7 * var12 >> -1184308944;
+                          var19[var21] = var7 * var13 >> -445141584;
+                          var20[var21] = var14 * var7 >> 177380048;
+                          var22 = jh.field_A & var21 - this.field_s;
+                          var13 = var13 - var48[var22];
                           var21++;
-                          var14 = var14 - var51[var22];
-                          var12 = var12 - var49[var22];
-                          var22 = ((te) this).field_s + var21 & jh.field_A;
-                          var12 = var12 + var49[var22];
-                          var13 = var13 + var50[var22];
-                          var14 = var14 + var51[var22];
+                          var14 = var14 - var49[var22];
+                          var12 = var12 - var47[var22];
+                          var22 = this.field_s + var21 & jh.field_A;
+                          var12 = var12 + var47[var22];
+                          var13 = var13 + var48[var22];
+                          var14 = var14 + var49[var22];
                           continue L5;
                         }
                       }
                     } else {
                       var19_int = jh.field_A & var18_int;
-                      var12 = var12 + var49[var19_int];
-                      var13 = var13 + var50[var19_int];
-                      var14 = var14 + var51[var19_int];
+                      var12 = var12 + var47[var19_int];
+                      var13 = var13 + var48[var19_int];
+                      var14 = var14 + var49[var19_int];
                       var18_int++;
                       continue L4;
                     }
@@ -149,7 +141,7 @@ final class te extends am {
           }
           return var3;
         } else {
-          return null;
+          return (int[][]) null;
         }
     }
 
@@ -173,29 +165,23 @@ final class te extends am {
         int[][] var17 = null;
         int[] var18 = null;
         int[][] var19 = null;
-        int[] var20 = null;
-        int[][] var21 = null;
-        int[] var22 = null;
-        int[][] var23 = null;
         var14 = Torquing.field_u;
-        var3 = ((te) this).field_l.a(param1, 25657);
+        var3 = this.field_l.a(param1, 25657);
         if (param0 >= 86) {
           L0: {
-            if (!((te) this).field_l.field_b) {
+            if (!this.field_l.field_b) {
               break L0;
             } else {
-              var4 = 1 + ((te) this).field_u + ((te) this).field_u;
+              var4 = 1 + this.field_u + this.field_u;
               var5 = 65536 / var4;
-              var6 = 1 + (((te) this).field_s + ((te) this).field_s);
+              var6 = 1 + (this.field_s + this.field_s);
               var7 = 65536 / var6;
-              var23 = new int[var4][];
-              var21 = var23;
-              var19 = var21;
+              var19 = new int[var4][];
               var17 = var19;
               var8 = var17;
-              var9 = -((te) this).field_u + param1;
+              var9 = -this.field_u + param1;
               L1: while (true) {
-                if (((te) this).field_u + param1 < var9) {
+                if (this.field_u + param1 < var9) {
                   var9 = 0;
                   L2: while (true) {
                     if (var9 >= ci.field_c) {
@@ -205,11 +191,11 @@ final class te extends am {
                       var11 = 0;
                       L3: while (true) {
                         if (var4 <= var11) {
-                          var3[var9] = var5 * var10 >> 16;
+                          var3[var9] = var5 * var10 >> -753215056;
                           var9++;
                           continue L2;
                         } else {
-                          var10 = var10 + var23[var11][var9];
+                          var10 = var10 + var19[var11][var9];
                           var11++;
                           continue L3;
                         }
@@ -217,28 +203,26 @@ final class te extends am {
                     }
                   }
                 } else {
-                  var10_ref_int__ = ((te) this).b(0, 0, vp.field_I & var9);
-                  var22 = new int[ci.field_c];
-                  var20 = var22;
-                  var18 = var20;
+                  var10_ref_int__ = this.b(0, 0, vp.field_I & var9);
+                  var18 = new int[ci.field_c];
                   var16 = var18;
                   var11_ref_int__ = var16;
                   var12 = 0;
-                  var13 = -((te) this).field_s;
+                  var13 = -this.field_s;
                   L4: while (true) {
-                    if (((te) this).field_s < var13) {
+                    if (this.field_s < var13) {
                       var15 = 0;
                       var13 = var15;
                       L5: while (true) {
                         if (ci.field_c <= var15) {
-                          var8[var9 - -((te) this).field_u - param1] = var22;
+                          var8[var9 - -this.field_u - param1] = var18;
                           var9++;
                           continue L1;
                         } else {
-                          var11_ref_int__[var15] = var7 * var12 >> 16;
-                          var12 = var12 - var10_ref_int__[-((te) this).field_s + var15 & jh.field_A];
+                          var11_ref_int__[var15] = var7 * var12 >> 1776471536;
+                          var12 = var12 - var10_ref_int__[-this.field_s + var15 & jh.field_A];
                           var15++;
-                          var12 = var12 + var10_ref_int__[((te) this).field_s + var15 & jh.field_A];
+                          var12 = var12 + var10_ref_int__[this.field_s + var15 & jh.field_A];
                           continue L5;
                         }
                       }
@@ -254,7 +238,7 @@ final class te extends am {
           }
           return var3;
         } else {
-          return null;
+          return (int[]) null;
         }
     }
 
@@ -267,8 +251,8 @@ final class te extends am {
 
     public te() {
         super(1, false);
-        ((te) this).field_u = 1;
-        ((te) this).field_s = 1;
+        this.field_u = 1;
+        this.field_s = 1;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -278,7 +262,7 @@ final class te extends am {
           if (param2 <= -69) {
             break L0;
           } else {
-            field_t = null;
+            field_t = (String) null;
             break L0;
           }
         }
@@ -328,6 +312,7 @@ final class te extends am {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_10_0 = null;
         Object stackOut_12_0 = null;
@@ -349,10 +334,10 @@ final class te extends am {
               L1: {
                 var4_int = param2;
                 if (0 == var4_int) {
-                  ((te) this).field_s = param0.i((byte) -101);
+                  this.field_s = param0.i((byte) -101);
                   break L1;
                 } else {
-                  if (var4_int != 1) {
+                  if (-2 != (var4_int ^ -1)) {
                     if (var4_int != 2) {
                       break L1;
                     } else {
@@ -374,41 +359,43 @@ final class te extends am {
                           break L2;
                         }
                       }
-                      ((te) this).field_p = stackIn_13_1 != 0;
+                      ((te) (this)).field_p = stackIn_13_1 != 0;
                       break L1;
                     }
                   } else {
-                    ((te) this).field_u = param0.i((byte) -101);
+                    this.field_u = param0.i((byte) -101);
                     break L1;
                   }
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var4;
+            stackOut_15_0 = (RuntimeException) (var4);
             stackOut_15_1 = new StringBuilder().append("te.H(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -416,15 +403,16 @@ final class te extends am {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         Runtime discarded$0 = Runtime.getRuntime();
         field_t = "Previous";
     }

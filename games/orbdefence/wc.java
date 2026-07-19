@@ -19,10 +19,6 @@ final class wc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "wc.A(";
         field_b = "ACHIEVEMENTS";
     }

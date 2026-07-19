@@ -9,7 +9,7 @@ final class dd {
         long var1 = 0L;
         L0: {
           var1 = System.currentTimeMillis();
-          if (~db.field_C < ~var1) {
+          if ((db.field_C ^ -1L) < (var1 ^ -1L)) {
             ek.field_d = ek.field_d + (-var1 + db.field_C);
             break L0;
           } else {
@@ -27,6 +27,11 @@ final class dd {
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 >= -54) {
+            field_a = (rb) null;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
@@ -51,69 +56,68 @@ final class dd {
         StringBuilder stackOut_7_1 = null;
         String stackOut_7_2 = null;
         try {
-          if (param3 == -23466) {
-            try {
-              L0: {
-                var4 = param0.getGraphics();
-                hg.field_y.a(param2, param1, var4, 19291);
-                var4.dispose();
-                break L0;
+          L0: {
+            if (param3 == -23466) {
+              try {
+                L1: {
+                  var4 = param0.getGraphics();
+                  hg.field_y.a(param2, param1, var4, 19291);
+                  var4.dispose();
+                  break L1;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var4_ref = (Exception) (Object) decompiledCaughtException;
+                param0.repaint();
+                return;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var4_ref = (Exception) (Object) decompiledCaughtException;
-              param0.repaint();
               return;
+            } else {
+              break L0;
             }
-            return;
-          } else {
-            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L1: {
+          L2: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4_ref2;
+            stackOut_6_0 = (RuntimeException) (var4_ref2);
             stackOut_6_1 = new StringBuilder().append("dd.B(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L1;
+              break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
               stackIn_9_2 = stackOut_7_2;
-              break L1;
+              break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static boolean a(byte param0) {
+        boolean discarded$0 = false;
         if (param0 <= 25) {
-            boolean discarded$0 = dd.a((byte) 121);
+            discarded$0 = dd.a((byte) 121);
             return sc.a(ll.b(116), true);
         }
         return sc.a(ll.b(116), true);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new ge();
     }
 }

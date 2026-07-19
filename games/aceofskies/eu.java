@@ -14,17 +14,17 @@ final class eu extends o {
 
     final void a(int param0, int param1, double param2, md param3) {
         try {
-            ((eu) this).field_i = param3;
-            ((eu) this).field_d.a(((eu) this).field_i.field_d, true);
-            ((eu) this).field_b = 20.0;
-            ((eu) this).field_h = 64;
-            ((eu) this).field_f = param1;
-            ((eu) this).field_e = ((eu) this).field_i.field_e;
-            ((eu) this).a((byte) 111, (double)param0);
-            ((eu) this).a(param2, (byte) 25);
-            ((eu) this).b(24.0, 128);
+            this.field_i = param3;
+            this.field_d.a(this.field_i.field_d, true);
+            this.field_b = 20.0;
+            this.field_h = 64;
+            this.field_f = param1;
+            this.field_e = this.field_i.field_e;
+            this.a((byte) 111, (double)param0);
+            this.a(param2, (byte) 25);
+            this.b(24.0, 128);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "eu.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "eu.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,29 +34,37 @@ final class eu extends o {
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             L0: {
-              if (null == vs.field_g) {
+              if (param0 == 0) {
                 break L0;
               } else {
+                field_g = -18;
+                break L0;
+              }
+            }
+            L1: {
+              if (null == vs.field_g) {
+                break L1;
+              } else {
                 try {
-                  L1: {
+                  L2: {
                     vs.field_g.a(true, 0L);
                     vs.field_g.a(24, nm.field_c.field_f, nm.field_c.field_g, -105);
                     decompiledRegionSelector0 = 0;
-                    break L1;
+                    break L2;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L2: {
+                  L3: {
                     var1 = (Exception) (Object) decompiledCaughtException;
                     decompiledRegionSelector0 = 1;
-                    break L2;
+                    break L3;
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
                   nm.field_c.field_g = nm.field_c.field_g + 24;
                   return;
                 } else {
-                  break L0;
+                  break L1;
                 }
               }
             }
@@ -113,11 +121,11 @@ final class eu extends o {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var6 = new byte[32768];
+            var6 = new byte[param1];
             var4 = var6;
-            var5 = -38;
-            au.a(param0, param3, var6, 0, 32768);
-            stackOut_0_0 = (byte[]) var6;
+            var5 = -115 / ((param2 - -94) / 32);
+            au.a(param0, param3, var6, 0, param1);
+            stackOut_0_0 = (byte[]) (var6);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -125,23 +133,23 @@ final class eu extends o {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4_ref;
+            stackOut_2_0 = (RuntimeException) (var4_ref);
             stackOut_2_1 = new StringBuilder().append("eu.I(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -149,7 +157,7 @@ final class eu extends o {
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 32768 + ',' + 20 + ',' + param3 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_1_0;
     }
@@ -162,7 +170,7 @@ final class eu extends o {
         var3 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
-            qm.a(ft.field_o, (byte) -31, op.field_a, true, param0, os.field_w, 0);
+            qm.a(ft.field_o, (byte) -31, op.field_a, param1, param0, os.field_w, 0);
             var2_int = 0;
             L1: while (true) {
               if (os.field_w <= var2_int) {
@@ -183,15 +191,11 @@ final class eu extends o {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var2, "eu.J(" + param0 + ',' + true + ')');
+          throw pn.a((Throwable) ((Object) var2), "eu.J(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "Data server full or too many connections from your address. Please try again in a few minutes.";
         field_j = "Back";
     }

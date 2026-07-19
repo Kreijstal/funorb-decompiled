@@ -7,7 +7,7 @@ final class wn extends am {
     public static void b(int param0) {
         field_s = null;
         if (param0 != 0) {
-            field_s = null;
+            field_s = (bp) null;
         }
     }
 
@@ -16,18 +16,15 @@ final class wn extends am {
     }
 
     final int[] a(byte param0, int param1) {
+        int[] discarded$0 = null;
         if (param0 <= 86) {
-            int[] discarded$0 = ((wn) this).a((byte) 88, -87);
+            discarded$0 = this.a((byte) 88, -87);
             return q.field_b;
         }
         return q.field_b;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = new bp();
     }
 }

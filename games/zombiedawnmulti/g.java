@@ -93,12 +93,12 @@ final class g {
     }
 
     final static void c() {
-        oh var0 = (oh) (Object) field_c.a(true);
+        oh var0 = (oh) ((Object) field_c.a(true));
         if (var0 == null) {
             var0 = new oh();
         }
         var0.a(oo.field_i, oo.field_b, oo.field_l, oo.field_f, oo.field_e, oo.field_g, oo.field_d);
-        field_b.a((br) (Object) var0, false);
+        field_b.a(var0, false);
     }
 
     final static ja b(ja param0) {
@@ -188,14 +188,14 @@ final class g {
     }
 
     final static void b() {
-        oh var0 = (oh) (Object) field_b.a(true);
+        oh var0 = (oh) ((Object) field_b.a(true));
         if (var0 == null) {
             throw new IllegalStateException(field_z);
         }
         oo.a(var0.field_g, var0.field_i, var0.field_h);
         oo.h(var0.field_l, var0.field_f, var0.field_j, var0.field_k);
         var0.field_g = null;
-        field_c.a((br) (Object) var0, false);
+        field_c.a(var0, false);
     }
 
     private final static boolean b(th param0) {
@@ -209,7 +209,7 @@ final class g {
               if (!(var1.field_d instanceof id)) {
                 break L1;
               } else {
-                if (((id) (Object) var1).field_E <= ((id) (Object) var1.field_d).field_E) {
+                if (((id) ((Object) var1)).field_E <= ((id) ((Object) var1.field_d)).field_E) {
                   var1 = var1.field_d;
                   continue L0;
                 } else {
@@ -223,6 +223,8 @@ final class g {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -240,7 +242,7 @@ final class g {
                 var12++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -250,7 +252,7 @@ final class g {
                 } else {
                   var10 = param0[param4];
                   var11 = 256 - ((param2 & 255) * param9 >> 8);
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (var10 & 16711935) * var11 >> 8 & 16711935 | (var10 & 65280) * var11 >> 8 & 65280;
                   var13++;
@@ -284,6 +286,8 @@ final class g {
     }
 
     final static void a(int param0) {
+        int incrementValue$7877 = 0;
+        int incrementValue$7878 = 0;
         int var1 = 0;
         int[] var2 = null;
         int var3 = 0;
@@ -294,12 +298,8 @@ final class g {
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
         var1 = 0;
-        var12 = oo.field_i;
-        var11 = var12;
-        var10 = var11;
+        var10 = oo.field_i;
         var9 = var10;
         var2 = var9;
         var3 = oo.field_b;
@@ -319,12 +319,12 @@ final class g {
                 continue L0;
               } else {
                 L2: {
-                  if (var12[var1] != 0) {
+                  if (var10[var1] != 0) {
                     break L2;
                   } else {
                     L3: {
                       L4: {
-                        if (var1 >= var12.length - 1) {
+                        if (var1 >= var10.length - 1) {
                           break L4;
                         } else {
                           if (var2[var1 + 1] != 0) {
@@ -356,7 +356,7 @@ final class g {
                           }
                         }
                       }
-                      if (var1 >= var12.length - 1 - var3) {
+                      if (var1 >= var10.length - 1 - var3) {
                         break L2;
                       } else {
                         if (var2[var1 + var3] == 0) {
@@ -366,14 +366,14 @@ final class g {
                         }
                       }
                     }
-                    int incrementValue$7877 = var1;
+                    incrementValue$7877 = var1;
                     var1++;
                     var6[incrementValue$7877] = param0;
                     var8++;
                     continue L1;
                   }
                 }
-                int incrementValue$7878 = var1;
+                incrementValue$7878 = var1;
                 var1++;
                 var6[incrementValue$7878] = var2[incrementValue$7878];
                 var8++;
@@ -402,7 +402,7 @@ final class g {
                 } else {
                   L2: {
                     var2 = var1_ref.field_d;
-                    if (((id) (Object) var1_ref).field_E <= ((id) (Object) var2).field_E) {
+                    if (((id) ((Object) var1_ref)).field_E <= ((id) ((Object) var2)).field_E) {
                       break L2;
                     } else {
                       var1_ref.a(true);
@@ -584,6 +584,8 @@ final class g {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -601,7 +603,7 @@ final class g {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -611,7 +613,7 @@ final class g {
                 } else {
                   var9 = param0[param4];
                   var10 = 256 - (param2 & 255);
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (var9 & 16711935) * var10 >> 8 & 16711935 | (var9 & 65280) * var10 >> 8 & 65280;
                   var12++;
@@ -765,10 +767,6 @@ final class g {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "No pixdest to pop!";
         field_b = new th();
         field_c = new th();

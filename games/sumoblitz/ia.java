@@ -13,58 +13,68 @@ final class ia implements Iterator {
     private ms field_g;
 
     public final Object next() {
+        int fieldTemp$1 = 0;
         int var2 = 0;
-        Object var3 = null;
-        ms var3_ref = null;
+        ms var3 = null;
         ms var4 = null;
         var2 = Sumoblitz.field_L ? 1 : 0;
-        if (((ia) this).field_b == ((ia) this).field_e.field_c[((ia) this).field_f + -1]) {
+        if (this.field_b == this.field_e.field_c[this.field_f + -1]) {
           L0: while (true) {
-            if (((ia) this).field_f < ((ia) this).field_e.field_d) {
-              int fieldTemp$2 = ((ia) this).field_f;
-              ((ia) this).field_f = ((ia) this).field_f + 1;
-              var3_ref = ((ia) this).field_e.field_c[fieldTemp$2].field_b;
-              if (var3_ref == ((ia) this).field_e.field_c[((ia) this).field_f - 1]) {
-                continue L0;
+            if (this.field_f < this.field_e.field_d) {
+              fieldTemp$1 = this.field_f;
+              this.field_f = this.field_f + 1;
+              var3 = this.field_e.field_c[fieldTemp$1].field_b;
+              if (var3 == this.field_e.field_c[this.field_f - 1]) {
+                if (var2 == 0) {
+                  continue L0;
+                } else {
+                  return null;
+                }
               } else {
-                ((ia) this).field_g = var3_ref;
-                ((ia) this).field_b = var3_ref.field_b;
-                return (Object) (Object) var3_ref;
+                this.field_g = var3;
+                this.field_b = var3.field_b;
+                return var3;
               }
             } else {
               return null;
             }
           }
         } else {
-          var4 = ((ia) this).field_b;
-          ((ia) this).field_b = var4.field_b;
-          ((ia) this).field_g = var4;
-          return (Object) (Object) var4;
+          var4 = this.field_b;
+          this.field_b = var4.field_b;
+          this.field_g = var4;
+          return var4;
         }
     }
 
     public final void remove() {
-        if (null == ((ia) this).field_g) {
+        if (null == this.field_g) {
             throw new IllegalStateException();
         }
-        ((ia) this).field_g.b(false);
-        ((ia) this).field_g = null;
+        this.field_g.b(false);
+        this.field_g = null;
     }
 
     public final boolean hasNext() {
+        int fieldTemp$1 = 0;
         int var2 = 0;
         var2 = Sumoblitz.field_L ? 1 : 0;
-        if (((ia) this).field_e.field_c[-1 + ((ia) this).field_f] == ((ia) this).field_b) {
+        if (this.field_e.field_c[-1 + this.field_f] == this.field_b) {
           L0: while (true) {
-            if (((ia) this).field_e.field_d > ((ia) this).field_f) {
-              int fieldTemp$1 = ((ia) this).field_f;
-              ((ia) this).field_f = ((ia) this).field_f + 1;
-              if (((ia) this).field_e.field_c[fieldTemp$1].field_b != ((ia) this).field_e.field_c[-1 + ((ia) this).field_f]) {
-                ((ia) this).field_b = ((ia) this).field_e.field_c[((ia) this).field_f - 1].field_b;
-                return true;
+            if (this.field_e.field_d > this.field_f) {
+              fieldTemp$1 = this.field_f;
+              this.field_f = this.field_f + 1;
+              if (this.field_e.field_c[fieldTemp$1].field_b == this.field_e.field_c[-1 + this.field_f]) {
+                this.field_b = this.field_e.field_c[-1 + this.field_f];
+                if (var2 == 0) {
+                  continue L0;
+                } else {
+                  this.field_b = this.field_e.field_c[this.field_f - 1].field_b;
+                  return true;
+                }
               } else {
-                ((ia) this).field_b = ((ia) this).field_e.field_c[-1 + ((ia) this).field_f];
-                continue L0;
+                this.field_b = this.field_e.field_c[this.field_f - 1].field_b;
+                return true;
               }
             } else {
               return false;
@@ -78,41 +88,46 @@ final class ia implements Iterator {
     public static void a(int param0) {
         field_c = null;
         field_a = null;
+        if (param0 == 1) {
+            return;
+        }
+        field_d = -74;
     }
 
     private final void b(int param0) {
-        ((ia) this).field_f = 1;
-        ((ia) this).field_b = ((ia) this).field_e.field_c[0].field_b;
+        this.field_f = 1;
+        this.field_b = this.field_e.field_c[0].field_b;
         if (param0 <= 4) {
           this.b(34);
-          ((ia) this).field_g = null;
+          this.field_g = null;
           return;
         } else {
-          ((ia) this).field_g = null;
+          this.field_g = null;
           return;
         }
     }
 
     ia(um param0) {
-        ((ia) this).field_g = null;
+        this.field_g = null;
         try {
-            ((ia) this).field_e = param0;
+            this.field_e = param0;
             this.b(8);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ia.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, byte param1) {
         int var2 = ps.field_e[param0];
+        if (param1 != -82) {
+            field_a = (String) null;
+            so.a(var2, (byte) -127);
+            return;
+        }
         so.a(var2, (byte) -127);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Suggested names: ";
         field_c = new String[]{"Showing by rating", "Showing by win percentage"};
     }

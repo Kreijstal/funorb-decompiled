@@ -7,16 +7,12 @@ public abstract class Peer {
     protected jaclib.peer.PeerReference reference;
 
     protected long a() {
-        return ((jaclib.peer.Peer) this).reference.a((byte) 34);
+        return this.reference.a((byte) 34);
     }
 
     private final native static void init(Class param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        Peer.init(jaclib.peer.PeerReference.class);
+        jaclib.peer.Peer.init(jaclib.peer.PeerReference.class);
     }
 }

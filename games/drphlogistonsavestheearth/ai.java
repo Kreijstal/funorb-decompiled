@@ -14,6 +14,7 @@ final class ai extends uh {
     static String field_x;
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
+        ec discarded$0 = null;
         ja.field_t[gg.field_b] = param3;
         bj.field_a[gg.field_b] = gg.field_b;
         rc.field_i[gg.field_b] = param2;
@@ -28,7 +29,7 @@ final class ai extends uh {
         qj.field_d[gg.field_b] = param5;
         int var6 = param4 + param0 - -param5;
         if (param1 > -60) {
-            ec discarded$0 = ai.g(-61);
+            discarded$0 = ai.g(-61);
         }
         int var7 = 0 == var6 ? 0 : 1000 * param0 / var6;
         kf.field_c[gg.field_b] = var7;
@@ -43,24 +44,27 @@ final class ai extends uh {
 
     final String i(int param0) {
         int var3 = 0;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
-        if (((ai) this).field_z == null) {
+        if (this.field_z == null) {
             return "";
         }
-        StringBuilder discarded$0 = var5.append(((ai) this).field_z[0]);
-        for (var3 = 1; ((ai) this).field_z.length > var3; var3++) {
-            StringBuilder discarded$1 = var2.append("...");
-            StringBuilder discarded$2 = var5.append(((ai) this).field_z[var3]);
+        StringBuilder discarded$0 = var5.append(this.field_z[0]);
+        for (var3 = 1; this.field_z.length > var3; var3++) {
+            discarded$1 = var2.append("...");
+            discarded$2 = var5.append(this.field_z[var3]);
         }
         if (param0 < 120) {
-            ((ai) this).a((byte) 20);
+            this.a((byte) 20);
         }
         return var2.toString();
     }
 
     private final void a(od param0, int param1, int param2) {
+        int[] array$1 = null;
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -68,7 +72,7 @@ final class ai extends uh {
         sa var7 = null;
         int var8 = 0;
         int var9 = 0;
-        Object var10 = null;
+        od var10 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
@@ -90,21 +94,21 @@ final class ai extends uh {
           L0: {
             L1: {
               if (param2 != 1) {
-                if (param2 == 2) {
+                if ((param2 ^ -1) == -3) {
                   var4_int = param0.l(31760);
-                  ((ai) this).field_D = new int[var4_int];
+                  this.field_D = new int[var4_int];
                   var5 = 0;
                   L2: while (true) {
                     if (var5 >= var4_int) {
                       break L1;
                     } else {
-                      ((ai) this).field_D[var5] = param0.j(-788751192);
+                      this.field_D[var5] = param0.j(-788751192);
                       var5++;
                       continue L2;
                     }
                   }
                 } else {
-                  if (param2 != 3) {
+                  if ((param2 ^ -1) != -4) {
                     if (4 == param2) {
                       break L1;
                     } else {
@@ -112,8 +116,8 @@ final class ai extends uh {
                     }
                   } else {
                     var4_int = param0.l(31760);
-                    ((ai) this).field_u = new int[var4_int][];
-                    ((ai) this).field_E = new int[var4_int];
+                    this.field_u = new int[var4_int][];
+                    this.field_E = new int[var4_int];
                     var5 = 0;
                     L3: while (true) {
                       if (var4_int <= var5) {
@@ -123,14 +127,15 @@ final class ai extends uh {
                           var6 = param0.j(-788751192);
                           var7 = m.a(var6, (byte) 46);
                           if (var7 != null) {
-                            ((ai) this).field_E[var5] = var6;
-                            ((ai) this).field_u[var5] = new int[var7.field_a];
+                            this.field_E[var5] = var6;
+                            array$1 = new int[var7.field_a];
+                            this.field_u[var5] = array$1;
                             var8 = 0;
                             L5: while (true) {
                               if (var7.field_a <= var8) {
                                 break L4;
                               } else {
-                                ((ai) this).field_u[var5][var8] = param0.j(-788751192);
+                                this.field_u[var5][var8] = param0.j(-788751192);
                                 var8++;
                                 continue L5;
                               }
@@ -146,7 +151,7 @@ final class ai extends uh {
                   }
                 }
               } else {
-                ((ai) this).field_z = ki.a((byte) -123, '<', param0.b((byte) -56));
+                this.field_z = ki.a((byte) -123, '<', param0.b((byte) -56));
                 break L1;
               }
             }
@@ -154,8 +159,8 @@ final class ai extends uh {
               if (param1 < -6) {
                 break L6;
               } else {
-                var10 = null;
-                ((ai) this).a((od) null, 90);
+                var10 = (od) null;
+                this.a((od) null, 90);
                 break L6;
               }
             }
@@ -165,23 +170,23 @@ final class ai extends uh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var4 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var4;
+            stackOut_21_0 = (RuntimeException) (var4);
             stackOut_21_1 = new StringBuilder().append("ai.B(");
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -189,13 +194,14 @@ final class ai extends uh {
               break L7;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ',' + param2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static ec g(int param0) {
+        ec discarded$0 = null;
         if (param0 != -29132) {
-            ec discarded$0 = ai.g(-85);
+            discarded$0 = ai.g(-85);
         }
         return ie.field_v;
     }
@@ -204,9 +210,9 @@ final class ai extends uh {
         int var3 = 0;
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         int var2 = 83 % ((-66 - param0) / 46);
-        if (((ai) this).field_D != null) {
-            for (var3 = 0; ((ai) this).field_D.length > var3; var3++) {
-                ((ai) this).field_D[var3] = li.a(((ai) this).field_D[var3], 32768);
+        if (this.field_D != null) {
+            for (var3 = 0; this.field_D.length > var3; var3++) {
+                this.field_D[var3] = li.a(this.field_D[var3], 32768);
             }
         }
     }
@@ -214,6 +220,9 @@ final class ai extends uh {
     public static void h(int param0) {
         field_x = null;
         field_A = null;
+        if (param0 != -30463) {
+            ai.a(0, (byte) -77, 16, -100, 52, 101);
+        }
         field_w = null;
         field_v = null;
         field_y = null;
@@ -252,7 +261,7 @@ final class ai extends uh {
                   if (param1 == 0) {
                     break L2;
                   } else {
-                    ((ai) this).a((byte) 112);
+                    this.a((byte) 112);
                     break L2;
                   }
                 }
@@ -267,23 +276,23 @@ final class ai extends uh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_0 = (RuntimeException) (var3);
             stackOut_6_1 = new StringBuilder().append("ai.D(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -291,15 +300,11 @@ final class ai extends uh {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_v = "Create a free Account";
         field_w = "Create your own free Jagex account";
         field_A = new vh();

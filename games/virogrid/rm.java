@@ -14,12 +14,12 @@ final class rm extends ah {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((rm) this).field_a;
-          param1 = param1 + ((rm) this).field_l;
+          param0 = param0 + this.field_a;
+          param1 = param1 + this.field_l;
           var4 = param0 + param1 * df.field_e;
           var5 = 0;
-          var6 = ((rm) this).field_d;
-          var7 = ((rm) this).field_b;
+          var6 = this.field_d;
+          var7 = this.field_b;
           var8 = df.field_e - var7;
           var9 = 0;
           if (param1 >= df.field_g) {
@@ -71,7 +71,7 @@ final class rm extends ah {
             break L4;
           } else {
             if (var6 > 0) {
-              rm.b(df.field_d, ((rm) this).field_n, ((rm) this).field_m, var5, var4, var7, var6, var8, var9, param2);
+              rm.b(df.field_d, this.field_n, this.field_m, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -89,12 +89,12 @@ final class rm extends ah {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + (((rm) this).field_j - ((rm) this).field_b - ((rm) this).field_a);
-          param1 = param1 + ((rm) this).field_l;
+          param0 = param0 + (this.field_j - this.field_b - this.field_a);
+          param1 = param1 + this.field_l;
           var3 = param0 + param1 * df.field_e;
-          var4 = ((rm) this).field_b - 1;
-          var5 = ((rm) this).field_d;
-          var6 = ((rm) this).field_b;
+          var4 = this.field_b - 1;
+          var5 = this.field_d;
+          var6 = this.field_b;
           var7 = df.field_e - var6;
           var8 = var6 + var6;
           if (param1 >= df.field_g) {
@@ -146,7 +146,7 @@ final class rm extends ah {
             break L4;
           } else {
             if (var5 > 0) {
-              rm.c(df.field_d, ((rm) this).field_n, ((rm) this).field_m, 0, var4, var3, var6, var5, var7, var8);
+              rm.c(df.field_d, this.field_n, this.field_m, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -164,12 +164,12 @@ final class rm extends ah {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((rm) this).field_a;
-          param1 = param1 + ((rm) this).field_l;
+          param0 = param0 + this.field_a;
+          param1 = param1 + this.field_l;
           var3 = param0 + param1 * df.field_e;
           var4 = 0;
-          var5 = ((rm) this).field_d;
-          var6 = ((rm) this).field_b;
+          var5 = this.field_d;
+          var6 = this.field_b;
           var7 = df.field_e - var6;
           var8 = 0;
           if (param1 >= df.field_g) {
@@ -221,7 +221,7 @@ final class rm extends ah {
             break L4;
           } else {
             if (var5 > 0) {
-              rm.a(df.field_d, ((rm) this).field_n, ((rm) this).field_m, 0, var4, var3, var6, var5, var7, var8);
+              rm.a(df.field_d, this.field_n, this.field_m, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -231,6 +231,16 @@ final class rm extends ah {
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -252,7 +262,7 @@ final class rm extends ah {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4++;
                     param3 = param1[incrementValue$10];
                     if (param3 == 0) {
@@ -260,7 +270,7 @@ final class rm extends ah {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
@@ -270,48 +280,48 @@ final class rm extends ah {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4++;
                   param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4++;
                   param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4++;
                   param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4++;
                 param3 = param1[incrementValue$18];
                 if (param3 == 0) {
@@ -319,7 +329,7 @@ final class rm extends ah {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param0[incrementValue$19] = param2[param3 & 255];
                   var12++;
@@ -334,28 +344,39 @@ final class rm extends ah {
     final void a() {
         int var3 = 0;
         int var4 = 0;
-        if (((rm) this).field_b == ((rm) this).field_j) {
-            if (((rm) this).field_d == ((rm) this).field_i) {
+        int incrementValue$0 = 0;
+        if (this.field_b == this.field_j) {
+            if (this.field_d == this.field_i) {
                 return;
             }
         }
-        byte[] var1 = new byte[((rm) this).field_j * ((rm) this).field_i];
+        byte[] var1 = new byte[this.field_j * this.field_i];
         int var2 = 0;
-        for (var3 = 0; var3 < ((rm) this).field_d; var3++) {
-            for (var4 = 0; var4 < ((rm) this).field_b; var4++) {
-                int incrementValue$0 = var2;
+        for (var3 = 0; var3 < this.field_d; var3++) {
+            for (var4 = 0; var4 < this.field_b; var4++) {
+                incrementValue$0 = var2;
                 var2++;
-                var1[var4 + ((rm) this).field_a + (var3 + ((rm) this).field_l) * ((rm) this).field_j] = ((rm) this).field_n[incrementValue$0];
+                var1[var4 + this.field_a + (var3 + this.field_l) * this.field_j] = this.field_n[incrementValue$0];
             }
         }
-        ((rm) this).field_n = var1;
-        ((rm) this).field_b = ((rm) this).field_j;
-        ((rm) this).field_d = ((rm) this).field_i;
-        ((rm) this).field_a = 0;
-        ((rm) this).field_l = 0;
+        this.field_n = var1;
+        this.field_b = this.field_j;
+        this.field_d = this.field_i;
+        this.field_a = 0;
+        this.field_l = 0;
     }
 
     private final static void c(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -377,7 +398,7 @@ final class rm extends ah {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4--;
                     param3 = param2[param1[incrementValue$10] & 255];
                     if (param3 == 0) {
@@ -385,7 +406,7 @@ final class rm extends ah {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param0[incrementValue$11] = param3;
                       var12++;
@@ -395,48 +416,48 @@ final class rm extends ah {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4--;
                   param3 = param2[param1[incrementValue$12] & 255];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param0[incrementValue$13] = param3;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4--;
                   param3 = param2[param1[incrementValue$14] & 255];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param0[incrementValue$15] = param3;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4--;
                   param3 = param2[param1[incrementValue$16] & 255];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param0[incrementValue$17] = param3;
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4--;
                 param3 = param2[param1[incrementValue$18] & 255];
                 if (param3 == 0) {
@@ -444,7 +465,7 @@ final class rm extends ah {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param0[incrementValue$19] = param3;
                   var12++;
@@ -457,28 +478,30 @@ final class rm extends ah {
     }
 
     rm(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        ((rm) this).field_j = param0;
-        ((rm) this).field_i = param1;
-        ((rm) this).field_a = param2;
-        ((rm) this).field_l = param3;
-        ((rm) this).field_b = param4;
-        ((rm) this).field_d = param5;
-        ((rm) this).field_n = param6;
-        ((rm) this).field_m = param7;
+        this.field_j = param0;
+        this.field_i = param1;
+        this.field_a = param2;
+        this.field_l = param3;
+        this.field_b = param4;
+        this.field_d = param5;
+        this.field_n = param6;
+        this.field_m = param7;
     }
 
     rm(int param0, int param1, int param2) {
-        ((rm) this).field_b = param0;
-        ((rm) this).field_j = param0;
-        ((rm) this).field_d = param1;
-        ((rm) this).field_i = param1;
-        ((rm) this).field_l = 0;
-        ((rm) this).field_a = 0;
-        ((rm) this).field_n = new byte[param0 * param1];
-        ((rm) this).field_m = new int[param2];
+        this.field_b = param0;
+        this.field_j = param0;
+        this.field_d = param1;
+        this.field_i = param1;
+        this.field_l = 0;
+        this.field_a = 0;
+        this.field_n = new byte[param0 * param1];
+        this.field_m = new int[param2];
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -498,7 +521,7 @@ final class rm extends ah {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var13 = param1[incrementValue$66];
                 if (var13 == 0) {
@@ -508,7 +531,7 @@ final class rm extends ah {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;

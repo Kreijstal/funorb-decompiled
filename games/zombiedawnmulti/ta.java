@@ -16,20 +16,25 @@ final class ta extends al {
     static ak field_hb;
 
     public static void k(byte param0) {
-        field_ob = null;
-        field_ib = null;
-        field_hb = null;
-        field_lb = null;
-        field_gb = null;
-        field_pb = null;
-        field_jb = null;
+        if (param0 > -61) {
+          return;
+        } else {
+          field_ob = null;
+          field_ib = null;
+          field_hb = null;
+          field_lb = null;
+          field_gb = null;
+          field_pb = null;
+          field_jb = null;
+          return;
+        }
     }
 
     final void l(int param0) {
-        ((ta) this).field_qb.field_L = false;
-        ((ta) this).field_nb = true;
+        this.field_qb.field_L = false;
+        this.field_nb = true;
         if (param0 <= 110) {
-            ((ta) this).field_nb = true;
+            this.field_nb = true;
         }
     }
 
@@ -37,18 +42,18 @@ final class ta extends al {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
-            ((ta) this).field_mb = param1;
-            if (null != ((ta) this).field_mb) {
-                var3_int = ci.field_d.a(((ta) this).field_mb, 260, ci.field_d.field_C);
-                ((ta) this).b(300, var3_int + 150, 78);
+            this.field_mb = param1;
+            if (null != this.field_mb) {
+                var3_int = ci.field_d.a(this.field_mb, 260, ci.field_d.field_C);
+                this.b(300, var3_int + 150, 78);
             }
-            ((ta) this).field_qb = new le(13, 50, 274, 30, 15, 2113632, 4210752);
-            ((ta) this).field_kb = false;
-            ((ta) this).field_qb.field_L = true;
-            ((ta) this).field_nb = false;
-            ((ta) this).b((byte) 107, (cf) (Object) ((ta) this).field_qb);
+            this.field_qb = new le(13, 50, 274, 30, 15, 2113632, 4210752);
+            this.field_kb = false;
+            this.field_qb.field_L = true;
+            this.field_nb = false;
+            this.b((byte) 107, this.field_qb);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ta.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,7 +90,7 @@ final class ta extends al {
         try {
           L0: {
             L1: {
-              if (((ta) this).field_kb) {
+              if (this.field_kb) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -117,60 +122,67 @@ final class ta extends al {
                     break L3;
                   }
                 }
-                ((ta) this).field_kb = stackIn_7_1 != 0;
-                if (((ta) this).field_kb) {
-                  ((ta) this).field_qb.a(4210752, 8405024, (byte) -95);
-                  ((ta) this).field_qb.field_L = true;
-                  break L2;
-                } else {
-                  ((ta) this).field_qb.a(4210752, 2113632, (byte) 117);
-                  if (((ta) this).field_nb) {
-                    ((ta) this).field_qb.field_L = false;
-                    break L2;
+                L4: {
+                  ((ta) (this)).field_kb = stackIn_7_1 != 0;
+                  if (this.field_kb) {
+                    break L4;
                   } else {
-                    break L2;
+                    this.field_qb.a(4210752, 2113632, (byte) 117);
+                    if (this.field_nb) {
+                      this.field_qb.field_L = false;
+                      if (!ZombieDawnMulti.field_E) {
+                        break L2;
+                      } else {
+                        break L4;
+                      }
+                    } else {
+                      break L2;
+                    }
                   }
                 }
+                this.field_qb.a(4210752, 8405024, (byte) -95);
+                this.field_qb.field_L = true;
+                break L2;
               }
             }
-            ((ta) this).field_qb.field_B = (int)(65536.0f * (param1 / 100.0f));
-            ((ta) this).field_rb = param0;
+            this.field_qb.field_B = (int)(65536.0f * (param1 / 100.0f));
+            this.field_rb = param0;
             if (param2 >= 24) {
               break L0;
             } else {
-              field_gb = null;
+              field_gb = (cj) null;
               return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var5 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var5;
+            stackOut_15_0 = (RuntimeException) (var5);
             stackOut_15_1 = new StringBuilder().append("ta.C(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
-              break L4;
+              break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
               stackIn_18_2 = stackOut_16_2;
-              break L4;
+              break L5;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -178,19 +190,21 @@ final class ta extends al {
         try {
             int var2_int = 34 / ((param0 - -20) / 42);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ta.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "ta.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(boolean param0, int param1, int param2) {
+        int discarded$2 = 0;
+        int discarded$3 = 0;
         if (!param0) {
           L0: {
-            field_hb = null;
+            field_hb = (ak) null;
             super.a(param0, param1, param2);
-            ci.field_d.b(((ta) this).field_rb, param1 + (((ta) this).field_n >> 1), 103 + param2, 16777215, -1);
-            if (null != ((ta) this).field_mb) {
+            ci.field_d.b(this.field_rb, param1 + (this.field_n >> -368012767), 103 + param2, 16777215, -1);
+            if (null != this.field_mb) {
               oo.b(param1 - -20, 120 + (param2 - 7), 260, 8421504);
-              int discarded$2 = ci.field_d.a(((ta) this).field_mb, param1 + 20, param2 + 128, 260, 100, 16777215, -1, 1, 0, ci.field_d.field_C);
+              discarded$2 = ci.field_d.a(this.field_mb, param1 + 20, param2 - -120 + 8, 260, 100, 16777215, -1, 1, 0, ci.field_d.field_C);
               break L0;
             } else {
               break L0;
@@ -200,10 +214,10 @@ final class ta extends al {
         } else {
           L1: {
             super.a(param0, param1, param2);
-            ci.field_d.b(((ta) this).field_rb, param1 + (((ta) this).field_n >> 1), 103 + param2, 16777215, -1);
-            if (null != ((ta) this).field_mb) {
+            ci.field_d.b(this.field_rb, param1 + (this.field_n >> -368012767), 103 + param2, 16777215, -1);
+            if (null != this.field_mb) {
               oo.b(param1 - -20, 120 + (param2 - 7), 260, 8421504);
-              int discarded$3 = ci.field_d.a(((ta) this).field_mb, param1 + 20, param2 + 128, 260, 100, 16777215, -1, 1, 0, ci.field_d.field_C);
+              discarded$3 = ci.field_d.a(this.field_mb, param1 + 20, param2 - -120 + 8, 260, 100, 16777215, -1, 1, 0, ci.field_d.field_C);
               break L1;
             } else {
               break L1;
@@ -214,10 +228,6 @@ final class ta extends al {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_jb = "You cannot chat to <%0> because <%0> is not in your friend list.";
         field_pb = new char[128];
     }

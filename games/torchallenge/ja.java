@@ -15,7 +15,7 @@ final class ja {
 
     final static boolean a(byte param0, int param1) {
         if (param0 >= 91) {
-          if (param1 >= 3) {
+          if ((param1 ^ -1) <= -4) {
             if (10 < param1) {
               return false;
             } else {
@@ -31,13 +31,14 @@ final class ja {
 
     public static void a(int param0) {
         field_g = null;
-        field_e = null;
-        int var1 = -45;
-        field_j = null;
+        field_e = (boolean[][]) null;
+        int var1 = -91 / ((param0 - -62) / 55);
+        field_j = (boolean[][]) null;
         field_b = null;
     }
 
     final static boolean a(String param0, int param1, String param2) {
+        boolean discarded$2 = false;
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_7_0 = 0;
@@ -82,7 +83,7 @@ final class ja {
               if (param1 > 74) {
                 break L1;
               } else {
-                boolean discarded$2 = ja.a((byte) -72, 59);
+                discarded$2 = ja.a((byte) -72, 59);
                 break L1;
               }
             }
@@ -91,7 +92,7 @@ final class ja {
                 if (-1 != param0.indexOf(param2)) {
                   break L3;
                 } else {
-                  if (param0.indexOf(var3) == -1) {
+                  if ((param0.indexOf(var3) ^ -1) == 0) {
                     stackOut_6_0 = 0;
                     stackIn_7_0 = stackOut_6_0;
                     break L2;
@@ -110,23 +111,23 @@ final class ja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_0 = (RuntimeException) (var3_ref);
             stackOut_8_1 = new StringBuilder().append("ja.D(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -135,23 +136,23 @@ final class ja {
             }
           }
           L5: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -159,7 +160,7 @@ final class ja {
               break L5;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -170,13 +171,9 @@ final class ja {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 0;
         field_g = new am(2);
-        field_e = new boolean[][]{new boolean[6], new boolean[6], new boolean[6]};
-        field_j = new boolean[][]{new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[1], new boolean[1]};
+        field_e = new boolean[][]{new boolean[]{false, false, true, false, false, true}, new boolean[]{false, false, true, false, false, true}, new boolean[]{false, false, true, false, false, true}};
+        field_j = new boolean[][]{new boolean[]{false, true, true}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{true, true, true}, new boolean[]{false, false, false}, new boolean[]{true, true, true}, new boolean[]{true, true, true}, new boolean[]{true, true, true}, new boolean[]{true}, new boolean[]{true}};
     }
 }

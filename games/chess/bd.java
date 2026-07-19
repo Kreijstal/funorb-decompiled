@@ -13,14 +13,15 @@ final class bd {
         field_a = null;
         field_e = null;
         field_c = null;
+        if (param0 >= -2) {
+            field_b = (dd) null;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bd.A(";
         field_c = "Please check if address is correct";
     }

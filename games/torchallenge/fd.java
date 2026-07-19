@@ -17,7 +17,7 @@ final class fd implements Iterable {
         if (null != param1.field_h) {
             param1.a(true);
         }
-        da var5 = ((fd) this).field_a[(int)((long)(((fd) this).field_d - 1) & param2)];
+        da var5 = this.field_a[(int)((long)(this.field_d - 1) & param2)];
         if (param0 < 2) {
             return;
         }
@@ -28,16 +28,21 @@ final class fd implements Iterable {
             param1.field_d = param2;
             param1.field_f.field_h = param1;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "fd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "fd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public static void b(int param0) {
         field_c = null;
+        if (param0 != 0) {
+            return;
+        }
         field_h = null;
     }
 
     final static void a(byte param0, ka param1) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -54,6 +59,7 @@ final class fd implements Iterable {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
@@ -66,7 +72,7 @@ final class fd implements Iterable {
         var9 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
-            if ((3 & (param1.field_x | param1.field_u | param1.field_s | param1.field_p)) != 0) {
+            if (-1 != (3 & (param1.field_x | param1.field_u | param1.field_s | param1.field_p) ^ -1)) {
               L1: {
                 var2_int = (3 & param1.field_s) + param1.field_u;
                 var2_int = 4 - ((var2_int & 3) - var2_int);
@@ -77,7 +83,7 @@ final class fd implements Iterable {
                 if (param0 == -44) {
                   break L1;
                 } else {
-                  field_h = null;
+                  field_h = (ka) null;
                   break L1;
                 }
               }
@@ -90,6 +96,7 @@ final class fd implements Iterable {
                   param1.field_p = param1.field_p & -4;
                   param1.field_y = var4;
                   param1.field_s = param1.field_s & -4;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   var8 = 0;
@@ -99,9 +106,9 @@ final class fd implements Iterable {
                       var7++;
                       continue L2;
                     } else {
-                      int incrementValue$2 = var6;
+                      incrementValue$2 = var6;
                       var6++;
-                      int incrementValue$3 = var5;
+                      incrementValue$3 = var5;
                       var5++;
                       var4[incrementValue$2] = param1.field_y[incrementValue$3];
                       var8++;
@@ -111,30 +118,31 @@ final class fd implements Iterable {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var2;
+            stackOut_13_0 = (RuntimeException) (var2);
             stackOut_13_1 = new StringBuilder().append("fd.G(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -142,19 +150,27 @@ final class fd implements Iterable {
               break L4;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static void a(int param0) {
-        bg.field_K.c(0, (ee) (Object) new ih());
+        bg.field_K.c(0, new ih());
+        if (param0 != -2068) {
+            field_h = (ka) null;
+        }
     }
 
     final static boolean a(qk param0, int param1, qk param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        ka var5 = null;
         int stackIn_16_0 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -196,7 +212,7 @@ final class fd implements Iterable {
               if (param1 > 49) {
                 break L1;
               } else {
-                var5 = null;
+                var5 = (ka) null;
                 fd.a((byte) -65, (ka) null);
                 break L1;
               }
@@ -229,7 +245,7 @@ final class fd implements Iterable {
               }
             }
             L4: {
-              if (var3_int <= 0) {
+              if ((var3_int ^ -1) >= -1) {
                 stackOut_15_0 = 0;
                 stackIn_16_0 = stackOut_15_0;
                 break L4;
@@ -245,23 +261,23 @@ final class fd implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var3;
+            stackOut_17_0 = (RuntimeException) (var3);
             stackOut_17_1 = new StringBuilder().append("fd.A(");
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -270,23 +286,23 @@ final class fd implements Iterable {
             }
           }
           L6: {
-            stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+            stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
             stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param1).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param2 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -294,51 +310,52 @@ final class fd implements Iterable {
               break L6;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
         }
         return stackIn_16_0 != 0;
     }
 
     final da a(int param0, long param1) {
+        boolean discarded$1 = false;
         da var4 = null;
         da var5 = null;
         int var6 = 0;
-        Object var7 = null;
+        qk var7 = null;
         var6 = TorChallenge.field_F ? 1 : 0;
-        var4 = ((fd) this).field_a[(int)(param1 & (long)(-1 + ((fd) this).field_d))];
+        var4 = this.field_a[(int)(param1 & (long)(-1 + this.field_d))];
         if (param0 > 72) {
-          ((fd) this).field_b = var4.field_f;
+          this.field_b = var4.field_f;
           L0: while (true) {
-            if (((fd) this).field_b != var4) {
-              if (param1 != ((fd) this).field_b.field_d) {
-                ((fd) this).field_b = ((fd) this).field_b.field_f;
+            if (this.field_b != var4) {
+              if (param1 != this.field_b.field_d) {
+                this.field_b = this.field_b.field_f;
                 continue L0;
               } else {
-                var5 = ((fd) this).field_b;
-                ((fd) this).field_b = ((fd) this).field_b.field_f;
+                var5 = this.field_b;
+                this.field_b = this.field_b.field_f;
                 return var5;
               }
             } else {
-              ((fd) this).field_b = null;
+              this.field_b = null;
               return null;
             }
           }
         } else {
-          var7 = null;
-          boolean discarded$1 = fd.a((qk) null, -124, (qk) null);
-          ((fd) this).field_b = var4.field_f;
+          var7 = (qk) null;
+          discarded$1 = fd.a((qk) null, -124, (qk) null);
+          this.field_b = var4.field_f;
           L1: while (true) {
-            if (((fd) this).field_b != var4) {
-              if (param1 != ((fd) this).field_b.field_d) {
-                ((fd) this).field_b = ((fd) this).field_b.field_f;
+            if (this.field_b != var4) {
+              if (param1 != this.field_b.field_d) {
+                this.field_b = this.field_b.field_f;
                 continue L1;
               } else {
-                var5 = ((fd) this).field_b;
-                ((fd) this).field_b = ((fd) this).field_b.field_f;
+                var5 = this.field_b;
+                this.field_b = this.field_b.field_f;
                 return var5;
               }
             } else {
-              ((fd) this).field_b = null;
+              this.field_b = null;
               return null;
             }
           }
@@ -346,17 +363,24 @@ final class fd implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new md((fd) this);
+        return (Iterator) ((Object) new md((fd) (this)));
     }
 
     final static void a(byte param0) {
-        fe var1 = cj.field_h[9];
-        int var2 = ab.field_g[9];
+        fe var1 = null;
+        int var2 = 0;
+        var1 = cj.field_h[9];
+        var2 = ab.field_g[9];
         var1.field_l = var1.field_k.length;
-        pg.field_p = nc.a(var1, 100, var2);
-        pg.field_p.e(-1);
-        pg.field_p.e(0, var1.field_k.length);
-        ok.field_a = we.a(pg.field_p, 6222);
+        if (param0 != -86) {
+          return;
+        } else {
+          pg.field_p = nc.a(var1, 100, var2);
+          pg.field_p.e(-1);
+          pg.field_p.e(0, var1.field_k.length);
+          ok.field_a = we.a(pg.field_p, 6222);
+          return;
+        }
     }
 
     private fd() throws Throwable {
@@ -364,10 +388,6 @@ final class fd implements Iterable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = 9;
     }
 }

@@ -25,81 +25,96 @@ final class ci {
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
-        String stackIn_5_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
+        String stackIn_7_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_4_0 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_0 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var5 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
-            var2_int = param0.length();
-            var3 = new char[var2_int];
-            var4 = 0;
-            L1: while (true) {
-              if (var2_int <= var4) {
-                stackOut_4_0 = new String(var3);
-                stackIn_5_0 = stackOut_4_0;
-                break L0;
+            L1: {
+              var2_int = param0.length();
+              var3 = new char[var2_int];
+              if (param1 == -79) {
+                break L1;
               } else {
-                var3[-1 + (var2_int - var4)] = param0.charAt(var4);
-                var4++;
-                continue L1;
+                field_f = (ng) null;
+                break L1;
               }
+            }
+            var4 = 0;
+            L2: while (true) {
+              L3: {
+                if (var2_int <= var4) {
+                  break L3;
+                } else {
+                  var3[-1 + (var2_int - var4)] = param0.charAt(var4);
+                  var4++;
+                  if (var5 == 0) {
+                    continue L2;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              stackOut_6_0 = new String(var3);
+              stackIn_7_0 = stackOut_6_0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L4: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("ci.B(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_8_0 = (RuntimeException) (var2);
+            stackOut_8_1 = new StringBuilder().append("ci.B(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L2;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L4;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L2;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L4;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -79 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
         }
-        return stackIn_5_0;
+        return stackIn_7_0;
     }
 
     final ca a(byte param0) {
         ca var2 = null;
-        var2 = ((ci) this).field_d.field_l;
-        if (((ci) this).field_d != var2) {
+        var2 = this.field_d.field_l;
+        if (this.field_d != var2) {
           if (param0 != 100) {
-            return null;
+            return (ca) null;
           } else {
             var2.b(12);
             return var2;
@@ -115,28 +130,28 @@ final class ci {
             if (!(param1.field_m == null)) {
                 param1.b(12);
             }
-            param1.field_l = ((ci) this).field_d;
-            param1.field_m = ((ci) this).field_d.field_m;
+            param1.field_l = this.field_d;
+            param1.field_m = this.field_d.field_m;
             param1.field_m.field_l = param1;
             param1.field_l.field_m = param1;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "ci.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "ci.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final ca a(boolean param0) {
         ca var2 = null;
         if (param0) {
-          var2 = ((ci) this).field_d.field_l;
-          if (var2 == ((ci) this).field_d) {
-            ((ci) this).field_c = null;
+          var2 = this.field_d.field_l;
+          if (var2 == this.field_d) {
+            this.field_c = null;
             return null;
           } else {
-            ((ci) this).field_c = var2.field_l;
+            this.field_c = var2.field_l;
             return var2;
           }
         } else {
-          return null;
+          return (ca) null;
         }
     }
 
@@ -146,11 +161,11 @@ final class ci {
         int var4 = 0;
         var4 = Lexicominos.field_L ? 1 : 0;
         var2 = 0;
-        var3 = ((ci) this).field_d.field_l;
+        var3 = this.field_d.field_l;
         L0: while (true) {
-          if (((ci) this).field_d == var3) {
+          if (this.field_d == var3) {
             if (param0 < 22) {
-              field_a = null;
+              field_a = (sh) null;
               return var2;
             } else {
               return var2;
@@ -158,7 +173,11 @@ final class ci {
           } else {
             var3 = var3.field_l;
             var2++;
-            continue L0;
+            if (var4 == 0) {
+              continue L0;
+            } else {
+              return var2;
+            }
           }
         }
     }
@@ -232,7 +251,7 @@ final class ci {
             }
           }
         } else {
-          field_f = null;
+          field_f = (ng) null;
           if (param1 >= 32) {
             if (param1 > 126) {
               if (param1 < 160) {
@@ -351,40 +370,36 @@ final class ci {
     }
 
     public ci() {
-        ((ci) this).field_d = new ca();
-        ((ci) this).field_d.field_m = ((ci) this).field_d;
-        ((ci) this).field_d.field_l = ((ci) this).field_d;
+        this.field_d = new ca();
+        this.field_d.field_m = this.field_d;
+        this.field_d.field_l = this.field_d;
     }
 
     final ca a(int param0) {
         ca var2 = null;
         if (param0 == -256) {
-          var2 = ((ci) this).field_c;
-          if (((ci) this).field_d == var2) {
-            ((ci) this).field_c = null;
+          var2 = this.field_c;
+          if (this.field_d == var2) {
+            this.field_c = null;
             return null;
           } else {
-            ((ci) this).field_c = var2.field_l;
+            this.field_c = var2.field_l;
             return var2;
           }
         } else {
-          ((ci) this).field_d = null;
-          var2 = ((ci) this).field_c;
-          if (((ci) this).field_d == var2) {
-            ((ci) this).field_c = null;
+          this.field_d = (ca) null;
+          var2 = this.field_c;
+          if (this.field_d == var2) {
+            this.field_c = null;
             return null;
           } else {
-            ((ci) this).field_c = var2.field_l;
+            this.field_c = var2.field_l;
             return var2;
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new ng();
     }
 }

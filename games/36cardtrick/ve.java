@@ -19,10 +19,6 @@ abstract class ve {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ve.A(";
         field_b = "This game has been updated! Please reload this page.";
         field_d = new int[8192];

@@ -20,16 +20,16 @@ abstract class ag extends wf {
     abstract int b();
 
     final void a(int[] param0, int param1, int param2) {
-        if (((ag) this).field_h) {
-            ((ag) this).b(param0, param1, param2);
+        if (this.field_h) {
+            this.b(param0, param1, param2);
         } else {
-            ((ag) this).d(param2);
+            this.d(param2);
         }
     }
 
     abstract ag d();
 
     protected ag() {
-        ((ag) this).field_h = true;
+        this.field_h = true;
     }
 }

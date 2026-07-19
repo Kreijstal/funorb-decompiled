@@ -11,15 +11,14 @@ final class ha {
 
     public static void a(byte param0) {
         field_b = null;
+        if (param0 < 54) {
+            return;
+        }
         field_e = null;
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ha.A(";
         field_d = new int[4];
         field_e = "Loading...";

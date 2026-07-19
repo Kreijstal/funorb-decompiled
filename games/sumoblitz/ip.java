@@ -6,6 +6,7 @@ final class ip extends ml {
     static tf field_y;
 
     final void a(byte param0, int param1, int param2) {
+        int incrementValue$2 = 0;
         int var4 = 0;
         int var5 = 0;
         if (param2 != 4096) {
@@ -13,10 +14,10 @@ final class ip extends ml {
         } else {
           var4 = param1 * 2;
           var5 = param0 & 255;
-          int incrementValue$2 = var4;
+          incrementValue$2 = var4;
           var4++;
-          ((ip) this).field_x[incrementValue$2] = (byte)(var5 * 3 >> 5);
-          ((ip) this).field_x[var4] = (byte)(var5 * 3 >> 5);
+          this.field_x[incrementValue$2] = (byte)(var5 * 3 >> 66555013);
+          this.field_x[var4] = (byte)(var5 * 3 >> 1886067877);
           return;
         }
     }
@@ -27,50 +28,72 @@ final class ip extends ml {
 
     final byte[] a(byte param0, int param1, int param2, int param3) {
         int var5 = 79 % ((param0 - -43) / 46);
-        ((ip) this).field_x = new byte[2 * (param3 * (param2 * param1))];
-        ((ip) this).a(param3, 206, param2, param1);
-        return ((ip) this).field_x;
+        this.field_x = new byte[2 * (param3 * (param2 * param1))];
+        this.a(param3, 206, param2, param1);
+        return this.field_x;
     }
 
     final static void d(int param0) {
+        boolean discarded$45 = false;
+        boolean discarded$46 = false;
         RuntimeException var1 = null;
         int var2 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
             if (oj.a(false)) {
-              boolean discarded$15 = pu.field_e.a(cc.field_j, c.field_r, true, -1);
-              pu.field_e.h(-104);
-              L1: while (true) {
-                if (!wd.c(-81)) {
-                  break L0;
+              L1: {
+                discarded$45 = pu.field_e.a(cc.field_j, c.field_r, true, param0 + -1886067878);
+                if (param0 == 1886067877) {
+                  break L1;
                 } else {
-                  boolean discarded$16 = pu.field_e.a(np.field_c, tg.field_a, true);
-                  continue L1;
+                  ip.d((byte) -127);
+                  break L1;
                 }
               }
-            } else {
-              L2: {
-                if (null == gk.field_o) {
-                  break L2;
+              pu.field_e.h(-104);
+              L2: while (true) {
+                if (!wd.c(-81)) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 } else {
-                  if (gk.field_o.field_a) {
-                    ib.d(1);
-                    pu.field_e.a((byte) 113, (pk) (Object) new u(pu.field_e, am.field_e));
-                    break L2;
+                  discarded$46 = pu.field_e.a(np.field_c, tg.field_a, true);
+                  if (var2 == 0) {
+                    continue L2;
                   } else {
-                    break L2;
+                    return;
                   }
                 }
               }
-              return;
+            } else {
+              L3: {
+                if (null == gk.field_o) {
+                  break L3;
+                } else {
+                  if (gk.field_o.field_a) {
+                    ib.d(1);
+                    pu.field_e.a((byte) 113, new u(pu.field_e, am.field_e));
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "ip.D(" + 1886067877 + ')');
+          throw qo.a((Throwable) ((Object) var1), "ip.D(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -82,10 +105,6 @@ final class ip extends ml {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = new tf();
     }
 }

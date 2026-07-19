@@ -13,6 +13,9 @@ final class dj {
     static String field_d;
 
     public static void a(byte param0) {
+        if (param0 != 38) {
+            return;
+        }
         field_g = null;
         field_d = null;
         field_c = null;
@@ -51,7 +54,7 @@ final class dj {
               if (param0 > 53) {
                 break L1;
               } else {
-                field_d = null;
+                field_d = (String) null;
                 break L1;
               }
             }
@@ -72,23 +75,23 @@ final class dj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_0 = (RuntimeException) (var2);
             stackOut_8_1 = new StringBuilder().append("dj.A(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -96,7 +99,7 @@ final class dj {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
@@ -106,23 +109,23 @@ final class dj {
         mc var5 = null;
         int var6 = 0;
         var6 = TetraLink.field_J;
-        var4 = ((dj) this).field_e[(int)(param0 & (long)(-1 + ((dj) this).field_f))];
-        ((dj) this).field_a = var4.field_j;
+        var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_f))];
+        this.field_a = var4.field_j;
         L0: while (true) {
-          if (var4 == ((dj) this).field_a) {
+          if (var4 == this.field_a) {
             if (param1 != -43) {
-              return null;
+              return (mc) null;
             } else {
-              ((dj) this).field_a = null;
+              this.field_a = null;
               return null;
             }
           } else {
-            if (~param0 == ~((dj) this).field_a.field_c) {
-              var5 = ((dj) this).field_a;
-              ((dj) this).field_a = ((dj) this).field_a.field_j;
+            if ((param0 ^ -1L) == (this.field_a.field_c ^ -1L)) {
+              var5 = this.field_a;
+              this.field_a = this.field_a.field_j;
               return var5;
             } else {
-              ((dj) this).field_a = ((dj) this).field_a.field_j;
+              this.field_a = this.field_a.field_j;
               continue L0;
             }
           }
@@ -130,11 +133,11 @@ final class dj {
     }
 
     final mc b(int param0) {
-        ((dj) this).field_i = 0;
+        this.field_i = 0;
         if (param0 < 21) {
-            return null;
+            return (mc) null;
         }
-        return ((dj) this).a(-1);
+        return this.a(-1);
     }
 
     final void a(long param0, int param1, mc param2) {
@@ -143,9 +146,9 @@ final class dj {
             if (!(param2.field_e == null)) {
                 param2.b(false);
             }
-            var5 = ((dj) this).field_e[(int)((long)(((dj) this).field_f + -1) & param0)];
+            var5 = this.field_e[(int)((long)(this.field_f + -1) & param0)];
             if (param1 > -48) {
-                ((dj) this).field_e = null;
+                this.field_e = (mc[]) null;
             }
             param2.field_j = var5;
             param2.field_e = var5.field_e;
@@ -153,35 +156,38 @@ final class dj {
             param2.field_c = param0;
             param2.field_j.field_e = param2;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "dj.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "dj.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final mc a(int param0) {
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
         mc var2 = null;
         int var3 = 0;
         var3 = TetraLink.field_J;
         if (param0 == -1) {
           L0: {
-            if (0 >= ((dj) this).field_i) {
+            if (0 >= this.field_i) {
               break L0;
             } else {
-              if (((dj) this).field_e[((dj) this).field_i + -1] == ((dj) this).field_b) {
+              if (this.field_e[this.field_i + -1] == this.field_b) {
                 break L0;
               } else {
-                var2 = ((dj) this).field_b;
-                ((dj) this).field_b = var2.field_j;
+                var2 = this.field_b;
+                this.field_b = var2.field_j;
                 return var2;
               }
             }
           }
           L1: while (true) {
-            if (((dj) this).field_f > ((dj) this).field_i) {
-              int fieldTemp$3 = ((dj) this).field_i;
-              ((dj) this).field_i = ((dj) this).field_i + 1;
-              var2 = ((dj) this).field_e[fieldTemp$3].field_j;
-              if (((dj) this).field_e[-1 + ((dj) this).field_i] != var2) {
-                ((dj) this).field_b = var2.field_j;
+            if (this.field_f > this.field_i) {
+              fieldTemp$3 = this.field_i;
+              this.field_i = this.field_i + 1;
+              var2 = this.field_e[fieldTemp$3].field_j;
+              if (this.field_e[-1 + this.field_i] != var2) {
+                this.field_b = var2.field_j;
                 return var2;
               } else {
                 continue L1;
@@ -191,16 +197,16 @@ final class dj {
             }
           }
         } else {
-          field_g = null;
-          if (0 < ((dj) this).field_i) {
-            if (((dj) this).field_e[((dj) this).field_i + -1] == ((dj) this).field_b) {
+          field_g = (db) null;
+          if (0 < this.field_i) {
+            if (this.field_e[this.field_i + -1] == this.field_b) {
               L2: while (true) {
-                if (((dj) this).field_f > ((dj) this).field_i) {
-                  int fieldTemp$4 = ((dj) this).field_i;
-                  ((dj) this).field_i = ((dj) this).field_i + 1;
-                  var2 = ((dj) this).field_e[fieldTemp$4].field_j;
-                  if (((dj) this).field_e[-1 + ((dj) this).field_i] != var2) {
-                    ((dj) this).field_b = var2.field_j;
+                if (this.field_f > this.field_i) {
+                  fieldTemp$4 = this.field_i;
+                  this.field_i = this.field_i + 1;
+                  var2 = this.field_e[fieldTemp$4].field_j;
+                  if (this.field_e[-1 + this.field_i] != var2) {
+                    this.field_b = var2.field_j;
                     return var2;
                   } else {
                     continue L2;
@@ -210,18 +216,18 @@ final class dj {
                 }
               }
             } else {
-              var2 = ((dj) this).field_b;
-              ((dj) this).field_b = var2.field_j;
+              var2 = this.field_b;
+              this.field_b = var2.field_j;
               return var2;
             }
           } else {
             L3: while (true) {
-              if (((dj) this).field_f > ((dj) this).field_i) {
-                int fieldTemp$5 = ((dj) this).field_i;
-                ((dj) this).field_i = ((dj) this).field_i + 1;
-                var2 = ((dj) this).field_e[fieldTemp$5].field_j;
-                if (((dj) this).field_e[-1 + ((dj) this).field_i] != var2) {
-                  ((dj) this).field_b = var2.field_j;
+              if (this.field_f > this.field_i) {
+                fieldTemp$5 = this.field_i;
+                this.field_i = this.field_i + 1;
+                var2 = this.field_e[fieldTemp$5].field_j;
+                if (this.field_e[-1 + this.field_i] != var2) {
+                  this.field_b = var2.field_j;
                   return var2;
                 } else {
                   continue L3;
@@ -235,17 +241,18 @@ final class dj {
     }
 
     dj(int param0) {
+        mc dupTemp$2 = null;
         int var2 = 0;
         mc var3 = null;
-        ((dj) this).field_i = 0;
-        ((dj) this).field_e = new mc[param0];
-        ((dj) this).field_f = param0;
+        this.field_i = 0;
+        this.field_e = new mc[param0];
+        this.field_f = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            mc dupTemp$2 = new mc();
+            dupTemp$2 = new mc();
             var3 = dupTemp$2;
-            ((dj) this).field_e[var2] = dupTemp$2;
+            this.field_e[var2] = dupTemp$2;
             var3.field_j = var3;
             var3.field_e = var3;
             var2++;
@@ -258,18 +265,14 @@ final class dj {
 
     final static void a(byte param0, f param1) {
         try {
-            int var2_int = 29;
+            int var2_int = 29 / ((-63 - param0) / 49);
             im.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "dj.F(" + -116 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "dj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new db(10, 2, 2, 0);
         field_c = "Create a free account to start using this feature";
         field_d = "Staff impersonation";

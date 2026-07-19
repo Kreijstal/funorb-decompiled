@@ -7,6 +7,11 @@ final class nd {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != 3) {
+            field_b = -26;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 

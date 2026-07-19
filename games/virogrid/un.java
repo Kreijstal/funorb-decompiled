@@ -11,6 +11,6 @@ public class un {
     un field_d;
 
     un() {
-        ((un) this).field_a = 0;
+        this.field_a = 0;
     }
 }

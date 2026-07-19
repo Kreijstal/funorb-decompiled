@@ -7,25 +7,28 @@ final class jo {
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != 16720) {
+            og var2 = (og) null;
+            jo.a(true, -106, (og) null);
+        }
     }
 
     final static void a(boolean param0, int param1, og param2) {
         df var3 = null;
         try {
+            if (!param0) {
+                field_a = (String) null;
+            }
             var3 = wa.field_d;
-            var3.f(-121, 7);
+            var3.f(-121, param1);
             var3.b(90, param2.field_j);
             var3.b(90, param2.field_l);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "jo.A(" + true + ',' + 7 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "jo.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Unpacking sound effects";
     }
 }

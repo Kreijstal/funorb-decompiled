@@ -22,7 +22,7 @@ final class ifa extends td {
         int var18 = 0;
         aga var19 = null;
         int[][] var23 = null;
-        Object stackIn_3_0 = null;
+        ii stackIn_3_0 = null;
         ju stackIn_20_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -31,9 +31,10 @@ final class ifa extends td {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ju stackOut_19_0 = null;
-        Object stackOut_2_0 = null;
+        ii stackOut_2_0 = null;
         RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         RuntimeException stackOut_23_0 = null;
@@ -45,21 +46,22 @@ final class ifa extends td {
         var18 = BachelorFridge.field_y;
         try {
           L0: {
-            var19 = ((ifa) this).field_h.a(34, param0);
+            var19 = this.field_h.a(34, param0);
             if (param1 == 3) {
-              var4 = new ju(((ifa) this).field_g, new nq(var19));
+              var4 = new ju(this.field_g, new nq(var19));
               var5 = 17;
               var6 = 17;
-              var7 = -1 + var5 >> 1;
-              var8 = var6 - 1 >> 1;
+              var7 = -1 + var5 >> 1807565089;
+              var8 = var6 - 1 >> 1715139553;
               var23 = var4.d((byte) 27);
               var10 = var19.field_x;
               var11 = var19.field_J;
               var12 = 0;
               L1: while (true) {
                 if (var5 <= var12) {
-                  stackOut_19_0 = (ju) var4;
+                  stackOut_19_0 = (ju) (var4);
                   stackIn_20_0 = stackOut_19_0;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   var13 = 0;
@@ -69,10 +71,10 @@ final class ifa extends td {
                       continue L1;
                     } else {
                       L3: {
-                        if (var23[var12][var13] == 1) {
+                        if (-2 == (var23[var12][var13] ^ -1)) {
                           var14 = var12 - (var7 - var10);
                           var15 = var13 + -var8 + var11;
-                          if (var14 < 0) {
+                          if ((var14 ^ -1) > -1) {
                             break L3;
                           } else {
                             if (var14 >= param0.field_z) {
@@ -87,7 +89,7 @@ final class ifa extends td {
                                   var16 = param0.field_a[var14][var15];
                                   var17 = var16.field_l;
                                   if (var17 != null) {
-                                    var4.field_o.a((bw) (Object) new iv(new nq(var17), false, 1, 40, 0), true);
+                                    var4.field_o.a(new iv(new nq(var17), false, 1, 40, 0), true);
                                     break L3;
                                   } else {
                                     break L3;
@@ -107,32 +109,33 @@ final class ifa extends td {
                 }
               }
             } else {
-              stackOut_2_0 = null;
+              stackOut_2_0 = (ii) null;
               stackIn_3_0 = stackOut_2_0;
-              return (ii) (Object) stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var3;
+            stackOut_21_0 = (RuntimeException) (var3);
             stackOut_21_1 = new StringBuilder().append("ifa.A(");
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L4;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -140,19 +143,23 @@ final class ifa extends td {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ')');
         }
-        return (ii) (Object) stackIn_20_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return (ii) ((Object) stackIn_20_0);
+        }
     }
 
     public static void b(int param0) {
         field_p = null;
-        int var1 = 3;
+        int var1 = 9 / ((param0 - -60) / 39);
     }
 
     final static vr a(int param0, boolean param1, boolean param2, int param3, boolean param4) {
         int var5 = 76 / ((param3 - 1) / 56);
-        return qma.a(false, 2097152, false, 0, false, param0);
+        return qma.a(param2, 2097152, false, param4 ? 1 : 0, param1, param0);
     }
 
     ifa(int param0, aga param1) {
@@ -160,10 +167,6 @@ final class ifa extends td {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "Try again";
     }
 }

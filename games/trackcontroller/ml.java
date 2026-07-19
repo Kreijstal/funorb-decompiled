@@ -40,6 +40,7 @@ final class ml extends fc {
     private static float[] field_P;
 
     final ik a() {
+        int incrementValue$1 = 0;
         byte[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -47,24 +48,24 @@ final class ml extends fc {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ((ml) this).field_H = 0;
-        ((ml) this).field_z = new float[field_s];
-        var1 = new byte[((ml) this).field_B];
+        this.field_H = 0;
+        this.field_z = new float[field_s];
+        var1 = new byte[this.field_B];
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((ml) this).field_o.length) {
-            ((ml) this).field_z = null;
-            return new ik(((ml) this).field_E, var1, ((ml) this).field_O, ((ml) this).field_C, ((ml) this).field_u);
+          if (var3 >= this.field_o.length) {
+            this.field_z = null;
+            return new ik(this.field_E, var1, this.field_O, this.field_C, this.field_u);
           } else {
             var4 = this.d(var3);
             if (var4 != null) {
               L1: {
                 var5 = var4.length;
-                if (var5 <= ((ml) this).field_B - var2) {
+                if (var5 <= this.field_B - var2) {
                   break L1;
                 } else {
-                  var5 = ((ml) this).field_B - var2;
+                  var5 = this.field_B - var2;
                   break L1;
                 }
               }
@@ -76,11 +77,11 @@ final class ml extends fc {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = ~var7 >> 31;
+                      var7 = (var7 ^ -1) >> 31;
                       break L3;
                     }
                   }
-                  int incrementValue$1 = var2;
+                  incrementValue$1 = var2;
                   var2++;
                   var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
@@ -99,6 +100,9 @@ final class ml extends fc {
     }
 
     final static void a(byte[] param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -173,14 +177,14 @@ final class ml extends fc {
                                     return;
                                   } else {
                                     L7: {
-                                      stackOut_37_0 = (boolean[]) field_L;
+                                      stackOut_37_0 = (boolean[]) (field_L);
                                       stackOut_37_1 = var6;
                                       stackIn_39_0 = stackOut_37_0;
                                       stackIn_39_1 = stackOut_37_1;
                                       stackIn_38_0 = stackOut_37_0;
                                       stackIn_38_1 = stackOut_37_1;
                                       if (ml.b() == 0) {
-                                        stackOut_39_0 = (boolean[]) (Object) stackIn_39_0;
+                                        stackOut_39_0 = (boolean[]) ((Object) stackIn_39_0);
                                         stackOut_39_1 = stackIn_39_1;
                                         stackOut_39_2 = 0;
                                         stackIn_40_0 = stackOut_39_0;
@@ -188,7 +192,7 @@ final class ml extends fc {
                                         stackIn_40_2 = stackOut_39_2;
                                         break L7;
                                       } else {
-                                        stackOut_38_0 = (boolean[]) (Object) stackIn_38_0;
+                                        stackOut_38_0 = (boolean[]) ((Object) stackIn_38_0);
                                         stackOut_38_1 = stackIn_38_1;
                                         stackOut_38_2 = 1;
                                         stackIn_40_0 = stackOut_38_0;
@@ -198,8 +202,8 @@ final class ml extends fc {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = ml.f(16);
-                                    int discarded$4 = ml.f(16);
+                                    discarded$3 = ml.f(16);
+                                    discarded$4 = ml.f(16);
                                     field_k[var6] = ml.f(8);
                                     var6++;
                                     continue L6;
@@ -224,7 +228,7 @@ final class ml extends fc {
                       }
                     }
                   } else {
-                    int discarded$5 = ml.f(16);
+                    discarded$5 = ml.f(16);
                     var3++;
                     continue L2;
                   }
@@ -316,9 +320,10 @@ final class ml extends fc {
 
     final static ml a(kk param0, int param1, int param2) {
         try {
+            boolean discarded$0 = false;
             ml var4_ref = null;
             if (!ml.a(param0)) {
-                boolean discarded$0 = param0.a(param1, param2, -1);
+                discarded$0 = param0.a(param1, param2, -1);
                 return null;
             }
             byte[] var3 = param0.a(param1, param2, (byte) -23);
@@ -326,8 +331,10 @@ final class ml extends fc {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new ml(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -357,6 +364,7 @@ final class ml extends fc {
     }
 
     private final float[] d(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -416,13 +424,7 @@ final class ml extends fc {
         int[] var48 = null;
         float[] var49 = null;
         float[] var50 = null;
-        int[] var52 = null;
-        float[] var53 = null;
-        float[] var54 = null;
-        float[] var55 = null;
-        int[] var56 = null;
-        float[] var57 = null;
-        float[] var58 = null;
+        float[] var52 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -457,8 +459,8 @@ final class ml extends fc {
         Object stackOut_109_0 = null;
         int stackOut_109_1 = 0;
         L0: {
-          ml.a(((ml) this).field_o[param0], 0);
-          int discarded$1 = ml.b();
+          ml.a(this.field_o[param0], 0);
+          discarded$1 = ml.b();
           var2 = ml.f(ea.b(false, field_k.length - 1));
           var3 = field_L[var2] ? 1 : 0;
           if (var3 == 0) {
@@ -580,9 +582,7 @@ final class ml extends fc {
                 var17_int = var4 >> 1;
                 var18_int = var4 >> 2;
                 var19 = var4 >> 3;
-                var57 = field_j;
-                var53 = var57;
-                var49 = var53;
+                var49 = field_j;
                 var45 = var49;
                 var20_ref_float__ = var45;
                 var21_int = 0;
@@ -594,11 +594,11 @@ final class ml extends fc {
                       if (var41 >= var4) {
                         L14: {
                           if (var3 == 0) {
-                            stackOut_39_0 = (float[]) field_D;
+                            stackOut_39_0 = (float[]) (field_D);
                             stackIn_40_0 = stackOut_39_0;
                             break L14;
                           } else {
-                            stackOut_38_0 = (float[]) field_p;
+                            stackOut_38_0 = (float[]) (field_p);
                             stackIn_40_0 = stackOut_38_0;
                             break L14;
                           }
@@ -606,11 +606,11 @@ final class ml extends fc {
                         L15: {
                           var21 = stackIn_40_0;
                           if (var3 == 0) {
-                            stackOut_42_0 = (float[]) field_P;
+                            stackOut_42_0 = (float[]) (field_P);
                             stackIn_43_0 = stackOut_42_0;
                             break L15;
                           } else {
-                            stackOut_41_0 = (float[]) field_v;
+                            stackOut_41_0 = (float[]) (field_v);
                             stackIn_43_0 = stackOut_41_0;
                             break L15;
                           }
@@ -618,11 +618,11 @@ final class ml extends fc {
                         L16: {
                           var22 = stackIn_43_0;
                           if (var3 == 0) {
-                            stackOut_45_0 = (float[]) field_m;
+                            stackOut_45_0 = (float[]) (field_m);
                             stackIn_46_0 = stackOut_45_0;
                             break L16;
                           } else {
-                            stackOut_44_0 = (float[]) field_J;
+                            stackOut_44_0 = (float[]) (field_J);
                             stackIn_46_0 = stackOut_44_0;
                             break L16;
                           }
@@ -630,18 +630,16 @@ final class ml extends fc {
                         L17: {
                           var23 = stackIn_46_0;
                           if (var3 == 0) {
-                            stackOut_48_0 = (int[]) field_x;
+                            stackOut_48_0 = (int[]) (field_x);
                             stackIn_49_0 = stackOut_48_0;
                             break L17;
                           } else {
-                            stackOut_47_0 = (int[]) field_I;
+                            stackOut_47_0 = (int[]) (field_I);
                             stackIn_49_0 = stackOut_47_0;
                             break L17;
                           }
                         }
-                        var56 = stackIn_49_0;
-                        var52 = var56;
-                        var48 = var52;
+                        var48 = stackIn_49_0;
                         var44 = var48;
                         var24 = var44;
                         var25 = 0;
@@ -721,7 +719,7 @@ final class ml extends fc {
                                                               }
                                                             }
                                                           } else {
-                                                            var20_ref_float__[var4 - var18_int + var26] = -var57[var26];
+                                                            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
                                                             var26++;
                                                             continue L26;
                                                           }
@@ -766,7 +764,7 @@ final class ml extends fc {
                                           }
                                         }
                                       } else {
-                                        var27_int = var56[var26];
+                                        var27_int = var48[var26];
                                         if (var26 < var27_int) {
                                           var28_int = 8 * var26;
                                           var29_int = 8 * var27_int;
@@ -879,27 +877,25 @@ final class ml extends fc {
             }
             L35: {
               var17 = null;
-              if (((ml) this).field_H <= 0) {
+              if (this.field_H <= 0) {
                 break L35;
               } else {
                 L36: {
-                  var18_int = ((ml) this).field_H + var4 >> 2;
-                  var58 = new float[var18_int];
-                  var54 = var58;
-                  var50 = var54;
+                  var18_int = this.field_H + var4 >> 2;
+                  var50 = new float[var18_int];
                   var46 = var50;
                   var40 = var46;
-                  var17 = (Object) (Object) var40;
-                  if (((ml) this).field_l) {
+                  var17 = var40;
+                  if (this.field_l) {
                     break L36;
                   } else {
                     var19 = 0;
                     L37: while (true) {
-                      if (var19 >= ((ml) this).field_G) {
+                      if (var19 >= this.field_G) {
                         break L36;
                       } else {
-                        var20 = (((ml) this).field_H >> 1) + var19;
-                        var40[var19] = var40[var19] + ((ml) this).field_z[var20];
+                        var20 = (this.field_H >> 1) + var19;
+                        var40[var19] = var40[var19] + this.field_z[var20];
                         var19++;
                         continue L37;
                       }
@@ -914,7 +910,7 @@ final class ml extends fc {
                     if (var19 >= var4 >> 1) {
                       break L35;
                     } else {
-                      var20 = var58.length - (var4 >> 1) + var19;
+                      var20 = var50.length - (var4 >> 1) + var19;
                       var40[var20] = var40[var20] + field_j[var19];
                       var19++;
                       continue L38;
@@ -924,11 +920,11 @@ final class ml extends fc {
               }
             }
             L39: {
-              var18 = ((ml) this).field_z;
-              ((ml) this).field_z = field_j;
+              var18 = this.field_z;
+              this.field_z = field_j;
               field_j = var18;
-              ((ml) this).field_H = var4;
-              ((ml) this).field_G = var12 - (var4 >> 1);
+              this.field_H = var4;
+              this.field_G = var12 - (var4 >> 1);
               stackOut_108_0 = this;
               stackIn_110_0 = stackOut_108_0;
               stackIn_109_0 = stackOut_108_0;
@@ -946,12 +942,12 @@ final class ml extends fc {
                 break L39;
               }
             }
-            ((ml) this).field_l = stackIn_111_1 != 0;
-            return (float[]) var17;
+            ((ml) (this)).field_l = stackIn_111_1 != 0;
+            return (float[]) (var17);
           } else {
             var42 = field_t[var14.field_d[var17_int]];
-            var55 = field_j;
-            var42.a(var55, var4 >> 1, var16 != 0);
+            var52 = field_j;
+            var42.a(var52, var4 >> 1, var16 != 0);
             var17_int++;
             continue L9;
           }
@@ -967,8 +963,8 @@ final class ml extends fc {
     }
 
     final static int f(int param0) {
-        int var3 = 0;
         int var4 = 0;
+        int var3 = 0;
         int var1 = 0;
         int var2 = 0;
         while (param0 >= 8 - field_M) {
@@ -994,19 +990,19 @@ final class ml extends fc {
         int var6_int = 0;
         byte[] var6 = null;
         be var2 = new be(param0);
-        ((ml) this).field_E = var2.e((byte) 113);
-        ((ml) this).field_B = var2.e((byte) 113);
-        ((ml) this).field_O = var2.e((byte) 113);
-        ((ml) this).field_C = var2.e((byte) 113);
-        if (((ml) this).field_C < 0) {
-            ((ml) this).field_C = ~((ml) this).field_C;
-            ((ml) this).field_u = true;
+        this.field_E = var2.e((byte) 113);
+        this.field_B = var2.e((byte) 113);
+        this.field_O = var2.e((byte) 113);
+        this.field_C = var2.e((byte) 113);
+        if (this.field_C < 0) {
+            this.field_C = this.field_C ^ -1;
+            this.field_u = true;
         }
         int var3 = var2.e((byte) 113);
         if (var3 < 0) {
             throw new IOException();
         }
-        ((ml) this).field_o = new byte[var3][];
+        this.field_o = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
             var5 = 0;
             do {
@@ -1015,7 +1011,7 @@ final class ml extends fc {
             } while (var6_int >= 255);
             var6 = new byte[var5];
             var2.a(91, var6, 0, var5);
-            ((ml) this).field_o[var4] = var6;
+            this.field_o[var4] = var6;
         }
     }
 
@@ -1030,14 +1026,13 @@ final class ml extends fc {
     }
 
     final ik a(int[] param0) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         float[] var7 = null;
-        float[] var11 = null;
-        float[] var13 = null;
-        byte[] var14 = null;
+        byte[] var12 = null;
         L0: {
           if (param0 == null) {
             break L0;
@@ -1050,23 +1045,23 @@ final class ml extends fc {
           }
         }
         L1: {
-          if (((ml) this).field_F != null) {
+          if (this.field_F != null) {
             break L1;
           } else {
-            ((ml) this).field_H = 0;
-            ((ml) this).field_z = new float[field_s];
-            ((ml) this).field_F = new byte[((ml) this).field_B];
-            ((ml) this).field_n = 0;
-            ((ml) this).field_i = 0;
+            this.field_H = 0;
+            this.field_z = new float[field_s];
+            this.field_F = new byte[this.field_B];
+            this.field_n = 0;
+            this.field_i = 0;
             break L1;
           }
         }
         L2: while (true) {
-          if (((ml) this).field_i >= ((ml) this).field_o.length) {
-            ((ml) this).field_z = null;
-            var14 = ((ml) this).field_F;
-            ((ml) this).field_F = null;
-            return new ik(((ml) this).field_E, var14, ((ml) this).field_O, ((ml) this).field_C, ((ml) this).field_u);
+          if (this.field_i >= this.field_o.length) {
+            this.field_z = null;
+            var12 = this.field_F;
+            this.field_F = null;
+            return new ik(this.field_E, var12, this.field_O, this.field_C, this.field_u);
           } else {
             L3: {
               if (param0 == null) {
@@ -1080,19 +1075,17 @@ final class ml extends fc {
               }
             }
             L4: {
-              var13 = this.d(((ml) this).field_i);
-              var11 = var13;
-              var7 = var11;
+              var7 = this.d(this.field_i);
               if (var7 == null) {
                 break L4;
               } else {
                 L5: {
-                  var3 = ((ml) this).field_n;
-                  var4 = var13.length;
-                  if (var4 <= ((ml) this).field_B - var3) {
+                  var3 = this.field_n;
+                  var4 = var7.length;
+                  if (var4 <= this.field_B - var3) {
                     break L5;
                   } else {
-                    var4 = ((ml) this).field_B - var3;
+                    var4 = this.field_B - var3;
                     break L5;
                   }
                 }
@@ -1103,32 +1096,32 @@ final class ml extends fc {
                       if (param0 == null) {
                         break L7;
                       } else {
-                        param0[0] = param0[0] - (var3 - ((ml) this).field_n);
+                        param0[0] = param0[0] - (var3 - this.field_n);
                         break L7;
                       }
                     }
-                    ((ml) this).field_n = var3;
+                    this.field_n = var3;
                     break L4;
                   } else {
                     L8: {
-                      var6 = (int)(128.0f + var13[var5] * 128.0f);
+                      var6 = (int)(128.0f + var7[var5] * 128.0f);
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = ~var6 >> 31;
+                        var6 = (var6 ^ -1) >> 31;
                         break L8;
                       }
                     }
-                    int incrementValue$1 = var3;
+                    incrementValue$1 = var3;
                     var3++;
-                    ((ml) this).field_F[incrementValue$1] = (byte)(var6 - 128);
+                    this.field_F[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
                 }
               }
             }
-            ((ml) this).field_i = ((ml) this).field_i + 1;
+            this.field_i = this.field_i + 1;
             continue L2;
           }
         }
@@ -1136,15 +1129,16 @@ final class ml extends fc {
 
     private final static void a(byte[] param0, int param1) {
         field_y = param0;
-        field_N = 0;
+        field_N = param1;
         field_M = 0;
     }
 
     final static ml a(kk param0, String param1, String param2) {
         try {
+            boolean discarded$0 = false;
             ml var4_ref = null;
             if (!ml.a(param0)) {
-                boolean discarded$0 = param0.a(param1, param2, (byte) -45);
+                discarded$0 = param0.a(param1, param2, (byte) -45);
                 return null;
             }
             byte[] var3 = param0.a(param1, -1, param2);
@@ -1152,8 +1146,10 @@ final class ml extends fc {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new ml(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1180,10 +1176,6 @@ final class ml extends fc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = false;
     }
 }

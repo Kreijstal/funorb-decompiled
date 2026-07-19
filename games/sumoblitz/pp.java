@@ -88,97 +88,125 @@ final class pp implements Runnable {
               }
             }
             L5: {
-              var10 = stackIn_13_0;
-              if (lk.field_k > param3) {
-                break L5;
-              } else {
-                if (lk.field_j > param3) {
-                  var11 = param3 + var8 * lk.field_b;
-                  var12 = 1 - -var10 + -var8 >> 1;
-                  L6: while (true) {
-                    var12--;
-                    if (var12 < 0) {
-                      break L5;
-                    } else {
-                      lk.field_a[var11] = 16777215;
-                      var11 = var11 + lk.field_b * 2;
-                      continue L6;
-                    }
-                  }
+              L6: {
+                var10 = stackIn_13_0;
+                if (lk.field_k > param3) {
+                  break L6;
                 } else {
-                  break L5;
+                  if (lk.field_j > param3) {
+                    var11 = param3 + var8 * lk.field_b;
+                    var12 = 1 - -var10 + -var8 >> -2219903;
+                    L7: while (true) {
+                      var12--;
+                      if (-1 < (var12 ^ -1)) {
+                        break L6;
+                      } else {
+                        lk.field_a[var11] = 16777215;
+                        var11 = var11 + lk.field_b * 2;
+                        if (var13 != 0) {
+                          break L5;
+                        } else {
+                          if (var13 == 0) {
+                            continue L7;
+                          } else {
+                            break L6;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    break L6;
+                  }
                 }
               }
-            }
-            L7: {
               if (param2 == -13181) {
-                break L7;
+                break L5;
               } else {
                 pp.a(5, 111, 100, -88, -57);
-                break L7;
+                break L5;
               }
             }
             L8: {
+              L9: {
+                L10: {
+                  if (lk.field_i > param0) {
+                    break L10;
+                  } else {
+                    if (var6 < lk.field_e) {
+                      var11 = param0 * lk.field_b - -var7;
+                      var12 = -var7 + (1 + var9) >> 220154369;
+                      L11: while (true) {
+                        var12--;
+                        if (var12 < 0) {
+                          break L10;
+                        } else {
+                          lk.field_a[var11] = 16777215;
+                          var11 += 2;
+                          if (var13 != 0) {
+                            break L9;
+                          } else {
+                            if (var13 == 0) {
+                              continue L11;
+                            } else {
+                              break L10;
+                            }
+                          }
+                        }
+                      }
+                    } else {
+                      break L10;
+                    }
+                  }
+                }
+                if (lk.field_k > var5_int) {
+                  break L9;
+                } else {
+                  if (var5_int >= lk.field_j) {
+                    break L9;
+                  } else {
+                    var11 = var5_int + lk.field_b * ((1 & var5_int + -param3) + var8);
+                    var12 = var10 + 1 + -var8 >> -1169820063;
+                    L12: while (true) {
+                      var12--;
+                      if ((var12 ^ -1) > -1) {
+                        break L9;
+                      } else {
+                        lk.field_a[var11] = 16777215;
+                        var11 = var11 + 2 * lk.field_b;
+                        if (var13 != 0) {
+                          break L8;
+                        } else {
+                          if (var13 == 0) {
+                            continue L12;
+                          } else {
+                            break L9;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
               if (lk.field_i > param0) {
                 break L8;
               } else {
-                if (var6 < lk.field_e) {
-                  var11 = param0 * lk.field_b - -var7;
-                  var12 = -var7 + (1 + var9) >> 1;
-                  L9: while (true) {
+                if (lk.field_e <= var6) {
+                  break L8;
+                } else {
+                  var11 = (1 & -param0 + var6) + (var7 + lk.field_b * var6);
+                  var12 = -var7 + (1 - -var9) >> 883457121;
+                  L13: while (true) {
                     var12--;
-                    if (var12 < 0) {
+                    if (-1 < (var12 ^ -1)) {
                       break L8;
                     } else {
                       lk.field_a[var11] = 16777215;
                       var11 += 2;
-                      continue L9;
-                    }
-                  }
-                } else {
-                  break L8;
-                }
-              }
-            }
-            L10: {
-              if (lk.field_k > var5_int) {
-                break L10;
-              } else {
-                if (var5_int >= lk.field_j) {
-                  break L10;
-                } else {
-                  var11 = var5_int + lk.field_b * ((1 & var5_int + -param3) + var8);
-                  var12 = var10 + 1 + -var8 >> 1;
-                  L11: while (true) {
-                    var12--;
-                    if (var12 < 0) {
-                      break L10;
-                    } else {
-                      lk.field_a[var11] = 16777215;
-                      var11 = var11 + 2 * lk.field_b;
-                      continue L11;
-                    }
-                  }
-                }
-              }
-            }
-            L12: {
-              if (lk.field_i > param0) {
-                break L12;
-              } else {
-                if (lk.field_e <= var6) {
-                  break L12;
-                } else {
-                  var11 = (1 & -param0 + var6) + (var7 + lk.field_b * var6);
-                  var12 = -var7 + (1 - -var9) >> 1;
-                  L13: while (true) {
-                    var12--;
-                    if (var12 < 0) {
-                      break L12;
-                    } else {
-                      lk.field_a[var11] = 16777215;
-                      var11 += 2;
-                      continue L13;
+                      if (var13 == 0) {
+                        continue L13;
+                      } else {
+                        return;
+                      }
                     }
                   }
                 }
@@ -189,7 +217,7 @@ final class pp implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var5, "pp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qo.a((Throwable) ((Object) var5), "pp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -206,71 +234,114 @@ final class pp implements Runnable {
     }
 
     public final void run() {
+        Exception exception = null;
         int var1_int = 0;
-        Exception var1 = null;
         du var2 = null;
         Throwable var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        String var5 = null;
+        int decompiledRegionSelector0 = 0;
+        int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        ((pp) this).field_b = true;
+        this.field_b = true;
         try {
-          L0: while (true) {
-            if (((pp) this).field_a) {
-              ((pp) this).field_b = false;
-              return;
-            } else {
-              var1_int = 0;
-              L1: while (true) {
-                if (2 <= var1_int) {
-                  tg.a(10L, (byte) 107);
-                  rd.a((Object) null, ((pp) this).field_g, -11030);
-                  continue L0;
-                } else {
-                  L2: {
-                    var2 = ((pp) this).field_c[var1_int];
-                    if (var2 != null) {
-                      var2.b();
-                      var1_int++;
-                      break L2;
+          L0: {
+            try {
+              L1: {
+                L2: while (true) {
+                  L3: {
+                    if (this.field_a) {
+                      break L3;
                     } else {
-                      var1_int++;
-                      break L2;
+                      if (var4 != 0) {
+                        decompiledRegionSelector0 = 1;
+                        break L1;
+                      } else {
+                        var1_int = 0;
+                        L4: while (true) {
+                          L5: {
+                            L6: {
+                              if (2 <= var1_int) {
+                                break L6;
+                              } else {
+                                var2 = this.field_c[var1_int];
+                                if (var4 != 0) {
+                                  break L5;
+                                } else {
+                                  L7: {
+                                    if (var2 != null) {
+                                      var2.b();
+                                      break L7;
+                                    } else {
+                                      break L7;
+                                    }
+                                  }
+                                  var1_int++;
+                                  if (var4 == 0) {
+                                    continue L4;
+                                  } else {
+                                    break L6;
+                                  }
+                                }
+                              }
+                            }
+                            tg.a(10L, (byte) 107);
+                            rd.a((Object) null, this.field_g, -11030);
+                            break L5;
+                          }
+                          if (var4 == 0) {
+                            continue L2;
+                          } else {
+                            break L3;
+                          }
+                        }
+                      }
                     }
                   }
-                  var1_int++;
-                  continue L1;
+                  decompiledRegionSelector0 = 0;
+                  break L1;
                 }
               }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              exception = (Exception) (Object) decompiledCaughtException;
+              var5 = (String) null;
+              ms.a((String) null, (Throwable) ((Object) exception), 0);
+              this.field_b = false;
+              return;
+            }
+            if (decompiledRegionSelector0 == 0) {
+              decompiledRegionSelector1 = 0;
+              break L0;
+            } else {
+              decompiledRegionSelector1 = 1;
+              break L0;
             }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Exception) (Object) decompiledCaughtException;
-          var5 = null;
-          ms.a((String) null, (Throwable) (Object) var1, 0);
-          ((pp) this).field_b = false;
-          return;
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
-          ((pp) this).field_b = false;
+          this.field_b = false;
           throw pp.<RuntimeException>$cfr$sneakyThrow(var3);
+        }
+        L8: {
+          if (decompiledRegionSelector1 == 0) {
+            this.field_b = false;
+            break L8;
+          } else {
+            break L8;
+          }
         }
     }
 
     pp() {
-        ((pp) this).field_c = new du[2];
-        ((pp) this).field_a = false;
-        ((pp) this).field_b = false;
+        this.field_c = new du[2];
+        this.field_a = false;
+        this.field_b = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new String[]{"Accelerator pad", "Ice pad", "Teleporter pad", "Pinball bouncer", "Attractor", "Repeller", "Spike pad", "Landmine"};
         field_f = "Members";
     }

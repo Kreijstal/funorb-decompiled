@@ -27,16 +27,12 @@ final class bd extends wj {
 
     final nk a(int param0) {
         if (param0 != -184) {
-            return null;
+            return (nk) null;
         }
         return be.field_w;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = -1;
         field_s = "Error connecting to server. Please try using a different server.";
         field_r = "Waiting for languages";

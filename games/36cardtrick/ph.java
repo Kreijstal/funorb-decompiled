@@ -14,49 +14,46 @@ final class ph {
     }
 
     final he a(int param0, long param1) {
+        int discarded$1 = 0;
         he var4 = null;
         he var5 = null;
         int var6 = 0;
-        he var7 = null;
-        he var8 = null;
         var6 = Main.field_T;
-        ((ph) this).field_d = param1;
+        this.field_d = param1;
         if (param0 <= -26) {
-          var7 = ((ph) this).field_e[(int)(param1 & (long)(-1 + ((ph) this).field_c))];
-          var4 = var7;
-          ((ph) this).field_b = var7.field_h;
+          var4 = this.field_e[(int)(param1 & (long)(-1 + this.field_c))];
+          this.field_b = var4.field_h;
           L0: while (true) {
-            if (var4 != ((ph) this).field_b) {
-              if (~param1 == ~((ph) this).field_b.field_j) {
-                var5 = ((ph) this).field_b;
-                ((ph) this).field_b = ((ph) this).field_b.field_h;
+            if (var4 != this.field_b) {
+              if ((param1 ^ -1L) == (this.field_b.field_j ^ -1L)) {
+                var5 = this.field_b;
+                this.field_b = this.field_b.field_h;
                 return var5;
               } else {
-                ((ph) this).field_b = ((ph) this).field_b.field_h;
+                this.field_b = this.field_b.field_h;
                 continue L0;
               }
             } else {
-              ((ph) this).field_b = null;
+              this.field_b = null;
               return null;
             }
           }
         } else {
-          int discarded$1 = ph.a(22, 12);
-          var8 = ((ph) this).field_e[(int)(param1 & (long)(-1 + ((ph) this).field_c))];
-          var4 = var8;
-          ((ph) this).field_b = var8.field_h;
+          discarded$1 = ph.a(22, 12);
+          var4 = this.field_e[(int)(param1 & (long)(-1 + this.field_c))];
+          this.field_b = var4.field_h;
           L1: while (true) {
-            if (var4 != ((ph) this).field_b) {
-              if (~param1 == ~((ph) this).field_b.field_j) {
-                var5 = ((ph) this).field_b;
-                ((ph) this).field_b = ((ph) this).field_b.field_h;
+            if (var4 != this.field_b) {
+              if ((param1 ^ -1L) == (this.field_b.field_j ^ -1L)) {
+                var5 = this.field_b;
+                this.field_b = this.field_b.field_h;
                 return var5;
               } else {
-                ((ph) this).field_b = ((ph) this).field_b.field_h;
+                this.field_b = this.field_b.field_h;
                 continue L1;
               }
             } else {
-              ((ph) this).field_b = null;
+              this.field_b = null;
               return null;
             }
           }
@@ -67,7 +64,7 @@ final class ph {
         ga.a(true);
         if (tb.field_c == null) {
           r.b((byte) 123);
-          kf.d(0);
+          kf.d(param0 ^ param0);
           ui.d((byte) -122);
           if (wk.b((byte) -112)) {
             na.field_r.h(1, 0);
@@ -81,7 +78,7 @@ final class ph {
         } else {
           bg.a(tb.field_c, (byte) -76);
           r.b((byte) 123);
-          kf.d(0);
+          kf.d(param0 ^ param0);
           ui.d((byte) -122);
           if (!wk.b((byte) -112)) {
             mc.a((byte) -126);
@@ -101,20 +98,20 @@ final class ph {
         int var4 = 0;
         var4 = Main.field_T;
         if (param0 == 26847) {
-          if (((ph) this).field_b != null) {
-            var2 = ((ph) this).field_e[(int)((long)(-1 + ((ph) this).field_c) & ((ph) this).field_d)];
+          if (this.field_b != null) {
+            var2 = this.field_e[(int)((long)(-1 + this.field_c) & this.field_d)];
             L0: while (true) {
-              if (((ph) this).field_b != var2) {
-                if (((ph) this).field_b.field_j != ((ph) this).field_d) {
-                  ((ph) this).field_b = ((ph) this).field_b.field_h;
+              if (this.field_b != var2) {
+                if (this.field_b.field_j != this.field_d) {
+                  this.field_b = this.field_b.field_h;
                   continue L0;
                 } else {
-                  var3 = ((ph) this).field_b;
-                  ((ph) this).field_b = ((ph) this).field_b.field_h;
+                  var3 = this.field_b;
+                  this.field_b = this.field_b.field_h;
                   return var3;
                 }
               } else {
-                ((ph) this).field_b = null;
+                this.field_b = null;
                 return null;
               }
             }
@@ -122,75 +119,90 @@ final class ph {
             return null;
           }
         } else {
-          return null;
+          return (he) null;
         }
     }
 
     ph(int param0) {
         int var2 = 0;
+        he dupTemp$0 = null;
         he var3 = null;
-        ((ph) this).field_c = param0;
-        ((ph) this).field_e = new he[param0];
+        this.field_c = param0;
+        this.field_e = new he[param0];
         for (var2 = 0; param0 > var2; var2++) {
-            he dupTemp$0 = new he();
+            dupTemp$0 = new he();
             var3 = dupTemp$0;
-            ((ph) this).field_e[var2] = dupTemp$0;
+            this.field_e[var2] = dupTemp$0;
             var3.field_h = var3;
             var3.field_i = var3;
         }
     }
 
     final static boolean a(char param0, boolean param1) {
-        int stackIn_25_0 = 0;
-        int stackIn_28_0 = 0;
+        int stackIn_27_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_25_0 = 0;
         int stackOut_26_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_24_0 = 0;
-        if (param0 < 48) {
-          if (65 > param0) {
-            L0: {
-              if (param0 < 97) {
-                break L0;
-              } else {
-                if (param0 > 122) {
+        if (!param1) {
+          if (param0 < 48) {
+            if (65 > param0) {
+              L0: {
+                if (param0 < 97) {
                   break L0;
+                } else {
+                  if (param0 > 122) {
+                    break L0;
+                  } else {
+                    return true;
+                  }
+                }
+              }
+              return false;
+            } else {
+              if (param0 <= 90) {
+                stackOut_28_0 = 1;
+                stackIn_30_0 = stackOut_28_0;
+                return stackIn_30_0 != 0;
+              } else {
+                L1: {
+                  L2: {
+                    if (param0 < 97) {
+                      break L2;
+                    } else {
+                      if (param0 > 122) {
+                        break L2;
+                      } else {
+                        stackOut_25_0 = 1;
+                        stackIn_27_0 = stackOut_25_0;
+                        break L1;
+                      }
+                    }
+                  }
+                  stackOut_26_0 = 0;
+                  stackIn_27_0 = stackOut_26_0;
+                  break L1;
+                }
+                return stackIn_27_0 != 0;
+              }
+            }
+          } else {
+            if (param0 > 57) {
+              if (65 <= param0) {
+                if (param0 > 90) {
+                  if (param0 >= 97) {
+                    if (param0 > 122) {
+                      return false;
+                    } else {
+                      return true;
+                    }
+                  } else {
+                    return false;
+                  }
                 } else {
                   return true;
                 }
-              }
-            }
-            return false;
-          } else {
-            if (param0 <= 90) {
-              stackOut_26_0 = 1;
-              stackIn_28_0 = stackOut_26_0;
-              return stackIn_28_0 != 0;
-            } else {
-              L1: {
-                L2: {
-                  if (param0 < 97) {
-                    break L2;
-                  } else {
-                    if (param0 > 122) {
-                      break L2;
-                    } else {
-                      stackOut_23_0 = 1;
-                      stackIn_25_0 = stackOut_23_0;
-                      break L1;
-                    }
-                  }
-                }
-                stackOut_24_0 = 0;
-                stackIn_25_0 = stackOut_24_0;
-                break L1;
-              }
-              return stackIn_25_0 != 0;
-            }
-          }
-        } else {
-          if (param0 > 57) {
-            if (65 <= param0) {
-              if (param0 > 90) {
+              } else {
                 if (param0 >= 97) {
                   if (param0 > 122) {
                     return false;
@@ -200,23 +212,13 @@ final class ph {
                 } else {
                   return false;
                 }
-              } else {
-                return true;
               }
             } else {
-              if (param0 >= 97) {
-                if (param0 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
+              return true;
             }
-          } else {
-            return true;
           }
+        } else {
+          return true;
         }
     }
 
@@ -226,17 +228,17 @@ final class ph {
             if (!(param0.field_i == null)) {
                 param0.d(12);
             }
-            var5 = ((ph) this).field_e[(int)(param1 & (long)(((ph) this).field_c - 1))];
+            var5 = this.field_e[(int)(param1 & (long)(this.field_c - 1))];
             param0.field_h = var5;
             param0.field_i = var5.field_i;
             param0.field_i.field_h = param0;
             if (param2 != 6144) {
-                field_a = null;
+                field_a = (String) null;
             }
             param0.field_j = param1;
             param0.field_h.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ph.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "ph.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -280,10 +282,6 @@ final class ph {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Please try again in a few minutes.";
     }
 }

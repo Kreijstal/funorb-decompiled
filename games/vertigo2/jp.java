@@ -51,6 +51,9 @@ final class jp {
         field_n = null;
         field_R = null;
         field_u = null;
+        if (!param0) {
+            return;
+        }
         field_j = null;
     }
 
@@ -67,16 +70,16 @@ final class jp {
         int var11 = 0;
         int var12 = 0;
         var12 = Vertigo2.field_L ? 1 : 0;
-        if (!((jp) this).field_i) {
+        if (!this.field_i) {
           L0: {
-            ((jp) this).field_i = true;
+            this.field_i = true;
             var2 = 32767;
             var3 = 32767;
             var4 = 32767;
             if (param0 == 117) {
               break L0;
             } else {
-              ((jp) this).a((byte) -11);
+              this.a((byte) -11);
               break L0;
             }
           }
@@ -85,18 +88,18 @@ final class jp {
           var7 = -32768;
           var8 = 0;
           L1: while (true) {
-            if (var8 >= ((jp) this).field_F) {
-              ((jp) this).field_S = var2;
-              ((jp) this).field_t = var3;
-              ((jp) this).field_D = var5;
-              ((jp) this).field_B = var4;
-              ((jp) this).field_E = var6;
-              ((jp) this).field_k = var7;
+            if (var8 >= this.field_F) {
+              this.field_S = var2;
+              this.field_t = var3;
+              this.field_D = var5;
+              this.field_B = var4;
+              this.field_E = var6;
+              this.field_k = var7;
               return;
             } else {
               L2: {
-                var9 = ((jp) this).field_I[var8];
-                var10 = ((jp) this).field_r[var8];
+                var9 = this.field_I[var8];
+                var10 = this.field_r[var8];
                 if (var9 <= var5) {
                   break L2;
                 } else {
@@ -129,7 +132,7 @@ final class jp {
                 }
               }
               L6: {
-                var11 = ((jp) this).field_m[var8];
+                var11 = this.field_m[var8];
                 if (var11 < var4) {
                   var4 = var11;
                   break L6;
@@ -153,6 +156,7 @@ final class jp {
     }
 
     final static char a(boolean param0, char param1) {
+        char discarded$2 = 0;
         L0: {
           if (param1 == 181) {
             break L0;
@@ -160,6 +164,14 @@ final class jp {
             if (param1 == 402) {
               break L0;
             } else {
+              L1: {
+                if (param0) {
+                  break L1;
+                } else {
+                  discarded$2 = jp.a(true, 'f');
+                  break L1;
+                }
+              }
               return Character.toTitleCase(param1);
             }
           }
@@ -168,16 +180,19 @@ final class jp {
     }
 
     private final void b(boolean param0) {
-        ((jp) this).field_i = false;
+        this.field_i = false;
+        if (!param0) {
+            this.field_O = (short[]) null;
+        }
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var8 = Vertigo2.field_L ? 1 : 0;
-        for (var6 = 0; ((jp) this).field_F > var6; var6++) {
-            ((jp) this).field_I[var6] = (short)(param0 * ((jp) this).field_I[var6] / param4);
-            ((jp) this).field_r[var6] = (short)(param2 * ((jp) this).field_r[var6] / param4);
-            ((jp) this).field_m[var6] = (short)(((jp) this).field_m[var6] * param3 / param4);
+        for (var6 = 0; this.field_F > var6; var6++) {
+            this.field_I[var6] = (short)(param0 * this.field_I[var6] / param4);
+            this.field_r[var6] = (short)(param2 * this.field_r[var6] / param4);
+            this.field_m[var6] = (short)(this.field_m[var6] * param3 / param4);
         }
         int var7 = -7 / ((-70 - param1) / 45);
         this.b(true);
@@ -187,24 +202,20 @@ final class jp {
         int var6 = 0;
         int var7 = Vertigo2.field_L ? 1 : 0;
         int var5 = -72 % ((param3 - 67) / 57);
-        for (var6 = 0; var6 < ((jp) this).field_F; var6++) {
-            ((jp) this).field_I[var6] = (short)(((jp) this).field_I[var6] + param2);
-            ((jp) this).field_r[var6] = (short)(((jp) this).field_r[var6] + param0);
-            ((jp) this).field_m[var6] = (short)(((jp) this).field_m[var6] + param1);
+        for (var6 = 0; var6 < this.field_F; var6++) {
+            this.field_I[var6] = (short)(this.field_I[var6] + param2);
+            this.field_r[var6] = (short)(this.field_r[var6] + param0);
+            this.field_m[var6] = (short)(this.field_m[var6] + param1);
         }
         this.b(true);
     }
 
     jp() {
-        ((jp) this).field_i = false;
-        ((jp) this).field_G = (byte) 0;
+        this.field_i = false;
+        this.field_G = (byte) 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = "<%0> and <%1> drew!";
         field_j = "Asking for or providing contact information";
         field_R = "<%0> is not on your ignore list.";

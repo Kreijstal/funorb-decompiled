@@ -16,10 +16,10 @@ final class vka extends td {
     vka(int param0, aga param1, int param2, int param3) {
         super(param0, param1);
         try {
-            ((vka) this).field_n = param3;
-            ((vka) this).field_k = param2;
+            this.field_n = param3;
+            this.field_k = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vka.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "vka.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class vka extends td {
         aga var3 = null;
         RuntimeException var3_ref = null;
         lp var4 = null;
-        Object stackIn_2_0 = null;
+        ii stackIn_2_0 = null;
         lp stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -44,9 +44,10 @@ final class vka extends td {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         lp stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        ii stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -58,40 +59,42 @@ final class vka extends td {
         try {
           L0: {
             if (param1 == 3) {
-              var3 = ((vka) this).field_h.a(22, param0);
-              var4 = new lp(((vka) this).field_g, new nq(var3));
+              var3 = this.field_h.a(22, param0);
+              var4 = new lp(this.field_g, new nq(var3));
               var4.field_r = var3.field_x;
               var4.field_s = var3.field_J;
-              stackOut_3_0 = (lp) var4;
+              stackOut_3_0 = (lp) (var4);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (ii) null;
               stackIn_2_0 = stackOut_1_0;
-              return (ii) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3_ref;
+            stackOut_5_0 = (RuntimeException) (var3_ref);
             stackOut_5_1 = new StringBuilder().append("vka.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -99,16 +102,16 @@ final class vka extends td {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return (ii) (Object) stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return (ii) ((Object) stackIn_4_0);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Not enough money!";
     }
 }

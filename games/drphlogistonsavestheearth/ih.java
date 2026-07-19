@@ -15,6 +15,9 @@ final class ih extends pj implements ra, ke {
     final static he[] k(int param0) {
         int var2 = 0;
         int var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        if (param0 != 24782) {
+            return (he[]) null;
+        }
         he[] var1 = new he[bd.field_M];
         for (var2 = 0; var2 < bd.field_M; var2++) {
             var1[var2] = new he(oe.field_b, field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], a.field_e[var2], aj.field_a);
@@ -36,6 +39,7 @@ final class ih extends pj implements ra, ke {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_8_0 = false;
         boolean stackOut_12_0 = false;
@@ -53,14 +57,16 @@ final class ih extends pj implements ra, ke {
           L0: {
             if (param3 >= 63) {
               if (!super.a(param0, param1, param2, 88)) {
-                if (param0 == 98) {
-                  stackOut_8_0 = ((ih) this).a(param2, 65535);
+                if (-99 == (param0 ^ -1)) {
+                  stackOut_8_0 = this.a(param2, 65535);
                   stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   if (param0 == 99) {
-                    stackOut_12_0 = ((ih) this).a(param2, (byte) 105);
+                    stackOut_12_0 = this.a(param2, (byte) 105);
                     stackIn_13_0 = stackOut_12_0;
+                    decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
                     return false;
@@ -69,35 +75,37 @@ final class ih extends pj implements ra, ke {
               } else {
                 stackOut_4_0 = 1;
                 stackIn_5_0 = stackOut_4_0;
-                return stackIn_5_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var5;
+            stackOut_14_0 = (RuntimeException) (var5);
             stackOut_14_1 = new StringBuilder().append("ih.BA(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L1;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -105,9 +113,21 @@ final class ih extends pj implements ra, ke {
               break L1;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param3 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param3 + ')');
         }
-        return stackIn_13_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_5_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_9_0;
+            } else {
+              return stackIn_13_0;
+            }
+          }
+        }
     }
 
     ih(qd param0) {
@@ -136,50 +156,50 @@ final class ih extends pj implements ra, ke {
         String stackOut_4_2 = null;
         try {
           L0: {
-            ((ih) this).field_M = param0;
-            ((ih) this).field_L = new hf(cd.field_a, (fd) null);
-            ((ih) this).field_L.field_l = (cg) (Object) new ie();
-            var7 = a.a(5044, wk.field_l, new String[2]);
+            this.field_M = param0;
+            this.field_L = new hf(cd.field_a, (fd) null);
+            this.field_L.field_l = (cg) ((Object) new ie());
+            var7 = a.a(5044, wk.field_l, new String[]{this.i(88), this.j(-84)});
             var3 = 20;
             var4 = new l(uh.field_i, 0, 0, 0, 0, 16777215, -1, 3, 0, uh.field_i.field_x, -1, 2147483647, true);
-            ((ih) this).field_Q = new qa(var7, (cg) (Object) var4);
-            ((ih) this).field_Q.field_v = "";
-            ((ih) this).field_Q.a(we.field_d, 0, 124);
-            ((ih) this).field_Q.a(we.field_d, 1, 115);
-            ((ih) this).field_Q.field_u = (fd) this;
-            ((ih) this).field_Q.field_w = -40 + ((ih) this).field_w;
-            ((ih) this).field_Q.b(0, -40 + ((ih) this).field_w, 26, var3);
-            var3 = var3 + (15 + ((ih) this).field_Q.field_k);
-            ((ih) this).b((vg) (Object) ((ih) this).field_Q, (byte) 50);
+            this.field_Q = new qa(var7, var4);
+            this.field_Q.field_v = "";
+            this.field_Q.a(we.field_d, 0, 124);
+            this.field_Q.a(we.field_d, 1, 115);
+            this.field_Q.field_u = (fd) (this);
+            this.field_Q.field_w = -40 + this.field_w;
+            this.field_Q.b(0, -40 + this.field_w, 26, var3);
+            var3 = var3 + (15 + this.field_Q.field_k);
+            this.b(this.field_Q, (byte) 50);
             var5 = 4;
             var6 = 200;
-            ((ih) this).field_L.a(var3, 40, 300 + -var6 >> 1, 16535, var6);
-            ((ih) this).field_L.field_u = (fd) this;
-            ((ih) this).b((vg) (Object) ((ih) this).field_L, (byte) 125);
-            ((ih) this).a(0, 55 + (var3 - -var5), 0, 16535, 300);
+            this.field_L.a(var3, 40, 300 + -var6 >> 1119285729, 16535, var6);
+            this.field_L.field_u = (fd) (this);
+            this.b(this.field_L, (byte) 125);
+            this.a(0, 55 + (var3 - -var5), 0, 16535, 300);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var2;
+            stackOut_3_0 = (RuntimeException) (var2);
             stackOut_3_1 = new StringBuilder().append("ih.<init>(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -187,7 +207,7 @@ final class ih extends pj implements ra, ke {
               break L1;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -212,11 +232,11 @@ final class ih extends pj implements ra, ke {
         try {
           L0: {
             L1: {
-              if (((ih) this).field_L != param3) {
+              if (this.field_L != param3) {
                 break L1;
               } else {
                 lk.b(1);
-                ((ih) this).field_M.d(true);
+                this.field_M.d(true);
                 break L1;
               }
             }
@@ -224,7 +244,7 @@ final class ih extends pj implements ra, ke {
               if (param2) {
                 break L2;
               } else {
-                ((ih) this).field_M = null;
+                this.field_M = (qd) null;
                 break L2;
               }
             }
@@ -234,23 +254,23 @@ final class ih extends pj implements ra, ke {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var6;
+            stackOut_5_0 = (RuntimeException) (var6);
             stackOut_5_1 = new StringBuilder().append("ih.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param3 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -258,12 +278,15 @@ final class ih extends pj implements ra, ke {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param4 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param4 + ')');
         }
     }
 
     public static void l(int param0) {
         field_O = null;
+        if (param0 != 288) {
+            return;
+        }
         field_J = null;
         field_P = null;
         field_N = null;
@@ -279,6 +302,7 @@ final class ih extends pj implements ra, ke {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
@@ -294,7 +318,7 @@ final class ih extends pj implements ra, ke {
             if (param1 <= -90) {
               L1: {
                 if (0 != param0) {
-                  if (param0 == 1) {
+                  if (-2 == (param0 ^ -1)) {
                     nd.a(-1, "privacy.ws");
                     break L1;
                   } else {
@@ -310,32 +334,34 @@ final class ih extends pj implements ra, ke {
                   break L1;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var5;
+            stackOut_10_0 = (RuntimeException) (var5);
             stackOut_10_1 = new StringBuilder().append("ih.C(").append(param0).append(',').append(param1).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L2;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -343,24 +369,28 @@ final class ih extends pj implements ra, ke {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param3 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     private final String j(int param0) {
+        if (param0 >= -57) {
+            this.field_M = (qd) null;
+        }
         return "</col></u>";
     }
 
     private final String i(int param0) {
-        int var2 = 0;
+        int var2 = 56 % ((param0 - 28) / 57);
         return "<u=2164A2><col=2164A2>";
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_N = "This entry doesn't match";
         field_O = new int[13];
         field_O[11] = 140;

@@ -13,30 +13,40 @@ final class kg extends br {
 
     public static void a(int param0) {
         field_j = null;
-        field_f = null;
-        field_l = null;
-        field_i = null;
-        field_k = null;
-        field_m = null;
+        if (param0 != 360) {
+          kg.a(false, (byte) 79);
+          field_f = null;
+          field_l = null;
+          field_i = null;
+          field_k = null;
+          field_m = null;
+          return;
+        } else {
+          field_f = null;
+          field_l = null;
+          field_i = null;
+          field_k = null;
+          field_m = null;
+          return;
+        }
     }
 
     final static void a(boolean param0, byte param1) {
         k.a((byte) 122, param0);
+        if (param1 < 97) {
+            field_l = (String) null;
+        }
     }
 
     kg(byte[] param0) {
         try {
-            ((kg) this).field_h = param0;
+            this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Who can join";
         field_l = "Macroing or use of bots";
         field_g = 360;

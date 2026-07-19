@@ -23,30 +23,34 @@ final class ak implements Iterable {
             return;
         }
         try {
-            param0.field_k = ((ak) this).field_f;
-            param0.field_i = ((ak) this).field_f.field_i;
+            param0.field_k = this.field_f;
+            param0.field_i = this.field_f.field_i;
             param0.field_i.field_k = param0;
             param0.field_k.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "ak.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "ak.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(boolean param0) {
+        boolean discarded$15 = false;
+        boolean discarded$16 = false;
         RuntimeException var1 = null;
         int var2 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
             if (we.b(false)) {
-              boolean discarded$15 = TorChallenge.field_H.a(e.field_m, false, qa.field_b, true);
+              discarded$15 = TorChallenge.field_H.a(e.field_m, param0, qa.field_b, true);
               TorChallenge.field_H.j(-86);
               L1: while (true) {
                 if (!kj.e((byte) -124)) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  boolean discarded$16 = TorChallenge.field_H.a(di.field_m, b.field_J, -58);
+                  discarded$16 = TorChallenge.field_H.a(di.field_m, b.field_J, -58);
                   continue L1;
                 }
               }
@@ -57,25 +61,31 @@ final class ak implements Iterable {
                 } else {
                   if (gi.field_d.field_i) {
                     ij.c((byte) -109);
-                    TorChallenge.field_H.a((byte) 123, (ee) (Object) new nh(TorChallenge.field_H, de.field_b));
+                    TorChallenge.field_H.a((byte) 123, (ee) (new nh(TorChallenge.field_H, de.field_b)));
                     break L2;
                   } else {
                     break L2;
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "ak.G(" + false + ')');
+          throw oj.a((Throwable) ((Object) var1), "ak.G(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new ag((ak) this);
+        return (Iterator) ((Object) new ag((ak) (this)));
     }
 
     final static void a(int param0, int param1, int param2, int param3, ka[] param4) {
@@ -93,6 +103,7 @@ final class ak implements Iterable {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
@@ -126,6 +137,7 @@ final class ak implements Iterable {
                     L2: while (true) {
                       if (var9 <= param0) {
                         qg.b(bk.field_s);
+                        decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
                         param4[1].g(param0, param2);
@@ -134,34 +146,36 @@ final class ak implements Iterable {
                       }
                     }
                   } else {
-                    return;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var5;
+            stackOut_12_0 = (RuntimeException) (var5);
             stackOut_12_1 = new StringBuilder().append("ak.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param4 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -169,7 +183,16 @@ final class ak implements Iterable {
               break L3;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -177,27 +200,36 @@ final class ak implements Iterable {
         field_i = null;
         field_c = null;
         field_b = null;
-        field_a = null;
+        field_a = (ka[][]) null;
         field_e = null;
-        field_j = null;
-        field_d = null;
-        field_g = null;
+        if (param0 >= -19) {
+          field_h = 101;
+          field_j = (int[][]) null;
+          field_d = null;
+          field_g = null;
+          return;
+        } else {
+          field_j = (int[][]) null;
+          field_d = null;
+          field_g = null;
+          return;
+        }
     }
 
     final w a(int param0) {
         w var2 = null;
         if (param0 == 0) {
-          var2 = ((ak) this).field_f.field_k;
-          if (((ak) this).field_f == var2) {
+          var2 = this.field_f.field_k;
+          if (this.field_f == var2) {
             return null;
           } else {
             var2.a(12695);
             return var2;
           }
         } else {
-          field_a = null;
-          var2 = ((ak) this).field_f.field_k;
-          if (((ak) this).field_f == var2) {
+          field_a = (ka[][]) null;
+          var2 = this.field_f.field_k;
+          if (this.field_f == var2) {
             return null;
           } else {
             var2.a(12695);
@@ -207,33 +239,66 @@ final class ak implements Iterable {
     }
 
     final static java.awt.Container b(int param0) {
-        if (!(gi.field_b == null)) {
-            return (java.awt.Container) (Object) gi.field_b;
+        ka[] var2 = null;
+        if (gi.field_b != null) {
+          return (java.awt.Container) ((Object) gi.field_b);
+        } else {
+          if (param0 != 4) {
+            var2 = (ka[]) null;
+            ak.a(12, -9, 70, 32, (ka[]) null);
+            return (java.awt.Container) ((Object) gi.b(param0 + 12472));
+          } else {
+            return (java.awt.Container) ((Object) gi.b(param0 + 12472));
+          }
         }
-        return (java.awt.Container) (Object) gi.b(12476);
     }
 
     final static boolean a(int param0, char param1) {
-        int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        if (param1 != 160) {
-          if (32 != param1) {
-            if (95 != param1) {
-              if (param1 == 45) {
-                return true;
+        int stackIn_8_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_6_0 = 0;
+        if (param0 == 95) {
+          if (param1 != 160) {
+            if (32 != param1) {
+              if (95 != param1) {
+                if (param1 == 45) {
+                  return true;
+                } else {
+                  return false;
+                }
               } else {
-                return false;
+                stackOut_18_0 = 1;
+                stackIn_20_0 = stackOut_18_0;
+                return stackIn_20_0 != 0;
               }
             } else {
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              return stackIn_7_0 != 0;
+              return true;
             }
           } else {
             return true;
           }
         } else {
-          return true;
+          ak.a((byte) -6);
+          if (param1 != 160) {
+            if (32 != param1) {
+              if (95 != param1) {
+                if (param1 == 45) {
+                  return true;
+                } else {
+                  return false;
+                }
+              } else {
+                stackOut_6_0 = 1;
+                stackIn_8_0 = stackOut_6_0;
+                return stackIn_8_0 != 0;
+              }
+            } else {
+              return true;
+            }
+          } else {
+            return true;
+          }
         }
     }
 
@@ -242,10 +307,6 @@ final class ak implements Iterable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = 0;
         field_a = new ka[3][];
         field_d = "Type your age in years";

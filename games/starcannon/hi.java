@@ -11,13 +11,15 @@ final class hi extends java.awt.Canvas {
 
     hi(java.awt.Component param0) {
         try {
-            ((hi) this).field_c = param0;
+            this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "hi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(byte[] param0, int param1) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -38,10 +40,6 @@ final class hi extends java.awt.Canvas {
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        byte[] var22 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        byte[] var25 = null;
         int stackIn_29_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_31_0 = 0;
@@ -112,7 +110,7 @@ final class hi extends java.awt.Canvas {
                             L5: while (true) {
                               if (var3 <= var4) {
                                 var17.field_g = 0;
-                                var4 = 0;
+                                var4 = param1;
                                 L6: while (true) {
                                   if (var4 >= bj.field_b) {
                                     break L0;
@@ -121,21 +119,17 @@ final class hi extends java.awt.Canvas {
                                       var5 = gg.field_d[var4];
                                       var6 = gh.field_C[var4];
                                       var7 = var5 * var6;
-                                      var24 = new byte[var7];
-                                      var22 = var24;
-                                      var20 = var22;
+                                      var20 = new byte[var7];
                                       var18 = var20;
                                       var8 = var18;
-                                      og.field_c[var4] = var24;
-                                      var25 = new byte[var7];
-                                      var23 = var25;
-                                      var21 = var23;
+                                      og.field_c[var4] = var20;
+                                      var21 = new byte[var7];
                                       var19 = var21;
                                       var9 = var19;
-                                      ac.field_d[var4] = var25;
+                                      ac.field_d[var4] = var21;
                                       var10 = 0;
                                       var11 = var17.j(7909);
-                                      if ((1 & var11) != 0) {
+                                      if (-1 != (1 & var11 ^ -1)) {
                                         var12 = 0;
                                         L8: while (true) {
                                           if (var5 <= var12) {
@@ -152,13 +146,13 @@ final class hi extends java.awt.Canvas {
                                                       continue L9;
                                                     } else {
                                                       L11: {
-                                                        byte dupTemp$2 = var17.a(false);
+                                                        dupTemp$2 = var17.a(false);
                                                         var9[var5 * var13 + var12] = dupTemp$2;
                                                         var14 = dupTemp$2;
                                                         stackOut_44_0 = var10;
                                                         stackIn_46_0 = stackOut_44_0;
                                                         stackIn_45_0 = stackOut_44_0;
-                                                        if (var14 == -1) {
+                                                        if (0 == (var14 ^ -1)) {
                                                           stackOut_46_0 = stackIn_46_0;
                                                           stackOut_46_1 = 0;
                                                           stackIn_47_0 = stackOut_46_0;
@@ -209,13 +203,13 @@ final class hi extends java.awt.Canvas {
                                                   break L7;
                                                 } else {
                                                   L15: {
-                                                    byte dupTemp$3 = var17.a(false);
+                                                    dupTemp$3 = var17.a(false);
                                                     var9[var12] = dupTemp$3;
                                                     var13 = dupTemp$3;
                                                     stackOut_28_0 = var10;
                                                     stackIn_30_0 = stackOut_28_0;
                                                     stackIn_29_0 = stackOut_28_0;
-                                                    if (var13 == -1) {
+                                                    if (0 == (var13 ^ -1)) {
                                                       stackOut_30_0 = stackIn_30_0;
                                                       stackOut_30_1 = 0;
                                                       stackIn_31_0 = stackOut_30_0;
@@ -281,7 +275,7 @@ final class hi extends java.awt.Canvas {
                   }
                 }
               } else {
-                fc.field_d[var4] = var16.i(-1174051992);
+                fc.field_d[var4] = var16.i(param1 + -1174051992);
                 var4++;
                 continue L1;
               }
@@ -291,23 +285,23 @@ final class hi extends java.awt.Canvas {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var2 = decompiledCaughtException;
-            stackOut_51_0 = (RuntimeException) var2;
+            stackOut_51_0 = (RuntimeException) (var2);
             stackOut_51_1 = new StringBuilder().append("hi.C(");
             stackIn_53_0 = stackOut_51_0;
             stackIn_53_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;
             stackIn_52_1 = stackOut_51_1;
             if (param0 == null) {
-              stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
-              stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
+              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
               stackOut_53_2 = "null";
               stackIn_54_0 = stackOut_53_0;
               stackIn_54_1 = stackOut_53_1;
               stackIn_54_2 = stackOut_53_2;
               break L17;
             } else {
-              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
-              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
+              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
               stackOut_52_2 = "{...}";
               stackIn_54_0 = stackOut_52_0;
               stackIn_54_1 = stackOut_52_1;
@@ -315,30 +309,33 @@ final class hi extends java.awt.Canvas {
               break L17;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + ',' + 0 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_54_0), stackIn_54_2 + ',' + param1 + ')');
         }
     }
 
     public static void a(byte param0) {
         field_f = null;
         field_a = null;
+        if (param0 != 56) {
+            return;
+        }
         field_e = null;
         field_d = null;
     }
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            ((hi) this).field_c.paint(param0);
+            this.field_c.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "hi.paint(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "hi.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void update(java.awt.Graphics param0) {
         try {
-            ((hi) this).field_c.update(param0);
+            this.field_c.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "hi.update(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "hi.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -353,7 +350,7 @@ final class hi extends java.awt.Canvas {
                     var3 = param2.getParameter("cookieprefix");
                     var4 = param2.getParameter("cookiehost");
                     var5 = var3 + "session=" + param1 + "; version=1; path=/; domain=" + var4;
-                    if (!(0 != param1.length())) {
+                    if (!(param0 != param1.length())) {
                         var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
                     mb.a("document.cookie=\"" + var5 + "\"", param2, 790);
@@ -361,7 +358,7 @@ final class hi extends java.awt.Canvas {
                 }
                 lj.a(816415832, param2);
             } catch (RuntimeException runtimeException) {
-                throw sd.a((Throwable) (Object) runtimeException, "hi.B(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+                throw sd.a((Throwable) ((Object) runtimeException), "hi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -371,10 +368,6 @@ final class hi extends java.awt.Canvas {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new rk();
         field_e = "Email address is unavailable";
         field_d = new int[8192];

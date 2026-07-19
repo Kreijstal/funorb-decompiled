@@ -37,14 +37,10 @@ abstract class wf extends ll {
     }
 
     wf(int param0) {
-        ((wf) this).field_A = param0;
+        this.field_A = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = "You must have charged <%0> Orbs of Mastery in total to earn the title of <%1>.";
         field_z = new String[]{"Dark Arts", "Readjust <%attack>/<%defence> balance. (Single use)"};
         field_B = "Player Name: ";

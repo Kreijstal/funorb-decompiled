@@ -15,10 +15,13 @@ final class go {
         field_f = null;
         field_a = null;
         field_d = null;
+        if (param0 != -7393) {
+            field_b = '￾';
+        }
     }
 
     final static String a(byte param0) {
-        int var1 = 0;
+        int var1 = -46 % ((53 - param0) / 63);
         return jl.field_e.d(-1);
     }
 
@@ -27,9 +30,9 @@ final class go {
             Object var6 = null;
             Object var7 = null;
             jq var8 = null;
-            mf stackIn_12_0 = null;
+            mf stackIn_14_0 = null;
             Throwable decompiledCaughtException = null;
-            mf stackOut_11_0 = null;
+            mf stackOut_13_0 = null;
             try {
               L0: {
                 L1: {
@@ -40,7 +43,7 @@ final class go {
                   } else {
                     oc.field_k = new jg(ec.field_P.field_q, 5200, 0);
                     ec.field_P.field_q = null;
-                    var6 = (Object) (Object) new ve(255, oc.field_k, new jg(ec.field_P.field_m, 12000, 0), 2097152);
+                    var6 = new ve(255, oc.field_k, new jg(ec.field_P.field_m, 12000, 0), 2097152);
                     break L1;
                   }
                 }
@@ -65,29 +68,37 @@ final class go {
                         break L4;
                       }
                     }
-                    var7 = (Object) (Object) new ve(param1, oc.field_k, v.field_g[param1], 2097152);
+                    var7 = new ve(param1, oc.field_k, v.field_g[param1], 2097152);
                     break L2;
                   }
                 }
                 L5: {
-                  var8 = dp.field_v.a(81, false, (ve) var6, param1, (ve) var7);
-                  if (param0) {
-                    var8.f(-10476);
+                  if (param5) {
                     break L5;
                   } else {
+                    go.a(78);
                     break L5;
                   }
                 }
-                stackOut_11_0 = new mf((bc) (Object) var8, param4, param3);
-                stackIn_12_0 = stackOut_11_0;
+                L6: {
+                  var8 = dp.field_v.a(81, param2, (ve) (var6), param1, (ve) (var7));
+                  if (param0) {
+                    var8.f(-10476);
+                    break L6;
+                  } else {
+                    break L6;
+                  }
+                }
+                stackOut_13_0 = new mf(var8, param4, param3);
+                stackIn_14_0 = stackOut_13_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (Object) (Object) decompiledCaughtException;
-              throw new RuntimeException(((IOException) var6).toString());
+              var6 = (IOException) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) (var6)).toString());
             }
-            return stackIn_12_0;
+            return stackIn_14_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -96,10 +107,6 @@ final class go {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = 0;
         field_f = "Here you can set up a rated game. If you win, your rating will go up. If<nbsp>you lose, it will go down!<br><br>Please specify your preferences and click '<%0>'. Our system will then attempt to find a suitable opponent in under a minute, depending on how busy the lobby<nbsp>is.<br><br>This is an excellent way to get to know new people!";
     }

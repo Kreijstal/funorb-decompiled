@@ -68,7 +68,7 @@ final class gq {
             break L4;
           } else {
             if (var6 > 0) {
-              gq.b(qn.field_d, param0.field_k, param0.field_j, 1, var5, var4, var7, var6, var8, var9);
+              gq.b(qn.field_d, param0.field_k, param0.field_j, param3, var5, var4, var7, var6, var8, var9);
               return;
             } else {
               break L4;
@@ -78,6 +78,10 @@ final class gq {
     }
 
     final static int b(int param0) {
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -93,16 +97,16 @@ final class gq {
         int incrementValue$5 = var6;
         var6--;
         if (incrementValue$5 != 0) {
-          int incrementValue$6 = var6;
+          incrementValue$6 = var6;
           var6--;
           if (incrementValue$6 != 0) {
-            int incrementValue$7 = var6;
+            incrementValue$7 = var6;
             var6--;
             if (incrementValue$7 != 0) {
-              int incrementValue$8 = var6;
+              incrementValue$8 = var6;
               var6--;
               if (incrementValue$8 != 0) {
-                int incrementValue$9 = var6;
+                incrementValue$9 = var6;
                 var6--;
                 if (incrementValue$9 != 0) {
                   if (var6 != 0) {
@@ -251,6 +255,16 @@ final class gq {
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$266 = 0;
+        int incrementValue$267 = 0;
+        int incrementValue$268 = 0;
+        int incrementValue$269 = 0;
+        int incrementValue$270 = 0;
+        int incrementValue$271 = 0;
+        int incrementValue$272 = 0;
+        int incrementValue$273 = 0;
+        int incrementValue$274 = 0;
+        int incrementValue$275 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -272,16 +286,16 @@ final class gq {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$266 = param4;
+                    incrementValue$266 = param4;
                     param4++;
                     if (param2[param1[incrementValue$266] & 255] == 0) {
                       param5++;
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$267 = param5;
+                      incrementValue$267 = param5;
                       param5++;
-                      param0[incrementValue$267] = 1;
+                      param0[incrementValue$267] = param3;
                       var12++;
                       continue L2;
                     }
@@ -289,54 +303,54 @@ final class gq {
                 }
               } else {
                 L3: {
-                  int incrementValue$268 = param4;
+                  incrementValue$268 = param4;
                   param4++;
                   if (param2[param1[incrementValue$268] & 255] == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$269 = param5;
+                    incrementValue$269 = param5;
                     param5++;
-                    param0[incrementValue$269] = 1;
+                    param0[incrementValue$269] = param3;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$270 = param4;
+                  incrementValue$270 = param4;
                   param4++;
                   if (param2[param1[incrementValue$270] & 255] == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$271 = param5;
+                    incrementValue$271 = param5;
                     param5++;
-                    param0[incrementValue$271] = 1;
+                    param0[incrementValue$271] = param3;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$272 = param4;
+                  incrementValue$272 = param4;
                   param4++;
                   if (param2[param1[incrementValue$272] & 255] == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$273 = param5;
+                    incrementValue$273 = param5;
                     param5++;
-                    param0[incrementValue$273] = 1;
+                    param0[incrementValue$273] = param3;
                     break L5;
                   }
                 }
-                int incrementValue$274 = param4;
+                incrementValue$274 = param4;
                 param4++;
                 if (param2[param1[incrementValue$274] & 255] == 0) {
                   param5++;
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$275 = param5;
+                  incrementValue$275 = param5;
                   param5++;
-                  param0[incrementValue$275] = 1;
+                  param0[incrementValue$275] = param3;
                   var12++;
                   continue L1;
                 }
@@ -347,6 +361,10 @@ final class gq {
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -377,7 +395,7 @@ final class gq {
                 var16++;
                 continue L0;
               } else {
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
                 var10 = param2[param1[incrementValue$4] & 255];
                 if (var10 == 0) {
@@ -396,13 +414,13 @@ final class gq {
                         break L2;
                       } else {
                         if (var18 > 128) {
-                          int incrementValue$5 = param4;
+                          incrementValue$5 = param4;
                           param4++;
                           param0[incrementValue$5] = (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 16) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7 << 8) + (var13 * (256 - var20) + 255 * (var20 - 128) >> 7);
                           var17++;
                           continue L1;
                         } else {
-                          int incrementValue$6 = param4;
+                          incrementValue$6 = param4;
                           param4++;
                           param0[incrementValue$6] = (var18 * var11 >> 7 << 16) + (var19 * var12 >> 7 << 8) + (var20 * var13 >> 7);
                           var17++;
@@ -411,7 +429,7 @@ final class gq {
                       }
                     }
                   }
-                  int incrementValue$7 = param4;
+                  incrementValue$7 = param4;
                   param4++;
                   param0[incrementValue$7] = var10;
                   var17++;

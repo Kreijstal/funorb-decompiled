@@ -19,19 +19,29 @@ final class pe extends nm {
     boolean field_v;
 
     public static void a(int param0) {
+        int discarded$2 = 0;
         field_l = null;
-        field_p = null;
-        field_o = null;
-        field_k = null;
+        if (param0 != 112) {
+          discarded$2 = pe.a((byte) 91);
+          field_p = null;
+          field_o = null;
+          field_k = null;
+          return;
+        } else {
+          field_p = null;
+          field_o = null;
+          field_k = null;
+          return;
+        }
     }
 
     final static void c(int param0) {
-        int var1 = -95;
+        int var1 = -95 / ((param0 - 64) / 58);
         ta.a(true, false);
     }
 
     final static int a(byte param0) {
-        int var1 = 0;
+        int var1 = 119 % ((param0 - -15) / 60);
         return ci.field_u - np.field_b;
     }
 
@@ -39,10 +49,6 @@ final class pe extends nm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = new boolean[112];
         field_i = true;
         field_n = 0;

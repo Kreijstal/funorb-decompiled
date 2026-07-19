@@ -43,6 +43,7 @@ final class pgb {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
@@ -95,6 +96,7 @@ final class pgb {
                         }
                       }
                       var8 = 72 % ((-35 - param2) / 54);
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       L5: {
@@ -124,29 +126,30 @@ final class pgb {
               }
             }
             param3.a(-632, 0, param0);
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var5 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var5;
+            stackOut_20_0 = (RuntimeException) (var5);
             stackOut_20_1 = new StringBuilder().append("pgb.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param3 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -155,23 +158,23 @@ final class pgb {
             }
           }
           L8: {
-            stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+            stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
             stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param4 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L8;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -179,34 +182,39 @@ final class pgb {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final int a(int param0) {
         L0: {
-          if (((pgb) this).field_k) {
+          if (this.field_k) {
             break L0;
           } else {
             L1: {
-              if (((pgb) this).field_a != 2) {
+              if (-3 != (this.field_a ^ -1)) {
                 break L1;
               } else {
-                if (0 < ((pgb) this).field_c) {
+                if (0 < this.field_c) {
                   break L0;
                 } else {
                   break L1;
                 }
               }
             }
-            if (~((pgb) this).field_i == ~wqa.field_a) {
+            if ((this.field_i ^ -1L) == (wqa.field_a ^ -1L)) {
               return 1;
             } else {
               L2: {
-                if (iwa.field_b != 2) {
+                if ((iwa.field_b ^ -1) != -3) {
                   break L2;
                 } else {
-                  if (!uaa.a(((pgb) this).field_n, (byte) -105)) {
+                  if (!uaa.a(this.field_n, (byte) -105)) {
                     break L2;
                   } else {
                     return 1;
@@ -225,6 +233,9 @@ final class pgb {
     }
 
     public static void a(byte param0) {
+        if (param0 <= 49) {
+            return;
+        }
         field_b = null;
         field_g = null;
         field_l = null;
@@ -232,50 +243,46 @@ final class pgb {
     }
 
     pgb(boolean param0) {
-        ((pgb) this).field_f = sj.field_o;
-        ((pgb) this).field_o = pva.field_f;
-        ((pgb) this).field_i = sga.field_q;
+        this.field_f = sj.field_o;
+        this.field_o = pva.field_f;
+        this.field_i = sga.field_q;
         if (!param0) {
-            ((pgb) this).field_m = null;
+            this.field_m = null;
         } else {
-            ((pgb) this).field_m = un.field_h;
+            this.field_m = un.field_h;
         }
-        ((pgb) this).field_q = psb.field_a;
-        ((pgb) this).field_c = bl.field_A;
-        ((pgb) this).field_a = wja.field_a;
-        ((pgb) this).field_k = dab.field_e;
-        ((pgb) this).field_e = ti.field_h;
-        ((pgb) this).field_h = jkb.field_b;
-        ((pgb) this).field_n = uja.field_a;
-        ((pgb) this).field_d = jh.field_p;
+        this.field_q = psb.field_a;
+        this.field_c = bl.field_A;
+        this.field_a = wja.field_a;
+        this.field_k = dab.field_e;
+        this.field_e = ti.field_h;
+        this.field_h = jkb.field_b;
+        this.field_n = uja.field_a;
+        this.field_d = jh.field_p;
     }
 
     pgb(int param0, String param1, int param2, String param3, String param4) {
         try {
-            ((pgb) this).field_n = param1;
-            ((pgb) this).field_e = param1;
-            ((pgb) this).field_q = param2;
-            ((pgb) this).field_d = param4;
-            ((pgb) this).field_f = 0;
-            ((pgb) this).field_a = param0;
-            ((pgb) this).field_c = 0;
-            ((pgb) this).field_k = true;
-            ((pgb) this).field_h = 0;
-            ((pgb) this).field_m = null;
-            ((pgb) this).field_o = param3;
-            ((pgb) this).field_i = 0L;
+            this.field_n = param1;
+            this.field_e = param1;
+            this.field_q = param2;
+            this.field_d = param4;
+            this.field_f = 0;
+            this.field_a = param0;
+            this.field_c = 0;
+            this.field_k = true;
+            this.field_h = 0;
+            this.field_m = null;
+            this.field_o = param3;
+            this.field_i = 0L;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pgb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "pgb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new gl(3);
-        field_g = (dja) (Object) new gfb();
+        field_g = (dja) ((Object) new gfb());
         field_p = "Toggle condition not";
         field_l = "ESC - cancel private message";
     }

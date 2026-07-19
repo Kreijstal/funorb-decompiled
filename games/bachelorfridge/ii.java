@@ -19,7 +19,7 @@ abstract class ii extends cj {
 
     void a(byte param0, lu param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        uha var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -42,7 +42,7 @@ abstract class ii extends cj {
               if (param0 <= -12) {
                 break L1;
               } else {
-                var4 = null;
+                var4 = (uha) null;
                 ii.a((String) null, false, -42, (uha) null);
                 break L1;
               }
@@ -53,23 +53,23 @@ abstract class ii extends cj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ii.F(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -77,31 +77,35 @@ abstract class ii extends cj {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     final void a(lu param0, int param1) {
         try {
-            param0.b(((ii) this).field_k, -121);
-            er.a(((ii) this).field_l, param1 + 132, param0);
+            param0.b(this.field_k, -121);
+            er.a(this.field_l, param1 + 132, param0);
             if (param1 != -9) {
-                ((ii) this).field_k = -23;
+                this.field_k = -23;
             }
-            ((ii) this).a((byte) -54, param0);
+            this.a((byte) -54, param0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ii.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ii.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void c(byte param0) {
         int var1 = 0;
-        if (b.field_u < 224) {
-          var1 = b.field_u % 32;
-          di.a(true, -var1 + 32 + b.field_u);
-          return;
+        if (param0 == 62) {
+          if (-225 < (b.field_u ^ -1)) {
+            var1 = b.field_u % 32;
+            di.a(true, -var1 + 32 + b.field_u);
+            return;
+          } else {
+            di.a(true, 256);
+            return;
+          }
         } else {
-          di.a(true, 256);
           return;
         }
     }
@@ -112,6 +116,7 @@ abstract class ii extends cj {
             IOException var2 = null;
             int stackIn_11_0 = 0;
             int stackIn_13_0 = 0;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             int stackOut_10_0 = 0;
             int stackOut_12_0 = 0;
@@ -135,19 +140,22 @@ abstract class ii extends cj {
                       if (param0 > ig.field_m.field_g) {
                         stackOut_10_0 = 0;
                         stackIn_11_0 = stackOut_10_0;
-                        return stackIn_11_0 != 0;
+                        decompiledRegionSelector0 = 0;
+                        break L0;
                       } else {
                         ig.field_m.field_g = 0;
                         stackOut_12_0 = 1;
                         stackIn_13_0 = stackOut_12_0;
-                        return stackIn_13_0 != 0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       }
                     } else {
-                      if (var2_int < 0) {
+                      if ((var2_int ^ -1) > -1) {
                         vc.a((byte) -106);
                         return false;
                       } else {
                         if (30000L >= ag.e(param1 ^ -9109)) {
+                          decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
                           vc.a((byte) -106);
@@ -162,7 +170,15 @@ abstract class ii extends cj {
                   vc.a((byte) -79);
                   return false;
                 }
-                return false;
+                if (decompiledRegionSelector0 == 0) {
+                  return stackIn_11_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 1) {
+                    return stackIn_13_0 != 0;
+                  } else {
+                    return false;
+                  }
+                }
               } else {
                 return false;
               }
@@ -183,11 +199,11 @@ abstract class ii extends cj {
     final static void a(int param0, java.awt.Component param1) {
         try {
             param1.setFocusTraversalKeysEnabled(false);
-            param1.addKeyListener((java.awt.event.KeyListener) (Object) vv.field_e);
-            param1.addFocusListener((java.awt.event.FocusListener) (Object) vv.field_e);
-            int var2_int = -39;
+            param1.addKeyListener(vv.field_e);
+            param1.addFocusListener(vv.field_e);
+            int var2_int = -78 / ((13 - param0) / 48);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ii.P(" + -104 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ii.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -240,7 +256,7 @@ abstract class ii extends cj {
         try {
           L0: {
             L1: {
-              mna.a(param3.f((byte) -92), (int[]) null, 0L, (String) null, (String) null, -1, -99, p.field_n, (sna) (Object) param3);
+              mna.a(param3.f((byte) -92), (int[]) null, 0L, (String) null, (String) null, -1, -99, p.field_n, param3);
               if (!param3.field_Zb) {
                 break L1;
               } else {
@@ -248,7 +264,7 @@ abstract class ii extends cj {
                   if (2 == param3.field_Lb) {
                     break L2;
                   } else {
-                    if (hea.field_r < 2) {
+                    if ((hea.field_r ^ -1) > -3) {
                       break L1;
                     } else {
                       break L2;
@@ -256,7 +272,7 @@ abstract class ii extends cj {
                   }
                 }
                 var9 = ms.field_u;
-                var10 = lga.a(true, new String[1], bea.field_s);
+                var10 = lga.a(true, new String[]{param0}, bea.field_s);
                 var9.field_a.a(var10, true, 10);
                 break L1;
               }
@@ -268,12 +284,12 @@ abstract class ii extends cj {
               } else {
                 if (hja.field_i != ms.field_u.field_k) {
                   var13 = ms.field_u;
-                  var14 = lga.a(true, new String[1], jh.field_k);
+                  var14 = lga.a(true, new String[]{param0}, jh.field_k);
                   var13.field_a.a(var14, true, 15);
                   break L3;
                 } else {
                   var11 = ms.field_u;
-                  var12 = lga.a(true, new String[1], wl.field_wb);
+                  var12 = lga.a(true, new String[]{param0}, wl.field_wb);
                   var11.field_a.a(var12, true, 16);
                   break L3;
                 }
@@ -284,7 +300,7 @@ abstract class ii extends cj {
               if (param2 == -3) {
                 break L4;
               } else {
-                field_m = null;
+                field_m = (eaa) null;
                 break L4;
               }
             }
@@ -297,23 +313,23 @@ abstract class ii extends cj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var4;
+            stackOut_13_0 = (RuntimeException) (var4);
             stackOut_13_1 = new StringBuilder().append("ii.U(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -322,23 +338,23 @@ abstract class ii extends cj {
             }
           }
           L6: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param3 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -346,25 +362,21 @@ abstract class ii extends cj {
               break L6;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
     }
 
     ii(int param0, int param1, nq param2) {
         super(param0);
         try {
-            ((ii) this).field_k = param1;
-            ((ii) this).field_l = param2;
+            this.field_k = param1;
+            this.field_l = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ii.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ii.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = new eaa();
     }
 }

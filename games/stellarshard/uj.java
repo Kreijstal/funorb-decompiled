@@ -19,24 +19,24 @@ final class uj {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_38_0 = 0;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        String stackIn_42_2 = null;
+        int stackIn_41_0 = 0;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_37_0 = 0;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
+        int stackOut_40_0 = 0;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        RuntimeException stackOut_44_0 = null;
+        StringBuilder stackOut_44_1 = null;
+        String stackOut_44_2 = null;
+        RuntimeException stackOut_43_0 = null;
+        StringBuilder stackOut_43_1 = null;
+        String stackOut_43_2 = null;
         var11 = stellarshard.field_B;
         try {
           L0: {
@@ -44,7 +44,7 @@ final class uj {
               if (param2 < 2) {
                 break L1;
               } else {
-                if (param2 > 36) {
+                if (-37 > (param2 ^ -1)) {
                   break L1;
                 } else {
                   L2: {
@@ -55,7 +55,7 @@ final class uj {
                     if (param1 >= 74) {
                       break L2;
                     } else {
-                      field_e = null;
+                      field_e = (oj) null;
                       break L2;
                     }
                   }
@@ -65,8 +65,8 @@ final class uj {
                       if (var5 == 0) {
                         throw new NumberFormatException();
                       } else {
-                        stackOut_37_0 = var6;
-                        stackIn_38_0 = stackOut_37_0;
+                        stackOut_40_0 = var6;
+                        stackIn_41_0 = stackOut_40_0;
                         break L0;
                       }
                     } else {
@@ -83,7 +83,12 @@ final class uj {
                               if (var9 != 43) {
                                 break L5;
                               } else {
-                                break L5;
+                                if (!param3) {
+                                  break L5;
+                                } else {
+                                  var8++;
+                                  continue L3;
+                                }
                               }
                             }
                           }
@@ -161,33 +166,33 @@ final class uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var4 = decompiledCaughtException;
-            stackOut_39_0 = (RuntimeException) var4;
-            stackOut_39_1 = new StringBuilder().append("uj.C(");
-            stackIn_41_0 = stackOut_39_0;
-            stackIn_41_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+            stackOut_42_0 = (RuntimeException) (var4);
+            stackOut_42_1 = new StringBuilder().append("uj.C(");
+            stackIn_44_0 = stackOut_42_0;
+            stackIn_44_1 = stackOut_42_1;
+            stackIn_43_0 = stackOut_42_0;
+            stackIn_43_1 = stackOut_42_1;
             if (param0 == null) {
-              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
-              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
-              stackOut_41_2 = "null";
-              stackIn_42_0 = stackOut_41_0;
-              stackIn_42_1 = stackOut_41_1;
-              stackIn_42_2 = stackOut_41_2;
+              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
+              stackOut_44_2 = "null";
+              stackIn_45_0 = stackOut_44_0;
+              stackIn_45_1 = stackOut_44_1;
+              stackIn_45_2 = stackOut_44_2;
               break L11;
             } else {
-              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
-              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
-              stackOut_40_2 = "{...}";
-              stackIn_42_0 = stackOut_40_0;
-              stackIn_42_1 = stackOut_40_1;
-              stackIn_42_2 = stackOut_40_2;
+              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
+              stackOut_43_2 = "{...}";
+              stackIn_45_0 = stackOut_43_0;
+              stackIn_45_1 = stackOut_43_1;
+              stackIn_45_2 = stackOut_43_2;
               break L11;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ',' + param1 + ',' + param2 + ',' + true + ')');
+          throw ma.a((Throwable) ((Object) stackIn_45_0), stackIn_45_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_38_0;
+        return stackIn_41_0;
     }
 
     public static void b(int param0) {
@@ -199,9 +204,9 @@ final class uj {
     }
 
     uj(int param0, int param1, int param2) {
-        ((uj) this).field_a = new int[1 + param2];
-        ((uj) this).field_c = param1;
-        ((uj) this).field_b = param0;
+        this.field_a = new int[1 + param2];
+        this.field_c = param1;
+        this.field_b = param0;
     }
 
     final int a(int param0) {
@@ -211,11 +216,11 @@ final class uj {
         if (param0 >= 41) {
           L0: {
             L1: {
-              if (((uj) this).field_a == null) {
+              if (this.field_a == null) {
                 break L1;
               } else {
-                if (0 != ((uj) this).field_a.length) {
-                  stackOut_6_0 = ((uj) this).field_a[((uj) this).field_a.length + -1];
+                if (0 != this.field_a.length) {
+                  stackOut_6_0 = this.field_a[this.field_a.length + -1];
                   stackIn_7_0 = stackOut_6_0;
                   break L0;
                 } else {
@@ -234,14 +239,15 @@ final class uj {
     }
 
     final int a(int param0, byte param1) {
+        int discarded$2 = 0;
         int var3 = 0;
         int var4 = 0;
         L0: {
           var4 = stellarshard.field_B;
-          if (((uj) this).field_a == null) {
+          if (this.field_a == null) {
             break L0;
           } else {
-            if (((uj) this).field_a.length == 0) {
+            if (-1 == (this.field_a.length ^ -1)) {
               break L0;
             } else {
               L1: {
@@ -249,15 +255,15 @@ final class uj {
                 if (param1 <= -121) {
                   break L1;
                 } else {
-                  int discarded$2 = ((uj) this).a(119);
+                  discarded$2 = this.a(119);
                   break L1;
                 }
               }
               L2: while (true) {
-                if (var3 >= ((uj) this).field_a.length) {
-                  return ((uj) this).field_a.length - 1;
+                if (var3 >= this.field_a.length) {
+                  return this.field_a.length - 1;
                 } else {
-                  if (param0 >= ((uj) this).field_a[var3] + ((uj) this).field_a[-1 + var3] >> 1) {
+                  if (param0 >= this.field_a[var3] + this.field_a[-1 + var3] >> -1417274431) {
                     var3++;
                     continue L2;
                   } else {
@@ -272,10 +278,6 @@ final class uj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new wb();
     }
 }

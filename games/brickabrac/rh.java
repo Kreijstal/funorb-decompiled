@@ -27,10 +27,6 @@ final class rh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "rh.A(";
         field_a = "Now press <img=2> or <img=5> to detonate the charge and destroy bricks close to the ball.";
         field_b = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};

@@ -24,9 +24,9 @@ final class ap {
     }
 
     final static void a(int[] param0, int param1, int[] param2, int param3, int[] param4, int param5) {
-        param4[param5] = param0[2] * param2[1] - param0[1] * param2[2];
-        param4[param5 + 1] = param0[0] * param2[2] - param0[2] * param2[0];
-        param4[param5 + 2] = param0[1] * param2[0] - param0[0] * param2[1];
+        param4[param5] = param0[param1 + 2] * param2[param3 + 1] - param0[param1 + 1] * param2[param3 + 2];
+        param4[param5 + 1] = param0[param1] * param2[param3 + 2] - param0[param1 + 2] * param2[param3];
+        param4[param5 + 2] = param0[param1 + 1] * param2[param3] - param0[param1] * param2[param3 + 1];
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, double param12, double param13, double param14) {
@@ -221,7 +221,7 @@ final class ap {
     }
 
     final static double b(double[] param0, int param1, double[] param2, int param3) {
-        return ap.a(param0[param1], param0[param1 + 1], param0[param1 + 2], param2[0], param2[1], param2[2]);
+        return ap.a(param0[param1], param0[param1 + 1], param0[param1 + 2], param2[param3], param2[param3 + 1], param2[param3 + 2]);
     }
 
     final static int[] a(int[] param0, int[] param1) {
@@ -302,7 +302,7 @@ final class ap {
         param2 = param2 * 2;
         param3 = param3 * 2;
         param4 = param4 * 2;
-        param0[param1] = param2;
+        param0[param1 + 0] = param2;
         param0[param1 + 1] = param3;
         param0[param1 + 2] = param4;
     }
@@ -320,22 +320,22 @@ final class ap {
         double[] var16 = null;
         ed var17 = null;
         ed var18 = null;
-        var8 = ap.a(param2, 10, param2, 10);
+        var8 = ap.a(param2, param3, param2, param3);
         if (var8 >= 1e-16) {
           var10 = Math.sqrt(var8);
-          field_a.a(param2[10] / var10, param2[11] / var10, param2[12] / var10, (byte) 76, -var10 * param6);
+          field_a.a(param2[param3] / var10, param2[param3 + 1] / var10, param2[param3 + 2] / var10, (byte) 76, -var10 * param6);
           var17 = ql.field_u;
           var18 = var17;
-          var17.field_a = param0[6];
-          var17.field_d = param0[7];
-          var17.field_b = param0[8];
-          var17.field_e = param0[9];
+          var17.field_a = param0[param1];
+          var17.field_d = param0[param1 + 1];
+          var17.field_b = param0[param1 + 2];
+          var17.field_e = param0[param1 + 3];
           var18.a(field_a, 65536);
           var13 = 1.0 / param6;
-          param4[param5] = (var17.field_a - param0[6]) * var13;
-          param4[param5 + 1] = (var17.field_d - param0[7]) * var13;
-          param4[param5 + 2] = (var17.field_b - param0[8]) * var13;
-          param4[param5 + 3] = (var17.field_e - param0[9]) * var13;
+          param4[param5] = (var17.field_a - param0[param1]) * var13;
+          param4[param5 + 1] = (var17.field_d - param0[param1 + 1]) * var13;
+          param4[param5 + 2] = (var17.field_b - param0[param1 + 2]) * var13;
+          param4[param5 + 3] = (var17.field_e - param0[param1 + 3]) * var13;
           return;
         } else {
           var10_ref_double__ = param4;
@@ -360,10 +360,6 @@ final class ap {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new ed();
     }
 }

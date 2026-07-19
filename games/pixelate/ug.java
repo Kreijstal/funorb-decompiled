@@ -14,6 +14,9 @@ final class ug extends fa {
 
     final static void a(int param0, int param1, int param2) {
         qh.field_b = param0;
+        if (param2 != -26104) {
+            return;
+        }
         bq.field_d = param1;
     }
 
@@ -24,7 +27,7 @@ final class ug extends fa {
           if (null != wo.field_b) {
             var2 = wo.field_b;
             var1 = var2;
-            rg.a(sd.a(ek.field_d, 113, new String[1]), false);
+            rg.a(sd.a(ek.field_d, 113, new String[]{var2}), false);
             wo.field_b = null;
             break L0;
           } else {
@@ -41,18 +44,18 @@ final class ug extends fa {
 
     ug(long param0, int param1, byte[] param2) {
         try {
-            ((ug) this).field_o = param0;
-            ((ug) this).field_m = param1;
-            ((ug) this).field_r = param2;
+            this.field_o = param0;
+            this.field_m = param1;
+            this.field_r = param2;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ug.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "ug.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void e(int param0) {
         field_l = null;
         if (param0 != 24857) {
-          field_p = null;
+          field_p = (String) null;
           field_p = null;
           field_s = null;
           field_n = null;
@@ -68,10 +71,6 @@ final class ug extends fa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = new int[]{14, 15, 16, 8};
         field_p = "<%0> is not on your ignore list.";
     }

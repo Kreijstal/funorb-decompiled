@@ -48,7 +48,7 @@ final class sm {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3_int = 23;
+            var3_int = -118 / ((-48 - param2) / 32);
             var4 = (String) null;
             stackOut_0_0 = qb.a(false, 0, param0, 100, 0, param1, (String) null);
             stackIn_1_0 = stackOut_0_0;
@@ -107,7 +107,7 @@ final class sm {
               break L2;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + 125 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }
@@ -116,34 +116,44 @@ final class sm {
         ck var3 = null;
         int var4 = 0;
         int var5 = 0;
-        var5 = client.field_A ? 1 : 0;
-        var3 = new ck(param1, param1);
-        var4 = 0;
-        if (param0 < -96) {
-          L0: while (true) {
-            if (var3.field_D.length <= var4) {
-              return var3;
-            } else {
-              var3.field_D[var4] = param2;
-              var4++;
-              continue L0;
-            }
+        ck stackIn_5_0 = null;
+        ck stackIn_6_0 = null;
+        ck stackOut_4_0 = null;
+        L0: {
+          var5 = client.field_A ? 1 : 0;
+          var3 = new ck(param1, param1);
+          var4 = 0;
+          if (param0 < -96) {
+            break L0;
+          } else {
+            field_e = 97;
+            break L0;
           }
-        } else {
-          field_e = 97;
-          L1: while (true) {
-            if (var3.field_D.length <= var4) {
-              return var3;
-            } else {
-              var3.field_D[var4] = param2;
+        }
+        L1: while (true) {
+          if (var3.field_D.length > var4) {
+            stackOut_4_0 = (ck) (var3);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_5_0 = stackOut_4_0;
+            if (var5 == 0) {
+              stackIn_6_0.field_D[var4] = param2;
               var4++;
               continue L1;
+            } else {
+              return stackIn_5_0;
             }
+          } else {
+            return var3;
           }
         }
     }
 
     public static void a(int param0) {
+        if (param0 != 30553) {
+            field_e = 92;
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
@@ -169,25 +179,31 @@ final class sm {
             StringBuilder stackOut_7_1 = null;
             String stackOut_7_2 = null;
             try {
-              try {
-                L0: {
-                  var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-                  param1.getAppletContext().showDocument(gn.a(var2, -1, param1), "_top");
+              L0: {
+                if (param0 == -65) {
+                  try {
+                    L1: {
+                      var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
+                      param1.getAppletContext().showDocument(gn.a(var2, -1, param1), "_top");
+                      break L1;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    var2_ref = (Exception) (Object) decompiledCaughtException;
+                    var2_ref.printStackTrace();
+                    return;
+                  }
+                  return;
+                } else {
                   break L0;
                 }
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = (Exception) (Object) decompiledCaughtException;
-                var2_ref.printStackTrace();
-                return;
               }
-              return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L1: {
+              L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) (var2_ref2);
-                stackOut_6_1 = new StringBuilder().append("sm.G(").append(-65).append(',');
+                stackOut_6_1 = new StringBuilder().append("sm.G(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -199,7 +215,7 @@ final class sm {
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
-                  break L1;
+                  break L2;
                 } else {
                   stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
                   stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
@@ -207,7 +223,7 @@ final class sm {
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
                   stackIn_9_2 = stackOut_7_2;
-                  break L1;
+                  break L2;
                 }
               }
               throw dh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
@@ -228,6 +244,9 @@ final class sm {
     }
 
     final static boolean b(int param0) {
+        if (param0 != 1) {
+            return false;
+        }
         return cf.field_i;
     }
 
@@ -393,21 +412,28 @@ final class sm {
           return var3;
         } else {
           L0: {
-            if (param1 >= 32768) {
-              var4 = this.field_b.a(32767 & param1, -112, 1);
-              break L0;
-            } else {
-              var4 = this.field_f.a(param1, 88, 1);
-              break L0;
+            L1: {
+              if (-32769 >= (param1 ^ -1)) {
+                break L1;
+              } else {
+                var4 = this.field_f.a(param1, 88, 1);
+                if (!client.field_A) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
             }
+            var4 = this.field_b.a(32767 & param1, -112, 1);
+            break L0;
           }
-          L1: {
+          L2: {
             var3 = new me();
             if (var4 != null) {
               var3.a((byte) 80, new wl(var4));
-              break L1;
+              break L2;
             } else {
-              break L1;
+              break L2;
             }
           }
           if (32768 > param1) {

@@ -5,21 +5,45 @@ final class kga extends rqa {
     static int field_o;
 
     final static phb[] a(int param0, int param1, int param2, boolean param3) {
+        phb[] var4 = null;
         int var5 = 0;
-        int var6 = VoidHunters.field_G;
-        phb[] var7 = new phb[9];
-        phb[] var4 = var7;
-        var7[0] = mra.a(param0, (byte) -118, 1);
-        for (var5 = 1; 9 > var5; var5++) {
-            var7[var5] = var7[0];
+        int var6 = 0;
+        phb[] var7 = null;
+        var6 = VoidHunters.field_G;
+        var7 = new phb[9];
+        var4 = var7;
+        var7[0] = mra.a(param0, (byte) -118, param2);
+        if (!param3) {
+          field_o = 40;
+          var5 = 1;
+          L0: while (true) {
+            if (9 <= var5) {
+              var4[4] = mra.a(param1, (byte) -123, 64);
+              return var4;
+            } else {
+              var7[var5] = var7[0];
+              var5++;
+              continue L0;
+            }
+          }
+        } else {
+          var5 = 1;
+          L1: while (true) {
+            if (9 <= var5) {
+              var4[4] = mra.a(param1, (byte) -123, 64);
+              return var4;
+            } else {
+              var7[var5] = var7[0];
+              var5++;
+              continue L1;
+            }
+          }
         }
-        var4[4] = mra.a(param1, (byte) -123, 64);
-        return var4;
     }
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -28,9 +52,10 @@ final class kga extends rqa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         nc stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        nc stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -42,36 +67,38 @@ final class kga extends rqa {
         try {
           L0: {
             if (param1 < -119) {
-              stackOut_3_0 = new nc((Object) (Object) frb.a(84, 116));
+              stackOut_3_0 = new nc(frb.a(84, 116));
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (nc) null;
               stackIn_2_0 = stackOut_1_0;
-              return (nc) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("kga.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -79,14 +106,21 @@ final class kga extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final static void a(int param0) {
         fja.field_p = new rq();
-        s.field_o.b((shb) (Object) fja.field_p, 99);
+        s.field_o.b(fja.field_p, 99);
+        if (param0 != 70) {
+            field_o = 121;
+        }
     }
 
     final static int a(int param0, String param1) {
@@ -121,23 +155,23 @@ final class kga extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_0 = (RuntimeException) (var2);
             stackOut_2_1 = new StringBuilder().append("kga.D(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -145,7 +179,7 @@ final class kga extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -156,125 +190,133 @@ final class kga extends rqa {
 
     final static void a(int param0, int[] param1) {
         RuntimeException var2 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            us.field_f = param1[48];
-            qaa.field_b = param1[115];
-            ww.field_o = param1[75];
-            bhb.field_i = param1[204];
-            adb.field_a = param1[98];
-            jt.field_p = param1[93];
-            iea.field_d = param1[207];
-            nca.field_o = param1[109];
-            hrb.field_a = param1[145];
-            db.field_q = param1[191];
-            kg.field_o = param1[82];
-            osb.field_b = param1[158];
-            nn.field_a = param1[192];
-            sja.field_i = param1[51];
-            wj.field_p = param1[230];
-            ftb.field_o = param1[104];
-            foa.field_p = param1[23];
-            cca.field_p = param1[99];
-            fna.field_p = param1[210];
-            gu.field_p = param1[92];
-            jsb.field_d = param1[185];
-            oq.field_v = param1[71];
-            oq.field_y = param1[225];
-            gs.field_c = param1[55];
-            ena.field_q = param1[58];
-            lob.field_b = param1[96];
-            oq.field_C = param1[196];
-            uda.field_b = param1[119];
-            oq.field_t = param1[202];
-            dcb.field_d = param1[17];
-            ds.field_d = param1[203];
-            dcb.field_f = param1[4];
-            hw.field_b = param1[9];
-            ioa.field_p = param1[73];
-            qmb.field_p = param1[6];
-            mp.field_o = param1[121];
-            rlb.field_e = param1[142];
-            jga.field_a = param1[100];
-            dr.field_a = param1[125];
-            wj.field_o = param1[64];
-            qjb.field_d = param1[18];
-            ktb.field_q = param1[37];
-            bpa.field_a = param1[222];
-            tua.field_a = param1[180];
-            pca.field_m = param1[30];
-            m.field_p = param1[167];
-            fja.field_o = param1[116];
-            qea.field_o = param1[134];
-            oq.field_G = param1[70];
-            pea.field_a = param1[149];
-            ku.field_c = param1[63];
-            oq.field_e = param1[224];
-            oq.field_q = param1[214];
-            awa.field_q = param1[166];
-            bn.field_a = param1[124];
-            era.field_p = param1[31];
-            la.field_m = param1[83];
-            de.field_q = param1[94];
-            rjb.field_u = param1[211];
-            oq.field_n = param1[220];
-            oq.field_I = param1[32];
-            klb.field_p = param1[85];
-            gib.field_a = param1[206];
-            ea.field_j = param1[187];
-            qv.field_o = param1[7];
-            gtb.field_c = param1[138];
-            slb.field_a = param1[177];
-            wra.field_p = param1[226];
-            bka.field_p = param1[24];
-            oq.field_k = param1[215];
-            gka.field_q = param1[227];
-            fmb.field_r = param1[157];
-            eta.field_b = param1[194];
-            ina.field_p = param1[176];
-            ava.field_a = param1[129];
-            kmb.field_f = param1[49];
-            fob.field_c = param1[193];
-            oq.field_p = param1[219];
-            asa.field_e = param1[128];
-            ooa.field_xb = param1[151];
-            apb.field_a = param1[65];
-            ed.field_o = param1[38];
-            cqa.field_p = param1[186];
-            kva.field_g = param1[56];
-            jtb.field_m = param1[147];
-            tea.field_b = param1[74];
-            opb.field_o = param1[69];
-            gaa.field_p = param1[155];
-            wob.field_o = param1[91];
-            mra.field_o = param1[34];
-            oga.field_o = param1[12];
-            fra.field_a = param1[26];
-            bma.field_n = param1[118];
-            ls.field_r = param1[198];
-            wkb.field_a = param1[62];
-            ana.field_f = param1[105];
-            wk.field_a = param1[42];
-            ldb.field_q = param1[126];
-            cp.field_f = param1[80];
-            dca.field_o = param1[87];
-            aea.field_a = param1[72];
+            L1: {
+              us.field_f = param1[48];
+              qaa.field_b = param1[115];
+              ww.field_o = param1[75];
+              bhb.field_i = param1[204];
+              adb.field_a = param1[98];
+              jt.field_p = param1[93];
+              iea.field_d = param1[207];
+              nca.field_o = param1[109];
+              hrb.field_a = param1[145];
+              db.field_q = param1[191];
+              kg.field_o = param1[82];
+              osb.field_b = param1[158];
+              nn.field_a = param1[192];
+              sja.field_i = param1[51];
+              wj.field_p = param1[230];
+              ftb.field_o = param1[104];
+              foa.field_p = param1[23];
+              cca.field_p = param1[99];
+              fna.field_p = param1[210];
+              gu.field_p = param1[92];
+              jsb.field_d = param1[185];
+              oq.field_v = param1[71];
+              oq.field_y = param1[225];
+              gs.field_c = param1[55];
+              ena.field_q = param1[58];
+              lob.field_b = param1[96];
+              oq.field_C = param1[196];
+              uda.field_b = param1[119];
+              oq.field_t = param1[202];
+              dcb.field_d = param1[17];
+              ds.field_d = param1[203];
+              dcb.field_f = param1[4];
+              hw.field_b = param1[9];
+              ioa.field_p = param1[73];
+              qmb.field_p = param1[6];
+              mp.field_o = param1[121];
+              rlb.field_e = param1[142];
+              jga.field_a = param1[100];
+              dr.field_a = param1[125];
+              wj.field_o = param1[64];
+              qjb.field_d = param1[18];
+              ktb.field_q = param1[37];
+              bpa.field_a = param1[222];
+              tua.field_a = param1[180];
+              pca.field_m = param1[30];
+              m.field_p = param1[167];
+              fja.field_o = param1[116];
+              qea.field_o = param1[134];
+              oq.field_G = param1[70];
+              pea.field_a = param1[149];
+              ku.field_c = param1[63];
+              oq.field_e = param1[224];
+              oq.field_q = param1[214];
+              awa.field_q = param1[166];
+              bn.field_a = param1[124];
+              era.field_p = param1[31];
+              la.field_m = param1[83];
+              de.field_q = param1[94];
+              rjb.field_u = param1[211];
+              oq.field_n = param1[220];
+              oq.field_I = param1[32];
+              klb.field_p = param1[85];
+              gib.field_a = param1[206];
+              ea.field_j = param1[187];
+              qv.field_o = param1[7];
+              gtb.field_c = param1[138];
+              slb.field_a = param1[177];
+              wra.field_p = param1[226];
+              bka.field_p = param1[24];
+              oq.field_k = param1[215];
+              gka.field_q = param1[227];
+              fmb.field_r = param1[157];
+              eta.field_b = param1[194];
+              ina.field_p = param1[176];
+              ava.field_a = param1[129];
+              kmb.field_f = param1[49];
+              fob.field_c = param1[193];
+              oq.field_p = param1[219];
+              asa.field_e = param1[128];
+              ooa.field_xb = param1[151];
+              apb.field_a = param1[65];
+              ed.field_o = param1[38];
+              cqa.field_p = param1[186];
+              kva.field_g = param1[56];
+              jtb.field_m = param1[147];
+              tea.field_b = param1[74];
+              opb.field_o = param1[69];
+              gaa.field_p = param1[155];
+              wob.field_o = param1[91];
+              mra.field_o = param1[34];
+              oga.field_o = param1[12];
+              fra.field_a = param1[26];
+              bma.field_n = param1[118];
+              ls.field_r = param1[198];
+              wkb.field_a = param1[62];
+              ana.field_f = param1[105];
+              wk.field_a = param1[42];
+              ldb.field_q = param1[126];
+              cp.field_f = param1[80];
+              dca.field_o = param1[87];
+              aea.field_a = param1[72];
+              if (param0 == 107) {
+                break L1;
+              } else {
+                field_o = -43;
+                break L1;
+              }
+            }
             eca.field_e = param1[103];
             bv.field_e = param1[163];
             oq.field_a = param1[221];
@@ -413,41 +455,37 @@ final class kga extends rqa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("kga.E(").append(107).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackOut_4_0 = (RuntimeException) (var2);
+            stackOut_4_1 = new StringBuilder().append("kga.E(").append(param0).append(',');
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = 360;
     }
 }

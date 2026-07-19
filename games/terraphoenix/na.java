@@ -19,13 +19,13 @@ final class na extends ei {
             int var4_int = -26 / ((32 - param2) / 55);
             ta.a(fh.field_x, param0, 10);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "na.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "na.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0, boolean param1, String param2, float param3) {
         RuntimeException runtimeException = null;
-        Object var6 = null;
+        String var6 = null;
         boolean stackIn_1_0 = false;
         boolean stackIn_2_0 = false;
         boolean stackIn_3_0 = false;
@@ -63,7 +63,7 @@ final class na extends ei {
         try {
           L0: {
             L1: {
-              stackOut_0_0 = ((na) this).field_W;
+              stackOut_0_0 = this.field_W;
               stackIn_2_0 = stackOut_0_0;
               stackIn_1_0 = stackOut_0_0;
               if (param1) {
@@ -100,17 +100,17 @@ final class na extends ei {
                     break L3;
                   }
                 }
-                ((na) this).field_W = stackIn_8_1 != 0;
-                if (((na) this).field_W) {
-                  ((na) this).field_cb.a(4210752, -7062047, 8405024);
-                  ((na) this).field_cb.field_P = true;
+                ((na) (this)).field_W = stackIn_8_1 != 0;
+                if (this.field_W) {
+                  this.field_cb.a(4210752, -7062047, 8405024);
+                  this.field_cb.field_P = true;
                   break L2;
                 } else {
-                  ((na) this).field_cb.a(4210752, -7062047, 2113632);
-                  if (!((na) this).field_ab) {
+                  this.field_cb.a(4210752, -7062047, 2113632);
+                  if (!this.field_ab) {
                     break L2;
                   } else {
-                    ((na) this).field_cb.field_P = false;
+                    this.field_cb.field_P = false;
                     break L2;
                   }
                 }
@@ -122,36 +122,36 @@ final class na extends ei {
               if (param0 == 60) {
                 break L4;
               } else {
-                var6 = null;
+                var6 = (String) null;
                 na.a(true, (String) null, 41, (String) null);
                 break L4;
               }
             }
-            ((na) this).field_cb.field_M = (int)(65536.0f * (param3 / 100.0f));
-            ((na) this).field_eb = param2;
+            this.field_cb.field_M = (int)(65536.0f * (param3 / 100.0f));
+            this.field_eb = param2;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             runtimeException = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) runtimeException;
+            stackOut_16_0 = (RuntimeException) (runtimeException);
             stackOut_16_1 = new StringBuilder().append("na.O(").append(param0).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -159,28 +159,29 @@ final class na extends ei {
               break L5;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param3 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param3 + ')');
         }
     }
 
     final void a(int param0, int param1, byte param2) {
+        int discarded$0 = 0;
         super.a(param0, param1, param2);
-        be.field_x.c(((na) this).field_eb, param0 + (((na) this).field_p >> 1), param1 + 103, 16777215, -1);
-        if (null != ((na) this).field_bb) {
+        be.field_x.c(this.field_eb, param0 + (this.field_p >> -562649663), param1 + 103, 16777215, -1);
+        if (null != this.field_bb) {
             l.d(20 + param0, -7 + (120 + param1), 260, 8421504);
-            int discarded$0 = be.field_x.a(((na) this).field_bb, 20 + param0, param1 - -128, 260, 100, 16777215, -1, 1, 0, be.field_x.field_s);
+            discarded$0 = be.field_x.a(this.field_bb, 20 + param0, param1 - -128, 260, 100, 16777215, -1, 1, 0, be.field_x.field_s);
         }
     }
 
     final void h(byte param0) {
         if (param0 > -73) {
-          ((na) this).h((byte) 5);
-          ((na) this).field_cb.field_P = false;
-          ((na) this).field_ab = true;
+          this.h((byte) 5);
+          this.field_cb.field_P = false;
+          this.field_ab = true;
           return;
         } else {
-          ((na) this).field_cb.field_P = false;
-          ((na) this).field_ab = true;
+          this.field_cb.field_P = false;
+          this.field_ab = true;
           return;
         }
     }
@@ -189,32 +190,34 @@ final class na extends ei {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
-            ((na) this).field_bb = param1;
-            if (((na) this).field_bb != null) {
-                var3_int = be.field_x.a(((na) this).field_bb, 260, be.field_x.field_s);
-                ((na) this).b(98, 150 + var3_int, 300);
+            this.field_bb = param1;
+            if (this.field_bb != null) {
+                var3_int = be.field_x.a(this.field_bb, 260, be.field_x.field_s);
+                this.b(98, 150 + var3_int, 300);
             }
-            ((na) this).field_cb = new hm(13, 50, 274, 30, 15, 2113632, 4210752);
-            ((na) this).field_ab = false;
-            ((na) this).field_W = false;
-            ((na) this).field_cb.field_P = true;
-            ((na) this).b((byte) 95, (gl) (Object) ((na) this).field_cb);
+            this.field_cb = new hm(13, 50, 274, 30, 15, 2113632, 4210752);
+            this.field_ab = false;
+            this.field_W = false;
+            this.field_cb.field_P = true;
+            this.b((byte) 95, this.field_cb);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void d(boolean param0) {
-        field_Z = null;
+        field_Z = (byte[][]) null;
+        if (!param0) {
+            field_Y = -73;
+            field_db = null;
+            field_X = null;
+            return;
+        }
         field_db = null;
         field_X = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Z = new byte[250][];
         field_Y = 5;
         field_X = "You have <%0> unread messages!";

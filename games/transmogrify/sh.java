@@ -17,6 +17,9 @@ final class sh {
     public static void a(boolean param0) {
         field_a = null;
         field_c = null;
+        if (param0) {
+            sh.a(false);
+        }
     }
 
     public final String toString() {
@@ -24,10 +27,6 @@ final class sh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = null;
         field_a = "<u>Tutorial: lesson 1<br>Type your word with the keyboard or use the mouse to drag letters. Then press 'ENTER' or click the 'Submit' button.<br><br>";
     }

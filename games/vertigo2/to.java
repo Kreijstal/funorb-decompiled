@@ -20,74 +20,101 @@ final class to {
         int var6 = 0;
         mi var8 = null;
         byte[] var12 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            var8 = id.field_f;
-            var2 = var8.h(-11);
-            if (var2 != 0) {
-              if (1 != var2) {
-                ke.a((Throwable) null, "A1: " + or.a(122), 0);
-                rm.b((byte) 117);
-                break L0;
-              } else {
-                var3 = var8.b(true);
-                var4 = (hn) (Object) qo.field_B.a((byte) 100);
-                L1: while (true) {
-                  L2: {
-                    if (var4 == null) {
-                      break L2;
-                    } else {
-                      if (var3 == var4.field_q) {
+            if (param0 <= -40) {
+              var8 = id.field_f;
+              var2 = var8.h(-11);
+              if (var2 != 0) {
+                if (1 != var2) {
+                  ke.a((Throwable) null, "A1: " + or.a(122), 0);
+                  rm.b((byte) 117);
+                  decompiledRegionSelector0 = 4;
+                  break L0;
+                } else {
+                  var3 = var8.b(true);
+                  var4 = (hn) ((Object) qo.field_B.a((byte) 100));
+                  L1: while (true) {
+                    L2: {
+                      if (var4 == null) {
                         break L2;
                       } else {
-                        var4 = (hn) (Object) qo.field_B.b(29);
-                        continue L1;
+                        if (var3 == var4.field_q) {
+                          break L2;
+                        } else {
+                          var4 = (hn) ((Object) qo.field_B.b(29));
+                          continue L1;
+                        }
                       }
                     }
+                    if (var4 != null) {
+                      var4.c(2);
+                      return;
+                    } else {
+                      rm.b((byte) 87);
+                      decompiledRegionSelector0 = 3;
+                      break L0;
+                    }
                   }
-                  if (var4 != null) {
-                    var4.c(2);
-                    return;
+                }
+              } else {
+                var3_ref_j = (j) ((Object) vf.field_C.a((byte) 100));
+                if (var3_ref_j != null) {
+                  L3: {
+                    var4_int = var8.h(-11);
+                    if (var4_int != 0) {
+                      var12 = new byte[var4_int];
+                      var8.a(0, var12, var4_int, -89);
+                      break L3;
+                    } else {
+                      var5 = null;
+                      break L3;
+                    }
+                  }
+                  var8.field_u = var8.field_u + 4;
+                  if (!var8.o(-4111)) {
+                    rm.b((byte) 94);
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
-                    rm.b((byte) 87);
+                    var3_ref_j.c(2);
                     return;
                   }
+                } else {
+                  rm.b((byte) -61);
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
             } else {
-              var3_ref_j = (j) (Object) vf.field_C.a((byte) 100);
-              if (var3_ref_j != null) {
-                L3: {
-                  var4_int = var8.h(-11);
-                  if (var4_int != 0) {
-                    var12 = new byte[var4_int];
-                    var8.a(0, var12, var4_int, -89);
-                    break L3;
-                  } else {
-                    var5 = null;
-                    break L3;
-                  }
-                }
-                var8.field_u = var8.field_u + 4;
-                if (!var8.o(-4111)) {
-                  rm.b((byte) 94);
-                  return;
-                } else {
-                  var3_ref_j.c(2);
-                  return;
-                }
-              } else {
-                rm.b((byte) -61);
-                return;
-              }
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "to.A(" + -99 + ')');
+          throw wn.a((Throwable) ((Object) var1), "to.A(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                return;
+              }
+            }
+          }
         }
     }
 
@@ -95,14 +122,15 @@ final class to {
         field_f = null;
         field_b = null;
         field_d = null;
+        if (param0 <= 73) {
+            field_d = (String) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Lost";
         field_c = 0;
         field_e = 0;

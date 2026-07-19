@@ -5,6 +5,12 @@ final class obb extends rqa {
     static String[] field_o;
 
     public static void a(int param0) {
+        int discarded$0 = 0;
+        if (param0 != 21942) {
+            discarded$0 = obb.a(7, -102, -66);
+            field_o = null;
+            return;
+        }
         field_o = null;
     }
 
@@ -12,37 +18,45 @@ final class obb extends rqa {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_5_0 = 0;
+        int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
+        int stackOut_6_0 = 0;
         var4 = VoidHunters.field_G;
         try {
           L0: {
+            L1: {
+              if (param1 == -18644) {
+                break L1;
+              } else {
+                field_o = (String[]) null;
+                break L1;
+              }
+            }
             var3_int = 0;
-            L1: while (true) {
+            L2: while (true) {
               if (param0 <= 0) {
-                stackOut_4_0 = var3_int;
-                stackIn_5_0 = stackOut_4_0;
+                stackOut_6_0 = var3_int;
+                stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                var3_int = 1 & param2 | var3_int << 1;
+                var3_int = 1 & param2 | var3_int << 1288312641;
                 param0--;
                 param2 = param2 >>> 1;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var3, "obb.B(" + param0 + ',' + -18644 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) var3), "obb.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_5_0;
+        return stackIn_7_0;
     }
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -51,9 +65,10 @@ final class obb extends rqa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         nc stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        nc stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -66,36 +81,38 @@ final class obb extends rqa {
           L0: {
             si.a(184, 62, param0[0].a(73));
             if (param1 < -119) {
-              stackOut_3_0 = new nc((Object) (Object) "void");
+              stackOut_3_0 = new nc("void");
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (nc) null;
               stackIn_2_0 = stackOut_1_0;
-              return (nc) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("obb.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -103,9 +120,13 @@ final class obb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     obb(String param0, Class[] param1, String param2) {

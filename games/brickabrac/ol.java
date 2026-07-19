@@ -17,34 +17,34 @@ final class ol extends km {
         var5 = BrickABrac.field_J ? 1 : 0;
         if (param0 == -120) {
           L0: {
-            if (((ol) this).field_h.field_j >= 0) {
+            if ((this.field_h.field_j ^ -1) <= -1) {
               L1: {
                 if (param1 == 98) {
                   break L1;
                 } else {
                   if (param1 != 99) {
-                    if (param1 == 96) {
-                      if (1 != ((ol) this).field_h.field_j) {
-                        if (((ol) this).field_h.field_j != 2) {
+                    if (-97 == (param1 ^ -1)) {
+                      if (1 != this.field_h.field_j) {
+                        if (-3 != (this.field_h.field_j ^ -1)) {
                           break L0;
                         } else {
-                          ((ol) this).field_h.a(false, 1);
+                          this.field_h.a(false, 1);
                           break L0;
                         }
                       } else {
-                        ((ol) this).field_h.a(false, 2);
+                        this.field_h.a(false, 2);
                         break L0;
                       }
                     } else {
-                      if (param1 == 97) {
-                        if (((ol) this).field_h.field_j == 2) {
-                          ((ol) this).field_h.a(false, 1);
+                      if ((param1 ^ -1) == -98) {
+                        if (this.field_h.field_j == 2) {
+                          this.field_h.a(false, 1);
                           break L0;
                         } else {
-                          if (((ol) this).field_h.field_j != 1) {
+                          if (-2 != (this.field_h.field_j ^ -1)) {
                             break L0;
                           } else {
-                            ((ol) this).field_h.a(false, 2);
+                            this.field_h.a(false, 2);
                             break L0;
                           }
                         }
@@ -57,15 +57,15 @@ final class ol extends km {
                   }
                 }
               }
-              if (((ol) this).field_h.field_j == 0) {
-                ((ol) this).field_h.a(false, 1);
+              if (this.field_h.field_j == 0) {
+                this.field_h.a(false, 1);
                 break L0;
               } else {
-                ((ol) this).field_h.a(false, 0);
+                this.field_h.a(false, 0);
                 break L0;
               }
             } else {
-              ((ol) this).field_h.a(false, 0);
+              this.field_h.a(false, 0);
               break L0;
             }
           }
@@ -81,13 +81,13 @@ final class ol extends km {
         int var6 = 0;
         L0: {
           var6 = BrickABrac.field_J ? 1 : 0;
-          var4 = ((ol) this).field_m[param0].field_f;
+          var4 = this.field_m[param0].field_f;
           var5 = var4;
           if (var5 != 40) {
-            if (var5 != 41) {
+            if ((var5 ^ -1) != -42) {
               return super.a(param0, param1, (byte) 123);
             } else {
-              if (!((ol) this).field_h.a((byte) 113)) {
+              if (!this.field_h.a((byte) 113)) {
                 break L0;
               } else {
                 ng.a(param1, 54, 15);
@@ -95,7 +95,7 @@ final class ol extends km {
               }
             }
           } else {
-            if (((ol) this).field_h.a((byte) 113)) {
+            if (this.field_h.a((byte) 113)) {
               ng.a(param1, param2 + -54, 13);
               break L0;
             } else {
@@ -106,7 +106,7 @@ final class ol extends km {
         if (param2 == 123) {
           return false;
         } else {
-          field_x = null;
+          field_x = (String) null;
           return false;
         }
     }
@@ -115,10 +115,14 @@ final class ol extends km {
         field_r = null;
         field_v = null;
         field_x = null;
+        if (param0 != 14529) {
+            field_z = (jp[]) null;
+        }
         field_z = null;
     }
 
     final void b(boolean param0) {
+        int dupTemp$1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -144,23 +148,23 @@ final class ol extends km {
               var4 = 0;
               L1: while (true) {
                 if (var4 >= 1) {
-                  var8 = ((ol) this).field_m[1];
+                  var8 = this.field_m[1];
                   var12 = var8;
                   var8.field_j = hq.field_s[0].field_x + 60;
                   var12.field_d = var12.field_j;
                   var12.field_c = (600 + -(2 * var12.field_j)) / 2;
                   var12.field_a = (523 + -var12.field_d) / 2;
-                  var5 = ((ol) this).field_m[2];
+                  var5 = this.field_m[2];
                   var5.field_a = var12.field_a;
                   var5.field_d = var12.field_d;
                   var5.field_c = 340;
                   var5.field_j = var12.field_j;
                   return;
                 } else {
-                  var11 = ((ol) this).field_m[var4];
+                  var11 = this.field_m[var4];
                   var11.field_c = var3;
-                  var11.field_a = ((ol) this).b(var4, 1);
-                  var11.field_d = ((ol) this).b((byte) -112, var4);
+                  var11.field_a = this.b(var4, 1);
+                  var11.field_d = this.b((byte) -112, var4);
                   var3 = var3 + (var11.field_j + 10);
                   var4++;
                   continue L1;
@@ -168,10 +172,10 @@ final class ol extends km {
               }
             } else {
               L2: {
-                var7 = ((ol) this).field_m[var3];
+                var7 = this.field_m[var3];
                 var9 = var7;
                 if (var9.field_f == 8) {
-                  stackOut_6_0 = ((ol) this).e((byte) 81);
+                  stackOut_6_0 = this.e((byte) 81);
                   stackIn_7_0 = stackOut_6_0;
                   break L2;
                 } else {
@@ -182,7 +186,7 @@ final class ol extends km {
               }
               var10 = stackIn_7_0;
               var5_ref = var10;
-              int dupTemp$1 = nn.field_g.c(var10) - -30;
+              dupTemp$1 = nn.field_g.c(var10) - -30;
               var9.field_j = dupTemp$1;
               var2 = var2 + dupTemp$1;
               if (var3 > 0) {
@@ -202,36 +206,32 @@ final class ol extends km {
 
     ol() {
         super(16, 180, 460, 402, 35, ag.field_L);
-        ((ol) this).field_u = new lc((km) this, ((ol) this).field_m[1], 1, 0);
-        ((ol) this).field_t = new lc((km) this, ((ol) this).field_m[2], 2, 1);
+        this.field_u = new lc((km) (this), this.field_m[1], 1, 0);
+        this.field_t = new lc((km) (this), this.field_m[2], 2, 1);
     }
 
     final void b(byte param0) {
         super.b((byte) -56);
-        al.a(((ol) this).field_a, 19);
+        al.a(this.field_a, 19);
         im.a(550, 5, 243, 5, 140, (byte) -91, 45);
-        ((ol) this).a(0);
-        ((ol) this).field_u.a((byte) 105);
-        ((ol) this).field_t.a((byte) 116);
+        this.a(0);
+        this.field_u.a((byte) 105);
+        this.field_t.a((byte) 116);
         if (param0 >= -14) {
-            field_z = null;
+            field_z = (jp[]) null;
         }
     }
 
     final void a(boolean param0, boolean param1, int param2) {
         super.a(param0, param1, -118);
-        ((ol) this).field_u.b((byte) -75);
-        ((ol) this).field_t.b((byte) -75);
+        this.field_u.b((byte) -75);
+        this.field_t.b((byte) -75);
         if (param2 > -52) {
-            field_r = null;
+            field_r = (jp) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = "Message lobby";
         field_v = new int[4];
         field_y = 10;

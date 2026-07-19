@@ -8,13 +8,13 @@ final class qc {
 
     final void a() {
         int var1 = 0;
-        ((qc) this).field_b = 0;
-        for (var1 = 0; var1 < ((qc) this).field_c.length; var1++) {
-            ((qc) this).field_c[var1] = 0;
+        this.field_b = 0;
+        for (var1 = 0; var1 < this.field_c.length; var1++) {
+            this.field_c[var1] = 0;
         }
     }
 
     qc(int param0) {
-        ((qc) this).field_c = new int[param0];
+        this.field_c = new int[param0];
     }
 }

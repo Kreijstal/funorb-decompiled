@@ -7,15 +7,15 @@ final class vn extends lka implements mca {
     private qu field_N;
 
     final String c(byte param0) {
-        if (((vn) this).field_t) {
-          if (null != ((vn) this).field_h) {
+        if (this.field_t) {
+          if (null != this.field_h) {
             if (param0 != 16) {
-              ((vn) this).field_P = 104;
-              ha.a(gd.field_m, mk.field_p - (((vn) this).field_P + -((vn) this).field_p), false);
-              return ((vn) this).field_h;
+              this.field_P = 104;
+              ha.a(gd.field_m, mk.field_p - (this.field_P + -this.field_p), false);
+              return this.field_h;
             } else {
-              ha.a(gd.field_m, mk.field_p - (((vn) this).field_P + -((vn) this).field_p), false);
-              return ((vn) this).field_h;
+              ha.a(gd.field_m, mk.field_p - (this.field_P + -this.field_p), false);
+              return this.field_h;
             }
           } else {
             return null;
@@ -27,18 +27,18 @@ final class vn extends lka implements mca {
 
     public final qu a(int param0) {
         if (param0 != 16728128) {
-            return null;
+            return (qu) null;
         }
-        return ((vn) this).field_N;
+        return this.field_N;
     }
 
     final void i(byte param0) {
         if (param0 >= -87) {
           L0: {
-            ((vn) this).field_N = null;
+            this.field_N = (qu) null;
             super.i((byte) -111);
-            if (((vn) this).field_N != null) {
-              ((vn) this).field_N.a(574);
+            if (this.field_N != null) {
+              this.field_N.a(574);
               break L0;
             } else {
               break L0;
@@ -48,8 +48,8 @@ final class vn extends lka implements mca {
         } else {
           L1: {
             super.i((byte) -111);
-            if (((vn) this).field_N != null) {
-              ((vn) this).field_N.a(574);
+            if (this.field_N != null) {
+              this.field_N.a(574);
               break L1;
             } else {
               break L1;
@@ -62,17 +62,18 @@ final class vn extends lka implements mca {
     final void a(int param0, int param1, wj param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            ((vn) this).field_P = mk.field_p - ((vn) this).field_s + -param0;
+            this.field_P = mk.field_p - this.field_s + -param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vn.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "vn.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     public static void k(int param0) {
+        boolean discarded$0 = false;
         field_M = null;
         if (param0 != -9063) {
-            Object var2 = null;
-            boolean discarded$0 = vn.a((byte) -1, (CharSequence) null);
+            CharSequence var2 = (CharSequence) null;
+            discarded$0 = vn.a((byte) -1, (CharSequence) null);
         }
     }
 
@@ -114,23 +115,23 @@ final class vn extends lka implements mca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("vn.JA(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -138,29 +139,41 @@ final class vn extends lka implements mca {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     final void a(int param0, qu param1) {
+        qu discarded$0 = null;
         try {
             if (param0 != 7) {
-                qu discarded$0 = ((vn) this).a(-10);
+                discarded$0 = this.a(-10);
             }
-            ((vn) this).field_N = param1;
+            this.field_N = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vn.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "vn.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (!(0 == (param1 & 7))) {
-            var2 = 8 + -(param1 & 7);
+        int var3 = 0;
+        if (param0 != -9938) {
+          return 66;
+        } else {
+          L0: {
+            var2 = 0;
+            if (0 != (param1 & 7)) {
+              var2 = 8 + -(param1 & 7);
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          var3 = param1 - -var2;
+          return var3;
         }
-        int var3 = param1 - -var2;
-        return var3;
     }
 
     vn(String param0, pl param1, int param2) {
@@ -168,10 +181,6 @@ final class vn extends lka implements mca {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_M = new int[]{16777215, 16728128, 16744448, 16776960};
     }
 }

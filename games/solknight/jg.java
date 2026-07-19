@@ -10,9 +10,9 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            ((jg) this).field_a = true;
+            this.field_a = true;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "jg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+            throw fc.a((Throwable) ((Object) runtimeException), "jg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -28,30 +28,53 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
         var3 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
-            var4 = (qc) (Object) sb.field_c.a((byte) 51);
+            var4 = (qc) ((Object) sb.field_c.a((byte) 51));
             L1: while (true) {
-              if (var4 == null) {
-                var5 = (sd) (Object) r.field_b.a((byte) 51);
-                L2: while (true) {
-                  if (var5 == null) {
-                    break L0;
+              L2: {
+                L3: {
+                  if (var4 == null) {
+                    break L3;
                   } else {
-                    fi.a(var5, 3, -24045);
-                    var5 = (sd) (Object) r.field_b.b(-119);
-                    continue L2;
+                    ah.a(false, param0, var4);
+                    var4 = (qc) ((Object) sb.field_c.b(-121));
+                    if (var3 != 0) {
+                      break L2;
+                    } else {
+                      if (var3 == 0) {
+                        continue L1;
+                      } else {
+                        break L3;
+                      }
+                    }
                   }
                 }
-              } else {
-                ah.a(false, 3, var4);
-                var4 = (qc) (Object) sb.field_c.b(-121);
-                continue L1;
+                if (param1 < -25) {
+                  break L2;
+                } else {
+                  field_e = -52;
+                  break L2;
+                }
+              }
+              var5 = (sd) ((Object) r.field_b.a((byte) 51));
+              L4: while (true) {
+                if (var5 == null) {
+                  break L0;
+                } else {
+                  fi.a(var5, param0, -24045);
+                  var5 = (sd) ((Object) r.field_b.b(-119));
+                  if (var3 == 0) {
+                    continue L4;
+                  } else {
+                    return;
+                  }
+                }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var2, "jg.C(" + 3 + ',' + -100 + ')');
+          throw fc.a((Throwable) ((Object) var2), "jg.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -60,18 +83,18 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
             return;
         }
         try {
-            de.a(param1, ((jg) this).field_c, (byte) 126);
+            de.a(param1, this.field_c, (byte) 126);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "jg.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw fc.a((Throwable) ((Object) runtimeException), "jg.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(rl param0, int param1, boolean param2) {
         try {
-            int var3_int = -44;
+            int var3_int = -44 / ((param1 - 35) / 40);
             uf.a(param2, 123, 256, param0);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "jg.E(" + (param0 != null ? "{...}" : "null") + ',' + 86 + ',' + param2 + ')');
+            throw fc.a((Throwable) ((Object) runtimeException), "jg.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -79,6 +102,7 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static String a(CharSequence param0, int param1) {
+        StringBuilder discarded$1 = null;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -88,133 +112,198 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        Object stackIn_16_0 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_31_2 = null;
+        boolean stackIn_7_0 = false;
+        int stackIn_13_0 = 0;
+        boolean stackIn_15_0 = false;
+        int stackIn_19_0 = 0;
+        Object stackIn_23_0 = null;
+        boolean stackIn_27_0 = false;
+        int stackIn_34_0 = 0;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        String stackIn_41_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_15_0 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
+        boolean stackOut_6_0 = false;
+        int stackOut_10_0 = 0;
+        boolean stackOut_14_0 = false;
+        int stackOut_12_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_33_0 = 0;
+        boolean stackOut_26_0 = false;
+        Object stackOut_22_0 = null;
+        RuntimeException stackOut_38_0 = null;
+        StringBuilder stackOut_38_1 = null;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        String stackOut_40_2 = null;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        String stackOut_39_2 = null;
         var9 = SolKnight.field_L ? 1 : 0;
         try {
-          if (param0 != null) {
-            var2_int = 0;
-            var3 = param0.length();
-            L0: while (true) {
-              L1: {
-                if (var2_int >= var3) {
-                  break L1;
-                } else {
-                  if (!ck.a(param0.charAt(var2_int), true)) {
-                    break L1;
-                  } else {
-                    var2_int++;
-                    continue L0;
-                  }
-                }
-              }
-              L2: while (true) {
-                L3: {
-                  if (var2_int >= var3) {
-                    break L3;
-                  } else {
-                    if (!ck.a(param0.charAt(var3 - 1), true)) {
+          L0: {
+            if (param0 != null) {
+              var2_int = 0;
+              var3 = param0.length();
+              L1: while (true) {
+                L2: {
+                  L3: {
+                    if (var2_int >= var3) {
                       break L3;
                     } else {
-                      var3--;
-                      continue L2;
+                      stackOut_6_0 = ck.a(param0.charAt(var2_int), true);
+                      stackIn_13_0 = stackOut_6_0 ? 1 : 0;
+                      stackIn_7_0 = stackOut_6_0;
+                      if (var9 != 0) {
+                        break L2;
+                      } else {
+                        if (!stackIn_7_0) {
+                          break L3;
+                        } else {
+                          var2_int++;
+                          continue L1;
+                        }
+                      }
                     }
                   }
+                  stackOut_10_0 = var2_int;
+                  stackIn_13_0 = stackOut_10_0;
+                  break L2;
                 }
-                var4 = var3 - var2_int;
-                if (var4 >= 1) {
-                  if (var4 <= 12) {
-                    var5 = new StringBuilder(var4);
-                    var6 = var2_int;
-                    L4: while (true) {
-                      if (~var3 >= ~var6) {
-                        if (0 != var5.length()) {
+                L4: while (true) {
+                  L5: {
+                    L6: {
+                      if (stackIn_13_0 >= var3) {
+                        break L6;
+                      } else {
+                        stackOut_14_0 = ck.a(param0.charAt(var3 - 1), true);
+                        stackIn_19_0 = stackOut_14_0 ? 1 : 0;
+                        stackIn_15_0 = stackOut_14_0;
+                        if (var9 != 0) {
+                          break L5;
+                        } else {
+                          if (!stackIn_15_0) {
+                            break L6;
+                          } else {
+                            var3--;
+                            stackOut_12_0 = var2_int;
+                            stackIn_13_0 = stackOut_12_0;
+                            continue L4;
+                          }
+                        }
+                      }
+                    }
+                    stackOut_18_0 = var3 - var2_int;
+                    stackIn_19_0 = stackOut_18_0;
+                    break L5;
+                  }
+                  var4 = stackIn_19_0;
+                  if ((var4 ^ -1) <= param1) {
+                    if (-13 <= (var4 ^ -1)) {
+                      var5 = new StringBuilder(var4);
+                      var6 = var2_int;
+                      L7: while (true) {
+                        L8: {
+                          if (var3 <= var6) {
+                            stackOut_33_0 = 0;
+                            stackIn_34_0 = stackOut_33_0;
+                            break L8;
+                          } else {
+                            var7 = param0.charAt(var6);
+                            stackOut_26_0 = c.a(param1 + 2, (char) var7);
+                            stackIn_34_0 = stackOut_26_0 ? 1 : 0;
+                            stackIn_27_0 = stackOut_26_0;
+                            if (var9 != 0) {
+                              break L8;
+                            } else {
+                              L9: {
+                                L10: {
+                                  if (stackIn_27_0) {
+                                    break L10;
+                                  } else {
+                                    if (var9 == 0) {
+                                      break L9;
+                                    } else {
+                                      break L10;
+                                    }
+                                  }
+                                }
+                                var8 = we.a(2, (char) var7);
+                                if (var8 == 0) {
+                                  break L9;
+                                } else {
+                                  discarded$1 = var5.append((char) var8);
+                                  break L9;
+                                }
+                              }
+                              var6++;
+                              continue L7;
+                            }
+                          }
+                        }
+                        if (stackIn_34_0 != var5.length()) {
                           return var5.toString();
                         } else {
                           return null;
                         }
-                      } else {
-                        L5: {
-                          var7 = param0.charAt(var6);
-                          if (c.a(0, (char) var7)) {
-                            var8 = we.a(2, (char) var7);
-                            if (var8 == 0) {
-                              break L5;
-                            } else {
-                              StringBuilder discarded$1 = var5.append((char) var8);
-                              break L5;
-                            }
-                          } else {
-                            break L5;
-                          }
-                        }
-                        var6++;
-                        continue L4;
                       }
+                    } else {
+                      stackOut_22_0 = null;
+                      stackIn_23_0 = stackOut_22_0;
+                      break L0;
                     }
                   } else {
-                    stackOut_15_0 = null;
-                    stackIn_16_0 = stackOut_15_0;
-                    return (String) (Object) stackIn_16_0;
+                    return null;
                   }
-                } else {
-                  return null;
                 }
               }
+            } else {
+              return null;
             }
-          } else {
-            return null;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L11: {
             var2 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) var2;
-            stackOut_28_1 = new StringBuilder().append("jg.B(");
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackOut_38_0 = (RuntimeException) (var2);
+            stackOut_38_1 = new StringBuilder().append("jg.B(");
+            stackIn_40_0 = stackOut_38_0;
+            stackIn_40_1 = stackOut_38_1;
+            stackIn_39_0 = stackOut_38_0;
+            stackIn_39_1 = stackOut_38_1;
             if (param0 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
-              break L6;
+              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
+              stackOut_40_2 = "null";
+              stackIn_41_0 = stackOut_40_0;
+              stackIn_41_1 = stackOut_40_1;
+              stackIn_41_2 = stackOut_40_2;
+              break L11;
             } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
-              break L6;
+              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
+              stackOut_39_2 = "{...}";
+              stackIn_41_0 = stackOut_39_0;
+              stackIn_41_1 = stackOut_39_1;
+              stackIn_41_2 = stackOut_39_2;
+              break L11;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + -2 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_41_0), stackIn_41_2 + ',' + param1 + ')');
         }
+        return (String) ((Object) stackIn_23_0);
     }
 
     final static void a(byte param0) {
-        fb.a(255);
+        fb.a(param0 + 174);
+        if (param0 == 81) {
+            return;
+        }
+        field_d = false;
     }
 
     jg() {
@@ -224,10 +313,6 @@ final class jg extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0;
         field_e = -1;
         field_d = false;

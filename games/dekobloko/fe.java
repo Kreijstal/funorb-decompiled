@@ -8,7 +8,7 @@ final class fe {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = -37;
+        int var1 = -37 / ((-34 - param0) / 50);
     }
 
     static {

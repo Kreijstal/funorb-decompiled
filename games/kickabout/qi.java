@@ -30,6 +30,7 @@ final class qi extends sr {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_2_0 = 0;
@@ -52,17 +53,17 @@ final class qi extends sr {
         var9 = Kickabout.field_G;
         try {
           L0: {
-            var4 = ((sp) param1).field_Sb;
+            var4 = ((sp) (param1)).field_Sb;
             if (param0 == 2) {
               L1: {
-                var5 = ((sp) param2).field_Sb;
-                var8 = ((qi) this).field_i % 3;
+                var5 = ((sp) (param2)).field_Sb;
+                var8 = this.field_i % 3;
                 if (0 == var8) {
                   var6 = var4.field_n;
                   var7 = var5.field_n;
                   break L1;
                 } else {
-                  if (var8 != 1) {
+                  if (-2 != (var8 ^ -1)) {
                     var7 = var5.field_o;
                     var6 = var4.field_o;
                     break L1;
@@ -73,36 +74,38 @@ final class qi extends sr {
                   }
                 }
               }
-              stackOut_9_0 = -var7 + var6 ^ ((qi) this).field_i / 3 << 31;
+              stackOut_9_0 = -var7 + var6 ^ this.field_i / 3 << 559945247;
               stackIn_10_0 = stackOut_9_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_2_0 = -108;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var4_ref;
+            stackOut_11_0 = (RuntimeException) (var4_ref);
             stackOut_11_1 = new StringBuilder().append("qi.D(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -111,23 +114,23 @@ final class qi extends sr {
             }
           }
           L3: {
-            stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+            stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
             stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -135,15 +138,20 @@ final class qi extends sr {
               break L3;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
-        return stackIn_10_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_10_0;
+        }
     }
 
     final int a(int param0) {
+        int discarded$0 = 0;
         if (param0 >= -69) {
-            Object var3 = null;
-            int discarded$0 = ((qi) this).a(81, (Object) null, (Object) null);
+            Object var3 = (Object) null;
+            discarded$0 = this.a(81, (Object) null, (Object) null);
         }
         return 6;
     }
@@ -152,20 +160,30 @@ final class qi extends sr {
     }
 
     final static int b(int param0) {
+        if (param0 != 3) {
+            return 118;
+        }
         return 180;
     }
 
     final static int a(boolean param0) {
         wk.a(nj.a(-100), 0);
+        if (param0) {
+            qi.b((byte) -67);
+        }
         return oa.field_a.get(5);
     }
 
     public static void b(byte param0) {
+        if (param0 != 85) {
+            field_p = -51;
+        }
         field_n = null;
         field_o = null;
     }
 
     final static void a(int param0, int param1, int param2, int[] param3, int[] param4) {
+        int incrementValue$1 = 0;
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -217,7 +235,7 @@ final class qi extends sr {
               if (param2 == -1) {
                 break L1;
               } else {
-                field_n = null;
+                field_n = (int[]) null;
                 break L1;
               }
             }
@@ -252,7 +270,7 @@ final class qi extends sr {
                     param3[var6] = var7;
                     param4[param1] = param4[var6];
                     param4[var6] = var8;
-                    qi.a(param0, -1 + var6, param2, param3, param4);
+                    qi.a(param0, -1 + var6, param2 + 0, param3, param4);
                     qi.a(var6 + 1, param1, -1, param3, param4);
                     break L2;
                   } else {
@@ -263,7 +281,7 @@ final class qi extends sr {
                         param3[var6] = var11;
                         var12 = param4[var10];
                         param4[var10] = param4[var6];
-                        int incrementValue$1 = var6;
+                        incrementValue$1 = var6;
                         var6++;
                         param4[incrementValue$1] = var12;
                         break L5;
@@ -283,23 +301,23 @@ final class qi extends sr {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var5;
+            stackOut_15_0 = (RuntimeException) (var5);
             stackOut_15_1 = new StringBuilder().append("qi.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param3 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -308,23 +326,23 @@ final class qi extends sr {
             }
           }
           L7: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
             stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param4 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L7;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -332,7 +350,7 @@ final class qi extends sr {
               break L7;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
         }
     }
 

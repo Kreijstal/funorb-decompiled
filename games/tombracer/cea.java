@@ -6,14 +6,15 @@ final class cea {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 > -112) {
+            field_a = (jea) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "cea.A(";
     }
 }

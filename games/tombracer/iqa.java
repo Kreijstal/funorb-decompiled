@@ -12,31 +12,31 @@ final class iqa {
 
     final soa a(byte param0) {
         if (param0 >= -12) {
-          return null;
+          return (soa) null;
         } else {
           L0: {
-            if (null == ((iqa) this).field_e) {
-              ((iqa) this).field_e = new soa();
+            if (null == this.field_e) {
+              this.field_e = new soa();
               break L0;
             } else {
               break L0;
             }
           }
-          ((iqa) this).field_e.a(127, (iqa) this);
-          return ((iqa) this).field_e;
+          this.field_e.a(127, (iqa) (this));
+          return this.field_e;
         }
     }
 
     public static void a(int param0) {
         field_g = null;
-        int var1 = 0;
+        int var1 = 13 % ((param0 - 26) / 56);
         field_c = null;
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
         jta.a(param3, true);
         vha.a(param2, (byte) 95, param3, param1);
-        int var4 = 24;
+        int var4 = -97 / ((param0 - 63) / 38);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -51,10 +51,10 @@ final class iqa {
         } else {
           if (param3 + param4 > ss.field_c) {
             nfa.a(0, param4, param2, param3, param1);
-            if (param0 != 30237) {
-              iqa.a(114, -54, -16, -30, -116);
+            if (param0 == 30237) {
               return;
             } else {
+              iqa.a(114, -54, -16, -30, -116);
               return;
             }
           } else {
@@ -77,11 +77,21 @@ final class iqa {
                 }
               } else {
                 bq.a(param1, param3, param2, (byte) -13, param4);
-                if (param0 == 30237) {
-                  return;
+                if (!TombRacer.field_G) {
+                  if (param0 != 30237) {
+                    iqa.a(114, -54, -16, -30, -116);
+                    return;
+                  } else {
+                    return;
+                  }
                 } else {
-                  iqa.a(114, -54, -16, -30, -116);
-                  return;
+                  nfa.a(0, param4, param2, param3, param1);
+                  if (param0 != 30237) {
+                    iqa.a(114, -54, -16, -30, -116);
+                    return;
+                  } else {
+                    return;
+                  }
                 }
               }
             }
@@ -91,19 +101,15 @@ final class iqa {
 
     iqa(ha param0, ei param1, java.awt.Canvas param2) {
         try {
-            ((iqa) this).field_a = param2;
-            ((iqa) this).field_d = param0;
-            ((iqa) this).field_b = param1;
+            this.field_a = param2;
+            this.field_d = param0;
+            this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "iqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "iqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Age:";
         field_c = new ila();
     }

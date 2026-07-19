@@ -19,7 +19,7 @@ final class po {
     public static void a(byte param0) {
         field_c = null;
         field_a = null;
-        int var1 = 43;
+        int var1 = 43 / ((param0 - 18) / 42);
         field_d = null;
         field_h = null;
         field_e = null;
@@ -28,15 +28,11 @@ final class po {
 
     final static void a(int param0) {
         em.field_h = 0;
-        int var1 = 0;
+        int var1 = 42 % ((param0 - 4) / 47);
         sr.field_h = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Systems";
         field_g = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
         field_h = new java.awt.Color(10040319);

@@ -13,12 +13,18 @@ final class wd {
     static int[] field_f;
 
     public static void a(byte param0) {
+        boolean discarded$0 = false;
         field_a = null;
         field_f = null;
         field_e = null;
+        if (param0 < 102) {
+            CharSequence var2 = (CharSequence) null;
+            discarded$0 = wd.a((byte) 89, (CharSequence) null, false);
+        }
     }
 
     final static boolean a(byte param0, CharSequence param1, boolean param2) {
+        boolean discarded$1 = false;
         RuntimeException var3 = null;
         int var3_int = 0;
         String var4 = null;
@@ -26,7 +32,7 @@ final class wd {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
+        CharSequence var9 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
@@ -40,6 +46,7 @@ final class wd {
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         String stackIn_39_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_8_0 = 0;
@@ -61,15 +68,17 @@ final class wd {
             if (param1 == null) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               var3_int = param1.length();
               if (var3_int < 1) {
                 stackOut_8_0 = 0;
                 stackIn_9_0 = stackOut_8_0;
-                return stackIn_9_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
-                if (var3_int <= 12) {
+                if (-13 <= (var3_int ^ -1)) {
                   L1: {
                     var4 = ta.a(-77, param1);
                     if (var4 == null) {
@@ -86,17 +95,18 @@ final class wd {
                                 if (param0 == 43) {
                                   break L3;
                                 } else {
-                                  var9 = null;
-                                  boolean discarded$1 = wd.a((byte) 21, (CharSequence) null, true);
+                                  var9 = (CharSequence) null;
+                                  discarded$1 = wd.a((byte) 21, (CharSequence) null, true);
                                   break L3;
                                 }
                               }
                               var6 = 0;
                               L4: while (true) {
-                                if (~param1.length() >= ~var6) {
-                                  if (var5 > 0) {
+                                if (param1.length() <= var6) {
+                                  if (-1 > (var5 ^ -1)) {
                                     stackOut_34_0 = 0;
                                     stackIn_35_0 = stackOut_34_0;
+                                    decompiledRegionSelector0 = 5;
                                     break L0;
                                   } else {
                                     return true;
@@ -113,7 +123,7 @@ final class wd {
                                     }
                                   }
                                   L6: {
-                                    if (var5 < 2) {
+                                    if ((var5 ^ -1) > -3) {
                                       break L6;
                                     } else {
                                       if (param2) {
@@ -121,7 +131,8 @@ final class wd {
                                       } else {
                                         stackOut_29_0 = 0;
                                         stackIn_30_0 = stackOut_29_0;
-                                        return stackIn_30_0 != 0;
+                                        decompiledRegionSelector0 = 4;
+                                        break L0;
                                       }
                                     }
                                   }
@@ -136,7 +147,8 @@ final class wd {
                         }
                         stackOut_18_0 = 0;
                         stackIn_19_0 = stackOut_18_0;
-                        return stackIn_19_0 != 0;
+                        decompiledRegionSelector0 = 3;
+                        break L0;
                       } else {
                         break L1;
                       }
@@ -144,7 +156,8 @@ final class wd {
                   }
                   stackOut_13_0 = 0;
                   stackIn_14_0 = stackOut_13_0;
-                  return stackIn_14_0 != 0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   return false;
                 }
@@ -155,23 +168,23 @@ final class wd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) var3;
+            stackOut_36_0 = (RuntimeException) (var3);
             stackOut_36_1 = new StringBuilder().append("wd.A(").append(param0).append(',');
             stackIn_38_0 = stackOut_36_0;
             stackIn_38_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
             stackIn_37_1 = stackOut_36_1;
             if (param1 == null) {
-              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
               stackOut_38_2 = "null";
               stackIn_39_0 = stackOut_38_0;
               stackIn_39_1 = stackOut_38_1;
               stackIn_39_2 = stackOut_38_2;
               break L7;
             } else {
-              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
               stackOut_37_2 = "{...}";
               stackIn_39_0 = stackOut_37_0;
               stackIn_39_1 = stackOut_37_1;
@@ -179,52 +192,70 @@ final class wd {
               break L7;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + param2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_39_0), stackIn_39_2 + ',' + param2 + ')');
         }
-        return stackIn_35_0 != 0;
-    }
-
-    wd(boolean param0) {
-        ((wd) this).field_i = param0 ? true : false;
-    }
-
-    static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        int var0 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        field_g = 100;
-        field_a = new int[128];
-        field_e = new int[8192];
-        field_f = new int[256];
-        var1 = 0;
-        L0: while (true) {
-          if (var1 >= 256) {
-            return;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0 != 0;
           } else {
-            var0 = var1;
-            var2 = 0;
-            L1: while (true) {
-              if (var2 >= 8) {
-                field_f[var1] = var0;
-                var1++;
-                continue L0;
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_14_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_19_0 != 0;
               } else {
-                if (1 != (var0 & 1)) {
-                  var0 = var0 >>> 1;
-                  var2++;
-                  continue L1;
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_30_0 != 0;
                 } else {
-                  var0 = -306674912 ^ var0 >>> 1;
-                  var2++;
-                  continue L1;
+                  return stackIn_35_0 != 0;
                 }
               }
             }
           }
+        }
+    }
+
+    wd(boolean param0) {
+        this.field_i = param0 ? true : false;
+    }
+
+    static {
+        $cfr$clinit: {
+            int var0 = 0;
+            int var1 = 0;
+            int var2 = 0;
+            field_g = 100;
+            field_a = new int[128];
+            field_e = new int[8192];
+            field_f = new int[256];
+            var1 = 0;
+            L0: while (true) {
+              if (var1 >= 256) {
+                break $cfr$clinit;
+              } else {
+                var0 = var1;
+                var2 = 0;
+                L1: while (true) {
+                  if ((var2 ^ -1) <= -9) {
+                    field_f[var1] = var0;
+                    var1++;
+                    continue L0;
+                  } else {
+                    if (1 != (var0 & 1)) {
+                      var0 = var0 >>> 1;
+                      var2++;
+                      continue L1;
+                    } else {
+                      var0 = -306674912 ^ var0 >>> 371290497;
+                      var2++;
+                      continue L1;
+                    }
+                  }
+                }
+              }
+            }
         }
     }
 }

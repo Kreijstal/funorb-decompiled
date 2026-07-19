@@ -32,9 +32,9 @@ final class mh {
 
     final static void a(int param0, int param1) {
         L0: {
-          sg.field_d = 3 & param1 >> 4;
-          ii.field_Q = (param1 & 13) >> 2;
-          if (sg.field_d > 2) {
+          sg.field_d = 3 & param1 >> -1442461980;
+          ii.field_Q = (param1 & 13) >> -1730123902;
+          if (-3 > (sg.field_d ^ -1)) {
             sg.field_d = 2;
             break L0;
           } else {
@@ -45,7 +45,7 @@ final class mh {
         if (2 < ii.field_Q) {
           L1: {
             ii.field_Q = 2;
-            if (v.field_d > 2) {
+            if (v.field_d > param0) {
               v.field_d = 2;
               break L1;
             } else {
@@ -55,7 +55,7 @@ final class mh {
           return;
         } else {
           L2: {
-            if (v.field_d > 2) {
+            if (v.field_d > param0) {
               v.field_d = 2;
               break L2;
             } else {
@@ -121,8 +121,8 @@ final class mh {
               break L0;
             }
           }
-          ((mh) this).field_h = stackIn_8_1 != 0;
-          ((mh) this).field_c = true;
+          ((mh) (this)).field_h = stackIn_8_1 != 0;
+          this.field_c = true;
           return;
         } else {
           L1: {
@@ -143,8 +143,8 @@ final class mh {
               break L1;
             }
           }
-          ((mh) this).field_h = stackIn_4_1 != 0;
-          ((mh) this).field_c = true;
+          ((mh) (this)).field_h = stackIn_4_1 != 0;
+          this.field_c = true;
           return;
         }
     }
@@ -152,39 +152,35 @@ final class mh {
     final boolean b(byte param0) {
         if (param0 < 94) {
             mh.a(35);
-            return ((mh) this).field_c;
+            return this.field_c;
         }
-        return ((mh) this).field_c;
+        return this.field_c;
     }
 
     final boolean c(int param0) {
         if (param0 > -14) {
-            ((mh) this).field_b = null;
-            return ((mh) this).field_h;
+            this.field_b = (String) null;
+            return this.field_h;
         }
-        return ((mh) this).field_h;
+        return this.field_h;
     }
 
     final String a(byte param0) {
         int var2 = 34 % ((param0 - -10) / 60);
-        return ((mh) this).field_b;
+        return this.field_b;
     }
 
     mh(String param0) {
-        ((mh) this).field_h = false;
-        ((mh) this).field_c = false;
+        this.field_h = false;
+        this.field_c = false;
         try {
-            ((mh) this).field_b = param0;
+            this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "White's move";
         field_g = "%L";
         field_a = new sa();

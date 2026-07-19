@@ -7,6 +7,12 @@ final class f {
     static hj field_c;
 
     final static void a(byte param0) {
+        String[][] dupTemp$6 = null;
+        long[][] dupTemp$7 = null;
+        int[][] dupTemp$8 = null;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -36,6 +42,7 @@ final class f {
         int var25 = 0;
         int var26 = 0;
         pi var27 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var26 = BrickABrac.field_J ? 1 : 0;
         try {
@@ -52,10 +59,10 @@ final class f {
               var27 = jl.field_e;
               var2 = var27.l(255);
               if (0 != var2) {
-                if (var2 == 1) {
+                if (-2 == (var2 ^ -1)) {
                   var3 = var27.i(param0 + 65273);
                   var4 = var27.g(-32768);
-                  var6 = (sp) (Object) tm.field_f.d(-60);
+                  var6 = (sp) ((Object) tm.field_f.d(-60));
                   L3: while (true) {
                     L4: {
                       if (var6 == null) {
@@ -64,7 +71,7 @@ final class f {
                         if (var6.field_m == var3) {
                           break L4;
                         } else {
-                          var6 = (sp) (Object) tm.field_f.a((byte) 116);
+                          var6 = (sp) ((Object) tm.field_f.a((byte) 116));
                           continue L3;
                         }
                       }
@@ -75,7 +82,8 @@ final class f {
                       break L2;
                     } else {
                       hn.a((byte) 53);
-                      return;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     }
                   }
                 } else {
@@ -85,14 +93,14 @@ final class f {
                 }
               } else {
                 var3 = var27.i(65280);
-                var4_ref_eg = (eg) (Object) qc.field_n.d(-105);
+                var4_ref_eg = (eg) ((Object) qc.field_n.d(-105));
                 L5: while (true) {
                   L6: {
                     if (var4_ref_eg == null) {
                       break L6;
                     } else {
                       if (var4_ref_eg.field_l != var3) {
-                        var4_ref_eg = (eg) (Object) qc.field_n.a((byte) 116);
+                        var4_ref_eg = (eg) ((Object) qc.field_n.a((byte) 116));
                         continue L5;
                       } else {
                         break L6;
@@ -113,14 +121,14 @@ final class f {
                         var8_int = 1;
                         L8: while (true) {
                           if (var5 <= var8_int) {
-                            String[][] dupTemp$6 = new String[3][var6_int];
+                            dupTemp$6 = new String[3][var6_int];
                             var4_ref_eg.field_i = dupTemp$6;
                             var8 = dupTemp$6;
                             var9 = new String[3][var6_int];
-                            long[][] dupTemp$7 = new long[3][var6_int];
+                            dupTemp$7 = new long[3][var6_int];
                             var4_ref_eg.field_r = dupTemp$7;
                             var10 = dupTemp$7;
-                            int[][] dupTemp$8 = new int[3][var6_int * var7];
+                            dupTemp$8 = new int[3][var6_int * var7];
                             var4_ref_eg.field_n = dupTemp$8;
                             var11 = dupTemp$8;
                             var12 = 0;
@@ -153,7 +161,7 @@ final class f {
                                           var12++;
                                           break L10;
                                         } else {
-                                          int incrementValue$9 = var15;
+                                          incrementValue$9 = var15;
                                           var15++;
                                           var11[0][incrementValue$9] = var27.e(255);
                                           var25++;
@@ -179,7 +187,7 @@ final class f {
                                           if (var25 >= var7) {
                                             break L12;
                                           } else {
-                                            int incrementValue$10 = var16;
+                                            incrementValue$10 = var16;
                                             var16++;
                                             var11[1][incrementValue$10] = var27.e(255);
                                             var25++;
@@ -207,7 +215,7 @@ final class f {
                                           if (var7 <= var25) {
                                             break L14;
                                           } else {
-                                            int incrementValue$11 = var17;
+                                            incrementValue$11 = var17;
                                             var17++;
                                             var11[2][incrementValue$11] = var27.e(255);
                                             var25++;
@@ -247,17 +255,28 @@ final class f {
                     break L2;
                   } else {
                     hn.a((byte) 127);
-                    return;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   }
                 }
               }
             }
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var1, "f.B(" + param0 + ')');
+          throw qb.a((Throwable) ((Object) var1), "f.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -271,10 +290,6 @@ final class f {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Level Select";
     }
 }

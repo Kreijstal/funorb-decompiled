@@ -30,7 +30,7 @@ final class ul extends nm {
             var2 = -120 / ((param0 - 32) / 49);
             var1_int = 0;
             L1: while (true) {
-              if (var1_int >= 256) {
+              if ((var1_int ^ -1) <= -257) {
                 var6 = 256;
                 var1_int = var6;
                 L2: while (true) {
@@ -53,7 +53,7 @@ final class ul extends nm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var1, "ul.D(" + param0 + ')');
+          throw qb.a((Throwable) ((Object) var1), "ul.D(" + param0 + ')');
         }
     }
 
@@ -61,6 +61,9 @@ final class ul extends nm {
         field_l = null;
         field_k = null;
         field_m = null;
+        if (param0 >= -41) {
+            return;
+        }
         field_r = null;
         field_j = null;
     }
@@ -74,39 +77,38 @@ final class ul extends nm {
 
     final static void a(int param0, vm param1, int param2, boolean param3, int param4) {
         try {
-            dc.field_e.a(256, false, 1048576, (byte) 22, 1000000, param1);
-            int var5_int = 44;
+            dc.field_e.a(param2, !param3 ? true : false, param0, (byte) 22, 1000000, param1);
+            int var5_int = 88 / ((-16 - param4) / 38);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ul.F(" + 1048576 + ',' + (param1 != null ? "{...}" : "null") + ',' + 256 + ',' + true + ',' + -104 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "ul.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static int a(int param0, int param1) {
+        if (param0 != 255) {
+            field_k = (jp[]) null;
+        }
         return la.a(param1, 255, 255);
     }
 
     final boolean b(boolean param0) {
-        ((ul) this).field_n = ((ul) this).field_n - 256;
+        this.field_n = this.field_n - 256;
         if (param0) {
             return false;
         }
-        int fieldTemp$0 = ((ul) this).field_q - 1;
-        ((ul) this).field_q = ((ul) this).field_q - 1;
+        int fieldTemp$0 = this.field_q - 1;
+        this.field_q = this.field_q - 1;
         return fieldTemp$0 != 0 ? true : false;
     }
 
     ul(int param0, int param1, int param2) {
-        ((ul) this).field_n = param2;
-        ((ul) this).field_q = 50;
-        ((ul) this).field_i = param1;
-        ((ul) this).field_o = Integer.toString(param0);
+        this.field_n = param2;
+        this.field_q = 50;
+        this.field_i = param1;
+        this.field_o = Integer.toString(param0);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "You cannot chat to <%0> because <%0> is offline in your friend list.";
         field_p = 256;
     }

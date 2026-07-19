@@ -41,39 +41,39 @@ final class le extends ms {
             if (field_k == null) {
               break L2;
             } else {
-              if (field_k.length == ((le) this).field_l.length) {
+              if (field_k.length == this.field_l.length) {
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          field_k = new int[((le) this).field_l.length];
+          field_k = new int[this.field_l.length];
           break L1;
         }
-        var3 = ((le) this).field_l.length;
+        var3 = this.field_l.length;
         var4 = param0;
-        var5 = ((le) this).field_n - 1;
-        var6 = ((le) this).field_n * param1;
+        var5 = this.field_n - 1;
+        var6 = this.field_n * param1;
         var7 = var3 - 1;
         var8_int = 0;
         L3: while (true) {
           if (var8_int >= var3) {
-            var8 = ((le) this).field_l;
-            ((le) this).field_l = field_k;
+            var8 = this.field_l;
+            this.field_l = field_k;
             field_k = var8;
             return;
           } else {
             var9 = var8_int + var6 & var7;
             var10 = 0;
             L4: while (true) {
-              if (var10 >= ((le) this).field_n) {
-                var8_int = var8_int + ((le) this).field_n;
+              if (var10 >= this.field_n) {
+                var8_int = var8_int + this.field_n;
                 continue L3;
               } else {
                 var11 = var8_int + var10;
                 var12 = var9 + (var10 + var4 & var5);
-                field_k[var11] = ((le) this).field_l[var12];
+                field_k[var11] = this.field_l[var12];
                 var10++;
                 continue L4;
               }

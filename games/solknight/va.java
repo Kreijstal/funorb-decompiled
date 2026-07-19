@@ -25,28 +25,46 @@ abstract class va {
 
     final int c(int param0) {
         int var2 = -5 % ((param0 - -88) / 37);
-        return ((va) this).field_d.a(-29749) + ((va) this).field_k.a(-29749);
+        return this.field_d.a(-29749) + this.field_k.a(-29749);
     }
 
     final static String a(boolean param0) {
-        if (!ab.field_u) {
-          if (kk.field_d >= kg.field_e) {
-            if (kk.field_d >= kg.field_e - -wi.field_l) {
-              return null;
+        if (param0) {
+          if (!ab.field_u) {
+            if (kk.field_d >= kg.field_e) {
+              if (kk.field_d >= kg.field_e - -wi.field_l) {
+                return null;
+              } else {
+                return s.field_ib;
+              }
             } else {
-              return s.field_ib;
+              return null;
             }
           } else {
             return null;
           }
         } else {
-          return null;
+          field_g = (o) null;
+          if (!ab.field_u) {
+            if (kk.field_d >= kg.field_e) {
+              if (kk.field_d >= kg.field_e - -wi.field_l) {
+                return null;
+              } else {
+                return s.field_ib;
+              }
+            } else {
+              return null;
+            }
+          } else {
+            return null;
+          }
         }
     }
 
     abstract boolean d(byte param0);
 
     final ic a(int param0, boolean param1, int param2, int param3, byte param4) {
+        boolean discarded$1 = false;
         long var6 = 0L;
         ic var8 = null;
         ic stackIn_1_0 = null;
@@ -59,20 +77,20 @@ abstract class va {
         ic stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          var6 = (long)param2 + ((long)param0 << 32);
+          var6 = (long)param2 + ((long)param0 << 437409504);
           var8 = new ic();
           var8.field_l = var6;
-          stackOut_0_0 = (ic) var8;
+          stackOut_0_0 = (ic) (var8);
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
           if (!param1) {
-            stackOut_2_0 = (ic) (Object) stackIn_2_0;
+            stackOut_2_0 = (ic) ((Object) stackIn_2_0);
             stackOut_2_1 = 0;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             break L0;
           } else {
-            stackOut_1_0 = (ic) (Object) stackIn_1_0;
+            stackOut_1_0 = (ic) ((Object) stackIn_1_0);
             stackOut_1_1 = 1;
             stackIn_3_0 = stackOut_1_0;
             stackIn_3_1 = stackOut_1_1;
@@ -82,43 +100,62 @@ abstract class va {
         stackIn_3_0.field_r = stackIn_3_1 != 0;
         var8.field_y = param4;
         if (param3 == 437409504) {
-          if (!param1) {
-            if (((va) this).c(125) >= 20) {
-              throw new RuntimeException();
+          L1: {
+            if (!param1) {
+              break L1;
             } else {
-              ((va) this).field_d.a((ec) (Object) var8, param3 + -437409504);
-              return var8;
-            }
-          } else {
-            if (((va) this).b(false) < 20) {
-              ((va) this).field_m.a((ec) (Object) var8, 0);
-              return var8;
-            } else {
-              throw new RuntimeException();
+              if (-21 < (this.b(false) ^ -1)) {
+                this.field_m.a(var8, 0);
+                if (SolKnight.field_L) {
+                  break L1;
+                } else {
+                  return var8;
+                }
+              } else {
+                throw new RuntimeException();
+              }
             }
           }
-        } else {
-          boolean discarded$1 = ((va) this).d((byte) -77);
-          if (!param1) {
-            if (((va) this).c(125) >= 20) {
-              throw new RuntimeException();
-            } else {
-              ((va) this).field_d.a((ec) (Object) var8, param3 + -437409504);
-              return var8;
-            }
+          if (this.c(125) >= 20) {
+            throw new RuntimeException();
           } else {
-            if (((va) this).b(false) < 20) {
-              ((va) this).field_m.a((ec) (Object) var8, 0);
-              return var8;
+            this.field_d.a(var8, param3 + -437409504);
+            return var8;
+          }
+        } else {
+          L2: {
+            discarded$1 = this.d((byte) -77);
+            if (!param1) {
+              break L2;
             } else {
-              throw new RuntimeException();
+              if (-21 < (this.b(false) ^ -1)) {
+                this.field_m.a(var8, 0);
+                if (SolKnight.field_L) {
+                  break L2;
+                } else {
+                  return var8;
+                }
+              } else {
+                throw new RuntimeException();
+              }
             }
+          }
+          if (this.c(125) >= 20) {
+            throw new RuntimeException();
+          } else {
+            this.field_d.a(var8, param3 + -437409504);
+            return var8;
           }
         }
     }
 
     public static void b(byte param0) {
         field_g = null;
+        if (param0 != 0) {
+            field_g = (o) null;
+            field_f = null;
+            return;
+        }
         field_f = null;
     }
 
@@ -126,7 +163,7 @@ abstract class va {
         if (param0 != -5868) {
             return true;
         }
-        return ((va) this).c(-49) >= 20 ? true : false;
+        return (this.c(-49) ^ -1) <= -21 ? true : false;
     }
 
     final boolean b(int param0) {
@@ -138,8 +175,8 @@ abstract class va {
         int stackOut_2_0 = 0;
         if (param0 != -21) {
           L0: {
-            ((va) this).field_m = null;
-            if (20 > ((va) this).b(false)) {
+            this.field_m = (hl) null;
+            if (20 > this.b(false)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -152,7 +189,7 @@ abstract class va {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (20 > ((va) this).b(false)) {
+            if (20 > this.b(false)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -168,23 +205,23 @@ abstract class va {
 
     final int b(boolean param0) {
         if (param0) {
-          ((va) this).a((byte) -33);
-          return ((va) this).field_m.a(-29749) - -((va) this).field_i.a(-29749);
+          this.a((byte) -33);
+          return this.field_m.a(-29749) - -this.field_i.a(-29749);
         } else {
-          return ((va) this).field_m.a(-29749) - -((va) this).field_i.a(-29749);
+          return this.field_m.a(-29749) - -this.field_i.a(-29749);
         }
     }
 
     va() {
-        ((va) this).field_m = new hl();
-        ((va) this).field_i = new hl();
-        ((va) this).field_d = new hl();
-        ((va) this).field_k = new hl();
-        ((va) this).field_e = new gb(6);
-        ((va) this).field_n = (byte) 0;
-        ((va) this).field_l = 0;
-        ((va) this).field_c = 0;
-        ((va) this).field_h = new gb(10);
+        this.field_m = new hl();
+        this.field_i = new hl();
+        this.field_d = new hl();
+        this.field_k = new hl();
+        this.field_e = new gb(6);
+        this.field_n = (byte) 0;
+        this.field_l = 0;
+        this.field_c = 0;
+        this.field_h = new gb(10);
     }
 
     static {

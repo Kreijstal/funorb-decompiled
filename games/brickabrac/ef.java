@@ -12,14 +12,23 @@ final class ef extends IOException {
     static String field_c;
 
     final static void a(int param0, int param1) {
-        pi var2 = k.field_h;
-        var2.e(-13413, param1);
-        var2.a(-5, 1);
-        var2.a(-112, 1);
+        pi var2 = null;
+        if (param0 != -22809) {
+          return;
+        } else {
+          var2 = k.field_h;
+          var2.e(-13413, param1);
+          var2.a(-5, 1);
+          var2.a(param0 ^ 22903, 1);
+          return;
+        }
     }
 
     public static void b(int param0) {
         field_f = null;
+        if (param0 != 10) {
+            return;
+        }
         field_d = null;
         field_e = null;
         field_a = null;
@@ -54,6 +63,7 @@ final class ef extends IOException {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
@@ -81,32 +91,38 @@ final class ef extends IOException {
         String stackOut_11_2 = null;
         try {
           L0: {
-            param0.d((-param0.field_x + param9) / 2 + (param2 + (param4 * 5 >> 16)), param5);
-            param1.c((10 * param4 >> 16) + (param2 - (-((-param1.field_x + param9) / 2) + -(10 / param8))), -(22 / param8) + param5 + (param6 + 480 - param1.field_z));
-            param10.c((-param10.field_x + param9) / 2 + param2 + ((20 * param4 >> 16) + 10 / param8), 480 + (param5 - -param6 + -param10.field_z));
-            break L0;
+            param0.d((-param0.field_x + param9) / 2 + (param2 + (param4 * 5 >> -1722248016)), param5);
+            param1.c((10 * param4 >> 1918877328) + (param2 - (-((-param1.field_x + param9) / 2) + -(10 / param8))), -(22 / param8) + param5 + (param6 + 480 - param1.field_z));
+            if (!param3) {
+              param10.c((-param10.field_x + param9) / 2 + param2 + ((20 * param4 >> -1999231120) + 10 / param8), 480 + (param5 - -param6 + -param10.field_z));
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var11 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var11;
+            stackOut_4_0 = (RuntimeException) (var11);
             stackOut_4_1 = new StringBuilder().append("ef.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -115,23 +131,23 @@ final class ef extends IOException {
             }
           }
           L2: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -140,23 +156,23 @@ final class ef extends IOException {
             }
           }
           L3: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',').append(false).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',');
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param10 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -164,7 +180,12 @@ final class ef extends IOException {
               break L3;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -175,7 +196,7 @@ final class ef extends IOException {
         var1 = hj.field_Yb * hj.field_Yb;
         var2 = -(hc.field_f * hc.field_f) + var1;
         if (param0 >= -27) {
-          field_d = null;
+          field_d = (int[]) null;
           var3 = (-rn.field_h + ej.field_O) * var2 / var1 + rn.field_h;
           gp.field_d.a(120, var3, qh.field_f, 640, (byte) 64);
           fj.a(kn.field_z, 5, ej.field_O + -24, 640, om.field_oc, 0, (byte) 94);
@@ -191,8 +212,8 @@ final class ef extends IOException {
     final static void a(String param0, int param1, int param2, String[] param3) {
         RuntimeException var4 = null;
         int var5 = 0;
-        Object var6 = null;
-        Object var7 = null;
+        String[] var6 = null;
+        String[] var7 = null;
         String[] var8 = null;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
@@ -241,7 +262,7 @@ final class ef extends IOException {
               if (param1 == -106) {
                 break L1;
               } else {
-                var6 = null;
+                var6 = (String[]) null;
                 ef.a((String) null, 72, 40, (String[]) null);
                 break L1;
               }
@@ -252,7 +273,7 @@ final class ef extends IOException {
                 he.field_H = i.a(param2, -60, param0);
                 return;
               } else {
-                if (param2 <= 105) {
+                if (-106 <= (param2 ^ -1)) {
                   var8 = param3;
                   md.a(var8, true);
                   he.field_H = lm.a(param1 ^ 2167, param3);
@@ -267,7 +288,7 @@ final class ef extends IOException {
                 stackOut_4_0 = 1;
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_5_0 = stackOut_4_0;
-                if (vo.field_x >= 13) {
+                if (-14 >= (vo.field_x ^ -1)) {
                   stackOut_6_0 = stackIn_6_0;
                   stackOut_6_1 = 0;
                   stackIn_7_0 = stackOut_6_0;
@@ -282,7 +303,7 @@ final class ef extends IOException {
                 }
               }
               he.field_H = cd.a(stackIn_7_0 != 0, stackIn_7_1 != 0);
-              var7 = null;
+              var7 = (String[]) null;
               md.a((String[]) null, true);
               return;
             }
@@ -291,23 +312,23 @@ final class ef extends IOException {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var4;
+            stackOut_15_0 = (RuntimeException) (var4);
             stackOut_15_1 = new StringBuilder().append("ef.C(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -316,23 +337,23 @@ final class ef extends IOException {
             }
           }
           L4: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
             stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param3 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -340,15 +361,11 @@ final class ef extends IOException {
               break L4;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new oe[29];
         field_d = new int[128];
         field_c = "1-UP: an extra life.";

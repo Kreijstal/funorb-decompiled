@@ -12,9 +12,12 @@ abstract class jh {
     static String field_b;
 
     public static void a(byte param0) {
-        field_d = null;
+        field_d = (String[][]) null;
+        if (param0 != 39) {
+            field_c = (String[][]) null;
+        }
         field_b = null;
-        field_c = null;
+        field_c = (String[][]) null;
     }
 
     final static int a(CharSequence param0, int param1) {
@@ -53,7 +56,7 @@ abstract class jh {
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                var3 = (var3 << 5) + -var3 + kj.a(param0.charAt(var4), param1 ^ -8251);
+                var3 = (var3 << 1398563877) + -var3 + kj.a(param0.charAt(var4), param1 ^ -8251);
                 var4++;
                 continue L1;
               }
@@ -63,23 +66,23 @@ abstract class jh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_0 = (RuntimeException) (var2);
             stackOut_6_1 = new StringBuilder().append("jh.H(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -87,27 +90,23 @@ abstract class jh {
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_5_0;
     }
 
     final java.net.Socket b(byte param0) throws IOException {
         if (param0 != 51) {
-            field_b = null;
+            field_b = (String) null;
         }
-        return new java.net.Socket(((jh) this).field_f, ((jh) this).field_e);
+        return new java.net.Socket(this.field_f, this.field_e);
     }
 
     abstract java.net.Socket a(int param0) throws IOException;
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_c = new String[][]{new String[1]};
-        field_d = new String[][]{null, new String[1]};
+        field_c = new String[][]{new String[]{"Diamonds: Congratulations on your find! 2,500 points for one diamond! Diamonds are often found right at the very bottom of the volcano."}};
+        field_d = new String[][]{null, new String[]{"Ice bomb: You've used an ice bomb. This will freeze water and turn it into loose ice. If you freeze loose ice, it becomes perma-frozen and part of the Super Volcano. It also turns living things into ice cubes!"}};
         field_b = "Next";
     }
 }

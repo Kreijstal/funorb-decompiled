@@ -20,16 +20,16 @@ abstract class tda extends bw {
     abstract tda b();
 
     protected tda() {
-        ((tda) this).field_f = true;
+        this.field_f = true;
     }
 
     abstract int d();
 
     final void b(int[] param0, int param1, int param2) {
-        if (((tda) this).field_f) {
-            ((tda) this).a(param0, param1, param2);
+        if (this.field_f) {
+            this.a(param0, param1, param2);
         } else {
-            ((tda) this).a(param2);
+            this.a(param2);
         }
     }
 }

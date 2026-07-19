@@ -37,20 +37,20 @@ abstract class oi extends aja {
     abstract void b(int param0, int param1);
 
     final void a(int param0, int param1, int param2, int param3) {
-        ((oi) this).field_k = param0;
-        ((oi) this).field_n = param1;
-        ((oi) this).field_D = param2;
-        ((oi) this).field_j = param3;
+        this.field_k = param0;
+        this.field_n = param1;
+        this.field_D = param2;
+        this.field_j = param3;
     }
 
     final int b() {
-        return ((oi) this).field_n + ((oi) this).field_q + ((oi) this).field_j;
+        return this.field_n + this.field_q + this.field_j;
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4);
 
     final int d() {
-        return ((oi) this).field_e;
+        return this.field_e;
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
@@ -58,7 +58,7 @@ abstract class oi extends aja {
     abstract void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6);
 
     final int c() {
-        return ((oi) this).field_k + ((oi) this).field_e + ((oi) this).field_D;
+        return this.field_k + this.field_e + this.field_D;
     }
 
     private final boolean a(float param0, float param1, float param2, float param3, float param4, float param5) {
@@ -78,12 +78,12 @@ abstract class oi extends aja {
         float var20 = 0.0f;
         L0: {
           L1: {
-            var7 = ((oi) this).field_k + ((oi) this).field_e + ((oi) this).field_D;
-            var8 = ((oi) this).field_n + ((oi) this).field_q + ((oi) this).field_j;
-            if (var7 != ((oi) this).field_e) {
+            var7 = this.field_k + this.field_e + this.field_D;
+            var8 = this.field_n + this.field_q + this.field_j;
+            if (var7 != this.field_e) {
               break L1;
             } else {
-              if (var8 == ((oi) this).field_q) {
+              if (var8 == this.field_q) {
                 break L0;
               } else {
                 break L1;
@@ -94,14 +94,14 @@ abstract class oi extends aja {
           var10 = (param3 - param1) / (float)var7;
           var11 = (param4 - param0) / (float)var8;
           var12 = (param5 - param1) / (float)var8;
-          var13 = var11 * (float)((oi) this).field_n;
-          var14 = var12 * (float)((oi) this).field_n;
-          var15 = var9 * (float)((oi) this).field_k;
-          var16 = var10 * (float)((oi) this).field_k;
-          var17 = -var9 * (float)((oi) this).field_D;
-          var18 = -var10 * (float)((oi) this).field_D;
-          var19 = -var11 * (float)((oi) this).field_j;
-          var20 = -var12 * (float)((oi) this).field_j;
+          var13 = var11 * (float)this.field_n;
+          var14 = var12 * (float)this.field_n;
+          var15 = var9 * (float)this.field_k;
+          var16 = var10 * (float)this.field_k;
+          var17 = -var9 * (float)this.field_D;
+          var18 = -var10 * (float)this.field_D;
+          var19 = -var11 * (float)this.field_j;
+          var20 = -var12 * (float)this.field_j;
           param0 = param0 + (var15 + var13);
           param1 = param1 + (var16 + var14);
           param2 = param2 + (var17 + var13);
@@ -199,34 +199,34 @@ abstract class oi extends aja {
           }
         }
         L12: {
-          if (var11 >= (float)((oi) this).field_w.field_H) {
+          if (var11 >= (float)this.field_w.field_H) {
             break L12;
           } else {
-            var11 = (float)((oi) this).field_w.field_H;
+            var11 = (float)this.field_w.field_H;
             break L12;
           }
         }
         L13: {
-          if (var12 <= (float)((oi) this).field_w.field_A) {
+          if (var12 <= (float)this.field_w.field_A) {
             break L13;
           } else {
-            var12 = (float)((oi) this).field_w.field_A;
+            var12 = (float)this.field_w.field_A;
             break L13;
           }
         }
         L14: {
-          if (var13 >= (float)((oi) this).field_w.field_n) {
+          if (var13 >= (float)this.field_w.field_n) {
             break L14;
           } else {
-            var13 = (float)((oi) this).field_w.field_n;
+            var13 = (float)this.field_w.field_n;
             break L14;
           }
         }
         L15: {
-          if (var14 <= (float)((oi) this).field_w.field_p) {
+          if (var14 <= (float)this.field_w.field_p) {
             break L15;
           } else {
-            var14 = (float)((oi) this).field_w.field_p;
+            var14 = (float)this.field_w.field_p;
             break L15;
           }
         }
@@ -234,18 +234,18 @@ abstract class oi extends aja {
         if (var12 < 0.0f) {
           var14 = var13 - var14;
           if (var14 < 0.0f) {
-            field_o = ((oi) this).field_w.field_i;
+            field_o = this.field_w.field_i;
             field_f = (int)((float)((int)var13 * field_o) + var11);
             var15 = (param2 - param0) * (param5 - param1) - (param3 - param1) * (param4 - param0);
             var16 = (param4 - param0) * (param3 - param1) - (param5 - param1) * (param2 - param0);
-            field_C = (int)((param5 - param1) * 4096.0f * (float)((oi) this).field_e / var15);
-            field_v = (int)((param3 - param1) * 4096.0f * (float)((oi) this).field_q / var16);
-            field_z = (int)((param4 - param0) * 4096.0f * (float)((oi) this).field_e / var16);
-            field_u = (int)((param2 - param0) * 4096.0f * (float)((oi) this).field_q / var15);
+            field_C = (int)((param5 - param1) * 4096.0f * (float)this.field_e / var15);
+            field_v = (int)((param3 - param1) * 4096.0f * (float)this.field_q / var16);
+            field_z = (int)((param4 - param0) * 4096.0f * (float)this.field_e / var16);
+            field_u = (int)((param2 - param0) * 4096.0f * (float)this.field_q / var15);
             field_A = (int)(var11 * 16.0f + 8.0f - (param0 + param2 + param4 + var9) / 4.0f * 16.0f);
             field_d = (int)(var13 * 16.0f + 8.0f - (param1 + param3 + param5 + var10) / 4.0f * 16.0f);
-            field_m = (((oi) this).field_e >> 1 << 12) + (field_d * field_z >> 4);
-            field_p = (((oi) this).field_q >> 1 << 12) + (field_d * field_u >> 4);
+            field_m = (this.field_e >> 1 << 12) + (field_d * field_z >> 4);
+            field_p = (this.field_q >> 1 << 12) + (field_d * field_u >> 4);
             field_a = field_A * field_C >> 4;
             field_l = field_A * field_v >> 4;
             field_B = (int)var12;
@@ -263,35 +263,35 @@ abstract class oi extends aja {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        if (((oi) this).field_w.g()) {
+        if (this.field_w.g()) {
             throw new IllegalStateException();
         }
-        if (((oi) this).field_t == null) {
-            ((oi) this).field_t = new int[4];
+        if (this.field_t == null) {
+            this.field_t = new int[4];
         }
-        ((oi) this).field_w.K(((oi) this).field_t);
-        ((oi) this).field_w.T(((oi) this).field_w.field_H, ((oi) this).field_w.field_n, param0 + param2, param1 + param3);
-        int var8 = ((oi) this).c();
-        int var9 = ((oi) this).b();
+        this.field_w.K(this.field_t);
+        this.field_w.T(this.field_w.field_H, this.field_w.field_n, param0 + param2, param1 + param3);
+        int var8 = this.c();
+        int var9 = this.b();
         int var10 = (param2 + var8 - 1) / var8;
         int var11 = (param3 + var9 - 1) / var9;
         for (var12 = 0; var12 < var11; var12++) {
             var13 = var12 * var9;
             for (var14 = 0; var14 < var10; var14++) {
-                ((oi) this).a(param0 + var14 * var8, param1 + var13, param4, param5, param6);
+                this.a(param0 + var14 * var8, param1 + var13, param4, param5, param6);
             }
         }
-        ((oi) this).field_w.KA(((oi) this).field_t[0], ((oi) this).field_t[1], ((oi) this).field_t[2], ((oi) this).field_t[3]);
+        this.field_w.KA(this.field_t[0], this.field_t[1], this.field_t[2], this.field_t[3]);
     }
 
     final int a() {
-        return ((oi) this).field_q;
+        return this.field_q;
     }
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
-        if (!((oi) this).field_w.g()) {
+        if (!this.field_w.g()) {
           if (this.a(param0, param1, param2, param3, param4, param5)) {
             L0: {
               field_y = param7;
@@ -331,15 +331,15 @@ abstract class oi extends aja {
                           if (param8 != 2) {
                             break L1;
                           } else {
-                            ((oi) this).b(2, 2);
+                            this.b(2, 2);
                             break L1;
                           }
                         } else {
-                          ((oi) this).b(2, 1);
+                          this.b(2, 1);
                           break L1;
                         }
                       } else {
-                        ((oi) this).b(2, 0);
+                        this.b(2, 0);
                         break L1;
                       }
                     }
@@ -349,15 +349,15 @@ abstract class oi extends aja {
                         if (param8 != 2) {
                           break L1;
                         } else {
-                          ((oi) this).b(3, 2);
+                          this.b(3, 2);
                           break L1;
                         }
                       } else {
-                        ((oi) this).b(3, 1);
+                        this.b(3, 1);
                         break L1;
                       }
                     } else {
-                      ((oi) this).b(3, 0);
+                      this.b(3, 0);
                       break L1;
                     }
                   }
@@ -367,15 +367,15 @@ abstract class oi extends aja {
                       if (param8 != 2) {
                         break L1;
                       } else {
-                        ((oi) this).b(0, 2);
+                        this.b(0, 2);
                         break L1;
                       }
                     } else {
-                      ((oi) this).b(0, 1);
+                      this.b(0, 1);
                       break L1;
                     }
                   } else {
-                    ((oi) this).b(0, 0);
+                    this.b(0, 0);
                     break L1;
                   }
                 }
@@ -385,15 +385,15 @@ abstract class oi extends aja {
                     if (param8 != 2) {
                       break L1;
                     } else {
-                      ((oi) this).b(1, 2);
+                      this.b(1, 2);
                       break L1;
                     }
                   } else {
-                    ((oi) this).b(1, 1);
+                    this.b(1, 1);
                     break L1;
                   }
                 } else {
-                  ((oi) this).b(1, 0);
+                  this.b(1, 0);
                   break L1;
                 }
               }
@@ -408,16 +408,12 @@ abstract class oi extends aja {
     }
 
     oi(sob param0, int param1, int param2) {
-        ((oi) this).field_w = param0;
-        ((oi) this).field_e = param1;
-        ((oi) this).field_q = param2;
+        this.field_w = param0;
+        this.field_e = param1;
+        this.field_q = param2;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = 0;
         field_b = 0;
         field_x = 0;

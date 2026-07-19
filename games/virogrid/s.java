@@ -14,22 +14,33 @@ final class s {
     static km field_f;
 
     final static boolean b(byte param0) {
-        int var1 = 51;
-        if (he.field_Xb == null) {
+        int var1 = 0;
+        var1 = -51 / ((param0 - -22) / 47);
+        if (he.field_Xb != null) {
+          if (!he.field_Xb.e((byte) 32)) {
             return false;
+          } else {
+            return true;
+          }
+        } else {
+          return false;
         }
-        if (!he.field_Xb.e((byte) 32)) {
-            return false;
-        }
-        return true;
     }
 
     public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
-        field_f = null;
-        field_h = null;
+        if (param0 != -1) {
+          field_g = 64;
+          field_f = null;
+          field_h = null;
+          return;
+        } else {
+          field_f = null;
+          field_h = null;
+          return;
+        }
     }
 
     s() {
@@ -37,33 +48,48 @@ final class s {
 
     s(s param0) {
         try {
-            ((s) this).field_j = param0.field_j;
-            ((s) this).field_e = param0.field_e;
-            ((s) this).field_i = param0.field_i;
-            ((s) this).field_d = param0.field_d;
+            this.field_j = param0.field_j;
+            this.field_e = param0.field_e;
+            this.field_i = param0.field_i;
+            this.field_d = param0.field_d;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "s.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static cb a(byte param0) {
         try {
             Throwable var1 = null;
-            cb stackIn_3_0 = null;
+            cb stackIn_2_0 = null;
+            cb stackIn_4_0 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            cb stackOut_2_0 = null;
+            cb stackOut_3_0 = null;
+            cb stackOut_1_0 = null;
             try {
               L0: {
-                stackOut_2_0 = (cb) Class.forName("hb").newInstance();
-                stackIn_3_0 = stackOut_2_0;
-                break L0;
+                if (param0 == -110) {
+                  stackOut_3_0 = (cb) (Class.forName("hb").newInstance());
+                  stackIn_4_0 = stackOut_3_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  stackOut_1_0 = (cb) null;
+                  stackIn_2_0 = stackOut_1_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
+                }
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = decompiledCaughtException;
               return null;
             }
-            return stackIn_3_0;
+            if (decompiledRegionSelector0 == 0) {
+              return stackIn_2_0;
+            } else {
+              return stackIn_4_0;
+            }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -72,10 +98,6 @@ final class s {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Exploiting a bug";
         field_g = -1;
         field_c = "Invite more players, or alternatively try changing the following settings:  ";

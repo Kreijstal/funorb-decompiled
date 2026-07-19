@@ -1,9 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.applet.Applet;
-import java.lang.String;
-
 final class jg extends mf {
     static boolean field_n;
     static bh field_q;
@@ -19,6 +16,7 @@ final class jg extends mf {
         RuntimeException var1 = null;
         java.applet.Applet stackIn_2_0 = null;
         da stackIn_7_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         da stackOut_6_0 = null;
         java.applet.Applet stackOut_1_0 = null;
@@ -35,22 +33,30 @@ final class jg extends mf {
               }
               stackOut_6_0 = ca.field_c;
               stackIn_7_0 = stackOut_6_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = fl.field_F;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1, "jg.J(" + param0 + ')');
+          throw bd.a((Throwable) ((Object) var1), "jg.J(" + param0 + ')');
         }
-        return (java.applet.Applet) (Object) stackIn_7_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return (java.applet.Applet) ((Object) stackIn_7_0);
+        }
     }
 
     final static void a(byte[] param0, boolean param1) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         RuntimeException var2 = null;
         va var2_ref = null;
         int var3 = 0;
@@ -66,74 +72,47 @@ final class jg extends mf {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        int stackIn_37_0 = 0;
-        int stackIn_37_1 = 0;
-        int stackIn_45_0 = 0;
-        int stackIn_46_0 = 0;
-        int stackIn_46_1 = 0;
-        int stackIn_50_0 = 0;
-        int stackIn_50_1 = 0;
-        int stackIn_50_2 = 0;
-        int stackIn_61_0 = 0;
-        int stackIn_61_1 = 0;
-        int stackIn_61_2 = 0;
-        int stackIn_62_0 = 0;
-        int stackIn_64_0 = 0;
-        int stackIn_65_0 = 0;
-        int stackIn_65_1 = 0;
+        int stackIn_41_0 = 0;
+        int stackIn_41_1 = 0;
+        int stackIn_41_2 = 0;
+        int stackIn_51_0 = 0;
+        int stackIn_53_0 = 0;
+        int stackIn_54_0 = 0;
+        int stackIn_54_1 = 0;
         int stackIn_70_0 = 0;
-        int stackIn_79_0 = 0;
-        int stackIn_83_0 = 0;
-        int stackIn_86_0 = 0;
-        int stackIn_86_1 = 0;
-        int stackIn_86_2 = 0;
-        int stackIn_87_0 = 0;
-        int stackIn_89_0 = 0;
-        int stackIn_90_0 = 0;
-        int stackIn_90_1 = 0;
-        RuntimeException stackIn_96_0 = null;
-        StringBuilder stackIn_96_1 = null;
-        RuntimeException stackIn_98_0 = null;
-        StringBuilder stackIn_98_1 = null;
-        RuntimeException stackIn_99_0 = null;
-        StringBuilder stackIn_99_1 = null;
-        String stackIn_99_2 = null;
+        int stackIn_72_0 = 0;
+        int stackIn_73_0 = 0;
+        int stackIn_73_1 = 0;
+        RuntimeException stackIn_78_0 = null;
+        StringBuilder stackIn_78_1 = null;
+        RuntimeException stackIn_80_0 = null;
+        StringBuilder stackIn_80_1 = null;
+        RuntimeException stackIn_81_0 = null;
+        StringBuilder stackIn_81_1 = null;
+        String stackIn_81_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_36_0 = 0;
-        int stackOut_36_1 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_48_1 = 0;
-        int stackOut_48_2 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_60_1 = 0;
-        int stackOut_60_2 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_64_1 = 0;
-        int stackOut_62_0 = 0;
-        int stackOut_62_1 = 0;
+        int stackOut_39_0 = 0;
+        int stackOut_39_1 = 0;
+        int stackOut_39_2 = 0;
         int stackOut_69_0 = 0;
-        int stackOut_78_0 = 0;
-        int stackOut_82_0 = 0;
-        int stackOut_85_0 = 0;
-        int stackOut_85_1 = 0;
-        int stackOut_85_2 = 0;
-        int stackOut_86_0 = 0;
-        int stackOut_89_0 = 0;
-        int stackOut_89_1 = 0;
-        int stackOut_87_0 = 0;
-        int stackOut_87_1 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_45_1 = 0;
-        RuntimeException stackOut_95_0 = null;
-        StringBuilder stackOut_95_1 = null;
-        RuntimeException stackOut_98_0 = null;
-        StringBuilder stackOut_98_1 = null;
-        String stackOut_98_2 = null;
-        RuntimeException stackOut_96_0 = null;
-        StringBuilder stackOut_96_1 = null;
-        String stackOut_96_2 = null;
+        int stackOut_72_0 = 0;
+        int stackOut_72_1 = 0;
+        int stackOut_70_0 = 0;
+        int stackOut_70_1 = 0;
+        int stackOut_50_0 = 0;
+        int stackOut_53_0 = 0;
+        int stackOut_53_1 = 0;
+        int stackOut_51_0 = 0;
+        int stackOut_51_1 = 0;
+        RuntimeException stackOut_77_0 = null;
+        StringBuilder stackOut_77_1 = null;
+        RuntimeException stackOut_80_0 = null;
+        StringBuilder stackOut_80_1 = null;
+        String stackOut_80_2 = null;
+        RuntimeException stackOut_78_0 = null;
+        StringBuilder stackOut_78_1 = null;
+        String stackOut_78_2 = null;
         var15 = wizardrun.field_H;
         try {
           L0: {
@@ -154,113 +133,27 @@ final class jg extends mf {
               var3 = 1 + (255 & var2_ref.f(255));
               var4 = 0;
               L1: while (true) {
-                L2: {
-                  L3: {
-                    if (~wb.field_f >= ~var4) {
-                      break L3;
-                    } else {
-                      ph.field_q[var4] = var2_ref.j(-14477);
-                      var4++;
-                      if (var15 != 0) {
-                        break L2;
-                      } else {
-                        if (var15 == 0) {
-                          continue L1;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                  }
+                if ((wb.field_f ^ -1) >= (var4 ^ -1)) {
                   var4 = 0;
-                  break L2;
-                }
-                L4: while (true) {
-                  L5: {
-                    L6: {
-                      if (~var4 <= ~wb.field_f) {
-                        break L6;
-                      } else {
-                        ne.field_h[var4] = var2_ref.j(-14477);
-                        var4++;
-                        if (var15 != 0) {
-                          break L5;
-                        } else {
-                          if (var15 == 0) {
-                            continue L4;
-                          } else {
-                            break L6;
-                          }
-                        }
-                      }
-                    }
-                    var4 = 0;
-                    break L5;
-                  }
-                  L7: while (true) {
-                    L8: {
-                      L9: {
-                        if (~var4 <= ~wb.field_f) {
-                          break L9;
-                        } else {
-                          cg.field_k[var4] = var2_ref.j(-14477);
-                          var4++;
-                          if (var15 != 0) {
-                            break L8;
-                          } else {
-                            if (var15 == 0) {
-                              continue L7;
-                            } else {
-                              break L9;
-                            }
-                          }
-                        }
-                      }
+                  L2: while (true) {
+                    if ((var4 ^ -1) <= (wb.field_f ^ -1)) {
                       var4 = 0;
-                      break L8;
-                    }
-                    L10: while (true) {
-                      L11: {
-                        L12: {
-                          if (wb.field_f <= var4) {
-                            break L12;
-                          } else {
-                            tf.field_b[var4] = var2_ref.j(-14477);
-                            var4++;
-                            if (var15 != 0) {
-                              break L11;
-                            } else {
-                              if (var15 == 0) {
-                                continue L10;
-                              } else {
-                                break L12;
-                              }
-                            }
-                          }
-                        }
-                        var2_ref.field_m = -(wb.field_f * 8) + (-7 + param0.length + (-(var3 * 3) + 3));
-                        ic.field_b = new int[var3];
-                        break L11;
-                      }
-                      var4 = 1;
-                      L13: while (true) {
-                        L14: {
-                          L15: {
-                            L16: {
-                              if (~var3 >= ~var4) {
-                                break L16;
-                              } else {
-                                ic.field_b[var4] = var2_ref.d((byte) 125);
-                                stackOut_36_0 = ~ic.field_b[var4];
-                                stackOut_36_1 = -1;
-                                stackIn_46_0 = stackOut_36_0;
-                                stackIn_46_1 = stackOut_36_1;
-                                stackIn_37_0 = stackOut_36_0;
-                                stackIn_37_1 = stackOut_36_1;
-                                if (var15 != 0) {
-                                  L17: while (true) {
-                                    if (stackIn_46_0 >= stackIn_46_1) {
-                                      break L15;
+                      L3: while (true) {
+                        if ((var4 ^ -1) <= (wb.field_f ^ -1)) {
+                          var4 = 0;
+                          L4: while (true) {
+                            if (wb.field_f <= var4) {
+                              var2_ref.field_m = -(wb.field_f * 8) + (-7 + param0.length + (-(var3 * 3) + 3));
+                              ic.field_b = new int[var3];
+                              var4 = 1;
+                              L5: while (true) {
+                                if ((var3 ^ -1) >= (var4 ^ -1)) {
+                                  var2_ref.field_m = 0;
+                                  var4 = 0;
+                                  L6: while (true) {
+                                    if (var4 >= wb.field_f) {
+                                      decompiledRegionSelector0 = 1;
+                                      break L0;
                                     } else {
                                       var5 = cg.field_k[var4];
                                       var6 = tf.field_b[var4];
@@ -271,568 +164,203 @@ final class jg extends mf {
                                       ue.field_e[var4] = var9;
                                       var10 = 0;
                                       var11 = var2_ref.f(255);
-                                      if (var15 != 0) {
-                                        break L14;
-                                      } else {
-                                        stackOut_48_0 = -1;
-                                        stackOut_48_1 = var11 & 1;
-                                        stackOut_48_2 = -1;
-                                        stackIn_50_0 = stackOut_48_0;
-                                        stackIn_50_1 = stackOut_48_1;
-                                        stackIn_50_2 = stackOut_48_2;
-                                        L18: while (true) {
-                                          L19: {
-                                            L20: {
-                                              L21: {
-                                                L22: {
-                                                  if (stackIn_50_0 != (stackIn_50_1 ^ stackIn_50_2)) {
-                                                    break L22;
-                                                  } else {
-                                                    var12 = 0;
-                                                    L23: while (true) {
-                                                      L24: {
-                                                        if (var7 <= var12) {
-                                                          break L24;
-                                                        } else {
-                                                          var8[var12] = var2_ref.k(0);
-                                                          var12++;
-                                                          if (var15 != 0) {
-                                                            break L20;
-                                                          } else {
-                                                            if (var15 == 0) {
-                                                              continue L23;
-                                                            } else {
-                                                              break L24;
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                      if ((2 & var11) == 0) {
-                                                        break L21;
-                                                      } else {
-                                                        var12 = 0;
-                                                        L25: while (true) {
-                                                          L26: {
-                                                            if (~var12 <= ~var7) {
-                                                              break L26;
-                                                            } else {
-                                                              byte dupTemp$2 = var2_ref.k(0);
-                                                              var9[var12] = dupTemp$2;
-                                                              var13 = dupTemp$2;
-                                                              stackOut_60_0 = var10;
-                                                              stackOut_60_1 = var13;
-                                                              stackOut_60_2 = -1;
-                                                              stackIn_50_0 = stackOut_60_0;
-                                                              stackIn_50_1 = stackOut_60_1;
-                                                              stackIn_50_2 = stackOut_60_2;
-                                                              stackIn_61_0 = stackOut_60_0;
-                                                              stackIn_61_1 = stackOut_60_1;
-                                                              stackIn_61_2 = stackOut_60_2;
-                                                              if (var15 != 0) {
-                                                                continue L18;
-                                                              } else {
-                                                                L27: {
-                                                                  stackOut_61_0 = stackIn_61_0;
-                                                                  stackIn_64_0 = stackOut_61_0;
-                                                                  stackIn_62_0 = stackOut_61_0;
-                                                                  if (stackIn_61_1 == stackIn_61_2) {
-                                                                    stackOut_64_0 = stackIn_64_0;
-                                                                    stackOut_64_1 = 0;
-                                                                    stackIn_65_0 = stackOut_64_0;
-                                                                    stackIn_65_1 = stackOut_64_1;
-                                                                    break L27;
-                                                                  } else {
-                                                                    stackOut_62_0 = stackIn_62_0;
-                                                                    stackOut_62_1 = 1;
-                                                                    stackIn_65_0 = stackOut_62_0;
-                                                                    stackIn_65_1 = stackOut_62_1;
-                                                                    break L27;
-                                                                  }
-                                                                }
-                                                                var10 = stackIn_65_0 | stackIn_65_1;
-                                                                var12++;
-                                                                if (var15 == 0) {
-                                                                  continue L25;
-                                                                } else {
-                                                                  break L26;
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                          if (var15 == 0) {
-                                                            break L21;
-                                                          } else {
-                                                            break L22;
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
+                                      stackOut_39_0 = -1;
+                                      stackOut_39_1 = var11 & 1;
+                                      stackOut_39_2 = -1;
+                                      stackIn_41_0 = stackOut_39_0;
+                                      stackIn_41_1 = stackOut_39_1;
+                                      stackIn_41_2 = stackOut_39_2;
+                                      L7: {
+                                        if (stackIn_41_0 != (stackIn_41_1 ^ stackIn_41_2)) {
+                                          var12 = 0;
+                                          L8: while (true) {
+                                            if ((var5 ^ -1) >= (var12 ^ -1)) {
+                                              if (-1 == (var11 & 2 ^ -1)) {
+                                                break L7;
+                                              } else {
                                                 var12 = 0;
-                                                L28: while (true) {
-                                                  L29: {
-                                                    L30: {
-                                                      if (~var5 >= ~var12) {
-                                                        break L30;
-                                                      } else {
-                                                        stackOut_69_0 = 0;
-                                                        stackIn_79_0 = stackOut_69_0;
-                                                        stackIn_70_0 = stackOut_69_0;
-                                                        if (var15 != 0) {
-                                                          break L29;
-                                                        } else {
-                                                          var13 = stackIn_70_0;
-                                                          L31: while (true) {
-                                                            L32: {
-                                                              L33: {
-                                                                if (~var6 >= ~var13) {
-                                                                  break L33;
-                                                                } else {
-                                                                  var8[var12 + var13 * var5] = var2_ref.k(0);
-                                                                  var13++;
-                                                                  if (var15 != 0) {
-                                                                    break L32;
-                                                                  } else {
-                                                                    if (var15 == 0) {
-                                                                      continue L31;
-                                                                    } else {
-                                                                      break L33;
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                              var12++;
-                                                              break L32;
-                                                            }
-                                                            if (var15 == 0) {
-                                                              continue L28;
-                                                            } else {
-                                                              break L30;
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                    stackOut_78_0 = -1;
-                                                    stackIn_79_0 = stackOut_78_0;
-                                                    break L29;
-                                                  }
-                                                  if (stackIn_79_0 == ~(var11 & 2)) {
-                                                    break L21;
+                                                L9: while (true) {
+                                                  if (var12 >= var5) {
+                                                    break L7;
                                                   } else {
-                                                    var12 = 0;
-                                                    L34: while (true) {
-                                                      if (var12 >= var5) {
-                                                        break L21;
+                                                    var13 = 0;
+                                                    L10: while (true) {
+                                                      if ((var13 ^ -1) <= (var6 ^ -1)) {
+                                                        var12++;
+                                                        continue L9;
                                                       } else {
-                                                        stackOut_82_0 = 0;
-                                                        stackIn_45_0 = stackOut_82_0;
-                                                        stackIn_83_0 = stackOut_82_0;
-                                                        if (var15 != 0) {
-                                                          break L19;
-                                                        } else {
-                                                          var13 = stackIn_83_0;
-                                                          L35: while (true) {
-                                                            L36: {
-                                                              if (~var13 <= ~var6) {
-                                                                break L36;
-                                                              } else {
-                                                                byte dupTemp$3 = var2_ref.k(0);
-                                                                var9[var5 * var13 + var12] = dupTemp$3;
-                                                                var14 = dupTemp$3;
-                                                                stackOut_85_0 = var10;
-                                                                stackOut_85_1 = 0;
-                                                                stackOut_85_2 = ~var14;
-                                                                stackIn_50_0 = stackOut_85_0;
-                                                                stackIn_50_1 = stackOut_85_1;
-                                                                stackIn_50_2 = stackOut_85_2;
-                                                                stackIn_86_0 = stackOut_85_0;
-                                                                stackIn_86_1 = stackOut_85_1;
-                                                                stackIn_86_2 = stackOut_85_2;
-                                                                if (var15 != 0) {
-                                                                  continue L18;
-                                                                } else {
-                                                                  L37: {
-                                                                    stackOut_86_0 = stackIn_86_0;
-                                                                    stackIn_89_0 = stackOut_86_0;
-                                                                    stackIn_87_0 = stackOut_86_0;
-                                                                    if (stackIn_86_1 == stackIn_86_2) {
-                                                                      stackOut_89_0 = stackIn_89_0;
-                                                                      stackOut_89_1 = 0;
-                                                                      stackIn_90_0 = stackOut_89_0;
-                                                                      stackIn_90_1 = stackOut_89_1;
-                                                                      break L37;
-                                                                    } else {
-                                                                      stackOut_87_0 = stackIn_87_0;
-                                                                      stackOut_87_1 = 1;
-                                                                      stackIn_90_0 = stackOut_87_0;
-                                                                      stackIn_90_1 = stackOut_87_1;
-                                                                      break L37;
-                                                                    }
-                                                                  }
-                                                                  var10 = stackIn_90_0 | stackIn_90_1;
-                                                                  var13++;
-                                                                  if (var15 == 0) {
-                                                                    continue L35;
-                                                                  } else {
-                                                                    break L36;
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                            var12++;
-                                                            if (var15 == 0) {
-                                                              continue L34;
-                                                            } else {
-                                                              break L21;
-                                                            }
+                                                        L11: {
+                                                          dupTemp$2 = var2_ref.k(0);
+                                                          var9[var5 * var13 + var12] = dupTemp$2;
+                                                          var14 = dupTemp$2;
+                                                          stackOut_69_0 = var10;
+                                                          stackIn_72_0 = stackOut_69_0;
+                                                          stackIn_70_0 = stackOut_69_0;
+                                                          if (0 == (var14 ^ -1)) {
+                                                            stackOut_72_0 = stackIn_72_0;
+                                                            stackOut_72_1 = 0;
+                                                            stackIn_73_0 = stackOut_72_0;
+                                                            stackIn_73_1 = stackOut_72_1;
+                                                            break L11;
+                                                          } else {
+                                                            stackOut_70_0 = stackIn_70_0;
+                                                            stackOut_70_1 = 1;
+                                                            stackIn_73_0 = stackOut_70_0;
+                                                            stackIn_73_1 = stackOut_70_1;
+                                                            break L11;
                                                           }
                                                         }
+                                                        var10 = stackIn_73_0 | stackIn_73_1;
+                                                        var13++;
+                                                        continue L10;
                                                       }
                                                     }
                                                   }
                                                 }
                                               }
-                                              v.field_e[var4] = var10 != 0;
-                                              var4++;
-                                              break L20;
-                                            }
-                                            if (var15 == 0) {
-                                              stackOut_44_0 = var4;
-                                              stackIn_45_0 = stackOut_44_0;
-                                              break L19;
                                             } else {
-                                              break L15;
+                                              var13 = 0;
+                                              L12: while (true) {
+                                                if ((var6 ^ -1) >= (var13 ^ -1)) {
+                                                  var12++;
+                                                  continue L8;
+                                                } else {
+                                                  var8[var12 + var13 * var5] = var2_ref.k(0);
+                                                  var13++;
+                                                  continue L12;
+                                                }
+                                              }
                                             }
                                           }
-                                          stackOut_45_0 = stackIn_45_0;
-                                          stackOut_45_1 = wb.field_f;
-                                          stackIn_46_0 = stackOut_45_0;
-                                          stackIn_46_1 = stackOut_45_1;
-                                          continue L17;
+                                        } else {
+                                          var12 = 0;
+                                          L13: while (true) {
+                                            if (var7 <= var12) {
+                                              if ((2 & var11) == 0) {
+                                                break L7;
+                                              } else {
+                                                var12 = 0;
+                                                L14: while (true) {
+                                                  if ((var12 ^ -1) <= (var7 ^ -1)) {
+                                                    break L7;
+                                                  } else {
+                                                    L15: {
+                                                      dupTemp$3 = var2_ref.k(0);
+                                                      var9[var12] = dupTemp$3;
+                                                      var13 = dupTemp$3;
+                                                      stackOut_50_0 = var10;
+                                                      stackIn_53_0 = stackOut_50_0;
+                                                      stackIn_51_0 = stackOut_50_0;
+                                                      if (var13 == -1) {
+                                                        stackOut_53_0 = stackIn_53_0;
+                                                        stackOut_53_1 = 0;
+                                                        stackIn_54_0 = stackOut_53_0;
+                                                        stackIn_54_1 = stackOut_53_1;
+                                                        break L15;
+                                                      } else {
+                                                        stackOut_51_0 = stackIn_51_0;
+                                                        stackOut_51_1 = 1;
+                                                        stackIn_54_0 = stackOut_51_0;
+                                                        stackIn_54_1 = stackOut_51_1;
+                                                        break L15;
+                                                      }
+                                                    }
+                                                    var10 = stackIn_54_0 | stackIn_54_1;
+                                                    var12++;
+                                                    continue L14;
+                                                  }
+                                                }
+                                              }
+                                            } else {
+                                              var8[var12] = var2_ref.k(0);
+                                              var12++;
+                                              continue L13;
+                                            }
+                                          }
                                         }
                                       }
+                                      v.field_e[var4] = var10 != 0;
+                                      var4++;
+                                      continue L6;
                                     }
                                   }
                                 } else {
-                                  L38: {
-                                    if (stackIn_37_0 == stackIn_37_1) {
+                                  L16: {
+                                    ic.field_b[var4] = var2_ref.d((byte) 125);
+                                    if ((ic.field_b[var4] ^ -1) == -1) {
                                       ic.field_b[var4] = 1;
-                                      break L38;
+                                      break L16;
                                     } else {
-                                      break L38;
+                                      break L16;
                                     }
                                   }
                                   var4++;
-                                  if (var15 == 0) {
-                                    continue L13;
-                                  } else {
-                                    break L16;
-                                  }
+                                  continue L5;
                                 }
                               }
-                            }
-                            var2_ref.field_m = 0;
-                            var4 = 0;
-                            L39: while (true) {
-                              stackOut_44_0 = var4;
-                              stackIn_45_0 = stackOut_44_0;
-                              L40: while (true) {
-                                stackOut_45_0 = stackIn_45_0;
-                                stackOut_45_1 = wb.field_f;
-                                stackIn_46_0 = stackOut_45_0;
-                                stackIn_46_1 = stackOut_45_1;
-                                if (stackIn_46_0 >= stackIn_46_1) {
-                                  break L15;
-                                } else {
-                                  var5 = cg.field_k[var4];
-                                  var6 = tf.field_b[var4];
-                                  var7 = var6 * var5;
-                                  var8 = new byte[var7];
-                                  mf.field_j[var4] = var8;
-                                  var9 = new byte[var7];
-                                  ue.field_e[var4] = var9;
-                                  var10 = 0;
-                                  var11 = var2_ref.f(255);
-                                  if (var15 != 0) {
-                                    break L14;
-                                  } else {
-                                    stackOut_48_0 = -1;
-                                    stackOut_48_1 = var11 & 1;
-                                    stackOut_48_2 = -1;
-                                    stackIn_50_0 = stackOut_48_0;
-                                    stackIn_50_1 = stackOut_48_1;
-                                    stackIn_50_2 = stackOut_48_2;
-                                    L41: while (true) {
-                                      L42: {
-                                        L43: {
-                                          L44: {
-                                            if (stackIn_50_0 != (stackIn_50_1 ^ stackIn_50_2)) {
-                                              break L44;
-                                            } else {
-                                              var12 = 0;
-                                              L45: while (true) {
-                                                L46: {
-                                                  if (var7 <= var12) {
-                                                    break L46;
-                                                  } else {
-                                                    var8[var12] = var2_ref.k(0);
-                                                    var12++;
-                                                    if (var15 != 0) {
-                                                      break L42;
-                                                    } else {
-                                                      if (var15 == 0) {
-                                                        continue L45;
-                                                      } else {
-                                                        break L46;
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                                if ((2 & var11) == 0) {
-                                                  break L43;
-                                                } else {
-                                                  var12 = 0;
-                                                  L47: while (true) {
-                                                    L48: {
-                                                      if (~var12 <= ~var7) {
-                                                        break L48;
-                                                      } else {
-                                                        byte dupTemp$2 = var2_ref.k(0);
-                                                        var9[var12] = dupTemp$2;
-                                                        var13 = dupTemp$2;
-                                                        stackOut_60_0 = var10;
-                                                        stackOut_60_1 = var13;
-                                                        stackOut_60_2 = -1;
-                                                        stackIn_50_0 = stackOut_60_0;
-                                                        stackIn_50_1 = stackOut_60_1;
-                                                        stackIn_50_2 = stackOut_60_2;
-                                                        stackIn_61_0 = stackOut_60_0;
-                                                        stackIn_61_1 = stackOut_60_1;
-                                                        stackIn_61_2 = stackOut_60_2;
-                                                        if (var15 != 0) {
-                                                          continue L41;
-                                                        } else {
-                                                          L49: {
-                                                            stackOut_61_0 = stackIn_61_0;
-                                                            stackIn_64_0 = stackOut_61_0;
-                                                            stackIn_62_0 = stackOut_61_0;
-                                                            if (stackIn_61_1 == stackIn_61_2) {
-                                                              stackOut_64_0 = stackIn_64_0;
-                                                              stackOut_64_1 = 0;
-                                                              stackIn_65_0 = stackOut_64_0;
-                                                              stackIn_65_1 = stackOut_64_1;
-                                                              break L49;
-                                                            } else {
-                                                              stackOut_62_0 = stackIn_62_0;
-                                                              stackOut_62_1 = 1;
-                                                              stackIn_65_0 = stackOut_62_0;
-                                                              stackIn_65_1 = stackOut_62_1;
-                                                              break L49;
-                                                            }
-                                                          }
-                                                          var10 = stackIn_65_0 | stackIn_65_1;
-                                                          var12++;
-                                                          if (var15 == 0) {
-                                                            continue L47;
-                                                          } else {
-                                                            break L48;
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                    if (var15 == 0) {
-                                                      break L43;
-                                                    } else {
-                                                      break L44;
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                          var12 = 0;
-                                          L50: while (true) {
-                                            L51: {
-                                              L52: {
-                                                if (~var5 >= ~var12) {
-                                                  break L52;
-                                                } else {
-                                                  stackOut_69_0 = 0;
-                                                  stackIn_79_0 = stackOut_69_0;
-                                                  stackIn_70_0 = stackOut_69_0;
-                                                  if (var15 != 0) {
-                                                    break L51;
-                                                  } else {
-                                                    var13 = stackIn_70_0;
-                                                    L53: while (true) {
-                                                      L54: {
-                                                        L55: {
-                                                          if (~var6 >= ~var13) {
-                                                            break L55;
-                                                          } else {
-                                                            var8[var12 + var13 * var5] = var2_ref.k(0);
-                                                            var13++;
-                                                            if (var15 != 0) {
-                                                              break L54;
-                                                            } else {
-                                                              if (var15 == 0) {
-                                                                continue L53;
-                                                              } else {
-                                                                break L55;
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                        var12++;
-                                                        break L54;
-                                                      }
-                                                      if (var15 == 0) {
-                                                        continue L50;
-                                                      } else {
-                                                        break L52;
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                              stackOut_78_0 = -1;
-                                              stackIn_79_0 = stackOut_78_0;
-                                              break L51;
-                                            }
-                                            if (stackIn_79_0 == ~(var11 & 2)) {
-                                              break L43;
-                                            } else {
-                                              var12 = 0;
-                                              L56: while (true) {
-                                                if (var12 >= var5) {
-                                                  break L43;
-                                                } else {
-                                                  stackOut_82_0 = 0;
-                                                  stackIn_45_0 = stackOut_82_0;
-                                                  stackIn_83_0 = stackOut_82_0;
-                                                  if (var15 != 0) {
-                                                    continue L40;
-                                                  } else {
-                                                    var13 = stackIn_83_0;
-                                                    L57: while (true) {
-                                                      L58: {
-                                                        if (~var13 <= ~var6) {
-                                                          break L58;
-                                                        } else {
-                                                          byte dupTemp$3 = var2_ref.k(0);
-                                                          var9[var5 * var13 + var12] = dupTemp$3;
-                                                          var14 = dupTemp$3;
-                                                          stackOut_85_0 = var10;
-                                                          stackOut_85_1 = 0;
-                                                          stackOut_85_2 = ~var14;
-                                                          stackIn_50_0 = stackOut_85_0;
-                                                          stackIn_50_1 = stackOut_85_1;
-                                                          stackIn_50_2 = stackOut_85_2;
-                                                          stackIn_86_0 = stackOut_85_0;
-                                                          stackIn_86_1 = stackOut_85_1;
-                                                          stackIn_86_2 = stackOut_85_2;
-                                                          if (var15 != 0) {
-                                                            continue L41;
-                                                          } else {
-                                                            L59: {
-                                                              stackOut_86_0 = stackIn_86_0;
-                                                              stackIn_89_0 = stackOut_86_0;
-                                                              stackIn_87_0 = stackOut_86_0;
-                                                              if (stackIn_86_1 == stackIn_86_2) {
-                                                                stackOut_89_0 = stackIn_89_0;
-                                                                stackOut_89_1 = 0;
-                                                                stackIn_90_0 = stackOut_89_0;
-                                                                stackIn_90_1 = stackOut_89_1;
-                                                                break L59;
-                                                              } else {
-                                                                stackOut_87_0 = stackIn_87_0;
-                                                                stackOut_87_1 = 1;
-                                                                stackIn_90_0 = stackOut_87_0;
-                                                                stackIn_90_1 = stackOut_87_1;
-                                                                break L59;
-                                                              }
-                                                            }
-                                                            var10 = stackIn_90_0 | stackIn_90_1;
-                                                            var13++;
-                                                            if (var15 == 0) {
-                                                              continue L57;
-                                                            } else {
-                                                              break L58;
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                      var12++;
-                                                      if (var15 == 0) {
-                                                        continue L56;
-                                                      } else {
-                                                        break L43;
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                        v.field_e[var4] = var10 != 0;
-                                        var4++;
-                                        break L42;
-                                      }
-                                      if (var15 == 0) {
-                                        continue L39;
-                                      } else {
-                                        break L15;
-                                      }
-                                    }
-                                  }
-                                }
-                              }
+                            } else {
+                              tf.field_b[var4] = var2_ref.j(-14477);
+                              var4++;
+                              continue L4;
                             }
                           }
-                          break L14;
+                        } else {
+                          cg.field_k[var4] = var2_ref.j(-14477);
+                          var4++;
+                          continue L3;
                         }
-                        break L0;
                       }
+                    } else {
+                      ne.field_h[var4] = var2_ref.j(-14477);
+                      var4++;
+                      continue L2;
                     }
                   }
+                } else {
+                  ph.field_q[var4] = var2_ref.j(-14477);
+                  var4++;
+                  continue L1;
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L60: {
+          L17: {
             var2 = decompiledCaughtException;
-            stackOut_95_0 = (RuntimeException) var2;
-            stackOut_95_1 = new StringBuilder().append("jg.H(");
-            stackIn_98_0 = stackOut_95_0;
-            stackIn_98_1 = stackOut_95_1;
-            stackIn_96_0 = stackOut_95_0;
-            stackIn_96_1 = stackOut_95_1;
+            stackOut_77_0 = (RuntimeException) (var2);
+            stackOut_77_1 = new StringBuilder().append("jg.H(");
+            stackIn_80_0 = stackOut_77_0;
+            stackIn_80_1 = stackOut_77_1;
+            stackIn_78_0 = stackOut_77_0;
+            stackIn_78_1 = stackOut_77_1;
             if (param0 == null) {
-              stackOut_98_0 = (RuntimeException) (Object) stackIn_98_0;
-              stackOut_98_1 = (StringBuilder) (Object) stackIn_98_1;
-              stackOut_98_2 = "null";
-              stackIn_99_0 = stackOut_98_0;
-              stackIn_99_1 = stackOut_98_1;
-              stackIn_99_2 = stackOut_98_2;
-              break L60;
+              stackOut_80_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackOut_80_1 = (StringBuilder) ((Object) stackIn_80_1);
+              stackOut_80_2 = "null";
+              stackIn_81_0 = stackOut_80_0;
+              stackIn_81_1 = stackOut_80_1;
+              stackIn_81_2 = stackOut_80_2;
+              break L17;
             } else {
-              stackOut_96_0 = (RuntimeException) (Object) stackIn_96_0;
-              stackOut_96_1 = (StringBuilder) (Object) stackIn_96_1;
-              stackOut_96_2 = "{...}";
-              stackIn_99_0 = stackOut_96_0;
-              stackIn_99_1 = stackOut_96_1;
-              stackIn_99_2 = stackOut_96_2;
-              break L60;
+              stackOut_78_0 = (RuntimeException) ((Object) stackIn_78_0);
+              stackOut_78_1 = (StringBuilder) ((Object) stackIn_78_1);
+              stackOut_78_2 = "{...}";
+              stackIn_81_0 = stackOut_78_0;
+              stackIn_81_1 = stackOut_78_1;
+              stackIn_81_2 = stackOut_78_2;
+              break L17;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_99_0, stackIn_99_2 + ',' + param1 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_81_0), stackIn_81_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -845,17 +373,17 @@ final class jg extends mf {
               if (param0 > 68) {
                 break L1;
               } else {
-                ((jg) this).field_l = null;
+                this.field_l = (String) null;
                 break L1;
               }
             }
-            ((jg) this).field_l = null;
+            this.field_l = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var2, "jg.B(" + param0 + ')');
+          throw bd.a((Throwable) ((Object) var2), "jg.B(" + param0 + ')');
         }
     }
 
@@ -864,7 +392,7 @@ final class jg extends mf {
         RuntimeException var3_ref = null;
         wd var4 = null;
         String stackIn_2_0 = null;
-        Object stackIn_5_0 = null;
+        String stackIn_5_0 = null;
         Object stackIn_14_0 = null;
         String stackIn_20_0 = null;
         String stackIn_22_0 = null;
@@ -875,11 +403,12 @@ final class jg extends mf {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_13_0 = null;
         String stackOut_19_0 = null;
         String stackOut_21_0 = null;
-        Object stackOut_4_0 = null;
+        String stackOut_4_0 = null;
         String stackOut_1_0 = null;
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
@@ -891,19 +420,19 @@ final class jg extends mf {
         String stackOut_24_2 = null;
         try {
           L0: {
-            var3 = bl.a(4, (CharSequence) (Object) param0);
+            var3 = bl.a(4, (CharSequence) ((Object) param0));
             if (var3 == null) {
               if (param1 == -1) {
                 L1: {
-                  if (!param0.equals((Object) (Object) ((jg) this).field_l)) {
+                  if (!param0.equals(this.field_l)) {
                     L2: {
-                      var4 = pl.a(param1, param0);
+                      var4 = pl.a(param1 ^ 0, param0);
                       if (var4 == null) {
                         break L2;
                       } else {
                         if (null == var4.field_h) {
-                          ((jg) this).field_l = param0;
-                          ((jg) this).field_s = var4.field_i;
+                          this.field_l = param0;
+                          this.field_s = var4.field_i;
                           break L1;
                         } else {
                           break L2;
@@ -912,52 +441,57 @@ final class jg extends mf {
                     }
                     stackOut_13_0 = null;
                     stackIn_14_0 = stackOut_13_0;
-                    return (String) (Object) stackIn_14_0;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     break L1;
                   }
                 }
-                if (!((jg) this).field_s) {
+                if (!this.field_s) {
                   stackOut_19_0 = uc.field_e;
                   stackIn_20_0 = stackOut_19_0;
-                  return stackIn_20_0;
+                  decompiledRegionSelector0 = 3;
+                  break L0;
                 } else {
                   stackOut_21_0 = oj.field_d;
                   stackIn_22_0 = stackOut_21_0;
+                  decompiledRegionSelector0 = 4;
                   break L0;
                 }
               } else {
-                stackOut_4_0 = null;
+                stackOut_4_0 = (String) null;
                 stackIn_5_0 = stackOut_4_0;
-                return (String) (Object) stackIn_5_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
-              stackOut_1_0 = (String) var3;
+              stackOut_1_0 = (String) (var3);
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var3_ref;
+            stackOut_23_0 = (RuntimeException) (var3_ref);
             stackOut_23_1 = new StringBuilder().append("jg.A(");
             stackIn_26_0 = stackOut_23_0;
             stackIn_26_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
               break L3;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_27_0 = stackOut_24_0;
               stackIn_27_1 = stackOut_24_1;
@@ -965,14 +499,30 @@ final class jg extends mf {
               break L3;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param1 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param1 + ')');
         }
-        return stackIn_22_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_5_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return (String) ((Object) stackIn_14_0);
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_20_0;
+              } else {
+                return stackIn_22_0;
+              }
+            }
+          }
+        }
     }
 
     jg(og param0) {
         super(param0);
-        ((jg) this).field_s = false;
+        this.field_s = false;
     }
 
     public static void c(byte param0) {
@@ -984,7 +534,7 @@ final class jg extends mf {
                 field_m = 69;
             }
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "jg.I(" + param0 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "jg.I(" + param0 + ')');
         }
     }
 
@@ -1001,6 +551,7 @@ final class jg extends mf {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ok stackOut_11_0 = null;
         ok stackOut_17_0 = null;
@@ -1024,19 +575,19 @@ final class jg extends mf {
                 break L1;
               }
             }
-            if (ad.a((CharSequence) (Object) param1, (byte) 120)) {
+            if (ad.a((CharSequence) ((Object) param1), (byte) 120)) {
               L2: {
-                if (param1.equals((Object) (Object) ((jg) this).field_l)) {
+                if (param1.equals(this.field_l)) {
                   break L2;
                 } else {
                   L3: {
-                    var3 = pl.a(param0, param1);
+                    var3 = pl.a(param0 ^ 0, param1);
                     if (null == var3) {
                       break L3;
                     } else {
                       if (null == var3.field_h) {
-                        ((jg) this).field_l = param1;
-                        ((jg) this).field_s = var3.field_i;
+                        this.field_l = param1;
+                        this.field_s = var3.field_i;
                         break L2;
                       } else {
                         break L3;
@@ -1045,11 +596,12 @@ final class jg extends mf {
                   }
                   stackOut_11_0 = l.field_S;
                   stackIn_12_0 = stackOut_11_0;
-                  return stackIn_12_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
               L4: {
-                if (((jg) this).field_s) {
+                if (this.field_s) {
                   stackOut_17_0 = gf.field_V;
                   stackIn_18_0 = stackOut_17_0;
                   break L4;
@@ -1059,34 +611,36 @@ final class jg extends mf {
                   break L4;
                 }
               }
+              decompiledRegionSelector0 = 2;
               break L0;
             } else {
               stackOut_4_0 = hg.field_c;
               stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3_ref = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var3_ref;
+            stackOut_19_0 = (RuntimeException) (var3_ref);
             stackOut_19_1 = new StringBuilder().append("jg.C(").append(param0).append(',');
             stackIn_22_0 = stackOut_19_0;
             stackIn_22_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L5;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_23_0 = stackOut_20_0;
               stackIn_23_1 = stackOut_20_1;
@@ -1094,16 +648,20 @@ final class jg extends mf {
               break L5;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
         }
-        return stackIn_18_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_12_0;
+          } else {
+            return stackIn_18_0;
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = new bh(8, 0, 4, 1);
         field_r = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         field_p = "EXCLUSIVE";

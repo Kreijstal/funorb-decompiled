@@ -8,16 +8,15 @@ final class jf extends pu {
     private static String field_z;
 
     public static void b(int param0) {
-        field_n = null;
+        field_n = (int[][]) null;
+        if (param0 != 0) {
+            return;
+        }
         field_l = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "jf.A(";
-        field_n = new int[][]{new int[6], new int[6], new int[6], new int[6], new int[6], new int[6], new int[6], new int[6], new int[6], new int[6]};
+        field_n = new int[][]{new int[]{0, 0, 0, 0, 0, 0}, new int[]{1, 1, 1, 1, 1, 1}, new int[]{0, 0, 0, 0, 0, 0}, new int[]{1, 1, 1, 1, 1, 1}, new int[]{0, 0, 0, 0, 0, 0}, new int[]{1, 1, 1, 1, 1, 1}, new int[]{0, 0, 0, 0, 0, 0}, new int[]{0, 0, 1, 1, 1, 1}, new int[]{0, 0, 0, 0, 0, 0}, new int[]{1, 1, 1, 1, 1, 1}};
     }
 }

@@ -8,11 +8,24 @@ final class tf {
     static String field_b;
 
     final static dd a(int param0, int param1) {
-        if (mp.field_V > 0) {
-          return ua.field_r;
+        if (param0 == -17104) {
+          if (mp.field_V <= 0) {
+            if (!ap.field_w[param1]) {
+              return ua.field_r;
+            } else {
+              return mm.field_j;
+            }
+          } else {
+            return ua.field_r;
+          }
         } else {
-          if (ap.field_w[param1]) {
-            return mm.field_j;
+          field_a = (tm) null;
+          if (mp.field_V <= 0) {
+            if (!ap.field_w[param1]) {
+              return ua.field_r;
+            } else {
+              return mm.field_j;
+            }
           } else {
             return ua.field_r;
           }
@@ -20,7 +33,7 @@ final class tf {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (qi.field_a != 13) {
+        if (-14 != (qi.field_a ^ -1)) {
           if (qi.field_a != 102) {
             if (param0 == 15585) {
               if (null != im.field_Ub) {
@@ -56,14 +69,10 @@ final class tf {
     }
 
     tf(int param0) {
-        ((tf) this).field_c = param0;
+        this.field_c = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Player";
     }
 }

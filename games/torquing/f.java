@@ -17,14 +17,14 @@ public class f {
 
     public static File a(int param0, String param1) {
         if (param0 != -3455) {
-            return null;
+            return (File) null;
         }
         return f.a(-31192, param1, field_d, field_a);
     }
 
     public static void a(byte param0, String param1, int param2) {
         Exception var3 = null;
-        Object var4 = null;
+        String var4 = null;
         Throwable decompiledCaughtException = null;
         field_d = param1;
         field_a = param2;
@@ -34,7 +34,7 @@ public class f {
               if (param0 == 32) {
                 break L1;
               } else {
-                var4 = null;
+                var4 = (String) null;
                 f.a((byte) -102, (String) null, 46);
                 break L1;
               }
@@ -79,10 +79,6 @@ public class f {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_c = new Hashtable(16);
     }

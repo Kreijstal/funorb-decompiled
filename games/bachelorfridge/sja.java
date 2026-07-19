@@ -9,6 +9,9 @@ final class sja extends uda {
     final static void a(int param0, mha param1, boolean param2) {
         pf var3 = field_fb;
         var3.c(param0, (byte) 122);
+        if (!param2) {
+            return;
+        }
         try {
             var3.d(5, 0);
             var3.d(0, 0);
@@ -16,7 +19,7 @@ final class sja extends uda {
             var3.d(param1.field_h, 0);
             var3.d(param1.field_i, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "sja.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + true + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "sja.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -36,7 +39,7 @@ final class sja extends uda {
         try {
             super.e(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "sja.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "sja.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

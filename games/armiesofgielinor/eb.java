@@ -12,6 +12,7 @@ final class eb {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
@@ -36,7 +37,7 @@ final class eb {
                     }
                   }
                   L4: {
-                    if (param1 != 48) {
+                    if ((param1 ^ -1) != -49) {
                       break L4;
                     } else {
                       param1 = 80;
@@ -53,54 +54,79 @@ final class eb {
                   break L1;
                 }
               }
-              var3_int = 1;
-              L5: while (true) {
-                if (var3_int >= mn.field_m[param1].length) {
-                  break L0;
-                } else {
-                  mn.field_k[param1][var3_int] = null;
-                  var3_int++;
-                  continue L5;
+              if (param2) {
+                var3_int = 1;
+                L5: while (true) {
+                  if (var3_int >= mn.field_m[param1].length) {
+                    decompiledRegionSelector0 = 2;
+                    break L0;
+                  } else {
+                    mn.field_k[param1][var3_int] = null;
+                    var3_int++;
+                    if (var4 == 0) {
+                      continue L5;
+                    } else {
+                      return;
+                    }
+                  }
                 }
+              } else {
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var3, "eb.A(" + param0 + ',' + param1 + ',' + true + ')');
+          throw ig.a((Throwable) ((Object) var3), "eb.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     public static void a(int param0) {
         field_c = null;
         field_e = null;
-        field_a = null;
-        field_d = null;
+        if (param0 != 1) {
+          field_c = (je) null;
+          field_a = null;
+          field_d = null;
+          return;
+        } else {
+          field_a = null;
+          field_d = null;
+          return;
+        }
     }
 
     final static int a(byte param0, int param1) {
-        param1 = ((-1431655766 & param1) >>> 1) + (1431655765 & param1);
-        param1 = (param1 & 858993459) - -((param1 & -858993458) >>> 2);
-        param1 = 252645135 & (param1 >>> 4) + param1;
+        param1 = ((-1431655766 & param1) >>> 716488737) + (1431655765 & param1);
+        param1 = (param1 & 858993459) - -((param1 & -858993458) >>> -799002878);
+        param1 = 252645135 & (param1 >>> 539582692) + param1;
         if (param0 >= -70) {
-            field_e = null;
-            param1 = param1 + (param1 >>> 8);
-            param1 = param1 + (param1 >>> 16);
-            return param1 & 255;
+          field_e = (String) null;
+          param1 = param1 + (param1 >>> 1897789992);
+          param1 = param1 + (param1 >>> 261794928);
+          return param1 & 255;
+        } else {
+          param1 = param1 + (param1 >>> 1897789992);
+          param1 = param1 + (param1 >>> 261794928);
+          return param1 & 255;
         }
-        param1 = param1 + (param1 >>> 8);
-        param1 = param1 + (param1 >>> 16);
-        return param1 & 255;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Send private message";
         field_e = "Month";
         field_b = 5;

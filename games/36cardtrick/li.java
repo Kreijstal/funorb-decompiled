@@ -19,6 +19,10 @@ final class li extends je {
     private int field_s;
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, li param11, int param12, int param13) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         L0: {
           L1: {
             if (param12 == 0) {
@@ -64,10 +68,10 @@ final class li extends je {
               } else {
                 param0 = param2[param4 >> 8];
                 param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
-                int incrementValue$4 = param5;
+                incrementValue$4 = param5;
                 param5++;
                 param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
-                int incrementValue$5 = param5;
+                incrementValue$5 = param5;
                 param5++;
                 param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param4 = param4 + param12;
@@ -78,10 +82,10 @@ final class li extends je {
             param1 = param4 >> 8;
             param0 = param2[param1];
             param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
-            int incrementValue$6 = param5;
+            incrementValue$6 = param5;
             param5++;
             param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
-            int incrementValue$7 = param5;
+            incrementValue$7 = param5;
             param5++;
             param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param4 = param4 + param12;
@@ -91,6 +95,11 @@ final class li extends je {
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
+        int discarded$8 = 0;
+        int discarded$9 = 0;
         ib var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -99,78 +108,78 @@ final class li extends je {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          if (((li) this).field_m != 0) {
+          if (this.field_m != 0) {
             break L0;
           } else {
-            if (((li) this).field_x != 0) {
+            if (this.field_x != 0) {
               break L0;
             } else {
-              ((li) this).a(param2);
+              this.a(param2);
               return;
             }
           }
         }
         L1: {
-          var4 = (ib) (Object) ((li) this).field_i;
-          var5 = ((li) this).field_r << 8;
-          var6 = ((li) this).field_t << 8;
+          var4 = (ib) ((Object) this.field_i);
+          var5 = this.field_r << 8;
+          var6 = this.field_t << 8;
           var7 = var4.field_h.length << 8;
           var8 = var6 - var5;
           if (var8 > 0) {
             break L1;
           } else {
-            ((li) this).field_l = 0;
+            this.field_l = 0;
             break L1;
           }
         }
         L2: {
           var9 = param1;
           param2 = param2 + param1;
-          if (((li) this).field_u >= 0) {
+          if (this.field_u >= 0) {
             break L2;
           } else {
-            if (((li) this).field_p <= 0) {
+            if (this.field_p <= 0) {
               this.f();
-              ((li) this).c(103);
+              this.c(103);
               return;
             } else {
-              ((li) this).field_u = 0;
+              this.field_u = 0;
               break L2;
             }
           }
         }
         L3: {
-          if (((li) this).field_u < var7) {
+          if (this.field_u < var7) {
             break L3;
           } else {
-            if (((li) this).field_p >= 0) {
+            if (this.field_p >= 0) {
               this.f();
-              ((li) this).c(126);
+              this.c(126);
               return;
             } else {
-              ((li) this).field_u = var7 - 1;
+              this.field_u = var7 - 1;
               break L3;
             }
           }
         }
-        if (((li) this).field_l >= 0) {
+        if (this.field_l >= 0) {
           L4: {
-            if (((li) this).field_l <= 0) {
+            if (this.field_l <= 0) {
               break L4;
             } else {
-              if (!((li) this).field_o) {
-                if (((li) this).field_p >= 0) {
+              if (!this.field_o) {
+                if (this.field_p >= 0) {
                   L5: while (true) {
-                    var9 = this.b(param0, var9, var6, param2, (int) var4.field_h[((li) this).field_r]);
-                    if (((li) this).field_u >= var6) {
-                      var10 = (((li) this).field_u - var5) / var8;
-                      if (var10 < ((li) this).field_l) {
-                        ((li) this).field_u = ((li) this).field_u - var8 * var10;
-                        ((li) this).field_l = ((li) this).field_l - var10;
+                    var9 = this.b(param0, var9, var6, param2, (int) var4.field_h[this.field_r]);
+                    if (this.field_u >= var6) {
+                      var10 = (this.field_u - var5) / var8;
+                      if (var10 < this.field_l) {
+                        this.field_u = this.field_u - var8 * var10;
+                        this.field_l = this.field_l - var10;
                         continue L5;
                       } else {
-                        ((li) this).field_u = ((li) this).field_u - var8 * ((li) this).field_l;
-                        ((li) this).field_l = 0;
+                        this.field_u = this.field_u - var8 * this.field_l;
+                        this.field_l = 0;
                         break L4;
                       }
                     } else {
@@ -179,16 +188,16 @@ final class li extends je {
                   }
                 } else {
                   L6: while (true) {
-                    var9 = this.a(param0, var9, var5, param2, (int) var4.field_h[((li) this).field_t - 1]);
-                    if (((li) this).field_u < var5) {
-                      var10 = (var6 - 1 - ((li) this).field_u) / var8;
-                      if (var10 < ((li) this).field_l) {
-                        ((li) this).field_u = ((li) this).field_u + var8 * var10;
-                        ((li) this).field_l = ((li) this).field_l - var10;
+                    var9 = this.a(param0, var9, var5, param2, (int) var4.field_h[this.field_t - 1]);
+                    if (this.field_u < var5) {
+                      var10 = (var6 - 1 - this.field_u) / var8;
+                      if (var10 < this.field_l) {
+                        this.field_u = this.field_u + var8 * var10;
+                        this.field_l = this.field_l - var10;
                         continue L6;
                       } else {
-                        ((li) this).field_u = ((li) this).field_u + var8 * ((li) this).field_l;
-                        ((li) this).field_l = 0;
+                        this.field_u = this.field_u + var8 * this.field_l;
+                        this.field_l = 0;
                         break L4;
                       }
                     } else {
@@ -198,15 +207,15 @@ final class li extends je {
                 }
               } else {
                 L7: {
-                  if (((li) this).field_p >= 0) {
+                  if (this.field_p >= 0) {
                     break L7;
                   } else {
-                    var9 = this.a(param0, var9, var5, param2, (int) var4.field_h[((li) this).field_r]);
-                    if (((li) this).field_u < var5) {
-                      ((li) this).field_u = var5 + var5 - 1 - ((li) this).field_u;
-                      ((li) this).field_p = -((li) this).field_p;
-                      int fieldTemp$5 = ((li) this).field_l - 1;
-                      ((li) this).field_l = ((li) this).field_l - 1;
+                    var9 = this.a(param0, var9, var5, param2, (int) var4.field_h[this.field_r]);
+                    if (this.field_u < var5) {
+                      this.field_u = var5 + var5 - 1 - this.field_u;
+                      this.field_p = -this.field_p;
+                      fieldTemp$5 = this.field_l - 1;
+                      this.field_l = this.field_l - 1;
                       if (fieldTemp$5 != 0) {
                         break L7;
                       } else {
@@ -218,19 +227,19 @@ final class li extends je {
                   }
                 }
                 L8: while (true) {
-                  var9 = this.b(param0, var9, var6, param2, (int) var4.field_h[((li) this).field_t - 1]);
-                  if (((li) this).field_u >= var6) {
-                    ((li) this).field_u = var6 + var6 - 1 - ((li) this).field_u;
-                    ((li) this).field_p = -((li) this).field_p;
-                    int fieldTemp$6 = ((li) this).field_l - 1;
-                    ((li) this).field_l = ((li) this).field_l - 1;
+                  var9 = this.b(param0, var9, var6, param2, (int) var4.field_h[this.field_t - 1]);
+                  if (this.field_u >= var6) {
+                    this.field_u = var6 + var6 - 1 - this.field_u;
+                    this.field_p = -this.field_p;
+                    fieldTemp$6 = this.field_l - 1;
+                    this.field_l = this.field_l - 1;
                     if (fieldTemp$6 != 0) {
-                      var9 = this.a(param0, var9, var5, param2, (int) var4.field_h[((li) this).field_r]);
-                      if (((li) this).field_u < var5) {
-                        ((li) this).field_u = var5 + var5 - 1 - ((li) this).field_u;
-                        ((li) this).field_p = -((li) this).field_p;
-                        int fieldTemp$7 = ((li) this).field_l - 1;
-                        ((li) this).field_l = ((li) this).field_l - 1;
+                      var9 = this.a(param0, var9, var5, param2, (int) var4.field_h[this.field_r]);
+                      if (this.field_u < var5) {
+                        this.field_u = var5 + var5 - 1 - this.field_u;
+                        this.field_p = -this.field_p;
+                        fieldTemp$7 = this.field_l - 1;
+                        this.field_l = this.field_l - 1;
                         if (fieldTemp$7 != 0) {
                           continue L8;
                         } else {
@@ -249,37 +258,37 @@ final class li extends je {
               }
             }
           }
-          if (((li) this).field_p < 0) {
-            int discarded$8 = this.a(param0, var9, 0, param2, 0);
-            if (((li) this).field_u < 0) {
-              ((li) this).field_u = -1;
+          if (this.field_p < 0) {
+            discarded$8 = this.a(param0, var9, 0, param2, 0);
+            if (this.field_u < 0) {
+              this.field_u = -1;
               this.f();
-              ((li) this).c(92);
+              this.c(92);
               return;
             } else {
               return;
             }
           } else {
             L9: {
-              int discarded$9 = this.b(param0, var9, var7, param2, 0);
-              if (((li) this).field_u < var7) {
+              discarded$9 = this.b(param0, var9, var7, param2, 0);
+              if (this.field_u < var7) {
                 break L9;
               } else {
-                ((li) this).field_u = var7;
+                this.field_u = var7;
                 this.f();
-                ((li) this).c(122);
+                this.c(122);
                 break L9;
               }
             }
             return;
           }
         } else {
-          if (!((li) this).field_o) {
-            if (((li) this).field_p >= 0) {
+          if (!this.field_o) {
+            if (this.field_p >= 0) {
               L10: while (true) {
-                var9 = this.b(param0, var9, var6, param2, (int) var4.field_h[((li) this).field_r]);
-                if (((li) this).field_u >= var6) {
-                  ((li) this).field_u = var5 + (((li) this).field_u - var5) % var8;
+                var9 = this.b(param0, var9, var6, param2, (int) var4.field_h[this.field_r]);
+                if (this.field_u >= var6) {
+                  this.field_u = var5 + (this.field_u - var5) % var8;
                   continue L10;
                 } else {
                   return;
@@ -287,9 +296,9 @@ final class li extends je {
               }
             } else {
               L11: while (true) {
-                var9 = this.a(param0, var9, var5, param2, (int) var4.field_h[((li) this).field_t - 1]);
-                if (((li) this).field_u < var5) {
-                  ((li) this).field_u = var6 - 1 - (var6 - 1 - ((li) this).field_u) % var8;
+                var9 = this.a(param0, var9, var5, param2, (int) var4.field_h[this.field_t - 1]);
+                if (this.field_u < var5) {
+                  this.field_u = var6 - 1 - (var6 - 1 - this.field_u) % var8;
                   continue L11;
                 } else {
                   return;
@@ -298,13 +307,13 @@ final class li extends je {
             }
           } else {
             L12: {
-              if (((li) this).field_p >= 0) {
+              if (this.field_p >= 0) {
                 break L12;
               } else {
-                var9 = this.a(param0, var9, var5, param2, (int) var4.field_h[((li) this).field_r]);
-                if (((li) this).field_u < var5) {
-                  ((li) this).field_u = var5 + var5 - 1 - ((li) this).field_u;
-                  ((li) this).field_p = -((li) this).field_p;
+                var9 = this.a(param0, var9, var5, param2, (int) var4.field_h[this.field_r]);
+                if (this.field_u < var5) {
+                  this.field_u = var5 + var5 - 1 - this.field_u;
+                  this.field_p = -this.field_p;
                   break L12;
                 } else {
                   return;
@@ -312,14 +321,14 @@ final class li extends je {
               }
             }
             L13: while (true) {
-              var9 = this.b(param0, var9, var6, param2, (int) var4.field_h[((li) this).field_t - 1]);
-              if (((li) this).field_u >= var6) {
-                ((li) this).field_u = var6 + var6 - 1 - ((li) this).field_u;
-                ((li) this).field_p = -((li) this).field_p;
-                var9 = this.a(param0, var9, var5, param2, (int) var4.field_h[((li) this).field_r]);
-                if (((li) this).field_u < var5) {
-                  ((li) this).field_u = var5 + var5 - 1 - ((li) this).field_u;
-                  ((li) this).field_p = -((li) this).field_p;
+              var9 = this.b(param0, var9, var6, param2, (int) var4.field_h[this.field_t - 1]);
+              if (this.field_u >= var6) {
+                this.field_u = var6 + var6 - 1 - this.field_u;
+                this.field_p = -this.field_p;
+                var9 = this.a(param0, var9, var5, param2, (int) var4.field_h[this.field_r]);
+                if (this.field_u < var5) {
+                  this.field_u = var5 + var5 - 1 - this.field_u;
+                  this.field_p = -this.field_p;
                   continue L13;
                 } else {
                   return;
@@ -333,23 +342,23 @@ final class li extends je {
     }
 
     final synchronized int g() {
-        return ((li) this).field_m == -2147483648 ? 0 : ((li) this).field_m;
+        return this.field_m == -2147483648 ? 0 : this.field_m;
     }
 
     final synchronized void a(boolean param0) {
-        ((li) this).field_o = param0 ? true : false;
+        this.field_o = param0 ? true : false;
     }
 
     final synchronized void h(int param0) {
         param0 = param0 << 8;
-        int var2 = ((ib) (Object) ((li) this).field_i).field_h.length << 8;
+        int var2 = ((ib) ((Object) this.field_i)).field_h.length << 8;
         if (param0 < -1) {
             param0 = -1;
         }
         if (param0 > var2) {
             param0 = var2;
         }
-        ((li) this).field_u = param0;
+        this.field_u = param0;
     }
 
     final je b() {
@@ -357,6 +366,21 @@ final class li extends je {
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, li param10) {
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
         L0: {
           param3 = param3 >> 8;
           param9 = param9 >> 8;
@@ -381,53 +405,53 @@ final class li extends je {
                 param10.field_u = param3 << 8;
                 return param4 >> 1;
               } else {
-                int incrementValue$15 = param3;
+                incrementValue$15 = param3;
                 param3--;
                 param0 = param1[incrementValue$15];
-                int incrementValue$16 = param4;
+                incrementValue$16 = param4;
                 param4++;
                 param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
-                int incrementValue$17 = param4;
+                incrementValue$17 = param4;
                 param4++;
                 param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 continue L2;
               }
             }
           } else {
-            int incrementValue$18 = param3;
+            incrementValue$18 = param3;
             param3--;
             param0 = param1[incrementValue$18];
-            int incrementValue$19 = param4;
+            incrementValue$19 = param4;
             param4++;
             param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
-            int incrementValue$20 = param4;
+            incrementValue$20 = param4;
             param4++;
             param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
-            int incrementValue$21 = param3;
+            incrementValue$21 = param3;
             param3--;
             param0 = param1[incrementValue$21];
-            int incrementValue$22 = param4;
+            incrementValue$22 = param4;
             param4++;
             param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
-            int incrementValue$23 = param4;
+            incrementValue$23 = param4;
             param4++;
             param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
-            int incrementValue$24 = param3;
+            incrementValue$24 = param3;
             param3--;
             param0 = param1[incrementValue$24];
-            int incrementValue$25 = param4;
+            incrementValue$25 = param4;
             param4++;
             param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
-            int incrementValue$26 = param4;
+            incrementValue$26 = param4;
             param4++;
             param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
-            int incrementValue$27 = param3;
+            incrementValue$27 = param3;
             param3--;
             param0 = param1[incrementValue$27];
-            int incrementValue$28 = param4;
+            incrementValue$28 = param4;
             param4++;
             param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
-            int incrementValue$29 = param4;
+            incrementValue$29 = param4;
             param4++;
             param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             continue L1;
@@ -436,6 +460,16 @@ final class li extends je {
     }
 
     private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, li param8) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         param2 = param2 >> 8;
         param7 = param7 >> 8;
         param4 = param4 << 2;
@@ -445,32 +479,32 @@ final class li extends je {
         }
         param5 -= 3;
         while (param3 < param5) {
-            int incrementValue$0 = param3;
+            incrementValue$0 = param3;
             param3++;
-            int incrementValue$1 = param2;
+            incrementValue$1 = param2;
             param2--;
             param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
-            int incrementValue$2 = param3;
+            incrementValue$2 = param3;
             param3++;
-            int incrementValue$3 = param2;
+            incrementValue$3 = param2;
             param2--;
             param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
-            int incrementValue$4 = param3;
+            incrementValue$4 = param3;
             param3++;
-            int incrementValue$5 = param2;
+            incrementValue$5 = param2;
             param2--;
             param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
-            int incrementValue$6 = param3;
+            incrementValue$6 = param3;
             param3++;
-            int incrementValue$7 = param2;
+            incrementValue$7 = param2;
             param2--;
             param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
         }
         param5 += 3;
         while (param3 < param5) {
-            int incrementValue$8 = param3;
+            incrementValue$8 = param3;
             param3++;
-            int incrementValue$9 = param2;
+            incrementValue$9 = param2;
             param2--;
             param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
         }
@@ -479,6 +513,8 @@ final class li extends je {
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, li param11, int param12, int param13) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         L0: {
           L1: {
             param11.field_v = param11.field_v - param11.field_s * param5;
@@ -525,7 +561,7 @@ final class li extends je {
                 param11.field_u = param4;
                 return param5;
               } else {
-                int incrementValue$2 = param5;
+                incrementValue$2 = param5;
                 param5++;
                 param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
                 param6 = param6 + param7;
@@ -536,7 +572,7 @@ final class li extends je {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
-            int incrementValue$3 = param5;
+            incrementValue$3 = param5;
             param5++;
             param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
             param6 = param6 + param7;
@@ -547,6 +583,21 @@ final class li extends je {
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, li param12) {
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
         L0: {
           param3 = param3 >> 8;
           param11 = param11 >> 8;
@@ -576,14 +627,14 @@ final class li extends je {
                 param12.field_u = param3 << 8;
                 return param4 >> 1;
               } else {
-                int incrementValue$15 = param3;
+                incrementValue$15 = param3;
                 param3--;
                 param0 = param1[incrementValue$15];
-                int incrementValue$16 = param4;
+                incrementValue$16 = param4;
                 param4++;
                 param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
                 param5 = param5 + param7;
-                int incrementValue$17 = param4;
+                incrementValue$17 = param4;
                 param4++;
                 param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 param6 = param6 + param8;
@@ -591,47 +642,47 @@ final class li extends je {
               }
             }
           } else {
-            int incrementValue$18 = param3;
+            incrementValue$18 = param3;
             param3--;
             param0 = param1[incrementValue$18];
-            int incrementValue$19 = param4;
+            incrementValue$19 = param4;
             param4++;
             param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$20 = param4;
+            incrementValue$20 = param4;
             param4++;
             param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
             param6 = param6 + param8;
-            int incrementValue$21 = param3;
+            incrementValue$21 = param3;
             param3--;
             param0 = param1[incrementValue$21];
-            int incrementValue$22 = param4;
+            incrementValue$22 = param4;
             param4++;
             param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$23 = param4;
+            incrementValue$23 = param4;
             param4++;
             param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
             param6 = param6 + param8;
-            int incrementValue$24 = param3;
+            incrementValue$24 = param3;
             param3--;
             param0 = param1[incrementValue$24];
-            int incrementValue$25 = param4;
+            incrementValue$25 = param4;
             param4++;
             param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$26 = param4;
+            incrementValue$26 = param4;
             param4++;
             param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
             param6 = param6 + param8;
-            int incrementValue$27 = param3;
+            incrementValue$27 = param3;
             param3--;
             param0 = param1[incrementValue$27];
-            int incrementValue$28 = param4;
+            incrementValue$28 = param4;
             param4++;
             param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$29 = param4;
+            incrementValue$29 = param4;
             param4++;
             param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             param6 = param6 + param8;
@@ -641,25 +692,25 @@ final class li extends je {
     }
 
     private final void f() {
-        if (((li) this).field_x != 0) {
-            if (((li) this).field_m == -2147483648) {
-                ((li) this).field_m = 0;
+        if (this.field_x != 0) {
+            if (this.field_m == -2147483648) {
+                this.field_m = 0;
             }
-            ((li) this).field_x = 0;
+            this.field_x = 0;
             this.i();
             return;
         }
     }
 
     private final synchronized void a(int param0, int param1) {
-        ((li) this).field_m = param0;
-        ((li) this).field_n = param1;
-        ((li) this).field_x = 0;
+        this.field_m = param0;
+        this.field_n = param1;
+        this.field_x = 0;
         this.i();
     }
 
     final synchronized void e(int param0) {
-        ((li) this).field_l = param0;
+        this.field_l = param0;
     }
 
     final static li a(ib param0, int param1, int param2, int param3) {
@@ -675,6 +726,10 @@ final class li extends je {
     }
 
     private final static int d(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, li param11, int param12, int param13) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         L0: {
           L1: {
             if (param12 == 0) {
@@ -719,10 +774,10 @@ final class li extends je {
                 return param5 >> 1;
               } else {
                 param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
-                int incrementValue$4 = param5;
+                incrementValue$4 = param5;
                 param5++;
                 param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
-                int incrementValue$5 = param5;
+                incrementValue$5 = param5;
                 param5++;
                 param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param4 = param4 + param12;
@@ -733,10 +788,10 @@ final class li extends je {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
             param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
-            int incrementValue$6 = param5;
+            incrementValue$6 = param5;
             param5++;
             param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
-            int incrementValue$7 = param5;
+            incrementValue$7 = param5;
             param5++;
             param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param4 = param4 + param12;
@@ -756,30 +811,30 @@ final class li extends je {
     private final int b(int[] param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         L0: while (true) {
-          if (((li) this).field_x <= 0) {
+          if (this.field_x <= 0) {
             L1: {
-              if (((li) this).field_p != 256) {
+              if (this.field_p != 256) {
                 break L1;
               } else {
-                if ((((li) this).field_u & 255) != 0) {
+                if ((this.field_u & 255) != 0) {
                   break L1;
                 } else {
                   if (gd.field_q) {
-                    return li.a(0, ((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_v, ((li) this).field_w, 0, param3, param2, (li) this);
+                    return li.a(0, ((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, 0, param3, param2, (li) (this));
                   } else {
-                    return li.b(((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_q, 0, param3, param2, (li) this);
+                    return li.b(((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_q, 0, param3, param2, (li) (this));
                   }
                 }
               }
             }
             if (gd.field_q) {
-              return li.b(0, 0, ((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_v, ((li) this).field_w, 0, param3, param2, (li) this, ((li) this).field_p, param4);
+              return li.b(0, 0, ((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, 0, param3, param2, (li) (this), this.field_p, param4);
             } else {
-              return li.a(0, 0, ((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_q, 0, param3, param2, (li) this, ((li) this).field_p, param4);
+              return li.a(0, 0, ((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_q, 0, param3, param2, (li) (this), this.field_p, param4);
             }
           } else {
             L2: {
-              var6 = param1 + ((li) this).field_x;
+              var6 = param1 + this.field_x;
               if (var6 <= param3) {
                 break L2;
               } else {
@@ -789,33 +844,33 @@ final class li extends je {
             }
             L3: {
               L4: {
-                ((li) this).field_x = ((li) this).field_x + param1;
-                if (((li) this).field_p != 256) {
+                this.field_x = this.field_x + param1;
+                if (this.field_p != 256) {
                   break L4;
                 } else {
-                  if ((((li) this).field_u & 255) != 0) {
+                  if ((this.field_u & 255) != 0) {
                     break L4;
                   } else {
                     if (!gd.field_q) {
-                      param1 = li.a(((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_q, ((li) this).field_k, 0, var6, param2, (li) this);
+                      param1 = li.a(((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_q, this.field_k, 0, var6, param2, (li) (this));
                       break L3;
                     } else {
-                      param1 = li.a(0, ((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_v, ((li) this).field_w, ((li) this).field_s, ((li) this).field_y, 0, var6, param2, (li) this);
+                      param1 = li.a(0, ((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, this.field_s, this.field_y, 0, var6, param2, (li) (this));
                       break L3;
                     }
                   }
                 }
               }
               if (!gd.field_q) {
-                param1 = li.c(0, 0, ((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_q, ((li) this).field_k, 0, var6, param2, (li) this, ((li) this).field_p, param4);
+                param1 = li.c(0, 0, ((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_q, this.field_k, 0, var6, param2, (li) (this), this.field_p, param4);
                 break L3;
               } else {
-                param1 = li.a(0, 0, ((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_v, ((li) this).field_w, ((li) this).field_s, ((li) this).field_y, 0, var6, param2, (li) this, ((li) this).field_p, param4);
+                param1 = li.a(0, 0, ((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, this.field_s, this.field_y, 0, var6, param2, (li) (this), this.field_p, param4);
                 break L3;
               }
             }
-            ((li) this).field_x = ((li) this).field_x - param1;
-            if (((li) this).field_x == 0) {
+            this.field_x = this.field_x - param1;
+            if (this.field_x == 0) {
               if (!this.e()) {
                 continue L0;
               } else {
@@ -829,12 +884,14 @@ final class li extends je {
     }
 
     private final void i() {
-        ((li) this).field_q = ((li) this).field_m;
-        ((li) this).field_v = li.b(((li) this).field_m, ((li) this).field_n);
-        ((li) this).field_w = li.d(((li) this).field_m, ((li) this).field_n);
+        this.field_q = this.field_m;
+        this.field_v = li.b(this.field_m, this.field_n);
+        this.field_w = li.d(this.field_m, this.field_n);
     }
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, li param10, int param11, int param12) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         L0: {
           L1: {
             if (param11 == 0) {
@@ -876,7 +933,7 @@ final class li extends je {
                 param10.field_u = param4;
                 return param5;
               } else {
-                int incrementValue$4 = param5;
+                incrementValue$4 = param5;
                 param5++;
                 param3[incrementValue$4] = param3[incrementValue$4] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
                 param4 = param4 + param1;
@@ -886,7 +943,7 @@ final class li extends je {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
-            int incrementValue$5 = param5;
+            incrementValue$5 = param5;
             param5++;
             param3[incrementValue$5] = param3[incrementValue$5] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
             param4 = param4 + param11;
@@ -906,30 +963,30 @@ final class li extends je {
     private final int a(int[] param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         L0: while (true) {
-          if (((li) this).field_x <= 0) {
+          if (this.field_x <= 0) {
             L1: {
-              if (((li) this).field_p != -256) {
+              if (this.field_p != -256) {
                 break L1;
               } else {
-                if ((((li) this).field_u & 255) != 0) {
+                if ((this.field_u & 255) != 0) {
                   break L1;
                 } else {
                   if (gd.field_q) {
-                    return li.b(0, ((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_v, ((li) this).field_w, 0, param3, param2, (li) this);
+                    return li.b(0, ((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, 0, param3, param2, (li) (this));
                   } else {
-                    return li.a(((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_q, 0, param3, param2, (li) this);
+                    return li.a(((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_q, 0, param3, param2, (li) (this));
                   }
                 }
               }
             }
             if (gd.field_q) {
-              return li.d(0, 0, ((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_v, ((li) this).field_w, 0, param3, param2, (li) this, ((li) this).field_p, param4);
+              return li.d(0, 0, ((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, 0, param3, param2, (li) (this), this.field_p, param4);
             } else {
-              return li.b(0, 0, ((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_q, 0, param3, param2, (li) this, ((li) this).field_p, param4);
+              return li.b(0, 0, ((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_q, 0, param3, param2, (li) (this), this.field_p, param4);
             }
           } else {
             L2: {
-              var6 = param1 + ((li) this).field_x;
+              var6 = param1 + this.field_x;
               if (var6 <= param3) {
                 break L2;
               } else {
@@ -939,33 +996,33 @@ final class li extends je {
             }
             L3: {
               L4: {
-                ((li) this).field_x = ((li) this).field_x + param1;
-                if (((li) this).field_p != -256) {
+                this.field_x = this.field_x + param1;
+                if (this.field_p != -256) {
                   break L4;
                 } else {
-                  if ((((li) this).field_u & 255) != 0) {
+                  if ((this.field_u & 255) != 0) {
                     break L4;
                   } else {
                     if (!gd.field_q) {
-                      param1 = li.b(((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_q, ((li) this).field_k, 0, var6, param2, (li) this);
+                      param1 = li.b(((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_q, this.field_k, 0, var6, param2, (li) (this));
                       break L3;
                     } else {
-                      param1 = li.b(0, ((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_v, ((li) this).field_w, ((li) this).field_s, ((li) this).field_y, 0, var6, param2, (li) this);
+                      param1 = li.b(0, ((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, this.field_s, this.field_y, 0, var6, param2, (li) (this));
                       break L3;
                     }
                   }
                 }
               }
               if (!gd.field_q) {
-                param1 = li.a(0, 0, ((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_q, ((li) this).field_k, 0, var6, param2, (li) this, ((li) this).field_p, param4);
+                param1 = li.a(0, 0, ((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_q, this.field_k, 0, var6, param2, (li) (this), this.field_p, param4);
                 break L3;
               } else {
-                param1 = li.b(0, 0, ((ib) (Object) ((li) this).field_i).field_h, param0, ((li) this).field_u, param1, ((li) this).field_v, ((li) this).field_w, ((li) this).field_s, ((li) this).field_y, 0, var6, param2, (li) this, ((li) this).field_p, param4);
+                param1 = li.b(0, 0, ((ib) ((Object) this.field_i)).field_h, param0, this.field_u, param1, this.field_v, this.field_w, this.field_s, this.field_y, 0, var6, param2, (li) (this), this.field_p, param4);
                 break L3;
               }
             }
-            ((li) this).field_x = ((li) this).field_x - param1;
-            if (((li) this).field_x == 0) {
+            this.field_x = this.field_x - param1;
+            if (this.field_x == 0) {
               if (!this.e()) {
                 continue L0;
               } else {
@@ -979,6 +1036,8 @@ final class li extends je {
     }
 
     private final static int c(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, li param11, int param12, int param13) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         L0: {
           L1: {
             param11.field_v = param11.field_v - param11.field_s * param5;
@@ -1025,7 +1084,7 @@ final class li extends je {
                 return param5;
               } else {
                 param0 = param2[param4 >> 8];
-                int incrementValue$2 = param5;
+                incrementValue$2 = param5;
                 param5++;
                 param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
                 param6 = param6 + param7;
@@ -1036,7 +1095,7 @@ final class li extends je {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1];
-            int incrementValue$3 = param5;
+            incrementValue$3 = param5;
             param5++;
             param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
             param6 = param6 + param7;
@@ -1047,6 +1106,8 @@ final class li extends je {
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, li param10, int param11, int param12) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         L0: {
           L1: {
             if (param11 == 0) {
@@ -1088,7 +1149,7 @@ final class li extends je {
                 return param5;
               } else {
                 param0 = param2[param4 >> 8];
-                int incrementValue$4 = param5;
+                incrementValue$4 = param5;
                 param5++;
                 param3[incrementValue$4] = param3[incrementValue$4] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
                 param4 = param4 + param11;
@@ -1098,7 +1159,7 @@ final class li extends je {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1];
-            int incrementValue$5 = param5;
+            incrementValue$5 = param5;
             param5++;
             param3[incrementValue$5] = param3[incrementValue$5] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
             param4 = param4 + param11;
@@ -1108,59 +1169,59 @@ final class li extends je {
     }
 
     final synchronized void c(int param0, int param1) {
-        ((li) this).field_r = param0;
-        ((li) this).field_t = param1;
+        this.field_r = param0;
+        this.field_t = param1;
     }
 
     final synchronized void d(int param0) {
         int var2 = 0;
         if (param0 != 0) {
-          if (((li) this).field_v == 0) {
-            if (((li) this).field_w == 0) {
-              ((li) this).field_x = 0;
-              ((li) this).field_m = 0;
-              ((li) this).field_q = 0;
-              ((li) this).c(122);
+          if (this.field_v == 0) {
+            if (this.field_w == 0) {
+              this.field_x = 0;
+              this.field_m = 0;
+              this.field_q = 0;
+              this.c(122);
               return;
             } else {
               L0: {
-                var2 = -((li) this).field_q;
-                if (((li) this).field_q <= var2) {
+                var2 = -this.field_q;
+                if (this.field_q <= var2) {
                   break L0;
                 } else {
-                  var2 = ((li) this).field_q;
+                  var2 = this.field_q;
                   break L0;
                 }
               }
               L1: {
-                if (-((li) this).field_v <= var2) {
+                if (-this.field_v <= var2) {
                   break L1;
                 } else {
-                  var2 = -((li) this).field_v;
+                  var2 = -this.field_v;
                   break L1;
                 }
               }
               L2: {
-                if (((li) this).field_v <= var2) {
+                if (this.field_v <= var2) {
                   break L2;
                 } else {
-                  var2 = ((li) this).field_v;
+                  var2 = this.field_v;
                   break L2;
                 }
               }
               L3: {
-                if (-((li) this).field_w <= var2) {
+                if (-this.field_w <= var2) {
                   break L3;
                 } else {
-                  var2 = -((li) this).field_w;
+                  var2 = -this.field_w;
                   break L3;
                 }
               }
               L4: {
-                if (((li) this).field_w <= var2) {
+                if (this.field_w <= var2) {
                   break L4;
                 } else {
-                  var2 = ((li) this).field_w;
+                  var2 = this.field_w;
                   break L4;
                 }
               }
@@ -1172,52 +1233,52 @@ final class li extends je {
                   break L5;
                 }
               }
-              ((li) this).field_x = param0;
-              ((li) this).field_m = -2147483648;
-              ((li) this).field_k = -((li) this).field_q / param0;
-              ((li) this).field_s = -((li) this).field_v / param0;
-              ((li) this).field_y = -((li) this).field_w / param0;
+              this.field_x = param0;
+              this.field_m = -2147483648;
+              this.field_k = -this.field_q / param0;
+              this.field_s = -this.field_v / param0;
+              this.field_y = -this.field_w / param0;
               return;
             }
           } else {
             L6: {
-              var2 = -((li) this).field_q;
-              if (((li) this).field_q <= var2) {
+              var2 = -this.field_q;
+              if (this.field_q <= var2) {
                 break L6;
               } else {
-                var2 = ((li) this).field_q;
+                var2 = this.field_q;
                 break L6;
               }
             }
             L7: {
-              if (-((li) this).field_v <= var2) {
+              if (-this.field_v <= var2) {
                 break L7;
               } else {
-                var2 = -((li) this).field_v;
+                var2 = -this.field_v;
                 break L7;
               }
             }
             L8: {
-              if (((li) this).field_v <= var2) {
+              if (this.field_v <= var2) {
                 break L8;
               } else {
-                var2 = ((li) this).field_v;
+                var2 = this.field_v;
                 break L8;
               }
             }
             L9: {
-              if (-((li) this).field_w <= var2) {
+              if (-this.field_w <= var2) {
                 break L9;
               } else {
-                var2 = -((li) this).field_w;
+                var2 = -this.field_w;
                 break L9;
               }
             }
             L10: {
-              if (((li) this).field_w <= var2) {
+              if (this.field_w <= var2) {
                 break L10;
               } else {
-                var2 = ((li) this).field_w;
+                var2 = this.field_w;
                 break L10;
               }
             }
@@ -1229,16 +1290,16 @@ final class li extends je {
                 break L11;
               }
             }
-            ((li) this).field_x = param0;
-            ((li) this).field_m = -2147483648;
-            ((li) this).field_k = -((li) this).field_q / param0;
-            ((li) this).field_s = -((li) this).field_v / param0;
-            ((li) this).field_y = -((li) this).field_w / param0;
+            this.field_x = param0;
+            this.field_m = -2147483648;
+            this.field_k = -this.field_q / param0;
+            this.field_s = -this.field_v / param0;
+            this.field_y = -this.field_w / param0;
             return;
           }
         } else {
-          ((li) this).f(0);
-          ((li) this).c(127);
+          this.f(0);
+          this.c(127);
           return;
         }
     }
@@ -1256,6 +1317,16 @@ final class li extends je {
     }
 
     private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, li param8) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         param2 = param2 >> 8;
         param7 = param7 >> 8;
         param4 = param4 << 2;
@@ -1265,32 +1336,32 @@ final class li extends je {
         }
         param5 -= 3;
         while (param3 < param5) {
-            int incrementValue$0 = param3;
+            incrementValue$0 = param3;
             param3++;
-            int incrementValue$1 = param2;
+            incrementValue$1 = param2;
             param2++;
             param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
-            int incrementValue$2 = param3;
+            incrementValue$2 = param3;
             param3++;
-            int incrementValue$3 = param2;
+            incrementValue$3 = param2;
             param2++;
             param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
-            int incrementValue$4 = param3;
+            incrementValue$4 = param3;
             param3++;
-            int incrementValue$5 = param2;
+            incrementValue$5 = param2;
             param2++;
             param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
-            int incrementValue$6 = param3;
+            incrementValue$6 = param3;
             param3++;
-            int incrementValue$7 = param2;
+            incrementValue$7 = param2;
             param2++;
             param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
         }
         param5 += 3;
         while (param3 < param5) {
-            int incrementValue$8 = param3;
+            incrementValue$8 = param3;
             param3++;
-            int incrementValue$9 = param2;
+            incrementValue$9 = param2;
             param2++;
             param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
         }
@@ -1307,10 +1378,10 @@ final class li extends je {
         int var2 = 0;
         int var3 = 0;
         L0: {
-          var1 = ((li) this).field_m;
+          var1 = this.field_m;
           if (var1 != -2147483648) {
-            var2 = li.b(var1, ((li) this).field_n);
-            var3 = li.d(var1, ((li) this).field_n);
+            var2 = li.b(var1, this.field_n);
+            var3 = li.d(var1, this.field_n);
             break L0;
           } else {
             var3 = 0;
@@ -1320,19 +1391,19 @@ final class li extends je {
           }
         }
         L1: {
-          if (((li) this).field_q != var1) {
+          if (this.field_q != var1) {
             break L1;
           } else {
-            if (((li) this).field_v != var2) {
+            if (this.field_v != var2) {
               break L1;
             } else {
-              if (((li) this).field_w == var3) {
-                if (((li) this).field_m == -2147483648) {
-                  ((li) this).field_m = 0;
-                  ((li) this).field_w = 0;
-                  ((li) this).field_v = 0;
-                  ((li) this).field_q = 0;
-                  ((li) this).c(91);
+              if (this.field_w == var3) {
+                if (this.field_m == -2147483648) {
+                  this.field_m = 0;
+                  this.field_w = 0;
+                  this.field_v = 0;
+                  this.field_q = 0;
+                  this.c(91);
                   return true;
                 } else {
                   this.i();
@@ -1345,91 +1416,91 @@ final class li extends je {
           }
         }
         L2: {
-          if (((li) this).field_q >= var1) {
-            if (((li) this).field_q <= var1) {
-              ((li) this).field_k = 0;
+          if (this.field_q >= var1) {
+            if (this.field_q <= var1) {
+              this.field_k = 0;
               break L2;
             } else {
-              ((li) this).field_k = -1;
-              ((li) this).field_x = ((li) this).field_q - var1;
+              this.field_k = -1;
+              this.field_x = this.field_q - var1;
               break L2;
             }
           } else {
-            ((li) this).field_k = 1;
-            ((li) this).field_x = var1 - ((li) this).field_q;
+            this.field_k = 1;
+            this.field_x = var1 - this.field_q;
             break L2;
           }
         }
         L3: {
-          if (((li) this).field_v >= var2) {
-            if (((li) this).field_v <= var2) {
-              ((li) this).field_s = 0;
+          if (this.field_v >= var2) {
+            if (this.field_v <= var2) {
+              this.field_s = 0;
               break L3;
             } else {
               L4: {
-                ((li) this).field_s = -1;
-                if (((li) this).field_x == 0) {
+                this.field_s = -1;
+                if (this.field_x == 0) {
                   break L4;
                 } else {
-                  if (((li) this).field_x <= ((li) this).field_v - var2) {
+                  if (this.field_x <= this.field_v - var2) {
                     break L3;
                   } else {
                     break L4;
                   }
                 }
               }
-              ((li) this).field_x = ((li) this).field_v - var2;
+              this.field_x = this.field_v - var2;
               break L3;
             }
           } else {
             L5: {
-              ((li) this).field_s = 1;
-              if (((li) this).field_x == 0) {
+              this.field_s = 1;
+              if (this.field_x == 0) {
                 break L5;
               } else {
-                if (((li) this).field_x <= var2 - ((li) this).field_v) {
+                if (this.field_x <= var2 - this.field_v) {
                   break L3;
                 } else {
                   break L5;
                 }
               }
             }
-            ((li) this).field_x = var2 - ((li) this).field_v;
+            this.field_x = var2 - this.field_v;
             break L3;
           }
         }
-        if (((li) this).field_w < var3) {
-          ((li) this).field_y = 1;
-          if (((li) this).field_x != 0) {
-            if (((li) this).field_x > var3 - ((li) this).field_w) {
-              ((li) this).field_x = var3 - ((li) this).field_w;
+        if (this.field_w < var3) {
+          this.field_y = 1;
+          if (this.field_x != 0) {
+            if (this.field_x > var3 - this.field_w) {
+              this.field_x = var3 - this.field_w;
               return false;
             } else {
               return false;
             }
           } else {
-            ((li) this).field_x = var3 - ((li) this).field_w;
+            this.field_x = var3 - this.field_w;
             return false;
           }
         } else {
           L6: {
-            if (((li) this).field_w <= var3) {
-              ((li) this).field_y = 0;
+            if (this.field_w <= var3) {
+              this.field_y = 0;
               break L6;
             } else {
               L7: {
-                ((li) this).field_y = -1;
-                if (((li) this).field_x == 0) {
+                this.field_y = -1;
+                if (this.field_x == 0) {
                   break L7;
                 } else {
-                  if (((li) this).field_x <= ((li) this).field_w - var3) {
+                  if (this.field_x <= this.field_w - var3) {
                     break L6;
                   } else {
                     break L7;
                   }
                 }
               }
-              ((li) this).field_x = ((li) this).field_w - var3;
+              this.field_x = this.field_w - var3;
               break L6;
             }
           }
@@ -1438,6 +1509,10 @@ final class li extends je {
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, li param13, int param14, int param15) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         L0: {
           L1: {
             param13.field_q = param13.field_q - param13.field_k * param5;
@@ -1488,11 +1563,11 @@ final class li extends je {
               } else {
                 param0 = param2[param4 >> 8];
                 param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
-                int incrementValue$4 = param5;
+                incrementValue$4 = param5;
                 param5++;
                 param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
                 param6 = param6 + param8;
-                int incrementValue$5 = param5;
+                incrementValue$5 = param5;
                 param5++;
                 param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param7 = param7 + param9;
@@ -1504,11 +1579,11 @@ final class li extends je {
             param1 = param4 >> 8;
             param0 = param2[param1];
             param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
-            int incrementValue$6 = param5;
+            incrementValue$6 = param5;
             param5++;
             param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
             param6 = param6 + param8;
-            int incrementValue$7 = param5;
+            incrementValue$7 = param5;
             param5++;
             param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param7 = param7 + param9;
@@ -1523,6 +1598,10 @@ final class li extends je {
     }
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, li param13, int param14, int param15) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         L0: {
           L1: {
             param13.field_q = param13.field_q - param13.field_k * param5;
@@ -1572,11 +1651,11 @@ final class li extends je {
                 return param5;
               } else {
                 param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
-                int incrementValue$4 = param5;
+                incrementValue$4 = param5;
                 param5++;
                 param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
                 param6 = param6 + param8;
-                int incrementValue$5 = param5;
+                incrementValue$5 = param5;
                 param5++;
                 param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param7 = param7 + param9;
@@ -1588,11 +1667,11 @@ final class li extends je {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
             param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
-            int incrementValue$6 = param5;
+            incrementValue$6 = param5;
             param5++;
             param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
             param6 = param6 + param8;
-            int incrementValue$7 = param5;
+            incrementValue$7 = param5;
             param5++;
             param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param7 = param7 + param9;
@@ -1603,6 +1682,16 @@ final class li extends je {
     }
 
     private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, li param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         L0: {
           param2 = param2 >> 8;
           param8 = param8 >> 8;
@@ -1628,9 +1717,9 @@ final class li extends je {
                 param9.field_u = param2 << 8;
                 return param3;
               } else {
-                int incrementValue$10 = param3;
+                incrementValue$10 = param3;
                 param3++;
-                int incrementValue$11 = param2;
+                incrementValue$11 = param2;
                 param2--;
                 param1[incrementValue$10] = param1[incrementValue$10] + param0[incrementValue$11] * param4;
                 param4 = param4 + param5;
@@ -1638,27 +1727,27 @@ final class li extends je {
               }
             }
           } else {
-            int incrementValue$12 = param3;
+            incrementValue$12 = param3;
             param3++;
-            int incrementValue$13 = param2;
+            incrementValue$13 = param2;
             param2--;
             param1[incrementValue$12] = param1[incrementValue$12] + param0[incrementValue$13] * param4;
             param4 = param4 + param5;
-            int incrementValue$14 = param3;
+            incrementValue$14 = param3;
             param3++;
-            int incrementValue$15 = param2;
+            incrementValue$15 = param2;
             param2--;
             param1[incrementValue$14] = param1[incrementValue$14] + param0[incrementValue$15] * param4;
             param4 = param4 + param5;
-            int incrementValue$16 = param3;
+            incrementValue$16 = param3;
             param3++;
-            int incrementValue$17 = param2;
+            incrementValue$17 = param2;
             param2--;
             param1[incrementValue$16] = param1[incrementValue$16] + param0[incrementValue$17] * param4;
             param4 = param4 + param5;
-            int incrementValue$18 = param3;
+            incrementValue$18 = param3;
             param3++;
-            int incrementValue$19 = param2;
+            incrementValue$19 = param2;
             param2--;
             param1[incrementValue$18] = param1[incrementValue$18] + param0[incrementValue$19] * param4;
             param4 = param4 + param5;
@@ -1668,6 +1757,21 @@ final class li extends je {
     }
 
     private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, li param12) {
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
         L0: {
           param3 = param3 >> 8;
           param11 = param11 >> 8;
@@ -1697,14 +1801,14 @@ final class li extends je {
                 param12.field_u = param3 << 8;
                 return param4 >> 1;
               } else {
-                int incrementValue$15 = param3;
+                incrementValue$15 = param3;
                 param3++;
                 param0 = param1[incrementValue$15];
-                int incrementValue$16 = param4;
+                incrementValue$16 = param4;
                 param4++;
                 param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
                 param5 = param5 + param7;
-                int incrementValue$17 = param4;
+                incrementValue$17 = param4;
                 param4++;
                 param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 param6 = param6 + param8;
@@ -1712,47 +1816,47 @@ final class li extends je {
               }
             }
           } else {
-            int incrementValue$18 = param3;
+            incrementValue$18 = param3;
             param3++;
             param0 = param1[incrementValue$18];
-            int incrementValue$19 = param4;
+            incrementValue$19 = param4;
             param4++;
             param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$20 = param4;
+            incrementValue$20 = param4;
             param4++;
             param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
             param6 = param6 + param8;
-            int incrementValue$21 = param3;
+            incrementValue$21 = param3;
             param3++;
             param0 = param1[incrementValue$21];
-            int incrementValue$22 = param4;
+            incrementValue$22 = param4;
             param4++;
             param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$23 = param4;
+            incrementValue$23 = param4;
             param4++;
             param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
             param6 = param6 + param8;
-            int incrementValue$24 = param3;
+            incrementValue$24 = param3;
             param3++;
             param0 = param1[incrementValue$24];
-            int incrementValue$25 = param4;
+            incrementValue$25 = param4;
             param4++;
             param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$26 = param4;
+            incrementValue$26 = param4;
             param4++;
             param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
             param6 = param6 + param8;
-            int incrementValue$27 = param3;
+            incrementValue$27 = param3;
             param3++;
             param0 = param1[incrementValue$27];
-            int incrementValue$28 = param4;
+            incrementValue$28 = param4;
             param4++;
             param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$29 = param4;
+            incrementValue$29 = param4;
             param4++;
             param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             param6 = param6 + param8;
@@ -1762,19 +1866,34 @@ final class li extends je {
     }
 
     final int d() {
-        int var1 = ((li) this).field_q * 3 >> 6;
+        int var1 = this.field_q * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
-        if (((li) this).field_l == 0) {
-            var1 = var1 - var1 * ((li) this).field_u / (((ib) (Object) ((li) this).field_i).field_h.length << 8);
+        if (this.field_l == 0) {
+            var1 = var1 - var1 * this.field_u / (((ib) ((Object) this.field_i)).field_h.length << 8);
         } else {
-            if (((li) this).field_l >= 0) {
-                var1 = var1 - var1 * ((li) this).field_r / ((ib) (Object) ((li) this).field_i).field_h.length;
+            if (this.field_l >= 0) {
+                var1 = var1 - var1 * this.field_r / ((ib) ((Object) this.field_i)).field_h.length;
             }
         }
         return var1 > 255 ? 255 : var1;
     }
 
     private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, li param10) {
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
         L0: {
           param3 = param3 >> 8;
           param9 = param9 >> 8;
@@ -1799,53 +1918,53 @@ final class li extends je {
                 param10.field_u = param3 << 8;
                 return param4 >> 1;
               } else {
-                int incrementValue$15 = param3;
+                incrementValue$15 = param3;
                 param3++;
                 param0 = param1[incrementValue$15];
-                int incrementValue$16 = param4;
+                incrementValue$16 = param4;
                 param4++;
                 param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
-                int incrementValue$17 = param4;
+                incrementValue$17 = param4;
                 param4++;
                 param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 continue L2;
               }
             }
           } else {
-            int incrementValue$18 = param3;
+            incrementValue$18 = param3;
             param3++;
             param0 = param1[incrementValue$18];
-            int incrementValue$19 = param4;
+            incrementValue$19 = param4;
             param4++;
             param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
-            int incrementValue$20 = param4;
+            incrementValue$20 = param4;
             param4++;
             param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
-            int incrementValue$21 = param3;
+            incrementValue$21 = param3;
             param3++;
             param0 = param1[incrementValue$21];
-            int incrementValue$22 = param4;
+            incrementValue$22 = param4;
             param4++;
             param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
-            int incrementValue$23 = param4;
+            incrementValue$23 = param4;
             param4++;
             param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
-            int incrementValue$24 = param3;
+            incrementValue$24 = param3;
             param3++;
             param0 = param1[incrementValue$24];
-            int incrementValue$25 = param4;
+            incrementValue$25 = param4;
             param4++;
             param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
-            int incrementValue$26 = param4;
+            incrementValue$26 = param4;
             param4++;
             param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
-            int incrementValue$27 = param3;
+            incrementValue$27 = param3;
             param3++;
             param0 = param1[incrementValue$27];
-            int incrementValue$28 = param4;
+            incrementValue$28 = param4;
             param4++;
             param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
-            int incrementValue$29 = param4;
+            incrementValue$29 = param4;
             param4++;
             param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             continue L1;
@@ -1854,8 +1973,8 @@ final class li extends je {
     }
 
     final int c() {
-        if (((li) this).field_m == 0) {
-            if (((li) this).field_x == 0) {
+        if (this.field_m == 0) {
+            if (this.field_x == 0) {
                 return 0;
             }
         }
@@ -1863,10 +1982,20 @@ final class li extends je {
     }
 
     private final synchronized int h() {
-        return ((li) this).field_n < 0 ? -1 : ((li) this).field_n;
+        return this.field_n < 0 ? -1 : this.field_n;
     }
 
     private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, li param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         L0: {
           param2 = param2 >> 8;
           param8 = param8 >> 8;
@@ -1892,9 +2021,9 @@ final class li extends je {
                 param9.field_u = param2 << 8;
                 return param3;
               } else {
-                int incrementValue$10 = param3;
+                incrementValue$10 = param3;
                 param3++;
-                int incrementValue$11 = param2;
+                incrementValue$11 = param2;
                 param2++;
                 param1[incrementValue$10] = param1[incrementValue$10] + param0[incrementValue$11] * param4;
                 param4 = param4 + param5;
@@ -1902,27 +2031,27 @@ final class li extends je {
               }
             }
           } else {
-            int incrementValue$12 = param3;
+            incrementValue$12 = param3;
             param3++;
-            int incrementValue$13 = param2;
+            incrementValue$13 = param2;
             param2++;
             param1[incrementValue$12] = param1[incrementValue$12] + param0[incrementValue$13] * param4;
             param4 = param4 + param5;
-            int incrementValue$14 = param3;
+            incrementValue$14 = param3;
             param3++;
-            int incrementValue$15 = param2;
+            incrementValue$15 = param2;
             param2++;
             param1[incrementValue$14] = param1[incrementValue$14] + param0[incrementValue$15] * param4;
             param4 = param4 + param5;
-            int incrementValue$16 = param3;
+            incrementValue$16 = param3;
             param3++;
-            int incrementValue$17 = param2;
+            incrementValue$17 = param2;
             param2++;
             param1[incrementValue$16] = param1[incrementValue$16] + param0[incrementValue$17] * param4;
             param4 = param4 + param5;
-            int incrementValue$18 = param3;
+            incrementValue$18 = param3;
             param3++;
-            int incrementValue$19 = param2;
+            incrementValue$19 = param2;
             param2++;
             param1[incrementValue$18] = param1[incrementValue$18] + param0[incrementValue$19] * param4;
             param4 = param4 + param5;
@@ -1938,49 +2067,49 @@ final class li extends je {
         if (param0 != 0) {
           var4 = li.b(param1, param2);
           var5 = li.d(param1, param2);
-          if (((li) this).field_v == var4) {
-            if (((li) this).field_w == var5) {
-              ((li) this).field_x = 0;
+          if (this.field_v == var4) {
+            if (this.field_w == var5) {
+              this.field_x = 0;
               return;
             } else {
               L0: {
-                var6 = param1 - ((li) this).field_q;
-                if (((li) this).field_q - param1 <= var6) {
+                var6 = param1 - this.field_q;
+                if (this.field_q - param1 <= var6) {
                   break L0;
                 } else {
-                  var6 = ((li) this).field_q - param1;
+                  var6 = this.field_q - param1;
                   break L0;
                 }
               }
               L1: {
-                if (var4 - ((li) this).field_v <= var6) {
+                if (var4 - this.field_v <= var6) {
                   break L1;
                 } else {
-                  var6 = var4 - ((li) this).field_v;
+                  var6 = var4 - this.field_v;
                   break L1;
                 }
               }
               L2: {
-                if (((li) this).field_v - var4 <= var6) {
+                if (this.field_v - var4 <= var6) {
                   break L2;
                 } else {
-                  var6 = ((li) this).field_v - var4;
+                  var6 = this.field_v - var4;
                   break L2;
                 }
               }
               L3: {
-                if (var5 - ((li) this).field_w <= var6) {
+                if (var5 - this.field_w <= var6) {
                   break L3;
                 } else {
-                  var6 = var5 - ((li) this).field_w;
+                  var6 = var5 - this.field_w;
                   break L3;
                 }
               }
               L4: {
-                if (((li) this).field_w - var5 <= var6) {
+                if (this.field_w - var5 <= var6) {
                   break L4;
                 } else {
-                  var6 = ((li) this).field_w - var5;
+                  var6 = this.field_w - var5;
                   break L4;
                 }
               }
@@ -1992,53 +2121,53 @@ final class li extends je {
                   break L5;
                 }
               }
-              ((li) this).field_x = param0;
-              ((li) this).field_m = param1;
-              ((li) this).field_n = param2;
-              ((li) this).field_k = (param1 - ((li) this).field_q) / param0;
-              ((li) this).field_s = (var4 - ((li) this).field_v) / param0;
-              ((li) this).field_y = (var5 - ((li) this).field_w) / param0;
+              this.field_x = param0;
+              this.field_m = param1;
+              this.field_n = param2;
+              this.field_k = (param1 - this.field_q) / param0;
+              this.field_s = (var4 - this.field_v) / param0;
+              this.field_y = (var5 - this.field_w) / param0;
               return;
             }
           } else {
             L6: {
-              var6 = param1 - ((li) this).field_q;
-              if (((li) this).field_q - param1 <= var6) {
+              var6 = param1 - this.field_q;
+              if (this.field_q - param1 <= var6) {
                 break L6;
               } else {
-                var6 = ((li) this).field_q - param1;
+                var6 = this.field_q - param1;
                 break L6;
               }
             }
             L7: {
-              if (var4 - ((li) this).field_v <= var6) {
+              if (var4 - this.field_v <= var6) {
                 break L7;
               } else {
-                var6 = var4 - ((li) this).field_v;
+                var6 = var4 - this.field_v;
                 break L7;
               }
             }
             L8: {
-              if (((li) this).field_v - var4 <= var6) {
+              if (this.field_v - var4 <= var6) {
                 break L8;
               } else {
-                var6 = ((li) this).field_v - var4;
+                var6 = this.field_v - var4;
                 break L8;
               }
             }
             L9: {
-              if (var5 - ((li) this).field_w <= var6) {
+              if (var5 - this.field_w <= var6) {
                 break L9;
               } else {
-                var6 = var5 - ((li) this).field_w;
+                var6 = var5 - this.field_w;
                 break L9;
               }
             }
             L10: {
-              if (((li) this).field_w - var5 <= var6) {
+              if (this.field_w - var5 <= var6) {
                 break L10;
               } else {
-                var6 = ((li) this).field_w - var5;
+                var6 = this.field_w - var5;
                 break L10;
               }
             }
@@ -2050,12 +2179,12 @@ final class li extends je {
                 break L11;
               }
             }
-            ((li) this).field_x = param0;
-            ((li) this).field_m = param1;
-            ((li) this).field_n = param2;
-            ((li) this).field_k = (param1 - ((li) this).field_q) / param0;
-            ((li) this).field_s = (var4 - ((li) this).field_v) / param0;
-            ((li) this).field_y = (var5 - ((li) this).field_w) / param0;
+            this.field_x = param0;
+            this.field_m = param1;
+            this.field_n = param2;
+            this.field_k = (param1 - this.field_q) / param0;
+            this.field_s = (var4 - this.field_v) / param0;
+            this.field_y = (var5 - this.field_w) / param0;
             return;
           }
         } else {
@@ -2065,6 +2194,9 @@ final class li extends je {
     }
 
     final synchronized void a(int param0) {
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
         ib var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -2072,109 +2204,109 @@ final class li extends je {
         int var6 = 0;
         int var7 = 0;
         L0: {
-          if (((li) this).field_x <= 0) {
+          if (this.field_x <= 0) {
             break L0;
           } else {
-            if (param0 < ((li) this).field_x) {
-              ((li) this).field_q = ((li) this).field_q + ((li) this).field_k * param0;
-              ((li) this).field_v = ((li) this).field_v + ((li) this).field_s * param0;
-              ((li) this).field_w = ((li) this).field_w + ((li) this).field_y * param0;
-              ((li) this).field_x = ((li) this).field_x - param0;
+            if (param0 < this.field_x) {
+              this.field_q = this.field_q + this.field_k * param0;
+              this.field_v = this.field_v + this.field_s * param0;
+              this.field_w = this.field_w + this.field_y * param0;
+              this.field_x = this.field_x - param0;
               break L0;
             } else {
               L1: {
-                if (((li) this).field_m != -2147483648) {
+                if (this.field_m != -2147483648) {
                   break L1;
                 } else {
-                  ((li) this).field_m = 0;
-                  ((li) this).field_w = 0;
-                  ((li) this).field_v = 0;
-                  ((li) this).field_q = 0;
-                  ((li) this).c(83);
-                  param0 = ((li) this).field_x;
+                  this.field_m = 0;
+                  this.field_w = 0;
+                  this.field_v = 0;
+                  this.field_q = 0;
+                  this.c(83);
+                  param0 = this.field_x;
                   break L1;
                 }
               }
-              ((li) this).field_x = 0;
+              this.field_x = 0;
               this.i();
               break L0;
             }
           }
         }
         L2: {
-          var2 = (ib) (Object) ((li) this).field_i;
-          var3 = ((li) this).field_r << 8;
-          var4 = ((li) this).field_t << 8;
+          var2 = (ib) ((Object) this.field_i);
+          var3 = this.field_r << 8;
+          var4 = this.field_t << 8;
           var5 = var2.field_h.length << 8;
           var6 = var4 - var3;
           if (var6 > 0) {
             break L2;
           } else {
-            ((li) this).field_l = 0;
+            this.field_l = 0;
             break L2;
           }
         }
         L3: {
-          if (((li) this).field_u >= 0) {
+          if (this.field_u >= 0) {
             break L3;
           } else {
-            if (((li) this).field_p <= 0) {
+            if (this.field_p <= 0) {
               this.f();
-              ((li) this).c(93);
+              this.c(93);
               return;
             } else {
-              ((li) this).field_u = 0;
+              this.field_u = 0;
               break L3;
             }
           }
         }
         L4: {
-          if (((li) this).field_u < var5) {
+          if (this.field_u < var5) {
             break L4;
           } else {
-            if (((li) this).field_p >= 0) {
+            if (this.field_p >= 0) {
               this.f();
-              ((li) this).c(113);
+              this.c(113);
               return;
             } else {
-              ((li) this).field_u = var5 - 1;
+              this.field_u = var5 - 1;
               break L4;
             }
           }
         }
-        ((li) this).field_u = ((li) this).field_u + ((li) this).field_p * param0;
-        if (((li) this).field_l >= 0) {
+        this.field_u = this.field_u + this.field_p * param0;
+        if (this.field_l >= 0) {
           L5: {
-            if (((li) this).field_l <= 0) {
+            if (this.field_l <= 0) {
               break L5;
             } else {
-              if (!((li) this).field_o) {
+              if (!this.field_o) {
                 L6: {
-                  if (((li) this).field_p >= 0) {
-                    if (((li) this).field_u >= var4) {
-                      var7 = (((li) this).field_u - var3) / var6;
-                      if (var7 < ((li) this).field_l) {
-                        ((li) this).field_u = ((li) this).field_u - var6 * var7;
-                        ((li) this).field_l = ((li) this).field_l - var7;
+                  if (this.field_p >= 0) {
+                    if (this.field_u >= var4) {
+                      var7 = (this.field_u - var3) / var6;
+                      if (var7 < this.field_l) {
+                        this.field_u = this.field_u - var6 * var7;
+                        this.field_l = this.field_l - var7;
                         break L6;
                       } else {
-                        ((li) this).field_u = ((li) this).field_u - var6 * ((li) this).field_l;
-                        ((li) this).field_l = 0;
+                        this.field_u = this.field_u - var6 * this.field_l;
+                        this.field_l = 0;
                         break L5;
                       }
                     } else {
                       return;
                     }
                   } else {
-                    if (((li) this).field_u < var3) {
-                      var7 = (var4 - 1 - ((li) this).field_u) / var6;
-                      if (var7 < ((li) this).field_l) {
-                        ((li) this).field_u = ((li) this).field_u + var6 * var7;
-                        ((li) this).field_l = ((li) this).field_l - var7;
+                    if (this.field_u < var3) {
+                      var7 = (var4 - 1 - this.field_u) / var6;
+                      if (var7 < this.field_l) {
+                        this.field_u = this.field_u + var6 * var7;
+                        this.field_l = this.field_l - var7;
                         break L6;
                       } else {
-                        ((li) this).field_u = ((li) this).field_u + var6 * ((li) this).field_l;
-                        ((li) this).field_l = 0;
+                        this.field_u = this.field_u + var6 * this.field_l;
+                        this.field_l = 0;
                         break L5;
                       }
                     } else {
@@ -2185,14 +2317,14 @@ final class li extends je {
                 return;
               } else {
                 L7: {
-                  if (((li) this).field_p >= 0) {
+                  if (this.field_p >= 0) {
                     break L7;
                   } else {
-                    if (((li) this).field_u < var3) {
-                      ((li) this).field_u = var3 + var3 - 1 - ((li) this).field_u;
-                      ((li) this).field_p = -((li) this).field_p;
-                      int fieldTemp$3 = ((li) this).field_l - 1;
-                      ((li) this).field_l = ((li) this).field_l - 1;
+                    if (this.field_u < var3) {
+                      this.field_u = var3 + var3 - 1 - this.field_u;
+                      this.field_p = -this.field_p;
+                      fieldTemp$3 = this.field_l - 1;
+                      this.field_l = this.field_l - 1;
                       if (fieldTemp$3 != 0) {
                         break L7;
                       } else {
@@ -2204,17 +2336,17 @@ final class li extends je {
                   }
                 }
                 L8: while (true) {
-                  if (((li) this).field_u >= var4) {
-                    ((li) this).field_u = var4 + var4 - 1 - ((li) this).field_u;
-                    ((li) this).field_p = -((li) this).field_p;
-                    int fieldTemp$4 = ((li) this).field_l - 1;
-                    ((li) this).field_l = ((li) this).field_l - 1;
+                  if (this.field_u >= var4) {
+                    this.field_u = var4 + var4 - 1 - this.field_u;
+                    this.field_p = -this.field_p;
+                    fieldTemp$4 = this.field_l - 1;
+                    this.field_l = this.field_l - 1;
                     if (fieldTemp$4 != 0) {
-                      if (((li) this).field_u < var3) {
-                        ((li) this).field_u = var3 + var3 - 1 - ((li) this).field_u;
-                        ((li) this).field_p = -((li) this).field_p;
-                        int fieldTemp$5 = ((li) this).field_l - 1;
-                        ((li) this).field_l = ((li) this).field_l - 1;
+                      if (this.field_u < var3) {
+                        this.field_u = var3 + var3 - 1 - this.field_u;
+                        this.field_p = -this.field_p;
+                        fieldTemp$5 = this.field_l - 1;
+                        this.field_l = this.field_l - 1;
                         if (fieldTemp$5 != 0) {
                           continue L8;
                         } else {
@@ -2233,40 +2365,40 @@ final class li extends je {
               }
             }
           }
-          if (((li) this).field_p < 0) {
-            if (((li) this).field_u < 0) {
-              ((li) this).field_u = -1;
+          if (this.field_p < 0) {
+            if (this.field_u < 0) {
+              this.field_u = -1;
               this.f();
-              ((li) this).c(103);
+              this.c(103);
               return;
             } else {
               return;
             }
           } else {
             L9: {
-              if (((li) this).field_u < var5) {
+              if (this.field_u < var5) {
                 break L9;
               } else {
-                ((li) this).field_u = var5;
+                this.field_u = var5;
                 this.f();
-                ((li) this).c(101);
+                this.c(101);
                 break L9;
               }
             }
             return;
           }
         } else {
-          if (!((li) this).field_o) {
-            if (((li) this).field_p >= 0) {
-              if (((li) this).field_u < var4) {
+          if (!this.field_o) {
+            if (this.field_p >= 0) {
+              if (this.field_u < var4) {
                 return;
               } else {
-                ((li) this).field_u = var3 + (((li) this).field_u - var3) % var6;
+                this.field_u = var3 + (this.field_u - var3) % var6;
                 return;
               }
             } else {
-              if (((li) this).field_u < var3) {
-                ((li) this).field_u = var4 - 1 - (var4 - 1 - ((li) this).field_u) % var6;
+              if (this.field_u < var3) {
+                this.field_u = var4 - 1 - (var4 - 1 - this.field_u) % var6;
                 return;
               } else {
                 return;
@@ -2274,12 +2406,12 @@ final class li extends je {
             }
           } else {
             L10: {
-              if (((li) this).field_p >= 0) {
+              if (this.field_p >= 0) {
                 break L10;
               } else {
-                if (((li) this).field_u < var3) {
-                  ((li) this).field_u = var3 + var3 - 1 - ((li) this).field_u;
-                  ((li) this).field_p = -((li) this).field_p;
+                if (this.field_u < var3) {
+                  this.field_u = var3 + var3 - 1 - this.field_u;
+                  this.field_p = -this.field_p;
                   break L10;
                 } else {
                   return;
@@ -2287,12 +2419,12 @@ final class li extends je {
               }
             }
             L11: while (true) {
-              if (((li) this).field_u >= var4) {
-                ((li) this).field_u = var4 + var4 - 1 - ((li) this).field_u;
-                ((li) this).field_p = -((li) this).field_p;
-                if (((li) this).field_u < var3) {
-                  ((li) this).field_u = var3 + var3 - 1 - ((li) this).field_u;
-                  ((li) this).field_p = -((li) this).field_p;
+              if (this.field_u >= var4) {
+                this.field_u = var4 + var4 - 1 - this.field_u;
+                this.field_p = -this.field_p;
+                if (this.field_u < var3) {
+                  this.field_u = var3 + var3 - 1 - this.field_u;
+                  this.field_p = -this.field_p;
                   continue L11;
                 } else {
                   return;
@@ -2306,34 +2438,34 @@ final class li extends je {
     }
 
     final synchronized void i(int param0) {
-        if (((li) this).field_p < 0) {
-            ((li) this).field_p = -param0;
+        if (this.field_p < 0) {
+            this.field_p = -param0;
         } else {
-            ((li) this).field_p = param0;
+            this.field_p = param0;
         }
     }
 
     private li(ib param0, int param1, int param2) {
-        ((li) this).field_i = (ea) (Object) param0;
-        ((li) this).field_r = param0.field_j;
-        ((li) this).field_t = param0.field_k;
-        ((li) this).field_o = param0.field_i;
-        ((li) this).field_p = param1;
-        ((li) this).field_m = param2;
-        ((li) this).field_n = 8192;
-        ((li) this).field_u = 0;
+        this.field_i = (ea) ((Object) param0);
+        this.field_r = param0.field_j;
+        this.field_t = param0.field_k;
+        this.field_o = param0.field_i;
+        this.field_p = param1;
+        this.field_m = param2;
+        this.field_n = 8192;
+        this.field_u = 0;
         this.i();
     }
 
     private li(ib param0, int param1, int param2, int param3) {
-        ((li) this).field_i = (ea) (Object) param0;
-        ((li) this).field_r = param0.field_j;
-        ((li) this).field_t = param0.field_k;
-        ((li) this).field_o = param0.field_i;
-        ((li) this).field_p = param1;
-        ((li) this).field_m = param2;
-        ((li) this).field_n = param3;
-        ((li) this).field_u = 0;
+        this.field_i = (ea) ((Object) param0);
+        this.field_r = param0.field_j;
+        this.field_t = param0.field_k;
+        this.field_o = param0.field_i;
+        this.field_p = param1;
+        this.field_m = param2;
+        this.field_n = param3;
+        this.field_u = 0;
         this.i();
     }
 }

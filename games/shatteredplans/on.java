@@ -13,64 +13,78 @@ final class on {
     static String field_h;
 
     final oh c(int param0) {
-        oh var2 = ((on) this).field_d.field_h.field_e;
+        oh var2 = this.field_d.field_h.field_e;
         int var3 = -32 % ((25 - param0) / 37);
-        if (!(((on) this).field_d.field_h != var2)) {
-            ((on) this).field_e = null;
+        if (!(this.field_d.field_h != var2)) {
+            this.field_e = null;
             return null;
         }
-        ((on) this).field_e = var2.field_e;
+        this.field_e = var2.field_e;
         return var2;
     }
 
     final static String a(boolean param0) {
+        String discarded$4 = null;
+        if (param0) {
+            discarded$4 = on.a(false);
+            if (sc.field_q) {
+                return null;
+            }
+            if ((ri.field_F ^ -1) < (rq.field_e ^ -1)) {
+                return null;
+            }
+            if (!((ri.field_F + de.field_i ^ -1) >= (rq.field_e ^ -1))) {
+                return jq.field_d;
+            }
+            return null;
+        }
         if (sc.field_q) {
             return null;
         }
-        if (~ri.field_F < ~rq.field_e) {
+        if ((ri.field_F ^ -1) < (rq.field_e ^ -1)) {
             return null;
         }
-        if (!(~(ri.field_F + de.field_i) >= ~rq.field_e)) {
+        if (!((ri.field_F + de.field_i ^ -1) >= (rq.field_e ^ -1))) {
             return jq.field_d;
         }
         return null;
     }
 
     final oh b(byte param0) {
-        oh var2 = ((on) this).field_e;
+        oh var2 = this.field_e;
         if (param0 != -124) {
-            field_i = null;
-            if (!(((on) this).field_d.field_h != var2)) {
-                ((on) this).field_e = null;
+            field_i = (String) null;
+            if (!(this.field_d.field_h != var2)) {
+                this.field_e = null;
                 return null;
             }
-            ((on) this).field_e = var2.field_e;
+            this.field_e = var2.field_e;
             return var2;
         }
-        if (!(((on) this).field_d.field_h != var2)) {
-            ((on) this).field_e = null;
+        if (!(this.field_d.field_h != var2)) {
+            this.field_e = null;
             return null;
         }
-        ((on) this).field_e = var2.field_e;
+        this.field_e = var2.field_e;
         return var2;
     }
 
     final oh a(int param0) {
-        oh var2 = ((on) this).field_d.field_h.field_f;
+        oh var2 = this.field_d.field_h.field_f;
         if (param0 != 2) {
             field_b = false;
-            if (!(((on) this).field_d.field_h != var2)) {
-                ((on) this).field_e = null;
+            if (!(this.field_d.field_h != var2)) {
+                this.field_e = null;
                 return null;
             }
-            ((on) this).field_e = var2.field_f;
+            this.field_e = var2.field_f;
             return var2;
         }
-        if (!(((on) this).field_d.field_h != var2)) {
-            ((on) this).field_e = null;
+        if (!(this.field_d.field_h != var2)) {
+            this.field_e = null;
             return null;
         }
-        ((on) this).field_e = var2.field_f;
+        this.field_e = var2.field_f;
         return var2;
     }
 
@@ -79,6 +93,11 @@ final class on {
         field_g = null;
         field_a = null;
         field_h = null;
+        if (param0 != 22256) {
+            field_h = (String) null;
+            field_f = null;
+            return;
+        }
         field_f = null;
     }
 
@@ -94,6 +113,7 @@ final class on {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_5_0 = null;
         oh stackOut_9_0 = null;
@@ -112,15 +132,16 @@ final class on {
                 var3 = param1;
                 break L1;
               } else {
-                var3 = ((on) this).field_d.field_h.field_f;
+                var3 = this.field_d.field_h.field_f;
                 break L1;
               }
             }
-            if (var3 == ((on) this).field_d.field_h) {
-              ((on) this).field_e = null;
+            if (var3 == this.field_d.field_h) {
+              this.field_e = null;
               stackOut_5_0 = null;
               stackIn_6_0 = stackOut_5_0;
-              return (oh) (Object) stackIn_6_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L2: {
                 if (!param0) {
@@ -130,9 +151,10 @@ final class on {
                   break L2;
                 }
               }
-              ((on) this).field_e = var3.field_f;
-              stackOut_9_0 = (oh) var3;
+              this.field_e = var3.field_f;
+              stackOut_9_0 = (oh) (var3);
               stackIn_10_0 = stackOut_9_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -140,23 +162,23 @@ final class on {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3_ref;
+            stackOut_11_0 = (RuntimeException) (var3_ref);
             stackOut_11_1 = new StringBuilder().append("on.A(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -164,16 +186,20 @@ final class on {
               break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
-        return stackIn_10_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (oh) ((Object) stackIn_6_0);
+        } else {
+          return stackIn_10_0;
+        }
     }
 
     on(pf param0) {
         try {
-            ((on) this).field_d = param0;
+            this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "on.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "on.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -190,6 +216,7 @@ final class on {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_5_0 = null;
         oh stackOut_7_0 = null;
@@ -206,22 +233,24 @@ final class on {
             L1: {
               var4 = -19 / ((param0 - 20) / 59);
               if (param1 == null) {
-                var3 = ((on) this).field_d.field_h.field_e;
+                var3 = this.field_d.field_h.field_e;
                 break L1;
               } else {
                 var3 = param1;
                 break L1;
               }
             }
-            if (((on) this).field_d.field_h == var3) {
-              ((on) this).field_e = null;
+            if (this.field_d.field_h == var3) {
+              this.field_e = null;
               stackOut_5_0 = null;
               stackIn_6_0 = stackOut_5_0;
-              return (oh) (Object) stackIn_6_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              ((on) this).field_e = var3.field_e;
-              stackOut_7_0 = (oh) var3;
+              this.field_e = var3.field_e;
+              stackOut_7_0 = (oh) (var3);
               stackIn_8_0 = stackOut_7_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -229,23 +258,23 @@ final class on {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3_ref;
+            stackOut_9_0 = (RuntimeException) (var3_ref);
             stackOut_9_1 = new StringBuilder().append("on.H(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -253,18 +282,22 @@ final class on {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
-        return stackIn_8_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (oh) ((Object) stackIn_6_0);
+        } else {
+          return stackIn_8_0;
+        }
     }
 
     final oh a(byte param0) {
-        oh var2 = ((on) this).field_e;
-        if (((on) this).field_d.field_h == var2) {
-            ((on) this).field_e = null;
+        oh var2 = this.field_e;
+        if (this.field_d.field_h == var2) {
+            this.field_e = null;
             return null;
         }
-        ((on) this).field_e = var2.field_f;
+        this.field_e = var2.field_f;
         if (param0 < 44) {
             on.a(-53, false);
             return var2;
@@ -714,10 +747,6 @@ final class on {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Email (Login):";
         field_a = "Some players haven't unlocked the currently selected game options.<br>Please see the player list on the left for details.";
         field_f = "Enter name of friend to delete from list";

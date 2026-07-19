@@ -17,23 +17,29 @@ final class he {
         field_a = null;
         field_c = null;
         field_g = null;
-        field_d = null;
+        if (param0 != -31399) {
+          field_d = (String) null;
+          field_d = null;
+          return;
+        } else {
+          field_d = null;
+          return;
+        }
     }
 
     final static void a(int param0, String param1) {
+        if (param0 != 1) {
+            return;
+        }
         try {
             vi.a((byte) 84, param1);
-            jn.a(bj.field_qb, false, -1);
+            jn.a(bj.field_qb, false, param0 + -2);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "he.A(" + 1 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Achievements";
         field_b = "Instructions";
         field_c = "Private";

@@ -9,16 +9,16 @@ final class sh extends qc {
 
     final pb b(byte param0) {
         if (param0 > -127) {
-            return null;
+            return (pb) null;
         }
-        return (pb) (Object) new ac();
+        return (pb) ((Object) new ac());
     }
 
     final void a(byte param0) {
         int var2 = -16 / ((param0 - 29) / 42);
-        tb.field_d.a(cb.field_p, 100, ((sh) this).field_k * (gi.field_m * 48), ((sh) this).field_j / ((sh) this).field_k);
-        ((sh) this).field_j = 0;
-        ((sh) this).field_k = 0;
+        tb.field_d.a(cb.field_p, 100, this.field_k * (gi.field_m * 48), this.field_j / this.field_k);
+        this.field_j = 0;
+        this.field_k = 0;
     }
 
     final f a(boolean param0, int param1, int param2, int param3, ta param4) {
@@ -44,15 +44,15 @@ final class sh extends qc {
         try {
           L0: {
             L1: {
-              ((sh) this).field_j = ((sh) this).field_j + param3;
+              this.field_j = this.field_j + param3;
               if (!param0) {
                 break L1;
               } else {
-                field_m = null;
+                field_m = (String) null;
                 break L1;
               }
             }
-            ((sh) this).field_k = ((sh) this).field_k + 1;
+            this.field_k = this.field_k + 1;
             stackOut_2_0 = new cj(bm.field_g, 0, 0, 0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -61,23 +61,23 @@ final class sh extends qc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var6;
+            stackOut_4_0 = (RuntimeException) (var6);
             stackOut_4_1 = new StringBuilder().append("sh.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param4 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -85,9 +85,9 @@ final class sh extends qc {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
-        return (f) (Object) stackIn_3_0;
+        return (f) ((Object) stackIn_3_0);
     }
 
     public static void c(int param0) {
@@ -101,15 +101,11 @@ final class sh extends qc {
     }
 
     sh() {
-        ((sh) this).field_k = 0;
-        ((sh) this).field_j = 0;
+        this.field_k = 0;
+        this.field_j = 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Confirm Email:";
         field_l = "Enter";
     }

@@ -15,23 +15,22 @@ final class to {
                 fg.c((byte) 95);
             }
             tg.a(pj.field_p, ta.field_i, (byte) -41, nf.field_f);
-            bq.a(param1, 0, 0, 4);
+            bq.a(param1, param0, 0, 4);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "to.A(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "to.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
         field_b = null;
+        if (param0 >= -51) {
+            return;
+        }
         field_f = null;
         field_e = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
         field_b = new int[128];
         field_e = "Username: ";

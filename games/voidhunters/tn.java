@@ -7,6 +7,9 @@ final class tn {
 
     public static void a(byte param0) {
         field_b = null;
+        if (param0 != 110) {
+            field_b = (String) null;
+        }
     }
 
     private tn() throws Throwable {
@@ -14,10 +17,6 @@ final class tn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Continue";
     }
 }

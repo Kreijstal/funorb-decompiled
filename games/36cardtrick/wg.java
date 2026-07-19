@@ -7,15 +7,11 @@ final class wg {
     private static String field_z;
 
     public static void a(byte param0) {
-        int var1 = 0;
+        int var1 = -4 % ((-4 - param0) / 51);
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "wg.A(";
         field_b = new bk();
     }

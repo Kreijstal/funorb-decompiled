@@ -17,7 +17,7 @@ abstract class hd extends nb {
 
     final static void a(int param0, int param1, int param2) {
         dp.field_h = param0;
-        Object var4 = null;
+        String var4 = (String) null;
         mn.a(-1, (String) null, true);
         int var3 = -120 / ((-77 - param1) / 47);
     }
@@ -25,6 +25,11 @@ abstract class hd extends nb {
     public static void d(byte param0) {
         field_p = null;
         field_s = null;
+        if (param0 != -77) {
+            field_p = (String[]) null;
+            field_u = null;
+            return;
+        }
         field_u = null;
     }
 
@@ -33,9 +38,12 @@ abstract class hd extends nb {
             Object var6 = null;
             Object var7 = null;
             om var8 = null;
-            dj stackIn_14_0 = null;
+            dj stackIn_11_0 = null;
+            dj stackIn_15_0 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            dj stackOut_13_0 = null;
+            dj stackOut_14_0 = null;
+            dj stackOut_10_0 = null;
             try {
               L0: {
                 L1: {
@@ -45,7 +53,7 @@ abstract class hd extends nb {
                   } else {
                     da.field_j = new sf(lc.field_a.field_e, 5200, 0);
                     lc.field_a.field_e = null;
-                    var6 = (Object) (Object) new na(255, da.field_j, new sf(lc.field_a.field_i, 12000, 0), 2097152);
+                    var6 = new na(255, da.field_j, new sf(lc.field_a.field_i, 12000, 0), 2097152);
                     break L1;
                   }
                 }
@@ -71,29 +79,41 @@ abstract class hd extends nb {
                         break L4;
                       }
                     }
-                    var7 = (Object) (Object) new na(param2, da.field_j, lg.field_v[param2], 2097152);
+                    var7 = new na(param2, da.field_j, lg.field_v[param2], 2097152);
                     break L2;
                   }
                 }
-                var8 = ep.field_l.a((na) var7, (byte) -106, false, param2, (na) var6);
-                L5: {
-                  if (!param5) {
-                    break L5;
-                  } else {
-                    var8.a(false);
-                    break L5;
+                var8 = ep.field_l.a((na) (var7), (byte) -106, param0, param2, (na) (var6));
+                if (param1) {
+                  L5: {
+                    if (!param5) {
+                      break L5;
+                    } else {
+                      var8.a(false);
+                      break L5;
+                    }
                   }
+                  stackOut_14_0 = new dj(var8, param4, param3);
+                  stackIn_15_0 = stackOut_14_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  stackOut_10_0 = (dj) null;
+                  stackIn_11_0 = stackOut_10_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
-                stackOut_13_0 = new dj((w) (Object) var8, true, param3);
-                stackIn_14_0 = stackOut_13_0;
-                break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (Object) (Object) decompiledCaughtException;
-              throw new RuntimeException(((IOException) var6).toString());
+              var6 = (IOException) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) (var6)).toString());
             }
-            return stackIn_14_0;
+            if (decompiledRegionSelector0 == 0) {
+              return stackIn_11_0;
+            } else {
+              return stackIn_15_0;
+            }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -105,10 +125,6 @@ abstract class hd extends nb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = new int[16];
         field_p = new String[]{"Showing by rating", "Showing by win percentage"};
         field_y = 131072;

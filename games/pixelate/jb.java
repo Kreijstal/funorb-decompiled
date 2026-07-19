@@ -9,14 +9,13 @@ final class jb {
 
     public static void a(byte param0) {
         field_b = null;
+        if (param0 != 33) {
+            return;
+        }
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "jb.A(";
         field_c = "The invitation has been withdrawn.";
     }

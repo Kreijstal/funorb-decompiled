@@ -14,7 +14,7 @@ final class pf extends o {
     }
 
     final void a() {
-        ((pf) this).field_k = null;
+        this.field_k = null;
     }
 
     final void b() {
@@ -36,27 +36,19 @@ final class pf extends o {
         int[] var18 = null;
         int[] var19 = null;
         int[] var21 = null;
-        int[] var22 = null;
-        int[] var24 = null;
-        int[] var25 = null;
-        int[] var26 = null;
-        int[] var27 = null;
-        if (((pf) this).field_k == null) {
-          ((pf) this).field_k = new kl(16);
-          var27 = new int[16];
-          var24 = var27;
-          var21 = var24;
+        int[] var23 = null;
+        if (this.field_k == null) {
+          this.field_k = new kl(16);
+          var21 = new int[16];
           var18 = var21;
           var1 = var18;
-          var25 = new int[16];
-          var22 = var25;
-          var19 = var22;
+          var19 = new int[16];
           var16 = var19;
           var2 = var16;
-          var26 = var1;
-          var25[9] = 128;
-          var26[9] = 128;
-          var4 = new al(((pf) this).field_j);
+          var23 = var1;
+          var19[9] = 128;
+          var23[9] = 128;
+          var4 = new al(this.field_j);
           var5 = var4.c();
           var6 = 0;
           L0: while (true) {
@@ -83,14 +75,14 @@ final class pf extends o {
                             if (var11 != 0) {
                               break L4;
                             } else {
-                              var1[var10] = (var27[var10] & -2080769) + (var12 << 14);
+                              var1[var10] = (var21[var10] & -2080769) + (var12 << 14);
                               break L4;
                             }
                           }
                           if (var11 != 32) {
                             break L3;
                           } else {
-                            var1[var10] = (var27[var10] & -16257) + (var12 << 7);
+                            var1[var10] = (var21[var10] & -16257) + (var12 << 7);
                             break L3;
                           }
                         }
@@ -101,7 +93,7 @@ final class pf extends o {
                         } else {
                           var10 = var8 & 15;
                           var11 = var8 >> 8 & 127;
-                          var2[var10] = var27[var10] + var11;
+                          var2[var10] = var21[var10] + var11;
                           break L5;
                         }
                       }
@@ -116,14 +108,14 @@ final class pf extends o {
                             break L6;
                           } else {
                             L7: {
-                              var13 = var25[var10];
-                              var14 = (td) (Object) ((pf) this).field_k.a(30, (long)var13);
+                              var13 = var19[var10];
+                              var14 = (td) ((Object) this.field_k.a(30, (long)var13));
                               if (var14 != null) {
                                 break L7;
                               } else {
                                 var15 = new td(new byte[128]);
                                 var14 = var15;
-                                ((pf) this).field_k.a(48, (long)var13, (o) (Object) var15);
+                                this.field_k.a(48, (long)var13, var15);
                                 break L7;
                               }
                             }
@@ -161,6 +153,35 @@ final class pf extends o {
     }
 
     private pf(p param0) {
+        int incrementValue$29 = 0;
+        int incrementValue$30 = 0;
+        int incrementValue$31 = 0;
+        int incrementValue$32 = 0;
+        int incrementValue$33 = 0;
+        int incrementValue$34 = 0;
+        int incrementValue$35 = 0;
+        int incrementValue$36 = 0;
+        int incrementValue$37 = 0;
+        int incrementValue$38 = 0;
+        int incrementValue$39 = 0;
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
+        int incrementValue$48 = 0;
+        int incrementValue$49 = 0;
+        int incrementValue$50 = 0;
+        int incrementValue$51 = 0;
+        int incrementValue$52 = 0;
+        int incrementValue$53 = 0;
+        int incrementValue$54 = 0;
+        int incrementValue$55 = 0;
+        int incrementValue$56 = 0;
+        int discarded$57 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -324,21 +345,21 @@ final class pf extends o {
                       param0.field_l = param0.field_l + var25;
                       var50 = param0.field_l;
                       param0.field_l = param0.field_l + var5 * 3;
-                      ((pf) this).field_j = new byte[var4];
-                      var51 = new p(((pf) this).field_j);
+                      this.field_j = new byte[var4];
+                      var51 = new p(this.field_j);
                       var51.d(1297377380, (byte) -81);
                       var51.d(6, (byte) -81);
-                      stackOut_64_0 = (p) var51;
+                      stackOut_64_0 = (p) (var51);
                       stackIn_66_0 = stackOut_64_0;
                       stackIn_65_0 = stackOut_64_0;
                       if (var2 <= 1) {
-                        stackOut_66_0 = (p) (Object) stackIn_66_0;
+                        stackOut_66_0 = (p) ((Object) stackIn_66_0);
                         stackOut_66_1 = 0;
                         stackIn_67_0 = stackOut_66_0;
                         stackIn_67_1 = stackOut_66_1;
                         break L3;
                       } else {
-                        stackOut_65_0 = (p) (Object) stackIn_65_0;
+                        stackOut_65_0 = (p) ((Object) stackIn_65_0);
                         stackOut_65_1 = 1;
                         stackIn_67_0 = stackOut_65_0;
                         stackIn_67_1 = stackOut_65_1;
@@ -371,7 +392,7 @@ final class pf extends o {
                           L6: {
                             var63 = param0.c((byte) 78);
                             var51.a(false, var63);
-                            int incrementValue$29 = var29;
+                            incrementValue$29 = var29;
                             var29++;
                             var64 = param0.field_o[incrementValue$29] & 255;
                             if (var64 == var62) {
@@ -406,7 +427,7 @@ final class pf extends o {
                                                 break L7;
                                               }
                                             }
-                                            int incrementValue$30 = var44;
+                                            incrementValue$30 = var44;
                                             var44++;
                                             var51.c((int) param0.field_o[incrementValue$30], (byte) 125);
                                             continue L5;
@@ -420,10 +441,10 @@ final class pf extends o {
                                               break L8;
                                             }
                                           }
-                                          int incrementValue$31 = var37;
+                                          incrementValue$31 = var37;
                                           var37++;
                                           var53 = var53 + param0.field_o[incrementValue$31];
-                                          int incrementValue$32 = var31;
+                                          incrementValue$32 = var31;
                                           var31++;
                                           var58 = var58 + param0.field_o[incrementValue$32];
                                           var51.c(var53 & 127, (byte) -95);
@@ -439,7 +460,7 @@ final class pf extends o {
                                             break L9;
                                           }
                                         }
-                                        int incrementValue$33 = var32;
+                                        incrementValue$33 = var32;
                                         var32++;
                                         var57 = var57 + param0.field_o[incrementValue$33];
                                         var51.c(var57 & 127, (byte) 89);
@@ -454,10 +475,10 @@ final class pf extends o {
                                           break L10;
                                         }
                                       }
-                                      int incrementValue$34 = var45;
+                                      incrementValue$34 = var45;
                                       var45++;
                                       var56 = var56 + param0.field_o[incrementValue$34];
-                                      int incrementValue$35 = var33;
+                                      incrementValue$35 = var33;
                                       var33++;
                                       var56 = var56 + (param0.field_o[incrementValue$35] << 7);
                                       var51.c(var56 & 127, (byte) -76);
@@ -475,7 +496,7 @@ final class pf extends o {
                                     }
                                     L12: {
                                       L13: {
-                                        int incrementValue$36 = var15;
+                                        incrementValue$36 = var15;
                                         var15++;
                                         var28 = var28 + param0.field_o[incrementValue$36] & 127;
                                         var51.c(var28, (byte) -68);
@@ -507,7 +528,7 @@ final class pf extends o {
                                                                           break L14;
                                                                         } else {
                                                                           if (var28 != 123) {
-                                                                            int incrementValue$37 = var39;
+                                                                            incrementValue$37 = var39;
                                                                             var39++;
                                                                             var66 = param0.field_o[incrementValue$37];
                                                                             break L12;
@@ -519,66 +540,66 @@ final class pf extends o {
                                                                     }
                                                                   }
                                                                 }
-                                                                int incrementValue$38 = var30;
+                                                                incrementValue$38 = var30;
                                                                 var30++;
                                                                 var66 = param0.field_o[incrementValue$38];
                                                                 break L12;
                                                               } else {
-                                                                int incrementValue$39 = var49;
+                                                                incrementValue$39 = var49;
                                                                 var49++;
                                                                 var66 = param0.field_o[incrementValue$39];
                                                                 break L12;
                                                               }
                                                             } else {
-                                                              int incrementValue$40 = var48;
+                                                              incrementValue$40 = var48;
                                                               var48++;
                                                               var66 = param0.field_o[incrementValue$40];
                                                               break L12;
                                                             }
                                                           } else {
-                                                            int incrementValue$41 = var47;
+                                                            incrementValue$41 = var47;
                                                             var47++;
                                                             var66 = param0.field_o[incrementValue$41];
                                                             break L12;
                                                           }
                                                         } else {
-                                                          int incrementValue$42 = var46;
+                                                          incrementValue$42 = var46;
                                                           var46++;
                                                           var66 = param0.field_o[incrementValue$42];
                                                           break L12;
                                                         }
                                                       } else {
-                                                        int incrementValue$43 = var43;
+                                                        incrementValue$43 = var43;
                                                         var43++;
                                                         var66 = param0.field_o[incrementValue$43];
                                                         break L12;
                                                       }
                                                     } else {
-                                                      int incrementValue$44 = var36;
+                                                      incrementValue$44 = var36;
                                                       var36++;
                                                       var66 = param0.field_o[incrementValue$44];
                                                       break L12;
                                                     }
                                                   } else {
-                                                    int incrementValue$45 = var42;
+                                                    incrementValue$45 = var42;
                                                     var42++;
                                                     var66 = param0.field_o[incrementValue$45];
                                                     break L12;
                                                   }
                                                 } else {
-                                                  int incrementValue$46 = var35;
+                                                  incrementValue$46 = var35;
                                                   var35++;
                                                   var66 = param0.field_o[incrementValue$46];
                                                   break L12;
                                                 }
                                               } else {
-                                                int incrementValue$47 = var41;
+                                                incrementValue$47 = var41;
                                                 var41++;
                                                 var66 = param0.field_o[incrementValue$47];
                                                 break L12;
                                               }
                                             } else {
-                                              int incrementValue$48 = var34;
+                                              incrementValue$48 = var34;
                                               var34++;
                                               var66 = param0.field_o[incrementValue$48];
                                               break L12;
@@ -588,7 +609,7 @@ final class pf extends o {
                                           }
                                         }
                                       }
-                                      int incrementValue$49 = var44;
+                                      incrementValue$49 = var44;
                                       var44++;
                                       var66 = param0.field_o[incrementValue$49];
                                       break L12;
@@ -607,10 +628,10 @@ final class pf extends o {
                                       break L15;
                                     }
                                   }
-                                  int incrementValue$50 = var37;
+                                  incrementValue$50 = var37;
                                   var37++;
                                   var53 = var53 + param0.field_o[incrementValue$50];
-                                  int incrementValue$51 = var40;
+                                  incrementValue$51 = var40;
                                   var40++;
                                   var55 = var55 + param0.field_o[incrementValue$51];
                                   var51.c(var53 & 127, (byte) 79);
@@ -626,10 +647,10 @@ final class pf extends o {
                                     break L16;
                                   }
                                 }
-                                int incrementValue$52 = var37;
+                                incrementValue$52 = var37;
                                 var37++;
                                 var53 = var53 + param0.field_o[incrementValue$52];
-                                int incrementValue$53 = var38;
+                                incrementValue$53 = var38;
                                 var38++;
                                 var54 = var54 + param0.field_o[incrementValue$53];
                                 var51.c(var53 & 127, (byte) 71);
@@ -647,13 +668,13 @@ final class pf extends o {
                               }
                               var51.c(81, (byte) 83);
                               var51.c(3, (byte) 96);
-                              int incrementValue$54 = var50;
+                              incrementValue$54 = var50;
                               var50++;
                               var51.c((int) param0.field_o[incrementValue$54], (byte) 106);
-                              int incrementValue$55 = var50;
+                              incrementValue$55 = var50;
                               var50++;
                               var51.c((int) param0.field_o[incrementValue$55], (byte) 88);
-                              int incrementValue$56 = var50;
+                              incrementValue$56 = var50;
                               var50++;
                               var51.c((int) param0.field_o[incrementValue$56], (byte) -67);
                               continue L5;
@@ -786,7 +807,7 @@ final class pf extends o {
                   }
                 }
               } else {
-                int discarded$57 = param0.c((byte) 95);
+                discarded$57 = param0.c((byte) 95);
                 var15++;
                 continue L1;
               }

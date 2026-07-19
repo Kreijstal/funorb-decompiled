@@ -36,7 +36,7 @@ final class md {
               pl.field_a[0] = ta.field_c.nextInt();
               pl.field_a[1] = ta.field_c.nextInt();
               pl.field_a[3] = (int)h.field_d;
-              pl.field_a[2] = (int)(h.field_d >> 32);
+              pl.field_a[2] = (int)(h.field_d >> 488269600);
               ui.field_p.field_k = 0;
               ui.field_p.b(false, pl.field_a[0]);
               ui.field_p.b(false, pl.field_a[1]);
@@ -110,32 +110,32 @@ final class md {
                 break L7;
               }
             }
-            ee.a(sc.field_d, (be) (Object) ra.field_C, fj.field_N, 0, ui.field_p);
+            ee.a(sc.field_d, ra.field_C, fj.field_N, param3 ^ -1, ui.field_p);
             ra.field_C.c(ra.field_C.field_k - var5_int, (byte) -96);
-            me.a(-1, -1);
+            me.a(param3, -1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var5;
+            stackOut_20_0 = (RuntimeException) (var5);
             stackOut_20_1 = new StringBuilder().append("md.B(");
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L8;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -143,13 +143,14 @@ final class md {
               break L8;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param1 + ',' + param2 + ',' + -1 + ',' + param4 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void a(int param0, cf param1, int param2) {
         la var6 = null;
         int var5 = 0;
+        int discarded$0 = 0;
         try {
             var6 = ra.field_C;
             var6.c(param0, 7);
@@ -163,10 +164,10 @@ final class md {
             var6.b(false, param1.field_n);
             var6.b(false, param1.field_l);
             var6.b(false, param1.field_o);
-            int discarded$0 = var6.a(var5, false);
+            discarded$0 = var6.a(var5, false);
             var6.a(true, -var5 + var6.field_k);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "md.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "md.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -175,13 +176,13 @@ final class md {
         field_e = null;
         field_b = null;
         field_c = null;
+        if (param0) {
+            kd var2 = (kd) null;
+            md.a((kd) null, -5, false, 89, true);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[128];
         field_c = "To Customer Support";
         field_f = "Create a free Account";

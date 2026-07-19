@@ -10,6 +10,9 @@ final class bva extends vmb {
     static boolean field_d;
 
     public static void b(int param0) {
+        if (param0 != 23008) {
+            return;
+        }
         field_b = null;
         field_g = null;
         field_e = null;
@@ -17,17 +20,13 @@ final class bva extends vmb {
 
     bva(qma[] param0) {
         try {
-            ((bva) this).field_f = param0;
+            this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "bva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 0;
         field_g = "You have <%0> unread messages!";
         field_b = new int[8192];

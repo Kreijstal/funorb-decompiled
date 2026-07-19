@@ -11,14 +11,15 @@ final class pr {
     public static void a(int param0) {
         field_c = null;
         field_b = null;
+        if (param0 != 0) {
+            field_c = (String) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "pr.A(";
         field_b = "My Pitch";
         field_a = new int[7];

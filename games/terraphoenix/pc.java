@@ -15,70 +15,80 @@ final class pc {
         if (param0 > -10) {
             return 69;
         }
-        int var3 = param2 >>> 31;
+        int var3 = param2 >>> 1177897759;
         return -var3 + (var3 + param2) / param1;
     }
 
     final static void a(ci param0, int param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
+        RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
-          vi.field_h = param0;
-          return;
+          L0: {
+            L1: {
+              vi.field_h = param0;
+              if (param1 == 40) {
+                break L1;
+              } else {
+                field_c = (bg[]) null;
+                break L1;
+              }
+            }
+            break L0;
+          }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L0: {
-            var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("pc.D(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
+            stackOut_3_1 = new StringBuilder().append("pc.D(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L0;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L0;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 40 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     final static String a(Throwable param0, int param1) throws IOException {
+        int discarded$1 = 0;
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;
         BufferedReader var6 = null;
         String var7 = null;
-        String var8 = null;
         int var9 = 0;
         int var10 = 0;
         String var11 = null;
@@ -86,14 +96,22 @@ final class pc {
         int var13 = 0;
         el var14 = null;
         StringWriter var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
+        String var20 = null;
+        String var21 = null;
+        String var22 = null;
+        String var23 = null;
+        String var24 = null;
+        String var25 = null;
+        String var26 = null;
+        String var27 = null;
+        String var28 = null;
+        String var29 = null;
+        String var30 = null;
+        String var31 = null;
         L0: {
           var13 = Terraphoenix.field_V;
           if (param0 instanceof el) {
-            var14 = (el) (Object) param0;
+            var14 = (el) ((Object) param0);
             param0 = var14.field_a;
             var2 = var14.field_b + " | ";
             var11 = var2;
@@ -106,83 +124,158 @@ final class pc {
           }
         }
         var15 = new StringWriter();
-        var4 = new PrintWriter((Writer) (Object) var15);
+        var4 = new PrintWriter((Writer) ((Object) var15));
         param0.printStackTrace(var4);
         var4.close();
         var5 = var15.toString();
         var11 = var5;
         var2 = var11;
         var11 = var5;
-        var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
-        var7 = var6.readLine();
-        var11 = var7;
-        var2 = var11;
-        var11 = var7;
-        L1: while (true) {
-          var8 = var6.readLine();
-          var11 = var8;
+        var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
+        if (param1 == 0) {
+          var25 = var6.readLine();
+          var11 = var25;
           var2 = var11;
-          var11 = var8;
-          if (var8 == null) {
-            var2 = var2 + "| " + var7;
-            return var2;
-          } else {
-            L2: {
-              var9 = var8.indexOf('(');
-              var10 = var8.indexOf(')', 1 + var9);
-              if (var9 == -1) {
-                var11 = var8;
-                var2 = var11;
-                var2 = var11;
-                break L2;
-              } else {
-                var11 = var8.substring(0, var9);
-                break L2;
+          var11 = var25;
+          L1: while (true) {
+            var20 = var6.readLine();
+            var11 = var20;
+            var2 = var11;
+            var11 = var20;
+            if (var20 == null) {
+              var2 = var2 + "| " + var25;
+              var11 = var2;
+              var2 = var11;
+              var11 = var2;
+              return var2;
+            } else {
+              L2: {
+                var9 = var20.indexOf('(');
+                var10 = var20.indexOf(')', 1 + var9);
+                if ((var9 ^ -1) == 0) {
+                  var11 = var20;
+                  var2 = var11;
+                  var2 = var11;
+                  break L2;
+                } else {
+                  var11 = var20.substring(0, var9);
+                  break L2;
+                }
               }
-            }
-            L3: {
-              var16 = var11.trim();
-              var2 = var16;
-              var2 = var16;
-              var17 = var16.substring(var16.lastIndexOf(' ') + 1);
-              var2 = var17;
-              var2 = var17;
-              var18 = var17.substring(1 + var17.lastIndexOf('\t'));
-              var2 = var18;
-              var2 = var18;
-              var19 = var2 + var18;
-              var2 = var19;
-              var2 = var19;
-              if (var9 == -1) {
-                break L3;
-              } else {
-                if (var10 == -1) {
+              L3: {
+                var21 = var11.trim();
+                var2 = var21;
+                var2 = var21;
+                var22 = var21.substring(var21.lastIndexOf(' ') + 1);
+                var2 = var22;
+                var2 = var22;
+                var23 = var22.substring(1 + var22.lastIndexOf('\t'));
+                var2 = var23;
+                var2 = var23;
+                var24 = var2 + var23;
+                var2 = var24;
+                var2 = var24;
+                var2 = var24;
+                if ((var9 ^ -1) == 0) {
                   break L3;
                 } else {
-                  var12 = var8.indexOf(".java:", var9);
-                  if (var12 >= 0) {
-                    var2 = var19 + var8.substring(5 + var12, var10);
+                  if (var10 == -1) {
                     break L3;
                   } else {
-                    break L3;
+                    var12 = var20.indexOf(".java:", var9);
+                    if ((var12 ^ -1) <= -1) {
+                      var2 = var24 + var20.substring(5 + var12, var10);
+                      break L3;
+                    } else {
+                      break L3;
+                    }
                   }
                 }
               }
+              var2 = var2 + ' ';
+              continue L1;
             }
-            var2 = var2 + ' ';
-            continue L1;
+          }
+        } else {
+          discarded$1 = pc.a(51, -88, -81);
+          var31 = var6.readLine();
+          var11 = var31;
+          var2 = var11;
+          var11 = var31;
+          var7 = var31;
+          var11 = var7;
+          var2 = var11;
+          var11 = var7;
+          L4: while (true) {
+            var26 = var6.readLine();
+            var11 = var26;
+            var2 = var11;
+            var11 = var26;
+            if (var26 == null) {
+              var2 = var2 + "| " + var31;
+              var11 = var2;
+              var2 = var11;
+              var11 = var2;
+              return var2;
+            } else {
+              L5: {
+                var9 = var26.indexOf('(');
+                var10 = var26.indexOf(')', 1 + var9);
+                if ((var9 ^ -1) == 0) {
+                  var11 = var26;
+                  var2 = var11;
+                  var2 = var11;
+                  break L5;
+                } else {
+                  var11 = var26.substring(0, var9);
+                  break L5;
+                }
+              }
+              L6: {
+                var27 = var11.trim();
+                var2 = var27;
+                var2 = var27;
+                var28 = var27.substring(var27.lastIndexOf(' ') + 1);
+                var2 = var28;
+                var2 = var28;
+                var29 = var28.substring(1 + var28.lastIndexOf('\t'));
+                var2 = var29;
+                var2 = var29;
+                var30 = var2 + var29;
+                var2 = var30;
+                var2 = var30;
+                var2 = var30;
+                if ((var9 ^ -1) == 0) {
+                  break L6;
+                } else {
+                  if (var10 == -1) {
+                    break L6;
+                  } else {
+                    var12 = var26.indexOf(".java:", var9);
+                    if ((var12 ^ -1) <= -1) {
+                      var2 = var30 + var26.substring(5 + var12, var10);
+                      break L6;
+                    } else {
+                      break L6;
+                    }
+                  }
+                }
+              }
+              var2 = var2 + ' ';
+              continue L4;
+            }
           }
         }
     }
 
     pc() {
-        ((pc) this).field_f = 0;
+        this.field_f = 0;
     }
 
     public static void a(int param0) {
         field_d = null;
         field_c = null;
-        field_b = null;
+        field_b = (boolean[][]) null;
         if (param0 != 12653) {
             pc.a(53);
             field_e = null;
@@ -192,10 +285,6 @@ final class pc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new boolean[640][480];
     }
 }

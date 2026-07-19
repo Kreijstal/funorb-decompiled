@@ -20,13 +20,13 @@ final class k {
     }
 
     final static void c() {
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        int var2 = 0;
         if (field_a < 0) {
             field_e = 0;
             field_b = 0;
@@ -60,6 +60,14 @@ final class k {
     }
 
     final static void a(int[] param0, int param1, int param2) {
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
+        int fieldTemp$15 = 0;
         int var3 = 0;
         int[] var4_ref_int__ = null;
         int var4 = 0;
@@ -108,14 +116,18 @@ final class k {
                 if (var7 >= var6) {
                   break L4;
                 } else {
+                  fieldTemp$8 = field_a;
                   field_a = field_a + 1;
-                  field_d[field_a] = param0[var8];
+                  field_d[fieldTemp$8] = param0[var8];
+                  fieldTemp$9 = field_a;
                   field_a = field_a + 1;
-                  field_d[field_a] = var7;
+                  field_d[fieldTemp$9] = var7;
+                  fieldTemp$10 = field_a;
                   field_a = field_a + 1;
-                  field_d[field_a] = param0[var4];
+                  field_d[fieldTemp$10] = param0[var4];
+                  fieldTemp$11 = field_a;
                   field_a = field_a + 1;
-                  field_d[field_a] = var6;
+                  field_d[fieldTemp$11] = var6;
                   break L4;
                 }
               }
@@ -123,14 +135,18 @@ final class k {
               var8 += 2;
               continue L3;
             } else {
+              fieldTemp$12 = field_a;
               field_a = field_a + 1;
-              field_d[field_a] = param0[var4];
+              field_d[fieldTemp$12] = param0[var4];
+              fieldTemp$13 = field_a;
               field_a = field_a + 1;
-              field_d[field_a] = var6;
+              field_d[fieldTemp$13] = var6;
+              fieldTemp$14 = field_a;
               field_a = field_a + 1;
-              field_d[field_a] = param0[var8];
+              field_d[fieldTemp$14] = param0[var8];
+              fieldTemp$15 = field_a;
               field_a = field_a + 1;
-              field_d[field_a] = var7;
+              field_d[fieldTemp$15] = var7;
               var4 = var8;
               var8 += 2;
               continue L3;
@@ -197,7 +213,7 @@ final class k {
             var1 = field_h;
             var2 = field_f;
             var3 = field_c;
-            fn.b(var1, var3, var2 - var1, 0);
+            fn.b(var1, var3, var2 - var1, param0);
         }
     }
 

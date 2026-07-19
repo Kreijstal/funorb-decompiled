@@ -19,10 +19,11 @@ final class gk {
     }
 
     public static void a(int param0) {
+        int discarded$0 = 0;
         field_a = null;
         field_c = null;
         if (param0 != 0) {
-            int discarded$0 = gk.a(103, 65, true, (byte) -104);
+            discarded$0 = gk.a(103, 65, true, (byte) -104);
             field_d = null;
             return;
         }
@@ -31,9 +32,9 @@ final class gk {
 
     final boolean a(boolean param0) {
         if (param0) {
-          if (this != (Object) (Object) da.field_g) {
-            if ((Object) (Object) da.field_f != this) {
-              if ((Object) (Object) eh.field_b == this) {
+          if (this != da.field_g) {
+            if (da.field_f != this) {
+              if (eh.field_b == this) {
                 return true;
               } else {
                 return false;
@@ -50,10 +51,6 @@ final class gk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new Random();
         field_c = "Player names can be up to 12 letters, numbers and underscores";
         field_b = 0;

@@ -16,10 +16,13 @@ final class ga implements Iterable {
         field_b = null;
         field_f = null;
         field_d = null;
+        if (param0 != 72) {
+            field_d = (ce) null;
+        }
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new ee((ga) this);
+        return (Iterator) ((Object) new ee((ga) (this)));
     }
 
     final static boolean a(int param0) {
@@ -50,14 +53,14 @@ final class ga implements Iterable {
             if (!(null == param0.field_e)) {
                 param0.a(param2 ^ 64);
             }
-            var5 = ((ga) this).field_c[(int)((long)(param2 + ((ga) this).field_a) & param1)];
+            var5 = this.field_c[(int)((long)(param2 + this.field_a) & param1)];
             param0.field_h = var5;
             param0.field_e = var5.field_e;
             param0.field_e.field_h = param0;
             param0.field_b = param1;
             param0.field_h.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ga.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "ga.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -66,25 +69,25 @@ final class ga implements Iterable {
         fc var5 = null;
         int var6 = 0;
         var6 = TrackController.field_F ? 1 : 0;
-        var4 = ((ga) this).field_c[(int)((long)(-1 + ((ga) this).field_a) & param0)];
-        ((ga) this).field_g = var4.field_h;
+        var4 = this.field_c[(int)((long)(-1 + this.field_a) & param0)];
+        this.field_g = var4.field_h;
         L0: while (true) {
-          if (var4 == ((ga) this).field_g) {
+          if (var4 == this.field_g) {
             if (param1 != 20) {
-              field_b = null;
-              ((ga) this).field_g = null;
+              field_b = (boolean[]) null;
+              this.field_g = null;
               return null;
             } else {
-              ((ga) this).field_g = null;
+              this.field_g = null;
               return null;
             }
           } else {
-            if (param0 != ((ga) this).field_g.field_b) {
-              ((ga) this).field_g = ((ga) this).field_g.field_h;
+            if (param0 != this.field_g.field_b) {
+              this.field_g = this.field_g.field_h;
               continue L0;
             } else {
-              var5 = ((ga) this).field_g;
-              ((ga) this).field_g = ((ga) this).field_g.field_h;
+              var5 = this.field_g;
+              this.field_g = this.field_g.field_h;
               return var5;
             }
           }
@@ -96,10 +99,6 @@ final class ga implements Iterable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "That name is not available";
     }
 }

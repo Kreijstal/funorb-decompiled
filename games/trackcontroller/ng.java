@@ -14,12 +14,12 @@ final class ng extends fd {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ng) this).field_b;
-          param1 = param1 + ((ng) this).field_a;
+          param0 = param0 + this.field_b;
+          param1 = param1 + this.field_a;
           var3 = param0 + param1 * ll.field_d;
           var4 = 0;
-          var5 = ((ng) this).field_j;
-          var6 = ((ng) this).field_c;
+          var5 = this.field_j;
+          var6 = this.field_c;
           var7 = ll.field_d - var6;
           var8 = 0;
           if (param1 >= ll.field_b) {
@@ -71,7 +71,7 @@ final class ng extends fd {
             break L4;
           } else {
             if (var5 > 0) {
-              ng.b(ll.field_i, ((ng) this).field_m, ((ng) this).field_l, 0, var4, var3, var6, var5, var7, var8);
+              ng.b(ll.field_i, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -81,6 +81,16 @@ final class ng extends fd {
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -102,7 +112,7 @@ final class ng extends fd {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4++;
                     param3 = param1[incrementValue$10];
                     if (param3 == 0) {
@@ -110,7 +120,7 @@ final class ng extends fd {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
@@ -120,48 +130,48 @@ final class ng extends fd {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4++;
                   param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4++;
                   param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4++;
                   param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4++;
                 param3 = param1[incrementValue$18];
                 if (param3 == 0) {
@@ -169,7 +179,7 @@ final class ng extends fd {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param0[incrementValue$19] = param2[param3 & 255];
                   var12++;
@@ -182,6 +192,8 @@ final class ng extends fd {
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -201,7 +213,7 @@ final class ng extends fd {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var13 = param1[incrementValue$66];
                 if (var13 == 0) {
@@ -211,7 +223,7 @@ final class ng extends fd {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -232,12 +244,12 @@ final class ng extends fd {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ng) this).field_b;
-          param1 = param1 + ((ng) this).field_a;
+          param0 = param0 + this.field_b;
+          param1 = param1 + this.field_a;
           var4 = param0 + param1 * ll.field_d;
           var5 = 0;
-          var6 = ((ng) this).field_j;
-          var7 = ((ng) this).field_c;
+          var6 = this.field_j;
+          var7 = this.field_c;
           var8 = ll.field_d - var7;
           var9 = 0;
           if (param1 >= ll.field_b) {
@@ -289,7 +301,7 @@ final class ng extends fd {
             break L4;
           } else {
             if (var6 > 0) {
-              ng.a(ll.field_i, ((ng) this).field_m, ((ng) this).field_l, var5, var4, var7, var6, var8, var9, param2);
+              ng.a(ll.field_i, this.field_m, this.field_l, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -299,24 +311,24 @@ final class ng extends fd {
     }
 
     ng(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        ((ng) this).field_g = param0;
-        ((ng) this).field_k = param1;
-        ((ng) this).field_b = param2;
-        ((ng) this).field_a = param3;
-        ((ng) this).field_c = param4;
-        ((ng) this).field_j = param5;
-        ((ng) this).field_m = param6;
-        ((ng) this).field_l = param7;
+        this.field_g = param0;
+        this.field_k = param1;
+        this.field_b = param2;
+        this.field_a = param3;
+        this.field_c = param4;
+        this.field_j = param5;
+        this.field_m = param6;
+        this.field_l = param7;
     }
 
     ng(int param0, int param1, int param2) {
-        ((ng) this).field_c = param0;
-        ((ng) this).field_g = param0;
-        ((ng) this).field_j = param1;
-        ((ng) this).field_k = param1;
-        ((ng) this).field_a = 0;
-        ((ng) this).field_b = 0;
-        ((ng) this).field_m = new byte[param0 * param1];
-        ((ng) this).field_l = new int[param2];
+        this.field_c = param0;
+        this.field_g = param0;
+        this.field_j = param1;
+        this.field_k = param1;
+        this.field_a = 0;
+        this.field_b = 0;
+        this.field_m = new byte[param0 * param1];
+        this.field_l = new int[param2];
     }
 }

@@ -14,56 +14,60 @@ final class vc {
     public static void a(int param0) {
         field_d = null;
         field_a = null;
-        field_b = null;
-        field_f = null;
+        if (param0 != 0) {
+          field_f = (byte[][]) null;
+          field_b = null;
+          field_f = (byte[][]) null;
+          return;
+        } else {
+          field_b = null;
+          field_f = (byte[][]) null;
+          return;
+        }
     }
 
     final boolean b(int param0) {
         if (param0 != -15493) {
             field_e = 86;
-            return ((vc) this).field_c;
+            return this.field_c;
         }
-        return ((vc) this).field_c;
+        return this.field_c;
     }
 
     final boolean a(boolean param0) {
         if (param0) {
             return false;
         }
-        return ((vc) this).field_h;
+        return this.field_h;
     }
 
     final void a(boolean param0, int param1) {
-        ((vc) this).field_h = true;
+        this.field_h = true;
         if (param1 > -75) {
             return;
         }
-        ((vc) this).field_c = param0 ? true : false;
+        this.field_c = param0 ? true : false;
     }
 
     final String a(byte param0) {
         if (param0 != -58) {
-            field_b = null;
-            return ((vc) this).field_g;
+            field_b = (he[]) null;
+            return this.field_g;
         }
-        return ((vc) this).field_g;
+        return this.field_g;
     }
 
     vc(String param0) {
-        ((vc) this).field_c = false;
-        ((vc) this).field_h = false;
+        this.field_c = false;
+        this.field_h = false;
         try {
-            ((vc) this).field_g = param0;
+            this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "vc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         long var6 = 0L;
         long var4 = 0L;
@@ -73,15 +77,15 @@ final class vc {
         field_d = "Achieved";
         field_f = new byte[1000][];
         field_a = new int[98304];
-        for (var0 = 92682; var0 >= 46341; var0--) {
-            var6 = (long)((var0 << 1) - -1);
-            var4 = (long)((var0 << 1) - 1);
-            var3 = (int)((var6 * var6 >> 18) + -32768L);
-            var2 = (int)(-32768L + (var4 * var4 >> 18));
+        for (var0 = 92682; -46342 >= (var0 ^ -1); var0--) {
+            var6 = (long)((var0 << -1220703679) - -1);
+            var4 = (long)((var0 << -777326559) - 1);
+            var3 = (int)((var6 * var6 >> -1397190254) + -32768L);
+            var2 = (int)(-32768L + (var4 * var4 >> 1708641682));
             if (var3 >= field_a.length) {
                 var3 = -1 + field_a.length;
             }
-            for (var1 = var2 < 0 ? 0 : var2; var3 >= var1; var1++) {
+            for (var1 = -1 < (var2 ^ -1) ? 0 : var2; var3 >= var1; var1++) {
                 field_a[var1] = var0;
             }
         }

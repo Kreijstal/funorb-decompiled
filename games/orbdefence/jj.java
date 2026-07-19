@@ -6,53 +6,139 @@ final class jj extends kj {
     static String field_B;
 
     final static String a(int param0, long param1) {
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$7 = null;
         int var3 = 0;
         long var4 = 0L;
-        StringBuilder var6 = null;
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        java.applet.Applet var12 = null;
+        StringBuilder var13 = null;
+        StringBuilder var14 = null;
         var11 = OrbDefence.field_D ? 1 : 0;
         if (param1 > 0L) {
-          if (param1 < 6582952005840035281L) {
-            if (0L == param1 % 37L) {
-              return null;
-            } else {
+          if (-6582952005840035282L < (param1 ^ -1L)) {
+            if (0L != param1 % 37L) {
               var3 = 0;
-              var4 = param1;
-              L0: while (true) {
-                if (var4 == 0L) {
-                  var6 = new StringBuilder(var3);
-                  L1: while (true) {
-                    if (param1 == 0L) {
-                      StringBuilder discarded$2 = var6.reverse();
-                      var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
-                      return var6.toString();
+              if (param0 != 14461) {
+                var12 = (java.applet.Applet) null;
+                jj.a((String) null, (byte) -111, (java.applet.Applet) null);
+                var4 = param1;
+                L0: while (true) {
+                  L1: {
+                    if (-1L == (var4 ^ -1L)) {
+                      break L1;
                     } else {
-                      L2: {
-                        var7 = param1;
-                        param1 = param1 / 37L;
-                        var9 = nk.field_r[(int)(-(param1 * 37L) + var7)];
-                        if (var9 != 95) {
-                          break L2;
-                        } else {
-                          var10 = var6.length() - 1;
-                          var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
-                          var9 = 160;
-                          break L2;
-                        }
+                      var4 = var4 / 37L;
+                      var3++;
+                      if (var11 == 0) {
+                        continue L0;
+                      } else {
+                        break L1;
                       }
-                      StringBuilder discarded$3 = var6.append((char) var9);
-                      continue L1;
                     }
                   }
-                } else {
-                  var4 = var4 / 37L;
-                  var3++;
-                  continue L0;
+                  var13 = new StringBuilder(var3);
+                  L2: while (true) {
+                    L3: {
+                      L4: {
+                        if (-1L == (param1 ^ -1L)) {
+                          break L4;
+                        } else {
+                          var7 = param1;
+                          param1 = param1 / 37L;
+                          var9 = nk.field_r[(int)(-(param1 * 37L) + var7)];
+                          if (var11 != 0) {
+                            break L3;
+                          } else {
+                            L5: {
+                              if (var9 != 95) {
+                                break L5;
+                              } else {
+                                var10 = var13.length() - 1;
+                                var13.setCharAt(var10, Character.toUpperCase(var13.charAt(var10)));
+                                var9 = 160;
+                                break L5;
+                              }
+                            }
+                            discarded$4 = var13.append((char) var9);
+                            if (var11 == 0) {
+                              continue L2;
+                            } else {
+                              break L4;
+                            }
+                          }
+                        }
+                      }
+                      discarded$5 = var13.reverse();
+                      var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
+                      break L3;
+                    }
+                    return var13.toString();
+                  }
+                }
+              } else {
+                var4 = param1;
+                L6: while (true) {
+                  L7: {
+                    if (-1L == (var4 ^ -1L)) {
+                      break L7;
+                    } else {
+                      var4 = var4 / 37L;
+                      var3++;
+                      if (var11 == 0) {
+                        continue L6;
+                      } else {
+                        break L7;
+                      }
+                    }
+                  }
+                  var14 = new StringBuilder(var3);
+                  L8: while (true) {
+                    L9: {
+                      L10: {
+                        if (-1L == (param1 ^ -1L)) {
+                          break L10;
+                        } else {
+                          var7 = param1;
+                          param1 = param1 / 37L;
+                          var9 = nk.field_r[(int)(-(param1 * 37L) + var7)];
+                          if (var11 != 0) {
+                            break L9;
+                          } else {
+                            L11: {
+                              if (var9 != 95) {
+                                break L11;
+                              } else {
+                                var10 = var14.length() - 1;
+                                var14.setCharAt(var10, Character.toUpperCase(var14.charAt(var10)));
+                                var9 = 160;
+                                break L11;
+                              }
+                            }
+                            discarded$6 = var14.append((char) var9);
+                            if (var11 == 0) {
+                              continue L8;
+                            } else {
+                              break L10;
+                            }
+                          }
+                        }
+                      }
+                      discarded$7 = var14.reverse();
+                      var14.setCharAt(0, Character.toUpperCase(var14.charAt(0)));
+                      break L9;
+                    }
+                    return var14.toString();
+                  }
                 }
               }
+            } else {
+              return null;
             }
           } else {
             return null;
@@ -64,20 +150,20 @@ final class jj extends kj {
 
     final void a(int param0, int param1, int param2, int param3) {
         hj var5 = null;
-        if (param1 != 0) {
+        if (-1 != (param1 ^ -1)) {
           return;
         } else {
-          if (((jj) this).field_y != null) {
-            if (0 != ((jj) this).field_A) {
-              if (((jj) this).field_A == 256) {
-                ((jj) this).field_y.a(((jj) this).field_n + param0, param1, 1048575, ((jj) this).field_s + param3);
+          if (this.field_y != null) {
+            if (0 != this.field_A) {
+              if (this.field_A == 256) {
+                this.field_y.a(this.field_n + param0, param1, 1048575, this.field_s + param3);
                 return;
               } else {
-                var5 = new hj(((jj) this).field_y.field_m, ((jj) this).field_y.field_r);
+                var5 = new hj(this.field_y.field_m, this.field_y.field_r);
                 de.a(-128, var5);
-                ((jj) this).field_y.a(0, param1, param2, 0);
+                this.field_y.a(0, param1, param2, 0);
                 oc.g((byte) -105);
-                var5.a(((jj) this).field_s + param3, param0 - -((jj) this).field_n, ((jj) this).field_A);
+                var5.a(this.field_s + param3, param0 - -this.field_n, this.field_A);
                 return;
               }
             } else {
@@ -92,20 +178,23 @@ final class jj extends kj {
     jj(pj param0) {
         super(param0.field_s, param0.field_n, param0.field_m, param0.field_r, (td) null, (ag) null);
         try {
-            param0.a(0, 0, ((jj) this).field_r, (byte) -90, ((jj) this).field_m);
-            ((jj) this).field_A = 256;
-            ((jj) this).field_y = param0;
+            param0.a(0, 0, this.field_r, (byte) -90, this.field_m);
+            this.field_A = 256;
+            this.field_y = param0;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "jj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dd.a((Throwable) ((Object) runtimeException), "jj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public jj() {
         super(0, 0, 0, 0, (td) null, (ag) null);
-        ((jj) this).field_A = 256;
+        this.field_A = 256;
     }
 
     public static void k(int param0) {
+        if (param0 != 37) {
+            return;
+        }
         field_B = null;
     }
 
@@ -166,23 +255,23 @@ final class jj extends kj {
               decompiledCaughtException = decompiledCaughtParameter1;
               L1: {
                 var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_4_0 = (RuntimeException) var3_ref2;
+                stackOut_4_0 = (RuntimeException) (var3_ref2);
                 stackOut_4_1 = new StringBuilder().append("jj.G(");
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
                 stackIn_5_0 = stackOut_4_0;
                 stackIn_5_1 = stackOut_4_1;
                 if (param0 == null) {
-                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+                  stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
                   stackOut_6_2 = "null";
                   stackIn_7_0 = stackOut_6_0;
                   stackIn_7_1 = stackOut_6_1;
                   stackIn_7_2 = stackOut_6_2;
                   break L1;
                 } else {
-                  stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-                  stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+                  stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+                  stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
                   stackOut_5_2 = "{...}";
                   stackIn_7_0 = stackOut_5_0;
                   stackIn_7_1 = stackOut_5_1;
@@ -191,23 +280,23 @@ final class jj extends kj {
                 }
               }
               L2: {
-                stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
                 stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
                 stackIn_9_0 = stackOut_7_0;
                 stackIn_9_1 = stackOut_7_1;
                 stackIn_8_0 = stackOut_7_0;
                 stackIn_8_1 = stackOut_7_1;
                 if (param2 == null) {
-                  stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-                  stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+                  stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+                  stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
                   stackOut_9_2 = "null";
                   stackIn_10_0 = stackOut_9_0;
                   stackIn_10_1 = stackOut_9_1;
                   stackIn_10_2 = stackOut_9_2;
                   break L2;
                 } else {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "{...}";
                   stackIn_10_0 = stackOut_8_0;
                   stackIn_10_1 = stackOut_8_1;
@@ -215,7 +304,7 @@ final class jj extends kj {
                   break L2;
                 }
               }
-              throw dd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+              throw dd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -225,17 +314,21 @@ final class jj extends kj {
     }
 
     final static String l(int param0) {
-        if (!(null != gb.field_h)) {
-            return "";
+        java.applet.Applet var2 = null;
+        if (null == gb.field_h) {
+          return "";
+        } else {
+          if (param0 >= -94) {
+            var2 = (java.applet.Applet) null;
+            jj.a((String) null, (byte) 69, (java.applet.Applet) null);
+            return gb.field_h;
+          } else {
+            return gb.field_h;
+          }
         }
-        return gb.field_h;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_B = "Waiting for graphics";
     }
 }

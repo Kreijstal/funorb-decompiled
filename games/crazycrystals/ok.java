@@ -14,7 +14,7 @@ final class ok implements wo {
 
     final static void a(int param0) {
         jm.field_a = null;
-        ui.field_c = null;
+        ui.field_c = (byte[][]) null;
         if (param0 != 2188450) {
             return;
         }
@@ -24,7 +24,7 @@ final class ok implements wo {
             gh.field_z = null;
             uo.field_k = null;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "ok.A(" + param0 + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "ok.A(" + param0 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class ok implements wo {
             L2: while (true) {
               L3: {
                 L4: {
-                  if (~param0.field_I >= ~var9) {
+                  if ((param0.field_I ^ -1) >= (var9 ^ -1)) {
                     break L4;
                   } else {
                     var10 = param0.field_K[var9];
@@ -137,7 +137,7 @@ final class ok implements wo {
                           }
                         }
                         var13 = cf.field_g[var10];
-                        if (var13 == -2147483648) {
+                        if (2147483647 == (var13 ^ -1)) {
                           break L5;
                         } else {
                           var14 = cf.field_g[var11];
@@ -145,7 +145,7 @@ final class ok implements wo {
                             break L5;
                           } else {
                             var15 = cf.field_g[var12];
-                            if (var15 == -2147483648) {
+                            if ((var15 ^ -1) == 2147483647) {
                               break L5;
                             } else {
                               L7: {
@@ -165,12 +165,12 @@ final class ok implements wo {
                               L8: while (true) {
                                 L9: {
                                   L10: {
-                                    if (var18 >> 4 == 0) {
+                                    if ((var18 >> 488168516 ^ -1) == -1) {
                                       break L10;
                                     } else {
                                       var17--;
                                       stackOut_27_0 = -1;
-                                      stackOut_27_1 = ~var17;
+                                      stackOut_27_1 = var17 ^ -1;
                                       stackIn_36_0 = stackOut_27_0;
                                       stackIn_36_1 = stackOut_27_1;
                                       stackIn_28_0 = stackOut_27_0;
@@ -199,7 +199,7 @@ final class ok implements wo {
                                       }
                                     }
                                   }
-                                  stackOut_35_0 = var17 << 4;
+                                  stackOut_35_0 = var17 << 928575492;
                                   stackOut_35_1 = var18;
                                   stackIn_36_0 = stackOut_35_0;
                                   stackIn_36_1 = stackOut_35_1;
@@ -209,7 +209,7 @@ final class ok implements wo {
                                   var19 = stackIn_36_0 + stackIn_36_1;
                                   gh.field_E[var19] = var9;
                                   ga.field_J[var17] = 1 + var18;
-                                  if (param0.field_s <= 0) {
+                                  if (-1 <= (param0.field_s ^ -1)) {
                                     break L12;
                                   } else {
                                     if (null == param0.field_o) {
@@ -242,7 +242,7 @@ final class ok implements wo {
               }
               L13: {
                 L14: {
-                  if (stackIn_45_0 <= ~param0.field_s) {
+                  if (stackIn_45_0 <= (param0.field_s ^ -1)) {
                     break L14;
                   } else {
                     if (null == param0.field_o) {
@@ -251,7 +251,7 @@ final class ok implements wo {
                       var9 = 0;
                       var10 = 0;
                       L15: while (true) {
-                        if (~to.field_b.length >= ~var10) {
+                        if ((to.field_b.length ^ -1) >= (var10 ^ -1)) {
                           break L14;
                         } else {
                           var11 = to.field_b[var10];
@@ -281,23 +281,23 @@ final class ok implements wo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var5 = decompiledCaughtException;
-            stackOut_56_0 = (RuntimeException) var5;
+            stackOut_56_0 = (RuntimeException) (var5);
             stackOut_56_1 = new StringBuilder().append("ok.C(");
             stackIn_59_0 = stackOut_56_0;
             stackIn_59_1 = stackOut_56_1;
             stackIn_57_0 = stackOut_56_0;
             stackIn_57_1 = stackOut_56_1;
             if (param0 == null) {
-              stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
-              stackOut_59_1 = (StringBuilder) (Object) stackIn_59_1;
+              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
+              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
               stackOut_59_2 = "null";
               stackIn_60_0 = stackOut_59_0;
               stackIn_60_1 = stackOut_59_1;
               stackIn_60_2 = stackOut_59_2;
               break L16;
             } else {
-              stackOut_57_0 = (RuntimeException) (Object) stackIn_57_0;
-              stackOut_57_1 = (StringBuilder) (Object) stackIn_57_1;
+              stackOut_57_0 = (RuntimeException) ((Object) stackIn_57_0);
+              stackOut_57_1 = (StringBuilder) ((Object) stackIn_57_1);
               stackOut_57_2 = "{...}";
               stackIn_60_0 = stackOut_57_0;
               stackIn_60_1 = stackOut_57_1;
@@ -305,7 +305,7 @@ final class ok implements wo {
               break L16;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_60_0, stackIn_60_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_60_0), stackIn_60_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -321,17 +321,17 @@ final class ok implements wo {
             field_i = null;
             field_a = null;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "ok.D(" + param0 + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "ok.D(" + param0 + ')');
         }
     }
 
     public ok() {
         try {
-            ((ok) this).field_h = ai.field_h;
-            ((ok) this).field_f = 1;
-            ((ok) this).field_d = 1;
+            this.field_h = ai.field_h;
+            this.field_f = 1;
+            this.field_d = 1;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "ok.<init>()");
+            throw dn.a((Throwable) ((Object) runtimeException), "ok.<init>()");
         }
     }
 
@@ -355,32 +355,32 @@ final class ok implements wo {
         String stackOut_4_2 = null;
         try {
           L0: {
-            ((ok) this).field_d = param2;
-            ((ok) this).field_f = param1;
-            ((ok) this).field_h = param0;
+            this.field_d = param2;
+            this.field_f = param1;
+            this.field_h = param0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ok.<init>(");
             stackIn_6_0 = stackOut_3_0;
             stackIn_6_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_7_0 = stackOut_4_0;
               stackIn_7_1 = stackOut_4_1;
@@ -388,11 +388,12 @@ final class ok implements wo {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public final void a(int param0, boolean param1, int param2, qm param3, boolean param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -408,6 +409,7 @@ final class ok implements wo {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_7_0 = 0;
@@ -443,23 +445,23 @@ final class ok implements wo {
               }
               L3: {
                 var6_int = stackIn_10_0;
-                int discarded$1 = ((ok) this).field_h.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_o + "</u>", param2 - -param3.field_r, param0 + param3.field_j, param3.field_g, param3.field_f, var6_int, -1, ((ok) this).field_f, ((ok) this).field_d, ((ok) this).field_h.field_u + ((ok) this).field_h.field_o);
+                discarded$1 = this.field_h.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_o + "</u>", param2 - -param3.field_r, param0 + param3.field_j, param3.field_g, param3.field_f, var6_int, -1, this.field_f, this.field_d, this.field_h.field_u + this.field_h.field_o);
                 if (!param3.e(-125)) {
                   break L3;
                 } else {
                   L4: {
                     L5: {
-                      var7 = ((ok) this).field_h.a(param3.field_o);
-                      var8 = ((ok) this).field_h.field_o - -((ok) this).field_h.field_u;
+                      var7 = this.field_h.a(param3.field_o);
+                      var8 = this.field_h.field_o - -this.field_h.field_u;
                       var9 = param2 - -param3.field_r;
                       var10 = param3.field_j + param0;
-                      if (((ok) this).field_f == 2) {
+                      if (this.field_f == 2) {
                         break L5;
                       } else {
-                        if (1 != ((ok) this).field_f) {
+                        if (1 != this.field_f) {
                           break L4;
                         } else {
-                          var9 = var9 + (-var7 + param3.field_g >> 1);
+                          var9 = var9 + (-var7 + param3.field_g >> -475426655);
                           if (var11 == 0) {
                             break L4;
                           } else {
@@ -473,13 +475,13 @@ final class ok implements wo {
                   }
                   L6: {
                     L7: {
-                      if (((ok) this).field_d == 2) {
+                      if ((this.field_d ^ -1) == -3) {
                         break L7;
                       } else {
-                        if (((ok) this).field_d != 1) {
+                        if (-2 != (this.field_d ^ -1)) {
                           break L6;
                         } else {
-                          var10 = var10 + (-var8 + param3.field_f >> 1);
+                          var10 = var10 + (-var8 + param3.field_f >> 1133987009);
                           if (var11 == 0) {
                             break L6;
                           } else {
@@ -495,32 +497,34 @@ final class ok implements wo {
                   break L3;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var6 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var6;
+            stackOut_25_0 = (RuntimeException) (var6);
             stackOut_25_1 = new StringBuilder().append("ok.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_28_0 = stackOut_25_0;
             stackIn_28_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param3 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L8;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_29_0 = stackOut_26_0;
               stackIn_29_1 = stackOut_26_1;
@@ -528,15 +532,16 @@ final class ok implements wo {
               break L8;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param4 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Create";
         field_b = new fp();
         field_a = new wb();

@@ -14,9 +14,9 @@ final class tla {
     static String field_a;
 
     final void a(byte param0, int param1) {
-        jaggl.OpenGL.glNewList(((tla) this).field_i + param1, 4864);
+        jaggl.OpenGL.glNewList(this.field_i + param1, 4864);
         if (param0 != 6) {
-            ((tla) this).a(-22, '~');
+            this.a(-22, '~');
         }
     }
 
@@ -24,7 +24,7 @@ final class tla {
         if (param0 != 4864) {
             return;
         }
-        jaggl.OpenGL.glCallList(((tla) this).field_i - -param1);
+        jaggl.OpenGL.glCallList(this.field_i - -param1);
     }
 
     final void b(byte param0) {
@@ -34,27 +34,36 @@ final class tla {
 
     tla(cka param0, int param1) {
         try {
-            ((tla) this).field_i = jaggl.OpenGL.glGenLists(param1);
+            this.field_i = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(byte param0) {
-        field_d = null;
-        field_c = null;
-        field_h = null;
-        field_g = null;
-        field_a = null;
-        field_f = null;
-        field_j = null;
+        if (param0 < 76) {
+          field_h = (String) null;
+          field_d = null;
+          field_c = null;
+          field_h = null;
+          field_g = null;
+          field_a = null;
+          field_f = null;
+          field_j = null;
+          return;
+        } else {
+          field_d = null;
+          field_c = null;
+          field_h = null;
+          field_g = null;
+          field_a = null;
+          field_f = null;
+          field_j = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_j = "This game has started.";
         field_d = "Your rating is <%0>";

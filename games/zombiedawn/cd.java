@@ -11,12 +11,12 @@ final class cd extends vn {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((cd) this).field_v;
-          param1 = param1 + ((cd) this).field_x;
+          param0 = param0 + this.field_v;
+          param1 = param1 + this.field_x;
           var4 = param0 + param1 * bi.field_f;
           var5 = 0;
-          var6 = ((cd) this).field_t;
-          var7 = ((cd) this).field_w;
+          var6 = this.field_t;
+          var7 = this.field_w;
           var8 = bi.field_f - var7;
           var9 = 0;
           if (param1 >= bi.field_l) {
@@ -68,7 +68,7 @@ final class cd extends vn {
             break L4;
           } else {
             if (var6 > 0) {
-              cd.c(bi.field_c, ((cd) this).field_z, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+              cd.c(bi.field_c, this.field_z, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -86,12 +86,12 @@ final class cd extends vn {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((cd) this).field_v;
-          param1 = param1 + ((cd) this).field_x;
+          param0 = param0 + this.field_v;
+          param1 = param1 + this.field_x;
           var3 = param0 + param1 * bi.field_f;
           var4 = 0;
-          var5 = ((cd) this).field_t;
-          var6 = ((cd) this).field_w;
+          var5 = this.field_t;
+          var6 = this.field_w;
           var7 = bi.field_f - var6;
           var8 = 0;
           if (param1 >= bi.field_l) {
@@ -143,7 +143,7 @@ final class cd extends vn {
             break L4;
           } else {
             if (var5 > 0) {
-              cd.d(bi.field_c, ((cd) this).field_z, 0, var4, var3, var6, var5, var7, var8);
+              cd.d(bi.field_c, this.field_z, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -170,30 +170,30 @@ final class cd extends vn {
           } else {
             if (param3 > 0) {
               L1: {
-                var6 = ((cd) this).field_w;
-                var7 = ((cd) this).field_t;
+                var6 = this.field_w;
+                var7 = this.field_t;
                 var8 = 0;
                 var9 = 0;
-                var10 = ((cd) this).field_r;
-                var11 = ((cd) this).field_q;
+                var10 = this.field_r;
+                var11 = this.field_q;
                 var12 = (var10 << 16) / param2;
                 var13 = (var11 << 16) / param3;
-                if (((cd) this).field_v <= 0) {
+                if (this.field_v <= 0) {
                   break L1;
                 } else {
-                  var14 = ((((cd) this).field_v << 16) + var12 - 1) / var12;
+                  var14 = ((this.field_v << 16) + var12 - 1) / var12;
                   param0 = param0 + var14;
-                  var8 = var8 + (var14 * var12 - (((cd) this).field_v << 16));
+                  var8 = var8 + (var14 * var12 - (this.field_v << 16));
                   break L1;
                 }
               }
               L2: {
-                if (((cd) this).field_x <= 0) {
+                if (this.field_x <= 0) {
                   break L2;
                 } else {
-                  var14 = ((((cd) this).field_x << 16) + var13 - 1) / var13;
+                  var14 = ((this.field_x << 16) + var13 - 1) / var13;
                   param1 = param1 + var14;
-                  var9 = var9 + (var14 * var13 - (((cd) this).field_x << 16));
+                  var9 = var9 + (var14 * var13 - (this.field_x << 16));
                   break L2;
                 }
               }
@@ -256,7 +256,7 @@ final class cd extends vn {
                   break L8;
                 }
               }
-              cd.b(bi.field_c, ((cd) this).field_z, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
+              cd.b(bi.field_c, this.field_z, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
               return;
             } else {
               break L0;
@@ -266,6 +266,8 @@ final class cd extends vn {
     }
 
     final void c(int param0, int param1, int param2, int param3) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -279,10 +281,10 @@ final class cd extends vn {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        if (((cd) this).field_t != 0) {
+        if (this.field_t != 0) {
           L0: {
-            var5 = ((cd) this).field_t;
-            var6 = ((cd) this).field_w;
+            var5 = this.field_t;
+            var6 = this.field_w;
             var7 = param2 << 8;
             var8 = (param3 - param2 << 8) / var5;
             var9 = 0;
@@ -323,7 +325,7 @@ final class cd extends vn {
             }
           }
           var10 = bi.field_f - var6;
-          var11 = ((cd) this).field_w - var6;
+          var11 = this.field_w - var6;
           var12 = param0 + param1 * bi.field_f;
           param1 = -var5;
           L4: while (true) {
@@ -341,13 +343,13 @@ final class cd extends vn {
                     param1++;
                     continue L4;
                   } else {
-                    var14 = (((cd) this).field_z[var9] >>> 24) * var13 >> 8;
+                    var14 = (this.field_z[var9] >>> 24) * var13 >> 8;
                     var15 = 256 - var14;
-                    int incrementValue$2 = var9;
+                    incrementValue$2 = var9;
                     var9++;
-                    var16 = ((cd) this).field_z[incrementValue$2];
+                    var16 = this.field_z[incrementValue$2];
                     var17 = bi.field_c[var12];
-                    int incrementValue$3 = var12;
+                    incrementValue$3 = var12;
                     var12++;
                     bi.field_c[incrementValue$3] = ((var16 & 16711935) * var14 + (var17 & 16711935) * var15 & -16711936) + ((var16 & 65280) * var14 + (var17 & 65280) * var15 & 16711680) >>> 8;
                     param0++;
@@ -383,30 +385,30 @@ final class cd extends vn {
           } else {
             if (param3 > 0) {
               L1: {
-                var5 = ((cd) this).field_w;
-                var6 = ((cd) this).field_t;
+                var5 = this.field_w;
+                var6 = this.field_t;
                 var7 = 0;
                 var8 = 0;
-                var9 = ((cd) this).field_r;
-                var10 = ((cd) this).field_q;
+                var9 = this.field_r;
+                var10 = this.field_q;
                 var11 = (var9 << 16) / param2;
                 var12 = (var10 << 16) / param3;
-                if (((cd) this).field_v <= 0) {
+                if (this.field_v <= 0) {
                   break L1;
                 } else {
-                  var13 = ((((cd) this).field_v << 16) + var11 - 1) / var11;
+                  var13 = ((this.field_v << 16) + var11 - 1) / var11;
                   param0 = param0 + var13;
-                  var7 = var7 + (var13 * var11 - (((cd) this).field_v << 16));
+                  var7 = var7 + (var13 * var11 - (this.field_v << 16));
                   break L1;
                 }
               }
               L2: {
-                if (((cd) this).field_x <= 0) {
+                if (this.field_x <= 0) {
                   break L2;
                 } else {
-                  var13 = ((((cd) this).field_x << 16) + var12 - 1) / var12;
+                  var13 = ((this.field_x << 16) + var12 - 1) / var12;
                   param1 = param1 + var13;
-                  var8 = var8 + (var13 * var12 - (((cd) this).field_x << 16));
+                  var8 = var8 + (var13 * var12 - (this.field_x << 16));
                   break L2;
                 }
               }
@@ -469,7 +471,7 @@ final class cd extends vn {
                   break L8;
                 }
               }
-              cd.d(bi.field_c, ((cd) this).field_z, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+              cd.d(bi.field_c, this.field_z, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
               return;
             } else {
               break L0;
@@ -500,8 +502,6 @@ final class cd extends vn {
         int var21 = 0;
         int[] var22 = null;
         int[] var23 = null;
-        int[] var24 = null;
-        int[] var25 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -515,10 +515,10 @@ final class cd extends vn {
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
         L0: {
-          var3 = ((cd) this).field_w >> 2;
-          var4 = ((cd) this).field_t >> 2;
-          param0 = param0 + ((cd) this).field_v / 4;
-          param1 = param1 + ((cd) this).field_x / 4;
+          var3 = this.field_w >> 2;
+          var4 = this.field_t >> 2;
+          param0 = param0 + this.field_v / 4;
+          param1 = param1 + this.field_x / 4;
           if (param0 >= bi.field_g) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -532,7 +532,7 @@ final class cd extends vn {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= bi.field_b) {
-            stackOut_5_0 = ((cd) this).field_w - 4;
+            stackOut_5_0 = this.field_w - 4;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -556,7 +556,7 @@ final class cd extends vn {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= bi.field_d) {
-            stackOut_11_0 = ((cd) this).field_t - 4;
+            stackOut_11_0 = this.field_t - 4;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -566,9 +566,7 @@ final class cd extends vn {
           }
         }
         var8 = stackIn_12_0;
-        var25 = new int[16];
-        var24 = var25;
-        var23 = var24;
+        var23 = new int[16];
         var22 = var23;
         var9 = var22;
         var10 = var7;
@@ -582,12 +580,12 @@ final class cd extends vn {
                 var10 += 4;
                 continue L4;
               } else {
-                var12 = var10 * ((cd) this).field_w + var11;
+                var12 = var10 * this.field_w + var11;
                 var13 = (param1 + (var10 >> 2)) * bi.field_f + (param0 + (var11 >> 2));
                 var14 = 0;
                 L6: while (true) {
                   if (var14 >= 4) {
-                    var25 = var24;
+                    var23 = var22;
                     var14 = 0;
                     var15 = 0;
                     var16 = 0;
@@ -610,11 +608,11 @@ final class cd extends vn {
                           continue L5;
                         }
                       } else {
-                        var14 = var25[var19] >>> 24;
+                        var14 = var23[var19] >>> 24;
                         var15 = var15 + var14;
-                        var16 = var16 + var14 * (var25[var19] >> 16 & 255);
-                        var17 = var17 + var14 * (var25[var19] >> 8 & 255);
-                        var18 = var18 + var14 * (var25[var19] & 255);
+                        var16 = var16 + var14 * (var23[var19] >> 16 & 255);
+                        var17 = var17 + var14 * (var23[var19] >> 8 & 255);
+                        var18 = var18 + var14 * (var23[var19] & 255);
                         var19++;
                         continue L7;
                       }
@@ -626,7 +624,7 @@ final class cd extends vn {
                         var14++;
                         continue L6;
                       } else {
-                        var9[(var14 << 2) + var15] = ((cd) this).field_z[var12 + var14 * ((cd) this).field_w + var15];
+                        var9[(var14 << 2) + var15] = this.field_z[var12 + var14 * this.field_w + var15];
                         var15++;
                         continue L8;
                       }
@@ -640,6 +638,8 @@ final class cd extends vn {
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var14 = 0;
         param8 = -param10;
         L0: while (true) {
@@ -654,7 +654,7 @@ final class cd extends vn {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -669,7 +669,7 @@ final class cd extends vn {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -682,6 +682,8 @@ final class cd extends vn {
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -702,7 +704,7 @@ final class cd extends vn {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -713,7 +715,7 @@ final class cd extends vn {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
@@ -734,12 +736,12 @@ final class cd extends vn {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((cd) this).field_v;
-          param1 = param1 + ((cd) this).field_x;
+          param0 = param0 + this.field_v;
+          param1 = param1 + this.field_x;
           var4 = param0 + param1 * bi.field_f;
           var5 = 0;
-          var6 = ((cd) this).field_t;
-          var7 = ((cd) this).field_w;
+          var6 = this.field_t;
+          var7 = this.field_w;
           var8 = bi.field_f - var7;
           var9 = 0;
           if (param1 >= bi.field_l) {
@@ -791,7 +793,7 @@ final class cd extends vn {
             break L4;
           } else {
             if (var6 > 0) {
-              cd.b(0, 0, 0, bi.field_c, ((cd) this).field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+              cd.b(0, 0, 0, bi.field_c, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -813,12 +815,12 @@ final class cd extends vn {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((cd) this).field_v;
-          param1 = param1 + (((cd) this).field_q - ((cd) this).field_t - ((cd) this).field_x);
-          var3 = param0 + (param1 + ((cd) this).field_t - 1) * bi.field_f;
+          param0 = param0 + this.field_v;
+          param1 = param1 + (this.field_q - this.field_t - this.field_x);
+          var3 = param0 + (param1 + this.field_t - 1) * bi.field_f;
           var4 = 0;
-          var5 = ((cd) this).field_t;
-          var6 = ((cd) this).field_w;
+          var5 = this.field_t;
+          var6 = this.field_w;
           var7 = -bi.field_f - var6;
           var8 = 0;
           if (param1 >= bi.field_l) {
@@ -870,7 +872,7 @@ final class cd extends vn {
             break L4;
           } else {
             if (var5 > 0) {
-              cd.d(bi.field_c, ((cd) this).field_z, 0, var4, var3, var6, var5, var7, var8);
+              cd.d(bi.field_c, this.field_z, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -888,12 +890,12 @@ final class cd extends vn {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((cd) this).field_v;
-          param1 = param1 + ((cd) this).field_x;
+          param0 = param0 + this.field_v;
+          param1 = param1 + this.field_x;
           var4 = param0 + param1 * bi.field_f;
           var5 = 0;
-          var6 = ((cd) this).field_t;
-          var7 = ((cd) this).field_w;
+          var6 = this.field_t;
+          var7 = this.field_w;
           var8 = bi.field_f - var7;
           var9 = 0;
           if (param1 >= bi.field_l) {
@@ -945,7 +947,7 @@ final class cd extends vn {
             break L4;
           } else {
             if (var6 > 0) {
-              cd.e(bi.field_c, ((cd) this).field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+              cd.e(bi.field_c, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -963,12 +965,12 @@ final class cd extends vn {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((cd) this).field_v;
-          param1 = param1 + ((cd) this).field_x;
+          param0 = param0 + this.field_v;
+          param1 = param1 + this.field_x;
           var4 = param0 + param1 * bi.field_f;
           var5 = 0;
-          var6 = ((cd) this).field_t;
-          var7 = ((cd) this).field_w;
+          var6 = this.field_t;
+          var7 = this.field_w;
           var8 = bi.field_f - var7;
           var9 = 0;
           if (param1 >= bi.field_l) {
@@ -1020,7 +1022,7 @@ final class cd extends vn {
             break L4;
           } else {
             if (var6 > 0) {
-              cd.f(bi.field_c, ((cd) this).field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+              cd.f(bi.field_c, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -1030,6 +1032,8 @@ final class cd extends vn {
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1050,7 +1054,7 @@ final class cd extends vn {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -1064,7 +1068,7 @@ final class cd extends vn {
                   var15 = (param2 & 16711935) * param9 & -16711936;
                   var16 = (param2 & 65280) * param9 & 16711680;
                   param2 = (var15 | var16) >>> 8;
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var13 & 16711935) * var14 & -16711936) + ((param2 & 65280) * var12 + (var13 & 65280) * var14 & 16711680) >>> 8;
                   var11++;
@@ -1085,12 +1089,12 @@ final class cd extends vn {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + (((cd) this).field_r - ((cd) this).field_w - ((cd) this).field_v);
-          param1 = param1 + ((cd) this).field_x;
+          param0 = param0 + (this.field_r - this.field_w - this.field_v);
+          param1 = param1 + this.field_x;
           var3 = param0 + param1 * bi.field_f;
-          var4 = ((cd) this).field_w - 1;
-          var5 = ((cd) this).field_t;
-          var6 = ((cd) this).field_w;
+          var4 = this.field_w - 1;
+          var5 = this.field_t;
+          var6 = this.field_w;
           var7 = bi.field_f - var6;
           var8 = var6 + var6;
           if (param1 >= bi.field_l) {
@@ -1142,7 +1146,7 @@ final class cd extends vn {
             break L4;
           } else {
             if (var5 > 0) {
-              cd.e(bi.field_c, ((cd) this).field_z, 0, var4, var3, var6, var5, var7, var8);
+              cd.e(bi.field_c, this.field_z, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -1161,12 +1165,12 @@ final class cd extends vn {
         int var10 = 0;
         if (param2 != 256) {
           L0: {
-            param0 = param0 + ((cd) this).field_v;
-            param1 = param1 + ((cd) this).field_x;
+            param0 = param0 + this.field_v;
+            param1 = param1 + this.field_x;
             var4 = param0 + param1 * bi.field_f;
             var5 = 0;
-            var6 = ((cd) this).field_t;
-            var7 = ((cd) this).field_w;
+            var6 = this.field_t;
+            var7 = this.field_w;
             var8 = bi.field_f - var7;
             var9 = 0;
             if (param1 >= bi.field_l) {
@@ -1218,7 +1222,7 @@ final class cd extends vn {
               break L4;
             } else {
               if (var6 > 0) {
-                cd.d(bi.field_c, ((cd) this).field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+                cd.d(bi.field_c, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
                 return;
               } else {
                 break L4;
@@ -1227,7 +1231,7 @@ final class cd extends vn {
           }
           return;
         } else {
-          ((cd) this).b(param0, param1);
+          this.b(param0, param1);
           return;
         }
     }
@@ -1237,17 +1241,19 @@ final class cd extends vn {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int incrementValue$0 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = -param5; var11 < 0; var11++) {
                 var12 = (param1[param3] >>> 24) * param9 >> 8;
                 var13 = 256 - var12;
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
                 var14 = param1[incrementValue$0];
                 var15 = param0[param4];
-                int incrementValue$1 = param4;
+                incrementValue$1 = param4;
                 param4++;
                 param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
             }
@@ -1262,6 +1268,7 @@ final class cd extends vn {
         int var15 = 0;
         int var16 = 0;
         int var18 = 0;
+        int incrementValue$0 = 0;
         int var17 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
@@ -1272,7 +1279,7 @@ final class cd extends vn {
                 if (var16 != 0) {
                     var17 = 256 - var16;
                     var18 = param0[param5];
-                    int incrementValue$0 = param5;
+                    incrementValue$0 = param5;
                     param5++;
                     param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
                 } else {
@@ -1295,12 +1302,12 @@ final class cd extends vn {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((cd) this).field_v;
-          param1 = param1 + ((cd) this).field_x;
+          param0 = param0 + this.field_v;
+          param1 = param1 + this.field_x;
           var3 = param0 + param1 * bi.field_f;
           var4 = 0;
-          var5 = ((cd) this).field_t;
-          var6 = ((cd) this).field_w;
+          var5 = this.field_t;
+          var6 = this.field_w;
           var7 = bi.field_f - var6;
           var8 = 0;
           if (param1 >= bi.field_l) {
@@ -1352,7 +1359,7 @@ final class cd extends vn {
             break L4;
           } else {
             if (var5 > 0) {
-              cd.d(bi.field_c, ((cd) this).field_z, 0, var4, var3, var6, var5, var7, var8);
+              cd.d(bi.field_c, this.field_z, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -1362,6 +1369,8 @@ final class cd extends vn {
     }
 
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1395,7 +1404,7 @@ final class cd extends vn {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
                 param2 = param1[incrementValue$2];
                 var17 = param2 >>> 24;
@@ -1430,7 +1439,7 @@ final class cd extends vn {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
-                  int incrementValue$3 = param4;
+                  incrementValue$3 = param4;
                   param4++;
                   param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
@@ -1454,6 +1463,7 @@ final class cd extends vn {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
+        int incrementValue$0 = 0;
         int var13 = param3;
         for (var14 = -param8; var14 < 0; var14++) {
             var15 = (param4 >> 16) * param11;
@@ -1462,7 +1472,7 @@ final class cd extends vn {
                 var18 = param0[param5];
                 var19 = (var17 >>> 24) * param12 >> 8;
                 var20 = 256 - var19;
-                int incrementValue$0 = param5;
+                incrementValue$0 = param5;
                 param5++;
                 param0[incrementValue$0] = ((var17 & 16711935) * var19 + (var18 & 16711935) * var20 & -16711936) + ((var17 & 65280) * var19 + (var18 & 65280) * var20 & 16711680) >>> 8;
                 param3 = param3 + param9;
@@ -1474,6 +1484,8 @@ final class cd extends vn {
     }
 
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -1494,7 +1506,7 @@ final class cd extends vn {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3--;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -1505,7 +1517,7 @@ final class cd extends vn {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
@@ -1518,6 +1530,8 @@ final class cd extends vn {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -1539,7 +1553,7 @@ final class cd extends vn {
                 param6++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var14 = param2 >>> 24;
@@ -1562,7 +1576,7 @@ final class cd extends vn {
                   }
                   var16 = 256 - var14;
                   var17 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
                   param5++;
@@ -1622,10 +1636,10 @@ final class cd extends vn {
         int stackOut_19_1 = 0;
         int stackOut_19_2 = 0;
         L0: {
-          var3 = ((cd) this).field_w >> 1;
-          var4 = ((cd) this).field_t >> 1;
-          param0 = param0 + ((cd) this).field_v / 2;
-          param1 = param1 + ((cd) this).field_x / 2;
+          var3 = this.field_w >> 1;
+          var4 = this.field_t >> 1;
+          param0 = param0 + this.field_v / 2;
+          param1 = param1 + this.field_x / 2;
           if (param0 >= bi.field_g) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -1639,7 +1653,7 @@ final class cd extends vn {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= bi.field_b) {
-            stackOut_5_0 = ((cd) this).field_w - 2;
+            stackOut_5_0 = this.field_w - 2;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -1663,7 +1677,7 @@ final class cd extends vn {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= bi.field_d) {
-            stackOut_11_0 = ((cd) this).field_t - 2;
+            stackOut_11_0 = this.field_t - 2;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -1678,7 +1692,7 @@ final class cd extends vn {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((cd) this).field_w + var5;
+            var10 = var9 * this.field_w + var5;
             var11 = (param1 + (var9 >> 1)) * bi.field_f + (param0 + (var5 >> 1));
             var12 = var5;
             L5: while (true) {
@@ -1714,14 +1728,14 @@ final class cd extends vn {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = ((cd) this).field_z;
+                      stackOut_18_0 = this.field_z;
                       stackOut_18_1 = var10 + (var19 & 1);
                       stackIn_20_0 = stackOut_18_0;
                       stackIn_20_1 = stackOut_18_1;
                       stackIn_19_0 = stackOut_18_0;
                       stackIn_19_1 = stackOut_18_1;
                       if ((var19 & 2) != 0) {
-                        stackOut_20_0 = (int[]) (Object) stackIn_20_0;
+                        stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
                         stackOut_20_1 = stackIn_20_1;
                         stackOut_20_2 = 0;
                         stackIn_21_0 = stackOut_20_0;
@@ -1729,9 +1743,9 @@ final class cd extends vn {
                         stackIn_21_2 = stackOut_20_2;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) (Object) stackIn_19_0;
+                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
                         stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = ((cd) this).field_w;
+                        stackOut_19_2 = this.field_w;
                         stackIn_21_0 = stackOut_19_0;
                         stackIn_21_1 = stackOut_19_1;
                         stackIn_21_2 = stackOut_19_2;

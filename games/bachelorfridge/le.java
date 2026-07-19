@@ -39,6 +39,7 @@ final class le extends iaa {
     private short[] field_j;
 
     private final void a(byte[] param0) {
+        byte dupTemp$1 = 0;
         lu var2 = null;
         lu var3 = null;
         lu var4 = null;
@@ -156,7 +157,7 @@ final class le extends iaa {
           if (var11 <= 0) {
             break L2;
           } else {
-            ((le) this).field_e = new byte[var11];
+            this.field_e = new byte[var11];
             var2.field_g = 0;
             var28 = 0;
             L3: while (true) {
@@ -164,8 +165,8 @@ final class le extends iaa {
                 break L2;
               } else {
                 L4: {
-                  byte dupTemp$1 = var2.b(true);
-                  ((le) this).field_e[var28] = dupTemp$1;
+                  dupTemp$1 = var2.b(true);
+                  this.field_e[var28] = dupTemp$1;
                   var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
@@ -283,19 +284,19 @@ final class le extends iaa {
           var48 = var28;
           var28 = var28 + (var26 + var27 * 2);
           var49 = var28;
-          ((le) this).field_d = var9;
-          ((le) this).field_i = var10;
-          ((le) this).field_u = var11;
-          ((le) this).field_l = new int[var9];
-          ((le) this).field_L = new int[var9];
-          ((le) this).field_H = new int[var9];
-          ((le) this).field_p = new int[var10];
-          ((le) this).field_v = new int[var10];
-          ((le) this).field_J = new int[var10];
+          this.field_d = var9;
+          this.field_i = var10;
+          this.field_u = var11;
+          this.field_l = new int[var9];
+          this.field_L = new int[var9];
+          this.field_H = new int[var9];
+          this.field_p = new int[var10];
+          this.field_v = new int[var10];
+          this.field_J = new int[var10];
           if (var19 != 1) {
             break L12;
           } else {
-            ((le) this).field_o = new int[var9];
+            this.field_o = new int[var9];
             break L12;
           }
         }
@@ -303,7 +304,7 @@ final class le extends iaa {
           if (var13 == 0) {
             break L13;
           } else {
-            ((le) this).field_C = new byte[var10];
+            this.field_C = new byte[var10];
             break L13;
           }
         }
@@ -311,7 +312,7 @@ final class le extends iaa {
           if (var15 != 255) {
             break L14;
           } else {
-            ((le) this).field_A = new byte[var10];
+            this.field_A = new byte[var10];
             break L14;
           }
         }
@@ -319,7 +320,7 @@ final class le extends iaa {
           if (var16 != 1) {
             break L15;
           } else {
-            ((le) this).field_q = new byte[var10];
+            this.field_q = new byte[var10];
             break L15;
           }
         }
@@ -327,7 +328,7 @@ final class le extends iaa {
           if (var17 != 1) {
             break L16;
           } else {
-            ((le) this).field_t = new int[var10];
+            this.field_t = new int[var10];
             break L16;
           }
         }
@@ -335,7 +336,7 @@ final class le extends iaa {
           if (var18 != 1) {
             break L17;
           } else {
-            ((le) this).field_x = new short[var10];
+            this.field_x = new short[var10];
             break L17;
           }
         }
@@ -346,37 +347,37 @@ final class le extends iaa {
             if (var11 <= 0) {
               break L18;
             } else {
-              ((le) this).field_s = new byte[var10];
+              this.field_s = new byte[var10];
               break L18;
             }
           }
         }
         L19: {
-          ((le) this).field_z = new short[var10];
+          this.field_z = new short[var10];
           if (var11 <= 0) {
             break L19;
           } else {
             L20: {
-              ((le) this).field_I = new short[var11];
-              ((le) this).field_w = new short[var11];
-              ((le) this).field_E = new short[var11];
+              this.field_I = new short[var11];
+              this.field_w = new short[var11];
+              this.field_E = new short[var11];
               if (var26 <= 0) {
                 break L20;
               } else {
-                ((le) this).field_k = new short[var26];
-                ((le) this).field_g = new short[var26];
-                ((le) this).field_j = new short[var26];
-                ((le) this).field_c = new byte[var26];
-                ((le) this).field_r = new byte[var26];
-                ((le) this).field_h = new byte[var26];
+                this.field_k = new short[var26];
+                this.field_g = new short[var26];
+                this.field_j = new short[var26];
+                this.field_c = new byte[var26];
+                this.field_r = new byte[var26];
+                this.field_h = new byte[var26];
                 break L20;
               }
             }
             if (var27 <= 0) {
               break L19;
             } else {
-              ((le) this).field_f = new byte[var27];
-              ((le) this).field_y = new byte[var27];
+              this.field_f = new byte[var27];
+              this.field_y = new byte[var27];
               break L19;
             }
           }
@@ -402,7 +403,7 @@ final class le extends iaa {
             var53 = 0;
             L22: while (true) {
               if (var53 >= var10) {
-                ((le) this).field_F = -1;
+                this.field_F = -1;
                 var2.field_g = var36;
                 var3.field_g = var31;
                 var53 = 0;
@@ -412,7 +413,7 @@ final class le extends iaa {
                 var57 = 0;
                 L23: while (true) {
                   if (var57 >= var10) {
-                    ((le) this).field_F = ((le) this).field_F + 1;
+                    this.field_F = this.field_F + 1;
                     var2.field_g = var43;
                     var3.field_g = var44;
                     var4.field_g = var45;
@@ -448,13 +449,13 @@ final class le extends iaa {
                         return;
                       } else {
                         L27: {
-                          var58 = ((le) this).field_e[var57] & 255;
+                          var58 = this.field_e[var57] & 255;
                           if (var58 != 0) {
                             break L27;
                           } else {
-                            ((le) this).field_I[var57] = (short)var2.e((byte) 47);
-                            ((le) this).field_w[var57] = (short)var2.e((byte) 59);
-                            ((le) this).field_E[var57] = (short)var2.e((byte) 89);
+                            this.field_I[var57] = (short)var2.e((byte) 47);
+                            this.field_w[var57] = (short)var2.e((byte) 59);
+                            this.field_E[var57] = (short)var2.e((byte) 89);
                             break L27;
                           }
                         }
@@ -462,15 +463,15 @@ final class le extends iaa {
                           if (var58 != 1) {
                             break L28;
                           } else {
-                            ((le) this).field_I[var57] = (short)var3.e((byte) 121);
-                            ((le) this).field_w[var57] = (short)var3.e((byte) 66);
-                            ((le) this).field_E[var57] = (short)var3.e((byte) 96);
-                            ((le) this).field_k[var57] = (short)var4.e((byte) 94);
-                            ((le) this).field_g[var57] = (short)var4.e((byte) 111);
-                            ((le) this).field_j[var57] = (short)var4.e((byte) 121);
-                            ((le) this).field_c[var57] = var5.b(true);
-                            ((le) this).field_r[var57] = var6.b(true);
-                            ((le) this).field_h[var57] = var7.b(true);
+                            this.field_I[var57] = (short)var3.e((byte) 121);
+                            this.field_w[var57] = (short)var3.e((byte) 66);
+                            this.field_E[var57] = (short)var3.e((byte) 96);
+                            this.field_k[var57] = (short)var4.e((byte) 94);
+                            this.field_g[var57] = (short)var4.e((byte) 111);
+                            this.field_j[var57] = (short)var4.e((byte) 121);
+                            this.field_c[var57] = var5.b(true);
+                            this.field_r[var57] = var6.b(true);
+                            this.field_h[var57] = var7.b(true);
                             break L28;
                           }
                         }
@@ -478,30 +479,30 @@ final class le extends iaa {
                           if (var58 != 2) {
                             break L29;
                           } else {
-                            ((le) this).field_I[var57] = (short)var3.e((byte) 96);
-                            ((le) this).field_w[var57] = (short)var3.e((byte) 66);
-                            ((le) this).field_E[var57] = (short)var3.e((byte) 78);
-                            ((le) this).field_k[var57] = (short)var4.e((byte) 124);
-                            ((le) this).field_g[var57] = (short)var4.e((byte) 86);
-                            ((le) this).field_j[var57] = (short)var4.e((byte) 113);
-                            ((le) this).field_c[var57] = var5.b(true);
-                            ((le) this).field_r[var57] = var6.b(true);
-                            ((le) this).field_h[var57] = var7.b(true);
-                            ((le) this).field_f[var57] = var7.b(true);
-                            ((le) this).field_y[var57] = var7.b(true);
+                            this.field_I[var57] = (short)var3.e((byte) 96);
+                            this.field_w[var57] = (short)var3.e((byte) 66);
+                            this.field_E[var57] = (short)var3.e((byte) 78);
+                            this.field_k[var57] = (short)var4.e((byte) 124);
+                            this.field_g[var57] = (short)var4.e((byte) 86);
+                            this.field_j[var57] = (short)var4.e((byte) 113);
+                            this.field_c[var57] = var5.b(true);
+                            this.field_r[var57] = var6.b(true);
+                            this.field_h[var57] = var7.b(true);
+                            this.field_f[var57] = var7.b(true);
+                            this.field_y[var57] = var7.b(true);
                             break L29;
                           }
                         }
                         if (var58 == 3) {
-                          ((le) this).field_I[var57] = (short)var3.e((byte) 125);
-                          ((le) this).field_w[var57] = (short)var3.e((byte) 119);
-                          ((le) this).field_E[var57] = (short)var3.e((byte) 124);
-                          ((le) this).field_k[var57] = (short)var4.e((byte) 50);
-                          ((le) this).field_g[var57] = (short)var4.e((byte) 62);
-                          ((le) this).field_j[var57] = (short)var4.e((byte) 95);
-                          ((le) this).field_c[var57] = var5.b(true);
-                          ((le) this).field_r[var57] = var6.b(true);
-                          ((le) this).field_h[var57] = var7.b(true);
+                          this.field_I[var57] = (short)var3.e((byte) 125);
+                          this.field_w[var57] = (short)var3.e((byte) 119);
+                          this.field_E[var57] = (short)var3.e((byte) 124);
+                          this.field_k[var57] = (short)var4.e((byte) 50);
+                          this.field_g[var57] = (short)var4.e((byte) 62);
+                          this.field_j[var57] = (short)var4.e((byte) 95);
+                          this.field_c[var57] = var5.b(true);
+                          this.field_r[var57] = var6.b(true);
+                          this.field_h[var57] = var7.b(true);
                           var57++;
                           continue L24;
                         } else {
@@ -523,28 +524,28 @@ final class le extends iaa {
                           var56 = var54;
                           var55 = var2.e(-4095) + var56;
                           var56 = var55;
-                          ((le) this).field_p[var57] = var53;
-                          ((le) this).field_v[var57] = var54;
-                          ((le) this).field_J[var57] = var55;
-                          if (var53 <= ((le) this).field_F) {
+                          this.field_p[var57] = var53;
+                          this.field_v[var57] = var54;
+                          this.field_J[var57] = var55;
+                          if (var53 <= this.field_F) {
                             break L31;
                           } else {
-                            ((le) this).field_F = var53;
+                            this.field_F = var53;
                             break L31;
                           }
                         }
                         L32: {
-                          if (var54 <= ((le) this).field_F) {
+                          if (var54 <= this.field_F) {
                             break L32;
                           } else {
-                            ((le) this).field_F = var54;
+                            this.field_F = var54;
                             break L32;
                           }
                         }
-                        if (var55 <= ((le) this).field_F) {
+                        if (var55 <= this.field_F) {
                           break L30;
                         } else {
-                          ((le) this).field_F = var55;
+                          this.field_F = var55;
                           break L30;
                         }
                       }
@@ -556,13 +557,13 @@ final class le extends iaa {
                         var54 = var55;
                         var55 = var2.e(-4095) + var56;
                         var56 = var55;
-                        ((le) this).field_p[var57] = var53;
-                        ((le) this).field_v[var57] = var54;
-                        ((le) this).field_J[var57] = var55;
-                        if (var55 <= ((le) this).field_F) {
+                        this.field_p[var57] = var53;
+                        this.field_v[var57] = var54;
+                        this.field_J[var57] = var55;
+                        if (var55 <= this.field_F) {
                           break L33;
                         } else {
-                          ((le) this).field_F = var55;
+                          this.field_F = var55;
                           break L33;
                         }
                       }
@@ -574,13 +575,13 @@ final class le extends iaa {
                         var53 = var55;
                         var55 = var2.e(-4095) + var56;
                         var56 = var55;
-                        ((le) this).field_p[var57] = var53;
-                        ((le) this).field_v[var57] = var54;
-                        ((le) this).field_J[var57] = var55;
-                        if (var55 <= ((le) this).field_F) {
+                        this.field_p[var57] = var53;
+                        this.field_v[var57] = var54;
+                        this.field_J[var57] = var55;
+                        if (var55 <= this.field_F) {
                           break L34;
                         } else {
-                          ((le) this).field_F = var55;
+                          this.field_F = var55;
                           break L34;
                         }
                       }
@@ -591,11 +592,11 @@ final class le extends iaa {
                       var54 = var59;
                       var55 = var2.e(-4095) + var56;
                       var56 = var55;
-                      ((le) this).field_p[var57] = var53;
-                      ((le) this).field_v[var57] = var54;
-                      ((le) this).field_J[var57] = var55;
-                      if (var55 > ((le) this).field_F) {
-                        ((le) this).field_F = var55;
+                      this.field_p[var57] = var53;
+                      this.field_v[var57] = var54;
+                      this.field_J[var57] = var55;
+                      if (var55 > this.field_F) {
+                        this.field_F = var55;
                         var57++;
                         continue L23;
                       } else {
@@ -610,11 +611,11 @@ final class le extends iaa {
                 }
               } else {
                 L35: {
-                  ((le) this).field_z[var53] = (short)var2.e((byte) 105);
+                  this.field_z[var53] = (short)var2.e((byte) 105);
                   if (var13 == 0) {
                     break L35;
                   } else {
-                    ((le) this).field_C[var53] = var3.b(true);
+                    this.field_C[var53] = var3.b(true);
                     break L35;
                   }
                 }
@@ -622,7 +623,7 @@ final class le extends iaa {
                   if (var15 != 255) {
                     break L36;
                   } else {
-                    ((le) this).field_A[var53] = var4.b(true);
+                    this.field_A[var53] = var4.b(true);
                     break L36;
                   }
                 }
@@ -630,7 +631,7 @@ final class le extends iaa {
                   if (var16 != 1) {
                     break L37;
                   } else {
-                    ((le) this).field_q[var53] = var5.b(true);
+                    this.field_q[var53] = var5.b(true);
                     break L37;
                   }
                 }
@@ -638,7 +639,7 @@ final class le extends iaa {
                   if (var17 != 1) {
                     break L38;
                   } else {
-                    ((le) this).field_t[var53] = var6.b(16711935);
+                    this.field_t[var53] = var6.b(16711935);
                     break L38;
                   }
                 }
@@ -646,17 +647,17 @@ final class le extends iaa {
                   if (var18 != 1) {
                     break L39;
                   } else {
-                    ((le) this).field_x[var53] = (short)(var7.e((byte) 121) - 1);
+                    this.field_x[var53] = (short)(var7.e((byte) 121) - 1);
                     break L39;
                   }
                 }
-                if (((le) this).field_s != null) {
-                  if (((le) this).field_x[var53] == -1) {
-                    ((le) this).field_s[var53] = (byte) -1;
+                if (this.field_s != null) {
+                  if (this.field_x[var53] == -1) {
+                    this.field_s[var53] = (byte)-1;
                     var53++;
                     continue L22;
                   } else {
-                    ((le) this).field_s[var53] = (byte)(var8.b(16711935) - 1);
+                    this.field_s[var53] = (byte)(var8.b(16711935) - 1);
                     var53++;
                     continue L22;
                   }
@@ -695,14 +696,14 @@ final class le extends iaa {
                 break L42;
               }
             }
-            ((le) this).field_l[var53] = var50 + var55;
-            ((le) this).field_L[var53] = var51 + var56;
-            ((le) this).field_H[var53] = var52 + var57;
-            var50 = ((le) this).field_l[var53];
-            var51 = ((le) this).field_L[var53];
-            var52 = ((le) this).field_H[var53];
+            this.field_l[var53] = var50 + var55;
+            this.field_L[var53] = var51 + var56;
+            this.field_H[var53] = var52 + var57;
+            var50 = this.field_l[var53];
+            var51 = this.field_L[var53];
+            var52 = this.field_H[var53];
             if (var19 == 1) {
-              ((le) this).field_o[var53] = var6.b(16711935);
+              this.field_o[var53] = var6.b(16711935);
               var53++;
               continue L21;
             } else {
@@ -714,6 +715,7 @@ final class le extends iaa {
     }
 
     final void b() {
+        jea dupTemp$1 = null;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -733,25 +735,25 @@ final class le extends iaa {
         sr var17 = null;
         sr var18 = null;
         sr var19 = null;
-        if (((le) this).field_D == null) {
-          ((le) this).field_D = new sr[((le) this).field_F];
+        if (this.field_D == null) {
+          this.field_D = new sr[this.field_F];
           var1 = 0;
           L0: while (true) {
-            if (var1 >= ((le) this).field_F) {
+            if (var1 >= this.field_F) {
               var1 = 0;
               L1: while (true) {
-                if (var1 >= ((le) this).field_i) {
+                if (var1 >= this.field_i) {
                   return;
                 } else {
-                  var2 = ((le) this).field_p[var1];
-                  var3 = ((le) this).field_v[var1];
-                  var4 = ((le) this).field_J[var1];
-                  var5 = ((le) this).field_l[var3] - ((le) this).field_l[var2];
-                  var6 = ((le) this).field_L[var3] - ((le) this).field_L[var2];
-                  var7 = ((le) this).field_H[var3] - ((le) this).field_H[var2];
-                  var8 = ((le) this).field_l[var4] - ((le) this).field_l[var2];
-                  var9 = ((le) this).field_L[var4] - ((le) this).field_L[var2];
-                  var10 = ((le) this).field_H[var4] - ((le) this).field_H[var2];
+                  var2 = this.field_p[var1];
+                  var3 = this.field_v[var1];
+                  var4 = this.field_J[var1];
+                  var5 = this.field_l[var3] - this.field_l[var2];
+                  var6 = this.field_L[var3] - this.field_L[var2];
+                  var7 = this.field_H[var3] - this.field_H[var2];
+                  var8 = this.field_l[var4] - this.field_l[var2];
+                  var9 = this.field_L[var4] - this.field_L[var2];
+                  var10 = this.field_H[var4] - this.field_H[var2];
                   var11 = var6 * var10 - var9 * var7;
                   var12 = var7 * var8 - var10 * var5;
                   var13 = var5 * var9 - var8 * var6;
@@ -786,8 +788,8 @@ final class le extends iaa {
                                     var11 = var11 * 256 / var14;
                                     var12 = var12 * 256 / var14;
                                     var13 = var13 * 256 / var14;
-                                    if (((le) this).field_C != null) {
-                                      var15 = ((le) this).field_C[var1];
+                                    if (this.field_C != null) {
+                                      var15 = this.field_C[var1];
                                       break L5;
                                     } else {
                                       var15 = 0;
@@ -797,15 +799,15 @@ final class le extends iaa {
                                   if (var15 != 0) {
                                     if (var15 == 1) {
                                       L6: {
-                                        if (((le) this).field_B != null) {
+                                        if (this.field_B != null) {
                                           break L6;
                                         } else {
-                                          ((le) this).field_B = new jea[((le) this).field_i];
+                                          this.field_B = new jea[this.field_i];
                                           break L6;
                                         }
                                       }
-                                      jea dupTemp$1 = new jea();
-                                      ((le) this).field_B[var1] = dupTemp$1;
+                                      dupTemp$1 = new jea();
+                                      this.field_B[var1] = dupTemp$1;
                                       var16 = dupTemp$1;
                                       var16.field_b = var11;
                                       var16.field_e = var12;
@@ -817,17 +819,17 @@ final class le extends iaa {
                                       continue L1;
                                     }
                                   } else {
-                                    var17 = ((le) this).field_D[var2];
+                                    var17 = this.field_D[var2];
                                     var17.field_f = var17.field_f + var11;
                                     var17.field_h = var17.field_h + var12;
                                     var17.field_e = var17.field_e + var13;
                                     var17.field_g = var17.field_g + 1;
-                                    var18 = ((le) this).field_D[var3];
+                                    var18 = this.field_D[var3];
                                     var18.field_f = var18.field_f + var11;
                                     var18.field_h = var18.field_h + var12;
                                     var18.field_e = var18.field_e + var13;
                                     var18.field_g = var18.field_g + 1;
-                                    var19 = ((le) this).field_D[var4];
+                                    var19 = this.field_D[var4];
                                     var19.field_f = var19.field_f + var11;
                                     var19.field_h = var19.field_h + var12;
                                     var19.field_e = var19.field_e + var13;
@@ -852,7 +854,7 @@ final class le extends iaa {
                 }
               }
             } else {
-              ((le) this).field_D[var1] = new sr();
+              this.field_D[var1] = new sr();
               var1++;
               continue L0;
             }
@@ -863,7 +865,7 @@ final class le extends iaa {
     }
 
     final gga a(int param0, int param1, int param2, int param3, int param4) {
-        return (gga) (Object) new ss((le) this, param0, param1, param2, param3, param4);
+        return (gga) ((Object) new ss((le) (this), param0, param1, param2, param3, param4));
     }
 
     final static le a(vr param0, String param1, String param2) {
@@ -1002,22 +1004,22 @@ final class le extends iaa {
           var21 = var21 + var18;
           var34 = var21;
           var21 = var21 + var19;
-          ((le) this).field_d = var9;
-          ((le) this).field_i = var10;
-          ((le) this).field_u = var11;
-          ((le) this).field_l = new int[var9];
-          ((le) this).field_L = new int[var9];
-          ((le) this).field_H = new int[var9];
-          ((le) this).field_p = new int[var10];
-          ((le) this).field_v = new int[var10];
-          ((le) this).field_J = new int[var10];
+          this.field_d = var9;
+          this.field_i = var10;
+          this.field_u = var11;
+          this.field_l = new int[var9];
+          this.field_L = new int[var9];
+          this.field_H = new int[var9];
+          this.field_p = new int[var10];
+          this.field_v = new int[var10];
+          this.field_J = new int[var10];
           if (var11 <= 0) {
             break L5;
           } else {
-            ((le) this).field_e = new byte[var11];
-            ((le) this).field_I = new short[var11];
-            ((le) this).field_w = new short[var11];
-            ((le) this).field_E = new short[var11];
+            this.field_e = new byte[var11];
+            this.field_I = new short[var11];
+            this.field_w = new short[var11];
+            this.field_E = new short[var11];
             break L5;
           }
         }
@@ -1025,7 +1027,7 @@ final class le extends iaa {
           if (var16 != 1) {
             break L6;
           } else {
-            ((le) this).field_o = new int[var9];
+            this.field_o = new int[var9];
             break L6;
           }
         }
@@ -1033,9 +1035,9 @@ final class le extends iaa {
           if (var12 != 1) {
             break L7;
           } else {
-            ((le) this).field_C = new byte[var10];
-            ((le) this).field_s = new byte[var10];
-            ((le) this).field_x = new short[var10];
+            this.field_C = new byte[var10];
+            this.field_s = new byte[var10];
+            this.field_x = new short[var10];
             break L7;
           }
         }
@@ -1043,7 +1045,7 @@ final class le extends iaa {
           if (var13 != 255) {
             break L8;
           } else {
-            ((le) this).field_A = new byte[var10];
+            this.field_A = new byte[var10];
             break L8;
           }
         }
@@ -1051,7 +1053,7 @@ final class le extends iaa {
           if (var14 != 1) {
             break L9;
           } else {
-            ((le) this).field_q = new byte[var10];
+            this.field_q = new byte[var10];
             break L9;
           }
         }
@@ -1059,11 +1061,11 @@ final class le extends iaa {
           if (var15 != 1) {
             break L10;
           } else {
-            ((le) this).field_t = new int[var10];
+            this.field_t = new int[var10];
             break L10;
           }
         }
-        ((le) this).field_z = new short[var10];
+        this.field_z = new short[var10];
         var4.field_g = var22;
         var5.field_g = var32;
         var6.field_g = var33;
@@ -1083,7 +1085,7 @@ final class le extends iaa {
             var38 = 0;
             L12: while (true) {
               if (var38 >= var10) {
-                ((le) this).field_F = -1;
+                this.field_F = -1;
                 var4.field_g = var29;
                 var5.field_g = var23;
                 var38 = 0;
@@ -1093,13 +1095,13 @@ final class le extends iaa {
                 var42 = 0;
                 L13: while (true) {
                   if (var42 >= var10) {
-                    ((le) this).field_F = ((le) this).field_F + 1;
+                    this.field_F = this.field_F + 1;
                     var4.field_g = var31;
                     var42 = 0;
                     L14: while (true) {
                       if (var42 >= var11) {
                         L15: {
-                          if (((le) this).field_s == null) {
+                          if (this.field_s == null) {
                             break L15;
                           } else {
                             var42 = 0;
@@ -1110,23 +1112,23 @@ final class le extends iaa {
                                 if (var42 != 0) {
                                   break L15;
                                 } else {
-                                  ((le) this).field_s = null;
+                                  this.field_s = null;
                                   break L15;
                                 }
                               } else {
-                                var44 = ((le) this).field_s[var45] & 255;
+                                var44 = this.field_s[var45] & 255;
                                 if (var44 != 255) {
                                   L17: {
-                                    if ((((le) this).field_I[var44] & 65535) != ((le) this).field_p[var45]) {
+                                    if ((this.field_I[var44] & 65535) != this.field_p[var45]) {
                                       break L17;
                                     } else {
-                                      if ((((le) this).field_w[var44] & 65535) != ((le) this).field_v[var45]) {
+                                      if ((this.field_w[var44] & 65535) != this.field_v[var45]) {
                                         break L17;
                                       } else {
-                                        if ((((le) this).field_E[var44] & 65535) != ((le) this).field_J[var45]) {
+                                        if ((this.field_E[var44] & 65535) != this.field_J[var45]) {
                                           break L17;
                                         } else {
-                                          ((le) this).field_s[var45] = (byte) -1;
+                                          this.field_s[var45] = (byte)-1;
                                           var45++;
                                           continue L16;
                                         }
@@ -1148,7 +1150,7 @@ final class le extends iaa {
                           if (var3 != 0) {
                             break L18;
                           } else {
-                            ((le) this).field_x = null;
+                            this.field_x = null;
                             break L18;
                           }
                         }
@@ -1156,16 +1158,16 @@ final class le extends iaa {
                           if (var2 != 0) {
                             break L19;
                           } else {
-                            ((le) this).field_C = null;
+                            this.field_C = null;
                             break L19;
                           }
                         }
                         return;
                       } else {
-                        ((le) this).field_e[var42] = (byte) 0;
-                        ((le) this).field_I[var42] = (short)var4.e((byte) 52);
-                        ((le) this).field_w[var42] = (short)var4.e((byte) 98);
-                        ((le) this).field_E[var42] = (short)var4.e((byte) 98);
+                        this.field_e[var42] = (byte) 0;
+                        this.field_I[var42] = (short)var4.e((byte) 52);
+                        this.field_w[var42] = (short)var4.e((byte) 98);
+                        this.field_E[var42] = (short)var4.e((byte) 98);
                         var42++;
                         continue L14;
                       }
@@ -1183,28 +1185,28 @@ final class le extends iaa {
                           var41 = var39;
                           var40 = var4.e(-4095) + var41;
                           var41 = var40;
-                          ((le) this).field_p[var42] = var38;
-                          ((le) this).field_v[var42] = var39;
-                          ((le) this).field_J[var42] = var40;
-                          if (var38 <= ((le) this).field_F) {
+                          this.field_p[var42] = var38;
+                          this.field_v[var42] = var39;
+                          this.field_J[var42] = var40;
+                          if (var38 <= this.field_F) {
                             break L21;
                           } else {
-                            ((le) this).field_F = var38;
+                            this.field_F = var38;
                             break L21;
                           }
                         }
                         L22: {
-                          if (var39 <= ((le) this).field_F) {
+                          if (var39 <= this.field_F) {
                             break L22;
                           } else {
-                            ((le) this).field_F = var39;
+                            this.field_F = var39;
                             break L22;
                           }
                         }
-                        if (var40 <= ((le) this).field_F) {
+                        if (var40 <= this.field_F) {
                           break L20;
                         } else {
-                          ((le) this).field_F = var40;
+                          this.field_F = var40;
                           break L20;
                         }
                       }
@@ -1216,13 +1218,13 @@ final class le extends iaa {
                         var39 = var40;
                         var40 = var4.e(-4095) + var41;
                         var41 = var40;
-                        ((le) this).field_p[var42] = var38;
-                        ((le) this).field_v[var42] = var39;
-                        ((le) this).field_J[var42] = var40;
-                        if (var40 <= ((le) this).field_F) {
+                        this.field_p[var42] = var38;
+                        this.field_v[var42] = var39;
+                        this.field_J[var42] = var40;
+                        if (var40 <= this.field_F) {
                           break L23;
                         } else {
-                          ((le) this).field_F = var40;
+                          this.field_F = var40;
                           break L23;
                         }
                       }
@@ -1234,13 +1236,13 @@ final class le extends iaa {
                         var38 = var40;
                         var40 = var4.e(-4095) + var41;
                         var41 = var40;
-                        ((le) this).field_p[var42] = var38;
-                        ((le) this).field_v[var42] = var39;
-                        ((le) this).field_J[var42] = var40;
-                        if (var40 <= ((le) this).field_F) {
+                        this.field_p[var42] = var38;
+                        this.field_v[var42] = var39;
+                        this.field_J[var42] = var40;
+                        if (var40 <= this.field_F) {
                           break L24;
                         } else {
-                          ((le) this).field_F = var40;
+                          this.field_F = var40;
                           break L24;
                         }
                       }
@@ -1251,11 +1253,11 @@ final class le extends iaa {
                       var39 = var44;
                       var40 = var4.e(-4095) + var41;
                       var41 = var40;
-                      ((le) this).field_p[var42] = var38;
-                      ((le) this).field_v[var42] = var39;
-                      ((le) this).field_J[var42] = var40;
-                      if (var40 > ((le) this).field_F) {
-                        ((le) this).field_F = var40;
+                      this.field_p[var42] = var38;
+                      this.field_v[var42] = var39;
+                      this.field_J[var42] = var40;
+                      if (var40 > this.field_F) {
+                        this.field_F = var40;
                         var42++;
                         continue L13;
                       } else {
@@ -1270,30 +1272,30 @@ final class le extends iaa {
                 }
               } else {
                 L25: {
-                  ((le) this).field_z[var38] = (short)var4.e((byte) 79);
+                  this.field_z[var38] = (short)var4.e((byte) 79);
                   if (var12 != 1) {
                     break L25;
                   } else {
                     L26: {
                       var39 = var5.b(16711935);
                       if ((var39 & 1) != 1) {
-                        ((le) this).field_C[var38] = (byte) 0;
+                        this.field_C[var38] = (byte) 0;
                         break L26;
                       } else {
-                        ((le) this).field_C[var38] = (byte) 1;
+                        this.field_C[var38] = (byte) 1;
                         var2 = 1;
                         break L26;
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((le) this).field_s[var38] = (byte) -1;
-                      ((le) this).field_x[var38] = (short) -1;
+                      this.field_s[var38] = (byte)-1;
+                      this.field_x[var38] = (short)-1;
                       break L25;
                     } else {
-                      ((le) this).field_s[var38] = (byte)(var39 >> 2);
-                      ((le) this).field_x[var38] = ((le) this).field_z[var38];
-                      ((le) this).field_z[var38] = (short) 127;
-                      if (((le) this).field_x[var38] == -1) {
+                      this.field_s[var38] = (byte)(var39 >> 2);
+                      this.field_x[var38] = this.field_z[var38];
+                      this.field_z[var38] = (short)127;
+                      if (this.field_x[var38] == -1) {
                         break L25;
                       } else {
                         var3 = 1;
@@ -1306,7 +1308,7 @@ final class le extends iaa {
                   if (var13 != 255) {
                     break L27;
                   } else {
-                    ((le) this).field_A[var38] = var6.b(true);
+                    this.field_A[var38] = var6.b(true);
                     break L27;
                   }
                 }
@@ -1314,12 +1316,12 @@ final class le extends iaa {
                   if (var14 != 1) {
                     break L28;
                   } else {
-                    ((le) this).field_q[var38] = var7.b(true);
+                    this.field_q[var38] = var7.b(true);
                     break L28;
                   }
                 }
                 if (var15 == 1) {
-                  ((le) this).field_t[var38] = var8.b(16711935);
+                  this.field_t[var38] = var8.b(16711935);
                   var38++;
                   continue L12;
                 } else {
@@ -1357,14 +1359,14 @@ final class le extends iaa {
                 break L31;
               }
             }
-            ((le) this).field_l[var38] = var35 + var40;
-            ((le) this).field_L[var38] = var36 + var41;
-            ((le) this).field_H[var38] = var37 + var42;
-            var35 = ((le) this).field_l[var38];
-            var36 = ((le) this).field_L[var38];
-            var37 = ((le) this).field_H[var38];
+            this.field_l[var38] = var35 + var40;
+            this.field_L[var38] = var36 + var41;
+            this.field_H[var38] = var37 + var42;
+            var35 = this.field_l[var38];
+            var36 = this.field_L[var38];
+            var37 = this.field_H[var38];
             if (var16 == 1) {
-              ((le) this).field_o[var38] = var8.b(16711935);
+              this.field_o[var38] = var8.b(16711935);
               var38++;
               continue L11;
             } else {
@@ -1376,52 +1378,49 @@ final class le extends iaa {
     }
 
     final void a() {
+        int[] array$2 = null;
+        int[] array$3 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
         L0: {
-          if (((le) this).field_o == null) {
+          if (this.field_o == null) {
             break L0;
           } else {
-            var9 = new int[256];
-            var7 = var9;
-            var5 = var7;
+            var5 = new int[256];
             var2 = 0;
             var3 = 0;
             L1: while (true) {
-              if (var3 >= ((le) this).field_d) {
-                ((le) this).field_G = new int[var2 + 1][];
+              if (var3 >= this.field_d) {
+                this.field_G = new int[var2 + 1][];
                 var3 = 0;
                 L2: while (true) {
                   if (var3 > var2) {
                     var3 = 0;
                     L3: while (true) {
-                      if (var3 >= ((le) this).field_d) {
-                        ((le) this).field_o = null;
+                      if (var3 >= this.field_d) {
+                        this.field_o = null;
                         break L0;
                       } else {
-                        var4 = ((le) this).field_o[var3];
+                        var4 = this.field_o[var3];
                         var5[var4] = var5[var4] + 1;
-                        ((le) this).field_G[var4][var5[var4]] = var3;
+                        this.field_G[var4][var5[var4]] = var3;
                         var3++;
                         continue L3;
                       }
                     }
                   } else {
-                    ((le) this).field_G[var3] = new int[var9[var3]];
-                    var9[var3] = 0;
+                    array$2 = new int[var5[var3]];
+                    this.field_G[var3] = array$2;
+                    var5[var3] = 0;
                     var3++;
                     continue L2;
                   }
                 }
               } else {
-                var4 = ((le) this).field_o[var3];
+                var4 = this.field_o[var3];
                 var5[var4] = var5[var4] + 1;
                 if (var4 > var2) {
                   var2 = var4;
@@ -1436,42 +1435,41 @@ final class le extends iaa {
           }
         }
         L4: {
-          if (((le) this).field_t == null) {
+          if (this.field_t == null) {
             break L4;
           } else {
-            var10 = new int[256];
-            var8 = var10;
-            var6 = var8;
+            var6 = new int[256];
             var2 = 0;
             var3 = 0;
             L5: while (true) {
-              if (var3 >= ((le) this).field_i) {
-                ((le) this).field_n = new int[var2 + 1][];
+              if (var3 >= this.field_i) {
+                this.field_n = new int[var2 + 1][];
                 var3 = 0;
                 L6: while (true) {
                   if (var3 > var2) {
                     var3 = 0;
                     L7: while (true) {
-                      if (var3 >= ((le) this).field_i) {
-                        ((le) this).field_t = null;
+                      if (var3 >= this.field_i) {
+                        this.field_t = null;
                         break L4;
                       } else {
-                        var4 = ((le) this).field_t[var3];
+                        var4 = this.field_t[var3];
                         var6[var4] = var6[var4] + 1;
-                        ((le) this).field_n[var4][var6[var4]] = var3;
+                        this.field_n[var4][var6[var4]] = var3;
                         var3++;
                         continue L7;
                       }
                     }
                   } else {
-                    ((le) this).field_n[var3] = new int[var10[var3]];
-                    var10[var3] = 0;
+                    array$3 = new int[var6[var3]];
+                    this.field_n[var3] = array$3;
+                    var6[var3] = 0;
                     var3++;
                     continue L6;
                   }
                 }
               } else {
-                var4 = ((le) this).field_t[var3];
+                var4 = this.field_t[var3];
                 var6[var4] = var6[var4] + 1;
                 if (var4 > var2) {
                   var2 = var4;
@@ -1490,9 +1488,9 @@ final class le extends iaa {
     private le(byte[] param0) {
         L0: {
           L1: {
-            ((le) this).field_d = 0;
-            ((le) this).field_F = 0;
-            ((le) this).field_i = 0;
+            this.field_d = 0;
+            this.field_F = 0;
+            this.field_i = 0;
             if (param0[param0.length - 1] != -1) {
               break L1;
             } else {

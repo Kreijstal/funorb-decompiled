@@ -11,9 +11,9 @@ final class qa implements be {
 
     final static void a(int param0, int param1) {
         hg var2 = gk.field_g;
-        var2.g(11, 8);
-        var2.a(1, 99);
-        var2.a(3, 125);
+        var2.g(param1, 8);
+        var2.a(1, param0 ^ 96);
+        var2.a(param0, 125);
     }
 
     final static void a(byte param0, int param1, byte[] param2, int param3, boolean param4, int param5) {
@@ -21,20 +21,22 @@ final class qa implements be {
         int var8 = 0;
         int var9 = 0;
         try {
-            int var7 = 0;
+            int var7 = 12 % ((param0 - -41) / 56);
             var6 = gk.field_g;
-            var6.g(11, 8);
+            var6.g(param3, 8);
             var6.field_l = var6.field_l + 1;
             var8 = var6.field_l;
             var6.a(4, -66);
             var6.a(param5, 72);
-            var9 = 0;
-            var9 += 128;
+            var9 = param1;
+            if (!(!param4)) {
+                var9 += 128;
+            }
             var6.a(var9, -95);
             var6.a(param2, param2.length, 0, (byte) 81);
             var6.b(var6.field_l - var8, -1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "qa.A(" + 78 + ',' + 0 + ',' + (param2 != null ? "{...}" : "null") + ',' + 11 + ',' + true + ',' + param5 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "qa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -55,10 +57,6 @@ final class qa implements be {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "You do not have a suitable number of players for the current options.";
         field_b = 0.0;
         field_f = "To report a player, click on the most suitable option from the Rules of Conduct. Please do not abuse this form.";

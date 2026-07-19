@@ -5,8 +5,9 @@ final class ql extends dd {
     static String field_q;
 
     final String c(byte param0, al param1) {
+        String discarded$2 = null;
         RuntimeException var3 = null;
-        Object var4 = null;
+        al var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -31,8 +32,8 @@ final class ql extends dd {
               if (param0 > 49) {
                 break L1;
               } else {
-                var4 = null;
-                String discarded$2 = ((ql) this).c((byte) -78, (al) null);
+                var4 = (al) null;
+                discarded$2 = this.c((byte) -78, (al) null);
                 break L1;
               }
             }
@@ -44,23 +45,23 @@ final class ql extends dd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ql.T(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -68,15 +69,16 @@ final class ql extends dd {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     public static void c(int param0) {
+        int discarded$0 = 0;
         if (param0 != 42) {
-            Object var2 = null;
-            int discarded$0 = ql.a(39, (byte[]) null, 29);
+            byte[] var2 = (byte[]) null;
+            discarded$0 = ql.a(39, (byte[]) null, 29);
             field_q = null;
             return;
         }
@@ -121,23 +123,23 @@ final class ql extends dd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ql.S(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -145,7 +147,7 @@ final class ql extends dd {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param2 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
@@ -159,10 +161,6 @@ final class ql extends dd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = "Loading sound effects";
     }
 }

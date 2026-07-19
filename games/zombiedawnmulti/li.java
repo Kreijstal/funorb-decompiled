@@ -11,14 +11,15 @@ final class li extends qc {
     byte[] field_D;
 
     final byte[] e(int param0) {
-        Object var3 = null;
-        if (!((li) this).field_t) {
+        np discarded$2 = null;
+        ga var3 = null;
+        if (!this.field_t) {
           if (param0 != 0) {
-            var3 = null;
-            np discarded$2 = li.a((byte) 125, (ga) null);
-            return ((li) this).field_D;
+            var3 = (ga) null;
+            discarded$2 = li.a((byte) 125, (ga) null);
+            return this.field_D;
           } else {
-            return ((li) this).field_D;
+            return this.field_D;
           }
         } else {
           throw new RuntimeException();
@@ -26,16 +27,22 @@ final class li extends qc {
     }
 
     public static void g(int param0) {
+        np discarded$0 = null;
         field_E = null;
         field_z = null;
+        if (param0 <= 60) {
+            ga var2 = (ga) null;
+            discarded$0 = li.a((byte) 126, (ga) null);
+        }
     }
 
     final int f(int param0) {
-        if (((li) this).field_t) {
+        int discarded$0 = 0;
+        if (this.field_t) {
             return 0;
         }
         if (param0 != 100) {
-            int discarded$0 = ((li) this).f(44);
+            discarded$0 = this.f(44);
             return 100;
         }
         return 100;
@@ -95,23 +102,23 @@ final class li extends qc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("li.I(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -119,7 +126,7 @@ final class li extends qc {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -128,10 +135,6 @@ final class li extends qc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "Encouraging rule breaking";
     }
 }

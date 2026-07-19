@@ -15,13 +15,13 @@ class fl extends hg {
 
     final void d(int param0) {
         int var2 = 125 / ((param0 - 31) / 57);
-        if (!(((fl) this).field_i != null)) {
+        if (!(this.field_i != null)) {
             return;
         }
-        ((fl) this).field_i.field_j = ((fl) this).field_j;
-        ((fl) this).field_j.field_i = ((fl) this).field_i;
-        ((fl) this).field_i = null;
-        ((fl) this).field_j = null;
+        this.field_i.field_j = this.field_j;
+        this.field_j.field_i = this.field_i;
+        this.field_i = null;
+        this.field_j = null;
     }
 
     final static String e(int param0) {
@@ -31,7 +31,7 @@ class fl extends hg {
         if (!(dg.field_o != ui.field_b)) {
             return tc.field_j;
         }
-        if (!di.field_g.b(0)) {
+        if (!di.field_g.b(param0)) {
             return tc.field_j;
         }
         return vk.field_v;
@@ -45,7 +45,7 @@ class fl extends hg {
           if (param2 == -1) {
             break L0;
           } else {
-            field_k = null;
+            field_k = (int[]) null;
             break L0;
           }
         }
@@ -93,6 +93,9 @@ class fl extends hg {
             return;
         }
         ed[] var4 = jm.field_K;
+        if (param0 != -1) {
+            field_h = (String) null;
+        }
         if (!(var4 != null)) {
             return;
         }
@@ -108,7 +111,7 @@ class fl extends hg {
             }
             ka.a(105);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fl.CA(" + -1 + ',' + param1 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "fl.CA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -125,11 +128,11 @@ class fl extends hg {
             ce.field_j = param5;
             mn.field_n = param6;
             kh.field_c = param0;
-            od.field_j = (sb) (Object) new bk();
+            od.field_j = (sb) ((Object) new bk());
             uk.field_b = new kk(param1);
             af.field_e = new sk(od.field_j, uk.field_b);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fl.W(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "fl.W(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -138,7 +141,7 @@ class fl extends hg {
 
     public static void a(byte param0) {
         field_h = null;
-        int var1 = 0;
+        int var1 = 126 % ((param0 - 50) / 35);
         field_n = null;
         field_m = null;
         field_k = null;
@@ -147,10 +150,6 @@ class fl extends hg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Connection timed out. Please try using a different server.";
         field_h = "Connection lost - attempting to reconnect";
         field_g = "Shield bonus: ";

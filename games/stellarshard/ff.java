@@ -14,8 +14,8 @@ final class ff extends nh {
 
     final static void a(int param0, int param1) {
         ha var2 = pg.field_fb;
-        var2.f(6, 950);
-        var2.a(false, 1);
+        var2.f(param1, 950);
+        var2.a(false, param0);
         var2.a(false, 0);
     }
 
@@ -24,6 +24,10 @@ final class ff extends nh {
     }
 
     final static nj a(boolean param0, byte param1) {
+        int discarded$4 = 0;
+        String discarded$5 = null;
+        int discarded$6 = 0;
+        String discarded$7 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -61,7 +65,7 @@ final class ff extends nh {
           eh.field_d = stackIn_3_0 != 0;
           ha.field_t = var9.f(4);
           k.field_d = var9.d(0);
-          if (ii.field_J != 2) {
+          if (-3 != (ii.field_J ^ -1)) {
             il.field_w = 0;
             mg.field_y = 0;
             break L1;
@@ -72,7 +76,7 @@ final class ff extends nh {
           }
         }
         L2: {
-          if (var9.f(4) != 1) {
+          if (-2 != (var9.f(4) ^ -1)) {
             stackOut_8_0 = 0;
             stackIn_9_0 = stackOut_8_0;
             break L2;
@@ -85,7 +89,7 @@ final class ff extends nh {
         L3: {
           var4 = stackIn_9_0;
           ld.field_z = var9.e((byte) 122);
-          var5 = 0;
+          var5 = -101 % ((param1 - 46) / 36);
           if (var4 == 0) {
             oe.field_d = ld.field_z;
             break L3;
@@ -95,16 +99,16 @@ final class ff extends nh {
           }
         }
         L4: {
-          if (ii.field_J == 1) {
-            int discarded$4 = var9.c((byte) 105);
-            String discarded$5 = var9.e((byte) 106);
+          if (-2 == (ii.field_J ^ -1)) {
+            discarded$4 = var9.c((byte) 105);
+            discarded$5 = var9.e((byte) 106);
             break L4;
           } else {
             if (ii.field_J != 4) {
               break L4;
             } else {
-              int discarded$6 = var9.c((byte) 105);
-              String discarded$7 = var9.e((byte) 106);
+              discarded$6 = var9.c((byte) 105);
+              discarded$7 = var9.e((byte) 106);
               break L4;
             }
           }
@@ -116,13 +120,13 @@ final class ff extends nh {
               L6: {
                 var10 = qh.field_e.a(32767, var6);
                 ug.field_b = var10.e(0);
-                if (!oe.field_d.equals((Object) (Object) wf.field_b)) {
+                if (!oe.field_d.equals(wf.field_b)) {
                   stackOut_22_0 = var10.field_y;
                   stackIn_23_0 = stackOut_22_0;
                   break L6;
                 } else {
                   stackOut_21_0 = null;
-                  stackIn_23_0 = (int[]) (Object) stackOut_21_0;
+                  stackIn_23_0 = (int[]) ((Object) stackOut_21_0);
                   break L6;
                 }
               }
@@ -132,14 +136,14 @@ final class ff extends nh {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var7 = (Exception) (Object) decompiledCaughtException;
-            qe.a(-105, "CC1", (Throwable) (Object) var7);
+            qe.a(-105, "CC1", (Throwable) ((Object) var7));
             rc.field_k = null;
             ug.field_b = null;
             return new nj(param0);
           }
           return new nj(param0);
         } else {
-          ug.field_b = ni.a(false, 80, (ka) (Object) var9);
+          ug.field_b = ni.a(false, 80, var9);
           rc.field_k = null;
           return new nj(param0);
         }

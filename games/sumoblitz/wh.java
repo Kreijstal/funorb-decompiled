@@ -12,28 +12,79 @@ final class wh extends pj {
 
     public static void a(int param0) {
         field_r = null;
+        if (param0 != -1) {
+            return;
+        }
         field_w = null;
     }
 
     private final void f(int param0) {
-        if (!(((wh) this).field_t <= 0L)) {
-            ((wh) this).field_u.field_y.releasePbuffer(((wh) this).field_t);
-            ((wh) this).field_t = 0L;
+        L0: {
+          if (this.field_t > 0L) {
+            this.field_u.field_y.releasePbuffer(this.field_t);
+            this.field_t = 0L;
+            break L0;
+          } else {
+            break L0;
+          }
+        }
+        if (param0 != 30611) {
+          this.field_u = (fr) null;
+          return;
+        } else {
+          return;
         }
     }
 
     final static String a(byte param0) {
-        String var1 = "";
-        if (no.field_a != null) {
+        String var1 = null;
+        L0: {
+          var1 = "";
+          if (no.field_a == null) {
+            break L0;
+          } else {
             var1 = no.field_a.a((byte) 48);
+            break L0;
+          }
         }
-        if (0 == var1.length()) {
-            var1 = kf.f(1);
+        if (param0 > -53) {
+          L1: {
+            field_w = (String[]) null;
+            if (0 != var1.length()) {
+              break L1;
+            } else {
+              var1 = kf.f(1);
+              break L1;
+            }
+          }
+          L2: {
+            if (var1.length() == 0) {
+              var1 = kq.field_R;
+              break L2;
+            } else {
+              break L2;
+            }
+          }
+          return var1;
+        } else {
+          L3: {
+            if (0 != var1.length()) {
+              break L3;
+            } else {
+              var1 = kf.f(1);
+              break L3;
+            }
+          }
+          L4: {
+            if (var1.length() == 0) {
+              var1 = kq.field_R;
+              break L4;
+            } else {
+              break L4;
+            }
+          }
+          return var1;
         }
-        if (!(var1.length() != 0)) {
-            var1 = kq.field_R;
-        }
-        return var1;
     }
 
     protected final void finalize() throws Throwable {
@@ -45,24 +96,20 @@ final class wh extends pj {
         if (param0 >= -68) {
             return -90L;
         }
-        return ((wh) this).field_t;
+        return this.field_t;
     }
 
     wh(fr param0, int param1, int param2) {
         try {
-            ((wh) this).field_u = param0;
-            ((wh) this).field_v = param1 * param2;
-            ((wh) this).field_t = ((wh) this).field_u.field_y.createPbuffer(param1, param2);
+            this.field_u = param0;
+            this.field_v = param1 * param2;
+            this.field_t = this.field_u.field_y.createPbuffer(param1, param2);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "click to assign points <br> right-click to remove points";
         field_x = 64;
         field_w = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};

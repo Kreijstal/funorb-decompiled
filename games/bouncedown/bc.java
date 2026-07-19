@@ -7,24 +7,25 @@ final class bc {
     static int field_a;
 
     final ai a(byte param0) {
-        ai var2 = ((bc) this).field_b.field_c;
-        if (!(var2 != ((bc) this).field_b)) {
-            ((bc) this).field_c = null;
+        boolean discarded$0 = false;
+        ai var2 = this.field_b.field_c;
+        if (!(var2 != this.field_b)) {
+            this.field_c = null;
             return null;
         }
-        ((bc) this).field_c = var2.field_c;
+        this.field_c = var2.field_c;
         if (param0 > -44) {
-            boolean discarded$0 = ((bc) this).f((byte) 90);
+            discarded$0 = this.f((byte) 90);
         }
         return var2;
     }
 
     final ai c(byte param0) {
         if (param0 != -52) {
-            ((bc) this).b(108);
+            this.b(108);
         }
-        ai var2 = ((bc) this).field_b.field_c;
-        if (((bc) this).field_b == var2) {
+        ai var2 = this.field_b.field_c;
+        if (this.field_b == var2) {
             return null;
         }
         var2.c(param0 ^ -50);
@@ -32,42 +33,43 @@ final class bc {
     }
 
     final ai b(byte param0) {
-        ai var2 = ((bc) this).field_b.field_f;
+        ai var2 = this.field_b.field_f;
         if (param0 <= 9) {
+            return (ai) null;
+        }
+        if (!(var2 != this.field_b)) {
+            this.field_c = null;
             return null;
         }
-        if (!(var2 != ((bc) this).field_b)) {
-            ((bc) this).field_c = null;
-            return null;
-        }
-        ((bc) this).field_c = var2.field_f;
+        this.field_c = var2.field_f;
         return var2;
     }
 
     final ai d(byte param0) {
-        ai var2 = ((bc) this).field_c;
-        if (!(var2 != ((bc) this).field_b)) {
-            ((bc) this).field_c = null;
+        ai var2 = this.field_c;
+        if (!(var2 != this.field_b)) {
+            this.field_c = null;
             return null;
         }
         int var3 = 102 % ((15 - param0) / 33);
-        ((bc) this).field_c = var2.field_c;
+        this.field_c = var2.field_c;
         return var2;
     }
 
     final boolean f(byte param0) {
+        ai discarded$0 = null;
         if (param0 != -93) {
-            ai discarded$0 = ((bc) this).c((byte) 40);
+            discarded$0 = this.c((byte) 40);
         }
-        return ((bc) this).field_b == ((bc) this).field_b.field_c ? true : false;
+        return this.field_b == this.field_b.field_c ? true : false;
     }
 
     final ai e(byte param0) {
-        ai var2 = ((bc) this).field_b.field_f;
+        ai var2 = this.field_b.field_f;
         if (param0 <= 55) {
-            return null;
+            return (ai) null;
         }
-        if (var2 == ((bc) this).field_b) {
+        if (var2 == this.field_b) {
             return null;
         }
         var2.c(2);
@@ -80,26 +82,26 @@ final class bc {
                 param1.c(2);
             }
             if (param0 != 1) {
-                ((bc) this).field_c = null;
+                this.field_c = (ai) null;
             }
-            param1.field_c = ((bc) this).field_b;
-            param1.field_f = ((bc) this).field_b.field_f;
+            param1.field_c = this.field_b;
+            param1.field_f = this.field_b.field_f;
             param1.field_f.field_c = param1;
             param1.field_c.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "bc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "bc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final ai a(int param0) {
-        ai var2 = ((bc) this).field_c;
-        if (var2 == ((bc) this).field_b) {
-            ((bc) this).field_c = null;
+        ai var2 = this.field_c;
+        if (var2 == this.field_b) {
+            this.field_c = null;
             return null;
         }
-        ((bc) this).field_c = var2.field_f;
+        this.field_c = var2.field_f;
         if (param0 != -18158) {
-            ((bc) this).field_c = null;
+            this.field_c = (ai) null;
         }
         return var2;
     }
@@ -108,16 +110,16 @@ final class bc {
         if (!(null == param1.field_f)) {
             param1.c(param0 ^ 81);
         }
-        param1.field_c = ((bc) this).field_b.field_c;
+        param1.field_c = this.field_b.field_c;
         if (param0 != 83) {
             return;
         }
         try {
-            param1.field_f = ((bc) this).field_b;
+            param1.field_f = this.field_b;
             param1.field_f.field_c = param1;
             param1.field_c.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "bc.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "bc.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -126,19 +128,19 @@ final class bc {
         int var4 = Bounce.field_N;
         int var2 = 81 % ((-6 - param0) / 51);
         while (true) {
-            var3 = ((bc) this).field_b.field_c;
-            if (var3 == ((bc) this).field_b) {
+            var3 = this.field_b.field_c;
+            if (var3 == this.field_b) {
                 break;
             }
             var3.c(2);
         }
-        ((bc) this).field_c = null;
+        this.field_c = null;
     }
 
     public bc() {
-        ((bc) this).field_b = new ai();
-        ((bc) this).field_b.field_f = ((bc) this).field_b;
-        ((bc) this).field_b.field_c = ((bc) this).field_b;
+        this.field_b = new ai();
+        this.field_b.field_f = this.field_b;
+        this.field_b.field_c = this.field_b;
     }
 
     final static String a(String param0, int param1) {
@@ -189,23 +191,23 @@ final class bc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_0 = (RuntimeException) (var2);
             stackOut_6_1 = new StringBuilder().append("bc.F(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -213,7 +215,7 @@ final class bc {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_5_0;
     }

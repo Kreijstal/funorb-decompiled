@@ -36,7 +36,7 @@ final class toa {
     }
 
     final int a(int param0) {
-        Object var3 = null;
+        byte[] var3 = null;
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -44,18 +44,18 @@ final class toa {
           if (param0 == 0) {
             break L0;
           } else {
-            var3 = null;
+            var3 = (byte[]) null;
             toa.a(104, -1.1755644083023071f, 21, 1.4921725988388062f, -0.9892958402633667f, (byte) 76, (vjb) null, -0.3563171923160553f, -2, 1.3547749519348145f, 48, -53, (byte[]) null);
             break L0;
           }
         }
         L1: {
           L2: {
-            if (((toa) this).field_c == null) {
+            if (this.field_c == null) {
               break L2;
             } else {
-              if (((toa) this).field_c.length != 0) {
-                stackOut_6_0 = ((toa) this).field_c[((toa) this).field_c.length - 1];
+              if (this.field_c.length != 0) {
+                stackOut_6_0 = this.field_c[this.field_c.length - 1];
                 stackIn_7_0 = stackOut_6_0;
                 break L1;
               } else {
@@ -71,6 +71,7 @@ final class toa {
     }
 
     final static void a(int param0, float param1, int param2, float param3, float param4, byte param5, vjb param6, float param7, int param8, float param9, int param10, int param11, byte[] param12) {
+        boolean discarded$2 = false;
         int var13_int = 0;
         RuntimeException var13 = null;
         int var14 = 0;
@@ -112,7 +113,7 @@ final class toa {
               if (param5 < -38) {
                 break L1;
               } else {
-                boolean discarded$2 = toa.a(80, -3, -102);
+                discarded$2 = toa.a(80, -3, -102);
                 break L1;
               }
             }
@@ -132,23 +133,23 @@ final class toa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var13 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var13;
+            stackOut_7_0 = (RuntimeException) (var13);
             stackOut_7_1 = new StringBuilder().append("toa.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param6 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -157,23 +158,23 @@ final class toa {
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param12 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -181,14 +182,14 @@ final class toa {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 
     toa(int param0, int param1, int param2) {
-        ((toa) this).field_a = param1;
-        ((toa) this).field_b = param0;
-        ((toa) this).field_c = new int[1 + param2];
+        this.field_a = param1;
+        this.field_b = param0;
+        this.field_c = new int[1 + param2];
     }
 
     final int a(int param0, int param1) {
@@ -198,18 +199,18 @@ final class toa {
         L0: {
           var5 = VoidHunters.field_G;
           var3 = -63 / ((-8 - param0) / 54);
-          if (((toa) this).field_c == null) {
+          if (this.field_c == null) {
             break L0;
           } else {
-            if (((toa) this).field_c.length == 0) {
+            if (this.field_c.length == 0) {
               break L0;
             } else {
               var4 = 1;
               L1: while (true) {
-                if (var4 >= ((toa) this).field_c.length) {
-                  return ((toa) this).field_c.length - 1;
+                if (var4 >= this.field_c.length) {
+                  return this.field_c.length - 1;
                 } else {
-                  if (param1 < ((toa) this).field_c[var4 - 1] + ((toa) this).field_c[var4] >> 1) {
+                  if (param1 < this.field_c[var4 - 1] + this.field_c[var4] >> -1833770719) {
                     return var4 - 1;
                   } else {
                     var4++;

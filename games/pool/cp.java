@@ -19,7 +19,7 @@ final class cp {
             return false;
           }
         } else {
-          field_b = null;
+          field_b = (String) null;
           if (fq.m(0)) {
             if ((eo.field_Tb & 8) != 0) {
               return false;
@@ -35,11 +35,14 @@ final class cp {
     final static void a(boolean param0) {
         db.field_Pb = rl.a((byte) -121);
         up.field_j = 0;
+        if (param0) {
+            field_a = (di) null;
+        }
     }
 
     final static long a(byte[] param0, byte param1, int param2) {
         RuntimeException var3 = null;
-        Object var4 = null;
+        byte[] var4 = null;
         long stackIn_3_0 = 0L;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -64,7 +67,7 @@ final class cp {
               if (param1 == -83) {
                 break L1;
               } else {
-                var4 = null;
+                var4 = (byte[]) null;
                 break L1;
               }
             }
@@ -76,23 +79,23 @@ final class cp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("cp.B(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -100,7 +103,7 @@ final class cp {
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
@@ -110,13 +113,12 @@ final class cp {
         field_c = null;
         field_d = null;
         field_b = null;
+        if (!param0) {
+            field_c = (ao) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "members-only content";
     }
 }

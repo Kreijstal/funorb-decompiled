@@ -9,20 +9,19 @@ final class sb {
 
     final static void a(byte param0) {
         rg.b(95);
-        int var1 = 0;
+        int var1 = -29 % ((17 - param0) / 45);
     }
 
     public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_c = null;
+        if (param0 <= 65) {
+            field_c = (ab) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new kb(3);
     }
 }

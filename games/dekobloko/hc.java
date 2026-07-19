@@ -19,10 +19,10 @@ final class hc {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        int var6 = 0;
+        ck var6 = null;
         ck var7 = null;
         ck var8 = null;
-        ck var9 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = client.field_A ? 1 : 0;
         try {
@@ -31,114 +31,151 @@ final class hc {
             hk.a(244, 198, 367, 141, 0);
             if (null != d.field_h) {
               L1: {
-                var7 = d.field_h[wh.field_a];
-                var8 = var7;
-                var8 = var7;
-                if (var7 != null) {
-                  var7.c(245, 199);
-                  break L1;
-                } else {
-                  if (null != bn.field_g) {
-                    discarded$3 = bn.field_g.a(wf.field_m, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-              L2: {
-                var2 = -32;
-                if (ac.field_F >= dk.field_i) {
-                  break L2;
-                } else {
-                  var8 = d.field_h[bh.field_m];
-                  if (var8 == null) {
+                L2: {
+                  var6 = d.field_h[wh.field_a];
+                  var7 = var6;
+                  var7 = var6;
+                  if (var6 != null) {
                     break L2;
                   } else {
-                    var3_int = (var8.field_K - -60) * ac.field_F / dk.field_i;
-                    var4 = -30 + var3_int;
-                    if (lb.field_b) {
-                      bn.a((byte) -112, var4 * -256 / 30, (var8.field_K - var4) * 256 / 30, 199, var8, 245);
-                      break L2;
+                    if (null != bn.field_g) {
+                      discarded$3 = bn.field_g.a(wf.field_m, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                      if (var5 == 0) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
                     } else {
-                      bn.a((byte) -115, (var8.field_K + -var4) * 256 / 30, -256 * var4 / 30, 199, var8, 245);
-                      break L2;
+                      break L1;
                     }
                   }
                 }
+                var6.c(245, 199);
+                break L1;
               }
               L3: {
-                if (bn.field_g == null) {
+                var2 = -96 / ((param0 - -79) / 41);
+                if (ac.field_F >= dk.field_i) {
                   break L3;
                 } else {
-                  var3 = null;
-                  var6 = 0;
-                  var4 = var6;
-                  L4: while (true) {
-                    if (var6 >= d.field_h.length) {
-                      if (var3 == null) {
-                        break L3;
+                  var7 = d.field_h[bh.field_m];
+                  if (var7 == null) {
+                    break L3;
+                  } else {
+                    L4: {
+                      var3_int = (var7.field_K - -60) * ac.field_F / dk.field_i;
+                      var4 = -30 + var3_int;
+                      if (lb.field_b) {
+                        break L4;
                       } else {
-                        discarded$4 = bn.field_g.a("Screenshot(s) " + (String) (var3) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
-                        break L3;
+                        bn.a((byte) -115, (var7.field_K + -var4) * 256 / 30, -256 * var4 / 30, 199, var7, 245);
+                        if (var5 == 0) {
+                          break L3;
+                        } else {
+                          break L4;
+                        }
                       }
-                    } else {
-                      var9 = d.field_h[var6];
-                      if (var9 != null) {
-                        L5: {
-                          L6: {
-                            if (365 != var9.field_K) {
-                              break L6;
+                    }
+                    bn.a((byte) -112, var4 * -256 / 30, (var7.field_K - var4) * 256 / 30, 199, var7, 245);
+                    break L3;
+                  }
+                }
+              }
+              L5: {
+                if (bn.field_g == null) {
+                  break L5;
+                } else {
+                  var3 = null;
+                  var4 = 0;
+                  L6: while (true) {
+                    L7: {
+                      if (var4 >= d.field_h.length) {
+                        break L7;
+                      } else {
+                        var8 = d.field_h[var4];
+                        if (var5 != 0) {
+                          break L5;
+                        } else {
+                          L8: {
+                            if (var8 == null) {
+                              break L8;
                             } else {
-                              if (var9.field_C != 139) {
-                                break L6;
-                              } else {
-                                break L5;
+                              L9: {
+                                if (365 != var8.field_K) {
+                                  break L9;
+                                } else {
+                                  if (var8.field_C != 139) {
+                                    break L9;
+                                  } else {
+                                    break L8;
+                                  }
+                                }
                               }
+                              L10: {
+                                if (var3 != null) {
+                                  break L10;
+                                } else {
+                                  var3 = Integer.toString(var4);
+                                  if (var5 == 0) {
+                                    break L8;
+                                  } else {
+                                    break L10;
+                                  }
+                                }
+                              }
+                              var3 = (String) (var3) + ", " + var4;
+                              break L8;
                             }
                           }
-                          if (var3 != null) {
-                            var3 = (String) (var3) + ", " + var6;
-                            break L5;
+                          var4++;
+                          if (var5 == 0) {
+                            continue L6;
                           } else {
-                            var3 = Integer.toString(var6);
-                            break L5;
+                            break L7;
                           }
                         }
-                        var6++;
-                        continue L4;
-                      } else {
-                        var6++;
-                        continue L4;
                       }
+                    }
+                    if (var3 == null) {
+                      break L5;
+                    } else {
+                      discarded$4 = bn.field_g.a("Screenshot(s) " + (String) (var3) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                      return;
                     }
                   }
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              L7: {
+              L11: {
                 if (null == bn.field_g) {
-                  break L7;
+                  break L11;
                 } else {
                   discarded$5 = bn.field_g.a(wf.field_m, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
-                  break L7;
+                  break L11;
                 }
               }
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) ((Object) var1), "hc.B(" + 73 + ')');
+          throw dh.a((Throwable) ((Object) var1), "hc.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(byte param0) {
         field_e = null;
         field_c = null;
-        int var1 = 68;
+        int var1 = -68 / ((16 - param0) / 39);
         field_f = null;
     }
 
@@ -180,7 +217,7 @@ final class hc {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3 = new pi(0, 0, 0);
+            var3 = new pi(0, param0, 0);
             var3.field_b = param2.field_b;
             var3.field_i = param2.field_i;
             var3.field_a = param2.field_a;
@@ -198,7 +235,7 @@ final class hc {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) (var3_ref);
-            stackOut_2_1 = new StringBuilder().append("hc.A(").append(0).append(',');
+            stackOut_2_1 = new StringBuilder().append("hc.A(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

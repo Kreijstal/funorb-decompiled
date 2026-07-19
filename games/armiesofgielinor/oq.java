@@ -33,24 +33,26 @@ final class oq extends wv {
     }
 
     final static int a(boolean param0) {
+        if (param0) {
+            return -112;
+        }
         return ii.field_b;
     }
 
     final static void a(int param0, java.awt.Component param1) {
         param1.setFocusTraversalKeysEnabled(false);
+        if (param0 != 27080) {
+            return;
+        }
         try {
-            param1.addKeyListener((java.awt.event.KeyListener) (Object) va.field_w);
-            param1.addFocusListener((java.awt.event.FocusListener) (Object) va.field_w);
+            param1.addKeyListener(va.field_w);
+            param1.addFocusListener(va.field_w);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "oq.F(" + 27080 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "oq.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Classic";
         field_m = new sa();
         field_k = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";

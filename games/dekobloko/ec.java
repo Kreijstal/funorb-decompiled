@@ -25,13 +25,18 @@ final class ec {
         field_k = null;
         field_p = null;
         field_i = null;
-        field_c = null;
-        field_f = null;
-        field_j = null;
-        field_a = null;
-        field_q = null;
-        field_b = null;
-        field_e = null;
+        if (param0 < 78) {
+          return;
+        } else {
+          field_c = null;
+          field_f = null;
+          field_j = null;
+          field_a = null;
+          field_q = null;
+          field_b = null;
+          field_e = null;
+          return;
+        }
     }
 
     final static void a(int param0) {
@@ -46,22 +51,36 @@ final class ec {
           L0: {
             var1 = we.field_b;
             L1: while (true) {
-              if (!sc.c((byte) -104)) {
+              L2: {
+                L3: {
+                  if (!sc.c((byte) -104)) {
+                    break L3;
+                  } else {
+                    var1.f(8, -4);
+                    fieldTemp$2 = var1.field_n + 1;
+                    var1.field_n = var1.field_n + 1;
+                    var2 = fieldTemp$2;
+                    ba.a(-32141, var1);
+                    we.field_b.b(var1.field_n - var2, true);
+                    if (var3 != 0) {
+                      break L2;
+                    } else {
+                      if (var3 == 0) {
+                        continue L1;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                }
                 if (param0 <= -91) {
-                  break L0;
+                  break L2;
                 } else {
                   ec.a(-123);
                   return;
                 }
-              } else {
-                var1.f(8, -4);
-                fieldTemp$2 = var1.field_n + 1;
-                var1.field_n = var1.field_n + 1;
-                var2 = fieldTemp$2;
-                ba.a(-32141, var1);
-                we.field_b.b(var1.field_n - var2, true);
-                continue L1;
               }
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

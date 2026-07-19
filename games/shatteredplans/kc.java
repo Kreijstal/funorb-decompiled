@@ -19,9 +19,14 @@ final class kc {
     static int[] field_m;
 
     public static void a(boolean param0) {
-        field_l = null;
+        field_l = (byte[][]) null;
         field_b = null;
         field_m = null;
+        if (param0) {
+            field_i = 19;
+            field_g = null;
+            return;
+        }
         field_g = null;
     }
 
@@ -50,7 +55,7 @@ final class kc {
                 break L0;
               } else {
                 var3 = gd.field_b[var2];
-                ps.a(jl.field_M, var2 << 4, jl.field_M, var1_int, var3);
+                ps.a(jl.field_M, var2 << 740786052, jl.field_M, var1_int, var3);
                 var1_int = var1_int + var3;
                 var2++;
                 continue L2;
@@ -60,15 +65,11 @@ final class kc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1, "kc.A(" + param0 + ')');
+          throw r.a((Throwable) ((Object) var1), "kc.A(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new pf();
         field_m = new int[4];
     }

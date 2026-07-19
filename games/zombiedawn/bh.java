@@ -14,19 +14,22 @@ final class bh extends le {
         al var3 = null;
         int var4 = 0;
         al[] var5 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = ZombieDawn.field_J;
         try {
           L0: {
             if (qg.field_d) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               qg.field_d = true;
               var5 = qk.field_Jb;
               var1 = var5;
-              var2 = 0;
+              var2 = param0;
               L1: while (true) {
                 if (var2 >= var5.length) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   var3 = var5[var2];
@@ -40,21 +43,29 @@ final class bh extends le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1_ref, "bh.B(" + 0 + ')');
+          throw sh.a((Throwable) ((Object) var1_ref), "bh.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void c(int param0) {
         field_h = null;
+        if (param0 < 69) {
+            bh.a(-47);
+        }
         field_j = null;
         field_i = null;
     }
 
     bh(byte[] param0) {
         try {
-            ((bh) this).field_k = param0;
+            this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,12 +79,13 @@ final class bh extends le {
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_22_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_23_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_6_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_18_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_19_0 = 0;
         int stackOut_11_0 = 0;
         int stackOut_2_0 = 0;
         var5 = ZombieDawn.field_J;
@@ -83,29 +95,40 @@ final class bh extends le {
               if (c.a(param0, 441)) {
                 stackOut_6_0 = 1;
                 stackIn_7_0 = stackOut_6_0;
-                return stackIn_7_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 var6 = hn.field_o;
                 var2 = var6;
                 var3 = 0;
                 L1: while (true) {
                   if (var6.length <= var3) {
-                    var2 = pf.field_h;
-                    var3 = 0;
-                    L2: while (true) {
+                    L2: {
+                      var2 = pf.field_h;
+                      var3 = 0;
+                      if (!param1) {
+                        break L2;
+                      } else {
+                        field_h = (String) null;
+                        break L2;
+                      }
+                    }
+                    L3: while (true) {
                       if (var3 >= var2.length) {
-                        stackOut_21_0 = 0;
-                        stackIn_22_0 = stackOut_21_0;
+                        stackOut_22_0 = 0;
+                        stackIn_23_0 = stackOut_22_0;
+                        decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
                         var4 = var2[var3];
                         if (param0 == var4) {
-                          stackOut_18_0 = 1;
-                          stackIn_19_0 = stackOut_18_0;
-                          return stackIn_19_0 != 0;
+                          stackOut_19_0 = 1;
+                          stackIn_20_0 = stackOut_19_0;
+                          decompiledRegionSelector0 = 3;
+                          break L0;
                         } else {
                           var3++;
-                          continue L2;
+                          continue L3;
                         }
                       }
                     }
@@ -117,7 +140,8 @@ final class bh extends le {
                     } else {
                       stackOut_11_0 = 1;
                       stackIn_12_0 = stackOut_11_0;
-                      return stackIn_12_0 != 0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     }
                   }
                 }
@@ -125,22 +149,35 @@ final class bh extends le {
             } else {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2_ref, "bh.C(" + param0 + ',' + false + ')');
+          throw sh.a((Throwable) ((Object) var2_ref), "bh.C(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_22_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_12_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_20_0 != 0;
+              } else {
+                return stackIn_23_0 != 0;
+              }
+            }
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "CURSE";
     }
 }

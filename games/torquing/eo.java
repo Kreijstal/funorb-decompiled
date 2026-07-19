@@ -14,12 +14,12 @@ final class eo {
         field_c = null;
         if (param0 != 6) {
           eo.a(20);
-          field_d = null;
+          field_d = (int[][]) null;
           field_e = null;
           field_a = null;
           return;
         } else {
-          field_d = null;
+          field_d = (int[][]) null;
           field_e = null;
           field_a = null;
           return;
@@ -27,10 +27,6 @@ final class eo {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "eo.A(";
         field_e = "The account name you use to access RuneScape and other Jagex.com games";
         field_b = new k(6, 0, 4, 2);

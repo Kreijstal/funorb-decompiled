@@ -83,23 +83,23 @@ abstract class ek extends ff {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var7_ref;
+            stackOut_2_0 = (RuntimeException) (var7_ref);
             stackOut_2_1 = new StringBuilder().append("ek.O(").append(param0).append(',').append(param1).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -108,23 +108,23 @@ abstract class ek extends ff {
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
             stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(param3).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param4 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -133,23 +133,23 @@ abstract class ek extends ff {
             }
           }
           L3: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
             stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param5 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -157,7 +157,7 @@ abstract class ek extends ff {
               break L3;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param6 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param6 + ')');
         }
         return stackIn_1_0;
     }
@@ -165,23 +165,33 @@ abstract class ek extends ff {
     public static void f(byte param0) {
         field_J = null;
         field_F = null;
-        field_z = null;
-        field_I = null;
-        field_y = null;
-        field_H = null;
+        if (param0 >= -63) {
+          field_K = -50L;
+          field_z = null;
+          field_I = null;
+          field_y = null;
+          field_H = null;
+          return;
+        } else {
+          field_z = null;
+          field_I = null;
+          field_y = null;
+          field_H = null;
+          return;
+        }
     }
 
     final void d(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        var2 = ((ek) this).field_G >> 24;
-        var3 = ((ek) this).field_E >> 24;
-        if (var2 == ((ek) this).field_C) {
-          if (var3 != ((ek) this).field_B) {
-            ((ek) this).field_C = var2;
-            ((ek) this).field_B = var3;
-            ((ek) this).field_A.a(-44, (ek) this);
+        var2 = this.field_G >> -1148155624;
+        var3 = this.field_E >> 728831128;
+        if (var2 == this.field_C) {
+          if (var3 != this.field_B) {
+            this.field_C = var2;
+            this.field_B = var3;
+            this.field_A.a(-44, (ek) (this));
             var4 = -126 % ((-59 - param0) / 46);
             return;
           } else {
@@ -189,9 +199,9 @@ abstract class ek extends ff {
             return;
           }
         } else {
-          ((ek) this).field_C = var2;
-          ((ek) this).field_B = var3;
-          ((ek) this).field_A.a(-44, (ek) this);
+          this.field_C = var2;
+          this.field_B = var3;
+          this.field_A.a(-44, (ek) (this));
           var4 = -126 % ((-59 - param0) / 46);
           return;
         }
@@ -201,30 +211,41 @@ abstract class ek extends ff {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         me.field_h = param4;
-        nc.field_h = param0;
-        se.field_C = param1;
-        bf.field_g = param3;
+        if (param2 != 1829947600) {
+          field_z = (cj) null;
+          nc.field_h = param0;
+          se.field_C = param1;
+          bf.field_g = param3;
+          return;
+        } else {
+          nc.field_h = param0;
+          se.field_C = param1;
+          bf.field_g = param3;
+          return;
+        }
     }
 
     final int g(int param0) {
-        Object var3 = null;
+        int discarded$2 = 0;
+        String var3 = null;
         if (param0 != 1829947600) {
-          var3 = null;
-          int discarded$2 = ek.a(false, -35, (String) null, -111, (String) null, (String) null, -17);
-          return ((ek) this).field_E >> 16;
+          var3 = (String) null;
+          discarded$2 = ek.a(false, -35, (String) null, -111, (String) null, (String) null, -17);
+          return this.field_E >> 1829947600;
         } else {
-          return ((ek) this).field_E >> 16;
+          return this.field_E >> 1829947600;
         }
     }
 
     final static void i(int param0) {
-        Object var2 = null;
+        int discarded$2 = 0;
+        String var2 = null;
         q.field_a = null;
         aa.field_n = null;
         ik.field_a = null;
         if (param0 < 45) {
-          var2 = null;
-          int discarded$2 = ek.a(false, 8, (String) null, -49, (String) null, (String) null, -19);
+          var2 = (String) null;
+          discarded$2 = ek.a(false, 8, (String) null, -49, (String) null, (String) null, -19);
           bq.field_c = false;
           ud.field_N = null;
           return;
@@ -256,12 +277,12 @@ abstract class ek extends ff {
         try {
           L0: {
             L1: {
-              ((ek) this).field_A = param1;
-              ((ek) this).d((byte) -105);
+              this.field_A = param1;
+              this.d((byte) -105);
               if (param0 == -9019) {
                 break L1;
               } else {
-                field_J = null;
+                field_J = (ja) null;
                 break L1;
               }
             }
@@ -271,23 +292,23 @@ abstract class ek extends ff {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ek.Q(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -295,31 +316,27 @@ abstract class ek extends ff {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     final int e(byte param0) {
         if (param0 != -112) {
             ek.i(98);
-            return ((ek) this).field_G >> 16;
+            return this.field_G >> 1307187664;
         }
-        return ((ek) this).field_G >> 16;
+        return this.field_G >> 1307187664;
     }
 
     ek(int param0, int param1, int param2) {
-        ((ek) this).field_C = -1;
-        ((ek) this).field_G = param0 << 16;
-        ((ek) this).field_B = -1;
-        ((ek) this).field_D = param2;
-        ((ek) this).field_E = param1 << 16;
+        this.field_C = -1;
+        this.field_G = param0 << 1588518416;
+        this.field_B = -1;
+        this.field_D = param2;
+        this.field_E = param1 << 8329232;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = "<%0> would need a rating of <%1> to play with the current options.";
         field_I = "You have withdrawn your request to join.";
         field_F = "Speed";

@@ -8,13 +8,12 @@ final class tua {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 < 68) {
+            field_a = 120;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "tua.A(";
         field_a = 4;
         field_b = "Return to lobby";

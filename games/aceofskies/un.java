@@ -29,9 +29,15 @@ abstract class un {
     }
 
     public static void d(int param0) {
+        int discarded$0 = 0;
         field_f = null;
         field_i = null;
         field_q = null;
+        if (param0 != 6) {
+            discarded$0 = un.e(26);
+            field_o = null;
+            return;
+        }
         field_o = null;
     }
 
@@ -43,10 +49,10 @@ abstract class un {
 
     final int b(int param0) {
         if (param0 != -1048142560) {
-          ((un) this).field_b = null;
-          return ((un) this).field_b.c(0) + ((un) this).field_g.c(0);
+          this.field_b = (er) null;
+          return this.field_b.c(0) + this.field_g.c(0);
         } else {
-          return ((un) this).field_b.c(0) + ((un) this).field_g.c(0);
+          return this.field_b.c(0) + this.field_g.c(0);
         }
     }
 
@@ -63,19 +69,19 @@ abstract class un {
         gp stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          var6 = (long)param1 + ((long)param0 << 32);
+          var6 = (long)param1 + ((long)param0 << -1048142560);
           var8 = new gp();
-          stackOut_0_0 = (gp) var8;
+          stackOut_0_0 = (gp) (var8);
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
           if (!param3) {
-            stackOut_2_0 = (gp) (Object) stackIn_2_0;
+            stackOut_2_0 = (gp) ((Object) stackIn_2_0);
             stackOut_2_1 = 0;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             break L0;
           } else {
-            stackOut_1_0 = (gp) (Object) stackIn_1_0;
+            stackOut_1_0 = (gp) ((Object) stackIn_1_0);
             stackOut_1_1 = 1;
             stackIn_3_0 = stackOut_1_0;
             stackIn_3_1 = stackOut_1_1;
@@ -87,34 +93,34 @@ abstract class un {
         var8.field_z = param4;
         if (param2 == -21) {
           if (!param3) {
-            if (20 <= ((un) this).c(-116)) {
+            if (20 <= this.c(-116)) {
               throw new RuntimeException();
             } else {
-              ((un) this).field_d.a(2, (wt) (Object) var8);
+              this.field_d.a(2, var8);
               return var8;
             }
           } else {
-            if (((un) this).b(-1048142560) >= 20) {
+            if ((this.b(-1048142560) ^ -1) <= -21) {
               throw new RuntimeException();
             } else {
-              ((un) this).field_b.a(2, (wt) (Object) var8);
+              this.field_b.a(2, var8);
               return var8;
             }
           }
         } else {
-          ((un) this).field_d = null;
+          this.field_d = (er) null;
           if (!param3) {
-            if (20 <= ((un) this).c(-116)) {
+            if (20 <= this.c(-116)) {
               throw new RuntimeException();
             } else {
-              ((un) this).field_d.a(2, (wt) (Object) var8);
+              this.field_d.a(2, var8);
               return var8;
             }
           } else {
-            if (((un) this).b(-1048142560) >= 20) {
+            if ((this.b(-1048142560) ^ -1) <= -21) {
               throw new RuntimeException();
             } else {
-              ((un) this).field_b.a(2, (wt) (Object) var8);
+              this.field_b.a(2, var8);
               return var8;
             }
           }
@@ -122,6 +128,7 @@ abstract class un {
     }
 
     final boolean a(boolean param0) {
+        int discarded$10 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -130,8 +137,8 @@ abstract class un {
         int stackOut_2_0 = 0;
         if (param0) {
           L0: {
-            int discarded$10 = ((un) this).c(53);
-            if (-21 < ((un) this).b(-1048142560)) {
+            discarded$10 = this.c(53);
+            if (-21 < (this.b(-1048142560) ^ -1)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -144,7 +151,7 @@ abstract class un {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (-21 > ((un) this).b(-1048142560)) {
+            if (-21 < (this.b(-1048142560) ^ -1)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -169,16 +176,16 @@ abstract class un {
           if (ml.field_m == null) {
             var3 = ka.a(param0 ^ 118);
             if (param0 != -21) {
-              field_i = null;
+              field_i = (jb) null;
               vr.field_b = new ce(var3, (String) null, true, false, false);
-              vn.field_f.a((ea) (Object) ak.field_d, 0);
-              ak.field_d.d((ea) (Object) vr.field_b, -30244);
+              vn.field_f.a(ak.field_d, 0);
+              ak.field_d.d(vr.field_b, -30244);
               ak.field_d.e((byte) 85);
               return;
             } else {
               vr.field_b = new ce(var3, (String) null, true, false, false);
-              vn.field_f.a((ea) (Object) ak.field_d, 0);
-              ak.field_d.d((ea) (Object) vr.field_b, -30244);
+              vn.field_f.a(ak.field_d, 0);
+              ak.field_d.d(vr.field_b, -30244);
               ak.field_d.e((byte) 85);
               return;
             }
@@ -187,15 +194,15 @@ abstract class un {
             var2 = ka.a(param0 ^ 118);
             if (param0 == -21) {
               vr.field_b = new ce(var2, (String) null, true, false, false);
-              vn.field_f.a((ea) (Object) ak.field_d, 0);
-              ak.field_d.d((ea) (Object) vr.field_b, -30244);
+              vn.field_f.a(ak.field_d, 0);
+              ak.field_d.d(vr.field_b, -30244);
               ak.field_d.e((byte) 85);
               return;
             } else {
-              field_i = null;
+              field_i = (jb) null;
               vr.field_b = new ce(var2, (String) null, true, false, false);
-              vn.field_f.a((ea) (Object) ak.field_d, 0);
-              ak.field_d.d((ea) (Object) vr.field_b, -30244);
+              vn.field_f.a(ak.field_d, 0);
+              ak.field_d.d(vr.field_b, -30244);
               ak.field_d.e((byte) 85);
               return;
             }
@@ -207,7 +214,7 @@ abstract class un {
 
     final boolean a(byte param0) {
         int var2 = -97 % ((param0 - -51) / 52);
-        return ((un) this).c(-95) >= 20 ? true : false;
+        return -21 >= (this.c(-95) ^ -1) ? true : false;
     }
 
     abstract void a(int param0, boolean param1, Object param2);
@@ -215,29 +222,25 @@ abstract class un {
     final int c(int param0) {
         if (param0 > -69) {
           field_c = 121;
-          return ((un) this).field_d.c(0) - -((un) this).field_n.c(0);
+          return this.field_d.c(0) - -this.field_n.c(0);
         } else {
-          return ((un) this).field_d.c(0) - -((un) this).field_n.c(0);
+          return this.field_d.c(0) - -this.field_n.c(0);
         }
     }
 
     un() {
-        ((un) this).field_b = new er();
-        ((un) this).field_g = new er();
-        ((un) this).field_d = new er();
-        ((un) this).field_n = new er();
-        ((un) this).field_l = new rb(6);
-        ((un) this).field_j = 0;
-        ((un) this).field_k = (byte) 0;
-        ((un) this).field_e = 0;
-        ((un) this).field_h = new rb(10);
+        this.field_b = new er();
+        this.field_g = new er();
+        this.field_d = new er();
+        this.field_n = new er();
+        this.field_l = new rb(6);
+        this.field_j = 0;
+        this.field_k = (byte) 0;
+        this.field_e = 0;
+        this.field_h = new rb(10);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = "radar_sweep_oneshot";
         field_i = new jb();
         field_o = new lh();

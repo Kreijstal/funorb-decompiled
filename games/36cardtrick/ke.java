@@ -7,6 +7,8 @@ final class ke {
     static String field_b;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int param10, int param11, int param12) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         RuntimeException var13 = null;
         int var13_int = 0;
         int var14 = 0;
@@ -33,33 +35,33 @@ final class ke {
         var18 = Main.field_T;
         try {
           L0: {
-            param11 = (16711935 & param3 * (param11 & 16711935) >> 8) - -((16711925 & (param11 & 65280) * param3) >> 8);
+            param11 = (16711935 & param3 * (param11 & 16711935) >> -574526776) - -((16711925 & (param11 & 65280) * param3) >> -703331480);
             param3 = -param3 + 256;
             var13_int = param2;
-            var14 = 0;
+            var14 = 37 % ((param4 - -19) / 61);
             var15 = -param0;
             L1: while (true) {
-              if (var15 >= 0) {
+              if ((var15 ^ -1) <= -1) {
                 break L0;
               } else {
-                int incrementValue$2 = param9;
+                incrementValue$2 = param9;
                 param9++;
-                if (~incrementValue$2 != ~param10) {
+                if (incrementValue$2 != param10) {
                   param2 = var13_int;
                   var16 = -param7;
                   L2: while (true) {
-                    if (var16 >= 0) {
+                    if ((var16 ^ -1) <= -1) {
                       var15++;
                       param6 = param6 + param1;
                       continue L1;
                     } else {
-                      int incrementValue$3 = param2;
+                      incrementValue$3 = param2;
                       param2++;
-                      if (~incrementValue$3 != ~param10) {
+                      if (incrementValue$3 != param10) {
                         L3: {
                           var17 = param8[param6];
-                          if (~param5 != ~var17) {
-                            param8[param6] = bc.a(param3 * bc.a(var17, 65280) >> 8, 65280) + bc.a(bc.a(16711935, var17) * param3 >> 8, 16711935) + param11;
+                          if (param5 != var17) {
+                            param8[param6] = bc.a(param3 * bc.a(var17, 65280) >> 1542353864, 65280) + bc.a(bc.a(16711935, var17) * param3 >> 1595916328, 16711935) + param11;
                             break L3;
                           } else {
                             break L3;
@@ -71,7 +73,7 @@ final class ke {
                       } else {
                         L4: {
                           var17 = param12;
-                          if (var16 - -param12 > 0) {
+                          if (-1 > (var16 - -param12 ^ -1)) {
                             var17 = -var16;
                             break L4;
                           } else {
@@ -98,23 +100,23 @@ final class ke {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var13 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var13;
-            stackOut_18_1 = new StringBuilder().append("ke.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(-84).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
+            stackOut_18_0 = (RuntimeException) (var13);
+            stackOut_18_1 = new StringBuilder().append("ke.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param8 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L5;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -122,7 +124,7 @@ final class ke {
               break L5;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 
@@ -133,12 +135,12 @@ final class ke {
         int var6 = 0;
         var6 = Main.field_T;
         if (param0 == -100) {
-          var3 = (((ke) this).field_a.length >> 1) + -1;
+          var3 = (this.field_a.length >> 434476833) + -1;
           var4 = var3 & param1;
           L0: while (true) {
-            var5 = ((ke) this).field_a[var4 + (var4 - -1)];
+            var5 = this.field_a[var4 + (var4 - -1)];
             if (var5 != -1) {
-              if (((ke) this).field_a[var4 + var4] == param1) {
+              if (this.field_a[var4 + var4] == param1) {
                 return var5;
               } else {
                 var4 = var3 & 1 + var4;
@@ -154,6 +156,9 @@ final class ke {
     }
 
     public static void a(byte param0) {
+        if (param0 > -6) {
+            field_c = (qa) null;
+        }
         field_b = null;
         field_c = null;
     }
@@ -161,22 +166,26 @@ final class ke {
     final static void a(dh param0, int param1, int param2) {
         w var5 = null;
         int var4 = 0;
+        int discarded$0 = 0;
         try {
             var5 = na.field_r;
-            var5.h(4, 0);
+            var5.h(param1, 0);
             var5.field_i = var5.field_i + 1;
             var4 = var5.field_i;
-            var5.b(-9469, 1);
-            var5.b(-9469, param0.field_n);
+            if (param2 != 21719) {
+                field_c = (qa) null;
+            }
+            var5.b(param2 ^ -28716, 1);
+            var5.b(param2 ^ -28716, param0.field_n);
             var5.b(-9469, param0.field_l);
             var5.a(-246, param0.field_j);
             var5.a(-246, param0.field_i);
             var5.a(-246, param0.field_p);
             var5.a(-246, param0.field_h);
-            int discarded$0 = var5.b(var4, (byte) 5);
-            var5.f(-var4 + var5.field_i, 8049);
+            discarded$0 = var5.b(var4, (byte) 5);
+            var5.f(-var4 + var5.field_i, param2 ^ 19366);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ke.D(" + (param0 != null ? "{...}" : "null") + ',' + 4 + ',' + 21719 + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "ke.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -205,8 +214,8 @@ final class ke {
           L0: {
             var2_int = 1;
             L1: while (true) {
-              if (var2_int > (param0.length >> 1) + param0.length) {
-                ((ke) this).field_a = new int[var2_int + var2_int];
+              if (var2_int > (param0.length >> -2061894111) + param0.length) {
+                this.field_a = new int[var2_int + var2_int];
                 var3 = 0;
                 L2: while (true) {
                   if (var2_int + var2_int <= var3) {
@@ -217,9 +226,9 @@ final class ke {
                       } else {
                         var4 = param0[var3] & -1 + var2_int;
                         L4: while (true) {
-                          if (-1 == ((ke) this).field_a[var4 + var4 - -1]) {
-                            ((ke) this).field_a[var4 + var4] = param0[var3];
-                            ((ke) this).field_a[var4 + (var4 - -1)] = var3;
+                          if (-1 == this.field_a[var4 + var4 - -1]) {
+                            this.field_a[var4 + var4] = param0[var3];
+                            this.field_a[var4 + (var4 - -1)] = var3;
                             var3++;
                             continue L3;
                           } else {
@@ -230,7 +239,7 @@ final class ke {
                       }
                     }
                   } else {
-                    ((ke) this).field_a[var3] = -1;
+                    this.field_a[var3] = -1;
                     var3++;
                     continue L2;
                   }
@@ -245,23 +254,23 @@ final class ke {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_0 = (RuntimeException) (var2);
             stackOut_14_1 = new StringBuilder().append("ke.<init>(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -269,15 +278,11 @@ final class ke {
               break L5;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new qa("email");
         field_b = "Names should contain a maximum of 12 characters";
     }

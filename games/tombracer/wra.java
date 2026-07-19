@@ -19,34 +19,47 @@ final class wra extends IOException {
         var2 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
+            L1: {
+              if (param0 == 0) {
+                break L1;
+              } else {
+                field_b = (String) null;
+                break L1;
+              }
+            }
             var1_int = 0;
-            L1: while (true) {
+            L2: while (true) {
               if (db.field_h.field_c.length <= var1_int) {
                 break L0;
               } else {
                 db.field_h.field_c[var1_int] = vba.field_x[var1_int];
                 var1_int++;
-                continue L1;
+                if (var2 == 0) {
+                  continue L2;
+                } else {
+                  return;
+                }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "wra.A(" + 0 + ')');
+          throw tba.a((Throwable) ((Object) var1), "wra.A(" + param0 + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_a = null;
+        if (!param0) {
+            field_a = (String) null;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Public";
     }
 }

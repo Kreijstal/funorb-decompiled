@@ -9,11 +9,14 @@ final class qd extends ib {
 
     public static void i(int param0) {
         field_p = null;
+        if (param0 != 400) {
+            field_r = 18;
+        }
     }
 
     final static void a(int param0, int param1) {
         h.field_c = 400 * param1 / 150;
-        h.field_a = (param1 << 16) / 150;
+        h.field_a = (param1 << -798739728) / 150;
         if (param0 >= -71) {
           qd.a(-106, -80);
           h.field_b = 100 * param1 / 150;
@@ -27,9 +30,9 @@ final class qd extends ib {
     qd(Object param0, int param1) {
         super(param1);
         try {
-            ((qd) this).field_o = param0;
+            this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -43,16 +46,12 @@ final class qd extends ib {
 
     final Object f(int param0) {
         if (param0 != -18088) {
-            return null;
+            return (Object) null;
         }
-        return ((qd) this).field_o;
+        return this.field_o;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "This is a key.<br><br>When you collect a key,<br>all the safes of the same<br>colour will open. The<br>safes usually contain crystals, so you'll probably need to open them to complete the level.";
         field_r = 64;
     }

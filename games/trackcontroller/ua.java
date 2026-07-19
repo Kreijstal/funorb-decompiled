@@ -8,13 +8,14 @@ final class ua extends rh {
     private int field_J;
 
     final String e(int param0) {
-        if (((ua) this).field_q) {
-          return ((ua) this).field_I.c(15914);
+        String discarded$2 = null;
+        if (this.field_q) {
+          return this.field_I.c(15914);
         } else {
           if (param0 == 0) {
             return null;
           } else {
-            String discarded$2 = ((ua) this).e(-5);
+            discarded$2 = this.e(-5);
             return null;
           }
         }
@@ -31,6 +32,7 @@ final class ua extends rh {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
@@ -47,34 +49,36 @@ final class ua extends rh {
             if (param0 < -104) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("ua.QA(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -82,9 +86,13 @@ final class ua extends rh {
               break L1;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
-        return stackIn_4_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_4_0 != 0;
+        }
     }
 
     public static void j(int param0) {
@@ -100,10 +108,10 @@ final class ua extends rh {
 
     final void a(int param0, int param1, byte param2, al param3) {
         try {
-            ((ua) this).field_J = ((ua) this).field_J + 1;
+            this.field_J = this.field_J + 1;
             super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ua.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "ua.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -123,26 +131,26 @@ final class ua extends rh {
         if (param0 != 0) {
           return;
         } else {
-          var5 = param1 + ((ua) this).field_p + (((ua) this).field_x >> 1);
-          var6 = (((ua) this).field_u >> 1) + ((ua) this).field_m + param2;
-          var8 = ((ua) this).field_I.a((byte) -58);
+          var5 = param1 + this.field_p + (this.field_x >> 806708545);
+          var6 = (this.field_u >> 595129889) + this.field_m + param2;
+          var8 = this.field_I.a((byte) -58);
           if (lh.field_x == var8) {
             var16 = TrackController.field_D[0];
-            var9 = var16.field_s << 1;
-            var10 = var16.field_v << 1;
+            var9 = var16.field_s << -1197099487;
+            var10 = var16.field_v << -1430298495;
             if (bl.field_a != null) {
               if (var9 <= bl.field_a.field_t) {
                 if (bl.field_a.field_q >= var10) {
                   mb.a((byte) -103, bl.field_a);
                   ll.a();
-                  var16.a(112, 144, var16.field_s << 4, var16.field_v << 4, -((ua) this).field_J << 10, 4096);
+                  var16.a(112, 144, var16.field_s << 1674872420, var16.field_v << -1017554108, -this.field_J << 975192618, 4096);
                   ch.m(-74);
                   bl.field_a.a(-var16.field_s + var5, -var16.field_v + var6, 256);
                   return;
                 } else {
                   bl.field_a = new qj(var9, var10);
                   mb.a((byte) 122, bl.field_a);
-                  var16.a(112, 144, var16.field_s << 4, var16.field_v << 4, -((ua) this).field_J << 10, 4096);
+                  var16.a(112, 144, var16.field_s << 1674872420, var16.field_v << -1017554108, -this.field_J << 975192618, 4096);
                   ch.m(-74);
                   bl.field_a.a(-var16.field_s + var5, -var16.field_v + var6, 256);
                   return;
@@ -150,7 +158,7 @@ final class ua extends rh {
               } else {
                 bl.field_a = new qj(var9, var10);
                 mb.a((byte) 122, bl.field_a);
-                var16.a(112, 144, var16.field_s << 4, var16.field_v << 4, -((ua) this).field_J << 10, 4096);
+                var16.a(112, 144, var16.field_s << 1674872420, var16.field_v << -1017554108, -this.field_J << 975192618, 4096);
                 ch.m(-74);
                 bl.field_a.a(-var16.field_s + var5, -var16.field_v + var6, 256);
                 return;
@@ -158,7 +166,7 @@ final class ua extends rh {
             } else {
               bl.field_a = new qj(var9, var10);
               mb.a((byte) 122, bl.field_a);
-              var16.a(112, 144, var16.field_s << 4, var16.field_v << 4, -((ua) this).field_J << 10, 4096);
+              var16.a(112, 144, var16.field_s << 1674872420, var16.field_v << -1017554108, -this.field_J << 975192618, 4096);
               ch.m(-74);
               bl.field_a.a(-var16.field_s + var5, -var16.field_v + var6, 256);
               return;
@@ -170,31 +178,31 @@ final class ua extends rh {
                   return;
                 } else {
                   var14 = TrackController.field_D[1];
-                  var14.a(-(var14.field_t >> 1) + var5, -(var14.field_q >> 1) + var6, 256);
+                  var14.a(-(var14.field_t >> -1432936543) + var5, -(var14.field_q >> 347300897) + var6, 256);
                   return;
                 }
               } else {
                 var13 = TrackController.field_D[2];
-                var13.a(-(var13.field_t >> 1) + var5, var6 - (var13.field_q >> 1), 256);
+                var13.a(-(var13.field_t >> 1603413217) + var5, var6 - (var13.field_q >> -1602711263), 256);
                 return;
               }
             } else {
               var15 = TrackController.field_D[0];
-              var9 = var15.field_s << 1;
-              var10 = var15.field_v << 1;
+              var9 = var15.field_s << -1197099487;
+              var10 = var15.field_v << -1430298495;
               if (bl.field_a != null) {
                 if (var9 <= bl.field_a.field_t) {
                   if (bl.field_a.field_q >= var10) {
                     mb.a((byte) -103, bl.field_a);
                     ll.a();
-                    var15.a(112, 144, var15.field_s << 4, var15.field_v << 4, -((ua) this).field_J << 10, 4096);
+                    var15.a(112, 144, var15.field_s << 1674872420, var15.field_v << -1017554108, -this.field_J << 975192618, 4096);
                     ch.m(-74);
                     bl.field_a.a(-var15.field_s + var5, -var15.field_v + var6, 256);
                     return;
                   } else {
                     bl.field_a = new qj(var9, var10);
                     mb.a((byte) 122, bl.field_a);
-                    var15.a(112, 144, var15.field_s << 4, var15.field_v << 4, -((ua) this).field_J << 10, 4096);
+                    var15.a(112, 144, var15.field_s << 1674872420, var15.field_v << -1017554108, -this.field_J << 975192618, 4096);
                     ch.m(-74);
                     bl.field_a.a(-var15.field_s + var5, -var15.field_v + var6, 256);
                     return;
@@ -202,7 +210,7 @@ final class ua extends rh {
                 } else {
                   bl.field_a = new qj(var9, var10);
                   mb.a((byte) 122, bl.field_a);
-                  var15.a(112, 144, var15.field_s << 4, var15.field_v << 4, -((ua) this).field_J << 10, 4096);
+                  var15.a(112, 144, var15.field_s << 1674872420, var15.field_v << -1017554108, -this.field_J << 975192618, 4096);
                   ch.m(-74);
                   bl.field_a.a(-var15.field_s + var5, -var15.field_v + var6, 256);
                   return;
@@ -210,7 +218,7 @@ final class ua extends rh {
               } else {
                 bl.field_a = new qj(var9, var10);
                 mb.a((byte) 122, bl.field_a);
-                var15.a(112, 144, var15.field_s << 4, var15.field_v << 4, -((ua) this).field_J << 10, 4096);
+                var15.a(112, 144, var15.field_s << 1674872420, var15.field_v << -1017554108, -this.field_J << 975192618, 4096);
                 ch.m(-74);
                 bl.field_a.a(-var15.field_s + var5, -var15.field_v + var6, 256);
                 return;
@@ -222,17 +230,13 @@ final class ua extends rh {
 
     ua(eh param0) {
         try {
-            ((ua) this).field_I = param0;
+            this.field_I = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = "Fullscreen";
     }
 }

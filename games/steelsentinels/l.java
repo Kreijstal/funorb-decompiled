@@ -16,16 +16,16 @@ final class l implements Iterator {
 
     final static void a(em param0, byte param1) {
         try {
-            int var2_int = -1;
-            ll.field_e.a((we) (Object) param0);
+            int var2_int = -112 % ((-14 - param1) / 32);
+            ll.field_e.a(param0);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "l.A(" + (param0 != null ? "{...}" : "null") + ',' + -128 + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "l.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(gk[] param0, cm param1, String[] param2, int[] param3, int param4, String[] param5, String[][] param6, int param7, cm param8, byte param9, String[][] param10, wk[][] param11, cm param12, byte[] param13, wk[][] param14, boolean param15, int[] param16, int param17, String[] param18, byte[] param19) {
         RuntimeException var20 = null;
-        Object var21 = null;
+        byte[] var21 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
@@ -260,7 +260,7 @@ final class l implements Iterator {
               if (param9 == 94) {
                 break L1;
               } else {
-                var21 = null;
+                var21 = (byte[]) null;
                 l.a((gk[]) null, (cm) null, (String[]) null, (int[]) null, 58, (String[]) null, (String[][]) null, -8, (cm) null, (byte) -10, (String[][]) null, (wk[][]) null, (cm) null, (byte[]) null, (wk[][]) null, true, (int[]) null, 95, (String[]) null, (byte[]) null);
                 break L1;
               }
@@ -276,23 +276,23 @@ final class l implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var20 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var20;
+            stackOut_4_0 = (RuntimeException) (var20);
             stackOut_4_1 = new StringBuilder().append("l.C(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -301,23 +301,23 @@ final class l implements Iterator {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -326,23 +326,23 @@ final class l implements Iterator {
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -351,23 +351,23 @@ final class l implements Iterator {
             }
           }
           L5: {
-            stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+            stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
             stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param3 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -376,23 +376,23 @@ final class l implements Iterator {
             }
           }
           L6: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param4).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param5 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -401,23 +401,23 @@ final class l implements Iterator {
             }
           }
           L7: {
-            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+            stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
             stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param6 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -426,23 +426,23 @@ final class l implements Iterator {
             }
           }
           L8: {
-            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+            stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
             stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param7).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param8 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L8;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -451,23 +451,23 @@ final class l implements Iterator {
             }
           }
           L9: {
-            stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+            stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
             stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param9).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param10 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L9;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -476,23 +476,23 @@ final class l implements Iterator {
             }
           }
           L10: {
-            stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+            stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
             stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
             stackIn_29_1 = stackOut_28_1;
             if (param11 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "null";
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
               break L10;
             } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "{...}";
               stackIn_31_0 = stackOut_29_0;
               stackIn_31_1 = stackOut_29_1;
@@ -501,23 +501,23 @@ final class l implements Iterator {
             }
           }
           L11: {
-            stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+            stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
             stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param12 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L11;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
@@ -526,23 +526,23 @@ final class l implements Iterator {
             }
           }
           L12: {
-            stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
+            stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
             stackOut_34_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_34_2).append(',');
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;
             stackIn_35_1 = stackOut_34_1;
             if (param13 == null) {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
               stackOut_36_2 = "null";
               stackIn_37_0 = stackOut_36_0;
               stackIn_37_1 = stackOut_36_1;
               stackIn_37_2 = stackOut_36_2;
               break L12;
             } else {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackOut_35_2 = "{...}";
               stackIn_37_0 = stackOut_35_0;
               stackIn_37_1 = stackOut_35_1;
@@ -551,23 +551,23 @@ final class l implements Iterator {
             }
           }
           L13: {
-            stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
+            stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
             stackOut_37_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_37_2).append(',');
             stackIn_39_0 = stackOut_37_0;
             stackIn_39_1 = stackOut_37_1;
             stackIn_38_0 = stackOut_37_0;
             stackIn_38_1 = stackOut_37_1;
             if (param14 == null) {
-              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
               stackOut_39_2 = "null";
               stackIn_40_0 = stackOut_39_0;
               stackIn_40_1 = stackOut_39_1;
               stackIn_40_2 = stackOut_39_2;
               break L13;
             } else {
-              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
               stackOut_38_2 = "{...}";
               stackIn_40_0 = stackOut_38_0;
               stackIn_40_1 = stackOut_38_1;
@@ -576,23 +576,23 @@ final class l implements Iterator {
             }
           }
           L14: {
-            stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
+            stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
             stackOut_40_1 = ((StringBuilder) (Object) stackIn_40_1).append(stackIn_40_2).append(',').append(param15).append(',');
             stackIn_42_0 = stackOut_40_0;
             stackIn_42_1 = stackOut_40_1;
             stackIn_41_0 = stackOut_40_0;
             stackIn_41_1 = stackOut_40_1;
             if (param16 == null) {
-              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
-              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
               stackOut_42_2 = "null";
               stackIn_43_0 = stackOut_42_0;
               stackIn_43_1 = stackOut_42_1;
               stackIn_43_2 = stackOut_42_2;
               break L14;
             } else {
-              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
-              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
+              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
               stackOut_41_2 = "{...}";
               stackIn_43_0 = stackOut_41_0;
               stackIn_43_1 = stackOut_41_1;
@@ -601,23 +601,23 @@ final class l implements Iterator {
             }
           }
           L15: {
-            stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
+            stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
             stackOut_43_1 = ((StringBuilder) (Object) stackIn_43_1).append(stackIn_43_2).append(',').append(param17).append(',');
             stackIn_45_0 = stackOut_43_0;
             stackIn_45_1 = stackOut_43_1;
             stackIn_44_0 = stackOut_43_0;
             stackIn_44_1 = stackOut_43_1;
             if (param18 == null) {
-              stackOut_45_0 = (RuntimeException) (Object) stackIn_45_0;
-              stackOut_45_1 = (StringBuilder) (Object) stackIn_45_1;
+              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
               stackOut_45_2 = "null";
               stackIn_46_0 = stackOut_45_0;
               stackIn_46_1 = stackOut_45_1;
               stackIn_46_2 = stackOut_45_2;
               break L15;
             } else {
-              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
-              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
+              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
               stackOut_44_2 = "{...}";
               stackIn_46_0 = stackOut_44_0;
               stackIn_46_1 = stackOut_44_1;
@@ -626,23 +626,23 @@ final class l implements Iterator {
             }
           }
           L16: {
-            stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
+            stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
             stackOut_46_1 = ((StringBuilder) (Object) stackIn_46_1).append(stackIn_46_2).append(',');
             stackIn_48_0 = stackOut_46_0;
             stackIn_48_1 = stackOut_46_1;
             stackIn_47_0 = stackOut_46_0;
             stackIn_47_1 = stackOut_46_1;
             if (param19 == null) {
-              stackOut_48_0 = (RuntimeException) (Object) stackIn_48_0;
-              stackOut_48_1 = (StringBuilder) (Object) stackIn_48_1;
+              stackOut_48_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackOut_48_1 = (StringBuilder) ((Object) stackIn_48_1);
               stackOut_48_2 = "null";
               stackIn_49_0 = stackOut_48_0;
               stackIn_49_1 = stackOut_48_1;
               stackIn_49_2 = stackOut_48_2;
               break L16;
             } else {
-              stackOut_47_0 = (RuntimeException) (Object) stackIn_47_0;
-              stackOut_47_1 = (StringBuilder) (Object) stackIn_47_1;
+              stackOut_47_0 = (RuntimeException) ((Object) stackIn_47_0);
+              stackOut_47_1 = (StringBuilder) ((Object) stackIn_47_1);
               stackOut_47_2 = "{...}";
               stackIn_49_0 = stackOut_47_0;
               stackIn_49_1 = stackOut_47_1;
@@ -650,23 +650,24 @@ final class l implements Iterator {
               break L16;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_49_0, stackIn_49_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_49_0), stackIn_49_2 + ')');
         }
     }
 
     public final boolean hasNext() {
+        int fieldTemp$1 = 0;
         int var2 = 0;
         var2 = SteelSentinels.field_G;
-        if (((l) this).field_d.field_j[((l) this).field_b - 1] == ((l) this).field_c) {
+        if (this.field_d.field_j[this.field_b - 1] == this.field_c) {
           L0: while (true) {
-            if (((l) this).field_d.field_e > ((l) this).field_b) {
-              int fieldTemp$1 = ((l) this).field_b;
-              ((l) this).field_b = ((l) this).field_b + 1;
-              if (((l) this).field_d.field_j[fieldTemp$1].field_k != ((l) this).field_d.field_j[-1 + ((l) this).field_b]) {
-                ((l) this).field_c = ((l) this).field_d.field_j[((l) this).field_b - 1].field_k;
+            if (this.field_d.field_e > this.field_b) {
+              fieldTemp$1 = this.field_b;
+              this.field_b = this.field_b + 1;
+              if (this.field_d.field_j[fieldTemp$1].field_k != this.field_d.field_j[-1 + this.field_b]) {
+                this.field_c = this.field_d.field_j[this.field_b - 1].field_k;
                 return true;
               } else {
-                ((l) this).field_c = ((l) this).field_d.field_j[-1 + ((l) this).field_b];
+                this.field_c = this.field_d.field_j[-1 + this.field_b];
                 continue L0;
               }
             } else {
@@ -679,72 +680,89 @@ final class l implements Iterator {
     }
 
     public final void remove() {
-        if (((l) this).field_h == null) {
+        if (this.field_h == null) {
             throw new IllegalStateException();
         }
-        ((l) this).field_h.b(4);
-        ((l) this).field_h = null;
+        this.field_h.b(4);
+        this.field_h = null;
     }
 
     public final Object next() {
+        int fieldTemp$2 = 0;
         int var2 = 0;
         Object var3 = null;
         ck var3_ref = null;
         ck var4 = null;
         var2 = SteelSentinels.field_G;
-        if (((l) this).field_d.field_j[((l) this).field_b + -1] == ((l) this).field_c) {
+        if (this.field_d.field_j[this.field_b + -1] == this.field_c) {
           L0: while (true) {
-            if (((l) this).field_d.field_e > ((l) this).field_b) {
-              int fieldTemp$2 = ((l) this).field_b;
-              ((l) this).field_b = ((l) this).field_b + 1;
-              var3_ref = ((l) this).field_d.field_j[fieldTemp$2].field_k;
-              if (var3_ref == ((l) this).field_d.field_j[((l) this).field_b - 1]) {
+            if (this.field_d.field_e > this.field_b) {
+              fieldTemp$2 = this.field_b;
+              this.field_b = this.field_b + 1;
+              var3_ref = this.field_d.field_j[fieldTemp$2].field_k;
+              if (var3_ref == this.field_d.field_j[this.field_b - 1]) {
                 continue L0;
               } else {
-                ((l) this).field_h = var3_ref;
-                ((l) this).field_c = var3_ref.field_k;
-                return (Object) (Object) var3_ref;
+                this.field_h = var3_ref;
+                this.field_c = var3_ref.field_k;
+                return var3_ref;
               }
             } else {
               return null;
             }
           }
         } else {
-          var4 = ((l) this).field_c;
-          ((l) this).field_c = var4.field_k;
-          ((l) this).field_h = var4;
-          return (Object) (Object) var4;
+          var4 = this.field_c;
+          this.field_c = var4.field_k;
+          this.field_h = var4;
+          return var4;
         }
     }
 
     private final void a(int param0) {
-        ((l) this).field_b = 1;
-        ((l) this).field_h = null;
-        ((l) this).field_c = ((l) this).field_d.field_j[0].field_k;
+        this.field_b = 1;
+        if (param0 != 29329) {
+          field_i = (tg) null;
+          this.field_h = null;
+          this.field_c = this.field_d.field_j[0].field_k;
+          return;
+        } else {
+          this.field_h = null;
+          this.field_c = this.field_d.field_j[0].field_k;
+          return;
+        }
     }
 
     public static void a(byte param0) {
-        field_i = null;
-        field_f = null;
-        field_e = null;
-        field_a = null;
+        byte[] var2 = null;
+        if (param0 != 22) {
+          var2 = (byte[]) null;
+          l.a((gk[]) null, (cm) null, (String[]) null, (int[]) null, 96, (String[]) null, (String[][]) null, -31, (cm) null, (byte) 116, (String[][]) null, (wk[][]) null, (cm) null, (byte[]) null, (wk[][]) null, true, (int[]) null, -127, (String[]) null, (byte[]) null);
+          field_i = null;
+          field_f = null;
+          field_e = null;
+          field_a = null;
+          return;
+        } else {
+          field_i = null;
+          field_f = null;
+          field_e = null;
+          field_a = null;
+          return;
+        }
     }
 
     l(q param0) {
-        ((l) this).field_h = null;
+        this.field_h = null;
         try {
-            ((l) this).field_d = param0;
+            this.field_d = param0;
             this.a(29329);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "l.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "<%0> got careless";
         field_f = "Jump:";
         field_g = -1;

@@ -21,22 +21,25 @@ final class cm extends bo {
         field_r = null;
         field_n = null;
         field_t = null;
-        field_p = null;
+        if (param0 != -121) {
+          field_o = -51;
+          field_p = null;
+          return;
+        } else {
+          field_p = null;
+          return;
+        }
     }
 
     final cd a(int param0) {
         if (param0 != 13) {
-            field_r = null;
+            field_r = (jp[]) null;
             return bj.field_Y;
         }
         return bj.field_Y;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = "No spectators";
         field_u = "Similar rating";
         field_t = "Loading...";

@@ -10,29 +10,38 @@ final class bda extends lw {
 
     public static void d(int param0) {
         field_o = null;
-        field_p = null;
-        field_n = null;
-        field_m = null;
+        if (param0 > 0) {
+          field_l = -113;
+          field_p = null;
+          field_n = null;
+          field_m = null;
+          return;
+        } else {
+          field_p = null;
+          field_n = null;
+          field_m = null;
+          return;
+        }
     }
 
     final void a(int param0, byte param1) {
         int var4 = 0;
         var4 = BachelorFridge.field_y;
         if (param0 == 34) {
-          if (0 != ((bda) this).field_e) {
-            if (((bda) this).field_e != 1) {
+          if (0 != this.field_e) {
+            if (this.field_e != 1) {
               L0: {
                 if (!um.a(true)) {
                   break L0;
                 } else {
-                  if (!((bda) this).c((byte) 95)) {
+                  if (!this.c((byte) 95)) {
                     break L0;
                   } else {
                     fla.b(23621);
                     if (param1 == 73) {
                       return;
                     } else {
-                      ((bda) this).a(-88, (byte) -14);
+                      this.a(-88, (byte) -14);
                       return;
                     }
                   }
@@ -41,7 +50,7 @@ final class bda extends lw {
               if (param1 == 73) {
                 return;
               } else {
-                ((bda) this).a(-88, (byte) -14);
+                this.a(-88, (byte) -14);
                 return;
               }
             } else {
@@ -50,14 +59,14 @@ final class bda extends lw {
                 if (!um.a(true)) {
                   break L1;
                 } else {
-                  if (!((bda) this).c((byte) 95)) {
+                  if (!this.c((byte) 95)) {
                     break L1;
                   } else {
                     fla.b(23621);
                     if (param1 == 73) {
                       return;
                     } else {
-                      ((bda) this).a(-88, (byte) -14);
+                      this.a(-88, (byte) -14);
                       return;
                     }
                   }
@@ -66,26 +75,26 @@ final class bda extends lw {
               if (param1 == 73) {
                 return;
               } else {
-                ((bda) this).a(-88, (byte) -14);
+                this.a(-88, (byte) -14);
                 return;
               }
             }
           } else {
-            ((bda) this).b(1);
-            ((bda) this).c(101);
-            if (((bda) this).field_e != 1) {
+            this.b(1);
+            this.c(101);
+            if (this.field_e != 1) {
               if (um.a(true)) {
-                if (!((bda) this).c((byte) 95)) {
+                if (!this.c((byte) 95)) {
                   if (param1 == 73) {
                     return;
                   } else {
-                    ((bda) this).a(-88, (byte) -14);
+                    this.a(-88, (byte) -14);
                     return;
                   }
                 } else {
                   fla.b(23621);
                   if (param1 != 73) {
-                    ((bda) this).a(-88, (byte) -14);
+                    this.a(-88, (byte) -14);
                     return;
                   } else {
                     return;
@@ -93,7 +102,7 @@ final class bda extends lw {
                 }
               } else {
                 if (param1 != 73) {
-                  ((bda) this).a(-88, (byte) -14);
+                  this.a(-88, (byte) -14);
                   return;
                 } else {
                   return;
@@ -105,12 +114,12 @@ final class bda extends lw {
                 if (!um.a(true)) {
                   break L2;
                 } else {
-                  if (!((bda) this).c((byte) 95)) {
+                  if (!this.c((byte) 95)) {
                     break L2;
                   } else {
                     fla.b(23621);
                     if (param1 != 73) {
-                      ((bda) this).a(-88, (byte) -14);
+                      this.a(-88, (byte) -14);
                       return;
                     } else {
                       return;
@@ -119,7 +128,7 @@ final class bda extends lw {
                 }
               }
               if (param1 != 73) {
-                ((bda) this).a(-88, (byte) -14);
+                this.a(-88, (byte) -14);
                 return;
               } else {
                 return;
@@ -127,19 +136,19 @@ final class bda extends lw {
             }
           }
         } else {
-          if (param0 != 19) {
-            if (param0 == 18) {
-              if (((bda) this).field_e >= 1) {
+          if (-20 != (param0 ^ -1)) {
+            if (-19 == (param0 ^ -1)) {
+              if (this.field_e >= 1) {
                 fla.b(param1 + 23548);
                 if (param1 != 73) {
-                  ((bda) this).a(-88, (byte) -14);
+                  this.a(-88, (byte) -14);
                   return;
                 } else {
                   return;
                 }
               } else {
                 if (param1 != 73) {
-                  ((bda) this).a(-88, (byte) -14);
+                  this.a(-88, (byte) -14);
                   return;
                 } else {
                   return;
@@ -147,19 +156,19 @@ final class bda extends lw {
               }
             } else {
               if (param1 != 73) {
-                ((bda) this).a(-88, (byte) -14);
+                this.a(-88, (byte) -14);
                 return;
               } else {
                 return;
               }
             }
           } else {
-            ((bda) this).b(1);
-            ((bda) this).c(param1 ^ 17);
+            this.b(1);
+            this.c(param1 ^ 17);
             if (param1 == 73) {
               return;
             } else {
-              ((bda) this).a(-88, (byte) -14);
+              this.a(-88, (byte) -14);
               return;
             }
           }
@@ -168,15 +177,15 @@ final class bda extends lw {
 
     final void a(int param0) {
         int var2 = -102 % ((59 - param0) / 33);
-        ((bda) this).c(98);
+        this.c(98);
     }
 
     final void a(byte param0) {
         int var2 = 0;
         if (param0 >= 103) {
           var2 = (int)((1.0 - Math.cos((double)(vr.field_b * 4) * 3.141592653589793 / 100.0)) * 256.0);
-          if (((bda) this).field_e == 1) {
-            vg.a(sia.field_j, 8640, 22997, 33000, var2 + 4096, 6480, 4096 - -var2, sia.field_j.field_o << 3, sia.field_j.field_n << 3);
+          if (-2 == (this.field_e ^ -1)) {
+            vg.a(sia.field_j, 8640, 22997, 33000, var2 + 4096, 6480, 4096 - -var2, sia.field_j.field_o << -1175365565, sia.field_j.field_n << -471586781);
             return;
           } else {
             return;
@@ -187,15 +196,11 @@ final class bda extends lw {
     }
 
     bda() {
-        super(true, new String[2], au.field_a);
-        ((bda) this).field_c = new int[][]{new int[2], new int[2]};
+        super(true, new String[]{ek.field_k, el.field_g}, au.field_a);
+        this.field_c = new int[][]{new int[]{180, 160}, new int[]{180, 390}};
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Encouraging rule breaking";
         field_n = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
         field_p = "Please remove <%0> from your ignore list first.";

@@ -29,10 +29,10 @@ final class tk extends lh {
 
     final void d(int param0) {
         int var2 = 4 % ((param0 - 40) / 58);
-        ((tk) this).field_i = null;
-        ((tk) this).field_z = null;
-        ((tk) this).field_k = null;
-        ((tk) this).field_D = null;
+        this.field_i = null;
+        this.field_z = null;
+        this.field_k = null;
+        this.field_D = null;
     }
 
     public static void a(int param0) {
@@ -51,11 +51,11 @@ final class tk extends lh {
             ia.field_l[param5] = param3;
             ia.field_j[param5] = param6;
             if (param4 > -116) {
-                field_y = null;
+                field_y = (String) null;
             }
             ia.field_r[param5] = param0;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "tk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            throw pf.a((Throwable) ((Object) runtimeException), "tk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -63,10 +63,6 @@ final class tk extends lh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = "Create";
     }
 }

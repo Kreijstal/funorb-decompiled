@@ -34,7 +34,7 @@ final class kp extends rqa {
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) frb.a(228, 95));
+            stackOut_2_0 = new nc(frb.a(228, 95));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -42,23 +42,23 @@ final class kp extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("kp.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -66,7 +66,7 @@ final class kp extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -104,7 +104,7 @@ final class kp extends rqa {
             L2: while (true) {
               if (dma.field_j <= var6) {
                 L3: {
-                  if (var2 != -1) {
+                  if (0 != (var2 ^ -1)) {
                     var6 = dma.field_j;
                     nr.a(var5, var3, var6, 2, var4, var2);
                     break L3;
@@ -118,7 +118,7 @@ final class kp extends rqa {
                 var8 = -1;
                 var9 = 0;
                 L4: while (true) {
-                  if (~var9 <= ~dma.field_g) {
+                  if (var9 >= dma.field_g) {
                     L5: {
                       if (-1 != var7) {
                         L6: {
@@ -126,7 +126,7 @@ final class kp extends rqa {
                             break L6;
                           } else {
                             L7: {
-                              if (Math.abs(var2 - var7) >= 8) {
+                              if ((Math.abs(var2 - var7) ^ -1) <= -9) {
                                 break L7;
                               } else {
                                 if (8 <= Math.abs(-var8 + var3)) {
@@ -139,7 +139,7 @@ final class kp extends rqa {
                             nr.a(var5, var3, var6, 2, var4, var2);
                             var2 = -1;
                             var3 = -1;
-                            if (var7 != -1) {
+                            if ((var7 ^ -1) != 0) {
                               var3 = var8;
                               var2 = var7;
                               var4 = var6;
@@ -150,7 +150,7 @@ final class kp extends rqa {
                           }
                         }
                         L8: {
-                          if (var2 == -1) {
+                          if ((var2 ^ -1) == 0) {
                             var4 = var6;
                             break L8;
                           } else {
@@ -161,12 +161,13 @@ final class kp extends rqa {
                         var3 = var8;
                         break L5;
                       } else {
-                        if (var2 == -1) {
-                          break L5;
-                        } else {
+                        if (0 != (var2 ^ -1)) {
                           var3 = -1;
                           var2 = -1;
                           break L5;
+                        } else {
+                          var6++;
+                          continue L2;
                         }
                       }
                     }
@@ -174,13 +175,15 @@ final class kp extends rqa {
                     continue L2;
                   } else {
                     L9: {
-                      if (dma.field_i[var1_int] != 0) {
+                      if (-1 != (dma.field_i[var1_int] ^ -1)) {
                         var8 = var9;
-                        if (var7 != -1) {
-                          break L9;
-                        } else {
+                        if ((var7 ^ -1) == 0) {
                           var7 = var9;
                           break L9;
+                        } else {
+                          var1_int++;
+                          var9++;
+                          continue L4;
                         }
                       } else {
                         break L9;
@@ -197,13 +200,13 @@ final class kp extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "kp.B(" + param0 + ')');
+          throw rta.a((Throwable) ((Object) var1), "kp.B(" + param0 + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 <= 22) {
-            field_o = null;
+            field_o = (String) null;
         }
         field_o = null;
     }
@@ -213,10 +216,6 @@ final class kp extends rqa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Private";
     }
 }

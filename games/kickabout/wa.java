@@ -66,7 +66,7 @@ final class wa {
               if (param0 > 96) {
                 break L1;
               } else {
-                field_b = null;
+                field_b = (String) null;
                 break L1;
               }
             }
@@ -78,23 +78,23 @@ final class wa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_0 = (RuntimeException) (var4);
             stackOut_4_1 = new StringBuilder().append("wa.D(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -103,23 +103,23 @@ final class wa {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -128,23 +128,23 @@ final class wa {
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -152,7 +152,7 @@ final class wa {
               break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -160,30 +160,73 @@ final class wa {
     public static void a(byte param0) {
         field_c = null;
         field_a = null;
-        int var1 = -64;
+        int var1 = -128 / ((param0 - 30) / 42);
         field_b = null;
     }
 
     final static ot a(int param0, int param1) {
         int var4 = 0;
-        int var5 = Kickabout.field_G;
-        ut var2 = new ut(108, 108);
-        iw.a(-118, var2);
-        on.d(54, 54, 51, 255);
-        on.d(54, 54, 43, 0);
-        ts.a(param1, 0, 124);
-        ta.e(117);
-        ot var3 = new ot(54, 54);
-        iw.a(-92, (ut) (Object) var3);
-        var2.f(0, 0);
-        ta.e(119);
-        for (var4 = 0; var3.field_y.length > var4; var4++) {
-            var3.field_y[var4] = hf.a(var3.field_y[var4] << 24, 1118668);
+        int var5 = 0;
+        ut var6 = null;
+        ot var7 = null;
+        ut var8 = null;
+        ot var9 = null;
+        var5 = Kickabout.field_G;
+        if (param0 >= -89) {
+          wa.b((byte) 1);
+          var6 = new ut(108, 108);
+          iw.a(-118, var6);
+          on.d(54, 54, 51, 255);
+          on.d(54, 54, 43, 0);
+          ts.a(param1, 0, 124);
+          ta.e(117);
+          var7 = new ot(54, 54);
+          iw.a(-92, var7);
+          var6.f(0, 0);
+          ta.e(119);
+          var4 = 0;
+          L0: while (true) {
+            if (var7.field_y.length <= var4) {
+              return var7;
+            } else {
+              var7.field_y[var4] = hf.a(var7.field_y[var4] << -639117096, 1118668);
+              var4++;
+              continue L0;
+            }
+          }
+        } else {
+          var8 = new ut(108, 108);
+          iw.a(-118, var8);
+          on.d(54, 54, 51, 255);
+          on.d(54, 54, 43, 0);
+          ts.a(param1, 0, 124);
+          ta.e(117);
+          var9 = new ot(54, 54);
+          iw.a(-92, var9);
+          var8.f(0, 0);
+          ta.e(119);
+          var4 = 0;
+          L1: while (true) {
+            if (var9.field_y.length <= var4) {
+              return var9;
+            } else {
+              var9.field_y[var4] = hf.a(var9.field_y[var4] << -639117096, 1118668);
+              var4++;
+              continue L1;
+            }
+          }
         }
-        return var3;
     }
 
     final static void b(byte param0) {
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -201,7 +244,7 @@ final class wa {
               if (param0 <= -84) {
                 break L1;
               } else {
-                field_b = null;
+                field_b = (String) null;
                 break L1;
               }
             }
@@ -210,28 +253,28 @@ final class wa {
               if (var2 >= var3) {
                 break L0;
               } else {
-                int incrementValue$40 = var2;
+                incrementValue$40 = var2;
                 var2++;
                 var5[incrementValue$40] = 0;
-                int incrementValue$41 = var2;
+                incrementValue$41 = var2;
                 var2++;
                 var5[incrementValue$41] = 0;
-                int incrementValue$42 = var2;
+                incrementValue$42 = var2;
                 var2++;
                 var5[incrementValue$42] = 0;
-                int incrementValue$43 = var2;
+                incrementValue$43 = var2;
                 var2++;
                 var5[incrementValue$43] = 0;
-                int incrementValue$44 = var2;
+                incrementValue$44 = var2;
                 var2++;
                 var5[incrementValue$44] = 0;
-                int incrementValue$45 = var2;
+                incrementValue$45 = var2;
                 var2++;
                 var5[incrementValue$45] = 0;
-                int incrementValue$46 = var2;
+                incrementValue$46 = var2;
                 var2++;
                 var5[incrementValue$46] = 0;
-                int incrementValue$47 = var2;
+                incrementValue$47 = var2;
                 var2++;
                 var5[incrementValue$47] = 0;
                 continue L2;
@@ -241,25 +284,25 @@ final class wa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1_ref, "wa.B(" + param0 + ')');
+          throw nb.a((Throwable) ((Object) var1_ref), "wa.B(" + param0 + ')');
         }
     }
 
     final static void a(byte param0, String param1) {
+        ot discarded$0 = null;
         try {
             wp.field_h = param1;
             fp.field_e = 1;
+            if (param0 != 52) {
+                discarded$0 = wa.a(34, 19);
+            }
             et.field_b = true;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "wa.C(" + 52 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "wa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new ut(96, 100);
         field_c = "Waiting for <%0> to start the game...";
         field_b = "The online auction system is a marketplace where your characters can be traded with other FunOrb players.<br><col=ffff00>Note: Auctions may not appear in the system for a few minutes after they are created.</col>";

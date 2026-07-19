@@ -7,14 +7,15 @@ class tb {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 >= -1) {
+            field_a = (llb) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "tb.F(";
     }
 }

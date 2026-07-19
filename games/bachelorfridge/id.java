@@ -11,10 +11,10 @@ final class id extends pn {
 
     id(vr param0) {
         try {
-            ((id) this).field_b = bla.a(29611, "basic", "tiles_pizza", param0);
+            this.field_b = bla.a(29611, "basic", "tiles_pizza", param0);
             this.a(128);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -28,60 +28,60 @@ final class id extends pn {
     final static void a(int param0, cq param1) {
         try {
             int var2_int = -125 % ((-18 - param0) / 55);
-            saa.field_a.b((tda) (Object) param1.field_i);
+            saa.field_a.b(param1.field_i);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "id.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "id.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void a(int param0) {
-        ((id) this).field_a = new kv[4];
+        this.field_a = new kv[4];
         kv var6 = new kv(384, 192);
         kv var2 = var6;
         var6.b();
-        ((id) this).field_b[48].a(64, 32);
-        ((id) this).field_b[49].a(0, 64);
-        ((id) this).field_b[0].a(128, 64);
-        ((id) this).field_b[8].a(64, 96);
-        ((id) this).field_b[1].a(192, 96);
-        ((id) this).field_a[0] = var6;
+        this.field_b[48].a(64, 32);
+        this.field_b[49].a(0, 64);
+        this.field_b[0].a(128, 64);
+        this.field_b[8].a(64, 96);
+        this.field_b[1].a(192, 96);
+        this.field_a[0] = var6;
         kv var3 = new kv(384, 192);
         var3.b();
-        ((id) this).field_b[49].a(128, 0);
-        ((id) this).field_b[49].a(64, 32);
-        ((id) this).field_b[13].a(192, 32);
-        ((id) this).field_b[50].a(0, 64);
-        ((id) this).field_b[14].a(128, 64);
-        ((id) this).field_b[40].a(64, 96);
-        ((id) this).field_b[24].a(192, 96);
-        ((id) this).field_b[41].a(128, 128);
-        ((id) this).field_a[1] = var3;
+        this.field_b[49].a(128, 0);
+        this.field_b[49].a(64, 32);
+        this.field_b[13].a(192, 32);
+        this.field_b[50].a(0, 64);
+        this.field_b[14].a(128, 64);
+        this.field_b[40].a(64, 96);
+        this.field_b[24].a(192, 96);
+        this.field_b[41].a(128, param0);
+        this.field_a[1] = var3;
         kv var4 = new kv(384, 192);
         var4.b();
-        ((id) this).field_b[6].a(64, 32);
-        ((id) this).field_b[7].a(128, 64);
-        ((id) this).field_b[16].a(64, 96);
-        ((id) this).field_b[32].a(192, 96);
-        ((id) this).field_b[33].a(128, 128);
-        ((id) this).field_a[3] = var4;
+        this.field_b[6].a(64, 32);
+        this.field_b[7].a(128, 64);
+        this.field_b[16].a(64, 96);
+        this.field_b[32].a(192, 96);
+        this.field_b[33].a(128, 128);
+        this.field_a[3] = var4;
         kv var5 = new kv(384, 192);
         var5.b();
-        ((id) this).field_b[29].a(64, 32);
-        ((id) this).field_b[21].a(192, 32);
-        ((id) this).field_b[42].a(0, 64);
-        ((id) this).field_b[22].a(128, 64);
-        ((id) this).field_b[34].a(256, 64);
-        ((id) this).field_b[42].a(64, 96);
-        ((id) this).field_b[34].a(192, 96);
-        ((id) this).field_b[35].a(128, 128);
-        ((id) this).field_a[2] = var5;
+        this.field_b[29].a(64, 32);
+        this.field_b[21].a(192, 32);
+        this.field_b[42].a(0, 64);
+        this.field_b[22].a(128, 64);
+        this.field_b[34].a(256, 64);
+        this.field_b[42].a(64, 96);
+        this.field_b[34].a(192, 96);
+        this.field_b[35].a(128, 128);
+        this.field_a[2] = var5;
     }
 
     public static void b(int param0) {
         field_i = null;
         field_g = null;
         if (param0 != 35) {
-            field_i = null;
+            field_i = (js) null;
         }
         field_h = null;
         field_j = null;
@@ -89,12 +89,16 @@ final class id extends pn {
 
     final static void a(vr param0, int param1) {
         dv var2 = null;
+        be discarded$0 = null;
         try {
             dv.b(param0.a((byte) 123, "", "headers.packvorbis"));
+            if (param1 != 64) {
+                id.b(-45);
+            }
             var2 = dv.a(param0, "jagex logo2.packvorbis", "");
-            be discarded$0 = var2.b();
+            discarded$0 = var2.b();
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "id.D(" + (param0 != null ? "{...}" : "null") + ',' + 64 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "id.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -149,15 +153,15 @@ final class id extends pn {
                     }
                     var4 = -3;
                     L4: while (true) {
-                      if (var4 <= -8) {
+                      if ((var4 ^ -1) >= 7) {
                         var12 = param0.a(0, (byte) -90, 0);
-                        ((id) this).field_a[0].e(var12.field_c + -128, -128 + var12.field_a);
+                        this.field_a[0].e(var12.field_c + -128, -128 + var12.field_a);
                         var13 = param0.a(0, (byte) 98, param0.field_a);
-                        ((id) this).field_a[3].e(var13.field_c + -64, -128 + (var13.field_a + 32));
+                        this.field_a[3].e(var13.field_c + -64, -128 + (var13.field_a + 32));
                         var14 = param0.a(param0.field_z, (byte) 35, param0.field_a);
-                        ((id) this).field_a[2].e(-128 + var14.field_c, -64 + var14.field_a);
+                        this.field_a[2].e(-128 + var14.field_c, -64 + var14.field_a);
                         var15 = param0.a(param0.field_z, (byte) -98, 0);
-                        ((id) this).field_a[1].e(-192 + var15.field_c, 32 + (-128 + var15.field_a));
+                        this.field_a[1].e(-192 + var15.field_c, 32 + (-128 + var15.field_a));
                         break L0;
                       } else {
                         var5 = 0;
@@ -171,7 +175,7 @@ final class id extends pn {
                               if (0 != var5) {
                                 break L6;
                               } else {
-                                ((id) this).field_b[48].a(var11.field_c - -64, -32 + var11.field_a);
+                                this.field_b[48].a(var11.field_c - -64, -32 + var11.field_a);
                                 break L6;
                               }
                             }
@@ -179,11 +183,11 @@ final class id extends pn {
                               if (var5 != param0.field_z) {
                                 break L7;
                               } else {
-                                ((id) this).field_b[50].a(var11.field_c + -64, 32 + var11.field_a);
+                                this.field_b[50].a(var11.field_c + -64, 32 + var11.field_a);
                                 break L7;
                               }
                             }
-                            ((id) this).field_b[49].a(var11.field_c, var11.field_a);
+                            this.field_b[49].a(var11.field_c, var11.field_a);
                             var5++;
                             continue L5;
                           }
@@ -194,26 +198,26 @@ final class id extends pn {
                     L8: {
                       var9 = param0.a(var4, (byte) -104, 0);
                       if (param0.field_z - 2 > var4) {
-                        ((id) this).field_b[9 - -(var4 % 3) + 1].a(var9.field_c - 128, var9.field_a);
+                        this.field_b[9 - -(var4 % 3) + 1].a(var9.field_c - 128, var9.field_a);
                         break L8;
                       } else {
                         break L8;
                       }
                     }
                     L9: {
-                      if (var4 < 0) {
+                      if (-1 < (var4 ^ -1)) {
                         break L9;
                       } else {
-                        ((id) this).field_b[49].a(-128 + var9.field_c, -64 + var9.field_a);
+                        this.field_b[49].a(-128 + var9.field_c, -64 + var9.field_a);
                         break L9;
                       }
                     }
                     L10: {
                       var10 = param0.a(var4, (byte) 47, param0.field_a);
-                      if (var4 <= 0) {
+                      if ((var4 ^ -1) >= -1) {
                         break L10;
                       } else {
-                        ((id) this).field_b[var4 % 3 + 17].a(var10.field_c, var10.field_a);
+                        this.field_b[var4 % 3 + 17].a(var10.field_c, var10.field_a);
                         break L10;
                       }
                     }
@@ -221,7 +225,7 @@ final class id extends pn {
                       if (var4 < 0) {
                         break L11;
                       } else {
-                        ((id) this).field_b[34].a(var10.field_c, var10.field_a + 64);
+                        this.field_b[34].a(var10.field_c, var10.field_a + 64);
                         break L11;
                       }
                     }
@@ -232,18 +236,18 @@ final class id extends pn {
               } else {
                 L12: {
                   var7 = param0.a(0, (byte) 70, var4);
-                  ((id) this).field_b[2 - -(var4 % 3)].a(var7.field_c - -128, var7.field_a);
+                  this.field_b[2 - -(var4 % 3)].a(var7.field_c - -128, var7.field_a);
                   var8 = param0.a(param0.field_z, (byte) -128, var4);
-                  if (var4 > 0) {
-                    ((id) this).field_b[25 + var4 % 2].a(var8.field_c, var8.field_a);
+                  if (-1 > (var4 ^ -1)) {
+                    this.field_b[25 + var4 % 2].a(var8.field_c, var8.field_a);
                     break L12;
                   } else {
                     break L12;
                   }
                 }
                 L13: {
-                  if (var4 >= 0) {
-                    ((id) this).field_b[42].a(var8.field_c, 64 + var8.field_a);
+                  if (-1 >= (var4 ^ -1)) {
+                    this.field_b[42].a(var8.field_c, 64 + var8.field_a);
                     break L13;
                   } else {
                     break L13;
@@ -258,23 +262,23 @@ final class id extends pn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L14: {
             var3 = decompiledCaughtException;
-            stackOut_36_0 = (RuntimeException) var3;
+            stackOut_36_0 = (RuntimeException) (var3);
             stackOut_36_1 = new StringBuilder().append("id.B(");
             stackIn_38_0 = stackOut_36_0;
             stackIn_38_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
             stackIn_37_1 = stackOut_36_1;
             if (param0 == null) {
-              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
               stackOut_38_2 = "null";
               stackIn_39_0 = stackOut_38_0;
               stackIn_39_1 = stackOut_38_1;
               stackIn_39_2 = stackOut_38_2;
               break L14;
             } else {
-              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
               stackOut_37_2 = "{...}";
               stackIn_39_0 = stackOut_37_0;
               stackIn_39_1 = stackOut_37_1;
@@ -282,15 +286,11 @@ final class id extends pn {
               break L14;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_39_0), stackIn_39_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "<col=ff0000>Failed!</col>";
         field_j = "Eating. Try dropping foods into your fridge.";
     }

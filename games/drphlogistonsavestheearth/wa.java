@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class wa extends pj implements kd, ke {
     private hf field_P;
     static int field_N;
@@ -19,6 +17,7 @@ final class wa extends pj implements kd, ke {
     private kl field_M;
 
     public final void a(kl param0, byte param1) {
+        boolean discarded$2 = false;
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -27,6 +26,7 @@ final class wa extends pj implements kd, ke {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
@@ -40,47 +40,49 @@ final class wa extends pj implements kd, ke {
           L0: {
             if (param1 == 83) {
               L1: {
-                if (param0 == ((wa) this).field_L) {
-                  boolean discarded$2 = ((wa) this).field_M.a(false, (vg) this);
+                if (param0 == this.field_L) {
+                  discarded$2 = this.field_M.a(false, (vg) (this));
                   break L1;
                 } else {
                   break L1;
                 }
               }
               L2: {
-                if (param0 != ((wa) this).field_M) {
+                if (param0 != this.field_M) {
                   break L2;
                 } else {
                   this.g((byte) -121);
                   break L2;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_0 = (RuntimeException) (var3);
             stackOut_8_1 = new StringBuilder().append("wa.A(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -88,12 +90,21 @@ final class wa extends pj implements kd, ke {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void j(int param0) {
+        int discarded$0 = 0;
         field_Q = null;
+        if (param0 != -11179) {
+            discarded$0 = wa.a((byte) 75, false);
+        }
         field_O = null;
     }
 
@@ -103,10 +114,10 @@ final class wa extends pj implements kd, ke {
             if (na.b(-1)) {
               break L1;
             } else {
-              if (0 >= ((wa) this).field_L.field_p.length()) {
+              if (0 >= this.field_L.field_p.length()) {
                 break L0;
               } else {
-                if (((wa) this).field_M.field_p.length() > 0) {
+                if (this.field_M.field_p.length() > 0) {
                   break L1;
                 } else {
                   break L0;
@@ -114,7 +125,7 @@ final class wa extends pj implements kd, ke {
               }
             }
           }
-          pc.a(param0 ^ 32, ((wa) this).field_L.field_p, ((wa) this).field_M.field_p);
+          pc.a(param0 ^ 32, this.field_L.field_p, this.field_M.field_p);
           break L0;
         }
         L2: {
@@ -129,10 +140,10 @@ final class wa extends pj implements kd, ke {
 
     final void i(int param0) {
         if (param0 != 134) {
-            ((wa) this).field_P = null;
+            this.field_P = (hf) null;
         }
-        ((wa) this).field_L.h((byte) 88);
-        ((wa) this).field_M.h((byte) 88);
+        this.field_L.h((byte) 88);
+        this.field_M.h((byte) 88);
     }
 
     public final void a(boolean param0, kl param1) {
@@ -159,7 +170,7 @@ final class wa extends pj implements kd, ke {
               if (param0) {
                 break L1;
               } else {
-                field_O = null;
+                field_O = (he[]) null;
                 break L1;
               }
             }
@@ -169,23 +180,23 @@ final class wa extends pj implements kd, ke {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("wa.B(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -193,7 +204,7 @@ final class wa extends pj implements kd, ke {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -201,10 +212,10 @@ final class wa extends pj implements kd, ke {
         if (param0) {
             this.g((byte) 79);
         }
-        if (!(null != ((wa) this).field_L.field_p)) {
+        if (!(null != this.field_L.field_p)) {
             return "";
         }
-        return ((wa) this).field_L.field_p;
+        return this.field_L.field_p;
     }
 
     final static void a(String param0, boolean param1, java.applet.Applet param2, byte param3) {
@@ -225,6 +236,7 @@ final class wa extends pj implements kd, ke {
             RuntimeException stackIn_16_0 = null;
             StringBuilder stackIn_16_1 = null;
             String stackIn_16_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_10_0 = null;
             StringBuilder stackOut_10_1 = null;
@@ -257,41 +269,50 @@ final class wa extends pj implements kd, ke {
                     break L2;
                   } else {
                     if (og.a(param0, 0)) {
-                      return;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     } else {
                       break L2;
                     }
                   }
                 }
-                {
+                try {
                   L3: {
                     param2.getAppletContext().showDocument(new java.net.URL(param0), "_blank");
                     break L3;
                   }
+                } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L4: {
+                    var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
+                    gb.a((Throwable) null, "MGR1: " + param0, 10);
+                    break L4;
+                  }
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L5: {
                 var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_10_0 = (RuntimeException) var4_ref;
+                stackOut_10_0 = (RuntimeException) (var4_ref);
                 stackOut_10_1 = new StringBuilder().append("wa.H(");
                 stackIn_12_0 = stackOut_10_0;
                 stackIn_12_1 = stackOut_10_1;
                 stackIn_11_0 = stackOut_10_0;
                 stackIn_11_1 = stackOut_10_1;
                 if (param0 == null) {
-                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+                  stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+                  stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
                   stackOut_12_2 = "null";
                   stackIn_13_0 = stackOut_12_0;
                   stackIn_13_1 = stackOut_12_1;
                   stackIn_13_2 = stackOut_12_2;
                   break L5;
                 } else {
-                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+                  stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
                   stackOut_11_2 = "{...}";
                   stackIn_13_0 = stackOut_11_0;
                   stackIn_13_1 = stackOut_11_1;
@@ -300,23 +321,23 @@ final class wa extends pj implements kd, ke {
                 }
               }
               L6: {
-                stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+                stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
                 stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',');
                 stackIn_15_0 = stackOut_13_0;
                 stackIn_15_1 = stackOut_13_1;
                 stackIn_14_0 = stackOut_13_0;
                 stackIn_14_1 = stackOut_13_1;
                 if (param2 == null) {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+                  stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
                   stackOut_15_2 = "null";
                   stackIn_16_0 = stackOut_15_0;
                   stackIn_16_1 = stackOut_15_1;
                   stackIn_16_2 = stackOut_15_2;
                   break L6;
                 } else {
-                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+                  stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
                   stackOut_14_2 = "{...}";
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_16_1 = stackOut_14_1;
@@ -324,7 +345,12 @@ final class wa extends pj implements kd, ke {
                   break L6;
                 }
               }
-              throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param3 + ')');
+              throw ie.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param3 + ')');
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -334,17 +360,20 @@ final class wa extends pj implements kd, ke {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        if (null != ((wa) this).field_J) {
-            int discarded$0 = uh.field_i.a(((wa) this).field_J, 20 + (param0 + ((wa) this).field_o), ((wa) this).field_m + (param3 + 15), ((wa) this).field_w + -40, ((wa) this).field_k, 16777215, -1, 1, 0, uh.field_i.field_x);
+        int discarded$0 = 0;
+        if (null != this.field_J) {
+            discarded$0 = uh.field_i.a(this.field_J, 20 + (param0 + this.field_o), this.field_m + (param3 + 15), this.field_w + -40, this.field_k, 16777215, -1, 1, 0, uh.field_i.field_x);
         }
-        if (!(null == ((wa) this).field_K)) {
-            wj.g(10 + param0, param3 + 134, -20 + ((wa) this).field_w, 4210752);
+        if (!(null == this.field_K)) {
+            wj.g(10 + param0, param3 + 134, -20 + this.field_w, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }
 
     wa(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (cg) null);
+        dh dupTemp$2 = null;
+        dh dupTemp$3 = null;
         RuntimeException var6 = null;
         ie var6_ref = null;
         rf var7 = null;
@@ -452,8 +481,8 @@ final class wa extends pj implements kd, ke {
               }
             }
             L2: {
-              ((wa) this).field_V = stackIn_4_1 != 0;
-              ((wa) this).field_J = param1;
+              ((wa) (this)).field_V = stackIn_4_1 != 0;
+              this.field_J = param1;
               stackOut_4_0 = this;
               stackIn_6_0 = stackOut_4_0;
               stackIn_5_0 = stackOut_4_0;
@@ -472,7 +501,7 @@ final class wa extends pj implements kd, ke {
               }
             }
             L3: {
-              ((wa) this).field_T = stackIn_7_1 != 0;
+              ((wa) (this)).field_T = stackIn_7_1 != 0;
               stackOut_7_0 = this;
               stackIn_9_0 = stackOut_7_0;
               stackIn_8_0 = stackOut_7_0;
@@ -491,15 +520,15 @@ final class wa extends pj implements kd, ke {
               }
             }
             L4: {
-              ((wa) this).field_U = stackIn_10_1 != 0;
-              if (!((wa) this).field_T) {
+              ((wa) (this)).field_U = stackIn_10_1 != 0;
+              if (!this.field_T) {
                 break L4;
               } else {
                 L5: {
-                  if (((wa) this).field_V) {
+                  if (this.field_V) {
                     break L5;
                   } else {
-                    if (!((wa) this).field_U) {
+                    if (!this.field_U) {
                       break L4;
                     } else {
                       break L5;
@@ -510,11 +539,11 @@ final class wa extends pj implements kd, ke {
               }
             }
             L6: {
-              ((wa) this).field_L = (kl) (Object) new qg(param0, (fd) this, 100);
-              ((wa) this).field_M = (kl) (Object) new qg("", (fd) this, 20);
-              if (!((wa) this).field_T) {
+              this.field_L = (kl) ((Object) new qg(param0, (fd) (this), 100));
+              this.field_M = (kl) ((Object) new qg("", (fd) (this), 20));
+              if (!this.field_T) {
                 L7: {
-                  ((wa) this).field_S = new hf(rc.field_b, (fd) null);
+                  this.field_S = new hf(rc.field_b, (fd) null);
                   stackOut_16_0 = this;
                   stackOut_16_1 = null;
                   stackOut_16_2 = null;
@@ -524,7 +553,7 @@ final class wa extends pj implements kd, ke {
                   stackIn_17_0 = stackOut_16_0;
                   stackIn_17_1 = stackOut_16_1;
                   stackIn_17_2 = stackOut_16_2;
-                  if (!((wa) this).field_U) {
+                  if (!this.field_U) {
                     stackOut_18_0 = this;
                     stackOut_18_1 = null;
                     stackOut_18_2 = null;
@@ -546,71 +575,71 @@ final class wa extends pj implements kd, ke {
                     break L7;
                   }
                 }
-                ((wa) this).field_P = new hf(stackIn_19_3, (fd) null);
-                if (!((wa) this).field_V) {
+                ((wa) (this)).field_P = new hf(stackIn_19_3, (fd) null);
+                if (!this.field_V) {
                   break L6;
                 } else {
-                  ((wa) this).field_K = new hf(ai.field_v, (fd) this);
+                  this.field_K = new hf(ai.field_v, (fd) (this));
                   break L6;
                 }
               } else {
-                ((wa) this).field_S = new hf(DrPhlogistonSavesTheEarth.field_E, (fd) null);
-                ((wa) this).field_P = new hf(qk.field_d, (fd) null);
-                ((wa) this).field_L.field_E = false;
+                this.field_S = new hf(DrPhlogistonSavesTheEarth.field_E, (fd) null);
+                this.field_P = new hf(qk.field_d, (fd) null);
+                this.field_L.field_E = false;
                 break L6;
               }
             }
             L8: {
-              ((wa) this).field_L.field_l = (cg) (Object) new mj(10000536);
-              ((wa) this).field_M.field_l = (cg) (Object) new dm(10000536);
+              this.field_L.field_l = (cg) ((Object) new mj(10000536));
+              this.field_M.field_l = (cg) ((Object) new dm(10000536));
               var6_ref = new ie();
-              ((wa) this).field_S.field_l = (cg) (Object) var6_ref;
-              if (null == ((wa) this).field_P) {
+              this.field_S.field_l = (cg) ((Object) var6_ref);
+              if (null == this.field_P) {
                 break L8;
               } else {
-                ((wa) this).field_P.field_l = (cg) (Object) var6_ref;
+                this.field_P.field_l = (cg) ((Object) var6_ref);
                 break L8;
               }
             }
             L9: {
-              ((wa) this).field_L.field_v = bf.field_x;
-              if (((wa) this).field_K == null) {
+              this.field_L.field_v = bf.field_x;
+              if (this.field_K == null) {
                 break L9;
               } else {
-                ((wa) this).field_K.field_l = (cg) (Object) var6_ref;
+                this.field_K.field_l = (cg) ((Object) var6_ref);
                 break L9;
               }
             }
             L10: {
-              if (null == ((wa) this).field_K) {
+              if (null == this.field_K) {
                 break L10;
               } else {
-                ((wa) this).field_K.field_v = ai.field_w;
+                this.field_K.field_v = ai.field_w;
                 break L10;
               }
             }
             L11: {
-              if (!((wa) this).field_T) {
-                if (!((wa) this).field_U) {
-                  ((wa) this).field_P.field_l = (cg) (Object) new uk();
+              if (!this.field_T) {
+                if (!this.field_U) {
+                  this.field_P.field_l = (cg) ((Object) new uk());
                   break L11;
                 } else {
-                  ((wa) this).field_P.field_v = v.field_X;
-                  ((wa) this).field_P.field_l = (cg) (Object) new uk();
+                  this.field_P.field_v = v.field_X;
+                  this.field_P.field_l = (cg) ((Object) new uk());
                   break L11;
                 }
               } else {
-                ((wa) this).field_P.field_v = ka.field_l;
+                this.field_P.field_v = ka.field_l;
                 break L11;
               }
             }
             L12: {
-              ((wa) this).field_m = 15;
+              this.field_m = 15;
               var7 = uh.field_i;
-              if (((wa) this).field_J == null) {
+              if (this.field_J == null) {
                 break L12;
               } else {
-                ((wa) this).field_m = ((wa) this).field_m + (var7.a(((wa) this).field_J, -40 + ((wa) this).field_w, var7.field_x) + 5);
+                this.field_m = this.field_m + (var7.a(this.field_J, -40 + this.field_w, var7.field_x) + 5);
                 break L12;
               }
             }
@@ -630,87 +659,87 @@ final class wa extends pj implements kd, ke {
               }
             }
             L14: {
-              dh dupTemp$2 = new dh(10, ((wa) this).field_m, ((wa) this).field_w - 20, 25, (vg) (Object) ((wa) this).field_L, false, 80, 3, var7, 16777215, var8);
+              dupTemp$2 = new dh(10, this.field_m, this.field_w - 20, 25, this.field_L, false, 80, 3, var7, 16777215, var8);
               var12 = dupTemp$2;
-              ((wa) this).b((vg) (Object) dupTemp$2, (byte) 53);
-              ((wa) this).field_m = ((wa) this).field_m + (((vg) (Object) var12).field_k - -5);
-              dh dupTemp$3 = new dh(10, ((wa) this).field_m, -20 + ((wa) this).field_w, 25, (vg) (Object) ((wa) this).field_M, false, 80, 3, var7, 16777215, qf.field_a);
+              this.b(dupTemp$2, (byte) 53);
+              this.field_m = this.field_m + (((vg) ((Object) var12)).field_k - -5);
+              dupTemp$3 = new dh(10, this.field_m, -20 + this.field_w, 25, this.field_M, false, 80, 3, var7, 16777215, qf.field_a);
               var13 = dupTemp$3;
-              ((wa) this).b((vg) (Object) dupTemp$3, (byte) 77);
-              ((wa) this).field_m = ((wa) this).field_m + (((vg) (Object) var13).field_k + 5);
-              ((wa) this).field_S.field_u = (fd) this;
-              if (((wa) this).field_K == null) {
+              this.b(dupTemp$3, (byte) 77);
+              this.field_m = this.field_m + (((vg) ((Object) var13)).field_k + 5);
+              this.field_S.field_u = (fd) (this);
+              if (this.field_K == null) {
                 break L14;
               } else {
-                ((wa) this).field_K.field_u = (fd) this;
+                this.field_K.field_u = (fd) (this);
                 break L14;
               }
             }
             L15: {
-              if (((wa) this).field_P == null) {
+              if (this.field_P == null) {
                 break L15;
               } else {
-                ((wa) this).field_P.field_u = (fd) this;
+                this.field_P.field_u = (fd) (this);
                 break L15;
               }
             }
             L16: {
-              if (null != ((wa) this).field_K) {
-                ((wa) this).field_S.a(((wa) this).field_m, 30, 85, 16535, -95 + ((wa) this).field_w);
-                ((wa) this).field_m = ((wa) this).field_m + 60;
+              if (null != this.field_K) {
+                this.field_S.a(this.field_m, 30, 85, 16535, -95 + this.field_w);
+                this.field_m = this.field_m + 60;
                 break L16;
               } else {
-                ((wa) this).field_S.a(((wa) this).field_m, 30, 8, 16535, -16 + ((wa) this).field_w);
-                ((wa) this).field_m = ((wa) this).field_m + 35;
+                this.field_S.a(this.field_m, 30, 8, 16535, -16 + this.field_w);
+                this.field_m = this.field_m + 35;
                 break L16;
               }
             }
             L17: {
-              if (((wa) this).field_K == null) {
+              if (this.field_K == null) {
                 break L17;
               } else {
-                ((wa) this).field_K.a(((wa) this).field_m, 30, 8, 16535, -6 + (((wa) this).field_w + -10));
-                ((wa) this).field_m = ((wa) this).field_m + 35;
+                this.field_K.a(this.field_m, 30, 8, 16535, -6 + (this.field_w + -10));
+                this.field_m = this.field_m + 35;
                 break L17;
               }
             }
             L18: {
-              if (((wa) this).field_P == null) {
+              if (this.field_P == null) {
                 break L18;
               } else {
                 L19: {
-                  if (((wa) this).field_T) {
+                  if (this.field_T) {
                     break L19;
                   } else {
-                    if (!((wa) this).field_U) {
-                      ((wa) this).field_P.a(((wa) this).field_m, 20, 8, 16535, 40);
-                      ((wa) this).field_m = ((wa) this).field_m + 25;
+                    if (!this.field_U) {
+                      this.field_P.a(this.field_m, 20, 8, 16535, 40);
+                      this.field_m = this.field_m + 25;
                       break L18;
                     } else {
                       break L19;
                     }
                   }
                 }
-                ((wa) this).field_P.a(((wa) this).field_m, 30, 8, 16535, -6 + (((wa) this).field_w - 10));
-                ((wa) this).field_m = ((wa) this).field_m + 35;
+                this.field_P.a(this.field_m, 30, 8, 16535, -6 + (this.field_w - 10));
+                this.field_m = this.field_m + 35;
                 break L18;
               }
             }
             L20: {
-              ((wa) this).a(0, 3 + ((wa) this).field_m, 0, 16535, ((wa) this).field_w);
-              ((wa) this).b((vg) (Object) ((wa) this).field_S, (byte) 89);
-              if (null == ((wa) this).field_K) {
+              this.a(0, 3 + this.field_m, 0, 16535, this.field_w);
+              this.b(this.field_S, (byte) 89);
+              if (null == this.field_K) {
                 break L20;
               } else {
-                ((wa) this).b((vg) (Object) ((wa) this).field_K, (byte) 90);
+                this.b(this.field_K, (byte) 90);
                 break L20;
               }
             }
             L21: {
-              if (((wa) this).field_P == null) {
+              if (this.field_P == null) {
                 break L21;
               } else {
-                ((wa) this).b((vg) (Object) ((wa) this).field_P, (byte) 54);
+                this.b(this.field_P, (byte) 54);
                 break L21;
               }
             }
@@ -720,23 +749,23 @@ final class wa extends pj implements kd, ke {
           decompiledCaughtException = decompiledCaughtParameter0;
           L22: {
             var6 = decompiledCaughtException;
-            stackOut_57_0 = (RuntimeException) var6;
+            stackOut_57_0 = (RuntimeException) (var6);
             stackOut_57_1 = new StringBuilder().append("wa.<init>(");
             stackIn_59_0 = stackOut_57_0;
             stackIn_59_1 = stackOut_57_1;
             stackIn_58_0 = stackOut_57_0;
             stackIn_58_1 = stackOut_57_1;
             if (param0 == null) {
-              stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
-              stackOut_59_1 = (StringBuilder) (Object) stackIn_59_1;
+              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
+              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
               stackOut_59_2 = "null";
               stackIn_60_0 = stackOut_59_0;
               stackIn_60_1 = stackOut_59_1;
               stackIn_60_2 = stackOut_59_2;
               break L22;
             } else {
-              stackOut_58_0 = (RuntimeException) (Object) stackIn_58_0;
-              stackOut_58_1 = (StringBuilder) (Object) stackIn_58_1;
+              stackOut_58_0 = (RuntimeException) ((Object) stackIn_58_0);
+              stackOut_58_1 = (StringBuilder) ((Object) stackIn_58_1);
               stackOut_58_2 = "{...}";
               stackIn_60_0 = stackOut_58_0;
               stackIn_60_1 = stackOut_58_1;
@@ -745,23 +774,23 @@ final class wa extends pj implements kd, ke {
             }
           }
           L23: {
-            stackOut_60_0 = (RuntimeException) (Object) stackIn_60_0;
+            stackOut_60_0 = (RuntimeException) ((Object) stackIn_60_0);
             stackOut_60_1 = ((StringBuilder) (Object) stackIn_60_1).append(stackIn_60_2).append(',');
             stackIn_62_0 = stackOut_60_0;
             stackIn_62_1 = stackOut_60_1;
             stackIn_61_0 = stackOut_60_0;
             stackIn_61_1 = stackOut_60_1;
             if (param1 == null) {
-              stackOut_62_0 = (RuntimeException) (Object) stackIn_62_0;
-              stackOut_62_1 = (StringBuilder) (Object) stackIn_62_1;
+              stackOut_62_0 = (RuntimeException) ((Object) stackIn_62_0);
+              stackOut_62_1 = (StringBuilder) ((Object) stackIn_62_1);
               stackOut_62_2 = "null";
               stackIn_63_0 = stackOut_62_0;
               stackIn_63_1 = stackOut_62_1;
               stackIn_63_2 = stackOut_62_2;
               break L23;
             } else {
-              stackOut_61_0 = (RuntimeException) (Object) stackIn_61_0;
-              stackOut_61_1 = (StringBuilder) (Object) stackIn_61_1;
+              stackOut_61_0 = (RuntimeException) ((Object) stackIn_61_0);
+              stackOut_61_1 = (StringBuilder) ((Object) stackIn_61_1);
               stackOut_61_2 = "{...}";
               stackIn_63_0 = stackOut_61_0;
               stackIn_63_1 = stackOut_61_1;
@@ -769,7 +798,7 @@ final class wa extends pj implements kd, ke {
               break L23;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_63_0, stackIn_63_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_63_0), stackIn_63_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -785,6 +814,7 @@ final class wa extends pj implements kd, ke {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         boolean stackOut_8_0 = false;
@@ -802,24 +832,27 @@ final class wa extends pj implements kd, ke {
             if (super.a(param0, param1, param2, 72)) {
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 if (param3 > 63) {
                   break L1;
                 } else {
-                  ((wa) this).field_S = null;
+                  this.field_S = (hf) null;
                   break L1;
                 }
               }
-              if (param0 == 98) {
-                stackOut_8_0 = ((wa) this).a(param2, 65535);
+              if (-99 == (param0 ^ -1)) {
+                stackOut_8_0 = this.a(param2, 65535);
                 stackIn_9_0 = stackOut_8_0;
-                return stackIn_9_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (99 == param0) {
-                  stackOut_12_0 = ((wa) this).a(param2, (byte) 98);
+                  stackOut_12_0 = this.a(param2, (byte) 98);
                   stackIn_13_0 = stackOut_12_0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   return false;
@@ -831,23 +864,23 @@ final class wa extends pj implements kd, ke {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var5;
+            stackOut_14_0 = (RuntimeException) (var5);
             stackOut_14_1 = new StringBuilder().append("wa.BA(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -855,15 +888,23 @@ final class wa extends pj implements kd, ke {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param3 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param3 + ')');
         }
-        return stackIn_13_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0;
+          } else {
+            return stackIn_13_0;
+          }
+        }
     }
 
     public final void a(int param0, int param1, boolean param2, hf param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
-        Object var8 = null;
+        java.applet.Applet var8 = null;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -887,8 +928,8 @@ final class wa extends pj implements kd, ke {
         try {
           L0: {
             L1: {
-              if (((wa) this).field_S != param3) {
-                if (param3 == ((wa) this).field_K) {
+              if (this.field_S != param3) {
+                if (param3 == this.field_K) {
                   L2: {
                     if (param2) {
                       stackOut_13_0 = 0;
@@ -903,12 +944,12 @@ final class wa extends pj implements kd, ke {
                   ta.b(stackIn_14_0 != 0);
                   break L1;
                 } else {
-                  if (((wa) this).field_P == param3) {
-                    if (((wa) this).field_T) {
+                  if (this.field_P == param3) {
+                    if (this.field_T) {
                       sg.a(param2);
                       break L1;
                     } else {
-                      if (((wa) this).field_U) {
+                      if (this.field_U) {
                         gf.d((byte) 89);
                         break L1;
                       } else {
@@ -929,7 +970,7 @@ final class wa extends pj implements kd, ke {
               if (param2) {
                 break L3;
               } else {
-                var8 = null;
+                var8 = (java.applet.Applet) null;
                 wa.a((String) null, true, (java.applet.Applet) null, (byte) -7);
                 break L3;
               }
@@ -940,23 +981,23 @@ final class wa extends pj implements kd, ke {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var6;
+            stackOut_18_0 = (RuntimeException) (var6);
             stackOut_18_1 = new StringBuilder().append("wa.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param3 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -964,7 +1005,7 @@ final class wa extends pj implements kd, ke {
               break L4;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param4 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param4 + ')');
         }
     }
 
@@ -987,6 +1028,7 @@ final class wa extends pj implements kd, ke {
         int stackIn_75_0 = 0;
         int stackIn_79_0 = 0;
         int stackIn_81_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_61_0 = 0;
         int stackOut_64_0 = 0;
@@ -1015,13 +1057,13 @@ final class wa extends pj implements kd, ke {
                   }
                 }
                 L3: {
-                  var3 = -5;
+                  var3 = -10 / ((param0 - -62) / 33);
                   if (var2_int != -1) {
                     L4: {
                       if (rd.field_D > la.field_b) {
                         L5: {
                           la.field_b = la.field_b + 1;
-                          if (~rd.field_F <= ~la.field_b) {
+                          if (rd.field_F >= la.field_b) {
                             break L5;
                           } else {
                             L6: {
@@ -1039,7 +1081,7 @@ final class wa extends pj implements kd, ke {
                             break L4;
                           }
                         }
-                        if (~rd.field_D < ~la.field_b) {
+                        if (rd.field_D > la.field_b) {
                           break L4;
                         } else {
                           if (gl.field_e[(1 + ig.field_k) % var2_int] == null) {
@@ -1054,12 +1096,12 @@ final class wa extends pj implements kd, ke {
                       }
                     }
                     L7: {
-                      if (~rd.field_D >= ~la.field_b) {
+                      if (rd.field_D <= la.field_b) {
                         L8: {
                           bd.field_L = ig.field_k;
                           if (!ie.field_B) {
                             ig.field_k = ig.field_k - 1;
-                            if (ig.field_k < 0) {
+                            if ((ig.field_k ^ -1) > -1) {
                               ig.field_k = ig.field_k + var2_int;
                               break L8;
                             } else {
@@ -1098,7 +1140,7 @@ final class wa extends pj implements kd, ke {
                     L10: {
                       var4 = 357 + -(sc.field_c.field_C / 2);
                       var5 = 0;
-                      if (mh.field_f == 0) {
+                      if (-1 == (mh.field_f ^ -1)) {
                         break L10;
                       } else {
                         if (var4 >= ih.field_R) {
@@ -1109,7 +1151,7 @@ final class wa extends pj implements kd, ke {
                               if (ae.field_gb <= -sc.field_c.field_y + 269) {
                                 break L11;
                               } else {
-                                if (ae.field_gb >= 269) {
+                                if ((ae.field_gb ^ -1) <= -270) {
                                   break L11;
                                 } else {
                                   ie.field_B = false;
@@ -1122,7 +1164,7 @@ final class wa extends pj implements kd, ke {
                             if (ae.field_gb <= 586) {
                               break L10;
                             } else {
-                              if (~ae.field_gb > ~(sc.field_c.field_y + 586)) {
+                              if (ae.field_gb < sc.field_c.field_y + 586) {
                                 var5 = 1;
                                 la.field_b = rd.field_D;
                                 ie.field_B = true;
@@ -1150,10 +1192,10 @@ final class wa extends pj implements kd, ke {
                             break L9;
                           } else {
                             L12: {
-                              if (~(-sc.field_c.field_y + 269) <= ~ck.field_c) {
+                              if (-sc.field_c.field_y + 269 >= ck.field_c) {
                                 break L12;
                               } else {
-                                if (ck.field_c >= 269) {
+                                if (-270 >= (ck.field_c ^ -1)) {
                                   break L12;
                                 } else {
                                   la.field_b = rd.field_F;
@@ -1161,10 +1203,10 @@ final class wa extends pj implements kd, ke {
                                 }
                               }
                             }
-                            if (ck.field_c <= 586) {
+                            if (-587 <= (ck.field_c ^ -1)) {
                               break L9;
                             } else {
-                              if (~(sc.field_c.field_y + 586) < ~ck.field_c) {
+                              if (sc.field_c.field_y + 586 > ck.field_c) {
                                 la.field_b = rd.field_F;
                                 break L9;
                               } else {
@@ -1186,17 +1228,19 @@ final class wa extends pj implements kd, ke {
                       if (!lb.field_w.c((byte) -82)) {
                         break L14;
                       } else {
-                        if (lb.field_w.field_f == 0) {
+                        if (-1 == (lb.field_w.field_f ^ -1)) {
                           stackOut_61_0 = 3;
                           stackIn_62_0 = stackOut_61_0;
-                          return stackIn_62_0;
+                          decompiledRegionSelector0 = 0;
+                          break L0;
                         } else {
                           if (1 != lb.field_w.field_f) {
                             break L14;
                           } else {
                             stackOut_64_0 = 2;
                             stackIn_65_0 = stackOut_64_0;
-                            return stackIn_65_0;
+                            decompiledRegionSelector0 = 1;
+                            break L0;
                           }
                         }
                       }
@@ -1213,14 +1257,16 @@ final class wa extends pj implements kd, ke {
                             if (lb.field_w.field_f == 0) {
                               stackOut_71_0 = 3;
                               stackIn_72_0 = stackOut_71_0;
-                              return stackIn_72_0;
+                              decompiledRegionSelector0 = 2;
+                              break L0;
                             } else {
                               if (lb.field_w.field_f != 1) {
                                 break L16;
                               } else {
                                 stackOut_74_0 = 1;
                                 stackIn_75_0 = stackOut_74_0;
-                                return stackIn_75_0;
+                                decompiledRegionSelector0 = 3;
+                                break L0;
                               }
                             }
                           }
@@ -1228,7 +1274,8 @@ final class wa extends pj implements kd, ke {
                         if (di.field_c == 13) {
                           stackOut_78_0 = 1;
                           stackIn_79_0 = stackOut_78_0;
-                          return stackIn_79_0;
+                          decompiledRegionSelector0 = 4;
+                          break L0;
                         } else {
                           continue L15;
                         }
@@ -1238,6 +1285,7 @@ final class wa extends pj implements kd, ke {
                 }
                 stackOut_80_0 = 0;
                 stackIn_81_0 = stackOut_80_0;
+                decompiledRegionSelector0 = 5;
                 break L0;
               } else {
                 k.field_L = k.field_L + 1;
@@ -1249,9 +1297,29 @@ final class wa extends pj implements kd, ke {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "wa.E(" + 21 + ',' + param1 + ')');
+          throw ie.a((Throwable) ((Object) var2), "wa.E(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_81_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_62_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_65_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_72_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_75_0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_79_0;
+                } else {
+                  return stackIn_81_0;
+                }
+              }
+            }
+          }
+        }
     }
 
     final void b(byte param0, String param1) {
@@ -1259,22 +1327,18 @@ final class wa extends pj implements kd, ke {
         String var4 = null;
         try {
             if (param0 < 24) {
-                ((wa) this).field_M = null;
+                this.field_M = (kl) null;
             }
-            var3 = ((wa) this).field_L;
+            var3 = this.field_L;
             var4 = param1;
             var3.a(false, var4, -19116);
-            ((wa) this).field_M.h((byte) 88);
+            this.field_M.h((byte) 88);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "wa.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "wa.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Q = new int[75];
     }
 }

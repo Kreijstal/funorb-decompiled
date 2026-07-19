@@ -10,11 +10,12 @@ final class qh implements cj {
     private pk field_e;
 
     final static gd a(boolean param0) {
+        gd discarded$1 = null;
         String var1 = null;
         var1 = pb.a((byte) -47);
         if (param0) {
           if (var1 != null) {
-            if (var1.indexOf('@') < 0) {
+            if (-1 < (var1.indexOf('@') ^ -1)) {
               return new gd(pb.a((byte) -47), dd.f((byte) 105));
             } else {
               var1 = "";
@@ -24,12 +25,12 @@ final class qh implements cj {
             return new gd(pb.a((byte) -47), dd.f((byte) 105));
           }
         } else {
-          gd discarded$1 = qh.a(false);
+          discarded$1 = qh.a(false);
           if (var1 == null) {
             return new gd(pb.a((byte) -47), dd.f((byte) 105));
           } else {
             L0: {
-              if (var1.indexOf('@') >= 0) {
+              if (-1 >= (var1.indexOf('@') ^ -1)) {
                 var1 = "";
                 break L0;
               } else {
@@ -42,6 +43,7 @@ final class qh implements cj {
     }
 
     public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -75,7 +77,7 @@ final class qh implements cj {
               if (param3 == -24381) {
                 break L1;
               } else {
-                ((qh) this).field_a = -110;
+                this.field_a = -110;
                 break L1;
               }
             }
@@ -98,18 +100,18 @@ final class qh implements cj {
               break L2;
             }
             var6_int = stackIn_8_0;
-            int discarded$1 = ((qh) this).field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_o + "</u>", param2 - -param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, var6_int, -1, ((qh) this).field_a, ((qh) this).field_f, ((qh) this).field_e.field_p + ((qh) this).field_e.field_s);
+            discarded$1 = this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_o + "</u>", param2 - -param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, var6_int, -1, this.field_a, this.field_f, this.field_e.field_p + this.field_e.field_s);
             if (param1.d(param3 ^ 24395)) {
               L4: {
-                var7 = ((qh) this).field_e.b(param1.field_o);
-                var8 = ((qh) this).field_e.field_p + ((qh) this).field_e.field_s;
+                var7 = this.field_e.b(param1.field_o);
+                var8 = this.field_e.field_p + this.field_e.field_s;
                 var9 = param2 - -param1.field_w;
-                if (2 == ((qh) this).field_a) {
+                if (2 == this.field_a) {
                   var9 = var9 + (param1.field_p - var7);
                   break L4;
                 } else {
-                  if (((qh) this).field_a == 1) {
-                    var9 = var9 + (param1.field_p - var7 >> 1);
+                  if ((this.field_a ^ -1) == -2) {
+                    var9 = var9 + (param1.field_p - var7 >> 2004225281);
                     break L4;
                   } else {
                     break L4;
@@ -118,12 +120,12 @@ final class qh implements cj {
               }
               L5: {
                 var10 = param0 - -param1.field_u;
-                if (((qh) this).field_f == 2) {
+                if (-3 == (this.field_f ^ -1)) {
                   var10 = var10 + (param1.field_n - var8);
                   break L5;
                 } else {
-                  if (1 == ((qh) this).field_f) {
-                    var10 = var10 + (param1.field_n - var8 >> 1);
+                  if (1 == this.field_f) {
+                    var10 = var10 + (param1.field_n - var8 >> -431592895);
                     break L5;
                   } else {
                     break L5;
@@ -140,23 +142,23 @@ final class qh implements cj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var6;
+            stackOut_22_0 = (RuntimeException) (var6);
             stackOut_22_1 = new StringBuilder().append("qh.E(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -164,36 +166,36 @@ final class qh implements cj {
               break L6;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public qh() {
-        ((qh) this).field_e = qk.field_e;
-        ((qh) this).field_a = 1;
-        ((qh) this).field_f = 1;
+        this.field_e = qk.field_e;
+        this.field_a = 1;
+        this.field_f = 1;
     }
 
     public static void a(byte param0) {
+        gd discarded$0 = null;
         field_b = null;
         field_c = null;
+        if (param0 != -25) {
+            discarded$0 = qh.a(true);
+        }
     }
 
     qh(pk param0, int param1, int param2) {
         try {
-            ((qh) this).field_a = param1;
-            ((qh) this).field_f = param2;
-            ((qh) this).field_e = param0;
+            this.field_a = param1;
+            this.field_f = param2;
+            this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "qh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[16384];
     }
 }

@@ -17,6 +17,9 @@ final class vl {
     static String field_d;
 
     final static void b(int param0) {
+        if (param0 != 2147483647) {
+            vl.a((byte) 56);
+        }
     }
 
     final static u a(int param0, String param1, r param2, String param3) {
@@ -78,7 +81,7 @@ final class vl {
               if (param0 == 0) {
                 break L1;
               } else {
-                field_b = null;
+                field_b = (String) null;
                 break L1;
               }
             }
@@ -91,23 +94,23 @@ final class vl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_0 = (RuntimeException) (var4);
             stackOut_4_1 = new StringBuilder().append("vl.F(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -116,23 +119,23 @@ final class vl {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -141,23 +144,23 @@ final class vl {
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -165,7 +168,7 @@ final class vl {
               break L4;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -186,51 +189,59 @@ final class vl {
           aj.field_f = new int[param1 * 2];
           break L0;
         }
+        L2: {
+          if (param2 == -26418) {
+            break L2;
+          } else {
+            field_h = (String) null;
+            break L2;
+          }
+        }
         if (on.field_e != null) {
           if (param1 > on.field_e.length) {
-            L2: {
-              L3: {
+            L3: {
+              L4: {
                 on.field_e = new int[param1 * 2];
                 if (li.field_g == null) {
-                  break L3;
+                  break L4;
                 } else {
                   if (param1 <= li.field_g.length) {
-                    break L2;
-                  } else {
                     break L3;
+                  } else {
+                    break L4;
                   }
                 }
               }
               li.field_g = new int[2 * param1];
-              break L2;
+              break L3;
             }
-            L4: {
+            L5: {
               if (null == ub.field_p) {
-                break L4;
+                break L5;
               } else {
                 if (param1 <= ub.field_p.length) {
                   if (null == jf.field_N) {
                     jf.field_N = new int[param1 * 2];
                     if (null == hm.field_A) {
-                      L5: {
-                        L6: {
+                      L6: {
+                        L7: {
                           hm.field_A = new int[param1 * 2];
                           if (null == ac.field_I) {
-                            break L6;
+                            break L7;
                           } else {
                             if (param1 - -param0 > ac.field_I.length) {
-                              break L6;
+                              break L7;
                             } else {
-                              break L5;
+                              break L6;
                             }
                           }
                         }
                         ac.field_I = new int[2 * (param0 + param1)];
-                        break L5;
+                        break L6;
                       }
-                      L7: {
+                      L8: {
                         if (null == sl.field_m) {
-                          break L7;
+                          break L8;
                         } else {
                           if (param1 <= sl.field_m.length) {
                             id.field_d = -2147483648;
@@ -240,7 +251,7 @@ final class vl {
                             f.field_y = 2147483647;
                             return;
                           } else {
-                            break L7;
+                            break L8;
                           }
                         }
                       }
@@ -253,20 +264,20 @@ final class vl {
                       return;
                     } else {
                       if (hm.field_A.length >= param1) {
-                        L8: {
-                          L9: {
+                        L9: {
+                          L10: {
                             if (null == ac.field_I) {
-                              break L9;
+                              break L10;
                             } else {
                               if (param1 - -param0 > ac.field_I.length) {
-                                break L9;
+                                break L10;
                               } else {
-                                break L8;
+                                break L9;
                               }
                             }
                           }
                           ac.field_I = new int[2 * (param0 + param1)];
-                          break L8;
+                          break L9;
                         }
                         if (null == sl.field_m) {
                           sl.field_m = new boolean[2 * param1];
@@ -295,25 +306,25 @@ final class vl {
                           }
                         }
                       } else {
-                        L10: {
-                          L11: {
+                        L11: {
+                          L12: {
                             hm.field_A = new int[param1 * 2];
                             if (null == ac.field_I) {
-                              break L11;
+                              break L12;
                             } else {
                               if (param1 - -param0 > ac.field_I.length) {
-                                break L11;
+                                break L12;
                               } else {
-                                break L10;
+                                break L11;
                               }
                             }
                           }
                           ac.field_I = new int[2 * (param0 + param1)];
-                          break L10;
+                          break L11;
                         }
-                        L12: {
+                        L13: {
                           if (null == sl.field_m) {
-                            break L12;
+                            break L13;
                           } else {
                             if (param1 <= sl.field_m.length) {
                               id.field_d = -2147483648;
@@ -323,7 +334,7 @@ final class vl {
                               f.field_y = 2147483647;
                               return;
                             } else {
-                              break L12;
+                              break L13;
                             }
                           }
                         }
@@ -339,21 +350,21 @@ final class vl {
                   } else {
                     if (jf.field_N.length >= param1) {
                       if (null == hm.field_A) {
-                        L13: {
-                          L14: {
+                        L14: {
+                          L15: {
                             hm.field_A = new int[param1 * 2];
                             if (null == ac.field_I) {
-                              break L14;
+                              break L15;
                             } else {
                               if (param1 - -param0 > ac.field_I.length) {
-                                break L14;
+                                break L15;
                               } else {
-                                break L13;
+                                break L14;
                               }
                             }
                           }
                           ac.field_I = new int[2 * (param0 + param1)];
-                          break L13;
+                          break L14;
                         }
                         if (null == sl.field_m) {
                           sl.field_m = new boolean[2 * param1];
@@ -383,20 +394,20 @@ final class vl {
                         }
                       } else {
                         if (hm.field_A.length >= param1) {
-                          L15: {
-                            L16: {
+                          L16: {
+                            L17: {
                               if (null == ac.field_I) {
-                                break L16;
+                                break L17;
                               } else {
                                 if (param1 - -param0 > ac.field_I.length) {
-                                  break L16;
+                                  break L17;
                                 } else {
-                                  break L15;
+                                  break L16;
                                 }
                               }
                             }
                             ac.field_I = new int[2 * (param0 + param1)];
-                            break L15;
+                            break L16;
                           }
                           if (null == sl.field_m) {
                             sl.field_m = new boolean[2 * param1];
@@ -425,21 +436,21 @@ final class vl {
                             }
                           }
                         } else {
-                          L17: {
-                            L18: {
+                          L18: {
+                            L19: {
                               hm.field_A = new int[param1 * 2];
                               if (null == ac.field_I) {
-                                break L18;
+                                break L19;
                               } else {
                                 if (param1 - -param0 > ac.field_I.length) {
-                                  break L18;
+                                  break L19;
                                 } else {
-                                  break L17;
+                                  break L18;
                                 }
                               }
                             }
                             ac.field_I = new int[2 * (param0 + param1)];
-                            break L17;
+                            break L18;
                           }
                           if (null == sl.field_m) {
                             sl.field_m = new boolean[2 * param1];
@@ -470,36 +481,36 @@ final class vl {
                         }
                       }
                     } else {
-                      L19: {
-                        L20: {
+                      L20: {
+                        L21: {
                           jf.field_N = new int[param1 * 2];
                           if (null == hm.field_A) {
-                            break L20;
+                            break L21;
                           } else {
                             if (hm.field_A.length >= param1) {
-                              break L19;
-                            } else {
                               break L20;
-                            }
-                          }
-                        }
-                        hm.field_A = new int[param1 * 2];
-                        break L19;
-                      }
-                      L21: {
-                        L22: {
-                          if (null == ac.field_I) {
-                            break L22;
-                          } else {
-                            if (param1 - -param0 > ac.field_I.length) {
-                              break L22;
                             } else {
                               break L21;
                             }
                           }
                         }
+                        hm.field_A = new int[param1 * 2];
+                        break L20;
+                      }
+                      L22: {
+                        L23: {
+                          if (null == ac.field_I) {
+                            break L23;
+                          } else {
+                            if (param1 - -param0 > ac.field_I.length) {
+                              break L23;
+                            } else {
+                              break L22;
+                            }
+                          }
+                        }
                         ac.field_I = new int[2 * (param0 + param1)];
-                        break L21;
+                        break L22;
                       }
                       if (null == sl.field_m) {
                         sl.field_m = new boolean[2 * param1];
@@ -530,59 +541,59 @@ final class vl {
                     }
                   }
                 } else {
-                  break L4;
+                  break L5;
                 }
               }
             }
-            L23: {
-              L24: {
+            L24: {
+              L25: {
                 ub.field_p = new int[2 * param1];
                 if (null == jf.field_N) {
-                  break L24;
+                  break L25;
                 } else {
                   if (jf.field_N.length >= param1) {
-                    break L23;
-                  } else {
                     break L24;
+                  } else {
+                    break L25;
                   }
                 }
               }
               jf.field_N = new int[param1 * 2];
-              break L23;
+              break L24;
             }
-            L25: {
-              L26: {
+            L26: {
+              L27: {
                 if (null == hm.field_A) {
-                  break L26;
+                  break L27;
                 } else {
                   if (hm.field_A.length >= param1) {
-                    break L25;
-                  } else {
                     break L26;
-                  }
-                }
-              }
-              hm.field_A = new int[param1 * 2];
-              break L25;
-            }
-            L27: {
-              L28: {
-                if (null == ac.field_I) {
-                  break L28;
-                } else {
-                  if (param1 - -param0 > ac.field_I.length) {
-                    break L28;
                   } else {
                     break L27;
                   }
                 }
               }
-              ac.field_I = new int[2 * (param0 + param1)];
-              break L27;
+              hm.field_A = new int[param1 * 2];
+              break L26;
             }
-            L29: {
+            L28: {
+              L29: {
+                if (null == ac.field_I) {
+                  break L29;
+                } else {
+                  if (param1 - -param0 > ac.field_I.length) {
+                    break L29;
+                  } else {
+                    break L28;
+                  }
+                }
+              }
+              ac.field_I = new int[2 * (param0 + param1)];
+              break L28;
+            }
+            L30: {
               if (null == sl.field_m) {
-                break L29;
+                break L30;
               } else {
                 if (param1 <= sl.field_m.length) {
                   id.field_d = -2147483648;
@@ -592,7 +603,7 @@ final class vl {
                   f.field_y = 2147483647;
                   return;
                 } else {
-                  break L29;
+                  break L30;
                 }
               }
             }
@@ -604,61 +615,61 @@ final class vl {
             f.field_y = 2147483647;
             return;
           } else {
-            L30: {
-              L31: {
+            L31: {
+              L32: {
                 if (li.field_g == null) {
-                  break L31;
+                  break L32;
                 } else {
                   if (param1 <= li.field_g.length) {
-                    break L30;
-                  } else {
                     break L31;
+                  } else {
+                    break L32;
                   }
                 }
               }
               li.field_g = new int[2 * param1];
-              break L30;
+              break L31;
             }
-            L32: {
+            L33: {
               if (null == ub.field_p) {
-                break L32;
+                break L33;
               } else {
                 if (param1 <= ub.field_p.length) {
                   if (null == jf.field_N) {
-                    L33: {
-                      L34: {
+                    L34: {
+                      L35: {
                         jf.field_N = new int[param1 * 2];
                         if (null == hm.field_A) {
-                          break L34;
+                          break L35;
                         } else {
                           if (hm.field_A.length >= param1) {
-                            break L33;
-                          } else {
                             break L34;
-                          }
-                        }
-                      }
-                      hm.field_A = new int[param1 * 2];
-                      break L33;
-                    }
-                    L35: {
-                      L36: {
-                        if (null == ac.field_I) {
-                          break L36;
-                        } else {
-                          if (param1 - -param0 > ac.field_I.length) {
-                            break L36;
                           } else {
                             break L35;
                           }
                         }
                       }
-                      ac.field_I = new int[2 * (param0 + param1)];
-                      break L35;
+                      hm.field_A = new int[param1 * 2];
+                      break L34;
                     }
-                    L37: {
+                    L36: {
+                      L37: {
+                        if (null == ac.field_I) {
+                          break L37;
+                        } else {
+                          if (param1 - -param0 > ac.field_I.length) {
+                            break L37;
+                          } else {
+                            break L36;
+                          }
+                        }
+                      }
+                      ac.field_I = new int[2 * (param0 + param1)];
+                      break L36;
+                    }
+                    L38: {
                       if (null == sl.field_m) {
-                        break L37;
+                        break L38;
                       } else {
                         if (param1 <= sl.field_m.length) {
                           id.field_d = -2147483648;
@@ -668,7 +679,7 @@ final class vl {
                           f.field_y = 2147483647;
                           return;
                         } else {
-                          break L37;
+                          break L38;
                         }
                       }
                     }
@@ -682,25 +693,25 @@ final class vl {
                   } else {
                     if (jf.field_N.length >= param1) {
                       if (null == hm.field_A) {
-                        L38: {
-                          L39: {
+                        L39: {
+                          L40: {
                             hm.field_A = new int[param1 * 2];
                             if (null == ac.field_I) {
-                              break L39;
+                              break L40;
                             } else {
                               if (param1 - -param0 > ac.field_I.length) {
-                                break L39;
+                                break L40;
                               } else {
-                                break L38;
+                                break L39;
                               }
                             }
                           }
                           ac.field_I = new int[2 * (param0 + param1)];
-                          break L38;
+                          break L39;
                         }
-                        L40: {
+                        L41: {
                           if (null == sl.field_m) {
-                            break L40;
+                            break L41;
                           } else {
                             if (param1 <= sl.field_m.length) {
                               id.field_d = -2147483648;
@@ -710,7 +721,7 @@ final class vl {
                               f.field_y = 2147483647;
                               return;
                             } else {
-                              break L40;
+                              break L41;
                             }
                           }
                         }
@@ -723,20 +734,20 @@ final class vl {
                         return;
                       } else {
                         if (hm.field_A.length >= param1) {
-                          L41: {
-                            L42: {
+                          L42: {
+                            L43: {
                               if (null == ac.field_I) {
-                                break L42;
+                                break L43;
                               } else {
                                 if (param1 - -param0 > ac.field_I.length) {
-                                  break L42;
+                                  break L43;
                                 } else {
-                                  break L41;
+                                  break L42;
                                 }
                               }
                             }
                             ac.field_I = new int[2 * (param0 + param1)];
-                            break L41;
+                            break L42;
                           }
                           if (null == sl.field_m) {
                             sl.field_m = new boolean[2 * param1];
@@ -765,25 +776,25 @@ final class vl {
                             }
                           }
                         } else {
-                          L43: {
-                            L44: {
+                          L44: {
+                            L45: {
                               hm.field_A = new int[param1 * 2];
                               if (null == ac.field_I) {
-                                break L44;
+                                break L45;
                               } else {
                                 if (param1 - -param0 > ac.field_I.length) {
-                                  break L44;
+                                  break L45;
                                 } else {
-                                  break L43;
+                                  break L44;
                                 }
                               }
                             }
                             ac.field_I = new int[2 * (param0 + param1)];
-                            break L43;
+                            break L44;
                           }
-                          L45: {
+                          L46: {
                             if (null == sl.field_m) {
-                              break L45;
+                              break L46;
                             } else {
                               if (param1 <= sl.field_m.length) {
                                 id.field_d = -2147483648;
@@ -793,7 +804,7 @@ final class vl {
                                 f.field_y = 2147483647;
                                 return;
                               } else {
-                                break L45;
+                                break L46;
                               }
                             }
                           }
@@ -807,40 +818,40 @@ final class vl {
                         }
                       }
                     } else {
-                      L46: {
-                        L47: {
+                      L47: {
+                        L48: {
                           jf.field_N = new int[param1 * 2];
                           if (null == hm.field_A) {
-                            break L47;
+                            break L48;
                           } else {
                             if (hm.field_A.length >= param1) {
-                              break L46;
-                            } else {
                               break L47;
-                            }
-                          }
-                        }
-                        hm.field_A = new int[param1 * 2];
-                        break L46;
-                      }
-                      L48: {
-                        L49: {
-                          if (null == ac.field_I) {
-                            break L49;
-                          } else {
-                            if (param1 - -param0 > ac.field_I.length) {
-                              break L49;
                             } else {
                               break L48;
                             }
                           }
                         }
-                        ac.field_I = new int[2 * (param0 + param1)];
-                        break L48;
+                        hm.field_A = new int[param1 * 2];
+                        break L47;
                       }
-                      L50: {
+                      L49: {
+                        L50: {
+                          if (null == ac.field_I) {
+                            break L50;
+                          } else {
+                            if (param1 - -param0 > ac.field_I.length) {
+                              break L50;
+                            } else {
+                              break L49;
+                            }
+                          }
+                        }
+                        ac.field_I = new int[2 * (param0 + param1)];
+                        break L49;
+                      }
+                      L51: {
                         if (null == sl.field_m) {
-                          break L50;
+                          break L51;
                         } else {
                           if (param1 <= sl.field_m.length) {
                             id.field_d = -2147483648;
@@ -850,7 +861,7 @@ final class vl {
                             f.field_y = 2147483647;
                             return;
                           } else {
-                            break L50;
+                            break L51;
                           }
                         }
                       }
@@ -864,59 +875,59 @@ final class vl {
                     }
                   }
                 } else {
-                  break L32;
+                  break L33;
                 }
               }
             }
-            L51: {
-              L52: {
+            L52: {
+              L53: {
                 ub.field_p = new int[2 * param1];
                 if (null == jf.field_N) {
-                  break L52;
+                  break L53;
                 } else {
                   if (jf.field_N.length >= param1) {
-                    break L51;
-                  } else {
                     break L52;
+                  } else {
+                    break L53;
                   }
                 }
               }
               jf.field_N = new int[param1 * 2];
-              break L51;
+              break L52;
             }
-            L53: {
-              L54: {
+            L54: {
+              L55: {
                 if (null == hm.field_A) {
-                  break L54;
+                  break L55;
                 } else {
                   if (hm.field_A.length >= param1) {
-                    break L53;
-                  } else {
                     break L54;
-                  }
-                }
-              }
-              hm.field_A = new int[param1 * 2];
-              break L53;
-            }
-            L55: {
-              L56: {
-                if (null == ac.field_I) {
-                  break L56;
-                } else {
-                  if (param1 - -param0 > ac.field_I.length) {
-                    break L56;
                   } else {
                     break L55;
                   }
                 }
               }
-              ac.field_I = new int[2 * (param0 + param1)];
-              break L55;
+              hm.field_A = new int[param1 * 2];
+              break L54;
             }
-            L57: {
+            L56: {
+              L57: {
+                if (null == ac.field_I) {
+                  break L57;
+                } else {
+                  if (param1 - -param0 > ac.field_I.length) {
+                    break L57;
+                  } else {
+                    break L56;
+                  }
+                }
+              }
+              ac.field_I = new int[2 * (param0 + param1)];
+              break L56;
+            }
+            L58: {
               if (null == sl.field_m) {
-                break L57;
+                break L58;
               } else {
                 if (param1 <= sl.field_m.length) {
                   id.field_d = -2147483648;
@@ -926,7 +937,7 @@ final class vl {
                   f.field_y = 2147483647;
                   return;
                 } else {
-                  break L57;
+                  break L58;
                 }
               }
             }
@@ -939,62 +950,62 @@ final class vl {
             return;
           }
         } else {
-          L58: {
-            L59: {
+          L59: {
+            L60: {
               on.field_e = new int[param1 * 2];
               if (li.field_g == null) {
-                break L59;
+                break L60;
               } else {
                 if (param1 <= li.field_g.length) {
-                  break L58;
-                } else {
                   break L59;
+                } else {
+                  break L60;
                 }
               }
             }
             li.field_g = new int[2 * param1];
-            break L58;
+            break L59;
           }
-          L60: {
+          L61: {
             if (null == ub.field_p) {
-              break L60;
+              break L61;
             } else {
               if (param1 <= ub.field_p.length) {
                 if (null == jf.field_N) {
-                  L61: {
-                    L62: {
+                  L62: {
+                    L63: {
                       jf.field_N = new int[param1 * 2];
                       if (null == hm.field_A) {
-                        break L62;
+                        break L63;
                       } else {
                         if (hm.field_A.length >= param1) {
-                          break L61;
-                        } else {
                           break L62;
-                        }
-                      }
-                    }
-                    hm.field_A = new int[param1 * 2];
-                    break L61;
-                  }
-                  L63: {
-                    L64: {
-                      if (null == ac.field_I) {
-                        break L64;
-                      } else {
-                        if (param1 - -param0 > ac.field_I.length) {
-                          break L64;
                         } else {
                           break L63;
                         }
                       }
                     }
-                    ac.field_I = new int[2 * (param0 + param1)];
-                    break L63;
+                    hm.field_A = new int[param1 * 2];
+                    break L62;
                   }
-                  L65: {
+                  L64: {
+                    L65: {
+                      if (null == ac.field_I) {
+                        break L65;
+                      } else {
+                        if (param1 - -param0 > ac.field_I.length) {
+                          break L65;
+                        } else {
+                          break L64;
+                        }
+                      }
+                    }
+                    ac.field_I = new int[2 * (param0 + param1)];
+                    break L64;
+                  }
+                  L66: {
                     if (null == sl.field_m) {
-                      break L65;
+                      break L66;
                     } else {
                       if (param1 <= sl.field_m.length) {
                         id.field_d = -2147483648;
@@ -1004,7 +1015,7 @@ final class vl {
                         f.field_y = 2147483647;
                         return;
                       } else {
-                        break L65;
+                        break L66;
                       }
                     }
                   }
@@ -1018,25 +1029,25 @@ final class vl {
                 } else {
                   if (jf.field_N.length >= param1) {
                     if (null == hm.field_A) {
-                      L66: {
-                        L67: {
+                      L67: {
+                        L68: {
                           hm.field_A = new int[param1 * 2];
                           if (null == ac.field_I) {
-                            break L67;
+                            break L68;
                           } else {
                             if (param1 - -param0 > ac.field_I.length) {
-                              break L67;
+                              break L68;
                             } else {
-                              break L66;
+                              break L67;
                             }
                           }
                         }
                         ac.field_I = new int[2 * (param0 + param1)];
-                        break L66;
+                        break L67;
                       }
-                      L68: {
+                      L69: {
                         if (null == sl.field_m) {
-                          break L68;
+                          break L69;
                         } else {
                           if (param1 <= sl.field_m.length) {
                             id.field_d = -2147483648;
@@ -1046,7 +1057,7 @@ final class vl {
                             f.field_y = 2147483647;
                             return;
                           } else {
-                            break L68;
+                            break L69;
                           }
                         }
                       }
@@ -1059,20 +1070,20 @@ final class vl {
                       return;
                     } else {
                       if (hm.field_A.length >= param1) {
-                        L69: {
-                          L70: {
+                        L70: {
+                          L71: {
                             if (null == ac.field_I) {
-                              break L70;
+                              break L71;
                             } else {
                               if (param1 - -param0 > ac.field_I.length) {
-                                break L70;
+                                break L71;
                               } else {
-                                break L69;
+                                break L70;
                               }
                             }
                           }
                           ac.field_I = new int[2 * (param0 + param1)];
-                          break L69;
+                          break L70;
                         }
                         if (null == sl.field_m) {
                           sl.field_m = new boolean[2 * param1];
@@ -1101,25 +1112,25 @@ final class vl {
                           }
                         }
                       } else {
-                        L71: {
-                          L72: {
+                        L72: {
+                          L73: {
                             hm.field_A = new int[param1 * 2];
                             if (null == ac.field_I) {
-                              break L72;
+                              break L73;
                             } else {
                               if (param1 - -param0 > ac.field_I.length) {
-                                break L72;
+                                break L73;
                               } else {
-                                break L71;
+                                break L72;
                               }
                             }
                           }
                           ac.field_I = new int[2 * (param0 + param1)];
-                          break L71;
+                          break L72;
                         }
-                        L73: {
+                        L74: {
                           if (null == sl.field_m) {
-                            break L73;
+                            break L74;
                           } else {
                             if (param1 <= sl.field_m.length) {
                               id.field_d = -2147483648;
@@ -1129,7 +1140,7 @@ final class vl {
                               f.field_y = 2147483647;
                               return;
                             } else {
-                              break L73;
+                              break L74;
                             }
                           }
                         }
@@ -1143,40 +1154,40 @@ final class vl {
                       }
                     }
                   } else {
-                    L74: {
-                      L75: {
+                    L75: {
+                      L76: {
                         jf.field_N = new int[param1 * 2];
                         if (null == hm.field_A) {
-                          break L75;
+                          break L76;
                         } else {
                           if (hm.field_A.length >= param1) {
-                            break L74;
-                          } else {
                             break L75;
-                          }
-                        }
-                      }
-                      hm.field_A = new int[param1 * 2];
-                      break L74;
-                    }
-                    L76: {
-                      L77: {
-                        if (null == ac.field_I) {
-                          break L77;
-                        } else {
-                          if (param1 - -param0 > ac.field_I.length) {
-                            break L77;
                           } else {
                             break L76;
                           }
                         }
                       }
-                      ac.field_I = new int[2 * (param0 + param1)];
-                      break L76;
+                      hm.field_A = new int[param1 * 2];
+                      break L75;
                     }
-                    L78: {
+                    L77: {
+                      L78: {
+                        if (null == ac.field_I) {
+                          break L78;
+                        } else {
+                          if (param1 - -param0 > ac.field_I.length) {
+                            break L78;
+                          } else {
+                            break L77;
+                          }
+                        }
+                      }
+                      ac.field_I = new int[2 * (param0 + param1)];
+                      break L77;
+                    }
+                    L79: {
                       if (null == sl.field_m) {
-                        break L78;
+                        break L79;
                       } else {
                         if (param1 <= sl.field_m.length) {
                           id.field_d = -2147483648;
@@ -1186,7 +1197,7 @@ final class vl {
                           f.field_y = 2147483647;
                           return;
                         } else {
-                          break L78;
+                          break L79;
                         }
                       }
                     }
@@ -1200,59 +1211,59 @@ final class vl {
                   }
                 }
               } else {
-                break L60;
+                break L61;
               }
             }
           }
-          L79: {
-            L80: {
+          L80: {
+            L81: {
               ub.field_p = new int[2 * param1];
               if (null == jf.field_N) {
-                break L80;
+                break L81;
               } else {
                 if (jf.field_N.length >= param1) {
-                  break L79;
-                } else {
                   break L80;
+                } else {
+                  break L81;
                 }
               }
             }
             jf.field_N = new int[param1 * 2];
-            break L79;
+            break L80;
           }
-          L81: {
-            L82: {
+          L82: {
+            L83: {
               if (null == hm.field_A) {
-                break L82;
+                break L83;
               } else {
                 if (hm.field_A.length >= param1) {
-                  break L81;
-                } else {
                   break L82;
-                }
-              }
-            }
-            hm.field_A = new int[param1 * 2];
-            break L81;
-          }
-          L83: {
-            L84: {
-              if (null == ac.field_I) {
-                break L84;
-              } else {
-                if (param1 - -param0 > ac.field_I.length) {
-                  break L84;
                 } else {
                   break L83;
                 }
               }
             }
-            ac.field_I = new int[2 * (param0 + param1)];
-            break L83;
+            hm.field_A = new int[param1 * 2];
+            break L82;
           }
-          L85: {
+          L84: {
+            L85: {
+              if (null == ac.field_I) {
+                break L85;
+              } else {
+                if (param1 - -param0 > ac.field_I.length) {
+                  break L85;
+                } else {
+                  break L84;
+                }
+              }
+            }
+            ac.field_I = new int[2 * (param0 + param1)];
+            break L84;
+          }
+          L86: {
             if (null == sl.field_m) {
-              break L85;
+              break L86;
             } else {
               if (param1 <= sl.field_m.length) {
                 id.field_d = -2147483648;
@@ -1262,7 +1273,7 @@ final class vl {
                 f.field_y = 2147483647;
                 return;
               } else {
-                break L85;
+                break L86;
               }
             }
           }
@@ -1279,17 +1290,22 @@ final class vl {
     public static void a(byte param0) {
         field_j = null;
         field_b = null;
-        field_a = null;
+        field_a = (lg[][]) null;
         field_f = null;
-        field_e = null;
+        field_e = (int[][]) null;
         field_d = null;
         field_h = null;
-        field_g = null;
+        if (param0 > -10) {
+          return;
+        } else {
+          field_g = null;
+          return;
+        }
     }
 
     final static void a(int param0) {
         if (param0 > -101) {
-            field_b = null;
+            field_b = (String) null;
             ti.c(-95);
             return;
         }
@@ -1310,36 +1326,32 @@ final class vl {
         er var16 = null;
         int[] var17 = null;
         int[] var18 = null;
-        int[] var19 = null;
-        int[] var20 = null;
         L0: {
-          var20 = bi.field_l;
-          var19 = var20;
-          var18 = var19;
+          var18 = bi.field_l;
           var17 = var18;
           var15 = var17;
           var6 = var15;
           var7 = bi.field_e;
           var8 = bi.field_j;
-          var9 = new er(3, param0 + -6);
+          var9 = new er(param1, param0 + -(param1 * 2));
           var9.d();
-          bi.e(0, 0, 3, -6 + param0, param4, param5);
-          var10 = new er(3, 3);
+          bi.e(0, param2, param1, -(param1 * 2) + param0, param4, param5);
+          var10 = new er(param1, param1);
           var10.d();
-          bi.b(0, 0, 3, 3, param4);
-          var11 = new er(16, 3);
+          bi.b(0, 0, param1, param1, param4);
+          var11 = new er(16, param1);
           var11.d();
-          bi.b(0, 0, 16, 3, param4);
-          var12 = new er(3, 3);
+          bi.b(0, 0, 16, param1, param4);
+          var12 = new er(param1, param1);
           var12.d();
-          bi.b(0, 0, 3, 3, param5);
-          var13 = new er(16, 3);
+          bi.b(0, 0, param1, param1, param5);
+          var13 = new er(16, param1);
           var13.d();
-          bi.b(0, 0, 16, 3, param5);
+          bi.b(0, 0, 16, param1, param5);
           var14 = null;
-          if (param3 > 0) {
+          if ((param3 ^ -1) < -1) {
             var16 = new er(16, 16);
-            var14 = (Object) (Object) var16;
+            var14 = var16;
             var16.d();
             bi.b(0, 0, 16, 16, param3);
             break L0;
@@ -1347,15 +1359,11 @@ final class vl {
             break L0;
           }
         }
-        bi.a(var20, var7, var8);
-        return new er[]{var10, var11, var10, var9, (er) var14, var9, var12, var13, var12};
+        bi.a(var18, var7, var8);
+        return new er[]{var10, var11, var10, var9, (er) (var14), var9, var12, var13, var12};
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Email address is unavailable";
         field_f = "Orb coins: ";
         field_g = "<img=2> / <img=10><br><img=1> / <img=12><br><img=3> / <img=11><br><img=4> / <img=9><br><img=5> / <img=7><br><img=15> / <img=17><br><img=14> / <img=16><br><img=8>";

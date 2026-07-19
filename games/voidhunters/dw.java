@@ -9,6 +9,9 @@ final class dw implements wwa {
     public static void a(int param0) {
         field_a = null;
         field_c = null;
+        if (param0 < 113) {
+            field_a = (int[]) null;
+        }
     }
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
@@ -43,10 +46,10 @@ final class dw implements wwa {
               if (!(param1 instanceof htb)) {
                 break L1;
               } else {
-                if (!((htb) (Object) param1).field_u) {
+                if (!((htb) ((Object) param1)).field_u) {
                   break L1;
                 } else {
-                  var8.c((-var8.field_m + param1.field_h >> 1) + (1 + var6_int), 1 + (var7 + (-var8.field_n + param1.field_f >> 1)), 256);
+                  var8.c((-var8.field_m + param1.field_h >> 695876833) + (1 + var6_int), 1 + (var7 + (-var8.field_n + param1.field_f >> -562634783)), 256);
                   break L1;
                 }
               }
@@ -66,23 +69,23 @@ final class dw implements wwa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var6;
+            stackOut_8_0 = (RuntimeException) (var6);
             stackOut_8_1 = new StringBuilder().append("dw.A(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -90,15 +93,11 @@ final class dw implements wwa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 10;
         field_c = new dfa();
     }

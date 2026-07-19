@@ -13,13 +13,14 @@ public class ed {
 
     public static File a(String param0, int param1) {
         if (param1 != 32718) {
-            return null;
+            return (File) null;
         }
         return ed.a(51, field_b, param0, field_c);
     }
 
     public static void a(byte param0, String param1, int param2) {
         Exception var3 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         field_b = param2;
         field_c = param1;
@@ -29,6 +30,7 @@ public class ed {
             if (param0 == -4) {
               if (field_e != null) {
                 field_e = field_e + "/";
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 L1: {
@@ -43,7 +45,8 @@ public class ed {
                 return;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -60,15 +63,20 @@ public class ed {
           field_a = true;
           return;
         }
-        L3: {
-          if (null == field_e) {
-            field_e = "~/";
-            break L3;
-          } else {
-            break L3;
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          L3: {
+            if (null == field_e) {
+              field_e = "~/";
+              break L3;
+            } else {
+              break L3;
+            }
           }
+          field_a = true;
+          return;
         }
-        field_a = true;
     }
 
     private ed() throws Throwable {
@@ -80,10 +88,6 @@ public class ed {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = false;
         field_d = new Hashtable(16);
     }

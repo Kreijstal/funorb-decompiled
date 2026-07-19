@@ -10,13 +10,53 @@ final class ve {
     static String field_c;
 
     final static boolean a(boolean param0) {
-        return ed.c(true) || pb.field_G <= 0;
+        boolean discarded$5 = false;
+        int stackIn_5_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        if (!param0) {
+          if (!ed.c(true)) {
+            if ((pb.field_G ^ -1) >= -1) {
+              return true;
+            } else {
+              return false;
+            }
+          } else {
+            stackOut_9_0 = 1;
+            stackIn_11_0 = stackOut_9_0;
+            return stackIn_11_0 != 0;
+          }
+        } else {
+          discarded$5 = ve.a(false);
+          if (ed.c(true)) {
+            return true;
+          } else {
+            L0: {
+              if ((pb.field_G ^ -1) < -1) {
+                stackOut_4_0 = 0;
+                stackIn_5_0 = stackOut_4_0;
+                break L0;
+              } else {
+                stackOut_3_0 = 1;
+                stackIn_5_0 = stackOut_3_0;
+                break L0;
+              }
+            }
+            return stackIn_5_0 != 0;
+          }
+        }
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
-        ((ve) this).field_d = param1;
-        ((ve) this).field_f = param3;
-        ((ve) this).field_b = param0;
+        this.field_d = param1;
+        this.field_f = param3;
+        this.field_b = param0;
+        if (param2 >= 72) {
+            return;
+        }
+        field_e = (ad) null;
     }
 
     final void b(boolean param0) {
@@ -27,14 +67,14 @@ final class ve {
         var5 = DungeonAssault.field_K;
         if (param0) {
           L0: while (true) {
-            if (((Math.abs(((ve) this).field_d) | Math.abs(((ve) this).field_f) | Math.abs(((ve) this).field_b)) & -65536) == 0) {
-              var2 = this.c(false) >> 1;
+            if (((Math.abs(this.field_d) | Math.abs(this.field_f) | Math.abs(this.field_b)) & -65536) == 0) {
+              var2 = this.c(false) >> 931920705;
               var3 = 15;
               L1: while (true) {
                 if (65536 > var2) {
-                  ((ve) this).field_d = (((ve) this).field_d << var3) / var2;
-                  ((ve) this).field_f = (((ve) this).field_f << var3) / var2;
-                  ((ve) this).field_b = (((ve) this).field_b << var3) / var2;
+                  this.field_d = (this.field_d << var3) / var2;
+                  this.field_f = (this.field_f << var3) / var2;
+                  this.field_b = (this.field_b << var3) / var2;
                   var4 = this.c(false);
                   if (var4 >= 64512) {
                     if (66560 < var4) {
@@ -52,9 +92,9 @@ final class ve {
                 }
               }
             } else {
-              ((ve) this).field_f = ((ve) this).field_f >> 1;
-              ((ve) this).field_d = ((ve) this).field_d >> 1;
-              ((ve) this).field_b = ((ve) this).field_b >> 1;
+              this.field_f = this.field_f >> 1;
+              this.field_d = this.field_d >> 1;
+              this.field_b = this.field_b >> 1;
               continue L0;
             }
           }
@@ -74,6 +114,12 @@ final class ve {
     }
 
     final static String a(int param0, long param1, int param2, int param3, boolean param4) {
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$7 = null;
+        StringBuilder discarded$8 = null;
+        StringBuilder discarded$9 = null;
+        StringBuilder discarded$10 = null;
+        StringBuilder discarded$11 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -94,7 +140,7 @@ final class ve {
           }
         }
         L1: {
-          if (param3 != 2) {
+          if (-3 != (param3 ^ -1)) {
             break L1;
           } else {
             var7 = 160;
@@ -111,53 +157,115 @@ final class ve {
             break L2;
           }
         }
-        var9 = new StringBuilder(26);
-        var10 = 0;
-        L3: while (true) {
-          if (var10 >= 1) {
-            StringBuilder discarded$57 = var9.append((char) var6);
+        L3: {
+          var9 = new StringBuilder(26);
+          if (param0 > 0) {
             var10 = 0;
             L4: while (true) {
-              var11 = (int)param1;
-              param1 = param1 / 10L;
-              StringBuilder discarded$58 = var9.append((char)(48 - (-var11 - -(10 * (int)param1))));
-              if (param1 != 0L) {
-                var10++;
-                if (0 != var10 % 3) {
-                  continue L4;
-                } else {
-                  StringBuilder discarded$59 = var9.append((char) var7);
-                  continue L4;
-                }
+              if (param0 <= var10) {
+                discarded$6 = var9.append((char) var6);
+                break L3;
               } else {
-                L5: {
-                  if (var8 != 0) {
-                    StringBuilder discarded$60 = var9.append('-');
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                return var9.reverse().toString();
+                var11 = (int)param1;
+                param1 = param1 / 10L;
+                discarded$7 = var9.append((char)(-(10 * (int)param1) + (var11 + 48)));
+                var10++;
+                continue L4;
               }
             }
           } else {
-            var11 = (int)param1;
-            param1 = param1 / 10L;
-            StringBuilder discarded$61 = var9.append((char)(-(10 * (int)param1) + (var11 + 48)));
-            var10++;
-            continue L3;
+            break L3;
+          }
+        }
+        var10 = 0;
+        L5: while (true) {
+          var11 = (int)param1;
+          param1 = param1 / 10L;
+          discarded$8 = var9.append((char)(48 - (-var11 - -(10 * (int)param1))));
+          if ((param1 ^ -1L) != -1L) {
+            if (param4) {
+              var10++;
+              if (0 != var10 % 3) {
+                continue L5;
+              } else {
+                discarded$9 = var9.append((char) var7);
+                continue L5;
+              }
+            } else {
+              continue L5;
+            }
+          } else {
+            if (param2 != -17311) {
+              L6: {
+                field_a = true;
+                if (var8 != 0) {
+                  discarded$10 = var9.append('-');
+                  break L6;
+                } else {
+                  break L6;
+                }
+              }
+              return var9.reverse().toString();
+            } else {
+              L7: {
+                if (var8 != 0) {
+                  discarded$11 = var9.append('-');
+                  break L7;
+                } else {
+                  break L7;
+                }
+              }
+              return var9.reverse().toString();
+            }
           }
         }
     }
 
     private final int c(boolean param0) {
         int var2 = 0;
-        var2 = (((ve) this).field_b >> 2) * (((ve) this).field_b >> 2) + (((ve) this).field_f >> 2) * (((ve) this).field_f >> 2) + (((ve) this).field_d >> 2) * (((ve) this).field_d >> 2);
-        if (var2 < 0) {
-          throw new RuntimeException();
+        int stackIn_5_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        if (!param0) {
+          var2 = (this.field_b >> -2089464094) * (this.field_b >> -118145502) + (this.field_f >> -1225268702) * (this.field_f >> -799567614) + (this.field_d >> -1084721886) * (this.field_d >> -2147109758);
+          if (var2 < 0) {
+            throw new RuntimeException();
+          } else {
+            L0: {
+              if (param0) {
+                stackOut_11_0 = 0;
+                stackIn_12_0 = stackOut_11_0;
+                break L0;
+              } else {
+                stackOut_10_0 = 1;
+                stackIn_12_0 = stackOut_10_0;
+                break L0;
+              }
+            }
+            return ug.a(stackIn_12_0 != 0, var2) << -1156140638;
+          }
         } else {
-          return ug.a(true, var2) << 2;
+          this.a(56, -92, 125, -12);
+          var2 = (this.field_b >> -2089464094) * (this.field_b >> -118145502) + (this.field_f >> -1225268702) * (this.field_f >> -799567614) + (this.field_d >> -1084721886) * (this.field_d >> -2147109758);
+          if (var2 < 0) {
+            throw new RuntimeException();
+          } else {
+            L1: {
+              if (param0) {
+                stackOut_4_0 = 0;
+                stackIn_5_0 = stackOut_4_0;
+                break L1;
+              } else {
+                stackOut_3_0 = 1;
+                stackIn_5_0 = stackOut_3_0;
+                break L1;
+              }
+            }
+            return ug.a(stackIn_5_0 != 0, var2) << -1156140638;
+          }
         }
     }
 
@@ -166,10 +274,6 @@ final class ve {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new ad(11, 0, 1, 2);
         field_a = false;
         field_c = "Please log in as a subscribing member to access this feature.";

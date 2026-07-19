@@ -48,10 +48,10 @@ final class kb implements ur {
               if (!(param3 instanceof d)) {
                 break L2;
               } else {
-                if (!((d) (Object) param3).field_G) {
+                if (!((d) ((Object) param3)).field_G) {
                   break L2;
                 } else {
-                  var8.d(var6_int - -1 - -(param3.field_n - var8.field_x >> 1), (param3.field_s + -var8.field_B >> 1) + (var7 - -1), 256);
+                  var8.d(var6_int - -1 - -(param3.field_n - var8.field_x >> -1113624351), (param3.field_s + -var8.field_B >> -1686258495) + (var7 - -1), 256);
                   break L2;
                 }
               }
@@ -67,23 +67,23 @@ final class kb implements ur {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var6;
+            stackOut_8_0 = (RuntimeException) (var6);
             stackOut_8_1 = new StringBuilder().append("kb.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param3 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -91,7 +91,7 @@ final class kb implements ur {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param4 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param4 + ')');
         }
     }
 
@@ -113,10 +113,6 @@ final class kb implements ur {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new cg();
         field_f = "<col=F62610>Red:</col> <%0> <col=25D3F7>Blue:</col> <%1>";
     }

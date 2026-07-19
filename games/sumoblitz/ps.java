@@ -10,6 +10,9 @@ final class ps {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != 28) {
+            return;
+        }
         field_d = null;
         field_e = null;
         field_b = null;
@@ -17,10 +20,6 @@ final class ps {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ps.A(";
         field_b = "score: ";
         field_a = 0;

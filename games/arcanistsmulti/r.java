@@ -9,7 +9,12 @@ final class r {
     static String field_e;
 
     final static void a(boolean param0) {
+        qb discarded$0 = null;
         ed.j(120);
+        if (param0) {
+            eg var2 = (eg) null;
+            discarded$0 = r.a(51, -102, 48, (eg) null);
+        }
         oc.a(112, nn.field_p, tl.field_a[0].field_n, dh.field_Gb, ga.field_r, ra.field_h);
     }
 
@@ -24,6 +29,7 @@ final class r {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         qb stackOut_5_0 = null;
         Object stackOut_1_0 = null;
@@ -42,40 +48,42 @@ final class r {
                 if (param0 == -17928) {
                   break L1;
                 } else {
-                  field_a = null;
+                  field_a = (String) null;
                   break L1;
                 }
               }
               stackOut_5_0 = wh.a(-112);
               stackIn_6_0 = stackOut_5_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
-              return (qb) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
+            stackOut_7_0 = (RuntimeException) (var4);
             stackOut_7_1 = new StringBuilder().append("r.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param3 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -83,20 +91,25 @@ final class r {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
-        return stackIn_6_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (qb) ((Object) stackIn_2_0);
+        } else {
+          return stackIn_6_0;
+        }
     }
 
     public static void a(int param0) {
+        ho discarded$0 = null;
         field_c = null;
         field_a = null;
         field_b = null;
         field_e = null;
         field_d = null;
         if (param0 != 8) {
-            Object var2 = null;
-            ho discarded$0 = r.a((String) null, 56);
+            String var2 = (String) null;
+            discarded$0 = r.a((String) null, 56);
         }
     }
 
@@ -111,6 +124,7 @@ final class r {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ho stackOut_10_0 = null;
         Object stackOut_8_0 = null;
@@ -137,10 +151,11 @@ final class r {
                 if (pa.field_g != hb.field_Gb) {
                   break L2;
                 } else {
-                  if (param0.equals((Object) (Object) ji.field_j)) {
+                  if (param0.equals(ji.field_j)) {
                     hb.field_Gb = uj.field_h;
                     stackOut_10_0 = fh.field_i;
                     stackIn_11_0 = stackOut_10_0;
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     break L2;
@@ -152,7 +167,8 @@ final class r {
               fh.field_i = null;
               stackOut_8_0 = null;
               stackIn_9_0 = stackOut_8_0;
-              return (ho) (Object) stackIn_9_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               return null;
             }
@@ -161,23 +177,23 @@ final class r {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var2;
+            stackOut_12_0 = (RuntimeException) (var2);
             stackOut_12_1 = new StringBuilder().append("r.D(");
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -185,48 +201,50 @@ final class r {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');
         }
-        return stackIn_11_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (ho) ((Object) stackIn_9_0);
+        } else {
+          return stackIn_11_0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        long var0 = 0L;
-        int var2 = 0;
-        int var3 = 0;
-        field_d = new long[256];
-        var2 = 0;
-        L0: while (true) {
-          if (var2 >= 256) {
-            field_a = "Please remove <%0> from your ignore list first.";
-            field_c = "You just fell into the water. Try not to do this in future, as outside of this training area it will result in injury.";
-            field_e = "Return to game";
-            return;
-          } else {
-            var0 = (long)var2;
-            var3 = 0;
-            L1: while (true) {
-              if (8 <= var3) {
-                field_d[var2] = var0;
-                var2++;
-                continue L0;
+        $cfr$clinit: {
+            long var0 = 0L;
+            int var2 = 0;
+            int var3 = 0;
+            field_d = new long[256];
+            var2 = 0;
+            L0: while (true) {
+              if ((var2 ^ -1) <= -257) {
+                field_a = "Please remove <%0> from your ignore list first.";
+                field_c = "You just fell into the water. Try not to do this in future, as outside of this training area it will result in injury.";
+                field_e = "Return to game";
+                break $cfr$clinit;
               } else {
-                if ((1L & var0) == 1L) {
-                  var0 = var0 >>> 1 ^ -3932672073523589310L;
-                  var3++;
-                  continue L1;
-                } else {
-                  var0 = var0 >>> 1;
-                  var3++;
-                  continue L1;
+                var0 = (long)var2;
+                var3 = 0;
+                L1: while (true) {
+                  if (8 <= var3) {
+                    field_d[var2] = var0;
+                    var2++;
+                    continue L0;
+                  } else {
+                    if ((1L & var0) == 1L) {
+                      var0 = var0 >>> 1284508929 ^ -3932672073523589310L;
+                      var3++;
+                      continue L1;
+                    } else {
+                      var0 = var0 >>> 1;
+                      var3++;
+                      continue L1;
+                    }
+                  }
                 }
               }
             }
-          }
         }
     }
 }

@@ -19,6 +19,7 @@ final class cn {
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_16_0 = 0;
         int stackOut_8_0 = 0;
@@ -27,15 +28,16 @@ final class cn {
         var4 = CrazyCrystals.field_B;
         try {
           L0: {
-            var5 = (pi) (Object) hc.field_b.g(32073);
+            var5 = (pi) ((Object) hc.field_b.g(32073));
             var1 = var5;
             if (var1 != null) {
-              var2 = -1;
+              var2 = -85 % ((param0 - 23) / 39);
               var3 = 0;
               L1: while (true) {
                 if (var1.field_i <= var3) {
                   stackOut_16_0 = 1;
                   stackIn_17_0 = stackOut_16_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
                   L2: {
@@ -47,7 +49,8 @@ final class cn {
                       } else {
                         stackOut_8_0 = 0;
                         stackIn_9_0 = stackOut_8_0;
-                        return stackIn_9_0 != 0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       }
                     }
                   }
@@ -58,7 +61,8 @@ final class cn {
                       if (var5.field_m[var3].field_a == 0) {
                         stackOut_13_0 = 0;
                         stackIn_14_0 = stackOut_13_0;
-                        return stackIn_14_0 != 0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       } else {
                         break L3;
                       }
@@ -71,29 +75,43 @@ final class cn {
             } else {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1_ref, "cn.B(" + 114 + ')');
+          throw dn.a((Throwable) ((Object) var1_ref), "cn.B(" + param0 + ')');
         }
-        return stackIn_17_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_14_0 != 0;
+            } else {
+              return stackIn_17_0 != 0;
+            }
+          }
+        }
     }
 
     public static void a(int param0) {
         field_c = null;
         field_b = null;
         field_d = null;
+        if (param0 < 9) {
+            field_c = (dl[]) null;
+            field_e = null;
+            return;
+        }
         field_e = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new sj(14, 0, 4, 1);
     }
 }

@@ -10,16 +10,15 @@ final class sg {
 
     public static void a(boolean param0) {
         field_c = null;
-        field_b = null;
+        field_b = (byte[][]) null;
         field_d = null;
         field_a = null;
+        if (param0) {
+            sg.a(false);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "sg.A(";
         field_b = new byte[250][];
         field_c = new int[5];

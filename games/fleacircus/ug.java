@@ -12,13 +12,12 @@ final class ug {
     public static void a(byte param0) {
         field_b = null;
         field_e = null;
+        if (param0 != -73) {
+            field_c = 47;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ug.A(";
     }
 }

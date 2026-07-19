@@ -21,14 +21,17 @@ final class ea extends ma {
     static String field_m;
 
     final static void c(byte param0) {
-        int var1 = -27;
+        int var1 = 27 / ((param0 - 59) / 62);
         di.field_j = kn.field_e.j(-100);
-        CharSequence var2 = (CharSequence) (Object) di.field_j;
+        CharSequence var2 = (CharSequence) ((Object) di.field_j);
         oj.field_y = hq.a(110, var2);
     }
 
     public static void d(byte param0) {
         field_u = null;
+        if (param0 <= 115) {
+            return;
+        }
         field_m = null;
         field_r = null;
     }
@@ -37,10 +40,6 @@ final class ea extends ma {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = false;
         field_p = 0;
         field_z = true;

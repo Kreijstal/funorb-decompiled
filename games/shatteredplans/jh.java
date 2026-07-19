@@ -16,45 +16,50 @@ final class jh extends vd implements ok {
     private int field_w;
 
     final void g(int param0) {
-        ((jh) this).field_y = true;
+        this.field_y = true;
         if (param0 < 80) {
-            ((jh) this).e((byte) 91);
+            this.e((byte) 91);
         }
     }
 
     public static void d(byte param0) {
         field_v = null;
+        if (param0 < 74) {
+            field_D = false;
+            field_B = null;
+            return;
+        }
         field_B = null;
     }
 
     final boolean f(int param0) {
         if (param0 != 244874369) {
-            ((jh) this).field_G = null;
-            return ((jh) this).field_y;
+            this.field_G = (String) null;
+            return this.field_y;
         }
-        return ((jh) this).field_y;
+        return this.field_y;
     }
 
     final void a(int param0) {
         int var2 = 0;
         var2 = 122 / ((param0 - 67) / 47);
-        if (!((jh) this).field_s) {
+        if (!this.field_s) {
           return;
         } else {
-          if (!((jh) this).field_y) {
-            if (((jh) this).field_w == -1) {
-              if (((jh) this).field_E == null) {
-                if (null == ((jh) this).field_C) {
+          if (!this.field_y) {
+            if ((this.field_w ^ -1) == 0) {
+              if (this.field_E == null) {
+                if (null == this.field_C) {
                   return;
                 } else {
-                  rs.field_Cb.c(((jh) this).field_C, ((jh) this).field_m / 2 + (1 + ((jh) this).field_k), rs.field_Cb.field_J / 2 + (((jh) this).field_i / 2 + ((jh) this).field_t), ((jh) this).field_x, -1);
+                  rs.field_Cb.c(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
                   return;
                 }
               } else {
                 L0: {
-                  ((jh) this).field_E.f((-((jh) this).field_E.field_z + ((jh) this).field_m) / 2 + ((jh) this).field_k, (((jh) this).field_i - ((jh) this).field_E.field_w) / 2 + ((jh) this).field_t);
-                  if (null != ((jh) this).field_C) {
-                    rs.field_Cb.c(((jh) this).field_C, ((jh) this).field_m / 2 + (1 + ((jh) this).field_k), rs.field_Cb.field_J / 2 + (((jh) this).field_i / 2 + ((jh) this).field_t), ((jh) this).field_x, -1);
+                  this.field_E.f((-this.field_E.field_z + this.field_m) / 2 + this.field_k, (this.field_i - this.field_E.field_w) / 2 + this.field_t);
+                  if (null != this.field_C) {
+                    rs.field_Cb.c(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
                     break L0;
                   } else {
                     break L0;
@@ -63,12 +68,12 @@ final class jh extends vd implements ok {
                 return;
               }
             } else {
-              gf.d(((jh) this).field_k, ((jh) this).field_t, ((jh) this).field_m, ((jh) this).field_i, ((jh) this).field_w);
-              if (((jh) this).field_E != null) {
+              gf.d(this.field_k, this.field_t, this.field_m, this.field_i, this.field_w);
+              if (this.field_E != null) {
                 L1: {
-                  ((jh) this).field_E.f((-((jh) this).field_E.field_z + ((jh) this).field_m) / 2 + ((jh) this).field_k, (((jh) this).field_i - ((jh) this).field_E.field_w) / 2 + ((jh) this).field_t);
-                  if (null != ((jh) this).field_C) {
-                    rs.field_Cb.c(((jh) this).field_C, ((jh) this).field_m / 2 + (1 + ((jh) this).field_k), rs.field_Cb.field_J / 2 + (((jh) this).field_i / 2 + ((jh) this).field_t), ((jh) this).field_x, -1);
+                  this.field_E.f((-this.field_E.field_z + this.field_m) / 2 + this.field_k, (this.field_i - this.field_E.field_w) / 2 + this.field_t);
+                  if (null != this.field_C) {
+                    rs.field_Cb.c(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
                     break L1;
                   } else {
                     break L1;
@@ -77,8 +82,8 @@ final class jh extends vd implements ok {
                 return;
               } else {
                 L2: {
-                  if (null != ((jh) this).field_C) {
-                    rs.field_Cb.c(((jh) this).field_C, ((jh) this).field_m / 2 + (1 + ((jh) this).field_k), rs.field_Cb.field_J / 2 + (((jh) this).field_i / 2 + ((jh) this).field_t), ((jh) this).field_x, -1);
+                  if (null != this.field_C) {
+                    rs.field_Cb.c(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
                     break L2;
                   } else {
                     break L2;
@@ -88,35 +93,35 @@ final class jh extends vd implements ok {
               }
             }
           } else {
-            if (-1 == ((jh) this).field_z) {
+            if (-1 == this.field_z) {
               L3: {
-                if (((jh) this).field_F != null) {
-                  ((jh) this).field_F.f(((jh) this).field_k + (((jh) this).field_m - ((jh) this).field_F.field_z) / 2, (((jh) this).field_i - ((jh) this).field_F.field_w) / 2 + ((jh) this).field_t);
+                if (this.field_F != null) {
+                  this.field_F.f(this.field_k + (this.field_m - this.field_F.field_z) / 2, (this.field_i - this.field_F.field_w) / 2 + this.field_t);
                   break L3;
                 } else {
                   break L3;
                 }
               }
-              if (((jh) this).field_G != null) {
-                rs.field_Cb.c(((jh) this).field_G, ((jh) this).field_m / 2 + 1 + ((jh) this).field_k, rs.field_Cb.field_J / 2 + (((jh) this).field_i / 2 + ((jh) this).field_t), ((jh) this).field_u, -1);
+              if (this.field_G != null) {
+                rs.field_Cb.c(this.field_G, this.field_m / 2 + 1 + this.field_k, rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_u, -1);
                 return;
               } else {
                 return;
               }
             } else {
               L4: {
-                gf.d(((jh) this).field_k, ((jh) this).field_t, ((jh) this).field_m, ((jh) this).field_i, ((jh) this).field_z);
-                if (((jh) this).field_F != null) {
-                  ((jh) this).field_F.f(((jh) this).field_k + (((jh) this).field_m - ((jh) this).field_F.field_z) / 2, (((jh) this).field_i - ((jh) this).field_F.field_w) / 2 + ((jh) this).field_t);
+                gf.d(this.field_k, this.field_t, this.field_m, this.field_i, this.field_z);
+                if (this.field_F != null) {
+                  this.field_F.f(this.field_k + (this.field_m - this.field_F.field_z) / 2, (this.field_i - this.field_F.field_w) / 2 + this.field_t);
                   break L4;
                 } else {
                   break L4;
                 }
               }
-              if (((jh) this).field_G == null) {
+              if (this.field_G == null) {
                 return;
               } else {
-                rs.field_Cb.c(((jh) this).field_G, ((jh) this).field_m / 2 + 1 + ((jh) this).field_k, rs.field_Cb.field_J / 2 + (((jh) this).field_i / 2 + ((jh) this).field_t), ((jh) this).field_u, -1);
+                rs.field_Cb.c(this.field_G, this.field_m / 2 + 1 + this.field_k, rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_u, -1);
                 return;
               }
             }
@@ -128,7 +133,7 @@ final class jh extends vd implements ok {
         RuntimeException var5 = null;
         String var5_ref = null;
         int var6 = 0;
-        Object var7 = null;
+        String var7 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -157,6 +162,7 @@ final class jh extends vd implements ok {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
@@ -194,7 +200,8 @@ final class jh extends vd implements ok {
         try {
           L0: {
             if (ck.field_a != null) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 sr.field_h = false;
@@ -211,18 +218,18 @@ final class jh extends vd implements ok {
                   }
                 }
               }
-              var7 = null;
+              var7 = (String) null;
               cq.a(-114, ho.field_c, (String) null, var5_ref, 0);
               ck.field_a = uq.field_j;
-              uq.field_j.field_ab = -(8355711 & ho.field_c >> 1) + (ho.field_c + ((16711422 & bh.field_k.field_ab) >> 1));
-              uq.field_j.field_jb = -(8355711 & ho.field_c >> 1) + ho.field_c + ((bh.field_k.field_jb & 16711422) >> 1);
+              uq.field_j.field_ab = -(8355711 & ho.field_c >> -1797168255) + (ho.field_c + ((16711422 & bh.field_k.field_ab) >> 1097682401));
+              uq.field_j.field_jb = -(8355711 & ho.field_c >> 244874369) + ho.field_c + ((bh.field_k.field_jb & 16711422) >> 1551899841);
               er.field_j = cg.field_C;
-              uq.field_j.field_qb = -(ho.field_c >> 1 & 8355711) + ho.field_c - -(bh.field_k.field_qb >> 1 & 8355711);
+              uq.field_j.field_qb = -(ho.field_c >> 823471681 & 8355711) + ho.field_c - -(bh.field_k.field_qb >> 951529377 & 8355711);
               fa.field_X = new qr(0L, param1);
               mb.field_n = new qr(0L, param2);
               fe.field_w = new qr(0L, (qr) null);
               sg.field_Ab = new qr(0L, param3);
-              uq.field_j = new qr(0L, param0);
+              uq.field_j = new qr((long)param4, param0);
               uq.field_j.field_nb = ho.field_f;
               sg.field_Ab.a(4, uq.field_j);
               cg.field_C = new qr(0L, er.field_j);
@@ -232,8 +239,9 @@ final class jh extends vd implements ok {
               fa.field_X.a(4, mb.field_n);
               fa.field_X.a(4, fe.field_w);
               fe.field_w.a(4, sg.field_Ab);
-              fe.field_w.a(4, hd.field_m);
+              fe.field_w.a(param4 + 4, hd.field_m);
               fe.field_w.a(4, cb.field_l);
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -241,23 +249,23 @@ final class jh extends vd implements ok {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var5;
+            stackOut_11_0 = (RuntimeException) (var5);
             stackOut_11_1 = new StringBuilder().append("jh.G(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -266,23 +274,23 @@ final class jh extends vd implements ok {
             }
           }
           L3: {
-            stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+            stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
             stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -291,23 +299,23 @@ final class jh extends vd implements ok {
             }
           }
           L4: {
-            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+            stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
             stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param2 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L4;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -316,23 +324,23 @@ final class jh extends vd implements ok {
             }
           }
           L5: {
-            stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+            stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
             stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param3 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L5;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -340,44 +348,45 @@ final class jh extends vd implements ok {
               break L5;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + 0 + ')');
+          throw r.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     jh(int param0, int param1, int param2, int param3, int param4, bi param5, String param6, int param7, int param8, bi param9, String param10, int param11) {
         super(param0, param1, param2, param3);
         try {
-            ((jh) this).field_y = false;
-            ((jh) this).field_u = param11;
-            ((jh) this).field_z = param8;
-            ((jh) this).field_E = param5;
-            ((jh) this).field_G = param10;
-            ((jh) this).field_F = param9;
-            ((jh) this).field_x = param7;
-            ((jh) this).field_w = param4;
-            ((jh) this).field_C = param6;
+            this.field_y = false;
+            this.field_u = param11;
+            this.field_z = param8;
+            this.field_E = param5;
+            this.field_G = param10;
+            this.field_F = param9;
+            this.field_x = param7;
+            this.field_w = param4;
+            this.field_C = param6;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "jh.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "jh.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ')');
         }
     }
 
     final void e(byte param0) {
-        ((jh) this).field_y = !((jh) this).field_y ? true : false;
+        this.field_y = !this.field_y ? true : false;
         if (param0 <= 1) {
-            field_B = null;
+            field_B = (ga) null;
             return;
         }
     }
 
     final void d(boolean param0) {
-        ((jh) this).field_y = param0 ? true : false;
+        this.field_y = param0 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_v = "Loading extra data";
         field_D = false;
     }

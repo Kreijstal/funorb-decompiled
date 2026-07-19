@@ -8,6 +8,11 @@ abstract class pe {
 
     public static void a(byte param0) {
         field_b = null;
+        if (param0 >= -37) {
+            field_a = (int[]) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
@@ -18,10 +23,6 @@ abstract class pe {
     abstract int a(int param0, int param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "pe.A(";
         field_a = new int[8192];
         field_b = new sg();

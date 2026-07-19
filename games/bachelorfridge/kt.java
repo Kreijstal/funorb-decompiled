@@ -10,11 +10,11 @@ final class kt extends pp {
 
     final void a(lu param0, byte param1) {
         try {
-            er.a(((kt) this).field_h, 120, param0);
+            er.a(this.field_h, 120, param0);
             int var3_int = 51 % ((param1 - 34) / 58);
-            param0.d(((kt) this).field_l, 0);
+            param0.d(this.field_l, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "kt.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "kt.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -29,20 +29,20 @@ final class kt extends pp {
 
     kt(nq param0, int param1) {
         try {
-            ((kt) this).field_l = param1;
-            ((kt) this).field_h = param0;
+            this.field_l = param1;
+            this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "kt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "kt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(aga param0, op param1, int param2) {
         aga var4 = null;
         try {
-            var4 = ((kt) this).field_h.a(param2 ^ 93, param1);
-            var4.j(((kt) this).field_l, param2 ^ param2);
+            var4 = this.field_h.a(param2 ^ 93, param1);
+            var4.j(this.field_l, param2 ^ param2);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "kt.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "kt.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

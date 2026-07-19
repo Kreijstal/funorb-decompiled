@@ -11,6 +11,6 @@ public class eh {
     int field_c;
 
     eh() {
-        ((eh) this).field_f = 0;
+        this.field_f = 0;
     }
 }

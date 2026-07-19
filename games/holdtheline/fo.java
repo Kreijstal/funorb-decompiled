@@ -14,16 +14,15 @@ final class fo extends hl {
         field_k = null;
         field_n = null;
         field_m = null;
+        if (param0) {
+            field_m = (String) null;
+        }
     }
 
     fo() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fo.A(";
         field_n = new e(1, 2, 2, 0);
         field_k = new sh();

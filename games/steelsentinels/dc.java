@@ -12,6 +12,8 @@ final class dc {
     static String field_a;
 
     final static String a(int param0, int param1) {
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
         int[] var2 = null;
         StringBuilder var3 = null;
         int var4 = 0;
@@ -26,16 +28,16 @@ final class dc {
           if (var4 >= var6.length) {
             return var3.toString();
           } else {
-            if ((var6[var4] & param0) != -1) {
+            if ((var6[var4] & param0) != 0) {
               L1: {
-                if (-1 >= var3.length()) {
+                if (-1 <= (var3.length() ^ -1)) {
                   break L1;
                 } else {
-                  StringBuilder discarded$2 = var3.append('/');
+                  discarded$2 = var3.append('/');
                   break L1;
                 }
               }
-              StringBuilder discarded$3 = var3.append(kk.field_h[var4]);
+              discarded$3 = var3.append(kk.field_h[var4]);
               var4++;
               continue L0;
             } else {
@@ -47,10 +49,10 @@ final class dc {
     }
 
     public static void a(int param0) {
-        field_b = null;
+        field_b = (wk[][]) null;
         field_d = null;
         field_f = null;
-        int var1 = 0;
+        int var1 = -60 % ((42 - param0) / 59);
         field_a = null;
     }
 
@@ -59,10 +61,6 @@ final class dc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = -1;
         field_d = "F1";
         field_f = "Mission <%0>";

@@ -16,7 +16,7 @@ final class v {
 
     final va a() {
         byte[] var1 = this.b();
-        return new va(22050, var1, 22050 * ((v) this).field_a / 1000, 22050 * ((v) this).field_b / 1000);
+        return new va(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
     }
 
     private final byte[] b() {
@@ -41,10 +41,10 @@ final class v {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((v) this).field_c[var4] != null) {
-                    var5 = ((v) this).field_c[var4].field_s * 22050 / 1000;
-                    var6 = ((v) this).field_c[var4].field_o * 22050 / 1000;
-                    var13 = ((v) this).field_c[var4].a(var5, ((v) this).field_c[var4].field_s);
+                  if (this.field_c[var4] != null) {
+                    var5 = this.field_c[var4].field_s * 22050 / 1000;
+                    var6 = this.field_c[var4].field_o * 22050 / 1000;
+                    var13 = this.field_c[var4].a(var5, this.field_c[var4].field_s);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -75,9 +75,9 @@ final class v {
               return new byte[]{};
             }
           } else {
-            if (((v) this).field_c[var2] != null) {
-              if (((v) this).field_c[var2].field_s + ((v) this).field_c[var2].field_o > var1) {
-                var1 = ((v) this).field_c[var2].field_s + ((v) this).field_c[var2].field_o;
+            if (this.field_c[var2] != null) {
+              if (this.field_c[var2].field_s + this.field_c[var2].field_o > var1) {
+                var1 = this.field_c[var2].field_s + this.field_c[var2].field_o;
                 var2++;
                 continue L0;
               } else {
@@ -95,19 +95,19 @@ final class v {
     private v(ec param0) {
         int var2 = 0;
         int var3 = 0;
-        ((v) this).field_c = new wg[10];
+        this.field_c = new wg[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((v) this).field_a = param0.k(0);
-            ((v) this).field_b = param0.k(0);
+            this.field_a = param0.k(0);
+            this.field_b = param0.k(0);
             return;
           } else {
             var3 = param0.c(true);
             if (var3 != 0) {
               param0.field_o = param0.field_o - 1;
-              ((v) this).field_c[var2] = new wg();
-              ((v) this).field_c[var2].a(param0);
+              this.field_c[var2] = new wg();
+              this.field_c[var2].a(param0);
               var2++;
               continue L0;
             } else {

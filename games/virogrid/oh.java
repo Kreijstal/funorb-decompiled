@@ -11,6 +11,9 @@ final class oh {
 
     public static void a(boolean param0) {
         field_a = null;
+        if (!param0) {
+            return;
+        }
         field_b = null;
         field_c = null;
         field_e = null;
@@ -21,10 +24,6 @@ final class oh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Please try again in a few minutes.";
         field_e = new ul(0);
         field_f = 0;

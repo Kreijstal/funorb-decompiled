@@ -24,19 +24,18 @@ final class gk {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-            param0.addMouseListener((java.awt.event.MouseListener) (Object) ic.field_d);
-            param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ic.field_d);
-            param0.addFocusListener((java.awt.event.FocusListener) (Object) ic.field_d);
+            param0.addMouseListener(ic.field_d);
+            if (param1 <= 26) {
+                field_d = (float[]) null;
+            }
+            param0.addMouseMotionListener(ic.field_d);
+            param0.addFocusListener(ic.field_d);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "gk.A(" + (param0 != null ? "{...}" : "null") + ',' + 31 + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "gk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "AI racers: ";
         field_a = "(Including <%0>)";
         field_d = new float[3];

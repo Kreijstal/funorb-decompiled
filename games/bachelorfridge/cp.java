@@ -10,15 +10,11 @@ final class cp {
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = 2;
+        int var1 = 66 % ((param0 - -77) / 33);
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "cp.A(";
         field_b = new kf();
         field_a = new String[]{"Name", "Kills", "Damage Done", "Healing Done", "Flies Taken", "Pit Pushes", "Status Changes"};

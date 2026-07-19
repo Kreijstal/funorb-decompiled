@@ -27,15 +27,19 @@ final class pf implements qk {
         field_j = null;
         field_f = null;
         field_m = null;
+        if (!param0) {
+            field_j = (int[]) null;
+        }
     }
 
     public final void a(int param0, lh param1, byte param2, boolean param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        Object var11 = null;
+        java.applet.Applet var11 = null;
         sb var12 = null;
         lh stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
@@ -61,16 +65,16 @@ final class pf implements qk {
             L1: {
               if (!(param1 instanceof sb)) {
                 stackOut_2_0 = null;
-                stackIn_3_0 = (lh) (Object) stackOut_2_0;
+                stackIn_3_0 = (lh) ((Object) stackOut_2_0);
                 break L1;
               } else {
-                stackOut_1_0 = (lh) param1;
+                stackOut_1_0 = (lh) (param1);
                 stackIn_3_0 = stackOut_1_0;
                 break L1;
               }
             }
             L2: {
-              var12 = (sb) (Object) stackIn_3_0;
+              var12 = (sb) ((Object) stackIn_3_0);
               if (var12 != null) {
                 param3 = param3 & var12.field_K;
                 break L2;
@@ -80,7 +84,7 @@ final class pf implements qk {
             }
             L3: {
               var7 = 5592405;
-              pb.a(param0 - -param1.field_o, param1.field_z + param4, param1.field_x, param1.field_E, ((pf) this).field_l);
+              pb.a(param0 - -param1.field_o, param1.field_z + param4, param1.field_x, param1.field_E, this.field_l);
               if (param3) {
                 var7 = 16777215;
                 break L3;
@@ -89,15 +93,15 @@ final class pf implements qk {
               }
             }
             L4: {
-              var8 = ((pf) this).field_p + (param1.field_o + param0);
-              var9 = ((pf) this).field_k + param1.field_z + param4;
-              pb.e(var8, var9, ((pf) this).field_e, ((pf) this).field_h, 5592405);
-              pb.a(var8, var9, ((pf) this).field_e, ((pf) this).field_h, var7);
+              var8 = this.field_p + (param1.field_o + param0);
+              var9 = this.field_k + param1.field_z + param4;
+              pb.e(var8, var9, this.field_e, this.field_h, 5592405);
+              pb.a(var8, var9, this.field_e, this.field_h, var7);
               if (!var12.field_T) {
                 break L4;
               } else {
-                pb.d(var8, var9, ((pf) this).field_e + var8, var9 - -((pf) this).field_h, 1);
-                pb.d(var8 - -((pf) this).field_e, var9, var8, var9 + ((pf) this).field_h, 1);
+                pb.d(var8, var9, this.field_e + var8, var9 - -this.field_h, 1);
+                pb.d(var8 - -this.field_e, var9, var8, var9 + this.field_h, 1);
                 break L4;
               }
             }
@@ -105,14 +109,14 @@ final class pf implements qk {
               if (param2 == -30) {
                 break L5;
               } else {
-                var11 = null;
+                var11 = (java.applet.Applet) null;
                 pf.a((java.applet.Applet) null, -4);
                 break L5;
               }
             }
-            if (null != ((pf) this).field_c) {
-              var10 = ((pf) this).field_e + ((pf) this).field_p - -((pf) this).field_a;
-              int discarded$1 = ((pf) this).field_c.a(param1.field_y, var10 + (param1.field_o + param0), param4 - -param1.field_z - -((pf) this).field_i, param1.field_x - ((pf) this).field_a - var10, param1.field_E - (((pf) this).field_a << 1), ((pf) this).field_q, ((pf) this).field_g, ((pf) this).field_o, ((pf) this).field_d, 0);
+            if (null != this.field_c) {
+              var10 = this.field_e + this.field_p - -this.field_a;
+              discarded$1 = this.field_c.a(param1.field_y, var10 + (param1.field_o + param0), param4 - -param1.field_z - -this.field_i, param1.field_x - this.field_a - var10, param1.field_E - (this.field_a << 1472222209), this.field_q, this.field_g, this.field_o, this.field_d, 0);
               break L0;
             } else {
               return;
@@ -122,23 +126,23 @@ final class pf implements qk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var6;
+            stackOut_17_0 = (RuntimeException) (var6);
             stackOut_17_1 = new StringBuilder().append("pf.A(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -146,7 +150,7 @@ final class pf implements qk {
               break L6;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -203,23 +207,23 @@ final class pf implements qk {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_7_0 = (RuntimeException) var2_ref2;
+                stackOut_7_0 = (RuntimeException) (var2_ref2);
                 stackOut_7_1 = new StringBuilder().append("pf.B(");
                 stackIn_9_0 = stackOut_7_0;
                 stackIn_9_1 = stackOut_7_1;
                 stackIn_8_0 = stackOut_7_0;
                 stackIn_8_1 = stackOut_7_1;
                 if (param0 == null) {
-                  stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-                  stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+                  stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+                  stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
                   stackOut_9_2 = "null";
                   stackIn_10_0 = stackOut_9_0;
                   stackIn_10_1 = stackOut_9_1;
                   stackIn_10_2 = stackOut_9_2;
                   break L2;
                 } else {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "{...}";
                   stackIn_10_0 = stackOut_8_0;
                   stackIn_10_1 = stackOut_8_1;
@@ -227,7 +231,7 @@ final class pf implements qk {
                   break L2;
                 }
               }
-              throw ci.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
+              throw ci.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -278,23 +282,23 @@ final class pf implements qk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("pf.C(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -302,35 +306,31 @@ final class pf implements qk {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0 != 0;
     }
 
     pf(mi param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        ((pf) this).field_o = 1;
-        ((pf) this).field_d = 1;
+        this.field_o = 1;
+        this.field_d = 1;
         try {
-            ((pf) this).field_p = param5;
-            ((pf) this).field_h = param7;
-            ((pf) this).field_k = param6;
-            ((pf) this).field_g = param4;
-            ((pf) this).field_q = param3;
-            ((pf) this).field_i = param2;
-            ((pf) this).field_e = param8;
-            ((pf) this).field_l = param9;
-            ((pf) this).field_c = param0;
-            ((pf) this).field_a = param1;
+            this.field_p = param5;
+            this.field_h = param7;
+            this.field_k = param6;
+            this.field_g = param4;
+            this.field_q = param3;
+            this.field_i = param2;
+            this.field_e = param8;
+            this.field_l = param9;
+            this.field_c = param0;
+            this.field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "pf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "pf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new int[5];
         field_f = "Connection lost - attempting to reconnect";
         field_r = "<%1> was destroyed within <%0>'s core containment explosion";

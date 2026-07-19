@@ -127,6 +127,7 @@ final class aea extends k {
     }
 
     final int[][] a(boolean param0, int param1) {
+        int[][] discarded$0 = null;
         int[] var4 = null;
         int[] var5 = null;
         int[] var6 = null;
@@ -134,19 +135,19 @@ final class aea extends k {
         int[][] var14 = null;
         int var9 = BachelorFridge.field_y;
         if (param0) {
-            int[][] discarded$0 = ((aea) this).a(false, -63);
+            discarded$0 = this.a(false, -63);
         }
-        int[][] var13 = ((aea) this).field_h.a(param1, -858);
+        int[][] var13 = this.field_h.a(param1, -858);
         int[][] var11 = var13;
         int[][] var10 = var11;
         int[][] var3 = var10;
-        if (!(!((aea) this).field_h.field_b)) {
+        if (!(!this.field_h.field_b)) {
             var4 = var13[0];
             var5 = var13[1];
             var6 = var13[2];
             for (var7 = 0; var7 < hh.field_d; var7++) {
                 this.a(1, param1, var7);
-                var14 = ((aea) this).a((byte) -91, 0, kk.field_s);
+                var14 = this.a((byte) -91, 0, kk.field_s);
                 var4[var7] = var14[0][kb.field_g];
                 var5[var7] = var14[1][kb.field_g];
                 var6[var7] = var14[2][kb.field_g];
@@ -156,18 +157,19 @@ final class aea extends k {
     }
 
     final int[] a(int param0, int param1) {
+        int[][] discarded$0 = null;
         int var4 = 0;
         int[] var5 = null;
         int var6 = BachelorFridge.field_y;
         if (param1 != 0) {
-            int[][] discarded$0 = ((aea) this).a(false, 106);
+            discarded$0 = this.a(false, 106);
         }
-        int[] var7 = ((aea) this).field_j.a(param0, -1);
+        int[] var7 = this.field_j.a(param0, -1);
         int[] var3 = var7;
-        if (!(!((aea) this).field_j.field_m)) {
+        if (!(!this.field_j.field_m)) {
             for (var4 = 0; hh.field_d > var4; var4++) {
                 this.a(param1 ^ 1, param0, var4);
-                var5 = ((aea) this).a(0, kk.field_s, (byte) 118);
+                var5 = this.a(0, kk.field_s, (byte) 118);
                 var7[var4] = var5[kb.field_g];
             }
         }
@@ -175,6 +177,9 @@ final class aea extends k {
     }
 
     public static void d(int param0) {
+        if (param0 <= 87) {
+            return;
+        }
         field_k = null;
     }
 
@@ -184,7 +189,7 @@ final class aea extends k {
 
     final void a(byte param0, lu param1, int param2) {
         RuntimeException var4 = null;
-        Object var5 = null;
+        lu var5 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
@@ -218,7 +223,7 @@ final class aea extends k {
                   stackOut_2_0 = this;
                   stackIn_4_0 = stackOut_2_0;
                   stackIn_3_0 = stackOut_2_0;
-                  if (param1.b(param0 + 16712006) != 1) {
+                  if ((param1.b(param0 + 16712006) ^ -1) != -2) {
                     stackOut_4_0 = this;
                     stackOut_4_1 = 0;
                     stackIn_5_0 = stackOut_4_0;
@@ -232,7 +237,7 @@ final class aea extends k {
                     break L2;
                   }
                 }
-                ((aea) this).field_f = stackIn_5_1 != 0;
+                ((aea) (this)).field_f = stackIn_5_1 != 0;
                 break L1;
               } else {
                 break L1;
@@ -242,8 +247,8 @@ final class aea extends k {
               if (param0 == -71) {
                 break L3;
               } else {
-                var5 = null;
-                ((aea) this).a((byte) 63, (lu) null, 61);
+                var5 = (lu) null;
+                this.a((byte) 63, (lu) null, 61);
                 break L3;
               }
             }
@@ -253,23 +258,23 @@ final class aea extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var4;
+            stackOut_9_0 = (RuntimeException) (var4);
             stackOut_9_1 = new StringBuilder().append("aea.E(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -277,7 +282,7 @@ final class aea extends k {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param2 + ')');
         }
     }
 

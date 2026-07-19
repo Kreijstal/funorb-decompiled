@@ -11,15 +11,19 @@ final class vc {
     public static void a(int param0) {
         field_c = null;
         field_d = null;
-        field_b = null;
-        field_a = null;
+        if (param0 != -6058) {
+          field_c = (int[]) null;
+          field_b = null;
+          field_a = null;
+          return;
+        } else {
+          field_b = null;
+          field_a = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "vc.A(";
         field_b = "<%0> decreased by <%1>";
         field_a = "<col=FF0000>Attack -1</col>";

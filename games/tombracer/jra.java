@@ -14,58 +14,98 @@ final class jra extends loa {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        int stackOut_3_0 = 0;
+        int stackOut_11_0 = 0;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
             var5_int = 1;
             L1: while (true) {
-              if (-1 + param2.field_f <= var5_int) {
-                L2: {
-                  var5_int = 2;
-                  if (param1 >= 73) {
-                    break L2;
+              L2: {
+                L3: {
+                  if (-1 + param2.field_f <= var5_int) {
+                    break L3;
                   } else {
-                    jra.a(78);
-                    break L2;
+                    stackOut_3_0 = 1;
+                    stackIn_12_0 = stackOut_3_0;
+                    stackIn_4_0 = stackOut_3_0;
+                    if (var7 != 0) {
+                      break L2;
+                    } else {
+                      var6 = stackIn_4_0;
+                      L4: while (true) {
+                        L5: {
+                          L6: {
+                            if (-1 + param2.field_a <= var6) {
+                              break L6;
+                            } else {
+                              param2.a(var6, 0, 0, var5_int);
+                              var6 += 2;
+                              if (var7 != 0) {
+                                break L5;
+                              } else {
+                                if (var7 == 0) {
+                                  continue L4;
+                                } else {
+                                  break L6;
+                                }
+                              }
+                            }
+                          }
+                          var5_int++;
+                          break L5;
+                        }
+                        if (var7 == 0) {
+                          continue L1;
+                        } else {
+                          break L3;
+                        }
+                      }
+                    }
                   }
                 }
-                L3: while (true) {
-                  if (var5_int >= -2 + param2.field_a) {
-                    break L0;
-                  } else {
-                    var6 = 1 + ((jra) this).field_a.a(param2.field_f + -2, 0);
-                    param2.a(var5_int, 0, 0, var6);
-                    var5_int += 2;
-                    continue L3;
-                  }
+                var5_int = 2;
+                stackOut_11_0 = param1;
+                stackIn_12_0 = stackOut_11_0;
+                break L2;
+              }
+              L7: {
+                if (stackIn_12_0 >= 73) {
+                  break L7;
+                } else {
+                  jra.a(78);
+                  break L7;
                 }
-              } else {
-                var6 = 1;
-                L4: while (true) {
-                  if (-1 + param2.field_a <= var6) {
-                    var5_int++;
-                    var5_int++;
-                    continue L1;
+              }
+              L8: while (true) {
+                if (var5_int >= -2 + param2.field_a) {
+                  break L0;
+                } else {
+                  var6 = 1 + this.field_a.a(param2.field_f + -2, 0);
+                  param2.a(var5_int, 0, 0, var6);
+                  var5_int += 2;
+                  if (var7 == 0) {
+                    continue L8;
                   } else {
-                    param2.a(var6, 0, 0, var5_int);
-                    var6 += 2;
-                    continue L4;
+                    return;
                   }
                 }
               }
@@ -73,33 +113,33 @@ final class jra extends loa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L9: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var5;
-            stackOut_12_1 = new StringBuilder().append("jra.B(").append(param0).append(',').append(param1).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_20_0 = (RuntimeException) (var5);
+            stackOut_20_1 = new StringBuilder().append("jra.B(").append(param0).append(',').append(param1).append(',');
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L5;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L9;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L5;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L9;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param3 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param3 + ')');
         }
     }
 
@@ -114,10 +154,6 @@ final class jra extends loa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Names can only contain letters, numbers, spaces and underscores";
         field_c = new String[3];
     }

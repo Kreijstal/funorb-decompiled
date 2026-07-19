@@ -23,14 +23,10 @@ abstract class vv extends am {
     abstract int a(int param0);
 
     vv() {
-        ((vv) this).field_p = true;
+        this.field_p = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "vv.H(";
         field_s = "Suggest muting this player";
     }

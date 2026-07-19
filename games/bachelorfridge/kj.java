@@ -11,6 +11,9 @@ abstract class kj {
     abstract void a(int param0, boolean param1, int param2);
 
     public static void a(byte param0) {
+        if (param0 != -110) {
+            return;
+        }
         field_a = null;
     }
 
@@ -50,11 +53,11 @@ abstract class kj {
             break L0;
           }
         }
-        var2 = ((kj) this).field_e.field_D[((kj) this).field_d][((kj) this).field_c];
+        var2 = this.field_e.field_D[this.field_d][this.field_c];
         if (var2 != null) {
           L1: while (true) {
             if (null == var2.field_b) {
-              var2.field_b = (kj) this;
+              var2.field_b = (kj) (this);
               return;
             } else {
               var2 = var2.field_b;
@@ -62,7 +65,7 @@ abstract class kj {
             }
           }
         } else {
-          ((kj) this).field_e.field_D[((kj) this).field_d][((kj) this).field_c] = (kj) this;
+          this.field_e.field_D[this.field_d][this.field_c] = (kj) (this);
           return;
         }
     }
@@ -71,24 +74,20 @@ abstract class kj {
         if (param1 != 0) {
             return;
         }
-        ((kj) this).field_e.field_s.a(-1, param2, ((kj) this).field_d, param0, ((kj) this).field_c);
+        this.field_e.field_s.a(-1, param2, this.field_d, param0, this.field_c);
     }
 
     kj(gj param0, int param1, int param2) {
         try {
-            ((kj) this).field_e = param0;
-            ((kj) this).field_d = param1;
-            ((kj) this).field_c = param2;
+            this.field_e = param0;
+            this.field_d = param1;
+            this.field_c = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Waiting for graphics";
     }
 }

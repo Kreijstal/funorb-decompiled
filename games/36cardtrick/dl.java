@@ -13,7 +13,7 @@ final class dl extends qb {
             vj.a(param1.field_r, param1.field_l, param1.field_k);
             int var2_int = -40 % ((param0 - 27) / 52);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "dl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "dl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,16 +31,12 @@ final class dl extends qb {
     public static void a(int param0) {
         field_j = null;
         if (param0 != 8996) {
-            Object var2 = null;
+            kc var2 = (kc) null;
             dl.a(51, (kc) null);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = 0;
         field_j = "Go Back";
     }

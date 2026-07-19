@@ -3,7 +3,7 @@
  */
 final class na {
     final static Boolean a(int param0) {
-        int var1 = 0;
+        int var1 = 120 % ((param0 - -46) / 45);
         Boolean var2 = kc.field_b;
         kc.field_b = null;
         return var2;
@@ -14,10 +14,10 @@ final class na {
             return;
         }
         try {
-            bd.field_c.a(-8212, (ug) (Object) new hk(param1, (ug) (Object) param1));
-            qb.field_c.a((fh) (Object) param1);
+            bd.field_c.a(-8212, new hk(param1, param1));
+            qb.field_c.a(param1);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "na.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw la.a((Throwable) ((Object) runtimeException), "na.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

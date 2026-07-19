@@ -12,6 +12,14 @@ final class wa {
     private static int field_d;
 
     private final static void a(int[] param0, int param1, int param2) {
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
+        int fieldTemp$15 = 0;
         int var3 = 0;
         int[] var4_ref_int__ = null;
         int var4 = 0;
@@ -45,9 +53,9 @@ final class wa {
             }
           }
         }
-        param2 = param2;
+        param2 = param2 + param1;
         var4 = param2 - 2;
-        var8 = 0;
+        var8 = param1;
         var5 = var8;
         L3: while (true) {
           if (var8 >= param2) {
@@ -60,25 +68,33 @@ final class wa {
                 if (var7 >= var6) {
                   break L4;
                 } else {
+                  fieldTemp$8 = field_c;
                   field_c = field_c + 1;
-                  field_g[field_c] = param0[var8];
+                  field_g[fieldTemp$8] = param0[var8];
+                  fieldTemp$9 = field_c;
                   field_c = field_c + 1;
-                  field_g[field_c] = var7;
+                  field_g[fieldTemp$9] = var7;
+                  fieldTemp$10 = field_c;
                   field_c = field_c + 1;
-                  field_g[field_c] = param0[var4];
+                  field_g[fieldTemp$10] = param0[var4];
+                  fieldTemp$11 = field_c;
                   field_c = field_c + 1;
-                  field_g[field_c] = var6;
+                  field_g[fieldTemp$11] = var6;
                   break L4;
                 }
               } else {
+                fieldTemp$12 = field_c;
                 field_c = field_c + 1;
-                field_g[field_c] = param0[var4];
+                field_g[fieldTemp$12] = param0[var4];
+                fieldTemp$13 = field_c;
                 field_c = field_c + 1;
-                field_g[field_c] = var6;
+                field_g[fieldTemp$13] = var6;
+                fieldTemp$14 = field_c;
                 field_c = field_c + 1;
-                field_g[field_c] = param0[var8];
+                field_g[fieldTemp$14] = param0[var8];
+                fieldTemp$15 = field_c;
                 field_c = field_c + 1;
-                field_g[field_c] = var7;
+                field_g[fieldTemp$15] = var7;
                 break L4;
               }
             }
@@ -95,12 +111,12 @@ final class wa {
 
     private final static void a(int[] param0, int param1, int param2, int param3) {
         wa.a();
-        wa.a(param0, 0, param2);
+        wa.a(param0, param1, param2);
         wa.a(param3);
     }
 
     final static void b(int[] param0, int param1, int param2) {
-        wa.a(param0, 0, param0.length, 16711680, param2, (int[]) null, (int[]) null);
+        wa.a(param0, 0, param0.length, param1, param2, (int[]) null, (int[]) null);
     }
 
     private final static boolean d() {
@@ -241,13 +257,13 @@ final class wa {
     }
 
     private final static void c() {
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        int var2 = 0;
         if (field_c < 0) {
             field_b = 0;
             field_d = 0;
@@ -350,7 +366,7 @@ final class wa {
                     var5 = param2[var7] + param3[var7] + wb.field_i;
                 }
             }
-            wb.e(var4, var6, var5 - var4, 16711680, param1);
+            wb.e(var4, var6, var5 - var4, param0, param1);
         }
     }
 
@@ -378,7 +394,7 @@ final class wa {
             }
         }
         wa.a();
-        wa.a(param0, 0, param2);
-        wa.a(16711680, param4, param5, param6);
+        wa.a(param0, param1, param2);
+        wa.a(param3, param4, param5, param6);
     }
 }

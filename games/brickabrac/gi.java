@@ -9,32 +9,32 @@ final class gi extends ki {
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
         pb var6 = null;
-        if (!((gi) this).b((byte) -127)) {
+        if (!this.b((byte) -127)) {
           lb.g(param4, param2, 640, 480, kg.field_i[param3], 16777215);
           if (!param0) {
-            field_u = null;
+            field_u = (String) null;
             return;
           } else {
             return;
           }
         } else {
-          var6 = ge.a(((gi) this).field_m, param3, -20777);
-          if (var6.a((byte) -84, param3, ((gi) this).field_m)) {
+          var6 = ge.a(this.field_m, param3, -20777);
+          if (var6.a((byte) -84, param3, this.field_m)) {
             sa.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.field_p, param1, 640, 0, param4);
             if (param0) {
               return;
             } else {
-              field_u = null;
+              field_u = (String) null;
               return;
             }
           } else {
             lf.a(var6, 1, 0, fp.field_B, param3, 100);
-            var6.a(((gi) this).field_m, param3, (byte) 78);
+            var6.a(this.field_m, param3, (byte) 78);
             sa.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.field_p, param1, 640, 0, param4);
             if (param0) {
               return;
             } else {
-              field_u = null;
+              field_u = (String) null;
               return;
             }
           }
@@ -46,7 +46,7 @@ final class gi extends ki {
         if (-1 < param1) {
           lb.g(param2, param3, 153, 238, kg.field_i[param1], 16777215);
           var5 = 52 % ((param0 - -28) / 43);
-          if (!((gi) this).b((byte) -106)) {
+          if (!this.b((byte) -106)) {
             return;
           } else {
             ce.field_c.c(param2, param3);
@@ -55,7 +55,7 @@ final class gi extends ki {
         } else {
           lb.g(param2, param3, 153, 238, 16777215, 11184810);
           var5 = 52 % ((param0 - -28) / 43);
-          if (!((gi) this).b((byte) -106)) {
+          if (!this.b((byte) -106)) {
             return;
           } else {
             ce.field_c.c(param2, param3);
@@ -87,7 +87,7 @@ final class gi extends ki {
 
     final jp a(boolean param0, int param1) {
         if (!param0) {
-          ((gi) this).a((byte) 65, 25, -62, -115);
+          this.a((byte) 65, 25, -62, -115);
           return um.field_l[-1 + param1];
         } else {
           return um.field_l[-1 + param1];
@@ -101,7 +101,7 @@ final class gi extends ki {
 
     final jp[] a(int param0, boolean param1) {
         if (!param1) {
-            field_u = null;
+            field_u = (String) null;
             return pk.field_e[param0 - 1];
         }
         return pk.field_e[param0 - 1];
@@ -112,20 +112,23 @@ final class gi extends ki {
         field_t = null;
         field_r = null;
         field_s = null;
+        if (param0 != -417029247) {
+            gi.g(-5);
+        }
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
         pb var7 = null;
         pb var8 = null;
         if (param1 < -84) {
-          if (((gi) this).b((byte) -123)) {
-            var8 = kd.a(((gi) this).field_m, param3, (byte) -74);
-            if (var8.a((byte) -84, param3, ((gi) this).field_m)) {
+          if (this.b((byte) -123)) {
+            var8 = kd.a(this.field_m, param3, (byte) -74);
+            if (var8.a((byte) -84, param3, this.field_m)) {
               sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.field_p, param4, 306, -13, param2);
               return;
             } else {
               lf.a(var8, 2, -13, pp.field_b, param3, 102);
-              var8.a(((gi) this).field_m, param3, (byte) 78);
+              var8.a(this.field_m, param3, (byte) 78);
               sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.field_p, param4, 306, -13, param2);
               return;
             }
@@ -134,15 +137,15 @@ final class gi extends ki {
             return;
           }
         } else {
-          field_u = null;
-          if (((gi) this).b((byte) -123)) {
-            var7 = kd.a(((gi) this).field_m, param3, (byte) -74);
-            if (var7.a((byte) -84, param3, ((gi) this).field_m)) {
+          field_u = (String) null;
+          if (this.b((byte) -123)) {
+            var7 = kd.a(this.field_m, param3, (byte) -74);
+            if (var7.a((byte) -84, param3, this.field_m)) {
               sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.field_p, param4, 306, -13, param2);
               return;
             } else {
               lf.a(var7, 2, -13, pp.field_b, param3, 102);
-              var7.a(((gi) this).field_m, param3, (byte) 78);
+              var7.a(this.field_m, param3, (byte) 78);
               sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.field_p, param4, 306, -13, param2);
               return;
             }
@@ -160,7 +163,7 @@ final class gi extends ki {
             um.field_l = new jp[2];
             pk.field_e = new jp[2][];
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "gi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "gi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -209,7 +212,7 @@ final class gi extends ki {
             return false;
           }
         } else {
-          field_s = null;
+          field_s = (String) null;
           if (wn.field_b != null) {
             if (null != lj.field_q) {
               if (null != fp.field_B) {
@@ -250,17 +253,21 @@ final class gi extends ki {
     }
 
     final static void g(int param0) {
-        int var1 = co.a((byte) -53);
-        int var2 = ba.b(true);
-        vg.field_c.a(var1 - -(un.field_a << 1), var2 - -(vo.field_A << 1), nc.field_k + -un.field_a, false, mi.field_d + -vo.field_A);
+        int var1 = 0;
+        int var2 = 0;
+        var1 = co.a((byte) -53);
+        var2 = ba.b(true);
+        vg.field_c.a(var1 - -(un.field_a << 753437185), var2 - -(vo.field_A << -417029247), nc.field_k + -un.field_a, false, mi.field_d + -vo.field_A);
         jq.d(-16085);
+        if (param0 != 11184810) {
+          field_t = (String) null;
+          return;
+        } else {
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Discard";
         field_t = "Report <%0> for abuse";
         field_u = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";

@@ -10,10 +10,10 @@ abstract class fh extends ug {
     abstract void a(int param0);
 
     final void a(int[] param0, int param1, int param2) {
-        if (((fh) this).field_h) {
-            ((fh) this).b(param0, param1, param2);
+        if (this.field_h) {
+            this.b(param0, param1, param2);
         } else {
-            ((fh) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class fh extends ug {
     abstract int d();
 
     fh() {
-        ((fh) this).field_h = true;
+        this.field_h = true;
     }
 }

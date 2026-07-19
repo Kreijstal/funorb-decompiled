@@ -13,12 +13,12 @@ final class pc extends hs {
 
     final static void c(int param0) {
         lg.field_e = null;
-        int var1 = 1;
+        int var1 = 119 % ((param0 - -40) / 34);
     }
 
     pc(int param0, int param1, int param2, int param3, int param4) {
         super(param0, param1, param2, param3, param4);
-        ((pc) this).field_e = ((pc) this).field_a;
+        this.field_e = this.field_a;
     }
 
     public final l a(byte param0) throws jn {
@@ -247,19 +247,19 @@ final class pc extends hs {
         L0: {
           var12 = ShatteredPlansClient.field_F ? 1 : 0;
           var13 = super.a((byte) 119);
-          var3 = ((pc) this).field_c * ((pc) this).field_b / 2;
-          if (0 == ((pc) this).field_b * ((pc) this).field_c % 2) {
-            var3 = var3 - ((pc) this).field_c / 2;
+          var3 = this.field_c * this.field_b / 2;
+          if (0 == this.field_b * this.field_c % 2) {
+            var3 = var3 - this.field_c / 2;
             break L0;
           } else {
             break L0;
           }
         }
-        var4 = ((pc) this).a(var3, ((pc) this).field_c, ((pc) this).field_b, -120, var13.field_e.length);
+        var4 = this.a(var3, this.field_c, this.field_b, -120, var13.field_e.length);
         var4.field_L = 2;
         var5 = 0;
         L1: while (true) {
-          if (var5 >= 4) {
+          if (-5 >= (var5 ^ -1)) {
             L2: {
               var4.field_I = ks.field_c + " " + String.valueOf((char)(65 + qf.a((byte) 114, 26, var13.field_j))) + String.valueOf((char)(65 + qf.a((byte) 30, 26, var13.field_j))) + String.valueOf((char)(65 + qf.a((byte) 24, 26, var13.field_j))) + "-" + 5;
               var4.field_x = 30;
@@ -267,7 +267,7 @@ final class pc extends hs {
               var4.field_u = true;
               var6 = 68 % ((-67 - param0) / 44);
               var4.field_r = new jd[6];
-              if (var3 / ((pc) this).field_c % 2 != 0) {
+              if (var3 / this.field_c % 2 != 0) {
                 stackOut_8_0 = 0;
                 stackIn_9_0 = stackOut_8_0;
                 break L2;
@@ -283,9 +283,9 @@ final class pc extends hs {
               stackOut_9_1 = 0;
               stackOut_9_2 = null;
               stackOut_9_3 = null;
-              stackOut_9_4 = (ln) var4;
-              stackOut_9_5 = ((pc) this).field_f;
-              stackOut_9_6 = var3 - ((pc) this).field_c;
+              stackOut_9_4 = (ln) (var4);
+              stackOut_9_5 = this.field_f;
+              stackOut_9_6 = var3 - this.field_c;
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
               stackIn_11_2 = stackOut_9_2;
@@ -301,12 +301,12 @@ final class pc extends hs {
               stackIn_10_5 = stackOut_9_5;
               stackIn_10_6 = stackOut_9_6;
               if (var5 == 0) {
-                stackOut_11_0 = (jd[]) (Object) stackIn_11_0;
+                stackOut_11_0 = (jd[]) ((Object) stackIn_11_0);
                 stackOut_11_1 = stackIn_11_1;
                 stackOut_11_2 = null;
                 stackOut_11_3 = null;
-                stackOut_11_4 = (ln) (Object) stackIn_11_4;
-                stackOut_11_5 = (ln[]) (Object) stackIn_11_5;
+                stackOut_11_4 = (ln) ((Object) stackIn_11_4);
+                stackOut_11_5 = (ln[]) ((Object) stackIn_11_5);
                 stackOut_11_6 = stackIn_11_6;
                 stackOut_11_7 = 0;
                 stackIn_12_0 = stackOut_11_0;
@@ -319,12 +319,12 @@ final class pc extends hs {
                 stackIn_12_7 = stackOut_11_7;
                 break L3;
               } else {
-                stackOut_10_0 = (jd[]) (Object) stackIn_10_0;
+                stackOut_10_0 = (jd[]) ((Object) stackIn_10_0);
                 stackOut_10_1 = stackIn_10_1;
                 stackOut_10_2 = null;
                 stackOut_10_3 = null;
-                stackOut_10_4 = (ln) (Object) stackIn_10_4;
-                stackOut_10_5 = (ln[]) (Object) stackIn_10_5;
+                stackOut_10_4 = (ln) ((Object) stackIn_10_4);
+                stackOut_10_5 = (ln[]) ((Object) stackIn_10_5);
                 stackOut_10_6 = stackIn_10_6;
                 stackOut_10_7 = 1;
                 stackIn_12_0 = stackOut_10_0;
@@ -344,10 +344,10 @@ final class pc extends hs {
               stackOut_12_1 = 1;
               stackOut_12_2 = null;
               stackOut_12_3 = null;
-              stackOut_12_4 = (ln) var4;
-              stackOut_12_5 = ((pc) this).field_f;
+              stackOut_12_4 = (ln) (var4);
+              stackOut_12_5 = this.field_f;
               stackOut_12_6 = var3;
-              stackOut_12_7 = ((pc) this).field_c;
+              stackOut_12_7 = this.field_c;
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
               stackIn_14_2 = stackOut_12_2;
@@ -365,12 +365,12 @@ final class pc extends hs {
               stackIn_13_6 = stackOut_12_6;
               stackIn_13_7 = stackOut_12_7;
               if (var5 != 0) {
-                stackOut_14_0 = (jd[]) (Object) stackIn_14_0;
+                stackOut_14_0 = (jd[]) ((Object) stackIn_14_0);
                 stackOut_14_1 = stackIn_14_1;
                 stackOut_14_2 = null;
                 stackOut_14_3 = null;
-                stackOut_14_4 = (ln) (Object) stackIn_14_4;
-                stackOut_14_5 = (ln[]) (Object) stackIn_14_5;
+                stackOut_14_4 = (ln) ((Object) stackIn_14_4);
+                stackOut_14_5 = (ln[]) ((Object) stackIn_14_5);
                 stackOut_14_6 = stackIn_14_6;
                 stackOut_14_7 = stackIn_14_7;
                 stackOut_14_8 = 0;
@@ -385,12 +385,12 @@ final class pc extends hs {
                 stackIn_15_8 = stackOut_14_8;
                 break L4;
               } else {
-                stackOut_13_0 = (jd[]) (Object) stackIn_13_0;
+                stackOut_13_0 = (jd[]) ((Object) stackIn_13_0);
                 stackOut_13_1 = stackIn_13_1;
                 stackOut_13_2 = null;
                 stackOut_13_3 = null;
-                stackOut_13_4 = (ln) (Object) stackIn_13_4;
-                stackOut_13_5 = (ln[]) (Object) stackIn_13_5;
+                stackOut_13_4 = (ln) ((Object) stackIn_13_4);
+                stackOut_13_5 = (ln[]) ((Object) stackIn_13_5);
                 stackOut_13_6 = stackIn_13_6;
                 stackOut_13_7 = stackIn_13_7;
                 stackOut_13_8 = 1;
@@ -408,14 +408,14 @@ final class pc extends hs {
             }
             L5: {
               stackIn_15_0[stackIn_15_1] = new jd(stackIn_15_4, stackIn_15_5[stackIn_15_6 - (stackIn_15_7 - stackIn_15_8)], (ln) null, 100 + var4.field_A, (int)((double)var4.field_S - 0.25 * (200.0 * rh.field_d)), 0);
-              var4.field_r[2] = new jd(var4, ((pc) this).field_f[var3 - -1], (ln) null, 100 + var4.field_A, (int)((double)var4.field_S + 0.25 * (rh.field_d * 200.0)), 0);
+              var4.field_r[2] = new jd(var4, this.field_f[var3 - -1], (ln) null, 100 + var4.field_A, (int)((double)var4.field_S + 0.25 * (rh.field_d * 200.0)), 0);
               stackOut_15_0 = var4.field_r;
               stackOut_15_1 = 3;
               stackOut_15_2 = null;
               stackOut_15_3 = null;
-              stackOut_15_4 = (ln) var4;
-              stackOut_15_5 = ((pc) this).field_f;
-              stackOut_15_6 = -((pc) this).field_c;
+              stackOut_15_4 = (ln) (var4);
+              stackOut_15_5 = this.field_f;
+              stackOut_15_6 = -this.field_c;
               stackOut_15_7 = var3;
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -434,12 +434,12 @@ final class pc extends hs {
               stackIn_16_6 = stackOut_15_6;
               stackIn_16_7 = stackOut_15_7;
               if (var5 == 0) {
-                stackOut_17_0 = (jd[]) (Object) stackIn_17_0;
+                stackOut_17_0 = (jd[]) ((Object) stackIn_17_0);
                 stackOut_17_1 = stackIn_17_1;
                 stackOut_17_2 = null;
                 stackOut_17_3 = null;
-                stackOut_17_4 = (ln) (Object) stackIn_17_4;
-                stackOut_17_5 = (ln[]) (Object) stackIn_17_5;
+                stackOut_17_4 = (ln) ((Object) stackIn_17_4);
+                stackOut_17_5 = (ln[]) ((Object) stackIn_17_5);
                 stackOut_17_6 = stackIn_17_6;
                 stackOut_17_7 = stackIn_17_7;
                 stackOut_17_8 = 1;
@@ -454,12 +454,12 @@ final class pc extends hs {
                 stackIn_18_8 = stackOut_17_8;
                 break L5;
               } else {
-                stackOut_16_0 = (jd[]) (Object) stackIn_16_0;
+                stackOut_16_0 = (jd[]) ((Object) stackIn_16_0);
                 stackOut_16_1 = stackIn_16_1;
                 stackOut_16_2 = null;
                 stackOut_16_3 = null;
-                stackOut_16_4 = (ln) (Object) stackIn_16_4;
-                stackOut_16_5 = (ln[]) (Object) stackIn_16_5;
+                stackOut_16_4 = (ln) ((Object) stackIn_16_4);
+                stackOut_16_5 = (ln[]) ((Object) stackIn_16_5);
                 stackOut_16_6 = stackIn_16_6;
                 stackOut_16_7 = stackIn_16_7;
                 stackOut_16_8 = 0;
@@ -481,10 +481,10 @@ final class pc extends hs {
               stackOut_18_1 = 4;
               stackOut_18_2 = null;
               stackOut_18_3 = null;
-              stackOut_18_4 = (ln) var4;
-              stackOut_18_5 = ((pc) this).field_f;
+              stackOut_18_4 = (ln) (var4);
+              stackOut_18_5 = this.field_f;
               stackOut_18_6 = var3;
-              stackOut_18_7 = ((pc) this).field_c;
+              stackOut_18_7 = this.field_c;
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
               stackIn_20_2 = stackOut_18_2;
@@ -502,12 +502,12 @@ final class pc extends hs {
               stackIn_19_6 = stackOut_18_6;
               stackIn_19_7 = stackOut_18_7;
               if (var5 == 0) {
-                stackOut_20_0 = (jd[]) (Object) stackIn_20_0;
+                stackOut_20_0 = (jd[]) ((Object) stackIn_20_0);
                 stackOut_20_1 = stackIn_20_1;
                 stackOut_20_2 = null;
                 stackOut_20_3 = null;
-                stackOut_20_4 = (ln) (Object) stackIn_20_4;
-                stackOut_20_5 = (ln[]) (Object) stackIn_20_5;
+                stackOut_20_4 = (ln) ((Object) stackIn_20_4);
+                stackOut_20_5 = (ln[]) ((Object) stackIn_20_5);
                 stackOut_20_6 = stackIn_20_6;
                 stackOut_20_7 = stackIn_20_7;
                 stackOut_20_8 = 0;
@@ -522,12 +522,12 @@ final class pc extends hs {
                 stackIn_21_8 = stackOut_20_8;
                 break L6;
               } else {
-                stackOut_19_0 = (jd[]) (Object) stackIn_19_0;
+                stackOut_19_0 = (jd[]) ((Object) stackIn_19_0);
                 stackOut_19_1 = stackIn_19_1;
                 stackOut_19_2 = null;
                 stackOut_19_3 = null;
-                stackOut_19_4 = (ln) (Object) stackIn_19_4;
-                stackOut_19_5 = (ln[]) (Object) stackIn_19_5;
+                stackOut_19_4 = (ln) ((Object) stackIn_19_4);
+                stackOut_19_5 = (ln[]) ((Object) stackIn_19_5);
                 stackOut_19_6 = stackIn_19_6;
                 stackOut_19_7 = stackIn_19_7;
                 stackOut_19_8 = 1;
@@ -544,13 +544,13 @@ final class pc extends hs {
               }
             }
             stackIn_21_0[stackIn_21_1] = new jd(stackIn_21_4, stackIn_21_5[stackIn_21_6 - (stackIn_21_7 + stackIn_21_8)], (ln) null, -100 + var4.field_A, (int)(0.25 * (200.0 * rh.field_d) + (double)var4.field_S), 0);
-            var4.field_r[5] = new jd(var4, ((pc) this).field_f[-1 + var3], (ln) null, -100 + var4.field_A, (int)((double)var4.field_S - 0.25 * (200.0 * rh.field_d)), 0);
+            var4.field_r[5] = new jd(var4, this.field_f[-1 + var3], (ln) null, -100 + var4.field_A, (int)((double)var4.field_S - 0.25 * (200.0 * rh.field_d)), 0);
             var7_int = 0;
             L7: while (true) {
-              if (var7_int >= 6) {
+              if (-7 >= (var7_int ^ -1)) {
                 var4.field_D = new ln[]{};
                 var7 = new ln[var13.field_e.length - -1];
-                ps.a((Object[]) (Object) var13.field_e, 0, (Object[]) (Object) var7, 0, var13.field_e.length);
+                ps.a(var13.field_e, 0, var7, 0, var13.field_e.length);
                 var7[var13.field_e.length] = var4;
                 var13.field_e = var7;
                 var13.a(26253);
@@ -568,17 +568,17 @@ final class pc extends hs {
                         L9: while (true) {
                           if (4 <= var11) {
                             L10: {
-                              stackOut_33_0 = (ln) var10;
+                              stackOut_33_0 = (ln) (var10);
                               stackIn_35_0 = stackOut_33_0;
                               stackIn_34_0 = stackOut_33_0;
                               if (var10.field_p % 2 != 0) {
-                                stackOut_35_0 = (ln) (Object) stackIn_35_0;
+                                stackOut_35_0 = (ln) ((Object) stackIn_35_0);
                                 stackOut_35_1 = 7;
                                 stackIn_36_0 = stackOut_35_0;
                                 stackIn_36_1 = stackOut_35_1;
                                 break L10;
                               } else {
-                                stackOut_34_0 = (ln) (Object) stackIn_34_0;
+                                stackOut_34_0 = (ln) ((Object) stackIn_34_0);
                                 stackOut_34_1 = 6;
                                 stackIn_36_0 = stackOut_34_0;
                                 stackIn_36_1 = stackOut_34_1;
@@ -621,12 +621,13 @@ final class pc extends hs {
     }
 
     final static int a(boolean param0, CharSequence param1) {
+        int discarded$2 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        Object var6 = null;
+        CharSequence var6 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -652,8 +653,8 @@ final class pc extends hs {
               if (!param0) {
                 break L1;
               } else {
-                var6 = null;
-                int discarded$2 = pc.a(false, (CharSequence) null);
+                var6 = (CharSequence) null;
+                discarded$2 = pc.a(false, (CharSequence) null);
                 break L1;
               }
             }
@@ -666,7 +667,7 @@ final class pc extends hs {
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                var3 = q.a((byte) -123, param1.charAt(var4)) + (var3 << 5) - var3;
+                var3 = q.a((byte) -123, param1.charAt(var4)) + (var3 << -2091368667) - var3;
                 var4++;
                 continue L2;
               }
@@ -676,23 +677,23 @@ final class pc extends hs {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_0 = (RuntimeException) (var2);
             stackOut_8_1 = new StringBuilder().append("pc.B(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -700,12 +701,17 @@ final class pc extends hs {
               break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
 
     final static String a(boolean param0) {
+        int discarded$0 = 0;
+        if (param0) {
+            CharSequence var2 = (CharSequence) null;
+            discarded$0 = pc.a(false, (CharSequence) null);
+        }
         return sa.field_a.e(-1);
     }
 
@@ -735,22 +741,22 @@ final class pc extends hs {
         try {
           L0: {
             L1: {
-              ((pc) this).field_f = new ln[((pc) this).field_c * ((pc) this).field_b];
-              var3_int = ((pc) this).field_f.length / 2;
-              if (((pc) this).field_c * ((pc) this).field_b % 2 != 0) {
+              this.field_f = new ln[this.field_c * this.field_b];
+              var3_int = this.field_f.length / 2;
+              if (-1 != (this.field_c * this.field_b % 2 ^ -1)) {
                 break L1;
               } else {
-                var3_int = var3_int - ((pc) this).field_c / 2;
+                var3_int = var3_int - this.field_c / 2;
                 break L1;
               }
             }
             L2: {
-              ((pc) this).field_f[var3_int] = li.field_b;
-              ((pc) this).field_f[var3_int - 1] = li.field_b;
-              ((pc) this).field_f[1 + var3_int] = li.field_b;
-              ((pc) this).field_f[((pc) this).field_c + var3_int] = li.field_b;
-              ((pc) this).field_f[var3_int - ((pc) this).field_c] = li.field_b;
-              if (var3_int / ((pc) this).field_c % 2 != 0) {
+              this.field_f[var3_int] = li.field_b;
+              this.field_f[var3_int - 1] = li.field_b;
+              this.field_f[1 + var3_int] = li.field_b;
+              this.field_f[this.field_c + var3_int] = li.field_b;
+              this.field_f[var3_int - this.field_c] = li.field_b;
+              if (var3_int / this.field_c % 2 != 0) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
@@ -763,12 +769,12 @@ final class pc extends hs {
             L3: {
               var4 = stackIn_5_0;
               if (var4 != 0) {
-                ((pc) this).field_f[-1 + (-((pc) this).field_c + var3_int)] = li.field_b;
-                ((pc) this).field_f[-1 + (((pc) this).field_c + var3_int)] = li.field_b;
+                this.field_f[-1 + (-this.field_c + var3_int)] = li.field_b;
+                this.field_f[-1 + (this.field_c + var3_int)] = li.field_b;
                 break L3;
               } else {
-                ((pc) this).field_f[1 + (-((pc) this).field_c + var3_int)] = li.field_b;
-                ((pc) this).field_f[var3_int + ((pc) this).field_c - -1] = li.field_b;
+                this.field_f[1 + (-this.field_c + var3_int)] = li.field_b;
+                this.field_f[var3_int + this.field_c - -1] = li.field_b;
                 break L3;
               }
             }
@@ -779,23 +785,23 @@ final class pc extends hs {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_0 = (RuntimeException) (var3);
             stackOut_10_1 = new StringBuilder().append("pc.J(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -803,22 +809,21 @@ final class pc extends hs {
               break L4;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 
     public static void d(int param0) {
         field_r = null;
+        if (param0 <= 57) {
+            field_r = (String) null;
+        }
         field_n = null;
         field_o = null;
         field_p = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Elapsed time";
         field_p = "Type your age in years";
         field_m = 480;

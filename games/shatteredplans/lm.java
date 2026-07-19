@@ -14,13 +14,26 @@ final class lm {
         ms.field_e[46] = 72;
         ms.field_e[47] = 73;
         ms.field_e[59] = 57;
-        ms.field_e[91] = 42;
-        ms.field_e[92] = 74;
-        ms.field_e[93] = 43;
-        ms.field_e[45] = 26;
-        ms.field_e[222] = 58;
-        ms.field_e[192] = 28;
-        ms.field_e[520] = 59;
+        if (param0 <= 85) {
+          lm.a(false);
+          ms.field_e[91] = 42;
+          ms.field_e[92] = 74;
+          ms.field_e[93] = 43;
+          ms.field_e[45] = 26;
+          ms.field_e[222] = 58;
+          ms.field_e[192] = 28;
+          ms.field_e[520] = 59;
+          return;
+        } else {
+          ms.field_e[91] = 42;
+          ms.field_e[92] = 74;
+          ms.field_e[93] = 43;
+          ms.field_e[45] = 26;
+          ms.field_e[222] = 58;
+          ms.field_e[192] = 28;
+          ms.field_e[520] = 59;
+          return;
+        }
     }
 
     public static void a(boolean param0) {
@@ -35,10 +48,6 @@ final class lm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Game Type: Conquest";
         field_e = new int[]{2, 21, 22, 7, 6, 14};
         field_d = new u();

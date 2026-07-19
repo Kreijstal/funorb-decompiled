@@ -48,10 +48,10 @@ final class umb extends ksa implements ntb {
         try {
           L0: {
             L1: {
-              var5 = (umb) (Object) param0;
+              var5 = (umb) ((Object) param0);
               var4 = 0;
-              if (var5.field_f != ((umb) this).field_f) {
-                iva.a(-6940, "int servertick has changed. before=" + var5.field_f + ", now=" + ((umb) this).field_f);
+              if (var5.field_f != this.field_f) {
+                iva.a(-6940, "int servertick has changed. before=" + var5.field_f + ", now=" + this.field_f);
                 var4 = 1;
                 break L1;
               } else {
@@ -59,16 +59,16 @@ final class umb extends ksa implements ntb {
               }
             }
             L2: {
-              if (var5.field_g == ((umb) this).field_g) {
+              if (var5.field_g == this.field_g) {
                 break L2;
               } else {
-                iva.a(-6940, "int statecrc has changed. before=" + var5.field_g + ", now=" + ((umb) this).field_g);
+                iva.a(-6940, "int statecrc has changed. before=" + var5.field_g + ", now=" + this.field_g);
                 var4 = 1;
                 break L2;
               }
             }
             L3: {
-              stackOut_5_0 = ((umb) this).field_e;
+              stackOut_5_0 = this.field_e;
               stackIn_7_0 = stackOut_5_0;
               stackIn_6_0 = stackOut_5_0;
               if (var5.field_e) {
@@ -98,7 +98,7 @@ final class umb extends ksa implements ntb {
               if (param1 <= -19) {
                 break L5;
               } else {
-                ((umb) this).field_e = true;
+                this.field_e = true;
                 break L5;
               }
             }
@@ -113,23 +113,23 @@ final class umb extends ksa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var3;
+            stackOut_17_0 = (RuntimeException) (var3);
             stackOut_17_1 = new StringBuilder().append("umb.F(");
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -137,20 +137,21 @@ final class umb extends ksa implements ntb {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ')');
         }
     }
 
     public final void b(faa param0, int param1) {
+        boolean discarded$0 = false;
         try {
-            param0.a(-632, ((umb) this).field_f, 32);
-            param0.a(-632, ((umb) this).field_g, 32);
+            param0.a(-632, this.field_f, 32);
+            param0.a(-632, this.field_g, 32);
             if (param1 > -109) {
-                field_d = null;
+                field_d = (llb) null;
             }
-            boolean discarded$0 = vq.a(param0, 43, ((umb) this).field_e);
+            discarded$0 = vq.a(param0, 43, this.field_e);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "umb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "umb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -191,18 +192,18 @@ final class umb extends ksa implements ntb {
             L1: {
               L2: {
                 var4 = -52 / ((22 - param0) / 59);
-                var3 = (umb) (Object) param1;
-                if (var3.field_f != ((umb) this).field_f) {
+                var3 = (umb) ((Object) param1);
+                if (var3.field_f != this.field_f) {
                   break L2;
                 } else {
-                  if (var3.field_g != ((umb) this).field_g) {
+                  if (var3.field_g != this.field_g) {
                     break L2;
                   } else {
                     L3: {
                       stackOut_2_0 = var3.field_e;
                       stackIn_4_0 = stackOut_2_0;
                       stackIn_3_0 = stackOut_2_0;
-                      if (((umb) this).field_e) {
+                      if (this.field_e) {
                         stackOut_4_0 = stackIn_4_0;
                         stackOut_4_1 = 0;
                         stackIn_5_0 = stackOut_4_0;
@@ -236,23 +237,23 @@ final class umb extends ksa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3_ref;
+            stackOut_9_0 = (RuntimeException) (var3_ref);
             stackOut_9_1 = new StringBuilder().append("umb.C(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -260,29 +261,29 @@ final class umb extends ksa implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
         return stackIn_8_0 != 0;
     }
 
     public final void b(byte param0, tv param1) {
-        umb var4 = (umb) (Object) param1;
+        umb var4 = (umb) ((Object) param1);
         umb var3 = var4;
-        var4.field_f = ((umb) this).field_f;
+        var4.field_f = this.field_f;
         if (param0 < 54) {
             return;
         }
         try {
-            var4.field_g = ((umb) this).field_g;
-            var4.field_e = ((umb) this).field_e;
+            var4.field_g = this.field_g;
+            var4.field_e = this.field_e;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "umb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "umb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void a(faa param0, boolean param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        tv var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -302,14 +303,14 @@ final class umb extends ksa implements ntb {
         try {
           L0: {
             L1: {
-              ((umb) this).field_f = param0.i(0, 32);
-              ((umb) this).field_g = param0.i(0, 32);
-              ((umb) this).field_e = kv.a(param1, param0);
+              this.field_f = param0.i(0, 32);
+              this.field_g = param0.i(0, 32);
+              this.field_e = kv.a(param1, param0);
               if (!param1) {
                 break L1;
               } else {
-                var4 = null;
-                ((umb) this).a((tv) null, 89);
+                var4 = (tv) null;
+                this.a((tv) null, 89);
                 break L1;
               }
             }
@@ -319,23 +320,23 @@ final class umb extends ksa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("umb.H(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -343,7 +344,7 @@ final class umb extends ksa implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

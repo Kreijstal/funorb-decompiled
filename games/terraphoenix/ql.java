@@ -3,9 +3,6 @@
  */
 import java.io.*;
 import java.util.*;
-import java.net.Socket;
-import java.net.ProxySelector;
-import java.net.URI;
 
 final class ql extends mj {
     static int field_i;
@@ -26,270 +23,154 @@ final class ql extends mj {
             int var6 = 0;
             int var7 = 0;
             int stackIn_4_0 = 0;
-            int stackIn_13_0 = 0;
-            int stackIn_20_0 = 0;
-            RuntimeException stackIn_22_0 = null;
-            StringBuilder stackIn_22_1 = null;
+            int stackIn_7_0 = 0;
+            int stackIn_14_0 = 0;
+            int stackIn_21_0 = 0;
             RuntimeException stackIn_23_0 = null;
             StringBuilder stackIn_23_1 = null;
             RuntimeException stackIn_24_0 = null;
             StringBuilder stackIn_24_1 = null;
-            String stackIn_24_2 = null;
+            RuntimeException stackIn_25_0 = null;
+            StringBuilder stackIn_25_1 = null;
+            String stackIn_25_2 = null;
+            int decompiledRegionSelector0 = 0;
+            int decompiledRegionSelector1 = 0;
+            Throwable decompiledCaughtException = null;
             int stackOut_3_0 = 0;
-            int stackOut_12_0 = 0;
-            int stackOut_18_0 = 0;
+            int stackOut_13_0 = 0;
+            int stackOut_6_0 = 0;
+            int stackOut_20_0 = 0;
             int stackOut_19_0 = 0;
-            RuntimeException stackOut_21_0 = null;
-            StringBuilder stackOut_21_1 = null;
             RuntimeException stackOut_22_0 = null;
             StringBuilder stackOut_22_1 = null;
-            String stackOut_22_2 = null;
+            RuntimeException stackOut_24_0 = null;
+            StringBuilder stackOut_24_1 = null;
+            String stackOut_24_2 = null;
             RuntimeException stackOut_23_0 = null;
             StringBuilder stackOut_23_1 = null;
             String stackOut_23_2 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var7 = Terraphoenix.field_V;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            if (bl.field_e) {
-                                statePc = 3;
-                            } else {
-                                statePc = 2;
+            var7 = Terraphoenix.field_V;
+            try {
+              L0: {
+                if (bl.field_e) {
+                  stackOut_3_0 = 1;
+                  stackIn_4_0 = stackOut_3_0;
+                  decompiledRegionSelector1 = 0;
+                  break L0;
+                } else {
+                  try {
+                    L1: {
+                      var2 = "tuhstatbut";
+                      if (param1 == -15) {
+                        var3 = (String) (cd.a((byte) -128, "getcookies", param0));
+                        var4 = nc.a(14352, var3, ';');
+                        var5 = 0;
+                        L2: while (true) {
+                          if (var4.length <= var5) {
+                            decompiledRegionSelector0 = 1;
+                            break L1;
+                          } else {
+                            L3: {
+                              var6 = var4[var5].indexOf('=');
+                              if (-1 < (var6 ^ -1)) {
+                                break L3;
+                              } else {
+                                if (var4[var5].substring(0, var6).trim().equals(var2)) {
+                                  stackOut_13_0 = 1;
+                                  stackIn_14_0 = stackOut_13_0;
+                                  decompiledRegionSelector0 = 2;
+                                  break L1;
+                                } else {
+                                  break L3;
+                                }
+                              }
                             }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            stackOut_3_0 = 1;
-                            stackIn_4_0 = stackOut_3_0;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        return stackIn_4_0 != 0;
-                    }
-                    case 5: {
-                        try {
-                            var2 = "tuhstatbut";
-                            statePc = 7;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            var3 = (String) cd.a((byte) -128, "getcookies", param0);
-                            var4 = nc.a(14352, var3, ';');
-                            var5 = 0;
-                            statePc = 8;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            if (var4.length <= var5) {
-                                statePc = 17;
-                            } else {
-                                statePc = 9;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            var6 = var4[var5].indexOf('=');
-                            if (var6 < 0) {
-                                statePc = 14;
-                            } else {
-                                statePc = 10;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        try {
-                            if (var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
-                                statePc = 12;
-                            } else {
-                                statePc = 11;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        try {
-                            statePc = 14;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        try {
-                            stackOut_12_0 = 1;
-                            stackIn_13_0 = stackOut_12_0;
-                            statePc = 13;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_12) {
-                            caughtException = stateCaught_12;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        return stackIn_13_0 != 0;
-                    }
-                    case 14: {
-                        try {
                             var5++;
-                            statePc = 8;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_14) {
-                            caughtException = stateCaught_14;
-                            statePc = 16;
-                            continue stateLoop;
+                            continue L2;
+                          }
                         }
+                      } else {
+                        stackOut_6_0 = 1;
+                        stackIn_7_0 = stackOut_6_0;
+                        decompiledRegionSelector0 = 0;
+                        break L1;
+                      }
                     }
-                    case 16: {
-                        try {
-                            var2_ref = caughtException;
-                            statePc = 17;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_16) {
-                            caughtException = stateCaught_16;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
+                  } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L4: {
+                      var2_ref = decompiledCaughtException;
+                      decompiledRegionSelector0 = 1;
+                      break L4;
                     }
-                    case 17: {
-                        try {
-                            if (null == param0.getParameter("tuhstatbut")) {
-                                statePc = 19;
-                            } else {
-                                statePc = 18;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_17) {
-                            caughtException = stateCaught_17;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 18: {
-                        try {
-                            stackOut_18_0 = 1;
-                            stackIn_20_0 = stackOut_18_0;
-                            statePc = 20;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_18) {
-                            caughtException = stateCaught_18;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 19: {
-                        try {
-                            stackOut_19_0 = 0;
-                            stackIn_20_0 = stackOut_19_0;
-                            statePc = 20;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_19) {
-                            caughtException = stateCaught_19;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 20: {
-                        return stackIn_20_0 != 0;
-                    }
-                    case 21: {
-                        var2_ref2 = (RuntimeException) (Object) caughtException;
-                        stackOut_21_0 = (RuntimeException) var2_ref2;
-                        stackOut_21_1 = new StringBuilder().append("ql.H(");
-                        stackIn_23_0 = stackOut_21_0;
-                        stackIn_23_1 = stackOut_21_1;
-                        stackIn_22_0 = stackOut_21_0;
-                        stackIn_22_1 = stackOut_21_1;
-                        if (param0 == null) {
-                            statePc = 23;
+                  }
+                  if (decompiledRegionSelector0 == 0) {
+                    decompiledRegionSelector1 = 2;
+                    break L0;
+                  } else {
+                    if (decompiledRegionSelector0 == 1) {
+                      L5: {
+                        if (null == param0.getParameter("tuhstatbut")) {
+                          stackOut_20_0 = 0;
+                          stackIn_21_0 = stackOut_20_0;
+                          break L5;
                         } else {
-                            statePc = 22;
+                          stackOut_19_0 = 1;
+                          stackIn_21_0 = stackOut_19_0;
+                          break L5;
                         }
-                        continue stateLoop;
+                      }
+                      decompiledRegionSelector1 = 1;
+                      break L0;
+                    } else {
+                      decompiledRegionSelector1 = 3;
+                      break L0;
                     }
-                    case 22: {
-                        stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-                        stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-                        stackOut_22_2 = "{...}";
-                        stackIn_24_0 = stackOut_22_0;
-                        stackIn_24_1 = stackOut_22_1;
-                        stackIn_24_2 = stackOut_22_2;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                    case 23: {
-                        stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-                        stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-                        stackOut_23_2 = "null";
-                        stackIn_24_0 = stackOut_23_0;
-                        stackIn_24_1 = stackOut_23_1;
-                        stackIn_24_2 = stackOut_23_2;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                    case 24: {
-                        throw qk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + -15 + ')');
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
                 }
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L6: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_22_0 = (RuntimeException) (var2_ref2);
+                stackOut_22_1 = new StringBuilder().append("ql.H(");
+                stackIn_24_0 = stackOut_22_0;
+                stackIn_24_1 = stackOut_22_1;
+                stackIn_23_0 = stackOut_22_0;
+                stackIn_23_1 = stackOut_22_1;
+                if (param0 == null) {
+                  stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+                  stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
+                  stackOut_24_2 = "null";
+                  stackIn_25_0 = stackOut_24_0;
+                  stackIn_25_1 = stackOut_24_1;
+                  stackIn_25_2 = stackOut_24_2;
+                  break L6;
+                } else {
+                  stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+                  stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
+                  stackOut_23_2 = "{...}";
+                  stackIn_25_0 = stackOut_23_0;
+                  stackIn_25_1 = stackOut_23_1;
+                  stackIn_25_2 = stackOut_23_2;
+                  break L6;
+                }
+              }
+              throw qk.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
+            }
+            if (decompiledRegionSelector1 == 0) {
+              return stackIn_4_0 != 0;
+            } else {
+              if (decompiledRegionSelector1 == 1) {
+                return stackIn_21_0 != 0;
+              } else {
+                if (decompiledRegionSelector1 == 2) {
+                  return stackIn_7_0 != 0;
+                } else {
+                  return stackIn_14_0 != 0;
+                }
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -300,7 +181,7 @@ final class ql extends mj {
 
     public static void b(int param0) {
         if (param0 != -5) {
-            Object var2 = null;
+            uc var2 = (uc) null;
             ql.a(67, (uc) null);
         }
         field_h = null;
@@ -310,6 +191,7 @@ final class ql extends mj {
 
     final static void a(int param0, uc param1) {
         try {
+            int discarded$1 = 0;
             RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
@@ -346,22 +228,23 @@ final class ql extends mj {
             java.lang.reflect.Field var26 = null;
             java.lang.reflect.Method var27 = null;
             java.lang.reflect.Method var28 = null;
-            RuntimeException stackIn_64_0 = null;
-            StringBuilder stackIn_64_1 = null;
             RuntimeException stackIn_65_0 = null;
             StringBuilder stackIn_65_1 = null;
             RuntimeException stackIn_66_0 = null;
             StringBuilder stackIn_66_1 = null;
-            String stackIn_66_2 = null;
+            RuntimeException stackIn_67_0 = null;
+            StringBuilder stackIn_67_1 = null;
+            String stackIn_67_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_63_0 = null;
-            StringBuilder stackOut_63_1 = null;
+            RuntimeException stackOut_64_0 = null;
+            StringBuilder stackOut_64_1 = null;
+            RuntimeException stackOut_66_0 = null;
+            StringBuilder stackOut_66_1 = null;
+            String stackOut_66_2 = null;
             RuntimeException stackOut_65_0 = null;
             StringBuilder stackOut_65_1 = null;
             String stackOut_65_2 = null;
-            RuntimeException stackOut_64_0 = null;
-            StringBuilder stackOut_64_1 = null;
-            String stackOut_64_2 = null;
             var18 = null;
             var16 = null;
             var20 = null;
@@ -369,10 +252,11 @@ final class ql extends mj {
             var12 = Terraphoenix.field_V;
             try {
               L0: {
-                var13 = (wf) (Object) rd.field_k.d(9272);
+                var13 = (wf) ((Object) rd.field_k.d(9272));
                 var17 = var13;
                 if (var17 == null) {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   var3 = 0;
                   var4 = 0;
@@ -385,15 +269,16 @@ final class ql extends mj {
                           if (param0 <= -115) {
                             break L2;
                           } else {
-                            field_e = null;
+                            field_e = (qf) null;
                             break L2;
                           }
                         }
                         var5 = 0;
                         L3: while (true) {
-                          if (~var5 <= ~var17.field_p) {
-                            int discarded$1 = param1.d(var4, 8600);
+                          if (var5 >= var17.field_p) {
+                            discarded$1 = param1.d(var4, 8600);
                             var17.b((byte) 12);
+                            decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
                             L4: {
@@ -403,23 +288,23 @@ final class ql extends mj {
                                     L6: {
                                       var6_int = var17.field_k[var5];
                                       if (var6_int == 0) {
-                                        var15 = (java.lang.reflect.Field) var17.field_s[var5].field_e;
+                                        var15 = (java.lang.reflect.Field) (var17.field_s[var5].field_e);
                                         var8 = var15.getInt((Object) null);
                                         param1.i(0, -106);
                                         param1.e(var8, 8959);
                                         break L6;
                                       } else {
-                                        if (var6_int == 1) {
-                                          var16_ref = (java.lang.reflect.Field) var17.field_s[var5].field_e;
+                                        if ((var6_int ^ -1) == -2) {
+                                          var16_ref = (java.lang.reflect.Field) (var17.field_s[var5].field_e);
                                           var19 = var16_ref;
                                           var19.setInt((Object) null, var17.field_m[var5]);
                                           param1.i(0, -102);
                                           break L6;
                                         } else {
-                                          if (var6_int != 2) {
+                                          if (-3 != (var6_int ^ -1)) {
                                             break L6;
                                           } else {
-                                            var26 = (java.lang.reflect.Field) var17.field_s[var5].field_e;
+                                            var26 = (java.lang.reflect.Field) (var17.field_s[var5].field_e);
                                             var8 = var26.getModifiers();
                                             param1.i(0, -93);
                                             param1.e(var8, 8959);
@@ -430,12 +315,12 @@ final class ql extends mj {
                                     }
                                     L7: {
                                       if (var6_int == 3) {
-                                        var28 = (java.lang.reflect.Method) var17.field_j[var5].field_e;
+                                        var28 = (java.lang.reflect.Method) (var17.field_j[var5].field_e);
                                         var25 = var17.field_o[var5];
                                         var9 = new Object[var25.length];
                                         var10_int = 0;
                                         L8: while (true) {
-                                          if (~var25.length >= ~var10_int) {
+                                          if (var25.length <= var10_int) {
                                             var10 = var28.invoke((Object) null, var9);
                                             if (var10 == null) {
                                               param1.i(0, -107);
@@ -444,7 +329,7 @@ final class ql extends mj {
                                               if (!(var10 instanceof Number)) {
                                                 if (var10 instanceof String) {
                                                   param1.i(2, -105);
-                                                  param1.a((String) var10, 2295);
+                                                  param1.a((String) (var10), 2295);
                                                   break L7;
                                                 } else {
                                                   param1.i(4, 119);
@@ -452,22 +337,22 @@ final class ql extends mj {
                                                 }
                                               } else {
                                                 param1.i(1, 59);
-                                                param1.a(((Number) var10).longValue(), 53);
+                                                param1.a(((Number) (var10)).longValue(), 53);
                                                 break L7;
                                               }
                                             }
                                           } else {
-                                            var11 = new ObjectInputStream((InputStream) (Object) new ByteArrayInputStream(var25[var10_int]));
+                                            var11 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(var25[var10_int])));
                                             var9[var10_int] = var11.readObject();
                                             var10_int++;
                                             continue L8;
                                           }
                                         }
                                       } else {
-                                        if (var6_int != 4) {
+                                        if (-5 != (var6_int ^ -1)) {
                                           break L7;
                                         } else {
-                                          var27 = (java.lang.reflect.Method) var17.field_j[var5].field_e;
+                                          var27 = (java.lang.reflect.Method) (var17.field_j[var5].field_e);
                                           var8 = var27.getModifiers();
                                           param1.i(0, 74);
                                           param1.e(var8, 8959);
@@ -476,6 +361,34 @@ final class ql extends mj {
                                       }
                                     }
                                     break L5;
+                                  }
+                                } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
+                                  decompiledCaughtException = decompiledCaughtParameter0;
+                                  L9: {
+                                    var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
+                                    param1.i(-10, -10);
+                                    break L9;
+                                  }
+                                } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
+                                  decompiledCaughtException = decompiledCaughtParameter1;
+                                  L10: {
+                                    var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
+                                    param1.i(-11, 15);
+                                    break L10;
+                                  }
+                                } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
+                                  decompiledCaughtException = decompiledCaughtParameter2;
+                                  L11: {
+                                    var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
+                                    param1.i(-12, -91);
+                                    break L11;
+                                  }
+                                } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
+                                  decompiledCaughtException = decompiledCaughtParameter3;
+                                  L12: {
+                                    var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
+                                    param1.i(-13, 3);
+                                    break L12;
                                   }
                                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                                   decompiledCaughtException = decompiledCaughtParameter4;
@@ -497,6 +410,13 @@ final class ql extends mj {
                                     var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
                                     param1.i(-16, 27);
                                     break L15;
+                                  }
+                                } catch (java.lang.SecurityException decompiledCaughtParameter7) {
+                                  decompiledCaughtException = decompiledCaughtParameter7;
+                                  L16: {
+                                    var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
+                                    param1.i(-17, -112);
+                                    break L16;
                                   }
                                 } catch (java.io.IOException decompiledCaughtParameter8) {
                                   decompiledCaughtException = decompiledCaughtParameter8;
@@ -538,13 +458,14 @@ final class ql extends mj {
                           }
                         }
                       } else {
-                        return;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       }
                     } else {
                       L21: {
                         if (null != var13.field_s[var4]) {
                           L22: {
-                            if (var13.field_s[var4].field_d != 2) {
+                            if ((var13.field_s[var4].field_d ^ -1) != -3) {
                               break L22;
                             } else {
                               var13.field_r[var4] = -5;
@@ -571,11 +492,12 @@ final class ql extends mj {
                               break L24;
                             }
                           }
-                          if (0 != var13.field_j[var4].field_d) {
-                            break L23;
-                          } else {
+                          if (0 == var13.field_j[var4].field_d) {
                             var3 = 1;
                             break L23;
+                          } else {
+                            var4++;
+                            continue L1;
                           }
                         } else {
                           break L23;
@@ -591,31 +513,40 @@ final class ql extends mj {
               decompiledCaughtException = decompiledCaughtParameter12;
               L25: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_63_0 = (RuntimeException) var2;
-                stackOut_63_1 = new StringBuilder().append("ql.J(").append(param0).append(',');
-                stackIn_65_0 = stackOut_63_0;
-                stackIn_65_1 = stackOut_63_1;
-                stackIn_64_0 = stackOut_63_0;
-                stackIn_64_1 = stackOut_63_1;
+                stackOut_64_0 = (RuntimeException) (var2);
+                stackOut_64_1 = new StringBuilder().append("ql.J(").append(param0).append(',');
+                stackIn_66_0 = stackOut_64_0;
+                stackIn_66_1 = stackOut_64_1;
+                stackIn_65_0 = stackOut_64_0;
+                stackIn_65_1 = stackOut_64_1;
                 if (param1 == null) {
-                  stackOut_65_0 = (RuntimeException) (Object) stackIn_65_0;
-                  stackOut_65_1 = (StringBuilder) (Object) stackIn_65_1;
-                  stackOut_65_2 = "null";
-                  stackIn_66_0 = stackOut_65_0;
-                  stackIn_66_1 = stackOut_65_1;
-                  stackIn_66_2 = stackOut_65_2;
+                  stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
+                  stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
+                  stackOut_66_2 = "null";
+                  stackIn_67_0 = stackOut_66_0;
+                  stackIn_67_1 = stackOut_66_1;
+                  stackIn_67_2 = stackOut_66_2;
                   break L25;
                 } else {
-                  stackOut_64_0 = (RuntimeException) (Object) stackIn_64_0;
-                  stackOut_64_1 = (StringBuilder) (Object) stackIn_64_1;
-                  stackOut_64_2 = "{...}";
-                  stackIn_66_0 = stackOut_64_0;
-                  stackIn_66_1 = stackOut_64_1;
-                  stackIn_66_2 = stackOut_64_2;
+                  stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
+                  stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
+                  stackOut_65_2 = "{...}";
+                  stackIn_67_0 = stackOut_65_0;
+                  stackIn_67_1 = stackOut_65_1;
+                  stackIn_67_2 = stackOut_65_2;
                   break L25;
                 }
               }
-              throw qk.a((Throwable) (Object) stackIn_66_0, stackIn_66_2 + ')');
+              throw qk.a((Throwable) ((Object) stackIn_67_0), stackIn_67_2 + ')');
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 1) {
+                return;
+              } else {
+                return;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -639,87 +570,101 @@ final class ql extends mj {
         java.lang.reflect.Method var11 = null;
         String var12 = null;
         String var13 = null;
-        Class var14 = null;
+        uc var14 = null;
+        Class var15 = null;
         java.net.Socket stackIn_3_0 = null;
-        Object stackIn_11_0 = null;
-        java.net.Socket stackIn_20_0 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
+        Object stackIn_13_0 = null;
+        java.net.Socket stackIn_22_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         java.net.Socket stackOut_2_0 = null;
-        java.net.Socket stackOut_19_0 = null;
-        Object stackOut_10_0 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
+        java.net.Socket stackOut_21_0 = null;
+        Object stackOut_12_0 = null;
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
         try {
           L0: {
             if (param0.type() == java.net.Proxy.Type.DIRECT) {
-              stackOut_2_0 = ((ql) this).a(true);
+              stackOut_2_0 = this.a(true);
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               var3_ref = param0.address();
               if ((Object) var3_ref instanceof java.net.InetSocketAddress) {
-                var4_ref = (java.net.InetSocketAddress) (Object) var3_ref;
+                L1: {
+                  var4_ref = (java.net.InetSocketAddress) ((Object) var3_ref);
+                  if (param1 == 15736) {
+                    break L1;
+                  } else {
+                    var14 = (uc) null;
+                    ql.a(-77, (uc) null);
+                    break L1;
+                  }
+                }
                 if (param0.type() == java.net.Proxy.Type.HTTP) {
                   var5 = null;
                   try {
-                    L1: {
-                      L2: {
-                        var14 = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
-                        var6_ref = var14;
-                        var7 = var14.getDeclaredMethod("getProxyAuth", new Class[2]);
+                    L2: {
+                      L3: {
+                        var15 = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
+                        var6_ref = var15;
+                        var7 = var15.getDeclaredMethod("getProxyAuth", new Class[]{String.class, Integer.TYPE});
                         var7.setAccessible(true);
-                        var8 = var7.invoke((Object) null, new Object[2]);
+                        var8 = var7.invoke((Object) null, new Object[]{var4_ref.getHostName(), new Integer(var4_ref.getPort())});
                         if (var8 == null) {
-                          break L2;
+                          break L3;
                         } else {
-                          var9 = var6_ref.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[0]);
+                          var9 = var6_ref.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[]{});
                           var9.setAccessible(true);
-                          if (((Boolean) var9.invoke(var8, new Object[0])).booleanValue()) {
-                            var10 = var6_ref.getDeclaredMethod("getHeaderName", new Class[0]);
+                          if (((Boolean) (var9.invoke(var8, new Object[]{}))).booleanValue()) {
+                            var10 = var6_ref.getDeclaredMethod("getHeaderName", new Class[]{});
                             var10.setAccessible(true);
-                            var11 = var14.getDeclaredMethod("getHeaderValue", new Class[2]);
+                            var11 = var15.getDeclaredMethod("getHeaderValue", new Class[]{java.net.URL.class, String.class});
                             var11.setAccessible(true);
-                            var12 = (String) var10.invoke(var8, new Object[0]);
-                            var13 = (String) var11.invoke(var8, new Object[2]);
-                            var5 = (Object) (Object) (var12 + ": " + var13);
-                            break L2;
+                            var12 = (String) (var10.invoke(var8, new Object[]{}));
+                            var13 = (String) (var11.invoke(var8, new Object[]{new java.net.URL("https://" + this.field_d + "/"), "https"}));
+                            var5 = var12 + ": " + var13;
+                            break L3;
                           } else {
-                            break L2;
+                            break L3;
                           }
                         }
                       }
-                      break L1;
+                      break L2;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
-                    L3: {
+                    L4: {
                       var6 = (Exception) (Object) decompiledCaughtException;
-                      break L3;
+                      break L4;
                     }
                   }
-                  stackOut_19_0 = this.a(var4_ref.getPort(), var4_ref.getHostName(), (byte) 28, (String) var5);
-                  stackIn_20_0 = stackOut_19_0;
+                  stackOut_21_0 = this.a(var4_ref.getPort(), var4_ref.getHostName(), (byte) 28, (String) (var5));
+                  stackIn_22_0 = stackOut_21_0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (param0.type() == java.net.Proxy.Type.SOCKS) {
-                    var5 = (Object) (Object) new java.net.Socket(param0);
-                    ((java.net.Socket) var5).connect((java.net.SocketAddress) (Object) new java.net.InetSocketAddress(((ql) this).field_d, ((ql) this).field_b));
-                    stackOut_10_0 = var5;
-                    stackIn_11_0 = stackOut_10_0;
-                    return (java.net.Socket) (Object) stackIn_11_0;
+                    var5 = new java.net.Socket(param0);
+                    ((java.net.Socket) (var5)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.field_d, this.field_b)));
+                    stackOut_12_0 = var5;
+                    stackIn_13_0 = stackOut_12_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
                     return null;
                   }
@@ -731,35 +676,43 @@ final class ql extends mj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L4: {
+          L5: {
             var3 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var3;
-            stackOut_21_1 = new StringBuilder().append("ql.G(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackOut_23_0 = (RuntimeException) (var3);
+            stackOut_23_1 = new StringBuilder().append("ql.G(");
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
-              break L4;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              break L5;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
-              break L4;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
+              break L5;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + 15736 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
         }
-        return stackIn_20_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return (java.net.Socket) ((Object) stackIn_13_0);
+          } else {
+            return stackIn_22_0;
+          }
+        }
     }
 
     private final java.net.Socket a(int param0, String param1, byte param2, String param3) throws IOException {
@@ -773,76 +726,85 @@ final class ql extends mj {
         int var12 = 0;
         java.net.Socket var13 = null;
         String var14 = null;
-        java.net.Socket stackIn_10_0 = null;
-        Object stackIn_25_0 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
+        java.net.Socket stackIn_12_0 = null;
+        Object stackIn_27_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        String stackIn_32_2 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        java.net.Socket stackOut_9_0 = null;
-        Object stackOut_24_0 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
+        java.net.Socket stackOut_11_0 = null;
+        Object stackOut_26_0 = null;
         RuntimeException stackOut_28_0 = null;
         StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
         RuntimeException stackOut_30_0 = null;
         StringBuilder stackOut_30_1 = null;
         String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        String stackOut_33_2 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_2 = null;
         var12 = Terraphoenix.field_V;
         try {
           L0: {
             L1: {
-              var13 = new java.net.Socket(param1, param0);
-              var13.setSoTimeout(10000);
-              var6 = var13.getOutputStream();
-              if (param3 == null) {
-                var6.write(("CONNECT " + ((ql) this).field_d + ":" + ((ql) this).field_b + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+              if (param2 == 28) {
                 break L1;
               } else {
-                var6.write(("CONNECT " + ((ql) this).field_d + ":" + ((ql) this).field_b + " HTTP/1.0\n" + param3 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+                this.field_j = (java.net.ProxySelector) null;
                 break L1;
               }
             }
             L2: {
+              var13 = new java.net.Socket(param1, param0);
+              var13.setSoTimeout(10000);
+              var6 = var13.getOutputStream();
+              if (param3 == null) {
+                var6.write(("CONNECT " + this.field_d + ":" + this.field_b + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+                break L2;
+              } else {
+                var6.write(("CONNECT " + this.field_d + ":" + this.field_b + " HTTP/1.0\n" + param3 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+                break L2;
+              }
+            }
+            L3: {
               var6.flush();
-              var7 = new BufferedReader((Reader) (Object) new InputStreamReader(var13.getInputStream()));
+              var7 = new BufferedReader((Reader) ((Object) new InputStreamReader(var13.getInputStream())));
               var8 = var7.readLine();
               if (var8 != null) {
-                L3: {
+                L4: {
                   if (var8.startsWith("HTTP/1.0 200")) {
-                    break L3;
+                    break L4;
                   } else {
                     if (var8.startsWith("HTTP/1.1 200")) {
-                      break L3;
+                      break L4;
                     } else {
-                      L4: {
+                      L5: {
                         if (var8.startsWith("HTTP/1.0 407")) {
-                          break L4;
+                          break L5;
                         } else {
                           if (var8.startsWith("HTTP/1.1 407")) {
-                            break L4;
+                            break L5;
                           } else {
-                            break L2;
+                            break L3;
                           }
                         }
                       }
@@ -851,32 +813,33 @@ final class ql extends mj {
                       var8 = var10;
                       var8 = var10;
                       var8 = var7.readLine();
-                      L5: while (true) {
-                        L6: {
+                      L6: while (true) {
+                        L7: {
                           if (var8 == null) {
-                            break L6;
+                            break L7;
                           } else {
-                            if (var9 >= 50) {
-                              break L6;
+                            if (-51 >= (var9 ^ -1)) {
+                              break L7;
                             } else {
                               if (var8.toLowerCase().startsWith(var10)) {
-                                L7: {
+                                L8: {
                                   var14 = var8.substring(var10.length()).trim();
                                   var8 = var14;
                                   var8 = var14;
+                                  var8 = var14;
                                   var11 = var14.indexOf(' ');
-                                  if (var11 == -1) {
-                                    break L7;
+                                  if (0 == (var11 ^ -1)) {
+                                    break L8;
                                   } else {
                                     var8 = var14.substring(0, var11);
-                                    break L7;
+                                    break L8;
                                   }
                                 }
                                 throw new wb(var8);
                               } else {
                                 var9++;
                                 var8 = var7.readLine();
-                                continue L5;
+                                continue L6;
                               }
                             }
                           }
@@ -886,83 +849,90 @@ final class ql extends mj {
                     }
                   }
                 }
-                stackOut_9_0 = (java.net.Socket) var13;
-                stackIn_10_0 = stackOut_9_0;
-                return stackIn_10_0;
+                stackOut_11_0 = (java.net.Socket) (var13);
+                stackIn_12_0 = stackOut_11_0;
+                decompiledRegionSelector0 = 0;
+                break L0;
               } else {
-                break L2;
+                break L3;
               }
             }
             var6.close();
             var7.close();
             var13.close();
-            stackOut_24_0 = null;
-            stackIn_25_0 = stackOut_24_0;
+            stackOut_26_0 = null;
+            stackIn_27_0 = stackOut_26_0;
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var5 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var5;
-            stackOut_26_1 = new StringBuilder().append("ql.I(").append(param0).append(',');
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
-            if (param1 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
-              break L8;
-            } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
-              break L8;
-            }
-          }
           L9: {
-            stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',').append(28).append(',');
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
-            if (param3 == null) {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
+            var5 = decompiledCaughtException;
+            stackOut_28_0 = (RuntimeException) (var5);
+            stackOut_28_1 = new StringBuilder().append("ql.I(").append(param0).append(',');
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
+            if (param1 == null) {
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
               break L9;
             } else {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
               break L9;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + ')');
+          L10: {
+            stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',').append(param2).append(',');
+            stackIn_33_0 = stackOut_31_0;
+            stackIn_33_1 = stackOut_31_1;
+            stackIn_32_0 = stackOut_31_0;
+            stackIn_32_1 = stackOut_31_1;
+            if (param3 == null) {
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackOut_33_2 = "null";
+              stackIn_34_0 = stackOut_33_0;
+              stackIn_34_1 = stackOut_33_1;
+              stackIn_34_2 = stackOut_33_2;
+              break L10;
+            } else {
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
+              stackOut_32_2 = "{...}";
+              stackIn_34_0 = stackOut_32_0;
+              stackIn_34_1 = stackOut_32_1;
+              stackIn_34_2 = stackOut_32_2;
+              break L10;
+            }
+          }
+          throw qk.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');
         }
-        return (java.net.Socket) (Object) stackIn_25_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_12_0;
+        } else {
+          return (java.net.Socket) ((Object) stackIn_27_0);
+        }
     }
 
     ql() {
-        ((ql) this).field_j = java.net.ProxySelector.getDefault();
+        this.field_j = java.net.ProxySelector.getDefault();
     }
 
     final java.net.Socket b(boolean param0) throws IOException {
+        String discarded$2 = null;
         List var3 = null;
         List var4 = null;
         int var5 = 0;
@@ -1044,12 +1014,12 @@ final class ql extends mj {
           if (Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
             break L0;
           } else {
-            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
+            discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           }
         }
         L1: {
-          if (((ql) this).field_b != 443) {
+          if (this.field_b != 443) {
             stackOut_4_0 = 0;
             stackIn_5_0 = stackOut_4_0;
             break L1;
@@ -1063,7 +1033,7 @@ final class ql extends mj {
         try {
           L2: {
             L3: {
-              stackOut_6_0 = ((ql) this).field_j;
+              stackOut_6_0 = this.field_j;
               stackOut_6_1 = null;
               stackOut_6_2 = null;
               stackOut_6_3 = new StringBuilder();
@@ -1076,10 +1046,10 @@ final class ql extends mj {
               stackIn_7_2 = stackOut_6_2;
               stackIn_7_3 = stackOut_6_3;
               if (var5 == 0) {
-                stackOut_8_0 = (java.net.ProxySelector) (Object) stackIn_8_0;
+                stackOut_8_0 = (java.net.ProxySelector) ((Object) stackIn_8_0);
                 stackOut_8_1 = null;
                 stackOut_8_2 = null;
-                stackOut_8_3 = (StringBuilder) (Object) stackIn_8_3;
+                stackOut_8_3 = (StringBuilder) ((Object) stackIn_8_3);
                 stackOut_8_4 = "http";
                 stackIn_9_0 = stackOut_8_0;
                 stackIn_9_1 = stackOut_8_1;
@@ -1088,10 +1058,10 @@ final class ql extends mj {
                 stackIn_9_4 = stackOut_8_4;
                 break L3;
               } else {
-                stackOut_7_0 = (java.net.ProxySelector) (Object) stackIn_7_0;
+                stackOut_7_0 = (java.net.ProxySelector) ((Object) stackIn_7_0);
                 stackOut_7_1 = null;
                 stackOut_7_2 = null;
-                stackOut_7_3 = (StringBuilder) (Object) stackIn_7_3;
+                stackOut_7_3 = (StringBuilder) ((Object) stackIn_7_3);
                 stackOut_7_4 = "https";
                 stackIn_9_0 = stackOut_7_0;
                 stackIn_9_1 = stackOut_7_1;
@@ -1102,8 +1072,8 @@ final class ql extends mj {
               }
             }
             L4: {
-              var3 = ((java.net.ProxySelector) (Object) stackIn_9_0).select(new java.net.URI(stackIn_9_4 + "://" + ((ql) this).field_d));
-              stackOut_9_0 = ((ql) this).field_j;
+              var3 = ((java.net.ProxySelector) (Object) stackIn_9_0).select(new java.net.URI(stackIn_9_4 + "://" + this.field_d));
+              stackOut_9_0 = this.field_j;
               stackOut_9_1 = null;
               stackOut_9_2 = null;
               stackOut_9_3 = new StringBuilder();
@@ -1116,10 +1086,10 @@ final class ql extends mj {
               stackIn_10_2 = stackOut_9_2;
               stackIn_10_3 = stackOut_9_3;
               if (var5 == 0) {
-                stackOut_11_0 = (java.net.ProxySelector) (Object) stackIn_11_0;
+                stackOut_11_0 = (java.net.ProxySelector) ((Object) stackIn_11_0);
                 stackOut_11_1 = null;
                 stackOut_11_2 = null;
-                stackOut_11_3 = (StringBuilder) (Object) stackIn_11_3;
+                stackOut_11_3 = (StringBuilder) ((Object) stackIn_11_3);
                 stackOut_11_4 = "https";
                 stackIn_12_0 = stackOut_11_0;
                 stackIn_12_1 = stackOut_11_1;
@@ -1128,10 +1098,10 @@ final class ql extends mj {
                 stackIn_12_4 = stackOut_11_4;
                 break L4;
               } else {
-                stackOut_10_0 = (java.net.ProxySelector) (Object) stackIn_10_0;
+                stackOut_10_0 = (java.net.ProxySelector) ((Object) stackIn_10_0);
                 stackOut_10_1 = null;
                 stackOut_10_2 = null;
-                stackOut_10_3 = (StringBuilder) (Object) stackIn_10_3;
+                stackOut_10_3 = (StringBuilder) ((Object) stackIn_10_3);
                 stackOut_10_4 = "http";
                 stackIn_12_0 = stackOut_10_0;
                 stackIn_12_1 = stackOut_10_1;
@@ -1141,15 +1111,15 @@ final class ql extends mj {
                 break L4;
               }
             }
-            var4 = ((java.net.ProxySelector) (Object) stackIn_12_0).select(new java.net.URI(stackIn_12_4 + "://" + ((ql) this).field_d));
+            var4 = ((java.net.ProxySelector) (Object) stackIn_12_0).select(new java.net.URI(stackIn_12_4 + "://" + this.field_d));
             break L2;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-          return ((ql) this).a(true);
+          return this.a(true);
         }
-        boolean discarded$3 = var3.addAll((Collection) (Object) var4);
+        boolean discarded$3 = var3.addAll((Collection) ((Object) var4));
         var6_array = var3.toArray();
         var7 = null;
         var8_array = var6_array;
@@ -1167,16 +1137,16 @@ final class ql extends mj {
             if (var7 != null) {
               throw ql.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
             } else {
-              return ((ql) this).a(true);
+              return this.a(true);
             }
           } else {
             var10 = var8_array[var9];
-            var11 = (java.net.Proxy) var10;
+            var11 = (java.net.Proxy) (var10);
             try {
               L7: {
                 var12_ref2 = this.a(var11, 15736);
                 if (var12_ref2 != null) {
-                  stackOut_20_0 = (java.net.Socket) var12_ref2;
+                  stackOut_20_0 = (java.net.Socket) (var12_ref2);
                   stackIn_21_0 = stackOut_20_0;
                   decompiledRegionSelector0 = 1;
                   break L7;
@@ -1186,6 +1156,15 @@ final class ql extends mj {
                   break L7;
                 }
               }
+            } catch (wb decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L8: {
+                var12 = (wb) (Object) decompiledCaughtException;
+                var7 = var12;
+                var9++;
+                decompiledRegionSelector0 = 0;
+                break L8;
+              }
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               L9: {
@@ -1193,15 +1172,6 @@ final class ql extends mj {
                 var9++;
                 decompiledRegionSelector0 = 0;
                 break L9;
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L8: {
-                var12 = (wb) (Object) decompiledCaughtException;
-                var7 = (Object) (Object) var12;
-                var9++;
-                decompiledRegionSelector0 = 0;
-                break L8;
               }
             }
             if (decompiledRegionSelector0 == 0) {
@@ -1214,10 +1184,6 @@ final class ql extends mj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Press 'L' to reload, cost: 14tus";
         field_e = new qf();
         field_h = "to return to the normal view.";

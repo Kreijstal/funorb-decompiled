@@ -12,7 +12,7 @@ final class sh extends ek {
         field_N = null;
         field_M = null;
         if (!param0) {
-            field_P = null;
+            field_P = (String) null;
             field_P = null;
             return;
         }
@@ -39,6 +39,7 @@ final class sh extends ek {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_6_0 = 0;
@@ -56,11 +57,12 @@ final class sh extends ek {
             if (param0.field_Q == param1) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
-                var3_int = param0.e((byte) -112) + -((sh) this).e((byte) -112);
-                var4 = param0.g(1829947600) + -((sh) this).g(1829947600);
+                var3_int = param0.e((byte) -112) + -this.e((byte) -112);
+                var4 = param0.g(1829947600) + -this.g(1829947600);
                 var5 = var4 * var4 + var3_int * var3_int;
                 if (var5 >= 3600) {
                   stackOut_6_0 = 0;
@@ -72,6 +74,7 @@ final class sh extends ek {
                   break L1;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -79,23 +82,23 @@ final class sh extends ek {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_0 = (RuntimeException) (var3);
             stackOut_8_1 = new StringBuilder().append("sh.K(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -103,9 +106,13 @@ final class sh extends ek {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
         }
-        return stackIn_7_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          return stackIn_7_0 != 0;
+        }
     }
 
     sh(int param0, int param1) {
@@ -113,10 +120,6 @@ final class sh extends ek {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_P = "";
         field_M = "Login: ";
     }

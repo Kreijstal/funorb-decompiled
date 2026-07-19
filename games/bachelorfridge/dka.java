@@ -11,43 +11,43 @@ final class dka extends vd implements lja {
     final static void a(nv param0, byte param1) {
         try {
             if (param1 != 59) {
-                field_G = null;
+                field_G = (af) null;
             }
-            fo.field_a.a(param1 ^ -60, (sna) (Object) param0);
+            fo.field_a.a(param1 ^ -60, param0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "dka.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "dka.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public dka() {
         super(0, 0, 476, 225, (qda) null);
-        ((dka) this).field_E = new hf(sca.field_b, (pl) null);
-        ((dka) this).field_C = new hf(nt.field_x, (pl) null);
-        ((dka) this).field_F = new hf(tja.field_b, (pl) null);
+        this.field_E = new hf(sca.field_b, (pl) null);
+        this.field_C = new hf(nt.field_x, (pl) null);
+        this.field_F = new hf(tja.field_b, (pl) null);
         ff var1 = new ff();
-        ((dka) this).field_E.field_f = (qda) (Object) var1;
-        ((dka) this).field_C.field_f = (qda) (Object) var1;
-        ((dka) this).field_F.field_f = (qda) (Object) var1;
+        this.field_E.field_f = (qda) ((Object) var1);
+        this.field_C.field_f = (qda) ((Object) var1);
+        this.field_F.field_f = (qda) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
-        int var4 = -var2 + var3 >> 1;
-        ((dka) this).field_C.a(((dka) this).field_p - var3 >> 1, 30, (byte) 59, var4, -var2 + (-48 + ((dka) this).field_q));
-        ((dka) this).field_F.a((((dka) this).field_p - var3 >> 1) + var4 - -var2, 30, (byte) 59, var4, -var2 + ((dka) this).field_q + -48);
-        ((dka) this).field_E.a(((dka) this).field_p - var3 >> 1, 30, (byte) 59, var3, -(2 * var2) + ((dka) this).field_q + -78);
-        ((dka) this).field_C.field_k = (pl) this;
-        ((dka) this).field_E.field_k = (pl) this;
-        ((dka) this).field_F.field_k = (pl) this;
-        ((dka) this).field_E.field_h = qha.field_h;
-        ((dka) this).field_F.field_h = lna.field_h;
-        ((dka) this).c((wj) (Object) ((dka) this).field_C, -121);
-        ((dka) this).c((wj) (Object) ((dka) this).field_E, 122);
-        ((dka) this).c((wj) (Object) ((dka) this).field_F, 33);
+        int var4 = -var2 + var3 >> -439461215;
+        this.field_C.a(this.field_p - var3 >> 1868289409, 30, (byte) 59, var4, -var2 + (-48 + this.field_q));
+        this.field_F.a((this.field_p - var3 >> -1014112543) + var4 - -var2, 30, (byte) 59, var4, -var2 + this.field_q + -48);
+        this.field_E.a(this.field_p - var3 >> -1924230527, 30, (byte) 59, var3, -(2 * var2) + this.field_q + -78);
+        this.field_C.field_k = (pl) (this);
+        this.field_E.field_k = (pl) (this);
+        this.field_F.field_k = (pl) (this);
+        this.field_E.field_h = qha.field_h;
+        this.field_F.field_h = lna.field_h;
+        this.c(this.field_C, -121);
+        this.c(this.field_E, 122);
+        this.c(this.field_F, 33);
     }
 
     public final void a(int param0, hf param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
-        Object var8 = null;
+        nv var8 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -68,12 +68,12 @@ final class dka extends vd implements lja {
         try {
           L0: {
             L1: {
-              if (((dka) this).field_C != param1) {
-                if (((dka) this).field_E == param1) {
+              if (this.field_C != param1) {
+                if (this.field_E == param1) {
                   qfa.f(114);
                   break L1;
                 } else {
-                  if (((dka) this).field_F == param1) {
+                  if (this.field_F == param1) {
                     nt.e((byte) 123);
                     break L1;
                   } else {
@@ -88,7 +88,7 @@ final class dka extends vd implements lja {
             if (param3 >= 50) {
               break L0;
             } else {
-              var8 = null;
+              var8 = (nv) null;
               dka.a((nv) null, (byte) -59);
               return;
             }
@@ -97,23 +97,23 @@ final class dka extends vd implements lja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var6;
+            stackOut_11_0 = (RuntimeException) (var6);
             stackOut_11_1 = new StringBuilder().append("dka.AA(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -121,14 +121,14 @@ final class dka extends vd implements lja {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = param3 + ((dka) this).field_s;
-        int var6 = param1 + ((dka) this).field_v;
-        int discarded$0 = jca.field_a.a(wfa.field_q, var5 - -20, 20 + var6, ((dka) this).field_p - 40, ((dka) this).field_q + -50, 16777215, -1, 1, 0, jca.field_a.field_u);
+        int var5 = param3 + this.field_s;
+        int var6 = param1 + this.field_v;
+        int discarded$0 = jca.field_a.a(wfa.field_q, var5 - -20, 20 + var6, this.field_p - 40, this.field_q + -50, 16777215, -1, 1, 0, jca.field_a.field_u);
         super.a((byte) 74, param1, param2, param3);
         int var7 = -39 / ((param0 - -20) / 54);
     }
@@ -146,6 +146,7 @@ final class dka extends vd implements lja {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_7_0 = false;
         int stackOut_12_0 = 0;
@@ -169,49 +170,53 @@ final class dka extends vd implements lja {
                 break L1;
               }
             }
-            if (!super.a(param0, param1, param2, param3)) {
-              if (param1 == 98) {
-                stackOut_7_0 = ((dka) this).a(-123, param3);
+            if (!super.a(param0 + 0, param1, param2, param3)) {
+              if (-99 == (param1 ^ -1)) {
+                stackOut_7_0 = this.a(-123, param3);
                 stackIn_8_0 = stackOut_7_0;
-                return stackIn_8_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (param1 != 99) {
                   stackOut_12_0 = 0;
                   stackIn_13_0 = stackOut_12_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_10_0 = ((dka) this).b(param3, 1);
+                  stackOut_10_0 = this.b(param3, 1);
                   stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               }
             } else {
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var5;
+            stackOut_14_0 = (RuntimeException) (var5);
             stackOut_14_1 = new StringBuilder().append("dka.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param3 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -219,15 +224,27 @@ final class dka extends vd implements lja {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
-        return stackIn_13_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_11_0;
+            } else {
+              return stackIn_13_0 != 0;
+            }
+          }
+        }
     }
 
     public static void a(int param0) {
         field_D = null;
         if (param0 != 26727) {
-            Object var2 = null;
+            nv var2 = (nv) null;
             dka.a((nv) null, (byte) -57);
             field_G = null;
             return;
@@ -236,10 +253,6 @@ final class dka extends vd implements lja {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_D = "Report abuse";
     }
 }

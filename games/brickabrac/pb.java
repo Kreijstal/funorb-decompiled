@@ -14,8 +14,8 @@ final class pb extends nm {
 
     final boolean a(byte param0, int param1, int param2) {
         if (param0 == -84) {
-          if (param2 == ((pb) this).field_m) {
-            if (((pb) this).field_k != param1) {
+          if (param2 == this.field_m) {
+            if (this.field_k != param1) {
               return false;
             } else {
               return true;
@@ -24,9 +24,9 @@ final class pb extends nm {
             return false;
           }
         } else {
-          field_j = null;
-          if (param2 == ((pb) this).field_m) {
-            if (((pb) this).field_k != param1) {
+          field_j = (jp) null;
+          if (param2 == this.field_m) {
+            if (this.field_k != param1) {
               return false;
             } else {
               return true;
@@ -41,42 +41,44 @@ final class pb extends nm {
         field_o = null;
         field_n = null;
         field_l = null;
+        if (param0 < 22) {
+            field_l = (String) null;
+            field_j = null;
+            return;
+        }
         field_j = null;
     }
 
     final void a(int param0, int param1, byte param2) {
+        String discarded$2 = null;
         if (param2 != 78) {
-          String discarded$2 = pb.a(13, -48);
-          ((pb) this).field_k = param1;
-          ((pb) this).field_m = param0;
+          discarded$2 = pb.a(13, -48);
+          this.field_k = param1;
+          this.field_m = param0;
           return;
         } else {
-          ((pb) this).field_k = param1;
-          ((pb) this).field_m = param0;
+          this.field_k = param1;
+          this.field_m = param0;
           return;
         }
     }
 
     final static String a(int param0, int param1) {
         if (param1 != 4) {
-          return null;
+          return (String) null;
         } else {
           return 1 + param0 + "/" + gh.field_b.length;
         }
     }
 
     pb(int param0, int param1) {
-        ((pb) this).field_i = param0;
-        ((pb) this).field_q = param1;
-        ((pb) this).field_p = new jp(((pb) this).field_i, ((pb) this).field_q);
-        ((pb) this).a(-2, -2, (byte) 78);
+        this.field_i = param0;
+        this.field_q = param1;
+        this.field_p = new jp(this.field_i, this.field_q);
+        this.a(-2, -2, (byte) 78);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Reject <%0> from this game";
         field_n = new int[4];
         field_l = "Solicitation";

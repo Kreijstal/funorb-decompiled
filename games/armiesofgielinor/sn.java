@@ -9,17 +9,17 @@ final class sn extends ow {
     boolean field_l;
 
     sn(int param0, byte[] param1, int param2, int param3) {
-        ((sn) this).field_p = param0;
-        ((sn) this).field_o = param1;
-        ((sn) this).field_m = param2;
-        ((sn) this).field_n = param3;
+        this.field_p = param0;
+        this.field_o = param1;
+        this.field_m = param2;
+        this.field_n = param3;
     }
 
     sn(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((sn) this).field_p = param0;
-        ((sn) this).field_o = param1;
-        ((sn) this).field_m = param2;
-        ((sn) this).field_n = param3;
-        ((sn) this).field_l = param4 ? true : false;
+        this.field_p = param0;
+        this.field_o = param1;
+        this.field_m = param2;
+        this.field_n = param3;
+        this.field_l = param4 ? true : false;
     }
 }

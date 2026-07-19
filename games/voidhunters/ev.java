@@ -23,16 +23,12 @@ abstract class ev {
     abstract void a(int param0, byte param1, int param2);
 
     ev(int param0, int param1, int param2) {
-        ((ev) this).field_a = param2;
-        ((ev) this).field_e = param0;
-        ((ev) this).field_d = param1;
+        this.field_a = param2;
+        this.field_e = param0;
+        this.field_d = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Play rated game";
         field_c = "Fighter chassis";
     }

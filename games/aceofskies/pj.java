@@ -10,28 +10,32 @@ abstract class pj {
     java.awt.Image field_d;
 
     final static tp c(byte param0) {
+        if (param0 > -61) {
+            pj.a((byte) 38);
+            return qn.field_b;
+        }
         return qn.field_b;
     }
 
     abstract void a(int param0, java.awt.Graphics param1, int param2, int param3);
 
     final void a(int param0) {
-        vp.a(((pj) this).field_e, ((pj) this).field_c, ((pj) this).field_b);
+        vp.a(this.field_e, this.field_c, this.field_b);
         if (param0 != -12595) {
-            field_f = null;
+            field_f = (eg) null;
         }
     }
 
     public static void a(byte param0) {
-        int var1 = 0;
+        int var1 = 18 % ((param0 - -44) / 47);
         field_f = null;
         field_a = null;
     }
 
     final static void b(byte param0) {
-        ak.field_d.d((ea) (Object) new tn(), -30244);
+        ak.field_d.d(new tn(), -30244);
         if (param0 >= -21) {
-            Object var2 = null;
+            s var2 = (s) null;
             pj.a(19, (s) null);
         }
     }
@@ -48,6 +52,7 @@ abstract class pj {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
@@ -87,7 +92,8 @@ abstract class pj {
                           break L4;
                         } else {
                           if (var3.field_b == param1.field_b) {
-                            return;
+                            decompiledRegionSelector0 = 1;
+                            break L0;
                           } else {
                             break L4;
                           }
@@ -107,32 +113,34 @@ abstract class pj {
                 }
               }
               tr.a(param1, param0 + -96);
+              decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var2;
+            stackOut_17_0 = (RuntimeException) (var2);
             stackOut_17_1 = new StringBuilder().append("pj.B(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -140,17 +148,22 @@ abstract class pj {
               break L6;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     abstract void a(byte param0, int param1, int param2, java.awt.Component param3);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new eg();
     }
 }

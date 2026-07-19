@@ -3,6 +3,9 @@
  */
 final class vh {
     final static Object a(String param0, int param1, java.applet.Applet param2) throws Throwable {
+        if (param1 != -12151) {
+            return (Object) null;
+        }
         return netscape.javascript.JSObject.getWindow(param2).call(param0, (Object[]) null);
     }
 

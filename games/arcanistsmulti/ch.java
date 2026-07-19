@@ -16,23 +16,22 @@ final class ch {
     }
 
     ch(int param0) {
-        ((ch) this).field_g = param0;
+        this.field_g = param0;
     }
 
     public static void a(boolean param0) {
         field_e = null;
         field_d = null;
         field_h = null;
+        if (param0) {
+            return;
+        }
         field_a = null;
         field_f = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
         field_e = "Selection:";
         field_a = new ji();

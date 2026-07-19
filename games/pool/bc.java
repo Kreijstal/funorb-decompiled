@@ -16,6 +16,9 @@ final class bc {
     public static void a(byte param0) {
         field_h = null;
         field_j = null;
+        if (param0 != -8) {
+            return;
+        }
         field_d = null;
         field_c = null;
         field_i = null;
@@ -47,63 +50,55 @@ final class bc {
         int[] var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = Pool.field_O;
         try {
           L0: {
-            var16 = mc.field_e.field_U[0];
-            var13 = var16;
-            var10 = var13;
-            var7 = var10;
-            var6 = var7;
-            var1_array = var6;
-            mc.field_e.field_U = new int[5][];
-            mc.field_e.field_U[0] = var16;
-            var18 = new int[var16.length];
-            var15 = var18;
-            var12 = var15;
-            var9 = var12;
-            var2 = var9;
-            var17 = new int[var16.length];
-            var14 = var17;
-            var11 = var14;
-            var8 = var11;
-            var3 = var8;
+            L1: {
+              var10 = mc.field_e.field_U[0];
+              var7 = var10;
+              var6 = var7;
+              var1_array = var6;
+              mc.field_e.field_U = new int[5][];
+              mc.field_e.field_U[0] = var10;
+              var12 = new int[var10.length];
+              var9 = var12;
+              var2 = var9;
+              var11 = new int[var10.length];
+              var8 = var11;
+              var3 = var8;
+              if (param0 == 17) {
+                break L1;
+              } else {
+                field_b = (ge) null;
+                break L1;
+              }
+            }
             var4 = 0;
-            L1: while (true) {
-              if (var4 >= var16.length) {
-                fd.a(var18, var17, (byte) -54);
-                mc.field_e.field_U[2] = dn.a(var3, (byte) 36, ta.a(new int[4], 28));
-                mc.field_e.field_U[1] = dn.a(var3, (byte) 94, ta.a(new int[4], 3));
-                mc.field_e.field_U[4] = dn.a(var3, (byte) 53, ta.a(new int[4], -120));
-                mc.field_e.field_U[3] = dn.a(var3, (byte) 45, ta.a(new int[4], -128));
+            L2: while (true) {
+              if (var4 >= var10.length) {
+                fd.a(var12, var11, (byte) -54);
+                mc.field_e.field_U[2] = dn.a(var3, (byte) 36, ta.a(new int[]{0, 10066329, var12.length, 15658734}, param0 + 11));
+                mc.field_e.field_U[1] = dn.a(var3, (byte) 94, ta.a(new int[]{0, 13421772, var12.length, 16777215}, param0 + -14));
+                mc.field_e.field_U[4] = dn.a(var3, (byte) 53, ta.a(new int[]{0, 16744192, var12.length, 16777087}, -120));
+                mc.field_e.field_U[3] = dn.a(var3, (byte) 45, ta.a(new int[]{0, 16772864, var12.length, 16756543}, -128));
                 break L0;
               } else {
-                var17[var4] = var4;
-                var2[var4] = var16[var4];
+                var11[var4] = var4;
+                var2[var4] = var10[var4];
                 var4++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var1, "bc.A(" + 17 + ')');
+          throw wm.a((Throwable) ((Object) var1), "bc.A(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Unable to connect to the data server. Please check any firewall you are using.";
         field_f = 48;
         field_a = "Time trial completed!";

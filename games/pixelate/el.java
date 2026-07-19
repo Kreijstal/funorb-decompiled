@@ -14,10 +14,20 @@ final class el {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        w.field_q = param1;
-        da.field_m = param4;
-        dk.field_d = param0;
-        ab.field_b = param2;
+        if (param3 < 87) {
+          field_b = -89;
+          w.field_q = param1;
+          da.field_m = param4;
+          dk.field_d = param0;
+          ab.field_b = param2;
+          return;
+        } else {
+          w.field_q = param1;
+          da.field_m = param4;
+          dk.field_d = param0;
+          ab.field_b = param2;
+          return;
+        }
     }
 
     final static int a(int param0, byte param1, int param2) {
@@ -112,14 +122,8 @@ final class el {
         int[] var16 = null;
         int[] var17 = null;
         int[] var18 = null;
-        int[] var19 = null;
-        int[] var20 = null;
-        int[] var21 = null;
-        int[] var22 = null;
         L0: {
-          var21 = new int[8];
-          var19 = var21;
-          var17 = var19;
+          var17 = new int[8];
           var15 = var17;
           var13 = var15;
           var7 = var13;
@@ -155,24 +159,22 @@ final class el {
         var13[7] = var12 + param5;
         var13[4] = param1 - var11;
         var13[6] = param1 - -var11;
-        var22 = ep.a(var21, -1);
-        var20 = var22;
-        var18 = var20;
+        var18 = ep.a(var17, -1);
         var16 = var18;
         var14 = var16;
         var7 = var14;
         if (var14 == null) {
           return;
         } else {
-          ta.a(var22, 8421504);
+          ta.a(var18, param2);
           if (param3 > -8) {
             field_b = -46;
-            t.c(param4, param0, (int)(param6 - 0.5f), 8421504);
-            t.c(param1, param5, (int)(-0.5f + param6), 8421504);
+            t.c(param4, param0, (int)(param6 - 0.5f), param2);
+            t.c(param1, param5, (int)(-0.5f + param6), param2);
             return;
           } else {
-            t.c(param4, param0, (int)(param6 - 0.5f), 8421504);
-            t.c(param1, param5, (int)(-0.5f + param6), 8421504);
+            t.c(param4, param0, (int)(param6 - 0.5f), param2);
+            t.c(param1, param5, (int)(-0.5f + param6), param2);
             return;
           }
         }
@@ -180,6 +182,7 @@ final class el {
 
     final static fm a(int param0, boolean param1, boolean param2, int param3, int param4, boolean param5) {
         try {
+            fm discarded$2 = null;
             Object var6 = null;
             Object var7 = null;
             gg var8 = null;
@@ -190,7 +193,7 @@ final class el {
               if (param0 < -100) {
                 break L0;
               } else {
-                fm discarded$2 = el.a(68, true, true, -71, -103, true);
+                discarded$2 = el.a(68, true, true, -71, -103, true);
                 break L0;
               }
             }
@@ -202,7 +205,7 @@ final class el {
                   if (ef.field_e.field_k != null) {
                     rj.field_G = new uo(ef.field_e.field_k, 5200, 0);
                     ef.field_e.field_k = null;
-                    var6 = (Object) (Object) new rn(255, rj.field_G, new uo(ef.field_e.field_m, 12000, 0), 2097152);
+                    var6 = new rn(255, rj.field_G, new uo(ef.field_e.field_m, 12000, 0), 2097152);
                     break L2;
                   } else {
                     break L2;
@@ -227,14 +230,14 @@ final class el {
                         break L5;
                       }
                     }
-                    var7 = (Object) (Object) new rn(param3, rj.field_G, ug.field_l[param3], 2097152);
+                    var7 = new rn(param3, rj.field_G, ug.field_l[param3], 2097152);
                     break L3;
                   } else {
                     break L3;
                   }
                 }
                 L6: {
-                  var8 = ck.field_j.a(param2, 6, param3, (rn) var6, (rn) var7);
+                  var8 = ck.field_j.a(param2, 6, param3, (rn) (var6), (rn) (var7));
                   if (param5) {
                     var8.a(true);
                     break L6;
@@ -242,14 +245,14 @@ final class el {
                     break L6;
                   }
                 }
-                stackOut_15_0 = new fm((jp) (Object) var8, true, param4);
+                stackOut_15_0 = new fm(var8, param1, param4);
                 stackIn_16_0 = stackOut_15_0;
                 break L1;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (Object) (Object) decompiledCaughtException;
-              throw new RuntimeException(((IOException) var6).toString());
+              var6 = (IOException) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) (var6)).toString());
             }
             return stackIn_16_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -261,20 +264,62 @@ final class el {
 
     final static int a(int param0, byte param1) {
         int var2 = 0;
-        var2 = var2 | 1;
-        if (0 == ok.a(tg.field_f, -105, 2)) {
+        L0: {
+          var2 = 0;
+          var2 = var2 | 1;
+          if (0 != ok.a(tg.field_f, -105, 2)) {
+            break L0;
+          } else {
             var2 = var2 | 2;
+            break L0;
+          }
         }
-        if (!(ok.a(tg.field_f, -124, 2) != 0)) {
+        L1: {
+          if (-1 == (ok.a(tg.field_f, -124, 2) ^ -1)) {
             var2 = var2 | 8;
+            break L1;
+          } else {
+            break L1;
+          }
         }
-        if (ok.a(tg.field_f, -122, 2) == -1) {
-            var2 = var2 | 4;
+        if (param1 != -24) {
+          L2: {
+            el.a(-13);
+            if (ok.a(tg.field_f, param1 ^ 110, 2) != 0) {
+              break L2;
+            } else {
+              var2 = var2 | 4;
+              break L2;
+            }
+          }
+          L3: {
+            if (-1 == (ok.a(tg.field_f, -116, 2) ^ -1)) {
+              var2 = var2 | 16;
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          return var2;
+        } else {
+          L4: {
+            if (ok.a(tg.field_f, param1 ^ 110, 2) != 0) {
+              break L4;
+            } else {
+              var2 = var2 | 4;
+              break L4;
+            }
+          }
+          L5: {
+            if (-1 == (ok.a(tg.field_f, -116, 2) ^ -1)) {
+              var2 = var2 | 16;
+              break L5;
+            } else {
+              break L5;
+            }
+          }
+          return var2;
         }
-        if (!(-1 != ok.a(tg.field_f, -116, 2))) {
-            var2 = var2 | 16;
-        }
-        return var2;
     }
 
     public static void a(int param0) {
@@ -287,10 +332,6 @@ final class el {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 33;
         field_c = "Unfortunately your configuration doesn't support fullscreen mode.";
     }

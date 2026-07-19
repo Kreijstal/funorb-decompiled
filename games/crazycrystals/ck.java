@@ -28,75 +28,95 @@ final class ck extends ud {
         try {
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "ck.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "ck.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void n(int param0) {
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = CrazyCrystals.field_B;
         try {
           L0: {
             var5 = to.field_b;
             var1 = var5;
-            var2 = 0;
-            var3 = var5.length;
-            L1: while (true) {
-              if (var2 >= var3) {
-                break L0;
-              } else {
-                int incrementValue$40 = var2;
-                var2++;
-                var5[incrementValue$40] = 0;
-                int incrementValue$41 = var2;
-                var2++;
-                var5[incrementValue$41] = 0;
-                int incrementValue$42 = var2;
-                var2++;
-                var5[incrementValue$42] = 0;
-                int incrementValue$43 = var2;
-                var2++;
-                var5[incrementValue$43] = 0;
-                int incrementValue$44 = var2;
-                var2++;
-                var5[incrementValue$44] = 0;
-                int incrementValue$45 = var2;
-                var2++;
-                var5[incrementValue$45] = 0;
-                int incrementValue$46 = var2;
-                var2++;
-                var5[incrementValue$46] = 0;
-                int incrementValue$47 = var2;
-                var2++;
-                var5[incrementValue$47] = 0;
-                continue L1;
+            if (param0 == 48) {
+              var2 = 0;
+              var3 = var5.length;
+              L1: while (true) {
+                if (var2 >= var3) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  incrementValue$40 = var2;
+                  var2++;
+                  var5[incrementValue$40] = 0;
+                  incrementValue$41 = var2;
+                  var2++;
+                  var5[incrementValue$41] = 0;
+                  incrementValue$42 = var2;
+                  var2++;
+                  var5[incrementValue$42] = 0;
+                  incrementValue$43 = var2;
+                  var2++;
+                  var5[incrementValue$43] = 0;
+                  incrementValue$44 = var2;
+                  var2++;
+                  var5[incrementValue$44] = 0;
+                  incrementValue$45 = var2;
+                  var2++;
+                  var5[incrementValue$45] = 0;
+                  incrementValue$46 = var2;
+                  var2++;
+                  var5[incrementValue$46] = 0;
+                  incrementValue$47 = var2;
+                  var2++;
+                  var5[incrementValue$47] = 0;
+                  continue L1;
+                }
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1_ref, "ck.T(" + 48 + ')');
+          throw dn.a((Throwable) ((Object) var1_ref), "ck.T(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static void m(int param0) {
         kf.field_f = null;
         co.field_F = false;
-        cl.field_o = 0;
+        cl.field_o = param0;
         rf.field_G = -1;
         ni.field_b = -1;
     }
 
     final static long a(byte param0, CharSequence param1) {
-        long var2_long = 0L;
         RuntimeException var2 = null;
+        long var2_long = 0L;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -138,7 +158,7 @@ final class ck extends ud {
                         break L4;
                       } else {
                         if (90 >= var6) {
-                          var2_long = var2_long + (long)(var6 - 64);
+                          var2_long = var2_long + (long)(var6 + 1 + -65);
                           break L3;
                         } else {
                           break L4;
@@ -179,10 +199,10 @@ final class ck extends ud {
               var6 = -71 % ((param0 - 52) / 38);
               L6: while (true) {
                 L7: {
-                  if (var2_long % 37L != 0L) {
+                  if ((var2_long % 37L ^ -1L) != -1L) {
                     break L7;
                   } else {
-                    if (var2_long == 0L) {
+                    if (-1L == (var2_long ^ -1L)) {
                       break L7;
                     } else {
                       var2_long = var2_long / 37L;
@@ -200,23 +220,23 @@ final class ck extends ud {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var2;
+            stackOut_21_0 = (RuntimeException) (var2);
             stackOut_21_1 = new StringBuilder().append("ck.W(").append(param0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -224,7 +244,7 @@ final class ck extends ud {
               break L8;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
         }
         return stackIn_20_0;
     }
@@ -234,10 +254,6 @@ final class ck extends ud {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_eb = "Player";
         field_fb = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
     }

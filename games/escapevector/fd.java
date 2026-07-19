@@ -10,57 +10,82 @@ final class fd {
     static String field_e;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        ld.a(param4, ((fd) this).field_c, 4, param1, param0, param3);
+        ld.a(param4, this.field_c, 4, param1, param0, param3);
         if (param2 != -96) {
-            ((fd) this).a(45, 104, 124, -52, 19);
+            this.a(45, 104, 124, -52, 19);
         }
     }
 
     public static void a(byte param0) {
+        boolean discarded$0 = false;
         field_d = null;
         field_e = null;
         field_b = null;
         field_a = null;
         field_f = null;
+        if (param0 != 86) {
+            discarded$0 = fd.a(true, 'ﾩ');
+        }
     }
 
     fd(ed[] param0) {
         try {
-            ((fd) this).field_c = param0;
+            this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "fd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(boolean param0, char param1) {
-        int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        if (160 != param1) {
-          if (param1 != 32) {
-            if (param1 != 95) {
-              if (param1 == 45) {
-                return true;
+        int stackIn_8_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_6_0 = 0;
+        if (param0) {
+          if (160 != param1) {
+            if (param1 != 32) {
+              if (param1 != 95) {
+                if (param1 == 45) {
+                  return true;
+                } else {
+                  return false;
+                }
               } else {
-                return false;
+                stackOut_18_0 = 1;
+                stackIn_20_0 = stackOut_18_0;
+                return stackIn_20_0 != 0;
               }
             } else {
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              return stackIn_7_0 != 0;
+              return true;
             }
           } else {
             return true;
           }
         } else {
-          return true;
+          fd.a((byte) 47);
+          if (160 != param1) {
+            if (param1 != 32) {
+              if (param1 != 95) {
+                if (param1 == 45) {
+                  return true;
+                } else {
+                  return false;
+                }
+              } else {
+                stackOut_6_0 = 1;
+                stackIn_8_0 = stackOut_6_0;
+                return stackIn_8_0 != 0;
+              }
+            } else {
+              return true;
+            }
+          } else {
+            return true;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Become a member to get this expansion and...";
         field_f = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
         field_b = "Name is available";

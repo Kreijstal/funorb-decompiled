@@ -77,7 +77,7 @@ final class qf {
           }
         }
         var6 = stackIn_3_0;
-        if (var5 >= 4) {
+        if ((var5 ^ -1) <= -5) {
           if (12 != var5) {
             if (var5 == 14) {
               L1: {
@@ -217,10 +217,6 @@ final class qf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "qf.A(";
         field_a = 0;
     }

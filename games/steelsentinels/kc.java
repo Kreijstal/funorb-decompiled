@@ -19,10 +19,15 @@ final class kc extends ck {
     static String field_t;
 
     public static void d(int param0) {
-        field_x = null;
+        String discarded$0 = null;
+        field_x = (wk[][]) null;
         field_w = null;
         field_o = null;
         field_C = null;
+        if (param0 != -1341) {
+            int[] var2 = (int[]) null;
+            discarded$0 = kc.a((int[]) null, (int[]) null, -79);
+        }
         field_t = null;
         field_y = null;
         field_s = null;
@@ -30,6 +35,7 @@ final class kc extends ck {
     }
 
     final static void a(String param0, int param1, boolean param2, int param3, java.awt.Color param4) {
+        boolean discarded$1 = false;
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
@@ -114,11 +120,11 @@ final class kc extends ck {
                     var10.fillRect(2, 2, param1 * 3, 30);
                     var10.setColor(java.awt.Color.black);
                     var10.drawRect(1, 1, 301, 31);
-                    var10.fillRect(3 * param1 + 2, 2, 300 - 3 * param1, 30);
+                    var10.fillRect(3 * param1 + 2, 2, param3 - 3 * param1, 30);
                     var10.setFont(wc.field_f);
                     var10.setColor(java.awt.Color.white);
                     var10.drawString(param0, (304 - 6 * param0.length()) / 2, 22);
-                    boolean discarded$1 = var9.drawImage(ll.field_j, -152 + na.field_i / 2, -18 + li.field_A / 2, (java.awt.image.ImageObserver) null);
+                    discarded$1 = var9.drawImage(ll.field_j, -152 + na.field_i / 2, -18 + li.field_A / 2, (java.awt.image.ImageObserver) null);
                     break L5;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -165,23 +171,23 @@ final class kc extends ck {
           decompiledCaughtException = decompiledCaughtParameter2;
           L10: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var5_ref;
+            stackOut_18_0 = (RuntimeException) (var5_ref);
             stackOut_18_1 = new StringBuilder().append("kc.C(");
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L10;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -190,23 +196,23 @@ final class kc extends ck {
             }
           }
           L11: {
-            stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(300).append(',');
+            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param4 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L11;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -214,7 +220,7 @@ final class kc extends ck {
               break L11;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
         }
     }
 
@@ -228,39 +234,39 @@ final class kc extends ck {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        String stackIn_133_0 = null;
-        RuntimeException stackIn_135_0 = null;
-        StringBuilder stackIn_135_1 = null;
+        String stackIn_134_0 = null;
         RuntimeException stackIn_136_0 = null;
         StringBuilder stackIn_136_1 = null;
         RuntimeException stackIn_137_0 = null;
         StringBuilder stackIn_137_1 = null;
-        String stackIn_137_2 = null;
         RuntimeException stackIn_138_0 = null;
         StringBuilder stackIn_138_1 = null;
+        String stackIn_138_2 = null;
         RuntimeException stackIn_139_0 = null;
         StringBuilder stackIn_139_1 = null;
         RuntimeException stackIn_140_0 = null;
         StringBuilder stackIn_140_1 = null;
-        String stackIn_140_2 = null;
+        RuntimeException stackIn_141_0 = null;
+        StringBuilder stackIn_141_1 = null;
+        String stackIn_141_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_132_0 = null;
-        RuntimeException stackOut_134_0 = null;
-        StringBuilder stackOut_134_1 = null;
+        String stackOut_133_0 = null;
+        RuntimeException stackOut_135_0 = null;
+        StringBuilder stackOut_135_1 = null;
+        RuntimeException stackOut_137_0 = null;
+        StringBuilder stackOut_137_1 = null;
+        String stackOut_137_2 = null;
         RuntimeException stackOut_136_0 = null;
         StringBuilder stackOut_136_1 = null;
         String stackOut_136_2 = null;
-        RuntimeException stackOut_135_0 = null;
-        StringBuilder stackOut_135_1 = null;
-        String stackOut_135_2 = null;
-        RuntimeException stackOut_137_0 = null;
-        StringBuilder stackOut_137_1 = null;
+        RuntimeException stackOut_138_0 = null;
+        StringBuilder stackOut_138_1 = null;
+        RuntimeException stackOut_140_0 = null;
+        StringBuilder stackOut_140_1 = null;
+        String stackOut_140_2 = null;
         RuntimeException stackOut_139_0 = null;
         StringBuilder stackOut_139_1 = null;
         String stackOut_139_2 = null;
-        RuntimeException stackOut_138_0 = null;
-        StringBuilder stackOut_138_1 = null;
-        String stackOut_138_2 = null;
         var9 = SteelSentinels.field_G;
         try {
           L0: {
@@ -275,7 +281,7 @@ final class kc extends ck {
                     L3: {
                       var5 = cd.field_c[1];
                       var6 = ul.a((byte) -84, param0[0]);
-                      if (var6 < 0) {
+                      if (-1 < (var6 ^ -1)) {
                         break L3;
                       } else {
                         if (var6 >= cd.field_c.length) {
@@ -287,7 +293,7 @@ final class kc extends ck {
                       }
                     }
                     L4: {
-                      if (var6 == 0) {
+                      if (-1 == (var6 ^ -1)) {
                         var3_int = var3_int ^ 8176765;
                         break L4;
                       } else {
@@ -296,7 +302,7 @@ final class kc extends ck {
                     }
                     L5: {
                       var5 = var5 + "-";
-                      if (var6 == 1) {
+                      if ((var6 ^ -1) == -2) {
                         var3_int = var3_int ^ 1155849;
                         break L5;
                       } else {
@@ -304,7 +310,7 @@ final class kc extends ck {
                       }
                     }
                     L6: {
-                      if (2 != var6) {
+                      if (param2 != var6) {
                         break L6;
                       } else {
                         var3_int = var3_int ^ 5624312;
@@ -312,7 +318,7 @@ final class kc extends ck {
                       }
                     }
                     L7: {
-                      if (var6 == 3) {
+                      if ((var6 ^ -1) == -4) {
                         var3_int = var3_int ^ 7177436;
                         break L7;
                       } else {
@@ -344,7 +350,7 @@ final class kc extends ck {
                       }
                     }
                     L11: {
-                      if (var6 != 7) {
+                      if (-8 != (var6 ^ -1)) {
                         break L11;
                       } else {
                         var3_int = var3_int ^ 3140392;
@@ -360,7 +366,7 @@ final class kc extends ck {
                       }
                     }
                     L13: {
-                      if (var6 == 9) {
+                      if ((var6 ^ -1) == -10) {
                         var3_int = var3_int ^ 5940651;
                         break L13;
                       } else {
@@ -368,7 +374,7 @@ final class kc extends ck {
                       }
                     }
                     L14: {
-                      if (var6 != 10) {
+                      if ((var6 ^ -1) != -11) {
                         break L14;
                       } else {
                         var3_int = var3_int ^ 7257749;
@@ -386,11 +392,11 @@ final class kc extends ck {
                     var7 = var3_int;
                     var8 = 0;
                     L16: while (true) {
-                      if (var8 >= 5) {
+                      if (-6 >= (var8 ^ -1)) {
                         var10 = 0;
                         var8 = var10;
                         L17: while (true) {
-                          if (~param1.length >= ~var10) {
+                          if (param1.length <= var10) {
                             L18: {
                               if (1 == var4) {
                                 var5 = var5 + "-V1";
@@ -400,7 +406,7 @@ final class kc extends ck {
                               }
                             }
                             L19: {
-                              if (var4 == 2) {
+                              if ((var4 ^ -1) == -3) {
                                 var5 = var5 + "-V2";
                                 break L19;
                               } else {
@@ -408,7 +414,7 @@ final class kc extends ck {
                               }
                             }
                             L20: {
-                              if (var4 != 3) {
+                              if (-4 != (var4 ^ -1)) {
                                 break L20;
                               } else {
                                 var5 = var5 + "-V3";
@@ -439,15 +445,15 @@ final class kc extends ck {
                                 break L23;
                               }
                             }
-                            stackOut_132_0 = (String) var5;
-                            stackIn_133_0 = stackOut_132_0;
+                            stackOut_133_0 = (String) (var5);
+                            stackIn_134_0 = stackOut_133_0;
                             break L0;
                           } else {
                             L24: {
                               if (param1[var10] != 0) {
                                 break L24;
                               } else {
-                                if (var4 < 1) {
+                                if ((var4 ^ -1) > -2) {
                                   var4 = 1;
                                   break L24;
                                 } else {
@@ -468,10 +474,10 @@ final class kc extends ck {
                               }
                             }
                             L26: {
-                              if (param1[var10] != 2) {
+                              if (-3 != (param1[var10] ^ -1)) {
                                 break L26;
                               } else {
-                                if (var4 < 3) {
+                                if ((var4 ^ -1) > -4) {
                                   var4 = 3;
                                   break L26;
                                 } else {
@@ -480,7 +486,7 @@ final class kc extends ck {
                               }
                             }
                             L27: {
-                              if (param1[var10] != 3) {
+                              if (-4 != (param1[var10] ^ -1)) {
                                 break L27;
                               } else {
                                 if (var4 < 4) {
@@ -507,7 +513,7 @@ final class kc extends ck {
                               if (param1[var10] != 5) {
                                 break L29;
                               } else {
-                                if (var4 < 1) {
+                                if ((var4 ^ -1) > -2) {
                                   var4 = 1;
                                   break L29;
                                 } else {
@@ -519,7 +525,7 @@ final class kc extends ck {
                               if (param1[var10] != 6) {
                                 break L30;
                               } else {
-                                if (var4 < 2) {
+                                if (-3 < (var4 ^ -1)) {
                                   var4 = 2;
                                   break L30;
                                 } else {
@@ -531,7 +537,7 @@ final class kc extends ck {
                               if (param1[var10] != 7) {
                                 break L31;
                               } else {
-                                if (var4 < 3) {
+                                if (-4 < (var4 ^ -1)) {
                                   var4 = 3;
                                   break L31;
                                 } else {
@@ -543,7 +549,7 @@ final class kc extends ck {
                               if (param1[var10] != 8) {
                                 break L32;
                               } else {
-                                if (var4 < 4) {
+                                if ((var4 ^ -1) > -5) {
                                   var4 = 4;
                                   break L32;
                                 } else {
@@ -555,7 +561,7 @@ final class kc extends ck {
                               if (param1[var10] != 9) {
                                 break L33;
                               } else {
-                                if (var4 >= 5) {
+                                if ((var4 ^ -1) <= -6) {
                                   break L33;
                                 } else {
                                   var4 = 5;
@@ -564,10 +570,10 @@ final class kc extends ck {
                               }
                             }
                             L34: {
-                              if (param1[var10] != 10) {
+                              if ((param1[var10] ^ -1) != -11) {
                                 break L34;
                               } else {
-                                if (var4 < 1) {
+                                if ((var4 ^ -1) > -2) {
                                   var4 = 1;
                                   break L34;
                                 } else {
@@ -579,7 +585,7 @@ final class kc extends ck {
                               if (param1[var10] != 11) {
                                 break L35;
                               } else {
-                                if (var4 >= 2) {
+                                if ((var4 ^ -1) <= -3) {
                                   break L35;
                                 } else {
                                   var4 = 2;
@@ -591,7 +597,7 @@ final class kc extends ck {
                               if (param1[var10] != 12) {
                                 break L36;
                               } else {
-                                if (var4 >= 3) {
+                                if (-4 >= (var4 ^ -1)) {
                                   break L36;
                                 } else {
                                   var4 = 3;
@@ -612,10 +618,10 @@ final class kc extends ck {
                               }
                             }
                             L38: {
-                              if (param1[var10] != 14) {
+                              if ((param1[var10] ^ -1) != -15) {
                                 break L38;
                               } else {
-                                if (var4 >= 5) {
+                                if ((var4 ^ -1) <= -6) {
                                   break L38;
                                 } else {
                                   var4 = 5;
@@ -623,41 +629,40 @@ final class kc extends ck {
                                 }
                               }
                             }
-                            L39: {
-                              if (param1[var10] != 20) {
-                                break L39;
+                            if (-21 == (param1[var10] ^ -1)) {
+                              if (6 > var4) {
+                                var4 = 6;
+                                var10++;
+                                continue L17;
                               } else {
-                                if (6 <= var4) {
-                                  break L39;
-                                } else {
-                                  var4 = 6;
-                                  break L39;
-                                }
+                                var10++;
+                                continue L17;
                               }
+                            } else {
+                              var10++;
+                              continue L17;
                             }
-                            var10++;
-                            continue L17;
                           }
                         }
                       } else {
-                        L40: {
-                          L41: {
-                            if (var7 % 35 <= 0) {
-                              break L41;
+                        L39: {
+                          L40: {
+                            if (-1 <= (var7 % 35 ^ -1)) {
+                              break L40;
                             } else {
-                              if (var7 % 35 < 26) {
+                              if ((var7 % 35 ^ -1) > -27) {
                                 var5 = var5 + (char)(65 - -((var7 % 35 - 1) % 26));
-                                break L40;
+                                break L39;
                               } else {
-                                break L41;
+                                break L40;
                               }
                             }
                           }
-                          if (var7 % 35 >= 26) {
+                          if (-27 >= (var7 % 35 ^ -1)) {
                             var5 = var5 + (char)((-26 + var7 % 35) % 10 + 48);
-                            break L40;
+                            break L39;
                           } else {
-                            break L40;
+                            break L39;
                           }
                         }
                         var7 = var7 / 35;
@@ -672,20 +677,20 @@ final class kc extends ck {
                   }
                 }
               } else {
-                L42: {
+                L41: {
                   if (-1 == param0[var6]) {
-                    break L42;
+                    break L41;
                   } else {
                     var3_int = var3_int + param0[var6];
-                    break L42;
+                    break L41;
                   }
                 }
-                L43: {
-                  if (param0[var6] == 49) {
+                L42: {
+                  if ((param0[var6] ^ -1) == -50) {
                     var4 = 6;
-                    break L43;
+                    break L42;
                   } else {
-                    break L43;
+                    break L42;
                   }
                 }
                 var3_int = (var3_int ^ 10 * var3_int) & 8388607;
@@ -696,77 +701,73 @@ final class kc extends ck {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L44: {
+          L43: {
             var3 = decompiledCaughtException;
-            stackOut_134_0 = (RuntimeException) var3;
-            stackOut_134_1 = new StringBuilder().append("kc.A(");
-            stackIn_136_0 = stackOut_134_0;
-            stackIn_136_1 = stackOut_134_1;
-            stackIn_135_0 = stackOut_134_0;
-            stackIn_135_1 = stackOut_134_1;
+            stackOut_135_0 = (RuntimeException) (var3);
+            stackOut_135_1 = new StringBuilder().append("kc.A(");
+            stackIn_137_0 = stackOut_135_0;
+            stackIn_137_1 = stackOut_135_1;
+            stackIn_136_0 = stackOut_135_0;
+            stackIn_136_1 = stackOut_135_1;
             if (param0 == null) {
-              stackOut_136_0 = (RuntimeException) (Object) stackIn_136_0;
-              stackOut_136_1 = (StringBuilder) (Object) stackIn_136_1;
-              stackOut_136_2 = "null";
-              stackIn_137_0 = stackOut_136_0;
-              stackIn_137_1 = stackOut_136_1;
-              stackIn_137_2 = stackOut_136_2;
-              break L44;
+              stackOut_137_0 = (RuntimeException) ((Object) stackIn_137_0);
+              stackOut_137_1 = (StringBuilder) ((Object) stackIn_137_1);
+              stackOut_137_2 = "null";
+              stackIn_138_0 = stackOut_137_0;
+              stackIn_138_1 = stackOut_137_1;
+              stackIn_138_2 = stackOut_137_2;
+              break L43;
             } else {
-              stackOut_135_0 = (RuntimeException) (Object) stackIn_135_0;
-              stackOut_135_1 = (StringBuilder) (Object) stackIn_135_1;
-              stackOut_135_2 = "{...}";
-              stackIn_137_0 = stackOut_135_0;
-              stackIn_137_1 = stackOut_135_1;
-              stackIn_137_2 = stackOut_135_2;
-              break L44;
+              stackOut_136_0 = (RuntimeException) ((Object) stackIn_136_0);
+              stackOut_136_1 = (StringBuilder) ((Object) stackIn_136_1);
+              stackOut_136_2 = "{...}";
+              stackIn_138_0 = stackOut_136_0;
+              stackIn_138_1 = stackOut_136_1;
+              stackIn_138_2 = stackOut_136_2;
+              break L43;
             }
           }
-          L45: {
-            stackOut_137_0 = (RuntimeException) (Object) stackIn_137_0;
-            stackOut_137_1 = ((StringBuilder) (Object) stackIn_137_1).append(stackIn_137_2).append(',');
-            stackIn_139_0 = stackOut_137_0;
-            stackIn_139_1 = stackOut_137_1;
-            stackIn_138_0 = stackOut_137_0;
-            stackIn_138_1 = stackOut_137_1;
+          L44: {
+            stackOut_138_0 = (RuntimeException) ((Object) stackIn_138_0);
+            stackOut_138_1 = ((StringBuilder) (Object) stackIn_138_1).append(stackIn_138_2).append(',');
+            stackIn_140_0 = stackOut_138_0;
+            stackIn_140_1 = stackOut_138_1;
+            stackIn_139_0 = stackOut_138_0;
+            stackIn_139_1 = stackOut_138_1;
             if (param1 == null) {
-              stackOut_139_0 = (RuntimeException) (Object) stackIn_139_0;
-              stackOut_139_1 = (StringBuilder) (Object) stackIn_139_1;
-              stackOut_139_2 = "null";
-              stackIn_140_0 = stackOut_139_0;
-              stackIn_140_1 = stackOut_139_1;
-              stackIn_140_2 = stackOut_139_2;
-              break L45;
+              stackOut_140_0 = (RuntimeException) ((Object) stackIn_140_0);
+              stackOut_140_1 = (StringBuilder) ((Object) stackIn_140_1);
+              stackOut_140_2 = "null";
+              stackIn_141_0 = stackOut_140_0;
+              stackIn_141_1 = stackOut_140_1;
+              stackIn_141_2 = stackOut_140_2;
+              break L44;
             } else {
-              stackOut_138_0 = (RuntimeException) (Object) stackIn_138_0;
-              stackOut_138_1 = (StringBuilder) (Object) stackIn_138_1;
-              stackOut_138_2 = "{...}";
-              stackIn_140_0 = stackOut_138_0;
-              stackIn_140_1 = stackOut_138_1;
-              stackIn_140_2 = stackOut_138_2;
-              break L45;
+              stackOut_139_0 = (RuntimeException) ((Object) stackIn_139_0);
+              stackOut_139_1 = (StringBuilder) ((Object) stackIn_139_1);
+              stackOut_139_2 = "{...}";
+              stackIn_141_0 = stackOut_139_0;
+              stackIn_141_1 = stackOut_139_1;
+              stackIn_141_2 = stackOut_139_2;
+              break L44;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_140_0, stackIn_140_2 + ',' + 2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_141_0), stackIn_141_2 + ',' + param2 + ')');
         }
-        return stackIn_133_0;
+        return stackIn_134_0;
     }
 
     kc(long param0, int param1, byte[] param2) {
         try {
-            ((kc) this).field_p = param1;
-            ((kc) this).field_v = param0;
-            ((kc) this).field_B = param2;
+            this.field_p = param1;
+            this.field_v = param0;
+            this.field_B = param2;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "kc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "kc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = false;
         field_w = new byte[]{(byte) 1, (byte) 0, (byte) 0};
         field_u = "Choose a chassis for your sentinel configuration. Each chassis is equipped with a default set of weapons and modules.";

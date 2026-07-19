@@ -20,76 +20,74 @@ final class gh {
     final p a(int param0, int param1) {
         p var3 = null;
         byte[] var4 = null;
-        p var5 = null;
-        p var10 = null;
-        var3 = (p) ((gh) this).field_c.a(param1 + -32891, (long)param0);
+        p var7 = null;
+        var3 = (p) (this.field_c.a(param1 + -32891, (long)param0));
         if (param1 == 32767) {
           if (var3 == null) {
             L0: {
-              if (param0 >= 32768) {
-                var4 = ((gh) this).field_e.a(1, 100, param0 & 32767);
+              if ((param0 ^ -1) <= -32769) {
+                var4 = this.field_e.a(1, 100, param0 & 32767);
                 break L0;
               } else {
-                var4 = ((gh) this).field_d.a(1, 100, param0);
+                var4 = this.field_d.a(1, 100, param0);
                 break L0;
               }
             }
-            var10 = new p();
+            var7 = new p();
             if (var4 == null) {
               if (32768 <= param0) {
-                var10.d((byte) -91);
-                ((gh) this).field_c.a((long)param0, (Object) (Object) var10, (byte) 116);
-                return var10;
+                var7.d((byte) -91);
+                this.field_c.a((long)param0, var7, (byte) 116);
+                return var7;
               } else {
-                ((gh) this).field_c.a((long)param0, (Object) (Object) var10, (byte) 116);
-                return var10;
+                this.field_c.a((long)param0, var7, (byte) 116);
+                return var7;
               }
             } else {
-              var10.a(new fj(var4), (byte) 38);
+              var7.a(new fj(var4), (byte) 38);
               if (32768 <= param0) {
-                var10.d((byte) -91);
-                ((gh) this).field_c.a((long)param0, (Object) (Object) var10, (byte) 116);
-                return var10;
+                var7.d((byte) -91);
+                this.field_c.a((long)param0, var7, (byte) 116);
+                return var7;
               } else {
-                ((gh) this).field_c.a((long)param0, (Object) (Object) var10, (byte) 116);
-                return var10;
+                this.field_c.a((long)param0, var7, (byte) 116);
+                return var7;
               }
             }
           } else {
             return var3;
           }
         } else {
-          ((gh) this).field_e = null;
+          this.field_e = (la) null;
           if (var3 == null) {
             L1: {
-              if (param0 >= 32768) {
-                var4 = ((gh) this).field_e.a(1, 100, param0 & 32767);
+              if ((param0 ^ -1) <= -32769) {
+                var4 = this.field_e.a(1, 100, param0 & 32767);
                 break L1;
               } else {
-                var4 = ((gh) this).field_d.a(1, 100, param0);
+                var4 = this.field_d.a(1, 100, param0);
                 break L1;
               }
             }
-            var5 = new p();
-            var3 = var5;
+            var3 = new p();
             if (var4 != null) {
               var3.a(new fj(var4), (byte) 38);
               if (32768 > param0) {
-                ((gh) this).field_c.a((long)param0, (Object) (Object) var5, (byte) 116);
+                this.field_c.a((long)param0, var3, (byte) 116);
                 return var3;
               } else {
-                var5.d((byte) -91);
-                ((gh) this).field_c.a((long)param0, (Object) (Object) var5, (byte) 116);
+                var3.d((byte) -91);
+                this.field_c.a((long)param0, var3, (byte) 116);
                 return var3;
               }
             } else {
               if (32768 <= param0) {
-                var5.d((byte) -91);
-                ((gh) this).field_c.a((long)param0, (Object) (Object) var5, (byte) 116);
-                return var5;
+                var3.d((byte) -91);
+                this.field_c.a((long)param0, var3, (byte) 116);
+                return var3;
               } else {
-                ((gh) this).field_c.a((long)param0, (Object) (Object) var5, (byte) 116);
-                return var5;
+                this.field_c.a((long)param0, var3, (byte) 116);
+                return var3;
               }
             }
           } else {
@@ -103,15 +101,17 @@ final class gh {
     }
 
     public static void a(int param0) {
+        if (param0 <= 104) {
+            gh.b(29);
+            field_b = null;
+            field_a = null;
+            return;
+        }
         field_b = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
     }
 }

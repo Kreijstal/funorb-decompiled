@@ -19,19 +19,23 @@ final class dl {
 
     final static rk[] a(int param0) {
         int var2 = 0;
+        rk[] discarded$0 = null;
         int var3 = Chess.field_G;
         rk[] var1 = new rk[h.field_n];
         for (var2 = 0; var2 < h.field_n; var2++) {
             var1[var2] = new rk(cd.field_p, ek.field_a, be.field_a[var2], a.field_c[var2], wm.field_b[var2], b.field_c[var2], vk.field_d[var2], uh.field_r);
         }
         if (param0 != -15326) {
-            rk[] discarded$0 = dl.a(-33);
+            discarded$0 = dl.a(-33);
         }
         ch.k(4210752);
         return var1;
     }
 
     public static void b(int param0) {
+        if (param0 != 7) {
+            field_h = (String) null;
+        }
         field_m = null;
         field_h = null;
         field_j = null;
@@ -39,10 +43,6 @@ final class dl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "<%0> has lost connection.";
         field_m = "Only show lobby chat from my friends";
         field_n = -1;

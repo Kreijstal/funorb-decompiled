@@ -11,7 +11,7 @@ final class ek extends mc {
     static String field_s;
 
     ek(int param0) {
-        ((ek) this).field_q = param0;
+        this.field_q = param0;
     }
 
     public static void b(byte param0) {
@@ -36,14 +36,13 @@ final class ek extends mc {
     }
 
     final static hl a(boolean param0) {
+        if (!param0) {
+            return (hl) null;
+        }
         return v.field_x.field_Pb;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
         field_t = "white";
     }

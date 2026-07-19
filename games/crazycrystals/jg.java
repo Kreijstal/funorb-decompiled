@@ -48,10 +48,10 @@ final class jg {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = CrazyCrystals.field_B;
-        for (var5 = param3; var5 < ((jg) this).field_n; var5++) {
-            ((jg) this).field_L[var5] = (short)(((jg) this).field_L[var5] + param0);
-            ((jg) this).field_G[var5] = (short)(((jg) this).field_G[var5] + param2);
-            ((jg) this).field_b[var5] = (short)(((jg) this).field_b[var5] + param1);
+        for (var5 = param3; var5 < this.field_n; var5++) {
+            this.field_L[var5] = (short)(this.field_L[var5] + param0);
+            this.field_G[var5] = (short)(this.field_G[var5] + param2);
+            this.field_b[var5] = (short)(this.field_b[var5] + param1);
         }
         this.a(true);
     }
@@ -69,10 +69,10 @@ final class jg {
         int var11 = 0;
         int var12 = 0;
         var12 = CrazyCrystals.field_B;
-        if (((jg) this).field_O) {
+        if (this.field_O) {
           return;
         } else {
-          ((jg) this).field_O = true;
+          this.field_O = true;
           var2 = param0;
           var3 = 32767;
           var4 = 32767;
@@ -81,18 +81,18 @@ final class jg {
           var7 = -32768;
           var8 = 0;
           L0: while (true) {
-            if (((jg) this).field_n <= var8) {
-              ((jg) this).field_E = var6;
-              ((jg) this).field_x = var2;
-              ((jg) this).field_e = var7;
-              ((jg) this).field_p = var4;
-              ((jg) this).field_C = var3;
-              ((jg) this).field_j = var5;
+            if (this.field_n <= var8) {
+              this.field_E = var6;
+              this.field_x = var2;
+              this.field_e = var7;
+              this.field_p = var4;
+              this.field_C = var3;
+              this.field_j = var5;
               return;
             } else {
               L1: {
-                var9 = ((jg) this).field_L[var8];
-                var10 = ((jg) this).field_G[var8];
+                var9 = this.field_L[var8];
+                var10 = this.field_G[var8];
                 if (var10 <= var6) {
                   break L1;
                 } else {
@@ -125,7 +125,7 @@ final class jg {
                 }
               }
               L5: {
-                var11 = ((jg) this).field_b[var8];
+                var11 = this.field_b[var8];
                 if (var4 > var11) {
                   var4 = var11;
                   break L5;
@@ -152,10 +152,10 @@ final class jg {
         if (param0 != -30866) {
             return;
         }
-        for (var6 = 0; ((jg) this).field_n > var6; var6++) {
-            ((jg) this).field_L[var6] = (short)(param2 * ((jg) this).field_L[var6] / param3);
-            ((jg) this).field_G[var6] = (short)(param4 * ((jg) this).field_G[var6] / param3);
-            ((jg) this).field_b[var6] = (short)(param1 * ((jg) this).field_b[var6] / param3);
+        for (var6 = 0; this.field_n > var6; var6++) {
+            this.field_L[var6] = (short)(param2 * this.field_L[var6] / param3);
+            this.field_G[var6] = (short)(param4 * this.field_G[var6] / param3);
+            this.field_b[var6] = (short)(param1 * this.field_b[var6] / param3);
         }
         this.a(true);
     }
@@ -192,7 +192,7 @@ final class jg {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2_int = 0;
+            var2_int = -73 % ((param1 - 25) / 34);
             stackOut_0_0 = param0.a(false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -201,23 +201,23 @@ final class jg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_0 = (RuntimeException) (var2);
             stackOut_2_1 = new StringBuilder().append("jg.E(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -225,25 +225,24 @@ final class jg {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -38 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
 
     private final void a(boolean param0) {
-        ((jg) this).field_O = false;
+        this.field_O = false;
+        if (!param0) {
+            this.a(66, 120, -42, -98);
+        }
     }
 
     jg() {
-        ((jg) this).field_s = (byte) 0;
-        ((jg) this).field_O = false;
+        this.field_s = (byte) 0;
+        this.field_O = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = "If you do nothing the game will revert to normal view in <%0> seconds.";
     }
 }

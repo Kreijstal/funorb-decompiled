@@ -26,10 +26,20 @@ abstract class pe {
     }
 
     final static l a(int param0) {
-        if (!(null != qc.field_b)) {
+        L0: {
+          if (null == qc.field_b) {
             qc.field_b = new l(u.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, u.field_d.field_x, -1, 2147483647, true);
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        return qc.field_b;
+        if (param0 != 2147483647) {
+          field_i = (String) null;
+          return qc.field_b;
+        } else {
+          return qc.field_b;
+        }
     }
 
     abstract void a(int param0, int param1);
@@ -51,6 +61,7 @@ abstract class pe {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
@@ -82,6 +93,7 @@ abstract class pe {
                     L2: while (true) {
                       if (var9 <= param2) {
                         wj.a(rb.field_e);
+                        decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
                         param0[1].d(param2, param4);
@@ -90,36 +102,38 @@ abstract class pe {
                       }
                     }
                   } else {
-                    return;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 } else {
                   break L1;
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) runtimeException;
+            stackOut_11_0 = (RuntimeException) (runtimeException);
             stackOut_11_1 = new StringBuilder().append("pe.EA(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -127,15 +141,20 @@ abstract class pe {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Level not reached";
         field_g = 64;
         field_b = -1;

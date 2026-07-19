@@ -25,25 +25,21 @@ final class mk extends kd {
     }
 
     public static void a(byte param0) {
-        int var1 = 0;
+        int var1 = 110 % ((40 - param0) / 55);
         field_l = null;
         field_h = null;
     }
 
     mk(int param0, ij param1) {
         try {
-            ((mk) this).field_i = param0;
-            ((mk) this).field_k = param1;
+            this.field_i = param0;
+            this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "mk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "mk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Type your email address again to make sure it's correct";
         field_j = 0L;
     }

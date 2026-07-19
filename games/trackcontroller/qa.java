@@ -8,14 +8,15 @@ final class qa {
 
     public static void a(boolean param0) {
         field_a = null;
+        if (!param0) {
+            qa.a(true);
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "qa.A(";
         field_b = new int[8192];
     }

@@ -13,43 +13,43 @@ final class ak extends ga implements el {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var7 = Confined.field_J ? 1 : 0;
         try {
           L0: {
             if (param0 > 68) {
               var6_int = 0;
               L1: while (true) {
-                if (((ak) this).field_H.length <= var6_int) {
-                  if (((ak) this).field_Q[((ak) this).field_H.length] != param3) {
+                if (this.field_H.length <= var6_int) {
+                  if (this.field_Q[this.field_H.length] != param3) {
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
-                    ((ak) this).field_R.a((byte) -120);
+                    this.field_R.a((byte) -120);
                     return;
                   }
                 } else {
                   L2: {
-                    if (((ak) this).field_Q[var6_int] == param3) {
-                      ((ak) this).field_R.a(11579568, ((ak) this).field_H[var6_int]);
-                      var6_int++;
+                    if (this.field_Q[var6_int] == param3) {
+                      this.field_R.a(11579568, this.field_H[var6_int]);
                       break L2;
                     } else {
-                      var6_int++;
                       break L2;
                     }
                   }
@@ -58,38 +58,44 @@ final class ak extends ga implements el {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var6;
-            stackOut_15_1 = new StringBuilder().append("ak.FA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackOut_13_0 = (RuntimeException) (var6);
+            stackOut_13_1 = new StringBuilder().append("ak.FA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param3 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
               break L3;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param4 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -107,6 +113,7 @@ final class ak extends ga implements el {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
@@ -120,7 +127,7 @@ final class ak extends ga implements el {
         try {
           L0: {
             L1: {
-              ((ak) this).field_N.e(31);
+              this.field_N.e(31);
               if (param1 == null) {
                 break L1;
               } else {
@@ -128,40 +135,41 @@ final class ak extends ga implements el {
                   break L1;
                 } else {
                   var3_int = param1.length;
-                  ((ak) this).field_H = new String[var3_int];
+                  this.field_H = new String[var3_int];
                   var4_int = 0;
                   L2: while (true) {
                     if (var3_int <= var4_int) {
                       var4 = new hk(gm.field_cb, 0, 1);
-                      ((ak) this).field_Q = new rg[var3_int - -1];
+                      this.field_Q = new rg[var3_int - -1];
                       var5 = 0;
                       L3: while (true) {
                         if (var3_int <= var5) {
                           L4: {
-                            ((ak) this).field_Q[var3_int] = new rg(eh.field_A, (uk) this);
-                            ((ak) this).field_Q[var3_int].field_n = (fe) (Object) var4;
+                            this.field_Q[var3_int] = new rg(eh.field_A, (uk) (this));
+                            this.field_Q[var3_int].field_n = (fe) ((Object) var4);
                             if (param0 <= -126) {
                               break L4;
                             } else {
-                              field_L = null;
+                              field_L = (String[]) null;
                               break L4;
                             }
                           }
-                          ((ak) this).field_Q[var3_int].a(-114, 100, 20 + (var3_int - -1) * 16, 15, 0);
-                          ((ak) this).b((fj) (Object) ((ak) this).field_Q[var3_int], 10);
+                          this.field_Q[var3_int].a(-114, 100, 20 + (var3_int - -1) * 16, 15, 0);
+                          this.b(this.field_Q[var3_int], 10);
+                          decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
-                          ((ak) this).field_Q[var5] = new rg(((ak) this).field_H[var5], (uk) this);
-                          ((ak) this).field_Q[var5].field_n = (fe) (Object) var4;
-                          ((ak) this).field_Q[var5].field_C = field_O;
-                          ((ak) this).field_Q[var5].a(-125, 80, 20 + 16 * var5, 15, 0);
-                          ((ak) this).b((fj) (Object) ((ak) this).field_Q[var5], 10);
+                          this.field_Q[var5] = new rg(this.field_H[var5], (uk) (this));
+                          this.field_Q[var5].field_n = (fe) ((Object) var4);
+                          this.field_Q[var5].field_C = field_O;
+                          this.field_Q[var5].a(-125, 80, 20 + 16 * var5, 15, 0);
+                          this.b(this.field_Q[var5], 10);
                           var5++;
                           continue L3;
                         }
                       }
                     } else {
-                      ((ak) this).field_H[var4_int] = am.a(72, (CharSequence) (Object) param1[var4_int]).replace(' ', ' ');
+                      this.field_H[var4_int] = am.a(72, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }
@@ -169,30 +177,31 @@ final class ak extends ga implements el {
                 }
               }
             }
-            ((ak) this).field_H = null;
-            return;
+            this.field_H = null;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var3;
+            stackOut_16_0 = (RuntimeException) (var3);
             stackOut_16_1 = new StringBuilder().append("ak.A(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -200,7 +209,12 @@ final class ak extends ga implements el {
               break L5;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -218,6 +232,7 @@ final class ak extends ga implements el {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_5_0 = false;
         int stackOut_10_0 = 0;
@@ -235,48 +250,52 @@ final class ak extends ga implements el {
           L0: {
             var5_int = -101 / ((47 - param1) / 43);
             if (!super.a(param0, (byte) 99, param2, param3)) {
-              if (param2 == 98) {
-                stackOut_5_0 = ((ak) this).c(param0, 32);
+              if ((param2 ^ -1) == -99) {
+                stackOut_5_0 = this.c(param0, 32);
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (99 != param2) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_8_0 = ((ak) this).a(17731, param0);
+                  stackOut_8_0 = this.a(17731, param0);
                   stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               }
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var5;
+            stackOut_12_0 = (RuntimeException) (var5);
             stackOut_12_1 = new StringBuilder().append("ak.Q(");
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L1;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -284,13 +303,25 @@ final class ak extends ga implements el {
               break L1;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_11_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_9_0;
+            } else {
+              return stackIn_11_0 != 0;
+            }
+          }
+        }
     }
 
     public static void j(int param0) {
-        int var1 = 100;
+        int var1 = -100 / ((param0 - -50) / 48);
         field_L = null;
         field_P = null;
         field_O = null;
@@ -299,9 +330,9 @@ final class ak extends ga implements el {
     ak(pg param0) {
         super(0, 0, 0, 0, (fe) null);
         try {
-            ((ak) this).field_R = param0;
+            this.field_R = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ak.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "ak.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -312,7 +343,7 @@ final class ak extends ga implements el {
         double var13 = 0.0;
         try {
             if (param3 != 4825) {
-                Object var15 = null;
+                mn var15 = (mn) null;
                 ak.a(1.1248923326487368, (double[]) null, (dj) null, -35, (oi) null, (mn) null);
             }
             var7_double = param2.field_E + param2.field_C * param1[9];
@@ -323,13 +354,15 @@ final class ak extends ga implements el {
             param4.field_o = var9;
             param4.field_t = var7_double;
             param4.field_u = var13 * 25.0;
-            param5.a((rk) (Object) param4, (byte) -65);
+            param5.a((rk) (param4), (byte) -65);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ak.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "ak.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
+        int discarded$2 = 0;
+        int discarded$3 = 0;
         ok var5 = null;
         super.a(param0, param1, (byte) 97, param3);
         if (param2 >= 36) {
@@ -338,8 +371,8 @@ final class ak extends ga implements el {
           } else {
             L0: {
               var5 = gm.field_cb;
-              if (((ak) this).field_H != null) {
-                int discarded$2 = var5.a(qd.field_a, ((ak) this).field_q + param3, ((ak) this).field_m + param0, ((ak) this).field_F, 20, 16777215, -1, 0, 0, var5.field_C + var5.field_D);
+              if (this.field_H != null) {
+                discarded$2 = var5.a(qd.field_a, this.field_q + param3, this.field_m + param0, this.field_F, 20, 16777215, -1, 0, 0, var5.field_C + var5.field_D);
                 break L0;
               } else {
                 break L0;
@@ -348,14 +381,14 @@ final class ak extends ga implements el {
             return;
           }
         } else {
-          field_O = null;
+          field_O = (String) null;
           if (param1 != 0) {
             return;
           } else {
             L1: {
               var5 = gm.field_cb;
-              if (((ak) this).field_H != null) {
-                int discarded$3 = var5.a(qd.field_a, ((ak) this).field_q + param3, ((ak) this).field_m + param0, ((ak) this).field_F, 20, 16777215, -1, 0, 0, var5.field_C + var5.field_D);
+              if (this.field_H != null) {
+                discarded$3 = var5.a(qd.field_a, this.field_q + param3, this.field_m + param0, this.field_F, 20, 16777215, -1, 0, 0, var5.field_C + var5.field_D);
                 break L1;
               } else {
                 break L1;
@@ -368,20 +401,16 @@ final class ak extends ga implements el {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-            param1.removeMouseListener((java.awt.event.MouseListener) (Object) tf.field_a);
-            param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) tf.field_a);
-            param1.removeFocusListener((java.awt.event.FocusListener) (Object) tf.field_a);
-            pe.field_n = 0;
+            param1.removeMouseListener(tf.field_a);
+            param1.removeMouseMotionListener(tf.field_a);
+            param1.removeFocusListener(tf.field_a);
+            pe.field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ak.B(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "ak.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_P = "Loading models";
         field_L = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
         field_O = "Use this alternative as your account name";

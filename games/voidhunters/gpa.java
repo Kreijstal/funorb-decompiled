@@ -7,24 +7,23 @@ final class gpa extends za {
 
     public static void a(int param0) {
         field_f = null;
+        if (param0 > -89) {
+            field_f = (String) null;
+        }
     }
 
     final void a(boolean param0) {
-        ((gpa) this).field_e.a();
+        this.field_e.a();
         if (param0) {
-            ((gpa) this).a(true);
+            this.a(true);
         }
     }
 
     gpa(int param0) {
-        ((gpa) this).field_e = new jaclib.memory.heap.NativeHeap(param0);
+        this.field_e = new jaclib.memory.heap.NativeHeap(param0);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Off";
     }
 }

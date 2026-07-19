@@ -96,20 +96,28 @@ final class md extends gj {
     public static void d(int param0) {
         field_q = null;
         field_v = null;
-        field_u = null;
-        field_t = null;
+        if (param0 > -50) {
+          field_u = (String) null;
+          field_u = null;
+          field_t = null;
+          return;
+        } else {
+          field_u = null;
+          field_t = null;
+          return;
+        }
     }
 
     final int c(byte param0) {
         if (param0 <= -100) {
-          if (((md) this).field_n) {
+          if (this.field_n) {
             return 0;
           } else {
             return 100;
           }
         } else {
-          ((md) this).field_s = null;
-          if (((md) this).field_n) {
+          this.field_s = (byte[]) null;
+          if (this.field_n) {
             return 0;
           } else {
             return 100;
@@ -120,25 +128,21 @@ final class md extends gj {
     final byte[] d(byte param0) {
         if (param0 >= -106) {
             field_w = 85;
-            if (!(!((md) this).field_n)) {
+            if (!(!this.field_n)) {
                 throw new RuntimeException();
             }
-            return ((md) this).field_s;
+            return this.field_s;
         }
-        if (!(!((md) this).field_n)) {
+        if (!(!this.field_n)) {
             throw new RuntimeException();
         }
-        return ((md) this).field_s;
+        return this.field_s;
     }
 
     md() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = "Sound ";
         field_w = 256;
         field_t = new bc();

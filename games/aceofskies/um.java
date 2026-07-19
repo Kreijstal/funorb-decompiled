@@ -34,14 +34,14 @@ final class um extends rf {
         var7 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
-            ((um) this).field_i.b(param0, param1, param2);
-            var6 = (ft) (Object) ((um) this).field_k.d(268435455);
+            this.field_i.b(param0, param1, param2);
+            var6 = (ft) ((Object) this.field_k.d(268435455));
             L1: while (true) {
               if (var6 == null) {
                 break L0;
               } else {
                 L2: {
-                  if (((um) this).field_l.a(0, var6)) {
+                  if (this.field_l.a(0, var6)) {
                     break L2;
                   } else {
                     var5 = param2;
@@ -55,7 +55,7 @@ final class um extends rf {
                         this.a(var6, (byte) 121, var6.field_i, var4_int - -var5, param0, var4_int);
                         var4_int = var4_int + var6.field_i;
                         var5 = var5 - var6.field_i;
-                        if (((um) this).field_l.a(var5, var4_int, false, var6, param0)) {
+                        if (this.field_l.a(var5, var4_int, false, var6, param0)) {
                           break L2;
                         } else {
                           continue L3;
@@ -64,7 +64,7 @@ final class um extends rf {
                     }
                   }
                 }
-                var6 = (ft) (Object) ((um) this).field_k.b((byte) 103);
+                var6 = (ft) ((Object) this.field_k.b((byte) 103));
                 continue L1;
               }
             }
@@ -73,23 +73,23 @@ final class um extends rf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_0 = (RuntimeException) (var4);
             stackOut_12_1 = new StringBuilder().append("um.M(");
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -97,7 +97,7 @@ final class um extends rf {
               break L4;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -139,37 +139,37 @@ final class um extends rf {
         try {
           L0: {
             L1: {
-              if ((4 & ((um) this).field_l.field_G[param2.field_m]) == 0) {
+              if ((4 & this.field_l.field_G[param2.field_m] ^ -1) == param0) {
                 break L1;
               } else {
                 if (0 <= param2.field_p) {
                   break L1;
                 } else {
-                  var4_int = ((um) this).field_l.field_m[param2.field_m] / tk.field_f;
+                  var4_int = this.field_l.field_m[param2.field_m] / tk.field_f;
                   var5 = (var4_int + 1048575 - param2.field_t) / var4_int;
                   param2.field_t = var4_int * param1 + param2.field_t & 1048575;
                   if (var5 <= param1) {
                     L2: {
-                      if (((um) this).field_l.field_z[param2.field_m] != 0) {
+                      if (this.field_l.field_z[param2.field_m] != 0) {
                         L3: {
                           param2.field_e = su.a(param2.field_x, param2.field_e.l(), 0, param2.field_e.g());
-                          stackOut_6_0 = ((um) this).field_l;
-                          stackOut_6_1 = (ft) param2;
+                          stackOut_6_0 = this.field_l;
+                          stackOut_6_1 = (ft) (param2);
                           stackIn_8_0 = stackOut_6_0;
                           stackIn_8_1 = stackOut_6_1;
                           stackIn_7_0 = stackOut_6_0;
                           stackIn_7_1 = stackOut_6_1;
-                          if (param2.field_y.field_n[param2.field_n] >= 0) {
-                            stackOut_8_0 = (hk) (Object) stackIn_8_0;
-                            stackOut_8_1 = (ft) (Object) stackIn_8_1;
+                          if (-1 >= (param2.field_y.field_n[param2.field_n] ^ -1)) {
+                            stackOut_8_0 = (hk) ((Object) stackIn_8_0);
+                            stackOut_8_1 = (ft) ((Object) stackIn_8_1);
                             stackOut_8_2 = 0;
                             stackIn_9_0 = stackOut_8_0;
                             stackIn_9_1 = stackOut_8_1;
                             stackIn_9_2 = stackOut_8_2;
                             break L3;
                           } else {
-                            stackOut_7_0 = (hk) (Object) stackIn_7_0;
-                            stackOut_7_1 = (ft) (Object) stackIn_7_1;
+                            stackOut_7_0 = (hk) ((Object) stackIn_7_0);
+                            stackOut_7_1 = (ft) ((Object) stackIn_7_1);
                             stackOut_7_2 = 1;
                             stackIn_9_0 = stackOut_7_0;
                             stackIn_9_1 = stackOut_7_1;
@@ -185,7 +185,7 @@ final class um extends rf {
                       }
                     }
                     L4: {
-                      if (param2.field_y.field_n[param2.field_n] >= 0) {
+                      if ((param2.field_y.field_n[param2.field_n] ^ -1) <= -1) {
                         break L4;
                       } else {
                         param2.field_e.d(-1);
@@ -207,23 +207,23 @@ final class um extends rf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var4;
-            stackOut_15_1 = new StringBuilder().append("um.C(").append(-1).append(',').append(param1).append(',');
+            stackOut_15_0 = (RuntimeException) (var4);
+            stackOut_15_1 = new StringBuilder().append("um.C(").append(param0).append(',').append(param1).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param2 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -231,7 +231,7 @@ final class um extends rf {
               break L5;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
     }
 
@@ -240,6 +240,10 @@ final class um extends rf {
     }
 
     final static s a(boolean param0, int param1) {
+        int discarded$4 = 0;
+        String discarded$5 = null;
+        int discarded$6 = 0;
+        String discarded$7 = null;
         dl var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -264,7 +268,7 @@ final class um extends rf {
           var2 = var8;
           var3 = var8.g(39);
           m.field_f = 127 & var3;
-          if ((var3 & 128) == 0) {
+          if (-1 == (var3 & 128 ^ -1)) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -289,7 +293,7 @@ final class um extends rf {
           }
         }
         L2: {
-          if (1 != var8.g(-89)) {
+          if (param1 != var8.g(-89)) {
             stackOut_8_0 = 0;
             stackIn_9_0 = stackOut_8_0;
             break L2;
@@ -301,7 +305,7 @@ final class um extends rf {
         }
         L3: {
           var4 = stackIn_9_0;
-          ku.field_g = var8.h(-17883);
+          ku.field_g = var8.h(param1 + -17884);
           if (var4 != 0) {
             tn.field_t = var8.h(-17883);
             break L3;
@@ -312,13 +316,13 @@ final class um extends rf {
         }
         L4: {
           if (1 == m.field_f) {
-            int discarded$4 = var8.i((byte) 0);
-            String discarded$5 = var8.h(-17883);
+            discarded$4 = var8.i((byte) 0);
+            discarded$5 = var8.h(-17883);
             break L4;
           } else {
-            if (m.field_f == 4) {
-              int discarded$6 = var8.i((byte) 0);
-              String discarded$7 = var8.h(-17883);
+            if (-5 == (m.field_f ^ -1)) {
+              discarded$6 = var8.i((byte) 0);
+              discarded$7 = var8.h(-17883);
               break L4;
             } else {
               break L4;
@@ -332,13 +336,13 @@ final class um extends rf {
               L6: {
                 var9 = uk.field_f.a(var5, -43);
                 ep.field_x = var9.c((byte) 1);
-                if (!tn.field_t.equals((Object) (Object) fj.field_a)) {
+                if (!tn.field_t.equals(fj.field_a)) {
                   stackOut_22_0 = var9.field_t;
                   stackIn_23_0 = stackOut_22_0;
                   break L6;
                 } else {
                   stackOut_21_0 = null;
-                  stackIn_23_0 = (int[]) (Object) stackOut_21_0;
+                  stackIn_23_0 = (int[]) ((Object) stackOut_21_0);
                   break L6;
                 }
               }
@@ -348,28 +352,28 @@ final class um extends rf {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            v.a("CC1", (byte) -52, (Throwable) (Object) var6);
+            v.a("CC1", (byte) -52, (Throwable) ((Object) var6));
             ku.field_e = null;
             ep.field_x = null;
             return new s(param0);
           }
           return new s(param0);
         } else {
-          ep.field_x = ko.a((rb) (Object) var8, 80, (byte) -114);
+          ep.field_x = ko.a(var8, 80, (byte) -114);
           ku.field_e = null;
           return new s(param0);
         }
     }
 
     final rf b() {
-        ft var1 = (ft) (Object) ((um) this).field_k.d(268435455);
+        ft var1 = (ft) ((Object) this.field_k.d(268435455));
         if (var1 == null) {
             return null;
         }
         if (!(var1.field_e == null)) {
-            return (rf) (Object) var1.field_e;
+            return (rf) ((Object) var1.field_e);
         }
-        return ((um) this).a();
+        return this.a();
     }
 
     final void a(int param0) {
@@ -377,12 +381,12 @@ final class um extends rf {
         ft var3 = null;
         int var4 = 0;
         var4 = AceOfSkies.field_G ? 1 : 0;
-        ((um) this).field_i.a(param0);
-        var3 = (ft) (Object) ((um) this).field_k.d(268435455);
+        this.field_i.a(param0);
+        var3 = (ft) ((Object) this.field_k.d(268435455));
         L0: while (true) {
           if (var3 != null) {
             L1: {
-              if (!((um) this).field_l.a(0, var3)) {
+              if (!this.field_l.a(0, var3)) {
                 var2 = param0;
                 L2: while (true) {
                   if (var3.field_i >= var2) {
@@ -392,7 +396,7 @@ final class um extends rf {
                   } else {
                     this.a(-1, var3.field_i, var3);
                     var2 = var2 - var3.field_i;
-                    if (((um) this).field_l.a(var2, 0, false, var3, (int[]) null)) {
+                    if (this.field_l.a(var2, 0, false, var3, (int[]) null)) {
                       break L1;
                     } else {
                       continue L2;
@@ -403,7 +407,7 @@ final class um extends rf {
                 break L1;
               }
             }
-            var3 = (ft) (Object) ((um) this).field_k.b((byte) 103);
+            var3 = (ft) ((Object) this.field_k.b((byte) 103));
             continue L0;
           } else {
             return;
@@ -415,16 +419,19 @@ final class um extends rf {
         ft var1_ref = null;
         int var2 = AceOfSkies.field_G ? 1 : 0;
         do {
-            var1_ref = (ft) (Object) ((um) this).field_k.b((byte) 103);
+            var1_ref = (ft) ((Object) this.field_k.b((byte) 103));
             if (var1_ref == null) {
                 return null;
             }
         } while (null == var1_ref.field_e);
-        return (rf) (Object) var1_ref.field_e;
+        return (rf) ((Object) var1_ref.field_e);
     }
 
     public static void a(byte param0) {
         field_n = null;
+        if (param0 <= 82) {
+            return;
+        }
         field_m = null;
     }
 
@@ -432,32 +439,63 @@ final class um extends rf {
         int var1 = 0;
         int var2 = 0;
         var2 = AceOfSkies.field_G ? 1 : 0;
-        ss.field_t = false;
-        uf.field_e = null;
-        if (!nf.field_a) {
-          var1 = un.field_c;
-          if (var1 > 0) {
-            if (var1 == 1) {
-              uf.field_e = qk.field_f;
-              uf.field_e = od.a(new CharSequence[3], 3);
-              ml.field_m.h((byte) 127);
-              nj.c(98);
-              return;
+        if (param0 == 1) {
+          ss.field_t = false;
+          uf.field_e = null;
+          if (!nf.field_a) {
+            var1 = un.field_c;
+            if ((var1 ^ -1) < -1) {
+              if (var1 == 1) {
+                uf.field_e = qk.field_f;
+                uf.field_e = od.a(new CharSequence[]{(CharSequence) ((Object) uf.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.field_f)}, 3);
+                ml.field_m.h((byte) 127);
+                nj.c(98);
+                return;
+              } else {
+                uf.field_e = sn.a(field_n, 121, new String[]{Integer.toString(var1)});
+                uf.field_e = od.a(new CharSequence[]{(CharSequence) ((Object) uf.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.field_f)}, 3);
+                ml.field_m.h((byte) 127);
+                nj.c(98);
+                return;
+              }
             } else {
-              uf.field_e = sn.a(field_n, 121, new String[1]);
-              uf.field_e = od.a(new CharSequence[3], 3);
               ml.field_m.h((byte) 127);
               nj.c(98);
               return;
             }
           } else {
-            ml.field_m.h((byte) 127);
-            nj.c(98);
+            ml.field_m.l(88);
             return;
           }
         } else {
-          ml.field_m.l(88);
-          return;
+          field_n = (String) null;
+          ss.field_t = false;
+          uf.field_e = null;
+          if (!nf.field_a) {
+            var1 = un.field_c;
+            if ((var1 ^ -1) < -1) {
+              if (var1 == 1) {
+                uf.field_e = qk.field_f;
+                uf.field_e = od.a(new CharSequence[]{(CharSequence) ((Object) uf.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.field_f)}, 3);
+                ml.field_m.h((byte) 127);
+                nj.c(98);
+                return;
+              } else {
+                uf.field_e = sn.a(field_n, 121, new String[]{Integer.toString(var1)});
+                uf.field_e = od.a(new CharSequence[]{(CharSequence) ((Object) uf.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.field_f)}, 3);
+                ml.field_m.h((byte) 127);
+                nj.c(98);
+                return;
+              }
+            } else {
+              ml.field_m.h((byte) 127);
+              nj.c(98);
+              return;
+            }
+          } else {
+            ml.field_m.l(88);
+            return;
+          }
         }
     }
 
@@ -519,13 +557,13 @@ final class um extends rf {
         try {
           L0: {
             L1: {
-              if ((4 & ((um) this).field_l.field_G[param0.field_m]) == 0) {
+              if (-1 == (4 & this.field_l.field_G[param0.field_m] ^ -1)) {
                 break L1;
               } else {
                 if (param0.field_p >= 0) {
                   break L1;
                 } else {
-                  var7_int = ((um) this).field_l.field_m[param0.field_m] / tk.field_f;
+                  var7_int = this.field_l.field_m[param0.field_m] / tk.field_f;
                   L2: while (true) {
                     var8 = (-param0.field_t + (var7_int + 1048575)) / var7_int;
                     if (var8 > param2) {
@@ -548,26 +586,26 @@ final class um extends rf {
                       }
                       L4: {
                         var11 = param0.field_e;
-                        if (((um) this).field_l.field_z[param0.field_m] != 0) {
+                        if (this.field_l.field_z[param0.field_m] != 0) {
                           L5: {
                             param0.field_e = su.a(param0.field_x, var11.l(), 0, var11.g());
-                            stackOut_10_0 = ((um) this).field_l;
-                            stackOut_10_1 = (ft) param0;
+                            stackOut_10_0 = this.field_l;
+                            stackOut_10_1 = (ft) (param0);
                             stackIn_12_0 = stackOut_10_0;
                             stackIn_12_1 = stackOut_10_1;
                             stackIn_11_0 = stackOut_10_0;
                             stackIn_11_1 = stackOut_10_1;
                             if (0 <= param0.field_y.field_n[param0.field_n]) {
-                              stackOut_12_0 = (hk) (Object) stackIn_12_0;
-                              stackOut_12_1 = (ft) (Object) stackIn_12_1;
+                              stackOut_12_0 = (hk) ((Object) stackIn_12_0);
+                              stackOut_12_1 = (ft) ((Object) stackIn_12_1);
                               stackOut_12_2 = 0;
                               stackIn_13_0 = stackOut_12_0;
                               stackIn_13_1 = stackOut_12_1;
                               stackIn_13_2 = stackOut_12_2;
                               break L5;
                             } else {
-                              stackOut_11_0 = (hk) (Object) stackIn_11_0;
-                              stackOut_11_1 = (ft) (Object) stackIn_11_1;
+                              stackOut_11_0 = (hk) ((Object) stackIn_11_0);
+                              stackOut_11_1 = (ft) ((Object) stackIn_11_1);
                               stackOut_11_2 = 1;
                               stackIn_13_0 = stackOut_11_0;
                               stackIn_13_1 = stackOut_11_1;
@@ -596,7 +634,7 @@ final class um extends rf {
                       if (!var11.j()) {
                         continue L2;
                       } else {
-                        ((um) this).field_i.b((rf) (Object) var11);
+                        this.field_i.b(var11);
                         continue L2;
                       }
                     }
@@ -612,23 +650,23 @@ final class um extends rf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var7 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var7;
+            stackOut_22_0 = (RuntimeException) (var7);
             stackOut_22_1 = new StringBuilder().append("um.F(");
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -637,23 +675,23 @@ final class um extends rf {
             }
           }
           L8: {
-            stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+            stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
             stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param4 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L8;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -661,25 +699,21 @@ final class um extends rf {
               break L8;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param5 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param5 + ')');
         }
     }
 
     um(hk param0) {
-        ((um) this).field_k = new kp();
-        ((um) this).field_i = new tp();
+        this.field_k = new kp();
+        this.field_i = new tp();
         try {
-            ((um) this).field_l = param0;
+            this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "um.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "um.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = true;
         field_n = "You have <%0> unread messages!";
     }

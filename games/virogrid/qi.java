@@ -66,7 +66,7 @@ final class qi {
               } else {
                 var3_long = -af.field_e + hc.a(param0 + -4781);
                 var2 = (int)((-var3_long + 10999L) / 1000L);
-                if (var2 >= 0) {
+                if ((var2 ^ -1) <= -1) {
                   break L2;
                 } else {
                   var2 = 0;
@@ -120,7 +120,7 @@ final class qi {
                         } else {
                           if (var3 < var7 + 6) {
                             L8: {
-                              if (-6 + (var3 - -rj.field_d.length) + -var7 >= 0) {
+                              if ((-6 + (var3 - -rj.field_d.length) + -var7 ^ -1) <= -1) {
                                 stackOut_23_0 = rj.field_d[var3 - (6 - (rj.field_d.length + -var7))];
                                 stackIn_24_0 = stackOut_23_0;
                                 break L8;
@@ -185,7 +185,7 @@ final class qi {
                   stackOut_37_0 = 1492912648;
                   stackIn_39_0 = stackOut_37_0;
                   stackIn_38_0 = stackOut_37_0;
-                  if (var4 < 0) {
+                  if ((var4 ^ -1) > -1) {
                     stackOut_39_0 = stackIn_39_0;
                     stackOut_39_1 = 0;
                     stackIn_40_0 = stackOut_39_0;
@@ -201,7 +201,7 @@ final class qi {
                 }
                 L13: {
                   var7 = gl.a(stackIn_40_0, stackIn_40_1 != 0, var6);
-                  var8 = hn.field_q - (var7 >> 1);
+                  var8 = hn.field_q - (var7 >> -590538751);
                   if (var4 < 0) {
                     break L13;
                   } else {
@@ -220,7 +220,7 @@ final class qi {
                       var9 = stackIn_44_0;
                       var1_int = var1_int + oh.field_d;
                       if (var9 != null) {
-                        var9.a(var8 + -eh.field_d, (bj.field_j << 1) + mi.field_c, false, var7 - -(eh.field_d << 1), var1_int);
+                        var9.a(var8 + -eh.field_d, (bj.field_j << 2145471137) + mi.field_c, false, var7 - -(eh.field_d << 476439009), var1_int);
                         break L15;
                       } else {
                         break L15;
@@ -249,7 +249,7 @@ final class qi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "qi.A(" + param0 + ')');
+          throw kg.a((Throwable) ((Object) var1), "qi.A(" + param0 + ')');
         }
     }
 
@@ -264,10 +264,6 @@ final class qi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Your friend list is full. Max of 100 for free users, and 200 for members.";
     }
 }

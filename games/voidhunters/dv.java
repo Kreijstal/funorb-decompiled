@@ -11,7 +11,7 @@ final class dv implements ntb {
 
     public final void b(byte param0, tv param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
+        tv var4 = null;
         dv var6 = null;
         dv var7 = null;
         RuntimeException stackIn_4_0 = null;
@@ -32,15 +32,15 @@ final class dv implements ntb {
         String stackOut_4_2 = null;
         try {
           L0: {
-            var6 = (dv) (Object) param1;
+            var6 = (dv) ((Object) param1);
             var7 = var6;
-            var7.field_a = ((dv) this).field_a;
-            var7.field_e = ((dv) this).field_e;
+            var7.field_a = this.field_a;
+            var7.field_e = this.field_e;
             if (param0 > 54) {
               break L0;
             } else {
-              var4 = null;
-              ((dv) this).b((byte) -57, (tv) null);
+              var4 = (tv) null;
+              this.b((byte) -57, (tv) null);
               return;
             }
           }
@@ -48,23 +48,23 @@ final class dv implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var3;
+            stackOut_3_0 = (RuntimeException) (var3);
             stackOut_3_1 = new StringBuilder().append("dv.D(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -72,18 +72,26 @@ final class dv implements ntb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        jt.a(param5, 529, param1, (byte) -122, 31, 255, param0);
+        if (param3 < 97) {
+          dv.a((byte) -23);
+          jt.a(param5, param4, param1, (byte) -122, 31, param2, param0);
+          return;
+        } else {
+          jt.a(param5, param4, param1, (byte) -122, 31, param2, param0);
+          return;
+        }
     }
 
     public final void a(tv param0, int param1) {
+        boolean discarded$2 = false;
         RuntimeException var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        tv var5 = null;
         dv var6 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -104,28 +112,28 @@ final class dv implements ntb {
         try {
           L0: {
             L1: {
-              var6 = (dv) (Object) param0;
+              var6 = (dv) ((Object) param0);
               if (param1 <= -19) {
                 break L1;
               } else {
-                var5 = null;
-                boolean discarded$2 = ((dv) this).a((byte) -95, (tv) null);
+                var5 = (tv) null;
+                discarded$2 = this.a((byte) -95, (tv) null);
                 break L1;
               }
             }
             L2: {
               var4 = 0;
-              if (var6.field_e != ((dv) this).field_e) {
+              if (var6.field_e != this.field_e) {
                 var4 = 1;
-                System.out.println("int option has changed. before=" + var6.field_e + ", now=" + ((dv) this).field_e);
+                System.out.println("int option has changed. before=" + var6.field_e + ", now=" + this.field_e);
                 break L2;
               } else {
                 break L2;
               }
             }
             L3: {
-              if (var6.field_a != ((dv) this).field_a) {
-                System.out.println("boolean unvote has changed. before=" + var6.field_a + ", now=" + ((dv) this).field_a);
+              if (var6.field_a != this.field_a) {
+                System.out.println("boolean unvote has changed. before=" + var6.field_a + ", now=" + this.field_a);
                 var4 = 1;
                 break L3;
               } else {
@@ -143,23 +151,23 @@ final class dv implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_0 = (RuntimeException) (var3);
             stackOut_11_1 = new StringBuilder().append("dv.F(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -167,20 +175,21 @@ final class dv implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
         }
     }
 
     public final void a(faa param0, boolean param1) {
         try {
-            ((dv) this).field_e = param0.i(0, 32);
-            ((dv) this).field_a = kv.a(param1, param0);
+            this.field_e = param0.i(0, 32);
+            this.field_a = kv.a(param1, param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "dv.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "dv.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void b(faa param0, int param1) {
+        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -201,12 +210,12 @@ final class dv implements ntb {
         try {
           L0: {
             L1: {
-              param0.a(-632, ((dv) this).field_e, 32);
-              boolean discarded$2 = vq.a(param0, -70, ((dv) this).field_a);
+              param0.a(-632, this.field_e, 32);
+              discarded$2 = vq.a(param0, -70, this.field_a);
               if (param1 < -109) {
                 break L1;
               } else {
-                ((dv) this).field_a = false;
+                this.field_a = false;
                 break L1;
               }
             }
@@ -216,23 +225,23 @@ final class dv implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("dv.B(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -240,7 +249,7 @@ final class dv implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -280,13 +289,13 @@ final class dv implements ntb {
           L0: {
             L1: {
               L2: {
-                var3 = (dv) (Object) param1;
+                var3 = (dv) ((Object) param1);
                 var4 = 9 % ((param0 - 22) / 59);
-                if (((dv) this).field_e != var3.field_e) {
+                if (this.field_e != var3.field_e) {
                   break L2;
                 } else {
                   L3: {
-                    stackOut_1_0 = ((dv) this).field_a;
+                    stackOut_1_0 = this.field_a;
                     stackIn_3_0 = stackOut_1_0;
                     stackIn_2_0 = stackOut_1_0;
                     if (var3.field_a) {
@@ -322,23 +331,23 @@ final class dv implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_0 = (RuntimeException) (var3_ref);
             stackOut_8_1 = new StringBuilder().append("dv.C(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -346,13 +355,19 @@ final class dv implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
 
     public static void a(byte param0) {
         field_d = null;
+        if (param0 != -98) {
+            field_c = (ij) null;
+            field_b = null;
+            field_c = null;
+            return;
+        }
         field_b = null;
         field_c = null;
     }
@@ -361,15 +376,11 @@ final class dv implements ntb {
     }
 
     dv(int param0, boolean param1) {
-        ((dv) this).field_e = param0;
-        ((dv) this).field_a = param1 ? true : false;
+        this.field_e = param0;
+        this.field_a = param1 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new ij();
         field_d = "Fastest";
     }

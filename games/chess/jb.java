@@ -10,25 +10,42 @@ abstract class jb implements vb {
     static int field_f;
 
     final static int a(byte param0, int param1, boolean param2, int param3) {
+        if (param0 <= 51) {
+            return 108;
+        }
         return ve.f((byte) -76);
     }
 
     final static void a(byte param0) {
-        int var1 = ug.field_b * ug.field_b;
-        int var2 = var1 - da.field_F * da.field_F;
-        int var3 = cb.field_a - -(var2 * (-cb.field_a + Chess.field_E) / var1);
-        uh.field_m.a(fl.field_x, 640, -2147483648, 120, var3);
-        ga.a(5, 640, 0, 22478, ri.field_g, -24 + Chess.field_E, qc.field_e);
+        int var1 = 0;
+        int var2 = 0;
+        int var3 = 0;
+        if (param0 != -89) {
+          field_c = (String) null;
+          var1 = ug.field_b * ug.field_b;
+          var2 = var1 - da.field_F * da.field_F;
+          var3 = cb.field_a - -(var2 * (-cb.field_a + Chess.field_E) / var1);
+          uh.field_m.a(fl.field_x, 640, -2147483648, 120, var3);
+          ga.a(5, 640, 0, 22478, ri.field_g, -24 + Chess.field_E, qc.field_e);
+          return;
+        } else {
+          var1 = ug.field_b * ug.field_b;
+          var2 = var1 - da.field_F * da.field_F;
+          var3 = cb.field_a - -(var2 * (-cb.field_a + Chess.field_E) / var1);
+          uh.field_m.a(fl.field_x, 640, -2147483648, 120, var3);
+          ga.a(5, 640, 0, 22478, ri.field_g, -24 + Chess.field_E, qc.field_e);
+          return;
+        }
     }
 
     public final String a(boolean param0) {
-        if (!((jb) this).b(14496)) {
-          if (350L + ((jb) this).field_a <= ud.a(2)) {
+        if (!this.b(14496)) {
+          if (350L + this.field_a <= ud.a(2)) {
             if (param0) {
               jb.a(-51, false);
-              return ((jb) this).d(47);
+              return this.d(47);
             } else {
-              return ((jb) this).d(47);
+              return this.d(47);
             }
           } else {
             return null;
@@ -41,9 +58,9 @@ abstract class jb implements vb {
     abstract String d(int param0);
 
     public final void b(boolean param0) {
-        ((jb) this).field_a = ud.a(2);
+        this.field_a = ud.a(2);
         if (!param0) {
-            field_c = null;
+            field_c = (String) null;
         }
     }
 
@@ -58,6 +75,9 @@ abstract class jb implements vb {
     }
 
     public static void c(int param0) {
+        if (param0 != 350) {
+            return;
+        }
         field_d = null;
         field_c = null;
         field_e = null;
@@ -73,11 +93,14 @@ abstract class jb implements vb {
             tg.field_t = param2;
             ue.field_e = param3;
             ol.field_N = param5;
-            qh.field_c = (wm) (Object) new ob();
+            qh.field_c = (wm) ((Object) new ob());
+            if (param0 != 350) {
+                field_c = (String) null;
+            }
             ba.field_O = new on(param5);
             ge.field_fb = new hj(qh.field_c, ba.field_O);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "jb.H(" + 350 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "jb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -96,15 +119,15 @@ abstract class jb implements vb {
     }
 
     public final mk a(int param0) {
-        if (!((jb) this).b(14496)) {
-          if (~ud.a(2) > ~(350L + ((jb) this).field_a)) {
+        if (!this.b(14496)) {
+          if ((ud.a(2) ^ -1L) > (350L + this.field_a ^ -1L)) {
             return in.field_g;
           } else {
             if (param0 != 21314) {
-              field_e = null;
-              return ((jb) this).e(param0 + -21310);
+              field_e = (dd) null;
+              return this.e(param0 + -21310);
             } else {
-              return ((jb) this).e(param0 + -21310);
+              return this.e(param0 + -21310);
             }
           }
         } else {
@@ -113,10 +136,6 @@ abstract class jb implements vb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Allow spectators?";
         field_c = "You do not have a suitable number of players for the current options.";
     }

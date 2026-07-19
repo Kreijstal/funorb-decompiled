@@ -9,14 +9,19 @@ final class j {
     static int field_e;
 
     public static void a(int param0) {
+        String discarded$0 = null;
         field_b = null;
         field_a = null;
         field_c = null;
         field_d = null;
+        if (param0 != -3) {
+            discarded$0 = j.b(-90);
+        }
     }
 
     final static String b(int param0) {
-        if (rk.field_d >= 2) {
+        String discarded$1 = null;
+        if (-3 >= (rk.field_d ^ -1)) {
           if (null == kl.field_b) {
             if (!bf.field_y.b((byte) 110)) {
               return n.field_f;
@@ -36,7 +41,7 @@ final class j {
                           return ba.field_a;
                         }
                       } else {
-                        String discarded$1 = j.b(69);
+                        discarded$1 = j.b(69);
                         if (!li.field_b.a(29741)) {
                           return gj.field_b + " - " + li.field_b.a((byte) 116) + "%";
                         } else {
@@ -65,10 +70,6 @@ final class j {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new s(3);
         field_b = new int[4];
     }

@@ -14,21 +14,23 @@ final class as {
         field_e = null;
         field_f = null;
         field_c = null;
+        if (param0 >= -38) {
+            return;
+        }
         field_b = null;
         field_a = null;
     }
 
     final static Boolean b(int param0) {
+        if (param0 != -599) {
+            return (Boolean) null;
+        }
         Boolean var1 = mr.field_a;
         mr.field_a = null;
         return var1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Show players in <%0>'s game";
         field_a = null;
         field_c = "Report <%0> for abuse";

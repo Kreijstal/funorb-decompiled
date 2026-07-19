@@ -10,6 +10,7 @@ final class jr implements Runnable {
     volatile dd[] field_d;
 
     final static String[] a(byte param0, char param1, String param2) {
+        int incrementValue$2 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;
@@ -19,113 +20,128 @@ final class jr implements Runnable {
         int var8 = 0;
         int var9 = 0;
         CharSequence var10 = null;
-        String[] stackIn_10_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
+        String[] stackIn_3_0 = null;
+        String[] stackIn_11_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String[] stackOut_9_0 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
+        String[] stackOut_10_0 = null;
+        String[] stackOut_2_0 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
         String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            var10 = (CharSequence) (Object) param2;
+            var10 = (CharSequence) ((Object) param2);
             var3_int = gb.a((byte) -49, param1, var10);
-            var4 = new String[var3_int - -1];
-            var5 = 0;
-            var6 = 0;
-            var7 = 0;
-            L1: while (true) {
-              if (var3_int <= var7) {
-                var4[var3_int] = param2.substring(var6);
-                stackOut_9_0 = (String[]) var4;
-                stackIn_10_0 = stackOut_9_0;
-                break L0;
-              } else {
-                var8 = var6;
-                L2: while (true) {
-                  if (param1 == param2.charAt(var8)) {
-                    int incrementValue$2 = var5;
-                    var5++;
-                    var4[incrementValue$2] = param2.substring(var6, var8);
-                    var6 = var8 - -1;
-                    var7++;
-                    continue L1;
-                  } else {
-                    var8++;
-                    continue L2;
+            if (param0 == -9) {
+              var4 = new String[var3_int - -1];
+              var5 = 0;
+              var6 = 0;
+              var7 = 0;
+              L1: while (true) {
+                if (var3_int <= var7) {
+                  var4[var3_int] = param2.substring(var6);
+                  stackOut_10_0 = (String[]) (var4);
+                  stackIn_11_0 = stackOut_10_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  var8 = var6;
+                  L2: while (true) {
+                    if (param1 == param2.charAt(var8)) {
+                      incrementValue$2 = var5;
+                      var5++;
+                      var4[incrementValue$2] = param2.substring(var6, var8);
+                      var6 = var8 - -1;
+                      var7++;
+                      continue L1;
+                    } else {
+                      var8++;
+                      continue L2;
+                    }
                   }
                 }
               }
+            } else {
+              stackOut_2_0 = (String[]) null;
+              stackIn_3_0 = stackOut_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("jr.C(").append(-9).append(',').append(param1).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_12_0 = (RuntimeException) (var3);
+            stackOut_12_1 = new StringBuilder().append("jr.C(").append(param0).append(',').append(param1).append(',');
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
-        return stackIn_10_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_11_0;
+        }
     }
 
     public final void run() {
         int var1_int = 0;
         dd var2 = null;
         int var4 = Vertigo2.field_L ? 1 : 0;
-        ((jr) this).field_b = true;
+        this.field_b = true;
         try {
-            while (!((jr) this).field_a) {
-                for (var1_int = 0; var1_int < 2; var1_int++) {
-                    var2 = ((jr) this).field_d[var1_int];
+            while (!this.field_a) {
+                for (var1_int = 0; (var1_int ^ -1) > -3; var1_int++) {
+                    var2 = this.field_d[var1_int];
                     if (var2 == null) {
                     } else {
                         var2.b();
                     }
                 }
                 um.a(true, 10L);
-                Object var5 = null;
-                e.a(((jr) this).field_c, (Object) null, -29785);
+                Object var5 = (Object) null;
+                e.a(this.field_c, (Object) null, -29785);
             }
         } catch (Exception exception) {
-            Object var6 = null;
-            ke.a((Throwable) (Object) exception, (String) null, 0);
+            String var6 = (String) null;
+            ke.a((Throwable) ((Object) exception), (String) null, 0);
         } finally {
-            ((jr) this).field_b = false;
+            this.field_b = false;
         }
     }
 
@@ -138,22 +154,30 @@ final class jr implements Runnable {
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            var4 = (nf) (Object) ki.field_a.a((byte) 100);
+            var4 = (nf) ((Object) ki.field_a.a((byte) 100));
             L1: while (true) {
               if (var4 == null) {
                 var2 = mo.field_h.a((byte) 100);
                 L2: while (true) {
                   if (var2 == null) {
+                    L3: {
+                      if (param1 == 2) {
+                        break L3;
+                      } else {
+                        field_e = (wp) null;
+                        break L3;
+                      }
+                    }
                     break L0;
                   } else {
-                    hm.d(0, 4);
+                    hm.d(0, param0);
                     var2 = mo.field_h.b(41);
                     continue L2;
                   }
                 }
               } else {
-                jc.a(-14499, 4, var4);
-                var4 = (nf) (Object) ki.field_a.b(71);
+                jc.a(-14499, param0, var4);
+                var4 = (nf) ((Object) ki.field_a.b(71));
                 continue L1;
               }
             }
@@ -161,7 +185,7 @@ final class jr implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var2_ref, "jr.D(" + 4 + ',' + 2 + ')');
+          throw wn.a((Throwable) ((Object) var2_ref), "jr.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -255,7 +279,7 @@ final class jr implements Runnable {
           stackIn_1_2 = stackOut_0_2;
           stackIn_1_3 = stackOut_0_3;
           if (!db.field_S) {
-            stackOut_2_0 = (cr) (Object) stackIn_2_0;
+            stackOut_2_0 = (cr) ((Object) stackIn_2_0);
             stackOut_2_1 = stackIn_2_1;
             stackOut_2_2 = stackIn_2_2;
             stackOut_2_3 = stackIn_2_3;
@@ -267,7 +291,7 @@ final class jr implements Runnable {
             stackIn_3_4 = stackOut_2_4;
             break L0;
           } else {
-            stackOut_1_0 = (cr) (Object) stackIn_1_0;
+            stackOut_1_0 = (cr) ((Object) stackIn_1_0);
             stackOut_1_1 = stackIn_1_1;
             stackOut_1_2 = stackIn_1_2;
             stackOut_1_3 = stackIn_1_3;
@@ -281,7 +305,7 @@ final class jr implements Runnable {
           }
         }
         L1: {
-          stackOut_3_0 = (cr) (Object) stackIn_3_0;
+          stackOut_3_0 = (cr) ((Object) stackIn_3_0);
           stackOut_3_1 = stackIn_3_1;
           stackOut_3_2 = stackIn_3_2;
           stackOut_3_3 = stackIn_3_3 + -stackIn_3_4;
@@ -294,7 +318,7 @@ final class jr implements Runnable {
           stackIn_4_2 = stackOut_3_2;
           stackIn_4_3 = stackOut_3_3;
           if (db.field_S) {
-            stackOut_5_0 = (cr) (Object) stackIn_5_0;
+            stackOut_5_0 = (cr) ((Object) stackIn_5_0);
             stackOut_5_1 = stackIn_5_1;
             stackOut_5_2 = stackIn_5_2;
             stackOut_5_3 = stackIn_5_3;
@@ -306,7 +330,7 @@ final class jr implements Runnable {
             stackIn_6_4 = stackOut_5_4;
             break L1;
           } else {
-            stackOut_4_0 = (cr) (Object) stackIn_4_0;
+            stackOut_4_0 = (cr) ((Object) stackIn_4_0);
             stackOut_4_1 = stackIn_4_1;
             stackOut_4_2 = stackIn_4_2;
             stackOut_4_3 = stackIn_4_3;
@@ -344,7 +368,7 @@ final class jr implements Runnable {
           var3 = stackIn_9_0;
           tp.field_Nb.a(98, 363 + -var3, 30, 5, var3 + 5);
           sa.field_b.a(72, -365 + (-5 + (ud.field_A.field_Fb - 5)), 30, 5, 370);
-          uk.field_v.a(37, 2, re.field_k, -5 + (ja.field_b.field_db - 37), 5, ja.field_b.field_Fb - 10, 3124);
+          uk.field_v.a(37, 2, re.field_k, -5 + (ja.field_b.field_db + -5 + -32), 5, ja.field_b.field_Fb - 10, 3124);
           var4 = (ud.field_A.field_Fb - -2) / 2;
           b.field_h.a(125, -2 + var4, 40, -40 + ud.field_A.field_db, 0);
           if (db.field_S) {
@@ -358,16 +382,12 @@ final class jr implements Runnable {
     }
 
     jr() {
-        ((jr) this).field_d = new dd[2];
-        ((jr) this).field_a = false;
-        ((jr) this).field_b = false;
+        this.field_d = new dd[2];
+        this.field_a = false;
+        this.field_b = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new wp();
     }
 }

@@ -14,10 +14,6 @@ final class dga {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "dga.A(";
         field_b = new int[4];
     }

@@ -34,15 +34,15 @@ final class bd {
         try {
             sb.field_n.field_T[0][bi.field_p] = 0;
             sb.field_n.field_T[0][re.field_b] = 14540253;
-            for (var4_int = 0; var4_int < sb.field_n.field_G; var4_int++) {
+            for (var4_int = param2; var4_int < sb.field_n.field_G; var4_int++) {
                 var5 = 169 - -(-76 * var4_int / sb.field_n.field_G);
-                sb.field_n.field_T[0][wd.field_e] = hi.a(hi.a(var5 << 8, var5 << 16), var5);
-                eh.a(0, 109 + -sb.field_n.field_G + var4_int, 640, -sb.field_n.field_G + 109 - -var4_int - -1);
-                sb.field_n.b(param0, param1, 109, 0, -1);
+                sb.field_n.field_T[0][wd.field_e] = hi.a(hi.a(var5 << -435920024, var5 << 1729126672), var5);
+                eh.a(0, param3 + -sb.field_n.field_G + var4_int, 640, -sb.field_n.field_G + param3 - -var4_int - -1);
+                sb.field_n.b(param0, param1, param3, 0, -1);
             }
             eh.a();
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "bd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + 0 + ',' + 109 + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "bd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -51,10 +51,6 @@ final class bd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = true;
         field_a = "Ranking: Polar Prince";
         field_i = "Hard hat: Protection from falling rock.";

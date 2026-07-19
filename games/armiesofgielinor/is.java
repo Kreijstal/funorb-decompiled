@@ -18,14 +18,14 @@ final class is {
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
         if (param1 >= 0) {
-          if (-1583 <= param1) {
-            if (0 != param1 % 4) {
+          if (-1583 >= (param1 ^ -1)) {
+            if (0 != param1 % param0) {
               return false;
             } else {
               if (0 != param1 % 100) {
                 return true;
               } else {
-                if (param1 % 400 == 0) {
+                if (-1 == (param1 % 400 ^ -1)) {
                   return true;
                 } else {
                   return false;
@@ -48,7 +48,7 @@ final class is {
           }
         } else {
           L1: {
-            if (-1 != (param1 + 1) % 4) {
+            if (-1 != ((param1 + 1) % 4 ^ -1)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -66,16 +66,21 @@ final class is {
         field_a = null;
         field_e = null;
         field_d = null;
-        field_g = null;
-        field_c = null;
-        field_f = null;
+        if (param0 != -5) {
+          field_d = (String) null;
+          field_g = null;
+          field_c = null;
+          field_f = null;
+          return;
+        } else {
+          field_g = null;
+          field_c = null;
+          field_f = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Loading music";
         field_f = "Waiting for fonts";
         field_a = "You must be a member to play with the current options.";

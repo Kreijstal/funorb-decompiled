@@ -23,10 +23,6 @@ final class tc extends wl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = 0;
         field_l = new tg();
         field_m = new tf();

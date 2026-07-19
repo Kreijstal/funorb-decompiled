@@ -11,6 +11,7 @@ final class b extends sh implements ta {
     static boolean field_Db;
 
     public final void a(int param0, tg param1, int param2, int param3, int param4) {
+        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -19,6 +20,7 @@ final class b extends sh implements ta {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
@@ -30,44 +32,46 @@ final class b extends sh implements ta {
         String stackOut_7_2 = null;
         try {
           L0: {
-            if (!((b) this).field_Bb) {
+            if (!this.field_Bb) {
               L1: {
                 ul.a(param0 + 3344);
-                ((b) this).h(true);
+                this.h(true);
                 if (param0 == 12085) {
                   break L1;
                 } else {
-                  boolean discarded$2 = ((b) this).f(59);
+                  discarded$2 = this.f(59);
                   break L1;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               vc.a(true, false, -16113);
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) runtimeException;
+            stackOut_6_0 = (RuntimeException) (runtimeException);
             stackOut_6_1 = new StringBuilder().append("b.L(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -75,13 +79,18 @@ final class b extends sh implements ta {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final void l(int param0) {
         if (param0 >= -85) {
-          ((b) this).field_Bb = false;
+          this.field_Bb = false;
           this.a(lc.a(248, ma.field_d, 29493), true, 113);
           return;
         } else {
@@ -93,9 +102,9 @@ final class b extends sh implements ta {
     b(je param0, qh param1) {
         super(param0, on.field_b, aj.field_e, false, false);
         try {
-            ((b) this).field_Ab = param1;
+            this.field_Ab = param1;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "b.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "b.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -158,8 +167,8 @@ final class b extends sh implements ta {
             var5[3].field_z = var5[3].field_p;
             var5[1].field_u = var5[1].field_w;
             var5[5].field_z = var5[5].field_p;
-            var5[7].field_u = var5[7].field_w;
-            stackOut_0_0 = (mg[]) var4;
+            var5[param2].field_u = var5[7].field_w;
+            stackOut_0_0 = (mg[]) (var4);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -167,23 +176,23 @@ final class b extends sh implements ta {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4_ref;
+            stackOut_2_0 = (RuntimeException) (var4_ref);
             stackOut_2_1 = new StringBuilder().append("b.RA(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -192,23 +201,23 @@ final class b extends sh implements ta {
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
             stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -217,23 +226,23 @@ final class b extends sh implements ta {
             }
           }
           L3: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(7).append(',');
+            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param3 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -241,17 +250,24 @@ final class b extends sh implements ta {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_1_0;
     }
 
     public static void j(byte param0) {
         field_Cb = null;
+        if (param0 != -22) {
+            field_Gb = 0L;
+            field_Eb = null;
+            return;
+        }
         field_Eb = null;
     }
 
     private final void a(ck param0, boolean param1, int param2) {
+        tg discarded$2 = null;
+        tg discarded$3 = null;
         RuntimeException var4 = null;
         String var4_ref = null;
         sf var5 = null;
@@ -263,6 +279,7 @@ final class b extends sh implements ta {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_34_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_31_0 = null;
         StringBuilder stackOut_31_1 = null;
@@ -276,11 +293,11 @@ final class b extends sh implements ta {
         try {
           L0: {
             L1: {
-              ((b) this).field_Fb = true;
+              this.field_Fb = true;
               if (param2 > 97) {
                 break L1;
               } else {
-                ((b) this).field_Ab = null;
+                this.field_Ab = (qh) null;
                 break L1;
               }
             }
@@ -291,7 +308,7 @@ final class b extends sh implements ta {
               } else {
                 if (param0.field_b == null) {
                   var4_ref = param0.field_e;
-                  if (param0.field_g == 248) {
+                  if (-249 == (param0.field_g ^ -1)) {
                     L3: {
                       if (!param1) {
                         mj.f(0);
@@ -300,7 +317,7 @@ final class b extends sh implements ta {
                         break L3;
                       }
                     }
-                    ((b) this).field_Bb = true;
+                    this.field_Bb = true;
                     var4_ref = ma.field_d;
                     break L2;
                   } else {
@@ -308,8 +325,8 @@ final class b extends sh implements ta {
                   }
                 } else {
                   var4_ref = dm.field_t;
-                  if (null != ((b) this).field_Ab) {
-                    ((b) this).field_Ab.a((byte) -72);
+                  if (null != this.field_Ab) {
+                    this.field_Ab.a((byte) -72);
                     break L2;
                   } else {
                     break L2;
@@ -318,11 +335,11 @@ final class b extends sh implements ta {
               }
             }
             L4: {
-              var5 = new sf((sh) this, on.field_b, var4_ref);
+              var5 = new sf((sh) (this), on.field_b, var4_ref);
               if (!param0.field_a) {
                 L5: {
-                  if (((b) this).field_Bb) {
-                    tg discarded$2 = var5.a((cd) this, 260, md.field_c);
+                  if (this.field_Bb) {
+                    discarded$2 = var5.a((cd) (this), 260, md.field_c);
                     break L5;
                   } else {
                     if (param0.field_g != 5) {
@@ -335,7 +352,7 @@ final class b extends sh implements ta {
                     }
                   }
                 }
-                if (param0.field_g == 3) {
+                if (-4 == (param0.field_g ^ -1)) {
                   var5.a(7, qh.field_N, (byte) 127);
                   break L4;
                 } else {
@@ -348,38 +365,40 @@ final class b extends sh implements ta {
                 }
               } else {
                 if (!param0.field_d) {
-                  tg discarded$3 = var5.a((cd) this, 260, md.field_c);
+                  discarded$3 = var5.a((cd) (this), 260, md.field_c);
                   break L4;
                 } else {
-                  ((b) this).b((fi) (Object) new ok((b) this), (byte) -53);
-                  return;
+                  this.b(new ok((b) (this)), (byte) -53);
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             }
-            ((b) this).b((fi) (Object) var5, (byte) -53);
+            this.b(var5, (byte) -53);
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var4;
+            stackOut_31_0 = (RuntimeException) (var4);
             stackOut_31_1 = new StringBuilder().append("b.W(");
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param0 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L6;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
@@ -387,15 +406,20 @@ final class b extends sh implements ta {
               break L6;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + param1 + ',' + param2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final boolean f(int param0) {
         ck var2 = null;
         if (param0 == 3) {
-          if (((b) this).field_G) {
-            if (!((b) this).field_Fb) {
+          if (this.field_G) {
+            if (!this.field_Fb) {
               var2 = cf.a((byte) -113);
               if (var2 == null) {
                 return super.f(3);
@@ -411,8 +435,8 @@ final class b extends sh implements ta {
           }
         } else {
           field_Gb = 49L;
-          if (((b) this).field_G) {
-            if (!((b) this).field_Fb) {
+          if (this.field_G) {
+            if (!this.field_Fb) {
               var2 = cf.a((byte) -113);
               if (var2 == null) {
                 return super.f(3);
@@ -522,10 +546,10 @@ final class b extends sh implements ta {
                   break L6;
                 } else {
                   var11 = var8 * df.field_e - -param2;
-                  var12 = -var8 + var10 + 1 >> 1;
+                  var12 = -var8 + var10 + 1 >> 409501089;
                   L7: while (true) {
                     var12--;
-                    if (var12 < 0) {
+                    if ((var12 ^ -1) > -1) {
                       break L6;
                     } else {
                       df.field_d[var11] = 16777215;
@@ -544,7 +568,7 @@ final class b extends sh implements ta {
                   break L8;
                 } else {
                   var11 = var7 + df.field_e * param0;
-                  var12 = var9 + (1 + -var7) >> 1;
+                  var12 = var9 + (1 + -var7) >> 50781825;
                   L9: while (true) {
                     var12--;
                     if (0 > var12) {
@@ -566,10 +590,10 @@ final class b extends sh implements ta {
                   break L10;
                 } else {
                   var11 = (var8 - -(var5_int + -param2 & 1)) * df.field_e - -var5_int;
-                  var12 = -var8 + var10 + 1 >> 1;
+                  var12 = -var8 + var10 + 1 >> -1704708319;
                   L11: while (true) {
                     var12--;
-                    if (var12 < 0) {
+                    if (-1 < (var12 ^ -1)) {
                       break L10;
                     } else {
                       df.field_d[var11] = 16777215;
@@ -586,7 +610,7 @@ final class b extends sh implements ta {
               } else {
                 if (var6 < df.field_h) {
                   var11 = (1 & var6 + -param0) + df.field_e * var6 + var7;
-                  var12 = -var7 + 1 - -var9 >> 1;
+                  var12 = -var7 + 1 - -var9 >> 1225724801;
                   L13: while (true) {
                     var12--;
                     if (var12 < 0) {
@@ -607,15 +631,11 @@ final class b extends sh implements ta {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var5, "b.VA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw kg.a((Throwable) ((Object) var5), "b.VA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Cb = "Withdraw invitation to <%0> to join this game";
         field_Db = true;
     }

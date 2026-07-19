@@ -11,6 +11,6 @@ public class jr {
     public volatile int field_c;
 
     jr() {
-        ((jr) this).field_c = 0;
+        this.field_c = 0;
     }
 }

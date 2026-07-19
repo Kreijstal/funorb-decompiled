@@ -31,10 +31,6 @@ final class bm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bm.A(";
         field_c = "Sandbox";
         field_a = "Let's practise using minions. Select the Summon Imps spell below.";

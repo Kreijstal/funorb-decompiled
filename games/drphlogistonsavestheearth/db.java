@@ -15,11 +15,14 @@ final class db {
     }
 
     db(int param0) {
-        ((db) this).field_c = param0;
+        this.field_c = param0;
     }
 
     public static void a(byte param0) {
         field_d = null;
+        if (param0 <= 55) {
+            return;
+        }
         field_e = null;
         field_f = null;
         field_g = null;
@@ -27,10 +30,6 @@ final class db {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Next";
         field_a = 0;
         field_f = "Unable to connect to the data server. Please check any firewall you are using.";

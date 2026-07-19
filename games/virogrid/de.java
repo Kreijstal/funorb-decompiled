@@ -13,14 +13,21 @@ final class de extends mb {
         field_ob = null;
         field_pb = null;
         field_sb = null;
-        field_rb = null;
+        if (param0) {
+          field_sb = (String) null;
+          field_rb = null;
+          return;
+        } else {
+          field_rb = null;
+          return;
+        }
     }
 
     final void b(fi param0, byte param1) {
         try {
             super.b(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "de.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "de.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -29,10 +36,6 @@ final class de extends mb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_qb = "Age:";
     }
 }

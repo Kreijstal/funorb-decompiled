@@ -8,7 +8,7 @@ final class oi {
     static ob field_d;
 
     public static void a(byte param0) {
-        int var1 = 0;
+        int var1 = -48 % ((49 - param0) / 41);
         field_a = null;
         field_b = null;
         field_c = null;
@@ -20,10 +20,6 @@ final class oi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Unpacking graphics";
         field_a = new wb();
     }

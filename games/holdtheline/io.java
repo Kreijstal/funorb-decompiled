@@ -11,66 +11,62 @@ final class io {
 
     final String a(byte param0) {
         if (param0 != -41) {
-            ((io) this).field_d = true;
-            return ((io) this).field_e;
+            this.field_d = true;
+            return this.field_e;
         }
-        return ((io) this).field_e;
+        return this.field_e;
     }
 
     final static String a(int param0, byte param1) {
+        String discarded$1 = null;
         int var2 = 0;
         int var3 = 0;
         char[] var4 = null;
-        char[] var5 = null;
-        char[] var6 = null;
-        char[] var7 = null;
-        char[] var8 = null;
         if (0 > param0) {
           return "--:--";
         } else {
           if (param1 != -61) {
-            String discarded$1 = io.a(34, (byte) -85);
+            discarded$1 = io.a(34, (byte) -85);
             var2 = param0 / 50;
             var3 = var2 / 60;
             var2 = var2 % 60;
-            var7 = new char[5];
-            var5 = var7;
-            var4 = var5;
+            var4 = new char[5];
             var4[3] = (char)(var2 / 10 + 48);
             var4[0] = (char)(48 + var3 / 10 % 10);
             var4[1] = (char)(var3 % 10 + 48);
-            var4[2] = ':';
+            var4[2] = (char)58;
             var4[4] = (char)(var2 % 10 + 48);
-            return new String(var7);
+            return new String(var4);
           } else {
             var2 = param0 / 50;
             var3 = var2 / 60;
             var2 = var2 % 60;
-            var8 = new char[5];
-            var6 = var8;
-            var4 = var6;
+            var4 = new char[5];
             var4[3] = (char)(var2 / 10 + 48);
             var4[0] = (char)(48 + var3 / 10 % 10);
             var4[1] = (char)(var3 % 10 + 48);
-            var4[2] = ':';
+            var4[2] = (char)58;
             var4[4] = (char)(var2 % 10 + 48);
-            return new String(var8);
+            return new String(var4);
           }
         }
     }
 
     final boolean b(byte param0) {
         if (param0 >= -22) {
-            field_c = null;
-            return ((io) this).field_d;
+            field_c = (ah) null;
+            return this.field_d;
         }
-        return ((io) this).field_d;
+        return this.field_d;
     }
 
     public static void a(int param0) {
         field_a = null;
         field_c = null;
         field_f = null;
+        if (param0 != 10) {
+            field_f = (String) null;
+        }
     }
 
     io(String param0, boolean param1) {
@@ -103,11 +99,11 @@ final class io {
         try {
           L0: {
             L1: {
-              ((io) this).field_e = param0;
-              if (((io) this).field_e != null) {
+              this.field_e = param0;
+              if (this.field_e != null) {
                 break L1;
               } else {
-                ((io) this).field_e = "";
+                this.field_e = "";
                 break L1;
               }
             }
@@ -129,9 +125,9 @@ final class io {
                 break L2;
               }
             }
-            ((io) this).field_d = stackIn_6_1 != 0;
-            if (0 == ((io) this).field_e.length()) {
-              ((io) this).field_d = false;
+            ((io) (this)).field_d = stackIn_6_1 != 0;
+            if (0 == this.field_e.length()) {
+              this.field_d = false;
               break L0;
             } else {
               return;
@@ -141,23 +137,23 @@ final class io {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_0 = (RuntimeException) (var3);
             stackOut_10_1 = new StringBuilder().append("io.<init>(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -165,7 +161,7 @@ final class io {
               break L3;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }
     }
 
@@ -174,10 +170,6 @@ final class io {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "You can also choose to play either <col=1>Practice</col> or <col=1>Demolition</col> games. The course selection in these modes depends on your progress through the <col=1>Championship</col>.<br><br><col=1>Practice</col> mode allows you to try out a course for as many laps as you like, with or without computer-controlled competitors, to help you improve your lap times.<br><br>In <col=1>Demolition</col> mode, use your shields, weaponry and front bumper to damage opponents. Eliminate <col=1>5</col> opponents to win the round.<br><br>";
         field_c = new ah();
         field_b = 0;

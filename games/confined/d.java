@@ -16,14 +16,17 @@ final class d {
         field_f = null;
         field_c = null;
         field_b = null;
-        field_g = null;
+        if (param0 <= 44) {
+          field_b = (bi) null;
+          field_g = null;
+          return;
+        } else {
+          field_g = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "d.A(";
         field_e = "Unable to connect to the data server. Please check any firewall you are using.";
         field_c = new double[]{0.4, 2.6, 0.8, 6.1, 1.2, 5.3, 2.8};

@@ -7,15 +7,14 @@ final class bc {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 <= 101) {
+            return;
+        }
         field_a = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bc.A(";
         field_b = "Low";
     }

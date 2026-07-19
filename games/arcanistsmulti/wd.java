@@ -20,9 +20,14 @@ final class wd implements qi {
         field_k = null;
         field_g = null;
         field_a = null;
-        field_e = null;
-        field_h = null;
-        field_i = null;
+        if (param0 != 0) {
+          return;
+        } else {
+          field_e = null;
+          field_h = null;
+          field_i = null;
+          return;
+        }
     }
 
     public final void a(int param0, int param1, int param2) {
@@ -31,10 +36,6 @@ final class wd implements qi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Enter name of player to delete from list";
         field_k = "This is the Book of Overlight. Overlight spells focus on healing and the defence of your forces. You require 5 wands to purchase this spellbook; you currently have ";
         field_b = 0L;

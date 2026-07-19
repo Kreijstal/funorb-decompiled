@@ -11,8 +11,8 @@ final class eg {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ((eg) this).field_b = ((eg) this).field_a.getDisplayMode();
-        if (null == ((eg) this).field_b) {
+        this.field_b = this.field_a.getDisplayMode();
+        if (null == this.field_b) {
           throw new NullPointerException();
         } else {
           L0: {
@@ -22,8 +22,8 @@ final class eg {
             if (param4 != 0) {
               break L0;
             } else {
-              var6 = ((eg) this).field_b.getRefreshRate();
-              var7 = ((eg) this).field_a.getDisplayModes();
+              var6 = this.field_b.getRefreshRate();
+              var7 = this.field_a.getDisplayModes();
               var8 = 0;
               var9 = 0;
               L1: while (true) {
@@ -71,44 +71,44 @@ final class eg {
               }
             }
           }
-          ((eg) this).field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+          this.field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
           return;
         }
     }
 
     public final int[] listmodes() {
         int var3 = 0;
-        java.awt.DisplayMode[] var4 = ((eg) this).field_a.getDisplayModes();
+        java.awt.DisplayMode[] var4 = this.field_a.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << 2];
+        int[] var2 = new int[var4.length << 783899458];
         for (var3 = 0; var3 < var4.length; var3++) {
-            var2[var3 << 2] = var4[var3].getWidth();
-            var2[1 + (var3 << 2)] = var4[var3].getHeight();
-            var2[2 + (var3 << 2)] = var4[var3].getBitDepth();
-            var2[(var3 << 2) - -3] = var4[var3].getRefreshRate();
+            var2[var3 << 874069250] = var4[var3].getWidth();
+            var2[1 + (var3 << -2116823294)] = var4[var3].getHeight();
+            var2[2 + (var3 << -1294678142)] = var4[var3].getBitDepth();
+            var2[(var3 << -450509214) - -3] = var4[var3].getRefreshRate();
         }
         return var2;
     }
 
     public final void exit() {
-        if (!(((eg) this).field_b == null)) {
-            ((eg) this).field_a.setDisplayMode(((eg) this).field_b);
-            if (!((eg) this).field_a.getDisplayMode().equals(((eg) this).field_b)) {
+        if (!(this.field_b == null)) {
+            this.field_a.setDisplayMode(this.field_b);
+            if (!this.field_a.getDisplayMode().equals(this.field_b)) {
                 throw new RuntimeException("");
             }
-            ((eg) this).field_b = null;
+            this.field_b = null;
         }
         this.a((byte) 106, (java.awt.Frame) null);
     }
 
     private final void a(byte param0, java.awt.Frame param1) {
-        Object var4 = null;
-        ((eg) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
+        java.awt.Frame var4 = null;
+        this.field_a.setFullScreenWindow((java.awt.Window) ((Object) param1));
         L0: {
           if (param0 >= 97) {
             break L0;
           } else {
-            var4 = null;
+            var4 = (java.awt.Frame) null;
             this.a((byte) -95, (java.awt.Frame) null);
             break L0;
           }
@@ -122,8 +122,8 @@ final class eg {
         int var4 = 0;
         java.awt.GraphicsDevice var5 = null;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
-        ((eg) this).field_a = var1.getDefaultScreenDevice();
-        if (((eg) this).field_a.isFullScreenSupported()) {
+        this.field_a = var1.getDefaultScreenDevice();
+        if (this.field_a.isFullScreenSupported()) {
           return;
         } else {
           var2 = var1.getScreenDevices();
@@ -136,7 +136,7 @@ final class eg {
               var5 = var3[var4];
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
-                  ((eg) this).field_a = var5;
+                  this.field_a = var5;
                   return;
                 } else {
                   var4++;

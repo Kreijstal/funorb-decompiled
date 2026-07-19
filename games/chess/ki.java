@@ -11,9 +11,9 @@ final class ki extends fb {
     private ki(String param0, jm param1, rg param2) {
         super(param0, param1, param2);
         try {
-            ((ki) this).field_n = a.field_a.field_k;
+            this.field_n = a.field_a.field_k;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -246,7 +246,7 @@ final class ki extends fb {
     }
 
     final void a(int param0, boolean param1, int param2, int param3) {
-        ((ki) this).field_I = !((ki) this).field_I ? true : false;
+        this.field_I = !this.field_I ? true : false;
         super.a(param0, param1, param2, param3);
     }
 
@@ -270,13 +270,21 @@ final class ki extends fb {
     ki(String param0, rg param1, boolean param2) {
         this(param0, param1);
         try {
-            ((ki) this).field_I = param2 ? true : false;
+            this.field_I = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void a(int param0) {
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -289,34 +297,34 @@ final class ki extends fb {
           L0: {
             var5 = ge.field_eb;
             var1 = var5;
-            var2 = 0;
+            var2 = param0;
             var3 = var5.length;
             L1: while (true) {
               if (var2 >= var3) {
                 break L0;
               } else {
-                int incrementValue$40 = var2;
+                incrementValue$40 = var2;
                 var2++;
                 var5[incrementValue$40] = 0;
-                int incrementValue$41 = var2;
+                incrementValue$41 = var2;
                 var2++;
                 var5[incrementValue$41] = 0;
-                int incrementValue$42 = var2;
+                incrementValue$42 = var2;
                 var2++;
                 var5[incrementValue$42] = 0;
-                int incrementValue$43 = var2;
+                incrementValue$43 = var2;
                 var2++;
                 var5[incrementValue$43] = 0;
-                int incrementValue$44 = var2;
+                incrementValue$44 = var2;
                 var2++;
                 var5[incrementValue$44] = 0;
-                int incrementValue$45 = var2;
+                incrementValue$45 = var2;
                 var2++;
                 var5[incrementValue$45] = 0;
-                int incrementValue$46 = var2;
+                incrementValue$46 = var2;
                 var2++;
                 var5[incrementValue$46] = 0;
-                int incrementValue$47 = var2;
+                incrementValue$47 = var2;
                 var2++;
                 var5[incrementValue$47] = 0;
                 continue L1;
@@ -326,24 +334,20 @@ final class ki extends fb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var1_ref, "ki.CA(" + 0 + ')');
+          throw fk.a((Throwable) ((Object) var1_ref), "ki.CA(" + param0 + ')');
         }
     }
 
     private ki(String param0, rg param1) {
         this(param0, a.field_a.field_a, param1);
         try {
-            ((ki) this).field_n = a.field_a.field_k;
+            this.field_n = a.field_a.field_k;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_O = "Ask to join <%0>'s game";
         field_Q = "To server list";
         field_N = "Enter name of player to add to list";

@@ -9,23 +9,22 @@ final class rha extends vg {
 
     public static void a(int param0) {
         field_h = null;
+        if (param0 != -29867) {
+            field_h = (String) null;
+        }
     }
 
     rha(long param0, int param1, byte[] param2) {
         try {
-            ((rha) this).field_i = param1;
-            ((rha) this).field_f = param0;
-            ((rha) this).field_g = param2;
+            this.field_i = param1;
+            this.field_f = param0;
+            this.field_g = param2;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "rha.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "rha.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Johnsson";
     }
 }

@@ -20,13 +20,26 @@ final class kf extends ck {
     static gh field_y;
 
     public static void d(int param0) {
-        field_r = null;
-        field_B = null;
-        field_t = null;
-        field_A = null;
-        field_o = null;
-        field_v = null;
-        field_y = null;
+        if (param0 != 90) {
+          field_B = (String) null;
+          field_r = null;
+          field_B = null;
+          field_t = null;
+          field_A = null;
+          field_o = null;
+          field_v = null;
+          field_y = null;
+          return;
+        } else {
+          field_r = null;
+          field_B = null;
+          field_t = null;
+          field_A = null;
+          field_o = null;
+          field_v = null;
+          field_y = null;
+          return;
+        }
     }
 
     kf() {
@@ -63,10 +76,6 @@ final class kf extends ck {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_B = "WEAPONS";
         field_r = "Some players haven't unlocked the currently selected game options.<br>Please view the '<%0>' tab on the left for details.";
         field_v = "<%1> plummeted like a stalled brick";

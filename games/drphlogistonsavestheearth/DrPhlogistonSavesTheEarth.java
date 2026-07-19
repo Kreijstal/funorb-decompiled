@@ -2,7 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.util.*;
-import java.awt.Canvas;
 
 public final class DrPhlogistonSavesTheEarth extends sl {
     static nh field_J;
@@ -18,9 +17,9 @@ public final class DrPhlogistonSavesTheEarth extends sl {
 
     public final void init() {
         try {
-            ((DrPhlogistonSavesTheEarth) this).a(12, "drphlogistonsavestheearth", (byte) 12);
+            this.a(12, "drphlogistonsavestheearth", (byte) 12);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "DrPhlogistonSavesTheEarth.init()");
+            throw ie.a((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.init()");
         }
     }
 
@@ -52,7 +51,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             var4 = -95 / ((param1 - 56) / 32);
             var3[0] = be.a(param0);
             var3[0].c();
-            stackOut_0_0 = (he[]) var3;
+            stackOut_0_0 = (he[]) (var3);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -60,23 +59,23 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3_ref;
+            stackOut_2_0 = (RuntimeException) (var3_ref);
             stackOut_2_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.PA(");
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
@@ -84,7 +83,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               break L1;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
@@ -183,7 +182,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               L4: while (true) {
                 L5: {
                   L6: {
-                    if (var2_int >= 16) {
+                    if ((var2_int ^ -1) <= -17) {
                       break L6;
                     } else {
                       wj.g(0, var2_int, 800, 4096 * var2_int + 16711680);
@@ -224,7 +223,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.GB(" + param0 + ')');
+          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.GB(" + param0 + ')');
         }
     }
 
@@ -260,7 +259,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               if (param0 == -1745) {
                 break L1;
               } else {
-                field_G = null;
+                field_G = (he[]) null;
                 break L1;
               }
             }
@@ -272,7 +271,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   if (param1 <= var5) {
                     break L4;
                   } else {
-                    stackOut_6_0 = (he[]) var4;
+                    stackOut_6_0 = (he[]) (var4);
                     stackIn_11_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
                     if (var6 != 0) {
@@ -288,7 +287,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                     }
                   }
                 }
-                stackOut_10_0 = (he[]) var4;
+                stackOut_10_0 = (he[]) (var4);
                 stackIn_11_0 = stackOut_10_0;
                 break L3;
               }
@@ -299,23 +298,23 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4_ref;
+            stackOut_12_0 = (RuntimeException) (var4_ref);
             stackOut_12_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.MB(").append(param0).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_12_0;
             stackIn_15_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_16_0 = stackOut_13_0;
               stackIn_16_1 = stackOut_13_1;
@@ -323,12 +322,13 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
         return stackIn_11_0;
     }
 
     final void c(byte param0) {
+        boolean discarded$1 = false;
         RuntimeException var2 = null;
         je var2_ref = null;
         int var2_int = 0;
@@ -348,6 +348,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         Object stackIn_83_0 = null;
         int stackIn_83_1 = 0;
         int stackIn_83_2 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_17_0 = null;
         Object stackOut_20_0 = null;
@@ -369,7 +370,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           L0: {
             L1: {
               ia.a((byte) 9);
-              if (!((DrPhlogistonSavesTheEarth) this).field_C) {
+              if (!this.field_C) {
                 break L1;
               } else {
                 if (!s.field_a.e(16)) {
@@ -420,7 +421,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               }
             }
             L5: {
-              ((DrPhlogistonSavesTheEarth) this).a(stackIn_21_1 != 0, 55);
+              this.a(stackIn_21_1 != 0, 55);
               if (!nd.field_Q) {
                 break L5;
               } else {
@@ -433,19 +434,20 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               ni.field_x = ni.field_x + 1;
               lf.field_b = lf.field_b + 1;
               if (kh.a(false)) {
-                ((DrPhlogistonSavesTheEarth) this).m(-128);
+                this.m(-128);
                 if (!kh.a(false)) {
                   break L6;
                 } else {
                   L7: {
                     if (bj.a(13)) {
-                      boolean discarded$1 = this.b(false, -111);
+                      discarded$1 = this.b(false, -111);
                       break L7;
                     } else {
                       break L7;
                     }
                   }
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               } else {
                 break L6;
@@ -453,14 +455,14 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             }
             L8: {
               L9: {
-                if (((DrPhlogistonSavesTheEarth) this).field_C) {
+                if (this.field_C) {
                   break L9;
                 } else {
                   ui.a(ma.field_sb, param0 + -34);
                   if (!this.b(true, param0 ^ -88)) {
                     break L8;
                   } else {
-                    ((DrPhlogistonSavesTheEarth) this).field_C = true;
+                    this.field_C = true;
                     if (var5 == 0) {
                       break L8;
                     } else {
@@ -481,9 +483,9 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                         L13: {
                           var2_int = (int)(32.0 * ji.a(65535, (double)ni.field_x / 25.0) + 224.0);
                           var3 = 3 * var2_int / 4;
-                          pj.field_E = var2_int + ((var3 << 16) - -(var3 << 8));
+                          pj.field_E = var2_int + ((var3 << -357803408) - -(var3 << -1873746072));
                           var2_int = (int)(224.0 + pj.a((double)ni.field_x / 25.0, param0 ^ 32803) * 32.0);
-                          a.field_i = var2_int << 16;
+                          a.field_i = var2_int << 361898928;
                           if (ul.field_a != 0) {
                             break L13;
                           } else {
@@ -502,10 +504,10 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                                 }
                               }
                               L16: {
-                                if (var4 == 3) {
+                                if (-4 == (var4 ^ -1)) {
                                   break L16;
                                 } else {
-                                  if (var4 == 4) {
+                                  if (-5 == (var4 ^ -1)) {
                                     wl.a(-2, 0, 108);
                                     if (var5 == 0) {
                                       break L14;
@@ -588,11 +590,11 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   }
                   L20: {
                     L21: {
-                      var2_int = ((DrPhlogistonSavesTheEarth) this).b(stackIn_83_1, stackIn_83_2 != 0);
-                      if (var2_int == 1) {
+                      var2_int = this.b(stackIn_83_1, stackIn_83_2 != 0);
+                      if ((var2_int ^ -1) == -2) {
                         break L21;
                       } else {
-                        if (var2_int == 2) {
+                        if (-3 == (var2_int ^ -1)) {
                           break L21;
                         } else {
                           break L20;
@@ -601,7 +603,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                     }
                     L22: {
                       if (null != df.field_l) {
-                        hb.a(-5, (java.awt.Canvas) (Object) df.field_l);
+                        hb.a(-5, df.field_l);
                         df.field_l.a(sb.field_d, true);
                         df.field_l = null;
                         break L22;
@@ -609,7 +611,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                         break L22;
                       }
                     }
-                    if (var2_int == 2) {
+                    if ((var2_int ^ -1) == -3) {
                       DrPhlogistonSavesTheEarth.a(nb.a(-106), -117);
                       break L20;
                     } else {
@@ -629,10 +631,10 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               } else {
                 bh.b(-95);
                 gf.b((byte) 86);
-                if (hl.field_f != 9) {
+                if ((hl.field_f ^ -1) != -10) {
                   break L8;
                 } else {
-                  if (ej.field_h != 0) {
+                  if (-1 != (ej.field_h ^ -1)) {
                     break L8;
                   } else {
                     hl.field_f = 2;
@@ -646,7 +648,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               L24: {
                 if (!oh.a(0)) {
                   L25: while (true) {
-                    var2_ref = (je) (Object) nf.field_x.d(180479896);
+                    var2_ref = (je) ((Object) nf.field_x.d(180479896));
                     if (var2_ref == null) {
                       break L24;
                     } else {
@@ -671,7 +673,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   if (!th.a(false, vi.field_a)) {
                     break L27;
                   } else {
-                    ((DrPhlogistonSavesTheEarth) this).c(true);
+                    this.c(true);
                     if (var5 != 0) {
                       break L23;
                     } else {
@@ -691,7 +693,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               if (sb.b(-11)) {
                 L29: {
                   L30: {
-                    var2_int = ((DrPhlogistonSavesTheEarth) this).b(false);
+                    var2_int = this.b(false);
                     if (var2_int == 0) {
                       break L30;
                     } else {
@@ -708,7 +710,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   dj.a(false, 5);
                   break L29;
                 }
-                if (var2_int != 2) {
+                if (-3 != (var2_int ^ -1)) {
                   break L28;
                 } else {
                   am.e(11);
@@ -738,12 +740,18 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                 }
               }
             }
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.BA(" + param0 + ')');
+          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.BA(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -863,7 +871,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.VA(" + param0 + ')');
+          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.VA(" + param0 + ')');
         }
     }
 
@@ -1149,13 +1157,13 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             vh.a(84);
             dc.c(88);
             vi.a(2823);
-            ((DrPhlogistonSavesTheEarth) this).field_z = null;
+            this.field_z = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.W(" + param0 + ')');
+          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.W(" + param0 + ')');
         }
     }
 
@@ -1163,6 +1171,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         RuntimeException var1 = null;
         int stackIn_2_0 = 0;
         int stackIn_10_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_9_0 = 0;
@@ -1188,19 +1197,25 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                 stackIn_10_0 = stackOut_9_0;
                 break L1;
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1, "DrPhlogistonSavesTheEarth.IB(" + param0 + ')');
+          throw ie.a((Throwable) ((Object) var1), "DrPhlogistonSavesTheEarth.IB(" + param0 + ')');
         }
-        return stackIn_10_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_10_0 != 0;
+        }
     }
 
     private final void p(int param0) {
@@ -1234,7 +1249,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.RA(" + param0 + ')');
+          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.RA(" + param0 + ')');
         }
     }
 
@@ -1243,28 +1258,35 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
         try {
           L0: {
             if (param2 == 176) {
-              var3_int = param0 >> 31 & param1 - 1;
-              stackOut_3_0 = (param0 - -(param0 >>> 31)) % param1 - -var3_int;
+              var3_int = param0 >> 1153343807 & param1 - 1;
+              stackOut_3_0 = (param0 - -(param0 >>> -144144289)) % param1 - -var3_int;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = -7;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var3, "DrPhlogistonSavesTheEarth.SA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ie.a((Throwable) ((Object) var3), "DrPhlogistonSavesTheEarth.SA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     private final he[] a(he[] param0, int param1) {
@@ -1300,7 +1322,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               if (param1 == 65793) {
                 break L1;
               } else {
-                ((DrPhlogistonSavesTheEarth) this).h(-112);
+                this.h(-112);
                 break L1;
               }
             }
@@ -1308,11 +1330,11 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             L2: while (true) {
               L3: {
                 L4: {
-                  if (~var4 <= ~var3.length) {
+                  if ((var4 ^ -1) <= (var3.length ^ -1)) {
                     break L4;
                   } else {
                     var3[var4] = param0[var4].e();
-                    stackOut_6_0 = (he[]) var3;
+                    stackOut_6_0 = (he[]) (var3);
                     stackIn_11_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
                     if (var5 != 0) {
@@ -1328,7 +1350,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                     }
                   }
                 }
-                stackOut_10_0 = (he[]) var3;
+                stackOut_10_0 = (he[]) (var3);
                 stackIn_11_0 = stackOut_10_0;
                 break L3;
               }
@@ -1339,23 +1361,23 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var3_ref;
+            stackOut_12_0 = (RuntimeException) (var3_ref);
             stackOut_12_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.CB(");
             stackIn_15_0 = stackOut_12_0;
             stackIn_15_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_16_0 = stackOut_13_0;
               stackIn_16_1 = stackOut_13_1;
@@ -1363,7 +1385,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ')');
         }
         return stackIn_11_0;
     }
@@ -1379,6 +1401,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
@@ -1392,21 +1415,22 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         try {
           L0: {
             if (param1 == null) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 var3_int = 0;
                 if (param0 >= 80) {
                   break L1;
                 } else {
-                  field_J = null;
+                  field_J = (nh) null;
                   break L1;
                 }
               }
               L2: while (true) {
                 L3: {
                   L4: {
-                    if (~param1.length >= ~var3_int) {
+                    if ((param1.length ^ -1) >= (var3_int ^ -1)) {
                       break L4;
                     } else {
                       param1[var3_int].c();
@@ -1424,6 +1448,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   }
                   break L3;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             }
@@ -1432,23 +1457,23 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             runtimeException = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) runtimeException;
+            stackOut_13_0 = (RuntimeException) (runtimeException);
             stackOut_13_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.WA(").append(param0).append(',');
             stackIn_16_0 = stackOut_13_0;
             stackIn_16_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_17_0 = stackOut_14_0;
               stackIn_17_1 = stackOut_14_1;
@@ -1456,12 +1481,16 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final void h(int param0) {
-        Object var2_ref = null;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -1472,6 +1501,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         int stackIn_86_0 = 0;
         int stackIn_87_0 = 0;
         int stackIn_87_1 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         q stackOut_4_0 = null;
         java.awt.Canvas stackOut_2_0 = null;
@@ -1483,18 +1513,18 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         int stackOut_82_0 = 0;
         int stackOut_84_0 = 0;
         boolean stackOut_84_1 = false;
-        var2_ref = null;
+        Object var2_ref = null;
         var4 = field_D ? 1 : 0;
         try {
           L0: {
             L1: {
               if (df.field_l != null) {
                 stackOut_4_0 = df.field_l;
-                stackIn_5_0 = (Object) (Object) stackOut_4_0;
+                stackIn_5_0 = stackOut_4_0;
                 break L1;
               } else {
                 stackOut_2_0 = n.field_g;
-                stackIn_5_0 = (Object) (Object) stackOut_2_0;
+                stackIn_5_0 = stackOut_2_0;
                 break L1;
               }
             }
@@ -1511,12 +1541,14 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   break L2;
                 }
               }
-              o.a(stackIn_12_0 != 0, 320, (java.awt.Canvas) var2_ref);
-              return;
+              o.a(stackIn_12_0 != 0, 320, (java.awt.Canvas) (var2_ref));
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              if (!((DrPhlogistonSavesTheEarth) this).field_C) {
-                dh.a(41, (java.awt.Canvas) var2_ref);
-                return;
+              if (!this.field_C) {
+                dh.a(41, (java.awt.Canvas) (var2_ref));
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (a.a(-27365)) {
                   L3: {
@@ -1551,7 +1583,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                         } else {
                           L8: {
                             L9: {
-                              if (hl.field_f == -1) {
+                              if (0 == (hl.field_f ^ -1)) {
                                 break L9;
                               } else {
                                 th.field_a[hl.field_f].f(-8448);
@@ -1591,11 +1623,11 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                         sd.field_a.y(6212);
                         break L10;
                       }
-                      be.a(15 * (-ue.field_b + 33));
+                      be.a(15 * (-ue.field_b + 32 + 1));
                       be.a(0, 0, 640, 480, 22070844, -(10 * ue.field_b) + 320);
                       break L6;
                     }
-                    if (ue.field_b != 0) {
+                    if ((ue.field_b ^ -1) != -1) {
                       break L3;
                     } else {
                       if (r.field_d != 11) {
@@ -1681,19 +1713,21 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                     break L14;
                   }
                   L18: {
-                    if (nj.field_j < 2) {
+                    if (-3 < (nj.field_j ^ -1)) {
                       break L18;
                     } else {
                       a.field_g.c(qj.field_c + " lps", 15, 15, 16777215, 65793);
                       break L18;
                     }
                   }
-                  DrPhlogistonSavesTheEarth.a(param0, -74, (java.awt.Canvas) var2_ref, 0);
+                  DrPhlogistonSavesTheEarth.a(param0, -74, (java.awt.Canvas) (var2_ref), 0);
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
                   we.a(ia.field_b, -119, 100.0f);
-                  dh.a(21, (java.awt.Canvas) var2_ref);
-                  return;
+                  dh.a(21, (java.awt.Canvas) (var2_ref));
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               }
             }
@@ -1701,7 +1735,20 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.LA(" + param0 + ')');
+          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.LA(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -1716,7 +1763,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               if (param0 == -8755) {
                 break L1;
               } else {
-                field_F = null;
+                field_F = (vd) null;
                 break L1;
               }
             }
@@ -1726,11 +1773,11 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   break L3;
                 } else {
                   L4: {
-                    if (~r.field_d == ~hl.field_f) {
+                    if ((r.field_d ^ -1) == (hl.field_f ^ -1)) {
                       break L4;
                     } else {
                       ue.field_b = ue.field_b + 1;
-                      if (ue.field_b != 32) {
+                      if ((ue.field_b ^ -1) != -33) {
                         break L2;
                       } else {
                         L5: {
@@ -1752,7 +1799,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                     }
                   }
                   L6: {
-                    if (hl.field_f != -1) {
+                    if ((hl.field_f ^ -1) != 0) {
                       break L6;
                     } else {
                       sd.field_a.r(param0 ^ 8794);
@@ -1772,11 +1819,11 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                 }
               }
               L7: {
-                if (ul.field_a != 1) {
+                if (-2 != (ul.field_a ^ -1)) {
                   break L7;
                 } else {
                   ue.field_b = ue.field_b + 1;
-                  if (ue.field_b == 32) {
+                  if (-33 == (ue.field_b ^ -1)) {
                     L8: {
                       L9: {
                         if (pf.a((byte) 97)) {
@@ -1805,11 +1852,11 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                 }
               }
               L10: {
-                if (ul.field_a == 2) {
+                if (-3 == (ul.field_a ^ -1)) {
                   break L10;
                 } else {
                   L11: {
-                    if (ue.field_b <= 0) {
+                    if (-1 <= (ue.field_b ^ -1)) {
                       ul.field_a = 0;
                       break L11;
                     } else {
@@ -1841,7 +1888,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                     hl.field_f = hg.field_sb;
                     eb.a((byte) 20);
                     li.b(param0 + 8638);
-                    if (hl.field_f != -2) {
+                    if ((hl.field_f ^ -1) != 1) {
                       break L12;
                     } else {
                       hl.field_f = 0;
@@ -1866,7 +1913,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.LB(" + param0 + ')');
+          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.LB(" + param0 + ')');
         }
     }
 
@@ -1875,6 +1922,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = field_D ? 1 : 0;
         try {
@@ -1974,16 +2022,23 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   rh.field_h = hh.field_d[2];
                   break L2;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.TA(" + param0 + ')');
+          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.TA(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -2029,7 +2084,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               if (param1 == 0) {
                 break L1;
               } else {
-                field_E = null;
+                field_E = (String) null;
                 break L1;
               }
             }
@@ -2062,23 +2117,23 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var4;
+            stackOut_11_0 = (RuntimeException) (var4);
             stackOut_11_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.UA(");
             stackIn_14_0 = stackOut_11_0;
             stackIn_14_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_15_0 = stackOut_12_0;
               stackIn_15_1 = stackOut_12_1;
@@ -2087,23 +2142,23 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             }
           }
           L6: {
-            stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+            stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
             stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_15_0;
             stackIn_18_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_19_0 = stackOut_16_0;
               stackIn_19_1 = stackOut_16_1;
@@ -2111,7 +2166,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               break L6;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
     }
 
@@ -2156,7 +2211,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               if (param1 <= -67) {
                 break L3;
               } else {
-                field_G = null;
+                field_G = (he[]) null;
                 break L3;
               }
             }
@@ -2166,23 +2221,23 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           decompiledCaughtException = decompiledCaughtParameter1;
           L4: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4_ref2;
+            stackOut_7_0 = (RuntimeException) (var4_ref2);
             stackOut_7_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.OB(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_7_0;
             stackIn_10_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_11_0 = stackOut_8_0;
               stackIn_11_1 = stackOut_8_1;
@@ -2190,517 +2245,530 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               break L4;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param3 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ')');
         }
     }
 
     private final void j(byte param0) {
         kb var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
-        L0: {
-          we.a(sl.field_s, -79, 50.0f);
-          ((DrPhlogistonSavesTheEarth) this).h(0);
-          nl.field_r[0] = kb.a(aa.field_b, "", "menu_select").a().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_1_gatling_gun_fire");
-          if (null != var2) {
-            nl.field_r[1] = var2.a().a(qk.field_g);
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            L1: {
+              we.a(sl.field_s, -79, 50.0f);
+              this.h(0);
+              nl.field_r[0] = kb.a(aa.field_b, "", "menu_select").a().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_1_gatling_gun_fire");
+              if (null != var2) {
+                nl.field_r[1] = var2.a().a(qk.field_g);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              var2 = kb.a(aa.field_b, "", "DrP_2_drop_bomb");
+              if (var2 == null) {
+                break L2;
+              } else {
+                nl.field_r[2] = var2.a().a(qk.field_g);
+                break L2;
+              }
+            }
+            L3: {
+              var2 = kb.a(aa.field_b, "", "DrP_3_sonic_canon_fire");
+              if (null != var2) {
+                nl.field_r[3] = var2.a().a(qk.field_g);
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            L4: {
+              var2 = kb.a(aa.field_b, "", "DrP_4_homing_missile_fire");
+              if (var2 != null) {
+                nl.field_r[4] = var2.a().a(qk.field_g);
+                break L4;
+              } else {
+                break L4;
+              }
+            }
+            L5: {
+              nl.field_r[5] = wi.a(2205, 100, 100);
+              var2 = kb.a(aa.field_b, "", "DrP_6_mega_canon_fire");
+              if (var2 != null) {
+                nl.field_r[6] = var2.a().a(qk.field_g);
+                break L5;
+              } else {
+                break L5;
+              }
+            }
+            L6: {
+              var2 = kb.a(aa.field_b, "", "DrP_7_loose_life");
+              if (var2 == null) {
+                break L6;
+              } else {
+                nl.field_r[7] = var2.a().a(qk.field_g);
+                break L6;
+              }
+            }
+            L7: {
+              nl.field_r[8] = tk.a(ua.field_b, "", "DrP_8_respawn").c().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_9_final_death");
+              if (null == var2) {
+                break L7;
+              } else {
+                nl.field_r[9] = var2.a().a(qk.field_g);
+                break L7;
+              }
+            }
+            L8: {
+              var2 = kb.a(aa.field_b, "", "DrP_10_tripod_hit");
+              if (null != var2) {
+                nl.field_r[10] = var2.a().a(qk.field_g);
+                break L8;
+              } else {
+                break L8;
+              }
+            }
+            L9: {
+              var2 = kb.a(aa.field_b, "", "DrP_11_tripod_fire");
+              if (var2 != null) {
+                nl.field_r[11] = var2.a().a(qk.field_g);
+                break L9;
+              } else {
+                break L9;
+              }
+            }
+            L10: {
+              var2 = kb.a(aa.field_b, "", "DrP_12_probes_hit");
+              if (var2 != null) {
+                nl.field_r[12] = var2.a().a(qk.field_g);
+                break L10;
+              } else {
+                break L10;
+              }
+            }
+            L11: {
+              nl.field_r[13] = tk.a(ua.field_b, "", "DrP_13_probes_die").c().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_14_glider_fire");
+              if (null != var2) {
+                nl.field_r[14] = var2.a().a(qk.field_g);
+                break L11;
+              } else {
+                break L11;
+              }
+            }
+            L12: {
+              var2 = kb.a(aa.field_b, "", "DrP_15_glider_die");
+              if (var2 == null) {
+                break L12;
+              } else {
+                nl.field_r[15] = var2.a().a(qk.field_g);
+                break L12;
+              }
+            }
+            L13: {
+              var2 = kb.a(aa.field_b, "", "DrP_16_shredder_hit");
+              if (null == var2) {
+                break L13;
+              } else {
+                nl.field_r[16] = var2.a().a(qk.field_g);
+                break L13;
+              }
+            }
+            L14: {
+              var2 = kb.a(aa.field_b, "", "DrP_17_shredder_die");
+              if (var2 != null) {
+                nl.field_r[17] = var2.a().a(qk.field_g);
+                break L14;
+              } else {
+                break L14;
+              }
+            }
+            L15: {
+              var2 = kb.a(aa.field_b, "", "DrP_18_as_bot_hit");
+              if (var2 == null) {
+                break L15;
+              } else {
+                nl.field_r[18] = var2.a().a(qk.field_g);
+                break L15;
+              }
+            }
+            L16: {
+              var2 = kb.a(aa.field_b, "", "DrP_19_as_bot_fire");
+              if (null != var2) {
+                nl.field_r[19] = var2.a().a(qk.field_g);
+                break L16;
+              } else {
+                break L16;
+              }
+            }
+            L17: {
+              nl.field_r[20] = tk.a(ua.field_b, "", "DrP_20_as_bot_die").c().a(qk.field_g);
+              nl.field_r[21] = tk.a(ua.field_b, "", "DrP_21_dropship_move").c().a(qk.field_g);
+              nl.field_r[22] = tk.a(ua.field_b, "", "DrP_22_dropship_chrg").c().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_23_dropship_spawn");
+              if (var2 == null) {
+                break L17;
+              } else {
+                nl.field_r[23] = var2.a().a(qk.field_g);
+                break L17;
+              }
+            }
+            L18: {
+              var2 = kb.a(aa.field_b, "", "DrP_24_dropship_fire");
+              if (var2 == null) {
+                break L18;
+              } else {
+                nl.field_r[24] = var2.a().a(qk.field_g);
+                break L18;
+              }
+            }
+            L19: {
+              var2 = kb.a(aa.field_b, "", "DrP_25_dropship_hit");
+              if (null == var2) {
+                break L19;
+              } else {
+                nl.field_r[25] = var2.a().a(qk.field_g);
+                break L19;
+              }
+            }
+            L20: {
+              nl.field_r[26] = tk.a(ua.field_b, "", "DrP_26_dropship_die").c().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_27_spacemine_exp");
+              if (null != var2) {
+                nl.field_r[27] = var2.a().a(qk.field_g);
+                break L20;
+              } else {
+                break L20;
+              }
+            }
+            L21: {
+              var2 = kb.a(aa.field_b, "", "DrP_28_miner_hit");
+              if (var2 == null) {
+                break L21;
+              } else {
+                nl.field_r[28] = var2.a().a(qk.field_g);
+                break L21;
+              }
+            }
+            L22: {
+              nl.field_r[29] = tk.a(ua.field_b, "", "DrP_29_miner_move").c().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_30_miner_die");
+              if (null == var2) {
+                break L22;
+              } else {
+                nl.field_r[30] = var2.a().a(qk.field_g);
+                break L22;
+              }
+            }
+            L23: {
+              var2 = kb.a(aa.field_b, "", "DrP_31_asteroid_hit");
+              if (var2 == null) {
+                break L23;
+              } else {
+                nl.field_r[31] = var2.a().a(qk.field_g);
+                break L23;
+              }
+            }
+            L24: {
+              var2 = kb.a(aa.field_b, "", "DrP_32b_asteroid_dest");
+              if (null == var2) {
+                break L24;
+              } else {
+                nl.field_r[32] = var2.a().a(qk.field_g);
+                break L24;
+              }
+            }
+            L25: {
+              nl.field_r[33] = tk.a(ua.field_b, "", "DrP_33_battlecarr_move").c().a(qk.field_g);
+              nl.field_r[34] = tk.a(ua.field_b, "", "DrP_34_battlecarr_charge").c().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_35_battlecarr_fire");
+              if (var2 != null) {
+                nl.field_r[35] = var2.a().a(qk.field_g);
+                break L25;
+              } else {
+                break L25;
+              }
+            }
+            L26: {
+              var2 = kb.a(aa.field_b, "", "DrP_36_battlecarr_spawn");
+              if (null != var2) {
+                nl.field_r[36] = var2.a().a(qk.field_g);
+                break L26;
+              } else {
+                break L26;
+              }
+            }
+            L27: {
+              var2 = kb.a(aa.field_b, "", "DrP_37_battlecarr_hit");
+              if (var2 != null) {
+                nl.field_r[37] = var2.a().a(qk.field_g);
+                break L27;
+              } else {
+                break L27;
+              }
+            }
+            L28: {
+              nl.field_r[38] = tk.a(ua.field_b, "", "DrP_38_battlecarr_die").c().a(qk.field_g);
+              nl.field_r[39] = tk.a(ua.field_b, "", "DrP_39_bunkers_hit").c().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_40_bunkers_die");
+              if (null == var2) {
+                break L28;
+              } else {
+                nl.field_r[40] = var2.a().a(qk.field_g);
+                break L28;
+              }
+            }
+            L29: {
+              var2 = kb.a(aa.field_b, "", "DrP_41_combtank_fire");
+              if (var2 == null) {
+                break L29;
+              } else {
+                nl.field_r[41] = var2.a().a(qk.field_g);
+                break L29;
+              }
+            }
+            L30: {
+              var2 = kb.a(aa.field_b, "", "DrP_42_combtank_hit");
+              if (var2 == null) {
+                break L30;
+              } else {
+                nl.field_r[42] = var2.a().a(qk.field_g);
+                break L30;
+              }
+            }
+            L31: {
+              var2 = kb.a(aa.field_b, "", "DrP_43_combtank_die");
+              if (var2 == null) {
+                break L31;
+              } else {
+                nl.field_r[43] = var2.a().a(qk.field_g);
+                break L31;
+              }
+            }
+            L32: {
+              var2 = kb.a(aa.field_b, "", "DrP_44_battank_fire");
+              if (var2 == null) {
+                break L32;
+              } else {
+                nl.field_r[44] = var2.a().a(qk.field_g);
+                break L32;
+              }
+            }
+            L33: {
+              var2 = kb.a(aa.field_b, "", "DrP_45_battank_hit");
+              if (var2 != null) {
+                nl.field_r[45] = var2.a().a(qk.field_g);
+                break L33;
+              } else {
+                break L33;
+              }
+            }
+            L34: {
+              var2 = kb.a(aa.field_b, "", "DrP_46_battank_die");
+              if (var2 != null) {
+                nl.field_r[46] = var2.a().a(qk.field_g);
+                break L34;
+              } else {
+                break L34;
+              }
+            }
+            L35: {
+              nl.field_r[47] = tk.a(ua.field_b, "", "DrP_47_attackcop_move").c().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_48_attackcop_fire");
+              if (null == var2) {
+                break L35;
+              } else {
+                nl.field_r[48] = var2.a().a(qk.field_g);
+                break L35;
+              }
+            }
+            L36: {
+              var2 = kb.a(aa.field_b, "", "DrP_49_attackcop_hit");
+              if (var2 != null) {
+                nl.field_r[49] = var2.a().a(qk.field_g);
+                break L36;
+              } else {
+                break L36;
+              }
+            }
+            L37: {
+              nl.field_r[50] = tk.a(ua.field_b, "", "DrP_50_attackcop_die").c().a(qk.field_g);
+              nl.field_r[51] = tk.a(ua.field_b, "", "DrP_51_doomcop_move").c().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_52_doomcop_fire");
+              if (var2 != null) {
+                nl.field_r[52] = var2.a().a(qk.field_g);
+                break L37;
+              } else {
+                break L37;
+              }
+            }
+            L38: {
+              var2 = kb.a(aa.field_b, "", "DrP_53_doomcop_hit");
+              if (null != var2) {
+                nl.field_r[53] = var2.a().a(qk.field_g);
+                break L38;
+              } else {
+                break L38;
+              }
+            }
+            L39: {
+              nl.field_r[54] = tk.a(ua.field_b, "", "DrP_54_doomcop_die").c().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_55_floatbat_move");
+              if (null != var2) {
+                nl.field_r[55] = var2.a().a(qk.field_g);
+                break L39;
+              } else {
+                break L39;
+              }
+            }
+            L40: {
+              nl.field_r[56] = tk.a(ua.field_b, "", "DrP_56_floatbat_chrg").c().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_57_floatbat_fire");
+              if (null != var2) {
+                nl.field_r[57] = var2.a().a(qk.field_g);
+                break L40;
+              } else {
+                break L40;
+              }
+            }
+            L41: {
+              var2 = kb.a(aa.field_b, "", "DrP_58_floatbat_spawn");
+              if (null != var2) {
+                nl.field_r[58] = var2.a().a(qk.field_g);
+                break L41;
+              } else {
+                break L41;
+              }
+            }
+            L42: {
+              var2 = kb.a(aa.field_b, "", "DrP_59_floatbat_hit");
+              if (null == var2) {
+                break L42;
+              } else {
+                nl.field_r[59] = var2.a().a(qk.field_g);
+                break L42;
+              }
+            }
+            L43: {
+              nl.field_r[60] = tk.a(ua.field_b, "", "DrP_60_floatbat_die").c().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_61_alcomship_move");
+              if (var2 == null) {
+                break L43;
+              } else {
+                nl.field_r[61] = var2.a().a(qk.field_g);
+                break L43;
+              }
+            }
+            L44: {
+              nl.field_r[62] = tk.a(ua.field_b, "", "DrP_62_alcomship_chrg").c().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_63_alcomship_fire");
+              if (null == var2) {
+                break L44;
+              } else {
+                nl.field_r[63] = var2.a().a(qk.field_g);
+                break L44;
+              }
+            }
+            L45: {
+              var2 = kb.a(aa.field_b, "", "DrP_64_alcomship_spawn");
+              if (null != var2) {
+                nl.field_r[64] = var2.a().a(qk.field_g);
+                break L45;
+              } else {
+                break L45;
+              }
+            }
+            L46: {
+              var2 = kb.a(aa.field_b, "", "DrP_65_alcomship_fire2");
+              if (var2 != null) {
+                nl.field_r[65] = var2.a().a(qk.field_g);
+                break L46;
+              } else {
+                break L46;
+              }
+            }
+            L47: {
+              var2 = kb.a(aa.field_b, "", "DrP_66_alcomship_hit");
+              if (null != var2) {
+                nl.field_r[66] = var2.a().a(qk.field_g);
+                break L47;
+              } else {
+                break L47;
+              }
+            }
+            L48: {
+              nl.field_r[67] = tk.a(ua.field_b, "", "DrP_67_alcomship_die").c().a(qk.field_g);
+              var2 = kb.a(aa.field_b, "", "DrP_68_humbuild_hit");
+              if (var2 != null) {
+                nl.field_r[68] = var2.a().a(qk.field_g);
+                break L48;
+              } else {
+                break L48;
+              }
+            }
+            L49: {
+              if (var2 == null) {
+                break L49;
+              } else {
+                nl.field_r[69] = var2.a().a(qk.field_g);
+                break L49;
+              }
+            }
+            L50: {
+              var2 = kb.a(aa.field_b, "", "DrP_70_allpowerups");
+              if (var2 == null) {
+                break L50;
+              } else {
+                nl.field_r[70] = var2.a().a(qk.field_g);
+                break L50;
+              }
+            }
+            L51: {
+              var2 = kb.a(aa.field_b, "", "DrP_32c_asteroid_dest");
+              var3 = 47 / ((param0 - 19) / 45);
+              if (var2 == null) {
+                break L51;
+              } else {
+                nl.field_r[71] = var2.a().a(qk.field_g);
+                break L51;
+              }
+            }
+            L52: {
+              var2 = kb.a(aa.field_b, "", "DrP_32a_asteroid_dest");
+              if (var2 == null) {
+                break L52;
+              } else {
+                nl.field_r[72] = var2.a().a(qk.field_g);
+                break L52;
+              }
+            }
+            L53: {
+              var2 = kb.a(aa.field_b, "", "drp_71_tesla_coil");
+              if (var2 == null) {
+                break L53;
+              } else {
+                nl.field_r[73] = var2.a().a(qk.field_g);
+                break L53;
+              }
+            }
             break L0;
-          } else {
-            break L0;
           }
-        }
-        L1: {
-          var2 = kb.a(aa.field_b, "", "DrP_2_drop_bomb");
-          if (var2 == null) {
-            break L1;
-          } else {
-            nl.field_r[2] = var2.a().a(qk.field_g);
-            break L1;
-          }
-        }
-        L2: {
-          var2 = kb.a(aa.field_b, "", "DrP_3_sonic_canon_fire");
-          if (null != var2) {
-            nl.field_r[3] = var2.a().a(qk.field_g);
-            break L2;
-          } else {
-            break L2;
-          }
-        }
-        L3: {
-          var2 = kb.a(aa.field_b, "", "DrP_4_homing_missile_fire");
-          if (var2 != null) {
-            nl.field_r[4] = var2.a().a(qk.field_g);
-            break L3;
-          } else {
-            break L3;
-          }
-        }
-        L4: {
-          nl.field_r[5] = wi.a(2205, 100, 100);
-          var2 = kb.a(aa.field_b, "", "DrP_6_mega_canon_fire");
-          if (var2 != null) {
-            nl.field_r[6] = var2.a().a(qk.field_g);
-            break L4;
-          } else {
-            break L4;
-          }
-        }
-        L5: {
-          var2 = kb.a(aa.field_b, "", "DrP_7_loose_life");
-          if (var2 == null) {
-            break L5;
-          } else {
-            nl.field_r[7] = var2.a().a(qk.field_g);
-            break L5;
-          }
-        }
-        L6: {
-          nl.field_r[8] = tk.a(ua.field_b, "", "DrP_8_respawn").c().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_9_final_death");
-          if (null == var2) {
-            break L6;
-          } else {
-            nl.field_r[9] = var2.a().a(qk.field_g);
-            break L6;
-          }
-        }
-        L7: {
-          var2 = kb.a(aa.field_b, "", "DrP_10_tripod_hit");
-          if (null != var2) {
-            nl.field_r[10] = var2.a().a(qk.field_g);
-            break L7;
-          } else {
-            break L7;
-          }
-        }
-        L8: {
-          var2 = kb.a(aa.field_b, "", "DrP_11_tripod_fire");
-          if (var2 != null) {
-            nl.field_r[11] = var2.a().a(qk.field_g);
-            break L8;
-          } else {
-            break L8;
-          }
-        }
-        L9: {
-          var2 = kb.a(aa.field_b, "", "DrP_12_probes_hit");
-          if (var2 != null) {
-            nl.field_r[12] = var2.a().a(qk.field_g);
-            break L9;
-          } else {
-            break L9;
-          }
-        }
-        L10: {
-          nl.field_r[13] = tk.a(ua.field_b, "", "DrP_13_probes_die").c().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_14_glider_fire");
-          if (null != var2) {
-            nl.field_r[14] = var2.a().a(qk.field_g);
-            break L10;
-          } else {
-            break L10;
-          }
-        }
-        L11: {
-          var2 = kb.a(aa.field_b, "", "DrP_15_glider_die");
-          if (var2 == null) {
-            break L11;
-          } else {
-            nl.field_r[15] = var2.a().a(qk.field_g);
-            break L11;
-          }
-        }
-        L12: {
-          var2 = kb.a(aa.field_b, "", "DrP_16_shredder_hit");
-          if (null == var2) {
-            break L12;
-          } else {
-            nl.field_r[16] = var2.a().a(qk.field_g);
-            break L12;
-          }
-        }
-        L13: {
-          var2 = kb.a(aa.field_b, "", "DrP_17_shredder_die");
-          if (var2 != null) {
-            nl.field_r[17] = var2.a().a(qk.field_g);
-            break L13;
-          } else {
-            break L13;
-          }
-        }
-        L14: {
-          var2 = kb.a(aa.field_b, "", "DrP_18_as_bot_hit");
-          if (var2 == null) {
-            break L14;
-          } else {
-            nl.field_r[18] = var2.a().a(qk.field_g);
-            break L14;
-          }
-        }
-        L15: {
-          var2 = kb.a(aa.field_b, "", "DrP_19_as_bot_fire");
-          if (null != var2) {
-            nl.field_r[19] = var2.a().a(qk.field_g);
-            break L15;
-          } else {
-            break L15;
-          }
-        }
-        L16: {
-          nl.field_r[20] = tk.a(ua.field_b, "", "DrP_20_as_bot_die").c().a(qk.field_g);
-          nl.field_r[21] = tk.a(ua.field_b, "", "DrP_21_dropship_move").c().a(qk.field_g);
-          nl.field_r[22] = tk.a(ua.field_b, "", "DrP_22_dropship_chrg").c().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_23_dropship_spawn");
-          if (var2 == null) {
-            break L16;
-          } else {
-            nl.field_r[23] = var2.a().a(qk.field_g);
-            break L16;
-          }
-        }
-        L17: {
-          var2 = kb.a(aa.field_b, "", "DrP_24_dropship_fire");
-          if (var2 == null) {
-            break L17;
-          } else {
-            nl.field_r[24] = var2.a().a(qk.field_g);
-            break L17;
-          }
-        }
-        L18: {
-          var2 = kb.a(aa.field_b, "", "DrP_25_dropship_hit");
-          if (null == var2) {
-            break L18;
-          } else {
-            nl.field_r[25] = var2.a().a(qk.field_g);
-            break L18;
-          }
-        }
-        L19: {
-          nl.field_r[26] = tk.a(ua.field_b, "", "DrP_26_dropship_die").c().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_27_spacemine_exp");
-          if (null != var2) {
-            nl.field_r[27] = var2.a().a(qk.field_g);
-            break L19;
-          } else {
-            break L19;
-          }
-        }
-        L20: {
-          var2 = kb.a(aa.field_b, "", "DrP_28_miner_hit");
-          if (var2 == null) {
-            break L20;
-          } else {
-            nl.field_r[28] = var2.a().a(qk.field_g);
-            break L20;
-          }
-        }
-        L21: {
-          nl.field_r[29] = tk.a(ua.field_b, "", "DrP_29_miner_move").c().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_30_miner_die");
-          if (null == var2) {
-            break L21;
-          } else {
-            nl.field_r[30] = var2.a().a(qk.field_g);
-            break L21;
-          }
-        }
-        L22: {
-          var2 = kb.a(aa.field_b, "", "DrP_31_asteroid_hit");
-          if (var2 == null) {
-            break L22;
-          } else {
-            nl.field_r[31] = var2.a().a(qk.field_g);
-            break L22;
-          }
-        }
-        L23: {
-          var2 = kb.a(aa.field_b, "", "DrP_32b_asteroid_dest");
-          if (null == var2) {
-            break L23;
-          } else {
-            nl.field_r[32] = var2.a().a(qk.field_g);
-            break L23;
-          }
-        }
-        L24: {
-          nl.field_r[33] = tk.a(ua.field_b, "", "DrP_33_battlecarr_move").c().a(qk.field_g);
-          nl.field_r[34] = tk.a(ua.field_b, "", "DrP_34_battlecarr_charge").c().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_35_battlecarr_fire");
-          if (var2 != null) {
-            nl.field_r[35] = var2.a().a(qk.field_g);
-            break L24;
-          } else {
-            break L24;
-          }
-        }
-        L25: {
-          var2 = kb.a(aa.field_b, "", "DrP_36_battlecarr_spawn");
-          if (null != var2) {
-            nl.field_r[36] = var2.a().a(qk.field_g);
-            break L25;
-          } else {
-            break L25;
-          }
-        }
-        L26: {
-          var2 = kb.a(aa.field_b, "", "DrP_37_battlecarr_hit");
-          if (var2 != null) {
-            nl.field_r[37] = var2.a().a(qk.field_g);
-            break L26;
-          } else {
-            break L26;
-          }
-        }
-        L27: {
-          nl.field_r[38] = tk.a(ua.field_b, "", "DrP_38_battlecarr_die").c().a(qk.field_g);
-          nl.field_r[39] = tk.a(ua.field_b, "", "DrP_39_bunkers_hit").c().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_40_bunkers_die");
-          if (null == var2) {
-            break L27;
-          } else {
-            nl.field_r[40] = var2.a().a(qk.field_g);
-            break L27;
-          }
-        }
-        L28: {
-          var2 = kb.a(aa.field_b, "", "DrP_41_combtank_fire");
-          if (var2 == null) {
-            break L28;
-          } else {
-            nl.field_r[41] = var2.a().a(qk.field_g);
-            break L28;
-          }
-        }
-        L29: {
-          var2 = kb.a(aa.field_b, "", "DrP_42_combtank_hit");
-          if (var2 == null) {
-            break L29;
-          } else {
-            nl.field_r[42] = var2.a().a(qk.field_g);
-            break L29;
-          }
-        }
-        L30: {
-          var2 = kb.a(aa.field_b, "", "DrP_43_combtank_die");
-          if (var2 == null) {
-            break L30;
-          } else {
-            nl.field_r[43] = var2.a().a(qk.field_g);
-            break L30;
-          }
-        }
-        L31: {
-          var2 = kb.a(aa.field_b, "", "DrP_44_battank_fire");
-          if (var2 == null) {
-            break L31;
-          } else {
-            nl.field_r[44] = var2.a().a(qk.field_g);
-            break L31;
-          }
-        }
-        L32: {
-          var2 = kb.a(aa.field_b, "", "DrP_45_battank_hit");
-          if (var2 != null) {
-            nl.field_r[45] = var2.a().a(qk.field_g);
-            break L32;
-          } else {
-            break L32;
-          }
-        }
-        L33: {
-          var2 = kb.a(aa.field_b, "", "DrP_46_battank_die");
-          if (var2 != null) {
-            nl.field_r[46] = var2.a().a(qk.field_g);
-            break L33;
-          } else {
-            break L33;
-          }
-        }
-        L34: {
-          nl.field_r[47] = tk.a(ua.field_b, "", "DrP_47_attackcop_move").c().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_48_attackcop_fire");
-          if (null == var2) {
-            break L34;
-          } else {
-            nl.field_r[48] = var2.a().a(qk.field_g);
-            break L34;
-          }
-        }
-        L35: {
-          var2 = kb.a(aa.field_b, "", "DrP_49_attackcop_hit");
-          if (var2 != null) {
-            nl.field_r[49] = var2.a().a(qk.field_g);
-            break L35;
-          } else {
-            break L35;
-          }
-        }
-        L36: {
-          nl.field_r[50] = tk.a(ua.field_b, "", "DrP_50_attackcop_die").c().a(qk.field_g);
-          nl.field_r[51] = tk.a(ua.field_b, "", "DrP_51_doomcop_move").c().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_52_doomcop_fire");
-          if (var2 != null) {
-            nl.field_r[52] = var2.a().a(qk.field_g);
-            break L36;
-          } else {
-            break L36;
-          }
-        }
-        L37: {
-          var2 = kb.a(aa.field_b, "", "DrP_53_doomcop_hit");
-          if (null != var2) {
-            nl.field_r[53] = var2.a().a(qk.field_g);
-            break L37;
-          } else {
-            break L37;
-          }
-        }
-        L38: {
-          nl.field_r[54] = tk.a(ua.field_b, "", "DrP_54_doomcop_die").c().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_55_floatbat_move");
-          if (null != var2) {
-            nl.field_r[55] = var2.a().a(qk.field_g);
-            break L38;
-          } else {
-            break L38;
-          }
-        }
-        L39: {
-          nl.field_r[56] = tk.a(ua.field_b, "", "DrP_56_floatbat_chrg").c().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_57_floatbat_fire");
-          if (null != var2) {
-            nl.field_r[57] = var2.a().a(qk.field_g);
-            break L39;
-          } else {
-            break L39;
-          }
-        }
-        L40: {
-          var2 = kb.a(aa.field_b, "", "DrP_58_floatbat_spawn");
-          if (null != var2) {
-            nl.field_r[58] = var2.a().a(qk.field_g);
-            break L40;
-          } else {
-            break L40;
-          }
-        }
-        L41: {
-          var2 = kb.a(aa.field_b, "", "DrP_59_floatbat_hit");
-          if (null == var2) {
-            break L41;
-          } else {
-            nl.field_r[59] = var2.a().a(qk.field_g);
-            break L41;
-          }
-        }
-        L42: {
-          nl.field_r[60] = tk.a(ua.field_b, "", "DrP_60_floatbat_die").c().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_61_alcomship_move");
-          if (var2 == null) {
-            break L42;
-          } else {
-            nl.field_r[61] = var2.a().a(qk.field_g);
-            break L42;
-          }
-        }
-        L43: {
-          nl.field_r[62] = tk.a(ua.field_b, "", "DrP_62_alcomship_chrg").c().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_63_alcomship_fire");
-          if (null == var2) {
-            break L43;
-          } else {
-            nl.field_r[63] = var2.a().a(qk.field_g);
-            break L43;
-          }
-        }
-        L44: {
-          var2 = kb.a(aa.field_b, "", "DrP_64_alcomship_spawn");
-          if (null != var2) {
-            nl.field_r[64] = var2.a().a(qk.field_g);
-            break L44;
-          } else {
-            break L44;
-          }
-        }
-        L45: {
-          var2 = kb.a(aa.field_b, "", "DrP_65_alcomship_fire2");
-          if (var2 != null) {
-            nl.field_r[65] = var2.a().a(qk.field_g);
-            break L45;
-          } else {
-            break L45;
-          }
-        }
-        L46: {
-          var2 = kb.a(aa.field_b, "", "DrP_66_alcomship_hit");
-          if (null != var2) {
-            nl.field_r[66] = var2.a().a(qk.field_g);
-            break L46;
-          } else {
-            break L46;
-          }
-        }
-        L47: {
-          nl.field_r[67] = tk.a(ua.field_b, "", "DrP_67_alcomship_die").c().a(qk.field_g);
-          var2 = kb.a(aa.field_b, "", "DrP_68_humbuild_hit");
-          if (var2 != null) {
-            nl.field_r[68] = var2.a().a(qk.field_g);
-            break L47;
-          } else {
-            break L47;
-          }
-        }
-        L48: {
-          if (var2 == null) {
-            break L48;
-          } else {
-            nl.field_r[69] = var2.a().a(qk.field_g);
-            break L48;
-          }
-        }
-        L49: {
-          var2 = kb.a(aa.field_b, "", "DrP_70_allpowerups");
-          if (var2 == null) {
-            break L49;
-          } else {
-            nl.field_r[70] = var2.a().a(qk.field_g);
-            break L49;
-          }
-        }
-        L50: {
-          var2 = kb.a(aa.field_b, "", "DrP_32c_asteroid_dest");
-          var3 = 47 / ((param0 - 19) / 45);
-          if (var2 == null) {
-            break L50;
-          } else {
-            nl.field_r[71] = var2.a().a(qk.field_g);
-            break L50;
-          }
-        }
-        L51: {
-          var2 = kb.a(aa.field_b, "", "DrP_32a_asteroid_dest");
-          if (var2 == null) {
-            break L51;
-          } else {
-            nl.field_r[72] = var2.a().a(qk.field_g);
-            break L51;
-          }
-        }
-        L52: {
-          var2 = kb.a(aa.field_b, "", "drp_71_tesla_coil");
-          if (var2 == null) {
-            break L52;
-          } else {
-            nl.field_r[73] = var2.a().a(qk.field_g);
-            break L52;
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw ie.a((Throwable) ((Object) var2_ref), "DrPhlogistonSavesTheEarth.KB(" + param0 + ')');
         }
     }
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
+            boolean discarded$2 = false;
             java.net.URL var2 = null;
             Exception var2_ref = null;
             RuntimeException var2_ref2 = null;
@@ -2728,7 +2796,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       if (param1 <= -92) {
                         break L2;
                       } else {
-                        boolean discarded$2 = DrPhlogistonSavesTheEarth.t(-37);
+                        discarded$2 = DrPhlogistonSavesTheEarth.t(-37);
                         break L2;
                       }
                     }
@@ -2750,23 +2818,23 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_7_0 = (RuntimeException) var2_ref2;
+                stackOut_7_0 = (RuntimeException) (var2_ref2);
                 stackOut_7_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.JB(");
                 stackIn_10_0 = stackOut_7_0;
                 stackIn_10_1 = stackOut_7_1;
                 stackIn_8_0 = stackOut_7_0;
                 stackIn_8_1 = stackOut_7_1;
                 if (param0 == null) {
-                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
                   stackOut_10_2 = "null";
                   stackIn_11_0 = stackOut_10_0;
                   stackIn_11_1 = stackOut_10_1;
                   stackIn_11_2 = stackOut_10_2;
                   break L4;
                 } else {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "{...}";
                   stackIn_11_0 = stackOut_8_0;
                   stackIn_11_1 = stackOut_8_1;
@@ -2774,7 +2842,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   break L4;
                 }
               }
-              throw ie.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
+              throw ie.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -2794,11 +2862,14 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             ji.field_d = kc.a(ff.field_P, kf.field_d, "", -101, "bottomheavy32");
             cb.field_b = kc.a(ff.field_P, kf.field_d, "", -95, "scriptfont");
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "DrPhlogistonSavesTheEarth.NB(" + param0 + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.NB(" + param0 + ')');
         }
     }
 
     private final void s(int param0) {
+        nh discarded$3 = null;
+        nh discarded$4 = null;
+        nh discarded$5 = null;
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -2807,10 +2878,10 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               we.a(qa.field_O, -111, 95.0f);
               nc.field_M = qk.a("", kf.field_d, "mb_foreground", true);
               eb.field_g = qk.a("", kf.field_d, "mb_logo", true);
-              nh discarded$3 = qk.a("", kf.field_d, "mb_transparency_layer", true);
-              nh discarded$4 = qk.a("", kf.field_d, "mb_signup_button_frame", true);
+              discarded$3 = qk.a("", kf.field_d, "mb_transparency_layer", true);
+              discarded$4 = qk.a("", kf.field_d, "mb_signup_button_frame", true);
               v.field_Y = qk.a("", kf.field_d, "mb_price_background", true);
-              nh discarded$5 = qk.a("", kf.field_d, "mb_menu_button_frame", true);
+              discarded$5 = qk.a("", kf.field_d, "mb_menu_button_frame", true);
               cm.field_R = new nh[8];
               cm.field_R[0] = qk.a("", kf.field_d, "mb_screenshot_1", true);
               cm.field_R[1] = qk.a("", kf.field_d, "mb_screenshot_2", true);
@@ -2839,7 +2910,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.EB(" + param0 + ')');
+          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.EB(" + param0 + ')');
         }
     }
 
@@ -2851,7 +2922,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             L1: {
               ek.d(-2);
               if (null != df.field_l) {
-                hb.a(-5, (java.awt.Canvas) (Object) df.field_l);
+                hb.a(-5, df.field_l);
                 df.field_l.a(sb.field_d, true);
                 break L1;
               } else {
@@ -2872,7 +2943,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.AA(" + param0 + ')');
+          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.AA(" + param0 + ')');
         }
     }
 
@@ -2886,25 +2957,25 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               if (param0 == 32) {
                 break L1;
               } else {
-                field_J = null;
+                field_J = (nh) null;
                 break L1;
               }
             }
-            ((DrPhlogistonSavesTheEarth) this).a(8, 4, false, 7320, 0, 11, 10, 9);
+            this.a(8, 4, false, 7320, 0, 11, 10, 9);
             var2 = new ug();
             var2.d(9, 128, param0 ^ 85);
             var2.a(oa.field_b, (byte) -13);
-            dc.a(sb.field_d, 22050, true, var2, (byte) -92, (java.awt.Component) (Object) n.field_g);
+            dc.a(sb.field_d, 22050, true, var2, (byte) -92, (java.awt.Component) ((Object) n.field_g));
             a.field_i = 16711680;
             pj.field_E = 11184895;
             b.field_h = 16777215;
-            ((DrPhlogistonSavesTheEarth) this).a(true, false, true, true, -6);
+            this.a(true, false, true, true, -6);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2_ref, "DrPhlogistonSavesTheEarth.MA(" + param0 + ')');
+          throw ie.a((Throwable) ((Object) var2_ref), "DrPhlogistonSavesTheEarth.MA(" + param0 + ')');
         }
     }
 
@@ -2952,7 +3023,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   if (var4 >= param1.length) {
                     break L4;
                   } else {
-                    stackOut_6_0 = (he[]) var3;
+                    stackOut_6_0 = (he[]) (var3);
                     stackIn_11_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
                     if (var5 != 0) {
@@ -2968,7 +3039,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                     }
                   }
                 }
-                stackOut_10_0 = (he[]) var3;
+                stackOut_10_0 = (he[]) (var3);
                 stackIn_11_0 = stackOut_10_0;
                 break L3;
               }
@@ -2979,23 +3050,23 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var3_ref;
+            stackOut_12_0 = (RuntimeException) (var3_ref);
             stackOut_12_1 = new StringBuilder().append("DrPhlogistonSavesTheEarth.AB(").append(param0).append(',');
             stackIn_15_0 = stackOut_12_0;
             stackIn_15_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_16_0 = stackOut_13_0;
               stackIn_16_1 = stackOut_13_1;
@@ -3003,7 +3074,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
         return stackIn_11_0;
     }
@@ -3019,11 +3090,12 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             field_L = null;
             field_G = null;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "DrPhlogistonSavesTheEarth.QA(" + param0 + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.QA(" + param0 + ')');
         }
     }
 
     private final void r(int param0) {
+        he discarded$1 = null;
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -3041,7 +3113,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             el.field_ub = eh.a("", (byte) -23, kf.field_d, "title_text_achievements_this_game_screen");
             jk.field_L = eh.a("", (byte) -100, kf.field_d, "title_text_level_select_screen");
             cj.field_g = eh.a("", (byte) -24, kf.field_d, "title_text_world_complete");
-            he discarded$1 = eh.a("", (byte) -91, kf.field_d, "title_text_members_benefits");
+            discarded$1 = eh.a("", (byte) -91, kf.field_d, "title_text_members_benefits");
             oj.field_d = eh.a("", (byte) -54, kf.field_d, "title_text_log_in");
             pi.field_S = ij.a("numbers", (byte) 111, kf.field_d, "");
             t.field_a = eh.a("", (byte) -65, kf.field_d, "claw");
@@ -3085,7 +3157,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.BB(" + param0 + ')');
+          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.BB(" + param0 + ')');
         }
     }
 
@@ -3150,7 +3222,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               L4: while (true) {
                 L5: {
                   L6: {
-                    if (~var2_int <= ~ib.field_j.length) {
+                    if ((var2_int ^ -1) <= (ib.field_j.length ^ -1)) {
                       break L6;
                     } else {
                       fa.field_k[var2_int].c();
@@ -3180,7 +3252,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   if (param0 < -110) {
                     break L7;
                   } else {
-                    ((DrPhlogistonSavesTheEarth) this).field_C = false;
+                    this.field_C = false;
                     break L7;
                   }
                 }
@@ -3239,7 +3311,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                     L14: while (true) {
                       L15: {
                         L16: {
-                          if (~var2_int <= ~mk.field_e.length) {
+                          if ((var2_int ^ -1) <= (mk.field_e.length ^ -1)) {
                             break L16;
                           } else {
                             mk.field_e[var2_int].c();
@@ -3371,16 +3443,22 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "DrPhlogistonSavesTheEarth.DB(" + param0 + ')');
+          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.DB(" + param0 + ')');
         }
     }
 
     public DrPhlogistonSavesTheEarth() {
-        ((DrPhlogistonSavesTheEarth) this).field_H = 0;
-        ((DrPhlogistonSavesTheEarth) this).field_C = false;
+        this.field_H = 0;
+        this.field_C = false;
     }
 
     private final boolean b(boolean param0, int param1) {
+        boolean discarded$6 = false;
+        boolean discarded$7 = false;
+        boolean discarded$8 = false;
+        boolean discarded$9 = false;
+        boolean discarded$10 = false;
+        boolean discarded$11 = false;
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -3405,6 +3483,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         int stackIn_119_0 = 0;
         int stackIn_129_0 = 0;
         int stackIn_144_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_74_0 = 0;
         int stackOut_79_0 = 0;
@@ -3431,24 +3510,25 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                 tc.a((byte) 86);
                 stackOut_74_0 = 0;
                 stackIn_75_0 = stackOut_74_0;
-                return stackIn_75_0 != 0;
+                decompiledRegionSelector0 = 10;
+                break L0;
               } else {
                 if (null != df.field_a) {
                   we.a(ai.field_x, -83, 55.0f);
-                  ((DrPhlogistonSavesTheEarth) this).h(0);
+                  this.h(0);
                   ad.field_q = ok.a(df.field_a, "", "Dr_Phlogiston_Title");
-                  boolean discarded$6 = s.field_a.a(0, ui.field_a, 0, ad.field_q, cf.field_c);
+                  discarded$6 = s.field_a.a(0, ui.field_a, 0, ad.field_q, cf.field_c);
                   ki.field_c = ok.a(df.field_a, "", "Dr_Phlogiston_Earth");
-                  boolean discarded$7 = s.field_a.a(0, ui.field_a, 0, ki.field_c, cf.field_c);
+                  discarded$7 = s.field_a.a(0, ui.field_a, 0, ki.field_c, cf.field_c);
                   hi.field_l = ok.a(df.field_a, "", "Dr_Phlogiston_Space");
-                  boolean discarded$8 = s.field_a.a(0, ui.field_a, 0, hi.field_l, cf.field_c);
+                  discarded$8 = s.field_a.a(0, ui.field_a, 0, hi.field_l, cf.field_c);
                   le.field_e = ok.a(df.field_a, "", "Dr_Phlogiston_Alien");
-                  boolean discarded$9 = s.field_a.a(0, ui.field_a, 0, le.field_e, cf.field_c);
+                  discarded$9 = s.field_a.a(0, ui.field_a, 0, le.field_e, cf.field_c);
                   lh.field_l = ok.a(df.field_a, "", "Dr_Phlogiston_Boss_Break");
                   dm.field_x = ok.a(df.field_a, "", "Dr_Phlogiston_GameOver_jingle");
-                  boolean discarded$10 = s.field_a.a(0, ui.field_a, 0, dm.field_x, cf.field_c);
+                  discarded$10 = s.field_a.a(0, ui.field_a, 0, dm.field_x, cf.field_c);
                   ml.field_l = ok.a(df.field_a, "", "Dr_Phlogiston_GameComplete_jingle");
-                  boolean discarded$11 = s.field_a.a(0, ui.field_a, 0, ml.field_l, cf.field_c);
+                  discarded$11 = s.field_a.a(0, ui.field_a, 0, ml.field_l, cf.field_c);
                   s.field_a.b((byte) 47);
                   cf.field_c = null;
                   df.field_a = null;
@@ -3456,11 +3536,12 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                   tc.a((byte) 86);
                   stackOut_79_0 = 0;
                   stackIn_80_0 = stackOut_79_0;
-                  return stackIn_80_0 != 0;
+                  decompiledRegionSelector0 = 11;
+                  break L0;
                 } else {
                   if (null != kf.field_d) {
                     L1: {
-                      if (((DrPhlogistonSavesTheEarth) this).field_H == 0) {
+                      if (-1 == (this.field_H ^ -1)) {
                         this.h((byte) -83);
                         break L1;
                       } else {
@@ -3468,7 +3549,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       }
                     }
                     L2: {
-                      if (((DrPhlogistonSavesTheEarth) this).field_H == 1) {
+                      if (-2 == (this.field_H ^ -1)) {
                         this.r(2);
                         break L2;
                       } else {
@@ -3476,7 +3557,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       }
                     }
                     L3: {
-                      if (2 != ((DrPhlogistonSavesTheEarth) this).field_H) {
+                      if (2 != this.field_H) {
                         break L3;
                       } else {
                         this.k((byte) 22);
@@ -3484,7 +3565,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       }
                     }
                     L4: {
-                      if (((DrPhlogistonSavesTheEarth) this).field_H == 3) {
+                      if ((this.field_H ^ -1) == -4) {
                         this.q(-11666);
                         break L4;
                       } else {
@@ -3492,7 +3573,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       }
                     }
                     L5: {
-                      if (((DrPhlogistonSavesTheEarth) this).field_H != 4) {
+                      if (-5 != (this.field_H ^ -1)) {
                         break L5;
                       } else {
                         this.i((byte) -125);
@@ -3500,7 +3581,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       }
                     }
                     L6: {
-                      if (((DrPhlogistonSavesTheEarth) this).field_H == 5) {
+                      if (this.field_H == 5) {
                         this.d(true);
                         break L6;
                       } else {
@@ -3508,7 +3589,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       }
                     }
                     L7: {
-                      if (((DrPhlogistonSavesTheEarth) this).field_H == 6) {
+                      if (this.field_H == 6) {
                         this.o(125);
                         break L7;
                       } else {
@@ -3516,7 +3597,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       }
                     }
                     L8: {
-                      if (((DrPhlogistonSavesTheEarth) this).field_H == 7) {
+                      if (this.field_H == 7) {
                         this.s(-23796);
                         break L8;
                       } else {
@@ -3524,18 +3605,19 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       }
                     }
                     L9: {
-                      if (((DrPhlogistonSavesTheEarth) this).field_H == 8) {
+                      if (-9 == (this.field_H ^ -1)) {
                         kf.field_d = null;
                         break L9;
                       } else {
                         break L9;
                       }
                     }
-                    ((DrPhlogistonSavesTheEarth) this).field_H = ((DrPhlogistonSavesTheEarth) this).field_H + 1;
+                    this.field_H = this.field_H + 1;
                     tc.a((byte) 86);
                     stackOut_118_0 = 0;
                     stackIn_119_0 = stackOut_118_0;
-                    return stackIn_119_0 != 0;
+                    decompiledRegionSelector0 = 12;
+                    break L0;
                   } else {
                     if (null == mh.field_a) {
                       var3_int = 0;
@@ -3576,13 +3658,13 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                           if (param1 <= -91) {
                             break L13;
                           } else {
-                            field_L = null;
+                            field_L = (String) null;
                             break L13;
                           }
                         }
                         L14: {
                           pi.a(eb.field_g, 21914);
-                          wb.a((java.applet.Applet) this, 2, 1052688, 150, ej.field_e, 15488514);
+                          wb.a((java.applet.Applet) (this), 2, 1052688, 150, ej.field_e, 15488514);
                           ah.a((byte) 109, 50);
                           k.a(0, 50);
                           if (oh.a(0)) {
@@ -3596,6 +3678,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                         tc.a((byte) 86);
                         stackOut_143_0 = 1;
                         stackIn_144_0 = stackOut_143_0;
+                        decompiledRegionSelector0 = 14;
                         break L0;
                       }
                     } else {
@@ -3603,7 +3686,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                       L15: while (true) {
                         L16: {
                           L17: {
-                            if (var3_int >= 9) {
+                            if (-10 >= (var3_int ^ -1)) {
                               break L17;
                             } else {
                               bi.field_K[var3_int] = new mk(mh.field_a.a("", "AchirdAttacks_level_" + (1 + var3_int) + ".lvl", 24874), var3_int % 3 - -1);
@@ -3625,7 +3708,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                         }
                         stackOut_128_0 = 0;
                         stackIn_129_0 = stackOut_128_0;
-                        return stackIn_129_0 != 0;
+                        decompiledRegionSelector0 = 13;
+                        break L0;
                       }
                     }
                   }
@@ -3694,11 +3778,13 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                                                                 aa.field_b = null;
                                                                 stackOut_69_0 = 0;
                                                                 stackIn_70_0 = stackOut_69_0;
-                                                                return stackIn_70_0 != 0;
+                                                                decompiledRegionSelector0 = 9;
+                                                                break L0;
                                                               } else {
                                                                 stackOut_67_0 = 0;
                                                                 stackIn_68_0 = stackOut_67_0;
-                                                                return stackIn_68_0 != 0;
+                                                                decompiledRegionSelector0 = 8;
+                                                                break L0;
                                                               }
                                                             }
                                                           }
@@ -3706,49 +3792,56 @@ public final class DrPhlogistonSavesTheEarth extends sl {
                                                         we.a(qg.a(td.field_o, sa.field_b, 34, "basic", ph.field_b), -118, 48.0f);
                                                         stackOut_64_0 = 0;
                                                         stackIn_65_0 = stackOut_64_0;
-                                                        return stackIn_65_0 != 0;
+                                                        decompiledRegionSelector0 = 7;
+                                                        break L0;
                                                       }
                                                     }
                                                   }
                                                   we.a(qg.a(bh.field_d, ij.field_a, 34, "", ff.field_P), -127, 45.0f);
                                                   stackOut_56_0 = 0;
                                                   stackIn_57_0 = stackOut_56_0;
-                                                  return stackIn_57_0 != 0;
+                                                  decompiledRegionSelector0 = 6;
+                                                  break L0;
                                                 }
                                               }
                                             }
                                             we.a(qg.a(l.field_s, hl.field_e, 34, "", mh.field_a), -115, 40.0f);
                                             stackOut_48_0 = 0;
                                             stackIn_49_0 = stackOut_48_0;
-                                            return stackIn_49_0 != 0;
+                                            decompiledRegionSelector0 = 5;
+                                            break L0;
                                           }
                                         }
                                       }
                                       we.a(qg.a(td.field_o, sa.field_b, 34, "", kf.field_d), -118, 18.0f);
                                       stackOut_40_0 = 0;
                                       stackIn_41_0 = stackOut_40_0;
-                                      return stackIn_41_0 != 0;
+                                      decompiledRegionSelector0 = 4;
+                                      break L0;
                                     }
                                   }
                                 }
                                 we.a(qg.a(qd.field_Fb, r.field_a, 34, "", df.field_a), -105, 13.0f);
                                 stackOut_32_0 = 0;
                                 stackIn_33_0 = stackOut_32_0;
-                                return stackIn_33_0 != 0;
+                                decompiledRegionSelector0 = 3;
+                                break L0;
                               }
                             }
                           }
                           we.a(hj.a(qd.field_Fb, ui.field_a, r.field_a, 0, 17733), -83, 10.0f);
                           stackOut_24_0 = 0;
                           stackIn_25_0 = stackOut_24_0;
-                          return stackIn_25_0 != 0;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         }
                       }
                     }
                     we.a(qg.a(wi.field_h, ig.field_o, 34, "", ua.field_b), -105, 8.0f);
                     stackOut_16_0 = 0;
                     stackIn_17_0 = stackOut_16_0;
-                    return stackIn_17_0 != 0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
                     break L18;
                   }
@@ -3757,323 +3850,395 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               we.a(qg.a(wi.field_h, ig.field_o, 34, "", aa.field_b), -88, 5.0f);
               stackOut_8_0 = 0;
               stackIn_9_0 = stackOut_8_0;
-              return stackIn_9_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var3, "DrPhlogistonSavesTheEarth.FB(" + param0 + ',' + param1 + ')');
+          throw ie.a((Throwable) ((Object) var3), "DrPhlogistonSavesTheEarth.FB(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_144_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_9_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_17_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_25_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_33_0 != 0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_41_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_49_0 != 0;
+                  } else {
+                    if (decompiledRegionSelector0 == 6) {
+                      return stackIn_57_0 != 0;
+                    } else {
+                      if (decompiledRegionSelector0 == 7) {
+                        return stackIn_65_0 != 0;
+                      } else {
+                        if (decompiledRegionSelector0 == 8) {
+                          return stackIn_68_0 != 0;
+                        } else {
+                          if (decompiledRegionSelector0 == 9) {
+                            return stackIn_70_0 != 0;
+                          } else {
+                            if (decompiledRegionSelector0 == 10) {
+                              return stackIn_75_0 != 0;
+                            } else {
+                              if (decompiledRegionSelector0 == 11) {
+                                return stackIn_80_0 != 0;
+                              } else {
+                                if (decompiledRegionSelector0 == 12) {
+                                  return stackIn_119_0 != 0;
+                                } else {
+                                  if (decompiledRegionSelector0 == 13) {
+                                    return stackIn_129_0 != 0;
+                                  } else {
+                                    return stackIn_144_0 != 0;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     private final void q(int param0) {
+        RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        int decompiledRegionSelector0 = 0;
+        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         var6 = field_D ? 1 : 0;
-        we.a(qa.field_O, -103, 73.0f);
-        bc.field_d = new nh(50, 300);
-        q.field_f = new he(50, 300, 2);
-        var2_int = q.field_f.field_d * 260;
-        var3 = -1 + q.field_f.field_m.length;
-        var4 = var2_int;
-        L0: while (true) {
-          L1: {
-            L2: {
-              if (~var3 > ~var4) {
-                break L2;
-              } else {
-                q.field_f.field_m[var4] = (byte) 1;
-                var4++;
-                if (var6 != 0) {
-                  break L1;
-                } else {
-                  if (var6 == 0) {
-                    continue L0;
+        try {
+          L0: {
+            we.a(qa.field_O, -103, 73.0f);
+            bc.field_d = new nh(50, 300);
+            q.field_f = new he(50, 300, 2);
+            var2_int = q.field_f.field_d * 260;
+            var3 = -1 + q.field_f.field_m.length;
+            var4 = var2_int;
+            L1: while (true) {
+              L2: {
+                L3: {
+                  if ((var3 ^ -1) > (var4 ^ -1)) {
+                    break L3;
                   } else {
-                    break L2;
-                  }
-                }
-              }
-            }
-            v.field_O = new nh(640, 430);
-            v.field_O.c();
-            var4 = 336 * wj.field_k;
-            break L1;
-          }
-          var5 = 0;
-          L3: while (true) {
-            L4: {
-              L5: {
-                if (var5 >= 2000) {
-                  break L5;
-                } else {
-                  wj.field_l[hi.a(var4, param0 + 11670, pd.field_c)] = 65793 * (hi.a(254, 4, pd.field_c) + 1);
-                  var5++;
-                  if (var6 != 0) {
-                    break L4;
-                  } else {
-                    if (var6 == 0) {
-                      continue L3;
-                    } else {
-                      break L5;
-                    }
-                  }
-                }
-              }
-              var5 = 0;
-              break L4;
-            }
-            L6: while (true) {
-              L7: {
-                L8: {
-                  if (430 <= var5) {
-                    break L8;
-                  } else {
-                    wj.e(0, var5, 640, 258 * ((9 + var5) / 7), (var5 - -435) / 3);
-                    var5++;
+                    q.field_f.field_m[var4] = (byte) 1;
+                    var4++;
                     if (var6 != 0) {
-                      break L7;
+                      break L2;
                     } else {
                       if (var6 == 0) {
-                        continue L6;
+                        continue L1;
                       } else {
-                        break L8;
+                        break L3;
                       }
                     }
                   }
                 }
-                lb.field_C.a(125);
-                nb.field_b = new nh(640, 430);
-                nb.field_b.c();
-                break L7;
+                v.field_O = new nh(640, 430);
+                v.field_O.c();
+                var4 = 336 * wj.field_k;
+                break L2;
               }
               var5 = 0;
-              L9: while (true) {
-                L10: {
-                  L11: {
-                    if (var5 >= 1500) {
-                      break L11;
+              L4: while (true) {
+                L5: {
+                  L6: {
+                    if (-2001 >= (var5 ^ -1)) {
+                      break L6;
                     } else {
-                      wj.field_l[hi.a(wj.field_l.length, qk.a(param0, -11670), pd.field_c)] = hi.a(256, 4, pd.field_c) * 65793;
+                      wj.field_l[hi.a(var4, param0 + 11670, pd.field_c)] = 65793 * (hi.a(254, 4, pd.field_c) + 1);
                       var5++;
                       if (var6 != 0) {
-                        break L10;
+                        break L5;
                       } else {
                         if (var6 == 0) {
-                          continue L9;
+                          continue L4;
                         } else {
-                          break L11;
+                          break L6;
                         }
                       }
                     }
                   }
                   var5 = 0;
-                  break L10;
+                  break L5;
                 }
-                L12: while (true) {
-                  L13: {
-                    L14: {
-                      if (var5 >= 500) {
-                        break L14;
+                L7: while (true) {
+                  L8: {
+                    L9: {
+                      if (430 <= var5) {
+                        break L9;
                       } else {
-                        wj.field_l[hi.a(wj.field_l.length, 4, pd.field_c)] = 131329 * hi.a(128, 4, pd.field_c);
+                        wj.e(0, var5, 640, 258 * ((9 + var5) / 7), (var5 - -435) / 3);
                         var5++;
                         if (var6 != 0) {
-                          break L13;
+                          break L8;
                         } else {
                           if (var6 == 0) {
-                            continue L12;
+                            continue L7;
                           } else {
-                            break L14;
+                            break L9;
                           }
                         }
                       }
                     }
-                    var5 = 0;
-                    break L13;
+                    lb.field_C.a(125);
+                    nb.field_b = new nh(640, 430);
+                    nb.field_b.c();
+                    break L8;
                   }
-                  L15: while (true) {
-                    L16: {
-                      L17: {
-                        if (var5 >= 500) {
-                          break L17;
+                  var5 = 0;
+                  L10: while (true) {
+                    L11: {
+                      L12: {
+                        if ((var5 ^ -1) <= -1501) {
+                          break L12;
                         } else {
-                          wj.field_l[hi.a(wj.field_l.length, 4, pd.field_c)] = hi.a(128, 4, pd.field_c) * 65794;
+                          wj.field_l[hi.a(wj.field_l.length, qk.a(param0, -11670), pd.field_c)] = hi.a(256, 4, pd.field_c) * 65793;
                           var5++;
                           if (var6 != 0) {
-                            break L16;
+                            break L11;
                           } else {
                             if (var6 == 0) {
-                              continue L15;
+                              continue L10;
                             } else {
-                              break L17;
+                              break L12;
                             }
                           }
                         }
                       }
-                      lb.field_C.a(96);
-                      sg.field_e = eh.a("", (byte) -103, kf.field_d, "background_bath");
-                      uk.field_h = eh.a("", (byte) -52, kf.field_d, "background_london");
-                      oi.field_f = eh.a("", (byte) -121, kf.field_d, "background_brighton");
-                      nj.field_o = eh.a("", (byte) -97, kf.field_d, "midground_earth");
-                      hc.field_K = cl.a("", kf.field_d, -116, "background_space");
-                      hc.field_K[1].field_D = hc.field_K[1].field_D + 800;
-                      break L16;
+                      var5 = 0;
+                      break L11;
                     }
-                    if (param0 == -11666) {
-                      sh.field_b = qk.a("", kf.field_d, "midground_space", true);
-                      vi.field_g = eh.a("", (byte) -111, kf.field_d, "background_alien");
-                      gb.field_e = eh.a("", (byte) -79, kf.field_d, "background_alien_8");
-                      ha.field_b = eh.a("", (byte) -112, kf.field_d, "background_alien_9");
-                      q.field_e = qk.a("", kf.field_d, "scenery_earth_background_clouds_lit", true);
-                      kl.field_R[0] = qk.a("", kf.field_d, "scenery_space_background_asteroid_1", true);
-                      kl.field_R[1] = qk.a("", kf.field_d, "scenery_space_background_asteroid_2", true);
-                      kl.field_R[2] = qk.a("", kf.field_d, "scenery_space_background_asteroid_3", true);
-                      kl.field_R[3] = qk.a("", kf.field_d, "scenery_space_background_asteroid_4", true);
-                      kl.field_R[4] = qk.a("", kf.field_d, "scenery_space_background_asteroid_5", true);
-                      si.field_F = qk.a("", kf.field_d, "background_space_comet", true);
-                      cc.field_w = eh.a("", (byte) -89, kf.field_d, "midground_alien");
-                      b.field_k = eh.a("", (byte) -45, kf.field_d, "midground_alien_8");
-                      nf.field_v = eh.a("", (byte) -77, kf.field_d, "midground_alien_9");
-                      kh.field_e = eh.a("", (byte) -116, kf.field_d, "playership");
-                      kh.field_e.d(3);
-                      ri.field_e = kh.field_e.field_k;
-                      am.field_l = kh.field_e.field_d;
-                      am.field_p = am.field_l / 2;
-                      ri.field_q = ri.field_e / 2;
-                      df.field_f = this.a(eh.a("", (byte) -85, kf.field_d, "scenery_tile_earth_1"), (byte) 88);
-                      ah.field_L = this.a(eh.a("", (byte) -118, kf.field_d, "scenery_tile_earth_2"), (byte) 103);
-                      mk.field_f = this.a(eh.a("", (byte) -120, kf.field_d, "scenery_tile_earth_3"), (byte) -60);
-                      qg.field_U = this.a(eh.a("", (byte) -126, kf.field_d, "scenery_tile_earth_4"), (byte) 24);
-                      bf.field_v = this.a(eh.a("", (byte) -106, kf.field_d, "scenery_tile_earth_5"), (byte) 113);
-                      vg.field_h = this.a(eh.a("", (byte) -55, kf.field_d, "scenery_tile_earth_6"), (byte) -124);
-                      rg.field_a = this.a(eh.a("", (byte) -29, kf.field_d, "scenery_tile_earth_7"), (byte) 120);
-                      fi.field_e = this.a(eh.a("", (byte) -127, kf.field_d, "scenery_tile_earth_8"), (byte) -29);
-                      jd.field_Q = this.a(eh.a("", (byte) -82, kf.field_d, "scenery_tile_earth_9"), (byte) 118);
-                      r.field_e = this.a(eh.a("", (byte) -49, kf.field_d, "scenery_tile_earth_10"), (byte) 127);
-                      nf.field_s = ij.a("scenery_tile_earth_11", (byte) 99, kf.field_d, "");
-                      nf.field_s[0].c();
-                      pc.field_c = new he[1];
-                      pc.field_c[0] = nf.field_s[0].e();
-                      pc.field_c[0].g();
-                      rh.field_f = this.a(eh.a("", (byte) -109, kf.field_d, "scenery_tile_earth_1_rubble"), (byte) -34);
-                      sd.field_d = this.a(eh.a("", (byte) -112, kf.field_d, "scenery_tile_earth_2_rubble"), (byte) 110);
-                      tb.field_b = this.a(eh.a("", (byte) -78, kf.field_d, "scenery_tile_earth_3_rubble"), (byte) -20);
-                      qf.field_e = this.a(eh.a("", (byte) -36, kf.field_d, "scenery_tile_earth_4_rubble"), (byte) -48);
-                      dm.field_z = this.a(eh.a("", (byte) -76, kf.field_d, "scenery_tile_earth_5_rubble"), (byte) -23);
-                      qd.field_Cb = this.a(eh.a("", (byte) -107, kf.field_d, "scenery_tile_earth_6_rubble"), (byte) 90);
-                      gm.field_L = this.a(eh.a("", (byte) -77, kf.field_d, "scenery_tile_earth_7_rubble"), (byte) -97);
-                      rb.field_c = this.a(eh.a("", (byte) -57, kf.field_d, "scenery_tile_earth_8_rubble"), (byte) -40);
-                      sc.field_a = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_9_rubble"), (byte) 103);
-                      rd.field_A = this.a(eh.a("", (byte) -29, kf.field_d, "scenery_tile_earth_10_rubble"), (byte) -77);
-                      re.field_i = ij.a("scenery_tile_earth_11_rubble", (byte) 84, kf.field_d, "");
-                      re.field_i[0].c();
-                      re.field_h = new he[1];
-                      re.field_h[0] = re.field_i[0].e();
-                      re.field_h[0].g();
-                      dm.field_y = this.a(eh.a("", (byte) -69, kf.field_d, "scenery_tile_earth_1_fire_mask"), (byte) 105);
-                      wh.field_u = this.a(eh.a("", (byte) -31, kf.field_d, "scenery_tile_earth_2_fire_mask"), (byte) -120);
-                      ng.field_b = this.a(eh.a("", (byte) -68, kf.field_d, "scenery_tile_earth_3_fire_mask"), (byte) 17);
-                      g.field_q = this.a(eh.a("", (byte) -70, kf.field_d, "scenery_tile_earth_4_fire_mask"), (byte) -124);
-                      pj.field_z = this.a(eh.a("", (byte) -123, kf.field_d, "scenery_tile_earth_5_fire_mask"), (byte) 98);
-                      tl.field_Q = this.a(eh.a("", (byte) -108, kf.field_d, "scenery_tile_earth_6_fire_mask"), (byte) -7);
-                      ld.field_d = this.a(eh.a("", (byte) -71, kf.field_d, "scenery_tile_earth_7_fire_mask"), (byte) 1);
-                      eb.field_c = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_8_fire_mask"), (byte) -28);
-                      ri.field_h = this.a(eh.a("", (byte) -53, kf.field_d, "scenery_tile_earth_9_fire_mask"), (byte) 119);
-                      el.field_vb = this.a(eh.a("", (byte) -25, kf.field_d, "scenery_tile_earth_10_fire_mask"), (byte) -126);
-                      bk.field_j = ij.a("scenery_tile_earth_11_fire_mask", (byte) 73, kf.field_d, "");
-                      bk.field_j[0].c();
-                      ik.field_f = new he[1];
-                      ik.field_f[0] = bk.field_j[0].e();
-                      ik.field_f[0].g();
-                      fa.field_m = this.a(eh.a("", (byte) -30, kf.field_d, "scenery_tile_earth_bath_01"), (byte) -35);
-                      we.field_c = this.a(eh.a("", (byte) -107, kf.field_d, "scenery_tile_earth_bath_02"), (byte) -7);
-                      d.field_c = ij.a("scenery_tile_earth_bath_03", (byte) 115, kf.field_d, "");
-                      d.field_c[0].c();
-                      ek.field_l = this.a(eh.a("", (byte) -89, kf.field_d, "scenery_tile_earth_bath_04"), (byte) -110);
-                      oj.field_g = this.a(eh.a("", (byte) -117, kf.field_d, "scenery_tile_earth_bath_05"), (byte) -24);
-                      mh.field_g = this.a(eh.a("", (byte) -58, kf.field_d, "scenery_tile_earth_bath_06"), (byte) 101);
-                      u.field_c = this.a(eh.a("", (byte) -93, kf.field_d, "scenery_tile_earth_bath_07"), (byte) 112);
-                      ai.field_y = this.a(eh.a("", (byte) -43, kf.field_d, "scenery_tile_earth_bath_08"), (byte) 117);
-                      bk.field_d = this.a(eh.a("", (byte) -80, kf.field_d, "scenery_tile_earth_bath_09"), (byte) 23);
-                      ek.field_t = this.a(eh.a("", (byte) -59, kf.field_d, "scenery_tile_earth_bath_10"), (byte) 103);
-                      hh.field_c = ij.a("scenery_tile_earth_bath_11", (byte) 71, kf.field_d, "");
-                      hh.field_c[0].c();
-                      lk.field_m = new he[1];
-                      lk.field_m[0] = hh.field_c[0].e();
-                      lk.field_m[0].g();
-                      gi.field_d = ij.a("scenery_tile_earth_bath_01_broken", (byte) 108, kf.field_d, "");
-                      gi.field_d[0].c();
-                      lc.field_q = ij.a("scenery_tile_earth_bath_02_broken", (byte) 92, kf.field_d, "");
-                      lc.field_q[0].c();
-                      ca.field_V = ij.a("scenery_tile_earth_bath_03_broken", (byte) 86, kf.field_d, "");
-                      ca.field_V[0].c();
-                      ac.field_g = ij.a("scenery_tile_earth_bath_04_broken", (byte) 109, kf.field_d, "");
-                      ac.field_g[0].c();
-                      df.field_k = this.a(eh.a("", (byte) -59, kf.field_d, "scenery_tile_earth_bath_05_broken"), (byte) -88);
-                      sl.field_x = ij.a("scenery_tile_earth_bath_06_broken", (byte) 80, kf.field_d, "");
-                      sl.field_x[0].c();
-                      qj.field_a = this.a(eh.a("", (byte) -81, kf.field_d, "scenery_tile_earth_bath_07_broken"), (byte) 102);
-                      og.field_c = ij.a("scenery_tile_earth_bath_08_broken", (byte) 120, kf.field_d, "");
-                      og.field_c[0].c();
-                      ck.field_d = this.a(eh.a("", (byte) -39, kf.field_d, "scenery_tile_earth_bath_09_broken"), (byte) 89);
-                      field_G = this.a(eh.a("", (byte) -71, kf.field_d, "scenery_tile_earth_bath_10_broken"), (byte) 7);
-                      qa.field_S = ij.a("scenery_tile_earth_bath_11_broken", (byte) 61, kf.field_d, "");
-                      qa.field_S[0].c();
-                      nf.field_p = new he[1];
-                      nf.field_p[0] = hh.field_c[0].e();
-                      nf.field_p[0].g();
-                      eb.field_a = ij.a("scenery_tile_earth_bath_01_fire_mask", (byte) 121, kf.field_d, "");
-                      eb.field_a[0].c();
-                      wb.field_b = ij.a("scenery_tile_earth_bath_02_fire_mask", (byte) 108, kf.field_d, "");
-                      wb.field_b[0].c();
-                      cm.field_L = ij.a("scenery_tile_earth_bath_03_fire_mask", (byte) 75, kf.field_d, "");
-                      cm.field_L[0].c();
-                      ca.field_Y = ij.a("scenery_tile_earth_bath_04_fire_mask", (byte) 106, kf.field_d, "");
-                      ca.field_Y[0].c();
-                      oj.field_f = ij.a("scenery_tile_earth_bath_05_fire_mask", (byte) 114, kf.field_d, "");
-                      oj.field_f[0].c();
-                      ld.field_f = ij.a("scenery_tile_earth_bath_06_fire_mask", (byte) 60, kf.field_d, "");
-                      ld.field_f[0].c();
-                      cf.field_g = this.a(eh.a("", (byte) -48, kf.field_d, "scenery_tile_earth_bath_07_fire_mask"), (byte) 101);
-                      cf.field_g[0].c();
-                      ri.field_r = ij.a("scenery_tile_earth_bath_08_fire_mask", (byte) 62, kf.field_d, "");
-                      ri.field_r[0].c();
-                      cl.field_n = ij.a("scenery_tile_earth_bath_09_fire_mask", (byte) 102, kf.field_d, "");
-                      cl.field_n[0].c();
-                      kj.field_g = ij.a("scenery_tile_earth_bath_10_fire_mask", (byte) 120, kf.field_d, "");
-                      kj.field_g[0].c();
-                      ei.field_k = ij.a("scenery_tile_earth_bath_11_fire_mask", (byte) 125, kf.field_d, "");
-                      ei.field_k[0].c();
-                      ij.field_e = new he[1];
-                      ij.field_e[0] = ei.field_k[0].e();
-                      ij.field_e[0].g();
-                      vc.field_b = ij.a("scenery_tile_alien_1", (byte) 107, kf.field_d, "");
-                      ij.field_d = ij.a("scenery_tile_alien_2", (byte) 103, kf.field_d, "");
-                      db.field_b = ij.a("scenery_tile_alien_3", (byte) 112, kf.field_d, "");
-                      kf.field_e = ij.a("scenery_tile_alien_4", (byte) 72, kf.field_d, "");
-                      return;
-                    } else {
-                      return;
+                    L13: while (true) {
+                      L14: {
+                        L15: {
+                          if (-501 >= (var5 ^ -1)) {
+                            break L15;
+                          } else {
+                            wj.field_l[hi.a(wj.field_l.length, 4, pd.field_c)] = 131329 * hi.a(128, 4, pd.field_c);
+                            var5++;
+                            if (var6 != 0) {
+                              break L14;
+                            } else {
+                              if (var6 == 0) {
+                                continue L13;
+                              } else {
+                                break L15;
+                              }
+                            }
+                          }
+                        }
+                        var5 = 0;
+                        break L14;
+                      }
+                      L16: while (true) {
+                        L17: {
+                          L18: {
+                            if (var5 >= 500) {
+                              break L18;
+                            } else {
+                              wj.field_l[hi.a(wj.field_l.length, 4, pd.field_c)] = hi.a(128, 4, pd.field_c) * 65794;
+                              var5++;
+                              if (var6 != 0) {
+                                break L17;
+                              } else {
+                                if (var6 == 0) {
+                                  continue L16;
+                                } else {
+                                  break L18;
+                                }
+                              }
+                            }
+                          }
+                          lb.field_C.a(96);
+                          sg.field_e = eh.a("", (byte) -103, kf.field_d, "background_bath");
+                          uk.field_h = eh.a("", (byte) -52, kf.field_d, "background_london");
+                          oi.field_f = eh.a("", (byte) -121, kf.field_d, "background_brighton");
+                          nj.field_o = eh.a("", (byte) -97, kf.field_d, "midground_earth");
+                          hc.field_K = cl.a("", kf.field_d, -116, "background_space");
+                          hc.field_K[1].field_D = hc.field_K[1].field_D + 800;
+                          break L17;
+                        }
+                        if (param0 == -11666) {
+                          sh.field_b = qk.a("", kf.field_d, "midground_space", true);
+                          vi.field_g = eh.a("", (byte) -111, kf.field_d, "background_alien");
+                          gb.field_e = eh.a("", (byte) -79, kf.field_d, "background_alien_8");
+                          ha.field_b = eh.a("", (byte) -112, kf.field_d, "background_alien_9");
+                          q.field_e = qk.a("", kf.field_d, "scenery_earth_background_clouds_lit", true);
+                          kl.field_R[0] = qk.a("", kf.field_d, "scenery_space_background_asteroid_1", true);
+                          kl.field_R[1] = qk.a("", kf.field_d, "scenery_space_background_asteroid_2", true);
+                          kl.field_R[2] = qk.a("", kf.field_d, "scenery_space_background_asteroid_3", true);
+                          kl.field_R[3] = qk.a("", kf.field_d, "scenery_space_background_asteroid_4", true);
+                          kl.field_R[4] = qk.a("", kf.field_d, "scenery_space_background_asteroid_5", true);
+                          si.field_F = qk.a("", kf.field_d, "background_space_comet", true);
+                          cc.field_w = eh.a("", (byte) -89, kf.field_d, "midground_alien");
+                          b.field_k = eh.a("", (byte) -45, kf.field_d, "midground_alien_8");
+                          nf.field_v = eh.a("", (byte) -77, kf.field_d, "midground_alien_9");
+                          kh.field_e = eh.a("", (byte) -116, kf.field_d, "playership");
+                          kh.field_e.d(3);
+                          ri.field_e = kh.field_e.field_k;
+                          am.field_l = kh.field_e.field_d;
+                          am.field_p = am.field_l / 2;
+                          ri.field_q = ri.field_e / 2;
+                          df.field_f = this.a(eh.a("", (byte) -85, kf.field_d, "scenery_tile_earth_1"), (byte) 88);
+                          ah.field_L = this.a(eh.a("", (byte) -118, kf.field_d, "scenery_tile_earth_2"), (byte) 103);
+                          mk.field_f = this.a(eh.a("", (byte) -120, kf.field_d, "scenery_tile_earth_3"), (byte) -60);
+                          qg.field_U = this.a(eh.a("", (byte) -126, kf.field_d, "scenery_tile_earth_4"), (byte) 24);
+                          bf.field_v = this.a(eh.a("", (byte) -106, kf.field_d, "scenery_tile_earth_5"), (byte) 113);
+                          vg.field_h = this.a(eh.a("", (byte) -55, kf.field_d, "scenery_tile_earth_6"), (byte) -124);
+                          rg.field_a = this.a(eh.a("", (byte) -29, kf.field_d, "scenery_tile_earth_7"), (byte) 120);
+                          fi.field_e = this.a(eh.a("", (byte) -127, kf.field_d, "scenery_tile_earth_8"), (byte) -29);
+                          jd.field_Q = this.a(eh.a("", (byte) -82, kf.field_d, "scenery_tile_earth_9"), (byte) 118);
+                          r.field_e = this.a(eh.a("", (byte) -49, kf.field_d, "scenery_tile_earth_10"), (byte) 127);
+                          nf.field_s = ij.a("scenery_tile_earth_11", (byte) 99, kf.field_d, "");
+                          nf.field_s[0].c();
+                          pc.field_c = new he[1];
+                          pc.field_c[0] = nf.field_s[0].e();
+                          pc.field_c[0].g();
+                          rh.field_f = this.a(eh.a("", (byte) -109, kf.field_d, "scenery_tile_earth_1_rubble"), (byte) -34);
+                          sd.field_d = this.a(eh.a("", (byte) -112, kf.field_d, "scenery_tile_earth_2_rubble"), (byte) 110);
+                          tb.field_b = this.a(eh.a("", (byte) -78, kf.field_d, "scenery_tile_earth_3_rubble"), (byte) -20);
+                          qf.field_e = this.a(eh.a("", (byte) -36, kf.field_d, "scenery_tile_earth_4_rubble"), (byte) -48);
+                          dm.field_z = this.a(eh.a("", (byte) -76, kf.field_d, "scenery_tile_earth_5_rubble"), (byte) -23);
+                          qd.field_Cb = this.a(eh.a("", (byte) -107, kf.field_d, "scenery_tile_earth_6_rubble"), (byte) 90);
+                          gm.field_L = this.a(eh.a("", (byte) -77, kf.field_d, "scenery_tile_earth_7_rubble"), (byte) -97);
+                          rb.field_c = this.a(eh.a("", (byte) -57, kf.field_d, "scenery_tile_earth_8_rubble"), (byte) -40);
+                          sc.field_a = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_9_rubble"), (byte) 103);
+                          rd.field_A = this.a(eh.a("", (byte) -29, kf.field_d, "scenery_tile_earth_10_rubble"), (byte) -77);
+                          re.field_i = ij.a("scenery_tile_earth_11_rubble", (byte) 84, kf.field_d, "");
+                          re.field_i[0].c();
+                          re.field_h = new he[1];
+                          re.field_h[0] = re.field_i[0].e();
+                          re.field_h[0].g();
+                          dm.field_y = this.a(eh.a("", (byte) -69, kf.field_d, "scenery_tile_earth_1_fire_mask"), (byte) 105);
+                          wh.field_u = this.a(eh.a("", (byte) -31, kf.field_d, "scenery_tile_earth_2_fire_mask"), (byte) -120);
+                          ng.field_b = this.a(eh.a("", (byte) -68, kf.field_d, "scenery_tile_earth_3_fire_mask"), (byte) 17);
+                          g.field_q = this.a(eh.a("", (byte) -70, kf.field_d, "scenery_tile_earth_4_fire_mask"), (byte) -124);
+                          pj.field_z = this.a(eh.a("", (byte) -123, kf.field_d, "scenery_tile_earth_5_fire_mask"), (byte) 98);
+                          tl.field_Q = this.a(eh.a("", (byte) -108, kf.field_d, "scenery_tile_earth_6_fire_mask"), (byte) -7);
+                          ld.field_d = this.a(eh.a("", (byte) -71, kf.field_d, "scenery_tile_earth_7_fire_mask"), (byte) 1);
+                          eb.field_c = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_8_fire_mask"), (byte) -28);
+                          ri.field_h = this.a(eh.a("", (byte) -53, kf.field_d, "scenery_tile_earth_9_fire_mask"), (byte) 119);
+                          el.field_vb = this.a(eh.a("", (byte) -25, kf.field_d, "scenery_tile_earth_10_fire_mask"), (byte) -126);
+                          bk.field_j = ij.a("scenery_tile_earth_11_fire_mask", (byte) 73, kf.field_d, "");
+                          bk.field_j[0].c();
+                          ik.field_f = new he[1];
+                          ik.field_f[0] = bk.field_j[0].e();
+                          ik.field_f[0].g();
+                          fa.field_m = this.a(eh.a("", (byte) -30, kf.field_d, "scenery_tile_earth_bath_01"), (byte) -35);
+                          we.field_c = this.a(eh.a("", (byte) -107, kf.field_d, "scenery_tile_earth_bath_02"), (byte) -7);
+                          d.field_c = ij.a("scenery_tile_earth_bath_03", (byte) 115, kf.field_d, "");
+                          d.field_c[0].c();
+                          ek.field_l = this.a(eh.a("", (byte) -89, kf.field_d, "scenery_tile_earth_bath_04"), (byte) -110);
+                          oj.field_g = this.a(eh.a("", (byte) -117, kf.field_d, "scenery_tile_earth_bath_05"), (byte) -24);
+                          mh.field_g = this.a(eh.a("", (byte) -58, kf.field_d, "scenery_tile_earth_bath_06"), (byte) 101);
+                          u.field_c = this.a(eh.a("", (byte) -93, kf.field_d, "scenery_tile_earth_bath_07"), (byte) 112);
+                          ai.field_y = this.a(eh.a("", (byte) -43, kf.field_d, "scenery_tile_earth_bath_08"), (byte) 117);
+                          bk.field_d = this.a(eh.a("", (byte) -80, kf.field_d, "scenery_tile_earth_bath_09"), (byte) 23);
+                          ek.field_t = this.a(eh.a("", (byte) -59, kf.field_d, "scenery_tile_earth_bath_10"), (byte) 103);
+                          hh.field_c = ij.a("scenery_tile_earth_bath_11", (byte) 71, kf.field_d, "");
+                          hh.field_c[0].c();
+                          lk.field_m = new he[1];
+                          lk.field_m[0] = hh.field_c[0].e();
+                          lk.field_m[0].g();
+                          gi.field_d = ij.a("scenery_tile_earth_bath_01_broken", (byte) 108, kf.field_d, "");
+                          gi.field_d[0].c();
+                          lc.field_q = ij.a("scenery_tile_earth_bath_02_broken", (byte) 92, kf.field_d, "");
+                          lc.field_q[0].c();
+                          ca.field_V = ij.a("scenery_tile_earth_bath_03_broken", (byte) 86, kf.field_d, "");
+                          ca.field_V[0].c();
+                          ac.field_g = ij.a("scenery_tile_earth_bath_04_broken", (byte) 109, kf.field_d, "");
+                          ac.field_g[0].c();
+                          df.field_k = this.a(eh.a("", (byte) -59, kf.field_d, "scenery_tile_earth_bath_05_broken"), (byte) -88);
+                          sl.field_x = ij.a("scenery_tile_earth_bath_06_broken", (byte) 80, kf.field_d, "");
+                          sl.field_x[0].c();
+                          qj.field_a = this.a(eh.a("", (byte) -81, kf.field_d, "scenery_tile_earth_bath_07_broken"), (byte) 102);
+                          og.field_c = ij.a("scenery_tile_earth_bath_08_broken", (byte) 120, kf.field_d, "");
+                          og.field_c[0].c();
+                          ck.field_d = this.a(eh.a("", (byte) -39, kf.field_d, "scenery_tile_earth_bath_09_broken"), (byte) 89);
+                          field_G = this.a(eh.a("", (byte) -71, kf.field_d, "scenery_tile_earth_bath_10_broken"), (byte) 7);
+                          qa.field_S = ij.a("scenery_tile_earth_bath_11_broken", (byte) 61, kf.field_d, "");
+                          qa.field_S[0].c();
+                          nf.field_p = new he[1];
+                          nf.field_p[0] = hh.field_c[0].e();
+                          nf.field_p[0].g();
+                          eb.field_a = ij.a("scenery_tile_earth_bath_01_fire_mask", (byte) 121, kf.field_d, "");
+                          eb.field_a[0].c();
+                          wb.field_b = ij.a("scenery_tile_earth_bath_02_fire_mask", (byte) 108, kf.field_d, "");
+                          wb.field_b[0].c();
+                          cm.field_L = ij.a("scenery_tile_earth_bath_03_fire_mask", (byte) 75, kf.field_d, "");
+                          cm.field_L[0].c();
+                          ca.field_Y = ij.a("scenery_tile_earth_bath_04_fire_mask", (byte) 106, kf.field_d, "");
+                          ca.field_Y[0].c();
+                          oj.field_f = ij.a("scenery_tile_earth_bath_05_fire_mask", (byte) 114, kf.field_d, "");
+                          oj.field_f[0].c();
+                          ld.field_f = ij.a("scenery_tile_earth_bath_06_fire_mask", (byte) 60, kf.field_d, "");
+                          ld.field_f[0].c();
+                          cf.field_g = this.a(eh.a("", (byte) -48, kf.field_d, "scenery_tile_earth_bath_07_fire_mask"), (byte) 101);
+                          cf.field_g[0].c();
+                          ri.field_r = ij.a("scenery_tile_earth_bath_08_fire_mask", (byte) 62, kf.field_d, "");
+                          ri.field_r[0].c();
+                          cl.field_n = ij.a("scenery_tile_earth_bath_09_fire_mask", (byte) 102, kf.field_d, "");
+                          cl.field_n[0].c();
+                          kj.field_g = ij.a("scenery_tile_earth_bath_10_fire_mask", (byte) 120, kf.field_d, "");
+                          kj.field_g[0].c();
+                          ei.field_k = ij.a("scenery_tile_earth_bath_11_fire_mask", (byte) 125, kf.field_d, "");
+                          ei.field_k[0].c();
+                          ij.field_e = new he[1];
+                          ij.field_e[0] = ei.field_k[0].e();
+                          ij.field_e[0].g();
+                          vc.field_b = ij.a("scenery_tile_alien_1", (byte) 107, kf.field_d, "");
+                          ij.field_d = ij.a("scenery_tile_alien_2", (byte) 103, kf.field_d, "");
+                          db.field_b = ij.a("scenery_tile_alien_3", (byte) 112, kf.field_d, "");
+                          kf.field_e = ij.a("scenery_tile_alien_4", (byte) 72, kf.field_d, "");
+                          decompiledRegionSelector0 = 1;
+                          break L0;
+                        } else {
+                          decompiledRegionSelector0 = 0;
+                          break L0;
+                        }
+                      }
                     }
                   }
                 }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.HB(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_L = "Resume Game";
         field_E = "Retry";
         field_F = new vd();

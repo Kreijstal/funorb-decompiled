@@ -10,23 +10,23 @@ final class ri extends te {
         java.awt.image.DataBufferInt var5 = null;
         java.awt.image.DirectColorModel var6 = null;
         java.awt.image.WritableRaster var7 = null;
-        ((ri) this).field_b = param0;
-        ((ri) this).field_c = new int[1 + param0 * param1];
-        ((ri) this).field_f = param1;
-        var5 = new java.awt.image.DataBufferInt(((ri) this).field_c, ((ri) this).field_c.length);
+        this.field_b = param0;
+        this.field_c = new int[1 + param0 * param1];
+        this.field_f = param1;
+        var5 = new java.awt.image.DataBufferInt(this.field_c, this.field_c.length);
         var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
         if (param2 != -36) {
-          ((ri) this).field_h = null;
-          var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) (Object) var6).createCompatibleSampleModel(((ri) this).field_b, ((ri) this).field_f), (java.awt.image.DataBuffer) (Object) var5, (java.awt.Point) null);
-          ((ri) this).field_d = (java.awt.Image) (Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) (Object) var6, var7, false, new Hashtable());
-          ((ri) this).field_h = param3;
-          ((ri) this).a(param2 + 36);
+          this.field_h = (java.awt.Component) null;
+          var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_b, this.field_f), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
+          this.field_d = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
+          this.field_h = param3;
+          this.a(param2 + 36);
           return;
         } else {
-          var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) (Object) var6).createCompatibleSampleModel(((ri) this).field_b, ((ri) this).field_f), (java.awt.image.DataBuffer) (Object) var5, (java.awt.Point) null);
-          ((ri) this).field_d = (java.awt.Image) (Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) (Object) var6, var7, false, new Hashtable());
-          ((ri) this).field_h = param3;
-          ((ri) this).a(param2 + 36);
+          var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_b, this.field_f), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
+          this.field_d = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
+          this.field_h = param3;
+          this.a(param2 + 36);
           return;
         }
     }
@@ -35,14 +35,16 @@ final class ri extends te {
     }
 
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
-        Object var6 = null;
+        boolean discarded$4 = false;
+        boolean discarded$5 = false;
+        java.awt.Graphics var6 = null;
         if (param3 <= 34) {
-          var6 = null;
-          ((ri) this).a(-39, 10, (java.awt.Graphics) null, 68);
-          boolean discarded$4 = param2.drawImage(((ri) this).field_d, param1, param0, (java.awt.image.ImageObserver) (Object) ((ri) this).field_h);
+          var6 = (java.awt.Graphics) null;
+          this.a(-39, 10, (java.awt.Graphics) null, 68);
+          discarded$4 = param2.drawImage(this.field_d, param1, param0, (java.awt.image.ImageObserver) ((Object) this.field_h));
           return;
         } else {
-          boolean discarded$5 = param2.drawImage(((ri) this).field_d, param1, param0, (java.awt.image.ImageObserver) (Object) ((ri) this).field_h);
+          discarded$5 = param2.drawImage(this.field_d, param1, param0, (java.awt.image.ImageObserver) ((Object) this.field_h));
           return;
         }
     }

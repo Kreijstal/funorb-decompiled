@@ -12,30 +12,35 @@ final class wk extends gi {
 
     final static void a(int param0, int param1) {
         oa.field_b = param1;
-        s.field_a.a(param1 * 128 / 80, (byte) -13);
+        s.field_a.a(param1 * 128 / param0, (byte) -13);
     }
 
     public static void d(int param0) {
-        field_m = null;
-        field_h = null;
-        field_l = null;
+        if (param0 != 80) {
+          field_m = (he[]) null;
+          field_m = null;
+          field_h = null;
+          field_l = null;
+          return;
+        } else {
+          field_m = null;
+          field_h = null;
+          field_l = null;
+          return;
+        }
     }
 
     wk(long param0, int param1, byte[] param2) {
         try {
-            ((wk) this).field_k = param0;
-            ((wk) this).field_j = param2;
-            ((wk) this).field_n = param1;
+            this.field_k = param0;
+            this.field_j = param2;
+            this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "wk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "wk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Accept";
         field_l = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
     }

@@ -7,6 +7,9 @@ final class im {
     static jn field_b;
 
     public static void a(boolean param0) {
+        if (!param0) {
+            return;
+        }
         field_a = null;
         field_b = null;
         field_c = null;
@@ -24,6 +27,7 @@ final class im {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         an stackOut_7_0 = null;
         Object stackOut_9_0 = null;
@@ -42,7 +46,7 @@ final class im {
               if (param0 <= -23) {
                 break L1;
               } else {
-                field_c = null;
+                field_c = (ha) null;
                 break L1;
               }
             }
@@ -51,13 +55,14 @@ final class im {
                 if (st.field_z != vm.field_c) {
                   break L2;
                 } else {
-                  if (!param1.equals((Object) (Object) tl.field_s)) {
+                  if (!param1.equals(tl.field_s)) {
                     break L2;
                   } else {
                     vm.field_c = hm.field_a;
                     stackOut_7_0 = jh.field_z;
                     stackIn_8_0 = stackOut_7_0;
-                    return stackIn_8_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               }
@@ -66,34 +71,36 @@ final class im {
               tl.field_s = param1;
               stackOut_9_0 = null;
               stackIn_10_0 = stackOut_9_0;
+              decompiledRegionSelector0 = 2;
               break L0;
             } else {
               stackOut_3_0 = null;
               stackIn_4_0 = stackOut_3_0;
-              return (an) (Object) stackIn_4_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var2;
+            stackOut_11_0 = (RuntimeException) (var2);
             stackOut_11_1 = new StringBuilder().append("im.A(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -101,16 +108,20 @@ final class im {
               break L3;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
-        return (an) (Object) stackIn_10_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (an) ((Object) stackIn_4_0);
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0;
+          } else {
+            return (an) ((Object) stackIn_10_0);
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = null;
     }
 }

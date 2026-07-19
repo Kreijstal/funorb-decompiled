@@ -9,8 +9,9 @@ final class so extends tra implements mk {
     static String field_L;
 
     public static void m(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 200) {
-            boolean discarded$0 = so.a(-98, (byte) 40, -89);
+            discarded$0 = so.a(-98, (byte) 40, -89);
             field_J = null;
             field_L = null;
             return;
@@ -22,9 +23,9 @@ final class so extends tra implements mk {
     final void a(int param0, int param1, ae param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            ((so) this).field_M = -param0 + jba.field_j + -((so) this).field_i;
+            this.field_M = -param0 + jba.field_j + -this.field_i;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "so.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "so.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -49,7 +50,7 @@ final class so extends tra implements mk {
         try {
           L0: {
             L1: {
-              ((so) this).field_N = param1;
+              this.field_N = param1;
               if (param0 == -13861) {
                 break L1;
               } else {
@@ -63,23 +64,23 @@ final class so extends tra implements mk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("so.BB(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -87,15 +88,21 @@ final class so extends tra implements mk {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     final static void n(int param0) {
+        RuntimeException runtimeException = null;
         vb var1 = null;
-        RuntimeException var1_ref = null;
         int var2 = 0;
+        boolean stackIn_7_0 = false;
+        boolean stackIn_15_0 = false;
+        boolean stackIn_20_0 = false;
         RuntimeException decompiledCaughtException = null;
+        boolean stackOut_6_0 = false;
+        boolean stackOut_14_0 = false;
+        boolean stackOut_19_0 = false;
         var2 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -109,82 +116,112 @@ final class so extends tra implements mk {
               }
             }
             L2: {
-              gg.field_b.c();
-              bga.field_b = bga.field_b - 1;
-              if (0 != bga.field_b) {
-                break L2;
-              } else {
-                bga.field_b = 200;
-                var1 = (vb) (Object) tna.field_e.f(-80);
-                L3: while (true) {
-                  if (var1 == null) {
-                    if (db.field_f != null) {
-                      var1 = (vb) (Object) db.field_f.f(param0 ^ 16378);
-                      L4: while (true) {
+              L3: {
+                L4: {
+                  gg.field_b.c();
+                  bga.field_b = bga.field_b - 1;
+                  if (0 != bga.field_b) {
+                    break L4;
+                  } else {
+                    bga.field_b = 200;
+                    var1 = (vb) ((Object) tna.field_e.f(-80));
+                    L5: while (true) {
+                      L6: {
                         if (var1 == null) {
-                          break L2;
+                          break L6;
                         } else {
-                          L5: {
-                            if (var1.field_h.l((byte) -91)) {
-                              break L5;
+                          stackOut_6_0 = var1.field_h.l((byte) -101);
+                          stackIn_20_0 = stackOut_6_0;
+                          stackIn_7_0 = stackOut_6_0;
+                          if (var2 != 0) {
+                            break L3;
+                          } else {
+                            L7: {
+                              if (stackIn_7_0) {
+                                break L7;
+                              } else {
+                                var1.p(21);
+                                break L7;
+                              }
+                            }
+                            var1 = (vb) ((Object) tna.field_e.e(110));
+                            if (var2 == 0) {
+                              continue L5;
                             } else {
-                              var1.p(param0 + 16389);
-                              break L5;
+                              break L6;
                             }
                           }
-                          var1 = (vb) (Object) db.field_f.e(118);
-                          continue L4;
                         }
                       }
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    L6: {
-                      if (var1.field_h.l((byte) -101)) {
-                        break L6;
+                      if (db.field_f != null) {
+                        var1 = (vb) ((Object) db.field_f.f(param0 ^ 16378));
+                        L8: while (true) {
+                          if (var1 == null) {
+                            break L4;
+                          } else {
+                            stackOut_14_0 = var1.field_h.l((byte) -91);
+                            stackIn_20_0 = stackOut_14_0;
+                            stackIn_15_0 = stackOut_14_0;
+                            if (var2 != 0) {
+                              break L3;
+                            } else {
+                              L9: {
+                                if (stackIn_15_0) {
+                                  break L9;
+                                } else {
+                                  var1.p(param0 + 16389);
+                                  break L9;
+                                }
+                              }
+                              var1 = (vb) ((Object) db.field_f.e(118));
+                              if (var2 == 0) {
+                                continue L8;
+                              } else {
+                                break L4;
+                              }
+                            }
+                          }
+                        }
                       } else {
-                        var1.p(21);
-                        break L6;
+                        break L4;
                       }
                     }
-                    var1 = (vb) (Object) tna.field_e.e(110);
-                    continue L3;
                   }
                 }
-              }
-            }
-            L7: {
-              if (null == fq.field_e) {
-                break L7;
-              } else {
-                if (fq.field_e.a((byte) -114)) {
-                  break L7;
+                if (null == fq.field_e) {
+                  break L2;
                 } else {
-                  break L7;
+                  stackOut_19_0 = fq.field_e.a((byte) -114);
+                  stackIn_20_0 = stackOut_19_0;
+                  break L3;
                 }
+              }
+              if (stackIn_20_0) {
+                break L2;
+              } else {
+                break L2;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1_ref, "so.VA(" + param0 + ')');
+          runtimeException = decompiledCaughtException;
+          throw tba.a((Throwable) ((Object) runtimeException), "so.VA(" + param0 + ')');
         }
     }
 
     public final nua a(byte param0) {
         if (param0 < 44) {
-            return null;
+            return (nua) null;
         }
-        return ((so) this).field_N;
+        return this.field_N;
     }
 
     final void i(int param0) {
         super.i(param0);
-        if (null != ((so) this).field_N) {
-            ((so) this).field_N.c(-74);
+        if (null != this.field_N) {
+            this.field_N.c(-74);
         }
     }
 
@@ -199,13 +236,13 @@ final class so extends tra implements mk {
 
     final String d(byte param0) {
         int var2 = 0;
-        if (((so) this).field_f) {
-          if (((so) this).field_q == null) {
+        if (this.field_f) {
+          if (this.field_q == null) {
             return null;
           } else {
             var2 = -81 % ((param0 - -58) / 60);
-            gca.a(2533, jba.field_j - (((so) this).field_M + -((so) this).field_m), sta.field_B);
-            return ((so) this).field_q;
+            gca.a(2533, jba.field_j - (this.field_M + -this.field_m), sta.field_B);
+            return this.field_q;
           }
         } else {
           return null;
@@ -213,10 +250,6 @@ final class so extends tra implements mk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_J = "+5 Coins";
         field_L = "Error";
     }

@@ -40,6 +40,7 @@ final class bg implements nl {
     }
 
     final static void a(int param0, byte param1, boolean param2) {
+        boolean discarded$1 = false;
         ml var3 = null;
         jb var4 = null;
         String var5_ref_String = null;
@@ -47,7 +48,7 @@ final class bg implements nl {
         int var6 = 0;
         if (param1 <= 43) {
           L0: {
-            boolean discarded$1 = bg.a(-59);
+            discarded$1 = bg.a(-59);
             var3 = mp.a(param0, param2, (byte) -119);
             if (var3 != null) {
               pk.field_b.a(false, (byte) -110);
@@ -88,6 +89,7 @@ final class bg implements nl {
     }
 
     public final void a(boolean param0, int param1, int param2, int param3, cf param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -95,7 +97,7 @@ final class bg implements nl {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        Object var14 = null;
+        cf var14 = null;
         ud var15 = null;
         cf stackIn_3_0 = null;
         RuntimeException stackIn_13_0 = null;
@@ -120,18 +122,18 @@ final class bg implements nl {
           L0: {
             L1: {
               if (param4 instanceof ud) {
-                stackOut_2_0 = (cf) param4;
+                stackOut_2_0 = (cf) (param4);
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
               } else {
                 stackOut_1_0 = null;
-                stackIn_3_0 = (cf) (Object) stackOut_1_0;
+                stackIn_3_0 = (cf) ((Object) stackOut_1_0);
                 break L1;
               }
             }
             L2: {
-              var15 = (ud) (Object) stackIn_3_0;
-              oo.e(param4.field_y + param3, param4.field_i + param1, param4.field_n, param4.field_w, ((bg) this).field_j);
+              var15 = (ud) ((Object) stackIn_3_0);
+              oo.e(param4.field_y + param3, param4.field_i + param1, param4.field_n, param4.field_w, this.field_j);
               if (var15 == null) {
                 break L2;
               } else {
@@ -141,12 +143,12 @@ final class bg implements nl {
             L3: {
               var7 = var15.field_R + (param4.field_y + param3);
               var8 = param1 - -param4.field_i + var15.field_bb;
-              oo.d(var7, var8, var15.field_X, ((bg) this).field_f);
+              oo.d(var7, var8, var15.field_X, this.field_f);
               if (param2 == -15112) {
                 break L3;
               } else {
-                var14 = null;
-                ((bg) this).a(true, 88, 109, -117, (cf) null);
+                var14 = (cf) null;
+                this.a(true, 88, 109, -117, (cf) null);
                 break L3;
               }
             }
@@ -155,7 +157,7 @@ final class bg implements nl {
                 var9 = 3.141592653589793 * (double)var15.field_W * 2.0 / (double)var15.field_U;
                 var11 = (int)(-Math.sin(var9) * (double)var15.field_X);
                 var12 = (int)(Math.cos(var9) * (double)var15.field_X);
-                oo.d(var11 + var7, var12 + var8, 1, ((bg) this).field_b);
+                oo.d(var11 + var7, var12 + var8, 1, this.field_b);
                 break L4;
               } else {
                 break L4;
@@ -167,11 +169,11 @@ final class bg implements nl {
               var11 = (int)(-Math.sin(var9) * (double)var15.field_X);
               var12 = (int)(Math.cos(var9) * (double)var15.field_X);
               oo.g(var7, var8, var11 + var7, var8 - -var12, 1);
-              if (((bg) this).field_g == null) {
+              if (this.field_g == null) {
                 break L5;
               } else {
-                var13 = ((bg) this).field_h + (var15.field_X + var15.field_R);
-                int discarded$1 = ((bg) this).field_g.a(param4.field_j, var13 + (param4.field_y + param3), ((bg) this).field_l + (param1 - -param4.field_i), param4.field_n + -((bg) this).field_h + -var13, -(((bg) this).field_h << 1) + param4.field_w, ((bg) this).field_c, ((bg) this).field_i, 1, 1, 0);
+                var13 = this.field_h + (var15.field_X + var15.field_R);
+                discarded$1 = this.field_g.a(param4.field_j, var13 + (param4.field_y + param3), this.field_l + (param1 - -param4.field_i), param4.field_n + -this.field_h + -var13, -(this.field_h << 1287508609) + param4.field_w, this.field_c, this.field_i, 1, 1, 0);
                 break L5;
               }
             }
@@ -181,23 +183,23 @@ final class bg implements nl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var6;
+            stackOut_12_0 = (RuntimeException) (var6);
             stackOut_12_1 = new StringBuilder().append("bg.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param4 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L6;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -205,7 +207,7 @@ final class bg implements nl {
               break L6;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
     }
 
@@ -248,24 +250,20 @@ final class bg implements nl {
 
     bg(fm param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
-            ((bg) this).field_c = param3;
-            ((bg) this).field_f = param5;
-            ((bg) this).field_h = param1;
-            ((bg) this).field_j = param7;
-            ((bg) this).field_i = param4;
-            ((bg) this).field_g = param0;
-            ((bg) this).field_l = param2;
-            ((bg) this).field_b = param6;
+            this.field_c = param3;
+            this.field_f = param5;
+            this.field_h = param1;
+            this.field_j = param7;
+            this.field_i = param4;
+            this.field_g = param0;
+            this.field_l = param2;
+            this.field_b = param6;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "bg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "bg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = "Names should contain a maximum of 12 characters";
         field_m = "<%0> must play <%1> more rated games before playing with the current options.";
         field_p = "Select a location!";

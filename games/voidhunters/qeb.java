@@ -8,6 +8,9 @@ final class qeb {
     int field_b;
 
     public static void a(byte param0) {
+        if (param0 >= -115) {
+            return;
+        }
         field_c = null;
     }
 
@@ -16,10 +19,6 @@ final class qeb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Destroy the enemy team with blueprint ships. No respawns.";
     }
 }

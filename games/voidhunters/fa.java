@@ -10,7 +10,7 @@ final class fa extends ksa {
     public static void c(byte param0) {
         field_d = null;
         field_e = null;
-        int var1 = -11;
+        int var1 = 11 / ((5 - param0) / 58);
     }
 
     final static void a(String param0, int param1, boolean param2) {
@@ -19,11 +19,11 @@ final class fa extends ksa {
             kmb.field_c = param2 ? true : false;
             hwa.field_o = new os(klb.field_r, vob.field_r, param0, tla.field_c, kmb.field_c);
             if (param1 >= -119) {
-                field_d = null;
+                field_d = (gd[]) null;
             }
-            klb.field_r.a(false, (shb) (Object) hwa.field_o);
+            klb.field_r.a(false, hwa.field_o);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "fa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "fa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -32,10 +32,6 @@ final class fa extends ksa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new gd[109];
         field_e = new String[]{"BAASAicADQESAg--BR4AHgEPAR4AD-8HIwkeAR4AD-8MJgIeAA--Aw8EEgUNDhIPDRANEQ0", "BwENAiYADQENAg0DGwQbBRsDGwUqBh8AGQEN-wcqCCoJHwANARn-CioMGw0nABsBGwIbAw0EDQUNDg0QLQ", "AwEeAQ8EIgANAQ0CHgAsAQ8EGwUN-wUNBg0HDQgNCSIAGwIeAA8BLAMNBA0GDQweAA--Dg8PDw", "BQANAycADQENAx4AGAEnAC0BDQQYBRgEDQUNBRAJIw0QDyYADQENAh4AJgAYARgEDQUtARgEDQUNEg0", "BgANAi0DHwAXAScBDQINAx4AGgENBRf-BCEAFwIX-wUfACYAFwIeAA0BGgMNBA3-ARf-Bi0IDQkuCi4LDQ"};
     }

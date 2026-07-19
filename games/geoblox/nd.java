@@ -114,7 +114,7 @@ final class nd {
             }
             try {
               L1: {
-                stackOut_2_0 = (vk) Class.forName("gl").newInstance();
+                stackOut_2_0 = (vk) (Class.forName("gl").newInstance());
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
               }
@@ -143,14 +143,14 @@ final class nd {
         int stackOut_3_0 = 0;
         try {
           L0: {
-            var3_int = 0;
+            var3_int = param1;
             L1: while (true) {
-              if (param2 <= 0) {
+              if ((param2 ^ -1) >= -1) {
                 stackOut_3_0 = var3_int;
                 stackIn_4_0 = stackOut_3_0;
                 break L0;
               } else {
-                var3_int = var3_int << 1 | param0 & 1;
+                var3_int = var3_int << -137336543 | param0 & 1;
                 param2--;
                 param0 = param0 >>> 1;
                 continue L1;
@@ -160,16 +160,12 @@ final class nd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var3, "nd.B(" + param0 + ',' + 0 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) var3), "nd.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_4_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
     }
 }

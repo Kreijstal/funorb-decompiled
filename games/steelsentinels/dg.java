@@ -19,15 +19,11 @@ final class dg {
         field_b = null;
         field_g = null;
         field_e = null;
-        int var1 = -1;
+        int var1 = -51 % ((param0 - 28) / 50);
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "dg.A(";
         field_e = "Please wait until loading has finished.";
         field_f = "Members";

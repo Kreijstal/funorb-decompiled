@@ -9,7 +9,7 @@ final class ve {
 
     public static void b(byte param0) {
         field_a = null;
-        int var1 = 9;
+        int var1 = -9 / ((param0 - 36) / 56);
         field_b = null;
     }
 
@@ -24,6 +24,7 @@ final class ve {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
@@ -40,7 +41,7 @@ final class ve {
           L0: {
             if (param1 == 1) {
               L1: {
-                if ((param0[param2 >> 5] & 1 << (31 & param2)) == 0) {
+                if (-1 == (param0[param2 >> 509118245] & 1 << (31 & param2) ^ -1)) {
                   stackOut_5_0 = 0;
                   stackIn_6_0 = stackOut_5_0;
                   break L1;
@@ -50,34 +51,36 @@ final class ve {
                   break L1;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 0;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_0 = (RuntimeException) (var3);
             stackOut_7_1 = new StringBuilder().append("ve.E(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -85,36 +88,45 @@ final class ve {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + param2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_6_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_6_0 != 0;
+        }
     }
 
     final static void a(byte param0) {
         pa.field_d = new sf[17];
         pa.field_d[0] = new sf(0, 170, 170, 300, 0, (wk) null, true);
-        pa.field_d[1] = new sf(1, 224, 110, 200, 0, (wk) null, false);
-        pa.field_d[2] = new sf(2, 224, 86, 400, 0, (wk) null, true);
-        pa.field_d[3] = new sf(3, 224, 60, 200, 0, (wk) null, false);
-        pa.field_d[4] = new sf(4, 224, 60, 285, 0, (wk) null, false);
-        pa.field_d[5] = new sf(5, 224, 60, 200, 0, (wk) null, false);
-        pa.field_d[6] = new sf(6, 224, 60, 285, 0, (wk) null, false);
-        pa.field_d[7] = new sf(7, 224, 120, 200, 0, (wk) null, false);
-        pa.field_d[8] = new sf(8, 224, 86, 285, 0, (wk) null, false);
-        pa.field_d[9] = new sf(9, 170, 86, 300, 0, (wk) null, true);
-        pa.field_d[10] = new sf(10, 224, 60, 200, 0, (wk) null, false);
-        pa.field_d[11] = new sf(11, 224, 60, 285, 0, (wk) null, false);
-        pa.field_d[12] = new sf(12, 224, 100, 285, 0, b.field_q[2], false);
-        pa.field_d[13] = new sf(13, 170, 174, 300, 0, (wk) null, true);
-        pa.field_d[14] = new sf(14, 224, 60, 200, 0, (wk) null, false);
-        pa.field_d[15] = new sf(15, 224, 60, 400, 0, b.field_q[2], false);
-        pa.field_d[16] = new sf(16, 170, 170, 300, 0, (wk) null, true);
+        if (param0 == 122) {
+          pa.field_d[1] = new sf(1, 224, 110, 200, 0, (wk) null, false);
+          pa.field_d[2] = new sf(2, 224, 86, 400, 0, (wk) null, true);
+          pa.field_d[3] = new sf(3, 224, 60, 200, 0, (wk) null, false);
+          pa.field_d[4] = new sf(4, 224, 60, 285, 0, (wk) null, false);
+          pa.field_d[5] = new sf(5, 224, 60, 200, 0, (wk) null, false);
+          pa.field_d[6] = new sf(6, 224, 60, 285, 0, (wk) null, false);
+          pa.field_d[7] = new sf(7, 224, 120, 200, 0, (wk) null, false);
+          pa.field_d[8] = new sf(8, 224, 86, 285, 0, (wk) null, false);
+          pa.field_d[9] = new sf(9, 170, 86, 300, 0, (wk) null, true);
+          pa.field_d[10] = new sf(10, 224, 60, 200, 0, (wk) null, false);
+          pa.field_d[11] = new sf(11, 224, 60, 285, 0, (wk) null, false);
+          pa.field_d[12] = new sf(12, 224, 100, 285, 0, b.field_q[2], false);
+          pa.field_d[13] = new sf(13, 170, 174, 300, 0, (wk) null, true);
+          pa.field_d[14] = new sf(14, 224, 60, 200, 0, (wk) null, false);
+          pa.field_d[15] = new sf(15, 224, 60, 400, 0, b.field_q[2], false);
+          pa.field_d[16] = new sf(16, 170, 170, 300, 0, (wk) null, true);
+          return;
+        } else {
+          return;
+        }
     }
 
     final static boolean a(byte param0, int param1) {
         try {
             if (param0 > -84) {
-                Object var3 = null;
+                byte[] var3 = (byte[]) null;
                 ve.a(-78, (byte[]) null);
             }
             if (rf.field_d.field_p >= param1) {
@@ -137,13 +149,16 @@ final class ve {
                 rf.field_d.field_p = 0;
                 return true;
             }
-            {
+            try {
+                if (false) throw (IOException) null;
                 if (0 <= var2_int) {
-                    if (ki.l(150) <= 30000L) {
+                    if (-30001L <= (ki.l(150) ^ -1L)) {
                         return false;
                     }
                 }
                 pm.m(-125);
+            } catch (IOException iOException) {
+                pm.m(-40);
             }
             return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -154,6 +169,8 @@ final class ve {
     }
 
     final static void a(int param0, byte[] param1) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -174,10 +191,6 @@ final class ve {
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        byte[] var22 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        byte[] var25 = null;
         int stackIn_30_0 = 0;
         int stackIn_31_0 = 0;
         int stackIn_32_0 = 0;
@@ -193,6 +206,7 @@ final class ve {
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
         String stackIn_54_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_44_0 = 0;
         int stackOut_46_0 = 0;
@@ -252,24 +266,21 @@ final class ve {
                                   var4 = 0;
                                   L6: while (true) {
                                     if (var4 >= rl.field_d) {
+                                      decompiledRegionSelector0 = 1;
                                       break L0;
                                     } else {
                                       L7: {
                                         var5 = le.field_L[var4];
                                         var6 = ca.field_r[var4];
                                         var7 = var6 * var5;
-                                        var24 = new byte[var7];
-                                        var22 = var24;
-                                        var20 = var22;
+                                        var20 = new byte[var7];
                                         var18 = var20;
                                         var8 = var18;
-                                        dl.field_L[var4] = var24;
-                                        var25 = new byte[var7];
-                                        var23 = var25;
-                                        var21 = var23;
+                                        dl.field_L[var4] = var20;
+                                        var21 = new byte[var7];
                                         var19 = var21;
                                         var9 = var19;
-                                        sn.field_g[var4] = var25;
+                                        sn.field_g[var4] = var21;
                                         var10 = 0;
                                         var11 = var17.f((byte) -121);
                                         if ((1 & var11) != 0) {
@@ -291,13 +302,13 @@ final class ve {
                                                         continue L9;
                                                       } else {
                                                         L11: {
-                                                          byte dupTemp$2 = var17.d((byte) -2);
+                                                          dupTemp$2 = var17.d((byte) -2);
                                                           var9[var13 * var5 + var12] = dupTemp$2;
                                                           var14 = dupTemp$2;
                                                           stackOut_44_0 = var10;
                                                           stackIn_46_0 = stackOut_44_0;
                                                           stackIn_45_0 = stackOut_44_0;
-                                                          if (var14 == -1) {
+                                                          if (0 == (var14 ^ -1)) {
                                                             stackOut_46_0 = stackIn_46_0;
                                                             stackOut_46_1 = 0;
                                                             stackIn_47_0 = stackOut_46_0;
@@ -337,14 +348,14 @@ final class ve {
                                           var12 = 0;
                                           L13: while (true) {
                                             if (var12 >= var7) {
-                                              if ((2 & var11) != 0) {
+                                              if (-1 != (2 & var11 ^ -1)) {
                                                 var12 = 0;
                                                 L14: while (true) {
                                                   if (var7 <= var12) {
                                                     break L7;
                                                   } else {
                                                     L15: {
-                                                      byte dupTemp$3 = var17.d((byte) -2);
+                                                      dupTemp$3 = var17.d((byte) -2);
                                                       var9[var12] = dupTemp$3;
                                                       var13 = dupTemp$3;
                                                       stackOut_29_0 = var10;
@@ -424,30 +435,31 @@ final class ve {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var2 = decompiledCaughtException;
-            stackOut_51_0 = (RuntimeException) var2;
+            stackOut_51_0 = (RuntimeException) (var2);
             stackOut_51_1 = new StringBuilder().append("ve.C(").append(param0).append(',');
             stackIn_53_0 = stackOut_51_0;
             stackIn_53_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;
             stackIn_52_1 = stackOut_51_1;
             if (param1 == null) {
-              stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
-              stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
+              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
               stackOut_53_2 = "null";
               stackIn_54_0 = stackOut_53_0;
               stackIn_54_1 = stackOut_53_1;
               stackIn_54_2 = stackOut_53_2;
               break L17;
             } else {
-              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
-              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
+              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
               stackOut_52_2 = "{...}";
               stackIn_54_0 = stackOut_52_0;
               stackIn_54_1 = stackOut_52_1;
@@ -455,11 +467,17 @@ final class ve {
               break L17;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_54_0), stackIn_54_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static pe a(int param0, kj param1) {
+        int discarded$1 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -490,9 +508,9 @@ final class ve {
         var9 = SteelSentinels.field_G;
         try {
           L0: {
-            var3 = 110;
+            var3 = 110 / ((-37 - param0) / 57);
             var2_int = param1.g(-72, 8);
-            if (var2_int > 0) {
+            if ((var2_int ^ -1) < -1) {
               throw new IllegalStateException("" + var2_int);
             } else {
               L1: {
@@ -522,7 +540,7 @@ final class ve {
               }
               L2: {
                 if (var5 != 0) {
-                  int discarded$1 = param1.g(-113, 16);
+                  discarded$1 = param1.g(-113, 16);
                   var6.field_y = s.a(var6.field_y, 16, param1, false);
                   var6.field_i = s.a(var6.field_i, 16, param1, false);
                   var6.field_E = s.a(var6.field_E, 16, param1, false);
@@ -556,55 +574,54 @@ final class ve {
                         break L4;
                       }
                     } else {
-                      L6: {
-                        if ((var6.field_P[var8] & 255) <= var7) {
-                          break L6;
-                        } else {
-                          break L6;
-                        }
+                      if ((var6.field_P[var8] & 255) > var7) {
+                        var7 = var6.field_P[var8] & 255;
+                        var8++;
+                        continue L5;
+                      } else {
+                        var8++;
+                        continue L5;
                       }
-                      var8++;
-                      continue L5;
                     }
                   }
                 } else {
                   break L4;
                 }
               }
-              stackOut_22_0 = (pe) var6;
+              stackOut_22_0 = (pe) (var6);
               stackIn_23_0 = stackOut_22_0;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var2 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("ve.G(").append(-100).append(',');
+            stackOut_24_0 = (RuntimeException) (var2);
+            stackOut_24_1 = new StringBuilder().append("ve.G(").append(param0).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
-              break L7;
+              break L6;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
               stackIn_27_2 = stackOut_25_2;
-              break L7;
+              break L6;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
         }
         return stackIn_23_0;
     }
@@ -617,7 +634,7 @@ final class ve {
             if (0 > param1) {
               break L1;
             } else {
-              if (param1 < 65536) {
+              if ((param1 ^ -1) > -65537) {
                 break L0;
               } else {
                 break L1;
@@ -629,7 +646,7 @@ final class ve {
           break L0;
         }
         L2: {
-          if (param1 >= 256) {
+          if ((param1 ^ -1) <= -257) {
             param1 = param1 >>> 8;
             var2 += 8;
             break L2;
@@ -638,7 +655,7 @@ final class ve {
           }
         }
         L3: {
-          if (param1 >= 16) {
+          if (-17 >= (param1 ^ -1)) {
             var2 += 4;
             param1 = param1 >>> 4;
             break L3;
@@ -657,7 +674,7 @@ final class ve {
             }
           }
           L5: {
-            if (param1 < 1) {
+            if (-2 < (param1 ^ -1)) {
               break L5;
             } else {
               var2++;
@@ -672,10 +689,6 @@ final class ve {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = null;
     }
 }

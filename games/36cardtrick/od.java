@@ -16,10 +16,6 @@ final class od {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "od.A(";
         field_b = new bk();
     }

@@ -41,6 +41,7 @@ final class uq {
     }
 
     private final static void a(jp param0) {
+        int incrementValue$49 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -66,7 +67,7 @@ final class uq {
                   var4--;
                   continue L1;
                 } else {
-                  int incrementValue$49 = var3;
+                  incrementValue$49 = var3;
                   var3++;
                   param0.field_G[var1] = -incrementValue$49;
                   var1--;
@@ -80,6 +81,9 @@ final class uq {
     }
 
     final static void b(jp param0) {
+        int incrementValue$52 = 0;
+        int incrementValue$53 = 0;
+        int incrementValue$54 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3_int = 0;
@@ -90,17 +94,13 @@ final class uq {
         int var7 = 0;
         int[] var8 = null;
         int[] var9 = null;
-        int[] var10 = null;
-        int[] var11 = null;
         uq.a(param0);
         var1 = 0;
         var2 = 0;
         var3_int = 0;
         L0: while (true) {
           if (var3_int >= param0.field_C) {
-            var11 = new int[param0.field_C + var1];
-            var10 = var11;
-            var9 = var10;
+            var9 = new int[param0.field_C + var1];
             var8 = var9;
             var3 = var8;
             var2 = 0;
@@ -111,7 +111,7 @@ final class uq {
                 param0.field_G = var3;
                 return;
               } else {
-                var11[var5] = var4;
+                var9[var5] = var4;
                 var6 = 0;
                 L2: while (true) {
                   if (var6 >= param0.field_D) {
@@ -119,7 +119,7 @@ final class uq {
                     continue L1;
                   } else {
                     L3: {
-                      int incrementValue$52 = var2;
+                      incrementValue$52 = var2;
                       var2++;
                       var7 = param0.field_G[incrementValue$52];
                       if (var7 >= 0) {
@@ -130,7 +130,7 @@ final class uq {
                         break L3;
                       }
                     }
-                    int incrementValue$53 = var4;
+                    incrementValue$53 = var4;
                     var4++;
                     var3[incrementValue$53] = var7;
                     var6++;
@@ -146,7 +146,7 @@ final class uq {
                 var3_int++;
                 continue L0;
               } else {
-                int incrementValue$54 = var2;
+                incrementValue$54 = var2;
                 var2++;
                 var5 = param0.field_G[incrementValue$54];
                 if (var5 < 0) {
@@ -167,6 +167,8 @@ final class uq {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int var9 = 0;
         int var10 = 0;
         param3 = param3 + param7;
@@ -185,7 +187,7 @@ final class uq {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$22 = param2;
+                    incrementValue$22 = param2;
                     param2++;
                     param4 = param1[incrementValue$22];
                     if (param4 > 0) {
@@ -200,7 +202,7 @@ final class uq {
                   }
                 }
               } else {
-                int incrementValue$23 = param2;
+                incrementValue$23 = param2;
                 param2++;
                 param4 = param1[incrementValue$23];
                 if (param4 <= 0) {

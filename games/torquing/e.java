@@ -10,6 +10,11 @@ class e extends bc {
 
     public static void b(boolean param0) {
         field_d = null;
+        if (!param0) {
+            field_d = (String) null;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
@@ -34,8 +39,8 @@ class e extends bc {
         try {
           L0: {
             L1: {
-              param0.a(118, ((e) this).field_e);
-              param0.a((byte) 107, ((e) this).field_c);
+              param0.a(118, this.field_e);
+              param0.a((byte) 107, this.field_c);
               if (param1 == -71) {
                 break L1;
               } else {
@@ -49,23 +54,23 @@ class e extends bc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("e.F(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -73,32 +78,28 @@ class e extends bc {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     e(long param0, String param1) {
         try {
-            ((e) this).field_e = param0;
-            ((e) this).field_c = param1;
+            this.field_e = param0;
+            this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "e.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "e.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     gq a(boolean param0) {
         if (param0) {
-            field_d = null;
+            field_d = (String) null;
             return hg.field_f;
         }
         return hg.field_f;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "This game has been updated! Please reload this page.";
     }
 }

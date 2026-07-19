@@ -8,7 +8,7 @@ final class ki {
 
     final static void a(byte param0) {
         if (param0 >= -36) {
-          field_b = null;
+          field_b = (er[]) null;
           ql.i(34);
           al.a((byte) -41);
           up.field_z = null;
@@ -25,6 +25,11 @@ final class ki {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != -7) {
+            field_b = (er[]) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
@@ -95,23 +100,23 @@ final class ki {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var5;
+            stackOut_9_0 = (RuntimeException) (var5);
             stackOut_9_1 = new StringBuilder().append("ki.A(").append(param0).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -119,15 +124,11 @@ final class ki {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param3 + ',' + param4 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new nj();
     }
 }

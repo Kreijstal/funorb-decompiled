@@ -20,12 +20,12 @@ final class hj implements Runnable {
     }
 
     final static void a(byte param0, int param1) {
-        hd.field_s = 3 & param1 >> 4;
-        he.field_d = param1 >> 2 & 3;
+        hd.field_s = 3 & param1 >> -169374172;
+        he.field_d = param1 >> -652271166 & 3;
         if (param0 == 100) {
-          if (hd.field_s <= 2) {
+          if ((hd.field_s ^ -1) >= -3) {
             fj.field_S = 3 & param1;
-            if (he.field_d <= 2) {
+            if ((he.field_d ^ -1) >= -3) {
               if (2 < fj.field_S) {
                 fj.field_S = 2;
                 return;
@@ -44,7 +44,7 @@ final class hj implements Runnable {
           } else {
             hd.field_s = 2;
             fj.field_S = 3 & param1;
-            if (he.field_d <= 2) {
+            if ((he.field_d ^ -1) >= -3) {
               if (2 < fj.field_S) {
                 fj.field_S = 2;
                 return;
@@ -62,11 +62,11 @@ final class hj implements Runnable {
             }
           }
         } else {
-          field_c = null;
-          if (hd.field_s > 2) {
+          field_c = (String[]) null;
+          if ((hd.field_s ^ -1) < -3) {
             hd.field_s = 2;
             fj.field_S = 3 & param1;
-            if (he.field_d > 2) {
+            if ((he.field_d ^ -1) < -3) {
               he.field_d = 2;
               if (2 < fj.field_S) {
                 fj.field_S = 2;
@@ -87,7 +87,7 @@ final class hj implements Runnable {
             }
           } else {
             fj.field_S = 3 & param1;
-            if (he.field_d > 2) {
+            if ((he.field_d ^ -1) < -3) {
               he.field_d = 2;
               if (2 >= fj.field_S) {
                 return;
@@ -116,52 +116,58 @@ final class hj implements Runnable {
         oa var2 = null;
         Throwable var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        String var5 = null;
         Throwable decompiledCaughtException = null;
         var4 = TrackController.field_F ? 1 : 0;
-        ((hj) this).field_e = true;
+        this.field_e = true;
         try {
-          L0: while (true) {
-            if (((hj) this).field_b) {
-              ((hj) this).field_e = false;
-              return;
-            } else {
-              var1_int = 0;
-              L1: while (true) {
-                if (2 <= var1_int) {
-                  wl.a(10L, false);
-                  f.a((Object) null, (byte) -127, ((hj) this).field_d);
-                  continue L0;
-                } else {
-                  L2: {
-                    var2 = ((hj) this).field_a[var1_int];
-                    if (var2 == null) {
-                      var1_int++;
-                      break L2;
-                    } else {
-                      var2.b();
-                      break L2;
+          L0: {
+            try {
+              L1: {
+                L2: while (true) {
+                  if (this.field_b) {
+                    break L1;
+                  } else {
+                    var1_int = 0;
+                    L3: while (true) {
+                      if (2 <= var1_int) {
+                        wl.a(10L, false);
+                        f.a((Object) null, (byte) -127, this.field_d);
+                        continue L2;
+                      } else {
+                        L4: {
+                          var2 = this.field_a[var1_int];
+                          if (var2 == null) {
+                            break L4;
+                          } else {
+                            var2.b();
+                            break L4;
+                          }
+                        }
+                        var1_int++;
+                        continue L3;
+                      }
                     }
                   }
-                  var1_int++;
-                  continue L1;
                 }
               }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = (Exception) (Object) decompiledCaughtException;
+              var5 = (String) null;
+              hb.a((Throwable) ((Object) var1), 0, (String) null);
+              this.field_e = false;
+              return;
             }
+            break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Exception) (Object) decompiledCaughtException;
-          var5 = null;
-          hb.a((Throwable) (Object) var1, 0, (String) null);
-          ((hj) this).field_e = false;
-          return;
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
-          ((hj) this).field_e = false;
+          this.field_e = false;
           throw hj.<RuntimeException>$cfr$sneakyThrow(var3);
         }
+        this.field_e = false;
     }
 
     final static byte a(char param0, byte param1) {
@@ -790,19 +796,23 @@ final class hj implements Runnable {
         ti var5 = null;
         int var6 = 0;
         var6 = TrackController.field_F ? 1 : 0;
-        var5 = (ti) (Object) ea.field_s.b(2);
+        var5 = (ti) ((Object) ea.field_s.b(2));
         L0: while (true) {
           if (var5 == null) {
-            var5 = new ti();
-            var5.field_l = 10;
-            var5.field_k = 1;
-            var5.field_i = 10;
-            ea.field_s.a((byte) -105, (fc) (Object) var5);
-            mc.a(false, 3, var5);
-            return var5;
+            if (param4 != -102) {
+              return (ti) null;
+            } else {
+              var5 = new ti();
+              var5.field_l = param3;
+              var5.field_k = param2;
+              var5.field_i = param1;
+              ea.field_s.a((byte) -105, var5);
+              mc.a(false, param0, var5);
+              return var5;
+            }
           } else {
-            if (var5.field_i != 10) {
-              var5 = (ti) (Object) ea.field_s.a(10);
+            if (var5.field_i != param1) {
+              var5 = (ti) ((Object) ea.field_s.a(param4 + 112));
               continue L0;
             } else {
               return var5;
@@ -812,18 +822,14 @@ final class hj implements Runnable {
     }
 
     hj() {
-        ((hj) this).field_a = new oa[2];
-        ((hj) this).field_b = false;
-        ((hj) this).field_e = false;
+        this.field_a = new oa[2];
+        this.field_b = false;
+        this.field_e = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-        field_f = new char[]{'[', ']', '#'};
+        field_f = new char[]{(char)91, (char)93, (char)35};
     }
 
     @SuppressWarnings("unchecked")

@@ -25,10 +25,6 @@ final class ho {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ho.A(";
         field_d = new int[256];
         field_b = new rq();

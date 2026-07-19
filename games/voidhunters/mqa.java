@@ -13,12 +13,13 @@ final class mqa extends rqa {
     }
 
     final static lkb a(int param0, String param1) {
+        lkb discarded$2 = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        Object var6 = null;
+        String var6 = null;
         lkb stackIn_4_0 = null;
         lkb stackIn_8_0 = null;
         lkb stackIn_16_0 = null;
@@ -31,6 +32,7 @@ final class mqa extends rqa {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         lkb stackOut_3_0 = null;
         lkb stackOut_7_0 = null;
@@ -49,24 +51,27 @@ final class mqa extends rqa {
         try {
           L0: {
             var2_int = param1.length();
-            if (var2_int == 0) {
+            if (-1 == (var2_int ^ -1)) {
               stackOut_3_0 = br.field_f;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              if (var2_int > 63) {
+              if ((var2_int ^ -1) < -64) {
                 stackOut_7_0 = qw.field_j;
                 stackIn_8_0 = stackOut_7_0;
-                return stackIn_8_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 var3 = 0;
                 L1: while (true) {
                   if (var2_int <= var3) {
                     if (param0 != -23150) {
-                      var6 = null;
-                      lkb discarded$2 = mqa.a(-101, (String) null);
+                      var6 = (String) null;
+                      discarded$2 = mqa.a(-101, (String) null);
                       stackOut_24_0 = null;
                       stackIn_25_0 = stackOut_24_0;
+                      decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       return null;
@@ -78,7 +83,8 @@ final class mqa extends rqa {
                         if (tea.field_a.indexOf(var4) == -1) {
                           stackOut_19_0 = ira.field_b;
                           stackIn_20_0 = stackOut_19_0;
-                          return stackIn_20_0;
+                          decompiledRegionSelector0 = 3;
+                          break L0;
                         } else {
                           break L2;
                         }
@@ -96,7 +102,8 @@ final class mqa extends rqa {
                         }
                         stackOut_15_0 = ira.field_b;
                         stackIn_16_0 = stackOut_15_0;
-                        return stackIn_16_0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       }
                     }
                     var3++;
@@ -110,23 +117,23 @@ final class mqa extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var2;
+            stackOut_26_0 = (RuntimeException) (var2);
             stackOut_26_1 = new StringBuilder().append("mqa.B(").append(param0).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param1 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L4;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -134,19 +141,47 @@ final class mqa extends rqa {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
         }
-        return (lkb) (Object) stackIn_25_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_16_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_20_0;
+              } else {
+                return (lkb) ((Object) stackIn_25_0);
+              }
+            }
+          }
+        }
     }
 
     public static void a(int param0) {
-        field_p = null;
-        field_r = null;
+        lkb discarded$2 = null;
+        String var2 = null;
+        if (param0 > -6) {
+          var2 = (String) null;
+          discarded$2 = mqa.a(105, (String) null);
+          field_p = null;
+          field_r = null;
+          return;
+        } else {
+          field_p = null;
+          field_r = null;
+          return;
+        }
     }
 
     final nc a(nc[] param0, int param1) {
+        nc discarded$2 = null;
         RuntimeException var3 = null;
-        Object var4 = null;
+        nc[] var4 = null;
         nc stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -172,12 +207,12 @@ final class mqa extends rqa {
               if (param1 < -119) {
                 break L1;
               } else {
-                var4 = null;
-                nc discarded$2 = ((mqa) this).a((nc[]) null, -71);
+                var4 = (nc[]) null;
+                discarded$2 = this.a((nc[]) null, -71);
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -185,23 +220,23 @@ final class mqa extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("mqa.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -209,16 +244,12 @@ final class mqa extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = 131072;
         field_r = new gl(1);
         field_o = 1.0f;

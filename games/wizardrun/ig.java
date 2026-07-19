@@ -37,6 +37,7 @@ abstract class ig extends rk {
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
         String stackIn_76_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
@@ -58,13 +59,14 @@ abstract class ig extends rk {
         try {
           L0: {
             if (param0 == null) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
-                if (param4 <= 0) {
+                if ((param4 ^ -1) >= -1) {
                   break L1;
                 } else {
-                  if (param3 > 0) {
+                  if ((param3 ^ -1) < -1) {
                     L2: {
                       if (null == param0[3]) {
                         stackOut_9_0 = 0;
@@ -260,7 +262,7 @@ abstract class ig extends rk {
                       if (null == param0[5]) {
                         break L19;
                       } else {
-                        if (param0[5].field_s != 0) {
+                        if (-1 != (param0[5].field_s ^ -1)) {
                           ed.b(var17, var18, var10, var19);
                           var20 = var14;
                           L20: while (true) {
@@ -312,36 +314,38 @@ abstract class ig extends rk {
                         }
                       }
                     }
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
                     break L1;
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L24: {
             var6 = decompiledCaughtException;
-            stackOut_73_0 = (RuntimeException) var6;
+            stackOut_73_0 = (RuntimeException) (var6);
             stackOut_73_1 = new StringBuilder().append("ig.B(");
             stackIn_75_0 = stackOut_73_0;
             stackIn_75_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;
             stackIn_74_1 = stackOut_73_1;
             if (param0 == null) {
-              stackOut_75_0 = (RuntimeException) (Object) stackIn_75_0;
-              stackOut_75_1 = (StringBuilder) (Object) stackIn_75_1;
+              stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
+              stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
               stackOut_75_2 = "null";
               stackIn_76_0 = stackOut_75_0;
               stackIn_76_1 = stackOut_75_1;
               stackIn_76_2 = stackOut_75_2;
               break L24;
             } else {
-              stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
-              stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
+              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
+              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
               stackOut_74_2 = "{...}";
               stackIn_76_0 = stackOut_74_0;
               stackIn_76_1 = stackOut_74_1;
@@ -349,21 +353,30 @@ abstract class ig extends rk {
               break L24;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_76_0), stackIn_76_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     public static void a(byte param0) {
         field_q = null;
         if (param0 >= -82) {
-            field_q = null;
+            field_q = (cd) null;
         }
     }
 
     abstract boolean d(int param0);
 
     ig(int param0) {
-        ((ig) this).field_p = param0;
+        this.field_p = param0;
     }
 
     static {

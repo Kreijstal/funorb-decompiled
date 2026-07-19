@@ -8,7 +8,7 @@ final class rm {
 
     final sn b() {
         byte[] var1 = this.a();
-        return new sn(22050, var1, 22050 * ((rm) this).field_c / 1000, 22050 * ((rm) this).field_b / 1000);
+        return new sn(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
     final static rm a(kl param0, int param1, int param2) {
@@ -41,10 +41,10 @@ final class rm {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((rm) this).field_a[var4] != null) {
-                    var5 = ((rm) this).field_a[var4].field_r * 22050 / 1000;
-                    var6 = ((rm) this).field_a[var4].field_e * 22050 / 1000;
-                    var13 = ((rm) this).field_a[var4].a(var5, ((rm) this).field_a[var4].field_r);
+                  if (this.field_a[var4] != null) {
+                    var5 = this.field_a[var4].field_r * 22050 / 1000;
+                    var6 = this.field_a[var4].field_e * 22050 / 1000;
+                    var13 = this.field_a[var4].a(var5, this.field_a[var4].field_r);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -75,9 +75,9 @@ final class rm {
               return new byte[]{};
             }
           } else {
-            if (((rm) this).field_a[var2] != null) {
-              if (((rm) this).field_a[var2].field_r + ((rm) this).field_a[var2].field_e > var1) {
-                var1 = ((rm) this).field_a[var2].field_r + ((rm) this).field_a[var2].field_e;
+            if (this.field_a[var2] != null) {
+              if (this.field_a[var2].field_r + this.field_a[var2].field_e > var1) {
+                var1 = this.field_a[var2].field_r + this.field_a[var2].field_e;
                 var2++;
                 continue L0;
               } else {
@@ -95,19 +95,19 @@ final class rm {
     private rm(vh param0) {
         int var2 = 0;
         int var3 = 0;
-        ((rm) this).field_a = new hu[10];
+        this.field_a = new hu[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((rm) this).field_c = param0.e((byte) -104);
-            ((rm) this).field_b = param0.e((byte) -104);
+            this.field_c = param0.e((byte) -104);
+            this.field_b = param0.e((byte) -104);
             return;
           } else {
             var3 = param0.k(0);
             if (var3 != 0) {
               param0.field_q = param0.field_q - 1;
-              ((rm) this).field_a[var2] = new hu();
-              ((rm) this).field_a[var2].a(param0);
+              this.field_a[var2] = new hu();
+              this.field_a[var2].a(param0);
               var2++;
               continue L0;
             } else {

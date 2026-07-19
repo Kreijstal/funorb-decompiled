@@ -15,7 +15,7 @@ final class po extends am {
     final void a(fj param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        Object var5 = null;
+        fj var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -38,8 +38,8 @@ final class po extends am {
               if (param1 == 35) {
                 break L1;
               } else {
-                var5 = null;
-                ((po) this).a((fj) null, 56, 26);
+                var5 = (fj) null;
+                this.a((fj) null, 56, 26);
                 break L1;
               }
             }
@@ -55,23 +55,23 @@ final class po extends am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_0 = (RuntimeException) (var4);
             stackOut_6_1 = new StringBuilder().append("po.H(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -79,7 +79,7 @@ final class po extends am {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -88,14 +88,14 @@ final class po extends am {
     }
 
     private final void b(int param0, int param1) {
-        ((po) this).field_A = (param1 & 255) << 4;
-        ((po) this).field_v = (param1 & 16711680) >> 12;
-        ((po) this).field_s = param1 >> 4 & 4080;
+        this.field_A = (param1 & 255) << 786159204;
+        this.field_v = (param1 & 16711680) >> 324326572;
+        this.field_s = param1 >> -1775937404 & param0;
     }
 
     public static void g(byte param0) {
         field_x = null;
-        int var1 = 0;
+        int var1 = 100 % ((49 - param0) / 48);
         field_y = null;
         field_t = null;
     }
@@ -114,10 +114,10 @@ final class po extends am {
         int var8 = 0;
         int[][] var9 = null;
         var8 = Torquing.field_u;
-        var9 = ((po) this).field_r.a(15142, param1);
+        var9 = this.field_r.a(15142, param1);
         var3 = var9;
         if (param0 == -29116) {
-          if (!((po) this).field_r.field_b) {
+          if (!this.field_r.field_b) {
             return var9;
           } else {
             var4 = var9[0];
@@ -128,24 +128,20 @@ final class po extends am {
               if (ci.field_c <= var7) {
                 return var9;
               } else {
-                var4[var7] = ((po) this).field_v;
-                var5[var7] = ((po) this).field_s;
-                var6[var7] = ((po) this).field_A;
+                var4[var7] = this.field_v;
+                var5[var7] = this.field_s;
+                var6[var7] = this.field_A;
                 var7++;
                 continue L0;
               }
             }
           }
         } else {
-          return null;
+          return (int[][]) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = new String[3];
         field_u = -1;
         field_w = 0;

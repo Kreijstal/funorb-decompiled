@@ -7,10 +7,6 @@ final class nv {
     static int field_b;
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 33;
     }
 }

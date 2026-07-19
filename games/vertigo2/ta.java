@@ -47,223 +47,200 @@ final class ta extends gp {
         int[] var42 = null;
         int[] var43 = null;
         int[] var44 = null;
-        int[] var48 = null;
-        int[] var49 = null;
-        int[] var50 = null;
-        int[] var51 = null;
-        int[] var52 = null;
-        int[] var53 = null;
-        int[] var57 = null;
-        int[] var58 = null;
-        int[] var59 = null;
-        int[] var60 = null;
-        int[] var61 = null;
-        int[] var62 = null;
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        Object stackIn_45_0 = null;
         Object stackIn_46_0 = null;
         Object stackIn_47_0 = null;
-        int stackIn_47_1 = 0;
-        Object stackOut_44_0 = null;
+        Object stackIn_48_0 = null;
+        int stackIn_48_1 = 0;
+        Object stackOut_45_0 = null;
+        Object stackOut_47_0 = null;
+        int stackOut_47_1 = 0;
         Object stackOut_46_0 = null;
         int stackOut_46_1 = 0;
-        Object stackOut_45_0 = null;
-        int stackOut_45_1 = 0;
         Object stackOut_3_0 = null;
         Object stackOut_5_0 = null;
         int stackOut_5_1 = 0;
         Object stackOut_4_0 = null;
         int stackOut_4_1 = 0;
-        if (((ta) this).field_x != null) {
-          if (((ta) this).field_t != param2) {
-            if (((ta) this).field_v.a(param1, param0, 0)) {
+        if (this.field_x != null) {
+          if (this.field_t != param2) {
+            if (this.field_v.a(param1, param0, 0)) {
               L0: {
-                stackOut_44_0 = this;
-                stackIn_46_0 = stackOut_44_0;
-                stackIn_45_0 = stackOut_44_0;
+                stackOut_45_0 = this;
+                stackIn_47_0 = stackOut_45_0;
+                stackIn_46_0 = stackOut_45_0;
                 if (!param3) {
-                  stackOut_46_0 = this;
-                  stackOut_46_1 = 128;
-                  stackIn_47_0 = stackOut_46_0;
-                  stackIn_47_1 = stackOut_46_1;
+                  stackOut_47_0 = this;
+                  stackOut_47_1 = 128;
+                  stackIn_48_0 = stackOut_47_0;
+                  stackIn_48_1 = stackOut_47_1;
                   break L0;
                 } else {
-                  stackOut_45_0 = this;
-                  stackOut_45_1 = 64;
-                  stackIn_47_0 = stackOut_45_0;
-                  stackIn_47_1 = stackOut_45_1;
+                  stackOut_46_0 = this;
+                  stackOut_46_1 = 64;
+                  stackIn_48_0 = stackOut_46_0;
+                  stackIn_48_1 = stackOut_46_1;
                   break L0;
                 }
               }
-              ((ta) this).field_u = stackIn_47_1;
-              ((ta) this).field_x = ((ta) this).field_v.a(param1, (double)param2, true, ((ta) this).field_y, ((ta) this).field_u, 27127, ((ta) this).field_u, param0);
-              ((ta) this).field_t = param2;
-              if (((ta) this).field_w) {
-                L1: {
-                  var60 = new int[((ta) this).field_u];
-                  var51 = var60;
-                  var42 = var51;
-                  var33 = var42;
-                  var5 = var33;
-                  var61 = new int[((ta) this).field_u];
-                  var52 = var61;
-                  var43 = var52;
-                  var34 = var43;
-                  var6 = var34;
-                  var62 = new int[((ta) this).field_u];
-                  var53 = var62;
-                  var44 = var53;
-                  var35 = var44;
-                  var7 = var35;
-                  var8 = new int[((ta) this).field_u * ((ta) this).field_u];
-                  var13 = ((ta) this).field_u;
-                  var14 = ((ta) this).field_u;
-                  var15 = var13 - 1;
-                  var16 = var14 - 1;
-                  var17 = var13 * var14;
-                  var12 = var13;
-                  var11 = var13;
-                  var18 = 2;
+              ((ta) (this)).field_u = stackIn_48_1;
+              this.field_x = this.field_v.a(param1, (double)param2, true, this.field_y, this.field_u, 27127, this.field_u, param0);
+              this.field_t = param2;
+              if (this.field_w) {
+                var42 = new int[this.field_u];
+                var33 = var42;
+                var5 = var33;
+                var43 = new int[this.field_u];
+                var34 = var43;
+                var6 = var34;
+                var44 = new int[this.field_u];
+                var35 = var44;
+                var7 = var35;
+                var8 = new int[this.field_u * this.field_u];
+                var13 = this.field_u;
+                var14 = this.field_u;
+                var15 = var13 - 1;
+                var16 = var14 - 1;
+                var17 = var13 * var14;
+                var12 = 1 * var13;
+                var11 = 1 * var13;
+                var18 = 2;
+                L1: while (true) {
                   if (var18 < 0) {
-                    break L1;
-                  } else {
-                    var9 = var15;
+                    var23 = var17;
+                    var29 = var16;
                     L2: while (true) {
-                      if (var9 < 0) {
-                        L3: {
-                          if (var12 != 0) {
-                            var18--;
-                            break L3;
+                      if (var29 < 0) {
+                        this.field_x = var8;
+                        return this.field_x;
+                      } else {
+                        var24 = 1;
+                        var25 = 1;
+                        var28 = 0;
+                        var27 = 0;
+                        var26 = 0;
+                        var9 = 2;
+                        L3: while (true) {
+                          if (var9 < 0) {
+                            var9 = var15;
+                            L4: while (true) {
+                              if (var9 < 0) {
+                                var9 = var15;
+                                L5: while (true) {
+                                  if (var9 < 0) {
+                                    L6: {
+                                      if (var12 != 0) {
+                                        break L6;
+                                      } else {
+                                        var12 = var17;
+                                        break L6;
+                                      }
+                                    }
+                                    if (var11 == 0) {
+                                      var11 = var17;
+                                      var29--;
+                                      continue L2;
+                                    } else {
+                                      var29--;
+                                      continue L2;
+                                    }
+                                  } else {
+                                    var12--;
+                                    var22 = this.field_x[var12];
+                                    var11--;
+                                    var21 = this.field_x[var11];
+                                    var5[var9] = var5[var9] + ((var22 >> 16 & 255) - (var21 >> 16 & 255));
+                                    var6[var9] = var6[var9] + ((var22 >> 8 & 255) - (var21 >> 8 & 255));
+                                    var7[var9] = var7[var9] + ((var22 & 255) - (var21 & 255));
+                                    var9--;
+                                    continue L5;
+                                  }
+                                }
+                              } else {
+                                L7: {
+                                  var25--;
+                                  var24--;
+                                  var18 = var26 / 9;
+                                  var19 = var28 / 9;
+                                  var20 = var27 / 9;
+                                  var23--;
+                                  var8[var23] = var18 << 16 | var19 << 8 | var20;
+                                  var26 = var26 + (var42[var25] - var42[var24]);
+                                  var27 = var27 + (var44[var25] - var44[var24]);
+                                  var28 = var28 + (var43[var25] - var43[var24]);
+                                  if (var25 != 0) {
+                                    break L7;
+                                  } else {
+                                    var25 = var13;
+                                    break L7;
+                                  }
+                                }
+                                if (var24 == 0) {
+                                  var24 = var13;
+                                  var9--;
+                                  continue L4;
+                                } else {
+                                  var9--;
+                                  continue L4;
+                                }
+                              }
+                            }
                           } else {
-                            var12 = var17;
-                            break L3;
+                            var25--;
+                            var26 = var26 + var42[var25];
+                            var28 = var28 + var43[var25];
+                            var27 = var27 + var44[var25];
+                            if (var25 == 0) {
+                              var25 = var13;
+                              var9--;
+                              continue L3;
+                            } else {
+                              var9--;
+                              continue L3;
+                            }
                           }
                         }
-                        var18--;
-                        var18--;
-                        break L1;
+                      }
+                    }
+                  } else {
+                    var9 = var15;
+                    L8: while (true) {
+                      if (var9 < 0) {
+                        if (var12 == 0) {
+                          var12 = var17;
+                          var18--;
+                          continue L1;
+                        } else {
+                          var18--;
+                          continue L1;
+                        }
                       } else {
                         var12--;
-                        var10 = ((ta) this).field_x[var12];
+                        var10 = this.field_x[var12];
                         var5[var9] = var5[var9] + (var10 >> 16 & 255);
                         var6[var9] = var6[var9] + (var10 >> 8 & 255);
                         var7[var9] = var7[var9] + (var10 & 255);
                         var9--;
-                        continue L2;
-                      }
-                    }
-                  }
-                }
-                var23 = var17;
-                var29 = var16;
-                L4: while (true) {
-                  if (var29 < 0) {
-                    ((ta) this).field_x = var8;
-                    return ((ta) this).field_x;
-                  } else {
-                    var24 = 1;
-                    var25 = 1;
-                    var28 = 0;
-                    var27 = 0;
-                    var26 = 0;
-                    var9 = 2;
-                    L5: while (true) {
-                      if (var9 < 0) {
-                        var9 = var15;
-                        L6: while (true) {
-                          if (var9 < 0) {
-                            var9 = var15;
-                            L7: while (true) {
-                              if (var9 < 0) {
-                                L8: {
-                                  if (var12 != 0) {
-                                    break L8;
-                                  } else {
-                                    var12 = var17;
-                                    break L8;
-                                  }
-                                }
-                                if (var11 == 0) {
-                                  var11 = var17;
-                                  var29--;
-                                  continue L4;
-                                } else {
-                                  var29--;
-                                  continue L4;
-                                }
-                              } else {
-                                var12--;
-                                var22 = ((ta) this).field_x[var12];
-                                var11--;
-                                var21 = ((ta) this).field_x[var11];
-                                var5[var9] = var5[var9] + ((var22 >> 16 & 255) - (var21 >> 16 & 255));
-                                var6[var9] = var6[var9] + ((var22 >> 8 & 255) - (var21 >> 8 & 255));
-                                var7[var9] = var7[var9] + ((var22 & 255) - (var21 & 255));
-                                var9--;
-                                continue L7;
-                              }
-                            }
-                          } else {
-                            L9: {
-                              var25--;
-                              var24--;
-                              var18 = var26 / 9;
-                              var19 = var28 / 9;
-                              var20 = var27 / 9;
-                              var23--;
-                              var8[var23] = var18 << 16 | var19 << 8 | var20;
-                              var26 = var26 + (var60[var25] - var60[var24]);
-                              var27 = var27 + (var62[var25] - var62[var24]);
-                              var28 = var28 + (var61[var25] - var61[var24]);
-                              if (var25 != 0) {
-                                break L9;
-                              } else {
-                                var25 = var13;
-                                break L9;
-                              }
-                            }
-                            if (var24 == 0) {
-                              var24 = var13;
-                              var9--;
-                              continue L6;
-                            } else {
-                              var9--;
-                              continue L6;
-                            }
-                          }
-                        }
-                      } else {
-                        var25--;
-                        var26 = var26 + var60[var25];
-                        var28 = var28 + var61[var25];
-                        var27 = var27 + var62[var25];
-                        if (var25 == 0) {
-                          var25 = var13;
-                          var9--;
-                          continue L5;
-                        } else {
-                          var9--;
-                          continue L5;
-                        }
+                        continue L8;
                       }
                     }
                   }
                 }
               } else {
-                return ((ta) this).field_x;
+                return this.field_x;
               }
             } else {
               return null;
             }
           } else {
-            return ((ta) this).field_x;
+            return this.field_x;
           }
         } else {
-          if (((ta) this).field_v.a(param1, param0, 0)) {
-            L10: {
+          if (this.field_v.a(param1, param0, 0)) {
+            L9: {
               stackOut_3_0 = this;
               stackIn_5_0 = stackOut_3_0;
               stackIn_4_0 = stackOut_3_0;
@@ -272,178 +249,160 @@ final class ta extends gp {
                 stackOut_5_1 = 128;
                 stackIn_6_0 = stackOut_5_0;
                 stackIn_6_1 = stackOut_5_1;
-                break L10;
+                break L9;
               } else {
                 stackOut_4_0 = this;
                 stackOut_4_1 = 64;
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
-                break L10;
+                break L9;
               }
             }
-            ((ta) this).field_u = stackIn_6_1;
-            ((ta) this).field_x = ((ta) this).field_v.a(param1, (double)param2, true, ((ta) this).field_y, ((ta) this).field_u, 27127, ((ta) this).field_u, param0);
-            ((ta) this).field_t = param2;
-            if (((ta) this).field_w) {
-              L11: {
-                var57 = new int[((ta) this).field_u];
-                var48 = var57;
-                var39 = var48;
-                var30 = var39;
-                var5 = var30;
-                var58 = new int[((ta) this).field_u];
-                var49 = var58;
-                var40 = var49;
-                var31 = var40;
-                var6 = var31;
-                var59 = new int[((ta) this).field_u];
-                var50 = var59;
-                var41 = var50;
-                var32 = var41;
-                var7 = var32;
-                var8 = new int[((ta) this).field_u * ((ta) this).field_u];
-                var13 = ((ta) this).field_u;
-                var14 = ((ta) this).field_u;
-                var15 = var13 - 1;
-                var16 = var14 - 1;
-                var17 = var13 * var14;
-                var12 = var13;
-                var11 = var13;
-                var18 = 2;
+            ((ta) (this)).field_u = stackIn_6_1;
+            this.field_x = this.field_v.a(param1, (double)param2, true, this.field_y, this.field_u, 27127, this.field_u, param0);
+            this.field_t = param2;
+            if (this.field_w) {
+              var39 = new int[this.field_u];
+              var30 = var39;
+              var5 = var30;
+              var40 = new int[this.field_u];
+              var31 = var40;
+              var6 = var31;
+              var41 = new int[this.field_u];
+              var32 = var41;
+              var7 = var32;
+              var8 = new int[this.field_u * this.field_u];
+              var13 = this.field_u;
+              var14 = this.field_u;
+              var15 = var13 - 1;
+              var16 = var14 - 1;
+              var17 = var13 * var14;
+              var12 = 1 * var13;
+              var11 = 1 * var13;
+              var18 = 2;
+              L10: while (true) {
                 if (var18 < 0) {
-                  break L11;
-                } else {
-                  var9 = var15;
-                  L12: while (true) {
-                    if (var9 < 0) {
-                      L13: {
-                        if (var12 != 0) {
-                          var18--;
-                          break L13;
+                  var23 = var17;
+                  var29 = var16;
+                  L11: while (true) {
+                    if (var29 < 0) {
+                      this.field_x = var8;
+                      return this.field_x;
+                    } else {
+                      var24 = 1;
+                      var25 = 1;
+                      var28 = 0;
+                      var27 = 0;
+                      var26 = 0;
+                      var9 = 2;
+                      L12: while (true) {
+                        if (var9 < 0) {
+                          var9 = var15;
+                          L13: while (true) {
+                            if (var9 < 0) {
+                              var9 = var15;
+                              L14: while (true) {
+                                if (var9 < 0) {
+                                  L15: {
+                                    if (var12 != 0) {
+                                      break L15;
+                                    } else {
+                                      var12 = var17;
+                                      break L15;
+                                    }
+                                  }
+                                  if (var11 == 0) {
+                                    var11 = var17;
+                                    var29--;
+                                    continue L11;
+                                  } else {
+                                    var29--;
+                                    continue L11;
+                                  }
+                                } else {
+                                  var12--;
+                                  var22 = this.field_x[var12];
+                                  var11--;
+                                  var21 = this.field_x[var11];
+                                  var5[var9] = var5[var9] + ((var22 >> 16 & 255) - (var21 >> 16 & 255));
+                                  var6[var9] = var6[var9] + ((var22 >> 8 & 255) - (var21 >> 8 & 255));
+                                  var7[var9] = var7[var9] + ((var22 & 255) - (var21 & 255));
+                                  var9--;
+                                  continue L14;
+                                }
+                              }
+                            } else {
+                              L16: {
+                                var25--;
+                                var24--;
+                                var18 = var26 / 9;
+                                var19 = var28 / 9;
+                                var20 = var27 / 9;
+                                var23--;
+                                var8[var23] = var18 << 16 | var19 << 8 | var20;
+                                var26 = var26 + (var39[var25] - var39[var24]);
+                                var27 = var27 + (var41[var25] - var41[var24]);
+                                var28 = var28 + (var40[var25] - var40[var24]);
+                                if (var25 != 0) {
+                                  break L16;
+                                } else {
+                                  var25 = var13;
+                                  break L16;
+                                }
+                              }
+                              if (var24 == 0) {
+                                var24 = var13;
+                                var9--;
+                                continue L13;
+                              } else {
+                                var9--;
+                                continue L13;
+                              }
+                            }
+                          }
                         } else {
-                          var12 = var17;
-                          break L13;
+                          var25--;
+                          var26 = var26 + var39[var25];
+                          var28 = var28 + var40[var25];
+                          var27 = var27 + var41[var25];
+                          if (var25 == 0) {
+                            var25 = var13;
+                            var9--;
+                            continue L12;
+                          } else {
+                            var9--;
+                            continue L12;
+                          }
                         }
                       }
-                      var18--;
-                      var18--;
-                      var18--;
-                      break L11;
+                    }
+                  }
+                } else {
+                  var9 = var15;
+                  L17: while (true) {
+                    if (var9 < 0) {
+                      if (var12 == 0) {
+                        var12 = var17;
+                        var18--;
+                        continue L10;
+                      } else {
+                        var18--;
+                        continue L10;
+                      }
                     } else {
                       var12--;
-                      var10 = ((ta) this).field_x[var12];
+                      var10 = this.field_x[var12];
                       var5[var9] = var5[var9] + (var10 >> 16 & 255);
                       var6[var9] = var6[var9] + (var10 >> 8 & 255);
                       var7[var9] = var7[var9] + (var10 & 255);
                       var9--;
-                      continue L12;
-                    }
-                  }
-                }
-              }
-              var23 = var17;
-              var29 = var16;
-              L14: while (true) {
-                if (var29 < 0) {
-                  ((ta) this).field_x = var8;
-                  return ((ta) this).field_x;
-                } else {
-                  L15: {
-                    var24 = 1;
-                    var25 = 1;
-                    var28 = 0;
-                    var27 = 0;
-                    var26 = 0;
-                    var9 = 2;
-                    if (var9 < 0) {
-                      break L15;
-                    } else {
-                      L16: {
-                        var25--;
-                        var26 = var26 + var57[var25];
-                        var28 = var28 + var58[var25];
-                        var27 = var27 + var59[var25];
-                        if (var25 != 0) {
-                          var9--;
-                          break L16;
-                        } else {
-                          var25 = var13;
-                          break L16;
-                        }
-                      }
-                      var9--;
-                      var9--;
-                      var9--;
-                      break L15;
-                    }
-                  }
-                  var9 = var15;
-                  L17: while (true) {
-                    if (var9 < 0) {
-                      var9 = var15;
-                      L18: while (true) {
-                        if (var9 < 0) {
-                          L19: {
-                            if (var12 != 0) {
-                              break L19;
-                            } else {
-                              var12 = var17;
-                              break L19;
-                            }
-                          }
-                          if (var11 == 0) {
-                            var11 = var17;
-                            var29--;
-                            continue L14;
-                          } else {
-                            var29--;
-                            continue L14;
-                          }
-                        } else {
-                          var12--;
-                          var22 = ((ta) this).field_x[var12];
-                          var11--;
-                          var21 = ((ta) this).field_x[var11];
-                          var5[var9] = var5[var9] + ((var22 >> 16 & 255) - (var21 >> 16 & 255));
-                          var6[var9] = var6[var9] + ((var22 >> 8 & 255) - (var21 >> 8 & 255));
-                          var7[var9] = var7[var9] + ((var22 & 255) - (var21 & 255));
-                          var9--;
-                          continue L18;
-                        }
-                      }
-                    } else {
-                      L20: {
-                        var25--;
-                        var24--;
-                        var18 = var26 / 9;
-                        var19 = var28 / 9;
-                        var20 = var27 / 9;
-                        var23--;
-                        var8[var23] = var18 << 16 | var19 << 8 | var20;
-                        var26 = var26 + (var57[var25] - var57[var24]);
-                        var27 = var27 + (var59[var25] - var59[var24]);
-                        var28 = var28 + (var58[var25] - var58[var24]);
-                        if (var25 != 0) {
-                          break L20;
-                        } else {
-                          var25 = var13;
-                          break L20;
-                        }
-                      }
-                      if (var24 == 0) {
-                        var24 = var13;
-                        var9--;
-                        continue L17;
-                      } else {
-                        var9--;
-                        continue L17;
-                      }
+                      continue L17;
                     }
                   }
                 }
               }
             } else {
-              return ((ta) this).field_x;
+              return this.field_x;
             }
           } else {
             return null;
@@ -452,9 +411,9 @@ final class ta extends gp {
     }
 
     ta(ed param0) {
-        ((ta) this).field_v = new he(param0);
-        ((ta) this).field_w = param0.h(-11) == 1 ? true : false;
-        ((ta) this).field_y = param0.h(-11) == 1 ? true : false;
+        this.field_v = new he(param0);
+        this.field_w = param0.h(-11) == 1 ? true : false;
+        this.field_y = param0.h(-11) == 1 ? true : false;
         int discarded$0 = param0.h(-11);
         int discarded$1 = param0.h(-11);
         int var2 = param0.h(-11) & 3;

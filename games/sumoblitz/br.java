@@ -42,18 +42,22 @@ final class br {
     }
 
     final static int b(int param0) {
+        if (param0 > -3) {
+            br.a(101);
+            return 1;
+        }
         return 1;
     }
 
     final int c(int param0) {
-        if (!((br) this).field_f) {
-          if (2 != ((br) this).field_g) {
+        if (!this.field_f) {
+          if (2 != this.field_g) {
             if (param0 < -79) {
-              if (((br) this).field_j == qj.field_d) {
+              if (this.field_j == qj.field_d) {
                 return 1;
               } else {
-                if (wh.field_s == 2) {
-                  if (!lc.a(false, ((br) this).field_d)) {
+                if (-3 == (wh.field_s ^ -1)) {
+                  if (!lc.a(false, this.field_d)) {
                     return 0;
                   } else {
                     return 1;
@@ -66,13 +70,13 @@ final class br {
               return -19;
             }
           } else {
-            if (((br) this).field_a <= 0) {
+            if ((this.field_a ^ -1) >= -1) {
               if (param0 < -79) {
-                if (((br) this).field_j == qj.field_d) {
+                if (this.field_j == qj.field_d) {
                   return 1;
                 } else {
-                  if (wh.field_s == 2) {
-                    if (!lc.a(false, ((br) this).field_d)) {
+                  if (-3 == (wh.field_s ^ -1)) {
+                    if (!lc.a(false, this.field_d)) {
                       return 0;
                     } else {
                       return 1;
@@ -94,30 +98,40 @@ final class br {
     }
 
     public static void a(int param0) {
+        if (param0 != 23050) {
+            return;
+        }
         field_i = null;
     }
 
     br(boolean param0) {
-        ((br) this).field_c = jt.field_w;
-        ((br) this).field_f = is.field_a;
-        ((br) this).field_a = wn.field_a;
-        ((br) this).field_j = bb.field_j;
-        ((br) this).field_h = eh.field_c;
-        ((br) this).field_g = jb.field_h;
-        ((br) this).field_e = oi.field_c;
-        ((br) this).field_d = fu.field_E;
-        if (!param0) {
-            ((br) this).field_b = null;
-        } else {
-            ((br) this).field_b = tm.field_c;
+        L0: {
+          L1: {
+            this.field_c = jt.field_w;
+            this.field_f = is.field_a;
+            this.field_a = wn.field_a;
+            this.field_j = bb.field_j;
+            this.field_h = eh.field_c;
+            this.field_g = jb.field_h;
+            this.field_e = oi.field_c;
+            this.field_d = fu.field_E;
+            if (param0) {
+              break L1;
+            } else {
+              this.field_b = null;
+              if (!Sumoblitz.field_L) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          this.field_b = tm.field_c;
+          break L0;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "INSTRUCTIONS";
     }
 }

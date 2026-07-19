@@ -14,12 +14,20 @@ final class um {
         try {
             Exception var1 = null;
             Throwable decompiledCaughtException = null;
+            L0: {
+              if (param0 == 114) {
+                break L0;
+              } else {
+                field_a = (String[][]) null;
+                break L0;
+              }
+            }
             if (pd.field_G != null) {
               try {
-                L0: {
+                L1: {
                   pd.field_G.a((byte) 4, 0L);
-                  pd.field_G.a(un.field_e.field_n, 126, 24, un.field_e.field_f);
-                  break L0;
+                  pd.field_G.a(un.field_e.field_n, param0 + 12, 24, un.field_e.field_f);
+                  break L1;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -44,7 +52,7 @@ final class um {
         field_d = null;
         field_g = null;
         field_f = null;
-        field_a = null;
+        field_a = (String[][]) null;
         field_e = null;
         if (param0 < 118) {
           um.a(75);
@@ -57,10 +65,6 @@ final class um {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new ff(2, 4, 4, 0);
         field_g = "Yes";
         field_f = "Buyout is off";

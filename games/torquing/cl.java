@@ -11,13 +11,25 @@ final class cl {
     public static void a(int param0) {
         field_c = null;
         field_d = null;
-        field_e = null;
-        field_b = null;
-        field_a = null;
+        if (param0 != -11784) {
+          cl.a(101, -52, -57);
+          field_e = null;
+          field_b = null;
+          field_a = null;
+          return;
+        } else {
+          field_e = null;
+          field_b = null;
+          field_a = null;
+          return;
+        }
     }
 
     final static void a(int param0, boolean param1, uh param2, la param3) {
         try {
+            if (param1) {
+                field_c = (String) null;
+            }
             pf.field_A = n.c((byte) 57) * param0 / 1000;
             ti.a(param3, 28922);
             le.a(6, param3);
@@ -26,13 +38,13 @@ final class cl {
             af.a(true);
             jh.field_z = 0 - pf.field_A;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "cl.A(" + param0 + ',' + false + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "cl.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2) {
         if (param0 >= -64) {
-            field_e = null;
+            field_e = (int[]) null;
             jo.field_b = param2;
             vk.field_A = param1;
             return;
@@ -42,10 +54,6 @@ final class cl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new int[3];
         field_b = " ";
         field_c = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";

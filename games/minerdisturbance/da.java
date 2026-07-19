@@ -8,10 +8,13 @@ final class da {
     private int[] field_b;
 
     final static java.awt.Container b(int param0) {
-        if (!(null == nd.field_f)) {
-            return (java.awt.Container) (Object) nd.field_f;
+        if (param0 != 24255) {
+            field_c = -116;
         }
-        return (java.awt.Container) (Object) bm.c(-74);
+        if (!(null == nd.field_f)) {
+            return (java.awt.Container) ((Object) nd.field_f);
+        }
+        return (java.awt.Container) ((Object) bm.c(-74));
     }
 
     final static hg a(int param0) {
@@ -24,7 +27,7 @@ final class da {
     final static void a(boolean param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        Object var4 = null;
+        String var4 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
@@ -82,7 +85,7 @@ final class da {
                     if (var3_int != 0) {
                       L6: {
                         if (wi.field_C) {
-                          param1 = oa.a((byte) -93, fe.field_r, new String[1]);
+                          param1 = oa.a((byte) -93, fe.field_r, new String[]{param1});
                           break L6;
                         } else {
                           break L6;
@@ -125,7 +128,7 @@ final class da {
               if (param0) {
                 break L8;
               } else {
-                var4 = null;
+                var4 = (String) null;
                 da.a(false, (String) null, 106);
                 break L8;
               }
@@ -136,23 +139,23 @@ final class da {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var3 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var3;
+            stackOut_26_0 = (RuntimeException) (var3);
             stackOut_26_1 = new StringBuilder().append("da.D(").append(param0).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param1 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L9;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -160,7 +163,7 @@ final class da {
               break L9;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param2 + ')');
         }
     }
 
@@ -189,8 +192,8 @@ final class da {
           L0: {
             var2_int = 1;
             L1: while (true) {
-              if (var2_int > param0.length - -(param0.length >> 1)) {
-                ((da) this).field_b = new int[var2_int + var2_int];
+              if (var2_int > param0.length - -(param0.length >> -1975875647)) {
+                this.field_b = new int[var2_int + var2_int];
                 var3 = 0;
                 L2: while (true) {
                   if (var3 >= var2_int + var2_int) {
@@ -201,9 +204,9 @@ final class da {
                       } else {
                         var4 = param0[var3] & var2_int + -1;
                         L4: while (true) {
-                          if (((da) this).field_b[1 + (var4 + var4)] == -1) {
-                            ((da) this).field_b[var4 + var4] = param0[var3];
-                            ((da) this).field_b[1 + (var4 - -var4)] = var3;
+                          if ((this.field_b[1 + (var4 + var4)] ^ -1) == 0) {
+                            this.field_b[var4 + var4] = param0[var3];
+                            this.field_b[1 + (var4 - -var4)] = var3;
                             var3++;
                             continue L3;
                           } else {
@@ -214,7 +217,7 @@ final class da {
                       }
                     }
                   } else {
-                    ((da) this).field_b[var3] = -1;
+                    this.field_b[var3] = -1;
                     var3++;
                     continue L2;
                   }
@@ -229,23 +232,23 @@ final class da {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_0 = (RuntimeException) (var2);
             stackOut_14_1 = new StringBuilder().append("da.<init>(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -253,7 +256,7 @@ final class da {
               break L5;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
     }
 
@@ -262,7 +265,7 @@ final class da {
         int var4 = 0;
         int var5 = 0;
         L0: {
-          var3 = -1 + (((da) this).field_b.length >> 1);
+          var3 = -1 + (this.field_b.length >> 1856600705);
           var4 = param1 & var3;
           if (param0 == -71) {
             break L0;
@@ -272,11 +275,11 @@ final class da {
           }
         }
         L1: while (true) {
-          var5 = ((da) this).field_b[var4 - -var4 + 1];
-          if (var5 == -1) {
+          var5 = this.field_b[var4 - -var4 + 1];
+          if ((var5 ^ -1) == 0) {
             return -1;
           } else {
-            if (param1 == ((da) this).field_b[var4 + var4]) {
+            if (param1 == this.field_b[var4 + var4]) {
               return var5;
             } else {
               var4 = 1 + var4 & var3;

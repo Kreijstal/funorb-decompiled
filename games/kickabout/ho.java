@@ -18,10 +18,10 @@ final class ho {
 
     final int b() {
         int var1 = 0;
-        while (((ho) this).field_c[var1] >= 0) {
-            var1 = tg.b() != 0 ? ((ho) this).field_c[var1] : var1 + 1;
+        while (this.field_c[var1] >= 0) {
+            var1 = tg.b() != 0 ? this.field_c[var1] : var1 + 1;
         }
-        return ~((ho) this).field_c[var1];
+        return this.field_c[var1] ^ -1;
     }
 
     private final void a() {
@@ -39,33 +39,29 @@ final class ho {
         int var11 = 0;
         int[] var12 = null;
         int[] var14 = null;
-        int[] var16 = null;
-        int[] var18 = null;
-        int[] var19 = null;
-        var19 = new int[((ho) this).field_a];
-        var18 = new int[33];
-        var16 = var18;
-        var14 = var16;
+        int[] var17 = null;
+        var17 = new int[this.field_a];
+        var14 = new int[33];
         var12 = var14;
         var2_ref_int__ = var12;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((ho) this).field_a) {
-            ((ho) this).field_c = new int[8];
+          if (var3 >= this.field_a) {
+            this.field_c = new int[8];
             var2 = 0;
             var3 = 0;
             L1: while (true) {
-              if (var3 >= ((ho) this).field_a) {
+              if (var3 >= this.field_a) {
                 return;
               } else {
-                var4 = ((ho) this).field_e[var3];
+                var4 = this.field_e[var3];
                 if (var4 != 0) {
-                  var5 = var19[var3];
+                  var5 = var17[var3];
                   var6 = 0;
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((ho) this).field_c[var6] = ~var3;
+                      this.field_c[var6] = var3 ^ -1;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -82,30 +78,30 @@ final class ho {
                           break L3;
                         } else {
                           L4: {
-                            if (((ho) this).field_c[var6] != 0) {
+                            if (this.field_c[var6] != 0) {
                               break L4;
                             } else {
-                              ((ho) this).field_c[var6] = var2;
+                              this.field_c[var6] = var2;
                               break L4;
                             }
                           }
-                          var6 = ((ho) this).field_c[var6];
+                          var6 = this.field_c[var6];
                           break L3;
                         }
                       }
                       L5: {
-                        if (var6 < ((ho) this).field_c.length) {
+                        if (var6 < this.field_c.length) {
                           break L5;
                         } else {
-                          var9 = new int[((ho) this).field_c.length * 2];
+                          var9 = new int[this.field_c.length * 2];
                           var11 = 0;
                           var10 = var11;
                           L6: while (true) {
-                            if (var11 >= ((ho) this).field_c.length) {
-                              ((ho) this).field_c = var9;
+                            if (var11 >= this.field_c.length) {
+                              this.field_c = var9;
                               break L5;
                             } else {
-                              var9[var11] = ((ho) this).field_c[var11];
+                              var9[var11] = this.field_c[var11];
                               var11++;
                               continue L6;
                             }
@@ -124,12 +120,12 @@ final class ho {
               }
             }
           } else {
-            var4 = ((ho) this).field_e[var3];
+            var4 = this.field_e[var3];
             if (var4 != 0) {
               L7: {
                 var5 = 1 << 32 - var4;
-                var6 = var18[var4];
-                var19[var3] = var6;
+                var6 = var14[var4];
+                var17[var3] = var6;
                 if ((var6 & var5) == 0) {
                   var7 = var6 | var5;
                   var8 = var4 - 1;
@@ -137,7 +133,7 @@ final class ho {
                     if (var8 < 1) {
                       break L7;
                     } else {
-                      var9_int = var18[var8];
+                      var9_int = var14[var8];
                       if (var9_int != var6) {
                         break L7;
                       } else {
@@ -158,13 +154,13 @@ final class ho {
                   break L7;
                 }
               }
-              var18[var4] = var7;
+              var14[var4] = var7;
               var8 = var4 + 1;
               L9: while (true) {
                 if (var8 <= 32) {
-                  var9_int = var18[var8];
+                  var9_int = var14[var8];
                   if (var9_int == var6) {
-                    var18[var8] = var7;
+                    var14[var8] = var7;
                     var8++;
                     continue L9;
                   } else {
@@ -185,10 +181,12 @@ final class ho {
     }
 
     final float[] c() {
-        return ((ho) this).field_f[((ho) this).b()];
+        return this.field_f[this.b()];
     }
 
     ho() {
+        int discarded$2 = 0;
+        int incrementValue$3 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3_int = 0;
@@ -216,10 +214,10 @@ final class ho {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$2 = tg.e(24);
-          ((ho) this).field_b = tg.e(16);
-          ((ho) this).field_a = tg.e(24);
-          ((ho) this).field_e = new int[((ho) this).field_a];
+          discarded$2 = tg.e(24);
+          this.field_b = tg.e(16);
+          this.field_a = tg.e(24);
+          this.field_e = new int[this.field_a];
           if (tg.b() == 0) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -248,7 +246,7 @@ final class ho {
             var14 = 0;
             var3_int = var14;
             L3: while (true) {
-              if (var14 >= ((ho) this).field_a) {
+              if (var14 >= this.field_a) {
                 break L1;
               } else {
                 L4: {
@@ -258,13 +256,13 @@ final class ho {
                     if (tg.b() != 0) {
                       break L4;
                     } else {
-                      ((ho) this).field_e[var14] = 0;
+                      this.field_e[var14] = 0;
                       var14++;
                       continue L3;
                     }
                   }
                 }
-                ((ho) this).field_e[var14] = tg.e(5) + 1;
+                this.field_e[var14] = tg.e(5) + 1;
                 var14++;
                 continue L3;
               }
@@ -273,19 +271,19 @@ final class ho {
             var2 = 0;
             var3_int = tg.e(5) + 1;
             L5: while (true) {
-              if (var2 >= ((ho) this).field_a) {
+              if (var2 >= this.field_a) {
                 break L1;
               } else {
-                var4_int = tg.e(cm.a(true, ((ho) this).field_a - var2));
+                var4_int = tg.e(cm.a(true, this.field_a - var2));
                 var5 = 0;
                 L6: while (true) {
                   if (var5 >= var4_int) {
                     var3_int++;
                     continue L5;
                   } else {
-                    int incrementValue$3 = var2;
+                    incrementValue$3 = var2;
                     var2++;
-                    ((ho) this).field_e[incrementValue$3] = var3_int;
+                    this.field_e[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }
@@ -317,34 +315,34 @@ final class ho {
             L9: {
               var6 = stackIn_23_0;
               if (var2 != 1) {
-                var7 = ((ho) this).field_a * ((ho) this).field_b;
+                var7 = this.field_a * this.field_b;
                 break L9;
               } else {
-                var7 = ho.a(((ho) this).field_a, ((ho) this).field_b);
+                var7 = ho.a(this.field_a, this.field_b);
                 break L9;
               }
             }
-            ((ho) this).field_d = new int[var7];
+            this.field_d = new int[var7];
             var8 = 0;
             L10: while (true) {
               if (var8 >= var7) {
-                ((ho) this).field_f = new float[((ho) this).field_a][((ho) this).field_b];
+                this.field_f = new float[this.field_a][this.field_b];
                 if (var2 != 1) {
                   var8 = 0;
                   L11: while (true) {
-                    if (var8 >= ((ho) this).field_a) {
+                    if (var8 >= this.field_a) {
                       break L7;
                     } else {
                       var9 = 0.0f;
-                      var10 = var8 * ((ho) this).field_b;
+                      var10 = var8 * this.field_b;
                       var11 = 0;
                       L12: while (true) {
-                        if (var11 >= ((ho) this).field_b) {
+                        if (var11 >= this.field_b) {
                           var8++;
                           continue L11;
                         } else {
-                          var12 = (float)((ho) this).field_d[var10] * var4 + var3 + var9;
-                          ((ho) this).field_f[var8][var11] = var12;
+                          var12 = (float)this.field_d[var10] * var4 + var3 + var9;
+                          this.field_f[var8][var11] = var12;
                           if (var6 != 0) {
                             var9 = var12;
                             var10++;
@@ -362,21 +360,21 @@ final class ho {
                 } else {
                   var8 = 0;
                   L13: while (true) {
-                    if (var8 >= ((ho) this).field_a) {
+                    if (var8 >= this.field_a) {
                       break L7;
                     } else {
                       var9 = 0.0f;
                       var10 = 1;
                       var11 = 0;
                       L14: while (true) {
-                        if (var11 >= ((ho) this).field_b) {
+                        if (var11 >= this.field_b) {
                           var8++;
                           continue L13;
                         } else {
                           L15: {
                             var12_int = var8 / var10 % var7;
-                            var13 = (float)((ho) this).field_d[var12_int] * var4 + var3 + var9;
-                            ((ho) this).field_f[var8][var11] = var13;
+                            var13 = (float)this.field_d[var12_int] * var4 + var3 + var9;
+                            this.field_f[var8][var11] = var13;
                             if (var6 == 0) {
                               break L15;
                             } else {
@@ -393,7 +391,7 @@ final class ho {
                   }
                 }
               } else {
-                ((ho) this).field_d[var8] = tg.e(var5);
+                this.field_d[var8] = tg.e(var5);
                 var8++;
                 continue L10;
               }

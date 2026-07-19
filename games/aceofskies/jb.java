@@ -10,6 +10,9 @@ final class jb {
 
     final static void a(String param0, int param1) {
         System.out.println("Error: " + eh.a("%0a", -104, "\n", param0));
+        if (param1 != 20164) {
+            field_a = (String[]) null;
+        }
     }
 
     public static void a(int param0) {
@@ -22,10 +25,6 @@ final class jb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new String[]{"Player_engine_loop1", "npc_prop_engine_loop1", "npc_prop_engine_loop2", "npc_big_plane_engine_loop1", "npc_jet_engine_loop1", "npc_jet_engine_loop2", "ufo_engine_loop"};
     }
 }

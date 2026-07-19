@@ -12,7 +12,7 @@ final class ej {
     final static er a(byte param0) {
         int var5_int = 0;
         int var6 = Vertigo2.field_L ? 1 : 0;
-        int var1 = 110;
+        int var1 = 110 / ((param0 - 43) / 32);
         int var2 = mh.field_c[0] * vi.field_w[0];
         byte[] var3 = se.field_y[0];
         int[] var4 = new int[var2];
@@ -28,16 +28,16 @@ final class ej {
         field_d = null;
         field_b = null;
         field_e = null;
-        int var1 = 61;
-        field_c = null;
+        int var1 = 61 / ((param0 - 81) / 32);
+        field_c = (byte[][]) null;
     }
 
     final void a(java.applet.Applet param0, byte param1) {
         try {
             int var3_int = 121 / ((-13 - param1) / 47);
-            gl.a(-11, 31536000L, param0, ((ej) this).field_a, "jagex-last-login-method");
+            gl.a(-11, 31536000L, param0, this.field_a, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ej.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "ej.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -47,15 +47,16 @@ final class ej {
 
     ej(String param0) {
         try {
-            ((ej) this).field_a = param0;
+            this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ej.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean a(int param0, String param1) {
+        boolean discarded$2 = false;
         RuntimeException var3 = null;
-        Object var4 = null;
+        String var4 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -80,12 +81,12 @@ final class ej {
               if (param0 == 31588) {
                 break L1;
               } else {
-                var4 = null;
-                boolean discarded$2 = ((ej) this).a(-78, (String) null);
+                var4 = (String) null;
+                discarded$2 = this.a(-78, (String) null);
                 break L1;
               }
             }
-            stackOut_2_0 = ((ej) this).field_a.equals((Object) (Object) param1);
+            stackOut_2_0 = this.field_a.equals(param1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -93,23 +94,23 @@ final class ej {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ej.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -117,23 +118,19 @@ final class ej {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     final static String a(byte param0, int param1, int param2) {
         if (param0 <= 101) {
-            field_b = null;
+            field_b = (String) null;
         }
-        return Vertigo2.a(new String[2], lp.field_z, -116);
+        return Vertigo2.a(new String[]{Integer.toString(param1), Integer.toString(param2)}, lp.field_z, -116);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "No highscores";
         field_f = false;
         field_e = "Rating";

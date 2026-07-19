@@ -49,48 +49,88 @@ final class vg {
     int field_N;
 
     final static void a(byte param0) {
-        if (!(td.e(true))) {
-            return;
-        }
-        if (vn.field_d == 71) {
-            if (!(mj.field_p <= 0)) {
-                df.a((byte) 65, mj.field_p - 1);
+        int var1 = 0;
+        if (!td.e(true)) {
+          return;
+        } else {
+          L0: {
+            if (-72 != (vn.field_d ^ -1)) {
+              if ((vn.field_d ^ -1) != -73) {
+                break L0;
+              } else {
+                if (-8 >= (mj.field_p ^ -1)) {
+                  break L0;
+                } else {
+                  df.a((byte) -125, mj.field_p + 1);
+                  break L0;
+                }
+              }
+            } else {
+              if ((vn.field_d ^ -1) != -73) {
+                break L0;
+              } else {
+                if (-8 >= (mj.field_p ^ -1)) {
+                  break L0;
+                } else {
+                  df.a((byte) -125, mj.field_p + 1);
+                  break L0;
+                }
+              }
             }
-        }
-        if (vn.field_d == 72) {
-            if (mj.field_p < 7) {
-                df.a((byte) -125, mj.field_p + 1);
-            }
-        }
-        if (vn.field_d == 33) {
-            if (!(0 >= ed.field_Cb)) {
+          }
+          L1: {
+            if (-34 != (vn.field_d ^ -1)) {
+              break L1;
+            } else {
+              if (0 < ed.field_Cb) {
                 ed.field_Cb = ed.field_Cb - 1;
+                break L1;
+              } else {
+                break L1;
+              }
             }
-        }
-        if (vn.field_d == 34) {
-            if (!(ed.field_Cb >= 8)) {
+          }
+          L2: {
+            if (vn.field_d != 34) {
+              break L2;
+            } else {
+              if (-9 < (ed.field_Cb ^ -1)) {
                 ed.field_Cb = ed.field_Cb + 1;
+                break L2;
+              } else {
+                break L2;
+              }
             }
+          }
+          L3: {
+            if (vn.field_d == 35) {
+              ed.field_Cb = 6;
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          var1 = 36 / ((21 - param0) / 50);
+          return;
         }
-        if (!(vn.field_d != 35)) {
-            ed.field_Cb = 6;
-        }
-        int var1 = -36;
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
         int var6 = 0;
         int var7 = ArcanistsMulti.field_G ? 1 : 0;
         int var5 = -13 % ((-60 - param1) / 62);
-        for (var6 = 0; var6 < ((vg) this).field_f; var6++) {
-            ((vg) this).field_b[var6] = (short)(((vg) this).field_b[var6] + param3);
-            ((vg) this).field_B[var6] = (short)(((vg) this).field_B[var6] + param0);
-            ((vg) this).field_L[var6] = (short)(((vg) this).field_L[var6] + param2);
+        for (var6 = 0; var6 < this.field_f; var6++) {
+            this.field_b[var6] = (short)(this.field_b[var6] + param3);
+            this.field_B[var6] = (short)(this.field_B[var6] + param0);
+            this.field_L[var6] = (short)(this.field_L[var6] + param2);
         }
         this.a(false);
     }
 
     public static void a(int param0) {
+        if (param0 != 40) {
+            return;
+        }
         field_M = null;
         field_t = null;
         field_c = null;
@@ -103,16 +143,16 @@ final class vg {
     }
 
     private final void a(boolean param0) {
-        ((vg) this).field_m = false;
+        this.field_m = param0 ? true : false;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = ArcanistsMulti.field_G ? 1 : 0;
-        for (var6 = param1; ((vg) this).field_f > var6; var6++) {
-            ((vg) this).field_b[var6] = (short)(param4 * ((vg) this).field_b[var6] / param2);
-            ((vg) this).field_B[var6] = (short)(param0 * ((vg) this).field_B[var6] / param2);
-            ((vg) this).field_L[var6] = (short)(param3 * ((vg) this).field_L[var6] / param2);
+        for (var6 = param1; this.field_f > var6; var6++) {
+            this.field_b[var6] = (short)(param4 * this.field_b[var6] / param2);
+            this.field_B[var6] = (short)(param0 * this.field_B[var6] / param2);
+            this.field_L[var6] = (short)(param3 * this.field_L[var6] / param2);
         }
         this.a(false);
     }
@@ -130,10 +170,10 @@ final class vg {
         int var11 = 0;
         int var12 = 0;
         var12 = ArcanistsMulti.field_G ? 1 : 0;
-        if (((vg) this).field_m) {
+        if (this.field_m) {
           return;
         } else {
-          ((vg) this).field_m = true;
+          this.field_m = true;
           var2 = 32767;
           var3 = 32767;
           var4 = 32767;
@@ -142,22 +182,22 @@ final class vg {
           var7 = -32768;
           var8 = 0;
           L0: while (true) {
-            if (var8 >= ((vg) this).field_f) {
+            if (var8 >= this.field_f) {
               if (param0 == 62) {
-                ((vg) this).field_R = var3;
-                ((vg) this).field_v = var6;
-                ((vg) this).field_P = var4;
-                ((vg) this).field_k = var2;
-                ((vg) this).field_N = var7;
-                ((vg) this).field_i = var5;
+                this.field_R = var3;
+                this.field_v = var6;
+                this.field_P = var4;
+                this.field_k = var2;
+                this.field_N = var7;
+                this.field_i = var5;
                 return;
               } else {
                 return;
               }
             } else {
               L1: {
-                var9 = ((vg) this).field_b[var8];
-                var10 = ((vg) this).field_B[var8];
+                var9 = this.field_b[var8];
+                var10 = this.field_B[var8];
                 if (var9 <= var5) {
                   break L1;
                 } else {
@@ -166,7 +206,7 @@ final class vg {
                 }
               }
               L2: {
-                var11 = ((vg) this).field_L[var8];
+                var11 = this.field_L[var8];
                 if (var2 > var9) {
                   var2 = var9;
                   break L2;
@@ -212,15 +252,11 @@ final class vg {
     }
 
     vg() {
-        ((vg) this).field_m = false;
-        ((vg) this).field_F = (byte) 0;
+        this.field_m = false;
+        this.field_F = (byte) 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = "Try changing the '<%0>' setting.";
         field_c = new int[]{39, 40, 41};
         field_n = "This item can be purchased with Orb<nbsp>Coins in the Orb Downloads section of the website.";

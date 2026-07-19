@@ -25,16 +25,22 @@ final class cs {
     }
 
     public static void a(int param0) {
-        field_b = null;
-        field_a = null;
-        field_c = null;
+        String discarded$2 = null;
+        if (param0 != 3840) {
+          discarded$2 = cs.a((byte) 80);
+          field_b = null;
+          field_a = null;
+          field_c = null;
+          return;
+        } else {
+          field_b = null;
+          field_a = null;
+          field_c = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "No Reward (DNF)";
     }
 }

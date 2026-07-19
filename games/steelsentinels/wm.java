@@ -52,7 +52,7 @@ public class wm {
 
     public static File a(int param0, String param1) {
         if (param0 != 8244) {
-            field_b = null;
+            field_b = (Hashtable) null;
             return wm.a(field_a, field_d, (byte) 26, param1);
         }
         return wm.a(field_a, field_d, (byte) 26, param1);
@@ -63,10 +63,6 @@ public class wm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = false;
         field_b = new Hashtable(16);
     }

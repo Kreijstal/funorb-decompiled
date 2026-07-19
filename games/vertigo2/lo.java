@@ -16,28 +16,28 @@ final class lo {
 
     final Object b(long param0, byte param1) {
         oq var6 = null;
-        qc var7 = (qc) (Object) ((lo) this).field_f.a(param0, (byte) 27);
+        qc var7 = (qc) ((Object) this.field_f.a(param0, (byte) 27));
         if (var7 == null) {
             return null;
         }
         if (param1 < 36) {
-            return null;
+            return (Object) null;
         }
         Object var5 = var7.a((byte) 121);
         if (!(var5 != null)) {
             var7.c(2);
             var7.a(-121);
-            ((lo) this).field_c = ((lo) this).field_c + var7.field_C;
+            this.field_c = this.field_c + var7.field_C;
             return null;
         }
         if (!var7.i(0)) {
-            ((lo) this).field_e.a((byte) 118, (gp) (Object) var7);
+            this.field_e.a((byte) 118, var7);
             var7.field_n = 0L;
         } else {
             var6 = new oq(var5, var7.field_C);
-            ((lo) this).field_f.a(var7.field_k, (li) (Object) var6, 120);
-            ((lo) this).field_e.a((byte) 102, (gp) (Object) var6);
-            ((qc) (Object) var6).field_n = 0L;
+            this.field_f.a(var7.field_k, var6, 120);
+            this.field_e.a((byte) 102, var6);
+            ((qc) ((Object) var6)).field_n = 0L;
             var7.c(2);
             var7.a(-122);
         }
@@ -49,22 +49,22 @@ final class lo {
             if (!(param0 == null)) {
                 param0.c(2);
                 param0.a(-115);
-                ((lo) this).field_c = ((lo) this).field_c + param0.field_C;
+                this.field_c = this.field_c + param0.field_C;
             }
             int var3_int = 4 % ((param1 - -12) / 48);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "lo.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "lo.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     private final void a(long param0, byte param1) {
-        qc var4 = (qc) (Object) ((lo) this).field_f.a(param0, (byte) 32);
-        int var5 = 2;
+        qc var4 = (qc) ((Object) this.field_f.a(param0, (byte) 32));
+        int var5 = 56 % ((2 - param1) / 33);
         this.a(var4, 118);
     }
 
     public static void a(byte param0) {
-        int var1 = 47;
+        int var1 = -47 / ((param0 - -63) / 36);
         field_j = null;
         field_a = null;
         field_g = null;
@@ -77,25 +77,25 @@ final class lo {
         oq var6 = null;
         int var7 = Vertigo2.field_L ? 1 : 0;
         try {
-            if (!(param1 <= ((lo) this).field_h)) {
+            if (!(param1 <= this.field_h)) {
                 throw new IllegalStateException();
             }
             this.a(param3, (byte) 126);
-            ((lo) this).field_c = ((lo) this).field_c - param1;
-            while (((lo) this).field_c < 0) {
-                var9 = (qc) (Object) ((lo) this).field_e.a(param0 ^ -66);
+            this.field_c = this.field_c - param1;
+            while (this.field_c < 0) {
+                var9 = (qc) ((Object) this.field_e.a(param0 ^ -66));
                 this.a(var9, 56);
             }
             if (param0 != 89) {
-                Object var8 = null;
-                ((lo) this).a(101L, (Object) null, (byte) -113);
+                Object var8 = (Object) null;
+                this.a(101L, (Object) null, (byte) -113);
             }
             var6 = new oq(param2, param1);
-            ((lo) this).field_f.a(param3, (li) (Object) var6, param0 ^ 32);
-            ((lo) this).field_e.a((byte) 35, (gp) (Object) var6);
-            ((qc) (Object) var6).field_n = 0L;
+            this.field_f.a(param3, var6, param0 ^ 32);
+            this.field_e.a((byte) 35, var6);
+            ((qc) ((Object) var6)).field_n = 0L;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "lo.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "lo.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -134,23 +134,23 @@ final class lo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("lo.A(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -158,12 +158,15 @@ final class lo {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ')');
         }
     }
 
     final static void a(int param0) {
         to.field_c = 0;
+        if (param0 != 8537) {
+            field_b = (String) null;
+        }
     }
 
     lo(int param0) {
@@ -172,9 +175,9 @@ final class lo {
 
     private lo(int param0, int param1) {
         int var3 = 0;
-        ((lo) this).field_e = new sr();
-        ((lo) this).field_c = param0;
-        ((lo) this).field_h = param0;
+        this.field_e = new sr();
+        this.field_c = param0;
+        this.field_h = param0;
         var3 = 1;
         L0: while (true) {
           if (var3 + var3 < param0) {
@@ -182,21 +185,17 @@ final class lo {
               var3 = var3 + var3;
               continue L0;
             } else {
-              ((lo) this).field_f = new el(var3);
+              this.field_f = new el(var3);
               return;
             }
           } else {
-            ((lo) this).field_f = new el(var3);
+            this.field_f = new el(var3);
             return;
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "You do not have a suitable number of players for the current options.";
         field_g = "On";
         field_b = "Loading music";

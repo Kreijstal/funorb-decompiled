@@ -7,26 +7,43 @@ final class bk {
     static String field_c;
 
     public static void a(boolean param0) {
-        field_b = null;
-        field_c = null;
-        field_a = null;
+        if (!param0) {
+          field_b = (dm) null;
+          field_b = null;
+          field_c = null;
+          field_a = null;
+          return;
+        } else {
+          field_b = null;
+          field_c = null;
+          field_a = null;
+          return;
+        }
     }
 
     final static void a(rh param0, int param1, int param2, ob param3) {
+        vd discarded$0 = null;
         try {
             uf.field_a = param1 * sb.a(true) / 1000;
             ab.a(99, param0);
             ni.a(param0, 0);
+            if (param2 < 97) {
+                discarded$0 = bk.a(true, -54);
+            }
             ul.a(-21541, param0);
             jk.b((byte) -91);
             ad.a((byte) -32);
-            gb.field_f = -uf.field_a;
+            gb.field_f = -uf.field_a + 0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "bk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + 111 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "bk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static vd a(boolean param0, int param1) {
+        int discarded$4 = 0;
+        String discarded$5 = null;
+        int discarded$6 = 0;
+        String discarded$7 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -49,7 +66,7 @@ final class bk {
           var8 = eh.field_d;
           var3 = var8.c((byte) 34);
           gj.field_u = var3 & 127;
-          if ((128 & var3) == 0) {
+          if ((param1 & var3) == 0) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -63,7 +80,7 @@ final class bk {
           vd.field_l = stackIn_3_0 != 0;
           bm.field_s = var8.c((byte) 34);
           uf.field_c = var8.b(2901);
-          if (gj.field_u != 2) {
+          if (-3 != (gj.field_u ^ -1)) {
             uk.field_o = 0;
             tj.field_b = 0;
             break L1;
@@ -74,7 +91,7 @@ final class bk {
           }
         }
         L2: {
-          if (var8.c((byte) 34) != 1) {
+          if (-2 != (var8.c((byte) 34) ^ -1)) {
             stackOut_8_0 = 0;
             stackIn_9_0 = stackOut_8_0;
             break L2;
@@ -97,21 +114,21 @@ final class bk {
         }
         L4: {
           if (gj.field_u == 1) {
-            int discarded$4 = var8.b(true);
-            String discarded$5 = var8.e((byte) 112);
+            discarded$4 = var8.b(true);
+            discarded$5 = var8.e((byte) 112);
             break L4;
           } else {
-            if (gj.field_u != 4) {
+            if ((gj.field_u ^ -1) != -5) {
               break L4;
             } else {
-              int discarded$6 = var8.b(true);
-              String discarded$7 = var8.e((byte) 112);
+              discarded$6 = var8.b(true);
+              discarded$7 = var8.e((byte) 112);
               break L4;
             }
           }
         }
         if (!param0) {
-          re.field_f = qa.a((qc) (Object) var8, 0, 80);
+          re.field_f = qa.a(var8, 0, 80);
           vj.field_c = null;
           return new vd(param0);
         } else {
@@ -121,13 +138,13 @@ final class bk {
               L6: {
                 var9 = rd.field_r.a((byte) -14, var5);
                 re.field_f = var9.e((byte) -69);
-                if (!jc.field_b.equals((Object) (Object) wd.field_f)) {
+                if (!jc.field_b.equals(wd.field_f)) {
                   stackOut_21_0 = var9.field_m;
                   stackIn_22_0 = stackOut_21_0;
                   break L6;
                 } else {
                   stackOut_20_0 = null;
-                  stackIn_22_0 = (int[]) (Object) stackOut_20_0;
+                  stackIn_22_0 = (int[]) ((Object) stackOut_20_0);
                   break L6;
                 }
               }
@@ -137,7 +154,7 @@ final class bk {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            gi.a((Throwable) (Object) var6, "CC1", (byte) 125);
+            gi.a((Throwable) ((Object) var6), "CC1", (byte) 125);
             vj.field_c = null;
             re.field_f = null;
             return new vd(param0);
@@ -147,10 +164,6 @@ final class bk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new dm(640, 640);
         field_c = "Username: ";
     }

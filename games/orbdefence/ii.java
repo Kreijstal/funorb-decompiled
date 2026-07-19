@@ -11,13 +11,13 @@ class ii extends sh {
 
     final void a(mg param0, int param1) {
         try {
-            param0.a(((ii) this).field_b, -16943);
+            param0.a(this.field_b, -16943);
             if (param1 != 27557) {
-                field_d = null;
+                field_d = (String) null;
             }
-            param0.a((byte) 113, ((ii) this).field_f);
+            param0.a((byte) 113, this.field_f);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "ii.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dd.a((Throwable) ((Object) runtimeException), "ii.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -43,18 +43,14 @@ class ii extends sh {
 
     ii(long param0, String param1) {
         try {
-            ((ii) this).field_b = param0;
-            ((ii) this).field_f = param1;
+            this.field_b = param0;
+            this.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "ii.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dd.a((Throwable) ((Object) runtimeException), "ii.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Loading instruments";
         field_e = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
         field_a = "to keep fullscreen or";

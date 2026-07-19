@@ -21,10 +21,6 @@ final class fh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fh.A(";
         field_d = false;
     }

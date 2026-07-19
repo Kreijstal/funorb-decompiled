@@ -7,14 +7,13 @@ final class oe {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != -27273) {
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "oe.A(";
         field_a = "Close";
     }

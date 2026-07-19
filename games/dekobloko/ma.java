@@ -88,7 +88,7 @@ abstract class ma extends ce implements ra {
         try {
           L0: {
             L1: {
-              if (param2 != 0) {
+              if (-1 != (param2 ^ -1)) {
                 break L1;
               } else {
                 if (this.field_p != null) {
@@ -170,6 +170,7 @@ abstract class ma extends ce implements ra {
         String var3 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_4_0 = null;
         String stackOut_6_0 = null;
@@ -184,7 +185,8 @@ abstract class ma extends ce implements ra {
                 if (var3 != null) {
                   stackOut_4_0 = (String) (var3);
                   stackIn_5_0 = stackOut_4_0;
-                  return stackIn_5_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   break L1;
                 }
@@ -192,6 +194,7 @@ abstract class ma extends ce implements ra {
             }
             stackOut_6_0 = (String) (var2);
             stackIn_7_0 = stackOut_6_0;
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -199,7 +202,11 @@ abstract class ma extends ce implements ra {
           var2_ref = decompiledCaughtException;
           throw dh.a((Throwable) ((Object) var2_ref), "ma.R(" + param0 + ')');
         }
-        return stackIn_7_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0;
+        } else {
+          return stackIn_7_0;
+        }
     }
 
     ce a(int param0) {
@@ -208,6 +215,7 @@ abstract class ma extends ce implements ra {
         ce stackIn_7_0 = null;
         ce stackIn_10_0 = null;
         Object stackIn_12_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ce stackOut_6_0 = null;
         Object stackOut_11_0 = null;
@@ -222,7 +230,8 @@ abstract class ma extends ce implements ra {
                 if (var2.a(true)) {
                   stackOut_6_0 = (ce) (var2);
                   stackIn_7_0 = stackOut_6_0;
-                  return stackIn_7_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   break L1;
                 }
@@ -231,11 +240,13 @@ abstract class ma extends ce implements ra {
             if (param0 == 14) {
               stackOut_11_0 = null;
               stackIn_12_0 = stackOut_11_0;
+              decompiledRegionSelector0 = 2;
               break L0;
             } else {
               stackOut_9_0 = (ce) null;
               stackIn_10_0 = stackOut_9_0;
-              return stackIn_10_0;
+              decompiledRegionSelector0 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -243,7 +254,15 @@ abstract class ma extends ce implements ra {
           var2_ref = decompiledCaughtException;
           throw dh.a((Throwable) ((Object) var2_ref), "ma.N(" + param0 + ')');
         }
-        return (ce) ((Object) stackIn_12_0);
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_7_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_10_0;
+          } else {
+            return (ce) ((Object) stackIn_12_0);
+          }
+        }
     }
 
     void a(ce param0, int param1, int param2, int param3) {
@@ -417,6 +436,7 @@ abstract class ma extends ce implements ra {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_9_0 = 0;
@@ -450,11 +470,13 @@ abstract class ma extends ce implements ra {
                 stackIn_10_0 = stackOut_9_0;
                 break L1;
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -487,7 +509,11 @@ abstract class ma extends ce implements ra {
           }
           throw dh.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
-        return stackIn_10_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_10_0 != 0;
+        }
     }
 
     final boolean a(int param0, int param1, int param2, ce param3, int param4, int param5, boolean param6) {
@@ -738,7 +764,7 @@ abstract class ma extends ce implements ra {
                 var3_int = ((nm) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4 != 0, 2, param1) ? 1 : 0;
                 var4 = k.field_b.field_Sb.field_M;
                 var5 = null;
-                if (jj.field_b == 2) {
+                if (-3 == (jj.field_b ^ -1)) {
                   break L4;
                 } else {
                   L5: {
@@ -1034,7 +1060,7 @@ abstract class ma extends ce implements ra {
                     break L27;
                   }
                 }
-                if (k.field_b.field_Nb.field_ob != 0) {
+                if ((k.field_b.field_Nb.field_ob ^ -1) != -1) {
                   vh.field_h = new hb(k.field_b.field_Nb.field_E, k.field_b.field_Nb.field_pb, k.field_b.field_Nb.field_mb, k.field_b.field_Nb.field_N, fj.field_b, ah.field_h, ua.field_H, ua.field_H);
                   of.field_d = 1;
                   break L3;
@@ -1105,6 +1131,7 @@ abstract class ma extends ce implements ra {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         pi stackOut_6_0 = null;
         Object stackOut_4_0 = null;
@@ -1129,11 +1156,13 @@ abstract class ma extends ce implements ra {
             if (gb.a(param1, param0, param2, 78)) {
               stackOut_6_0 = a.b(0);
               stackIn_7_0 = stackOut_6_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_4_0 = null;
               stackIn_5_0 = stackOut_4_0;
-              return (pi) ((Object) stackIn_5_0);
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1166,7 +1195,11 @@ abstract class ma extends ce implements ra {
           }
           throw dh.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_7_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (pi) ((Object) stackIn_5_0);
+        } else {
+          return stackIn_7_0;
+        }
     }
 
     final boolean a(int param0, int param1, ce param2, char param3) {
@@ -1182,6 +1215,7 @@ abstract class ma extends ce implements ra {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         boolean stackOut_15_0 = false;
@@ -1209,13 +1243,14 @@ abstract class ma extends ce implements ra {
                   } else {
                     stackOut_7_0 = 1;
                     stackIn_8_0 = stackOut_7_0;
-                    return stackIn_8_0 != 0;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   }
                 }
               }
             }
             var5_int = param1;
-            if (var5_int == 80) {
+            if (-81 == (var5_int ^ -1)) {
               L2: {
                 if (bj.field_d[81]) {
                   stackOut_15_0 = this.a(param2, (byte) -112);
@@ -1227,11 +1262,13 @@ abstract class ma extends ce implements ra {
                   break L2;
                 }
               }
-              return stackIn_16_0;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
               var5_int = 24 / ((param0 - -22) / 49);
               stackOut_17_0 = 0;
               stackIn_18_0 = stackOut_17_0;
+              decompiledRegionSelector0 = 2;
               break L0;
             }
           }
@@ -1265,7 +1302,15 @@ abstract class ma extends ce implements ra {
           }
           throw dh.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param3 + ')');
         }
-        return stackIn_18_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_8_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_16_0;
+          } else {
+            return stackIn_18_0 != 0;
+          }
+        }
     }
 
     private final boolean b(boolean param0, ce param1) {
@@ -1284,6 +1329,7 @@ abstract class ma extends ce implements ra {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ce stackOut_4_0 = null;
         ce stackOut_9_0 = null;
@@ -1347,11 +1393,13 @@ abstract class ma extends ce implements ra {
                 stackIn_17_0 = stackOut_16_0;
                 break L1;
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 0;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1384,7 +1432,11 @@ abstract class ma extends ce implements ra {
           }
           throw dh.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
         }
-        return stackIn_17_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_17_0 != 0;
+        }
     }
 
     final static tj a(int param0, long param1) {
@@ -1738,6 +1790,7 @@ abstract class ma extends ce implements ra {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         StringBuilder stackOut_7_0 = null;
         StringBuilder stackOut_5_0 = null;
@@ -1771,11 +1824,13 @@ abstract class ma extends ce implements ra {
             if (param3) {
               stackOut_7_0 = (StringBuilder) (param2);
               stackIn_8_0 = stackOut_7_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_5_0 = (StringBuilder) null;
               stackIn_6_0 = stackOut_5_0;
-              return stackIn_6_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1833,7 +1888,11 @@ abstract class ma extends ce implements ra {
           }
           throw dh.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param3 + ')');
         }
-        return stackIn_8_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0;
+        } else {
+          return stackIn_8_0;
+        }
     }
 
     final static int a(int param0, byte param1) {
@@ -1843,6 +1902,7 @@ abstract class ma extends ce implements ra {
         int stackIn_29_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_46_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_28_0 = 0;
@@ -1853,9 +1913,10 @@ abstract class ma extends ce implements ra {
             if (0 == param0) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              if (param0 > 0) {
+              if ((param0 ^ -1) < -1) {
                 L1: {
                   var2_int = 1;
                   if (param0 > 65535) {
@@ -1867,7 +1928,7 @@ abstract class ma extends ce implements ra {
                   }
                 }
                 L2: {
-                  if (param0 > 255) {
+                  if (-256 > (param0 ^ -1)) {
                     param0 = param0 >> 8;
                     var2_int += 8;
                     break L2;
@@ -1876,7 +1937,7 @@ abstract class ma extends ce implements ra {
                   }
                 }
                 L3: {
-                  if (param0 > 15) {
+                  if (-16 > (param0 ^ -1)) {
                     param0 = param0 >> 4;
                     var2_int += 4;
                     break L3;
@@ -1885,7 +1946,7 @@ abstract class ma extends ce implements ra {
                   }
                 }
                 L4: {
-                  if (param0 > 3) {
+                  if ((param0 ^ -1) < -4) {
                     var2_int += 2;
                     param0 = param0 >> 2;
                     break L4;
@@ -1904,12 +1965,13 @@ abstract class ma extends ce implements ra {
                 }
                 stackOut_28_0 = var2_int;
                 stackIn_29_0 = stackOut_28_0;
-                return stackIn_29_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (param1 >= 46) {
                   L6: {
                     var2_int = 2;
-                    if (param0 >= -65536) {
+                    if (65535 >= (param0 ^ -1)) {
                       break L6;
                     } else {
                       param0 = param0 >> 16;
@@ -1927,7 +1989,7 @@ abstract class ma extends ce implements ra {
                     }
                   }
                   L8: {
-                    if (param0 >= -16) {
+                    if (15 >= (param0 ^ -1)) {
                       break L8;
                     } else {
                       var2_int += 4;
@@ -1936,7 +1998,7 @@ abstract class ma extends ce implements ra {
                     }
                   }
                   L9: {
-                    if (param0 < -4) {
+                    if ((param0 ^ -1) > 3) {
                       var2_int += 2;
                       param0 = param0 >> 2;
                       break L9;
@@ -1945,7 +2007,7 @@ abstract class ma extends ce implements ra {
                     }
                   }
                   L10: {
-                    if (param0 >= -2) {
+                    if (1 >= (param0 ^ -1)) {
                       break L10;
                     } else {
                       param0 = param0 >> 1;
@@ -1955,11 +2017,13 @@ abstract class ma extends ce implements ra {
                   }
                   stackOut_45_0 = var2_int;
                   stackIn_46_0 = stackOut_45_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
                   stackOut_31_0 = 45;
                   stackIn_32_0 = stackOut_31_0;
-                  return stackIn_32_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               }
             }
@@ -1969,7 +2033,19 @@ abstract class ma extends ce implements ra {
           var2 = decompiledCaughtException;
           throw dh.a((Throwable) ((Object) var2), "ma.L(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_46_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_29_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_32_0;
+            } else {
+              return stackIn_46_0;
+            }
+          }
+        }
     }
 
     static {

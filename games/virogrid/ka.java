@@ -21,6 +21,7 @@ final class ka extends l {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+        int incrementValue$1 = 0;
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -31,6 +32,7 @@ final class ka extends l {
         int var13 = 0;
         int var14 = 0;
         int stackIn_24_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_23_0 = 0;
         int stackOut_22_0 = 0;
@@ -38,10 +40,12 @@ final class ka extends l {
         try {
           L0: {
             if (param1 <= param6) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param6 - -1 >= param3) {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 L1: {
                   if (5 + param6 >= param3) {
@@ -50,7 +54,7 @@ final class ka extends l {
                     if (param4 == param0) {
                       break L1;
                     } else {
-                      var7_int = (1 & (param4 & param0)) + ((param4 >> 1) + (param0 >> 1));
+                      var7_int = (1 & (param4 & param0)) + ((param4 >> 1074050177) + (param0 >> 1894736513));
                       var8 = param6;
                       var9 = param0;
                       var10 = param4;
@@ -59,6 +63,7 @@ final class ka extends l {
                         if (var11 >= param3) {
                           ka.a(param0, param1, param2, var8, var9, param5 + param5, param6);
                           ka.a(var10, param1, param2, param3, param4, 0, var8);
+                          decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
                           L3: {
@@ -77,7 +82,7 @@ final class ka extends l {
                             var13 = stackIn_24_0;
                             if (var7_int < var13) {
                               lk.field_Tb[var11] = lk.field_Tb[var8];
-                              int incrementValue$1 = var8;
+                              incrementValue$1 = var8;
                               var8++;
                               lk.field_Tb[incrementValue$1] = var12;
                               if (var13 < var9) {
@@ -105,7 +110,8 @@ final class ka extends l {
                 var7_int = -1 + param3;
                 L5: while (true) {
                   if (param6 >= var7_int) {
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     var8 = param6;
                     L6: while (true) {
@@ -136,7 +142,20 @@ final class ka extends l {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var7, "ka.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw kg.a((Throwable) ((Object) var7), "ka.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -150,19 +169,15 @@ final class ka extends l {
     }
 
     public static void c(int param0) {
-        int var1 = 9;
+        int var1 = 19 / ((55 - param0) / 49);
         field_n = null;
     }
 
     ka() {
-        ((ka) this).field_l = false;
+        this.field_l = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = -1;
         field_n = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
     }

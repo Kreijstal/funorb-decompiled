@@ -19,58 +19,65 @@ final class nf implements Runnable {
         Throwable var3 = null;
         int var4 = 0;
         Object var5 = null;
-        Object var6 = null;
+        String var6 = null;
         Throwable decompiledCaughtException = null;
         var4 = Terraphoenix.field_V;
-        ((nf) this).field_i = true;
+        this.field_i = true;
         try {
-          L0: while (true) {
-            if (((nf) this).field_b) {
-              ((nf) this).field_i = false;
-              return;
-            } else {
-              var1_int = 0;
-              L1: while (true) {
-                if (2 <= var1_int) {
-                  gi.a((byte) -68, 10L);
-                  var5 = null;
-                  cf.a(((nf) this).field_e, false, (Object) null);
-                  continue L0;
-                } else {
-                  L2: {
-                    var2 = ((nf) this).field_d[var1_int];
-                    if (var2 == null) {
-                      var1_int++;
-                      var1_int++;
-                      break L2;
-                    } else {
-                      var2.c();
-                      var1_int++;
-                      break L2;
+          L0: {
+            try {
+              L1: {
+                L2: while (true) {
+                  if (this.field_b) {
+                    break L1;
+                  } else {
+                    var1_int = 0;
+                    L3: while (true) {
+                      if (2 <= var1_int) {
+                        gi.a((byte) -68, 10L);
+                        var5 = (Object) null;
+                        cf.a(this.field_e, false, (Object) null);
+                        continue L2;
+                      } else {
+                        L4: {
+                          var2 = this.field_d[var1_int];
+                          if (var2 == null) {
+                            break L4;
+                          } else {
+                            var2.c();
+                            break L4;
+                          }
+                        }
+                        var1_int++;
+                        continue L3;
+                      }
                     }
                   }
-                  var1_int++;
-                  continue L1;
                 }
               }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = (Exception) (Object) decompiledCaughtException;
+              var6 = (String) null;
+              bd.a((Throwable) ((Object) var1), (String) null, 98);
+              this.field_i = false;
+              return;
             }
+            break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Exception) (Object) decompiledCaughtException;
-          var6 = null;
-          bd.a((Throwable) (Object) var1, (String) null, 98);
-          ((nf) this).field_i = false;
-          return;
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
-          ((nf) this).field_i = false;
+          this.field_i = false;
           throw nf.<RuntimeException>$cfr$sneakyThrow(var3);
         }
+        this.field_i = false;
     }
 
     public static void a(byte param0) {
+        if (param0 >= -118) {
+            return;
+        }
         field_g = null;
         field_f = null;
         field_a = null;
@@ -86,16 +93,12 @@ final class nf implements Runnable {
     }
 
     nf() {
-        ((nf) this).field_d = new nk[2];
-        ((nf) this).field_b = false;
-        ((nf) this).field_i = false;
+        this.field_d = new nk[2];
+        this.field_b = false;
+        this.field_i = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
         field_h = 56;
         field_f = new int[8192];

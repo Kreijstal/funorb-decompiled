@@ -24,20 +24,19 @@ final class nk {
             ue.field_e.field_l = 6;
             ue.field_e.field_g = de.field_c;
         }
-        int var1 = 0;
+        int var1 = -61 % ((param0 - 39) / 41);
         return ue.field_e;
     }
 
     public static void a(byte param0) {
         field_a = null;
         field_h = null;
+        if (param0 != 52) {
+            field_a = (int[]) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Player names can be up to 12 letters, numbers and underscores";
         field_a = new int[8192];
     }

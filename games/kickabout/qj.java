@@ -13,11 +13,11 @@ final class qj {
     final int a(byte param0) {
         int var2 = 0;
         var2 = -121 / ((-14 - param0) / 44);
-        if (((qj) this).field_b != null) {
-          if (((qj) this).field_b.length == 0) {
+        if (this.field_b != null) {
+          if (this.field_b.length == 0) {
             return 0;
           } else {
-            return ((qj) this).field_b[-1 + ((qj) this).field_b.length];
+            return this.field_b[-1 + this.field_b.length];
           }
         } else {
           return 0;
@@ -48,19 +48,19 @@ final class qj {
         int var4 = 0;
         var4 = Kickabout.field_G;
         if (param0 == 101) {
-          if (((qj) this).field_b != null) {
-            if (((qj) this).field_b.length != 0) {
+          if (this.field_b != null) {
+            if (-1 != (this.field_b.length ^ -1)) {
               var3 = 1;
               L0: while (true) {
-                if (((qj) this).field_b.length > var3) {
-                  if (((qj) this).field_b[-1 + var3] - -((qj) this).field_b[var3] >> 1 > param1) {
+                if (this.field_b.length > var3) {
+                  if (this.field_b[-1 + var3] - -this.field_b[var3] >> -1613831583 > param1) {
                     return var3 - 1;
                   } else {
                     var3++;
                     continue L0;
                   }
                 } else {
-                  return ((qj) this).field_b.length + -1;
+                  return this.field_b.length + -1;
                 }
               }
             } else {
@@ -71,19 +71,19 @@ final class qj {
           }
         } else {
           field_e = -68;
-          if (((qj) this).field_b != null) {
-            if (((qj) this).field_b.length != 0) {
+          if (this.field_b != null) {
+            if (-1 != (this.field_b.length ^ -1)) {
               var3 = 1;
               L1: while (true) {
-                if (((qj) this).field_b.length > var3) {
-                  if (((qj) this).field_b[-1 + var3] - -((qj) this).field_b[var3] >> 1 > param1) {
+                if (this.field_b.length > var3) {
+                  if (this.field_b[-1 + var3] - -this.field_b[var3] >> -1613831583 > param1) {
                     return var3 - 1;
                   } else {
                     var3++;
                     continue L1;
                   }
                 } else {
-                  return ((qj) this).field_b.length + -1;
+                  return this.field_b.length + -1;
                 }
               }
             } else {
@@ -100,10 +100,11 @@ final class qj {
     }
 
     public static void b(byte param0) {
+        int discarded$0 = 0;
         field_a = null;
         field_c = null;
         if (param0 >= -25) {
-            int discarded$0 = qj.a(75, 93);
+            discarded$0 = qj.a(75, 93);
             field_f = null;
             return;
         }
@@ -111,16 +112,12 @@ final class qj {
     }
 
     qj(int param0, int param1, int param2) {
-        ((qj) this).field_d = param1;
-        ((qj) this).field_g = param0;
-        ((qj) this).field_b = new int[1 + param2];
+        this.field_d = param1;
+        this.field_g = param0;
+        this.field_b = new int[1 + param2];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = 470;
         field_c = "Waiting for sound effects";
     }

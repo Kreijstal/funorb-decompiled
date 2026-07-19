@@ -16,14 +16,10 @@ final class uf {
         field_c = null;
         field_f = null;
         field_g = null;
-        int var1 = -76;
+        int var1 = 76 / ((-15 - param0) / 37);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "uf.A(";
         field_c = new int[25];
     }

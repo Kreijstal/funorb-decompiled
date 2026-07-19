@@ -9,6 +9,11 @@ final class ee {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != 1) {
+            field_a = 65;
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
@@ -36,27 +41,27 @@ final class ee {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var9_int = param7 + (param8.field_D + param3);
-            var10 = param7 + (param8.field_D + param3 - -30);
-            var11 = param8.field_v - (-param2 + -(param8.field_w >> 1));
-            wj.d(var9_int, 0, var10, var11);
-            param8.a(param3 - 1, param2 - 1, 80);
-            param8.a(-1 + param3, param2 + 1, 80);
+            var9_int = param7 + (param8.field_D + param3) + -param5;
+            var10 = param7 + (param8.field_D + param3 - -param6);
+            var11 = param8.field_v - (-param2 + -(param8.field_w >> 1178139841));
+            wj.d(var9_int, 0, var10, var11 - -param1);
+            param8.a(param3 - 1, param2 - 1, param0);
+            param8.a(-1 + param3, param2 + 1, param0);
             wj.a(ha.field_d);
-            wj.d(var9_int + 1, 0, var10 - -1, var11);
-            param8.a(1 + param3, -1 + param2, 80);
-            param8.a(param3 + 1, 1 + param2, 80);
-            var12 = 46;
+            wj.d(var9_int + 1, 0, var10 - -1, var11 - -param1);
+            param8.a(1 + param3, -1 + param2, param0);
+            param8.a(param3 + 1, 1 + param2, param0);
+            var12 = 93 / ((31 - param4) / 59);
             wj.a(ha.field_d);
-            var9_int = -param7 + param3 + (param8.field_D + param8.field_y) + -30;
-            var10 = param8.field_D - -param8.field_y - -param3 - param7;
-            wj.d(var9_int, var11, var10, 480);
-            param8.a(-1 + param3, param2 + -1, 80);
-            param8.a(param3 - 1, 1 + param2, 80);
+            var9_int = -param7 + param3 + (param8.field_D + param8.field_y) + -param6;
+            var10 = param8.field_D - -param8.field_y - -param3 - (param7 - -param5);
+            wj.d(var9_int, -param1 + var11, var10, 480);
+            param8.a(-1 + param3, param2 + -1, param0);
+            param8.a(param3 - 1, 1 + param2, param0);
             wj.a(ha.field_d);
-            wj.d(1 + var9_int, var11, 1 + var10, 480);
-            param8.a(1 + param3, -1 + param2, 80);
-            param8.a(param3 + 1, 1 + param2, 80);
+            wj.d(1 + var9_int, -param1 + var11, 1 + var10, 480);
+            param8.a(1 + param3, -1 + param2, param0);
+            param8.a(param3 + 1, 1 + param2, param0);
             wj.a(ha.field_d);
             break L0;
           }
@@ -64,23 +69,23 @@ final class ee {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var9 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var9;
-            stackOut_2_1 = new StringBuilder().append("ee.B(").append(80).append(',').append(0).append(',').append(param2).append(',').append(param3).append(',').append(-99).append(',').append(0).append(',').append(30).append(',').append(param7).append(',');
+            stackOut_2_0 = (RuntimeException) (var9);
+            stackOut_2_1 = new StringBuilder().append("ee.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param8 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -88,15 +93,11 @@ final class ee {
               break L1;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = 0;
     }
 }

@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class nna {
     int field_c;
     byte[] field_y;
@@ -56,6 +54,7 @@ final class nna {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_5_0 = null;
         String stackOut_12_0 = null;
@@ -74,23 +73,26 @@ final class nna {
         String stackOut_24_2 = null;
         try {
           L0: {
-            var6 = (CharSequence) (Object) param1;
+            var6 = (CharSequence) ((Object) param1);
             if (fs.a(true, var6)) {
               if (ue.a(param1, 0)) {
                 stackOut_5_0 = iia.field_q;
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
-                if (ae.field_g == 2) {
+                if ((ae.field_g ^ -1) == param0) {
                   if (qaa.a(2180, param1)) {
-                    stackOut_12_0 = gl.a((byte) 125, bva.field_a, new String[1]);
+                    stackOut_12_0 = gl.a((byte) 125, bva.field_a, new String[]{param1});
                     stackIn_13_0 = stackOut_12_0;
-                    return stackIn_13_0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   } else {
                     if (100 <= tba.field_k) {
                       stackOut_16_0 = bs.field_h;
                       stackIn_17_0 = stackOut_16_0;
-                      return stackIn_17_0;
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     } else {
                       if (!dda.a(false, param1)) {
                         var5 = ql.field_k;
@@ -102,47 +104,51 @@ final class nna {
                         var5.d(-var4 + var5.field_h, (byte) -104);
                         stackOut_21_0 = null;
                         stackIn_22_0 = stackOut_21_0;
+                        decompiledRegionSelector0 = 6;
                         break L0;
                       } else {
-                        stackOut_19_0 = gl.a((byte) 94, bha.field_o, new String[1]);
+                        stackOut_19_0 = gl.a((byte) 94, bha.field_o, new String[]{param1});
                         stackIn_20_0 = stackOut_19_0;
-                        return stackIn_20_0;
+                        decompiledRegionSelector0 = 5;
+                        break L0;
                       }
                     }
                   }
                 } else {
                   stackOut_8_0 = eia.field_o;
                   stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               }
             } else {
               stackOut_1_0 = pk.field_v;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var3;
-            stackOut_23_1 = new StringBuilder().append("nna.A(").append(-3).append(',');
+            stackOut_23_0 = (RuntimeException) (var3);
+            stackOut_23_1 = new StringBuilder().append("nna.A(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L1;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -150,28 +156,52 @@ final class nna {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param2 + ')');
         }
-        return (String) (Object) stackIn_22_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_9_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_13_0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_17_0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_20_0;
+                  } else {
+                    return (String) ((Object) stackIn_22_0);
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     nna() {
-        ((nna) this).field_C = new boolean[16];
-        ((nna) this).field_e = new byte[6][258];
-        ((nna) this).field_s = new int[6][258];
-        ((nna) this).field_b = new int[6][258];
-        ((nna) this).field_r = new boolean[256];
-        ((nna) this).field_w = new int[16];
-        ((nna) this).field_g = new byte[4096];
-        ((nna) this).field_t = new int[6][258];
-        ((nna) this).field_B = 0;
-        ((nna) this).field_y = new byte[18002];
-        ((nna) this).field_p = new byte[18002];
-        ((nna) this).field_m = new byte[256];
-        ((nna) this).field_A = 0;
-        ((nna) this).field_j = new int[6];
-        ((nna) this).field_q = new int[256];
-        ((nna) this).field_a = new int[257];
+        this.field_C = new boolean[16];
+        this.field_e = new byte[6][258];
+        this.field_s = new int[6][258];
+        this.field_b = new int[6][258];
+        this.field_r = new boolean[256];
+        this.field_w = new int[16];
+        this.field_g = new byte[4096];
+        this.field_t = new int[6][258];
+        this.field_B = 0;
+        this.field_y = new byte[18002];
+        this.field_p = new byte[18002];
+        this.field_m = new byte[256];
+        this.field_A = 0;
+        this.field_j = new int[6];
+        this.field_q = new int[256];
+        this.field_a = new int[257];
     }
 
     static {

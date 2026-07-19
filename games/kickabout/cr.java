@@ -28,32 +28,48 @@ final class cr implements gj {
     }
 
     public cr() {
-        ((cr) this).field_h = gf.field_a;
-        ((cr) this).field_i = 1;
-        ((cr) this).field_a = 1;
+        this.field_h = gf.field_a;
+        this.field_i = 1;
+        this.field_a = 1;
     }
 
     cr(hu param0, int param1, int param2) {
         try {
-            ((cr) this).field_h = param0;
-            ((cr) this).field_a = param1;
-            ((cr) this).field_i = param2;
+            this.field_h = param0;
+            this.field_a = param1;
+            this.field_i = param2;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "cr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "cr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static boolean b(int param0) {
-        if (null == op.field_y) {
+        if (param0 == 0) {
+          if (null != op.field_y) {
+            if (!un.field_c.a((byte) -96)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (!un.field_c.a((byte) -96)) {
+          }
+        } else {
+          field_f = (String) null;
+          if (null != op.field_y) {
+            if (!un.field_c.a((byte) -96)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     public final void a(int param0, boolean param1, int param2, fd param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -104,19 +120,19 @@ final class cr implements gj {
               break L1;
             }
             var6_int = stackIn_6_0;
-            int discarded$1 = ((cr) this).field_h.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_q + "</u>", param4 - -param3.field_t, param3.field_g + param2, param3.field_n, param3.field_i, var6_int, -1, ((cr) this).field_a, ((cr) this).field_i, ((cr) this).field_h.field_p + ((cr) this).field_h.field_G);
+            discarded$1 = this.field_h.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_q + "</u>", param4 - -param3.field_t, param3.field_g + param2, param3.field_n, param3.field_i, var6_int, -1, this.field_a, this.field_i, this.field_h.field_p + this.field_h.field_G);
             if (param3.b(93)) {
               L3: {
-                var8 = ((cr) this).field_h.a(param3.field_q);
-                var9 = ((cr) this).field_h.field_p + ((cr) this).field_h.field_G;
+                var8 = this.field_h.a(param3.field_q);
+                var9 = this.field_h.field_p + this.field_h.field_G;
                 var10 = param4 - -param3.field_t;
                 var11 = param2 - -param3.field_g;
-                if (((cr) this).field_a == 2) {
+                if ((this.field_a ^ -1) == -3) {
                   var10 = var10 + (-var8 + param3.field_n);
                   break L3;
                 } else {
-                  if (((cr) this).field_a == 1) {
-                    var10 = var10 + (-var8 + param3.field_n >> 1);
+                  if (this.field_a == 1) {
+                    var10 = var10 + (-var8 + param3.field_n >> -519513503);
                     break L3;
                   } else {
                     break L3;
@@ -124,12 +140,12 @@ final class cr implements gj {
                 }
               }
               L4: {
-                if (((cr) this).field_i == 2) {
+                if (-3 == (this.field_i ^ -1)) {
                   var11 = var11 + (-var9 + param3.field_i);
                   break L4;
                 } else {
-                  if (((cr) this).field_i == 1) {
-                    var11 = var11 + (-var9 + param3.field_i >> 1);
+                  if ((this.field_i ^ -1) == -2) {
+                    var11 = var11 + (-var9 + param3.field_i >> 1461273505);
                     break L4;
                   } else {
                     break L4;
@@ -146,23 +162,23 @@ final class cr implements gj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var6;
+            stackOut_20_0 = (RuntimeException) (var6);
             stackOut_20_1 = new StringBuilder().append("cr.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param3 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L5;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -170,15 +186,11 @@ final class cr implements gj {
               break L5;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param4 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Cancel";
         field_b = new ff(12, 0, 1, 0);
         field_d = new vd();

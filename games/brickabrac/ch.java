@@ -17,6 +17,8 @@ final class ch {
     static String field_i;
 
     final static void a(byte param0) {
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         RuntimeException var1 = null;
         pi var1_ref = null;
         int var2 = 0;
@@ -31,6 +33,7 @@ final class ch {
         String var8 = null;
         int var9 = 0;
         int stackIn_12_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_11_0 = 0;
         int stackOut_9_0 = 0;
@@ -41,35 +44,38 @@ final class ch {
             var2 = var1_ref.l(255);
             if (0 != var2) {
               if (var2 != 1) {
-                if (var2 == 2) {
+                if (-3 == (var2 ^ -1)) {
                   L1: {
-                    if (wk.field_m != 1) {
+                    if ((wk.field_m ^ -1) != -2) {
                       break L1;
                     } else {
                       wk.field_m = 2;
                       break L1;
                     }
                   }
-                  return;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   if (var2 == 3) {
                     L2: {
-                      if (wk.field_m != 2) {
+                      if (-3 != (wk.field_m ^ -1)) {
                         break L2;
                       } else {
                         wk.field_m = 1;
                         break L2;
                       }
                     }
-                    return;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   } else {
-                    if (var2 == 4) {
+                    if (-5 == (var2 ^ -1)) {
                       wk.field_m = 1;
                       var3 = var1_ref.d(-1);
                       rk.field_Tb = var3.intern();
                       var4 = var1_ref.l(255);
                       wn.a(2, var4);
-                      return;
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     } else {
                       L3: {
                         rk.a("F1: " + eq.c((byte) -104), (Throwable) null, 58);
@@ -81,6 +87,7 @@ final class ch {
                           break L3;
                         }
                       }
+                      decompiledRegionSelector0 = 5;
                       break L0;
                     }
                   }
@@ -97,7 +104,7 @@ final class ch {
                 }
                 L5: {
                   var3 = var1_ref.d(-1);
-                  if (var3.equals((Object) (Object) "")) {
+                  if (var3.equals("")) {
                     var3 = null;
                     break L5;
                   } else {
@@ -111,7 +118,7 @@ final class ch {
                   if (var6 == null) {
                     var6 = pf.a(false, var5);
                     if (var6 != null) {
-                      of.field_i.a((long)gb.a((CharSequence) (Object) var4_ref_String, 87).hashCode(), (tk) (Object) var6, 104);
+                      of.field_i.a((long)gb.a((CharSequence) ((Object) var4_ref_String), 87).hashCode(), var6, 104);
                       break L6;
                     } else {
                       break L6;
@@ -123,11 +130,11 @@ final class ch {
                 L7: {
                   if (var6 == null) {
                     var6 = new mp();
-                    of.field_i.a((long)gb.a((CharSequence) (Object) var4_ref_String, 116).hashCode(), (tk) (Object) var6, 101);
-                    int fieldTemp$2 = ol.field_w;
+                    of.field_i.a((long)gb.a((CharSequence) ((Object) var4_ref_String), 116).hashCode(), var6, 101);
+                    fieldTemp$2 = ol.field_w;
                     ol.field_w = ol.field_w + 1;
                     var6.field_Sb = fieldTemp$2;
-                    bf.field_N.a((nm) (Object) var6, (byte) 3);
+                    bf.field_N.a(var6, (byte) 3);
                     break L7;
                   } else {
                     break L7;
@@ -145,7 +152,7 @@ final class ch {
                 var6.field_Ub = var3;
                 var6.field_Qb = var5;
                 var6.b((byte) 111);
-                var7_ref = (mp) (Object) bf.field_N.d(-65);
+                var7_ref = (mp) ((Object) bf.field_N.d(-65));
                 L9: while (true) {
                   L10: {
                     if (null == var7_ref) {
@@ -154,7 +161,7 @@ final class ch {
                       if (!a.a(200, var7_ref, var6)) {
                         break L10;
                       } else {
-                        var7_ref = (mp) (Object) bf.field_N.a((byte) 116);
+                        var7_ref = (mp) ((Object) bf.field_N.a((byte) 116));
                         if (var9 == 0) {
                           continue L9;
                         } else {
@@ -168,7 +175,7 @@ final class ch {
                       if (var7_ref == null) {
                         break L12;
                       } else {
-                        il.a((nm) (Object) var6, -103, (nm) (Object) var7_ref);
+                        il.a(var6, -103, var7_ref);
                         if (var9 == 0) {
                           break L11;
                         } else {
@@ -176,10 +183,11 @@ final class ch {
                         }
                       }
                     }
-                    bf.field_N.a((nm) (Object) var6, (byte) 3);
+                    bf.field_N.a(var6, (byte) 3);
                     break L11;
                   }
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
             } else {
@@ -224,7 +232,7 @@ final class ch {
               L17: {
                 var6 = jf.a(0, var4_ref_String);
                 var7 = var1_ref.d(-1);
-                var8 = gb.a((CharSequence) (Object) var4_ref_String, 69);
+                var8 = gb.a((CharSequence) ((Object) var4_ref_String), 69);
                 if (null == var8) {
                   var8 = var4_ref_String;
                   break L17;
@@ -236,7 +244,7 @@ final class ch {
                 if (null == var6) {
                   var6 = jf.a(0, var7);
                   if (null != var6) {
-                    tf.field_d.a((long)var8.hashCode(), (tk) (Object) var6, 110);
+                    tf.field_d.a((long)var8.hashCode(), var6, 110);
                     break L18;
                   } else {
                     break L18;
@@ -248,11 +256,11 @@ final class ch {
               L19: {
                 if (var6 == null) {
                   var6 = new mp();
-                  tf.field_d.a((long)var8.hashCode(), (tk) (Object) var6, 120);
-                  int fieldTemp$3 = fo.field_h;
+                  tf.field_d.a((long)var8.hashCode(), var6, 120);
+                  fieldTemp$3 = fo.field_h;
                   fo.field_h = fo.field_h + 1;
                   var6.field_Sb = fieldTemp$3;
-                  jq.field_n.a((nm) (Object) var6, (byte) 3);
+                  jq.field_n.a(var6, (byte) 3);
                   break L19;
                 } else {
                   break L19;
@@ -261,13 +269,35 @@ final class ch {
               var6.field_ac = var5;
               var6.field_Qb = var7;
               var6.field_Rb = var4_ref_String;
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var1, "ch.C(" + param0 + ')');
+          throw qb.a((Throwable) ((Object) var1), "ch.C(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return;
+                } else {
+                  return;
+                }
+              }
+            }
+          }
         }
     }
 
@@ -301,7 +331,7 @@ final class ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var1, "ch.B(" + param0 + ')');
+          throw qb.a((Throwable) ((Object) var1), "ch.B(" + param0 + ')');
         }
     }
 
@@ -319,16 +349,12 @@ final class ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var4, "ch.A(" + param0 + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) var4), "ch.A(" + param0 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = -1;
         field_a = new tf();
         field_g = new int[256];

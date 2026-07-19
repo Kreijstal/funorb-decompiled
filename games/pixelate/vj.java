@@ -8,15 +8,15 @@ final class vj extends sj {
     private int field_q;
 
     final synchronized void a(sj param0) {
-        ((vj) this).field_r.b(1392503105, (fa) (Object) param0);
+        this.field_r.b(1392503105, param0);
     }
 
     final sj d() {
-        return (sj) (Object) ((vj) this).field_r.f(1504642273);
+        return (sj) ((Object) this.field_r.f(1504642273));
     }
 
     final sj b() {
-        return (sj) (Object) ((vj) this).field_r.c(1504642273);
+        return (sj) ((Object) this.field_r.c(1504642273));
     }
 
     final synchronized void a(int param0) {
@@ -27,19 +27,19 @@ final class vj extends sj {
         Throwable var6 = null;
         Throwable decompiledCaughtException = null;
         L0: while (true) {
-          if (((vj) this).field_q >= 0) {
-            if (((vj) this).field_o + param0 >= ((vj) this).field_q) {
-              var2 = ((vj) this).field_q - ((vj) this).field_o;
+          if (this.field_q >= 0) {
+            if (this.field_o + param0 >= this.field_q) {
+              var2 = this.field_q - this.field_o;
               this.e(var2);
               param0 = param0 - var2;
-              ((vj) this).field_o = ((vj) this).field_o + var2;
+              this.field_o = this.field_o + var2;
               this.e();
-              var3 = (hl) (Object) ((vj) this).field_p.c(1504642273);
-              var4 = (Object) (Object) var3;
+              var3 = (hl) ((Object) this.field_p.c(1504642273));
+              var4 = var3;
               synchronized (var4) {
                 L1: {
                   L2: {
-                    var5 = var3.a((vj) this);
+                    var5 = var3.a((vj) (this));
                     if (var5 >= 0) {
                       var3.field_k = var5;
                       this.a(var3.field_a, var3);
@@ -59,7 +59,7 @@ final class vj extends sj {
                 return;
               }
             } else {
-              ((vj) this).field_o = ((vj) this).field_o + param0;
+              this.field_o = this.field_o + param0;
               this.e(param0);
               return;
             }
@@ -78,20 +78,20 @@ final class vj extends sj {
         Throwable var8 = null;
         Throwable decompiledCaughtException = null;
         L0: while (true) {
-          if (((vj) this).field_q >= 0) {
-            if (((vj) this).field_o + param2 >= ((vj) this).field_q) {
-              var4 = ((vj) this).field_q - ((vj) this).field_o;
+          if (this.field_q >= 0) {
+            if (this.field_o + param2 >= this.field_q) {
+              var4 = this.field_q - this.field_o;
               this.c(param0, param1, var4);
               param1 = param1 + var4;
               param2 = param2 - var4;
-              ((vj) this).field_o = ((vj) this).field_o + var4;
+              this.field_o = this.field_o + var4;
               this.e();
-              var5 = (hl) (Object) ((vj) this).field_p.c(1504642273);
-              var6 = (Object) (Object) var5;
+              var5 = (hl) ((Object) this.field_p.c(1504642273));
+              var6 = var5;
               synchronized (var6) {
                 L1: {
                   L2: {
-                    var7 = var5.a((vj) this);
+                    var7 = var5.a((vj) (this));
                     if (var7 >= 0) {
                       var5.field_k = var7;
                       this.a(var5.field_a, var5);
@@ -111,7 +111,7 @@ final class vj extends sj {
                 return;
               }
             } else {
-              ((vj) this).field_o = ((vj) this).field_o + param2;
+              this.field_o = this.field_o + param2;
               this.c(param0, param1, param2);
               return;
             }
@@ -124,22 +124,22 @@ final class vj extends sj {
 
     private final void e() {
         hl var1 = null;
-        if (((vj) this).field_o > 0) {
-            var1 = (hl) (Object) ((vj) this).field_p.c(1504642273);
+        if (this.field_o > 0) {
+            var1 = (hl) ((Object) this.field_p.c(1504642273));
             while (var1 != null) {
-                var1.field_k = var1.field_k - ((vj) this).field_o;
-                var1 = (hl) (Object) ((vj) this).field_p.f(1504642273);
+                var1.field_k = var1.field_k - this.field_o;
+                var1 = (hl) ((Object) this.field_p.f(1504642273));
             }
-            ((vj) this).field_q = ((vj) this).field_q - ((vj) this).field_o;
-            ((vj) this).field_o = 0;
+            this.field_q = this.field_q - this.field_o;
+            this.field_o = 0;
         }
     }
 
     private final void e(int param0) {
-        sj var2 = (sj) (Object) ((vj) this).field_r.c(1504642273);
+        sj var2 = (sj) ((Object) this.field_r.c(1504642273));
         while (var2 != null) {
             var2.a(param0);
-            var2 = (sj) (Object) ((vj) this).field_r.f(1504642273);
+            var2 = (sj) ((Object) this.field_r.f(1504642273));
         }
     }
 
@@ -149,18 +149,18 @@ final class vj extends sj {
 
     private final void a(fa param0, hl param1) {
         L0: while (true) {
-          if (param0 != ((vj) this).field_p.field_f) {
-            if (((hl) (Object) param0).field_k <= param1.field_k) {
+          if (param0 != this.field_p.field_f) {
+            if (((hl) ((Object) param0)).field_k <= param1.field_k) {
               param0 = param0.field_a;
               continue L0;
             } else {
-              jj.a((byte) 98, param0, (fa) (Object) param1);
-              ((vj) this).field_q = ((hl) (Object) ((vj) this).field_p.field_f.field_a).field_k;
+              jj.a((byte) 98, param0, param1);
+              this.field_q = ((hl) ((Object) this.field_p.field_f.field_a)).field_k;
               return;
             }
           } else {
-            jj.a((byte) 98, param0, (fa) (Object) param1);
-            ((vj) this).field_q = ((hl) (Object) ((vj) this).field_p.field_f.field_a).field_k;
+            jj.a((byte) 98, param0, param1);
+            this.field_q = ((hl) ((Object) this.field_p.field_f.field_a)).field_k;
             return;
           }
         }
@@ -169,26 +169,26 @@ final class vj extends sj {
     private final void a(hl param0) {
         param0.c(2779);
         param0.a();
-        fa var2 = ((vj) this).field_p.field_f.field_a;
-        if (var2 == ((vj) this).field_p.field_f) {
-            ((vj) this).field_q = -1;
+        fa var2 = this.field_p.field_f.field_a;
+        if (var2 == this.field_p.field_f) {
+            this.field_q = -1;
         } else {
-            ((vj) this).field_q = ((hl) (Object) var2).field_k;
+            this.field_q = ((hl) ((Object) var2)).field_k;
         }
     }
 
     public vj() {
-        ((vj) this).field_r = new bb();
-        ((vj) this).field_p = new bb();
-        ((vj) this).field_o = 0;
-        ((vj) this).field_q = -1;
+        this.field_r = new bb();
+        this.field_p = new bb();
+        this.field_o = 0;
+        this.field_q = -1;
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        sj var4 = (sj) (Object) ((vj) this).field_r.c(1504642273);
+        sj var4 = (sj) ((Object) this.field_r.c(1504642273));
         while (var4 != null) {
             var4.a(param0, param1, param2);
-            var4 = (sj) (Object) ((vj) this).field_r.f(1504642273);
+            var4 = (sj) ((Object) this.field_r.f(1504642273));
         }
     }
 }

@@ -32,7 +32,7 @@ final class pg extends nm {
             return stackIn_11_0 != 0;
           }
         } else {
-          field_o = null;
+          field_o = (String) null;
           if (og.h(-26090)) {
             return true;
           } else {
@@ -53,6 +53,7 @@ final class pg extends nm {
     }
 
     final static jp a(jp param0, int param1, int param2) {
+        boolean discarded$1 = false;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -82,26 +83,26 @@ final class pg extends nm {
               if (param2 == -17912) {
                 break L1;
               } else {
-                boolean discarded$1 = pg.c(-48);
+                discarded$1 = pg.c(-48);
                 break L1;
               }
             }
-            var6 = new jp(40 + param0.field_D, 40 + param0.field_C);
+            var6 = new jp(param1 * 2 + param0.field_D, 2 * param1 + param0.field_C);
             var6.g();
             lb.g(0, 0, var6.field_D, var6.field_C, 16777215);
             var4 = 0;
             L2: while (true) {
-              if (var4 >= 20) {
+              if (param1 <= var4) {
                 var6.h();
-                param0.d(-param0.field_E + 20, 20 + -param0.field_F, 0);
+                param0.d(-param0.field_E + param1, param1 + -param0.field_F, 0);
                 kc.field_q.a((byte) 109);
-                var6.field_F = param0.field_F - 20;
-                var6.field_E = -20 + param0.field_E;
-                stackOut_6_0 = (jp) var6;
+                var6.field_F = param0.field_F - param1;
+                var6.field_E = -param1 + param0.field_E;
+                stackOut_6_0 = (jp) (var6);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                param0.d(-param0.field_E + 20, -param0.field_F + 20, 0);
+                param0.d(-param0.field_E + param1, -param0.field_F + param1, 0);
                 lb.e(1, 1, 0, 0, var6.field_D, var6.field_C);
                 var4++;
                 continue L2;
@@ -112,23 +113,23 @@ final class pg extends nm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_0 = (RuntimeException) (var3);
             stackOut_8_1 = new StringBuilder().append("pg.D(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -136,7 +137,7 @@ final class pg extends nm {
               break L3;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 20 + ',' + param2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_7_0;
     }
@@ -148,19 +149,25 @@ final class pg extends nm {
         field_p = null;
         field_q = null;
         field_n = null;
+        if (param0 > -123) {
+            field_p = (jp) null;
+        }
     }
 
     final static void d(int param0) {
+        if (param0 != 0) {
+            return;
+        }
         nh.a(642, 482, -40, -1, cd.field_h, -1);
     }
 
     pg(long param0, int param1, byte[] param2) {
         try {
-            ((pg) this).field_r = param1;
-            ((pg) this).field_l = param2;
-            ((pg) this).field_j = param0;
+            this.field_r = param1;
+            this.field_l = param2;
+            this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "pg.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "pg.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -172,9 +179,14 @@ final class pg extends nm {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        int discarded$0 = 0;
         try {
             var2_int = pq.field_k;
             var3 = po.field_a;
+            if (param0) {
+                String var9 = (String) null;
+                pg.a(false, (String) null);
+            }
             var4 = ad.field_l.field_O.a(param1, 500);
             var5 = ad.field_l.field_O.b(param1, 500) + 6;
             var6 = 2 + np.field_a * var4;
@@ -182,17 +194,13 @@ final class pg extends nm {
             var8 = br.a(var6, var3, 20, -30);
             lb.e(var7, var8, var5, var6, 0);
             lb.g(var7 + 1, 1 + var8, -2 + var5, var6 - 2, 16777088);
-            int discarded$0 = ad.field_l.field_O.a(param1, 3 + var7, -ad.field_l.field_O.field_F + (1 + var8) - -ok.field_f, 500, 1000, 0, -1, 0, 0, np.field_a);
+            discarded$0 = ad.field_l.field_O.a(param1, 3 + var7, -ad.field_l.field_O.field_F + (1 + var8) - -ok.field_f, 500, 1000, 0, -1, 0, 0, np.field_a);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "pg.A(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "Rated game";
         field_q = "Player Two";
         field_i = "Buying or selling an account";

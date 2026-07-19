@@ -9,6 +9,10 @@ final class im {
     static String field_a;
 
     final static fg a(int param0) {
+        if (param0 != 28357) {
+            im.a((byte) 91);
+            return u.field_g;
+        }
         return u.field_g;
     }
 
@@ -17,13 +21,12 @@ final class im {
         field_b = null;
         field_d = null;
         field_c = null;
+        if (param0 > -105) {
+            field_c = (f) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Private";
         field_a = "<%0> has been removed.";
     }

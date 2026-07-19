@@ -7,14 +7,10 @@ final class rb {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = 0;
+        int var1 = 68 % ((param0 - 24) / 58);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "rb.A(";
         field_a = new int[29];
         field_a[26] = 12;

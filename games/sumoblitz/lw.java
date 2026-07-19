@@ -9,14 +9,13 @@ final class lw {
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != -1685) {
+            return;
+        }
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "lw.A(";
         field_a = new jf();
         field_c = "More memory is required to run in different resolutions. Try updating your version of Java or changing your Java settings.";

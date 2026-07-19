@@ -18,80 +18,92 @@ final class tq {
         int var3 = 0;
         int var4 = 0;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        var3 = ((tq) this).field_d.length;
-        L0: while (true) {
-          if (var3 > param0) {
-            return var3;
-          } else {
-            if (((tq) this).field_c) {
-              if (var3 != 0) {
-                var3 = var3 * ((tq) this).field_h;
-                continue L0;
+        if (param1 == 231) {
+          var3 = this.field_d.length;
+          L0: while (true) {
+            if (var3 > param0) {
+              return var3;
+            } else {
+              if (this.field_c) {
+                if (var3 != 0) {
+                  var3 = var3 * this.field_h;
+                  continue L0;
+                } else {
+                  var3 = 1;
+                  continue L0;
+                }
               } else {
-                var3 = 1;
+                var3 = var3 + this.field_h;
                 continue L0;
               }
-            } else {
-              var3 = var3 + ((tq) this).field_h;
-              continue L0;
             }
           }
+        } else {
+          return -32;
         }
     }
 
     final void a(String param0, int param1) {
         try {
             if (param1 >= -122) {
-                ((tq) this).field_c = false;
+                this.field_c = false;
             }
-            this.a(95, ((tq) this).field_e - -1, param0);
+            this.a(95, this.field_e - -1, param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "tq.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "tq.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     private final void a(int param0, int param1, String param2) {
-        if (!(param1 <= ((tq) this).field_e)) {
-            ((tq) this).field_e = param1;
+        if (!(param1 <= this.field_e)) {
+            this.field_e = param1;
         }
-        if (!(param1 < ((tq) this).field_d.length)) {
+        if (!(param1 < this.field_d.length)) {
             this.a((byte) -45, param1);
         }
+        if (param0 != 95) {
+            return;
+        }
         try {
-            ((tq) this).field_d[param1] = param2;
+            this.field_d[param1] = param2;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "tq.D(" + 95 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "tq.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final String toString() {
         int var2 = 0;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         StringBuilder var4 = new StringBuilder();
         StringBuilder var1 = var4;
         StringBuilder discarded$0 = var1.append("[");
-        for (var2 = 0; var2 < ((tq) this).field_e; var2++) {
+        for (var2 = 0; var2 < this.field_e; var2++) {
             if (0 != var2) {
-                StringBuilder discarded$1 = var1.append(", ");
+                discarded$1 = var1.append(", ");
             }
-            StringBuilder discarded$2 = var4.append(((tq) this).field_d[var2]);
+            discarded$2 = var4.append(this.field_d[var2]);
         }
         StringBuilder discarded$3 = var1.append("]");
         return var1.toString();
     }
 
     private final void a(byte param0, int param1) {
+        if (param0 != -45) {
+            return;
+        }
         String[] var3 = new String[this.a(param1, 231)];
-        ps.a((Object[]) (Object) ((tq) this).field_d, 0, (Object[]) (Object) var3, 0, ((tq) this).field_d.length);
-        ((tq) this).field_d = var3;
+        ps.a(this.field_d, 0, var3, 0, this.field_d.length);
+        this.field_d = var3;
     }
 
     final String[] a(int param0) {
-        String[] var2 = new String[((tq) this).field_e - -1];
+        String[] var2 = new String[this.field_e - -1];
         if (param0 != 220) {
-            ((tq) this).field_e = 1;
+            this.field_e = 1;
         }
-        ps.a((Object[]) (Object) ((tq) this).field_d, 0, (Object[]) (Object) var2, 0, ((tq) this).field_e + 1);
+        ps.a(this.field_d, 0, var2, 0, this.field_e + 1);
         return var2;
     }
 
@@ -109,22 +121,18 @@ final class tq {
     }
 
     tq(int param0, boolean param1) {
-        ((tq) this).field_d = new String[]{};
-        ((tq) this).field_e = -1;
-        ((tq) this).field_c = false;
-        ((tq) this).field_h = param0;
-        ((tq) this).field_c = param1 ? true : false;
+        this.field_d = new String[]{};
+        this.field_e = -1;
+        this.field_c = false;
+        this.field_h = param0;
+        this.field_c = param1 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "You are invited to <%0>'s game.";
         field_i = "Year of <%0>";
         field_b = null;
-        field_g = new char[]{' ', ' ', '_', '-', 'à', 'á', 'â', 'ä', 'ã', 'À', 'Á', 'Â', 'Ä', 'Ã', 'è', 'é', 'ê', 'ë', 'È', 'É', 'Ê', 'Ë', 'í', 'î', 'ï', 'Í', 'Î', 'Ï', 'ò', 'ó', 'ô', 'ö', 'õ', 'Ò', 'Ó', 'Ô', 'Ö', 'Õ', 'ù', 'ú', 'û', 'ü', 'Ù', 'Ú', 'Û', 'Ü', 'ç', 'Ç', 'ÿ', 'Ÿ', 'ñ', 'Ñ', 'ß'};
+        field_g = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
         field_k = "Respect";
     }
 }

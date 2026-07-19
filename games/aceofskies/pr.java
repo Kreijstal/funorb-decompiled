@@ -15,10 +15,6 @@ final class pr {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "pr.A(";
         field_b = new gr(1);
         field_a = "Waiting for sound effects";

@@ -19,7 +19,7 @@ final class fga implements sia {
               if (param0 == 32415) {
                 break L1;
               } else {
-                ((fga) this).field_d = null;
+                this.field_d = (int[]) null;
                 break L1;
               }
             }
@@ -29,7 +29,7 @@ final class fga implements sia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "fga.G(" + param0 + ')');
+          throw tba.a((Throwable) ((Object) var2), "fga.G(" + param0 + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class fga implements sia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3, "fga.I(" + param0 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) var3), "fga.I(" + param0 + ',' + param1 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -84,6 +84,7 @@ final class fga implements sia {
         Object stackIn_33_0 = null;
         int stackIn_33_1 = 0;
         int stackIn_33_2 = 0;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         Object stackOut_29_0 = null;
         int stackOut_29_1 = 0;
@@ -96,14 +97,15 @@ final class fga implements sia {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            if (((fga) this).field_c) {
+            if (this.field_c) {
               if (param1) {
                 if (param0) {
-                  if (ld.field_e < 2) {
-                    return;
+                  if (-3 < (ld.field_e ^ -1)) {
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   } else {
                     L1: {
-                      if (hf.field_b != 1) {
+                      if ((hf.field_b ^ -1) != -2) {
                         break L1;
                       } else {
                         try {
@@ -112,23 +114,23 @@ final class fga implements sia {
                             L3: while (true) {
                               L4: {
                                 L5: {
-                                  if (((fga) this).field_d.length <= var3_int) {
+                                  if (this.field_d.length <= var3_int) {
                                     break L5;
                                   } else {
                                     if (var5 != 0) {
                                       break L4;
                                     } else {
                                       L6: {
-                                        if (~((fga) this).field_d[var3_int] <= ~jm.field_m) {
+                                        if ((this.field_d[var3_int] ^ -1) <= (jm.field_m ^ -1)) {
                                           break L6;
                                         } else {
-                                          if (~jm.field_m <= ~(40 + ((fga) this).field_d[var3_int])) {
+                                          if ((jm.field_m ^ -1) <= (40 + this.field_d[var3_int] ^ -1)) {
                                             break L6;
                                           } else {
-                                            if (~lba.field_p >= ~((fga) this).field_b[var3_int]) {
+                                            if ((lba.field_p ^ -1) >= (this.field_b[var3_int] ^ -1)) {
                                               break L6;
                                             } else {
-                                              if (~(((fga) this).field_b[var3_int] + 30) >= ~lba.field_p) {
+                                              if ((this.field_b[var3_int] + 30 ^ -1) >= (lba.field_p ^ -1)) {
                                                 break L6;
                                               } else {
                                                 if (oj.field_tb[82]) {
@@ -193,22 +195,43 @@ final class fga implements sia {
                         break L1;
                       }
                     }
+                    decompiledRegionSelector0 = 4;
                     break L0;
                   }
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               } else {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3_ref, "fga.D(" + param0 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) var3_ref), "fga.D(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                return;
+              }
+            }
+          }
         }
     }
 
@@ -223,18 +246,18 @@ final class fga implements sia {
               if (param0 == -2) {
                 break L1;
               } else {
-                ((fga) this).field_d = null;
+                this.field_d = (int[]) null;
                 break L1;
               }
             }
-            stackOut_3_0 = ((fga) this).field_c;
+            stackOut_3_0 = this.field_c;
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "fga.A(" + param0 + ')');
+          throw tba.a((Throwable) ((Object) var2), "fga.A(" + param0 + ')');
         }
         return stackIn_4_0;
     }
@@ -261,13 +284,13 @@ final class fga implements sia {
               stackIn_3_0 = stackOut_0_0;
               stackIn_1_0 = stackOut_0_0;
               if (!param1) {
-                stackOut_3_0 = (kh) (Object) stackIn_3_0;
+                stackOut_3_0 = (kh) ((Object) stackIn_3_0);
                 stackOut_3_1 = 0;
                 stackIn_4_0 = stackOut_3_0;
                 stackIn_4_1 = stackOut_3_1;
                 break L1;
               } else {
-                stackOut_1_0 = (kh) (Object) stackIn_1_0;
+                stackOut_1_0 = (kh) ((Object) stackIn_1_0);
                 stackOut_1_1 = 1;
                 stackIn_4_0 = stackOut_1_0;
                 stackIn_4_1 = stackOut_1_1;
@@ -282,7 +305,7 @@ final class fga implements sia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var4, "fga.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) var4), "fga.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -337,23 +360,23 @@ final class fga implements sia {
           decompiledCaughtException = decompiledCaughtParameter1;
           L4: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4_ref2;
+            stackOut_7_0 = (RuntimeException) (var4_ref2);
             stackOut_7_1 = new StringBuilder().append("fga.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_10_0 = stackOut_7_0;
             stackIn_10_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param3 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_11_0 = stackOut_8_0;
               stackIn_11_1 = stackOut_8_1;
@@ -361,7 +384,7 @@ final class fga implements sia {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
     }
 
@@ -389,6 +412,7 @@ final class fga implements sia {
             int stackIn_25_0 = 0;
             int stackIn_47_0 = 0;
             int stackIn_61_0 = 0;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             int stackOut_15_0 = 0;
             BitSet stackOut_15_1 = null;
@@ -405,31 +429,32 @@ final class fga implements sia {
             var10 = TombRacer.field_G ? 1 : 0;
             try {
               L0: {
-                if (!((fga) this).field_c) {
-                  return;
+                if (!this.field_c) {
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   if (f.field_e != null) {
                     L1: {
                       L2: {
                         var2_int = aq.a(-5640);
-                        if (null == ((fga) this).field_d) {
+                        if (null == this.field_d) {
                           break L2;
                         } else {
-                          if (var2_int == ((fga) this).field_d.length) {
+                          if (var2_int == this.field_d.length) {
                             break L1;
                           } else {
                             break L2;
                           }
                         }
                       }
-                      ((fga) this).field_b = new int[var2_int];
-                      ((fga) this).field_d = new int[var2_int];
+                      this.field_b = new int[var2_int];
+                      this.field_d = new int[var2_int];
                       var3_int = 20;
                       var4 = 30;
                       var5 = var3_int;
                       var6_int = 0;
                       L3: while (true) {
-                        if (~var2_int >= ~var6_int) {
+                        if ((var2_int ^ -1) >= (var6_int ^ -1)) {
                           break L1;
                         } else {
                           L4: {
@@ -441,9 +466,9 @@ final class fga implements sia {
                               break L4;
                             }
                           }
-                          ((fga) this).field_d[var6_int] = var5;
+                          this.field_d[var6_int] = var5;
                           var5 += 40;
-                          ((fga) this).field_b[var6_int] = var4;
+                          this.field_b[var6_int] = var4;
                           var6_int++;
                           if (var10 == 0) {
                             continue L3;
@@ -464,7 +489,7 @@ final class fga implements sia {
                       stackIn_16_1 = stackOut_15_1;
                       if (rd.b(false)) {
                         stackOut_18_0 = stackIn_18_0;
-                        stackOut_18_1 = (BitSet) (Object) stackIn_18_1;
+                        stackOut_18_1 = (BitSet) ((Object) stackIn_18_1);
                         stackOut_18_2 = 0;
                         stackIn_19_0 = stackOut_18_0;
                         stackIn_19_1 = stackOut_18_1;
@@ -472,7 +497,7 @@ final class fga implements sia {
                         break L5;
                       } else {
                         stackOut_16_0 = stackIn_16_0;
-                        stackOut_16_1 = (BitSet) (Object) stackIn_16_1;
+                        stackOut_16_1 = (BitSet) ((Object) stackIn_16_1);
                         stackOut_16_2 = 1;
                         stackIn_19_0 = stackOut_16_0;
                         stackIn_19_1 = stackOut_16_1;
@@ -485,7 +510,7 @@ final class fga implements sia {
                       if (param0 == 1) {
                         break L6;
                       } else {
-                        ((fga) this).field_b = null;
+                        this.field_b = (int[]) null;
                         break L6;
                       }
                     }
@@ -511,7 +536,7 @@ final class fga implements sia {
                                     break L11;
                                   } else {
                                     L12: {
-                                      if (~var5 <= ~var4) {
+                                      if ((var5 ^ -1) <= (var4 ^ -1)) {
                                         break L12;
                                       } else {
                                         if (this.a((byte) -122, var6_int)) {
@@ -553,13 +578,13 @@ final class fga implements sia {
                                 break L10;
                               }
                               L14: {
-                                var3.c(var8, ((fga) this).field_d[var5], 40, ((fga) this).field_b[var5], -22971, 30);
-                                var3.a(((fga) this).field_b[var5], ((fga) this).field_d[var5], 30, 40, -10066330, (byte) -107);
+                                var3.c(var8, this.field_d[var5], 40, this.field_b[var5], -22971, 30);
+                                var3.a(this.field_b[var5], this.field_d[var5], 30, 40, -10066330, (byte) -107);
                                 var9 = null;
                                 if (var6_int == -1) {
                                   break L14;
                                 } else {
-                                  var9 = (Object) (Object) Integer.toString(var6_int);
+                                  var9 = Integer.toString(var6_int);
                                   break L14;
                                 }
                               }
@@ -567,7 +592,7 @@ final class fga implements sia {
                                 if (var9 == null) {
                                   break L15;
                                 } else {
-                                  oka.a((String) var9, 16777215, kn.field_p, -1, ((fga) this).field_b[var5] - -15, 20 + ((fga) this).field_d[var5], 0);
+                                  oka.a((String) (var9), 16777215, kn.field_p, -1, this.field_b[var5] - -15, 20 + this.field_d[var5], 0);
                                   break L15;
                                 }
                               }
@@ -576,13 +601,13 @@ final class fga implements sia {
                                 if (!aga.a(false, var6_int).field_d) {
                                   break L16;
                                 } else {
-                                  var9 = (Object) (Object) "M";
+                                  var9 = "M";
                                   break L16;
                                 }
                               }
                               L17: {
                                 if (null != var9) {
-                                  oka.a((String) var9, 16777215, kn.field_p, -1, 26 + ((fga) this).field_b[var5], ((fga) this).field_d[var5] + 20, 0);
+                                  oka.a((String) (var9), 16777215, kn.field_p, -1, 26 + this.field_b[var5], this.field_d[var5] + 20, 0);
                                   break L17;
                                 } else {
                                   break L17;
@@ -612,21 +637,32 @@ final class fga implements sia {
                         decompiledCaughtException = decompiledCaughtParameter0;
                         L19: {
                           var6 = (qva) (Object) decompiledCaughtException;
-                          System.out.println((Object) (Object) var6);
+                          System.out.println(var6);
                           break L19;
                         }
                       }
+                      decompiledRegionSelector0 = 2;
                       break L0;
                     }
                   } else {
-                    return;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2 = (RuntimeException) (Object) decompiledCaughtException;
-              throw tba.a((Throwable) (Object) var2, "fga.B(" + param0 + ')');
+              throw tba.a((Throwable) ((Object) var2), "fga.B(" + param0 + ')');
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 1) {
+                return;
+              } else {
+                return;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -637,6 +673,7 @@ final class fga implements sia {
 
     final void c(int param0) {
         RuntimeException var2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
@@ -649,18 +686,25 @@ final class fga implements sia {
                   break L1;
                 }
               }
-              ((fga) this).field_c = true;
-              ((fga) this).field_d = null;
+              this.field_c = true;
+              this.field_d = null;
               this.d(32415);
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "fga.F(" + param0 + ')');
+          throw tba.a((Throwable) ((Object) var2), "fga.F(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -676,6 +720,7 @@ final class fga implements sia {
         int stackIn_37_0 = 0;
         int stackIn_45_0 = 0;
         int stackIn_47_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_46_0 = 0;
         int stackOut_36_0 = 0;
@@ -686,12 +731,12 @@ final class fga implements sia {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            if (((fga) this).field_c) {
+            if (this.field_c) {
               L1: {
                 if (13 != param2) {
                   break L1;
                 } else {
-                  ((fga) this).field_c = false;
+                  this.field_c = false;
                   break L1;
                 }
               }
@@ -699,14 +744,15 @@ final class fga implements sia {
                 if (param0 == -72) {
                   break L2;
                 } else {
-                  field_a = null;
+                  field_a = (String) null;
                   break L2;
                 }
               }
-              if (param2 != 35) {
+              if ((param2 ^ -1) != -36) {
                 if (48 != param2) {
                   stackOut_46_0 = 0;
                   stackIn_47_0 = stackOut_46_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
                   var4_int = 0;
@@ -714,7 +760,7 @@ final class fga implements sia {
                   L3: while (true) {
                     L4: {
                       L5: {
-                        if (~var5 <= ~aq.a(-5640)) {
+                        if ((var5 ^ -1) <= (aq.a(-5640) ^ -1)) {
                           break L5;
                         } else {
                           stackOut_36_0 = var4_int;
@@ -750,7 +796,8 @@ final class fga implements sia {
                       stackIn_45_0 = stackOut_44_0;
                       break L4;
                     }
-                    return stackIn_45_0 != 0;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   }
                 }
               } else {
@@ -758,7 +805,7 @@ final class fga implements sia {
                 L7: while (true) {
                   L8: {
                     L9: {
-                      if (var4_int >= 100) {
+                      if (-101 >= (var4_int ^ -1)) {
                         break L9;
                       } else {
                         this.a((byte) -128, false, var4_int);
@@ -824,22 +871,36 @@ final class fga implements sia {
                       stackIn_32_0 = stackOut_31_0;
                       break L11;
                     }
-                    return stackIn_32_0 != 0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               }
             } else {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var4, "fga.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) var4), "fga.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_47_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_32_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_45_0 != 0;
+            } else {
+              return stackIn_47_0 != 0;
+            }
+          }
+        }
     }
 
     public static void a(byte param0) {
@@ -847,21 +908,17 @@ final class fga implements sia {
             int var1_int = 78 / ((63 - param0) / 40);
             field_a = null;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "fga.J(" + param0 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "fga.J(" + param0 + ')');
         }
     }
 
     fga() {
-        ((fga) this).field_c = false;
-        ((fga) this).field_d = null;
-        ((fga) this).field_b = null;
+        this.field_c = false;
+        this.field_d = null;
+        this.field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Menu";
     }
 }

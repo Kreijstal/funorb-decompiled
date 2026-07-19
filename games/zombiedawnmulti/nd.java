@@ -59,10 +59,11 @@ public class nd {
     }
 
     public static File a(String param0, int param1) {
-        Object var3 = null;
+        File discarded$2 = null;
+        String var3 = null;
         if (param1 != 0) {
-          var3 = null;
-          File discarded$2 = nd.a((String) null, -93);
+          var3 = (String) null;
+          discarded$2 = nd.a((String) null, -93);
           return nd.a(param0, -25157, field_b, field_e);
         } else {
           return nd.a(param0, -25157, field_b, field_e);
@@ -70,10 +71,6 @@ public class nd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = false;
         field_d = new Hashtable(16);
     }

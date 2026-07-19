@@ -8,6 +8,9 @@ class us extends oib {
     private String field_e;
 
     public static void b(byte param0) {
+        if (param0 < 27) {
+            return;
+        }
         field_d = null;
     }
 
@@ -18,10 +21,10 @@ class us extends oib {
 
     us(long param0, String param1) {
         try {
-            ((us) this).field_g = param0;
-            ((us) this).field_e = param1;
+            this.field_g = param0;
+            this.field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "us.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "us.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,18 +33,14 @@ class us extends oib {
             if (param1 != -26216) {
                 field_f = 54;
             }
-            param0.a(((us) this).field_g, 90);
-            param0.a((byte) -53, ((us) this).field_e);
+            param0.a(this.field_g, 90);
+            param0.a((byte) -53, this.field_e);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "us.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "us.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 8;
         field_d = new pfb(64);
     }

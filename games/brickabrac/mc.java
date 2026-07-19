@@ -13,6 +13,11 @@ final class mc {
         field_f = null;
         field_a = null;
         field_e = null;
+        if (param0 > -46) {
+            mc.a((byte) -35);
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
@@ -22,10 +27,6 @@ final class mc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new n();
         field_c = 0;
         field_a = "On";

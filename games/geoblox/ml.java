@@ -16,6 +16,8 @@ final class ml extends ff {
     }
 
     public final void a(int param0, int param1, int param2, boolean param3, el param4) {
+        String discarded$2 = null;
+        int discarded$3 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -69,7 +71,7 @@ final class ml extends ff {
             L2: {
               var6_int = stackIn_6_0;
               if (param4 instanceof hk) {
-                param3 = param3 & ((hk) (Object) param4).field_D;
+                param3 = param3 & ((hk) ((Object) param4)).field_D;
                 break L2;
               } else {
                 break L2;
@@ -79,30 +81,30 @@ final class ml extends ff {
               if (param1 < -5) {
                 break L3;
               } else {
-                String discarded$2 = ml.c(-17);
+                discarded$2 = ml.c(-17);
                 break L3;
               }
             }
             L4: {
               if (param3) {
                 if (var6_int == 0) {
-                  stackOut_15_0 = ((ml) this).field_w;
+                  stackOut_15_0 = this.field_w;
                   stackIn_16_0 = stackOut_15_0;
                   break L4;
                 } else {
-                  stackOut_14_0 = ((ml) this).field_x;
+                  stackOut_14_0 = this.field_x;
                   stackIn_16_0 = stackOut_14_0;
                   break L4;
                 }
               } else {
-                stackOut_12_0 = ((ml) this).field_v;
+                stackOut_12_0 = this.field_v;
                 stackIn_16_0 = stackOut_12_0;
                 break L4;
               }
             }
             L5: {
               var7 = stackIn_16_0;
-              jf.a(((ml) this).field_y, var7, param0 + param4.field_v, param4.field_r, (-((ml) this).field_y[0].field_o + param4.field_h >> 1) + (param2 + param4.field_m), -17154);
+              jf.a(this.field_y, var7, param0 + param4.field_v, param4.field_r, (-this.field_y[0].field_o + param4.field_h >> 1553840577) + (param2 + param4.field_m), -17154);
               if (param3) {
                 stackOut_18_0 = 16777215;
                 stackIn_19_0 = stackOut_18_0;
@@ -114,30 +116,30 @@ final class ml extends ff {
               }
             }
             var8 = stackIn_19_0;
-            int discarded$3 = ((ml) this).field_n.a(param4.field_s, param4.field_v + param0, -2 + param2 - -param4.field_m, param4.field_r, param4.field_h, var8, -1, 1, 1, ((ml) this).field_n.field_o);
+            discarded$3 = this.field_n.a(param4.field_s, param4.field_v + param0, -2 + param2 - -param4.field_m, param4.field_r, param4.field_h, var8, -1, 1, 1, this.field_n.field_o);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var6;
+            stackOut_21_0 = (RuntimeException) (var6);
             stackOut_21_1 = new StringBuilder().append("ml.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param4 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -145,7 +147,7 @@ final class ml extends ff {
               break L6;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
         }
     }
 
@@ -165,17 +167,17 @@ final class ml extends ff {
     }
 
     private ml(int param0, int param1, int param2) {
-        ((ml) this).field_n = hh.field_c;
-        ((ml) this).field_w = param0;
-        ((ml) this).field_v = param2;
-        ((ml) this).field_x = param1;
-        ((ml) this).field_y = vk.field_e;
+        this.field_n = hh.field_c;
+        this.field_w = param0;
+        this.field_v = param2;
+        this.field_x = param1;
+        this.field_y = vk.field_e;
     }
 
     final static String c(int param0) {
         String var1 = null;
         if (param0 != 7789) {
-          return null;
+          return (String) null;
         } else {
           L0: {
             var1 = "";
@@ -207,10 +209,6 @@ final class ml extends ff {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = "Use this alternative as your account name";
     }
 }

@@ -32,25 +32,28 @@ final class o extends pg {
 
     final static void a(ll param0, byte param1, int param2, byte param3, int param4, int param5, nf param6) {
         try {
+            if (param1 != -47) {
+                field_o = (String) null;
+            }
             sn.a(param5, param0, param2, -19, param6, true, param4, param3);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "o.A(" + (param0 != null ? "{...}" : "null") + ',' + -47 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "o.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(boolean param0) {
         if (!param0) {
-          ((o) this).b(false);
-          ((o) this).field_x = null;
-          ((o) this).field_n = null;
-          ((o) this).field_m = null;
-          ((o) this).field_D = null;
+          this.b(false);
+          this.field_x = null;
+          this.field_n = null;
+          this.field_m = null;
+          this.field_D = null;
           return;
         } else {
-          ((o) this).field_x = null;
-          ((o) this).field_n = null;
-          ((o) this).field_m = null;
-          ((o) this).field_D = null;
+          this.field_x = null;
+          this.field_n = null;
+          this.field_m = null;
+          this.field_D = null;
           return;
         }
     }
@@ -58,22 +61,30 @@ final class o extends pg {
     final static void a(byte param0) {
         jl.field_c.field_i = 0;
         jl.field_c.field_o = 0;
+        if (param0 != -34) {
+            o.c(false);
+        }
     }
 
     public static void c(boolean param0) {
-        field_o = null;
-        field_E = null;
-        field_F = null;
+        if (!param0) {
+          field_g = 98;
+          field_o = null;
+          field_E = null;
+          field_F = null;
+          return;
+        } else {
+          field_o = null;
+          field_E = null;
+          field_F = null;
+          return;
+        }
     }
 
     o() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = 0;
         field_o = "Game options";
         field_g = 4;

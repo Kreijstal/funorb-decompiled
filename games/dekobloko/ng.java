@@ -23,22 +23,23 @@ final class ng {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var10 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -46,7 +47,7 @@ final class ng {
               if (param0 == null) {
                 break L1;
               } else {
-                if (param1 > 0) {
+                if ((param1 ^ -1) < -1) {
                   L2: {
                     var5_int = param0[0].field_K;
                     var6 = param0[2].field_K;
@@ -66,57 +67,74 @@ final class ng {
                   var9 = -var6 + param4 + param1;
                   param4 = var8;
                   L3: while (true) {
-                    if (param4 >= var9) {
-                      hk.a(kh.field_e);
-                      break L0;
-                    } else {
-                      param0[1].c(param4, param2);
-                      param4 = param4 + var7;
-                      continue L3;
+                    L4: {
+                      if (param4 >= var9) {
+                        hk.a(kh.field_e);
+                        break L4;
+                      } else {
+                        param0[1].c(param4, param2);
+                        param4 = param4 + var7;
+                        if (var10 != 0) {
+                          break L4;
+                        } else {
+                          continue L3;
+                        }
+                      }
                     }
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 } else {
                   break L1;
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) (var5);
-            stackOut_11_1 = new StringBuilder().append("ng.A(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_13_0 = (RuntimeException) (var5);
+            stackOut_13_1 = new StringBuilder().append("ng.A(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L4;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              break L4;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L5;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(int param0) {
         field_i = null;
         field_g = null;
+        if (param0 > -26) {
+            return;
+        }
         field_j = null;
         field_b = null;
         field_l = null;
@@ -144,26 +162,49 @@ final class ng {
         bh var4 = null;
         bh var5 = null;
         int var6 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_6_0 = 0;
         var6 = client.field_A ? 1 : 0;
         var4 = this.field_h[(int)((long)(this.field_f - 1) & param0)];
         this.field_k = var4.field_b;
         L0: while (true) {
-          if (this.field_k == var4) {
+          L1: {
+            L2: {
+              if (this.field_k == var4) {
+                break L2;
+              } else {
+                stackOut_2_0 = ((this.field_k.field_i ^ -1L) < (param0 ^ -1L) ? -1 : ((this.field_k.field_i ^ -1L) == (param0 ^ -1L) ? 0 : 1));
+                stackIn_7_0 = stackOut_2_0;
+                stackIn_3_0 = stackOut_2_0;
+                if (var6 != 0) {
+                  break L1;
+                } else {
+                  if (stackIn_3_0 != 0) {
+                    this.field_k = this.field_k.field_b;
+                    if (var6 == 0) {
+                      continue L0;
+                    } else {
+                      break L2;
+                    }
+                  } else {
+                    var5 = this.field_k;
+                    this.field_k = this.field_k.field_b;
+                    return var5;
+                  }
+                }
+              }
+            }
             this.field_k = null;
-            if (param1 >= 48) {
-              return null;
-            } else {
-              return (bh) null;
-            }
+            stackOut_6_0 = param1;
+            stackIn_7_0 = stackOut_6_0;
+            break L1;
+          }
+          if (stackIn_7_0 >= 48) {
+            return null;
           } else {
-            if (~this.field_k.field_i != ~param0) {
-              this.field_k = this.field_k.field_b;
-              continue L0;
-            } else {
-              var5 = this.field_k;
-              this.field_k = this.field_k.field_b;
-              return var5;
-            }
+            return (bh) null;
           }
         }
     }
@@ -181,181 +222,225 @@ final class ng {
         jc stackIn_13_0 = null;
         int stackIn_22_0 = 0;
         jc stackIn_26_0 = null;
-        jc stackIn_40_0 = null;
-        jc stackIn_44_0 = null;
-        RuntimeException stackIn_50_0 = null;
-        StringBuilder stackIn_50_1 = null;
+        jc stackIn_41_0 = null;
+        jc stackIn_45_0 = null;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
         RuntimeException stackIn_52_0 = null;
         StringBuilder stackIn_52_1 = null;
-        String stackIn_52_2 = null;
+        RuntimeException stackIn_53_0 = null;
+        StringBuilder stackIn_53_1 = null;
+        String stackIn_53_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_21_0 = 0;
         int stackOut_20_0 = 0;
         jc stackOut_25_0 = null;
         jc stackOut_12_0 = null;
-        jc stackOut_39_0 = null;
-        jc stackOut_43_0 = null;
+        jc stackOut_40_0 = null;
+        jc stackOut_44_0 = null;
         jc stackOut_5_0 = null;
         jc stackOut_2_0 = null;
-        RuntimeException stackOut_49_0 = null;
-        StringBuilder stackOut_49_1 = null;
+        RuntimeException stackOut_50_0 = null;
+        StringBuilder stackOut_50_1 = null;
+        RuntimeException stackOut_52_0 = null;
+        StringBuilder stackOut_52_1 = null;
+        String stackOut_52_2 = null;
         RuntimeException stackOut_51_0 = null;
         StringBuilder stackOut_51_1 = null;
         String stackOut_51_2 = null;
-        RuntimeException stackOut_50_0 = null;
-        StringBuilder stackOut_50_1 = null;
-        String stackOut_50_2 = null;
         var6 = client.field_A ? 1 : 0;
         try {
-          var2_int = param1.length();
-          if (var2_int != 0) {
-            if (var2_int <= 64) {
-              L0: {
-                if (param0 == -1) {
-                  break L0;
-                } else {
-                  var7 = (ck[]) null;
-                  ng.a((ck[]) null, 38, -12, 7, -118);
-                  break L0;
+          L0: {
+            var2_int = param1.length();
+            if (var2_int != 0) {
+              if ((var2_int ^ -1) >= -65) {
+                L1: {
+                  if (param0 == -1) {
+                    break L1;
+                  } else {
+                    var7 = (ck[]) null;
+                    ng.a((ck[]) null, 38, -12, 7, -118);
+                    break L1;
+                  }
                 }
-              }
-              if (param1.charAt(0) == 34) {
-                if (param1.charAt(var2_int + -1) == 34) {
-                  var3 = 0;
-                  var4 = 1;
-                  L1: while (true) {
-                    if (var2_int + -1 > var4) {
-                      L2: {
-                        var5 = param1.charAt(var4);
-                        if (var5 == 92) {
-                          L3: {
-                            if (var3 != 0) {
-                              stackOut_21_0 = 0;
-                              stackIn_22_0 = stackOut_21_0;
-                              break L3;
+                if (param1.charAt(0) == 34) {
+                  if (param1.charAt(var2_int + -1) == 34) {
+                    var3 = 0;
+                    var4 = 1;
+                    L2: while (true) {
+                      if (var2_int + -1 > var4) {
+                        L3: {
+                          L4: {
+                            var5 = param1.charAt(var4);
+                            if (var5 == 92) {
+                              L5: {
+                                if (var3 != 0) {
+                                  stackOut_21_0 = 0;
+                                  stackIn_22_0 = stackOut_21_0;
+                                  break L5;
+                                } else {
+                                  stackOut_20_0 = 1;
+                                  stackIn_22_0 = stackOut_20_0;
+                                  break L5;
+                                }
+                              }
+                              var3 = stackIn_22_0;
+                              if (var6 == 0) {
+                                break L3;
+                              } else {
+                                break L4;
+                              }
                             } else {
-                              stackOut_20_0 = 1;
-                              stackIn_22_0 = stackOut_20_0;
-                              break L3;
+                              break L4;
                             }
                           }
-                          var3 = stackIn_22_0;
-                          break L2;
-                        } else {
-                          L4: {
+                          L6: {
                             if (var5 != 34) {
-                              break L4;
+                              break L6;
                             } else {
                               if (var3 != 0) {
-                                break L4;
+                                break L6;
                               } else {
                                 stackOut_25_0 = be.field_x;
                                 stackIn_26_0 = stackOut_25_0;
-                                return stackIn_26_0;
+                                decompiledRegionSelector0 = 3;
+                                break L0;
                               }
                             }
                           }
                           var3 = 0;
-                          break L2;
+                          break L3;
+                        }
+                        var4++;
+                        continue L2;
+                      } else {
+                        return null;
+                      }
+                    }
+                  } else {
+                    stackOut_12_0 = be.field_x;
+                    stackIn_13_0 = stackOut_12_0;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
+                  }
+                } else {
+                  var3 = 0;
+                  var4 = 0;
+                  L7: while (true) {
+                    if (var2_int > var4) {
+                      L8: {
+                        L9: {
+                          var5 = param1.charAt(var4);
+                          if (46 == var5) {
+                            L10: {
+                              if (0 == var4) {
+                                break L10;
+                              } else {
+                                if (var4 == -1 + var2_int) {
+                                  break L10;
+                                } else {
+                                  if (var3 == 0) {
+                                    var3 = 1;
+                                    if (var6 == 0) {
+                                      break L8;
+                                    } else {
+                                      break L9;
+                                    }
+                                  } else {
+                                    break L10;
+                                  }
+                                }
+                              }
+                            }
+                            stackOut_40_0 = be.field_x;
+                            stackIn_41_0 = stackOut_40_0;
+                            decompiledRegionSelector0 = 4;
+                            break L0;
+                          } else {
+                            break L9;
+                          }
+                        }
+                        if (-1 != nm.field_Pb.indexOf(var5)) {
+                          var3 = 0;
+                          break L8;
+                        } else {
+                          stackOut_44_0 = be.field_x;
+                          stackIn_45_0 = stackOut_44_0;
+                          decompiledRegionSelector0 = 5;
+                          break L0;
                         }
                       }
                       var4++;
-                      continue L1;
+                      continue L7;
                     } else {
                       return null;
                     }
                   }
-                } else {
-                  stackOut_12_0 = be.field_x;
-                  stackIn_13_0 = stackOut_12_0;
-                  return stackIn_13_0;
                 }
               } else {
-                var3 = 0;
-                var4 = 0;
-                L5: while (true) {
-                  if (var2_int > var4) {
-                    L6: {
-                      var5 = param1.charAt(var4);
-                      if (46 == var5) {
-                        L7: {
-                          if (0 == var4) {
-                            break L7;
-                          } else {
-                            if (var4 == -1 + var2_int) {
-                              break L7;
-                            } else {
-                              if (var3 == 0) {
-                                var3 = 1;
-                                break L6;
-                              } else {
-                                break L7;
-                              }
-                            }
-                          }
-                        }
-                        stackOut_39_0 = be.field_x;
-                        stackIn_40_0 = stackOut_39_0;
-                        return stackIn_40_0;
-                      } else {
-                        if (-1 != nm.field_Pb.indexOf(var5)) {
-                          var3 = 0;
-                          break L6;
-                        } else {
-                          stackOut_43_0 = be.field_x;
-                          stackIn_44_0 = stackOut_43_0;
-                          return stackIn_44_0;
-                        }
-                      }
-                    }
-                    var4++;
-                    continue L5;
-                  } else {
-                    return null;
-                  }
-                }
+                stackOut_5_0 = ga.field_e;
+                stackIn_6_0 = stackOut_5_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
-              stackOut_5_0 = ga.field_e;
-              stackIn_6_0 = stackOut_5_0;
-              return stackIn_6_0;
+              stackOut_2_0 = hm.field_a;
+              stackIn_3_0 = stackOut_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-          } else {
-            stackOut_2_0 = hm.field_a;
-            stackIn_3_0 = stackOut_2_0;
-            return stackIn_3_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L11: {
             var2 = decompiledCaughtException;
-            stackOut_49_0 = (RuntimeException) (var2);
-            stackOut_49_1 = new StringBuilder().append("ng.B(").append(param0).append(',');
-            stackIn_51_0 = stackOut_49_0;
-            stackIn_51_1 = stackOut_49_1;
-            stackIn_50_0 = stackOut_49_0;
-            stackIn_50_1 = stackOut_49_1;
+            stackOut_50_0 = (RuntimeException) (var2);
+            stackOut_50_1 = new StringBuilder().append("ng.B(").append(param0).append(',');
+            stackIn_52_0 = stackOut_50_0;
+            stackIn_52_1 = stackOut_50_1;
+            stackIn_51_0 = stackOut_50_0;
+            stackIn_51_1 = stackOut_50_1;
             if (param1 == null) {
+              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
+              stackOut_52_2 = "null";
+              stackIn_53_0 = stackOut_52_0;
+              stackIn_53_1 = stackOut_52_1;
+              stackIn_53_2 = stackOut_52_2;
+              break L11;
+            } else {
               stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
               stackOut_51_1 = (StringBuilder) ((Object) stackIn_51_1);
-              stackOut_51_2 = "null";
-              stackIn_52_0 = stackOut_51_0;
-              stackIn_52_1 = stackOut_51_1;
-              stackIn_52_2 = stackOut_51_2;
-              break L8;
-            } else {
-              stackOut_50_0 = (RuntimeException) ((Object) stackIn_50_0);
-              stackOut_50_1 = (StringBuilder) ((Object) stackIn_50_1);
-              stackOut_50_2 = "{...}";
-              stackIn_52_0 = stackOut_50_0;
-              stackIn_52_1 = stackOut_50_1;
-              stackIn_52_2 = stackOut_50_2;
-              break L8;
+              stackOut_51_2 = "{...}";
+              stackIn_53_0 = stackOut_51_0;
+              stackIn_53_1 = stackOut_51_1;
+              stackIn_53_2 = stackOut_51_2;
+              break L11;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_52_0), stackIn_52_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_53_0), stackIn_53_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_13_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_26_0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_41_0;
+                } else {
+                  return stackIn_45_0;
+                }
+              }
+            }
+          }
         }
     }
 
@@ -378,7 +463,7 @@ final class ng {
         bh var8 = null;
         bh var9 = null;
         var3 = client.field_A ? 1 : 0;
-        if (this.field_d <= 0) {
+        if ((this.field_d ^ -1) >= -1) {
           if (param0 >= 37) {
             L0: while (true) {
               if (this.field_f > this.field_d) {
@@ -390,7 +475,11 @@ final class ng {
                   this.field_c = var9.field_b;
                   return var9;
                 } else {
-                  continue L0;
+                  if (var3 == 0) {
+                    continue L0;
+                  } else {
+                    return null;
+                  }
                 }
               } else {
                 return null;
@@ -412,7 +501,11 @@ final class ng {
                     this.field_c = var5.field_b;
                     return var5;
                   } else {
-                    continue L1;
+                    if (var3 == 0) {
+                      continue L1;
+                    } else {
+                      return null;
+                    }
                   }
                 } else {
                   return null;
@@ -433,6 +526,8 @@ final class ng {
         bh dupTemp$2 = null;
         int var2 = 0;
         bh var3 = null;
+        int var4 = 0;
+        var4 = client.field_A ? 1 : 0;
         this.field_d = 0;
         this.field_f = param0;
         this.field_h = new bh[param0];
@@ -445,7 +540,11 @@ final class ng {
             var3.field_b = var3;
             var3.field_a = var3;
             var2++;
-            continue L0;
+            if (var4 == 0) {
+              continue L0;
+            } else {
+              return;
+            }
           } else {
             return;
           }

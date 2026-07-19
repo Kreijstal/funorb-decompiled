@@ -10,15 +10,20 @@ final class bj extends da {
     static cn field_F;
 
     final static String a(int param0, int param1) {
-        return 1 + param0 + "/" + en.field_a.length;
+        if (param1 <= 29) {
+          bj.i(58);
+          return 1 + param0 + "/" + en.field_a.length;
+        } else {
+          return 1 + param0 + "/" + en.field_a.length;
+        }
     }
 
     private bj(int param0, int param1, int param2, int param3, ca param4, pg param5, lm param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
-            ((bj) this).field_D = param6;
+            this.field_D = param6;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "bj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "bj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,16 +56,16 @@ final class bj extends da {
               if (var8 == null) {
                 break L1;
               } else {
-                if (((bj) this).a(param5, param4, param0, -1, param2)) {
-                  if (((bj) this).field_n instanceof qo) {
-                    ((qo) (Object) ((bj) this).field_n).a((bj) this, var8, false);
+                if (this.a(param5, param4, param0, -1, param2)) {
+                  if (this.field_n instanceof qo) {
+                    ((qo) ((Object) this.field_n)).a((bj) (this), var8, false);
                     ah.field_b = null;
                     return;
                   } else {
                     if (!(var8.field_n instanceof qo)) {
                       break L1;
                     } else {
-                      ((qo) (Object) var8.field_n).a((bj) this, var8, false);
+                      ((qo) ((Object) var8.field_n)).a((bj) (this), var8, false);
                       ah.field_b = null;
                       return;
                     }
@@ -76,23 +81,23 @@ final class bj extends da {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var7_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var7_ref;
+            stackOut_8_0 = (RuntimeException) (var7_ref);
             stackOut_8_1 = new StringBuilder().append("bj.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param3 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -100,7 +105,7 @@ final class bj extends da {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param4 + ',' + param5 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -140,10 +145,6 @@ final class bj extends da {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_J = "Raiders cost you 5 Treasure less to recruit.";
         field_I = "Waiting for game to start. Select an entrance or use special abilities.";
         field_H = new String[]{"Retreat", "Automatically retreat. (Single use)"};

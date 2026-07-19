@@ -11,12 +11,12 @@ abstract class hf implements kf {
     static hj field_f;
 
     public final na b(boolean param0) {
-        if (!((hf) this).a(true)) {
-          if (pf.a(0) >= 350L + ((hf) this).field_e) {
+        if (!this.a(true)) {
+          if (pf.a(0) >= 350L + this.field_e) {
             if (param0) {
-              return null;
+              return (na) null;
             } else {
-              return ((hf) this).c(1);
+              return this.c(1);
             }
           } else {
             return ke.field_d;
@@ -34,7 +34,7 @@ abstract class hf implements kf {
         if (!(0 != var1.length())) {
             var1 = ka.c(10367);
         }
-        if (!(0 != var1.length())) {
+        if (!(param0 != var1.length())) {
             var1 = pg.field_c;
         }
         return var1;
@@ -57,11 +57,11 @@ abstract class hf implements kf {
     public final String b(byte param0) {
         int var2 = 0;
         var2 = -15 / ((param0 - 20) / 44);
-        if (!((hf) this).a(true)) {
-          if (~pf.a(0) > ~(350L + ((hf) this).field_e)) {
+        if (!this.a(true)) {
+          if ((pf.a(0) ^ -1L) > (350L + this.field_e ^ -1L)) {
             return null;
           } else {
-            return ((hf) this).c((byte) -58);
+            return this.c((byte) -58);
           }
         } else {
           return null;
@@ -69,7 +69,7 @@ abstract class hf implements kf {
     }
 
     public final void a(byte param0) {
-        ((hf) this).field_e = pf.a(0);
+        this.field_e = pf.a(0);
         if (param0 > -87) {
             hf.a(-14);
         }
@@ -78,10 +78,6 @@ abstract class hf implements kf {
     abstract String c(byte param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new kg();
         field_b = null;
     }

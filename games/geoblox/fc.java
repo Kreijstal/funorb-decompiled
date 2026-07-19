@@ -20,11 +20,11 @@ final class fc {
         try {
           L0: {
             pf.field_D = true;
-            var1_ref = (ja) (Object) a.field_d.g(0);
+            var1_ref = (ja) ((Object) a.field_d.g(0));
             L1: while (true) {
               if (var1_ref == null) {
-                var2 = 0;
-                var1_ref = (ja) (Object) bh.field_c.g(0);
+                var2 = 12 % ((-69 - param0) / 38);
+                var1_ref = (ja) ((Object) bh.field_c.g(0));
                 L2: while (true) {
                   if (var1_ref == null) {
                     break L0;
@@ -35,10 +35,10 @@ final class fc {
                         if (5 == var1_ref.field_z) {
                           break L4;
                         } else {
-                          if (var1_ref.field_z == 7) {
+                          if ((var1_ref.field_z ^ -1) == -8) {
                             break L4;
                           } else {
-                            if (var1_ref.field_z == 8) {
+                            if ((var1_ref.field_z ^ -1) == -9) {
                               break L4;
                             } else {
                               break L3;
@@ -50,11 +50,11 @@ final class fc {
                       if (var1_ref.field_G < 3) {
                         break L3;
                       } else {
-                        ra.field_a.a(-115, (hf) (Object) var1_ref);
+                        ra.field_a.a(-115, var1_ref);
                         break L3;
                       }
                     }
-                    var1_ref = (ja) (Object) bh.field_c.d(1);
+                    var1_ref = (ja) ((Object) bh.field_c.d(1));
                     continue L2;
                   }
                 }
@@ -66,14 +66,14 @@ final class fc {
                     if (var1_ref.field_G < 3) {
                       break L5;
                     } else {
-                      ra.field_a.a(-67, (hf) (Object) var1_ref);
+                      ra.field_a.a(-67, var1_ref);
                       break L5;
                     }
                   } else {
                     break L5;
                   }
                 }
-                var1_ref = (ja) (Object) a.field_d.d(1);
+                var1_ref = (ja) ((Object) a.field_d.d(1));
                 continue L1;
               }
             }
@@ -81,34 +81,41 @@ final class fc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "fc.B(" + 19 + ')');
+          throw t.a((Throwable) ((Object) var1), "fc.B(" + param0 + ')');
         }
     }
 
     final static void a(boolean param0, java.awt.Canvas param1) {
-        if (!(hj.field_a != 11)) {
+        if (!((hj.field_a ^ -1) != -12)) {
             w.a(31);
+        }
+        if (!param0) {
+            return;
         }
         try {
             qc.a(pb.field_s, oi.field_e, lb.field_a, (byte) -40);
             i.a(0, (byte) 117, param1, 0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "fc.A(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "fc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
         field_b = null;
         field_g = null;
-        field_d = null;
-        field_e = null;
+        if (param0 >= -79) {
+          fc.a(-17);
+          field_d = null;
+          field_e = null;
+          return;
+        } else {
+          field_d = null;
+          field_e = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Music: ";
         field_d = new qc(256);
         field_a = 0.0;

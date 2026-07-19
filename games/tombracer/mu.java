@@ -20,15 +20,17 @@ final class mu extends jea {
     }
 
     public static void d(byte param0) {
+        if (param0 != 101) {
+            field_Bb = (String) null;
+            field_wb = null;
+            field_Bb = null;
+            return;
+        }
         field_wb = null;
         field_Bb = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Eb = "mu.A(";
         field_wb = "+10 Coins";
         field_Bb = "You have been removed from <%0>'s game.";

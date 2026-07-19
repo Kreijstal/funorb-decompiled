@@ -11,10 +11,10 @@ final class qr extends uda {
         if (param2 != 5) {
             return;
         }
-        if (!(!((qr) this).field_e)) {
-            ((qr) this).field_d.g(1, param2 ^ -112);
-            ((qr) this).field_d.a((ura) (Object) ((qr) this).field_f[-1 + param1], -116);
-            ((qr) this).field_d.g(0, -109);
+        if (!(!this.field_e)) {
+            this.field_d.g(1, param2 ^ -112);
+            this.field_d.a(this.field_f[-1 + param1], -116);
+            this.field_d.g(0, -109);
         }
     }
 
@@ -64,7 +64,7 @@ final class qr extends uda {
         RuntimeException stackOut_34_0 = null;
         StringBuilder stackOut_34_1 = null;
         String stackOut_34_2 = null;
-        ((qr) this).field_e = false;
+        this.field_e = false;
         try {
           L0: {
             L1: {
@@ -75,7 +75,7 @@ final class qr extends uda {
                   stackOut_2_0 = this;
                   stackIn_4_0 = stackOut_2_0;
                   stackIn_3_0 = stackOut_2_0;
-                  if (param0.field_L >= 3) {
+                  if (-4 >= (param0.field_L ^ -1)) {
                     stackOut_4_0 = this;
                     stackOut_4_1 = 0;
                     stackIn_5_0 = stackOut_4_0;
@@ -90,8 +90,8 @@ final class qr extends uda {
                   }
                 }
                 L3: {
-                  ((qr) this).field_h = stackIn_5_1 != 0;
-                  if (!((qr) this).field_h) {
+                  ((qr) (this)).field_h = stackIn_5_1 != 0;
+                  if (!this.field_h) {
                     stackOut_7_0 = 127;
                     stackIn_8_0 = stackOut_7_0;
                     break L3;
@@ -108,16 +108,16 @@ final class qr extends uda {
                 var9 = 0;
                 var14 = 0;
                 L4: while (true) {
-                  if (var14 >= 64) {
-                    ((qr) this).field_f = new hdb[3];
-                    ((qr) this).field_f[0] = ((qr) this).field_d.a(false, -5210, var27, 64);
-                    ((qr) this).field_f[1] = ((qr) this).field_d.a(false, -5210, var28, 64);
-                    ((qr) this).field_f[2] = ((qr) this).field_d.a(false, -5210, var29, 64);
+                  if ((var14 ^ -1) <= -65) {
+                    this.field_f = new hdb[3];
+                    this.field_f[0] = this.field_d.a(false, -5210, var27, 64);
+                    this.field_f[1] = this.field_d.a(false, -5210, var28, 64);
+                    this.field_f[2] = this.field_d.a(false, -5210, var29, 64);
                     break L1;
                   } else {
                     var15 = 0;
                     L5: while (true) {
-                      if (var15 >= 64) {
+                      if (-65 >= (var15 ^ -1)) {
                         var14++;
                         continue L4;
                       } else {
@@ -128,15 +128,15 @@ final class qr extends uda {
                         var11 = var11 * var13;
                         var16 = 0;
                         L6: while (true) {
-                          if (var16 >= 6) {
+                          if ((var16 ^ -1) <= -7) {
                             var9++;
                             var15++;
                             continue L5;
                           } else {
                             L7: {
                               if (0 != var16) {
-                                if (var16 != 1) {
-                                  if (var16 == 2) {
+                                if (-2 != (var16 ^ -1)) {
+                                  if (-3 == (var16 ^ -1)) {
                                     var10 = var12;
                                     break L7;
                                   } else {
@@ -175,9 +175,9 @@ final class qr extends uda {
                                 break L8;
                               }
                             }
-                            var27[var16][var9] = var6 << 24;
-                            var28[var16][var9] = var7 << 24;
-                            var29[var16][var9] = var8 << 24;
+                            var27[var16][var9] = var6 << 1456193976;
+                            var28[var16][var9] = var7 << -2029569480;
+                            var29[var16][var9] = var8 << 750705752;
                             var16++;
                             continue L6;
                           }
@@ -194,23 +194,23 @@ final class qr extends uda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) var2;
+            stackOut_33_0 = (RuntimeException) (var2);
             stackOut_33_1 = new StringBuilder().append("qr.<init>(");
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
             stackIn_34_1 = stackOut_33_1;
             if (param0 == null) {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackOut_35_2 = "null";
               stackIn_36_0 = stackOut_35_0;
               stackIn_36_1 = stackOut_35_1;
               stackIn_36_2 = stackOut_35_2;
               break L9;
             } else {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "{...}";
               stackIn_36_0 = stackOut_34_0;
               stackIn_36_1 = stackOut_34_1;
@@ -218,16 +218,16 @@ final class qr extends uda {
               break L9;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ')');
         }
     }
 
     final void b(int param0, boolean param1) {
         if (param0 != 5) {
-            Object var4 = null;
-            ((qr) this).a((byte) -108, 75, (ura) null);
+            ura var4 = (ura) null;
+            this.a((byte) -108, 75, (ura) null);
         }
-        ((qr) this).field_d.a(et.field_c, true, asa.field_a);
+        this.field_d.a(et.field_c, true, asa.field_a);
     }
 
     final void a(int param0, boolean param1) {
@@ -236,37 +236,37 @@ final class qr extends uda {
         var4 = VoidHunters.field_G;
         if (param0 == 5) {
           L0: {
-            if (null == ((qr) this).field_f) {
-              ((qr) this).field_d.a(0, (byte) -113, tma.field_q);
+            if (null == this.field_f) {
+              this.field_d.a(0, (byte) -113, tma.field_q);
               break L0;
             } else {
               if (!param1) {
-                ((qr) this).field_d.a(0, (byte) -113, tma.field_q);
+                this.field_d.a(0, (byte) -113, tma.field_q);
                 break L0;
               } else {
-                ((qr) this).field_d.g(1, -51);
-                ((qr) this).field_d.a((byte) -111, tea.field_d);
-                var5 = ((qr) this).field_d.H((byte) 8);
+                this.field_d.g(1, -51);
+                this.field_d.a((byte) -111, tea.field_d);
+                var5 = this.field_d.H((byte) 8);
                 var5.a((byte) -80, 1024);
-                ((qr) this).field_d.a(wda.field_o, true);
-                if (!((qr) this).field_h) {
-                  ((qr) this).field_d.a(asa.field_a, true, et.field_c);
-                  ((qr) this).field_d.a(0, pja.field_l, 7);
-                  ((qr) this).field_d.g(2, -51);
-                  ((qr) this).field_d.a(et.field_c, true, je.field_c);
-                  ((qr) this).field_d.a(0, pja.field_l, param0 ^ 2);
-                  ((qr) this).field_d.a(true, param0 ^ -21120, false, pja.field_l, 1);
-                  ((qr) this).field_d.a(0, (byte) -86, tma.field_q);
-                  ((qr) this).field_d.a(((qr) this).field_d.field_Q, param0 + -119);
-                  ((qr) this).field_d.g(0, -100);
-                  ((qr) this).field_e = true;
+                this.field_d.a(wda.field_o, true);
+                if (!this.field_h) {
+                  this.field_d.a(asa.field_a, true, et.field_c);
+                  this.field_d.a(0, pja.field_l, 7);
+                  this.field_d.g(2, -51);
+                  this.field_d.a(et.field_c, true, je.field_c);
+                  this.field_d.a(0, pja.field_l, param0 ^ 2);
+                  this.field_d.a(true, param0 ^ -21120, false, pja.field_l, 1);
+                  this.field_d.a(0, (byte) -86, tma.field_q);
+                  this.field_d.a(this.field_d.field_Q, param0 + -119);
+                  this.field_d.g(0, -100);
+                  this.field_e = true;
                   break L0;
                 } else {
-                  ((qr) this).field_d.a(et.field_c, true, je.field_c);
-                  ((qr) this).field_d.a(true, param0 + -21120, false, qcb.field_q, 0);
-                  ((qr) this).field_d.a(0, (byte) -96, tma.field_q);
-                  ((qr) this).field_d.g(0, -100);
-                  ((qr) this).field_e = true;
+                  this.field_d.a(et.field_c, true, je.field_c);
+                  this.field_d.a(true, param0 + -21120, false, qcb.field_q, 0);
+                  this.field_d.a(0, (byte) -96, tma.field_q);
+                  this.field_d.g(0, -100);
+                  this.field_e = true;
                   break L0;
                 }
               }
@@ -283,10 +283,10 @@ final class qr extends uda {
             return;
         }
         try {
-            ((qr) this).field_d.a(param2, -113);
-            ((qr) this).field_d.h(-124, param1);
+            this.field_d.a(param2, -113);
+            this.field_d.h(-124, param1);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qr.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "qr.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -294,38 +294,38 @@ final class qr extends uda {
         int var3 = 0;
         L0: {
           var3 = VoidHunters.field_G;
-          if (!((qr) this).field_e) {
-            ((qr) this).field_d.a(0, (byte) -99, qcb.field_q);
+          if (!this.field_e) {
+            this.field_d.a(0, (byte) -99, qcb.field_q);
             break L0;
           } else {
-            ((qr) this).field_d.g(1, -114);
-            ((qr) this).field_d.a((ura) null, -123);
-            ((qr) this).field_d.a((byte) -111, meb.field_d);
-            ((qr) this).field_d.F((byte) 108);
-            if (((qr) this).field_h) {
-              ((qr) this).field_d.a(asa.field_a, true, asa.field_a);
-              ((qr) this).field_d.a(0, qcb.field_q, 7);
-              ((qr) this).field_d.a(0, (byte) -92, qcb.field_q);
-              ((qr) this).field_d.g(0, -110);
-              ((qr) this).field_e = false;
+            this.field_d.g(1, -114);
+            this.field_d.a((ura) null, -123);
+            this.field_d.a((byte) -111, meb.field_d);
+            this.field_d.F((byte) 108);
+            if (this.field_h) {
+              this.field_d.a(asa.field_a, true, asa.field_a);
+              this.field_d.a(0, qcb.field_q, 7);
+              this.field_d.a(0, (byte) -92, qcb.field_q);
+              this.field_d.g(0, -110);
+              this.field_e = false;
               break L0;
             } else {
-              ((qr) this).field_d.a(asa.field_a, true, asa.field_a);
-              ((qr) this).field_d.a(0, qcb.field_q, 7);
-              ((qr) this).field_d.g(2, -90);
-              ((qr) this).field_d.a(asa.field_a, true, asa.field_a);
-              ((qr) this).field_d.a(0, qcb.field_q, param0 + -2536);
-              ((qr) this).field_d.a(1, pja.field_l, 7);
-              ((qr) this).field_d.a(0, (byte) -105, qcb.field_q);
-              ((qr) this).field_d.a((ura) null, -128);
-              ((qr) this).field_d.g(0, -110);
-              ((qr) this).field_e = false;
+              this.field_d.a(asa.field_a, true, asa.field_a);
+              this.field_d.a(0, qcb.field_q, 7);
+              this.field_d.g(2, -90);
+              this.field_d.a(asa.field_a, true, asa.field_a);
+              this.field_d.a(0, qcb.field_q, param0 + -2536);
+              this.field_d.a(1, pja.field_l, 7);
+              this.field_d.a(0, (byte) -105, qcb.field_q);
+              this.field_d.a((ura) null, -128);
+              this.field_d.g(0, -110);
+              this.field_e = false;
               break L0;
             }
           }
         }
         if (param0 == 2543) {
-          ((qr) this).field_d.a(asa.field_a, true, asa.field_a);
+          this.field_d.a(asa.field_a, true, asa.field_a);
           return;
         } else {
           return;

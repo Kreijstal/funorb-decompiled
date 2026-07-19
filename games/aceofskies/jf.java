@@ -1,14 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.net.URL;
-
 final class jf implements ir {
     static hj field_a;
     static String field_b;
 
     final static boolean a(int param0) {
-        Object var2 = null;
+        gk var2 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -17,11 +15,11 @@ final class jf implements ir {
         int stackOut_2_0 = 0;
         if (param0 != 15000) {
           L0: {
-            var2 = null;
+            var2 = (gk) null;
             jf.a(83, (gk) null, (gk) null);
             v.field_a = true;
             wg.field_b = kh.a(param0 + -15076) - -15000L;
-            if (ob.field_d != 11) {
+            if ((ob.field_d ^ -1) != -12) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -36,7 +34,7 @@ final class jf implements ir {
           L1: {
             v.field_a = true;
             wg.field_b = kh.a(param0 + -15076) - -15000L;
-            if (ob.field_d != 11) {
+            if ((ob.field_d ^ -1) != -12) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -51,14 +49,15 @@ final class jf implements ir {
     }
 
     final static void a(int param0, gk param1, gk param2) {
+        al discarded$0 = null;
         lj.field_c = nc.a(param1, param0 ^ 102, param2, jb.field_a, (boolean[]) null);
-        Object var5 = null;
+        boolean[] var5 = (boolean[]) null;
         kn.field_c = nc.a(param1, -107, param2, s.field_d, (boolean[]) null);
         if (param0 != -4) {
             return;
         }
         try {
-            Object var6 = null;
+            boolean[] var6 = (boolean[]) null;
             lp.field_g = nc.a(param1, -114, param2, iq.field_g, (boolean[]) null);
             fd.field_b = dt.a(param1, 19501, ad.field_T, param2, tt.field_d);
             uh.field_g = nc.a(param1, -76, param2, wt.field_k, ht.field_j);
@@ -66,9 +65,9 @@ final class jf implements ir {
             mh.field_o = bj.a(param2, "", wg.field_c).a();
             gg.field_a = bj.a(param2, "", rg.field_C).a();
             kq.field_b = bj.a(param2, "", np.field_e).a();
-            al discarded$0 = bj.a(param2, "", un.field_q).a();
+            discarded$0 = bj.a(param2, "", un.field_q).a();
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "jf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "jf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -99,7 +98,7 @@ final class jf implements ir {
               if (param1 == -7592) {
                 break L1;
               } else {
-                field_b = null;
+                field_b = (String) null;
                 break L1;
               }
             }
@@ -111,8 +110,8 @@ final class jf implements ir {
               if (!(param3 instanceof mi)) {
                 break L2;
               } else {
-                if (((mi) (Object) param3).field_s) {
-                  var8.d(var6_int + (1 - -(param3.field_q + -var8.field_v >> 1)), (param3.field_n + -var8.field_q >> 1) + var7 - -1, 256);
+                if (((mi) ((Object) param3)).field_s) {
+                  var8.d(var6_int + (1 - -(param3.field_q + -var8.field_v >> -314791647)), (param3.field_n + -var8.field_q >> -768042815) + var7 - -1, 256);
                   break L2;
                 } else {
                   break L2;
@@ -130,23 +129,23 @@ final class jf implements ir {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var6;
+            stackOut_10_0 = (RuntimeException) (var6);
             stackOut_10_1 = new StringBuilder().append("jf.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -154,7 +153,7 @@ final class jf implements ir {
               break L3;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param4 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param4 + ')');
         }
     }
 
@@ -198,16 +197,16 @@ final class jf implements ir {
         try {
           L0: {
             L1: {
-              var4 = -106 % (param2 / 46);
+              var4 = -106 % ((param2 - 0) / 46);
               var3 = null;
               var5 = null;
               if (gt.field_r == null) {
                 break L1;
               } else {
-                if (gt.field_r.equals((Object) (Object) param0.getParameter("settings"))) {
+                if (gt.field_r.equals(param0.getParameter("settings"))) {
                   break L1;
                 } else {
-                  var3 = (Object) (Object) gt.field_r;
+                  var3 = gt.field_r;
                   var5 = var3;
                   var5 = var3;
                   break L1;
@@ -218,22 +217,22 @@ final class jf implements ir {
               if (ac.field_d == null) {
                 break L2;
               } else {
-                if (ac.field_d.equals((Object) (Object) param0.getParameter("session"))) {
+                if (ac.field_d.equals(param0.getParameter("session"))) {
                   break L2;
                 } else {
-                  var5 = (Object) (Object) ac.field_d;
+                  var5 = ac.field_d;
                   break L2;
                 }
               }
             }
-            stackOut_6_0 = vj.a(param1, (String) var3, (String) var5, 122, -1);
+            stackOut_6_0 = vj.a(param1, (String) (var3), (String) (var5), 122, -1);
             stackIn_7_0 = stackOut_6_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var3 = (Object) (Object) decompiledCaughtException;
+            var3 = decompiledCaughtException;
             stackOut_8_0 = var3;
             stackOut_8_1 = new StringBuilder().append("jf.F(");
             stackIn_10_0 = stackOut_8_0;
@@ -242,7 +241,7 @@ final class jf implements ir {
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
               stackOut_10_0 = stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
@@ -250,7 +249,7 @@ final class jf implements ir {
               break L3;
             } else {
               stackOut_9_0 = stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -267,7 +266,7 @@ final class jf implements ir {
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
               stackOut_13_0 = stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
@@ -275,7 +274,7 @@ final class jf implements ir {
               break L4;
             } else {
               stackOut_12_0 = stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -283,17 +282,22 @@ final class jf implements ir {
               break L4;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ')');
         }
         return stackIn_7_0;
     }
 
     public static void a(byte param0) {
         field_b = null;
+        if (param0 >= -11) {
+            return;
+        }
         field_a = null;
     }
 
     final static boolean a(int param0, boolean param1, byte param2, int param3) {
+        boolean discarded$2 = false;
+        boolean discarded$3 = false;
         int var4 = 0;
         int var5 = 0;
         int stackIn_28_0 = 0;
@@ -312,7 +316,7 @@ final class jf implements ir {
                 if (js.field_c[param3] <= js.field_c[param0]) {
                   var4 = dd.field_c[param3] + qd.field_p[param3] + hg.field_C[param3];
                   if (param2 != 67) {
-                    boolean discarded$2 = jf.a(121, false, (byte) -23, -25);
+                    discarded$2 = jf.a(121, false, (byte) -23, -25);
                     var5 = qd.field_p[param0] + hg.field_C[param0] + dd.field_c[param0];
                     if (var5 <= var4) {
                       if (var4 > var5) {
@@ -395,7 +399,7 @@ final class jf implements ir {
                       return true;
                     }
                   } else {
-                    boolean discarded$3 = jf.a(121, false, (byte) -23, -25);
+                    discarded$3 = jf.a(121, false, (byte) -23, -25);
                     var5 = qd.field_p[param0] + hg.field_C[param0] + dd.field_c[param0];
                     if (var5 <= var4) {
                       if (var4 > var5) {
@@ -430,10 +434,6 @@ final class jf implements ir {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Error connecting to server. Please try using a different server.";
     }
 }

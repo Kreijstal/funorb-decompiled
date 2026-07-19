@@ -4,7 +4,7 @@
 final class agb implements dja {
     public final tv a(byte param0) {
         int var2 = -61 % ((param0 - -64) / 50);
-        return (tv) (Object) new tt();
+        return (tv) ((Object) new tt());
     }
 
     final static long a(CharSequence param0, int param1) {
@@ -14,7 +14,7 @@ final class agb implements dja {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        Object var8 = null;
+        CharSequence var8 = null;
         long stackIn_22_0 = 0L;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -41,7 +41,7 @@ final class agb implements dja {
               if (param1 == -49) {
                 break L1;
               } else {
-                var8 = null;
+                var8 = (CharSequence) null;
                 break L1;
               }
             }
@@ -100,10 +100,10 @@ final class agb implements dja {
               }
               L7: while (true) {
                 L8: {
-                  if (var2_long % 37L != 0L) {
+                  if (-1L != (var2_long % 37L ^ -1L)) {
                     break L8;
                   } else {
-                    if (var2_long == 0L) {
+                    if ((var2_long ^ -1L) == -1L) {
                       break L8;
                     } else {
                       var2_long = var2_long / 37L;
@@ -121,23 +121,23 @@ final class agb implements dja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var2;
+            stackOut_23_0 = (RuntimeException) (var2);
             stackOut_23_1 = new StringBuilder().append("agb.C(");
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L9;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -145,17 +145,18 @@ final class agb implements dja {
               break L9;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
         }
         return stackIn_22_0;
     }
 
     public final tv[] a(int param0, int param1) {
+        tv discarded$0 = null;
         if (param0 != 11995) {
-            tv discarded$0 = ((agb) this).a((byte) 63);
-            return (tv[]) (Object) new tt[param1];
+            discarded$0 = this.a((byte) 63);
+            return (tv[]) ((Object) new tt[param1]);
         }
-        return (tv[]) (Object) new tt[param1];
+        return (tv[]) ((Object) new tt[param1]);
     }
 
     static {

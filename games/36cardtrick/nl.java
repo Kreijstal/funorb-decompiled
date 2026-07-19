@@ -17,14 +17,18 @@ final class nl {
             ti.a(he.field_g, (byte) 54, ck.field_G, sg.field_b);
             ll.a(0, (byte) 115, param0, 0);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "nl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "nl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(int param0) {
+        int discarded$0 = 0;
         field_e = null;
         field_c = null;
         field_a = null;
+        if (param0 != 10000) {
+            discarded$0 = nl.a(false);
+        }
     }
 
     final static int a(boolean param0) {
@@ -46,7 +50,7 @@ final class nl {
             L1: while (true) {
               if (!ge.b((byte) -114)) {
                 L2: {
-                  cg.field_e.a(af.a(ij.field_e, true, eg.field_b), (byte) 123, af.a(jc.field_N, true, ag.field_a));
+                  cg.field_e.a(af.a(ij.field_e, true, eg.field_b), (byte) 123, af.a(jc.field_N, param0, ag.field_a));
                   if (!cg.field_e.f(-85)) {
                     break L2;
                   } else {
@@ -60,11 +64,11 @@ final class nl {
                     if (var1_int == 0) {
                       break L4;
                     } else {
-                      if (cg.field_e.field_k < 0) {
+                      if ((cg.field_e.field_k ^ -1) > -1) {
                         break L4;
                       } else {
                         var3 = dd.field_j[cg.field_e.field_k];
-                        if (var3 == 2) {
+                        if (-3 == (var3 ^ -1)) {
                           re.c(3);
                           break L3;
                         } else {
@@ -81,7 +85,7 @@ final class nl {
                   if (var2 == 0) {
                     break L3;
                   } else {
-                    if (v.field_R != 2) {
+                    if ((v.field_R ^ -1) != -3) {
                       re.c(3);
                       break L3;
                     } else {
@@ -90,7 +94,7 @@ final class nl {
                   }
                 }
                 L5: {
-                  if (var3 != 0) {
+                  if (-1 != (var3 ^ -1)) {
                     break L5;
                   } else {
                     if (v.field_R == 2) {
@@ -133,16 +137,12 @@ final class nl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "nl.C(" + true + ')');
+          throw ma.a((Throwable) ((Object) var1), "nl.C(" + param0 + ')');
         }
         return stackIn_28_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Orb coins: <%0>";
         field_d = 0;
         field_e = new boolean[64];

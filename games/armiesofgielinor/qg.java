@@ -14,10 +14,6 @@ abstract class qg extends ms {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = 0;
     }
 }

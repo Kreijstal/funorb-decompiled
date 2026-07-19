@@ -15,31 +15,33 @@ final class jj {
             for (var1_int = 0; var1_int < 32; var1_int++) {
                 pc.field_k[var1_int] = 0L;
             }
-            for (var1_int = 0; var1_int < 32; var1_int++) {
+            for (var1_int = 0; (var1_int ^ -1) > -33; var1_int++) {
                 ql.field_b[var1_int] = 0L;
             }
             uh.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "jj.A(" + param0 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ')');
         }
     }
 
     final static String a(boolean param0) {
+        if (!param0) {
+            return (String) null;
+        }
         return dh.field_c;
     }
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != 0) {
+            return;
+        }
         field_c = null;
         field_d = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Type your age in years";
     }
 }

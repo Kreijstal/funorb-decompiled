@@ -9,14 +9,26 @@ final class brb extends rqa {
     }
 
     final static void e(byte param0) {
+        mob discarded$4 = null;
+        mob discarded$5 = null;
         java.awt.Canvas var1 = null;
-        if (upa.field_a) {
-            upa.field_a = false;
-            var1 = df.e((byte) 123);
-            mob discarded$0 = bm.field_o.a((java.awt.Component) (Object) var1, noa.field_q, pk.field_o, 14);
-            mob discarded$1 = bm.field_o.a((java.awt.Component) (Object) var1, true, (byte) -122);
-            kc.field_b = pk.field_o;
-            uia.field_b = noa.field_q;
+        if (param0 != -128) {
+          return;
+        } else {
+          L0: {
+            if (!upa.field_a) {
+              break L0;
+            } else {
+              upa.field_a = false;
+              var1 = df.e((byte) 123);
+              discarded$4 = bm.field_o.a((java.awt.Component) ((Object) var1), noa.field_q, pk.field_o, 14);
+              discarded$5 = bm.field_o.a((java.awt.Component) ((Object) var1), true, (byte) -122);
+              kc.field_b = pk.field_o;
+              uia.field_b = noa.field_q;
+              break L0;
+            }
+          }
+          return;
         }
     }
 
@@ -51,7 +63,7 @@ final class brb extends rqa {
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -59,23 +71,23 @@ final class brb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("brb.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -83,15 +95,16 @@ final class brb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     final static rbb f(byte param0) {
+        rbb discarded$1 = null;
         if (param0 != 62) {
           L0: {
-            rbb discarded$1 = brb.f((byte) -106);
+            discarded$1 = brb.f((byte) -106);
             if (eg.field_p == null) {
               eg.field_p = new rbb();
               eg.field_p.a(loa.field_o, -24763);
@@ -132,10 +145,6 @@ final class brb extends rqa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = 30;
     }
 }

@@ -9,6 +9,9 @@ final class td {
     public static void a(int param0) {
         field_c = null;
         field_b = null;
+        if (param0 != 128) {
+            return;
+        }
         field_a = null;
     }
 
@@ -40,10 +43,6 @@ final class td {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Click";
         field_b = new int[128];
     }

@@ -11,6 +11,9 @@ final class ej {
     private static String field_z;
 
     public static void a(byte param0) {
+        if (param0 != -30) {
+            return;
+        }
         field_e = null;
         field_b = null;
         field_c = null;
@@ -19,10 +22,6 @@ final class ej {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ej.A(";
         field_b = "You need to play <%0> more rated games to unlock this option.";
         field_a = "<%0> has left.";

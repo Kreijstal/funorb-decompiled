@@ -14,7 +14,7 @@ final class ag {
 
     public static void a(int param0) {
         field_g = null;
-        int var1 = 33;
+        int var1 = -33 / ((param0 - 69) / 55);
         field_a = null;
         field_c = null;
         field_d = null;
@@ -22,17 +22,13 @@ final class ag {
 
     final static boolean b(int param0) {
         if (param0 <= 13) {
-            field_g = null;
+            field_g = (String) null;
             return mh.field_i;
         }
         return mh.field_i;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = true;
         field_a = "Tooltips ";
         field_g = "Show one score each from my scores and my friends' scores. ";

@@ -23,54 +23,59 @@ final class pg implements Runnable {
         Throwable var3 = null;
         int var4 = 0;
         Object var5 = null;
-        Object var6 = null;
+        String var6 = null;
         Throwable decompiledCaughtException = null;
         var4 = TetraLink.field_J;
-        ((pg) this).field_k = true;
+        this.field_k = true;
         try {
-          L0: while (true) {
-            if (((pg) this).field_g) {
-              ((pg) this).field_k = false;
-              return;
-            } else {
-              var1_int = 0;
-              L1: while (true) {
-                if (var1_int >= 2) {
-                  tb.a(false, 10L);
-                  var5 = null;
-                  li.a(((pg) this).field_j, (Object) null, (byte) -98);
-                  continue L0;
-                } else {
-                  L2: {
-                    var2 = ((pg) this).field_l[var1_int];
-                    if (var2 != null) {
-                      var2.f();
-                      var1_int++;
-                      break L2;
-                    } else {
-                      var1_int++;
-                      break L2;
+          L0: {
+            try {
+              L1: {
+                L2: while (true) {
+                  if (this.field_g) {
+                    break L1;
+                  } else {
+                    var1_int = 0;
+                    L3: while (true) {
+                      if (-3 >= (var1_int ^ -1)) {
+                        tb.a(false, 10L);
+                        var5 = (Object) null;
+                        li.a(this.field_j, (Object) null, (byte) -98);
+                        continue L2;
+                      } else {
+                        L4: {
+                          var2 = this.field_l[var1_int];
+                          if (var2 != null) {
+                            var2.f();
+                            break L4;
+                          } else {
+                            break L4;
+                          }
+                        }
+                        var1_int++;
+                        continue L3;
+                      }
                     }
                   }
-                  var1_int++;
-                  continue L1;
                 }
               }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = (Exception) (Object) decompiledCaughtException;
+              var6 = (String) null;
+              fk.a(-127, (Throwable) ((Object) var1), (String) null);
+              this.field_k = false;
+              return;
             }
+            break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Exception) (Object) decompiledCaughtException;
-          var6 = null;
-          fk.a(-127, (Throwable) (Object) var1, (String) null);
-          ((pg) this).field_k = false;
-          return;
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
-          ((pg) this).field_k = false;
+          this.field_k = false;
           throw pg.<RuntimeException>$cfr$sneakyThrow(var3);
         }
+        this.field_k = false;
     }
 
     public static void a(boolean param0) {
@@ -91,16 +96,12 @@ final class pg implements Runnable {
     }
 
     pg() {
-        ((pg) this).field_l = new nk[2];
-        ((pg) this).field_g = false;
-        ((pg) this).field_k = false;
+        this.field_l = new nk[2];
+        this.field_g = false;
+        this.field_k = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new int[5];
         field_b = "Main Menu";
         field_i = new int[4];

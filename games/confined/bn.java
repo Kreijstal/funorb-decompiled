@@ -69,14 +69,14 @@ final class bn {
               }
               L3: {
                 var5 = param1.g(4, param0);
-                var6 = (short)param1.g(16, param0);
+                var6 = (short)param1.g(16, param0 + 0);
                 if (var5 > 0) {
                   var7 = 0;
                   L4: while (true) {
                     if (var7 >= var4_int) {
                       break L3;
                     } else {
-                      param2[var7] = (short)(var6 + param1.g(var5, param0));
+                      param2[var7] = (short)(var6 + param1.g(var5, param0 + 0));
                       var7++;
                       continue L4;
                     }
@@ -94,7 +94,7 @@ final class bn {
                   }
                 }
               }
-              stackOut_15_0 = (short[]) param2;
+              stackOut_15_0 = (short[]) (param2);
               stackIn_16_0 = stackOut_15_0;
               break L0;
             } else {
@@ -105,23 +105,23 @@ final class bn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var4;
+            stackOut_17_0 = (RuntimeException) (var4);
             stackOut_17_1 = new StringBuilder().append("bn.B(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -130,23 +130,23 @@ final class bn {
             }
           }
           L7: {
-            stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+            stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
             stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param2 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -154,13 +154,13 @@ final class bn {
               break L7;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param3 + ')');
         }
         return stackIn_16_0;
     }
 
     public static void a(byte param0) {
-        int var1 = 53;
+        int var1 = 107 / ((param0 - 23) / 49);
         field_d = null;
         field_b = null;
     }
@@ -170,20 +170,21 @@ final class bn {
         if (ui.field_c == null) {
             ui.field_c = new jj(vg.field_Z, cb.field_b);
         }
-        vg.field_Z.c((fj) (Object) ui.field_c, 0);
+        vg.field_Z.c(ui.field_c, param0);
     }
 
     final boolean b(int param0) {
+        short[] discarded$0 = null;
         if (param0 != 0) {
-            Object var3 = null;
-            short[] discarded$0 = bn.a(69, (hb) null, (short[]) null, 72);
+            short[] var3 = (short[]) null;
+            discarded$0 = bn.a(69, (hb) null, (short[]) null, 72);
         }
-        return ((bn) this).field_a;
+        return this.field_a;
     }
 
     final String a(int param0) {
         int var2 = -76 / ((param0 - -20) / 48);
-        return ((bn) this).field_c;
+        return this.field_c;
     }
 
     bn(String param0) {
@@ -220,11 +221,11 @@ final class bn {
         try {
           L0: {
             L1: {
-              ((bn) this).field_c = param0;
-              if (null != ((bn) this).field_c) {
+              this.field_c = param0;
+              if (null != this.field_c) {
                 break L1;
               } else {
-                ((bn) this).field_c = "";
+                this.field_c = "";
                 break L1;
               }
             }
@@ -247,11 +248,11 @@ final class bn {
               }
             }
             L3: {
-              ((bn) this).field_a = stackIn_6_1 != 0;
-              if (((bn) this).field_c.length() != 0) {
+              ((bn) (this)).field_a = stackIn_6_1 != 0;
+              if (this.field_c.length() != 0) {
                 break L3;
               } else {
-                ((bn) this).field_a = false;
+                this.field_a = false;
                 break L3;
               }
             }
@@ -261,23 +262,23 @@ final class bn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("bn.<init>(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -285,15 +286,11 @@ final class bn {
               break L4;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "This game has been updated! Please reload this page.";
     }
 }

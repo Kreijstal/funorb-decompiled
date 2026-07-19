@@ -16,10 +16,10 @@ abstract class wf extends ai {
     }
 
     final void b(int[] param0, int param1, int param2) {
-        if (((wf) this).field_i) {
-            ((wf) this).a(param0, param1, param2);
+        if (this.field_i) {
+            this.a(param0, param1, param2);
         } else {
-            ((wf) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class wf extends ai {
     abstract wf d();
 
     protected wf() {
-        ((wf) this).field_i = true;
+        this.field_i = true;
     }
 }

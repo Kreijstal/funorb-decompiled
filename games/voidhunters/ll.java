@@ -9,12 +9,14 @@ final class ll extends rqa {
     static boolean field_o;
 
     final static int a(int param0) {
-        int var1 = -17;
+        int var1 = 0;
+        var1 = 17 / ((param0 - -41) / 54);
         ho.field_a.a(0);
         if (ff.field_o.e(0)) {
-            return 0;
+          return 0;
+        } else {
+          return vq.g(-6269);
         }
-        return vq.g(-6269);
     }
 
     ll(String param0, Class[] param1, String param2) {
@@ -51,7 +53,7 @@ final class ll extends rqa {
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) frb.a(15, 75));
+            stackOut_2_0 = new nc(frb.a(15, 75));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -59,23 +61,23 @@ final class ll extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ll.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -83,41 +85,54 @@ final class ll extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     public static void e(int param0) {
         field_p = null;
+        if (param0 == 1) {
+            return;
+        }
+        field_o = false;
     }
 
     final static void e(byte param0) {
         Exception exception = null;
         Object var1 = null;
         File var1_ref = null;
+        Object var2 = null;
         Throwable decompiledCaughtException = null;
-        var1 = null;
-        try {
-          L0: {
-            var1_ref = lfb.a(ata.field_L, (byte) 34);
+        L0: {
+          var1 = null;
+          if (param0 == -120) {
             break L0;
+          } else {
+            field_p = (aja) null;
+            break L0;
+          }
+        }
+        try {
+          L1: {
+            var1_ref = lfb.a(ata.field_L, (byte) 34);
+            break L1;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             exception = (Exception) (Object) decompiledCaughtException;
-            break L1;
+            break L2;
           }
         }
         if (var1_ref == null) {
           return;
         } else {
-          exception = (Exception) asa.a(var1_ref, (byte) -48);
+          exception = (Exception) (asa.a(var1_ref, (byte) -48));
           if (!((Object) exception instanceof Hashtable)) {
             return;
           } else {
-            wqb.field_e = (Hashtable) (Object) exception;
+            wqb.field_e = (Hashtable) ((Object) exception);
             return;
           }
         }
@@ -136,6 +151,7 @@ final class ll extends rqa {
         int stackIn_77_0 = 0;
         int stackIn_80_0 = 0;
         int stackIn_82_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_64_0 = 0;
         int stackOut_60_0 = 0;
@@ -150,7 +166,7 @@ final class ll extends rqa {
           L0: {
             ao.field_o = ao.field_o + 65536;
             L1: while (true) {
-              if (jca.a(si.field_r, ao.field_o, (byte) 74) < 65536) {
+              if ((jca.a(si.field_r, ao.field_o, (byte) 74) ^ -1) > -65537) {
                 L2: {
                   var2_int = -1;
                   if (lqa.field_p != null) {
@@ -166,7 +182,7 @@ final class ll extends rqa {
                   }
                 }
                 L3: {
-                  if (var2_int != -1) {
+                  if (0 != (var2_int ^ -1)) {
                     L4: {
                       if (si.field_s <= otb.field_q) {
                         break L4;
@@ -263,7 +279,7 @@ final class ll extends rqa {
                                 }
                               }
                             }
-                            if (oq.field_H <= 586) {
+                            if (-587 <= (oq.field_H ^ -1)) {
                               break L9;
                             } else {
                               if (oq.field_H < 586 + so.field_e.field_q) {
@@ -295,7 +311,7 @@ final class ll extends rqa {
                               if (269 + -so.field_e.field_q >= kc.field_b) {
                                 break L11;
                               } else {
-                                if (kc.field_b >= 269) {
+                                if (-270 >= (kc.field_b ^ -1)) {
                                   break L11;
                                 } else {
                                   otb.field_q = si.field_p;
@@ -323,7 +339,7 @@ final class ll extends rqa {
                     break L8;
                   }
                 }
-                var3 = 1;
+                var3 = 13 % ((param1 - -42) / 37);
                 if (param0) {
                   L12: {
                     nna.field_z.a(pmb.a(-1, qs.field_a, oq.field_H), 5620, pmb.a(-1, uia.field_b, kc.field_b));
@@ -332,14 +348,16 @@ final class ll extends rqa {
                         if (nna.field_z.field_j == 1) {
                           stackOut_64_0 = 2;
                           stackIn_65_0 = stackOut_64_0;
-                          return stackIn_65_0;
+                          decompiledRegionSelector0 = 1;
+                          break L0;
                         } else {
                           break L12;
                         }
                       } else {
                         stackOut_60_0 = 3;
                         stackIn_61_0 = stackOut_60_0;
-                        return stackIn_61_0;
+                        decompiledRegionSelector0 = 0;
+                        break L0;
                       }
                     } else {
                       break L12;
@@ -351,6 +369,7 @@ final class ll extends rqa {
                     if (!ata.e(stackIn_68_0)) {
                       stackOut_81_0 = 0;
                       stackIn_82_0 = stackOut_81_0;
+                      decompiledRegionSelector0 = 5;
                       break L0;
                     } else {
                       L14: {
@@ -359,28 +378,31 @@ final class ll extends rqa {
                           if (0 == nna.field_z.field_j) {
                             stackOut_73_0 = 3;
                             stackIn_74_0 = stackOut_73_0;
-                            return stackIn_74_0;
+                            decompiledRegionSelector0 = 2;
+                            break L0;
                           } else {
-                            if (nna.field_z.field_j != 1) {
+                            if (-2 != (nna.field_z.field_j ^ -1)) {
                               break L14;
                             } else {
                               stackOut_76_0 = 1;
                               stackIn_77_0 = stackOut_76_0;
-                              return stackIn_77_0;
+                              decompiledRegionSelector0 = 3;
+                              break L0;
                             }
                           }
                         } else {
                           break L14;
                         }
                       }
-                      if (pma.field_o != 13) {
+                      if ((pma.field_o ^ -1) != -14) {
                         stackOut_67_0 = 127;
                         stackIn_68_0 = stackOut_67_0;
                         continue L13;
                       } else {
                         stackOut_79_0 = 1;
                         stackIn_80_0 = stackOut_79_0;
-                        return stackIn_80_0;
+                        decompiledRegionSelector0 = 4;
+                        break L0;
                       }
                     }
                   }
@@ -396,16 +418,32 @@ final class ll extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "ll.B(" + param0 + ',' + 40 + ')');
+          throw rta.a((Throwable) ((Object) var2), "ll.B(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_82_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_61_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_65_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_74_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_77_0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_80_0;
+                } else {
+                  return stackIn_82_0;
+                }
+              }
+            }
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = true;
     }
 }

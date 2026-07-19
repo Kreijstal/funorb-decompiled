@@ -7,12 +7,20 @@ final class of {
     static String field_b;
 
     final static void a(int param0, int param1, int param2) {
-        qg.field_a = 240;
-        vg.field_f = 320;
+        qg.field_a = param1;
+        vg.field_f = param0;
+        if (param2 != 11) {
+            of.a(-36);
+        }
     }
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 < 63) {
+            field_b = (String) null;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
@@ -36,10 +44,6 @@ final class of {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "COMPLETE";
         field_b = "EXPANSION ONLY ITEM";
     }

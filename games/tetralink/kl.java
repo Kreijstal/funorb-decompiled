@@ -32,17 +32,20 @@ final class kl extends java.awt.Canvas implements java.awt.event.FocusListener {
     final void a(byte param0, ie param1) {
         try {
             if (param0 <= 33) {
-                Object var4 = null;
-                ((kl) this).paint((java.awt.Graphics) null);
+                java.awt.Graphics var4 = (java.awt.Graphics) null;
+                this.paint((java.awt.Graphics) null);
             }
-            r.a(param1, ((kl) this).field_d, 0);
+            r.a(param1, this.field_d, 0);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "kl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "kl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
         field_e = null;
+        if (param0 >= -87) {
+            return;
+        }
         field_f = null;
         field_g = null;
     }
@@ -55,17 +58,13 @@ final class kl extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            ((kl) this).field_c = true;
+            this.field_c = true;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "kl.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "kl.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Location";
         field_f = "Loading...";
         field_e = "Player Name: ";

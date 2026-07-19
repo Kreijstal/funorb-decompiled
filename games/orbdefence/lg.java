@@ -11,29 +11,29 @@ final class lg {
         int var5_int = 0;
         int var6 = 0;
         String var7 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
         RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         try {
           L0: {
             L1: {
               og.field_n[0] = tl.field_f.nextInt();
               og.field_n[1] = tl.field_f.nextInt();
-              og.field_n[3] = (int)tg.field_a;
-              og.field_n[2] = (int)(tg.field_a >> 32);
+              og.field_n[param0] = (int)tg.field_a;
+              og.field_n[2] = (int)(tg.field_a >> 856570144);
               pg.field_c.field_i = 0;
               pg.field_c.b(og.field_n[0], -1);
               pg.field_c.b(og.field_n[1], -1);
@@ -48,7 +48,12 @@ final class lg {
                 break L1;
               } else {
                 uk.field_b.a(16, -10);
-                break L1;
+                if (!OrbDefence.field_D) {
+                  break L1;
+                } else {
+                  uk.field_b.a(18, -55);
+                  break L1;
+                }
               }
             }
             L2: {
@@ -107,53 +112,56 @@ final class lg {
                 break L7;
               }
             }
-            cg.a((mg) (Object) uk.field_b, pc.field_W, 0, nc.field_ab, pg.field_c);
+            cg.a(uk.field_b, pc.field_W, 0, nc.field_ab, pg.field_c);
             uk.field_b.d(uk.field_b.field_i - var5_int, -2);
-            bh.a(-1, -1);
+            bh.a(-1, param0 + -4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var5;
-            stackOut_18_1 = new StringBuilder().append("lg.E(").append(3).append(',').append(param1).append(',');
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackOut_20_0 = (RuntimeException) (var5);
+            stackOut_20_1 = new StringBuilder().append("lg.E(").append(param0).append(',').append(param1).append(',');
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
             if (param2 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
               break L8;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
               break L8;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param3 + ',' + param4 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static dc a(int param0, boolean param1) {
         dc var2 = new dc();
-        mj.field_m.a(-125, (ca) (Object) var2);
-        tg.a(-87, 4);
+        mj.field_m.a(-125, var2);
+        if (param1) {
+            return (dc) null;
+        }
+        tg.a(-87, param0);
         return var2;
     }
 
     public static void a(int param0) {
         field_c = null;
-        int var1 = -14;
+        int var1 = -14 / ((param0 - 40) / 62);
         field_b = null;
     }
 
@@ -162,18 +170,17 @@ final class lg {
         var2.i(param0, -114);
         var2.a(1, -55);
         var2.a(0, -32);
-        int var3 = 0;
+        int var3 = 56 % ((-11 - param1) / 56);
     }
 
     final static boolean a(byte param0) {
-        return ed.field_b.a(0);
+        if (param0 != -2) {
+            return false;
+        }
+        return ed.field_b.a(param0 + 2);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
     }
 }

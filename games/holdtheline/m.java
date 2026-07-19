@@ -12,13 +12,12 @@ abstract class m {
         field_d = null;
         field_b = null;
         field_c = null;
+        if (!param0) {
+            field_d = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "m.A(";
         field_d = "Open in popup window";
         field_b = "Action";

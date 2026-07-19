@@ -14,51 +14,52 @@ final class cp extends kj {
     private int field_g;
 
     public static void b(int param0) {
+        int discarded$0 = 0;
         field_h = null;
         field_i = null;
         if (param0 != 2092666604) {
-            Object var2 = null;
-            int discarded$0 = cp.a(-67, 118, -41, -44, -77, (double[][]) null, (int[]) null);
+            int[] var2 = (int[]) null;
+            discarded$0 = cp.a(-67, 118, -41, -44, -77, (double[][]) null, (int[]) null);
         }
     }
 
     final void a(int param0, int param1, byte param2) {
-        int var4 = ((cp) this).field_n * param1 >> 12;
-        int var5 = param0 * ((cp) this).field_g >> 12;
-        int var6 = param1 * ((cp) this).field_k >> 12;
-        int var7 = param0 * ((cp) this).field_m >> 12;
-        int var8 = param1 * ((cp) this).field_l >> 12;
-        int var9 = ((cp) this).field_p * param0 >> 12;
-        int var10 = param1 * ((cp) this).field_j >> 12;
+        int var4 = this.field_n * param1 >> -1803631060;
+        int var5 = param0 * this.field_g >> 459677452;
+        int var6 = param1 * this.field_k >> 800781612;
+        int var7 = param0 * this.field_m >> 2092666604;
+        int var8 = param1 * this.field_l >> 293845516;
+        int var9 = this.field_p * param0 >> 516529196;
+        int var10 = param1 * this.field_j >> -1849527732;
         if (param2 != 106) {
-            ((cp) this).field_g = -74;
+            this.field_g = -74;
         }
-        int var11 = param0 * ((cp) this).field_o >> 12;
-        qh.a(var10, 7503, var4, var11, var5, var6, var7, var9, ((cp) this).field_c, var8);
+        int var11 = param0 * this.field_o >> 790401356;
+        qh.a(var10, 7503, var4, var11, var5, var6, var7, var9, this.field_c, var8);
     }
 
     final void a(byte param0, int param1, int param2) {
         if (param0 <= 7) {
-            ((cp) this).a(-123, 3, -45);
+            this.a(-123, 3, -45);
         }
     }
 
     final void a(int param0, int param1, int param2) {
         if (param2 >= -101) {
-            ((cp) this).a(-52, -40, -79);
+            this.a(-52, -40, -79);
         }
     }
 
     cp(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         super(-1, param8, param9);
-        ((cp) this).field_l = param4;
-        ((cp) this).field_g = param1;
-        ((cp) this).field_k = param2;
-        ((cp) this).field_n = param0;
-        ((cp) this).field_j = param6;
-        ((cp) this).field_m = param3;
-        ((cp) this).field_o = param7;
-        ((cp) this).field_p = param5;
+        this.field_l = param4;
+        this.field_g = param1;
+        this.field_k = param2;
+        this.field_n = param0;
+        this.field_j = param6;
+        this.field_m = param3;
+        this.field_o = param7;
+        this.field_p = param5;
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4, double[][] param5, int[] param6) {
@@ -112,7 +113,7 @@ final class cp extends kj {
                   if (param2 < -19) {
                     break L2;
                   } else {
-                    field_h = null;
+                    field_h = (String) null;
                     break L2;
                   }
                 }
@@ -157,23 +158,23 @@ final class cp extends kj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var7 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var7;
+            stackOut_15_0 = (RuntimeException) (var7);
             stackOut_15_1 = new StringBuilder().append("cp.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param5 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -182,23 +183,23 @@ final class cp extends kj {
             }
           }
           L7: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
             stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param6 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L7;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -206,16 +207,12 @@ final class cp extends kj {
               break L7;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
         }
         return stackIn_14_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Torquing";
         field_h = "Email is valid";
     }

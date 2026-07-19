@@ -34,7 +34,7 @@ final class kma extends k {
               if (param2 != 0) {
                 break L1;
               } else {
-                ((kma) this).field_l = param1.e((byte) 60);
+                this.field_l = param1.e((byte) 60);
                 break L1;
               }
             }
@@ -42,7 +42,7 @@ final class kma extends k {
               if (param0 == -71) {
                 break L2;
               } else {
-                field_o = null;
+                field_o = (eaa) null;
                 break L2;
               }
             }
@@ -52,23 +52,23 @@ final class kma extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_0 = (RuntimeException) (var4);
             stackOut_5_1 = new StringBuilder().append("kma.E(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -76,11 +76,14 @@ final class kma extends k {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ')');
         }
     }
 
     final int[][] a(boolean param0, int param1) {
+        int incrementValue$3 = 0;
+        int discarded$4 = 0;
+        int incrementValue$5 = 0;
         int[][] var3 = null;
         int var4 = 0;
         int[] var5 = null;
@@ -93,10 +96,6 @@ final class kma extends k {
         int[][] var12 = null;
         int[][] var13 = null;
         int[][] var14 = null;
-        int[][] var15 = null;
-        int[][] var16 = null;
-        int[][] var17 = null;
-        int[][] var18 = null;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_7_0 = 0;
@@ -117,18 +116,16 @@ final class kma extends k {
         int stackOut_5_1 = 0;
         var11 = BachelorFridge.field_y;
         if (!param0) {
-          var18 = ((kma) this).field_h.a(param1, -858);
-          var16 = var18;
-          var14 = var16;
+          var14 = this.field_h.a(param1, -858);
           var13 = var14;
           var12 = var13;
           var3 = var12;
-          if (((kma) this).field_h.field_b) {
+          if (this.field_h.field_b) {
             L0: {
-              stackOut_20_0 = ((kma) this).field_k;
+              stackOut_20_0 = this.field_k;
               stackIn_22_0 = stackOut_20_0;
               stackIn_21_0 = stackOut_20_0;
-              if (((kma) this).field_q == bi.field_g) {
+              if (this.field_q == bi.field_g) {
                 stackOut_22_0 = stackIn_22_0;
                 stackOut_22_1 = param1;
                 stackIn_23_0 = stackOut_22_0;
@@ -136,26 +133,26 @@ final class kma extends k {
                 break L0;
               } else {
                 stackOut_21_0 = stackIn_21_0;
-                stackOut_21_1 = ((kma) this).field_q * param1 / bi.field_g;
+                stackOut_21_1 = this.field_q * param1 / bi.field_g;
                 stackIn_23_0 = stackOut_21_0;
                 stackIn_23_1 = stackOut_21_1;
                 break L0;
               }
             }
             var4 = stackIn_23_0 * stackIn_23_1;
-            var5 = var18[0];
-            var6 = var18[1];
-            var7 = var18[2];
-            if (hh.field_d == ((kma) this).field_k) {
+            var5 = var14[0];
+            var6 = var14[1];
+            var7 = var14[2];
+            if (hh.field_d == this.field_k) {
               var8 = 0;
               L1: while (true) {
                 if (hh.field_d > var8) {
-                  int incrementValue$3 = var4;
+                  incrementValue$3 = var4;
                   var4++;
-                  var9 = ((kma) this).field_n[incrementValue$3];
-                  var7[var8] = dda.a(4080, var9 << 4);
-                  var6[var8] = dda.a(var9, 65280) >> 4;
-                  var5[var8] = dda.a(4080, var9 >> 12);
+                  var9 = this.field_n[incrementValue$3];
+                  var7[var8] = dda.a(4080, var9 << 442831940);
+                  var6[var8] = dda.a(var9, 65280) >> 330292804;
+                  var5[var8] = dda.a(4080, var9 >> -16962676);
                   var8++;
                   continue L1;
                 } else {
@@ -166,11 +163,11 @@ final class kma extends k {
               var8 = 0;
               L2: while (true) {
                 if (hh.field_d > var8) {
-                  var9 = ((kma) this).field_k * var8 / hh.field_d;
-                  var10 = ((kma) this).field_n[var4 - -var9];
-                  var7[var8] = dda.a(4080, var10 << 4);
-                  var6[var8] = dda.a(var10, 65280) >> 4;
-                  var5[var8] = dda.a(4080, var10 >> 12);
+                  var9 = this.field_k * var8 / hh.field_d;
+                  var10 = this.field_n[var4 - -var9];
+                  var7[var8] = dda.a(4080, var10 << -1404954812);
+                  var6[var8] = dda.a(var10, 65280) >> 787189476;
+                  var5[var8] = dda.a(4080, var10 >> -2082261940);
                   var8++;
                   continue L2;
                 } else {
@@ -182,19 +179,17 @@ final class kma extends k {
             return var3;
           }
         } else {
-          int discarded$4 = ((kma) this).c((byte) 116);
-          var17 = ((kma) this).field_h.a(param1, -858);
-          var15 = var17;
-          var14 = var15;
+          discarded$4 = this.c((byte) 116);
+          var14 = this.field_h.a(param1, -858);
           var13 = var14;
           var12 = var13;
           var3 = var12;
-          if (((kma) this).field_h.field_b) {
+          if (this.field_h.field_b) {
             L3: {
-              stackOut_4_0 = ((kma) this).field_k;
+              stackOut_4_0 = this.field_k;
               stackIn_6_0 = stackOut_4_0;
               stackIn_5_0 = stackOut_4_0;
-              if (((kma) this).field_q == bi.field_g) {
+              if (this.field_q == bi.field_g) {
                 stackOut_6_0 = stackIn_6_0;
                 stackOut_6_1 = param1;
                 stackIn_7_0 = stackOut_6_0;
@@ -202,25 +197,25 @@ final class kma extends k {
                 break L3;
               } else {
                 stackOut_5_0 = stackIn_5_0;
-                stackOut_5_1 = ((kma) this).field_q * param1 / bi.field_g;
+                stackOut_5_1 = this.field_q * param1 / bi.field_g;
                 stackIn_7_0 = stackOut_5_0;
                 stackIn_7_1 = stackOut_5_1;
                 break L3;
               }
             }
             var4 = stackIn_7_0 * stackIn_7_1;
-            var5 = var17[0];
-            var6 = var17[1];
-            var7 = var17[2];
-            if (hh.field_d != ((kma) this).field_k) {
+            var5 = var14[0];
+            var6 = var14[1];
+            var7 = var14[2];
+            if (hh.field_d != this.field_k) {
               var8 = 0;
               L4: while (true) {
                 if (hh.field_d > var8) {
-                  var9 = ((kma) this).field_k * var8 / hh.field_d;
-                  var10 = ((kma) this).field_n[var4 - -var9];
-                  var7[var8] = dda.a(4080, var10 << 4);
-                  var6[var8] = dda.a(var10, 65280) >> 4;
-                  var5[var8] = dda.a(4080, var10 >> 12);
+                  var9 = this.field_k * var8 / hh.field_d;
+                  var10 = this.field_n[var4 - -var9];
+                  var7[var8] = dda.a(4080, var10 << -1404954812);
+                  var6[var8] = dda.a(var10, 65280) >> 787189476;
+                  var5[var8] = dda.a(4080, var10 >> -2082261940);
                   var8++;
                   continue L4;
                 } else {
@@ -233,12 +228,12 @@ final class kma extends k {
                 if (hh.field_d <= var8) {
                   return var3;
                 } else {
-                  int incrementValue$5 = var4;
+                  incrementValue$5 = var4;
                   var4++;
-                  var9 = ((kma) this).field_n[incrementValue$5];
-                  var7[var8] = dda.a(4080, var9 << 4);
-                  var6[var8] = dda.a(var9, 65280) >> 4;
-                  var5[var8] = dda.a(4080, var9 >> 12);
+                  var9 = this.field_n[incrementValue$5];
+                  var7[var8] = dda.a(4080, var9 << 442831940);
+                  var6[var8] = dda.a(var9, 65280) >> 330292804;
+                  var5[var8] = dda.a(4080, var9 >> -16962676);
                   var8++;
                   continue L5;
                 }
@@ -257,12 +252,12 @@ final class kma extends k {
         int stackOut_6_0 = 0;
         if (param1 <= -9) {
           super.a(param0, (byte) -95, param2);
-          if (((kma) this).field_l >= 0) {
+          if (this.field_l >= 0) {
             if (da.field_c == null) {
               return;
             } else {
               L0: {
-                if (da.field_c.c(((kma) this).field_l, 0).field_d) {
+                if (da.field_c.c(this.field_l, 0).field_d) {
                   stackOut_7_0 = 64;
                   stackIn_8_0 = stackOut_7_0;
                   break L0;
@@ -273,9 +268,9 @@ final class kma extends k {
                 }
               }
               var4 = stackIn_8_0;
-              ((kma) this).field_n = da.field_c.a(0, false, var4, 1.0f, ((kma) this).field_l, var4);
-              ((kma) this).field_q = var4;
-              ((kma) this).field_k = var4;
+              this.field_n = da.field_c.a(0, false, var4, 1.0f, this.field_l, var4);
+              this.field_q = var4;
+              this.field_k = var4;
               return;
             }
           } else {
@@ -288,26 +283,27 @@ final class kma extends k {
 
     public kma() {
         super(0, false);
-        ((kma) this).field_l = -1;
+        this.field_l = -1;
     }
 
     final int c(byte param0) {
         if (param0 <= 35) {
             kma.d(-92);
-            return ((kma) this).field_l;
+            return this.field_l;
         }
-        return ((kma) this).field_l;
+        return this.field_l;
     }
 
     final void b(int param0) {
         super.b(param0);
-        ((kma) this).field_n = null;
+        this.field_n = null;
     }
 
     final static void d(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = BachelorFridge.field_y;
         try {
@@ -317,35 +313,47 @@ final class kma extends k {
               var1_int = 0;
               L1: while (true) {
                 if (fj.field_m.length <= var1_int) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  ng.field_f.a((long)fj.field_m[var1_int].toLowerCase().hashCode(), (byte) -114, (bw) (Object) new ji(var1_int));
+                  ng.field_f.a((long)fj.field_m[var1_int].toLowerCase().hashCode(), (byte) -114, new ji(var1_int));
                   var1_int++;
                   continue L1;
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "kma.D(" + param0 + ')');
+          throw pe.a((Throwable) ((Object) var1), "kma.D(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void e(int param0) {
-        field_p = null;
-        field_m = null;
-        field_o = null;
+        if (param0 != -1) {
+          field_p = (String) null;
+          field_p = null;
+          field_m = null;
+          field_o = null;
+          return;
+        } else {
+          field_p = null;
+          field_m = null;
+          field_o = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "Enter name of player to delete from list";
         field_m = "All";
         field_o = new eaa();

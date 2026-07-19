@@ -55,7 +55,7 @@ final class fa extends ne {
             L1: {
               var6_int = 0;
               var7 = 0;
-              if (param3 < 0) {
+              if (-1 < (param3 ^ -1)) {
                 var6_int = var6_int - param3;
                 param4 = param4 + param3;
                 param3 = 0;
@@ -125,10 +125,10 @@ final class fa extends ne {
                 var11 = -1;
                 var12 = -param2;
                 L8: while (true) {
-                  if (var12 >= 0) {
+                  if (-1 >= (var12 ^ -1)) {
                     param5.field_w = var6_int;
                     param5.field_A = var7;
-                    stackOut_28_0 = (cn) param5;
+                    stackOut_28_0 = (cn) (param5);
                     stackIn_29_0 = stackOut_28_0;
                     break L0;
                   } else {
@@ -160,23 +160,23 @@ final class fa extends ne {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var6 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var6;
+            stackOut_30_0 = (RuntimeException) (var6);
             stackOut_30_1 = new StringBuilder().append("fa.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param5 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "null";
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
               break L10;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_33_0 = stackOut_31_0;
               stackIn_33_1 = stackOut_31_1;
@@ -184,38 +184,38 @@ final class fa extends ne {
               break L10;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ')');
         }
         return stackIn_29_0;
     }
 
     public static void a(int param0) {
+        int discarded$0 = 0;
         field_k = null;
         field_m = null;
+        if (param0 != -28822) {
+            discarded$0 = fa.a((byte) -16, -26, 56);
+        }
     }
 
     final void a(int param0, int param1) {
         int var3 = -119 / ((param1 - -68) / 41);
-        ((fa) this).field_l = param0;
-        ((fa) this).field_n.h(128 + oo.field_d * param0 >> 8);
+        this.field_l = param0;
+        this.field_n.h(128 + oo.field_d * param0 >> 1439807272);
     }
 
     fa(ni param0, ne param1) {
         try {
-            ((fa) this).field_n = param0;
-            ((fa) this).field_l = param0.i();
-            ((fa) this).field_o = param1;
-            ((fa) this).field_n.h(oo.field_d * ((fa) this).field_l - -128 >> 8);
+            this.field_n = param0;
+            this.field_l = param0.i();
+            this.field_o = param1;
+            this.field_n.h(oo.field_d * this.field_l - -128 >> 698583976);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Achieved";
         field_k = "A vast pit occupies almost all of this room, except for a narrow ledge. There is no way to gauge its depth. A raider who falls here will continue falling for some time.<br><br>This trap will kill defeated raiders, even if they have abilities that would normally prevent death.";
     }

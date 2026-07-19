@@ -12,15 +12,19 @@ final class aa {
     public static void a(int param0) {
         field_b = null;
         field_e = null;
-        field_c = null;
-        field_a = null;
+        if (param0 != 1) {
+          field_b = (vj) null;
+          field_c = null;
+          field_a = null;
+          return;
+        } else {
+          field_c = null;
+          field_a = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "aa.A(";
         field_a = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
         field_e = new vd();

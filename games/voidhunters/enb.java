@@ -9,14 +9,10 @@ final class enb {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = -21;
+        int var1 = 21 / ((-8 - param0) / 43);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "enb.A(";
         field_c = 1024;
         field_a = "Assassination";

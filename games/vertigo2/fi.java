@@ -18,9 +18,9 @@ final class fi {
             bf.field_a = param1;
             ed.field_t = true;
             df.field_l = new fj(ch.field_e, sg.field_a, param2, tk.field_e, bf.field_a);
-            ch.field_e.b((iq) (Object) df.field_l, 0);
+            ch.field_e.b(df.field_l, param0 ^ param0);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "fi.B(" + 31820 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "fi.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,18 +31,21 @@ final class fi {
                 param0.a(-107);
             }
             int var6 = 118 / ((param2 - -20) / 35);
-            var5 = ((fi) this).field_f[(int)(param1 & (long)(-1 + ((fi) this).field_g))];
+            var5 = this.field_f[(int)(param1 & (long)(-1 + this.field_g))];
             param0.field_p = var5;
             param0.field_o = var5.field_o;
             param0.field_o.field_p = param0;
             param0.field_n = param1;
             param0.field_p.field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "fi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "fi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void c(int param0) {
+        if (param0 != 0) {
+            return;
+        }
         field_j = null;
         field_e = null;
         field_b = null;
@@ -50,6 +53,12 @@ final class fi {
     }
 
     final gp a(byte param0) {
+        gp discarded$6 = null;
+        int fieldTemp$7 = 0;
+        int fieldTemp$8 = 0;
+        gp discarded$9 = null;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
         int var3 = 0;
         gp var4 = null;
         gp var5 = null;
@@ -58,19 +67,19 @@ final class fi {
         gp var58 = null;
         gp var59 = null;
         var3 = Vertigo2.field_L ? 1 : 0;
-        if (((fi) this).field_h <= 0) {
+        if ((this.field_h ^ -1) >= -1) {
           if (param0 != -60) {
-            gp discarded$6 = ((fi) this).a(-90);
+            discarded$6 = this.a(-90);
             L0: while (true) {
-              if (((fi) this).field_g > ((fi) this).field_h) {
-                int fieldTemp$7 = ((fi) this).field_h;
-                ((fi) this).field_h = ((fi) this).field_h + 1;
-                var4 = ((fi) this).field_f[fieldTemp$7].field_p;
+              if (this.field_g > this.field_h) {
+                fieldTemp$7 = this.field_h;
+                this.field_h = this.field_h + 1;
+                var4 = this.field_f[fieldTemp$7].field_p;
                 var59 = var4;
-                if (var4 == ((fi) this).field_f[-1 + ((fi) this).field_h]) {
+                if (var4 == this.field_f[-1 + this.field_h]) {
                   continue L0;
                 } else {
-                  ((fi) this).field_a = var59.field_p;
+                  this.field_a = var59.field_p;
                   return var59;
                 }
               } else {
@@ -79,15 +88,15 @@ final class fi {
             }
           } else {
             L1: while (true) {
-              if (((fi) this).field_g > ((fi) this).field_h) {
-                int fieldTemp$8 = ((fi) this).field_h;
-                ((fi) this).field_h = ((fi) this).field_h + 1;
-                var4 = ((fi) this).field_f[fieldTemp$8].field_p;
+              if (this.field_g > this.field_h) {
+                fieldTemp$8 = this.field_h;
+                this.field_h = this.field_h + 1;
+                var4 = this.field_f[fieldTemp$8].field_p;
                 var58 = var4;
-                if (var4 == ((fi) this).field_f[-1 + ((fi) this).field_h]) {
+                if (var4 == this.field_f[-1 + this.field_h]) {
                   continue L1;
                 } else {
-                  ((fi) this).field_a = var58.field_p;
+                  this.field_a = var58.field_p;
                   return var58;
                 }
               } else {
@@ -96,19 +105,19 @@ final class fi {
             }
           }
         } else {
-          if (((fi) this).field_a == ((fi) this).field_f[((fi) this).field_h - 1]) {
+          if (this.field_a == this.field_f[this.field_h - 1]) {
             if (param0 != -60) {
-              gp discarded$9 = ((fi) this).a(-90);
+              discarded$9 = this.a(-90);
               L2: while (true) {
-                if (((fi) this).field_g > ((fi) this).field_h) {
-                  int fieldTemp$10 = ((fi) this).field_h;
-                  ((fi) this).field_h = ((fi) this).field_h + 1;
-                  var4 = ((fi) this).field_f[fieldTemp$10].field_p;
+                if (this.field_g > this.field_h) {
+                  fieldTemp$10 = this.field_h;
+                  this.field_h = this.field_h + 1;
+                  var4 = this.field_f[fieldTemp$10].field_p;
                   var29 = var4;
-                  if (var4 == ((fi) this).field_f[-1 + ((fi) this).field_h]) {
+                  if (var4 == this.field_f[-1 + this.field_h]) {
                     continue L2;
                   } else {
-                    ((fi) this).field_a = var29.field_p;
+                    this.field_a = var29.field_p;
                     return var29;
                   }
                 } else {
@@ -117,15 +126,15 @@ final class fi {
               }
             } else {
               L3: while (true) {
-                if (((fi) this).field_g > ((fi) this).field_h) {
-                  int fieldTemp$11 = ((fi) this).field_h;
-                  ((fi) this).field_h = ((fi) this).field_h + 1;
-                  var4 = ((fi) this).field_f[fieldTemp$11].field_p;
+                if (this.field_g > this.field_h) {
+                  fieldTemp$11 = this.field_h;
+                  this.field_h = this.field_h + 1;
+                  var4 = this.field_f[fieldTemp$11].field_p;
                   var5 = var4;
-                  if (var4 == ((fi) this).field_f[-1 + ((fi) this).field_h]) {
+                  if (var4 == this.field_f[-1 + this.field_h]) {
                     continue L3;
                   } else {
-                    ((fi) this).field_a = var5.field_p;
+                    this.field_a = var5.field_p;
                     return var5;
                   }
                 } else {
@@ -134,8 +143,8 @@ final class fi {
               }
             }
           } else {
-            var57 = ((fi) this).field_a;
-            ((fi) this).field_a = var57.field_p;
+            var57 = this.field_a;
+            this.field_a = var57.field_p;
             return var57;
           }
         }
@@ -160,6 +169,7 @@ final class fi {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         co stackOut_3_0 = null;
         Object stackOut_1_0 = null;
@@ -181,38 +191,40 @@ final class fi {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var5_int = 0;
+            var5_int = 34 % ((-6 - param4) / 33);
             if (hq.a(124, param0, param3, param1)) {
               stackOut_3_0 = m.a(param2.a(param0, param3, (byte) -103), 0);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
-              return (co) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var5;
+            stackOut_5_0 = (RuntimeException) (var5);
             stackOut_5_1 = new StringBuilder().append("fi.H(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -221,23 +233,23 @@ final class fi {
             }
           }
           L2: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
             stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -245,15 +257,19 @@ final class fi {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param3 + ',' + 70 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ',' + param4 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (co) ((Object) stackIn_2_0);
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final gp b(int param0) {
         int var2 = 59 / ((-72 - param0) / 53);
-        ((fi) this).field_h = 0;
-        return ((fi) this).a((byte) -60);
+        this.field_h = 0;
+        return this.a((byte) -60);
     }
 
     final gp a(int param0, long param1) {
@@ -261,27 +277,27 @@ final class fi {
         gp var5 = null;
         int var6 = 0;
         var6 = Vertigo2.field_L ? 1 : 0;
-        ((fi) this).field_d = param1;
+        this.field_d = param1;
         if (param0 == 3661) {
-          var4 = ((fi) this).field_f[(int)((long)(((fi) this).field_g - 1) & param1)];
-          ((fi) this).field_i = var4.field_p;
+          var4 = this.field_f[(int)((long)(this.field_g - 1) & param1)];
+          this.field_i = var4.field_p;
           L0: while (true) {
-            if (var4 != ((fi) this).field_i) {
-              if (~param1 == ~((fi) this).field_i.field_n) {
-                var5 = ((fi) this).field_i;
-                ((fi) this).field_i = ((fi) this).field_i.field_p;
+            if (var4 != this.field_i) {
+              if ((param1 ^ -1L) == (this.field_i.field_n ^ -1L)) {
+                var5 = this.field_i;
+                this.field_i = this.field_i.field_p;
                 return var5;
               } else {
-                ((fi) this).field_i = ((fi) this).field_i.field_p;
+                this.field_i = this.field_i.field_p;
                 continue L0;
               }
             } else {
-              ((fi) this).field_i = null;
+              this.field_i = null;
               return null;
             }
           }
         } else {
-          return null;
+          return (gp) null;
         }
     }
 
@@ -290,26 +306,26 @@ final class fi {
         gp var3 = null;
         int var4 = 0;
         var4 = Vertigo2.field_L ? 1 : 0;
-        if (null != ((fi) this).field_i) {
+        if (null != this.field_i) {
           if (param0 <= -89) {
-            var2 = ((fi) this).field_f[(int)(((fi) this).field_d & (long)(-1 + ((fi) this).field_g))];
+            var2 = this.field_f[(int)(this.field_d & (long)(-1 + this.field_g))];
             L0: while (true) {
-              if (((fi) this).field_i != var2) {
-                if (~((fi) this).field_i.field_n == ~((fi) this).field_d) {
-                  var3 = ((fi) this).field_i;
-                  ((fi) this).field_i = ((fi) this).field_i.field_p;
+              if (this.field_i != var2) {
+                if ((this.field_i.field_n ^ -1L) == (this.field_d ^ -1L)) {
+                  var3 = this.field_i;
+                  this.field_i = this.field_i.field_p;
                   return var3;
                 } else {
-                  ((fi) this).field_i = ((fi) this).field_i.field_p;
+                  this.field_i = this.field_i.field_p;
                   continue L0;
                 }
               } else {
-                ((fi) this).field_i = null;
+                this.field_i = null;
                 return null;
               }
             }
           } else {
-            return null;
+            return (gp) null;
           }
         } else {
           return null;
@@ -317,17 +333,18 @@ final class fi {
     }
 
     fi(int param0) {
+        gp dupTemp$2 = null;
         int var2 = 0;
         gp var3 = null;
-        ((fi) this).field_h = 0;
-        ((fi) this).field_g = param0;
-        ((fi) this).field_f = new gp[param0];
+        this.field_h = 0;
+        this.field_g = param0;
+        this.field_f = new gp[param0];
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            gp dupTemp$2 = new gp();
+            dupTemp$2 = new gp();
             var3 = dupTemp$2;
-            ((fi) this).field_f[var2] = dupTemp$2;
+            this.field_f[var2] = dupTemp$2;
             var3.field_p = var3;
             var3.field_o = var3;
             var2++;
@@ -339,10 +356,6 @@ final class fi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Average rating";
         field_b = new tj();
     }

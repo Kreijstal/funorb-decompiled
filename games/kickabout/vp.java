@@ -31,12 +31,14 @@ final class vp implements hc {
         int var10 = 0;
         int var11 = 0;
         dd var12 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var11 = Kickabout.field_G;
         try {
           L0: {
             if (param1 == wr.field_l) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 hq.field_a = false;
@@ -45,7 +47,7 @@ final class vp implements hc {
                 if (wr.field_l == 0) {
                   break L1;
                 } else {
-                  if (wr.field_l == 1) {
+                  if ((wr.field_l ^ -1) == -2) {
                     break L1;
                   } else {
                     vf.field_K = new byte[5][][][];
@@ -53,12 +55,21 @@ final class vp implements hc {
                     var3 = 5;
                     var4 = 0;
                     L2: while (true) {
-                      if (var4 >= 5) {
-                        var4 = 0;
+                      if ((var4 ^ -1) <= -6) {
+                        L3: {
+                          var4 = 0;
+                          if (param0 == -4121) {
+                            break L3;
+                          } else {
+                            vp.c(9);
+                            break L3;
+                          }
+                        }
                         var5 = 0;
-                        L3: while (true) {
+                        L4: while (true) {
                           if (var5 >= 5) {
                             hq.field_a = true;
+                            decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
                             var6 = pv.field_I[var5][5];
@@ -66,39 +77,39 @@ final class vp implements hc {
                             var12.a(var7, (byte) -107);
                             cb.field_b[var5] = new byte[8][];
                             var8 = 0;
-                            L4: while (true) {
+                            L5: while (true) {
                               if (var8 >= 8) {
                                 var12.a(var6, (byte) -107);
                                 var8 = (2 + var6.field_e.length) / 3;
                                 vf.field_K[var5] = new byte[var8][8][];
                                 var9 = 0;
-                                L5: while (true) {
+                                L6: while (true) {
                                   if (var9 >= var8) {
                                     var5++;
-                                    continue L3;
+                                    continue L4;
                                   } else {
                                     var12.a(var9 * 3, -39);
                                     var10 = 0;
-                                    L6: while (true) {
-                                      if (var10 >= 8) {
+                                    L7: while (true) {
+                                      if (-9 >= (var10 ^ -1)) {
                                         var4++;
-                                        jm.a(var3, 9863, var4);
+                                        jm.a(var3, param0 + 13984, var4);
                                         var9++;
-                                        continue L5;
+                                        continue L6;
                                       } else {
-                                        kh.a(var5, var12, var10 << 8, false, 2150);
+                                        kh.a(var5, var12, var10 << -1931856088, false, 2150);
                                         vf.field_K[var5][var9][var10] = ge.a(16, vf.field_F);
                                         var10++;
-                                        continue L6;
+                                        continue L7;
                                       }
                                     }
                                   }
                                 }
                               } else {
-                                kh.a(var5, var12, var8 << 8, false, 2150);
+                                kh.a(var5, var12, var8 << 453597256, false, 2150);
                                 cb.field_b[var5][var8] = ge.a(16, vf.field_F);
                                 var8++;
-                                continue L4;
+                                continue L5;
                               }
                             }
                           }
@@ -113,15 +124,25 @@ final class vp implements hc {
                 }
               }
               hq.field_a = true;
-              vf.field_K = null;
-              cb.field_b = null;
-              return;
+              vf.field_K = (byte[][][][]) null;
+              cb.field_b = (byte[][][]) null;
+              decompiledRegionSelector0 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "vp.A(" + -4121 + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) var2), "vp.A(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -184,13 +205,13 @@ final class vp implements hc {
             }
         }
         if (param2 < 0) {
-            field_b = null;
+            field_b = (String) null;
         }
         return -1;
     }
 
     vp() {
-        ((vp) this).field_i = 0;
+        this.field_i = 0;
     }
 
     final static void c(int param0) {
@@ -199,7 +220,7 @@ final class vp implements hc {
         Throwable decompiledCaughtException = null;
         L0: {
           if (null != lw.field_e) {
-            var1 = (Object) (Object) lw.field_e;
+            var1 = lw.field_e;
             synchronized (var1) {
               L1: {
                 lw.field_e = null;
@@ -211,13 +232,21 @@ final class vp implements hc {
             break L0;
           }
         }
+        L2: {
+          if (param0 <= -103) {
+            break L2;
+          } else {
+            field_b = (String) null;
+            break L2;
+          }
+        }
     }
 
     public final void a(int param0, boolean param1) {
-        Object var4 = null;
+        String var4 = null;
         L0: {
           pe.b(0);
-          var4 = null;
+          var4 = (String) null;
           vc.a((String) null, -1);
           if (param0 == -25) {
             break L0;
@@ -262,7 +291,7 @@ final class vp implements hc {
                 break L2;
               }
             }
-            ((vp) this).field_i = ((vp) this).field_i + 1;
+            this.field_i = this.field_i + 1;
             ul.a(true, 300, 320, param1);
             break L1;
           }
@@ -333,8 +362,8 @@ final class vp implements hc {
 
     public final void a(int param0) {
         int var2 = 83 % ((50 - param0) / 45);
-        if (((vp) this).a((byte) 87)) {
-            ei.a((((vp) this).field_i & 8) == 0 ? true : false, false);
+        if (this.a((byte) 87)) {
+            ei.a(-1 == (this.field_i & 8 ^ -1) ? true : false, false);
         }
     }
 
@@ -355,10 +384,6 @@ final class vp implements hc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "Play rated game";
         field_d = "tournament lobby";
         field_o = new ff(8, 0, 4, 1);

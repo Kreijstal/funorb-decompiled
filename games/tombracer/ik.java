@@ -26,84 +26,125 @@ final class ik extends vg {
         if (0 != var6) {
           if (var8 != 0) {
             L0: {
-              var13 = (var8 << 12) / var6;
-              var14 = -(var13 * param1 >> 12) + param5;
-              if (param1 < pka.field_b) {
-                var11 = var14 + (var13 * pka.field_b >> 12);
-                var9 = pka.field_b;
-                break L0;
-              } else {
-                if (param1 <= ss.field_c) {
+              L1: {
+                var13 = (var8 << 1223854252) / var6;
+                var14 = -(var13 * param1 >> 1914499532) + param5;
+                if (param1 < pka.field_b) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (param1 <= ss.field_c) {
+                      break L2;
+                    } else {
+                      var11 = (var13 * ss.field_c >> 1757637740) + var14;
+                      var9 = ss.field_c;
+                      if (var15 == 0) {
+                        break L0;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
                   var9 = param1;
                   var11 = param5;
-                  break L0;
-                } else {
-                  var11 = (var13 * ss.field_c >> 12) + var14;
-                  var9 = ss.field_c;
-                  break L0;
+                  if (var15 == 0) {
+                    break L0;
+                  } else {
+                    break L1;
+                  }
                 }
               }
-            }
-            L1: {
-              if (param0 < pka.field_b) {
-                var12 = var14 + (var13 * pka.field_b >> 12);
-                var10 = pka.field_b;
-                break L1;
-              } else {
-                if (ss.field_c < param0) {
-                  var12 = (ss.field_c * var13 >> 12) + var14;
-                  var10 = ss.field_c;
-                  break L1;
-                } else {
-                  var10 = param0;
-                  var12 = param4;
-                  break L1;
-                }
-              }
-            }
-            L2: {
-              if (gca.field_d <= var11) {
-                if (hc.field_h >= var11) {
-                  break L2;
-                } else {
-                  var11 = hc.field_h;
-                  var9 = (hc.field_h + -var14 << 12) / var13;
-                  break L2;
-                }
-              } else {
-                var9 = (-var14 + gca.field_d << 12) / var13;
-                var11 = gca.field_d;
-                break L2;
-              }
+              var11 = var14 + (var13 * pka.field_b >> -145403028);
+              var9 = pka.field_b;
+              break L0;
             }
             L3: {
-              if (gca.field_d <= var12) {
-                if (var12 > hc.field_h) {
-                  var10 = (hc.field_h - var14 << 12) / var13;
-                  var12 = hc.field_h;
-                  break L3;
+              L4: {
+                if (param0 < pka.field_b) {
+                  break L4;
                 } else {
-                  break L3;
+                  L5: {
+                    if (ss.field_c < param0) {
+                      break L5;
+                    } else {
+                      var10 = param0;
+                      var12 = param4;
+                      if (var15 == 0) {
+                        break L3;
+                      } else {
+                        break L5;
+                      }
+                    }
+                  }
+                  var12 = (ss.field_c * var13 >> 2088900844) + var14;
+                  var10 = ss.field_c;
+                  if (var15 == 0) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
                 }
+              }
+              var12 = var14 + (var13 * pka.field_b >> -1604243636);
+              var10 = pka.field_b;
+              break L3;
+            }
+            L6: {
+              L7: {
+                if (gca.field_d <= var11) {
+                  break L7;
+                } else {
+                  var9 = (-var14 + gca.field_d << 698802348) / var13;
+                  var11 = gca.field_d;
+                  if (var15 == 0) {
+                    break L6;
+                  } else {
+                    break L7;
+                  }
+                }
+              }
+              if (hc.field_h >= var11) {
+                break L6;
               } else {
-                var12 = gca.field_d;
-                var10 = (gca.field_d + -var14 << 12) / var13;
-                break L3;
+                var11 = hc.field_h;
+                var9 = (hc.field_h + -var14 << -191347604) / var13;
+                break L6;
               }
             }
-            ara.a(0, param3, var9, var10, var11, var12);
-            return;
+            L8: {
+              if (gca.field_d <= var12) {
+                break L8;
+              } else {
+                var12 = gca.field_d;
+                var10 = (gca.field_d + -var14 << 62460588) / var13;
+                if (var15 == 0) {
+                  ara.a(0, param3, var9, var10, var11, var12);
+                  return;
+                } else {
+                  break L8;
+                }
+              }
+            }
+            if (var12 > hc.field_h) {
+              var10 = (hc.field_h - var14 << 1642759884) / var13;
+              var12 = hc.field_h;
+              ara.a(0, param3, var9, var10, var11, var12);
+              return;
+            } else {
+              ara.a(0, param3, var9, var10, var11, var12);
+              return;
+            }
           } else {
             rla.a(param0, param1, (byte) -2, param3, param5);
             return;
           }
         } else {
-          L4: {
+          L9: {
             if (var8 != 0) {
               ui.a(param5, 109, param3, param1, param4);
-              break L4;
+              break L9;
             } else {
-              break L4;
+              break L9;
             }
           }
           return;
@@ -111,15 +152,16 @@ final class ik extends vg {
     }
 
     public static void a(byte param0) {
-        int var1 = -6;
+        int var1 = -13 / ((13 - param0) / 45);
         field_j = null;
         field_h = null;
     }
 
     final static roa b(int param0) {
-        roa var1 = new roa();
+        roa var1 = null;
+        var1 = new roa();
         var1.field_f = new up(0, 5);
-        var1.field_f.b(1, 10);
+        var1.field_f.b(param0 ^ -17697, 10);
         var1.field_t = 14;
         var1.field_k = 150;
         var1.field_x = true;
@@ -129,11 +171,20 @@ final class ik extends vg {
         var1.field_h = 40;
         var1.field_m = true;
         var1.field_b = 2;
-        var1.field_c = true;
-        var1.field_l = 524288;
-        var1.field_a = 524288;
-        var1.field_d = 0;
-        return var1;
+        if (param0 != -17698) {
+          ik.a(108, -3, 45, 83, 83, -49);
+          var1.field_c = true;
+          var1.field_l = 524288;
+          var1.field_a = 524288;
+          var1.field_d = 0;
+          return var1;
+        } else {
+          var1.field_c = true;
+          var1.field_l = 524288;
+          var1.field_a = 524288;
+          var1.field_d = 0;
+          return var1;
+        }
     }
 
     final static void a(int param0) {
@@ -146,20 +197,39 @@ final class ik extends vg {
           L0: {
             var1_int = 0;
             L1: while (true) {
-              if (var1_int >= ara.field_xb) {
+              L2: {
+                L3: {
+                  if (var1_int >= ara.field_xb) {
+                    break L3;
+                  } else {
+                    wea.field_d[var1_int] = null;
+                    var1_int++;
+                    if (var2 != 0) {
+                      break L2;
+                    } else {
+                      if (var2 == 0) {
+                        continue L1;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                }
                 ara.field_xb = 0;
+                break L2;
+              }
+              if (param0 == 5) {
                 break L0;
               } else {
-                wea.field_d[var1_int] = null;
-                var1_int++;
-                continue L1;
+                field_j = (String) null;
+                return;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "ik.C(" + 5 + ')');
+          throw tba.a((Throwable) ((Object) var1), "ik.C(" + param0 + ')');
         }
     }
 
@@ -168,10 +238,6 @@ final class ik extends vg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 5;
         field_j = "Resigned";
     }

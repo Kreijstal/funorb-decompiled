@@ -5,6 +5,10 @@ class mg extends rl {
     int[] field_B;
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -34,7 +38,7 @@ class mg extends rl {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
                 param2 = param1[incrementValue$4];
                 if (param2 == 0) {
@@ -53,13 +57,13 @@ class mg extends rl {
                         break L2;
                       } else {
                         if (var17 > 128) {
-                          int incrementValue$5 = param4;
+                          incrementValue$5 = param4;
                           param4++;
                           param0[incrementValue$5] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
                           var16++;
                           continue L1;
                         } else {
-                          int incrementValue$6 = param4;
+                          incrementValue$6 = param4;
                           param4++;
                           param0[incrementValue$6] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
                           var16++;
@@ -68,7 +72,7 @@ class mg extends rl {
                       }
                     }
                   }
-                  int incrementValue$7 = param4;
+                  incrementValue$7 = param4;
                   param4++;
                   param0[incrementValue$7] = param2;
                   var16++;
@@ -81,6 +85,8 @@ class mg extends rl {
     }
 
     private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -99,7 +105,7 @@ class mg extends rl {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$14 = param4;
+                incrementValue$14 = param4;
                 param4++;
                 param3 = param2[incrementValue$14];
                 if (param3 != 0) {
@@ -108,7 +114,7 @@ class mg extends rl {
                     var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
                     var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
                     var14 = (param3 & 255) * (param0 & 255) >>> 8;
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param1[incrementValue$15] = (var12 << 16) + (var13 << 8) + var14;
                     var11++;
@@ -130,30 +136,33 @@ class mg extends rl {
     }
 
     final void a() {
-        int var3 = 0;
         int var4 = 0;
-        int[] var1 = new int[((mg) this).field_w * ((mg) this).field_p];
+        int incrementValue$0 = 0;
+        int var3 = 0;
+        int[] var1 = new int[this.field_w * this.field_p];
         int var2 = 0;
-        for (var3 = 0; var3 < ((mg) this).field_w; var3++) {
-            for (var4 = ((mg) this).field_p - 1; var4 >= 0; var4--) {
-                int incrementValue$0 = var2;
+        for (var3 = 0; var3 < this.field_w; var3++) {
+            for (var4 = this.field_p - 1; var4 >= 0; var4--) {
+                incrementValue$0 = var2;
                 var2++;
-                var1[incrementValue$0] = ((mg) this).field_B[var3 + var4 * ((mg) this).field_w];
+                var1[incrementValue$0] = this.field_B[var3 + var4 * this.field_w];
             }
         }
-        ((mg) this).field_B = var1;
-        var3 = ((mg) this).field_x;
-        ((mg) this).field_x = ((mg) this).field_r;
-        ((mg) this).field_r = ((mg) this).field_z - ((mg) this).field_p - var3;
-        var3 = ((mg) this).field_p;
-        ((mg) this).field_p = ((mg) this).field_w;
-        ((mg) this).field_w = var3;
-        var3 = ((mg) this).field_z;
-        ((mg) this).field_z = ((mg) this).field_u;
-        ((mg) this).field_u = var3;
+        this.field_B = var1;
+        var3 = this.field_x;
+        this.field_x = this.field_r;
+        this.field_r = this.field_z - this.field_p - var3;
+        var3 = this.field_p;
+        this.field_p = this.field_w;
+        this.field_w = var3;
+        var3 = this.field_z;
+        this.field_z = this.field_u;
+        this.field_u = var3;
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -172,7 +181,7 @@ class mg extends rl {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -181,7 +190,7 @@ class mg extends rl {
                   continue L1;
                 } else {
                   var13 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -202,12 +211,12 @@ class mg extends rl {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((mg) this).field_r;
-          param1 = param1 + ((mg) this).field_x;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_x;
           var4 = param0 + param1 * df.field_e;
           var5 = 0;
-          var6 = ((mg) this).field_p;
-          var7 = ((mg) this).field_w;
+          var6 = this.field_p;
+          var7 = this.field_w;
           var8 = df.field_e - var7;
           var9 = 0;
           if (param1 >= df.field_g) {
@@ -258,7 +267,7 @@ class mg extends rl {
           return;
         } else {
           if (var6 > 0) {
-            mg.a(df.field_d, ((mg) this).field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+            mg.a(df.field_d, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -275,12 +284,12 @@ class mg extends rl {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((mg) this).field_r;
-          param1 = param1 + ((mg) this).field_x;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_x;
           var4 = param0 + param1 * df.field_e;
           var5 = 0;
-          var6 = ((mg) this).field_p;
-          var7 = ((mg) this).field_w;
+          var6 = this.field_p;
+          var7 = this.field_w;
           var8 = df.field_e - var7;
           var9 = 0;
           if (param1 >= df.field_g) {
@@ -331,7 +340,7 @@ class mg extends rl {
           return;
         } else {
           if (var6 > 0) {
-            mg.a(df.field_d, ((mg) this).field_B, param2, var5, var4, var7, var6, var8, var9);
+            mg.a(df.field_d, this.field_B, param2, var5, var4, var7, var6, var8, var9);
             return;
           } else {
             return;
@@ -340,6 +349,16 @@ class mg extends rl {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -361,14 +380,14 @@ class mg extends rl {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     if (param1[incrementValue$218] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -378,52 +397,52 @@ class mg extends rl {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   if (param1[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   if (param1[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   if (param1[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 if (param1[incrementValue$226] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -470,19 +489,19 @@ class mg extends rl {
         int var40 = 0;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((mg) this).field_r << 4);
-            param1 = param1 - (((mg) this).field_x << 4);
+            param0 = param0 - (this.field_r << 4);
+            param1 = param1 - (this.field_x << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((mg) this).field_w << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((mg) this).field_w << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((mg) this).field_p << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((mg) this).field_p << 4) - param1) * var10;
-            var17 = ((((mg) this).field_w << 4) - param0) * var10 + ((((mg) this).field_p << 4) - param1) * var9;
-            var18 = -((((mg) this).field_w << 4) - param0) * var9 + ((((mg) this).field_p << 4) - param1) * var10;
+            var13 = ((this.field_w << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_w << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_p << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_p << 4) - param1) * var10;
+            var17 = ((this.field_w << 4) - param0) * var10 + ((this.field_p << 4) - param1) * var9;
+            var18 = -((this.field_w << 4) - param0) * var9 + ((this.field_p << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -691,11 +710,11 @@ class mg extends rl {
                                     break L20;
                                   } else {
                                     var33 = var37 >> 12;
-                                    if (var37 >> 12 >= ((mg) this).field_w) {
+                                    if (var37 >> 12 >= this.field_w) {
                                       break L20;
                                     } else {
                                       var34 = var38 >> 12;
-                                      if (var38 >> 12 < ((mg) this).field_p) {
+                                      if (var38 >> 12 < this.field_p) {
                                         this.a(var23, var33, var34, var37, var38);
                                         var39++;
                                         var37 = var37 + var28;
@@ -757,7 +776,7 @@ class mg extends rl {
                           } else {
                             L24: {
                               var40 = 0;
-                              var35 = var38 - (((mg) this).field_p << 12);
+                              var35 = var38 - (this.field_p << 12);
                               if (var35 >= 0) {
                                 if (var27 != 0) {
                                   var35 = (var27 - var35) / var27;
@@ -788,7 +807,7 @@ class mg extends rl {
                                       break L26;
                                     } else {
                                       var33 = var37 >> 12;
-                                      if (var37 >> 12 < ((mg) this).field_w) {
+                                      if (var37 >> 12 < this.field_w) {
                                         var34 = var38 >> 12;
                                         this.a(var23, var33, var34, var37, var38);
                                         var39++;
@@ -828,7 +847,7 @@ class mg extends rl {
                           var38 = var32 + (var29 * var27 >> 4);
                           var39 = var20;
                           var40 = 0;
-                          var35 = var37 - (((mg) this).field_w << 12);
+                          var35 = var37 - (this.field_w << 12);
                           if (var35 >= 0) {
                             if (var28 != 0) {
                               var35 = (var28 - var35) / var28;
@@ -884,7 +903,7 @@ class mg extends rl {
                                       break L32;
                                     } else {
                                       var34 = var38 >> 12;
-                                      if (var38 >> 12 < ((mg) this).field_p) {
+                                      if (var38 >> 12 < this.field_p) {
                                         var33 = var37 >> 12;
                                         this.a(var23, var33, var34, var37, var38);
                                         var39++;
@@ -922,7 +941,7 @@ class mg extends rl {
                           var38 = var32 + (var29 * var27 >> 4);
                           var39 = var20;
                           var40 = 0;
-                          var35 = var37 - (((mg) this).field_w << 12);
+                          var35 = var37 - (this.field_w << 12);
                           if (var35 >= 0) {
                             if (var28 != 0) {
                               var35 = (var28 - var35) / var28;
@@ -947,7 +966,7 @@ class mg extends rl {
                           } else {
                             L36: {
                               var40 = 0;
-                              var35 = var38 - (((mg) this).field_p << 12);
+                              var35 = var38 - (this.field_p << 12);
                               if (var35 >= 0) {
                                 if (var27 != 0) {
                                   var35 = (var27 - var35) / var27;
@@ -1047,7 +1066,7 @@ class mg extends rl {
         int stackOut_24_0 = 0;
         int stackOut_23_0 = 0;
         L0: {
-          var6 = param2 * ((mg) this).field_w + param1;
+          var6 = param2 * this.field_w + param1;
           param3 = param3 & 4095;
           param4 = param4 & 4095;
           if (param2 < 0) {
@@ -1064,7 +1083,7 @@ class mg extends rl {
                 break L1;
               } else {
                 L2: {
-                  var7 = ((mg) this).field_B[var6];
+                  var7 = this.field_B[var6];
                   if (var7 == 0) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
@@ -1079,13 +1098,13 @@ class mg extends rl {
                 break L1;
               }
             }
-            if (param1 >= ((mg) this).field_w - 1) {
+            if (param1 >= this.field_w - 1) {
               var12 = 0;
               var8 = 0;
               break L0;
             } else {
               L3: {
-                var8 = ((mg) this).field_B[var6 + 1];
+                var8 = this.field_B[var6 + 1];
                 if (var8 == 0) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
@@ -1102,7 +1121,7 @@ class mg extends rl {
           }
         }
         L4: {
-          if (param2 >= ((mg) this).field_p - 1) {
+          if (param2 >= this.field_p - 1) {
             var14 = 0;
             var13 = 0;
             var10 = 0;
@@ -1116,7 +1135,7 @@ class mg extends rl {
                 break L5;
               } else {
                 L6: {
-                  var9 = ((mg) this).field_B[var6 + ((mg) this).field_w];
+                  var9 = this.field_B[var6 + this.field_w];
                   if (var9 == 0) {
                     stackOut_18_0 = 0;
                     stackIn_19_0 = stackOut_18_0;
@@ -1131,13 +1150,13 @@ class mg extends rl {
                 break L5;
               }
             }
-            if (param1 >= ((mg) this).field_w - 1) {
+            if (param1 >= this.field_w - 1) {
               var14 = 0;
               var10 = 0;
               break L4;
             } else {
               L7: {
-                var10 = ((mg) this).field_B[var6 + ((mg) this).field_w + 1];
+                var10 = this.field_B[var6 + this.field_w + 1];
                 if (var10 == 0) {
                   stackOut_24_0 = 0;
                   stackIn_25_0 = stackOut_24_0;
@@ -1208,12 +1227,12 @@ class mg extends rl {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((mg) this).field_r;
-          param1 = param1 + ((mg) this).field_x;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_x;
           var3 = param0 + param1 * df.field_e;
           var4 = 0;
-          var5 = ((mg) this).field_p;
-          var6 = ((mg) this).field_w;
+          var5 = this.field_p;
+          var6 = this.field_w;
           var7 = df.field_e - var6;
           var8 = 0;
           if (param1 >= df.field_g) {
@@ -1264,7 +1283,7 @@ class mg extends rl {
           return;
         } else {
           if (var5 > 0) {
-            mg.b(df.field_d, ((mg) this).field_B, 0, var4, var3, var6, var5, var7, var8);
+            mg.b(df.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -1273,6 +1292,8 @@ class mg extends rl {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -1286,7 +1307,7 @@ class mg extends rl {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -1300,7 +1321,7 @@ class mg extends rl {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -1314,14 +1335,14 @@ class mg extends rl {
 
     final mg d() {
         int var3 = 0;
-        mg var1 = new mg(((mg) this).field_w, ((mg) this).field_p);
-        var1.field_u = ((mg) this).field_u;
-        var1.field_z = ((mg) this).field_z;
-        var1.field_r = ((mg) this).field_r;
-        var1.field_x = ((mg) this).field_x;
-        int var2 = ((mg) this).field_B.length;
+        mg var1 = new mg(this.field_w, this.field_p);
+        var1.field_u = this.field_u;
+        var1.field_z = this.field_z;
+        var1.field_r = this.field_r;
+        var1.field_x = this.field_x;
+        int var2 = this.field_B.length;
         for (var3 = 0; var3 < var2; var3++) {
-            var1.field_B[var3] = ((mg) this).field_B[var3];
+            var1.field_B[var3] = this.field_B[var3];
         }
         return var1;
     }
@@ -1329,35 +1350,45 @@ class mg extends rl {
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
             var9 = param3 + param4 - 3;
             while (param3 < var9) {
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 param0[incrementValue$0] = param1[incrementValue$1];
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
-                int incrementValue$3 = param2;
+                incrementValue$3 = param2;
                 param2++;
                 param0[incrementValue$2] = param1[incrementValue$3];
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
-                int incrementValue$5 = param2;
+                incrementValue$5 = param2;
                 param2++;
                 param0[incrementValue$4] = param1[incrementValue$5];
-                int incrementValue$6 = param3;
+                incrementValue$6 = param3;
                 param3++;
-                int incrementValue$7 = param2;
+                incrementValue$7 = param2;
                 param2++;
                 param0[incrementValue$6] = param1[incrementValue$7];
             }
             var9 += 3;
             while (param3 < var9) {
-                int incrementValue$8 = param3;
+                incrementValue$8 = param3;
                 param3++;
-                int incrementValue$9 = param2;
+                incrementValue$9 = param2;
                 param2++;
                 param0[incrementValue$8] = param1[incrementValue$9];
             }
@@ -1369,21 +1400,21 @@ class mg extends rl {
     final mg c() {
         int var2 = 0;
         int var3 = 0;
-        mg var1 = new mg(((mg) this).field_w, ((mg) this).field_p);
-        var1.field_u = ((mg) this).field_u;
-        var1.field_z = ((mg) this).field_z;
-        var1.field_r = ((mg) this).field_u - ((mg) this).field_w - ((mg) this).field_r;
-        var1.field_x = ((mg) this).field_x;
-        for (var2 = 0; var2 < ((mg) this).field_p; var2++) {
-            for (var3 = 0; var3 < ((mg) this).field_w; var3++) {
-                var1.field_B[var2 * ((mg) this).field_w + var3] = ((mg) this).field_B[var2 * ((mg) this).field_w + ((mg) this).field_w - 1 - var3];
+        mg var1 = new mg(this.field_w, this.field_p);
+        var1.field_u = this.field_u;
+        var1.field_z = this.field_z;
+        var1.field_r = this.field_u - this.field_w - this.field_r;
+        var1.field_x = this.field_x;
+        for (var2 = 0; var2 < this.field_p; var2++) {
+            for (var3 = 0; var3 < this.field_w; var3++) {
+                var1.field_B[var2 * this.field_w + var3] = this.field_B[var2 * this.field_w + this.field_w - 1 - var3];
             }
         }
         return var1;
     }
 
     final void b() {
-        df.a(((mg) this).field_B, ((mg) this).field_w, ((mg) this).field_p);
+        df.a(this.field_B, this.field_w, this.field_p);
     }
 
     void e(int param0, int param1, int param2) {
@@ -1395,12 +1426,12 @@ class mg extends rl {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((mg) this).field_r;
-          param1 = param1 + ((mg) this).field_x;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_x;
           var4 = param0 + param1 * df.field_e;
           var5 = 0;
-          var6 = ((mg) this).field_p;
-          var7 = ((mg) this).field_w;
+          var6 = this.field_p;
+          var7 = this.field_w;
           var8 = df.field_e - var7;
           var9 = 0;
           if (param1 >= df.field_g) {
@@ -1453,10 +1484,10 @@ class mg extends rl {
           if (var6 > 0) {
             L4: {
               if (param2 != 256) {
-                mg.a(0, 0, 0, df.field_d, ((mg) this).field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+                mg.a(0, 0, 0, df.field_d, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
                 break L4;
               } else {
-                mg.a(0, 0, 0, df.field_d, ((mg) this).field_B, var5, 0, var4, 0, var7, var6, var8, var9);
+                mg.a(0, 0, 0, df.field_d, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9);
                 break L4;
               }
             }
@@ -1498,15 +1529,15 @@ class mg extends rl {
         int var32 = 0;
         int var33 = 0;
         L0: {
-          if (param2 > ((mg) this).field_u) {
+          if (param2 > this.field_u) {
             break L0;
           } else {
-            if (param3 <= ((mg) this).field_z) {
+            if (param3 <= this.field_z) {
               L1: {
-                var5 = param0 + ((mg) this).field_r * param2 / ((mg) this).field_u;
-                var6 = param0 + ((((mg) this).field_r + ((mg) this).field_w) * param2 + ((mg) this).field_u - 1) / ((mg) this).field_u;
-                var7 = param1 + ((mg) this).field_x * param3 / ((mg) this).field_z;
-                var8 = param1 + ((((mg) this).field_x + ((mg) this).field_p) * param3 + ((mg) this).field_z - 1) / ((mg) this).field_z;
+                var5 = param0 + this.field_r * param2 / this.field_u;
+                var6 = param0 + ((this.field_r + this.field_w) * param2 + this.field_u - 1) / this.field_u;
+                var7 = param1 + this.field_x * param3 / this.field_z;
+                var8 = param1 + ((this.field_x + this.field_p) * param3 + this.field_z - 1) / this.field_z;
                 if (var5 >= df.field_i) {
                   break L1;
                 } else {
@@ -1558,10 +1589,10 @@ class mg extends rl {
                         } else {
                           var13 = var12 - param0 << 4;
                           var14 = var11 - param1 << 4;
-                          var15 = var13 * ((mg) this).field_u / param2 - (((mg) this).field_r << 4);
-                          var16 = (var13 + 16) * ((mg) this).field_u / param2 - (((mg) this).field_r << 4);
-                          var17 = var14 * ((mg) this).field_z / param3 - (((mg) this).field_x << 4);
-                          var18 = (var14 + 16) * ((mg) this).field_z / param3 - (((mg) this).field_x << 4);
+                          var15 = var13 * this.field_u / param2 - (this.field_r << 4);
+                          var16 = (var13 + 16) * this.field_u / param2 - (this.field_r << 4);
+                          var17 = var14 * this.field_z / param3 - (this.field_x << 4);
+                          var18 = (var14 + 16) * this.field_z / param3 - (this.field_x << 4);
                           var19 = (var16 - var15) * (var18 - var17);
                           if (var19 != 0) {
                             L7: {
@@ -1573,10 +1604,10 @@ class mg extends rl {
                               }
                             }
                             L8: {
-                              if (var16 <= ((mg) this).field_w << 4) {
+                              if (var16 <= this.field_w << 4) {
                                 break L8;
                               } else {
-                                var16 = ((mg) this).field_w << 4;
+                                var16 = this.field_w << 4;
                                 break L8;
                               }
                             }
@@ -1589,10 +1620,10 @@ class mg extends rl {
                               }
                             }
                             L10: {
-                              if (var18 <= ((mg) this).field_p << 4) {
+                              if (var18 <= this.field_p << 4) {
                                 break L10;
                               } else {
-                                var18 = ((mg) this).field_p << 4;
+                                var18 = this.field_p << 4;
                                 break L10;
                               }
                             }
@@ -1663,7 +1694,7 @@ class mg extends rl {
                                     continue L11;
                                   } else {
                                     L17: {
-                                      var32 = ((mg) this).field_B[var29 * ((mg) this).field_w + var31];
+                                      var32 = this.field_B[var29 * this.field_w + var31];
                                       if (var32 != 0) {
                                         break L17;
                                       } else {
@@ -1725,12 +1756,12 @@ class mg extends rl {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((mg) this).field_r;
-          param1 = param1 + ((mg) this).field_x;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_x;
           var3 = param0 + param1 * df.field_e;
           var4 = 0;
-          var5 = ((mg) this).field_p;
-          var6 = ((mg) this).field_w;
+          var5 = this.field_p;
+          var6 = this.field_w;
           var7 = df.field_e - var6;
           var8 = 0;
           if (param1 >= df.field_g) {
@@ -1781,7 +1812,7 @@ class mg extends rl {
           return;
         } else {
           if (var5 > 0) {
-            mg.a(0, df.field_d, ((mg) this).field_B, 0, var4, var3, var6, var5, var7, var8);
+            mg.a(0, df.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -1790,16 +1821,18 @@ class mg extends rl {
     }
 
     mg(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        ((mg) this).field_u = param0;
-        ((mg) this).field_z = param1;
-        ((mg) this).field_r = param2;
-        ((mg) this).field_x = param3;
-        ((mg) this).field_w = param4;
-        ((mg) this).field_p = param5;
-        ((mg) this).field_B = param6;
+        this.field_u = param0;
+        this.field_z = param1;
+        this.field_r = param2;
+        this.field_x = param3;
+        this.field_w = param4;
+        this.field_p = param5;
+        this.field_B = param6;
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -1813,7 +1846,7 @@ class mg extends rl {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -1825,7 +1858,7 @@ class mg extends rl {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -1846,12 +1879,12 @@ class mg extends rl {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((mg) this).field_r;
-          param1 = param1 + ((mg) this).field_x;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_x;
           var4 = param0 + param1 * df.field_e;
           var5 = 0;
-          var6 = ((mg) this).field_p;
-          var7 = ((mg) this).field_w;
+          var6 = this.field_p;
+          var7 = this.field_w;
           var8 = df.field_e - var7;
           var9 = 0;
           if (param1 >= df.field_g) {
@@ -1902,7 +1935,7 @@ class mg extends rl {
           return;
         } else {
           if (var6 > 0) {
-            mg.b(df.field_d, ((mg) this).field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+            mg.b(df.field_d, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -1940,15 +1973,15 @@ class mg extends rl {
         int var31 = 0;
         int var32 = 0;
         L0: {
-          if (param2 > ((mg) this).field_u) {
+          if (param2 > this.field_u) {
             break L0;
           } else {
-            if (param3 <= ((mg) this).field_z) {
+            if (param3 <= this.field_z) {
               L1: {
-                var5 = param0 + ((mg) this).field_r * param2 / ((mg) this).field_u;
-                var6 = param0 + ((((mg) this).field_r + ((mg) this).field_w) * param2 + ((mg) this).field_u - 1) / ((mg) this).field_u;
-                var7 = param1 + ((mg) this).field_x * param3 / ((mg) this).field_z;
-                var8 = param1 + ((((mg) this).field_x + ((mg) this).field_p) * param3 + ((mg) this).field_z - 1) / ((mg) this).field_z;
+                var5 = param0 + this.field_r * param2 / this.field_u;
+                var6 = param0 + ((this.field_r + this.field_w) * param2 + this.field_u - 1) / this.field_u;
+                var7 = param1 + this.field_x * param3 / this.field_z;
+                var8 = param1 + ((this.field_x + this.field_p) * param3 + this.field_z - 1) / this.field_z;
                 if (var5 >= df.field_i) {
                   break L1;
                 } else {
@@ -2000,10 +2033,10 @@ class mg extends rl {
                         } else {
                           var13 = var12 - param0 << 4;
                           var14 = var11 - param1 << 4;
-                          var15 = var13 * ((mg) this).field_u / param2 - (((mg) this).field_r << 4);
-                          var16 = (var13 + 16) * ((mg) this).field_u / param2 - (((mg) this).field_r << 4);
-                          var17 = var14 * ((mg) this).field_z / param3 - (((mg) this).field_x << 4);
-                          var18 = (var14 + 16) * ((mg) this).field_z / param3 - (((mg) this).field_x << 4);
+                          var15 = var13 * this.field_u / param2 - (this.field_r << 4);
+                          var16 = (var13 + 16) * this.field_u / param2 - (this.field_r << 4);
+                          var17 = var14 * this.field_z / param3 - (this.field_x << 4);
+                          var18 = (var14 + 16) * this.field_z / param3 - (this.field_x << 4);
                           var19 = (var16 - var15) * (var18 - var17) >> 1;
                           if (var19 != 0) {
                             L7: {
@@ -2015,10 +2048,10 @@ class mg extends rl {
                               }
                             }
                             L8: {
-                              if (var16 <= ((mg) this).field_w << 4) {
+                              if (var16 <= this.field_w << 4) {
                                 break L8;
                               } else {
-                                var16 = ((mg) this).field_w << 4;
+                                var16 = this.field_w << 4;
                                 break L8;
                               }
                             }
@@ -2031,10 +2064,10 @@ class mg extends rl {
                               }
                             }
                             L10: {
-                              if (var18 <= ((mg) this).field_p << 4) {
+                              if (var18 <= this.field_p << 4) {
                                 break L10;
                               } else {
-                                var18 = ((mg) this).field_p << 4;
+                                var18 = this.field_p << 4;
                                 break L10;
                               }
                             }
@@ -2098,7 +2131,7 @@ class mg extends rl {
                                     var28++;
                                     continue L11;
                                   } else {
-                                    var31 = ((mg) this).field_B[var28 * ((mg) this).field_w + var30];
+                                    var31 = this.field_B[var28 * this.field_w + var30];
                                     if (var31 != 0) {
                                       L16: {
                                         var32 = var29;
@@ -2150,16 +2183,26 @@ class mg extends rl {
     }
 
     mg(int param0, int param1) {
-        ((mg) this).field_B = new int[param0 * param1];
-        ((mg) this).field_u = param0;
-        ((mg) this).field_w = param0;
-        ((mg) this).field_z = param1;
-        ((mg) this).field_p = param1;
-        ((mg) this).field_x = 0;
-        ((mg) this).field_r = 0;
+        this.field_B = new int[param0 * param1];
+        this.field_u = param0;
+        this.field_w = param0;
+        this.field_z = param1;
+        this.field_p = param1;
+        this.field_x = 0;
+        this.field_r = 0;
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -2181,7 +2224,7 @@ class mg extends rl {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     param2 = param1[incrementValue$218];
                     if (param2 == 0) {
@@ -2189,7 +2232,7 @@ class mg extends rl {
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -2199,48 +2242,48 @@ class mg extends rl {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 param2 = param1[incrementValue$226];
                 if (param2 == 0) {
@@ -2248,7 +2291,7 @@ class mg extends rl {
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -2261,6 +2304,7 @@ class mg extends rl {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int incrementValue$1 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -2333,7 +2377,7 @@ class mg extends rl {
                     break L5;
                   }
                 }
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 df.field_d[incrementValue$1] = (var13 & 66847740 | var14 & 261120) >> 2;
                 var9++;
@@ -2346,16 +2390,17 @@ class mg extends rl {
     }
 
     void e(int param0, int param1) {
-        param0 = param0 + (((mg) this).field_r >> 1);
-        param1 = param1 + (((mg) this).field_x >> 1);
+        param0 = param0 + (this.field_r >> 1);
+        param1 = param1 + (this.field_x >> 1);
         int var3 = param0 < df.field_i ? df.field_i - param0 << 1 : 0;
-        int var4 = param0 + (((mg) this).field_w >> 1) > df.field_k ? df.field_k - param0 << 1 : ((mg) this).field_w;
+        int var4 = param0 + (this.field_w >> 1) > df.field_k ? df.field_k - param0 << 1 : this.field_w;
         int var5 = param1 < df.field_g ? df.field_g - param1 << 1 : 0;
-        int var6 = param1 + (((mg) this).field_p >> 1) > df.field_h ? df.field_h - param1 << 1 : ((mg) this).field_p;
-        mg.a(((mg) this).field_B, var5 * ((mg) this).field_w + var3, (param1 + (var5 >> 1)) * df.field_e + (param0 + (var3 >> 1)), (((mg) this).field_w << 1) - (var4 - var3) + (((mg) this).field_w & 1), df.field_e - (var4 - var3 >> 1), ((mg) this).field_w, var4 - var3 >> 1, var6 - var5 >> 1);
+        int var6 = param1 + (this.field_p >> 1) > df.field_h ? df.field_h - param1 << 1 : this.field_p;
+        mg.a(this.field_B, var5 * this.field_w + var3, (param1 + (var5 >> 1)) * df.field_e + (param0 + (var3 >> 1)), (this.field_w << 1) - (var4 - var3) + (this.field_w & 1), df.field_e - (var4 - var3 >> 1), this.field_w, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     mg(byte[] param0, java.awt.Component param1) {
+        boolean discarded$1 = false;
         InterruptedException var3 = null;
         java.awt.Image var3_ref = null;
         java.awt.MediaTracker var4 = null;
@@ -2367,18 +2412,18 @@ class mg extends rl {
             var4 = new java.awt.MediaTracker(param1);
             var4.addImage(var3_ref, 0);
             var4.waitForAll();
-            ((mg) this).field_w = var3_ref.getWidth((java.awt.image.ImageObserver) (Object) param1);
-            ((mg) this).field_p = var3_ref.getHeight((java.awt.image.ImageObserver) (Object) param1);
-            ((mg) this).field_u = ((mg) this).field_w;
-            ((mg) this).field_z = ((mg) this).field_p;
-            ((mg) this).field_r = 0;
-            ((mg) this).field_x = 0;
-            ((mg) this).field_B = new int[((mg) this).field_w * ((mg) this).field_p];
-            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, ((mg) this).field_w, ((mg) this).field_p, ((mg) this).field_B, 0, ((mg) this).field_w);
-            boolean discarded$1 = var5.grabPixels();
+            this.field_w = var3_ref.getWidth((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_p = var3_ref.getHeight((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_u = this.field_w;
+            this.field_z = this.field_p;
+            this.field_r = 0;
+            this.field_x = 0;
+            this.field_B = new int[this.field_w * this.field_p];
+            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, this.field_w, this.field_p, this.field_B, 0, this.field_w);
+            discarded$1 = var5.grabPixels();
             break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = (InterruptedException) (Object) decompiledCaughtException;
@@ -2388,6 +2433,9 @@ class mg extends rl {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$403 = 0;
+        int incrementValue$404 = 0;
+        int incrementValue$405 = 0;
         int var12 = 0;
         int var13 = 0;
         var12 = param11 & 16711935;
@@ -2405,7 +2453,7 @@ class mg extends rl {
                 param6++;
                 continue L0;
               } else {
-                int incrementValue$403 = param3;
+                incrementValue$403 = param3;
                 param3++;
                 param2 = param1[incrementValue$403];
                 if (param2 == 0) {
@@ -2414,14 +2462,14 @@ class mg extends rl {
                   continue L1;
                 } else {
                   if (param2 >> 8 != (param2 & 65535)) {
-                    int incrementValue$404 = param4;
+                    incrementValue$404 = param4;
                     param4++;
                     param0[incrementValue$404] = param2;
                     param5++;
                     continue L1;
                   } else {
                     param2 = param2 & 255;
-                    int incrementValue$405 = param4;
+                    incrementValue$405 = param4;
                     param4++;
                     param0[incrementValue$405] = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
                     param5++;
@@ -2443,12 +2491,12 @@ class mg extends rl {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((mg) this).field_r;
-          param1 = param1 + ((mg) this).field_x;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_x;
           var4 = param0 + param1 * df.field_e;
           var5 = 0;
-          var6 = ((mg) this).field_p;
-          var7 = ((mg) this).field_w;
+          var6 = this.field_p;
+          var7 = this.field_w;
           var8 = df.field_e - var7;
           var9 = 0;
           if (param1 >= df.field_g) {
@@ -2499,7 +2547,7 @@ class mg extends rl {
           return;
         } else {
           if (var6 > 0) {
-            mg.a(df.field_d, ((mg) this).field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+            mg.a(df.field_d, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -2516,12 +2564,12 @@ class mg extends rl {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((mg) this).field_r;
-          param1 = param1 + ((mg) this).field_x;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_x;
           var3 = param0 + param1 * df.field_e;
           var4 = 0;
-          var5 = ((mg) this).field_p;
-          var6 = ((mg) this).field_w;
+          var5 = this.field_p;
+          var6 = this.field_w;
           var7 = df.field_e - var6;
           var8 = 0;
           if (param1 >= df.field_g) {
@@ -2572,7 +2620,7 @@ class mg extends rl {
           return;
         } else {
           if (var5 > 0) {
-            mg.a(df.field_d, ((mg) this).field_B, var4, var3, var6, var5, var7, var8);
+            mg.a(df.field_d, this.field_B, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;

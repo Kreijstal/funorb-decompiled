@@ -26,37 +26,45 @@ final class af {
     }
 
     public static void a(int param0) {
+        boolean discarded$0 = false;
         field_b = null;
         field_c = null;
         field_f = null;
         field_a = null;
-        field_e = null;
+        field_e = (int[][][]) null;
         field_d = null;
+        if (param0 != -7604) {
+            discarded$0 = af.a(1, -16);
+        }
     }
 
     final static boolean a(int param0, int param1) {
-        if (!(param1 != 3)) {
+        if ((param1 ^ -1) == -4) {
+          return true;
+        } else {
+          if (4 == param1) {
             return true;
+          } else {
+            if ((param1 ^ -1) != -6) {
+              if (param0 == -4275) {
+                if (-9 != (param1 ^ -1)) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
+                return false;
+              }
+            } else {
+              return true;
+            }
+          }
         }
-        if (!(4 != param1)) {
-            return true;
-        }
-        if (param1 == 5) {
-            return true;
-        }
-        if (param1 != 8) {
-            return false;
-        }
-        return true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
-        field_e = new int[][][]{new int[3][], new int[2][], new int[4][], new int[6][], new int[3][], new int[1][], new int[6][]};
+        field_e = new int[][][]{new int[][]{new int[]{-1}, new int[]{130, 61}, new int[]{116, 51}}, new int[][]{new int[]{-1}, new int[]{130, 64}}, new int[][]{new int[]{-1}, new int[]{105, 79}, new int[]{106, 50}, new int[]{-1, -1}}, new int[][]{new int[]{-1}, new int[]{-1}, new int[]{-1}, new int[]{-1}, new int[]{-1}, new int[]{-1}}, new int[][]{new int[]{-1}, new int[]{53, 79}, new int[]{44, 49}}, new int[][]{new int[]{-1}}, new int[][]{new int[]{-1}, new int[]{-1}, new int[]{-1}, new int[]{-1}, new int[]{-1}, new int[]{-1}}};
         field_f = new int[]{6, 6, 180, 39};
     }
 }

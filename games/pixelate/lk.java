@@ -9,21 +9,21 @@ final class lk extends jj {
 
     final void c(int param0) {
         super.c(param0);
-        ((lk) this).field_m = ((lk) this).field_m + 1;
-        ((lk) this).field_p = ((lk) this).field_p + 2;
-        if (f.field_f.length > ((lk) this).field_m) {
-          if (f.field_f.length <= ((lk) this).field_p) {
-            ((lk) this).field_p = ((lk) this).field_p - f.field_f.length;
+        this.field_m = this.field_m + 1;
+        this.field_p = this.field_p + 2;
+        if (f.field_f.length > this.field_m) {
+          if (f.field_f.length <= this.field_p) {
+            this.field_p = this.field_p - f.field_f.length;
             return;
           } else {
             return;
           }
         } else {
-          ((lk) this).field_m = ((lk) this).field_m - f.field_f.length;
-          if (f.field_f.length > ((lk) this).field_p) {
+          this.field_m = this.field_m - f.field_f.length;
+          if (f.field_f.length > this.field_p) {
             return;
           } else {
-            ((lk) this).field_p = ((lk) this).field_p - f.field_f.length;
+            this.field_p = this.field_p - f.field_f.length;
             return;
           }
         }
@@ -44,11 +44,11 @@ final class lk extends jj {
 
     final void a(boolean param0) {
         int var2 = 0;
-        t.g(0, 0, 640, 480, f.field_f[((lk) this).field_m], f.field_f[((lk) this).field_p]);
+        t.g(0, 0, 640, 480, f.field_f[this.field_m], f.field_f[this.field_p]);
         if (!param0) {
-          var2 = ((lk) this).field_m;
+          var2 = this.field_m;
           if (var2 <= 512) {
-            if (var2 > 256) {
+            if ((var2 ^ -1) < -257) {
               var2 = 512 - var2;
               return;
             } else {

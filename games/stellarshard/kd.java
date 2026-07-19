@@ -14,10 +14,10 @@ abstract class kd extends gg {
     abstract void b(int[] param0, int param1, int param2);
 
     final void a(int[] param0, int param1, int param2) {
-        if (((kd) this).field_m) {
-            ((kd) this).b(param0, param1, param2);
+        if (this.field_m) {
+            this.b(param0, param1, param2);
         } else {
-            ((kd) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class kd extends gg {
     abstract int b();
 
     kd() {
-        ((kd) this).field_m = true;
+        this.field_m = true;
     }
 }

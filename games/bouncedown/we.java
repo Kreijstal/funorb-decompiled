@@ -14,12 +14,12 @@ final class we extends li {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((we) this).field_b;
-          param1 = param1 + ((we) this).field_f;
+          param0 = param0 + this.field_b;
+          param1 = param1 + this.field_f;
           var4 = param0 + param1 * na.field_e;
           var5 = 0;
-          var6 = ((we) this).field_h;
-          var7 = ((we) this).field_g;
+          var6 = this.field_h;
+          var7 = this.field_g;
           var8 = na.field_e - var7;
           var9 = 0;
           if (param1 >= na.field_i) {
@@ -71,7 +71,7 @@ final class we extends li {
             break L4;
           } else {
             if (var6 > 0) {
-              we.a(na.field_d, ((we) this).field_j, ((we) this).field_i, var5, var4, var7, var6, var8, var9, param2);
+              we.a(na.field_d, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -89,12 +89,12 @@ final class we extends li {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((we) this).field_b;
-          param1 = param1 + ((we) this).field_f;
+          param0 = param0 + this.field_b;
+          param1 = param1 + this.field_f;
           var3 = param0 + param1 * na.field_e;
           var4 = 0;
-          var5 = ((we) this).field_h;
-          var6 = ((we) this).field_g;
+          var5 = this.field_h;
+          var6 = this.field_g;
           var7 = na.field_e - var6;
           var8 = 0;
           if (param1 >= na.field_i) {
@@ -146,7 +146,7 @@ final class we extends li {
             break L4;
           } else {
             if (var5 > 0) {
-              we.b(na.field_d, ((we) this).field_j, ((we) this).field_i, 0, var4, var3, var6, var5, var7, var8);
+              we.b(na.field_d, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -156,17 +156,27 @@ final class we extends li {
     }
 
     we(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        ((we) this).field_a = param0;
-        ((we) this).field_d = param1;
-        ((we) this).field_b = param2;
-        ((we) this).field_f = param3;
-        ((we) this).field_g = param4;
-        ((we) this).field_h = param5;
-        ((we) this).field_j = param6;
-        ((we) this).field_i = param7;
+        this.field_a = param0;
+        this.field_d = param1;
+        this.field_b = param2;
+        this.field_f = param3;
+        this.field_g = param4;
+        this.field_h = param5;
+        this.field_j = param6;
+        this.field_i = param7;
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -188,7 +198,7 @@ final class we extends li {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4++;
                     param3 = param1[incrementValue$10];
                     if (param3 == 0) {
@@ -196,7 +206,7 @@ final class we extends li {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
@@ -206,48 +216,48 @@ final class we extends li {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4++;
                   param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4++;
                   param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4++;
                   param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4++;
                 param3 = param1[incrementValue$18];
                 if (param3 == 0) {
@@ -255,7 +265,7 @@ final class we extends li {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param0[incrementValue$19] = param2[param3 & 255];
                   var12++;
@@ -268,17 +278,19 @@ final class we extends li {
     }
 
     we(int param0, int param1, int param2) {
-        ((we) this).field_g = param0;
-        ((we) this).field_a = param0;
-        ((we) this).field_h = param1;
-        ((we) this).field_d = param1;
-        ((we) this).field_f = 0;
-        ((we) this).field_b = 0;
-        ((we) this).field_j = new byte[param0 * param1];
-        ((we) this).field_i = new int[param2];
+        this.field_g = param0;
+        this.field_a = param0;
+        this.field_h = param1;
+        this.field_d = param1;
+        this.field_f = 0;
+        this.field_b = 0;
+        this.field_j = new byte[param0 * param1];
+        this.field_i = new int[param2];
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -298,7 +310,7 @@ final class we extends li {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var13 = param1[incrementValue$66];
                 if (var13 == 0) {
@@ -308,7 +320,7 @@ final class we extends li {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;

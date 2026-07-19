@@ -11,6 +11,6 @@ public class en {
     en field_d;
 
     en() {
-        ((en) this).field_a = 0;
+        this.field_a = 0;
     }
 }

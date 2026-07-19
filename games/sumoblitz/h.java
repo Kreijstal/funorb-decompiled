@@ -9,8 +9,8 @@ final class h extends da implements e {
     final native void fa(char param0, int param1, int param2, int param3, boolean param4);
 
     protected final void finalize() {
-        if (((h) this).field_nativeid != 0L) {
-            pa.a((e) this, (byte) -37);
+        if (this.field_nativeid != 0L) {
+            pa.a((e) (this), (byte) -37);
         }
     }
 
@@ -21,7 +21,7 @@ final class h extends da implements e {
     }
 
     h(oa param0, ya param1, ta param2, ri[] param3, hr[] param4) {
-        super((ha) (Object) param0, param2);
+        super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];
         int[] var7 = new int[param3.length];

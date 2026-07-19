@@ -26,10 +26,6 @@ final class mba {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mba.A(";
         field_b = new qia();
     }

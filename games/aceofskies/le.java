@@ -5,6 +5,6 @@ final class le {
     int[] field_a;
 
     le(kj param0, it param1) {
-        ((le) this).field_a = new int[4096];
+        this.field_a = new int[4096];
     }
 }

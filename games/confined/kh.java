@@ -30,6 +30,7 @@ final class kh extends dc {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_13_0 = 0;
@@ -45,23 +46,24 @@ final class kh extends dc {
         String stackOut_18_2 = null;
         try {
           L0: {
-            if (((kh) this).field_T == param2) {
+            if (this.field_T == param2) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param2.c(5)) {
                 L1: {
-                  var4_double = -((kh) this).field_cb + param2.field_E;
-                  var6 = param2.field_t - ((kh) this).field_L;
-                  var8 = -((kh) this).field_X + param2.field_D;
-                  var10 = ((kh) this).field_x * var4_double + var6 * ((kh) this).field_P + var8 * ((kh) this).field_K;
+                  var4_double = -this.field_cb + param2.field_E;
+                  var6 = param2.field_t - this.field_L;
+                  var8 = -this.field_X + param2.field_D;
+                  var10 = this.field_x * var4_double + var6 * this.field_P + var8 * this.field_K;
                   if (var10 < (double)param0) {
                     break L1;
                   } else {
-                    var12 = var4_double - var10 * ((kh) this).field_x;
-                    var14 = var6 - var10 * ((kh) this).field_P;
-                    var16 = var8 - var10 * ((kh) this).field_K;
+                    var12 = var4_double - var10 * this.field_x;
+                    var14 = var6 - var10 * this.field_P;
+                    var16 = var8 - var10 * this.field_K;
                     var18 = var16 * var16 + (var14 * var14 + var12 * var12);
                     var20 = param2.field_C * param2.field_C;
                     if (var18 < var20) {
@@ -71,21 +73,22 @@ final class kh extends dc {
                         if (!param1) {
                           break L2;
                         } else {
-                          if (((kh) this).field_y > var24) {
+                          if (this.field_y > var24) {
                             break L2;
                           } else {
                             break L1;
                           }
                         }
                       }
-                      ((kh) this).field_R = ((kh) this).field_cb + ((kh) this).field_x * var24;
-                      ((kh) this).field_y = var24;
-                      ((kh) this).field_s = ((kh) this).field_L + ((kh) this).field_P * var24;
-                      ((kh) this).field_S = param2;
-                      ((kh) this).field_eb = var24 * ((kh) this).field_K + ((kh) this).field_X;
+                      this.field_R = this.field_cb + this.field_x * var24;
+                      this.field_y = var24;
+                      this.field_s = this.field_L + this.field_P * var24;
+                      this.field_S = param2;
+                      this.field_eb = var24 * this.field_K + this.field_X;
                       stackOut_13_0 = 1;
                       stackIn_14_0 = stackOut_13_0;
-                      return stackIn_14_0 != 0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     } else {
                       return false;
                     }
@@ -93,11 +96,13 @@ final class kh extends dc {
                 }
                 stackOut_15_0 = 0;
                 stackIn_16_0 = stackOut_15_0;
+                decompiledRegionSelector0 = 3;
                 break L0;
               } else {
                 stackOut_5_0 = 0;
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -105,23 +110,23 @@ final class kh extends dc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var4;
+            stackOut_17_0 = (RuntimeException) (var4);
             stackOut_17_1 = new StringBuilder().append("kh.B(").append(param0).append(',').append(param1).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param2 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L3;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -129,19 +134,31 @@ final class kh extends dc {
               break L3;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
         }
-        return stackIn_16_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_14_0 != 0;
+            } else {
+              return stackIn_16_0 != 0;
+            }
+          }
+        }
     }
 
     final void i(int param0) {
-        lc var3 = ((kh) this).field_T.field_A.field_x;
+        lc var3 = this.field_T.field_A.field_x;
         lc var2 = var3;
-        ((kh) this).field_S = null;
-        ((kh) this).field_eb = var2.field_r[var3.field_a - param0];
-        ((kh) this).field_y = (((kh) this).field_eb - ((kh) this).field_X) / ((kh) this).field_K;
-        ((kh) this).field_R = ((kh) this).field_cb + ((kh) this).field_x * ((kh) this).field_y;
-        ((kh) this).field_s = ((kh) this).field_P * ((kh) this).field_y + ((kh) this).field_L;
+        this.field_S = null;
+        this.field_eb = var2.field_r[var3.field_a - param0];
+        this.field_y = (this.field_eb - this.field_X) / this.field_K;
+        this.field_R = this.field_cb + this.field_x * this.field_y;
+        this.field_s = this.field_P * this.field_y + this.field_L;
     }
 
     private final boolean a(int param0, boolean param1, boolean param2) {
@@ -160,16 +177,24 @@ final class kh extends dc {
         int var24 = 0;
         lc var25 = null;
         lc var26 = null;
-        var24 = Confined.field_J ? 1 : 0;
-        var25 = ((kh) this).field_T.field_A.field_x;
-        var26 = var25;
-        var5 = var26.field_f + -1;
+        L0: {
+          var24 = Confined.field_J ? 1 : 0;
+          var25 = this.field_T.field_A.field_x;
+          var26 = var25;
+          var5 = var26.field_f + -1;
+          if (param2) {
+            break L0;
+          } else {
+            field_fb = (bi) null;
+            break L0;
+          }
+        }
         var6 = 0;
-        L0: while (true) {
+        L1: while (true) {
           if (var6 >= var26.field_f) {
             return param1;
           } else {
-            L1: {
+            L2: {
               var7 = new double[]{var25.field_v[param0][var6], var25.field_v[1 + param0][var6], var25.field_v[param0 - -1][var5], var25.field_v[param0][var5]};
               var8 = new double[]{var25.field_n[param0][var6], var25.field_n[1 + param0][var6], var25.field_n[param0 + 1][var5], var25.field_n[param0][var5]};
               var9 = new double[]{var25.field_r[param0], var25.field_r[1 + param0], var25.field_r[1 + param0], var25.field_r[param0]};
@@ -181,62 +206,65 @@ final class kh extends dc {
               var20 = var7[0] - var7[1];
               var22 = var8[0] - var8[1];
               if (0.0 <= (-(var10 * (var22 + var16)) + (var14 + var20) * var12) * var18) {
-                L2: {
+                L3: {
                   if (!this.a(var9[2], (byte) -32, param1, var9[0], var7[1], var7[2], var8[1], var8[2], var9[1], var8[0], var7[0])) {
-                    break L2;
+                    break L3;
                   } else {
                     param1 = true;
-                    break L2;
+                    break L3;
                   }
                 }
                 if (!this.a(var9[0], (byte) -32, param1, var9[2], var7[3], var7[0], var8[3], var8[0], var9[3], var8[2], var7[2])) {
-                  break L1;
+                  break L2;
                 } else {
                   param1 = true;
-                  break L1;
+                  break L2;
                 }
               } else {
-                L3: {
+                L4: {
                   if (!this.a(var9[1], (byte) -32, param1, var9[3], var7[0], var7[1], var8[0], var8[1], var9[0], var8[3], var7[3])) {
-                    break L3;
+                    break L4;
                   } else {
                     param1 = true;
-                    break L3;
+                    break L4;
                   }
                 }
                 if (!this.a(var9[3], (byte) -32, param1, var9[1], var7[2], var7[3], var8[2], var8[3], var9[2], var8[1], var7[1])) {
-                  break L1;
+                  break L2;
                 } else {
                   param1 = true;
                   var5 = var6;
                   var6++;
-                  continue L0;
+                  continue L1;
                 }
               }
             }
             var5 = var6;
             var6++;
-            continue L0;
+            continue L1;
           }
         }
     }
 
     final void f(byte param0) {
-        lc var3 = ((kh) this).field_T.field_A.field_x;
+        lc var3 = this.field_T.field_A.field_x;
         lc var2 = var3;
         if (param0 >= -117) {
-            field_fb = null;
+            field_fb = (bi) null;
         }
-        ((kh) this).field_S = null;
-        ((kh) this).field_eb = var3.field_r[0];
-        ((kh) this).field_y = (-((kh) this).field_X + ((kh) this).field_eb) / ((kh) this).field_K;
-        ((kh) this).field_s = ((kh) this).field_P * ((kh) this).field_y + ((kh) this).field_L;
-        ((kh) this).field_R = ((kh) this).field_cb + ((kh) this).field_y * ((kh) this).field_x;
+        this.field_S = null;
+        this.field_eb = var3.field_r[0];
+        this.field_y = (-this.field_X + this.field_eb) / this.field_K;
+        this.field_s = this.field_P * this.field_y + this.field_L;
+        this.field_R = this.field_cb + this.field_y * this.field_x;
     }
 
     public static void g(byte param0) {
         field_fb = null;
         field_gb = null;
+        if (param0 <= 13) {
+            return;
+        }
         field_W = null;
     }
 
@@ -245,18 +273,18 @@ final class kh extends dc {
     }
 
     final boolean b(boolean param0, int param1, int param2) {
-        lc var13 = ((kh) this).field_T.field_A.field_x;
+        lc var13 = this.field_T.field_A.field_x;
         lc var14 = var13;
         double var5 = var13.field_r[param2];
         if (param1 != 28) {
             return true;
         }
-        if (0.001 * (var5 - ((kh) this).field_X) > ((kh) this).field_K) {
+        if (0.001 * (var5 - this.field_X) > this.field_K) {
             return this.a(param2 - 1, param0, true);
         }
-        double var7 = (-((kh) this).field_X + var5) / ((kh) this).field_K;
-        double var9 = ((kh) this).field_x * var7 + ((kh) this).field_cb;
-        double var11 = var7 * ((kh) this).field_P + ((kh) this).field_L;
+        double var7 = (-this.field_X + var5) / this.field_K;
+        double var9 = this.field_x * var7 + this.field_cb;
+        double var11 = var7 * this.field_P + this.field_L;
         if (var14.a(var11, var9, (byte) 29, param2)) {
             return this.a(-1 + param2, param0, true);
         }
@@ -271,7 +299,7 @@ final class kh extends dc {
     }
 
     final static void h(int param0) {
-        int var1 = 0;
+        int var1 = 57 % ((0 - param0) / 62);
         tj.field_z[45] = 26;
         tj.field_z[46] = 72;
         tj.field_z[44] = 71;
@@ -296,6 +324,14 @@ final class kh extends dc {
         double var33 = 0.0;
         double var35 = 0.0;
         double var37 = 0.0;
+        L0: {
+          if (param1 == -32) {
+            break L0;
+          } else {
+            field_fb = (bi) null;
+            break L0;
+          }
+        }
         param5 = param5 - param10;
         param7 = param7 - param9;
         param8 = param8 - param3;
@@ -313,30 +349,30 @@ final class kh extends dc {
           var23 = var23 * var27;
           var25 = var25 * var27;
           var21 = var21 * var27;
-          var27 = param10 - ((kh) this).field_cb;
-          var29 = param9 - ((kh) this).field_L;
-          var31 = param3 - ((kh) this).field_X;
+          var27 = param10 - this.field_cb;
+          var29 = param9 - this.field_L;
+          var31 = param3 - this.field_X;
           var33 = var25 * var31 + (var27 * var21 + var23 * var29);
           if (var33 < 0.0) {
-            var35 = ((kh) this).field_K * var25 + (var21 * ((kh) this).field_x + var23 * ((kh) this).field_P);
+            var35 = this.field_K * var25 + (var21 * this.field_x + var23 * this.field_P);
             if (0.0001 * var33 >= var35) {
-              L0: {
+              L1: {
                 var37 = var33 / var35;
                 if (!param2) {
-                  break L0;
+                  break L1;
                 } else {
-                  if (var37 >= ((kh) this).field_y) {
+                  if (var37 >= this.field_y) {
                     return false;
                   } else {
-                    break L0;
+                    break L1;
                   }
                 }
               }
-              ((kh) this).field_s = ((kh) this).field_P * var37 + ((kh) this).field_L;
-              ((kh) this).field_S = null;
-              ((kh) this).field_y = var37;
-              ((kh) this).field_eb = ((kh) this).field_X + ((kh) this).field_K * var37;
-              ((kh) this).field_R = ((kh) this).field_x * var37 + ((kh) this).field_cb;
+              this.field_s = this.field_P * var37 + this.field_L;
+              this.field_S = null;
+              this.field_y = var37;
+              this.field_eb = this.field_X + this.field_K * var37;
+              this.field_R = this.field_x * var37 + this.field_cb;
               return true;
             } else {
               return false;
@@ -348,31 +384,31 @@ final class kh extends dc {
     }
 
     final void a(double param0, int param1, double param2, double param3, double param4, double param5, double param6, double param7, boolean param8, double param9) {
-        ((kh) this).field_x = param7;
-        ((kh) this).field_L = param0;
-        ((kh) this).field_K = param2;
-        ((kh) this).field_P = param9;
+        this.field_x = param7;
+        this.field_L = param0;
+        this.field_K = param2;
+        this.field_P = param9;
         if (param8) {
             return;
         }
-        ((kh) this).field_H = param1;
-        ((kh) this).field_cb = param6;
-        ((kh) this).field_u = param3;
-        ((kh) this).field_B = param4;
-        ((kh) this).field_X = param5;
+        this.field_H = param1;
+        this.field_cb = param6;
+        this.field_u = param3;
+        this.field_B = param4;
+        this.field_X = param5;
     }
 
     final boolean a(int param0, byte param1, boolean param2) {
         int var5 = 14 % ((param1 - 63) / 56);
-        lc var14 = ((kh) this).field_T.field_A.field_x;
+        lc var14 = this.field_T.field_A.field_x;
         lc var15 = var14;
         double var6 = var14.field_r[param0];
-        if (((kh) this).field_K > 0.001 * (-((kh) this).field_X + var6)) {
+        if (this.field_K > 0.001 * (-this.field_X + var6)) {
             return this.a(param0, param2, true);
         }
-        double var8 = (-((kh) this).field_X + var6) / ((kh) this).field_K;
-        double var10 = ((kh) this).field_cb + var8 * ((kh) this).field_x;
-        double var12 = ((kh) this).field_L + var8 * ((kh) this).field_P;
+        double var8 = (-this.field_X + var6) / this.field_K;
+        double var10 = this.field_cb + var8 * this.field_x;
+        double var12 = this.field_L + var8 * this.field_P;
         if (!var15.a(var12, var10, (byte) 55, param0)) {
             return false;
         }
@@ -380,6 +416,7 @@ final class kh extends dc {
     }
 
     final static String a(byte[] param0, int param1, int param2, int param3) {
+        int incrementValue$2 = 0;
         char[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -409,10 +446,10 @@ final class kh extends dc {
         try {
           L0: {
             var4 = new char[param1];
-            var5 = 0;
+            var5 = param2;
             var6 = 0;
             L1: while (true) {
-              if (~param1 >= ~var6) {
+              if (param1 <= var6) {
                 stackOut_12_0 = new String(var4, 0, var5);
                 stackIn_13_0 = stackOut_12_0;
                 break L0;
@@ -421,10 +458,10 @@ final class kh extends dc {
                   var7 = 255 & param0[param3 + var6];
                   if (var7 != 0) {
                     L3: {
-                      if (var7 < 128) {
+                      if (-129 < (var7 ^ -1)) {
                         break L3;
                       } else {
-                        if (var7 >= 160) {
+                        if (-161 >= (var7 ^ -1)) {
                           break L3;
                         } else {
                           L4: {
@@ -441,7 +478,7 @@ final class kh extends dc {
                         }
                       }
                     }
-                    int incrementValue$2 = var5;
+                    incrementValue$2 = var5;
                     var5++;
                     var4[incrementValue$2] = (char)var7;
                     break L2;
@@ -458,23 +495,23 @@ final class kh extends dc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var4_ref;
+            stackOut_14_0 = (RuntimeException) (var4_ref);
             stackOut_14_1 = new StringBuilder().append("kh.E(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -482,16 +519,12 @@ final class kh extends dc {
               break L5;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + 0 + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_13_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_W = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     }
 }

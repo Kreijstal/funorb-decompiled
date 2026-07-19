@@ -15,10 +15,6 @@ final class aj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "aj.A(";
         field_b = null;
         field_a = new ba(6, 0, 4, 2);

@@ -8,15 +8,30 @@ final class se extends wv {
 
     final static void f(byte param0) {
         tga.field_a.f(8, 16384);
+        if (param0 != -6) {
+            field_r = (String) null;
+        }
     }
 
     final static void d(byte param0) {
+        String var1 = null;
         String var2 = null;
-        if (!(null == wra.field_b)) {
+        L0: {
+          if (null != wra.field_b) {
             var2 = wra.field_b;
-            String var1 = var2;
-            wja.a(gl.a((byte) 86, mu.field_Bb, new String[1]), 15165);
+            var1 = var2;
+            wja.a(gl.a((byte) 86, mu.field_Bb, new String[]{var2}), param0 + 15047);
             wra.field_b = null;
+            break L0;
+          } else {
+            break L0;
+          }
+        }
+        if (param0 != 118) {
+          field_q = (String) null;
+          return;
+        } else {
+          return;
         }
     }
 
@@ -32,7 +47,7 @@ final class se extends wv {
     }
 
     public static void e(byte param0) {
-        int var1 = 0;
+        int var1 = -61 % ((65 - param0) / 47);
         field_q = null;
         field_s = null;
         field_r = null;
@@ -40,19 +55,19 @@ final class se extends wv {
 
     final int a(int param0, byte param1) {
         if (param1 != -48) {
-          field_q = null;
-          return ((se) this).a((byte) 117, param0) + ((se) this).field_m[param0].e(-163);
+          field_q = (String) null;
+          return this.a((byte) 117, param0) + this.field_m[param0].e(-163);
         } else {
-          return ((se) this).a((byte) 117, param0) + ((se) this).field_m[param0].e(-163);
+          return this.a((byte) 117, param0) + this.field_m[param0].e(-163);
         }
     }
 
     final int a(byte param0, int param1) {
         if (param0 <= 111) {
-          field_r = null;
-          return aaa.a(false) - ((se) this).field_m[param1].e(-163) >> 1;
+          field_r = (String) null;
+          return aaa.a(false) - this.field_m[param1].e(-163) >> -1739940575;
         } else {
-          return aaa.a(false) - ((se) this).field_m[param1].e(-163) >> 1;
+          return aaa.a(false) - this.field_m[param1].e(-163) >> -1739940575;
         }
     }
 
@@ -61,10 +76,6 @@ final class se extends wv {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = new int[]{0};
         field_q = "Disruptive behaviour";
         field_r = "<%0> has left.";

@@ -46,13 +46,16 @@ final class ce extends rr {
         String var3 = null;
         long var4 = 0L;
         sq.field_o = true;
+        if (!param1) {
+            return;
+        }
         try {
             var2 = "tuhstatbut";
             var3 = "rvnadlm";
             var4 = -1L;
             lg.a(var4, param0, 60, var2, var3);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ce.N(" + (param0 != null ? "{...}" : "null") + ',' + true + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "ce.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -82,7 +85,7 @@ final class ce extends rr {
               if (param0) {
                 break L1;
               } else {
-                field_w = null;
+                field_w = (String) null;
                 break L1;
               }
             }
@@ -94,23 +97,23 @@ final class ce extends rr {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ce.L(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -118,7 +121,7 @@ final class ce extends rr {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -133,9 +136,13 @@ final class ce extends rr {
                 ji.field_G.i((byte) -104);
             }
             no.field_e = new ri(param0, param1, false, true, true);
-            ae.field_f.b((vg) (Object) no.field_e, 122);
+            if (param2 != 3) {
+                java.applet.Applet var4 = (java.applet.Applet) null;
+                ce.a((java.applet.Applet) null, true);
+            }
+            ae.field_f.b(no.field_e, 122);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ce.O(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + 3 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "ce.O(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -144,13 +151,12 @@ final class ce extends rr {
         field_w = null;
         field_u = null;
         field_v = null;
+        if (!param0) {
+            field_v = (bi) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = "Chat view has been scrolled up. Scroll down to chat.";
         field_w = "This game has been updated! Please reload this page.";
     }

@@ -13,15 +13,30 @@ abstract class ti {
     abstract byte[] b(int param0, boolean param1);
 
     final static int b(int param0, int param1) {
+        if (param1 != 2047) {
+            field_f = (vi) null;
+            return gl.field_b[param0 & 2047];
+        }
         return gl.field_b[param0 & 2047];
     }
 
     public static void a(byte param0) {
+        int discarded$2 = 0;
         field_f = null;
-        field_b = null;
-        field_g = null;
-        field_a = null;
-        field_e = null;
+        if (param0 != 13) {
+          discarded$2 = ti.b(-127, 29);
+          field_b = null;
+          field_g = null;
+          field_a = null;
+          field_e = null;
+          return;
+        } else {
+          field_b = null;
+          field_g = null;
+          field_a = null;
+          field_e = null;
+          return;
+        }
     }
 
     final static void a(int param0, int param1) {
@@ -32,13 +47,18 @@ abstract class ti {
         var3 = StarCannon.field_A;
         try {
           L0: {
-            var4 = (rh) (Object) a.field_f.c(-3905);
+            var4 = (rh) ((Object) a.field_f.c(-3905));
             L1: while (true) {
               if (var4 == null) {
-                break L0;
+                if (param0 > 32) {
+                  break L0;
+                } else {
+                  field_d = false;
+                  return;
+                }
               } else {
-                ha.a(2, 121, var4);
-                var4 = (rh) (Object) a.field_f.a(-16913);
+                ha.a(param1, 121, var4);
+                var4 = (rh) ((Object) a.field_f.a(-16913));
                 continue L1;
               }
             }
@@ -46,7 +66,7 @@ abstract class ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var2, "ti.B(" + 57 + ',' + 2 + ')');
+          throw sd.a((Throwable) ((Object) var2), "ti.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -55,10 +75,6 @@ abstract class ti {
     abstract ak b(byte param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Connection timed out. Please try using a different server.";
         field_d = false;
         field_c = -1;

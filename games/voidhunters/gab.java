@@ -16,34 +16,38 @@ final class gab {
     final int[][] b(int param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
-        if (!(((gab) this).field_g == ((gab) this).field_c)) {
+        if (!(this.field_g == this.field_c)) {
             throw new RuntimeException("Can only retrieve a full image cache");
         }
-        for (var2 = 0; var2 < ((gab) this).field_c; var2++) {
-            ((gab) this).field_a[var2] = hgb.field_o;
+        for (var2 = 0; var2 < this.field_c; var2++) {
+            this.field_a[var2] = hgb.field_o;
         }
         if (param0 <= 23) {
-            ((gab) this).field_h = null;
+            this.field_h = (int[][]) null;
         }
-        return ((gab) this).field_h;
+        return this.field_h;
     }
 
     final void a(boolean param0) {
         int var2 = 0;
+        int[][] discarded$0 = null;
         int var3 = VoidHunters.field_G;
-        for (var2 = 0; var2 < ((gab) this).field_c; var2++) {
-            ((gab) this).field_h[var2] = null;
+        for (var2 = 0; var2 < this.field_c; var2++) {
+            this.field_h[var2] = null;
         }
-        ((gab) this).field_h = null;
-        ((gab) this).field_a = null;
-        ((gab) this).field_i.e(100);
+        this.field_h = (int[][]) null;
+        this.field_a = null;
+        this.field_i.e(100);
         if (param0) {
-            int[][] discarded$0 = ((gab) this).b(122);
+            discarded$0 = this.b(122);
         }
-        ((gab) this).field_i = null;
+        this.field_i = null;
     }
 
     public static void a(int param0) {
+        if (param0 != 15325) {
+            return;
+        }
         field_j = null;
         field_b = null;
     }
@@ -73,12 +77,12 @@ final class gab {
         int stackOut_3_1 = 0;
         var6 = VoidHunters.field_G;
         var3 = -45 / ((param0 - 80) / 37);
-        if (((gab) this).field_c == ((gab) this).field_g) {
+        if (this.field_c == this.field_g) {
           L0: {
             stackOut_13_0 = this;
             stackIn_15_0 = stackOut_13_0;
             stackIn_14_0 = stackOut_13_0;
-            if (null != ((gab) this).field_a[param1]) {
+            if (null != this.field_a[param1]) {
               stackOut_15_0 = this;
               stackOut_15_1 = 0;
               stackIn_16_0 = stackOut_15_0;
@@ -92,43 +96,43 @@ final class gab {
               break L0;
             }
           }
-          ((gab) this).field_e = stackIn_16_1 != 0;
-          ((gab) this).field_a[param1] = hgb.field_o;
-          return ((gab) this).field_h[param1];
+          ((gab) (this)).field_e = stackIn_16_1 != 0;
+          this.field_a[param1] = hgb.field_o;
+          return this.field_h[param1];
         } else {
-          if (1 != ((gab) this).field_c) {
+          if (1 != this.field_c) {
             L1: {
-              var4 = ((gab) this).field_a[param1];
+              var4 = this.field_a[param1];
               if (var4 != null) {
-                ((gab) this).field_e = false;
+                this.field_e = false;
                 break L1;
               } else {
                 L2: {
-                  ((gab) this).field_e = true;
-                  if (((gab) this).field_d < ((gab) this).field_c) {
-                    var4 = new osa(param1, ((gab) this).field_d);
-                    ((gab) this).field_d = ((gab) this).field_d + 1;
+                  this.field_e = true;
+                  if (this.field_d < this.field_c) {
+                    var4 = new osa(param1, this.field_d);
+                    this.field_d = this.field_d + 1;
                     break L2;
                   } else {
-                    var5 = (osa) (Object) ((gab) this).field_i.b((byte) 116);
+                    var5 = (osa) ((Object) this.field_i.b((byte) 116));
                     var4 = new osa(param1, var5.field_f);
-                    ((gab) this).field_a[var5.field_d] = null;
+                    this.field_a[var5.field_d] = null;
                     var5.b(-3846);
                     break L2;
                   }
                 }
-                ((gab) this).field_a[param1] = var4;
+                this.field_a[param1] = var4;
                 break L1;
               }
             }
-            ((gab) this).field_i.a((ksa) (Object) var4, (byte) -55);
-            return ((gab) this).field_h[var4.field_f];
+            this.field_i.a(var4, (byte) -55);
+            return this.field_h[var4.field_f];
           } else {
             L3: {
               stackOut_2_0 = this;
               stackIn_4_0 = stackOut_2_0;
               stackIn_3_0 = stackOut_2_0;
-              if (((gab) this).field_f == param1) {
+              if (this.field_f == param1) {
                 stackOut_4_0 = this;
                 stackOut_4_1 = 0;
                 stackIn_5_0 = stackOut_4_0;
@@ -142,29 +146,25 @@ final class gab {
                 break L3;
               }
             }
-            ((gab) this).field_e = stackIn_5_1 != 0;
-            ((gab) this).field_f = param1;
-            return ((gab) this).field_h[0];
+            ((gab) (this)).field_e = stackIn_5_1 != 0;
+            this.field_f = param1;
+            return this.field_h[0];
           }
         }
     }
 
     gab(int param0, int param1, int param2) {
-        ((gab) this).field_f = -1;
-        ((gab) this).field_d = 0;
-        ((gab) this).field_i = new ij();
-        ((gab) this).field_e = false;
-        ((gab) this).field_g = param1;
-        ((gab) this).field_c = param0;
-        ((gab) this).field_h = new int[((gab) this).field_c][param2];
-        ((gab) this).field_a = new osa[((gab) this).field_g];
+        this.field_f = -1;
+        this.field_d = 0;
+        this.field_i = new ij();
+        this.field_e = false;
+        this.field_g = param1;
+        this.field_c = param0;
+        this.field_h = new int[this.field_c][param2];
+        this.field_a = new osa[this.field_g];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new String[]{null, null, null, null, "User in singleplayer sandbox"};
         field_b = new sfa();
     }

@@ -27,6 +27,7 @@ final class db {
     }
 
     db(byte[] param0, je param1) {
+        int discarded$1 = 0;
         Exception var3 = null;
         iw var4 = null;
         int var5 = 0;
@@ -40,14 +41,14 @@ final class db {
         int var13 = 0;
         iw var14 = null;
         Throwable decompiledCaughtException = null;
-        ((db) this).field_i = -1;
-        ((db) this).field_e = null;
-        ((db) this).field_e = param1;
+        this.field_i = -1;
+        this.field_e = null;
+        this.field_e = param1;
         try {
           L0: {
             var14 = new iw(param0);
             var4 = new iw(param0);
-            int discarded$1 = var14.h((byte) -126);
+            discarded$1 = var14.h((byte) -126);
             var14.field_n = var14.field_n + 2;
             var5 = var14.h((byte) -112);
             var6 = 0;
@@ -58,25 +59,25 @@ final class db {
             L1: while (true) {
               if (var9 >= var5) {
                 if (var4.field_n == param0.length) {
-                  ((db) this).field_i = var6;
-                  ((db) this).field_a = new short[var6];
-                  ((db) this).field_c = new short[var6];
-                  ((db) this).field_f = new short[var6];
-                  ((db) this).field_d = new short[var6];
-                  ((db) this).field_m = new short[var6];
-                  ((db) this).field_j = new byte[var6];
+                  this.field_i = var6;
+                  this.field_a = new short[var6];
+                  this.field_c = new short[var6];
+                  this.field_f = new short[var6];
+                  this.field_d = new short[var6];
+                  this.field_m = new short[var6];
+                  this.field_j = new byte[var6];
                   var13 = 0;
                   var9 = var13;
                   L2: while (true) {
                     if (var13 >= var6) {
                       break L0;
                     } else {
-                      ((db) this).field_a[var13] = field_b[var13];
-                      ((db) this).field_c[var13] = field_l[var13];
-                      ((db) this).field_f[var13] = field_g[var13];
-                      ((db) this).field_d[var13] = field_h[var13];
-                      ((db) this).field_m[var13] = field_n[var13];
-                      ((db) this).field_j[var13] = field_k[var13];
+                      this.field_a[var13] = field_b[var13];
+                      this.field_c[var13] = field_l[var13];
+                      this.field_f[var13] = field_g[var13];
+                      this.field_d[var13] = field_h[var13];
+                      this.field_m[var13] = field_n[var13];
+                      this.field_j[var13] = field_k[var13];
                       var13++;
                       continue L2;
                     }
@@ -86,7 +87,7 @@ final class db {
                 }
               } else {
                 L3: {
-                  var10 = ((db) this).field_e.field_o[var9];
+                  var10 = this.field_e.field_o[var9];
                   if (var10 != 0) {
                     break L3;
                   } else {
@@ -157,7 +158,7 @@ final class db {
                     }
                     L11: {
                       L12: {
-                        field_n[var6] = (short) -1;
+                        field_n[var6] = (short)-1;
                         if (var10 == 1) {
                           break L12;
                         } else {
@@ -201,17 +202,13 @@ final class db {
           decompiledCaughtException = decompiledCaughtParameter0;
           L13: {
             var3 = (Exception) (Object) decompiledCaughtException;
-            ((db) this).field_i = 0;
+            this.field_i = 0;
             break L13;
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new short[500];
         field_n = new short[500];
         field_k = new byte[500];

@@ -14,17 +14,53 @@ final class il extends pi {
     int field_r;
 
     final static boolean e(int param0) {
-        return pl.field_h != 15;
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        if (param0 != -31391) {
+          L0: {
+            field_t = (String[][]) null;
+            if (-16 == (pl.field_h ^ -1)) {
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = 1;
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+          return stackIn_8_0 != 0;
+        } else {
+          L1: {
+            if (-16 == (pl.field_h ^ -1)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
+        }
     }
 
     public static void a(int param0) {
-        field_t = null;
+        field_t = (String[][]) null;
         field_s = null;
-        int var1 = 15;
+        int var1 = 47 / ((63 - param0) / 55);
     }
 
     final static void a(int param0, byte param1) {
-        int discarded$0 = s.a(-27911);
+        int discarded$4 = s.a(-27911);
+        if (param1 != -109) {
+            field_t = (String[][]) null;
+        }
     }
 
     private il() throws Throwable {
@@ -32,11 +68,7 @@ final class il extends pi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_t = new String[][]{new String[1]};
+        field_t = new String[][]{new String[]{"Use the <img=15> and <img=14> arrow keys to move around. Sometimes you may want to drop into a narrow shaft - press <img=16> to do so. To jump, press the <img=17> arrow. In deep water, you can use the same controls to swim about."}};
         field_n = false;
     }
 }

@@ -10,6 +10,7 @@ final class mt {
     static String field_b;
 
     final static boolean a(byte param0) {
+        boolean discarded$1 = false;
         if (null == kc.field_g[1]) {
           if (param0 == -43) {
             if (bo.field_Cb.a("scenery", "goal_top", (byte) -10)) {
@@ -24,7 +25,7 @@ final class mt {
               return false;
             }
           } else {
-            boolean discarded$1 = mt.a((byte) 61);
+            discarded$1 = mt.a((byte) 61);
             if (bo.field_Cb.a("scenery", "goal_top", (byte) -10)) {
               if (!bo.field_Cb.a("scenery", "goal_bottom", (byte) -10)) {
                 return false;
@@ -43,10 +44,11 @@ final class mt {
     }
 
     public static void a(int param0) {
+        boolean discarded$2 = false;
         field_d = null;
         field_c = null;
         if (param0 != 1) {
-          boolean discarded$2 = mt.a((byte) -66);
+          discarded$2 = mt.a((byte) -66);
           field_f = null;
           field_e = null;
           field_b = null;
@@ -60,10 +62,6 @@ final class mt {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "The Semi Finals start in <%0> seconds...";
         field_e = "Won";
         field_b = "Rating";

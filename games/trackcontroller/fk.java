@@ -10,7 +10,7 @@ final class fk {
     private static String field_z;
 
     public static void a(int param0) {
-        field_d = null;
+        field_d = (byte[][]) null;
         if (param0 != 14934) {
             return;
         }
@@ -20,10 +20,6 @@ final class fk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fk.A(";
         field_c = null;
     }

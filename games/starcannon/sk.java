@@ -7,8 +7,8 @@ final class sk {
     static og field_c;
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4) {
-        int var5_int = 0;
         RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -38,24 +38,32 @@ final class sk {
                 break L2;
               }
             }
+            L3: {
+              if (param3) {
+                break L3;
+              } else {
+                field_b = true;
+                break L3;
+              }
+            }
             var7 = var5_int;
-            L3: while (true) {
+            L4: while (true) {
               if (var7 >= var6) {
                 break L0;
               } else {
                 var8 = 152 - -(48 * var7 / param2);
-                var9 = var8 << 16 | var8 << 8 | var8;
+                var9 = var8 << -1021771376 | var8 << -1364739832 | var8;
                 ki.field_a[param0 + ki.field_j * (param4 + var7)] = var9;
                 ki.field_a[param0 + ki.field_j * (param4 + var7) + param1] = var9;
                 var7++;
-                continue L3;
+                continue L4;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var5, "sk.B(" + param0 + ',' + param1 + ',' + param2 + ',' + true + ',' + param4 + ')');
+          throw sd.a((Throwable) ((Object) var5), "sk.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -66,13 +74,12 @@ final class sk {
     public static void a(boolean param0) {
         field_a = null;
         field_c = null;
+        if (param0) {
+            sk.a(89, -5, -15, false, 94);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Passwords must be between 5 and 20 letters and numbers";
         field_c = new og();
     }

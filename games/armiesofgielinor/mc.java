@@ -12,13 +12,15 @@ final class mc implements lv {
     public final String a(int param0) {
         if (param0 >= -122) {
             mc.d(18);
+            return "Defeat: Total Unit Loss";
         }
         return "Defeat: Total Unit Loss";
     }
 
     public final boolean b(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 0) {
-            boolean discarded$0 = ((mc) this).c(118);
+            discarded$0 = this.c(118);
             return false;
         }
         return false;
@@ -36,77 +38,98 @@ final class mc implements lv {
 
     mc(int param0, ha param1) {
         try {
-            ((mc) this).field_b = param0;
-            ((mc) this).field_e = param1;
+            this.field_b = param0;
+            this.field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "mc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "mc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final boolean c(int param0) {
+        String discarded$3 = null;
+        String discarded$4 = null;
+        String discarded$5 = null;
         int var2 = 0;
         at var3 = null;
         int var4 = 0;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         var2 = 0;
         L0: while (true) {
-          if (var2 >= ((mc) this).field_e.field_W) {
-            L1: {
-              if (((mc) this).field_e.field_K != null) {
-                break L1;
-              } else {
-                if (((mc) this).field_e.b(((mc) this).field_b, (byte) -26)) {
-                  return false;
+          if (var2 >= this.field_e.field_W) {
+            if (this.field_e.field_K == null) {
+              if (!this.field_e.b(this.field_b, (byte) -26)) {
+                if (param0 > -121) {
+                  discarded$3 = this.a(62);
+                  return true;
                 } else {
-                  break L1;
+                  return true;
                 }
+              } else {
+                return false;
               }
-            }
-            if (param0 <= -121) {
-              return true;
             } else {
-              String discarded$1 = ((mc) this).a(62);
-              return true;
+              if (param0 > -121) {
+                discarded$4 = this.a(62);
+                return true;
+              } else {
+                return true;
+              }
             }
           } else {
-            L2: {
-              if (null == ((mc) this).field_e.field_K) {
-                break L2;
-              } else {
-                if (var2 == ((mc) this).field_b) {
-                  break L2;
+            if (var4 == 0) {
+              L1: {
+                L2: {
+                  if (null == this.field_e.field_K) {
+                    break L2;
+                  } else {
+                    if (var2 == this.field_b) {
+                      break L2;
+                    } else {
+                      if (var4 == 0) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                }
+                L3: {
+                  if (this.field_e.c(this.field_b, -16985, var2)) {
+                    break L3;
+                  } else {
+                    if (var4 == 0) {
+                      break L1;
+                    } else {
+                      break L3;
+                    }
+                  }
+                }
+                var3 = this.field_e.f(var2, 0);
+                if (var3 == null) {
+                  break L1;
                 } else {
-                  var2++;
-                  continue L0;
+                  if (var3.b(false) > 0) {
+                    return false;
+                  } else {
+                    break L1;
+                  }
                 }
               }
-            }
-            if (((mc) this).field_e.c(((mc) this).field_b, -16985, var2)) {
-              var3 = ((mc) this).field_e.f(var2, 0);
-              if (var3 != null) {
-                if (var3.b(false) > 0) {
-                  return false;
-                } else {
-                  var2++;
-                  continue L0;
-                }
-              } else {
-                var2++;
-                continue L0;
-              }
-            } else {
               var2++;
               continue L0;
+            } else {
+              if (param0 > -121) {
+                discarded$5 = this.a(62);
+                return true;
+              } else {
+                return true;
+              }
             }
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Heavy stone armour that protects a unit from all damage for a certain number of attacks, but slows down or immobilises the unit.";
     }
 }

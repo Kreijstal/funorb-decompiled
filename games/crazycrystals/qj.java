@@ -19,10 +19,6 @@ final class qj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "qj.A(";
         field_a = new sj(13, 0, 1, 0);
     }

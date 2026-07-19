@@ -66,7 +66,7 @@ final class qf {
           L0: {
             L1: {
               ja.a(0L, (String) null, (byte) 85, (nb) null, param0, param1, (int[]) null, -1, (String) null);
-              if (param0 != 0) {
+              if (-1 != (param0 ^ -1)) {
                 break L1;
               } else {
                 var12 = pi.field_d;
@@ -127,7 +127,7 @@ final class qf {
               }
             }
             L4: {
-              if (param0 == 2) {
+              if (-3 == (param0 ^ -1)) {
                 var30 = pi.field_d;
                 var32 = el.field_z[0];
                 var31 = fg.field_a;
@@ -157,23 +157,23 @@ final class qf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_0 = (RuntimeException) (var3);
             stackOut_11_1 = new StringBuilder().append("qf.A(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -181,23 +181,23 @@ final class qf {
               break L5;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ')');
         }
     }
 
     final static void a(int param0) {
-        nj.field_w.c((mf) (Object) new ii(), 83);
+        nj.field_w.c(new ii(), 83);
         if (param0 < 90) {
             qf.a((byte) -70);
         }
     }
 
     public static void a(byte param0) {
-        Object var2 = null;
+        ci var2 = null;
         field_h = null;
         field_g = null;
         if (param0 != -46) {
-          var2 = null;
+          var2 = (ci) null;
           qf.a(-42, (ci) null, (byte) 33);
           field_f = null;
           field_d = null;
@@ -210,10 +210,6 @@ final class qf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new mk();
         field_b = true;
         field_a = 0;

@@ -27,7 +27,7 @@ final class fk extends hs {
                     break L2;
                   }
                 }
-                if (param2 == 1) {
+                if (-2 == (param2 ^ -1)) {
                   stackOut_10_0 = var3_int * param0;
                   stackIn_11_0 = stackOut_10_0;
                   break L0;
@@ -52,32 +52,32 @@ final class fk extends hs {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var3, "fk.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw nb.a((Throwable) ((Object) var3), "fk.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_11_0;
     }
 
     final void f(int param0, int param1) {
         if (param0 < 98) {
-            ((fk) this).field_l = true;
+            this.field_l = true;
         }
     }
 
     final void e(int param0) {
-        ((fk) this).c(112);
-        ((fk) this).a(false, vo.a((byte) -18, mc.field_e, new String[1]));
-        ((fk) this).b(param0 + -2352, ((fk) this).field_a.field_v);
-        ((fk) this).a(150, 17709);
+        this.c(112);
+        this.a(false, vo.a((byte) -18, mc.field_e, new String[]{h.field_b[this.field_a.field_t][this.field_a.field_m]}));
+        this.b(param0 + -2352, this.field_a.field_v);
+        this.a(150, 17709);
         if (param0 == 1) {
-          if (((fk) this).field_a.field_f) {
+          if (this.field_a.field_f) {
             un.field_d.a("FB", 5, 17, 16777215, -1);
             return;
           } else {
             return;
           }
         } else {
-          ((fk) this).e(-98);
-          if (!((fk) this).field_a.field_f) {
+          this.e(-98);
+          if (!this.field_a.field_f) {
             return;
           } else {
             un.field_d.a("FB", 5, 17, 16777215, -1);
@@ -87,9 +87,10 @@ final class fk extends hs {
     }
 
     public static void f(int param0) {
+        int discarded$0 = 0;
         field_k = null;
         if (param0 != 1) {
-            int discarded$0 = fk.b(76, -73, -121);
+            discarded$0 = fk.b(76, -73, -121);
             field_j = null;
             return;
         }
@@ -99,12 +100,12 @@ final class fk extends hs {
     final void a(int param0, boolean param1) {
         if (param0 < -92) {
           if (param1) {
-            if (((fk) this).field_l) {
+            if (this.field_l) {
               return;
             } else {
               or.field_d.b(75, (byte) 74);
               or.field_d.a(121, 4);
-              ((fk) this).field_l = true;
+              this.field_l = true;
               return;
             }
           } else {
@@ -117,14 +118,10 @@ final class fk extends hs {
 
     fk(nu param0, int param1, boolean param2) {
         super(param0, param1, param2, (int[]) null);
-        ((fk) this).field_l = false;
+        this.field_l = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new String[]{"Current Bid:", "Buyout", "Time Left:"};
         field_k = new int[8192];
     }

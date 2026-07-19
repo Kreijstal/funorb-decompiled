@@ -16,7 +16,7 @@ public class IDirect3D extends jaclib.peer.IUnknown {
         jagdx.IDirect3D var2 = null;
         int var3 = 0;
         var2 = new jagdx.IDirect3D(param1);
-        var3 = IDirect3D._Direct3DCreate(param0, var2);
+        var3 = jagdx.IDirect3D._Direct3DCreate(param0, var2);
         if (jagdx.ah.a(var3, 10643)) {
           throw new jagdx.eva(String.valueOf(var3));
         } else {
@@ -44,7 +44,7 @@ public class IDirect3D extends jaclib.peer.IUnknown {
 
     private IDirect3D(jaclib.peer.sha param0) {
         super(param0);
-        ((jagdx.IDirect3D) this).a = param0;
+        this.a = param0;
     }
 
     public final native int CheckDepthStencilMatch(int param0, int param1, int param2, int param3, int param4);
@@ -56,7 +56,7 @@ public class IDirect3D extends jaclib.peer.IUnknown {
     }
 
     public final jagdx.IDirect3DDevice a(int param0, int param1, java.awt.Canvas param2, int param3, jagdx.D3DPRESENT_PARAMETERS param4) {
-        jagdx.IDirect3DDevice var6 = new jagdx.IDirect3DDevice(((jagdx.IDirect3D) this).a);
+        jagdx.IDirect3DDevice var6 = new jagdx.IDirect3DDevice(this.a);
         int var7 = this._CreateDevice(param0, param1, param2, param3, param4, var6);
         if (!(!jagdx.ah.a(var7, 10643))) {
             throw new jagdx.eva(String.valueOf(var7));

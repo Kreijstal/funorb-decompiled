@@ -48,7 +48,7 @@ class ah extends qf {
             return stackIn_15_0;
           }
         } else {
-          field_c = null;
+          field_c = (dq) null;
           param1 = param1 & 8191;
           if (param1 < 4096) {
             L2: {
@@ -82,7 +82,7 @@ class ah extends qf {
 
     final static boolean a(int param0) {
         L0: {
-          if (oo.field_a == -1) {
+          if (0 == (oo.field_a ^ -1)) {
             if (!no.a(1, 0)) {
               return false;
             } else {
@@ -115,22 +115,24 @@ class ah extends qf {
     }
 
     final static String c(int param0) {
+        int discarded$0 = 0;
+        if (param0 != 2048) {
+            discarded$0 = ah.a((byte) -71, 109);
+            return eb.field_c;
+        }
         return eb.field_c;
     }
 
     public static void b(int param0) {
+        int discarded$0 = 0;
         field_b = null;
         field_c = null;
         if (param0 != 1) {
-            int discarded$0 = ah.a((byte) -16, 95);
+            discarded$0 = ah.a((byte) -16, 95);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new ce();
     }
 }

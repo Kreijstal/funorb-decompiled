@@ -31,6 +31,11 @@ final class cc extends ab {
 
     public static void e(byte param0) {
         field_v = null;
+        if (param0 < 17) {
+            field_z = 70;
+            field_A = null;
+            return;
+        }
         field_A = null;
     }
 
@@ -39,29 +44,29 @@ final class cc extends ab {
 
     final int f(int param0) {
         if (param0 > 51) {
-          if (null == ((cc) this).field_y) {
+          if (null == this.field_y) {
             return 0;
           } else {
-            return 100 * ((cc) this).field_y.field_l / (((cc) this).field_y.field_o.length - ((cc) this).field_x);
+            return 100 * this.field_y.field_l / (this.field_y.field_o.length - this.field_x);
           }
         } else {
           cc.a((byte) -115, 18);
-          if (null == ((cc) this).field_y) {
+          if (null == this.field_y) {
             return 0;
           } else {
-            return 100 * ((cc) this).field_y.field_l / (((cc) this).field_y.field_o.length - ((cc) this).field_x);
+            return 100 * this.field_y.field_l / (this.field_y.field_o.length - this.field_x);
           }
         }
     }
 
     final byte[] a(boolean param0) {
-        if (!((cc) this).field_s) {
-          if (-((cc) this).field_x + ((cc) this).field_y.field_o.length <= ((cc) this).field_y.field_l) {
+        if (!this.field_s) {
+          if (-this.field_x + this.field_y.field_o.length <= this.field_y.field_l) {
             if (param0) {
-              ((cc) this).field_y = null;
-              return ((cc) this).field_y.field_o;
+              this.field_y = (p) null;
+              return this.field_y.field_o;
             } else {
-              return ((cc) this).field_y.field_o;
+              return this.field_y.field_o;
             }
           } else {
             throw new RuntimeException();
@@ -72,10 +77,6 @@ final class cc extends ab {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_v = "Checking";
     }
 }

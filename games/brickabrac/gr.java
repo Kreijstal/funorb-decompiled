@@ -10,6 +10,9 @@ final class gr {
     public static void a(byte param0) {
         field_b = null;
         field_d = null;
+        if (param0 <= 109) {
+            gr.b(47, 0);
+        }
         field_c = null;
     }
 
@@ -39,7 +42,7 @@ final class gr {
               if (param0) {
                 break L1;
               } else {
-                field_c = null;
+                field_c = (jp) null;
                 break L1;
               }
             }
@@ -51,23 +54,23 @@ final class gr {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("gr.B(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -75,7 +78,7 @@ final class gr {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -120,13 +123,13 @@ final class gr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var2, "gr.D(" + param0 + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) var2), "gr.D(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static void b(int param0, int param1) {
         tn.field_C = param0;
-        if (tn.field_C != 1) {
+        if (-2 != (tn.field_C ^ -1)) {
             a.field_s = ln.field_j;
             jc.field_J = mh.field_ib;
             tf.field_c = kp.field_e;
@@ -149,13 +152,12 @@ final class gr {
             we.field_b = gg.field_p;
             field_c = re.field_k;
         }
+        if (param1 != -28463) {
+            field_a = -38;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
         field_b = "<%0> has dropped out.";
     }

@@ -26,12 +26,12 @@ class pi {
 
     final synchronized void e() {
         try {
-            ((pi) this).field_h = true;
+            this.field_h = true;
             try {
-                ((pi) this).g();
+                this.g();
             } catch (Exception exception) {
-                ((pi) this).h();
-                ((pi) this).field_d = km.b(-1) + 2000L;
+                this.h();
+                this.field_d = km.b(-1) + 2000L;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -71,16 +71,16 @@ class pi {
         }
         L1: {
           dk.a(param0, 0, var3);
-          ((pi) this).field_p = ((pi) this).field_p - param1;
-          if (((pi) this).field_t == null) {
+          this.field_p = this.field_p - param1;
+          if (this.field_t == null) {
             break L1;
           } else {
-            if (((pi) this).field_p > 0) {
+            if (this.field_p > 0) {
               break L1;
             } else {
-              ((pi) this).field_p = ((pi) this).field_p + (field_c >> 4);
-              pi.b(((pi) this).field_t);
-              this.a(((pi) this).field_t, ((pi) this).field_t.d());
+              this.field_p = this.field_p + (field_c >> 4);
+              pi.b(this.field_t);
+              this.a(this.field_t, this.field_t.d());
               var4 = 0;
               var5 = 255;
               var6 = 7;
@@ -105,9 +105,9 @@ class pi {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & ~(1 << var7_int);
+                            var5 = var5 & (1 << var7_int ^ -1);
                             var10 = null;
-                            var11 = ((pi) this).field_i[var7_int];
+                            var11 = this.field_i[var7_int];
                             var14 = var11;
                             var14 = var11;
                             L7: while (true) {
@@ -123,7 +123,7 @@ class pi {
                                       break L8;
                                     } else {
                                       var5 = var5 | 1 << var7_int;
-                                      var10 = (Object) (Object) var11;
+                                      var10 = var11;
                                       var11 = var11.field_l;
                                       continue L7;
                                     }
@@ -140,7 +140,7 @@ class pi {
                                     break L9;
                                   }
                                 }
-                                if (var4 < ((pi) this).field_n) {
+                                if (var4 < this.field_n) {
                                   L10: {
                                     var14 = var11.c();
                                     if (var14 == null) {
@@ -162,10 +162,10 @@ class pi {
                                     var15 = var11.field_l;
                                     var11.field_l = null;
                                     if (var10 != null) {
-                                      ((lf) var10).field_l = var15;
+                                      ((lf) (var10)).field_l = var15;
                                       break L12;
                                     } else {
-                                      ((pi) this).field_i[var7_int] = var15;
+                                      this.field_i[var7_int] = var15;
                                       break L12;
                                     }
                                   }
@@ -173,7 +173,7 @@ class pi {
                                     if (var15 != null) {
                                       break L13;
                                     } else {
-                                      ((pi) this).field_f[var7_int] = (lf) var10;
+                                      this.field_f[var7_int] = (lf) (var10);
                                       break L13;
                                     }
                                   }
@@ -204,19 +204,19 @@ class pi {
                   if (var6 >= 8) {
                     break L1;
                   } else {
-                    var7 = ((pi) this).field_i[var6];
-                    var8 = ((pi) this).field_i;
+                    var7 = this.field_i[var6];
+                    var8 = this.field_i;
                     var9 = var6;
-                    ((pi) this).field_f[var6] = null;
+                    this.field_f[var6] = null;
                     var8[var9] = null;
                     L15: while (true) {
                       if (var7 == null) {
                         var6++;
                         continue L14;
                       } else {
-                        var10 = (Object) (Object) var7.field_l;
+                        var10 = var7.field_l;
                         var7.field_l = null;
-                        var7 = (lf) var10;
+                        var7 = (lf) (var10);
                         continue L15;
                       }
                     }
@@ -227,26 +227,26 @@ class pi {
           }
         }
         L16: {
-          if (((pi) this).field_p >= 0) {
+          if (this.field_p >= 0) {
             break L16;
           } else {
-            ((pi) this).field_p = 0;
+            this.field_p = 0;
             break L16;
           }
         }
         L17: {
-          if (((pi) this).field_t == null) {
+          if (this.field_t == null) {
             break L17;
           } else {
-            ((pi) this).field_t.b(param0, 0, param1);
+            this.field_t.b(param0, 0, param1);
             break L17;
           }
         }
-        ((pi) this).field_k = km.b(-1);
+        this.field_k = km.b(-1);
     }
 
     int a() throws Exception {
-        return ((pi) this).field_e;
+        return this.field_e;
     }
 
     void a(int param0) throws Exception {
@@ -254,6 +254,7 @@ class pi {
 
     final static pi a(vh param0, java.awt.Component param1, int param2, int param3) {
         try {
+            rc discarded$2 = null;
             vj var4 = null;
             Throwable var4_ref = null;
             vj var5 = null;
@@ -294,14 +295,14 @@ class pi {
                         L3: {
                           var5 = new vj();
                           var4 = var5;
-                          stackOut_8_0 = (vj) var4;
+                          stackOut_8_0 = (vj) (var4);
                           stackOut_8_1 = 256;
                           stackIn_10_0 = stackOut_8_0;
                           stackIn_10_1 = stackOut_8_1;
                           stackIn_9_0 = stackOut_8_0;
                           stackIn_9_1 = stackOut_8_1;
                           if (!field_r) {
-                            stackOut_10_0 = (vj) (Object) stackIn_10_0;
+                            stackOut_10_0 = (vj) ((Object) stackIn_10_0);
                             stackOut_10_1 = stackIn_10_1;
                             stackOut_10_2 = 1;
                             stackIn_11_0 = stackOut_10_0;
@@ -309,7 +310,7 @@ class pi {
                             stackIn_11_2 = stackOut_10_2;
                             break L3;
                           } else {
-                            stackOut_9_0 = (vj) (Object) stackIn_9_0;
+                            stackOut_9_0 = (vj) ((Object) stackIn_9_0);
                             stackOut_9_1 = stackIn_9_1;
                             stackOut_9_2 = 2;
                             stackIn_11_0 = stackOut_9_0;
@@ -319,19 +320,19 @@ class pi {
                           }
                         }
                         L4: {
-                          ((pi) (Object) stackIn_11_0).field_l = new int[stackIn_11_1 * stackIn_11_2];
-                          ((pi) (Object) var4).field_b = param3;
-                          ((pi) (Object) var4).a(param1);
-                          ((pi) (Object) var4).field_e = (param3 & -1024) + 1024;
-                          if (((pi) (Object) var4).field_e <= 16384) {
+                          ((pi) ((Object) stackIn_11_0)).field_l = new int[stackIn_11_1 * stackIn_11_2];
+                          ((pi) ((Object) var4)).field_b = param3;
+                          ((pi) ((Object) var4)).a(param1);
+                          ((pi) ((Object) var4)).field_e = (param3 & -1024) + 1024;
+                          if (((pi) ((Object) var4)).field_e <= 16384) {
                             break L4;
                           } else {
-                            ((pi) (Object) var4).field_e = 16384;
+                            ((pi) ((Object) var4)).field_e = 16384;
                             break L4;
                           }
                         }
                         L5: {
-                          ((pi) (Object) var4).a(((pi) (Object) var4).field_e);
+                          ((pi) ((Object) var4)).a(((pi) ((Object) var4)).field_e);
                           if (field_o <= 0) {
                             break L5;
                           } else {
@@ -340,7 +341,7 @@ class pi {
                             } else {
                               field_u = new sa();
                               field_u.field_b = param0;
-                              rc discarded$2 = param0.a((byte) -66, field_o, (Runnable) (Object) field_u);
+                              discarded$2 = param0.a((byte) -66, field_o, (Runnable) ((Object) field_u));
                               break L5;
                             }
                           }
@@ -350,14 +351,14 @@ class pi {
                             break L6;
                           } else {
                             if (field_u.field_c[param2] == null) {
-                              field_u.field_c[param2] = (pi) (Object) var5;
+                              field_u.field_c[param2] = (pi) ((Object) var5);
                               break L6;
                             } else {
                               throw new IllegalArgumentException();
                             }
                           }
                         }
-                        stackOut_20_0 = (vj) var4;
+                        stackOut_20_0 = (vj) (var4);
                         stackIn_21_0 = stackOut_20_0;
                         break L2;
                       }
@@ -366,7 +367,7 @@ class pi {
                       var4_ref = decompiledCaughtException;
                       return new pi();
                     }
-                    return (pi) (Object) stackIn_21_0;
+                    return (pi) ((Object) stackIn_21_0);
                   } else {
                     break L0;
                   }
@@ -391,18 +392,18 @@ class pi {
 
     private final void a(lf param0, int param1) {
         int var3 = param1 >> 5;
-        lf var4 = ((pi) this).field_f[var3];
+        lf var4 = this.field_f[var3];
         if (var4 == null) {
-            ((pi) this).field_i[var3] = param0;
+            this.field_i[var3] = param0;
         } else {
             var4.field_l = param0;
         }
-        ((pi) this).field_f[var3] = param0;
+        this.field_f[var3] = param0;
         param0.field_j = param1;
     }
 
     final synchronized void a(lf param0) {
-        ((pi) this).field_t = param0;
+        this.field_t = param0;
     }
 
     public static void d() {
@@ -410,9 +411,35 @@ class pi {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        field_c = 22050;
-        field_r = true;
-        field_o = 10;
+        int stackIn_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_5_0 = 0;
+        L0: {
+          if (param0 < 8000) {
+            break L0;
+          } else {
+            if (param0 <= 48000) {
+              L1: {
+                field_c = param0;
+                if (!param1) {
+                  stackOut_6_0 = 0;
+                  stackIn_7_0 = stackOut_6_0;
+                  break L1;
+                } else {
+                  stackOut_5_0 = 1;
+                  stackIn_7_0 = stackOut_5_0;
+                  break L1;
+                }
+              }
+              field_r = stackIn_7_0 != 0;
+              field_o = param2;
+              return;
+            } else {
+              break L0;
+            }
+          }
+        }
+        throw new IllegalArgumentException();
     }
 
     private final static void b(lf param0) {
@@ -433,25 +460,26 @@ class pi {
             Exception var3 = null;
             int var3_int = 0;
             int var4 = 0;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            if (!((pi) this).field_g) {
+            if (!this.field_g) {
               var1 = km.b(-1);
               try {
                 L0: {
                   L1: {
-                    if (var1 <= ((pi) this).field_k + 6000L) {
+                    if (var1 <= this.field_k + 6000L) {
                       break L1;
                     } else {
-                      ((pi) this).field_k = var1 - 6000L;
+                      this.field_k = var1 - 6000L;
                       break L1;
                     }
                   }
                   L2: while (true) {
-                    if (var1 <= ((pi) this).field_k + 5000L) {
+                    if (var1 <= this.field_k + 5000L) {
                       break L0;
                     } else {
                       this.b(256);
-                      ((pi) this).field_k = ((pi) this).field_k + (long)(256000 / field_c);
+                      this.field_k = this.field_k + (long)(256000 / field_c);
                       var1 = km.b(-1);
                       continue L2;
                     }
@@ -461,38 +489,39 @@ class pi {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 L3: {
                   var3 = (Exception) (Object) decompiledCaughtException;
-                  ((pi) this).field_k = var1;
+                  this.field_k = var1;
                   break L3;
                 }
               }
-              if (((pi) this).field_l != null) {
+              if (this.field_l != null) {
                 try {
                   L4: {
                     L5: {
-                      if (((pi) this).field_d == 0L) {
+                      if (this.field_d == 0L) {
                         break L5;
                       } else {
-                        if (var1 >= ((pi) this).field_d) {
-                          ((pi) this).a(((pi) this).field_e);
-                          ((pi) this).field_d = 0L;
-                          ((pi) this).field_h = true;
+                        if (var1 >= this.field_d) {
+                          this.a(this.field_e);
+                          this.field_d = 0L;
+                          this.field_h = true;
                           break L5;
                         } else {
-                          return;
+                          decompiledRegionSelector0 = 0;
+                          break L4;
                         }
                       }
                     }
                     L6: {
-                      var3_int = ((pi) this).a();
-                      if (((pi) this).field_a - var3_int <= ((pi) this).field_m) {
+                      var3_int = this.a();
+                      if (this.field_a - var3_int <= this.field_m) {
                         break L6;
                       } else {
-                        ((pi) this).field_m = ((pi) this).field_a - var3_int;
+                        this.field_m = this.field_a - var3_int;
                         break L6;
                       }
                     }
                     L7: {
-                      var4 = ((pi) this).field_b + ((pi) this).field_s;
+                      var4 = this.field_b + this.field_s;
                       if (var4 + 256 <= 16384) {
                         break L7;
                       } else {
@@ -501,27 +530,27 @@ class pi {
                       }
                     }
                     L8: {
-                      if (var4 + 256 <= ((pi) this).field_e) {
+                      if (var4 + 256 <= this.field_e) {
                         break L8;
                       } else {
                         L9: {
-                          ((pi) this).field_e = ((pi) this).field_e + 1024;
-                          if (((pi) this).field_e <= 16384) {
+                          this.field_e = this.field_e + 1024;
+                          if (this.field_e <= 16384) {
                             break L9;
                           } else {
-                            ((pi) this).field_e = 16384;
+                            this.field_e = 16384;
                             break L9;
                           }
                         }
-                        ((pi) this).h();
-                        ((pi) this).a(((pi) this).field_e);
+                        this.h();
+                        this.a(this.field_e);
                         var3_int = 0;
-                        ((pi) this).field_h = true;
-                        if (var4 + 256 <= ((pi) this).field_e) {
+                        this.field_h = true;
+                        if (var4 + 256 <= this.field_e) {
                           break L8;
                         } else {
-                          var4 = ((pi) this).field_e - 256;
-                          ((pi) this).field_s = var4 - ((pi) this).field_b;
+                          var4 = this.field_e - 256;
+                          this.field_s = var4 - this.field_b;
                           break L8;
                         }
                       }
@@ -529,42 +558,44 @@ class pi {
                     L10: while (true) {
                       if (var3_int >= var4) {
                         L11: {
-                          if (var1 <= ((pi) this).field_j) {
+                          if (var1 <= this.field_j) {
                             break L11;
                           } else {
                             L12: {
-                              if (((pi) this).field_h) {
-                                ((pi) this).field_h = false;
+                              if (this.field_h) {
+                                this.field_h = false;
                                 break L12;
                               } else {
                                 L13: {
-                                  if (((pi) this).field_m != 0) {
+                                  if (this.field_m != 0) {
                                     break L13;
                                   } else {
-                                    if (((pi) this).field_q != 0) {
+                                    if (this.field_q != 0) {
                                       break L13;
                                     } else {
-                                      ((pi) this).h();
-                                      ((pi) this).field_d = var1 + 2000L;
-                                      return;
+                                      this.h();
+                                      this.field_d = var1 + 2000L;
+                                      decompiledRegionSelector0 = 1;
+                                      break L4;
                                     }
                                   }
                                 }
-                                ((pi) this).field_s = Math.min(((pi) this).field_q, ((pi) this).field_m);
-                                ((pi) this).field_q = ((pi) this).field_m;
+                                this.field_s = Math.min(this.field_q, this.field_m);
+                                this.field_q = this.field_m;
                                 break L12;
                               }
                             }
-                            ((pi) this).field_m = 0;
-                            ((pi) this).field_j = var1 + 2000L;
+                            this.field_m = 0;
+                            this.field_j = var1 + 2000L;
                             break L11;
                           }
                         }
-                        ((pi) this).field_a = var3_int;
+                        this.field_a = var3_int;
+                        decompiledRegionSelector0 = 2;
                         break L4;
                       } else {
-                        this.a(((pi) this).field_l, 256);
-                        ((pi) this).c();
+                        this.a(this.field_l, 256);
+                        this.c();
                         var3_int += 256;
                         continue L10;
                       }
@@ -574,12 +605,21 @@ class pi {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   L14: {
                     var3 = (Exception) (Object) decompiledCaughtException;
-                    ((pi) this).h();
-                    ((pi) this).field_d = var1 + 2000L;
+                    this.h();
+                    this.field_d = var1 + 2000L;
+                    decompiledRegionSelector0 = 2;
                     break L14;
                   }
                 }
-                return;
+                if (decompiledRegionSelector0 == 0) {
+                  return;
+                } else {
+                  if (decompiledRegionSelector0 == 1) {
+                    return;
+                  } else {
+                    return;
+                  }
+                }
               } else {
                 return;
               }
@@ -594,12 +634,12 @@ class pi {
     }
 
     private final void b(int param0) {
-        ((pi) this).field_p = ((pi) this).field_p - param0;
-        if (((pi) this).field_p < 0) {
-            ((pi) this).field_p = 0;
+        this.field_p = this.field_p - param0;
+        if (this.field_p < 0) {
+            this.field_p = 0;
         }
-        if (((pi) this).field_t != null) {
-            ((pi) this).field_t.a(param0);
+        if (this.field_t != null) {
+            this.field_t.a(param0);
             return;
         }
     }
@@ -631,7 +671,7 @@ class pi {
                 }
               } else {
                 L3: {
-                  if ((Object) (Object) field_u.field_c[var2] != this) {
+                  if (field_u.field_c[var2] != this) {
                     break L3;
                   } else {
                     field_u.field_c[var2] = null;
@@ -650,26 +690,26 @@ class pi {
             }
           }
         }
-        ((pi) this).h();
-        ((pi) this).field_l = null;
-        ((pi) this).field_g = true;
+        this.h();
+        this.field_l = null;
+        this.field_g = true;
     }
 
     void a(java.awt.Component param0) throws Exception {
     }
 
     pi() {
-        ((pi) this).field_n = 32;
-        ((pi) this).field_g = false;
-        ((pi) this).field_k = km.b(-1);
-        ((pi) this).field_i = new lf[8];
-        ((pi) this).field_a = 0;
-        ((pi) this).field_q = 0;
-        ((pi) this).field_h = true;
-        ((pi) this).field_m = 0;
-        ((pi) this).field_f = new lf[8];
-        ((pi) this).field_p = 0;
-        ((pi) this).field_d = 0L;
-        ((pi) this).field_j = 0L;
+        this.field_n = 32;
+        this.field_g = false;
+        this.field_k = km.b(-1);
+        this.field_i = new lf[8];
+        this.field_a = 0;
+        this.field_q = 0;
+        this.field_h = true;
+        this.field_m = 0;
+        this.field_f = new lf[8];
+        this.field_p = 0;
+        this.field_d = 0L;
+        this.field_j = 0L;
     }
 }

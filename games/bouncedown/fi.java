@@ -7,24 +7,38 @@ final class fi {
     static int field_b;
 
     public static void a(int param0) {
+        if (param0 != -14935) {
+            return;
+        }
         field_a = null;
     }
 
     final static boolean b(int param0) {
-        if (null == kf.field_b) {
+        if (param0 == 21856) {
+          if (null != kf.field_b) {
+            if (kf.field_b.a(false) == null) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (kf.field_b.a(false) == null) {
+          }
+        } else {
+          fi.a(93);
+          if (null != kf.field_b) {
+            if (kf.field_b.a(false) == null) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Loading graphics";
     }
 }

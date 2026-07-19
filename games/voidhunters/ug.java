@@ -9,6 +9,11 @@ final class ug extends rqa {
     }
 
     public static void f(byte param0) {
+        if (param0 != -104) {
+            ug.e((byte) -21);
+            field_o = null;
+            return;
+        }
         field_o = null;
     }
 
@@ -39,11 +44,11 @@ final class ug extends rqa {
               if (param1 <= -119) {
                 break L1;
               } else {
-                field_o = (Object[]) ((Object[]) field_o[1])[4];
+                field_o = (Object[]) (((Object[]) (field_o[1]))[4]);
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -51,23 +56,23 @@ final class ug extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ug.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -75,7 +80,7 @@ final class ug extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -377,13 +382,18 @@ final class ug extends rqa {
         System.out.println("set_self_destruct_timer(" + oq.field_y + ")");
         System.out.println("set_player_repair_time(" + wra.field_p + ")");
         System.out.println("set_player_repair_amount(" + gka.field_q + ")");
-        System.out.println("set_ai_repair_time(" + uja.field_b + ")");
-        System.out.println("set_ai_repair_amount(" + ela.field_q + ")");
-        System.out.println("set_fighter_repair_time(" + wj.field_p + ")");
-        System.out.println("set_fighter_repair_amount(" + bjb.field_o + ")");
-        System.out.println("set_ready_room_mission_time(" + oq.field_h + ")");
-        System.out.println("set_ready_room_mutator_time(" + oq.field_z + ")");
-        System.out.println("set_ready_room_team_time(" + oq.field_j + ")");
+        if (param0 != 106) {
+          return;
+        } else {
+          System.out.println("set_ai_repair_time(" + uja.field_b + ")");
+          System.out.println("set_ai_repair_amount(" + ela.field_q + ")");
+          System.out.println("set_fighter_repair_time(" + wj.field_p + ")");
+          System.out.println("set_fighter_repair_amount(" + bjb.field_o + ")");
+          System.out.println("set_ready_room_mission_time(" + oq.field_h + ")");
+          System.out.println("set_ready_room_mutator_time(" + oq.field_z + ")");
+          System.out.println("set_ready_room_team_time(" + oq.field_j + ")");
+          return;
+        }
     }
 
     static {

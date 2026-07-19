@@ -13,7 +13,7 @@ public class va {
 
     public static File a(String param0, byte param1) {
         if (param1 != 40) {
-            field_d = null;
+            field_d = (String) null;
             return va.a(field_b, -29755, field_e, param0);
         }
         return va.a(field_b, -29755, field_e, param0);
@@ -39,7 +39,7 @@ public class va {
               if (param0 <= -87) {
                 break L1;
               } else {
-                field_c = null;
+                field_c = (Hashtable) null;
                 break L1;
               }
             }
@@ -75,10 +75,6 @@ public class va {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = false;
         field_c = new Hashtable(16);
     }

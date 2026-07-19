@@ -9,20 +9,25 @@ final class dw extends kj {
     dw(gj param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
-            ((dw) this).field_h = 39;
+            this.field_h = 39;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "dw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "dw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_g = null;
+        if (!param0) {
+            return;
+        }
+        dw.a(30, -41, 76, 123, -15, -79);
     }
 
     final boolean b(int param0) {
+        int fieldTemp$2 = 0;
         if (param0 >= 21) {
-          int fieldTemp$2 = ((dw) this).field_h - 1;
-          ((dw) this).field_h = ((dw) this).field_h - 1;
+          fieldTemp$2 = this.field_h - 1;
+          this.field_h = this.field_h - 1;
           if (fieldTemp$2 != 0) {
             return false;
           } else {
@@ -63,20 +68,20 @@ final class dw extends kj {
             var7 = param1;
             var8 = param3 * param3;
             var9 = param1 * param1;
-            var10 = var9 << 1;
-            var11 = var8 << 1;
-            var12 = param1 << 1;
+            var10 = var9 << -2002178271;
+            var11 = var8 << 1995104129;
+            var12 = param1 << -876583007;
             var13 = (1 + -var12) * var8 + var10;
             var14 = -(var11 * (var12 + -1)) + var9;
-            var15 = var8 << 2;
-            var16 = var9 << 2;
-            var17 = var10 * (3 + (var6_int << 1));
-            var18 = ((var7 << 1) + -3) * var11;
+            var15 = var8 << 457629442;
+            var16 = var9 << -1981960286;
+            var17 = var10 * (3 + (var6_int << 278404801));
+            var18 = ((var7 << 251199585) + -3) * var11;
             var19 = var16 * (1 + var6_int);
             hba.a(param4, -param3 + param5, tj.field_b[param0], 7, param3 + param5);
             var20 = var15 * (-1 + var7);
             L1: while (true) {
-              if (var7 <= 0) {
+              if ((var7 ^ -1) >= -1) {
                 break L0;
               } else {
                 L2: {
@@ -84,7 +89,7 @@ final class dw extends kj {
                     break L2;
                   } else {
                     L3: while (true) {
-                      if (var13 >= 0) {
+                      if (-1 >= (var13 ^ -1)) {
                         break L2;
                       } else {
                         var14 = var14 + var19;
@@ -127,7 +132,7 @@ final class dw extends kj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var6, "dw.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.a((Throwable) ((Object) var6), "dw.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -140,11 +145,11 @@ final class dw extends kj {
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-          ((dw) this).a(-64, false, -127);
-          mba.field_d[(-((dw) this).field_h + 39) / 4].e(param2, -16 + param0);
+          this.a(-64, false, -127);
+          mba.field_d[(-this.field_h + 39) / 4].e(param2, -16 + param0);
           return;
         } else {
-          mba.field_d[(-((dw) this).field_h + 39) / 4].e(param2, -16 + param0);
+          mba.field_d[(-this.field_h + 39) / 4].e(param2, -16 + param0);
           return;
         }
     }

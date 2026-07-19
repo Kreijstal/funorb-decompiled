@@ -19,20 +19,29 @@ final class dj {
 
     public static void a(boolean param0) {
         field_c = null;
-        field_h = null;
-        field_j = null;
-        field_m = null;
-        field_l = null;
-        field_a = null;
-        field_b = null;
-        field_e = null;
+        if (!param0) {
+          field_l = (long[]) null;
+          field_h = null;
+          field_j = null;
+          field_m = null;
+          field_l = null;
+          field_a = null;
+          field_b = null;
+          field_e = null;
+          return;
+        } else {
+          field_h = null;
+          field_j = null;
+          field_m = null;
+          field_l = null;
+          field_a = null;
+          field_b = null;
+          field_e = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "dj.A(";
         field_c = new cd();
         field_m = new int[]{14, 15, 16, 8, 52, 53};

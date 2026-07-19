@@ -18,9 +18,12 @@ abstract class nb extends wb {
 
     public static void d(int param0) {
         field_u = null;
-        field_q = null;
+        field_q = (int[][]) null;
         field_p = null;
         field_r = null;
+        if (param0 != -30419) {
+            return;
+        }
         field_o = null;
         field_x = null;
     }
@@ -29,105 +32,100 @@ abstract class nb extends wb {
         int var4 = 0;
         int var5 = 0;
         if (ac.field_e) {
-          L0: {
-            cm.field_h.a(param0, (byte) 97);
-            var4 = dk.field_v.i(-9184) ? 1 : 0;
-            if (0 == oi.field_g) {
-              break L0;
-            } else {
-              if (var4 != 0) {
+          cm.field_h.a(param0, (byte) 97);
+          if (param3 == 5) {
+            L0: {
+              var4 = dk.field_v.i(-9184) ? 1 : 0;
+              if (0 == oi.field_g) {
                 break L0;
               } else {
-                param0 = false;
-                nf.a((byte) -119);
-                break L0;
+                if (var4 != 0) {
+                  break L0;
+                } else {
+                  param0 = false;
+                  nf.a((byte) -119);
+                  break L0;
+                }
               }
             }
-          }
-          if (!param0) {
-            if (var4 == 0) {
-              var5 = dk.field_v.g(-10) + dk.field_v.field_Bb;
-              if (var5 <= 640) {
-                L1: {
-                  if (var5 >= 635) {
-                    break L1;
-                  } else {
-                    if (bf.field_o > 0) {
-                      bf.field_o = bf.field_o - 5;
-                      break L1;
+            if (!param0) {
+              if (var4 == 0) {
+                var5 = dk.field_v.g(-10) + dk.field_v.field_Bb;
+                if ((var5 ^ -1) >= -641) {
+                  if (-636 < (var5 ^ -1)) {
+                    if (-1 <= (bf.field_o ^ -1)) {
+                      return;
                     } else {
+                      bf.field_o = bf.field_o - 5;
                       return;
                     }
-                  }
-                }
-                return;
-              } else {
-                bf.field_o = bf.field_o + 5;
-                return;
-              }
-            } else {
-              cm.field_h.a(param0, (byte) 126);
-              var5 = dk.field_v.g(-10) + dk.field_v.field_Bb;
-              if (var5 <= 640) {
-                L2: {
-                  if (var5 >= 635) {
-                    break L2;
-                  } else {
-                    if (bf.field_o > 0) {
-                      bf.field_o = bf.field_o - 5;
-                      break L2;
-                    } else {
-                      return;
-                    }
-                  }
-                }
-                return;
-              } else {
-                bf.field_o = bf.field_o + 5;
-                return;
-              }
-            }
-          } else {
-            dk.field_v.b(13, -80, 15);
-            if (var4 != 0) {
-              cm.field_h.a(param0, (byte) 126);
-              var5 = dk.field_v.g(-10) + dk.field_v.field_Bb;
-              if (var5 <= 640) {
-                if (var5 < 635) {
-                  if (bf.field_o > 0) {
-                    bf.field_o = bf.field_o - 5;
-                    return;
                   } else {
                     return;
                   }
                 } else {
+                  bf.field_o = bf.field_o + 5;
                   return;
                 }
               } else {
-                bf.field_o = bf.field_o + 5;
-                return;
-              }
-            } else {
-              var5 = dk.field_v.g(-10) + dk.field_v.field_Bb;
-              if (var5 <= 640) {
-                L3: {
-                  if (var5 >= 635) {
-                    break L3;
-                  } else {
-                    if (bf.field_o > 0) {
-                      bf.field_o = bf.field_o - 5;
-                      break L3;
+                cm.field_h.a(param0, (byte) 126);
+                var5 = dk.field_v.g(-10) + dk.field_v.field_Bb;
+                if ((var5 ^ -1) >= -641) {
+                  if (-636 < (var5 ^ -1)) {
+                    if (-1 <= (bf.field_o ^ -1)) {
+                      return;
                     } else {
+                      bf.field_o = bf.field_o - 5;
                       return;
                     }
+                  } else {
+                    return;
                   }
+                } else {
+                  bf.field_o = bf.field_o + 5;
+                  return;
                 }
-                return;
+              }
+            } else {
+              dk.field_v.b(param1, -80, param2);
+              if (var4 != 0) {
+                cm.field_h.a(param0, (byte) 126);
+                var5 = dk.field_v.g(-10) + dk.field_v.field_Bb;
+                if ((var5 ^ -1) >= -641) {
+                  if (-636 < (var5 ^ -1)) {
+                    if (-1 <= (bf.field_o ^ -1)) {
+                      return;
+                    } else {
+                      bf.field_o = bf.field_o - 5;
+                      return;
+                    }
+                  } else {
+                    return;
+                  }
+                } else {
+                  bf.field_o = bf.field_o + 5;
+                  return;
+                }
               } else {
-                bf.field_o = bf.field_o + 5;
-                return;
+                var5 = dk.field_v.g(-10) + dk.field_v.field_Bb;
+                if ((var5 ^ -1) >= -641) {
+                  if (-636 < (var5 ^ -1)) {
+                    if (-1 <= (bf.field_o ^ -1)) {
+                      return;
+                    } else {
+                      bf.field_o = bf.field_o - 5;
+                      return;
+                    }
+                  } else {
+                    return;
+                  }
+                } else {
+                  bf.field_o = bf.field_o + 5;
+                  return;
+                }
               }
             }
+          } else {
+            return;
           }
         } else {
           return;
@@ -136,23 +134,23 @@ abstract class nb extends wb {
 
     final static void a(boolean param0, oj param1) {
         try {
-            cm.field_h.a(0, (km) (Object) param1);
+            if (param0) {
+                oj var3 = (oj) null;
+                nb.a(false, (oj) null);
+            }
+            cm.field_h.a(0, param1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "nb.E(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "nb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     abstract byte[] b(byte param0);
 
     nb() {
-        ((nb) this).field_t = true;
+        this.field_t = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = 250;
         field_u = new int[]{2, 14, 15, 6, 5, 16, 17, 18, 12};
         field_o = "Remove <%0> from friend list";

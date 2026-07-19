@@ -11,8 +11,8 @@ final class bm {
     static nn field_b;
 
     final static void a(int param0) {
-        cg.d(32);
-        lj.a(4, 30);
+        cg.d(param0 ^ 36);
+        lj.a(param0, 30);
     }
 
     final static lm a(String param0, int param1, int param2) {
@@ -44,12 +44,12 @@ final class bm {
               if (param2 == 4) {
                 break L1;
               } else {
-                field_g = null;
+                field_g = (String) null;
                 break L1;
               }
             }
             var3.field_f = param0;
-            stackOut_2_0 = (lm) var3;
+            stackOut_2_0 = (lm) (var3);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -57,23 +57,23 @@ final class bm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_0 = (RuntimeException) (var3_ref);
             stackOut_4_1 = new StringBuilder().append("bm.B(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -81,28 +81,38 @@ final class bm {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
 
     public static void a(byte param0) {
         field_d = null;
-        field_b = null;
-        field_f = null;
-        field_g = null;
-        field_a = null;
-        field_e = null;
+        if (param0 != 110) {
+          bm.a(95);
+          field_b = null;
+          field_f = null;
+          field_g = null;
+          field_a = null;
+          field_e = null;
+          return;
+        } else {
+          field_b = null;
+          field_f = null;
+          field_g = null;
+          field_a = null;
+          field_e = null;
+          return;
+        }
     }
 
     final static void b(byte param0) {
+        if (param0 != 62) {
+            bm.a((byte) -121);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 0;
         field_f = "Waiting for music";
         field_d = "Continue";

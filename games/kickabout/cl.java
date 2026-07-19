@@ -13,7 +13,7 @@ final class cl {
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
         if (param0) {
-          if (param3 < 0) {
+          if (-1 < (param3 ^ -1)) {
             return false;
           } else {
             if (param3 <= 11) {
@@ -48,42 +48,40 @@ final class cl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        int var0 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        field_g = "last week's Diamond Division winner: ";
-        field_c = new int[256];
-        field_d = true;
-        var1 = 0;
-        L0: while (true) {
-          if (var1 >= 256) {
-            field_h = "Hide players in <%0>'s game";
-            return;
-          } else {
-            var0 = var1;
-            var2 = 0;
-            L1: while (true) {
-              if (8 <= var2) {
-                field_c[var1] = var0;
-                var1++;
-                continue L0;
+        $cfr$clinit: {
+            int var0 = 0;
+            int var1 = 0;
+            int var2 = 0;
+            field_g = "last week's Diamond Division winner: ";
+            field_c = new int[256];
+            field_d = true;
+            var1 = 0;
+            L0: while (true) {
+              if ((var1 ^ -1) <= -257) {
+                field_h = "Hide players in <%0>'s game";
+                break $cfr$clinit;
               } else {
-                if ((var0 & 1) != 1) {
-                  var0 = var0 >>> 1;
-                  var2++;
-                  continue L1;
-                } else {
-                  var0 = var0 >>> 1 ^ -306674912;
-                  var2++;
-                  continue L1;
+                var0 = var1;
+                var2 = 0;
+                L1: while (true) {
+                  if (8 <= var2) {
+                    field_c[var1] = var0;
+                    var1++;
+                    continue L0;
+                  } else {
+                    if ((var0 & 1 ^ -1) != -2) {
+                      var0 = var0 >>> 1;
+                      var2++;
+                      continue L1;
+                    } else {
+                      var0 = var0 >>> -1481890047 ^ -306674912;
+                      var2++;
+                      continue L1;
+                    }
+                  }
                 }
               }
             }
-          }
         }
     }
 }

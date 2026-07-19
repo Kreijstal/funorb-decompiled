@@ -20,20 +20,22 @@ final class qn extends tg {
     static pd field_R;
 
     public static void c(byte param0) {
+        wm discarded$0 = null;
         field_I = null;
         field_R = null;
         field_H = null;
         field_L = null;
         field_S = null;
         if (param0 != -124) {
-            Object var2 = null;
-            wm discarded$0 = qn.a((hg) null, 93);
+            hg var2 = (hg) null;
+            discarded$0 = qn.a((hg) null, 93);
         }
         field_P = null;
         field_J = null;
     }
 
     final static wm a(hg param0, int param1) {
+        int discarded$1 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -102,7 +104,7 @@ final class qn extends tg {
               }
               L3: {
                 if (var4 != 0) {
-                  int discarded$1 = param0.c((byte) -78, 16);
+                  discarded$1 = param0.c((byte) -78, 16);
                   var5.field_s = c.a(var5.field_s, -119, 16, param0);
                   var5.field_d = c.a(var5.field_d, -108, 16, param0);
                   var5.field_t = c.a(var5.field_t, param1 + -13589, 16, param0);
@@ -152,7 +154,7 @@ final class qn extends tg {
                   }
                 }
               }
-              stackOut_24_0 = (wm) var5;
+              stackOut_24_0 = (wm) (var5);
               stackIn_25_0 = stackOut_24_0;
               break L0;
             }
@@ -161,23 +163,23 @@ final class qn extends tg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var2;
+            stackOut_26_0 = (RuntimeException) (var2);
             stackOut_26_1 = new StringBuilder().append("qn.A(");
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param0 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L8;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -185,7 +187,7 @@ final class qn extends tg {
               break L8;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param1 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param1 + ')');
         }
         return stackIn_25_0;
     }
@@ -219,38 +221,38 @@ final class qn extends tg {
           L0: {
             if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
               L1: {
-                var8_int = -((qn) this).field_M + (-((qn) this).field_l + (-param3 + param6));
-                var9 = -((qn) this).field_N - ((qn) this).field_u - (param5 - param4);
-                if (((qn) this).field_F * ((qn) this).field_F <= var9 * var9 + var8_int * var8_int) {
+                var8_int = -this.field_M + (-this.field_l + (-param3 + param6));
+                var9 = -this.field_N - this.field_u - (param5 - param4);
+                if (this.field_F * this.field_F <= var9 * var9 + var8_int * var8_int) {
                   break L1;
                 } else {
                   L2: {
                     var10 = Math.atan2((double)var9, (double)var8_int) - bk.field_b;
                     if (0.0 <= var10) {
                       if (var10 > 0.0) {
-                        var10 = var10 + 3.141592653589793 / (double)((qn) this).field_Q;
+                        var10 = var10 + 3.141592653589793 / (double)this.field_Q;
                         break L2;
                       } else {
                         break L2;
                       }
                     } else {
-                      var10 = var10 - 3.141592653589793 / (double)((qn) this).field_Q;
+                      var10 = var10 - 3.141592653589793 / (double)this.field_Q;
                       break L2;
                     }
                   }
-                  ((qn) this).field_G = (int)(var10 * (double)((qn) this).field_Q / 6.283185307179586);
+                  this.field_G = (int)(var10 * (double)this.field_Q / 6.283185307179586);
                   L3: while (true) {
-                    if (((qn) this).field_Q > ((qn) this).field_G) {
+                    if (this.field_Q > this.field_G) {
                       L4: while (true) {
-                        if (0 <= ((qn) this).field_G) {
+                        if (0 <= this.field_G) {
                           break L1;
                         } else {
-                          ((qn) this).field_G = ((qn) this).field_G + ((qn) this).field_Q;
+                          this.field_G = this.field_G + this.field_Q;
                           continue L4;
                         }
                       }
                     } else {
-                      ((qn) this).field_G = ((qn) this).field_G - ((qn) this).field_Q;
+                      this.field_G = this.field_G - this.field_Q;
                       continue L3;
                     }
                   }
@@ -267,23 +269,23 @@ final class qn extends tg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var8;
+            stackOut_16_0 = (RuntimeException) (var8);
             stackOut_16_1 = new StringBuilder().append("qn.NA(");
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -291,7 +293,7 @@ final class qn extends tg {
               break L5;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_15_0 != 0;
     }
@@ -301,10 +303,6 @@ final class qn extends tg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = 2;
         field_P = new p();
         field_L = "<%0> has resigned.";

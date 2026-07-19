@@ -11,19 +11,30 @@ final class dk {
     }
 
     final static boolean a(int param0, byte param1, int param2) {
-        return (540800 & param0) != 0;
+        if (param1 >= -57) {
+            return true;
+        }
+        return (540800 & param0 ^ -1) != -1 ? true : false;
     }
 
     final static ns a(byte param0) {
         try {
             Throwable var1 = null;
-            ns stackIn_1_0 = null;
+            ns stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            ns stackOut_0_0 = null;
+            ns stackOut_2_0 = null;
             try {
               L0: {
-                stackOut_0_0 = (ns) Class.forName("gp").newInstance();
-                stackIn_1_0 = stackOut_0_0;
+                L1: {
+                  if (param0 <= -125) {
+                    break L1;
+                  } else {
+                    field_c = -74;
+                    break L1;
+                  }
+                }
+                stackOut_2_0 = (ns) (Class.forName("gp").newInstance());
+                stackIn_3_0 = stackOut_2_0;
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -31,7 +42,7 @@ final class dk {
               var1 = decompiledCaughtException;
               return null;
             }
-            return stackIn_1_0;
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -48,10 +59,6 @@ final class dk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new jn();
         field_b = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     }

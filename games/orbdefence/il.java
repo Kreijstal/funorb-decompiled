@@ -11,14 +11,14 @@ final class il {
 
     final o b(int param0) {
         o var2 = null;
-        var2 = ((il) this).field_c;
-        if (var2 == ((il) this).field_b) {
-          ((il) this).field_c = null;
+        var2 = this.field_c;
+        if (var2 == this.field_b) {
+          this.field_c = null;
           return null;
         } else {
-          ((il) this).field_c = var2.field_f;
+          this.field_c = var2.field_f;
           if (param0 != 0) {
-            return null;
+            return (o) null;
           } else {
             return var2;
           }
@@ -34,22 +34,29 @@ final class il {
           return -79;
         } else {
           var2 = 0;
-          var3 = ((il) this).field_b.field_f;
+          var3 = this.field_b.field_f;
           L0: while (true) {
-            if (var3 == ((il) this).field_b) {
-              return var2;
-            } else {
-              var3 = var3.field_f;
-              var2++;
-              continue L0;
+            L1: {
+              if (var3 == this.field_b) {
+                break L1;
+              } else {
+                var3 = var3.field_f;
+                var2++;
+                if (var4 == 0) {
+                  continue L0;
+                } else {
+                  break L1;
+                }
+              }
             }
+            return var2;
           }
         }
     }
 
     final void a(int param0, o param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
+        o var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -76,15 +83,15 @@ final class il {
                 break L1;
               }
             }
-            param1.field_g = ((il) this).field_b.field_g;
-            param1.field_f = ((il) this).field_b;
+            param1.field_g = this.field_b.field_g;
+            param1.field_f = this.field_b;
             param1.field_g.field_f = param1;
             param1.field_f.field_g = param1;
             if (param0 < -39) {
               break L0;
             } else {
-              var4 = null;
-              ((il) this).a(-33, (o) null);
+              var4 = (o) null;
+              this.a(-33, (o) null);
               return;
             }
           }
@@ -92,23 +99,23 @@ final class il {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_0 = (RuntimeException) (var3);
             stackOut_6_1 = new StringBuilder().append("il.B(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -116,7 +123,7 @@ final class il {
               break L2;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
@@ -131,22 +138,26 @@ final class il {
         field_e = null;
         field_f = null;
         field_d = null;
+        if (param0 != 0) {
+            field_a = false;
+        }
     }
 
     final o c(int param0) {
+        o discarded$2 = null;
         o var2 = null;
         if (param0 == 30664) {
-          var2 = ((il) this).field_b.field_f;
-          if (((il) this).field_b == var2) {
+          var2 = this.field_b.field_f;
+          if (this.field_b == var2) {
             return null;
           } else {
             var2.c(param0 ^ -30665);
             return var2;
           }
         } else {
-          o discarded$2 = ((il) this).b(40);
-          var2 = ((il) this).field_b.field_f;
-          if (((il) this).field_b == var2) {
+          discarded$2 = this.b(40);
+          var2 = this.field_b.field_f;
+          if (this.field_b == var2) {
             return null;
           } else {
             var2.c(param0 ^ -30665);
@@ -156,42 +167,38 @@ final class il {
     }
 
     public il() {
-        ((il) this).field_b = new o();
-        ((il) this).field_b.field_g = ((il) this).field_b;
-        ((il) this).field_b.field_f = ((il) this).field_b;
+        this.field_b = new o();
+        this.field_b.field_g = this.field_b;
+        this.field_b.field_f = this.field_b;
     }
 
     final o b(byte param0) {
         o var2 = null;
-        Object var3 = null;
+        o var3 = null;
         if (param0 == 46) {
-          var2 = ((il) this).field_b.field_f;
-          if (var2 == ((il) this).field_b) {
-            ((il) this).field_c = null;
+          var2 = this.field_b.field_f;
+          if (var2 == this.field_b) {
+            this.field_c = null;
             return null;
           } else {
-            ((il) this).field_c = var2.field_f;
+            this.field_c = var2.field_f;
             return var2;
           }
         } else {
-          var3 = null;
-          ((il) this).a(49, (o) null);
-          var2 = ((il) this).field_b.field_f;
-          if (var2 == ((il) this).field_b) {
-            ((il) this).field_c = null;
+          var3 = (o) null;
+          this.a(49, (o) null);
+          var2 = this.field_b.field_f;
+          if (var2 == this.field_b) {
+            this.field_c = null;
             return null;
           } else {
-            ((il) this).field_c = var2.field_f;
+            this.field_c = var2.field_f;
             return var2;
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Return to game";
     }
 }

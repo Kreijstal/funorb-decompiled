@@ -13,16 +13,12 @@ final class cq {
         field_b = null;
         field_e = null;
         field_a = null;
-        int var1 = 34;
+        int var1 = -104 / ((param0 - 18) / 32);
         field_c = null;
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "cq.A(";
         field_c = "to keep fullscreen or";
     }

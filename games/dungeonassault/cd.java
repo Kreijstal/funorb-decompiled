@@ -13,7 +13,7 @@ final class cd {
 
     final boolean a(byte param0) {
         int var2 = -99 % ((param0 - 83) / 38);
-        return ((cd) this).field_c;
+        return this.field_c;
     }
 
     cd(String param0) {
@@ -23,9 +23,9 @@ final class cd {
     final String b(int param0) {
         if (param0 != -1) {
             cd.a(96);
-            return ((cd) this).field_a;
+            return this.field_a;
         }
-        return ((cd) this).field_a;
+        return this.field_a;
     }
 
     public static void a(int param0) {
@@ -68,11 +68,11 @@ final class cd {
         try {
           L0: {
             L1: {
-              ((cd) this).field_a = param0;
-              if (null != ((cd) this).field_a) {
+              this.field_a = param0;
+              if (null != this.field_a) {
                 break L1;
               } else {
-                ((cd) this).field_a = "";
+                this.field_a = "";
                 break L1;
               }
             }
@@ -94,11 +94,11 @@ final class cd {
                 break L2;
               }
             }
-            ((cd) this).field_c = stackIn_6_1 != 0;
-            if (((cd) this).field_a.length() != 0) {
+            ((cd) (this)).field_c = stackIn_6_1 != 0;
+            if (-1 != (this.field_a.length() ^ -1)) {
               break L0;
             } else {
-              ((cd) this).field_c = false;
+              this.field_c = false;
               return;
             }
           }
@@ -106,23 +106,23 @@ final class cd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("cd.<init>(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -130,15 +130,11 @@ final class cd {
               break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_h = "Quit";
         field_g = new md();

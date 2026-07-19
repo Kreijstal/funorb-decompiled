@@ -11,7 +11,11 @@ final class rn {
     static volatile boolean field_b;
 
     public static void b(int param0) {
+        int discarded$0 = 0;
         field_g = null;
+        if (param0 != 64) {
+            discarded$0 = rn.a(93);
+        }
         field_d = null;
         field_c = null;
         field_f = null;
@@ -67,11 +71,11 @@ final class rn {
               }
             }
             var5 = new ol();
-            var5.b(124);
-            var5.a((long)(param0 * 8), 17567, var4);
+            var5.b(param2 ^ 116);
+            var5.a((long)(param0 * param2), 17567, var4);
             var6 = new byte[64];
             var5.a((byte) -88, var6, 0);
-            stackOut_6_0 = (byte[]) var6;
+            stackOut_6_0 = (byte[]) (var6);
             stackIn_7_0 = stackOut_6_0;
             break L0;
           }
@@ -79,23 +83,23 @@ final class rn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var4_ref;
-            stackOut_8_1 = new StringBuilder().append("rn.B(").append(param0).append(',').append(param1).append(',').append(8).append(',');
+            stackOut_8_0 = (RuntimeException) (var4_ref);
+            stackOut_8_1 = new StringBuilder().append("rn.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param3 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -103,20 +107,19 @@ final class rn {
               break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
 
     final static int a(int param0) {
+        if (param0 > -66) {
+            return -64;
+        }
         return wk.field_g;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new String[]{null, "You need to recruit some raiders in order to raid another dungeon.<br><br><%command>Recruit a party of raiders, then exit this page by clicking on the 'Confirm' button at the top-left of the screen.</col>"};
         field_d = "Use special abilities before combat begins.";
         field_e = "From only <%0>/month";

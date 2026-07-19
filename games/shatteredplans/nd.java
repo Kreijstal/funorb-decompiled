@@ -15,6 +15,9 @@ final class nd {
     int field_j;
 
     final static sq a(byte param0) {
+        String discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
         sq var1 = null;
         int var2 = 0;
         StringBuilder var3 = null;
@@ -31,7 +34,7 @@ final class nd {
               var2 = -25 % ((0 - param0) / 59);
               var8 = new sq();
               var1 = var8;
-              String discarded$3 = sd.field_t.substring(1, sd.field_t.indexOf(']'));
+              discarded$3 = sd.field_t.substring(1, sd.field_t.indexOf(']'));
               var3 = new StringBuilder();
               tp.b((byte) 56);
               L1: while (true) {
@@ -118,8 +121,8 @@ final class nd {
                           break L2;
                         }
                       } else {
-                        StringBuilder discarded$4 = var3.append(sd.field_t);
-                        StringBuilder discarded$5 = var3.append(' ');
+                        discarded$4 = var3.append(sd.field_t);
+                        discarded$5 = var3.append(' ');
                         break L2;
                       }
                     }
@@ -145,6 +148,9 @@ final class nd {
     }
 
     public static void a(boolean param0) {
+        if (!param0) {
+            return;
+        }
         field_i = null;
         field_d = null;
         field_c = null;
@@ -154,16 +160,12 @@ final class nd {
     }
 
     nd(int param0, int param1, int param2) {
-        ((nd) this).field_j = param1;
-        ((nd) this).field_f = param2;
-        ((nd) this).field_e = param0;
+        this.field_j = param1;
+        this.field_f = param2;
+        this.field_e = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Rated games are available to members only. To become a member, please visit the 'Account' section of the website.";
         field_d = new int[]{1, 1, 2, 2, 3, 1, 3, 2, 2, 2, 3, 3, 1, 3, 5, 5, 5, 5, 3, 5, 3, 5, 1, 1, 5};
         field_g = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};

@@ -17,26 +17,46 @@ abstract class l {
         if (param0 < 94) {
             return;
         }
-        oo.a(((l) this).field_b, ((l) this).field_h, ((l) this).field_f);
+        oo.a(this.field_b, this.field_h, this.field_f);
     }
 
     final static boolean a(int param0, int param1) {
-        return param0 == (-param0 & param0);
+        if (param1 > -23) {
+            return false;
+        }
+        return param0 == (-param0 & param0) ? true : false;
     }
 
     final static hf a(byte param0) {
-        String var1 = s.a((byte) 32);
-        if (var1 != null) {
-            if (var1.indexOf('@') >= 0) {
+        String var1 = null;
+        if (param0 != -118) {
+          return (hf) null;
+        } else {
+          L0: {
+            var1 = s.a((byte) 32);
+            if (var1 == null) {
+              break L0;
+            } else {
+              if (var1.indexOf('@') < 0) {
+                break L0;
+              } else {
                 var1 = "";
+                break L0;
+              }
             }
+          }
+          return new hf(s.a((byte) 32), bg.a(2));
         }
-        return new hf(s.a((byte) 32), bg.a(2));
     }
 
     public static void a(int param0) {
         field_c = null;
         field_d = null;
+        if (param0 != 64) {
+            field_e = (k) null;
+            field_e = null;
+            return;
+        }
         field_e = null;
     }
 
@@ -57,10 +77,6 @@ abstract class l {
     abstract void a(int param0, java.awt.Component param1, int param2, int param3);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new bo("usename");
         field_a = 0;
         field_d = "Game";

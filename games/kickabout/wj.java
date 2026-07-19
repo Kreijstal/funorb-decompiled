@@ -18,6 +18,7 @@ class wj extends fd implements jp {
         int var4 = 0;
         fd stackIn_8_0 = null;
         Object stackIn_11_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         fd stackOut_7_0 = null;
         Object stackOut_10_0 = null;
@@ -25,45 +26,51 @@ class wj extends fd implements jp {
         try {
           L0: {
             L1: {
-              var2 = new nw(((wj) this).field_y);
+              var2 = new nw(this.field_y);
               if (!param0) {
                 break L1;
               } else {
-                field_v = null;
+                field_v = (vn[][]) null;
                 break L1;
               }
             }
-            var3 = (fd) (Object) var2.a((byte) 77);
+            var3 = (fd) ((Object) var2.a((byte) 77));
             L2: while (true) {
               L3: {
                 if (null == var3) {
                   break L3;
                 } else {
                   if (!var3.b(42)) {
-                    var3 = (fd) (Object) var2.a(0);
+                    var3 = (fd) ((Object) var2.a(0));
                     if (var4 == 0) {
                       continue L2;
                     } else {
                       break L3;
                     }
                   } else {
-                    stackOut_7_0 = (fd) var3;
+                    stackOut_7_0 = (fd) (var3);
                     stackIn_8_0 = stackOut_7_0;
-                    return stackIn_8_0;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   }
                 }
               }
               stackOut_10_0 = null;
               stackIn_11_0 = stackOut_10_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2_ref, "wj.Q(" + param0 + ')');
+          throw nb.a((Throwable) ((Object) var2_ref), "wj.Q(" + param0 + ')');
         }
-        return (fd) (Object) stackIn_11_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_8_0;
+        } else {
+          return (fd) ((Object) stackIn_11_0);
+        }
     }
 
     public static void i(int param0) {
@@ -71,20 +78,22 @@ class wj extends fd implements jp {
             return;
         }
         try {
-            field_v = null;
+            field_v = (vn[][]) null;
             field_w = null;
             field_x = null;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "wj.RA(" + param0 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "wj.RA(" + param0 + ')');
         }
     }
 
     wj(int param0, int param1, int param2, int param3, gj param4) {
         super(param0, param1, param2, param3, param4, (jv) null);
-        ((wj) this).field_y = new tf();
+        this.field_y = new tf();
     }
 
     final boolean b(fd param0, byte param1) {
+        boolean discarded$7 = false;
+        gn discarded$8 = null;
         nw var3 = null;
         RuntimeException var3_ref = null;
         fd var4 = null;
@@ -103,6 +112,7 @@ class wj extends fd implements jp {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_35_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         boolean stackOut_11_0 = false;
@@ -124,17 +134,18 @@ class wj extends fd implements jp {
               if (param1 > 122) {
                 break L1;
               } else {
-                boolean discarded$7 = ((wj) this).b(-52);
+                discarded$7 = this.b(-52);
                 break L1;
               }
             }
-            if (((wj) this).field_y.a((byte) -4)) {
+            if (this.field_y.a((byte) -4)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
-              return stackIn_8_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              var3 = new nw(((wj) this).field_y);
-              var4 = (fd) (Object) var3.a((byte) 73);
+              var3 = new nw(this.field_y);
+              var4 = (fd) ((Object) var3.a((byte) 73));
               L2: while (true) {
                 L3: {
                   L4: {
@@ -159,9 +170,9 @@ class wj extends fd implements jp {
                               }
                             }
                           }
-                          var5 = new nw(((wj) this).field_y);
-                          gn discarded$8 = var5.a(395869153, (gn) (Object) var4);
-                          var6 = (fd) (Object) var5.a(0);
+                          var5 = new nw(this.field_y);
+                          discarded$8 = var5.a(395869153, var4);
+                          var6 = (fd) ((Object) var5.a(0));
                           L7: while (true) {
                             if (var6 == null) {
                               break L5;
@@ -175,9 +186,10 @@ class wj extends fd implements jp {
                                 if (stackIn_21_0) {
                                   stackOut_25_0 = 1;
                                   stackIn_26_0 = stackOut_25_0;
-                                  return stackIn_26_0 != 0;
+                                  decompiledRegionSelector0 = 2;
+                                  break L0;
                                 } else {
-                                  var6 = (fd) (Object) var5.a(0);
+                                  var6 = (fd) ((Object) var5.a(0));
                                   if (var7 == 0) {
                                     continue L7;
                                   } else {
@@ -188,7 +200,7 @@ class wj extends fd implements jp {
                             }
                           }
                         }
-                        var4 = (fd) (Object) var3.a(0);
+                        var4 = (fd) ((Object) var3.a(0));
                         if (var7 == 0) {
                           continue L2;
                         } else {
@@ -201,6 +213,7 @@ class wj extends fd implements jp {
                   stackIn_30_0 = stackOut_29_0;
                   break L3;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             }
@@ -209,23 +222,23 @@ class wj extends fd implements jp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3_ref = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var3_ref;
+            stackOut_31_0 = (RuntimeException) (var3_ref);
             stackOut_31_1 = new StringBuilder().append("wj.O(");
             stackIn_34_0 = stackOut_31_0;
             stackIn_34_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param0 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "null";
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
               break L8;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_35_0 = stackOut_32_0;
               stackIn_35_1 = stackOut_32_1;
@@ -233,9 +246,17 @@ class wj extends fd implements jp {
               break L8;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ',' + param1 + ')');
         }
-        return stackIn_30_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_8_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_30_0 != 0;
+          } else {
+            return stackIn_26_0 != 0;
+          }
+        }
     }
 
     final boolean a(fd param0, int param1) {
@@ -254,6 +275,7 @@ class wj extends fd implements jp {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_6_0 = false;
         int stackOut_10_0 = 0;
@@ -271,8 +293,8 @@ class wj extends fd implements jp {
         try {
           L0: {
             if (param1 == 0) {
-              var3 = new nw(((wj) this).field_y);
-              var4 = (fd) (Object) var3.a((byte) -97);
+              var3 = new nw(this.field_y);
+              var4 = (fd) ((Object) var3.a((byte) -97));
               L1: while (true) {
                 L2: {
                   L3: {
@@ -286,7 +308,7 @@ class wj extends fd implements jp {
                         break L2;
                       } else {
                         if (!stackIn_7_0) {
-                          var4 = (fd) (Object) var3.a(0);
+                          var4 = (fd) ((Object) var3.a(0));
                           if (var5 == 0) {
                             continue L1;
                           } else {
@@ -295,7 +317,8 @@ class wj extends fd implements jp {
                         } else {
                           stackOut_10_0 = 1;
                           stackIn_11_0 = stackOut_10_0;
-                          return stackIn_11_0 != 0;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         }
                       }
                     }
@@ -304,35 +327,37 @@ class wj extends fd implements jp {
                   stackIn_14_0 = stackOut_13_0;
                   break L2;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var3_ref;
+            stackOut_15_0 = (RuntimeException) (var3_ref);
             stackOut_15_1 = new StringBuilder().append("wj.HA(");
             stackIn_18_0 = stackOut_15_0;
             stackIn_18_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L4;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_19_0 = stackOut_16_0;
               stackIn_19_1 = stackOut_16_1;
@@ -340,9 +365,17 @@ class wj extends fd implements jp {
               break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
         }
-        return stackIn_14_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_14_0 != 0;
+          } else {
+            return stackIn_11_0 != 0;
+          }
+        }
     }
 
     final void a(int param0, fd param1) {
@@ -366,11 +399,11 @@ class wj extends fd implements jp {
         try {
           L0: {
             L1: {
-              ((wj) this).field_y.a((gn) (Object) param1, 3);
+              this.field_y.a(param1, 3);
               if (param0 < -15) {
                 break L1;
               } else {
-                ((wj) this).field_y = null;
+                this.field_y = (tf) null;
                 break L1;
               }
             }
@@ -380,23 +413,23 @@ class wj extends fd implements jp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("wj.N(").append(param0).append(',');
             stackIn_6_0 = stackOut_3_0;
             stackIn_6_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_7_0 = stackOut_4_0;
               stackIn_7_1 = stackOut_4_1;
@@ -404,7 +437,7 @@ class wj extends fd implements jp {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
     }
 
@@ -423,6 +456,7 @@ class wj extends fd implements jp {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_5_0 = false;
         int stackOut_12_0 = 0;
@@ -439,12 +473,12 @@ class wj extends fd implements jp {
         try {
           L0: {
             L1: {
-              var8 = new nw(((wj) this).field_y);
-              var9 = (fd) (Object) var8.a((byte) 111);
+              var8 = new nw(this.field_y);
+              var9 = (fd) ((Object) var8.a((byte) 111));
               if (param0) {
                 break L1;
               } else {
-                field_x = null;
+                field_x = (int[]) null;
                 break L1;
               }
             }
@@ -463,8 +497,8 @@ class wj extends fd implements jp {
                       if (!stackIn_6_0) {
                         break L4;
                       } else {
-                        if (!var9.a(param0, param1 - -((wj) this).field_g, param2, param3, param4, param5 - -((wj) this).field_t, param6)) {
-                          var9 = (fd) (Object) var8.a(0);
+                        if (!var9.a(param0, param1 - -this.field_g, param2, param3, param4, param5 - -this.field_t, param6)) {
+                          var9 = (fd) ((Object) var8.a(0));
                           if (var10 == 0) {
                             continue L2;
                           } else {
@@ -473,7 +507,8 @@ class wj extends fd implements jp {
                         } else {
                           stackOut_12_0 = 1;
                           stackIn_13_0 = stackOut_12_0;
-                          return stackIn_13_0 != 0;
+                          decompiledRegionSelector0 = 1;
+                          break L0;
                         }
                       }
                     }
@@ -483,6 +518,7 @@ class wj extends fd implements jp {
                 stackIn_16_0 = stackOut_15_0;
                 break L3;
               }
+              decompiledRegionSelector0 = 0;
               break L0;
             }
           }
@@ -490,23 +526,23 @@ class wj extends fd implements jp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8_ref = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var8_ref;
+            stackOut_17_0 = (RuntimeException) (var8_ref);
             stackOut_17_1 = new StringBuilder().append("wj.EA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_20_0 = stackOut_17_0;
             stackIn_20_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param3 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_21_0 = stackOut_18_0;
               stackIn_21_1 = stackOut_18_1;
@@ -514,12 +550,17 @@ class wj extends fd implements jp {
               break L5;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
-        return stackIn_16_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_16_0 != 0;
+        } else {
+          return stackIn_13_0 != 0;
+        }
     }
 
     final void g(int param0) {
+        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
         nw var2 = null;
         fd var3 = null;
@@ -529,23 +570,23 @@ class wj extends fd implements jp {
         try {
           L0: {
             L1: {
-              var2 = new nw(((wj) this).field_y);
+              var2 = new nw(this.field_y);
               if (param0 == 84) {
                 break L1;
               } else {
-                boolean discarded$2 = ((wj) this).a((fd) null, -46);
+                discarded$2 = this.a((fd) null, -46);
                 break L1;
               }
             }
-            var3 = (fd) (Object) var2.a((byte) -99);
+            var3 = (fd) ((Object) var2.a((byte) -99));
             L2: while (true) {
               L3: {
                 L4: {
                   if (var3 == null) {
                     break L4;
                   } else {
-                    var3.g(param0);
-                    var3 = (fd) (Object) var2.a(0);
+                    var3.g(param0 ^ 0);
+                    var3 = (fd) ((Object) var2.a(0));
                     if (var4 != 0) {
                       break L3;
                     } else {
@@ -565,7 +606,7 @@ class wj extends fd implements jp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) runtimeException, "wj.FA(" + param0 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "wj.FA(" + param0 + ')');
         }
     }
 
@@ -591,8 +632,8 @@ class wj extends fd implements jp {
         try {
           L0: {
             var2_int = 0;
-            var3 = new nw(((wj) this).field_y);
-            var4 = (fd) (Object) var3.a((byte) -80);
+            var3 = new nw(this.field_y);
+            var4 = (fd) ((Object) var3.a((byte) -80));
             L1: while (true) {
               L2: {
                 L3: {
@@ -617,7 +658,7 @@ class wj extends fd implements jp {
                           break L4;
                         }
                       }
-                      var4 = (fd) (Object) var3.a(0);
+                      var4 = (fd) ((Object) var3.a(0));
                       if (var6 == 0) {
                         continue L1;
                       } else {
@@ -636,7 +677,7 @@ class wj extends fd implements jp {
                 if (stackIn_11_0 == stackIn_11_1) {
                   break L5;
                 } else {
-                  field_w = null;
+                  field_w = (String[]) null;
                   break L5;
                 }
               }
@@ -648,12 +689,13 @@ class wj extends fd implements jp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "wj.NA(" + param0 + ')');
+          throw nb.a((Throwable) ((Object) var2), "wj.NA(" + param0 + ')');
         }
         return stackIn_15_0;
     }
 
     final boolean a(fd param0, byte param1) {
+        gn discarded$6 = null;
         nw var3 = null;
         RuntimeException var3_ref = null;
         fd var4 = null;
@@ -672,6 +714,7 @@ class wj extends fd implements jp {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_34_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_4_0 = 0;
         boolean stackOut_10_0 = false;
@@ -689,18 +732,19 @@ class wj extends fd implements jp {
         var7 = Kickabout.field_G;
         try {
           L0: {
-            if (((wj) this).field_y.a((byte) -106)) {
+            if (this.field_y.a((byte) -106)) {
               stackOut_4_0 = 0;
               stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
-                var3 = new nw(((wj) this).field_y);
-                var4 = (fd) (Object) var3.b(0);
+                var3 = new nw(this.field_y);
+                var4 = (fd) ((Object) var3.b(0));
                 if (param1 == -100) {
                   break L1;
                 } else {
-                  ((wj) this).a(-56, (fd) null);
+                  this.a(-56, (fd) null);
                   break L1;
                 }
               }
@@ -728,9 +772,9 @@ class wj extends fd implements jp {
                               }
                             }
                           }
-                          var5 = new nw(((wj) this).field_y);
-                          gn discarded$6 = var5.a((byte) 104, (gn) (Object) var4);
-                          var6 = (fd) (Object) var5.b((byte) 46);
+                          var5 = new nw(this.field_y);
+                          discarded$6 = var5.a((byte) 104, (gn) (var4));
+                          var6 = (fd) ((Object) var5.b((byte) 46));
                           L7: while (true) {
                             if (var6 == null) {
                               break L5;
@@ -744,9 +788,10 @@ class wj extends fd implements jp {
                                 if (stackIn_20_0) {
                                   stackOut_24_0 = 1;
                                   stackIn_25_0 = stackOut_24_0;
-                                  return stackIn_25_0 != 0;
+                                  decompiledRegionSelector0 = 2;
+                                  break L0;
                                 } else {
-                                  var6 = (fd) (Object) var5.b((byte) 46);
+                                  var6 = (fd) ((Object) var5.b((byte) 46));
                                   if (var7 == 0) {
                                     continue L7;
                                   } else {
@@ -757,7 +802,7 @@ class wj extends fd implements jp {
                             }
                           }
                         }
-                        var4 = (fd) (Object) var3.b((byte) 46);
+                        var4 = (fd) ((Object) var3.b((byte) 46));
                         if (var7 == 0) {
                           continue L2;
                         } else {
@@ -770,6 +815,7 @@ class wj extends fd implements jp {
                   stackIn_29_0 = stackOut_28_0;
                   break L3;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             }
@@ -778,23 +824,23 @@ class wj extends fd implements jp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3_ref = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var3_ref;
+            stackOut_30_0 = (RuntimeException) (var3_ref);
             stackOut_30_1 = new StringBuilder().append("wj.U(");
             stackIn_33_0 = stackOut_30_0;
             stackIn_33_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param0 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L8;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_34_0 = stackOut_31_0;
               stackIn_34_1 = stackOut_31_1;
@@ -802,9 +848,17 @@ class wj extends fd implements jp {
               break L8;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ',' + param1 + ')');
         }
-        return stackIn_29_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_29_0 != 0;
+          } else {
+            return stackIn_25_0 != 0;
+          }
+        }
     }
 
     void a(int param0, int param1, int param2, int param3) {
@@ -812,33 +866,34 @@ class wj extends fd implements jp {
         RuntimeException var5_ref = null;
         fd var6 = null;
         int var7 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = Kickabout.field_G;
         try {
           L0: {
             if (param1 == 65) {
               L1: {
-                if (param0 != 0) {
+                if (-1 != (param0 ^ -1)) {
                   break L1;
                 } else {
-                  if (((wj) this).field_r == null) {
+                  if (this.field_r == null) {
                     break L1;
                   } else {
-                    ((wj) this).field_r.a(-103, true, param3, (fd) this, param2);
+                    this.field_r.a(-103, true, param3, (fd) (this), param2);
                     break L1;
                   }
                 }
               }
-              var5 = new nw(((wj) this).field_y);
-              var6 = (fd) (Object) var5.b(0);
+              var5 = new nw(this.field_y);
+              var6 = (fd) ((Object) var5.b(0));
               L2: while (true) {
                 L3: {
                   L4: {
                     if (var6 == null) {
                       break L4;
                     } else {
-                      var6.a(param0, 65, ((wj) this).field_t + param2, ((wj) this).field_g + param3);
-                      var6 = (fd) (Object) var5.b((byte) 46);
+                      var6.a(param0, 65, this.field_t + param2, this.field_g + param3);
+                      var6 = (fd) ((Object) var5.b((byte) 46));
                       if (var7 != 0) {
                         break L3;
                       } else {
@@ -852,16 +907,23 @@ class wj extends fd implements jp {
                   }
                   break L3;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var5_ref, "wj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw nb.a((Throwable) ((Object) var5_ref), "wj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -907,7 +969,7 @@ class wj extends fd implements jp {
             L2: while (true) {
               L3: {
                 L4: {
-                  if (~param1 >= ~var7) {
+                  if ((param1 ^ -1) >= (var7 ^ -1)) {
                     break L4;
                   } else {
                     var8 = 65793;
@@ -916,7 +978,7 @@ class wj extends fd implements jp {
                       break L3;
                     } else {
                       L5: {
-                        if (~param0 == ~var7) {
+                        if ((param0 ^ -1) == (var7 ^ -1)) {
                           var8 = 16777215;
                           var9 = 50;
                           break L5;
@@ -943,23 +1005,23 @@ class wj extends fd implements jp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var6;
+            stackOut_16_0 = (RuntimeException) (var6);
             stackOut_16_1 = new StringBuilder().append("wj.TA(").append(param0).append(',').append(param1).append(',');
             stackIn_19_0 = stackOut_16_0;
             stackIn_19_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_20_0 = stackOut_17_0;
               stackIn_20_1 = stackOut_17_1;
@@ -967,7 +1029,7 @@ class wj extends fd implements jp {
               break L6;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -1006,6 +1068,7 @@ class wj extends fd implements jp {
         RuntimeException stackIn_66_0 = null;
         StringBuilder stackIn_66_1 = null;
         String stackIn_66_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_11_0 = false;
         int stackOut_28_0 = 0;
@@ -1036,7 +1099,7 @@ class wj extends fd implements jp {
             if (param0 == -336184828) {
               L1: {
                 wa.b((byte) -105);
-                if (param1.field_u <= 0) {
+                if ((param1.field_u ^ -1) >= -1) {
                   break L1;
                 } else {
                   if (param1.field_G == null) {
@@ -1052,7 +1115,7 @@ class wj extends fd implements jp {
               L2: while (true) {
                 L3: {
                   L4: {
-                    if (~var8 <= ~param1.field_g) {
+                    if ((var8 ^ -1) <= (param1.field_g ^ -1)) {
                       break L4;
                     } else {
                       var9 = param1.field_n[var8];
@@ -1075,7 +1138,7 @@ class wj extends fd implements jp {
                               var15 = fb.field_M[var11] - var12;
                               var16 = fk.field_k[var10] + -var13;
                               var17 = fk.field_k[var11] + -var13;
-                              if (var17 * var14 + -(var15 * var16) < 0) {
+                              if ((var17 * var14 + -(var15 * var16) ^ -1) > -1) {
                                 break L6;
                               } else {
                                 if (var19 == 0) {
@@ -1092,7 +1155,7 @@ class wj extends fd implements jp {
                           } else {
                             L7: {
                               var13 = ld.field_e[var10];
-                              if (var13 != -2147483648) {
+                              if (2147483647 != (var13 ^ -1)) {
                                 break L7;
                               } else {
                                 if (var19 == 0) {
@@ -1122,7 +1185,7 @@ class wj extends fd implements jp {
                               stackIn_31_1 = stackOut_28_1;
                               stackIn_29_0 = stackOut_28_0;
                               stackIn_29_1 = stackOut_28_1;
-                              if (var7 < 0) {
+                              if ((var7 ^ -1) > -1) {
                                 stackOut_31_0 = stackIn_31_0;
                                 stackOut_31_1 = stackIn_31_1;
                                 stackOut_31_2 = var15 << -var7;
@@ -1145,7 +1208,7 @@ class wj extends fd implements jp {
                             L10: while (true) {
                               L11: {
                                 L12: {
-                                  if (var17 >> 4 == 0) {
+                                  if (var17 >> -988548572 == 0) {
                                     break L12;
                                   } else {
                                     var16--;
@@ -1176,7 +1239,7 @@ class wj extends fd implements jp {
                                     }
                                   }
                                 }
-                                stackOut_41_0 = (var16 << 4) + var17;
+                                stackOut_41_0 = (var16 << -336184828) + var17;
                                 stackIn_42_0 = stackOut_41_0;
                                 break L11;
                               }
@@ -1184,7 +1247,7 @@ class wj extends fd implements jp {
                                 var18 = stackIn_42_0;
                                 nb.field_e[var18] = var8;
                                 qe.field_b[var16] = 1 + var17;
-                                if (param1.field_u <= 0) {
+                                if (-1 <= (param1.field_u ^ -1)) {
                                   break L14;
                                 } else {
                                   if (param1.field_G == null) {
@@ -1224,7 +1287,7 @@ class wj extends fd implements jp {
                         var8 = 0;
                         var9 = 0;
                         L17: while (true) {
-                          if (~var9 <= ~vu.field_zb.length) {
+                          if ((var9 ^ -1) <= (vu.field_zb.length ^ -1)) {
                             break L16;
                           } else {
                             var10 = vu.field_zb[var9];
@@ -1247,33 +1310,35 @@ class wj extends fd implements jp {
                   }
                   break L15;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var5 = decompiledCaughtException;
-            stackOut_62_0 = (RuntimeException) var5;
+            stackOut_62_0 = (RuntimeException) (var5);
             stackOut_62_1 = new StringBuilder().append("wj.UA(").append(param0).append(',');
             stackIn_65_0 = stackOut_62_0;
             stackIn_65_1 = stackOut_62_1;
             stackIn_63_0 = stackOut_62_0;
             stackIn_63_1 = stackOut_62_1;
             if (param1 == null) {
-              stackOut_65_0 = (RuntimeException) (Object) stackIn_65_0;
-              stackOut_65_1 = (StringBuilder) (Object) stackIn_65_1;
+              stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
+              stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
               stackOut_65_2 = "null";
               stackIn_66_0 = stackOut_65_0;
               stackIn_66_1 = stackOut_65_1;
               stackIn_66_2 = stackOut_65_2;
               break L18;
             } else {
-              stackOut_63_0 = (RuntimeException) (Object) stackIn_63_0;
-              stackOut_63_1 = (StringBuilder) (Object) stackIn_63_1;
+              stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
+              stackOut_63_1 = (StringBuilder) ((Object) stackIn_63_1);
               stackOut_63_2 = "{...}";
               stackIn_66_0 = stackOut_63_0;
               stackIn_66_1 = stackOut_63_1;
@@ -1281,7 +1346,12 @@ class wj extends fd implements jp {
               break L18;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_66_0, stackIn_66_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_66_0), stackIn_66_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -1297,12 +1367,12 @@ class wj extends fd implements jp {
               if (param0 > 10) {
                 break L1;
               } else {
-                ((wj) this).field_y = null;
+                this.field_y = (tf) null;
                 break L1;
               }
             }
             L2: {
-              if (null == ((wj) this).a(false)) {
+              if (null == this.a(false)) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
                 break L2;
@@ -1317,12 +1387,15 @@ class wj extends fd implements jp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "wj.KA(" + param0 + ')');
+          throw nb.a((Throwable) ((Object) var2), "wj.KA(" + param0 + ')');
         }
         return stackIn_7_0 != 0;
     }
 
     final static String a(String param0, String param1, boolean param2, String param3) {
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -1388,7 +1461,7 @@ class wj extends fd implements jp {
             var4_int = param3.length();
             var5 = param0.length();
             var6 = param1.length();
-            if (var5 == 0) {
+            if (-1 == (var5 ^ -1)) {
               throw new IllegalArgumentException("Key cannot have zero length");
             } else {
               L1: {
@@ -1449,8 +1522,8 @@ class wj extends fd implements jp {
                         }
                       }
                     }
-                    StringBuilder discarded$3 = var9.append(param3.substring(var10, var11));
-                    StringBuilder discarded$4 = var9.append(param1);
+                    discarded$3 = var9.append(param3.substring(var10, var11));
+                    discarded$4 = var9.append(param1);
                     var10 = var5 + var11;
                     break L7;
                   }
@@ -1461,7 +1534,7 @@ class wj extends fd implements jp {
                   }
                 }
                 L9: {
-                  StringBuilder discarded$5 = var9.append(param3.substring(var10));
+                  discarded$5 = var9.append(param3.substring(var10));
                   if (param2) {
                     break L9;
                   } else {
@@ -1479,23 +1552,23 @@ class wj extends fd implements jp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var4 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var4;
+            stackOut_27_0 = (RuntimeException) (var4);
             stackOut_27_1 = new StringBuilder().append("wj.S(");
             stackIn_30_0 = stackOut_27_0;
             stackIn_30_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
             stackIn_28_1 = stackOut_27_1;
             if (param0 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "null";
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
               break L10;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "{...}";
               stackIn_31_0 = stackOut_28_0;
               stackIn_31_1 = stackOut_28_1;
@@ -1504,23 +1577,23 @@ class wj extends fd implements jp {
             }
           }
           L11: {
-            stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+            stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
             stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
             stackIn_34_0 = stackOut_31_0;
             stackIn_34_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param1 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "null";
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
               break L11;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_35_0 = stackOut_32_0;
               stackIn_35_1 = stackOut_32_1;
@@ -1529,23 +1602,23 @@ class wj extends fd implements jp {
             }
           }
           L12: {
-            stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
+            stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
             stackOut_35_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(',').append(param2).append(',');
             stackIn_38_0 = stackOut_35_0;
             stackIn_38_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;
             stackIn_36_1 = stackOut_35_1;
             if (param3 == null) {
-              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
               stackOut_38_2 = "null";
               stackIn_39_0 = stackOut_38_0;
               stackIn_39_1 = stackOut_38_1;
               stackIn_39_2 = stackOut_38_2;
               break L12;
             } else {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
               stackOut_36_2 = "{...}";
               stackIn_39_0 = stackOut_36_0;
               stackIn_39_1 = stackOut_36_1;
@@ -1553,7 +1626,7 @@ class wj extends fd implements jp {
               break L12;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_39_0), stackIn_39_2 + ')');
         }
         return stackIn_26_0;
     }
@@ -1590,8 +1663,8 @@ class wj extends fd implements jp {
                 break L1;
               }
             }
-            var7 = new nw(((wj) this).field_y);
-            var8 = (fd) (Object) var7.a((byte) -93);
+            var7 = new nw(this.field_y);
+            var8 = (fd) ((Object) var7.a((byte) -93));
             L2: while (true) {
               L3: {
                 if (var8 == null) {
@@ -1600,8 +1673,8 @@ class wj extends fd implements jp {
                   if (!var8.e((byte) -113)) {
                     break L3;
                   } else {
-                    var8.a(param0 + ((wj) this).field_g, param1, param2, param3, -1, ((wj) this).field_t + param5);
-                    var8 = (fd) (Object) var7.a(0);
+                    var8.a(param0 + this.field_g, param1, param2, param3, -1, this.field_t + param5);
+                    var8 = (fd) ((Object) var7.a(0));
                     if (var9 == 0) {
                       continue L2;
                     } else {
@@ -1617,23 +1690,23 @@ class wj extends fd implements jp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var7_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var7_ref;
+            stackOut_9_0 = (RuntimeException) (var7_ref);
             stackOut_9_1 = new StringBuilder().append("wj.T(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_12_0 = stackOut_9_0;
             stackIn_12_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_13_0 = stackOut_10_0;
               stackIn_13_1 = stackOut_10_1;
@@ -1641,11 +1714,14 @@ class wj extends fd implements jp {
               break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param4 + ',' + param5 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     private final void a(StringBuilder param0, Hashtable param1, int param2, int param3) {
+        StringBuilder discarded$9 = null;
+        StringBuilder discarded$10 = null;
+        StringBuilder discarded$11 = null;
         RuntimeException runtimeException = null;
         nw var5 = null;
         fd var6 = null;
@@ -1665,6 +1741,7 @@ class wj extends fd implements jp {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
@@ -1685,16 +1762,16 @@ class wj extends fd implements jp {
         var8 = Kickabout.field_G;
         try {
           L0: {
-            var5 = new nw(((wj) this).field_y);
+            var5 = new nw(this.field_y);
             if (param3 == 24745) {
-              var6 = (fd) (Object) var5.a((byte) 63);
+              var6 = (fd) ((Object) var5.a((byte) 63));
               L1: while (true) {
                 L2: {
                   L3: {
                     if (null == var6) {
                       break L3;
                     } else {
-                      StringBuilder discarded$9 = param0.append('\n');
+                      discarded$9 = param0.append('\n');
                       if (var8 != 0) {
                         break L2;
                       } else {
@@ -1702,10 +1779,10 @@ class wj extends fd implements jp {
                         L4: while (true) {
                           L5: {
                             L6: {
-                              if (~param2 > ~var7) {
+                              if ((param2 ^ -1) > (var7 ^ -1)) {
                                 break L6;
                               } else {
-                                StringBuilder discarded$10 = param0.append(' ');
+                                discarded$10 = param0.append(' ');
                                 var7++;
                                 if (var8 != 0) {
                                   break L5;
@@ -1718,8 +1795,8 @@ class wj extends fd implements jp {
                                 }
                               }
                             }
-                            StringBuilder discarded$11 = var6.a(param3 ^ 9586, 1 + param2, param1, param0);
-                            var6 = (fd) (Object) var5.a(0);
+                            discarded$11 = var6.a(param3 ^ 9586, 1 + param2, param1, param0);
+                            var6 = (fd) ((Object) var5.a(0));
                             break L5;
                           }
                           if (var8 == 0) {
@@ -1733,33 +1810,35 @@ class wj extends fd implements jp {
                   }
                   break L2;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             runtimeException = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) runtimeException;
+            stackOut_15_0 = (RuntimeException) (runtimeException);
             stackOut_15_1 = new StringBuilder().append("wj.SA(");
             stackIn_18_0 = stackOut_15_0;
             stackIn_18_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L7;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_19_0 = stackOut_16_0;
               stackIn_19_1 = stackOut_16_1;
@@ -1768,23 +1847,23 @@ class wj extends fd implements jp {
             }
           }
           L8: {
-            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+            stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
             stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
             stackIn_22_0 = stackOut_19_0;
             stackIn_22_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L8;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_23_0 = stackOut_20_0;
               stackIn_23_1 = stackOut_20_1;
@@ -1792,7 +1871,12 @@ class wj extends fd implements jp {
               break L8;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param2 + ',' + param3 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -1801,7 +1885,7 @@ class wj extends fd implements jp {
             super.a(param0, param1, param2, param3, param4);
             this.j(5);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "wj.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "wj.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1811,20 +1895,21 @@ class wj extends fd implements jp {
         fd var3 = null;
         String var4 = null;
         int var5 = 0;
-        Object stackIn_3_0 = null;
+        String stackIn_3_0 = null;
         Object stackIn_6_0 = null;
         String stackIn_12_0 = null;
         Object stackIn_15_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_5_0 = null;
         String stackOut_11_0 = null;
         Object stackOut_14_0 = null;
-        Object stackOut_2_0 = null;
+        String stackOut_2_0 = null;
         var5 = Kickabout.field_G;
         try {
           L0: {
-            var2 = new nw(((wj) this).field_y);
-            var3 = (fd) (Object) var2.a((byte) -56);
+            var2 = new nw(this.field_y);
+            var3 = (fd) ((Object) var2.a((byte) -56));
             if (param0 == -1) {
               L1: while (true) {
                 L2: {
@@ -1839,12 +1924,13 @@ class wj extends fd implements jp {
                       if (var5 != 0) {
                         break L2;
                       } else {
-                        if (stackIn_6_0 != (Object) (Object) var4) {
-                          stackOut_11_0 = (String) var4;
+                        if (stackIn_6_0 != var4) {
+                          stackOut_11_0 = (String) (var4);
                           stackIn_12_0 = stackOut_11_0;
-                          return stackIn_12_0;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         } else {
-                          var3 = (fd) (Object) var2.a(0);
+                          var3 = (fd) ((Object) var2.a(0));
                           if (var5 == 0) {
                             continue L1;
                           } else {
@@ -1858,20 +1944,30 @@ class wj extends fd implements jp {
                   stackIn_15_0 = stackOut_14_0;
                   break L2;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              stackOut_2_0 = null;
+              stackOut_2_0 = (String) null;
               stackIn_3_0 = stackOut_2_0;
-              return (String) (Object) stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2_ref, "wj.MA(" + param0 + ')');
+          throw nb.a((Throwable) ((Object) var2_ref), "wj.MA(" + param0 + ')');
         }
-        return (String) (Object) stackIn_15_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return (String) ((Object) stackIn_15_0);
+          } else {
+            return stackIn_12_0;
+          }
+        }
     }
 
     final StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {
@@ -1915,20 +2011,20 @@ class wj extends fd implements jp {
               if (param0 == 17883) {
                 break L1;
               } else {
-                field_v = null;
+                field_v = (vn[][]) null;
                 break L1;
               }
             }
             L2: {
-              if (((wj) this).a(1, param3, param2, param1)) {
-                ((wj) this).b(param1, param3, param2, param0 + -36451);
+              if (this.a(1, param3, param2, param1)) {
+                this.b(param1, param3, param2, param0 + -36451);
                 this.a(param3, param2, param1, 24745);
                 break L2;
               } else {
                 break L2;
               }
             }
-            stackOut_7_0 = (StringBuilder) param3;
+            stackOut_7_0 = (StringBuilder) (param3);
             stackIn_8_0 = stackOut_7_0;
             break L0;
           }
@@ -1936,23 +2032,23 @@ class wj extends fd implements jp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var5;
+            stackOut_9_0 = (RuntimeException) (var5);
             stackOut_9_1 = new StringBuilder().append("wj.GA(").append(param0).append(',').append(param1).append(',');
             stackIn_12_0 = stackOut_9_0;
             stackIn_12_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_13_0 = stackOut_10_0;
               stackIn_13_1 = stackOut_10_1;
@@ -1961,23 +2057,23 @@ class wj extends fd implements jp {
             }
           }
           L4: {
-            stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+            stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
             stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_16_0 = stackOut_13_0;
             stackIn_16_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param3 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_17_0 = stackOut_14_0;
               stackIn_17_1 = stackOut_14_1;
@@ -1985,7 +2081,7 @@ class wj extends fd implements jp {
               break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
         return stackIn_8_0;
     }
@@ -2008,6 +2104,7 @@ class wj extends fd implements jp {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_34_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_6_0 = false;
         int stackOut_16_0 = 0;
@@ -2034,8 +2131,8 @@ class wj extends fd implements jp {
                 break L1;
               }
             }
-            var5 = new nw(((wj) this).field_y);
-            var6_ref_fd = (fd) (Object) var5.a((byte) -108);
+            var5 = new nw(this.field_y);
+            var6_ref_fd = (fd) ((Object) var5.a((byte) -108));
             L2: while (true) {
               L3: {
                 L4: {
@@ -2060,11 +2157,12 @@ class wj extends fd implements jp {
                             } else {
                               stackOut_16_0 = 1;
                               stackIn_17_0 = stackOut_16_0;
-                              return stackIn_17_0 != 0;
+                              decompiledRegionSelector0 = 0;
+                              break L0;
                             }
                           }
                         }
-                        var6_ref_fd = (fd) (Object) var5.a(0);
+                        var6_ref_fd = (fd) ((Object) var5.a(0));
                         if (var7 == 0) {
                           continue L2;
                         } else {
@@ -2079,22 +2177,24 @@ class wj extends fd implements jp {
                 break L3;
               }
               var6 = stackIn_20_0;
-              if (var6 == 80) {
+              if (-81 == (var6 ^ -1)) {
                 L6: {
                   if (!ne.field_G[81]) {
-                    stackOut_26_0 = ((wj) this).b(param2, (byte) 123);
+                    stackOut_26_0 = this.b(param2, (byte) 123);
                     stackIn_27_0 = stackOut_26_0;
                     break L6;
                   } else {
-                    stackOut_24_0 = ((wj) this).a(param2, (byte) -100);
+                    stackOut_24_0 = this.a(param2, (byte) -100);
                     stackIn_27_0 = stackOut_24_0;
                     break L6;
                   }
                 }
-                return stackIn_27_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 stackOut_28_0 = 0;
                 stackIn_29_0 = stackOut_28_0;
+                decompiledRegionSelector0 = 2;
                 break L0;
               }
             }
@@ -2103,23 +2203,23 @@ class wj extends fd implements jp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var5_ref = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var5_ref;
+            stackOut_30_0 = (RuntimeException) (var5_ref);
             stackOut_30_1 = new StringBuilder().append("wj.E(").append(param0).append(',').append(param1).append(',');
             stackIn_33_0 = stackOut_30_0;
             stackIn_33_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param2 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L7;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_34_0 = stackOut_31_0;
               stackIn_34_1 = stackOut_31_1;
@@ -2127,9 +2227,17 @@ class wj extends fd implements jp {
               break L7;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + param3 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ',' + param3 + ')');
         }
-        return stackIn_29_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_17_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_27_0;
+          } else {
+            return stackIn_29_0 != 0;
+          }
+        }
     }
 
     void a(byte param0, fd param1, int param2, int param3) {
@@ -2157,8 +2265,8 @@ class wj extends fd implements jp {
         try {
           L0: {
             super.a(param0, param1, param2, param3);
-            var5 = new nw(((wj) this).field_y);
-            var6 = (fd) (Object) var5.a((byte) -34);
+            var5 = new nw(this.field_y);
+            var6 = (fd) ((Object) var5.a((byte) -34));
             L1: while (true) {
               L2: {
                 if (null == var6) {
@@ -2167,8 +2275,8 @@ class wj extends fd implements jp {
                   if (!var6.e((byte) -113)) {
                     break L2;
                   } else {
-                    var6.a((byte) 12, param1, ((wj) this).field_t + param2, param3 + ((wj) this).field_g);
-                    var6 = (fd) (Object) var5.a(0);
+                    var6.a((byte) 12, param1, this.field_t + param2, param3 + this.field_g);
+                    var6 = (fd) ((Object) var5.a(0));
                     if (var7 == 0) {
                       continue L1;
                     } else {
@@ -2184,23 +2292,23 @@ class wj extends fd implements jp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) runtimeException;
+            stackOut_6_0 = (RuntimeException) (runtimeException);
             stackOut_6_1 = new StringBuilder().append("wj.P(").append(param0).append(',');
             stackIn_9_0 = stackOut_6_0;
             stackIn_9_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_10_0 = stackOut_7_0;
               stackIn_10_1 = stackOut_7_1;
@@ -2208,7 +2316,7 @@ class wj extends fd implements jp {
               break L3;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2222,7 +2330,7 @@ class wj extends fd implements jp {
         try {
           L0: {
             L1: {
-              var2 = new nw(((wj) this).field_y);
+              var2 = new nw(this.field_y);
               if (param0 == 5) {
                 break L1;
               } else {
@@ -2230,7 +2338,7 @@ class wj extends fd implements jp {
                 break L1;
               }
             }
-            var3 = (fd) (Object) var2.a((byte) 106);
+            var3 = (fd) ((Object) var2.a((byte) 106));
             L2: while (true) {
               L3: {
                 L4: {
@@ -2238,7 +2346,7 @@ class wj extends fd implements jp {
                     break L4;
                   } else {
                     var3.e(-1947);
-                    var3 = (fd) (Object) var2.a(0);
+                    var3 = (fd) ((Object) var2.a(0));
                     if (var4 != 0) {
                       break L3;
                     } else {
@@ -2258,7 +2366,7 @@ class wj extends fd implements jp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) runtimeException, "wj.R(" + param0 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "wj.R(" + param0 + ')');
         }
     }
 
@@ -2278,6 +2386,7 @@ class wj extends fd implements jp {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_3_0 = false;
         int stackOut_15_0 = 0;
@@ -2293,8 +2402,8 @@ class wj extends fd implements jp {
         var11 = Kickabout.field_G;
         try {
           L0: {
-            var8 = new nw(((wj) this).field_y);
-            var9 = (fd) (Object) var8.a((byte) 54);
+            var8 = new nw(this.field_y);
+            var9 = (fd) ((Object) var8.a((byte) 54));
             var10 = -61 % ((63 - param6) / 56);
             L1: while (true) {
               L2: {
@@ -2318,13 +2427,14 @@ class wj extends fd implements jp {
                             if (var9.a(param0, param1, param2, param3, param4, param5, -10)) {
                               stackOut_15_0 = 1;
                               stackIn_16_0 = stackOut_15_0;
-                              return stackIn_16_0 != 0;
+                              decompiledRegionSelector0 = 1;
+                              break L0;
                             } else {
                               break L4;
                             }
                           }
                         }
-                        var9 = (fd) (Object) var8.a(0);
+                        var9 = (fd) ((Object) var8.a(0));
                         if (var11 == 0) {
                           continue L1;
                         } else {
@@ -2338,6 +2448,7 @@ class wj extends fd implements jp {
                 stackIn_19_0 = stackOut_18_0;
                 break L2;
               }
+              decompiledRegionSelector0 = 0;
               break L0;
             }
           }
@@ -2345,23 +2456,23 @@ class wj extends fd implements jp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8_ref = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var8_ref;
+            stackOut_20_0 = (RuntimeException) (var8_ref);
             stackOut_20_1 = new StringBuilder().append("wj.BA(").append(param0).append(',');
             stackIn_23_0 = stackOut_20_0;
             stackIn_23_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L5;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_24_0 = stackOut_21_0;
               stackIn_24_1 = stackOut_21_1;
@@ -2369,16 +2480,16 @@ class wj extends fd implements jp {
               break L5;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
-        return stackIn_19_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_19_0 != 0;
+        } else {
+          return stackIn_16_0 != 0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = true;
         field_A = 0;
         field_v = new vn[5][5];

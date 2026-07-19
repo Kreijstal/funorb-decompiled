@@ -6,9 +6,10 @@ final class mc {
     static he field_b;
 
     public static void b(byte param0) {
+        ci discarded$0 = null;
         field_a = null;
         if (param0 != 53) {
-            ci discarded$0 = mc.a((byte) 52);
+            discarded$0 = mc.a((byte) 52);
             field_b = null;
             return;
         }
@@ -53,10 +54,6 @@ final class mc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Starting Turn ";
     }
 }

@@ -12,13 +12,13 @@ final class sj extends k {
         int[] var7 = null;
         int var8 = 0;
         int var9 = BachelorFridge.field_y;
-        int[] var10 = ((sj) this).field_j.a(param0, -1);
+        int[] var10 = this.field_j.a(param0, -1);
         int[] var3 = var10;
         if (param1 != 0) {
-            return null;
+            return (int[]) null;
         }
-        if (!(!((sj) this).field_j.field_m)) {
-            var4 = ((sj) this).a((byte) -62, 0, param0);
+        if (!(!this.field_j.field_m)) {
+            var4 = this.a((byte) -62, 0, param0);
             var5 = var4[0];
             var6 = var4[1];
             var7 = var4[2];
@@ -42,10 +42,6 @@ final class sj extends k {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = new int[]{16777215, 16728128, 16744448};
     }
 }

@@ -8,9 +8,18 @@ final class lg {
     static String field_b;
 
     public static void a(byte param0) {
-        field_a = null;
-        field_b = null;
-        field_c = null;
+        if (param0 <= 89) {
+          field_a = (o[]) null;
+          field_a = null;
+          field_b = null;
+          field_c = null;
+          return;
+        } else {
+          field_a = null;
+          field_b = null;
+          field_c = null;
+          return;
+        }
     }
 
     public final String toString() {
@@ -18,10 +27,6 @@ final class lg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Names cannot start or end with space or underscore";
         field_b = "Members' Benefits";
     }

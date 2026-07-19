@@ -168,22 +168,22 @@ final class js extends ni {
           var21 = var21 + var18;
           var34 = var21;
           var21 = var21 + var19;
-          ((js) this).field_x = var9;
-          ((js) this).field_O = var10;
-          ((js) this).field_E = var11;
-          ((js) this).field_N = new int[var9];
-          ((js) this).field_D = new int[var9];
-          ((js) this).field_u = new int[var9];
-          ((js) this).field_q = new int[var10];
-          ((js) this).field_o = new int[var10];
-          ((js) this).field_r = new int[var10];
+          this.field_x = var9;
+          this.field_O = var10;
+          this.field_E = var11;
+          this.field_N = new int[var9];
+          this.field_D = new int[var9];
+          this.field_u = new int[var9];
+          this.field_q = new int[var10];
+          this.field_o = new int[var10];
+          this.field_r = new int[var10];
           if (var11 <= 0) {
             break L5;
           } else {
-            ((js) this).field_t = new byte[var11];
-            ((js) this).field_M = new short[var11];
-            ((js) this).field_n = new short[var11];
-            ((js) this).field_C = new short[var11];
+            this.field_t = new byte[var11];
+            this.field_M = new short[var11];
+            this.field_n = new short[var11];
+            this.field_C = new short[var11];
             break L5;
           }
         }
@@ -191,7 +191,7 @@ final class js extends ni {
           if (var16 != 1) {
             break L6;
           } else {
-            ((js) this).field_m = new int[var9];
+            this.field_m = new int[var9];
             break L6;
           }
         }
@@ -199,9 +199,9 @@ final class js extends ni {
           if (var12 != 1) {
             break L7;
           } else {
-            ((js) this).field_p = new byte[var10];
-            ((js) this).field_G = new byte[var10];
-            ((js) this).field_B = new short[var10];
+            this.field_p = new byte[var10];
+            this.field_G = new byte[var10];
+            this.field_B = new short[var10];
             break L7;
           }
         }
@@ -209,7 +209,7 @@ final class js extends ni {
           if (var13 != 255) {
             break L8;
           } else {
-            ((js) this).field_w = new byte[var10];
+            this.field_w = new byte[var10];
             break L8;
           }
         }
@@ -217,7 +217,7 @@ final class js extends ni {
           if (var14 != 1) {
             break L9;
           } else {
-            ((js) this).field_h = new byte[var10];
+            this.field_h = new byte[var10];
             break L9;
           }
         }
@@ -225,11 +225,11 @@ final class js extends ni {
           if (var15 != 1) {
             break L10;
           } else {
-            ((js) this).field_e = new int[var10];
+            this.field_e = new int[var10];
             break L10;
           }
         }
-        ((js) this).field_i = new short[var10];
+        this.field_i = new short[var10];
         var4.field_q = var22;
         var5.field_q = var32;
         var6.field_q = var33;
@@ -249,7 +249,7 @@ final class js extends ni {
             var38 = 0;
             L12: while (true) {
               if (var38 >= var10) {
-                ((js) this).field_v = -1;
+                this.field_v = -1;
                 var4.field_q = var29;
                 var5.field_q = var23;
                 var38 = 0;
@@ -259,13 +259,13 @@ final class js extends ni {
                 var42 = 0;
                 L13: while (true) {
                   if (var42 >= var10) {
-                    ((js) this).field_v = ((js) this).field_v + 1;
+                    this.field_v = this.field_v + 1;
                     var4.field_q = var31;
                     var42 = 0;
                     L14: while (true) {
                       if (var42 >= var11) {
                         L15: {
-                          if (((js) this).field_G == null) {
+                          if (this.field_G == null) {
                             break L15;
                           } else {
                             var42 = 0;
@@ -276,23 +276,23 @@ final class js extends ni {
                                 if (var42 != 0) {
                                   break L15;
                                 } else {
-                                  ((js) this).field_G = null;
+                                  this.field_G = null;
                                   break L15;
                                 }
                               } else {
-                                var44 = ((js) this).field_G[var45] & 255;
+                                var44 = this.field_G[var45] & 255;
                                 if (var44 != 255) {
                                   L17: {
-                                    if ((((js) this).field_M[var44] & 65535) != ((js) this).field_q[var45]) {
+                                    if ((this.field_M[var44] & 65535) != this.field_q[var45]) {
                                       break L17;
                                     } else {
-                                      if ((((js) this).field_n[var44] & 65535) != ((js) this).field_o[var45]) {
+                                      if ((this.field_n[var44] & 65535) != this.field_o[var45]) {
                                         break L17;
                                       } else {
-                                        if ((((js) this).field_C[var44] & 65535) != ((js) this).field_r[var45]) {
+                                        if ((this.field_C[var44] & 65535) != this.field_r[var45]) {
                                           break L17;
                                         } else {
-                                          ((js) this).field_G[var45] = (byte) -1;
+                                          this.field_G[var45] = (byte)-1;
                                           var45++;
                                           continue L16;
                                         }
@@ -314,7 +314,7 @@ final class js extends ni {
                           if (var3 != 0) {
                             break L18;
                           } else {
-                            ((js) this).field_B = null;
+                            this.field_B = null;
                             break L18;
                           }
                         }
@@ -322,16 +322,16 @@ final class js extends ni {
                           if (var2 != 0) {
                             break L19;
                           } else {
-                            ((js) this).field_p = null;
+                            this.field_p = null;
                             break L19;
                           }
                         }
                         return;
                       } else {
-                        ((js) this).field_t[var42] = (byte) 0;
-                        ((js) this).field_M[var42] = (short)var4.e((byte) -104);
-                        ((js) this).field_n[var42] = (short)var4.e((byte) -104);
-                        ((js) this).field_C[var42] = (short)var4.e((byte) -104);
+                        this.field_t[var42] = (byte) 0;
+                        this.field_M[var42] = (short)var4.e((byte) -104);
+                        this.field_n[var42] = (short)var4.e((byte) -104);
+                        this.field_C[var42] = (short)var4.e((byte) -104);
                         var42++;
                         continue L14;
                       }
@@ -349,28 +349,28 @@ final class js extends ni {
                           var41 = var39;
                           var40 = var4.a(53) + var41;
                           var41 = var40;
-                          ((js) this).field_q[var42] = var38;
-                          ((js) this).field_o[var42] = var39;
-                          ((js) this).field_r[var42] = var40;
-                          if (var38 <= ((js) this).field_v) {
+                          this.field_q[var42] = var38;
+                          this.field_o[var42] = var39;
+                          this.field_r[var42] = var40;
+                          if (var38 <= this.field_v) {
                             break L21;
                           } else {
-                            ((js) this).field_v = var38;
+                            this.field_v = var38;
                             break L21;
                           }
                         }
                         L22: {
-                          if (var39 <= ((js) this).field_v) {
+                          if (var39 <= this.field_v) {
                             break L22;
                           } else {
-                            ((js) this).field_v = var39;
+                            this.field_v = var39;
                             break L22;
                           }
                         }
-                        if (var40 <= ((js) this).field_v) {
+                        if (var40 <= this.field_v) {
                           break L20;
                         } else {
-                          ((js) this).field_v = var40;
+                          this.field_v = var40;
                           break L20;
                         }
                       }
@@ -382,13 +382,13 @@ final class js extends ni {
                         var39 = var40;
                         var40 = var4.a(67) + var41;
                         var41 = var40;
-                        ((js) this).field_q[var42] = var38;
-                        ((js) this).field_o[var42] = var39;
-                        ((js) this).field_r[var42] = var40;
-                        if (var40 <= ((js) this).field_v) {
+                        this.field_q[var42] = var38;
+                        this.field_o[var42] = var39;
+                        this.field_r[var42] = var40;
+                        if (var40 <= this.field_v) {
                           break L23;
                         } else {
-                          ((js) this).field_v = var40;
+                          this.field_v = var40;
                           break L23;
                         }
                       }
@@ -400,13 +400,13 @@ final class js extends ni {
                         var38 = var40;
                         var40 = var4.a(106) + var41;
                         var41 = var40;
-                        ((js) this).field_q[var42] = var38;
-                        ((js) this).field_o[var42] = var39;
-                        ((js) this).field_r[var42] = var40;
-                        if (var40 <= ((js) this).field_v) {
+                        this.field_q[var42] = var38;
+                        this.field_o[var42] = var39;
+                        this.field_r[var42] = var40;
+                        if (var40 <= this.field_v) {
                           break L24;
                         } else {
-                          ((js) this).field_v = var40;
+                          this.field_v = var40;
                           break L24;
                         }
                       }
@@ -417,11 +417,11 @@ final class js extends ni {
                       var39 = var44;
                       var40 = var4.a(109) + var41;
                       var41 = var40;
-                      ((js) this).field_q[var42] = var38;
-                      ((js) this).field_o[var42] = var39;
-                      ((js) this).field_r[var42] = var40;
-                      if (var40 > ((js) this).field_v) {
-                        ((js) this).field_v = var40;
+                      this.field_q[var42] = var38;
+                      this.field_o[var42] = var39;
+                      this.field_r[var42] = var40;
+                      if (var40 > this.field_v) {
+                        this.field_v = var40;
                         var42++;
                         continue L13;
                       } else {
@@ -436,30 +436,30 @@ final class js extends ni {
                 }
               } else {
                 L25: {
-                  ((js) this).field_i[var38] = (short)var4.e((byte) -104);
+                  this.field_i[var38] = (short)var4.e((byte) -104);
                   if (var12 != 1) {
                     break L25;
                   } else {
                     L26: {
                       var39 = var5.k(0);
                       if ((var39 & 1) != 1) {
-                        ((js) this).field_p[var38] = (byte) 0;
+                        this.field_p[var38] = (byte) 0;
                         break L26;
                       } else {
-                        ((js) this).field_p[var38] = (byte) 1;
+                        this.field_p[var38] = (byte) 1;
                         var2 = 1;
                         break L26;
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((js) this).field_G[var38] = (byte) -1;
-                      ((js) this).field_B[var38] = (short) -1;
+                      this.field_G[var38] = (byte)-1;
+                      this.field_B[var38] = (short)-1;
                       break L25;
                     } else {
-                      ((js) this).field_G[var38] = (byte)(var39 >> 2);
-                      ((js) this).field_B[var38] = ((js) this).field_i[var38];
-                      ((js) this).field_i[var38] = (short) 127;
-                      if (((js) this).field_B[var38] == -1) {
+                      this.field_G[var38] = (byte)(var39 >> 2);
+                      this.field_B[var38] = this.field_i[var38];
+                      this.field_i[var38] = (short)127;
+                      if (this.field_B[var38] == -1) {
                         break L25;
                       } else {
                         var3 = 1;
@@ -472,7 +472,7 @@ final class js extends ni {
                   if (var13 != 255) {
                     break L27;
                   } else {
-                    ((js) this).field_w[var38] = var6.a((byte) -124);
+                    this.field_w[var38] = var6.a((byte) -124);
                     break L27;
                   }
                 }
@@ -480,12 +480,12 @@ final class js extends ni {
                   if (var14 != 1) {
                     break L28;
                   } else {
-                    ((js) this).field_h[var38] = var7.a((byte) 126);
+                    this.field_h[var38] = var7.a((byte) 126);
                     break L28;
                   }
                 }
                 if (var15 == 1) {
-                  ((js) this).field_e[var38] = var8.k(0);
+                  this.field_e[var38] = var8.k(0);
                   var38++;
                   continue L12;
                 } else {
@@ -523,14 +523,14 @@ final class js extends ni {
                 break L31;
               }
             }
-            ((js) this).field_N[var38] = var35 + var40;
-            ((js) this).field_D[var38] = var36 + var41;
-            ((js) this).field_u[var38] = var37 + var42;
-            var35 = ((js) this).field_N[var38];
-            var36 = ((js) this).field_D[var38];
-            var37 = ((js) this).field_u[var38];
+            this.field_N[var38] = var35 + var40;
+            this.field_D[var38] = var36 + var41;
+            this.field_u[var38] = var37 + var42;
+            var35 = this.field_N[var38];
+            var36 = this.field_D[var38];
+            var37 = this.field_u[var38];
             if (var16 == 1) {
-              ((js) this).field_m[var38] = var8.k(0);
+              this.field_m[var38] = var8.k(0);
               var38++;
               continue L11;
             } else {
@@ -542,6 +542,7 @@ final class js extends ni {
     }
 
     private final void a(byte[] param0) {
+        byte dupTemp$1 = 0;
         vh var2 = null;
         vh var3 = null;
         vh var4 = null;
@@ -659,7 +660,7 @@ final class js extends ni {
           if (var11 <= 0) {
             break L2;
           } else {
-            ((js) this).field_t = new byte[var11];
+            this.field_t = new byte[var11];
             var2.field_q = 0;
             var28 = 0;
             L3: while (true) {
@@ -667,8 +668,8 @@ final class js extends ni {
                 break L2;
               } else {
                 L4: {
-                  byte dupTemp$1 = var2.a((byte) 107);
-                  ((js) this).field_t[var28] = dupTemp$1;
+                  dupTemp$1 = var2.a((byte) 107);
+                  this.field_t[var28] = dupTemp$1;
                   var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
@@ -786,19 +787,19 @@ final class js extends ni {
           var48 = var28;
           var28 = var28 + (var26 + var27 * 2);
           var49 = var28;
-          ((js) this).field_x = var9;
-          ((js) this).field_O = var10;
-          ((js) this).field_E = var11;
-          ((js) this).field_N = new int[var9];
-          ((js) this).field_D = new int[var9];
-          ((js) this).field_u = new int[var9];
-          ((js) this).field_q = new int[var10];
-          ((js) this).field_o = new int[var10];
-          ((js) this).field_r = new int[var10];
+          this.field_x = var9;
+          this.field_O = var10;
+          this.field_E = var11;
+          this.field_N = new int[var9];
+          this.field_D = new int[var9];
+          this.field_u = new int[var9];
+          this.field_q = new int[var10];
+          this.field_o = new int[var10];
+          this.field_r = new int[var10];
           if (var19 != 1) {
             break L12;
           } else {
-            ((js) this).field_m = new int[var9];
+            this.field_m = new int[var9];
             break L12;
           }
         }
@@ -806,7 +807,7 @@ final class js extends ni {
           if (var13 == 0) {
             break L13;
           } else {
-            ((js) this).field_p = new byte[var10];
+            this.field_p = new byte[var10];
             break L13;
           }
         }
@@ -814,7 +815,7 @@ final class js extends ni {
           if (var15 != 255) {
             break L14;
           } else {
-            ((js) this).field_w = new byte[var10];
+            this.field_w = new byte[var10];
             break L14;
           }
         }
@@ -822,7 +823,7 @@ final class js extends ni {
           if (var16 != 1) {
             break L15;
           } else {
-            ((js) this).field_h = new byte[var10];
+            this.field_h = new byte[var10];
             break L15;
           }
         }
@@ -830,7 +831,7 @@ final class js extends ni {
           if (var17 != 1) {
             break L16;
           } else {
-            ((js) this).field_e = new int[var10];
+            this.field_e = new int[var10];
             break L16;
           }
         }
@@ -838,7 +839,7 @@ final class js extends ni {
           if (var18 != 1) {
             break L17;
           } else {
-            ((js) this).field_B = new short[var10];
+            this.field_B = new short[var10];
             break L17;
           }
         }
@@ -849,37 +850,37 @@ final class js extends ni {
             if (var11 <= 0) {
               break L18;
             } else {
-              ((js) this).field_G = new byte[var10];
+              this.field_G = new byte[var10];
               break L18;
             }
           }
         }
         L19: {
-          ((js) this).field_i = new short[var10];
+          this.field_i = new short[var10];
           if (var11 <= 0) {
             break L19;
           } else {
             L20: {
-              ((js) this).field_M = new short[var11];
-              ((js) this).field_n = new short[var11];
-              ((js) this).field_C = new short[var11];
+              this.field_M = new short[var11];
+              this.field_n = new short[var11];
+              this.field_C = new short[var11];
               if (var26 <= 0) {
                 break L20;
               } else {
-                ((js) this).field_K = new short[var26];
-                ((js) this).field_s = new short[var26];
-                ((js) this).field_k = new short[var26];
-                ((js) this).field_J = new byte[var26];
-                ((js) this).field_f = new byte[var26];
-                ((js) this).field_I = new byte[var26];
+                this.field_K = new short[var26];
+                this.field_s = new short[var26];
+                this.field_k = new short[var26];
+                this.field_J = new byte[var26];
+                this.field_f = new byte[var26];
+                this.field_I = new byte[var26];
                 break L20;
               }
             }
             if (var27 <= 0) {
               break L19;
             } else {
-              ((js) this).field_F = new byte[var27];
-              ((js) this).field_z = new byte[var27];
+              this.field_F = new byte[var27];
+              this.field_z = new byte[var27];
               break L19;
             }
           }
@@ -905,7 +906,7 @@ final class js extends ni {
             var53 = 0;
             L22: while (true) {
               if (var53 >= var10) {
-                ((js) this).field_v = -1;
+                this.field_v = -1;
                 var2.field_q = var36;
                 var3.field_q = var31;
                 var53 = 0;
@@ -915,7 +916,7 @@ final class js extends ni {
                 var57 = 0;
                 L23: while (true) {
                   if (var57 >= var10) {
-                    ((js) this).field_v = ((js) this).field_v + 1;
+                    this.field_v = this.field_v + 1;
                     var2.field_q = var43;
                     var3.field_q = var44;
                     var4.field_q = var45;
@@ -951,13 +952,13 @@ final class js extends ni {
                         return;
                       } else {
                         L27: {
-                          var58 = ((js) this).field_t[var57] & 255;
+                          var58 = this.field_t[var57] & 255;
                           if (var58 != 0) {
                             break L27;
                           } else {
-                            ((js) this).field_M[var57] = (short)var2.e((byte) -104);
-                            ((js) this).field_n[var57] = (short)var2.e((byte) -104);
-                            ((js) this).field_C[var57] = (short)var2.e((byte) -104);
+                            this.field_M[var57] = (short)var2.e((byte) -104);
+                            this.field_n[var57] = (short)var2.e((byte) -104);
+                            this.field_C[var57] = (short)var2.e((byte) -104);
                             break L27;
                           }
                         }
@@ -965,15 +966,15 @@ final class js extends ni {
                           if (var58 != 1) {
                             break L28;
                           } else {
-                            ((js) this).field_M[var57] = (short)var3.e((byte) -104);
-                            ((js) this).field_n[var57] = (short)var3.e((byte) -104);
-                            ((js) this).field_C[var57] = (short)var3.e((byte) -104);
-                            ((js) this).field_K[var57] = (short)var4.e((byte) -104);
-                            ((js) this).field_s[var57] = (short)var4.e((byte) -104);
-                            ((js) this).field_k[var57] = (short)var4.e((byte) -104);
-                            ((js) this).field_J[var57] = var5.a((byte) -28);
-                            ((js) this).field_f[var57] = var6.a((byte) 107);
-                            ((js) this).field_I[var57] = var7.a((byte) -5);
+                            this.field_M[var57] = (short)var3.e((byte) -104);
+                            this.field_n[var57] = (short)var3.e((byte) -104);
+                            this.field_C[var57] = (short)var3.e((byte) -104);
+                            this.field_K[var57] = (short)var4.e((byte) -104);
+                            this.field_s[var57] = (short)var4.e((byte) -104);
+                            this.field_k[var57] = (short)var4.e((byte) -104);
+                            this.field_J[var57] = var5.a((byte) -28);
+                            this.field_f[var57] = var6.a((byte) 107);
+                            this.field_I[var57] = var7.a((byte) -5);
                             break L28;
                           }
                         }
@@ -981,30 +982,30 @@ final class js extends ni {
                           if (var58 != 2) {
                             break L29;
                           } else {
-                            ((js) this).field_M[var57] = (short)var3.e((byte) -104);
-                            ((js) this).field_n[var57] = (short)var3.e((byte) -104);
-                            ((js) this).field_C[var57] = (short)var3.e((byte) -104);
-                            ((js) this).field_K[var57] = (short)var4.e((byte) -104);
-                            ((js) this).field_s[var57] = (short)var4.e((byte) -104);
-                            ((js) this).field_k[var57] = (short)var4.e((byte) -104);
-                            ((js) this).field_J[var57] = var5.a((byte) -38);
-                            ((js) this).field_f[var57] = var6.a((byte) 113);
-                            ((js) this).field_I[var57] = var7.a((byte) -32);
-                            ((js) this).field_F[var57] = var7.a((byte) 104);
-                            ((js) this).field_z[var57] = var7.a((byte) -71);
+                            this.field_M[var57] = (short)var3.e((byte) -104);
+                            this.field_n[var57] = (short)var3.e((byte) -104);
+                            this.field_C[var57] = (short)var3.e((byte) -104);
+                            this.field_K[var57] = (short)var4.e((byte) -104);
+                            this.field_s[var57] = (short)var4.e((byte) -104);
+                            this.field_k[var57] = (short)var4.e((byte) -104);
+                            this.field_J[var57] = var5.a((byte) -38);
+                            this.field_f[var57] = var6.a((byte) 113);
+                            this.field_I[var57] = var7.a((byte) -32);
+                            this.field_F[var57] = var7.a((byte) 104);
+                            this.field_z[var57] = var7.a((byte) -71);
                             break L29;
                           }
                         }
                         if (var58 == 3) {
-                          ((js) this).field_M[var57] = (short)var3.e((byte) -104);
-                          ((js) this).field_n[var57] = (short)var3.e((byte) -104);
-                          ((js) this).field_C[var57] = (short)var3.e((byte) -104);
-                          ((js) this).field_K[var57] = (short)var4.e((byte) -104);
-                          ((js) this).field_s[var57] = (short)var4.e((byte) -104);
-                          ((js) this).field_k[var57] = (short)var4.e((byte) -104);
-                          ((js) this).field_J[var57] = var5.a((byte) -60);
-                          ((js) this).field_f[var57] = var6.a((byte) 120);
-                          ((js) this).field_I[var57] = var7.a((byte) 97);
+                          this.field_M[var57] = (short)var3.e((byte) -104);
+                          this.field_n[var57] = (short)var3.e((byte) -104);
+                          this.field_C[var57] = (short)var3.e((byte) -104);
+                          this.field_K[var57] = (short)var4.e((byte) -104);
+                          this.field_s[var57] = (short)var4.e((byte) -104);
+                          this.field_k[var57] = (short)var4.e((byte) -104);
+                          this.field_J[var57] = var5.a((byte) -60);
+                          this.field_f[var57] = var6.a((byte) 120);
+                          this.field_I[var57] = var7.a((byte) 97);
                           var57++;
                           continue L24;
                         } else {
@@ -1026,28 +1027,28 @@ final class js extends ni {
                           var56 = var54;
                           var55 = var2.a(62) + var56;
                           var56 = var55;
-                          ((js) this).field_q[var57] = var53;
-                          ((js) this).field_o[var57] = var54;
-                          ((js) this).field_r[var57] = var55;
-                          if (var53 <= ((js) this).field_v) {
+                          this.field_q[var57] = var53;
+                          this.field_o[var57] = var54;
+                          this.field_r[var57] = var55;
+                          if (var53 <= this.field_v) {
                             break L31;
                           } else {
-                            ((js) this).field_v = var53;
+                            this.field_v = var53;
                             break L31;
                           }
                         }
                         L32: {
-                          if (var54 <= ((js) this).field_v) {
+                          if (var54 <= this.field_v) {
                             break L32;
                           } else {
-                            ((js) this).field_v = var54;
+                            this.field_v = var54;
                             break L32;
                           }
                         }
-                        if (var55 <= ((js) this).field_v) {
+                        if (var55 <= this.field_v) {
                           break L30;
                         } else {
-                          ((js) this).field_v = var55;
+                          this.field_v = var55;
                           break L30;
                         }
                       }
@@ -1059,13 +1060,13 @@ final class js extends ni {
                         var54 = var55;
                         var55 = var2.a(99) + var56;
                         var56 = var55;
-                        ((js) this).field_q[var57] = var53;
-                        ((js) this).field_o[var57] = var54;
-                        ((js) this).field_r[var57] = var55;
-                        if (var55 <= ((js) this).field_v) {
+                        this.field_q[var57] = var53;
+                        this.field_o[var57] = var54;
+                        this.field_r[var57] = var55;
+                        if (var55 <= this.field_v) {
                           break L33;
                         } else {
-                          ((js) this).field_v = var55;
+                          this.field_v = var55;
                           break L33;
                         }
                       }
@@ -1077,13 +1078,13 @@ final class js extends ni {
                         var53 = var55;
                         var55 = var2.a(119) + var56;
                         var56 = var55;
-                        ((js) this).field_q[var57] = var53;
-                        ((js) this).field_o[var57] = var54;
-                        ((js) this).field_r[var57] = var55;
-                        if (var55 <= ((js) this).field_v) {
+                        this.field_q[var57] = var53;
+                        this.field_o[var57] = var54;
+                        this.field_r[var57] = var55;
+                        if (var55 <= this.field_v) {
                           break L34;
                         } else {
-                          ((js) this).field_v = var55;
+                          this.field_v = var55;
                           break L34;
                         }
                       }
@@ -1094,11 +1095,11 @@ final class js extends ni {
                       var54 = var59;
                       var55 = var2.a(118) + var56;
                       var56 = var55;
-                      ((js) this).field_q[var57] = var53;
-                      ((js) this).field_o[var57] = var54;
-                      ((js) this).field_r[var57] = var55;
-                      if (var55 > ((js) this).field_v) {
-                        ((js) this).field_v = var55;
+                      this.field_q[var57] = var53;
+                      this.field_o[var57] = var54;
+                      this.field_r[var57] = var55;
+                      if (var55 > this.field_v) {
+                        this.field_v = var55;
                         var57++;
                         continue L23;
                       } else {
@@ -1113,11 +1114,11 @@ final class js extends ni {
                 }
               } else {
                 L35: {
-                  ((js) this).field_i[var53] = (short)var2.e((byte) -104);
+                  this.field_i[var53] = (short)var2.e((byte) -104);
                   if (var13 == 0) {
                     break L35;
                   } else {
-                    ((js) this).field_p[var53] = var3.a((byte) 8);
+                    this.field_p[var53] = var3.a((byte) 8);
                     break L35;
                   }
                 }
@@ -1125,7 +1126,7 @@ final class js extends ni {
                   if (var15 != 255) {
                     break L36;
                   } else {
-                    ((js) this).field_w[var53] = var4.a((byte) -101);
+                    this.field_w[var53] = var4.a((byte) -101);
                     break L36;
                   }
                 }
@@ -1133,7 +1134,7 @@ final class js extends ni {
                   if (var16 != 1) {
                     break L37;
                   } else {
-                    ((js) this).field_h[var53] = var5.a((byte) 105);
+                    this.field_h[var53] = var5.a((byte) 105);
                     break L37;
                   }
                 }
@@ -1141,7 +1142,7 @@ final class js extends ni {
                   if (var17 != 1) {
                     break L38;
                   } else {
-                    ((js) this).field_e[var53] = var6.k(0);
+                    this.field_e[var53] = var6.k(0);
                     break L38;
                   }
                 }
@@ -1149,17 +1150,17 @@ final class js extends ni {
                   if (var18 != 1) {
                     break L39;
                   } else {
-                    ((js) this).field_B[var53] = (short)(var7.e((byte) -104) - 1);
+                    this.field_B[var53] = (short)(var7.e((byte) -104) - 1);
                     break L39;
                   }
                 }
-                if (((js) this).field_G != null) {
-                  if (((js) this).field_B[var53] == -1) {
-                    ((js) this).field_G[var53] = (byte) -1;
+                if (this.field_G != null) {
+                  if (this.field_B[var53] == -1) {
+                    this.field_G[var53] = (byte)-1;
                     var53++;
                     continue L22;
                   } else {
-                    ((js) this).field_G[var53] = (byte)(var8.k(0) - 1);
+                    this.field_G[var53] = (byte)(var8.k(0) - 1);
                     var53++;
                     continue L22;
                   }
@@ -1198,14 +1199,14 @@ final class js extends ni {
                 break L42;
               }
             }
-            ((js) this).field_N[var53] = var50 + var55;
-            ((js) this).field_D[var53] = var51 + var56;
-            ((js) this).field_u[var53] = var52 + var57;
-            var50 = ((js) this).field_N[var53];
-            var51 = ((js) this).field_D[var53];
-            var52 = ((js) this).field_u[var53];
+            this.field_N[var53] = var50 + var55;
+            this.field_D[var53] = var51 + var56;
+            this.field_u[var53] = var52 + var57;
+            var50 = this.field_N[var53];
+            var51 = this.field_D[var53];
+            var52 = this.field_u[var53];
             if (var19 == 1) {
-              ((js) this).field_m[var53] = var6.k(0);
+              this.field_m[var53] = var6.k(0);
               var53++;
               continue L21;
             } else {
@@ -1217,6 +1218,7 @@ final class js extends ni {
     }
 
     final void b() {
+        kg dupTemp$1 = null;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -1236,25 +1238,25 @@ final class js extends ni {
         wi var17 = null;
         wi var18 = null;
         wi var19 = null;
-        if (((js) this).field_y == null) {
-          ((js) this).field_y = new wi[((js) this).field_v];
+        if (this.field_y == null) {
+          this.field_y = new wi[this.field_v];
           var1 = 0;
           L0: while (true) {
-            if (var1 >= ((js) this).field_v) {
+            if (var1 >= this.field_v) {
               var1 = 0;
               L1: while (true) {
-                if (var1 >= ((js) this).field_O) {
+                if (var1 >= this.field_O) {
                   return;
                 } else {
-                  var2 = ((js) this).field_q[var1];
-                  var3 = ((js) this).field_o[var1];
-                  var4 = ((js) this).field_r[var1];
-                  var5 = ((js) this).field_N[var3] - ((js) this).field_N[var2];
-                  var6 = ((js) this).field_D[var3] - ((js) this).field_D[var2];
-                  var7 = ((js) this).field_u[var3] - ((js) this).field_u[var2];
-                  var8 = ((js) this).field_N[var4] - ((js) this).field_N[var2];
-                  var9 = ((js) this).field_D[var4] - ((js) this).field_D[var2];
-                  var10 = ((js) this).field_u[var4] - ((js) this).field_u[var2];
+                  var2 = this.field_q[var1];
+                  var3 = this.field_o[var1];
+                  var4 = this.field_r[var1];
+                  var5 = this.field_N[var3] - this.field_N[var2];
+                  var6 = this.field_D[var3] - this.field_D[var2];
+                  var7 = this.field_u[var3] - this.field_u[var2];
+                  var8 = this.field_N[var4] - this.field_N[var2];
+                  var9 = this.field_D[var4] - this.field_D[var2];
+                  var10 = this.field_u[var4] - this.field_u[var2];
                   var11 = var6 * var10 - var9 * var7;
                   var12 = var7 * var8 - var10 * var5;
                   var13 = var5 * var9 - var8 * var6;
@@ -1289,8 +1291,8 @@ final class js extends ni {
                                     var11 = var11 * 256 / var14;
                                     var12 = var12 * 256 / var14;
                                     var13 = var13 * 256 / var14;
-                                    if (((js) this).field_p != null) {
-                                      var15 = ((js) this).field_p[var1];
+                                    if (this.field_p != null) {
+                                      var15 = this.field_p[var1];
                                       break L5;
                                     } else {
                                       var15 = 0;
@@ -1300,15 +1302,15 @@ final class js extends ni {
                                   if (var15 != 0) {
                                     if (var15 == 1) {
                                       L6: {
-                                        if (((js) this).field_L != null) {
+                                        if (this.field_L != null) {
                                           break L6;
                                         } else {
-                                          ((js) this).field_L = new kg[((js) this).field_O];
+                                          this.field_L = new kg[this.field_O];
                                           break L6;
                                         }
                                       }
-                                      kg dupTemp$1 = new kg();
-                                      ((js) this).field_L[var1] = dupTemp$1;
+                                      dupTemp$1 = new kg();
+                                      this.field_L[var1] = dupTemp$1;
                                       var16 = dupTemp$1;
                                       var16.field_b = var11;
                                       var16.field_a = var12;
@@ -1320,17 +1322,17 @@ final class js extends ni {
                                       continue L1;
                                     }
                                   } else {
-                                    var17 = ((js) this).field_y[var2];
+                                    var17 = this.field_y[var2];
                                     var17.field_d = var17.field_d + var11;
                                     var17.field_e = var17.field_e + var12;
                                     var17.field_b = var17.field_b + var13;
                                     var17.field_g = var17.field_g + 1;
-                                    var18 = ((js) this).field_y[var3];
+                                    var18 = this.field_y[var3];
                                     var18.field_d = var18.field_d + var11;
                                     var18.field_e = var18.field_e + var12;
                                     var18.field_b = var18.field_b + var13;
                                     var18.field_g = var18.field_g + 1;
-                                    var19 = ((js) this).field_y[var4];
+                                    var19 = this.field_y[var4];
                                     var19.field_d = var19.field_d + var11;
                                     var19.field_e = var19.field_e + var12;
                                     var19.field_b = var19.field_b + var13;
@@ -1355,7 +1357,7 @@ final class js extends ni {
                 }
               }
             } else {
-              ((js) this).field_y[var1] = new wi();
+              this.field_y[var1] = new wi();
               var1++;
               continue L0;
             }
@@ -1374,56 +1376,53 @@ final class js extends ni {
     }
 
     final kk a(int param0, int param1, int param2, int param3, int param4) {
-        return (kk) (Object) new gd((js) this, param0, param1, param2, param3, param4);
+        return (kk) ((Object) new gd((js) (this), param0, param1, param2, param3, param4));
     }
 
     final void a() {
+        int[] array$2 = null;
+        int[] array$3 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
         L0: {
-          if (((js) this).field_m == null) {
+          if (this.field_m == null) {
             break L0;
           } else {
-            var9 = new int[256];
-            var7 = var9;
-            var5 = var7;
+            var5 = new int[256];
             var2 = 0;
             var3 = 0;
             L1: while (true) {
-              if (var3 >= ((js) this).field_x) {
-                ((js) this).field_l = new int[var2 + 1][];
+              if (var3 >= this.field_x) {
+                this.field_l = new int[var2 + 1][];
                 var3 = 0;
                 L2: while (true) {
                   if (var3 > var2) {
                     var3 = 0;
                     L3: while (true) {
-                      if (var3 >= ((js) this).field_x) {
-                        ((js) this).field_m = null;
+                      if (var3 >= this.field_x) {
+                        this.field_m = null;
                         break L0;
                       } else {
-                        var4 = ((js) this).field_m[var3];
+                        var4 = this.field_m[var3];
                         var5[var4] = var5[var4] + 1;
-                        ((js) this).field_l[var4][var5[var4]] = var3;
+                        this.field_l[var4][var5[var4]] = var3;
                         var3++;
                         continue L3;
                       }
                     }
                   } else {
-                    ((js) this).field_l[var3] = new int[var9[var3]];
-                    var9[var3] = 0;
+                    array$2 = new int[var5[var3]];
+                    this.field_l[var3] = array$2;
+                    var5[var3] = 0;
                     var3++;
                     continue L2;
                   }
                 }
               } else {
-                var4 = ((js) this).field_m[var3];
+                var4 = this.field_m[var3];
                 var5[var4] = var5[var4] + 1;
                 if (var4 > var2) {
                   var2 = var4;
@@ -1438,42 +1437,41 @@ final class js extends ni {
           }
         }
         L4: {
-          if (((js) this).field_e == null) {
+          if (this.field_e == null) {
             break L4;
           } else {
-            var10 = new int[256];
-            var8 = var10;
-            var6 = var8;
+            var6 = new int[256];
             var2 = 0;
             var3 = 0;
             L5: while (true) {
-              if (var3 >= ((js) this).field_O) {
-                ((js) this).field_H = new int[var2 + 1][];
+              if (var3 >= this.field_O) {
+                this.field_H = new int[var2 + 1][];
                 var3 = 0;
                 L6: while (true) {
                   if (var3 > var2) {
                     var3 = 0;
                     L7: while (true) {
-                      if (var3 >= ((js) this).field_O) {
-                        ((js) this).field_e = null;
+                      if (var3 >= this.field_O) {
+                        this.field_e = null;
                         break L4;
                       } else {
-                        var4 = ((js) this).field_e[var3];
+                        var4 = this.field_e[var3];
                         var6[var4] = var6[var4] + 1;
-                        ((js) this).field_H[var4][var6[var4]] = var3;
+                        this.field_H[var4][var6[var4]] = var3;
                         var3++;
                         continue L7;
                       }
                     }
                   } else {
-                    ((js) this).field_H[var3] = new int[var10[var3]];
-                    var10[var3] = 0;
+                    array$3 = new int[var6[var3]];
+                    this.field_H[var3] = array$3;
+                    var6[var3] = 0;
                     var3++;
                     continue L6;
                   }
                 }
               } else {
-                var4 = ((js) this).field_e[var3];
+                var4 = this.field_e[var3];
                 var6[var4] = var6[var4] + 1;
                 if (var4 > var2) {
                   var2 = var4;
@@ -1492,9 +1490,9 @@ final class js extends ni {
     private js(byte[] param0) {
         L0: {
           L1: {
-            ((js) this).field_v = 0;
-            ((js) this).field_O = 0;
-            ((js) this).field_x = 0;
+            this.field_v = 0;
+            this.field_O = 0;
+            this.field_x = 0;
             if (param0[param0.length - 1] != -1) {
               break L1;
             } else {
@@ -1514,51 +1512,51 @@ final class js extends ni {
     js(js param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         int var6 = 0;
         L0: {
-          ((js) this).field_v = 0;
-          ((js) this).field_O = 0;
-          ((js) this).field_x = 0;
-          ((js) this).field_x = param0.field_x;
-          ((js) this).field_v = param0.field_v;
-          ((js) this).field_O = param0.field_O;
-          ((js) this).field_E = param0.field_E;
+          this.field_v = 0;
+          this.field_O = 0;
+          this.field_x = 0;
+          this.field_x = param0.field_x;
+          this.field_v = param0.field_v;
+          this.field_O = param0.field_O;
+          this.field_E = param0.field_E;
           if (!param1) {
-            ((js) this).field_N = new int[((js) this).field_x];
-            ((js) this).field_D = new int[((js) this).field_x];
-            ((js) this).field_u = new int[((js) this).field_x];
+            this.field_N = new int[this.field_x];
+            this.field_D = new int[this.field_x];
+            this.field_u = new int[this.field_x];
             var6 = 0;
             L1: while (true) {
-              if (var6 >= ((js) this).field_x) {
+              if (var6 >= this.field_x) {
                 break L0;
               } else {
-                ((js) this).field_N[var6] = param0.field_N[var6];
-                ((js) this).field_D[var6] = param0.field_D[var6];
-                ((js) this).field_u[var6] = param0.field_u[var6];
+                this.field_N[var6] = param0.field_N[var6];
+                this.field_D[var6] = param0.field_D[var6];
+                this.field_u[var6] = param0.field_u[var6];
                 var6++;
                 continue L1;
               }
             }
           } else {
-            ((js) this).field_N = param0.field_N;
-            ((js) this).field_D = param0.field_D;
-            ((js) this).field_u = param0.field_u;
+            this.field_N = param0.field_N;
+            this.field_D = param0.field_D;
+            this.field_u = param0.field_u;
             break L0;
           }
         }
         L2: {
           if (!param2) {
-            ((js) this).field_i = new short[((js) this).field_O];
+            this.field_i = new short[this.field_O];
             var6 = 0;
             L3: while (true) {
-              if (var6 >= ((js) this).field_O) {
+              if (var6 >= this.field_O) {
                 break L2;
               } else {
-                ((js) this).field_i[var6] = param0.field_i[var6];
+                this.field_i[var6] = param0.field_i[var6];
                 var6++;
                 continue L3;
               }
             }
           } else {
-            ((js) this).field_i = param0.field_i;
+            this.field_i = param0.field_i;
             break L2;
           }
         }
@@ -1568,13 +1566,13 @@ final class js extends ni {
               break L5;
             } else {
               if (param0.field_B != null) {
-                ((js) this).field_B = new short[((js) this).field_O];
+                this.field_B = new short[this.field_O];
                 var6 = 0;
                 L6: while (true) {
-                  if (var6 >= ((js) this).field_O) {
+                  if (var6 >= this.field_O) {
                     break L4;
                   } else {
-                    ((js) this).field_B[var6] = param0.field_B[var6];
+                    this.field_B[var6] = param0.field_B[var6];
                     var6++;
                     continue L6;
                   }
@@ -1584,19 +1582,19 @@ final class js extends ni {
               }
             }
           }
-          ((js) this).field_B = param0.field_B;
+          this.field_B = param0.field_B;
           break L4;
         }
         L7: {
           if (!param4) {
-            ((js) this).field_h = new byte[((js) this).field_O];
+            this.field_h = new byte[this.field_O];
             if (param0.field_h != null) {
               var6 = 0;
               L8: while (true) {
-                if (var6 >= ((js) this).field_O) {
+                if (var6 >= this.field_O) {
                   break L7;
                 } else {
-                  ((js) this).field_h[var6] = param0.field_h[var6];
+                  this.field_h[var6] = param0.field_h[var6];
                   var6++;
                   continue L8;
                 }
@@ -1604,44 +1602,44 @@ final class js extends ni {
             } else {
               var6 = 0;
               L9: while (true) {
-                if (var6 >= ((js) this).field_O) {
+                if (var6 >= this.field_O) {
                   break L7;
                 } else {
-                  ((js) this).field_h[var6] = (byte) 0;
+                  this.field_h[var6] = (byte) 0;
                   var6++;
                   continue L9;
                 }
               }
             }
           } else {
-            ((js) this).field_h = param0.field_h;
+            this.field_h = param0.field_h;
             break L7;
           }
         }
-        ((js) this).field_q = param0.field_q;
-        ((js) this).field_o = param0.field_o;
-        ((js) this).field_r = param0.field_r;
-        ((js) this).field_p = param0.field_p;
-        ((js) this).field_w = param0.field_w;
-        ((js) this).field_G = param0.field_G;
-        ((js) this).field_t = param0.field_t;
-        ((js) this).field_M = param0.field_M;
-        ((js) this).field_n = param0.field_n;
-        ((js) this).field_C = param0.field_C;
-        ((js) this).field_K = param0.field_K;
-        ((js) this).field_s = param0.field_s;
-        ((js) this).field_k = param0.field_k;
-        ((js) this).field_J = param0.field_J;
-        ((js) this).field_f = param0.field_f;
-        ((js) this).field_I = param0.field_I;
-        ((js) this).field_F = param0.field_F;
-        ((js) this).field_z = param0.field_z;
-        ((js) this).field_m = param0.field_m;
-        ((js) this).field_e = param0.field_e;
-        ((js) this).field_l = param0.field_l;
-        ((js) this).field_H = param0.field_H;
-        ((js) this).field_y = param0.field_y;
-        ((js) this).field_L = param0.field_L;
-        ((js) this).field_g = param0.field_g;
+        this.field_q = param0.field_q;
+        this.field_o = param0.field_o;
+        this.field_r = param0.field_r;
+        this.field_p = param0.field_p;
+        this.field_w = param0.field_w;
+        this.field_G = param0.field_G;
+        this.field_t = param0.field_t;
+        this.field_M = param0.field_M;
+        this.field_n = param0.field_n;
+        this.field_C = param0.field_C;
+        this.field_K = param0.field_K;
+        this.field_s = param0.field_s;
+        this.field_k = param0.field_k;
+        this.field_J = param0.field_J;
+        this.field_f = param0.field_f;
+        this.field_I = param0.field_I;
+        this.field_F = param0.field_F;
+        this.field_z = param0.field_z;
+        this.field_m = param0.field_m;
+        this.field_e = param0.field_e;
+        this.field_l = param0.field_l;
+        this.field_H = param0.field_H;
+        this.field_y = param0.field_y;
+        this.field_L = param0.field_L;
+        this.field_g = param0.field_g;
     }
 }

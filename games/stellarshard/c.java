@@ -58,7 +58,7 @@ public class c {
 
     public static File a(String param0, int param1) {
         if (param1 != 0) {
-            return null;
+            return (File) null;
         }
         return c.a(param0, field_e, field_d, (byte) -6);
     }
@@ -68,10 +68,6 @@ public class c {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = false;
         field_a = new Hashtable(16);
     }

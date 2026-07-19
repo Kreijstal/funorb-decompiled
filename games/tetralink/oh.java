@@ -5,6 +5,8 @@ class oh extends md {
     int[] field_C;
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -22,7 +24,7 @@ class oh extends md {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -32,7 +34,7 @@ class oh extends md {
                 } else {
                   var12 = (param2 & 16711935) * param9 & -16711936;
                   var13 = (param2 & 65280) * param9 & 16711680;
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (var12 | var13) >>> 8;
                   var11++;
@@ -53,12 +55,12 @@ class oh extends md {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((oh) this).field_x;
-          param1 = param1 + ((oh) this).field_D;
+          param0 = param0 + this.field_x;
+          param1 = param1 + this.field_D;
           var4 = param0 + param1 * ra.field_f;
           var5 = 0;
-          var6 = ((oh) this).field_E;
-          var7 = ((oh) this).field_u;
+          var6 = this.field_E;
+          var7 = this.field_u;
           var8 = ra.field_f - var7;
           var9 = 0;
           if (param1 >= ra.field_i) {
@@ -109,7 +111,7 @@ class oh extends md {
           return;
         } else {
           if (var6 > 0) {
-            oh.a(ra.field_b, ((oh) this).field_C, 0, var5, var4, var7, var6, var8, var9, param2);
+            oh.a(ra.field_b, this.field_C, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -126,12 +128,12 @@ class oh extends md {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((oh) this).field_x;
-          param1 = param1 + ((oh) this).field_D;
+          param0 = param0 + this.field_x;
+          param1 = param1 + this.field_D;
           var4 = param0 + param1 * ra.field_f;
           var5 = 0;
-          var6 = ((oh) this).field_E;
-          var7 = ((oh) this).field_u;
+          var6 = this.field_E;
+          var7 = this.field_u;
           var8 = ra.field_f - var7;
           var9 = 0;
           if (param1 >= ra.field_i) {
@@ -182,7 +184,7 @@ class oh extends md {
           return;
         } else {
           if (var6 > 0) {
-            oh.b(ra.field_b, ((oh) this).field_C, 0, var5, var4, var7, var6, var8, var9, param2);
+            oh.b(ra.field_b, this.field_C, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -191,6 +193,8 @@ class oh extends md {
     }
 
     private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -209,7 +213,7 @@ class oh extends md {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$14 = param4;
+                incrementValue$14 = param4;
                 param4++;
                 param3 = param2[incrementValue$14];
                 if (param3 != 0) {
@@ -218,7 +222,7 @@ class oh extends md {
                     var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
                     var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
                     var14 = (param3 & 255) * (param0 & 255) >>> 8;
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param1[incrementValue$15] = (var12 << 16) + (var13 << 8) + var14;
                     var11++;
@@ -248,12 +252,12 @@ class oh extends md {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((oh) this).field_x;
-          param1 = param1 + ((oh) this).field_D;
+          param0 = param0 + this.field_x;
+          param1 = param1 + this.field_D;
           var3 = param0 + param1 * ra.field_f;
           var4 = 0;
-          var5 = ((oh) this).field_E;
-          var6 = ((oh) this).field_u;
+          var5 = this.field_E;
+          var6 = this.field_u;
           var7 = ra.field_f - var6;
           var8 = 0;
           if (param1 >= ra.field_i) {
@@ -304,7 +308,7 @@ class oh extends md {
           return;
         } else {
           if (var5 > 0) {
-            oh.a(0, ra.field_b, ((oh) this).field_C, 0, var4, var3, var6, var5, var7, var8);
+            oh.a(0, ra.field_b, this.field_C, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -313,26 +317,26 @@ class oh extends md {
     }
 
     void d(int param0, int param1) {
-        param0 = param0 + (((oh) this).field_x >> 1);
-        param1 = param1 + (((oh) this).field_D >> 1);
+        param0 = param0 + (this.field_x >> 1);
+        param1 = param1 + (this.field_D >> 1);
         int var3 = param0 < ra.field_j ? ra.field_j - param0 << 1 : 0;
-        int var4 = param0 + (((oh) this).field_u >> 1) > ra.field_l ? ra.field_l - param0 << 1 : ((oh) this).field_u;
+        int var4 = param0 + (this.field_u >> 1) > ra.field_l ? ra.field_l - param0 << 1 : this.field_u;
         int var5 = param1 < ra.field_i ? ra.field_i - param1 << 1 : 0;
-        int var6 = param1 + (((oh) this).field_E >> 1) > ra.field_g ? ra.field_g - param1 << 1 : ((oh) this).field_E;
-        oh.a(((oh) this).field_C, var5 * ((oh) this).field_u + var3, (param1 + (var5 >> 1)) * ra.field_f + (param0 + (var3 >> 1)), (((oh) this).field_u << 1) - (var4 - var3) + (((oh) this).field_u & 1), ra.field_f - (var4 - var3 >> 1), ((oh) this).field_u, var4 - var3 >> 1, var6 - var5 >> 1);
+        int var6 = param1 + (this.field_E >> 1) > ra.field_g ? ra.field_g - param1 << 1 : this.field_E;
+        oh.a(this.field_C, var5 * this.field_u + var3, (param1 + (var5 >> 1)) * ra.field_f + (param0 + (var3 >> 1)), (this.field_u << 1) - (var4 - var3) + (this.field_u & 1), ra.field_f - (var4 - var3 >> 1), this.field_u, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final oh a() {
         int var2 = 0;
         int var3 = 0;
-        oh var1 = new oh(((oh) this).field_u, ((oh) this).field_E);
-        var1.field_t = ((oh) this).field_t;
-        var1.field_F = ((oh) this).field_F;
-        var1.field_x = ((oh) this).field_t - ((oh) this).field_u - ((oh) this).field_x;
-        var1.field_D = ((oh) this).field_D;
-        for (var2 = 0; var2 < ((oh) this).field_E; var2++) {
-            for (var3 = 0; var3 < ((oh) this).field_u; var3++) {
-                var1.field_C[var2 * ((oh) this).field_u + var3] = ((oh) this).field_C[var2 * ((oh) this).field_u + ((oh) this).field_u - 1 - var3];
+        oh var1 = new oh(this.field_u, this.field_E);
+        var1.field_t = this.field_t;
+        var1.field_F = this.field_F;
+        var1.field_x = this.field_t - this.field_u - this.field_x;
+        var1.field_D = this.field_D;
+        for (var2 = 0; var2 < this.field_E; var2++) {
+            for (var3 = 0; var3 < this.field_u; var3++) {
+                var1.field_C[var2 * this.field_u + var3] = this.field_C[var2 * this.field_u + this.field_u - 1 - var3];
             }
         }
         return var1;
@@ -373,19 +377,19 @@ class oh extends md {
         int var40 = 0;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((oh) this).field_x << 4);
-            param1 = param1 - (((oh) this).field_D << 4);
+            param0 = param0 - (this.field_x << 4);
+            param1 = param1 - (this.field_D << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((oh) this).field_u << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((oh) this).field_u << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((oh) this).field_E << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((oh) this).field_E << 4) - param1) * var10;
-            var17 = ((((oh) this).field_u << 4) - param0) * var10 + ((((oh) this).field_E << 4) - param1) * var9;
-            var18 = -((((oh) this).field_u << 4) - param0) * var9 + ((((oh) this).field_E << 4) - param1) * var10;
+            var13 = ((this.field_u << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_u << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_E << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_E << 4) - param1) * var10;
+            var17 = ((this.field_u << 4) - param0) * var10 + ((this.field_E << 4) - param1) * var9;
+            var18 = -((this.field_u << 4) - param0) * var9 + ((this.field_E << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -594,11 +598,11 @@ class oh extends md {
                                     break L20;
                                   } else {
                                     var33 = var37 >> 12;
-                                    if (var37 >> 12 >= ((oh) this).field_u) {
+                                    if (var37 >> 12 >= this.field_u) {
                                       break L20;
                                     } else {
                                       var34 = var38 >> 12;
-                                      if (var38 >> 12 < ((oh) this).field_E) {
+                                      if (var38 >> 12 < this.field_E) {
                                         this.a(var23, var33, var34, var37, var38);
                                         var39++;
                                         var37 = var37 + var28;
@@ -660,7 +664,7 @@ class oh extends md {
                           } else {
                             L24: {
                               var40 = 0;
-                              var35 = var38 - (((oh) this).field_E << 12);
+                              var35 = var38 - (this.field_E << 12);
                               if (var35 >= 0) {
                                 if (var27 != 0) {
                                   var35 = (var27 - var35) / var27;
@@ -691,7 +695,7 @@ class oh extends md {
                                       break L26;
                                     } else {
                                       var33 = var37 >> 12;
-                                      if (var37 >> 12 < ((oh) this).field_u) {
+                                      if (var37 >> 12 < this.field_u) {
                                         var34 = var38 >> 12;
                                         this.a(var23, var33, var34, var37, var38);
                                         var39++;
@@ -731,7 +735,7 @@ class oh extends md {
                           var38 = var32 + (var29 * var27 >> 4);
                           var39 = var20;
                           var40 = 0;
-                          var35 = var37 - (((oh) this).field_u << 12);
+                          var35 = var37 - (this.field_u << 12);
                           if (var35 >= 0) {
                             if (var28 != 0) {
                               var35 = (var28 - var35) / var28;
@@ -787,7 +791,7 @@ class oh extends md {
                                       break L32;
                                     } else {
                                       var34 = var38 >> 12;
-                                      if (var38 >> 12 < ((oh) this).field_E) {
+                                      if (var38 >> 12 < this.field_E) {
                                         var33 = var37 >> 12;
                                         this.a(var23, var33, var34, var37, var38);
                                         var39++;
@@ -825,7 +829,7 @@ class oh extends md {
                           var38 = var32 + (var29 * var27 >> 4);
                           var39 = var20;
                           var40 = 0;
-                          var35 = var37 - (((oh) this).field_u << 12);
+                          var35 = var37 - (this.field_u << 12);
                           if (var35 >= 0) {
                             if (var28 != 0) {
                               var35 = (var28 - var35) / var28;
@@ -850,7 +854,7 @@ class oh extends md {
                           } else {
                             L36: {
                               var40 = 0;
-                              var35 = var38 - (((oh) this).field_E << 12);
+                              var35 = var38 - (this.field_E << 12);
                               if (var35 >= 0) {
                                 if (var27 != 0) {
                                   var35 = (var27 - var35) / var27;
@@ -924,6 +928,7 @@ class oh extends md {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int incrementValue$1 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -996,7 +1001,7 @@ class oh extends md {
                     break L5;
                   }
                 }
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 ra.field_b[incrementValue$1] = (var13 & 66847740 | var14 & 261120) >> 2;
                 var9++;
@@ -1018,12 +1023,12 @@ class oh extends md {
         int var10 = 0;
         if (param2 != 256) {
           L0: {
-            param0 = param0 + ((oh) this).field_x;
-            param1 = param1 + ((oh) this).field_D;
+            param0 = param0 + this.field_x;
+            param1 = param1 + this.field_D;
             var4 = param0 + param1 * ra.field_f;
             var5 = 0;
-            var6 = ((oh) this).field_E;
-            var7 = ((oh) this).field_u;
+            var6 = this.field_E;
+            var7 = this.field_u;
             var8 = ra.field_f - var7;
             var9 = 0;
             if (param1 >= ra.field_i) {
@@ -1074,19 +1079,29 @@ class oh extends md {
             return;
           } else {
             if (var6 > 0) {
-              oh.c(ra.field_b, ((oh) this).field_C, 0, var5, var4, var7, var6, var8, var9, param2);
+              oh.c(ra.field_b, this.field_C, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               return;
             }
           }
         } else {
-          ((oh) this).c(param0, param1);
+          this.c(param0, param1);
           return;
         }
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -1108,7 +1123,7 @@ class oh extends md {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     param2 = param1[incrementValue$218];
                     if (param2 == 0) {
@@ -1116,7 +1131,7 @@ class oh extends md {
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -1126,48 +1141,48 @@ class oh extends md {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 param2 = param1[incrementValue$226];
                 if (param2 == 0) {
@@ -1175,7 +1190,7 @@ class oh extends md {
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -1188,6 +1203,8 @@ class oh extends md {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -1201,7 +1218,7 @@ class oh extends md {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -1215,7 +1232,7 @@ class oh extends md {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -1257,15 +1274,15 @@ class oh extends md {
         int var31 = 0;
         int var32 = 0;
         L0: {
-          if (param2 > ((oh) this).field_t) {
+          if (param2 > this.field_t) {
             break L0;
           } else {
-            if (param3 <= ((oh) this).field_F) {
+            if (param3 <= this.field_F) {
               L1: {
-                var5 = param0 + ((oh) this).field_x * param2 / ((oh) this).field_t;
-                var6 = param0 + ((((oh) this).field_x + ((oh) this).field_u) * param2 + ((oh) this).field_t - 1) / ((oh) this).field_t;
-                var7 = param1 + ((oh) this).field_D * param3 / ((oh) this).field_F;
-                var8 = param1 + ((((oh) this).field_D + ((oh) this).field_E) * param3 + ((oh) this).field_F - 1) / ((oh) this).field_F;
+                var5 = param0 + this.field_x * param2 / this.field_t;
+                var6 = param0 + ((this.field_x + this.field_u) * param2 + this.field_t - 1) / this.field_t;
+                var7 = param1 + this.field_D * param3 / this.field_F;
+                var8 = param1 + ((this.field_D + this.field_E) * param3 + this.field_F - 1) / this.field_F;
                 if (var5 >= ra.field_j) {
                   break L1;
                 } else {
@@ -1317,10 +1334,10 @@ class oh extends md {
                         } else {
                           var13 = var12 - param0 << 4;
                           var14 = var11 - param1 << 4;
-                          var15 = var13 * ((oh) this).field_t / param2 - (((oh) this).field_x << 4);
-                          var16 = (var13 + 16) * ((oh) this).field_t / param2 - (((oh) this).field_x << 4);
-                          var17 = var14 * ((oh) this).field_F / param3 - (((oh) this).field_D << 4);
-                          var18 = (var14 + 16) * ((oh) this).field_F / param3 - (((oh) this).field_D << 4);
+                          var15 = var13 * this.field_t / param2 - (this.field_x << 4);
+                          var16 = (var13 + 16) * this.field_t / param2 - (this.field_x << 4);
+                          var17 = var14 * this.field_F / param3 - (this.field_D << 4);
+                          var18 = (var14 + 16) * this.field_F / param3 - (this.field_D << 4);
                           var19 = (var16 - var15) * (var18 - var17) >> 1;
                           if (var19 != 0) {
                             L7: {
@@ -1332,10 +1349,10 @@ class oh extends md {
                               }
                             }
                             L8: {
-                              if (var16 <= ((oh) this).field_u << 4) {
+                              if (var16 <= this.field_u << 4) {
                                 break L8;
                               } else {
-                                var16 = ((oh) this).field_u << 4;
+                                var16 = this.field_u << 4;
                                 break L8;
                               }
                             }
@@ -1348,10 +1365,10 @@ class oh extends md {
                               }
                             }
                             L10: {
-                              if (var18 <= ((oh) this).field_E << 4) {
+                              if (var18 <= this.field_E << 4) {
                                 break L10;
                               } else {
-                                var18 = ((oh) this).field_E << 4;
+                                var18 = this.field_E << 4;
                                 break L10;
                               }
                             }
@@ -1415,7 +1432,7 @@ class oh extends md {
                                     var28++;
                                     continue L11;
                                   } else {
-                                    var31 = ((oh) this).field_C[var28 * ((oh) this).field_u + var30];
+                                    var31 = this.field_C[var28 * this.field_u + var30];
                                     if (var31 != 0) {
                                       L16: {
                                         var32 = var29;
@@ -1475,12 +1492,12 @@ class oh extends md {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((oh) this).field_x;
-          param1 = param1 + ((oh) this).field_D;
+          param0 = param0 + this.field_x;
+          param1 = param1 + this.field_D;
           var4 = param0 + param1 * ra.field_f;
           var5 = 0;
-          var6 = ((oh) this).field_E;
-          var7 = ((oh) this).field_u;
+          var6 = this.field_E;
+          var7 = this.field_u;
           var8 = ra.field_f - var7;
           var9 = 0;
           if (param1 >= ra.field_i) {
@@ -1531,7 +1548,7 @@ class oh extends md {
           return;
         } else {
           if (var6 > 0) {
-            oh.b(ra.field_b, ((oh) this).field_C, param2, var5, var4, var7, var6, var8, var9);
+            oh.b(ra.field_b, this.field_C, param2, var5, var4, var7, var6, var8, var9);
             return;
           } else {
             return;
@@ -1540,6 +1557,16 @@ class oh extends md {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -1561,14 +1588,14 @@ class oh extends md {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     if (param1[incrementValue$218] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -1578,52 +1605,52 @@ class oh extends md {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   if (param1[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   if (param1[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   if (param1[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 if (param1[incrementValue$226] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -1638,35 +1665,45 @@ class oh extends md {
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
             var9 = param3 + param4 - 3;
             while (param3 < var9) {
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 param0[incrementValue$0] = param1[incrementValue$1];
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
-                int incrementValue$3 = param2;
+                incrementValue$3 = param2;
                 param2++;
                 param0[incrementValue$2] = param1[incrementValue$3];
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
-                int incrementValue$5 = param2;
+                incrementValue$5 = param2;
                 param2++;
                 param0[incrementValue$4] = param1[incrementValue$5];
-                int incrementValue$6 = param3;
+                incrementValue$6 = param3;
                 param3++;
-                int incrementValue$7 = param2;
+                incrementValue$7 = param2;
                 param2++;
                 param0[incrementValue$6] = param1[incrementValue$7];
             }
             var9 += 3;
             while (param3 < var9) {
-                int incrementValue$8 = param3;
+                incrementValue$8 = param3;
                 param3++;
-                int incrementValue$9 = param2;
+                incrementValue$9 = param2;
                 param2++;
                 param0[incrementValue$8] = param1[incrementValue$9];
             }
@@ -1676,6 +1713,8 @@ class oh extends md {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1694,7 +1733,7 @@ class oh extends md {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -1703,7 +1742,7 @@ class oh extends md {
                   continue L1;
                 } else {
                   var13 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -1716,20 +1755,21 @@ class oh extends md {
     }
 
     final void c() {
-        ra.a(((oh) this).field_C, ((oh) this).field_u, ((oh) this).field_E);
+        ra.a(this.field_C, this.field_u, this.field_E);
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
             var14 = (param4 >> 16) * param11;
             for (var15 = -param7; var15 < 0; var15++) {
                 param2 = param1[(param3 >> 16) + var14];
                 if (param2 != 0) {
-                    int incrementValue$1 = param5;
+                    incrementValue$1 = param5;
                     param5++;
                     param0[incrementValue$1] = param2;
                 } else {
@@ -1744,27 +1784,28 @@ class oh extends md {
     }
 
     final void b() {
-        int var3 = 0;
         int var4 = 0;
-        int[] var1 = new int[((oh) this).field_u * ((oh) this).field_E];
+        int incrementValue$0 = 0;
+        int var3 = 0;
+        int[] var1 = new int[this.field_u * this.field_E];
         int var2 = 0;
-        for (var3 = 0; var3 < ((oh) this).field_u; var3++) {
-            for (var4 = ((oh) this).field_E - 1; var4 >= 0; var4--) {
-                int incrementValue$0 = var2;
+        for (var3 = 0; var3 < this.field_u; var3++) {
+            for (var4 = this.field_E - 1; var4 >= 0; var4--) {
+                incrementValue$0 = var2;
                 var2++;
-                var1[incrementValue$0] = ((oh) this).field_C[var3 + var4 * ((oh) this).field_u];
+                var1[incrementValue$0] = this.field_C[var3 + var4 * this.field_u];
             }
         }
-        ((oh) this).field_C = var1;
-        var3 = ((oh) this).field_D;
-        ((oh) this).field_D = ((oh) this).field_x;
-        ((oh) this).field_x = ((oh) this).field_F - ((oh) this).field_E - var3;
-        var3 = ((oh) this).field_E;
-        ((oh) this).field_E = ((oh) this).field_u;
-        ((oh) this).field_u = var3;
-        var3 = ((oh) this).field_F;
-        ((oh) this).field_F = ((oh) this).field_t;
-        ((oh) this).field_t = var3;
+        this.field_C = var1;
+        var3 = this.field_D;
+        this.field_D = this.field_x;
+        this.field_x = this.field_F - this.field_E - var3;
+        var3 = this.field_E;
+        this.field_E = this.field_u;
+        this.field_u = var3;
+        var3 = this.field_F;
+        this.field_F = this.field_t;
+        this.field_t = var3;
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -1794,7 +1835,7 @@ class oh extends md {
         int stackOut_24_0 = 0;
         int stackOut_23_0 = 0;
         L0: {
-          var6 = param2 * ((oh) this).field_u + param1;
+          var6 = param2 * this.field_u + param1;
           param3 = param3 & 4095;
           param4 = param4 & 4095;
           if (param2 < 0) {
@@ -1811,7 +1852,7 @@ class oh extends md {
                 break L1;
               } else {
                 L2: {
-                  var7 = ((oh) this).field_C[var6];
+                  var7 = this.field_C[var6];
                   if (var7 == 0) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
@@ -1826,13 +1867,13 @@ class oh extends md {
                 break L1;
               }
             }
-            if (param1 >= ((oh) this).field_u - 1) {
+            if (param1 >= this.field_u - 1) {
               var12 = 0;
               var8 = 0;
               break L0;
             } else {
               L3: {
-                var8 = ((oh) this).field_C[var6 + 1];
+                var8 = this.field_C[var6 + 1];
                 if (var8 == 0) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
@@ -1849,7 +1890,7 @@ class oh extends md {
           }
         }
         L4: {
-          if (param2 >= ((oh) this).field_E - 1) {
+          if (param2 >= this.field_E - 1) {
             var14 = 0;
             var13 = 0;
             var10 = 0;
@@ -1863,7 +1904,7 @@ class oh extends md {
                 break L5;
               } else {
                 L6: {
-                  var9 = ((oh) this).field_C[var6 + ((oh) this).field_u];
+                  var9 = this.field_C[var6 + this.field_u];
                   if (var9 == 0) {
                     stackOut_18_0 = 0;
                     stackIn_19_0 = stackOut_18_0;
@@ -1878,13 +1919,13 @@ class oh extends md {
                 break L5;
               }
             }
-            if (param1 >= ((oh) this).field_u - 1) {
+            if (param1 >= this.field_u - 1) {
               var14 = 0;
               var10 = 0;
               break L4;
             } else {
               L7: {
-                var10 = ((oh) this).field_C[var6 + ((oh) this).field_u + 1];
+                var10 = this.field_C[var6 + this.field_u + 1];
                 if (var10 == 0) {
                   stackOut_24_0 = 0;
                   stackIn_25_0 = stackOut_24_0;
@@ -1955,12 +1996,12 @@ class oh extends md {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((oh) this).field_x;
-          param1 = param1 + ((oh) this).field_D;
+          param0 = param0 + this.field_x;
+          param1 = param1 + this.field_D;
           var3 = param0 + param1 * ra.field_f;
           var4 = 0;
-          var5 = ((oh) this).field_E;
-          var6 = ((oh) this).field_u;
+          var5 = this.field_E;
+          var6 = this.field_u;
           var7 = ra.field_f - var6;
           var8 = 0;
           if (param1 >= ra.field_i) {
@@ -2011,7 +2052,7 @@ class oh extends md {
           return;
         } else {
           if (var5 > 0) {
-            oh.a(ra.field_b, ((oh) this).field_C, var4, var3, var6, var5, var7, var8);
+            oh.a(ra.field_b, this.field_C, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -2020,13 +2061,13 @@ class oh extends md {
     }
 
     oh(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        ((oh) this).field_t = param0;
-        ((oh) this).field_F = param1;
-        ((oh) this).field_x = param2;
-        ((oh) this).field_D = param3;
-        ((oh) this).field_u = param4;
-        ((oh) this).field_E = param5;
-        ((oh) this).field_C = param6;
+        this.field_t = param0;
+        this.field_F = param1;
+        this.field_x = param2;
+        this.field_D = param3;
+        this.field_u = param4;
+        this.field_E = param5;
+        this.field_C = param6;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -2060,15 +2101,15 @@ class oh extends md {
         int var32 = 0;
         int var33 = 0;
         L0: {
-          if (param2 > ((oh) this).field_t) {
+          if (param2 > this.field_t) {
             break L0;
           } else {
-            if (param3 <= ((oh) this).field_F) {
+            if (param3 <= this.field_F) {
               L1: {
-                var5 = param0 + ((oh) this).field_x * param2 / ((oh) this).field_t;
-                var6 = param0 + ((((oh) this).field_x + ((oh) this).field_u) * param2 + ((oh) this).field_t - 1) / ((oh) this).field_t;
-                var7 = param1 + ((oh) this).field_D * param3 / ((oh) this).field_F;
-                var8 = param1 + ((((oh) this).field_D + ((oh) this).field_E) * param3 + ((oh) this).field_F - 1) / ((oh) this).field_F;
+                var5 = param0 + this.field_x * param2 / this.field_t;
+                var6 = param0 + ((this.field_x + this.field_u) * param2 + this.field_t - 1) / this.field_t;
+                var7 = param1 + this.field_D * param3 / this.field_F;
+                var8 = param1 + ((this.field_D + this.field_E) * param3 + this.field_F - 1) / this.field_F;
                 if (var5 >= ra.field_j) {
                   break L1;
                 } else {
@@ -2120,10 +2161,10 @@ class oh extends md {
                         } else {
                           var13 = var12 - param0 << 4;
                           var14 = var11 - param1 << 4;
-                          var15 = var13 * ((oh) this).field_t / param2 - (((oh) this).field_x << 4);
-                          var16 = (var13 + 16) * ((oh) this).field_t / param2 - (((oh) this).field_x << 4);
-                          var17 = var14 * ((oh) this).field_F / param3 - (((oh) this).field_D << 4);
-                          var18 = (var14 + 16) * ((oh) this).field_F / param3 - (((oh) this).field_D << 4);
+                          var15 = var13 * this.field_t / param2 - (this.field_x << 4);
+                          var16 = (var13 + 16) * this.field_t / param2 - (this.field_x << 4);
+                          var17 = var14 * this.field_F / param3 - (this.field_D << 4);
+                          var18 = (var14 + 16) * this.field_F / param3 - (this.field_D << 4);
                           var19 = (var16 - var15) * (var18 - var17);
                           if (var19 != 0) {
                             L7: {
@@ -2135,10 +2176,10 @@ class oh extends md {
                               }
                             }
                             L8: {
-                              if (var16 <= ((oh) this).field_u << 4) {
+                              if (var16 <= this.field_u << 4) {
                                 break L8;
                               } else {
-                                var16 = ((oh) this).field_u << 4;
+                                var16 = this.field_u << 4;
                                 break L8;
                               }
                             }
@@ -2151,10 +2192,10 @@ class oh extends md {
                               }
                             }
                             L10: {
-                              if (var18 <= ((oh) this).field_E << 4) {
+                              if (var18 <= this.field_E << 4) {
                                 break L10;
                               } else {
-                                var18 = ((oh) this).field_E << 4;
+                                var18 = this.field_E << 4;
                                 break L10;
                               }
                             }
@@ -2225,7 +2266,7 @@ class oh extends md {
                                     continue L11;
                                   } else {
                                     L17: {
-                                      var32 = ((oh) this).field_C[var29 * ((oh) this).field_u + var31];
+                                      var32 = this.field_C[var29 * this.field_u + var31];
                                       if (var32 != 0) {
                                         break L17;
                                       } else {
@@ -2287,12 +2328,12 @@ class oh extends md {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((oh) this).field_x;
-          param1 = param1 + ((oh) this).field_D;
+          param0 = param0 + this.field_x;
+          param1 = param1 + this.field_D;
           var3 = param0 + param1 * ra.field_f;
           var4 = 0;
-          var5 = ((oh) this).field_E;
-          var6 = ((oh) this).field_u;
+          var5 = this.field_E;
+          var6 = this.field_u;
           var7 = ra.field_f - var6;
           var8 = 0;
           if (param1 >= ra.field_i) {
@@ -2343,7 +2384,7 @@ class oh extends md {
           return;
         } else {
           if (var5 > 0) {
-            oh.a(ra.field_b, ((oh) this).field_C, 0, var4, var3, var6, var5, var7, var8);
+            oh.a(ra.field_b, this.field_C, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -2360,12 +2401,12 @@ class oh extends md {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((oh) this).field_x;
-          param1 = param1 + ((oh) this).field_D;
+          param0 = param0 + this.field_x;
+          param1 = param1 + this.field_D;
           var4 = param0 + param1 * ra.field_f;
           var5 = 0;
-          var6 = ((oh) this).field_E;
-          var7 = ((oh) this).field_u;
+          var6 = this.field_E;
+          var7 = this.field_u;
           var8 = ra.field_f - var7;
           var9 = 0;
           if (param1 >= ra.field_i) {
@@ -2418,10 +2459,10 @@ class oh extends md {
           if (var6 > 0) {
             L4: {
               if (param2 != 256) {
-                oh.a(0, 0, 0, ra.field_b, ((oh) this).field_C, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+                oh.a(0, 0, 0, ra.field_b, this.field_C, var5, 0, var4, 0, var7, var6, var8, var9, param2);
                 break L4;
               } else {
-                oh.a(0, 0, 0, ra.field_b, ((oh) this).field_C, var5, 0, var4, 0, var7, var6, var8, var9);
+                oh.a(0, 0, 0, ra.field_b, this.field_C, var5, 0, var4, 0, var7, var6, var8, var9);
                 break L4;
               }
             }
@@ -2433,6 +2474,8 @@ class oh extends md {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -2446,7 +2489,7 @@ class oh extends md {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -2458,7 +2501,7 @@ class oh extends md {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -2472,19 +2515,23 @@ class oh extends md {
 
     final oh d() {
         int var3 = 0;
-        oh var1 = new oh(((oh) this).field_u, ((oh) this).field_E);
-        var1.field_t = ((oh) this).field_t;
-        var1.field_F = ((oh) this).field_F;
-        var1.field_x = ((oh) this).field_x;
-        var1.field_D = ((oh) this).field_D;
-        int var2 = ((oh) this).field_C.length;
+        oh var1 = new oh(this.field_u, this.field_E);
+        var1.field_t = this.field_t;
+        var1.field_F = this.field_F;
+        var1.field_x = this.field_x;
+        var1.field_D = this.field_D;
+        int var2 = this.field_C.length;
         for (var3 = 0; var3 < var2; var3++) {
-            var1.field_C[var3] = ((oh) this).field_C[var3];
+            var1.field_C[var3] = this.field_C[var3];
         }
         return var1;
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -2514,7 +2561,7 @@ class oh extends md {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
                 param2 = param1[incrementValue$4];
                 if (param2 == 0) {
@@ -2533,13 +2580,13 @@ class oh extends md {
                         break L2;
                       } else {
                         if (var17 > 128) {
-                          int incrementValue$5 = param4;
+                          incrementValue$5 = param4;
                           param4++;
                           param0[incrementValue$5] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
                           var16++;
                           continue L1;
                         } else {
-                          int incrementValue$6 = param4;
+                          incrementValue$6 = param4;
                           param4++;
                           param0[incrementValue$6] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
                           var16++;
@@ -2548,7 +2595,7 @@ class oh extends md {
                       }
                     }
                   }
-                  int incrementValue$7 = param4;
+                  incrementValue$7 = param4;
                   param4++;
                   param0[incrementValue$7] = param2;
                   var16++;
@@ -2561,13 +2608,13 @@ class oh extends md {
     }
 
     oh(int param0, int param1) {
-        ((oh) this).field_C = new int[param0 * param1];
-        ((oh) this).field_t = param0;
-        ((oh) this).field_u = param0;
-        ((oh) this).field_F = param1;
-        ((oh) this).field_E = param1;
-        ((oh) this).field_D = 0;
-        ((oh) this).field_x = 0;
+        this.field_C = new int[param0 * param1];
+        this.field_t = param0;
+        this.field_u = param0;
+        this.field_F = param1;
+        this.field_E = param1;
+        this.field_D = 0;
+        this.field_x = 0;
     }
 
     void c(int param0, int param1, int param2, int param3) {
@@ -2587,30 +2634,30 @@ class oh extends md {
         } else {
           if (param3 > 0) {
             L0: {
-              var5 = ((oh) this).field_u;
-              var6 = ((oh) this).field_E;
+              var5 = this.field_u;
+              var6 = this.field_E;
               var7 = 0;
               var8 = 0;
-              var9 = ((oh) this).field_t;
-              var10 = ((oh) this).field_F;
+              var9 = this.field_t;
+              var10 = this.field_F;
               var11 = (var9 << 16) / param2;
               var12 = (var10 << 16) / param3;
-              if (((oh) this).field_x <= 0) {
+              if (this.field_x <= 0) {
                 break L0;
               } else {
-                var13 = ((((oh) this).field_x << 16) + var11 - 1) / var11;
+                var13 = ((this.field_x << 16) + var11 - 1) / var11;
                 param0 = param0 + var13;
-                var7 = var7 + (var13 * var11 - (((oh) this).field_x << 16));
+                var7 = var7 + (var13 * var11 - (this.field_x << 16));
                 break L0;
               }
             }
             L1: {
-              if (((oh) this).field_D <= 0) {
+              if (this.field_D <= 0) {
                 break L1;
               } else {
-                var13 = ((((oh) this).field_D << 16) + var12 - 1) / var12;
+                var13 = ((this.field_D << 16) + var12 - 1) / var12;
                 param1 = param1 + var13;
-                var8 = var8 + (var13 * var12 - (((oh) this).field_D << 16));
+                var8 = var8 + (var13 * var12 - (this.field_D << 16));
                 break L1;
               }
             }
@@ -2673,7 +2720,7 @@ class oh extends md {
                 break L7;
               }
             }
-            oh.a(ra.field_b, ((oh) this).field_C, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+            oh.a(ra.field_b, this.field_C, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
             return;
           } else {
             return;
@@ -2682,6 +2729,7 @@ class oh extends md {
     }
 
     oh(byte[] param0, java.awt.Component param1) {
+        boolean discarded$1 = false;
         InterruptedException var3 = null;
         java.awt.Image var3_ref = null;
         java.awt.MediaTracker var4 = null;
@@ -2693,18 +2741,18 @@ class oh extends md {
             var4 = new java.awt.MediaTracker(param1);
             var4.addImage(var3_ref, 0);
             var4.waitForAll();
-            ((oh) this).field_u = var3_ref.getWidth((java.awt.image.ImageObserver) (Object) param1);
-            ((oh) this).field_E = var3_ref.getHeight((java.awt.image.ImageObserver) (Object) param1);
-            ((oh) this).field_t = ((oh) this).field_u;
-            ((oh) this).field_F = ((oh) this).field_E;
-            ((oh) this).field_x = 0;
-            ((oh) this).field_D = 0;
-            ((oh) this).field_C = new int[((oh) this).field_u * ((oh) this).field_E];
-            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, ((oh) this).field_u, ((oh) this).field_E, ((oh) this).field_C, 0, ((oh) this).field_u);
-            boolean discarded$1 = var5.grabPixels();
+            this.field_u = var3_ref.getWidth((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_E = var3_ref.getHeight((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_t = this.field_u;
+            this.field_F = this.field_E;
+            this.field_x = 0;
+            this.field_D = 0;
+            this.field_C = new int[this.field_u * this.field_E];
+            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, this.field_u, this.field_E, this.field_C, 0, this.field_u);
+            discarded$1 = var5.grabPixels();
             break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = (InterruptedException) (Object) decompiledCaughtException;

@@ -18,12 +18,22 @@ abstract class rl extends wb {
     final static void e(boolean param0) {
         ji.field_e.field_l = 0;
         ji.field_e.field_b = 0;
+        if (!param0) {
+            field_s = (String) null;
+        }
     }
 
     final static void b(byte param0) {
+        if (param0 != 29) {
+            field_q = (String) null;
+        }
     }
 
     final static km d(boolean param0) {
+        if (!param0) {
+            field_y = 78;
+            return lg.field_a.field_Lb;
+        }
         return lg.field_a.field_Lb;
     }
 
@@ -47,10 +57,6 @@ abstract class rl extends wb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = "Won";
         field_v = "Only show private chat from my friends and opponents";
         field_q = "If you are not, please change your password to something more obscure!";

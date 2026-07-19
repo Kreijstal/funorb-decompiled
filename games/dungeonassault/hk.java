@@ -12,15 +12,14 @@ final class hk {
     public static void a(int param0) {
         field_c = null;
         field_a = null;
+        if (param0 >= -59) {
+            return;
+        }
         field_d = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "hk.A(";
         field_b = new int[128];
         field_c = new int[8192];

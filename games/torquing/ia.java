@@ -11,10 +11,19 @@ final class ia extends af {
     static int field_i;
 
     final static void d(int param0) {
-        if (of.field_m < 140) {
-            ea.b(-36, of.field_m - -20);
+        if (param0 < 37) {
+          return;
         } else {
-            ea.b(-108, 160);
+          L0: {
+            if (-141 >= (of.field_m ^ -1)) {
+              ea.b(-108, 160);
+              break L0;
+            } else {
+              ea.b(-36, of.field_m - -20);
+              break L0;
+            }
+          }
+          return;
         }
     }
 
@@ -26,17 +35,40 @@ final class ia extends af {
     }
 
     final static boolean a(int param0, int param1) {
-        if (param1 == -1) {
-            return true;
+        int stackIn_6_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        if (0 == (param1 ^ -1)) {
+          return true;
+        } else {
+          L0: {
+            if (param0 == -22426) {
+              break L0;
+            } else {
+              ia.c(-53);
+              break L0;
+            }
+          }
+          L1: {
+            if (0 == (1 << param1 & oh.field_c)) {
+              stackOut_5_0 = 0;
+              stackIn_6_0 = stackOut_5_0;
+              break L1;
+            } else {
+              stackOut_4_0 = 1;
+              stackIn_6_0 = stackOut_4_0;
+              break L1;
+            }
+          }
+          return stackIn_6_0 != 0;
         }
-        return 0 != (1 << param1 & oh.field_c) ? true : false;
     }
 
     final void b(int param0) {
         if (param0 != 6) {
-            ((ia) this).field_e = -123;
+            this.field_e = -123;
         }
-        ((ia) this).a((byte) 75, 0, 0);
+        this.a((byte) 75, 0, 0);
     }
 
     final void a(byte param0, int param1, int param2) {
@@ -73,9 +105,9 @@ final class ia extends af {
         int stackOut_10_0 = 0;
         L0: {
           var22 = Torquing.field_u;
-          var4 = param1 + ((ia) this).field_h;
+          var4 = param1 + this.field_h;
           var6 = 120 / ((25 - param0) / 44);
-          var5 = ((ia) this).field_c + param2;
+          var5 = this.field_c + param2;
           if (wp.field_v[3] != null) {
             stackOut_2_0 = wp.field_v[3].field_w;
             stackIn_3_0 = stackOut_2_0;
@@ -124,8 +156,8 @@ final class ia extends af {
         }
         L4: {
           var10 = stackIn_12_0;
-          var11 = ((ia) this).field_g + var4;
-          var12 = ((ia) this).field_e + var5;
+          var11 = this.field_g + var4;
+          var12 = this.field_e + var5;
           var13 = var4 - -var7;
           var14 = var11 - var8;
           var15 = var9 + var5;
@@ -133,8 +165,8 @@ final class ia extends af {
           var17 = var13;
           var18 = var14;
           if (var17 > var18) {
-            var18 = var4 - -(((ia) this).field_g * var7 / (var7 + var8));
-            var17 = var4 - -(((ia) this).field_g * var7 / (var7 + var8));
+            var18 = var4 - -(this.field_g * var7 / (var7 + var8));
+            var17 = var4 - -(this.field_g * var7 / (var7 + var8));
             break L4;
           } else {
             break L4;
@@ -144,15 +176,15 @@ final class ia extends af {
           var19 = var15;
           var20 = var16;
           if (var19 > var20) {
-            var20 = ((ia) this).field_e * var9 / (var10 + var9) + var5;
-            var19 = ((ia) this).field_e * var9 / (var10 + var9) + var5;
+            var20 = this.field_e * var9 / (var10 + var9) + var5;
+            var19 = this.field_e * var9 / (var10 + var9) + var5;
             break L5;
           } else {
             break L5;
           }
         }
         L6: {
-          rh.a(var4, ((ia) this).field_e, (byte) 71, var5, ((ia) this).field_g, ao.field_a);
+          rh.a(var4, this.field_e, (byte) 71, var5, this.field_g, ao.field_a);
           ph.d(var17, var19, var18 - var17, var20 - var19, bo.field_d);
           ph.b(tj.field_m);
           if (null != wp.field_v[0]) {
@@ -242,7 +274,7 @@ final class ia extends af {
           if (wp.field_v[3] == null) {
             break L14;
           } else {
-            if (wp.field_v[3].field_u == 0) {
+            if (-1 == (wp.field_v[3].field_u ^ -1)) {
               break L14;
             } else {
               ph.f(var4, var19, var17, var20);
@@ -264,7 +296,7 @@ final class ia extends af {
           if (wp.field_v[5] == null) {
             break L16;
           } else {
-            if (wp.field_v[5].field_u == 0) {
+            if (-1 == (wp.field_v[5].field_u ^ -1)) {
               break L16;
             } else {
               ph.f(var18, var19, var11, var20);
@@ -285,17 +317,13 @@ final class ia extends af {
     }
 
     ia(int param0, int param1, int param2, int param3) {
-        ((ia) this).field_e = param3;
-        ((ia) this).field_c = param1;
-        ((ia) this).field_h = param0;
-        ((ia) this).field_g = param2;
+        this.field_e = param3;
+        this.field_c = param1;
+        this.field_h = param0;
+        this.field_g = param2;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = 0;
     }
 }

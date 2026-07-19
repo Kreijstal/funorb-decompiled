@@ -19,29 +19,37 @@ final class ed {
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             L0: {
-              if (null == va.field_h) {
+              if (param0 == -105) {
                 break L0;
               } else {
+                field_b = (String) null;
+                break L0;
+              }
+            }
+            L1: {
+              if (null == va.field_h) {
+                break L1;
+              } else {
                 try {
-                  L1: {
+                  L2: {
                     va.field_h.a(-94, 0L);
-                    va.field_h.a(rf.field_d.field_p, 24, 42, rf.field_d.field_t);
+                    va.field_h.a(rf.field_d.field_p, 24, param0 ^ -67, rf.field_d.field_t);
                     decompiledRegionSelector0 = 0;
-                    break L1;
+                    break L2;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L2: {
+                  L3: {
                     var1 = (Exception) (Object) decompiledCaughtException;
                     decompiledRegionSelector0 = 1;
-                    break L2;
+                    break L3;
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
                   rf.field_d.field_p = rf.field_d.field_p + 24;
                   return;
                 } else {
-                  break L0;
+                  break L1;
                 }
               }
             }
@@ -55,24 +63,20 @@ final class ed {
 
     public static void a(byte param0) {
         field_e = null;
-        field_c = null;
+        field_c = (int[][]) null;
         field_g = null;
-        int var1 = 80;
+        int var1 = -80 / ((28 - param0) / 45);
         field_d = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = 0;
         field_e = "Basic Combat";
         field_b = "To report a player, right-click on their name and select the option to report abuse.";
         field_a = 64;
         field_d = "Unable to add friend - system busy";
-        field_c = new int[][]{null, new int[10], new int[10]};
+        field_c = new int[][]{null, new int[]{140, 200, 120, 210, 150, 185, 270, 180, 255, 220}, new int[]{225, 325, 200, 270, 190, 300, 270, 200, 195, 320}};
         field_g = "module:</col>";
     }
 }

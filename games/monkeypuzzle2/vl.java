@@ -33,19 +33,15 @@ final class vl extends ug {
     }
 
     vl(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((vl) this).field_k = param5;
-        ((vl) this).field_l = param2;
-        ((vl) this).field_m = param0;
-        ((vl) this).field_n = param1;
-        ((vl) this).field_i = param3;
-        ((vl) this).field_e = param4;
+        this.field_k = param5;
+        this.field_l = param2;
+        this.field_m = param0;
+        this.field_n = param1;
+        this.field_i = param3;
+        this.field_e = param4;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = 0;
     }
 }

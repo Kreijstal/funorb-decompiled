@@ -29,7 +29,7 @@ final class pn extends nm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var2, "pn.D(" + param0 + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) var2), "pn.D(" + param0 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
@@ -45,14 +45,15 @@ final class pn extends nm {
         String var8 = null;
         int var9 = 0;
         int var10 = 0;
-        Object stackIn_3_0 = null;
+        String stackIn_3_0 = null;
         String stackIn_59_0 = null;
         Object stackIn_96_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_58_0 = null;
         String stackOut_56_0 = null;
         Object stackOut_95_0 = null;
-        Object stackOut_2_0 = null;
+        String stackOut_2_0 = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -60,13 +61,13 @@ final class pn extends nm {
               L1: {
                 var1 = null;
                 var2 = null;
-                if (ng.field_b != 0) {
+                if (-1 != (ng.field_b ^ -1)) {
                   break L1;
                 } else {
                   if (null == nl.field_f) {
                     break L1;
                   } else {
-                    var2 = (Object) (Object) rl.field_a;
+                    var2 = rl.field_a;
                     break L1;
                   }
                 }
@@ -83,7 +84,7 @@ final class pn extends nm {
                         if (!nc.a(0, kb.field_Qb)) {
                           break L4;
                         } else {
-                          var2 = (Object) (Object) rd.a(ul.field_j, new String[1], (byte) 103);
+                          var2 = rd.a(ul.field_j, new String[]{tk.field_p}, (byte) 103);
                           if (var10 == 0) {
                             break L3;
                           } else {
@@ -91,13 +92,13 @@ final class pn extends nm {
                           }
                         }
                       }
-                      var2 = (Object) (Object) rd.a(kk.field_c, new String[1], (byte) 103);
+                      var2 = rd.a(kk.field_c, new String[]{tk.field_p}, (byte) 103);
                       break L3;
                     }
                     if (!nq.field_p) {
                       break L2;
                     } else {
-                      wp.a((byte) 92, 0, (String) null, (String) var2, (String) null, 2);
+                      wp.a((byte) 92, 0, (String) null, (String) (var2), (String) null, 2);
                       th.b(1);
                       break L2;
                     }
@@ -112,7 +113,7 @@ final class pn extends nm {
                     break L5;
                   } else {
                     if (null == wp.field_k) {
-                      var2 = (Object) (Object) un.field_h;
+                      var2 = un.field_h;
                       break L5;
                     } else {
                       break L5;
@@ -122,7 +123,7 @@ final class pn extends nm {
               }
               L6: {
                 if (null != var2) {
-                  na.a(-115, (String) null, (String) var2, 0, cn.field_d);
+                  na.a(-115, (String) null, (String) (var2), 0, cn.field_d);
                   break L6;
                 } else {
                   L7: {
@@ -137,8 +138,8 @@ final class pn extends nm {
                         break L8;
                       } else {
                         L9: {
-                          var4 = rd.a(hq.field_x, new String[1], (byte) 103);
-                          var8 = rd.a(ek.field_fb, new String[1], (byte) 103);
+                          var4 = rd.a(hq.field_x, new String[]{tk.field_p}, (byte) 103);
+                          var8 = rd.a(ek.field_fb, new String[]{var3}, (byte) 103);
                           var7 = -485 + g.field_n.field_Ib - -ap.field_e.field_Ib - (-jq.field_y.c(var8) + jq.field_y.c(var4));
                           if (0 > var7) {
                             var7 = 0;
@@ -188,7 +189,7 @@ final class pn extends nm {
                               }
                             }
                           }
-                          var4 = "[" + rd.a(fm.field_a, new String[1], (byte) 103) + "] ";
+                          var4 = "[" + rd.a(fm.field_a, new String[]{o.field_e.field_Fc}, (byte) 103) + "] ";
                           break L10;
                         }
                       } else {
@@ -238,23 +239,23 @@ final class pn extends nm {
                         if (!g.field_n.field_kb) {
                           break L16;
                         } else {
-                          if (~(-g.field_n.field_Eb + pq.field_k) <= ~var9) {
+                          if ((-g.field_n.field_Eb + pq.field_k ^ -1) <= (var9 ^ -1)) {
                             break L16;
                           } else {
                             if (!um.field_e) {
-                              var1 = (Object) (Object) rp.field_y;
+                              var1 = rp.field_y;
                               break L16;
                             } else {
-                              var1 = (Object) (Object) "Broken!";
+                              var1 = "Broken!";
                               break L16;
                             }
                           }
                         }
                       }
-                      if (g.field_n.field_L == 0) {
+                      if ((g.field_n.field_L ^ -1) == -1) {
                         break L7;
                       } else {
-                        if (~var9 >= ~g.field_n.field_U) {
+                        if ((var9 ^ -1) >= (g.field_n.field_U ^ -1)) {
                           break L7;
                         } else {
                           if (!um.field_e) {
@@ -280,7 +281,7 @@ final class pn extends nm {
                     if (!ap.field_e.field_kb) {
                       break L18;
                     } else {
-                      var1 = (Object) (Object) rd.a(df.field_b, new String[2], (byte) 103);
+                      var1 = rd.a(df.field_b, new String[]{var3, tk.field_p}, (byte) 103);
                       break L18;
                     }
                   }
@@ -289,19 +290,25 @@ final class pn extends nm {
               }
               stackOut_95_0 = var1;
               stackIn_96_0 = stackOut_95_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_2_0 = null;
+              stackOut_2_0 = (String) null;
               stackIn_3_0 = stackOut_2_0;
-              return (String) (Object) stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Object) (Object) decompiledCaughtException;
-          throw qb.a((Throwable) var1, "pn.B(" + param0 + ')');
+          var1 = decompiledCaughtException;
+          throw qb.a((Throwable) (var1), "pn.B(" + param0 + ')');
         }
-        return (String) (Object) stackIn_96_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return (String) ((Object) stackIn_96_0);
+        }
     }
 
     public static void a(int param0) {
@@ -316,11 +323,12 @@ final class pn extends nm {
                 pn.a(-11);
             }
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "pn.C(" + param0 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "pn.C(" + param0 + ')');
         }
     }
 
     final static void b(int param0, int param1) {
+        String discarded$2 = null;
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -332,7 +340,7 @@ final class pn extends nm {
               if (param0 <= -4) {
                 break L1;
               } else {
-                String discarded$2 = pn.c(104);
+                discarded$2 = pn.c(104);
                 break L1;
               }
             }
@@ -342,28 +350,24 @@ final class pn extends nm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var2, "pn.A(" + param0 + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) var2), "pn.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     pn(int param0, int param1, int param2, int param3, int param4, int param5) {
         try {
-            ((pn) this).field_t = param2;
-            ((pn) this).field_n = param1;
-            ((pn) this).field_r = param3;
-            ((pn) this).field_p = param0;
-            ((pn) this).field_l = param4;
-            ((pn) this).field_k = param5;
+            this.field_t = param2;
+            this.field_n = param1;
+            this.field_r = param3;
+            this.field_p = param0;
+            this.field_l = param4;
+            this.field_k = param5;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "pn.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "pn.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Warning: if you quit, you will lose any game you are in the middle of!";
         field_j = "Score: ";
         field_s = "Spectate <%0>'s game";

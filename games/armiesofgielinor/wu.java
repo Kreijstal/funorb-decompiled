@@ -7,14 +7,14 @@ final class wu {
 
     public final int[] listmodes() {
         int var3 = 0;
-        java.awt.DisplayMode[] var4 = ((wu) this).field_b.getDisplayModes();
+        java.awt.DisplayMode[] var4 = this.field_b.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << 2];
+        int[] var2 = new int[var4.length << -886217374];
         for (var3 = 0; var4.length > var3; var3++) {
-            var2[var3 << 2] = var4[var3].getWidth();
-            var2[1 + (var3 << 2)] = var4[var3].getHeight();
-            var2[2 + (var3 << 2)] = var4[var3].getBitDepth();
-            var2[3 + (var3 << 2)] = var4[var3].getRefreshRate();
+            var2[var3 << 1973645250] = var4[var3].getWidth();
+            var2[1 + (var3 << 1161304130)] = var4[var3].getHeight();
+            var2[2 + (var3 << 977388130)] = var4[var3].getBitDepth();
+            var2[3 + (var3 << -1074681534)] = var4[var3].getRefreshRate();
         }
         return var2;
     }
@@ -25,8 +25,8 @@ final class wu {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ((wu) this).field_a = ((wu) this).field_b.getDisplayMode();
-        if (((wu) this).field_a == null) {
+        this.field_a = this.field_b.getDisplayMode();
+        if (this.field_a == null) {
           throw new NullPointerException();
         } else {
           L0: {
@@ -34,8 +34,8 @@ final class wu {
             param0.enableInputMethods(false);
             this.a(-48, param0);
             if (param4 == 0) {
-              var6 = ((wu) this).field_a.getRefreshRate();
-              var7 = ((wu) this).field_b.getDisplayModes();
+              var6 = this.field_a.getRefreshRate();
+              var7 = this.field_b.getDisplayModes();
               var8 = 0;
               var9 = 0;
               L1: while (true) {
@@ -85,23 +85,23 @@ final class wu {
               break L0;
             }
           }
-          ((wu) this).field_b.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+          this.field_b.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
           return;
         }
     }
 
     private final void a(int param0, java.awt.Frame param1) {
-        Object var4 = null;
+        java.awt.Frame var4 = null;
         L0: {
           if (param0 <= -43) {
             break L0;
           } else {
-            var4 = null;
+            var4 = (java.awt.Frame) null;
             this.a(95, (java.awt.Frame) null);
             break L0;
           }
         }
-        ((wu) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param1);
+        this.field_b.setFullScreenWindow((java.awt.Window) ((Object) param1));
     }
 
     public wu() throws Exception {
@@ -111,8 +111,8 @@ final class wu {
         int var4 = 0;
         java.awt.GraphicsDevice var5 = null;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
-        ((wu) this).field_b = var1.getDefaultScreenDevice();
-        if (((wu) this).field_b.isFullScreenSupported()) {
+        this.field_b = var1.getDefaultScreenDevice();
+        if (this.field_b.isFullScreenSupported()) {
           return;
         } else {
           var2 = var1.getScreenDevices();
@@ -125,7 +125,7 @@ final class wu {
               var5 = var3[var4];
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
-                  ((wu) this).field_b = var5;
+                  this.field_b = var5;
                   return;
                 } else {
                   var4++;
@@ -141,12 +141,12 @@ final class wu {
     }
 
     public final void exit() {
-        if (((wu) this).field_a != null) {
-            ((wu) this).field_b.setDisplayMode(((wu) this).field_a);
-            if (!(((wu) this).field_b.getDisplayMode().equals(((wu) this).field_a))) {
+        if (this.field_a != null) {
+            this.field_b.setDisplayMode(this.field_a);
+            if (!(this.field_b.getDisplayMode().equals(this.field_a))) {
                 throw new RuntimeException("");
             }
-            ((wu) this).field_a = null;
+            this.field_a = null;
         }
         this.a(-96, (java.awt.Frame) null);
     }

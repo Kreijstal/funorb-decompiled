@@ -15,10 +15,6 @@ final class ah {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ah.A(";
         field_a = "Waiting for music";
         field_b = 4;

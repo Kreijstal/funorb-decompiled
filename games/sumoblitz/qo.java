@@ -10,7 +10,7 @@ final class qo {
     final static su a(Throwable param0, String param1) {
         su var2 = null;
         if (param0 instanceof su) {
-            var2 = (su) (Object) param0;
+            var2 = (su) ((Object) param0);
             var2.field_a = var2.field_a + ' ' + param1;
         } else {
             var2 = new su(param0, param1);
@@ -19,16 +19,24 @@ final class qo {
     }
 
     public static void a(boolean param0) {
-        field_a = null;
-        field_b = null;
-        field_c = null;
+        su discarded$2 = null;
+        String var2 = null;
+        if (param0) {
+          var2 = (String) null;
+          discarded$2 = qo.a((Throwable) null, (String) null);
+          field_a = null;
+          field_b = null;
+          field_c = null;
+          return;
+        } else {
+          field_a = null;
+          field_b = null;
+          field_c = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "qo.B(";
         field_b = new ts(11, 0, 1, 2);
         field_c = "If you do nothing the game will revert to normal view in <%0> second.";

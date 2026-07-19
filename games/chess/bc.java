@@ -27,13 +27,12 @@ final class bc {
     public static void a(int param0) {
         field_a = null;
         field_c = null;
+        if (param0 != 10) {
+            bc.a(-47L, (byte) -116);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 80;
         field_a = "Full";
         field_c = "Send private message to <%0>";

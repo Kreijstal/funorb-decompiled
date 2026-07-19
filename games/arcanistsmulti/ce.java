@@ -64,17 +64,17 @@ final class ce extends pg {
     }
 
     final static void a(int param0, int param1, int param2) {
-        na var6 = null;
         na var7 = null;
         ab var9 = null;
         ab var10 = null;
         ab var11 = null;
+        na var6 = null;
         if (param2 >= -65) {
             field_n = 98;
             if (param0 == ki.field_q) {
                 return;
             }
-            var6 = (na) (Object) nk.field_q.a((long)ki.field_q, (byte) -109);
+            var6 = (na) ((Object) nk.field_q.a((long)ki.field_q, (byte) -109));
             var7 = var6;
             var6 = var7;
             ki.field_q = param0;
@@ -98,7 +98,7 @@ final class ce extends pg {
         if (param0 == ki.field_q) {
             return;
         }
-        var6 = (na) (Object) nk.field_q.a((long)ki.field_q, (byte) -109);
+        var6 = (na) ((Object) nk.field_q.a((long)ki.field_q, (byte) -109));
         na var8 = var6;
         ki.field_q = param0;
         if (var8 != null) {
@@ -119,10 +119,6 @@ final class ce extends pg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Updates will sent to the email address you've given";
         field_j = "Secondary";
     }

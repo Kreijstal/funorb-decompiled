@@ -33,6 +33,7 @@ final class aa {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_8_0 = 0;
         int stackOut_5_0 = 0;
@@ -48,17 +49,19 @@ final class aa {
         try {
           L0: {
             var2_int = param1.charAt(0);
-            var3 = 1;
+            var3 = param0;
             L1: while (true) {
               if (param1.length() <= var3) {
                 stackOut_8_0 = 1;
                 stackIn_9_0 = stackOut_8_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (param1.charAt(var3) != var2_int) {
                   stackOut_5_0 = 0;
                   stackIn_6_0 = stackOut_5_0;
-                  return stackIn_6_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   var3++;
                   continue L1;
@@ -70,23 +73,23 @@ final class aa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var2;
-            stackOut_10_1 = new StringBuilder().append("aa.C(").append(1).append(',');
+            stackOut_10_0 = (RuntimeException) (var2);
+            stackOut_10_1 = new StringBuilder().append("aa.C(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L2;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -94,20 +97,27 @@ final class aa {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
-        return stackIn_9_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0 != 0;
+        } else {
+          return stackIn_9_0 != 0;
+        }
     }
 
     public static void b(byte param0) {
+        boolean discarded$0 = false;
+        if (param0 != -96) {
+            String var2 = (String) null;
+            discarded$0 = aa.a(-12, (String) null);
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
     }
 }

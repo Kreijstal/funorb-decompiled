@@ -30,7 +30,7 @@ final class ce extends dj {
           if (qh.field_o.isEmpty()) {
             var3 = 0;
             L1: while (true) {
-              if (var3 >= 3) {
+              if ((var3 ^ -1) <= -4) {
                 if (0 != var1) {
                   break L0;
                 } else {
@@ -56,7 +56,7 @@ final class ce extends dj {
               if (var3 >= var1) {
                 break L0;
               } else {
-                var15 = (fq) qh.field_o.elementAt(var3);
+                var15 = (fq) (qh.field_o.elementAt(var3));
                 ii.a(var2, var15, (byte) 118);
                 var3++;
                 continue L2;
@@ -86,7 +86,7 @@ final class ce extends dj {
             var8 = (double)(var3 - -var4) * 0.5;
             var10 = 0.5 * (double)(var5 + var6);
             var12 = 24.0;
-            if (var7 <= 480) {
+            if (-481 <= (var7 ^ -1)) {
               break L4;
             } else {
               var12 = 480.0 * var12 / (double)var7;
@@ -97,12 +97,15 @@ final class ce extends dj {
           }
           return new double[]{var8, var10, var12};
         } else {
-          return null;
+          return (double[]) null;
         }
     }
 
     public static void b(boolean param0) {
         field_eb = null;
+        if (param0) {
+            return;
+        }
         field_bb = null;
     }
 
@@ -111,10 +114,6 @@ final class ce extends dj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_bb = "Email: ";
         field_gb = -1;
     }

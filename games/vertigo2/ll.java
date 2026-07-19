@@ -11,8 +11,16 @@ final class ll {
     public static void a(int param0) {
         field_e = null;
         field_c = null;
-        field_a = null;
-        field_d = null;
+        if (param0 != 3) {
+          field_c = (String) null;
+          field_a = null;
+          field_d = null;
+          return;
+        } else {
+          field_a = null;
+          field_d = null;
+          return;
+        }
     }
 
     public final String toString() {
@@ -30,10 +38,6 @@ final class ll {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Login: ";
         field_c = "You have 1 unread message!";
         field_d = "Please send me news and updates (I can unsubscribe at any time)";

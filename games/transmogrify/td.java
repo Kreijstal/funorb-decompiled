@@ -16,16 +16,21 @@ abstract class td {
         int var4 = 0;
         long var5 = 0L;
         var4 = 27 / ((-40 - param0) / 61);
-        var5 = ((td) this).c(0);
-        if (var5 > 0L) {
+        var5 = this.c(0);
+        if ((var5 ^ -1L) < -1L) {
           pg.a(var5, -114);
-          return ((td) this).a(param1, -122);
+          return this.a(param1, -122);
         } else {
-          return ((td) this).a(param1, -122);
+          return this.a(param1, -122);
         }
     }
 
     public static void b(int param0) {
+        if (param0 != 0) {
+            field_c = (byte[]) null;
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
@@ -34,11 +39,11 @@ abstract class td {
             he.b((byte) -87);
             ci.field_f.k(31410);
             ok.field_a = new ff(ob.field_F, (String) null, lb.field_d, param3, param1);
-            l.field_d = new rf(ci.field_f, (qg) (Object) ok.field_a);
-            ci.field_f.b((qg) (Object) l.field_d, (byte) -71);
+            l.field_d = new rf(ci.field_f, ok.field_a);
+            ci.field_f.b((qg) (l.field_d), (byte) -71);
             int var4_int = 70 % ((param0 - 41) / 32);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "td.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "td.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -47,13 +52,13 @@ abstract class td {
             if (param2.field_f != null) {
                 param2.c(5);
             }
-            int var3_int = 0;
+            int var3_int = 8 % ((param1 - 51) / 40);
             param2.field_b = param0;
             param2.field_f = param0.field_f;
             param2.field_f.field_b = param2;
             param2.field_b.field_f = param2;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "td.L(" + (param0 != null ? "{...}" : "null") + ',' + 125 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "td.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

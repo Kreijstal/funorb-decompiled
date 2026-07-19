@@ -14,13 +14,13 @@ final class ws {
           if (param0 <= -10) {
             break L0;
           } else {
-            field_b = null;
+            field_b = (int[][]) null;
             break L0;
           }
         }
         L1: {
           L2: {
-            if (vj.field_c == 10) {
+            if ((vj.field_c ^ -1) == -11) {
               break L2;
             } else {
               if (!vr.d(1)) {
@@ -46,49 +46,62 @@ final class ws {
         char[] var6 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_23_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_25_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_7_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_12_0 = 0;
+        int stackOut_24_0 = 0;
+        int stackOut_21_0 = 0;
+        int stackOut_14_0 = 0;
         var5 = Kickabout.field_G;
         try {
           L0: {
             if (Character.isISOControl(param0)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (vt.a(param0, true)) {
                 stackOut_7_0 = 1;
                 stackIn_8_0 = stackOut_7_0;
-                return stackIn_8_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
-                var6 = ij.field_p;
-                var2 = var6;
+                L1: {
+                  var6 = ij.field_p;
+                  var2 = var6;
+                  if (param1 == 121) {
+                    break L1;
+                  } else {
+                    ws.a(54);
+                    break L1;
+                  }
+                }
                 var3 = 0;
-                L1: while (true) {
+                L2: while (true) {
                   if (var6.length <= var3) {
                     var2 = tq.field_B;
                     var3 = 0;
-                    L2: while (true) {
+                    L3: while (true) {
                       if (var3 >= var2.length) {
-                        stackOut_22_0 = 0;
-                        stackIn_23_0 = stackOut_22_0;
+                        stackOut_24_0 = 0;
+                        stackIn_25_0 = stackOut_24_0;
+                        decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
                         var4 = var2[var3];
                         if (var4 == param0) {
-                          stackOut_19_0 = 1;
-                          stackIn_20_0 = stackOut_19_0;
-                          return stackIn_20_0 != 0;
+                          stackOut_21_0 = 1;
+                          stackIn_22_0 = stackOut_21_0;
+                          decompiledRegionSelector0 = 3;
+                          break L0;
                         } else {
                           var3++;
-                          continue L2;
+                          continue L3;
                         }
                       }
                     }
@@ -96,11 +109,12 @@ final class ws {
                     var4 = var6[var3];
                     if (param0 != var4) {
                       var3++;
-                      continue L1;
+                      continue L2;
                     } else {
-                      stackOut_12_0 = 1;
-                      stackIn_13_0 = stackOut_12_0;
-                      return stackIn_13_0 != 0;
+                      stackOut_14_0 = 1;
+                      stackIn_15_0 = stackOut_14_0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     }
                   }
                 }
@@ -110,23 +124,38 @@ final class ws {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2_ref, "ws.C(" + param0 + ',' + 121 + ')');
+          throw nb.a((Throwable) ((Object) var2_ref), "ws.C(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_23_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_15_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_22_0 != 0;
+              } else {
+                return stackIn_25_0 != 0;
+              }
+            }
+          }
+        }
     }
 
     public static void a(int param0) {
-        field_d = null;
-        field_b = null;
-        field_c = null;
+        if (param0 != -25514) {
+            field_d = (int[][]) null;
+        }
+        field_d = (int[][]) null;
+        field_b = (int[][]) null;
+        field_c = (int[][][]) null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new String[]{"All scores", "My scores", "Best each"};
         field_f = true;
         field_d = new int[8][4];
@@ -140,14 +169,14 @@ final class ws {
         op.a(5, (byte) 127, "250,894,646,1044,250,300,646,450");
         op.a(6, (byte) 127, "250,1044,646,824,250,520,646,300");
         op.a(7, (byte) 126, "448,1044,716,672,180,672,448,300");
-        field_c[5] = new int[4][];
-        field_c[1] = new int[4][];
-        field_c[6] = new int[4][];
-        field_c[3] = new int[4][];
-        field_c[7] = new int[4][];
-        field_c[2] = new int[4][];
-        field_c[0] = new int[4][];
-        field_c[4] = new int[4][];
+        field_c[5] = new int[][]{new int[]{152, 768, 328, 440}, new int[]{416, 952, 288, 328}, new int[]{188, 128, 296, 360}, new int[]{480, 232, 268, 376}};
+        field_c[1] = new int[][]{new int[]{352, 900, 184, 336}, new int[]{160, 540, 560, 344}, new int[]{168, 116, 328, 408}, new int[]{416, 44, 300, 488}};
+        field_c[6] = new int[][]{new int[]{188, 996, 284, 320}, new int[]{400, 756, 356, 368}, new int[]{124, 420, 312, 344}, new int[]{444, 76, 252, 352}};
+        field_c[3] = new int[][]{new int[]{112, 908, 280, 372}, new int[]{500, 868, 224, 412}, new int[]{276, 140, 312, 368}, new int[]{292, 956, 248, 374}};
+        field_c[7] = new int[][]{new int[]{356, 944, 296, 320}, new int[]{488, 424, 328, 440}, new int[]{120, 496, 280, 360}, new int[]{344, 104, 288, 344}};
+        field_c[2] = new int[][]{new int[]{256, 932, 384, 312}, new int[]{224, 76, 424, 656}, new int[]{108, 52, 340, 352}, new int[]{448, 68, 324, 416}};
+        field_c[0] = new int[][]{new int[]{136, 876, 384, 344}, new int[]{400, 852, 316, 488}, new int[]{116, 76, 304, 432}, new int[]{368, 172, 396, 408}};
+        field_c[4] = new int[][]{new int[]{208, 896, 296, 380}, new int[]{384, 944, 336, 368}, new int[]{296, 176, 252, 288}, new int[]{320, 416, 260, 400}};
         field_e = -1;
     }
 }

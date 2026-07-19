@@ -11,54 +11,54 @@ abstract class ui extends g {
     static String field_B;
 
     final void a(int param0, byte param1, int param2, int param3) {
-        if (((ui) this).field_E != 0) {
-          if (((ui) this).field_E >= 256) {
+        if (-1 != (this.field_E ^ -1)) {
+          if (this.field_E >= 256) {
             if (param0 != 0) {
               return;
             } else {
-              ((ui) this).b(param1 ^ -58, param2 + ((ui) this).field_k, param3 + ((ui) this).field_w);
+              this.b(param1 ^ -58, param2 + this.field_k, param3 + this.field_w);
               super.a(param0, (byte) -57, param2, param3);
               return;
             }
           } else {
             if (rj.field_s != null) {
-              if (((ui) this).field_p <= rj.field_s.field_v) {
-                if (((ui) this).field_t <= rj.field_s.field_y) {
+              if (this.field_p <= rj.field_s.field_v) {
+                if (this.field_t <= rj.field_s.field_y) {
                   hj.a(rj.field_s, 1);
                   ti.d();
-                  ((ui) this).b(param1 + 58, 0, 0);
-                  super.a(param0, param1, -((ui) this).field_k + -param2, -((ui) this).field_w + -param3);
+                  this.b(param1 + 58, 0, 0);
+                  super.a(param0, param1, -this.field_k + -param2, -this.field_w + -param3);
                   id.b((byte) -58);
-                  rj.field_s.e(param3 + ((ui) this).field_w, param2 - -((ui) this).field_k, ((ui) this).field_E);
+                  rj.field_s.e(param3 + this.field_w, param2 - -this.field_k, this.field_E);
                   return;
                 } else {
-                  rj.field_s = new pb(((ui) this).field_p, ((ui) this).field_t);
+                  rj.field_s = new pb(this.field_p, this.field_t);
                   hj.a(rj.field_s, 1);
                   ti.d();
-                  ((ui) this).b(param1 + 58, 0, 0);
-                  super.a(param0, param1, -((ui) this).field_k + -param2, -((ui) this).field_w + -param3);
+                  this.b(param1 + 58, 0, 0);
+                  super.a(param0, param1, -this.field_k + -param2, -this.field_w + -param3);
                   id.b((byte) -58);
-                  rj.field_s.e(param3 + ((ui) this).field_w, param2 - -((ui) this).field_k, ((ui) this).field_E);
+                  rj.field_s.e(param3 + this.field_w, param2 - -this.field_k, this.field_E);
                   return;
                 }
               } else {
-                rj.field_s = new pb(((ui) this).field_p, ((ui) this).field_t);
+                rj.field_s = new pb(this.field_p, this.field_t);
                 hj.a(rj.field_s, 1);
                 ti.d();
-                ((ui) this).b(param1 + 58, 0, 0);
-                super.a(param0, param1, -((ui) this).field_k + -param2, -((ui) this).field_w + -param3);
+                this.b(param1 + 58, 0, 0);
+                super.a(param0, param1, -this.field_k + -param2, -this.field_w + -param3);
                 id.b((byte) -58);
-                rj.field_s.e(param3 + ((ui) this).field_w, param2 - -((ui) this).field_k, ((ui) this).field_E);
+                rj.field_s.e(param3 + this.field_w, param2 - -this.field_k, this.field_E);
                 return;
               }
             } else {
-              rj.field_s = new pb(((ui) this).field_p, ((ui) this).field_t);
+              rj.field_s = new pb(this.field_p, this.field_t);
               hj.a(rj.field_s, 1);
               ti.d();
-              ((ui) this).b(param1 + 58, 0, 0);
-              super.a(param0, param1, -((ui) this).field_k + -param2, -((ui) this).field_w + -param3);
+              this.b(param1 + 58, 0, 0);
+              super.a(param0, param1, -this.field_k + -param2, -this.field_w + -param3);
               id.b((byte) -58);
-              rj.field_s.e(param3 + ((ui) this).field_w, param2 - -((ui) this).field_k, ((ui) this).field_E);
+              rj.field_s.e(param3 + this.field_w, param2 - -this.field_k, this.field_E);
               return;
             }
           }
@@ -68,34 +68,63 @@ abstract class ui extends g {
     }
 
     private final int a(int param0) {
-        int stackIn_5_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        L0: {
-          if (!((ui) this).field_G) {
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
-            break L0;
-          } else {
-            if ((Object) (Object) ((ui) this).field_H.d((byte) -120) == this) {
-              stackOut_3_0 = 256;
-              stackIn_5_0 = stackOut_3_0;
+        if (param0 != 0) {
+          L0: {
+            this.b(-18, -2, -61);
+            if (!this.field_G) {
+              stackOut_11_0 = 0;
+              stackIn_12_0 = stackOut_11_0;
               break L0;
             } else {
-              stackOut_2_0 = 0;
-              stackIn_5_0 = stackOut_2_0;
-              break L0;
+              if (this.field_H.d((byte) -120) == this) {
+                stackOut_10_0 = 256;
+                stackIn_12_0 = stackOut_10_0;
+                break L0;
+              } else {
+                stackOut_9_0 = 0;
+                stackIn_12_0 = stackOut_9_0;
+                break L0;
+              }
             }
           }
+          return stackIn_12_0;
+        } else {
+          L1: {
+            if (!this.field_G) {
+              stackOut_5_0 = 0;
+              stackIn_6_0 = stackOut_5_0;
+              break L1;
+            } else {
+              if (this.field_H.d((byte) -120) == this) {
+                stackOut_4_0 = 256;
+                stackIn_6_0 = stackOut_4_0;
+                break L1;
+              } else {
+                stackOut_3_0 = 0;
+                stackIn_6_0 = stackOut_3_0;
+                break L1;
+              }
+            }
+          }
+          return stackIn_6_0;
         }
-        return stackIn_5_0;
     }
 
     public static void e(byte param0) {
         field_B = null;
         field_F = null;
         field_C = null;
+        if (param0 != -29) {
+            return;
+        }
         field_D = null;
     }
 
@@ -119,25 +148,25 @@ abstract class ui extends g {
         if (param0) {
           L0: {
             var2 = this.a(0);
-            var3 = var2 - ((ui) this).field_E;
+            var3 = var2 - this.field_E;
             if (var3 > 0) {
-              ((ui) this).field_E = ((ui) this).field_E + (8 + (var3 + -1)) / 8;
+              this.field_E = this.field_E + (8 + (var3 + -1)) / 8;
               break L0;
             } else {
               break L0;
             }
           }
-          if (var3 < 0) {
+          if ((var3 ^ -1) > -1) {
             L1: {
               L2: {
-                ((ui) this).field_E = ((ui) this).field_E + (var3 - 15) / 16;
-                if (0 != ((ui) this).field_E) {
+                this.field_E = this.field_E + (var3 - 16 - -1) / 16;
+                if (0 != this.field_E) {
                   break L2;
                 } else {
                   if (0 != var2) {
                     break L2;
                   } else {
-                    if (((ui) this).field_G) {
+                    if (this.field_G) {
                       break L2;
                     } else {
                       stackOut_36_0 = 1;
@@ -155,13 +184,13 @@ abstract class ui extends g {
           } else {
             L3: {
               L4: {
-                if (0 != ((ui) this).field_E) {
+                if (0 != this.field_E) {
                   break L4;
                 } else {
                   if (0 != var2) {
                     break L4;
                   } else {
-                    if (((ui) this).field_G) {
+                    if (this.field_G) {
                       break L4;
                     } else {
                       stackOut_30_0 = 1;
@@ -179,24 +208,24 @@ abstract class ui extends g {
           }
         } else {
           L5: {
-            field_B = null;
+            field_B = (String) null;
             var2 = this.a(0);
-            var3 = var2 - ((ui) this).field_E;
+            var3 = var2 - this.field_E;
             if (var3 > 0) {
-              ((ui) this).field_E = ((ui) this).field_E + (8 + (var3 + -1)) / 8;
+              this.field_E = this.field_E + (8 + (var3 + -1)) / 8;
               break L5;
             } else {
               break L5;
             }
           }
-          if (var3 < 0) {
-            ((ui) this).field_E = ((ui) this).field_E + (var3 - 15) / 16;
-            if (0 == ((ui) this).field_E) {
+          if ((var3 ^ -1) > -1) {
+            this.field_E = this.field_E + (var3 - 16 - -1) / 16;
+            if (0 == this.field_E) {
               if (0 != var2) {
                 return false;
               } else {
                 L6: {
-                  if (((ui) this).field_G) {
+                  if (this.field_G) {
                     stackOut_19_0 = 0;
                     stackIn_20_0 = stackOut_19_0;
                     break L6;
@@ -212,12 +241,12 @@ abstract class ui extends g {
               return false;
             }
           } else {
-            if (0 == ((ui) this).field_E) {
+            if (0 == this.field_E) {
               if (0 != var2) {
                 return false;
               } else {
                 L7: {
-                  if (((ui) this).field_G) {
+                  if (this.field_G) {
                     stackOut_10_0 = 0;
                     stackIn_11_0 = stackOut_10_0;
                     break L7;
@@ -241,14 +270,14 @@ abstract class ui extends g {
         if (var2 != null) {
             return var2;
         }
-        return (rj) this;
+        return (rj) (this);
     }
 
     boolean h(int param0) {
         if (param0 > 98) {
-          ((ui) this).field_E = this.a(0);
-          if (((ui) this).field_E == 0) {
-            if (((ui) this).field_G) {
+          this.field_E = this.a(0);
+          if (this.field_E == 0) {
+            if (this.field_G) {
               return false;
             } else {
               return true;
@@ -262,28 +291,24 @@ abstract class ui extends g {
     }
 
     ui(ei param0, int param1, int param2) {
-        super(ml.field_b + -param1 >> 1, -param2 + vf.field_F >> 1, param1, param2, (uk) null);
+        super(ml.field_b + -param1 >> -1820756927, -param2 + vf.field_F >> -1655264063, param1, param2, (uk) null);
         try {
-            ((ui) this).field_E = 0;
-            ((ui) this).field_H = param0;
-            ((ui) this).field_G = false;
+            this.field_E = 0;
+            this.field_H = param0;
+            this.field_G = false;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ui.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "ui.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final void a(int param0, byte param1, int param2) {
-        ((ui) this).b(param0, ml.field_b - param0 >> 1, vf.field_F + -param2 >> 1, param2, 23987);
+        this.b(param0, ml.field_b - param0 >> 1359765697, vf.field_F + -param2 >> 2138435233, param2, 23987);
         if (param1 > -4) {
-            field_B = null;
+            field_B = (String) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = new li(12, 0, 1, 0);
         field_D = "Checking";
         field_B = "Unable to connect to the data server. Please check any firewall you are using.";

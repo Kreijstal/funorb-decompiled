@@ -18,13 +18,12 @@ abstract class gf {
         field_g = null;
         field_c = null;
         field_f = null;
+        if (param0 != 540) {
+            field_f = (km) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "gf.A(";
         field_f = new km(540, 140);
         field_e = false;

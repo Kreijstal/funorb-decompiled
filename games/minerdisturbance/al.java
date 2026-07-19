@@ -12,24 +12,24 @@ class al extends pi {
 
     final void a(byte param0) {
         if (param0 <= -90) {
-          if (null == ((al) this).field_q) {
+          if (null == this.field_q) {
             return;
           } else {
-            ((al) this).field_q.field_t = ((al) this).field_t;
-            ((al) this).field_t.field_q = ((al) this).field_q;
-            ((al) this).field_q = null;
-            ((al) this).field_t = null;
+            this.field_q.field_t = this.field_t;
+            this.field_t.field_q = this.field_q;
+            this.field_q = null;
+            this.field_t = null;
             return;
           }
         } else {
-          field_s = null;
-          if (null == ((al) this).field_q) {
+          field_s = (wh) null;
+          if (null == this.field_q) {
             return;
           } else {
-            ((al) this).field_q.field_t = ((al) this).field_t;
-            ((al) this).field_t.field_q = ((al) this).field_q;
-            ((al) this).field_q = null;
-            ((al) this).field_t = null;
+            this.field_q.field_t = this.field_t;
+            this.field_t.field_q = this.field_q;
+            this.field_q = null;
+            this.field_t = null;
             return;
           }
         }
@@ -73,23 +73,23 @@ class al extends pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("al.HA(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -97,7 +97,7 @@ class al extends pi {
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -105,14 +105,20 @@ class al extends pi {
     public static void a(int param0) {
         field_r = null;
         field_s = null;
+        if (param0 != -483) {
+            field_r = (ih) null;
+            field_o = null;
+            return;
+        }
         field_o = null;
     }
 
     final static void e(int param0) {
+        jf discarded$2 = null;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        Object var3 = null;
+        String var3 = null;
         RuntimeException decompiledCaughtException = null;
         var2 = MinerDisturbance.field_ab;
         try {
@@ -121,14 +127,14 @@ class al extends pi {
               if (param0 > 72) {
                 break L1;
               } else {
-                var3 = null;
-                jf discarded$2 = al.a(-123, (String) null);
+                var3 = (String) null;
+                discarded$2 = al.a(-123, (String) null);
                 break L1;
               }
             }
             var1_int = 0;
             L2: while (true) {
-              if (var1_int >= 25) {
+              if (-26 >= (var1_int ^ -1)) {
                 break L0;
               } else {
                 L3: {
@@ -148,15 +154,12 @@ class al extends pi {
                   if (gl.field_u[var1_int] != null) {
                     if (gl.field_u[var1_int].k()) {
                       gl.field_u[var1_int] = null;
-                      var1_int++;
                       break L4;
                     } else {
                       kf.a(gl.field_u[var1_int], (byte) -54);
-                      var1_int++;
                       break L4;
                     }
                   } else {
-                    var1_int++;
                     break L4;
                   }
                 }
@@ -168,7 +171,7 @@ class al extends pi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "al.GA(" + param0 + ')');
+          throw lj.a((Throwable) ((Object) var1), "al.GA(" + param0 + ')');
         }
     }
 
@@ -176,10 +179,6 @@ class al extends pi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = 0;
         field_o = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
     }

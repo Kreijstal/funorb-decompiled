@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.awt.Canvas;
-
 public final class ShatteredPlansClient extends tl {
     static int[] field_E;
     static in field_H;
@@ -26,6 +24,7 @@ public final class ShatteredPlansClient extends tl {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_6_0 = 0;
         int stackOut_10_0 = 0;
@@ -50,7 +49,8 @@ public final class ShatteredPlansClient extends tl {
                   if (var4.field_xb != null) {
                     stackOut_6_0 = 1;
                     stackIn_7_0 = stackOut_6_0;
-                    return stackIn_7_0 != 0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
                     break L1;
                   }
@@ -74,34 +74,36 @@ public final class ShatteredPlansClient extends tl {
                 stackIn_12_0 = stackOut_11_0;
                 break L2;
               }
+              decompiledRegionSelector0 = 2;
               break L0;
             } else {
               stackOut_1_0 = 0;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var4_ref;
+            stackOut_13_0 = (RuntimeException) (var4_ref);
             stackOut_13_1 = new StringBuilder().append("ShatteredPlansClient.KA(").append(param0).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -109,14 +111,22 @@ public final class ShatteredPlansClient extends tl {
               break L4;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
-        return stackIn_12_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0 != 0;
+          } else {
+            return stackIn_12_0 != 0;
+          }
+        }
     }
 
     final void a(boolean param0) {
         if (param0) {
-            ((ShatteredPlansClient) this).a(-37);
+            this.a(-37);
         }
         kf.e(120);
         if (!(null == bj.field_K)) {
@@ -126,13 +136,13 @@ public final class ShatteredPlansClient extends tl {
     }
 
     final void c(int param0) {
-        ((ShatteredPlansClient) this).a(param0 + 257, 1, 14, 25, false, 0, 2, 4);
+        this.a(param0 + 257, 1, 14, 25, false, 0, 2, 4);
         h var3 = new h();
         var3.field_u.d(128, (byte) -110, 9);
         var3.field_r.d(128, (byte) -110, 9);
         var3.field_u.c(598, wm.field_b);
         var3.field_r.c(param0 ^ -599, wm.field_b);
-        da.a((java.awt.Component) (Object) tm.field_i, fa.field_W, var3, 1102, false, 22050, 22050, true);
+        da.a((java.awt.Component) ((Object) tm.field_i), fa.field_W, var3, 1102, false, 22050, 22050, true);
         rm.field_b = 2458760;
         wo.field_a = 2805974;
         em.field_j = 2458760;
@@ -140,7 +150,7 @@ public final class ShatteredPlansClient extends tl {
         ah.field_P = 2458760;
         es.field_n = 2805974;
         em.a(us.b(0), 1);
-        ((ShatteredPlansClient) this).a(false, true, -2839, true, true, false, false);
+        this.a(false, true, -2839, true, true, false, false);
         td.field_K = hi.field_a;
         ae.field_a[71] = 4;
         ae.field_a[74] = -2;
@@ -164,6 +174,9 @@ public final class ShatteredPlansClient extends tl {
 
     final void a(int param0) {
         try {
+            int discarded$3 = 0;
+            int fieldTemp$4 = 0;
+            int fieldTemp$5 = 0;
             int var2 = 0;
             int var3 = 0;
             lq var3_ref_lq = null;
@@ -243,7 +256,7 @@ public final class ShatteredPlansClient extends tl {
             int stackOut_122_1 = 0;
             L0: {
               var16 = field_F ? 1 : 0;
-              int discarded$3 = po.b(-87);
+              discarded$3 = po.b(-87);
               l.field_f = po.b(-80);
               ql.a(-26848);
               if (null == bj.field_K) {
@@ -277,7 +290,7 @@ public final class ShatteredPlansClient extends tl {
               }
             }
             L2: {
-              ((ShatteredPlansClient) this).a(stackIn_7_1 != 0, 77);
+              this.a(stackIn_7_1 != 0, 77);
               if (!um.field_n) {
                 break L2;
               } else {
@@ -289,7 +302,7 @@ public final class ShatteredPlansClient extends tl {
             L3: {
               cl.field_n = cl.field_n + 1;
               if (uf.a(false)) {
-                ((ShatteredPlansClient) this).j((byte) -123);
+                this.j((byte) -123);
                 if (!uf.a(false)) {
                   break L3;
                 } else {
@@ -357,11 +370,11 @@ public final class ShatteredPlansClient extends tl {
                         }
                         L7: {
                           L8: {
-                            var3 = ((ShatteredPlansClient) this).a(stackIn_46_1 != 0, stackIn_46_2 != 0);
-                            if (var3 == 1) {
+                            var3 = this.a(stackIn_46_1 != 0, stackIn_46_2 != 0);
+                            if ((var3 ^ -1) == -2) {
                               break L8;
                             } else {
-                              if (var3 != 2) {
+                              if (-3 != (var3 ^ -1)) {
                                 break L7;
                               } else {
                                 break L8;
@@ -379,7 +392,7 @@ public final class ShatteredPlansClient extends tl {
                           if (2 != var3) {
                             break L7;
                           } else {
-                            da.a(1, (java.applet.Applet) this);
+                            da.a(1, (java.applet.Applet) (this));
                             break L7;
                           }
                         }
@@ -388,7 +401,7 @@ public final class ShatteredPlansClient extends tl {
                       } else {
                         if (i.c(0)) {
                           var2 = 1;
-                          if (~jb.field_c != ~jb.field_g) {
+                          if ((jb.field_c ^ -1) != (jb.field_g ^ -1)) {
                             this.b(false, false);
                             break L5;
                           } else {
@@ -412,23 +425,23 @@ public final class ShatteredPlansClient extends tl {
                       }
                     } else {
                       L11: {
-                        if (~jb.field_g != ~jb.field_c) {
+                        if ((jb.field_g ^ -1) != (jb.field_c ^ -1)) {
                           this.b(false, false);
                           break L11;
                         } else {
                           L12: {
                             var3 = cq.d(false);
-                            if (var3 == 2) {
+                            if (-3 == (var3 ^ -1)) {
                               ej.c(0);
                               break L12;
                             } else {
                               if (3 == var3) {
                                 ne.field_s = false;
-                                m.a(8, 13421772, rm.field_b, 8, mp.field_b.field_K, mr.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, mr.field_i, 320, (nq) (Object) mp.field_b, (nq) (Object) mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (bi[]) null, es.field_n);
+                                m.a(8, 13421772, rm.field_b, 8, mp.field_b.field_K, mr.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, mr.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (bi[]) null, es.field_n);
                                 fm.a(true, -1);
                                 break L12;
                               } else {
-                                if (var3 == 4) {
+                                if ((var3 ^ -1) == -5) {
                                   ne.field_s = true;
                                   qk.a(wi.field_b, 0, (byte) 125);
                                   break L12;
@@ -463,10 +476,10 @@ public final class ShatteredPlansClient extends tl {
             }
             L14: {
               if (var2 != 0) {
-                if (~gg.field_a >= ~eb.field_b) {
+                if ((gg.field_a ^ -1) >= (eb.field_b ^ -1)) {
                   break L14;
                 } else {
-                  int fieldTemp$4 = eb.field_b + jl.field_U;
+                  fieldTemp$4 = eb.field_b + jl.field_U;
                   eb.field_b = eb.field_b + jl.field_U;
                   if (gg.field_a >= fieldTemp$4) {
                     break L14;
@@ -479,9 +492,9 @@ public final class ShatteredPlansClient extends tl {
                 if (0 >= eb.field_b) {
                   break L14;
                 } else {
-                  int fieldTemp$5 = eb.field_b - jl.field_U;
+                  fieldTemp$5 = eb.field_b - jl.field_U;
                   eb.field_b = eb.field_b - jl.field_U;
-                  if (fieldTemp$5 >= 0) {
+                  if ((fieldTemp$5 ^ -1) <= -1) {
                     break L14;
                   } else {
                     eb.field_b = 0;
@@ -493,7 +506,7 @@ public final class ShatteredPlansClient extends tl {
             L15: {
               if (!w.d(true)) {
                 L16: while (true) {
-                  var3_ref_lq = (lq) (Object) jq.field_a.h(54);
+                  var3_ref_lq = (lq) ((Object) jq.field_a.h(54));
                   if (var3_ref_lq == null) {
                     break L15;
                   } else {
@@ -525,7 +538,7 @@ public final class ShatteredPlansClient extends tl {
                   }
                 }
                 L19: {
-                  if (vr.field_c != -2) {
+                  if (1 != (vr.field_c ^ -1)) {
                     break L19;
                   } else {
                     if (gr.field_o == -1) {
@@ -615,11 +628,11 @@ public final class ShatteredPlansClient extends tl {
                   if (jc.f(-11)) {
                     L29: {
                       L30: {
-                        var6 = ((ShatteredPlansClient) this).i((byte) 16);
+                        var6 = this.i((byte) 16);
                         if (var6 == 0) {
                           break L30;
                         } else {
-                          if (var6 == 1) {
+                          if (-2 == (var6 ^ -1)) {
                             break L30;
                           } else {
                             break L29;
@@ -668,7 +681,7 @@ public final class ShatteredPlansClient extends tl {
                     }
                     L33: {
                       var7 = 0;
-                      if (var6 != 2) {
+                      if (-3 != (var6 ^ -1)) {
                         break L33;
                       } else {
                         var7 = 1;
@@ -714,14 +727,14 @@ public final class ShatteredPlansClient extends tl {
                 }
                 return;
               } else {
-                if (ej.field_e == 9) {
+                if (-10 == (ej.field_e ^ -1)) {
                   rn.a(1048576);
                   md.field_Q = false;
                   gr.field_o = 10;
                   oi.field_c = sa.field_a.e(-1);
                   continue L17;
                 } else {
-                  if (ej.field_e == 14) {
+                  if (-15 == (ej.field_e ^ -1)) {
                     rn.a(1048576);
                     be.a(a.a(20605), js.a(2000, (byte) 122), pe.m(42), 1024, js.a(6, (byte) 122), (byte) -122, hn.field_j.length, bb.a((byte) 100), pg.field_C, 150);
                     sj.a((byte) 77, js.b((byte) 121), fl.a(83));
@@ -754,7 +767,7 @@ public final class ShatteredPlansClient extends tl {
                       continue L17;
                     } else {
                       L38: {
-                        if (ej.field_e != 10) {
+                        if (-11 != (ej.field_e ^ -1)) {
                           break L38;
                         } else {
                           if (mf.field_p) {
@@ -765,7 +778,7 @@ public final class ShatteredPlansClient extends tl {
                           }
                         }
                       }
-                      if (ej.field_e != 71) {
+                      if ((ej.field_e ^ -1) != -72) {
                         if (58 != ej.field_e) {
                           if (60 == ej.field_e) {
                             L39: {
@@ -805,13 +818,13 @@ public final class ShatteredPlansClient extends tl {
                               var4_ref = null;
                               if (!v.field_b) {
                                 if (kc.field_d) {
-                                  var4_ref = (Object) (Object) in.field_g;
+                                  var4_ref = in.field_g;
                                   break L42;
                                 } else {
                                   break L42;
                                 }
                               } else {
-                                var4_ref = (Object) (Object) ce.field_x;
+                                var4_ref = ce.field_x;
                                 break L42;
                               }
                             }
@@ -819,23 +832,23 @@ public final class ShatteredPlansClient extends tl {
                               if (var4_ref == null) {
                                 break L43;
                               } else {
-                                if (((km) var4_ref).c(14759)) {
+                                if (((km) (var4_ref)).c(14759)) {
                                   continue L17;
                                 } else {
                                   break L43;
                                 }
                               }
                             }
-                            ((ShatteredPlansClient) this).e((byte) -84);
+                            this.e((byte) -84);
                             continue L17;
                           }
                         } else {
                           L44: {
                             rn.a(1048576);
                             var4 = sa.field_a.j(-93);
-                            var5_ref_vr = kj.a((byte) -85, (ob) (Object) sa.field_a);
+                            var5_ref_vr = kj.a((byte) -85, sa.field_a);
                             var6 = sa.field_a.g(-2852);
-                            if (sa.field_a.j(-95) == 0) {
+                            if ((sa.field_a.j(-95) ^ -1) == -1) {
                               stackOut_98_0 = 0;
                               stackIn_99_0 = stackOut_98_0;
                               break L44;
@@ -848,7 +861,7 @@ public final class ShatteredPlansClient extends tl {
                           L45: {
                             var7 = stackIn_99_0;
                             var8 = sa.field_a.g(-2852);
-                            if (var8 < 0) {
+                            if (-1 < (var8 ^ -1)) {
                               stackOut_101_0 = 0;
                               stackIn_102_0 = stackOut_101_0;
                               break L45;
@@ -879,7 +892,7 @@ public final class ShatteredPlansClient extends tl {
                                 var11 = stackIn_108_0;
                                 if (var11 == null) {
                                   stackOut_110_0 = null;
-                                  stackIn_111_0 = (kq) (Object) stackOut_110_0;
+                                  stackIn_111_0 = (kq) ((Object) stackOut_110_0);
                                   break L48;
                                 } else {
                                   stackOut_109_0 = var11.field_Y;
@@ -911,7 +924,7 @@ public final class ShatteredPlansClient extends tl {
                               }
                               try {
                                 L51: {
-                                  var13.field_P.a((ob) (Object) sa.field_a, var13.field_n, false);
+                                  var13.field_P.a(sa.field_a, var13.field_n, false);
                                   decompiledRegionSelector0 = 0;
                                   break L51;
                                 }
@@ -919,7 +932,7 @@ public final class ShatteredPlansClient extends tl {
                                 decompiledCaughtException = decompiledCaughtParameter0;
                                 L52: {
                                   var15 = (jn) (Object) decompiledCaughtException;
-                                  jq.a(-29901, (Throwable) (Object) var15, "Map Generation failed when receiving initial game state from server.");
+                                  jq.a(-29901, (Throwable) ((Object) var15), "Map Generation failed when receiving initial game state from server.");
                                   q.g(-96);
                                   decompiledRegionSelector0 = 1;
                                   break L52;
@@ -928,7 +941,7 @@ public final class ShatteredPlansClient extends tl {
                                 decompiledCaughtException = decompiledCaughtParameter1;
                                 L53: {
                                   var15_ref = (kr) (Object) decompiledCaughtException;
-                                  jq.a(-29901, (Throwable) (Object) var15_ref, "Gamestate received from server is invalid.");
+                                  jq.a(-29901, (Throwable) ((Object) var15_ref), "Gamestate received from server is invalid.");
                                   q.g(-96);
                                   decompiledRegionSelector0 = 1;
                                   break L53;
@@ -937,7 +950,7 @@ public final class ShatteredPlansClient extends tl {
                                 decompiledCaughtException = decompiledCaughtParameter2;
                                 L54: {
                                   var15_ref2 = (Exception) (Object) decompiledCaughtException;
-                                  jq.a(-29901, (Throwable) (Object) var15_ref2, "Error receiving gamestate from server.");
+                                  jq.a(-29901, (Throwable) ((Object) var15_ref2), "Error receiving gamestate from server.");
                                   q.g(-119);
                                   decompiledRegionSelector0 = 1;
                                   break L54;
@@ -946,17 +959,17 @@ public final class ShatteredPlansClient extends tl {
                               if (decompiledRegionSelector0 == 0) {
                                 L55: {
                                   var13.b((byte) -81);
-                                  stackOut_121_0 = (km) var13;
+                                  stackOut_121_0 = (km) (var13);
                                   stackIn_123_0 = stackOut_121_0;
                                   stackIn_122_0 = stackOut_121_0;
                                   if (var14 == 0) {
-                                    stackOut_123_0 = (km) (Object) stackIn_123_0;
+                                    stackOut_123_0 = (km) ((Object) stackIn_123_0);
                                     stackOut_123_1 = 0;
                                     stackIn_124_0 = stackOut_123_0;
                                     stackIn_124_1 = stackOut_123_1;
                                     break L55;
                                   } else {
-                                    stackOut_122_0 = (km) (Object) stackIn_122_0;
+                                    stackOut_122_0 = (km) ((Object) stackIn_122_0);
                                     stackOut_122_1 = 1;
                                     stackIn_124_0 = stackOut_122_0;
                                     stackIn_124_1 = stackOut_122_1;
@@ -998,19 +1011,19 @@ public final class ShatteredPlansClient extends tl {
                           continue L17;
                         } else {
                           var4 = sa.field_a.a(16711680);
-                          var4 = var4 & ~vq.field_a;
+                          var4 = var4 & (vq.field_a ^ -1);
                           var5 = 0;
                           L57: while (true) {
-                            if (var5 >= 25) {
+                            if ((var5 ^ -1) <= -26) {
                               vq.field_a = vq.field_a | var4;
                               continue L17;
                             } else {
                               L58: {
                                 var6 = 1 << var5;
-                                if ((var6 & var4) == 0) {
+                                if ((var6 & var4 ^ -1) == -1) {
                                   break L58;
                                 } else {
-                                  ((ShatteredPlansClient) this).field_G.a((byte) -113, (oh) (Object) new he(var5));
+                                  this.field_G.a((byte) -113, new he(var5));
                                   break L58;
                                 }
                               }
@@ -1043,11 +1056,11 @@ public final class ShatteredPlansClient extends tl {
         wg.field_e.a("<col=2F5FBF>", 27275, "glossary");
         var2_int = 0;
         L0: while (true) {
-          if (var2_int >= 4) {
+          if ((var2_int ^ -1) <= -5) {
             wg.field_e.a(field_L, 27275, "territories");
             wg.field_e.a(dm.field_c, 27275, "uioptions");
             wg.field_e.a(ba.field_a, 27275, "fleetinfo");
-            wg.field_e.a(ib.field_c, 27275, "projects");
+            wg.field_e.a(ib.field_c, param0 ^ 27274, "projects");
             wg.field_e.a(vj.field_B, 27275, "diplomacy");
             wg.field_e.a(uq.field_l, 27275, "messages");
             wg.field_e.a(Integer.toString(gm.field_k[0], 16), 27275, "colmetal");
@@ -1055,21 +1068,21 @@ public final class ShatteredPlansClient extends tl {
             wg.field_e.a(Integer.toString(gm.field_k[2], 16), 27275, "colenergy");
             wg.field_e.a(Integer.toString(gm.field_k[3], 16), 27275, "colexotics");
             var2 = "<col=<%0>><%1></col>";
-            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "project_metal");
-            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "project_biomass");
-            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "project_energy");
-            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "Project_Metal");
-            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "Project_Biomass");
-            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "Project_Energy");
-            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "Project_Exotics");
-            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "PROJECT_METAL");
-            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "PROJECT_BIOMASS");
-            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "PROJECT_ENERGY");
-            wg.field_e.a(re.a(var2, 4371, new String[2]), 27275, "PROJECT_EXOTICS");
+            wg.field_e.a(re.a(var2, 4371, new String[]{Integer.toString(gm.field_k[0], 16), or.field_d[0].toLowerCase()}), 27275, "project_metal");
+            wg.field_e.a(re.a(var2, 4371, new String[]{Integer.toString(gm.field_k[1], 16), or.field_d[param0].toLowerCase()}), 27275, "project_biomass");
+            wg.field_e.a(re.a(var2, 4371, new String[]{Integer.toString(gm.field_k[2], 16), or.field_d[2].toLowerCase()}), 27275, "project_energy");
+            wg.field_e.a(re.a(var2, 4371, new String[]{Integer.toString(gm.field_k[0], 16), or.field_d[0]}), 27275, "Project_Metal");
+            wg.field_e.a(re.a(var2, 4371, new String[]{Integer.toString(gm.field_k[1], 16), or.field_d[1]}), param0 + 27274, "Project_Biomass");
+            wg.field_e.a(re.a(var2, 4371, new String[]{Integer.toString(gm.field_k[2], 16), or.field_d[2]}), 27275, "Project_Energy");
+            wg.field_e.a(re.a(var2, 4371, new String[]{Integer.toString(gm.field_k[3], 16), or.field_d[3]}), param0 ^ 27274, "Project_Exotics");
+            wg.field_e.a(re.a(var2, 4371, new String[]{Integer.toString(gm.field_k[0], 16), or.field_d[0].toUpperCase()}), 27275, "PROJECT_METAL");
+            wg.field_e.a(re.a(var2, param0 ^ 4370, new String[]{Integer.toString(gm.field_k[1], 16), or.field_d[1].toUpperCase()}), 27275, "PROJECT_BIOMASS");
+            wg.field_e.a(re.a(var2, param0 ^ 4370, new String[]{Integer.toString(gm.field_k[2], 16), or.field_d[2].toUpperCase()}), param0 ^ 27274, "PROJECT_ENERGY");
+            wg.field_e.a(re.a(var2, param0 + 4370, new String[]{Integer.toString(gm.field_k[3], 16), or.field_d[3].toUpperCase()}), 27275, "PROJECT_EXOTICS");
             return;
           } else {
-            wg.field_e.a(re.a("<col=<%0>><%1></col>", 4371, new String[2]), 27275, "resource" + var2_int);
-            wg.field_e.a(re.a("<col=<%0>><%1></col>", 4371, new String[2]), 27275, "Resource" + var2_int);
+            wg.field_e.a(re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(gm.field_k[var2_int], 16), h.field_x[var2_int].toLowerCase()}), 27275, "resource" + var2_int);
+            wg.field_e.a(re.a("<col=<%0>><%1></col>", param0 ^ 4370, new String[]{Integer.toString(gm.field_k[var2_int], 16), h.field_x[var2_int]}), 27275, "Resource" + var2_int);
             var2_int++;
             continue L0;
           }
@@ -1079,9 +1092,9 @@ public final class ShatteredPlansClient extends tl {
     private final boolean c(int param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
-        int stackIn_75_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_73_0 = 0;
+        int stackIn_77_0 = 0;
+        int stackOut_76_0 = 0;
+        int stackOut_75_0 = 0;
         var4 = field_F ? 1 : 0;
         na.a((byte) 51);
         if (null != cm.field_a) {
@@ -1094,31 +1107,31 @@ public final class ShatteredPlansClient extends tl {
                   if (!kl.field_s.b((byte) -45)) {
                     break L1;
                   } else {
-                    if (kl.field_s.a("lobby", 98)) {
+                    if (kl.field_s.a("lobby", param0 + 16)) {
                       L2: {
                         if (!rl.field_f.b((byte) 120)) {
                           break L2;
                         } else {
-                          if (rl.field_f.a("lobby", -112)) {
+                          if (rl.field_f.a("lobby", param0 ^ -62)) {
                             L3: {
                               if (!cm.field_a.b((byte) 120)) {
                                 break L3;
                               } else {
-                                if (!cm.field_a.a(-1)) {
+                                if (!cm.field_a.a(param0 + -83)) {
                                   break L3;
                                 } else {
                                   L4: {
                                     if (!ld.field_m.b((byte) -70)) {
                                       break L4;
                                     } else {
-                                      if (!ld.field_m.a(-1)) {
+                                      if (!ld.field_m.a(param0 + -83)) {
                                         break L4;
                                       } else {
                                         L5: {
                                           if (!df.field_n.b((byte) 111)) {
                                             break L5;
                                           } else {
-                                            if (!df.field_n.a(-1)) {
+                                            if (!df.field_n.a(param0 + -83)) {
                                               break L5;
                                             } else {
                                               L6: {
@@ -1139,7 +1152,7 @@ public final class ShatteredPlansClient extends tl {
                                                             if (!nh.field_l.b((byte) -19)) {
                                                               break L8;
                                                             } else {
-                                                              if (nh.field_l.a(-1)) {
+                                                              if (nh.field_l.a(param0 ^ -83)) {
                                                                 L9: {
                                                                   if (!ti.field_g.b((byte) -79)) {
                                                                     break L9;
@@ -1151,7 +1164,7 @@ public final class ShatteredPlansClient extends tl {
                                                                         if (!ai.field_c.b((byte) -40)) {
                                                                           break L10;
                                                                         } else {
-                                                                          if (!ai.field_c.a(-1)) {
+                                                                          if (!ai.field_c.a(param0 ^ -83)) {
                                                                             break L10;
                                                                           } else {
                                                                             L11: {
@@ -1170,9 +1183,9 @@ public final class ShatteredPlansClient extends tl {
                                                                                       } else {
                                                                                         dp.e(-23771);
                                                                                         nj.a(65.0f, 2, jp.field_xb);
-                                                                                        ((ShatteredPlansClient) this).d(1);
+                                                                                        this.d(param0 + -81);
                                                                                         if (param1) {
-                                                                                          vo.a(ld.field_m, cm.field_a, 100);
+                                                                                          vo.a(ld.field_m, cm.field_a, param0 + 18);
                                                                                           cm.field_a = null;
                                                                                           ld.field_m = null;
                                                                                           u.c(122);
@@ -1183,7 +1196,7 @@ public final class ShatteredPlansClient extends tl {
                                                                                       }
                                                                                     }
                                                                                   }
-                                                                                  nj.a(75.0f, 2, nc.a(ed.field_e, la.field_k, 36, jh.field_v));
+                                                                                  nj.a(75.0f, 2, nc.a(ed.field_e, la.field_k, param0 ^ 118, jh.field_v));
                                                                                   return false;
                                                                                 }
                                                                               }
@@ -1215,12 +1228,12 @@ public final class ShatteredPlansClient extends tl {
                                                   }
                                                 }
                                               }
-                                              nj.a(60.0f, 2, bh.a("", m.field_z, (byte) 62, le.field_a, hc.field_b));
+                                              nj.a(60.0f, param0 + -80, bh.a("", m.field_z, (byte) 62, le.field_a, hc.field_b));
                                               return false;
                                             }
                                           }
                                         }
-                                        nj.a(45.0f, 2, ve.a(df.field_n, 0, le.field_a, hc.field_b, -14930));
+                                        nj.a(45.0f, 2, ve.a(df.field_n, 0, le.field_a, hc.field_b, param0 + -15012));
                                         return false;
                                       }
                                     }
@@ -1251,13 +1264,13 @@ public final class ShatteredPlansClient extends tl {
               }
             }
           }
-          nj.a(10.0f, 2, bh.a("basic", kl.field_s, (byte) 38, fa.field_J, ii.field_r));
+          nj.a(10.0f, param0 ^ 80, bh.a("basic", kl.field_s, (byte) 38, fa.field_J, ii.field_r));
           return false;
         } else {
           if (m.field_z != null) {
             nj.a(75.0f, 2, cq.field_I);
-            ((ShatteredPlansClient) this).d(1);
-            ii.a(m.field_z, df.field_n, 35);
+            this.d(1);
+            ii.a(m.field_z, df.field_n, param0 + -47);
             df.field_n = null;
             m.field_z = null;
             u.c(126);
@@ -1266,7 +1279,7 @@ public final class ShatteredPlansClient extends tl {
             if (ti.field_g == null) {
               if (nh.field_l == null) {
                 if (null != ai.field_c) {
-                  ph.a(ai.field_c, -85);
+                  ph.a(ai.field_c, param0 + -167);
                   mh.field_h = oq.a(ai.field_c.a(true, "starnames.txt", ""), (byte) -17);
                   ai.field_c = null;
                   u.c(121);
@@ -1280,23 +1293,31 @@ public final class ShatteredPlansClient extends tl {
                     L13: while (true) {
                       if (14 <= var3) {
                         L14: {
-                          gr.field_o = 0;
-                          if (bs.field_b < 2) {
-                            stackOut_74_0 = 0;
-                            stackIn_75_0 = stackOut_74_0;
+                          if (param0 == 82) {
                             break L14;
                           } else {
-                            stackOut_73_0 = 1;
-                            stackIn_75_0 = stackOut_73_0;
+                            this.l(64);
                             break L14;
                           }
                         }
-                        se.field_g = stackIn_75_0 != 0;
+                        L15: {
+                          gr.field_o = 0;
+                          if (bs.field_b < 2) {
+                            stackOut_76_0 = 0;
+                            stackIn_77_0 = stackOut_76_0;
+                            break L15;
+                          } else {
+                            stackOut_75_0 = 1;
+                            stackIn_77_0 = stackOut_75_0;
+                            break L15;
+                          }
+                        }
+                        se.field_g = stackIn_77_0 != 0;
                         uc.field_A = -1;
                         vr.field_c = 0;
                         de.field_j = -1;
                         hk.a(50, (byte) 52);
-                        ec.b(-8, 50);
+                        ec.b(param0 ^ -86, 50);
                         u.c(122);
                         jo.a(32767, hk.field_nb, true, 1048576);
                         return true;
@@ -1321,8 +1342,8 @@ public final class ShatteredPlansClient extends tl {
               }
             } else {
               nj.a(90.0f, 2, cc.field_p);
-              ((ShatteredPlansClient) this).d(1);
-              ck.a(ms.field_d, (java.applet.Applet) this, kl.field_s, rl.field_f, ti.field_g, la.field_k, (byte) -8);
+              this.d(1);
+              ck.a(ms.field_d, (java.applet.Applet) (this), kl.field_s, rl.field_f, ti.field_g, la.field_k, (byte) -8);
               rl.field_f = null;
               ti.field_g = null;
               la.field_k = null;
@@ -1721,13 +1742,13 @@ public final class ShatteredPlansClient extends tl {
         u.b(-31);
         da.b((byte) -37);
         ro.a((byte) -92);
-        ((ShatteredPlansClient) this).field_s = null;
-        ((ShatteredPlansClient) this).field_G = null;
+        this.field_s = null;
+        this.field_G = null;
     }
 
     public static void m(byte param0) {
         if (param0 != -46) {
-            field_L = null;
+            field_L = (String) null;
         }
         field_H = null;
         field_L = null;
@@ -1736,32 +1757,40 @@ public final class ShatteredPlansClient extends tl {
     }
 
     public final void init() {
-        ((ShatteredPlansClient) this).a("shatteredplans", 15, (byte) 112);
+        this.a("shatteredplans", 15, (byte) 112);
     }
 
     private final void b(boolean param0, boolean param1) {
+        boolean discarded$4 = false;
+        int fieldTemp$5 = 0;
+        oh discarded$6 = null;
+        boolean discarded$7 = false;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        String[] var10 = null;
+        String var9 = null;
         String[] var11 = null;
-        int stackIn_75_0 = 0;
-        int stackIn_85_0 = 0;
-        int stackIn_90_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_84_0 = 0;
-        int stackOut_83_0 = 0;
-        int stackOut_89_0 = 0;
-        int stackOut_88_0 = 0;
+        String[] var12 = null;
+        int stackIn_80_0 = 0;
+        int stackIn_83_0 = 0;
+        int stackIn_100_0 = 0;
+        int stackIn_105_0 = 0;
+        int stackOut_79_0 = 0;
+        int stackOut_78_0 = 0;
+        int stackOut_82_0 = 0;
+        int stackOut_81_0 = 0;
+        int stackOut_99_0 = 0;
+        int stackOut_98_0 = 0;
+        int stackOut_104_0 = 0;
+        int stackOut_103_0 = 0;
         L0: {
           var8 = field_F ? 1 : 0;
-          if (~jb.field_c != ~jb.field_g) {
+          if ((jb.field_c ^ -1) != (jb.field_g ^ -1)) {
             if (jb.field_g != po.field_f) {
-              if (~jb.field_g == ~gs.field_d) {
+              if ((jb.field_g ^ -1) == (gs.field_d ^ -1)) {
                 L1: {
                   if (!w.d(true)) {
                     L2: {
@@ -1774,25 +1803,54 @@ public final class ShatteredPlansClient extends tl {
                     }
                     L3: {
                       if (bs.field_b < 2) {
-                        stackOut_74_0 = 0;
-                        stackIn_75_0 = stackOut_74_0;
+                        stackOut_79_0 = 0;
+                        stackIn_80_0 = stackOut_79_0;
                         break L3;
                       } else {
-                        stackOut_73_0 = 1;
-                        stackIn_75_0 = stackOut_73_0;
+                        stackOut_78_0 = 1;
+                        stackIn_80_0 = stackOut_78_0;
                         break L3;
                       }
                     }
                     L4: {
-                      se.field_g = stackIn_75_0 != 0;
+                      se.field_g = stackIn_80_0 != 0;
                       gr.field_o = sh.field_b;
                       jc.a(75, id.a(2, kl.field_s, "basic", "unachieved"));
-                      oi.a(true);
-                      if (nh.a((byte) -111, gr.field_o)) {
-                        rn.a(1048576);
+                      if (param0) {
+                        stackOut_82_0 = 0;
+                        stackIn_83_0 = stackOut_82_0;
                         break L4;
                       } else {
+                        stackOut_81_0 = 1;
+                        stackIn_83_0 = stackOut_81_0;
                         break L4;
+                      }
+                    }
+                    L5: {
+                      oi.a(stackIn_83_0 != 0);
+                      if (ne.field_s) {
+                        ne.field_s = false;
+                        m.a(8, 13421772, rm.field_b, 8, mp.field_b.field_K, mr.field_i, 240, mp.field_b.field_q + mp.field_b.field_K, mr.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (bi[]) null, es.field_n);
+                        fm.a(false, -1);
+                        break L5;
+                      } else {
+                        break L5;
+                      }
+                    }
+                    L6: {
+                      if (!ns.field_ob) {
+                        break L6;
+                      } else {
+                        ta.a(gr.field_o, -6, (byte) 96, false);
+                        break L6;
+                      }
+                    }
+                    L7: {
+                      if (nh.a((byte) -111, gr.field_o)) {
+                        rn.a(1048576);
+                        break L7;
+                      } else {
+                        break L7;
                       }
                     }
                     s.a(1);
@@ -1807,7 +1865,7 @@ public final class ShatteredPlansClient extends tl {
                 break L0;
               } else {
                 na.field_F = na.field_F - 1;
-                if (na.field_F != 0) {
+                if (-1 != (na.field_F ^ -1)) {
                   break L0;
                 } else {
                   jb.field_g = jb.field_c;
@@ -1816,8 +1874,21 @@ public final class ShatteredPlansClient extends tl {
               }
             } else {
               na.field_F = na.field_F + 1;
-              if (na.field_F == 16) {
-                si.f((byte) -91);
+              if ((na.field_F ^ -1) == -17) {
+                L8: {
+                  if (ne.field_s) {
+                    oq.a(param0);
+                    break L8;
+                  } else {
+                    if (!ns.field_ob) {
+                      si.f((byte) -91);
+                      break L8;
+                    } else {
+                      si.f((byte) -91);
+                      break L8;
+                    }
+                  }
+                }
                 jb.field_g = gs.field_d;
                 break L0;
               } else {
@@ -1825,200 +1896,200 @@ public final class ShatteredPlansClient extends tl {
               }
             }
           } else {
-            L5: {
+            L9: {
               var3 = 0;
               var4 = 0;
               if (param1) {
-                break L5;
+                break L9;
               } else {
                 if (vr.field_c == gr.field_o) {
-                  if (vr.field_c != -1) {
-                    if (vr.field_c != -2) {
-                      if (vr.field_c == -3) {
+                  if ((vr.field_c ^ -1) != 0) {
+                    if (1 != (vr.field_c ^ -1)) {
+                      if ((vr.field_c ^ -1) == 2) {
                         ub.f((byte) 93);
-                        break L5;
+                        break L9;
                       } else {
                         if (!nh.a((byte) -121, vr.field_c)) {
-                          break L5;
+                          break L9;
                         } else {
                           mj.field_Hb[vr.field_c].i(2664);
-                          break L5;
+                          break L9;
                         }
                       }
                     } else {
                       var3 = 1;
-                      break L5;
+                      break L9;
                     }
                   } else {
                     if (mf.field_p) {
                       var3 = 1;
                       var4 = 1;
-                      break L5;
+                      break L9;
                     } else {
                       ce.field_x.b(true, true);
-                      L6: while (true) {
+                      L10: while (true) {
                         if (!cc.e((byte) 55)) {
-                          break L5;
+                          break L9;
                         } else {
                           ce.field_x.g(-86);
-                          continue L6;
+                          continue L10;
                         }
                       }
                     }
                   }
                 } else {
-                  L7: {
-                    L8: {
+                  L11: {
+                    L12: {
                       if (eh.field_Q != 0) {
-                        break L8;
+                        break L12;
                       } else {
                         if (!nh.a((byte) -76, vr.field_c)) {
-                          break L8;
+                          break L12;
                         } else {
                           if (!mj.field_Hb[vr.field_c].a((byte) 95)) {
-                            break L7;
+                            break L11;
                           } else {
-                            break L8;
+                            break L12;
                           }
                         }
                       }
                     }
                     eh.field_Q = eh.field_Q + 1;
-                    break L7;
+                    break L11;
                   }
                   if (eh.field_Q == 32) {
                     rn.a(1048576);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-              }
-            }
-            L9: {
-              if (!mf.field_p) {
-                break L9;
-              } else {
-                if (md.field_Q) {
-                  break L9;
-                } else {
-                  if (!is.field_a) {
-                    L10: {
-                      if (!v.field_b) {
-                        break L10;
-                      } else {
-                        if (!sr.field_h) {
-                          break L10;
-                        } else {
-                          var3 = 0;
-                          break L10;
-                        }
-                      }
-                    }
-                    L11: {
-                      cf.a(2, var3 != 0);
-                      if (!kc.field_d) {
-                        break L11;
-                      } else {
-                        in.field_g.b(var4 != 0, true);
-                        break L11;
-                      }
-                    }
-                    L12: {
-                      if (v.field_b) {
-                        cf.a(320, 8, 180, var4 != 0);
-                        ce.field_x.b(var4 != 0, true);
-                        break L12;
-                      } else {
-                        break L12;
-                      }
-                    }
-                    L13: while (true) {
-                      if (!cc.e((byte) 55)) {
-                        break L9;
-                      } else {
-                        L14: {
-                          if (v.field_b) {
-                            if (gn.a(13, -9861, 12, 15)) {
-                              continue L13;
-                            } else {
-                              break L14;
-                            }
-                          } else {
-                            boolean discarded$3 = qf.a(0, 13, 15, 12);
-                            break L14;
-                          }
-                        }
-                        L15: {
-                          if (kc.field_d) {
-                            in.field_g.g(-98);
-                            break L15;
-                          } else {
-                            break L15;
-                          }
-                        }
-                        if (!v.field_b) {
-                          continue L13;
-                        } else {
-                          ce.field_x.g(-99);
-                          continue L13;
-                        }
-                      }
-                    }
+                    break L9;
                   } else {
                     break L9;
                   }
                 }
               }
             }
-            L16: {
-              if (mf.field_p) {
-                break L16;
+            L13: {
+              if (!mf.field_p) {
+                break L13;
               } else {
-                af.b(0);
-                break L16;
+                if (md.field_Q) {
+                  break L13;
+                } else {
+                  if (!is.field_a) {
+                    L14: {
+                      if (!v.field_b) {
+                        break L14;
+                      } else {
+                        if (!sr.field_h) {
+                          break L14;
+                        } else {
+                          var3 = 0;
+                          break L14;
+                        }
+                      }
+                    }
+                    L15: {
+                      cf.a(2, var3 != 0);
+                      if (!kc.field_d) {
+                        break L15;
+                      } else {
+                        in.field_g.b(var4 != 0, true);
+                        break L15;
+                      }
+                    }
+                    L16: {
+                      if (v.field_b) {
+                        cf.a(320, 8, 180, var4 != 0);
+                        ce.field_x.b(var4 != 0, true);
+                        break L16;
+                      } else {
+                        break L16;
+                      }
+                    }
+                    L17: while (true) {
+                      if (!cc.e((byte) 55)) {
+                        break L13;
+                      } else {
+                        L18: {
+                          if (v.field_b) {
+                            if (gn.a(13, -9861, 12, 15)) {
+                              continue L17;
+                            } else {
+                              break L18;
+                            }
+                          } else {
+                            discarded$4 = qf.a(0, 13, 15, 12);
+                            break L18;
+                          }
+                        }
+                        L19: {
+                          if (kc.field_d) {
+                            in.field_g.g(-98);
+                            break L19;
+                          } else {
+                            break L19;
+                          }
+                        }
+                        if (!v.field_b) {
+                          continue L17;
+                        } else {
+                          ce.field_x.g(-99);
+                          continue L17;
+                        }
+                      }
+                    }
+                  } else {
+                    break L13;
+                  }
+                }
               }
             }
-            L17: {
+            L20: {
+              if (mf.field_p) {
+                break L20;
+              } else {
+                af.b(0);
+                break L20;
+              }
+            }
+            L21: {
               if (!ge.field_n) {
-                if (fl.field_h <= 0) {
-                  break L17;
+                if ((fl.field_h ^ -1) >= -1) {
+                  break L21;
                 } else {
                   fl.field_h = fl.field_h - 1;
-                  break L17;
+                  break L21;
                 }
               } else {
                 if (fl.field_h < ed.field_f) {
                   fl.field_h = fl.field_h + 1;
-                  break L17;
+                  break L21;
                 } else {
-                  break L17;
+                  break L21;
                 }
               }
             }
-            L18: {
+            L22: {
               var5 = ed.field_f * ed.field_f;
               var6 = -(fl.field_h * fl.field_h) + var5;
               var7 = 120 * var6 / var5 + fs.field_z;
               fa.a(var7, (byte) -47);
-              if (uc.field_v > 0) {
+              if (-1 > (uc.field_v ^ -1)) {
                 uc.field_v = uc.field_v - 1;
-                break L18;
+                break L22;
               } else {
-                break L18;
+                break L22;
               }
             }
-            L19: {
-              if (((ShatteredPlansClient) this).field_G.d(0) == null) {
-                break L19;
+            L23: {
+              if (this.field_G.d(0) == null) {
+                break L23;
               } else {
-                int fieldTemp$4 = ((ShatteredPlansClient) this).field_I + 1;
-                ((ShatteredPlansClient) this).field_I = ((ShatteredPlansClient) this).field_I + 1;
-                if (fieldTemp$4 != 335) {
-                  break L19;
+                fieldTemp$5 = this.field_I + 1;
+                this.field_I = this.field_I + 1;
+                if (-336 != (fieldTemp$5 ^ -1)) {
+                  break L23;
                 } else {
-                  ((ShatteredPlansClient) this).field_I = 0;
-                  oh discarded$5 = ((ShatteredPlansClient) this).field_G.h(64);
+                  this.field_I = 0;
+                  discarded$6 = this.field_G.h(64);
                   break L0;
                 }
               }
@@ -2026,62 +2097,71 @@ public final class ShatteredPlansClient extends tl {
             break L0;
           }
         }
-        L20: {
-          if (gr.field_o == -4) {
-            L21: {
-              tq.field_b = null;
-              var10 = new String[]{hn.field_f[0], hn.field_f[1], hn.field_f[2], hn.field_f[3]};
-              ce.field_x = new km(false, false, (int) ga.field_w[0], td.field_K, hj.field_k, var10, 0, false, (kq) null);
-              if (!uh.field_i) {
-                stackOut_84_0 = 0;
-                stackIn_85_0 = stackOut_84_0;
-                break L21;
-              } else {
-                stackOut_83_0 = 1;
-                stackIn_85_0 = stackOut_83_0;
-                break L21;
-              }
-            }
-            var4 = stackIn_85_0;
-            ta.a(0, -1, (byte) 96, var4 != 0);
-            cs.field_i = true;
-            break L20;
-          } else {
-            break L20;
-          }
-        }
-        L22: {
-          if (gr.field_o != -5) {
-            break L22;
-          } else {
-            L23: {
-              tq.field_b = null;
-              var11 = new String[]{hn.field_f[0]};
-              ce.field_x = new km(false, true, 0, hi.field_a, 0, var11, 0, false, (kq) null);
-              if (!uh.field_i) {
-                stackOut_89_0 = 0;
-                stackIn_90_0 = stackOut_89_0;
-                break L23;
-              } else {
-                stackOut_88_0 = 1;
-                stackIn_90_0 = stackOut_88_0;
-                break L23;
-              }
-            }
-            var4 = stackIn_90_0;
-            ta.a(0, -1, (byte) 96, var4 != 0);
-            cs.field_i = true;
-            break L22;
-          }
-        }
         L24: {
-          if (gr.field_o != -7) {
+          if (!param0) {
             break L24;
+          } else {
+            var9 = (String) null;
+            discarded$7 = ShatteredPlansClient.a(64, 68L, (String) null);
+            break L24;
+          }
+        }
+        L25: {
+          if (gr.field_o == -4) {
+            L26: {
+              tq.field_b = null;
+              var11 = new String[]{hn.field_f[0], hn.field_f[1], hn.field_f[2], hn.field_f[3]};
+              ce.field_x = new km(false, false, (int) ga.field_w[0], td.field_K, hj.field_k, var11, 0, false, (kq) null);
+              if (!uh.field_i) {
+                stackOut_99_0 = 0;
+                stackIn_100_0 = stackOut_99_0;
+                break L26;
+              } else {
+                stackOut_98_0 = 1;
+                stackIn_100_0 = stackOut_98_0;
+                break L26;
+              }
+            }
+            var4 = stackIn_100_0;
+            ta.a(0, -1, (byte) 96, var4 != 0);
+            cs.field_i = true;
+            break L25;
+          } else {
+            break L25;
+          }
+        }
+        L27: {
+          if (gr.field_o != -5) {
+            break L27;
+          } else {
+            L28: {
+              tq.field_b = null;
+              var12 = new String[]{hn.field_f[0]};
+              ce.field_x = new km(false, true, 0, hi.field_a, 0, var12, 0, false, (kq) null);
+              if (!uh.field_i) {
+                stackOut_104_0 = 0;
+                stackIn_105_0 = stackOut_104_0;
+                break L28;
+              } else {
+                stackOut_103_0 = 1;
+                stackIn_105_0 = stackOut_103_0;
+                break L28;
+              }
+            }
+            var4 = stackIn_105_0;
+            ta.a(0, -1, (byte) 96, var4 != 0);
+            cs.field_i = true;
+            break L27;
+          }
+        }
+        L29: {
+          if (gr.field_o != -7) {
+            break L29;
           } else {
             tk.a(11, np.field_a.g(-79), (byte) -2);
             gr.field_o = vr.field_c;
             is.field_a = true;
-            break L24;
+            break L29;
           }
         }
     }
@@ -2093,7 +2173,7 @@ public final class ShatteredPlansClient extends tl {
             u.c(121);
         }
         oi.field_h = io.a(3, 50);
-        ms.field_d = rm.a(5, true, false, true, false);
+        ms.field_d = rm.a(5, true, param0, !param0 ? true : false, false);
         nh.field_l = io.a(6, 93);
         ti.field_g = io.a(7, 110);
         cm.field_a = io.a(8, 90);
@@ -2151,11 +2231,11 @@ public final class ShatteredPlansClient extends tl {
           var14 = field_F ? 1 : 0;
           if (bj.field_K != null) {
             stackOut_2_0 = bj.field_K;
-            stackIn_3_0 = (Object) (Object) stackOut_2_0;
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           } else {
             stackOut_1_0 = tm.field_i;
-            stackIn_3_0 = (Object) (Object) stackOut_1_0;
+            stackIn_3_0 = stackOut_1_0;
             break L0;
           }
         }
@@ -2164,7 +2244,7 @@ public final class ShatteredPlansClient extends tl {
           if (ik.field_h) {
             if (m.f((byte) 116)) {
               L1: {
-                if (gr.field_o != vr.field_c) {
+                if ((gr.field_o ^ -1) != (vr.field_c ^ -1)) {
                   L2: {
                     if (-1 != vr.field_c) {
                       stackOut_27_0 = 0;
@@ -2179,7 +2259,7 @@ public final class ShatteredPlansClient extends tl {
                   L3: {
                     L4: {
                       u.a(stackIn_28_0 != 0, false);
-                      if (vr.field_c != gr.field_o) {
+                      if ((vr.field_c ^ -1) != (gr.field_o ^ -1)) {
                         break L4;
                       } else {
                         if (-2 == vr.field_c) {
@@ -2229,7 +2309,7 @@ public final class ShatteredPlansClient extends tl {
                 } else {
                   if (vr.field_c != -2) {
                     L7: {
-                      if (vr.field_c != -1) {
+                      if (0 != (vr.field_c ^ -1)) {
                         stackOut_17_0 = 0;
                         stackIn_18_0 = stackOut_17_0;
                         break L7;
@@ -2245,7 +2325,7 @@ public final class ShatteredPlansClient extends tl {
                         if (vr.field_c != gr.field_o) {
                           break L9;
                         } else {
-                          if (vr.field_c == -2) {
+                          if ((vr.field_c ^ -1) == 1) {
                             break L8;
                           } else {
                             break L9;
@@ -2269,11 +2349,11 @@ public final class ShatteredPlansClient extends tl {
               }
               L10: {
                 if (gr.field_o != vr.field_c) {
-                  if (gr.field_o == -2) {
+                  if ((gr.field_o ^ -1) == 1) {
                     gf.c(0, 0, 640, 480, 0, 256 * eh.field_Q / 32);
                     break L10;
                   } else {
-                    if (vr.field_c != -2) {
+                    if ((vr.field_c ^ -1) != 1) {
                       break L10;
                     } else {
                       gf.c(0, 0, 640, 480, 0, -(256 * eh.field_Q / 32) + 256);
@@ -2348,17 +2428,17 @@ public final class ShatteredPlansClient extends tl {
                     break L14;
                   } else {
                     if (!i.c(0)) {
-                      if (((ShatteredPlansClient) this).field_G.g(27)) {
+                      if (this.field_G.g(27)) {
                         break L14;
                       } else {
                         L17: {
-                          var3_ref_he = (he) (Object) ((ShatteredPlansClient) this).field_G.d(param0 ^ 1);
+                          var3_ref_he = (he) ((Object) this.field_G.d(param0 ^ 1));
                           var4 = ud.field_a[var3_ref_he.field_k];
                           var5_int = mp.field_b.c(var4) + 50;
                           var6 = 36;
                           var7_int = 10 - -(var5_int / 2);
                           var8 = 10;
-                          var9 = ((ShatteredPlansClient) this).field_I;
+                          var9 = this.field_I;
                           if (303 < var9) {
                             var9 = 335 + -var9;
                             break L17;
@@ -2372,14 +2452,14 @@ public final class ShatteredPlansClient extends tl {
                           }
                         }
                         var10 = re.a(0, 32, var9, var5_int, param0 ^ 1);
-                        var11 = 10 + (var5_int - var10 >> 1);
+                        var11 = 10 + (var5_int - var10 >> -1947436255);
                         var18 = new int[4];
                         gf.a(var18);
                         ga.a(var6, var8, var11, (byte) -78, var10);
                         gf.d(var11, var8, var10 + var11, var8 - -var6);
                         var13 = oi.a(var3_ref_he.field_k, (byte) 66);
                         var13.f(-36 + (var7_int - -(var5_int / 2)), 4 + var8);
-                        mp.field_b.d(var4, -(var5_int / 2) + (var7_int - -10), -2 + (mp.field_b.field_J + var6 >> 1) + var8, 2805974, -1);
+                        mp.field_b.d(var4, -(var5_int / 2) + (var7_int - -10), -2 + (mp.field_b.field_J + var6 >> -2007098719) + var8, 2805974, -1);
                         gf.b(var18);
                         break L14;
                       }
@@ -2413,7 +2493,7 @@ public final class ShatteredPlansClient extends tl {
                     var3 = Runtime.getRuntime().totalMemory();
                     var5 = Runtime.getRuntime().freeMemory();
                     var7 = -var5 + var3;
-                    mp.field_b.d((int)(var7 >> 10) + "kb", 4, 2 * mp.field_b.field_J + 8, 16777215, -1);
+                    mp.field_b.d((int)(var7 >> -45671350) + "kb", 4, 2 * mp.field_b.field_J + 8, 16777215, -1);
                     break L19;
                   } else {
                     break L19;
@@ -2424,19 +2504,19 @@ public final class ShatteredPlansClient extends tl {
                 if (param0 == 1) {
                   break L20;
                 } else {
-                  ((ShatteredPlansClient) this).a(true);
+                  this.a(true);
                   break L20;
                 }
               }
-              mc.a(110, 0, (java.awt.Canvas) var2, 0);
+              mc.a(110, 0, (java.awt.Canvas) (var2), 0);
               return;
             } else {
               nj.a(100.0f, 2, jh.field_v);
-              pa.a(9242, (java.awt.Canvas) var2);
+              pa.a(9242, (java.awt.Canvas) (var2));
               return;
             }
           } else {
-            pa.a(9242, (java.awt.Canvas) var2);
+            pa.a(9242, (java.awt.Canvas) (var2));
             return;
           }
         } else {
@@ -2451,14 +2531,14 @@ public final class ShatteredPlansClient extends tl {
               break L21;
             }
           }
-          no.a(stackIn_7_0 != 0, 10, (java.awt.Canvas) var2);
+          no.a(stackIn_7_0 != 0, 10, (java.awt.Canvas) (var2));
           return;
         }
     }
 
     public ShatteredPlansClient() {
-        ((ShatteredPlansClient) this).field_G = new pf();
-        ((ShatteredPlansClient) this).field_I = 0;
+        this.field_G = new pf();
+        this.field_I = 0;
     }
 
     private final static void n(byte param0) {
@@ -2473,21 +2553,25 @@ public final class ShatteredPlansClient extends tl {
               break L0;
             } else {
               if (in.field_g == null) {
-                L1: {
-                  var1 = -320 + (cl.field_n % 640 << 1);
-                  var2 = -320 + var1;
-                  var3 = (Math.cos(3.141592653589793 * (double)var2 / 640.0) + 1.0) * 12.0;
-                  if (var3 > 16.0) {
-                    var3 = var3 + 5.0 * (var3 - 16.0);
-                    break L1;
-                  } else {
-                    break L1;
+                var1 = -320 + (cl.field_n % 640 << -330437503);
+                var2 = -320 + var1;
+                if (param0 == 67) {
+                  L1: {
+                    var3 = (Math.cos(3.141592653589793 * (double)var2 / 640.0) + 1.0) * 12.0;
+                    if (var3 > 16.0) {
+                      var3 = var3 + 5.0 * (var3 - 16.0);
+                      break L1;
+                    } else {
+                      break L1;
+                    }
                   }
+                  so.a(param0 + -67, (640 - in.field_f.field_o) / 2, 10, jf.field_a);
+                  var2 = (int)var3;
+                  in.field_f.c((640 - in.field_f.field_o) / 2, 10, 256);
+                  return;
+                } else {
+                  return;
                 }
-                so.a(0, (640 - in.field_f.field_o) / 2, 10, jf.field_a);
-                var2 = (int)var3;
-                in.field_f.c((640 - in.field_f.field_o) / 2, 10, 256);
-                return;
               } else {
                 break L0;
               }
@@ -2498,10 +2582,6 @@ public final class ShatteredPlansClient extends tl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = true;
         field_L = "Production";
         field_J = "Target: <%0> points";

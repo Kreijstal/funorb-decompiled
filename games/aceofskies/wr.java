@@ -12,12 +12,12 @@ final class wr {
         } else {
             var6 = new java.awt.image.BufferedImage(param2, param3, 2);
             var6.setRGB(0, 0, param2, param3, param1, 0, param2);
-            param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) (Object) var6, param4, (String) null));
+            param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) var6), param4, (String) null));
         }
     }
 
     public final void movemouse(int param0, int param1) {
-        ((wr) this).field_b.mouseMove(param0, param1);
+        this.field_b.mouseMove(param0, param1);
     }
 
     public final void showcursor(java.awt.Component param0, boolean param1) {
@@ -34,13 +34,13 @@ final class wr {
                 }
               }
             }
-            if (((wr) this).field_a == param0) {
+            if (this.field_a == param0) {
               return;
             } else {
               L1: {
-                if (null != ((wr) this).field_a) {
-                  ((wr) this).field_a.setCursor((java.awt.Cursor) null);
-                  ((wr) this).field_a = null;
+                if (null != this.field_a) {
+                  this.field_a.setCursor((java.awt.Cursor) null);
+                  this.field_a = null;
                   break L1;
                 } else {
                   break L1;
@@ -48,8 +48,8 @@ final class wr {
               }
               L2: {
                 if (param0 != null) {
-                  param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) (Object) new java.awt.image.BufferedImage(1, 1, 2), new java.awt.Point(0, 0), (String) null));
-                  ((wr) this).field_a = param0;
+                  param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
+                  this.field_a = param0;
                   break L2;
                 } else {
                   break L2;
@@ -66,6 +66,6 @@ final class wr {
 
     public wr() throws Exception {
         java.awt.Robot var2 = new java.awt.Robot();
-        ((wr) this).field_b = var2;
+        this.field_b = var2;
     }
 }

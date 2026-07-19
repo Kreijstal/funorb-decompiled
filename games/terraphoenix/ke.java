@@ -11,31 +11,46 @@ abstract class ke {
     static bg[] field_a;
 
     final static void a(byte param0) {
+        if (param0 > -100) {
+            field_f = -51;
+        }
     }
 
     final static void b(boolean param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Terraphoenix.field_V;
         try {
           L0: {
-            var1_int = 0;
-            L1: while (true) {
-              if (4 <= var1_int) {
-                break L0;
-              } else {
-                sj.field_a[var1_int] = new lg(var1_int);
-                var1_int++;
-                continue L1;
+            if (!param0) {
+              var1_int = 0;
+              L1: while (true) {
+                if (4 <= var1_int) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  sj.field_a[var1_int] = new lg(var1_int);
+                  var1_int++;
+                  continue L1;
+                }
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var1, "ke.E(" + false + ')');
+          throw qk.a((Throwable) ((Object) var1), "ke.E(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -55,22 +70,27 @@ abstract class ke {
             ll.a(var3, var4, (byte) 116, param0, var2);
             int var6 = -64 / ((param1 - -40) / 38);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ke.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "ke.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_g = null;
-        field_d = null;
-        field_b = null;
-        field_a = null;
+        if (param0) {
+          field_g = (String) null;
+          field_d = null;
+          field_b = null;
+          field_a = null;
+          return;
+        } else {
+          field_d = null;
+          field_b = null;
+          field_a = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         kk.a(50, 100);
         field_g = "Left click to select destination";
     }

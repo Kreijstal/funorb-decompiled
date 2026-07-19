@@ -7,19 +7,18 @@ final class hw extends sna {
     static String field_wb;
 
     public static void b(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_wb = null;
         field_xb = null;
     }
 
     hw(int param0) {
-        ((hw) this).field_vb = param0;
+        this.field_vb = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_wb = "Show lobby chat from my friends";
     }
 }

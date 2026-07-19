@@ -23,31 +23,23 @@ final class qp {
         var3 = ZombieDawn.field_J;
         if (param1 > 32) {
           var2 = param0;
-          if (0 == var2) {
-            return tk.field_b;
-          } else {
-            if (var2 != 1) {
-              if (var2 != 2) {
-                if (var2 != 3) {
-                  if (var2 == 4) {
-                    return rg.field_K;
-                  } else {
-                    if (var2 == 5) {
-                      return ti.field_d;
-                    } else {
-                      if (var2 != 6) {
+          if (0 != var2) {
+            if (-2 != (var2 ^ -1)) {
+              if ((var2 ^ -1) != -3) {
+                if ((var2 ^ -1) != -4) {
+                  if ((var2 ^ -1) != -5) {
+                    if (var2 != 5) {
+                      if (-7 != (var2 ^ -1)) {
                         if (var2 != 7) {
-                          if (var2 == 9) {
-                            return fe.field_J;
-                          } else {
-                            if (var2 != 10) {
-                              if (var2 != 13) {
-                                if (var2 != 12) {
+                          if (var2 != 9) {
+                            if (-11 != (var2 ^ -1)) {
+                              if ((var2 ^ -1) != -14) {
+                                if (-13 != (var2 ^ -1)) {
                                   if (var2 != 14) {
-                                    if (var2 == 15) {
-                                      return tl.field_k;
-                                    } else {
+                                    if ((var2 ^ -1) != -16) {
                                       return null;
+                                    } else {
+                                      return tl.field_k;
                                     }
                                   } else {
                                     return ig.field_Bb;
@@ -61,6 +53,8 @@ final class qp {
                             } else {
                               return ub.field_h;
                             }
+                          } else {
+                            return fe.field_J;
                           }
                         } else {
                           return bh.field_h;
@@ -68,7 +62,11 @@ final class qp {
                       } else {
                         return ij.field_J;
                       }
+                    } else {
+                      return ti.field_d;
                     }
+                  } else {
+                    return rg.field_K;
                   }
                 } else {
                   return cl.field_a;
@@ -79,17 +77,15 @@ final class qp {
             } else {
               return mm.field_l;
             }
+          } else {
+            return tk.field_b;
           }
         } else {
-          return null;
+          return (String) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "More memory is required to run in different resolutions. Try updating your version of Java or changing your Java settings.";
     }
 }

@@ -110,9 +110,10 @@ final class nb {
     }
 
     public static void a(byte param0) {
-        field_d = null;
+        boolean discarded$2 = false;
+        field_d = (bi[][]) null;
         if (param0 <= 99) {
-          boolean discarded$2 = nb.a('￿', 111);
+          discarded$2 = nb.a('￿', 111);
           field_b = null;
           field_c = null;
           return;
@@ -130,18 +131,18 @@ final class nb {
         } else {
           if (null != ji.field_G) {
             ji.field_G.i((byte) -104);
-            var1 = w.l(0);
+            var1 = w.l(param0 ^ param0);
             no.field_e = new ri(var1, (String) null, true, false, false);
-            le.field_e.a(true, (vg) (Object) ae.field_f);
-            ae.field_f.b((vg) (Object) no.field_e, 108);
-            ae.field_f.n(7489);
+            le.field_e.a(true, ae.field_f);
+            ae.field_f.b(no.field_e, param0 + -18);
+            ae.field_f.n(param0 + 7363);
             return;
           } else {
-            var1 = w.l(0);
+            var1 = w.l(param0 ^ param0);
             no.field_e = new ri(var1, (String) null, true, false, false);
-            le.field_e.a(true, (vg) (Object) ae.field_f);
-            ae.field_f.b((vg) (Object) no.field_e, 108);
-            ae.field_f.n(7489);
+            le.field_e.a(true, ae.field_f);
+            ae.field_f.b(no.field_e, param0 + -18);
+            ae.field_f.n(param0 + 7363);
             return;
           }
         }
@@ -185,23 +186,23 @@ final class nb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("nb.B(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -209,16 +210,12 @@ final class nb {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Please wait while we search.<br>Games usually start within a minute, provided the server is busy enough.<br><br>The longer you are forced to wait, the earlier in the list of players you are likely to appear.<br><br>If the game doesn't start, click 'Cancel' and then try choosing 'Don't mind' for more options or switching to a busier lobby.";
         field_b = new int[8192];
     }

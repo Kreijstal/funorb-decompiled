@@ -54,12 +54,12 @@ final class sfa extends ha {
         int var2 = 0;
         var2 = 0;
         L0: while (true) {
-          if (var2 < ((sfa) this).field_u) {
-            if (((sfa) this).field_Y[var2].field_b != param0) {
+          if (var2 < this.field_u) {
+            if (this.field_Y[var2].field_b != param0) {
               var2++;
               continue L0;
             } else {
-              return ((sfa) this).field_Y[var2];
+              return this.field_Y[var2];
             }
           } else {
             return null;
@@ -68,10 +68,19 @@ final class sfa extends ha {
     }
 
     final boolean d(int param0) {
-        return ((sfa) this).field_c.a((byte) -56, param0).field_b || ((sfa) this).field_c.a((byte) 125, param0).field_n;
+        return this.field_c.a((byte) -56, param0).field_b || this.field_c.a((byte) 125, param0).field_n;
     }
 
     final void ya() {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -81,19 +90,19 @@ final class sfa extends ha {
         int var7 = 0;
         int var8 = 0;
         L0: {
-          if (((sfa) this).field_J != 0) {
+          if (this.field_J != 0) {
             break L0;
           } else {
-            if (((sfa) this).field_W != ((sfa) this).field_K) {
+            if (this.field_W != this.field_K) {
               break L0;
             } else {
-              if (((sfa) this).field_d != 0) {
+              if (this.field_d != 0) {
                 break L0;
               } else {
-                if (((sfa) this).field_P != ((sfa) this).field_h) {
+                if (this.field_P != this.field_h) {
                   break L0;
                 } else {
-                  var1 = ((sfa) this).field_n.length;
+                  var1 = this.field_n.length;
                   var2 = var1 - (var1 & 7);
                   var3 = 0;
                   L1: while (true) {
@@ -102,37 +111,37 @@ final class sfa extends ha {
                         if (var3 >= var1) {
                           return;
                         } else {
-                          int incrementValue$9 = var3;
+                          incrementValue$9 = var3;
                           var3++;
-                          ((sfa) this).field_n[incrementValue$9] = 2147483648.0f;
+                          this.field_n[incrementValue$9] = 2147483648.0f;
                           continue L2;
                         }
                       }
                     } else {
-                      int incrementValue$10 = var3;
+                      incrementValue$10 = var3;
                       var3++;
-                      ((sfa) this).field_n[incrementValue$10] = 2147483648.0f;
-                      int incrementValue$11 = var3;
+                      this.field_n[incrementValue$10] = 2147483648.0f;
+                      incrementValue$11 = var3;
                       var3++;
-                      ((sfa) this).field_n[incrementValue$11] = 2147483648.0f;
-                      int incrementValue$12 = var3;
+                      this.field_n[incrementValue$11] = 2147483648.0f;
+                      incrementValue$12 = var3;
                       var3++;
-                      ((sfa) this).field_n[incrementValue$12] = 2147483648.0f;
-                      int incrementValue$13 = var3;
+                      this.field_n[incrementValue$12] = 2147483648.0f;
+                      incrementValue$13 = var3;
                       var3++;
-                      ((sfa) this).field_n[incrementValue$13] = 2147483648.0f;
-                      int incrementValue$14 = var3;
+                      this.field_n[incrementValue$13] = 2147483648.0f;
+                      incrementValue$14 = var3;
                       var3++;
-                      ((sfa) this).field_n[incrementValue$14] = 2147483648.0f;
-                      int incrementValue$15 = var3;
+                      this.field_n[incrementValue$14] = 2147483648.0f;
+                      incrementValue$15 = var3;
                       var3++;
-                      ((sfa) this).field_n[incrementValue$15] = 2147483648.0f;
-                      int incrementValue$16 = var3;
+                      this.field_n[incrementValue$15] = 2147483648.0f;
+                      incrementValue$16 = var3;
                       var3++;
-                      ((sfa) this).field_n[incrementValue$16] = 2147483648.0f;
-                      int incrementValue$17 = var3;
+                      this.field_n[incrementValue$16] = 2147483648.0f;
+                      incrementValue$17 = var3;
                       var3++;
-                      ((sfa) this).field_n[incrementValue$17] = 2147483648.0f;
+                      this.field_n[incrementValue$17] = 2147483648.0f;
                       continue L1;
                     }
                   }
@@ -141,10 +150,10 @@ final class sfa extends ha {
             }
           }
         }
-        var1 = ((sfa) this).field_W - ((sfa) this).field_J;
-        var2 = ((sfa) this).field_P - ((sfa) this).field_d;
-        var3 = ((sfa) this).field_K - var1;
-        var4 = ((sfa) this).field_J + ((sfa) this).field_d * ((sfa) this).field_K;
+        var1 = this.field_W - this.field_J;
+        var2 = this.field_P - this.field_d;
+        var3 = this.field_K - var1;
+        var4 = this.field_J + this.field_d * this.field_K;
         var5 = var1 >> 3;
         var6 = var1 & 7;
         var1 = var4 - 1;
@@ -160,21 +169,21 @@ final class sfa extends ha {
                 var7 = var5;
                 L5: while (true) {
                   var1++;
-                  ((sfa) this).field_n[var1] = 2147483648.0f;
+                  this.field_n[var1] = 2147483648.0f;
                   var1++;
-                  ((sfa) this).field_n[var1] = 2147483648.0f;
+                  this.field_n[var1] = 2147483648.0f;
                   var1++;
-                  ((sfa) this).field_n[var1] = 2147483648.0f;
+                  this.field_n[var1] = 2147483648.0f;
                   var1++;
-                  ((sfa) this).field_n[var1] = 2147483648.0f;
+                  this.field_n[var1] = 2147483648.0f;
                   var1++;
-                  ((sfa) this).field_n[var1] = 2147483648.0f;
+                  this.field_n[var1] = 2147483648.0f;
                   var1++;
-                  ((sfa) this).field_n[var1] = 2147483648.0f;
+                  this.field_n[var1] = 2147483648.0f;
                   var1++;
-                  ((sfa) this).field_n[var1] = 2147483648.0f;
+                  this.field_n[var1] = 2147483648.0f;
                   var1++;
-                  ((sfa) this).field_n[var1] = 2147483648.0f;
+                  this.field_n[var1] = 2147483648.0f;
                   var7--;
                   if (var7 > 0) {
                     continue L5;
@@ -191,7 +200,7 @@ final class sfa extends ha {
                 var7 = var6;
                 L7: while (true) {
                   var1++;
-                  ((sfa) this).field_n[var1] = 2147483648.0f;
+                  this.field_n[var1] = 2147483648.0f;
                   var7--;
                   if (var7 > 0) {
                     continue L7;
@@ -210,10 +219,10 @@ final class sfa extends ha {
 
     private final void i(int param0) {
         int var2 = 0;
-        ((sfa) this).field_u = param0;
-        ((sfa) this).field_Y = new tw[((sfa) this).field_u];
-        for (var2 = 0; var2 < ((sfa) this).field_u; var2++) {
-            ((sfa) this).field_Y[var2] = new tw((sfa) this);
+        this.field_u = param0;
+        this.field_Y = new tw[this.field_u];
+        for (var2 = 0; var2 < this.field_u; var2++) {
+            this.field_Y[var2] = new tw((sfa) (this));
         }
     }
 
@@ -226,29 +235,29 @@ final class sfa extends ha {
         int[] var8 = null;
         int[] var9 = null;
         L0: {
-          var5 = ((sfa) this).field_A.field_m + (((sfa) this).field_A.field_r * (float)param0 + ((sfa) this).field_A.field_o * (float)param1 + ((sfa) this).field_A.field_f * (float)param2);
-          if (var5 < (float)((sfa) this).field_g) {
+          var5 = this.field_A.field_m + (this.field_A.field_r * (float)param0 + this.field_A.field_o * (float)param1 + this.field_A.field_f * (float)param2);
+          if (var5 < (float)this.field_g) {
             break L0;
           } else {
-            if (var5 <= (float)((sfa) this).field_U) {
+            if (var5 <= (float)this.field_U) {
               L1: {
                 L2: {
-                  var6 = (int)((float)((sfa) this).field_Q * (((sfa) this).field_A.field_l + (((sfa) this).field_A.field_g * (float)param0 + ((sfa) this).field_A.field_i * (float)param1 + ((sfa) this).field_A.field_n * (float)param2)) / var5);
-                  var7 = (int)((float)((sfa) this).field_C * (((sfa) this).field_A.field_e + (((sfa) this).field_A.field_h * (float)param0 + ((sfa) this).field_A.field_s * (float)param1 + ((sfa) this).field_A.field_j * (float)param2)) / var5);
-                  if (var6 < ((sfa) this).field_p) {
+                  var6 = (int)((float)this.field_Q * (this.field_A.field_l + (this.field_A.field_g * (float)param0 + this.field_A.field_i * (float)param1 + this.field_A.field_n * (float)param2)) / var5);
+                  var7 = (int)((float)this.field_C * (this.field_A.field_e + (this.field_A.field_h * (float)param0 + this.field_A.field_s * (float)param1 + this.field_A.field_j * (float)param2)) / var5);
+                  if (var6 < this.field_p) {
                     break L2;
                   } else {
-                    if (var6 > ((sfa) this).field_l) {
+                    if (var6 > this.field_l) {
                       break L2;
                     } else {
-                      if (var7 < ((sfa) this).field_k) {
+                      if (var7 < this.field_k) {
                         break L2;
                       } else {
-                        if (var7 > ((sfa) this).field_o) {
+                        if (var7 > this.field_o) {
                           break L2;
                         } else {
-                          param3[0] = var6 - ((sfa) this).field_p;
-                          param3[1] = var7 - ((sfa) this).field_k;
+                          param3[0] = var6 - this.field_p;
+                          param3[1] = var7 - this.field_k;
                           param3[2] = (int)var5;
                           break L1;
                         }
@@ -277,91 +286,93 @@ final class sfa extends ha {
     }
 
     final void f(int param0, int param1) {
-        tw var3 = ((sfa) this).a((Runnable) (Object) Thread.currentThread());
-        ((sfa) this).field_g = param0;
-        ((sfa) this).field_U = param1;
-        var3.field_B = ((sfa) this).field_U - 255;
+        tw var3 = this.a((Runnable) ((Object) Thread.currentThread()));
+        this.field_g = param0;
+        this.field_U = param1;
+        var3.field_B = this.field_U - 255;
     }
 
     final void c(int param0) {
         qq var4 = null;
         int var5 = 0;
         dw var6 = null;
-        int var2 = param0 - ((sfa) this).field_j;
-        Object var3 = ((sfa) this).field_F.b((byte) 85);
+        int var2 = param0 - this.field_j;
+        Object var3 = this.field_F.b((byte) 85);
         while (var3 != null) {
-            var4 = (qq) var3;
+            var4 = (qq) (var3);
             if (var4.field_g) {
                 var4.field_j = var4.field_j + var2;
                 var5 = var4.field_j / 20;
                 if (var5 > 0) {
-                    var6 = ((sfa) this).field_c.a((byte) -53, var4.field_f);
+                    var6 = this.field_c.a((byte) -53, var4.field_f);
                     var4.a(var6.field_s * var2 * 50 / 1000, var6.field_o * var2 * 50 / 1000);
                     var4.field_j = var4.field_j - var5 * 20;
                 }
                 var4.field_g = false;
             }
-            var3 = ((sfa) this).field_F.a((byte) 60);
+            var3 = this.field_F.a((byte) 60);
         }
-        ((sfa) this).field_j = param0;
-        ((sfa) this).field_X.b(72, 5);
-        ((sfa) this).field_F.b(119, 5);
+        this.field_j = param0;
+        this.field_X.b(72, 5);
+        this.field_F.b(119, 5);
     }
 
     final void GA(int param0) {
-        ((sfa) this).aa(0, 0, ((sfa) this).field_K, ((sfa) this).field_h, param0, 0);
+        this.aa(0, 0, this.field_K, this.field_h, param0, 0);
     }
 
     final void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((sfa) this).U(param0, param1, param2, param4, param5);
-        ((sfa) this).U(param0, param1 + param3 - 1, param2, param4, param5);
+        this.U(param0, param1, param2, param4, param5);
+        this.U(param0, param1 + param3 - 1, param2, param4, param5);
         this.c(param0, param1 + 1, param3 - 2, param4, param5);
         this.c(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
     }
 
     private final void b(java.awt.Canvas param0, int param1, int param2) {
+        float[] array$2 = null;
         java.awt.Dimension var5 = null;
         ija var6 = null;
         ija var7 = null;
-        var6 = (ija) (Object) ((sfa) this).field_G.a((byte) -112, (long)((Object) (Object) param0).hashCode());
+        var6 = (ija) ((Object) this.field_G.a((byte) -112, (long)param0.hashCode()));
         if (var6 == null) {
           return;
         } else {
           L0: {
             var6.p(30);
             var7 = tfa.a(param2, param1, param0, 0);
-            ((sfa) this).field_G.a((long)((Object) (Object) param0).hashCode(), 116, (vg) (Object) var7);
-            if (((sfa) this).field_t != param0) {
+            this.field_G.a((long)param0.hashCode(), 116, var7);
+            if (this.field_t != param0) {
               break L0;
             } else {
-              if (((sfa) this).field_D != null) {
+              if (this.field_D != null) {
                 break L0;
               } else {
                 L1: {
                   L2: {
                     var5 = param0.getSize();
-                    ((sfa) this).field_m = var5.width;
-                    ((sfa) this).field_O = var5.height;
-                    ((sfa) this).field_T = var7;
-                    ((sfa) this).field_r = var7.field_g;
-                    ((sfa) this).field_K = var7.field_h;
-                    ((sfa) this).field_h = var7.field_f;
-                    if (((sfa) this).field_K != ((sfa) this).field_y) {
+                    this.field_m = var5.width;
+                    this.field_O = var5.height;
+                    this.field_T = var7;
+                    this.field_r = var7.field_g;
+                    this.field_K = var7.field_h;
+                    this.field_h = var7.field_f;
+                    if (this.field_K != this.field_y) {
                       break L2;
                     } else {
-                      if (((sfa) this).field_h == ((sfa) this).field_s) {
+                      if (this.field_h == this.field_s) {
                         break L1;
                       } else {
                         break L2;
                       }
                     }
                   }
-                  ((sfa) this).field_y = ((sfa) this).field_K;
-                  ((sfa) this).field_i = ((sfa) this).field_K;
-                  ((sfa) this).field_s = ((sfa) this).field_h;
-                  ((sfa) this).field_B = ((sfa) this).field_h;
-                  ((sfa) this).field_n = new float[((sfa) this).field_y * ((sfa) this).field_s];
-                  ((sfa) this).field_H = new float[((sfa) this).field_y * ((sfa) this).field_s];
+                  this.field_y = this.field_K;
+                  this.field_i = this.field_K;
+                  this.field_s = this.field_h;
+                  this.field_B = this.field_h;
+                  array$2 = new float[this.field_y * this.field_s];
+                  this.field_n = array$2;
+                  this.field_H = array$2;
                   break L1;
                 }
                 this.m();
@@ -382,29 +393,29 @@ final class sfa extends ha {
         int var11 = 0;
         int var12 = 0;
         L0: {
-          if (param0 < ((sfa) this).field_J) {
+          if (param0 < this.field_J) {
             break L0;
           } else {
-            if (param0 < ((sfa) this).field_W) {
+            if (param0 < this.field_W) {
               L1: {
-                if (param1 >= ((sfa) this).field_d) {
+                if (param1 >= this.field_d) {
                   break L1;
                 } else {
-                  param2 = param2 - (((sfa) this).field_d - param1);
-                  param1 = ((sfa) this).field_d;
+                  param2 = param2 - (this.field_d - param1);
+                  param1 = this.field_d;
                   break L1;
                 }
               }
               L2: {
-                if (param1 + param2 <= ((sfa) this).field_P) {
+                if (param1 + param2 <= this.field_P) {
                   break L2;
                 } else {
-                  param2 = ((sfa) this).field_P - param1;
+                  param2 = this.field_P - param1;
                   break L2;
                 }
               }
               L3: {
-                var6 = param0 + param1 * ((sfa) this).field_K;
+                var6 = param0 + param1 * this.field_K;
                 var7 = param3 >>> 24;
                 if (param4 == 0) {
                   break L3;
@@ -430,12 +441,12 @@ final class sfa extends ha {
                           if (var8 >= param2) {
                             break L5;
                           } else {
-                            var9 = var6 + var8 * ((sfa) this).field_K;
-                            var10 = ((sfa) this).field_r[var9];
+                            var9 = var6 + var8 * this.field_K;
+                            var10 = this.field_r[var9];
                             var11 = param3 + var10;
                             var12 = (param3 & 16711935) + (var10 & 16711935);
                             var10 = (var12 & 16777472) + (var11 - var12 & 65536);
-                            ((sfa) this).field_r[var9] = var11 - var10 | var10 - (var10 >>> 8);
+                            this.field_r[var9] = var11 - var10 | var10 - (var10 >>> 8);
                             var8++;
                             continue L6;
                           }
@@ -449,10 +460,10 @@ final class sfa extends ha {
                         if (var9 >= param2) {
                           break L5;
                         } else {
-                          var10 = var6 + var9 * ((sfa) this).field_K;
-                          var11 = ((sfa) this).field_r[var10];
+                          var10 = var6 + var9 * this.field_K;
+                          var11 = this.field_r[var10];
                           var11 = ((var11 & 16711935) * var8 >> 8 & 16711935) + ((var11 & 65280) * var8 >> 8 & 65280);
-                          ((sfa) this).field_r[var10] = param3 + var11;
+                          this.field_r[var10] = param3 + var11;
                           var9++;
                           continue L7;
                         }
@@ -467,7 +478,7 @@ final class sfa extends ha {
                 if (var8 >= param2) {
                   break L0;
                 } else {
-                  ((sfa) this).field_r[var6 + var8 * ((sfa) this).field_K] = param3;
+                  this.field_r[var6 + var8 * this.field_K] = param3;
                   var8++;
                   continue L8;
                 }
@@ -480,11 +491,11 @@ final class sfa extends ha {
     }
 
     private final void g(int param0) {
-        ((sfa) this).field_Y[0].a((Runnable) (Object) Thread.currentThread(), (byte) 100);
+        this.field_Y[param0].a((Runnable) ((Object) Thread.currentThread()), (byte) 100);
     }
 
     final void a(gda param0) {
-        ((sfa) this).field_A = (pna) (Object) param0;
+        this.field_A = (pna) ((Object) param0);
     }
 
     final void v(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -496,12 +507,12 @@ final class sfa extends ha {
         float var14 = 0.0f;
         float var15 = 0.0f;
         L0: {
-          var9 = ((sfa) this).field_A.field_m + (((sfa) this).field_A.field_r * (float)param0 + ((sfa) this).field_A.field_o * (float)param1 + ((sfa) this).field_A.field_f * (float)param2);
-          var10 = ((sfa) this).field_A.field_m + (((sfa) this).field_A.field_r * (float)param3 + ((sfa) this).field_A.field_o * (float)param4 + ((sfa) this).field_A.field_f * (float)param5);
-          if (var9 >= (float)((sfa) this).field_g) {
+          var9 = this.field_A.field_m + (this.field_A.field_r * (float)param0 + this.field_A.field_o * (float)param1 + this.field_A.field_f * (float)param2);
+          var10 = this.field_A.field_m + (this.field_A.field_r * (float)param3 + this.field_A.field_o * (float)param4 + this.field_A.field_f * (float)param5);
+          if (var9 >= (float)this.field_g) {
             break L0;
           } else {
-            if (var10 >= (float)((sfa) this).field_g) {
+            if (var10 >= (float)this.field_g) {
               break L0;
             } else {
               return;
@@ -509,42 +520,42 @@ final class sfa extends ha {
           }
         }
         L1: {
-          var11 = ((sfa) this).field_A.field_l + (((sfa) this).field_A.field_g * (float)param0 + ((sfa) this).field_A.field_i * (float)param1 + ((sfa) this).field_A.field_n * (float)param2);
-          var12 = ((sfa) this).field_A.field_e + (((sfa) this).field_A.field_h * (float)param0 + ((sfa) this).field_A.field_s * (float)param1 + ((sfa) this).field_A.field_j * (float)param2);
-          var13 = ((sfa) this).field_A.field_l + (((sfa) this).field_A.field_g * (float)param3 + ((sfa) this).field_A.field_i * (float)param4 + ((sfa) this).field_A.field_n * (float)param5);
-          var14 = ((sfa) this).field_A.field_e + (((sfa) this).field_A.field_h * (float)param3 + ((sfa) this).field_A.field_s * (float)param4 + ((sfa) this).field_A.field_j * (float)param5);
-          if (var9 >= (float)((sfa) this).field_g) {
+          var11 = this.field_A.field_l + (this.field_A.field_g * (float)param0 + this.field_A.field_i * (float)param1 + this.field_A.field_n * (float)param2);
+          var12 = this.field_A.field_e + (this.field_A.field_h * (float)param0 + this.field_A.field_s * (float)param1 + this.field_A.field_j * (float)param2);
+          var13 = this.field_A.field_l + (this.field_A.field_g * (float)param3 + this.field_A.field_i * (float)param4 + this.field_A.field_n * (float)param5);
+          var14 = this.field_A.field_e + (this.field_A.field_h * (float)param3 + this.field_A.field_s * (float)param4 + this.field_A.field_j * (float)param5);
+          if (var9 >= (float)this.field_g) {
             break L1;
           } else {
-            var15 = ((float)((sfa) this).field_g - var10) / (var9 - var10);
+            var15 = ((float)this.field_g - var10) / (var9 - var10);
             var11 = var13 + (var11 - var13) * var15;
             var12 = var14 + (var12 - var14) * var15;
-            var9 = (float)((sfa) this).field_g;
+            var9 = (float)this.field_g;
             break L1;
           }
         }
         L2: {
-          if (var10 >= (float)((sfa) this).field_g) {
+          if (var10 >= (float)this.field_g) {
             break L2;
           } else {
-            var15 = ((float)((sfa) this).field_g - var9) / (var10 - var9);
+            var15 = ((float)this.field_g - var9) / (var10 - var9);
             var13 = var11 + (var13 - var11) * var15;
             var14 = var12 + (var14 - var12) * var15;
-            var10 = (float)((sfa) this).field_g;
+            var10 = (float)this.field_g;
             break L2;
           }
         }
-        ((sfa) this).a(((sfa) this).field_L + (int)((float)((sfa) this).field_Q * var11 / var9), ((sfa) this).field_w + (int)((float)((sfa) this).field_C * var12 / var9), ((sfa) this).field_L + (int)((float)((sfa) this).field_Q * var13 / var10), ((sfa) this).field_w + (int)((float)((sfa) this).field_C * var14 / var10), param6, param7);
+        this.a(this.field_L + (int)((float)this.field_Q * var11 / var9), this.field_w + (int)((float)this.field_C * var12 / var9), this.field_L + (int)((float)this.field_Q * var13 / var10), this.field_w + (int)((float)this.field_C * var14 / var10), param6, param7);
     }
 
     final void a(za param0) {
     }
 
     final boolean j(int param0) {
-        if (((sfa) this).field_e) {
+        if (this.field_e) {
           return true;
         } else {
-          if (!((sfa) this).field_c.a((byte) -17, param0).field_g) {
+          if (!this.field_c.a((byte) -17, param0).field_g) {
             return false;
           } else {
             return true;
@@ -557,21 +568,21 @@ final class sfa extends ha {
         java.awt.Graphics var3 = null;
         Throwable decompiledCaughtException = null;
         L0: {
-          if (((sfa) this).field_t == null) {
+          if (this.field_t == null) {
             break L0;
           } else {
-            if (((sfa) this).field_T != null) {
+            if (this.field_T != null) {
               try {
                 L1: {
-                  var3 = ((sfa) this).field_t.getGraphics();
-                  ((sfa) this).field_T.a(((sfa) this).field_O, 0, param0, 108, param1, 0, var3, ((sfa) this).field_m);
+                  var3 = this.field_t.getGraphics();
+                  this.field_T.a(this.field_O, 0, param0, 108, param1, 0, var3, this.field_m);
                   break L1;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 L2: {
                   exception = (Exception) (Object) decompiledCaughtException;
-                  ((sfa) this).field_t.repaint();
+                  this.field_t.repaint();
                   break L2;
                 }
               }
@@ -592,10 +603,10 @@ final class sfa extends ha {
     }
 
     final void DA(int param0, int param1, int param2, int param3) {
-        ((sfa) this).field_L = param0;
-        ((sfa) this).field_w = param1;
-        ((sfa) this).field_Q = param2;
-        ((sfa) this).field_C = param3;
+        this.field_L = param0;
+        this.field_w = param1;
+        this.field_Q = param2;
+        this.field_C = param3;
         this.g();
     }
 
@@ -647,23 +658,23 @@ final class sfa extends ha {
         int[] stackOut_11_4 = null;
         int stackOut_11_5 = 0;
         Object stackOut_3_0 = null;
-        var3 = (Object) (Object) ((sfa) this).field_F;
+        var3 = this.field_F;
         synchronized (var3) {
           L0: {
             L1: {
-              var2 = (qq) ((sfa) this).field_F.a((byte) 92, (long)param0 | -9223372036854775808L);
+              var2 = (qq) (this.field_F.a((byte) 92, (long)param0 | -9223372036854775808L));
               if (var2 != null) {
                 break L1;
               } else {
-                if (((sfa) this).field_c.a(param0, (byte) 41)) {
+                if (this.field_c.a(param0, (byte) 41)) {
                   L2: {
                     L3: {
-                      var4 = ((sfa) this).field_c.a((byte) -124, param0);
+                      var4 = this.field_c.a((byte) -124, param0);
                       if (var4.field_g) {
                         break L3;
                       } else {
-                        if (!((sfa) this).field_e) {
-                          stackOut_9_0 = ((sfa) this).field_I;
+                        if (!this.field_e) {
+                          stackOut_9_0 = this.field_I;
                           stackIn_10_0 = stackOut_9_0;
                           break L2;
                         } else {
@@ -681,7 +692,7 @@ final class sfa extends ha {
                     stackOut_10_1 = null;
                     stackOut_10_2 = param0;
                     stackOut_10_3 = var5;
-                    stackOut_10_4 = ((sfa) this).field_c.a((byte) 40, var5, 0.699999988079071f, param0, true, var5);
+                    stackOut_10_4 = this.field_c.a((byte) 40, var5, 0.699999988079071f, param0, true, var5);
                     stackIn_12_0 = stackOut_10_0;
                     stackIn_12_1 = stackOut_10_1;
                     stackIn_12_2 = stackOut_10_2;
@@ -697,7 +708,7 @@ final class sfa extends ha {
                       stackOut_12_1 = null;
                       stackOut_12_2 = stackIn_12_2;
                       stackOut_12_3 = stackIn_12_3;
-                      stackOut_12_4 = (int[]) (Object) stackIn_12_4;
+                      stackOut_12_4 = (int[]) ((Object) stackIn_12_4);
                       stackOut_12_5 = 0;
                       stackIn_13_0 = stackOut_12_0;
                       stackIn_13_1 = stackOut_12_1;
@@ -711,7 +722,7 @@ final class sfa extends ha {
                       stackOut_11_1 = null;
                       stackOut_11_2 = stackIn_11_2;
                       stackOut_11_3 = stackIn_11_3;
-                      stackOut_11_4 = (int[]) (Object) stackIn_11_4;
+                      stackOut_11_4 = (int[]) ((Object) stackIn_11_4);
                       stackOut_11_5 = 1;
                       stackIn_13_0 = stackOut_11_0;
                       stackIn_13_1 = stackOut_11_1;
@@ -723,12 +734,12 @@ final class sfa extends ha {
                     }
                   }
                   var2 = new qq(stackIn_13_2, stackIn_13_3, stackIn_13_4, stackIn_13_5 != 0);
-                  ((sfa) this).field_F.a(29166, (Object) (Object) var2, (long)param0 | -9223372036854775808L);
+                  this.field_F.a(29166, var2, (long)param0 | -9223372036854775808L);
                   break L1;
                 } else {
                   stackOut_3_0 = null;
                   stackIn_4_0 = stackOut_3_0;
-                  return (int[]) (Object) stackIn_4_0;
+                  return (int[]) ((Object) stackIn_4_0);
                 }
               }
             }
@@ -746,25 +757,25 @@ final class sfa extends ha {
         if (param1 < 0) {
             param1 = 0;
         }
-        if (param2 > ((sfa) this).field_K) {
-            param2 = ((sfa) this).field_K;
+        if (param2 > this.field_K) {
+            param2 = this.field_K;
         }
-        if (param3 > ((sfa) this).field_h) {
-            param3 = ((sfa) this).field_h;
+        if (param3 > this.field_h) {
+            param3 = this.field_h;
         }
-        ((sfa) this).field_J = param0;
-        ((sfa) this).field_W = param2;
-        ((sfa) this).field_d = param1;
-        ((sfa) this).field_P = param3;
+        this.field_J = param0;
+        this.field_W = param2;
+        this.field_d = param1;
+        this.field_P = param3;
         this.g();
     }
 
     final ka a(oc param0, int param1, int param2, int param3, int param4) {
-        return (ka) (Object) new ww((sfa) this, param0, param1, param3, param4, param2);
+        return (ka) ((Object) new ww((sfa) (this), param0, param1, param3, param4, param2));
     }
 
     final boolean n() {
-        return ((sfa) this).field_z;
+        return this.field_z;
     }
 
     final boolean j() {
@@ -772,41 +783,41 @@ final class sfa extends ha {
     }
 
     final gda e() {
-        tw var1 = ((sfa) this).a((Runnable) (Object) Thread.currentThread());
-        return (gda) (Object) var1.field_u;
+        tw var1 = this.a((Runnable) ((Object) Thread.currentThread()));
+        return (gda) ((Object) var1.field_u);
     }
 
     final void d() {
-        if (((sfa) this).field_t != null) {
-            ((sfa) this).field_r = ((sfa) this).field_T.field_g;
-            ((sfa) this).field_K = ((sfa) this).field_T.field_h;
-            ((sfa) this).field_h = ((sfa) this).field_T.field_f;
-            ((sfa) this).field_n = ((sfa) this).field_H;
-            ((sfa) this).field_y = ((sfa) this).field_i;
-            ((sfa) this).field_s = ((sfa) this).field_B;
+        if (this.field_t != null) {
+            this.field_r = this.field_T.field_g;
+            this.field_K = this.field_T.field_h;
+            this.field_h = this.field_T.field_f;
+            this.field_n = this.field_H;
+            this.field_y = this.field_i;
+            this.field_s = this.field_B;
         } else {
-            ((sfa) this).field_K = 1;
-            ((sfa) this).field_h = 1;
-            ((sfa) this).field_r = null;
-            ((sfa) this).field_y = 1;
-            ((sfa) this).field_s = 1;
-            ((sfa) this).field_n = null;
+            this.field_K = 1;
+            this.field_h = 1;
+            this.field_r = null;
+            this.field_y = 1;
+            this.field_s = 1;
+            this.field_n = null;
         }
-        ((sfa) this).field_D = null;
+        this.field_D = null;
         this.m();
     }
 
     final void k() {
-        if (((sfa) this).field_E) {
+        if (this.field_E) {
             rpa.a(false, true, true);
-            ((sfa) this).field_E = false;
+            this.field_E = false;
         }
-        ((sfa) this).field_T = null;
-        ((sfa) this).field_t = null;
-        ((sfa) this).field_m = 0;
-        ((sfa) this).field_O = 0;
-        ((sfa) this).field_G = null;
-        ((sfa) this).field_z = true;
+        this.field_T = null;
+        this.field_t = null;
+        this.field_m = 0;
+        this.field_O = 0;
+        this.field_G = null;
+        this.field_z = true;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -840,19 +851,19 @@ final class sfa extends ha {
                   param2 = param2 << 16;
                   var7 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
                   param3 = param3 + param1;
-                  if (param1 >= ((sfa) this).field_d) {
+                  if (param1 >= this.field_d) {
                     break L2;
                   } else {
-                    param0 = param0 + var7 * (((sfa) this).field_d - param1);
-                    param1 = ((sfa) this).field_d;
+                    param0 = param0 + var7 * (this.field_d - param1);
+                    param1 = this.field_d;
                     break L2;
                   }
                 }
                 L3: {
-                  if (param3 < ((sfa) this).field_P) {
+                  if (param3 < this.field_P) {
                     break L3;
                   } else {
-                    param3 = ((sfa) this).field_P - 1;
+                    param3 = this.field_P - 1;
                     break L3;
                   }
                 }
@@ -882,18 +893,18 @@ final class sfa extends ha {
                           } else {
                             L7: {
                               var9 = param0 >> 16;
-                              if (var9 < ((sfa) this).field_J) {
+                              if (var9 < this.field_J) {
                                 break L7;
                               } else {
-                                if (var9 >= ((sfa) this).field_W) {
+                                if (var9 >= this.field_W) {
                                   break L7;
                                 } else {
-                                  var10 = var9 + param1 * ((sfa) this).field_K;
-                                  var11 = ((sfa) this).field_r[var10];
+                                  var10 = var9 + param1 * this.field_K;
+                                  var11 = this.field_r[var10];
                                   var12 = param4 + var11;
                                   var13 = (param4 & 16711935) + (var11 & 16711935);
                                   var11 = (var13 & 16777472) + (var12 - var13 & 65536);
-                                  ((sfa) this).field_r[var10] = var12 - var11 | var11 - (var11 >>> 8);
+                                  this.field_r[var10] = var12 - var11 | var11 - (var11 >>> 8);
                                   break L7;
                                 }
                               }
@@ -913,16 +924,16 @@ final class sfa extends ha {
                         } else {
                           L9: {
                             var10 = param0 >> 16;
-                            if (var10 < ((sfa) this).field_J) {
+                            if (var10 < this.field_J) {
                               break L9;
                             } else {
-                              if (var10 >= ((sfa) this).field_W) {
+                              if (var10 >= this.field_W) {
                                 break L9;
                               } else {
-                                var11 = var10 + param1 * ((sfa) this).field_K;
-                                var12 = ((sfa) this).field_r[var11];
+                                var11 = var10 + param1 * this.field_K;
+                                var12 = this.field_r[var11];
                                 var12 = ((var12 & 16711935) * var9 >> 8 & 16711935) + ((var12 & 65280) * var9 >> 8 & 65280);
-                                ((sfa) this).field_r[var10 + param1 * ((sfa) this).field_K] = param4 + var12;
+                                this.field_r[var10 + param1 * this.field_K] = param4 + var12;
                                 break L9;
                               }
                             }
@@ -941,13 +952,13 @@ final class sfa extends ha {
                   } else {
                     L11: {
                       var9 = param0 >> 16;
-                      if (var9 < ((sfa) this).field_J) {
+                      if (var9 < this.field_J) {
                         break L11;
                       } else {
-                        if (var9 >= ((sfa) this).field_W) {
+                        if (var9 >= this.field_W) {
                           break L11;
                         } else {
-                          ((sfa) this).field_r[var9 + param1 * ((sfa) this).field_K] = param4;
+                          this.field_r[var9 + param1 * this.field_K] = param4;
                           break L11;
                         }
                       }
@@ -964,19 +975,19 @@ final class sfa extends ha {
                   param3 = param3 << 16;
                   var7 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
                   param2 = param2 + param0;
-                  if (param0 >= ((sfa) this).field_J) {
+                  if (param0 >= this.field_J) {
                     break L12;
                   } else {
-                    param1 = param1 + var7 * (((sfa) this).field_J - param0);
-                    param0 = ((sfa) this).field_J;
+                    param1 = param1 + var7 * (this.field_J - param0);
+                    param0 = this.field_J;
                     break L12;
                   }
                 }
                 L13: {
-                  if (param2 < ((sfa) this).field_W) {
+                  if (param2 < this.field_W) {
                     break L13;
                   } else {
-                    param2 = ((sfa) this).field_W - 1;
+                    param2 = this.field_W - 1;
                     break L13;
                   }
                 }
@@ -1006,18 +1017,18 @@ final class sfa extends ha {
                           } else {
                             L17: {
                               var9 = param1 >> 16;
-                              if (var9 < ((sfa) this).field_d) {
+                              if (var9 < this.field_d) {
                                 break L17;
                               } else {
-                                if (var9 >= ((sfa) this).field_P) {
+                                if (var9 >= this.field_P) {
                                   break L17;
                                 } else {
-                                  var10 = param0 + var9 * ((sfa) this).field_K;
-                                  var11 = ((sfa) this).field_r[var10];
+                                  var10 = param0 + var9 * this.field_K;
+                                  var11 = this.field_r[var10];
                                   var12 = param4 + var11;
                                   var13 = (param4 & 16711935) + (var11 & 16711935);
                                   var11 = (var13 & 16777472) + (var12 - var13 & 65536);
-                                  ((sfa) this).field_r[var10] = var12 - var11 | var11 - (var11 >>> 8);
+                                  this.field_r[var10] = var12 - var11 | var11 - (var11 >>> 8);
                                   break L17;
                                 }
                               }
@@ -1037,16 +1048,16 @@ final class sfa extends ha {
                         } else {
                           L19: {
                             var10 = param1 >> 16;
-                            if (var10 < ((sfa) this).field_d) {
+                            if (var10 < this.field_d) {
                               break L19;
                             } else {
-                              if (var10 >= ((sfa) this).field_P) {
+                              if (var10 >= this.field_P) {
                                 break L19;
                               } else {
-                                var11 = param0 + var10 * ((sfa) this).field_K;
-                                var12 = ((sfa) this).field_r[var11];
+                                var11 = param0 + var10 * this.field_K;
+                                var12 = this.field_r[var11];
                                 var12 = ((var12 & 16711935) * var9 >> 8 & 16711935) + ((var12 & 65280) * var9 >> 8 & 65280);
-                                ((sfa) this).field_r[var11] = param4 + var12;
+                                this.field_r[var11] = param4 + var12;
                                 break L19;
                               }
                             }
@@ -1065,13 +1076,13 @@ final class sfa extends ha {
                   } else {
                     L21: {
                       var9 = param1 >> 16;
-                      if (var9 < ((sfa) this).field_d) {
+                      if (var9 < this.field_d) {
                         break L21;
                       } else {
-                        if (var9 >= ((sfa) this).field_P) {
+                        if (var9 >= this.field_P) {
                           break L21;
                         } else {
-                          ((sfa) this).field_r[param0 + var9 * ((sfa) this).field_K] = param4;
+                          this.field_r[param0 + var9 * this.field_K] = param4;
                           break L21;
                         }
                       }
@@ -1099,10 +1110,10 @@ final class sfa extends ha {
         } else {
           L23: {
             if (param2 < 0) {
-              ((sfa) this).U(param0 + param2, param1, -param2 + 1, param4, param5);
+              this.U(param0 + param2, param1, -param2 + 1, param4, param5);
               break L23;
             } else {
-              ((sfa) this).U(param0, param1, param2 + 1, param4, param5);
+              this.U(param0, param1, param2 + 1, param4, param5);
               break L23;
             }
           }
@@ -1119,29 +1130,29 @@ final class sfa extends ha {
         int[] var9 = null;
         int[] var10 = null;
         L0: {
-          var6 = ((sfa) this).field_A.field_m + (((sfa) this).field_A.field_r * (float)param0 + ((sfa) this).field_A.field_o * (float)param1 + ((sfa) this).field_A.field_f * (float)param2);
-          if (var6 < (float)((sfa) this).field_g) {
+          var6 = this.field_A.field_m + (this.field_A.field_r * (float)param0 + this.field_A.field_o * (float)param1 + this.field_A.field_f * (float)param2);
+          if (var6 < (float)this.field_g) {
             break L0;
           } else {
-            if (var6 <= (float)((sfa) this).field_U) {
+            if (var6 <= (float)this.field_U) {
               L1: {
                 L2: {
-                  var7 = (int)((float)((sfa) this).field_Q * (((sfa) this).field_A.field_l + (((sfa) this).field_A.field_g * (float)param0 + ((sfa) this).field_A.field_i * (float)param1 + ((sfa) this).field_A.field_n * (float)param2)) / (float)param3);
-                  var8 = (int)((float)((sfa) this).field_C * (((sfa) this).field_A.field_e + (((sfa) this).field_A.field_h * (float)param0 + ((sfa) this).field_A.field_s * (float)param1 + ((sfa) this).field_A.field_j * (float)param2)) / (float)param3);
-                  if (var7 < ((sfa) this).field_p) {
+                  var7 = (int)((float)this.field_Q * (this.field_A.field_l + (this.field_A.field_g * (float)param0 + this.field_A.field_i * (float)param1 + this.field_A.field_n * (float)param2)) / (float)param3);
+                  var8 = (int)((float)this.field_C * (this.field_A.field_e + (this.field_A.field_h * (float)param0 + this.field_A.field_s * (float)param1 + this.field_A.field_j * (float)param2)) / (float)param3);
+                  if (var7 < this.field_p) {
                     break L2;
                   } else {
-                    if (var7 > ((sfa) this).field_l) {
+                    if (var7 > this.field_l) {
                       break L2;
                     } else {
-                      if (var8 < ((sfa) this).field_k) {
+                      if (var8 < this.field_k) {
                         break L2;
                       } else {
-                        if (var8 > ((sfa) this).field_o) {
+                        if (var8 > this.field_o) {
                           break L2;
                         } else {
-                          param4[0] = var7 - ((sfa) this).field_p;
-                          param4[1] = var8 - ((sfa) this).field_k;
+                          param4[0] = var7 - this.field_p;
+                          param4[1] = var8 - this.field_k;
                           param4[2] = (int)var6;
                           break L1;
                         }
@@ -1170,6 +1181,18 @@ final class sfa extends ha {
     }
 
     private final void e(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -1196,19 +1219,19 @@ final class sfa extends ha {
         }
         L1: {
           var7 = param1 - param3;
-          if (var7 >= ((sfa) this).field_d) {
+          if (var7 >= this.field_d) {
             break L1;
           } else {
-            var7 = ((sfa) this).field_d;
+            var7 = this.field_d;
             break L1;
           }
         }
         L2: {
           var8 = param1 + param3 + 1;
-          if (var8 <= ((sfa) this).field_P) {
+          if (var8 <= this.field_P) {
             break L2;
           } else {
-            var8 = ((sfa) this).field_P;
+            var8 = this.field_P;
             break L2;
           }
         }
@@ -1266,7 +1289,7 @@ final class sfa extends ha {
                                 if (var13 <= var10) {
                                   break L10;
                                 } else {
-                                  int incrementValue$12 = var11;
+                                  incrementValue$12 = var11;
                                   var11--;
                                   var14 = var14 - (incrementValue$12 + var11);
                                   var13 = var13 - (var11 + var11);
@@ -1276,39 +1299,39 @@ final class sfa extends ha {
                             }
                             L11: {
                               var16 = param0 - var11;
-                              if (var16 >= ((sfa) this).field_J) {
+                              if (var16 >= this.field_J) {
                                 break L11;
                               } else {
-                                var16 = ((sfa) this).field_J;
+                                var16 = this.field_J;
                                 break L11;
                               }
                             }
                             L12: {
                               var17 = param0 + var11;
-                              if (var17 <= ((sfa) this).field_W - 1) {
+                              if (var17 <= this.field_W - 1) {
                                 break L12;
                               } else {
-                                var17 = ((sfa) this).field_W - 1;
+                                var17 = this.field_W - 1;
                                 break L12;
                               }
                             }
-                            var18 = var16 + var9 * ((sfa) this).field_K;
+                            var18 = var16 + var9 * this.field_K;
                             var19 = var16;
                             L13: while (true) {
                               if (var19 > var17) {
                                 var9++;
                                 var14 = var14 + (var12 + var12);
-                                int incrementValue$13 = var12;
+                                incrementValue$13 = var12;
                                 var12++;
                                 var13 = var13 + (incrementValue$13 + var12);
                                 continue L8;
                               } else {
-                                if ((float)param2 < ((sfa) this).field_n[var18]) {
-                                  var20 = ((sfa) this).field_r[var18];
+                                if ((float)param2 < this.field_n[var18]) {
+                                  var20 = this.field_r[var18];
                                   var21 = param4 + var20;
                                   var22 = (param4 & 16711935) + (var20 & 16711935);
                                   var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-                                  ((sfa) this).field_r[var18] = var21 - var20 | var20 - (var20 >>> 8);
+                                  this.field_r[var18] = var21 - var20 | var20 - (var20 >>> 8);
                                   var18++;
                                   var19++;
                                   continue L13;
@@ -1331,39 +1354,39 @@ final class sfa extends ha {
                             if (var13 > var10) {
                               L16: {
                                 var16 = param0 - var11 + 1;
-                                if (var16 >= ((sfa) this).field_J) {
+                                if (var16 >= this.field_J) {
                                   break L16;
                                 } else {
-                                  var16 = ((sfa) this).field_J;
+                                  var16 = this.field_J;
                                   break L16;
                                 }
                               }
                               L17: {
                                 var17 = param0 + var11;
-                                if (var17 <= ((sfa) this).field_W) {
+                                if (var17 <= this.field_W) {
                                   break L17;
                                 } else {
-                                  var17 = ((sfa) this).field_W;
+                                  var17 = this.field_W;
                                   break L17;
                                 }
                               }
-                              var18 = var16 + var9 * ((sfa) this).field_K;
+                              var18 = var16 + var9 * this.field_K;
                               var19 = var16;
                               L18: while (true) {
                                 if (var19 >= var17) {
                                   var9++;
-                                  int incrementValue$14 = var12;
+                                  incrementValue$14 = var12;
                                   var12--;
                                   var13 = var13 - (incrementValue$14 + var12);
                                   var14 = var14 - (var12 + var12);
                                   continue L7;
                                 } else {
-                                  if ((float)param2 < ((sfa) this).field_n[var18]) {
-                                    var20 = ((sfa) this).field_r[var18];
+                                  if ((float)param2 < this.field_n[var18]) {
+                                    var20 = this.field_r[var18];
                                     var21 = param4 + var20;
                                     var22 = (param4 & 16711935) + (var20 & 16711935);
                                     var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-                                    ((sfa) this).field_r[var18] = var21 - var20 | var20 - (var20 >>> 8);
+                                    this.field_r[var18] = var21 - var20 | var20 - (var20 >>> 8);
                                     var18++;
                                     var19++;
                                     continue L18;
@@ -1380,7 +1403,7 @@ final class sfa extends ha {
                           }
                         }
                         var13 = var13 + (var11 + var11);
-                        int incrementValue$15 = var11;
+                        incrementValue$15 = var11;
                         var11++;
                         var14 = var14 + (incrementValue$15 + var11);
                         continue L14;
@@ -1410,7 +1433,7 @@ final class sfa extends ha {
                               if (var13 <= var10) {
                                 break L22;
                               } else {
-                                int incrementValue$16 = var11;
+                                incrementValue$16 = var11;
                                 var11--;
                                 var14 = var14 - (incrementValue$16 + var11);
                                 var13 = var13 - (var11 + var11);
@@ -1420,37 +1443,37 @@ final class sfa extends ha {
                           }
                           L23: {
                             var17 = param0 - var11;
-                            if (var17 >= ((sfa) this).field_J) {
+                            if (var17 >= this.field_J) {
                               break L23;
                             } else {
-                              var17 = ((sfa) this).field_J;
+                              var17 = this.field_J;
                               break L23;
                             }
                           }
                           L24: {
                             var18 = param0 + var11;
-                            if (var18 <= ((sfa) this).field_W - 1) {
+                            if (var18 <= this.field_W - 1) {
                               break L24;
                             } else {
-                              var18 = ((sfa) this).field_W - 1;
+                              var18 = this.field_W - 1;
                               break L24;
                             }
                           }
-                          var19 = var17 + var9 * ((sfa) this).field_K;
+                          var19 = var17 + var9 * this.field_K;
                           var20 = var17;
                           L25: while (true) {
                             if (var20 > var18) {
                               var9++;
                               var14 = var14 + (var12 + var12);
-                              int incrementValue$17 = var12;
+                              incrementValue$17 = var12;
                               var12++;
                               var13 = var13 + (incrementValue$17 + var12);
                               continue L20;
                             } else {
-                              if ((float)param2 < ((sfa) this).field_n[var19]) {
-                                var21 = ((sfa) this).field_r[var19];
+                              if ((float)param2 < this.field_n[var19]) {
+                                var21 = this.field_r[var19];
                                 var21 = ((var21 & 16711935) * var16 >> 8 & 16711935) + ((var21 & 65280) * var16 >> 8 & 65280);
-                                ((sfa) this).field_r[var19] = param4 + var21;
+                                this.field_r[var19] = param4 + var21;
                                 var19++;
                                 var20++;
                                 continue L25;
@@ -1473,37 +1496,37 @@ final class sfa extends ha {
                           if (var13 > var10) {
                             L28: {
                               var17 = param0 - var11 + 1;
-                              if (var17 >= ((sfa) this).field_J) {
+                              if (var17 >= this.field_J) {
                                 break L28;
                               } else {
-                                var17 = ((sfa) this).field_J;
+                                var17 = this.field_J;
                                 break L28;
                               }
                             }
                             L29: {
                               var18 = param0 + var11;
-                              if (var18 <= ((sfa) this).field_W) {
+                              if (var18 <= this.field_W) {
                                 break L29;
                               } else {
-                                var18 = ((sfa) this).field_W;
+                                var18 = this.field_W;
                                 break L29;
                               }
                             }
-                            var19 = var17 + var9 * ((sfa) this).field_K;
+                            var19 = var17 + var9 * this.field_K;
                             var20 = var17;
                             L30: while (true) {
                               if (var20 >= var18) {
                                 var9++;
-                                int incrementValue$18 = var12;
+                                incrementValue$18 = var12;
                                 var12--;
                                 var13 = var13 - (incrementValue$18 + var12);
                                 var14 = var14 - (var12 + var12);
                                 continue L19;
                               } else {
-                                if ((float)param2 < ((sfa) this).field_n[var19]) {
-                                  var21 = ((sfa) this).field_r[var19];
+                                if ((float)param2 < this.field_n[var19]) {
+                                  var21 = this.field_r[var19];
                                   var21 = ((var21 & 16711935) * var16 >> 8 & 16711935) + ((var21 & 65280) * var16 >> 8 & 65280);
-                                  ((sfa) this).field_r[var19] = param4 + var21;
+                                  this.field_r[var19] = param4 + var21;
                                   var19++;
                                   var20++;
                                   continue L30;
@@ -1520,7 +1543,7 @@ final class sfa extends ha {
                         }
                       }
                       var13 = var13 + (var11 + var11);
-                      int incrementValue$19 = var11;
+                      incrementValue$19 = var11;
                       var11++;
                       var14 = var14 + (incrementValue$19 + var11);
                       continue L26;
@@ -1551,7 +1574,7 @@ final class sfa extends ha {
                       if (var13 <= var10) {
                         break L34;
                       } else {
-                        int incrementValue$20 = var11;
+                        incrementValue$20 = var11;
                         var11--;
                         var14 = var14 - (incrementValue$20 + var11);
                         var13 = var13 - (var11 + var11);
@@ -1561,35 +1584,35 @@ final class sfa extends ha {
                   }
                   L35: {
                     var16 = param0 - var11;
-                    if (var16 >= ((sfa) this).field_J) {
+                    if (var16 >= this.field_J) {
                       break L35;
                     } else {
-                      var16 = ((sfa) this).field_J;
+                      var16 = this.field_J;
                       break L35;
                     }
                   }
                   L36: {
                     var17 = param0 + var11;
-                    if (var17 <= ((sfa) this).field_W - 1) {
+                    if (var17 <= this.field_W - 1) {
                       break L36;
                     } else {
-                      var17 = ((sfa) this).field_W - 1;
+                      var17 = this.field_W - 1;
                       break L36;
                     }
                   }
-                  var18 = var16 + var9 * ((sfa) this).field_K;
+                  var18 = var16 + var9 * this.field_K;
                   var19 = var16;
                   L37: while (true) {
                     if (var19 > var17) {
                       var9++;
                       var14 = var14 + (var12 + var12);
-                      int incrementValue$21 = var12;
+                      incrementValue$21 = var12;
                       var12++;
                       var13 = var13 + (incrementValue$21 + var12);
                       continue L32;
                     } else {
-                      if ((float)param2 < ((sfa) this).field_n[var18]) {
-                        ((sfa) this).field_r[var18] = param4;
+                      if ((float)param2 < this.field_n[var18]) {
+                        this.field_r[var18] = param4;
                         var18++;
                         var19++;
                         continue L37;
@@ -1612,35 +1635,35 @@ final class sfa extends ha {
                   if (var13 > var10) {
                     L40: {
                       var16 = param0 - var11 + 1;
-                      if (var16 >= ((sfa) this).field_J) {
+                      if (var16 >= this.field_J) {
                         break L40;
                       } else {
-                        var16 = ((sfa) this).field_J;
+                        var16 = this.field_J;
                         break L40;
                       }
                     }
                     L41: {
                       var17 = param0 + var11;
-                      if (var17 <= ((sfa) this).field_W) {
+                      if (var17 <= this.field_W) {
                         break L41;
                       } else {
-                        var17 = ((sfa) this).field_W;
+                        var17 = this.field_W;
                         break L41;
                       }
                     }
-                    var18 = var16 + var9 * ((sfa) this).field_K;
+                    var18 = var16 + var9 * this.field_K;
                     var19 = var16;
                     L42: while (true) {
                       if (var19 >= var17) {
                         var9++;
-                        int incrementValue$22 = var12;
+                        incrementValue$22 = var12;
                         var12--;
                         var13 = var13 - (incrementValue$22 + var12);
                         var14 = var14 - (var12 + var12);
                         continue L31;
                       } else {
-                        if ((float)param2 < ((sfa) this).field_n[var18]) {
-                          ((sfa) this).field_r[var18] = param4;
+                        if ((float)param2 < this.field_n[var18]) {
+                          this.field_r[var18] = param4;
                           var18++;
                           var19++;
                           continue L42;
@@ -1657,7 +1680,7 @@ final class sfa extends ha {
                 }
               }
               var13 = var13 + (var11 + var11);
-              int incrementValue$23 = var11;
+              incrementValue$23 = var11;
               var11++;
               var14 = var14 + (incrementValue$23 + var11);
               continue L38;
@@ -1667,7 +1690,7 @@ final class sfa extends ha {
     }
 
     final jca a(nha param0, mw param1) {
-        return (jca) (Object) new bf((sfa) this, (nh) (Object) param0, (ita) (Object) param1);
+        return (jca) ((Object) new bf((sfa) (this), (nh) ((Object) param0), (ita) ((Object) param1)));
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -1677,8 +1700,6 @@ final class sfa extends ha {
         int[] var14 = null;
         nh var15 = null;
         int[] var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
         int stackIn_12_0 = 0;
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
@@ -1691,27 +1712,25 @@ final class sfa extends ha {
                 if (param6 == 65535) {
                   break L1;
                 } else {
-                  if (((sfa) this).field_c.a((byte) -7, param6).field_p) {
+                  if (this.field_c.a((byte) -7, param6).field_p) {
                     break L1;
                   } else {
                     L2: {
-                      if (((sfa) this).field_v == param6) {
+                      if (this.field_v == param6) {
                         break L2;
                       } else {
                         L3: {
-                          var11 = (nh) ((sfa) this).field_X.a((byte) 75, (long)param6);
+                          var11 = (nh) (this.field_X.a((byte) 75, (long)param6));
                           if (var11 != null) {
                             break L3;
                           } else {
-                            var18 = ((sfa) this).h(param6);
-                            var17 = var18;
-                            var16 = var17;
+                            var16 = this.h(param6);
                             var14 = var16;
                             var12 = var14;
                             if (var12 != null) {
                               L4: {
-                                if (!((sfa) this).j(param6)) {
-                                  stackOut_11_0 = ((sfa) this).field_I;
+                                if (!this.j(param6)) {
+                                  stackOut_11_0 = this.field_I;
                                   stackIn_12_0 = stackOut_11_0;
                                   break L4;
                                 } else {
@@ -1721,21 +1740,21 @@ final class sfa extends ha {
                                 }
                               }
                               var13 = stackIn_12_0;
-                              var15 = ((sfa) this).a(var18, var13, 79, var13, var13, 0);
+                              var15 = this.a(var16, var13, 79, var13, var13, 0);
                               var11 = var15;
-                              ((sfa) this).field_X.a(29166, (Object) (Object) var15, (long)param6);
+                              this.field_X.a(29166, var15, (long)param6);
                               break L3;
                             } else {
                               return;
                             }
                           }
                         }
-                        ((sfa) this).field_v = param6;
-                        ((sfa) this).field_R = var11;
+                        this.field_v = param6;
+                        this.field_R = var11;
                         break L2;
                       }
                     }
-                    ((pf) (Object) ((sfa) this).field_R).b(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
+                    ((pf) ((Object) this.field_R)).b(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
                     break L0;
                   }
                 }
@@ -1757,8 +1776,6 @@ final class sfa extends ha {
         int[] var14 = null;
         nh var15 = null;
         int[] var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
         int stackIn_12_0 = 0;
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
@@ -1771,27 +1788,25 @@ final class sfa extends ha {
                 if (param6 == 65535) {
                   break L1;
                 } else {
-                  if (((sfa) this).field_c.a((byte) 5, param6).field_p) {
+                  if (this.field_c.a((byte) 5, param6).field_p) {
                     break L1;
                   } else {
                     L2: {
-                      if (((sfa) this).field_v == param6) {
+                      if (this.field_v == param6) {
                         break L2;
                       } else {
                         L3: {
-                          var11 = (nh) ((sfa) this).field_X.a((byte) 55, (long)param6);
+                          var11 = (nh) (this.field_X.a((byte) 55, (long)param6));
                           if (var11 != null) {
                             break L3;
                           } else {
-                            var18 = ((sfa) this).h(param6);
-                            var17 = var18;
-                            var16 = var17;
+                            var16 = this.h(param6);
                             var14 = var16;
                             var12 = var14;
                             if (var12 != null) {
                               L4: {
-                                if (!((sfa) this).j(param6)) {
-                                  stackOut_11_0 = ((sfa) this).field_I;
+                                if (!this.j(param6)) {
+                                  stackOut_11_0 = this.field_I;
                                   stackIn_12_0 = stackOut_11_0;
                                   break L4;
                                 } else {
@@ -1801,21 +1816,21 @@ final class sfa extends ha {
                                 }
                               }
                               var13 = stackIn_12_0;
-                              var15 = ((sfa) this).a(var18, var13, 80, var13, var13, 0);
+                              var15 = this.a(var16, var13, 80, var13, var13, 0);
                               var11 = var15;
-                              ((sfa) this).field_X.a(29166, (Object) (Object) var15, (long)param6);
+                              this.field_X.a(29166, var15, (long)param6);
                               break L3;
                             } else {
                               return;
                             }
                           }
                         }
-                        ((sfa) this).field_v = param6;
-                        ((sfa) this).field_R = var11;
+                        this.field_v = param6;
+                        this.field_R = var11;
                         break L2;
                       }
                     }
-                    ((pf) (Object) ((sfa) this).field_R).a(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
+                    ((pf) ((Object) this.field_R)).a(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
                     break L0;
                   }
                 }
@@ -1831,38 +1846,38 @@ final class sfa extends ha {
     }
 
     final mw b(int param0, int param1) {
-        return (mw) (Object) new ita(param0, param1);
+        return (mw) ((Object) new ita(param0, param1));
     }
 
     final void la() {
-        ((sfa) this).field_J = 0;
-        ((sfa) this).field_d = 0;
-        ((sfa) this).field_W = ((sfa) this).field_K;
-        ((sfa) this).field_P = ((sfa) this).field_h;
+        this.field_J = 0;
+        this.field_d = 0;
+        this.field_W = this.field_K;
+        this.field_P = this.field_h;
         this.g();
     }
 
     final gda b() {
-        return (gda) (Object) new pna();
+        return (gda) ((Object) new pna());
     }
 
     final void xa(float param0) {
-        ((sfa) this).field_f = (int)(param0 * 65535.0f);
+        this.field_f = (int)(param0 * 65535.0f);
     }
 
     final int i() {
-        return ((sfa) this).field_g;
+        return this.field_g;
     }
 
     final void a(jca param0) {
-        bf var2 = (bf) (Object) param0;
-        ((sfa) this).field_K = var2.field_c;
-        ((sfa) this).field_h = var2.field_d;
-        ((sfa) this).field_r = var2.field_g;
-        ((sfa) this).field_D = var2;
-        ((sfa) this).field_y = var2.field_c;
-        ((sfa) this).field_s = var2.field_d;
-        ((sfa) this).field_n = var2.field_e;
+        bf var2 = (bf) ((Object) param0);
+        this.field_K = var2.field_c;
+        this.field_h = var2.field_d;
+        this.field_r = var2.field_g;
+        this.field_D = var2;
+        this.field_y = var2.field_c;
+        this.field_s = var2.field_d;
+        this.field_n = var2.field_e;
         this.m();
     }
 
@@ -1874,11 +1889,11 @@ final class sfa extends ha {
         int var8 = 0;
         var4 = 0;
         L0: while (true) {
-          if (var4 >= ((sfa) this).field_Y.length) {
+          if (var4 >= this.field_Y.length) {
             return;
           } else {
             L1: {
-              var5 = ((sfa) this).field_Y[var4];
+              var5 = this.field_Y[var4];
               var5.field_D = param0 & 16777215;
               var6 = var5.field_D >>> 16 & 255;
               if (var6 >= 2) {
@@ -1930,24 +1945,24 @@ final class sfa extends ha {
 
     private final void m() {
         int var1 = 0;
-        for (var1 = 0; var1 < ((sfa) this).field_u; var1++) {
-            ((sfa) this).field_Y[var1].a(-39);
+        for (var1 = 0; var1 < this.field_u; var1++) {
+            this.field_Y[var1].a(-39);
         }
-        ((sfa) this).la();
+        this.la();
     }
 
     final void T(int param0, int param1, int param2, int param3) {
-        if (((sfa) this).field_J < param0) {
-            ((sfa) this).field_J = param0;
+        if (this.field_J < param0) {
+            this.field_J = param0;
         }
-        if (((sfa) this).field_d < param1) {
-            ((sfa) this).field_d = param1;
+        if (this.field_d < param1) {
+            this.field_d = param1;
         }
-        if (((sfa) this).field_W > param2) {
-            ((sfa) this).field_W = param2;
+        if (this.field_W > param2) {
+            this.field_W = param2;
         }
-        if (((sfa) this).field_P > param3) {
-            ((sfa) this).field_P = param3;
+        if (this.field_P > param3) {
+            this.field_P = param3;
         }
         this.g();
     }
@@ -1959,7 +1974,7 @@ final class sfa extends ha {
             this.a(param0);
         } catch (Throwable throwable) {
             throwable.printStackTrace();
-            ((sfa) this).a(true);
+            this.a(true);
             throw new RuntimeException("");
         }
     }
@@ -1970,7 +1985,7 @@ final class sfa extends ha {
     private final void a(java.awt.Canvas param0, int param1, int param2) {
         ija var4 = null;
         L0: {
-          var4 = (ija) (Object) ((sfa) this).field_G.a((byte) -104, (long)((Object) (Object) param0).hashCode());
+          var4 = (ija) ((Object) this.field_G.a((byte) -104, (long)param0.hashCode()));
           if (var4 != null) {
             L1: {
               if (var4.field_h != param1) {
@@ -1987,7 +2002,7 @@ final class sfa extends ha {
             break L0;
           } else {
             var4 = tfa.a(param2, param1, param0, 0);
-            ((sfa) this).field_G.a((long)((Object) (Object) param0).hashCode(), 125, (vg) (Object) var4);
+            this.field_G.a((long)param0.hashCode(), 125, var4);
             break L0;
           }
         }
@@ -2018,14 +2033,6 @@ final class sfa extends ha {
         byte[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
-        int[] var24 = null;
-        byte[] var25 = null;
-        int[] var26 = null;
-        int[] var27 = null;
-        int[] var28 = null;
-        byte[] var29 = null;
-        int[] var30 = null;
-        int[] var31 = null;
         int[] stackIn_25_0 = null;
         int stackIn_25_1 = 0;
         int[] stackIn_26_0 = null;
@@ -2043,9 +2050,7 @@ final class sfa extends ha {
         int stackOut_25_2 = 0;
         L0: {
           L1: {
-            var28 = param0.field_g;
-            var24 = var28;
-            var20 = var24;
+            var20 = param0.field_g;
             var16 = var20;
             var3 = var16;
             var4 = param0.field_f;
@@ -2057,14 +2062,10 @@ final class sfa extends ha {
               if (param0.field_h != null) {
                 break L1;
               } else {
-                var30 = new int[var28.length];
-                var26 = var30;
-                var22 = var26;
+                var22 = new int[var20.length];
                 var18 = var22;
                 var8 = var18;
-                var29 = new byte[var5 * var6];
-                var25 = var29;
-                var21 = var25;
+                var21 = new byte[var5 * var6];
                 var17 = var21;
                 var14 = var17;
                 var9 = var14;
@@ -2073,11 +2074,11 @@ final class sfa extends ha {
                   if (var10 >= var6) {
                     var10 = 0;
                     L3: while (true) {
-                      if (var10 >= var28.length) {
-                        var7 = (Object) (Object) new kf((sfa) this, var29, var30, var5, var6);
+                      if (var10 >= var20.length) {
+                        var7 = new kf((sfa) (this), var21, var22, var5, var6);
                         break L0;
                       } else {
-                        var8[var10] = var28[var10];
+                        var8[var10] = var20[var10];
                         var10++;
                         continue L3;
                       }
@@ -2100,9 +2101,7 @@ final class sfa extends ha {
               }
             }
           }
-          var31 = new int[var5 * var6];
-          var27 = var31;
-          var23 = var27;
+          var23 = new int[var5 * var6];
           var19 = var23;
           var15 = var19;
           var9 = param0.field_h;
@@ -2110,7 +2109,7 @@ final class sfa extends ha {
             var10 = 0;
             L5: while (true) {
               if (var10 >= var6) {
-                var7 = (Object) (Object) new raa((sfa) this, var31, var5, var6);
+                var7 = new raa((sfa) (this), var23, var5, var6);
                 break L0;
               } else {
                 var11 = var10 * var5;
@@ -2122,14 +2121,14 @@ final class sfa extends ha {
                   } else {
                     L7: {
                       var13 = var3[var4[var11 + var12] & 255];
-                      stackOut_24_0 = (int[]) var15;
+                      stackOut_24_0 = (int[]) (var15);
                       stackOut_24_1 = var11 + var12;
                       stackIn_26_0 = stackOut_24_0;
                       stackIn_26_1 = stackOut_24_1;
                       stackIn_25_0 = stackOut_24_0;
                       stackIn_25_1 = stackOut_24_1;
                       if (var13 == 0) {
-                        stackOut_26_0 = (int[]) (Object) stackIn_26_0;
+                        stackOut_26_0 = (int[]) ((Object) stackIn_26_0);
                         stackOut_26_1 = stackIn_26_1;
                         stackOut_26_2 = 0;
                         stackIn_27_0 = stackOut_26_0;
@@ -2137,7 +2136,7 @@ final class sfa extends ha {
                         stackIn_27_2 = stackOut_26_2;
                         break L7;
                       } else {
-                        stackOut_25_0 = (int[]) (Object) stackIn_25_0;
+                        stackOut_25_0 = (int[]) ((Object) stackIn_25_0);
                         stackOut_25_1 = stackIn_25_1;
                         stackOut_25_2 = -16777216 | var13;
                         stackIn_27_0 = stackOut_25_0;
@@ -2157,7 +2156,7 @@ final class sfa extends ha {
             var10 = 0;
             L8: while (true) {
               if (var10 >= var6) {
-                var7 = (Object) (Object) new vqa((sfa) this, var31, var5, var6);
+                var7 = new vqa((sfa) (this), var23, var5, var6);
                 break L0;
               } else {
                 var11 = var10 * var5;
@@ -2176,41 +2175,41 @@ final class sfa extends ha {
             }
           }
         }
-        ((nh) var7).b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
-        return (nh) var7;
+        ((nh) (var7)).b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
+        return (nh) (var7);
     }
 
     private sfa(d param0) {
         super(param0);
-        ((sfa) this).field_E = false;
-        ((sfa) this).field_z = false;
-        ((sfa) this).field_G = new ji(4);
-        ((sfa) this).field_g = 50;
-        ((sfa) this).field_f = 75518;
-        ((sfa) this).field_Q = 512;
-        ((sfa) this).field_d = 0;
-        ((sfa) this).field_I = 128;
-        ((sfa) this).field_J = 0;
-        ((sfa) this).field_M = 78642;
-        ((sfa) this).field_W = 0;
-        ((sfa) this).field_q = 45823;
-        ((sfa) this).field_P = 0;
-        ((sfa) this).field_e = false;
-        ((sfa) this).field_U = 3500;
-        ((sfa) this).field_C = 512;
-        ((sfa) this).field_X = new dd(16);
-        ((sfa) this).field_v = -1;
+        this.field_E = false;
+        this.field_z = false;
+        this.field_G = new ji(4);
+        this.field_g = 50;
+        this.field_f = 75518;
+        this.field_Q = 512;
+        this.field_d = 0;
+        this.field_I = 128;
+        this.field_J = 0;
+        this.field_M = 78642;
+        this.field_W = 0;
+        this.field_q = 45823;
+        this.field_P = 0;
+        this.field_e = false;
+        this.field_U = 3500;
+        this.field_C = 512;
+        this.field_X = new dd(16);
+        this.field_v = -1;
         try {
-            ((sfa) this).field_F = new dd(256);
-            ((sfa) this).field_A = new pna();
+            this.field_F = new dd(256);
+            this.field_A = new pna();
             this.i(1);
             this.g(0);
             ija.a(true, (byte) 100, true);
-            ((sfa) this).field_E = true;
-            ((sfa) this).field_j = (int)bva.b((byte) -107);
+            this.field_E = true;
+            this.field_j = (int)bva.b((byte) -107);
         } catch (Throwable throwable) {
             throwable.printStackTrace();
-            ((sfa) this).a(true);
+            this.a(true);
             throw new RuntimeException("");
         }
     }
@@ -2224,12 +2223,12 @@ final class sfa extends ha {
         float var15 = 0.0f;
         float var16 = 0.0f;
         L0: {
-          var10 = ((sfa) this).field_A.field_m + (((sfa) this).field_A.field_r * (float)param0 + ((sfa) this).field_A.field_o * (float)param1 + ((sfa) this).field_A.field_f * (float)param2);
-          var11 = ((sfa) this).field_A.field_m + (((sfa) this).field_A.field_r * (float)param3 + ((sfa) this).field_A.field_o * (float)param4 + ((sfa) this).field_A.field_f * (float)param5);
-          if (var10 >= (float)((sfa) this).field_g) {
+          var10 = this.field_A.field_m + (this.field_A.field_r * (float)param0 + this.field_A.field_o * (float)param1 + this.field_A.field_f * (float)param2);
+          var11 = this.field_A.field_m + (this.field_A.field_r * (float)param3 + this.field_A.field_o * (float)param4 + this.field_A.field_f * (float)param5);
+          if (var10 >= (float)this.field_g) {
             break L0;
           } else {
-            if (var11 >= (float)((sfa) this).field_g) {
+            if (var11 >= (float)this.field_g) {
               break L0;
             } else {
               return;
@@ -2237,52 +2236,52 @@ final class sfa extends ha {
           }
         }
         L1: {
-          var12 = ((sfa) this).field_A.field_l + (((sfa) this).field_A.field_g * (float)param0 + ((sfa) this).field_A.field_i * (float)param1 + ((sfa) this).field_A.field_n * (float)param2);
-          var13 = ((sfa) this).field_A.field_e + (((sfa) this).field_A.field_h * (float)param0 + ((sfa) this).field_A.field_s * (float)param1 + ((sfa) this).field_A.field_j * (float)param2);
-          var14 = ((sfa) this).field_A.field_l + (((sfa) this).field_A.field_g * (float)param3 + ((sfa) this).field_A.field_i * (float)param4 + ((sfa) this).field_A.field_n * (float)param5);
-          var15 = ((sfa) this).field_A.field_e + (((sfa) this).field_A.field_h * (float)param3 + ((sfa) this).field_A.field_s * (float)param4 + ((sfa) this).field_A.field_j * (float)param5);
-          if (var10 >= (float)((sfa) this).field_g) {
+          var12 = this.field_A.field_l + (this.field_A.field_g * (float)param0 + this.field_A.field_i * (float)param1 + this.field_A.field_n * (float)param2);
+          var13 = this.field_A.field_e + (this.field_A.field_h * (float)param0 + this.field_A.field_s * (float)param1 + this.field_A.field_j * (float)param2);
+          var14 = this.field_A.field_l + (this.field_A.field_g * (float)param3 + this.field_A.field_i * (float)param4 + this.field_A.field_n * (float)param5);
+          var15 = this.field_A.field_e + (this.field_A.field_h * (float)param3 + this.field_A.field_s * (float)param4 + this.field_A.field_j * (float)param5);
+          if (var10 >= (float)this.field_g) {
             break L1;
           } else {
-            var16 = ((float)((sfa) this).field_g - var11) / (var10 - var11);
+            var16 = ((float)this.field_g - var11) / (var10 - var11);
             var12 = var14 + (var12 - var14) * var16;
             var13 = var15 + (var13 - var15) * var16;
-            var10 = (float)((sfa) this).field_g;
+            var10 = (float)this.field_g;
             break L1;
           }
         }
         L2: {
-          if (var11 >= (float)((sfa) this).field_g) {
+          if (var11 >= (float)this.field_g) {
             break L2;
           } else {
-            var16 = ((float)((sfa) this).field_g - var10) / (var11 - var10);
+            var16 = ((float)this.field_g - var10) / (var11 - var10);
             var14 = var12 + (var14 - var12) * var16;
             var15 = var13 + (var15 - var13) * var16;
-            var11 = (float)((sfa) this).field_g;
+            var11 = (float)this.field_g;
             break L2;
           }
         }
-        ((sfa) this).a(((sfa) this).field_L + (int)((float)((sfa) this).field_Q * var12 / (float)param6), ((sfa) this).field_w + (int)((float)((sfa) this).field_C * var13 / (float)param6), ((sfa) this).field_L + (int)((float)((sfa) this).field_Q * var14 / (float)param6), ((sfa) this).field_w + (int)((float)((sfa) this).field_C * var15 / (float)param6), param7, param8);
+        this.a(this.field_L + (int)((float)this.field_Q * var12 / (float)param6), this.field_w + (int)((float)this.field_C * var13 / (float)param6), this.field_L + (int)((float)this.field_Q * var14 / (float)param6), this.field_w + (int)((float)this.field_C * var15 / (float)param6), param7, param8);
     }
 
     final int[] Y() {
-        return new int[]{((sfa) this).field_L, ((sfa) this).field_w, ((sfa) this).field_Q, ((sfa) this).field_C};
+        return new int[]{this.field_L, this.field_w, this.field_Q, this.field_C};
     }
 
     final void K(int[] param0) {
-        param0[0] = ((sfa) this).field_J;
-        param0[1] = ((sfa) this).field_d;
-        param0[2] = ((sfa) this).field_W;
-        param0[3] = ((sfa) this).field_P;
+        param0[0] = this.field_J;
+        param0[1] = this.field_d;
+        param0[2] = this.field_W;
+        param0[3] = this.field_P;
     }
 
     final void ZA(int param0, float param1, float param2, float param3, float param4, float param5) {
-        ((sfa) this).field_q = (int)(param1 * 65535.0f);
-        ((sfa) this).field_M = (int)(param2 * 65535.0f);
+        this.field_q = (int)(param1 * 65535.0f);
+        this.field_M = (int)(param2 * 65535.0f);
         float var7 = (float)Math.sqrt((double)(param3 * param3 + param4 * param4 + param5 * param5));
-        ((sfa) this).field_x = (int)(param3 * 65535.0f / var7);
-        ((sfa) this).field_V = (int)(param4 * 65535.0f / var7);
-        ((sfa) this).field_S = (int)(param5 * 65535.0f / var7);
+        this.field_x = (int)(param3 * 65535.0f / var7);
+        this.field_V = (int)(param4 * 65535.0f / var7);
+        this.field_S = (int)(param5 * 65535.0f / var7);
     }
 
     final void U(int param0, int param1, int param2, int param3, int param4) {
@@ -2293,29 +2292,29 @@ final class sfa extends ha {
         int var10 = 0;
         int var11 = 0;
         L0: {
-          if (param1 < ((sfa) this).field_d) {
+          if (param1 < this.field_d) {
             break L0;
           } else {
-            if (param1 < ((sfa) this).field_P) {
+            if (param1 < this.field_P) {
               L1: {
-                if (param0 >= ((sfa) this).field_J) {
+                if (param0 >= this.field_J) {
                   break L1;
                 } else {
-                  param2 = param2 - (((sfa) this).field_J - param0);
-                  param0 = ((sfa) this).field_J;
+                  param2 = param2 - (this.field_J - param0);
+                  param0 = this.field_J;
                   break L1;
                 }
               }
               L2: {
-                if (param0 + param2 <= ((sfa) this).field_W) {
+                if (param0 + param2 <= this.field_W) {
                   break L2;
                 } else {
-                  param2 = ((sfa) this).field_W - param0;
+                  param2 = this.field_W - param0;
                   break L2;
                 }
               }
               L3: {
-                var6 = param0 + param1 * ((sfa) this).field_K;
+                var6 = param0 + param1 * this.field_K;
                 var7 = param3 >>> 24;
                 if (param4 == 0) {
                   break L3;
@@ -2341,11 +2340,11 @@ final class sfa extends ha {
                           if (var8 >= param2) {
                             break L5;
                           } else {
-                            var9 = ((sfa) this).field_r[var6 + var8];
+                            var9 = this.field_r[var6 + var8];
                             var10 = param3 + var9;
                             var11 = (param3 & 16711935) + (var9 & 16711935);
                             var9 = (var11 & 16777472) + (var10 - var11 & 65536);
-                            ((sfa) this).field_r[var6 + var8] = var10 - var9 | var9 - (var9 >>> 8);
+                            this.field_r[var6 + var8] = var10 - var9 | var9 - (var9 >>> 8);
                             var8++;
                             continue L6;
                           }
@@ -2359,9 +2358,9 @@ final class sfa extends ha {
                         if (var9 >= param2) {
                           break L5;
                         } else {
-                          var10 = ((sfa) this).field_r[var6 + var9];
+                          var10 = this.field_r[var6 + var9];
                           var10 = ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
-                          ((sfa) this).field_r[var6 + var9] = param3 + var10;
+                          this.field_r[var6 + var9] = param3 + var10;
                           var9++;
                           continue L7;
                         }
@@ -2376,7 +2375,7 @@ final class sfa extends ha {
                 if (var8 >= param2) {
                   break L0;
                 } else {
-                  ((sfa) this).field_r[var6 + var8] = param3;
+                  this.field_r[var6 + var8] = param3;
                   var8++;
                   continue L8;
                 }
@@ -2389,31 +2388,31 @@ final class sfa extends ha {
     }
 
     final int XA() {
-        return ((sfa) this).field_U;
+        return this.field_U;
     }
 
     private final void g() {
-        int var1 = 0;
         iua var2_ref_iua = null;
         int var2 = 0;
         int var3 = 0;
-        ((sfa) this).field_p = ((sfa) this).field_J - ((sfa) this).field_L;
-        ((sfa) this).field_l = ((sfa) this).field_W - ((sfa) this).field_L;
-        ((sfa) this).field_k = ((sfa) this).field_d - ((sfa) this).field_w;
-        ((sfa) this).field_o = ((sfa) this).field_P - ((sfa) this).field_w;
-        for (var1 = 0; var1 < ((sfa) this).field_u; var1++) {
-            var2_ref_iua = ((sfa) this).field_Y[var1].field_v;
-            var2_ref_iua.field_e = ((sfa) this).field_L - ((sfa) this).field_J;
-            var2_ref_iua.field_n = ((sfa) this).field_w - ((sfa) this).field_d;
-            var2_ref_iua.field_h = ((sfa) this).field_W - ((sfa) this).field_J;
-            var2_ref_iua.field_v = ((sfa) this).field_P - ((sfa) this).field_d;
+        int var1 = 0;
+        this.field_p = this.field_J - this.field_L;
+        this.field_l = this.field_W - this.field_L;
+        this.field_k = this.field_d - this.field_w;
+        this.field_o = this.field_P - this.field_w;
+        for (var1 = 0; var1 < this.field_u; var1++) {
+            var2_ref_iua = this.field_Y[var1].field_v;
+            var2_ref_iua.field_e = this.field_L - this.field_J;
+            var2_ref_iua.field_n = this.field_w - this.field_d;
+            var2_ref_iua.field_h = this.field_W - this.field_J;
+            var2_ref_iua.field_v = this.field_P - this.field_d;
         }
-        var1 = ((sfa) this).field_d * ((sfa) this).field_K + ((sfa) this).field_J;
-        for (var2 = ((sfa) this).field_d; var2 < ((sfa) this).field_P; var2++) {
-            for (var3 = 0; var3 < ((sfa) this).field_u; var3++) {
-                ((sfa) this).field_Y[var3].field_v.field_p[var2 - ((sfa) this).field_d] = var1;
+        var1 = this.field_d * this.field_K + this.field_J;
+        for (var2 = this.field_d; var2 < this.field_P; var2++) {
+            for (var3 = 0; var3 < this.field_u; var3++) {
+                this.field_Y[var3].field_v.field_p[var2 - this.field_d] = var1;
             }
-            var1 = var1 + ((sfa) this).field_K;
+            var1 = var1 + this.field_K;
         }
     }
 
@@ -2430,15 +2429,15 @@ final class sfa extends ha {
           if (var7 >= param1.length) {
             if (!param2) {
               if (var6 == 0) {
-                return (da) (Object) new sn((sfa) this, param0, param1, var4, var5);
+                return (da) ((Object) new sn((sfa) (this), param0, param1, var4, var5));
               } else {
                 throw new IllegalArgumentException("");
               }
             } else {
               if (var6 == 0) {
-                return (da) (Object) new le((sfa) this, param0, param1, var4, var5);
+                return (da) ((Object) new le((sfa) (this), param0, param1, var4, var5));
               } else {
-                return (da) (Object) new nu((sfa) this, param0, param1, var4, var5);
+                return (da) ((Object) new nu((sfa) (this), param0, param1, var4, var5));
               }
             }
           } else {
@@ -2460,13 +2459,14 @@ final class sfa extends ha {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int incrementValue$0 = 0;
         param6 = param6 - param2;
         for (var8 = 0; var8 < param3; var8++) {
-            var9 = (param1 + var8) * ((sfa) this).field_K + param0;
+            var9 = (param1 + var8) * this.field_K + param0;
             for (var10 = 0; var10 < param2; var10++) {
-                int incrementValue$0 = param5;
+                incrementValue$0 = param5;
                 param5++;
-                ((sfa) this).field_r[var9 + var10] = param4[incrementValue$0];
+                this.field_r[var9 + var10] = param4[incrementValue$0];
             }
             param5 = param5 + param6;
         }
@@ -2476,57 +2476,59 @@ final class sfa extends ha {
     }
 
     private final void a(java.awt.Canvas param0) {
+        float[] array$2 = null;
         ija var2 = null;
         java.awt.Dimension var3 = null;
         L0: {
           if (param0 == null) {
-            ((sfa) this).field_t = null;
-            ((sfa) this).field_T = null;
-            if (((sfa) this).field_D != null) {
+            this.field_t = null;
+            this.field_T = null;
+            if (this.field_D != null) {
               break L0;
             } else {
-              ((sfa) this).field_r = null;
-              ((sfa) this).field_h = 1;
-              ((sfa) this).field_K = 1;
-              ((sfa) this).field_s = 1;
-              ((sfa) this).field_y = 1;
+              this.field_r = null;
+              this.field_h = 1;
+              this.field_K = 1;
+              this.field_s = 1;
+              this.field_y = 1;
               this.m();
               break L0;
             }
           } else {
-            var2 = (ija) (Object) ((sfa) this).field_G.a((byte) -116, (long)((Object) (Object) param0).hashCode());
+            var2 = (ija) ((Object) this.field_G.a((byte) -116, (long)param0.hashCode()));
             if (var2 == null) {
               break L0;
             } else {
-              ((sfa) this).field_t = param0;
+              this.field_t = param0;
               var3 = param0.getSize();
-              ((sfa) this).field_m = var3.width;
-              ((sfa) this).field_O = var3.height;
-              ((sfa) this).field_T = var2;
-              if (((sfa) this).field_D != null) {
+              this.field_m = var3.width;
+              this.field_O = var3.height;
+              this.field_T = var2;
+              if (this.field_D != null) {
                 break L0;
               } else {
                 L1: {
                   L2: {
-                    ((sfa) this).field_r = var2.field_g;
-                    ((sfa) this).field_K = var2.field_h;
-                    ((sfa) this).field_h = var2.field_f;
-                    if (((sfa) this).field_K != ((sfa) this).field_y) {
+                    this.field_r = var2.field_g;
+                    this.field_K = var2.field_h;
+                    this.field_h = var2.field_f;
+                    if (this.field_K != this.field_y) {
                       break L2;
                     } else {
-                      if (((sfa) this).field_h == ((sfa) this).field_s) {
+                      if (this.field_h == this.field_s) {
                         break L1;
                       } else {
                         break L2;
                       }
                     }
                   }
-                  ((sfa) this).field_y = ((sfa) this).field_K;
-                  ((sfa) this).field_i = ((sfa) this).field_K;
-                  ((sfa) this).field_s = ((sfa) this).field_h;
-                  ((sfa) this).field_B = ((sfa) this).field_h;
-                  ((sfa) this).field_n = new float[((sfa) this).field_y * ((sfa) this).field_s];
-                  ((sfa) this).field_H = new float[((sfa) this).field_y * ((sfa) this).field_s];
+                  this.field_y = this.field_K;
+                  this.field_i = this.field_K;
+                  this.field_s = this.field_h;
+                  this.field_B = this.field_h;
+                  array$2 = new float[this.field_y * this.field_s];
+                  this.field_n = array$2;
+                  this.field_H = array$2;
                   break L1;
                 }
                 this.m();
@@ -2538,6 +2540,11 @@ final class sfa extends ha {
     }
 
     final void s(int param0, int param1, int param2, int param3, int param4) {
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -2561,27 +2568,27 @@ final class sfa extends ha {
             }
           }
           L1: {
-            if (((sfa) this).field_W <= ((sfa) this).field_J) {
+            if (this.field_W <= this.field_J) {
               break L1;
             } else {
-              if (((sfa) this).field_P > ((sfa) this).field_d) {
-                if (param0 + param2 < ((sfa) this).field_J) {
+              if (this.field_P > this.field_d) {
+                if (param0 + param2 < this.field_J) {
                   break L1;
                 } else {
                   L2: {
-                    if (param0 - param2 >= ((sfa) this).field_W) {
+                    if (param0 - param2 >= this.field_W) {
                       break L2;
                     } else {
-                      if (param1 + param2 < ((sfa) this).field_d) {
+                      if (param1 + param2 < this.field_d) {
                         break L2;
                       } else {
-                        if (param1 - param2 < ((sfa) this).field_P) {
+                        if (param1 - param2 < this.field_P) {
                           L3: {
                             L4: {
-                              var6 = param0 + param1 * ((sfa) this).field_K;
+                              var6 = param0 + param1 * this.field_K;
                               var7 = var6;
-                              var8 = var6 - param2 * ((sfa) this).field_K;
-                              var9 = var6 + param2 * ((sfa) this).field_K;
+                              var8 = var6 - param2 * this.field_K;
+                              var9 = var6 + param2 * this.field_K;
                               var10 = param2;
                               var11 = 0;
                               param2 = param2 * param2;
@@ -2606,118 +2613,118 @@ final class sfa extends ha {
                                     return;
                                   } else {
                                     L6: {
-                                      if (param0 - var10 < ((sfa) this).field_J) {
+                                      if (param0 - var10 < this.field_J) {
                                         break L6;
                                       } else {
-                                        if (param0 + var10 >= ((sfa) this).field_W) {
+                                        if (param0 + var10 >= this.field_W) {
                                           break L6;
                                         } else {
-                                          if (param1 - var10 < ((sfa) this).field_d) {
+                                          if (param1 - var10 < this.field_d) {
                                             break L6;
                                           } else {
-                                            if (param1 + var10 < ((sfa) this).field_P) {
+                                            if (param1 + var10 < this.field_P) {
                                               var14 = var6 - var10;
                                               var15 = param3;
-                                              var16 = ((sfa) this).field_r[var14];
+                                              var16 = this.field_r[var14];
                                               var17 = var15 + var16;
                                               var18 = (var15 & 16711935) + (var16 & 16711935);
                                               var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                              ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                              this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                               var14 = var6 + var10;
                                               var15 = param3;
-                                              var16 = ((sfa) this).field_r[var14];
+                                              var16 = this.field_r[var14];
                                               var17 = var15 + var16;
                                               var18 = (var15 & 16711935) + (var16 & 16711935);
                                               var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                              ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                              this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                               var14 = var8;
                                               var15 = param3;
-                                              var16 = ((sfa) this).field_r[var14];
+                                              var16 = this.field_r[var14];
                                               var17 = var15 + var16;
                                               var18 = (var15 & 16711935) + (var16 & 16711935);
                                               var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                              ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                              this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                               var14 = var9;
                                               var15 = param3;
-                                              var16 = ((sfa) this).field_r[var14];
+                                              var16 = this.field_r[var14];
                                               var17 = var15 + var16;
                                               var18 = (var15 & 16711935) + (var16 & 16711935);
                                               var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                              ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                              this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                               L7: while (true) {
                                                 L8: {
-                                                  int incrementValue$5 = var11;
+                                                  incrementValue$5 = var11;
                                                   var11++;
                                                   var12 = var12 + (incrementValue$5 + var11);
-                                                  var6 = var6 - ((sfa) this).field_K;
-                                                  var7 = var7 + ((sfa) this).field_K;
+                                                  var6 = var6 - this.field_K;
+                                                  var7 = var7 + this.field_K;
                                                   if (var12 <= param2) {
                                                     break L8;
                                                   } else {
                                                     var10--;
                                                     var12 = var12 - (var10 + var10);
-                                                    var8 = var8 + ((sfa) this).field_K;
-                                                    var9 = var9 - ((sfa) this).field_K;
+                                                    var8 = var8 + this.field_K;
+                                                    var9 = var9 - this.field_K;
                                                     break L8;
                                                   }
                                                 }
                                                 if (var10 >= var11) {
                                                   var14 = var8 - var11;
                                                   var15 = param3;
-                                                  var16 = ((sfa) this).field_r[var14];
+                                                  var16 = this.field_r[var14];
                                                   var17 = var15 + var16;
                                                   var18 = (var15 & 16711935) + (var16 & 16711935);
                                                   var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                  ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                  this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                   var14 = var8 + var11;
                                                   var15 = param3;
-                                                  var16 = ((sfa) this).field_r[var14];
+                                                  var16 = this.field_r[var14];
                                                   var17 = var15 + var16;
                                                   var18 = (var15 & 16711935) + (var16 & 16711935);
                                                   var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                  ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                  this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                   var14 = var6 - var10;
                                                   var15 = param3;
-                                                  var16 = ((sfa) this).field_r[var14];
+                                                  var16 = this.field_r[var14];
                                                   var17 = var15 + var16;
                                                   var18 = (var15 & 16711935) + (var16 & 16711935);
                                                   var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                  ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                  this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                   var14 = var6 + var10;
                                                   var15 = param3;
-                                                  var16 = ((sfa) this).field_r[var14];
+                                                  var16 = this.field_r[var14];
                                                   var17 = var15 + var16;
                                                   var18 = (var15 & 16711935) + (var16 & 16711935);
                                                   var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                  ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                  this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                   var14 = var7 - var10;
                                                   var15 = param3;
-                                                  var16 = ((sfa) this).field_r[var14];
+                                                  var16 = this.field_r[var14];
                                                   var17 = var15 + var16;
                                                   var18 = (var15 & 16711935) + (var16 & 16711935);
                                                   var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                  ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                  this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                   var14 = var7 + var10;
                                                   var15 = param3;
-                                                  var16 = ((sfa) this).field_r[var14];
+                                                  var16 = this.field_r[var14];
                                                   var17 = var15 + var16;
                                                   var18 = (var15 & 16711935) + (var16 & 16711935);
                                                   var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                  ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                  this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                   var14 = var9 - var11;
                                                   var15 = param3;
-                                                  var16 = ((sfa) this).field_r[var14];
+                                                  var16 = this.field_r[var14];
                                                   var17 = var15 + var16;
                                                   var18 = (var15 & 16711935) + (var16 & 16711935);
                                                   var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                  ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                  this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                   var14 = var9 + var11;
                                                   var15 = param3;
-                                                  var16 = ((sfa) this).field_r[var14];
+                                                  var16 = this.field_r[var14];
                                                   var17 = var15 + var16;
                                                   var18 = (var15 & 16711935) + (var16 & 16711935);
                                                   var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                  ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                  this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                   continue L7;
                                                 } else {
                                                   break L3;
@@ -2731,88 +2738,88 @@ final class sfa extends ha {
                                       }
                                     }
                                     L9: {
-                                      if (param0 - var10 < ((sfa) this).field_J) {
+                                      if (param0 - var10 < this.field_J) {
                                         break L9;
                                       } else {
-                                        if (param1 < ((sfa) this).field_d) {
+                                        if (param1 < this.field_d) {
                                           break L9;
                                         } else {
-                                          if (param1 >= ((sfa) this).field_P) {
+                                          if (param1 >= this.field_P) {
                                             break L9;
                                           } else {
                                             var14 = var6 - var10;
                                             var15 = param3;
-                                            var16 = ((sfa) this).field_r[var14];
+                                            var16 = this.field_r[var14];
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
                                             var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                            ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                            this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                             break L9;
                                           }
                                         }
                                       }
                                     }
                                     L10: {
-                                      if (param0 + var10 >= ((sfa) this).field_W) {
+                                      if (param0 + var10 >= this.field_W) {
                                         break L10;
                                       } else {
-                                        if (param1 < ((sfa) this).field_d) {
+                                        if (param1 < this.field_d) {
                                           break L10;
                                         } else {
-                                          if (param1 >= ((sfa) this).field_P) {
+                                          if (param1 >= this.field_P) {
                                             break L10;
                                           } else {
                                             var14 = var6 + var10;
                                             var15 = param3;
-                                            var16 = ((sfa) this).field_r[var14];
+                                            var16 = this.field_r[var14];
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
                                             var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                            ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                            this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                             break L10;
                                           }
                                         }
                                       }
                                     }
                                     L11: {
-                                      if (param1 - var10 < ((sfa) this).field_d) {
+                                      if (param1 - var10 < this.field_d) {
                                         break L11;
                                       } else {
-                                        if (param0 < ((sfa) this).field_J) {
+                                        if (param0 < this.field_J) {
                                           break L11;
                                         } else {
-                                          if (param0 >= ((sfa) this).field_W) {
+                                          if (param0 >= this.field_W) {
                                             break L11;
                                           } else {
                                             var14 = var8;
                                             var15 = param3;
-                                            var16 = ((sfa) this).field_r[var14];
+                                            var16 = this.field_r[var14];
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
                                             var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                            ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                            this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                             break L11;
                                           }
                                         }
                                       }
                                     }
                                     L12: {
-                                      if (param1 + var10 >= ((sfa) this).field_P) {
+                                      if (param1 + var10 >= this.field_P) {
                                         break L12;
                                       } else {
-                                        if (param0 < ((sfa) this).field_J) {
+                                        if (param0 < this.field_J) {
                                           break L12;
                                         } else {
-                                          if (param0 >= ((sfa) this).field_W) {
+                                          if (param0 >= this.field_W) {
                                             break L12;
                                           } else {
                                             var14 = var9;
                                             var15 = param3;
-                                            var16 = ((sfa) this).field_r[var14];
+                                            var16 = this.field_r[var14];
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
                                             var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                            ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                            this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                             break L12;
                                           }
                                         }
@@ -2820,60 +2827,60 @@ final class sfa extends ha {
                                     }
                                     L13: while (true) {
                                       L14: {
-                                        int incrementValue$6 = var11;
+                                        incrementValue$6 = var11;
                                         var11++;
                                         var12 = var12 + (incrementValue$6 + var11);
-                                        var6 = var6 - ((sfa) this).field_K;
-                                        var7 = var7 + ((sfa) this).field_K;
+                                        var6 = var6 - this.field_K;
+                                        var7 = var7 + this.field_K;
                                         if (var12 <= param2) {
                                           break L14;
                                         } else {
                                           var10--;
                                           var12 = var12 - (var10 + var10);
-                                          var8 = var8 + ((sfa) this).field_K;
-                                          var9 = var9 - ((sfa) this).field_K;
+                                          var8 = var8 + this.field_K;
+                                          var9 = var9 - this.field_K;
                                           break L14;
                                         }
                                       }
                                       if (var10 >= var11) {
                                         L15: {
-                                          if (param1 - var10 < ((sfa) this).field_d) {
+                                          if (param1 - var10 < this.field_d) {
                                             break L15;
                                           } else {
-                                            if (param1 - var10 >= ((sfa) this).field_P) {
+                                            if (param1 - var10 >= this.field_P) {
                                               break L15;
                                             } else {
                                               L16: {
-                                                if (param0 - var11 < ((sfa) this).field_J) {
+                                                if (param0 - var11 < this.field_J) {
                                                   break L16;
                                                 } else {
-                                                  if (param0 - var11 >= ((sfa) this).field_W) {
+                                                  if (param0 - var11 >= this.field_W) {
                                                     break L16;
                                                   } else {
                                                     var14 = var8 - var11;
                                                     var15 = param3;
-                                                    var16 = ((sfa) this).field_r[var14];
+                                                    var16 = this.field_r[var14];
                                                     var17 = var15 + var16;
                                                     var18 = (var15 & 16711935) + (var16 & 16711935);
                                                     var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                    ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                    this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                     break L16;
                                                   }
                                                 }
                                               }
-                                              if (param0 + var11 < ((sfa) this).field_J) {
+                                              if (param0 + var11 < this.field_J) {
                                                 break L15;
                                               } else {
-                                                if (param0 + var11 >= ((sfa) this).field_W) {
+                                                if (param0 + var11 >= this.field_W) {
                                                   break L15;
                                                 } else {
                                                   var14 = var8 + var11;
                                                   var15 = param3;
-                                                  var16 = ((sfa) this).field_r[var14];
+                                                  var16 = this.field_r[var14];
                                                   var17 = var15 + var16;
                                                   var18 = (var15 & 16711935) + (var16 & 16711935);
                                                   var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                  ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                  this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                   break L15;
                                                 }
                                               }
@@ -2881,43 +2888,43 @@ final class sfa extends ha {
                                           }
                                         }
                                         L17: {
-                                          if (param1 - var11 < ((sfa) this).field_d) {
+                                          if (param1 - var11 < this.field_d) {
                                             break L17;
                                           } else {
-                                            if (param1 - var11 >= ((sfa) this).field_P) {
+                                            if (param1 - var11 >= this.field_P) {
                                               break L17;
                                             } else {
                                               L18: {
-                                                if (param0 - var10 < ((sfa) this).field_J) {
+                                                if (param0 - var10 < this.field_J) {
                                                   break L18;
                                                 } else {
-                                                  if (param0 - var10 >= ((sfa) this).field_W) {
+                                                  if (param0 - var10 >= this.field_W) {
                                                     break L18;
                                                   } else {
                                                     var14 = var6 - var10;
                                                     var15 = param3;
-                                                    var16 = ((sfa) this).field_r[var14];
+                                                    var16 = this.field_r[var14];
                                                     var17 = var15 + var16;
                                                     var18 = (var15 & 16711935) + (var16 & 16711935);
                                                     var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                    ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                    this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                     break L18;
                                                   }
                                                 }
                                               }
-                                              if (param0 + var10 < ((sfa) this).field_J) {
+                                              if (param0 + var10 < this.field_J) {
                                                 break L17;
                                               } else {
-                                                if (param0 + var10 >= ((sfa) this).field_W) {
+                                                if (param0 + var10 >= this.field_W) {
                                                   break L17;
                                                 } else {
                                                   var14 = var6 + var10;
                                                   var15 = param3;
-                                                  var16 = ((sfa) this).field_r[var14];
+                                                  var16 = this.field_r[var14];
                                                   var17 = var15 + var16;
                                                   var18 = (var15 & 16711935) + (var16 & 16711935);
                                                   var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                  ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                  this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                   break L17;
                                                 }
                                               }
@@ -2925,86 +2932,86 @@ final class sfa extends ha {
                                           }
                                         }
                                         L19: {
-                                          if (param1 + var11 < ((sfa) this).field_d) {
+                                          if (param1 + var11 < this.field_d) {
                                             break L19;
                                           } else {
-                                            if (param1 + var11 >= ((sfa) this).field_P) {
+                                            if (param1 + var11 >= this.field_P) {
                                               break L19;
                                             } else {
                                               L20: {
-                                                if (param0 - var10 < ((sfa) this).field_J) {
+                                                if (param0 - var10 < this.field_J) {
                                                   break L20;
                                                 } else {
-                                                  if (param0 - var10 >= ((sfa) this).field_W) {
+                                                  if (param0 - var10 >= this.field_W) {
                                                     break L20;
                                                   } else {
                                                     var14 = var7 - var10;
                                                     var15 = param3;
-                                                    var16 = ((sfa) this).field_r[var14];
+                                                    var16 = this.field_r[var14];
                                                     var17 = var15 + var16;
                                                     var18 = (var15 & 16711935) + (var16 & 16711935);
                                                     var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                    ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                    this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                     break L20;
                                                   }
                                                 }
                                               }
-                                              if (param0 + var10 < ((sfa) this).field_J) {
+                                              if (param0 + var10 < this.field_J) {
                                                 break L19;
                                               } else {
-                                                if (param0 + var10 >= ((sfa) this).field_W) {
+                                                if (param0 + var10 >= this.field_W) {
                                                   break L19;
                                                 } else {
                                                   var14 = var7 + var10;
                                                   var15 = param3;
-                                                  var16 = ((sfa) this).field_r[var14];
+                                                  var16 = this.field_r[var14];
                                                   var17 = var15 + var16;
                                                   var18 = (var15 & 16711935) + (var16 & 16711935);
                                                   var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                  ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                  this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                   break L19;
                                                 }
                                               }
                                             }
                                           }
                                         }
-                                        if (param1 + var10 < ((sfa) this).field_d) {
+                                        if (param1 + var10 < this.field_d) {
                                           continue L13;
                                         } else {
-                                          if (param1 + var10 >= ((sfa) this).field_P) {
+                                          if (param1 + var10 >= this.field_P) {
                                             continue L13;
                                           } else {
                                             L21: {
-                                              if (param0 - var11 < ((sfa) this).field_J) {
+                                              if (param0 - var11 < this.field_J) {
                                                 break L21;
                                               } else {
-                                                if (param0 - var11 >= ((sfa) this).field_W) {
+                                                if (param0 - var11 >= this.field_W) {
                                                   break L21;
                                                 } else {
                                                   var14 = var9 - var11;
                                                   var15 = param3;
-                                                  var16 = ((sfa) this).field_r[var14];
+                                                  var16 = this.field_r[var14];
                                                   var17 = var15 + var16;
                                                   var18 = (var15 & 16711935) + (var16 & 16711935);
                                                   var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                  ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                  this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                   break L21;
                                                 }
                                               }
                                             }
-                                            if (param0 + var11 < ((sfa) this).field_J) {
+                                            if (param0 + var11 < this.field_J) {
                                               continue L13;
                                             } else {
-                                              if (param0 + var11 >= ((sfa) this).field_W) {
+                                              if (param0 + var11 >= this.field_W) {
                                                 continue L13;
                                               } else {
                                                 var14 = var9 + var11;
                                                 var15 = param3;
-                                                var16 = ((sfa) this).field_r[var14];
+                                                var16 = this.field_r[var14];
                                                 var17 = var15 + var16;
                                                 var18 = (var15 & 16711935) + (var16 & 16711935);
                                                 var16 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                                ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
+                                                this.field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                                 continue L13;
                                               }
                                             }
@@ -3017,62 +3024,62 @@ final class sfa extends ha {
                                   }
                                 } else {
                                   L22: {
-                                    if (param0 - var10 < ((sfa) this).field_J) {
+                                    if (param0 - var10 < this.field_J) {
                                       break L22;
                                     } else {
-                                      if (param0 + var10 >= ((sfa) this).field_W) {
+                                      if (param0 + var10 >= this.field_W) {
                                         break L22;
                                       } else {
-                                        if (param1 - var10 < ((sfa) this).field_d) {
+                                        if (param1 - var10 < this.field_d) {
                                           break L22;
                                         } else {
-                                          if (param1 + var10 < ((sfa) this).field_P) {
+                                          if (param1 + var10 < this.field_P) {
                                             var14 = var6 - var10;
                                             var15 = param3;
                                             var16 = var13;
                                             var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                             var17 = 256 - var16;
-                                            var18 = ((sfa) this).field_r[var14];
+                                            var18 = this.field_r[var14];
                                             var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                            ((sfa) this).field_r[var14] = var15 + var18;
+                                            this.field_r[var14] = var15 + var18;
                                             var14 = var6 + var10;
                                             var15 = param3;
                                             var16 = var13;
                                             var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                             var17 = 256 - var16;
-                                            var18 = ((sfa) this).field_r[var14];
+                                            var18 = this.field_r[var14];
                                             var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                            ((sfa) this).field_r[var14] = var15 + var18;
+                                            this.field_r[var14] = var15 + var18;
                                             var14 = var8;
                                             var15 = param3;
                                             var16 = var13;
                                             var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                             var17 = 256 - var16;
-                                            var18 = ((sfa) this).field_r[var14];
+                                            var18 = this.field_r[var14];
                                             var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                            ((sfa) this).field_r[var14] = var15 + var18;
+                                            this.field_r[var14] = var15 + var18;
                                             var14 = var9;
                                             var15 = param3;
                                             var16 = var13;
                                             var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                             var17 = 256 - var16;
-                                            var18 = ((sfa) this).field_r[var14];
+                                            var18 = this.field_r[var14];
                                             var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                            ((sfa) this).field_r[var14] = var15 + var18;
+                                            this.field_r[var14] = var15 + var18;
                                             L23: while (true) {
                                               L24: {
-                                                int incrementValue$7 = var11;
+                                                incrementValue$7 = var11;
                                                 var11++;
                                                 var12 = var12 + (incrementValue$7 + var11);
-                                                var6 = var6 - ((sfa) this).field_K;
-                                                var7 = var7 + ((sfa) this).field_K;
+                                                var6 = var6 - this.field_K;
+                                                var7 = var7 + this.field_K;
                                                 if (var12 <= param2) {
                                                   break L24;
                                                 } else {
                                                   var10--;
                                                   var12 = var12 - (var10 + var10);
-                                                  var8 = var8 + ((sfa) this).field_K;
-                                                  var9 = var9 - ((sfa) this).field_K;
+                                                  var8 = var8 + this.field_K;
+                                                  var9 = var9 - this.field_K;
                                                   break L24;
                                                 }
                                               }
@@ -3082,65 +3089,65 @@ final class sfa extends ha {
                                                 var16 = var13;
                                                 var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                 var17 = 256 - var16;
-                                                var18 = ((sfa) this).field_r[var14];
+                                                var18 = this.field_r[var14];
                                                 var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                ((sfa) this).field_r[var14] = var15 + var18;
+                                                this.field_r[var14] = var15 + var18;
                                                 var14 = var8 + var11;
                                                 var15 = param3;
                                                 var16 = var13;
                                                 var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                 var17 = 256 - var16;
-                                                var18 = ((sfa) this).field_r[var14];
+                                                var18 = this.field_r[var14];
                                                 var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                ((sfa) this).field_r[var14] = var15 + var18;
+                                                this.field_r[var14] = var15 + var18;
                                                 var14 = var6 - var10;
                                                 var15 = param3;
                                                 var16 = var13;
                                                 var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                 var17 = 256 - var16;
-                                                var18 = ((sfa) this).field_r[var14];
+                                                var18 = this.field_r[var14];
                                                 var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                ((sfa) this).field_r[var14] = var15 + var18;
+                                                this.field_r[var14] = var15 + var18;
                                                 var14 = var6 + var10;
                                                 var15 = param3;
                                                 var16 = var13;
                                                 var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                 var17 = 256 - var16;
-                                                var18 = ((sfa) this).field_r[var14];
+                                                var18 = this.field_r[var14];
                                                 var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                ((sfa) this).field_r[var14] = var15 + var18;
+                                                this.field_r[var14] = var15 + var18;
                                                 var14 = var7 - var10;
                                                 var15 = param3;
                                                 var16 = var13;
                                                 var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                 var17 = 256 - var16;
-                                                var18 = ((sfa) this).field_r[var14];
+                                                var18 = this.field_r[var14];
                                                 var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                ((sfa) this).field_r[var14] = var15 + var18;
+                                                this.field_r[var14] = var15 + var18;
                                                 var14 = var7 + var10;
                                                 var15 = param3;
                                                 var16 = var13;
                                                 var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                 var17 = 256 - var16;
-                                                var18 = ((sfa) this).field_r[var14];
+                                                var18 = this.field_r[var14];
                                                 var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                ((sfa) this).field_r[var14] = var15 + var18;
+                                                this.field_r[var14] = var15 + var18;
                                                 var14 = var9 - var11;
                                                 var15 = param3;
                                                 var16 = var13;
                                                 var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                 var17 = 256 - var16;
-                                                var18 = ((sfa) this).field_r[var14];
+                                                var18 = this.field_r[var14];
                                                 var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                ((sfa) this).field_r[var14] = var15 + var18;
+                                                this.field_r[var14] = var15 + var18;
                                                 var14 = var9 + var11;
                                                 var15 = param3;
                                                 var16 = var13;
                                                 var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                 var17 = 256 - var16;
-                                                var18 = ((sfa) this).field_r[var14];
+                                                var18 = this.field_r[var14];
                                                 var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                ((sfa) this).field_r[var14] = var15 + var18;
+                                                this.field_r[var14] = var15 + var18;
                                                 continue L23;
                                               } else {
                                                 break L3;
@@ -3154,13 +3161,13 @@ final class sfa extends ha {
                                     }
                                   }
                                   L25: {
-                                    if (param0 - var10 < ((sfa) this).field_J) {
+                                    if (param0 - var10 < this.field_J) {
                                       break L25;
                                     } else {
-                                      if (param1 < ((sfa) this).field_d) {
+                                      if (param1 < this.field_d) {
                                         break L25;
                                       } else {
-                                        if (param1 >= ((sfa) this).field_P) {
+                                        if (param1 >= this.field_P) {
                                           break L25;
                                         } else {
                                           var14 = var6 - var10;
@@ -3168,22 +3175,22 @@ final class sfa extends ha {
                                           var16 = var13;
                                           var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                           var17 = 256 - var16;
-                                          var18 = ((sfa) this).field_r[var14];
+                                          var18 = this.field_r[var14];
                                           var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                          ((sfa) this).field_r[var14] = var15 + var18;
+                                          this.field_r[var14] = var15 + var18;
                                           break L25;
                                         }
                                       }
                                     }
                                   }
                                   L26: {
-                                    if (param0 + var10 >= ((sfa) this).field_W) {
+                                    if (param0 + var10 >= this.field_W) {
                                       break L26;
                                     } else {
-                                      if (param1 < ((sfa) this).field_d) {
+                                      if (param1 < this.field_d) {
                                         break L26;
                                       } else {
-                                        if (param1 >= ((sfa) this).field_P) {
+                                        if (param1 >= this.field_P) {
                                           break L26;
                                         } else {
                                           var14 = var6 + var10;
@@ -3191,22 +3198,22 @@ final class sfa extends ha {
                                           var16 = var13;
                                           var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                           var17 = 256 - var16;
-                                          var18 = ((sfa) this).field_r[var14];
+                                          var18 = this.field_r[var14];
                                           var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                          ((sfa) this).field_r[var14] = var15 + var18;
+                                          this.field_r[var14] = var15 + var18;
                                           break L26;
                                         }
                                       }
                                     }
                                   }
                                   L27: {
-                                    if (param1 - var10 < ((sfa) this).field_d) {
+                                    if (param1 - var10 < this.field_d) {
                                       break L27;
                                     } else {
-                                      if (param0 < ((sfa) this).field_J) {
+                                      if (param0 < this.field_J) {
                                         break L27;
                                       } else {
-                                        if (param0 >= ((sfa) this).field_W) {
+                                        if (param0 >= this.field_W) {
                                           break L27;
                                         } else {
                                           var14 = var8;
@@ -3214,22 +3221,22 @@ final class sfa extends ha {
                                           var16 = var13;
                                           var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                           var17 = 256 - var16;
-                                          var18 = ((sfa) this).field_r[var14];
+                                          var18 = this.field_r[var14];
                                           var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                          ((sfa) this).field_r[var14] = var15 + var18;
+                                          this.field_r[var14] = var15 + var18;
                                           break L27;
                                         }
                                       }
                                     }
                                   }
                                   L28: {
-                                    if (param1 + var10 >= ((sfa) this).field_P) {
+                                    if (param1 + var10 >= this.field_P) {
                                       break L28;
                                     } else {
-                                      if (param0 < ((sfa) this).field_J) {
+                                      if (param0 < this.field_J) {
                                         break L28;
                                       } else {
-                                        if (param0 >= ((sfa) this).field_W) {
+                                        if (param0 >= this.field_W) {
                                           break L28;
                                         } else {
                                           var14 = var9;
@@ -3237,9 +3244,9 @@ final class sfa extends ha {
                                           var16 = var13;
                                           var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                           var17 = 256 - var16;
-                                          var18 = ((sfa) this).field_r[var14];
+                                          var18 = this.field_r[var14];
                                           var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                          ((sfa) this).field_r[var14] = var15 + var18;
+                                          this.field_r[var14] = var15 + var18;
                                           break L28;
                                         }
                                       }
@@ -3247,34 +3254,34 @@ final class sfa extends ha {
                                   }
                                   L29: while (true) {
                                     L30: {
-                                      int incrementValue$8 = var11;
+                                      incrementValue$8 = var11;
                                       var11++;
                                       var12 = var12 + (incrementValue$8 + var11);
-                                      var6 = var6 - ((sfa) this).field_K;
-                                      var7 = var7 + ((sfa) this).field_K;
+                                      var6 = var6 - this.field_K;
+                                      var7 = var7 + this.field_K;
                                       if (var12 <= param2) {
                                         break L30;
                                       } else {
                                         var10--;
                                         var12 = var12 - (var10 + var10);
-                                        var8 = var8 + ((sfa) this).field_K;
-                                        var9 = var9 - ((sfa) this).field_K;
+                                        var8 = var8 + this.field_K;
+                                        var9 = var9 - this.field_K;
                                         break L30;
                                       }
                                     }
                                     if (var10 >= var11) {
                                       L31: {
-                                        if (param1 - var10 < ((sfa) this).field_d) {
+                                        if (param1 - var10 < this.field_d) {
                                           break L31;
                                         } else {
-                                          if (param1 - var10 >= ((sfa) this).field_P) {
+                                          if (param1 - var10 >= this.field_P) {
                                             break L31;
                                           } else {
                                             L32: {
-                                              if (param0 - var11 < ((sfa) this).field_J) {
+                                              if (param0 - var11 < this.field_J) {
                                                 break L32;
                                               } else {
-                                                if (param0 - var11 >= ((sfa) this).field_W) {
+                                                if (param0 - var11 >= this.field_W) {
                                                   break L32;
                                                 } else {
                                                   var14 = var8 - var11;
@@ -3282,17 +3289,17 @@ final class sfa extends ha {
                                                   var16 = var13;
                                                   var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                   var17 = 256 - var16;
-                                                  var18 = ((sfa) this).field_r[var14];
+                                                  var18 = this.field_r[var14];
                                                   var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                  ((sfa) this).field_r[var14] = var15 + var18;
+                                                  this.field_r[var14] = var15 + var18;
                                                   break L32;
                                                 }
                                               }
                                             }
-                                            if (param0 + var11 < ((sfa) this).field_J) {
+                                            if (param0 + var11 < this.field_J) {
                                               break L31;
                                             } else {
-                                              if (param0 + var11 >= ((sfa) this).field_W) {
+                                              if (param0 + var11 >= this.field_W) {
                                                 break L31;
                                               } else {
                                                 var14 = var8 + var11;
@@ -3300,9 +3307,9 @@ final class sfa extends ha {
                                                 var16 = var13;
                                                 var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                 var17 = 256 - var16;
-                                                var18 = ((sfa) this).field_r[var14];
+                                                var18 = this.field_r[var14];
                                                 var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                ((sfa) this).field_r[var14] = var15 + var18;
+                                                this.field_r[var14] = var15 + var18;
                                                 break L31;
                                               }
                                             }
@@ -3310,17 +3317,17 @@ final class sfa extends ha {
                                         }
                                       }
                                       L33: {
-                                        if (param1 - var11 < ((sfa) this).field_d) {
+                                        if (param1 - var11 < this.field_d) {
                                           break L33;
                                         } else {
-                                          if (param1 - var11 >= ((sfa) this).field_P) {
+                                          if (param1 - var11 >= this.field_P) {
                                             break L33;
                                           } else {
                                             L34: {
-                                              if (param0 - var10 < ((sfa) this).field_J) {
+                                              if (param0 - var10 < this.field_J) {
                                                 break L34;
                                               } else {
-                                                if (param0 - var10 >= ((sfa) this).field_W) {
+                                                if (param0 - var10 >= this.field_W) {
                                                   break L34;
                                                 } else {
                                                   var14 = var6 - var10;
@@ -3328,17 +3335,17 @@ final class sfa extends ha {
                                                   var16 = var13;
                                                   var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                   var17 = 256 - var16;
-                                                  var18 = ((sfa) this).field_r[var14];
+                                                  var18 = this.field_r[var14];
                                                   var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                  ((sfa) this).field_r[var14] = var15 + var18;
+                                                  this.field_r[var14] = var15 + var18;
                                                   break L34;
                                                 }
                                               }
                                             }
-                                            if (param0 + var10 < ((sfa) this).field_J) {
+                                            if (param0 + var10 < this.field_J) {
                                               break L33;
                                             } else {
-                                              if (param0 + var10 >= ((sfa) this).field_W) {
+                                              if (param0 + var10 >= this.field_W) {
                                                 break L33;
                                               } else {
                                                 var14 = var6 + var10;
@@ -3346,9 +3353,9 @@ final class sfa extends ha {
                                                 var16 = var13;
                                                 var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                 var17 = 256 - var16;
-                                                var18 = ((sfa) this).field_r[var14];
+                                                var18 = this.field_r[var14];
                                                 var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                ((sfa) this).field_r[var14] = var15 + var18;
+                                                this.field_r[var14] = var15 + var18;
                                                 break L33;
                                               }
                                             }
@@ -3356,17 +3363,17 @@ final class sfa extends ha {
                                         }
                                       }
                                       L35: {
-                                        if (param1 + var11 < ((sfa) this).field_d) {
+                                        if (param1 + var11 < this.field_d) {
                                           break L35;
                                         } else {
-                                          if (param1 + var11 >= ((sfa) this).field_P) {
+                                          if (param1 + var11 >= this.field_P) {
                                             break L35;
                                           } else {
                                             L36: {
-                                              if (param0 - var10 < ((sfa) this).field_J) {
+                                              if (param0 - var10 < this.field_J) {
                                                 break L36;
                                               } else {
-                                                if (param0 - var10 >= ((sfa) this).field_W) {
+                                                if (param0 - var10 >= this.field_W) {
                                                   break L36;
                                                 } else {
                                                   var14 = var7 - var10;
@@ -3374,17 +3381,17 @@ final class sfa extends ha {
                                                   var16 = var13;
                                                   var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                   var17 = 256 - var16;
-                                                  var18 = ((sfa) this).field_r[var14];
+                                                  var18 = this.field_r[var14];
                                                   var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                  ((sfa) this).field_r[var14] = var15 + var18;
+                                                  this.field_r[var14] = var15 + var18;
                                                   break L36;
                                                 }
                                               }
                                             }
-                                            if (param0 + var10 < ((sfa) this).field_J) {
+                                            if (param0 + var10 < this.field_J) {
                                               break L35;
                                             } else {
-                                              if (param0 + var10 >= ((sfa) this).field_W) {
+                                              if (param0 + var10 >= this.field_W) {
                                                 break L35;
                                               } else {
                                                 var14 = var7 + var10;
@@ -3392,26 +3399,26 @@ final class sfa extends ha {
                                                 var16 = var13;
                                                 var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                 var17 = 256 - var16;
-                                                var18 = ((sfa) this).field_r[var14];
+                                                var18 = this.field_r[var14];
                                                 var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                ((sfa) this).field_r[var14] = var15 + var18;
+                                                this.field_r[var14] = var15 + var18;
                                                 break L35;
                                               }
                                             }
                                           }
                                         }
                                       }
-                                      if (param1 + var10 < ((sfa) this).field_d) {
+                                      if (param1 + var10 < this.field_d) {
                                         continue L29;
                                       } else {
-                                        if (param1 + var10 >= ((sfa) this).field_P) {
+                                        if (param1 + var10 >= this.field_P) {
                                           continue L29;
                                         } else {
                                           L37: {
-                                            if (param0 - var11 < ((sfa) this).field_J) {
+                                            if (param0 - var11 < this.field_J) {
                                               break L37;
                                             } else {
-                                              if (param0 - var11 >= ((sfa) this).field_W) {
+                                              if (param0 - var11 >= this.field_W) {
                                                 break L37;
                                               } else {
                                                 var14 = var9 - var11;
@@ -3419,17 +3426,17 @@ final class sfa extends ha {
                                                 var16 = var13;
                                                 var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                                 var17 = 256 - var16;
-                                                var18 = ((sfa) this).field_r[var14];
+                                                var18 = this.field_r[var14];
                                                 var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                                ((sfa) this).field_r[var14] = var15 + var18;
+                                                this.field_r[var14] = var15 + var18;
                                                 break L37;
                                               }
                                             }
                                           }
-                                          if (param0 + var11 < ((sfa) this).field_J) {
+                                          if (param0 + var11 < this.field_J) {
                                             continue L29;
                                           } else {
-                                            if (param0 + var11 >= ((sfa) this).field_W) {
+                                            if (param0 + var11 >= this.field_W) {
                                               continue L29;
                                             } else {
                                               var14 = var9 + var11;
@@ -3437,9 +3444,9 @@ final class sfa extends ha {
                                               var16 = var13;
                                               var15 = ((var15 & 16711935) * var16 >> 8 & 16711935) + ((var15 & 65280) * var16 >> 8 & 65280) + (var16 << 24);
                                               var17 = 256 - var16;
-                                              var18 = ((sfa) this).field_r[var14];
+                                              var18 = this.field_r[var14];
                                               var18 = ((var18 & 16711935) * var17 >> 8 & 16711935) + ((var18 & 65280) * var17 >> 8 & 65280);
-                                              ((sfa) this).field_r[var14] = var15 + var18;
+                                              this.field_r[var14] = var15 + var18;
                                               continue L29;
                                             }
                                           }
@@ -3453,57 +3460,57 @@ final class sfa extends ha {
                               }
                             }
                             L38: {
-                              if (param0 - var10 >= ((sfa) this).field_J) {
-                                if (param0 - var10 >= ((sfa) this).field_J) {
-                                  if (param1 < ((sfa) this).field_d) {
+                              if (param0 - var10 >= this.field_J) {
+                                if (param0 - var10 >= this.field_J) {
+                                  if (param1 < this.field_d) {
                                     break L38;
                                   } else {
-                                    if (param1 >= ((sfa) this).field_P) {
+                                    if (param1 >= this.field_P) {
                                       break L38;
                                     } else {
-                                      ((sfa) this).field_r[var6 - var10] = param3;
+                                      this.field_r[var6 - var10] = param3;
                                       break L38;
                                     }
                                   }
                                 } else {
-                                  if (param0 - var10 < ((sfa) this).field_J) {
+                                  if (param0 - var10 < this.field_J) {
                                     break L38;
                                   } else {
-                                    if (param1 < ((sfa) this).field_d) {
+                                    if (param1 < this.field_d) {
                                       break L38;
                                     } else {
-                                      if (param1 >= ((sfa) this).field_P) {
+                                      if (param1 >= this.field_P) {
                                         break L38;
                                       } else {
-                                        ((sfa) this).field_r[var6 - var10] = param3;
+                                        this.field_r[var6 - var10] = param3;
                                         break L38;
                                       }
                                     }
                                   }
                                 }
                               } else {
-                                if (param0 - var10 >= ((sfa) this).field_J) {
-                                  if (param1 < ((sfa) this).field_d) {
+                                if (param0 - var10 >= this.field_J) {
+                                  if (param1 < this.field_d) {
                                     break L38;
                                   } else {
-                                    if (param1 >= ((sfa) this).field_P) {
+                                    if (param1 >= this.field_P) {
                                       break L38;
                                     } else {
-                                      ((sfa) this).field_r[var6 - var10] = param3;
+                                      this.field_r[var6 - var10] = param3;
                                       break L38;
                                     }
                                   }
                                 } else {
-                                  if (param0 - var10 < ((sfa) this).field_J) {
+                                  if (param0 - var10 < this.field_J) {
                                     break L38;
                                   } else {
-                                    if (param1 < ((sfa) this).field_d) {
+                                    if (param1 < this.field_d) {
                                       break L38;
                                     } else {
-                                      if (param1 >= ((sfa) this).field_P) {
+                                      if (param1 >= this.field_P) {
                                         break L38;
                                       } else {
-                                        ((sfa) this).field_r[var6 - var10] = param3;
+                                        this.field_r[var6 - var10] = param3;
                                         break L38;
                                       }
                                     }
@@ -3512,67 +3519,67 @@ final class sfa extends ha {
                               }
                             }
                             L39: {
-                              if (param0 + var10 < ((sfa) this).field_W) {
-                                if (param1 >= ((sfa) this).field_d) {
-                                  if (param1 < ((sfa) this).field_P) {
-                                    ((sfa) this).field_r[var6 + var10] = param3;
-                                    if (param1 - var10 < ((sfa) this).field_d) {
+                              if (param0 + var10 < this.field_W) {
+                                if (param1 >= this.field_d) {
+                                  if (param1 < this.field_P) {
+                                    this.field_r[var6 + var10] = param3;
+                                    if (param1 - var10 < this.field_d) {
                                       break L39;
                                     } else {
-                                      if (param0 < ((sfa) this).field_J) {
+                                      if (param0 < this.field_J) {
                                         break L39;
                                       } else {
-                                        if (param0 >= ((sfa) this).field_W) {
+                                        if (param0 >= this.field_W) {
                                           break L39;
                                         } else {
-                                          ((sfa) this).field_r[var8] = param3;
+                                          this.field_r[var8] = param3;
                                           break L39;
                                         }
                                       }
                                     }
                                   } else {
-                                    if (param1 - var10 < ((sfa) this).field_d) {
+                                    if (param1 - var10 < this.field_d) {
                                       break L39;
                                     } else {
-                                      if (param0 < ((sfa) this).field_J) {
+                                      if (param0 < this.field_J) {
                                         break L39;
                                       } else {
-                                        if (param0 >= ((sfa) this).field_W) {
+                                        if (param0 >= this.field_W) {
                                           break L39;
                                         } else {
-                                          ((sfa) this).field_r[var8] = param3;
+                                          this.field_r[var8] = param3;
                                           break L39;
                                         }
                                       }
                                     }
                                   }
                                 } else {
-                                  if (param1 - var10 < ((sfa) this).field_d) {
+                                  if (param1 - var10 < this.field_d) {
                                     break L39;
                                   } else {
-                                    if (param0 < ((sfa) this).field_J) {
+                                    if (param0 < this.field_J) {
                                       break L39;
                                     } else {
-                                      if (param0 >= ((sfa) this).field_W) {
+                                      if (param0 >= this.field_W) {
                                         break L39;
                                       } else {
-                                        ((sfa) this).field_r[var8] = param3;
+                                        this.field_r[var8] = param3;
                                         break L39;
                                       }
                                     }
                                   }
                                 }
                               } else {
-                                if (param1 - var10 < ((sfa) this).field_d) {
+                                if (param1 - var10 < this.field_d) {
                                   break L39;
                                 } else {
-                                  if (param0 < ((sfa) this).field_J) {
+                                  if (param0 < this.field_J) {
                                     break L39;
                                   } else {
-                                    if (param0 >= ((sfa) this).field_W) {
+                                    if (param0 >= this.field_W) {
                                       break L39;
                                     } else {
-                                      ((sfa) this).field_r[var8] = param3;
+                                      this.field_r[var8] = param3;
                                       break L39;
                                     }
                                   }
@@ -3580,16 +3587,16 @@ final class sfa extends ha {
                               }
                             }
                             L40: {
-                              if (param1 + var10 >= ((sfa) this).field_P) {
+                              if (param1 + var10 >= this.field_P) {
                                 break L40;
                               } else {
-                                if (param0 < ((sfa) this).field_J) {
+                                if (param0 < this.field_J) {
                                   break L40;
                                 } else {
-                                  if (param0 >= ((sfa) this).field_W) {
+                                  if (param0 >= this.field_W) {
                                     break L40;
                                   } else {
-                                    ((sfa) this).field_r[var9] = param3;
+                                    this.field_r[var9] = param3;
                                     break L40;
                                   }
                                 }
@@ -3597,57 +3604,57 @@ final class sfa extends ha {
                             }
                             L41: while (true) {
                               L42: {
-                                int incrementValue$9 = var11;
+                                incrementValue$9 = var11;
                                 var11++;
                                 var12 = var12 + (incrementValue$9 + var11);
-                                var6 = var6 - ((sfa) this).field_K;
-                                var7 = var7 + ((sfa) this).field_K;
+                                var6 = var6 - this.field_K;
+                                var7 = var7 + this.field_K;
                                 if (var12 <= param2) {
                                   break L42;
                                 } else {
                                   var10--;
                                   var12 = var12 - (var10 + var10);
-                                  var8 = var8 + ((sfa) this).field_K;
-                                  var9 = var9 - ((sfa) this).field_K;
+                                  var8 = var8 + this.field_K;
+                                  var9 = var9 - this.field_K;
                                   break L42;
                                 }
                               }
                               if (var10 >= var11) {
                                 L43: {
-                                  if (param1 - var10 < ((sfa) this).field_d) {
+                                  if (param1 - var10 < this.field_d) {
                                     break L43;
                                   } else {
-                                    if (param1 - var10 >= ((sfa) this).field_P) {
+                                    if (param1 - var10 >= this.field_P) {
                                       break L43;
                                     } else {
-                                      if (param0 - var11 < ((sfa) this).field_J) {
-                                        if (param0 + var11 >= ((sfa) this).field_J) {
-                                          if (param0 + var11 >= ((sfa) this).field_W) {
+                                      if (param0 - var11 < this.field_J) {
+                                        if (param0 + var11 >= this.field_J) {
+                                          if (param0 + var11 >= this.field_W) {
                                             break L43;
                                           } else {
-                                            ((sfa) this).field_r[var8 + var11] = param3;
+                                            this.field_r[var8 + var11] = param3;
                                             break L43;
                                           }
                                         } else {
-                                          if (param0 + var11 < ((sfa) this).field_J) {
+                                          if (param0 + var11 < this.field_J) {
                                             break L43;
                                           } else {
-                                            if (param0 + var11 >= ((sfa) this).field_W) {
+                                            if (param0 + var11 >= this.field_W) {
                                               break L43;
                                             } else {
-                                              ((sfa) this).field_r[var8 + var11] = param3;
+                                              this.field_r[var8 + var11] = param3;
                                               break L43;
                                             }
                                           }
                                         }
                                       } else {
-                                        if (param0 + var11 < ((sfa) this).field_J) {
+                                        if (param0 + var11 < this.field_J) {
                                           break L43;
                                         } else {
-                                          if (param0 + var11 >= ((sfa) this).field_W) {
+                                          if (param0 + var11 >= this.field_W) {
                                             break L43;
                                           } else {
-                                            ((sfa) this).field_r[var8 + var11] = param3;
+                                            this.field_r[var8 + var11] = param3;
                                             break L43;
                                           }
                                         }
@@ -3656,31 +3663,31 @@ final class sfa extends ha {
                                   }
                                 }
                                 L44: {
-                                  if (param1 - var11 < ((sfa) this).field_d) {
+                                  if (param1 - var11 < this.field_d) {
                                     break L44;
                                   } else {
-                                    if (param1 - var11 >= ((sfa) this).field_P) {
+                                    if (param1 - var11 >= this.field_P) {
                                       break L44;
                                     } else {
                                       L45: {
-                                        if (param0 - var10 < ((sfa) this).field_J) {
+                                        if (param0 - var10 < this.field_J) {
                                           break L45;
                                         } else {
-                                          if (param0 - var10 >= ((sfa) this).field_W) {
+                                          if (param0 - var10 >= this.field_W) {
                                             break L45;
                                           } else {
-                                            ((sfa) this).field_r[var6 - var10] = param3;
+                                            this.field_r[var6 - var10] = param3;
                                             break L45;
                                           }
                                         }
                                       }
-                                      if (param0 + var10 < ((sfa) this).field_J) {
+                                      if (param0 + var10 < this.field_J) {
                                         break L44;
                                       } else {
-                                        if (param0 + var10 >= ((sfa) this).field_W) {
+                                        if (param0 + var10 >= this.field_W) {
                                           break L44;
                                         } else {
-                                          ((sfa) this).field_r[var6 + var10] = param3;
+                                          this.field_r[var6 + var10] = param3;
                                           break L44;
                                         }
                                       }
@@ -3688,62 +3695,62 @@ final class sfa extends ha {
                                   }
                                 }
                                 L46: {
-                                  if (param1 + var11 < ((sfa) this).field_d) {
+                                  if (param1 + var11 < this.field_d) {
                                     break L46;
                                   } else {
-                                    if (param1 + var11 >= ((sfa) this).field_P) {
+                                    if (param1 + var11 >= this.field_P) {
                                       break L46;
                                     } else {
                                       L47: {
-                                        if (param0 - var10 < ((sfa) this).field_J) {
+                                        if (param0 - var10 < this.field_J) {
                                           break L47;
                                         } else {
-                                          if (param0 - var10 >= ((sfa) this).field_W) {
+                                          if (param0 - var10 >= this.field_W) {
                                             break L47;
                                           } else {
-                                            ((sfa) this).field_r[var7 - var10] = param3;
+                                            this.field_r[var7 - var10] = param3;
                                             break L47;
                                           }
                                         }
                                       }
-                                      if (param0 + var10 < ((sfa) this).field_J) {
+                                      if (param0 + var10 < this.field_J) {
                                         break L46;
                                       } else {
-                                        if (param0 + var10 >= ((sfa) this).field_W) {
+                                        if (param0 + var10 >= this.field_W) {
                                           break L46;
                                         } else {
-                                          ((sfa) this).field_r[var7 + var10] = param3;
+                                          this.field_r[var7 + var10] = param3;
                                           break L46;
                                         }
                                       }
                                     }
                                   }
                                 }
-                                if (param1 + var10 < ((sfa) this).field_d) {
+                                if (param1 + var10 < this.field_d) {
                                   continue L41;
                                 } else {
-                                  if (param1 + var10 >= ((sfa) this).field_P) {
+                                  if (param1 + var10 >= this.field_P) {
                                     continue L41;
                                   } else {
                                     L48: {
-                                      if (param0 - var11 < ((sfa) this).field_J) {
+                                      if (param0 - var11 < this.field_J) {
                                         break L48;
                                       } else {
-                                        if (param0 - var11 >= ((sfa) this).field_W) {
+                                        if (param0 - var11 >= this.field_W) {
                                           break L48;
                                         } else {
-                                          ((sfa) this).field_r[var9 - var11] = param3;
+                                          this.field_r[var9 - var11] = param3;
                                           break L48;
                                         }
                                       }
                                     }
-                                    if (param0 + var11 < ((sfa) this).field_J) {
+                                    if (param0 + var11 < this.field_J) {
                                       continue L41;
                                     } else {
-                                      if (param0 + var11 >= ((sfa) this).field_W) {
+                                      if (param0 + var11 >= this.field_W) {
                                         continue L41;
                                       } else {
-                                        ((sfa) this).field_r[var9 + var11] = param3;
+                                        this.field_r[var9 + var11] = param3;
                                         continue L41;
                                       }
                                     }
@@ -3771,21 +3778,21 @@ final class sfa extends ha {
           return;
         } else {
           L49: {
-            if (param0 < ((sfa) this).field_J) {
+            if (param0 < this.field_J) {
               break L49;
             } else {
               L50: {
-                if (param1 < ((sfa) this).field_d) {
+                if (param1 < this.field_d) {
                   break L50;
                 } else {
-                  if (param0 >= ((sfa) this).field_W) {
+                  if (param0 >= this.field_W) {
                     break L50;
                   } else {
-                    if (param1 < ((sfa) this).field_P) {
+                    if (param1 < this.field_P) {
                       L51: {
                         L52: {
                           var6 = param3 >>> 24;
-                          var7 = param0 + param1 * ((sfa) this).field_K;
+                          var7 = param0 + param1 * this.field_K;
                           if (param4 == 0) {
                             break L52;
                           } else {
@@ -3806,11 +3813,11 @@ final class sfa extends ha {
                               } else {
                                 var8 = var7;
                                 var9 = param3;
-                                var10 = ((sfa) this).field_r[var8];
+                                var10 = this.field_r[var8];
                                 var11 = var9 + var10;
                                 var12 = (var9 & 16711935) + (var10 & 16711935);
                                 var10 = (var12 & 16777472) + (var11 - var12 & 65536);
-                                ((sfa) this).field_r[var8] = var11 - var10 | var10 - (var10 >>> 8);
+                                this.field_r[var8] = var11 - var10 | var10 - (var10 >>> 8);
                                 break L51;
                               }
                             } else {
@@ -3819,14 +3826,14 @@ final class sfa extends ha {
                               var10 = var6;
                               var9 = ((var9 & 16711935) * var10 >> 8 & 16711935) + ((var9 & 65280) * var10 >> 8 & 65280) + (var10 << 24);
                               var11 = 256 - var10;
-                              var12 = ((sfa) this).field_r[var8];
+                              var12 = this.field_r[var8];
                               var12 = ((var12 & 16711935) * var11 >> 8 & 16711935) + ((var12 & 65280) * var11 >> 8 & 65280);
-                              ((sfa) this).field_r[var8] = var9 + var12;
+                              this.field_r[var8] = var9 + var12;
                               break L51;
                             }
                           }
                         }
-                        ((sfa) this).field_r[var7] = param3;
+                        this.field_r[var7] = param3;
                         break L51;
                       }
                       return;
@@ -3844,6 +3851,24 @@ final class sfa extends ha {
     }
 
     final void za(int param0, int param1, int param2, int param3, int param4) {
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
+        int incrementValue$30 = 0;
+        int incrementValue$31 = 0;
+        int incrementValue$32 = 0;
+        int incrementValue$33 = 0;
+        int incrementValue$34 = 0;
+        int incrementValue$35 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -3870,19 +3895,19 @@ final class sfa extends ha {
         }
         L1: {
           var6 = param1 - param2;
-          if (var6 >= ((sfa) this).field_d) {
+          if (var6 >= this.field_d) {
             break L1;
           } else {
-            var6 = ((sfa) this).field_d;
+            var6 = this.field_d;
             break L1;
           }
         }
         L2: {
           var7 = param1 + param2 + 1;
-          if (var7 <= ((sfa) this).field_P) {
+          if (var7 <= this.field_P) {
             break L2;
           } else {
-            var7 = ((sfa) this).field_P;
+            var7 = this.field_P;
             break L2;
           }
         }
@@ -3940,7 +3965,7 @@ final class sfa extends ha {
                                 if (var12 <= var9) {
                                   break L10;
                                 } else {
-                                  int incrementValue$18 = var10;
+                                  incrementValue$18 = var10;
                                   var10--;
                                   var13 = var13 - (incrementValue$18 + var10);
                                   var12 = var12 - (var10 + var10);
@@ -3950,40 +3975,40 @@ final class sfa extends ha {
                             }
                             L11: {
                               var15 = param0 - var10;
-                              if (var15 >= ((sfa) this).field_J) {
+                              if (var15 >= this.field_J) {
                                 break L11;
                               } else {
-                                var15 = ((sfa) this).field_J;
+                                var15 = this.field_J;
                                 break L11;
                               }
                             }
                             L12: {
                               var16 = param0 + var10;
-                              if (var16 <= ((sfa) this).field_W - 1) {
+                              if (var16 <= this.field_W - 1) {
                                 break L12;
                               } else {
-                                var16 = ((sfa) this).field_W - 1;
+                                var16 = this.field_W - 1;
                                 break L12;
                               }
                             }
-                            var17 = var15 + var8 * ((sfa) this).field_K;
+                            var17 = var15 + var8 * this.field_K;
                             var18 = var15;
                             L13: while (true) {
                               if (var18 > var16) {
                                 var8++;
                                 var13 = var13 + (var11 + var11);
-                                int incrementValue$19 = var11;
+                                incrementValue$19 = var11;
                                 var11++;
                                 var12 = var12 + (incrementValue$19 + var11);
                                 continue L8;
                               } else {
-                                var19 = ((sfa) this).field_r[var17];
+                                var19 = this.field_r[var17];
                                 var20 = param3 + var19;
                                 var21 = (param3 & 16711935) + (var19 & 16711935);
                                 var19 = (var21 & 16777472) + (var20 - var21 & 65536);
-                                int incrementValue$20 = var17;
+                                incrementValue$20 = var17;
                                 var17++;
-                                ((sfa) this).field_r[incrementValue$20] = var20 - var19 | var19 - (var19 >>> 8);
+                                this.field_r[incrementValue$20] = var20 - var19 | var19 - (var19 >>> 8);
                                 var18++;
                                 continue L13;
                               }
@@ -4000,40 +4025,40 @@ final class sfa extends ha {
                             if (var12 > var9) {
                               L16: {
                                 var15 = param0 - var10 + 1;
-                                if (var15 >= ((sfa) this).field_J) {
+                                if (var15 >= this.field_J) {
                                   break L16;
                                 } else {
-                                  var15 = ((sfa) this).field_J;
+                                  var15 = this.field_J;
                                   break L16;
                                 }
                               }
                               L17: {
                                 var16 = param0 + var10;
-                                if (var16 <= ((sfa) this).field_W) {
+                                if (var16 <= this.field_W) {
                                   break L17;
                                 } else {
-                                  var16 = ((sfa) this).field_W;
+                                  var16 = this.field_W;
                                   break L17;
                                 }
                               }
-                              var17 = var15 + var8 * ((sfa) this).field_K;
+                              var17 = var15 + var8 * this.field_K;
                               var18 = var15;
                               L18: while (true) {
                                 if (var18 >= var16) {
                                   var8++;
-                                  int incrementValue$21 = var11;
+                                  incrementValue$21 = var11;
                                   var11--;
                                   var12 = var12 - (incrementValue$21 + var11);
                                   var13 = var13 - (var11 + var11);
                                   continue L7;
                                 } else {
-                                  var19 = ((sfa) this).field_r[var17];
+                                  var19 = this.field_r[var17];
                                   var20 = param3 + var19;
                                   var21 = (param3 & 16711935) + (var19 & 16711935);
                                   var19 = (var21 & 16777472) + (var20 - var21 & 65536);
-                                  int incrementValue$22 = var17;
+                                  incrementValue$22 = var17;
                                   var17++;
-                                  ((sfa) this).field_r[incrementValue$22] = var20 - var19 | var19 - (var19 >>> 8);
+                                  this.field_r[incrementValue$22] = var20 - var19 | var19 - (var19 >>> 8);
                                   var18++;
                                   continue L18;
                                 }
@@ -4044,7 +4069,7 @@ final class sfa extends ha {
                           }
                         }
                         var12 = var12 + (var10 + var10);
-                        int incrementValue$23 = var10;
+                        incrementValue$23 = var10;
                         var10++;
                         var13 = var13 + (incrementValue$23 + var10);
                         continue L14;
@@ -4074,7 +4099,7 @@ final class sfa extends ha {
                               if (var12 <= var9) {
                                 break L22;
                               } else {
-                                int incrementValue$24 = var10;
+                                incrementValue$24 = var10;
                                 var10--;
                                 var13 = var13 - (incrementValue$24 + var10);
                                 var12 = var12 - (var10 + var10);
@@ -4084,38 +4109,38 @@ final class sfa extends ha {
                           }
                           L23: {
                             var16 = param0 - var10;
-                            if (var16 >= ((sfa) this).field_J) {
+                            if (var16 >= this.field_J) {
                               break L23;
                             } else {
-                              var16 = ((sfa) this).field_J;
+                              var16 = this.field_J;
                               break L23;
                             }
                           }
                           L24: {
                             var17 = param0 + var10;
-                            if (var17 <= ((sfa) this).field_W - 1) {
+                            if (var17 <= this.field_W - 1) {
                               break L24;
                             } else {
-                              var17 = ((sfa) this).field_W - 1;
+                              var17 = this.field_W - 1;
                               break L24;
                             }
                           }
-                          var18 = var16 + var8 * ((sfa) this).field_K;
+                          var18 = var16 + var8 * this.field_K;
                           var19 = var16;
                           L25: while (true) {
                             if (var19 > var17) {
                               var8++;
                               var13 = var13 + (var11 + var11);
-                              int incrementValue$25 = var11;
+                              incrementValue$25 = var11;
                               var11++;
                               var12 = var12 + (incrementValue$25 + var11);
                               continue L20;
                             } else {
-                              var20 = ((sfa) this).field_r[var18];
+                              var20 = this.field_r[var18];
                               var20 = ((var20 & 16711935) * var15 >> 8 & 16711935) + ((var20 & 65280) * var15 >> 8 & 65280);
-                              int incrementValue$26 = var18;
+                              incrementValue$26 = var18;
                               var18++;
-                              ((sfa) this).field_r[incrementValue$26] = param3 + var20;
+                              this.field_r[incrementValue$26] = param3 + var20;
                               var19++;
                               continue L25;
                             }
@@ -4132,38 +4157,38 @@ final class sfa extends ha {
                           if (var12 > var9) {
                             L28: {
                               var16 = param0 - var10 + 1;
-                              if (var16 >= ((sfa) this).field_J) {
+                              if (var16 >= this.field_J) {
                                 break L28;
                               } else {
-                                var16 = ((sfa) this).field_J;
+                                var16 = this.field_J;
                                 break L28;
                               }
                             }
                             L29: {
                               var17 = param0 + var10;
-                              if (var17 <= ((sfa) this).field_W) {
+                              if (var17 <= this.field_W) {
                                 break L29;
                               } else {
-                                var17 = ((sfa) this).field_W;
+                                var17 = this.field_W;
                                 break L29;
                               }
                             }
-                            var18 = var16 + var8 * ((sfa) this).field_K;
+                            var18 = var16 + var8 * this.field_K;
                             var19 = var16;
                             L30: while (true) {
                               if (var19 >= var17) {
                                 var8++;
-                                int incrementValue$27 = var11;
+                                incrementValue$27 = var11;
                                 var11--;
                                 var12 = var12 - (incrementValue$27 + var11);
                                 var13 = var13 - (var11 + var11);
                                 continue L19;
                               } else {
-                                var20 = ((sfa) this).field_r[var18];
+                                var20 = this.field_r[var18];
                                 var20 = ((var20 & 16711935) * var15 >> 8 & 16711935) + ((var20 & 65280) * var15 >> 8 & 65280);
-                                int incrementValue$28 = var18;
+                                incrementValue$28 = var18;
                                 var18++;
-                                ((sfa) this).field_r[incrementValue$28] = param3 + var20;
+                                this.field_r[incrementValue$28] = param3 + var20;
                                 var19++;
                                 continue L30;
                               }
@@ -4174,7 +4199,7 @@ final class sfa extends ha {
                         }
                       }
                       var12 = var12 + (var10 + var10);
-                      int incrementValue$29 = var10;
+                      incrementValue$29 = var10;
                       var10++;
                       var13 = var13 + (incrementValue$29 + var10);
                       continue L26;
@@ -4205,7 +4230,7 @@ final class sfa extends ha {
                       if (var12 <= var9) {
                         break L34;
                       } else {
-                        int incrementValue$30 = var10;
+                        incrementValue$30 = var10;
                         var10--;
                         var13 = var13 - (incrementValue$30 + var10);
                         var12 = var12 - (var10 + var10);
@@ -4215,36 +4240,36 @@ final class sfa extends ha {
                   }
                   L35: {
                     var15 = param0 - var10;
-                    if (var15 >= ((sfa) this).field_J) {
+                    if (var15 >= this.field_J) {
                       break L35;
                     } else {
-                      var15 = ((sfa) this).field_J;
+                      var15 = this.field_J;
                       break L35;
                     }
                   }
                   L36: {
                     var16 = param0 + var10;
-                    if (var16 <= ((sfa) this).field_W - 1) {
+                    if (var16 <= this.field_W - 1) {
                       break L36;
                     } else {
-                      var16 = ((sfa) this).field_W - 1;
+                      var16 = this.field_W - 1;
                       break L36;
                     }
                   }
-                  var17 = var15 + var8 * ((sfa) this).field_K;
+                  var17 = var15 + var8 * this.field_K;
                   var18 = var15;
                   L37: while (true) {
                     if (var18 > var16) {
                       var8++;
                       var13 = var13 + (var11 + var11);
-                      int incrementValue$31 = var11;
+                      incrementValue$31 = var11;
                       var11++;
                       var12 = var12 + (incrementValue$31 + var11);
                       continue L32;
                     } else {
-                      int incrementValue$32 = var17;
+                      incrementValue$32 = var17;
                       var17++;
-                      ((sfa) this).field_r[incrementValue$32] = param3;
+                      this.field_r[incrementValue$32] = param3;
                       var18++;
                       continue L37;
                     }
@@ -4261,36 +4286,36 @@ final class sfa extends ha {
                   if (var12 > var9) {
                     L40: {
                       var15 = param0 - var10 + 1;
-                      if (var15 >= ((sfa) this).field_J) {
+                      if (var15 >= this.field_J) {
                         break L40;
                       } else {
-                        var15 = ((sfa) this).field_J;
+                        var15 = this.field_J;
                         break L40;
                       }
                     }
                     L41: {
                       var16 = param0 + var10;
-                      if (var16 <= ((sfa) this).field_W) {
+                      if (var16 <= this.field_W) {
                         break L41;
                       } else {
-                        var16 = ((sfa) this).field_W;
+                        var16 = this.field_W;
                         break L41;
                       }
                     }
-                    var17 = var15 + var8 * ((sfa) this).field_K;
+                    var17 = var15 + var8 * this.field_K;
                     var18 = var15;
                     L42: while (true) {
                       if (var18 >= var16) {
                         var8++;
-                        int incrementValue$33 = var11;
+                        incrementValue$33 = var11;
                         var11--;
                         var12 = var12 - (incrementValue$33 + var11);
                         var13 = var13 - (var11 + var11);
                         continue L31;
                       } else {
-                        int incrementValue$34 = var17;
+                        incrementValue$34 = var17;
                         var17++;
-                        ((sfa) this).field_r[incrementValue$34] = param3;
+                        this.field_r[incrementValue$34] = param3;
                         var18++;
                         continue L42;
                       }
@@ -4301,7 +4326,7 @@ final class sfa extends ha {
                 }
               }
               var12 = var12 + (var10 + var10);
-              int incrementValue$35 = var10;
+              incrementValue$35 = var10;
               var10++;
               var13 = var13 + (incrementValue$35 + var10);
               continue L38;
@@ -4313,14 +4338,16 @@ final class sfa extends ha {
     final void b(int param0) {
         ww.field_q = param0;
         ww.field_G = param0;
-        if (((sfa) this).field_u > 1) {
+        if (this.field_u > 1) {
             throw new IllegalStateException("No MT");
         }
-        this.i(((sfa) this).field_u);
+        this.i(this.field_u);
         this.g(0);
     }
 
     final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -4330,36 +4357,36 @@ final class sfa extends ha {
         int var13 = 0;
         int var14 = 0;
         L0: {
-          if (param0 >= ((sfa) this).field_J) {
+          if (param0 >= this.field_J) {
             break L0;
           } else {
-            param2 = param2 - (((sfa) this).field_J - param0);
-            param0 = ((sfa) this).field_J;
+            param2 = param2 - (this.field_J - param0);
+            param0 = this.field_J;
             break L0;
           }
         }
         L1: {
-          if (param1 >= ((sfa) this).field_d) {
+          if (param1 >= this.field_d) {
             break L1;
           } else {
-            param3 = param3 - (((sfa) this).field_d - param1);
-            param1 = ((sfa) this).field_d;
+            param3 = param3 - (this.field_d - param1);
+            param1 = this.field_d;
             break L1;
           }
         }
         L2: {
-          if (param0 + param2 <= ((sfa) this).field_W) {
+          if (param0 + param2 <= this.field_W) {
             break L2;
           } else {
-            param2 = ((sfa) this).field_W - param0;
+            param2 = this.field_W - param0;
             break L2;
           }
         }
         L3: {
-          if (param1 + param3 <= ((sfa) this).field_P) {
+          if (param1 + param3 <= this.field_P) {
             break L3;
           } else {
-            param3 = ((sfa) this).field_P - param1;
+            param3 = this.field_P - param1;
             break L3;
           }
         }
@@ -4371,13 +4398,13 @@ final class sfa extends ha {
               if (param3 <= 0) {
                 break L5;
               } else {
-                if (param0 > ((sfa) this).field_W) {
+                if (param0 > this.field_W) {
                   break L5;
                 } else {
-                  if (param1 <= ((sfa) this).field_P) {
+                  if (param1 <= this.field_P) {
                     L6: {
-                      var7 = ((sfa) this).field_K - param2;
-                      var8 = param0 + param1 * ((sfa) this).field_K;
+                      var7 = this.field_K - param2;
+                      var8 = param0 + param1 * this.field_K;
                       var9 = param4 >>> 24;
                       if (param5 == 0) {
                         break L6;
@@ -4410,13 +4437,13 @@ final class sfa extends ha {
                                       var10++;
                                       continue L9;
                                     } else {
-                                      var12 = ((sfa) this).field_r[var8];
+                                      var12 = this.field_r[var8];
                                       var13 = param4 + var12;
                                       var14 = (param4 & 16711935) + (var12 & 16711935);
                                       var12 = (var14 & 16777472) + (var13 - var14 & 65536);
-                                      int incrementValue$2 = var8;
+                                      incrementValue$2 = var8;
                                       var8++;
-                                      ((sfa) this).field_r[incrementValue$2] = var13 - var12 | var12 - (var12 >>> 8);
+                                      this.field_r[incrementValue$2] = var13 - var12 | var12 - (var12 >>> 8);
                                       var11++;
                                       continue L10;
                                     }
@@ -4439,11 +4466,11 @@ final class sfa extends ha {
                                     var11++;
                                     continue L11;
                                   } else {
-                                    var13 = ((sfa) this).field_r[var8];
+                                    var13 = this.field_r[var8];
                                     var13 = ((var13 & 16711935) * var10 >> 8 & 16711935) + (((var13 & -16711936) >>> 8) * var10 & -16711936);
-                                    int incrementValue$3 = var8;
+                                    incrementValue$3 = var8;
                                     var8++;
-                                    ((sfa) this).field_r[incrementValue$3] = param4 + var13;
+                                    this.field_r[incrementValue$3] = param4 + var13;
                                     var12++;
                                     continue L12;
                                   }
@@ -4470,21 +4497,21 @@ final class sfa extends ha {
                             param0 = var10;
                             L15: while (true) {
                               param2++;
-                              ((sfa) this).field_r[param2] = param4;
+                              this.field_r[param2] = param4;
                               param2++;
-                              ((sfa) this).field_r[param2] = param4;
+                              this.field_r[param2] = param4;
                               param2++;
-                              ((sfa) this).field_r[param2] = param4;
+                              this.field_r[param2] = param4;
                               param2++;
-                              ((sfa) this).field_r[param2] = param4;
+                              this.field_r[param2] = param4;
                               param2++;
-                              ((sfa) this).field_r[param2] = param4;
+                              this.field_r[param2] = param4;
                               param2++;
-                              ((sfa) this).field_r[param2] = param4;
+                              this.field_r[param2] = param4;
                               param2++;
-                              ((sfa) this).field_r[param2] = param4;
+                              this.field_r[param2] = param4;
                               param2++;
-                              ((sfa) this).field_r[param2] = param4;
+                              this.field_r[param2] = param4;
                               param0--;
                               if (param0 > 0) {
                                 continue L15;
@@ -4501,7 +4528,7 @@ final class sfa extends ha {
                             param0 = var11;
                             L17: while (true) {
                               param2++;
-                              ((sfa) this).field_r[param2] = param4;
+                              this.field_r[param2] = param4;
                               param0--;
                               if (param0 > 0) {
                                 continue L17;
@@ -4528,7 +4555,7 @@ final class sfa extends ha {
     }
 
     final int f(int param0) {
-        return ((sfa) this).field_c.a((byte) -5, param0).field_d;
+        return this.field_c.a((byte) -5, param0).field_d;
     }
 
     final boolean h() {
@@ -4566,56 +4593,56 @@ final class sfa extends ha {
         int stackOut_7_1 = 0;
         L0: {
           L1: {
-            var11 = ((sfa) this).a((Runnable) (Object) Thread.currentThread());
+            var11 = this.a((Runnable) ((Object) Thread.currentThread()));
             var12 = var11.field_v;
             var12.field_j = false;
-            param0 = param0 - ((sfa) this).field_p;
-            param2 = param2 - ((sfa) this).field_p;
-            param4 = param4 - ((sfa) this).field_p;
-            param1 = param1 - ((sfa) this).field_k;
-            param3 = param3 - ((sfa) this).field_k;
-            param5 = param5 - ((sfa) this).field_k;
-            stackOut_0_0 = (iua) var12;
+            param0 = param0 - this.field_p;
+            param2 = param2 - this.field_p;
+            param4 = param4 - this.field_p;
+            param1 = param1 - this.field_k;
+            param3 = param3 - this.field_k;
+            param5 = param5 - this.field_k;
+            stackOut_0_0 = (iua) (var12);
             stackIn_7_0 = stackOut_0_0;
             stackIn_1_0 = stackOut_0_0;
             if (param0 < 0) {
               break L1;
             } else {
-              stackOut_1_0 = (iua) (Object) stackIn_1_0;
+              stackOut_1_0 = (iua) ((Object) stackIn_1_0);
               stackIn_7_0 = stackOut_1_0;
               stackIn_2_0 = stackOut_1_0;
               if (param0 > var12.field_h) {
                 break L1;
               } else {
-                stackOut_2_0 = (iua) (Object) stackIn_2_0;
+                stackOut_2_0 = (iua) ((Object) stackIn_2_0);
                 stackIn_7_0 = stackOut_2_0;
                 stackIn_3_0 = stackOut_2_0;
                 if (param2 < 0) {
                   break L1;
                 } else {
-                  stackOut_3_0 = (iua) (Object) stackIn_3_0;
+                  stackOut_3_0 = (iua) ((Object) stackIn_3_0);
                   stackIn_7_0 = stackOut_3_0;
                   stackIn_4_0 = stackOut_3_0;
                   if (param2 > var12.field_h) {
                     break L1;
                   } else {
-                    stackOut_4_0 = (iua) (Object) stackIn_4_0;
+                    stackOut_4_0 = (iua) ((Object) stackIn_4_0);
                     stackIn_7_0 = stackOut_4_0;
                     stackIn_5_0 = stackOut_4_0;
                     if (param4 < 0) {
                       break L1;
                     } else {
-                      stackOut_5_0 = (iua) (Object) stackIn_5_0;
+                      stackOut_5_0 = (iua) ((Object) stackIn_5_0);
                       stackIn_8_0 = stackOut_5_0;
                       stackIn_6_0 = stackOut_5_0;
                       if (param4 <= var12.field_h) {
-                        stackOut_8_0 = (iua) (Object) stackIn_8_0;
+                        stackOut_8_0 = (iua) ((Object) stackIn_8_0);
                         stackOut_8_1 = 0;
                         stackIn_9_0 = stackOut_8_0;
                         stackIn_9_1 = stackOut_8_1;
                         break L0;
                       } else {
-                        stackOut_6_0 = (iua) (Object) stackIn_6_0;
+                        stackOut_6_0 = (iua) ((Object) stackIn_6_0);
                         stackIn_7_0 = stackOut_6_0;
                         break L1;
                       }
@@ -4625,7 +4652,7 @@ final class sfa extends ha {
               }
             }
           }
-          stackOut_7_0 = (iua) (Object) stackIn_7_0;
+          stackOut_7_0 = (iua) ((Object) stackIn_7_0);
           stackOut_7_1 = 1;
           stackIn_9_0 = stackOut_7_0;
           stackIn_9_1 = stackOut_7_1;
@@ -4677,6 +4704,7 @@ final class sfa extends ha {
     }
 
     final nh a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+        int incrementValue$21 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -4696,7 +4724,7 @@ final class sfa extends ha {
                   var9++;
                   continue L0;
                 } else {
-                  int incrementValue$21 = var8;
+                  incrementValue$21 = var8;
                   var8++;
                   var11 = param0[incrementValue$21] >>> 24;
                   if (var11 != 0) {
@@ -4716,9 +4744,9 @@ final class sfa extends ha {
             }
           }
           if (var7 == 0) {
-            return (nh) (Object) new raa((sfa) this, param0, param1, param2, param3, param4, param5);
+            return (nh) ((Object) new raa((sfa) (this), param0, param1, param2, param3, param4, param5));
           } else {
-            return (nh) (Object) new vqa((sfa) this, param0, param1, param2, param3, param4, param5);
+            return (nh) ((Object) new vqa((sfa) (this), param0, param1, param2, param3, param4, param5));
           }
         }
     }

@@ -29,23 +29,25 @@ final class ei extends wl {
     }
 
     final void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        ((ei) this).field_o = param1;
-        ((ei) this).field_v = param4;
+        this.field_o = param1;
+        this.field_v = param4;
         if (param5 != -24536) {
             return;
         }
         try {
-            ((ei) this).field_r = param2;
-            ((ei) this).field_s = param6;
-            ((ei) this).field_q = param0;
-            ((ei) this).field_u = param7;
-            ((ei) this).field_p = param3;
+            this.field_r = param2;
+            this.field_s = param6;
+            this.field_q = param0;
+            this.field_u = param7;
+            this.field_p = param3;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ei.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "ei.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     final static o[] a(int param0, int param1, int param2, int param3, int param4) {
+        o dupTemp$4 = null;
+        o dupTemp$5 = null;
         o[] var5 = null;
         o[] var6 = null;
         var6 = new o[9];
@@ -57,11 +59,11 @@ final class ei extends wl {
         var5[1] = dupTemp$3;
         var5[0] = dupTemp$3;
         if (param4 == 20230) {
-          o dupTemp$4 = id.a((byte) 76, param0, param3);
+          dupTemp$4 = id.a((byte) 76, param0, param3);
           var6[8] = dupTemp$4;
           var5[7] = dupTemp$4;
           var5[5] = dupTemp$4;
-          if (param2 != 0) {
+          if (-1 != (param2 ^ -1)) {
             var6[4] = id.a((byte) 98, param2, 64);
             return var5;
           } else {
@@ -69,11 +71,11 @@ final class ei extends wl {
           }
         } else {
           ei.a(-59);
-          o dupTemp$5 = id.a((byte) 76, param0, param3);
+          dupTemp$5 = id.a((byte) 76, param0, param3);
           var6[8] = dupTemp$5;
           var5[7] = dupTemp$5;
           var5[5] = dupTemp$5;
-          if (param2 == 0) {
+          if (-1 == (param2 ^ -1)) {
             return var5;
           } else {
             var6[4] = id.a((byte) 98, param2, 64);
@@ -83,6 +85,7 @@ final class ei extends wl {
     }
 
     final static void a(byte param0, int param1) {
+        o[] discarded$2 = null;
         wl var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -91,7 +94,7 @@ final class ei extends wl {
         var3 = wizardrun.field_H;
         try {
           L0: {
-            var4 = (pg) (Object) sf.field_j.b((byte) 115);
+            var4 = (pg) ((Object) sf.field_j.b((byte) 115));
             L1: while (true) {
               if (var4 == null) {
                 var2 = bk.field_d.b((byte) 96);
@@ -100,7 +103,7 @@ final class ei extends wl {
                     if (param0 == 51) {
                       break L0;
                     } else {
-                      o[] discarded$2 = ei.a(122, 75, 31, 20, 79);
+                      discarded$2 = ei.a(122, 75, 31, 20, 79);
                       return;
                     }
                   } else {
@@ -111,7 +114,7 @@ final class ei extends wl {
                 }
               } else {
                 pg.a(param1, true, var4);
-                var4 = (pg) (Object) sf.field_j.d(8192);
+                var4 = (pg) ((Object) sf.field_j.d(8192));
                 continue L1;
               }
             }
@@ -119,7 +122,7 @@ final class ei extends wl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var2_ref, "ei.D(" + param0 + ',' + param1 + ')');
+          throw bd.a((Throwable) ((Object) var2_ref), "ei.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -127,10 +130,6 @@ final class ei extends wl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Player";
         field_m = "Hold <%0> or SPACE";
         field_j = true;

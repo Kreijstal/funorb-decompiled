@@ -31,6 +31,10 @@ final class kj {
     }
 
     final static void a(uf param0, byte param1) {
+        int dupTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int incrementValue$6 = 0;
+        int dupTemp$7 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -43,6 +47,7 @@ final class kj {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
@@ -55,89 +60,95 @@ final class kj {
         var5 = CrazyCrystals.field_B;
         try {
           L0: {
-            var2_int = 0;
-            L1: while (true) {
-              if (var2_int >= 3) {
-                var2_int = 0;
-                L2: while (true) {
-                  if (jl.field_d <= var2_int) {
-                    int dupTemp$4 = param0.a(true);
-                    cl.field_j[dupTemp$4] = cl.field_j[dupTemp$4] + 1;
-                    var2_int = 0;
-                    var3 = 0;
-                    L3: while (true) {
-                      if (jl.field_d <= var3) {
-                        jl.field_d = var2_int;
-                        int fieldTemp$5 = jl.field_d;
-                        jl.field_d = jl.field_d + 1;
-                        ol.field_D[fieldTemp$5] = param0;
-                        break L0;
-                      } else {
-                        L4: {
-                          L5: {
-                            if (param0.field_f == ol.field_D[var3].field_f) {
-                              var4 = ol.field_D[var3].a(true);
-                              if (cj.field_A < cl.field_j[var4]) {
-                                cl.field_j[var4] = cl.field_j[var4] - 1;
-                                break L4;
+            if (param1 > 3) {
+              var2_int = 0;
+              L1: while (true) {
+                if (var2_int >= 3) {
+                  var2_int = 0;
+                  L2: while (true) {
+                    if (jl.field_d <= var2_int) {
+                      dupTemp$4 = param0.a(true);
+                      cl.field_j[dupTemp$4] = cl.field_j[dupTemp$4] + 1;
+                      var2_int = 0;
+                      var3 = 0;
+                      L3: while (true) {
+                        if (jl.field_d <= var3) {
+                          jl.field_d = var2_int;
+                          fieldTemp$5 = jl.field_d;
+                          jl.field_d = jl.field_d + 1;
+                          ol.field_D[fieldTemp$5] = param0;
+                          decompiledRegionSelector0 = 1;
+                          break L0;
+                        } else {
+                          L4: {
+                            L5: {
+                              if (param0.field_f == ol.field_D[var3].field_f) {
+                                var4 = ol.field_D[var3].a(true);
+                                if (cj.field_A < cl.field_j[var4]) {
+                                  cl.field_j[var4] = cl.field_j[var4] - 1;
+                                  break L4;
+                                } else {
+                                  break L5;
+                                }
                               } else {
                                 break L5;
                               }
-                            } else {
-                              break L5;
                             }
+                            incrementValue$6 = var2_int;
+                            var2_int++;
+                            ol.field_D[incrementValue$6] = ol.field_D[var3];
+                            break L4;
                           }
-                          int incrementValue$6 = var2_int;
-                          var2_int++;
-                          ol.field_D[incrementValue$6] = ol.field_D[var3];
-                          break L4;
+                          var3++;
+                          continue L3;
                         }
-                        var3++;
-                        continue L3;
                       }
-                    }
-                  } else {
-                    L6: {
-                      if (ol.field_D[var2_int].field_f != param0.field_f) {
-                        break L6;
-                      } else {
-                        int dupTemp$7 = ol.field_D[var2_int].a(true);
-                        cl.field_j[dupTemp$7] = cl.field_j[dupTemp$7] + 1;
-                        break L6;
+                    } else {
+                      L6: {
+                        if (ol.field_D[var2_int].field_f != param0.field_f) {
+                          break L6;
+                        } else {
+                          dupTemp$7 = ol.field_D[var2_int].a(true);
+                          cl.field_j[dupTemp$7] = cl.field_j[dupTemp$7] + 1;
+                          break L6;
+                        }
                       }
+                      var2_int++;
+                      continue L2;
                     }
-                    var2_int++;
-                    continue L2;
                   }
+                } else {
+                  cl.field_j[var2_int] = 0;
+                  var2_int++;
+                  continue L1;
                 }
-              } else {
-                cl.field_j[var2_int] = 0;
-                var2_int++;
-                continue L1;
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_0 = (RuntimeException) (var2);
             stackOut_22_1 = new StringBuilder().append("kj.C(");
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -145,15 +156,16 @@ final class kj {
               break L7;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + 36 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Connection restored.";
         field_a = new dl[4];
     }

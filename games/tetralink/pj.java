@@ -21,28 +21,40 @@ final class pj {
     }
 
     final static java.awt.Container a(byte param0) {
-        if (null != ea.field_h) {
-            return (java.awt.Container) (Object) ea.field_h;
+        if (param0 > -15) {
+            return (java.awt.Container) null;
         }
-        return (java.awt.Container) (Object) lk.q(13);
+        if (null != ea.field_h) {
+            return (java.awt.Container) ((Object) ea.field_h);
+        }
+        return (java.awt.Container) ((Object) lk.q(13));
     }
 
     public static void a(int param0) {
         field_h = null;
-        field_d = null;
-        field_f = null;
-        field_c = null;
-        field_b = null;
-        field_i = null;
-        field_a = null;
-        field_g = null;
+        if (param0 <= 25) {
+          field_c = (String) null;
+          field_d = null;
+          field_f = null;
+          field_c = null;
+          field_b = null;
+          field_i = null;
+          field_a = null;
+          field_g = null;
+          return;
+        } else {
+          field_d = null;
+          field_f = null;
+          field_c = null;
+          field_b = null;
+          field_i = null;
+          field_a = null;
+          field_g = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "You can join this game";
         field_g = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
     }

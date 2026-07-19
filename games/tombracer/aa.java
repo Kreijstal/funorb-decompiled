@@ -13,13 +13,12 @@ abstract class aa {
     public static void a(boolean param0) {
         field_a = null;
         field_b = null;
+        if (!param0) {
+            field_a = (jpa) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Don't mind";
     }
 }

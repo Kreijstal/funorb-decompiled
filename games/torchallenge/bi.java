@@ -13,20 +13,20 @@ final class bi {
     static int[][][] field_e;
 
     public static void b(int param0) {
-        field_g = null;
+        field_g = (int[][][][]) null;
         if (param0 != 0) {
-          field_d = null;
+          field_d = (uf) null;
           field_b = null;
           field_c = null;
-          field_e = null;
-          field_a = null;
+          field_e = (int[][][]) null;
+          field_a = (int[][]) null;
           field_d = null;
           return;
         } else {
           field_b = null;
           field_c = null;
-          field_e = null;
-          field_a = null;
+          field_e = (int[][][]) null;
+          field_a = (int[][]) null;
           field_d = null;
           return;
         }
@@ -42,15 +42,11 @@ final class bi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = false;
         field_b = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
-        field_e = new int[][][]{new int[7][], new int[7][], new int[7][]};
+        field_e = new int[][][]{new int[][]{new int[]{0, 1, 1, 1, 1, 0}, new int[]{0}, new int[]{0}, new int[]{0, 1, 1, 1, 1, 0}, new int[]{0}, new int[]{0}, new int[]{0}}, new int[][]{new int[]{0, 1, 1, 1, 1, 0}, new int[]{0, 1, 1, 1, 1}, new int[]{1, 1, 1, 1}, new int[]{0}, new int[]{0}, new int[]{0, 0, 0, 0, 1, 1, 1}, new int[]{0}}, new int[][]{new int[]{1, 1, 1, 1, 1, 0}, new int[]{0}, new int[]{0}, new int[]{0}, new int[]{1, 1, 0, 1, 1, 1}, new int[]{0}, new int[]{0, 0, 0, 1, 1, 1}}};
         field_c = "Type your password again to make sure it's correct";
         field_h = -1;
-        field_a = new int[][]{new int[1], new int[6], new int[1], new int[1], new int[1], new int[1]};
+        field_a = new int[][]{new int[]{300}, new int[]{400, 400, 400, 400, 400, 400}, new int[]{300}, new int[]{250}, new int[]{250}, new int[]{300}};
     }
 }

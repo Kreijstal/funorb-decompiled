@@ -8,19 +8,28 @@ final class o {
     static String field_a;
 
     public static void b(byte param0) {
-        field_a = null;
-        field_d = null;
-        field_b = null;
+        if (param0 != 39) {
+          field_a = (String) null;
+          field_a = null;
+          field_d = null;
+          field_b = null;
+          return;
+        } else {
+          field_a = null;
+          field_d = null;
+          field_b = null;
+          return;
+        }
     }
 
     final static hj a(int param0, int param1) {
-        if (param0 != 2) {
+        if (param0 != param1) {
           if (param0 != 3) {
             if (param0 >= 4) {
-              if (param0 >= 8) {
+              if (-9 >= (param0 ^ -1)) {
                 throw new RuntimeException();
               } else {
-                return nj.field_c[param0 - 4].a(8192);
+                return nj.field_c[param0 - 4].a(param1 + 8190);
               }
             } else {
               throw new RuntimeException();
@@ -29,11 +38,12 @@ final class o {
             return sm.field_a.a(8192);
           }
         } else {
-          return ol.field_i.a(8192);
+          return ol.field_i.a(param1 + 8190);
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        uh discarded$1 = null;
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -85,7 +95,7 @@ final class o {
               if (param5 == -4441) {
                 break L4;
               } else {
-                uh discarded$1 = o.a((byte) -27);
+                discarded$1 = o.a((byte) -27);
                 break L4;
               }
             }
@@ -97,7 +107,7 @@ final class o {
                 break L5;
               }
             }
-            var7_int = param0 * param3 >> 8;
+            var7_int = param0 * param3 >> 1712370216;
             var8 = param3 - var7_int;
             var9 = param2 + param1;
             var10 = param2;
@@ -110,18 +120,17 @@ final class o {
                 L7: while (true) {
                   if (0 >= var12) {
                     var10++;
-                    var10++;
                     continue L6;
                   } else {
                     var13 = tc.field_b[var11];
-                    var14 = var13 >> 16 & 255;
-                    var15 = 255 & var13 >> 8;
+                    var14 = var13 >> -302811504 & 255;
+                    var15 = 255 & var13 >> -1158230552;
                     var16 = 255 & var13;
                     var17 = var15 * 6 + 5 * var14 + 5 * var16;
-                    var18 = (var17 * var8 >> 12) + (var7_int * var14 >> 8);
-                    var19 = (var7_int * var15 >> 8) + (var8 * var17 >> 12);
-                    var20 = (var8 * var17 >> 12) + (var16 * var7_int >> 8);
-                    var21 = var19 << 8 | var18 << 16 | var20;
+                    var18 = (var17 * var8 >> 109695180) + (var7_int * var14 >> 2015807656);
+                    var19 = (var7_int * var15 >> 61450760) + (var8 * var17 >> 1345674220);
+                    var20 = (var8 * var17 >> 1688780652) + (var16 * var7_int >> -1279341944);
+                    var21 = var19 << 1853515560 | var18 << 107424528 | var20;
                     tc.field_b[var11] = var21;
                     var11++;
                     var12--;
@@ -134,7 +143,7 @@ final class o {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var7, "o.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw kk.a((Throwable) ((Object) var7), "o.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -144,10 +153,6 @@ final class o {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = (float)Math.pow(0.949999988079071, 1.0);
         field_b = "Best Each";
         field_a = "Player 2";

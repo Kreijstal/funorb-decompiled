@@ -12,32 +12,33 @@ final class hk extends rg {
     private boolean field_ab;
 
     final void b(int param0, int param1, int param2) {
+        int discarded$0 = 0;
         super.b(param0, -1, param2);
-        va.field_i.b(((hk) this).field_X, (((hk) this).field_r >> 1) + param0, 103 + param2, 16777215, param1);
-        if (!(null == ((hk) this).field_cb)) {
+        va.field_i.b(this.field_X, (this.field_r >> 608644865) + param0, 103 + param2, 16777215, param1);
+        if (!(null == this.field_cb)) {
             ed.f(20 + param0, -7 + param2 + 120, 260, 8421504);
-            int discarded$0 = va.field_i.a(((hk) this).field_cb, 20 + param0, param2 + 128, 260, 100, 16777215, -1, 1, 0, va.field_i.field_M);
+            discarded$0 = va.field_i.a(this.field_cb, 20 + param0, param2 + 128, 260, 100, 16777215, -1, 1, 0, va.field_i.field_M);
         }
     }
 
     final void k(int param0) {
-        ((hk) this).field_ab = true;
-        ((hk) this).field_Z.field_I = false;
+        this.field_ab = true;
+        this.field_Z.field_I = false;
         if (param0 < 11) {
             hk.e(false);
         }
     }
 
     final void a(String param0, float param1, int param2, boolean param3) {
-        if ((!param3 ? 1 : 0) == (((hk) this).field_U ? 1 : 0)) {
-            ((hk) this).field_U = param3 ? true : false;
-            if (((hk) this).field_U) {
-                ((hk) this).field_Z.a(8405024, -1028717695, 4210752);
-                ((hk) this).field_Z.field_I = true;
+        if ((!param3 ? 1 : 0) == (this.field_U ? 1 : 0)) {
+            this.field_U = param3 ? true : false;
+            if (this.field_U) {
+                this.field_Z.a(8405024, -1028717695, 4210752);
+                this.field_Z.field_I = true;
             } else {
-                ((hk) this).field_Z.a(2113632, -1028717695, 4210752);
-                if (!(!((hk) this).field_ab)) {
-                    ((hk) this).field_Z.field_I = false;
+                this.field_Z.a(2113632, -1028717695, 4210752);
+                if (!(!this.field_ab)) {
+                    this.field_Z.field_I = false;
                 }
             }
         }
@@ -45,33 +46,36 @@ final class hk extends rg {
             return;
         }
         try {
-            ((hk) this).field_Z.field_z = (int)(65536.0f * (param1 / 100.0f));
-            ((hk) this).field_X = param0;
+            this.field_Z.field_z = (int)(65536.0f * (param1 / 100.0f));
+            this.field_X = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "hk.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "hk.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void e(boolean param0) {
         field_W = null;
+        if (param0) {
+            field_bb = -76;
+        }
     }
 
     hk(wi param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
-            ((hk) this).field_cb = param1;
-            if (null != ((hk) this).field_cb) {
-                var3_int = va.field_i.a(((hk) this).field_cb, 260, va.field_i.field_M);
-                ((hk) this).a(6154, 150 - -var3_int, 300);
+            this.field_cb = param1;
+            if (null != this.field_cb) {
+                var3_int = va.field_i.a(this.field_cb, 260, va.field_i.field_M);
+                this.a(6154, 150 - -var3_int, 300);
             }
-            ((hk) this).field_Z = new hd(13, 50, 274, 30, 15, 2113632, 4210752);
-            ((hk) this).field_Z.field_I = true;
-            ((hk) this).field_ab = false;
-            ((hk) this).field_U = false;
-            ((hk) this).a((ub) (Object) ((hk) this).field_Z, (byte) 27);
+            this.field_Z = new hd(13, 50, 274, 30, 15, 2113632, 4210752);
+            this.field_Z.field_I = true;
+            this.field_ab = false;
+            this.field_U = false;
+            this.a((ub) (this.field_Z), (byte) 27);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "hk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

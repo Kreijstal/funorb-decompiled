@@ -8,7 +8,7 @@ class uj {
 
     boolean c(byte param0) {
         if (param0 >= -104) {
-            field_c = null;
+            field_c = (String) null;
             return false;
         }
         return false;
@@ -31,8 +31,9 @@ class uj {
     }
 
     int d(byte param0) {
+        int discarded$0 = 0;
         if (param0 != 64) {
-            int discarded$0 = ((uj) this).d((byte) -115);
+            discarded$0 = this.d((byte) -115);
             return 10 * oq.field_l;
         }
         return 10 * oq.field_l;
@@ -40,7 +41,7 @@ class uj {
 
     int b(int param0) {
         if (param0 != -25131) {
-            field_b = null;
+            field_b = (String) null;
             return 0;
         }
         return 0;
@@ -48,7 +49,7 @@ class uj {
 
     boolean a(boolean param0) {
         if (param0) {
-            field_c = null;
+            field_c = (String) null;
             return true;
         }
         return true;
@@ -63,17 +64,13 @@ class uj {
 
     int a(int param0) {
         if (param0 != -1) {
-            field_b = null;
+            field_b = (String) null;
             return -1;
         }
         return -1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "wins";
         field_c = "Account created successfully!";
     }

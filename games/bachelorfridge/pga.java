@@ -13,18 +13,22 @@ final class pga {
         var4 = BachelorFridge.field_y;
         var5 = wga.d(0);
         var2 = var5;
-        var3 = 0;
-        L0: while (true) {
-          if (var5.length > var3) {
-            if (var5[var3].field_c == param1) {
-              return var5[var3];
+        if (!param0) {
+          var3 = 0;
+          L0: while (true) {
+            if (var5.length > var3) {
+              if (var5[var3].field_c == param1) {
+                return var5[var3];
+              } else {
+                var3++;
+                continue L0;
+              }
             } else {
-              var3++;
-              continue L0;
+              return null;
             }
-          } else {
-            return null;
           }
+        } else {
+          return (du) null;
         }
     }
 
@@ -38,10 +42,6 @@ final class pga {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 470;
     }
 }

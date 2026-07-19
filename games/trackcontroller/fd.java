@@ -17,7 +17,7 @@ abstract class fd {
 
     public static void a(byte param0) {
         field_h = null;
-        int var1 = 32;
+        int var1 = -32 / ((51 - param0) / 54);
         field_d = null;
         field_f = null;
     }
@@ -27,10 +27,6 @@ abstract class fd {
     abstract void a(int param0, int param1, int param2);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fd.B(";
         field_f = "Waiting for fonts";
     }

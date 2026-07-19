@@ -27,14 +27,14 @@ final class mj {
 
     final dl b(byte param0) {
         if (param0 == 84) {
-          if (((mj) this).field_e == 0) {
+          if (this.field_e == 0) {
             return ac.field_j;
           } else {
             return qn.field_e;
           }
         } else {
-          field_f = null;
-          if (((mj) this).field_e == 0) {
+          field_f = (dl[]) null;
+          if (this.field_e == 0) {
             return ac.field_j;
           } else {
             return qn.field_e;
@@ -43,9 +43,9 @@ final class mj {
     }
 
     final void a(int param0) {
-        ((mj) this).field_b = ((mj) this).field_b + ((mj) this).field_g;
+        this.field_b = this.field_b + this.field_g;
         int var2 = 60 % ((param0 - 46) / 46);
-        ((mj) this).field_c = ((mj) this).field_c + ((mj) this).field_e;
+        this.field_c = this.field_c + this.field_e;
     }
 
     final dl a(int param0, int param1) {
@@ -56,65 +56,65 @@ final class mj {
         L0: {
           var6 = CrazyCrystals.field_B;
           if (1 != param1) {
-            var4 = -((mj) this).field_g;
-            var3 = -((mj) this).field_e;
+            var4 = -this.field_g;
+            var3 = -this.field_e;
             break L0;
           } else {
-            var4 = ((mj) this).field_g;
-            var3 = ((mj) this).field_e;
+            var4 = this.field_g;
+            var3 = this.field_e;
             break L0;
           }
         }
         if (param0 == 13214) {
-          if ((var4 | -((mj) this).field_e) >= 0) {
-            if ((var3 | -((mj) this).field_g) >= 0) {
+          if (((var4 | -this.field_e) ^ -1) <= -1) {
+            if ((var3 | -this.field_g) >= 0) {
               var5 = ai.field_b;
-              ((mj) this).field_g = var3;
-              ((mj) this).field_e = var4;
+              this.field_g = var3;
+              this.field_e = var4;
               return var5;
             } else {
               var5 = ce.field_eb;
-              ((mj) this).field_g = var3;
-              ((mj) this).field_e = var4;
+              this.field_g = var3;
+              this.field_e = var4;
               return var5;
             }
           } else {
-            if ((-((mj) this).field_g | var3) < 0) {
+            if (((-this.field_g | var3) ^ -1) > -1) {
               var5 = en.field_M;
-              ((mj) this).field_g = var3;
-              ((mj) this).field_e = var4;
+              this.field_g = var3;
+              this.field_e = var4;
               return var5;
             } else {
               var5 = jl.field_b;
-              ((mj) this).field_g = var3;
-              ((mj) this).field_e = var4;
+              this.field_g = var3;
+              this.field_e = var4;
               return var5;
             }
           }
         } else {
-          field_f = null;
-          if ((var4 | -((mj) this).field_e) >= 0) {
-            if ((var3 | -((mj) this).field_g) >= 0) {
+          field_f = (dl[]) null;
+          if (((var4 | -this.field_e) ^ -1) <= -1) {
+            if ((var3 | -this.field_g) >= 0) {
               var5 = ai.field_b;
-              ((mj) this).field_g = var3;
-              ((mj) this).field_e = var4;
+              this.field_g = var3;
+              this.field_e = var4;
               return var5;
             } else {
               var5 = ce.field_eb;
-              ((mj) this).field_g = var3;
-              ((mj) this).field_e = var4;
+              this.field_g = var3;
+              this.field_e = var4;
               return var5;
             }
           } else {
-            if ((-((mj) this).field_g | var3) < 0) {
+            if (((-this.field_g | var3) ^ -1) > -1) {
               var5 = en.field_M;
-              ((mj) this).field_g = var3;
-              ((mj) this).field_e = var4;
+              this.field_g = var3;
+              this.field_e = var4;
               return var5;
             } else {
               var5 = jl.field_b;
-              ((mj) this).field_g = var3;
-              ((mj) this).field_e = var4;
+              this.field_g = var3;
+              this.field_e = var4;
               return var5;
             }
           }
@@ -122,18 +122,14 @@ final class mj {
     }
 
     mj(int param0, int param1, int param2, int param3) {
-        ((mj) this).field_a = null;
-        ((mj) this).field_e = param3;
-        ((mj) this).field_g = param2;
-        ((mj) this).field_b = param0;
-        ((mj) this).field_c = param1;
+        this.field_a = null;
+        this.field_e = param3;
+        this.field_g = param2;
+        this.field_b = param0;
+        this.field_c = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Create a free Account";
     }
 }

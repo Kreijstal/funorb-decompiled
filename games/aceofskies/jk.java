@@ -7,10 +7,11 @@ final class jk {
     private fq field_a;
 
     public static void a(int param0) {
+        boolean discarded$0 = false;
         field_b = null;
         field_c = null;
         if (param0 != 29770) {
-            boolean discarded$0 = jk.a('>', 104);
+            discarded$0 = jk.a('>', 104);
         }
     }
 
@@ -27,6 +28,7 @@ final class jk {
         int stackIn_12_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_24_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_23_0 = 0;
@@ -38,7 +40,8 @@ final class jk {
             if (Character.isISOControl(param0)) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (!dc.a((byte) -119, param0)) {
                 var5 = wo.field_l;
@@ -52,7 +55,7 @@ final class jk {
                       if (param1 == -26024) {
                         break L2;
                       } else {
-                        field_b = null;
+                        field_b = (gk) null;
                         break L2;
                       }
                     }
@@ -62,13 +65,15 @@ final class jk {
                       if (var6.length <= var7) {
                         stackOut_23_0 = 0;
                         stackIn_24_0 = stackOut_23_0;
+                        decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
                         var4 = var6[var7];
                         if (var4 == param0) {
                           stackOut_20_0 = 1;
                           stackIn_21_0 = stackOut_20_0;
-                          return stackIn_21_0 != 0;
+                          decompiledRegionSelector0 = 3;
+                          break L0;
                         } else {
                           var7++;
                           continue L3;
@@ -80,7 +85,8 @@ final class jk {
                     if (param0 == var4) {
                       stackOut_11_0 = 1;
                       stackIn_12_0 = stackOut_11_0;
-                      return stackIn_12_0 != 0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     } else {
                       var3++;
                       continue L1;
@@ -90,29 +96,47 @@ final class jk {
               } else {
                 stackOut_5_0 = 1;
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var2_ref, "jk.C(" + param0 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) var2_ref), "jk.C(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_24_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_12_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_21_0 != 0;
+              } else {
+                return stackIn_24_0 != 0;
+              }
+            }
+          }
+        }
     }
 
     final void a(byte param0, wl param1) {
-        ((jk) this).field_a = param1.a((byte) -49, 24, (byte[]) null, 196584, true);
-        hl discarded$0 = new hl(((jk) this).field_a, 5126, 2, 0);
-        hl discarded$2 = new hl(((jk) this).field_a, 5126, 3, 8);
+        hl discarded$3 = null;
+        this.field_a = param1.a((byte) -49, 24, (byte[]) null, 196584, true);
+        hl discarded$0 = new hl(this.field_a, 5126, 2, 0);
+        hl discarded$2 = new hl(this.field_a, 5126, 3, 8);
         if (param0 < 34) {
             return;
         }
         try {
-            hl discarded$3 = new hl(((jk) this).field_a, 5121, 4, 20);
+            discarded$3 = new hl(this.field_a, 5121, 4, 20);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "jk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "jk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -122,10 +146,6 @@ final class jk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Orb Points";
     }
 }

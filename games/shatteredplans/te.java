@@ -7,12 +7,19 @@ final class te {
     static String field_b;
 
     final static void a(int param0, int param1) {
+        if (param0 != 0) {
+            return;
+        }
         int discarded$0 = uo.a((byte) -75);
     }
 
     final static void a(boolean param0) {
         bq.a(127);
         hr.a(bh.field_m[0].field_o, cr.field_c, tg.field_a, 113, pe.field_K, rc.field_l);
+        if (!param0) {
+            v var2 = (v) null;
+            te.a(-28, (v) null, 8, (v) null, 98, -88);
+        }
     }
 
     public static void a(int param0) {
@@ -28,18 +35,17 @@ final class te {
             cs.field_l = param3;
             sm.field_b = param5;
             ar.field_i = param2;
+            if (param0 != -4440) {
+                field_b = (String) null;
+            }
             kr.field_a = param1;
             tr.field_Lb = param4;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "te.A(" + -4440 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Cancel draw";
         field_b = "Click to hide the Diplomacy window.";
     }

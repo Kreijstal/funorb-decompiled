@@ -1,20 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class wha implements dja {
     static int field_a;
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            return null;
+            return (tv[]) null;
         }
-        return (tv[]) (Object) new crb[param1];
+        return (tv[]) ((Object) new crb[param1]);
     }
 
     final static void a(int param0) {
-        wga.field_a = new lwa(fh.field_g, lo.field_b, kn.field_p, qc.field_q, (llb) (Object) urb.field_o, iga.field_o);
+        if (param0 != 29012) {
+            field_a = 71;
+        }
+        wga.field_a = new lwa(fh.field_g, lo.field_b, kn.field_p, qc.field_q, urb.field_o, iga.field_o);
     }
 
     final static void a(int param0, boolean param1, int param2) {
@@ -154,8 +155,8 @@ final class wha implements dja {
                     }
                   }
                 } else {
-                  if (iv.field_o == 2) {
-                    var3_int = wva.a(kjb.field_o, ob.field_l, 0, isa.a(wma.field_M, new String[1], 95), boa.field_a);
+                  if (-3 == (iv.field_o ^ -1)) {
+                    var3_int = wva.a(kjb.field_o, ob.field_l, 0, isa.a(wma.field_M, new String[]{"<br><%0><br>"}, param0 + 93), boa.field_a);
                     var4 = -1;
                     var5 = 0;
                     L6: while (true) {
@@ -163,7 +164,7 @@ final class wha implements dja {
                         if (var5 >= var3_int) {
                           break L7;
                         } else {
-                          if (!"<%0>".equals((Object) (Object) ob.field_l[var5])) {
+                          if (!"<%0>".equals(ob.field_l[var5])) {
                             var5++;
                             continue L6;
                           } else {
@@ -174,10 +175,10 @@ final class wha implements dja {
                       }
                       if (var4 != -1) {
                         tj.field_k = new String[var4];
-                        cua.a((Object[]) (Object) ob.field_l, 0, (Object[]) (Object) tj.field_k, 0, var4);
+                        cua.a(ob.field_l, 0, tj.field_k, 0, var4);
                         vg.field_p = new String[-var4 + (var3_int - 1)];
-                        cua.a((Object[]) (Object) ob.field_l, var4 + 1, (Object[]) (Object) vg.field_p, 0, -1 + -var4 + var3_int);
-                        var3_int = wva.a(kjb.field_o, ob.field_l, 0, isa.a(nda.field_o, new String[1], 88), boa.field_a);
+                        cua.a(ob.field_l, var4 + 1, vg.field_p, 0, -1 + -var4 + var3_int);
+                        var3_int = wva.a(kjb.field_o, ob.field_l, 0, isa.a(nda.field_o, new String[]{"<br><%0><br>"}, 88), boa.field_a);
                         var4 = -1;
                         var5 = 0;
                         L8: while (true) {
@@ -185,7 +186,7 @@ final class wha implements dja {
                             if (var5 >= var3_int) {
                               break L9;
                             } else {
-                              if (!"<%0>".equals((Object) (Object) ob.field_l[var5])) {
+                              if (!"<%0>".equals(ob.field_l[var5])) {
                                 var5++;
                                 continue L8;
                               } else {
@@ -194,12 +195,12 @@ final class wha implements dja {
                               }
                             }
                           }
-                          if (var4 != -1) {
+                          if ((var4 ^ -1) != 0) {
                             L10: {
                               dha.field_q = new String[var4];
-                              cua.a((Object[]) (Object) ob.field_l, 0, (Object[]) (Object) dha.field_q, 0, var4);
+                              cua.a(ob.field_l, 0, dha.field_q, 0, var4);
                               jha.field_o = new String[-var4 + (var3_int + -1)];
-                              cua.a((Object[]) (Object) ob.field_l, var4 + 1, (Object[]) (Object) jha.field_o, 0, -1 + -var4 + var3_int);
+                              cua.a(ob.field_l, var4 + 1, jha.field_o, 0, -1 + -var4 + var3_int);
                               if (tj.field_k.length >= dha.field_q.length) {
                                 stackOut_48_0 = tj.field_k.length;
                                 stackIn_49_0 = stackOut_48_0;
@@ -258,7 +259,7 @@ final class wha implements dja {
                                           stackIn_64_0 = stackOut_63_0;
                                           stackIn_64_1 = stackOut_63_1;
                                           if (var8 < jha.field_o.length) {
-                                            stackOut_65_0 = (String[]) (Object) stackIn_65_0;
+                                            stackOut_65_0 = (String[]) ((Object) stackIn_65_0);
                                             stackOut_65_1 = stackIn_65_1;
                                             stackOut_65_2 = jha.field_o[var8];
                                             stackIn_66_0 = stackOut_65_0;
@@ -266,7 +267,7 @@ final class wha implements dja {
                                             stackIn_66_2 = stackOut_65_2;
                                             break L15;
                                           } else {
-                                            stackOut_64_0 = (String[]) (Object) stackIn_64_0;
+                                            stackOut_64_0 = (String[]) ((Object) stackIn_64_0);
                                             stackOut_64_1 = stackIn_64_1;
                                             stackOut_64_2 = "";
                                             stackIn_66_0 = stackOut_64_0;
@@ -289,7 +290,7 @@ final class wha implements dja {
                                       stackIn_58_0 = stackOut_57_0;
                                       stackIn_58_1 = stackOut_57_1;
                                       if (0 > -var5 + var8 + dha.field_q.length) {
-                                        stackOut_59_0 = (String[]) (Object) stackIn_59_0;
+                                        stackOut_59_0 = (String[]) ((Object) stackIn_59_0);
                                         stackOut_59_1 = stackIn_59_1;
                                         stackOut_59_2 = "";
                                         stackIn_60_0 = stackOut_59_0;
@@ -297,7 +298,7 @@ final class wha implements dja {
                                         stackIn_60_2 = stackOut_59_2;
                                         break L16;
                                       } else {
-                                        stackOut_58_0 = (String[]) (Object) stackIn_58_0;
+                                        stackOut_58_0 = (String[]) ((Object) stackIn_58_0);
                                         stackOut_58_1 = stackIn_58_1;
                                         stackOut_58_2 = dha.field_q[dha.field_q.length + var8 - var5];
                                         stackIn_60_0 = stackOut_58_0;
@@ -327,7 +328,7 @@ final class wha implements dja {
                     }
                   } else {
                     if (iv.field_o != 3) {
-                      if (iv.field_o == 4) {
+                      if ((iv.field_o ^ -1) == -5) {
                         var3_int = wva.a(kjb.field_o, ob.field_l, 0, r.field_m, boa.field_a);
                         var4 = var3_int + 2;
                         bra.field_f = new String[var4];
@@ -360,7 +361,7 @@ final class wha implements dja {
                         if (5 != iv.field_o) {
                           throw new IllegalArgumentException();
                         } else {
-                          var3_int = wva.a(kjb.field_o, ob.field_l, 0, tl.field_o, boa.field_a);
+                          var3_int = wva.a(kjb.field_o, ob.field_l, param0 + -2, tl.field_o, boa.field_a);
                           var4 = 3 - -var3_int;
                           bra.field_f = new String[var4];
                           edb.field_o = new int[var4];
@@ -399,7 +400,7 @@ final class wha implements dja {
                           var3_int = wva.a(kjb.field_o, ob.field_l, 0, oda.field_t, boa.field_a);
                           break L21;
                         } else {
-                          var3_int = wva.a(kjb.field_o, ob.field_l, 0, moa.field_n, boa.field_a);
+                          var3_int = wva.a(kjb.field_o, ob.field_l, param0 ^ 2, moa.field_n, boa.field_a);
                           break L21;
                         }
                       }
@@ -441,7 +442,7 @@ final class wha implements dja {
             L24: while (true) {
               if (bra.field_f.length <= var4) {
                 L25: {
-                  if (iv.field_o != 2) {
+                  if ((iv.field_o ^ -1) != -3) {
                     break L25;
                   } else {
                     var10 = tj.field_k;
@@ -454,80 +455,78 @@ final class wha implements dja {
                           if (var5 >= var11.length) {
                             break L25;
                           } else {
-                            L28: {
-                              var13 = var11[var5];
-                              var7 = ptb.a((byte) -107, false, var13);
-                              if (var3_int >= var7) {
-                                break L28;
-                              } else {
-                                break L28;
-                              }
+                            var13 = var11[var5];
+                            var7 = ptb.a((byte) -107, false, var13);
+                            if (var3_int < var7) {
+                              var3_int = var7;
+                              var5++;
+                              continue L27;
+                            } else {
+                              var5++;
+                              continue L27;
                             }
-                            var5++;
-                            continue L27;
                           }
                         }
                       } else {
-                        L29: {
-                          var12 = var10[var5];
-                          var7 = ptb.a((byte) -107, false, var12);
-                          if (var7 <= var3_int) {
-                            break L29;
-                          } else {
-                            break L29;
-                          }
+                        var12 = var10[var5];
+                        var7 = ptb.a((byte) -107, false, var12);
+                        if (var7 > var3_int) {
+                          var3_int = var7;
+                          var5++;
+                          continue L26;
+                        } else {
+                          var5++;
+                          continue L26;
                         }
-                        var5++;
-                        continue L26;
                       }
                     }
                   }
                 }
-                sg.field_E = (lfa.field_m + ro.field_c << 1) * mba.field_a.field_c;
+                sg.field_E = (lfa.field_m + ro.field_c << -1921525375) * mba.field_a.field_c;
                 var4 = 0;
-                L30: while (true) {
+                L28: while (true) {
                   if (bra.field_f.length <= var4) {
-                    jrb.field_o = -(sg.field_E >> 1) + bba.field_d;
+                    jrb.field_o = -(sg.field_E >> -1150849375) + bba.field_d;
                     tm.field_o = new int[bra.field_f.length][];
                     var4 = 0;
                     var5 = jrb.field_o;
-                    L31: while (true) {
+                    L29: while (true) {
                       if (bra.field_f.length <= var4) {
-                        L32: {
-                          if (2 != iv.field_o) {
+                        L30: {
+                          if (param0 != iv.field_o) {
                             mba.field_a.a(param1, -1, 0, uca.a(true, kc.field_b, uia.field_b));
-                            break L32;
+                            break L30;
                           } else {
                             mba.field_a.a(param1, -1, -1, -1);
-                            break L32;
+                            break L30;
                           }
                         }
                         break L0;
                       } else {
-                        L33: {
+                        L31: {
                           var6 = edb.field_o[var4];
-                          if (var6 < 0) {
+                          if ((var6 ^ -1) > -1) {
                             var5 = var5 + u.field_r;
-                            break L33;
+                            break L31;
                           } else {
                             var7 = ptb.a((byte) -107, true, bra.field_f[var4]);
-                            var8 = -(var7 >> 1) + dv.field_f;
+                            var8 = -(var7 >> -839779391) + dv.field_f;
                             var5 = var5 + ro.field_c;
                             tm.field_o[var4] = new int[4];
                             tm.field_o[var4][0] = var8 - za.field_d;
                             tm.field_o[var4][1] = var5;
-                            tm.field_o[var4][2] = var7 - -(za.field_d << 1);
-                            tm.field_o[var4][3] = (lfa.field_m << 1) + rua.field_p;
-                            var5 = var5 + ((lfa.field_m << 1) - (-ro.field_c - rua.field_p));
-                            break L33;
+                            tm.field_o[var4][2] = var7 - -(za.field_d << 1040370561);
+                            tm.field_o[var4][3] = (lfa.field_m << 401559809) + rua.field_p;
+                            var5 = var5 + ((lfa.field_m << 2130887425) - (-ro.field_c - rua.field_p));
+                            break L31;
                           }
                         }
                         var4++;
-                        continue L31;
+                        continue L29;
                       }
                     }
                   } else {
-                    L34: {
+                    L32: {
                       stackOut_104_0 = sg.field_E;
                       stackIn_106_0 = stackOut_104_0;
                       stackIn_105_0 = stackOut_104_0;
@@ -536,46 +535,46 @@ final class wha implements dja {
                         stackOut_106_1 = rua.field_p;
                         stackIn_107_0 = stackOut_106_0;
                         stackIn_107_1 = stackOut_106_1;
-                        break L34;
+                        break L32;
                       } else {
                         stackOut_105_0 = stackIn_105_0;
                         stackOut_105_1 = u.field_r;
                         stackIn_107_0 = stackOut_105_0;
                         stackIn_107_1 = stackOut_105_1;
-                        break L34;
+                        break L32;
                       }
                     }
                     sg.field_E = stackIn_107_0 + stackIn_107_1;
                     var4++;
-                    continue L30;
+                    continue L28;
                   }
                 }
               } else {
-                L35: {
+                L33: {
                   stackOut_84_0 = -107;
                   stackIn_86_0 = stackOut_84_0;
                   stackIn_85_0 = stackOut_84_0;
-                  if (edb.field_o[var4] < 0) {
+                  if ((edb.field_o[var4] ^ -1) > -1) {
                     stackOut_86_0 = stackIn_86_0;
                     stackOut_86_1 = 0;
                     stackIn_87_0 = stackOut_86_0;
                     stackIn_87_1 = stackOut_86_1;
-                    break L35;
+                    break L33;
                   } else {
                     stackOut_85_0 = stackIn_85_0;
                     stackOut_85_1 = 1;
                     stackIn_87_0 = stackOut_85_0;
                     stackIn_87_1 = stackOut_85_1;
-                    break L35;
+                    break L33;
                   }
                 }
-                L36: {
+                L34: {
                   var5 = ptb.a((byte) stackIn_87_0, stackIn_87_1 != 0, bra.field_f[var4]);
                   if (var3_int < var5) {
                     var3_int = var5;
-                    break L36;
+                    break L34;
                   } else {
-                    break L36;
+                    break L34;
                   }
                 }
                 var4++;
@@ -586,20 +585,16 @@ final class wha implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var3, "wha.C(" + 2 + ',' + param1 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) var3), "wha.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public final tv a(byte param0) {
         int var2 = -12 % ((param0 - -64) / 50);
-        return (tv) (Object) new crb();
+        return (tv) ((Object) new crb());
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 11;
     }
 }

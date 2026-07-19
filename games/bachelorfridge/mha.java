@@ -13,10 +13,6 @@ final class mha extends bw {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mha.<init>()";
     }
 }

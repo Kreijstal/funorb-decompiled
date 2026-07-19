@@ -14,11 +14,11 @@ final class go extends bp implements nh {
     public final void a(ji param0, int param1) {
         try {
             if (param1 != 15149) {
-                field_j = null;
+                field_j = (int[]) null;
             }
-            super.a(param0, param1);
+            super.a(param0, param1 ^ 0);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "go.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "go.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -36,15 +36,15 @@ final class go extends bp implements nh {
     go(on param0, iw param1, int param2, int param3, int param4, byte[] param5) {
         super(param0, 32879, param1, io.field_g, param2 * (param3 * param4), false);
         try {
-            ((go) this).field_i = param2;
-            ((go) this).field_k = param3;
-            ((go) this).field_l = param4;
-            ((go) this).field_e.a((ed) this, 104);
+            this.field_i = param2;
+            this.field_k = param3;
+            this.field_l = param4;
+            this.field_e.a((ed) (this), 104);
             jaggl.OpenGL.glPixelStorei(3317, 1);
-            jaggl.OpenGL.glTexImage3Dub(((go) this).field_h, 0, ((go) this).e(-11), ((go) this).field_i, ((go) this).field_k, ((go) this).field_l, 0, te.a(-21339, ((go) this).field_c), 5121, param5, 0);
+            jaggl.OpenGL.glTexImage3Dub(this.field_h, 0, this.e(-11), this.field_i, this.field_k, this.field_l, 0, te.a(-21339, this.field_c), 5121, param5, 0);
             jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -53,10 +53,6 @@ final class go extends bp implements nh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = new ts(0, 2, 2, 1);
         field_j = new int[25];
         field_o = "Log in / Create account";

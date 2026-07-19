@@ -10,14 +10,10 @@ final class bha extends pu {
 
     public static void d(byte param0) {
         field_m = null;
-        int var1 = -95;
+        int var1 = 95 / ((-7 - param0) / 43);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bha.A(";
         field_l = true;
         field_n = false;

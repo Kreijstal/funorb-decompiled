@@ -23,10 +23,6 @@ final class sm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "sm.A(";
         field_b = "Waiting for fonts";
         field_f = "Time to flee! Get your zombies out!";

@@ -14,17 +14,17 @@ final class lc {
     final boolean a(byte param0) {
         if (param0 != -34) {
             lc.b(-70);
-            return ((lc) this).field_b;
+            return this.field_b;
         }
-        return ((lc) this).field_b;
+        return this.field_b;
     }
 
     final String b(byte param0) {
         if (param0 != 66) {
-            ((lc) this).a(true, 65);
-            return ((lc) this).field_a;
+            this.a(true, 65);
+            return this.field_a;
         }
-        return ((lc) this).field_a;
+        return this.field_a;
     }
 
     public static void b(int param0) {
@@ -39,18 +39,18 @@ final class lc {
     final boolean a(int param0) {
         if (param0 != 250) {
             field_g = 99;
-            return ((lc) this).field_e;
+            return this.field_e;
         }
-        return ((lc) this).field_e;
+        return this.field_e;
     }
 
     lc(String param0) {
-        ((lc) this).field_b = false;
-        ((lc) this).field_e = false;
+        this.field_b = false;
+        this.field_e = false;
         try {
-            ((lc) this).field_a = param0;
+            this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "lc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,15 +58,11 @@ final class lc {
         if (param1 < 74) {
             return;
         }
-        ((lc) this).field_b = param0 ? true : false;
-        ((lc) this).field_e = true;
+        this.field_b = param0 ? true : false;
+        this.field_e = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Password: ";
         field_h = 250;
     }

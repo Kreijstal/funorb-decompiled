@@ -16,9 +16,9 @@ abstract class fh {
             Object var7 = null;
             gd var8 = null;
             int var9 = 0;
-            kk stackIn_11_0 = null;
+            kk stackIn_14_0 = null;
             Throwable decompiledCaughtException = null;
-            kk stackOut_10_0 = null;
+            kk stackOut_13_0 = null;
             try {
               L0: {
                 L1: {
@@ -27,7 +27,7 @@ abstract class fh {
                   if (null != kb.field_d.field_t) {
                     sd.field_c = new il(kb.field_d.field_t, 5200, 0);
                     kb.field_d.field_t = null;
-                    var6 = (Object) (Object) new hf(255, sd.field_c, new il(kb.field_d.field_v, 12000, 0), 2097152);
+                    var6 = new hf(255, sd.field_c, new il(kb.field_d.field_v, 12000, 0), 2097152);
                     break L1;
                   } else {
                     break L1;
@@ -52,24 +52,32 @@ abstract class fh {
                         break L4;
                       }
                     }
-                    var7 = (Object) (Object) new hf(param1, sd.field_c, kh.field_e[param1], 2097152);
+                    var7 = new hf(param1, sd.field_c, kh.field_e[param1], 2097152);
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                var8 = ij.field_d.a(103, param1, (hf) var6, false, (hf) var7);
-                var9 = 71 % ((param5 - -49) / 56);
-                stackOut_10_0 = new kk((wi) (Object) var8, true, 1);
-                stackIn_11_0 = stackOut_10_0;
+                L5: {
+                  var8 = ij.field_d.a(103, param1, (hf) (var6), param3, (hf) (var7));
+                  var9 = 71 % ((param5 - -49) / 56);
+                  if (param2) {
+                    var8.b(6054);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                stackOut_13_0 = new kk(var8, param0, param4);
+                stackIn_14_0 = stackOut_13_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (Object) (Object) decompiledCaughtException;
-              throw new RuntimeException(((IOException) var6).toString());
+              var6 = (IOException) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) (var6)).toString());
             }
-            return stackIn_11_0;
+            return stackIn_14_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -80,17 +88,17 @@ abstract class fh {
     abstract byte[] b(byte param0);
 
     final static int a(int param0, int param1) {
-        param1 = fj.b(-48, param1);
-        if (!(param1 != 32)) {
+        param1 = fj.b(param0 ^ -48, param1);
+        if (!(-33 != (param1 ^ -1))) {
             return 38;
         }
-        if (0 == param1) {
+        if (param0 == param1) {
             return 0;
         }
         if (!(param1 <= 32)) {
             return 64 | param1 + -26;
         }
-        return param1 + 6;
+        return param1 - 1 + 7;
     }
 
     abstract void a(byte[] param0, int param1);
@@ -107,6 +115,24 @@ abstract class fh {
     }
 
     final static boolean a(int param0) {
+        if (param0 != 520) {
+            field_e = (oi) null;
+            if (!(-1 != hd.field_o)) {
+                if (!(hf.a(1, false))) {
+                    return false;
+                }
+                hd.field_o = ne.field_a.h(16383);
+                ne.field_a.field_k = 0;
+            }
+            if (!(hd.field_o != -2)) {
+                if (!(hf.a(2, false))) {
+                    return false;
+                }
+                hd.field_o = ne.field_a.d((byte) -76);
+                ne.field_a.field_k = 0;
+            }
+            return hf.a(hd.field_o, false);
+        }
         if (!(-1 != hd.field_o)) {
             if (!(hf.a(1, false))) {
                 return false;
@@ -125,10 +151,6 @@ abstract class fh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new byte[520];
         field_e = new oi();
         field_d = "Change display name";

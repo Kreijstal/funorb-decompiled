@@ -24,10 +24,6 @@ final class bn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bn.A(";
         field_b = true;
         field_a = "Reject";

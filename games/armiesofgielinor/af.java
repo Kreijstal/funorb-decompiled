@@ -2,8 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.io.*;
-import java.net.URL;
-import java.lang.String;
 
 abstract class af {
     static boolean field_c;
@@ -16,24 +14,24 @@ abstract class af {
         String var3_ref = null;
         int var4 = 0;
         String var5 = null;
-        String stackIn_31_0 = null;
-        Object stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        Object stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
+        String stackIn_33_0 = null;
         Object stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
+        Object stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
+        Object stackIn_37_0 = null;
+        StringBuilder stackIn_37_1 = null;
+        String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_30_0 = null;
-        Object stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_0 = null;
         Object stackOut_34_0 = null;
         StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        Object stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
+        Object stackOut_36_0 = null;
+        StringBuilder stackOut_36_1 = null;
+        String stackOut_36_2 = null;
+        Object stackOut_35_0 = null;
+        StringBuilder stackOut_35_1 = null;
+        String stackOut_35_2 = null;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -42,20 +40,21 @@ abstract class af {
               if (param0.field_q != null) {
                 L2: {
                   var5 = param0.field_q;
-                  var2 = (Object) (Object) var5;
+                  var2 = var5;
                   var3 = var2;
-                  var2 = (Object) (Object) var5;
-                  if (param0.field_p == 1) {
-                    var2 = (Object) (Object) ("<img=0>" + var5);
+                  var2 = var5;
+                  var2 = var5;
+                  if ((param0.field_p ^ -1) == -2) {
+                    var2 = "<img=0>" + var5;
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                if (param0.field_p != 2) {
+                if ((param0.field_p ^ -1) != -3) {
                   break L1;
                 } else {
-                  var2 = (Object) (Object) ("<img=1>" + (String) var2);
+                  var2 = "<img=1>" + (String) (var2);
                   var3 = var2;
                   var3 = var2;
                   break L1;
@@ -65,120 +64,146 @@ abstract class af {
               }
             }
             L3: {
-              var3_ref = "";
-              if (2 == param0.field_b) {
-                if (!param0.field_f) {
-                  L4: {
-                    if (0 != param0.field_a) {
-                      break L4;
+              if (param1 == 103) {
+                break L3;
+              } else {
+                field_c = false;
+                break L3;
+              }
+            }
+            L4: {
+              L5: {
+                var3_ref = "";
+                if (2 == param0.field_b) {
+                  break L5;
+                } else {
+                  L6: {
+                    if (0 != param0.field_b) {
+                      break L6;
                     } else {
-                      if (param0.field_e == 0) {
-                        var3_ref = fo.a(4800, ta.field_Q, new String[1]);
-                        break L3;
+                      if (!bq.field_c) {
+                        break L6;
                       } else {
-                        break L4;
+                        var3_ref = "[" + sa.field_c + "] ";
+                        break L6;
                       }
                     }
                   }
-                  var3_ref = fo.a(4800, ov.field_l, new String[1]);
-                  break L3;
-                } else {
-                  break L3;
-                }
-              } else {
-                L5: {
-                  if (0 != param0.field_b) {
-                    break L5;
-                  } else {
-                    if (!bq.field_c) {
-                      break L5;
-                    } else {
-                      var3_ref = "[" + sa.field_c + "] ";
-                      break L5;
-                    }
-                  }
-                }
-                L6: {
-                  if (param0.field_b == 1) {
-                    var3_ref = "[" + fo.a(4800, cv.field_m, new String[1]) + "] ";
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                L7: {
-                  if (4 != param0.field_b) {
-                    break L7;
-                  } else {
-                    if (null == ur.field_C) {
+                  L7: {
+                    if (-2 == (param0.field_b ^ -1)) {
+                      var3_ref = "[" + fo.a(param1 + 4697, cv.field_m, new String[]{param0.field_k}) + "] ";
                       break L7;
                     } else {
-                      var3_ref = "[" + ur.field_C + "] ";
                       break L7;
                     }
                   }
-                }
-                L8: {
-                  if (param0.field_b != 3) {
-                    break L8;
-                  } else {
-                    var3_ref = "[#" + param0.field_k + "] ";
-                    break L8;
+                  L8: {
+                    if (4 != param0.field_b) {
+                      break L8;
+                    } else {
+                      if (null == ur.field_C) {
+                        break L8;
+                      } else {
+                        var3_ref = "[" + ur.field_C + "] ";
+                        break L8;
+                      }
+                    }
                   }
-                }
-                if (!param0.field_f) {
-                  var3_ref = var3_ref + (String) var2 + ": ";
-                  break L3;
-                } else {
-                  break L3;
+                  L9: {
+                    if ((param0.field_b ^ -1) != -4) {
+                      break L9;
+                    } else {
+                      var3_ref = "[#" + param0.field_k + "] ";
+                      break L9;
+                    }
+                  }
+                  if (!param0.field_f) {
+                    var3_ref = var3_ref + (String) (var2) + ": ";
+                    if (var4 == 0) {
+                      break L4;
+                    } else {
+                      break L5;
+                    }
+                  } else {
+                    break L4;
+                  }
                 }
               }
+              if (!param0.field_f) {
+                L10: {
+                  L11: {
+                    if (0 != param0.field_a) {
+                      break L11;
+                    } else {
+                      if (param0.field_e == 0) {
+                        break L10;
+                      } else {
+                        break L11;
+                      }
+                    }
+                  }
+                  var3_ref = fo.a(param1 + 4697, ov.field_l, new String[]{(String) (var2)});
+                  if (var4 == 0) {
+                    break L4;
+                  } else {
+                    break L10;
+                  }
+                }
+                var3_ref = fo.a(param1 + 4697, ta.field_Q, new String[]{(String) (var2)});
+                break L4;
+              } else {
+                break L4;
+              }
             }
-            stackOut_30_0 = (String) var3_ref;
-            stackIn_31_0 = stackOut_30_0;
+            stackOut_32_0 = (String) (var3_ref);
+            stackIn_33_0 = stackOut_32_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_32_0 = var2;
-            stackOut_32_1 = new StringBuilder().append("af.H(");
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+          L12: {
+            var2 = decompiledCaughtException;
+            stackOut_34_0 = var2;
+            stackOut_34_1 = new StringBuilder().append("af.H(");
+            stackIn_36_0 = stackOut_34_0;
+            stackIn_36_1 = stackOut_34_1;
+            stackIn_35_0 = stackOut_34_0;
+            stackIn_35_1 = stackOut_34_1;
             if (param0 == null) {
-              stackOut_34_0 = stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
-              break L9;
+              stackOut_36_0 = stackIn_36_0;
+              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
+              stackOut_36_2 = "null";
+              stackIn_37_0 = stackOut_36_0;
+              stackIn_37_1 = stackOut_36_1;
+              stackIn_37_2 = stackOut_36_2;
+              break L12;
             } else {
-              stackOut_33_0 = stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
-              break L9;
+              stackOut_35_0 = stackIn_35_0;
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackOut_35_2 = "{...}";
+              stackIn_37_0 = stackOut_35_0;
+              stackIn_37_1 = stackOut_35_1;
+              stackIn_37_2 = stackOut_35_2;
+              break L12;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ',' + 103 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_37_0), stackIn_37_2 + ',' + param1 + ')');
         }
-        return stackIn_31_0;
+        return stackIn_33_0;
     }
 
     abstract void a(vh param0, int param1);
 
     public static void b(byte param0) {
+        if (param0 >= -95) {
+            return;
+        }
         field_a = null;
     }
 
     final static void a(Throwable param0, int param1, String param2) {
         try {
+            int discarded$1 = 0;
             Exception var3 = null;
             int var3_int = 0;
             String var4 = null;
@@ -205,6 +230,7 @@ abstract class af {
             java.net.URL stackIn_13_3 = null;
             StringBuilder stackIn_13_4 = null;
             String stackIn_13_5 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             hd stackOut_10_0 = null;
             java.net.URL stackOut_10_1 = null;
@@ -275,11 +301,11 @@ abstract class af {
                     stackIn_11_3 = stackOut_10_3;
                     stackIn_11_4 = stackOut_10_4;
                     if (uk.field_l == null) {
-                      stackOut_12_0 = (hd) (Object) stackIn_12_0;
+                      stackOut_12_0 = (hd) ((Object) stackIn_12_0);
                       stackOut_12_1 = null;
                       stackOut_12_2 = null;
-                      stackOut_12_3 = (java.net.URL) (Object) stackIn_12_3;
-                      stackOut_12_4 = (StringBuilder) (Object) stackIn_12_4;
+                      stackOut_12_3 = (java.net.URL) ((Object) stackIn_12_3);
+                      stackOut_12_4 = (StringBuilder) ((Object) stackIn_12_4);
                       stackOut_12_5 = "" + ck.field_b;
                       stackIn_13_0 = stackOut_12_0;
                       stackIn_13_1 = stackOut_12_1;
@@ -289,11 +315,11 @@ abstract class af {
                       stackIn_13_5 = stackOut_12_5;
                       break L4;
                     } else {
-                      stackOut_11_0 = (hd) (Object) stackIn_11_0;
+                      stackOut_11_0 = (hd) ((Object) stackIn_11_0);
                       stackOut_11_1 = null;
                       stackOut_11_2 = null;
-                      stackOut_11_3 = (java.net.URL) (Object) stackIn_11_3;
-                      stackOut_11_4 = (StringBuilder) (Object) stackIn_11_4;
+                      stackOut_11_3 = (java.net.URL) ((Object) stackIn_11_3);
+                      stackOut_11_4 = (StringBuilder) ((Object) stackIn_11_4);
                       stackOut_11_5 = uk.field_l;
                       stackIn_13_0 = stackOut_11_0;
                       stackIn_13_1 = stackOut_11_1;
@@ -306,27 +332,48 @@ abstract class af {
                   }
                   var5 = ((hd) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, stackIn_13_5 + "&v1=" + hd.field_t + "&v2=" + hd.field_u + "&e=" + var11), false);
                   L5: while (true) {
-                    if (var5.field_g != 0) {
+                    L6: {
+                      L7: {
+                        if (var5.field_g != 0) {
+                          break L7;
+                        } else {
+                          nu.a(1L, 0);
+                          if (var7 != 0) {
+                            break L6;
+                          } else {
+                            if (var7 == 0) {
+                              continue L5;
+                            } else {
+                              break L7;
+                            }
+                          }
+                        }
+                      }
                       if (var5.field_g == 1) {
-                        var6 = (DataInputStream) var5.field_f;
-                        int discarded$1 = var6.read();
-                        var6.close();
-                        break L0;
+                        break L6;
                       } else {
                         return;
                       }
-                    } else {
-                      nu.a(1L, 0);
-                      continue L5;
                     }
+                    var6 = (DataInputStream) (var5.field_f);
+                    discarded$1 = var6.read();
+                    var6.close();
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (Exception) (Object) decompiledCaughtException;
+              return;
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
               return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -343,17 +390,13 @@ abstract class af {
             se.field_f = param0;
             ac.field_n = true;
             qc.field_a = new ro(rl.field_C, bv.field_t, param1, fh.field_i, se.field_f);
-            rl.field_C.a((kb) (Object) qc.field_a, 0);
+            rl.field_C.a(qc.field_a, param2 ^ param2);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "af.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + -1 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "af.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new String[]{"BARBARIAN", "AVIANSIE", "GORILLA", "BARBARIANSPEARWOMAN", "DRAGON", "TXHAARKET", "DAGANNOTH", "PORTALMAGE", "PALADIN", "SARADOMINOWL", "MONK", "SARADOMINMAGE", "WHITEKNIGHT", "UNICORN", "CENTAURBOWMAN", "LION", "SARADOMINRANGER", "PRIEST", "ICYENE", "WEREWOLF", "SKELETON", "NECROMANCER", "ZAMORAKMAGE", "BLACKKNIGHT", "BLACKDEMON", "ZAMORAKRANGER", "HELLHOUND", "SEASLUG", "VYREWATCH", "PYRELORD", "TERRORBIRDGNOME", "WOLF", "DRUID", "BLACKGUARDDWARF", "DWARFCANNON", "MOSSGIANT", "VOIDKNIGHT", "TORTOISEGNOME", "GLIDERGNOME", "JADEVINE", "ENT", "FALCON", "BLACKBEAR", "ELFSONGSTRESS", "ELFSHIELDMAIDEN", "GRENWALL", "DIREWOLF", "ELVENPIKEMEN", "ELVENARCHER", "ELFLORD", "ELFLADY", "SHADOWCREATURE", "GOBLIN", "GOBLINHIGHPRIEST", "OGRE", "JOGRE", "MOGRE", "HOBGOBLIN", "OGRESHAMAN", "CYCLOPS", "ORK", "OGRESS", "OURG", "KALPHITEQUEEN", "JACKAL", "MUMMY", "LOCUST", "BEBADINNOMAD", "MENAPHITETHUG", "WARRIOROFICTHLARIN", "CROCODILE", "SCARABITEMAGE", "SPHINX", "ELIDINISELEMENTAL", "KINGBLACKDRAGON", "DWARFCANNON(cannon)", "PORTALMAGE(portal)", "", "", "", "", "BLUEDRAGON", "BARROWS AHRIM", "BARROWS DHAROK", "BARROWS GUTHAN", "BARROWS KARIL", "BARROWS TORAG", "BARROWS VERAC", "ZEMOUREGAL"};
         field_b = 0;
     }

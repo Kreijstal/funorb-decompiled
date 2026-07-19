@@ -12,8 +12,9 @@ final class lg extends uj {
     }
 
     final boolean a(boolean param0) {
+        int discarded$0 = 0;
         if (param0) {
-            int discarded$0 = ((lg) this).a(-39);
+            discarded$0 = this.a(-39);
             return false;
         }
         return false;
@@ -24,7 +25,7 @@ final class lg extends uj {
 
     final int d(byte param0) {
         if (param0 != 64) {
-            field_d = null;
+            field_d = (String) null;
             return oq.field_a;
         }
         return oq.field_a;
@@ -38,14 +39,15 @@ final class lg extends uj {
     }
 
     public static void d(int param0) {
+        if (param0 != 108) {
+            field_d = (String) null;
+            field_d = null;
+            return;
+        }
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Confirm Password: ";
     }
 }

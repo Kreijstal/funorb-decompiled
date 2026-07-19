@@ -8,6 +8,9 @@ final class bf extends d {
     static vl field_N;
 
     public static void a(int param0) {
+        if (param0 != 8192) {
+            return;
+        }
         field_N = null;
         field_K = null;
         field_M = null;
@@ -17,36 +20,36 @@ final class bf extends d {
     final static void a(String param0, int param1, float param2, boolean param3) {
         try {
             if (param1 != 8192) {
-                Object var5 = null;
+                String var5 = (String) null;
                 bf.a((String) null, 67, -0.11976710706949234f, true);
             }
             if (sj.field_b == null) {
                 sj.field_b = new tb(mf.field_f, ke.field_b);
-                mf.field_f.a(param1 + -8287, (oc) (Object) sj.field_b);
+                mf.field_f.a(param1 + -8287, sj.field_b);
             }
             sj.field_b.a(param2, param0, param3, (byte) 86);
             lb.d();
             wc.a(true, -1);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "bf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "bf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     bf(String param0, uh param1, boolean param2) {
         this(param0, param1);
         try {
-            ((bf) this).field_F = param2 ? true : false;
+            this.field_F = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private bf(String param0, uh param1) {
         this(param0, bj.field_T.field_q, param1);
         try {
-            ((bf) this).field_l = bj.field_T.field_o;
+            this.field_l = bj.field_T.field_o;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,11 +74,11 @@ final class bf extends d {
         int stackOut_2_1 = 0;
         if (param2 > -8) {
           L0: {
-            field_L = null;
+            field_L = (jp) null;
             stackOut_5_0 = this;
             stackIn_7_0 = stackOut_5_0;
             stackIn_6_0 = stackOut_5_0;
-            if (((bf) this).field_F) {
+            if (this.field_F) {
               stackOut_7_0 = this;
               stackOut_7_1 = 0;
               stackIn_8_0 = stackOut_7_0;
@@ -89,7 +92,7 @@ final class bf extends d {
               break L0;
             }
           }
-          ((bf) this).field_F = stackIn_8_1 != 0;
+          ((bf) (this)).field_F = stackIn_8_1 != 0;
           super.a(param0, param1, -69, param3);
           return;
         } else {
@@ -97,7 +100,7 @@ final class bf extends d {
             stackOut_1_0 = this;
             stackIn_3_0 = stackOut_1_0;
             stackIn_2_0 = stackOut_1_0;
-            if (((bf) this).field_F) {
+            if (this.field_F) {
               stackOut_3_0 = this;
               stackOut_3_1 = 0;
               stackIn_4_0 = stackOut_3_0;
@@ -111,7 +114,7 @@ final class bf extends d {
               break L1;
             }
           }
-          ((bf) this).field_F = stackIn_4_1 != 0;
+          ((bf) (this)).field_F = stackIn_4_1 != 0;
           super.a(param0, param1, -69, param3);
           return;
         }
@@ -120,9 +123,9 @@ final class bf extends d {
     private bf(String param0, ub param1, uh param2) {
         super(param0, param1, param2);
         try {
-            ((bf) this).field_l = bj.field_T.field_o;
+            this.field_l = bj.field_T.field_o;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -131,19 +134,21 @@ final class bf extends d {
             lm.a(-1);
             mf.field_f.a(-127);
             if (param2 != -15947) {
-                field_K = null;
+                field_K = (jp) null;
             }
             eo.field_k = new hk(gf.field_d, (String) null, cg.field_l, param0, param1);
-            rj.field_c = new bh(mf.field_f, (oc) (Object) eo.field_k);
-            mf.field_f.a(-117, (oc) (Object) rj.field_c);
+            rj.field_c = new bh(mf.field_f, eo.field_k);
+            mf.field_f.a(-117, rj.field_c);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "bf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "bf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(byte param0) {
-        RuntimeException var1 = null;
+        RuntimeException runtimeException = null;
         int var2 = 0;
+        id var3 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = BrickABrac.field_J ? 1 : 0;
         try {
@@ -160,20 +165,65 @@ final class bf extends d {
                 break L1;
               }
             }
-            break L0;
+            if (param0 >= 29) {
+              L2: {
+                eq.field_m = null;
+                if (rq.field_a != null) {
+                  rq.field_a.c((byte) -91);
+                  rq.field_a = null;
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              L3: {
+                pn.field_i = null;
+                if (null == mp.field_Tb) {
+                  break L3;
+                } else {
+                  mp.field_Tb.c((byte) -84);
+                  mp.field_Tb = null;
+                  break L3;
+                }
+              }
+              L4: {
+                BrickABrac.field_F = null;
+                if (eq.field_m == null) {
+                  break L4;
+                } else {
+                  var3 = (id) ((Object) eq.field_m.b((byte) 120));
+                  L5: while (true) {
+                    if (var3 == null) {
+                      eq.field_m = null;
+                      break L4;
+                    } else {
+                      var3.d(3);
+                      var3 = (id) ((Object) eq.field_m.a(false));
+                      continue L5;
+                    }
+                  }
+                }
+              }
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var1, "bf.A(" + 119 + ')');
+          runtimeException = decompiledCaughtException;
+          throw qb.a((Throwable) ((Object) runtimeException), "bf.A(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_M = new int[8192];
     }
 }

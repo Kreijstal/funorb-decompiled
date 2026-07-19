@@ -29,10 +29,6 @@ final class gta {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "gta.A(";
         field_e = "Names cannot start or end with space or underscore";
         field_a = "Character Select";

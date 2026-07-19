@@ -10,16 +10,21 @@ final class i {
     private static String field_z;
 
     public static void a(boolean param0) {
-        field_a = null;
-        field_c = null;
-        field_d = null;
+        if (param0) {
+          field_a = (qb) null;
+          field_a = null;
+          field_c = null;
+          field_d = null;
+          return;
+        } else {
+          field_a = null;
+          field_c = null;
+          field_d = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "i.A(";
         field_c = "Shackles";
         field_d = "Loading music";

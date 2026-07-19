@@ -19,6 +19,9 @@ final class ah {
         field_c = null;
         field_h = null;
         field_b = null;
+        if (param0) {
+            field_g = (String) null;
+        }
     }
 
     ah() {
@@ -26,20 +29,16 @@ final class ah {
 
     ah(ah param0) {
         try {
-            ((ah) this).field_a = param0.field_a;
-            ((ah) this).field_j = param0.field_j;
-            ((ah) this).field_f = param0.field_f;
-            ((ah) this).field_d = param0.field_d;
+            this.field_a = param0.field_a;
+            this.field_j = param0.field_j;
+            this.field_f = param0.field_f;
+            this.field_d = param0.field_d;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "The game options are not all set.";
         field_b = "<%0> has resigned.";
         field_h = "Press <img=4> or <img=0> click on the cue ball to enter shot mode.";

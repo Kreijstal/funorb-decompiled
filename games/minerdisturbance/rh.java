@@ -9,7 +9,7 @@ final class rh extends jk {
         try {
             super.a((byte) -104, param1);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "rh.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "rh.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -18,9 +18,10 @@ final class rh extends jk {
     }
 
     final static ed a(int param0, String[] param1) {
+        ed discarded$2 = null;
         ed var2 = null;
         RuntimeException var2_ref = null;
-        Object var3 = null;
+        String[] var3 = null;
         ed stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -47,12 +48,12 @@ final class rh extends jk {
               if (param0 >= 118) {
                 break L1;
               } else {
-                var3 = null;
-                ed discarded$2 = rh.a(17, (String[]) null);
+                var3 = (String[]) null;
+                discarded$2 = rh.a(17, (String[]) null);
                 break L1;
               }
             }
-            stackOut_2_0 = (ed) var2;
+            stackOut_2_0 = (ed) (var2);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -60,23 +61,23 @@ final class rh extends jk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2_ref;
+            stackOut_4_0 = (RuntimeException) (var2_ref);
             stackOut_4_1 = new StringBuilder().append("rh.G(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -84,7 +85,7 @@ final class rh extends jk {
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }

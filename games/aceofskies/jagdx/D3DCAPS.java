@@ -73,7 +73,7 @@ public class D3DCAPS {
     public int StretchRectFilterCaps;
 
     D3DCAPS() {
-        ((jagdx.D3DCAPS) this).VS20Caps = new jagdx.D3DVSHADERCAPS2_0();
-        ((jagdx.D3DCAPS) this).PS20Caps = new jagdx.D3DPSHADERCAPS2_0();
+        this.VS20Caps = new jagdx.D3DVSHADERCAPS2_0();
+        this.PS20Caps = new jagdx.D3DPSHADERCAPS2_0();
     }
 }

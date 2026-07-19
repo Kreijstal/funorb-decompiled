@@ -10,6 +10,9 @@ final class ss {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != 1) {
+            return;
+        }
         field_d = null;
         field_e = null;
         field_a = null;
@@ -18,10 +21,6 @@ final class ss {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ss.A(";
         field_c = new gq(4, 1, 1, 1);
         field_d = "Aggressiveness";

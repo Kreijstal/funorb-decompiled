@@ -16,6 +16,9 @@ final class un {
 
     final static int a(int param0) {
         no.field_n.a(false);
+        if (param0 != 0) {
+            return -2;
+        }
         if (!nn.field_c.b(20)) {
             return hm.c(3);
         }
@@ -34,10 +37,6 @@ final class un {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = (byte) 2;
         field_f = "Bombing Along";
         field_a = "Invalid password.";

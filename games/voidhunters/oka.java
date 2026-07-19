@@ -7,12 +7,12 @@ final class oka {
 
     final void a() {
         int var1 = 0;
-        for (var1 = 0; var1 < ((oka) this).field_a.length; var1++) {
-            ((oka) this).field_a[var1] = 0;
+        for (var1 = 0; var1 < this.field_a.length; var1++) {
+            this.field_a[var1] = 0;
         }
     }
 
     oka(int param0) {
-        ((oka) this).field_a = new int[param0];
+        this.field_a = new int[param0];
     }
 }

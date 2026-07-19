@@ -9,7 +9,7 @@ final class qh extends vo {
     final static void a(int param0, int param1, String param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        Object var4 = null;
+        String var4 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
@@ -32,7 +32,7 @@ final class qh extends vo {
               if (param0 == 10) {
                 break L1;
               } else {
-                var4 = null;
+                var4 = (String) null;
                 qh.a(24, 51, (String) null);
                 break L1;
               }
@@ -64,7 +64,7 @@ final class qh extends vo {
                   }
                   L5: {
                     var3_int = 1;
-                    if (param1 != 10) {
+                    if (-11 != (param1 ^ -1)) {
                       break L5;
                     } else {
                       var3_int = 0;
@@ -78,7 +78,7 @@ final class qh extends vo {
                     } else {
                       L7: {
                         if (mp.field_e) {
-                          param2 = s.a(1938762664, nd.field_e, new String[1]);
+                          param2 = s.a(1938762664, nd.field_e, new String[]{param2});
                           break L7;
                         } else {
                           break L7;
@@ -96,7 +96,7 @@ final class qh extends vo {
                       break L6;
                     }
                   }
-                  if (param1 == 256) {
+                  if (-257 == (param1 ^ -1)) {
                     break L2;
                   } else {
                     if (param1 != 10) {
@@ -121,23 +121,23 @@ final class qh extends vo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var3 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var3;
+            stackOut_26_0 = (RuntimeException) (var3);
             stackOut_26_1 = new StringBuilder().append("qh.N(").append(param0).append(',').append(param1).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param2 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L9;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -145,7 +145,7 @@ final class qh extends vo {
               break L9;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
         }
     }
 
@@ -155,14 +155,17 @@ final class qh extends vo {
     final static void a(float param0, String param1, byte param2, boolean param3) {
         if (!(null != vi.field_c)) {
             vi.field_c = new sa(e.field_S, ed.field_c);
-            e.field_S.a((ga) (Object) vi.field_c, true);
+            e.field_S.a(vi.field_c, true);
         }
         vi.field_c.a(param3, param0, (byte) -97, param1);
+        if (param2 >= -18) {
+            return;
+        }
         try {
             bi.d();
             rc.a(true, (byte) -63);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "qh.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + -92 + ',' + param3 + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "qh.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

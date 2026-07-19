@@ -11,14 +11,14 @@ final class av {
         int var2 = 0;
         if (ua.field_l[0] == null) {
           L0: {
-            za.a(34, new int[6], 220, 210, 0, 430, (byte) -64);
-            za.a(32, new int[5], 160, 170, 1, 470, (byte) 107);
-            za.a(32, new int[2], 400, 200, 2, 440, (byte) 106);
-            za.a(32, new int[3], 430, 170, 3, 470, (byte) -103);
-            za.a(32, new int[2], 400, 260, 4, 512, (byte) -42);
-            za.a(32, new int[2], 400, 260, 5, 498, (byte) -64);
-            za.a(32, new int[2], 200, 110, 6, 530, (byte) -65);
-            za.a(32, new int[3], 240, 170, 7, 470, (byte) 119);
+            za.a(34, new int[]{0, 3, 22, 2, 14, 11}, 220, 210, 0, 430, (byte) -64);
+            za.a(32, new int[]{1, 12, 13, 3, 7}, 160, 170, 1, 470, (byte) 107);
+            za.a(32, new int[]{15, 5}, 400, 200, 2, 440, (byte) 106);
+            za.a(32, new int[]{18, 6, 17}, 430, 170, 3, 470, (byte) -103);
+            za.a(32, new int[]{15, 5}, 400, 260, 4, 512, (byte) -42);
+            za.a(32, new int[]{2, 5}, 400, 260, 5, 498, (byte) -64);
+            za.a(32, new int[]{15, 16}, 200, 110, 6, 530, (byte) -65);
+            za.a(32, new int[]{12, 13, 5}, 240, 170, 7, 470, (byte) 119);
             oq.field_K = kn.field_b.a((byte) 94, du.field_p[12]);
             var1 = kn.field_b.a((byte) 94, du.field_p[13]);
             if (oq.field_K >= var1) {
@@ -28,8 +28,16 @@ final class av {
               break L0;
             }
           }
-          var2 = 4 + dp.field_h.field_a - -dp.field_h.field_i;
-          bk.field_e[6] = var2 + 200 + (dp.field_h.field_j - -dp.field_h.field_i);
+          L1: {
+            var2 = 4 + dp.field_h.field_a - -dp.field_h.field_i;
+            bk.field_e[6] = var2 + 200 + (dp.field_h.field_j - -dp.field_h.field_i);
+            if (param0) {
+              break L1;
+            } else {
+              av.a((byte) -119);
+              break L1;
+            }
+          }
           oo.field_Y[6] = 30 + 2 * var2;
           return true;
         } else {
@@ -45,12 +53,17 @@ final class av {
         if (param2) {
             var4 += 2;
         }
-        var4++;
-        int var5 = -111;
+        if (param3) {
+            var4++;
+        }
+        int var5 = -111 / ((-32 - param0) / 57);
         return qh.field_a[var4];
     }
 
     final static boolean a(int param0, int param1, int param2) {
+        if (param0 != 22847) {
+            field_b = (int[]) null;
+        }
         return mi.b(param1, param2, 22547) & ta.a(param2, param1, (byte) 82);
     }
 
@@ -58,68 +71,66 @@ final class av {
         field_b = null;
         field_c = null;
         field_a = null;
-        int var1 = -1;
+        int var1 = -17 % ((param0 - 59) / 41);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        int var0 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        field_c = new kp();
-        field_b = new int[128];
-        var0 = 0;
-        L0: while (true) {
-          if (var0 >= 64) {
+        $cfr$clinit: {
+            int var0 = 0;
+            int var1 = 0;
+            int var2 = 0;
+            int var3 = 0;
+            int var4 = 0;
+            int var5 = 0;
+            int var6 = 0;
+            field_c = new kp();
+            field_b = new int[128];
             var0 = 0;
-            L1: while (true) {
-              if (var0 >= 64) {
-                var0 = 16711935 & field_b[63];
-                var1 = 65280 & field_b[63];
-                var2 = 0;
-                L2: while (true) {
-                  if (var2 >= 2) {
-                    field_a = new ej(2, 4, 4, 0);
-                    return;
+            L0: while (true) {
+              if ((var0 ^ -1) <= -65) {
+                var0 = 0;
+                L1: while (true) {
+                  if (-65 >= (var0 ^ -1)) {
+                    var0 = 16711935 & field_b[63];
+                    var1 = 65280 & field_b[63];
+                    var2 = 0;
+                    L2: while (true) {
+                      if (-3 >= (var2 ^ -1)) {
+                        field_a = new ej(2, 4, 4, 0);
+                        break $cfr$clinit;
+                      } else {
+                        var3 = field_b[64 - -var2];
+                        var4 = 256 + -(256 * var2 / 2);
+                        var5 = 16711935 & var3;
+                        var6 = var3 & 65280;
+                        var5 = var5 * (-var4 + 256);
+                        var6 = var6 * (-var4 + 256);
+                        var5 = var5 + var0 * var4;
+                        var6 = var6 + var1 * var4;
+                        var3 = (var6 & 16711680 | -16711936 & var5) >>> 1805483048;
+                        field_b[64 - -var2] = var3;
+                        var2++;
+                        continue L2;
+                      }
+                    }
                   } else {
-                    var3 = field_b[64 - -var2];
-                    var4 = 256 + -(256 * var2 / 2);
-                    var5 = 16711935 & var3;
-                    var6 = var3 & 65280;
-                    var5 = var5 * (-var4 + 256);
-                    var6 = var6 * (-var4 + 256);
-                    var5 = var5 + var0 * var4;
-                    var6 = var6 + var1 * var4;
-                    var3 = (var6 & 16711680 | -16711936 & var5) >>> 8;
-                    field_b[64 - -var2] = var3;
-                    var2++;
-                    continue L2;
+                    var1 = 96 * (var0 * var0) / 4096;
+                    var2 = 32 * (var0 * (var0 * var0)) / 262144;
+                    var3 = var0 * var0 * 128 / 4096;
+                    field_b[-var0 + 127] = (var1 << -709126672) - (-(var2 << 1924794792) + -var3);
+                    var0++;
+                    continue L1;
                   }
                 }
               } else {
-                var1 = 96 * (var0 * var0) / 4096;
-                var2 = 32 * (var0 * (var0 * var0)) / 262144;
-                var3 = var0 * var0 * 128 / 4096;
-                field_b[-var0 + 127] = (var1 << 16) - (-(var2 << 8) + -var3);
+                var1 = var0 * (var0 * 192) / 4096;
+                var2 = 128 * var0 * (var0 * (var0 * var0)) / 16777216;
+                var3 = 255 * (var0 * (var0 * var0)) / 262144;
+                field_b[var0] = (var2 << 841758184) + (var1 << 1219902800) + var3;
                 var0++;
-                continue L1;
+                continue L0;
               }
             }
-          } else {
-            var1 = var0 * (var0 * 192) / 4096;
-            var2 = 128 * var0 * (var0 * (var0 * var0)) / 16777216;
-            var3 = 255 * (var0 * (var0 * var0)) / 262144;
-            field_b[var0] = (var2 << 8) + (var1 << 16) + var3;
-            var0++;
-            continue L0;
-          }
         }
     }
 }

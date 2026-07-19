@@ -13,10 +13,6 @@ final class gn extends pu {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "gn.A(";
     }
 }

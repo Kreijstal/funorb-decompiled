@@ -25,14 +25,6 @@ final class oba extends k {
         int[] var22 = null;
         int[] var23 = null;
         int[][] var25 = null;
-        int[] var26 = null;
-        int[] var27 = null;
-        int[] var28 = null;
-        int[][] var29 = null;
-        int[][] var30 = null;
-        int[] var31 = null;
-        int[] var32 = null;
-        int[] var33 = null;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
@@ -56,13 +48,11 @@ final class oba extends k {
         int stackOut_3_3 = 0;
         L0: {
           var12 = BachelorFridge.field_y;
-          var30 = ((oba) this).field_h.a(param1, -858);
-          var25 = var30;
-          var20 = var25;
+          var20 = this.field_h.a(param1, -858);
           var15 = var20;
           var13 = var15;
           var3 = var13;
-          if (((oba) this).field_h.field_b) {
+          if (this.field_h.field_b) {
             L1: {
               stackOut_2_0 = this;
               stackOut_2_1 = -80;
@@ -73,7 +63,7 @@ final class oba extends k {
               stackIn_3_0 = stackOut_2_0;
               stackIn_3_1 = stackOut_2_1;
               stackIn_3_2 = stackOut_2_2;
-              if (((oba) this).field_l) {
+              if (this.field_l) {
                 stackOut_4_0 = this;
                 stackOut_4_1 = stackIn_4_1;
                 stackOut_4_2 = stackIn_4_2;
@@ -95,26 +85,20 @@ final class oba extends k {
                 break L1;
               }
             }
-            var29 = ((oba) this).a((byte) stackIn_5_1, stackIn_5_2, stackIn_5_3);
-            var31 = var29[0];
-            var26 = var31;
-            var21 = var26;
+            var25 = this.a((byte) stackIn_5_1, stackIn_5_2, stackIn_5_3);
+            var21 = var25[0];
             var16 = var21;
             var5 = var16;
-            var32 = var29[1];
-            var27 = var32;
-            var22 = var27;
+            var22 = var25[1];
             var17 = var22;
             var6 = var17;
-            var33 = var29[2];
-            var28 = var33;
-            var23 = var28;
+            var23 = var25[2];
             var18 = var23;
             var7 = var18;
-            var8 = var30[0];
-            var9 = var30[1];
-            var10 = var30[2];
-            if (((oba) this).field_k) {
+            var8 = var20[0];
+            var9 = var20[1];
+            var10 = var20[2];
+            if (this.field_k) {
               var11 = 0;
               L2: while (true) {
                 if (hh.field_d <= var11) {
@@ -133,9 +117,9 @@ final class oba extends k {
                 if (var11 >= hh.field_d) {
                   break L0;
                 } else {
-                  var8[var11] = var31[var11];
-                  var9[var11] = var32[var11];
-                  var10[var11] = var33[var11];
+                  var8[var11] = var21[var11];
+                  var9[var11] = var22[var11];
+                  var10[var11] = var23[var11];
                   var11++;
                   continue L3;
                 }
@@ -148,14 +132,14 @@ final class oba extends k {
         if (!param0) {
           return var3;
         } else {
-          return null;
+          return (int[][]) null;
         }
     }
 
     public oba() {
         super(1, false);
-        ((oba) this).field_k = true;
-        ((oba) this).field_l = true;
+        this.field_k = true;
+        this.field_l = true;
     }
 
     final static void d(int param0) {
@@ -164,7 +148,7 @@ final class oba extends k {
         if (param0 != -1488922239) {
             return;
         }
-        it.field_s.a(var2 + (lda.field_a << 1), 56, -fh.field_v + io.field_p, ql.field_s + -lda.field_a, var1 + (fh.field_v << 1));
+        it.field_s.a(var2 + (lda.field_a << -1488922239), 56, -fh.field_v + io.field_p, ql.field_s + -lda.field_a, var1 + (fh.field_v << -161976671));
         pfa.b(param0 ^ -1488922240);
     }
 
@@ -172,12 +156,12 @@ final class oba extends k {
         int[] var4 = null;
         int var5 = 0;
         int var6 = BachelorFridge.field_y;
-        int[] var7 = ((oba) this).field_j.a(param0, -1);
+        int[] var7 = this.field_j.a(param0, -1);
         int[] var3 = var7;
-        if (!((oba) this).field_j.field_m) {
+        if (!this.field_j.field_m) {
         } else {
-            var4 = ((oba) this).a(0, ((oba) this).field_l ? -param0 + it.field_r : param0, (byte) 109);
-            if (!((oba) this).field_k) {
+            var4 = this.a(0, this.field_l ? -param0 + it.field_r : param0, (byte) 109);
+            if (!this.field_k) {
                 bl.a(var4, 0, var7, 0, hh.field_d);
             } else {
                 for (var5 = 0; hh.field_d > var5; var5++) {
@@ -245,7 +229,7 @@ final class oba extends k {
               if (param0 == -71) {
                 break L1;
               } else {
-                ((oba) this).field_k = false;
+                this.field_k = false;
                 break L1;
               }
             }
@@ -253,14 +237,14 @@ final class oba extends k {
               var4_int = param2;
               if (0 != var4_int) {
                 if (1 != var4_int) {
-                  if (var4_int != 2) {
+                  if (-3 != (var4_int ^ -1)) {
                     break L2;
                   } else {
                     L3: {
                       stackOut_17_0 = this;
                       stackIn_19_0 = stackOut_17_0;
                       stackIn_18_0 = stackOut_17_0;
-                      if (-2 != param1.b(16711935)) {
+                      if (-2 != (param1.b(16711935) ^ -1)) {
                         stackOut_19_0 = this;
                         stackOut_19_1 = 0;
                         stackIn_20_0 = stackOut_19_0;
@@ -274,7 +258,7 @@ final class oba extends k {
                         break L3;
                       }
                     }
-                    ((oba) this).field_f = stackIn_20_1 != 0;
+                    ((oba) (this)).field_f = stackIn_20_1 != 0;
                     break L2;
                   }
                 } else {
@@ -282,7 +266,7 @@ final class oba extends k {
                     stackOut_13_0 = this;
                     stackIn_15_0 = stackOut_13_0;
                     stackIn_14_0 = stackOut_13_0;
-                    if (-2 != param1.b(16711935)) {
+                    if (-2 != (param1.b(16711935) ^ -1)) {
                       stackOut_15_0 = this;
                       stackOut_15_1 = 0;
                       stackIn_16_0 = stackOut_15_0;
@@ -296,7 +280,7 @@ final class oba extends k {
                       break L4;
                     }
                   }
-                  ((oba) this).field_l = stackIn_16_1 != 0;
+                  ((oba) (this)).field_l = stackIn_16_1 != 0;
                   break L2;
                 }
               } else {
@@ -318,7 +302,7 @@ final class oba extends k {
                     break L5;
                   }
                 }
-                ((oba) this).field_k = stackIn_12_1 != 0;
+                ((oba) (this)).field_k = stackIn_12_1 != 0;
                 break L2;
               }
             }
@@ -328,23 +312,23 @@ final class oba extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var4;
+            stackOut_22_0 = (RuntimeException) (var4);
             stackOut_22_1 = new StringBuilder().append("oba.E(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -352,7 +336,7 @@ final class oba extends k {
               break L6;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param2 + ')');
         }
     }
 

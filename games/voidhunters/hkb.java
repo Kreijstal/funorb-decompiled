@@ -40,14 +40,14 @@ final class hkb implements ntb {
         try {
           L0: {
             L1: {
-              stackOut_0_0 = (faa) param0;
+              stackOut_0_0 = (faa) (param0);
               stackOut_0_1 = 81;
               stackIn_2_0 = stackOut_0_0;
               stackIn_2_1 = stackOut_0_1;
               stackIn_1_0 = stackOut_0_0;
               stackIn_1_1 = stackOut_0_1;
-              if (((hkb) this).field_a == null) {
-                stackOut_2_0 = (faa) (Object) stackIn_2_0;
+              if (this.field_a == null) {
+                stackOut_2_0 = (faa) ((Object) stackIn_2_0);
                 stackOut_2_1 = stackIn_2_1;
                 stackOut_2_2 = 0;
                 stackIn_3_0 = stackOut_2_0;
@@ -55,7 +55,7 @@ final class hkb implements ntb {
                 stackIn_3_2 = stackOut_2_2;
                 break L1;
               } else {
-                stackOut_1_0 = (faa) (Object) stackIn_1_0;
+                stackOut_1_0 = (faa) ((Object) stackIn_1_0);
                 stackOut_1_1 = stackIn_1_1;
                 stackOut_1_2 = 1;
                 stackIn_3_0 = stackOut_1_0;
@@ -66,7 +66,7 @@ final class hkb implements ntb {
             }
             L2: {
               if (vq.a(stackIn_3_0, stackIn_3_1, stackIn_3_2 != 0)) {
-                ((hkb) this).field_a.b(param0, -120);
+                this.field_a.b(param0, -120);
                 break L2;
               } else {
                 break L2;
@@ -76,7 +76,7 @@ final class hkb implements ntb {
               if (param1 < -109) {
                 break L3;
               } else {
-                ((hkb) this).field_a = null;
+                this.field_a = (pe) null;
                 break L3;
               }
             }
@@ -86,23 +86,23 @@ final class hkb implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("hkb.B(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -110,11 +110,12 @@ final class hkb implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
     final static boolean b(int param0) {
+        boolean discarded$2 = false;
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -122,7 +123,7 @@ final class hkb implements ntb {
           if (param0 == -1) {
             break L0;
           } else {
-            boolean discarded$2 = hkb.b(36);
+            discarded$2 = hkb.b(36);
             break L0;
           }
         }
@@ -186,8 +187,8 @@ final class hkb implements ntb {
           L0: {
             L1: {
               var3_int = -104 % ((22 - param0) / 59);
-              var4 = (hkb) (Object) param1;
-              if (null != ((hkb) this).field_a) {
+              var4 = (hkb) ((Object) param1);
+              if (null != this.field_a) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -221,10 +222,10 @@ final class hkb implements ntb {
                   break L4;
                 } else {
                   L5: {
-                    if (((hkb) this).field_a == null) {
+                    if (this.field_a == null) {
                       break L5;
                     } else {
-                      if (!((hkb) this).field_a.a((byte) 96, (tv) (Object) var4.field_a)) {
+                      if (!this.field_a.a((byte) 96, var4.field_a)) {
                         break L5;
                       } else {
                         break L4;
@@ -246,23 +247,23 @@ final class hkb implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_0 = (RuntimeException) (var3);
             stackOut_13_1 = new StringBuilder().append("hkb.C(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L6;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -270,16 +271,17 @@ final class hkb implements ntb {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
         return stackIn_12_0 != 0;
     }
 
     final int a(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 0) {
-            boolean discarded$0 = hkb.b(29);
+            discarded$0 = hkb.b(29);
         }
-        return ((hkb) this).field_a.d(false);
+        return this.field_a.d(false);
     }
 
     public final void a(faa param0, boolean param1) {
@@ -305,17 +307,17 @@ final class hkb implements ntb {
             L1: {
               if (kv.a(param1, param0)) {
                 L2: {
-                  if (null == ((hkb) this).field_a) {
-                    ((hkb) this).field_a = new pe();
+                  if (null == this.field_a) {
+                    this.field_a = new pe();
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                ((hkb) this).field_a.a(param0, false);
+                this.field_a.a(param0, false);
                 break L1;
               } else {
-                ((hkb) this).field_a = null;
+                this.field_a = null;
                 break L1;
               }
             }
@@ -325,23 +327,23 @@ final class hkb implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_0 = (RuntimeException) (var3);
             stackOut_7_1 = new StringBuilder().append("hkb.H(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -349,7 +351,7 @@ final class hkb implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
         }
     }
 
@@ -363,6 +365,7 @@ final class hkb implements ntb {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
@@ -376,8 +379,8 @@ final class hkb implements ntb {
           L0: {
             if (param0 > 54) {
               L1: {
-                var3 = (hkb) (Object) param1;
-                if (null == ((hkb) this).field_a) {
+                var3 = (hkb) ((Object) param1);
+                if (null == this.field_a) {
                   var3.field_a = null;
                   break L1;
                 } else {
@@ -389,36 +392,38 @@ final class hkb implements ntb {
                       break L2;
                     }
                   }
-                  ((hkb) this).field_a.b((byte) 108, (tv) (Object) var3.field_a);
+                  this.field_a.b((byte) 108, var3.field_a);
                   break L1;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3_ref;
+            stackOut_9_0 = (RuntimeException) (var3_ref);
             stackOut_9_1 = new StringBuilder().append("hkb.D(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -426,14 +431,19 @@ final class hkb implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public final void a(tv param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        tv var5 = null;
         hkb var6 = null;
         int stackIn_8_0 = 0;
         int stackIn_9_0 = 0;
@@ -466,30 +476,30 @@ final class hkb implements ntb {
         try {
           L0: {
             L1: {
-              var6 = (hkb) (Object) param0;
+              var6 = (hkb) ((Object) param0);
               if (param1 <= -19) {
                 break L1;
               } else {
-                var5 = null;
-                ((hkb) this).a((tv) null, 5);
+                var5 = (tv) null;
+                this.a((tv) null, 5);
                 break L1;
               }
             }
             L2: {
-              if (((hkb) this).field_a == null) {
+              if (this.field_a == null) {
                 break L2;
               } else {
                 if (var6.field_a == null) {
                   break L2;
                 } else {
-                  ((hkb) this).field_a.a((tv) (Object) var6.field_a, -32);
+                  this.field_a.a(var6.field_a, -32);
                   break L2;
                 }
               }
             }
             L3: {
               var4 = 0;
-              if (((hkb) this).field_a != null) {
+              if (this.field_a != null) {
                 stackOut_7_0 = 0;
                 stackIn_8_0 = stackOut_7_0;
                 break L3;
@@ -522,10 +532,10 @@ final class hkb implements ntb {
                 if ((stackIn_11_0 ^ stackIn_11_1) != 0) {
                   break L6;
                 } else {
-                  if (((hkb) this).field_a == null) {
+                  if (this.field_a == null) {
                     break L5;
                   } else {
-                    if (((hkb) this).field_a.a((byte) 82, (tv) (Object) var6.field_a)) {
+                    if (this.field_a.a((byte) 82, var6.field_a)) {
                       break L6;
                     } else {
                       break L5;
@@ -534,7 +544,7 @@ final class hkb implements ntb {
                 }
               }
               var4 = 1;
-              System.out.println("World saved_state has changed. before=" + (Object) (Object) var6.field_a + ", now=" + (Object) (Object) ((hkb) this).field_a);
+              System.out.println("World saved_state has changed. before=" + var6.field_a + ", now=" + this.field_a);
               break L5;
             }
             L7: {
@@ -551,23 +561,23 @@ final class hkb implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var3;
+            stackOut_20_0 = (RuntimeException) (var3);
             stackOut_20_1 = new StringBuilder().append("hkb.F(");
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L8;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -575,7 +585,7 @@ final class hkb implements ntb {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ')');
         }
     }
 
@@ -587,24 +597,25 @@ final class hkb implements ntb {
         int var6 = 0;
         int var7 = 0;
         sg var8 = null;
+        tfa var9 = null;
         int var10 = 0;
         pe var11 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var10 = VoidHunters.field_G;
         try {
           L0: {
@@ -618,16 +629,45 @@ final class hkb implements ntb {
                   if (var7 >= var6_ref_sg__.length) {
                     break L1;
                   } else {
-                    L3: {
-                      var8 = var6_ref_sg__[var7];
-                      if (var8 == null) {
-                        break L3;
+                    var8 = var6_ref_sg__[var7];
+                    if (var8 != null) {
+                      if (-1 >= (var8.o((byte) -117) ^ -1)) {
+                        L3: {
+                          if (!var8.l((byte) -10)) {
+                            L4: {
+                              if (qv.field_o != 0) {
+                                break L4;
+                              } else {
+                                var8.h(17704, 2);
+                                break L4;
+                              }
+                            }
+                            L5: {
+                              var9 = param1.a(var8.o((byte) -117), (byte) 59);
+                              if (null == var9.field_g) {
+                                var9.field_g = new sg();
+                                break L5;
+                              } else {
+                                break L5;
+                              }
+                            }
+                            var8.b((byte) 92, var9.field_g);
+                            var9.field_g.u(-14);
+                            break L3;
+                          } else {
+                            break L3;
+                          }
+                        }
+                        var7++;
+                        continue L2;
                       } else {
-                        break L3;
+                        var7++;
+                        continue L2;
                       }
+                    } else {
+                      var7++;
+                      continue L2;
                     }
-                    var7++;
-                    continue L2;
                   }
                 }
               } else {
@@ -635,7 +675,7 @@ final class hkb implements ntb {
               }
             }
             var5 = var11.f(24797);
-            ((hkb) this).field_a.b((byte) 58, (tv) (Object) var11);
+            this.field_a.b((byte) 58, var11);
             var6 = -74 / ((param2 - 66) / 59);
             var11.b(-123, false);
             var11.a(0, var5);
@@ -643,33 +683,33 @@ final class hkb implements ntb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L6: {
             var4 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var4;
-            stackOut_10_1 = new StringBuilder().append("hkb.E(").append(param0).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackOut_20_0 = (RuntimeException) (var4);
+            stackOut_20_1 = new StringBuilder().append("hkb.E(").append(param0).append(',');
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              break L4;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L6;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
-              break L4;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param2 + ')');
         }
     }
 
@@ -678,9 +718,9 @@ final class hkb implements ntb {
 
     hkb(pe param0) {
         try {
-            ((hkb) this).field_a = param0;
+            this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "hkb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "hkb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

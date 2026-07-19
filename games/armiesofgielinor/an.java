@@ -19,15 +19,27 @@ final class an extends dr {
     }
 
     final static void h(int param0) {
-        int var1 = hw.a(true);
-        int var2 = so.a(25213);
-        sg.field_c.a((byte) -111, var2 + (ov.field_b << 1), co.field_f - b.field_k, var1 - -(b.field_k << 1), -ov.field_b + rk.field_r);
-        pj.h(15);
+        int var1 = 0;
+        int var2 = 0;
+        var1 = hw.a(true);
+        if (param0 != 1976460609) {
+          an.g(37);
+          var2 = so.a(param0 + -1976435396);
+          sg.field_c.a((byte) -111, var2 + (ov.field_b << 1746174305), co.field_f - b.field_k, var1 - -(b.field_k << 1976460609), -ov.field_b + rk.field_r);
+          pj.h(15);
+          return;
+        } else {
+          var2 = so.a(param0 + -1976435396);
+          sg.field_c.a((byte) -111, var2 + (ov.field_b << 1746174305), co.field_f - b.field_k, var1 - -(b.field_k << 1976460609), -ov.field_b + rk.field_r);
+          pj.h(15);
+          return;
+        }
     }
 
     final nd a(int param0, nd[] param1) {
+        nd discarded$2 = null;
         RuntimeException var3 = null;
-        Object var4 = null;
+        nd[] var4 = null;
         nd stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -52,12 +64,12 @@ final class an extends dr {
               if (param0 == -24872) {
                 break L1;
               } else {
-                var4 = null;
-                nd discarded$2 = ((an) this).a(-83, (nd[]) null);
+                var4 = (nd[]) null;
+                discarded$2 = this.a(-83, (nd[]) null);
                 break L1;
               }
             }
-            stackOut_2_0 = new nd((Object) (Object) qu.a(param1[0].a(2), (byte) 81));
+            stackOut_2_0 = new nd(qu.a(param1[0].a(2), (byte) 81));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -65,23 +77,23 @@ final class an extends dr {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("an.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -89,7 +101,7 @@ final class an extends dr {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -104,10 +116,6 @@ final class an extends dr {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_H = new int[4];
         field_G = null;
     }

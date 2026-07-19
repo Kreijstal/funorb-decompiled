@@ -22,12 +22,14 @@ final class lob implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "lob.A(" + param0 + ')');
+          throw rta.a((Throwable) ((Object) var2), "lob.A(" + param0 + ')');
         }
-        return (tv) (Object) stackIn_1_0;
+        return (tv) ((Object) stackIn_1_0);
     }
 
     final static void a(boolean param0) {
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         RuntimeException var1 = null;
         faa var1_ref = null;
         int var2 = 0;
@@ -44,6 +46,7 @@ final class lob implements dja {
         int stackIn_14_0 = 0;
         vu stackIn_56_0 = null;
         vu stackIn_66_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_13_0 = 0;
         int stackOut_11_0 = 0;
@@ -73,7 +76,7 @@ final class lob implements dja {
                 }
               }
               L3: {
-                if (var1_ref.e((byte) -101) != 1) {
+                if (-2 != (var1_ref.e((byte) -101) ^ -1)) {
                   stackOut_13_0 = 0;
                   stackIn_14_0 = stackOut_13_0;
                   break L3;
@@ -104,7 +107,7 @@ final class lob implements dja {
               L6: {
                 var6 = nf.a(var4_ref_String, false);
                 var7 = var1_ref.a(-1);
-                var8 = jwa.a(false, (CharSequence) (Object) var4_ref_String);
+                var8 = jwa.a(false, (CharSequence) ((Object) var4_ref_String));
                 if (null != var8) {
                   break L6;
                 } else {
@@ -120,7 +123,7 @@ final class lob implements dja {
                   if (null == var6) {
                     break L7;
                   } else {
-                    om.field_c.a((fh) (Object) var6, (byte) -124, (long)var8.hashCode());
+                    om.field_c.a(var6, (byte) -124, (long)var8.hashCode());
                     break L7;
                   }
                 }
@@ -128,11 +131,11 @@ final class lob implements dja {
               L8: {
                 if (var6 == null) {
                   var6 = new vu();
-                  om.field_c.a((fh) (Object) var6, (byte) -106, (long)var8.hashCode());
-                  int fieldTemp$2 = mq.field_k;
+                  om.field_c.a(var6, (byte) -106, (long)var8.hashCode());
+                  fieldTemp$2 = mq.field_k;
                   mq.field_k = mq.field_k + 1;
                   var6.field_yb = fieldTemp$2;
-                  st.field_o.b(-10258, (ksa) (Object) var6);
+                  st.field_o.b(-10258, var6);
                   break L8;
                 } else {
                   break L8;
@@ -141,11 +144,12 @@ final class lob implements dja {
               var6.field_vb = var7;
               var6.field_Fb = var4_ref_String;
               var6.field_Cb = var5;
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (var2 != 1) {
-                if (var2 != 2) {
-                  if (var2 == 3) {
+                if (-3 != (var2 ^ -1)) {
+                  if (-4 == (var2 ^ -1)) {
                     L9: {
                       if (iwa.field_b != 2) {
                         break L9;
@@ -154,11 +158,13 @@ final class lob implements dja {
                         break L9;
                       }
                     }
-                    return;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   } else {
                     if (var2 != 4) {
                       gna.a((Throwable) null, "F1: " + hm.e(-13514), 0);
                       ifb.l(-125);
+                      decompiledRegionSelector0 = 5;
                       break L0;
                     } else {
                       iwa.field_b = 1;
@@ -166,19 +172,21 @@ final class lob implements dja {
                       kbb.field_q = var3.intern();
                       var4 = var1_ref.e((byte) -126);
                       rma.b(var4, (byte) 71);
-                      return;
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     }
                   }
                 } else {
                   L10: {
-                    if (iwa.field_b != 1) {
+                    if (-2 != (iwa.field_b ^ -1)) {
                       break L10;
                     } else {
                       iwa.field_b = 2;
                       break L10;
                     }
                   }
-                  return;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               } else {
                 L11: {
@@ -192,7 +200,7 @@ final class lob implements dja {
                 }
                 L12: {
                   var3 = var1_ref.a(-1);
-                  if (!var3.equals((Object) (Object) "")) {
+                  if (!var3.equals("")) {
                     break L12;
                   } else {
                     var3 = null;
@@ -206,7 +214,7 @@ final class lob implements dja {
                   if (var6 == null) {
                     var6 = di.a(var5, 0);
                     if (null != var6) {
-                      ae.field_f.a((fh) (Object) var6, (byte) -31, (long)jwa.a(false, (CharSequence) (Object) var4_ref_String).hashCode());
+                      ae.field_f.a(var6, (byte) -31, (long)jwa.a(false, (CharSequence) ((Object) var4_ref_String)).hashCode());
                       break L13;
                     } else {
                       break L13;
@@ -218,11 +226,11 @@ final class lob implements dja {
                 L14: {
                   if (var6 == null) {
                     var6 = new vu();
-                    ae.field_f.a((fh) (Object) var6, (byte) -112, (long)jwa.a(false, (CharSequence) (Object) var4_ref_String).hashCode());
-                    int fieldTemp$3 = vob.field_p;
+                    ae.field_f.a(var6, (byte) -112, (long)jwa.a(false, (CharSequence) ((Object) var4_ref_String)).hashCode());
+                    fieldTemp$3 = vob.field_p;
                     vob.field_p = vob.field_p + 1;
                     var6.field_yb = fieldTemp$3;
-                    mr.field_M.b(-10258, (ksa) (Object) var6);
+                    mr.field_M.b(-10258, var6);
                     break L14;
                   } else {
                     break L14;
@@ -240,7 +248,7 @@ final class lob implements dja {
                 var6.field_vb = var5;
                 var6.field_Ab = var3;
                 var6.b(-3846);
-                var7_ref = (vu) (Object) mr.field_M.d(0);
+                var7_ref = (vu) ((Object) mr.field_M.d(0));
                 L16: while (true) {
                   L17: {
                     L18: {
@@ -248,7 +256,7 @@ final class lob implements dja {
                         if (var7_ref == null) {
                           break L19;
                         } else {
-                          stackOut_55_0 = (vu) var7_ref;
+                          stackOut_55_0 = (vu) (var7_ref);
                           stackIn_66_0 = stackOut_55_0;
                           stackIn_56_0 = stackOut_55_0;
                           if (var9 != 0) {
@@ -257,7 +265,7 @@ final class lob implements dja {
                             if (!qob.a(stackIn_56_0, 7569, var6)) {
                               break L19;
                             } else {
-                              var7_ref = (vu) (Object) mr.field_M.a((byte) 78);
+                              var7_ref = (vu) ((Object) mr.field_M.a((byte) 78));
                               if (var9 == 0) {
                                 continue L16;
                               } else {
@@ -271,7 +279,7 @@ final class lob implements dja {
                         if (null != var7_ref) {
                           break L20;
                         } else {
-                          mr.field_M.b(-10258, (ksa) (Object) var6);
+                          mr.field_M.b(-10258, var6);
                           if (var9 == 0) {
                             break L17;
                           } else {
@@ -279,14 +287,15 @@ final class lob implements dja {
                           }
                         }
                       }
-                      stackOut_64_0 = (vu) var6;
+                      stackOut_64_0 = (vu) (var6);
                       stackIn_66_0 = stackOut_64_0;
                       break L18;
                     }
-                    al.a((ksa) (Object) stackIn_66_0, (ksa) (Object) var7_ref, 2);
+                    al.a(stackIn_66_0, var7_ref, 2);
                     break L17;
                   }
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
             }
@@ -294,11 +303,34 @@ final class lob implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "lob.D(" + param0 + ')');
+          throw rta.a((Throwable) ((Object) var1), "lob.D(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return;
+                } else {
+                  return;
+                }
+              }
+            }
+          }
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -311,7 +343,7 @@ final class lob implements dja {
           L0: {
             L1: {
               L2: {
-                if (~hab.field_i > ~param4) {
+                if ((hab.field_i ^ -1) > (param4 ^ -1)) {
                   break L2;
                 } else {
                   if (param5 >= lua.field_c) {
@@ -330,7 +362,7 @@ final class lob implements dja {
                         }
                       }
                       L5: {
-                        if (~param2 >= ~mt.field_o) {
+                        if ((param2 ^ -1) >= (mt.field_o ^ -1)) {
                           break L5;
                         } else {
                           var6_int = 0;
@@ -377,7 +409,7 @@ final class lob implements dja {
                     }
                     L9: {
                       L10: {
-                        if (~param4 <= ~lua.field_c) {
+                        if ((param4 ^ -1) <= (lua.field_c ^ -1)) {
                           break L10;
                         } else {
                           param4 = lua.field_c;
@@ -388,7 +420,7 @@ final class lob implements dja {
                           }
                         }
                       }
-                      int incrementValue$2 = param4;
+                      incrementValue$2 = param4;
                       param4++;
                       ww.a(param1, param0, rba.field_b[incrementValue$2], (byte) 75, param2);
                       break L9;
@@ -406,7 +438,7 @@ final class lob implements dja {
                           }
                         }
                       }
-                      int incrementValue$3 = param5;
+                      incrementValue$3 = param5;
                       param5--;
                       ww.a(param1, param0, rba.field_b[incrementValue$3], (byte) 75, param2);
                       break L11;
@@ -421,7 +453,7 @@ final class lob implements dja {
                           var8 = param4;
                           L14: while (true) {
                             L15: {
-                              if (~param5 > ~var8) {
+                              if ((param5 ^ -1) > (var8 ^ -1)) {
                                 break L15;
                               } else {
                                 var9 = rba.field_b[var8];
@@ -455,7 +487,7 @@ final class lob implements dja {
                         var8 = param4;
                         L17: while (true) {
                           L18: {
-                            if (~param5 > ~var8) {
+                            if ((param5 ^ -1) > (var8 ^ -1)) {
                               break L18;
                             } else {
                               rba.field_b[var8][param2] = param1;
@@ -482,7 +514,7 @@ final class lob implements dja {
                     if (var7 != 0) {
                       var8 = param4;
                       L19: while (true) {
-                        if (~var8 < ~param5) {
+                        if ((var8 ^ -1) < (param5 ^ -1)) {
                           break L2;
                         } else {
                           rba.field_b[var8][param0] = param1;
@@ -509,7 +541,7 @@ final class lob implements dja {
               if (param3 == 256) {
                 break L1;
               } else {
-                field_a = null;
+                field_a = (String) null;
                 break L1;
               }
             }
@@ -518,7 +550,7 @@ final class lob implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var6, "lob.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) var6), "lob.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -554,23 +586,23 @@ final class lob implements dja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_0 = (RuntimeException) (var2);
             stackOut_2_1 = new StringBuilder().append("lob.C(").append(param0).append(',');
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
@@ -578,39 +610,47 @@ final class lob implements dja {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
         return stackIn_1_0;
     }
 
     public final tv[] a(int param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        tv[] stackIn_2_0 = null;
         lua[] stackIn_4_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         lua[] stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        tv[] stackOut_1_0 = null;
         try {
           L0: {
             if (param0 == 11995) {
               stackOut_3_0 = new lua[param1];
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (tv[]) null;
               stackIn_2_0 = stackOut_1_0;
-              return (tv[]) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var3, "lob.B(" + param0 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) var3), "lob.B(" + param0 + ',' + param1 + ')');
         }
-        return (tv[]) (Object) stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return (tv[]) ((Object) stackIn_4_0);
+        }
     }
 
     public static void b(byte param0) {
+        int discarded$2 = 0;
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -620,7 +660,7 @@ final class lob implements dja {
               if (param0 > 88) {
                 break L1;
               } else {
-                int discarded$2 = lob.a(-76, (CharSequence) null);
+                discarded$2 = lob.a(-76, (CharSequence) null);
                 break L1;
               }
             }
@@ -630,15 +670,11 @@ final class lob implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "lob.E(" + param0 + ')');
+          throw rta.a((Throwable) ((Object) var1), "lob.E(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 256;
     }
 }

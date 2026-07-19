@@ -11,9 +11,15 @@ final class wn extends at {
     private int field_m;
 
     private final void f(int param0) {
+        if (param0 != 7) {
+            field_l = (String) null;
+        }
     }
 
     public static void d(int param0) {
+        if (param0 != 10) {
+            return;
+        }
         field_l = null;
         field_j = null;
     }
@@ -21,16 +27,16 @@ final class wn extends at {
     final boolean c(byte param0) {
         int var2 = 0;
         L0: {
-          if (((wn) this).field_n == 0) {
-            ((wn) this).field_o.a(((wn) this).field_m, 97, ((wn) this).field_k);
+          if (this.field_n == 0) {
+            this.field_o.a(this.field_m, 97, this.field_k);
             break L0;
           } else {
             break L0;
           }
         }
         var2 = 122 % ((param0 - 71) / 47);
-        int fieldTemp$2 = ((wn) this).field_n + 1;
-        ((wn) this).field_n = ((wn) this).field_n + 1;
+        int fieldTemp$2 = this.field_n + 1;
+        this.field_n = this.field_n + 1;
         if (fieldTemp$2 >= this.e(-12304)) {
           this.f(7);
           return true;
@@ -40,24 +46,25 @@ final class wn extends at {
     }
 
     private final int e(int param0) {
+        boolean discarded$0 = false;
+        if (param0 != -12304) {
+            discarded$0 = this.c((byte) 38);
+            return 10;
+        }
         return 10;
     }
 
     wn(ad param0, String param1, int param2) {
         try {
-            ((wn) this).field_k = param1;
-            ((wn) this).field_m = param2;
-            ((wn) this).field_o = param0;
+            this.field_k = param1;
+            this.field_m = param2;
+            this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "wn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "wn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Asking to join <%0>'s game...";
         field_j = new du(7, 0, 1, 1);
     }

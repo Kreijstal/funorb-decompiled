@@ -13,9 +13,21 @@ final class ha {
     static int[] field_c;
 
     public static void a(int param0) {
-        field_d = null;
-        field_c = null;
-        field_f = null;
+        byte[] discarded$2 = null;
+        String var2 = null;
+        if (param0 != 11) {
+          var2 = (String) null;
+          discarded$2 = ha.a((String) null, (byte) -33);
+          field_d = null;
+          field_c = null;
+          field_f = null;
+          return;
+        } else {
+          field_d = null;
+          field_c = null;
+          field_f = null;
+          return;
+        }
     }
 
     final static byte[] a(String param0, byte param1) {
@@ -44,7 +56,7 @@ final class ha {
               if (param1 >= 15) {
                 break L1;
               } else {
-                field_d = null;
+                field_d = (String[]) null;
                 break L1;
               }
             }
@@ -56,23 +68,23 @@ final class ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("ha.C(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -80,7 +92,7 @@ final class ha {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -93,15 +105,11 @@ final class ha {
         int var6 = jg.field_c.get(1);
         int var7 = jg.field_c.get(11);
         int var8 = jg.field_c.get(12);
-        int var9 = jg.field_c.get(13);
+        int var9 = jg.field_c.get(param1);
         return nn.field_p[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + oi.field_s[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
         field_f = new int[]{10, 1, 1};
         field_c = new int[4];

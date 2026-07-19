@@ -35,7 +35,7 @@ final class c extends bo implements Cloneable {
                 break L1;
               }
             }
-            stackOut_2_0 = ng.a(eb.field_m, param1, (f) (Object) new c((f) (Object) new kp(-1)), (byte) -83, kd.field_m);
+            stackOut_2_0 = ng.a(eb.field_m, param1, new c(new kp(-1)), (byte) -83, kd.field_m);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -43,23 +43,23 @@ final class c extends bo implements Cloneable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("c.V(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -67,7 +67,7 @@ final class c extends bo implements Cloneable {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -84,7 +84,7 @@ final class c extends bo implements Cloneable {
             if (param1 != 24) {
               break L1;
             } else {
-              if (param2 == 24) {
+              if (-25 == (param2 ^ -1)) {
                 qb.field_b.a(param4, param5 + -param2);
                 break L0;
               } else {
@@ -99,7 +99,7 @@ final class c extends bo implements Cloneable {
 
     final int a(boolean param0, boolean param1) {
         if (!param0) {
-            field_q = null;
+            field_q = (am) null;
             return 0;
         }
         return 0;
@@ -117,6 +117,7 @@ final class c extends bo implements Cloneable {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
@@ -132,7 +133,7 @@ final class c extends bo implements Cloneable {
             if (null != param1.field_h) {
               L1: {
                 L2: {
-                  if (param1.field_d != 0) {
+                  if ((param1.field_d ^ -1) != param0) {
                     break L2;
                   } else {
                     if (param1.field_l == 0) {
@@ -158,7 +159,8 @@ final class c extends bo implements Cloneable {
                           if (param1.field_l != var3.field_l) {
                             break L4;
                           } else {
-                            return;
+                            decompiledRegionSelector0 = 1;
+                            break L0;
                           }
                         }
                       }
@@ -176,32 +178,34 @@ final class c extends bo implements Cloneable {
                 }
               }
               kj.a(param1, (byte) 36);
+              decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var2;
-            stackOut_17_1 = new StringBuilder().append("c.I(").append(-1).append(',');
+            stackOut_17_0 = (RuntimeException) (var2);
+            stackOut_17_1 = new StringBuilder().append("c.I(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -209,11 +213,23 @@ final class c extends bo implements Cloneable {
               break L6;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     final static lb b(boolean param0) {
+        if (param0) {
+            c.g(83);
+        }
         if (sa.field_lb == null) {
             sa.field_lb = new lb(ba.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, ba.field_i.field_o, -1, 2147483647, true);
         }
@@ -221,6 +237,9 @@ final class c extends bo implements Cloneable {
     }
 
     public static void g(int param0) {
+        if (param0 != -1) {
+            return;
+        }
         field_q = null;
     }
 

@@ -35,10 +35,6 @@ final class ib implements uj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[128];
     }
 }

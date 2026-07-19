@@ -9,38 +9,39 @@ final class em {
     int[] field_d;
 
     final int a(int param0, int param1) {
+        int discarded$5 = 0;
         int var3 = 0;
         int var4 = 0;
         var4 = Terraphoenix.field_V;
-        if (((em) this).field_d != null) {
-          if (((em) this).field_d.length != 0) {
+        if (this.field_d != null) {
+          if (-1 != (this.field_d.length ^ -1)) {
             if (param1 <= -115) {
               var3 = 1;
               L0: while (true) {
-                if (((em) this).field_d.length > var3) {
-                  if (param0 >= ((em) this).field_d[var3] + ((em) this).field_d[var3 + -1] >> 1) {
+                if (this.field_d.length > var3) {
+                  if (param0 >= this.field_d[var3] + this.field_d[var3 + -1] >> -1679860287) {
                     var3++;
                     continue L0;
                   } else {
                     return var3 + -1;
                   }
                 } else {
-                  return ((em) this).field_d.length + -1;
+                  return this.field_d.length + -1;
                 }
               }
             } else {
-              int discarded$5 = ((em) this).a(-82, 56);
+              discarded$5 = this.a(-82, 56);
               var3 = 1;
               L1: while (true) {
-                if (((em) this).field_d.length > var3) {
-                  if (param0 >= ((em) this).field_d[var3] + ((em) this).field_d[var3 + -1] >> 1) {
+                if (this.field_d.length > var3) {
+                  if (param0 >= this.field_d[var3] + this.field_d[var3 + -1] >> -1679860287) {
                     var3++;
                     continue L1;
                   } else {
                     return var3 + -1;
                   }
                 } else {
-                  return ((em) this).field_d.length + -1;
+                  return this.field_d.length + -1;
                 }
               }
             }
@@ -54,22 +55,22 @@ final class em {
 
     final int b(int param0) {
         if (param0 == -1) {
-          if (null != ((em) this).field_d) {
-            if (((em) this).field_d.length == 0) {
+          if (null != this.field_d) {
+            if (-1 == (this.field_d.length ^ -1)) {
               return 0;
             } else {
-              return ((em) this).field_d[((em) this).field_d.length + -1];
+              return this.field_d[this.field_d.length + -1];
             }
           } else {
             return 0;
           }
         } else {
-          field_c = null;
-          if (null != ((em) this).field_d) {
-            if (((em) this).field_d.length == 0) {
+          field_c = (ci) null;
+          if (null != this.field_d) {
+            if (-1 == (this.field_d.length ^ -1)) {
               return 0;
             } else {
-              return ((em) this).field_d[((em) this).field_d.length + -1];
+              return this.field_d[this.field_d.length + -1];
             }
           } else {
             return 0;
@@ -80,19 +81,18 @@ final class em {
     public static void a(int param0) {
         field_c = null;
         field_b = null;
+        if (param0 >= -118) {
+            field_c = (ci) null;
+        }
     }
 
     em(int param0, int param1, int param2) {
-        ((em) this).field_a = param1;
-        ((em) this).field_e = param0;
-        ((em) this).field_d = new int[param2 - -1];
+        this.field_a = param1;
+        this.field_e = param0;
+        this.field_d = new int[param2 - -1];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Invalid password.";
     }
 }

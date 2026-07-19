@@ -32,7 +32,7 @@ final class mj {
         try {
           L0: {
             L1: {
-              if (param2 >= 0) {
+              if ((param2 ^ -1) <= -1) {
                 break L1;
               } else {
                 param0 = param0 + param2;
@@ -41,7 +41,7 @@ final class mj {
               }
             }
             L2: {
-              if (param4 < 0) {
+              if (-1 < (param4 ^ -1)) {
                 param1 = param1 + param4;
                 param4 = 0;
                 break L2;
@@ -50,7 +50,7 @@ final class mj {
               }
             }
             L3: {
-              if (~(param4 + param1) >= ~tc.field_c) {
+              if (param4 + param1 <= tc.field_c) {
                 break L3;
               } else {
                 param1 = -param4 + tc.field_c;
@@ -58,18 +58,18 @@ final class mj {
               }
             }
             L4: {
-              if (~tc.field_j <= ~(param0 + param2)) {
+              if (tc.field_j >= param0 + param2) {
                 break L4;
               } else {
                 param0 = -param2 + tc.field_j;
                 break L4;
               }
             }
-            var6_int = 128;
+            var6_int = -param5 + 256;
             var7 = param4 - -param1;
             var8 = param4;
             L5: while (true) {
-              if (~var7 >= ~var8) {
+              if (var7 <= var8) {
                 if (param3 == 0) {
                   break L0;
                 } else {
@@ -80,20 +80,19 @@ final class mj {
                 var9 = var8 * tc.field_j + param2;
                 var10 = param0;
                 L6: while (true) {
-                  if (var10 <= 0) {
-                    var8++;
+                  if (-1 <= (var10 ^ -1)) {
                     var8++;
                     continue L5;
                   } else {
                     var11 = tc.field_b[var9];
-                    var12 = (var11 & 16711680) >> 16;
-                    var13 = 255 & var11 >> 8;
+                    var12 = (var11 & 16711680) >> 304316912;
+                    var13 = 255 & var11 >> 927944936;
                     var14 = var11 & 255;
                     var15 = var14 * 5 + (6 * var13 + var12 * 5);
-                    var16 = (var6_int * var15 >> 12) + (128 * var12 >> 8);
-                    var17 = (var6_int * var15 >> 12) + (var13 * 128 >> 8);
-                    var18 = (var15 * var6_int >> 12) + (var14 * 128 >> 8);
-                    var19 = var16 << 16 | var17 << 8 | var18;
+                    var16 = (var6_int * var15 >> -1059631284) + (param5 * var12 >> -645259768);
+                    var17 = (var6_int * var15 >> -1143322772) + (var13 * param5 >> -1782067320);
+                    var18 = (var15 * var6_int >> 1864533100) + (var14 * param5 >> 1084193608);
+                    var19 = var16 << 1525471696 | var17 << 2131926632 | var18;
                     tc.field_b[var9] = var19;
                     var9++;
                     var10--;
@@ -106,15 +105,11 @@ final class mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var6, "mj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + 128 + ')');
+          throw kk.a((Throwable) ((Object) var6), "mj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Names cannot start or end with space or underscore";
     }
 }

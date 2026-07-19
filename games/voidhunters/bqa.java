@@ -11,11 +11,36 @@ final class bqa {
 
     public static void a(byte param0) {
         field_f = null;
+        if (param0 <= 104) {
+            return;
+        }
         field_d = null;
     }
 
     final static boolean a(boolean param0) {
-        return fda.e((byte) 119) || hcb.field_o <= 0;
+        int stackIn_7_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_6_0 = 0;
+        if (!param0) {
+          L0: {
+            if (fda.e((byte) 119)) {
+              stackOut_5_0 = 1;
+              stackIn_7_0 = stackOut_5_0;
+              break L0;
+            } else {
+              if ((hcb.field_o ^ -1) < -1) {
+                stackOut_6_0 = 0;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                return true;
+              }
+            }
+          }
+          return stackIn_7_0 != 0;
+        } else {
+          return false;
+        }
     }
 
     private bqa() throws Throwable {
@@ -23,10 +48,6 @@ final class bqa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Email is valid";
     }
 }

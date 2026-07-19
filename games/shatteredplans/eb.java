@@ -11,6 +11,9 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public static void b(int param0) {
         field_a = null;
+        if (param0 != -1314558012) {
+            return;
+        }
         field_f = null;
         field_e = null;
     }
@@ -19,6 +22,8 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static void a(int param0, int param1, byte[] param2, int param3, int[] param4) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -60,23 +65,31 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
             var5_int = 0;
             L1: while (true) {
               if (var5_int >= gd.field_b.length) {
+                L2: {
+                  if (param3 == 12) {
+                    break L2;
+                  } else {
+                    field_b = -26;
+                    break L2;
+                  }
+                }
                 break L0;
               } else {
                 param1 = gd.field_b[var5_int];
-                var6 = var5_int << 4;
-                L2: while (true) {
-                  int incrementValue$4 = param1;
+                var6 = var5_int << -74577948;
+                L3: while (true) {
+                  incrementValue$4 = param1;
                   param1--;
                   if (incrementValue$4 == 0) {
                     var5_int++;
                     continue L1;
                   } else {
-                    int incrementValue$5 = var6;
+                    incrementValue$5 = var6;
                     var6++;
                     param0 = jl.field_M[incrementValue$5];
                     param4[param2[param0]] = param4[param2[param0]] + 1;
                     jl.field_M[param4[param2[param0]]] = param0;
-                    continue L2;
+                    continue L3;
                   }
                 }
               }
@@ -84,58 +97,58 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var5 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var5;
+            stackOut_10_0 = (RuntimeException) (var5);
             stackOut_10_1 = new StringBuilder().append("eb.C(").append(param0).append(',').append(param1).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L3;
+              break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
               stackIn_13_2 = stackOut_11_2;
-              break L3;
+              break L4;
             }
           }
-          L4: {
-            stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(12).append(',');
+          L5: {
+            stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param3).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param4 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L4;
+              break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
               stackIn_16_2 = stackOut_14_2;
-              break L4;
+              break L5;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
     }
 
@@ -147,21 +160,22 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
             if (param1 != -17115) {
                 field_b = 54;
             }
-            ql.a(((eb) this).field_d, 0, param0);
+            ql.a(this.field_d, 0, param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "eb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "eb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            ((eb) this).field_c = true;
+            this.field_c = true;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "eb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "eb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0) {
+        int fieldTemp$1 = 0;
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -200,8 +214,8 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
         int var34 = 0;
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
-        int stackIn_43_0 = 0;
-        int stackIn_53_0 = 0;
+        int stackIn_45_0 = 0;
+        int stackIn_56_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
@@ -209,10 +223,10 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
         int stackOut_10_0 = 0;
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_51_0 = 0;
+        int stackOut_44_0 = 0;
+        int stackOut_43_0 = 0;
+        int stackOut_55_0 = 0;
+        int stackOut_54_0 = 0;
         var34 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -232,13 +246,13 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
               var11 = 140;
               var2 = var10;
               var1_int = -260;
-              if (~var5 < ~di.field_m) {
-                if (~di.field_m > ~var4) {
+              if (var5 > di.field_m) {
+                if (di.field_m < var4) {
                   stackOut_5_0 = var10;
                   stackIn_6_0 = stackOut_5_0;
                   break L1;
                 } else {
-                  stackOut_4_0 = re.a(var10, -var4 + var5, -var4 + di.field_m, var11, 0);
+                  stackOut_4_0 = re.a(var10, -var4 + var5, -var4 + di.field_m, var11, param0 + -320);
                   stackIn_6_0 = stackOut_4_0;
                   break L1;
                 }
@@ -252,17 +266,17 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
               var12 = stackIn_6_0;
               tf.field_b.c(var1_int, var2 + (var12 - 120), 128);
               qq.field_n.f(var1_int, var12 - -var2);
-              if (~var5 >= ~di.field_m) {
-                stackOut_10_0 = 205 + var10 << 4;
+              if (var5 <= di.field_m) {
+                stackOut_10_0 = 205 + var10 << -1061957692;
                 stackIn_11_0 = stackOut_10_0;
                 break L2;
               } else {
-                if (~di.field_m > ~var4) {
+                if (di.field_m < var4) {
                   stackOut_9_0 = 0;
                   stackIn_11_0 = stackOut_9_0;
                   break L2;
                 } else {
-                  stackOut_8_0 = re.a(0, -var4 + var5, di.field_m + -var4, 205 - -var10 << 4, 0);
+                  stackOut_8_0 = re.a(0, -var4 + var5, di.field_m + -var4, 205 - -var10 << 742301380, 0);
                   stackIn_11_0 = stackOut_8_0;
                   break L2;
                 }
@@ -270,10 +284,10 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
             }
             L3: {
               var13 = stackIn_11_0;
-              var14 = 454 + var1_int << 4;
-              var15 = -var13 + (var10 + 374 - -var2 << 4);
+              var14 = 454 + var1_int << 609578692;
+              var15 = -var13 + (var10 + 374 - -var2 << 851901028);
               var16 = 32 - -vc.a((byte) -39, 32);
-              if (~var6 < ~di.field_m) {
+              if (var6 > di.field_m) {
                 gf.b(var14, var15, var16, 128, fe.field_u);
                 break L3;
               } else {
@@ -282,238 +296,247 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
             }
             L4: {
               var17 = 454 + (var1_int + 3);
-              var18 = var17 << 4;
-              var19 = (var13 >> 4) + -36;
-              var20 = var19 << 4;
-              var21 = 144;
-              if (var7 > di.field_m) {
+              var18 = var17 << -1951805212;
+              var19 = (var13 >> -1936225948) + -36;
+              if (param0 == 320) {
                 break L4;
               } else {
-                var22 = -var7 + di.field_m;
-                var23 = -var7 + 1000;
-                var24 = var22 << 2;
-                var24 = var24 + var22 * 16 * var22 / var23;
-                var20 = var20 - (var24 >> 4);
-                var21 = var21 * (-var22 + var23) / var23;
-                var17 = var17 + (var24 >> 4);
-                var19 = var19 - (var24 >> 8);
-                var18 = var18 + var24;
+                eb.b(62);
                 break L4;
               }
             }
             L5: {
-              var22 = 454 + var1_int - -3 << 4;
-              var23 = 169 + var10 << 4;
-              var24 = -var7 + 950 << 2;
+              var20 = var19 << -190982460;
+              var21 = 144;
+              if (var7 > di.field_m) {
+                break L5;
+              } else {
+                var22 = -var7 + di.field_m;
+                var23 = -var7 + 1000;
+                var24 = var22 << -1198081726;
+                var24 = var24 + var22 * 16 * var22 / var23;
+                var20 = var20 - (var24 >> -1314558012);
+                var21 = var21 * (-var22 + var23) / var23;
+                var17 = var17 + (var24 >> -1830644956);
+                var19 = var19 - (var24 >> 2001301032);
+                var18 = var18 + var24;
+                break L5;
+              }
+            }
+            L6: {
+              var22 = 454 + var1_int - -3 << -1074827996;
+              var23 = 169 + var10 << -1112830972;
+              var24 = -var7 + 950 << -1572258974;
               var24 = var24 + (-var7 + 950) * (-(var7 * 16) + 15200) / (1000 + -var7);
               var22 = var22 + var24;
-              var23 = var23 - (var24 >> 4);
-              gf.d(0, 0, var22 - -320 >> 4, 480);
+              var23 = var23 - (var24 >> 1787680868);
+              gf.d(0, 0, var22 - -320 >> -1826874268, 480);
               gf.d(var17, var19, 20, 4, 0);
-              if (~di.field_m <= ~var9) {
-                L6: {
+              if (di.field_m >= var9) {
+                L7: {
                   var25 = -var9 + di.field_m;
                   var26 = var6 - var9;
                   var27_int = 440 * var25 / var26;
                   var28 = var27_int - -rg.a(64, -64, (byte) 109);
-                  if (var28 >= 0) {
-                    break L6;
-                  } else {
-                    var28 = 0;
-                    break L6;
-                  }
-                }
-                L7: {
-                  if (255 >= var28) {
+                  if ((var28 ^ -1) <= -1) {
                     break L7;
                   } else {
-                    var28 = 255;
+                    var28 = 0;
                     break L7;
                   }
                 }
                 L8: {
-                  gf.a(16 + var17, var19 + 2, (var28 >> 2) * 65793);
-                  var28 = -40 + (var27_int + rg.a(64, -64, (byte) 114));
-                  if (var28 < 0) {
-                    var28 = 0;
+                  if (255 >= var28) {
                     break L8;
                   } else {
+                    var28 = 255;
                     break L8;
                   }
                 }
                 L9: {
-                  if (var28 <= 255) {
+                  gf.a(16 + var17, var19 + 2, (var28 >> 1984694722) * 65793);
+                  var28 = -40 + (var27_int + rg.a(64, -64, (byte) 114));
+                  if (var28 < 0) {
+                    var28 = 0;
                     break L9;
                   } else {
-                    var28 = 255;
                     break L9;
                   }
                 }
                 L10: {
-                  gf.a(3 + var17, var19 - -3, 65793 * (var28 >> 2));
-                  var28 = rg.a(64, -64, (byte) 98) + (var27_int - 80);
-                  if (var28 < 0) {
-                    var28 = 0;
+                  if (var28 <= 255) {
                     break L10;
                   } else {
+                    var28 = 255;
                     break L10;
                   }
                 }
                 L11: {
-                  if (var28 <= 255) {
+                  gf.a(3 + var17, var19 - -3, 65793 * (var28 >> 1702483618));
+                  var28 = rg.a(64, -64, (byte) 98) + (var27_int - 80);
+                  if (-1 < (var28 ^ -1)) {
+                    var28 = 0;
                     break L11;
                   } else {
-                    var28 = 255;
                     break L11;
                   }
                 }
                 L12: {
-                  gf.a(var17 - -12, var19, 65793 * (var28 >> 2));
-                  var28 = -120 + var27_int + rg.a(64, -64, (byte) 126);
-                  if (var28 < 0) {
-                    var28 = 0;
+                  if (var28 <= 255) {
                     break L12;
                   } else {
+                    var28 = 255;
                     break L12;
                   }
                 }
                 L13: {
-                  if (var28 <= 255) {
+                  gf.a(var17 - -12, var19, 65793 * (var28 >> -871687582));
+                  var28 = -120 + var27_int + rg.a(64, -64, (byte) 126);
+                  if (var28 < 0) {
+                    var28 = 0;
                     break L13;
                   } else {
-                    var28 = 255;
                     break L13;
                   }
                 }
-                gf.a(var17 - -7, 1 + var19, (var28 >> 2) * 65793);
-                break L5;
+                L14: {
+                  if ((var28 ^ -1) >= -256) {
+                    break L14;
+                  } else {
+                    var28 = 255;
+                    break L14;
+                  }
+                }
+                gf.a(var17 - -7, 1 + var19, (var28 >> 1108437922) * 65793);
+                break L6;
               } else {
-                break L5;
+                break L6;
               }
             }
-            L14: {
+            L15: {
               gf.a();
               if (var9 <= di.field_m) {
-                L15: {
+                L16: {
                   var25 = -var9 + di.field_m;
                   var26 = -var9 + var8;
                   var27 = 0.0003141592653589793 * (double)var25 * (double)var25;
                   if (var25 > var26) {
-                    stackOut_42_0 = 128;
-                    stackIn_43_0 = stackOut_42_0;
-                    break L15;
+                    stackOut_44_0 = 128;
+                    stackIn_45_0 = stackOut_44_0;
+                    break L16;
                   } else {
-                    stackOut_41_0 = var25 * 128 / var26;
-                    stackIn_43_0 = stackOut_41_0;
-                    break L15;
+                    stackOut_43_0 = var25 * 128 / var26;
+                    stackIn_45_0 = stackOut_43_0;
+                    break L16;
                   }
                 }
-                var29 = stackIn_43_0;
+                var29 = stackIn_45_0;
                 var30 = 0;
-                L16: while (true) {
-                  if (var30 >= 3) {
-                    L17: {
+                L17: while (true) {
+                  if ((var30 ^ -1) <= -4) {
+                    L18: {
                       if (600 > var25) {
-                        stackOut_52_0 = var25;
-                        stackIn_53_0 = stackOut_52_0;
-                        break L17;
+                        stackOut_55_0 = var25;
+                        stackIn_56_0 = stackOut_55_0;
+                        break L18;
                       } else {
-                        stackOut_51_0 = 600;
-                        stackIn_53_0 = stackOut_51_0;
-                        break L17;
+                        stackOut_54_0 = 600;
+                        stackIn_56_0 = stackOut_54_0;
+                        break L18;
                       }
                     }
-                    var30 = stackIn_53_0;
+                    var30 = stackIn_56_0;
                     var31 = -1 + sd.field_p;
                     var32 = 0;
-                    L18: while (true) {
+                    L19: while (true) {
                       if (var30 <= var32) {
-                        break L14;
+                        break L15;
                       } else {
-                        L19: {
-                          if (var31 >= 0) {
-                            break L19;
+                        L20: {
+                          if ((var31 ^ -1) <= -1) {
+                            break L20;
                           } else {
                             var31 += 600;
-                            break L19;
+                            break L20;
                           }
                         }
                         var33 = 256 * (var30 - var32) / 600;
                         gf.b(p.field_A[var31], np.field_f[var31], var33, 12, fe.field_x);
-                        gf.b(p.field_A[var31], np.field_f[var31], var33 >> 2, 128, fe.field_x);
+                        gf.b(p.field_A[var31], np.field_f[var31], var33 >> -118837918, 128, fe.field_x);
                         var31--;
                         var32++;
-                        continue L18;
+                        continue L19;
                       }
                     }
                   } else {
-                    L20: {
-                      var31 = (int)(Math.cos(3.141592653589793 * (double)(2 * var30) / 3.0 + var27) * (double)(var21 >> 1));
-                      var31 = var31 + var18;
-                      var32 = (int)((double)var21 * Math.sin(var27 + 3.141592653589793 * (double)(var30 * 2) / 3.0));
-                      var32 = var32 + var20;
-                      if (~(var22 + 320) > ~var31) {
-                        break L20;
-                      } else {
-                        gf.g(var17, var19, var31 >> 4, var32 >> 4, 0);
+                    var31 = (int)(Math.cos(3.141592653589793 * (double)(2 * var30) / 3.0 + var27) * (double)(var21 >> 2064758561));
+                    var31 = var31 + var18;
+                    var32 = (int)((double)var21 * Math.sin(var27 + 3.141592653589793 * (double)(var30 * 2) / 3.0));
+                    var32 = var32 + var20;
+                    if (var22 + 320 >= var31) {
+                      L21: {
+                        gf.g(var17, var19, var31 >> 605130468, var32 >> -1715380860, 0);
                         gf.b(var31, var32, 64, var29, fe.field_x);
                         p.field_A[sd.field_p] = var31;
                         np.field_f[sd.field_p] = var32;
-                        int fieldTemp$1 = sd.field_p + 1;
+                        fieldTemp$1 = sd.field_p + 1;
                         sd.field_p = sd.field_p + 1;
-                        if (fieldTemp$1 == 600) {
+                        if (-601 == (fieldTemp$1 ^ -1)) {
                           sd.field_p = 0;
-                          break L20;
+                          break L21;
                         } else {
-                          break L20;
+                          break L21;
                         }
                       }
+                      var30++;
+                      continue L17;
+                    } else {
+                      var30++;
+                      continue L17;
                     }
-                    var30++;
-                    continue L16;
                   }
                 }
               } else {
-                break L14;
+                break L15;
               }
             }
-            L21: {
+            L22: {
               if (900 < di.field_m) {
-                L22: {
-                  if (di.field_m > 950) {
+                L23: {
+                  if ((di.field_m ^ -1) < -951) {
                     var16 = re.a(0, 50, -900 + di.field_m, 256, 0);
-                    break L22;
+                    break L23;
                   } else {
                     var16 = re.a(256, 50, -950 + di.field_m, 0, 0);
-                    break L22;
+                    break L23;
                   }
                 }
                 gf.a(var22, var23, var16, 12, fe.field_v);
-                gf.a(var22 + 128, var23 - 16, var16 >> 1, 12, fe.field_v);
-                gf.a(var22 - -256, var23 - 32, var16 >> 2, 12, fe.field_v);
-                break L21;
+                gf.a(var22 + 128, var23 - 16, var16 >> -655431071, 12, fe.field_v);
+                gf.a(var22 - -256, var23 - 32, var16 >> 493738498, 12, fe.field_v);
+                break L22;
               } else {
-                break L21;
+                break L22;
               }
             }
-            L23: {
+            L24: {
               var25 = -var22 + var18;
-              if (var25 <= 0) {
-                break L23;
+              if (-1 <= (var25 ^ -1)) {
+                break L24;
               } else {
-                L24: {
+                L25: {
                   var16 = var25;
-                  if (var16 <= 320) {
-                    break L24;
+                  if (-321 <= (var16 ^ -1)) {
+                    break L25;
                   } else {
-                    var20 = var20 - (var16 + -320 >> 2);
-                    var18 = var18 + (var16 - 320 << 1);
-                    var16 = -(var16 >> 2) + 320;
-                    break L24;
+                    var20 = var20 - (var16 + -320 >> 1756076258);
+                    var18 = var18 + (var16 - 320 << 208399937);
+                    var16 = -(var16 >> -17281886) + 320;
+                    break L25;
                   }
                 }
                 gf.b(var18, var20, var16, 256, fe.field_u);
-                break L23;
+                break L24;
               }
             }
             break L0;
@@ -521,7 +544,7 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1, "eb.A(" + 320 + ')');
+          throw r.a((Throwable) ((Object) var1), "eb.A(" + param0 + ')');
         }
     }
 
@@ -532,10 +555,6 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0;
         field_e = "Offer NAP";
         field_a = new int[]{18, 19, 9};

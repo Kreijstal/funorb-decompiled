@@ -10,14 +10,17 @@ final class wo extends java.awt.Canvas {
         try {
             field_b = null;
             if (param0 <= 89) {
-                field_b = null;
+                field_b = (hr[]) null;
             }
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "wo.A(" + param0 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "wo.A(" + param0 + ')');
         }
     }
 
     final static int a(String[] args, vn param1, int param2, boolean param3, String param4) {
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -56,6 +59,7 @@ final class wo extends java.awt.Canvas {
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
         String stackIn_51_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_14_0 = 0;
@@ -93,14 +97,15 @@ final class wo extends java.awt.Canvas {
           L0: {
             L1: {
               var5_int = param1.a(param4);
-              if (~var5_int < ~param2) {
+              if ((var5_int ^ -1) < (param2 ^ -1)) {
                 break L1;
               } else {
                 if (-1 == param4.indexOf("<br>")) {
                   args[0] = param4;
                   stackOut_7_0 = 1;
                   stackIn_8_0 = stackOut_7_0;
-                  return stackIn_8_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   break L1;
                 }
@@ -143,9 +148,9 @@ final class wo extends java.awt.Canvas {
                           }
                           var11 = param4.substring(var7, 1 + var9).trim();
                           var12 = param1.a(var11);
-                          if (~var12 <= ~param2) {
+                          if ((var12 ^ -1) <= (param2 ^ -1)) {
                             var7 = var9 + 1;
-                            int incrementValue$3 = var6;
+                            incrementValue$3 = var6;
                             var6++;
                             args[incrementValue$3] = var11;
                             break L5;
@@ -154,11 +159,11 @@ final class wo extends java.awt.Canvas {
                           }
                         }
                         L7: {
-                          if (var10 != 62) {
+                          if ((var10 ^ -1) != -63) {
                             break L7;
                           } else {
                             if (param4.regionMatches(var9 - 3, "<br>", 0, 4)) {
-                              int incrementValue$4 = var6;
+                              incrementValue$4 = var6;
                               var6++;
                               args[incrementValue$4] = param4.substring(var7, var9 + -3).trim();
                               var7 = 1 + var9;
@@ -177,15 +182,15 @@ final class wo extends java.awt.Canvas {
                       }
                     }
                   }
-                  stackOut_33_0 = ~var8;
-                  stackOut_33_1 = ~var7;
+                  stackOut_33_0 = var8 ^ -1;
+                  stackOut_33_1 = var7 ^ -1;
                   stackIn_34_0 = stackOut_33_0;
                   stackIn_34_1 = stackOut_33_1;
                   break L3;
                 }
                 L8: {
                   if (stackIn_34_0 < stackIn_34_1) {
-                    int incrementValue$5 = var6;
+                    incrementValue$5 = var6;
                     var6++;
                     args[incrementValue$5] = param4.substring(var7, var8).trim();
                     break L8;
@@ -195,35 +200,37 @@ final class wo extends java.awt.Canvas {
                 }
                 stackOut_37_0 = var6;
                 stackIn_38_0 = stackOut_37_0;
+                decompiledRegionSelector0 = 2;
                 break L0;
               }
             } else {
               stackOut_10_0 = -80;
               stackIn_11_0 = stackOut_10_0;
-              return stackIn_11_0;
+              decompiledRegionSelector0 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var5 = decompiledCaughtException;
-            stackOut_39_0 = (RuntimeException) var5;
+            stackOut_39_0 = (RuntimeException) (var5);
             stackOut_39_1 = new StringBuilder().append("wo.B(");
             stackIn_42_0 = stackOut_39_0;
             stackIn_42_1 = stackOut_39_1;
             stackIn_40_0 = stackOut_39_0;
             stackIn_40_1 = stackOut_39_1;
             if (args == null) {
-              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
-              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
               stackOut_42_2 = "null";
               stackIn_43_0 = stackOut_42_0;
               stackIn_43_1 = stackOut_42_1;
               stackIn_43_2 = stackOut_42_2;
               break L9;
             } else {
-              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
-              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
               stackOut_40_2 = "{...}";
               stackIn_43_0 = stackOut_40_0;
               stackIn_43_1 = stackOut_40_1;
@@ -232,23 +239,23 @@ final class wo extends java.awt.Canvas {
             }
           }
           L10: {
-            stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
+            stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
             stackOut_43_1 = ((StringBuilder) (Object) stackIn_43_1).append(stackIn_43_2).append(',');
             stackIn_46_0 = stackOut_43_0;
             stackIn_46_1 = stackOut_43_1;
             stackIn_44_0 = stackOut_43_0;
             stackIn_44_1 = stackOut_43_1;
             if (param1 == null) {
-              stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
-              stackOut_46_1 = (StringBuilder) (Object) stackIn_46_1;
+              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
               stackOut_46_2 = "null";
               stackIn_47_0 = stackOut_46_0;
               stackIn_47_1 = stackOut_46_1;
               stackIn_47_2 = stackOut_46_2;
               break L10;
             } else {
-              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
-              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
+              stackOut_44_0 = (RuntimeException) ((Object) stackIn_44_0);
+              stackOut_44_1 = (StringBuilder) ((Object) stackIn_44_1);
               stackOut_44_2 = "{...}";
               stackIn_47_0 = stackOut_44_0;
               stackIn_47_1 = stackOut_44_1;
@@ -257,23 +264,23 @@ final class wo extends java.awt.Canvas {
             }
           }
           L11: {
-            stackOut_47_0 = (RuntimeException) (Object) stackIn_47_0;
+            stackOut_47_0 = (RuntimeException) ((Object) stackIn_47_0);
             stackOut_47_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_50_0 = stackOut_47_0;
             stackIn_50_1 = stackOut_47_1;
             stackIn_48_0 = stackOut_47_0;
             stackIn_48_1 = stackOut_47_1;
             if (param4 == null) {
-              stackOut_50_0 = (RuntimeException) (Object) stackIn_50_0;
-              stackOut_50_1 = (StringBuilder) (Object) stackIn_50_1;
+              stackOut_50_0 = (RuntimeException) ((Object) stackIn_50_0);
+              stackOut_50_1 = (StringBuilder) ((Object) stackIn_50_1);
               stackOut_50_2 = "null";
               stackIn_51_0 = stackOut_50_0;
               stackIn_51_1 = stackOut_50_1;
               stackIn_51_2 = stackOut_50_2;
               break L11;
             } else {
-              stackOut_48_0 = (RuntimeException) (Object) stackIn_48_0;
-              stackOut_48_1 = (StringBuilder) (Object) stackIn_48_1;
+              stackOut_48_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackOut_48_1 = (StringBuilder) ((Object) stackIn_48_1);
               stackOut_48_2 = "{...}";
               stackIn_51_0 = stackOut_48_0;
               stackIn_51_1 = stackOut_48_1;
@@ -281,9 +288,17 @@ final class wo extends java.awt.Canvas {
               break L11;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_51_0, stackIn_51_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_51_0), stackIn_51_2 + ')');
         }
-        return stackIn_38_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_8_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_11_0;
+          } else {
+            return stackIn_38_0;
+          }
+        }
     }
 
     public final void paint(java.awt.Graphics param0) {
@@ -306,30 +321,30 @@ final class wo extends java.awt.Canvas {
         String stackOut_3_2 = null;
         try {
           L0: {
-            ((wo) this).field_a.paint(param0);
+            this.field_a.paint(param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) runtimeException;
+            stackOut_2_0 = (RuntimeException) (runtimeException);
             stackOut_2_1 = new StringBuilder().append("wo.paint(");
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
@@ -337,7 +352,7 @@ final class wo extends java.awt.Canvas {
               break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -361,30 +376,30 @@ final class wo extends java.awt.Canvas {
         String stackOut_3_2 = null;
         try {
           L0: {
-            ((wo) this).field_a.update(param0);
+            this.field_a.update(param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) runtimeException;
+            stackOut_2_0 = (RuntimeException) (runtimeException);
             stackOut_2_1 = new StringBuilder().append("wo.update(");
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
@@ -392,7 +407,7 @@ final class wo extends java.awt.Canvas {
               break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -434,6 +449,7 @@ final class wo extends java.awt.Canvas {
         RuntimeException stackIn_132_0 = null;
         StringBuilder stackIn_132_1 = null;
         String stackIn_132_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_13_0 = 0;
         int stackOut_11_0 = 0;
@@ -547,7 +563,7 @@ final class wo extends java.awt.Canvas {
                     L8: {
                       var23 = var19;
                       var24 = var20;
-                      if (~var24 > ~var23) {
+                      if ((var24 ^ -1) > (var23 ^ -1)) {
                         var24 = param1 * var13 / (var13 - -var14) + param7;
                         var23 = param1 * var13 / (var13 - -var14) + param7;
                         break L8;
@@ -599,12 +615,12 @@ final class wo extends java.awt.Canvas {
                       if (param0[1] == null) {
                         break L13;
                       } else {
-                        if (param0[1].b() != 0) {
+                        if (-1 != (param0[1].b() ^ -1)) {
                           var10_ref.a((byte) 51, param7, var23, var21, var22);
                           var25 = var17;
                           L14: while (true) {
                             L15: {
-                              if (~var25 <= ~var18) {
+                              if ((var25 ^ -1) <= (var18 ^ -1)) {
                                 break L15;
                               } else {
                                 param0[1].a(var25, param7, param4, param3, param8);
@@ -632,12 +648,12 @@ final class wo extends java.awt.Canvas {
                       if (null == param0[7]) {
                         break L16;
                       } else {
-                        if (param0[7].b() != 0) {
+                        if ((param0[7].b() ^ -1) != -1) {
                           var10_ref.a((byte) 109, var24, var16, var21, var22);
                           var25 = var17;
                           L17: while (true) {
                             L18: {
-                              if (~var18 >= ~var25) {
+                              if ((var18 ^ -1) >= (var25 ^ -1)) {
                                 break L18;
                               } else {
                                 param0[7].a(var25, var20, param4, param3, param8);
@@ -665,12 +681,12 @@ final class wo extends java.awt.Canvas {
                       if (null == param0[3]) {
                         break L19;
                       } else {
-                        if (param0[3].d() != 0) {
+                        if (-1 != (param0[3].d() ^ -1)) {
                           var10_ref.a((byte) -93, var23, var24, param2, var21);
                           var25 = var19;
                           L20: while (true) {
                             L21: {
-                              if (~var20 >= ~var25) {
+                              if ((var20 ^ -1) >= (var25 ^ -1)) {
                                 break L21;
                               } else {
                                 param0[3].a(param2, var25, param4, param3, param8);
@@ -698,12 +714,12 @@ final class wo extends java.awt.Canvas {
                       if (param0[5] == null) {
                         break L22;
                       } else {
-                        if (param0[5].d() != 0) {
+                        if ((param0[5].d() ^ -1) != -1) {
                           var10_ref.a((byte) -128, var23, var24, var22, var15);
                           var25 = var19;
                           L23: while (true) {
                             L24: {
-                              if (~var25 <= ~var20) {
+                              if ((var25 ^ -1) <= (var20 ^ -1)) {
                                 break L24;
                               } else {
                                 param0[5].a(var18, var25, param4, param3, param8);
@@ -731,7 +747,7 @@ final class wo extends java.awt.Canvas {
                       if (param0[4] == null) {
                         break L25;
                       } else {
-                        if (param0[4].b() == 0) {
+                        if (-1 == (param0[4].b() ^ -1)) {
                           break L25;
                         } else {
                           if (0 != param0[4].d()) {
@@ -786,36 +802,39 @@ final class wo extends java.awt.Canvas {
                         }
                       }
                     }
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L31: {
             var10 = decompiledCaughtException;
-            stackOut_124_0 = (RuntimeException) var10;
+            stackOut_124_0 = (RuntimeException) (var10);
             stackOut_124_1 = new StringBuilder().append("wo.C(");
             stackIn_127_0 = stackOut_124_0;
             stackIn_127_1 = stackOut_124_1;
             stackIn_125_0 = stackOut_124_0;
             stackIn_125_1 = stackOut_124_1;
             if (param0 == null) {
-              stackOut_127_0 = (RuntimeException) (Object) stackIn_127_0;
-              stackOut_127_1 = (StringBuilder) (Object) stackIn_127_1;
+              stackOut_127_0 = (RuntimeException) ((Object) stackIn_127_0);
+              stackOut_127_1 = (StringBuilder) ((Object) stackIn_127_1);
               stackOut_127_2 = "null";
               stackIn_128_0 = stackOut_127_0;
               stackIn_128_1 = stackOut_127_1;
               stackIn_128_2 = stackOut_127_2;
               break L31;
             } else {
-              stackOut_125_0 = (RuntimeException) (Object) stackIn_125_0;
-              stackOut_125_1 = (StringBuilder) (Object) stackIn_125_1;
+              stackOut_125_0 = (RuntimeException) ((Object) stackIn_125_0);
+              stackOut_125_1 = (StringBuilder) ((Object) stackIn_125_1);
               stackOut_125_2 = "{...}";
               stackIn_128_0 = stackOut_125_0;
               stackIn_128_1 = stackOut_125_1;
@@ -824,23 +843,23 @@ final class wo extends java.awt.Canvas {
             }
           }
           L32: {
-            stackOut_128_0 = (RuntimeException) (Object) stackIn_128_0;
+            stackOut_128_0 = (RuntimeException) ((Object) stackIn_128_0);
             stackOut_128_1 = ((StringBuilder) (Object) stackIn_128_1).append(stackIn_128_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_131_0 = stackOut_128_0;
             stackIn_131_1 = stackOut_128_1;
             stackIn_129_0 = stackOut_128_0;
             stackIn_129_1 = stackOut_128_1;
             if (param5 == null) {
-              stackOut_131_0 = (RuntimeException) (Object) stackIn_131_0;
-              stackOut_131_1 = (StringBuilder) (Object) stackIn_131_1;
+              stackOut_131_0 = (RuntimeException) ((Object) stackIn_131_0);
+              stackOut_131_1 = (StringBuilder) ((Object) stackIn_131_1);
               stackOut_131_2 = "null";
               stackIn_132_0 = stackOut_131_0;
               stackIn_132_1 = stackOut_131_1;
               stackIn_132_2 = stackOut_131_2;
               break L32;
             } else {
-              stackOut_129_0 = (RuntimeException) (Object) stackIn_129_0;
-              stackOut_129_1 = (StringBuilder) (Object) stackIn_129_1;
+              stackOut_129_0 = (RuntimeException) ((Object) stackIn_129_0);
+              stackOut_129_1 = (StringBuilder) ((Object) stackIn_129_1);
               stackOut_129_2 = "{...}";
               stackIn_132_0 = stackOut_129_0;
               stackIn_132_1 = stackOut_129_1;
@@ -848,7 +867,16 @@ final class wo extends java.awt.Canvas {
               break L32;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_132_0, stackIn_132_2 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_132_0), stackIn_132_2 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -872,30 +900,30 @@ final class wo extends java.awt.Canvas {
         String stackOut_4_2 = null;
         try {
           L0: {
-            ((wo) this).field_a = param0;
+            this.field_a = param0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("wo.<init>(");
             stackIn_6_0 = stackOut_3_0;
             stackIn_6_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_7_0 = stackOut_4_0;
               stackIn_7_1 = stackOut_4_1;
@@ -903,7 +931,7 @@ final class wo extends java.awt.Canvas {
               break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
     }
 

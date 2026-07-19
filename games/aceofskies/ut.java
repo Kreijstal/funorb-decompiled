@@ -7,6 +7,12 @@ final class ut {
     static String field_b;
 
     public static void a(byte param0) {
+        if (param0 <= 104) {
+            field_c = (pa) null;
+            field_b = null;
+            field_c = null;
+            return;
+        }
         field_b = null;
         field_c = null;
     }
@@ -35,61 +41,62 @@ final class ut {
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
         var8 = AceOfSkies.field_G ? 1 : 0;
-        try {
-          L0: {
-            param0--;
-            L1: while (true) {
-              if (param0 < 0) {
-                break L0;
-              } else {
-                var9 = param2;
-                var5_array = var9;
-                var6 = param4;
-                var7 = param3;
-                var9[var6] = var7 + (pg.a(var9[var6], 16711422) >> 1);
-                param4++;
-                param0--;
-                continue L1;
-              }
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("ut.A(").append(param0).append(',').append(-96).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L2;
+        if (param1 == -96) {
+          param0--;
+          L0: while (true) {
+            if ((param0 ^ -1) > -1) {
+              return;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L2;
+              try {
+                L1: {
+                  var9 = param2;
+                  var5_array = var9;
+                  var6 = param4;
+                  var7 = param3;
+                  var9[var6] = var7 + (pg.a(var9[var6], 16711422) >> -646806271);
+                  param4++;
+                  param0--;
+                  break L1;
+                }
+              } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L2: {
+                  var5 = decompiledCaughtException;
+                  stackOut_8_0 = (RuntimeException) (var5);
+                  stackOut_8_1 = new StringBuilder().append("ut.A(").append(param0).append(',').append(param1).append(',');
+                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_1 = stackOut_8_1;
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  if (param2 == null) {
+                    stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+                    stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
+                    stackOut_10_2 = "null";
+                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_1 = stackOut_10_1;
+                    stackIn_11_2 = stackOut_10_2;
+                    break L2;
+                  } else {
+                    stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+                    stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+                    stackOut_9_2 = "{...}";
+                    stackIn_11_0 = stackOut_9_0;
+                    stackIn_11_1 = stackOut_9_1;
+                    stackIn_11_2 = stackOut_9_2;
+                    break L2;
+                  }
+                }
+                throw pn.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ',' + param4 + ')');
+              }
+              continue L0;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param3 + ',' + param4 + ')');
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "This game has been updated! Please reload this page.";
     }
 }

@@ -10,17 +10,15 @@ final class tg {
     static qr field_c;
 
     final static boolean a(int param0, int param1, byte param2, int param3) {
-        Object var5 = null;
+        bi var5 = null;
         if (param2 < -91) {
-          if (param1 < 0) {
-            return false;
-          } else {
-            if (param1 <= 11) {
-              if (param0 >= 1) {
-                if (oq.a((byte) -123, param3, param1) >= param0) {
-                  return true;
-                } else {
+          if (-1 >= (param1 ^ -1)) {
+            if ((param1 ^ -1) >= -12) {
+              if (-2 >= (param0 ^ -1)) {
+                if (oq.a((byte) -123, param3, param1) < param0) {
                   return false;
+                } else {
+                  return true;
                 }
               } else {
                 return false;
@@ -28,13 +26,15 @@ final class tg {
             } else {
               return false;
             }
+          } else {
+            return false;
           }
         } else {
-          var5 = null;
+          var5 = (bi) null;
           tg.a(-57, (bi) null, (byte) 36, -126);
-          if (param1 >= 0) {
-            if (param1 <= 11) {
-              if (param0 >= 1) {
+          if (-1 >= (param1 ^ -1)) {
+            if ((param1 ^ -1) >= -12) {
+              if (-2 >= (param0 ^ -1)) {
                 if (oq.a((byte) -123, param3, param1) < param0) {
                   return false;
                 } else {
@@ -56,10 +56,12 @@ final class tg {
         field_c = null;
         field_b = null;
         field_d = null;
-        int var1 = 2;
+        int var1 = 95 % ((param0 - -56) / 38);
     }
 
     final static void a(int param0, bi param1, byte param2, int param3) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -74,22 +76,22 @@ final class tg {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_30_2 = null;
+        String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
         RuntimeException stackOut_27_0 = null;
         StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -154,7 +156,7 @@ final class tg {
                     continue L5;
                   } else {
                     L7: {
-                      int incrementValue$2 = var9;
+                      incrementValue$2 = var9;
                       var9++;
                       var13 = 255 & param1.field_B[incrementValue$2];
                       if (var13 != 0) {
@@ -168,22 +170,20 @@ final class tg {
                             var14 = var14 & -16711936;
                             var15 = var15 * (256 - var13);
                             var15 = var15 & 16711680;
-                            var14 = (var14 | var15) >>> 8;
+                            var14 = (var14 | var15) >>> -1859049592;
                             var14 = var14 + var13 * 65793;
                             break L8;
                           } else {
-                            var14 = 8355711 & var14 >>> 1 | 8421504;
+                            var14 = 8355711 & var14 >>> 2105639873 | 8421504;
                             break L8;
                           }
                         }
-                        int incrementValue$3 = var11;
+                        incrementValue$3 = var11;
                         var11++;
                         gf.field_h[incrementValue$3] = var14;
-                        param3++;
                         break L7;
                       } else {
                         var11++;
-                        param3++;
                         break L7;
                       }
                     }
@@ -198,39 +198,35 @@ final class tg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var4 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var4;
-            stackOut_27_1 = new StringBuilder().append("tg.A(").append(param0).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackOut_25_0 = (RuntimeException) (var4);
+            stackOut_25_1 = new StringBuilder().append("tg.A(").append(param0).append(',');
+            stackIn_27_0 = stackOut_25_0;
+            stackIn_27_1 = stackOut_25_1;
+            stackIn_26_0 = stackOut_25_0;
+            stackIn_26_1 = stackOut_25_1;
             if (param1 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackOut_27_2 = "null";
+              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_1 = stackOut_27_1;
+              stackIn_28_2 = stackOut_27_2;
               break L9;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackOut_26_2 = "{...}";
+              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_1 = stackOut_26_1;
+              stackIn_28_2 = stackOut_26_2;
               break L9;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param2 + ',' + param3 + ')');
+          throw r.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new Random();
         field_d = new int[8192];
     }

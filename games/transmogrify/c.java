@@ -9,6 +9,9 @@ final class c {
     static boolean[] field_e;
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
+        if (param2 != -50) {
+            return;
+        }
         og.a((byte) 89);
         sb.g(param1, param4, param0, param3);
     }
@@ -25,10 +28,6 @@ final class c {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new boolean[64];
     }
 }

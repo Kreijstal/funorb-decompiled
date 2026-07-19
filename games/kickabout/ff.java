@@ -23,15 +23,11 @@ final class ff {
     }
 
     ff(int param0, int param1, int param2, int param3) {
-        ((ff) this).field_d = param3;
-        ((ff) this).field_a = param0;
+        this.field_d = param3;
+        this.field_a = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new ut(80, 10);
         field_c = "Withdraw request to join <%0>'s game";
     }

@@ -24,7 +24,7 @@ abstract class th {
         lr.field_k[21] = hea.field_t;
         lr.field_k[5] = ll.field_l;
         lr.field_k[6] = lp.field_t;
-        lr.field_k[25] = ch.field_q;
+        lr.field_k[param0] = ch.field_q;
         lr.field_k[18] = ja.field_q;
         lr.field_k[26] = si.field_c;
         lr.field_k[8] = null;
@@ -46,10 +46,6 @@ abstract class th {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "th.S(";
     }
 }

@@ -33,8 +33,8 @@ final class eg extends am {
           L0: {
             L1: {
               var4_int = param2;
-              if (var4_int == 0) {
-                ((eg) this).field_s = param0.i(7088);
+              if (-1 == (var4_int ^ -1)) {
+                this.field_s = param0.i(7088);
                 break L1;
               } else {
                 break L1;
@@ -54,23 +54,23 @@ final class eg extends am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_0 = (RuntimeException) (var4);
             stackOut_6_1 = new StringBuilder().append("eg.H(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -78,111 +78,119 @@ final class eg extends am {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public eg() {
         super(0, true);
-        ((eg) this).field_s = 585;
+        this.field_s = 585;
     }
 
     final static void a(int param0, int param1, fn param2, int param3, fn param4, boolean param5) {
-        RuntimeException var6 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
+        RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
         String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
-            hn.field_z = param1;
-            id.field_b = param4;
-            aq.field_b = param3;
-            ln.field_D = param0;
-            kc.field_x = param2;
+            L1: {
+              hn.field_z = param1;
+              id.field_b = param4;
+              aq.field_b = param3;
+              ln.field_D = param0;
+              kc.field_x = param2;
+              if (param5) {
+                break L1;
+              } else {
+                field_v = (la) null;
+                break L1;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var6 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var6;
-            stackOut_2_1 = new StringBuilder().append("eg.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
-            } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
-            }
-          }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(param3).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            if (param4 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
+            stackOut_3_1 = new StringBuilder().append("eg.A(").append(param0).append(',').append(param1).append(',');
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param2 == null) {
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + true + ')');
+          L3: {
+            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',').append(param3).append(',');
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param4 == null) {
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw rb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param5 + ')');
         }
     }
 
@@ -196,8 +204,6 @@ final class eg extends am {
         int[] var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
         int stackIn_12_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_25_0 = 0;
@@ -220,13 +226,11 @@ final class eg extends am {
           }
         }
         L1: {
-          var13 = ((eg) this).field_l.a(param1, 25657);
-          var12 = var13;
-          var11 = var12;
+          var11 = this.field_l.a(param1, 25657);
           var10 = var11;
           var9 = var10;
           var3 = var9;
-          if (!((eg) this).field_l.field_b) {
+          if (!this.field_l.field_b) {
             break L1;
           } else {
             var4 = dp.field_a[param1];
@@ -237,16 +241,16 @@ final class eg extends am {
               } else {
                 L3: {
                   var6 = q.field_b[var5];
-                  if (((eg) this).field_s >= var6) {
+                  if (this.field_s >= var6) {
                     break L3;
                   } else {
-                    if (var6 >= -((eg) this).field_s + 4096) {
+                    if (var6 >= -this.field_s + 4096) {
                       break L3;
                     } else {
-                      if (-((eg) this).field_s + 2048 >= var4) {
+                      if (-this.field_s + 2048 >= var4) {
                         break L3;
                       } else {
-                        if (2048 + ((eg) this).field_s <= var4) {
+                        if (2048 + this.field_s <= var4) {
                           break L3;
                         } else {
                           L4: {
@@ -265,7 +269,7 @@ final class eg extends am {
                           var9 = var3;
                           var7 = stackIn_12_0;
                           var7 = var7 << 12;
-                          var7 = var7 / (2048 + -((eg) this).field_s);
+                          var7 = var7 / (2048 + -this.field_s);
                           var9[var5] = -var7 + 4096;
                           var5++;
                           continue L2;
@@ -275,10 +279,10 @@ final class eg extends am {
                   }
                 }
                 L5: {
-                  if (var6 <= -((eg) this).field_s + 2048) {
+                  if (var6 <= -this.field_s + 2048) {
                     break L5;
                   } else {
-                    if (var6 >= 2048 + ((eg) this).field_s) {
+                    if (var6 >= 2048 + this.field_s) {
                       break L5;
                     } else {
                       L6: {
@@ -294,29 +298,29 @@ final class eg extends am {
                         }
                       }
                       var7 = stackIn_18_0;
-                      var7 = var7 - ((eg) this).field_s;
+                      var7 = var7 - this.field_s;
                       var7 = var7 << 12;
-                      var9[var5] = var7 / (2048 - ((eg) this).field_s);
+                      var9[var5] = var7 / (2048 - this.field_s);
                       var5++;
                       continue L2;
                     }
                   }
                 }
                 L7: {
-                  if (var4 < ((eg) this).field_s) {
+                  if (var4 < this.field_s) {
                     break L7;
                   } else {
-                    if (4096 + -((eg) this).field_s < var4) {
+                    if (4096 + -this.field_s < var4) {
                       break L7;
                     } else {
                       L8: {
-                        if (((eg) this).field_s > var6) {
+                        if (this.field_s > var6) {
                           break L8;
                         } else {
-                          if (var6 > -((eg) this).field_s + 4096) {
+                          if (var6 > -this.field_s + 4096) {
                             break L8;
                           } else {
-                            var13[var5] = 0;
+                            var11[var5] = 0;
                             var5++;
                             continue L2;
                           }
@@ -336,7 +340,7 @@ final class eg extends am {
                       }
                       var7 = stackIn_32_0;
                       var7 = var7 << 12;
-                      var7 = var7 / (-((eg) this).field_s + 2048);
+                      var7 = var7 / (-this.field_s + 2048);
                       var9[var5] = -var7 + 4096;
                       var5++;
                       continue L2;
@@ -345,7 +349,7 @@ final class eg extends am {
                 }
                 L10: {
                   var7 = var6 + -2048;
-                  if (var7 >= 0) {
+                  if (-1 >= (var7 ^ -1)) {
                     stackOut_24_0 = var7;
                     stackIn_25_0 = stackOut_24_0;
                     break L10;
@@ -356,9 +360,9 @@ final class eg extends am {
                   }
                 }
                 var7 = stackIn_25_0;
-                var7 = var7 - ((eg) this).field_s;
+                var7 = var7 - this.field_s;
                 var7 = var7 << 12;
-                var9[var5] = var7 / (-((eg) this).field_s + 2048);
+                var9[var5] = var7 / (-this.field_s + 2048);
                 var5++;
                 continue L2;
               }
@@ -371,7 +375,7 @@ final class eg extends am {
 
     public static void b(int param0) {
         if (param0 >= -17) {
-            field_t = null;
+            field_t = (la) null;
         }
         field_v = null;
         field_y = null;
@@ -379,10 +383,6 @@ final class eg extends am {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = "Achievements";
         field_u = 20000000L;
     }

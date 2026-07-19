@@ -16,16 +16,15 @@ final class hg {
 
     public static void a(int param0) {
         field_c = null;
+        if (param0 != -17525) {
+            return;
+        }
         field_a = null;
         field_b = null;
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[8192];
     }
 }

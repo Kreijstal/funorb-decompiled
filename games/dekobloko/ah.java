@@ -22,7 +22,14 @@ final class ah {
         field_i = null;
         field_c = null;
         field_f = null;
-        field_a = null;
+        if (param0 != 8) {
+          field_b = (boolean[]) null;
+          field_a = null;
+          return;
+        } else {
+          field_a = null;
+          return;
+        }
     }
 
     static {

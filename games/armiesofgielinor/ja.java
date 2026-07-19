@@ -10,23 +10,26 @@ final class ja extends tc {
     private int field_l;
 
     final void b(int param0, int param1, byte param2) {
-        ((ja) this).field_l = ((ja) this).field_l + 1;
-        ((ja) this).field_p = ((ja) this).field_p + param1;
+        this.field_l = this.field_l + 1;
+        this.field_p = this.field_p + param1;
         if (param2 <= 85) {
           return;
         } else {
-          ((ja) this).field_m = ((ja) this).field_m + param0;
+          this.field_m = this.field_m + param0;
           return;
         }
     }
 
     final void f(int param0) {
         int var2 = -56 % ((param0 - -48) / 43);
-        ((ja) this).field_k = true;
+        this.field_k = true;
     }
 
     final boolean a(int param0) {
-        Object var3 = null;
+        boolean discarded$6 = false;
+        int fieldTemp$7 = 0;
+        int fieldTemp$8 = 0;
+        jd var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -35,10 +38,10 @@ final class ja extends tc {
         int stackOut_2_0 = 0;
         if (param0 != -5) {
           L0: {
-            var3 = null;
-            boolean discarded$6 = ((ja) this).a((jd) null, 101);
-            int fieldTemp$7 = ((ja) this).field_n;
-            ((ja) this).field_n = ((ja) this).field_n + 1;
+            var3 = (jd) null;
+            discarded$6 = this.a((jd) null, 101);
+            fieldTemp$7 = this.field_n;
+            this.field_n = this.field_n + 1;
             if (40 <= fieldTemp$7) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
@@ -52,8 +55,8 @@ final class ja extends tc {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            int fieldTemp$8 = ((ja) this).field_n;
-            ((ja) this).field_n = ((ja) this).field_n + 1;
+            fieldTemp$8 = this.field_n;
+            this.field_n = this.field_n + 1;
             if (40 <= fieldTemp$8) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
@@ -69,15 +72,18 @@ final class ja extends tc {
     }
 
     final static boolean a(byte param0, int param1, int param2, int param3) {
-        return ej.b(13, param2, -14, param1);
+        if (param0 != -66) {
+            return false;
+        }
+        return ej.b(param3, param2, param0 ^ 76, param1);
     }
 
     final boolean a(byte param0) {
         if (param0 <= 123) {
-            ((ja) this).b(82, 19, (byte) 40);
-            return ((ja) this).field_k;
+            this.b(82, 19, (byte) 40);
+            return this.field_k;
         }
-        return ((ja) this).field_k;
+        return this.field_k;
     }
 
     final boolean a(int param0, ja param1) {
@@ -112,8 +118,8 @@ final class ja extends tc {
             L1: {
               var3_int = param1.field_m / param1.field_l;
               var4 = param1.field_p / param1.field_l;
-              var5 = ((ja) this).field_m / ((ja) this).field_l;
-              var6 = ((ja) this).field_p / ((ja) this).field_l;
+              var5 = this.field_m / this.field_l;
+              var6 = this.field_p / this.field_l;
               var7 = -var5 + var3_int;
               var7 = var7 * var7;
               var8 = -var6 + var4;
@@ -121,7 +127,7 @@ final class ja extends tc {
               if (param0 == -5) {
                 break L1;
               } else {
-                ((ja) this).field_n = -4;
+                this.field_n = -4;
                 break L1;
               }
             }
@@ -139,10 +145,10 @@ final class ja extends tc {
                   }
                 }
                 L5: {
-                  if (var7 >= 25) {
+                  if (-26 >= (var7 ^ -1)) {
                     break L5;
                   } else {
-                    if (var8 >= 4) {
+                    if (-5 >= (var8 ^ -1)) {
                       break L5;
                     } else {
                       break L3;
@@ -163,23 +169,23 @@ final class ja extends tc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_0 = (RuntimeException) (var3);
             stackOut_11_1 = new StringBuilder().append("ja.C(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L6;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -187,14 +193,15 @@ final class ja extends tc {
               break L6;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
         return stackIn_10_0 != 0;
     }
 
     final boolean a(jd param0, int param1) {
+        boolean discarded$2 = false;
         RuntimeException var3 = null;
-        Object var4 = null;
+        ja var4 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -219,12 +226,12 @@ final class ja extends tc {
               if (param1 == -4977) {
                 break L1;
               } else {
-                var4 = null;
-                boolean discarded$2 = ((ja) this).a(114, (ja) null);
+                var4 = (ja) null;
+                discarded$2 = this.a(114, (ja) null);
                 break L1;
               }
             }
-            stackOut_2_0 = ((ja) this).a(param0.field_J, param0.field_w, (byte) -95);
+            stackOut_2_0 = this.a(param0.field_J, param0.field_w, (byte) -95);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -232,23 +239,23 @@ final class ja extends tc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ja.D(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -256,7 +263,7 @@ final class ja extends tc {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -266,18 +273,19 @@ final class ja extends tc {
             return;
         }
         try {
-            ((ja) this).b(param1.field_J, param1.field_w, (byte) 108);
+            this.b(param1.field_J, param1.field_w, (byte) 108);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ja.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "ja.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean a(int param0, int param1, byte param2) {
+        boolean discarded$2 = false;
         int var4 = 0;
         int var5 = 0;
-        var4 = ((ja) this).field_m / ((ja) this).field_l;
+        var4 = this.field_m / this.field_l;
         if (param2 < -27) {
-          var5 = ((ja) this).field_p / ((ja) this).field_l;
+          var5 = this.field_p / this.field_l;
           if (param0 >= -2 + var4) {
             if (var5 - 2 <= param1) {
               if (2 + var4 >= param0) {
@@ -296,8 +304,8 @@ final class ja extends tc {
             return false;
           }
         } else {
-          boolean discarded$2 = ((ja) this).a((byte) 97);
-          var5 = ((ja) this).field_p / ((ja) this).field_l;
+          discarded$2 = this.a((byte) 97);
+          var5 = this.field_p / this.field_l;
           if (param0 >= -2 + var4) {
             if (var5 - 2 <= param1) {
               if (2 + var4 >= param0) {
@@ -335,6 +343,7 @@ final class ja extends tc {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
@@ -350,41 +359,43 @@ final class ja extends tc {
           L0: {
             var3_int = param1.field_m / param1.field_l;
             var4 = param1.field_p / param1.field_l;
-            var5 = ((ja) this).field_m / ((ja) this).field_l;
+            var5 = this.field_m / this.field_l;
             if (param0 == 2) {
-              var6 = ((ja) this).field_p / ((ja) this).field_l;
+              var6 = this.field_p / this.field_l;
               var7 = var3_int + -var5;
               var8 = -var6 + var4;
               stackOut_3_0 = var8 * var8 + var7 * var7;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = -59;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("ja.E(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -392,16 +403,20 @@ final class ja extends tc {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final int a(int param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
-        var3 = ((ja) this).field_m / ((ja) this).field_l;
-        var4 = ((ja) this).field_p / ((ja) this).field_l;
+        var3 = this.field_m / this.field_l;
+        var4 = this.field_p / this.field_l;
         if (param1 >= -23) {
           return -50;
         } else {
@@ -411,30 +426,26 @@ final class ja extends tc {
 
     public static void e(int param0) {
         field_o = null;
-        int var1 = 0;
+        int var1 = 107 % ((param0 - -36) / 54);
     }
 
     ja(jd param0) {
         try {
-            ((ja) this).field_l = 1;
-            ((ja) this).field_p = param0.field_w;
-            ((ja) this).field_m = param0.field_J;
+            this.field_l = 1;
+            this.field_p = param0.field_w;
+            this.field_m = param0.field_J;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "ja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     ja(int param0, int param1) {
-        ((ja) this).field_m = param0;
-        ((ja) this).field_l = 1;
-        ((ja) this).field_p = param1;
+        this.field_m = param0;
+        this.field_l = 1;
+        this.field_p = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Spells to harm a single unit.";
     }
 }

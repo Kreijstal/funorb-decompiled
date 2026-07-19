@@ -16,6 +16,7 @@ final class wg implements ir {
     }
 
     public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -72,18 +73,18 @@ final class wg implements ir {
               break L2;
             }
             var6_int = stackIn_7_0;
-            int discarded$1 = ((wg) this).field_a.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_f + "</u>", param3.field_p + param2, param3.field_h + param4, param3.field_q, param3.field_n, var6_int, -1, ((wg) this).field_e, ((wg) this).field_d, ((wg) this).field_a.field_I + ((wg) this).field_a.field_D);
+            discarded$1 = this.field_a.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_f + "</u>", param3.field_p + param2, param3.field_h + param4, param3.field_q, param3.field_n, var6_int, -1, this.field_e, this.field_d, this.field_a.field_I + this.field_a.field_D);
             if (param3.e(param1 + 36252)) {
               L4: {
-                var7 = ((wg) this).field_a.a(param3.field_f);
-                var8 = ((wg) this).field_a.field_D + ((wg) this).field_a.field_I;
+                var7 = this.field_a.a(param3.field_f);
+                var8 = this.field_a.field_D + this.field_a.field_I;
                 var9 = param3.field_p + param2;
                 var10 = param3.field_h + param4;
-                if (((wg) this).field_e != 2) {
-                  if (1 != ((wg) this).field_e) {
+                if (-3 != (this.field_e ^ -1)) {
+                  if (1 != this.field_e) {
                     break L4;
                   } else {
-                    var9 = var9 + (-var7 + param3.field_q >> 1);
+                    var9 = var9 + (-var7 + param3.field_q >> 1673308225);
                     break L4;
                   }
                 } else {
@@ -92,9 +93,9 @@ final class wg implements ir {
                 }
               }
               L5: {
-                if (((wg) this).field_d != 2) {
-                  if (1 == ((wg) this).field_d) {
-                    var10 = var10 + (-var8 + param3.field_n >> 1);
+                if (this.field_d != 2) {
+                  if (1 == this.field_d) {
+                    var10 = var10 + (-var8 + param3.field_n >> 1956029377);
                     break L5;
                   } else {
                     break L5;
@@ -114,23 +115,23 @@ final class wg implements ir {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var6;
+            stackOut_20_0 = (RuntimeException) (var6);
             stackOut_20_1 = new StringBuilder().append("wg.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param3 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -138,31 +139,27 @@ final class wg implements ir {
               break L6;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param4 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param4 + ')');
         }
     }
 
     public wg() {
-        ((wg) this).field_a = qo.field_b;
-        ((wg) this).field_d = 1;
-        ((wg) this).field_e = 1;
+        this.field_a = qo.field_b;
+        this.field_d = 1;
+        this.field_e = 1;
     }
 
     wg(hc param0, int param1, int param2) {
         try {
-            ((wg) this).field_d = param2;
-            ((wg) this).field_e = param1;
-            ((wg) this).field_a = param0;
+            this.field_d = param2;
+            this.field_e = param1;
+            this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "gun_overheat";
     }
 }

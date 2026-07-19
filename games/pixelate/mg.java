@@ -13,17 +13,18 @@ abstract class mg extends hn implements hi {
         field_g = null;
         field_h = null;
         field_k = null;
-        int var1 = -28;
+        int var1 = 57 / ((-8 - param0) / 42);
     }
 
     abstract String a(int param0, String param1);
 
     final String c(int param0) {
+        boolean discarded$2 = false;
         if (param0 != -1) {
-          boolean discarded$2 = ((mg) this).a(10);
-          return ((mg) this).a(-128, ((mg) this).field_j.field_q);
+          discarded$2 = this.a(10);
+          return this.a(-128, this.field_j.field_q);
         } else {
-          return ((mg) this).a(-128, ((mg) this).field_j.field_q);
+          return this.a(-128, this.field_j.field_q);
         }
     }
 
@@ -31,8 +32,8 @@ abstract class mg extends hn implements hi {
         int stackIn_5_0 = 0;
         int stackOut_3_0 = 0;
         if (param0 == -22265) {
-          if (null != ((mg) this).field_j.field_q) {
-            if (((mg) this).field_j.field_q.length() == 0) {
+          if (null != this.field_j.field_q) {
+            if (this.field_j.field_q.length() == 0) {
               return true;
             } else {
               return false;
@@ -51,10 +52,10 @@ abstract class mg extends hn implements hi {
 
     public final void a(int param0, c param1) {
         try {
-            ((mg) this).b(2048);
+            this.b(2048);
             int var3_int = -22 % ((-30 - param0) / 60);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "mg.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "mg.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -92,23 +93,23 @@ abstract class mg extends hn implements hi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("mg.H(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -116,34 +117,31 @@ abstract class mg extends hn implements hi {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     final dj a(boolean param0) {
-        Object var3 = null;
+        String discarded$2 = null;
+        String var3 = null;
         if (!param0) {
-          var3 = null;
-          String discarded$2 = ((mg) this).a(17, (String) null);
-          return ((mg) this).a(((mg) this).field_j.field_q, param0);
+          var3 = (String) null;
+          discarded$2 = this.a(17, (String) null);
+          return this.a(this.field_j.field_q, param0);
         } else {
-          return ((mg) this).a(((mg) this).field_j.field_q, param0);
+          return this.a(this.field_j.field_q, param0);
         }
     }
 
     mg(c param0) {
         try {
-            ((mg) this).field_j = param0;
+            this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "mg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Shortcut Reference";
         field_k = "Options Menu";
     }

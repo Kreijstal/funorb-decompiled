@@ -13,23 +13,23 @@ final class m {
         var3 = var3.trim();
         int var4 = -84 % ((-28 - param1) / 46);
         var3 = var3.toLowerCase();
-        if (!(!var3.equals((Object) (Object) "anything"))) {
+        if (!(!var3.equals("anything"))) {
             return -1;
         }
-        return ((ji) (Object) cw.field_zb.a(true, (long)var3.hashCode())).field_h;
+        return ((ji) ((Object) cw.field_zb.a(true, (long)var3.hashCode()))).field_h;
     }
 
     public static void a(byte param0) {
+        int discarded$0 = 0;
         field_a = null;
         field_c = null;
         field_b = null;
+        if (param0 < 67) {
+            discarded$0 = m.a(65, (byte) -106, 41);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "***Disarmed!***";
         field_a = new Random();
     }

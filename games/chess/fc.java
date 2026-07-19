@@ -11,6 +11,9 @@ final class fc {
 
     public static void a(int param0) {
         field_c = null;
+        if (param0 != -29306) {
+            return;
+        }
         field_b = null;
         field_d = null;
         field_e = null;
@@ -18,10 +21,6 @@ final class fc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fc.A(";
         field_b = "<%0> might change the options - wait and see.";
         field_a = "Age:";

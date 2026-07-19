@@ -14,10 +14,6 @@ final class mj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mj.A(";
         field_a = "Open in popup window";
     }

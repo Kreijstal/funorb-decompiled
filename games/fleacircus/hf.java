@@ -15,6 +15,9 @@ final class hf {
 
     public static void a(int param0) {
         field_g = null;
+        if (param0 >= -105) {
+            return;
+        }
         field_d = null;
         field_f = null;
         field_e = null;
@@ -66,7 +69,7 @@ final class hf {
                 var4 = -38 % ((-19 - param0) / 39);
                 param2 = uj.a('_', param2, 1, "");
                 var3 = rk.a(param1, 5);
-                if (param2.indexOf(param1) != -1) {
+                if ((param2.indexOf(param1) ^ -1) != 0) {
                   break L2;
                 } else {
                   if (param2.indexOf(var3) == -1) {
@@ -88,23 +91,23 @@ final class hf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3_ref;
+            stackOut_6_0 = (RuntimeException) (var3_ref);
             stackOut_6_1 = new StringBuilder().append("hf.B(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -113,23 +116,23 @@ final class hf {
             }
           }
           L4: {
-            stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+            stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
             stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -137,17 +140,18 @@ final class hf {
               break L4;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw pf.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
+            boolean discarded$2 = false;
             java.net.URL var2 = null;
             Exception var2_ref = null;
             RuntimeException var2_ref2 = null;
-            Object var3 = null;
+            String var3 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
@@ -171,8 +175,8 @@ final class hf {
                     if (param1 < -5) {
                       break L1;
                     } else {
-                      var3 = null;
-                      boolean discarded$2 = hf.a((byte) 119, (String) null, (String) null);
+                      var3 = (String) null;
+                      discarded$2 = hf.a((byte) 119, (String) null, (String) null);
                       break L1;
                     }
                   }
@@ -191,23 +195,23 @@ final class hf {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_0 = (RuntimeException) (var2_ref2);
                 stackOut_6_1 = new StringBuilder().append("hf.A(");
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param0 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
@@ -215,7 +219,7 @@ final class hf {
                   break L2;
                 }
               }
-              throw pf.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+              throw pf.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -225,10 +229,6 @@ final class hf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new wk[3];
         field_f = "At the bottom of the screen, there are counters showing how many fleas are currently in the level, and how many you need to save. On some levels, you must save all the fleas; on other levels, only some must be saved.";
         field_h = new fh(7, 0, 1, 1);

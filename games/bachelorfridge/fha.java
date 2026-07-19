@@ -8,7 +8,7 @@ final class fha extends at {
     private kj field_l;
 
     public static void d(byte param0) {
-        field_j = null;
+        field_j = (String[][]) null;
         field_k = null;
         if (param0 == 9) {
             return;
@@ -20,15 +20,15 @@ final class fha extends at {
         int var2 = 0;
         L0: {
           var2 = 40 % ((71 - param0) / 47);
-          if (0 == ((fha) this).field_m) {
-            ((fha) this).field_l.a(0);
+          if (0 == this.field_m) {
+            this.field_l.a(0);
             break L0;
           } else {
             break L0;
           }
         }
-        int fieldTemp$2 = ((fha) this).field_m + 1;
-        ((fha) this).field_m = ((fha) this).field_m + 1;
+        int fieldTemp$2 = this.field_m + 1;
+        this.field_m = this.field_m + 1;
         if (fieldTemp$2 >= this.d(-18093)) {
           this.e(1);
           return true;
@@ -63,14 +63,14 @@ final class fha extends at {
             L1: {
               uka.field_i[0] = ia.field_k.nextInt();
               uka.field_i[1] = ia.field_k.nextInt();
-              dm.field_g.field_g = 0;
+              dm.field_g.field_g = param1;
               uka.field_i[3] = (int)bi.field_j;
-              uka.field_i[2] = (int)(bi.field_j >> 32);
-              dm.field_g.e(uka.field_i[0], -1615464796);
-              dm.field_g.e(uka.field_i[1], -1615464796);
+              uka.field_i[2] = (int)(bi.field_j >> 1977964704);
+              dm.field_g.e(uka.field_i[0], param1 + -1615464796);
+              dm.field_g.e(uka.field_i[1], param1 + -1615464796);
               dm.field_g.e(uka.field_i[2], -1615464796);
               dm.field_g.e(uka.field_i[3], -1615464796);
-              qja.b(24, dm.field_g);
+              qja.b(param1 ^ 24, dm.field_g);
               dm.field_g.b(param0, -125);
               param2.a(dm.field_g, false);
               sja.field_fb.field_g = 0;
@@ -78,15 +78,15 @@ final class fha extends at {
                 sja.field_fb.d(16, 0);
                 break L1;
               } else {
-                sja.field_fb.d(18, 0);
+                sja.field_fb.d(18, param1 ^ 0);
                 break L1;
               }
             }
             L2: {
               sja.field_fb.field_g = sja.field_fb.field_g + 2;
               var5_int = sja.field_fb.field_g;
-              sja.field_fb.e(cp.field_c, -1615464796);
-              sja.field_fb.b(1686281208, vi.field_a);
+              sja.field_fb.e(cp.field_c, param1 + -1615464796);
+              sja.field_fb.b(param1 + 1686281208, vi.field_a);
               var6 = 0;
               if (vs.field_c) {
                 var6 = var6 | 1;
@@ -121,7 +121,7 @@ final class fha extends at {
             }
             L6: {
               sja.field_fb.d(var6, 0);
-              var7 = pi.a(11713, nia.d(-31768));
+              var7 = pi.a(11713, nia.d(param1 + -31768));
               if (var7 != null) {
                 break L6;
               } else {
@@ -138,7 +138,7 @@ final class fha extends at {
                 break L7;
               }
             }
-            wd.a(sm.field_q, (byte) -126, (lu) (Object) sja.field_fb, dm.field_g, tg.field_p);
+            wd.a(sm.field_q, (byte) -126, sja.field_fb, dm.field_g, tg.field_p);
             sja.field_fb.a((byte) -88, sja.field_fb.field_g + -var5_int);
             hna.a(-1, 85);
             break L0;
@@ -147,23 +147,23 @@ final class fha extends at {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var5;
-            stackOut_21_1 = new StringBuilder().append("fha.F(").append(param0).append(',').append(0).append(',');
+            stackOut_21_0 = (RuntimeException) (var5);
+            stackOut_21_1 = new StringBuilder().append("fha.F(").append(param0).append(',').append(param1).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param2 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -171,22 +171,29 @@ final class fha extends at {
               break L8;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     private final void e(int param0) {
+        if (param0 == 1) {
+            return;
+        }
+        this.field_l = (kj) null;
     }
 
     private final int d(int param0) {
+        if (param0 != -18093) {
+            return -20;
+        }
         return 10;
     }
 
     fha(kj param0) {
         try {
-            ((fha) this).field_l = param0;
+            this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "fha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "fha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -207,22 +214,30 @@ final class fha extends at {
         var18 = BachelorFridge.field_y;
         try {
           L0: {
-            var12 = cr.a(an.field_q, param7, ha.field_n, 0);
-            var13 = cr.a(an.field_q, param2, ha.field_n, 0);
-            var14 = cr.a(eo.field_l, param4, pw.field_x, 0);
+            L1: {
+              var12 = cr.a(an.field_q, param7, ha.field_n, 0);
+              var13 = cr.a(an.field_q, param2, ha.field_n, 0);
+              var14 = cr.a(eo.field_l, param4, pw.field_x, 0);
+              if (param1 >= 43) {
+                break L1;
+              } else {
+                field_j = (String[][]) null;
+                break L1;
+              }
+            }
             var15 = cr.a(eo.field_l, param0, pw.field_x, 0);
             var8_int = cr.a(an.field_q, param6 + param7, ha.field_n, 0);
             var9 = cr.a(an.field_q, param2 - param6, ha.field_n, 0);
             var16 = var12;
-            L1: while (true) {
+            L2: while (true) {
               if (var8_int <= var16) {
                 var16 = var13;
-                L2: while (true) {
+                L3: while (true) {
                   if (var16 <= var9) {
                     var10 = cr.a(eo.field_l, param6 + param4, pw.field_x, 0);
                     var11 = cr.a(eo.field_l, param0 - param6, pw.field_x, 0);
                     var16 = var8_int;
-                    L3: while (true) {
+                    L4: while (true) {
                       if (var9 < var16) {
                         break L0;
                       } else {
@@ -231,34 +246,30 @@ final class fha extends at {
                         hba.a(param5, var10, var22, 7, var11);
                         hba.a(param3, var11, var22, 7, var15);
                         var16++;
-                        continue L3;
+                        continue L4;
                       }
                     }
                   } else {
                     hba.a(param3, var14, tj.field_b[var16], 7, var15);
                     var16--;
-                    continue L2;
+                    continue L3;
                   }
                 }
               } else {
                 hba.a(param3, var14, tj.field_b[var16], 7, var15);
                 var16++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var8, "fha.C(" + param0 + ',' + 127 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw pe.a((Throwable) ((Object) var8), "fha.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "Names can only contain letters, numbers, spaces and underscores";
     }
 }

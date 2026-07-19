@@ -14,18 +14,39 @@ final class ta {
     static boolean field_d;
 
     final static int a(boolean param0, int param1) {
-        int var2 = 7 & 6 + param1;
-        if (0 != var2) {
+        int var2 = 0;
+        var2 = 7 & 6 + param1;
+        if (param0) {
+          if (0 != var2) {
             if (var2 > 5) {
-                return 3;
+              return 3;
+            } else {
+              return 2;
             }
-            return 2;
+          } else {
+            return 5;
+          }
+        } else {
+          field_b = true;
+          if (0 != var2) {
+            if (var2 > 5) {
+              return 3;
+            } else {
+              return 2;
+            }
+          } else {
+            return 5;
+          }
         }
-        return 5;
     }
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != 5) {
+            field_e = -50;
+            field_i = null;
+            return;
+        }
         field_i = null;
     }
 
@@ -34,10 +55,6 @@ final class ta {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = 0;
         field_a = "You need to play 1 more rated game to unlock this option.";
     }

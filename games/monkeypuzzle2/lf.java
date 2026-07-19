@@ -9,13 +9,17 @@ final class lf {
     static volatile int field_a;
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param5 <= param1) {
-          if (param5 + param4 > param1) {
-            if (param6 <= param2) {
-              if (param6 - -param3 <= param2) {
-                return false;
+        if (param0 == -19864) {
+          if (param5 <= param1) {
+            if (param5 + param4 > param1) {
+              if (param6 <= param2) {
+                if (param6 - -param3 <= param2) {
+                  return false;
+                } else {
+                  return true;
+                }
               } else {
-                return true;
+                return false;
               }
             } else {
               return false;
@@ -37,14 +41,15 @@ final class lf {
             int stackIn_26_0 = 0;
             int stackIn_31_0 = 0;
             int stackIn_35_0 = 0;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             int stackOut_13_0 = 0;
-            int stackOut_30_0 = 0;
             int stackOut_25_0 = 0;
+            int stackOut_30_0 = 0;
             int stackOut_34_0 = 0;
             if (4 <= lg.field_n.field_b) {
               if (-1 != lg.field_n.field_a) {
-                if (lg.field_n.field_a == -2) {
+                if (1 == (lg.field_n.field_a ^ -1)) {
                   return 4;
                 } else {
                   return 1;
@@ -71,9 +76,10 @@ final class lf {
                       if (2 == kd.field_a.field_g) {
                         stackOut_13_0 = dh.a(true, -1);
                         stackIn_14_0 = stackOut_13_0;
-                        return stackIn_14_0;
+                        decompiledRegionSelector0 = 0;
+                        break L0;
                       } else {
-                        if (kd.field_a.field_g != 1) {
+                        if ((kd.field_a.field_g ^ -1) != -2) {
                           break L2;
                         } else {
                           ii.field_T = ii.field_T + 1;
@@ -84,11 +90,11 @@ final class lf {
                   }
                   L3: {
                     if (ii.field_T == 2) {
-                      pg.field_a = new id((java.net.Socket) kd.field_a.field_b, rk.field_g);
+                      pg.field_a = new id((java.net.Socket) (kd.field_a.field_b), rk.field_g);
                       var2 = new gk(13);
                       qi.a(fl.field_d, var2, fa.field_q, false, rb.field_eb);
                       var2.b(15, -49152);
-                      var2.a(-803539344, mk.field_f);
+                      var2.a(param0 + -803539347, mk.field_f);
                       pg.field_a.a(var2.field_g, 0, (byte) 93, 13);
                       ii.field_T = ii.field_T + 1;
                       wi.field_f = 30000L + pf.a(0);
@@ -98,37 +104,47 @@ final class lf {
                     }
                   }
                   L4: {
-                    if (ii.field_T == 3) {
-                      if (pg.field_a.c(72) <= 0) {
-                        if (wi.field_f < pf.a(0)) {
-                          stackOut_30_0 = dh.a(true, -2);
-                          stackIn_31_0 = stackOut_30_0;
-                          return stackIn_31_0;
+                    if (ii.field_T == param0) {
+                      L5: {
+                        if ((pg.field_a.c(72) ^ -1) >= -1) {
+                          break L5;
                         } else {
-                          break L4;
+                          var1_int = pg.field_a.a(-16840);
+                          if (0 != var1_int) {
+                            stackOut_25_0 = dh.a(true, var1_int);
+                            stackIn_26_0 = stackOut_25_0;
+                            decompiledRegionSelector0 = 1;
+                            break L0;
+                          } else {
+                            ii.field_T = ii.field_T + 1;
+                            if (!MonkeyPuzzle2.field_F) {
+                              break L4;
+                            } else {
+                              break L5;
+                            }
+                          }
                         }
+                      }
+                      if (wi.field_f < pf.a(param0 ^ 3)) {
+                        stackOut_30_0 = dh.a(true, -2);
+                        stackIn_31_0 = stackOut_30_0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       } else {
-                        var1_int = pg.field_a.a(-16840);
-                        if (0 != var1_int) {
-                          stackOut_25_0 = dh.a(true, var1_int);
-                          stackIn_26_0 = stackOut_25_0;
-                          return stackIn_26_0;
-                        } else {
-                          ii.field_T = ii.field_T + 1;
-                          break L4;
-                        }
+                        break L4;
                       }
                     } else {
                       break L4;
                     }
                   }
-                  if (ii.field_T == 4) {
-                    lg.field_n.a(-105, jf.field_i, (Object) (Object) pg.field_a);
+                  if ((ii.field_T ^ -1) == -5) {
+                    lg.field_n.a(-105, jf.field_i, pg.field_a);
                     kd.field_a = null;
                     pg.field_a = null;
                     ii.field_T = 0;
                     stackOut_34_0 = 0;
                     stackIn_35_0 = stackOut_34_0;
+                    decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
                     return -1;
@@ -139,7 +155,19 @@ final class lf {
                 var1 = (IOException) (Object) decompiledCaughtException;
                 return dh.a(true, -3);
               }
-              return stackIn_35_0;
+              if (decompiledRegionSelector0 == 0) {
+                return stackIn_14_0;
+              } else {
+                if (decompiledRegionSelector0 == 1) {
+                  return stackIn_26_0;
+                } else {
+                  if (decompiledRegionSelector0 == 2) {
+                    return stackIn_31_0;
+                  } else {
+                    return stackIn_35_0;
+                  }
+                }
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -149,21 +177,29 @@ final class lf {
     }
 
     final static void a(int param0, int param1) {
-        hb var2 = gf.field_c;
-        var2.b(true, 6);
+        hb var2 = null;
+        var2 = gf.field_c;
+        var2.b(true, param1);
         var2.b(1, -49152);
-        var2.b(0, -49152);
+        var2.b(0, param0 + -74349);
+        if (param0 != 25197) {
+          field_a = -114;
+          return;
+        } else {
+          return;
+        }
     }
 
     public static void a(boolean param0) {
+        if (param0) {
+            field_b = (String) null;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "More suggestions";
         field_a = 0;
     }

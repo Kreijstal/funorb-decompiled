@@ -7,7 +7,10 @@ final class fd {
     int field_c;
 
     final static gj b(byte param0) {
-        return (gj) (Object) new fg();
+        if (param0 != 108) {
+            return (gj) null;
+        }
+        return (gj) ((Object) new fg());
     }
 
     public final String toString() {
@@ -19,33 +22,50 @@ final class fd {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (ib.field_f != null) {
-          var1 = (Object) (Object) ib.field_f;
+          var1 = ib.field_f;
           synchronized (var1) {
             L0: {
               ib.field_f = null;
               break L0;
             }
           }
+          L1: {
+            if (param0 >= 24) {
+              break L1;
+            } else {
+              field_a = (String) null;
+              break L1;
+            }
+          }
           return;
         } else {
+          L2: {
+            if (param0 >= 24) {
+              break L2;
+            } else {
+              field_a = (String) null;
+              break L2;
+            }
+          }
           return;
         }
     }
 
     public static void a(byte param0) {
         field_b = null;
+        if (param0 < 18) {
+            fd.a(-49);
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     fd(int param0) {
-        ((fd) this).field_c = param0;
+        this.field_c = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "How will you style yourself?";
     }
 }

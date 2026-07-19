@@ -12,6 +12,9 @@ final class ue {
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
+        if (param0 != -114) {
+            return;
+        }
         field_f = null;
     }
 
@@ -27,10 +30,6 @@ final class ue {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = 0;
         field_b = new int[29];
         field_f = "Play free version";

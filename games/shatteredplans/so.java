@@ -29,6 +29,7 @@ final class so extends qe {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
@@ -42,7 +43,7 @@ final class so extends qe {
           L0: {
             L1: {
               var4_int = param1 + gf.field_b * param2;
-              var5 = 0;
+              var5 = param0;
               var6 = param3.field_w;
               var7 = param3.field_z;
               var8 = -var7 + gf.field_b;
@@ -98,34 +99,36 @@ final class so extends qe {
                 if (var6 <= 0) {
                   break L5;
                 } else {
-                  ge.a(param3.field_B, var5, gf.field_h, 0, -28646, var7, var4_int, var9, var6, var8);
+                  ge.a(param3.field_B, var5, gf.field_h, 0, param0 + -28646, var7, var4_int, var9, var6, var8);
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var4;
-            stackOut_14_1 = new StringBuilder().append("so.B(").append(0).append(',').append(param1).append(',').append(param2).append(',');
+            stackOut_14_0 = (RuntimeException) (var4);
+            stackOut_14_1 = new StringBuilder().append("so.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param3 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -133,7 +136,12 @@ final class so extends qe {
               break L6;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -141,7 +149,7 @@ final class so extends qe {
         dn.field_k = null;
         wf.a(-15887);
         param13 = ak.a(true, param7, param5, param13, param8, param10, param9);
-        fb.a(param13, param11, param10, 16777215, param12, param6, param4, param3, true, 0);
+        fb.a(param13, param11, param10, param2, param12, param6, param4, param3, param1, param0 + param0);
         pf.a(param12, param11, -1043);
         cc.a(-115, param7, param12, param13);
     }
@@ -152,9 +160,13 @@ final class so extends qe {
         field_q = null;
         field_v = null;
         field_r = null;
+        if (param0 != 2) {
+            field_o = -40;
+        }
     }
 
     final static String[] a(String param0, char param1, int param2) {
+        int incrementValue$2 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;
@@ -185,7 +197,7 @@ final class so extends qe {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            var10 = (CharSequence) (Object) param0;
+            var10 = (CharSequence) ((Object) param0);
             var3_int = ak.a(-116, var10, param1);
             var4 = new String[var3_int + 1];
             var5 = 0;
@@ -195,14 +207,14 @@ final class so extends qe {
               if (var3_int <= var7) {
                 var7 = -81 % ((param2 - -33) / 57);
                 var4[var3_int] = param0.substring(var6);
-                stackOut_7_0 = (String[]) var4;
+                stackOut_7_0 = (String[]) (var4);
                 stackIn_8_0 = stackOut_7_0;
                 break L0;
               } else {
                 var8 = var6;
                 L2: while (true) {
                   if (param1 == param0.charAt(var8)) {
-                    int incrementValue$2 = var5;
+                    incrementValue$2 = var5;
                     var5++;
                     var4[incrementValue$2] = param0.substring(var6, var8);
                     var6 = var8 - -1;
@@ -220,23 +232,23 @@ final class so extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("so.A(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -244,7 +256,7 @@ final class so extends qe {
               break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_8_0;
     }
@@ -253,23 +265,19 @@ final class so extends qe {
         double var2_double = 0.0;
         int var4 = 0;
         try {
-            ((so) this).field_h = param0;
-            ((so) this).field_i = rp.a(96, pd.field_m, 0);
+            this.field_h = param0;
+            this.field_i = rp.a(96, pd.field_m, 0);
             var2_double = Math.random() * 3.141592653589793 * 2.0;
             var4 = 16384 + vc.a((byte) -39, 16384);
-            ((so) this).field_p = (int)((double)var4 * Math.sin(var2_double));
-            ((so) this).field_n = (int)(Math.cos(var2_double) * (double)var4);
-            ((so) this).field_u = 0;
+            this.field_p = (int)((double)var4 * Math.sin(var2_double));
+            this.field_n = (int)(Math.cos(var2_double) * (double)var4);
+            this.field_u = 0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "so.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "so.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = "Show game chat from my friends";
         field_m = 0;
     }

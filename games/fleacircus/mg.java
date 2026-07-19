@@ -23,11 +23,12 @@ final class mg {
     }
 
     final static void a(int param0) {
+        int discarded$0 = 0;
         nf.field_M = mi.c((byte) 105);
         nb.field_a = new f();
         wa.a(true, true, 30);
         if (param0 >= -53) {
-            int discarded$0 = mg.a(true, 123, -100, 21);
+            discarded$0 = mg.a(true, 123, -100, 21);
         }
     }
 
@@ -36,6 +37,7 @@ final class mg {
 
     final void a(byte param0, byte[] param1, ni param2) {
         try {
+            int discarded$2 = 0;
             Exception exception = null;
             RuntimeException runtimeException = null;
             int var4_int = 0;
@@ -76,12 +78,12 @@ final class mg {
                   if (param2.field_k[param2.field_i] != 31) {
                     break L1;
                   } else {
-                    if (param2.field_k[param2.field_i + 1] != -117) {
+                    if (116 != (param2.field_k[param2.field_i + 1] ^ -1)) {
                       break L1;
                     } else {
                       L2: {
-                        if (((mg) this).field_c == null) {
-                          ((mg) this).field_c = new java.util.zip.Inflater(true);
+                        if (this.field_c == null) {
+                          this.field_c = new java.util.zip.Inflater(true);
                           break L2;
                         } else {
                           break L2;
@@ -90,17 +92,17 @@ final class mg {
                       var4_int = 84 % ((-67 - param0) / 59);
                       try {
                         L3: {
-                          ((mg) this).field_c.setInput(param2.field_k, param2.field_i + 10, param2.field_k.length + -param2.field_i - 18);
-                          int discarded$2 = ((mg) this).field_c.inflate(param1);
+                          this.field_c.setInput(param2.field_k, param2.field_i + 10, param2.field_k.length + -param2.field_i - 10 - 8);
+                          discarded$2 = this.field_c.inflate(param1);
                           break L3;
                         }
                       } catch (java.lang.Exception decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
                         exception = (Exception) (Object) decompiledCaughtException;
-                        ((mg) this).field_c.reset();
+                        this.field_c.reset();
                         throw new RuntimeException("");
                       }
-                      ((mg) this).field_c.reset();
+                      this.field_c.reset();
                       break L0;
                     }
                   }
@@ -111,23 +113,23 @@ final class mg {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_13_0 = (RuntimeException) runtimeException;
+                stackOut_13_0 = (RuntimeException) (runtimeException);
                 stackOut_13_1 = new StringBuilder().append("mg.D(").append(param0).append(',');
                 stackIn_15_0 = stackOut_13_0;
                 stackIn_15_1 = stackOut_13_1;
                 stackIn_14_0 = stackOut_13_0;
                 stackIn_14_1 = stackOut_13_1;
                 if (param1 == null) {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+                  stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
                   stackOut_15_2 = "null";
                   stackIn_16_0 = stackOut_15_0;
                   stackIn_16_1 = stackOut_15_1;
                   stackIn_16_2 = stackOut_15_2;
                   break L4;
                 } else {
-                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+                  stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
                   stackOut_14_2 = "{...}";
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_16_1 = stackOut_14_1;
@@ -136,23 +138,23 @@ final class mg {
                 }
               }
               L5: {
-                stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+                stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
                 stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;
                 stackIn_17_1 = stackOut_16_1;
                 if (param2 == null) {
-                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
                   stackOut_18_2 = "null";
                   stackIn_19_0 = stackOut_18_0;
                   stackIn_19_1 = stackOut_18_1;
                   stackIn_19_2 = stackOut_18_2;
                   break L5;
                 } else {
-                  stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-                  stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                  stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+                  stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
                   stackOut_17_2 = "{...}";
                   stackIn_19_0 = stackOut_17_0;
                   stackIn_19_1 = stackOut_17_1;
@@ -160,7 +162,7 @@ final class mg {
                   break L5;
                 }
               }
-              throw pf.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+              throw pf.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -170,15 +172,17 @@ final class mg {
     }
 
     public static void a(byte param0) {
+        if (param0 != -3) {
+            field_b = (mf) null;
+            field_a = null;
+            field_b = null;
+            return;
+        }
         field_a = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = -1;
     }
 }

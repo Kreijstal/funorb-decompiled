@@ -7,6 +7,19 @@ final class ml extends hb {
     static String field_r;
 
     final static String e(int param0) {
+        if (param0 != 19290) {
+            ml.a((byte) 51);
+            if (uj.field_c) {
+                return null;
+            }
+            if (qd.field_l > ga.field_j) {
+                return null;
+            }
+            if (!(ga.field_j >= qd.field_l + fh.field_h)) {
+                return cc.field_j;
+            }
+            return null;
+        }
         if (uj.field_c) {
             return null;
         }
@@ -32,15 +45,17 @@ final class ml extends hb {
     }
 
     public static void a(byte param0) {
+        if (param0 < 50) {
+            field_r = (String) null;
+            field_t = null;
+            field_r = null;
+            return;
+        }
         field_t = null;
         field_r = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "PAS-8";
     }
 }

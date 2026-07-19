@@ -49,10 +49,10 @@ final class nf {
     final void a(int param0, int param1, byte param2, int param3, int param4) {
         int var6 = 0;
         int var7 = Geoblox.field_C;
-        for (var6 = 0; var6 < ((nf) this).field_o; var6++) {
-            ((nf) this).field_O[var6] = (short)(param3 * ((nf) this).field_O[var6] / param1);
-            ((nf) this).field_q[var6] = (short)(((nf) this).field_q[var6] * param0 / param1);
-            ((nf) this).field_K[var6] = (short)(((nf) this).field_K[var6] * param4 / param1);
+        for (var6 = 0; var6 < this.field_o; var6++) {
+            this.field_O[var6] = (short)(param3 * this.field_O[var6] / param1);
+            this.field_q[var6] = (short)(this.field_q[var6] * param0 / param1);
+            this.field_K[var6] = (short)(this.field_K[var6] * param4 / param1);
         }
         if (param2 <= 69) {
             nf.a(-90, 1, 93);
@@ -61,25 +61,31 @@ final class nf {
     }
 
     final static int c(byte param0) {
+        if (param0 >= -55) {
+            return 66;
+        }
         return qi.b(ag.field_k, 1);
     }
 
     public static void b(byte param0) {
         field_j = null;
         field_E = null;
+        if (param0 != 115) {
+            nf.a(124, -30, -53);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = Geoblox.field_C;
-        for (var5 = 0; ((nf) this).field_o > var5; var5++) {
-            ((nf) this).field_O[var5] = (short)(((nf) this).field_O[var5] + param0);
-            ((nf) this).field_q[var5] = (short)(((nf) this).field_q[var5] + param1);
-            ((nf) this).field_K[var5] = (short)(((nf) this).field_K[var5] + param3);
+        for (var5 = 0; this.field_o > var5; var5++) {
+            this.field_O[var5] = (short)(this.field_O[var5] + param0);
+            this.field_q[var5] = (short)(this.field_q[var5] + param1);
+            this.field_K[var5] = (short)(this.field_K[var5] + param3);
         }
         this.a(-7008);
         if (param2 != -9121) {
-            ((nf) this).field_g = null;
+            this.field_g = (short[]) null;
         }
     }
 
@@ -96,10 +102,10 @@ final class nf {
         int var11 = 0;
         int var12 = 0;
         var12 = Geoblox.field_C;
-        if (((nf) this).field_D) {
+        if (this.field_D) {
           return;
         } else {
-          ((nf) this).field_D = true;
+          this.field_D = true;
           var2 = 32767;
           var3 = 32767;
           var4 = 32767;
@@ -108,26 +114,26 @@ final class nf {
           var7 = -32768;
           var8 = 0;
           L0: while (true) {
-            if (((nf) this).field_o <= var8) {
+            if (this.field_o <= var8) {
               L1: {
-                ((nf) this).field_H = var6;
-                ((nf) this).field_s = var3;
-                ((nf) this).field_F = var4;
-                ((nf) this).field_I = var5;
+                this.field_H = var6;
+                this.field_s = var3;
+                this.field_F = var4;
+                this.field_I = var5;
                 if (param0 == -99) {
                   break L1;
                 } else {
-                  ((nf) this).field_K = null;
+                  this.field_K = (short[]) null;
                   break L1;
                 }
               }
-              ((nf) this).field_Q = var2;
-              ((nf) this).field_N = var7;
+              this.field_Q = var2;
+              this.field_N = var7;
               return;
             } else {
               L2: {
-                var9 = ((nf) this).field_O[var8];
-                var10 = ((nf) this).field_q[var8];
+                var9 = this.field_O[var8];
+                var10 = this.field_q[var8];
                 if (var10 < var3) {
                   var3 = var10;
                   break L2;
@@ -144,7 +150,7 @@ final class nf {
                 }
               }
               L4: {
-                var11 = ((nf) this).field_K[var8];
+                var11 = this.field_K[var8];
                 if (var9 < var2) {
                   var2 = var9;
                   break L4;
@@ -325,19 +331,25 @@ final class nf {
             }
             var1[var2] = new dm(pg.field_b, dd.field_C, gh.field_m[var2], md.field_e[var2], rc.field_j[var2], hl.field_K[var2], var5);
         }
+        if (param0 != 255) {
+            field_A = 40;
+        }
         kj.c(true);
         return var1;
     }
 
     final static boolean a(boolean param0) {
-        if (!(p.field_k != -1)) {
+        if (param0) {
+            return false;
+        }
+        if (!(0 != (p.field_k ^ -1))) {
             if (!el.b(30000, 1)) {
                 return false;
             }
             p.field_k = eh.field_d.c((byte) 34);
             eh.field_d.field_f = 0;
         }
-        if (p.field_k == -2) {
+        if ((p.field_k ^ -1) == 1) {
             if (!(el.b(30000, 2))) {
                 return false;
             }
@@ -348,19 +360,18 @@ final class nf {
     }
 
     private final void a(int param0) {
-        ((nf) this).field_D = false;
+        this.field_D = false;
+        if (param0 != -7008) {
+            nf.a(-110, 99, 92);
+        }
     }
 
     nf() {
-        ((nf) this).field_D = false;
-        ((nf) this).field_v = (byte) 0;
+        this.field_D = false;
+        this.field_v = (byte) 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_E = "Reload game";
         field_j = new tf();
     }

@@ -7,6 +7,7 @@ final class gh {
     }
 
     private final static void a(int param0, int param1, int param2, boolean param3, boolean param4) {
+        int incrementValue$1 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -120,7 +121,7 @@ final class gh {
                         var19++;
                         continue L6;
                       } else {
-                        int incrementValue$1 = var17;
+                        incrementValue$1 = var17;
                         var17++;
                         em.field_i[incrementValue$1] = var13;
                         var20++;

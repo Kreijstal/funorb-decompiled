@@ -11,6 +11,6 @@ public class mf {
     mf field_b;
 
     mf() {
-        ((mf) this).field_d = 0;
+        this.field_d = 0;
     }
 }

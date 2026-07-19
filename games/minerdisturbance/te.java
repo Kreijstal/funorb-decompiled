@@ -15,7 +15,10 @@ final class te implements uj {
 
     public static void b(int param0) {
         field_a = null;
-        field_e = null;
+        field_e = (ea[][]) null;
+        if (param0 != 31960) {
+            return;
+        }
         field_d = null;
         field_c = null;
         field_b = null;
@@ -36,7 +39,7 @@ final class te implements uj {
     final static int a(int param0) {
         int var1 = 0;
         if (2 <= af.field_u) {
-          var1 = 0;
+          var1 = 78 % ((-29 - param0) / 54);
           if (0 == kb.field_c) {
             if (!hj.field_i.a((byte) 125)) {
               return 20;
@@ -136,10 +139,6 @@ final class te implements uj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new ea[4];
         field_e = new ea[2][];
         field_a = "Resume Game";

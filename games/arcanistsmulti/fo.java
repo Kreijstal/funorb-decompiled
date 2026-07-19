@@ -38,10 +38,6 @@ final class fo {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fo.A(";
         field_b = "Please select an option in the '<%0>' row.";
         field_k = 0;

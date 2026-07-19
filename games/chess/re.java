@@ -24,18 +24,14 @@ final class re extends o {
     }
 
     re(int param0, int param1, int param2, int param3, int param4) {
-        ((re) this).field_o = param1;
-        ((re) this).field_s = param2;
-        ((re) this).field_k = param4;
-        ((re) this).field_l = param3;
-        ((re) this).field_t = param0;
+        this.field_o = param1;
+        this.field_s = param2;
+        this.field_k = param4;
+        this.field_l = param3;
+        this.field_t = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = 0;
         field_r = true;
         field_j = 22;

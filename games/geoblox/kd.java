@@ -10,7 +10,7 @@ final class kd {
     static int field_c;
 
     public static void a(byte param0) {
-        int var1 = 0;
+        int var1 = -73 % ((26 - param0) / 53);
         field_e = null;
         field_a = null;
         field_d = null;
@@ -42,10 +42,6 @@ final class kd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "It's the<br>bubble bonus!";
         field_a = "Achieved";
         field_f = new int[23];

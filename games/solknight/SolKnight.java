@@ -2,7 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.util.*;
-import java.awt.Canvas;
 
 public final class SolKnight extends ab {
     static fg field_D;
@@ -13,12 +12,13 @@ public final class SolKnight extends ab {
     public static boolean field_L;
 
     final void f(int param0) {
+        int discarded$0 = 0;
         s.n(0);
         if (null != dj.field_k) {
             qk.d(param0 ^ -14996);
         }
         if (param0 != -1) {
-            int discarded$0 = this.b(-29, true);
+            discarded$0 = this.b(-29, true);
         }
         pk.c(false);
     }
@@ -27,9 +27,9 @@ public final class SolKnight extends ab {
         if (!(null == wc.field_b)) {
             ue.a(wc.field_b, 0);
             wc.field_b = null;
-            mh.a(8192);
+            mh.a(param0 + 8191);
         }
-        fh.field_c = r.a(1, 89);
+        fh.field_c = r.a(param0, 89);
         wg.field_g = r.a(2, 74);
         qk.field_h = r.a(3, 125);
         ic.field_u = r.a(4, 109);
@@ -39,6 +39,7 @@ public final class SolKnight extends ab {
     }
 
     final void e(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -102,7 +103,7 @@ public final class SolKnight extends ab {
           }
         }
         L2: {
-          ((SolKnight) this).a(stackIn_6_1, stackIn_6_2 != 0);
+          this.a(stackIn_6_1, stackIn_6_2 != 0);
           if (pd.field_c) {
             this.m(1);
             pd.field_c = false;
@@ -113,12 +114,12 @@ public final class SolKnight extends ab {
         }
         L3: {
           if (bl.a((byte) -81)) {
-            ((SolKnight) this).c(true);
+            this.c(true);
             if (bl.a((byte) -81)) {
               if (!bb.h(119)) {
                 return;
               } else {
-                int discarded$1 = this.b(0, false);
+                discarded$1 = this.b(0, false);
                 return;
               }
             } else {
@@ -138,13 +139,13 @@ public final class SolKnight extends ab {
             L5: {
               if (null != qa.field_q) {
                 if (qa.field_q.field_k) {
-                  jl.field_d = jl.field_d & ~qa.field_q.field_m;
+                  jl.field_d = jl.field_d & (qa.field_q.field_m ^ -1);
                   ah.field_f = ah.field_f | qa.field_q.field_m;
                   qa.field_q = null;
                   jg.a((byte) 81);
                   h.a((byte) 92);
                   if (7 == kd.field_a) {
-                    if (jl.field_d == 0) {
+                    if (-1 == (jl.field_d ^ -1)) {
                       kd.field_a = 2;
                       gb.a(false, 2, -127);
                       break L5;
@@ -189,8 +190,8 @@ public final class SolKnight extends ab {
                         break L6;
                       }
                     }
-                    var2 = rk.a(stackIn_47_0 != 0, (byte) 20, (ab) this);
-                    if (var2 != 2364824) {
+                    var2 = rk.a(stackIn_47_0 != 0, (byte) 20, (ab) (this));
+                    if (-2364825 != (var2 ^ -1)) {
                       L7: {
                         if (1 == var2) {
                           break L7;
@@ -262,11 +263,11 @@ public final class SolKnight extends ab {
                         qk.d(14995);
                         break L9;
                       } else {
-                        if (var2 == 3) {
-                          ta.a(false, 320, w.field_b, 2, ug.field_g.field_s + ug.field_g.field_F, (mg) (Object) ug.field_g, 8, ad.field_b.field_s + ad.field_b.field_F, ad.field_b.field_F, w.field_b, 8, 240, (mg) (Object) ad.field_b, ug.field_g.field_F, true);
+                        if ((var2 ^ -1) == -4) {
+                          ta.a(false, 320, w.field_b, 2, ug.field_g.field_s + ug.field_g.field_F, ug.field_g, 8, ad.field_b.field_s + ad.field_b.field_F, ad.field_b.field_F, w.field_b, 8, 240, ad.field_b, ug.field_g.field_F, true);
                           break L9;
                         } else {
-                          if (var2 != 4) {
+                          if ((var2 ^ -1) != -5) {
                             break L9;
                           } else {
                             bb.a((byte) -14, -2, 0);
@@ -334,7 +335,7 @@ public final class SolKnight extends ab {
         L11: {
           if (!il.b(507)) {
             L12: while (true) {
-              var5 = (bl) (Object) w.field_a.a(0);
+              var5 = (bl) ((Object) w.field_a.a(0));
               if (var5 != null) {
                 sj.a(4, var5, -7471);
                 continue L12;
@@ -352,8 +353,8 @@ public final class SolKnight extends ab {
               qf.a(0, 0);
               var2 = 0;
               if (qc.a(34)) {
-                var3 = ((SolKnight) this).g(0);
-                if (var3 == 2) {
+                var3 = this.g(0);
+                if (-3 == (var3 ^ -1)) {
                   var2 = 1;
                   break L14;
                 } else {
@@ -367,14 +368,14 @@ public final class SolKnight extends ab {
               if (var2 == 0) {
                 break L15;
               } else {
-                aa.a(ad.field_b.field_F, (byte) -93, (mg) (Object) ad.field_b, ug.field_g.field_F - -ug.field_g.field_s, 8, w.field_b, 320, 8, ad.field_b.field_F + ad.field_b.field_s, (mg) (Object) ug.field_g, w.field_b, ug.field_g.field_F, 2, 240);
+                aa.a(ad.field_b.field_F, (byte) -93, ad.field_b, ug.field_g.field_F - -ug.field_g.field_s, 8, w.field_b, 320, 8, ad.field_b.field_F + ad.field_b.field_s, ug.field_g, w.field_b, ug.field_g.field_F, 2, 240);
                 break L15;
               }
             }
             var3 = 55 % ((51 - param0) / 39);
             return;
           } else {
-            ((SolKnight) this).d(true);
+            this.d(true);
             continue L13;
           }
         }
@@ -609,14 +610,16 @@ public final class SolKnight extends ab {
         qf.a(10351);
         wf.f(350);
         pc.a((byte) -121);
-        ((SolKnight) this).field_x = null;
+        this.field_x = null;
     }
 
     public final void init() {
-        ((SolKnight) this).a("solknight", 11, 8);
+        this.a("solknight", 11, 8);
     }
 
     private final int b(int param0, boolean param1) {
+        o discarded$2 = null;
+        o dupTemp$3 = null;
         int var3 = 0;
         o[] var4 = null;
         int var5_int = 0;
@@ -678,7 +681,7 @@ public final class SolKnight extends ab {
                                                 } else {
                                                   if (field_I.b(true)) {
                                                     a.a((byte) 102, ug.field_e, 65.0f);
-                                                    ((SolKnight) this).a(-11633);
+                                                    this.a(-11633);
                                                     if (!param1) {
                                                       return pb.field_c;
                                                     } else {
@@ -776,7 +779,7 @@ public final class SolKnight extends ab {
             if (null == ic.field_u) {
               if (pl.field_d != null) {
                 a.a((byte) 102, kj.field_N, 90.0f);
-                ((SolKnight) this).a(-11633);
+                this.a(-11633);
                 jc.field_b = rb.a("unachieved", "basic", pl.field_d, (byte) -127);
                 nb.field_a = rb.a("locked", "basic", pl.field_d, (byte) -117);
                 u.field_c = rb.a("orbcoin", "basic", pl.field_d, (byte) -115);
@@ -798,7 +801,7 @@ public final class SolKnight extends ab {
                   hj.field_n = rb.a("sword", "", fh.field_c, (byte) -124);
                   hj.field_p = eb.a(false, rb.a("shield_packed", "", fh.field_c, (byte) -127), 72);
                   qd.field_f = ik.a(fh.field_c, -18362, "overlays", "");
-                  o discarded$2 = rb.a("space", "", fh.field_c, (byte) -128);
+                  discarded$2 = rb.a("space", "", fh.field_c, (byte) -128);
                   ii.field_g = ik.a(fh.field_c, -18362, "explosion", "");
                   ua.field_F = ik.a(fh.field_c, -18362, "nukeexplosion", "");
                   ak.field_e = new o[8];
@@ -817,7 +820,7 @@ public final class SolKnight extends ab {
                   var20 = var19;
                   var20.a();
                   ak.field_e[4].a(0, 0, 152, 152);
-                  ai.a(10, (mg) (Object) ug.field_g, 31, 132, 132, 16776960, -122, 10, var20, 0, 5500);
+                  ai.a(10, ug.field_g, 31, 132, 132, 16776960, -122, 10, var20, 0, 5500);
                   dd.field_c = ik.a(fh.field_c, param0 ^ -18362, "uberframe", "");
                   this.a(dd.field_c, (byte) 31);
                   dd.field_c = null;
@@ -831,11 +834,11 @@ public final class SolKnight extends ab {
                       var21 = hj.field_p;
                       var5 = hj.field_n;
                       var6 = 316 * var21.field_q / var5.field_r;
-                      o dupTemp$3 = new o(var6, 316);
+                      dupTemp$3 = new o(var6, 316);
                       h.field_b = dupTemp$3;
                       var7 = dupTemp$3;
                       var7.a();
-                      var5.a(var6 + -(316 * var5.field_q / var5.field_r) >> 1, 0, var5.field_q * 316 / var5.field_r, 316);
+                      var5.a(var6 + -(316 * var5.field_q / var5.field_r) >> -1022422175, 0, var5.field_q * 316 / var5.field_r, 316);
                       var21.a(0, 3 * (316 + -(316 * var21.field_r / var5.field_r)) / 5, var6, var21.field_r * 316 / var5.field_r);
                       var8 = 40;
                       var9 = 191;
@@ -844,7 +847,7 @@ public final class SolKnight extends ab {
                       var11.a();
                       var7.a(0, 0, var8 * var7.field_q / var7.field_r, var8);
                       var12 = var10 * qd.field_f[0].field_r / qd.field_f[0].field_q;
-                      qd.field_f[0].a(var7.field_q * var8 / var7.field_r - -8, -var12 + var8 >> 1, var10, var12);
+                      qd.field_f[0].a(var7.field_q * var8 / var7.field_r - -8, -var12 + var8 >> 1694759201, var10, var12);
                       ah.a(var11, false);
                       var13 = ad.field_b.field_m;
                       pg.field_a = new o(var13, var13);
@@ -932,7 +935,7 @@ public final class SolKnight extends ab {
             }
           } else {
             a.a((byte) 102, rf.field_E, 75.0f);
-            ((SolKnight) this).a(param0 + -11633);
+            this.a(param0 + -11633);
             c.field_M[0] = rl.a(qb.field_cb, "", "sol knight title");
             c.field_M[1] = rl.a(qb.field_cb, "", "sol_ingame_1");
             c.field_M[2] = rl.a(qb.field_cb, "", "sol_ingame_2");
@@ -946,34 +949,295 @@ public final class SolKnight extends ab {
     }
 
     final void d(int param0) {
-        ((SolKnight) this).a(0, false, 6, 9, true, 16, 10, 8);
+        this.a(0, false, 6, 9, true, 16, 10, 8);
         mf var2 = new mf();
         var2.d(-4474, 128, 9);
-        dh.a(var2, (java.awt.Component) (Object) dc.field_q, true, (byte) -40, 22050, wh.field_c);
+        dh.a(var2, (java.awt.Component) ((Object) dc.field_q), true, (byte) -40, 22050, wh.field_c);
         hc.field_d = 16777088;
         if (param0 != -31680) {
             return;
         }
         rj.field_c = 16776960;
         pb.field_b = 16777215;
-        ((SolKnight) this).a((byte) -38, true, false, false, false);
+        this.a((byte) -38, true, false, false, false);
     }
 
     public SolKnight() {
     }
 
     private final void h(byte param0) {
+        int fieldTemp$10 = 0;
+        gg discarded$11 = null;
+        int fieldTemp$12 = 0;
+        gg discarded$13 = null;
+        int fieldTemp$14 = 0;
+        gg discarded$15 = null;
+        int fieldTemp$16 = 0;
+        gg discarded$17 = null;
+        int fieldTemp$18 = 0;
+        gg discarded$19 = null;
         int var2 = 0;
         int var3 = 0;
-        var3 = field_L ? 1 : 0;
-        if (0 == (bi.field_i & 1073741824)) {
-          bi.field_i = bi.field_i + 2048;
-          ic.field_t = ic.field_t + fa.field_f;
+        int var4 = 0;
+        L0: {
+          var3 = field_L ? 1 : 0;
+          if (0 == (bi.field_i & 1073741824)) {
+            bi.field_i = bi.field_i + 2048;
+            ic.field_t = ic.field_t + fa.field_f;
+            break L0;
+          } else {
+            var2 = bk.a(bi.field_i >>> 877718027, jb.field_g, (byte) -102);
+            bi.field_i = bi.field_i - (var2 << 1394859723);
+            ic.field_t = ic.field_t - fa.field_f * var2;
+            break L0;
+          }
+        }
+        if (param0 == -108) {
+          L1: {
+            if (wb.field_c != 0) {
+              if (0 < (gb.field_j << 769508017) + lc.field_h) {
+                lc.field_h = lc.field_h + (gb.field_j << -230779407);
+                ic.field_t = ic.field_t + gb.field_j * ud.field_k;
+                break L1;
+              } else {
+                ic.field_t = ic.field_t - gb.field_j * ud.field_k;
+                lc.field_h = lc.field_h - (gb.field_j << 1342001681);
+                break L1;
+              }
+            } else {
+              break L1;
+            }
+          }
+          L2: {
+            if (je.field_d == 0) {
+              L3: {
+                if ((ve.field_b ^ -1) >= -1) {
+                  break L3;
+                } else {
+                  ve.field_b = ve.field_b - 1;
+                  if (ve.field_b == 385) {
+                    mb.a(true, 35, 256);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              L4: {
+                if (ve.field_b < 0) {
+                  break L4;
+                } else {
+                  si.field_E = 240 - ve.field_b;
+                  wd.field_c = -160;
+                  if ((si.field_E ^ -1) > -1) {
+                    si.field_E = 0;
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              L5: {
+                if (0 < kh.field_d) {
+                  kh.field_d = kh.field_d - 1;
+                  kh.field_d = kh.field_d * 9 / 10;
+                  break L5;
+                } else {
+                  break L5;
+                }
+              }
+              L6: {
+                if (kd.field_a != ri.field_f) {
+                  ua.field_H = ua.field_H + 1;
+                  if (32 == ua.field_H) {
+                    L7: {
+                      if (-3 == (kd.field_a ^ -1)) {
+                        kh.field_c = null;
+                        break L7;
+                      } else {
+                        break L7;
+                      }
+                    }
+                    L8: {
+                      if (-9 != (kd.field_a ^ -1)) {
+                        break L8;
+                      } else {
+                        if (9 != ri.field_f) {
+                          break L8;
+                        } else {
+                          ah.field_f = 0;
+                          jl.field_d = 0;
+                          w.field_a.a(true);
+                          break L8;
+                        }
+                      }
+                    }
+                    ua.field_H = 0;
+                    kd.field_a = ri.field_f;
+                    break L6;
+                  } else {
+                    break L6;
+                  }
+                } else {
+                  if ((kd.field_a ^ -1) != 0) {
+                    vd.field_d[kd.field_a].c(0);
+                    if (-1 != (kd.field_a ^ -1)) {
+                      break L6;
+                    } else {
+                      hb.a(true);
+                      break L6;
+                    }
+                  } else {
+                    hb.a(true);
+                    break L6;
+                  }
+                }
+              }
+              if (0 <= ve.field_b) {
+                var4 = 1;
+                var2 = var4;
+                L9: while (true) {
+                  if (nf.field_W.length > var4) {
+                    nf.field_W[var4] = nf.field_W[var4] - 1;
+                    if (nf.field_W[var4] < 0) {
+                      nf.field_W[var4] = nf.field_W[var4] + 720;
+                      var4 += 2;
+                      continue L9;
+                    } else {
+                      var4 += 2;
+                      continue L9;
+                    }
+                  } else {
+                    if (lc.field_t.a((byte) 51) == null) {
+                      break L2;
+                    } else {
+                      fieldTemp$10 = wk.field_e + 1;
+                      wk.field_e = wk.field_e + 1;
+                      if (290 != fieldTemp$10) {
+                        break L2;
+                      } else {
+                        wk.field_e = 0;
+                        discarded$11 = lc.field_t.a(0);
+                        break L2;
+                      }
+                    }
+                  }
+                }
+              } else {
+                if (pg.field_e) {
+                  if (lc.field_t.a((byte) 51) != null) {
+                    fieldTemp$12 = wk.field_e + 1;
+                    wk.field_e = wk.field_e + 1;
+                    if (290 != fieldTemp$12) {
+                      break L2;
+                    } else {
+                      wk.field_e = 0;
+                      discarded$13 = lc.field_t.a(0);
+                      break L2;
+                    }
+                  } else {
+                    if (lc.field_t.a((byte) 51) == null) {
+                      break L2;
+                    } else {
+                      fieldTemp$14 = wk.field_e + 1;
+                      wk.field_e = wk.field_e + 1;
+                      if (290 != fieldTemp$14) {
+                        break L2;
+                      } else {
+                        wk.field_e = 0;
+                        discarded$15 = lc.field_t.a(0);
+                        break L2;
+                      }
+                    }
+                  }
+                } else {
+                  if (lc.field_t.a((byte) 51) != null) {
+                    fieldTemp$16 = wk.field_e + 1;
+                    wk.field_e = wk.field_e + 1;
+                    if (290 != fieldTemp$16) {
+                      break L2;
+                    } else {
+                      wk.field_e = 0;
+                      discarded$17 = lc.field_t.a(0);
+                      break L2;
+                    }
+                  } else {
+                    if (lc.field_t.a((byte) 51) == null) {
+                      break L2;
+                    } else {
+                      fieldTemp$18 = wk.field_e + 1;
+                      wk.field_e = wk.field_e + 1;
+                      if (290 != fieldTemp$18) {
+                        break L2;
+                      } else {
+                        wk.field_e = 0;
+                        discarded$19 = lc.field_t.a(0);
+                        break L2;
+                      }
+                    }
+                  }
+                }
+              }
+            } else {
+              if (1 != je.field_d) {
+                if ((je.field_d ^ -1) != -3) {
+                  ua.field_H = ua.field_H - 1;
+                  if (ua.field_H != 0) {
+                    break L2;
+                  } else {
+                    je.field_d = 0;
+                    break L2;
+                  }
+                } else {
+                  L10: {
+                    if (!il.b(507)) {
+                      L11: {
+                        if ((lk.field_e ^ -1) < -1) {
+                          ah.b(true);
+                          break L11;
+                        } else {
+                          break L11;
+                        }
+                      }
+                      kd.field_a = h.field_g;
+                      if (kd.field_a != -2) {
+                        break L10;
+                      } else {
+                        kd.field_a = 0;
+                        ta.a(false, 320, w.field_b, 2, ug.field_g.field_s + ug.field_g.field_F, ug.field_g, 8, ad.field_b.field_F - -ad.field_b.field_s, ad.field_b.field_F, w.field_b, 8, 240, ad.field_b, ug.field_g.field_F, false);
+                        break L10;
+                      }
+                    } else {
+                      kd.field_a = me.field_b;
+                      break L10;
+                    }
+                  }
+                  ri.field_f = kd.field_a;
+                  je.field_d = 3;
+                  break L2;
+                }
+              } else {
+                ua.field_H = ua.field_H + 1;
+                if (ua.field_H == 32) {
+                  L12: {
+                    if (!sg.b((byte) -104)) {
+                      nh.a((byte) 3);
+                      break L12;
+                    } else {
+                      da.a(true);
+                      break L12;
+                    }
+                  }
+                  je.field_d = 2;
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+            }
+          }
           return;
         } else {
-          var2 = bk.a(bi.field_i >>> 11, jb.field_g, (byte) -102);
-          bi.field_i = bi.field_i - (var2 << 11);
-          ic.field_t = ic.field_t - fa.field_f * var2;
           return;
         }
     }
@@ -1018,11 +1282,11 @@ public final class SolKnight extends ab {
           var8 = field_L ? 1 : 0;
           if (dj.field_k != null) {
             stackOut_2_0 = dj.field_k;
-            stackIn_3_0 = (Object) (Object) stackOut_2_0;
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           } else {
             stackOut_1_0 = dc.field_q;
-            stackIn_3_0 = (Object) (Object) stackOut_1_0;
+            stackIn_3_0 = stackOut_1_0;
             break L0;
           }
         }
@@ -1059,35 +1323,35 @@ public final class SolKnight extends ab {
                           if (kd.field_a == -1) {
                             d.a(false, (byte) -48);
                             ll.a(1 + ua.field_H, 256, false, false);
-                            mi.a(0, 0, 640, 480, 16769381, ua.field_H << 4);
+                            mi.a(0, 0, 640, 480, 16769381, ua.field_H << 501270884);
                             break L3;
                           } else {
                             vd.field_d[kd.field_a].d(582);
                             ll.a(1 + ua.field_H, 256, false, false);
-                            mi.a(0, 0, 640, 480, 16769381, ua.field_H << 4);
+                            mi.a(0, 0, 640, 480, 16769381, ua.field_H << 501270884);
                             break L3;
                           }
                         } else {
-                          if (ri.field_f != -1) {
+                          if (0 != (ri.field_f ^ -1)) {
                             vd.field_d[ri.field_f].d(582);
                             ll.a(1 + -ua.field_H + 32, 256, false, false);
-                            mi.a(0, 0, 640, 480, 16769381, 32 + -ua.field_H << 4);
+                            mi.a(0, 0, 640, 480, 16769381, 32 + -ua.field_H << 1694561444);
                             break L3;
                           } else {
                             d.a(false, (byte) -48);
                             ll.a(1 + -ua.field_H + 32, 256, false, false);
-                            mi.a(0, 0, 640, 480, 16769381, 32 + -ua.field_H << 4);
+                            mi.a(0, 0, 640, 480, 16769381, 32 + -ua.field_H << 1694561444);
                             break L3;
                           }
                         }
                       }
                     }
                     L4: {
-                      var4 = (la) (Object) lc.field_t.a((byte) 51);
+                      var4 = (la) ((Object) lc.field_t.a((byte) 51));
                       if (var4 != null) {
                         L5: {
                           var6 = wk.field_e;
-                          if (var6 >= 70) {
+                          if (-71 >= (var6 ^ -1)) {
                             if (var6 >= 220) {
                               var5 = var6 + 190;
                               break L5;
@@ -1101,7 +1365,7 @@ public final class SolKnight extends ab {
                           }
                         }
                         var7 = ug.field_g.b(hb.field_m[var4.field_h]);
-                        uj.a(60 + var7, 70, -60 + -var7 + 640 >> 1, gf.field_fb, var5, 2);
+                        uj.a(60 + var7, 70, -60 + -var7 + 640 >> 2079290817, gf.field_fb, var5, 2);
                         ii.field_f[var4.field_h].e(304, 10 + ug.field_g.field_s + (ug.field_g.field_F + var5));
                         ug.field_g.a(hb.field_m[var4.field_h], 320, var5 - -ug.field_g.field_F - -8, 16776960, 1);
                         break L4;
@@ -1119,7 +1383,7 @@ public final class SolKnight extends ab {
                       }
                     }
                     L7: {
-                      if (je.field_d == 0) {
+                      if (-1 == (je.field_d ^ -1)) {
                         break L7;
                       } else {
                         var5 = ua.field_H * 256 / 32;
@@ -1161,12 +1425,12 @@ public final class SolKnight extends ab {
                         }
                       }
                     }
-                    uf.a((byte) 99, 0, 0, (java.awt.Canvas) var2);
+                    uf.a((byte) 99, 0, 0, (java.awt.Canvas) (var2));
                     return;
                   } else {
                     L10: {
                       var3++;
-                      if (var3 >= 5) {
+                      if ((var3 ^ -1) <= -6) {
                         var3 = 0;
                         break L10;
                       } else {
@@ -1201,7 +1465,7 @@ public final class SolKnight extends ab {
                       }
                     }
                     L14: {
-                      if (var7 > 255) {
+                      if (-256 > (var7 ^ -1)) {
                         var7 = 255;
                         break L14;
                       } else {
@@ -1218,11 +1482,11 @@ public final class SolKnight extends ab {
               }
             } else {
               a.a((byte) 102, bg.field_t, 100.0f);
-              ih.a(20753, (java.awt.Canvas) var2);
+              ih.a(20753, (java.awt.Canvas) (var2));
               return;
             }
           } else {
-            ih.a(param0 ^ -31842, (java.awt.Canvas) var2);
+            ih.a(param0 ^ -31842, (java.awt.Canvas) (var2));
             return;
           }
         } else {
@@ -1251,7 +1515,7 @@ public final class SolKnight extends ab {
               break L15;
             }
           }
-          nc.a((java.awt.Canvas) (Object) stackIn_7_0, stackIn_7_1, stackIn_7_2 != 0);
+          nc.a((java.awt.Canvas) ((Object) stackIn_7_0), stackIn_7_1, stackIn_7_2 != 0);
           return;
         }
     }
@@ -1267,6 +1531,7 @@ public final class SolKnight extends ab {
     }
 
     private final void a(o[] param0, byte param1) {
+        o dupTemp$1 = null;
         RuntimeException var3 = null;
         int var3_int = 0;
         o var4 = null;
@@ -1352,7 +1617,7 @@ public final class SolKnight extends ab {
                 h.field_d[7] = wc.a(h.field_d[5], 0);
                 h.field_d[3] = wc.a(h.field_d[7], 0);
                 h.field_d[4] = new o(32, 32);
-                var10 = 0;
+                var10 = -106 % ((param1 - 77) / 40);
                 var48 = h.field_d[4].field_v;
                 var12_int = 0;
                 L2: while (true) {
@@ -1423,7 +1688,7 @@ public final class SolKnight extends ab {
                         le.field_d[7] = dh.field_f[7];
                         break L0;
                       } else {
-                        o dupTemp$1 = param0[var12_int].c();
+                        dupTemp$1 = param0[var12_int].c();
                         var11[var12_int] = dupTemp$1;
                         var38 = dupTemp$1;
                         var13 = var38;
@@ -1442,8 +1707,8 @@ public final class SolKnight extends ab {
                           } else {
                             L5: {
                               var16_int = var49[var15_int];
-                              if ((65535 & var16_int) != (var16_int >> 8 & 65535)) {
-                                if (var16_int == 1) {
+                              if ((65535 & var16_int) != (var16_int >> 879831336 & 65535)) {
+                                if (-2 == (var16_int ^ -1)) {
                                   var49[var15_int] = 0;
                                   break L5;
                                 } else {
@@ -1483,23 +1748,23 @@ public final class SolKnight extends ab {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var3;
+            stackOut_20_0 = (RuntimeException) (var3);
             stackOut_20_1 = new StringBuilder().append("SolKnight.U(");
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -1507,15 +1772,11 @@ public final class SolKnight extends ab {
               break L6;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + 31 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_E = new int[4];
         field_G = 0;
         field_D = new fg("");

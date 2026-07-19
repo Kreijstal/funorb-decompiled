@@ -35,7 +35,7 @@ final class lva extends rqa {
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) frb.a(102, 96));
+            stackOut_2_0 = new nc(frb.a(102, 96));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -43,23 +43,23 @@ final class lva extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("lva.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -67,19 +67,26 @@ final class lva extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     final static void b(boolean param0) {
-        al.field_a = kda.field_g + " <b>" + amb.field_b + "</b> " + vda.field_p + " <b>" + fja.field_r + "</b> " + inb.field_p + "<br>" + "<br>" + msa.field_r;
+        if (param0) {
+          field_p = -73;
+          al.field_a = kda.field_g + " <b>" + amb.field_b + "</b> " + vda.field_p + " <b>" + fja.field_r + "</b> " + inb.field_p + "<br>" + "<br>" + msa.field_r;
+          return;
+        } else {
+          al.field_a = kda.field_g + " <b>" + amb.field_b + "</b> " + vda.field_p + " <b>" + fja.field_r + "</b> " + inb.field_p + "<br>" + "<br>" + msa.field_r;
+          return;
+        }
     }
 
     final static int b(int param0, int param1, int param2) {
-        int var3 = param1 + -1 & param0 >> 31;
-        int var4 = 1;
-        return var3 + (param0 - -(param0 >>> 31)) % param1;
+        int var3 = param1 + -1 & param0 >> -1128139841;
+        int var4 = 125 % ((param2 - -6) / 41);
+        return var3 + (param0 - -(param0 >>> 617169759)) % param1;
     }
 
     public static void a(int param0) {
@@ -90,14 +97,17 @@ final class lva extends rqa {
     }
 
     final static void a(int param0, int param1, int param2) {
-        int var3 = -8;
+        int var3 = 8 / ((-49 - param1) / 47);
         dmb.field_c = param2;
         wua.field_k = param0;
     }
 
     final static void e(byte param0) {
+        if (param0 != 117) {
+            return;
+        }
         qn.field_h.g((byte) -17);
-        qn.field_h.a(false, (shb) (Object) new hnb(qn.field_h));
+        qn.field_h.a(false, new hnb(qn.field_h));
     }
 
     lva(String param0, Class[] param1, String param2) {
@@ -105,10 +115,6 @@ final class lva extends rqa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new float[4];
     }
 }

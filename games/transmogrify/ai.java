@@ -20,17 +20,18 @@ final class ai {
             int stackIn_32_0 = 0;
             int stackIn_35_0 = 0;
             int stackIn_37_0 = 0;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             int stackOut_15_0 = 0;
-            int stackOut_31_0 = 0;
             int stackOut_26_0 = 0;
+            int stackOut_31_0 = 0;
             int stackOut_36_0 = 0;
             int stackOut_34_0 = 0;
-            if (-5 >= oh.field_h.field_p) {
-              if (0 == oh.field_h.field_k) {
+            if (-5 >= (oh.field_h.field_p ^ -1)) {
+              if (0 == (oh.field_h.field_k ^ -1)) {
                 return 3;
               } else {
-                if (oh.field_h.field_k != -2) {
+                if ((oh.field_h.field_k ^ -1) != 1) {
                   return 1;
                 } else {
                   return 4;
@@ -49,13 +50,14 @@ final class ai {
                     }
                   }
                   L2: {
-                    if (cl.field_A != 1) {
+                    if (-2 != (cl.field_A ^ -1)) {
                       break L2;
                     } else {
-                      if (wj.field_j.field_c == 2) {
+                      if ((wj.field_j.field_c ^ -1) == -3) {
                         stackOut_15_0 = og.a(2, -1);
                         stackIn_16_0 = stackOut_15_0;
-                        return stackIn_16_0;
+                        decompiledRegionSelector0 = 0;
+                        break L0;
                       } else {
                         if (1 == wj.field_j.field_c) {
                           cl.field_A = cl.field_A + 1;
@@ -67,57 +69,68 @@ final class ai {
                     }
                   }
                   L3: {
-                    if (cl.field_A != 2) {
+                    if (cl.field_A != param0) {
                       break L3;
                     } else {
-                      re.field_y = new gj((java.net.Socket) wj.field_j.field_g, qi.field_a);
+                      re.field_y = new gj((java.net.Socket) (wj.field_j.field_g), qi.field_a);
                       var2 = new oa(13);
                       qb.a(116, of.field_c, var2, uh.field_f, tl.field_c);
-                      var2.f(6389, 15);
+                      var2.f(param0 + 6387, 15);
                       var2.a(-109, dk.field_h);
                       re.field_y.a((byte) 9, var2.field_g, 13, 0);
                       cl.field_A = cl.field_A + 1;
-                      ob.field_G = 30000L + lk.a(0);
+                      ob.field_G = 30000L + lk.a(param0 ^ 2);
                       break L3;
                     }
                   }
                   L4: {
-                    if (cl.field_A != 3) {
+                    if ((cl.field_A ^ -1) != -4) {
                       break L4;
                     } else {
-                      if (re.field_y.a((byte) -125) <= 0) {
-                        if (ob.field_G < lk.a(0)) {
-                          stackOut_31_0 = og.a(2, -2);
-                          stackIn_32_0 = stackOut_31_0;
-                          return stackIn_32_0;
+                      L5: {
+                        if (re.field_y.a((byte) -125) <= 0) {
+                          break L5;
                         } else {
-                          break L4;
+                          var1_int = re.field_y.c(1);
+                          if (var1_int != 0) {
+                            stackOut_26_0 = og.a(param0 ^ 0, var1_int);
+                            stackIn_27_0 = stackOut_26_0;
+                            decompiledRegionSelector0 = 1;
+                            break L0;
+                          } else {
+                            cl.field_A = cl.field_A + 1;
+                            if (!Transmogrify.field_A) {
+                              break L4;
+                            } else {
+                              break L5;
+                            }
+                          }
                         }
+                      }
+                      if (ob.field_G < lk.a(0)) {
+                        stackOut_31_0 = og.a(2, -2);
+                        stackIn_32_0 = stackOut_31_0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       } else {
-                        var1_int = re.field_y.c(1);
-                        if (var1_int != 0) {
-                          stackOut_26_0 = og.a(2, var1_int);
-                          stackIn_27_0 = stackOut_26_0;
-                          return stackIn_27_0;
-                        } else {
-                          cl.field_A = cl.field_A + 1;
-                          break L4;
-                        }
+                        break L4;
                       }
                     }
                   }
                   if (4 != cl.field_A) {
                     stackOut_36_0 = -1;
                     stackIn_37_0 = stackOut_36_0;
+                    decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
-                    oh.field_h.a(ck.field_A, (Object) (Object) re.field_y, 20);
+                    oh.field_h.a(ck.field_A, re.field_y, param0 + 18);
                     re.field_y = null;
                     cl.field_A = 0;
                     wj.field_j = null;
                     stackOut_34_0 = 0;
                     stackIn_35_0 = stackOut_34_0;
-                    return stackIn_35_0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   }
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -125,7 +138,23 @@ final class ai {
                 var1 = (IOException) (Object) decompiledCaughtException;
                 return og.a(2, -3);
               }
-              return stackIn_37_0;
+              if (decompiledRegionSelector0 == 0) {
+                return stackIn_16_0;
+              } else {
+                if (decompiledRegionSelector0 == 1) {
+                  return stackIn_27_0;
+                } else {
+                  if (decompiledRegionSelector0 == 2) {
+                    return stackIn_32_0;
+                  } else {
+                    if (decompiledRegionSelector0 == 3) {
+                      return stackIn_35_0;
+                    } else {
+                      return stackIn_37_0;
+                    }
+                  }
+                }
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -135,10 +164,18 @@ final class ai {
     }
 
     public static void a(byte param0) {
+        int discarded$2 = 0;
         field_a = null;
-        field_e = null;
+        field_e = (byte[][]) null;
         field_d = null;
-        field_b = null;
+        if (param0 != 67) {
+          discarded$2 = ai.a(17);
+          field_b = null;
+          return;
+        } else {
+          field_b = null;
+          return;
+        }
     }
 
     final static void b(int param0) {
@@ -150,15 +187,15 @@ final class ai {
             wg.field_d.r(77);
             var1 = lb.a(true);
             ok.field_a = new ff(var1, (String) null, true, false, false);
-            ci.field_f.b((qg) (Object) l.field_d, (byte) -71);
-            l.field_d.b(-122, (qg) (Object) ok.field_a);
+            ci.field_f.b((qg) (l.field_d), (byte) -71);
+            l.field_d.b(-122, ok.field_a);
             l.field_d.p(27830);
             return;
           } else {
             var1 = lb.a(true);
             ok.field_a = new ff(var1, (String) null, true, false, false);
-            ci.field_f.b((qg) (Object) l.field_d, (byte) -71);
-            l.field_d.b(-122, (qg) (Object) ok.field_a);
+            ci.field_f.b((qg) (l.field_d), (byte) -71);
+            l.field_d.b(-122, ok.field_a);
             l.field_d.p(27830);
             return;
           }
@@ -168,10 +205,6 @@ final class ai {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new byte[250][];
         field_a = new q();
     }

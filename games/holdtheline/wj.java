@@ -19,6 +19,12 @@ abstract class wj {
     cc field_m;
 
     final static void b(byte param0) {
+        String[][] dupTemp$6 = null;
+        long[][] dupTemp$7 = null;
+        int[][] dupTemp$8 = null;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -49,24 +55,25 @@ abstract class wj {
         int var26 = 0;
         int var27 = 0;
         da var28 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var27 = HoldTheLine.field_D;
         try {
           L0: {
             L1: {
-              var3 = 0;
+              var3 = -93 % ((param0 - 21) / 43);
               var28 = rd.field_e;
               var2 = var28.f((byte) -22);
-              if (var2 == 0) {
+              if (-1 == (var2 ^ -1)) {
                 var4 = var28.k(106);
-                var5 = (jg) (Object) pc.field_e.b((byte) 115);
+                var5 = (jg) ((Object) pc.field_e.b((byte) 115));
                 L2: while (true) {
                   L3: {
                     if (var5 == null) {
                       break L3;
                     } else {
                       if (var5.field_i != var4) {
-                        var5 = (jg) (Object) pc.field_e.c((byte) -25);
+                        var5 = (jg) ((Object) pc.field_e.c((byte) -25));
                         continue L2;
                       } else {
                         break L3;
@@ -85,14 +92,14 @@ abstract class wj {
                         var9_int = 1;
                         L5: while (true) {
                           if (var6 <= var9_int) {
-                            String[][] dupTemp$6 = new String[3][var7];
+                            dupTemp$6 = new String[3][var7];
                             var5.field_m = dupTemp$6;
                             var9 = dupTemp$6;
                             var10 = new String[3][var7];
-                            long[][] dupTemp$7 = new long[3][var7];
+                            dupTemp$7 = new long[3][var7];
                             var5.field_k = dupTemp$7;
                             var11 = dupTemp$7;
-                            int[][] dupTemp$8 = new int[3][var7 * var8];
+                            dupTemp$8 = new int[3][var7 * var8];
                             var5.field_p = dupTemp$8;
                             var12 = dupTemp$8;
                             var13 = 0;
@@ -102,7 +109,7 @@ abstract class wj {
                             var17 = 0;
                             var18 = 0;
                             var19 = var28.f((byte) -59);
-                            if (var19 > 0) {
+                            if ((var19 ^ -1) < -1) {
                               var20 = 0;
                               L6: while (true) {
                                 if (var20 >= var19) {
@@ -125,7 +132,7 @@ abstract class wj {
                                           var13++;
                                           break L7;
                                         } else {
-                                          int incrementValue$9 = var16;
+                                          incrementValue$9 = var16;
                                           var16++;
                                           var12[0][incrementValue$9] = var28.a(-107);
                                           var26++;
@@ -149,7 +156,7 @@ abstract class wj {
                                           if (var8 <= var26) {
                                             break L9;
                                           } else {
-                                            int incrementValue$10 = var17;
+                                            incrementValue$10 = var17;
                                             var17++;
                                             var12[1][incrementValue$10] = var28.a(98);
                                             var26++;
@@ -177,7 +184,7 @@ abstract class wj {
                                           if (var26 >= var8) {
                                             break L11;
                                           } else {
-                                            int incrementValue$11 = var18;
+                                            incrementValue$11 = var18;
                                             var18++;
                                             var12[2][incrementValue$11] = var28.a(111);
                                             var26++;
@@ -200,7 +207,7 @@ abstract class wj {
                             L13: {
                               gd.field_h[var9_int].field_b = var28.j(-1231);
                               gd.field_h[var9_int].field_e = false;
-                              if (var28.f((byte) -41) != 1) {
+                              if (-2 != (var28.f((byte) -41) ^ -1)) {
                                 gd.field_h[var9_int].field_g = null;
                                 break L13;
                               } else {
@@ -221,18 +228,19 @@ abstract class wj {
                     break L1;
                   } else {
                     r.a(-28036);
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   }
                 }
               } else {
-                if (var2 != 1) {
+                if ((var2 ^ -1) != -2) {
                   bl.a((Throwable) null, (byte) -120, "HS1: " + em.b(false));
                   r.a(-28036);
                   break L1;
                 } else {
                   var4 = var28.k(78);
                   var5_long = var28.d(true);
-                  var7_ref_fb = (fb) (Object) bj.field_O.b((byte) 110);
+                  var7_ref_fb = (fb) ((Object) bj.field_O.b((byte) 110));
                   L14: while (true) {
                     L15: {
                       if (var7_ref_fb == null) {
@@ -241,7 +249,7 @@ abstract class wj {
                         if (var7_ref_fb.field_u == var4) {
                           break L15;
                         } else {
-                          var7_ref_fb = (fb) (Object) bj.field_O.c((byte) -64);
+                          var7_ref_fb = (fb) ((Object) bj.field_O.c((byte) -64));
                           continue L14;
                         }
                       }
@@ -252,81 +260,96 @@ abstract class wj {
                       break L1;
                     } else {
                       r.a(-28036);
-                      return;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   }
                 }
               }
             }
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1, "wj.N(" + 68 + ')');
+          throw kk.a((Throwable) ((Object) var1), "wj.N(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     abstract void a(Object param0, boolean param1, int param2);
 
     final boolean c(int param0) {
+        boolean discarded$0 = false;
         if (param0 < 73) {
-            boolean discarded$0 = ((wj) this).c(3);
+            discarded$0 = this.c(3);
         }
-        return ((wj) this).b(39) >= 20 ? true : false;
+        return (this.b(39) ^ -1) <= -21 ? true : false;
     }
 
     final int b(boolean param0) {
         if (param0) {
-            ((wj) this).field_h = 95;
+            this.field_h = 95;
         }
-        return ((wj) this).field_g.a(107) - -((wj) this).field_e.a(-6);
+        return this.field_g.a(107) - -this.field_e.a(-6);
     }
 
     final int b(int param0) {
         if (param0 < 16) {
-            field_n = null;
+            field_n = (gn) null;
         }
-        return ((wj) this).field_d.a(64) - -((wj) this).field_i.a(29);
+        return this.field_d.a(64) - -this.field_i.a(29);
     }
 
     abstract void a(boolean param0);
 
     final cc a(int param0, boolean param1, byte param2, byte param3, int param4) {
-        long var6 = ((long)param4 << 32) - -(long)param0;
+        long var6 = ((long)param4 << 2134369312) - -(long)param0;
         cc var8 = new cc();
         var8.field_i = var6;
         var8.field_t = param1 ? true : false;
         var8.field_B = param2;
         if (param3 != -60) {
-            return null;
+            return (cc) null;
         }
         if (param1) {
-            if (!(((wj) this).b(78) < 20)) {
+            if (!(this.b(78) < 20)) {
                 throw new RuntimeException();
             }
-            ((wj) this).field_d.a(param3 ^ 83, (ln) (Object) var8);
+            this.field_d.a(param3 ^ 83, var8);
         } else {
-            if (((wj) this).b(false) >= 20) {
+            if (this.b(false) >= 20) {
                 throw new RuntimeException();
             }
-            ((wj) this).field_g.a(122, (ln) (Object) var8);
+            this.field_g.a(122, var8);
         }
         return var8;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, hj param7, int param8) {
         try {
-            cd.field_b = 20;
+            cd.field_b = param3;
             wn.field_a = param7;
-            vb.field_d = 80;
-            fh.field_e = 0;
-            bd.field_W = -1500;
-            mj.field_a = 80;
-            bj.field_G = 0;
-            ih.field_m = 50;
+            vb.field_d = param2;
+            fh.field_e = param5;
+            if (param1 != 19189) {
+                wj.a(37);
+            }
+            bd.field_W = param6;
+            mj.field_a = param8;
+            bj.field_G = param0;
+            ih.field_m = param4;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "wj.Q(" + 0 + ',' + 19189 + ',' + 80 + ',' + 20 + ',' + 50 + ',' + 0 + ',' + -1500 + ',' + (param7 != null ? "{...}" : "null") + ',' + 80 + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "wj.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -336,7 +359,7 @@ abstract class wj {
         if (param0 != 20) {
             return false;
         }
-        return ((wj) this).b(false) >= 20 ? true : false;
+        return this.b(false) >= 20 ? true : false;
     }
 
     abstract boolean a(byte param0);
@@ -344,26 +367,25 @@ abstract class wj {
     public static void a(int param0) {
         field_o = null;
         field_n = null;
+        if (param0 != 16831) {
+            return;
+        }
         field_a = null;
     }
 
     wj() {
-        ((wj) this).field_d = new ol();
-        ((wj) this).field_i = new ol();
-        ((wj) this).field_g = new ol();
-        ((wj) this).field_e = new ol();
-        ((wj) this).field_b = new th(6);
-        ((wj) this).field_l = (byte) 0;
-        ((wj) this).field_c = 0;
-        ((wj) this).field_f = 0;
-        ((wj) this).field_k = new th(10);
+        this.field_d = new ol();
+        this.field_i = new ol();
+        this.field_g = new ol();
+        this.field_e = new ol();
+        this.field_b = new th(6);
+        this.field_l = (byte) 0;
+        this.field_c = 0;
+        this.field_f = 0;
+        this.field_k = new th(10);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new hj(270, 70);
     }
 }

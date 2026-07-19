@@ -8,13 +8,13 @@ final class ho {
     int field_b;
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1 = 20 % ((param0 - -6) / 45);
         ud.field_X = null;
         kr.field_C.a(123);
     }
 
     public final String toString() {
-        return "(turnsTaken: " + ((ho) this).field_b + " damageTaken: " + ((ho) this).field_c + ")";
+        return "(turnsTaken: " + this.field_b + " damageTaken: " + this.field_c + ")";
     }
 
     final static void a(java.applet.Applet param0, byte param1) {
@@ -22,7 +22,7 @@ final class ho {
             java.net.URL var2 = null;
             RuntimeException var2_ref = null;
             Exception var2_ref2 = null;
-            Object var3 = null;
+            java.applet.Applet var3 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
@@ -58,7 +58,7 @@ final class ho {
                 if (param1 == -3) {
                   break L0;
                 } else {
-                  var3 = null;
+                  var3 = (java.applet.Applet) null;
                   ho.a((java.applet.Applet) null, (byte) -10);
                   return;
                 }
@@ -67,23 +67,23 @@ final class ho {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref;
+                stackOut_6_0 = (RuntimeException) (var2_ref);
                 stackOut_6_1 = new StringBuilder().append("ho.C(");
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param0 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
                   break L3;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
@@ -91,7 +91,7 @@ final class ho {
                   break L3;
                 }
               }
-              throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+              throw ig.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -101,20 +101,22 @@ final class ho {
     }
 
     public static void a(byte param0) {
+        if (param0 >= -113) {
+            ho.a(3);
+            field_d = null;
+            field_a = null;
+            return;
+        }
         field_d = null;
         field_a = null;
     }
 
     ho(int param0, int param1) {
-        ((ho) this).field_b = param0;
-        ((ho) this).field_c = param1;
+        this.field_b = param0;
+        this.field_c = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Ask to join <%0>'s game";
     }
 }

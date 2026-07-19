@@ -6,9 +6,9 @@ abstract class sc implements eeb {
     private long field_a;
 
     public final void a(int param0) {
-        ((sc) this).field_a = wt.a(false);
+        this.field_a = wt.a(false);
         if (param0 <= 6) {
-            ((sc) this).field_a = -33L;
+            this.field_a = -33L;
         }
     }
 
@@ -22,17 +22,17 @@ abstract class sc implements eeb {
     }
 
     public final qrb a(byte param0) {
-        if (((sc) this).b((byte) -120)) {
+        if (this.b((byte) -120)) {
           return mp.field_p;
         } else {
-          if (350L + ((sc) this).field_a > wt.a(false)) {
+          if (350L + this.field_a > wt.a(false)) {
             return tg.field_p;
           } else {
             if (param0 != 35) {
-              field_b = null;
-              return ((sc) this).b(-1);
+              field_b = (String) null;
+              return this.b(-1);
             } else {
-              return ((sc) this).b(-1);
+              return this.b(-1);
             }
           }
         }
@@ -44,25 +44,21 @@ abstract class sc implements eeb {
 
     public final String c(byte param0) {
         if (param0 == -79) {
-          if (!((sc) this).b((byte) -115)) {
-            if (~wt.a(false) > ~(((sc) this).field_a - -350L)) {
+          if (!this.b((byte) -115)) {
+            if ((wt.a(false) ^ -1L) > (this.field_a - -350L ^ -1L)) {
               return null;
             } else {
-              return ((sc) this).d(16384);
+              return this.d(16384);
             }
           } else {
             return null;
           }
         } else {
-          return null;
+          return (String) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Players";
     }
 }

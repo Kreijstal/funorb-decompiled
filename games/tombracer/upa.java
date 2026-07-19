@@ -15,7 +15,7 @@ final class upa extends vg {
     final static void a(String param0, byte param1) {
         System.out.println("Error: " + qf.a(966747152, "\n", "%0a", param0));
         if (param1 != -24) {
-            Object var3 = null;
+            String var3 = (String) null;
             upa.a((String) null, (byte) 67);
         }
     }
@@ -211,9 +211,9 @@ final class upa extends vg {
         jea stackOut_23_0 = null;
         int stackOut_23_1 = 0;
         int stackOut_23_2 = 0;
-        tga.a(-21953, -640 + bea.field_g >> 1, 640 + bea.field_g >> 1, 0, bea.field_a);
-        if (mla.field_a <= 0) {
-          if (gt.field_a <= 0) {
+        tga.a(-21953, -640 + bea.field_g >> 788615969, 640 + bea.field_g >> -1247157215, 0, bea.field_a);
+        if ((mla.field_a ^ -1) >= -1) {
+          if (gt.field_a <= param1) {
             if (0 < fp.field_e) {
               L0: {
                 if (null != fta.field_b) {
@@ -226,7 +226,7 @@ final class upa extends vg {
               L1: {
                 L2: {
                   stackOut_57_0 = nra.field_c;
-                  stackOut_57_1 = 118;
+                  stackOut_57_1 = param1 + 118;
                   stackIn_60_0 = stackOut_57_0;
                   stackIn_60_1 = stackOut_57_1;
                   stackIn_58_0 = stackOut_57_0;
@@ -234,7 +234,7 @@ final class upa extends vg {
                   if (!param0) {
                     break L2;
                   } else {
-                    stackOut_58_0 = (jea) (Object) stackIn_58_0;
+                    stackOut_58_0 = (jea) ((Object) stackIn_58_0);
                     stackOut_58_1 = stackIn_58_1;
                     stackIn_60_0 = stackOut_58_0;
                     stackIn_60_1 = stackOut_58_1;
@@ -243,7 +243,7 @@ final class upa extends vg {
                     if (tla.field_e) {
                       break L2;
                     } else {
-                      stackOut_59_0 = (jea) (Object) stackIn_59_0;
+                      stackOut_59_0 = (jea) ((Object) stackIn_59_0);
                       stackOut_59_1 = stackIn_59_1;
                       stackOut_59_2 = 1;
                       stackIn_61_0 = stackOut_59_0;
@@ -253,7 +253,7 @@ final class upa extends vg {
                     }
                   }
                 }
-                stackOut_60_0 = (jea) (Object) stackIn_60_0;
+                stackOut_60_0 = (jea) ((Object) stackIn_60_0);
                 stackOut_60_1 = stackIn_60_1;
                 stackOut_60_2 = 0;
                 stackIn_61_0 = stackOut_60_0;
@@ -273,7 +273,7 @@ final class upa extends vg {
                   if (!param0) {
                     break L4;
                   } else {
-                    stackOut_62_0 = (jea) (Object) stackIn_62_0;
+                    stackOut_62_0 = (jea) ((Object) stackIn_62_0);
                     stackOut_62_1 = stackIn_62_1;
                     stackIn_64_0 = stackOut_62_0;
                     stackIn_64_1 = stackOut_62_1;
@@ -282,7 +282,7 @@ final class upa extends vg {
                     if (tla.field_e) {
                       break L4;
                     } else {
-                      stackOut_63_0 = (jea) (Object) stackIn_63_0;
+                      stackOut_63_0 = (jea) ((Object) stackIn_63_0);
                       stackOut_63_1 = stackIn_63_1;
                       stackOut_63_2 = 1;
                       stackIn_65_0 = stackOut_63_0;
@@ -292,7 +292,7 @@ final class upa extends vg {
                     }
                   }
                 }
-                stackOut_64_0 = (jea) (Object) stackIn_64_0;
+                stackOut_64_0 = (jea) ((Object) stackIn_64_0);
                 stackOut_64_1 = stackIn_64_1;
                 stackOut_64_2 = 0;
                 stackIn_65_0 = stackOut_64_0;
@@ -319,7 +319,7 @@ final class upa extends vg {
             L6: {
               L7: {
                 stackOut_43_0 = nra.field_c;
-                stackOut_43_1 = 118;
+                stackOut_43_1 = param1 + 118;
                 stackIn_46_0 = stackOut_43_0;
                 stackIn_46_1 = stackOut_43_1;
                 stackIn_44_0 = stackOut_43_0;
@@ -327,7 +327,7 @@ final class upa extends vg {
                 if (!param0) {
                   break L7;
                 } else {
-                  stackOut_44_0 = (jea) (Object) stackIn_44_0;
+                  stackOut_44_0 = (jea) ((Object) stackIn_44_0);
                   stackOut_44_1 = stackIn_44_1;
                   stackIn_46_0 = stackOut_44_0;
                   stackIn_46_1 = stackOut_44_1;
@@ -336,7 +336,7 @@ final class upa extends vg {
                   if (tla.field_e) {
                     break L7;
                   } else {
-                    stackOut_45_0 = (jea) (Object) stackIn_45_0;
+                    stackOut_45_0 = (jea) ((Object) stackIn_45_0);
                     stackOut_45_1 = stackIn_45_1;
                     stackOut_45_2 = 1;
                     stackIn_47_0 = stackOut_45_0;
@@ -346,7 +346,7 @@ final class upa extends vg {
                   }
                 }
               }
-              stackOut_46_0 = (jea) (Object) stackIn_46_0;
+              stackOut_46_0 = (jea) ((Object) stackIn_46_0);
               stackOut_46_1 = stackIn_46_1;
               stackOut_46_2 = 0;
               stackIn_47_0 = stackOut_46_0;
@@ -366,7 +366,7 @@ final class upa extends vg {
                 if (!param0) {
                   break L9;
                 } else {
-                  stackOut_48_0 = (jea) (Object) stackIn_48_0;
+                  stackOut_48_0 = (jea) ((Object) stackIn_48_0);
                   stackOut_48_1 = stackIn_48_1;
                   stackIn_50_0 = stackOut_48_0;
                   stackIn_50_1 = stackOut_48_1;
@@ -375,7 +375,7 @@ final class upa extends vg {
                   if (tla.field_e) {
                     break L9;
                   } else {
-                    stackOut_49_0 = (jea) (Object) stackIn_49_0;
+                    stackOut_49_0 = (jea) ((Object) stackIn_49_0);
                     stackOut_49_1 = stackIn_49_1;
                     stackOut_49_2 = 1;
                     stackIn_51_0 = stackOut_49_0;
@@ -385,7 +385,7 @@ final class upa extends vg {
                   }
                 }
               }
-              stackOut_50_0 = (jea) (Object) stackIn_50_0;
+              stackOut_50_0 = (jea) ((Object) stackIn_50_0);
               stackOut_50_1 = stackIn_50_1;
               stackOut_50_2 = 0;
               stackIn_51_0 = stackOut_50_0;
@@ -409,7 +409,7 @@ final class upa extends vg {
           L11: {
             L12: {
               stackOut_3_0 = nra.field_a;
-              stackOut_3_1 = 80;
+              stackOut_3_1 = param1 + 80;
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
               stackIn_4_0 = stackOut_3_0;
@@ -417,7 +417,7 @@ final class upa extends vg {
               if (!param0) {
                 break L12;
               } else {
-                stackOut_4_0 = (jea) (Object) stackIn_4_0;
+                stackOut_4_0 = (jea) ((Object) stackIn_4_0);
                 stackOut_4_1 = stackIn_4_1;
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
@@ -426,7 +426,7 @@ final class upa extends vg {
                 if (uv.field_o) {
                   break L12;
                 } else {
-                  stackOut_5_0 = (jea) (Object) stackIn_5_0;
+                  stackOut_5_0 = (jea) ((Object) stackIn_5_0);
                   stackOut_5_1 = stackIn_5_1;
                   stackOut_5_2 = 1;
                   stackIn_7_0 = stackOut_5_0;
@@ -436,7 +436,7 @@ final class upa extends vg {
                 }
               }
             }
-            stackOut_6_0 = (jea) (Object) stackIn_6_0;
+            stackOut_6_0 = (jea) ((Object) stackIn_6_0);
             stackOut_6_1 = stackIn_6_1;
             stackOut_6_2 = 0;
             stackIn_7_0 = stackOut_6_0;
@@ -456,7 +456,7 @@ final class upa extends vg {
               if (!param0) {
                 break L14;
               } else {
-                stackOut_8_0 = (jea) (Object) stackIn_8_0;
+                stackOut_8_0 = (jea) ((Object) stackIn_8_0);
                 stackOut_8_1 = stackIn_8_1;
                 stackIn_10_0 = stackOut_8_0;
                 stackIn_10_1 = stackOut_8_1;
@@ -465,7 +465,7 @@ final class upa extends vg {
                 if (uv.field_o) {
                   break L14;
                 } else {
-                  stackOut_9_0 = (jea) (Object) stackIn_9_0;
+                  stackOut_9_0 = (jea) ((Object) stackIn_9_0);
                   stackOut_9_1 = stackIn_9_1;
                   stackOut_9_2 = 1;
                   stackIn_11_0 = stackOut_9_0;
@@ -475,7 +475,7 @@ final class upa extends vg {
                 }
               }
             }
-            stackOut_10_0 = (jea) (Object) stackIn_10_0;
+            stackOut_10_0 = (jea) ((Object) stackIn_10_0);
             stackOut_10_1 = stackIn_10_1;
             stackOut_10_2 = 0;
             stackIn_11_0 = stackOut_10_0;
@@ -484,7 +484,7 @@ final class upa extends vg {
             break L13;
           }
           ((jea) (Object) stackIn_11_0).b(stackIn_11_1, stackIn_11_2 != 0);
-          if (gt.field_a > 0) {
+          if (gt.field_a > param1) {
             L15: {
               if (null != fta.field_b) {
                 fta.field_b.d(nra.field_c.field_qb, 0);
@@ -496,7 +496,7 @@ final class upa extends vg {
             L16: {
               L17: {
                 stackOut_29_0 = nra.field_c;
-                stackOut_29_1 = 118;
+                stackOut_29_1 = param1 + 118;
                 stackIn_32_0 = stackOut_29_0;
                 stackIn_32_1 = stackOut_29_1;
                 stackIn_30_0 = stackOut_29_0;
@@ -504,7 +504,7 @@ final class upa extends vg {
                 if (!param0) {
                   break L17;
                 } else {
-                  stackOut_30_0 = (jea) (Object) stackIn_30_0;
+                  stackOut_30_0 = (jea) ((Object) stackIn_30_0);
                   stackOut_30_1 = stackIn_30_1;
                   stackIn_32_0 = stackOut_30_0;
                   stackIn_32_1 = stackOut_30_1;
@@ -513,7 +513,7 @@ final class upa extends vg {
                   if (tla.field_e) {
                     break L17;
                   } else {
-                    stackOut_31_0 = (jea) (Object) stackIn_31_0;
+                    stackOut_31_0 = (jea) ((Object) stackIn_31_0);
                     stackOut_31_1 = stackIn_31_1;
                     stackOut_31_2 = 1;
                     stackIn_33_0 = stackOut_31_0;
@@ -523,7 +523,7 @@ final class upa extends vg {
                   }
                 }
               }
-              stackOut_32_0 = (jea) (Object) stackIn_32_0;
+              stackOut_32_0 = (jea) ((Object) stackIn_32_0);
               stackOut_32_1 = stackIn_32_1;
               stackOut_32_2 = 0;
               stackIn_33_0 = stackOut_32_0;
@@ -543,7 +543,7 @@ final class upa extends vg {
                 if (!param0) {
                   break L19;
                 } else {
-                  stackOut_34_0 = (jea) (Object) stackIn_34_0;
+                  stackOut_34_0 = (jea) ((Object) stackIn_34_0);
                   stackOut_34_1 = stackIn_34_1;
                   stackIn_36_0 = stackOut_34_0;
                   stackIn_36_1 = stackOut_34_1;
@@ -552,7 +552,7 @@ final class upa extends vg {
                   if (tla.field_e) {
                     break L19;
                   } else {
-                    stackOut_35_0 = (jea) (Object) stackIn_35_0;
+                    stackOut_35_0 = (jea) ((Object) stackIn_35_0);
                     stackOut_35_1 = stackIn_35_1;
                     stackOut_35_2 = 1;
                     stackIn_37_0 = stackOut_35_0;
@@ -562,7 +562,7 @@ final class upa extends vg {
                   }
                 }
               }
-              stackOut_36_0 = (jea) (Object) stackIn_36_0;
+              stackOut_36_0 = (jea) ((Object) stackIn_36_0);
               stackOut_36_1 = stackIn_36_1;
               stackOut_36_2 = 0;
               stackIn_37_0 = stackOut_36_0;
@@ -589,7 +589,7 @@ final class upa extends vg {
                 L22: {
                   L23: {
                     stackOut_16_0 = nra.field_c;
-                    stackOut_16_1 = 118;
+                    stackOut_16_1 = param1 + 118;
                     stackIn_19_0 = stackOut_16_0;
                     stackIn_19_1 = stackOut_16_1;
                     stackIn_17_0 = stackOut_16_0;
@@ -597,7 +597,7 @@ final class upa extends vg {
                     if (!param0) {
                       break L23;
                     } else {
-                      stackOut_17_0 = (jea) (Object) stackIn_17_0;
+                      stackOut_17_0 = (jea) ((Object) stackIn_17_0);
                       stackOut_17_1 = stackIn_17_1;
                       stackIn_19_0 = stackOut_17_0;
                       stackIn_19_1 = stackOut_17_1;
@@ -606,7 +606,7 @@ final class upa extends vg {
                       if (tla.field_e) {
                         break L23;
                       } else {
-                        stackOut_18_0 = (jea) (Object) stackIn_18_0;
+                        stackOut_18_0 = (jea) ((Object) stackIn_18_0);
                         stackOut_18_1 = stackIn_18_1;
                         stackOut_18_2 = 1;
                         stackIn_20_0 = stackOut_18_0;
@@ -616,7 +616,7 @@ final class upa extends vg {
                       }
                     }
                   }
-                  stackOut_19_0 = (jea) (Object) stackIn_19_0;
+                  stackOut_19_0 = (jea) ((Object) stackIn_19_0);
                   stackOut_19_1 = stackIn_19_1;
                   stackOut_19_2 = 0;
                   stackIn_20_0 = stackOut_19_0;
@@ -636,7 +636,7 @@ final class upa extends vg {
                     if (!param0) {
                       break L25;
                     } else {
-                      stackOut_21_0 = (jea) (Object) stackIn_21_0;
+                      stackOut_21_0 = (jea) ((Object) stackIn_21_0);
                       stackOut_21_1 = stackIn_21_1;
                       stackIn_23_0 = stackOut_21_0;
                       stackIn_23_1 = stackOut_21_1;
@@ -645,7 +645,7 @@ final class upa extends vg {
                       if (tla.field_e) {
                         break L25;
                       } else {
-                        stackOut_22_0 = (jea) (Object) stackIn_22_0;
+                        stackOut_22_0 = (jea) ((Object) stackIn_22_0);
                         stackOut_22_1 = stackIn_22_1;
                         stackOut_22_2 = 1;
                         stackIn_24_0 = stackOut_22_0;
@@ -655,7 +655,7 @@ final class upa extends vg {
                       }
                     }
                   }
-                  stackOut_23_0 = (jea) (Object) stackIn_23_0;
+                  stackOut_23_0 = (jea) ((Object) stackIn_23_0);
                   stackOut_23_1 = stackIn_23_1;
                   stackOut_23_2 = 0;
                   stackIn_24_0 = stackOut_23_0;
@@ -674,11 +674,14 @@ final class upa extends vg {
     }
 
     final static boolean a(int param0, int param1, int param2) {
+        if (param1 != 0) {
+            return false;
+        }
         return hh.a(param2, (byte) 5, param0) & wu.a(-17, param0, param2);
     }
 
     final static int a(boolean param0, int param1, byte param2) {
-        Object var4 = null;
+        String var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -687,7 +690,7 @@ final class upa extends vg {
         int stackOut_2_0 = 0;
         if (param2 > -36) {
           L0: {
-            var4 = null;
+            var4 = (String) null;
             upa.a((String) null, (byte) -14);
             if (param0) {
               stackOut_7_0 = 0;

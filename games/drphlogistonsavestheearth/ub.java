@@ -6,6 +6,9 @@ final class ub {
     static he[] field_a;
 
     public static void a(byte param0) {
+        if (param0 > -117) {
+            return;
+        }
         field_a = null;
     }
 
@@ -43,7 +46,7 @@ final class ub {
               if (param0 >= 42) {
                 break L1;
               } else {
-                field_a = null;
+                field_a = (he[]) null;
                 break L1;
               }
             }
@@ -91,7 +94,7 @@ final class ub {
                       }
                     }
                   }
-                  if (var2_long < 177917621779460413L) {
+                  if (-177917621779460414L < (var2_long ^ -1L)) {
                     var5++;
                     continue L2;
                   } else {
@@ -101,7 +104,7 @@ final class ub {
               }
               L7: while (true) {
                 L8: {
-                  if (var2_long % 37L != 0L) {
+                  if ((var2_long % 37L ^ -1L) != -1L) {
                     break L8;
                   } else {
                     if (var2_long == 0L) {
@@ -122,23 +125,23 @@ final class ub {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var2;
+            stackOut_23_0 = (RuntimeException) (var2);
             stackOut_23_1 = new StringBuilder().append("ub.A(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L9;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -146,13 +149,13 @@ final class ub {
               break L9;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
         return stackIn_22_0;
     }
 
     final static void a(int param0) {
-        ae.field_hb = new nh[]{hb.field_a, ad.field_t, oi.field_d, cl.field_p, li.field_i, al.field_b, kc.field_p, rk.field_e, hj.field_e, cl.field_s, kc.field_q, qa.field_M, nd.field_L, sa.field_c, mh.field_c, DrPhlogistonSavesTheEarth.field_J, jj.field_c, am.field_o, ik.field_b, bd.field_P, nc.field_K, null, lh.field_p, f.field_i[0], le.field_d, qf.field_b, cj.field_d, kc.field_p, db.field_e, lh.field_p};
+        ae.field_hb = new nh[]{hb.field_a, ad.field_t, oi.field_d, cl.field_p, li.field_i, al.field_b, kc.field_p, rk.field_e, hj.field_e, cl.field_s, kc.field_q, qa.field_M, nd.field_L, sa.field_c, mh.field_c, DrPhlogistonSavesTheEarth.field_J, jj.field_c, am.field_o, ik.field_b, bd.field_P, nc.field_K, null, lh.field_p, f.field_i[param0], le.field_d, qf.field_b, cj.field_d, kc.field_p, db.field_e, lh.field_p};
     }
 
     static {

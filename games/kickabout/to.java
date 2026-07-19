@@ -9,17 +9,17 @@ final class to extends dm {
     byte[] field_i;
 
     to(int param0, byte[] param1, int param2, int param3) {
-        ((to) this).field_f = param0;
-        ((to) this).field_i = param1;
-        ((to) this).field_h = param2;
-        ((to) this).field_j = param3;
+        this.field_f = param0;
+        this.field_i = param1;
+        this.field_h = param2;
+        this.field_j = param3;
     }
 
     to(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((to) this).field_f = param0;
-        ((to) this).field_i = param1;
-        ((to) this).field_h = param2;
-        ((to) this).field_j = param3;
-        ((to) this).field_g = param4 ? true : false;
+        this.field_f = param0;
+        this.field_i = param1;
+        this.field_h = param2;
+        this.field_j = param3;
+        this.field_g = param4 ? true : false;
     }
 }

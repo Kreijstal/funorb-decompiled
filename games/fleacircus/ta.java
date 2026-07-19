@@ -14,31 +14,39 @@ abstract class ta extends pa {
     int field_r;
 
     public static void c(byte param0) {
-        int var1 = -2;
+        int var1 = -122 % ((-53 - param0) / 38);
         field_z = null;
         field_s = null;
     }
 
     final static dd[] a(int param0, int param1, int param2, int param3, int param4) {
-        return ud.a(0, 3, 4715, 1, 1, 0, 65793, 1, 0);
+        if (param2 != -2843) {
+          field_y = -101;
+          return ud.a(param3, 3, param2 + 7558, 1, 1, param4, param1, 1, param0);
+        } else {
+          return ud.a(param3, 3, param2 + 7558, 1, 1, param4, param1, 1, param0);
+        }
     }
 
     final static String f(int param0) {
-        return ae.field_a.h(0);
+        if (param0 != -15040) {
+            return (String) null;
+        }
+        return ae.field_a.h(param0 + 15040);
     }
 
     final static void a(boolean param0, int param1) {
+        dd[] discarded$0 = null;
         uc.field_c.a(param0, 10518);
+        if (param1 <= 43) {
+            discarded$0 = ta.a(19, 19, 119, 12, 2);
+        }
     }
 
     ta() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = "<%0>Balloons & Landing Pad:<%1> Each balloon caries a single flea up to a landing pad.";
         field_u = 0;
     }

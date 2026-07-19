@@ -9,156 +9,203 @@ final class vha {
     final static void a(int param0, byte param1, boolean param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        if (vo.field_b) {
-          L0: {
-            rua.field_gb.c(-59, param2);
-            var4 = kga.field_n.h(0) ? 1 : 0;
-            if (0 == hf.field_b) {
-              break L0;
-            } else {
-              if (var4 == 0) {
-                la.l(2097152);
-                param2 = false;
+        if (param1 == 95) {
+          if (vo.field_b) {
+            L0: {
+              rua.field_gb.c(-59, param2);
+              var4 = kga.field_n.h(param1 ^ 95) ? 1 : 0;
+              if (0 == hf.field_b) {
                 break L0;
               } else {
-                if (param2) {
-                  kga.field_n.a(param0, param3, (byte) -115);
-                  if (var4 != 0) {
-                    rua.field_gb.c(30, param2);
-                    var5 = kga.field_n.g(22514) - -kga.field_n.field_q;
-                    if (640 >= var5) {
-                      if (var5 < 635) {
-                        if (wv.field_j > 0) {
-                          wv.field_j = wv.field_j - 5;
-                          return;
+                if (var4 == 0) {
+                  la.l(2097152);
+                  param2 = false;
+                  break L0;
+                } else {
+                  if (param2) {
+                    kga.field_n.a(param0, param3, (byte) -115);
+                    if (var4 != 0) {
+                      L1: {
+                        rua.field_gb.c(30, param2);
+                        var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
+                        if (640 < var5) {
+                          break L1;
+                        } else {
+                          if (var5 < 635) {
+                            if ((wv.field_j ^ -1) < -1) {
+                              wv.field_j = wv.field_j - 5;
+                              if (TombRacer.field_G) {
+                                break L1;
+                              } else {
+                                return;
+                              }
+                            } else {
+                              return;
+                            }
+                          } else {
+                            return;
+                          }
+                        }
+                      }
+                      wv.field_j = wv.field_j + 5;
+                      return;
+                    } else {
+                      var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
+                      if (640 >= var5) {
+                        if (var5 < 635) {
+                          if ((wv.field_j ^ -1) < -1) {
+                            wv.field_j = wv.field_j - 5;
+                            if (!TombRacer.field_G) {
+                              return;
+                            } else {
+                              wv.field_j = wv.field_j + 5;
+                              return;
+                            }
+                          } else {
+                            return;
+                          }
                         } else {
                           return;
                         }
                       } else {
+                        wv.field_j = wv.field_j + 5;
                         return;
                       }
-                    } else {
-                      wv.field_j = wv.field_j + 5;
-                      return;
                     }
                   } else {
-                    var5 = kga.field_n.g(22514) - -kga.field_n.field_q;
-                    if (640 >= var5) {
-                      if (var5 < 635) {
-                        if (wv.field_j <= 0) {
-                          return;
-                        } else {
-                          wv.field_j = wv.field_j - 5;
-                          return;
-                        }
+                    L2: {
+                      rua.field_gb.c(30, param2);
+                      var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
+                      if (640 < var5) {
+                        break L2;
                       } else {
-                        return;
-                      }
-                    } else {
-                      wv.field_j = wv.field_j + 5;
-                      return;
-                    }
-                  }
-                } else {
-                  L1: {
-                    rua.field_gb.c(30, param2);
-                    var5 = kga.field_n.g(22514) - -kga.field_n.field_q;
-                    if (640 < var5) {
-                      wv.field_j = wv.field_j + 5;
-                      break L1;
-                    } else {
-                      if (var5 >= 635) {
-                        break L1;
-                      } else {
-                        if (wv.field_j > 0) {
-                          wv.field_j = wv.field_j - 5;
-                          break L1;
-                        } else {
-                          break L1;
-                        }
+                        break L2;
                       }
                     }
+                    wv.field_j = wv.field_j + 5;
+                    return;
                   }
-                  return;
                 }
               }
             }
-          }
-          if (!param2) {
-            if (var4 == 0) {
-              var5 = kga.field_n.g(22514) - -kga.field_n.field_q;
-              if (640 < var5) {
+            if (!param2) {
+              if (var4 == 0) {
+                L3: {
+                  var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
+                  if (640 < var5) {
+                    break L3;
+                  } else {
+                    L4: {
+                      if (var5 >= 635) {
+                        break L4;
+                      } else {
+                        if ((wv.field_j ^ -1) < -1) {
+                          wv.field_j = wv.field_j - 5;
+                          if (!TombRacer.field_G) {
+                            break L4;
+                          } else {
+                            break L3;
+                          }
+                        } else {
+                          return;
+                        }
+                      }
+                    }
+                    return;
+                  }
+                }
                 wv.field_j = wv.field_j + 5;
                 return;
               } else {
-                if (var5 >= 635) {
-                  return;
-                } else {
-                  if (wv.field_j > 0) {
-                    wv.field_j = wv.field_j - 5;
-                    return;
+                L5: {
+                  rua.field_gb.c(30, param2);
+                  var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
+                  if (640 < var5) {
+                    break L5;
                   } else {
+                    L6: {
+                      if (var5 >= 635) {
+                        break L6;
+                      } else {
+                        if ((wv.field_j ^ -1) < -1) {
+                          wv.field_j = wv.field_j - 5;
+                          if (!TombRacer.field_G) {
+                            break L6;
+                          } else {
+                            break L5;
+                          }
+                        } else {
+                          return;
+                        }
+                      }
+                    }
                     return;
                   }
                 }
+                wv.field_j = wv.field_j + 5;
+                return;
               }
             } else {
-              rua.field_gb.c(30, param2);
-              var5 = kga.field_n.g(22514) - -kga.field_n.field_q;
-              if (640 >= var5) {
-                if (var5 < 635) {
-                  if (wv.field_j <= 0) {
-                    return;
+              kga.field_n.a(param0, param3, (byte) -115);
+              if (var4 == 0) {
+                L7: {
+                  var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
+                  if (640 < var5) {
+                    break L7;
                   } else {
-                    wv.field_j = wv.field_j - 5;
+                    L8: {
+                      if (var5 >= 635) {
+                        break L8;
+                      } else {
+                        if ((wv.field_j ^ -1) < -1) {
+                          wv.field_j = wv.field_j - 5;
+                          if (!TombRacer.field_G) {
+                            break L8;
+                          } else {
+                            break L7;
+                          }
+                        } else {
+                          return;
+                        }
+                      }
+                    }
                     return;
                   }
-                } else {
-                  return;
                 }
+                wv.field_j = wv.field_j + 5;
+                return;
               } else {
+                L9: {
+                  rua.field_gb.c(30, param2);
+                  var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
+                  if (640 < var5) {
+                    break L9;
+                  } else {
+                    L10: {
+                      if (var5 >= 635) {
+                        break L10;
+                      } else {
+                        if ((wv.field_j ^ -1) < -1) {
+                          wv.field_j = wv.field_j - 5;
+                          if (!TombRacer.field_G) {
+                            break L10;
+                          } else {
+                            break L9;
+                          }
+                        } else {
+                          return;
+                        }
+                      }
+                    }
+                    return;
+                  }
+                }
                 wv.field_j = wv.field_j + 5;
                 return;
               }
             }
           } else {
-            kga.field_n.a(param0, param3, (byte) -115);
-            if (var4 == 0) {
-              var5 = kga.field_n.g(22514) - -kga.field_n.field_q;
-              if (640 >= var5) {
-                if (var5 < 635) {
-                  if (wv.field_j <= 0) {
-                    return;
-                  } else {
-                    wv.field_j = wv.field_j - 5;
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                wv.field_j = wv.field_j + 5;
-                return;
-              }
-            } else {
-              rua.field_gb.c(30, param2);
-              var5 = kga.field_n.g(22514) - -kga.field_n.field_q;
-              if (640 >= var5) {
-                if (var5 < 635) {
-                  if (wv.field_j > 0) {
-                    wv.field_j = wv.field_j - 5;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                wv.field_j = wv.field_j + 5;
-                return;
-              }
-            }
+            return;
           }
         } else {
           return;
@@ -166,7 +213,7 @@ final class vha {
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, int param10, boolean param11) {
-        fna.a(param4, 16777215, param9, param11, param3, -22919, 16777215, param7, true, param1, param8, param6, param10, param2);
+        fna.a(param4, 16777215, param9, param11, param3, -22919, 16777215, param7, param0, param1, param8, param6, param10, param2);
         if (param5 < 12) {
             vha.a(true, -67, 8, false, -52, 39, true, -85, -41, false, -10, true);
         }
@@ -175,13 +222,12 @@ final class vha {
     public static void a(int param0) {
         field_c = null;
         field_a = null;
+        if (param0 != 640) {
+            vha.a(6, (byte) -89, false, 63);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0;
         field_a = new iu(540, 140);
     }

@@ -15,10 +15,10 @@ final class mc {
     private RandomAccessFile field_f;
 
     final void a(byte param0, long param1) throws IOException {
-        ((mc) this).field_f.seek(param1);
-        ((mc) this).field_c = param1;
+        this.field_f.seek(param1);
+        this.field_c = param1;
         if (param0 >= -123) {
-            ((mc) this).field_c = -76L;
+            this.field_c = -76L;
             return;
         }
     }
@@ -63,11 +63,11 @@ final class mc {
         try {
           L0: {
             L1: {
-              var5_int = ((mc) this).field_f.read(param1, param3, param0);
-              if (~var5_int >= param2) {
+              var5_int = this.field_f.read(param1, param3, param0);
+              if ((var5_int ^ -1) >= param2) {
                 break L1;
               } else {
-                ((mc) this).field_c = ((mc) this).field_c + (long)var5_int;
+                this.field_c = this.field_c + (long)var5_int;
                 break L1;
               }
             }
@@ -79,23 +79,23 @@ final class mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var5;
+            stackOut_4_0 = (RuntimeException) (var5);
             stackOut_4_1 = new StringBuilder().append("mc.G(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -103,19 +103,25 @@ final class mc {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param2 + ',' + param3 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_3_0;
     }
 
     protected final void finalize() throws Throwable {
-        if (!(((mc) this).field_f == null)) {
+        if (!(this.field_f == null)) {
             System.out.println("");
-            ((mc) this).b((byte) 38);
+            this.b((byte) 38);
         }
     }
 
     final static String a(long param0, byte param1) {
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$7 = null;
+        StringBuilder discarded$8 = null;
+        StringBuilder discarded$9 = null;
+        StringBuilder discarded$10 = null;
+        StringBuilder discarded$11 = null;
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;
@@ -123,46 +129,147 @@ final class mc {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        StringBuilder var14 = null;
+        StringBuilder var15 = null;
+        StringBuilder var16 = null;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (param0 > 0L) {
-          if (param0 < 6582952005840035281L) {
-            if (param0 % 37L == 0L) {
-              return null;
-            } else {
+        if (-1L > (param0 ^ -1L)) {
+          if (-6582952005840035282L < (param0 ^ -1L)) {
+            if (-1L != (param0 % 37L ^ -1L)) {
               var3 = 0;
               var4 = param0;
               L0: while (true) {
-                if (var4 == 0L) {
-                  var6 = new StringBuilder(var3);
-                  L1: while (true) {
-                    if (param0 == 0L) {
-                      StringBuilder discarded$2 = var6.reverse();
-                      var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
-                      return var6.toString();
-                    } else {
+                if ((var4 ^ -1L) == -1L) {
+                  if (param1 != 26) {
+                    mc.a((byte) 85);
+                    var16 = new StringBuilder(var3);
+                    var6 = var16;
+                    L1: while (true) {
                       L2: {
-                        var7 = param0;
-                        param0 = param0 / 37L;
-                        var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
-                        if (var9 == 95) {
-                          var10 = -1 + var6.length();
-                          var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
-                          var9 = 160;
-                          break L2;
-                        } else {
-                          break L2;
+                        L3: {
+                          if (param0 == 0L) {
+                            break L3;
+                          } else {
+                            var7 = param0;
+                            param0 = param0 / 37L;
+                            var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
+                            if (var11 != 0) {
+                              break L2;
+                            } else {
+                              L4: {
+                                if (var9 == 95) {
+                                  var10 = -1 + var16.length();
+                                  var16.setCharAt(var10, Character.toUpperCase(var16.charAt(var10)));
+                                  var9 = 160;
+                                  break L4;
+                                } else {
+                                  break L4;
+                                }
+                              }
+                              discarded$6 = var16.append((char) var9);
+                              if (var11 == 0) {
+                                continue L1;
+                              } else {
+                                break L3;
+                              }
+                            }
+                          }
                         }
+                        discarded$7 = var16.reverse();
+                        var16.setCharAt(0, Character.toUpperCase(var16.charAt(0)));
+                        break L2;
                       }
-                      StringBuilder discarded$3 = var6.append((char) var9);
-                      continue L1;
+                      return var16.toString();
+                    }
+                  } else {
+                    var15 = new StringBuilder(var3);
+                    L5: while (true) {
+                      L6: {
+                        L7: {
+                          if (param0 == 0L) {
+                            break L7;
+                          } else {
+                            var7 = param0;
+                            param0 = param0 / 37L;
+                            var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
+                            if (var11 != 0) {
+                              break L6;
+                            } else {
+                              L8: {
+                                if (var9 == 95) {
+                                  var10 = -1 + var15.length();
+                                  var15.setCharAt(var10, Character.toUpperCase(var15.charAt(var10)));
+                                  var9 = 160;
+                                  break L8;
+                                } else {
+                                  break L8;
+                                }
+                              }
+                              discarded$8 = var15.append((char) var9);
+                              if (var11 == 0) {
+                                continue L5;
+                              } else {
+                                break L7;
+                              }
+                            }
+                          }
+                        }
+                        discarded$9 = var15.reverse();
+                        var15.setCharAt(0, Character.toUpperCase(var15.charAt(0)));
+                        break L6;
+                      }
+                      return var15.toString();
                     }
                   }
                 } else {
                   var3++;
                   var4 = var4 / 37L;
-                  continue L0;
+                  if (var11 == 0) {
+                    continue L0;
+                  } else {
+                    var14 = new StringBuilder(var3);
+                    L9: while (true) {
+                      L10: {
+                        L11: {
+                          if (param0 == 0L) {
+                            break L11;
+                          } else {
+                            var7 = param0;
+                            param0 = param0 / 37L;
+                            var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
+                            if (var11 != 0) {
+                              break L10;
+                            } else {
+                              L12: {
+                                if (var9 == 95) {
+                                  var10 = -1 + var14.length();
+                                  var14.setCharAt(var10, Character.toUpperCase(var14.charAt(var10)));
+                                  var9 = 160;
+                                  break L12;
+                                } else {
+                                  break L12;
+                                }
+                              }
+                              discarded$10 = var14.append((char) var9);
+                              if (var11 == 0) {
+                                continue L9;
+                              } else {
+                                break L11;
+                              }
+                            }
+                          }
+                        }
+                        discarded$11 = var14.reverse();
+                        var14.setCharAt(0, Character.toUpperCase(var14.charAt(0)));
+                        break L10;
+                      }
+                      return var14.toString();
+                    }
+                  }
                 }
               }
+            } else {
+              return null;
             }
           } else {
             return null;
@@ -173,81 +280,78 @@ final class mc {
     }
 
     final void a(byte param0, int param1, int param2, byte[] param3) throws IOException {
-        if (((mc) this).field_d < ((mc) this).field_c + (long)param2) {
-            ((mc) this).field_f.seek(((mc) this).field_d);
-            ((mc) this).field_f.write(1);
+        if (this.field_d < this.field_c + (long)param2) {
+            this.field_f.seek(this.field_d);
+            this.field_f.write(1);
             throw new EOFException();
         }
-        ((mc) this).field_f.write(param3, param1, param2);
+        this.field_f.write(param3, param1, param2);
         if (param0 <= 9) {
             return;
         }
         try {
-            ((mc) this).field_c = ((mc) this).field_c + (long)param2;
+            this.field_c = this.field_c + (long)param2;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "mc.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "mc.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final long a(int param0) throws IOException {
         if (param0 > -97) {
             field_e = 20;
-            return ((mc) this).field_f.length();
+            return this.field_f.length();
         }
-        return ((mc) this).field_f.length();
+        return this.field_f.length();
     }
 
     final void b(byte param0) throws IOException {
         if (param0 == 38) {
-          if (null != ((mc) this).field_f) {
-            ((mc) this).field_f.close();
-            ((mc) this).field_f = null;
+          if (null != this.field_f) {
+            this.field_f.close();
+            this.field_f = null;
             return;
           } else {
             return;
           }
         } else {
-          field_i = null;
-          if (null == ((mc) this).field_f) {
+          field_i = (vg) null;
+          if (null == this.field_f) {
             return;
           } else {
-            ((mc) this).field_f.close();
-            ((mc) this).field_f = null;
+            this.field_f.close();
+            this.field_f = null;
             return;
           }
         }
     }
 
     mc(File param0, String param1, long param2) throws IOException {
+        boolean discarded$0 = false;
         int var5_int = 0;
         try {
-            if (param2 == -1L) {
+            if (0L == (param2 ^ -1L)) {
                 param2 = 9223372036854775807L;
             }
             if (param2 < param0.length()) {
-                boolean discarded$0 = param0.delete();
+                discarded$0 = param0.delete();
             }
-            ((mc) this).field_f = new RandomAccessFile(param0, param1);
-            ((mc) this).field_c = 0L;
-            ((mc) this).field_d = param2;
-            var5_int = ((mc) this).field_f.read();
+            this.field_f = new RandomAccessFile(param0, param1);
+            this.field_c = 0L;
+            this.field_d = param2;
+            var5_int = this.field_f.read();
             if (-1 != var5_int) {
-                if (!param1.equals((Object) (Object) "r")) {
-                    ((mc) this).field_f.seek(0L);
-                    ((mc) this).field_f.write(var5_int);
+                if (!param1.equals("r")) {
+                    this.field_f.seek(0L);
+                    this.field_f.write(var5_int);
                 }
             }
-            ((mc) this).field_f.seek(0L);
+            this.field_f.seek(0L);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "mc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "mc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Try changing the following settings:  ";
         field_i = null;
     }

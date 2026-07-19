@@ -15,7 +15,7 @@ final class ng {
             L0: {
               hd.field_d = ij.a(param2, (byte) -128);
               if (hd.field_d instanceof km) {
-                ((km) (Object) hd.field_d).a(param0, 0, 125);
+                ((km) ((Object) hd.field_d)).a(param0, 0, 125);
                 break L0;
               } else {
                 break L0;
@@ -40,7 +40,7 @@ final class ng {
             L1: {
               hd.field_d = ij.a(param2, (byte) -128);
               if (hd.field_d instanceof km) {
-                ((km) (Object) hd.field_d).a(param0, 0, 125);
+                ((km) ((Object) hd.field_d)).a(param0, 0, 125);
                 break L1;
               } else {
                 break L1;
@@ -106,10 +106,6 @@ final class ng {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0;
         field_e = "Remove name";
         field_c = "Quick Chat Help";

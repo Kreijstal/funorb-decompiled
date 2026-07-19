@@ -9,13 +9,13 @@ final class bg extends qn implements ee {
     static String[] field_cb;
 
     final String g(int param0) {
-        if (((bg) this).field_w) {
-          if (null != ((bg) this).field_j) {
-            sb.d(33, rf.field_b, -((bg) this).field_bb - -((bg) this).field_y + hn.field_k);
+        if (this.field_w) {
+          if (null != this.field_j) {
+            sb.d(33, rf.field_b, -this.field_bb - -this.field_y + hn.field_k);
             if (param0 != 0) {
-              return null;
+              return (String) null;
             } else {
-              return ((bg) this).field_j;
+              return this.field_j;
             }
           } else {
             return null;
@@ -28,15 +28,15 @@ final class bg extends qn implements ee {
     public final vb a(int param0) {
         if (param0 >= -80) {
             field_ab = false;
-            return ((bg) this).field_Y;
+            return this.field_Y;
         }
-        return ((bg) this).field_Y;
+        return this.field_Y;
     }
 
     final void g(byte param0) {
         super.g(param0);
-        if (null != ((bg) this).field_Y) {
-            ((bg) this).field_Y.b(true);
+        if (null != this.field_Y) {
+            this.field_Y.b(true);
         }
     }
 
@@ -61,7 +61,7 @@ final class bg extends qn implements ee {
         try {
           L0: {
             L1: {
-              ((bg) this).field_Y = param1;
+              this.field_Y = param1;
               if (param0 < -63) {
                 break L1;
               } else {
@@ -75,23 +75,23 @@ final class bg extends qn implements ee {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("bg.BA(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -99,11 +99,17 @@ final class bg extends qn implements ee {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     public static void n(int param0) {
+        if (param0 != 2491) {
+            field_Z = (km) null;
+            field_cb = null;
+            field_Z = null;
+            return;
+        }
         field_cb = null;
         field_Z = null;
     }
@@ -111,12 +117,12 @@ final class bg extends qn implements ee {
     final void a(int param0, int param1, mf param2, int param3) {
         try {
             if (param1 >= -6) {
-                field_cb = null;
+                field_cb = (String[]) null;
             }
             super.a(param0, -30, param2, param3);
-            ((bg) this).field_bb = -param0 + (-((bg) this).field_u + hn.field_k);
+            this.field_bb = -param0 + (-this.field_u + hn.field_k);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "bg.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "bg.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -125,10 +131,6 @@ final class bg extends qn implements ee {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_cb = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     }
 }

@@ -36,8 +36,8 @@ final class mn implements Iterator {
         try {
           L0: {
             L1: {
-              var2 = new kf(param1, (ma) (Object) param1);
-              oj.field_o.b((byte) -74, (ma) (Object) var2);
+              var2 = new kf(param1, param1);
+              oj.field_o.b((byte) -74, var2);
               if (param0 == -24296) {
                 break L1;
               } else {
@@ -45,8 +45,8 @@ final class mn implements Iterator {
                 break L1;
               }
             }
-            qf.field_d.b((kd) (Object) param1);
-            stackOut_2_0 = (kf) var2;
+            qf.field_d.b(param1);
+            stackOut_2_0 = (kf) (var2);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -54,23 +54,23 @@ final class mn implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2_ref;
+            stackOut_4_0 = (RuntimeException) (var2_ref);
             stackOut_4_1 = new StringBuilder().append("mn.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -78,37 +78,70 @@ final class mn implements Iterator {
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     public final boolean hasNext() {
-        return ((mn) this).field_f.field_d != ((mn) this).field_c;
+        return this.field_f.field_d != this.field_c;
     }
 
     final static boolean a(boolean param0) {
-        return !ig.field_j.a(114);
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        if (!param0) {
+          L0: {
+            mn.a(69);
+            if (ig.field_j.a(114)) {
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = 1;
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+          return stackIn_8_0 != 0;
+        } else {
+          L1: {
+            if (ig.field_j.a(114)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
+        }
     }
 
     public final void remove() {
-        if (!(null != ((mn) this).field_b)) {
+        if (!(null != this.field_b)) {
             throw new IllegalStateException();
         }
-        ((mn) this).field_b.a(false);
-        ((mn) this).field_b = null;
+        this.field_b.a(false);
+        this.field_b = null;
     }
 
     public final Object next() {
-        rg var1 = ((mn) this).field_c;
-        if (((mn) this).field_f.field_d == var1) {
+        rg var1 = this.field_c;
+        if (this.field_f.field_d == var1) {
             var1 = null;
-            ((mn) this).field_c = null;
+            this.field_c = null;
         } else {
-            ((mn) this).field_c = var1.field_q;
+            this.field_c = var1.field_q;
         }
-        ((mn) this).field_b = var1;
-        return (Object) (Object) var1;
+        this.field_b = var1;
+        return var1;
     }
 
     public static void a(int param0) {
@@ -123,21 +156,17 @@ final class mn implements Iterator {
     }
 
     mn(qi param0) {
-        ((mn) this).field_b = null;
+        this.field_b = null;
         try {
-            ((mn) this).field_f = param0;
-            ((mn) this).field_c = ((mn) this).field_f.field_d.field_q;
-            ((mn) this).field_b = null;
+            this.field_f = param0;
+            this.field_c = this.field_f.field_d.field_q;
+            this.field_b = null;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "mn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "mn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Catching breath!";
     }
 }

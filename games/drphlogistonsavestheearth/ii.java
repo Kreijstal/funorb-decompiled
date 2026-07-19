@@ -15,10 +15,6 @@ final class ii {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ii.A(";
         field_a = new int[8192];
         vd discarded$0 = new vd();

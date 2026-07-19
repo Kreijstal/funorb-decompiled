@@ -25,45 +25,45 @@ final class tf extends tj {
         int var3 = 0;
         L0: {
           var3 = HoldTheLine.field_D;
-          if (((tf) this).field_y <= 0) {
-            if (1048576 <= ((tf) this).field_y) {
+          if ((this.field_y ^ -1) >= -1) {
+            if (1048576 <= this.field_y) {
               break L0;
             } else {
-              if (null != ((tf) this).field_m) {
-                ((tf) this).field_C.a(param0);
+              if (null != this.field_m) {
+                this.field_C.a(param0);
                 break L0;
               } else {
-                if (1048576 <= ((tf) this).field_y) {
+                if (1048576 <= this.field_y) {
                   break L0;
                 } else {
-                  if (null == ((tf) this).field_m) {
+                  if (null == this.field_m) {
                     break L0;
                   } else {
-                    ((tf) this).field_C.a(param0);
+                    this.field_C.a(param0);
                     break L0;
                   }
                 }
               }
             }
           } else {
-            if (1048576 <= ((tf) this).field_y) {
+            if (1048576 <= this.field_y) {
               break L0;
             } else {
-              if (null == ((tf) this).field_m) {
+              if (null == this.field_m) {
                 break L0;
               } else {
-                ((tf) this).field_C.a(param0);
+                this.field_C.a(param0);
                 break L0;
               }
             }
           }
         }
         L1: {
-          if (((tf) this).field_s <= 0) {
+          if (-1 <= (this.field_s ^ -1)) {
             break L1;
           } else {
-            if (null != ((tf) this).field_t) {
-              ((tf) this).field_p.a(param0);
+            if (null != this.field_t) {
+              this.field_p.a(param0);
               break L1;
             } else {
               break L1;
@@ -71,30 +71,30 @@ final class tf extends tj {
           }
         }
         L2: {
-          if (!((tf) this).field_x) {
+          if (!this.field_x) {
             break L2;
           } else {
             L3: {
-              if (0 >= ((tf) this).field_D) {
+              if (0 >= this.field_D) {
                 break L3;
               } else {
-                if (!((tf) this).field_q.c((byte) -128)) {
-                  ((tf) this).field_x = false;
-                  ((tf) this).field_z = null;
-                  ((tf) this).field_D = -((tf) this).field_D;
+                if (!this.field_q.c((byte) -128)) {
+                  this.field_x = false;
+                  this.field_z = null;
+                  this.field_D = -this.field_D;
                   break L2;
                 } else {
                   break L3;
                 }
               }
             }
-            if (((tf) this).field_D >= 0) {
+            if ((this.field_D ^ -1) <= -1) {
               break L2;
             } else {
-              if (!((tf) this).field_C.c((byte) 39)) {
-                ((tf) this).field_x = false;
-                ((tf) this).field_D = -((tf) this).field_D;
-                ((tf) this).field_m = null;
+              if (!this.field_C.c((byte) 39)) {
+                this.field_x = false;
+                this.field_D = -this.field_D;
+                this.field_m = null;
                 break L2;
               } else {
                 break L2;
@@ -103,24 +103,24 @@ final class tf extends tj {
           }
         }
         L4: {
-          if (0 == ((tf) this).field_D) {
+          if (0 == this.field_D) {
             break L4;
           } else {
-            ((tf) this).field_y = ((tf) this).field_y + ((tf) this).field_D * param0;
-            if (((tf) this).field_y >= 1048576) {
-              ((tf) this).field_y = 1048576;
-              if (!((tf) this).field_x) {
-                ((tf) this).field_D = 0;
-                if (!((tf) this).field_w) {
+            this.field_y = this.field_y + this.field_D * param0;
+            if (this.field_y >= 1048576) {
+              this.field_y = 1048576;
+              if (!this.field_x) {
+                this.field_D = 0;
+                if (!this.field_w) {
                   L5: {
-                    if (null == ((tf) this).field_m) {
+                    if (null == this.field_m) {
                       break L5;
                     } else {
-                      ((tf) this).field_C.f(-127);
+                      this.field_C.f(-127);
                       break L5;
                     }
                   }
-                  ((tf) this).field_m = null;
+                  this.field_m = null;
                   break L4;
                 } else {
                   break L4;
@@ -129,24 +129,24 @@ final class tf extends tj {
                 break L4;
               }
             } else {
-              if (0 < ((tf) this).field_y) {
+              if (0 < this.field_y) {
                 break L4;
               } else {
-                ((tf) this).field_y = 0;
-                if (((tf) this).field_x) {
+                this.field_y = 0;
+                if (this.field_x) {
                   break L4;
                 } else {
-                  ((tf) this).field_D = 0;
-                  if (!((tf) this).field_w) {
+                  this.field_D = 0;
+                  if (!this.field_w) {
                     L6: {
-                      if (null == ((tf) this).field_z) {
+                      if (null == this.field_z) {
                         break L6;
                       } else {
-                        ((tf) this).field_q.f(-127);
+                        this.field_q.f(-127);
                         break L6;
                       }
                     }
-                    ((tf) this).field_z = null;
+                    this.field_z = null;
                     break L4;
                   } else {
                     break L4;
@@ -159,76 +159,92 @@ final class tf extends tj {
     }
 
     final static hj[] a(int param0, gn param1, int param2, boolean param3) {
+        java.awt.Container discarded$2 = null;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        hj[] stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
+        hj[] stackIn_6_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        hj[] stackOut_3_0 = null;
+        hj[] stackOut_5_0 = null;
         Object stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
             if (qg.a(param2, param0, (byte) -27, param1)) {
-              java.awt.Container discarded$2 = tf.e(-27);
-              stackOut_3_0 = jd.h(-128);
-              stackIn_4_0 = stackOut_3_0;
+              L1: {
+                if (!param3) {
+                  break L1;
+                } else {
+                  discarded$2 = tf.e(-27);
+                  break L1;
+                }
+              }
+              stackOut_5_0 = jd.h(-128);
+              stackIn_6_0 = stackOut_5_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
-              return (hj[]) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("tf.F(").append(param0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_7_0 = (RuntimeException) (var4);
+            stackOut_7_1 = new StringBuilder().append("tf.F(").append(param0).append(',');
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
-              break L1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ',' + false + ')');
+          throw kk.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (hj[]) ((Object) stackIn_2_0);
+        } else {
+          return stackIn_6_0;
+        }
     }
 
     final boolean a(int param0, vi param1) {
+        boolean discarded$2 = false;
         RuntimeException var3 = null;
-        Object var4 = null;
+        vi var4 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -254,17 +270,17 @@ final class tf extends tj {
               if (param0 < -11) {
                 break L1;
               } else {
-                var4 = null;
-                boolean discarded$2 = ((tf) this).a(-93, (vi) null);
+                var4 = (vi) null;
+                discarded$2 = this.a(-93, (vi) null);
                 break L1;
               }
             }
             L2: {
               L3: {
-                if (param1 == ((tf) this).field_z) {
+                if (param1 == this.field_z) {
                   break L3;
                 } else {
-                  if (((tf) this).field_m != param1) {
+                  if (this.field_m != param1) {
                     stackOut_6_0 = 0;
                     stackIn_7_0 = stackOut_6_0;
                     break L2;
@@ -283,23 +299,23 @@ final class tf extends tj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_0 = (RuntimeException) (var3);
             stackOut_8_1 = new StringBuilder().append("tf.J(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -307,7 +323,7 @@ final class tf extends tj {
               break L4;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -340,6 +356,7 @@ final class tf extends tj {
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
         String stackIn_64_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_29_0 = 0;
         int stackOut_28_0 = 0;
@@ -358,35 +375,36 @@ final class tf extends tj {
         var11 = HoldTheLine.field_D;
         try {
           L0: {
-            if (((tf) this).field_B <= 0) {
-              ((tf) this).a(param2);
-              return;
+            if (this.field_B <= 0) {
+              this.a(param2);
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
-                if (((tf) this).field_x) {
+                if (this.field_x) {
                   L2: {
-                    if (0 >= ((tf) this).field_D) {
+                    if (0 >= this.field_D) {
                       break L2;
                     } else {
-                      if (((tf) this).field_q.c((byte) -127)) {
+                      if (this.field_q.c((byte) -127)) {
                         break L2;
                       } else {
-                        ((tf) this).field_D = -((tf) this).field_D;
-                        ((tf) this).field_x = false;
-                        ((tf) this).field_z = null;
+                        this.field_D = -this.field_D;
+                        this.field_x = false;
+                        this.field_z = null;
                         break L1;
                       }
                     }
                   }
-                  if (((tf) this).field_D >= 0) {
+                  if (-1 >= (this.field_D ^ -1)) {
                     break L1;
                   } else {
-                    if (((tf) this).field_C.c((byte) 101)) {
+                    if (this.field_C.c((byte) 101)) {
                       break L1;
                     } else {
-                      ((tf) this).field_D = -((tf) this).field_D;
-                      ((tf) this).field_x = false;
-                      ((tf) this).field_m = null;
+                      this.field_D = -this.field_D;
+                      this.field_x = false;
+                      this.field_m = null;
                       break L1;
                     }
                   }
@@ -395,55 +413,55 @@ final class tf extends tj {
                 }
               }
               L3: {
-                var4_int = (((tf) this).field_y >> 12) * ((tf) this).field_B / 256;
-                var5 = ((tf) this).field_B + -var4_int;
-                if (((tf) this).field_D == 0) {
+                var4_int = (this.field_y >> 172353900) * this.field_B / 256;
+                var5 = this.field_B + -var4_int;
+                if (this.field_D == 0) {
                   break L3;
                 } else {
-                  ((tf) this).field_y = ((tf) this).field_y + param2 * ((tf) this).field_D;
-                  if (((tf) this).field_y < 1048576) {
-                    if (0 < ((tf) this).field_y) {
+                  this.field_y = this.field_y + param2 * this.field_D;
+                  if (this.field_y < 1048576) {
+                    if (0 < this.field_y) {
                       break L3;
                     } else {
-                      ((tf) this).field_y = 0;
-                      if (((tf) this).field_x) {
+                      this.field_y = 0;
+                      if (this.field_x) {
                         break L3;
                       } else {
-                        ((tf) this).field_D = 0;
-                        if (((tf) this).field_w) {
+                        this.field_D = 0;
+                        if (this.field_w) {
                           break L3;
                         } else {
                           L4: {
-                            if (((tf) this).field_z != null) {
-                              ((tf) this).field_q.f(-124);
+                            if (this.field_z != null) {
+                              this.field_q.f(-124);
                               break L4;
                             } else {
                               break L4;
                             }
                           }
-                          ((tf) this).field_z = null;
+                          this.field_z = null;
                           break L3;
                         }
                       }
                     }
                   } else {
-                    ((tf) this).field_y = 1048576;
-                    if (((tf) this).field_x) {
+                    this.field_y = 1048576;
+                    if (this.field_x) {
                       break L3;
                     } else {
-                      ((tf) this).field_D = 0;
-                      if (((tf) this).field_w) {
+                      this.field_D = 0;
+                      if (this.field_w) {
                         break L3;
                       } else {
                         L5: {
-                          if (null == ((tf) this).field_m) {
+                          if (null == this.field_m) {
                             break L5;
                           } else {
-                            ((tf) this).field_C.f(-127);
+                            this.field_C.f(-127);
                             break L5;
                           }
                         }
-                        ((tf) this).field_m = null;
+                        this.field_m = null;
                         break L3;
                       }
                     }
@@ -456,21 +474,21 @@ final class tf extends tj {
                   stackIn_30_0 = stackOut_29_0;
                   break L6;
                 } else {
-                  stackOut_28_0 = param2 << 1;
+                  stackOut_28_0 = param2 << -596116767;
                   stackIn_30_0 = stackOut_28_0;
                   break L6;
                 }
               }
               L7: {
                 var6 = stackIn_30_0;
-                if (((tf) this).field_s >= 256) {
+                if (-257 >= (this.field_s ^ -1)) {
                   break L7;
                 } else {
                   L8: {
-                    if (((tf) this).field_z != null) {
+                    if (this.field_z != null) {
                       break L8;
                     } else {
-                      if (((tf) this).field_m != null) {
+                      if (this.field_m != null) {
                         break L8;
                       } else {
                         break L7;
@@ -478,31 +496,31 @@ final class tf extends tj {
                     }
                   }
                   if (var4_int != 256) {
-                    if (var5 == 256) {
-                      ((tf) this).field_C.b(param0, param1, param2);
+                    if ((var5 ^ -1) == -257) {
+                      this.field_C.b(param0, param1, param2);
                       break L7;
                     } else {
                       L9: {
                         L10: {
-                          if (null == ((tf) this).field_v) {
+                          if (null == this.field_v) {
                             break L10;
                           } else {
-                            if (var6 > ((tf) this).field_v.length) {
+                            if (var6 > this.field_v.length) {
                               break L10;
                             } else {
-                              bc.a(((tf) this).field_v, 0, var6);
-                              bc.a(((tf) this).field_u, 0, var6);
+                              bc.a(this.field_v, 0, var6);
+                              bc.a(this.field_u, 0, var6);
                               break L9;
                             }
                           }
                         }
-                        ((tf) this).field_u = new int[var6];
-                        ((tf) this).field_v = new int[var6];
+                        this.field_u = new int[var6];
+                        this.field_v = new int[var6];
                         break L9;
                       }
                       L11: {
-                        ((tf) this).field_q.b(((tf) this).field_v, 0, param2);
-                        ((tf) this).field_C.b(((tf) this).field_u, 0, param2);
+                        this.field_q.b(this.field_v, 0, param2);
+                        this.field_C.b(this.field_u, 0, param2);
                         if (lo.field_t) {
                           param1 = param1 << 1;
                           stackOut_43_0 = param1 << 1;
@@ -520,44 +538,44 @@ final class tf extends tj {
                         if (var8 >= var6) {
                           break L7;
                         } else {
-                          param0[var8 + var7] = param0[var8 + var7] + (((tf) this).field_v[var8] * var4_int + var5 * ((tf) this).field_u[var8] >> 8);
+                          param0[var8 + var7] = param0[var8 + var7] + (this.field_v[var8] * var4_int + var5 * this.field_u[var8] >> 1418724520);
                           var8++;
                           continue L12;
                         }
                       }
                     }
                   } else {
-                    ((tf) this).field_q.b(param0, param1, param2);
+                    this.field_q.b(param0, param1, param2);
                     break L7;
                   }
                 }
               }
               L13: {
-                if (((tf) this).field_t == null) {
+                if (this.field_t == null) {
                   break L13;
                 } else {
-                  if (0 == ((tf) this).field_s) {
+                  if (0 == this.field_s) {
                     break L13;
                   } else {
                     L14: {
                       L15: {
-                        if (((tf) this).field_v == null) {
+                        if (this.field_v == null) {
                           break L15;
                         } else {
-                          if (((tf) this).field_v.length < var6) {
+                          if (this.field_v.length < var6) {
                             break L15;
                           } else {
-                            bc.a(((tf) this).field_v, 0, var6);
+                            bc.a(this.field_v, 0, var6);
                             break L14;
                           }
                         }
                       }
-                      ((tf) this).field_u = new int[var6];
-                      ((tf) this).field_v = new int[var6];
+                      this.field_u = new int[var6];
+                      this.field_v = new int[var6];
                       break L14;
                     }
                     L16: {
-                      ((tf) this).field_p.b(((tf) this).field_v, 0, param2);
+                      this.field_p.b(this.field_v, 0, param2);
                       if (!lo.field_t) {
                         stackOut_56_0 = param1;
                         stackIn_57_0 = stackOut_56_0;
@@ -570,14 +588,14 @@ final class tf extends tj {
                       }
                     }
                     var7 = stackIn_57_0;
-                    var8 = ((tf) this).field_s * ((tf) this).field_B / 256;
-                    var9 = -var8 + ((tf) this).field_B;
+                    var8 = this.field_s * this.field_B / 256;
+                    var9 = -var8 + this.field_B;
                     var10 = 0;
                     L17: while (true) {
                       if (var10 >= var6) {
                         break L13;
                       } else {
-                        param0[var10 + var7] = var9 * param0[var10 + var7] + var8 * ((tf) this).field_v[var10] >> 8;
+                        param0[var10 + var7] = var9 * param0[var10 + var7] + var8 * this.field_v[var10] >> -758450424;
                         var10++;
                         continue L17;
                       }
@@ -585,6 +603,7 @@ final class tf extends tj {
                   }
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -592,23 +611,23 @@ final class tf extends tj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var4 = decompiledCaughtException;
-            stackOut_61_0 = (RuntimeException) var4;
+            stackOut_61_0 = (RuntimeException) (var4);
             stackOut_61_1 = new StringBuilder().append("tf.A(");
             stackIn_63_0 = stackOut_61_0;
             stackIn_63_1 = stackOut_61_1;
             stackIn_62_0 = stackOut_61_0;
             stackIn_62_1 = stackOut_61_1;
             if (param0 == null) {
-              stackOut_63_0 = (RuntimeException) (Object) stackIn_63_0;
-              stackOut_63_1 = (StringBuilder) (Object) stackIn_63_1;
+              stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
+              stackOut_63_1 = (StringBuilder) ((Object) stackIn_63_1);
               stackOut_63_2 = "null";
               stackIn_64_0 = stackOut_63_0;
               stackIn_64_1 = stackOut_63_1;
               stackIn_64_2 = stackOut_63_2;
               break L18;
             } else {
-              stackOut_62_0 = (RuntimeException) (Object) stackIn_62_0;
-              stackOut_62_1 = (StringBuilder) (Object) stackIn_62_1;
+              stackOut_62_0 = (RuntimeException) ((Object) stackIn_62_0);
+              stackOut_62_1 = (StringBuilder) ((Object) stackIn_62_1);
               stackOut_62_2 = "{...}";
               stackIn_64_0 = stackOut_62_0;
               stackIn_64_1 = stackOut_62_1;
@@ -616,18 +635,23 @@ final class tf extends tj {
               break L18;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_64_0, stackIn_64_2 + ',' + param1 + ',' + param2 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_64_0), stackIn_64_2 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static java.awt.Container e(int param0) {
         if (param0 != 0) {
-            field_o = null;
+            field_o = (uf) null;
         }
         if (!(null == fm.field_a)) {
-            return (java.awt.Container) (Object) fm.field_a;
+            return (java.awt.Container) ((Object) fm.field_a);
         }
-        return (java.awt.Container) (Object) en.a(111);
+        return (java.awt.Container) ((Object) en.a(111));
     }
 
     final tj a() {
@@ -635,111 +659,123 @@ final class tf extends tj {
     }
 
     final synchronized void a(int param0, int param1) {
-        ((tf) this).field_B = param0;
+        int discarded$0 = 0;
+        this.field_B = param0;
         if (param1 != -32284) {
-            int discarded$0 = ((tf) this).c();
+            discarded$0 = this.c();
         }
     }
 
     public static void f(int param0) {
         field_r = null;
-        int var1 = 19;
+        int var1 = 38 / ((param0 - -51) / 59);
         field_n = null;
         field_A = null;
         field_o = null;
     }
 
     final static float a(byte param0, float param1, wc[] param2) {
+        hj[] discarded$2 = null;
         float var3_float = 0.0f;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        float stackIn_7_0 = 0.0f;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
+        gn var7 = null;
+        float stackIn_9_0 = 0.0f;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        float stackOut_6_0 = 0.0f;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
+        float stackOut_8_0 = 0.0f;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         var6 = HoldTheLine.field_D;
         try {
           L0: {
-            var3_float = 0.0f;
-            var4 = (int)param1;
+            L1: {
+              var3_float = 0.0f;
+              var4 = (int)param1;
+              if (param0 > 74) {
+                break L1;
+              } else {
+                var7 = (gn) null;
+                discarded$2 = tf.a(115, (gn) null, 72, true);
+                break L1;
+              }
+            }
             var5 = 0;
-            L1: while (true) {
+            L2: while (true) {
               if (var5 >= var4) {
-                L2: {
+                L3: {
                   if (param1 == (float)var4) {
-                    break L2;
+                    break L3;
                   } else {
                     var3_float = var3_float + param2[var4].f(50) * ((float)(-var4) + param1);
-                    break L2;
+                    break L3;
                   }
                 }
-                stackOut_6_0 = var3_float;
-                stackIn_7_0 = stackOut_6_0;
+                stackOut_8_0 = var3_float;
+                stackIn_9_0 = stackOut_8_0;
                 break L0;
               } else {
                 var3_float = var3_float + param2[var5].f(50);
                 var5++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("tf.E(").append(117).append(',').append(param1).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_10_0 = (RuntimeException) (var3);
+            stackOut_10_1 = new StringBuilder().append("tf.E(").append(param0).append(',').append(param1).append(',');
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L3;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L3;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
-        return stackIn_7_0;
+        return stackIn_9_0;
     }
 
     private final void a(kf param0, byte param1, kf param2) {
         try {
-            ((tf) this).field_q = param0;
-            ((tf) this).field_y = 1048576;
-            int var4_int = 91;
-            ((tf) this).field_C = param2;
+            this.field_q = param0;
+            this.field_y = 1048576;
+            int var4_int = 91 / ((param1 - 21) / 54);
+            this.field_C = param2;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "tf.K(" + (param0 != null ? "{...}" : "null") + ',' + 126 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "tf.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -747,11 +783,11 @@ final class tf extends tj {
         try {
             param1.a((byte) 108, -1, param3);
             if (param2 != 17945) {
-                ((tf) this).field_y = 96;
+                this.field_y = 96;
             }
             param1.b(param0, param2 + -17943);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "tf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "tf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -759,7 +795,7 @@ final class tf extends tj {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
-        Object var9 = null;
+        vi var9 = null;
         Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
         Object stackIn_19_0 = null;
@@ -792,6 +828,7 @@ final class tf extends tj {
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
         String stackIn_59_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_16_0 = null;
         Object stackOut_18_0 = null;
@@ -834,48 +871,49 @@ final class tf extends tj {
         try {
           L0: {
             L1: {
-              if (!((tf) this).field_x) {
+              if (!this.field_x) {
                 break L1;
               } else {
                 if (param4) {
                   L2: {
-                    if (((tf) this).field_D > 0) {
+                    if (this.field_D > 0) {
                       L3: {
-                        if (((tf) this).field_z != null) {
-                          ((tf) this).field_q.f(-127);
+                        if (this.field_z != null) {
+                          this.field_q.f(-127);
                           break L3;
                         } else {
                           break L3;
                         }
                       }
-                      ((tf) this).field_z = param2;
+                      this.field_z = param2;
                       if (param2 == null) {
                         break L2;
                       } else {
-                        ((tf) this).field_q.a(param3 + -2128026886, param2, false);
-                        this.a(param1, ((tf) this).field_q, 17945, param5);
+                        this.field_q.a(param3 + -2128026886, param2, false);
+                        this.a(param1, this.field_q, 17945, param5);
                         break L2;
                       }
                     } else {
                       L4: {
-                        if (((tf) this).field_m != null) {
-                          ((tf) this).field_C.f(-125);
+                        if (this.field_m != null) {
+                          this.field_C.f(-125);
                           break L4;
                         } else {
                           break L4;
                         }
                       }
-                      ((tf) this).field_m = param2;
+                      this.field_m = param2;
                       if (param2 == null) {
                         break L2;
                       } else {
-                        ((tf) this).field_C.a(-2128027000, param2, false);
-                        this.a(param1, ((tf) this).field_C, 17945, param5);
+                        this.field_C.a(-2128027000, param2, false);
+                        this.a(param1, this.field_C, 17945, param5);
                         break L2;
                       }
                     }
                   }
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   break L1;
                 }
@@ -899,30 +937,31 @@ final class tf extends tj {
                 break L5;
               }
             }
-            ((tf) this).field_x = stackIn_19_1 != 0;
-            if (((tf) this).field_z != param2) {
-              if (param2 == ((tf) this).field_m) {
-                ((tf) this).field_D = -param0;
-                this.a(param1, ((tf) this).field_C, 17945, param5);
-                return;
+            ((tf) (this)).field_x = stackIn_19_1 != 0;
+            if (this.field_z != param2) {
+              if (param2 == this.field_m) {
+                this.field_D = -param0;
+                this.a(param1, this.field_C, 17945, param5);
+                decompiledRegionSelector0 = 2;
+                break L0;
               } else {
                 L6: {
                   if (param3 == -114) {
                     break L6;
                   } else {
-                    var9 = null;
-                    ((tf) this).a(85, 112, (vi) null, (byte) -26, false, -91);
+                    var9 = (vi) null;
+                    this.a(85, 112, (vi) null, (byte) -26, false, -91);
                     break L6;
                   }
                 }
                 L7: {
-                  if (((tf) this).field_z == null) {
+                  if (this.field_z == null) {
                     var7_int = 1;
                     break L7;
                   } else {
-                    if (((tf) this).field_m != null) {
+                    if (this.field_m != null) {
                       L8: {
-                        if (((tf) this).field_y >= 524288) {
+                        if (this.field_y >= 524288) {
                           stackOut_33_0 = 0;
                           stackIn_34_0 = stackOut_33_0;
                           break L8;
@@ -943,20 +982,20 @@ final class tf extends tj {
                 L9: {
                   if (var7_int == 0) {
                     L10: {
-                      if (((tf) this).field_m != null) {
-                        ((tf) this).field_C.f(-125);
+                      if (this.field_m != null) {
+                        this.field_C.f(-125);
                         break L10;
                       } else {
                         break L10;
                       }
                     }
                     L11: {
-                      ((tf) this).field_m = param2;
+                      this.field_m = param2;
                       if (param2 != null) {
                         L12: {
-                          stackOut_50_0 = ((tf) this).field_C;
+                          stackOut_50_0 = this.field_C;
                           stackOut_50_1 = -2128027000;
-                          stackOut_50_2 = (vi) param2;
+                          stackOut_50_2 = (vi) (param2);
                           stackIn_52_0 = stackOut_50_0;
                           stackIn_52_1 = stackOut_50_1;
                           stackIn_52_2 = stackOut_50_2;
@@ -964,9 +1003,9 @@ final class tf extends tj {
                           stackIn_51_1 = stackOut_50_1;
                           stackIn_51_2 = stackOut_50_2;
                           if (param4) {
-                            stackOut_52_0 = (kf) (Object) stackIn_52_0;
+                            stackOut_52_0 = (kf) ((Object) stackIn_52_0);
                             stackOut_52_1 = stackIn_52_1;
-                            stackOut_52_2 = (vi) (Object) stackIn_52_2;
+                            stackOut_52_2 = (vi) ((Object) stackIn_52_2);
                             stackOut_52_3 = 0;
                             stackIn_53_0 = stackOut_52_0;
                             stackIn_53_1 = stackOut_52_1;
@@ -974,9 +1013,9 @@ final class tf extends tj {
                             stackIn_53_3 = stackOut_52_3;
                             break L12;
                           } else {
-                            stackOut_51_0 = (kf) (Object) stackIn_51_0;
+                            stackOut_51_0 = (kf) ((Object) stackIn_51_0);
                             stackOut_51_1 = stackIn_51_1;
-                            stackOut_51_2 = (vi) (Object) stackIn_51_2;
+                            stackOut_51_2 = (vi) ((Object) stackIn_51_2);
                             stackOut_51_3 = 1;
                             stackIn_53_0 = stackOut_51_0;
                             stackIn_53_1 = stackOut_51_1;
@@ -986,32 +1025,32 @@ final class tf extends tj {
                           }
                         }
                         ((kf) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_53_2, stackIn_53_3 != 0);
-                        this.a(param1, ((tf) this).field_C, 17945, param5);
+                        this.a(param1, this.field_C, 17945, param5);
                         break L11;
                       } else {
                         break L11;
                       }
                     }
-                    ((tf) this).field_D = -param0;
+                    this.field_D = -param0;
                     break L9;
                   } else {
                     L13: {
-                      if (null == ((tf) this).field_z) {
+                      if (null == this.field_z) {
                         break L13;
                       } else {
-                        ((tf) this).field_q.f(param3 ^ 13);
+                        this.field_q.f(param3 ^ 13);
                         break L13;
                       }
                     }
                     L14: {
-                      ((tf) this).field_z = param2;
+                      this.field_z = param2;
                       if (param2 == null) {
                         break L14;
                       } else {
                         L15: {
-                          stackOut_40_0 = ((tf) this).field_q;
+                          stackOut_40_0 = this.field_q;
                           stackOut_40_1 = -2128027000;
-                          stackOut_40_2 = (vi) param2;
+                          stackOut_40_2 = (vi) (param2);
                           stackIn_42_0 = stackOut_40_0;
                           stackIn_42_1 = stackOut_40_1;
                           stackIn_42_2 = stackOut_40_2;
@@ -1019,9 +1058,9 @@ final class tf extends tj {
                           stackIn_41_1 = stackOut_40_1;
                           stackIn_41_2 = stackOut_40_2;
                           if (param4) {
-                            stackOut_42_0 = (kf) (Object) stackIn_42_0;
+                            stackOut_42_0 = (kf) ((Object) stackIn_42_0);
                             stackOut_42_1 = stackIn_42_1;
-                            stackOut_42_2 = (vi) (Object) stackIn_42_2;
+                            stackOut_42_2 = (vi) ((Object) stackIn_42_2);
                             stackOut_42_3 = 0;
                             stackIn_43_0 = stackOut_42_0;
                             stackIn_43_1 = stackOut_42_1;
@@ -1029,9 +1068,9 @@ final class tf extends tj {
                             stackIn_43_3 = stackOut_42_3;
                             break L15;
                           } else {
-                            stackOut_41_0 = (kf) (Object) stackIn_41_0;
+                            stackOut_41_0 = (kf) ((Object) stackIn_41_0);
                             stackOut_41_1 = stackIn_41_1;
-                            stackOut_41_2 = (vi) (Object) stackIn_41_2;
+                            stackOut_41_2 = (vi) ((Object) stackIn_41_2);
                             stackOut_41_3 = 1;
                             stackIn_43_0 = stackOut_41_0;
                             stackIn_43_1 = stackOut_41_1;
@@ -1041,43 +1080,45 @@ final class tf extends tj {
                           }
                         }
                         ((kf) (Object) stackIn_43_0).a(stackIn_43_1, stackIn_43_2, stackIn_43_3 != 0);
-                        this.a(param1, ((tf) this).field_q, param3 ^ -18025, param5);
+                        this.a(param1, this.field_q, param3 ^ -18025, param5);
                         break L14;
                       }
                     }
-                    ((tf) this).field_D = param0;
+                    this.field_D = param0;
                     break L9;
                   }
                 }
+                decompiledRegionSelector0 = 3;
                 break L0;
               }
             } else {
-              ((tf) this).field_D = param0;
-              this.a(param1, ((tf) this).field_q, 17945, param5);
-              return;
+              this.field_D = param0;
+              this.a(param1, this.field_q, 17945, param5);
+              decompiledRegionSelector0 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var7 = decompiledCaughtException;
-            stackOut_56_0 = (RuntimeException) var7;
+            stackOut_56_0 = (RuntimeException) (var7);
             stackOut_56_1 = new StringBuilder().append("tf.B(").append(param0).append(',').append(param1).append(',');
             stackIn_58_0 = stackOut_56_0;
             stackIn_58_1 = stackOut_56_1;
             stackIn_57_0 = stackOut_56_0;
             stackIn_57_1 = stackOut_56_1;
             if (param2 == null) {
-              stackOut_58_0 = (RuntimeException) (Object) stackIn_58_0;
-              stackOut_58_1 = (StringBuilder) (Object) stackIn_58_1;
+              stackOut_58_0 = (RuntimeException) ((Object) stackIn_58_0);
+              stackOut_58_1 = (StringBuilder) ((Object) stackIn_58_1);
               stackOut_58_2 = "null";
               stackIn_59_0 = stackOut_58_0;
               stackIn_59_1 = stackOut_58_1;
               stackIn_59_2 = stackOut_58_2;
               break L16;
             } else {
-              stackOut_57_0 = (RuntimeException) (Object) stackIn_57_0;
-              stackOut_57_1 = (StringBuilder) (Object) stackIn_57_1;
+              stackOut_57_0 = (RuntimeException) ((Object) stackIn_57_0);
+              stackOut_57_1 = (StringBuilder) ((Object) stackIn_57_1);
               stackOut_57_2 = "{...}";
               stackIn_59_0 = stackOut_57_0;
               stackIn_59_1 = stackOut_57_1;
@@ -1085,23 +1126,32 @@ final class tf extends tj {
               break L16;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_59_0, stackIn_59_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_59_0), stackIn_59_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
     public tf() {
-        ((tf) this).field_s = 0;
-        ((tf) this).field_B = 256;
-        ((tf) this).field_w = false;
+        this.field_s = 0;
+        this.field_B = 256;
+        this.field_w = false;
         kf var1 = new kf();
         this.a(var1, (byte) 126, new kf(var1));
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "1P";
         field_n = new en();
     }

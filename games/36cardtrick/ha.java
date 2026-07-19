@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class ha {
     int field_b;
     static bk field_d;
@@ -10,11 +8,12 @@ final class ha {
     static String field_c;
 
     final static String a(CharSequence param0, int param1, boolean param2) {
+        String discarded$2 = null;
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        Object var6 = null;
+        CharSequence var6 = null;
         String stackIn_3_0 = null;
         String stackIn_11_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -24,6 +23,7 @@ final class ha {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_10_0 = null;
         String stackOut_2_0 = null;
@@ -37,78 +37,93 @@ final class ha {
         String stackOut_15_2 = null;
         var5 = Main.field_T;
         try {
-          var3 = jl.a(false, param0, false);
-          if (var3 == null) {
-            L0: {
-              if (param1 == -30773) {
-                break L0;
-              } else {
-                var6 = null;
-                String discarded$2 = ha.a((CharSequence) null, 19, false);
-                break L0;
-              }
-            }
-            var4 = 0;
-            L1: while (true) {
-              if (var4 < param0.length()) {
-                if (fd.a(true, param0.charAt(var4))) {
-                  var4++;
-                  continue L1;
+          L0: {
+            var3 = jl.a(false, param0, param2);
+            if (var3 == null) {
+              L1: {
+                if (param1 == -30773) {
+                  break L1;
                 } else {
-                  stackOut_10_0 = nf.field_a;
-                  stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0;
+                  var6 = (CharSequence) null;
+                  discarded$2 = ha.a((CharSequence) null, 19, false);
+                  break L1;
                 }
-              } else {
-                return null;
               }
+              var4 = 0;
+              L2: while (true) {
+                if (var4 < param0.length()) {
+                  if (fd.a(true, param0.charAt(var4))) {
+                    var4++;
+                    continue L2;
+                  } else {
+                    stackOut_10_0 = nf.field_a;
+                    stackIn_11_0 = stackOut_10_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
+                  }
+                } else {
+                  return null;
+                }
+              }
+            } else {
+              stackOut_2_0 = (String) (var3);
+              stackIn_3_0 = stackOut_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-          } else {
-            stackOut_2_0 = (String) var3;
-            stackIn_3_0 = stackOut_2_0;
-            return stackIn_3_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3_ref;
+            stackOut_14_0 = (RuntimeException) (var3_ref);
             stackOut_14_1 = new StringBuilder().append("ha.C(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
-              break L2;
+              break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
               stackIn_17_2 = stackOut_15_2;
-              break L2;
+              break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + false + ')');
+          throw ma.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_11_0;
         }
     }
 
     final static int a(boolean param0, String param1, int param2, boolean param3, int param4, String param5) {
         try {
+            int discarded$6 = 0;
+            int discarded$7 = 0;
+            int discarded$8 = 0;
+            int discarded$9 = 0;
+            Object discarded$10 = null;
+            Object discarded$11 = null;
             RuntimeException var6 = null;
             int var6_int = 0;
             int var7 = 0;
             Throwable var8_ref_Throwable = null;
             int var8 = 0;
             int var9 = 0;
-            Object var10 = null;
+            String var10 = null;
             String var11 = null;
             CharSequence var12 = null;
             int stackIn_6_0 = 0;
@@ -134,6 +149,7 @@ final class ha {
             RuntimeException stackIn_104_0 = null;
             StringBuilder stackIn_104_1 = null;
             String stackIn_104_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             int stackOut_5_0 = 0;
             int stackOut_28_0 = 0;
@@ -170,7 +186,8 @@ final class ha {
                     if (!md.a(113, param3)) {
                       stackOut_5_0 = -1;
                       stackIn_6_0 = stackOut_5_0;
-                      return stackIn_6_0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     } else {
                       break L1;
                     }
@@ -184,7 +201,7 @@ final class ha {
                   } else {
                     L3: {
                       if (param3) {
-                        var10 = null;
+                        var10 = (String) null;
                         sh.field_k = nk.a(-108, false, cd.field_a, (String) null, param1);
                         break L3;
                       } else {
@@ -264,7 +281,8 @@ final class ha {
                               lk.field_w = false;
                               stackOut_28_0 = var6_int;
                               stackIn_29_0 = stackOut_28_0;
-                              return stackIn_29_0;
+                              decompiledRegionSelector0 = 1;
+                              break L0;
                             }
                           }
                         }
@@ -283,7 +301,7 @@ final class ha {
                       L10: {
                         cd.field_a = rd.field_j.d(true);
                         ec.field_f = rd.field_j.f(-109);
-                        int discarded$6 = rd.field_j.f(-103);
+                        discarded$6 = rd.field_j.f(-103);
                         d.field_c = rd.field_j.d((byte) 72);
                         var11 = rd.field_j.f((byte) 29);
                         var7 = rd.field_j.f(113);
@@ -333,14 +351,14 @@ final class ha {
                         if (!bj.field_m) {
                           break L14;
                         } else {
-                          int discarded$7 = rd.field_j.f(124);
-                          int discarded$8 = rd.field_j.f(101);
-                          int discarded$9 = rd.field_j.e((byte) 125);
+                          discarded$7 = rd.field_j.f(124);
+                          discarded$8 = rd.field_j.f(101);
+                          discarded$9 = rd.field_j.e((byte) 125);
                           pb.field_j = rd.field_j.d((byte) 72);
                           fb.field_d = new byte[pb.field_j];
                           var8 = 0;
                           L15: while (true) {
-                            if (~var8 <= ~pb.field_j) {
+                            if (var8 >= pb.field_j) {
                               break L14;
                             } else {
                               fb.field_d[var8] = rd.field_j.a(true);
@@ -352,7 +370,7 @@ final class ha {
                       }
                       L16: {
                         ri.field_c = rd.field_j.c(false);
-                        var12 = (CharSequence) (Object) ri.field_c;
+                        var12 = (CharSequence) ((Object) ri.field_c);
                         aa.field_fb = ff.a((byte) 116, var12);
                         qb.field_b = rd.field_j.f(-117);
                         ra.field_b = ad.field_q;
@@ -379,7 +397,7 @@ final class ha {
                       }
                       L18: {
                         L19: {
-                          if (d.field_c > 0) {
+                          if ((d.field_c ^ -1) < -1) {
                             break L19;
                           } else {
                             if (bi.field_c) {
@@ -387,7 +405,7 @@ final class ha {
                             } else {
                               try {
                                 L20: {
-                                  Object discarded$10 = vh.a("unzap", -12151, mk.g(-125));
+                                  discarded$10 = vh.a("unzap", -12151, mk.g(-125));
                                   break L20;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -403,7 +421,7 @@ final class ha {
                         }
                         try {
                           L22: {
-                            Object discarded$11 = vh.a(new Object[1], "zap", (byte) 111, mk.g(-125));
+                            discarded$11 = vh.a(new Object[]{eh.a(0, cd.field_a)}, "zap", (byte) 111, mk.g(-125));
                             break L22;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -416,7 +434,7 @@ final class ha {
                         break L18;
                       }
                       L24: {
-                        if (d.field_c <= 0) {
+                        if (-1 <= (d.field_c ^ -1)) {
                           break L24;
                         } else {
                           dg.field_F = true;
@@ -426,11 +444,12 @@ final class ha {
                       na.field_r.b(kb.field_e, 8);
                       var8 = 0;
                       L25: while (true) {
-                        if (var8 >= 4) {
+                        if (-5 >= (var8 ^ -1)) {
                           rd.field_j.b(kb.field_e, 8);
                           stackOut_72_0 = pd.field_l;
                           stackIn_73_0 = stackOut_72_0;
-                          return stackIn_73_0;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         } else {
                           kb.field_e[var8] = kb.field_e[var8] + 50;
                           var8++;
@@ -462,12 +481,13 @@ final class ha {
                             lk.field_w = true;
                             stackOut_78_0 = -1;
                             stackIn_79_0 = stackOut_78_0;
-                            return stackIn_79_0;
+                            decompiledRegionSelector0 = 3;
+                            break L0;
                           }
                         }
                       }
                       L28: {
-                        if (pd.field_l == 7) {
+                        if ((pd.field_l ^ -1) == -8) {
                           pd.field_l = 3;
                           break L28;
                         } else {
@@ -478,7 +498,8 @@ final class ha {
                       lk.field_w = false;
                       stackOut_83_0 = pd.field_l;
                       stackIn_84_0 = stackOut_83_0;
-                      return stackIn_84_0;
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     }
                   }
                 }
@@ -505,7 +526,8 @@ final class ha {
                       lk.field_w = false;
                       stackOut_94_0 = 3;
                       stackIn_95_0 = stackOut_94_0;
-                      return stackIn_95_0;
+                      decompiledRegionSelector0 = 5;
+                      break L0;
                     } else {
                       var6_int = ag.field_e;
                       ag.field_e = hj.field_l;
@@ -519,29 +541,30 @@ final class ha {
                 }
                 stackOut_96_0 = -1;
                 stackIn_97_0 = stackOut_96_0;
+                decompiledRegionSelector0 = 6;
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               L32: {
                 var6 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_98_0 = (RuntimeException) var6;
+                stackOut_98_0 = (RuntimeException) (var6);
                 stackOut_98_1 = new StringBuilder().append("ha.B(").append(param0).append(',');
                 stackIn_100_0 = stackOut_98_0;
                 stackIn_100_1 = stackOut_98_1;
                 stackIn_99_0 = stackOut_98_0;
                 stackIn_99_1 = stackOut_98_1;
                 if (param1 == null) {
-                  stackOut_100_0 = (RuntimeException) (Object) stackIn_100_0;
-                  stackOut_100_1 = (StringBuilder) (Object) stackIn_100_1;
+                  stackOut_100_0 = (RuntimeException) ((Object) stackIn_100_0);
+                  stackOut_100_1 = (StringBuilder) ((Object) stackIn_100_1);
                   stackOut_100_2 = "null";
                   stackIn_101_0 = stackOut_100_0;
                   stackIn_101_1 = stackOut_100_1;
                   stackIn_101_2 = stackOut_100_2;
                   break L32;
                 } else {
-                  stackOut_99_0 = (RuntimeException) (Object) stackIn_99_0;
-                  stackOut_99_1 = (StringBuilder) (Object) stackIn_99_1;
+                  stackOut_99_0 = (RuntimeException) ((Object) stackIn_99_0);
+                  stackOut_99_1 = (StringBuilder) ((Object) stackIn_99_1);
                   stackOut_99_2 = "{...}";
                   stackIn_101_0 = stackOut_99_0;
                   stackIn_101_1 = stackOut_99_1;
@@ -550,23 +573,23 @@ final class ha {
                 }
               }
               L33: {
-                stackOut_101_0 = (RuntimeException) (Object) stackIn_101_0;
+                stackOut_101_0 = (RuntimeException) ((Object) stackIn_101_0);
                 stackOut_101_1 = ((StringBuilder) (Object) stackIn_101_1).append(stackIn_101_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
                 stackIn_103_0 = stackOut_101_0;
                 stackIn_103_1 = stackOut_101_1;
                 stackIn_102_0 = stackOut_101_0;
                 stackIn_102_1 = stackOut_101_1;
                 if (param5 == null) {
-                  stackOut_103_0 = (RuntimeException) (Object) stackIn_103_0;
-                  stackOut_103_1 = (StringBuilder) (Object) stackIn_103_1;
+                  stackOut_103_0 = (RuntimeException) ((Object) stackIn_103_0);
+                  stackOut_103_1 = (StringBuilder) ((Object) stackIn_103_1);
                   stackOut_103_2 = "null";
                   stackIn_104_0 = stackOut_103_0;
                   stackIn_104_1 = stackOut_103_1;
                   stackIn_104_2 = stackOut_103_2;
                   break L33;
                 } else {
-                  stackOut_102_0 = (RuntimeException) (Object) stackIn_102_0;
-                  stackOut_102_1 = (StringBuilder) (Object) stackIn_102_1;
+                  stackOut_102_0 = (RuntimeException) ((Object) stackIn_102_0);
+                  stackOut_102_1 = (StringBuilder) ((Object) stackIn_102_1);
                   stackOut_102_2 = "{...}";
                   stackIn_104_0 = stackOut_102_0;
                   stackIn_104_1 = stackOut_102_1;
@@ -574,9 +597,33 @@ final class ha {
                   break L33;
                 }
               }
-              throw ma.a((Throwable) (Object) stackIn_104_0, stackIn_104_2 + ')');
+              throw ma.a((Throwable) ((Object) stackIn_104_0), stackIn_104_2 + ')');
             }
-            return stackIn_97_0;
+            if (decompiledRegionSelector0 == 0) {
+              return stackIn_6_0;
+            } else {
+              if (decompiledRegionSelector0 == 1) {
+                return stackIn_29_0;
+              } else {
+                if (decompiledRegionSelector0 == 2) {
+                  return stackIn_73_0;
+                } else {
+                  if (decompiledRegionSelector0 == 3) {
+                    return stackIn_79_0;
+                  } else {
+                    if (decompiledRegionSelector0 == 4) {
+                      return stackIn_84_0;
+                    } else {
+                      if (decompiledRegionSelector0 == 5) {
+                        return stackIn_95_0;
+                      } else {
+                        return stackIn_97_0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -586,7 +633,7 @@ final class ha {
 
     public static void a(int param0) {
         if (param0 >= -98) {
-            field_c = null;
+            field_c = (String) null;
         }
         field_a = null;
         field_d = null;
@@ -594,10 +641,6 @@ final class ha {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new bk();
         field_a = new cc();
         field_c = "Please check if address is correct";

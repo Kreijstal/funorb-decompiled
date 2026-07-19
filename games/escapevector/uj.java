@@ -30,10 +30,6 @@ final class uj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "uj.A(";
         field_c = "More suggestions";
         field_d = false;

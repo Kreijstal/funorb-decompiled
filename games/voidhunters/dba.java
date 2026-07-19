@@ -3,11 +3,14 @@
  */
 final class dba extends rqa {
     final static void a(int param0, ea param1, int param2) {
+        if (param2 != 0) {
+            return;
+        }
         try {
-            oaa.field_k.b(-10258, (ksa) (Object) param1);
-            hs.a(param1, 1, 4);
+            oaa.field_k.b(-10258, param1);
+            hs.a(param1, 1, param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "dba.C(" + 4 + ',' + (param1 != null ? "{...}" : "null") + ',' + 0 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "dba.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -55,7 +58,7 @@ final class dba extends rqa {
               }
             }
             si.a(110, 62, param0[0].a(25));
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -63,23 +66,23 @@ final class dba extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("dba.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -87,7 +90,7 @@ final class dba extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

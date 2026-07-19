@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class kh extends ip {
     private boolean field_p;
     private String field_o;
@@ -18,13 +16,13 @@ final class kh extends ip {
         if (!param0) {
             return;
         }
-        ((kh) this).field_o = null;
+        this.field_o = null;
     }
 
     public static void e(byte param0) {
         field_q = null;
         field_m = null;
-        int var1 = 14;
+        int var1 = -44 / ((-37 - param0) / 44);
         field_r = null;
         field_u = null;
     }
@@ -59,12 +57,20 @@ final class kh extends ip {
             gf.a();
             var1_int = 0;
             L2: while (true) {
-              if (var1_int >= 7) {
+              if (-8 >= (var1_int ^ -1)) {
                 var1_int = 7;
                 L3: while (true) {
                   if (13 <= var1_int) {
-                    wm.field_c.e();
-                    gf.a();
+                    L4: {
+                      wm.field_c.e();
+                      gf.a();
+                      if (param0 >= 35) {
+                        break L4;
+                      } else {
+                        field_t = -99;
+                        break L4;
+                      }
+                    }
                     bn.field_f.e(16, 16, 8454143);
                     gf.d(8, 8, 0, 0, wm.field_c.field_y, wm.field_c.field_v);
                     bn.field_f.e(16, 16, 0);
@@ -76,28 +82,28 @@ final class kh extends ip {
                     var8 = var1_int * 7 - 42;
                     var4 = var8;
                     var5 = 0;
-                    L4: while (true) {
+                    L5: while (true) {
                       if (13 - var1_int <= var5) {
                         var1_int++;
                         continue L3;
                       } else {
-                        L5: {
+                        L6: {
                           var6 = 16777215;
                           if (null != qj.field_c[var8]) {
                             rl.field_d[5].e(var2, var3, var6);
                             rl.field_d[4].e(27 + var2, var3, var6);
                             ed.a(var3, var2, var8, (byte) -93, var6);
-                            rl.field_d[5].e(27 + var2, var3 - -20, var6);
-                            rl.field_d[4].e(var2, var3 - -20, var6);
-                            break L5;
+                            rl.field_d[5].e(27 + var2, var3 - -20 + 0, var6);
+                            rl.field_d[4].e(var2, var3 - -20 - 0, var6);
+                            break L6;
                           } else {
-                            break L5;
+                            break L6;
                           }
                         }
                         var8 += 8;
                         var5++;
                         var2 += 54;
-                        continue L4;
+                        continue L5;
                       }
                     }
                   }
@@ -107,23 +113,50 @@ final class kh extends ip {
                 var3 = 20 * var1_int;
                 var4 = -var1_int + 6;
                 var5 = 0;
-                L6: while (true) {
+                L7: while (true) {
                   if (1 + var1_int <= var5) {
                     var1_int++;
                     continue L2;
                   } else {
-                    L7: {
-                      var6 = 16777215;
-                      if (null == qj.field_c[var4]) {
-                        break L7;
-                      } else {
-                        break L7;
+                    var6 = 16777215;
+                    if (null != qj.field_c[var4]) {
+                      L8: {
+                        if (var4 == 0) {
+                          break L8;
+                        } else {
+                          if ((var4 ^ -1) == -7) {
+                            break L8;
+                          } else {
+                            rl.field_d[5].e(var2, var3, var6);
+                            break L8;
+                          }
+                        }
                       }
+                      L9: {
+                        if ((var4 ^ -1) == -7) {
+                          break L9;
+                        } else {
+                          if (48 != var4) {
+                            rl.field_d[4].e(27 + var2, var3, var6);
+                            break L9;
+                          } else {
+                            break L9;
+                          }
+                        }
+                      }
+                      ed.a(var3, var2, var4, (byte) -127, var6);
+                      rl.field_d[4].e(var2, var3 + 20, var6);
+                      rl.field_d[5].e(27 + var2, 20 + var3, var6);
+                      var4 += 8;
+                      var5++;
+                      var2 += 54;
+                      continue L7;
+                    } else {
+                      var4 += 8;
+                      var5++;
+                      var2 += 54;
+                      continue L7;
                     }
-                    var4 += 8;
-                    var5++;
-                    var2 += 54;
-                    continue L6;
                   }
                 }
               }
@@ -132,7 +165,7 @@ final class kh extends ip {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var1, "kh.E(" + 108 + ')');
+          throw vk.a((Throwable) ((Object) var1), "kh.E(" + param0 + ')');
         }
     }
 
@@ -144,7 +177,7 @@ final class kh extends ip {
             nj.field_b = ra.field_c.c(true);
             ra.field_c.field_o = 0;
         }
-        if (nj.field_b == -2) {
+        if ((nj.field_b ^ -1) == 1) {
             if (!oi.a(-12929, 2)) {
                 return false;
             }
@@ -152,42 +185,50 @@ final class kh extends ip {
             ra.field_c.field_o = 0;
         }
         if (param0 > -59) {
-            field_q = null;
+            field_q = (long[]) null;
         }
         return oi.a(-12929, nj.field_b);
     }
 
     final static boolean d(boolean param0) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
         L0: {
-          L1: {
+          if (param0) {
+            break L0;
+          } else {
+            field_r = (cn) null;
+            break L0;
+          }
+        }
+        L1: {
+          L2: {
             if (null != gi.field_S) {
-              break L1;
+              break L2;
             } else {
               if (uc.g(127)) {
-                break L1;
+                break L2;
               } else {
                 if (null != mh.field_e) {
-                  break L1;
+                  break L2;
                 } else {
                   if (!ck.g(-1)) {
-                    stackOut_6_0 = 0;
-                    stackIn_7_0 = stackOut_6_0;
-                    break L0;
-                  } else {
+                    stackOut_8_0 = 0;
+                    stackIn_9_0 = stackOut_8_0;
                     break L1;
+                  } else {
+                    break L2;
                   }
                 }
               }
             }
           }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
-          break L0;
+          stackOut_7_0 = 1;
+          stackIn_9_0 = stackOut_7_0;
+          break L1;
         }
-        return stackIn_7_0 != 0;
+        return stackIn_9_0 != 0;
     }
 
     final od a(String param0, int param1) {
@@ -205,6 +246,7 @@ final class kh extends ip {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         od stackOut_2_0 = null;
         od stackOut_8_0 = null;
@@ -220,14 +262,15 @@ final class kh extends ip {
         String stackOut_16_2 = null;
         try {
           L0: {
-            var4 = (CharSequence) (Object) param0;
+            var4 = (CharSequence) ((Object) param0);
             if (!o.a((byte) 31, var4)) {
               stackOut_2_0 = pd.field_J;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
-                if (param0.equals((Object) (Object) ((kh) this).field_o)) {
+                if (param0.equals(this.field_o)) {
                   break L1;
                 } else {
                   L2: {
@@ -236,8 +279,8 @@ final class kh extends ip {
                       break L2;
                     } else {
                       if (null == var3.field_g) {
-                        ((kh) this).field_p = var3.field_a;
-                        ((kh) this).field_o = param0;
+                        this.field_p = var3.field_a;
+                        this.field_o = param0;
                         break L1;
                       } else {
                         break L2;
@@ -246,12 +289,13 @@ final class kh extends ip {
                   }
                   stackOut_8_0 = oc.field_A;
                   stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
               L3: {
                 var3_int = 108 % ((5 - param1) / 44);
-                if (((kh) this).field_p) {
+                if (this.field_p) {
                   stackOut_13_0 = c.field_d;
                   stackIn_14_0 = stackOut_13_0;
                   break L3;
@@ -261,6 +305,7 @@ final class kh extends ip {
                   break L3;
                 }
               }
+              decompiledRegionSelector0 = 2;
               break L0;
             }
           }
@@ -268,23 +313,23 @@ final class kh extends ip {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var3_ref;
+            stackOut_15_0 = (RuntimeException) (var3_ref);
             stackOut_15_1 = new StringBuilder().append("kh.C(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L4;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -292,9 +337,17 @@ final class kh extends ip {
               break L4;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ')');
         }
-        return stackIn_14_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0;
+          } else {
+            return stackIn_14_0;
+          }
+        }
     }
 
     final String a(byte param0, String param1) {
@@ -304,7 +357,7 @@ final class kh extends ip {
         CharSequence var5 = null;
         String stackIn_2_0 = null;
         String stackIn_14_0 = null;
-        Object stackIn_17_0 = null;
+        String stackIn_17_0 = null;
         String stackIn_19_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -313,10 +366,11 @@ final class kh extends ip {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_13_0 = null;
         String stackOut_18_0 = null;
-        Object stackOut_16_0 = null;
+        String stackOut_16_0 = null;
         String stackOut_1_0 = null;
         RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
@@ -328,16 +382,16 @@ final class kh extends ip {
         String stackOut_21_2 = null;
         try {
           L0: {
-            var5 = (CharSequence) (Object) param1;
+            var5 = (CharSequence) ((Object) param1);
             var3 = jg.a(104, var5);
             if (var3 == null) {
               L1: {
-                if (!param1.equals((Object) (Object) ((kh) this).field_o)) {
+                if (!param1.equals(this.field_o)) {
                   var4 = vk.a((byte) -126, param1);
                   if (var4 != null) {
                     if (null == var4.field_g) {
-                      ((kh) this).field_p = var4.field_a;
-                      ((kh) this).field_o = param1;
+                      this.field_p = var4.field_a;
+                      this.field_o = param1;
                       break L1;
                     } else {
                       return null;
@@ -349,48 +403,52 @@ final class kh extends ip {
                   break L1;
                 }
               }
-              if (!((kh) this).field_p) {
+              if (!this.field_p) {
                 stackOut_13_0 = fp.field_a;
                 stackIn_14_0 = stackOut_13_0;
-                return stackIn_14_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (param0 >= 44) {
                   stackOut_18_0 = ng.field_N;
                   stackIn_19_0 = stackOut_18_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_16_0 = null;
+                  stackOut_16_0 = (String) null;
                   stackIn_17_0 = stackOut_16_0;
-                  return (String) (Object) stackIn_17_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               }
             } else {
-              stackOut_1_0 = (String) var3;
+              stackOut_1_0 = (String) (var3);
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var3_ref;
+            stackOut_20_0 = (RuntimeException) (var3_ref);
             stackOut_20_1 = new StringBuilder().append("kh.D(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L2;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -398,50 +456,60 @@ final class kh extends ip {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
         }
-        return stackIn_19_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_14_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_17_0;
+            } else {
+              return stackIn_19_0;
+            }
+          }
+        }
     }
 
     kh(rm param0) {
         super(param0);
-        ((kh) this).field_p = false;
+        this.field_p = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        long var0 = 0L;
-        int var2 = 0;
-        int var3 = 0;
-        field_q = new long[256];
-        var2 = 0;
-        L0: while (true) {
-          if (var2 >= 256) {
-            return;
-          } else {
-            var0 = (long)var2;
-            var3 = 0;
-            L1: while (true) {
-              if (var3 >= 8) {
-                field_q[var2] = var0;
-                var2++;
-                continue L0;
+        $cfr$clinit: {
+            long var0 = 0L;
+            int var2 = 0;
+            int var3 = 0;
+            field_q = new long[256];
+            var2 = 0;
+            L0: while (true) {
+              if ((var2 ^ -1) <= -257) {
+                break $cfr$clinit;
               } else {
-                if ((1L & var0) != 1L) {
-                  var0 = var0 >>> 1;
-                  var3++;
-                  continue L1;
-                } else {
-                  var0 = var0 >>> 1 ^ -3932672073523589310L;
-                  var3++;
-                  continue L1;
+                var0 = (long)var2;
+                var3 = 0;
+                L1: while (true) {
+                  if (var3 >= 8) {
+                    field_q[var2] = var0;
+                    var2++;
+                    continue L0;
+                  } else {
+                    if ((1L & var0 ^ -1L) != -2L) {
+                      var0 = var0 >>> 1;
+                      var3++;
+                      continue L1;
+                    } else {
+                      var0 = var0 >>> 1378413441 ^ -3932672073523589310L;
+                      var3++;
+                      continue L1;
+                    }
+                  }
                 }
               }
             }
-          }
         }
     }
 }

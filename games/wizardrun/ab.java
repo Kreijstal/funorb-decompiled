@@ -12,24 +12,26 @@ final class ab {
     static o field_c;
 
     final wl b(int param0) {
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         int var3 = 0;
         wl var4 = null;
         wl var5 = null;
         wl var8 = null;
         wl var9 = null;
         var3 = wizardrun.field_H;
-        if (0 >= ((ab) this).field_g) {
+        if (0 >= this.field_g) {
           if (param0 == 1) {
             L0: while (true) {
-              if (((ab) this).field_g < ((ab) this).field_a) {
-                int fieldTemp$2 = ((ab) this).field_g;
-                ((ab) this).field_g = ((ab) this).field_g + 1;
-                var4 = ((ab) this).field_d[fieldTemp$2].field_b;
+              if (this.field_g < this.field_a) {
+                fieldTemp$2 = this.field_g;
+                this.field_g = this.field_g + 1;
+                var4 = this.field_d[fieldTemp$2].field_b;
                 var9 = var4;
-                if (var4 == ((ab) this).field_d[-1 + ((ab) this).field_g]) {
+                if (var4 == this.field_d[-1 + this.field_g]) {
                   continue L0;
                 } else {
-                  ((ab) this).field_e = var9.field_b;
+                  this.field_e = var9.field_b;
                   return var9;
                 }
               } else {
@@ -37,21 +39,21 @@ final class ab {
               }
             }
           } else {
-            return null;
+            return (wl) null;
           }
         } else {
-          if (((ab) this).field_e == ((ab) this).field_d[((ab) this).field_g - 1]) {
+          if (this.field_e == this.field_d[this.field_g - 1]) {
             if (param0 == 1) {
               L1: while (true) {
-                if (((ab) this).field_g < ((ab) this).field_a) {
-                  int fieldTemp$3 = ((ab) this).field_g;
-                  ((ab) this).field_g = ((ab) this).field_g + 1;
-                  var4 = ((ab) this).field_d[fieldTemp$3].field_b;
+                if (this.field_g < this.field_a) {
+                  fieldTemp$3 = this.field_g;
+                  this.field_g = this.field_g + 1;
+                  var4 = this.field_d[fieldTemp$3].field_b;
                   var5 = var4;
-                  if (var4 == ((ab) this).field_d[-1 + ((ab) this).field_g]) {
+                  if (var4 == this.field_d[-1 + this.field_g]) {
                     continue L1;
                   } else {
-                    ((ab) this).field_e = var5.field_b;
+                    this.field_e = var5.field_b;
                     return var5;
                   }
                 } else {
@@ -59,11 +61,11 @@ final class ab {
                 }
               }
             } else {
-              return null;
+              return (wl) null;
             }
           } else {
-            var8 = ((ab) this).field_e;
-            ((ab) this).field_e = var8.field_b;
+            var8 = this.field_e;
+            this.field_e = var8.field_b;
             return var8;
           }
         }
@@ -74,20 +76,20 @@ final class ab {
         wl var5 = null;
         int var6 = 0;
         var6 = wizardrun.field_H;
-        var4 = ((ab) this).field_d[(int)((long)(((ab) this).field_a - param0) & param1)];
-        ((ab) this).field_f = var4.field_b;
+        var4 = this.field_d[(int)((long)(this.field_a - param0) & param1)];
+        this.field_f = var4.field_b;
         L0: while (true) {
-          if (((ab) this).field_f != var4) {
-            if (((ab) this).field_f.field_e == param1) {
-              var5 = ((ab) this).field_f;
-              ((ab) this).field_f = ((ab) this).field_f.field_b;
+          if (this.field_f != var4) {
+            if (this.field_f.field_e == param1) {
+              var5 = this.field_f;
+              this.field_f = this.field_f.field_b;
               return var5;
             } else {
-              ((ab) this).field_f = ((ab) this).field_f.field_b;
+              this.field_f = this.field_f.field_b;
               continue L0;
             }
           } else {
-            ((ab) this).field_f = null;
+            this.field_f = null;
             return null;
           }
         }
@@ -106,10 +108,16 @@ final class ab {
 
     final static int c(int param0) {
         wi.field_L.a((byte) -84);
-        if (ii.field_f.b((byte) 0)) {
+        if (!ii.field_f.b((byte) 0)) {
+          return cd.a(-18067);
+        } else {
+          if (param0 != 14326) {
+            field_c = (o) null;
             return 0;
+          } else {
+            return 0;
+          }
         }
-        return cd.a(-18067);
     }
 
     final static void a(kl param0, byte param1) {
@@ -117,8 +125,8 @@ final class ab {
         int var4 = 0;
         int var5 = 0;
         try {
-            int var3 = 0;
-            var2 = new o(param0.a(104, "", "final_frame.jpg"), (java.awt.Component) (Object) wizardrun.field_G);
+            int var3 = -63 % ((param1 - -44) / 42);
+            var2 = new o(param0.a(104, "", "final_frame.jpg"), (java.awt.Component) ((Object) wizardrun.field_G));
             var4 = var2.field_z;
             var5 = var2.field_p;
             ph.d(-31782);
@@ -131,7 +139,7 @@ final class ab {
             ee.field_q.field_v = af.field_a.field_p;
             bb.b(4);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ab.B(" + (param0 != null ? "{...}" : "null") + ',' + 1 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "ab.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -144,23 +152,24 @@ final class ab {
     }
 
     final wl b(byte param0) {
-        ((ab) this).field_g = 0;
+        this.field_g = 0;
         int var2 = -80 / ((-5 - param0) / 33);
-        return ((ab) this).b(1);
+        return this.b(1);
     }
 
     ab(int param0) {
+        wl dupTemp$2 = null;
         int var2 = 0;
         wl var3 = null;
-        ((ab) this).field_g = 0;
-        ((ab) this).field_a = param0;
-        ((ab) this).field_d = new wl[param0];
+        this.field_g = 0;
+        this.field_a = param0;
+        this.field_d = new wl[param0];
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            wl dupTemp$2 = new wl();
+            dupTemp$2 = new wl();
             var3 = dupTemp$2;
-            ((ab) this).field_d[var2] = dupTemp$2;
+            this.field_d[var2] = dupTemp$2;
             var3.field_c = var3;
             var3.field_b = var3;
             var2++;
@@ -175,7 +184,7 @@ final class ab {
         if (null != param0.field_c) {
             param0.a(false);
         }
-        wl var5 = ((ab) this).field_d[(int)((long)(((ab) this).field_a + -1) & param2)];
+        wl var5 = this.field_d[(int)((long)(this.field_a + -1) & param2)];
         if (param1 >= -1) {
             return;
         }
@@ -186,13 +195,13 @@ final class ab {
             param0.field_b.field_c = param0;
             param0.field_e = param2;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ab.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "ab.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(byte param0) {
         if (param0 != -69) {
-          field_h = null;
+          field_h = (jh) null;
           og.field_R = new String[8];
           og.field_R[7] = lj.field_e;
           og.field_R[1] = vk.field_o;
@@ -218,10 +227,6 @@ final class ab {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "This is the last level before the first boss.";
     }
 }

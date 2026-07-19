@@ -12,27 +12,27 @@ class w implements q {
     private int field_f;
 
     on d(int param0, int param1) {
-        eo var3 = ((w) this).field_a.a(param1 ^ -23159, (long)param0);
+        eo var3 = this.field_a.a(param1 ^ -23159, (long)param0);
         if (var3 != null) {
-            return (on) (Object) var3;
+            return (on) ((Object) var3);
         }
-        byte[] var4 = ((w) this).field_d.b(param0, 0);
+        byte[] var4 = this.field_d.b(param0, 0);
         if (var4 == null) {
             return null;
         }
         on var5 = new on(new lu(var4));
-        ((w) this).field_a.a((eo) (Object) var5, (long)param0, 97);
+        this.field_a.a(var5, (long)param0, 97);
         if (param1 != -23060) {
-            field_h = null;
+            field_h = (int[][]) null;
         }
         return var5;
     }
 
     public final gma c(int param0, int param1) {
         if (param1 != 0) {
-            return null;
+            return (gma) null;
         }
-        return ((w) this).field_c[param0];
+        return this.field_c[param0];
     }
 
     final static void a(boolean param0) {
@@ -47,125 +47,150 @@ class w implements q {
         int var8 = 0;
         lda var9 = null;
         int var10 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_10_0 = 0;
         int stackIn_11_0 = 0;
-        int stackIn_11_1 = 0;
-        lda stackIn_16_0 = null;
+        int stackIn_12_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_13_1 = 0;
+        lda stackIn_18_0 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
         int stackOut_10_0 = 0;
-        int stackOut_10_1 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        lda stackOut_15_0 = null;
-        lda stackOut_14_0 = null;
+        int stackOut_12_0 = 0;
+        int stackOut_12_1 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_11_1 = 0;
+        lda stackOut_17_0 = null;
+        lda stackOut_16_0 = null;
         var10 = BachelorFridge.field_y;
         try {
           L0: {
+            L1: {
+              if (param0) {
+                break L1;
+              } else {
+                w.a(true);
+                break L1;
+              }
+            }
             var1_int = dfa.field_b + -rs.field_a;
-            rs.field_a = sd.field_a - (var1_int >> 1);
-            vka.field_q = -(ula.field_f >> 1) + jfa.field_w;
+            rs.field_a = sd.field_a - (var1_int >> -1451153727);
+            vka.field_q = -(ula.field_f >> 477840577) + jfa.field_w;
             dfa.field_b = var1_int + rs.field_a;
             var2 = vka.field_q;
             var3 = 0;
-            L1: while (true) {
+            L2: while (true) {
               if (pt.field_a.length <= var3) {
                 break L0;
               } else {
-                L2: {
+                L3: {
                   var4 = gn.field_l[var3];
                   if (var4 >= 0) {
                     if (var4 != fw.field_i.field_g) {
                       var5 = mt.field_v;
-                      break L2;
+                      break L3;
                     } else {
                       var5 = ru.field_c;
-                      break L2;
+                      break L3;
                     }
                   } else {
                     var5 = wk.field_f;
-                    break L2;
-                  }
-                }
-                L3: {
-                  var6 = pt.field_a[var3];
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
-                  stackIn_9_0 = stackOut_8_0;
-                  if (var4 < 0) {
-                    stackOut_10_0 = stackIn_10_0;
-                    stackOut_10_1 = 0;
-                    stackIn_11_0 = stackOut_10_0;
-                    stackIn_11_1 = stackOut_10_1;
-                    break L3;
-                  } else {
-                    stackOut_9_0 = stackIn_9_0;
-                    stackOut_9_1 = 1;
-                    stackIn_11_0 = stackOut_9_0;
-                    stackIn_11_1 = stackOut_9_1;
                     break L3;
                   }
                 }
                 L4: {
-                  var7 = hka.a(stackIn_11_0 != 0, stackIn_11_1 != 0, var6);
-                  var8 = -(var7 >> 1) + sd.field_a;
+                  var6 = pt.field_a[var3];
+                  stackOut_10_0 = 1;
+                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_11_0 = stackOut_10_0;
+                  if (var4 < 0) {
+                    stackOut_12_0 = stackIn_12_0;
+                    stackOut_12_1 = 0;
+                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_1 = stackOut_12_1;
+                    break L4;
+                  } else {
+                    stackOut_11_0 = stackIn_11_0;
+                    stackOut_11_1 = 1;
+                    stackIn_13_0 = stackOut_11_0;
+                    stackIn_13_1 = stackOut_11_1;
+                    break L4;
+                  }
+                }
+                L5: {
+                  var7 = hka.a(stackIn_13_0 != 0, stackIn_13_1 != 0, var6);
+                  var8 = -(var7 >> -111540223) + sd.field_a;
                   if (var4 >= 0) {
-                    L5: {
+                    L6: {
                       if (fw.field_i.field_g == var4) {
-                        stackOut_15_0 = nj.field_j;
-                        stackIn_16_0 = stackOut_15_0;
-                        break L5;
+                        stackOut_17_0 = nj.field_j;
+                        stackIn_18_0 = stackOut_17_0;
+                        break L6;
                       } else {
-                        stackOut_14_0 = aka.field_x;
-                        stackIn_16_0 = stackOut_14_0;
-                        break L5;
+                        stackOut_16_0 = aka.field_x;
+                        stackIn_18_0 = stackOut_16_0;
+                        break L6;
                       }
                     }
-                    L6: {
-                      var9 = stackIn_16_0;
+                    L7: {
+                      var9 = stackIn_18_0;
                       var2 = var2 + raa.field_J;
                       if (var9 != null) {
-                        var9.a(jo.field_t + (pba.field_r << 1), 28, -hna.field_k + var8, var2, var7 - -(hna.field_k << 1));
-                        break L6;
+                        var9.a(jo.field_t + (pba.field_r << -690463999), 28, -hna.field_k + var8, var2, var7 - -(hna.field_k << 1369786433));
+                        break L7;
                       } else {
-                        break L6;
+                        break L7;
                       }
                     }
                     var2 = var2 + pba.field_r;
-                    break L4;
+                    break L5;
                   } else {
-                    break L4;
+                    break L5;
                   }
                 }
-                L7: {
+                L8: {
                   if (0 <= var4) {
                     lha.field_b.c(var6, var8, var2 + mha.field_g, var5, -1);
                     var2 = var2 + (pba.field_r + (raa.field_J + jo.field_t));
-                    break L7;
+                    break L8;
                   } else {
                     qm.field_a.c(var6, var8, ah.field_l + var2, var5, -1);
                     var2 = var2 + un.field_i;
-                    break L7;
+                    break L8;
                   }
                 }
                 var3++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "w.F(" + true + ')');
+          throw pe.a((Throwable) ((Object) var1), "w.F(" + param0 + ')');
         }
     }
 
     public static void a(int param0) {
-        field_h = null;
+        field_h = (int[][]) null;
+        if (param0 <= 29) {
+            w.a(true);
+        }
     }
 
     w(vr param0, vr param1, vr param2) {
+        int discarded$14 = 0;
+        int discarded$15 = 0;
+        int discarded$16 = 0;
+        int discarded$17 = 0;
+        int discarded$18 = 0;
+        byte discarded$19 = 0;
+        int discarded$20 = 0;
+        byte discarded$21 = 0;
+        byte discarded$22 = 0;
+        byte discarded$23 = 0;
+        byte discarded$24 = 0;
+        byte discarded$25 = 0;
+        byte discarded$26 = 0;
+        int discarded$27 = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         lu var7 = null;
@@ -242,81 +267,81 @@ class w implements q {
         RuntimeException stackOut_118_0 = null;
         StringBuilder stackOut_118_1 = null;
         String stackOut_118_2 = null;
-        ((w) this).field_a = new vi(256);
+        this.field_a = new vi(256);
         try {
           L0: {
-            ((w) this).field_d = param1;
-            ((w) this).field_b = param2;
+            this.field_d = param1;
+            this.field_b = param2;
             var7 = new lu(param0.b(-38, 0, 0));
-            ((w) this).field_f = var7.e((byte) 103);
-            ((w) this).field_c = new gma[((w) this).field_f];
+            this.field_f = var7.e((byte) 103);
+            this.field_c = new gma[this.field_f];
             var5 = 0;
             L1: while (true) {
-              if (((w) this).field_f <= var5) {
+              if (this.field_f <= var5) {
                 var5 = 0;
                 L2: while (true) {
-                  if (((w) this).field_f <= var5) {
+                  if (this.field_f <= var5) {
                     var5 = 0;
                     L3: while (true) {
-                      if (var5 >= ((w) this).field_f) {
+                      if (var5 >= this.field_f) {
                         var5 = 0;
                         L4: while (true) {
-                          if (((w) this).field_f <= var5) {
+                          if (this.field_f <= var5) {
                             var5 = 0;
                             L5: while (true) {
-                              if (var5 >= ((w) this).field_f) {
+                              if (var5 >= this.field_f) {
                                 var5 = 0;
                                 L6: while (true) {
-                                  if (var5 >= ((w) this).field_f) {
+                                  if (var5 >= this.field_f) {
                                     var5 = 0;
                                     L7: while (true) {
-                                      if (((w) this).field_f <= var5) {
+                                      if (this.field_f <= var5) {
                                         var5 = 0;
                                         L8: while (true) {
-                                          if (((w) this).field_f <= var5) {
+                                          if (this.field_f <= var5) {
                                             var5 = 0;
                                             L9: while (true) {
-                                              if (var5 >= ((w) this).field_f) {
+                                              if (var5 >= this.field_f) {
                                                 var5 = 0;
                                                 L10: while (true) {
-                                                  if (((w) this).field_f <= var5) {
+                                                  if (this.field_f <= var5) {
                                                     var5 = 0;
                                                     L11: while (true) {
-                                                      if (var5 >= ((w) this).field_f) {
+                                                      if (var5 >= this.field_f) {
                                                         var5 = 0;
                                                         L12: while (true) {
-                                                          if (((w) this).field_f <= var5) {
+                                                          if (this.field_f <= var5) {
                                                             var5 = 0;
                                                             L13: while (true) {
-                                                              if (var5 >= ((w) this).field_f) {
+                                                              if (var5 >= this.field_f) {
                                                                 var5 = 0;
                                                                 L14: while (true) {
-                                                                  if (var5 >= ((w) this).field_f) {
+                                                                  if (var5 >= this.field_f) {
                                                                     var5 = 0;
                                                                     L15: while (true) {
-                                                                      if (var5 >= ((w) this).field_f) {
+                                                                      if (var5 >= this.field_f) {
                                                                         var5 = 0;
                                                                         L16: while (true) {
-                                                                          if (var5 >= ((w) this).field_f) {
+                                                                          if (var5 >= this.field_f) {
                                                                             var5 = 0;
                                                                             L17: while (true) {
-                                                                              if (var5 >= ((w) this).field_f) {
+                                                                              if (var5 >= this.field_f) {
                                                                                 var5 = 0;
                                                                                 L18: while (true) {
-                                                                                  if (var5 >= ((w) this).field_f) {
+                                                                                  if (var5 >= this.field_f) {
                                                                                     var5 = 0;
                                                                                     L19: while (true) {
-                                                                                      if (var5 >= ((w) this).field_f) {
+                                                                                      if (var5 >= this.field_f) {
                                                                                         var5 = 0;
                                                                                         L20: while (true) {
-                                                                                          if (((w) this).field_f <= var5) {
+                                                                                          if (this.field_f <= var5) {
                                                                                             break L0;
                                                                                           } else {
                                                                                             L21: {
-                                                                                              if (null == ((w) this).field_c[var5]) {
+                                                                                              if (null == this.field_c[var5]) {
                                                                                                 break L21;
                                                                                               } else {
-                                                                                                ((w) this).field_c[var5].field_b = var7.b(16711935);
+                                                                                                this.field_c[var5].field_b = var7.b(16711935);
                                                                                                 break L21;
                                                                                               }
                                                                                             }
@@ -326,10 +351,10 @@ class w implements q {
                                                                                         }
                                                                                       } else {
                                                                                         L22: {
-                                                                                          if (null == ((w) this).field_c[var5]) {
+                                                                                          if (null == this.field_c[var5]) {
                                                                                             break L22;
                                                                                           } else {
-                                                                                            int discarded$14 = var7.f(57);
+                                                                                            discarded$14 = var7.f(57);
                                                                                             break L22;
                                                                                           }
                                                                                         }
@@ -339,10 +364,10 @@ class w implements q {
                                                                                     }
                                                                                   } else {
                                                                                     L23: {
-                                                                                      if (((w) this).field_c[var5] == null) {
+                                                                                      if (this.field_c[var5] == null) {
                                                                                         break L23;
                                                                                       } else {
-                                                                                        int discarded$15 = var7.b(16711935);
+                                                                                        discarded$15 = var7.b(16711935);
                                                                                         break L23;
                                                                                       }
                                                                                     }
@@ -352,10 +377,10 @@ class w implements q {
                                                                                 }
                                                                               } else {
                                                                                 L24: {
-                                                                                  if (null == ((w) this).field_c[var5]) {
+                                                                                  if (null == this.field_c[var5]) {
                                                                                     break L24;
                                                                                   } else {
-                                                                                    int discarded$16 = var7.b(16711935);
+                                                                                    discarded$16 = var7.b(16711935);
                                                                                     break L24;
                                                                                   }
                                                                                 }
@@ -365,10 +390,10 @@ class w implements q {
                                                                             }
                                                                           } else {
                                                                             L25: {
-                                                                              if (((w) this).field_c[var5] == null) {
+                                                                              if (this.field_c[var5] == null) {
                                                                                 break L25;
                                                                               } else {
-                                                                                int discarded$17 = var7.b(16711935);
+                                                                                discarded$17 = var7.b(16711935);
                                                                                 break L25;
                                                                               }
                                                                             }
@@ -378,10 +403,10 @@ class w implements q {
                                                                         }
                                                                       } else {
                                                                         L26: {
-                                                                          if (null == ((w) this).field_c[var5]) {
+                                                                          if (null == this.field_c[var5]) {
                                                                             break L26;
                                                                           } else {
-                                                                            int discarded$18 = var7.b(16711935);
+                                                                            discarded$18 = var7.b(16711935);
                                                                             break L26;
                                                                           }
                                                                         }
@@ -391,10 +416,10 @@ class w implements q {
                                                                     }
                                                                   } else {
                                                                     L27: {
-                                                                      if (((w) this).field_c[var5] == null) {
+                                                                      if (this.field_c[var5] == null) {
                                                                         break L27;
                                                                       } else {
-                                                                        byte discarded$19 = var7.b(true);
+                                                                        discarded$19 = var7.b(true);
                                                                         break L27;
                                                                       }
                                                                     }
@@ -404,21 +429,21 @@ class w implements q {
                                                                 }
                                                               } else {
                                                                 L28: {
-                                                                  if (((w) this).field_c[var5] == null) {
+                                                                  if (this.field_c[var5] == null) {
                                                                     break L28;
                                                                   } else {
                                                                     L29: {
-                                                                      stackOut_70_0 = ((w) this).field_c[var5];
+                                                                      stackOut_70_0 = this.field_c[var5];
                                                                       stackIn_72_0 = stackOut_70_0;
                                                                       stackIn_71_0 = stackOut_70_0;
-                                                                      if (var7.b(16711935) != 1) {
-                                                                        stackOut_72_0 = (gma) (Object) stackIn_72_0;
+                                                                      if (-2 != (var7.b(16711935) ^ -1)) {
+                                                                        stackOut_72_0 = (gma) ((Object) stackIn_72_0);
                                                                         stackOut_72_1 = 0;
                                                                         stackIn_73_0 = stackOut_72_0;
                                                                         stackIn_73_1 = stackOut_72_1;
                                                                         break L29;
                                                                       } else {
-                                                                        stackOut_71_0 = (gma) (Object) stackIn_71_0;
+                                                                        stackOut_71_0 = (gma) ((Object) stackIn_71_0);
                                                                         stackOut_71_1 = 1;
                                                                         stackIn_73_0 = stackOut_71_0;
                                                                         stackIn_73_1 = stackOut_71_1;
@@ -435,10 +460,10 @@ class w implements q {
                                                             }
                                                           } else {
                                                             L30: {
-                                                              if (null == ((w) this).field_c[var5]) {
+                                                              if (null == this.field_c[var5]) {
                                                                 break L30;
                                                               } else {
-                                                                int discarded$20 = var7.b(16711935);
+                                                                discarded$20 = var7.b(16711935);
                                                                 break L30;
                                                               }
                                                             }
@@ -448,10 +473,10 @@ class w implements q {
                                                         }
                                                       } else {
                                                         L31: {
-                                                          if (null == ((w) this).field_c[var5]) {
+                                                          if (null == this.field_c[var5]) {
                                                             break L31;
                                                           } else {
-                                                            byte discarded$21 = var7.b(true);
+                                                            discarded$21 = var7.b(true);
                                                             break L31;
                                                           }
                                                         }
@@ -461,10 +486,10 @@ class w implements q {
                                                     }
                                                   } else {
                                                     L32: {
-                                                      if (null == ((w) this).field_c[var5]) {
+                                                      if (null == this.field_c[var5]) {
                                                         break L32;
                                                       } else {
-                                                        byte discarded$22 = var7.b(true);
+                                                        discarded$22 = var7.b(true);
                                                         break L32;
                                                       }
                                                     }
@@ -474,10 +499,10 @@ class w implements q {
                                                 }
                                               } else {
                                                 L33: {
-                                                  if (((w) this).field_c[var5] == null) {
+                                                  if (this.field_c[var5] == null) {
                                                     break L33;
                                                   } else {
-                                                    ((w) this).field_c[var5].field_g = (short)var7.e((byte) 77);
+                                                    this.field_c[var5].field_g = (short)var7.e((byte) 77);
                                                     break L33;
                                                   }
                                                 }
@@ -487,10 +512,10 @@ class w implements q {
                                             }
                                           } else {
                                             L34: {
-                                              if (((w) this).field_c[var5] == null) {
+                                              if (this.field_c[var5] == null) {
                                                 break L34;
                                               } else {
-                                                byte discarded$23 = var7.b(true);
+                                                discarded$23 = var7.b(true);
                                                 break L34;
                                               }
                                             }
@@ -500,10 +525,10 @@ class w implements q {
                                         }
                                       } else {
                                         L35: {
-                                          if (null == ((w) this).field_c[var5]) {
+                                          if (null == this.field_c[var5]) {
                                             break L35;
                                           } else {
-                                            byte discarded$24 = var7.b(true);
+                                            discarded$24 = var7.b(true);
                                             break L35;
                                           }
                                         }
@@ -513,10 +538,10 @@ class w implements q {
                                     }
                                   } else {
                                     L36: {
-                                      if (((w) this).field_c[var5] == null) {
+                                      if (this.field_c[var5] == null) {
                                         break L36;
                                       } else {
-                                        byte discarded$25 = var7.b(true);
+                                        discarded$25 = var7.b(true);
                                         break L36;
                                       }
                                     }
@@ -526,10 +551,10 @@ class w implements q {
                                 }
                               } else {
                                 L37: {
-                                  if (((w) this).field_c[var5] == null) {
+                                  if (this.field_c[var5] == null) {
                                     break L37;
                                   } else {
-                                    byte discarded$26 = var7.b(true);
+                                    discarded$26 = var7.b(true);
                                     break L37;
                                   }
                                 }
@@ -539,10 +564,10 @@ class w implements q {
                             }
                           } else {
                             L38: {
-                              if (null == ((w) this).field_c[var5]) {
+                              if (null == this.field_c[var5]) {
                                 break L38;
                               } else {
-                                int discarded$27 = var7.b(16711935);
+                                discarded$27 = var7.b(16711935);
                                 break L38;
                               }
                             }
@@ -552,21 +577,21 @@ class w implements q {
                         }
                       } else {
                         L39: {
-                          if (null == ((w) this).field_c[var5]) {
+                          if (null == this.field_c[var5]) {
                             break L39;
                           } else {
                             L40: {
-                              stackOut_17_0 = ((w) this).field_c[var5];
+                              stackOut_17_0 = this.field_c[var5];
                               stackIn_19_0 = stackOut_17_0;
                               stackIn_18_0 = stackOut_17_0;
                               if (var7.b(16711935) != 1) {
-                                stackOut_19_0 = (gma) (Object) stackIn_19_0;
+                                stackOut_19_0 = (gma) ((Object) stackIn_19_0);
                                 stackOut_19_1 = 0;
                                 stackIn_20_0 = stackOut_19_0;
                                 stackIn_20_1 = stackOut_19_1;
                                 break L40;
                               } else {
-                                stackOut_18_0 = (gma) (Object) stackIn_18_0;
+                                stackOut_18_0 = (gma) ((Object) stackIn_18_0);
                                 stackOut_18_1 = 1;
                                 stackIn_20_0 = stackOut_18_0;
                                 stackIn_20_1 = stackOut_18_1;
@@ -583,21 +608,21 @@ class w implements q {
                     }
                   } else {
                     L41: {
-                      if (((w) this).field_c[var5] == null) {
+                      if (this.field_c[var5] == null) {
                         break L41;
                       } else {
                         L42: {
-                          stackOut_9_0 = ((w) this).field_c[var5];
+                          stackOut_9_0 = this.field_c[var5];
                           stackIn_11_0 = stackOut_9_0;
                           stackIn_10_0 = stackOut_9_0;
                           if (var7.b(16711935) != 0) {
-                            stackOut_11_0 = (gma) (Object) stackIn_11_0;
+                            stackOut_11_0 = (gma) ((Object) stackIn_11_0);
                             stackOut_11_1 = 0;
                             stackIn_12_0 = stackOut_11_0;
                             stackIn_12_1 = stackOut_11_1;
                             break L42;
                           } else {
-                            stackOut_10_0 = (gma) (Object) stackIn_10_0;
+                            stackOut_10_0 = (gma) ((Object) stackIn_10_0);
                             stackOut_10_1 = 1;
                             stackIn_12_0 = stackOut_10_0;
                             stackIn_12_1 = stackOut_10_1;
@@ -617,7 +642,7 @@ class w implements q {
                   if (var7.b(16711935) != 1) {
                     break L43;
                   } else {
-                    ((w) this).field_c[var5] = new gma();
+                    this.field_c[var5] = new gma();
                     break L43;
                   }
                 }
@@ -630,23 +655,23 @@ class w implements q {
           decompiledCaughtException = decompiledCaughtParameter0;
           L44: {
             var4 = decompiledCaughtException;
-            stackOut_111_0 = (RuntimeException) var4;
+            stackOut_111_0 = (RuntimeException) (var4);
             stackOut_111_1 = new StringBuilder().append("w.<init>(");
             stackIn_113_0 = stackOut_111_0;
             stackIn_113_1 = stackOut_111_1;
             stackIn_112_0 = stackOut_111_0;
             stackIn_112_1 = stackOut_111_1;
             if (param0 == null) {
-              stackOut_113_0 = (RuntimeException) (Object) stackIn_113_0;
-              stackOut_113_1 = (StringBuilder) (Object) stackIn_113_1;
+              stackOut_113_0 = (RuntimeException) ((Object) stackIn_113_0);
+              stackOut_113_1 = (StringBuilder) ((Object) stackIn_113_1);
               stackOut_113_2 = "null";
               stackIn_114_0 = stackOut_113_0;
               stackIn_114_1 = stackOut_113_1;
               stackIn_114_2 = stackOut_113_2;
               break L44;
             } else {
-              stackOut_112_0 = (RuntimeException) (Object) stackIn_112_0;
-              stackOut_112_1 = (StringBuilder) (Object) stackIn_112_1;
+              stackOut_112_0 = (RuntimeException) ((Object) stackIn_112_0);
+              stackOut_112_1 = (StringBuilder) ((Object) stackIn_112_1);
               stackOut_112_2 = "{...}";
               stackIn_114_0 = stackOut_112_0;
               stackIn_114_1 = stackOut_112_1;
@@ -655,23 +680,23 @@ class w implements q {
             }
           }
           L45: {
-            stackOut_114_0 = (RuntimeException) (Object) stackIn_114_0;
+            stackOut_114_0 = (RuntimeException) ((Object) stackIn_114_0);
             stackOut_114_1 = ((StringBuilder) (Object) stackIn_114_1).append(stackIn_114_2).append(',');
             stackIn_116_0 = stackOut_114_0;
             stackIn_116_1 = stackOut_114_1;
             stackIn_115_0 = stackOut_114_0;
             stackIn_115_1 = stackOut_114_1;
             if (param1 == null) {
-              stackOut_116_0 = (RuntimeException) (Object) stackIn_116_0;
-              stackOut_116_1 = (StringBuilder) (Object) stackIn_116_1;
+              stackOut_116_0 = (RuntimeException) ((Object) stackIn_116_0);
+              stackOut_116_1 = (StringBuilder) ((Object) stackIn_116_1);
               stackOut_116_2 = "null";
               stackIn_117_0 = stackOut_116_0;
               stackIn_117_1 = stackOut_116_1;
               stackIn_117_2 = stackOut_116_2;
               break L45;
             } else {
-              stackOut_115_0 = (RuntimeException) (Object) stackIn_115_0;
-              stackOut_115_1 = (StringBuilder) (Object) stackIn_115_1;
+              stackOut_115_0 = (RuntimeException) ((Object) stackIn_115_0);
+              stackOut_115_1 = (StringBuilder) ((Object) stackIn_115_1);
               stackOut_115_2 = "{...}";
               stackIn_117_0 = stackOut_115_0;
               stackIn_117_1 = stackOut_115_1;
@@ -680,23 +705,23 @@ class w implements q {
             }
           }
           L46: {
-            stackOut_117_0 = (RuntimeException) (Object) stackIn_117_0;
+            stackOut_117_0 = (RuntimeException) ((Object) stackIn_117_0);
             stackOut_117_1 = ((StringBuilder) (Object) stackIn_117_1).append(stackIn_117_2).append(',');
             stackIn_119_0 = stackOut_117_0;
             stackIn_119_1 = stackOut_117_1;
             stackIn_118_0 = stackOut_117_0;
             stackIn_118_1 = stackOut_117_1;
             if (param2 == null) {
-              stackOut_119_0 = (RuntimeException) (Object) stackIn_119_0;
-              stackOut_119_1 = (StringBuilder) (Object) stackIn_119_1;
+              stackOut_119_0 = (RuntimeException) ((Object) stackIn_119_0);
+              stackOut_119_1 = (StringBuilder) ((Object) stackIn_119_1);
               stackOut_119_2 = "null";
               stackIn_120_0 = stackOut_119_0;
               stackIn_120_1 = stackOut_119_1;
               stackIn_120_2 = stackOut_119_2;
               break L46;
             } else {
-              stackOut_118_0 = (RuntimeException) (Object) stackIn_118_0;
-              stackOut_118_1 = (StringBuilder) (Object) stackIn_118_1;
+              stackOut_118_0 = (RuntimeException) ((Object) stackIn_118_0);
+              stackOut_118_1 = (StringBuilder) ((Object) stackIn_118_1);
               stackOut_118_2 = "{...}";
               stackIn_120_0 = stackOut_118_0;
               stackIn_120_1 = stackOut_118_1;
@@ -704,28 +729,29 @@ class w implements q {
               break L46;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_120_0, stackIn_120_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_120_0), stackIn_120_2 + ')');
         }
     }
 
     public final int[] a(int param0, boolean param1, int param2, float param3, int param4, int param5) {
         if (param0 != 0) {
-            return null;
+            return (int[]) null;
         }
-        return ((w) this).d(param4, param0 ^ -23060).a((double)param3, ((w) this).field_c[param4].field_a, (q) this, param5, param2, ((w) this).field_b, param1, -1);
+        return this.d(param4, param0 ^ -23060).a((double)param3, this.field_c[param4].field_a, (q) (this), param5, param2, this.field_b, param1, -1);
     }
 
     public final boolean c(byte param0, int param1) {
+        gma discarded$2 = null;
         on var3 = null;
         int stackIn_6_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_5_0 = 0;
         L0: {
-          var3 = ((w) this).d(param1, -23060);
+          var3 = this.d(param1, -23060);
           if (param0 < -45) {
             break L0;
           } else {
-            gma discarded$2 = ((w) this).c(-79, 92);
+            discarded$2 = this.c(-79, 92);
             break L0;
           }
         }
@@ -734,7 +760,7 @@ class w implements q {
             if (var3 == null) {
               break L2;
             } else {
-              if (!var3.a((q) this, ((w) this).field_b, -63)) {
+              if (!var3.a((q) (this), this.field_b, -63)) {
                 break L2;
               } else {
                 stackOut_4_0 = 1;

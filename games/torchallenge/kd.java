@@ -17,6 +17,11 @@ final class kd extends da {
     public static void a(int param0) {
         field_o = null;
         field_m = null;
+        if (param0 != 8192) {
+            field_r = 82;
+            field_k = null;
+            return;
+        }
         field_k = null;
     }
 
@@ -25,15 +30,15 @@ final class kd extends da {
             return;
         }
         try {
-            ((kd) this).field_p = param0;
-            ((kd) this).field_j = param2;
-            ((kd) this).field_s = param3;
-            ((kd) this).field_n = param6;
-            ((kd) this).field_q = param5;
-            ((kd) this).field_i = param7;
-            ((kd) this).field_l = param1;
+            this.field_p = param0;
+            this.field_j = param2;
+            this.field_s = param3;
+            this.field_n = param6;
+            this.field_q = param5;
+            this.field_i = param7;
+            this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "kd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "kd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -41,10 +46,6 @@ final class kd extends da {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new int[8192];
         field_k = new int[5];
     }

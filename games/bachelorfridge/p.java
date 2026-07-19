@@ -8,8 +8,8 @@ final class p extends pu {
     static sna field_o;
 
     final static void c(int param0) {
-        int var2 = 3;
-        gb var1 = (gb) (Object) ja.field_s.b((byte) 90);
+        int var2 = -3 / ((param0 - 19) / 61);
+        gb var1 = (gb) ((Object) ja.field_s.b((byte) 90));
         if (var1 == null) {
             vc.a((byte) -72);
             return;
@@ -23,6 +23,7 @@ final class p extends pu {
     }
 
     final static void a(int param0, byte[] param1, int param2) {
+        int incrementValue$2 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         int[] var4 = null;
@@ -48,26 +49,26 @@ final class p extends pu {
         var6 = BachelorFridge.field_y;
         try {
           L0: {
-            var3_int = 256;
+            var3_int = param2;
             var4 = new int[256];
             var5 = 0;
             L1: while (true) {
-              if (var5 >= 256) {
+              if ((var5 ^ -1) <= -257) {
                 var3_int += 256;
                 var7 = 0;
                 var5 = var7;
                 L2: while (true) {
-                  if (var7 >= 256) {
+                  if (-257 >= (var7 ^ -1)) {
                     break L0;
                   } else {
-                    param1[var3_int] = (byte)(param1[var3_int] + -2);
+                    param1[var3_int] = (byte)(param1[var3_int] + -param0);
                     var3_int = var3_int + var4[var7];
                     var7++;
                     continue L2;
                   }
                 }
               } else {
-                int incrementValue$2 = var3_int;
+                incrementValue$2 = var3_int;
                 var3_int++;
                 var4[var5] = dda.a(255, (int) param1[incrementValue$2]);
                 var5++;
@@ -79,23 +80,23 @@ final class p extends pu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("p.B(").append(2).append(',');
+            stackOut_8_0 = (RuntimeException) (var3);
+            stackOut_8_1 = new StringBuilder().append("p.B(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -103,7 +104,7 @@ final class p extends pu {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 256 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ')');
         }
     }
 
@@ -118,10 +119,6 @@ final class p extends pu {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = new long[1000];
         field_m = "Ask to join <%0>'s game";
     }

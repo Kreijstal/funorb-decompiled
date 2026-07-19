@@ -7,7 +7,7 @@ public class MapBuffer extends jaclib.memory.NativeBuffer {
     private int c;
 
     public final boolean a() {
-        return ((jaggl.MapBuffer) this).c != 0;
+        return -1 != (this.c ^ -1);
     }
 
     public final boolean b() {
@@ -15,10 +15,10 @@ public class MapBuffer extends jaclib.memory.NativeBuffer {
         RuntimeException var1 = null;
         L0: {
           var1_int = 1;
-          if (((jaggl.MapBuffer) this).c != 0) {
-            var1_int = jaggl.OpenGL.glUnmapBufferARB(((jaggl.MapBuffer) this).c) ? 1 : 0;
-            ((jaggl.MapBuffer) this).a(0L, 0);
-            ((jaggl.MapBuffer) this).c = 0;
+          if ((this.c ^ -1) != -1) {
+            var1_int = jaggl.OpenGL.glUnmapBufferARB(this.c) ? 1 : 0;
+            this.a(0L, 0);
+            this.c = 0;
             break L0;
           } else {
             break L0;
@@ -31,7 +31,7 @@ public class MapBuffer extends jaclib.memory.NativeBuffer {
     }
 
     public final void a(byte[] param0, int param1, int param2, int param3) {
-        if (0 != ((jaggl.MapBuffer) this).c) {
+        if (0 != this.c) {
           super.a(param0, param1, param2, param3);
           return;
         } else {
@@ -42,15 +42,15 @@ public class MapBuffer extends jaclib.memory.NativeBuffer {
     public final boolean a(int param0, int param1, int param2) {
         long var4_long = 0L;
         RuntimeException var4 = null;
-        if (((jaggl.MapBuffer) this).c != 0) {
+        if (this.c != 0) {
           return false;
         } else {
           var4_long = jaggl.OpenGL.glMapBufferARB(param0, param2);
           if (var4_long == 0L) {
             return false;
           } else {
-            ((jaggl.MapBuffer) this).a(var4_long, param1);
-            ((jaggl.MapBuffer) this).c = param0;
+            this.a(var4_long, param1);
+            this.c = param0;
             return true;
           }
         }

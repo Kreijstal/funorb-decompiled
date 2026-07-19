@@ -12,24 +12,45 @@ final class ci {
     static String field_d;
 
     public static void a(int param0) {
-        field_d = null;
-        field_f = null;
-        field_g = null;
-        field_b = null;
-        field_e = null;
-        field_h = null;
-        field_a = null;
+        if (param0 != -27513) {
+          return;
+        } else {
+          field_d = null;
+          field_f = null;
+          field_g = null;
+          field_b = null;
+          field_e = null;
+          field_h = null;
+          field_a = null;
+          return;
+        }
     }
 
     final static pi[] b(int param0) {
+        pi[] var1 = null;
         int var2 = 0;
-        int var3 = client.field_A ? 1 : 0;
-        pi[] var1 = new pi[ec.field_g];
-        for (var2 = 0; var2 < ec.field_g; var2++) {
-            var1[var2] = new pi(ed.field_f, i.field_d, sg.field_d[var2], fh.field_a[var2], tm.field_a[var2], hc.field_c[var2], tc.field_Nb[var2], mb.field_d);
+        int var3 = 0;
+        var3 = client.field_A ? 1 : 0;
+        var1 = new pi[ec.field_g];
+        if (param0 <= -110) {
+          var2 = 0;
+          L0: while (true) {
+            if (var2 < ec.field_g) {
+              var1[var2] = new pi(ed.field_f, i.field_d, sg.field_d[var2], fh.field_a[var2], tm.field_a[var2], hc.field_c[var2], tc.field_Nb[var2], mb.field_d);
+              var2++;
+              if (var3 == 0) {
+                continue L0;
+              } else {
+                return var1;
+              }
+            } else {
+              oa.a(126);
+              return var1;
+            }
+          }
+        } else {
+          return (pi[]) null;
         }
-        oa.a(126);
-        return var1;
     }
 
     final static void a(byte param0) {
@@ -85,7 +106,11 @@ final class ci {
                 incrementValue$47 = var3;
                 var3++;
                 var6[incrementValue$47] = 0;
-                continue L1;
+                if (var5 == 0) {
+                  continue L1;
+                } else {
+                  return;
+                }
               }
             }
           }
@@ -98,36 +123,80 @@ final class ci {
 
     final static void a(cc param0, int param1, int param2, byte param3, int param4, cc param5) {
         try {
+            if (param3 >= -62) {
+                field_d = (String) null;
+            }
             nf.field_g = param0;
             da.field_c = param5;
-            mb.field_c = 32;
-            qk.field_m = 4;
-            pa.field_Y = 5;
+            mb.field_c = param1;
+            qk.field_m = param4;
+            pa.field_Y = param2;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "ci.E(" + (param0 != null ? "{...}" : "null") + ',' + 32 + ',' + 5 + ',' + -63 + ',' + 4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "ci.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(char param0, byte param1) {
-        if (param1 < 66) {
-            ci.a((byte) -16);
-        }
-        if (!(!Character.isISOControl(param0))) {
+        if (param1 >= 66) {
+          if (Character.isISOControl(param0)) {
             return false;
-        }
-        if (j.a(-8241, param0)) {
-            return true;
-        }
-        if (45 != param0) {
-            if (160 != param0) {
-                if (32 != param0) {
-                    if (param0 != 95) {
+          } else {
+            if (!j.a(-8241, param0)) {
+              L0: {
+                if (45 == param0) {
+                  break L0;
+                } else {
+                  if (160 == param0) {
+                    break L0;
+                  } else {
+                    if (32 == param0) {
+                      break L0;
+                    } else {
+                      if (param0 == 95) {
+                        break L0;
+                      } else {
                         return false;
+                      }
                     }
+                  }
                 }
+              }
+              return true;
+            } else {
+              return true;
             }
+          }
+        } else {
+          ci.a((byte) -16);
+          if (Character.isISOControl(param0)) {
+            return false;
+          } else {
+            if (!j.a(-8241, param0)) {
+              if (45 != param0) {
+                if (160 != param0) {
+                  L1: {
+                    if (32 == param0) {
+                      break L1;
+                    } else {
+                      if (param0 == 95) {
+                        break L1;
+                      } else {
+                        return false;
+                      }
+                    }
+                  }
+                  return true;
+                } else {
+                  return true;
+                }
+              } else {
+                return true;
+              }
+            } else {
+              return true;
+            }
+          }
         }
-        return true;
     }
 
     static {

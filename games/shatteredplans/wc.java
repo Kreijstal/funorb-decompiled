@@ -18,27 +18,29 @@ final class wc {
             }
             var6_int = 128 > param1 ? 0 : -128 + param1;
             var7 = param1;
+            if (param0 != -27030) {
+                field_b = (String) null;
+            }
             for (var8 = var6_int; var7 > var8; var8++) {
                 gf.d(param2 - -var8, 0, param2 + (var8 + 1), 480 + param4);
-                var9 = param5 * (-var8 + param1) >> 7;
+                var9 = param5 * (-var8 + param1) >> 518924039;
                 param3.c(param2, param4, var9);
             }
             gf.a();
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "wc.B(" + -27030 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "wc.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != -23092) {
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "ERROR!";
     }
 }

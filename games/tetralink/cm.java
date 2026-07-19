@@ -44,87 +44,67 @@ final class cm {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_4_1 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_10_1 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_17_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_13_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_3_1 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_9_1 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_11_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_7_0 = 0;
         var4 = TetraLink.field_J;
         try {
           L0: {
             var3_int = 1;
             L1: while (true) {
-              L2: {
-                L3: {
-                  if (1 >= param2) {
-                    break L3;
+              if (1 >= param2) {
+                if (1 != param2) {
+                  if (param1 >= 80) {
+                    stackOut_12_0 = var3_int;
+                    stackIn_13_0 = stackOut_12_0;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
-                    stackOut_3_0 = -1;
-                    stackOut_3_1 = ~(1 & param2);
-                    stackIn_10_0 = stackOut_3_0;
-                    stackIn_10_1 = stackOut_3_1;
-                    stackIn_4_0 = stackOut_3_0;
-                    stackIn_4_1 = stackOut_3_1;
-                    if (var4 != 0) {
-                      break L2;
-                    } else {
-                      L4: {
-                        if (stackIn_4_0 == stackIn_4_1) {
-                          break L4;
-                        } else {
-                          var3_int = var3_int * param0;
-                          break L4;
-                        }
-                      }
-                      param0 = param0 * param0;
-                      param2 = param2 >> 1;
-                      if (var4 == 0) {
-                        continue L1;
-                      } else {
-                        break L3;
-                      }
-                    }
+                    stackOut_10_0 = -51;
+                    stackIn_11_0 = stackOut_10_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
-                }
-                stackOut_9_0 = 1;
-                stackOut_9_1 = param2;
-                stackIn_10_0 = stackOut_9_0;
-                stackIn_10_1 = stackOut_9_1;
-                break L2;
-              }
-              if (stackIn_10_0 != stackIn_10_1) {
-                if (param1 >= 80) {
-                  stackOut_16_0 = var3_int;
-                  stackIn_17_0 = stackOut_16_0;
-                  break L0;
                 } else {
-                  stackOut_14_0 = -51;
-                  stackIn_15_0 = stackOut_14_0;
-                  return stackIn_15_0;
+                  stackOut_7_0 = param0 * var3_int;
+                  stackIn_8_0 = stackOut_7_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               } else {
-                stackOut_11_0 = param0 * var3_int;
-                stackIn_12_0 = stackOut_11_0;
-                return stackIn_12_0;
+                L2: {
+                  if (-1 == (1 & param2 ^ -1)) {
+                    break L2;
+                  } else {
+                    var3_int = var3_int * param0;
+                    break L2;
+                  }
+                }
+                param0 = param0 * param0;
+                param2 = param2 >> 1;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var3, "cm.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oi.a((Throwable) ((Object) var3), "cm.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_17_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_8_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_11_0;
+          } else {
+            return stackIn_13_0;
+          }
+        }
     }
 
     public static void b(byte param0) {
@@ -133,49 +113,37 @@ final class cm {
         if (param0 <= 8) {
             return;
         }
-        try {
-            field_b = null;
-            field_x = null;
-        } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "cm.A(" + param0 + ')');
-        }
+        field_b = null;
+        field_x = null;
     }
 
     final static void a(byte param0) {
         if (param0 > -111) {
             return;
         }
-        try {
-            sj.field_g = new nd(sa.field_h, hl.field_gb, sn.field_c, bk.field_i, (hl) (Object) vd.field_c, ek.field_n);
-        } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "cm.C(" + param0 + ')');
-        }
+        sj.field_g = new nd(sa.field_h, hl.field_gb, sn.field_c, bk.field_i, vd.field_c, ek.field_n);
     }
 
     cm() {
-        ((cm) this).field_c = new int[16];
-        ((cm) this).field_H = new int[256];
-        ((cm) this).field_r = new int[6][258];
-        ((cm) this).field_t = 0;
-        ((cm) this).field_y = new byte[4096];
-        ((cm) this).field_o = 0;
-        ((cm) this).field_m = new int[257];
-        ((cm) this).field_C = new boolean[16];
-        ((cm) this).field_D = new int[6];
-        ((cm) this).field_B = new boolean[256];
-        ((cm) this).field_p = new int[6][258];
-        ((cm) this).field_w = new byte[256];
-        ((cm) this).field_h = new byte[6][258];
-        ((cm) this).field_e = new int[6][258];
-        ((cm) this).field_g = new byte[18002];
-        ((cm) this).field_j = new byte[18002];
+        this.field_c = new int[16];
+        this.field_H = new int[256];
+        this.field_r = new int[6][258];
+        this.field_t = 0;
+        this.field_y = new byte[4096];
+        this.field_o = 0;
+        this.field_m = new int[257];
+        this.field_C = new boolean[16];
+        this.field_D = new int[6];
+        this.field_B = new boolean[256];
+        this.field_p = new int[6][258];
+        this.field_w = new byte[256];
+        this.field_h = new byte[6][258];
+        this.field_e = new int[6][258];
+        this.field_g = new byte[18002];
+        this.field_j = new byte[18002];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = null;
         field_b = "Accept invitation to <%0>'s game";
     }

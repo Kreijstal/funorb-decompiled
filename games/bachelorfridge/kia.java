@@ -14,7 +14,7 @@ final class kia extends bw {
     }
 
     final void b() {
-        ((kia) this).field_f = null;
+        this.field_f = null;
     }
 
     final void a() {
@@ -36,27 +36,19 @@ final class kia extends bw {
         int[] var18 = null;
         int[] var19 = null;
         int[] var21 = null;
-        int[] var22 = null;
-        int[] var24 = null;
-        int[] var25 = null;
-        int[] var26 = null;
-        int[] var27 = null;
-        if (((kia) this).field_f == null) {
-          ((kia) this).field_f = new js(16);
-          var27 = new int[16];
-          var24 = var27;
-          var21 = var24;
+        int[] var23 = null;
+        if (this.field_f == null) {
+          this.field_f = new js(16);
+          var21 = new int[16];
           var18 = var21;
           var1 = var18;
-          var25 = new int[16];
-          var22 = var25;
-          var19 = var22;
+          var19 = new int[16];
           var16 = var19;
           var2 = var16;
-          var26 = var1;
-          var25[9] = 128;
-          var26[9] = 128;
-          var4 = new vga(((kia) this).field_g);
+          var23 = var1;
+          var19[9] = 128;
+          var23[9] = 128;
+          var4 = new vga(this.field_g);
           var5 = var4.c();
           var6 = 0;
           L0: while (true) {
@@ -83,14 +75,14 @@ final class kia extends bw {
                             if (var11 != 0) {
                               break L4;
                             } else {
-                              var1[var10] = (var27[var10] & -2080769) + (var12 << 14);
+                              var1[var10] = (var21[var10] & -2080769) + (var12 << 14);
                               break L4;
                             }
                           }
                           if (var11 != 32) {
                             break L3;
                           } else {
-                            var1[var10] = (var27[var10] & -16257) + (var12 << 7);
+                            var1[var10] = (var21[var10] & -16257) + (var12 << 7);
                             break L3;
                           }
                         }
@@ -101,7 +93,7 @@ final class kia extends bw {
                         } else {
                           var10 = var8 & 15;
                           var11 = var8 >> 8 & 127;
-                          var2[var10] = var27[var10] + var11;
+                          var2[var10] = var21[var10] + var11;
                           break L5;
                         }
                       }
@@ -116,14 +108,14 @@ final class kia extends bw {
                             break L6;
                           } else {
                             L7: {
-                              var13 = var25[var10];
-                              var14 = (g) (Object) ((kia) this).field_f.a(true, (long)var13);
+                              var13 = var19[var10];
+                              var14 = (g) ((Object) this.field_f.a(true, (long)var13));
                               if (var14 != null) {
                                 break L7;
                               } else {
                                 var15 = new g(new byte[128]);
                                 var14 = var15;
-                                ((kia) this).field_f.a((long)var13, (byte) 101, (bw) (Object) var15);
+                                this.field_f.a((long)var13, (byte) 101, var15);
                                 break L7;
                               }
                             }
@@ -161,6 +153,35 @@ final class kia extends bw {
     }
 
     private kia(lu param0) {
+        int incrementValue$29 = 0;
+        int incrementValue$30 = 0;
+        int incrementValue$31 = 0;
+        int incrementValue$32 = 0;
+        int incrementValue$33 = 0;
+        int incrementValue$34 = 0;
+        int incrementValue$35 = 0;
+        int incrementValue$36 = 0;
+        int incrementValue$37 = 0;
+        int incrementValue$38 = 0;
+        int incrementValue$39 = 0;
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
+        int incrementValue$48 = 0;
+        int incrementValue$49 = 0;
+        int incrementValue$50 = 0;
+        int incrementValue$51 = 0;
+        int incrementValue$52 = 0;
+        int incrementValue$53 = 0;
+        int incrementValue$54 = 0;
+        int incrementValue$55 = 0;
+        int incrementValue$56 = 0;
+        int discarded$57 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -324,21 +345,21 @@ final class kia extends bw {
                       param0.field_g = param0.field_g + var25;
                       var50 = param0.field_g;
                       param0.field_g = param0.field_g + var5 * 3;
-                      ((kia) this).field_g = new byte[var4];
-                      var51 = new lu(((kia) this).field_g);
+                      this.field_g = new byte[var4];
+                      var51 = new lu(this.field_g);
                       var51.e(1297377380, -1615464796);
                       var51.e(6, -1615464796);
-                      stackOut_64_0 = (lu) var51;
+                      stackOut_64_0 = (lu) (var51);
                       stackIn_66_0 = stackOut_64_0;
                       stackIn_65_0 = stackOut_64_0;
                       if (var2 <= 1) {
-                        stackOut_66_0 = (lu) (Object) stackIn_66_0;
+                        stackOut_66_0 = (lu) ((Object) stackIn_66_0);
                         stackOut_66_1 = 0;
                         stackIn_67_0 = stackOut_66_0;
                         stackIn_67_1 = stackOut_66_1;
                         break L3;
                       } else {
-                        stackOut_65_0 = (lu) (Object) stackIn_65_0;
+                        stackOut_65_0 = (lu) ((Object) stackIn_65_0);
                         stackOut_65_1 = 1;
                         stackIn_67_0 = stackOut_65_0;
                         stackIn_67_1 = stackOut_65_1;
@@ -371,7 +392,7 @@ final class kia extends bw {
                           L6: {
                             var63 = param0.d(-1);
                             var51.a(var63, (byte) -128);
-                            int incrementValue$29 = var29;
+                            incrementValue$29 = var29;
                             var29++;
                             var64 = param0.field_h[incrementValue$29] & 255;
                             if (var64 == var62) {
@@ -406,7 +427,7 @@ final class kia extends bw {
                                                 break L7;
                                               }
                                             }
-                                            int incrementValue$30 = var44;
+                                            incrementValue$30 = var44;
                                             var44++;
                                             var51.d((int) param0.field_h[incrementValue$30], 0);
                                             continue L5;
@@ -420,10 +441,10 @@ final class kia extends bw {
                                               break L8;
                                             }
                                           }
-                                          int incrementValue$31 = var37;
+                                          incrementValue$31 = var37;
                                           var37++;
                                           var53 = var53 + param0.field_h[incrementValue$31];
-                                          int incrementValue$32 = var31;
+                                          incrementValue$32 = var31;
                                           var31++;
                                           var58 = var58 + param0.field_h[incrementValue$32];
                                           var51.d(var53 & 127, 0);
@@ -439,7 +460,7 @@ final class kia extends bw {
                                             break L9;
                                           }
                                         }
-                                        int incrementValue$33 = var32;
+                                        incrementValue$33 = var32;
                                         var32++;
                                         var57 = var57 + param0.field_h[incrementValue$33];
                                         var51.d(var57 & 127, 0);
@@ -454,10 +475,10 @@ final class kia extends bw {
                                           break L10;
                                         }
                                       }
-                                      int incrementValue$34 = var45;
+                                      incrementValue$34 = var45;
                                       var45++;
                                       var56 = var56 + param0.field_h[incrementValue$34];
-                                      int incrementValue$35 = var33;
+                                      incrementValue$35 = var33;
                                       var33++;
                                       var56 = var56 + (param0.field_h[incrementValue$35] << 7);
                                       var51.d(var56 & 127, 0);
@@ -475,7 +496,7 @@ final class kia extends bw {
                                     }
                                     L12: {
                                       L13: {
-                                        int incrementValue$36 = var15;
+                                        incrementValue$36 = var15;
                                         var15++;
                                         var28 = var28 + param0.field_h[incrementValue$36] & 127;
                                         var51.d(var28, 0);
@@ -507,7 +528,7 @@ final class kia extends bw {
                                                                           break L14;
                                                                         } else {
                                                                           if (var28 != 123) {
-                                                                            int incrementValue$37 = var39;
+                                                                            incrementValue$37 = var39;
                                                                             var39++;
                                                                             var66 = param0.field_h[incrementValue$37];
                                                                             break L12;
@@ -519,66 +540,66 @@ final class kia extends bw {
                                                                     }
                                                                   }
                                                                 }
-                                                                int incrementValue$38 = var30;
+                                                                incrementValue$38 = var30;
                                                                 var30++;
                                                                 var66 = param0.field_h[incrementValue$38];
                                                                 break L12;
                                                               } else {
-                                                                int incrementValue$39 = var49;
+                                                                incrementValue$39 = var49;
                                                                 var49++;
                                                                 var66 = param0.field_h[incrementValue$39];
                                                                 break L12;
                                                               }
                                                             } else {
-                                                              int incrementValue$40 = var48;
+                                                              incrementValue$40 = var48;
                                                               var48++;
                                                               var66 = param0.field_h[incrementValue$40];
                                                               break L12;
                                                             }
                                                           } else {
-                                                            int incrementValue$41 = var47;
+                                                            incrementValue$41 = var47;
                                                             var47++;
                                                             var66 = param0.field_h[incrementValue$41];
                                                             break L12;
                                                           }
                                                         } else {
-                                                          int incrementValue$42 = var46;
+                                                          incrementValue$42 = var46;
                                                           var46++;
                                                           var66 = param0.field_h[incrementValue$42];
                                                           break L12;
                                                         }
                                                       } else {
-                                                        int incrementValue$43 = var43;
+                                                        incrementValue$43 = var43;
                                                         var43++;
                                                         var66 = param0.field_h[incrementValue$43];
                                                         break L12;
                                                       }
                                                     } else {
-                                                      int incrementValue$44 = var36;
+                                                      incrementValue$44 = var36;
                                                       var36++;
                                                       var66 = param0.field_h[incrementValue$44];
                                                       break L12;
                                                     }
                                                   } else {
-                                                    int incrementValue$45 = var42;
+                                                    incrementValue$45 = var42;
                                                     var42++;
                                                     var66 = param0.field_h[incrementValue$45];
                                                     break L12;
                                                   }
                                                 } else {
-                                                  int incrementValue$46 = var35;
+                                                  incrementValue$46 = var35;
                                                   var35++;
                                                   var66 = param0.field_h[incrementValue$46];
                                                   break L12;
                                                 }
                                               } else {
-                                                int incrementValue$47 = var41;
+                                                incrementValue$47 = var41;
                                                 var41++;
                                                 var66 = param0.field_h[incrementValue$47];
                                                 break L12;
                                               }
                                             } else {
-                                              int incrementValue$48 = var34;
+                                              incrementValue$48 = var34;
                                               var34++;
                                               var66 = param0.field_h[incrementValue$48];
                                               break L12;
@@ -588,7 +609,7 @@ final class kia extends bw {
                                           }
                                         }
                                       }
-                                      int incrementValue$49 = var44;
+                                      incrementValue$49 = var44;
                                       var44++;
                                       var66 = param0.field_h[incrementValue$49];
                                       break L12;
@@ -607,10 +628,10 @@ final class kia extends bw {
                                       break L15;
                                     }
                                   }
-                                  int incrementValue$50 = var37;
+                                  incrementValue$50 = var37;
                                   var37++;
                                   var53 = var53 + param0.field_h[incrementValue$50];
-                                  int incrementValue$51 = var40;
+                                  incrementValue$51 = var40;
                                   var40++;
                                   var55 = var55 + param0.field_h[incrementValue$51];
                                   var51.d(var53 & 127, 0);
@@ -626,10 +647,10 @@ final class kia extends bw {
                                     break L16;
                                   }
                                 }
-                                int incrementValue$52 = var37;
+                                incrementValue$52 = var37;
                                 var37++;
                                 var53 = var53 + param0.field_h[incrementValue$52];
-                                int incrementValue$53 = var38;
+                                incrementValue$53 = var38;
                                 var38++;
                                 var54 = var54 + param0.field_h[incrementValue$53];
                                 var51.d(var53 & 127, 0);
@@ -647,13 +668,13 @@ final class kia extends bw {
                               }
                               var51.d(81, 0);
                               var51.d(3, 0);
-                              int incrementValue$54 = var50;
+                              incrementValue$54 = var50;
                               var50++;
                               var51.d((int) param0.field_h[incrementValue$54], 0);
-                              int incrementValue$55 = var50;
+                              incrementValue$55 = var50;
                               var50++;
                               var51.d((int) param0.field_h[incrementValue$55], 0);
-                              int incrementValue$56 = var50;
+                              incrementValue$56 = var50;
                               var50++;
                               var51.d((int) param0.field_h[incrementValue$56], 0);
                               continue L5;
@@ -786,7 +807,7 @@ final class kia extends bw {
                   }
                 }
               } else {
-                int discarded$57 = param0.d(-1);
+                discarded$57 = param0.d(-1);
                 var15++;
                 continue L1;
               }

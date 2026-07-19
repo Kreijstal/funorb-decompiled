@@ -22,14 +22,14 @@ abstract class ic extends gi {
     abstract void d(int param0);
 
     final void a(int[] param0, int param1, int param2) {
-        if (((ic) this).field_h) {
-            ((ic) this).b(param0, param1, param2);
+        if (this.field_h) {
+            this.b(param0, param1, param2);
         } else {
-            ((ic) this).d(param2);
+            this.d(param2);
         }
     }
 
     protected ic() {
-        ((ic) this).field_h = true;
+        this.field_h = true;
     }
 }

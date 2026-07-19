@@ -12,9 +12,15 @@ final class oa extends IOException {
         field_c = null;
         field_b = null;
         field_a = null;
+        if (param0 != 17) {
+            oa.b(76);
+        }
     }
 
     final static void b(int param0) {
+        if (param0 != -16586) {
+            return;
+        }
         uk.a(false, 17);
     }
 
@@ -23,10 +29,6 @@ final class oa extends IOException {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Asking for or providing contact information";
         field_a = new mk();
     }

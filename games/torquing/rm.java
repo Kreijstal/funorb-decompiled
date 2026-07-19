@@ -42,15 +42,15 @@ class rm extends pa {
     int field_f;
 
     final int a(int param0, int param1, int param2, byte param3, byte param4, short param5, short param6) {
-        ((rm) this).field_o[((rm) this).field_g] = param0;
-        ((rm) this).field_y[((rm) this).field_g] = param1;
-        ((rm) this).field_q[((rm) this).field_g] = param2;
-        ((rm) this).field_j[((rm) this).field_g] = (byte)param3;
-        ((rm) this).field_D[((rm) this).field_g] = (byte)param4;
-        ((rm) this).field_m[((rm) this).field_g] = (short)param5;
-        ((rm) this).field_A[((rm) this).field_g] = (short)param6;
-        int fieldTemp$0 = ((rm) this).field_g;
-        ((rm) this).field_g = ((rm) this).field_g + 1;
+        this.field_o[this.field_g] = param0;
+        this.field_y[this.field_g] = param1;
+        this.field_q[this.field_g] = param2;
+        this.field_j[this.field_g] = (byte)param3;
+        this.field_D[this.field_g] = (byte)param4;
+        this.field_m[this.field_g] = (short)param5;
+        this.field_A[this.field_g] = (short)param6;
+        int fieldTemp$0 = this.field_g;
+        this.field_g = this.field_g + 1;
         return fieldTemp$0;
     }
 
@@ -63,10 +63,10 @@ class rm extends pa {
     }
 
     final void b() {
-        ((rm) this).field_i = null;
-        ((rm) this).field_p = null;
-        ((rm) this).field_w = null;
-        ((rm) this).field_R = null;
+        this.field_i = null;
+        this.field_p = null;
+        this.field_w = (int[][]) null;
+        this.field_R = (int[][]) null;
     }
 
     private final void b(byte[] param0) {
@@ -197,22 +197,22 @@ class rm extends pa {
           var21 = var21 + var18;
           var34 = var21;
           var21 = var21 + var19;
-          ((rm) this).field_f = var9;
-          ((rm) this).field_g = var10;
-          ((rm) this).field_k = var11;
-          ((rm) this).field_M = new int[var9];
-          ((rm) this).field_B = new int[var9];
-          ((rm) this).field_E = new int[var9];
-          ((rm) this).field_o = new int[var10];
-          ((rm) this).field_y = new int[var10];
-          ((rm) this).field_q = new int[var10];
+          this.field_f = var9;
+          this.field_g = var10;
+          this.field_k = var11;
+          this.field_M = new int[var9];
+          this.field_B = new int[var9];
+          this.field_E = new int[var9];
+          this.field_o = new int[var10];
+          this.field_y = new int[var10];
+          this.field_q = new int[var10];
           if (var11 <= 0) {
             break L5;
           } else {
-            ((rm) this).field_s = new byte[var11];
-            ((rm) this).field_u = new short[var11];
-            ((rm) this).field_n = new short[var11];
-            ((rm) this).field_x = new short[var11];
+            this.field_s = new byte[var11];
+            this.field_u = new short[var11];
+            this.field_n = new short[var11];
+            this.field_x = new short[var11];
             break L5;
           }
         }
@@ -220,7 +220,7 @@ class rm extends pa {
           if (var16 != 1) {
             break L6;
           } else {
-            ((rm) this).field_i = new int[var9];
+            this.field_i = new int[var9];
             break L6;
           }
         }
@@ -228,18 +228,18 @@ class rm extends pa {
           if (var12 != 1) {
             break L7;
           } else {
-            ((rm) this).field_j = new byte[var10];
-            ((rm) this).field_D = new byte[var10];
-            ((rm) this).field_A = new short[var10];
+            this.field_j = new byte[var10];
+            this.field_D = new byte[var10];
+            this.field_A = new short[var10];
             break L7;
           }
         }
         L8: {
           if (var13 != 255) {
-            ((rm) this).field_I = (byte)var13;
+            this.field_I = (byte)var13;
             break L8;
           } else {
-            ((rm) this).field_G = new byte[var10];
+            this.field_G = new byte[var10];
             break L8;
           }
         }
@@ -247,7 +247,7 @@ class rm extends pa {
           if (var14 != 1) {
             break L9;
           } else {
-            ((rm) this).field_r = new byte[var10];
+            this.field_r = new byte[var10];
             break L9;
           }
         }
@@ -255,11 +255,11 @@ class rm extends pa {
           if (var15 != 1) {
             break L10;
           } else {
-            ((rm) this).field_p = new int[var10];
+            this.field_p = new int[var10];
             break L10;
           }
         }
-        ((rm) this).field_m = new short[var10];
+        this.field_m = new short[var10];
         var4.field_n = var22;
         var5.field_n = var32;
         var6.field_n = var33;
@@ -279,7 +279,7 @@ class rm extends pa {
             var38 = 0;
             L12: while (true) {
               if (var38 >= var10) {
-                ((rm) this).field_F = -1;
+                this.field_F = -1;
                 var4.field_n = var29;
                 var5.field_n = var23;
                 var38 = 0;
@@ -289,13 +289,13 @@ class rm extends pa {
                 var42 = 0;
                 L13: while (true) {
                   if (var42 >= var10) {
-                    ((rm) this).field_F = ((rm) this).field_F + 1;
+                    this.field_F = this.field_F + 1;
                     var4.field_n = var31;
                     var42 = 0;
                     L14: while (true) {
                       if (var42 >= var11) {
                         L15: {
-                          if (((rm) this).field_D == null) {
+                          if (this.field_D == null) {
                             break L15;
                           } else {
                             var42 = 0;
@@ -306,23 +306,23 @@ class rm extends pa {
                                 if (var42 != 0) {
                                   break L15;
                                 } else {
-                                  ((rm) this).field_D = null;
+                                  this.field_D = null;
                                   break L15;
                                 }
                               } else {
-                                var44 = ((rm) this).field_D[var45] & 255;
+                                var44 = this.field_D[var45] & 255;
                                 if (var44 != 255) {
                                   L17: {
-                                    if ((((rm) this).field_u[var44] & 65535) != ((rm) this).field_o[var45]) {
+                                    if ((this.field_u[var44] & 65535) != this.field_o[var45]) {
                                       break L17;
                                     } else {
-                                      if ((((rm) this).field_n[var44] & 65535) != ((rm) this).field_y[var45]) {
+                                      if ((this.field_n[var44] & 65535) != this.field_y[var45]) {
                                         break L17;
                                       } else {
-                                        if ((((rm) this).field_x[var44] & 65535) != ((rm) this).field_q[var45]) {
+                                        if ((this.field_x[var44] & 65535) != this.field_q[var45]) {
                                           break L17;
                                         } else {
-                                          ((rm) this).field_D[var45] = (byte) -1;
+                                          this.field_D[var45] = (byte)-1;
                                           var45++;
                                           continue L16;
                                         }
@@ -344,7 +344,7 @@ class rm extends pa {
                           if (var3 != 0) {
                             break L18;
                           } else {
-                            ((rm) this).field_A = null;
+                            this.field_A = null;
                             break L18;
                           }
                         }
@@ -352,16 +352,16 @@ class rm extends pa {
                           if (var2 != 0) {
                             break L19;
                           } else {
-                            ((rm) this).field_j = null;
+                            this.field_j = null;
                             break L19;
                           }
                         }
                         return;
                       } else {
-                        ((rm) this).field_s[var42] = (byte) 0;
-                        ((rm) this).field_u[var42] = (short)var4.i(7088);
-                        ((rm) this).field_n[var42] = (short)var4.i(7088);
-                        ((rm) this).field_x[var42] = (short)var4.i(7088);
+                        this.field_s[var42] = (byte) 0;
+                        this.field_u[var42] = (short)var4.i(7088);
+                        this.field_n[var42] = (short)var4.i(7088);
+                        this.field_x[var42] = (short)var4.i(7088);
                         var42++;
                         continue L14;
                       }
@@ -379,28 +379,28 @@ class rm extends pa {
                           var41 = var39;
                           var40 = var4.g((byte) -121) + var41;
                           var41 = var40;
-                          ((rm) this).field_o[var42] = var38;
-                          ((rm) this).field_y[var42] = var39;
-                          ((rm) this).field_q[var42] = var40;
-                          if (var38 <= ((rm) this).field_F) {
+                          this.field_o[var42] = var38;
+                          this.field_y[var42] = var39;
+                          this.field_q[var42] = var40;
+                          if (var38 <= this.field_F) {
                             break L21;
                           } else {
-                            ((rm) this).field_F = var38;
+                            this.field_F = var38;
                             break L21;
                           }
                         }
                         L22: {
-                          if (var39 <= ((rm) this).field_F) {
+                          if (var39 <= this.field_F) {
                             break L22;
                           } else {
-                            ((rm) this).field_F = var39;
+                            this.field_F = var39;
                             break L22;
                           }
                         }
-                        if (var40 <= ((rm) this).field_F) {
+                        if (var40 <= this.field_F) {
                           break L20;
                         } else {
-                          ((rm) this).field_F = var40;
+                          this.field_F = var40;
                           break L20;
                         }
                       }
@@ -412,13 +412,13 @@ class rm extends pa {
                         var39 = var40;
                         var40 = var4.g((byte) -118) + var41;
                         var41 = var40;
-                        ((rm) this).field_o[var42] = var38;
-                        ((rm) this).field_y[var42] = var39;
-                        ((rm) this).field_q[var42] = var40;
-                        if (var40 <= ((rm) this).field_F) {
+                        this.field_o[var42] = var38;
+                        this.field_y[var42] = var39;
+                        this.field_q[var42] = var40;
+                        if (var40 <= this.field_F) {
                           break L23;
                         } else {
-                          ((rm) this).field_F = var40;
+                          this.field_F = var40;
                           break L23;
                         }
                       }
@@ -430,13 +430,13 @@ class rm extends pa {
                         var38 = var40;
                         var40 = var4.g((byte) -122) + var41;
                         var41 = var40;
-                        ((rm) this).field_o[var42] = var38;
-                        ((rm) this).field_y[var42] = var39;
-                        ((rm) this).field_q[var42] = var40;
-                        if (var40 <= ((rm) this).field_F) {
+                        this.field_o[var42] = var38;
+                        this.field_y[var42] = var39;
+                        this.field_q[var42] = var40;
+                        if (var40 <= this.field_F) {
                           break L24;
                         } else {
-                          ((rm) this).field_F = var40;
+                          this.field_F = var40;
                           break L24;
                         }
                       }
@@ -447,11 +447,11 @@ class rm extends pa {
                       var39 = var44;
                       var40 = var4.g((byte) -117) + var41;
                       var41 = var40;
-                      ((rm) this).field_o[var42] = var38;
-                      ((rm) this).field_y[var42] = var39;
-                      ((rm) this).field_q[var42] = var40;
-                      if (var40 > ((rm) this).field_F) {
-                        ((rm) this).field_F = var40;
+                      this.field_o[var42] = var38;
+                      this.field_y[var42] = var39;
+                      this.field_q[var42] = var40;
+                      if (var40 > this.field_F) {
+                        this.field_F = var40;
                         var42++;
                         continue L13;
                       } else {
@@ -466,30 +466,30 @@ class rm extends pa {
                 }
               } else {
                 L25: {
-                  ((rm) this).field_m[var38] = (short)var4.i(7088);
+                  this.field_m[var38] = (short)var4.i(7088);
                   if (var12 != 1) {
                     break L25;
                   } else {
                     L26: {
                       var39 = var5.i((byte) -101);
                       if ((var39 & 1) != 1) {
-                        ((rm) this).field_j[var38] = (byte) 0;
+                        this.field_j[var38] = (byte) 0;
                         break L26;
                       } else {
-                        ((rm) this).field_j[var38] = (byte) 1;
+                        this.field_j[var38] = (byte) 1;
                         var2 = 1;
                         break L26;
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((rm) this).field_D[var38] = (byte) -1;
-                      ((rm) this).field_A[var38] = (short) -1;
+                      this.field_D[var38] = (byte)-1;
+                      this.field_A[var38] = (short)-1;
                       break L25;
                     } else {
-                      ((rm) this).field_D[var38] = (byte)(var39 >> 2);
-                      ((rm) this).field_A[var38] = ((rm) this).field_m[var38];
-                      ((rm) this).field_m[var38] = (short) 127;
-                      if (((rm) this).field_A[var38] == -1) {
+                      this.field_D[var38] = (byte)(var39 >> 2);
+                      this.field_A[var38] = this.field_m[var38];
+                      this.field_m[var38] = (short)127;
+                      if (this.field_A[var38] == -1) {
                         break L25;
                       } else {
                         var3 = 1;
@@ -502,7 +502,7 @@ class rm extends pa {
                   if (var13 != 255) {
                     break L27;
                   } else {
-                    ((rm) this).field_G[var38] = var6.f((byte) 69);
+                    this.field_G[var38] = var6.f((byte) 69);
                     break L27;
                   }
                 }
@@ -510,12 +510,12 @@ class rm extends pa {
                   if (var14 != 1) {
                     break L28;
                   } else {
-                    ((rm) this).field_r[var38] = var7.f((byte) 76);
+                    this.field_r[var38] = var7.f((byte) 76);
                     break L28;
                   }
                 }
                 if (var15 == 1) {
-                  ((rm) this).field_p[var38] = var8.i((byte) -101);
+                  this.field_p[var38] = var8.i((byte) -101);
                   var38++;
                   continue L12;
                 } else {
@@ -553,14 +553,14 @@ class rm extends pa {
                 break L31;
               }
             }
-            ((rm) this).field_M[var38] = var35 + var40;
-            ((rm) this).field_B[var38] = var36 + var41;
-            ((rm) this).field_E[var38] = var37 + var42;
-            var35 = ((rm) this).field_M[var38];
-            var36 = ((rm) this).field_B[var38];
-            var37 = ((rm) this).field_E[var38];
+            this.field_M[var38] = var35 + var40;
+            this.field_B[var38] = var36 + var41;
+            this.field_E[var38] = var37 + var42;
+            var35 = this.field_M[var38];
+            var36 = this.field_B[var38];
+            var37 = this.field_E[var38];
             if (var16 == 1) {
-              ((rm) this).field_i[var38] = var8.i((byte) -101);
+              this.field_i[var38] = var8.i((byte) -101);
               var38++;
               continue L11;
             } else {
@@ -581,14 +581,14 @@ class rm extends pa {
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((rm) this).field_f) {
+          if (var3 >= this.field_f) {
             var2 = (int)(Math.sqrt((double)var2) + 0.99);
             this.a(param0, param0, param0, var2);
             return var2;
           } else {
-            var4 = ((rm) this).field_M[var3];
-            var5 = ((rm) this).field_B[var3];
-            var6 = ((rm) this).field_E[var3];
+            var4 = this.field_M[var3];
+            var5 = this.field_B[var3];
+            var6 = this.field_E[var3];
             var7 = var4 * var4 + var6 * var6 + var5 * var5;
             if (var7 > var2) {
               var2 = var7;
@@ -604,19 +604,20 @@ class rm extends pa {
 
     private final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        for (var5 = 0; var5 < ((rm) this).field_f; var5++) {
-            ((rm) this).field_M[var5] = ((rm) this).field_M[var5] * param0 / param3;
-            ((rm) this).field_B[var5] = ((rm) this).field_B[var5] * param1 / param3;
-            ((rm) this).field_E[var5] = ((rm) this).field_E[var5] * param2 / param3;
+        for (var5 = 0; var5 < this.field_f; var5++) {
+            this.field_M[var5] = this.field_M[var5] * param0 / param3;
+            this.field_B[var5] = this.field_B[var5] * param1 / param3;
+            this.field_E[var5] = this.field_E[var5] * param2 / param3;
         }
         this.d();
     }
 
     final bk a(int param0, int param1, int param2, int param3, int param4) {
-        return (bk) (Object) new pj((rm) this, param0, param1, param2, param3, param4);
+        return (bk) ((Object) new pj((rm) (this), param0, param1, param2, param3, param4));
     }
 
     final void a() {
+        bl dupTemp$1 = null;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -636,25 +637,25 @@ class rm extends pa {
         dd var17 = null;
         dd var18 = null;
         dd var19 = null;
-        if (((rm) this).field_l == null) {
-          ((rm) this).field_l = new dd[((rm) this).field_F];
+        if (this.field_l == null) {
+          this.field_l = new dd[this.field_F];
           var1 = 0;
           L0: while (true) {
-            if (var1 >= ((rm) this).field_F) {
+            if (var1 >= this.field_F) {
               var1 = 0;
               L1: while (true) {
-                if (var1 >= ((rm) this).field_g) {
+                if (var1 >= this.field_g) {
                   return;
                 } else {
-                  var2 = ((rm) this).field_o[var1];
-                  var3 = ((rm) this).field_y[var1];
-                  var4 = ((rm) this).field_q[var1];
-                  var5 = ((rm) this).field_M[var3] - ((rm) this).field_M[var2];
-                  var6 = ((rm) this).field_B[var3] - ((rm) this).field_B[var2];
-                  var7 = ((rm) this).field_E[var3] - ((rm) this).field_E[var2];
-                  var8 = ((rm) this).field_M[var4] - ((rm) this).field_M[var2];
-                  var9 = ((rm) this).field_B[var4] - ((rm) this).field_B[var2];
-                  var10 = ((rm) this).field_E[var4] - ((rm) this).field_E[var2];
+                  var2 = this.field_o[var1];
+                  var3 = this.field_y[var1];
+                  var4 = this.field_q[var1];
+                  var5 = this.field_M[var3] - this.field_M[var2];
+                  var6 = this.field_B[var3] - this.field_B[var2];
+                  var7 = this.field_E[var3] - this.field_E[var2];
+                  var8 = this.field_M[var4] - this.field_M[var2];
+                  var9 = this.field_B[var4] - this.field_B[var2];
+                  var10 = this.field_E[var4] - this.field_E[var2];
                   var11 = var6 * var10 - var9 * var7;
                   var12 = var7 * var8 - var10 * var5;
                   var13 = var5 * var9 - var8 * var6;
@@ -689,8 +690,8 @@ class rm extends pa {
                                     var11 = var11 * 256 / var14;
                                     var12 = var12 * 256 / var14;
                                     var13 = var13 * 256 / var14;
-                                    if (((rm) this).field_j != null) {
-                                      var15 = ((rm) this).field_j[var1];
+                                    if (this.field_j != null) {
+                                      var15 = this.field_j[var1];
                                       break L5;
                                     } else {
                                       var15 = 0;
@@ -700,15 +701,15 @@ class rm extends pa {
                                   if (var15 != 0) {
                                     if (var15 == 1) {
                                       L6: {
-                                        if (((rm) this).field_J != null) {
+                                        if (this.field_J != null) {
                                           break L6;
                                         } else {
-                                          ((rm) this).field_J = new bl[((rm) this).field_g];
+                                          this.field_J = new bl[this.field_g];
                                           break L6;
                                         }
                                       }
-                                      bl dupTemp$1 = new bl();
-                                      ((rm) this).field_J[var1] = dupTemp$1;
+                                      dupTemp$1 = new bl();
+                                      this.field_J[var1] = dupTemp$1;
                                       var16 = dupTemp$1;
                                       var16.field_c = var11;
                                       var16.field_f = var12;
@@ -720,17 +721,17 @@ class rm extends pa {
                                       continue L1;
                                     }
                                   } else {
-                                    var17 = ((rm) this).field_l[var2];
+                                    var17 = this.field_l[var2];
                                     var17.field_g = var17.field_g + var11;
                                     var17.field_a = var17.field_a + var12;
                                     var17.field_h = var17.field_h + var13;
                                     var17.field_f = var17.field_f + 1;
-                                    var18 = ((rm) this).field_l[var3];
+                                    var18 = this.field_l[var3];
                                     var18.field_g = var18.field_g + var11;
                                     var18.field_a = var18.field_a + var12;
                                     var18.field_h = var18.field_h + var13;
                                     var18.field_f = var18.field_f + 1;
-                                    var19 = ((rm) this).field_l[var4];
+                                    var19 = this.field_l[var4];
                                     var19.field_g = var19.field_g + var11;
                                     var19.field_a = var19.field_a + var12;
                                     var19.field_h = var19.field_h + var13;
@@ -755,7 +756,7 @@ class rm extends pa {
                 }
               }
             } else {
-              ((rm) this).field_l[var1] = new dd();
+              this.field_l[var1] = new dd();
               var1++;
               continue L0;
             }
@@ -766,6 +767,7 @@ class rm extends pa {
     }
 
     private final void a(byte[] param0) {
+        byte dupTemp$1 = 0;
         fj var2 = null;
         fj var3 = null;
         fj var4 = null;
@@ -883,7 +885,7 @@ class rm extends pa {
           if (var11 <= 0) {
             break L2;
           } else {
-            ((rm) this).field_s = new byte[var11];
+            this.field_s = new byte[var11];
             var2.field_n = 0;
             var28 = 0;
             L3: while (true) {
@@ -891,8 +893,8 @@ class rm extends pa {
                 break L2;
               } else {
                 L4: {
-                  byte dupTemp$1 = var2.f((byte) 64);
-                  ((rm) this).field_s[var28] = dupTemp$1;
+                  dupTemp$1 = var2.f((byte) 64);
+                  this.field_s[var28] = dupTemp$1;
                   var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
@@ -1010,19 +1012,19 @@ class rm extends pa {
           var48 = var28;
           var28 = var28 + (var26 + var27 * 2);
           var49 = var28;
-          ((rm) this).field_f = var9;
-          ((rm) this).field_g = var10;
-          ((rm) this).field_k = var11;
-          ((rm) this).field_M = new int[var9];
-          ((rm) this).field_B = new int[var9];
-          ((rm) this).field_E = new int[var9];
-          ((rm) this).field_o = new int[var10];
-          ((rm) this).field_y = new int[var10];
-          ((rm) this).field_q = new int[var10];
+          this.field_f = var9;
+          this.field_g = var10;
+          this.field_k = var11;
+          this.field_M = new int[var9];
+          this.field_B = new int[var9];
+          this.field_E = new int[var9];
+          this.field_o = new int[var10];
+          this.field_y = new int[var10];
+          this.field_q = new int[var10];
           if (var19 != 1) {
             break L12;
           } else {
-            ((rm) this).field_i = new int[var9];
+            this.field_i = new int[var9];
             break L12;
           }
         }
@@ -1030,16 +1032,16 @@ class rm extends pa {
           if (var13 == 0) {
             break L13;
           } else {
-            ((rm) this).field_j = new byte[var10];
+            this.field_j = new byte[var10];
             break L13;
           }
         }
         L14: {
           if (var15 != 255) {
-            ((rm) this).field_I = (byte)var15;
+            this.field_I = (byte)var15;
             break L14;
           } else {
-            ((rm) this).field_G = new byte[var10];
+            this.field_G = new byte[var10];
             break L14;
           }
         }
@@ -1047,7 +1049,7 @@ class rm extends pa {
           if (var16 != 1) {
             break L15;
           } else {
-            ((rm) this).field_r = new byte[var10];
+            this.field_r = new byte[var10];
             break L15;
           }
         }
@@ -1055,7 +1057,7 @@ class rm extends pa {
           if (var17 != 1) {
             break L16;
           } else {
-            ((rm) this).field_p = new int[var10];
+            this.field_p = new int[var10];
             break L16;
           }
         }
@@ -1063,7 +1065,7 @@ class rm extends pa {
           if (var18 != 1) {
             break L17;
           } else {
-            ((rm) this).field_A = new short[var10];
+            this.field_A = new short[var10];
             break L17;
           }
         }
@@ -1074,37 +1076,37 @@ class rm extends pa {
             if (var11 <= 0) {
               break L18;
             } else {
-              ((rm) this).field_D = new byte[var10];
+              this.field_D = new byte[var10];
               break L18;
             }
           }
         }
         L19: {
-          ((rm) this).field_m = new short[var10];
+          this.field_m = new short[var10];
           if (var11 <= 0) {
             break L19;
           } else {
             L20: {
-              ((rm) this).field_u = new short[var11];
-              ((rm) this).field_n = new short[var11];
-              ((rm) this).field_x = new short[var11];
+              this.field_u = new short[var11];
+              this.field_n = new short[var11];
+              this.field_x = new short[var11];
               if (var26 <= 0) {
                 break L20;
               } else {
-                ((rm) this).field_N = new short[var26];
-                ((rm) this).field_z = new short[var26];
-                ((rm) this).field_K = new short[var26];
-                ((rm) this).field_C = new byte[var26];
-                ((rm) this).field_v = new byte[var26];
-                ((rm) this).field_L = new byte[var26];
+                this.field_N = new short[var26];
+                this.field_z = new short[var26];
+                this.field_K = new short[var26];
+                this.field_C = new byte[var26];
+                this.field_v = new byte[var26];
+                this.field_L = new byte[var26];
                 break L20;
               }
             }
             if (var27 <= 0) {
               break L19;
             } else {
-              ((rm) this).field_Q = new byte[var27];
-              ((rm) this).field_t = new byte[var27];
+              this.field_Q = new byte[var27];
+              this.field_t = new byte[var27];
               break L19;
             }
           }
@@ -1130,7 +1132,7 @@ class rm extends pa {
             var53 = 0;
             L22: while (true) {
               if (var53 >= var10) {
-                ((rm) this).field_F = -1;
+                this.field_F = -1;
                 var2.field_n = var36;
                 var3.field_n = var31;
                 var53 = 0;
@@ -1140,7 +1142,7 @@ class rm extends pa {
                 var57 = 0;
                 L23: while (true) {
                   if (var57 >= var10) {
-                    ((rm) this).field_F = ((rm) this).field_F + 1;
+                    this.field_F = this.field_F + 1;
                     var2.field_n = var43;
                     var3.field_n = var44;
                     var4.field_n = var45;
@@ -1176,13 +1178,13 @@ class rm extends pa {
                         return;
                       } else {
                         L27: {
-                          var58 = ((rm) this).field_s[var57] & 255;
+                          var58 = this.field_s[var57] & 255;
                           if (var58 != 0) {
                             break L27;
                           } else {
-                            ((rm) this).field_u[var57] = (short)var2.i(7088);
-                            ((rm) this).field_n[var57] = (short)var2.i(7088);
-                            ((rm) this).field_x[var57] = (short)var2.i(7088);
+                            this.field_u[var57] = (short)var2.i(7088);
+                            this.field_n[var57] = (short)var2.i(7088);
+                            this.field_x[var57] = (short)var2.i(7088);
                             break L27;
                           }
                         }
@@ -1190,15 +1192,15 @@ class rm extends pa {
                           if (var58 != 1) {
                             break L28;
                           } else {
-                            ((rm) this).field_u[var57] = (short)var3.i(7088);
-                            ((rm) this).field_n[var57] = (short)var3.i(7088);
-                            ((rm) this).field_x[var57] = (short)var3.i(7088);
-                            ((rm) this).field_N[var57] = (short)var4.i(7088);
-                            ((rm) this).field_z[var57] = (short)var4.i(7088);
-                            ((rm) this).field_K[var57] = (short)var4.i(7088);
-                            ((rm) this).field_C[var57] = var5.f((byte) 100);
-                            ((rm) this).field_v[var57] = var6.f((byte) 114);
-                            ((rm) this).field_L[var57] = var7.f((byte) 52);
+                            this.field_u[var57] = (short)var3.i(7088);
+                            this.field_n[var57] = (short)var3.i(7088);
+                            this.field_x[var57] = (short)var3.i(7088);
+                            this.field_N[var57] = (short)var4.i(7088);
+                            this.field_z[var57] = (short)var4.i(7088);
+                            this.field_K[var57] = (short)var4.i(7088);
+                            this.field_C[var57] = var5.f((byte) 100);
+                            this.field_v[var57] = var6.f((byte) 114);
+                            this.field_L[var57] = var7.f((byte) 52);
                             break L28;
                           }
                         }
@@ -1206,30 +1208,30 @@ class rm extends pa {
                           if (var58 != 2) {
                             break L29;
                           } else {
-                            ((rm) this).field_u[var57] = (short)var3.i(7088);
-                            ((rm) this).field_n[var57] = (short)var3.i(7088);
-                            ((rm) this).field_x[var57] = (short)var3.i(7088);
-                            ((rm) this).field_N[var57] = (short)var4.i(7088);
-                            ((rm) this).field_z[var57] = (short)var4.i(7088);
-                            ((rm) this).field_K[var57] = (short)var4.i(7088);
-                            ((rm) this).field_C[var57] = var5.f((byte) 51);
-                            ((rm) this).field_v[var57] = var6.f((byte) 74);
-                            ((rm) this).field_L[var57] = var7.f((byte) 86);
-                            ((rm) this).field_Q[var57] = var7.f((byte) 22);
-                            ((rm) this).field_t[var57] = var7.f((byte) 37);
+                            this.field_u[var57] = (short)var3.i(7088);
+                            this.field_n[var57] = (short)var3.i(7088);
+                            this.field_x[var57] = (short)var3.i(7088);
+                            this.field_N[var57] = (short)var4.i(7088);
+                            this.field_z[var57] = (short)var4.i(7088);
+                            this.field_K[var57] = (short)var4.i(7088);
+                            this.field_C[var57] = var5.f((byte) 51);
+                            this.field_v[var57] = var6.f((byte) 74);
+                            this.field_L[var57] = var7.f((byte) 86);
+                            this.field_Q[var57] = var7.f((byte) 22);
+                            this.field_t[var57] = var7.f((byte) 37);
                             break L29;
                           }
                         }
                         if (var58 == 3) {
-                          ((rm) this).field_u[var57] = (short)var3.i(7088);
-                          ((rm) this).field_n[var57] = (short)var3.i(7088);
-                          ((rm) this).field_x[var57] = (short)var3.i(7088);
-                          ((rm) this).field_N[var57] = (short)var4.i(7088);
-                          ((rm) this).field_z[var57] = (short)var4.i(7088);
-                          ((rm) this).field_K[var57] = (short)var4.i(7088);
-                          ((rm) this).field_C[var57] = var5.f((byte) 118);
-                          ((rm) this).field_v[var57] = var6.f((byte) 119);
-                          ((rm) this).field_L[var57] = var7.f((byte) 35);
+                          this.field_u[var57] = (short)var3.i(7088);
+                          this.field_n[var57] = (short)var3.i(7088);
+                          this.field_x[var57] = (short)var3.i(7088);
+                          this.field_N[var57] = (short)var4.i(7088);
+                          this.field_z[var57] = (short)var4.i(7088);
+                          this.field_K[var57] = (short)var4.i(7088);
+                          this.field_C[var57] = var5.f((byte) 118);
+                          this.field_v[var57] = var6.f((byte) 119);
+                          this.field_L[var57] = var7.f((byte) 35);
                           var57++;
                           continue L24;
                         } else {
@@ -1251,28 +1253,28 @@ class rm extends pa {
                           var56 = var54;
                           var55 = var2.g((byte) -116) + var56;
                           var56 = var55;
-                          ((rm) this).field_o[var57] = var53;
-                          ((rm) this).field_y[var57] = var54;
-                          ((rm) this).field_q[var57] = var55;
-                          if (var53 <= ((rm) this).field_F) {
+                          this.field_o[var57] = var53;
+                          this.field_y[var57] = var54;
+                          this.field_q[var57] = var55;
+                          if (var53 <= this.field_F) {
                             break L31;
                           } else {
-                            ((rm) this).field_F = var53;
+                            this.field_F = var53;
                             break L31;
                           }
                         }
                         L32: {
-                          if (var54 <= ((rm) this).field_F) {
+                          if (var54 <= this.field_F) {
                             break L32;
                           } else {
-                            ((rm) this).field_F = var54;
+                            this.field_F = var54;
                             break L32;
                           }
                         }
-                        if (var55 <= ((rm) this).field_F) {
+                        if (var55 <= this.field_F) {
                           break L30;
                         } else {
-                          ((rm) this).field_F = var55;
+                          this.field_F = var55;
                           break L30;
                         }
                       }
@@ -1284,13 +1286,13 @@ class rm extends pa {
                         var54 = var55;
                         var55 = var2.g((byte) -127) + var56;
                         var56 = var55;
-                        ((rm) this).field_o[var57] = var53;
-                        ((rm) this).field_y[var57] = var54;
-                        ((rm) this).field_q[var57] = var55;
-                        if (var55 <= ((rm) this).field_F) {
+                        this.field_o[var57] = var53;
+                        this.field_y[var57] = var54;
+                        this.field_q[var57] = var55;
+                        if (var55 <= this.field_F) {
                           break L33;
                         } else {
-                          ((rm) this).field_F = var55;
+                          this.field_F = var55;
                           break L33;
                         }
                       }
@@ -1302,13 +1304,13 @@ class rm extends pa {
                         var53 = var55;
                         var55 = var2.g((byte) -118) + var56;
                         var56 = var55;
-                        ((rm) this).field_o[var57] = var53;
-                        ((rm) this).field_y[var57] = var54;
-                        ((rm) this).field_q[var57] = var55;
-                        if (var55 <= ((rm) this).field_F) {
+                        this.field_o[var57] = var53;
+                        this.field_y[var57] = var54;
+                        this.field_q[var57] = var55;
+                        if (var55 <= this.field_F) {
                           break L34;
                         } else {
-                          ((rm) this).field_F = var55;
+                          this.field_F = var55;
                           break L34;
                         }
                       }
@@ -1319,11 +1321,11 @@ class rm extends pa {
                       var54 = var59;
                       var55 = var2.g((byte) -121) + var56;
                       var56 = var55;
-                      ((rm) this).field_o[var57] = var53;
-                      ((rm) this).field_y[var57] = var54;
-                      ((rm) this).field_q[var57] = var55;
-                      if (var55 > ((rm) this).field_F) {
-                        ((rm) this).field_F = var55;
+                      this.field_o[var57] = var53;
+                      this.field_y[var57] = var54;
+                      this.field_q[var57] = var55;
+                      if (var55 > this.field_F) {
+                        this.field_F = var55;
                         var57++;
                         continue L23;
                       } else {
@@ -1338,11 +1340,11 @@ class rm extends pa {
                 }
               } else {
                 L35: {
-                  ((rm) this).field_m[var53] = (short)var2.i(7088);
+                  this.field_m[var53] = (short)var2.i(7088);
                   if (var13 == 0) {
                     break L35;
                   } else {
-                    ((rm) this).field_j[var53] = var3.f((byte) 78);
+                    this.field_j[var53] = var3.f((byte) 78);
                     break L35;
                   }
                 }
@@ -1350,7 +1352,7 @@ class rm extends pa {
                   if (var15 != 255) {
                     break L36;
                   } else {
-                    ((rm) this).field_G[var53] = var4.f((byte) 54);
+                    this.field_G[var53] = var4.f((byte) 54);
                     break L36;
                   }
                 }
@@ -1358,7 +1360,7 @@ class rm extends pa {
                   if (var16 != 1) {
                     break L37;
                   } else {
-                    ((rm) this).field_r[var53] = var5.f((byte) 54);
+                    this.field_r[var53] = var5.f((byte) 54);
                     break L37;
                   }
                 }
@@ -1366,7 +1368,7 @@ class rm extends pa {
                   if (var17 != 1) {
                     break L38;
                   } else {
-                    ((rm) this).field_p[var53] = var6.i((byte) -101);
+                    this.field_p[var53] = var6.i((byte) -101);
                     break L38;
                   }
                 }
@@ -1374,17 +1376,17 @@ class rm extends pa {
                   if (var18 != 1) {
                     break L39;
                   } else {
-                    ((rm) this).field_A[var53] = (short)(var7.i(7088) - 1);
+                    this.field_A[var53] = (short)(var7.i(7088) - 1);
                     break L39;
                   }
                 }
-                if (((rm) this).field_D != null) {
-                  if (((rm) this).field_A[var53] == -1) {
-                    ((rm) this).field_D[var53] = (byte) -1;
+                if (this.field_D != null) {
+                  if (this.field_A[var53] == -1) {
+                    this.field_D[var53] = (byte)-1;
                     var53++;
                     continue L22;
                   } else {
-                    ((rm) this).field_D[var53] = (byte)(var8.i((byte) -101) - 1);
+                    this.field_D[var53] = (byte)(var8.i((byte) -101) - 1);
                     var53++;
                     continue L22;
                   }
@@ -1423,14 +1425,14 @@ class rm extends pa {
                 break L42;
               }
             }
-            ((rm) this).field_M[var53] = var50 + var55;
-            ((rm) this).field_B[var53] = var51 + var56;
-            ((rm) this).field_E[var53] = var52 + var57;
-            var50 = ((rm) this).field_M[var53];
-            var51 = ((rm) this).field_B[var53];
-            var52 = ((rm) this).field_E[var53];
+            this.field_M[var53] = var50 + var55;
+            this.field_B[var53] = var51 + var56;
+            this.field_E[var53] = var52 + var57;
+            var50 = this.field_M[var53];
+            var51 = this.field_B[var53];
+            var52 = this.field_E[var53];
             if (var19 == 1) {
-              ((rm) this).field_i[var53] = var6.i((byte) -101);
+              this.field_i[var53] = var6.i((byte) -101);
               var53++;
               continue L21;
             } else {
@@ -1442,27 +1444,28 @@ class rm extends pa {
     }
 
     private final void d() {
-        ((rm) this).field_l = null;
-        ((rm) this).field_h = null;
-        ((rm) this).field_J = null;
+        this.field_l = null;
+        this.field_h = null;
+        this.field_J = null;
     }
 
     final int a(int param0, int param1, int param2) {
+        int fieldTemp$1 = 0;
         int var4 = 0;
         var4 = 0;
         L0: while (true) {
-          if (var4 >= ((rm) this).field_f) {
-            ((rm) this).field_M[((rm) this).field_f] = param0;
-            ((rm) this).field_B[((rm) this).field_f] = param1;
-            ((rm) this).field_E[((rm) this).field_f] = param2;
-            int fieldTemp$1 = ((rm) this).field_f + 1;
-            ((rm) this).field_f = ((rm) this).field_f + 1;
-            ((rm) this).field_F = fieldTemp$1;
-            return ((rm) this).field_f - 1;
+          if (var4 >= this.field_f) {
+            this.field_M[this.field_f] = param0;
+            this.field_B[this.field_f] = param1;
+            this.field_E[this.field_f] = param2;
+            fieldTemp$1 = this.field_f + 1;
+            this.field_f = this.field_f + 1;
+            this.field_F = fieldTemp$1;
+            return this.field_f - 1;
           } else {
-            if (((rm) this).field_M[var4] == param0) {
-              if (((rm) this).field_B[var4] == param1) {
-                if (((rm) this).field_E[var4] == param2) {
+            if (this.field_M[var4] == param0) {
+              if (this.field_B[var4] == param1) {
+                if (this.field_E[var4] == param2) {
                   return var4;
                 } else {
                   var4++;
@@ -1481,6 +1484,7 @@ class rm extends pa {
     }
 
     private final int a(rm param0, int param1, short param2) {
+        int fieldTemp$1 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1490,27 +1494,27 @@ class rm extends pa {
         var6 = param0.field_E[param1];
         var7 = 0;
         L0: while (true) {
-          if (var7 >= ((rm) this).field_f) {
+          if (var7 >= this.field_f) {
             L1: {
-              ((rm) this).field_M[((rm) this).field_f] = var4;
-              ((rm) this).field_B[((rm) this).field_f] = var5;
-              ((rm) this).field_E[((rm) this).field_f] = var6;
-              ((rm) this).field_H[((rm) this).field_f] = (short)param2;
+              this.field_M[this.field_f] = var4;
+              this.field_B[this.field_f] = var5;
+              this.field_E[this.field_f] = var6;
+              this.field_H[this.field_f] = (short)param2;
               if (param0.field_i == null) {
                 break L1;
               } else {
-                ((rm) this).field_i[((rm) this).field_f] = param0.field_i[param1];
+                this.field_i[this.field_f] = param0.field_i[param1];
                 break L1;
               }
             }
-            int fieldTemp$1 = ((rm) this).field_f;
-            ((rm) this).field_f = ((rm) this).field_f + 1;
+            fieldTemp$1 = this.field_f;
+            this.field_f = this.field_f + 1;
             return fieldTemp$1;
           } else {
-            if (var4 == ((rm) this).field_M[var7]) {
-              if (var5 == ((rm) this).field_B[var7]) {
-                if (var6 == ((rm) this).field_E[var7]) {
-                  ((rm) this).field_H[var7] = (short)(((rm) this).field_H[var7] | param2);
+            if (var4 == this.field_M[var7]) {
+              if (var5 == this.field_B[var7]) {
+                if (var6 == this.field_E[var7]) {
+                  this.field_H[var7] = (short)(this.field_H[var7] | param2);
                   return var7;
                 } else {
                   var7++;
@@ -1529,52 +1533,49 @@ class rm extends pa {
     }
 
     final void c() {
+        int[] array$2 = null;
+        int[] array$3 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
         L0: {
-          if (((rm) this).field_i == null) {
+          if (this.field_i == null) {
             break L0;
           } else {
-            var9 = new int[256];
-            var7 = var9;
-            var5 = var7;
+            var5 = new int[256];
             var2 = 0;
             var3 = 0;
             L1: while (true) {
-              if (var3 >= ((rm) this).field_f) {
-                ((rm) this).field_w = new int[var2 + 1][];
+              if (var3 >= this.field_f) {
+                this.field_w = new int[var2 + 1][];
                 var3 = 0;
                 L2: while (true) {
                   if (var3 > var2) {
                     var3 = 0;
                     L3: while (true) {
-                      if (var3 >= ((rm) this).field_f) {
-                        ((rm) this).field_i = null;
+                      if (var3 >= this.field_f) {
+                        this.field_i = null;
                         break L0;
                       } else {
-                        var4 = ((rm) this).field_i[var3];
+                        var4 = this.field_i[var3];
                         var5[var4] = var5[var4] + 1;
-                        ((rm) this).field_w[var4][var5[var4]] = var3;
+                        this.field_w[var4][var5[var4]] = var3;
                         var3++;
                         continue L3;
                       }
                     }
                   } else {
-                    ((rm) this).field_w[var3] = new int[var9[var3]];
-                    var9[var3] = 0;
+                    array$2 = new int[var5[var3]];
+                    this.field_w[var3] = array$2;
+                    var5[var3] = 0;
                     var3++;
                     continue L2;
                   }
                 }
               } else {
-                var4 = ((rm) this).field_i[var3];
+                var4 = this.field_i[var3];
                 var5[var4] = var5[var4] + 1;
                 if (var4 > var2) {
                   var2 = var4;
@@ -1589,42 +1590,41 @@ class rm extends pa {
           }
         }
         L4: {
-          if (((rm) this).field_p == null) {
+          if (this.field_p == null) {
             break L4;
           } else {
-            var10 = new int[256];
-            var8 = var10;
-            var6 = var8;
+            var6 = new int[256];
             var2 = 0;
             var3 = 0;
             L5: while (true) {
-              if (var3 >= ((rm) this).field_g) {
-                ((rm) this).field_R = new int[var2 + 1][];
+              if (var3 >= this.field_g) {
+                this.field_R = new int[var2 + 1][];
                 var3 = 0;
                 L6: while (true) {
                   if (var3 > var2) {
                     var3 = 0;
                     L7: while (true) {
-                      if (var3 >= ((rm) this).field_g) {
-                        ((rm) this).field_p = null;
+                      if (var3 >= this.field_g) {
+                        this.field_p = null;
                         break L4;
                       } else {
-                        var4 = ((rm) this).field_p[var3];
+                        var4 = this.field_p[var3];
                         var6[var4] = var6[var4] + 1;
-                        ((rm) this).field_R[var4][var6[var4]] = var3;
+                        this.field_R[var4][var6[var4]] = var3;
                         var3++;
                         continue L7;
                       }
                     }
                   } else {
-                    ((rm) this).field_R[var3] = new int[var10[var3]];
-                    var10[var3] = 0;
+                    array$3 = new int[var6[var3]];
+                    this.field_R[var3] = array$3;
+                    var6[var3] = 0;
                     var3++;
                     continue L6;
                   }
                 }
               } else {
-                var4 = ((rm) this).field_p[var3];
+                var4 = this.field_p[var3];
                 var6[var4] = var6[var4] + 1;
                 if (var4 > var2) {
                   var2 = var4;
@@ -1643,10 +1643,10 @@ class rm extends pa {
     private rm(byte[] param0) {
         L0: {
           L1: {
-            ((rm) this).field_I = (byte) 0;
-            ((rm) this).field_F = 0;
-            ((rm) this).field_g = 0;
-            ((rm) this).field_f = 0;
+            this.field_I = (byte) 0;
+            this.field_F = 0;
+            this.field_g = 0;
+            this.field_f = 0;
             if (param0[param0.length - 1] != -1) {
               break L1;
             } else {
@@ -1664,41 +1664,42 @@ class rm extends pa {
     }
 
     rm(int param0, int param1, int param2) {
-        ((rm) this).field_I = (byte) 0;
-        ((rm) this).field_F = 0;
-        ((rm) this).field_g = 0;
-        ((rm) this).field_f = 0;
-        ((rm) this).field_M = new int[param0];
-        ((rm) this).field_B = new int[param0];
-        ((rm) this).field_E = new int[param0];
-        ((rm) this).field_i = new int[param0];
-        ((rm) this).field_o = new int[param1];
-        ((rm) this).field_y = new int[param1];
-        ((rm) this).field_q = new int[param1];
-        ((rm) this).field_j = new byte[param1];
-        ((rm) this).field_G = new byte[param1];
-        ((rm) this).field_r = new byte[param1];
-        ((rm) this).field_m = new short[param1];
-        ((rm) this).field_A = new short[param1];
-        ((rm) this).field_D = new byte[param1];
-        ((rm) this).field_p = new int[param1];
+        this.field_I = (byte) 0;
+        this.field_F = 0;
+        this.field_g = 0;
+        this.field_f = 0;
+        this.field_M = new int[param0];
+        this.field_B = new int[param0];
+        this.field_E = new int[param0];
+        this.field_i = new int[param0];
+        this.field_o = new int[param1];
+        this.field_y = new int[param1];
+        this.field_q = new int[param1];
+        this.field_j = new byte[param1];
+        this.field_G = new byte[param1];
+        this.field_r = new byte[param1];
+        this.field_m = new short[param1];
+        this.field_A = new short[param1];
+        this.field_D = new byte[param1];
+        this.field_p = new int[param1];
         if (param2 > 0) {
-            ((rm) this).field_s = new byte[param2];
-            ((rm) this).field_u = new short[param2];
-            ((rm) this).field_n = new short[param2];
-            ((rm) this).field_x = new short[param2];
-            ((rm) this).field_N = new short[param2];
-            ((rm) this).field_z = new short[param2];
-            ((rm) this).field_K = new short[param2];
-            ((rm) this).field_C = new byte[param2];
-            ((rm) this).field_v = new byte[param2];
-            ((rm) this).field_L = new byte[param2];
-            ((rm) this).field_Q = new byte[param2];
-            ((rm) this).field_t = new byte[param2];
+            this.field_s = new byte[param2];
+            this.field_u = new short[param2];
+            this.field_n = new short[param2];
+            this.field_x = new short[param2];
+            this.field_N = new short[param2];
+            this.field_z = new short[param2];
+            this.field_K = new short[param2];
+            this.field_C = new byte[param2];
+            this.field_v = new byte[param2];
+            this.field_L = new byte[param2];
+            this.field_Q = new byte[param2];
+            this.field_t = new byte[param2];
         }
     }
 
     rm(rm[] param0, int param1) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1781,36 +1782,36 @@ class rm extends pa {
         int stackOut_24_1 = 0;
         int stackOut_23_0 = 0;
         int stackOut_23_1 = 0;
-        ((rm) this).field_I = (byte) 0;
-        ((rm) this).field_F = 0;
-        ((rm) this).field_g = 0;
-        ((rm) this).field_f = 0;
+        this.field_I = (byte) 0;
+        this.field_F = 0;
+        this.field_g = 0;
+        this.field_f = 0;
         var3 = 0;
         var4 = 0;
         var5 = 0;
         var6 = 0;
         var7 = 0;
         var8 = 0;
-        ((rm) this).field_f = 0;
-        ((rm) this).field_g = 0;
-        ((rm) this).field_k = 0;
-        ((rm) this).field_I = (byte) -1;
+        this.field_f = 0;
+        this.field_g = 0;
+        this.field_k = 0;
+        this.field_I = (byte) -1;
         var9 = 0;
         L0: while (true) {
           if (var9 >= param1) {
             L1: {
-              ((rm) this).field_M = new int[((rm) this).field_f];
-              ((rm) this).field_B = new int[((rm) this).field_f];
-              ((rm) this).field_E = new int[((rm) this).field_f];
-              ((rm) this).field_i = new int[((rm) this).field_f];
-              ((rm) this).field_H = new short[((rm) this).field_f];
-              ((rm) this).field_o = new int[((rm) this).field_g];
-              ((rm) this).field_y = new int[((rm) this).field_g];
-              ((rm) this).field_q = new int[((rm) this).field_g];
+              this.field_M = new int[this.field_f];
+              this.field_B = new int[this.field_f];
+              this.field_E = new int[this.field_f];
+              this.field_i = new int[this.field_f];
+              this.field_H = new short[this.field_f];
+              this.field_o = new int[this.field_g];
+              this.field_y = new int[this.field_g];
+              this.field_q = new int[this.field_g];
               if (var3 == 0) {
                 break L1;
               } else {
-                ((rm) this).field_j = new byte[((rm) this).field_g];
+                this.field_j = new byte[this.field_g];
                 break L1;
               }
             }
@@ -1818,7 +1819,7 @@ class rm extends pa {
               if (var4 == 0) {
                 break L2;
               } else {
-                ((rm) this).field_G = new byte[((rm) this).field_g];
+                this.field_G = new byte[this.field_g];
                 break L2;
               }
             }
@@ -1826,7 +1827,7 @@ class rm extends pa {
               if (var5 == 0) {
                 break L3;
               } else {
-                ((rm) this).field_r = new byte[((rm) this).field_g];
+                this.field_r = new byte[this.field_g];
                 break L3;
               }
             }
@@ -1834,7 +1835,7 @@ class rm extends pa {
               if (var6 == 0) {
                 break L4;
               } else {
-                ((rm) this).field_p = new int[((rm) this).field_g];
+                this.field_p = new int[this.field_g];
                 break L4;
               }
             }
@@ -1842,7 +1843,7 @@ class rm extends pa {
               if (var7 == 0) {
                 break L5;
               } else {
-                ((rm) this).field_A = new short[((rm) this).field_g];
+                this.field_A = new short[this.field_g];
                 break L5;
               }
             }
@@ -1850,39 +1851,39 @@ class rm extends pa {
               if (var8 == 0) {
                 break L6;
               } else {
-                ((rm) this).field_D = new byte[((rm) this).field_g];
+                this.field_D = new byte[this.field_g];
                 break L6;
               }
             }
             L7: {
-              ((rm) this).field_m = new short[((rm) this).field_g];
-              ((rm) this).field_P = new short[((rm) this).field_g];
-              if (((rm) this).field_k <= 0) {
+              this.field_m = new short[this.field_g];
+              this.field_P = new short[this.field_g];
+              if (this.field_k <= 0) {
                 break L7;
               } else {
-                ((rm) this).field_s = new byte[((rm) this).field_k];
-                ((rm) this).field_u = new short[((rm) this).field_k];
-                ((rm) this).field_n = new short[((rm) this).field_k];
-                ((rm) this).field_x = new short[((rm) this).field_k];
-                ((rm) this).field_N = new short[((rm) this).field_k];
-                ((rm) this).field_z = new short[((rm) this).field_k];
-                ((rm) this).field_K = new short[((rm) this).field_k];
-                ((rm) this).field_C = new byte[((rm) this).field_k];
-                ((rm) this).field_v = new byte[((rm) this).field_k];
-                ((rm) this).field_L = new byte[((rm) this).field_k];
-                ((rm) this).field_Q = new byte[((rm) this).field_k];
-                ((rm) this).field_t = new byte[((rm) this).field_k];
+                this.field_s = new byte[this.field_k];
+                this.field_u = new short[this.field_k];
+                this.field_n = new short[this.field_k];
+                this.field_x = new short[this.field_k];
+                this.field_N = new short[this.field_k];
+                this.field_z = new short[this.field_k];
+                this.field_K = new short[this.field_k];
+                this.field_C = new byte[this.field_k];
+                this.field_v = new byte[this.field_k];
+                this.field_L = new byte[this.field_k];
+                this.field_Q = new byte[this.field_k];
+                this.field_t = new byte[this.field_k];
                 break L7;
               }
             }
-            ((rm) this).field_f = 0;
-            ((rm) this).field_g = 0;
-            ((rm) this).field_k = 0;
+            this.field_f = 0;
+            this.field_g = 0;
+            this.field_k = 0;
             var9 = 0;
             L8: while (true) {
               if (var9 >= param1) {
                 var9 = 0;
-                ((rm) this).field_F = ((rm) this).field_f;
+                this.field_F = this.field_f;
                 var10 = 0;
                 L9: while (true) {
                   if (var10 >= param1) {
@@ -1901,14 +1902,14 @@ class rm extends pa {
                           L11: while (true) {
                             if (var17 < var19.field_k) {
                               L12: {
-                                ((rm) this).field_s[((rm) this).field_k] = var16.field_s[var17];
+                                this.field_s[this.field_k] = var16.field_s[var17];
                                 var14 = var16.field_s[var17];
                                 if (var14 != 0) {
                                   break L12;
                                 } else {
-                                  ((rm) this).field_u[((rm) this).field_k] = (short)this.a(var16, (int) var16.field_u[var17], (short) var12);
-                                  ((rm) this).field_n[((rm) this).field_k] = (short)this.a(var16, (int) var16.field_n[var17], (short) var12);
-                                  ((rm) this).field_x[((rm) this).field_k] = (short)this.a(var16, (int) var16.field_x[var17], (short) var12);
+                                  this.field_u[this.field_k] = (short)this.a(var16, (int) var16.field_u[var17], (short) var12);
+                                  this.field_n[this.field_k] = (short)this.a(var16, (int) var16.field_n[var17], (short) var12);
+                                  this.field_x[this.field_k] = (short)this.a(var16, (int) var16.field_x[var17], (short) var12);
                                   break L12;
                                 }
                               }
@@ -1919,15 +1920,15 @@ class rm extends pa {
                                   if (var14 > 3) {
                                     break L13;
                                   } else {
-                                    ((rm) this).field_u[((rm) this).field_k] = var16.field_u[var17];
-                                    ((rm) this).field_n[((rm) this).field_k] = var16.field_n[var17];
-                                    ((rm) this).field_x[((rm) this).field_k] = var16.field_x[var17];
-                                    ((rm) this).field_N[((rm) this).field_k] = var16.field_N[var17];
-                                    ((rm) this).field_z[((rm) this).field_k] = var16.field_z[var17];
-                                    ((rm) this).field_K[((rm) this).field_k] = var16.field_K[var17];
-                                    ((rm) this).field_C[((rm) this).field_k] = var16.field_C[var17];
-                                    ((rm) this).field_v[((rm) this).field_k] = var16.field_v[var17];
-                                    ((rm) this).field_L[((rm) this).field_k] = var16.field_L[var17];
+                                    this.field_u[this.field_k] = var16.field_u[var17];
+                                    this.field_n[this.field_k] = var16.field_n[var17];
+                                    this.field_x[this.field_k] = var16.field_x[var17];
+                                    this.field_N[this.field_k] = var16.field_N[var17];
+                                    this.field_z[this.field_k] = var16.field_z[var17];
+                                    this.field_K[this.field_k] = var16.field_K[var17];
+                                    this.field_C[this.field_k] = var16.field_C[var17];
+                                    this.field_v[this.field_k] = var16.field_v[var17];
+                                    this.field_L[this.field_k] = var16.field_L[var17];
                                     break L13;
                                   }
                                 }
@@ -1936,12 +1937,12 @@ class rm extends pa {
                                 if (var14 != 2) {
                                   break L14;
                                 } else {
-                                  ((rm) this).field_Q[((rm) this).field_k] = var16.field_Q[var17];
-                                  ((rm) this).field_t[((rm) this).field_k] = var16.field_t[var17];
+                                  this.field_Q[this.field_k] = var16.field_Q[var17];
+                                  this.field_t[this.field_k] = var16.field_t[var17];
                                   break L14;
                                 }
                               }
-                              ((rm) this).field_k = ((rm) this).field_k + 1;
+                              this.field_k = this.field_k + 1;
                               var17++;
                               continue L11;
                             } else {
@@ -1953,9 +1954,9 @@ class rm extends pa {
                           if (var8 != 0) {
                             L15: {
                               L16: {
-                                int incrementValue$1 = var9;
+                                incrementValue$1 = var9;
                                 var9++;
-                                stackOut_74_0 = ((rm) this).field_D;
+                                stackOut_74_0 = this.field_D;
                                 stackOut_74_1 = incrementValue$1;
                                 stackIn_77_0 = stackOut_74_0;
                                 stackIn_77_1 = stackOut_74_1;
@@ -1964,7 +1965,7 @@ class rm extends pa {
                                 if (var19.field_D == null) {
                                   break L16;
                                 } else {
-                                  stackOut_75_0 = (byte[]) (Object) stackIn_75_0;
+                                  stackOut_75_0 = (byte[]) ((Object) stackIn_75_0);
                                   stackOut_75_1 = stackIn_75_1;
                                   stackIn_77_0 = stackOut_75_0;
                                   stackIn_77_1 = stackOut_75_1;
@@ -1973,9 +1974,9 @@ class rm extends pa {
                                   if (var16.field_D[var13] == -1) {
                                     break L16;
                                   } else {
-                                    stackOut_76_0 = (byte[]) (Object) stackIn_76_0;
+                                    stackOut_76_0 = (byte[]) ((Object) stackIn_76_0);
                                     stackOut_76_1 = stackIn_76_1;
-                                    stackOut_76_2 = var16.field_D[var13] + ((rm) this).field_k;
+                                    stackOut_76_2 = var16.field_D[var13] + this.field_k;
                                     stackIn_78_0 = stackOut_76_0;
                                     stackIn_78_1 = stackOut_76_1;
                                     stackIn_78_2 = stackOut_76_2;
@@ -1983,7 +1984,7 @@ class rm extends pa {
                                   }
                                 }
                               }
-                              stackOut_77_0 = (byte[]) (Object) stackIn_77_0;
+                              stackOut_77_0 = (byte[]) ((Object) stackIn_77_0);
                               stackOut_77_1 = stackIn_77_1;
                               stackOut_77_2 = -1;
                               stackIn_78_0 = stackOut_77_0;
@@ -2022,7 +2023,7 @@ class rm extends pa {
                           if (var18.field_j == null) {
                             break L18;
                           } else {
-                            ((rm) this).field_j[((rm) this).field_g] = var15.field_j[var12];
+                            this.field_j[this.field_g] = var15.field_j[var12];
                             break L18;
                           }
                         }
@@ -2032,10 +2033,10 @@ class rm extends pa {
                           break L19;
                         } else {
                           if (var18.field_G == null) {
-                            ((rm) this).field_G[((rm) this).field_g] = var15.field_I;
+                            this.field_G[this.field_g] = var15.field_I;
                             break L19;
                           } else {
-                            ((rm) this).field_G[((rm) this).field_g] = var15.field_G[var12];
+                            this.field_G[this.field_g] = var15.field_G[var12];
                             break L19;
                           }
                         }
@@ -2047,7 +2048,7 @@ class rm extends pa {
                           if (var18.field_r == null) {
                             break L20;
                           } else {
-                            ((rm) this).field_r[((rm) this).field_g] = var15.field_r[var12];
+                            this.field_r[this.field_g] = var15.field_r[var12];
                             break L20;
                           }
                         }
@@ -2059,7 +2060,7 @@ class rm extends pa {
                           if (var18.field_p == null) {
                             break L21;
                           } else {
-                            ((rm) this).field_p[((rm) this).field_g] = var15.field_p[var12];
+                            this.field_p[this.field_g] = var15.field_p[var12];
                             break L21;
                           }
                         }
@@ -2069,20 +2070,20 @@ class rm extends pa {
                           break L22;
                         } else {
                           if (var18.field_A == null) {
-                            ((rm) this).field_A[((rm) this).field_g] = (short) -1;
+                            this.field_A[this.field_g] = (short)-1;
                             break L22;
                           } else {
-                            ((rm) this).field_A[((rm) this).field_g] = var15.field_A[var12];
+                            this.field_A[this.field_g] = var15.field_A[var12];
                             break L22;
                           }
                         }
                       }
-                      ((rm) this).field_m[((rm) this).field_g] = var15.field_m[var12];
-                      ((rm) this).field_P[((rm) this).field_g] = (short)var10;
-                      ((rm) this).field_o[((rm) this).field_g] = this.a(var15, var15.field_o[var12], (short) var10);
-                      ((rm) this).field_y[((rm) this).field_g] = this.a(var15, var15.field_y[var12], (short) var10);
-                      ((rm) this).field_q[((rm) this).field_g] = this.a(var15, var15.field_q[var12], (short) var10);
-                      ((rm) this).field_g = ((rm) this).field_g + 1;
+                      this.field_m[this.field_g] = var15.field_m[var12];
+                      this.field_P[this.field_g] = (short)var10;
+                      this.field_o[this.field_g] = this.a(var15, var15.field_o[var12], (short) var10);
+                      this.field_y[this.field_g] = this.a(var15, var15.field_y[var12], (short) var10);
+                      this.field_q[this.field_g] = this.a(var15, var15.field_q[var12], (short) var10);
+                      this.field_g = this.field_g + 1;
                       var12++;
                       continue L17;
                     } else {
@@ -2100,19 +2101,19 @@ class rm extends pa {
             var10_ref_rm = param0[var9];
             if (var10_ref_rm != null) {
               L23: {
-                ((rm) this).field_f = ((rm) this).field_f + var10_ref_rm.field_f;
-                ((rm) this).field_g = ((rm) this).field_g + var10_ref_rm.field_g;
-                ((rm) this).field_k = ((rm) this).field_k + var10_ref_rm.field_k;
+                this.field_f = this.field_f + var10_ref_rm.field_f;
+                this.field_g = this.field_g + var10_ref_rm.field_g;
+                this.field_k = this.field_k + var10_ref_rm.field_k;
                 if (var10_ref_rm.field_G == null) {
                   L24: {
-                    if (((rm) this).field_I != -1) {
+                    if (this.field_I != -1) {
                       break L24;
                     } else {
-                      ((rm) this).field_I = var10_ref_rm.field_I;
+                      this.field_I = var10_ref_rm.field_I;
                       break L24;
                     }
                   }
-                  if (((rm) this).field_I == var10_ref_rm.field_I) {
+                  if (this.field_I == var10_ref_rm.field_I) {
                     break L23;
                   } else {
                     var4 = 1;
@@ -2231,52 +2232,52 @@ class rm extends pa {
     rm(rm param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         int var6 = 0;
         L0: {
-          ((rm) this).field_I = (byte) 0;
-          ((rm) this).field_F = 0;
-          ((rm) this).field_g = 0;
-          ((rm) this).field_f = 0;
-          ((rm) this).field_f = param0.field_f;
-          ((rm) this).field_F = param0.field_F;
-          ((rm) this).field_g = param0.field_g;
-          ((rm) this).field_k = param0.field_k;
+          this.field_I = (byte) 0;
+          this.field_F = 0;
+          this.field_g = 0;
+          this.field_f = 0;
+          this.field_f = param0.field_f;
+          this.field_F = param0.field_F;
+          this.field_g = param0.field_g;
+          this.field_k = param0.field_k;
           if (!param1) {
-            ((rm) this).field_M = new int[((rm) this).field_f];
-            ((rm) this).field_B = new int[((rm) this).field_f];
-            ((rm) this).field_E = new int[((rm) this).field_f];
+            this.field_M = new int[this.field_f];
+            this.field_B = new int[this.field_f];
+            this.field_E = new int[this.field_f];
             var6 = 0;
             L1: while (true) {
-              if (var6 >= ((rm) this).field_f) {
+              if (var6 >= this.field_f) {
                 break L0;
               } else {
-                ((rm) this).field_M[var6] = param0.field_M[var6];
-                ((rm) this).field_B[var6] = param0.field_B[var6];
-                ((rm) this).field_E[var6] = param0.field_E[var6];
+                this.field_M[var6] = param0.field_M[var6];
+                this.field_B[var6] = param0.field_B[var6];
+                this.field_E[var6] = param0.field_E[var6];
                 var6++;
                 continue L1;
               }
             }
           } else {
-            ((rm) this).field_M = param0.field_M;
-            ((rm) this).field_B = param0.field_B;
-            ((rm) this).field_E = param0.field_E;
+            this.field_M = param0.field_M;
+            this.field_B = param0.field_B;
+            this.field_E = param0.field_E;
             break L0;
           }
         }
         L2: {
           if (!param2) {
-            ((rm) this).field_m = new short[((rm) this).field_g];
+            this.field_m = new short[this.field_g];
             var6 = 0;
             L3: while (true) {
-              if (var6 >= ((rm) this).field_g) {
+              if (var6 >= this.field_g) {
                 break L2;
               } else {
-                ((rm) this).field_m[var6] = param0.field_m[var6];
+                this.field_m[var6] = param0.field_m[var6];
                 var6++;
                 continue L3;
               }
             }
           } else {
-            ((rm) this).field_m = param0.field_m;
+            this.field_m = param0.field_m;
             break L2;
           }
         }
@@ -2286,13 +2287,13 @@ class rm extends pa {
               break L5;
             } else {
               if (param0.field_A != null) {
-                ((rm) this).field_A = new short[((rm) this).field_g];
+                this.field_A = new short[this.field_g];
                 var6 = 0;
                 L6: while (true) {
-                  if (var6 >= ((rm) this).field_g) {
+                  if (var6 >= this.field_g) {
                     break L4;
                   } else {
-                    ((rm) this).field_A[var6] = param0.field_A[var6];
+                    this.field_A[var6] = param0.field_A[var6];
                     var6++;
                     continue L6;
                   }
@@ -2302,19 +2303,19 @@ class rm extends pa {
               }
             }
           }
-          ((rm) this).field_A = param0.field_A;
+          this.field_A = param0.field_A;
           break L4;
         }
         L7: {
           if (!param4) {
-            ((rm) this).field_r = new byte[((rm) this).field_g];
+            this.field_r = new byte[this.field_g];
             if (param0.field_r != null) {
               var6 = 0;
               L8: while (true) {
-                if (var6 >= ((rm) this).field_g) {
+                if (var6 >= this.field_g) {
                   break L7;
                 } else {
-                  ((rm) this).field_r[var6] = param0.field_r[var6];
+                  this.field_r[var6] = param0.field_r[var6];
                   var6++;
                   continue L8;
                 }
@@ -2322,45 +2323,45 @@ class rm extends pa {
             } else {
               var6 = 0;
               L9: while (true) {
-                if (var6 >= ((rm) this).field_g) {
+                if (var6 >= this.field_g) {
                   break L7;
                 } else {
-                  ((rm) this).field_r[var6] = (byte) 0;
+                  this.field_r[var6] = (byte) 0;
                   var6++;
                   continue L9;
                 }
               }
             }
           } else {
-            ((rm) this).field_r = param0.field_r;
+            this.field_r = param0.field_r;
             break L7;
           }
         }
-        ((rm) this).field_o = param0.field_o;
-        ((rm) this).field_y = param0.field_y;
-        ((rm) this).field_q = param0.field_q;
-        ((rm) this).field_j = param0.field_j;
-        ((rm) this).field_G = param0.field_G;
-        ((rm) this).field_D = param0.field_D;
-        ((rm) this).field_I = param0.field_I;
-        ((rm) this).field_s = param0.field_s;
-        ((rm) this).field_u = param0.field_u;
-        ((rm) this).field_n = param0.field_n;
-        ((rm) this).field_x = param0.field_x;
-        ((rm) this).field_N = param0.field_N;
-        ((rm) this).field_z = param0.field_z;
-        ((rm) this).field_K = param0.field_K;
-        ((rm) this).field_C = param0.field_C;
-        ((rm) this).field_v = param0.field_v;
-        ((rm) this).field_L = param0.field_L;
-        ((rm) this).field_Q = param0.field_Q;
-        ((rm) this).field_t = param0.field_t;
-        ((rm) this).field_i = param0.field_i;
-        ((rm) this).field_p = param0.field_p;
-        ((rm) this).field_w = param0.field_w;
-        ((rm) this).field_R = param0.field_R;
-        ((rm) this).field_l = param0.field_l;
-        ((rm) this).field_J = param0.field_J;
-        ((rm) this).field_h = param0.field_h;
+        this.field_o = param0.field_o;
+        this.field_y = param0.field_y;
+        this.field_q = param0.field_q;
+        this.field_j = param0.field_j;
+        this.field_G = param0.field_G;
+        this.field_D = param0.field_D;
+        this.field_I = param0.field_I;
+        this.field_s = param0.field_s;
+        this.field_u = param0.field_u;
+        this.field_n = param0.field_n;
+        this.field_x = param0.field_x;
+        this.field_N = param0.field_N;
+        this.field_z = param0.field_z;
+        this.field_K = param0.field_K;
+        this.field_C = param0.field_C;
+        this.field_v = param0.field_v;
+        this.field_L = param0.field_L;
+        this.field_Q = param0.field_Q;
+        this.field_t = param0.field_t;
+        this.field_i = param0.field_i;
+        this.field_p = param0.field_p;
+        this.field_w = param0.field_w;
+        this.field_R = param0.field_R;
+        this.field_l = param0.field_l;
+        this.field_J = param0.field_J;
+        this.field_h = param0.field_h;
     }
 }

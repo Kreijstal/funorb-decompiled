@@ -21,19 +21,15 @@ final class lu {
 
     lu(int param0, ml param1, int param2) {
         try {
-            ((lu) this).field_g = param2;
-            ((lu) this).field_e = param0;
-            ((lu) this).field_b = param1;
+            this.field_g = param2;
+            this.field_e = param0;
+            this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "lu.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "lu.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new int[11];
         field_a = "WASD<br>QE<br>Left mouse button<br>Right mouse button<br>Mouse wheel or + and - keys";
         field_c = "Remove <%0> from ignore list";

@@ -21,10 +21,6 @@ final class fg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fg.A(";
         field_c = "Cancel rematch";
         field_b = "Invite more players, or alternatively try changing the following settings:  ";

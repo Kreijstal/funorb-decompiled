@@ -10,7 +10,7 @@ final class gg extends le {
     final void c(byte param0) {
         taa.e((byte) -91);
         if (param0 >= -35) {
-            ((gg) this).field_k = 85;
+            this.field_k = 85;
         }
     }
 
@@ -40,18 +40,18 @@ final class gg extends le {
             L1: {
               var4_int = param0;
               if (0 == var4_int) {
-                ((gg) this).field_k = param2.e((byte) -105);
+                this.field_k = param2.e((byte) -105);
                 break L1;
               } else {
                 if (var4_int != 1) {
-                  if (var4_int != 3) {
+                  if (-4 != (var4_int ^ -1)) {
                     break L1;
                   } else {
-                    ((gg) this).field_l = param2.e((byte) -107);
+                    this.field_l = param2.e((byte) -107);
                     break L1;
                   }
                 } else {
-                  ((gg) this).field_i = param2.e((byte) -104);
+                  this.field_i = param2.e((byte) -104);
                   break L1;
                 }
               }
@@ -60,7 +60,7 @@ final class gg extends le {
               if (param1 < -60) {
                 break L2;
               } else {
-                ((gg) this).c((byte) 61);
+                this.c((byte) 61);
                 break L2;
               }
             }
@@ -70,23 +70,23 @@ final class gg extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_0 = (RuntimeException) (var4);
             stackOut_12_1 = new StringBuilder().append("gg.F(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -94,7 +94,7 @@ final class gg extends le {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
     }
 
@@ -111,19 +111,15 @@ final class gg extends le {
         int[] var12 = null;
         int[] var13 = null;
         int[] var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
         L0: {
           var11 = VoidHunters.field_G;
-          var16 = ((gg) this).field_f.a((byte) -80, param0);
-          var15 = var16;
-          var14 = var15;
+          var14 = this.field_f.a((byte) -80, param0);
           var13 = var14;
           var12 = var13;
           var3 = var12;
-          if (((gg) this).field_f.field_e) {
+          if (this.field_f.field_e) {
             var4 = sj.field_p[param0];
-            var5 = var4 - 2048 >> 1;
+            var5 = var4 - 2048 >> 1464326017;
             var6 = 0;
             L1: while (true) {
               if (var6 >= hob.field_d) {
@@ -131,43 +127,43 @@ final class gg extends le {
               } else {
                 L2: {
                   var8 = grb.field_l[var6];
-                  var9 = var8 + -2048 >> 1;
-                  if (((gg) this).field_k == 0) {
-                    var7 = ((gg) this).field_l * (var8 - var4);
+                  var9 = var8 + -2048 >> -1734398271;
+                  if (this.field_k == 0) {
+                    var7 = this.field_l * (var8 - var4);
                     break L2;
                   } else {
-                    var10 = var5 * var5 + var9 * var9 >> 12;
+                    var10 = var5 * var5 + var9 * var9 >> 1482176652;
                     var7 = (int)(Math.sqrt((double)((float)var10 / 4096.0f)) * 4096.0);
-                    var7 = (int)(3.141592653589793 * (double)(var7 * ((gg) this).field_l));
+                    var7 = (int)(3.141592653589793 * (double)(var7 * this.field_l));
                     break L2;
                   }
                 }
                 L3: {
                   var7 = var7 - (-4096 & var7);
-                  if (((gg) this).field_i == 0) {
-                    var7 = 4096 + qta.field_o[255 & var7 >> 4] >> 1;
+                  if (this.field_i == 0) {
+                    var7 = 4096 + qta.field_o[255 & var7 >> 885122980] >> 785270529;
                     break L3;
                   } else {
-                    if (2 == ((gg) this).field_i) {
+                    if (2 == this.field_i) {
                       L4: {
                         var7 -= 2048;
-                        if (var7 >= 0) {
+                        if ((var7 ^ -1) <= -1) {
                           break L4;
                         } else {
                           var7 = -var7;
                           break L4;
                         }
                       }
-                      var7 = -var7 + 2048 << 1;
+                      var7 = -var7 + 2048 << -1650733919;
                       break L3;
                     } else {
-                      var16[var6] = var7;
+                      var14[var6] = var7;
                       var6++;
                       continue L1;
                     }
                   }
                 }
-                var16[var6] = var7;
+                var14[var6] = var7;
                 var6++;
                 continue L1;
               }
@@ -180,7 +176,7 @@ final class gg extends le {
           if (param1) {
             break L5;
           } else {
-            ((gg) this).field_k = -110;
+            this.field_k = -110;
             break L5;
           }
         }
@@ -189,16 +185,12 @@ final class gg extends le {
 
     public gg() {
         super(0, true);
-        ((gg) this).field_k = 0;
-        ((gg) this).field_l = 1;
-        ((gg) this).field_i = 0;
+        this.field_k = 0;
+        this.field_l = 1;
+        this.field_i = 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = 56;
     }
 }

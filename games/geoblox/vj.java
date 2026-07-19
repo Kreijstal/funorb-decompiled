@@ -8,17 +8,13 @@ final class vj {
     private static String field_z;
 
     public static void a(int param0) {
-        int var1 = 2;
+        int var1 = 86 % ((51 - param0) / 45);
         field_c = null;
         field_a = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "vj.A(";
     }
 }

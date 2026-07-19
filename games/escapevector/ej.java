@@ -12,7 +12,7 @@ final class ej {
 
     final static void a(byte param0, String param1) {
         RuntimeException runtimeException = null;
-        Object var3 = null;
+        String var3 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -37,7 +37,7 @@ final class ej {
               if (param0 <= -113) {
                 break L1;
               } else {
-                var3 = null;
+                var3 = (String) null;
                 ej.a((byte) -29, (String) null);
                 break L1;
               }
@@ -48,23 +48,23 @@ final class ej {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ej.B(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -72,16 +72,16 @@ final class ej {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     final static int a(int param0, int param1) {
-        param1 = ((param1 & -1431655765) >>> 1) + (param1 & 1431655765);
-        param1 = (param1 & 858993459) + ((-858993460 & param1) >>> 2);
-        param1 = (param1 >>> 4) + param1 & 252645135;
-        param1 = param1 + (param1 >>> 8);
-        param1 = param1 + (param1 >>> 16);
+        param1 = ((param1 & -1431655765) >>> -1516128639) + (param1 & 1431655765);
+        param1 = (param1 & param0) + ((-858993460 & param1) >>> 1378065122);
+        param1 = (param1 >>> -1166604636) + param1 & 252645135;
+        param1 = param1 + (param1 >>> 320507944);
+        param1 = param1 + (param1 >>> -2087009456);
         return param1 & 255;
     }
 
@@ -90,14 +90,17 @@ final class ej {
         field_a = null;
         field_f = null;
         field_g = null;
-        field_c = null;
+        if (param0 < 13) {
+          field_c = (String) null;
+          field_c = null;
+          return;
+        } else {
+          field_c = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "To Customer Support";
         field_g = new String[]{"", "", "", ""};
     }

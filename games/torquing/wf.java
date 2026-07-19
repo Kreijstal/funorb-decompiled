@@ -20,9 +20,9 @@ abstract class wf extends ta {
         int var4 = 0;
         int var6 = Torquing.field_u;
         try {
-            int var2 = 0;
-            for (var1_int = 0; var1_int < 8; var1_int++) {
-                for (var3_int = 0; var3_int < 8; var3_int++) {
+            int var2 = 86 % ((-30 - param0) / 41);
+            for (var1_int = 0; -9 < (var1_int ^ -1); var1_int++) {
+                for (var3_int = 0; (var3_int ^ -1) > -9; var3_int++) {
                     var4_ref_double__ = jl.field_O[var1_int];
                     mg.field_a[var1_int][var3_int] = 0.0;
                     var5 = var3_int;
@@ -35,36 +35,39 @@ abstract class wf extends ta {
             }
             ia.field_i = 0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "wf.DB(" + 76 + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "wf.DB(" + param0 + ')');
         }
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = ((wf) this).field_w << 3;
+        int var6 = this.field_w << -1563841277;
         if (param1 != 1326547364) {
-            ((wf) this).b(78, 62, -121, -50, -99);
+            this.b(78, 62, -121, -50, -99);
         }
-        param4 = (15 & var6) + (param4 << 4);
-        int var7 = ((wf) this).field_u << 3;
-        param3 = (param3 << 4) + (var7 & 15);
-        ((wf) this).b(var6, var7, param4, param3, param2, param0);
+        param4 = (15 & var6) + (param4 << 1326547364);
+        int var7 = this.field_u << -67037501;
+        param3 = (param3 << -620567804) + (var7 & 15);
+        this.b(var6, var7, param4, param3, param2, param0);
     }
 
     final static t[] a(int param0, int param1, int param2, int param3, byte param4) {
         t[] var6 = new t[9];
         t[] var5 = var6;
-        t dupTemp$0 = hj.a((byte) -87, param1, 1);
+        t dupTemp$0 = hj.a((byte) -87, param1, param2);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        t dupTemp$1 = hj.a((byte) -86, param3, 1);
+        t dupTemp$1 = hj.a((byte) -86, param3, param2);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (!(param0 == 0)) {
             var6[4] = hj.a((byte) -88, param0, 64);
+        }
+        if (param4 != 106) {
+            return (t[]) null;
         }
         return var5;
     }
@@ -73,61 +76,69 @@ abstract class wf extends ta {
 
     final static int a(byte param0, int param1, byte[] param2) {
         RuntimeException var3 = null;
-        int stackIn_1_0 = 0;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_0_0 = 0;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        int stackOut_2_0 = 0;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            stackOut_0_0 = nn.a(7655, param2, 0, param1);
-            stackIn_1_0 = stackOut_0_0;
+            L1: {
+              if (param0 == -117) {
+                break L1;
+              } else {
+                field_x = (ei) null;
+                break L1;
+              }
+            }
+            stackOut_2_0 = nn.a(7655, param2, 0, param1);
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("wf.AB(").append(-117).append(',').append(param1).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackOut_4_0 = (RuntimeException) (var3);
+            stackOut_4_1 = new StringBuilder().append("wf.AB(").append(param0).append(',').append(param1).append(',');
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -157,10 +168,6 @@ abstract class wf extends ta {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = "HIGH";
     }
 }

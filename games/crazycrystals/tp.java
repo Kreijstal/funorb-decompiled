@@ -26,10 +26,6 @@ final class tp {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "tp.A(";
         field_d = "This password contains your Player Name, and would be easy to guess";
         field_i = new char[128];

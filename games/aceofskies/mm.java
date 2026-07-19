@@ -15,10 +15,6 @@ final class mm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mm.A(";
     }
 }

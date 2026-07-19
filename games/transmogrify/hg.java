@@ -9,10 +9,11 @@ final class hg {
     private boolean field_c;
 
     final static void c(int param0) {
+        int discarded$0 = 0;
         ta.field_f = new wl();
-        l.field_d.b(96, (qg) (Object) ta.field_f);
+        l.field_d.b(96, ta.field_f);
         if (param0 != 0) {
-            int discarded$0 = hg.b(3);
+            discarded$0 = hg.b(3);
         }
     }
 
@@ -21,7 +22,7 @@ final class hg {
     }
 
     public static void b(byte param0) {
-        int var1 = 51;
+        int var1 = 103 / ((67 - param0) / 36);
         field_a = null;
         field_d = null;
         field_b = null;
@@ -37,9 +38,9 @@ final class hg {
     final String a(boolean param0) {
         if (param0) {
             hg.a(60);
-            return ((hg) this).field_e;
+            return this.field_e;
         }
-        return ((hg) this).field_e;
+        return this.field_e;
     }
 
     final static void a(int param0) {
@@ -50,26 +51,40 @@ final class hg {
         var2 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
-            var3 = (sj) (Object) ch.field_e.a((byte) -95);
+            var3 = (sj) ((Object) ch.field_e.a((byte) -95));
             L1: while (true) {
-              if (var3 == null) {
+              L2: {
+                L3: {
+                  if (var3 == null) {
+                    break L3;
+                  } else {
+                    var3.a((byte) 75);
+                    var3 = (sj) ((Object) ch.field_e.a(true));
+                    if (var2 != 0) {
+                      break L2;
+                    } else {
+                      if (var2 == 0) {
+                        continue L1;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                }
                 if (param0 > 40) {
-                  break L0;
+                  break L2;
                 } else {
-                  field_a = null;
+                  field_a = (ci) null;
                   return;
                 }
-              } else {
-                var3.a((byte) 75);
-                var3 = (sj) (Object) ch.field_e.a(true);
-                continue L1;
               }
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1, "hg.E(" + param0 + ')');
+          throw ch.a((Throwable) ((Object) var1), "hg.E(" + param0 + ')');
         }
     }
 
@@ -103,11 +118,11 @@ final class hg {
         try {
           L0: {
             L1: {
-              ((hg) this).field_e = param0;
-              if (((hg) this).field_e != null) {
+              this.field_e = param0;
+              if (this.field_e != null) {
                 break L1;
               } else {
-                ((hg) this).field_e = "";
+                this.field_e = "";
                 break L1;
               }
             }
@@ -129,11 +144,11 @@ final class hg {
                 break L2;
               }
             }
-            ((hg) this).field_c = stackIn_6_1 != 0;
-            if (0 != ((hg) this).field_e.length()) {
+            ((hg) (this)).field_c = stackIn_6_1 != 0;
+            if (0 != this.field_e.length()) {
               break L0;
             } else {
-              ((hg) this).field_c = false;
+              this.field_c = false;
               return;
             }
           }
@@ -141,23 +156,23 @@ final class hg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("hg.<init>(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -165,7 +180,7 @@ final class hg {
               break L3;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
@@ -173,14 +188,10 @@ final class hg {
         if (param0 != -121) {
             return true;
         }
-        return ((hg) this).field_c;
+        return this.field_c;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "You have 1 unread message!";
         field_b = new wk();
     }

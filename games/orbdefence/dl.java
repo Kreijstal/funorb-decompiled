@@ -9,17 +9,17 @@ final class dl extends ng {
     boolean field_k;
 
     dl(int param0, byte[] param1, int param2, int param3) {
-        ((dl) this).field_h = param0;
-        ((dl) this).field_g = param1;
-        ((dl) this).field_i = param2;
-        ((dl) this).field_j = param3;
+        this.field_h = param0;
+        this.field_g = param1;
+        this.field_i = param2;
+        this.field_j = param3;
     }
 
     dl(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((dl) this).field_h = param0;
-        ((dl) this).field_g = param1;
-        ((dl) this).field_i = param2;
-        ((dl) this).field_j = param3;
-        ((dl) this).field_k = param4 ? true : false;
+        this.field_h = param0;
+        this.field_g = param1;
+        this.field_i = param2;
+        this.field_j = param3;
+        this.field_k = param4 ? true : false;
     }
 }

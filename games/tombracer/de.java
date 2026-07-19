@@ -10,20 +10,20 @@ final class de extends cha {
         if (param3 != 2) {
             return;
         }
-        boolean discarded$0 = param2.drawImage(((de) this).field_a, param1, param0, (java.awt.image.ImageObserver) (Object) ((de) this).field_i);
+        boolean discarded$0 = param2.drawImage(this.field_a, param1, param0, (java.awt.image.ImageObserver) ((Object) this.field_i));
     }
 
     final void a(int param0, int param1, java.awt.Component param2, byte param3) {
-        ((de) this).field_g = new int[param0 * param1 + 1];
-        ((de) this).field_e = param1;
-        ((de) this).field_f = param0;
-        java.awt.image.DataBufferInt var5 = new java.awt.image.DataBufferInt(((de) this).field_g, ((de) this).field_g.length);
+        this.field_g = new int[param0 * param1 + 1];
+        this.field_e = param1;
+        this.field_f = param0;
+        java.awt.image.DataBufferInt var5 = new java.awt.image.DataBufferInt(this.field_g, this.field_g.length);
         java.awt.image.DirectColorModel var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-        java.awt.image.WritableRaster var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) (Object) var6).createCompatibleSampleModel(((de) this).field_f, ((de) this).field_e), (java.awt.image.DataBuffer) (Object) var5, (java.awt.Point) null);
-        ((de) this).field_a = (java.awt.Image) (Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) (Object) var6, var7, false, new Hashtable());
-        ((de) this).field_i = param2;
+        java.awt.image.WritableRaster var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_f, this.field_e), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
+        this.field_a = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
+        this.field_i = param2;
         int var8 = -23 % ((param3 - 74) / 41);
-        ((de) this).a(-19216);
+        this.a(-19216);
     }
 
     public de() {

@@ -87,31 +87,38 @@ final class hd extends bh {
               if (!param1) {
                 break L3;
               } else {
-                if (w.field_H.field_f != ta.field_b) {
-                  var11 = w.field_H;
-                  var12 = cm.a((byte) 86, sb.field_p, new String[]{param3});
-                  var11.field_h.a(var12, 15, 91);
-                  break L3;
-                } else {
-                  var9 = w.field_H;
-                  var10 = cm.a((byte) 94, fb.field_d, new String[]{param3});
-                  var9.field_h.a(var10, 16, 87);
-                  break L3;
+                L4: {
+                  if (w.field_H.field_f != ta.field_b) {
+                    break L4;
+                  } else {
+                    var9 = w.field_H;
+                    var10 = cm.a((byte) 94, fb.field_d, new String[]{param3});
+                    var9.field_h.a(var10, 16, param0 + 87);
+                    if (!client.field_A) {
+                      break L3;
+                    } else {
+                      break L4;
+                    }
+                  }
                 }
+                var11 = w.field_H;
+                var12 = cm.a((byte) 86, sb.field_p, new String[]{param3});
+                var11.field_h.a(var12, 15, param0 ^ 91);
+                break L3;
               }
             }
             var13 = w.field_H;
             var5 = he.field_S;
             var6 = nf.field_h;
-            var13.field_h.b(var6, var5, 123, 0, 0);
+            var13.field_h.b(var6, var5, 123, param0, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var4 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) (var4);
-            stackOut_11_1 = new StringBuilder().append("hd.A(").append(0).append(',').append(param1).append(',');
+            stackOut_11_1 = new StringBuilder().append("hd.A(").append(param0).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -123,7 +130,7 @@ final class hd extends bh {
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
-              break L4;
+              break L5;
             } else {
               stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
               stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
@@ -131,10 +138,10 @@ final class hd extends bh {
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
               stackIn_14_2 = stackOut_12_2;
-              break L4;
+              break L5;
             }
           }
-          L5: {
+          L6: {
             stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
             stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
             stackIn_16_0 = stackOut_14_0;
@@ -148,7 +155,7 @@ final class hd extends bh {
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
-              break L5;
+              break L6;
             } else {
               stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
@@ -156,7 +163,7 @@ final class hd extends bh {
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
               stackIn_17_2 = stackOut_15_2;
-              break L5;
+              break L6;
             }
           }
           throw dh.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
@@ -164,12 +171,24 @@ final class hd extends bh {
     }
 
     public static void a(int param0) {
-        field_o = null;
-        field_q = null;
-        field_v = null;
-        field_p = null;
-        field_t = null;
-        field_r = null;
+        if (param0 != 22771) {
+          field_u = -48;
+          field_o = null;
+          field_q = null;
+          field_v = null;
+          field_p = null;
+          field_t = null;
+          field_r = null;
+          return;
+        } else {
+          field_o = null;
+          field_q = null;
+          field_v = null;
+          field_p = null;
+          field_t = null;
+          field_r = null;
+          return;
+        }
     }
 
     static {

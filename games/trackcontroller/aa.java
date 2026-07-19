@@ -12,11 +12,14 @@ final class aa {
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 != -14) {
+            field_a = (qj[]) null;
+        }
     }
 
     aa(int param0, int param1, int param2, int param3) {
-        ((aa) this).field_c = param0;
-        ((aa) this).field_b = param3;
+        this.field_c = param0;
+        this.field_b = param3;
     }
 
     static {

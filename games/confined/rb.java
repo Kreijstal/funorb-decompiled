@@ -20,22 +20,26 @@ abstract class rb {
         field_i = null;
         field_d = null;
         field_g = null;
-        field_h = null;
-        field_a = null;
+        if (param0 != -90) {
+          field_g = (String) null;
+          field_h = null;
+          field_a = null;
+          return;
+        } else {
+          field_h = null;
+          field_a = null;
+          return;
+        }
     }
 
     final void a(byte param0) {
         if (param0 <= 100) {
             return;
         }
-        fn.a(((rb) this).field_f, ((rb) this).field_b, ((rb) this).field_c);
+        fn.a(this.field_f, this.field_b, this.field_c);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Good #luck.";
         field_g = "V";
         field_a = new boolean[64];

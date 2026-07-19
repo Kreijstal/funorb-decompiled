@@ -14,7 +14,7 @@ abstract class mb extends gb {
     static int field_C;
 
     mb(int param0) {
-        ((mb) this).field_t = param0;
+        this.field_t = param0;
     }
 
     static long a(long param0, long param1) {
@@ -30,9 +30,9 @@ abstract class mb extends gb {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        float stackIn_5_0 = 0.0f;
+        float stackIn_7_0 = 0.0f;
         RuntimeException decompiledCaughtException = null;
-        float stackOut_4_0 = 0.0f;
+        float stackOut_6_0 = 0.0f;
         var5 = TetraLink.field_J;
         try {
           L0: {
@@ -40,9 +40,16 @@ abstract class mb extends gb {
             var4 = 0;
             L1: while (true) {
               if (var4 >= 8) {
-                field_u = null;
-                stackOut_4_0 = var3_float;
-                stackIn_5_0 = stackOut_4_0;
+                L2: {
+                  if (!param2) {
+                    break L2;
+                  } else {
+                    field_u = (ni) null;
+                    break L2;
+                  }
+                }
+                stackOut_6_0 = var3_float;
+                stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
                 var3_float = (float)((double)var3_float + (double)vj.a(param1, true) * Math.sin((double)((float)(1 << var4) * param0 + vj.a(vj.a(param1, true) + param1, true))));
@@ -54,25 +61,25 @@ abstract class mb extends gb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var3, "mb.D(" + param0 + ',' + param1 + ',' + false + ')');
+          throw oi.a((Throwable) ((Object) var3), "mb.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_5_0;
+        return stackIn_7_0;
     }
 
     public static void b(byte param0) {
+        float discarded$0 = 0.0f;
         field_v = null;
         field_A = null;
         field_x = null;
         field_u = null;
+        if (param0 != -48) {
+            discarded$0 = mb.a(0.8539373278617859f, -0.7423967719078064f, true);
+        }
         field_w = null;
         field_y = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = "Show all private chat";
         field_w = new int[8192];
         field_B = 20000000L;

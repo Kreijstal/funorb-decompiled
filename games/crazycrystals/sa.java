@@ -13,8 +13,8 @@ final class sa extends na implements vd {
 
     final boolean g(byte param0) {
         si var2 = null;
-        if (((sa) this).field_C) {
-            if (!((sa) this).field_sb) {
+        if (this.field_C) {
+            if (!this.field_sb) {
                 var2 = jd.f((byte) 93);
                 if (!(var2 == null)) {
                     this.a(-1, false, var2);
@@ -22,7 +22,7 @@ final class sa extends na implements vd {
             }
         }
         if (param0 != 8) {
-            Object var3 = null;
+            si var3 = (si) null;
             this.a(-88, true, (si) null);
         }
         return super.g((byte) 8);
@@ -30,8 +30,8 @@ final class sa extends na implements vd {
 
     final void o(int param0) {
         if (param0 < 85) {
-            Object var3 = null;
-            ((sa) this).a((byte) -11, -96, 75, -54, (pc) null);
+            pc var3 = (pc) null;
+            this.a((byte) -11, -96, 75, -54, (pc) null);
         }
         this.a(-1, true, me.a(on.field_c, 20, 248));
     }
@@ -41,6 +41,9 @@ final class sa extends na implements vd {
         field_qb = null;
         field_rb = null;
         field_lb = null;
+        if (param0) {
+            field_mb = (am) null;
+        }
         field_mb = null;
     }
 
@@ -74,26 +77,28 @@ final class sa extends na implements vd {
             nh.field_F = je.field_j;
             sb.field_F = b.field_a;
             fl.field_g = fp.field_a;
-            int var2 = 0;
+            int var2 = 110 % ((param0 - 27) / 50);
             sm.field_e = we.field_h;
             ll.a(-84, true, true);
             ld.field_y = 0;
             ue.field_c = true;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "sa.T(" + -26 + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "sa.T(" + param0 + ')');
         }
     }
 
     sa(ol param0, dc param1) {
         super(param0, mo.field_m, vn.field_i, false, false);
         try {
-            ((sa) this).field_pb = param1;
+            this.field_pb = param1;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void a(int param0, boolean param1, si param2) {
+        pc discarded$2 = null;
+        pc discarded$3 = null;
         RuntimeException var4 = null;
         String var4_ref = null;
         jd var5 = null;
@@ -105,6 +110,7 @@ final class sa extends na implements vd {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_34_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_31_0 = null;
         StringBuilder stackOut_31_1 = null;
@@ -118,14 +124,14 @@ final class sa extends na implements vd {
         try {
           L0: {
             L1: {
-              ((sa) this).field_sb = true;
+              this.field_sb = true;
               if (param2.field_b) {
                 var4_ref = td.field_a;
                 break L1;
               } else {
                 if (null == param2.field_d) {
                   var4_ref = param2.field_h;
-                  if (param2.field_g != 248) {
+                  if (-249 != (param2.field_g ^ -1)) {
                     break L1;
                   } else {
                     L2: {
@@ -136,14 +142,14 @@ final class sa extends na implements vd {
                         break L2;
                       }
                     }
-                    ((sa) this).field_ob = true;
+                    this.field_ob = true;
                     var4_ref = on.field_c;
                     break L1;
                   }
                 } else {
                   var4_ref = db.field_f;
-                  if (((sa) this).field_pb != null) {
-                    ((sa) this).field_pb.a(param0 ^ -21);
+                  if (this.field_pb != null) {
+                    this.field_pb.a(param0 ^ -21);
                     break L1;
                   } else {
                     break L1;
@@ -151,25 +157,26 @@ final class sa extends na implements vd {
                 }
               }
             }
-            var5 = new jd((na) this, mo.field_m, var4_ref);
+            var5 = new jd((na) (this), mo.field_m, var4_ref);
             if (param0 == -1) {
               L3: {
                 L4: {
                   if (param2.field_b) {
                     if (!param2.field_f) {
-                      pc discarded$2 = var5.a(go.field_j, (bi) this, 39);
+                      discarded$2 = var5.a(go.field_j, (bi) (this), 39);
                       break L4;
                     } else {
-                      ((sa) this).a((qm) (Object) new ph((sa) this), (byte) -50);
-                      return;
+                      this.a((qm) (new ph((sa) (this))), (byte) -50);
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     }
                   } else {
                     L5: {
-                      if (((sa) this).field_ob) {
-                        pc discarded$3 = var5.a(go.field_j, (bi) this, 117);
+                      if (this.field_ob) {
+                        discarded$3 = var5.a(go.field_j, (bi) (this), 117);
                         break L5;
                       } else {
-                        if (param2.field_g != 5) {
+                        if (-6 != (param2.field_g ^ -1)) {
                           var5.a(cf.field_h, (byte) -124, -1);
                           break L5;
                         } else {
@@ -184,7 +191,7 @@ final class sa extends na implements vd {
                         var5.a(sb.field_C, (byte) -124, 9);
                         break L4;
                       } else {
-                        ((sa) this).a((qm) (Object) var5, (byte) -50);
+                        this.a((qm) (var5), (byte) -50);
                         break L3;
                       }
                     } else {
@@ -193,35 +200,37 @@ final class sa extends na implements vd {
                     }
                   }
                 }
-                ((sa) this).a((qm) (Object) var5, (byte) -50);
+                this.a((qm) (var5), (byte) -50);
                 break L3;
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var4;
+            stackOut_31_0 = (RuntimeException) (var4);
             stackOut_31_1 = new StringBuilder().append("sa.U(").append(param0).append(',').append(param1).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param2 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L6;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
@@ -229,29 +238,34 @@ final class sa extends na implements vd {
               break L6;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     public final void a(byte param0, int param1, int param2, int param3, pc param4) {
-        if (!(!((sa) this).field_ob)) {
+        if (!(!this.field_ob)) {
             vk.a(-40, true, false);
             return;
         }
         try {
             ro.g(108);
-            ((sa) this).i((byte) -121);
+            this.i((byte) -121);
             int var6_int = 62 / ((param0 - 83) / 36);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "sa.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "sa.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_rb = "Click";
     }
 }

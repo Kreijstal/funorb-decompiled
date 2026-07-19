@@ -13,7 +13,7 @@ public class bj {
 
     public static File a(String param0, int param1) {
         if (param1 != 0) {
-            field_a = null;
+            field_a = (String) null;
             return bj.a(param0, field_c, field_b, false);
         }
         return bj.a(param0, field_c, field_b, false);
@@ -72,10 +72,6 @@ public class bj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = false;
         field_d = new Hashtable(16);
     }

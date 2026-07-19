@@ -8,11 +8,12 @@ final class mg {
     static vh field_c;
 
     final static im a(int param0, long param1) {
+        boolean discarded$0 = false;
         if (param0 != 0) {
-            boolean discarded$0 = mg.a(-80);
-            return (im) (Object) ln.field_n.a(param1, false);
+            discarded$0 = mg.a(-80);
+            return (im) ((Object) ln.field_n.a(param1, false));
         }
-        return (im) (Object) ln.field_n.a(param1, false);
+        return (im) ((Object) ln.field_n.a(param1, false));
     }
 
     final static boolean a(int param0) {
@@ -30,9 +31,13 @@ final class mg {
     }
 
     public static void a(byte param0) {
+        boolean discarded$0 = false;
         field_a = null;
         field_c = null;
         field_b = null;
+        if (param0 >= -40) {
+            discarded$0 = mg.a(true);
+        }
     }
 
     final static boolean a(boolean param0) {
@@ -62,10 +67,6 @@ final class mg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "<%0> is already on your ignore list.";
         field_a = "<%0> and <%1> are out of lives!";
     }

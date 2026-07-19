@@ -14,10 +14,6 @@ final class nq {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "nq.A(";
         field_b = "Confirm Password: ";
     }

@@ -14,9 +14,15 @@ final class rh {
 
     public static void b(int param0) {
         field_g = null;
+        if (param0 != 0) {
+            field_e = -90;
+        }
     }
 
     final static e a(int param0) {
+        if (param0 != 0) {
+            return (e) null;
+        }
         return ti.field_f;
     }
 
@@ -25,10 +31,6 @@ final class rh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = 0;
         field_e = 0;
     }

@@ -57,16 +57,12 @@ public class ug {
 
     public static File a(String param0, boolean param1) {
         if (param1) {
-            return null;
+            return (File) null;
         }
         return ug.a(param0, field_e, -18261, field_c);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = false;
         field_a = new Hashtable(16);
     }

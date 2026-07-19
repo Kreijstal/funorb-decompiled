@@ -18,7 +18,7 @@ final class ak extends kj {
 
     final static t[] a(int param0, int param1, int param2, byte param3) {
         if (param3 != -124) {
-            return null;
+            return (t[]) null;
         }
         return wf.a(param2, param0, 1, param1, (byte) 106);
     }
@@ -27,64 +27,73 @@ final class ak extends kj {
         if (param0 > 7) {
             return;
         }
-        ((ak) this).field_i = 102;
+        this.field_i = 102;
     }
 
     ak(int param0, int param1, int param2, int param3, int param4, int param5) {
         super(-1, param4, param5);
-        ((ak) this).field_l = param3;
-        ((ak) this).field_j = param2;
-        ((ak) this).field_i = param0;
-        ((ak) this).field_g = param1;
+        this.field_l = param3;
+        this.field_j = param2;
+        this.field_i = param0;
+        this.field_g = param1;
     }
 
     final static boolean c(int param0) {
+        int fieldTemp$3 = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        int stackIn_20_0 = 0;
+        int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
+        int stackOut_21_0 = 0;
+        int stackOut_20_0 = 0;
         var2 = Torquing.field_u;
         try {
           L0: {
             L1: {
-              if (~i.field_P.length == ~po.field_z) {
+              if (i.field_P.length == po.field_z) {
                 po.field_z = -1;
                 break L1;
               } else {
                 break L1;
               }
             }
-            L2: while (true) {
-              L3: {
-                int fieldTemp$3 = po.field_z + 1;
+            L2: {
+              if (param0 == -85) {
+                break L2;
+              } else {
+                field_h = (String) null;
+                break L2;
+              }
+            }
+            L3: while (true) {
+              L4: {
+                fieldTemp$3 = po.field_z + 1;
                 po.field_z = po.field_z + 1;
-                if (~fieldTemp$3 <= ~i.field_P.length) {
-                  break L3;
+                if (fieldTemp$3 >= i.field_P.length) {
+                  break L4;
                 } else {
                   if (i.field_P[po.field_z]) {
-                    L4: {
-                      if (po.field_z == 13) {
-                        break L4;
+                    L5: {
+                      if ((po.field_z ^ -1) == -14) {
+                        break L5;
                       } else {
-                        if (po.field_z == 84) {
-                          break L4;
+                        if (-85 == (po.field_z ^ -1)) {
+                          break L5;
                         } else {
                           if (83 == po.field_z) {
-                            break L4;
+                            break L5;
                           } else {
-                            if (po.field_z == 81) {
-                              break L4;
+                            if ((po.field_z ^ -1) == -82) {
+                              break L5;
                             } else {
-                              if (po.field_z == 80) {
-                                break L4;
+                              if (-81 == (po.field_z ^ -1)) {
+                                break L5;
                               } else {
                                 if (r.field_b[po.field_z] == un.field_i) {
-                                  continue L2;
+                                  continue L3;
                                 } else {
                                   r.field_b[po.field_z] = rn.field_e;
-                                  break L3;
+                                  break L4;
                                 }
                               }
                             }
@@ -92,27 +101,27 @@ final class ak extends kj {
                         }
                       }
                     }
-                    if (~r.field_b[po.field_z] == ~nn.field_b) {
+                    if (r.field_b[po.field_z] == nn.field_b) {
                       r.field_b[po.field_z] = rn.field_e;
-                      break L3;
+                      break L4;
                     } else {
-                      continue L2;
+                      continue L3;
                     }
                   } else {
                     r.field_b[po.field_z] = nn.field_b;
-                    continue L2;
+                    continue L3;
                   }
                 }
               }
-              L5: {
-                if (~po.field_z <= ~i.field_P.length) {
-                  stackOut_19_0 = 0;
-                  stackIn_20_0 = stackOut_19_0;
-                  break L5;
+              L6: {
+                if (po.field_z >= i.field_P.length) {
+                  stackOut_21_0 = 0;
+                  stackIn_22_0 = stackOut_21_0;
+                  break L6;
                 } else {
-                  stackOut_18_0 = 1;
-                  stackIn_20_0 = stackOut_18_0;
-                  break L5;
+                  stackOut_20_0 = 1;
+                  stackIn_22_0 = stackOut_20_0;
+                  break L6;
                 }
               }
               break L0;
@@ -121,9 +130,9 @@ final class ak extends kj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1, "ak.B(" + -85 + ')');
+          throw rb.a((Throwable) ((Object) var1), "ak.B(" + param0 + ')');
         }
-        return stackIn_20_0 != 0;
+        return stackIn_22_0 != 0;
     }
 
     final void a(int param0, int param1, byte param2) {
@@ -131,27 +140,29 @@ final class ak extends kj {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var4 = ((ak) this).field_i * param1 >> 12;
+        var4 = this.field_i * param1 >> 615189964;
         if (param2 != 106) {
           return;
         } else {
-          var5 = param1 * ((ak) this).field_j >> 12;
-          var6 = ((ak) this).field_g * param0 >> 12;
-          var7 = ((ak) this).field_l * param0 >> 12;
-          um.a(var4, ((ak) this).field_c, var6, var5, var7, false);
+          var5 = param1 * this.field_j >> -2081938708;
+          var6 = this.field_g * param0 >> 1213719372;
+          var7 = this.field_l * param0 >> 1566135308;
+          um.a(var4, this.field_c, var6, var5, var7, false);
           return;
         }
     }
 
     public static void b(int param0) {
+        t[] discarded$0 = null;
+        if (param0 != -1507) {
+            discarded$0 = ak.a(-101, -57, 63, (byte) -67);
+            field_h = null;
+            return;
+        }
         field_h = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
     }
 }

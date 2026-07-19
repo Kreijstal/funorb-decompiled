@@ -14,55 +14,65 @@ final class sb {
 
     public static void a(byte param0) {
         field_e = null;
-        field_a = null;
-        field_c = null;
-        field_i = null;
+        if (param0 <= 75) {
+          field_c = (ek[]) null;
+          field_a = null;
+          field_c = null;
+          field_i = null;
+          return;
+        } else {
+          field_a = null;
+          field_c = null;
+          field_i = null;
+          return;
+        }
     }
 
     final static void a(int param0) {
-        Object var2 = null;
+        String var2 = (String) null;
         mj.a((String) null, field_a, 107);
-        int var1 = 0;
+        int var1 = -82 % ((44 - param0) / 45);
     }
 
     final ah a(boolean param0) {
+        ah discarded$5 = null;
         ah var2 = null;
         ah var3 = null;
         int var4 = 0;
         var4 = stellarshard.field_B;
-        if (((sb) this).field_g != null) {
+        if (this.field_g != null) {
           if (param0) {
-            var2 = ((sb) this).field_f[(int)((long)(-1 + ((sb) this).field_d) & ((sb) this).field_h)];
+            var2 = this.field_f[(int)((long)(-1 + this.field_d) & this.field_h)];
             L0: while (true) {
-              if (((sb) this).field_g != var2) {
-                if (~((sb) this).field_g.field_o == ~((sb) this).field_h) {
-                  var3 = ((sb) this).field_g;
-                  ((sb) this).field_g = ((sb) this).field_g.field_m;
+              if (this.field_g != var2) {
+                if ((this.field_g.field_o ^ -1L) == (this.field_h ^ -1L)) {
+                  var3 = this.field_g;
+                  this.field_g = this.field_g.field_m;
                   return var3;
                 } else {
-                  ((sb) this).field_g = ((sb) this).field_g.field_m;
+                  this.field_g = this.field_g.field_m;
                   continue L0;
                 }
               } else {
-                ((sb) this).field_g = null;
+                this.field_g = null;
                 return null;
               }
             }
           } else {
-            ah discarded$5 = ((sb) this).a(true);
-            var2 = ((sb) this).field_f[(int)((long)(-1 + ((sb) this).field_d) & ((sb) this).field_h)];
+            discarded$5 = this.a(true);
+            var2 = this.field_f[(int)((long)(-1 + this.field_d) & this.field_h)];
             L1: while (true) {
-              if (((sb) this).field_g != var2) {
-                if (~((sb) this).field_g.field_o == ~((sb) this).field_h) {
-                  var3 = ((sb) this).field_g;
-                  ((sb) this).field_g = ((sb) this).field_g.field_m;
+              if (this.field_g != var2) {
+                if ((this.field_g.field_o ^ -1L) == (this.field_h ^ -1L)) {
+                  var3 = this.field_g;
+                  this.field_g = this.field_g.field_m;
                   return var3;
                 } else {
-                  ((sb) this).field_g = ((sb) this).field_g.field_m;
+                  this.field_g = this.field_g.field_m;
                   continue L1;
                 }
               } else {
-                ((sb) this).field_g = null;
+                this.field_g = null;
                 return null;
               }
             }
@@ -74,13 +84,14 @@ final class sb {
 
     sb(int param0) {
         int var2 = 0;
+        ah dupTemp$0 = null;
         ah var3 = null;
-        ((sb) this).field_d = param0;
-        ((sb) this).field_f = new ah[param0];
+        this.field_d = param0;
+        this.field_f = new ah[param0];
         for (var2 = 0; param0 > var2; var2++) {
-            ah dupTemp$0 = new ah();
+            dupTemp$0 = new ah();
             var3 = dupTemp$0;
-            ((sb) this).field_f[var2] = dupTemp$0;
+            this.field_f[var2] = dupTemp$0;
             var3.field_m = var3;
             var3.field_l = var3;
         }
@@ -91,24 +102,24 @@ final class sb {
         ah var5 = null;
         int var6 = 0;
         var6 = stellarshard.field_B;
-        ((sb) this).field_h = param0;
-        var4 = ((sb) this).field_f[(int)(param0 & (long)(-1 + ((sb) this).field_d))];
-        ((sb) this).field_g = var4.field_m;
+        this.field_h = param0;
+        var4 = this.field_f[(int)(param0 & (long)(-1 + this.field_d))];
+        this.field_g = var4.field_m;
         L0: while (true) {
-          if (var4 == ((sb) this).field_g) {
+          if (var4 == this.field_g) {
             if (param1 > -108) {
-              return null;
+              return (ah) null;
             } else {
-              ((sb) this).field_g = null;
+              this.field_g = null;
               return null;
             }
           } else {
-            if (param0 != ((sb) this).field_g.field_o) {
-              ((sb) this).field_g = ((sb) this).field_g.field_m;
+            if (param0 != this.field_g.field_o) {
+              this.field_g = this.field_g.field_m;
               continue L0;
             } else {
-              var5 = ((sb) this).field_g;
-              ((sb) this).field_g = ((sb) this).field_g.field_m;
+              var5 = this.field_g;
+              this.field_g = this.field_g.field_m;
               return var5;
             }
           }
@@ -121,22 +132,18 @@ final class sb {
             if (!(null == param0.field_l)) {
                 param0.c((byte) 36);
             }
-            var5 = ((sb) this).field_f[(int)(param1 & (long)(((sb) this).field_d - param2))];
+            var5 = this.field_f[(int)(param1 & (long)(this.field_d - param2))];
             param0.field_m = var5;
             param0.field_l = var5.field_l;
             param0.field_l.field_m = param0;
             param0.field_o = param1;
             param0.field_m.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "sb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "sb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new byte[65536];
         ri.a(field_i, 0, 65536, (byte) -128);
     }

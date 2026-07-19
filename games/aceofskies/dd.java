@@ -31,11 +31,11 @@ final class dd {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var3_int = -1;
+            var3_int = -17 % ((param2 - -32) / 35);
             var4 = new cm();
-            ((jm) (Object) var4).field_f = param1;
-            ((jm) (Object) var4).field_e = param0;
-            stackOut_0_0 = (cm) var4;
+            ((jm) ((Object) var4)).field_f = param1;
+            ((jm) ((Object) var4)).field_e = param0;
+            stackOut_0_0 = (cm) (var4);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -43,23 +43,23 @@ final class dd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_0 = (RuntimeException) (var3);
             stackOut_2_1 = new StringBuilder().append("dd.A(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -67,9 +67,9 @@ final class dd {
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + -105 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ')');
         }
-        return (jm) (Object) stackIn_1_0;
+        return (jm) ((Object) stackIn_1_0);
     }
 
     public static void a(int param0) {
@@ -82,10 +82,6 @@ final class dd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Age:";
         field_d = "Cancel";
     }

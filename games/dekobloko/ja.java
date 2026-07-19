@@ -31,13 +31,9 @@ final class ja {
         int var11 = 0;
         int[] var12 = null;
         int[] var14 = null;
-        int[] var16 = null;
-        int[] var18 = null;
-        int[] var19 = null;
-        var19 = new int[this.field_e];
-        var18 = new int[33];
-        var16 = var18;
-        var14 = var16;
+        int[] var17 = null;
+        var17 = new int[this.field_e];
+        var14 = new int[33];
         var12 = var14;
         var2_ref_int__ = var12;
         var3 = 0;
@@ -52,12 +48,12 @@ final class ja {
               } else {
                 var4 = this.field_a[var3];
                 if (var4 != 0) {
-                  var5 = var19[var3];
+                  var5 = var17[var3];
                   var6 = 0;
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      this.field_b[var6] = ~var3;
+                      this.field_b[var6] = var3 ^ -1;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -120,8 +116,8 @@ final class ja {
             if (var4 != 0) {
               L7: {
                 var5 = 1 << 32 - var4;
-                var6 = var18[var4];
-                var19[var3] = var6;
+                var6 = var14[var4];
+                var17[var3] = var6;
                 if ((var6 & var5) == 0) {
                   var7 = var6 | var5;
                   var8 = var4 - 1;
@@ -129,7 +125,7 @@ final class ja {
                     if (var8 < 1) {
                       break L7;
                     } else {
-                      var9_int = var18[var8];
+                      var9_int = var14[var8];
                       if (var9_int != var6) {
                         break L7;
                       } else {
@@ -150,13 +146,13 @@ final class ja {
                   break L7;
                 }
               }
-              var18[var4] = var7;
+              var14[var4] = var7;
               var8 = var4 + 1;
               L9: while (true) {
                 if (var8 <= 32) {
-                  var9_int = var18[var8];
+                  var9_int = var14[var8];
                   if (var9_int == var6) {
-                    var18[var8] = var7;
+                    var14[var8] = var7;
                     var8++;
                     continue L9;
                   } else {
@@ -401,6 +397,6 @@ final class ja {
         while (this.field_b[var1] >= 0) {
             var1 = va.b() != 0 ? this.field_b[var1] : var1 + 1;
         }
-        return ~this.field_b[var1];
+        return this.field_b[var1] ^ -1;
     }
 }

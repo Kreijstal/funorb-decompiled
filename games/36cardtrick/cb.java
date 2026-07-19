@@ -10,17 +10,26 @@ final class cb extends qb {
     public static void a(int param0) {
         field_h = null;
         field_j = null;
+        if (param0 != -1962269296) {
+            field_h = (String) null;
+            field_g = null;
+            return;
+        }
         field_g = null;
     }
 
     final static int a(byte param0, int param1) {
         param1--;
-        param1 = param1 | param1 >>> 1;
-        param1 = param1 | param1 >>> 2;
-        param1 = param1 | param1 >>> 4;
-        param1 = param1 | param1 >>> 8;
-        param1 = param1 | param1 >>> 16;
-        return param1 + 1;
+        param1 = param1 | param1 >>> -1086071871;
+        param1 = param1 | param1 >>> -2110399614;
+        param1 = param1 | param1 >>> -1009940316;
+        if (param0 != -85) {
+          return 125;
+        } else {
+          param1 = param1 | param1 >>> 1213636648;
+          param1 = param1 | param1 >>> -1962269296;
+          return param1 + 1;
+        }
     }
 
     private cb() throws Throwable {
@@ -28,10 +37,6 @@ final class cb extends qb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Suggested names: ";
     }
 }

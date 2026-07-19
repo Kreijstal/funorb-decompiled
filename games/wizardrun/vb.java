@@ -28,6 +28,7 @@ final class vb extends pl {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_22_0 = 0;
         int stackOut_20_0 = 0;
@@ -46,11 +47,12 @@ final class vb extends pl {
             if (!super.a(param0, (byte) -103, param2, param3, param4, param5, param6)) {
               stackOut_22_0 = 0;
               stackIn_23_0 = stackOut_22_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               L1: {
-                var9 = -((vb) this).field_G + -param0 + param2;
-                var10 = -(2 * ((vb) this).field_G) + ((vb) this).field_r;
+                var9 = -this.field_G + -param0 + param2;
+                var10 = -(2 * this.field_G) + this.field_r;
                 if (var9 > var10) {
                   var9 = var10;
                   break L1;
@@ -59,7 +61,7 @@ final class vb extends pl {
                 }
               }
               L2: {
-                if (var9 >= 0) {
+                if ((var9 ^ -1) <= -1) {
                   break L2;
                 } else {
                   var9 = 0;
@@ -67,23 +69,23 @@ final class vb extends pl {
                 }
               }
               L3: {
-                var9 = ((vb) this).field_K * var9 / var10;
+                var9 = this.field_K * var9 / var10;
                 if (param4 != 1) {
-                  if (param4 == 2) {
+                  if ((param4 ^ -1) == -3) {
                     var11 = 2147483647;
                     var12 = -1;
                     var13 = 0;
                     L4: while (true) {
-                      if (var13 >= ((vb) this).field_H.a(31)) {
-                        if (var12 >= 0) {
-                          ((vb) this).field_H.d(-1, var12);
+                      if (var13 >= this.field_H.a(31)) {
+                        if ((var12 ^ -1) <= -1) {
+                          this.field_H.d(-1, var12);
                           break L3;
                         } else {
                           break L3;
                         }
                       } else {
                         L5: {
-                          var14 = -var9 + ((vb) this).field_H.a(-112, var13);
+                          var14 = -var9 + this.field_H.a(-112, var13);
                           var14 = var14 * var14;
                           if (var11 > var14) {
                             var12 = var13;
@@ -101,36 +103,37 @@ final class vb extends pl {
                     return true;
                   }
                 } else {
-                  ((vb) this).field_H.e(16711838, var9);
+                  this.field_H.e(16711838, var9);
                   break L3;
                 }
               }
               stackOut_20_0 = 1;
               stackIn_21_0 = stackOut_20_0;
-              return stackIn_21_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var8 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var8;
+            stackOut_24_0 = (RuntimeException) (var8);
             stackOut_24_1 = new StringBuilder().append("vb.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param6 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
               break L6;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
@@ -138,9 +141,13 @@ final class vb extends pl {
               break L6;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
         }
-        return stackIn_23_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_21_0 != 0;
+        } else {
+          return stackIn_23_0 != 0;
+        }
     }
 
     final int b(int param0, int param1) {
@@ -148,16 +155,16 @@ final class vb extends pl {
           if (param0 == -10455) {
             break L0;
           } else {
-            ((vb) this).field_J = 63;
+            this.field_J = 63;
             break L0;
           }
         }
         L1: {
-          if (param1 < 0) {
+          if (-1 < (param1 ^ -1)) {
             break L1;
           } else {
-            if (((vb) this).field_H.a(param0 + 10327) > param1) {
-              return ((vb) this).field_H.a(-126, param1);
+            if (this.field_H.a(param0 + 10327) > param1) {
+              return this.field_H.a(-126, param1);
             } else {
               break L1;
             }
@@ -170,21 +177,27 @@ final class vb extends pl {
         if (param0 != 0) {
             return 84;
         }
-        return ((vb) this).field_H.a(-5);
+        return this.field_H.a(-5);
     }
 
     final static o[] c(int param0, int param1, int param2, int param3, int param4) {
-        return cb.a(65793, 0, 1, true, 1, 0, 3, 0, 1);
+        if (param0 != -3) {
+            return (o[]) null;
+        }
+        return cb.a(param4, param2, 1, true, 1, param3, 3, param1, 1);
     }
 
     final int e(int param0) {
         if (param0 != 1) {
-            ((vb) this).field_G = -37;
+            this.field_G = -37;
         }
-        return ((vb) this).field_K;
+        return this.field_K;
     }
 
     public static void a(byte param0) {
+        if (param0 <= 125) {
+            field_F = (rc) null;
+        }
         field_I = null;
         field_F = null;
     }
@@ -194,10 +207,6 @@ final class vb extends pl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_I = null;
         field_F = new rc();
     }

@@ -10,25 +10,29 @@ final class ra {
 
     final static void a(int param0, vg param1, byte param2, int param3) {
         try {
-            dh.field_k = 0;
+            dh.field_k = param0;
+            if (param2 != -106) {
+                field_b = (cc) null;
+            }
             ij.field_f = param1;
-            eg.field_d = 0;
+            eg.field_d = param3;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ra.A(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ',' + -106 + ',' + 0 + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void a(int param0) {
         field_b = null;
         field_d = null;
+        if (param0 != 250) {
+            field_e = 70;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = 250;
         field_a = new de(12, 0, 1, 0);
         field_c = 0;

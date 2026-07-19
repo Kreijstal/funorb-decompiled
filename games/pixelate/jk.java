@@ -10,6 +10,12 @@ final class jk {
 
     public static void a(int param0) {
         field_e = null;
+        if (param0 != 20) {
+            jk.a(false, (byte) 23);
+            field_d = null;
+            field_a = null;
+            return;
+        }
         field_d = null;
         field_a = null;
     }
@@ -19,6 +25,9 @@ final class jk {
             param0 = false;
         }
         dh.a((byte) 58, param0);
+        if (param1 != 83) {
+            return;
+        }
         bj.a((byte) 1);
     }
 

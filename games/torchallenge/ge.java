@@ -6,6 +6,16 @@ final class ge extends jc {
     byte[] field_k;
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -27,7 +37,7 @@ final class ge extends jc {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4++;
                     param3 = param1[incrementValue$10];
                     if (param3 == 0) {
@@ -35,7 +45,7 @@ final class ge extends jc {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
@@ -45,48 +55,48 @@ final class ge extends jc {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4++;
                   param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4++;
                   param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4++;
                   param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4++;
                 param3 = param1[incrementValue$18];
                 if (param3 == 0) {
@@ -94,7 +104,7 @@ final class ge extends jc {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param0[incrementValue$19] = param2[param3 & 255];
                   var12++;
@@ -115,12 +125,12 @@ final class ge extends jc {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ge) this).field_f;
-          param1 = param1 + ((ge) this).field_g;
+          param0 = param0 + this.field_f;
+          param1 = param1 + this.field_g;
           var4 = param0 + param1 * qg.field_g;
           var5 = 0;
-          var6 = ((ge) this).field_a;
-          var7 = ((ge) this).field_b;
+          var6 = this.field_a;
+          var7 = this.field_b;
           var8 = qg.field_g - var7;
           var9 = 0;
           if (param1 >= qg.field_k) {
@@ -172,7 +182,7 @@ final class ge extends jc {
             break L4;
           } else {
             if (var6 > 0) {
-              ge.a(qg.field_i, ((ge) this).field_k, ((ge) this).field_l, var5, var4, var7, var6, var8, var9, param2);
+              ge.a(qg.field_i, this.field_k, this.field_l, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -182,6 +192,8 @@ final class ge extends jc {
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -204,7 +216,7 @@ final class ge extends jc {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$66 = param4;
+                incrementValue$66 = param4;
                 param4++;
                 param3 = param2[param1[incrementValue$66] & 255];
                 if (param3 == 0) {
@@ -214,7 +226,7 @@ final class ge extends jc {
                 } else {
                   var13 = (param3 & 16711935) * param10 & -16711936;
                   var14 = (param3 & 65280) * param10 & 16711680;
-                  int incrementValue$67 = param5;
+                  incrementValue$67 = param5;
                   param5++;
                   param0[incrementValue$67] = ((var13 | var14) >>> 8) + param11;
                   var16++;
@@ -227,6 +239,8 @@ final class ge extends jc {
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -246,7 +260,7 @@ final class ge extends jc {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var13 = param1[incrementValue$66];
                 if (var13 == 0) {
@@ -256,7 +270,7 @@ final class ge extends jc {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -278,12 +292,12 @@ final class ge extends jc {
         int var11 = 0;
         if (param2 != 256) {
           L0: {
-            param0 = param0 + ((ge) this).field_f;
-            param1 = param1 + ((ge) this).field_g;
+            param0 = param0 + this.field_f;
+            param1 = param1 + this.field_g;
             var5 = param0 + param1 * qg.field_g;
             var6 = 0;
-            var7 = ((ge) this).field_a;
-            var8 = ((ge) this).field_b;
+            var7 = this.field_a;
+            var8 = this.field_b;
             var9 = qg.field_g - var8;
             var10 = 0;
             if (param1 >= qg.field_k) {
@@ -335,7 +349,7 @@ final class ge extends jc {
               break L4;
             } else {
               if (var7 > 0) {
-                ge.a(qg.field_i, ((ge) this).field_k, ((ge) this).field_l, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+                ge.a(qg.field_i, this.field_k, this.field_l, 0, var6, var5, var8, var7, var9, var10, param2, param3);
                 return;
               } else {
                 break L4;
@@ -344,31 +358,31 @@ final class ge extends jc {
           }
           return;
         } else {
-          ((ge) this).a(param0, param1);
+          this.a(param0, param1);
           return;
         }
     }
 
     ge(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        ((ge) this).field_e = param0;
-        ((ge) this).field_d = param1;
-        ((ge) this).field_f = param2;
-        ((ge) this).field_g = param3;
-        ((ge) this).field_b = param4;
-        ((ge) this).field_a = param5;
-        ((ge) this).field_k = param6;
-        ((ge) this).field_l = param7;
+        this.field_e = param0;
+        this.field_d = param1;
+        this.field_f = param2;
+        this.field_g = param3;
+        this.field_b = param4;
+        this.field_a = param5;
+        this.field_k = param6;
+        this.field_l = param7;
     }
 
     ge(int param0, int param1, int param2) {
-        ((ge) this).field_b = param0;
-        ((ge) this).field_e = param0;
-        ((ge) this).field_a = param1;
-        ((ge) this).field_d = param1;
-        ((ge) this).field_g = 0;
-        ((ge) this).field_f = 0;
-        ((ge) this).field_k = new byte[param0 * param1];
-        ((ge) this).field_l = new int[param2];
+        this.field_b = param0;
+        this.field_e = param0;
+        this.field_a = param1;
+        this.field_d = param1;
+        this.field_g = 0;
+        this.field_f = 0;
+        this.field_k = new byte[param0 * param1];
+        this.field_l = new int[param2];
     }
 
     final void a(int param0, int param1) {
@@ -380,12 +394,12 @@ final class ge extends jc {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ge) this).field_f;
-          param1 = param1 + ((ge) this).field_g;
+          param0 = param0 + this.field_f;
+          param1 = param1 + this.field_g;
           var3 = param0 + param1 * qg.field_g;
           var4 = 0;
-          var5 = ((ge) this).field_a;
-          var6 = ((ge) this).field_b;
+          var5 = this.field_a;
+          var6 = this.field_b;
           var7 = qg.field_g - var6;
           var8 = 0;
           if (param1 >= qg.field_k) {
@@ -437,7 +451,7 @@ final class ge extends jc {
             break L4;
           } else {
             if (var5 > 0) {
-              ge.b(qg.field_i, ((ge) this).field_k, ((ge) this).field_l, 0, var4, var3, var6, var5, var7, var8);
+              ge.b(qg.field_i, this.field_k, this.field_l, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -448,20 +462,20 @@ final class ge extends jc {
 
     final ge b() {
         int var3 = 0;
-        ge var1 = new ge(((ge) this).field_b, ((ge) this).field_a, ((ge) this).field_l.length);
-        var1.field_e = ((ge) this).field_e;
-        var1.field_d = ((ge) this).field_d;
-        var1.field_f = ((ge) this).field_f;
-        var1.field_g = ((ge) this).field_g;
-        int var2 = ((ge) this).field_k.length;
+        ge var1 = new ge(this.field_b, this.field_a, this.field_l.length);
+        var1.field_e = this.field_e;
+        var1.field_d = this.field_d;
+        var1.field_f = this.field_f;
+        var1.field_g = this.field_g;
+        int var2 = this.field_k.length;
         for (var3 = 0; var3 < var2; var3++) {
-            var1.field_k[var3] = ((ge) this).field_k[var3];
+            var1.field_k[var3] = this.field_k[var3];
         }
-        var2 = ((ge) this).field_l.length;
+        var2 = this.field_l.length;
         int var4 = 0;
         var3 = var4;
         while (var4 < var2) {
-            var1.field_l[var4] = ((ge) this).field_l[var4];
+            var1.field_l[var4] = this.field_l[var4];
             var4++;
         }
         return var1;
@@ -469,11 +483,11 @@ final class ge extends jc {
 
     final ka a() {
         int var3 = 0;
-        int var1 = ((ge) this).field_b * ((ge) this).field_a;
+        int var1 = this.field_b * this.field_a;
         int[] var2 = new int[var1];
         for (var3 = 0; var3 < var1; var3++) {
-            var2[var3] = ((ge) this).field_l[((ge) this).field_k[var3] & 255];
+            var2[var3] = this.field_l[this.field_k[var3] & 255];
         }
-        return new ka(((ge) this).field_e, ((ge) this).field_d, ((ge) this).field_f, ((ge) this).field_g, ((ge) this).field_b, ((ge) this).field_a, var2);
+        return new ka(this.field_e, this.field_d, this.field_f, this.field_g, this.field_b, this.field_a, var2);
     }
 }

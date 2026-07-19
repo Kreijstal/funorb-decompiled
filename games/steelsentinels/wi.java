@@ -20,7 +20,7 @@ abstract class wi extends kd {
         try {
             field_G = null;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "wi.D(" + param0 + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "wi.D(" + param0 + ')');
         }
     }
 
@@ -61,6 +61,7 @@ abstract class wi extends kd {
         RuntimeException stackIn_62_0 = null;
         StringBuilder stackIn_62_1 = null;
         String stackIn_62_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_11_0 = false;
         int stackOut_22_0 = 0;
@@ -92,7 +93,7 @@ abstract class wi extends kd {
               var6 = param2 * 3;
               kk.b((byte) 34);
               var7 = var5_int + -10;
-              if (param1.field_K <= 0) {
+              if ((param1.field_K ^ -1) >= -1) {
                 break L1;
               } else {
                 if (null == param1.field_P) {
@@ -109,7 +110,7 @@ abstract class wi extends kd {
               L2: while (true) {
                 L3: {
                   L4: {
-                    if (~var8 <= ~param1.field_w) {
+                    if ((var8 ^ -1) <= (param1.field_w ^ -1)) {
                       break L4;
                     } else {
                       var9 = param1.field_G[var8];
@@ -149,7 +150,7 @@ abstract class wi extends kd {
                             } else {
                               L7: {
                                 var14 = km.field_h[var11];
-                                if (var14 != -2147483648) {
+                                if (2147483647 != (var14 ^ -1)) {
                                   break L7;
                                 } else {
                                   if (var19 == 0) {
@@ -167,7 +168,7 @@ abstract class wi extends kd {
                                 stackIn_25_1 = stackOut_22_1;
                                 stackIn_23_0 = stackOut_22_0;
                                 stackIn_23_1 = stackOut_22_1;
-                                if (var7 >= 0) {
+                                if (-1 >= (var7 ^ -1)) {
                                   stackOut_25_0 = stackIn_25_0;
                                   stackOut_25_1 = stackIn_25_1;
                                   stackOut_25_2 = var15 >> var7;
@@ -190,12 +191,12 @@ abstract class wi extends kd {
                               L9: while (true) {
                                 L10: {
                                   L11: {
-                                    if (0 == var17 >> 4) {
+                                    if (0 == var17 >> 268562756) {
                                       break L11;
                                     } else {
                                       var16--;
                                       stackOut_28_0 = -1;
-                                      stackOut_28_1 = ~var16;
+                                      stackOut_28_1 = var16 ^ -1;
                                       stackIn_36_0 = stackOut_28_0;
                                       stackIn_36_1 = stackOut_28_1;
                                       stackIn_29_0 = stackOut_28_0;
@@ -224,7 +225,7 @@ abstract class wi extends kd {
                                       }
                                     }
                                   }
-                                  stackOut_35_0 = var16 << 4;
+                                  stackOut_35_0 = var16 << 294058180;
                                   stackOut_35_1 = var17;
                                   stackIn_36_0 = stackOut_35_0;
                                   stackIn_36_1 = stackOut_35_1;
@@ -260,7 +261,7 @@ abstract class wi extends kd {
                       }
                     }
                   }
-                  stackOut_44_0 = ~param1.field_K;
+                  stackOut_44_0 = param1.field_K ^ -1;
                   stackIn_45_0 = stackOut_44_0;
                   break L3;
                 }
@@ -298,33 +299,35 @@ abstract class wi extends kd {
                   }
                   break L14;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var5 = decompiledCaughtException;
-            stackOut_58_0 = (RuntimeException) var5;
+            stackOut_58_0 = (RuntimeException) (var5);
             stackOut_58_1 = new StringBuilder().append("wi.B(").append(param0).append(',');
             stackIn_61_0 = stackOut_58_0;
             stackIn_61_1 = stackOut_58_1;
             stackIn_59_0 = stackOut_58_0;
             stackIn_59_1 = stackOut_58_1;
             if (param1 == null) {
-              stackOut_61_0 = (RuntimeException) (Object) stackIn_61_0;
-              stackOut_61_1 = (StringBuilder) (Object) stackIn_61_1;
+              stackOut_61_0 = (RuntimeException) ((Object) stackIn_61_0);
+              stackOut_61_1 = (StringBuilder) ((Object) stackIn_61_1);
               stackOut_61_2 = "null";
               stackIn_62_0 = stackOut_61_0;
               stackIn_62_1 = stackOut_61_1;
               stackIn_62_2 = stackOut_61_2;
               break L17;
             } else {
-              stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
-              stackOut_59_1 = (StringBuilder) (Object) stackIn_59_1;
+              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
+              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
               stackOut_59_2 = "{...}";
               stackIn_62_0 = stackOut_59_0;
               stackIn_62_1 = stackOut_59_1;
@@ -332,7 +335,12 @@ abstract class wi extends kd {
               break L17;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_62_0, stackIn_62_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_62_0), stackIn_62_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -344,7 +352,7 @@ abstract class wi extends kd {
         int var5 = 0;
         Object stackIn_9_0 = null;
         Object stackIn_12_0 = null;
-        Object stackIn_15_0 = null;
+        ah stackIn_15_0 = null;
         ah stackIn_20_0 = null;
         Object stackIn_23_0 = null;
         RuntimeException stackIn_25_0 = null;
@@ -354,10 +362,11 @@ abstract class wi extends kd {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ah stackOut_19_0 = null;
         Object stackOut_22_0 = null;
-        Object stackOut_14_0 = null;
+        ah stackOut_14_0 = null;
         Object stackOut_11_0 = null;
         Object stackOut_8_0 = null;
         RuntimeException stackOut_24_0 = null;
@@ -378,44 +387,48 @@ abstract class wi extends kd {
                 if (param0 == null) {
                   break L1;
                 } else {
-                  if (param0.length() != 0) {
-                    var2 = ui.a(1, (CharSequence) (Object) param0);
+                  if (-1 != (param0.length() ^ -1)) {
+                    var2 = ui.a(1, (CharSequence) ((Object) param0));
                     if (var2 != null) {
                       if (param1 >= 112) {
-                        var3 = (ah) (Object) pi.field_a.a((long)var2.hashCode(), (byte) 93);
+                        var3 = (ah) ((Object) pi.field_a.a((long)var2.hashCode(), (byte) 93));
                         L2: while (true) {
                           L3: {
                             if (null == var3) {
                               break L3;
                             } else {
-                              var4 = ui.a(1, (CharSequence) (Object) var3.field_dc);
-                              if (!var4.equals((Object) (Object) var2)) {
-                                var3 = (ah) (Object) pi.field_a.c((byte) 121);
+                              var4 = ui.a(1, (CharSequence) ((Object) var3.field_dc));
+                              if (!var4.equals(var2)) {
+                                var3 = (ah) ((Object) pi.field_a.c((byte) 121));
                                 if (var5 == 0) {
                                   continue L2;
                                 } else {
                                   break L3;
                                 }
                               } else {
-                                stackOut_19_0 = (ah) var3;
+                                stackOut_19_0 = (ah) (var3);
                                 stackIn_20_0 = stackOut_19_0;
-                                return stackIn_20_0;
+                                decompiledRegionSelector0 = 3;
+                                break L0;
                               }
                             }
                           }
                           stackOut_22_0 = null;
                           stackIn_23_0 = stackOut_22_0;
+                          decompiledRegionSelector0 = 4;
                           break L0;
                         }
                       } else {
-                        stackOut_14_0 = null;
+                        stackOut_14_0 = (ah) null;
                         stackIn_15_0 = stackOut_14_0;
-                        return (ah) (Object) stackIn_15_0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       }
                     } else {
                       stackOut_11_0 = null;
                       stackIn_12_0 = stackOut_11_0;
-                      return (ah) (Object) stackIn_12_0;
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     }
                   } else {
                     break L1;
@@ -425,29 +438,30 @@ abstract class wi extends kd {
             }
             stackOut_8_0 = null;
             stackIn_9_0 = stackOut_8_0;
-            return (ah) (Object) stackIn_9_0;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2_ref = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var2_ref;
+            stackOut_24_0 = (RuntimeException) (var2_ref);
             stackOut_24_1 = new StringBuilder().append("wi.C(");
             stackIn_27_0 = stackOut_24_0;
             stackIn_27_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L4;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_28_0 = stackOut_25_0;
               stackIn_28_1 = stackOut_25_1;
@@ -455,9 +469,25 @@ abstract class wi extends kd {
               break L4;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ')');
         }
-        return (ah) (Object) stackIn_23_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (ah) ((Object) stackIn_9_0);
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return (ah) ((Object) stackIn_12_0);
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_15_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_20_0;
+              } else {
+                return (ah) ((Object) stackIn_23_0);
+              }
+            }
+          }
+        }
     }
 
     final static void c(byte param0) {
@@ -468,7 +498,7 @@ abstract class wi extends kd {
                 field_y = -62;
             }
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "wi.A(" + param0 + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "wi.A(" + param0 + ')');
         }
     }
 
@@ -476,10 +506,6 @@ abstract class wi extends kd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_G = "There are no valid types of game that match your preferences.";
     }
 }

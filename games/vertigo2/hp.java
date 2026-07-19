@@ -8,7 +8,7 @@ final class hp {
 
     final ae a() {
         byte[] var1 = this.b();
-        return new ae(22050, var1, 22050 * ((hp) this).field_b / 1000, 22050 * ((hp) this).field_c / 1000);
+        return new ae(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
     }
 
     final static hp a(r param0, String param1, String param2) {
@@ -49,10 +49,10 @@ final class hp {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((hp) this).field_a[var4] != null) {
-                    var5 = ((hp) this).field_a[var4].field_a * 22050 / 1000;
-                    var6 = ((hp) this).field_a[var4].field_d * 22050 / 1000;
-                    var13 = ((hp) this).field_a[var4].a(var5, ((hp) this).field_a[var4].field_a);
+                  if (this.field_a[var4] != null) {
+                    var5 = this.field_a[var4].field_a * 22050 / 1000;
+                    var6 = this.field_a[var4].field_d * 22050 / 1000;
+                    var13 = this.field_a[var4].a(var5, this.field_a[var4].field_a);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -83,9 +83,9 @@ final class hp {
               return new byte[]{};
             }
           } else {
-            if (((hp) this).field_a[var2] != null) {
-              if (((hp) this).field_a[var2].field_a + ((hp) this).field_a[var2].field_d > var1) {
-                var1 = ((hp) this).field_a[var2].field_a + ((hp) this).field_a[var2].field_d;
+            if (this.field_a[var2] != null) {
+              if (this.field_a[var2].field_a + this.field_a[var2].field_d > var1) {
+                var1 = this.field_a[var2].field_a + this.field_a[var2].field_d;
                 var2++;
                 continue L0;
               } else {
@@ -103,19 +103,19 @@ final class hp {
     private hp(ed param0) {
         int var2 = 0;
         int var3 = 0;
-        ((hp) this).field_a = new dn[10];
+        this.field_a = new dn[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((hp) this).field_b = param0.a((byte) -11);
-            ((hp) this).field_c = param0.a((byte) -11);
+            this.field_b = param0.a((byte) -11);
+            this.field_c = param0.a((byte) -11);
             return;
           } else {
             var3 = param0.h(-11);
             if (var3 != 0) {
               param0.field_u = param0.field_u - 1;
-              ((hp) this).field_a[var2] = new dn();
-              ((hp) this).field_a[var2].a(param0);
+              this.field_a[var2] = new dn();
+              this.field_a[var2].a(param0);
               var2++;
               continue L0;
             } else {

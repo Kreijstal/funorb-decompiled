@@ -19,6 +19,7 @@ final class ig {
     static String[] field_g;
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+        int incrementValue$1 = 0;
         RuntimeException var15 = null;
         int var15_int = 0;
         int var16 = 0;
@@ -38,24 +39,24 @@ final class ig {
         var28 = SteelSentinels.field_G;
         try {
           L0: {
-            var15_int = (param2 << 4) - param8;
+            var15_int = (param2 << -226081244) - param8;
             var16 = param14;
             var17 = param13;
             var18 = param7;
             var19 = param4;
             L1: while (true) {
               L2: {
-                if (~var19 <= ~param10) {
+                if (var19 >= param10) {
                   break L2;
                 } else {
                   if (var17 >= param9) {
                     break L2;
                   } else {
                     L3: {
-                      var20 = (var19 << 4) + -param11;
+                      var20 = (var19 << -21506396) + -param11;
                       var21 = (var17 << param1) / param3;
-                      var22 = param5 * ff.field_kb[var21] >> 15;
-                      var23 = var19 - -(131072 + var20 * var22 >> 18);
+                      var22 = param5 * ff.field_kb[var21] >> 1797344047;
+                      var23 = var19 - -(131072 + var20 * var22 >> -1839143822);
                       if (639 >= var23) {
                         break L3;
                       } else {
@@ -64,7 +65,7 @@ final class ig {
                       }
                     }
                     L4: {
-                      var24 = (131072 + var22 * var15_int >> 18) + param2;
+                      var24 = (131072 + var22 * var15_int >> 36968882) + param2;
                       if (var24 <= 479) {
                         break L4;
                       } else {
@@ -73,7 +74,7 @@ final class ig {
                       }
                     }
                     var25 = pb.field_g[var24 * 640 + var23];
-                    var26 = 64 - -(ff.field_ib[var21] * param5 >> 17);
+                    var26 = 64 - -(ff.field_ib[var21] * param5 >> 988556209);
                     if (var26 < 0) {
                       throw new Error();
                     } else {
@@ -81,11 +82,11 @@ final class ig {
                       var26 = var26 * (var25 & 65280);
                       var25 = (var26 & 4177920) + (var27 & 1069563840);
                       var27 = (12582912 & var26) + (-1073692672 & var27);
-                      var27 = (var27 | var27 >>> 1) & 1077952512;
+                      var27 = (var27 | var27 >>> 2128506753) & 1077952512;
                       var17 = var17 + var18;
-                      int incrementValue$1 = var16;
+                      incrementValue$1 = var16;
                       var16++;
-                      pb.field_g[incrementValue$1] = vn.a(var27 - (var27 >>> 8), var25) >>> 6;
+                      pb.field_g[incrementValue$1] = vn.a(var27 - (var27 >>> 2057998632), var25) >>> -689853466;
                       var18 = var18 + param12;
                       var19++;
                       continue L1;
@@ -99,18 +100,18 @@ final class ig {
               var19 = param4 - 1;
               L5: while (true) {
                 L6: {
-                  if (~param6 < ~var19) {
+                  if (param6 > var19) {
                     break L6;
                   } else {
                     var18 = var18 - param12;
                     var17 = var17 - var18;
                     if (var17 < param9) {
                       L7: {
-                        var20 = (var19 << 4) + -param11;
+                        var20 = (var19 << -477492316) + -param11;
                         var21 = (var17 << param1) / param3;
-                        var22 = param5 * ff.field_kb[var21] >> 15;
-                        var23 = var19 - -(var22 * var20 + 131072 >> 18);
-                        if (var23 < 0) {
+                        var22 = param5 * ff.field_kb[var21] >> -1248982193;
+                        var23 = var19 - -(var22 * var20 + 131072 >> 1615798258);
+                        if (-1 < (var23 ^ -1)) {
                           var23 = 0;
                           break L7;
                         } else {
@@ -118,8 +119,8 @@ final class ig {
                         }
                       }
                       L8: {
-                        var24 = param2 - -(var22 * var15_int + 131072 >> 18);
-                        if (var24 > 479) {
+                        var24 = param2 - -(var22 * var15_int + 131072 >> 1233236530);
+                        if (-480 > (var24 ^ -1)) {
                           var24 = 479;
                           break L8;
                         } else {
@@ -128,8 +129,8 @@ final class ig {
                       }
                       L9: {
                         var25 = pb.field_g[var24 * 640 - -var23];
-                        var26 = 64 + (ff.field_ib[var21] * param5 >> 17);
-                        if (var26 >= 0) {
+                        var26 = 64 + (ff.field_ib[var21] * param5 >> 233832273);
+                        if (-1 >= (var26 ^ -1)) {
                           break L9;
                         } else {
                           var26 = -var26;
@@ -140,9 +141,9 @@ final class ig {
                       var26 = var26 * (65280 & var25);
                       var25 = (var26 & 4177920) + (var27 & 1069563840);
                       var27 = (12582912 & var26) + (var27 & -1073692672);
-                      var27 = 1077952512 & (var27 | var27 >>> 1);
+                      var27 = 1077952512 & (var27 | var27 >>> -1562395999);
                       var16--;
-                      pb.field_g[var16] = vn.a(var25, -(var27 >>> 8) + var27) >>> 6;
+                      pb.field_g[var16] = vn.a(var25, -(var27 >>> -635160440) + var27) >>> 1779417094;
                       var19--;
                       continue L5;
                     } else {
@@ -165,7 +166,7 @@ final class ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var15 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var15, "ig.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
+          throw ci.a((Throwable) ((Object) var15), "ig.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
         }
     }
 
@@ -187,75 +188,83 @@ final class ig {
                 var2 = 1;
                 L2: while (true) {
                   if (var2 > 10) {
+                    L3: {
+                      if (!param0) {
+                        break L3;
+                      } else {
+                        field_e = -28;
+                        break L3;
+                      }
+                    }
                     var2 = 0;
-                    L3: while (true) {
-                      if (var2 >= 8) {
+                    L4: while (true) {
+                      if ((var2 ^ -1) <= -9) {
                         return;
                       } else {
-                        ((ig) this).field_f[var2] = el.a(((ig) this).field_f[var2], el.a(((ig) this).field_c[var2], ((ig) this).field_k[var2]));
+                        this.field_f[var2] = el.a(this.field_f[var2], el.a(this.field_c[var2], this.field_k[var2]));
                         var2++;
-                        continue L3;
+                        continue L4;
                       }
                     }
                   } else {
                     var3 = 0;
-                    L4: while (true) {
+                    L5: while (true) {
                       if (var3 >= 8) {
                         var3 = 0;
-                        L5: while (true) {
+                        L6: while (true) {
                           if (8 <= var3) {
-                            ((ig) this).field_h[0] = el.a(((ig) this).field_h[0], tm.field_e[var2]);
+                            this.field_h[0] = el.a(this.field_h[0], tm.field_e[var2]);
                             var3 = 0;
-                            L6: while (true) {
-                              if (var3 >= 8) {
+                            L7: while (true) {
+                              if ((var3 ^ -1) <= -9) {
                                 var3 = 0;
-                                L7: while (true) {
-                                  if (var3 >= 8) {
+                                L8: while (true) {
+                                  if (-9 >= (var3 ^ -1)) {
                                     var2++;
                                     continue L2;
                                   } else {
-                                    ((ig) this).field_c[var3] = ((ig) this).field_j[var3];
+                                    this.field_c[var3] = this.field_j[var3];
                                     var3++;
-                                    continue L7;
+                                    continue L8;
                                   }
                                 }
                               } else {
-                                ((ig) this).field_j[var3] = ((ig) this).field_h[var3];
+                                this.field_j[var3] = this.field_h[var3];
                                 var7 = 0;
                                 var4 = var7;
                                 var5 = 56;
-                                L8: while (true) {
-                                  if (var7 >= 8) {
+                                L9: while (true) {
+                                  if ((var7 ^ -1) <= -9) {
                                     var3++;
-                                    continue L6;
+                                    continue L7;
                                   } else {
-                                    ((ig) this).field_j[var3] = el.a(((ig) this).field_j[var3], tm.field_i[var7][ec.a((int)(((ig) this).field_c[ec.a(7, -var7 + var3)] >>> var5), 255)]);
+                                    this.field_j[var3] = el.a(this.field_j[var3], tm.field_i[var7][ec.a((int)(this.field_c[ec.a(7, -var7 + var3)] >>> var5), 255)]);
                                     var7++;
                                     var5 -= 8;
-                                    continue L8;
+                                    continue L9;
                                   }
                                 }
                               }
                             }
                           } else {
-                            ((ig) this).field_h[var3] = ((ig) this).field_j[var3];
+                            this.field_h[var3] = this.field_j[var3];
                             var3++;
-                            continue L5;
+                            continue L6;
                           }
                         }
                       } else {
-                        ((ig) this).field_j[var3] = 0L;
+                        this.field_j[var3] = 0L;
                         var4 = 0;
                         var5 = 56;
-                        L9: while (true) {
-                          if (var4 >= 8) {
+                        L10: while (true) {
+                          if (-9 >= (var4 ^ -1)) {
                             var3++;
-                            continue L4;
+                            continue L5;
                           } else {
-                            ((ig) this).field_j[var3] = el.a(((ig) this).field_j[var3], tm.field_i[var4][ec.a((int)(((ig) this).field_h[ec.a(7, -var4 + var3)] >>> var5), 255)]);
+                            this.field_j[var3] = el.a(this.field_j[var3], tm.field_i[var4][ec.a((int)(this.field_h[ec.a(7, -var4 + var3)] >>> var5), 255)]);
                             var4++;
                             var5 -= 8;
-                            continue L9;
+                            continue L10;
                           }
                         }
                       }
@@ -263,14 +272,14 @@ final class ig {
                   }
                 }
               } else {
-                ((ig) this).field_h[var2] = ((ig) this).field_f[var2];
-                ((ig) this).field_c[var2] = el.a(((ig) this).field_k[var2], ((ig) this).field_f[var2]);
+                this.field_h[var2] = this.field_f[var2];
+                this.field_c[var2] = el.a(this.field_k[var2], this.field_f[var2]);
                 var2++;
                 continue L1;
               }
             }
           } else {
-            ((ig) this).field_k[var2] = el.a(el.a(el.a(el.a(td.a(255L, (long)((ig) this).field_b[var3 - -4]) << 24, el.a(td.a((long)((ig) this).field_b[var3 + 3] << 32, 1095216660480L), el.a(el.a(td.a(255L, (long)((ig) this).field_b[var3 - -1]) << 48, (long)((ig) this).field_b[var3] << 56), td.a((long)((ig) this).field_b[2 + var3], 255L) << 40))), td.a((long)((ig) this).field_b[var3 + 5], 255L) << 16), td.a((long)((ig) this).field_b[var3 - -6] << 8, 65280L)), td.a((long)((ig) this).field_b[var3 - -7], 255L));
+            this.field_k[var2] = el.a(el.a(el.a(el.a(td.a(255L, (long)this.field_b[var3 - -4]) << -135057576, el.a(td.a((long)this.field_b[var3 + 3] << 1682732192, 1095216660480L), el.a(el.a(td.a(255L, (long)this.field_b[var3 - -1]) << 1980338800, (long)this.field_b[var3] << -1931117192), td.a((long)this.field_b[2 + var3], 255L) << -209105496))), td.a((long)this.field_b[var3 + 5], 255L) << -1362739440), td.a((long)this.field_b[var3 - -6] << 605063176, 65280L)), td.a((long)this.field_b[var3 - -7], 255L));
             var2++;
             var3 += 8;
             continue L0;
@@ -281,7 +290,10 @@ final class ig {
     public static void a(byte param0) {
         field_g = null;
         field_d = null;
-        field_o = null;
+        field_o = (wk[][]) null;
+        if (param0 < 118) {
+            field_o = (wk[][]) null;
+        }
         field_m = null;
         field_n = null;
     }
@@ -318,7 +330,7 @@ final class ig {
           L0: {
             var5_int = 0;
             var6 = 8 - (7 & (int)param1) & 7;
-            var7 = 7 & ((ig) this).field_i;
+            var7 = 7 & this.field_i;
             var9 = param1;
             var11 = 31;
             var12 = 0;
@@ -326,11 +338,11 @@ final class ig {
               if (var11 < 0) {
                 var13 = -108 % ((30 - param0) / 43);
                 L2: while (true) {
-                  if (param1 <= 8L) {
+                  if ((param1 ^ -1L) >= -9L) {
                     L3: {
                       if (0L < param1) {
                         var8 = param2[var5_int] << var6 & 255;
-                        ((ig) this).field_b[((ig) this).field_l] = (byte)vn.a((int) ((ig) this).field_b[((ig) this).field_l], var8 >>> var7);
+                        this.field_b[this.field_l] = (byte)vn.a((int) this.field_b[this.field_l], var8 >>> var7);
                         break L3;
                       } else {
                         var8 = 0;
@@ -340,23 +352,23 @@ final class ig {
                     L4: {
                       if (8L <= (long)var7 + param1) {
                         L5: {
-                          ((ig) this).field_l = ((ig) this).field_l + 1;
+                          this.field_l = this.field_l + 1;
                           param1 = param1 - (long)(8 - var7);
-                          ((ig) this).field_i = ((ig) this).field_i + (8 - var7);
-                          if (512 == ((ig) this).field_i) {
+                          this.field_i = this.field_i + (8 - var7);
+                          if (512 == this.field_i) {
                             this.a(false);
-                            ((ig) this).field_i = 0;
-                            ((ig) this).field_l = 0;
+                            this.field_i = 0;
+                            this.field_l = 0;
                             break L5;
                           } else {
                             break L5;
                           }
                         }
-                        ((ig) this).field_b[((ig) this).field_l] = (byte)ec.a(255, var8 << 8 + -var7);
-                        ((ig) this).field_i = ((ig) this).field_i + (int)param1;
+                        this.field_b[this.field_l] = (byte)ec.a(255, var8 << 8 + -var7);
+                        this.field_i = this.field_i + (int)param1;
                         break L4;
                       } else {
-                        ((ig) this).field_i = (int)((long)((ig) this).field_i + param1);
+                        this.field_i = (int)((long)this.field_i + param1);
                         break L4;
                       }
                     }
@@ -367,24 +379,24 @@ final class ig {
                       if (0 > var8) {
                         break L6;
                       } else {
-                        if (var8 >= 256) {
+                        if ((var8 ^ -1) <= -257) {
                           break L6;
                         } else {
                           L7: {
-                            ((ig) this).field_b[((ig) this).field_l] = (byte)vn.a((int) ((ig) this).field_b[((ig) this).field_l], var8 >>> var7);
-                            ((ig) this).field_i = ((ig) this).field_i + (8 - var7);
-                            ((ig) this).field_l = ((ig) this).field_l + 1;
-                            if (((ig) this).field_i != 512) {
+                            this.field_b[this.field_l] = (byte)vn.a((int) this.field_b[this.field_l], var8 >>> var7);
+                            this.field_i = this.field_i + (8 - var7);
+                            this.field_l = this.field_l + 1;
+                            if (this.field_i != 512) {
                               break L7;
                             } else {
                               this.a(false);
-                              ((ig) this).field_l = 0;
-                              ((ig) this).field_i = 0;
+                              this.field_l = 0;
+                              this.field_i = 0;
                               break L7;
                             }
                           }
-                          ((ig) this).field_b[((ig) this).field_l] = (byte)ec.a(var8 << -var7 + 8, 255);
-                          ((ig) this).field_i = ((ig) this).field_i + var7;
+                          this.field_b[this.field_l] = (byte)ec.a(var8 << -var7 + 8, 255);
+                          this.field_i = this.field_i + var7;
                           param1 = param1 - 8L;
                           var5_int++;
                           continue L2;
@@ -395,8 +407,8 @@ final class ig {
                   }
                 }
               } else {
-                var12 = var12 + ((255 & ((ig) this).field_a[var11]) + (255 & (int)var9));
-                ((ig) this).field_a[var11] = (byte)var12;
+                var12 = var12 + ((255 & this.field_a[var11]) + (255 & (int)var9));
+                this.field_a[var11] = (byte)var12;
                 var12 = var12 >>> 8;
                 var9 = var9 >>> 8;
                 var11--;
@@ -408,23 +420,23 @@ final class ig {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var5;
+            stackOut_23_0 = (RuntimeException) (var5);
             stackOut_23_1 = new StringBuilder().append("ig.F(").append(param0).append(',').append(param1).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param2 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L8;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -432,7 +444,7 @@ final class ig {
               break L8;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
     }
 
@@ -440,21 +452,23 @@ final class ig {
         int var3 = SteelSentinels.field_G;
         int var2 = 0;
         if (param0 != -635160440) {
-            field_o = null;
+            field_o = (wk[][]) null;
         }
-        while (var2 < 32) {
-            ((ig) this).field_a[var2] = (byte) 0;
+        while ((var2 ^ -1) > -33) {
+            this.field_a[var2] = (byte) 0;
             var2++;
         }
-        ((ig) this).field_l = 0;
-        ((ig) this).field_b[0] = (byte) 0;
-        ((ig) this).field_i = 0;
+        this.field_l = 0;
+        this.field_b[0] = (byte) 0;
+        this.field_i = 0;
         for (var2 = 0; 8 > var2; var2++) {
-            ((ig) this).field_f[var2] = 0L;
+            this.field_f[var2] = 0L;
         }
     }
 
     final void a(byte[] param0, boolean param1, int param2) {
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -483,48 +497,48 @@ final class ig {
               if (param1) {
                 break L1;
               } else {
-                ((ig) this).field_k = null;
+                this.field_k = (long[]) null;
                 break L1;
               }
             }
             L2: {
-              ((ig) this).field_b[((ig) this).field_l] = (byte)vn.a((int) ((ig) this).field_b[((ig) this).field_l], 128 >>> ec.a(((ig) this).field_i, 7));
-              ((ig) this).field_l = ((ig) this).field_l + 1;
-              if (((ig) this).field_l <= 32) {
+              this.field_b[this.field_l] = (byte)vn.a((int) this.field_b[this.field_l], 128 >>> ec.a(this.field_i, 7));
+              this.field_l = this.field_l + 1;
+              if (this.field_l <= 32) {
                 break L2;
               } else {
                 L3: while (true) {
-                  if (((ig) this).field_l >= 64) {
+                  if (this.field_l >= 64) {
                     this.a(false);
-                    ((ig) this).field_l = 0;
+                    this.field_l = 0;
                     break L2;
                   } else {
-                    int fieldTemp$2 = ((ig) this).field_l;
-                    ((ig) this).field_l = ((ig) this).field_l + 1;
-                    ((ig) this).field_b[fieldTemp$2] = (byte) 0;
+                    fieldTemp$2 = this.field_l;
+                    this.field_l = this.field_l + 1;
+                    this.field_b[fieldTemp$2] = (byte) 0;
                     continue L3;
                   }
                 }
               }
             }
             L4: while (true) {
-              if (32 <= ((ig) this).field_l) {
-                ii.a(((ig) this).field_a, 0, ((ig) this).field_b, 32, 32);
+              if (32 <= this.field_l) {
+                ii.a(this.field_a, 0, this.field_b, 32, 32);
                 this.a(false);
                 var4_int = 0;
                 var5 = param2;
                 L5: while (true) {
-                  if (var4_int >= 8) {
+                  if ((var4_int ^ -1) <= -9) {
                     break L0;
                   } else {
-                    var6 = ((ig) this).field_f[var4_int];
-                    param0[var5] = (byte)(int)(var6 >>> 56);
-                    param0[1 + var5] = (byte)(int)(var6 >>> 48);
-                    param0[2 + var5] = (byte)(int)(var6 >>> 40);
-                    param0[var5 - -3] = (byte)(int)(var6 >>> 32);
-                    param0[4 + var5] = (byte)(int)(var6 >>> 24);
-                    param0[5 + var5] = (byte)(int)(var6 >>> 16);
-                    param0[var5 + 6] = (byte)(int)(var6 >>> 8);
+                    var6 = this.field_f[var4_int];
+                    param0[var5] = (byte)(int)(var6 >>> 2075452472);
+                    param0[1 + var5] = (byte)(int)(var6 >>> 795052592);
+                    param0[2 + var5] = (byte)(int)(var6 >>> 2076758440);
+                    param0[var5 - -3] = (byte)(int)(var6 >>> 532226976);
+                    param0[4 + var5] = (byte)(int)(var6 >>> -1818516008);
+                    param0[5 + var5] = (byte)(int)(var6 >>> -432379568);
+                    param0[var5 + 6] = (byte)(int)(var6 >>> -91172664);
                     param0[var5 - -7] = (byte)(int)var6;
                     var4_int++;
                     var5 += 8;
@@ -532,9 +546,9 @@ final class ig {
                   }
                 }
               } else {
-                int fieldTemp$3 = ((ig) this).field_l;
-                ((ig) this).field_l = ((ig) this).field_l + 1;
-                ((ig) this).field_b[fieldTemp$3] = (byte) 0;
+                fieldTemp$3 = this.field_l;
+                this.field_l = this.field_l + 1;
+                this.field_b[fieldTemp$3] = (byte) 0;
                 continue L4;
               }
             }
@@ -543,23 +557,23 @@ final class ig {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var4;
+            stackOut_13_0 = (RuntimeException) (var4);
             stackOut_13_1 = new StringBuilder().append("ig.A(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L6;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -567,27 +581,23 @@ final class ig {
               break L6;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     ig() {
-        ((ig) this).field_h = new long[8];
-        ((ig) this).field_a = new byte[32];
-        ((ig) this).field_k = new long[8];
-        ((ig) this).field_c = new long[8];
-        ((ig) this).field_f = new long[8];
-        ((ig) this).field_b = new byte[64];
-        ((ig) this).field_l = 0;
-        ((ig) this).field_j = new long[8];
-        ((ig) this).field_i = 0;
+        this.field_h = new long[8];
+        this.field_a = new byte[32];
+        this.field_k = new long[8];
+        this.field_c = new long[8];
+        this.field_f = new long[8];
+        this.field_b = new byte[64];
+        this.field_l = 0;
+        this.field_j = new long[8];
+        this.field_i = 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = new fm(2, 4, 4, 0);
         field_d = "Cancel rematch";
         field_g = new String[]{"The Golem-class sentinel entered the war in the early stages to replace conventional armour. Even to this day it remains a strong weapons platform for supporting the larger chassis.", "Slave-class sentinels specialise in closing in and destroying targets at close range. They are fitted with powerful legs, capable of leaping onto buildings for added tactical movement in a combat situation.", "When speed and accuracy are required, the Aquila-class scout sentinel is the robot for the job. The default design is fitted with a targeting system for perfect accuracy with its lasers, and also anti-air support from its missile systems.", "Long-range fire support is granted through the Turtle-class sentinel. Fitted with multiple heavy rockets and an ordnance weapon point on its back, a constant barrage of destruction can be created while you slowly advance.", "Commando-class sentinels provide a powerful mix of EMP rockets, a long range sniper cannon and close-range support with plasma and thunder blade.", "The Hurricane-class sentinel was designed as an aerial missile platform. It leaps into the air to launch its payload while utilising its rail guns for long range sniping.", "The high-speed Scorpion-class chassis destroys targets at close range with its top-mounted ultra gun, while keeping air defences enabled with targeted laser beams.", "As the war progressed, earlier sentinels were replaced with the heavier Crusher-class. Featuring a back-mounted ordnance slot, stormhammer, thrusters and a range of weapon points, this sentinel provided well-supported power for any situation.", "The colossal Bertha-class sentinel was one of the first chassis designs to be used in the war. Low-tech, but massive in design, it relies on outlasting its opponents and dealing massive damage at long range with its heavy rocket systems.", "Only just entering operation, the Orbital-class sentinel was designed to be a space-borne weapons platform. At the last moment, however, it was converted for atmospheric use, with the addition of extra heavy guns for missile defence.", "As the most advanced sentinel within the war, the Valhalla-class design is feared by commanders throughout the systems. It contains state-of-the-art energy weapons to deal with all manner of situations, as well as the devastating fusion blade for close-range decapitation.", "The first and last Babel-class sentinel started the war. The Babel landed on Ilolian Prime, and proceeded to destroy the whole planetary defence force over weeks of fighting. Commanders throughout the systems knew at this point that the old wars had ended, and the age of the sentinel had begun."};

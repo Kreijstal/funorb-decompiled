@@ -46,6 +46,7 @@ final class lf extends le {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_13_0 = 0;
         int stackOut_12_0 = 0;
@@ -78,10 +79,10 @@ final class lf extends le {
             }
             L2: {
               var3 = am.a(param0, 1);
-              if (param1.indexOf(param0) != -1) {
+              if (0 != (param1.indexOf(param0) ^ -1)) {
                 break L2;
               } else {
-                if (param1.indexOf(var3) != -1) {
+                if ((param1.indexOf(var3) ^ -1) != 0) {
                   break L2;
                 } else {
                   L3: {
@@ -110,35 +111,37 @@ final class lf extends le {
                     stackIn_14_0 = stackOut_12_0;
                     break L3;
                   }
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 }
               }
             }
             stackOut_5_0 = 1;
             stackIn_6_0 = stackOut_5_0;
-            return stackIn_6_0 != 0;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var3_ref;
+            stackOut_15_0 = (RuntimeException) (var3_ref);
             stackOut_15_1 = new StringBuilder().append("lf.C(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -147,23 +150,23 @@ final class lf extends le {
             }
           }
           L6: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
             stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L6;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -171,9 +174,13 @@ final class lf extends le {
               break L6;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param2 + ')');
         }
-        return stackIn_14_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0 != 0;
+        } else {
+          return stackIn_14_0 != 0;
+        }
     }
 
     public static void a(int param0) {
@@ -192,29 +199,30 @@ final class lf extends le {
         rl.field_f = true;
         te.field_eb = param1;
         ul.field_d = param1;
-        Object var4 = null;
+        int[] var4 = (int[]) null;
         bi.a((int[]) null, 0, 0);
-        cn.field_f = l.a(-1, param0, (java.awt.Component) (Object) cj.field_d, param1);
-        cn.field_f.b(-127);
+        cn.field_f = l.a(-1, param0, (java.awt.Component) ((Object) cj.field_d), param1);
+        cn.field_f.b(param2 + -129);
         ba.a(18002, param0 / 2, param1 / 2);
         pl.a(param1, param0, (byte) 50);
         ep.a(param0, param1, -21141);
-        hn.a(param1 / 2, (byte) -91, param0 / 2);
+        hn.a(param1 / 2, (byte) -91, param0 / param2);
     }
 
     final void c(byte param0) {
-        Object var3 = null;
-        ((lf) this).field_s = null;
-        ((lf) this).field_u = null;
+        boolean discarded$2 = false;
+        String var3 = null;
+        this.field_s = null;
+        this.field_u = null;
         if (param0 <= 122) {
-          var3 = null;
-          boolean discarded$2 = lf.a((String) null, (String) null, -37);
-          ((lf) this).field_t = null;
-          ((lf) this).field_E = null;
+          var3 = (String) null;
+          discarded$2 = lf.a((String) null, (String) null, -37);
+          this.field_t = null;
+          this.field_E = null;
           return;
         } else {
-          ((lf) this).field_t = null;
-          ((lf) this).field_E = null;
+          this.field_t = null;
+          this.field_E = null;
           return;
         }
     }
@@ -223,10 +231,6 @@ final class lf extends le {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = -1;
         field_h = new vn(640, 480);
     }

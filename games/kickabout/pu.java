@@ -14,26 +14,27 @@ final class pu extends hd implements lv {
     static int[] field_Db;
 
     final void h(byte param0) {
-        if (!(!((pu) this).field_gb)) {
-            je.a((byte) 100, (pu) this);
+        if (!(!this.field_gb)) {
+            je.a((byte) 100, (pu) (this));
         }
         if (param0 != 30) {
-            ((pu) this).h((byte) 44);
+            this.h((byte) 44);
         }
     }
 
     public final void a(int param0, int param1, int param2) {
+        int discarded$1 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         L0: {
-          var4 = ((pu) this).b(0);
-          var5 = ((pu) this).a(param1 ^ 24);
-          var6 = -(var4 >> 1) + param2;
-          var7 = -(var5 >> 1) + param0;
+          var4 = this.b(0);
+          var5 = this.a(param1 ^ 24);
+          var6 = -(var4 >> 32111329) + param2;
+          var7 = -(var5 >> -477480863) + param0;
           on.a(var6, var7, var4, var5, 52479, 60);
-          if (((pu) this).field_Bb.field_h != 0) {
+          if (-1 != (this.field_Bb.field_h ^ -1)) {
             on.a(var6, var7, var4, 50, 16777215, 60);
             break L0;
           } else {
@@ -42,20 +43,20 @@ final class pu extends hd implements lv {
         }
         L1: {
           on.e(var6, var7, var4, var5, 65793);
-          q.field_d.c(((pu) this).field_yb, -10 + (var6 + var4), 22 + var7, 16777215, 65793);
-          q.field_d.c(((pu) this).field_Hb, -10 + (var6 + var4), var7 - -36, 16777215, 65793);
+          q.field_d.c(this.field_yb, -10 + (var6 + var4), 22 + var7, 16777215, 65793);
+          q.field_d.c(this.field_Hb, -10 + (var6 + var4), var7 - -36, 16777215, 65793);
           if (param1 == 23) {
             break L1;
           } else {
-            ((pu) this).field_Hb = null;
+            this.field_Hb = (String) null;
             break L1;
           }
         }
         L2: {
-          ((pu) this).field_Cb.c(var6 - -8, 9 + var7);
-          if (0 != ((pu) this).field_Bb.field_h) {
+          this.field_Cb.c(var6 - -8, 9 + var7);
+          if (0 != this.field_Bb.field_h) {
             on.f(var6, var7 - -50, var4, 65793);
-            int discarded$1 = q.field_d.a(((pu) this).field_Gb, 5 + var6, var7 - -50, var4 + -10, var5 - 52, 16777215, 65793, 0, 1, 12);
+            discarded$1 = q.field_d.a(this.field_Gb, 5 + var6, var7 - -50, var4 + -10, var5 - 50 + -2, 16777215, 65793, 0, 1, 12);
             break L2;
           } else {
             break L2;
@@ -119,6 +120,7 @@ final class pu extends hd implements lv {
         RuntimeException stackIn_60_0 = null;
         StringBuilder stackIn_60_1 = null;
         String stackIn_60_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         vn stackOut_5_0 = null;
         vn stackOut_5_1 = null;
@@ -163,7 +165,7 @@ final class pu extends hd implements lv {
         try {
           L0: {
             L1: {
-              var24 = new vn(new vn[1], 1);
+              var24 = new vn(new vn[]{qd.field_j[param1]}, 1);
               var26 = var24;
               if (!param0) {
                 break L1;
@@ -198,11 +200,11 @@ final class pu extends hd implements lv {
               stackIn_6_2 = stackOut_5_2;
               stackIn_6_3 = stackOut_5_3;
               stackIn_6_4 = stackOut_5_4;
-              if (param1 == 4) {
+              if ((param1 ^ -1) == -5) {
                 stackOut_7_0 = null;
                 stackOut_7_1 = null;
-                stackOut_7_2 = (vn[]) (Object) stackIn_7_2;
-                stackOut_7_3 = (vn[]) (Object) stackIn_7_3;
+                stackOut_7_2 = (vn[]) ((Object) stackIn_7_2);
+                stackOut_7_3 = (vn[]) ((Object) stackIn_7_3);
                 stackOut_7_4 = stackIn_7_4;
                 stackOut_7_5 = es.field_k;
                 stackIn_8_0 = stackOut_7_0;
@@ -215,8 +217,8 @@ final class pu extends hd implements lv {
               } else {
                 stackOut_6_0 = null;
                 stackOut_6_1 = null;
-                stackOut_6_2 = (vn[]) (Object) stackIn_6_2;
-                stackOut_6_3 = (vn[]) (Object) stackIn_6_3;
+                stackOut_6_2 = (vn[]) ((Object) stackIn_6_2);
+                stackOut_6_3 = (vn[]) ((Object) stackIn_6_3);
                 stackOut_6_4 = stackIn_6_4;
                 stackOut_6_5 = iw.field_m[param1];
                 stackIn_8_0 = stackOut_6_0;
@@ -231,7 +233,7 @@ final class pu extends hd implements lv {
             L4: {
               stackIn_8_3[stackIn_8_4] = stackIn_8_5;
               var8 = new vn(stackIn_8_2, 2);
-              var10 = 0;
+              var10 = -10 % ((param3 - -49) / 51);
               var9 = (short)param5;
               var11 = (short)param6;
               var12 = new vn(var8, true, false, true, true);
@@ -239,9 +241,10 @@ final class pu extends hd implements lv {
                 break L4;
               } else {
                 if (param4 == null) {
-                  stackOut_11_0 = (vn) var12;
+                  stackOut_11_0 = (vn) (var12);
                   stackIn_12_0 = stackOut_11_0;
-                  return stackIn_12_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   break L4;
                 }
@@ -388,31 +391,32 @@ final class pu extends hd implements lv {
                 }
               }
             }
-            stackOut_52_0 = (vn) var12;
+            stackOut_52_0 = (vn) (var12);
             stackIn_53_0 = stackOut_52_0;
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L20: {
             var7 = decompiledCaughtException;
-            stackOut_54_0 = (RuntimeException) var7;
+            stackOut_54_0 = (RuntimeException) (var7);
             stackOut_54_1 = new StringBuilder().append("pu.E(").append(param0).append(',').append(param1).append(',');
             stackIn_56_0 = stackOut_54_0;
             stackIn_56_1 = stackOut_54_1;
             stackIn_55_0 = stackOut_54_0;
             stackIn_55_1 = stackOut_54_1;
             if (param2 == null) {
-              stackOut_56_0 = (RuntimeException) (Object) stackIn_56_0;
-              stackOut_56_1 = (StringBuilder) (Object) stackIn_56_1;
+              stackOut_56_0 = (RuntimeException) ((Object) stackIn_56_0);
+              stackOut_56_1 = (StringBuilder) ((Object) stackIn_56_1);
               stackOut_56_2 = "null";
               stackIn_57_0 = stackOut_56_0;
               stackIn_57_1 = stackOut_56_1;
               stackIn_57_2 = stackOut_56_2;
               break L20;
             } else {
-              stackOut_55_0 = (RuntimeException) (Object) stackIn_55_0;
-              stackOut_55_1 = (StringBuilder) (Object) stackIn_55_1;
+              stackOut_55_0 = (RuntimeException) ((Object) stackIn_55_0);
+              stackOut_55_1 = (StringBuilder) ((Object) stackIn_55_1);
               stackOut_55_2 = "{...}";
               stackIn_57_0 = stackOut_55_0;
               stackIn_57_1 = stackOut_55_1;
@@ -421,23 +425,23 @@ final class pu extends hd implements lv {
             }
           }
           L21: {
-            stackOut_57_0 = (RuntimeException) (Object) stackIn_57_0;
-            stackOut_57_1 = ((StringBuilder) (Object) stackIn_57_1).append(stackIn_57_2).append(',').append(-103).append(',');
+            stackOut_57_0 = (RuntimeException) ((Object) stackIn_57_0);
+            stackOut_57_1 = ((StringBuilder) (Object) stackIn_57_1).append(stackIn_57_2).append(',').append(param3).append(',');
             stackIn_59_0 = stackOut_57_0;
             stackIn_59_1 = stackOut_57_1;
             stackIn_58_0 = stackOut_57_0;
             stackIn_58_1 = stackOut_57_1;
             if (param4 == null) {
-              stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
-              stackOut_59_1 = (StringBuilder) (Object) stackIn_59_1;
+              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
+              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
               stackOut_59_2 = "null";
               stackIn_60_0 = stackOut_59_0;
               stackIn_60_1 = stackOut_59_1;
               stackIn_60_2 = stackOut_59_2;
               break L21;
             } else {
-              stackOut_58_0 = (RuntimeException) (Object) stackIn_58_0;
-              stackOut_58_1 = (StringBuilder) (Object) stackIn_58_1;
+              stackOut_58_0 = (RuntimeException) ((Object) stackIn_58_0);
+              stackOut_58_1 = (StringBuilder) ((Object) stackIn_58_1);
               stackOut_58_2 = "{...}";
               stackIn_60_0 = stackOut_58_0;
               stackIn_60_1 = stackOut_58_1;
@@ -445,9 +449,13 @@ final class pu extends hd implements lv {
               break L21;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_60_0, stackIn_60_2 + ',' + param5 + ',' + param6 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_60_0), stackIn_60_2 + ',' + param5 + ',' + param6 + ')');
         }
-        return stackIn_53_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_12_0;
+        } else {
+          return stackIn_53_0;
+        }
     }
 
     public final int b(int param0) {
@@ -472,7 +480,7 @@ final class pu extends hd implements lv {
         int var4 = fieldTemp$0;
         or.field_d.a(0, gl.field_a.field_n, 1991220144, gl.field_a.field_f);
         or.field_d.c(62, -var4 + or.field_d.field_n);
-        int var5 = 2;
+        int var5 = 83 % ((40 - param0) / 43);
     }
 
     public final int a(int param0) {
@@ -480,8 +488,8 @@ final class pu extends hd implements lv {
         if (param0 != 15) {
             return -84;
         }
-        if (((pu) this).field_Bb.field_h != 0) {
-            var2 = var2 + (20 + q.field_d.c(us.field_h[((pu) this).field_Bb.field_h], ((pu) this).b(param0 ^ 15) - 10, 12));
+        if (-1 != (this.field_Bb.field_h ^ -1)) {
+            var2 = var2 + (20 + q.field_d.c(us.field_h[this.field_Bb.field_h], this.b(param0 ^ 15) - 10, 12));
         }
         return var2;
     }
@@ -490,41 +498,37 @@ final class pu extends hd implements lv {
         field_Ab = null;
         field_Fb = null;
         field_Db = null;
-        int var1 = -40;
+        int var1 = -80 / ((-13 - param0) / 32);
         field_zb = null;
         field_Eb = null;
     }
 
     pu(fn param0, boolean param1) {
         try {
-            ((pu) this).field_mb = 32;
-            ((pu) this).field_q = 32;
-            ((pu) this).field_Bb = param0;
-            ((pu) this).field_Cb = param0.d(false);
-            ((pu) this).field_N = (ut) (Object) ((pu) this).field_Cb;
+            this.field_mb = 32;
+            this.field_q = 32;
+            this.field_Bb = param0;
+            this.field_Cb = param0.d(false);
+            this.field_N = (ut) ((Object) this.field_Cb);
             if (param1) {
-                ((pu) this).field_q = ((pu) this).field_q >> 1;
-                ((pu) this).field_mb = ((pu) this).field_mb >> 1;
-                ((pu) this).field_N = (ut) (Object) nh.b(((pu) this).field_Cb);
+                this.field_q = this.field_q >> 1;
+                this.field_mb = this.field_mb >> 1;
+                this.field_N = (ut) ((Object) nh.b(this.field_Cb));
             }
-            ((pu) this).field_yb = rv.field_b[((pu) this).field_Bb.field_h].toUpperCase();
-            ((pu) this).field_Hb = vo.a((byte) -18, kd.field_u, new String[1]).toLowerCase();
-            if (0 == ((pu) this).field_Bb.field_h) {
-                ((pu) this).field_yb = '(' + ((pu) this).field_yb + ')';
+            this.field_yb = rv.field_b[this.field_Bb.field_h].toUpperCase();
+            this.field_Hb = vo.a((byte) -18, kd.field_u, new String[]{wq.field_a[this.field_Bb.field_k]}).toLowerCase();
+            if (0 == this.field_Bb.field_h) {
+                this.field_yb = '(' + this.field_yb + ')';
             } else {
-                ((pu) this).field_yb = '"' + ((pu) this).field_yb + '"';
+                this.field_yb = '"' + this.field_yb + '"';
             }
-            ((pu) this).field_Gb = us.field_h[((pu) this).field_Bb.field_h];
+            this.field_Gb = us.field_h[this.field_Bb.field_h];
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "pu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "pu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Ab = "Unable to add name - system busy";
         field_zb = new int[2];
         field_Db = new int[7];

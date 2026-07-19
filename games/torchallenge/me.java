@@ -12,6 +12,9 @@ final class me implements j {
     private int field_f;
 
     public static void a(int param0) {
+        if (param0 != -13978) {
+            return;
+        }
         field_e = null;
         field_a = null;
         field_d = null;
@@ -66,22 +69,23 @@ final class me implements j {
     }
 
     public me() {
-        ((me) this).field_c = oe.field_g;
-        ((me) this).field_h = 1;
-        ((me) this).field_f = 1;
+        this.field_c = oe.field_g;
+        this.field_h = 1;
+        this.field_f = 1;
     }
 
     me(eg param0, int param1, int param2) {
         try {
-            ((me) this).field_h = param1;
-            ((me) this).field_f = param2;
-            ((me) this).field_c = param0;
+            this.field_h = param1;
+            this.field_f = param2;
+            this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public final void a(ee param0, int param1, int param2, byte param3, boolean param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -134,25 +138,25 @@ final class me implements j {
               if (param3 == 97) {
                 break L3;
               } else {
-                ((me) this).field_h = 7;
+                this.field_h = 7;
                 break L3;
               }
             }
             L4: {
-              int discarded$1 = ((me) this).field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_v + "</u>", param2 - -param0.field_m, param0.field_i + param1, param0.field_p, param0.field_l, var6_int, -1, ((me) this).field_h, ((me) this).field_f, ((me) this).field_c.field_x + ((me) this).field_c.field_K);
+              discarded$1 = this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_v + "</u>", param2 - -param0.field_m, param0.field_i + param1, param0.field_p, param0.field_l, var6_int, -1, this.field_h, this.field_f, this.field_c.field_x + this.field_c.field_K);
               if (!param0.c(94)) {
                 break L4;
               } else {
                 L5: {
-                  var7 = ((me) this).field_c.a(param0.field_v);
-                  var8 = ((me) this).field_c.field_x - -((me) this).field_c.field_K;
+                  var7 = this.field_c.a(param0.field_v);
+                  var8 = this.field_c.field_x - -this.field_c.field_K;
                   var9 = param2 + param0.field_m;
-                  if (((me) this).field_h == 2) {
+                  if ((this.field_h ^ -1) == -3) {
                     var9 = var9 + (param0.field_p - var7);
                     break L5;
                   } else {
-                    if (((me) this).field_h == 1) {
-                      var9 = var9 + (-var7 + param0.field_p >> 1);
+                    if ((this.field_h ^ -1) == -2) {
+                      var9 = var9 + (-var7 + param0.field_p >> -1004351167);
                       break L5;
                     } else {
                       break L5;
@@ -161,12 +165,12 @@ final class me implements j {
                 }
                 L6: {
                   var10 = param1 + param0.field_i;
-                  if (((me) this).field_f == 2) {
+                  if (this.field_f == 2) {
                     var10 = var10 + (-var8 + param0.field_l);
                     break L6;
                   } else {
-                    if (((me) this).field_f == 1) {
-                      var10 = var10 + (param0.field_l + -var8 >> 1);
+                    if (-2 == (this.field_f ^ -1)) {
+                      var10 = var10 + (param0.field_l + -var8 >> -1078860671);
                       break L6;
                     } else {
                       break L6;
@@ -183,23 +187,23 @@ final class me implements j {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var6;
+            stackOut_21_0 = (RuntimeException) (var6);
             stackOut_21_1 = new StringBuilder().append("me.A(");
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -207,15 +211,11 @@ final class me implements j {
               break L7;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = 0;
         field_a = new String[]{"Henhui", "Ziren", "Damen"};
     }

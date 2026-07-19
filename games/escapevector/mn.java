@@ -18,23 +18,40 @@ final class mn extends hg {
     final static String a(int param0, char param1, int param2) {
         int var4 = 0;
         int var6 = EscapeVector.field_A;
-        char[] var7 = new char[20];
+        char[] var7 = new char[param2];
         char[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
             var7[var4] = param1;
         }
-        int var5 = 26;
+        int var5 = 53 / ((49 - param0) / 63);
         return new String(var7);
     }
 
     final static void d(byte param0) {
+        int var1 = 0;
+        int var2 = 0;
         int var3 = 0;
-        int var1 = lh.b((byte) 71) ? 1 : 0;
+        if (param0 >= -112) {
+            mn.a(81, (byte) 59);
+            var1 = lh.b((byte) 71) ? 1 : 0;
+            if (!(rc.field_a != null)) {
+                kh.a(var1 != 0, -1230, false);
+                return;
+            }
+            var2 = vh.f(98);
+            if (!(rc.field_a.field_f == var2)) {
+                var3 = rc.field_a.field_h ? 1 : 0;
+                kh.a(var1 != 0, -1230, var3 != 0);
+                return;
+            }
+            return;
+        }
+        var1 = lh.b((byte) 71) ? 1 : 0;
         if (!(rc.field_a != null)) {
             kh.a(var1 != 0, -1230, false);
             return;
         }
-        int var2 = vh.f(98);
+        var2 = vh.f(98);
         if (!(rc.field_a.field_f == var2)) {
             var3 = rc.field_a.field_h ? 1 : 0;
             kh.a(var1 != 0, -1230, var3 != 0);
@@ -43,8 +60,27 @@ final class mn extends hg {
     }
 
     final static void a(int param0, byte param1) {
-        if (!(bk.field_r == null)) {
-            bk.field_r.b(-1, param0);
+        if (param1 != 44) {
+          L0: {
+            field_n = -42;
+            if (bk.field_r != null) {
+              bk.field_r.b(-1, param0);
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          return;
+        } else {
+          L1: {
+            if (bk.field_r != null) {
+              bk.field_r.b(-1, param0);
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          return;
         }
     }
 
@@ -56,6 +92,7 @@ final class mn extends hg {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var10 = EscapeVector.field_A;
         try {
@@ -72,37 +109,53 @@ final class mn extends hg {
                 break L1;
               }
             }
-            L2: {
-              if (param2 + var6 > em.field_j) {
-                var6 = -param2 + em.field_j;
-                break L2;
-              } else {
-                break L2;
+            if (param0 == -27951) {
+              L2: {
+                if (param2 + var6 > em.field_j) {
+                  var6 = -param2 + em.field_j;
+                  break L2;
+                } else {
+                  break L2;
+                }
               }
-            }
-            var7 = var5_int;
-            L3: while (true) {
-              if (var6 <= var7) {
-                break L0;
-              } else {
-                var8 = var7 * 48 / param4 + 152;
-                var9 = var8 << 16 | var8 << 8 | var8;
-                em.field_i[param1 + em.field_l * (var7 + param2)] = var9;
-                em.field_i[param3 + (param1 + (param2 - -var7) * em.field_l)] = var9;
-                var7++;
-                continue L3;
+              var7 = var5_int;
+              L3: while (true) {
+                if (var6 <= var7) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  var8 = var7 * 48 / param4 + 152;
+                  var9 = var8 << 101571248 | var8 << -1960417720 | var8;
+                  em.field_i[param1 + em.field_l * (var7 + param2)] = var9;
+                  em.field_i[param3 + (param1 + (param2 - -var7) * em.field_l)] = var9;
+                  var7++;
+                  continue L3;
+                }
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var5, "mn.D(" + -27951 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) var5), "mn.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(byte param0) {
         field_h = null;
+        if (param0 < 70) {
+            mn.a(86, -71, -62, 90, 61);
+            field_q = null;
+            return;
+        }
         field_q = null;
     }
 

@@ -9,6 +9,9 @@ final class aj {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != -9097) {
+            return;
+        }
         field_d = null;
         field_c = null;
     }
@@ -17,13 +20,13 @@ final class aj {
         if (param0 <= 0L) {
           return;
         } else {
-          if (param0 % 10L == 0L) {
+          if (-1L == (param0 % 10L ^ -1L)) {
             rq.a((byte) -93, param0 + -1L);
             rq.a((byte) -93, 1L);
             if (param1 == 1) {
               return;
             } else {
-              field_b = null;
+              field_b = (String) null;
               return;
             }
           } else {
@@ -31,7 +34,7 @@ final class aj {
             if (param1 == 1) {
               return;
             } else {
-              field_b = null;
+              field_b = (String) null;
               return;
             }
           }
@@ -43,7 +46,7 @@ final class aj {
         int var5 = 0;
         var5 = Kickabout.field_G;
         if (param0 != -1) {
-          return null;
+          return (String) null;
         } else {
           var4 = param3.indexOf(param1);
           L0: while (true) {
@@ -59,10 +62,6 @@ final class aj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Disruptive behaviour";
         field_c = "Players";
         field_d = "<%0> has no opponent and wins the tournament by default!";

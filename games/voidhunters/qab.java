@@ -9,23 +9,26 @@ final class qab {
     int field_b;
 
     final char a(int param0) {
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
         if (param0 > -75) {
-          ((qab) this).field_b = -65;
-          int fieldTemp$4 = ((qab) this).field_b;
-          ((qab) this).field_b = ((qab) this).field_b + 1;
-          return ((qab) this).field_c.charAt(fieldTemp$4);
+          this.field_b = -65;
+          fieldTemp$4 = this.field_b;
+          this.field_b = this.field_b + 1;
+          return this.field_c.charAt(fieldTemp$4);
         } else {
-          int fieldTemp$5 = ((qab) this).field_b;
-          ((qab) this).field_b = ((qab) this).field_b + 1;
-          return ((qab) this).field_c.charAt(fieldTemp$5);
+          fieldTemp$5 = this.field_b;
+          this.field_b = this.field_b + 1;
+          return this.field_c.charAt(fieldTemp$5);
         }
     }
 
     public final String toString() {
-        return ((qab) this).field_c.substring(0, ((qab) this).field_b) + "|" + ((qab) this).field_c.substring(((qab) this).field_b);
+        return this.field_c.substring(0, this.field_b) + "|" + this.field_c.substring(this.field_b);
     }
 
     final boolean a(byte param0) {
+        char discarded$10 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -34,8 +37,8 @@ final class qab {
         int stackOut_2_0 = 0;
         if (param0 > -102) {
           L0: {
-            char discarded$10 = ((qab) this).a(-42);
-            if (((qab) this).field_e > ((qab) this).field_b) {
+            discarded$10 = this.a(-42);
+            if (this.field_e > this.field_b) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -48,7 +51,7 @@ final class qab {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((qab) this).field_e > ((qab) this).field_b) {
+            if (this.field_e > this.field_b) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -63,13 +66,19 @@ final class qab {
     }
 
     public static void b(int param0) {
+        boolean discarded$0 = false;
+        if (param0 != 0) {
+            discarded$0 = qab.a(107, -118);
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     final static boolean a(int param0, int param1) {
         if (param0 > 32) {
-          if (param1 != 11) {
-            if (param1 == 13) {
+          if ((param1 ^ -1) != -12) {
+            if ((param1 ^ -1) == -14) {
               return false;
             } else {
               return true;
@@ -78,9 +87,9 @@ final class qab {
             return false;
           }
         } else {
-          field_a = null;
-          if (param1 != 11) {
-            if (param1 == 13) {
+          field_a = (String) null;
+          if ((param1 ^ -1) != -12) {
+            if ((param1 ^ -1) == -14) {
               return false;
             } else {
               return true;
@@ -92,20 +101,16 @@ final class qab {
     }
 
     qab(String param0) {
-        ((qab) this).field_b = 0;
+        this.field_b = 0;
         try {
-            ((qab) this).field_c = param0;
-            ((qab) this).field_e = ((qab) this).field_c.length();
+            this.field_c = param0;
+            this.field_e = this.field_c.length();
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "qab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "This password contains repeated characters, and would be easy to guess";
         field_d = 1024;
     }

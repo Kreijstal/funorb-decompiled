@@ -8,6 +8,7 @@ final class vh {
     static wk[] field_b;
 
     final static void a(int param0, tc param1, byte param2) {
+        int discarded$1 = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -52,7 +53,7 @@ final class vh {
             var6 = 0;
             L1: while (true) {
               if (var6 >= param1.field_q.length) {
-                int discarded$1 = var9.f(-103, var4);
+                discarded$1 = var9.f(-103, var4);
                 var9.b((byte) 99, -var4 + var9.field_p);
                 break L0;
               } else {
@@ -66,23 +67,23 @@ final class vh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_0 = (RuntimeException) (var3);
             stackOut_6_1 = new StringBuilder().append("vh.B(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -90,13 +91,14 @@ final class vh {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ')');
         }
     }
 
     final static wk[] a(int param0, cm param1, int param2, byte param3) {
+        wk[] discarded$2 = null;
         RuntimeException var4 = null;
-        Object var5 = null;
+        cm var5 = null;
         wk[] stackIn_6_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -122,8 +124,8 @@ final class vh {
                 if (param3 > 16) {
                   break L1;
                 } else {
-                  var5 = null;
-                  wk[] discarded$2 = vh.a(83, (cm) null, 117, (byte) 119);
+                  var5 = (cm) null;
+                  discarded$2 = vh.a(83, (cm) null, 117, (byte) 119);
                   break L1;
                 }
               }
@@ -138,23 +140,23 @@ final class vh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
+            stackOut_7_0 = (RuntimeException) (var4);
             stackOut_7_1 = new StringBuilder().append("vh.C(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -162,12 +164,15 @@ final class vh {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_6_0;
     }
 
     public static void a(int param0) {
+        if (param0 >= -1) {
+            return;
+        }
         field_b = null;
         field_d = null;
     }
@@ -185,15 +190,11 @@ final class vh {
         if (!(!uc.field_g)) {
             return false;
         }
-        int var4 = -3;
+        int var4 = 10 / ((param2 - 40) / 40);
         return he.a((byte) -122, param1, param3);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 200;
         field_c = 34;
     }

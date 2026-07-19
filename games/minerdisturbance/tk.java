@@ -12,14 +12,18 @@ final class tk implements uj {
     static String field_c;
 
     final static void b(boolean param0) {
-        nk var1 = (nk) (Object) eb.field_f.c(51510);
+        nk var1 = (nk) ((Object) eb.field_f.c(51510));
         if (!(var1 != null)) {
             throw new IllegalStateException();
         }
         eh.a(var1.field_y, var1.field_n, var1.field_s);
         eh.a(var1.field_r, var1.field_o, var1.field_t, var1.field_q);
         var1.field_y = null;
-        ah.field_g.a((byte) 91, (pi) (Object) var1);
+        ah.field_g.a((byte) 91, var1);
+        if (!param0) {
+            bi var2 = (bi) null;
+            tk.a((bi) null, -86, (byte) -122);
+        }
     }
 
     final static void a(String param0, java.applet.Applet param1, byte param2) {
@@ -46,7 +50,7 @@ final class tk implements uj {
                 }
                 ie.a(param1, true);
             } catch (RuntimeException runtimeException) {
-                throw lj.a((Throwable) (Object) runtimeException, "tk.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+                throw lj.a((Throwable) ((Object) runtimeException), "tk.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -61,20 +65,51 @@ final class tk implements uj {
             var3 = sn.field_c;
             var3.d((byte) -82, param1);
             var3.c(param0.field_o, 25564);
+            if (param2 != -102) {
+                tk.b(true);
+            }
             var3.b((byte) 124, param0.field_n);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "tk.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + -102 + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "tk.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static boolean b(int param0) {
-        return null != ll.field_a && ll.field_a.e((byte) 83) != null;
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
+        if (param0 > 126) {
+          L0: {
+            L1: {
+              if (null == ll.field_a) {
+                break L1;
+              } else {
+                if (ll.field_a.e((byte) 83) == null) {
+                  break L1;
+                } else {
+                  stackOut_4_0 = 1;
+                  stackIn_6_0 = stackOut_4_0;
+                  break L0;
+                }
+              }
+            }
+            stackOut_5_0 = 0;
+            stackIn_6_0 = stackOut_5_0;
+            break L0;
+          }
+          return stackIn_6_0 != 0;
+        } else {
+          return false;
+        }
     }
 
     public static void a(int param0) {
         field_d = null;
         field_c = null;
         field_e = null;
+        if (param0 != 8225) {
+            return;
+        }
         field_b = null;
         field_f = null;
     }
@@ -88,129 +123,140 @@ final class tk implements uj {
         int var6 = 0;
         char[] var7 = null;
         char[] var8 = null;
-        char[] var9 = null;
-        char[] var10 = null;
-        String stackIn_21_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
+        String stackIn_3_0 = null;
+        String stackIn_22_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_20_0 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
+        String stackOut_21_0 = null;
+        String stackOut_2_0 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
         RuntimeException stackOut_24_0 = null;
         StringBuilder stackOut_24_1 = null;
         String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         var6 = MinerDisturbance.field_ab;
         try {
           L0: {
             var2_int = param1.length();
-            L1: {
-              if (var2_int <= 20) {
-                break L1;
-              } else {
-                var2_int = 20;
-                break L1;
+            if (param0 == 732) {
+              L1: {
+                if (-21 <= (var2_int ^ -1)) {
+                  break L1;
+                } else {
+                  var2_int = 20;
+                  break L1;
+                }
               }
-            }
-            var10 = new char[var2_int];
-            var9 = var10;
-            var8 = var9;
-            var7 = var8;
-            var3 = var7;
-            var4 = 0;
-            L2: while (true) {
-              if (var2_int <= var4) {
-                stackOut_20_0 = new String(var10);
-                stackIn_21_0 = stackOut_20_0;
-                break L0;
-              } else {
-                L3: {
-                  L4: {
-                    var5 = param1.charAt(var4);
-                    if (var5 < 65) {
-                      break L4;
-                    } else {
-                      if (var5 <= 90) {
-                        var3[var4] = (char)(97 + var5 - 65);
-                        break L3;
-                      } else {
+              var8 = new char[var2_int];
+              var7 = var8;
+              var3 = var7;
+              var4 = 0;
+              L2: while (true) {
+                if (var2_int <= var4) {
+                  stackOut_21_0 = new String(var8);
+                  stackIn_22_0 = stackOut_21_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  L3: {
+                    L4: {
+                      var5 = param1.charAt(var4);
+                      if (var5 < 65) {
                         break L4;
-                      }
-                    }
-                  }
-                  L5: {
-                    L6: {
-                      if (97 > var5) {
-                        break L6;
                       } else {
-                        if (var5 <= 122) {
-                          break L5;
+                        if (var5 <= 90) {
+                          var3[var4] = (char)(97 + var5 - 65);
+                          break L3;
                         } else {
-                          break L6;
+                          break L4;
                         }
                       }
                     }
-                    L7: {
-                      if (var5 < 48) {
-                        break L7;
-                      } else {
-                        if (var5 > 57) {
+                    L5: {
+                      L6: {
+                        if (97 > var5) {
+                          break L6;
+                        } else {
+                          if (var5 <= 122) {
+                            break L5;
+                          } else {
+                            break L6;
+                          }
+                        }
+                      }
+                      L7: {
+                        if (var5 < 48) {
                           break L7;
                         } else {
-                          break L5;
+                          if (var5 > 57) {
+                            break L7;
+                          } else {
+                            break L5;
+                          }
                         }
                       }
+                      var3[var4] = (char)95;
+                      break L3;
                     }
-                    var3[var4] = '_';
+                    var3[var4] = (char)var5;
                     break L3;
                   }
-                  var3[var4] = (char)var5;
-                  break L3;
+                  var4++;
+                  continue L2;
                 }
-                var4++;
-                continue L2;
               }
+            } else {
+              stackOut_2_0 = (String) null;
+              stackIn_3_0 = stackOut_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("tk.C(").append(732).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_23_0 = (RuntimeException) (var2);
+            stackOut_23_1 = new StringBuilder().append("tk.C(").append(param0).append(',');
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
               break L8;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
               break L8;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
-        return stackIn_21_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_22_0;
+        }
     }
 
     public final void a(boolean param0) {
@@ -222,6 +268,12 @@ final class tk implements uj {
     }
 
     final static ud[] a(int param0, ld param1) {
+        int discarded$12 = 0;
+        int discarded$13 = 0;
+        int discarded$14 = 0;
+        int discarded$15 = 0;
+        int discarded$16 = 0;
+        int discarded$17 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -253,27 +305,27 @@ final class tk implements uj {
         try {
           L0: {
             var2_int = param1.c((byte) -104, 8);
-            if (var2_int <= 0) {
+            if (-1 <= (var2_int ^ -1)) {
               var3 = param1.c((byte) -122, 12);
               var4 = new ud[var3];
               var5 = 0;
-              var6 = -1;
+              var6 = -77 % ((param0 - 67) / 45);
               L1: while (true) {
                 if (var5 >= var3) {
-                  stackOut_10_0 = (ud[]) var4;
+                  stackOut_10_0 = (ud[]) (var4);
                   stackIn_11_0 = stackOut_10_0;
                   break L0;
                 } else {
                   L2: {
                     if (ql.a(param1, (byte) 100)) {
                       var7 = new ud();
-                      int discarded$12 = param1.c((byte) -95, 24);
-                      int discarded$13 = param1.c((byte) -81, 24);
+                      discarded$12 = param1.c((byte) -95, 24);
+                      discarded$13 = param1.c((byte) -81, 24);
                       var7.field_d = param1.c((byte) -99, 24);
-                      int discarded$14 = param1.c((byte) -72, 9);
-                      int discarded$15 = param1.c((byte) -83, 12);
-                      int discarded$16 = param1.c((byte) -68, 12);
-                      int discarded$17 = param1.c((byte) -126, 12);
+                      discarded$14 = param1.c((byte) -72, 9);
+                      discarded$15 = param1.c((byte) -83, 12);
+                      discarded$16 = param1.c((byte) -68, 12);
+                      discarded$17 = param1.c((byte) -126, 12);
                       var4[var5] = var7;
                       break L2;
                     } else {
@@ -294,23 +346,23 @@ final class tk implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var2;
-            stackOut_12_1 = new StringBuilder().append("tk.F(").append(-123).append(',');
+            stackOut_12_0 = (RuntimeException) (var2);
+            stackOut_12_1 = new StringBuilder().append("tk.F(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -318,7 +370,7 @@ final class tk implements uj {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
         return stackIn_11_0;
     }
@@ -329,11 +381,7 @@ final class tk implements uj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_e = new char[]{'€', ' ', '‚', 'ƒ', '„', '…', '†', '‡', 'ˆ', '‰', 'Š', '‹', 'Œ', ' ', 'Ž', ' ', ' ', '‘', '’', '“', '”', '•', '–', '—', '˜', '™', 'š', '›', 'œ', ' ', 'ž', 'Ÿ'};
+        field_e = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
         field_f = "Cancel";
         field_b = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_c = "Password: ";

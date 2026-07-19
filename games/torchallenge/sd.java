@@ -12,13 +12,22 @@ final class sd {
     static int field_b;
 
     public static void a(byte param0) {
-        field_f = null;
-        field_g = null;
-        field_e = null;
+        if (param0 > -42) {
+          field_g = (String) null;
+          field_f = null;
+          field_g = null;
+          field_e = null;
+          return;
+        } else {
+          field_f = null;
+          field_g = null;
+          field_e = null;
+          return;
+        }
     }
 
     final static void a(int param0) {
-        Object var2 = null;
+        java.awt.Component var2 = null;
         hc.field_Q = false;
         lh.field_s = -1;
         if (param0 > 120) {
@@ -35,7 +44,7 @@ final class sd {
             return;
           }
         } else {
-          var2 = null;
+          var2 = (java.awt.Component) null;
           sd.a((byte) -66, (java.awt.Component) null);
           if (null == ki.field_d) {
             ub.field_n = -1;
@@ -63,23 +72,19 @@ final class sd {
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
-            param1.removeKeyListener((java.awt.event.KeyListener) (Object) hl.field_d);
+            param1.removeKeyListener(hl.field_d);
             if (param0 != 69) {
-                Object var3 = null;
+                java.awt.Component var3 = (java.awt.Component) null;
                 sd.a((byte) 28, (java.awt.Component) null);
             }
-            param1.removeFocusListener((java.awt.event.FocusListener) (Object) hl.field_d);
+            param1.removeFocusListener(hl.field_d);
             df.field_Q = -1;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "sd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "sd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Music: ";
         field_e = new hb("email");
         field_d = 0;

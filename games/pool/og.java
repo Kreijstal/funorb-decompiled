@@ -32,7 +32,7 @@ final class og extends ob {
     final static void a(java.awt.Frame param0, sj param1, int param2) {
         le var3 = null;
         RuntimeException var3_ref = null;
-        Object var4 = null;
+        sj var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -70,7 +70,7 @@ final class og extends ob {
               if (param2 == 24442) {
                 break L1;
               } else {
-                var4 = null;
+                var4 = (sj) null;
                 og.a((java.awt.Frame) null, (sj) null, 107);
                 break L1;
               }
@@ -78,8 +78,8 @@ final class og extends ob {
             L2: while (true) {
               var3 = param1.a(param0, false);
               L3: while (true) {
-                if (-1 != var3.field_f) {
-                  if (-2 == var3.field_f) {
+                if (-1 != (var3.field_f ^ -1)) {
+                  if (-2 == (var3.field_f ^ -1)) {
                     param0.setVisible(false);
                     param0.dispose();
                     break L0;
@@ -98,23 +98,23 @@ final class og extends ob {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3_ref;
+            stackOut_9_0 = (RuntimeException) (var3_ref);
             stackOut_9_1 = new StringBuilder().append("og.E(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -123,23 +123,23 @@ final class og extends ob {
             }
           }
           L5: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -147,32 +147,28 @@ final class og extends ob {
               break L5;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ')');
         }
     }
 
     final int b(byte param0, int param1) {
         if (param0 == 6) {
-          if (((og) this).field_h.length + -1 <= param1) {
-            return ((og) this).field_x + param1 * ((og) this).field_s;
+          if (this.field_h.length + -1 <= param1) {
+            return this.field_x + param1 * this.field_s;
           } else {
-            return ((og) this).field_x + param1 * (-8 + ((og) this).field_s);
+            return this.field_x + param1 * (-8 + this.field_s);
           }
         } else {
-          field_H = null;
-          if (((og) this).field_h.length + -1 <= param1) {
-            return ((og) this).field_x + param1 * ((og) this).field_s;
+          field_H = (String) null;
+          if (this.field_h.length + -1 <= param1) {
+            return this.field_x + param1 * this.field_s;
           } else {
-            return ((og) this).field_x + param1 * (-8 + ((og) this).field_s);
+            return this.field_x + param1 * (-8 + this.field_s);
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_H = "Offer unrated rematch";
         field_J = new int[]{62, 20, 21, 49, 5, 3, 61};
         field_L = new nl();

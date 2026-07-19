@@ -18,16 +18,12 @@ abstract class he extends wt {
     abstract Object a(byte param0);
 
     he(int param0) {
-        ((he) this).field_p = param0;
+        this.field_p = param0;
     }
 
     abstract boolean e(int param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = 0;
         field_o = new eg();
     }

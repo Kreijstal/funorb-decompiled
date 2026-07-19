@@ -16,10 +16,15 @@ abstract class sc {
     abstract void a(int param0, java.awt.Component param1, int param2, byte param3);
 
     final static dm a(byte param0) {
+        int discarded$0 = 0;
         int var4_int = 0;
         int var1 = rc.field_j[0] * hl.field_K[0];
         byte[] var2 = mj.field_a[0];
         int[] var3 = new int[var1];
+        if (param0 != -60) {
+            Random var5 = (Random) null;
+            discarded$0 = sc.a((byte) 50, (Random) null, 37);
+        }
         for (var4_int = 0; var4_int < var1; var4_int++) {
             var3[var4_int] = cm.field_j[cd.a(255, (int) var2[var4_int])];
         }
@@ -29,7 +34,12 @@ abstract class sc {
     }
 
     public static void b(byte param0) {
+        int discarded$0 = 0;
         field_b = null;
+        if (param0 != 58) {
+            Random var2 = (Random) null;
+            discarded$0 = sc.a((byte) 47, (Random) null, -73);
+        }
     }
 
     final static int a(byte param0, Random param1, int param2) {
@@ -46,6 +56,7 @@ abstract class sc {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_11_0 = 0;
         int stackOut_6_0 = 0;
@@ -61,7 +72,7 @@ abstract class sc {
         try {
           L0: {
             if (param0 == -75) {
-              if (param2 > 0) {
+              if (-1 > (param2 ^ -1)) {
                 if (!uj.a(true, param2)) {
                   var3_int = -(int)(4294967296L % (long)param2) + -2147483648;
                   L1: while (true) {
@@ -69,15 +80,17 @@ abstract class sc {
                     if (var3_int > var4) {
                       stackOut_11_0 = jc.a(var4, param2, param0 ^ 121);
                       stackIn_12_0 = stackOut_11_0;
+                      decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
                       continue L1;
                     }
                   }
                 } else {
-                  stackOut_6_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> 32);
+                  stackOut_6_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> -1102483296);
                   stackIn_7_0 = stackOut_6_0;
-                  return stackIn_7_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               } else {
                 throw new IllegalArgumentException();
@@ -85,30 +98,31 @@ abstract class sc {
             } else {
               stackOut_1_0 = 102;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_0 = (RuntimeException) (var3);
             stackOut_13_1 = new StringBuilder().append("sc.J(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -116,24 +130,29 @@ abstract class sc {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ')');
         }
-        return stackIn_12_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0;
+          } else {
+            return stackIn_12_0;
+          }
+        }
     }
 
     final void a(int param0) {
-        vb.a(((sc) this).field_d, ((sc) this).field_a, ((sc) this).field_c);
+        int discarded$0 = 0;
+        vb.a(this.field_d, this.field_a, this.field_c);
         if (param0 != 255) {
-            Object var3 = null;
-            int discarded$0 = sc.a((byte) -94, (Random) null, 54);
+            Random var3 = (Random) null;
+            discarded$0 = sc.a((byte) -94, (Random) null, 54);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new fe();
     }
 }

@@ -14,6 +14,7 @@ final class jf {
     }
 
     final static boolean a(int param0, CharSequence param1) {
+        boolean discarded$2 = false;
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -39,7 +40,7 @@ final class jf {
               if (param0 == -13181) {
                 break L1;
               } else {
-                boolean discarded$2 = jf.a(74, (byte) -66, -15);
+                discarded$2 = jf.a(74, (byte) -66, -15);
                 break L1;
               }
             }
@@ -51,23 +52,23 @@ final class jf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("jf.B(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -75,7 +76,7 @@ final class jf {
               break L2;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -108,10 +109,6 @@ final class jf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new jn();
         field_d = new int[128];
         field_e = new int[8192];

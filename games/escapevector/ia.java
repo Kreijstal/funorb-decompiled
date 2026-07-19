@@ -49,10 +49,10 @@ final class ia {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = EscapeVector.field_A;
-        for (var6 = 0; ((ia) this).field_K > var6; var6++) {
-            ((ia) this).field_L[var6] = (short)(((ia) this).field_L[var6] * param3 / param1);
-            ((ia) this).field_r[var6] = (short)(((ia) this).field_r[var6] * param2 / param1);
-            ((ia) this).field_J[var6] = (short)(((ia) this).field_J[var6] * param0 / param1);
+        for (var6 = 0; this.field_K > var6; var6++) {
+            this.field_L[var6] = (short)(this.field_L[var6] * param3 / param1);
+            this.field_r[var6] = (short)(this.field_r[var6] * param2 / param1);
+            this.field_J[var6] = (short)(this.field_J[var6] * param0 / param1);
         }
         this.b((byte) 77);
         var6 = -28 % ((64 - param4) / 54);
@@ -71,8 +71,8 @@ final class ia {
         int var11 = 0;
         int var12 = 0;
         var12 = EscapeVector.field_A;
-        if (!((ia) this).field_B) {
-          ((ia) this).field_B = true;
+        if (!this.field_B) {
+          this.field_B = true;
           var2 = 32767;
           var3 = 32767;
           var4 = 32767;
@@ -81,22 +81,22 @@ final class ia {
           var7 = -32768;
           var8 = 0;
           L0: while (true) {
-            if (var8 >= ((ia) this).field_K) {
-              ((ia) this).field_R = var6;
-              ((ia) this).field_a = var5;
+            if (var8 >= this.field_K) {
+              this.field_R = var6;
+              this.field_a = var5;
               if (param0 == 49) {
-                ((ia) this).field_i = var3;
-                ((ia) this).field_b = var2;
-                ((ia) this).field_g = var4;
-                ((ia) this).field_O = var7;
+                this.field_i = var3;
+                this.field_b = var2;
+                this.field_g = var4;
+                this.field_O = var7;
                 return;
               } else {
                 return;
               }
             } else {
               L1: {
-                var9 = ((ia) this).field_L[var8];
-                var10 = ((ia) this).field_r[var8];
+                var9 = this.field_L[var8];
+                var10 = this.field_r[var8];
                 if (var5 < var9) {
                   var5 = var9;
                   break L1;
@@ -129,7 +129,7 @@ final class ia {
                 }
               }
               L5: {
-                var11 = ((ia) this).field_J[var8];
+                var11 = this.field_J[var8];
                 if (var11 >= var4) {
                   break L5;
                 } else {
@@ -153,36 +153,38 @@ final class ia {
     }
 
     private final void b(byte param0) {
-        ((ia) this).field_B = false;
+        this.field_B = false;
+        if (param0 != 77) {
+            this.a((byte) -127);
+        }
     }
 
     public static void a(boolean param0) {
         field_z = null;
         field_y = null;
+        if (!param0) {
+            field_p = (String) null;
+        }
         field_p = null;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = EscapeVector.field_A;
-        for (var5 = param1; ((ia) this).field_K > var5; var5++) {
-            ((ia) this).field_L[var5] = (short)(((ia) this).field_L[var5] + param2);
-            ((ia) this).field_r[var5] = (short)(((ia) this).field_r[var5] + param3);
-            ((ia) this).field_J[var5] = (short)(((ia) this).field_J[var5] + param0);
+        for (var5 = param1; this.field_K > var5; var5++) {
+            this.field_L[var5] = (short)(this.field_L[var5] + param2);
+            this.field_r[var5] = (short)(this.field_r[var5] + param3);
+            this.field_J[var5] = (short)(this.field_J[var5] + param0);
         }
         this.b((byte) 77);
     }
 
     ia() {
-        ((ia) this).field_I = (byte) 0;
-        ((ia) this).field_B = false;
+        this.field_I = (byte) 0;
+        this.field_B = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "The simulator is a training environment. Your objectives will be given to you at the beginning of each mission. Be prepared for anything.";
         field_y = new al();
     }

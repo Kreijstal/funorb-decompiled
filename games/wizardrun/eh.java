@@ -29,6 +29,7 @@ final class eh implements bf {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
         ub stackOut_2_0 = null;
@@ -46,17 +47,17 @@ final class eh implements bf {
             L1: {
               if (!(param2 instanceof vb)) {
                 stackOut_3_0 = null;
-                stackIn_4_0 = (ub) (Object) stackOut_3_0;
+                stackIn_4_0 = (ub) ((Object) stackOut_3_0);
                 break L1;
               } else {
-                stackOut_2_0 = (ub) param2;
+                stackOut_2_0 = (ub) (param2);
                 stackIn_4_0 = stackOut_2_0;
                 break L1;
               }
             }
             L2: {
-              var12 = (vb) (Object) stackIn_4_0;
-              ed.c(param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, ((eh) this).field_a);
+              var12 = (vb) ((Object) stackIn_4_0);
+              ed.c(param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, this.field_a);
               if (var12 != null) {
                 break L2;
               } else {
@@ -67,47 +68,49 @@ final class eh implements bf {
             var8 = var12.field_G + (param2.field_o + param0);
             if (param3) {
               var9 = param2.field_l + param1 - -var12.field_J;
-              ed.e(var8, var9, var8 - -var7, var9, ((eh) this).field_j);
+              ed.e(var8, var9, var8 - -var7, var9, this.field_j);
               var10 = -1 + var12.d(0);
               L3: while (true) {
-                if (var10 < 0) {
-                  if (((eh) this).field_b != null) {
-                    ((eh) this).field_b.b(var12.field_k, var8 - -(var7 / 2), var12.field_J + var9 + ((eh) this).field_b.field_E, ((eh) this).field_c, ((eh) this).field_g);
+                if (-1 < (var10 ^ -1)) {
+                  if (this.field_b != null) {
+                    this.field_b.b(var12.field_k, var8 - -(var7 / 2), var12.field_J + var9 + this.field_b.field_E, this.field_c, this.field_g);
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     return;
                   }
                 } else {
-                  ed.a(var12.b(-10455, var10) * var7 / var12.e(1) + var8, var9, ((eh) this).field_d, ((eh) this).field_f);
+                  ed.a(var12.b(-10455, var10) * var7 / var12.e(1) + var8, var9, this.field_d, this.field_f);
                   var10--;
                   continue L3;
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var6;
+            stackOut_14_0 = (RuntimeException) (var6);
             stackOut_14_1 = new StringBuilder().append("eh.B(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -115,7 +118,12 @@ final class eh implements bf {
               break L4;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param3 + ',' + param4 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -133,27 +141,27 @@ final class eh implements bf {
 
     eh(vd param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            ((eh) this).field_d = param5;
-            ((eh) this).field_g = param2;
-            ((eh) this).field_j = param3;
-            ((eh) this).field_f = param6;
-            ((eh) this).field_c = param1;
-            ((eh) this).field_b = param0;
-            ((eh) this).field_a = param4;
+            this.field_d = param5;
+            this.field_g = param2;
+            this.field_j = param3;
+            this.field_f = param6;
+            this.field_c = param1;
+            this.field_b = param0;
+            this.field_a = param4;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "eh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "eh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     final static long a(int param0) {
+        if (param0 != 2) {
+            field_e = (uh) null;
+            return d.a((byte) 75) + -eg.field_C;
+        }
         return d.a((byte) 75) + -eg.field_C;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Email is valid";
         field_e = null;
         field_i = " </col>Stage:<col=ffff00>";

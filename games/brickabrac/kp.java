@@ -13,10 +13,11 @@ final class kp {
     final static void a(int param0, byte param1, pn param2) {
         pi var6 = null;
         int var5 = 0;
+        int discarded$0 = 0;
         try {
             var6 = k.field_h;
             int var4 = 107 / ((44 - param1) / 45);
-            var6.e(-13413, 5);
+            var6.e(-13413, param0);
             var6.field_l = var6.field_l + 1;
             var5 = var6.field_l;
             var6.a(-117, 1);
@@ -26,15 +27,15 @@ final class kp {
             var6.a(param2.field_r, (byte) -79);
             var6.a(param2.field_l, (byte) -79);
             var6.a(param2.field_k, (byte) -79);
-            int discarded$0 = var6.d(3, var5);
+            discarded$0 = var6.d(3, var5);
             var6.d((byte) 124, -var5 + var6.field_l);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "kp.B(" + 5 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "kp.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
-        int var1 = 0;
+        int var1 = 10 % ((param0 - -8) / 43);
         field_c = null;
         field_e = null;
         field_d = null;
@@ -42,10 +43,6 @@ final class kp {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new vl();
     }
 }

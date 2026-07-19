@@ -10,22 +10,22 @@ abstract class eq implements sk {
 
     public final String a(int param0) {
         if (param0 >= 115) {
-          if (!((eq) this).b(true)) {
-            if (350L + ((eq) this).field_e > km.b(-1)) {
+          if (!this.b(true)) {
+            if (350L + this.field_e > km.b(-1)) {
               return null;
             } else {
-              return ((eq) this).b(0);
+              return this.b(0);
             }
           } else {
             return null;
           }
         } else {
-          ((eq) this).field_e = 37L;
-          if (!((eq) this).b(true)) {
-            if (350L + ((eq) this).field_e > km.b(-1)) {
+          this.field_e = 37L;
+          if (!this.b(true)) {
+            if (350L + this.field_e > km.b(-1)) {
               return null;
             } else {
-              return ((eq) this).b(0);
+              return this.b(0);
             }
           } else {
             return null;
@@ -41,10 +41,10 @@ abstract class eq implements sk {
     public final void a(boolean param0) {
         if (!param0) {
             eq.b((byte) 82);
-            ((eq) this).field_e = km.b(-1);
+            this.field_e = km.b(-1);
             return;
         }
-        ((eq) this).field_e = km.b(-1);
+        this.field_e = km.b(-1);
     }
 
     abstract String b(int param0);
@@ -52,13 +52,13 @@ abstract class eq implements sk {
     abstract cd c(int param0);
 
     public final cd a(byte param0) {
-        if (!((eq) this).b(true)) {
-          if (((eq) this).field_e + 350L <= km.b(-1)) {
+        if (!this.b(true)) {
+          if (this.field_e + 350L <= km.b(-1)) {
             if (param0 >= -74) {
-              ((eq) this).a(true);
-              return ((eq) this).c(0);
+              this.a(true);
+              return this.c(0);
             } else {
-              return ((eq) this).c(0);
+              return this.c(0);
             }
           } else {
             return q.field_a;
@@ -91,26 +91,26 @@ abstract class eq implements sk {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var9_int = param4 + param0.field_v + param3;
-            var10 = 30 + param3 + (param4 + param0.field_v);
-            var11 = (param0.field_t >> 1) + (param0.field_r + param5);
-            ph.f(var9_int, 0, var10, var11);
-            param0.a(-1 + param4, param5 + -1, 80);
-            param0.a(param4 - 1, 1 + param5, 80);
+            var9_int = -param1 + (param4 + param0.field_v) + param3;
+            var10 = param8 + param3 + (param4 + param0.field_v);
+            var11 = (param0.field_t >> 1607424321) + (param0.field_r + param5);
+            ph.f(var9_int, 0, var10, param7 + var11);
+            param0.a(-1 + param4, param5 + -1, param6);
+            param0.a(param4 - 1, 1 + param5, param6);
             ph.a(mo.field_w);
-            ph.f(1 + var9_int, 0, var10 - -1, var11);
-            param0.a(1 + param4, param5 - 1, 80);
-            param0.a(1 + param4, 1 + param5, 80);
+            ph.f(1 + var9_int, 0, var10 - -1, var11 + param7);
+            param0.a(1 + param4, param5 - 1, param6);
+            param0.a(1 + param4, 1 + param5, param6);
             ph.a(mo.field_w);
-            var9_int = -30 + (param0.field_s + param0.field_v) - (-param4 + param3);
-            var10 = param0.field_v + (param0.field_s + (param4 - param3));
-            ph.f(var9_int, var11, var10, 480);
-            param0.a(param4 + -1, -1 + param5, 80);
-            param0.a(param4 - 1, 1 + param5, 80);
+            var9_int = -param8 + (param0.field_s + param0.field_v) - (-param4 + param3);
+            var10 = param0.field_v + (param0.field_s + (param4 - param3) + -param1);
+            ph.f(var9_int, var11 - param7, var10, 480);
+            param0.a(param4 + -1, -1 + param5, param6);
+            param0.a(param4 - 1, 1 + param5, param6);
             ph.a(mo.field_w);
-            ph.f(var9_int + 1, var11, var10 + 1, 480);
-            param0.a(1 + param4, param5 - 1, 80);
-            param0.a(param4 - -1, 1 + param5, 80);
+            ph.f(var9_int + param2, var11 + -param7, var10 + 1, 480);
+            param0.a(1 + param4, param5 - 1, param6);
+            param0.a(param4 - -1, 1 + param5, param6);
             ph.a(mo.field_w);
             break L0;
           }
@@ -118,23 +118,23 @@ abstract class eq implements sk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var9 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var9;
+            stackOut_2_0 = (RuntimeException) (var9);
             stackOut_2_1 = new StringBuilder().append("eq.Q(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -142,15 +142,11 @@ abstract class eq implements sk {
               break L1;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 0 + ',' + 1 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + 80 + ',' + 0 + ',' + 30 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "<col=2>Look out for:</col>";
         field_a = -1.0;
         field_d = 0L;

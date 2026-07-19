@@ -5,16 +5,16 @@ final class fw {
     static String field_a;
 
     final static lp a(int param0, boolean param1) {
-        lp var2 = (lp) wha.field_J.a((byte) 61, (long)param0);
+        lp var2 = (lp) (wha.field_J.a((byte) 61, (long)param0));
         if (!(var2 == null)) {
             return var2;
         }
-        byte[] var3 = tq.field_g.a(false, 0, param0);
+        byte[] var3 = tq.field_g.a(param1, 0, param0);
         var2 = new lp();
         if (!(var3 == null)) {
             var2.a(-1, param0, new uia(var3));
         }
-        wha.field_J.a(29166, (Object) (Object) var2, (long)param0);
+        wha.field_J.a(29166, var2, (long)param0);
         return var2;
     }
 
@@ -26,10 +26,6 @@ final class fw {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "TAB - hide chat temporarily";
     }
 }

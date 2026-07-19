@@ -17,11 +17,11 @@ final class k implements Iterator {
     static dm field_a;
 
     public final void remove() {
-        if (null == ((k) this).field_c) {
+        if (null == this.field_c) {
             throw new IllegalStateException();
         }
-        ((k) this).field_c.a(false);
-        ((k) this).field_c = null;
+        this.field_c.a(false);
+        this.field_c = null;
     }
 
     final static java.applet.Applet c(int param0) {
@@ -30,9 +30,9 @@ final class k implements Iterator {
         }
         if (param0 <= 104) {
             k.a(83, 4, -82, 86, 115);
-            return (java.applet.Applet) (Object) qa.field_d;
+            return (java.applet.Applet) ((Object) qa.field_d);
         }
-        return (java.applet.Applet) (Object) qa.field_d;
+        return (java.applet.Applet) ((Object) qa.field_d);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -59,33 +59,34 @@ final class k implements Iterator {
     }
 
     public final Object next() {
+        int fieldTemp$2 = 0;
         int var2 = 0;
         Object var3 = null;
         hf var3_ref = null;
         hf var4 = null;
         var2 = Geoblox.field_C;
-        if (((k) this).field_d.field_a[((k) this).field_j + -1] == ((k) this).field_h) {
+        if (this.field_d.field_a[this.field_j + -1] == this.field_h) {
           L0: while (true) {
-            if (((k) this).field_j < ((k) this).field_d.field_c) {
-              int fieldTemp$2 = ((k) this).field_j;
-              ((k) this).field_j = ((k) this).field_j + 1;
-              var3_ref = ((k) this).field_d.field_a[fieldTemp$2].field_b;
-              if (var3_ref == ((k) this).field_d.field_a[((k) this).field_j - 1]) {
+            if (this.field_j < this.field_d.field_c) {
+              fieldTemp$2 = this.field_j;
+              this.field_j = this.field_j + 1;
+              var3_ref = this.field_d.field_a[fieldTemp$2].field_b;
+              if (var3_ref == this.field_d.field_a[this.field_j - 1]) {
                 continue L0;
               } else {
-                ((k) this).field_h = var3_ref.field_b;
-                ((k) this).field_c = var3_ref;
-                return (Object) (Object) var3_ref;
+                this.field_h = var3_ref.field_b;
+                this.field_c = var3_ref;
+                return var3_ref;
               }
             } else {
               return null;
             }
           }
         } else {
-          var4 = ((k) this).field_h;
-          ((k) this).field_h = var4.field_b;
-          ((k) this).field_c = var4;
-          return (Object) (Object) var4;
+          var4 = this.field_h;
+          this.field_h = var4.field_b;
+          this.field_c = var4;
+          return var4;
         }
     }
 
@@ -102,28 +103,29 @@ final class k implements Iterator {
     }
 
     k(gi param0) {
-        ((k) this).field_c = null;
+        this.field_c = null;
         try {
-            ((k) this).field_d = param0;
+            this.field_d = param0;
             this.a(-1);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "k.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final boolean hasNext() {
+        int fieldTemp$1 = 0;
         int var2 = 0;
         var2 = Geoblox.field_C;
-        if (((k) this).field_d.field_a[((k) this).field_j - 1] == ((k) this).field_h) {
+        if (this.field_d.field_a[this.field_j - 1] == this.field_h) {
           L0: while (true) {
-            if (((k) this).field_d.field_c > ((k) this).field_j) {
-              int fieldTemp$1 = ((k) this).field_j;
-              ((k) this).field_j = ((k) this).field_j + 1;
-              if (((k) this).field_d.field_a[fieldTemp$1].field_b != ((k) this).field_d.field_a[((k) this).field_j - 1]) {
-                ((k) this).field_h = ((k) this).field_d.field_a[-1 + ((k) this).field_j].field_b;
+            if (this.field_d.field_c > this.field_j) {
+              fieldTemp$1 = this.field_j;
+              this.field_j = this.field_j + 1;
+              if (this.field_d.field_a[fieldTemp$1].field_b != this.field_d.field_a[this.field_j - 1]) {
+                this.field_h = this.field_d.field_a[-1 + this.field_j].field_b;
                 return true;
               } else {
-                ((k) this).field_h = ((k) this).field_d.field_a[((k) this).field_j - 1];
+                this.field_h = this.field_d.field_a[this.field_j - 1];
                 continue L0;
               }
             } else {
@@ -136,16 +138,18 @@ final class k implements Iterator {
     }
 
     private final void a(int param0) {
-        ((k) this).field_c = null;
-        ((k) this).field_j = 1;
-        ((k) this).field_h = ((k) this).field_d.field_a[0].field_b;
+        this.field_c = null;
+        this.field_j = 1;
+        this.field_h = this.field_d.field_a[0].field_b;
+        if (param0 == -1) {
+          return;
+        } else {
+          this.remove();
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = -1;
         field_e = new tf();
         field_k = "Log in";

@@ -21,6 +21,7 @@ final class sm extends fa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_3_0 = false;
         int stackOut_1_0 = 0;
@@ -35,37 +36,39 @@ final class sm extends fa {
         try {
           L0: {
             if (param1 == -1) {
-              var3 = (CharSequence) (Object) param0;
-              stackOut_3_0 = eq.field_Hb.equals((Object) (Object) dh.a(var3, (byte) 72));
+              var3 = (CharSequence) ((Object) param0);
+              stackOut_3_0 = eq.field_Hb.equals(dh.a(var3, (byte) 72));
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_0 = (RuntimeException) (var2);
             stackOut_5_1 = new StringBuilder().append("sm.B(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -73,83 +76,78 @@ final class sm extends fa {
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final static void a(int param0, boolean param1, int param2) {
         int var3 = 0;
         String var4 = null;
         Object var5 = null;
-        Object var6 = null;
+        String var6 = null;
         CharSequence var7 = null;
-        L0: {
-          if (he.field_f == null) {
-            break L0;
-          } else {
+        CharSequence var8 = null;
+        if (param2 == 0) {
+          if (he.field_f != null) {
             var3 = he.field_f.b(-126, param1);
-            if (var3 != 0) {
-              if (2 != var3) {
-                he.field_f = null;
-                il.field_e = -1;
-                return;
-              } else {
-                if (he.field_f.field_cb == null) {
-                  he.field_f = null;
-                  il.field_e = -1;
-                  return;
-                } else {
-                  if (!he.field_f.field_cb.equals((Object) (Object) "")) {
-                    L1: {
+            if (-1 != (var3 ^ -1)) {
+              if (2 == var3) {
+                if (he.field_f.field_cb != null) {
+                  if (!he.field_f.field_cb.equals("")) {
+                    L0: {
                       if (91 != he.field_f.field_cb.charAt(0)) {
-                        var7 = (CharSequence) (Object) he.field_f.field_cb;
-                        var4 = dh.a(var7, (byte) 26);
-                        break L1;
+                        var8 = (CharSequence) ((Object) he.field_f.field_cb);
+                        var4 = dh.a(var8, (byte) 26);
+                        break L0;
                       } else {
                         var4 = he.field_f.field_cb;
+                        break L0;
+                      }
+                    }
+                    L1: {
+                      var5 = null;
+                      if (il.field_e != 0) {
+                        break L1;
+                      } else {
+                        var5 = jf.a(var4, param0, (byte) 108);
                         break L1;
                       }
                     }
                     L2: {
-                      var5 = null;
-                      if (il.field_e != 0) {
+                      if (-2 == (il.field_e ^ -1)) {
+                        var5 = ff.a(param0, var4, (byte) -106);
                         break L2;
                       } else {
-                        var5 = (Object) (Object) jf.a(var4, 13, (byte) 108);
                         break L2;
                       }
                     }
                     L3: {
-                      if (il.field_e == 1) {
-                        var5 = (Object) (Object) ff.a(13, var4, (byte) -106);
+                      if ((il.field_e ^ -1) == -3) {
+                        var5 = mj.a(-34, var4, param0);
                         break L3;
                       } else {
                         break L3;
                       }
                     }
                     L4: {
-                      if (il.field_e == 2) {
-                        var5 = (Object) (Object) mj.a(-34, var4, 13);
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    L5: {
                       if (il.field_e == 3) {
-                        var5 = (Object) (Object) aq.a(var4, 13, var4, -20867);
-                        break L5;
+                        var5 = aq.a(var4, param0, var4, -20867);
+                        break L4;
                       } else {
-                        break L5;
+                        break L4;
                       }
                     }
                     if (var5 != null) {
-                      var6 = null;
-                      ti.a(0, (String) null, var4, (byte) -59, 2, (String) var5);
+                      var6 = (String) null;
+                      ti.a(0, (String) null, var4, (byte) -59, 2, (String) (var5));
                       he.field_f = null;
                       il.field_e = -1;
-                      break L0;
+                      return;
                     } else {
                       he.field_f = null;
                       il.field_e = -1;
@@ -160,11 +158,109 @@ final class sm extends fa {
                     il.field_e = -1;
                     return;
                   }
+                } else {
+                  he.field_f = null;
+                  il.field_e = -1;
+                  return;
                 }
+              } else {
+                he.field_f = null;
+                il.field_e = -1;
+                return;
               }
             } else {
               return;
             }
+          } else {
+            return;
+          }
+        } else {
+          field_l = true;
+          if (he.field_f != null) {
+            L5: {
+              var3 = he.field_f.b(-126, param1);
+              if (-1 != (var3 ^ -1)) {
+                if (2 == var3) {
+                  if (he.field_f.field_cb != null) {
+                    if (!he.field_f.field_cb.equals("")) {
+                      L6: {
+                        if (91 != he.field_f.field_cb.charAt(0)) {
+                          var7 = (CharSequence) ((Object) he.field_f.field_cb);
+                          var4 = dh.a(var7, (byte) 26);
+                          break L6;
+                        } else {
+                          var4 = he.field_f.field_cb;
+                          break L6;
+                        }
+                      }
+                      L7: {
+                        var5 = null;
+                        if (il.field_e != 0) {
+                          break L7;
+                        } else {
+                          var5 = jf.a(var4, param0, (byte) 108);
+                          break L7;
+                        }
+                      }
+                      L8: {
+                        if (-2 == (il.field_e ^ -1)) {
+                          var5 = ff.a(param0, var4, (byte) -106);
+                          break L8;
+                        } else {
+                          break L8;
+                        }
+                      }
+                      L9: {
+                        if ((il.field_e ^ -1) == -3) {
+                          var5 = mj.a(-34, var4, param0);
+                          break L9;
+                        } else {
+                          break L9;
+                        }
+                      }
+                      L10: {
+                        if (il.field_e == 3) {
+                          var5 = aq.a(var4, param0, var4, -20867);
+                          var4 = (String) (var5);
+                          var4 = (String) (var5);
+                          break L10;
+                        } else {
+                          break L10;
+                        }
+                      }
+                      if (var5 != null) {
+                        var6 = (String) null;
+                        ti.a(0, (String) null, var4, (byte) -59, 2, (String) (var5));
+                        he.field_f = null;
+                        il.field_e = -1;
+                        break L5;
+                      } else {
+                        he.field_f = null;
+                        il.field_e = -1;
+                        return;
+                      }
+                    } else {
+                      he.field_f = null;
+                      il.field_e = -1;
+                      return;
+                    }
+                  } else {
+                    he.field_f = null;
+                    il.field_e = -1;
+                    return;
+                  }
+                } else {
+                  he.field_f = null;
+                  il.field_e = -1;
+                  return;
+                }
+              } else {
+                break L5;
+              }
+            }
+            return;
+          } else {
+            return;
           }
         }
     }
@@ -183,10 +279,6 @@ final class sm extends fa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = false;
         field_k = "(1 player wants to join)";
         field_n = "Please select an option in the '<%0>' row.";

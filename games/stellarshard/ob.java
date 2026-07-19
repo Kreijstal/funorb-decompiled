@@ -9,6 +9,9 @@ final class ob {
 
     public static void a(int param0) {
         field_c = null;
+        if (param0 != 30063) {
+            field_a = 73L;
+        }
         field_b = null;
         field_d = null;
     }
@@ -18,7 +21,11 @@ final class ob {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         int var12 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var12 = stellarshard.field_B;
         try {
@@ -61,12 +68,12 @@ final class ob {
               if (param0 >= 93) {
                 break L5;
               } else {
-                field_b = null;
+                field_b = (fh) null;
                 break L5;
               }
             }
             L6: {
-              if (param3 <= 0) {
+              if ((param3 ^ -1) >= -1) {
                 break L6;
               } else {
                 if (0 >= param4) {
@@ -77,6 +84,7 @@ final class ob {
                   param5 = -param4;
                   L7: while (true) {
                     if (param5 >= 0) {
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       param1 = -param3;
@@ -86,17 +94,36 @@ final class ob {
                           param5++;
                           continue L7;
                         } else {
-                          L9: {
-                            var8 = ti.field_a[var6_int];
-                            if ((255 & var8 >> 8) <= 64) {
-                              break L9;
-                            } else {
-                              break L9;
+                          var8 = ti.field_a[var6_int];
+                          if (param2 < (255 & var8 >> -980601784)) {
+                            L9: {
+                              if ((var8 >> -635973080 & 255) >= (var8 & 16711680) >> -311196592) {
+                                L10: {
+                                  var9 = (510 & var8 >> -741485937) - 60;
+                                  if (255 >= var9) {
+                                    break L10;
+                                  } else {
+                                    var9 = 255;
+                                    break L10;
+                                  }
+                                }
+                                var10 = var8 & 65280;
+                                var10 = 65280 & (var10 >> 2075161249) + -(var10 >> -798840315);
+                                var11 = (var8 & 255) >> -2050604381;
+                                ti.field_a[var6_int] = vf.b(var11, vf.b(var10, var9 << -1230962832));
+                                break L9;
+                              } else {
+                                break L9;
+                              }
                             }
+                            var6_int++;
+                            param1++;
+                            continue L8;
+                          } else {
+                            var6_int++;
+                            param1++;
+                            continue L8;
                           }
-                          var6_int++;
-                          param1++;
-                          continue L8;
                         }
                       }
                     }
@@ -104,20 +131,22 @@ final class ob {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var6, "ob.A(" + param0 + ',' + param1 + ',' + 64 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ma.a((Throwable) ((Object) var6), "ob.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Names can only contain letters, numbers, spaces and underscores";
         field_c = new int[128];
     }

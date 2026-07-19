@@ -14,18 +14,14 @@ final class wl extends kd {
     private static String field_z;
 
     wl(int param0, int param1, int param2, int param3, int param4) {
-        ((wl) this).field_h = param4;
-        ((wl) this).field_o = param0;
-        ((wl) this).field_j = param1;
-        ((wl) this).field_k = param2;
-        ((wl) this).field_l = param3;
+        this.field_h = param4;
+        this.field_o = param0;
+        this.field_j = param1;
+        this.field_k = param2;
+        this.field_l = param3;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "wl.<init>(";
         field_n = Math.atan2(1.0, 0.0);
         field_i = -1;

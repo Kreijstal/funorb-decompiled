@@ -16,14 +16,14 @@ class gi {
         int stackOut_2_0 = 0;
         if (param0 != -1387) {
           field_f = 76;
-          if (((gi) this).field_b != null) {
+          if (this.field_b != null) {
             return true;
           } else {
             return false;
           }
         } else {
           L0: {
-            if (((gi) this).field_b == null) {
+            if (this.field_b == null) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -40,37 +40,37 @@ class gi {
     final static void a(ag param0, int param1) {
         try {
             if (param1 != 3408) {
-                Object var3 = null;
+                ag var3 = (ag) null;
                 gi.a((ag) null, -47);
             }
-            ej.field_a.b((ic) (Object) param0);
+            ej.field_a.b(param0);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "gi.TB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "gi.TB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void b(int param0) {
-        field_a = null;
+        field_a = (byte[][][]) null;
         field_d = null;
         if (param0 != 10589) {
-            field_d = null;
+            field_d = (he[]) null;
         }
     }
 
     final void a(int param0) {
-        if (null == ((gi) this).field_b) {
+        if (null == this.field_b) {
           return;
         } else {
-          ((gi) this).field_b.field_e = ((gi) this).field_e;
-          ((gi) this).field_e.field_b = ((gi) this).field_b;
+          this.field_b.field_e = this.field_e;
+          this.field_e.field_b = this.field_b;
           if (param0 != -16175) {
             gi.b(21);
-            ((gi) this).field_b = null;
-            ((gi) this).field_e = null;
+            this.field_b = null;
+            this.field_e = null;
             return;
           } else {
-            ((gi) this).field_b = null;
-            ((gi) this).field_e = null;
+            this.field_b = null;
+            this.field_e = null;
             return;
           }
         }

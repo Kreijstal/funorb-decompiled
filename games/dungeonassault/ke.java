@@ -14,7 +14,7 @@ final class ke {
     }
 
     public static void a(int param0) {
-        int var1 = 2;
+        int var1 = 59 % ((58 - param0) / 55);
         field_a = null;
         field_c = null;
     }
@@ -23,7 +23,7 @@ final class ke {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        var1 = (Object) (Object) ib.field_f;
+        var1 = ib.field_f;
         synchronized (var1) {
           L0: {
             la.field_g = ua.field_a;
@@ -94,23 +94,23 @@ final class ke {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4_ref;
+            stackOut_4_0 = (RuntimeException) (var4_ref);
             stackOut_4_1 = new StringBuilder().append("ke.A(").append(param0).append(',').append(param1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -118,7 +118,7 @@ final class ke {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param3 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param3 + ')');
         }
         return stackIn_3_0;
     }
@@ -127,7 +127,7 @@ final class ke {
         if (param0 > 56) {
           if (10 != param1) {
             if (param1 != 12) {
-              if (param1 != 19) {
+              if ((param1 ^ -1) != -20) {
                 if (param1 != 18) {
                   if (param1 == 9) {
                     return true;
@@ -152,10 +152,6 @@ final class ke {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Being a python, the snake in this room is not venomous, but its massive size makes it no less deadly to slow-witted raiders.";
         field_e = 0;
         field_c = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};

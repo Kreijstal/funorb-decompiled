@@ -13,7 +13,7 @@ final class si {
         int var3 = 0;
         int[] var2 = new int[param0.length];
         for (var3 = param0.length - 1; var3 >= 0; var3--) {
-            var2[var3] = (int)Math.round(param0[var3] * (double)65536);
+            var2[var3] = (int)Math.round(param0[var3] * (double)(1 << param1));
         }
         return var2;
     }
@@ -426,89 +426,93 @@ final class si {
         double[] var34 = null;
         double[] var35 = null;
         double[] var36 = null;
-        L0: {
-          L1: {
-            var33 = new double[3];
-            si.a(param0, param1, param2, -param3, -param4, var33);
-            var35 = new double[3];
-            var34 = new double[3];
-            si.a(param0, param1, param2, param3, -param4, var34);
-            var36 = new double[3];
-            si.c(param0, var33);
-            si.c(param0, var34);
-            var14 = 0;
-            if (var33[2] < 0.5) {
-              break L1;
-            } else {
-              if (var34[2] >= 0.5) {
-                si.a(param0, param1, param2, -param3, param4, var35);
-                si.a(param0, param1, param2, param3, param4, var36);
-                si.a(param0, param1, param2, -param3, -param4, var33);
-                si.a(param0, param1, param2, param3, -param4, var34);
-                si.b(param0, var33);
-                si.b(param0, var34);
-                break L0;
-              } else {
+        if (param6 >= 4) {
+          L0: {
+            L1: {
+              var33 = new double[3];
+              si.a(param0, param1, param2, -param3, -param4, var33);
+              var35 = new double[3];
+              var34 = new double[3];
+              si.a(param0, param1, param2, param3, -param4, var34);
+              var36 = new double[3];
+              si.c(param0, var33);
+              si.c(param0, var34);
+              var14 = 0;
+              if (var33[2] < 0.5) {
                 break L1;
+              } else {
+                if (var34[2] >= 0.5) {
+                  si.a(param0, param1, param2, -param3, param4, var35);
+                  si.a(param0, param1, param2, param3, param4, var36);
+                  si.a(param0, param1, param2, -param3, -param4, var33);
+                  si.a(param0, param1, param2, param3, -param4, var34);
+                  si.b(param0, var33);
+                  si.b(param0, var34);
+                  break L0;
+                } else {
+                  break L1;
+                }
               }
             }
-          }
-          L2: {
-            if (var33[2] >= 0.5) {
-              break L2;
-            } else {
-              if (var34[2] >= 0.5) {
+            L2: {
+              if (var33[2] >= 0.5) {
                 break L2;
               } else {
-                return;
+                if (var34[2] >= 0.5) {
+                  break L2;
+                } else {
+                  return;
+                }
               }
             }
+            L3: {
+              var15_double = 0.5 - param0[9] * (param1[0] - param0[0]) + param0[10] * (param1[1] - param0[1]) + param0[11] * (param1[2] - param0[2]);
+              var15_double = var15_double / (param0[9] * param2[0] + param0[10] * param2[1] + param0[11] * param2[2]);
+              var17_double = -param3;
+              var19_double = param3;
+              if (var33[2] >= 0.5) {
+                var19_double = var15_double;
+                var14 = 2;
+                break L3;
+              } else {
+                var17_double = var15_double;
+                var14 = 1;
+                break L3;
+              }
+            }
+            si.a(param0, param1, param2, var17_double, -param4, var33);
+            si.a(param0, param1, param2, var17_double, param4, var35);
+            si.a(param0, param1, param2, var19_double, -param4, var34);
+            si.a(param0, param1, param2, var19_double, param4, var36);
+            si.b(param0, var33);
+            si.b(param0, var34);
+            break L0;
           }
-          L3: {
-            var15_double = 0.5 - param0[9] * (param1[0] - param0[0]) + param0[10] * (param1[1] - param0[1]) + param0[11] * (param1[2] - param0[2]);
-            var15_double = var15_double / (param0[9] * param2[0] + param0[10] * param2[1] + param0[11] * param2[2]);
-            var17_double = -param3;
-            var19_double = param3;
-            if (var33[2] >= 0.5) {
-              var19_double = var15_double;
-              var14 = 2;
-              break L3;
+          L4: {
+            si.b(param0, var35);
+            si.b(param0, var36);
+            var15 = (int)var33[0];
+            var16 = (int)var34[0];
+            var17 = (int)var33[1];
+            var18 = (int)var34[1];
+            var19 = (int)(var35[1] - var33[1]);
+            var20 = (int)(var36[1] - var34[1]);
+            rk.a(var15, var17, var16, var18, (int)((double)(param6 << 7) * var33[2]), param7, param5);
+            if (var14 == 1) {
+              break L4;
             } else {
-              var17_double = var15_double;
-              var14 = 1;
-              break L3;
+              rk.a(var15, var17, var15, var17 + var19, (int)((double)(param6 << 7) * var33[2]), param7, param5);
+              break L4;
             }
           }
-          si.a(param0, param1, param2, var17_double, -param4, var33);
-          si.a(param0, param1, param2, var17_double, param4, var35);
-          si.a(param0, param1, param2, var19_double, -param4, var34);
-          si.a(param0, param1, param2, var19_double, param4, var36);
-          si.b(param0, var33);
-          si.b(param0, var34);
-          break L0;
-        }
-        L4: {
-          si.b(param0, var35);
-          si.b(param0, var36);
-          var15 = (int)var33[0];
-          var16 = (int)var34[0];
-          var17 = (int)var33[1];
-          var18 = (int)var34[1];
-          var19 = (int)(var35[1] - var33[1]);
-          var20 = (int)(var36[1] - var34[1]);
-          rk.a(var15, var17, var16, var18, (int)((double)5120 * var33[2]), param7, param5);
-          if (var14 == 1) {
-            break L4;
+          rk.a(var15, var17 + var19, var16, var18 + var20, (int)((double)(param6 << 7) * var33[2]), param7, param5);
+          if (var14 == 2) {
+            return;
           } else {
-            rk.a(var15, var17, var15, var17 + var19, (int)((double)5120 * var33[2]), param7, param5);
-            break L4;
+            rk.a(var16, var18, var16, var18 + var20, (int)((double)(param6 << 7) * var34[2]), param7, param5);
+            return;
           }
-        }
-        rk.a(var15, var17 + var19, var16, var18 + var20, (int)((double)5120 * var33[2]), param7, param5);
-        if (var14 == 2) {
-          return;
         } else {
-          rk.a(var16, var18, var16, var18 + var20, (int)((double)5120 * var34[2]), param7, param5);
           return;
         }
     }
@@ -540,9 +544,9 @@ final class si {
         float stackOut_30_0 = 0.0f;
         float stackOut_28_0 = 0.0f;
         L0: {
-          var1 = (float)128 / 255.0f;
-          var2 = (float)191 / 255.0f;
-          var3 = (float)255 / 255.0f;
+          var1 = (float)((param0 & 16711680) >> 16) / 255.0f;
+          var2 = (float)((param0 & 65280) >> 8) / 255.0f;
+          var3 = (float)(param0 & 255) / 255.0f;
           if (var1 <= var2) {
             if (var2 <= var3) {
               stackOut_6_0 = var3;

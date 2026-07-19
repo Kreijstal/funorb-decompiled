@@ -23,59 +23,82 @@ final class tk implements kh {
             Object var6 = null;
             Object var7 = null;
             bm var8 = null;
-            kl stackIn_13_0 = null;
+            kl stackIn_2_0 = null;
+            kl stackIn_17_0 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            kl stackOut_12_0 = null;
+            kl stackOut_16_0 = null;
+            kl stackOut_1_0 = null;
             try {
               L0: {
-                L1: {
-                  var6 = null;
-                  if (null != vq.field_c.field_r) {
-                    rg.field_b = new ue(vq.field_c.field_r, 5200, 0);
-                    vq.field_c.field_r = null;
-                    var6 = (Object) (Object) new bc(255, rg.field_b, new ue(vq.field_c.field_d, 12000, 0), 2097152);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                L2: {
-                  var7 = null;
-                  if (null != rg.field_b) {
-                    L3: {
-                      if (mu.field_b != null) {
-                        break L3;
-                      } else {
-                        mu.field_b = new ue[vq.field_c.field_c.length];
-                        break L3;
-                      }
+                if (param2 == 1) {
+                  L1: {
+                    var6 = null;
+                    if (null != vq.field_c.field_r) {
+                      rg.field_b = new ue(vq.field_c.field_r, 5200, 0);
+                      vq.field_c.field_r = null;
+                      var6 = new bc(255, rg.field_b, new ue(vq.field_c.field_d, 12000, 0), 2097152);
+                      break L1;
+                    } else {
+                      break L1;
                     }
-                    L4: {
-                      if (mu.field_b[param0] != null) {
-                        break L4;
-                      } else {
-                        mu.field_b[param0] = new ue(vq.field_c.field_c[param0], 12000, 0);
-                        vq.field_c.field_c[param0] = null;
-                        break L4;
-                      }
-                    }
-                    var7 = (Object) (Object) new bc(param0, rg.field_b, mu.field_b[param0], 2097152);
-                    break L2;
-                  } else {
-                    break L2;
                   }
+                  L2: {
+                    var7 = null;
+                    if (null != rg.field_b) {
+                      L3: {
+                        if (mu.field_b != null) {
+                          break L3;
+                        } else {
+                          mu.field_b = new ue[vq.field_c.field_c.length];
+                          break L3;
+                        }
+                      }
+                      L4: {
+                        if (mu.field_b[param0] != null) {
+                          break L4;
+                        } else {
+                          mu.field_b[param0] = new ue(vq.field_c.field_c[param0], 12000, 0);
+                          vq.field_c.field_c[param0] = null;
+                          break L4;
+                        }
+                      }
+                      var7 = new bc(param0, rg.field_b, mu.field_b[param0], 2097152);
+                      break L2;
+                    } else {
+                      break L2;
+                    }
+                  }
+                  L5: {
+                    var8 = oi.field_c.a(param3, (bc) (var7), param0, 0, (bc) (var6));
+                    if (param4) {
+                      var8.c(31637);
+                      break L5;
+                    } else {
+                      break L5;
+                    }
+                  }
+                  stackOut_16_0 = new kl(var8, param1, param5);
+                  stackIn_17_0 = stackOut_16_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  stackOut_1_0 = (kl) null;
+                  stackIn_2_0 = stackOut_1_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
-                var8 = oi.field_c.a(false, (bc) var7, param0, 0, (bc) var6);
-                stackOut_12_0 = new kl((ew) (Object) var8, param1, param5);
-                stackIn_13_0 = stackOut_12_0;
-                break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (Object) (Object) decompiledCaughtException;
-              throw new RuntimeException(((IOException) var6).toString());
+              var6 = (IOException) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) (var6)).toString());
             }
-            return stackIn_13_0;
+            if (decompiledRegionSelector0 == 0) {
+              return stackIn_2_0;
+            } else {
+              return stackIn_17_0;
+            }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -84,10 +107,15 @@ final class tk implements kh {
     }
 
     public static void a(byte param0) {
+        kl discarded$0 = null;
         field_f = null;
+        if (param0 > -36) {
+            discarded$0 = tk.a(-28, true, 82, false, false, -112);
+        }
     }
 
     public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -117,17 +145,17 @@ final class tk implements kh {
           L0: {
             L1: {
               if (param0 instanceof vu) {
-                stackOut_2_0 = (kb) param0;
+                stackOut_2_0 = (kb) (param0);
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
               } else {
                 stackOut_1_0 = null;
-                stackIn_3_0 = (kb) (Object) stackOut_1_0;
+                stackIn_3_0 = (kb) ((Object) stackOut_1_0);
                 break L1;
               }
             }
             L2: {
-              var11 = (vu) (Object) stackIn_3_0;
+              var11 = (vu) ((Object) stackIn_3_0);
               if (var11 != null) {
                 param3 = param3 & var11.field_I;
                 break L2;
@@ -139,13 +167,13 @@ final class tk implements kh {
               if (param2 < -79) {
                 break L3;
               } else {
-                ((tk) this).field_e = -101;
+                this.field_e = -101;
                 break L3;
               }
             }
             L4: {
               var7 = 5592405;
-              qn.f(param1 - -param0.field_B, param0.field_p + param4, param0.field_l, param0.field_w, ((tk) this).field_l);
+              qn.f(param1 - -param0.field_B, param0.field_p + param4, param0.field_l, param0.field_w, this.field_l);
               if (!param3) {
                 break L4;
               } else {
@@ -154,24 +182,24 @@ final class tk implements kh {
               }
             }
             L5: {
-              var8 = ((tk) this).field_i + (param1 + param0.field_B);
-              var9 = param0.field_p + (param4 - -((tk) this).field_m);
-              qn.g(var8, var9, ((tk) this).field_h, ((tk) this).field_j, 5592405);
-              qn.f(var8, var9, ((tk) this).field_h, ((tk) this).field_j, var7);
+              var8 = this.field_i + (param1 + param0.field_B);
+              var9 = param0.field_p + (param4 - -this.field_m);
+              qn.g(var8, var9, this.field_h, this.field_j, 5592405);
+              qn.f(var8, var9, this.field_h, this.field_j, var7);
               if (var11.field_K) {
-                qn.h(var8, var9, ((tk) this).field_h + var8, ((tk) this).field_j + var9, 1);
-                qn.h(var8 - -((tk) this).field_h, var9, var8, ((tk) this).field_j + var9, 1);
+                qn.h(var8, var9, this.field_h + var8, this.field_j + var9, 1);
+                qn.h(var8 - -this.field_h, var9, var8, this.field_j + var9, 1);
                 break L5;
               } else {
                 break L5;
               }
             }
             L6: {
-              if (((tk) this).field_g == null) {
+              if (this.field_g == null) {
                 break L6;
               } else {
-                var10 = ((tk) this).field_a + ((tk) this).field_h + ((tk) this).field_i;
-                int discarded$1 = ((tk) this).field_g.a(param0.field_v, param1 - -param0.field_B + var10, param0.field_p + param4 + ((tk) this).field_k, -((tk) this).field_a - var10 + param0.field_l, param0.field_w - (((tk) this).field_a << 1), ((tk) this).field_b, ((tk) this).field_c, ((tk) this).field_d, ((tk) this).field_e, 0);
+                var10 = this.field_a + this.field_h + this.field_i;
+                discarded$1 = this.field_g.a(param0.field_v, param1 - -param0.field_B + var10, param0.field_p + param4 + this.field_k, -this.field_a - var10 + param0.field_l, param0.field_w - (this.field_a << -845089535), this.field_b, this.field_c, this.field_d, this.field_e, 0);
                 break L6;
               }
             }
@@ -181,23 +209,23 @@ final class tk implements kh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var6;
+            stackOut_16_0 = (RuntimeException) (var6);
             stackOut_16_1 = new StringBuilder().append("tk.C(");
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L7;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -205,34 +233,30 @@ final class tk implements kh {
               break L7;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     tk(ka param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        ((tk) this).field_e = 1;
-        ((tk) this).field_d = 1;
+        this.field_e = 1;
+        this.field_d = 1;
         try {
-            ((tk) this).field_i = param5;
-            ((tk) this).field_b = param3;
-            ((tk) this).field_c = param4;
-            ((tk) this).field_j = param7;
-            ((tk) this).field_k = param2;
-            ((tk) this).field_a = param1;
-            ((tk) this).field_m = param6;
-            ((tk) this).field_h = param8;
-            ((tk) this).field_g = param0;
-            ((tk) this).field_l = param9;
+            this.field_i = param5;
+            this.field_b = param3;
+            this.field_c = param4;
+            this.field_j = param7;
+            this.field_k = param2;
+            this.field_a = param1;
+            this.field_m = param6;
+            this.field_h = param8;
+            this.field_g = param0;
+            this.field_l = param9;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new boolean[64];
     }
 }

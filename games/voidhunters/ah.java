@@ -8,33 +8,42 @@ final class ah extends rqa {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = VoidHunters.field_G;
         try {
           L0: {
             if (!wgb.field_g) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              mmb.field_d = new aja[hwa.field_r.length];
-              var1_int = 0;
-              L1: while (true) {
+              L1: {
+                mmb.field_d = new aja[hwa.field_r.length];
+                var1_int = 0;
+                if (param0 <= -8) {
+                  break L1;
+                } else {
+                  field_o = (int[]) null;
+                  break L1;
+                }
+              }
+              L2: while (true) {
                 if (mmb.field_d.length <= var1_int) {
                   mmb.field_d[30] = wba.a((byte) -62, og.field_r, oaa.field_j);
                   nkb.a(false, "Finished building sprites");
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  L2: {
+                  L3: {
                     if (null != hwa.field_r[var1_int]) {
                       mmb.field_d[var1_int] = og.field_r.a(hwa.field_r[var1_int], false);
-                      var1_int++;
-                      break L2;
+                      break L3;
                     } else {
-                      var1_int++;
-                      break L2;
+                      break L3;
                     }
                   }
                   var1_int++;
-                  continue L1;
+                  continue L2;
                 }
               }
             }
@@ -42,7 +51,12 @@ final class ah extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "ah.D(" + -17 + ')');
+          throw rta.a((Throwable) ((Object) var1), "ah.D(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -52,11 +66,15 @@ final class ah extends rqa {
 
     public static void a(int param0) {
         field_o = null;
+        if (param0 == 233) {
+            return;
+        }
+        field_o = (int[]) null;
     }
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -65,9 +83,10 @@ final class ah extends rqa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         nc stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        nc stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -80,36 +99,38 @@ final class ah extends rqa {
           L0: {
             if (param1 < -119) {
               si.a(233, 62, param0[0].a(15));
-              stackOut_3_0 = new nc((Object) (Object) "void");
+              stackOut_3_0 = new nc("void");
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (nc) null;
               stackIn_2_0 = stackOut_1_0;
-              return (nc) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("ah.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -117,9 +138,13 @@ final class ah extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final static void a(int param0, boolean param1) {
@@ -132,73 +157,95 @@ final class ah extends rqa {
               psb.field_b = ob.a(0, bm.field_o, 640, 480, 0, 0);
               if (psb.field_b != null) {
                 var2 = 2;
-                qa.a((byte) 77, (java.awt.Canvas) (Object) psb.field_b);
+                qa.a((byte) 77, psb.field_b);
                 break L0;
               } else {
                 var2 = 3;
                 break L0;
               }
             }
-            if (null == efb.field_b) {
-              if (!vbb.field_p) {
+            if (param0 == 2) {
+              if (null != efb.field_b) {
                 return;
               } else {
-                wha.a(2, true, var2);
+                L1: {
+                  if (vbb.field_p) {
+                    wha.a(2, param1, var2);
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                }
                 return;
               }
             } else {
               return;
             }
           } else {
-            L1: {
+            L2: {
               psb.field_b = efb.field_b.a((byte) 124);
               mb.h(2, 117);
               if (psb.field_b != null) {
                 var2 = 2;
-                qa.a((byte) 77, (java.awt.Canvas) (Object) psb.field_b);
-                break L1;
+                qa.a((byte) 77, psb.field_b);
+                break L2;
               } else {
                 var2 = 3;
-                break L1;
+                break L2;
               }
             }
-            if (null != efb.field_b) {
-              return;
-            } else {
-              L2: {
-                if (vbb.field_p) {
-                  wha.a(2, true, var2);
-                  break L2;
-                } else {
-                  break L2;
+            if (param0 == 2) {
+              if (null != efb.field_b) {
+                return;
+              } else {
+                L3: {
+                  if (vbb.field_p) {
+                    wha.a(2, param1, var2);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
                 }
+                return;
               }
+            } else {
               return;
             }
           }
         } else {
           if (fda.e((byte) 120)) {
             var2 = 0;
-            if (null != efb.field_b) {
-              return;
-            } else {
-              L3: {
-                if (vbb.field_p) {
-                  wha.a(2, true, var2);
-                  break L3;
-                } else {
-                  break L3;
+            if (param0 == 2) {
+              if (null != efb.field_b) {
+                return;
+              } else {
+                L4: {
+                  if (vbb.field_p) {
+                    wha.a(2, param1, var2);
+                    break L4;
+                  } else {
+                    break L4;
+                  }
                 }
+                return;
               }
+            } else {
               return;
             }
           } else {
             var2 = 1;
-            if (null == efb.field_b) {
-              if (!vbb.field_p) {
+            if (param0 == 2) {
+              if (null != efb.field_b) {
                 return;
               } else {
-                wha.a(2, true, var2);
+                L5: {
+                  if (vbb.field_p) {
+                    wha.a(2, param1, var2);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
                 return;
               }
             } else {
@@ -209,10 +256,6 @@ final class ah extends rqa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new int[4];
     }
 }

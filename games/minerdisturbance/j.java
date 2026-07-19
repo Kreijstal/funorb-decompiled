@@ -13,6 +13,7 @@ final class j implements Runnable {
     volatile boolean field_i;
 
     final static int a(int param0, int param1, boolean param2, int param3, pf param4, String param5, pf param6) {
+        boolean discarded$1 = false;
         RuntimeException var7 = null;
         String var8 = null;
         int var9 = 0;
@@ -65,6 +66,7 @@ final class j implements Runnable {
         RuntimeException stackIn_74_0 = null;
         StringBuilder stackIn_74_1 = null;
         String stackIn_74_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         sb stackOut_10_0 = null;
@@ -120,7 +122,7 @@ final class j implements Runnable {
               if (param1 <= -34) {
                 break L1;
               } else {
-                field_e = null;
+                field_e = (String) null;
                 break L1;
               }
             }
@@ -134,7 +136,8 @@ final class j implements Runnable {
                 } else {
                   stackOut_5_0 = -1;
                   stackIn_6_0 = stackOut_5_0;
-                  return stackIn_6_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             }
@@ -159,7 +162,7 @@ final class j implements Runnable {
                       rf.field_c.a((byte) 96, dk.field_a.nextInt());
                       rf.field_c.a(8, var14);
                       rf.field_c.a(8, var8);
-                      var15 = (CharSequence) (Object) param5;
+                      var15 = (CharSequence) ((Object) param5);
                       rf.field_c.a(8, tk.a(732, var15));
                       rf.field_c.b((byte) 123, param3);
                       rf.field_c.c(param0, 25564);
@@ -176,7 +179,7 @@ final class j implements Runnable {
                       }
                     }
                     sn.field_c.b(23446, var11_ref_String);
-                    jg.a(kc.field_b, -121, rf.field_c, ph.field_g, (sb) (Object) sn.field_c);
+                    jg.a(kc.field_b, -121, rf.field_c, ph.field_g, sn.field_c);
                     sn.field_c.b(-var10 + sn.field_c.field_o, -506270856);
                     break L4;
                   } else {
@@ -191,7 +194,7 @@ final class j implements Runnable {
                       stackIn_11_0 = stackOut_10_0;
                       stackIn_11_1 = stackOut_10_1;
                       if (!param6.b((byte) 112)) {
-                        stackOut_12_0 = (sb) (Object) stackIn_12_0;
+                        stackOut_12_0 = (sb) ((Object) stackIn_12_0);
                         stackOut_12_1 = stackIn_12_1;
                         stackOut_12_2 = "";
                         stackIn_13_0 = stackOut_12_0;
@@ -199,9 +202,9 @@ final class j implements Runnable {
                         stackIn_13_2 = stackOut_12_2;
                         break L7;
                       } else {
-                        stackOut_11_0 = (sb) (Object) stackIn_11_0;
+                        stackOut_11_0 = (sb) ((Object) stackIn_11_0);
                         stackOut_11_1 = stackIn_11_1;
-                        stackOut_11_2 = (String) var14;
+                        stackOut_11_2 = (String) (var14);
                         stackIn_13_0 = stackOut_11_0;
                         stackIn_13_1 = stackOut_11_1;
                         stackIn_13_2 = stackOut_11_2;
@@ -217,15 +220,15 @@ final class j implements Runnable {
                       stackIn_14_0 = stackOut_13_0;
                       stackIn_14_1 = stackOut_13_1;
                       if (param4.b((byte) 88)) {
-                        stackOut_15_0 = (sb) (Object) stackIn_15_0;
+                        stackOut_15_0 = (sb) ((Object) stackIn_15_0);
                         stackOut_15_1 = stackIn_15_1;
-                        stackOut_15_2 = (String) var8;
+                        stackOut_15_2 = (String) (var8);
                         stackIn_16_0 = stackOut_15_0;
                         stackIn_16_1 = stackOut_15_1;
                         stackIn_16_2 = stackOut_15_2;
                         break L8;
                       } else {
-                        stackOut_14_0 = (sb) (Object) stackIn_14_0;
+                        stackOut_14_0 = (sb) ((Object) stackIn_14_0);
                         stackOut_14_1 = stackIn_14_1;
                         stackOut_14_2 = "";
                         stackIn_16_0 = stackOut_14_0;
@@ -238,7 +241,7 @@ final class j implements Runnable {
                     sn.field_c.c(16, 25564);
                     sn.field_c.field_o = sn.field_c.field_o + 1;
                     var9 = sn.field_c.field_o;
-                    jg.a(kc.field_b, -127, rf.field_c, ph.field_g, (sb) (Object) sn.field_c);
+                    jg.a(kc.field_b, -127, rf.field_c, ph.field_g, sn.field_c);
                     sn.field_c.g(-1, sn.field_c.field_o - var9);
                     break L4;
                   }
@@ -258,7 +261,7 @@ final class j implements Runnable {
                   L10: {
                     var9 = kj.field_a.d((byte) -54);
                     kj.field_a.field_o = 0;
-                    if (var9 < 100) {
+                    if ((var9 ^ -1) > -101) {
                       break L10;
                     } else {
                       if (105 >= var9) {
@@ -277,16 +280,17 @@ final class j implements Runnable {
                     ek.field_c = false;
                     stackOut_34_0 = var9;
                     stackIn_35_0 = stackOut_34_0;
-                    return stackIn_35_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
-                    if (var9 != 99) {
+                    if (-100 != (var9 ^ -1)) {
                       rj.field_d = -1;
                       oj.field_K = var9;
                       qd.field_Q = aa.field_l;
                       break L9;
                     } else {
-                      boolean discarded$1 = ta.a(0, hl.a(-92));
-                      mf.field_a = new Boolean(bh.a((sb) (Object) kj.field_a, -29320));
+                      discarded$1 = ta.a(0, hl.a(-92));
+                      mf.field_a = new Boolean(bh.a(kj.field_a, -29320));
                       kj.field_a.field_o = 0;
                       break L9;
                     }
@@ -317,7 +321,8 @@ final class j implements Runnable {
                         ek.field_c = false;
                         stackOut_43_0 = var11 + 100;
                         stackIn_44_0 = stackOut_43_0;
-                        return stackIn_44_0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       } else {
                         vh.field_i[var12] = kj.field_a.g(-1);
                         var12++;
@@ -334,7 +339,7 @@ final class j implements Runnable {
                   break L13;
                 } else {
                   L14: {
-                    if (oj.field_K != 255) {
+                    if (-256 != (oj.field_K ^ -1)) {
                       nf.field_g = kj.field_a.a(false);
                       break L14;
                     } else {
@@ -351,7 +356,8 @@ final class j implements Runnable {
                   ek.field_c = false;
                   stackOut_52_0 = oj.field_K;
                   stackIn_53_0 = stackOut_52_0;
-                  return stackIn_53_0;
+                  decompiledRegionSelector0 = 3;
+                  break L0;
                 }
               } else {
                 break L13;
@@ -378,7 +384,8 @@ final class j implements Runnable {
                   ek.field_c = false;
                   stackOut_60_0 = 249;
                   stackIn_61_0 = stackOut_60_0;
-                  return stackIn_61_0;
+                  decompiledRegionSelector0 = 4;
+                  break L0;
                 }
               } else {
                 break L15;
@@ -386,29 +393,30 @@ final class j implements Runnable {
             }
             stackOut_63_0 = -1;
             stackIn_64_0 = stackOut_63_0;
+            decompiledRegionSelector0 = 5;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var7 = decompiledCaughtException;
-            stackOut_65_0 = (RuntimeException) var7;
+            stackOut_65_0 = (RuntimeException) (var7);
             stackOut_65_1 = new StringBuilder().append("j.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_67_0 = stackOut_65_0;
             stackIn_67_1 = stackOut_65_1;
             stackIn_66_0 = stackOut_65_0;
             stackIn_66_1 = stackOut_65_1;
             if (param4 == null) {
-              stackOut_67_0 = (RuntimeException) (Object) stackIn_67_0;
-              stackOut_67_1 = (StringBuilder) (Object) stackIn_67_1;
+              stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
+              stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
               stackOut_67_2 = "null";
               stackIn_68_0 = stackOut_67_0;
               stackIn_68_1 = stackOut_67_1;
               stackIn_68_2 = stackOut_67_2;
               break L17;
             } else {
-              stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
-              stackOut_66_1 = (StringBuilder) (Object) stackIn_66_1;
+              stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
               stackOut_66_2 = "{...}";
               stackIn_68_0 = stackOut_66_0;
               stackIn_68_1 = stackOut_66_1;
@@ -417,23 +425,23 @@ final class j implements Runnable {
             }
           }
           L18: {
-            stackOut_68_0 = (RuntimeException) (Object) stackIn_68_0;
+            stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
             stackOut_68_1 = ((StringBuilder) (Object) stackIn_68_1).append(stackIn_68_2).append(',');
             stackIn_70_0 = stackOut_68_0;
             stackIn_70_1 = stackOut_68_1;
             stackIn_69_0 = stackOut_68_0;
             stackIn_69_1 = stackOut_68_1;
             if (param5 == null) {
-              stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
-              stackOut_70_1 = (StringBuilder) (Object) stackIn_70_1;
+              stackOut_70_0 = (RuntimeException) ((Object) stackIn_70_0);
+              stackOut_70_1 = (StringBuilder) ((Object) stackIn_70_1);
               stackOut_70_2 = "null";
               stackIn_71_0 = stackOut_70_0;
               stackIn_71_1 = stackOut_70_1;
               stackIn_71_2 = stackOut_70_2;
               break L18;
             } else {
-              stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
-              stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
+              stackOut_69_0 = (RuntimeException) ((Object) stackIn_69_0);
+              stackOut_69_1 = (StringBuilder) ((Object) stackIn_69_1);
               stackOut_69_2 = "{...}";
               stackIn_71_0 = stackOut_69_0;
               stackIn_71_1 = stackOut_69_1;
@@ -442,23 +450,23 @@ final class j implements Runnable {
             }
           }
           L19: {
-            stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
+            stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
             stackOut_71_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_71_2).append(',');
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;
             stackIn_72_1 = stackOut_71_1;
             if (param6 == null) {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackOut_73_2 = "null";
               stackIn_74_0 = stackOut_73_0;
               stackIn_74_1 = stackOut_73_1;
               stackIn_74_2 = stackOut_73_2;
               break L19;
             } else {
-              stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
-              stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
+              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
               stackOut_72_2 = "{...}";
               stackIn_74_0 = stackOut_72_0;
               stackIn_74_1 = stackOut_72_1;
@@ -466,39 +474,62 @@ final class j implements Runnable {
               break L19;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_74_0), stackIn_74_2 + ')');
         }
-        return stackIn_64_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_35_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_44_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_53_0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_61_0;
+                } else {
+                  return stackIn_64_0;
+                }
+              }
+            }
+          }
+        }
     }
 
     public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_d = null;
+        if (param0 < 55) {
+            field_e = (String) null;
+        }
     }
 
     public final void run() {
         int var1_int = 0;
         fj var2 = null;
         int var4 = MinerDisturbance.field_ab;
-        ((j) this).field_i = true;
+        this.field_i = true;
         try {
-            while (!((j) this).field_b) {
+            while (!this.field_b) {
                 for (var1_int = 0; var1_int < 2; var1_int++) {
-                    var2 = ((j) this).field_g[var1_int];
+                    var2 = this.field_g[var1_int];
                     if (var2 != null) {
                         var2.e();
                     }
                 }
                 gf.a(10L, -10309);
-                Object var5 = null;
-                jk.a(-23765, ((j) this).field_c, (Object) null);
+                Object var5 = (Object) null;
+                jk.a(-23765, this.field_c, (Object) null);
             }
         } catch (Exception exception) {
-            Object var6 = null;
-            di.a((Throwable) (Object) exception, 1, (String) null);
+            String var6 = (String) null;
+            di.a((Throwable) ((Object) exception), 1, (String) null);
         } finally {
-            ((j) this).field_i = false;
+            this.field_i = false;
         }
     }
 
@@ -512,20 +543,19 @@ final class j implements Runnable {
     }
 
     final static boolean a(byte param0) {
-        return ci.field_e == bd.field_h;
+        if (param0 != -110) {
+            field_a = (String) null;
+        }
+        return ci.field_e == bd.field_h ? true : false;
     }
 
     j() {
-        ((j) this).field_g = new fj[2];
-        ((j) this).field_b = false;
-        ((j) this).field_i = false;
+        this.field_g = new fj[2];
+        this.field_b = false;
+        this.field_i = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = null;
         field_e = "Mining map: Displays the map of the volcano.";
         field_a = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";

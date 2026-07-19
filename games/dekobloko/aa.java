@@ -10,11 +10,21 @@ final class aa {
     static ck field_e;
 
     public static void a(boolean param0) {
+        String discarded$2 = null;
         field_f = null;
         field_a = null;
-        field_c = null;
-        field_d = null;
-        field_e = null;
+        if (!param0) {
+          discarded$2 = aa.a(73);
+          field_c = null;
+          field_d = null;
+          field_e = null;
+          return;
+        } else {
+          field_c = null;
+          field_d = null;
+          field_e = null;
+          return;
+        }
     }
 
     final static String a(int param0) {

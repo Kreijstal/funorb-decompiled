@@ -17,16 +17,16 @@ final class hd extends oha {
           if (param0 == -2) {
             break L0;
           } else {
-            ((hd) this).field_p = -128;
+            this.field_p = -128;
             break L0;
           }
         }
         L1: {
           L2: {
-            if (((hd) this).field_n < 1) {
+            if (-2 < (this.field_n ^ -1)) {
               break L2;
             } else {
-              if (0 > ((hd) this).field_p) {
+              if (0 > this.field_p) {
                 break L2;
               } else {
                 stackOut_4_0 = 1;
@@ -45,14 +45,14 @@ final class hd extends oha {
     hd(int param0, int param1, int param2, String param3, String param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         super(4, param0, param1, param2, 0, param11);
         try {
-            ((hd) this).field_p = param8;
-            ((hd) this).field_f = param3;
-            ((hd) this).field_o = param6;
-            ((hd) this).field_q = param5;
-            ((hd) this).field_k = param4;
-            ((hd) this).field_n = param9;
+            this.field_p = param8;
+            this.field_f = param3;
+            this.field_o = param6;
+            this.field_q = param5;
+            this.field_k = param4;
+            this.field_n = param9;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "hd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "hd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ')');
         }
     }
 
@@ -61,16 +61,16 @@ final class hd extends oha {
           if (param0 == 0) {
             break L0;
           } else {
-            field_r = null;
+            field_r = (String) null;
             break L0;
           }
         }
-        if (((hd) this).field_o != 17) {
+        if (-18 != (this.field_o ^ -1)) {
           L1: {
-            if (((hd) this).field_p != 0) {
+            if (this.field_p != 0) {
               break L1;
             } else {
-              if (((hd) this).field_n != 0) {
+              if (this.field_n != 0) {
                 break L1;
               } else {
                 return 1;
@@ -78,10 +78,10 @@ final class hd extends oha {
             }
           }
           L2: {
-            if (((hd) this).field_p != 1) {
+            if ((this.field_p ^ -1) != -2) {
               break L2;
             } else {
-              if (1 == ((hd) this).field_n) {
+              if (1 == this.field_n) {
                 return 2;
               } else {
                 break L2;
@@ -105,43 +105,46 @@ final class hd extends oha {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        byte[] stackIn_18_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
+        byte[] stackIn_10_0 = null;
+        byte[] stackIn_19_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_17_0 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
+        byte[] stackOut_18_0 = null;
+        byte[] stackOut_9_0 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
         RuntimeException stackOut_24_0 = null;
         StringBuilder stackOut_24_1 = null;
         String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         var8 = BachelorFridge.field_y;
         try {
           L0: {
-            var4_int = param1.d(16, (byte) -108);
+            var4_int = param1.d(param3, (byte) -108);
             if (0 != var4_int) {
               L1: {
                 L2: {
@@ -160,34 +163,42 @@ final class hd extends oha {
               }
               var5 = param1.d(3, (byte) 87);
               var6 = (byte)param1.d(8, (byte) -117);
-              L3: {
-                if (0 < var5) {
-                  var7 = 0;
-                  L4: while (true) {
-                    if (var7 >= var4_int) {
-                      break L3;
-                    } else {
-                      param0[var7] = (byte)(param1.d(var5, (byte) 48) + var6);
-                      var7++;
-                      continue L4;
+              if (param2 > 89) {
+                L3: {
+                  if (0 < var5) {
+                    var7 = 0;
+                    L4: while (true) {
+                      if (var7 >= var4_int) {
+                        break L3;
+                      } else {
+                        param0[var7] = (byte)(param1.d(var5, (byte) 48) + var6);
+                        var7++;
+                        continue L4;
+                      }
                     }
-                  }
-                } else {
-                  var7 = 0;
-                  L5: while (true) {
-                    if (var4_int <= var7) {
-                      break L3;
-                    } else {
-                      param0[var7] = (byte)var6;
-                      var7++;
-                      continue L5;
+                  } else {
+                    var7 = 0;
+                    L5: while (true) {
+                      if (var4_int <= var7) {
+                        break L3;
+                      } else {
+                        param0[var7] = (byte)var6;
+                        var7++;
+                        continue L5;
+                      }
                     }
                   }
                 }
+                stackOut_18_0 = (byte[]) (param0);
+                stackIn_19_0 = stackOut_18_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
+              } else {
+                stackOut_9_0 = (byte[]) null;
+                stackIn_10_0 = stackOut_9_0;
+                decompiledRegionSelector0 = 0;
+                break L0;
               }
-              stackOut_17_0 = (byte[]) param0;
-              stackIn_18_0 = stackOut_17_0;
-              break L0;
             } else {
               return null;
             }
@@ -196,73 +207,105 @@ final class hd extends oha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var4;
-            stackOut_19_1 = new StringBuilder().append("hd.J(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackOut_20_0 = (RuntimeException) (var4);
+            stackOut_20_1 = new StringBuilder().append("hd.J(");
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
               break L6;
             }
           }
           L7: {
-            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
               break L7;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + 103 + ',' + 16 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_18_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_10_0;
+        } else {
+          return stackIn_19_0;
+        }
     }
 
     public static void d(int param0) {
         field_r = null;
+        if (param0 != 1) {
+            field_m = 97;
+        }
     }
 
     private final boolean c(byte param0) {
-        return ((hd) this).field_p == 0 && ((hd) this).field_n == 7;
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
+        L0: {
+          if (param0 == -96) {
+            break L0;
+          } else {
+            field_r = (String) null;
+            break L0;
+          }
+        }
+        L1: {
+          L2: {
+            if (this.field_p != 0) {
+              break L2;
+            } else {
+              if (this.field_n != 7) {
+                break L2;
+              } else {
+                stackOut_4_0 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                break L1;
+              }
+            }
+          }
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L1;
+        }
+        return stackIn_6_0 != 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Play free version";
         field_m = -1;
     }

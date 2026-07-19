@@ -18,8 +18,13 @@ final class tg implements gl {
         field_i = null;
         field_a = null;
         field_f = null;
-        field_b = null;
-        field_h = null;
+        if (param0) {
+          return;
+        } else {
+          field_b = null;
+          field_h = null;
+          return;
+        }
     }
 
     public final void a(boolean param0, int param1, int param2, byte param3, ce param4) {
@@ -56,7 +61,7 @@ final class tg implements gl {
                 if (!((ek) ((Object) param4)).field_H) {
                   break L1;
                 } else {
-                  var8.f((param4.field_t + -var8.field_K >> 1) + var6_int - -1, 1 + var7 + (param4.field_y + -var8.field_C >> 1), 256);
+                  var8.f((param4.field_t + -var8.field_K >> -1290148639) + var6_int - -1, 1 + var7 + (param4.field_y + -var8.field_C >> -1784257663), 256);
                   break L1;
                 }
               }
@@ -120,7 +125,7 @@ final class tg implements gl {
         if (!param0) {
             return (ck) null;
         }
-        return ik.field_b[param1][(12 & uf.field_A) >> 2];
+        return ik.field_b[param1][(12 & uf.field_A) >> -2019195358];
     }
 
     static {

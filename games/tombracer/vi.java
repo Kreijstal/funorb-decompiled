@@ -6,31 +6,32 @@ final class vi {
     static int field_a;
 
     final void a(int param0) {
-        Object var3 = null;
+        boolean discarded$2 = false;
+        tt var3 = null;
         if (param0 != 0) {
-          var3 = null;
-          boolean discarded$2 = ((vi) this).a((byte) 62, (tt) null);
-          ((vi) this).field_b.d(param0 ^ 8);
+          var3 = (tt) null;
+          discarded$2 = this.a((byte) 62, (tt) null);
+          this.field_b.d(param0 ^ 8);
           return;
         } else {
-          ((vi) this).field_b.d(param0 ^ 8);
+          this.field_b.d(param0 ^ 8);
           return;
         }
     }
 
     final tt a(boolean param0) {
         if (param0) {
-          if (((vi) this).field_b.d((byte) 14)) {
+          if (this.field_b.d((byte) 14)) {
             return null;
           } else {
-            return (tt) (Object) ((vi) this).field_b.c(-113);
+            return (tt) ((Object) this.field_b.c(-113));
           }
         } else {
-          ((vi) this).field_b = null;
-          if (((vi) this).field_b.d((byte) 14)) {
+          this.field_b = (vna) null;
+          if (this.field_b.d((byte) 14)) {
             return null;
           } else {
-            return (tt) (Object) ((vi) this).field_b.c(-113);
+            return (tt) ((Object) this.field_b.c(-113));
           }
         }
     }
@@ -61,7 +62,7 @@ final class vi {
         String stackOut_5_2 = null;
         try {
           L0: {
-            ((vi) this).field_b.b((byte) -110, (vg) (Object) param1);
+            this.field_b.b((byte) -110, param1);
             if (param0 > 9) {
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
@@ -75,23 +76,23 @@ final class vi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("vi.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -99,64 +100,111 @@ final class vi {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0 != 0;
     }
 
     final int a(byte param0) {
         int var2 = 35 % ((51 - param0) / 46);
-        return ((vi) this).field_b.a((byte) -16);
+        return this.field_b.a((byte) -16);
     }
 
     final int a(byte param0, int param1) {
+        int discarded$3 = 0;
         int var3 = 0;
         tt var4 = null;
         int var5 = 0;
+        boolean stackIn_5_0 = false;
+        int stackIn_9_0 = 0;
+        boolean stackIn_13_0 = false;
+        int stackIn_17_0 = 0;
+        boolean stackOut_4_0 = false;
+        int stackOut_8_0 = 0;
+        boolean stackOut_12_0 = false;
+        int stackOut_16_0 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
         var3 = 0;
         if (param0 >= 21) {
-          var4 = (tt) (Object) ((vi) this).field_b.f(-80);
+          var4 = (tt) ((Object) this.field_b.f(-80));
           L0: while (true) {
-            if (var4 == null) {
-              return var3;
-            } else {
-              L1: {
-                if (!var4.a(false, param1)) {
-                  break L1;
+            L1: {
+              L2: {
+                if (var4 == null) {
+                  break L2;
                 } else {
-                  var3++;
-                  break L1;
+                  stackOut_4_0 = var4.a(false, param1);
+                  stackIn_9_0 = stackOut_4_0 ? 1 : 0;
+                  stackIn_5_0 = stackOut_4_0;
+                  if (var5 != 0) {
+                    break L1;
+                  } else {
+                    L3: {
+                      if (!stackIn_5_0) {
+                        break L3;
+                      } else {
+                        var3++;
+                        break L3;
+                      }
+                    }
+                    var4 = (tt) ((Object) this.field_b.e(107));
+                    if (var5 == 0) {
+                      continue L0;
+                    } else {
+                      break L2;
+                    }
+                  }
                 }
               }
-              var4 = (tt) (Object) ((vi) this).field_b.e(107);
-              continue L0;
+              stackOut_8_0 = var3;
+              stackIn_9_0 = stackOut_8_0;
+              break L1;
             }
+            return stackIn_9_0;
           }
         } else {
-          int discarded$3 = ((vi) this).a((byte) 71, -82);
-          var4 = (tt) (Object) ((vi) this).field_b.f(-80);
-          L2: while (true) {
-            if (var4 == null) {
-              return var3;
-            } else {
-              L3: {
-                if (!var4.a(false, param1)) {
-                  break L3;
+          discarded$3 = this.a((byte) 71, -82);
+          var4 = (tt) ((Object) this.field_b.f(-80));
+          L4: while (true) {
+            L5: {
+              L6: {
+                if (var4 == null) {
+                  break L6;
                 } else {
-                  var3++;
-                  break L3;
+                  stackOut_12_0 = var4.a(false, param1);
+                  stackIn_17_0 = stackOut_12_0 ? 1 : 0;
+                  stackIn_13_0 = stackOut_12_0;
+                  if (var5 != 0) {
+                    break L5;
+                  } else {
+                    L7: {
+                      if (!stackIn_13_0) {
+                        break L7;
+                      } else {
+                        var3++;
+                        break L7;
+                      }
+                    }
+                    var4 = (tt) ((Object) this.field_b.e(107));
+                    if (var5 == 0) {
+                      continue L4;
+                    } else {
+                      break L6;
+                    }
+                  }
                 }
               }
-              var4 = (tt) (Object) ((vi) this).field_b.e(107);
-              continue L2;
+              stackOut_16_0 = var3;
+              stackIn_17_0 = stackOut_16_0;
+              break L5;
             }
+            return stackIn_17_0;
           }
         }
     }
 
     vi() {
-        ((vi) this).field_b = new vna();
+        this.field_b = new vna();
     }
 
     static {

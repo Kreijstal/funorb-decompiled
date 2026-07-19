@@ -16,7 +16,13 @@ final class ia {
     }
 
     final static void a(int param0, int param1) {
-        int discarded$0 = le.h(-1993);
+        int discarded$0 = 0;
+        if (param0 != -14296) {
+            field_b = (kc[]) null;
+            discarded$0 = le.h(param0 + 12303);
+            return;
+        }
+        int discarded$1 = le.h(param0 + 12303);
     }
 
     static {

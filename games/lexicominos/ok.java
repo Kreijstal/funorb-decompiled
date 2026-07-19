@@ -41,12 +41,15 @@ final class ok {
     static String field_d;
 
     final static m[] b(byte param0) {
-        int var1 = -103;
+        int var1 = -103 / ((10 - param0) / 62);
         return new m[]{bb.field_J, mh.field_B, el.field_b};
     }
 
     public static void a(byte param0) {
         field_k = null;
+        if (param0 != 28) {
+            return;
+        }
         field_b = null;
         field_d = null;
         field_G = null;
@@ -54,29 +57,25 @@ final class ok {
     }
 
     ok() {
-        ((ok) this).field_g = new byte[18002];
-        ((ok) this).field_B = 0;
-        ((ok) this).field_A = new int[256];
-        ((ok) this).field_r = new boolean[256];
-        ((ok) this).field_z = new int[16];
-        ((ok) this).field_H = 0;
-        ((ok) this).field_v = new byte[18002];
-        ((ok) this).field_m = new byte[256];
-        ((ok) this).field_x = new int[257];
-        ((ok) this).field_t = new byte[4096];
-        ((ok) this).field_o = new int[6][258];
-        ((ok) this).field_J = new boolean[16];
-        ((ok) this).field_C = new int[6][258];
-        ((ok) this).field_h = new int[6];
-        ((ok) this).field_a = new int[6][258];
-        ((ok) this).field_l = new byte[6][258];
+        this.field_g = new byte[18002];
+        this.field_B = 0;
+        this.field_A = new int[256];
+        this.field_r = new boolean[256];
+        this.field_z = new int[16];
+        this.field_H = 0;
+        this.field_v = new byte[18002];
+        this.field_m = new byte[256];
+        this.field_x = new int[257];
+        this.field_t = new byte[4096];
+        this.field_o = new int[6][258];
+        this.field_J = new boolean[16];
+        this.field_C = new int[6][258];
+        this.field_h = new int[6];
+        this.field_a = new int[6][258];
+        this.field_l = new byte[6][258];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new rb();
         field_q = new char[128];
         field_b = new ng();

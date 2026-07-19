@@ -17,85 +17,85 @@ final class vga {
     }
 
     final int c() {
-        return ((vga) this).field_b.length;
+        return this.field_b.length;
     }
 
     private final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        int var3 = 0;
+        int var4 = 0;
         if (param1 == 255) {
-            var3 = ((vga) this).field_g.b(16711935);
-            var4 = ((vga) this).field_g.d(-1);
+            var3 = this.field_g.b(16711935);
+            var4 = this.field_g.d(-1);
             if (var3 == 47) {
-                ((vga) this).field_g.field_g = ((vga) this).field_g.field_g + var4;
+                this.field_g.field_g = this.field_g.field_g + var4;
                 return 1;
             }
             if (var3 == 81) {
-                var5 = ((vga) this).field_g.a(3);
+                var5 = this.field_g.a(3);
                 var4 -= 3;
-                var6 = ((vga) this).field_i[param0];
-                ((vga) this).field_e = ((vga) this).field_e + (long)var6 * (long)(((vga) this).field_h - var5);
-                ((vga) this).field_h = var5;
-                ((vga) this).field_g.field_g = ((vga) this).field_g.field_g + var4;
+                var6 = this.field_i[param0];
+                this.field_e = this.field_e + (long)var6 * (long)(this.field_h - var5);
+                this.field_h = var5;
+                this.field_g.field_g = this.field_g.field_g + var4;
                 return 2;
             }
-            ((vga) this).field_g.field_g = ((vga) this).field_g.field_g + var4;
+            this.field_g.field_g = this.field_g.field_g + var4;
             return 3;
         }
         var3 = field_f[param1 - 128];
         var4 = param1;
         if (var3 >= 1) {
-            var4 = var4 | ((vga) this).field_g.b(16711935) << 8;
+            var4 = var4 | this.field_g.b(16711935) << 8;
         }
         if (var3 >= 2) {
-            var4 = var4 | ((vga) this).field_g.b(16711935) << 16;
+            var4 = var4 | this.field_g.b(16711935) << 16;
         }
         return var4;
     }
 
     final void c(int param0) {
-        ((vga) this).field_g.field_g = ((vga) this).field_b[param0];
+        this.field_g.field_g = this.field_b[param0];
     }
 
     final void a() {
-        ((vga) this).field_g.field_h = null;
-        ((vga) this).field_c = null;
-        ((vga) this).field_b = null;
-        ((vga) this).field_i = null;
-        ((vga) this).field_d = null;
+        this.field_g.field_h = null;
+        this.field_c = null;
+        this.field_b = null;
+        this.field_i = null;
+        this.field_d = null;
     }
 
     final void a(byte[] param0) {
         int var4 = 0;
         int var5 = 0;
-        ((vga) this).field_g.field_h = param0;
-        ((vga) this).field_g.field_g = 10;
-        int var2 = ((vga) this).field_g.e((byte) 126);
-        ((vga) this).field_a = ((vga) this).field_g.e((byte) 110);
-        ((vga) this).field_h = 500000;
-        ((vga) this).field_c = new int[var2];
+        this.field_g.field_h = param0;
+        this.field_g.field_g = 10;
+        int var2 = this.field_g.e((byte) 126);
+        this.field_a = this.field_g.e((byte) 110);
+        this.field_h = 500000;
+        this.field_c = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-            var4 = ((vga) this).field_g.f(80);
-            var5 = ((vga) this).field_g.f(-95);
+            var4 = this.field_g.f(80);
+            var5 = this.field_g.f(-95);
             if (var4 == 1297379947) {
-                ((vga) this).field_c[var3] = ((vga) this).field_g.field_g;
+                this.field_c[var3] = this.field_g.field_g;
                 var3++;
             }
-            ((vga) this).field_g.field_g = ((vga) this).field_g.field_g + var5;
+            this.field_g.field_g = this.field_g.field_g + var5;
         }
-        ((vga) this).field_e = 0L;
-        ((vga) this).field_b = new int[var2];
+        this.field_e = 0L;
+        this.field_b = new int[var2];
         int var6 = 0;
         var3 = var6;
         while (var6 < var2) {
-            ((vga) this).field_b[var6] = ((vga) this).field_c[var6];
+            this.field_b[var6] = this.field_c[var6];
             var6++;
         }
-        ((vga) this).field_i = new int[var2];
-        ((vga) this).field_d = new int[var2];
+        this.field_i = new int[var2];
+        this.field_d = new int[var2];
     }
 
     private final int d(int param0) {
@@ -103,14 +103,14 @@ final class vga {
         int var3 = 0;
         int var4 = 0;
         L0: {
-          var2 = ((vga) this).field_g.field_h[((vga) this).field_g.field_g];
+          var2 = this.field_g.field_h[this.field_g.field_g];
           if (var2 >= 0) {
-            var2 = ((vga) this).field_d[param0];
+            var2 = this.field_d[param0];
             break L0;
           } else {
             var2 = var2 & 255;
-            ((vga) this).field_d[param0] = var2;
-            ((vga) this).field_g.field_g = ((vga) this).field_g.field_g + 1;
+            this.field_d[param0] = var2;
+            this.field_g.field_g = this.field_g.field_g + 1;
             break L0;
           }
         }
@@ -126,7 +126,7 @@ final class vga {
           }
         }
         L2: {
-          var3 = ((vga) this).field_g.d(-1);
+          var3 = this.field_g.d(-1);
           if (var2 != 247) {
             break L2;
           } else {
@@ -135,7 +135,7 @@ final class vga {
             } else {
               L3: {
                 L4: {
-                  var4 = ((vga) this).field_g.field_h[((vga) this).field_g.field_g] & 255;
+                  var4 = this.field_g.field_h[this.field_g.field_g] & 255;
                   if (var4 < 241) {
                     break L4;
                   } else {
@@ -171,26 +171,26 @@ final class vga {
                   }
                 }
               }
-              ((vga) this).field_g.field_g = ((vga) this).field_g.field_g + 1;
-              ((vga) this).field_d[param0] = var4;
+              this.field_g.field_g = this.field_g.field_g + 1;
+              this.field_d[param0] = var4;
               return this.a(param0, var4);
             }
           }
         }
-        ((vga) this).field_g.field_g = ((vga) this).field_g.field_g + var3;
+        this.field_g.field_g = this.field_g.field_g + var3;
         return 0;
     }
 
     final void e(int param0) {
-        int var2 = ((vga) this).field_g.d(-1);
-        ((vga) this).field_i[param0] = ((vga) this).field_i[param0] + var2;
+        int var2 = this.field_g.d(-1);
+        this.field_i[param0] = this.field_i[param0] + var2;
     }
 
     final boolean e() {
         int var2 = 0;
-        int var1 = ((vga) this).field_b.length;
+        int var1 = this.field_b.length;
         for (var2 = 0; var2 < var1; var2++) {
-            if (((vga) this).field_b[var2] >= 0) {
+            if (this.field_b[var2] >= 0) {
                 return false;
             }
         }
@@ -198,19 +198,19 @@ final class vga {
     }
 
     final boolean f() {
-        return ((vga) this).field_g.field_h != null;
+        return this.field_g.field_h != null;
     }
 
     final void f(int param0) {
-        ((vga) this).field_b[param0] = ((vga) this).field_g.field_g;
+        this.field_b[param0] = this.field_g.field_g;
     }
 
     final void d() {
-        ((vga) this).field_g.field_g = -1;
+        this.field_g.field_g = -1;
     }
 
     final long b(int param0) {
-        return ((vga) this).field_e + (long)param0 * (long)((vga) this).field_h;
+        return this.field_e + (long)param0 * (long)this.field_h;
     }
 
     final int g() {
@@ -218,7 +218,7 @@ final class vga {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        var1 = ((vga) this).field_b.length;
+        var1 = this.field_b.length;
         var2 = -1;
         var3 = 2147483647;
         var4 = 0;
@@ -226,10 +226,10 @@ final class vga {
           if (var4 >= var1) {
             return var2;
           } else {
-            if (((vga) this).field_b[var4] >= 0) {
-              if (((vga) this).field_i[var4] < var3) {
+            if (this.field_b[var4] >= 0) {
+              if (this.field_i[var4] < var3) {
                 var2 = var4;
-                var3 = ((vga) this).field_i[var4];
+                var3 = this.field_i[var4];
                 var4++;
                 continue L0;
               } else {
@@ -246,14 +246,14 @@ final class vga {
 
     final void a(long param0) {
         int var4 = 0;
-        ((vga) this).field_e = param0;
-        int var3 = ((vga) this).field_b.length;
+        this.field_e = param0;
+        int var3 = this.field_b.length;
         for (var4 = 0; var4 < var3; var4++) {
-            ((vga) this).field_i[var4] = 0;
-            ((vga) this).field_d[var4] = 0;
-            ((vga) this).field_g.field_g = ((vga) this).field_c[var4];
-            ((vga) this).e(var4);
-            ((vga) this).field_b[var4] = ((vga) this).field_g.field_g;
+            this.field_i[var4] = 0;
+            this.field_d[var4] = 0;
+            this.field_g.field_g = this.field_c[var4];
+            this.e(var4);
+            this.field_b[var4] = this.field_g.field_g;
         }
     }
 
@@ -263,19 +263,15 @@ final class vga {
     }
 
     vga() {
-        ((vga) this).field_g = new lu((byte[]) null);
+        this.field_g = new lu((byte[]) null);
     }
 
     vga(byte[] param0) {
-        ((vga) this).field_g = new lu((byte[]) null);
-        ((vga) this).a(param0);
+        this.field_g = new lu((byte[]) null);
+        this.a(param0);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_f = new byte[]{(byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 0, (byte) 1, (byte) 2, (byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+        field_f = new byte[]{(byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 0, (byte) 1, (byte) 2, (byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
     }
 }

@@ -6,16 +6,12 @@ final class rh {
     private static String field_z;
 
     public static void a(int param0) {
-        int var1 = 0;
+        int var1 = -6 % ((-12 - param0) / 42);
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "rh.A(";
-        field_a = new byte[]{(byte) 49, (byte) 97};
+        field_a = new byte[]{(byte)49, (byte)97};
     }
 }

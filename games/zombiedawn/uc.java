@@ -17,14 +17,10 @@ abstract class uc {
     public static void b(int param0) {
         field_a = null;
         field_b = null;
-        int var1 = 0;
+        int var1 = 38 % ((25 - param0) / 56);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "uc.D(";
         field_b = new rh();
         field_c = 0;

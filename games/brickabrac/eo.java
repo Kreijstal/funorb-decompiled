@@ -12,12 +12,85 @@ final class eo extends tl {
     static String field_l;
 
     final static boolean a(boolean param0, pi param1) {
-        return 1 == param1.c(1, (byte) 127);
+        RuntimeException var2 = null;
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (!param0) {
+                break L1;
+              } else {
+                eo.c(-28);
+                break L1;
+              }
+            }
+            L2: {
+              if (1 != param1.c(1, (byte) 127)) {
+                stackOut_4_0 = 0;
+                stackIn_5_0 = stackOut_4_0;
+                break L2;
+              } else {
+                stackOut_3_0 = 1;
+                stackIn_5_0 = stackOut_3_0;
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) (var2);
+            stackOut_6_1 = new StringBuilder().append("eo.F(").append(param0).append(',');
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw qb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+        }
+        return stackIn_5_0 != 0;
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
         L0: {
-          if (param3 != 0) {
+          if (param3 != param0) {
             break L0;
           } else {
             if (md.field_r != param2) {
@@ -114,103 +187,124 @@ final class eo extends tl {
     }
 
     final void a(int param0, byte[] param1) {
+        java.nio.Buffer discarded$0 = null;
+        java.nio.ByteBuffer discarded$1 = null;
         try {
-            ((eo) this).field_j = java.nio.ByteBuffer.allocateDirect(param1.length);
+            this.field_j = java.nio.ByteBuffer.allocateDirect(param1.length);
             if (param0 < 63) {
-                field_g = null;
+                field_g = (java.awt.Font) null;
             }
-            java.nio.Buffer discarded$0 = ((eo) this).field_j.position(0);
-            java.nio.ByteBuffer discarded$1 = ((eo) this).field_j.put(param1);
+            discarded$0 = this.field_j.position(0);
+            discarded$1 = this.field_j.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "eo.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "eo.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final byte[] b(int param0) {
+        java.nio.ByteBuffer discarded$10 = null;
         byte[] var2 = null;
         byte[] var3 = null;
-        var3 = new byte[((eo) this).field_j.capacity()];
+        var3 = new byte[this.field_j.capacity()];
         var2 = var3;
-        java.nio.Buffer discarded$9 = ((eo) this).field_j.position(0);
+        java.nio.Buffer discarded$9 = this.field_j.position(0);
         if (param0 != 16616) {
-          return null;
+          return (byte[]) null;
         } else {
-          java.nio.ByteBuffer discarded$10 = ((eo) this).field_j.get(var3);
+          discarded$10 = this.field_j.get(var3);
           return var3;
         }
     }
 
     final static boolean a(int[] param0, int param1, byte param2) {
         RuntimeException var3 = null;
-        int stackIn_5_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_6_0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
           L0: {
-            L1: {
-              if ((param0[param1 >> 5] & 1 << (param1 & 31)) == 0) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L1;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L1;
+            if (param2 == -75) {
+              L1: {
+                if (-1 == (param0[param1 >> -2053133531] & 1 << (param1 & 31) ^ -1)) {
+                  stackOut_5_0 = 0;
+                  stackIn_6_0 = stackOut_5_0;
+                  break L1;
+                } else {
+                  stackOut_4_0 = 1;
+                  stackIn_6_0 = stackOut_4_0;
+                  break L1;
+                }
               }
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("eo.C(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_7_0 = (RuntimeException) (var3);
+            stackOut_7_1 = new StringBuilder().append("eo.C(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + -75 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_5_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_6_0 != 0;
+        }
     }
 
     public static void c(int param0) {
         field_l = null;
+        if (param0 != 7301) {
+            return;
+        }
         field_g = null;
         field_f = null;
         field_k = null;
@@ -222,10 +316,6 @@ final class eo extends tl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
         field_l = "Show lobby chat from my friends";
         field_i = -1;

@@ -13,7 +13,7 @@ final class sk extends ml {
 
     final static void a(int param0, int param1) {
         fl.field_M = param1 * 100 / 150;
-        fl.field_V = (param1 << 16) / 150;
+        fl.field_V = (param1 << -1775937712) / 150;
         fl.field_u = 400 * param1 / 150;
         if (param0 != 16062) {
             sk.f(79);
@@ -22,31 +22,31 @@ final class sk extends ml {
 
     final byte[] d(int param0) {
         if (param0 == 95) {
-          if (((sk) this).field_s) {
+          if (this.field_s) {
             throw new RuntimeException();
           } else {
-            return ((sk) this).field_A;
+            return this.field_A;
           }
         } else {
-          field_y = null;
-          if (((sk) this).field_s) {
+          field_y = (String[]) null;
+          if (this.field_s) {
             throw new RuntimeException();
           } else {
-            return ((sk) this).field_A;
+            return this.field_A;
           }
         }
     }
 
     final int c(boolean param0) {
         if (!param0) {
-          if (((sk) this).field_s) {
+          if (this.field_s) {
             return 0;
           } else {
             return 100;
           }
         } else {
           sk.a(16, 86);
-          if (((sk) this).field_s) {
+          if (this.field_s) {
             return 0;
           } else {
             return 100;
@@ -74,10 +74,6 @@ final class sk extends ml {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
         field_C = "Pause the game";
     }

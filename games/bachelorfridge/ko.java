@@ -14,46 +14,56 @@ final class ko {
     static String field_h;
 
     private final void a(boolean param0) {
+        int dupTemp$4 = 0;
+        int dupTemp$5 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         var5 = BachelorFridge.field_y;
-        int fieldTemp$3 = ((ko) this).field_d + 1;
-        ((ko) this).field_d = ((ko) this).field_d + 1;
-        ((ko) this).field_i = ((ko) this).field_i + fieldTemp$3;
+        int fieldTemp$3 = this.field_d + 1;
+        this.field_d = this.field_d + 1;
+        this.field_i = this.field_i + fieldTemp$3;
         var2 = 0;
         L0: while (true) {
           if (var2 >= 256) {
+            L1: {
+              if (!param0) {
+                break L1;
+              } else {
+                ko.a((byte) -43);
+                break L1;
+              }
+            }
             return;
           } else {
-            L1: {
-              var3 = ((ko) this).field_c[var2];
+            L2: {
+              var3 = this.field_c[var2];
               if (0 == (2 & var2)) {
                 if ((var2 & 1) != 0) {
-                  ((ko) this).field_j = ((ko) this).field_j ^ ((ko) this).field_j >>> 6;
-                  break L1;
+                  this.field_j = this.field_j ^ this.field_j >>> 170145702;
+                  break L2;
                 } else {
-                  ((ko) this).field_j = ((ko) this).field_j ^ ((ko) this).field_j << 13;
-                  break L1;
+                  this.field_j = this.field_j ^ this.field_j << 1665316269;
+                  break L2;
                 }
               } else {
                 if ((1 & var2) == 0) {
-                  ((ko) this).field_j = ((ko) this).field_j ^ ((ko) this).field_j << 2;
-                  break L1;
+                  this.field_j = this.field_j ^ this.field_j << -1112896094;
+                  break L2;
                 } else {
-                  ((ko) this).field_j = ((ko) this).field_j ^ ((ko) this).field_j >>> 16;
-                  break L1;
+                  this.field_j = this.field_j ^ this.field_j >>> -341920976;
+                  break L2;
                 }
               }
             }
-            ((ko) this).field_j = ((ko) this).field_j + ((ko) this).field_c[255 & var2 + 128];
-            int dupTemp$4 = ((ko) this).field_i + (((ko) this).field_j + ((ko) this).field_c[dda.a(var3, 1020) >> 2]);
+            this.field_j = this.field_j + this.field_c[255 & var2 + 128];
+            dupTemp$4 = this.field_i + (this.field_j + this.field_c[dda.a(var3, 1020) >> -1780004222]);
             var4 = dupTemp$4;
-            ((ko) this).field_c[var2] = dupTemp$4;
-            int dupTemp$5 = var3 + ((ko) this).field_c[dda.a(var4 >> 8 >> 2, 255)];
-            ((ko) this).field_i = dupTemp$5;
-            ((ko) this).field_b[var2] = dupTemp$5;
+            this.field_c[var2] = dupTemp$4;
+            dupTemp$5 = var3 + this.field_c[dda.a(var4 >> -1673213976 >> -1077630270, 255)];
+            this.field_i = dupTemp$5;
+            this.field_b[var2] = dupTemp$5;
             var2++;
             continue L0;
           }
@@ -65,7 +75,7 @@ final class ko {
             return;
         }
         sja.field_fb.c(94, (byte) 115);
-        int var2 = 5;
+        int var2 = -5 / ((param1 - -18) / 51);
         sja.field_fb.d(param0, 0);
     }
 
@@ -94,128 +104,128 @@ final class ko {
         L0: while (true) {
           if (4 <= var2) {
             var2 = 0;
-            var11 = 77;
+            var11 = 77 / ((param0 - 1) / 37);
             L1: while (true) {
               if (256 <= var2) {
                 var2 = 0;
                 L2: while (true) {
-                  if (var2 >= 256) {
+                  if (-257 >= (var2 ^ -1)) {
                     this.a(false);
-                    ((ko) this).field_a = 256;
+                    this.field_a = 256;
                     return;
                   } else {
-                    var8 = var8 + ((ko) this).field_c[var2 + 5];
-                    var3 = var3 + ((ko) this).field_c[var2];
-                    var10 = var10 + ((ko) this).field_c[var2 + 7];
-                    var4 = var4 + ((ko) this).field_c[1 + var2];
-                    var7 = var7 + ((ko) this).field_c[4 + var2];
-                    var9 = var9 + ((ko) this).field_c[6 + var2];
-                    var5 = var5 + ((ko) this).field_c[2 + var2];
-                    var6 = var6 + ((ko) this).field_c[3 + var2];
-                    var3 = var3 ^ var4 << 11;
+                    var8 = var8 + this.field_c[var2 + 5];
+                    var3 = var3 + this.field_c[var2];
+                    var10 = var10 + this.field_c[var2 + 7];
+                    var4 = var4 + this.field_c[1 + var2];
+                    var7 = var7 + this.field_c[4 + var2];
+                    var9 = var9 + this.field_c[6 + var2];
+                    var5 = var5 + this.field_c[2 + var2];
+                    var6 = var6 + this.field_c[3 + var2];
+                    var3 = var3 ^ var4 << 328831211;
                     var4 = var4 + var5;
                     var6 = var6 + var3;
-                    var4 = var4 ^ var5 >>> 2;
+                    var4 = var4 ^ var5 >>> -170652542;
                     var7 = var7 + var4;
                     var5 = var5 + var6;
-                    var5 = var5 ^ var6 << 8;
+                    var5 = var5 ^ var6 << -1771289432;
                     var8 = var8 + var5;
                     var6 = var6 + var7;
-                    var6 = var6 ^ var7 >>> 16;
+                    var6 = var6 ^ var7 >>> 77237552;
                     var9 = var9 + var6;
                     var7 = var7 + var8;
-                    var7 = var7 ^ var8 << 10;
+                    var7 = var7 ^ var8 << -232488790;
                     var10 = var10 + var7;
                     var8 = var8 + var9;
-                    var8 = var8 ^ var9 >>> 4;
+                    var8 = var8 ^ var9 >>> -1159965532;
                     var3 = var3 + var8;
                     var9 = var9 + var10;
-                    var9 = var9 ^ var10 << 8;
+                    var9 = var9 ^ var10 << -921187928;
                     var4 = var4 + var9;
                     var10 = var10 + var3;
-                    var10 = var10 ^ var3 >>> 9;
+                    var10 = var10 ^ var3 >>> 947312841;
                     var3 = var3 + var4;
                     var5 = var5 + var10;
-                    ((ko) this).field_c[var2] = var3;
-                    ((ko) this).field_c[1 + var2] = var4;
-                    ((ko) this).field_c[2 + var2] = var5;
-                    ((ko) this).field_c[3 + var2] = var6;
-                    ((ko) this).field_c[4 + var2] = var7;
-                    ((ko) this).field_c[5 + var2] = var8;
-                    ((ko) this).field_c[var2 - -6] = var9;
-                    ((ko) this).field_c[7 + var2] = var10;
+                    this.field_c[var2] = var3;
+                    this.field_c[1 + var2] = var4;
+                    this.field_c[2 + var2] = var5;
+                    this.field_c[3 + var2] = var6;
+                    this.field_c[4 + var2] = var7;
+                    this.field_c[5 + var2] = var8;
+                    this.field_c[var2 - -6] = var9;
+                    this.field_c[7 + var2] = var10;
                     var2 += 8;
                     continue L2;
                   }
                 }
               } else {
-                var5 = var5 + ((ko) this).field_b[var2 + 2];
-                var4 = var4 + ((ko) this).field_b[var2 - -1];
-                var6 = var6 + ((ko) this).field_b[3 + var2];
-                var7 = var7 + ((ko) this).field_b[4 + var2];
-                var10 = var10 + ((ko) this).field_b[var2 + 7];
-                var8 = var8 + ((ko) this).field_b[var2 + 5];
-                var9 = var9 + ((ko) this).field_b[6 + var2];
-                var3 = var3 + ((ko) this).field_b[var2];
-                var3 = var3 ^ var4 << 11;
+                var5 = var5 + this.field_b[var2 + 2];
+                var4 = var4 + this.field_b[var2 - -1];
+                var6 = var6 + this.field_b[3 + var2];
+                var7 = var7 + this.field_b[4 + var2];
+                var10 = var10 + this.field_b[var2 + 7];
+                var8 = var8 + this.field_b[var2 + 5];
+                var9 = var9 + this.field_b[6 + var2];
+                var3 = var3 + this.field_b[var2];
+                var3 = var3 ^ var4 << 2052711979;
                 var6 = var6 + var3;
                 var4 = var4 + var5;
-                var4 = var4 ^ var5 >>> 2;
+                var4 = var4 ^ var5 >>> 280383202;
                 var5 = var5 + var6;
                 var7 = var7 + var4;
-                var5 = var5 ^ var6 << 8;
+                var5 = var5 ^ var6 << -502749176;
                 var6 = var6 + var7;
                 var8 = var8 + var5;
-                var6 = var6 ^ var7 >>> 16;
+                var6 = var6 ^ var7 >>> 835723344;
                 var9 = var9 + var6;
                 var7 = var7 + var8;
-                var7 = var7 ^ var8 << 10;
+                var7 = var7 ^ var8 << -773509270;
                 var8 = var8 + var9;
                 var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> 4;
+                var8 = var8 ^ var9 >>> 353341156;
                 var3 = var3 + var8;
                 var9 = var9 + var10;
-                var9 = var9 ^ var10 << 8;
+                var9 = var9 ^ var10 << 144386504;
                 var10 = var10 + var3;
                 var4 = var4 + var9;
-                var10 = var10 ^ var3 >>> 9;
+                var10 = var10 ^ var3 >>> -1937836183;
                 var3 = var3 + var4;
                 var5 = var5 + var10;
-                ((ko) this).field_c[var2] = var3;
-                ((ko) this).field_c[1 + var2] = var4;
-                ((ko) this).field_c[var2 + 2] = var5;
-                ((ko) this).field_c[3 + var2] = var6;
-                ((ko) this).field_c[var2 - -4] = var7;
-                ((ko) this).field_c[var2 - -5] = var8;
-                ((ko) this).field_c[var2 - -6] = var9;
-                ((ko) this).field_c[7 + var2] = var10;
+                this.field_c[var2] = var3;
+                this.field_c[1 + var2] = var4;
+                this.field_c[var2 + 2] = var5;
+                this.field_c[3 + var2] = var6;
+                this.field_c[var2 - -4] = var7;
+                this.field_c[var2 - -5] = var8;
+                this.field_c[var2 - -6] = var9;
+                this.field_c[7 + var2] = var10;
                 var2 += 8;
                 continue L1;
               }
             }
           } else {
-            var3 = var3 ^ var4 << 11;
+            var3 = var3 ^ var4 << 1518947627;
             var6 = var6 + var3;
             var4 = var4 + var5;
-            var4 = var4 ^ var5 >>> 2;
+            var4 = var4 ^ var5 >>> -1542665406;
             var5 = var5 + var6;
             var7 = var7 + var4;
-            var5 = var5 ^ var6 << 8;
+            var5 = var5 ^ var6 << 113234216;
             var6 = var6 + var7;
             var8 = var8 + var5;
-            var6 = var6 ^ var7 >>> 16;
+            var6 = var6 ^ var7 >>> 368856112;
             var9 = var9 + var6;
             var7 = var7 + var8;
-            var7 = var7 ^ var8 << 10;
+            var7 = var7 ^ var8 << 268499626;
             var8 = var8 + var9;
             var10 = var10 + var7;
-            var8 = var8 ^ var9 >>> 4;
+            var8 = var8 ^ var9 >>> 634131780;
             var9 = var9 + var10;
             var3 = var3 + var8;
-            var9 = var9 ^ var10 << 8;
+            var9 = var9 ^ var10 << 706480904;
             var4 = var4 + var9;
             var10 = var10 + var3;
-            var10 = var10 ^ var3 >>> 9;
+            var10 = var10 ^ var3 >>> -1329141143;
             var5 = var5 + var10;
             var3 = var3 + var4;
             var2++;
@@ -231,29 +241,32 @@ final class ko {
             throw new IllegalArgumentException();
         }
         if (param0 != -21000) {
-            ((ko) this).field_i = -67;
+            this.field_i = -67;
         }
         int var3 = 2147483647 + -(int)(4294967296L % (long)param1);
         do {
-            var4 = ((ko) this).b(28602);
+            var4 = this.b(28602);
         } while (var3 < var4);
         return sg.a(param1, 1816304479, var4);
     }
 
     final int b(int param0) {
-        if (!(0 != ((ko) this).field_a)) {
+        if (!(0 != this.field_a)) {
             this.a(false);
-            ((ko) this).field_a = 256;
+            this.field_a = 256;
         }
         if (param0 != 28602) {
-            ((ko) this).field_c = null;
+            this.field_c = (int[]) null;
         }
-        int fieldTemp$0 = ((ko) this).field_a - 1;
-        ((ko) this).field_a = ((ko) this).field_a - 1;
-        return ((ko) this).field_b[fieldTemp$0];
+        int fieldTemp$0 = this.field_a - 1;
+        this.field_a = this.field_a - 1;
+        return this.field_b[fieldTemp$0];
     }
 
     public static void a(byte param0) {
+        if (param0 >= -41) {
+            ko.a(35, (byte) -68);
+        }
         field_h = null;
         field_g = null;
         field_f = null;
@@ -262,22 +275,18 @@ final class ko {
     ko(int[] param0) {
         int var2_int = 0;
         try {
-            ((ko) this).field_b = new int[256];
-            ((ko) this).field_c = new int[256];
+            this.field_b = new int[256];
+            this.field_c = new int[256];
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
-                ((ko) this).field_b[var2_int] = param0[var2_int];
+                this.field_b[var2_int] = param0[var2_int];
             }
             this.a(48);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ko.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ko.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = 20;
         field_h = "Members";
     }

@@ -18,18 +18,19 @@ final class mk {
         field_c = null;
         field_d = null;
         field_a = null;
+        if (param0 <= 85) {
+            field_i = (uj) null;
+            field_i = null;
+            return;
+        }
         field_i = null;
     }
 
     mk(boolean param0) {
-        ((mk) this).field_k = param0 ? true : false;
+        this.field_k = param0 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Fullscreen";
         field_i = new uj(2);
     }

@@ -16,10 +16,6 @@ final class veb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "veb.A(";
         field_b = 1;
         field_c = "Editor";

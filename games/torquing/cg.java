@@ -28,10 +28,10 @@ final class cg {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((cg) this).field_a[var4] != null) {
-                    var5 = ((cg) this).field_a[var4].field_f * 22050 / 1000;
-                    var6 = ((cg) this).field_a[var4].field_q * 22050 / 1000;
-                    var13 = ((cg) this).field_a[var4].a(var5, ((cg) this).field_a[var4].field_f);
+                  if (this.field_a[var4] != null) {
+                    var5 = this.field_a[var4].field_f * 22050 / 1000;
+                    var6 = this.field_a[var4].field_q * 22050 / 1000;
+                    var13 = this.field_a[var4].a(var5, this.field_a[var4].field_f);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -62,9 +62,9 @@ final class cg {
               return new byte[]{};
             }
           } else {
-            if (((cg) this).field_a[var2] != null) {
-              if (((cg) this).field_a[var2].field_f + ((cg) this).field_a[var2].field_q > var1) {
-                var1 = ((cg) this).field_a[var2].field_f + ((cg) this).field_a[var2].field_q;
+            if (this.field_a[var2] != null) {
+              if (this.field_a[var2].field_f + this.field_a[var2].field_q > var1) {
+                var1 = this.field_a[var2].field_f + this.field_a[var2].field_q;
                 var2++;
                 continue L0;
               } else {
@@ -81,25 +81,25 @@ final class cg {
 
     final gg b() {
         byte[] var1 = this.a();
-        return new gg(22050, var1, 22050 * ((cg) this).field_b / 1000, 22050 * ((cg) this).field_c / 1000);
+        return new gg(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
     }
 
     private cg(fj param0) {
         int var2 = 0;
         int var3 = 0;
-        ((cg) this).field_a = new ma[10];
+        this.field_a = new ma[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((cg) this).field_b = param0.i(7088);
-            ((cg) this).field_c = param0.i(7088);
+            this.field_b = param0.i(7088);
+            this.field_c = param0.i(7088);
             return;
           } else {
             var3 = param0.i((byte) -101);
             if (var3 != 0) {
               param0.field_n = param0.field_n - 1;
-              ((cg) this).field_a[var2] = new ma();
-              ((cg) this).field_a[var2].a(param0);
+              this.field_a[var2] = new ma();
+              this.field_a[var2].a(param0);
               var2++;
               continue L0;
             } else {

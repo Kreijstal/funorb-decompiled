@@ -13,30 +13,30 @@ final class tb {
         int var5_int = 0;
         int var6 = 0;
         String var7 = null;
-        Object var8 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
+        kk var8 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
         RuntimeException stackOut_25_0 = null;
         StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
         try {
           L0: {
             L1: {
               mf.field_c[0] = d.field_c.nextInt();
               mf.field_c[1] = d.field_c.nextInt();
               mf.field_c[3] = (int)fd.field_g;
-              mf.field_c[2] = (int)(fd.field_g >> 32);
+              mf.field_c[2] = (int)(fd.field_g >> 1345868064);
               d.field_d.field_h = 0;
               d.field_d.a(-96, mf.field_c[0]);
               d.field_d.a(-124, mf.field_c[1]);
@@ -51,7 +51,12 @@ final class tb {
                 break L1;
               } else {
                 ff.field_D.f(6389, 16);
-                break L1;
+                if (!Transmogrify.field_A) {
+                  break L1;
+                } else {
+                  ff.field_D.f(6389, 18);
+                  break L1;
+                }
               }
             }
             L2: {
@@ -95,7 +100,7 @@ final class tb {
               if (param4 >= 25) {
                 break L6;
               } else {
-                var8 = null;
+                var8 = (kk) null;
                 tb.a((kk) null, -124, true, true, 31);
                 break L6;
               }
@@ -119,7 +124,7 @@ final class tb {
                 break L8;
               }
             }
-            bj.a(kb.field_p, q.field_f, (oa) (Object) ff.field_D, (byte) -116, d.field_d);
+            bj.a(kb.field_p, q.field_f, ff.field_D, (byte) -116, d.field_d);
             ff.field_D.b(-120, ff.field_D.field_h - var5_int);
             rb.a(-1, -377);
             break L0;
@@ -128,31 +133,31 @@ final class tb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var5 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var5;
-            stackOut_23_1 = new StringBuilder().append("tb.A(");
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackOut_25_0 = (RuntimeException) (var5);
+            stackOut_25_1 = new StringBuilder().append("tb.A(");
+            stackIn_27_0 = stackOut_25_0;
+            stackIn_27_1 = stackOut_25_1;
+            stackIn_26_0 = stackOut_25_0;
+            stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackOut_27_2 = "null";
+              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_1 = stackOut_27_1;
+              stackIn_28_2 = stackOut_27_2;
               break L9;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackOut_26_2 = "{...}";
+              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_1 = stackOut_26_1;
+              stackIn_28_2 = stackOut_26_2;
               break L9;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -160,6 +165,9 @@ final class tb {
         field_e = null;
         field_d = null;
         field_c = null;
+        if (!param0) {
+            return;
+        }
         field_b = null;
     }
 
@@ -168,13 +176,13 @@ final class tb {
         String var3 = null;
         long var4 = 0L;
         try {
-            fl.field_c = true;
+            fl.field_c = param1;
             var2 = "tuhstatbut";
             var3 = "rvnadlm";
             var4 = -1L;
             hi.a(0, var4, var2, var3, param0);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "tb.B(" + (param0 != null ? "{...}" : "null") + ',' + true + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "tb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

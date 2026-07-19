@@ -70,11 +70,14 @@ final class nc extends wl {
 
     private final static void a(byte[] param0, int param1) {
         field_w = param0;
-        field_S = 0;
+        field_S = param1;
         field_R = 0;
     }
 
     final static void a(byte[] param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -149,14 +152,14 @@ final class nc extends wl {
                                     return;
                                   } else {
                                     L7: {
-                                      stackOut_37_0 = (boolean[]) field_y;
+                                      stackOut_37_0 = (boolean[]) (field_y);
                                       stackOut_37_1 = var6;
                                       stackIn_39_0 = stackOut_37_0;
                                       stackIn_39_1 = stackOut_37_1;
                                       stackIn_38_0 = stackOut_37_0;
                                       stackIn_38_1 = stackOut_37_1;
                                       if (nc.c() == 0) {
-                                        stackOut_39_0 = (boolean[]) (Object) stackIn_39_0;
+                                        stackOut_39_0 = (boolean[]) ((Object) stackIn_39_0);
                                         stackOut_39_1 = stackIn_39_1;
                                         stackOut_39_2 = 0;
                                         stackIn_40_0 = stackOut_39_0;
@@ -164,7 +167,7 @@ final class nc extends wl {
                                         stackIn_40_2 = stackOut_39_2;
                                         break L7;
                                       } else {
-                                        stackOut_38_0 = (boolean[]) (Object) stackIn_38_0;
+                                        stackOut_38_0 = (boolean[]) ((Object) stackIn_38_0);
                                         stackOut_38_1 = stackIn_38_1;
                                         stackOut_38_2 = 1;
                                         stackIn_40_0 = stackOut_38_0;
@@ -174,8 +177,8 @@ final class nc extends wl {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = nc.a(16);
-                                    int discarded$4 = nc.a(16);
+                                    discarded$3 = nc.a(16);
+                                    discarded$4 = nc.a(16);
                                     field_O[var6] = nc.a(8);
                                     var6++;
                                     continue L6;
@@ -200,7 +203,7 @@ final class nc extends wl {
                       }
                     }
                   } else {
-                    int discarded$5 = nc.a(16);
+                    discarded$5 = nc.a(16);
                     var3++;
                     continue L2;
                   }
@@ -304,19 +307,19 @@ final class nc extends wl {
         int var6_int = 0;
         byte[] var6 = null;
         va var2 = new va(param0);
-        ((nc) this).field_q = var2.i(255);
-        ((nc) this).field_m = var2.i(255);
-        ((nc) this).field_v = var2.i(255);
-        ((nc) this).field_I = var2.i(255);
-        if (((nc) this).field_I < 0) {
-            ((nc) this).field_I = ~((nc) this).field_I;
-            ((nc) this).field_J = true;
+        this.field_q = var2.i(255);
+        this.field_m = var2.i(255);
+        this.field_v = var2.i(255);
+        this.field_I = var2.i(255);
+        if (this.field_I < 0) {
+            this.field_I = this.field_I ^ -1;
+            this.field_J = true;
         }
         int var3 = var2.i(255);
         if (var3 < 0) {
             throw new IOException();
         }
-        ((nc) this).field_t = new byte[var3][];
+        this.field_t = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
             var5 = 0;
             do {
@@ -325,13 +328,13 @@ final class nc extends wl {
             } while (var6_int >= 255);
             var6 = new byte[var5];
             var2.a(true, var5, var6, 0);
-            ((nc) this).field_t[var4] = var6;
+            this.field_t[var4] = var6;
         }
     }
 
     final static int a(int param0) {
-        int var3 = 0;
         int var4 = 0;
+        int var3 = 0;
         int var1 = 0;
         int var2 = 0;
         while (param0 >= 8 - field_R) {
@@ -353,9 +356,10 @@ final class nc extends wl {
 
     final static nc a(kl param0, int param1, int param2) {
         try {
+            boolean discarded$0 = false;
             nc var4_ref = null;
             if (!nc.a(param0)) {
-                boolean discarded$0 = param0.a(param1, param2, (byte) -66);
+                discarded$0 = param0.a(param1, param2, (byte) -66);
                 return null;
             }
             byte[] var3 = param0.a(param2, param1, 1);
@@ -363,8 +367,10 @@ final class nc extends wl {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new nc(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -375,6 +381,7 @@ final class nc extends wl {
     }
 
     final je b() {
+        int incrementValue$1 = 0;
         byte[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -382,24 +389,24 @@ final class nc extends wl {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ((nc) this).field_F = 0;
-        ((nc) this).field_B = new float[field_H];
-        var1 = new byte[((nc) this).field_m];
+        this.field_F = 0;
+        this.field_B = new float[field_H];
+        var1 = new byte[this.field_m];
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((nc) this).field_t.length) {
-            ((nc) this).field_B = null;
-            return new je(((nc) this).field_q, var1, ((nc) this).field_v, ((nc) this).field_I, ((nc) this).field_J);
+          if (var3 >= this.field_t.length) {
+            this.field_B = null;
+            return new je(this.field_q, var1, this.field_v, this.field_I, this.field_J);
           } else {
             var4 = this.d(var3);
             if (var4 != null) {
               L1: {
                 var5 = var4.length;
-                if (var5 <= ((nc) this).field_m - var2) {
+                if (var5 <= this.field_m - var2) {
                   break L1;
                 } else {
-                  var5 = ((nc) this).field_m - var2;
+                  var5 = this.field_m - var2;
                   break L1;
                 }
               }
@@ -411,11 +418,11 @@ final class nc extends wl {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = ~var7 >> 31;
+                      var7 = (var7 ^ -1) >> 31;
                       break L3;
                     }
                   }
-                  int incrementValue$1 = var2;
+                  incrementValue$1 = var2;
                   var2++;
                   var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
@@ -434,6 +441,7 @@ final class nc extends wl {
     }
 
     private final float[] d(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -493,13 +501,7 @@ final class nc extends wl {
         int[] var48 = null;
         float[] var49 = null;
         float[] var50 = null;
-        int[] var52 = null;
-        float[] var53 = null;
-        float[] var54 = null;
-        float[] var55 = null;
-        int[] var56 = null;
-        float[] var57 = null;
-        float[] var58 = null;
+        float[] var52 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -534,8 +536,8 @@ final class nc extends wl {
         Object stackOut_109_0 = null;
         int stackOut_109_1 = 0;
         L0: {
-          nc.a(((nc) this).field_t[param0], 0);
-          int discarded$1 = nc.c();
+          nc.a(this.field_t[param0], 0);
+          discarded$1 = nc.c();
           var2 = nc.a(dj.a(false, field_O.length - 1));
           var3 = field_y[var2] ? 1 : 0;
           if (var3 == 0) {
@@ -657,9 +659,7 @@ final class nc extends wl {
                 var17_int = var4 >> 1;
                 var18_int = var4 >> 2;
                 var19 = var4 >> 3;
-                var57 = field_r;
-                var53 = var57;
-                var49 = var53;
+                var49 = field_r;
                 var45 = var49;
                 var20_ref_float__ = var45;
                 var21_int = 0;
@@ -671,11 +671,11 @@ final class nc extends wl {
                       if (var41 >= var4) {
                         L14: {
                           if (var3 == 0) {
-                            stackOut_39_0 = (float[]) field_x;
+                            stackOut_39_0 = (float[]) (field_x);
                             stackIn_40_0 = stackOut_39_0;
                             break L14;
                           } else {
-                            stackOut_38_0 = (float[]) field_n;
+                            stackOut_38_0 = (float[]) (field_n);
                             stackIn_40_0 = stackOut_38_0;
                             break L14;
                           }
@@ -683,11 +683,11 @@ final class nc extends wl {
                         L15: {
                           var21 = stackIn_40_0;
                           if (var3 == 0) {
-                            stackOut_42_0 = (float[]) field_N;
+                            stackOut_42_0 = (float[]) (field_N);
                             stackIn_43_0 = stackOut_42_0;
                             break L15;
                           } else {
-                            stackOut_41_0 = (float[]) field_k;
+                            stackOut_41_0 = (float[]) (field_k);
                             stackIn_43_0 = stackOut_41_0;
                             break L15;
                           }
@@ -695,11 +695,11 @@ final class nc extends wl {
                         L16: {
                           var22 = stackIn_43_0;
                           if (var3 == 0) {
-                            stackOut_45_0 = (float[]) field_M;
+                            stackOut_45_0 = (float[]) (field_M);
                             stackIn_46_0 = stackOut_45_0;
                             break L16;
                           } else {
-                            stackOut_44_0 = (float[]) field_z;
+                            stackOut_44_0 = (float[]) (field_z);
                             stackIn_46_0 = stackOut_44_0;
                             break L16;
                           }
@@ -707,18 +707,16 @@ final class nc extends wl {
                         L17: {
                           var23 = stackIn_46_0;
                           if (var3 == 0) {
-                            stackOut_48_0 = (int[]) field_u;
+                            stackOut_48_0 = (int[]) (field_u);
                             stackIn_49_0 = stackOut_48_0;
                             break L17;
                           } else {
-                            stackOut_47_0 = (int[]) field_P;
+                            stackOut_47_0 = (int[]) (field_P);
                             stackIn_49_0 = stackOut_47_0;
                             break L17;
                           }
                         }
-                        var56 = stackIn_49_0;
-                        var52 = var56;
-                        var48 = var52;
+                        var48 = stackIn_49_0;
                         var44 = var48;
                         var24 = var44;
                         var25 = 0;
@@ -798,7 +796,7 @@ final class nc extends wl {
                                                               }
                                                             }
                                                           } else {
-                                                            var20_ref_float__[var4 - var18_int + var26] = -var57[var26];
+                                                            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
                                                             var26++;
                                                             continue L26;
                                                           }
@@ -843,7 +841,7 @@ final class nc extends wl {
                                           }
                                         }
                                       } else {
-                                        var27_int = var56[var26];
+                                        var27_int = var48[var26];
                                         if (var26 < var27_int) {
                                           var28_int = 8 * var26;
                                           var29_int = 8 * var27_int;
@@ -956,27 +954,25 @@ final class nc extends wl {
             }
             L35: {
               var17 = null;
-              if (((nc) this).field_F <= 0) {
+              if (this.field_F <= 0) {
                 break L35;
               } else {
                 L36: {
-                  var18_int = ((nc) this).field_F + var4 >> 2;
-                  var58 = new float[var18_int];
-                  var54 = var58;
-                  var50 = var54;
+                  var18_int = this.field_F + var4 >> 2;
+                  var50 = new float[var18_int];
                   var46 = var50;
                   var40 = var46;
-                  var17 = (Object) (Object) var40;
-                  if (((nc) this).field_p) {
+                  var17 = var40;
+                  if (this.field_p) {
                     break L36;
                   } else {
                     var19 = 0;
                     L37: while (true) {
-                      if (var19 >= ((nc) this).field_s) {
+                      if (var19 >= this.field_s) {
                         break L36;
                       } else {
-                        var20 = (((nc) this).field_F >> 1) + var19;
-                        var40[var19] = var40[var19] + ((nc) this).field_B[var20];
+                        var20 = (this.field_F >> 1) + var19;
+                        var40[var19] = var40[var19] + this.field_B[var20];
                         var19++;
                         continue L37;
                       }
@@ -991,7 +987,7 @@ final class nc extends wl {
                     if (var19 >= var4 >> 1) {
                       break L35;
                     } else {
-                      var20 = var58.length - (var4 >> 1) + var19;
+                      var20 = var50.length - (var4 >> 1) + var19;
                       var40[var20] = var40[var20] + field_r[var19];
                       var19++;
                       continue L38;
@@ -1001,11 +997,11 @@ final class nc extends wl {
               }
             }
             L39: {
-              var18 = ((nc) this).field_B;
-              ((nc) this).field_B = field_r;
+              var18 = this.field_B;
+              this.field_B = field_r;
               field_r = var18;
-              ((nc) this).field_F = var4;
-              ((nc) this).field_s = var12 - (var4 >> 1);
+              this.field_F = var4;
+              this.field_s = var12 - (var4 >> 1);
               stackOut_108_0 = this;
               stackIn_110_0 = stackOut_108_0;
               stackIn_109_0 = stackOut_108_0;
@@ -1023,12 +1019,12 @@ final class nc extends wl {
                 break L39;
               }
             }
-            ((nc) this).field_p = stackIn_111_1 != 0;
-            return (float[]) var17;
+            ((nc) (this)).field_p = stackIn_111_1 != 0;
+            return (float[]) (var17);
           } else {
             var42 = field_C[var14.field_d[var17_int]];
-            var55 = field_r;
-            var42.a(var55, var4 >> 1, var16 != 0);
+            var52 = field_r;
+            var42.a(var52, var4 >> 1, var16 != 0);
             var17_int++;
             continue L9;
           }
@@ -1037,9 +1033,10 @@ final class nc extends wl {
 
     final static nc a(kl param0, String param1, String param2) {
         try {
+            boolean discarded$0 = false;
             nc var4_ref = null;
             if (!nc.a(param0)) {
-                boolean discarded$0 = param0.a(param2, param1, -127);
+                discarded$0 = param0.a(param2, param1, -127);
                 return null;
             }
             byte[] var3 = param0.a(-112, param2, param1);
@@ -1047,8 +1044,10 @@ final class nc extends wl {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new nc(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1059,14 +1058,13 @@ final class nc extends wl {
     }
 
     final je a(int[] param0) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         float[] var7 = null;
-        float[] var11 = null;
-        float[] var13 = null;
-        byte[] var14 = null;
+        byte[] var12 = null;
         L0: {
           if (param0 == null) {
             break L0;
@@ -1079,23 +1077,23 @@ final class nc extends wl {
           }
         }
         L1: {
-          if (((nc) this).field_Q != null) {
+          if (this.field_Q != null) {
             break L1;
           } else {
-            ((nc) this).field_F = 0;
-            ((nc) this).field_B = new float[field_H];
-            ((nc) this).field_Q = new byte[((nc) this).field_m];
-            ((nc) this).field_i = 0;
-            ((nc) this).field_o = 0;
+            this.field_F = 0;
+            this.field_B = new float[field_H];
+            this.field_Q = new byte[this.field_m];
+            this.field_i = 0;
+            this.field_o = 0;
             break L1;
           }
         }
         L2: while (true) {
-          if (((nc) this).field_o >= ((nc) this).field_t.length) {
-            ((nc) this).field_B = null;
-            var14 = ((nc) this).field_Q;
-            ((nc) this).field_Q = null;
-            return new je(((nc) this).field_q, var14, ((nc) this).field_v, ((nc) this).field_I, ((nc) this).field_J);
+          if (this.field_o >= this.field_t.length) {
+            this.field_B = null;
+            var12 = this.field_Q;
+            this.field_Q = null;
+            return new je(this.field_q, var12, this.field_v, this.field_I, this.field_J);
           } else {
             L3: {
               if (param0 == null) {
@@ -1109,19 +1107,17 @@ final class nc extends wl {
               }
             }
             L4: {
-              var13 = this.d(((nc) this).field_o);
-              var11 = var13;
-              var7 = var11;
+              var7 = this.d(this.field_o);
               if (var7 == null) {
                 break L4;
               } else {
                 L5: {
-                  var3 = ((nc) this).field_i;
-                  var4 = var13.length;
-                  if (var4 <= ((nc) this).field_m - var3) {
+                  var3 = this.field_i;
+                  var4 = var7.length;
+                  if (var4 <= this.field_m - var3) {
                     break L5;
                   } else {
-                    var4 = ((nc) this).field_m - var3;
+                    var4 = this.field_m - var3;
                     break L5;
                   }
                 }
@@ -1132,32 +1128,32 @@ final class nc extends wl {
                       if (param0 == null) {
                         break L7;
                       } else {
-                        param0[0] = param0[0] - (var3 - ((nc) this).field_i);
+                        param0[0] = param0[0] - (var3 - this.field_i);
                         break L7;
                       }
                     }
-                    ((nc) this).field_i = var3;
+                    this.field_i = var3;
                     break L4;
                   } else {
                     L8: {
-                      var6 = (int)(128.0f + var13[var5] * 128.0f);
+                      var6 = (int)(128.0f + var7[var5] * 128.0f);
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = ~var6 >> 31;
+                        var6 = (var6 ^ -1) >> 31;
                         break L8;
                       }
                     }
-                    int incrementValue$1 = var3;
+                    incrementValue$1 = var3;
                     var3++;
-                    ((nc) this).field_Q[incrementValue$1] = (byte)(var6 - 128);
+                    this.field_Q[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
                 }
               }
             }
-            ((nc) this).field_o = ((nc) this).field_o + 1;
+            this.field_o = this.field_o + 1;
             continue L2;
           }
         }
@@ -1180,10 +1176,6 @@ final class nc extends wl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_L = false;
     }
 }

@@ -10,6 +10,7 @@ final class fp extends wf {
 
     final static boolean a(byte param0, boolean param1) {
         try {
+            long dupTemp$2 = 0L;
             int var2 = 0;
             IOException var3 = null;
             dl var4 = null;
@@ -25,18 +26,18 @@ final class fp extends wf {
                 break L0;
               }
             }
-            if (gr.field_b.field_a == 0) {
+            if (-1 == (gr.field_b.field_a ^ -1)) {
               return false;
             } else {
               var2 = 72 / ((-10 - param0) / 56);
-              long dupTemp$2 = kh.a(-114);
+              dupTemp$2 = kh.a(-114);
               co.field_e = dupTemp$2;
               ff.field_b = dupTemp$2;
-              if (gr.field_b.field_a == 1) {
+              if ((gr.field_b.field_a ^ -1) == -2) {
                 try {
                   L1: {
                     L2: {
-                      ft.field_l = new vf((java.net.Socket) gr.field_b.field_f, ii.field_j);
+                      ft.field_l = new vf((java.net.Socket) (gr.field_b.field_f), ii.field_j);
                       var4 = nm.field_c;
                       q.field_p.field_g = 0;
                       var4.field_g = 0;
@@ -54,7 +55,7 @@ final class fp extends wf {
                     kg.field_b = stackIn_11_0;
                     hi.field_w = stackIn_11_0;
                     ca.field_f = qa.field_b;
-                    tr.a((rb) (Object) q.field_p, ut.field_a, id.field_d, ko.field_f, 0);
+                    tr.a(q.field_p, ut.field_a, id.field_d, ko.field_f, 0);
                     fr.a(-34, -1);
                     break L1;
                   }
@@ -98,10 +99,6 @@ final class fp extends wf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = 0;
     }
 }

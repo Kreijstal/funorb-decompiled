@@ -17,13 +17,16 @@ final class re implements Iterator {
     private int field_k;
 
     private final void a(int param0) {
-        int var2 = -2;
-        ((re) this).field_f = null;
-        ((re) this).field_k = 1;
-        ((re) this).field_a = ((re) this).field_b.field_h[0].field_e;
+        int var2 = -6 / ((-2 - param0) / 38);
+        this.field_f = null;
+        this.field_k = 1;
+        this.field_a = this.field_b.field_h[0].field_e;
     }
 
     public static void b(int param0) {
+        if (param0 != 967) {
+            return;
+        }
         field_j = null;
         field_h = null;
         field_i = null;
@@ -32,18 +35,19 @@ final class re implements Iterator {
     }
 
     public final boolean hasNext() {
+        int fieldTemp$1 = 0;
         int var2 = 0;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (((re) this).field_b.field_h[((re) this).field_k + -1] == ((re) this).field_a) {
+        if (this.field_b.field_h[this.field_k + -1] == this.field_a) {
           L0: while (true) {
-            if (((re) this).field_b.field_c > ((re) this).field_k) {
-              int fieldTemp$1 = ((re) this).field_k;
-              ((re) this).field_k = ((re) this).field_k + 1;
-              if (((re) this).field_b.field_h[fieldTemp$1].field_e != ((re) this).field_b.field_h[-1 + ((re) this).field_k]) {
-                ((re) this).field_a = ((re) this).field_b.field_h[-1 + ((re) this).field_k].field_e;
+            if (this.field_b.field_c > this.field_k) {
+              fieldTemp$1 = this.field_k;
+              this.field_k = this.field_k + 1;
+              if (this.field_b.field_h[fieldTemp$1].field_e != this.field_b.field_h[-1 + this.field_k]) {
+                this.field_a = this.field_b.field_h[-1 + this.field_k].field_e;
                 return true;
               } else {
-                ((re) this).field_a = ((re) this).field_b.field_h[-1 + ((re) this).field_k];
+                this.field_a = this.field_b.field_h[-1 + this.field_k];
                 continue L0;
               }
             } else {
@@ -56,50 +60,51 @@ final class re implements Iterator {
     }
 
     public final Object next() {
+        int fieldTemp$2 = 0;
         int var2 = 0;
         Object var3 = null;
         gi var3_ref = null;
         gi var4 = null;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (((re) this).field_b.field_h[-1 + ((re) this).field_k] == ((re) this).field_a) {
+        if (this.field_b.field_h[-1 + this.field_k] == this.field_a) {
           L0: while (true) {
-            if (((re) this).field_b.field_c > ((re) this).field_k) {
-              int fieldTemp$2 = ((re) this).field_k;
-              ((re) this).field_k = ((re) this).field_k + 1;
-              var3_ref = ((re) this).field_b.field_h[fieldTemp$2].field_e;
-              if (((re) this).field_b.field_h[((re) this).field_k - 1] == var3_ref) {
+            if (this.field_b.field_c > this.field_k) {
+              fieldTemp$2 = this.field_k;
+              this.field_k = this.field_k + 1;
+              var3_ref = this.field_b.field_h[fieldTemp$2].field_e;
+              if (this.field_b.field_h[this.field_k - 1] == var3_ref) {
                 continue L0;
               } else {
-                ((re) this).field_f = var3_ref;
-                ((re) this).field_a = var3_ref.field_e;
-                return (Object) (Object) var3_ref;
+                this.field_f = var3_ref;
+                this.field_a = var3_ref.field_e;
+                return var3_ref;
               }
             } else {
               return null;
             }
           }
         } else {
-          var4 = ((re) this).field_a;
-          ((re) this).field_f = var4;
-          ((re) this).field_a = var4.field_e;
-          return (Object) (Object) var4;
+          var4 = this.field_a;
+          this.field_f = var4;
+          this.field_a = var4.field_e;
+          return var4;
         }
     }
 
     final static void a(boolean param0) {
         cf.a((byte) -107);
-        sg.field_a = true;
+        sg.field_a = param0 ? true : false;
         pj.field_F = true;
         ng.field_c.j(300);
         nc.a(field_c, false, (byte) 79);
     }
 
     public final void remove() {
-        if (!(null != ((re) this).field_f)) {
+        if (!(null != this.field_f)) {
             throw new IllegalStateException();
         }
-        ((re) this).field_f.a(-16175);
-        ((re) this).field_f = null;
+        this.field_f.a(-16175);
+        this.field_f = null;
     }
 
     final static byte[] a(String param0, int param1) {
@@ -140,23 +145,23 @@ final class re implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("re.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -164,26 +169,22 @@ final class re implements Iterator {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     re(tc param0) {
-        ((re) this).field_f = null;
+        this.field_f = null;
         try {
-            ((re) this).field_b = param0;
+            this.field_b = param0;
             this.a(-116);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Mouse over an icon for details";
         field_c = "Connection lost - attempting to reconnect";
     }

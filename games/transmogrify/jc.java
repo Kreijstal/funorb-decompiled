@@ -10,32 +10,32 @@ final class jc extends ag {
     private final void a(gi param0) {
         param0.c(5);
         param0.a();
-        wf var2 = ((jc) this).field_m.field_d.field_b;
-        if (var2 == ((jc) this).field_m.field_d) {
-            ((jc) this).field_k = -1;
+        wf var2 = this.field_m.field_d.field_b;
+        if (var2 == this.field_m.field_d) {
+            this.field_k = -1;
         } else {
-            ((jc) this).field_k = ((gi) (Object) var2).field_g;
+            this.field_k = ((gi) ((Object) var2)).field_g;
         }
     }
 
     private final void e() {
         gi var1 = null;
-        if (((jc) this).field_l > 0) {
-            var1 = (gi) (Object) ((jc) this).field_m.a((byte) -95);
+        if (this.field_l > 0) {
+            var1 = (gi) ((Object) this.field_m.a((byte) -95));
             while (var1 != null) {
-                var1.field_g = var1.field_g - ((jc) this).field_l;
-                var1 = (gi) (Object) ((jc) this).field_m.a(true);
+                var1.field_g = var1.field_g - this.field_l;
+                var1 = (gi) ((Object) this.field_m.a(true));
             }
-            ((jc) this).field_k = ((jc) this).field_k - ((jc) this).field_l;
-            ((jc) this).field_l = 0;
+            this.field_k = this.field_k - this.field_l;
+            this.field_l = 0;
         }
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        ag var4 = (ag) (Object) ((jc) this).field_n.a((byte) -95);
+        ag var4 = (ag) ((Object) this.field_n.a((byte) -95));
         while (var4 != null) {
             var4.a(param0, param1, param2);
-            var4 = (ag) (Object) ((jc) this).field_n.a(true);
+            var4 = (ag) ((Object) this.field_n.a(true));
         }
     }
 
@@ -47,19 +47,19 @@ final class jc extends ag {
         Throwable var6 = null;
         Throwable decompiledCaughtException = null;
         L0: while (true) {
-          if (((jc) this).field_k >= 0) {
-            if (((jc) this).field_l + param0 >= ((jc) this).field_k) {
-              var2 = ((jc) this).field_k - ((jc) this).field_l;
+          if (this.field_k >= 0) {
+            if (this.field_l + param0 >= this.field_k) {
+              var2 = this.field_k - this.field_l;
               this.e(var2);
               param0 = param0 - var2;
-              ((jc) this).field_l = ((jc) this).field_l + var2;
+              this.field_l = this.field_l + var2;
               this.e();
-              var3 = (gi) (Object) ((jc) this).field_m.a((byte) -95);
-              var4 = (Object) (Object) var3;
+              var3 = (gi) ((Object) this.field_m.a((byte) -95));
+              var4 = var3;
               synchronized (var4) {
                 L1: {
                   L2: {
-                    var5 = var3.a((jc) this);
+                    var5 = var3.a((jc) (this));
                     if (var5 >= 0) {
                       var3.field_g = var5;
                       this.a(var3.field_b, var3);
@@ -79,7 +79,7 @@ final class jc extends ag {
                 return;
               }
             } else {
-              ((jc) this).field_l = ((jc) this).field_l + param0;
+              this.field_l = this.field_l + param0;
               this.e(param0);
               return;
             }
@@ -92,36 +92,36 @@ final class jc extends ag {
 
     private final void a(wf param0, gi param1) {
         L0: while (true) {
-          if (param0 != ((jc) this).field_m.field_d) {
-            if (((gi) (Object) param0).field_g <= param1.field_g) {
+          if (param0 != this.field_m.field_d) {
+            if (((gi) ((Object) param0)).field_g <= param1.field_g) {
               param0 = param0.field_b;
               continue L0;
             } else {
-              td.a(param0, (byte) 125, (wf) (Object) param1);
-              ((jc) this).field_k = ((gi) (Object) ((jc) this).field_m.field_d.field_b).field_g;
+              td.a(param0, (byte) 125, param1);
+              this.field_k = ((gi) ((Object) this.field_m.field_d.field_b)).field_g;
               return;
             }
           } else {
-            td.a(param0, (byte) 125, (wf) (Object) param1);
-            ((jc) this).field_k = ((gi) (Object) ((jc) this).field_m.field_d.field_b).field_g;
+            td.a(param0, (byte) 125, param1);
+            this.field_k = ((gi) ((Object) this.field_m.field_d.field_b)).field_g;
             return;
           }
         }
     }
 
     final ag d() {
-        return (ag) (Object) ((jc) this).field_n.a((byte) -95);
+        return (ag) ((Object) this.field_n.a((byte) -95));
     }
 
     final synchronized void a(ag param0) {
-        ((jc) this).field_n.a((wf) (Object) param0, (byte) 33);
+        this.field_n.a((wf) (param0), (byte) 33);
     }
 
     private final void e(int param0) {
-        ag var2 = (ag) (Object) ((jc) this).field_n.a((byte) -95);
+        ag var2 = (ag) ((Object) this.field_n.a((byte) -95));
         while (var2 != null) {
             var2.d(param0);
-            var2 = (ag) (Object) ((jc) this).field_n.a(true);
+            var2 = (ag) ((Object) this.field_n.a(true));
         }
     }
 
@@ -133,20 +133,20 @@ final class jc extends ag {
         Throwable var8 = null;
         Throwable decompiledCaughtException = null;
         L0: while (true) {
-          if (((jc) this).field_k >= 0) {
-            if (((jc) this).field_l + param2 >= ((jc) this).field_k) {
-              var4 = ((jc) this).field_k - ((jc) this).field_l;
+          if (this.field_k >= 0) {
+            if (this.field_l + param2 >= this.field_k) {
+              var4 = this.field_k - this.field_l;
               this.c(param0, param1, var4);
               param1 = param1 + var4;
               param2 = param2 - var4;
-              ((jc) this).field_l = ((jc) this).field_l + var4;
+              this.field_l = this.field_l + var4;
               this.e();
-              var5 = (gi) (Object) ((jc) this).field_m.a((byte) -95);
-              var6 = (Object) (Object) var5;
+              var5 = (gi) ((Object) this.field_m.a((byte) -95));
+              var6 = var5;
               synchronized (var6) {
                 L1: {
                   L2: {
-                    var7 = var5.a((jc) this);
+                    var7 = var5.a((jc) (this));
                     if (var7 >= 0) {
                       var5.field_g = var7;
                       this.a(var5.field_b, var5);
@@ -166,7 +166,7 @@ final class jc extends ag {
                 return;
               }
             } else {
-              ((jc) this).field_l = ((jc) this).field_l + param2;
+              this.field_l = this.field_l + param2;
               this.c(param0, param1, param2);
               return;
             }
@@ -178,7 +178,7 @@ final class jc extends ag {
     }
 
     final ag a() {
-        return (ag) (Object) ((jc) this).field_n.a(true);
+        return (ag) ((Object) this.field_n.a(true));
     }
 
     final int b() {
@@ -186,9 +186,9 @@ final class jc extends ag {
     }
 
     public jc() {
-        ((jc) this).field_n = new qj();
-        ((jc) this).field_m = new qj();
-        ((jc) this).field_l = 0;
-        ((jc) this).field_k = -1;
+        this.field_n = new qj();
+        this.field_m = new qj();
+        this.field_l = 0;
+        this.field_k = -1;
     }
 }

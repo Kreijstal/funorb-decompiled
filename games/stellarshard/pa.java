@@ -39,7 +39,7 @@ final class pa extends tf {
     int[] field_G;
 
     final bj a(int param0, int param1, int param2, int param3, int param4) {
-        return (bj) (Object) new sc((pa) this, param0, param1, param2, param3, param4);
+        return (bj) ((Object) new sc((pa) (this), param0, param1, param2, param3, param4));
     }
 
     private final void a(byte[] param0) {
@@ -170,22 +170,22 @@ final class pa extends tf {
           var21 = var21 + var18;
           var34 = var21;
           var21 = var21 + var19;
-          ((pa) this).field_m = var9;
-          ((pa) this).field_h = var10;
-          ((pa) this).field_L = var11;
-          ((pa) this).field_g = new int[var9];
-          ((pa) this).field_F = new int[var9];
-          ((pa) this).field_C = new int[var9];
-          ((pa) this).field_z = new int[var10];
-          ((pa) this).field_E = new int[var10];
-          ((pa) this).field_G = new int[var10];
+          this.field_m = var9;
+          this.field_h = var10;
+          this.field_L = var11;
+          this.field_g = new int[var9];
+          this.field_F = new int[var9];
+          this.field_C = new int[var9];
+          this.field_z = new int[var10];
+          this.field_E = new int[var10];
+          this.field_G = new int[var10];
           if (var11 <= 0) {
             break L5;
           } else {
-            ((pa) this).field_i = new byte[var11];
-            ((pa) this).field_B = new short[var11];
-            ((pa) this).field_w = new short[var11];
-            ((pa) this).field_k = new short[var11];
+            this.field_i = new byte[var11];
+            this.field_B = new short[var11];
+            this.field_w = new short[var11];
+            this.field_k = new short[var11];
             break L5;
           }
         }
@@ -193,7 +193,7 @@ final class pa extends tf {
           if (var16 != 1) {
             break L6;
           } else {
-            ((pa) this).field_y = new int[var9];
+            this.field_y = new int[var9];
             break L6;
           }
         }
@@ -201,9 +201,9 @@ final class pa extends tf {
           if (var12 != 1) {
             break L7;
           } else {
-            ((pa) this).field_q = new byte[var10];
-            ((pa) this).field_J = new byte[var10];
-            ((pa) this).field_D = new short[var10];
+            this.field_q = new byte[var10];
+            this.field_J = new byte[var10];
+            this.field_D = new short[var10];
             break L7;
           }
         }
@@ -211,7 +211,7 @@ final class pa extends tf {
           if (var13 != 255) {
             break L8;
           } else {
-            ((pa) this).field_x = new byte[var10];
+            this.field_x = new byte[var10];
             break L8;
           }
         }
@@ -219,7 +219,7 @@ final class pa extends tf {
           if (var14 != 1) {
             break L9;
           } else {
-            ((pa) this).field_j = new byte[var10];
+            this.field_j = new byte[var10];
             break L9;
           }
         }
@@ -227,11 +227,11 @@ final class pa extends tf {
           if (var15 != 1) {
             break L10;
           } else {
-            ((pa) this).field_n = new int[var10];
+            this.field_n = new int[var10];
             break L10;
           }
         }
-        ((pa) this).field_I = new short[var10];
+        this.field_I = new short[var10];
         var4.field_k = var22;
         var5.field_k = var32;
         var6.field_k = var33;
@@ -251,7 +251,7 @@ final class pa extends tf {
             var38 = 0;
             L12: while (true) {
               if (var38 >= var10) {
-                ((pa) this).field_v = -1;
+                this.field_v = -1;
                 var4.field_k = var29;
                 var5.field_k = var23;
                 var38 = 0;
@@ -261,13 +261,13 @@ final class pa extends tf {
                 var42 = 0;
                 L13: while (true) {
                   if (var42 >= var10) {
-                    ((pa) this).field_v = ((pa) this).field_v + 1;
+                    this.field_v = this.field_v + 1;
                     var4.field_k = var31;
                     var42 = 0;
                     L14: while (true) {
                       if (var42 >= var11) {
                         L15: {
-                          if (((pa) this).field_J == null) {
+                          if (this.field_J == null) {
                             break L15;
                           } else {
                             var42 = 0;
@@ -278,23 +278,23 @@ final class pa extends tf {
                                 if (var42 != 0) {
                                   break L15;
                                 } else {
-                                  ((pa) this).field_J = null;
+                                  this.field_J = null;
                                   break L15;
                                 }
                               } else {
-                                var44 = ((pa) this).field_J[var45] & 255;
+                                var44 = this.field_J[var45] & 255;
                                 if (var44 != 255) {
                                   L17: {
-                                    if ((((pa) this).field_B[var44] & 65535) != ((pa) this).field_z[var45]) {
+                                    if ((this.field_B[var44] & 65535) != this.field_z[var45]) {
                                       break L17;
                                     } else {
-                                      if ((((pa) this).field_w[var44] & 65535) != ((pa) this).field_E[var45]) {
+                                      if ((this.field_w[var44] & 65535) != this.field_E[var45]) {
                                         break L17;
                                       } else {
-                                        if ((((pa) this).field_k[var44] & 65535) != ((pa) this).field_G[var45]) {
+                                        if ((this.field_k[var44] & 65535) != this.field_G[var45]) {
                                           break L17;
                                         } else {
-                                          ((pa) this).field_J[var45] = (byte) -1;
+                                          this.field_J[var45] = (byte)-1;
                                           var45++;
                                           continue L16;
                                         }
@@ -316,7 +316,7 @@ final class pa extends tf {
                           if (var3 != 0) {
                             break L18;
                           } else {
-                            ((pa) this).field_D = null;
+                            this.field_D = null;
                             break L18;
                           }
                         }
@@ -324,16 +324,16 @@ final class pa extends tf {
                           if (var2 != 0) {
                             break L19;
                           } else {
-                            ((pa) this).field_q = null;
+                            this.field_q = null;
                             break L19;
                           }
                         }
                         return;
                       } else {
-                        ((pa) this).field_i[var42] = (byte) 0;
-                        ((pa) this).field_B[var42] = (short)var4.c((byte) 105);
-                        ((pa) this).field_w[var42] = (short)var4.c((byte) 98);
-                        ((pa) this).field_k[var42] = (short)var4.c((byte) 120);
+                        this.field_i[var42] = (byte) 0;
+                        this.field_B[var42] = (short)var4.c((byte) 105);
+                        this.field_w[var42] = (short)var4.c((byte) 98);
+                        this.field_k[var42] = (short)var4.c((byte) 120);
                         var42++;
                         continue L14;
                       }
@@ -351,28 +351,28 @@ final class pa extends tf {
                           var41 = var39;
                           var40 = var4.e(-64) + var41;
                           var41 = var40;
-                          ((pa) this).field_z[var42] = var38;
-                          ((pa) this).field_E[var42] = var39;
-                          ((pa) this).field_G[var42] = var40;
-                          if (var38 <= ((pa) this).field_v) {
+                          this.field_z[var42] = var38;
+                          this.field_E[var42] = var39;
+                          this.field_G[var42] = var40;
+                          if (var38 <= this.field_v) {
                             break L21;
                           } else {
-                            ((pa) this).field_v = var38;
+                            this.field_v = var38;
                             break L21;
                           }
                         }
                         L22: {
-                          if (var39 <= ((pa) this).field_v) {
+                          if (var39 <= this.field_v) {
                             break L22;
                           } else {
-                            ((pa) this).field_v = var39;
+                            this.field_v = var39;
                             break L22;
                           }
                         }
-                        if (var40 <= ((pa) this).field_v) {
+                        if (var40 <= this.field_v) {
                           break L20;
                         } else {
-                          ((pa) this).field_v = var40;
+                          this.field_v = var40;
                           break L20;
                         }
                       }
@@ -384,13 +384,13 @@ final class pa extends tf {
                         var39 = var40;
                         var40 = var4.e(-64) + var41;
                         var41 = var40;
-                        ((pa) this).field_z[var42] = var38;
-                        ((pa) this).field_E[var42] = var39;
-                        ((pa) this).field_G[var42] = var40;
-                        if (var40 <= ((pa) this).field_v) {
+                        this.field_z[var42] = var38;
+                        this.field_E[var42] = var39;
+                        this.field_G[var42] = var40;
+                        if (var40 <= this.field_v) {
                           break L23;
                         } else {
-                          ((pa) this).field_v = var40;
+                          this.field_v = var40;
                           break L23;
                         }
                       }
@@ -402,13 +402,13 @@ final class pa extends tf {
                         var38 = var40;
                         var40 = var4.e(-64) + var41;
                         var41 = var40;
-                        ((pa) this).field_z[var42] = var38;
-                        ((pa) this).field_E[var42] = var39;
-                        ((pa) this).field_G[var42] = var40;
-                        if (var40 <= ((pa) this).field_v) {
+                        this.field_z[var42] = var38;
+                        this.field_E[var42] = var39;
+                        this.field_G[var42] = var40;
+                        if (var40 <= this.field_v) {
                           break L24;
                         } else {
-                          ((pa) this).field_v = var40;
+                          this.field_v = var40;
                           break L24;
                         }
                       }
@@ -419,11 +419,11 @@ final class pa extends tf {
                       var39 = var44;
                       var40 = var4.e(-64) + var41;
                       var41 = var40;
-                      ((pa) this).field_z[var42] = var38;
-                      ((pa) this).field_E[var42] = var39;
-                      ((pa) this).field_G[var42] = var40;
-                      if (var40 > ((pa) this).field_v) {
-                        ((pa) this).field_v = var40;
+                      this.field_z[var42] = var38;
+                      this.field_E[var42] = var39;
+                      this.field_G[var42] = var40;
+                      if (var40 > this.field_v) {
+                        this.field_v = var40;
                         var42++;
                         continue L13;
                       } else {
@@ -438,30 +438,30 @@ final class pa extends tf {
                 }
               } else {
                 L25: {
-                  ((pa) this).field_I[var38] = (short)var4.c((byte) 46);
+                  this.field_I[var38] = (short)var4.c((byte) 46);
                   if (var12 != 1) {
                     break L25;
                   } else {
                     L26: {
                       var39 = var5.f(4);
                       if ((var39 & 1) != 1) {
-                        ((pa) this).field_q[var38] = (byte) 0;
+                        this.field_q[var38] = (byte) 0;
                         break L26;
                       } else {
-                        ((pa) this).field_q[var38] = (byte) 1;
+                        this.field_q[var38] = (byte) 1;
                         var2 = 1;
                         break L26;
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((pa) this).field_J[var38] = (byte) -1;
-                      ((pa) this).field_D[var38] = (short) -1;
+                      this.field_J[var38] = (byte)-1;
+                      this.field_D[var38] = (short)-1;
                       break L25;
                     } else {
-                      ((pa) this).field_J[var38] = (byte)(var39 >> 2);
-                      ((pa) this).field_D[var38] = ((pa) this).field_I[var38];
-                      ((pa) this).field_I[var38] = (short) 127;
-                      if (((pa) this).field_D[var38] == -1) {
+                      this.field_J[var38] = (byte)(var39 >> 2);
+                      this.field_D[var38] = this.field_I[var38];
+                      this.field_I[var38] = (short)127;
+                      if (this.field_D[var38] == -1) {
                         break L25;
                       } else {
                         var3 = 1;
@@ -474,7 +474,7 @@ final class pa extends tf {
                   if (var13 != 255) {
                     break L27;
                   } else {
-                    ((pa) this).field_x[var38] = var6.g(103);
+                    this.field_x[var38] = var6.g(103);
                     break L27;
                   }
                 }
@@ -482,12 +482,12 @@ final class pa extends tf {
                   if (var14 != 1) {
                     break L28;
                   } else {
-                    ((pa) this).field_j[var38] = var7.g(116);
+                    this.field_j[var38] = var7.g(116);
                     break L28;
                   }
                 }
                 if (var15 == 1) {
-                  ((pa) this).field_n[var38] = var8.f(4);
+                  this.field_n[var38] = var8.f(4);
                   var38++;
                   continue L12;
                 } else {
@@ -525,14 +525,14 @@ final class pa extends tf {
                 break L31;
               }
             }
-            ((pa) this).field_g[var38] = var35 + var40;
-            ((pa) this).field_F[var38] = var36 + var41;
-            ((pa) this).field_C[var38] = var37 + var42;
-            var35 = ((pa) this).field_g[var38];
-            var36 = ((pa) this).field_F[var38];
-            var37 = ((pa) this).field_C[var38];
+            this.field_g[var38] = var35 + var40;
+            this.field_F[var38] = var36 + var41;
+            this.field_C[var38] = var37 + var42;
+            var35 = this.field_g[var38];
+            var36 = this.field_F[var38];
+            var37 = this.field_C[var38];
             if (var16 == 1) {
-              ((pa) this).field_y[var38] = var8.f(4);
+              this.field_y[var38] = var8.f(4);
               var38++;
               continue L11;
             } else {
@@ -544,9 +544,9 @@ final class pa extends tf {
     }
 
     private final void c() {
-        ((pa) this).field_u = null;
-        ((pa) this).field_s = null;
-        ((pa) this).field_l = null;
+        this.field_u = null;
+        this.field_s = null;
+        this.field_l = null;
     }
 
     final void a(int[] param0) {
@@ -554,18 +554,19 @@ final class pa extends tf {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        for (var2 = 0; var2 < ((pa) this).field_m; var2++) {
-            var3 = ((pa) this).field_g[var2];
-            var4 = ((pa) this).field_F[var2];
-            var5 = ((pa) this).field_C[var2];
-            ((pa) this).field_g[var2] = param0[0] + (var3 * param0[3] + var4 * param0[6] + var5 * param0[9] >> 16);
-            ((pa) this).field_F[var2] = param0[1] + (var3 * param0[4] + var4 * param0[7] + var5 * param0[10] >> 16);
-            ((pa) this).field_C[var2] = param0[2] + (var3 * param0[5] + var4 * param0[8] + var5 * param0[11] >> 16);
+        for (var2 = 0; var2 < this.field_m; var2++) {
+            var3 = this.field_g[var2];
+            var4 = this.field_F[var2];
+            var5 = this.field_C[var2];
+            this.field_g[var2] = param0[0] + (var3 * param0[3] + var4 * param0[6] + var5 * param0[9] >> 16);
+            this.field_F[var2] = param0[1] + (var3 * param0[4] + var4 * param0[7] + var5 * param0[10] >> 16);
+            this.field_C[var2] = param0[2] + (var3 * param0[5] + var4 * param0[8] + var5 * param0[11] >> 16);
         }
         this.c();
     }
 
     private final void b(byte[] param0) {
+        byte dupTemp$1 = 0;
         ka var2 = null;
         ka var3 = null;
         ka var4 = null;
@@ -683,7 +684,7 @@ final class pa extends tf {
           if (var11 <= 0) {
             break L2;
           } else {
-            ((pa) this).field_i = new byte[var11];
+            this.field_i = new byte[var11];
             var2.field_k = 0;
             var28 = 0;
             L3: while (true) {
@@ -691,8 +692,8 @@ final class pa extends tf {
                 break L2;
               } else {
                 L4: {
-                  byte dupTemp$1 = var2.g(112);
-                  ((pa) this).field_i[var28] = dupTemp$1;
+                  dupTemp$1 = var2.g(112);
+                  this.field_i[var28] = dupTemp$1;
                   var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
@@ -810,19 +811,19 @@ final class pa extends tf {
           var48 = var28;
           var28 = var28 + (var26 + var27 * 2);
           var49 = var28;
-          ((pa) this).field_m = var9;
-          ((pa) this).field_h = var10;
-          ((pa) this).field_L = var11;
-          ((pa) this).field_g = new int[var9];
-          ((pa) this).field_F = new int[var9];
-          ((pa) this).field_C = new int[var9];
-          ((pa) this).field_z = new int[var10];
-          ((pa) this).field_E = new int[var10];
-          ((pa) this).field_G = new int[var10];
+          this.field_m = var9;
+          this.field_h = var10;
+          this.field_L = var11;
+          this.field_g = new int[var9];
+          this.field_F = new int[var9];
+          this.field_C = new int[var9];
+          this.field_z = new int[var10];
+          this.field_E = new int[var10];
+          this.field_G = new int[var10];
           if (var19 != 1) {
             break L12;
           } else {
-            ((pa) this).field_y = new int[var9];
+            this.field_y = new int[var9];
             break L12;
           }
         }
@@ -830,7 +831,7 @@ final class pa extends tf {
           if (var13 == 0) {
             break L13;
           } else {
-            ((pa) this).field_q = new byte[var10];
+            this.field_q = new byte[var10];
             break L13;
           }
         }
@@ -838,7 +839,7 @@ final class pa extends tf {
           if (var15 != 255) {
             break L14;
           } else {
-            ((pa) this).field_x = new byte[var10];
+            this.field_x = new byte[var10];
             break L14;
           }
         }
@@ -846,7 +847,7 @@ final class pa extends tf {
           if (var16 != 1) {
             break L15;
           } else {
-            ((pa) this).field_j = new byte[var10];
+            this.field_j = new byte[var10];
             break L15;
           }
         }
@@ -854,7 +855,7 @@ final class pa extends tf {
           if (var17 != 1) {
             break L16;
           } else {
-            ((pa) this).field_n = new int[var10];
+            this.field_n = new int[var10];
             break L16;
           }
         }
@@ -862,7 +863,7 @@ final class pa extends tf {
           if (var18 != 1) {
             break L17;
           } else {
-            ((pa) this).field_D = new short[var10];
+            this.field_D = new short[var10];
             break L17;
           }
         }
@@ -873,37 +874,37 @@ final class pa extends tf {
             if (var11 <= 0) {
               break L18;
             } else {
-              ((pa) this).field_J = new byte[var10];
+              this.field_J = new byte[var10];
               break L18;
             }
           }
         }
         L19: {
-          ((pa) this).field_I = new short[var10];
+          this.field_I = new short[var10];
           if (var11 <= 0) {
             break L19;
           } else {
             L20: {
-              ((pa) this).field_B = new short[var11];
-              ((pa) this).field_w = new short[var11];
-              ((pa) this).field_k = new short[var11];
+              this.field_B = new short[var11];
+              this.field_w = new short[var11];
+              this.field_k = new short[var11];
               if (var26 <= 0) {
                 break L20;
               } else {
-                ((pa) this).field_o = new short[var26];
-                ((pa) this).field_f = new short[var26];
-                ((pa) this).field_p = new short[var26];
-                ((pa) this).field_d = new byte[var26];
-                ((pa) this).field_H = new byte[var26];
-                ((pa) this).field_r = new byte[var26];
+                this.field_o = new short[var26];
+                this.field_f = new short[var26];
+                this.field_p = new short[var26];
+                this.field_d = new byte[var26];
+                this.field_H = new byte[var26];
+                this.field_r = new byte[var26];
                 break L20;
               }
             }
             if (var27 <= 0) {
               break L19;
             } else {
-              ((pa) this).field_K = new byte[var27];
-              ((pa) this).field_t = new byte[var27];
+              this.field_K = new byte[var27];
+              this.field_t = new byte[var27];
               break L19;
             }
           }
@@ -929,7 +930,7 @@ final class pa extends tf {
             var53 = 0;
             L22: while (true) {
               if (var53 >= var10) {
-                ((pa) this).field_v = -1;
+                this.field_v = -1;
                 var2.field_k = var36;
                 var3.field_k = var31;
                 var53 = 0;
@@ -939,7 +940,7 @@ final class pa extends tf {
                 var57 = 0;
                 L23: while (true) {
                   if (var57 >= var10) {
-                    ((pa) this).field_v = ((pa) this).field_v + 1;
+                    this.field_v = this.field_v + 1;
                     var2.field_k = var43;
                     var3.field_k = var44;
                     var4.field_k = var45;
@@ -975,13 +976,13 @@ final class pa extends tf {
                         return;
                       } else {
                         L27: {
-                          var58 = ((pa) this).field_i[var57] & 255;
+                          var58 = this.field_i[var57] & 255;
                           if (var58 != 0) {
                             break L27;
                           } else {
-                            ((pa) this).field_B[var57] = (short)var2.c((byte) 44);
-                            ((pa) this).field_w[var57] = (short)var2.c((byte) 117);
-                            ((pa) this).field_k[var57] = (short)var2.c((byte) 65);
+                            this.field_B[var57] = (short)var2.c((byte) 44);
+                            this.field_w[var57] = (short)var2.c((byte) 117);
+                            this.field_k[var57] = (short)var2.c((byte) 65);
                             break L27;
                           }
                         }
@@ -989,15 +990,15 @@ final class pa extends tf {
                           if (var58 != 1) {
                             break L28;
                           } else {
-                            ((pa) this).field_B[var57] = (short)var3.c((byte) 112);
-                            ((pa) this).field_w[var57] = (short)var3.c((byte) 38);
-                            ((pa) this).field_k[var57] = (short)var3.c((byte) 94);
-                            ((pa) this).field_o[var57] = (short)var4.c((byte) 42);
-                            ((pa) this).field_f[var57] = (short)var4.c((byte) 26);
-                            ((pa) this).field_p[var57] = (short)var4.c((byte) 32);
-                            ((pa) this).field_d[var57] = var5.g(-105);
-                            ((pa) this).field_H[var57] = var6.g(115);
-                            ((pa) this).field_r[var57] = var7.g(106);
+                            this.field_B[var57] = (short)var3.c((byte) 112);
+                            this.field_w[var57] = (short)var3.c((byte) 38);
+                            this.field_k[var57] = (short)var3.c((byte) 94);
+                            this.field_o[var57] = (short)var4.c((byte) 42);
+                            this.field_f[var57] = (short)var4.c((byte) 26);
+                            this.field_p[var57] = (short)var4.c((byte) 32);
+                            this.field_d[var57] = var5.g(-105);
+                            this.field_H[var57] = var6.g(115);
+                            this.field_r[var57] = var7.g(106);
                             break L28;
                           }
                         }
@@ -1005,30 +1006,30 @@ final class pa extends tf {
                           if (var58 != 2) {
                             break L29;
                           } else {
-                            ((pa) this).field_B[var57] = (short)var3.c((byte) 25);
-                            ((pa) this).field_w[var57] = (short)var3.c((byte) 34);
-                            ((pa) this).field_k[var57] = (short)var3.c((byte) 88);
-                            ((pa) this).field_o[var57] = (short)var4.c((byte) 54);
-                            ((pa) this).field_f[var57] = (short)var4.c((byte) 94);
-                            ((pa) this).field_p[var57] = (short)var4.c((byte) 45);
-                            ((pa) this).field_d[var57] = var5.g(126);
-                            ((pa) this).field_H[var57] = var6.g(126);
-                            ((pa) this).field_r[var57] = var7.g(-44);
-                            ((pa) this).field_K[var57] = var7.g(122);
-                            ((pa) this).field_t[var57] = var7.g(120);
+                            this.field_B[var57] = (short)var3.c((byte) 25);
+                            this.field_w[var57] = (short)var3.c((byte) 34);
+                            this.field_k[var57] = (short)var3.c((byte) 88);
+                            this.field_o[var57] = (short)var4.c((byte) 54);
+                            this.field_f[var57] = (short)var4.c((byte) 94);
+                            this.field_p[var57] = (short)var4.c((byte) 45);
+                            this.field_d[var57] = var5.g(126);
+                            this.field_H[var57] = var6.g(126);
+                            this.field_r[var57] = var7.g(-44);
+                            this.field_K[var57] = var7.g(122);
+                            this.field_t[var57] = var7.g(120);
                             break L29;
                           }
                         }
                         if (var58 == 3) {
-                          ((pa) this).field_B[var57] = (short)var3.c((byte) 76);
-                          ((pa) this).field_w[var57] = (short)var3.c((byte) 107);
-                          ((pa) this).field_k[var57] = (short)var3.c((byte) 26);
-                          ((pa) this).field_o[var57] = (short)var4.c((byte) 101);
-                          ((pa) this).field_f[var57] = (short)var4.c((byte) 30);
-                          ((pa) this).field_p[var57] = (short)var4.c((byte) 24);
-                          ((pa) this).field_d[var57] = var5.g(-40);
-                          ((pa) this).field_H[var57] = var6.g(123);
-                          ((pa) this).field_r[var57] = var7.g(-29);
+                          this.field_B[var57] = (short)var3.c((byte) 76);
+                          this.field_w[var57] = (short)var3.c((byte) 107);
+                          this.field_k[var57] = (short)var3.c((byte) 26);
+                          this.field_o[var57] = (short)var4.c((byte) 101);
+                          this.field_f[var57] = (short)var4.c((byte) 30);
+                          this.field_p[var57] = (short)var4.c((byte) 24);
+                          this.field_d[var57] = var5.g(-40);
+                          this.field_H[var57] = var6.g(123);
+                          this.field_r[var57] = var7.g(-29);
                           var57++;
                           continue L24;
                         } else {
@@ -1050,28 +1051,28 @@ final class pa extends tf {
                           var56 = var54;
                           var55 = var2.e(-64) + var56;
                           var56 = var55;
-                          ((pa) this).field_z[var57] = var53;
-                          ((pa) this).field_E[var57] = var54;
-                          ((pa) this).field_G[var57] = var55;
-                          if (var53 <= ((pa) this).field_v) {
+                          this.field_z[var57] = var53;
+                          this.field_E[var57] = var54;
+                          this.field_G[var57] = var55;
+                          if (var53 <= this.field_v) {
                             break L31;
                           } else {
-                            ((pa) this).field_v = var53;
+                            this.field_v = var53;
                             break L31;
                           }
                         }
                         L32: {
-                          if (var54 <= ((pa) this).field_v) {
+                          if (var54 <= this.field_v) {
                             break L32;
                           } else {
-                            ((pa) this).field_v = var54;
+                            this.field_v = var54;
                             break L32;
                           }
                         }
-                        if (var55 <= ((pa) this).field_v) {
+                        if (var55 <= this.field_v) {
                           break L30;
                         } else {
-                          ((pa) this).field_v = var55;
+                          this.field_v = var55;
                           break L30;
                         }
                       }
@@ -1083,13 +1084,13 @@ final class pa extends tf {
                         var54 = var55;
                         var55 = var2.e(-64) + var56;
                         var56 = var55;
-                        ((pa) this).field_z[var57] = var53;
-                        ((pa) this).field_E[var57] = var54;
-                        ((pa) this).field_G[var57] = var55;
-                        if (var55 <= ((pa) this).field_v) {
+                        this.field_z[var57] = var53;
+                        this.field_E[var57] = var54;
+                        this.field_G[var57] = var55;
+                        if (var55 <= this.field_v) {
                           break L33;
                         } else {
-                          ((pa) this).field_v = var55;
+                          this.field_v = var55;
                           break L33;
                         }
                       }
@@ -1101,13 +1102,13 @@ final class pa extends tf {
                         var53 = var55;
                         var55 = var2.e(-64) + var56;
                         var56 = var55;
-                        ((pa) this).field_z[var57] = var53;
-                        ((pa) this).field_E[var57] = var54;
-                        ((pa) this).field_G[var57] = var55;
-                        if (var55 <= ((pa) this).field_v) {
+                        this.field_z[var57] = var53;
+                        this.field_E[var57] = var54;
+                        this.field_G[var57] = var55;
+                        if (var55 <= this.field_v) {
                           break L34;
                         } else {
-                          ((pa) this).field_v = var55;
+                          this.field_v = var55;
                           break L34;
                         }
                       }
@@ -1118,11 +1119,11 @@ final class pa extends tf {
                       var54 = var59;
                       var55 = var2.e(-64) + var56;
                       var56 = var55;
-                      ((pa) this).field_z[var57] = var53;
-                      ((pa) this).field_E[var57] = var54;
-                      ((pa) this).field_G[var57] = var55;
-                      if (var55 > ((pa) this).field_v) {
-                        ((pa) this).field_v = var55;
+                      this.field_z[var57] = var53;
+                      this.field_E[var57] = var54;
+                      this.field_G[var57] = var55;
+                      if (var55 > this.field_v) {
+                        this.field_v = var55;
                         var57++;
                         continue L23;
                       } else {
@@ -1137,11 +1138,11 @@ final class pa extends tf {
                 }
               } else {
                 L35: {
-                  ((pa) this).field_I[var53] = (short)var2.c((byte) 76);
+                  this.field_I[var53] = (short)var2.c((byte) 76);
                   if (var13 == 0) {
                     break L35;
                   } else {
-                    ((pa) this).field_q[var53] = var3.g(-122);
+                    this.field_q[var53] = var3.g(-122);
                     break L35;
                   }
                 }
@@ -1149,7 +1150,7 @@ final class pa extends tf {
                   if (var15 != 255) {
                     break L36;
                   } else {
-                    ((pa) this).field_x[var53] = var4.g(-28);
+                    this.field_x[var53] = var4.g(-28);
                     break L36;
                   }
                 }
@@ -1157,7 +1158,7 @@ final class pa extends tf {
                   if (var16 != 1) {
                     break L37;
                   } else {
-                    ((pa) this).field_j[var53] = var5.g(-52);
+                    this.field_j[var53] = var5.g(-52);
                     break L37;
                   }
                 }
@@ -1165,7 +1166,7 @@ final class pa extends tf {
                   if (var17 != 1) {
                     break L38;
                   } else {
-                    ((pa) this).field_n[var53] = var6.f(4);
+                    this.field_n[var53] = var6.f(4);
                     break L38;
                   }
                 }
@@ -1173,17 +1174,17 @@ final class pa extends tf {
                   if (var18 != 1) {
                     break L39;
                   } else {
-                    ((pa) this).field_D[var53] = (short)(var7.c((byte) 73) - 1);
+                    this.field_D[var53] = (short)(var7.c((byte) 73) - 1);
                     break L39;
                   }
                 }
-                if (((pa) this).field_J != null) {
-                  if (((pa) this).field_D[var53] == -1) {
-                    ((pa) this).field_J[var53] = (byte) -1;
+                if (this.field_J != null) {
+                  if (this.field_D[var53] == -1) {
+                    this.field_J[var53] = (byte)-1;
                     var53++;
                     continue L22;
                   } else {
-                    ((pa) this).field_J[var53] = (byte)(var8.f(4) - 1);
+                    this.field_J[var53] = (byte)(var8.f(4) - 1);
                     var53++;
                     continue L22;
                   }
@@ -1222,14 +1223,14 @@ final class pa extends tf {
                 break L42;
               }
             }
-            ((pa) this).field_g[var53] = var50 + var55;
-            ((pa) this).field_F[var53] = var51 + var56;
-            ((pa) this).field_C[var53] = var52 + var57;
-            var50 = ((pa) this).field_g[var53];
-            var51 = ((pa) this).field_F[var53];
-            var52 = ((pa) this).field_C[var53];
+            this.field_g[var53] = var50 + var55;
+            this.field_F[var53] = var51 + var56;
+            this.field_C[var53] = var52 + var57;
+            var50 = this.field_g[var53];
+            var51 = this.field_F[var53];
+            var52 = this.field_C[var53];
             if (var19 == 1) {
-              ((pa) this).field_y[var53] = var6.f(4);
+              this.field_y[var53] = var6.f(4);
               var53++;
               continue L21;
             } else {
@@ -1241,52 +1242,49 @@ final class pa extends tf {
     }
 
     final void b() {
+        int[] array$2 = null;
+        int[] array$3 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
         L0: {
-          if (((pa) this).field_y == null) {
+          if (this.field_y == null) {
             break L0;
           } else {
-            var9 = new int[256];
-            var7 = var9;
-            var5 = var7;
+            var5 = new int[256];
             var2 = 0;
             var3 = 0;
             L1: while (true) {
-              if (var3 >= ((pa) this).field_m) {
-                ((pa) this).field_A = new int[var2 + 1][];
+              if (var3 >= this.field_m) {
+                this.field_A = new int[var2 + 1][];
                 var3 = 0;
                 L2: while (true) {
                   if (var3 > var2) {
                     var3 = 0;
                     L3: while (true) {
-                      if (var3 >= ((pa) this).field_m) {
-                        ((pa) this).field_y = null;
+                      if (var3 >= this.field_m) {
+                        this.field_y = null;
                         break L0;
                       } else {
-                        var4 = ((pa) this).field_y[var3];
+                        var4 = this.field_y[var3];
                         var5[var4] = var5[var4] + 1;
-                        ((pa) this).field_A[var4][var5[var4]] = var3;
+                        this.field_A[var4][var5[var4]] = var3;
                         var3++;
                         continue L3;
                       }
                     }
                   } else {
-                    ((pa) this).field_A[var3] = new int[var9[var3]];
-                    var9[var3] = 0;
+                    array$2 = new int[var5[var3]];
+                    this.field_A[var3] = array$2;
+                    var5[var3] = 0;
                     var3++;
                     continue L2;
                   }
                 }
               } else {
-                var4 = ((pa) this).field_y[var3];
+                var4 = this.field_y[var3];
                 var5[var4] = var5[var4] + 1;
                 if (var4 > var2) {
                   var2 = var4;
@@ -1301,42 +1299,41 @@ final class pa extends tf {
           }
         }
         L4: {
-          if (((pa) this).field_n == null) {
+          if (this.field_n == null) {
             break L4;
           } else {
-            var10 = new int[256];
-            var8 = var10;
-            var6 = var8;
+            var6 = new int[256];
             var2 = 0;
             var3 = 0;
             L5: while (true) {
-              if (var3 >= ((pa) this).field_h) {
-                ((pa) this).field_e = new int[var2 + 1][];
+              if (var3 >= this.field_h) {
+                this.field_e = new int[var2 + 1][];
                 var3 = 0;
                 L6: while (true) {
                   if (var3 > var2) {
                     var3 = 0;
                     L7: while (true) {
-                      if (var3 >= ((pa) this).field_h) {
-                        ((pa) this).field_n = null;
+                      if (var3 >= this.field_h) {
+                        this.field_n = null;
                         break L4;
                       } else {
-                        var4 = ((pa) this).field_n[var3];
+                        var4 = this.field_n[var3];
                         var6[var4] = var6[var4] + 1;
-                        ((pa) this).field_e[var4][var6[var4]] = var3;
+                        this.field_e[var4][var6[var4]] = var3;
                         var3++;
                         continue L7;
                       }
                     }
                   } else {
-                    ((pa) this).field_e[var3] = new int[var10[var3]];
-                    var10[var3] = 0;
+                    array$3 = new int[var6[var3]];
+                    this.field_e[var3] = array$3;
+                    var6[var3] = 0;
                     var3++;
                     continue L6;
                   }
                 }
               } else {
-                var4 = ((pa) this).field_n[var3];
+                var4 = this.field_n[var3];
                 var6[var4] = var6[var4] + 1;
                 if (var4 > var2) {
                   var2 = var4;
@@ -1353,6 +1350,7 @@ final class pa extends tf {
     }
 
     final void a() {
+        l dupTemp$1 = null;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -1372,25 +1370,25 @@ final class pa extends tf {
         nk var17 = null;
         nk var18 = null;
         nk var19 = null;
-        if (((pa) this).field_u == null) {
-          ((pa) this).field_u = new nk[((pa) this).field_v];
+        if (this.field_u == null) {
+          this.field_u = new nk[this.field_v];
           var1 = 0;
           L0: while (true) {
-            if (var1 >= ((pa) this).field_v) {
+            if (var1 >= this.field_v) {
               var1 = 0;
               L1: while (true) {
-                if (var1 >= ((pa) this).field_h) {
+                if (var1 >= this.field_h) {
                   return;
                 } else {
-                  var2 = ((pa) this).field_z[var1];
-                  var3 = ((pa) this).field_E[var1];
-                  var4 = ((pa) this).field_G[var1];
-                  var5 = ((pa) this).field_g[var3] - ((pa) this).field_g[var2];
-                  var6 = ((pa) this).field_F[var3] - ((pa) this).field_F[var2];
-                  var7 = ((pa) this).field_C[var3] - ((pa) this).field_C[var2];
-                  var8 = ((pa) this).field_g[var4] - ((pa) this).field_g[var2];
-                  var9 = ((pa) this).field_F[var4] - ((pa) this).field_F[var2];
-                  var10 = ((pa) this).field_C[var4] - ((pa) this).field_C[var2];
+                  var2 = this.field_z[var1];
+                  var3 = this.field_E[var1];
+                  var4 = this.field_G[var1];
+                  var5 = this.field_g[var3] - this.field_g[var2];
+                  var6 = this.field_F[var3] - this.field_F[var2];
+                  var7 = this.field_C[var3] - this.field_C[var2];
+                  var8 = this.field_g[var4] - this.field_g[var2];
+                  var9 = this.field_F[var4] - this.field_F[var2];
+                  var10 = this.field_C[var4] - this.field_C[var2];
                   var11 = var6 * var10 - var9 * var7;
                   var12 = var7 * var8 - var10 * var5;
                   var13 = var5 * var9 - var8 * var6;
@@ -1425,8 +1423,8 @@ final class pa extends tf {
                                     var11 = var11 * 256 / var14;
                                     var12 = var12 * 256 / var14;
                                     var13 = var13 * 256 / var14;
-                                    if (((pa) this).field_q != null) {
-                                      var15 = ((pa) this).field_q[var1];
+                                    if (this.field_q != null) {
+                                      var15 = this.field_q[var1];
                                       break L5;
                                     } else {
                                       var15 = 0;
@@ -1436,15 +1434,15 @@ final class pa extends tf {
                                   if (var15 != 0) {
                                     if (var15 == 1) {
                                       L6: {
-                                        if (((pa) this).field_l != null) {
+                                        if (this.field_l != null) {
                                           break L6;
                                         } else {
-                                          ((pa) this).field_l = new l[((pa) this).field_h];
+                                          this.field_l = new l[this.field_h];
                                           break L6;
                                         }
                                       }
-                                      l dupTemp$1 = new l();
-                                      ((pa) this).field_l[var1] = dupTemp$1;
+                                      dupTemp$1 = new l();
+                                      this.field_l[var1] = dupTemp$1;
                                       var16 = dupTemp$1;
                                       var16.field_i = var11;
                                       var16.field_c = var12;
@@ -1456,17 +1454,17 @@ final class pa extends tf {
                                       continue L1;
                                     }
                                   } else {
-                                    var17 = ((pa) this).field_u[var2];
+                                    var17 = this.field_u[var2];
                                     var17.field_e = var17.field_e + var11;
                                     var17.field_d = var17.field_d + var12;
                                     var17.field_f = var17.field_f + var13;
                                     var17.field_g = var17.field_g + 1;
-                                    var18 = ((pa) this).field_u[var3];
+                                    var18 = this.field_u[var3];
                                     var18.field_e = var18.field_e + var11;
                                     var18.field_d = var18.field_d + var12;
                                     var18.field_f = var18.field_f + var13;
                                     var18.field_g = var18.field_g + 1;
-                                    var19 = ((pa) this).field_u[var4];
+                                    var19 = this.field_u[var4];
                                     var19.field_e = var19.field_e + var11;
                                     var19.field_d = var19.field_d + var12;
                                     var19.field_f = var19.field_f + var13;
@@ -1491,7 +1489,7 @@ final class pa extends tf {
                 }
               }
             } else {
-              ((pa) this).field_u[var1] = new nk();
+              this.field_u[var1] = new nk();
               var1++;
               continue L0;
             }
@@ -1512,9 +1510,9 @@ final class pa extends tf {
     private pa(byte[] param0) {
         L0: {
           L1: {
-            ((pa) this).field_v = 0;
-            ((pa) this).field_h = 0;
-            ((pa) this).field_m = 0;
+            this.field_v = 0;
+            this.field_h = 0;
+            this.field_m = 0;
             if (param0[param0.length - 1] != -1) {
               break L1;
             } else {
@@ -1534,51 +1532,51 @@ final class pa extends tf {
     pa(pa param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         int var6 = 0;
         L0: {
-          ((pa) this).field_v = 0;
-          ((pa) this).field_h = 0;
-          ((pa) this).field_m = 0;
-          ((pa) this).field_m = param0.field_m;
-          ((pa) this).field_v = param0.field_v;
-          ((pa) this).field_h = param0.field_h;
-          ((pa) this).field_L = param0.field_L;
+          this.field_v = 0;
+          this.field_h = 0;
+          this.field_m = 0;
+          this.field_m = param0.field_m;
+          this.field_v = param0.field_v;
+          this.field_h = param0.field_h;
+          this.field_L = param0.field_L;
           if (!param1) {
-            ((pa) this).field_g = new int[((pa) this).field_m];
-            ((pa) this).field_F = new int[((pa) this).field_m];
-            ((pa) this).field_C = new int[((pa) this).field_m];
+            this.field_g = new int[this.field_m];
+            this.field_F = new int[this.field_m];
+            this.field_C = new int[this.field_m];
             var6 = 0;
             L1: while (true) {
-              if (var6 >= ((pa) this).field_m) {
+              if (var6 >= this.field_m) {
                 break L0;
               } else {
-                ((pa) this).field_g[var6] = param0.field_g[var6];
-                ((pa) this).field_F[var6] = param0.field_F[var6];
-                ((pa) this).field_C[var6] = param0.field_C[var6];
+                this.field_g[var6] = param0.field_g[var6];
+                this.field_F[var6] = param0.field_F[var6];
+                this.field_C[var6] = param0.field_C[var6];
                 var6++;
                 continue L1;
               }
             }
           } else {
-            ((pa) this).field_g = param0.field_g;
-            ((pa) this).field_F = param0.field_F;
-            ((pa) this).field_C = param0.field_C;
+            this.field_g = param0.field_g;
+            this.field_F = param0.field_F;
+            this.field_C = param0.field_C;
             break L0;
           }
         }
         L2: {
           if (!param2) {
-            ((pa) this).field_I = new short[((pa) this).field_h];
+            this.field_I = new short[this.field_h];
             var6 = 0;
             L3: while (true) {
-              if (var6 >= ((pa) this).field_h) {
+              if (var6 >= this.field_h) {
                 break L2;
               } else {
-                ((pa) this).field_I[var6] = param0.field_I[var6];
+                this.field_I[var6] = param0.field_I[var6];
                 var6++;
                 continue L3;
               }
             }
           } else {
-            ((pa) this).field_I = param0.field_I;
+            this.field_I = param0.field_I;
             break L2;
           }
         }
@@ -1588,13 +1586,13 @@ final class pa extends tf {
               break L5;
             } else {
               if (param0.field_D != null) {
-                ((pa) this).field_D = new short[((pa) this).field_h];
+                this.field_D = new short[this.field_h];
                 var6 = 0;
                 L6: while (true) {
-                  if (var6 >= ((pa) this).field_h) {
+                  if (var6 >= this.field_h) {
                     break L4;
                   } else {
-                    ((pa) this).field_D[var6] = param0.field_D[var6];
+                    this.field_D[var6] = param0.field_D[var6];
                     var6++;
                     continue L6;
                   }
@@ -1604,19 +1602,19 @@ final class pa extends tf {
               }
             }
           }
-          ((pa) this).field_D = param0.field_D;
+          this.field_D = param0.field_D;
           break L4;
         }
         L7: {
           if (!param4) {
-            ((pa) this).field_j = new byte[((pa) this).field_h];
+            this.field_j = new byte[this.field_h];
             if (param0.field_j != null) {
               var6 = 0;
               L8: while (true) {
-                if (var6 >= ((pa) this).field_h) {
+                if (var6 >= this.field_h) {
                   break L7;
                 } else {
-                  ((pa) this).field_j[var6] = param0.field_j[var6];
+                  this.field_j[var6] = param0.field_j[var6];
                   var6++;
                   continue L8;
                 }
@@ -1624,44 +1622,44 @@ final class pa extends tf {
             } else {
               var6 = 0;
               L9: while (true) {
-                if (var6 >= ((pa) this).field_h) {
+                if (var6 >= this.field_h) {
                   break L7;
                 } else {
-                  ((pa) this).field_j[var6] = (byte) 0;
+                  this.field_j[var6] = (byte) 0;
                   var6++;
                   continue L9;
                 }
               }
             }
           } else {
-            ((pa) this).field_j = param0.field_j;
+            this.field_j = param0.field_j;
             break L7;
           }
         }
-        ((pa) this).field_z = param0.field_z;
-        ((pa) this).field_E = param0.field_E;
-        ((pa) this).field_G = param0.field_G;
-        ((pa) this).field_q = param0.field_q;
-        ((pa) this).field_x = param0.field_x;
-        ((pa) this).field_J = param0.field_J;
-        ((pa) this).field_i = param0.field_i;
-        ((pa) this).field_B = param0.field_B;
-        ((pa) this).field_w = param0.field_w;
-        ((pa) this).field_k = param0.field_k;
-        ((pa) this).field_o = param0.field_o;
-        ((pa) this).field_f = param0.field_f;
-        ((pa) this).field_p = param0.field_p;
-        ((pa) this).field_d = param0.field_d;
-        ((pa) this).field_H = param0.field_H;
-        ((pa) this).field_r = param0.field_r;
-        ((pa) this).field_K = param0.field_K;
-        ((pa) this).field_t = param0.field_t;
-        ((pa) this).field_y = param0.field_y;
-        ((pa) this).field_n = param0.field_n;
-        ((pa) this).field_A = param0.field_A;
-        ((pa) this).field_e = param0.field_e;
-        ((pa) this).field_u = param0.field_u;
-        ((pa) this).field_l = param0.field_l;
-        ((pa) this).field_s = param0.field_s;
+        this.field_z = param0.field_z;
+        this.field_E = param0.field_E;
+        this.field_G = param0.field_G;
+        this.field_q = param0.field_q;
+        this.field_x = param0.field_x;
+        this.field_J = param0.field_J;
+        this.field_i = param0.field_i;
+        this.field_B = param0.field_B;
+        this.field_w = param0.field_w;
+        this.field_k = param0.field_k;
+        this.field_o = param0.field_o;
+        this.field_f = param0.field_f;
+        this.field_p = param0.field_p;
+        this.field_d = param0.field_d;
+        this.field_H = param0.field_H;
+        this.field_r = param0.field_r;
+        this.field_K = param0.field_K;
+        this.field_t = param0.field_t;
+        this.field_y = param0.field_y;
+        this.field_n = param0.field_n;
+        this.field_A = param0.field_A;
+        this.field_e = param0.field_e;
+        this.field_u = param0.field_u;
+        this.field_l = param0.field_l;
+        this.field_s = param0.field_s;
     }
 }

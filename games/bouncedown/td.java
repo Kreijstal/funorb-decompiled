@@ -9,18 +9,24 @@ abstract class td {
 
     final static void a(int param0, gk param1, gk param2, gk param3, boolean param4) {
         try {
+            if (param0 != 1) {
+                field_b = 63;
+            }
             pb.field_k = kg.a(2, "");
             pb.field_k.a(false, (byte) -48);
             uc.a(param2, 118, param3, param1);
-            tk.a(126);
+            tk.a(param0 ^ 127);
             vc.field_F = wj.field_a;
             fh.field_B = wj.field_a;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "td.C(" + 1 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "td.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     final static boolean a(int param0) {
+        if (param0 != 1) {
+            return true;
+        }
         return fe.field_g;
     }
 
@@ -42,10 +48,10 @@ abstract class td {
         if (wg.b(true)) {
           hh.field_p.a(true, 1);
           jj.a(0, true);
-          kc.a((byte) 18);
+          kc.a(param0);
           return;
         } else {
-          kc.a((byte) 18);
+          kc.a(param0);
           return;
         }
     }

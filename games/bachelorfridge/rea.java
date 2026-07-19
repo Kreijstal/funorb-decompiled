@@ -14,9 +14,19 @@ final class rea extends bw {
     int field_h;
 
     public static void c(byte param0) {
+        eaa var2 = null;
         field_g = null;
-        field_k = null;
-        field_f = null;
+        if (param0 > -105) {
+          var2 = (eaa) null;
+          rea.a((eaa) null, -84, 24, (byte) -29, -110, -31);
+          field_k = null;
+          field_f = null;
+          return;
+        } else {
+          field_k = null;
+          field_f = null;
+          return;
+        }
     }
 
     final static void a(eaa param0, int param1, int param2, byte param3, int param4, int param5) {
@@ -44,23 +54,23 @@ final class rea extends bw {
         var9 = BachelorFridge.field_y;
         try {
           L0: {
-            var6_int = -1;
-            var7 = (rea) (Object) param0.b((byte) 90);
+            var6_int = -35 % ((param3 - -3) / 43);
+            var7 = (rea) ((Object) param0.b((byte) 90));
             L1: while (true) {
               if (var7 == null) {
                 break L0;
               } else {
                 L2: {
-                  var8 = (630 & (int)var7.field_m * 8357 - -(326565 * (int)var7.field_j)) + (var7.field_n >> 1);
-                  if (var8 <= 256) {
+                  var8 = (630 & (int)var7.field_m * 8357 - -(326565 * (int)var7.field_j)) + (var7.field_n >> -743846559);
+                  if ((var8 ^ -1) >= -257) {
                     break L2;
                   } else {
                     var8 = 256;
                     break L2;
                   }
                 }
-                qna.field_l[var7.field_i].a((int)var7.field_m + param2 - 128, param5 + ((int)var7.field_l - 80), 4 * var7.field_n);
-                var7 = (rea) (Object) param0.c(0);
+                qna.field_l[var7.field_i].a((int)var7.field_m + param2 - 128, param5 + ((int)var7.field_l + -64 - 16), 4 * var7.field_n);
+                var7 = (rea) ((Object) param0.c(0));
                 continue L1;
               }
             }
@@ -69,23 +79,23 @@ final class rea extends bw {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var6;
+            stackOut_7_0 = (RuntimeException) (var6);
             stackOut_7_1 = new StringBuilder().append("rea.A(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -93,25 +103,21 @@ final class rea extends bw {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + 65280 + ',' + param2 + ',' + 118 + ',' + 10 + ',' + param5 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     rea(int param0, int param1, int param2, int param3) {
-        ((rea) this).field_l = (double)param2;
-        ((rea) this).field_i = param3;
-        ((rea) this).field_j = (double)param1;
-        ((rea) this).field_m = (double)param0;
-        ((rea) this).field_h = -2;
-        ((rea) this).field_n = 256;
-        ((rea) this).field_o = 0.0;
+        this.field_l = (double)param2;
+        this.field_i = param3;
+        this.field_j = (double)param1;
+        this.field_m = (double)param0;
+        this.field_h = -2;
+        this.field_n = 256;
+        this.field_o = 0.0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Join";
     }
 }

@@ -13,7 +13,14 @@ final class pv extends i {
         field_F = null;
         field_G = null;
         field_J = null;
-        field_I = null;
+        if (param0 >= -92) {
+          field_I = (nm[][]) null;
+          field_I = (nm[][]) null;
+          return;
+        } else {
+          field_I = (nm[][]) null;
+          return;
+        }
     }
 
     final void a(int param0, int param1) {
@@ -28,11 +35,11 @@ final class pv extends i {
           var7 = tu.field_E.field_J;
           var3 = var7;
           if (param0 >= 60) {
-            if (var7[((pv) this).field_K]) {
+            if (var7[this.field_K]) {
               return;
             } else {
               L0: {
-                var7[((pv) this).field_K] = true;
+                var7[this.field_K] = true;
                 if (la.a(100)) {
                   break L0;
                 } else {
@@ -47,10 +54,8 @@ final class pv extends i {
                       if (var7[var5]) {
                         var4 = var4 | 1 << var5;
                         var5++;
-                        var5++;
                         continue L1;
                       } else {
-                        var5++;
                         var5++;
                         continue L1;
                       }
@@ -70,22 +75,18 @@ final class pv extends i {
 
     pv(int param0) {
         super(param0);
-        ((pv) this).field_K = -12 + param0 + 1;
+        this.field_K = -12 + param0 + 1;
     }
 
     final int b(int param0) {
         if (param0 != -1379118556) {
-            field_F = null;
+            field_F = (int[]) null;
             return 400;
         }
         return 400;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_F = new int[8192];
         field_J = new int[5];
         field_J[1] = 204800;

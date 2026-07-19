@@ -9,30 +9,11 @@ final class vk implements os {
     static byte[] field_b;
 
     final static boolean b(int param0) {
-        RuntimeException var1 = null;
-        boolean stackIn_4_0 = false;
-        RuntimeException decompiledCaughtException = null;
-        boolean stackOut_3_0 = false;
-        try {
-          L0: {
-            L1: {
-              if (param0 > 27) {
-                break L1;
-              } else {
-                field_b = null;
-                break L1;
-              }
-            }
-            stackOut_3_0 = al.field_j;
-            stackIn_4_0 = stackOut_3_0;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "vk.E(" + param0 + ')');
+        if (param0 <= 27) {
+            field_b = (byte[]) null;
+            return al.field_j;
         }
-        return stackIn_4_0;
+        return al.field_j;
     }
 
     final static int c(int param0) {
@@ -43,11 +24,12 @@ final class vk implements os {
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_50_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_34_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        int stackOut_49_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_33_0 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -68,7 +50,7 @@ final class vk implements os {
                         break L4;
                       }
                     }
-                    if (fna.field_h != 13) {
+                    if ((fna.field_h ^ -1) != -14) {
                       continue L1;
                     } else {
                       var2 = 1;
@@ -88,9 +70,10 @@ final class vk implements os {
                   sa.field_r.a(wg.a(1541709953, jm.field_m, lba.field_p), 73, wg.a(1541709953, jba.field_j, sta.field_B));
                   break L2;
                 } else {
-                  stackOut_13_0 = 95;
-                  stackIn_14_0 = stackOut_13_0;
-                  return stackIn_14_0;
+                  stackOut_11_0 = 95;
+                  stackIn_12_0 = stackOut_11_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
               L5: {
@@ -107,15 +90,15 @@ final class vk implements os {
                   if (var1_int == 0) {
                     break L7;
                   } else {
-                    if (sa.field_r.field_h < 0) {
+                    if (-1 < (sa.field_r.field_h ^ -1)) {
                       break L7;
                     } else {
                       L8: {
                         var3 = hb.field_w[sa.field_r.field_h];
-                        if (var3 == 2) {
+                        if ((var3 ^ -1) == -3) {
                           break L8;
                         } else {
-                          if (var3 != 5) {
+                          if (-6 != (var3 ^ -1)) {
                             break L6;
                           } else {
                             break L8;
@@ -149,7 +132,7 @@ final class vk implements os {
                   if (2 == mq.field_a) {
                     var4 = bva.b((byte) -107) - ln.field_H;
                     var6 = (int)((-var4 + 10999L) / 1000L);
-                    if (var6 <= 0) {
+                    if ((var6 ^ -1) >= -1) {
                       var3 = 2;
                       qna.a(1, true, 5);
                       break L9;
@@ -161,93 +144,53 @@ final class vk implements os {
                   }
                 }
               }
-              stackOut_49_0 = var3;
-              stackIn_50_0 = stackOut_49_0;
+              stackOut_33_0 = var3;
+              stackIn_34_0 = stackOut_33_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "vk.D(" + param0 + ')');
+          throw tba.a((Throwable) ((Object) var1), "vk.D(" + param0 + ')');
         }
-        return stackIn_50_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_12_0;
+        } else {
+          return stackIn_34_0;
+        }
     }
 
     public static void a(int param0) {
-        try {
-            field_b = null;
-            field_a = null;
-            field_c = null;
-            field_d = null;
-            field_e = null;
-            if (param0 != 0) {
-                field_d = null;
-            }
-        } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "vk.C(" + param0 + ')');
+        field_b = null;
+        field_a = null;
+        field_c = null;
+        field_d = null;
+        field_e = null;
+        if (param0 != 0) {
+            field_d = (kia) null;
         }
     }
 
     public final mva[] a(int param0, int param1) {
-        RuntimeException var3 = null;
-        wea[] stackIn_4_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        wea[] stackOut_3_0 = null;
-        try {
-          L0: {
-            L1: {
-              if (param1 == -26955) {
-                break L1;
-              } else {
-                field_a = null;
-                break L1;
-              }
-            }
-            stackOut_3_0 = new wea[param0];
-            stackIn_4_0 = stackOut_3_0;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3, "vk.B(" + param0 + ',' + param1 + ')');
+        if (param1 != -26955) {
+            field_a = (String) null;
+            return (mva[]) ((Object) new wea[param0]);
         }
-        return (mva[]) (Object) stackIn_4_0;
+        return (mva[]) ((Object) new wea[param0]);
     }
 
     public final mva a(byte param0) {
-        RuntimeException var2 = null;
-        wea stackIn_4_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        wea stackOut_3_0 = null;
-        try {
-          L0: {
-            L1: {
-              if (param0 <= -17) {
-                break L1;
-              } else {
-                mva discarded$2 = ((vk) this).a((byte) 88);
-                break L1;
-              }
-            }
-            stackOut_3_0 = new wea();
-            stackIn_4_0 = stackOut_3_0;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "vk.A(" + param0 + ')');
+        mva discarded$0 = null;
+        if (param0 > -17) {
+            discarded$0 = this.a((byte) 88);
+            return (mva) ((Object) new wea());
         }
-        return (mva) (Object) stackIn_4_0;
+        return (mva) ((Object) new wea());
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "These aren't just common or garden Lindemann totems. Hold <img=8><img=9> to shove them around like heavy rock flamethrowers.";
         field_c = new String[]{"<%0> forgot to dodge the boulder", "<%0> rolled with it", "<%0> was bowled over", "<%0> was smeared", "<%0> developed a serious crush", "<%0>'s interests include hard rock", "<%0> made a poor speedbump"};
         field_d = new kia();

@@ -13,6 +13,9 @@ final class ep {
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != 0) {
+            return;
+        }
         field_c = null;
         field_g = null;
         field_b = null;
@@ -21,10 +24,6 @@ final class ep {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ep.A(";
         field_a = "View the players in your team. Purchase trinkets to enhance them.";
         field_g = "<%0> has dropped out.";

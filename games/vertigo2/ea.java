@@ -16,15 +16,30 @@ final class ea {
         field_h = null;
         field_d = null;
         field_b = null;
-        field_c = null;
-        field_a = null;
+        if (param0 != -28) {
+          ea.b((byte) 1);
+          field_c = null;
+          field_a = null;
+          return;
+        } else {
+          field_c = null;
+          field_a = null;
+          return;
+        }
     }
 
     final static void a(int param0, boolean param1) {
-        mi var2 = uh.field_Wb;
-        var2.j(11, 122);
+        mi var2 = null;
+        var2 = uh.field_Wb;
+        var2.j(param0, 122);
         var2.f(1, -99);
         var2.f(3, 98);
+        if (!param1) {
+          field_a = (String) null;
+          return;
+        } else {
+          return;
+        }
     }
 
     final static void b(byte param0) {
@@ -42,7 +57,7 @@ final class ea {
         if (as.field_b == null) {
           return;
         } else {
-          var1 = (Object) (Object) as.field_b;
+          var1 = as.field_b;
           synchronized (var1) {
             L1: {
               as.field_b = null;
@@ -54,10 +69,6 @@ final class ea {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Please enter a year between <%0> and <%1>";
         field_g = 250;
         field_a = "<%0> has lost connection.";

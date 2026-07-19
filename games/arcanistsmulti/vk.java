@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class vk extends ve {
     static aj field_B;
     static int field_u;
@@ -14,17 +12,17 @@ final class vk extends ve {
     static String field_z;
 
     final static void c(boolean param0) {
-        sb.field_a = false;
+        sb.field_a = param0 ? true : false;
     }
 
     final int e(byte param0) {
-        if (!(((vk) this).field_A != null)) {
+        if (!(this.field_A != null)) {
             return 0;
         }
         if (param0 >= -71) {
             field_u = -34;
         }
-        return ((vk) this).field_A.field_g * 100 / (-((vk) this).field_y + ((vk) this).field_A.field_j.length);
+        return this.field_A.field_g * 100 / (-this.field_y + this.field_A.field_j.length);
     }
 
     final byte[] c(int param0) {
@@ -32,16 +30,16 @@ final class vk extends ve {
           if (param0 < -11) {
             break L0;
           } else {
-            field_z = null;
+            field_z = (String) null;
             break L0;
           }
         }
         L1: {
-          if (((vk) this).field_p) {
+          if (this.field_p) {
             break L1;
           } else {
-            if (((vk) this).field_A.field_g >= -((vk) this).field_y + ((vk) this).field_A.field_j.length) {
-              return ((vk) this).field_A.field_j;
+            if (this.field_A.field_g >= -this.field_y + this.field_A.field_j.length) {
+              return this.field_A.field_j;
             } else {
               break L1;
             }
@@ -54,6 +52,9 @@ final class vk extends ve {
         field_v = null;
         field_z = null;
         field_B = null;
+        if (param0 != 20) {
+            field_w = (ll[]) null;
+        }
         field_w = null;
     }
 
@@ -75,6 +76,7 @@ final class vk extends ve {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_8_0 = null;
         String stackOut_2_0 = null;
@@ -88,66 +90,71 @@ final class vk extends ve {
         String stackOut_13_2 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var3 = ba.a(false, param1, true);
-          if (var3 == null) {
-            var4 = 0;
-            var5 = 0;
-            L0: while (true) {
-              if (var5 < param1.length()) {
-                if (pm.a(param1.charAt(var5), 45)) {
-                  var5++;
-                  continue L0;
+          L0: {
+            var3 = ba.a(param0, param1, true);
+            if (var3 == null) {
+              var4 = 27 % ((-51 - param2) / 62);
+              var5 = 0;
+              L1: while (true) {
+                if (var5 < param1.length()) {
+                  if (pm.a(param1.charAt(var5), 45)) {
+                    var5++;
+                    continue L1;
+                  } else {
+                    stackOut_8_0 = mb.field_N;
+                    stackIn_9_0 = stackOut_8_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
+                  }
                 } else {
-                  stackOut_8_0 = mb.field_N;
-                  stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0;
+                  return null;
                 }
-              } else {
-                return null;
               }
+            } else {
+              stackOut_2_0 = (String) (var3);
+              stackIn_3_0 = stackOut_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-          } else {
-            stackOut_2_0 = (String) var3;
-            stackIn_3_0 = stackOut_2_0;
-            return stackIn_3_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var3_ref;
-            stackOut_12_1 = new StringBuilder().append("vk.G(").append(false).append(',');
+            stackOut_12_0 = (RuntimeException) (var3_ref);
+            stackOut_12_1 = new StringBuilder().append("vk.G(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
-              break L1;
+              break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
               stackIn_15_2 = stackOut_13_2;
-              break L1;
+              break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + -123 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_9_0;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = 0;
         field_B = new aj(1, 2, 2, 0);
         field_v = "Message game";

@@ -28,9 +28,9 @@ final class ed extends cq implements qi {
         try {
           L0: {
             var9_int = -48 / ((-58 - param0) / 45);
-            ((ed) this).field_g.a((jj) this, -9135);
+            this.field_g.a((jj) (this), -9135);
             jaggl.OpenGL.glPixelStorei(3314, param3);
-            jaggl.OpenGL.glTexSubImage2Di(((ed) this).field_e, 0, param2, param6, param4, param5, 32993, ((ed) this).field_g.field_Bc, param7, param1);
+            jaggl.OpenGL.glTexSubImage2Di(this.field_e, 0, param2, param6, param4, param5, 32993, this.field_g.field_Bc, param7, param1);
             jaggl.OpenGL.glPixelStorei(3314, 0);
             break L0;
           }
@@ -38,23 +38,23 @@ final class ed extends cq implements qi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) runtimeException;
+            stackOut_2_0 = (RuntimeException) (runtimeException);
             stackOut_2_1 = new StringBuilder().append("ed.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param7 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
@@ -62,7 +62,7 @@ final class ed extends cq implements qi {
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -102,11 +102,11 @@ final class ed extends cq implements qi {
         String stackOut_7_2 = null;
         try {
           L0: {
-            ((ed) this).field_g.a((jj) this, -9135);
+            this.field_g.a((jj) (this), -9135);
             jaggl.OpenGL.glPixelStorei(3317, 1);
             var10_int = 49 % ((param4 - 67) / 37);
             jaggl.OpenGL.glPixelStorei(3314, param8);
-            jaggl.OpenGL.glTexSubImage2Dub(((ed) this).field_e, 0, param7, param0, param1, param3, gq.a(param6, -29824), 5121, param5, param2);
+            jaggl.OpenGL.glTexSubImage2Dub(this.field_e, 0, param7, param0, param1, param3, gq.a(param6, -29824), 5121, param5, param2);
             jaggl.OpenGL.glPixelStorei(3314, 0);
             jaggl.OpenGL.glPixelStorei(3317, 4);
             break L0;
@@ -115,23 +115,23 @@ final class ed extends cq implements qi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) runtimeException;
+            stackOut_2_0 = (RuntimeException) (runtimeException);
             stackOut_2_1 = new StringBuilder().append("ed.R(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param5 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
@@ -140,23 +140,23 @@ final class ed extends cq implements qi {
             }
           }
           L2: {
-            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
             stackIn_9_0 = stackOut_6_0;
             stackIn_9_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param6 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_10_0 = stackOut_7_0;
               stackIn_10_1 = stackOut_7_1;
@@ -164,7 +164,7 @@ final class ed extends cq implements qi {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param7 + ',' + param8 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -204,10 +204,10 @@ final class ed extends cq implements qi {
         String stackOut_7_2 = null;
         try {
           L0: {
-            ((ed) this).field_g.a((jj) this, -9135);
+            this.field_g.a((jj) (this), -9135);
             var10_int = 25 % ((param1 - -57) / 57);
             jaggl.OpenGL.glPixelStorei(3314, param5);
-            jaggl.OpenGL.glTexSubImage2Df(((ed) this).field_e, 0, param3, param2, param8, param6, gq.a(param7, -29824), 5121, param0, param4);
+            jaggl.OpenGL.glTexSubImage2Df(this.field_e, 0, param3, param2, param8, param6, gq.a(param7, -29824), 5121, param0, param4);
             jaggl.OpenGL.glPixelStorei(3314, 0);
             break L0;
           }
@@ -215,23 +215,23 @@ final class ed extends cq implements qi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) runtimeException;
+            stackOut_2_0 = (RuntimeException) (runtimeException);
             stackOut_2_1 = new StringBuilder().append("ed.T(");
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
@@ -240,23 +240,23 @@ final class ed extends cq implements qi {
             }
           }
           L2: {
-            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
             stackIn_9_0 = stackOut_6_0;
             stackIn_9_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param7 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_10_0 = stackOut_7_0;
               stackIn_10_1 = stackOut_7_1;
@@ -264,7 +264,7 @@ final class ed extends cq implements qi {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param8 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param8 + ')');
         }
     }
 
@@ -322,9 +322,9 @@ final class ed extends cq implements qi {
             L1: {
               L2: {
                 L3: {
-                  ((ed) this).field_j = param2;
-                  ((ed) this).field_k = param3;
-                  ((ed) this).field_g.a((jj) this, -9135);
+                  this.field_j = param2;
+                  this.field_k = param3;
+                  this.field_g.a((jj) (this), -9135);
                   jaggl.OpenGL.glPixelStorei(3317, 1);
                   if (!param4) {
                     break L3;
@@ -341,7 +341,7 @@ final class ed extends cq implements qi {
                   }
                 }
                 jaggl.OpenGL.glPixelStorei(3314, param7);
-                jaggl.OpenGL.glTexImage2Dub(((ed) this).field_e, 0, ((ed) this).a(false), param2, param3, 0, gq.a(((ed) this).field_h, -29824), 5121, param5, param6);
+                jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param2, param3, 0, gq.a(this.field_h, -29824), 5121, param5, param6);
                 jaggl.OpenGL.glPixelStorei(3314, 0);
                 if (!AceOfSkies.field_G) {
                   break L1;
@@ -349,7 +349,7 @@ final class ed extends cq implements qi {
                   break L2;
                 }
               }
-              ((ed) this).a(((ed) this).field_e, param3, param5, param2, (byte) 107);
+              this.a(this.field_e, param3, param5, param2, (byte) 107);
               break L1;
             }
             jaggl.OpenGL.glPixelStorei(3317, 4);
@@ -359,23 +359,23 @@ final class ed extends cq implements qi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var9 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var9;
+            stackOut_13_0 = (RuntimeException) (var9);
             stackOut_13_1 = new StringBuilder().append("ed.<init>(");
             stackIn_16_0 = stackOut_13_0;
             stackIn_16_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_17_0 = stackOut_14_0;
               stackIn_17_1 = stackOut_14_1;
@@ -384,23 +384,23 @@ final class ed extends cq implements qi {
             }
           }
           L5: {
-            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+            stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
             stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
             stackIn_20_0 = stackOut_17_0;
             stackIn_20_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_21_0 = stackOut_18_0;
               stackIn_21_1 = stackOut_18_1;
@@ -409,23 +409,23 @@ final class ed extends cq implements qi {
             }
           }
           L6: {
-            stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
             stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_24_0 = stackOut_21_0;
             stackIn_24_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param5 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_25_0 = stackOut_22_0;
               stackIn_25_1 = stackOut_22_1;
@@ -433,7 +433,7 @@ final class ed extends cq implements qi {
               break L6;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param6 + ',' + param7 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -441,27 +441,34 @@ final class ed extends cq implements qi {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
         try {
           L0: {
             if (param0 > 56) {
-              stackOut_3_0 = ((ed) this).field_j;
+              stackOut_3_0 = this.field_j;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 92;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var2, "ed.Q(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) var2), "ed.Q(" + param0 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     public final void a(boolean param0, boolean param1, byte param2) {
@@ -503,13 +510,13 @@ final class ed extends cq implements qi {
               if (param2 == -127) {
                 break L1;
               } else {
-                ((ed) this).field_k = 119;
+                this.field_k = 119;
                 break L1;
               }
             }
             L2: {
-              ((ed) this).field_g.a((jj) this, -9135);
-              stackOut_3_0 = ((ed) this).field_e;
+              this.field_g.a((jj) (this), -9135);
+              stackOut_3_0 = this.field_e;
               stackOut_3_1 = 10242;
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
@@ -535,7 +542,7 @@ final class ed extends cq implements qi {
             }
             L3: {
               jaggl.OpenGL.glTexParameteri(stackIn_7_0, stackIn_7_1, stackIn_7_2);
-              stackOut_7_0 = ((ed) this).field_e;
+              stackOut_7_0 = this.field_e;
               stackOut_7_1 = 10243;
               stackIn_10_0 = stackOut_7_0;
               stackIn_10_1 = stackOut_7_1;
@@ -565,7 +572,7 @@ final class ed extends cq implements qi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var4, "ed.O(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) var4), "ed.O(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -623,9 +630,9 @@ final class ed extends cq implements qi {
             L1: {
               L2: {
                 L3: {
-                  ((ed) this).field_k = param3;
-                  ((ed) this).field_j = param2;
-                  ((ed) this).field_g.a((jj) this, -9135);
+                  this.field_k = param3;
+                  this.field_j = param2;
+                  this.field_g.a((jj) (this), -9135);
                   if (param4) {
                     break L3;
                   } else {
@@ -641,7 +648,7 @@ final class ed extends cq implements qi {
                   }
                 }
                 jaggl.OpenGL.glPixelStorei(3314, param7);
-                jaggl.OpenGL.glTexImage2Df(((ed) this).field_e, 0, ((ed) this).a(false), param2, param3, 0, gq.a(((ed) this).field_h, -29824), 5126, param5, 4 * param6);
+                jaggl.OpenGL.glTexImage2Df(this.field_e, 0, this.a(false), param2, param3, 0, gq.a(this.field_h, -29824), 5126, param5, 4 * param6);
                 jaggl.OpenGL.glPixelStorei(3314, 0);
                 if (!AceOfSkies.field_G) {
                   break L1;
@@ -649,7 +656,7 @@ final class ed extends cq implements qi {
                   break L2;
                 }
               }
-              ((ed) this).a(param5, true, param2, param3, ((ed) this).field_e);
+              this.a(param5, true, param2, param3, this.field_e);
               break L1;
             }
             break L0;
@@ -658,23 +665,23 @@ final class ed extends cq implements qi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var9 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var9;
+            stackOut_12_0 = (RuntimeException) (var9);
             stackOut_12_1 = new StringBuilder().append("ed.<init>(");
             stackIn_15_0 = stackOut_12_0;
             stackIn_15_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_16_0 = stackOut_13_0;
               stackIn_16_1 = stackOut_13_1;
@@ -683,23 +690,23 @@ final class ed extends cq implements qi {
             }
           }
           L5: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_19_0 = stackOut_16_0;
             stackIn_19_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_20_0 = stackOut_17_0;
               stackIn_20_1 = stackOut_17_1;
@@ -708,23 +715,23 @@ final class ed extends cq implements qi {
             }
           }
           L6: {
-            stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+            stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
             stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_23_0 = stackOut_20_0;
             stackIn_23_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param5 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_24_0 = stackOut_21_0;
               stackIn_24_1 = stackOut_21_1;
@@ -732,7 +739,7 @@ final class ed extends cq implements qi {
               break L6;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param6 + ',' + param7 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -787,33 +794,33 @@ final class ed extends cq implements qi {
         String stackOut_12_2 = null;
         try {
           L0: {
-            ((ed) this).field_k = param4;
-            ((ed) this).field_j = param3;
-            ((ed) this).field_g.a((jj) this, -9135);
-            jaggl.OpenGL.glTexImage2Dub(((ed) this).field_e, 0, ((ed) this).a(false), param3, param4, 0, gq.a(((ed) this).field_h, -29824), kk.a(((ed) this).field_c, (byte) -96), (byte[]) null, 0);
+            this.field_k = param4;
+            this.field_j = param3;
+            this.field_g.a((jj) (this), -9135);
+            jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param3, param4, 0, gq.a(this.field_h, -29824), kk.a(this.field_c, (byte) -96), (byte[]) null, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ed.<init>(");
             stackIn_6_0 = stackOut_3_0;
             stackIn_6_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_7_0 = stackOut_4_0;
               stackIn_7_1 = stackOut_4_1;
@@ -822,23 +829,23 @@ final class ed extends cq implements qi {
             }
           }
           L2: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_10_0 = stackOut_7_0;
             stackIn_10_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_11_0 = stackOut_8_0;
               stackIn_11_1 = stackOut_8_1;
@@ -847,23 +854,23 @@ final class ed extends cq implements qi {
             }
           }
           L3: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_14_0 = stackOut_11_0;
             stackIn_14_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_15_0 = stackOut_12_0;
               stackIn_15_1 = stackOut_12_1;
@@ -871,7 +878,7 @@ final class ed extends cq implements qi {
               break L3;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param3 + ',' + param4 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -902,23 +909,23 @@ final class ed extends cq implements qi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) runtimeException;
+            stackOut_2_0 = (RuntimeException) (runtimeException);
             stackOut_2_1 = new StringBuilder().append("ed.A(");
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
@@ -926,7 +933,7 @@ final class ed extends cq implements qi {
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -941,18 +948,18 @@ final class ed extends cq implements qi {
               if (param1 == -32) {
                 break L1;
               } else {
-                ((ed) this).field_k = -67;
+                this.field_k = -67;
                 break L1;
               }
             }
-            stackOut_3_0 = param0 / (float)((ed) this).field_k;
+            stackOut_3_0 = param0 / (float)this.field_k;
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var3, "ed.P(" + param0 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) var3), "ed.P(" + param0 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -961,34 +968,41 @@ final class ed extends cq implements qi {
         RuntimeException var3 = null;
         float stackIn_2_0 = 0.0f;
         float stackIn_4_0 = 0.0f;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         float stackOut_3_0 = 0.0f;
         float stackOut_1_0 = 0.0f;
         try {
           L0: {
             if (param0 > 65) {
-              stackOut_3_0 = param1 / (float)((ed) this).field_j;
+              stackOut_3_0 = param1 / (float)this.field_j;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = -0.6172323226928711f;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var3, "ed.N(" + param0 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) var3), "ed.N(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     public final void a(byte param0) {
         try {
             super.a(param0);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "ed.C(" + param0 + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "ed.C(" + param0 + ')');
         }
     }
 
@@ -1068,7 +1082,7 @@ final class ed extends cq implements qi {
             }
             L2: {
               var7 = var5_int + -10;
-              if (param1.field_f <= 0) {
+              if (-1 <= (param1.field_f ^ -1)) {
                 break L2;
               } else {
                 if (param1.field_x == null) {
@@ -1105,7 +1119,7 @@ final class ed extends cq implements qi {
                             var15 = qj.field_t[var11] - var12;
                             var16 = -var13 + ro.field_t[var10];
                             var17 = ro.field_t[var11] - var13;
-                            if (-(var16 * var15) + var14 * var17 < 0) {
+                            if ((-(var16 * var15) + var14 * var17 ^ -1) > -1) {
                               break L7;
                             } else {
                               if (var19 == 0) {
@@ -1177,7 +1191,7 @@ final class ed extends cq implements qi {
                           L11: while (true) {
                             L12: {
                               L13: {
-                                if (var17 >> 4 == 0) {
+                                if ((var17 >> -1113938108 ^ -1) == -1) {
                                   break L13;
                                 } else {
                                   var16--;
@@ -1211,7 +1225,7 @@ final class ed extends cq implements qi {
                                   }
                                 }
                               }
-                              stackOut_43_0 = var16 << 4;
+                              stackOut_43_0 = var16 << -1433677884;
                               stackOut_43_1 = -var17;
                               stackIn_44_0 = stackOut_43_0;
                               stackIn_44_1 = stackOut_43_1;
@@ -1259,7 +1273,7 @@ final class ed extends cq implements qi {
                       var8 = 0;
                       var9 = 0;
                       L18: while (true) {
-                        if (~hs.field_a.length >= ~var9) {
+                        if ((hs.field_a.length ^ -1) >= (var9 ^ -1)) {
                           break L17;
                         } else {
                           var10 = hs.field_a[var9];
@@ -1291,23 +1305,23 @@ final class ed extends cq implements qi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L19: {
             var5 = decompiledCaughtException;
-            stackOut_66_0 = (RuntimeException) var5;
+            stackOut_66_0 = (RuntimeException) (var5);
             stackOut_66_1 = new StringBuilder().append("ed.B(").append(param0).append(',');
             stackIn_69_0 = stackOut_66_0;
             stackIn_69_1 = stackOut_66_1;
             stackIn_67_0 = stackOut_66_0;
             stackIn_67_1 = stackOut_66_1;
             if (param1 == null) {
-              stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
-              stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
+              stackOut_69_0 = (RuntimeException) ((Object) stackIn_69_0);
+              stackOut_69_1 = (StringBuilder) ((Object) stackIn_69_1);
               stackOut_69_2 = "null";
               stackIn_70_0 = stackOut_69_0;
               stackIn_70_1 = stackOut_69_1;
               stackIn_70_2 = stackOut_69_2;
               break L19;
             } else {
-              stackOut_67_0 = (RuntimeException) (Object) stackIn_67_0;
-              stackOut_67_1 = (StringBuilder) (Object) stackIn_67_1;
+              stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
+              stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
               stackOut_67_2 = "{...}";
               stackIn_70_0 = stackOut_67_0;
               stackIn_70_1 = stackOut_67_1;
@@ -1315,7 +1329,7 @@ final class ed extends cq implements qi {
               break L19;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_70_0, stackIn_70_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_70_0), stackIn_70_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1334,14 +1348,14 @@ final class ed extends cq implements qi {
                 break L1;
               }
             }
-            stackOut_3_0 = ((ed) this).field_k;
+            stackOut_3_0 = this.field_k;
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var2, "ed.M(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) var2), "ed.M(" + param0 + ')');
         }
         return stackIn_4_0;
     }
@@ -1385,16 +1399,16 @@ final class ed extends cq implements qi {
             L1: {
               L2: {
                 L3: {
-                  ((ed) this).field_j = param1;
-                  ((ed) this).field_k = param2;
-                  ((ed) this).field_g.a((jj) this, -9135);
+                  this.field_j = param1;
+                  this.field_k = param2;
+                  this.field_g.a((jj) (this), -9135);
                   if (!param3) {
                     break L3;
                   } else {
                     if (0 != param6) {
                       break L3;
                     } else {
-                      if (param5 == 0) {
+                      if ((param5 ^ -1) == -1) {
                         break L2;
                       } else {
                         break L3;
@@ -1403,7 +1417,7 @@ final class ed extends cq implements qi {
                   }
                 }
                 jaggl.OpenGL.glPixelStorei(3314, param6);
-                jaggl.OpenGL.glTexImage2Di(((ed) this).field_e, 0, 6408, ((ed) this).field_j, ((ed) this).field_k, 0, 32993, ((ed) this).field_g.field_Bc, param4, 4 * param5);
+                jaggl.OpenGL.glTexImage2Di(this.field_e, 0, 6408, this.field_j, this.field_k, 0, 32993, this.field_g.field_Bc, param4, 4 * param5);
                 jaggl.OpenGL.glPixelStorei(3314, 0);
                 if (!AceOfSkies.field_G) {
                   break L1;
@@ -1411,7 +1425,7 @@ final class ed extends cq implements qi {
                   break L2;
                 }
               }
-              ((ed) this).a((byte) -110, param2, param1, param4, ((ed) this).field_e);
+              this.a((byte) -110, param2, param1, param4, this.field_e);
               break L1;
             }
             break L0;
@@ -1420,23 +1434,23 @@ final class ed extends cq implements qi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             runtimeException = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) runtimeException;
+            stackOut_12_0 = (RuntimeException) (runtimeException);
             stackOut_12_1 = new StringBuilder().append("ed.<init>(");
             stackIn_15_0 = stackOut_12_0;
             stackIn_15_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_16_0 = stackOut_13_0;
               stackIn_16_1 = stackOut_13_1;
@@ -1445,23 +1459,23 @@ final class ed extends cq implements qi {
             }
           }
           L5: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_19_0 = stackOut_16_0;
             stackIn_19_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param4 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_20_0 = stackOut_17_0;
               stackIn_20_1 = stackOut_17_1;
@@ -1469,7 +1483,7 @@ final class ed extends cq implements qi {
               break L5;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param5 + ',' + param6 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -1484,7 +1498,7 @@ final class ed extends cq implements qi {
               if (param0 < -104) {
                 break L1;
               } else {
-                ((ed) this).field_j = 49;
+                this.field_j = 49;
                 break L1;
               }
             }
@@ -1495,16 +1509,12 @@ final class ed extends cq implements qi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var2, "ed.L(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) var2), "ed.L(" + param0 + ')');
         }
         return stackIn_4_0 != 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = 0;
     }
 }

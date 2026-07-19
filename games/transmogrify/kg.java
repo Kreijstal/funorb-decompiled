@@ -39,19 +39,19 @@ abstract class kg extends ri {
           L0: {
             L1: {
               if (!param0.startsWith("col=")) {
-                if (!param0.equals((Object) (Object) "/col")) {
+                if (!param0.equals("/col")) {
                   if (!param0.startsWith("trans=")) {
-                    if (!param0.equals((Object) (Object) "/trans")) {
+                    if (!param0.equals("/trans")) {
                       if (!param0.startsWith("str=")) {
-                        if (!param0.equals((Object) (Object) "str")) {
-                          if (!param0.equals((Object) (Object) "/str")) {
+                        if (!param0.equals("str")) {
+                          if (!param0.equals("/str")) {
                             if (!param0.startsWith("u=")) {
-                              if (!param0.equals((Object) (Object) "u")) {
-                                if (!param0.equals((Object) (Object) "/u")) {
+                              if (!param0.equals("u")) {
+                                if (!param0.equals("/u")) {
                                   if (!param0.startsWith("shad=")) {
-                                    if (!param0.equals((Object) (Object) "shad")) {
-                                      if (!param0.equals((Object) (Object) "/shad")) {
-                                        if (!param0.equals((Object) (Object) "br")) {
+                                    if (!param0.equals("shad")) {
+                                      if (!param0.equals("/shad")) {
+                                        if (!param0.equals("br")) {
                                           break L1;
                                         } else {
                                           this.a(field_q, field_v, field_u);
@@ -66,7 +66,7 @@ abstract class kg extends ri {
                                       break L1;
                                     }
                                   } else {
-                                    var7 = (CharSequence) (Object) param0.substring(5);
+                                    var7 = (CharSequence) ((Object) param0.substring(5));
                                     field_n = ej.a(-1, 16, var7);
                                     break L1;
                                   }
@@ -79,7 +79,7 @@ abstract class kg extends ri {
                                 break L1;
                               }
                             } else {
-                              var6 = (CharSequence) (Object) param0.substring(2);
+                              var6 = (CharSequence) ((Object) param0.substring(2));
                               field_m = ej.a(-1, 16, var6);
                               break L1;
                             }
@@ -92,7 +92,7 @@ abstract class kg extends ri {
                           break L1;
                         }
                       } else {
-                        var5 = (CharSequence) (Object) param0.substring(4);
+                        var5 = (CharSequence) ((Object) param0.substring(4));
                         field_w = ej.a(-1, 16, var5);
                         break L1;
                       }
@@ -101,7 +101,7 @@ abstract class kg extends ri {
                       break L1;
                     }
                   } else {
-                    var4 = (CharSequence) (Object) param0.substring(6);
+                    var4 = (CharSequence) ((Object) param0.substring(6));
                     field_H = aa.a(-121, var4);
                     break L1;
                   }
@@ -110,7 +110,7 @@ abstract class kg extends ri {
                   break L1;
                 }
               } else {
-                var3 = (CharSequence) (Object) param0.substring(4);
+                var3 = (CharSequence) ((Object) param0.substring(4));
                 field_F = ej.a(-1, 16, var3);
                 break L1;
               }
@@ -127,6 +127,8 @@ abstract class kg extends ri {
     }
 
     private final static int a(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -180,9 +182,9 @@ abstract class kg extends ri {
           if (var18 >= var12) {
             return -var13;
           } else {
-            int incrementValue$12 = var16;
+            incrementValue$12 = var16;
             var16++;
-            int incrementValue$13 = var17;
+            incrementValue$13 = var17;
             var17++;
             var19 = var14[incrementValue$12] + var15[incrementValue$13];
             if (var19 < var13) {
@@ -199,19 +201,19 @@ abstract class kg extends ri {
 
     final int a(String param0, int param1, int param2) {
         if (param2 == 0) {
-            param2 = ((kg) this).field_C;
+            param2 = this.field_C;
         }
-        int var4 = ((kg) this).a(param0, new int[1], field_s);
+        int var4 = this.a(param0, new int[]{param1}, field_s);
         int var5 = (var4 - 1) * param2;
-        return ((kg) this).field_y + var5 + ((kg) this).field_t;
+        return this.field_y + var5 + this.field_t;
     }
 
     final void a(char param0, int param1, int param2, int param3) {
         int var5 = 0;
         if (param0 != 32) {
-            param2 = param2 - ((kg) this).field_C;
+            param2 = param2 - this.field_C;
             var5 = de.a(126, param0) & 255;
-            ((kg) this).a(var5, param1 + ((kg) this).field_o[var5], param2 + ((kg) this).field_G[var5], ((kg) this).field_r[var5], ((kg) this).field_z[var5], param3, false);
+            this.a(var5, param1 + this.field_o[var5], param2 + this.field_G[var5], this.field_r[var5], this.field_z[var5], param3, false);
         }
     }
 
@@ -231,7 +233,7 @@ abstract class kg extends ri {
               if (var3 <= 0) {
                 break L1;
               } else {
-                field_l = (param1 - ((kg) this).a(param0) << 8) / var3;
+                field_l = (param1 - this.a(param0) << 8) / var3;
                 break L1;
               }
             }
@@ -271,19 +273,24 @@ abstract class kg extends ri {
         if (param0 == null) {
             return;
         }
-        ((kg) this).b(param3, param4);
-        this.b(param0, param1 - ((kg) this).a(param0) / 2, param2);
+        this.b(param3, param4);
+        this.b(param0, param1 - this.a(param0) / 2, param2);
     }
 
     final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        return ((kg) this).a(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
+        return this.a(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
     }
 
     final int a(char param0) {
-        return ((kg) this).field_x[de.a(69, param0) & 255];
+        return this.field_x[de.a(69, param0) & 255];
     }
 
     final int a(String param0, int[] param1, String[] param2) {
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$7 = null;
+        StringBuilder discarded$8 = null;
+        StringBuilder discarded$9 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -318,7 +325,7 @@ abstract class kg extends ri {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = ub.a(field_E, 117, ' ', 0);
+          discarded$5 = ub.a(field_E, 117, ' ', 0);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -354,26 +361,26 @@ abstract class kg extends ri {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_E.append('<');
-                        StringBuilder discarded$7 = field_E.append(var15);
-                        StringBuilder discarded$8 = field_E.append('>');
-                        if (!var15.equals((Object) (Object) "br")) {
-                          if (!var15.equals((Object) (Object) "lt")) {
-                            if (!var15.equals((Object) (Object) "gt")) {
-                              if (!var15.equals((Object) (Object) "nbsp")) {
-                                if (!var15.equals((Object) (Object) "shy")) {
-                                  if (!var15.equals((Object) (Object) "times")) {
-                                    if (!var15.equals((Object) (Object) "euro")) {
-                                      if (!var15.equals((Object) (Object) "copy")) {
-                                        if (!var15.equals((Object) (Object) "reg")) {
+                        discarded$6 = field_E.append('<');
+                        discarded$7 = field_E.append(var15);
+                        discarded$8 = field_E.append('>');
+                        if (!var15.equals("br")) {
+                          if (!var15.equals("lt")) {
+                            if (!var15.equals("gt")) {
+                              if (!var15.equals("nbsp")) {
+                                if (!var15.equals("shy")) {
+                                  if (!var15.equals("times")) {
+                                    if (!var15.equals("euro")) {
+                                      if (!var15.equals("copy")) {
+                                        if (!var15.equals("reg")) {
                                           if (!var15.startsWith("img=")) {
                                             break L3;
                                           } else {
                                             try {
                                               L4: {
-                                                var18 = (CharSequence) (Object) var15.substring(4);
+                                                var18 = (CharSequence) ((Object) var15.substring(4));
                                                 var16_int = aa.a(110, var18);
-                                                var4 = var4 + ((kg) this).field_A[var16_int].field_d;
+                                                var4 = var4 + this.field_A[var16_int].field_d;
                                                 var10 = 0;
                                                 break L4;
                                               }
@@ -388,14 +395,14 @@ abstract class kg extends ri {
                                           }
                                         } else {
                                           L6: {
-                                            var4 = var4 + ((kg) this).a('®');
-                                            if (((kg) this).field_p == null) {
+                                            var4 = var4 + this.a('®');
+                                            if (this.field_p == null) {
                                               break L6;
                                             } else {
                                               if (var10 == 0) {
                                                 break L6;
                                               } else {
-                                                var4 = var4 + ((kg) this).field_p[(var10 << 8) + 174];
+                                                var4 = var4 + this.field_p[(var10 << 8) + 174];
                                                 break L6;
                                               }
                                             }
@@ -405,14 +412,14 @@ abstract class kg extends ri {
                                         }
                                       } else {
                                         L7: {
-                                          var4 = var4 + ((kg) this).a('©');
-                                          if (((kg) this).field_p == null) {
+                                          var4 = var4 + this.a('©');
+                                          if (this.field_p == null) {
                                             break L7;
                                           } else {
                                             if (var10 == 0) {
                                               break L7;
                                             } else {
-                                              var4 = var4 + ((kg) this).field_p[(var10 << 8) + 169];
+                                              var4 = var4 + this.field_p[(var10 << 8) + 169];
                                               break L7;
                                             }
                                           }
@@ -422,14 +429,14 @@ abstract class kg extends ri {
                                       }
                                     } else {
                                       L8: {
-                                        var4 = var4 + ((kg) this).a('€');
-                                        if (((kg) this).field_p == null) {
+                                        var4 = var4 + this.a('€');
+                                        if (this.field_p == null) {
                                           break L8;
                                         } else {
                                           if (var10 == 0) {
                                             break L8;
                                           } else {
-                                            var4 = var4 + ((kg) this).field_p[(var10 << 8) + 128];
+                                            var4 = var4 + this.field_p[(var10 << 8) + 128];
                                             break L8;
                                           }
                                         }
@@ -439,14 +446,14 @@ abstract class kg extends ri {
                                     }
                                   } else {
                                     L9: {
-                                      var4 = var4 + ((kg) this).a('×');
-                                      if (((kg) this).field_p == null) {
+                                      var4 = var4 + this.a('×');
+                                      if (this.field_p == null) {
                                         break L9;
                                       } else {
                                         if (var10 == 0) {
                                           break L9;
                                         } else {
-                                          var4 = var4 + ((kg) this).field_p[(var10 << 8) + 215];
+                                          var4 = var4 + this.field_p[(var10 << 8) + 215];
                                           break L9;
                                         }
                                       }
@@ -456,14 +463,14 @@ abstract class kg extends ri {
                                   }
                                 } else {
                                   L10: {
-                                    var4 = var4 + ((kg) this).a('­');
-                                    if (((kg) this).field_p == null) {
+                                    var4 = var4 + this.a('­');
+                                    if (this.field_p == null) {
                                       break L10;
                                     } else {
                                       if (var10 == 0) {
                                         break L10;
                                       } else {
-                                        var4 = var4 + ((kg) this).field_p[(var10 << 8) + 173];
+                                        var4 = var4 + this.field_p[(var10 << 8) + 173];
                                         break L10;
                                       }
                                     }
@@ -473,14 +480,14 @@ abstract class kg extends ri {
                                 }
                               } else {
                                 L11: {
-                                  var4 = var4 + ((kg) this).a(' ');
-                                  if (((kg) this).field_p == null) {
+                                  var4 = var4 + this.a(' ');
+                                  if (this.field_p == null) {
                                     break L11;
                                   } else {
                                     if (var10 == 0) {
                                       break L11;
                                     } else {
-                                      var4 = var4 + ((kg) this).field_p[(var10 << 8) + 160];
+                                      var4 = var4 + this.field_p[(var10 << 8) + 160];
                                       break L11;
                                     }
                                   }
@@ -490,14 +497,14 @@ abstract class kg extends ri {
                               }
                             } else {
                               L12: {
-                                var4 = var4 + ((kg) this).a('>');
-                                if (((kg) this).field_p == null) {
+                                var4 = var4 + this.a('>');
+                                if (this.field_p == null) {
                                   break L12;
                                 } else {
                                   if (var10 == 0) {
                                     break L12;
                                   } else {
-                                    var4 = var4 + ((kg) this).field_p[(var10 << 8) + 62];
+                                    var4 = var4 + this.field_p[(var10 << 8) + 62];
                                     break L12;
                                   }
                                 }
@@ -507,14 +514,14 @@ abstract class kg extends ri {
                             }
                           } else {
                             L13: {
-                              var4 = var4 + ((kg) this).a('<');
-                              if (((kg) this).field_p == null) {
+                              var4 = var4 + this.a('<');
+                              if (this.field_p == null) {
                                 break L13;
                               } else {
                                 if (var10 == 0) {
                                   break L13;
                                 } else {
-                                  var4 = var4 + ((kg) this).field_p[(var10 << 8) + 60];
+                                  var4 = var4 + this.field_p[(var10 << 8) + 60];
                                   break L13;
                                 }
                               }
@@ -543,16 +550,16 @@ abstract class kg extends ri {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_E.append((char) var14);
+                        discarded$9 = field_E.append((char) var14);
                         var14 = (char)(de.a(6, (char) var14) & 255);
-                        var4 = var4 + ((kg) this).field_x[var14];
-                        if (((kg) this).field_p == null) {
+                        var4 = var4 + this.field_x[var14];
+                        if (this.field_p == null) {
                           break L15;
                         } else {
                           if (var10 == 0) {
                             break L15;
                           } else {
-                            var4 = var4 + ((kg) this).field_p[(var10 << 8) + var14];
+                            var4 = var4 + this.field_p[(var10 << 8) + var14];
                             break L15;
                           }
                         }
@@ -577,14 +584,14 @@ abstract class kg extends ri {
                     } else {
                       L18: {
                         stackOut_65_0 = var4;
-                        stackOut_65_1 = (int[]) param1;
+                        stackOut_65_1 = (int[]) (param1);
                         stackIn_67_0 = stackOut_65_0;
                         stackIn_67_1 = stackOut_65_1;
                         stackIn_66_0 = stackOut_65_0;
                         stackIn_66_1 = stackOut_65_1;
                         if (var11 >= param1.length) {
                           stackOut_67_0 = stackIn_67_0;
-                          stackOut_67_1 = (int[]) (Object) stackIn_67_1;
+                          stackOut_67_1 = (int[]) ((Object) stackIn_67_1);
                           stackOut_67_2 = param1.length - 1;
                           stackIn_68_0 = stackOut_67_0;
                           stackIn_68_1 = stackOut_67_1;
@@ -592,7 +599,7 @@ abstract class kg extends ri {
                           break L18;
                         } else {
                           stackOut_66_0 = stackIn_66_0;
-                          stackOut_66_1 = (int[]) (Object) stackIn_66_1;
+                          stackOut_66_1 = (int[]) ((Object) stackIn_66_1);
                           stackOut_66_2 = var11;
                           stackIn_68_0 = stackOut_66_0;
                           stackIn_68_1 = stackOut_66_1;
@@ -647,8 +654,8 @@ abstract class kg extends ri {
         if (param0 == null) {
             return;
         }
-        ((kg) this).b(param3, param4);
-        this.b(param0, param1 - ((kg) this).a(param0), param2);
+        this.b(param3, param4);
+        this.b(param0, param1 - this.a(param0), param2);
     }
 
     final void a(String param0, int param1, int param2, int[] param3, int[] param4) {
@@ -674,7 +681,7 @@ abstract class kg extends ri {
         int stackOut_31_0 = 0;
         int stackOut_30_0 = 0;
         var18 = null;
-        param2 = param2 - ((kg) this).field_C;
+        param2 = param2 - this.field_C;
         var6 = -1;
         var7 = 0;
         var8 = 0;
@@ -695,14 +702,14 @@ abstract class kg extends ri {
                   } else {
                     var12_ref_String = param0.substring(var6 + 1, var10).toLowerCase();
                     var6 = -1;
-                    if (!var12_ref_String.equals((Object) (Object) "lt")) {
-                      if (!var12_ref_String.equals((Object) (Object) "gt")) {
-                        if (!var12_ref_String.equals((Object) (Object) "nbsp")) {
-                          if (!var12_ref_String.equals((Object) (Object) "shy")) {
-                            if (!var12_ref_String.equals((Object) (Object) "times")) {
-                              if (!var12_ref_String.equals((Object) (Object) "euro")) {
-                                if (!var12_ref_String.equals((Object) (Object) "copy")) {
-                                  if (!var12_ref_String.equals((Object) (Object) "reg")) {
+                    if (!var12_ref_String.equals("lt")) {
+                      if (!var12_ref_String.equals("gt")) {
+                        if (!var12_ref_String.equals("nbsp")) {
+                          if (!var12_ref_String.equals("shy")) {
+                            if (!var12_ref_String.equals("times")) {
+                              if (!var12_ref_String.equals("euro")) {
+                                if (!var12_ref_String.equals("copy")) {
+                                  if (!var12_ref_String.equals("reg")) {
                                     if (!var12_ref_String.startsWith("img=")) {
                                       this.b(var12_ref_String);
                                       var10++;
@@ -730,15 +737,15 @@ abstract class kg extends ri {
                                           }
                                           L5: {
                                             var8++;
-                                            var19 = (CharSequence) (Object) var12_ref_String.substring(4);
+                                            var19 = (CharSequence) ((Object) var12_ref_String.substring(4));
                                             var15 = aa.a(-109, var19);
-                                            var16_ref_k = ((kg) this).field_A[var15];
-                                            if (((kg) this).field_B == null) {
+                                            var16_ref_k = this.field_A[var15];
+                                            if (this.field_B == null) {
                                               stackOut_31_0 = var16_ref_k.field_h;
                                               stackIn_32_0 = stackOut_31_0;
                                               break L5;
                                             } else {
-                                              stackOut_30_0 = ((kg) this).field_B[var15];
+                                              stackOut_30_0 = this.field_B[var15];
                                               stackIn_32_0 = stackOut_30_0;
                                               break L5;
                                             }
@@ -746,10 +753,10 @@ abstract class kg extends ri {
                                           L6: {
                                             var17 = stackIn_32_0;
                                             if (field_H != 256) {
-                                              var16_ref_k.a(param1 + var13, param2 + ((kg) this).field_C - var17 + var14, field_H);
+                                              var16_ref_k.a(param1 + var13, param2 + this.field_C - var17 + var14, field_H);
                                               break L6;
                                             } else {
-                                              var16_ref_k.a(param1 + var13, param2 + ((kg) this).field_C - var17 + var14);
+                                              var16_ref_k.a(param1 + var13, param2 + this.field_C - var17 + var14);
                                               break L6;
                                             }
                                           }
@@ -806,20 +813,20 @@ abstract class kg extends ri {
               if (var6 == -1) {
                 L8: {
                   var11 = (char)(de.a(32, (char) var11) & 255);
-                  if (((kg) this).field_p == null) {
+                  if (this.field_p == null) {
                     break L8;
                   } else {
                     if (var7 == 0) {
                       break L8;
                     } else {
-                      param1 = param1 + ((kg) this).field_p[(var7 << 8) + var11];
+                      param1 = param1 + this.field_p[(var7 << 8) + var11];
                       break L8;
                     }
                   }
                 }
                 L9: {
-                  var12 = ((kg) this).field_r[var11];
-                  var13 = ((kg) this).field_z[var11];
+                  var12 = this.field_r[var11];
+                  var13 = this.field_z[var11];
                   if (param3 == null) {
                     var14 = 0;
                     break L9;
@@ -854,32 +861,32 @@ abstract class kg extends ri {
                         if (field_n == -1) {
                           break L12;
                         } else {
-                          ((kg) this).a(var11, param1 + ((kg) this).field_o[var11] + 1 + var14, param2 + ((kg) this).field_G[var11] + 1 + var15, var12, var13, field_n, field_H, true);
+                          this.a(var11, param1 + this.field_o[var11] + 1 + var14, param2 + this.field_G[var11] + 1 + var15, var12, var13, field_n, field_H, true);
                           break L12;
                         }
                       }
-                      ((kg) this).a(var11, param1 + ((kg) this).field_o[var11] + var14, param2 + ((kg) this).field_G[var11] + var15, var12, var13, field_F, field_H, false);
+                      this.a(var11, param1 + this.field_o[var11] + var14, param2 + this.field_G[var11] + var15, var12, var13, field_F, field_H, false);
                       break L11;
                     } else {
                       L13: {
                         if (field_n == -1) {
                           break L13;
                         } else {
-                          ((kg) this).a(var11, param1 + ((kg) this).field_o[var11] + 1 + var14, param2 + ((kg) this).field_G[var11] + 1 + var15, var12, var13, field_n, true);
+                          this.a(var11, param1 + this.field_o[var11] + 1 + var14, param2 + this.field_G[var11] + 1 + var15, var12, var13, field_n, true);
                           break L13;
                         }
                       }
-                      ((kg) this).a(var11, param1 + ((kg) this).field_o[var11] + var14, param2 + ((kg) this).field_G[var11] + var15, var12, var13, field_F, false);
+                      this.a(var11, param1 + this.field_o[var11] + var14, param2 + this.field_G[var11] + var15, var12, var13, field_F, false);
                       break L11;
                     }
                   }
                 }
                 L14: {
-                  var16 = ((kg) this).field_x[var11];
+                  var16 = this.field_x[var11];
                   if (field_w == -1) {
                     break L14;
                   } else {
-                    sb.d(param1, param2 + (int)((double)((kg) this).field_C * 0.7), var16, field_w);
+                    sb.d(param1, param2 + (int)((double)this.field_C * 0.7), var16, field_w);
                     break L14;
                   }
                 }
@@ -887,7 +894,7 @@ abstract class kg extends ri {
                   if (field_m == -1) {
                     break L15;
                   } else {
-                    sb.d(param1, param2 + ((kg) this).field_C, var16, field_m);
+                    sb.d(param1, param2 + this.field_C, var16, field_m);
                     break L15;
                   }
                 }
@@ -926,7 +933,7 @@ abstract class kg extends ri {
         Throwable decompiledCaughtException = null;
         int stackOut_25_0 = 0;
         int stackOut_24_0 = 0;
-        param2 = param2 - ((kg) this).field_C;
+        param2 = param2 - this.field_C;
         var4 = -1;
         var5 = 0;
         var6 = param0.length();
@@ -946,14 +953,14 @@ abstract class kg extends ri {
                   } else {
                     var9_ref_String = param0.substring(var4 + 1, var7).toLowerCase();
                     var4 = -1;
-                    if (!var9_ref_String.equals((Object) (Object) "lt")) {
-                      if (!var9_ref_String.equals((Object) (Object) "gt")) {
-                        if (!var9_ref_String.equals((Object) (Object) "nbsp")) {
-                          if (!var9_ref_String.equals((Object) (Object) "shy")) {
-                            if (!var9_ref_String.equals((Object) (Object) "times")) {
-                              if (!var9_ref_String.equals((Object) (Object) "euro")) {
-                                if (!var9_ref_String.equals((Object) (Object) "copy")) {
-                                  if (!var9_ref_String.equals((Object) (Object) "reg")) {
+                    if (!var9_ref_String.equals("lt")) {
+                      if (!var9_ref_String.equals("gt")) {
+                        if (!var9_ref_String.equals("nbsp")) {
+                          if (!var9_ref_String.equals("shy")) {
+                            if (!var9_ref_String.equals("times")) {
+                              if (!var9_ref_String.equals("euro")) {
+                                if (!var9_ref_String.equals("copy")) {
+                                  if (!var9_ref_String.equals("reg")) {
                                     if (!var9_ref_String.startsWith("img=")) {
                                       this.b(var9_ref_String);
                                       var7++;
@@ -962,15 +969,15 @@ abstract class kg extends ri {
                                       try {
                                         L2: {
                                           L3: {
-                                            var13 = (CharSequence) (Object) var9_ref_String.substring(4);
+                                            var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
                                             var10 = aa.a(-117, var13);
-                                            var11_ref_k = ((kg) this).field_A[var10];
-                                            if (((kg) this).field_B == null) {
+                                            var11_ref_k = this.field_A[var10];
+                                            if (this.field_B == null) {
                                               stackOut_25_0 = var11_ref_k.field_h;
                                               stackIn_26_0 = stackOut_25_0;
                                               break L3;
                                             } else {
-                                              stackOut_24_0 = ((kg) this).field_B[var10];
+                                              stackOut_24_0 = this.field_B[var10];
                                               stackIn_26_0 = stackOut_24_0;
                                               break L3;
                                             }
@@ -978,10 +985,10 @@ abstract class kg extends ri {
                                           L4: {
                                             var12 = stackIn_26_0;
                                             if (field_H != 256) {
-                                              var11_ref_k.a(param1, param2 + ((kg) this).field_C - var12, field_H);
+                                              var11_ref_k.a(param1, param2 + this.field_C - var12, field_H);
                                               break L4;
                                             } else {
-                                              var11_ref_k.a(param1, param2 + ((kg) this).field_C - var12);
+                                              var11_ref_k.a(param1, param2 + this.field_C - var12);
                                               break L4;
                                             }
                                           }
@@ -1038,20 +1045,20 @@ abstract class kg extends ri {
               if (var4 == -1) {
                 L6: {
                   var8 = (char)(de.a(73, (char) var8) & 255);
-                  if (((kg) this).field_p == null) {
+                  if (this.field_p == null) {
                     break L6;
                   } else {
                     if (var5 == 0) {
                       break L6;
                     } else {
-                      param1 = param1 + ((kg) this).field_p[(var5 << 8) + var8];
+                      param1 = param1 + this.field_p[(var5 << 8) + var8];
                       break L6;
                     }
                   }
                 }
                 L7: {
-                  var9 = ((kg) this).field_r[var8];
-                  var10 = ((kg) this).field_z[var8];
+                  var9 = this.field_r[var8];
+                  var10 = this.field_z[var8];
                   var11 = param1;
                   if (var8 == 32) {
                     if (field_l <= 0) {
@@ -1068,32 +1075,32 @@ abstract class kg extends ri {
                         if (field_n == -1) {
                           break L8;
                         } else {
-                          ((kg) this).a(var8, param1 + ((kg) this).field_o[var8] + 1, param2 + ((kg) this).field_G[var8] + 1, var9, var10, field_n, field_H, true);
+                          this.a(var8, param1 + this.field_o[var8] + 1, param2 + this.field_G[var8] + 1, var9, var10, field_n, field_H, true);
                           break L8;
                         }
                       }
-                      ((kg) this).a(var8, param1 + ((kg) this).field_o[var8], param2 + ((kg) this).field_G[var8], var9, var10, field_F, field_H, false);
+                      this.a(var8, param1 + this.field_o[var8], param2 + this.field_G[var8], var9, var10, field_F, field_H, false);
                       break L7;
                     } else {
                       L9: {
                         if (field_n == -1) {
                           break L9;
                         } else {
-                          ((kg) this).a(var8, param1 + ((kg) this).field_o[var8] + 1, param2 + ((kg) this).field_G[var8] + 1, var9, var10, field_n, true);
+                          this.a(var8, param1 + this.field_o[var8] + 1, param2 + this.field_G[var8] + 1, var9, var10, field_n, true);
                           break L9;
                         }
                       }
-                      ((kg) this).a(var8, param1 + ((kg) this).field_o[var8], param2 + ((kg) this).field_G[var8], var9, var10, field_F, false);
+                      this.a(var8, param1 + this.field_o[var8], param2 + this.field_G[var8], var9, var10, field_F, false);
                       break L7;
                     }
                   }
                 }
                 L10: {
-                  param1 = param1 + ((kg) this).field_x[var8];
+                  param1 = param1 + this.field_x[var8];
                   if (field_w == -1) {
                     break L10;
                   } else {
-                    sb.d(var11, param2 + (int)((double)((kg) this).field_C * 0.7), param1 - var11, field_w);
+                    sb.d(var11, param2 + (int)((double)this.field_C * 0.7), param1 - var11, field_w);
                     break L10;
                   }
                 }
@@ -1101,7 +1108,7 @@ abstract class kg extends ri {
                   if (field_m == -1) {
                     break L11;
                   } else {
-                    sb.d(var11, param2 + ((kg) this).field_C + 1, param1 - var11, field_m);
+                    sb.d(var11, param2 + this.field_C + 1, param1 - var11, field_m);
                     break L11;
                   }
                 }
@@ -1132,13 +1139,13 @@ abstract class kg extends ri {
             if (param10 != 0) {
               break L0;
             } else {
-              param10 = ((kg) this).field_C;
+              param10 = this.field_C;
               break L0;
             }
           }
           L1: {
             var12 = new int[]{param3};
-            if (param4 >= ((kg) this).field_y + ((kg) this).field_t + param10) {
+            if (param4 >= this.field_y + this.field_t + param10) {
               break L1;
             } else {
               if (param4 >= param10 + param10) {
@@ -1150,7 +1157,7 @@ abstract class kg extends ri {
             }
           }
           L2: {
-            var13 = ((kg) this).a(param0, var12, field_s);
+            var13 = this.a(param0, var12, field_s);
             if (param9 != 3) {
               break L2;
             } else {
@@ -1167,7 +1174,7 @@ abstract class kg extends ri {
               if (param9 != 1) {
                 if (param9 != 2) {
                   L4: {
-                    var15 = (param4 - ((kg) this).field_y - ((kg) this).field_t - (var13 - 1) * param10) / (var13 + 1);
+                    var15 = (param4 - this.field_y - this.field_t - (var13 - 1) * param10) / (var13 + 1);
                     if (var15 >= 0) {
                       break L4;
                     } else {
@@ -1175,19 +1182,19 @@ abstract class kg extends ri {
                       break L4;
                     }
                   }
-                  var14 = param2 + ((kg) this).field_y + var15;
+                  var14 = param2 + this.field_y + var15;
                   param10 = param10 + var15;
                   break L3;
                 } else {
-                  var14 = param2 + param4 - ((kg) this).field_t - (var13 - 1) * param10;
+                  var14 = param2 + param4 - this.field_t - (var13 - 1) * param10;
                   break L3;
                 }
               } else {
-                var14 = param2 + ((kg) this).field_y + (param4 - ((kg) this).field_y - ((kg) this).field_t - (var13 - 1) * param10) / 2;
+                var14 = param2 + this.field_y + (param4 - this.field_y - this.field_t - (var13 - 1) * param10) / 2;
                 break L3;
               }
             } else {
-              var14 = param2 + ((kg) this).field_y;
+              var14 = param2 + this.field_y;
               break L3;
             }
           }
@@ -1214,13 +1221,13 @@ abstract class kg extends ri {
                     var15++;
                     continue L5;
                   } else {
-                    this.b(field_s[var15], param1 + param3 - ((kg) this).a(field_s[var15]), var14);
+                    this.b(field_s[var15], param1 + param3 - this.a(field_s[var15]), var14);
                     var14 = var14 + param10;
                     var15++;
                     continue L5;
                   }
                 } else {
-                  this.b(field_s[var15], param1 + (param3 - ((kg) this).a(field_s[var15])) / 2, var14);
+                  this.b(field_s[var15], param1 + (param3 - this.a(field_s[var15])) / 2, var14);
                   var14 = var14 + param10;
                   var15++;
                   continue L5;
@@ -1270,12 +1277,12 @@ abstract class kg extends ri {
                 throw new IllegalArgumentException();
             }
         }
-        ((kg) this).field_A = param0;
-        ((kg) this).field_B = param1;
+        this.field_A = param0;
+        this.field_B = param1;
     }
 
     final int b(String param0, int param1) {
-        return ((kg) this).a(param0, new int[1], field_s);
+        return this.a(param0, new int[]{param1}, field_s);
     }
 
     public static void a() {
@@ -1287,7 +1294,7 @@ abstract class kg extends ri {
         if (param0 == null) {
             return;
         }
-        ((kg) this).b(param3, param4);
+        this.b(param3, param4);
         this.b(param0, param1, param2);
     }
 
@@ -1324,20 +1331,20 @@ abstract class kg extends ri {
                     } else {
                       var8 = param0.substring(var2 + 1, var6).toLowerCase();
                       var2 = -1;
-                      if (!var8.equals((Object) (Object) "lt")) {
-                        if (!var8.equals((Object) (Object) "gt")) {
-                          if (!var8.equals((Object) (Object) "nbsp")) {
-                            if (!var8.equals((Object) (Object) "shy")) {
-                              if (!var8.equals((Object) (Object) "times")) {
-                                if (!var8.equals((Object) (Object) "euro")) {
-                                  if (!var8.equals((Object) (Object) "copy")) {
-                                    if (!var8.equals((Object) (Object) "reg")) {
+                      if (!var8.equals("lt")) {
+                        if (!var8.equals("gt")) {
+                          if (!var8.equals("nbsp")) {
+                            if (!var8.equals("shy")) {
+                              if (!var8.equals("times")) {
+                                if (!var8.equals("euro")) {
+                                  if (!var8.equals("copy")) {
+                                    if (!var8.equals("reg")) {
                                       if (var8.startsWith("img=")) {
                                         try {
                                           L2: {
-                                            var10 = (CharSequence) (Object) var8.substring(4);
+                                            var10 = (CharSequence) ((Object) var8.substring(4));
                                             var9_int = aa.a(111, var10);
-                                            var4 = var4 + ((kg) this).field_A[var9_int].field_d;
+                                            var4 = var4 + this.field_A[var9_int].field_d;
                                             var3 = 0;
                                             var6++;
                                             break L2;
@@ -1393,14 +1400,14 @@ abstract class kg extends ri {
                 if (var2 == -1) {
                   L4: {
                     var7 = (char)(de.a(53, (char) var7) & 255);
-                    var4 = var4 + ((kg) this).field_x[var7];
-                    if (((kg) this).field_p == null) {
+                    var4 = var4 + this.field_x[var7];
+                    if (this.field_p == null) {
                       break L4;
                     } else {
                       if (var3 == 0) {
                         break L4;
                       } else {
-                        var4 = var4 + ((kg) this).field_p[(var3 << 8) + var7];
+                        var4 = var4 + this.field_p[(var3 << 8) + var7];
                         break L4;
                       }
                     }
@@ -1425,6 +1432,13 @@ abstract class kg extends ri {
     }
 
     private final void a(byte[] param0) {
+        byte[] array$7 = null;
+        int incrementValue$8 = 0;
+        byte[] array$9 = null;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
         int var2 = 0;
         int var3_int = 0;
         int[] var3 = null;
@@ -1444,29 +1458,17 @@ abstract class kg extends ri {
         byte[][] var15 = null;
         byte[][] var16 = null;
         int[] var17 = null;
-        int[] var18 = null;
-        byte[][] var19 = null;
-        byte[][] var20 = null;
-        int[] var21 = null;
-        int[] var22 = null;
-        byte[][] var23 = null;
-        byte[][] var24 = null;
-        int[] var25 = null;
         L0: {
-          ((kg) this).field_x = new int[256];
+          this.field_x = new int[256];
           if (param0.length != 257) {
             var2 = 0;
             var3_int = 0;
             L1: while (true) {
               if (var3_int >= 256) {
-                var22 = new int[256];
-                var18 = var22;
-                var14 = var18;
+                var14 = new int[256];
                 var10 = var14;
                 var3 = var10;
-                var25 = new int[256];
-                var21 = var25;
-                var17 = var21;
+                var17 = new int[256];
                 var13 = var17;
                 var4 = var13;
                 var5_int = 0;
@@ -1475,27 +1477,23 @@ abstract class kg extends ri {
                     var5_int = 0;
                     L3: while (true) {
                       if (var5_int >= 256) {
-                        var23 = new byte[256][];
-                        var19 = var23;
-                        var15 = var19;
+                        var15 = new byte[256][];
                         var11 = var15;
                         var5 = var11;
                         var6_int = 0;
                         L4: while (true) {
                           if (var6_int >= 256) {
-                            var24 = new byte[256][];
-                            var20 = var24;
-                            var16 = var20;
+                            var16 = new byte[256][];
                             var12 = var16;
                             var6 = var12;
                             var7 = 0;
                             L5: while (true) {
                               if (var7 >= 256) {
-                                ((kg) this).field_p = new byte[65536];
+                                this.field_p = new byte[65536];
                                 var7 = 0;
                                 L6: while (true) {
                                   if (var7 >= 256) {
-                                    ((kg) this).field_C = var25[32] + var22[32];
+                                    this.field_C = var17[32] + var14[32];
                                     break L0;
                                   } else {
                                     if (var7 != 32) {
@@ -1505,7 +1503,7 @@ abstract class kg extends ri {
                                           if (var8 < 256) {
                                             if (var8 != 32) {
                                               if (var8 != 160) {
-                                                ((kg) this).field_p[(var7 << 8) + var8] = (byte)kg.a(var23, var24, var25, ((kg) this).field_x, var22, var7, var8);
+                                                this.field_p[(var7 << 8) + var8] = (byte)kg.a(var15, var16, var17, this.field_x, var14, var7, var8);
                                                 var8++;
                                                 continue L7;
                                               } else {
@@ -1532,18 +1530,19 @@ abstract class kg extends ri {
                                   }
                                 }
                               } else {
-                                var6[var7] = new byte[var22[var7]];
+                                array$7 = new byte[var14[var7]];
+                                var6[var7] = array$7;
                                 var8 = 0;
                                 var9 = 0;
                                 L8: while (true) {
-                                  if (var9 >= var24[var7].length) {
+                                  if (var9 >= var16[var7].length) {
                                     var7++;
                                     continue L5;
                                   } else {
-                                    int incrementValue$5 = var2;
+                                    incrementValue$8 = var2;
                                     var2++;
-                                    var8 = (byte)(var8 + param0[incrementValue$5]);
-                                    var24[var7][var9] = (byte)var8;
+                                    var8 = (byte)(var8 + param0[incrementValue$8]);
+                                    var16[var7][var9] = (byte)var8;
                                     var9++;
                                     continue L8;
                                   }
@@ -1551,18 +1550,19 @@ abstract class kg extends ri {
                               }
                             }
                           } else {
-                            var5[var6_int] = new byte[var22[var6_int]];
+                            array$9 = new byte[var14[var6_int]];
+                            var5[var6_int] = array$9;
                             var7 = 0;
                             var8 = 0;
                             L9: while (true) {
-                              if (var8 >= var23[var6_int].length) {
+                              if (var8 >= var15[var6_int].length) {
                                 var6_int++;
                                 continue L4;
                               } else {
-                                int incrementValue$6 = var2;
+                                incrementValue$10 = var2;
                                 var2++;
-                                var7 = (byte)(var7 + param0[incrementValue$6]);
-                                var23[var6_int][var8] = (byte)var7;
+                                var7 = (byte)(var7 + param0[incrementValue$10]);
+                                var15[var6_int][var8] = (byte)var7;
                                 var8++;
                                 continue L9;
                               }
@@ -1570,25 +1570,25 @@ abstract class kg extends ri {
                           }
                         }
                       } else {
-                        int incrementValue$7 = var2;
+                        incrementValue$11 = var2;
                         var2++;
-                        var4[var5_int] = param0[incrementValue$7] & 255;
+                        var4[var5_int] = param0[incrementValue$11] & 255;
                         var5_int++;
                         continue L3;
                       }
                     }
                   } else {
-                    int incrementValue$8 = var2;
+                    incrementValue$12 = var2;
                     var2++;
-                    var3[var5_int] = param0[incrementValue$8] & 255;
+                    var3[var5_int] = param0[incrementValue$12] & 255;
                     var5_int++;
                     continue L2;
                   }
                 }
               } else {
-                int incrementValue$9 = var2;
+                incrementValue$13 = var2;
                 var2++;
-                ((kg) this).field_x[var3_int] = param0[incrementValue$9] & 255;
+                this.field_x[var3_int] = param0[incrementValue$13] & 255;
                 var3_int++;
                 continue L1;
               }
@@ -1596,11 +1596,11 @@ abstract class kg extends ri {
           } else {
             var2 = 0;
             L10: while (true) {
-              if (var2 >= ((kg) this).field_x.length) {
-                ((kg) this).field_C = param0[256] & 255;
+              if (var2 >= this.field_x.length) {
+                this.field_C = param0[256] & 255;
                 break L0;
               } else {
-                ((kg) this).field_x[var2] = param0[var2] & 255;
+                this.field_x[var2] = param0[var2] & 255;
                 var2++;
                 continue L10;
               }
@@ -1617,36 +1617,36 @@ abstract class kg extends ri {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ((kg) this).field_C = 0;
-        ((kg) this).field_o = param1;
-        ((kg) this).field_G = param2;
-        ((kg) this).field_r = param3;
-        ((kg) this).field_z = param4;
+        this.field_C = 0;
+        this.field_o = param1;
+        this.field_G = param2;
+        this.field_r = param3;
+        this.field_z = param4;
         this.a(param0);
         var6 = 2147483647;
         var7 = -2147483648;
         var8 = 0;
         L0: while (true) {
           if (var8 >= 256) {
-            ((kg) this).field_y = ((kg) this).field_C - var6;
-            ((kg) this).field_t = var7 - ((kg) this).field_C;
-            ((kg) this).field_D = ((kg) this).field_C - ((kg) this).field_G[88];
+            this.field_y = this.field_C - var6;
+            this.field_t = var7 - this.field_C;
+            this.field_D = this.field_C - this.field_G[88];
             return;
           } else {
             L1: {
-              if (((kg) this).field_G[var8] >= var6) {
+              if (this.field_G[var8] >= var6) {
                 break L1;
               } else {
-                if (((kg) this).field_z[var8] == 0) {
+                if (this.field_z[var8] == 0) {
                   break L1;
                 } else {
-                  var6 = ((kg) this).field_G[var8];
+                  var6 = this.field_G[var8];
                   break L1;
                 }
               }
             }
-            if (((kg) this).field_G[var8] + ((kg) this).field_z[var8] > var7) {
-              var7 = ((kg) this).field_G[var8] + ((kg) this).field_z[var8];
+            if (this.field_G[var8] + this.field_z[var8] > var7) {
+              var7 = this.field_G[var8] + this.field_z[var8];
               var8++;
               continue L0;
             } else {
@@ -1658,10 +1658,6 @@ abstract class kg extends ri {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_E = new StringBuilder(100);
         field_w = -1;
         field_F = 0;

@@ -7,8 +7,9 @@ abstract class ld extends ota {
     static String field_f;
 
     final static boolean a(boolean param0, String param1) {
+        boolean discarded$2 = false;
         RuntimeException var2 = null;
-        Object var3 = null;
+        String var3 = null;
         int stackIn_7_0 = 0;
         int stackIn_9_0 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -18,6 +19,7 @@ abstract class ld extends ota {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_8_0 = 0;
         int stackOut_6_0 = 0;
@@ -35,8 +37,8 @@ abstract class ld extends ota {
               if (!param0) {
                 break L1;
               } else {
-                var3 = null;
-                boolean discarded$2 = ld.a(true, (String) null);
+                var3 = (String) null;
+                discarded$2 = ld.a(true, (String) null);
                 break L1;
               }
             }
@@ -50,6 +52,7 @@ abstract class ld extends ota {
                   if (param1.length() <= im.field_n) {
                     stackOut_8_0 = 0;
                     stackIn_9_0 = stackOut_8_0;
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     return true;
@@ -59,29 +62,30 @@ abstract class ld extends ota {
             }
             stackOut_6_0 = 1;
             stackIn_7_0 = stackOut_6_0;
-            return stackIn_7_0 != 0;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_0 = (RuntimeException) (var2);
             stackOut_10_1 = new StringBuilder().append("ld.D(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -89,9 +93,13 @@ abstract class ld extends ota {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
-        return stackIn_9_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_7_0 != 0;
+        } else {
+          return stackIn_9_0 != 0;
+        }
     }
 
     abstract na b(int param0);
@@ -101,16 +109,12 @@ abstract class ld extends ota {
     }
 
     public static void a(byte param0) {
-        int var1 = -35;
+        int var1 = 35 / ((param0 - -62) / 50);
         field_d = null;
         field_f = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "White light beams are safe for you, but deadly for skeletons. Maybe you can persuade the skeletons to step into the light.";
         field_f = "(<%0> players want to join)";
     }

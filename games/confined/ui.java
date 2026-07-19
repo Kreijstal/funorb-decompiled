@@ -9,141 +9,122 @@ final class ui {
     static String field_b;
 
     final static String a(int param0) {
-        RuntimeException var1 = null;
-        String var1_ref = null;
+        String var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        String stackIn_10_0 = null;
-        String stackIn_24_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_9_0 = null;
-        String stackOut_23_0 = null;
+        String var9 = null;
+        String var13 = null;
+        String var14 = null;
+        String var15 = null;
+        String var16 = null;
+        String var17 = null;
         var5 = Confined.field_J ? 1 : 0;
-        try {
-          L0: {
-            L1: {
-              if (param0 == 10) {
-                break L1;
+        if (param0 == 10) {
+          var15 = "(" + kk.field_c + " " + pk.field_c + " " + qm.field_y + ") " + Confined.field_F;
+          var1 = var15;
+          if (0 >= ai.field_i) {
+            return var1;
+          } else {
+            var1 = var15 + ":";
+            var2 = 0;
+            L0: while (true) {
+              if (ai.field_i <= var2) {
+                return var1;
               } else {
-                field_b = null;
-                break L1;
-              }
-            }
-            L2: {
-              L3: {
-                var1_ref = "(" + kk.field_c + " " + pk.field_c + " " + qm.field_y + ") " + Confined.field_F;
-                if (0 < ai.field_i) {
-                  var1_ref = var1_ref + ":";
-                  var2 = 0;
-                  L4: while (true) {
-                    if (~ai.field_i >= ~var2) {
-                      break L3;
-                    } else {
-                      stackOut_9_0 = var1_ref + ' ';
-                      stackIn_24_0 = stackOut_9_0;
-                      stackIn_10_0 = stackOut_9_0;
-                      if (var5 != 0) {
-                        break L2;
-                      } else {
-                        L5: {
-                          L6: {
-                            var1_ref = stackIn_10_0;
-                            var3 = 255 & e.field_c.field_m[var2];
-                            var4 = var3 >> 320483268;
-                            var3 = var3 & 15;
-                            if (10 > var4) {
-                              break L6;
-                            } else {
-                              var4 += 55;
-                              if (var5 == 0) {
-                                break L5;
-                              } else {
-                                break L6;
-                              }
-                            }
-                          }
-                          var4 += 48;
-                          break L5;
-                        }
-                        L7: {
-                          L8: {
-                            if (var3 >= 10) {
-                              break L8;
-                            } else {
-                              var3 += 48;
-                              if (var5 == 0) {
-                                break L7;
-                              } else {
-                                break L8;
-                              }
-                            }
-                          }
-                          var3 += 55;
-                          break L7;
-                        }
-                        var1_ref = var1_ref + (char)var4;
-                        var1_ref = var1_ref + (char)var3;
-                        var2++;
-                        if (var5 == 0) {
-                          continue L4;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
+                L1: {
+                  var16 = var1 + ' ';
+                  var3 = 255 & e.field_c.field_m[var2];
+                  var4 = var3 >> 320483268;
+                  var3 = var3 & 15;
+                  if (10 > var4) {
+                    var4 += 48;
+                    break L1;
+                  } else {
+                    var4 += 55;
+                    break L1;
                   }
-                } else {
-                  break L3;
                 }
+                L2: {
+                  if (-11 >= (var3 ^ -1)) {
+                    var3 += 55;
+                    break L2;
+                  } else {
+                    var3 += 48;
+                    break L2;
+                  }
+                }
+                var17 = var16 + (char)var4;
+                var1 = var17 + (char)var3;
+                var2++;
+                continue L0;
               }
-              stackOut_23_0 = (String) var1_ref;
-              stackIn_24_0 = stackOut_23_0;
-              break L2;
             }
-            break L0;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "ui.A(" + param0 + ')');
+        } else {
+          field_b = (String) null;
+          var9 = "(" + kk.field_c + " " + pk.field_c + " " + qm.field_y + ") " + Confined.field_F;
+          var1 = var9;
+          if (0 < ai.field_i) {
+            var1 = var9 + ":";
+            var2 = 0;
+            L3: while (true) {
+              if (ai.field_i > var2) {
+                L4: {
+                  var13 = var1 + ' ';
+                  var3 = 255 & e.field_c.field_m[var2];
+                  var4 = var3 >> 320483268;
+                  var3 = var3 & 15;
+                  if (10 > var4) {
+                    var4 += 48;
+                    break L4;
+                  } else {
+                    var4 += 55;
+                    break L4;
+                  }
+                }
+                L5: {
+                  if (-11 >= (var3 ^ -1)) {
+                    var3 += 55;
+                    break L5;
+                  } else {
+                    var3 += 48;
+                    break L5;
+                  }
+                }
+                var14 = var13 + (char)var4;
+                var1 = var14 + (char)var3;
+                var2++;
+                continue L3;
+              } else {
+                return var1;
+              }
+            }
+          } else {
+            return var1;
+          }
         }
-        return stackIn_24_0;
     }
 
     public static void a(byte param0) {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            L1: {
-              field_e = null;
-              field_a = null;
-              field_c = null;
-              if (param0 == 110) {
-                break L1;
-              } else {
-                String discarded$2 = ui.a(43);
-                break L1;
-              }
-            }
-            field_b = null;
-            field_d = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "ui.B(" + param0 + ')');
+        String discarded$2 = null;
+        field_e = null;
+        field_a = null;
+        field_c = null;
+        if (param0 != 110) {
+          discarded$2 = ui.a(43);
+          field_b = null;
+          field_d = null;
+          return;
+        } else {
+          field_b = null;
+          field_d = null;
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_d = "To server list";
     }

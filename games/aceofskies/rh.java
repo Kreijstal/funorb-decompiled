@@ -12,48 +12,44 @@ final class rh extends wf {
         field_e = null;
         field_f = null;
         if (param0 != 32081) {
-            field_e = null;
+            field_e = (qo) null;
         }
     }
 
     final void b(int param0, int param1) {
         if (param0 != -2580) {
-            ((rh) this).b(108, -13);
-            ((rh) this).field_g.g(param1);
+            this.b(108, -13);
+            this.field_g.g(param1);
             return;
         }
-        ((rh) this).field_g.g(param1);
+        this.field_g.g(param1);
     }
 
     final void a(int param0, int param1) {
         param1 = param1 << 6;
-        ((rh) this).field_h = param1;
+        this.field_h = param1;
         if (param0 != -128) {
           rh.a(-71);
-          ((rh) this).field_g.f(128 + param1 * gn.field_a >> 8);
+          this.field_g.f(128 + param1 * gn.field_a >> 1233910472);
           return;
         } else {
-          ((rh) this).field_g.f(128 + param1 * gn.field_a >> 8);
+          this.field_g.f(128 + param1 * gn.field_a >> 1233910472);
           return;
         }
     }
 
     rh(su param0, wf param1) {
         try {
-            ((rh) this).field_g = param0;
-            ((rh) this).field_h = param0.i();
-            ((rh) this).field_i = param1;
-            ((rh) this).field_g.f(((rh) this).field_h * gn.field_a - -128 >> 8);
+            this.field_g = param0;
+            this.field_h = param0.i();
+            this.field_i = param1;
+            this.field_g.f(this.field_h * gn.field_a - -128 >> -1623071768);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new qo();
     }
 }

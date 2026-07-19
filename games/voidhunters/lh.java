@@ -9,25 +9,24 @@ final class lh {
         pgb var6 = null;
         try {
             if (param0 >= -12) {
-                field_a = null;
+                field_a = (String) null;
             }
-            var6 = new pgb(2, param3, 0, param2, param4);
+            var6 = new pgb(param5, param3, param1, param2, param4);
             fpb.a(var6, 0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "lh.A(" + param0 + ',' + 0 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + 2 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "lh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
     public static void a(int param0) {
         field_a = null;
         field_b = null;
+        if (param0 != 15261) {
+            field_b = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Spawn Spawnpoint";
         field_a = "<%0> won the match!";
     }

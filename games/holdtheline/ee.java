@@ -24,23 +24,23 @@ class ee extends hl {
     float field_u;
 
     private final void a(float param0, byte param1, int param2, float param3, float param4) {
-        ((ee) this).field_y = param3;
+        this.field_y = param3;
         if (param1 <= 35) {
           return;
         } else {
-          ((ee) this).field_u = param0;
-          ((ee) this).field_r = param4;
-          ((ee) this).field_A = new qm((int)((ee) this).field_y, (int)((ee) this).field_u);
-          ((ee) this).field_v = -1;
-          ((ee) this).field_q = param2;
-          ((ee) this).field_s = -1;
-          ((ee) this).field_l = -1;
-          ((ee) this).field_m = -1;
-          ((ee) this).field_w = new in(((ee) this).field_r);
-          ((ee) this).field_z = false;
-          ((ee) this).field_j = 0.0f;
-          ((ee) this).field_t = 0.0f;
-          ((ee) this).field_x = 0.0f;
+          this.field_u = param0;
+          this.field_r = param4;
+          this.field_A = new qm((int)this.field_y, (int)this.field_u);
+          this.field_v = -1;
+          this.field_q = param2;
+          this.field_s = -1;
+          this.field_l = -1;
+          this.field_m = -1;
+          this.field_w = new in(this.field_r);
+          this.field_z = false;
+          this.field_j = 0.0f;
+          this.field_t = 0.0f;
+          this.field_x = 0.0f;
           return;
         }
     }
@@ -79,14 +79,14 @@ class ee extends hl {
         try {
           L0: {
             L1: {
-              var3_float = ka.a(((ee) this).field_q, 77, ((ee) this).field_A, param1);
+              var3_float = ka.a(this.field_q, 77, this.field_A, param1);
               if ((float)param0 == var3_float) {
                 break L1;
               } else {
                 L2: {
-                  ((ee) this).field_v = (int)var3_float;
-                  if (((ee) this).field_v == param1.length) {
-                    ((ee) this).field_v = 0;
+                  this.field_v = (int)var3_float;
+                  if (this.field_v == param1.length) {
+                    this.field_v = 0;
                     break L2;
                   } else {
                     break L2;
@@ -100,7 +100,7 @@ class ee extends hl {
                       break L4;
                     } else {
                       L5: {
-                        var5 = var4 + ((ee) this).field_v;
+                        var5 = var4 + this.field_v;
                         if (param1.length <= var5) {
                           var5 = var5 - param1.length;
                           break L5;
@@ -108,8 +108,8 @@ class ee extends hl {
                           break L5;
                         }
                       }
-                      if (hl.a(false, ((ee) this).field_q, (wc) (Object) param1[var5], ((ee) this).field_A)) {
-                        ((ee) this).field_m = var5;
+                      if (hl.a(false, this.field_q, param1[var5], this.field_A)) {
+                        this.field_m = var5;
                         break L4;
                       } else {
                         continue L3;
@@ -123,7 +123,7 @@ class ee extends hl {
                         break L7;
                       } else {
                         L8: {
-                          var5 = var4 + ((ee) this).field_v;
+                          var5 = var4 + this.field_v;
                           if (var5 < param1.length) {
                             break L8;
                           } else {
@@ -131,10 +131,10 @@ class ee extends hl {
                             break L8;
                           }
                         }
-                        if (!hl.a(false, ((ee) this).field_q, (wc) (Object) param1[var5], ((ee) this).field_A)) {
+                        if (!hl.a(false, this.field_q, param1[var5], this.field_A)) {
                           continue L6;
                         } else {
-                          ((ee) this).field_l = var5;
+                          this.field_l = var5;
                           break L7;
                         }
                       }
@@ -145,7 +145,7 @@ class ee extends hl {
                         break L1;
                       } else {
                         L10: {
-                          var5 = var4 + ((ee) this).field_v;
+                          var5 = var4 + this.field_v;
                           if (var5 >= param1.length) {
                             var5 = var5 - param1.length;
                             break L10;
@@ -153,8 +153,8 @@ class ee extends hl {
                             break L10;
                           }
                         }
-                        if (hl.a(false, ((ee) this).field_q, (wc) (Object) param1[var5], ((ee) this).field_A)) {
-                          ((ee) this).field_s = var5;
+                        if (hl.a(false, this.field_q, param1[var5], this.field_A)) {
+                          this.field_s = var5;
                           return;
                         } else {
                           continue L9;
@@ -171,23 +171,23 @@ class ee extends hl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var3 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var3;
+            stackOut_26_0 = (RuntimeException) (var3);
             stackOut_26_1 = new StringBuilder().append("ee.TA(").append(param0).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param1 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L11;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -195,35 +195,35 @@ class ee extends hl {
               break L11;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
         }
     }
 
     final void a(int param0) {
-        if (0.0f == ((ee) this).field_j) {
-          ((ee) this).field_u = ((ee) this).field_u + 0.019999999552965164f * (3.5f * ((ee) this).field_x);
-          ((ee) this).field_y = ((ee) this).field_y + 0.019999999552965164f * (3.5f * ((ee) this).field_t);
-          ((ee) this).field_A.field_h = (int)((ee) this).field_y;
-          ((ee) this).field_A.field_f = (int)((ee) this).field_u;
-          ((ee) this).a(-1, bl.field_r.field_sb);
-          if (~((ee) this).field_v == param0) {
+        if (0.0f == this.field_j) {
+          this.field_u = this.field_u + 0.019999999552965164f * (3.5f * this.field_x);
+          this.field_y = this.field_y + 0.019999999552965164f * (3.5f * this.field_t);
+          this.field_A.field_h = (int)this.field_y;
+          this.field_A.field_f = (int)this.field_u;
+          this.a(-1, bl.field_r.field_sb);
+          if ((this.field_v ^ -1) == param0) {
             return;
           } else {
-            ((ee) this).field_q = bl.field_r.field_sb[((ee) this).field_v].field_k;
+            this.field_q = bl.field_r.field_sb[this.field_v].field_k;
             return;
           }
         } else {
-          ((ee) this).field_r = ((ee) this).field_r + ((ee) this).field_j * 0.019999999552965164f;
-          ((ee) this).field_w.a(((ee) this).field_r, (byte) -54);
-          ((ee) this).field_u = ((ee) this).field_u + 0.019999999552965164f * (3.5f * ((ee) this).field_x);
-          ((ee) this).field_y = ((ee) this).field_y + 0.019999999552965164f * (3.5f * ((ee) this).field_t);
-          ((ee) this).field_A.field_h = (int)((ee) this).field_y;
-          ((ee) this).field_A.field_f = (int)((ee) this).field_u;
-          ((ee) this).a(-1, bl.field_r.field_sb);
-          if (~((ee) this).field_v == param0) {
+          this.field_r = this.field_r + this.field_j * 0.019999999552965164f;
+          this.field_w.a(this.field_r, (byte) -54);
+          this.field_u = this.field_u + 0.019999999552965164f * (3.5f * this.field_x);
+          this.field_y = this.field_y + 0.019999999552965164f * (3.5f * this.field_t);
+          this.field_A.field_h = (int)this.field_y;
+          this.field_A.field_f = (int)this.field_u;
+          this.a(-1, bl.field_r.field_sb);
+          if ((this.field_v ^ -1) == param0) {
             return;
           } else {
-            ((ee) this).field_q = bl.field_r.field_sb[((ee) this).field_v].field_k;
+            this.field_q = bl.field_r.field_sb[this.field_v].field_k;
             return;
           }
         }
@@ -238,10 +238,6 @@ class ee extends hl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Finish!";
     }
 }

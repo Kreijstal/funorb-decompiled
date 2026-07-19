@@ -17,11 +17,11 @@ final class kg extends ji {
 
     final int[] c(int param0, int param1) {
         if (param1 < 91) {
-            ((kg) this).field_C = -94;
+            this.field_C = -94;
         }
-        int[] var4 = ((kg) this).field_x.a(param0, (byte) -74);
+        int[] var4 = this.field_x.a(param0, (byte) -74);
         int[] var3 = var4;
-        if (((kg) this).field_x.field_i) {
+        if (this.field_x.field_i) {
             this.a(var4, param0, -107);
         }
         return var4;
@@ -32,21 +32,21 @@ final class kg extends ji {
         int var3 = 0;
         int var4 = 0;
         var4 = Vertigo2.field_L ? 1 : 0;
-        ((kg) this).field_B = kk.a(((kg) this).field_C, (byte) 38);
+        this.field_B = kk.a(this.field_C, (byte) 38);
         this.g(5865);
         if (param0 <= -98) {
-          var2 = ((kg) this).field_E + -1;
+          var2 = this.field_E + -1;
           L0: while (true) {
             L1: {
               if (1 > var2) {
                 break L1;
               } else {
-                var3 = ((kg) this).field_K[var2];
+                var3 = this.field_K[var2];
                 if (8 < var3) {
                   break L1;
                 } else {
-                  if (var3 >= -8) {
-                    ((kg) this).field_E = ((kg) this).field_E - 1;
+                  if ((var3 ^ -1) <= 7) {
+                    this.field_E = this.field_E - 1;
                     var2--;
                     continue L0;
                   } else {
@@ -110,13 +110,13 @@ final class kg extends ji {
         try {
           L0: {
             L1: {
-              var5 = ((kg) this).field_A * lf.field_y[param1];
-              var19 = 123;
-              if (((kg) this).field_E != 1) {
+              var5 = this.field_A * lf.field_y[param1];
+              var19 = -123 / ((param2 - -45) / 52);
+              if (-2 != (this.field_E ^ -1)) {
                 L2: {
                   L3: {
-                    var9 = ((kg) this).field_K[0];
-                    if (var9 > 8) {
+                    var9 = this.field_K[0];
+                    if ((var9 ^ -1) < -9) {
                       break L3;
                     } else {
                       if (var9 >= -8) {
@@ -127,11 +127,11 @@ final class kg extends ji {
                     }
                   }
                   L4: {
-                    var8 = ((kg) this).field_z[0] << 12;
-                    var13 = var8 * ((kg) this).field_A >> 12;
-                    var11 = var8 * var5 >> 12;
-                    var12 = ((kg) this).field_F * var8 >> 12;
-                    var15 = var11 >> 12;
+                    var8 = this.field_z[0] << -1897567764;
+                    var13 = var8 * this.field_A >> 1005759308;
+                    var11 = var8 * var5 >> -2066267828;
+                    var12 = this.field_F * var8 >> -183405300;
+                    var15 = var11 >> 800018188;
                     var16 = var15 + 1;
                     var11 = var11 & 4095;
                     if (var13 <= var16) {
@@ -141,17 +141,17 @@ final class kg extends ji {
                       break L4;
                     }
                   }
-                  var18 = ((kg) this).field_B[255 & var16] & 255;
+                  var18 = this.field_B[255 & var16] & 255;
                   var14 = ue.field_G[var11];
-                  var17 = ((kg) this).field_B[255 & var15] & 255;
+                  var17 = this.field_B[255 & var15] & 255;
                   var10 = 0;
                   L5: while (true) {
                     if (we.field_M <= var10) {
                       break L2;
                     } else {
-                      var4_int = ((kg) this).field_F * rh.field_O[var10];
-                      var6 = this.a(var8 * var4_int >> 12, 255, var18, var12, var14, var11, var17);
-                      param0[var10] = var6 * var9 >> 12;
+                      var4_int = this.field_F * rh.field_O[var10];
+                      var6 = this.a(var8 * var4_int >> -140734324, 255, var18, var12, var14, var11, var17);
+                      param0[var10] = var6 * var9 >> 1290680620;
                       var10++;
                       continue L5;
                     }
@@ -159,12 +159,12 @@ final class kg extends ji {
                 }
                 var7 = 1;
                 L6: while (true) {
-                  if (var7 >= ((kg) this).field_E) {
+                  if (var7 >= this.field_E) {
                     break L1;
                   } else {
                     L7: {
                       L8: {
-                        var9 = ((kg) this).field_K[var7];
+                        var9 = this.field_K[var7];
                         if (8 < var9) {
                           break L8;
                         } else {
@@ -176,11 +176,11 @@ final class kg extends ji {
                         }
                       }
                       L9: {
-                        var8 = ((kg) this).field_z[var7] << 12;
-                        var13 = var8 * ((kg) this).field_A >> 12;
-                        var11 = var5 * var8 >> 12;
-                        var12 = ((kg) this).field_F * var8 >> 12;
-                        var15 = var11 >> 12;
+                        var8 = this.field_z[var7] << -691051572;
+                        var13 = var8 * this.field_A >> -991570036;
+                        var11 = var5 * var8 >> -1225958644;
+                        var12 = this.field_F * var8 >> 1267698316;
+                        var15 = var11 >> 603092876;
                         var16 = var15 - -1;
                         var11 = var11 & 4095;
                         if (var13 > var16) {
@@ -191,13 +191,13 @@ final class kg extends ji {
                         }
                       }
                       L10: {
-                        var17 = ((kg) this).field_B[255 & var15] & 255;
+                        var17 = this.field_B[255 & var15] & 255;
                         var14 = ue.field_G[var11];
-                        var18 = ((kg) this).field_B[255 & var16] & 255;
-                        if (!((kg) this).field_D) {
+                        var18 = this.field_B[255 & var16] & 255;
+                        if (!this.field_D) {
                           break L10;
                         } else {
-                          if (var7 != -1 + ((kg) this).field_E) {
+                          if (var7 != -1 + this.field_E) {
                             break L10;
                           } else {
                             var10 = 0;
@@ -205,10 +205,10 @@ final class kg extends ji {
                               if (we.field_M <= var10) {
                                 break L7;
                               } else {
-                                var4_int = rh.field_O[var10] * ((kg) this).field_F;
-                                var6 = this.a(var8 * var4_int >> 12, 255, var18, var12, var14, var11, var17);
-                                var6 = param0[var10] + (var6 * var9 >> 12);
-                                param0[var10] = (var6 >> 1) + 2048;
+                                var4_int = rh.field_O[var10] * this.field_F;
+                                var6 = this.a(var8 * var4_int >> 2146311276, 255, var18, var12, var14, var11, var17);
+                                var6 = param0[var10] + (var6 * var9 >> 2045288908);
+                                param0[var10] = (var6 >> 1400964385) + 2048;
                                 var10++;
                                 continue L11;
                               }
@@ -221,9 +221,9 @@ final class kg extends ji {
                         if (we.field_M <= var10) {
                           break L7;
                         } else {
-                          var4_int = ((kg) this).field_F * rh.field_O[var10];
-                          var6 = this.a(var8 * var4_int >> 12, 255, var18, var12, var14, var11, var17);
-                          param0[var10] = param0[var10] + (var9 * var6 >> 12);
+                          var4_int = this.field_F * rh.field_O[var10];
+                          var6 = this.a(var8 * var4_int >> -2004408500, 255, var18, var12, var14, var11, var17);
+                          param0[var10] = param0[var10] + (var9 * var6 >> -5616564);
                           var10++;
                           continue L12;
                         }
@@ -235,12 +235,12 @@ final class kg extends ji {
                 }
               } else {
                 L13: {
-                  var9 = ((kg) this).field_K[0];
-                  var8 = ((kg) this).field_z[0] << 12;
-                  var11 = var5 * var8 >> 12;
-                  var13 = var8 * ((kg) this).field_A >> 12;
-                  var12 = ((kg) this).field_F * var8 >> 12;
-                  var15 = var11 >> 12;
+                  var9 = this.field_K[0];
+                  var8 = this.field_z[0] << 1146148716;
+                  var11 = var5 * var8 >> 78513260;
+                  var13 = var8 * this.field_A >> -1878899988;
+                  var12 = this.field_F * var8 >> 912009100;
+                  var15 = var11 >> -483530036;
                   var16 = var15 - -1;
                   if (var13 > var16) {
                     break L13;
@@ -251,18 +251,18 @@ final class kg extends ji {
                 }
                 var11 = var11 & 4095;
                 var14 = ue.field_G[var11];
-                var17 = ((kg) this).field_B[255 & var15] & 255;
-                var18 = 255 & ((kg) this).field_B[255 & var16];
-                if (((kg) this).field_D) {
+                var17 = this.field_B[255 & var15] & 255;
+                var18 = 255 & this.field_B[255 & var16];
+                if (this.field_D) {
                   var10 = 0;
                   L14: while (true) {
                     if (we.field_M <= var10) {
                       break L1;
                     } else {
-                      var4_int = ((kg) this).field_F * rh.field_O[var10];
-                      var6 = this.a(var8 * var4_int >> 12, 255, var18, var12, var14, var11, var17);
-                      var6 = var6 * var9 >> 12;
-                      param0[var10] = (var6 >> 1) + 2048;
+                      var4_int = this.field_F * rh.field_O[var10];
+                      var6 = this.a(var8 * var4_int >> 205551500, 255, var18, var12, var14, var11, var17);
+                      var6 = var6 * var9 >> 740601708;
+                      param0[var10] = (var6 >> -706297375) + 2048;
                       var10++;
                       continue L14;
                     }
@@ -273,9 +273,9 @@ final class kg extends ji {
                     if (var10 >= we.field_M) {
                       break L1;
                     } else {
-                      var4_int = rh.field_O[var10] * ((kg) this).field_F;
-                      var6 = this.a(var4_int * var8 >> 12, 255, var18, var12, var14, var11, var17);
-                      param0[var10] = var9 * var6 >> 12;
+                      var4_int = rh.field_O[var10] * this.field_F;
+                      var6 = this.a(var4_int * var8 >> -664942036, 255, var18, var12, var14, var11, var17);
+                      param0[var10] = var9 * var6 >> 253779148;
                       var10++;
                       continue L15;
                     }
@@ -289,23 +289,23 @@ final class kg extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var4 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) var4;
+            stackOut_37_0 = (RuntimeException) (var4);
             stackOut_37_1 = new StringBuilder().append("kg.K(");
             stackIn_39_0 = stackOut_37_0;
             stackIn_39_1 = stackOut_37_1;
             stackIn_38_0 = stackOut_37_0;
             stackIn_38_1 = stackOut_37_1;
             if (param0 == null) {
-              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
               stackOut_39_2 = "null";
               stackIn_40_0 = stackOut_39_0;
               stackIn_40_1 = stackOut_39_1;
               stackIn_40_2 = stackOut_39_2;
               break L16;
             } else {
-              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
               stackOut_38_2 = "{...}";
               stackIn_40_0 = stackOut_38_0;
               stackIn_40_1 = stackOut_38_1;
@@ -313,11 +313,14 @@ final class kg extends ji {
               break L16;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + param1 + ',' + -107 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_40_0), stackIn_40_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void b(byte param0) {
+        if (param0 >= -75) {
+            field_I = (String) null;
+        }
         field_G = null;
         field_I = null;
     }
@@ -360,10 +363,10 @@ final class kg extends ji {
         int stackOut_31_0 = 0;
         L0: {
           var18 = Vertigo2.field_L ? 1 : 0;
-          var13 = param0 >> 12;
+          var13 = param0 >> 2000135916;
           var12 = 1 + var13;
           param0 = param0 & 4095;
-          var13 = var13 & 255;
+          var13 = var13 & param1;
           if (param3 > var12) {
             break L0;
           } else {
@@ -376,10 +379,10 @@ final class kg extends ji {
           var12 = var12 & 255;
           var10 = -4096 + param5;
           var15 = ue.field_G[param0];
-          var14 = ((kg) this).field_B[var13 - -param6] & 3;
+          var14 = this.field_B[var13 - -param6] & 3;
           if (var14 <= 1) {
             L2: {
-              if (var14 == 0) {
+              if (-1 == (var14 ^ -1)) {
                 stackOut_9_0 = param5 + param0;
                 stackIn_10_0 = stackOut_9_0;
                 break L2;
@@ -393,7 +396,7 @@ final class kg extends ji {
             break L1;
           } else {
             L3: {
-              if (var14 == 2) {
+              if ((var14 ^ -1) == -3) {
                 stackOut_5_0 = param0 + -param5;
                 stackIn_6_0 = stackOut_5_0;
                 break L3;
@@ -408,8 +411,8 @@ final class kg extends ji {
           }
         }
         L4: {
-          var14 = ((kg) this).field_B[var12 - -param6] & 3;
-          if (var14 <= 1) {
+          var14 = this.field_B[var12 - -param6] & 3;
+          if ((var14 ^ -1) >= -2) {
             L5: {
               if (var14 != 0) {
                 stackOut_18_0 = param5 + -var11;
@@ -425,7 +428,7 @@ final class kg extends ji {
             break L4;
           } else {
             L6: {
-              if (var14 == 2) {
+              if ((var14 ^ -1) == -3) {
                 stackOut_14_0 = -param5 + var11;
                 stackIn_15_0 = stackOut_14_0;
                 break L6;
@@ -440,9 +443,9 @@ final class kg extends ji {
           }
         }
         L7: {
-          var14 = 3 & ((kg) this).field_B[param2 + var13];
-          var16 = ((var9 + -var8) * var15 >> 12) + var8;
-          if (var14 <= 1) {
+          var14 = 3 & this.field_B[param2 + var13];
+          var16 = ((var9 + -var8) * var15 >> 1661033740) + var8;
+          if (-2 <= (var14 ^ -1)) {
             L8: {
               if (var14 != 0) {
                 stackOut_27_0 = var10 + -param0;
@@ -458,7 +461,7 @@ final class kg extends ji {
             break L7;
           } else {
             L9: {
-              if (var14 != 2) {
+              if ((var14 ^ -1) != -3) {
                 stackOut_23_0 = -var10 + -param0;
                 stackIn_24_0 = stackOut_23_0;
                 break L9;
@@ -473,7 +476,7 @@ final class kg extends ji {
           }
         }
         L10: {
-          var14 = 3 & ((kg) this).field_B[param2 + var12];
+          var14 = 3 & this.field_B[param2 + var12];
           if (1 >= var14) {
             L11: {
               if (var14 == 0) {
@@ -504,11 +507,12 @@ final class kg extends ji {
             break L10;
           }
         }
-        var17 = (var15 * (var9 - var8) >> 12) + var8;
-        return ((var17 - var16) * param4 >> 12) + var16;
+        var17 = (var15 * (var9 - var8) >> -1548424756) + var8;
+        return ((var17 - var16) * param4 >> 132508044) + var16;
     }
 
     final void a(byte param0, int param1, ed param2) {
+        int dupTemp$1 = 0;
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -552,75 +556,72 @@ final class kg extends ji {
               var4_int = param1;
               if (var4_int != 0) {
                 if (1 == var4_int) {
-                  ((kg) this).field_E = param2.h(-11);
+                  this.field_E = param2.h(-11);
                   break L2;
                 } else {
-                  L3: {
-                    if (var4_int != 2) {
-                      if (var4_int != 3) {
-                        if (var4_int == 4) {
-                          ((kg) this).field_C = param2.h(-11);
-                          break L2;
-                        } else {
-                          if (var4_int != 5) {
-                            if (var4_int != 6) {
-                              break L3;
-                            } else {
-                              ((kg) this).field_A = param2.h(param0 + -121);
-                              break L2;
-                            }
+                  if (-3 != (var4_int ^ -1)) {
+                    if (-4 != (var4_int ^ -1)) {
+                      if (var4_int == 4) {
+                        this.field_C = param2.h(-11);
+                        break L2;
+                      } else {
+                        if (var4_int != 5) {
+                          if (var4_int != 6) {
+                            break L2;
                           } else {
-                            ((kg) this).field_F = param2.h(-11);
+                            this.field_A = param2.h(param0 + -121);
                             break L2;
                           }
+                        } else {
+                          this.field_F = param2.h(-11);
+                          break L2;
                         }
-                      } else {
-                        int dupTemp$1 = param2.h(param0 ^ -101);
-                        ((kg) this).field_A = dupTemp$1;
-                        ((kg) this).field_F = dupTemp$1;
-                        break L2;
                       }
                     } else {
-                      ((kg) this).field_H = param2.n(param0 + -108);
-                      if (((kg) this).field_H < 0) {
-                        ((kg) this).field_K = new short[((kg) this).field_E];
-                        var4_int = 0;
-                        L4: while (true) {
-                          if (~((kg) this).field_E >= ~var4_int) {
-                            break L3;
-                          } else {
-                            ((kg) this).field_K[var4_int] = (short)param2.n(2);
-                            var4_int++;
-                            continue L4;
-                          }
+                      dupTemp$1 = param2.h(param0 ^ -101);
+                      this.field_A = dupTemp$1;
+                      this.field_F = dupTemp$1;
+                      break L2;
+                    }
+                  } else {
+                    this.field_H = param2.n(param0 + -108);
+                    if (this.field_H < 0) {
+                      this.field_K = new short[this.field_E];
+                      var4_int = 0;
+                      L3: while (true) {
+                        if (this.field_E <= var4_int) {
+                          break L2;
+                        } else {
+                          this.field_K[var4_int] = (short)param2.n(2);
+                          var4_int++;
+                          continue L3;
                         }
-                      } else {
-                        break L2;
                       }
+                    } else {
+                      break L2;
                     }
                   }
-                  break L2;
                 }
               } else {
-                L5: {
+                L4: {
                   stackOut_15_0 = this;
                   stackIn_17_0 = stackOut_15_0;
                   stackIn_16_0 = stackOut_15_0;
-                  if (param2.h(-11) != 1) {
+                  if (-2 != (param2.h(-11) ^ -1)) {
                     stackOut_17_0 = this;
                     stackOut_17_1 = 0;
                     stackIn_18_0 = stackOut_17_0;
                     stackIn_18_1 = stackOut_17_1;
-                    break L5;
+                    break L4;
                   } else {
                     stackOut_16_0 = this;
                     stackOut_16_1 = 1;
                     stackIn_18_0 = stackOut_16_0;
                     stackIn_18_1 = stackOut_16_1;
-                    break L5;
+                    break L4;
                   }
                 }
-                ((kg) this).field_D = stackIn_18_1 != 0;
+                ((kg) (this)).field_D = stackIn_18_1 != 0;
                 break L2;
               }
             }
@@ -628,33 +629,33 @@ final class kg extends ji {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var4 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var4;
+            stackOut_30_0 = (RuntimeException) (var4);
             stackOut_30_1 = new StringBuilder().append("kg.C(").append(param0).append(',').append(param1).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param2 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "null";
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
-              break L6;
+              break L5;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_33_0 = stackOut_31_0;
               stackIn_33_1 = stackOut_31_1;
               stackIn_33_2 = stackOut_31_2;
-              break L6;
+              break L5;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ')');
         }
     }
 
@@ -666,23 +667,23 @@ final class kg extends ji {
           if (param0 == 5865) {
             break L0;
           } else {
-            field_I = null;
+            field_I = (String) null;
             break L0;
           }
         }
         L1: {
-          if (((kg) this).field_H <= 0) {
-            if (null == ((kg) this).field_K) {
+          if (-1 <= (this.field_H ^ -1)) {
+            if (null == this.field_K) {
               break L1;
             } else {
-              if (((kg) this).field_E == ((kg) this).field_K.length) {
-                ((kg) this).field_z = new short[((kg) this).field_E];
+              if (this.field_E == this.field_K.length) {
+                this.field_z = new short[this.field_E];
                 var2 = 0;
                 L2: while (true) {
-                  if (var2 >= ((kg) this).field_E) {
+                  if (var2 >= this.field_E) {
                     break L1;
                   } else {
-                    ((kg) this).field_z[var2] = (short)(int)Math.pow(2.0, (double)var2);
+                    this.field_z[var2] = (short)(int)Math.pow(2.0, (double)var2);
                     var2++;
                     continue L2;
                   }
@@ -692,15 +693,15 @@ final class kg extends ji {
               }
             }
           } else {
-            ((kg) this).field_K = new short[((kg) this).field_E];
-            ((kg) this).field_z = new short[((kg) this).field_E];
+            this.field_K = new short[this.field_E];
+            this.field_z = new short[this.field_E];
             var2 = 0;
             L3: while (true) {
-              if (((kg) this).field_E <= var2) {
+              if (this.field_E <= var2) {
                 break L1;
               } else {
-                ((kg) this).field_K[var2] = (short)(int)(Math.pow((double)((float)((kg) this).field_H / 4096.0f), (double)var2) * 4096.0);
-                ((kg) this).field_z[var2] = (short)(int)Math.pow(2.0, (double)var2);
+                this.field_K[var2] = (short)(int)(Math.pow((double)((float)this.field_H / 4096.0f), (double)var2) * 4096.0);
+                this.field_z[var2] = (short)(int)Math.pow(2.0, (double)var2);
                 var2++;
                 continue L3;
               }
@@ -716,20 +717,16 @@ final class kg extends ji {
 
     public kg() {
         super(0, true);
-        ((kg) this).field_B = new byte[512];
-        ((kg) this).field_F = 4;
-        ((kg) this).field_A = 4;
-        ((kg) this).field_E = 4;
-        ((kg) this).field_H = 1638;
-        ((kg) this).field_C = 0;
-        ((kg) this).field_D = true;
+        this.field_B = new byte[512];
+        this.field_F = 4;
+        this.field_A = 4;
+        this.field_E = 4;
+        this.field_H = 1638;
+        this.field_C = 0;
+        this.field_D = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_G = new uj(1);
         field_I = "Asking to join <%0>'s game...";
     }

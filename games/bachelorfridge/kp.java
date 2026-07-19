@@ -27,13 +27,10 @@ final class kp {
                       break L2;
                     }
                   }
-                  dg.b(var3, var2, var4, 3959817);
-                  var3 += 20;
+                  dg.b(var3, var2, var4, param0);
                   var3 += 20;
                   continue L1;
                 } else {
-                  var3 += 20;
-                  var3 += 20;
                   var3 += 20;
                   continue L1;
                 }
@@ -68,13 +65,10 @@ final class kp {
                       break L2;
                     }
                   }
-                  dg.b(var3, var2, var4, 3959817);
-                  var3 += 20;
+                  dg.b(var3, var2, var4, param0);
                   var3 += 20;
                   continue L1;
                 } else {
-                  var3 += 20;
-                  var3 += 20;
                   var3 += 20;
                   continue L1;
                 }

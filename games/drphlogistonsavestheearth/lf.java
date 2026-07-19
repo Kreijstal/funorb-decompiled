@@ -10,13 +10,15 @@ final class lf {
     static int field_c;
 
     public static void a(int param0) {
-        field_e = null;
+        field_e = (he[][]) null;
         field_d = null;
         field_f = null;
-        int var1 = 1;
+        int var1 = 71 % ((param0 - 4) / 55);
     }
 
     final static String a(long param0, byte param1) {
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
         int var3 = 0;
         int var4 = 0;
         long var5 = 0L;
@@ -26,7 +28,7 @@ final class lf {
         int var11 = 0;
         int var12 = 0;
         var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (param0 > 0L) {
+        if (-1L > (param0 ^ -1L)) {
           if (6582952005840035281L > param0) {
             if (param0 % 37L == 0L) {
               return null;
@@ -38,8 +40,8 @@ final class lf {
                 if (var5 == 0L) {
                   var7 = new StringBuilder(var4);
                   L1: while (true) {
-                    if (param0 == 0L) {
-                      StringBuilder discarded$2 = var7.reverse();
+                    if (-1L == (param0 ^ -1L)) {
+                      discarded$2 = var7.reverse();
                       var7.setCharAt(0, Character.toUpperCase(var7.charAt(0)));
                       return var7.toString();
                     } else {
@@ -56,7 +58,7 @@ final class lf {
                           break L2;
                         }
                       }
-                      StringBuilder discarded$3 = var7.append((char) var10);
+                      discarded$3 = var7.append((char) var10);
                       continue L1;
                     }
                   }
@@ -76,10 +78,6 @@ final class lf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new he[2][];
         field_c = 67;
         field_f = "Error connecting to server. Please try using a different server.";

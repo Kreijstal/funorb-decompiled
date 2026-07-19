@@ -9,17 +9,17 @@ final class sk extends md {
     int field_p;
 
     sk(int param0, byte[] param1, int param2, int param3) {
-        ((sk) this).field_p = param0;
-        ((sk) this).field_r = param1;
-        ((sk) this).field_q = param2;
-        ((sk) this).field_t = param3;
+        this.field_p = param0;
+        this.field_r = param1;
+        this.field_q = param2;
+        this.field_t = param3;
     }
 
     sk(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((sk) this).field_p = param0;
-        ((sk) this).field_r = param1;
-        ((sk) this).field_q = param2;
-        ((sk) this).field_t = param3;
-        ((sk) this).field_s = param4 ? true : false;
+        this.field_p = param0;
+        this.field_r = param1;
+        this.field_q = param2;
+        this.field_t = param3;
+        this.field_s = param4 ? true : false;
     }
 }

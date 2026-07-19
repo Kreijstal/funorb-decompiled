@@ -13,13 +13,12 @@ final class is {
         field_a = null;
         field_b = null;
         field_d = null;
+        if (param0 != 12836) {
+            field_c = (kv) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "is.A(";
         field_d = "Waiting for fonts";
         field_b = new int[]{-1, 5, 1, 2, 5, 5, 5, 5, 1, 1, 1, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, -1, -1, -1, -1, -1, -1, 5, 3, 5, -1, 5, 2, -1, -1, -1, 3, 5, -1, 2, -1, 5, 3, 5, -1, -1, -1, -1, -1, -1, 3, 3, 4, 3};

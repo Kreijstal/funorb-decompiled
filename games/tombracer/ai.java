@@ -8,9 +8,18 @@ final class ai {
     static String field_c;
 
     public static void a(byte param0) {
-        field_c = null;
-        field_d = null;
-        field_b = null;
+        if (param0 != 41) {
+          field_c = (String) null;
+          field_c = null;
+          field_d = null;
+          field_b = null;
+          return;
+        } else {
+          field_c = null;
+          field_d = null;
+          field_b = null;
+          return;
+        }
     }
 
     final static us a(byte param0, String param1) {
@@ -39,7 +48,7 @@ final class ai {
               if (param0 > 114) {
                 break L1;
               } else {
-                field_d = null;
+                field_d = (String) null;
                 break L1;
               }
             }
@@ -51,23 +60,23 @@ final class ai {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("ai.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -75,16 +84,12 @@ final class ai {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Remove friend";
         field_b = "This game option is only available to members.";
         field_c = "Honour";

@@ -35,10 +35,6 @@ final class dh extends l {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "dh.A(";
         field_r = 360;
         field_p = "You need a rating of <%1> to play with the current options.";

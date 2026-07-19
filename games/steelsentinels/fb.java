@@ -30,6 +30,7 @@ class fb extends me {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -51,10 +52,10 @@ class fb extends me {
         try {
           L0: {
             L1: {
-              if (520 <= oh.field_f) {
-                if (620 > oh.field_f) {
+              if (param4 <= oh.field_f) {
+                if (param3 + param4 > oh.field_f) {
                   if (param1 <= pi.field_c) {
-                    if (pi.field_c <= param1 - -34) {
+                    if (pi.field_c <= param1 - -param0) {
                       stackOut_8_0 = 1;
                       stackIn_10_0 = stackOut_8_0;
                       break L1;
@@ -95,9 +96,9 @@ class fb extends me {
             if (param5 == 12490) {
               L3: {
                 var8 = pl.field_T;
-                jm.a(param1, 34, var8, 1, 520, 100);
+                jm.a(param1, param0, var8, 1, param4, param3);
                 if (param2 != null) {
-                  ui.field_U.a(ke.a(param5 + -12448, param2), 570, param1 + (ui.field_U.field_U + 35) / 2, var7, -1);
+                  ui.field_U.a(ke.a(param5 + -12448, param2), param4 - -(param3 / 2), param1 + (ui.field_U.field_U + (param0 - -1)) / 2, var7, -1);
                   break L3;
                 } else {
                   break L3;
@@ -105,34 +106,36 @@ class fb extends me {
               }
               stackOut_19_0 = var6_int;
               stackIn_20_0 = stackOut_19_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_14_0 = 0;
               stackIn_15_0 = stackOut_14_0;
-              return stackIn_15_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var6;
-            stackOut_21_1 = new StringBuilder().append("fb.E(").append(34).append(',').append(param1).append(',');
+            stackOut_21_0 = (RuntimeException) (var6);
+            stackOut_21_1 = new StringBuilder().append("fb.E(").append(param0).append(',').append(param1).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param2 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L4;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -140,36 +143,40 @@ class fb extends me {
               break L4;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + 100 + ',' + 520 + ',' + param5 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
-        return stackIn_20_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_15_0 != 0;
+        } else {
+          return stackIn_20_0 != 0;
+        }
     }
 
     final void a(gi param0, boolean param1) {
         try {
-            param0.b(-28875, ((fb) this).field_i);
+            param0.b(-28875, this.field_i);
             if (param1) {
-                field_q = null;
+                field_q = (String) null;
             }
-            param0.a(((fb) this).field_m, (byte) -66);
+            param0.a(this.field_m, (byte) -66);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "fb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "fb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     dj a(byte param0) {
         if (param0 <= 47) {
-            return null;
+            return (dj) null;
         }
         return ol.field_Sb;
     }
 
     fb(long param0, String param1) {
         try {
-            ((fb) this).field_m = param1;
-            ((fb) this).field_i = param0;
+            this.field_m = param1;
+            this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "fb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "fb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -194,6 +201,14 @@ class fb extends me {
     }
 
     final static void b(int param0) {
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -206,34 +221,34 @@ class fb extends me {
           L0: {
             var5 = qe.field_a;
             var1 = var5;
-            var2 = 0;
+            var2 = param0;
             var3 = var5.length;
             L1: while (true) {
               if (var2 >= var3) {
                 break L0;
               } else {
-                int incrementValue$40 = var2;
+                incrementValue$40 = var2;
                 var2++;
                 var5[incrementValue$40] = 0;
-                int incrementValue$41 = var2;
+                incrementValue$41 = var2;
                 var2++;
                 var5[incrementValue$41] = 0;
-                int incrementValue$42 = var2;
+                incrementValue$42 = var2;
                 var2++;
                 var5[incrementValue$42] = 0;
-                int incrementValue$43 = var2;
+                incrementValue$43 = var2;
                 var2++;
                 var5[incrementValue$43] = 0;
-                int incrementValue$44 = var2;
+                incrementValue$44 = var2;
                 var2++;
                 var5[incrementValue$44] = 0;
-                int incrementValue$45 = var2;
+                incrementValue$45 = var2;
                 var2++;
                 var5[incrementValue$45] = 0;
-                int incrementValue$46 = var2;
+                incrementValue$46 = var2;
                 var2++;
                 var5[incrementValue$46] = 0;
-                int incrementValue$47 = var2;
+                incrementValue$47 = var2;
                 var2++;
                 var5[incrementValue$47] = 0;
                 continue L1;
@@ -243,15 +258,11 @@ class fb extends me {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1_ref, "fb.B(" + 0 + ')');
+          throw ci.a((Throwable) ((Object) var1_ref), "fb.B(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "Day";
         field_j = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
         field_p = "You can ask to join this game";

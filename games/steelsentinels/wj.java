@@ -11,6 +11,6 @@ public class wj {
     wj field_d;
 
     wj() {
-        ((wj) this).field_a = 0;
+        this.field_a = 0;
     }
 }

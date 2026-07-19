@@ -51,10 +51,10 @@ final class pf {
     final void a(int param0, int param1, byte param2, int param3, int param4) {
         int var6 = 0;
         int var8 = TrackController.field_F ? 1 : 0;
-        for (var6 = 0; ((pf) this).field_q > var6; var6++) {
-            ((pf) this).field_y[var6] = (short)(param3 * ((pf) this).field_y[var6] / param1);
-            ((pf) this).field_o[var6] = (short)(param4 * ((pf) this).field_o[var6] / param1);
-            ((pf) this).field_S[var6] = (short)(param0 * ((pf) this).field_S[var6] / param1);
+        for (var6 = 0; this.field_q > var6; var6++) {
+            this.field_y[var6] = (short)(param3 * this.field_y[var6] / param1);
+            this.field_o[var6] = (short)(param4 * this.field_o[var6] / param1);
+            this.field_S[var6] = (short)(param0 * this.field_S[var6] / param1);
         }
         int var7 = -31 / ((param2 - 43) / 48);
         this.a((byte) -84);
@@ -71,7 +71,7 @@ final class pf {
     }
 
     private final void a(byte param0) {
-        ((pf) this).field_F = false;
+        this.field_F = false;
         int var2 = -65 / ((18 - param0) / 46);
     }
 
@@ -86,7 +86,7 @@ final class pf {
                   if (param0 == 3) {
                     break L1;
                   } else {
-                    field_P = null;
+                    field_P = (wb[]) null;
                     break L1;
                   }
                 }
@@ -112,7 +112,7 @@ final class pf {
         var6 = TrackController.field_F ? 1 : 0;
         var5 = 0;
         L0: while (true) {
-          if (((pf) this).field_q <= var5) {
+          if (this.field_q <= var5) {
             this.a((byte) -40);
             if (param1 < 100) {
               this.a((byte) -59);
@@ -121,9 +121,9 @@ final class pf {
               return;
             }
           } else {
-            ((pf) this).field_y[var5] = (short)(((pf) this).field_y[var5] + param2);
-            ((pf) this).field_o[var5] = (short)(((pf) this).field_o[var5] + param3);
-            ((pf) this).field_S[var5] = (short)(((pf) this).field_S[var5] + param0);
+            this.field_y[var5] = (short)(this.field_y[var5] + param2);
+            this.field_o[var5] = (short)(this.field_o[var5] + param3);
+            this.field_S[var5] = (short)(this.field_S[var5] + param0);
             var5++;
             continue L0;
           }
@@ -131,8 +131,8 @@ final class pf {
     }
 
     pf() {
-        ((pf) this).field_F = false;
-        ((pf) this).field_a = (byte) 0;
+        this.field_F = false;
+        this.field_a = (byte) 0;
     }
 
     final void b(int param0) {
@@ -148,23 +148,21 @@ final class pf {
         int var11 = 0;
         int var12 = 0;
         var12 = TrackController.field_F ? 1 : 0;
-        if (!((pf) this).field_F) {
+        if (!this.field_F) {
           if (param0 == 14702) {
-            L0: {
-              ((pf) this).field_F = true;
-              var2 = 32767;
-              var3 = 32767;
-              var4 = 32767;
-              var5 = -32768;
-              var6 = -32768;
-              var7 = -32768;
-              var8 = 0;
-              if (((pf) this).field_q <= var8) {
-                break L0;
-              } else {
+            this.field_F = true;
+            var2 = 32767;
+            var3 = 32767;
+            var4 = 32767;
+            var5 = -32768;
+            var6 = -32768;
+            var7 = -32768;
+            var8 = 0;
+            L0: while (true) {
+              if (this.field_q > var8) {
                 L1: {
-                  var9 = ((pf) this).field_y[var8];
-                  var10 = ((pf) this).field_o[var8];
+                  var9 = this.field_y[var8];
+                  var10 = this.field_o[var8];
                   if (var3 > var10) {
                     var3 = var10;
                     break L1;
@@ -173,7 +171,7 @@ final class pf {
                   }
                 }
                 L2: {
-                  var11 = ((pf) this).field_S[var8];
+                  var11 = this.field_S[var8];
                   if (var5 < var9) {
                     var5 = var9;
                     break L2;
@@ -205,31 +203,27 @@ final class pf {
                     break L5;
                   }
                 }
-                L6: {
-                  if (var7 < var11) {
-                    var7 = var11;
-                    break L6;
-                  } else {
-                    var8++;
-                    break L6;
-                  }
+                if (var7 < var11) {
+                  var7 = var11;
+                  var8++;
+                  continue L0;
+                } else {
+                  var8++;
+                  continue L0;
                 }
-                var8++;
-                var8++;
-                var8++;
-                break L0;
+              } else {
+                this.field_u = var5;
+                this.field_n = var3;
+                this.field_p = var6;
+                this.field_k = var4;
+                this.field_w = var7;
+                this.field_i = var2;
+                return;
               }
             }
-            ((pf) this).field_u = var5;
-            ((pf) this).field_n = var3;
-            ((pf) this).field_p = var6;
-            ((pf) this).field_k = var4;
-            ((pf) this).field_w = var7;
-            ((pf) this).field_i = var2;
-            return;
           } else {
             pf.a(-106, 23L);
-            ((pf) this).field_F = true;
+            this.field_F = true;
             var2 = 32767;
             var3 = 32767;
             var4 = 32767;
@@ -237,66 +231,66 @@ final class pf {
             var6 = -32768;
             var7 = -32768;
             var8 = 0;
-            L7: while (true) {
-              if (((pf) this).field_q > var8) {
-                L8: {
-                  var9 = ((pf) this).field_y[var8];
-                  var10 = ((pf) this).field_o[var8];
+            L6: while (true) {
+              if (this.field_q > var8) {
+                L7: {
+                  var9 = this.field_y[var8];
+                  var10 = this.field_o[var8];
                   if (var3 > var10) {
                     var3 = var10;
+                    break L7;
+                  } else {
+                    break L7;
+                  }
+                }
+                L8: {
+                  var11 = this.field_S[var8];
+                  if (var5 < var9) {
+                    var5 = var9;
                     break L8;
                   } else {
                     break L8;
                   }
                 }
                 L9: {
-                  var11 = ((pf) this).field_S[var8];
-                  if (var5 < var9) {
-                    var5 = var9;
+                  if (var6 < var10) {
+                    var6 = var10;
                     break L9;
                   } else {
                     break L9;
                   }
                 }
                 L10: {
-                  if (var6 < var10) {
-                    var6 = var10;
+                  if (var2 > var9) {
+                    var2 = var9;
                     break L10;
                   } else {
                     break L10;
                   }
                 }
                 L11: {
-                  if (var2 > var9) {
-                    var2 = var9;
-                    break L11;
-                  } else {
-                    break L11;
-                  }
-                }
-                L12: {
                   if (var11 < var4) {
                     var4 = var11;
-                    break L12;
+                    break L11;
                   } else {
-                    break L12;
+                    break L11;
                   }
                 }
                 if (var7 < var11) {
                   var7 = var11;
                   var8++;
-                  continue L7;
+                  continue L6;
                 } else {
                   var8++;
-                  continue L7;
+                  continue L6;
                 }
               } else {
-                ((pf) this).field_u = var5;
-                ((pf) this).field_n = var3;
-                ((pf) this).field_p = var6;
-                ((pf) this).field_k = var4;
-                ((pf) this).field_w = var7;
-                ((pf) this).field_i = var2;
+                this.field_u = var5;
+                this.field_n = var3;
+                this.field_p = var6;
+                this.field_k = var4;
+                this.field_w = var7;
+                this.field_i = var2;
                 return;
               }
             }
@@ -307,10 +301,6 @@ final class pf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_T = false;
         field_c = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
         field_P = new wb[4];

@@ -11,12 +11,27 @@ final class pc {
     static mf field_e;
 
     public static void a(boolean param0) {
-        field_f = null;
-        field_g = null;
-        field_e = null;
-        field_c = null;
-        field_a = null;
-        field_b = null;
+        String discarded$2 = null;
+        CharSequence var2 = null;
+        if (!param0) {
+          var2 = (CharSequence) null;
+          discarded$2 = pc.a(-125, (CharSequence) null);
+          field_f = null;
+          field_g = null;
+          field_e = null;
+          field_c = null;
+          field_a = null;
+          field_b = null;
+          return;
+        } else {
+          field_f = null;
+          field_g = null;
+          field_e = null;
+          field_c = null;
+          field_a = null;
+          field_b = null;
+          return;
+        }
     }
 
     final static String a(int param0, CharSequence param1) {
@@ -46,7 +61,7 @@ final class pc {
               if (param0 == 0) {
                 break L1;
               } else {
-                field_a = null;
+                field_a = (hh) null;
                 break L1;
               }
             }
@@ -59,7 +74,7 @@ final class pc {
                 break L2;
               }
             }
-            stackOut_5_0 = (String) var2;
+            stackOut_5_0 = (String) (var2);
             stackIn_6_0 = stackOut_5_0;
             break L0;
           }
@@ -67,23 +82,23 @@ final class pc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2_ref;
+            stackOut_7_0 = (RuntimeException) (var2_ref);
             stackOut_7_1 = new StringBuilder().append("pc.A(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -91,19 +106,25 @@ final class pc {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (param1 >= 0) {
-          if (fh.field_c.length <= param1) {
-            return 0;
+        if ((param1 ^ -1) <= -1) {
+          if (fh.field_c.length > param1) {
+            if (param0 != 2513) {
+              field_c = (int[]) null;
+              var2 = fh.field_c[param1].length;
+              return var2;
+            } else {
+              var2 = fh.field_c[param1].length;
+              return var2;
+            }
           } else {
-            var2 = fh.field_c[param1].length;
-            return var2;
+            return 0;
           }
         } else {
           return 0;
@@ -111,10 +132,6 @@ final class pc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new String[]{"Superbly done so far, commander. Your mission remit has again been extended and now takes you to the ice moon. The aliens are busy perfecting cold fusion drive technology for their armada.", "Search for and destroy the drive components."};
         field_f = new int[]{0, 0, 0, 1};
         field_g = "Create a free Account";

@@ -68,14 +68,30 @@ abstract class mc {
     }
 
     final static boolean a(long param0, boolean param1) {
-        return param0 == 1272878999115L || param0 == 1272878132285L;
+        int stackIn_5_0 = 0;
+        int stackOut_3_0 = 0;
+        if (param1) {
+          if (-1272878999116L != (param0 ^ -1L)) {
+            if ((param0 ^ -1L) == -1272878132286L) {
+              return true;
+            } else {
+              return false;
+            }
+          } else {
+            stackOut_3_0 = 1;
+            stackIn_5_0 = stackOut_3_0;
+            return stackIn_5_0 != 0;
+          }
+        } else {
+          return true;
+        }
     }
 
     final int a(byte param0, long param1) {
         long var4 = 0L;
         L0: {
-          var4 = ((mc) this).b((byte) -36);
-          if (var4 > 0L) {
+          var4 = this.b((byte) -36);
+          if (-1L > (var4 ^ -1L)) {
             aj.a(var4, 1);
             break L0;
           } else {
@@ -84,9 +100,9 @@ abstract class mc {
         }
         if (param0 > -51) {
           mc.a(19);
-          return ((mc) this).a(114, param1);
+          return this.a(114, param1);
         } else {
-          return ((mc) this).a(114, param1);
+          return this.a(114, param1);
         }
     }
 
@@ -97,14 +113,14 @@ abstract class mc {
     abstract void b(int param0);
 
     final static double a(double param0, double param1, boolean param2) {
+        if (param2) {
+            mc.a((byte) -58);
+            return Math.sqrt(param0 * (1.7 * param1));
+        }
         return Math.sqrt(param0 * (1.7 * param1));
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Mute this player for 48 hours";
         field_b = "Unrated game. Rewards are reduced.";
         field_e = "LOADING <%0>";

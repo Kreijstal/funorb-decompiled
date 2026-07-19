@@ -3,6 +3,8 @@
  */
 final class vi extends dl {
     private final static void f(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -36,7 +38,7 @@ final class vi extends dl {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
                 param2 = param1[incrementValue$2];
                 var17 = param2 >>> 24;
@@ -71,7 +73,7 @@ final class vi extends dl {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
-                  int incrementValue$3 = param4;
+                  incrementValue$3 = param4;
                   param4++;
                   param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
@@ -135,10 +137,10 @@ final class vi extends dl {
         int stackOut_19_1 = 0;
         int stackOut_19_2 = 0;
         L0: {
-          var3 = ((vi) this).field_l >> 1;
-          var4 = ((vi) this).field_u >> 1;
-          param0 = param0 + ((vi) this).field_v / 2;
-          param1 = param1 + ((vi) this).field_t / 2;
+          var3 = this.field_l >> 1;
+          var4 = this.field_u >> 1;
+          param0 = param0 + this.field_v / 2;
+          param1 = param1 + this.field_t / 2;
           if (param0 >= kh.field_c) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -152,7 +154,7 @@ final class vi extends dl {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= kh.field_g) {
-            stackOut_5_0 = ((vi) this).field_l - 2;
+            stackOut_5_0 = this.field_l - 2;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -176,7 +178,7 @@ final class vi extends dl {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= kh.field_j) {
-            stackOut_11_0 = ((vi) this).field_u - 2;
+            stackOut_11_0 = this.field_u - 2;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -191,7 +193,7 @@ final class vi extends dl {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((vi) this).field_l + var5;
+            var10 = var9 * this.field_l + var5;
             var11 = (param1 + (var9 >> 1)) * kh.field_l + (param0 + (var5 >> 1));
             var12 = var5;
             L5: while (true) {
@@ -227,14 +229,14 @@ final class vi extends dl {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = ((vi) this).field_w;
+                      stackOut_18_0 = this.field_w;
                       stackOut_18_1 = var10 + (var19 & 1);
                       stackIn_20_0 = stackOut_18_0;
                       stackIn_20_1 = stackOut_18_1;
                       stackIn_19_0 = stackOut_18_0;
                       stackIn_19_1 = stackOut_18_1;
                       if ((var19 & 2) != 0) {
-                        stackOut_20_0 = (int[]) (Object) stackIn_20_0;
+                        stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
                         stackOut_20_1 = stackIn_20_1;
                         stackOut_20_2 = 0;
                         stackIn_21_0 = stackOut_20_0;
@@ -242,9 +244,9 @@ final class vi extends dl {
                         stackIn_21_2 = stackOut_20_2;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) (Object) stackIn_19_0;
+                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
                         stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = ((vi) this).field_l;
+                        stackOut_19_2 = this.field_l;
                         stackIn_21_0 = stackOut_19_0;
                         stackIn_21_1 = stackOut_19_1;
                         stackIn_21_2 = stackOut_19_2;
@@ -276,12 +278,12 @@ final class vi extends dl {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((vi) this).field_v;
-          param1 = param1 + ((vi) this).field_t;
+          param0 = param0 + this.field_v;
+          param1 = param1 + this.field_t;
           var3 = param0 + param1 * kh.field_l;
           var4 = 0;
-          var5 = ((vi) this).field_u;
-          var6 = ((vi) this).field_l;
+          var5 = this.field_u;
+          var6 = this.field_l;
           var7 = kh.field_l - var6;
           var8 = 0;
           if (param1 >= kh.field_b) {
@@ -333,7 +335,7 @@ final class vi extends dl {
             break L4;
           } else {
             if (var5 > 0) {
-              vi.c(kh.field_i, ((vi) this).field_w, 0, var4, var3, var6, var5, var7, var8);
+              vi.c(kh.field_i, this.field_w, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -343,6 +345,8 @@ final class vi extends dl {
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -363,7 +367,7 @@ final class vi extends dl {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -377,7 +381,7 @@ final class vi extends dl {
                   var15 = (param2 & 16711935) * param9 & -16711936;
                   var16 = (param2 & 65280) * param9 & 16711680;
                   param2 = (var15 | var16) >>> 8;
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var13 & 16711935) * var14 & -16711936) + ((param2 & 65280) * var12 + (var13 & 65280) * var14 & 16711680) >>> 8;
                   var11++;
@@ -395,6 +399,7 @@ final class vi extends dl {
         int var15 = 0;
         int var16 = 0;
         int var18 = 0;
+        int incrementValue$0 = 0;
         int var17 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
@@ -405,7 +410,7 @@ final class vi extends dl {
                 if (var16 != 0) {
                     var17 = 256 - var16;
                     var18 = param0[param5];
-                    int incrementValue$0 = param5;
+                    incrementValue$0 = param5;
                     param5++;
                     param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
                 } else {
@@ -428,12 +433,12 @@ final class vi extends dl {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((vi) this).field_v;
-          param1 = param1 + ((vi) this).field_t;
+          param0 = param0 + this.field_v;
+          param1 = param1 + this.field_t;
           var4 = param0 + param1 * kh.field_l;
           var5 = 0;
-          var6 = ((vi) this).field_u;
-          var7 = ((vi) this).field_l;
+          var6 = this.field_u;
+          var7 = this.field_l;
           var8 = kh.field_l - var7;
           var9 = 0;
           if (param1 >= kh.field_b) {
@@ -485,7 +490,7 @@ final class vi extends dl {
             break L4;
           } else {
             if (var6 > 0) {
-              vi.e(kh.field_i, ((vi) this).field_w, 0, var5, var4, var7, var6, var8, var9, param2);
+              vi.e(kh.field_i, this.field_w, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -512,30 +517,30 @@ final class vi extends dl {
           } else {
             if (param3 > 0) {
               L1: {
-                var5 = ((vi) this).field_l;
-                var6 = ((vi) this).field_u;
+                var5 = this.field_l;
+                var6 = this.field_u;
                 var7 = 0;
                 var8 = 0;
-                var9 = ((vi) this).field_n;
-                var10 = ((vi) this).field_o;
+                var9 = this.field_n;
+                var10 = this.field_o;
                 var11 = (var9 << 16) / param2;
                 var12 = (var10 << 16) / param3;
-                if (((vi) this).field_v <= 0) {
+                if (this.field_v <= 0) {
                   break L1;
                 } else {
-                  var13 = ((((vi) this).field_v << 16) + var11 - 1) / var11;
+                  var13 = ((this.field_v << 16) + var11 - 1) / var11;
                   param0 = param0 + var13;
-                  var7 = var7 + (var13 * var11 - (((vi) this).field_v << 16));
+                  var7 = var7 + (var13 * var11 - (this.field_v << 16));
                   break L1;
                 }
               }
               L2: {
-                if (((vi) this).field_t <= 0) {
+                if (this.field_t <= 0) {
                   break L2;
                 } else {
-                  var13 = ((((vi) this).field_t << 16) + var12 - 1) / var12;
+                  var13 = ((this.field_t << 16) + var12 - 1) / var12;
                   param1 = param1 + var13;
-                  var8 = var8 + (var13 * var12 - (((vi) this).field_t << 16));
+                  var8 = var8 + (var13 * var12 - (this.field_t << 16));
                   break L2;
                 }
               }
@@ -598,7 +603,7 @@ final class vi extends dl {
                   break L8;
                 }
               }
-              vi.c(kh.field_i, ((vi) this).field_w, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+              vi.c(kh.field_i, this.field_w, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
               return;
             } else {
               break L0;
@@ -617,12 +622,12 @@ final class vi extends dl {
         int var10 = 0;
         if (param2 != 256) {
           L0: {
-            param0 = param0 + ((vi) this).field_v;
-            param1 = param1 + ((vi) this).field_t;
+            param0 = param0 + this.field_v;
+            param1 = param1 + this.field_t;
             var4 = param0 + param1 * kh.field_l;
             var5 = 0;
-            var6 = ((vi) this).field_u;
-            var7 = ((vi) this).field_l;
+            var6 = this.field_u;
+            var7 = this.field_l;
             var8 = kh.field_l - var7;
             var9 = 0;
             if (param1 >= kh.field_b) {
@@ -674,7 +679,7 @@ final class vi extends dl {
               break L4;
             } else {
               if (var6 > 0) {
-                vi.d(kh.field_i, ((vi) this).field_w, 0, var5, var4, var7, var6, var8, var9, param2);
+                vi.d(kh.field_i, this.field_w, 0, var5, var4, var7, var6, var8, var9, param2);
                 return;
               } else {
                 break L4;
@@ -683,7 +688,7 @@ final class vi extends dl {
           }
           return;
         } else {
-          ((vi) this).a(param0, param1);
+          this.a(param0, param1);
           return;
         }
     }
@@ -697,12 +702,12 @@ final class vi extends dl {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((vi) this).field_v;
-          param1 = param1 + ((vi) this).field_t;
+          param0 = param0 + this.field_v;
+          param1 = param1 + this.field_t;
           var4 = param0 + param1 * kh.field_l;
           var5 = 0;
-          var6 = ((vi) this).field_u;
-          var7 = ((vi) this).field_l;
+          var6 = this.field_u;
+          var7 = this.field_l;
           var8 = kh.field_l - var7;
           var9 = 0;
           if (param1 >= kh.field_b) {
@@ -754,7 +759,7 @@ final class vi extends dl {
             break L4;
           } else {
             if (var6 > 0) {
-              vi.d(kh.field_i, ((vi) this).field_w, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+              vi.d(kh.field_i, this.field_w, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -764,6 +769,8 @@ final class vi extends dl {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -784,7 +791,7 @@ final class vi extends dl {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -795,7 +802,7 @@ final class vi extends dl {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
@@ -812,17 +819,19 @@ final class vi extends dl {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int incrementValue$0 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = -param5; var11 < 0; var11++) {
                 var12 = (param1[param3] >>> 24) * param9 >> 8;
                 var13 = 256 - var12;
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
                 var14 = param1[incrementValue$0];
                 var15 = param0[param4];
-                int incrementValue$1 = param4;
+                incrementValue$1 = param4;
                 param4++;
                 param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
             }
@@ -840,12 +849,12 @@ final class vi extends dl {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((vi) this).field_v;
-          param1 = param1 + ((vi) this).field_t;
+          param0 = param0 + this.field_v;
+          param1 = param1 + this.field_t;
           var4 = param0 + param1 * kh.field_l;
           var5 = 0;
-          var6 = ((vi) this).field_u;
-          var7 = ((vi) this).field_l;
+          var6 = this.field_u;
+          var7 = this.field_l;
           var8 = kh.field_l - var7;
           var9 = 0;
           if (param1 >= kh.field_b) {
@@ -897,7 +906,7 @@ final class vi extends dl {
             break L4;
           } else {
             if (var6 > 0) {
-              vi.b(0, 0, 0, kh.field_i, ((vi) this).field_w, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+              vi.b(0, 0, 0, kh.field_i, this.field_w, var5, 0, var4, 0, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -915,12 +924,12 @@ final class vi extends dl {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((vi) this).field_v;
-          param1 = param1 + ((vi) this).field_t;
+          param0 = param0 + this.field_v;
+          param1 = param1 + this.field_t;
           var3 = param0 + param1 * kh.field_l;
           var4 = 0;
-          var5 = ((vi) this).field_u;
-          var6 = ((vi) this).field_l;
+          var5 = this.field_u;
+          var6 = this.field_l;
           var7 = kh.field_l - var6;
           var8 = 0;
           if (param1 >= kh.field_b) {
@@ -972,7 +981,7 @@ final class vi extends dl {
             break L4;
           } else {
             if (var5 > 0) {
-              vi.c(kh.field_i, ((vi) this).field_w, 0, var4, var3, var6, var5, var7, var8);
+              vi.c(kh.field_i, this.field_w, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -986,6 +995,8 @@ final class vi extends dl {
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -1007,7 +1018,7 @@ final class vi extends dl {
                 param6++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var14 = param2 >>> 24;
@@ -1030,7 +1041,7 @@ final class vi extends dl {
                   }
                   var16 = 256 - var14;
                   var17 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
                   param5++;
@@ -1043,6 +1054,8 @@ final class vi extends dl {
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var14 = 0;
         param8 = -param10;
         L0: while (true) {
@@ -1057,7 +1070,7 @@ final class vi extends dl {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -1072,7 +1085,7 @@ final class vi extends dl {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -1093,12 +1106,12 @@ final class vi extends dl {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((vi) this).field_v;
-          param1 = param1 + ((vi) this).field_t;
+          param0 = param0 + this.field_v;
+          param1 = param1 + this.field_t;
           var4 = param0 + param1 * kh.field_l;
           var5 = 0;
-          var6 = ((vi) this).field_u;
-          var7 = ((vi) this).field_l;
+          var6 = this.field_u;
+          var7 = this.field_l;
           var8 = kh.field_l - var7;
           var9 = 0;
           if (param1 >= kh.field_b) {
@@ -1150,7 +1163,7 @@ final class vi extends dl {
             break L4;
           } else {
             if (var6 > 0) {
-              vi.f(kh.field_i, ((vi) this).field_w, 0, var5, var4, var7, var6, var8, var9, param2);
+              vi.f(kh.field_i, this.field_w, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;

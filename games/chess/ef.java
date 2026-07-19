@@ -19,28 +19,34 @@ final class ef extends o {
             if (wf.field_R != null) {
                 fk.field_q.a(false, wf.field_R, 59);
             }
-            int var2_int = 0;
+            int var2_int = 0 % ((-35 - param1) / 36);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ef.B(" + (param0 != null ? "{...}" : "null") + ',' + -102 + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "ef.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     ef(int param0) {
-        ((ef) this).field_k = param0;
+        this.field_k = param0;
     }
 
     public static void a(int param0) {
+        pf var2 = null;
         field_n = null;
         field_j = null;
-        field_l = null;
-        field_m = null;
+        if (param0 != 27706) {
+          var2 = (pf) null;
+          ef.a((pf) null, -119);
+          field_l = null;
+          field_m = null;
+          return;
+        } else {
+          field_l = null;
+          field_m = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Hide chat";
         field_j = new sa();
         field_n = new jc();

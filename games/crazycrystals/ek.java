@@ -8,6 +8,7 @@ final class ek extends l {
     static ng field_e;
 
     final l a(int param0) {
+        l discarded$6 = null;
         o stackIn_3_0 = null;
         o stackIn_3_1 = null;
         int stackIn_3_2 = 0;
@@ -52,8 +53,8 @@ final class ek extends l {
         gj stackOut_3_3 = null;
         jj.field_b = jj.field_b + 16;
         if (param0 == -2) {
-          if (jj.field_b < 0) {
-            return (l) this;
+          if ((jj.field_b ^ -1) > -1) {
+            return (l) (this);
           } else {
             L0: {
               jj.field_b = 0;
@@ -74,7 +75,7 @@ final class ek extends l {
                 stackIn_12_0 = stackOut_11_0;
                 stackIn_12_1 = stackOut_11_1;
                 stackIn_12_2 = stackOut_11_2;
-                stackIn_12_3 = (Object) (Object) stackOut_11_3;
+                stackIn_12_3 = stackOut_11_3;
                 break L0;
               } else {
                 stackOut_10_0 = null;
@@ -84,16 +85,16 @@ final class ek extends l {
                 stackIn_12_0 = stackOut_10_0;
                 stackIn_12_1 = stackOut_10_1;
                 stackIn_12_2 = stackOut_10_2;
-                stackIn_12_3 = (Object) (Object) stackOut_10_3;
+                stackIn_12_3 = stackOut_10_3;
                 break L0;
               }
             }
-            return (l) (Object) new o(stackIn_12_2, (l) (Object) stackIn_12_3);
+            return (l) ((Object) new o(stackIn_12_2, (l) ((Object) stackIn_12_3)));
           }
         } else {
-          l discarded$6 = ((ek) this).a(-85);
-          if (jj.field_b < 0) {
-            return (l) this;
+          discarded$6 = this.a(-85);
+          if ((jj.field_b ^ -1) > -1) {
+            return (l) (this);
           } else {
             L1: {
               jj.field_b = 0;
@@ -114,7 +115,7 @@ final class ek extends l {
                 stackIn_5_0 = stackOut_4_0;
                 stackIn_5_1 = stackOut_4_1;
                 stackIn_5_2 = stackOut_4_2;
-                stackIn_5_3 = (Object) (Object) stackOut_4_3;
+                stackIn_5_3 = stackOut_4_3;
                 break L1;
               } else {
                 stackOut_3_0 = null;
@@ -124,11 +125,11 @@ final class ek extends l {
                 stackIn_5_0 = stackOut_3_0;
                 stackIn_5_1 = stackOut_3_1;
                 stackIn_5_2 = stackOut_3_2;
-                stackIn_5_3 = (Object) (Object) stackOut_3_3;
+                stackIn_5_3 = stackOut_3_3;
                 break L1;
               }
             }
-            return (l) (Object) new o(stackIn_5_2, (l) (Object) stackIn_5_3);
+            return (l) ((Object) new o(stackIn_5_2, (l) ((Object) stackIn_5_3)));
           }
         }
     }
@@ -137,11 +138,12 @@ final class ek extends l {
     }
 
     final l b(byte param0) {
+        l discarded$0 = null;
         if (param0 != -90) {
-            l discarded$0 = ((ek) this).b((byte) 103);
-            return (l) (Object) new gj();
+            discarded$0 = this.b((byte) 103);
+            return (l) ((Object) new gj());
         }
-        return (l) (Object) new gj();
+        return (l) ((Object) new gj());
     }
 
     public static void b(int param0) {
@@ -155,10 +157,6 @@ final class ek extends l {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new int[]{65344, 16744640, 4227327};
         field_h = new mk();
     }

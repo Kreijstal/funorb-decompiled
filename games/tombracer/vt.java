@@ -17,10 +17,6 @@ final class vt {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "vt.A(";
         field_a = new vna();
     }

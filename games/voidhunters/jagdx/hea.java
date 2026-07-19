@@ -13,6 +13,6 @@ public final class hea {
         if (param1 <= 10) {
             return true;
         }
-        return param0 >= 0 ? true : false;
+        return (param0 ^ -1) <= -1 ? true : false;
     }
 }

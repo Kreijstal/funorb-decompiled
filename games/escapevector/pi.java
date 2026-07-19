@@ -17,7 +17,7 @@ final class pi extends hg {
 
     public static void a(byte param0) {
         field_j = null;
-        int var1 = -26;
+        int var1 = -26 / ((param0 - 26) / 58);
     }
 
     final static boolean a(int param0, String param1, String param2) {
@@ -65,16 +65,16 @@ final class pi extends hg {
               if (param0 < -77) {
                 break L1;
               } else {
-                field_j = null;
+                field_j = (ed) null;
                 break L1;
               }
             }
             L2: {
               L3: {
-                if (0 != param1.indexOf(param2)) {
+                if (0 != (param1.indexOf(param2) ^ -1)) {
                   break L3;
                 } else {
-                  if (0 == param1.indexOf(var3)) {
+                  if (0 == (param1.indexOf(var3) ^ -1)) {
                     stackOut_6_0 = 0;
                     stackIn_7_0 = stackOut_6_0;
                     break L2;
@@ -93,23 +93,23 @@ final class pi extends hg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_0 = (RuntimeException) (var3_ref);
             stackOut_8_1 = new StringBuilder().append("pi.B(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -118,23 +118,23 @@ final class pi extends hg {
             }
           }
           L5: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -142,7 +142,7 @@ final class pi extends hg {
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
         return stackIn_7_0 != 0;
     }

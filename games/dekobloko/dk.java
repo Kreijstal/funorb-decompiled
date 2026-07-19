@@ -46,81 +46,127 @@ final class dk extends java.awt.Canvas {
         f var11 = null;
         ki var12 = null;
         uf var13 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var8 = client.field_A ? 1 : 0;
         try {
           L0: {
             L1: {
-              var13 = de.field_V;
-              var2 = var13.d((byte) -36);
-              if (var2 != 0) {
-                if (var2 == 1) {
-                  var12 = (ki) ((Object) cg.field_c.c((byte) -66));
-                  if (var12 == null) {
-                    si.a(127);
-                    return;
-                  } else {
-                    var12.b((byte) 106);
-                    break L1;
-                  }
+              L2: {
+                var13 = de.field_V;
+                var2 = var13.d((byte) -36);
+                if (var2 != 0) {
+                  break L2;
                 } else {
-                  if (var2 == 2) {
-                    dupTemp$1 = (f) ((Object) rc.field_e.c((byte) -64));
-                    var10 = dupTemp$1;
-                    var3_ref_f = dupTemp$1;
-                    if (var10 == null) {
-                      si.a(115);
-                      return;
+                  var3_ref_int__ = b.h(56);
+                  var9 = var3_ref_int__;
+                  var4 = var9;
+                  var5 = var13;
+                  var6 = ((wl) ((Object) var5)).d((byte) -116);
+                  var7 = 0;
+                  L3: while (true) {
+                    if (var6 <= var7) {
+                      var11 = (f) ((Object) rc.field_e.c((byte) 92));
+                      if (var11 != null) {
+                        var11.field_u = true;
+                        var11.field_t = var3_ref_int__;
+                        var11.b((byte) 112);
+                        if (var8 == 0) {
+                          break L1;
+                        } else {
+                          break L2;
+                        }
+                      } else {
+                        si.a(95);
+                        decompiledRegionSelector0 = 0;
+                        break L0;
+                      }
                     } else {
-                      var10.field_t = b.h(109);
-                      var10.field_u = true;
-                      var10.b((byte) 119);
-                      break L1;
+                      var9[var7] = ((wl) ((Object) var5)).i(7553);
+                      var7++;
+                      if (var8 != 0) {
+                        break L1;
+                      } else {
+                        continue L3;
+                      }
                     }
-                  } else {
-                    qb.a((Throwable) null, 16408, "A1: " + qk.d((byte) 89));
-                    si.a(90);
-                    break L1;
-                  }
-                }
-              } else {
-                var3_ref_int__ = b.h(56);
-                var9 = var3_ref_int__;
-                var4 = var9;
-                var5 = var13;
-                var6 = ((wl) ((Object) var5)).d((byte) -116);
-                var7 = 0;
-                L2: while (true) {
-                  if (var6 <= var7) {
-                    var11 = (f) ((Object) rc.field_e.c((byte) 92));
-                    if (var11 != null) {
-                      var11.field_u = true;
-                      var11.field_t = var3_ref_int__;
-                      var11.b((byte) 112);
-                      break L1;
-                    } else {
-                      si.a(95);
-                      return;
-                    }
-                  } else {
-                    var9[var7] = ((wl) ((Object) var5)).i(7553);
-                    var7++;
-                    continue L2;
                   }
                 }
               }
+              L4: {
+                if ((var2 ^ -1) == -2) {
+                  break L4;
+                } else {
+                  L5: {
+                    if (var2 == 2) {
+                      break L5;
+                    } else {
+                      qb.a((Throwable) null, 16408, "A1: " + qk.d((byte) 89));
+                      si.a(90);
+                      if (var8 == 0) {
+                        break L1;
+                      } else {
+                        break L5;
+                      }
+                    }
+                  }
+                  dupTemp$1 = (f) ((Object) rc.field_e.c((byte) -64));
+                  var10 = dupTemp$1;
+                  var3_ref_f = dupTemp$1;
+                  if (var10 == null) {
+                    si.a(115);
+                    decompiledRegionSelector0 = 1;
+                    break L0;
+                  } else {
+                    var10.field_t = b.h(109);
+                    var10.field_u = true;
+                    var10.b((byte) 119);
+                    if (var8 == 0) {
+                      break L1;
+                    } else {
+                      break L4;
+                    }
+                  }
+                }
+              }
+              var12 = (ki) ((Object) cg.field_c.c((byte) -66));
+              if (var12 == null) {
+                si.a(127);
+                decompiledRegionSelector0 = 2;
+                break L0;
+              } else {
+                var12.b((byte) 106);
+                break L1;
+              }
             }
-            var3 = 1;
+            var3 = 17 % ((-81 - param0) / 35);
+            decompiledRegionSelector0 = 3;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) ((Object) var1), "dk.B(" + 69 + ')');
+          throw dh.a((Throwable) ((Object) var1), "dk.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
     public static void b(int param0) {
+        if (param0 != 16057) {
+            return;
+        }
         field_h = null;
         field_j = null;
         field_b = null;

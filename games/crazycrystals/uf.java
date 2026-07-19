@@ -16,16 +16,16 @@ final class uf {
     static vf field_c;
 
     final int a(boolean param0) {
-        if (!((uf) this).field_j) {
-          if (((uf) this).field_f != 2) {
-            if (~((uf) this).field_g == ~gl.field_i) {
+        if (!this.field_j) {
+          if ((this.field_f ^ -1) != -3) {
+            if ((this.field_g ^ -1L) == (gl.field_i ^ -1L)) {
               return 1;
             } else {
               L0: {
                 if (mh.field_h != 2) {
                   break L0;
                 } else {
-                  if (!m.a((byte) -126, ((uf) this).field_b)) {
+                  if (!m.a((byte) -126, this.field_b)) {
                     break L0;
                   } else {
                     return 1;
@@ -39,12 +39,12 @@ final class uf {
               }
             }
           } else {
-            if (((uf) this).field_a <= 0) {
-              if (~((uf) this).field_g == ~gl.field_i) {
+            if ((this.field_a ^ -1) >= -1) {
+              if ((this.field_g ^ -1L) == (gl.field_i ^ -1L)) {
                 return 1;
               } else {
                 if (mh.field_h == 2) {
-                  if (!m.a((byte) -126, ((uf) this).field_b)) {
+                  if (!m.a((byte) -126, this.field_b)) {
                     if (!param0) {
                       return 56;
                     } else {
@@ -80,26 +80,22 @@ final class uf {
     }
 
     uf(boolean param0) {
-        ((uf) this).field_a = dd.field_b;
-        ((uf) this).field_l = ca.field_m;
+        this.field_a = dd.field_b;
+        this.field_l = ca.field_m;
         if (!param0) {
-            ((uf) this).field_k = null;
+            this.field_k = null;
         } else {
-            ((uf) this).field_k = so.field_f;
+            this.field_k = so.field_f;
         }
-        ((uf) this).field_j = om.field_u;
-        ((uf) this).field_h = fb.field_b;
-        ((uf) this).field_d = na.field_kb;
-        ((uf) this).field_f = lj.field_b;
-        ((uf) this).field_b = md.field_s;
-        ((uf) this).field_g = vf.field_d;
+        this.field_j = om.field_u;
+        this.field_h = fb.field_b;
+        this.field_d = na.field_kb;
+        this.field_f = lj.field_b;
+        this.field_b = md.field_s;
+        this.field_g = vf.field_d;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new boolean[64];
         field_c = new vf();
     }

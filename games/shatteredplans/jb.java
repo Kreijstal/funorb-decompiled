@@ -15,11 +15,19 @@ final class jb {
         field_a = null;
         field_f = null;
         field_e = null;
+        if (param0 <= 20) {
+            return;
+        }
         field_h = null;
     }
 
     final static void a(boolean param0, byte param1) {
         ta.a(param0, 121);
+        if (param1 != -27) {
+            jb.a(11);
+            im.a(true, param0);
+            return;
+        }
         im.a(true, param0);
     }
 
@@ -28,7 +36,7 @@ final class jb {
           return;
         } else {
           if (param0 <= -89) {
-            if (param1 % 10L != 0L) {
+            if ((param1 % 10L ^ -1L) != -1L) {
               he.a(true, param1);
               return;
             } else {
@@ -43,10 +51,6 @@ final class jb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 0;
         field_e = "Expires in <%0> turns";
         field_f = "<%PROJECT_ENERGY> - (<%Resource2>) A <%project_energy> causes devastating flares that destroy <%highlight>half of the fleet</col> in the target <%glossary>system</col>. If the target system has a <%project_metal>, the net will be destroyed instead. Additionally, any <%highlight>fleet moving out of the system is stopped</col>. This project <%highlight>may not be used against an ally</col> and you must control a system with a <%glossary>wormhole</col> link to the target.";

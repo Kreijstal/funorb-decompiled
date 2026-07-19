@@ -14,7 +14,7 @@ final class ih {
                 ih.a(-113);
             }
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ih.B(" + param0 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "ih.B(" + param0 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class ih {
             L2: while (true) {
               L3: {
                 L4: {
-                  if (~param1.field_n >= ~var8) {
+                  if ((param1.field_n ^ -1) >= (var8 ^ -1)) {
                     break L4;
                   } else {
                     var9 = param1.field_A[var8];
@@ -125,7 +125,7 @@ final class ih {
                             var15 = we.field_z[var11] - var12;
                             var16 = hp.field_o[var10] - var13;
                             var17 = hp.field_o[var11] + -var13;
-                            if (var14 * var17 - var16 * var15 < 0) {
+                            if ((var14 * var17 - var16 * var15 ^ -1) > -1) {
                               break L6;
                             } else {
                               if (var19 == 0) {
@@ -150,7 +150,7 @@ final class ih {
                         }
                         L8: {
                           var13 = gi.field_k[var10];
-                          if (var13 != -2147483648) {
+                          if (2147483647 != (var13 ^ -1)) {
                             break L8;
                           } else {
                             if (var19 == 0) {
@@ -162,7 +162,7 @@ final class ih {
                         }
                         L9: {
                           var14 = gi.field_k[var11];
-                          if (var14 != -2147483648) {
+                          if ((var14 ^ -1) != 2147483647) {
                             break L9;
                           } else {
                             if (var19 == 0) {
@@ -203,7 +203,7 @@ final class ih {
                         L11: while (true) {
                           L12: {
                             L13: {
-                              if (var17 >> 4 == 0) {
+                              if (var17 >> -2059551676 == 0) {
                                 break L13;
                               } else {
                                 var16--;
@@ -237,7 +237,7 @@ final class ih {
                                 }
                               }
                             }
-                            stackOut_42_0 = var16 << 4;
+                            stackOut_42_0 = var16 << 827781412;
                             stackOut_42_1 = -var17;
                             stackIn_43_0 = stackOut_42_0;
                             stackIn_43_1 = stackOut_42_1;
@@ -247,7 +247,7 @@ final class ih {
                             var18 = stackIn_43_0 - stackIn_43_1;
                             Sumoblitz.field_G[var18] = var8;
                             rg.field_C[var16] = var17 - -1;
-                            if (param1.field_E <= 0) {
+                            if ((param1.field_E ^ -1) >= -1) {
                               break L15;
                             } else {
                               if (null == param1.field_a) {
@@ -279,7 +279,7 @@ final class ih {
                 if (stackIn_52_0 == -1) {
                   break L16;
                 } else {
-                  field_a = null;
+                  field_a = (mn) null;
                   break L16;
                 }
               }
@@ -294,7 +294,7 @@ final class ih {
                       var8 = 0;
                       var9 = 0;
                       L19: while (true) {
-                        if (~cv.field_G.length >= ~var9) {
+                        if ((cv.field_G.length ^ -1) >= (var9 ^ -1)) {
                           break L18;
                         } else {
                           var10 = cv.field_G[var9];
@@ -324,23 +324,23 @@ final class ih {
           decompiledCaughtException = decompiledCaughtParameter0;
           L20: {
             var5 = decompiledCaughtException;
-            stackOut_66_0 = (RuntimeException) var5;
+            stackOut_66_0 = (RuntimeException) (var5);
             stackOut_66_1 = new StringBuilder().append("ih.A(").append(param0).append(',');
             stackIn_69_0 = stackOut_66_0;
             stackIn_69_1 = stackOut_66_1;
             stackIn_67_0 = stackOut_66_0;
             stackIn_67_1 = stackOut_66_1;
             if (param1 == null) {
-              stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
-              stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
+              stackOut_69_0 = (RuntimeException) ((Object) stackIn_69_0);
+              stackOut_69_1 = (StringBuilder) ((Object) stackIn_69_1);
               stackOut_69_2 = "null";
               stackIn_70_0 = stackOut_69_0;
               stackIn_70_1 = stackOut_69_1;
               stackIn_70_2 = stackOut_69_2;
               break L20;
             } else {
-              stackOut_67_0 = (RuntimeException) (Object) stackIn_67_0;
-              stackOut_67_1 = (StringBuilder) (Object) stackIn_67_1;
+              stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
+              stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
               stackOut_67_2 = "{...}";
               stackIn_70_0 = stackOut_67_0;
               stackIn_70_1 = stackOut_67_1;
@@ -348,7 +348,7 @@ final class ih {
               break L20;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_70_0, stackIn_70_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_70_0), stackIn_70_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -359,15 +359,11 @@ final class ih {
             ki.field_f = wt.field_h[0];
             int var1_int = -21 / ((param0 - -59) / 40);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ih.C(" + param0 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "ih.C(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = false;
         field_b = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
     }

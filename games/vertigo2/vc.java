@@ -16,9 +16,9 @@ final class vc {
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            var1_int = 0;
+            var1_int = param0;
             L1: while (true) {
-              if (var1_int >= 11) {
+              if ((var1_int ^ -1) <= -12) {
                 var1_int = 0;
                 L2: while (true) {
                   if (var1_int >= 10) {
@@ -49,21 +49,24 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "vc.D(" + 0 + ')');
+          throw wn.a((Throwable) ((Object) var1), "vc.D(" + param0 + ')');
         }
     }
 
     final static void c(int param0) {
-        if (hm.field_F != -sq.field_e) {
+        if (hm.field_F != 0 + -sq.field_e) {
             if (-sq.field_e + 250 == hm.field_F) {
             }
         }
-        int var1 = -30;
+        int var1 = 60 / ((param0 - -6) / 39);
         hm.field_F = hm.field_F + 1;
     }
 
     public static void b(int param0) {
         field_b = null;
+        if (param0 != 0) {
+            return;
+        }
         field_a = null;
     }
 
@@ -81,6 +84,7 @@ final class vc {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_8_0 = 0;
         int stackOut_5_0 = 0;
@@ -101,6 +105,7 @@ final class vc {
                 var2_int = 35 / ((-66 - param0) / 41);
                 stackOut_8_0 = 0;
                 stackIn_9_0 = stackOut_8_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 L2: {
@@ -113,7 +118,8 @@ final class vc {
                     } else {
                       stackOut_5_0 = 1;
                       stackIn_6_0 = stackOut_5_0;
-                      return stackIn_6_0 != 0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   }
                 }
@@ -126,23 +132,23 @@ final class vc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_0 = (RuntimeException) (var2);
             stackOut_10_1 = new StringBuilder().append("vc.F(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -150,9 +156,13 @@ final class vc {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
-        return stackIn_9_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0 != 0;
+        } else {
+          return stackIn_9_0 != 0;
+        }
     }
 
     final static void a(byte param0) {
@@ -164,83 +174,91 @@ final class vc {
         var2 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            var1_ref = (bs) (Object) mk.field_J.a((byte) 100);
+            var1_ref = (bs) ((Object) mk.field_J.a((byte) 100));
             L1: while (true) {
               if (var1_ref == null) {
-                var1_ref2 = (uh) (Object) nr.field_p.a((byte) 100);
-                L2: while (true) {
+                L2: {
+                  if (param0 == -59) {
+                    break L2;
+                  } else {
+                    field_a = (String) null;
+                    break L2;
+                  }
+                }
+                var1_ref2 = (uh) ((Object) nr.field_p.a((byte) 100));
+                L3: while (true) {
                   if (var1_ref2 == null) {
-                    var1_ref = (bs) (Object) kq.field_Rb.a((byte) 100);
-                    L3: while (true) {
+                    var1_ref = (bs) ((Object) kq.field_Rb.a((byte) 100));
+                    L4: while (true) {
                       if (var1_ref == null) {
                         break L0;
                       } else {
-                        if (var1_ref.field_Ub > 0) {
-                          L4: {
+                        if (-1 > (var1_ref.field_Ub ^ -1)) {
+                          L5: {
                             var1_ref.field_Ub = var1_ref.field_Ub - 1;
                             if (0 != var1_ref.field_Ub) {
-                              break L4;
+                              break L5;
                             } else {
                               var1_ref.field_Hb = 0;
-                              if (var1_ref.k(15)) {
+                              if (var1_ref.k(param0 ^ -54)) {
                                 var1_ref.c(2);
-                                break L4;
+                                break L5;
                               } else {
-                                break L4;
+                                break L5;
                               }
                             }
                           }
-                          var1_ref = (bs) (Object) kq.field_Rb.b(38);
-                          continue L3;
+                          var1_ref = (bs) ((Object) kq.field_Rb.b(38));
+                          continue L4;
                         } else {
-                          var1_ref = (bs) (Object) kq.field_Rb.b(38);
-                          continue L3;
+                          var1_ref = (bs) ((Object) kq.field_Rb.b(38));
+                          continue L4;
                         }
                       }
                     }
                   } else {
-                    L5: {
-                      if (var1_ref2.field_ic > 0) {
+                    L6: {
+                      if (-1 > (var1_ref2.field_ic ^ -1)) {
                         var1_ref2.field_ic = var1_ref2.field_ic - 1;
                         if (0 == var1_ref2.field_ic) {
                           var1_ref2.field_Lb = 0;
-                          if (var1_ref2.k(4043)) {
+                          if (var1_ref2.k(param0 ^ -4082)) {
                             var1_ref2.c(2);
-                            break L5;
+                            break L6;
                           } else {
-                            break L5;
+                            break L6;
                           }
                         } else {
-                          break L5;
+                          break L6;
                         }
                       } else {
-                        break L5;
+                        break L6;
                       }
                     }
-                    var1_ref2 = (uh) (Object) nr.field_p.b(47);
-                    continue L2;
+                    var1_ref2 = (uh) ((Object) nr.field_p.b(47));
+                    continue L3;
                   }
                 }
               } else {
-                L6: {
-                  if (var1_ref.field_Ub > 0) {
+                L7: {
+                  if ((var1_ref.field_Ub ^ -1) < -1) {
                     var1_ref.field_Ub = var1_ref.field_Ub - 1;
-                    if (var1_ref.field_Ub == 0) {
+                    if (-1 == (var1_ref.field_Ub ^ -1)) {
                       var1_ref.field_Hb = 0;
                       if (var1_ref.k(15)) {
-                        var1_ref.c(2);
-                        break L6;
+                        var1_ref.c(param0 + 61);
+                        break L7;
                       } else {
-                        break L6;
+                        break L7;
                       }
                     } else {
-                      break L6;
+                      break L7;
                     }
                   } else {
-                    break L6;
+                    break L7;
                   }
                 }
-                var1_ref = (bs) (Object) mk.field_J.b(103);
+                var1_ref = (bs) ((Object) mk.field_J.b(103));
                 continue L1;
               }
             }
@@ -248,87 +266,94 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "vc.E(" + -59 + ')');
+          throw wn.a((Throwable) ((Object) var1), "vc.E(" + param0 + ')');
         }
     }
 
     final synchronized static byte[] a(int param0, byte param1) {
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;
-        L0: {
-          if (param0 != 100) {
-            break L0;
-          } else {
-            if (so.field_B <= 0) {
+        if (param1 == -69) {
+          L0: {
+            if (param0 != 100) {
               break L0;
             } else {
-              int fieldTemp$6 = so.field_B - 1;
-              so.field_B = so.field_B - 1;
-              var2_ref_byte__ = ac.field_O[fieldTemp$6];
-              ac.field_O[so.field_B] = null;
-              return var2_ref_byte__;
-            }
-          }
-        }
-        L1: {
-          if (param0 != 5000) {
-            break L1;
-          } else {
-            if (ie.field_Kb > 0) {
-              int fieldTemp$7 = ie.field_Kb - 1;
-              ie.field_Kb = ie.field_Kb - 1;
-              var2_ref_byte__ = bh.field_g[fieldTemp$7];
-              bh.field_g[ie.field_Kb] = null;
-              return var2_ref_byte__;
-            } else {
-              break L1;
-            }
-          }
-        }
-        L2: {
-          if (param0 != 30000) {
-            break L2;
-          } else {
-            if (ff.field_b > 0) {
-              int fieldTemp$8 = ff.field_b - 1;
-              ff.field_b = ff.field_b - 1;
-              var2_ref_byte__ = uo.field_f[fieldTemp$8];
-              uo.field_f[ff.field_b] = null;
-              return var2_ref_byte__;
-            } else {
-              break L2;
-            }
-          }
-        }
-        L3: {
-          if (df.field_j == null) {
-            break L3;
-          } else {
-            var2 = 0;
-            L4: while (true) {
-              if (ue.field_M.length <= var2) {
-                break L3;
+              if (-1 <= (so.field_B ^ -1)) {
+                break L0;
               } else {
-                if (param0 == ue.field_M[var2]) {
-                  if (mi.field_w[var2] > 0) {
-                    mi.field_w[var2] = mi.field_w[var2] - 1;
-                    var3 = df.field_j[var2][mi.field_w[var2] - 1];
-                    df.field_j[var2][mi.field_w[var2]] = null;
-                    return var3;
+                fieldTemp$3 = so.field_B - 1;
+                so.field_B = so.field_B - 1;
+                var2_ref_byte__ = ac.field_O[fieldTemp$3];
+                ac.field_O[so.field_B] = null;
+                return var2_ref_byte__;
+              }
+            }
+          }
+          L1: {
+            if (param0 != 5000) {
+              break L1;
+            } else {
+              if ((ie.field_Kb ^ -1) < -1) {
+                fieldTemp$4 = ie.field_Kb - 1;
+                ie.field_Kb = ie.field_Kb - 1;
+                var2_ref_byte__ = bh.field_g[fieldTemp$4];
+                bh.field_g[ie.field_Kb] = null;
+                return var2_ref_byte__;
+              } else {
+                break L1;
+              }
+            }
+          }
+          L2: {
+            if (-30001 != (param0 ^ -1)) {
+              break L2;
+            } else {
+              if ((ff.field_b ^ -1) < -1) {
+                fieldTemp$5 = ff.field_b - 1;
+                ff.field_b = ff.field_b - 1;
+                var2_ref_byte__ = uo.field_f[fieldTemp$5];
+                uo.field_f[ff.field_b] = null;
+                return var2_ref_byte__;
+              } else {
+                break L2;
+              }
+            }
+          }
+          L3: {
+            if (df.field_j == null) {
+              break L3;
+            } else {
+              var2 = 0;
+              L4: while (true) {
+                if (ue.field_M.length <= var2) {
+                  break L3;
+                } else {
+                  if (param0 == ue.field_M[var2]) {
+                    if (-1 > (mi.field_w[var2] ^ -1)) {
+                      mi.field_w[var2] = mi.field_w[var2] - 1;
+                      var3 = df.field_j[var2][mi.field_w[var2] - 1];
+                      df.field_j[var2][mi.field_w[var2]] = null;
+                      return var3;
+                    } else {
+                      var2++;
+                      continue L4;
+                    }
                   } else {
                     var2++;
                     continue L4;
                   }
-                } else {
-                  var2++;
-                  continue L4;
                 }
               }
             }
           }
+          return new byte[param0];
+        } else {
+          return (byte[]) null;
         }
-        return new byte[param0];
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7, int param8, int param9) {
@@ -366,7 +391,7 @@ final class vc {
           L0: {
             L1: {
               L2: {
-                var10_int = -20;
+                var10_int = -83 / ((param7 - -84) / 37);
                 if (param8 != param1) {
                   break L2;
                 } else {
@@ -402,19 +427,19 @@ final class vc {
               var24 = -var14 + var16;
               var25 = 128;
               L3: while (true) {
-                if (var25 > 4096) {
+                if (-4097 > (var25 ^ -1)) {
                   break L1;
                 } else {
-                  var26 = var25 * var25 >> 12;
-                  var27 = var25 * var26 >> 12;
+                  var26 = var25 * var25 >> -1227073876;
+                  var27 = var25 * var26 >> 329510252;
                   var28 = var19 * var27;
                   var29 = var20 * var27;
                   var30 = var21 * var26;
                   var31 = var26 * var22;
                   var32 = var23 * var25;
                   var33 = var25 * var24;
-                  var34 = (var32 + var30 + var28 >> 12) + param8;
-                  var35 = (var29 + (var31 - -var33) >> 12) + param4;
+                  var34 = (var32 + var30 + var28 >> -1393125844) + param8;
+                  var35 = (var29 + (var31 - -var33) >> -2037429716) + param4;
                   uj.a(var11, var34, var35, true, var12, param9);
                   var11 = var34;
                   var12 = var35;
@@ -428,15 +453,11 @@ final class vc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var10, "vc.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + 96 + ',' + param8 + ',' + param9 + ')');
+          throw wn.a((Throwable) ((Object) var10), "vc.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Waiting for fonts";
     }
 }

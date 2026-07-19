@@ -20,7 +20,14 @@ abstract class ki extends ah {
         gk.field_a = true;
         ie.field_r = true;
         na.field_d.e((byte) 67);
-        we.a(false, 12757, ak.field_b);
+        if (param0 < 57) {
+          ki.a(117, 22, -7);
+          we.a(false, 12757, ak.field_b);
+          return;
+        } else {
+          we.a(false, 12757, ak.field_b);
+          return;
+        }
     }
 
     abstract byte[] g(int param0);
@@ -48,14 +55,10 @@ abstract class ki extends ah {
     }
 
     ki() {
-        ((ki) this).field_w = true;
+        this.field_w = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Unfortunately you are not eligible to create an account.";
         field_v = 0;
         field_z = new int[16384];

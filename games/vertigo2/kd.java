@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 abstract class kd extends og {
     static String field_B;
     String field_u;
@@ -23,6 +21,9 @@ abstract class kd extends og {
     static String field_m;
 
     private final void g(byte param0) {
+        if (param0 <= 30) {
+            this.o(64);
+        }
         wi.field_h[1] = true;
     }
 
@@ -78,7 +79,7 @@ abstract class kd extends og {
               } else {
                 var6 = fk.a((byte) 87);
                 var4 = var6.getSize();
-                t.field_m.a(~param1, var4.height, var4.width);
+                t.field_m.a(param1 ^ -1, var4.height, var4.width);
                 break L1;
               }
             }
@@ -114,13 +115,13 @@ abstract class kd extends og {
           } else {
             L5: {
               var3 = 1200 * el.b(true);
-              if (((kd) this).field_t) {
+              if (this.field_t) {
                 break L5;
               } else {
                 if (jq.a((byte) 29) <= var3) {
                   break L4;
                 } else {
-                  if (~hb.b((byte) -122) < ~var3) {
+                  if ((hb.b((byte) -122) ^ -1) < (var3 ^ -1)) {
                     break L5;
                   } else {
                     break L4;
@@ -128,7 +129,7 @@ abstract class kd extends og {
                 }
               }
             }
-            ((kd) this).field_t = false;
+            this.field_t = false;
             rm.b((byte) 85);
             wp.a(param1 + 16);
             oq.a((byte) 102, ml.field_A, 2);
@@ -148,7 +149,7 @@ abstract class kd extends og {
         }
         L7: {
           L8: {
-            if (tr.field_f == -1) {
+            if (0 == (tr.field_f ^ -1)) {
               break L8;
             } else {
               if (0 != tr.field_f) {
@@ -159,7 +160,7 @@ abstract class kd extends og {
             }
           }
           L9: {
-            if (tr.field_f != -1) {
+            if (0 != (tr.field_f ^ -1)) {
               stackOut_23_0 = 0;
               stackIn_24_0 = stackOut_23_0;
               break L9;
@@ -175,7 +176,7 @@ abstract class kd extends og {
             if (var3 == 0) {
               break L10;
             } else {
-              if (tr.field_f == 0) {
+              if ((tr.field_f ^ -1) == -1) {
                 if (11 != hn.field_w) {
                   break L10;
                 } else {
@@ -194,7 +195,7 @@ abstract class kd extends og {
           if (-1 == tr.field_f) {
             break L7;
           } else {
-            if (tr.field_f != 0) {
+            if (-1 != (tr.field_f ^ -1)) {
               aj.field_j = 15000L + gk.a(90);
               break L7;
             } else {
@@ -210,19 +211,19 @@ abstract class kd extends og {
               break L11;
             } else {
               if (10 <= qc.field_A) {
-                if (hn.field_w >= 10) {
+                if ((hn.field_w ^ -1) <= -11) {
                   L12: {
                     wp.a(10);
                     if (3 != tr.field_f) {
-                      if (tr.field_f == 4) {
+                      if ((tr.field_f ^ -1) == -5) {
                         oq.a((byte) 102, ec.field_E, 256);
                         break L12;
                       } else {
-                        if (tr.field_f == 2) {
+                        if (-3 == (tr.field_f ^ -1)) {
                           oq.a((byte) 102, tq.field_d, 256);
                           break L12;
                         } else {
-                          if (tr.field_f != 5) {
+                          if ((tr.field_f ^ -1) != -6) {
                             oq.a((byte) 102, om.field_C, 256);
                             break L12;
                           } else {
@@ -242,25 +243,25 @@ abstract class kd extends og {
                   break L11;
                 }
               } else {
-                if (tr.field_f == 3) {
-                  ((kd) this).a(0, "js5crc");
+                if ((tr.field_f ^ -1) == -4) {
+                  this.a(0, "js5crc");
                   break L11;
                 } else {
-                  if (tr.field_f != 4) {
+                  if ((tr.field_f ^ -1) != -5) {
                     if (tr.field_f != 2) {
-                      if (tr.field_f != 5) {
-                        ((kd) this).a(0, "js5connect");
+                      if (-6 != (tr.field_f ^ -1)) {
+                        this.a(0, "js5connect");
                         break L11;
                       } else {
-                        ((kd) this).a(0, "outofdate");
+                        this.a(0, "outofdate");
                         break L11;
                       }
                     } else {
-                      ((kd) this).a(0, "js5connect_full");
+                      this.a(0, "js5connect_full");
                       break L11;
                     }
                   } else {
-                    ((kd) this).a(param1 ^ -6, "js5io");
+                    this.a(param1 ^ -6, "js5io");
                     break L11;
                   }
                 }
@@ -274,7 +275,7 @@ abstract class kd extends og {
               if (-1 == tr.field_f) {
                 break L15;
               } else {
-                if (tr.field_f != 0) {
+                if (-1 != (tr.field_f ^ -1)) {
                   break L14;
                 } else {
                   break L15;
@@ -289,10 +290,10 @@ abstract class kd extends og {
           }
           if (gk.a(98) >= aj.field_j) {
             br.field_R = false;
-            if (tr.field_f == -1) {
+            if ((tr.field_f ^ -1) == 0) {
               break L13;
             } else {
-              if (tr.field_f != 0) {
+              if ((tr.field_f ^ -1) != -1) {
                 tr.field_f = -1;
                 fk.f(-1);
                 break L13;
@@ -317,7 +318,7 @@ abstract class kd extends og {
           }
         }
         L17: {
-          if (qc.field_A != 0) {
+          if (-1 != (qc.field_A ^ -1)) {
             break L17;
           } else {
             if (!sf.a(1)) {
@@ -329,7 +330,7 @@ abstract class kd extends og {
           }
         }
         L18: {
-          if (qc.field_A == 1) {
+          if ((qc.field_A ^ -1) == -2) {
             L19: {
               if (0 == np.field_Lb) {
                 break L19;
@@ -350,7 +351,7 @@ abstract class kd extends og {
           }
         }
         L20: {
-          if (qc.field_A == 2) {
+          if ((qc.field_A ^ -1) == -3) {
             L21: {
               if (null == qc.field_B) {
                 break L21;
@@ -385,7 +386,7 @@ abstract class kd extends og {
           }
         }
         L22: {
-          if (qc.field_A != 3) {
+          if (-4 != (qc.field_A ^ -1)) {
             break L22;
           } else {
             if (!ir.a(-95, la.field_e, ke.field_b, kb.field_b)) {
@@ -414,13 +415,13 @@ abstract class kd extends og {
                     stackIn_102_0 = stackOut_100_0;
                     stackIn_101_0 = stackOut_100_0;
                     if (pb.field_f) {
-                      stackOut_102_0 = (String) (Object) stackIn_102_0;
+                      stackOut_102_0 = (String) ((Object) stackIn_102_0);
                       stackOut_102_1 = 0;
                       stackIn_103_0 = stackOut_102_0;
                       stackIn_103_1 = stackOut_102_1;
                       break L25;
                     } else {
-                      stackOut_101_0 = (String) (Object) stackIn_101_0;
+                      stackOut_101_0 = (String) ((Object) stackIn_101_0);
                       stackOut_101_1 = 1;
                       stackIn_103_0 = stackOut_101_0;
                       stackIn_103_1 = stackOut_101_1;
@@ -428,7 +429,7 @@ abstract class kd extends og {
                     }
                   }
                   L26: {
-                    stackOut_103_0 = (String) (Object) stackIn_103_0;
+                    stackOut_103_0 = (String) ((Object) stackIn_103_0);
                     stackOut_103_1 = stackIn_103_1;
                     stackOut_103_2 = 65536;
                     stackIn_105_0 = stackOut_103_0;
@@ -438,7 +439,7 @@ abstract class kd extends og {
                     stackIn_104_1 = stackOut_103_1;
                     stackIn_104_2 = stackOut_103_2;
                     if (pb.field_f) {
-                      stackOut_105_0 = (String) (Object) stackIn_105_0;
+                      stackOut_105_0 = (String) ((Object) stackIn_105_0);
                       stackOut_105_1 = stackIn_105_1;
                       stackOut_105_2 = stackIn_105_2;
                       stackOut_105_3 = 0;
@@ -448,7 +449,7 @@ abstract class kd extends og {
                       stackIn_106_3 = stackOut_105_3;
                       break L26;
                     } else {
-                      stackOut_104_0 = (String) (Object) stackIn_104_0;
+                      stackOut_104_0 = (String) ((Object) stackIn_104_0);
                       stackOut_104_1 = stackIn_104_1;
                       stackOut_104_2 = stackIn_104_2;
                       stackOut_104_3 = 1;
@@ -483,7 +484,7 @@ abstract class kd extends og {
                 la.field_e = null;
                 ke.field_b = null;
                 kb.field_b = null;
-                tq.a(false, (java.applet.Applet) this);
+                tq.a(false, (java.applet.Applet) (this));
                 di.b((byte) -68);
                 qc.field_A = 10;
                 break L22;
@@ -538,7 +539,7 @@ abstract class kd extends og {
           }
         }
         L34: {
-          if (qc.field_A != 12) {
+          if (-13 != (qc.field_A ^ -1)) {
             break L34;
           } else {
             if (hh.field_c) {
@@ -550,7 +551,7 @@ abstract class kd extends og {
           }
         }
         L35: {
-          if (qc.field_A == 13) {
+          if (-14 == (qc.field_A ^ -1)) {
             L36: {
               var3 = 1;
               if (le.field_d != null) {
@@ -588,7 +589,7 @@ abstract class kd extends og {
           } else {
             if (oh.field_F) {
               Vertigo2.a(ne.field_F, (byte) -35);
-              ((kd) this).a((byte) -57);
+              this.a((byte) -57);
               ap.a(ne.field_F, -8228);
               break L38;
             } else {
@@ -611,13 +612,13 @@ abstract class kd extends og {
             int var4_int = 119 / ((55 - param1) / 45);
             this.a(480, param0, false, param2, 640);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "kd.WA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "kd.WA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void h(int param0) {
         if (param0 != 30624) {
-            field_l = null;
+            field_l = (fi) null;
         }
         wi.field_h[11] = true;
         wi.field_h[13] = true;
@@ -632,13 +633,13 @@ abstract class kd extends og {
             ed var7 = null;
             String var8 = null;
             int var9 = 0;
-            Object var10 = null;
-            Object var11 = null;
+            String var10 = null;
+            String var11 = null;
             Boolean var12 = null;
             Throwable decompiledCaughtException = null;
             var9 = Vertigo2.field_L ? 1 : 0;
             var4 = qb.a(np.field_Lb, uo.field_h, param2, 10000);
-            if (var4 == 0) {
+            if (-1 == (var4 ^ -1)) {
               throw new IllegalStateException();
             } else {
               L0: {
@@ -666,9 +667,9 @@ abstract class kd extends og {
                 }
               }
               L2: {
-                if (var4 == 2) {
-                  var5 = sk.a(in.a((byte) 86), -1, ((kd) this).field_v, lf.g(0), hr.h(-121), eb.a(-1), rq.a((byte) 74));
-                  if (var5 == -1) {
+                if (-3 == (var4 ^ -1)) {
+                  var5 = sk.a(in.a((byte) 86), -1, this.field_v, lf.g(0), hr.h(-121), eb.a(-1), rq.a((byte) 74));
+                  if (0 == (var5 ^ -1)) {
                     break L2;
                   } else {
                     dl.a(-14, na.field_m, nk.field_Kb, var5);
@@ -685,7 +686,7 @@ abstract class kd extends og {
                   break L3;
                 } else {
                   L4: {
-                    if (tr.field_f == -1) {
+                    if ((tr.field_f ^ -1) == 0) {
                       break L4;
                     } else {
                       if (tr.field_f == 0) {
@@ -701,7 +702,7 @@ abstract class kd extends og {
                     br.field_R = false;
                     break L3;
                   } else {
-                    var5 = dh.a(24429, ((kd) this).field_r, in.a((byte) 86), hr.h(-91), ((kd) this).field_v, false);
+                    var5 = dh.a(24429, this.field_r, in.a((byte) 86), hr.h(-91), this.field_v, false);
                     if (var5 == -1) {
                       break L3;
                     } else {
@@ -721,7 +722,7 @@ abstract class kd extends og {
                 }
               }
               L5: {
-                if (var4 != 4) {
+                if (-5 != (var4 ^ -1)) {
                   break L5;
                 } else {
                   if (pl.field_i) {
@@ -764,7 +765,7 @@ abstract class kd extends og {
                 }
               }
               L9: {
-                if (var4 == 8) {
+                if (-9 == (var4 ^ -1)) {
                   lb.a(ob.e((byte) -93), (byte) 80);
                   break L9;
                 } else {
@@ -772,7 +773,7 @@ abstract class kd extends og {
                 }
               }
               L10: {
-                if (var4 != 9) {
+                if (-10 != (var4 ^ -1)) {
                   break L10;
                 } else {
                   gm.a(ob.e((byte) -103), (byte) -126);
@@ -780,7 +781,7 @@ abstract class kd extends og {
                 }
               }
               L11: {
-                if (var4 == 10) {
+                if ((var4 ^ -1) == -11) {
                   uh.field_Wb.j(17, 127);
                   break L11;
                 } else {
@@ -788,7 +789,7 @@ abstract class kd extends og {
                 }
               }
               L12: {
-                if (var4 == 11) {
+                if (-12 == (var4 ^ -1)) {
                   pd.a(ob.e((byte) -95), 1000000);
                   break L12;
                 } else {
@@ -796,7 +797,7 @@ abstract class kd extends og {
                 }
               }
               L13: {
-                if (var4 == 12) {
+                if (-13 == (var4 ^ -1)) {
                   gg.a(qh.d(0), true, ob.e((byte) 68));
                   break L13;
                 } else {
@@ -813,7 +814,7 @@ abstract class kd extends og {
                         if (null != ja.field_d) {
                           break L16;
                         } else {
-                          ja.field_d = new qb(gi.field_s, new java.net.URL(((kd) this).getCodeBase(), "countrylist.ws"), 5000);
+                          ja.field_d = new qb(gi.field_s, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
                           break L16;
                         }
                       }
@@ -828,7 +829,7 @@ abstract class kd extends og {
                               om.a(var8, (byte) -125);
                               break L18;
                             } else {
-                              var10 = null;
+                              var10 = (String) null;
                               om.a((String) null, (byte) 120);
                               break L18;
                             }
@@ -843,8 +844,8 @@ abstract class kd extends og {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     L19: {
                       var6 = (Exception) (Object) decompiledCaughtException;
-                      ke.a((Throwable) (Object) var6, "S1", 0);
-                      var11 = null;
+                      ke.a((Throwable) ((Object) var6), "S1", 0);
+                      var11 = (String) null;
                       om.a((String) null, (byte) -39);
                       ja.field_d = null;
                       break L19;
@@ -854,15 +855,15 @@ abstract class kd extends og {
                 }
               }
               L20: {
-                if (var4 == 15) {
+                if (-16 == (var4 ^ -1)) {
                   hn.field_w = 10;
                   break L20;
                 } else {
                   break L20;
                 }
               }
-              if (var4 != 16) {
-                if (var4 == 17) {
+              if ((var4 ^ -1) != -17) {
+                if (-18 == (var4 ^ -1)) {
                   return 2;
                 } else {
                   return 0;
@@ -879,6 +880,8 @@ abstract class kd extends og {
     }
 
     final void m(int param0) {
+        int discarded$65 = 0;
+        int discarded$66 = 0;
         int var3 = 0;
         Object stackIn_11_0 = null;
         int stackIn_11_1 = 0;
@@ -906,7 +909,7 @@ abstract class kd extends og {
           if (param0 <= -72) {
             break L0;
           } else {
-            ((kd) this).field_o = 1;
+            this.field_o = 1;
             break L0;
           }
         }
@@ -944,7 +947,7 @@ abstract class kd extends og {
                 break L2;
               }
             }
-            int discarded$65 = this.a(stackIn_13_1 != 0, (byte) stackIn_13_2, stackIn_13_3 != 0);
+            discarded$65 = this.a(stackIn_13_1 != 0, (byte) stackIn_13_2, stackIn_13_3 != 0);
             break L1;
           } else {
             if (10 <= qc.field_A) {
@@ -953,7 +956,7 @@ abstract class kd extends og {
                   iq.a((byte) -80, uo.field_h);
                   break L1;
                 } else {
-                  int discarded$66 = this.a(false, (byte) 116, false);
+                  discarded$66 = this.a(false, (byte) 116, false);
                   break L1;
                 }
               } else {
@@ -1001,11 +1004,11 @@ abstract class kd extends og {
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         var10.dispose();
-        ((kd) this).setBackground(java.awt.Color.black);
-        np.field_Lb = ((kd) this).field_A;
+        this.setBackground(java.awt.Color.black);
+        np.field_Lb = this.field_A;
         li.a(true, np.field_Lb);
-        f.a(((kd) this).field_y, ((kd) this).field_w, 5000, gi.field_s, np.field_Lb, ((kd) this).field_s, ((kd) this).field_p, param7, ((kd) this).field_n, ((kd) this).field_o, param4, ((kd) this).field_u, 5000, 6);
-        vi.a(np.field_Lb, ((kd) this).field_s, ((kd) this).field_p, ((kd) this).field_u, ((kd) this).field_o, param7, gi.field_s, ((kd) this).field_w, (byte) 112);
+        f.a(this.field_y, this.field_w, 5000, gi.field_s, np.field_Lb, this.field_s, this.field_p, param7, this.field_n, this.field_o, param4, this.field_u, 5000, 6);
+        vi.a(np.field_Lb, this.field_s, this.field_p, this.field_u, this.field_o, param7, gi.field_s, this.field_w, (byte) 112);
         mq.c(1);
         th.field_g = nb.i(0);
         ap.a(ne.field_F, -8228);
@@ -1049,8 +1052,8 @@ abstract class kd extends og {
                       g.b(false);
                       break L1;
                     } else {
-                      if (var2 != 2) {
-                        if (var2 == 3) {
+                      if ((var2 ^ -1) != -3) {
+                        if ((var2 ^ -1) == -4) {
                           p.a((byte) -118);
                           break L1;
                         } else {
@@ -1064,7 +1067,7 @@ abstract class kd extends og {
                             } else {
                               if (var2 != 6) {
                                 if (7 != var2) {
-                                  if (var2 != 8) {
+                                  if ((var2 ^ -1) != -9) {
                                     if (var2 == 16) {
                                       hk.g(3);
                                       break L1;
@@ -1075,7 +1078,7 @@ abstract class kd extends og {
                                         } else {
                                           if (var2 != 12) {
                                             if (var2 != 13) {
-                                              if (var2 != 17) {
+                                              if ((var2 ^ -1) != -18) {
                                                 if (var2 != 18) {
                                                   ke.a((Throwable) null, "MGS1: " + or.a(115), 0);
                                                   rm.b((byte) 127);
@@ -1113,7 +1116,7 @@ abstract class kd extends og {
                                       break L1;
                                     }
                                   } else {
-                                    gp.a(gi.field_s, -121, (ed) (Object) id.field_f, ca.field_b);
+                                    gp.a(gi.field_s, -121, id.field_f, ca.field_b);
                                     break L1;
                                   }
                                 } else {
@@ -1155,20 +1158,22 @@ abstract class kd extends og {
         String var7 = null;
         String var8 = null;
         String var9 = null;
-        Object var10 = null;
+        String var10 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        int decompiledRegionSelector0 = 0;
+        int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
         Object stackOut_2_0 = null;
         Object stackOut_3_0 = null;
@@ -1177,147 +1182,172 @@ abstract class kd extends og {
         Object stackOut_4_0 = null;
         Object stackOut_5_0 = null;
         int stackOut_5_1 = 0;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
         RuntimeException stackOut_24_0 = null;
         StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
         try {
-          try {
-            L0: {
-              if (((kd) this).c(-83)) {
-                L1: {
+          L0: {
+            try {
+              L1: {
+                if (this.c(-83)) {
                   L2: {
-                    ((kd) this).field_u = ((kd) this).getCodeBase().getHost();
-                    var6_ref2 = ((kd) this).field_u.toLowerCase();
-                    stackOut_2_0 = this;
-                    stackIn_5_0 = stackOut_2_0;
-                    stackIn_3_0 = stackOut_2_0;
-                    if (var6_ref2.equals((Object) (Object) "jagex.com")) {
-                      break L2;
-                    } else {
-                      stackOut_3_0 = this;
-                      stackIn_6_0 = stackOut_3_0;
-                      stackIn_4_0 = stackOut_3_0;
-                      if (!var6_ref2.endsWith(".jagex.com")) {
-                        stackOut_6_0 = this;
-                        stackOut_6_1 = 0;
-                        stackIn_7_0 = stackOut_6_0;
-                        stackIn_7_1 = stackOut_6_1;
-                        break L1;
+                    L3: {
+                      this.field_u = this.getCodeBase().getHost();
+                      var6_ref2 = this.field_u.toLowerCase();
+                      stackOut_2_0 = this;
+                      stackIn_5_0 = stackOut_2_0;
+                      stackIn_3_0 = stackOut_2_0;
+                      if (var6_ref2.equals("jagex.com")) {
+                        break L3;
                       } else {
-                        stackOut_4_0 = this;
-                        stackIn_5_0 = stackOut_4_0;
-                        break L2;
+                        stackOut_3_0 = this;
+                        stackIn_6_0 = stackOut_3_0;
+                        stackIn_4_0 = stackOut_3_0;
+                        if (!var6_ref2.endsWith(".jagex.com")) {
+                          stackOut_6_0 = this;
+                          stackOut_6_1 = 0;
+                          stackIn_7_0 = stackOut_6_0;
+                          stackIn_7_1 = stackOut_6_1;
+                          break L2;
+                        } else {
+                          stackOut_4_0 = this;
+                          stackIn_5_0 = stackOut_4_0;
+                          break L3;
+                        }
                       }
                     }
+                    stackOut_5_0 = this;
+                    stackOut_5_1 = 1;
+                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_1 = stackOut_5_1;
+                    break L2;
                   }
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
+                  L4: {
+                    ((kd) (this)).field_r = stackIn_7_1 != 0;
+                    this.field_p = Integer.parseInt(this.getParameter("gameport1"));
+                    this.field_s = Integer.parseInt(this.getParameter("gameport2"));
+                    var7 = this.getParameter("servernum");
+                    if (var7 != null) {
+                      this.field_o = Integer.parseInt(var7);
+                      break L4;
+                    } else {
+                      break L4;
+                    }
+                  }
+                  L5: {
+                    this.field_w = Integer.parseInt(this.getParameter("gamecrc"));
+                    this.field_y = Long.parseLong(this.getParameter("instanceid"));
+                    this.field_n = this.getParameter("member").equals("yes");
+                    if (!param2) {
+                      break L5;
+                    } else {
+                      field_B = (String) null;
+                      break L5;
+                    }
+                  }
+                  L6: {
+                    var8 = this.getParameter("lang");
+                    if (var8 != null) {
+                      this.field_A = Integer.parseInt(var8);
+                      break L6;
+                    } else {
+                      break L6;
+                    }
+                  }
+                  L7: {
+                    if (-6 < (this.field_A ^ -1)) {
+                      break L7;
+                    } else {
+                      this.field_A = 0;
+                      break L7;
+                    }
+                  }
+                  L8: {
+                    var9 = this.getParameter("affid");
+                    if (var9 != null) {
+                      this.field_v = Integer.parseInt(var9);
+                      break L8;
+                    } else {
+                      break L8;
+                    }
+                  }
+                  fo.field_d = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+                  this.a(32, 77, param1, this.field_w, param0, param4, param3);
+                  decompiledRegionSelector0 = 1;
+                  break L1;
+                } else {
+                  decompiledRegionSelector0 = 0;
                   break L1;
                 }
-                L3: {
-                  ((kd) this).field_r = stackIn_7_1 != 0;
-                  ((kd) this).field_p = Integer.parseInt(((kd) this).getParameter("gameport1"));
-                  ((kd) this).field_s = Integer.parseInt(((kd) this).getParameter("gameport2"));
-                  var7 = ((kd) this).getParameter("servernum");
-                  if (var7 != null) {
-                    ((kd) this).field_o = Integer.parseInt(var7);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  ((kd) this).field_w = Integer.parseInt(((kd) this).getParameter("gamecrc"));
-                  ((kd) this).field_y = Long.parseLong(((kd) this).getParameter("instanceid"));
-                  ((kd) this).field_n = ((kd) this).getParameter("member").equals((Object) (Object) "yes");
-                  var8 = ((kd) this).getParameter("lang");
-                  if (var8 != null) {
-                    ((kd) this).field_A = Integer.parseInt(var8);
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                L5: {
-                  if (((kd) this).field_A < 5) {
-                    break L5;
-                  } else {
-                    ((kd) this).field_A = 0;
-                    break L5;
-                  }
-                }
-                L6: {
-                  var9 = ((kd) this).getParameter("affid");
-                  if (var9 != null) {
-                    ((kd) this).field_v = Integer.parseInt(var9);
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                fo.field_d = Boolean.valueOf(((kd) this).getParameter("simplemode")).booleanValue();
-                ((kd) this).a(32, 77, param1, ((kd) this).field_w, 480, 640, param3);
-                break L0;
-              } else {
-                return;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L9: {
+                var6 = (Exception) (Object) decompiledCaughtException;
+                var10 = (String) null;
+                ke.a((Throwable) ((Object) var6), (String) null, 0);
+                this.a(0, "crash");
+                decompiledRegionSelector0 = 1;
+                break L9;
               }
             }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            L7: {
-              var6 = (Exception) (Object) decompiledCaughtException;
-              var10 = null;
-              ke.a((Throwable) (Object) var6, (String) null, 0);
-              ((kd) this).a(0, "crash");
-              break L7;
+            if (decompiledRegionSelector0 == 0) {
+              decompiledRegionSelector1 = 0;
+              break L0;
+            } else {
+              decompiledRegionSelector1 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L8: {
+          L10: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var6_ref;
-            stackOut_22_1 = new StringBuilder().append("kd.EB(").append(480).append(',').append(param1).append(',').append(false).append(',');
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_24_0 = (RuntimeException) (var6_ref);
+            stackOut_24_1 = new StringBuilder().append("kd.EB(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
             if (param3 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              break L8;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L10;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
-              break L8;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L10;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + 640 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector1 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     private final void i(int param0) {
         int var2 = id.field_f.h(-11);
         int var3 = (1 & var2) != 0 ? 1 : 0;
-        int var4 = -1 + ca.field_b;
+        int var4 = param0 + ca.field_b;
         byte[] var5 = new byte[var4];
         id.field_f.a((byte) 82, var4, var5, 0);
-        hc.a(in.a(0, var5), 16011, var3 != 0, ob.e((byte) 81));
+        hc.a(in.a(0, var5), param0 + 16012, var3 != 0, ob.e((byte) 81));
     }
 
     final int h(byte param0) {
@@ -1336,7 +1366,7 @@ abstract class kd extends og {
             if (var2 == 0) {
               break L2;
             } else {
-              if (var2 == 1) {
+              if ((var2 ^ -1) == -2) {
                 break L2;
               } else {
                 break L1;
@@ -1402,12 +1432,16 @@ abstract class kd extends og {
     }
 
     private final void f(byte param0) {
+        int discarded$0 = 0;
         String var2 = tc.a(127);
         rp.a(ob.e((byte) 77), -2112, var2);
+        if (param0 >= -104) {
+            discarded$0 = this.h((byte) 8);
+        }
     }
 
     private final void n(int param0) {
-        wi.field_h[6] = true;
+        wi.field_h[param0] = true;
     }
 
     protected kd() {
@@ -1417,8 +1451,11 @@ abstract class kd extends og {
         wi.field_h[16] = true;
         wi.field_h[17] = true;
         wi.field_h[7] = true;
-        wi.field_h[8] = true;
+        wi.field_h[8] = param0;
         wi.field_h[3] = true;
+        if (param1 != 2594) {
+            this.field_t = true;
+        }
         wi.field_h[0] = true;
         wi.field_h[18] = true;
     }
@@ -1429,60 +1466,73 @@ abstract class kd extends og {
         int var2 = 0;
         int var3 = 0;
         oc var4 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_19_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_21_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_15_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_17_0 = 0;
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            var4 = (oc) (Object) mg.field_N.a((byte) 100);
+            L1: {
+              if (param0 == 7) {
+                break L1;
+              } else {
+                kd.a(false);
+                break L1;
+              }
+            }
+            var4 = (oc) ((Object) mg.field_N.a((byte) 100));
             var1 = var4;
             if (var1 == null) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              stackOut_5_0 = 0;
+              stackIn_6_0 = stackOut_5_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               var2 = 0;
-              L1: while (true) {
+              L2: while (true) {
                 if (var2 >= var1.field_n) {
-                  stackOut_18_0 = 1;
-                  stackIn_19_0 = stackOut_18_0;
+                  stackOut_20_0 = 1;
+                  stackIn_21_0 = stackOut_20_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  L2: {
-                    if (var4.field_t[var2] == null) {
-                      break L2;
-                    } else {
-                      if (var4.field_t[var2].field_b == 0) {
-                        stackOut_10_0 = 0;
-                        stackIn_11_0 = stackOut_10_0;
-                        return stackIn_11_0 != 0;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
                   L3: {
-                    if (null == var4.field_w[var2]) {
+                    if (var4.field_t[var2] == null) {
                       break L3;
                     } else {
-                      if (0 == var4.field_w[var2].field_b) {
-                        stackOut_15_0 = 0;
-                        stackIn_16_0 = stackOut_15_0;
-                        return stackIn_16_0 != 0;
+                      if (-1 == (var4.field_t[var2].field_b ^ -1)) {
+                        stackOut_12_0 = 0;
+                        stackIn_13_0 = stackOut_12_0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       } else {
                         break L3;
                       }
                     }
                   }
+                  L4: {
+                    if (null == var4.field_w[var2]) {
+                      break L4;
+                    } else {
+                      if (0 == var4.field_w[var2].field_b) {
+                        stackOut_17_0 = 0;
+                        stackIn_18_0 = stackOut_17_0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
+                      } else {
+                        break L4;
+                      }
+                    }
+                  }
                   var2++;
-                  continue L1;
+                  continue L2;
                 }
               }
             }
@@ -1490,13 +1540,28 @@ abstract class kd extends og {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1_ref, "kd.BB(" + 7 + ')');
+          throw wn.a((Throwable) ((Object) var1_ref), "kd.BB(" + param0 + ')');
         }
-        return stackIn_19_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_13_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_18_0 != 0;
+            } else {
+              return stackIn_21_0 != 0;
+            }
+          }
+        }
     }
 
     private final void i(byte param0) {
         wi.field_h[5] = true;
+        if (param0 > -118) {
+            this.field_v = -21;
+        }
     }
 
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, boolean param4, boolean param5, boolean param6) {
@@ -1514,7 +1579,7 @@ abstract class kd extends og {
             this.i((byte) -123);
         }
         if (param1) {
-            ((kd) this).field_A = -32;
+            this.field_A = -32;
         }
         if (param6) {
             this.n(6);
@@ -1526,35 +1591,47 @@ abstract class kd extends og {
 
     private final void o(int param0) {
         wi.field_h[2] = true;
+        if (param0 != 15000) {
+            kd.a(false);
+        }
     }
 
     final int b(boolean param0, int param1) {
+        int discarded$0 = 0;
         if (param1 < 57) {
-            int discarded$0 = ((kd) this).h((byte) -69);
+            discarded$0 = this.h((byte) -69);
         }
         return this.a(true, (byte) -99, param0);
     }
 
     private final int j(int param0) {
         int var2 = 0;
-        if (((kd) this).field_f) {
+        if (this.field_f) {
           return -1;
         } else {
           if (va.b((byte) -81)) {
             if (!br.field_R) {
-              var2 = dh.a(24429, ((kd) this).field_r, in.a((byte) 86), hr.h(-95), ((kd) this).field_v, true);
-              if (var2 != -1) {
+              var2 = dh.a(24429, this.field_r, in.a((byte) 86), hr.h(-95), this.field_v, true);
+              if (0 != (var2 ^ -1)) {
                 L0: {
                   if (var2 == 0) {
                     break L0;
                   } else {
-                    if (var2 != 1) {
+                    if (-2 != (var2 ^ -1)) {
                       L1: {
                         if (gl.field_k) {
                           break L1;
                         } else {
-                          ((kd) this).a(0, "reconnect");
+                          this.a(0, "reconnect");
                           break L1;
+                        }
+                      }
+                      L2: {
+                        if (param0 <= -48) {
+                          break L2;
+                        } else {
+                          this.field_v = -93;
+                          break L2;
                         }
                       }
                       wp.a(10);
@@ -1567,15 +1644,15 @@ abstract class kd extends og {
                     }
                   }
                 }
-                L2: {
+                L3: {
                   if (11 != hn.field_w) {
-                    break L2;
+                    break L3;
                   } else {
                     if (tr.field_f == 0) {
                       vo.c((byte) 117);
-                      break L2;
+                      break L3;
                     } else {
-                      break L2;
+                      break L3;
                     }
                   }
                 }
@@ -1593,10 +1670,6 @@ abstract class kd extends og {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_B = "Set up new unrated game";
         field_q = "Player Name: ";
         field_m = "<%0> has resigned and left.";

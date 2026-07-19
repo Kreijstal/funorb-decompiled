@@ -19,8 +19,8 @@ final class pi extends wf {
     private int field_w;
 
     final int b() {
-        if (((pi) this).field_v == 0) {
-            if (((pi) this).field_l == 0) {
+        if (this.field_v == 0) {
+            if (this.field_l == 0) {
                 return 0;
             }
         }
@@ -28,19 +28,24 @@ final class pi extends wf {
     }
 
     final int a() {
-        int var1 = ((pi) this).field_y * 3 >> 6;
+        int var1 = this.field_y * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
-        if (((pi) this).field_o == 0) {
-            var1 = var1 - var1 * ((pi) this).field_u / (((ue) (Object) ((pi) this).field_j).field_h.length << 8);
+        if (this.field_o == 0) {
+            var1 = var1 - var1 * this.field_u / (((ue) ((Object) this.field_j)).field_h.length << 8);
         } else {
-            if (((pi) this).field_o >= 0) {
-                var1 = var1 - var1 * ((pi) this).field_m / ((ue) (Object) ((pi) this).field_j).field_h.length;
+            if (this.field_o >= 0) {
+                var1 = var1 - var1 * this.field_m / ((ue) ((Object) this.field_j)).field_h.length;
             }
         }
         return var1 > 255 ? 255 : var1;
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
+        int discarded$8 = 0;
+        int discarded$9 = 0;
         ue var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -49,78 +54,78 @@ final class pi extends wf {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          if (((pi) this).field_v != 0) {
+          if (this.field_v != 0) {
             break L0;
           } else {
-            if (((pi) this).field_l != 0) {
+            if (this.field_l != 0) {
               break L0;
             } else {
-              ((pi) this).a(param2);
+              this.a(param2);
               return;
             }
           }
         }
         L1: {
-          var4 = (ue) (Object) ((pi) this).field_j;
-          var5 = ((pi) this).field_m << 8;
-          var6 = ((pi) this).field_n << 8;
+          var4 = (ue) ((Object) this.field_j);
+          var5 = this.field_m << 8;
+          var6 = this.field_n << 8;
           var7 = var4.field_h.length << 8;
           var8 = var6 - var5;
           if (var8 > 0) {
             break L1;
           } else {
-            ((pi) this).field_o = 0;
+            this.field_o = 0;
             break L1;
           }
         }
         L2: {
           var9 = param1;
           param2 = param2 + param1;
-          if (((pi) this).field_u >= 0) {
+          if (this.field_u >= 0) {
             break L2;
           } else {
-            if (((pi) this).field_t <= 0) {
+            if (this.field_t <= 0) {
               this.f();
-              ((pi) this).c(2);
+              this.c(2);
               return;
             } else {
-              ((pi) this).field_u = 0;
+              this.field_u = 0;
               break L2;
             }
           }
         }
         L3: {
-          if (((pi) this).field_u < var7) {
+          if (this.field_u < var7) {
             break L3;
           } else {
-            if (((pi) this).field_t >= 0) {
+            if (this.field_t >= 0) {
               this.f();
-              ((pi) this).c(2);
+              this.c(2);
               return;
             } else {
-              ((pi) this).field_u = var7 - 1;
+              this.field_u = var7 - 1;
               break L3;
             }
           }
         }
-        if (((pi) this).field_o >= 0) {
+        if (this.field_o >= 0) {
           L4: {
-            if (((pi) this).field_o <= 0) {
+            if (this.field_o <= 0) {
               break L4;
             } else {
-              if (!((pi) this).field_p) {
-                if (((pi) this).field_t >= 0) {
+              if (!this.field_p) {
+                if (this.field_t >= 0) {
                   L5: while (true) {
-                    var9 = this.a(param0, var9, var6, param2, (int) var4.field_h[((pi) this).field_m]);
-                    if (((pi) this).field_u >= var6) {
-                      var10 = (((pi) this).field_u - var5) / var8;
-                      if (var10 < ((pi) this).field_o) {
-                        ((pi) this).field_u = ((pi) this).field_u - var8 * var10;
-                        ((pi) this).field_o = ((pi) this).field_o - var10;
+                    var9 = this.a(param0, var9, var6, param2, (int) var4.field_h[this.field_m]);
+                    if (this.field_u >= var6) {
+                      var10 = (this.field_u - var5) / var8;
+                      if (var10 < this.field_o) {
+                        this.field_u = this.field_u - var8 * var10;
+                        this.field_o = this.field_o - var10;
                         continue L5;
                       } else {
-                        ((pi) this).field_u = ((pi) this).field_u - var8 * ((pi) this).field_o;
-                        ((pi) this).field_o = 0;
+                        this.field_u = this.field_u - var8 * this.field_o;
+                        this.field_o = 0;
                         break L4;
                       }
                     } else {
@@ -129,16 +134,16 @@ final class pi extends wf {
                   }
                 } else {
                   L6: while (true) {
-                    var9 = this.b(param0, var9, var5, param2, (int) var4.field_h[((pi) this).field_n - 1]);
-                    if (((pi) this).field_u < var5) {
-                      var10 = (var6 - 1 - ((pi) this).field_u) / var8;
-                      if (var10 < ((pi) this).field_o) {
-                        ((pi) this).field_u = ((pi) this).field_u + var8 * var10;
-                        ((pi) this).field_o = ((pi) this).field_o - var10;
+                    var9 = this.b(param0, var9, var5, param2, (int) var4.field_h[this.field_n - 1]);
+                    if (this.field_u < var5) {
+                      var10 = (var6 - 1 - this.field_u) / var8;
+                      if (var10 < this.field_o) {
+                        this.field_u = this.field_u + var8 * var10;
+                        this.field_o = this.field_o - var10;
                         continue L6;
                       } else {
-                        ((pi) this).field_u = ((pi) this).field_u + var8 * ((pi) this).field_o;
-                        ((pi) this).field_o = 0;
+                        this.field_u = this.field_u + var8 * this.field_o;
+                        this.field_o = 0;
                         break L4;
                       }
                     } else {
@@ -148,15 +153,15 @@ final class pi extends wf {
                 }
               } else {
                 L7: {
-                  if (((pi) this).field_t >= 0) {
+                  if (this.field_t >= 0) {
                     break L7;
                   } else {
-                    var9 = this.b(param0, var9, var5, param2, (int) var4.field_h[((pi) this).field_m]);
-                    if (((pi) this).field_u < var5) {
-                      ((pi) this).field_u = var5 + var5 - 1 - ((pi) this).field_u;
-                      ((pi) this).field_t = -((pi) this).field_t;
-                      int fieldTemp$5 = ((pi) this).field_o - 1;
-                      ((pi) this).field_o = ((pi) this).field_o - 1;
+                    var9 = this.b(param0, var9, var5, param2, (int) var4.field_h[this.field_m]);
+                    if (this.field_u < var5) {
+                      this.field_u = var5 + var5 - 1 - this.field_u;
+                      this.field_t = -this.field_t;
+                      fieldTemp$5 = this.field_o - 1;
+                      this.field_o = this.field_o - 1;
                       if (fieldTemp$5 != 0) {
                         break L7;
                       } else {
@@ -168,19 +173,19 @@ final class pi extends wf {
                   }
                 }
                 L8: while (true) {
-                  var9 = this.a(param0, var9, var6, param2, (int) var4.field_h[((pi) this).field_n - 1]);
-                  if (((pi) this).field_u >= var6) {
-                    ((pi) this).field_u = var6 + var6 - 1 - ((pi) this).field_u;
-                    ((pi) this).field_t = -((pi) this).field_t;
-                    int fieldTemp$6 = ((pi) this).field_o - 1;
-                    ((pi) this).field_o = ((pi) this).field_o - 1;
+                  var9 = this.a(param0, var9, var6, param2, (int) var4.field_h[this.field_n - 1]);
+                  if (this.field_u >= var6) {
+                    this.field_u = var6 + var6 - 1 - this.field_u;
+                    this.field_t = -this.field_t;
+                    fieldTemp$6 = this.field_o - 1;
+                    this.field_o = this.field_o - 1;
                     if (fieldTemp$6 != 0) {
-                      var9 = this.b(param0, var9, var5, param2, (int) var4.field_h[((pi) this).field_m]);
-                      if (((pi) this).field_u < var5) {
-                        ((pi) this).field_u = var5 + var5 - 1 - ((pi) this).field_u;
-                        ((pi) this).field_t = -((pi) this).field_t;
-                        int fieldTemp$7 = ((pi) this).field_o - 1;
-                        ((pi) this).field_o = ((pi) this).field_o - 1;
+                      var9 = this.b(param0, var9, var5, param2, (int) var4.field_h[this.field_m]);
+                      if (this.field_u < var5) {
+                        this.field_u = var5 + var5 - 1 - this.field_u;
+                        this.field_t = -this.field_t;
+                        fieldTemp$7 = this.field_o - 1;
+                        this.field_o = this.field_o - 1;
                         if (fieldTemp$7 != 0) {
                           continue L8;
                         } else {
@@ -199,37 +204,37 @@ final class pi extends wf {
               }
             }
           }
-          if (((pi) this).field_t < 0) {
-            int discarded$8 = this.b(param0, var9, 0, param2, 0);
-            if (((pi) this).field_u < 0) {
-              ((pi) this).field_u = -1;
+          if (this.field_t < 0) {
+            discarded$8 = this.b(param0, var9, 0, param2, 0);
+            if (this.field_u < 0) {
+              this.field_u = -1;
               this.f();
-              ((pi) this).c(2);
+              this.c(2);
               return;
             } else {
               return;
             }
           } else {
             L9: {
-              int discarded$9 = this.a(param0, var9, var7, param2, 0);
-              if (((pi) this).field_u < var7) {
+              discarded$9 = this.a(param0, var9, var7, param2, 0);
+              if (this.field_u < var7) {
                 break L9;
               } else {
-                ((pi) this).field_u = var7;
+                this.field_u = var7;
                 this.f();
-                ((pi) this).c(2);
+                this.c(2);
                 break L9;
               }
             }
             return;
           }
         } else {
-          if (!((pi) this).field_p) {
-            if (((pi) this).field_t >= 0) {
+          if (!this.field_p) {
+            if (this.field_t >= 0) {
               L10: while (true) {
-                var9 = this.a(param0, var9, var6, param2, (int) var4.field_h[((pi) this).field_m]);
-                if (((pi) this).field_u >= var6) {
-                  ((pi) this).field_u = var5 + (((pi) this).field_u - var5) % var8;
+                var9 = this.a(param0, var9, var6, param2, (int) var4.field_h[this.field_m]);
+                if (this.field_u >= var6) {
+                  this.field_u = var5 + (this.field_u - var5) % var8;
                   continue L10;
                 } else {
                   return;
@@ -237,9 +242,9 @@ final class pi extends wf {
               }
             } else {
               L11: while (true) {
-                var9 = this.b(param0, var9, var5, param2, (int) var4.field_h[((pi) this).field_n - 1]);
-                if (((pi) this).field_u < var5) {
-                  ((pi) this).field_u = var6 - 1 - (var6 - 1 - ((pi) this).field_u) % var8;
+                var9 = this.b(param0, var9, var5, param2, (int) var4.field_h[this.field_n - 1]);
+                if (this.field_u < var5) {
+                  this.field_u = var6 - 1 - (var6 - 1 - this.field_u) % var8;
                   continue L11;
                 } else {
                   return;
@@ -248,13 +253,13 @@ final class pi extends wf {
             }
           } else {
             L12: {
-              if (((pi) this).field_t >= 0) {
+              if (this.field_t >= 0) {
                 break L12;
               } else {
-                var9 = this.b(param0, var9, var5, param2, (int) var4.field_h[((pi) this).field_m]);
-                if (((pi) this).field_u < var5) {
-                  ((pi) this).field_u = var5 + var5 - 1 - ((pi) this).field_u;
-                  ((pi) this).field_t = -((pi) this).field_t;
+                var9 = this.b(param0, var9, var5, param2, (int) var4.field_h[this.field_m]);
+                if (this.field_u < var5) {
+                  this.field_u = var5 + var5 - 1 - this.field_u;
+                  this.field_t = -this.field_t;
                   break L12;
                 } else {
                   return;
@@ -262,14 +267,14 @@ final class pi extends wf {
               }
             }
             L13: while (true) {
-              var9 = this.a(param0, var9, var6, param2, (int) var4.field_h[((pi) this).field_n - 1]);
-              if (((pi) this).field_u >= var6) {
-                ((pi) this).field_u = var6 + var6 - 1 - ((pi) this).field_u;
-                ((pi) this).field_t = -((pi) this).field_t;
-                var9 = this.b(param0, var9, var5, param2, (int) var4.field_h[((pi) this).field_m]);
-                if (((pi) this).field_u < var5) {
-                  ((pi) this).field_u = var5 + var5 - 1 - ((pi) this).field_u;
-                  ((pi) this).field_t = -((pi) this).field_t;
+              var9 = this.a(param0, var9, var6, param2, (int) var4.field_h[this.field_n - 1]);
+              if (this.field_u >= var6) {
+                this.field_u = var6 + var6 - 1 - this.field_u;
+                this.field_t = -this.field_t;
+                var9 = this.b(param0, var9, var5, param2, (int) var4.field_h[this.field_m]);
+                if (this.field_u < var5) {
+                  this.field_u = var5 + var5 - 1 - this.field_u;
+                  this.field_t = -this.field_t;
                   continue L13;
                 } else {
                   return;
@@ -287,6 +292,9 @@ final class pi extends wf {
     }
 
     final synchronized void a(int param0) {
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
         ue var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -294,109 +302,109 @@ final class pi extends wf {
         int var6 = 0;
         int var7 = 0;
         L0: {
-          if (((pi) this).field_l <= 0) {
+          if (this.field_l <= 0) {
             break L0;
           } else {
-            if (param0 < ((pi) this).field_l) {
-              ((pi) this).field_y = ((pi) this).field_y + ((pi) this).field_r * param0;
-              ((pi) this).field_w = ((pi) this).field_w + ((pi) this).field_k * param0;
-              ((pi) this).field_q = ((pi) this).field_q + ((pi) this).field_s * param0;
-              ((pi) this).field_l = ((pi) this).field_l - param0;
+            if (param0 < this.field_l) {
+              this.field_y = this.field_y + this.field_r * param0;
+              this.field_w = this.field_w + this.field_k * param0;
+              this.field_q = this.field_q + this.field_s * param0;
+              this.field_l = this.field_l - param0;
               break L0;
             } else {
               L1: {
-                if (((pi) this).field_v != -2147483648) {
+                if (this.field_v != -2147483648) {
                   break L1;
                 } else {
-                  ((pi) this).field_v = 0;
-                  ((pi) this).field_q = 0;
-                  ((pi) this).field_w = 0;
-                  ((pi) this).field_y = 0;
-                  ((pi) this).c(2);
-                  param0 = ((pi) this).field_l;
+                  this.field_v = 0;
+                  this.field_q = 0;
+                  this.field_w = 0;
+                  this.field_y = 0;
+                  this.c(2);
+                  param0 = this.field_l;
                   break L1;
                 }
               }
-              ((pi) this).field_l = 0;
+              this.field_l = 0;
               this.i();
               break L0;
             }
           }
         }
         L2: {
-          var2 = (ue) (Object) ((pi) this).field_j;
-          var3 = ((pi) this).field_m << 8;
-          var4 = ((pi) this).field_n << 8;
+          var2 = (ue) ((Object) this.field_j);
+          var3 = this.field_m << 8;
+          var4 = this.field_n << 8;
           var5 = var2.field_h.length << 8;
           var6 = var4 - var3;
           if (var6 > 0) {
             break L2;
           } else {
-            ((pi) this).field_o = 0;
+            this.field_o = 0;
             break L2;
           }
         }
         L3: {
-          if (((pi) this).field_u >= 0) {
+          if (this.field_u >= 0) {
             break L3;
           } else {
-            if (((pi) this).field_t <= 0) {
+            if (this.field_t <= 0) {
               this.f();
-              ((pi) this).c(2);
+              this.c(2);
               return;
             } else {
-              ((pi) this).field_u = 0;
+              this.field_u = 0;
               break L3;
             }
           }
         }
         L4: {
-          if (((pi) this).field_u < var5) {
+          if (this.field_u < var5) {
             break L4;
           } else {
-            if (((pi) this).field_t >= 0) {
+            if (this.field_t >= 0) {
               this.f();
-              ((pi) this).c(2);
+              this.c(2);
               return;
             } else {
-              ((pi) this).field_u = var5 - 1;
+              this.field_u = var5 - 1;
               break L4;
             }
           }
         }
-        ((pi) this).field_u = ((pi) this).field_u + ((pi) this).field_t * param0;
-        if (((pi) this).field_o >= 0) {
+        this.field_u = this.field_u + this.field_t * param0;
+        if (this.field_o >= 0) {
           L5: {
-            if (((pi) this).field_o <= 0) {
+            if (this.field_o <= 0) {
               break L5;
             } else {
-              if (!((pi) this).field_p) {
+              if (!this.field_p) {
                 L6: {
-                  if (((pi) this).field_t >= 0) {
-                    if (((pi) this).field_u >= var4) {
-                      var7 = (((pi) this).field_u - var3) / var6;
-                      if (var7 < ((pi) this).field_o) {
-                        ((pi) this).field_u = ((pi) this).field_u - var6 * var7;
-                        ((pi) this).field_o = ((pi) this).field_o - var7;
+                  if (this.field_t >= 0) {
+                    if (this.field_u >= var4) {
+                      var7 = (this.field_u - var3) / var6;
+                      if (var7 < this.field_o) {
+                        this.field_u = this.field_u - var6 * var7;
+                        this.field_o = this.field_o - var7;
                         break L6;
                       } else {
-                        ((pi) this).field_u = ((pi) this).field_u - var6 * ((pi) this).field_o;
-                        ((pi) this).field_o = 0;
+                        this.field_u = this.field_u - var6 * this.field_o;
+                        this.field_o = 0;
                         break L5;
                       }
                     } else {
                       return;
                     }
                   } else {
-                    if (((pi) this).field_u < var3) {
-                      var7 = (var4 - 1 - ((pi) this).field_u) / var6;
-                      if (var7 < ((pi) this).field_o) {
-                        ((pi) this).field_u = ((pi) this).field_u + var6 * var7;
-                        ((pi) this).field_o = ((pi) this).field_o - var7;
+                    if (this.field_u < var3) {
+                      var7 = (var4 - 1 - this.field_u) / var6;
+                      if (var7 < this.field_o) {
+                        this.field_u = this.field_u + var6 * var7;
+                        this.field_o = this.field_o - var7;
                         break L6;
                       } else {
-                        ((pi) this).field_u = ((pi) this).field_u + var6 * ((pi) this).field_o;
-                        ((pi) this).field_o = 0;
+                        this.field_u = this.field_u + var6 * this.field_o;
+                        this.field_o = 0;
                         break L5;
                       }
                     } else {
@@ -407,14 +415,14 @@ final class pi extends wf {
                 return;
               } else {
                 L7: {
-                  if (((pi) this).field_t >= 0) {
+                  if (this.field_t >= 0) {
                     break L7;
                   } else {
-                    if (((pi) this).field_u < var3) {
-                      ((pi) this).field_u = var3 + var3 - 1 - ((pi) this).field_u;
-                      ((pi) this).field_t = -((pi) this).field_t;
-                      int fieldTemp$3 = ((pi) this).field_o - 1;
-                      ((pi) this).field_o = ((pi) this).field_o - 1;
+                    if (this.field_u < var3) {
+                      this.field_u = var3 + var3 - 1 - this.field_u;
+                      this.field_t = -this.field_t;
+                      fieldTemp$3 = this.field_o - 1;
+                      this.field_o = this.field_o - 1;
                       if (fieldTemp$3 != 0) {
                         break L7;
                       } else {
@@ -426,17 +434,17 @@ final class pi extends wf {
                   }
                 }
                 L8: while (true) {
-                  if (((pi) this).field_u >= var4) {
-                    ((pi) this).field_u = var4 + var4 - 1 - ((pi) this).field_u;
-                    ((pi) this).field_t = -((pi) this).field_t;
-                    int fieldTemp$4 = ((pi) this).field_o - 1;
-                    ((pi) this).field_o = ((pi) this).field_o - 1;
+                  if (this.field_u >= var4) {
+                    this.field_u = var4 + var4 - 1 - this.field_u;
+                    this.field_t = -this.field_t;
+                    fieldTemp$4 = this.field_o - 1;
+                    this.field_o = this.field_o - 1;
                     if (fieldTemp$4 != 0) {
-                      if (((pi) this).field_u < var3) {
-                        ((pi) this).field_u = var3 + var3 - 1 - ((pi) this).field_u;
-                        ((pi) this).field_t = -((pi) this).field_t;
-                        int fieldTemp$5 = ((pi) this).field_o - 1;
-                        ((pi) this).field_o = ((pi) this).field_o - 1;
+                      if (this.field_u < var3) {
+                        this.field_u = var3 + var3 - 1 - this.field_u;
+                        this.field_t = -this.field_t;
+                        fieldTemp$5 = this.field_o - 1;
+                        this.field_o = this.field_o - 1;
                         if (fieldTemp$5 != 0) {
                           continue L8;
                         } else {
@@ -455,40 +463,40 @@ final class pi extends wf {
               }
             }
           }
-          if (((pi) this).field_t < 0) {
-            if (((pi) this).field_u < 0) {
-              ((pi) this).field_u = -1;
+          if (this.field_t < 0) {
+            if (this.field_u < 0) {
+              this.field_u = -1;
               this.f();
-              ((pi) this).c(2);
+              this.c(2);
               return;
             } else {
               return;
             }
           } else {
             L9: {
-              if (((pi) this).field_u < var5) {
+              if (this.field_u < var5) {
                 break L9;
               } else {
-                ((pi) this).field_u = var5;
+                this.field_u = var5;
                 this.f();
-                ((pi) this).c(2);
+                this.c(2);
                 break L9;
               }
             }
             return;
           }
         } else {
-          if (!((pi) this).field_p) {
-            if (((pi) this).field_t >= 0) {
-              if (((pi) this).field_u < var4) {
+          if (!this.field_p) {
+            if (this.field_t >= 0) {
+              if (this.field_u < var4) {
                 return;
               } else {
-                ((pi) this).field_u = var3 + (((pi) this).field_u - var3) % var6;
+                this.field_u = var3 + (this.field_u - var3) % var6;
                 return;
               }
             } else {
-              if (((pi) this).field_u < var3) {
-                ((pi) this).field_u = var4 - 1 - (var4 - 1 - ((pi) this).field_u) % var6;
+              if (this.field_u < var3) {
+                this.field_u = var4 - 1 - (var4 - 1 - this.field_u) % var6;
                 return;
               } else {
                 return;
@@ -496,12 +504,12 @@ final class pi extends wf {
             }
           } else {
             L10: {
-              if (((pi) this).field_t >= 0) {
+              if (this.field_t >= 0) {
                 break L10;
               } else {
-                if (((pi) this).field_u < var3) {
-                  ((pi) this).field_u = var3 + var3 - 1 - ((pi) this).field_u;
-                  ((pi) this).field_t = -((pi) this).field_t;
+                if (this.field_u < var3) {
+                  this.field_u = var3 + var3 - 1 - this.field_u;
+                  this.field_t = -this.field_t;
                   break L10;
                 } else {
                   return;
@@ -509,12 +517,12 @@ final class pi extends wf {
               }
             }
             L11: while (true) {
-              if (((pi) this).field_u >= var4) {
-                ((pi) this).field_u = var4 + var4 - 1 - ((pi) this).field_u;
-                ((pi) this).field_t = -((pi) this).field_t;
-                if (((pi) this).field_u < var3) {
-                  ((pi) this).field_u = var3 + var3 - 1 - ((pi) this).field_u;
-                  ((pi) this).field_t = -((pi) this).field_t;
+              if (this.field_u >= var4) {
+                this.field_u = var4 + var4 - 1 - this.field_u;
+                this.field_t = -this.field_t;
+                if (this.field_u < var3) {
+                  this.field_u = var3 + var3 - 1 - this.field_u;
+                  this.field_t = -this.field_t;
                   continue L11;
                 } else {
                   return;
@@ -528,6 +536,8 @@ final class pi extends wf {
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, pi param10, int param11, int param12) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         L0: {
           L1: {
             if (param11 == 0) {
@@ -569,7 +579,7 @@ final class pi extends wf {
                 param10.field_u = param4;
                 return param5;
               } else {
-                int incrementValue$4 = param5;
+                incrementValue$4 = param5;
                 param5++;
                 param3[incrementValue$4] = param3[incrementValue$4] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
                 param4 = param4 + param1;
@@ -579,7 +589,7 @@ final class pi extends wf {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
-            int incrementValue$5 = param5;
+            incrementValue$5 = param5;
             param5++;
             param3[incrementValue$5] = param3[incrementValue$5] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
             param4 = param4 + param11;
@@ -589,58 +599,58 @@ final class pi extends wf {
     }
 
     final synchronized int j() {
-        return ((pi) this).field_t < 0 ? -((pi) this).field_t : ((pi) this).field_t;
+        return this.field_t < 0 ? -this.field_t : this.field_t;
     }
 
     final synchronized void i(int param0) {
         int var2 = 0;
         if (param0 != 0) {
-          if (((pi) this).field_w == 0) {
-            if (((pi) this).field_q == 0) {
-              ((pi) this).field_l = 0;
-              ((pi) this).field_v = 0;
-              ((pi) this).field_y = 0;
-              ((pi) this).c(2);
+          if (this.field_w == 0) {
+            if (this.field_q == 0) {
+              this.field_l = 0;
+              this.field_v = 0;
+              this.field_y = 0;
+              this.c(2);
               return;
             } else {
               L0: {
-                var2 = -((pi) this).field_y;
-                if (((pi) this).field_y <= var2) {
+                var2 = -this.field_y;
+                if (this.field_y <= var2) {
                   break L0;
                 } else {
-                  var2 = ((pi) this).field_y;
+                  var2 = this.field_y;
                   break L0;
                 }
               }
               L1: {
-                if (-((pi) this).field_w <= var2) {
+                if (-this.field_w <= var2) {
                   break L1;
                 } else {
-                  var2 = -((pi) this).field_w;
+                  var2 = -this.field_w;
                   break L1;
                 }
               }
               L2: {
-                if (((pi) this).field_w <= var2) {
+                if (this.field_w <= var2) {
                   break L2;
                 } else {
-                  var2 = ((pi) this).field_w;
+                  var2 = this.field_w;
                   break L2;
                 }
               }
               L3: {
-                if (-((pi) this).field_q <= var2) {
+                if (-this.field_q <= var2) {
                   break L3;
                 } else {
-                  var2 = -((pi) this).field_q;
+                  var2 = -this.field_q;
                   break L3;
                 }
               }
               L4: {
-                if (((pi) this).field_q <= var2) {
+                if (this.field_q <= var2) {
                   break L4;
                 } else {
-                  var2 = ((pi) this).field_q;
+                  var2 = this.field_q;
                   break L4;
                 }
               }
@@ -652,52 +662,52 @@ final class pi extends wf {
                   break L5;
                 }
               }
-              ((pi) this).field_l = param0;
-              ((pi) this).field_v = -2147483648;
-              ((pi) this).field_r = -((pi) this).field_y / param0;
-              ((pi) this).field_k = -((pi) this).field_w / param0;
-              ((pi) this).field_s = -((pi) this).field_q / param0;
+              this.field_l = param0;
+              this.field_v = -2147483648;
+              this.field_r = -this.field_y / param0;
+              this.field_k = -this.field_w / param0;
+              this.field_s = -this.field_q / param0;
               return;
             }
           } else {
             L6: {
-              var2 = -((pi) this).field_y;
-              if (((pi) this).field_y <= var2) {
+              var2 = -this.field_y;
+              if (this.field_y <= var2) {
                 break L6;
               } else {
-                var2 = ((pi) this).field_y;
+                var2 = this.field_y;
                 break L6;
               }
             }
             L7: {
-              if (-((pi) this).field_w <= var2) {
+              if (-this.field_w <= var2) {
                 break L7;
               } else {
-                var2 = -((pi) this).field_w;
+                var2 = -this.field_w;
                 break L7;
               }
             }
             L8: {
-              if (((pi) this).field_w <= var2) {
+              if (this.field_w <= var2) {
                 break L8;
               } else {
-                var2 = ((pi) this).field_w;
+                var2 = this.field_w;
                 break L8;
               }
             }
             L9: {
-              if (-((pi) this).field_q <= var2) {
+              if (-this.field_q <= var2) {
                 break L9;
               } else {
-                var2 = -((pi) this).field_q;
+                var2 = -this.field_q;
                 break L9;
               }
             }
             L10: {
-              if (((pi) this).field_q <= var2) {
+              if (this.field_q <= var2) {
                 break L10;
               } else {
-                var2 = ((pi) this).field_q;
+                var2 = this.field_q;
                 break L10;
               }
             }
@@ -709,16 +719,16 @@ final class pi extends wf {
                 break L11;
               }
             }
-            ((pi) this).field_l = param0;
-            ((pi) this).field_v = -2147483648;
-            ((pi) this).field_r = -((pi) this).field_y / param0;
-            ((pi) this).field_k = -((pi) this).field_w / param0;
-            ((pi) this).field_s = -((pi) this).field_q / param0;
+            this.field_l = param0;
+            this.field_v = -2147483648;
+            this.field_r = -this.field_y / param0;
+            this.field_k = -this.field_w / param0;
+            this.field_s = -this.field_q / param0;
             return;
           }
         } else {
           this.h(0);
-          ((pi) this).c(2);
+          this.c(2);
           return;
         }
     }
@@ -726,30 +736,30 @@ final class pi extends wf {
     private final int b(int[] param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         L0: while (true) {
-          if (((pi) this).field_l <= 0) {
+          if (this.field_l <= 0) {
             L1: {
-              if (((pi) this).field_t != -256) {
+              if (this.field_t != -256) {
                 break L1;
               } else {
-                if ((((pi) this).field_u & 255) != 0) {
+                if ((this.field_u & 255) != 0) {
                   break L1;
                 } else {
                   if (e.field_s) {
-                    return pi.b(0, ((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_w, ((pi) this).field_q, 0, param3, param2, (pi) this);
+                    return pi.b(0, ((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, (pi) (this));
                   } else {
-                    return pi.b(((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_y, 0, param3, param2, (pi) this);
+                    return pi.b(((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, (pi) (this));
                   }
                 }
               }
             }
             if (e.field_s) {
-              return pi.a(0, 0, ((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_w, ((pi) this).field_q, 0, param3, param2, (pi) this, ((pi) this).field_t, param4);
+              return pi.a(0, 0, ((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, (pi) (this), this.field_t, param4);
             } else {
-              return pi.a(0, 0, ((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_y, 0, param3, param2, (pi) this, ((pi) this).field_t, param4);
+              return pi.a(0, 0, ((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, (pi) (this), this.field_t, param4);
             }
           } else {
             L2: {
-              var6 = param1 + ((pi) this).field_l;
+              var6 = param1 + this.field_l;
               if (var6 <= param3) {
                 break L2;
               } else {
@@ -759,33 +769,33 @@ final class pi extends wf {
             }
             L3: {
               L4: {
-                ((pi) this).field_l = ((pi) this).field_l + param1;
-                if (((pi) this).field_t != -256) {
+                this.field_l = this.field_l + param1;
+                if (this.field_t != -256) {
                   break L4;
                 } else {
-                  if ((((pi) this).field_u & 255) != 0) {
+                  if ((this.field_u & 255) != 0) {
                     break L4;
                   } else {
                     if (!e.field_s) {
-                      param1 = pi.b(((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_y, ((pi) this).field_r, 0, var6, param2, (pi) this);
+                      param1 = pi.b(((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, (pi) (this));
                       break L3;
                     } else {
-                      param1 = pi.b(0, ((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_w, ((pi) this).field_q, ((pi) this).field_k, ((pi) this).field_s, 0, var6, param2, (pi) this);
+                      param1 = pi.b(0, ((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, (pi) (this));
                       break L3;
                     }
                   }
                 }
               }
               if (!e.field_s) {
-                param1 = pi.b(0, 0, ((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_y, ((pi) this).field_r, 0, var6, param2, (pi) this, ((pi) this).field_t, param4);
+                param1 = pi.b(0, 0, ((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, (pi) (this), this.field_t, param4);
                 break L3;
               } else {
-                param1 = pi.a(0, 0, ((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_w, ((pi) this).field_q, ((pi) this).field_k, ((pi) this).field_s, 0, var6, param2, (pi) this, ((pi) this).field_t, param4);
+                param1 = pi.a(0, 0, ((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, (pi) (this), this.field_t, param4);
                 break L3;
               }
             }
-            ((pi) this).field_l = ((pi) this).field_l - param1;
-            if (((pi) this).field_l == 0) {
+            this.field_l = this.field_l - param1;
+            if (this.field_l == 0) {
               if (!this.l()) {
                 continue L0;
               } else {
@@ -799,11 +809,11 @@ final class pi extends wf {
     }
 
     final synchronized boolean k() {
-        return ((pi) this).field_l != 0;
+        return this.field_l != 0;
     }
 
     final synchronized boolean e() {
-        return ((pi) this).field_u < 0 || ((pi) this).field_u >= ((ue) (Object) ((pi) this).field_j).field_h.length << 8;
+        return this.field_u < 0 || this.field_u >= ((ue) ((Object) this.field_j)).field_h.length << 8;
     }
 
     private final boolean l() {
@@ -811,10 +821,10 @@ final class pi extends wf {
         int var2 = 0;
         int var3 = 0;
         L0: {
-          var1 = ((pi) this).field_v;
+          var1 = this.field_v;
           if (var1 != -2147483648) {
-            var2 = pi.a(var1, ((pi) this).field_x);
-            var3 = pi.b(var1, ((pi) this).field_x);
+            var2 = pi.a(var1, this.field_x);
+            var3 = pi.b(var1, this.field_x);
             break L0;
           } else {
             var3 = 0;
@@ -824,19 +834,19 @@ final class pi extends wf {
           }
         }
         L1: {
-          if (((pi) this).field_y != var1) {
+          if (this.field_y != var1) {
             break L1;
           } else {
-            if (((pi) this).field_w != var2) {
+            if (this.field_w != var2) {
               break L1;
             } else {
-              if (((pi) this).field_q == var3) {
-                if (((pi) this).field_v == -2147483648) {
-                  ((pi) this).field_v = 0;
-                  ((pi) this).field_q = 0;
-                  ((pi) this).field_w = 0;
-                  ((pi) this).field_y = 0;
-                  ((pi) this).c(2);
+              if (this.field_q == var3) {
+                if (this.field_v == -2147483648) {
+                  this.field_v = 0;
+                  this.field_q = 0;
+                  this.field_w = 0;
+                  this.field_y = 0;
+                  this.c(2);
                   return true;
                 } else {
                   this.i();
@@ -849,91 +859,91 @@ final class pi extends wf {
           }
         }
         L2: {
-          if (((pi) this).field_y >= var1) {
-            if (((pi) this).field_y <= var1) {
-              ((pi) this).field_r = 0;
+          if (this.field_y >= var1) {
+            if (this.field_y <= var1) {
+              this.field_r = 0;
               break L2;
             } else {
-              ((pi) this).field_r = -1;
-              ((pi) this).field_l = ((pi) this).field_y - var1;
+              this.field_r = -1;
+              this.field_l = this.field_y - var1;
               break L2;
             }
           } else {
-            ((pi) this).field_r = 1;
-            ((pi) this).field_l = var1 - ((pi) this).field_y;
+            this.field_r = 1;
+            this.field_l = var1 - this.field_y;
             break L2;
           }
         }
         L3: {
-          if (((pi) this).field_w >= var2) {
-            if (((pi) this).field_w <= var2) {
-              ((pi) this).field_k = 0;
+          if (this.field_w >= var2) {
+            if (this.field_w <= var2) {
+              this.field_k = 0;
               break L3;
             } else {
               L4: {
-                ((pi) this).field_k = -1;
-                if (((pi) this).field_l == 0) {
+                this.field_k = -1;
+                if (this.field_l == 0) {
                   break L4;
                 } else {
-                  if (((pi) this).field_l <= ((pi) this).field_w - var2) {
+                  if (this.field_l <= this.field_w - var2) {
                     break L3;
                   } else {
                     break L4;
                   }
                 }
               }
-              ((pi) this).field_l = ((pi) this).field_w - var2;
+              this.field_l = this.field_w - var2;
               break L3;
             }
           } else {
             L5: {
-              ((pi) this).field_k = 1;
-              if (((pi) this).field_l == 0) {
+              this.field_k = 1;
+              if (this.field_l == 0) {
                 break L5;
               } else {
-                if (((pi) this).field_l <= var2 - ((pi) this).field_w) {
+                if (this.field_l <= var2 - this.field_w) {
                   break L3;
                 } else {
                   break L5;
                 }
               }
             }
-            ((pi) this).field_l = var2 - ((pi) this).field_w;
+            this.field_l = var2 - this.field_w;
             break L3;
           }
         }
-        if (((pi) this).field_q < var3) {
-          ((pi) this).field_s = 1;
-          if (((pi) this).field_l != 0) {
-            if (((pi) this).field_l > var3 - ((pi) this).field_q) {
-              ((pi) this).field_l = var3 - ((pi) this).field_q;
+        if (this.field_q < var3) {
+          this.field_s = 1;
+          if (this.field_l != 0) {
+            if (this.field_l > var3 - this.field_q) {
+              this.field_l = var3 - this.field_q;
               return false;
             } else {
               return false;
             }
           } else {
-            ((pi) this).field_l = var3 - ((pi) this).field_q;
+            this.field_l = var3 - this.field_q;
             return false;
           }
         } else {
           L6: {
-            if (((pi) this).field_q <= var3) {
-              ((pi) this).field_s = 0;
+            if (this.field_q <= var3) {
+              this.field_s = 0;
               break L6;
             } else {
               L7: {
-                ((pi) this).field_s = -1;
-                if (((pi) this).field_l == 0) {
+                this.field_s = -1;
+                if (this.field_l == 0) {
                   break L7;
                 } else {
-                  if (((pi) this).field_l <= ((pi) this).field_q - var3) {
+                  if (this.field_l <= this.field_q - var3) {
                     break L6;
                   } else {
                     break L7;
                   }
                 }
               }
-              ((pi) this).field_l = ((pi) this).field_q - var3;
+              this.field_l = this.field_q - var3;
               break L6;
             }
           }
@@ -942,7 +952,7 @@ final class pi extends wf {
     }
 
     private final synchronized void h(int param0) {
-        this.e(0, ((pi) this).h());
+        this.e(param0, this.h());
     }
 
     final synchronized void a(int param0, int param1, int param2) {
@@ -952,49 +962,49 @@ final class pi extends wf {
         if (param0 != 0) {
           var4 = pi.a(param1, param2);
           var5 = pi.b(param1, param2);
-          if (((pi) this).field_w == var4) {
-            if (((pi) this).field_q == var5) {
-              ((pi) this).field_l = 0;
+          if (this.field_w == var4) {
+            if (this.field_q == var5) {
+              this.field_l = 0;
               return;
             } else {
               L0: {
-                var6 = param1 - ((pi) this).field_y;
-                if (((pi) this).field_y - param1 <= var6) {
+                var6 = param1 - this.field_y;
+                if (this.field_y - param1 <= var6) {
                   break L0;
                 } else {
-                  var6 = ((pi) this).field_y - param1;
+                  var6 = this.field_y - param1;
                   break L0;
                 }
               }
               L1: {
-                if (var4 - ((pi) this).field_w <= var6) {
+                if (var4 - this.field_w <= var6) {
                   break L1;
                 } else {
-                  var6 = var4 - ((pi) this).field_w;
+                  var6 = var4 - this.field_w;
                   break L1;
                 }
               }
               L2: {
-                if (((pi) this).field_w - var4 <= var6) {
+                if (this.field_w - var4 <= var6) {
                   break L2;
                 } else {
-                  var6 = ((pi) this).field_w - var4;
+                  var6 = this.field_w - var4;
                   break L2;
                 }
               }
               L3: {
-                if (var5 - ((pi) this).field_q <= var6) {
+                if (var5 - this.field_q <= var6) {
                   break L3;
                 } else {
-                  var6 = var5 - ((pi) this).field_q;
+                  var6 = var5 - this.field_q;
                   break L3;
                 }
               }
               L4: {
-                if (((pi) this).field_q - var5 <= var6) {
+                if (this.field_q - var5 <= var6) {
                   break L4;
                 } else {
-                  var6 = ((pi) this).field_q - var5;
+                  var6 = this.field_q - var5;
                   break L4;
                 }
               }
@@ -1006,53 +1016,53 @@ final class pi extends wf {
                   break L5;
                 }
               }
-              ((pi) this).field_l = param0;
-              ((pi) this).field_v = param1;
-              ((pi) this).field_x = param2;
-              ((pi) this).field_r = (param1 - ((pi) this).field_y) / param0;
-              ((pi) this).field_k = (var4 - ((pi) this).field_w) / param0;
-              ((pi) this).field_s = (var5 - ((pi) this).field_q) / param0;
+              this.field_l = param0;
+              this.field_v = param1;
+              this.field_x = param2;
+              this.field_r = (param1 - this.field_y) / param0;
+              this.field_k = (var4 - this.field_w) / param0;
+              this.field_s = (var5 - this.field_q) / param0;
               return;
             }
           } else {
             L6: {
-              var6 = param1 - ((pi) this).field_y;
-              if (((pi) this).field_y - param1 <= var6) {
+              var6 = param1 - this.field_y;
+              if (this.field_y - param1 <= var6) {
                 break L6;
               } else {
-                var6 = ((pi) this).field_y - param1;
+                var6 = this.field_y - param1;
                 break L6;
               }
             }
             L7: {
-              if (var4 - ((pi) this).field_w <= var6) {
+              if (var4 - this.field_w <= var6) {
                 break L7;
               } else {
-                var6 = var4 - ((pi) this).field_w;
+                var6 = var4 - this.field_w;
                 break L7;
               }
             }
             L8: {
-              if (((pi) this).field_w - var4 <= var6) {
+              if (this.field_w - var4 <= var6) {
                 break L8;
               } else {
-                var6 = ((pi) this).field_w - var4;
+                var6 = this.field_w - var4;
                 break L8;
               }
             }
             L9: {
-              if (var5 - ((pi) this).field_q <= var6) {
+              if (var5 - this.field_q <= var6) {
                 break L9;
               } else {
-                var6 = var5 - ((pi) this).field_q;
+                var6 = var5 - this.field_q;
                 break L9;
               }
             }
             L10: {
-              if (((pi) this).field_q - var5 <= var6) {
+              if (this.field_q - var5 <= var6) {
                 break L10;
               } else {
-                var6 = ((pi) this).field_q - var5;
+                var6 = this.field_q - var5;
                 break L10;
               }
             }
@@ -1064,12 +1074,12 @@ final class pi extends wf {
                 break L11;
               }
             }
-            ((pi) this).field_l = param0;
-            ((pi) this).field_v = param1;
-            ((pi) this).field_x = param2;
-            ((pi) this).field_r = (param1 - ((pi) this).field_y) / param0;
-            ((pi) this).field_k = (var4 - ((pi) this).field_w) / param0;
-            ((pi) this).field_s = (var5 - ((pi) this).field_q) / param0;
+            this.field_l = param0;
+            this.field_v = param1;
+            this.field_x = param2;
+            this.field_r = (param1 - this.field_y) / param0;
+            this.field_k = (var4 - this.field_w) / param0;
+            this.field_s = (var5 - this.field_q) / param0;
             return;
           }
         } else {
@@ -1079,6 +1089,10 @@ final class pi extends wf {
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, pi param11, int param12, int param13) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         L0: {
           L1: {
             if (param12 == 0) {
@@ -1123,10 +1137,10 @@ final class pi extends wf {
                 return param5 >> 1;
               } else {
                 param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
-                int incrementValue$4 = param5;
+                incrementValue$4 = param5;
                 param5++;
                 param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
-                int incrementValue$5 = param5;
+                incrementValue$5 = param5;
                 param5++;
                 param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param4 = param4 + param12;
@@ -1137,10 +1151,10 @@ final class pi extends wf {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
             param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
-            int incrementValue$6 = param5;
+            incrementValue$6 = param5;
             param5++;
             param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
-            int incrementValue$7 = param5;
+            incrementValue$7 = param5;
             param5++;
             param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param4 = param4 + param12;
@@ -1150,36 +1164,36 @@ final class pi extends wf {
     }
 
     final synchronized int g() {
-        return ((pi) this).field_v == -2147483648 ? 0 : ((pi) this).field_v;
+        return this.field_v == -2147483648 ? 0 : this.field_v;
     }
 
     private final int a(int[] param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         L0: while (true) {
-          if (((pi) this).field_l <= 0) {
+          if (this.field_l <= 0) {
             L1: {
-              if (((pi) this).field_t != 256) {
+              if (this.field_t != 256) {
                 break L1;
               } else {
-                if ((((pi) this).field_u & 255) != 0) {
+                if ((this.field_u & 255) != 0) {
                   break L1;
                 } else {
                   if (e.field_s) {
-                    return pi.a(0, ((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_w, ((pi) this).field_q, 0, param3, param2, (pi) this);
+                    return pi.a(0, ((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, (pi) (this));
                   } else {
-                    return pi.a(((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_y, 0, param3, param2, (pi) this);
+                    return pi.a(((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, (pi) (this));
                   }
                 }
               }
             }
             if (e.field_s) {
-              return pi.d(0, 0, ((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_w, ((pi) this).field_q, 0, param3, param2, (pi) this, ((pi) this).field_t, param4);
+              return pi.d(0, 0, ((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, 0, param3, param2, (pi) (this), this.field_t, param4);
             } else {
-              return pi.b(0, 0, ((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_y, 0, param3, param2, (pi) this, ((pi) this).field_t, param4);
+              return pi.b(0, 0, ((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_y, 0, param3, param2, (pi) (this), this.field_t, param4);
             }
           } else {
             L2: {
-              var6 = param1 + ((pi) this).field_l;
+              var6 = param1 + this.field_l;
               if (var6 <= param3) {
                 break L2;
               } else {
@@ -1189,33 +1203,33 @@ final class pi extends wf {
             }
             L3: {
               L4: {
-                ((pi) this).field_l = ((pi) this).field_l + param1;
-                if (((pi) this).field_t != 256) {
+                this.field_l = this.field_l + param1;
+                if (this.field_t != 256) {
                   break L4;
                 } else {
-                  if ((((pi) this).field_u & 255) != 0) {
+                  if ((this.field_u & 255) != 0) {
                     break L4;
                   } else {
                     if (!e.field_s) {
-                      param1 = pi.a(((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_y, ((pi) this).field_r, 0, var6, param2, (pi) this);
+                      param1 = pi.a(((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, (pi) (this));
                       break L3;
                     } else {
-                      param1 = pi.a(0, ((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_w, ((pi) this).field_q, ((pi) this).field_k, ((pi) this).field_s, 0, var6, param2, (pi) this);
+                      param1 = pi.a(0, ((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, (pi) (this));
                       break L3;
                     }
                   }
                 }
               }
               if (!e.field_s) {
-                param1 = pi.c(0, 0, ((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_y, ((pi) this).field_r, 0, var6, param2, (pi) this, ((pi) this).field_t, param4);
+                param1 = pi.c(0, 0, ((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_y, this.field_r, 0, var6, param2, (pi) (this), this.field_t, param4);
                 break L3;
               } else {
-                param1 = pi.b(0, 0, ((ue) (Object) ((pi) this).field_j).field_h, param0, ((pi) this).field_u, param1, ((pi) this).field_w, ((pi) this).field_q, ((pi) this).field_k, ((pi) this).field_s, 0, var6, param2, (pi) this, ((pi) this).field_t, param4);
+                param1 = pi.b(0, 0, ((ue) ((Object) this.field_j)).field_h, param0, this.field_u, param1, this.field_w, this.field_q, this.field_k, this.field_s, 0, var6, param2, (pi) (this), this.field_t, param4);
                 break L3;
               }
             }
-            ((pi) this).field_l = ((pi) this).field_l - param1;
-            if (((pi) this).field_l == 0) {
+            this.field_l = this.field_l - param1;
+            if (this.field_l == 0) {
               if (!this.l()) {
                 continue L0;
               } else {
@@ -1229,6 +1243,16 @@ final class pi extends wf {
     }
 
     private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, pi param8) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         param2 = param2 >> 8;
         param7 = param7 >> 8;
         param4 = param4 << 2;
@@ -1238,32 +1262,32 @@ final class pi extends wf {
         }
         param5 -= 3;
         while (param3 < param5) {
-            int incrementValue$0 = param3;
+            incrementValue$0 = param3;
             param3++;
-            int incrementValue$1 = param2;
+            incrementValue$1 = param2;
             param2++;
             param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
-            int incrementValue$2 = param3;
+            incrementValue$2 = param3;
             param3++;
-            int incrementValue$3 = param2;
+            incrementValue$3 = param2;
             param2++;
             param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
-            int incrementValue$4 = param3;
+            incrementValue$4 = param3;
             param3++;
-            int incrementValue$5 = param2;
+            incrementValue$5 = param2;
             param2++;
             param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
-            int incrementValue$6 = param3;
+            incrementValue$6 = param3;
             param3++;
-            int incrementValue$7 = param2;
+            incrementValue$7 = param2;
             param2++;
             param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
         }
         param5 += 3;
         while (param3 < param5) {
-            int incrementValue$8 = param3;
+            incrementValue$8 = param3;
             param3++;
-            int incrementValue$9 = param2;
+            incrementValue$9 = param2;
             param2++;
             param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
         }
@@ -1272,6 +1296,21 @@ final class pi extends wf {
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, pi param10) {
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
         L0: {
           param3 = param3 >> 8;
           param9 = param9 >> 8;
@@ -1296,53 +1335,53 @@ final class pi extends wf {
                 param10.field_u = param3 << 8;
                 return param4 >> 1;
               } else {
-                int incrementValue$15 = param3;
+                incrementValue$15 = param3;
                 param3--;
                 param0 = param1[incrementValue$15];
-                int incrementValue$16 = param4;
+                incrementValue$16 = param4;
                 param4++;
                 param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
-                int incrementValue$17 = param4;
+                incrementValue$17 = param4;
                 param4++;
                 param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 continue L2;
               }
             }
           } else {
-            int incrementValue$18 = param3;
+            incrementValue$18 = param3;
             param3--;
             param0 = param1[incrementValue$18];
-            int incrementValue$19 = param4;
+            incrementValue$19 = param4;
             param4++;
             param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
-            int incrementValue$20 = param4;
+            incrementValue$20 = param4;
             param4++;
             param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
-            int incrementValue$21 = param3;
+            incrementValue$21 = param3;
             param3--;
             param0 = param1[incrementValue$21];
-            int incrementValue$22 = param4;
+            incrementValue$22 = param4;
             param4++;
             param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
-            int incrementValue$23 = param4;
+            incrementValue$23 = param4;
             param4++;
             param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
-            int incrementValue$24 = param3;
+            incrementValue$24 = param3;
             param3--;
             param0 = param1[incrementValue$24];
-            int incrementValue$25 = param4;
+            incrementValue$25 = param4;
             param4++;
             param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
-            int incrementValue$26 = param4;
+            incrementValue$26 = param4;
             param4++;
             param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
-            int incrementValue$27 = param3;
+            incrementValue$27 = param3;
             param3--;
             param0 = param1[incrementValue$27];
-            int incrementValue$28 = param4;
+            incrementValue$28 = param4;
             param4++;
             param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
-            int incrementValue$29 = param4;
+            incrementValue$29 = param4;
             param4++;
             param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             continue L1;
@@ -1351,6 +1390,21 @@ final class pi extends wf {
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, pi param12) {
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
         L0: {
           param3 = param3 >> 8;
           param11 = param11 >> 8;
@@ -1380,14 +1434,14 @@ final class pi extends wf {
                 param12.field_u = param3 << 8;
                 return param4 >> 1;
               } else {
-                int incrementValue$15 = param3;
+                incrementValue$15 = param3;
                 param3--;
                 param0 = param1[incrementValue$15];
-                int incrementValue$16 = param4;
+                incrementValue$16 = param4;
                 param4++;
                 param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
                 param5 = param5 + param7;
-                int incrementValue$17 = param4;
+                incrementValue$17 = param4;
                 param4++;
                 param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 param6 = param6 + param8;
@@ -1395,47 +1449,47 @@ final class pi extends wf {
               }
             }
           } else {
-            int incrementValue$18 = param3;
+            incrementValue$18 = param3;
             param3--;
             param0 = param1[incrementValue$18];
-            int incrementValue$19 = param4;
+            incrementValue$19 = param4;
             param4++;
             param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$20 = param4;
+            incrementValue$20 = param4;
             param4++;
             param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
             param6 = param6 + param8;
-            int incrementValue$21 = param3;
+            incrementValue$21 = param3;
             param3--;
             param0 = param1[incrementValue$21];
-            int incrementValue$22 = param4;
+            incrementValue$22 = param4;
             param4++;
             param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$23 = param4;
+            incrementValue$23 = param4;
             param4++;
             param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
             param6 = param6 + param8;
-            int incrementValue$24 = param3;
+            incrementValue$24 = param3;
             param3--;
             param0 = param1[incrementValue$24];
-            int incrementValue$25 = param4;
+            incrementValue$25 = param4;
             param4++;
             param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$26 = param4;
+            incrementValue$26 = param4;
             param4++;
             param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
             param6 = param6 + param8;
-            int incrementValue$27 = param3;
+            incrementValue$27 = param3;
             param3--;
             param0 = param1[incrementValue$27];
-            int incrementValue$28 = param4;
+            incrementValue$28 = param4;
             param4++;
             param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$29 = param4;
+            incrementValue$29 = param4;
             param4++;
             param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             param6 = param6 + param8;
@@ -1445,10 +1499,12 @@ final class pi extends wf {
     }
 
     final synchronized void d(int param0, int param1) {
-        ((pi) this).a(param0, param1, ((pi) this).h());
+        this.a(param0, param1, this.h());
     }
 
     private final static int c(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, pi param11, int param12, int param13) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         L0: {
           L1: {
             param11.field_w = param11.field_w - param11.field_k * param5;
@@ -1495,7 +1551,7 @@ final class pi extends wf {
                 return param5;
               } else {
                 param0 = param2[param4 >> 8];
-                int incrementValue$2 = param5;
+                incrementValue$2 = param5;
                 param5++;
                 param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
                 param6 = param6 + param7;
@@ -1506,7 +1562,7 @@ final class pi extends wf {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1];
-            int incrementValue$3 = param5;
+            incrementValue$3 = param5;
             param5++;
             param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
             param6 = param6 + param7;
@@ -1517,6 +1573,10 @@ final class pi extends wf {
     }
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, pi param13, int param14, int param15) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         L0: {
           L1: {
             param13.field_y = param13.field_y - param13.field_r * param5;
@@ -1567,11 +1627,11 @@ final class pi extends wf {
               } else {
                 param0 = param2[param4 >> 8];
                 param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
-                int incrementValue$4 = param5;
+                incrementValue$4 = param5;
                 param5++;
                 param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
                 param6 = param6 + param8;
-                int incrementValue$5 = param5;
+                incrementValue$5 = param5;
                 param5++;
                 param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param7 = param7 + param9;
@@ -1583,11 +1643,11 @@ final class pi extends wf {
             param1 = param4 >> 8;
             param0 = param2[param1];
             param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
-            int incrementValue$6 = param5;
+            incrementValue$6 = param5;
             param5++;
             param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
             param6 = param6 + param8;
-            int incrementValue$7 = param5;
+            incrementValue$7 = param5;
             param5++;
             param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param7 = param7 + param9;
@@ -1598,6 +1658,10 @@ final class pi extends wf {
     }
 
     private final static int d(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, pi param11, int param12, int param13) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         L0: {
           L1: {
             if (param12 == 0) {
@@ -1643,10 +1707,10 @@ final class pi extends wf {
               } else {
                 param0 = param2[param4 >> 8];
                 param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
-                int incrementValue$4 = param5;
+                incrementValue$4 = param5;
                 param5++;
                 param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
-                int incrementValue$5 = param5;
+                incrementValue$5 = param5;
                 param5++;
                 param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param4 = param4 + param12;
@@ -1657,10 +1721,10 @@ final class pi extends wf {
             param1 = param4 >> 8;
             param0 = param2[param1];
             param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
-            int incrementValue$6 = param5;
+            incrementValue$6 = param5;
             param5++;
             param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
-            int incrementValue$7 = param5;
+            incrementValue$7 = param5;
             param5++;
             param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param4 = param4 + param12;
@@ -1686,17 +1750,32 @@ final class pi extends wf {
     }
 
     final synchronized void g(int param0) {
-        int var2 = ((ue) (Object) ((pi) this).field_j).field_h.length << 8;
+        int var2 = ((ue) ((Object) this.field_j)).field_h.length << 8;
         if (param0 < -1) {
             param0 = -1;
         }
         if (param0 > var2) {
             param0 = var2;
         }
-        ((pi) this).field_u = param0;
+        this.field_u = param0;
     }
 
     private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, pi param10) {
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
         L0: {
           param3 = param3 >> 8;
           param9 = param9 >> 8;
@@ -1721,53 +1800,53 @@ final class pi extends wf {
                 param10.field_u = param3 << 8;
                 return param4 >> 1;
               } else {
-                int incrementValue$15 = param3;
+                incrementValue$15 = param3;
                 param3++;
                 param0 = param1[incrementValue$15];
-                int incrementValue$16 = param4;
+                incrementValue$16 = param4;
                 param4++;
                 param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
-                int incrementValue$17 = param4;
+                incrementValue$17 = param4;
                 param4++;
                 param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 continue L2;
               }
             }
           } else {
-            int incrementValue$18 = param3;
+            incrementValue$18 = param3;
             param3++;
             param0 = param1[incrementValue$18];
-            int incrementValue$19 = param4;
+            incrementValue$19 = param4;
             param4++;
             param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
-            int incrementValue$20 = param4;
+            incrementValue$20 = param4;
             param4++;
             param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
-            int incrementValue$21 = param3;
+            incrementValue$21 = param3;
             param3++;
             param0 = param1[incrementValue$21];
-            int incrementValue$22 = param4;
+            incrementValue$22 = param4;
             param4++;
             param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
-            int incrementValue$23 = param4;
+            incrementValue$23 = param4;
             param4++;
             param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
-            int incrementValue$24 = param3;
+            incrementValue$24 = param3;
             param3++;
             param0 = param1[incrementValue$24];
-            int incrementValue$25 = param4;
+            incrementValue$25 = param4;
             param4++;
             param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
-            int incrementValue$26 = param4;
+            incrementValue$26 = param4;
             param4++;
             param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
-            int incrementValue$27 = param3;
+            incrementValue$27 = param3;
             param3++;
             param0 = param1[incrementValue$27];
-            int incrementValue$28 = param4;
+            incrementValue$28 = param4;
             param4++;
             param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
-            int incrementValue$29 = param4;
+            incrementValue$29 = param4;
             param4++;
             param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             continue L1;
@@ -1776,11 +1855,11 @@ final class pi extends wf {
     }
 
     private final void f() {
-        if (((pi) this).field_l != 0) {
-            if (((pi) this).field_v == -2147483648) {
-                ((pi) this).field_v = 0;
+        if (this.field_l != 0) {
+            if (this.field_v == -2147483648) {
+                this.field_v = 0;
             }
-            ((pi) this).field_l = 0;
+            this.field_l = 0;
             this.i();
             return;
         }
@@ -1791,6 +1870,16 @@ final class pi extends wf {
     }
 
     private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, pi param8) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         param2 = param2 >> 8;
         param7 = param7 >> 8;
         param4 = param4 << 2;
@@ -1800,32 +1889,32 @@ final class pi extends wf {
         }
         param5 -= 3;
         while (param3 < param5) {
-            int incrementValue$0 = param3;
+            incrementValue$0 = param3;
             param3++;
-            int incrementValue$1 = param2;
+            incrementValue$1 = param2;
             param2--;
             param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
-            int incrementValue$2 = param3;
+            incrementValue$2 = param3;
             param3++;
-            int incrementValue$3 = param2;
+            incrementValue$3 = param2;
             param2--;
             param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
-            int incrementValue$4 = param3;
+            incrementValue$4 = param3;
             param3++;
-            int incrementValue$5 = param2;
+            incrementValue$5 = param2;
             param2--;
             param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
-            int incrementValue$6 = param3;
+            incrementValue$6 = param3;
             param3++;
-            int incrementValue$7 = param2;
+            incrementValue$7 = param2;
             param2--;
             param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
         }
         param5 += 3;
         while (param3 < param5) {
-            int incrementValue$8 = param3;
+            incrementValue$8 = param3;
             param3++;
-            int incrementValue$9 = param2;
+            incrementValue$9 = param2;
             param2--;
             param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
         }
@@ -1834,10 +1923,12 @@ final class pi extends wf {
     }
 
     final synchronized void f(int param0) {
-        ((pi) this).field_o = param0;
+        this.field_o = param0;
     }
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, pi param10, int param11, int param12) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         L0: {
           L1: {
             if (param11 == 0) {
@@ -1879,7 +1970,7 @@ final class pi extends wf {
                 return param5;
               } else {
                 param0 = param2[param4 >> 8];
-                int incrementValue$4 = param5;
+                incrementValue$4 = param5;
                 param5++;
                 param3[incrementValue$4] = param3[incrementValue$4] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
                 param4 = param4 + param11;
@@ -1889,7 +1980,7 @@ final class pi extends wf {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1];
-            int incrementValue$5 = param5;
+            incrementValue$5 = param5;
             param5++;
             param3[incrementValue$5] = param3[incrementValue$5] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
             param4 = param4 + param11;
@@ -1899,6 +1990,10 @@ final class pi extends wf {
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, pi param13, int param14, int param15) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         L0: {
           L1: {
             param13.field_y = param13.field_y - param13.field_r * param5;
@@ -1948,11 +2043,11 @@ final class pi extends wf {
                 return param5;
               } else {
                 param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
-                int incrementValue$4 = param5;
+                incrementValue$4 = param5;
                 param5++;
                 param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
                 param6 = param6 + param8;
-                int incrementValue$5 = param5;
+                incrementValue$5 = param5;
                 param5++;
                 param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param7 = param7 + param9;
@@ -1964,11 +2059,11 @@ final class pi extends wf {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
             param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
-            int incrementValue$6 = param5;
+            incrementValue$6 = param5;
             param5++;
             param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
             param6 = param6 + param8;
-            int incrementValue$7 = param5;
+            incrementValue$7 = param5;
             param5++;
             param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param7 = param7 + param9;
@@ -1979,13 +2074,28 @@ final class pi extends wf {
     }
 
     private final synchronized void e(int param0, int param1) {
-        ((pi) this).field_v = param0;
-        ((pi) this).field_x = param1;
-        ((pi) this).field_l = 0;
+        this.field_v = param0;
+        this.field_x = param1;
+        this.field_l = 0;
         this.i();
     }
 
     private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, pi param12) {
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
         L0: {
           param3 = param3 >> 8;
           param11 = param11 >> 8;
@@ -2015,14 +2125,14 @@ final class pi extends wf {
                 param12.field_u = param3 << 8;
                 return param4 >> 1;
               } else {
-                int incrementValue$15 = param3;
+                incrementValue$15 = param3;
                 param3++;
                 param0 = param1[incrementValue$15];
-                int incrementValue$16 = param4;
+                incrementValue$16 = param4;
                 param4++;
                 param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
                 param5 = param5 + param7;
-                int incrementValue$17 = param4;
+                incrementValue$17 = param4;
                 param4++;
                 param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 param6 = param6 + param8;
@@ -2030,47 +2140,47 @@ final class pi extends wf {
               }
             }
           } else {
-            int incrementValue$18 = param3;
+            incrementValue$18 = param3;
             param3++;
             param0 = param1[incrementValue$18];
-            int incrementValue$19 = param4;
+            incrementValue$19 = param4;
             param4++;
             param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$20 = param4;
+            incrementValue$20 = param4;
             param4++;
             param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
             param6 = param6 + param8;
-            int incrementValue$21 = param3;
+            incrementValue$21 = param3;
             param3++;
             param0 = param1[incrementValue$21];
-            int incrementValue$22 = param4;
+            incrementValue$22 = param4;
             param4++;
             param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$23 = param4;
+            incrementValue$23 = param4;
             param4++;
             param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
             param6 = param6 + param8;
-            int incrementValue$24 = param3;
+            incrementValue$24 = param3;
             param3++;
             param0 = param1[incrementValue$24];
-            int incrementValue$25 = param4;
+            incrementValue$25 = param4;
             param4++;
             param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$26 = param4;
+            incrementValue$26 = param4;
             param4++;
             param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
             param6 = param6 + param8;
-            int incrementValue$27 = param3;
+            incrementValue$27 = param3;
             param3++;
             param0 = param1[incrementValue$27];
-            int incrementValue$28 = param4;
+            incrementValue$28 = param4;
             param4++;
             param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
             param5 = param5 + param7;
-            int incrementValue$29 = param4;
+            incrementValue$29 = param4;
             param4++;
             param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             param6 = param6 + param8;
@@ -2080,6 +2190,16 @@ final class pi extends wf {
     }
 
     private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, pi param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         L0: {
           param2 = param2 >> 8;
           param8 = param8 >> 8;
@@ -2105,9 +2225,9 @@ final class pi extends wf {
                 param9.field_u = param2 << 8;
                 return param3;
               } else {
-                int incrementValue$10 = param3;
+                incrementValue$10 = param3;
                 param3++;
-                int incrementValue$11 = param2;
+                incrementValue$11 = param2;
                 param2--;
                 param1[incrementValue$10] = param1[incrementValue$10] + param0[incrementValue$11] * param4;
                 param4 = param4 + param5;
@@ -2115,27 +2235,27 @@ final class pi extends wf {
               }
             }
           } else {
-            int incrementValue$12 = param3;
+            incrementValue$12 = param3;
             param3++;
-            int incrementValue$13 = param2;
+            incrementValue$13 = param2;
             param2--;
             param1[incrementValue$12] = param1[incrementValue$12] + param0[incrementValue$13] * param4;
             param4 = param4 + param5;
-            int incrementValue$14 = param3;
+            incrementValue$14 = param3;
             param3++;
-            int incrementValue$15 = param2;
+            incrementValue$15 = param2;
             param2--;
             param1[incrementValue$14] = param1[incrementValue$14] + param0[incrementValue$15] * param4;
             param4 = param4 + param5;
-            int incrementValue$16 = param3;
+            incrementValue$16 = param3;
             param3++;
-            int incrementValue$17 = param2;
+            incrementValue$17 = param2;
             param2--;
             param1[incrementValue$16] = param1[incrementValue$16] + param0[incrementValue$17] * param4;
             param4 = param4 + param5;
-            int incrementValue$18 = param3;
+            incrementValue$18 = param3;
             param3++;
-            int incrementValue$19 = param2;
+            incrementValue$19 = param2;
             param2--;
             param1[incrementValue$18] = param1[incrementValue$18] + param0[incrementValue$19] * param4;
             param4 = param4 + param5;
@@ -2145,12 +2265,14 @@ final class pi extends wf {
     }
 
     private final void i() {
-        ((pi) this).field_y = ((pi) this).field_v;
-        ((pi) this).field_w = pi.a(((pi) this).field_v, ((pi) this).field_x);
-        ((pi) this).field_q = pi.b(((pi) this).field_v, ((pi) this).field_x);
+        this.field_y = this.field_v;
+        this.field_w = pi.a(this.field_v, this.field_x);
+        this.field_q = pi.b(this.field_v, this.field_x);
     }
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, pi param11, int param12, int param13) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         L0: {
           L1: {
             param11.field_w = param11.field_w - param11.field_k * param5;
@@ -2197,7 +2319,7 @@ final class pi extends wf {
                 param11.field_u = param4;
                 return param5;
               } else {
-                int incrementValue$2 = param5;
+                incrementValue$2 = param5;
                 param5++;
                 param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
                 param6 = param6 + param7;
@@ -2208,7 +2330,7 @@ final class pi extends wf {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
-            int incrementValue$3 = param5;
+            incrementValue$3 = param5;
             param5++;
             param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
             param6 = param6 + param7;
@@ -2219,29 +2341,29 @@ final class pi extends wf {
     }
 
     final synchronized void e(int param0) {
-        if (((pi) this).field_t < 0) {
-            ((pi) this).field_t = -param0;
+        if (this.field_t < 0) {
+            this.field_t = -param0;
         } else {
-            ((pi) this).field_t = param0;
+            this.field_t = param0;
         }
     }
 
     final synchronized void d(int param0) {
         param0 = param0 << 8;
-        int var2 = ((ue) (Object) ((pi) this).field_j).field_h.length << 8;
+        int var2 = ((ue) ((Object) this.field_j)).field_h.length << 8;
         if (param0 < -1) {
             param0 = -1;
         }
         if (param0 > var2) {
             param0 = var2;
         }
-        ((pi) this).field_u = param0;
+        this.field_u = param0;
     }
 
     final synchronized void a(boolean param0) {
-        ((pi) this).field_t = (((pi) this).field_t ^ ((pi) this).field_t >> 31) + (((pi) this).field_t >>> 31);
+        this.field_t = (this.field_t ^ this.field_t >> 31) + (this.field_t >>> 31);
         if (param0) {
-          ((pi) this).field_t = -((pi) this).field_t;
+          this.field_t = -this.field_t;
           return;
         } else {
           return;
@@ -2249,7 +2371,7 @@ final class pi extends wf {
     }
 
     final synchronized void c(int param0, int param1) {
-        ((pi) this).a(param0, param1 << 6, ((pi) this).h());
+        this.a(param0, param1 << 6, this.h());
     }
 
     final wf d() {
@@ -2257,6 +2379,16 @@ final class pi extends wf {
     }
 
     private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, pi param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         L0: {
           param2 = param2 >> 8;
           param8 = param8 >> 8;
@@ -2282,9 +2414,9 @@ final class pi extends wf {
                 param9.field_u = param2 << 8;
                 return param3;
               } else {
-                int incrementValue$10 = param3;
+                incrementValue$10 = param3;
                 param3++;
-                int incrementValue$11 = param2;
+                incrementValue$11 = param2;
                 param2++;
                 param1[incrementValue$10] = param1[incrementValue$10] + param0[incrementValue$11] * param4;
                 param4 = param4 + param5;
@@ -2292,27 +2424,27 @@ final class pi extends wf {
               }
             }
           } else {
-            int incrementValue$12 = param3;
+            incrementValue$12 = param3;
             param3++;
-            int incrementValue$13 = param2;
+            incrementValue$13 = param2;
             param2++;
             param1[incrementValue$12] = param1[incrementValue$12] + param0[incrementValue$13] * param4;
             param4 = param4 + param5;
-            int incrementValue$14 = param3;
+            incrementValue$14 = param3;
             param3++;
-            int incrementValue$15 = param2;
+            incrementValue$15 = param2;
             param2++;
             param1[incrementValue$14] = param1[incrementValue$14] + param0[incrementValue$15] * param4;
             param4 = param4 + param5;
-            int incrementValue$16 = param3;
+            incrementValue$16 = param3;
             param3++;
-            int incrementValue$17 = param2;
+            incrementValue$17 = param2;
             param2++;
             param1[incrementValue$16] = param1[incrementValue$16] + param0[incrementValue$17] * param4;
             param4 = param4 + param5;
-            int incrementValue$18 = param3;
+            incrementValue$18 = param3;
             param3++;
-            int incrementValue$19 = param2;
+            incrementValue$19 = param2;
             param2++;
             param1[incrementValue$18] = param1[incrementValue$18] + param0[incrementValue$19] * param4;
             param4 = param4 + param5;
@@ -2322,7 +2454,7 @@ final class pi extends wf {
     }
 
     final synchronized int h() {
-        return ((pi) this).field_x < 0 ? -1 : ((pi) this).field_x;
+        return this.field_x < 0 ? -1 : this.field_x;
     }
 
     final static pi a(ue param0, int param1, int param2) {
@@ -2338,26 +2470,26 @@ final class pi extends wf {
     }
 
     private pi(ue param0, int param1, int param2) {
-        ((pi) this).field_j = (ic) (Object) param0;
-        ((pi) this).field_m = param0.field_i;
-        ((pi) this).field_n = param0.field_l;
-        ((pi) this).field_p = param0.field_j;
-        ((pi) this).field_t = param1;
-        ((pi) this).field_v = param2;
-        ((pi) this).field_x = 8192;
-        ((pi) this).field_u = 0;
+        this.field_j = (ic) ((Object) param0);
+        this.field_m = param0.field_i;
+        this.field_n = param0.field_l;
+        this.field_p = param0.field_j;
+        this.field_t = param1;
+        this.field_v = param2;
+        this.field_x = 8192;
+        this.field_u = 0;
         this.i();
     }
 
     private pi(ue param0, int param1, int param2, int param3) {
-        ((pi) this).field_j = (ic) (Object) param0;
-        ((pi) this).field_m = param0.field_i;
-        ((pi) this).field_n = param0.field_l;
-        ((pi) this).field_p = param0.field_j;
-        ((pi) this).field_t = param1;
-        ((pi) this).field_v = param2;
-        ((pi) this).field_x = param3;
-        ((pi) this).field_u = 0;
+        this.field_j = (ic) ((Object) param0);
+        this.field_m = param0.field_i;
+        this.field_n = param0.field_l;
+        this.field_p = param0.field_j;
+        this.field_t = param1;
+        this.field_v = param2;
+        this.field_x = param3;
+        this.field_u = 0;
         this.i();
     }
 }

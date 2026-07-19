@@ -6,7 +6,7 @@ final class cdb extends le {
 
     final int[] a(int param0, boolean param1) {
         if (!param1) {
-            return null;
+            return (int[]) null;
         }
         return grb.field_l;
     }
@@ -16,10 +16,6 @@ final class cdb extends le {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "cdb.A(";
     }
 }

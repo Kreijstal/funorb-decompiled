@@ -9,40 +9,41 @@ final class hh extends nh {
     byte[] field_h;
 
     final hh a(dd param0) {
-        ((hh) this).field_h = param0.a(-128, ((hh) this).field_h);
-        ((hh) this).field_j = param0.a(((hh) this).field_j, (byte) -87);
-        if (((hh) this).field_k == ((hh) this).field_l) {
-          int dupTemp$2 = param0.a(false, ((hh) this).field_k);
-          ((hh) this).field_l = dupTemp$2;
-          ((hh) this).field_k = dupTemp$2;
-          return (hh) this;
+        int dupTemp$2 = 0;
+        this.field_h = param0.a(-128, this.field_h);
+        this.field_j = param0.a(this.field_j, (byte) -87);
+        if (this.field_k == this.field_l) {
+          dupTemp$2 = param0.a(false, this.field_k);
+          this.field_l = dupTemp$2;
+          this.field_k = dupTemp$2;
+          return (hh) (this);
         } else {
           L0: {
-            ((hh) this).field_k = param0.a(false, ((hh) this).field_k);
-            ((hh) this).field_l = param0.a(false, ((hh) this).field_l);
-            if (((hh) this).field_k != ((hh) this).field_l) {
+            this.field_k = param0.a(false, this.field_k);
+            this.field_l = param0.a(false, this.field_l);
+            if (this.field_k != this.field_l) {
               break L0;
             } else {
-              ((hh) this).field_k = ((hh) this).field_k - 1;
+              this.field_k = this.field_k - 1;
               break L0;
             }
           }
-          return (hh) this;
+          return (hh) (this);
         }
     }
 
     hh(int param0, byte[] param1, int param2, int param3) {
-        ((hh) this).field_j = param0;
-        ((hh) this).field_h = param1;
-        ((hh) this).field_k = param2;
-        ((hh) this).field_l = param3;
+        this.field_j = param0;
+        this.field_h = param1;
+        this.field_k = param2;
+        this.field_l = param3;
     }
 
     hh(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((hh) this).field_j = param0;
-        ((hh) this).field_h = param1;
-        ((hh) this).field_k = param2;
-        ((hh) this).field_l = param3;
-        ((hh) this).field_i = param4 ? true : false;
+        this.field_j = param0;
+        this.field_h = param1;
+        this.field_k = param2;
+        this.field_l = param3;
+        this.field_i = param4 ? true : false;
     }
 }

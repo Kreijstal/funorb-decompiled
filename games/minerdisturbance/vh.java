@@ -21,11 +21,21 @@ final class vh implements uj {
         field_a = null;
         field_c = null;
         field_f = null;
-        field_b = null;
-        field_i = null;
-        field_d = null;
-        field_e = null;
-        field_h = null;
+        field_b = (String[][]) null;
+        if (param0 != 3) {
+          field_i = (String[]) null;
+          field_i = null;
+          field_d = null;
+          field_e = null;
+          field_h = null;
+          return;
+        } else {
+          field_i = null;
+          field_d = null;
+          field_e = null;
+          field_h = null;
+          return;
+        }
     }
 
     final static void a(int param0) {
@@ -39,7 +49,7 @@ final class vh implements uj {
 
     public final void a(boolean param0) {
         if (param0) {
-            field_d = null;
+            field_d = (String) null;
             ha.field_e = 3;
             tb.field_a = 3;
             return;
@@ -49,65 +59,71 @@ final class vh implements uj {
     }
 
     final static void a(int param0, ln[] param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
+        RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
-          wk.field_a = new kd((java.applet.Applet) (Object) pd.field_b, lc.field_o, param1, new String[7]);
-          return;
+          L0: {
+            L1: {
+              wk.field_a = new kd(pd.field_b, lc.field_o, param1, new String[]{tj.field_b, fb.field_d, hd.field_c, eg.field_g, sa.field_r, vc.field_u, wd.field_b});
+              if (param0 == 3) {
+                break L1;
+              } else {
+                field_i = (String[]) null;
+                break L1;
+              }
+            }
+            break L0;
+          }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L0: {
-            var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("vh.D(").append(3).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
+            stackOut_3_1 = new StringBuilder().append("vh.D(").append(param0).append(',');
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L0;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L0;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Creating your account";
-        field_b = new String[][]{null, new String[1]};
+        field_b = new String[][]{null, new String[]{"Oil: The black stuff's oil. Watch out! It's harder to swim through than water, and burns if exposed to flame."}};
         field_h = new String[]{"The torch lights up dark areas in the volcano and can let you see through to hidden areas. It doesn't work well underwater, though.", "Illuminate the Super Volcano and peer through to hidden areas. It doesn't work well underwater, though."};
         field_f = new gj();
         field_d = "Names cannot start or end with space or underscore";

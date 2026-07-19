@@ -11,21 +11,41 @@ final class ol {
     private boolean field_d;
 
     private final void a(int param0, int param1, int param2) {
-        L0: {
-          if (param1 > ((ol) this).field_e) {
-            ((ol) this).field_e = param1;
-            break L0;
-          } else {
-            break L0;
+        if (param0 == 31860) {
+          L0: {
+            if (param1 > this.field_e) {
+              this.field_e = param1;
+              break L0;
+            } else {
+              break L0;
+            }
           }
-        }
-        if (param1 >= ((ol) this).field_f.length) {
-          this.a(param1, 64);
-          ((ol) this).field_f[param1] = param2;
-          return;
+          if (param1 >= this.field_f.length) {
+            this.a(param1, 64);
+            this.field_f[param1] = param2;
+            return;
+          } else {
+            this.field_f[param1] = param2;
+            return;
+          }
         } else {
-          ((ol) this).field_f[param1] = param2;
-          return;
+          L1: {
+            field_c = 90;
+            if (param1 > this.field_e) {
+              this.field_e = param1;
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          if (param1 < this.field_f.length) {
+            this.field_f[param1] = param2;
+            return;
+          } else {
+            this.a(param1, 64);
+            this.field_f[param1] = param2;
+            return;
+          }
         }
     }
 
@@ -41,22 +61,45 @@ final class ol {
         int var3 = 0;
         int var4 = 0;
         var4 = stellarshard.field_B;
-        var3 = ((ol) this).field_f.length;
-        L0: while (true) {
-          if (param1 < var3) {
-            return var3;
-          } else {
-            if (((ol) this).field_d) {
-              if (var3 == 0) {
-                var3 = 1;
-                continue L0;
+        if (!param0) {
+          this.field_b = 105;
+          var3 = this.field_f.length;
+          L0: while (true) {
+            if (param1 < var3) {
+              return var3;
+            } else {
+              if (this.field_d) {
+                if (-1 == (var3 ^ -1)) {
+                  var3 = 1;
+                  continue L0;
+                } else {
+                  var3 = var3 * this.field_b;
+                  continue L0;
+                }
               } else {
-                var3 = var3 * ((ol) this).field_b;
+                var3 = var3 + this.field_b;
                 continue L0;
               }
+            }
+          }
+        } else {
+          var3 = this.field_f.length;
+          L1: while (true) {
+            if (param1 < var3) {
+              return var3;
             } else {
-              var3 = var3 + ((ol) this).field_b;
-              continue L0;
+              if (this.field_d) {
+                if (-1 == (var3 ^ -1)) {
+                  var3 = 1;
+                  continue L1;
+                } else {
+                  var3 = var3 * this.field_b;
+                  continue L1;
+                }
+              } else {
+                var3 = var3 + this.field_b;
+                continue L1;
+              }
             }
           }
         }
@@ -69,43 +112,43 @@ final class ol {
           ol.a(false);
           var4 = new int[this.a(true, param0)];
           var3 = var4;
-          ri.a(((ol) this).field_f, 0, var4, 0, ((ol) this).field_f.length);
-          ((ol) this).field_f = var4;
+          ri.a(this.field_f, 0, var4, 0, this.field_f.length);
+          this.field_f = var4;
           return;
         } else {
           var4 = new int[this.a(true, param0)];
           var3 = var4;
-          ri.a(((ol) this).field_f, 0, var4, 0, ((ol) this).field_f.length);
-          ((ol) this).field_f = var4;
+          ri.a(this.field_f, 0, var4, 0, this.field_f.length);
+          this.field_f = var4;
           return;
         }
     }
 
     final void a(int param0, byte param1) {
-        if (param0 >= 0) {
-          if (param0 <= ((ol) this).field_e) {
+        if (-1 >= (param0 ^ -1)) {
+          if (param0 <= this.field_e) {
             if (param1 != 111) {
               L0: {
-                ((ol) this).a(77, (byte) -17);
-                if (param0 != ((ol) this).field_e) {
-                  ri.a(((ol) this).field_f, 1 + param0, ((ol) this).field_f, param0, ((ol) this).field_e + -param0);
+                this.a(77, (byte) -17);
+                if (param0 != this.field_e) {
+                  ri.a(this.field_f, 1 + param0, this.field_f, param0, this.field_e + -param0);
                   break L0;
                 } else {
                   break L0;
                 }
               }
-              ((ol) this).field_e = ((ol) this).field_e - 1;
+              this.field_e = this.field_e - 1;
               return;
             } else {
               L1: {
-                if (param0 != ((ol) this).field_e) {
-                  ri.a(((ol) this).field_f, 1 + param0, ((ol) this).field_f, param0, ((ol) this).field_e + -param0);
+                if (param0 != this.field_e) {
+                  ri.a(this.field_f, 1 + param0, this.field_f, param0, this.field_e + -param0);
                   break L1;
                 } else {
                   break L1;
                 }
               }
-              ((ol) this).field_e = ((ol) this).field_e - 1;
+              this.field_e = this.field_e - 1;
               return;
             }
           } else {
@@ -119,33 +162,37 @@ final class ol {
     final void a(int param0, boolean param1) {
         if (param1) {
           this.a(-83, -41);
-          this.a(31860, ((ol) this).field_e + 1, param0);
+          this.a(31860, this.field_e + 1, param0);
           return;
         } else {
-          this.a(31860, ((ol) this).field_e + 1, param0);
+          this.a(31860, this.field_e + 1, param0);
           return;
         }
     }
 
     final int a(byte param0, int param1) {
+        int discarded$6 = 0;
         if (param0 == -117) {
-          if (param1 > ((ol) this).field_e) {
+          if (param1 > this.field_e) {
             throw new ArrayIndexOutOfBoundsException(param1);
           } else {
-            return ((ol) this).field_f[param1];
+            return this.field_f[param1];
           }
         } else {
-          int discarded$6 = ((ol) this).a(-72);
-          if (param1 > ((ol) this).field_e) {
+          discarded$6 = this.a(-72);
+          if (param1 > this.field_e) {
             throw new ArrayIndexOutOfBoundsException(param1);
           } else {
-            return ((ol) this).field_f[param1];
+            return this.field_f[param1];
           }
         }
     }
 
     final static void b(int param0) {
         sj.field_F = null;
+        if (param0 > -12) {
+            return;
+        }
         wc.field_C = null;
     }
 
@@ -154,11 +201,12 @@ final class ol {
     }
 
     final int a(int param0) {
+        int discarded$0 = 0;
         if (param0 != 19692) {
-            int discarded$0 = ((ol) this).a((byte) 67, 47);
-            return 1 + ((ol) this).field_e;
+            discarded$0 = this.a((byte) 67, 47);
+            return 1 + this.field_e;
         }
-        return 1 + ((ol) this).field_e;
+        return 1 + this.field_e;
     }
 
     static {

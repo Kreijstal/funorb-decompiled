@@ -5,8 +5,9 @@ final class pt extends rqa {
     static int field_o;
 
     final static String a(int param0, int param1) {
+        String discarded$0 = null;
         if (param1 > -26) {
-            String discarded$0 = pt.a(-66, 68);
+            discarded$0 = pt.a(-66, 68);
         }
         return "0" + (param0 + 1) + "/" + "0" + mb.field_k.length;
     }
@@ -106,7 +107,7 @@ final class pt extends rqa {
                             break L6;
                           }
                         }
-                        ((utb) (Object) param2[var8]).a(param5, 32);
+                        ((utb) ((Object) param2[var8])).a(param5, 32);
                         break L5;
                       } else {
                         param2[var8] = null;
@@ -119,7 +120,7 @@ final class pt extends rqa {
                 }
               }
             }
-            stackOut_16_0 = (tv[]) param2;
+            stackOut_16_0 = (tv[]) (param2);
             stackIn_17_0 = stackOut_16_0;
             break L0;
           }
@@ -127,23 +128,23 @@ final class pt extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var6;
-            stackOut_18_1 = new StringBuilder().append("pt.B(").append(param0).append(',').append(1).append(',');
+            stackOut_18_0 = (RuntimeException) (var6);
+            stackOut_18_1 = new StringBuilder().append("pt.B(").append(param0).append(',').append(param1).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param2 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L7;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -152,23 +153,23 @@ final class pt extends rqa {
             }
           }
           L8: {
-            stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
             stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param3 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -177,23 +178,23 @@ final class pt extends rqa {
             }
           }
           L9: {
-            stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+            stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
             stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param4).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param5 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
               break L9;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
@@ -201,7 +202,7 @@ final class pt extends rqa {
               break L9;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
         }
         return stackIn_17_0;
     }
@@ -211,8 +212,9 @@ final class pt extends rqa {
     }
 
     final nc a(nc[] param0, int param1) {
+        nc discarded$2 = null;
         RuntimeException var3 = null;
-        Object var4 = null;
+        nc[] var4 = null;
         nc stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -237,8 +239,8 @@ final class pt extends rqa {
               if (param1 < -119) {
                 break L1;
               } else {
-                var4 = null;
-                nc discarded$2 = ((pt) this).a((nc[]) null, -95);
+                var4 = (nc[]) null;
+                discarded$2 = this.a((nc[]) null, -95);
                 break L1;
               }
             }
@@ -250,23 +252,23 @@ final class pt extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("pt.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -274,16 +276,12 @@ final class pt extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = 64;
     }
 }

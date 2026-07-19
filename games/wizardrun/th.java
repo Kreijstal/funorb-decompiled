@@ -16,14 +16,22 @@ final class th {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        var1 = (Object) (Object) tc.field_m;
+        var1 = tc.field_m;
         synchronized (var1) {
           L0: {
-            sh.field_c = ve.field_d;
-            oc.field_a = oc.field_a + 1;
-            pg.field_n = wizardrun.field_T;
-            fi.field_B = gj.field_a;
-            ih.field_a = jf.field_i;
+            L1: {
+              sh.field_c = ve.field_d;
+              oc.field_a = oc.field_a + 1;
+              pg.field_n = wizardrun.field_T;
+              fi.field_B = gj.field_a;
+              ih.field_a = jf.field_i;
+              if (param0 == -21) {
+                break L1;
+              } else {
+                th.a((byte) 88);
+                break L1;
+              }
+            }
             jf.field_i = false;
             w.field_c = fi.field_w;
             tf.field_e = mh.field_pb;
@@ -36,40 +44,41 @@ final class th {
 
     final rk d(int param0) {
         rk var2 = null;
-        var2 = ((th) this).field_f;
-        if (((th) this).field_c != var2) {
+        var2 = this.field_f;
+        if (this.field_c != var2) {
           if (param0 <= 3) {
-            ((th) this).field_f = null;
-            ((th) this).field_f = var2.field_i;
+            this.field_f = (rk) null;
+            this.field_f = var2.field_i;
             return var2;
           } else {
-            ((th) this).field_f = var2.field_i;
+            this.field_f = var2.field_i;
             return var2;
           }
         } else {
-          ((th) this).field_f = null;
+          this.field_f = null;
           return null;
         }
     }
 
     final rk a(int param0) {
+        rk discarded$7 = null;
         rk var2 = null;
-        var2 = ((th) this).field_c.field_i;
+        var2 = this.field_c.field_i;
         if (param0 == 0) {
-          if (((th) this).field_c == var2) {
-            ((th) this).field_f = null;
+          if (this.field_c == var2) {
+            this.field_f = null;
             return null;
           } else {
-            ((th) this).field_f = var2.field_i;
+            this.field_f = var2.field_i;
             return var2;
           }
         } else {
-          rk discarded$7 = ((th) this).b(68);
-          if (((th) this).field_c == var2) {
-            ((th) this).field_f = null;
+          discarded$7 = this.b(68);
+          if (this.field_c == var2) {
+            this.field_f = null;
             return null;
           } else {
-            ((th) this).field_f = var2.field_i;
+            this.field_f = var2.field_i;
             return var2;
           }
         }
@@ -81,9 +90,9 @@ final class th {
         int var4 = 0;
         var4 = wizardrun.field_H;
         var2 = 0;
-        var3 = ((th) this).field_c.field_i;
+        var3 = this.field_c.field_i;
         L0: while (true) {
-          if (((th) this).field_c == var3) {
+          if (this.field_c == var3) {
             if (param0 != 4) {
               return -16;
             } else {
@@ -102,77 +111,95 @@ final class th {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        StringBuilder stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
+        StringBuilder stackIn_3_0 = null;
+        StringBuilder stackIn_7_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        StringBuilder stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
+        StringBuilder stackOut_6_0 = null;
+        StringBuilder stackOut_2_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         var6 = wizardrun.field_H;
         try {
           L0: {
             var4_int = param0.length();
-            param0.setLength(0);
+            param0.setLength(param2);
             var5 = var4_int;
-            L1: while (true) {
-              if (var5 >= 0) {
-                stackOut_5_0 = (StringBuilder) param0;
-                stackIn_6_0 = stackOut_5_0;
-                break L0;
-              } else {
-                param0.setCharAt(var5, ' ');
-                var5++;
-                continue L1;
+            if (param3 == 1) {
+              L1: while (true) {
+                if (param2 <= var5) {
+                  stackOut_6_0 = (StringBuilder) (param0);
+                  stackIn_7_0 = stackOut_6_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  param0.setCharAt(var5, param1);
+                  var5++;
+                  continue L1;
+                }
               }
+            } else {
+              stackOut_2_0 = (StringBuilder) null;
+              stackIn_3_0 = stackOut_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("th.C(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_8_0 = (RuntimeException) (var4);
+            stackOut_8_1 = new StringBuilder().append("th.C(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + ' ' + ',' + 0 + ',' + 1 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_6_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_7_0;
+        }
     }
 
     public static void a(byte param0) {
-        field_a = null;
+        if (param0 <= 60) {
+            return;
+        }
+        field_a = (byte[][][]) null;
         field_e = null;
         field_g = null;
         field_b = null;
@@ -180,35 +207,36 @@ final class th {
     }
 
     final void a(rk param0, int param1) {
+        rk discarded$0 = null;
         try {
             if (param1 != 14) {
-                rk discarded$0 = ((th) this).a(-10);
+                discarded$0 = this.a(-10);
             }
             if (param0.field_l != null) {
                 param0.b(false);
             }
-            param0.field_i = ((th) this).field_c;
-            param0.field_l = ((th) this).field_c.field_l;
+            param0.field_i = this.field_c;
+            param0.field_l = this.field_c.field_l;
             param0.field_l.field_i = param0;
             param0.field_i.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "th.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "th.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final rk b(int param0) {
         rk var2 = null;
-        var2 = ((th) this).field_c.field_i;
+        var2 = this.field_c.field_i;
         if (param0 >= 33) {
-          if (((th) this).field_c == var2) {
+          if (this.field_c == var2) {
             return null;
           } else {
             var2.b(false);
             return var2;
           }
         } else {
-          field_g = null;
-          if (((th) this).field_c == var2) {
+          field_g = (nj) null;
+          if (this.field_c == var2) {
             return null;
           } else {
             var2.b(false);
@@ -218,16 +246,12 @@ final class th {
     }
 
     public th() {
-        ((th) this).field_c = new rk();
-        ((th) this).field_c.field_l = ((th) this).field_c;
-        ((th) this).field_c.field_i = ((th) this).field_c;
+        this.field_c = new rk();
+        this.field_c.field_l = this.field_c;
+        this.field_c.field_i = this.field_c;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new bh(14, 0, 4, 1);
         field_b = "Just play";
     }

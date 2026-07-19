@@ -10,11 +10,11 @@ final class d {
     static String[] field_f;
 
     final void a(byte param0, boolean param1) {
-        ((d) this).field_e = param1 ? true : false;
+        this.field_e = param1 ? true : false;
         if (param0 != -128) {
             return;
         }
-        ((d) this).field_b = true;
+        this.field_b = true;
     }
 
     final static boolean a(char param0, int param1) {
@@ -28,11 +28,14 @@ final class d {
         int stackIn_8_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_20_0 = 0;
+        int stackIn_24_0 = 0;
         int stackIn_26_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_7_0 = 0;
         int stackOut_25_0 = 0;
+        int stackOut_23_0 = 0;
         int stackOut_19_0 = 0;
         int stackOut_12_0 = 0;
         var5 = EscapeVector.field_A;
@@ -41,12 +44,14 @@ final class d {
             if (Character.isISOControl(param0)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (k.a(true, param0)) {
                 stackOut_7_0 = 1;
                 stackIn_8_0 = stackOut_7_0;
-                return stackIn_8_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 var6 = pb.field_a;
                 var2 = var6;
@@ -57,15 +62,24 @@ final class d {
                     var3 = 0;
                     L2: while (true) {
                       if (var2.length <= var3) {
-                        stackOut_25_0 = 0;
-                        stackIn_26_0 = stackOut_25_0;
-                        break L0;
+                        if (param1 == -11217) {
+                          stackOut_25_0 = 0;
+                          stackIn_26_0 = stackOut_25_0;
+                          decompiledRegionSelector0 = 5;
+                          break L0;
+                        } else {
+                          stackOut_23_0 = 0;
+                          stackIn_24_0 = stackOut_23_0;
+                          decompiledRegionSelector0 = 4;
+                          break L0;
+                        }
                       } else {
                         var4 = var2[var3];
                         if (var4 == param0) {
                           stackOut_19_0 = 1;
                           stackIn_20_0 = stackOut_19_0;
-                          return stackIn_20_0 != 0;
+                          decompiledRegionSelector0 = 3;
+                          break L0;
                         } else {
                           var3++;
                           continue L2;
@@ -80,7 +94,8 @@ final class d {
                     } else {
                       stackOut_12_0 = 1;
                       stackIn_13_0 = stackOut_12_0;
-                      return stackIn_13_0 != 0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     }
                   }
                 }
@@ -90,53 +105,74 @@ final class d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2_ref, "d.E(" + param0 + ',' + -11217 + ')');
+          throw t.a((Throwable) ((Object) var2_ref), "d.E(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_26_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_13_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_20_0 != 0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_24_0 != 0;
+                } else {
+                  return stackIn_26_0 != 0;
+                }
+              }
+            }
+          }
+        }
     }
 
     final boolean b(int param0) {
         if (param0 != 0) {
             return false;
         }
-        return ((d) this).field_b;
+        return this.field_b;
     }
 
     final String a(int param0) {
         if (param0 > -24) {
-            return null;
+            return (String) null;
         }
-        return ((d) this).field_a;
+        return this.field_a;
     }
 
     final boolean c(int param0) {
         if (param0 != 14668) {
             return false;
         }
-        return ((d) this).field_e;
+        return this.field_e;
     }
 
     d(String param0) {
-        ((d) this).field_b = false;
-        ((d) this).field_e = false;
+        this.field_b = false;
+        this.field_e = false;
         try {
-            ((d) this).field_a = param0;
+            this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "d.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "d.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
         field_c = null;
         field_d = null;
+        if (param0 != 65) {
+            field_f = (String[]) null;
+            field_f = null;
+            return;
+        }
         field_f = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new tk();
         field_d = "Quit to website";
         field_f = new String[]{"Fly away from the asteroid intact<br>to avoid losing a life.", "Fly away from the moon intact<br>to avoid losing a life.", "Fly away from the planet intact<br>to avoid losing a life."};

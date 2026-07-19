@@ -24,33 +24,46 @@ abstract class ji {
     abstract void h(int param0);
 
     final static void f(int param0) {
+        int fieldTemp$5 = 0;
         pk var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = Geoblox.field_C;
         try {
           L0: {
-            var1 = fj.field_q;
-            L1: while (true) {
-              if (!cf.c((byte) -114)) {
-                break L0;
-              } else {
-                var1.a(8, (byte) -71);
-                int fieldTemp$5 = var1.field_f + 1;
-                var1.field_f = var1.field_f + 1;
-                var2 = fieldTemp$5;
-                pf.a(46, var1);
-                fj.field_q.f(11700, var1.field_f + -var2);
-                continue L1;
+            if (param0 <= -99) {
+              var1 = fj.field_q;
+              L1: while (true) {
+                if (!cf.c((byte) -114)) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  var1.a(8, (byte) -71);
+                  fieldTemp$5 = var1.field_f + 1;
+                  var1.field_f = var1.field_f + 1;
+                  var2 = fieldTemp$5;
+                  pf.a(46, var1);
+                  fj.field_q.f(11700, var1.field_f + -var2);
+                  continue L1;
+                }
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1_ref, "ji.B(" + -102 + ')');
+          throw t.a((Throwable) ((Object) var1_ref), "ji.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -69,20 +82,20 @@ abstract class ji {
         sd stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          var6 = ((long)param1 << 32) - -(long)param3;
+          var6 = ((long)param1 << 1984104992) - -(long)param3;
           var8 = new sd();
           var8.field_i = var6;
-          stackOut_0_0 = (sd) var8;
+          stackOut_0_0 = (sd) (var8);
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
           if (!param4) {
-            stackOut_2_0 = (sd) (Object) stackIn_2_0;
+            stackOut_2_0 = (sd) ((Object) stackIn_2_0);
             stackOut_2_1 = 0;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             break L0;
           } else {
-            stackOut_1_0 = (sd) (Object) stackIn_1_0;
+            stackOut_1_0 = (sd) ((Object) stackIn_1_0);
             stackOut_1_1 = 1;
             stackIn_3_0 = stackOut_1_0;
             stackIn_3_1 = stackOut_1_1;
@@ -93,15 +106,15 @@ abstract class ji {
           stackIn_3_0.field_q = stackIn_3_1 != 0;
           var8.field_E = param0;
           if (param4) {
-            if (((ji) this).a(param2 ^ 108) < 20) {
-              ((ji) this).field_g.a(param2 ^ -123, (rc) (Object) var8);
+            if ((this.a(param2 ^ 108) ^ -1) > -21) {
+              this.field_g.a(param2 ^ -123, var8);
               break L1;
             } else {
               throw new RuntimeException();
             }
           } else {
-            if (((ji) this).a(false) < 20) {
-              ((ji) this).field_p.a(8, (rc) (Object) var8);
+            if (-21 < (this.a(false) ^ -1)) {
+              this.field_p.a(8, var8);
               break L1;
             } else {
               throw new RuntimeException();
@@ -109,7 +122,7 @@ abstract class ji {
           }
         }
         if (param2 != -21) {
-          ((ji) this).field_g = null;
+          this.field_g = (wd) null;
           return var8;
         } else {
           return var8;
@@ -119,9 +132,9 @@ abstract class ji {
     final int a(int param0) {
         if (param0 >= -39) {
           ji.a(49L, (byte) 33);
-          return ((ji) this).field_g.b((byte) 67) + ((ji) this).field_e.b((byte) 67);
+          return this.field_g.b((byte) 67) + this.field_e.b((byte) 67);
         } else {
-          return ((ji) this).field_g.b((byte) 67) + ((ji) this).field_e.b((byte) 67);
+          return this.field_g.b((byte) 67) + this.field_e.b((byte) 67);
         }
     }
 
@@ -135,7 +148,7 @@ abstract class ji {
                 if (param1 == -33) {
                   break L0;
                 } else {
-                  field_a = null;
+                  field_a = (String[]) null;
                   return;
                 }
               }
@@ -162,8 +175,8 @@ abstract class ji {
         int stackOut_2_0 = 0;
         if (param0 != 20) {
           L0: {
-            field_l = null;
-            if (((ji) this).a(-104) < 20) {
+            field_l = (String) null;
+            if (this.a(-104) < 20) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -176,7 +189,7 @@ abstract class ji {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((ji) this).a(-104) < 20) {
+            if (this.a(-104) < 20) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -194,10 +207,10 @@ abstract class ji {
 
     final int a(boolean param0) {
         if (param0) {
-          ((ji) this).field_o = -38;
-          return ((ji) this).field_p.b((byte) 67) + ((ji) this).field_c.b((byte) 67);
+          this.field_o = -38;
+          return this.field_p.b((byte) 67) + this.field_c.b((byte) 67);
         } else {
-          return ((ji) this).field_p.b((byte) 67) + ((ji) this).field_c.b((byte) 67);
+          return this.field_p.b((byte) 67) + this.field_c.b((byte) 67);
         }
     }
 
@@ -244,8 +257,8 @@ abstract class ji {
         var8 = Geoblox.field_C;
         try {
           L0: {
-            var4_int = param3.e((byte) -17, 16);
-            if (var4_int != 0) {
+            var4_int = param3.e((byte) -17, param1);
+            if (var4_int != param2) {
               L1: {
                 L2: {
                   if (param0 == null) {
@@ -264,7 +277,7 @@ abstract class ji {
               L3: {
                 var5 = param3.e((byte) -17, 4);
                 var6 = (short)param3.e((byte) -17, 16);
-                if (var5 <= 0) {
+                if ((var5 ^ -1) >= -1) {
                   var7 = 0;
                   L4: while (true) {
                     if (var4_int <= var7) {
@@ -288,7 +301,7 @@ abstract class ji {
                   }
                 }
               }
-              stackOut_15_0 = (short[]) param0;
+              stackOut_15_0 = (short[]) (param0);
               stackIn_16_0 = stackOut_15_0;
               break L0;
             } else {
@@ -299,23 +312,23 @@ abstract class ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var4;
+            stackOut_17_0 = (RuntimeException) (var4);
             stackOut_17_1 = new StringBuilder().append("ji.J(");
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -324,23 +337,23 @@ abstract class ji {
             }
           }
           L7: {
-            stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(16).append(',').append(0).append(',');
+            stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param3 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -348,7 +361,7 @@ abstract class ji {
               break L7;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
         }
         return stackIn_16_0;
     }
@@ -356,6 +369,7 @@ abstract class ji {
     abstract boolean a(byte param0);
 
     final boolean b(int param0) {
+        boolean discarded$10 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -364,8 +378,8 @@ abstract class ji {
         int stackOut_2_0 = 0;
         if (param0 != -21) {
           L0: {
-            boolean discarded$10 = ((ji) this).a((byte) 74);
-            if (((ji) this).a(false) < 20) {
+            discarded$10 = this.a((byte) 74);
+            if ((this.a(false) ^ -1) > -21) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -378,7 +392,7 @@ abstract class ji {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((ji) this).a(false) < 20) {
+            if ((this.a(false) ^ -1) > -21) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -396,7 +410,7 @@ abstract class ji {
         int var2 = 0;
         int var3 = Geoblox.field_C;
         na[] var1 = new na[sb.field_a];
-        for (var2 = 0; sb.field_a > var2; var2++) {
+        for (var2 = param0; sb.field_a > var2; var2++) {
             var1[var2] = new na(pg.field_b, dd.field_C, gh.field_m[var2], md.field_e[var2], rc.field_j[var2], hl.field_K[var2], mj.field_a[var2], cm.field_j);
         }
         kj.c(true);
@@ -409,26 +423,22 @@ abstract class ji {
         field_a = null;
         field_d = null;
         field_l = null;
-        int var1 = 78;
+        int var1 = 78 / ((15 - param0) / 56);
     }
 
     ji() {
-        ((ji) this).field_g = new wd();
-        ((ji) this).field_e = new wd();
-        ((ji) this).field_p = new wd();
-        ((ji) this).field_c = new wd();
-        ((ji) this).field_m = new qc(6);
-        ((ji) this).field_b = 0;
-        ((ji) this).field_i = (byte) 0;
-        ((ji) this).field_q = 0;
-        ((ji) this).field_j = new qc(10);
+        this.field_g = new wd();
+        this.field_e = new wd();
+        this.field_p = new wd();
+        this.field_c = new wd();
+        this.field_m = new qc(6);
+        this.field_b = 0;
+        this.field_i = (byte) 0;
+        this.field_q = 0;
+        this.field_j = new qc(10);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
         field_r = new tf();
         field_h = 0;

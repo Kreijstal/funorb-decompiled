@@ -11,12 +11,17 @@ final class ga implements Runnable {
     final static void a(boolean param0, int param1) {
         sd.field_c.a(0, (byte) -124, 0);
         if (param1 < 35) {
-            field_b = null;
+            field_b = (ha[]) null;
         }
     }
 
     public static void b(boolean param0) {
+        oh discarded$0 = null;
         field_b = null;
+        if (!param0) {
+            byte[] var2 = (byte[]) null;
+            discarded$0 = ga.a(-5, (wb[]) null, (byte[]) null);
+        }
     }
 
     final static oh a(int param0, wb[] param1, byte[] param2) {
@@ -39,16 +44,6 @@ final class ga implements Runnable {
         int[] var18 = null;
         int[] var19 = null;
         byte[][] var20 = null;
-        int[] var21 = null;
-        int[] var22 = null;
-        int[] var23 = null;
-        int[] var24 = null;
-        byte[][] var25 = null;
-        int[] var26 = null;
-        int[] var27 = null;
-        int[] var28 = null;
-        int[] var29 = null;
-        byte[][] var30 = null;
         oh stackIn_8_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -88,36 +83,26 @@ final class ga implements Runnable {
             if (256 != param1.length) {
               throw new IllegalArgumentException();
             } else {
-              var3_int = 0;
-              var26 = new int[256];
-              var21 = var26;
-              var16 = var21;
+              var3_int = 81 % ((56 - param0) / 43);
+              var16 = new int[256];
               var11 = var16;
               var4 = var11;
-              var27 = new int[256];
-              var22 = var27;
-              var17 = var22;
+              var17 = new int[256];
               var12 = var17;
               var5 = var12;
-              var28 = new int[256];
-              var23 = var28;
-              var18 = var23;
+              var18 = new int[256];
               var13 = var18;
               var6 = var13;
-              var29 = new int[256];
-              var24 = var29;
-              var19 = var24;
+              var19 = new int[256];
               var14 = var19;
               var7 = var14;
-              var30 = new byte[256][];
-              var25 = var30;
-              var20 = var25;
+              var20 = new byte[256][];
               var15 = var20;
               var8 = var15;
               var9 = 0;
               L1: while (true) {
                 if (256 <= var9) {
-                  stackOut_7_0 = new oh(param2, var26, var27, var28, var29, var30);
+                  stackOut_7_0 = new oh(param2, var16, var17, var18, var19, var20);
                   stackIn_8_0 = stackOut_7_0;
                   break L0;
                 } else {
@@ -136,23 +121,23 @@ final class ga implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("ga.B(").append(121).append(',');
+            stackOut_9_0 = (RuntimeException) (var3);
+            stackOut_9_1 = new StringBuilder().append("ga.B(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -161,23 +146,23 @@ final class ga implements Runnable {
             }
           }
           L3: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -185,19 +170,19 @@ final class ga implements Runnable {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
         return stackIn_8_0;
     }
 
     final static void a(boolean param0) {
         if (!param0) {
-            field_b = null;
+            field_b = (ha[]) null;
         }
         if (gj.field_a == null) {
             return;
         }
-        bg.a((java.awt.Canvas) (Object) gj.field_a, (byte) -111);
+        bg.a(gj.field_a, (byte) -111);
         gj.field_a.a((byte) -81, jk.field_a);
         gj.field_a = null;
         if (!(null == wc.field_A)) {
@@ -210,30 +195,30 @@ final class ga implements Runnable {
         int var1_int = 0;
         gd var2 = null;
         int var4 = Main.field_T;
-        ((ga) this).field_c = true;
+        this.field_c = true;
         try {
-            while (!((ga) this).field_d) {
-                for (var1_int = 0; var1_int < 2; var1_int++) {
-                    var2 = ((ga) this).field_e[var1_int];
+            while (!this.field_d) {
+                for (var1_int = 0; (var1_int ^ -1) > -3; var1_int++) {
+                    var2 = this.field_e[var1_int];
                     if (var2 != null) {
                         var2.f();
                     }
                 }
                 wk.a((byte) -123, 10L);
-                Main.a((Object) null, ((ga) this).field_a, (byte) 109);
+                Main.a((Object) null, this.field_a, (byte) 109);
             }
         } catch (Exception exception) {
-            Object var5 = null;
-            k.a((Throwable) (Object) exception, (byte) -96, (String) null);
+            String var5 = (String) null;
+            k.a((Throwable) ((Object) exception), (byte) -96, (String) null);
         } finally {
-            ((ga) this).field_c = false;
+            this.field_c = false;
         }
     }
 
     ga() {
-        ((ga) this).field_e = new gd[2];
-        ((ga) this).field_d = false;
-        ((ga) this).field_c = false;
+        this.field_e = new gd[2];
+        this.field_d = false;
+        this.field_c = false;
     }
 
     static {

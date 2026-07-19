@@ -24,6 +24,7 @@ final class cc extends rk {
         int var14 = 0;
         hb var15 = null;
         int[][] var19 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var12 = Confined.field_J ? 1 : 0;
         try {
@@ -31,7 +32,7 @@ final class cc extends rk {
             var13 = e.field_c;
             var15 = var13;
             var2 = var15.c(32);
-            var3 = (cc) (Object) uc.field_bb.a(77);
+            var3 = (cc) ((Object) uc.field_bb.a(77));
             L1: while (true) {
               L2: {
                 if (var3 == null) {
@@ -40,18 +41,19 @@ final class cc extends rk {
                   if (var2 == var3.field_o) {
                     break L2;
                   } else {
-                    var3 = (cc) (Object) uc.field_bb.d(2123);
+                    var3 = (cc) ((Object) uc.field_bb.d(param0 ^ 2123));
                     continue L1;
                   }
                 }
               }
               if (var3 == null) {
                 dc.d(122);
-                return;
+                decompiledRegionSelector0 = 0;
+                break L0;
               } else {
                 L3: {
                   var4 = var15.c(32);
-                  if (0 != var4) {
+                  if (param0 != var4) {
                     var5 = var3.field_n;
                     em.field_f[0] = qc.field_m;
                     var6_int = 1;
@@ -81,7 +83,7 @@ final class cc extends rk {
                                       var19[1][var14 * 4 + 1] = am.field_I[var11];
                                       var19[1][2 + 4 * var14] = em.field_b[var11];
                                       var19[1][4 * var14 - -3] = oc.field_m[var11];
-                                      if (im.a(em.field_f[var11], 44)) {
+                                      if (im.a(em.field_f[var11], param0 ^ 44)) {
                                         if (em.field_b[var11] + am.field_I[var11] + oc.field_m[var11] == 0) {
                                           var6[1][var14] = null;
                                           var14--;
@@ -128,7 +130,7 @@ final class cc extends rk {
                             }
                           } else {
                             L10: {
-                              bd.a((kg) (Object) var15, (byte) -45);
+                              bd.a(var15, (byte) -45);
                               if (0 == var6_int) {
                                 cl.a(eh.field_R, qg.field_h, var6_int, dj.field_gb, (byte) -127, ll.field_d);
                                 break L10;
@@ -152,6 +154,7 @@ final class cc extends rk {
                     break L3;
                   }
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             }
@@ -159,86 +162,109 @@ final class cc extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "cc.F(" + 0 + ')');
+          throw sd.a((Throwable) ((Object) var1), "cc.F(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static mi a(int param0, int param1) {
         if (param1 != -14245) {
-            field_p = null;
+            field_p = (String) null;
         }
         return we.a(param0, false, (byte) -106, true, 1, false);
     }
 
     final static boolean a(byte param0) {
+        if (param0 <= 79) {
+            cc.b(true);
+        }
         return null == dn.field_d ? on.field_e : true;
     }
 
     final static int a(boolean param0, byte param1, int param2, int param3) {
+        if (param1 >= -109) {
+            field_p = (String) null;
+        }
         return oc.b(1);
     }
 
     public static void b(boolean param0) {
+        mi discarded$0 = null;
+        if (!param0) {
+            discarded$0 = cc.a(-115, 67);
+        }
         field_p = null;
     }
 
     final static int a(boolean param0, CharSequence param1) {
         RuntimeException var2 = null;
-        int stackIn_1_0 = 0;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_0_0 = 0;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        int stackOut_2_0 = 0;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            stackOut_0_0 = b.a(true, 10, (byte) 16, param1);
-            stackIn_1_0 = stackOut_0_0;
+            L1: {
+              if (param0) {
+                break L1;
+              } else {
+                field_p = (String) null;
+                break L1;
+              }
+            }
+            stackOut_2_0 = b.a(true, 10, (byte) 16, param1);
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("cc.C(").append(true).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackOut_4_0 = (RuntimeException) (var2);
+            stackOut_4_1 = new StringBuilder().append("cc.C(").append(param0).append(',');
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     private cc() throws Throwable {
@@ -246,10 +272,6 @@ final class cc extends rk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "Swap up/down: ";
     }
 }

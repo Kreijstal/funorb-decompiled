@@ -15,7 +15,7 @@ final class lm implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new tm((lm) this);
+        return (Iterator) ((Object) new tm((lm) (this)));
     }
 
     final void a(jl param0, int param1) {
@@ -26,12 +26,12 @@ final class lm implements Iterable {
             return;
         }
         try {
-            param0.field_o = ((lm) this).field_b;
-            param0.field_q = ((lm) this).field_b.field_q;
+            param0.field_o = this.field_b;
+            param0.field_q = this.field_b.field_q;
             param0.field_q.field_o = param0;
             param0.field_o.field_q = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "lm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "lm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -48,19 +48,20 @@ final class lm implements Iterable {
     }
 
     final jl a(int param0) {
+        jl discarded$2 = null;
         jl var2 = null;
         if (param0 == -29870) {
-          var2 = ((lm) this).field_b.field_o;
-          if (((lm) this).field_b == var2) {
+          var2 = this.field_b.field_o;
+          if (this.field_b == var2) {
             return null;
           } else {
             var2.b(true);
             return var2;
           }
         } else {
-          jl discarded$2 = ((lm) this).a(-12);
-          var2 = ((lm) this).field_b.field_o;
-          if (((lm) this).field_b == var2) {
+          discarded$2 = this.a(-12);
+          var2 = this.field_b.field_o;
+          if (this.field_b == var2) {
             return null;
           } else {
             var2.b(true);
@@ -70,10 +71,6 @@ final class lm implements Iterable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "This entry doesn't match";
     }
 }

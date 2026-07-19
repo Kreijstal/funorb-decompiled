@@ -10,7 +10,7 @@ final class oca extends jm {
 
     final void a(boolean param0, op param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        lu var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -30,12 +30,12 @@ final class oca extends jm {
         try {
           L0: {
             L1: {
-              param1.field_a[((oca) this).field_q][((oca) this).field_m].field_m = true;
+              param1.field_a[this.field_q][this.field_m].field_m = true;
               if (!param0) {
                 break L1;
               } else {
-                var4 = null;
-                ((oca) this).b((lu) null, (byte) 17);
+                var4 = (lu) null;
+                this.b((lu) null, (byte) 17);
                 break L1;
               }
             }
@@ -45,23 +45,23 @@ final class oca extends jm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("oca.C(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -69,17 +69,17 @@ final class oca extends jm {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     final void b(lu param0, byte param1) {
         try {
-            param0.d(((oca) this).field_q, 0);
-            param0.d(((oca) this).field_m, 0);
+            param0.d(this.field_q, 0);
+            param0.d(this.field_m, 0);
             int var3_int = 118 % ((37 - param1) / 38);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oca.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "oca.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -88,9 +88,9 @@ final class oca extends jm {
             return;
         }
         try {
-            param0.field_o.b(30996, ((oca) this).field_q, ((oca) this).field_m);
+            param0.field_o.b(30996, this.field_q, this.field_m);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "oca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -110,26 +110,22 @@ final class oca extends jm {
     }
 
     oca(int param0, int param1) {
-        ((oca) this).field_m = param1;
-        ((oca) this).field_q = param0;
-        ((oca) this).field_j = 1;
+        this.field_m = param1;
+        this.field_q = param0;
+        this.field_j = 1;
     }
 
     oca(lu param0) {
         try {
-            ((oca) this).field_j = 1;
-            ((oca) this).field_q = param0.b(16711935);
-            ((oca) this).field_m = param0.b(16711935);
+            this.field_j = 1;
+            this.field_q = param0.b(16711935);
+            this.field_m = param0.b(16711935);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oca.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "oca.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "This option is restricted. Your rating is currently <%0>.<br>Can you achieve the qualifying rating of <%1>?";
     }
 }

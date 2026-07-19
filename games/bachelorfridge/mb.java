@@ -12,22 +12,22 @@ final class mb {
         int var4 = 0;
         int var5 = 0;
         var5 = BachelorFridge.field_y;
-        var3 = ((mb) this).field_d.length;
-        var4 = 0;
+        var3 = this.field_d.length;
+        var4 = 103 % ((41 - param0) / 45);
         L0: while (true) {
           if (var3 > param1) {
             return var3;
           } else {
-            if (((mb) this).field_c) {
+            if (this.field_c) {
               if (0 == var3) {
                 var3 = 1;
                 continue L0;
               } else {
-                var3 = var3 * ((mb) this).field_a;
+                var3 = var3 * this.field_a;
                 continue L0;
               }
             } else {
-              var3 = var3 + ((mb) this).field_a;
+              var3 = var3 + this.field_a;
               continue L0;
             }
           }
@@ -37,18 +37,18 @@ final class mb {
     final void a(int param0, boolean param1) {
         if (param1) {
           if (param0 >= 0) {
-            if (((mb) this).field_b < param0) {
+            if (this.field_b < param0) {
               throw new ArrayIndexOutOfBoundsException(param0);
             } else {
               L0: {
-                if (param0 != ((mb) this).field_b) {
-                  bl.a(((mb) this).field_d, 1 + param0, ((mb) this).field_d, param0, -param0 + ((mb) this).field_b);
+                if (param0 != this.field_b) {
+                  bl.a(this.field_d, 1 + param0, this.field_d, param0, -param0 + this.field_b);
                   break L0;
                 } else {
                   break L0;
                 }
               }
-              ((mb) this).field_b = ((mb) this).field_b - 1;
+              this.field_b = this.field_b - 1;
               return;
             }
           } else {
@@ -57,18 +57,18 @@ final class mb {
         } else {
           this.a((byte) -124, 93, -106);
           if (param0 >= 0) {
-            if (((mb) this).field_b < param0) {
+            if (this.field_b < param0) {
               throw new ArrayIndexOutOfBoundsException(param0);
             } else {
               L1: {
-                if (param0 != ((mb) this).field_b) {
-                  bl.a(((mb) this).field_d, 1 + param0, ((mb) this).field_d, param0, -param0 + ((mb) this).field_b);
+                if (param0 != this.field_b) {
+                  bl.a(this.field_d, 1 + param0, this.field_d, param0, -param0 + this.field_b);
                   break L1;
                 } else {
                   break L1;
                 }
               }
-              ((mb) this).field_b = ((mb) this).field_b - 1;
+              this.field_b = this.field_b - 1;
               return;
             }
           } else {
@@ -79,35 +79,35 @@ final class mb {
 
     final void c(int param0, int param1) {
         int var3 = 83 / ((param1 - -20) / 59);
-        this.a((byte) 24, ((mb) this).field_b + 1, param0);
+        this.a((byte) 24, this.field_b + 1, param0);
     }
 
     final int a(byte param0, int param1) {
         if (param0 != -24) {
             return 121;
         }
-        if (!(param1 <= ((mb) this).field_b)) {
+        if (!(param1 <= this.field_b)) {
             throw new ArrayIndexOutOfBoundsException(param1);
         }
-        return ((mb) this).field_d[param1];
+        return this.field_d[param1];
     }
 
     private final void a(byte param0, int param1, int param2) {
         L0: {
-          if (((mb) this).field_b < param1) {
-            ((mb) this).field_b = param1;
+          if (this.field_b < param1) {
+            this.field_b = param1;
             break L0;
           } else {
             break L0;
           }
         }
         if (param0 > 3) {
-          if (param1 >= ((mb) this).field_d.length) {
+          if (param1 >= this.field_d.length) {
             this.a(1, param1);
-            ((mb) this).field_d[param1] = param2;
+            this.field_d[param1] = param2;
             return;
           } else {
-            ((mb) this).field_d[param1] = param2;
+            this.field_d[param1] = param2;
             return;
           }
         } else {
@@ -120,18 +120,25 @@ final class mb {
     }
 
     private final void a(int param0, int param1) {
-        int[] var4 = new int[this.b(119, param1)];
-        int[] var3 = var4;
-        bl.a(((mb) this).field_d, 0, var4, 0, ((mb) this).field_d.length);
-        ((mb) this).field_d = var4;
+        int[] var3 = null;
+        int[] var4 = null;
+        var4 = new int[this.b(param0 ^ 118, param1)];
+        var3 = var4;
+        bl.a(this.field_d, 0, var4, 0, this.field_d.length);
+        if (param0 != 1) {
+          return;
+        } else {
+          this.field_d = var4;
+          return;
+        }
     }
 
     final int a(byte param0) {
         if (param0 >= -123) {
-            ((mb) this).field_b = 46;
-            return 1 + ((mb) this).field_b;
+            this.field_b = 46;
+            return 1 + this.field_b;
         }
-        return 1 + ((mb) this).field_b;
+        return 1 + this.field_b;
     }
 
     static {

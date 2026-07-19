@@ -13,7 +13,7 @@ final class rp implements ef {
 
     public final boolean c(int param0, int param1) {
         if (param0 != 1) {
-            Object var4 = null;
+            String var4 = (String) null;
             rp.a((java.applet.Applet) null, -50, (String) null);
             return false;
         }
@@ -48,6 +48,8 @@ final class rp implements ef {
             RuntimeException stackIn_17_0 = null;
             StringBuilder stackIn_17_1 = null;
             String stackIn_17_2 = null;
+            int decompiledRegionSelector0 = 0;
+            int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_11_0 = null;
             StringBuilder stackOut_11_1 = null;
@@ -83,42 +85,51 @@ final class rp implements ef {
                         }
                       }
                       je.a(param0, "document.cookie=\"" + var5 + "\"", (byte) 124);
+                      decompiledRegionSelector0 = 1;
                       break L1;
                     } else {
-                      return;
+                      decompiledRegionSelector0 = 0;
+                      break L1;
                     }
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   L3: {
                     var3_ref = decompiledCaughtException;
+                    decompiledRegionSelector0 = 1;
                     break L3;
                   }
                 }
-                op.a(0, param0);
-                break L0;
+                if (decompiledRegionSelector0 == 0) {
+                  decompiledRegionSelector1 = 0;
+                  break L0;
+                } else {
+                  op.a(0, param0);
+                  decompiledRegionSelector1 = 1;
+                  break L0;
+                }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_11_0 = (RuntimeException) var3_ref2;
+                stackOut_11_0 = (RuntimeException) (var3_ref2);
                 stackOut_11_1 = new StringBuilder().append("rp.F(");
                 stackIn_13_0 = stackOut_11_0;
                 stackIn_13_1 = stackOut_11_1;
                 stackIn_12_0 = stackOut_11_0;
                 stackIn_12_1 = stackOut_11_1;
                 if (param0 == null) {
-                  stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-                  stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+                  stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+                  stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
                   stackOut_13_2 = "null";
                   stackIn_14_0 = stackOut_13_0;
                   stackIn_14_1 = stackOut_13_1;
                   stackIn_14_2 = stackOut_13_2;
                   break L4;
                 } else {
-                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+                  stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+                  stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
                   stackOut_12_2 = "{...}";
                   stackIn_14_0 = stackOut_12_0;
                   stackIn_14_1 = stackOut_12_1;
@@ -127,23 +138,23 @@ final class rp implements ef {
                 }
               }
               L5: {
-                stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+                stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
                 stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param1).append(',');
                 stackIn_16_0 = stackOut_14_0;
                 stackIn_16_1 = stackOut_14_1;
                 stackIn_15_0 = stackOut_14_0;
                 stackIn_15_1 = stackOut_14_1;
                 if (param2 == null) {
-                  stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                  stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+                  stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+                  stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
                   stackOut_16_2 = "null";
                   stackIn_17_0 = stackOut_16_0;
                   stackIn_17_1 = stackOut_16_1;
                   stackIn_17_2 = stackOut_16_2;
                   break L5;
                 } else {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+                  stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
                   stackOut_15_2 = "{...}";
                   stackIn_17_0 = stackOut_15_0;
                   stackIn_17_1 = stackOut_15_1;
@@ -151,7 +162,12 @@ final class rp implements ef {
                   break L5;
                 }
               }
-              throw wn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+              throw wn.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+            }
+            if (decompiledRegionSelector1 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -163,9 +179,9 @@ final class rp implements ef {
     public final int[] a(float param0, int param1, int param2) {
         if (param2 != 233) {
             rp.a(1);
-            return ((rp) this).field_h[param1].field_F;
+            return this.field_h[param1].field_F;
         }
-        return ((rp) this).field_h[param1].field_F;
+        return this.field_h[param1].field_F;
     }
 
     public final boolean d(int param0, int param1) {
@@ -182,13 +198,13 @@ final class rp implements ef {
         try {
             var5 = new int[6];
             int[] var3 = var5;
-            ((rp) this).field_h = dk.a(var5, true, param1);
+            this.field_h = dk.a(var5, true, param1);
             var4 = oo.field_o;
-            oo.a((ef) this);
-            ((rp) this).field_g = (fc) (Object) th.a(param0, var5, -27911);
+            oo.a((ef) (this));
+            this.field_g = (fc) ((Object) th.a(param0, var5, -27911));
             oo.a(var4);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "rp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "rp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -223,7 +239,7 @@ final class rp implements ef {
             if (param1 == 28580) {
               break L0;
             } else {
-              ((rp) this).field_g = null;
+              this.field_g = (fc) null;
               break L0;
             }
           }
@@ -231,10 +247,10 @@ final class rp implements ef {
           var5 = param0[2];
           param0[2] = 0;
           var6 = oo.field_o;
-          oo.a((ef) this);
+          oo.a((ef) (this));
           try {
             L1: {
-              ((rp) this).field_g.a(param0, mb.field_w);
+              this.field_g.a(param0, mb.field_w);
               break L1;
             }
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -255,23 +271,23 @@ final class rp implements ef {
           decompiledCaughtException = decompiledCaughtParameter1;
           L2: {
             var3 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_0 = (RuntimeException) (var3);
             stackOut_8_1 = new StringBuilder().append("rp.H(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -279,16 +295,16 @@ final class rp implements ef {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
         }
     }
 
     public static void a(int param0) {
-        Object var2 = null;
+        String var2 = null;
         field_b = null;
         field_e = null;
         if (param0 >= -77) {
-          var2 = null;
+          var2 = (String) null;
           rp.a((java.applet.Applet) null, -108, (String) null);
           field_c = null;
           field_d = null;
@@ -311,10 +327,6 @@ final class rp implements ef {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new ve(14, 0, 4, 1);
         field_d = "Blue won!";
         field_b = "<%0> is not a member, and cannot play with the current options.";

@@ -10,14 +10,10 @@ final class qb {
 
     public static void a(byte param0) {
         field_d = null;
-        int var1 = 0;
+        int var1 = -41 % ((-43 - param0) / 54);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "qb.A(";
         field_c = true;
         field_d = "Please select an option in the '<%0>' row.";

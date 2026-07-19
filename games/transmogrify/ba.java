@@ -15,7 +15,12 @@ final class ba extends wf {
     int field_i;
 
     final static hg e(int param0) {
-        return new hg(le.h(23), uf.a((byte) -76));
+        if (param0 > 0) {
+          field_n = -53;
+          return new hg(le.h(23), uf.a((byte) -76));
+        } else {
+          return new hg(le.h(23), uf.a((byte) -76));
+        }
     }
 
     public static void d(int param0) {
@@ -27,15 +32,16 @@ final class ba extends wf {
     }
 
     final static void a(int param0, int param1) {
+        int discarded$0 = 0;
         sg.field_e = param1;
         if (param0 < 104) {
-            int discarded$0 = ba.a((byte) -122);
+            discarded$0 = ba.a((byte) -122);
         }
     }
 
     final static int a(byte param0) {
         if (param0 != 101) {
-            field_l = null;
+            field_l = (String[]) null;
             return mf.field_d;
         }
         return mf.field_d;
@@ -45,10 +51,6 @@ final class ba extends wf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = 2;
         field_l = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
     }

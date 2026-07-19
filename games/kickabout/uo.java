@@ -5,6 +5,8 @@ final class uo extends hu {
     private byte[][] field_B;
 
     final static void b(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -23,7 +25,7 @@ final class uo extends hu {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 if (param1[incrementValue$66] == 0) {
                   param4++;
@@ -31,7 +33,7 @@ final class uo extends hu {
                   continue L1;
                 } else {
                   var12 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (((var12 & 16711935) * param9 & -16711936) + ((var12 & 65280) * param9 & 16711680) >> 8) + param2;
                   var11++;
@@ -45,8 +47,8 @@ final class uo extends hu {
 
     uo(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
         super(param0, param1, param2, param3, param4);
-        ((uo) this).field_B = new byte[256][];
-        ((uo) this).field_B = param5;
+        this.field_B = new byte[256][];
+        this.field_B = param5;
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
@@ -109,7 +111,7 @@ final class uo extends hu {
             break L4;
           } else {
             if (param4 > 0) {
-              uo.b(on.field_a, ((uo) this).field_B[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+              uo.b(on.field_a, this.field_B[param0], param5, var12, var9, param3, param4, var10, var11, param6);
               return;
             } else {
               break L4;
@@ -179,7 +181,7 @@ final class uo extends hu {
           } else {
             if (param4 > 0) {
               var12 = var12 - var11 * param3;
-              uo.a(on.field_a, ((uo) this).field_B[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
+              uo.a(on.field_a, this.field_B[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
               return;
             } else {
               break L4;
@@ -189,6 +191,8 @@ final class uo extends hu {
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -252,14 +256,14 @@ final class uo extends hu {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$2 = param7;
+                incrementValue$2 = param7;
                 param7++;
                 if (param1[incrementValue$2] == 0) {
                   param8++;
                   var20++;
                   continue L3;
                 } else {
-                  int incrementValue$3 = param8;
+                  incrementValue$3 = param8;
                   param8++;
                   on.field_a[incrementValue$3] = param6;
                   var20++;
@@ -272,6 +276,16 @@ final class uo extends hu {
     }
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -293,14 +307,14 @@ final class uo extends hu {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     if (param1[incrementValue$218] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -310,52 +324,52 @@ final class uo extends hu {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   if (param1[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   if (param1[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   if (param1[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 if (param1[incrementValue$226] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -369,13 +383,18 @@ final class uo extends hu {
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$9 = 0;
         int var12 = 0;
         int var10 = -(param6 >> 2);
         param6 = -(param6 & 3);
         for (var11 = -param7; var11 < 0; var11++) {
             for (var12 = var10; var12 < 0; var12++) {
                 if (param1[param3] != 0) {
-                    int incrementValue$1 = param4;
+                    incrementValue$1 = param4;
                     param4++;
                     param0[incrementValue$1] = param2;
                 } else {
@@ -383,7 +402,7 @@ final class uo extends hu {
                 }
                 param3 = param3 + param5;
                 if (param1[param3] != 0) {
-                    int incrementValue$3 = param4;
+                    incrementValue$3 = param4;
                     param4++;
                     param0[incrementValue$3] = param2;
                 } else {
@@ -391,7 +410,7 @@ final class uo extends hu {
                 }
                 param3 = param3 + param5;
                 if (param1[param3] != 0) {
-                    int incrementValue$5 = param4;
+                    incrementValue$5 = param4;
                     param4++;
                     param0[incrementValue$5] = param2;
                 } else {
@@ -399,7 +418,7 @@ final class uo extends hu {
                 }
                 param3 = param3 + param5;
                 if (param1[param3] != 0) {
-                    int incrementValue$7 = param4;
+                    incrementValue$7 = param4;
                     param4++;
                     param0[incrementValue$7] = param2;
                 } else {
@@ -409,7 +428,7 @@ final class uo extends hu {
             }
             for (var12 = param6; var12 < 0; var12++) {
                 if (param1[param3] != 0) {
-                    int incrementValue$9 = param4;
+                    incrementValue$9 = param4;
                     param4++;
                     param0[incrementValue$9] = param2;
                 } else {
@@ -484,10 +503,10 @@ final class uo extends hu {
             if (param4 > 0) {
               L5: {
                 if (on.field_d == null) {
-                  uo.a(on.field_a, ((uo) this).field_B[param0], param5, var11, var8, param3, param4, var9, var10);
+                  uo.a(on.field_a, this.field_B[param0], param5, var11, var8, param3, param4, var9, var10);
                   break L5;
                 } else {
-                  uo.a(on.field_a, ((uo) this).field_B[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, on.field_d, on.field_l);
+                  uo.a(on.field_a, this.field_B[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, on.field_d, on.field_l);
                   break L5;
                 }
               }
@@ -560,7 +579,7 @@ final class uo extends hu {
           } else {
             if (param4 > 0) {
               var11 = var11 - var10 * param3;
-              uo.a(on.field_a, ((uo) this).field_B[param0], param5, var12, var8, var10, param3, param4, var9, var11);
+              uo.a(on.field_a, this.field_B[param0], param5, var12, var8, var10, param3, param4, var9, var11);
               return;
             } else {
               break L4;
@@ -572,6 +591,7 @@ final class uo extends hu {
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var11 = 0;
         int var12 = 0;
+        int incrementValue$0 = 0;
         int var13 = 0;
         param2 = ((param2 & 16711935) * param10 & -16711936) + ((param2 & 65280) * param10 & 16711680) >> 8;
         param10 = 256 - param10;
@@ -579,7 +599,7 @@ final class uo extends hu {
             for (var12 = -param6; var12 < 0; var12++) {
                 if (param1[param3] != 0) {
                     var13 = param0[param4];
-                    int incrementValue$0 = param4;
+                    incrementValue$0 = param4;
                     param4++;
                     param0[incrementValue$0] = (((var13 & 16711935) * param10 & -16711936) + ((var13 & 65280) * param10 & 16711680) >> 8) + param2;
                 } else {

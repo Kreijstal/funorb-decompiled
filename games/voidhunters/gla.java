@@ -7,7 +7,7 @@ final class gla {
     private jp field_a;
 
     protected final void finalize() throws Throwable {
-        ((gla) this).field_a.a(((gla) this).field_c, (byte) 98);
+        this.field_a.a(this.field_c, (byte) 98);
         super.finalize();
     }
 
@@ -20,18 +20,14 @@ final class gla {
 
     gla(jp param0, int param1, int param2) {
         try {
-            ((gla) this).field_a = param0;
-            ((gla) this).field_c = param2;
+            this.field_a = param0;
+            this.field_c = param2;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "gla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "gla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Click here or press V to select the grapple";
     }
 }

@@ -28,10 +28,6 @@ abstract class uj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "uj.B(";
         field_b = "OVER <%0>";
         field_e = "BDA-E";

@@ -9,10 +9,20 @@ final class wj {
     static mf field_a;
 
     public static void a(int param0) {
-        field_b = null;
-        field_c = null;
-        field_a = null;
-        field_d = null;
+        if (param0 != 0) {
+          field_e = 48;
+          field_b = null;
+          field_c = null;
+          field_a = null;
+          field_d = null;
+          return;
+        } else {
+          field_b = null;
+          field_c = null;
+          field_a = null;
+          field_d = null;
+          return;
+        }
     }
 
     final static tg[] a(byte param0, int param1) {
@@ -21,7 +31,7 @@ final class wj {
         var3 = new tg[9];
         var2 = var3;
         if (param0 > -53) {
-          field_b = null;
+          field_b = (String) null;
           var3[4] = hc.a(64, param1, (byte) -123);
           return var2;
         } else {
@@ -31,10 +41,6 @@ final class wj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = 0;
         field_b = "Login: ";
         field_a = new mf();

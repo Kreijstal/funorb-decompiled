@@ -10,19 +10,18 @@ final class it {
     }
 
     final static vb a(int param0, int param1) {
+        if (param0 != 255) {
+            return (vb) null;
+        }
         return v.a(100, (byte) -76, 128, param1, 0, 255);
     }
 
     public static void a(int param0) {
         field_b = null;
-        int var1 = 2;
+        int var1 = 47 % ((param0 - 51) / 40);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new ft(3);
     }
 }

@@ -11,6 +11,6 @@ public class gb {
     public int field_f;
 
     gb() {
-        ((gb) this).field_a = 0;
+        this.field_a = 0;
     }
 }

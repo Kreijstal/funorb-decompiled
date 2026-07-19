@@ -13,10 +13,6 @@ final class nb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "nb.A(";
     }
 }

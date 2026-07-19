@@ -12,27 +12,37 @@ final class ln implements Iterator {
     private qa field_e;
 
     public final Object next() {
-        qa var1 = ((ln) this).field_e;
-        if (((ln) this).field_b.field_d != var1) {
-            ((ln) this).field_e = var1.field_k;
-        } else {
+        qa var1 = null;
+        var1 = this.field_e;
+        if (this.field_b.field_d != var1) {
+          this.field_e = var1.field_k;
+          if (ZombieDawnMulti.field_E) {
             var1 = null;
-            ((ln) this).field_e = null;
+            this.field_e = null;
+            this.field_a = var1;
+            return var1;
+          } else {
+            this.field_a = var1;
+            return var1;
+          }
+        } else {
+          var1 = null;
+          this.field_e = null;
+          this.field_a = var1;
+          return var1;
         }
-        ((ln) this).field_a = var1;
-        return (Object) (Object) var1;
     }
 
     public final boolean hasNext() {
-        return ((ln) this).field_e != ((ln) this).field_b.field_d;
+        return this.field_e != this.field_b.field_d;
     }
 
     public final void remove() {
-        if (!(((ln) this).field_a != null)) {
+        if (!(this.field_a != null)) {
             throw new IllegalStateException();
         }
-        ((ln) this).field_a.a(-4564);
-        ((ln) this).field_a = null;
+        this.field_a.a(-4564);
+        this.field_a = null;
     }
 
     public static void a(int param0) {
@@ -51,23 +61,19 @@ final class ln implements Iterator {
     }
 
     ln(e param0) {
-        ((ln) this).field_a = null;
+        this.field_a = null;
         try {
-            ((ln) this).field_b = param0;
-            ((ln) this).field_a = null;
-            ((ln) this).field_e = ((ln) this).field_b.field_d.field_k;
+            this.field_b = param0;
+            this.field_a = null;
+            this.field_e = this.field_b.field_d.field_k;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ln.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "ln.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new int[128];
         field_c = "Report abuse";
-        field_d = new char[]{'[', ']', '#'};
+        field_d = new char[]{(char)91, (char)93, (char)35};
     }
 }

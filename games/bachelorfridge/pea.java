@@ -9,11 +9,11 @@ final class pea extends pp {
 
     final void a(aga param0, op param1, int param2) {
         Object var4 = null;
-        if (null != ((pea) this).field_h) {
-            var4 = (Object) (Object) ((pea) this).field_h.a(116, param1);
+        if (null != this.field_h) {
+            var4 = this.field_h.a(116, param1);
         }
         if (var4 == null) {
-            var4 = (Object) (Object) param1.c(((pea) this).field_j, ((pea) this).field_i, 112);
+            var4 = param1.c(this.field_j, this.field_i, 112);
         }
         if (var4 == null) {
             return;
@@ -22,9 +22,9 @@ final class pea extends pp {
             return;
         }
         try {
-            ((aga) var4).field_A = false;
+            ((aga) (var4)).field_A = false;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "pea.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "pea.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -42,21 +42,21 @@ final class pea extends pp {
         try {
             int var3_int = 23 % ((param1 - 34) / 58);
             super.a(param0, (byte) 113);
-            er.a(((pea) this).field_h, 115, param0);
-            param0.d(((pea) this).field_j, 0);
-            param0.d(((pea) this).field_i, 0);
+            er.a(this.field_h, 115, param0);
+            param0.d(this.field_j, 0);
+            param0.d(this.field_i, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "pea.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "pea.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     pea(nq param0, int param1, int param2) {
         try {
-            ((pea) this).field_i = param2;
-            ((pea) this).field_h = param0;
-            ((pea) this).field_j = param1;
+            this.field_i = param2;
+            this.field_h = param0;
+            this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "pea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "pea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -71,7 +71,12 @@ final class pea extends pp {
             var1_int = 0;
             L1: while (true) {
               if (rn.field_s.field_g.field_m.length <= var1_int) {
-                break L0;
+                if (param0 > 113) {
+                  break L0;
+                } else {
+                  pea.e((byte) 34);
+                  return;
+                }
               } else {
                 rn.field_s.field_g.field_m[var1_int] = -1;
                 var1_int++;
@@ -82,15 +87,11 @@ final class pea extends pp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "pea.B(" + 120 + ')');
+          throw pe.a((Throwable) ((Object) var1), "pea.B(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Drag and drop some food into the fridge.";
     }
 }

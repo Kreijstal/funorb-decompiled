@@ -28,10 +28,10 @@ final class dq {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((dq) this).field_b[var4] != null) {
-                    var5 = ((dq) this).field_b[var4].field_a * 22050 / 1000;
-                    var6 = ((dq) this).field_b[var4].field_s * 22050 / 1000;
-                    var13 = ((dq) this).field_b[var4].a(var5, ((dq) this).field_b[var4].field_a);
+                  if (this.field_b[var4] != null) {
+                    var5 = this.field_b[var4].field_a * 22050 / 1000;
+                    var6 = this.field_b[var4].field_s * 22050 / 1000;
+                    var13 = this.field_b[var4].a(var5, this.field_b[var4].field_a);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -62,9 +62,9 @@ final class dq {
               return new byte[]{};
             }
           } else {
-            if (((dq) this).field_b[var2] != null) {
-              if (((dq) this).field_b[var2].field_a + ((dq) this).field_b[var2].field_s > var1) {
-                var1 = ((dq) this).field_b[var2].field_a + ((dq) this).field_b[var2].field_s;
+            if (this.field_b[var2] != null) {
+              if (this.field_b[var2].field_a + this.field_b[var2].field_s > var1) {
+                var1 = this.field_b[var2].field_a + this.field_b[var2].field_s;
                 var2++;
                 continue L0;
               } else {
@@ -81,25 +81,25 @@ final class dq {
 
     final kk b() {
         byte[] var1 = this.a();
-        return new kk(22050, var1, 22050 * ((dq) this).field_c / 1000, 22050 * ((dq) this).field_a / 1000);
+        return new kk(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
     private dq(ob param0) {
         int var2 = 0;
         int var3 = 0;
-        ((dq) this).field_b = new pk[10];
+        this.field_b = new pk[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((dq) this).field_c = param0.f(-20976);
-            ((dq) this).field_a = param0.f(-20976);
+            this.field_c = param0.f(-20976);
+            this.field_a = param0.f(-20976);
             return;
           } else {
             var3 = param0.j(-68);
             if (var3 != 0) {
               param0.field_j = param0.field_j - 1;
-              ((dq) this).field_b[var2] = new pk();
-              ((dq) this).field_b[var2].a(param0);
+              this.field_b[var2] = new pk();
+              this.field_b[var2].a(param0);
               var2++;
               continue L0;
             } else {

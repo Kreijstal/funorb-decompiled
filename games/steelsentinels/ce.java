@@ -14,9 +14,9 @@ final class ce extends ck {
 
     ce(byte[] param0) {
         try {
-            ((ce) this).field_s = param0;
+            this.field_s = param0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ce.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "ce.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -24,16 +24,21 @@ final class ce extends ck {
         field_v = null;
         field_t = null;
         field_o = null;
-        field_p = null;
-        field_q = null;
-        field_u = null;
+        if (param0 != 77) {
+          field_o = (gh) null;
+          field_p = null;
+          field_q = null;
+          field_u = null;
+          return;
+        } else {
+          field_p = null;
+          field_q = null;
+          field_u = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = jg.a(true);
         field_u = "Please enter a year between <%0> and <%1>";
         field_w = false;

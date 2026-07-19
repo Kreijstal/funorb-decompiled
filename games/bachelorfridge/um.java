@@ -9,17 +9,20 @@ final class um {
 
     public static void a(byte param0) {
         field_b = null;
+        if (param0 != 106) {
+            field_c = 55;
+        }
     }
 
     final static boolean a(boolean param0) {
-        return !ua.field_b;
+        if (!param0) {
+            field_b = (String) null;
+            return !ua.field_b ? true : false;
+        }
+        return !ua.field_b ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "This password contains your email address, and would be easy to guess";
     }
 }

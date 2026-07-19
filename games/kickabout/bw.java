@@ -10,11 +10,18 @@ final class bw {
     static int[] field_f;
 
     final static int a(long param0, int param1, long param2) {
-        return (int)((param2 << 16) / param0);
+        ak discarded$0 = null;
+        if (param1 != 249299984) {
+            discarded$0 = bw.a(32, -61, false, -3, 30, true);
+        }
+        return (int)((param2 << 249299984) / param0);
     }
 
     public static void a(boolean param0) {
         field_f = null;
+        if (param0) {
+            bw.a(false);
+        }
         field_c = null;
         field_d = null;
         field_e = null;
@@ -25,24 +32,23 @@ final class bw {
     final static ak a(int param0, int param1, boolean param2, int param3, int param4, boolean param5) {
         int var7 = 0;
         int var8 = Kickabout.field_G;
+        if (param4 != 9103) {
+            return (ak) null;
+        }
         ak var6 = new ak(4);
-        var6.field_e = ((ot) (Object) lu.field_p[param5 ? 1 : 0]).h();
+        var6.field_e = ((ot) ((Object) lu.field_p[param5 ? 1 : 0])).h();
         if (!(!param2)) {
             var6.field_e.g();
         }
         for (var7 = 0; var7 < param1; var7++) {
             var6.field_e.d();
         }
-        var6.field_g = -(var6.field_e.field_v >> 1) + param3;
+        var6.field_g = -(var6.field_e.field_v >> -1507173503) + param3;
         var6.field_k = param0;
         return var6;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_a = new int[8];
         field_d = new int[8];

@@ -10,6 +10,10 @@ final class oia extends kj {
     static String field_i;
 
     final boolean b(int param0) {
+        int fieldTemp$4 = 0;
+        int discarded$5 = 0;
+        int discarded$6 = 0;
+        int discarded$7 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -63,26 +67,26 @@ final class oia extends kj {
         int stackOut_13_5 = 0;
         var10 = BachelorFridge.field_y;
         if (param0 > 21) {
-          int fieldTemp$4 = ((oia) this).field_h - 2;
-          ((oia) this).field_h = ((oia) this).field_h - 2;
+          fieldTemp$4 = this.field_h - 2;
+          this.field_h = this.field_h - 2;
           if (0 == fieldTemp$4) {
             return true;
           } else {
             L0: {
-              if (((oia) this).field_h <= 126) {
-                var2 = ((oia) this).field_h;
+              if (-127 <= (this.field_h ^ -1)) {
+                var2 = this.field_h;
                 var2 += 16;
                 var3 = 0;
                 L1: while (true) {
-                  if (var3 >= 32) {
+                  if ((var3 ^ -1) <= -33) {
                     break L0;
                   } else {
                     L2: {
-                      var4 = kla.a(((oia) this).field_h, ((oia) this).field_e.field_h.field_w, -2147483648) - (((oia) this).field_h >> 1);
-                      stackOut_9_0 = (((oia) this).field_h >> 2) - Math.abs(var4) / 2;
+                      var4 = kla.a(this.field_h, this.field_e.field_h.field_w, -2147483648) - (this.field_h >> -794847263);
+                      stackOut_9_0 = (this.field_h >> 1210346978) - Math.abs(var4) / 2;
                       stackIn_11_0 = stackOut_9_0;
                       stackIn_10_0 = stackOut_9_0;
-                      if (kla.a(2, ((oia) this).field_e.field_h.field_w, -2147483648) <= 0) {
+                      if ((kla.a(2, this.field_e.field_h.field_w, -2147483648) ^ -1) >= -1) {
                         stackOut_11_0 = stackIn_11_0;
                         stackOut_11_1 = -1;
                         stackIn_12_0 = stackOut_11_0;
@@ -98,7 +102,7 @@ final class oia extends kj {
                     }
                     L3: {
                       var5 = stackIn_12_0 * stackIn_12_1;
-                      int discarded$5 = kla.a(50, ((oia) this).field_e.field_h.field_w, -2147483648);
+                      discarded$5 = kla.a(50, this.field_e.field_h.field_w, -2147483648);
                       var6 = var4 - -64;
                       var7 = var5 + 32;
                       var8 = (int)(Math.sin(300.0 * (double)var2) * 100.0) * 0;
@@ -117,7 +121,7 @@ final class oia extends kj {
                       stackIn_13_2 = stackOut_12_2;
                       stackIn_13_3 = stackOut_12_3;
                       stackIn_13_4 = stackOut_12_4;
-                      if (5 <= kla.a(20, ((oia) this).field_e.field_h.field_w, -2147483648)) {
+                      if (5 <= kla.a(20, this.field_e.field_h.field_w, -2147483648)) {
                         stackOut_14_0 = null;
                         stackOut_14_1 = null;
                         stackOut_14_2 = stackIn_14_2;
@@ -148,12 +152,12 @@ final class oia extends kj {
                       }
                     }
                     var9 = new rea(stackIn_15_2, stackIn_15_3, stackIn_15_4, stackIn_15_5);
-                    int discarded$6 = kla.a(3, ((oia) this).field_e.field_h.field_w, -2147483648);
-                    int discarded$7 = kla.a(5000, ((oia) this).field_e.field_h.field_w, -2147483648);
-                    var9.field_o = (double)(-1 + -kla.a(2, ((oia) this).field_e.field_h.field_w, -2147483648));
-                    var9.field_n = 25 + -kla.a(10, ((oia) this).field_e.field_h.field_w, -2147483648);
+                    discarded$6 = kla.a(3, this.field_e.field_h.field_w, -2147483648);
+                    discarded$7 = kla.a(5000, this.field_e.field_h.field_w, -2147483648);
+                    var9.field_o = (double)(-1 + -kla.a(2, this.field_e.field_h.field_w, -2147483648));
+                    var9.field_n = 25 + -kla.a(10, this.field_e.field_h.field_w, -2147483648);
                     var9.field_h = -1;
-                    ((oia) this).field_g.a((bw) (Object) var9, true);
+                    this.field_g.a(var9, true);
                     var3++;
                     continue L1;
                   }
@@ -162,7 +166,7 @@ final class oia extends kj {
                 break L0;
               }
             }
-            aga.a(((oia) this).field_e.field_h.field_w, true, ((oia) this).field_g, ((oia) this).field_h);
+            aga.a(this.field_e.field_h.field_w, true, this.field_g, this.field_h);
             return false;
           }
         } else {
@@ -172,12 +176,12 @@ final class oia extends kj {
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-            ((oia) this).field_g = null;
+            this.field_g = (eaa) null;
         }
     }
 
     final void a(int param0, int param1, int param2) {
-        baa.a(((oia) this).field_g, true, 65280, param2, param0, 10);
+        baa.a(this.field_g, true, 65280, param2, param0, 10);
         if (param1 != 0) {
             oia.c(85);
         }
@@ -186,10 +190,10 @@ final class oia extends kj {
     oia(gj param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
-            ((oia) this).field_h = 128;
-            ((oia) this).field_g = new eaa();
+            this.field_h = 128;
+            this.field_g = new eaa();
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "oia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -199,10 +203,6 @@ final class oia extends kj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Game full";
     }
 }

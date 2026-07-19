@@ -14,29 +14,31 @@ final class lia implements qm {
         if (param0 != -7339) {
             return 115;
         }
-        return ((lia) this).field_d;
+        return this.field_d;
     }
 
     public final void a(int param0) {
-        if (null == ((lia) this).field_e) {
-          ((lia) this).field_a = 0;
+        boolean discarded$4 = false;
+        boolean discarded$5 = false;
+        if (null == this.field_e) {
+          this.field_a = 0;
           if (param0 != 12574) {
-            boolean discarded$4 = ((lia) this).a(51, -94, true);
-            ((lia) this).field_b = 0;
+            discarded$4 = this.a(51, -94, true);
+            this.field_b = 0;
             return;
           } else {
-            ((lia) this).field_b = 0;
+            this.field_b = 0;
             return;
           }
         } else {
-          ((lia) this).field_e = null;
-          ((lia) this).field_a = 0;
+          this.field_e = null;
+          this.field_a = 0;
           if (param0 == 12574) {
-            ((lia) this).field_b = 0;
+            this.field_b = 0;
             return;
           } else {
-            boolean discarded$5 = ((lia) this).a(51, -94, true);
-            ((lia) this).field_b = 0;
+            discarded$5 = this.a(51, -94, true);
+            this.field_b = 0;
             return;
           }
         }
@@ -54,13 +56,13 @@ final class lia implements qm {
         int stackOut_9_0 = 0;
         int stackOut_19_0 = 0;
         int stackOut_18_0 = 0;
-        ((lia) this).field_d = (byte)param1;
+        this.field_d = (byte)param1;
         if (param2) {
-          ((lia) this).field_a = param0;
-          if (((lia) this).field_b < ((lia) this).field_a) {
+          this.field_a = param0;
+          if (this.field_b < this.field_a) {
             L0: {
               var5 = 8;
-              if (!((lia) this).field_f) {
+              if (!this.field_f) {
                 var4 = 1;
                 break L0;
               } else {
@@ -69,11 +71,11 @@ final class lia implements qm {
                 break L0;
               }
             }
-            if (((lia) this).field_e != null) {
+            if (this.field_e != null) {
               L1: {
-                ((lia) this).field_e = ((lia) this).field_c.field_jd.a(((lia) this).field_a, var5, 0, var4, ((lia) this).field_e);
-                ((lia) this).field_b = ((lia) this).field_a;
-                if (null == ((lia) this).field_e) {
+                this.field_e = this.field_c.field_jd.a(this.field_a, var5, 0, var4, this.field_e);
+                this.field_b = this.field_a;
+                if (null == this.field_e) {
                   stackOut_14_0 = 0;
                   stackIn_15_0 = stackOut_14_0;
                   break L1;
@@ -86,9 +88,9 @@ final class lia implements qm {
               return stackIn_15_0 != 0;
             } else {
               L2: {
-                ((lia) this).field_e = ((lia) this).field_c.field_jd.a(((lia) this).field_a, var5, 0, var4, ((lia) this).field_e);
-                ((lia) this).field_b = ((lia) this).field_a;
-                if (null == ((lia) this).field_e) {
+                this.field_e = this.field_c.field_jd.a(this.field_a, var5, 0, var4, this.field_e);
+                this.field_b = this.field_a;
+                if (null == this.field_e) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
                   break L2;
@@ -102,7 +104,7 @@ final class lia implements qm {
             }
           } else {
             L3: {
-              if (null == ((lia) this).field_e) {
+              if (null == this.field_e) {
                 stackOut_19_0 = 0;
                 stackIn_20_0 = stackOut_19_0;
                 break L3;
@@ -120,50 +122,52 @@ final class lia implements qm {
     }
 
     public final jaclib.memory.Buffer a(int param0, boolean param1) {
-        if (null == ((lia) this).field_e) {
+        boolean discarded$7 = false;
+        if (null == this.field_e) {
             return null;
         }
-        param1 = param1 & ((lia) this).field_f;
+        param1 = param1 & this.field_f;
         if (param0 != -15730) {
-            boolean discarded$7 = ((lia) this).a(52, 89, false);
-            if (((lia) this).field_g) {
+            discarded$7 = this.a(52, 89, false);
+            if (this.field_g) {
                 return null;
             }
-            if (!(!jagdx.ah.a(((lia) this).field_e.Lock(0, ((lia) this).field_b, param1 ? 8192 : 0, ((lia) this).field_c.field_Oc), (byte) 79))) {
-                ((lia) this).field_g = true;
-                return (jaclib.memory.Buffer) (Object) ((lia) this).field_c.field_Oc;
+            if (!(!jagdx.ah.a(this.field_e.Lock(0, this.field_b, param1 ? 8192 : 0, this.field_c.field_Oc), (byte) 79))) {
+                this.field_g = true;
+                return (jaclib.memory.Buffer) ((Object) this.field_c.field_Oc);
             }
             return null;
         }
-        if (((lia) this).field_g) {
+        if (this.field_g) {
             return null;
         }
-        if (!(!jagdx.ah.a(((lia) this).field_e.Lock(0, ((lia) this).field_b, param1 ? 8192 : 0, ((lia) this).field_c.field_Oc), (byte) 79))) {
-            ((lia) this).field_g = true;
-            return (jaclib.memory.Buffer) (Object) ((lia) this).field_c.field_Oc;
+        if (!(!jagdx.ah.a(this.field_e.Lock(0, this.field_b, param1 ? 8192 : 0, this.field_c.field_Oc), (byte) 79))) {
+            this.field_g = true;
+            return (jaclib.memory.Buffer) ((Object) this.field_c.field_Oc);
         }
         return null;
     }
 
     public final boolean a(boolean param0) {
+        boolean discarded$8 = false;
         if (param0) {
-          if (((lia) this).field_g) {
-            if (!jagdx.ah.a(((lia) this).field_e.Unlock(), (byte) -109)) {
+          if (this.field_g) {
+            if (!jagdx.ah.a(this.field_e.Unlock(), (byte) -109)) {
               return false;
             } else {
-              ((lia) this).field_g = false;
+              this.field_g = false;
               return true;
             }
           } else {
             return false;
           }
         } else {
-          boolean discarded$8 = ((lia) this).a(-68, -25, false);
-          if (((lia) this).field_g) {
-            if (!jagdx.ah.a(((lia) this).field_e.Unlock(), (byte) -109)) {
+          discarded$8 = this.a(-68, -25, false);
+          if (this.field_g) {
+            if (!jagdx.ah.a(this.field_e.Unlock(), (byte) -109)) {
               return false;
             } else {
-              ((lia) this).field_g = false;
+              this.field_g = false;
               return true;
             }
           } else {
@@ -173,8 +177,8 @@ final class lia implements qm {
     }
 
     lia(cta param0, boolean param1) {
-        ((lia) this).field_g = false;
-        ((lia) this).field_f = param1 ? true : false;
-        ((lia) this).field_c = param0;
+        this.field_g = false;
+        this.field_f = param1 ? true : false;
+        this.field_c = param0;
     }
 }

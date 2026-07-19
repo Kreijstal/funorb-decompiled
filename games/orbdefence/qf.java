@@ -33,10 +33,6 @@ final class qf extends ca {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new long[32];
         field_k = "To Customer Support";
         field_h = "Quit";

@@ -20,16 +20,16 @@ abstract class sh extends lh {
     abstract void a(int param0);
 
     final void a(int[] param0, int param1, int param2) {
-        if (((sh) this).field_j) {
-            ((sh) this).b(param0, param1, param2);
+        if (this.field_j) {
+            this.b(param0, param1, param2);
         } else {
-            ((sh) this).a(param2);
+            this.a(param2);
         }
     }
 
     abstract sh c();
 
     protected sh() {
-        ((sh) this).field_j = true;
+        this.field_j = true;
     }
 }

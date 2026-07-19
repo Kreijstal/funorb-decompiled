@@ -59,12 +59,20 @@ final class go {
 
     final boolean b(byte param0) {
         if (param0 != 58) {
-            ((go) this).field_h = false;
+            this.field_h = false;
         }
-        return ((go) this).field_f != null ? true : false;
+        return this.field_f != null ? true : false;
     }
 
     final static void b(int param0) {
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -75,46 +83,54 @@ final class go {
         var4 = HoldTheLine.field_D;
         try {
           L0: {
+            L1: {
+              if (param0 <= -69) {
+                break L1;
+              } else {
+                field_g = (int[][]) null;
+                break L1;
+              }
+            }
             var5 = pk.field_I;
             var1 = var5;
             var2 = 0;
             var3 = var5.length;
-            L1: while (true) {
+            L2: while (true) {
               if (var3 <= var2) {
                 break L0;
               } else {
-                int incrementValue$40 = var2;
+                incrementValue$40 = var2;
                 var2++;
                 var5[incrementValue$40] = 0;
-                int incrementValue$41 = var2;
+                incrementValue$41 = var2;
                 var2++;
                 var5[incrementValue$41] = 0;
-                int incrementValue$42 = var2;
+                incrementValue$42 = var2;
                 var2++;
                 var5[incrementValue$42] = 0;
-                int incrementValue$43 = var2;
+                incrementValue$43 = var2;
                 var2++;
                 var5[incrementValue$43] = 0;
-                int incrementValue$44 = var2;
+                incrementValue$44 = var2;
                 var2++;
                 var5[incrementValue$44] = 0;
-                int incrementValue$45 = var2;
+                incrementValue$45 = var2;
                 var2++;
                 var5[incrementValue$45] = 0;
-                int incrementValue$46 = var2;
+                incrementValue$46 = var2;
                 var2++;
                 var5[incrementValue$46] = 0;
-                int incrementValue$47 = var2;
+                incrementValue$47 = var2;
                 var2++;
                 var5[incrementValue$47] = 0;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1_ref, "go.B(" + -92 + ')');
+          throw kk.a((Throwable) ((Object) var1_ref), "go.B(" + param0 + ')');
         }
     }
 
@@ -188,20 +204,20 @@ final class go {
                 le.field_r = 2;
                 break L3;
               } else {
-                if (!ik.a((CharSequence) (Object) var6, true)) {
+                if (!ik.a((CharSequence) ((Object) var6), true)) {
                   le.field_r = 2;
                   break L3;
                 } else {
-                  le.field_r = mo.a((CharSequence) (Object) var6, (byte) -116);
+                  le.field_r = mo.a((CharSequence) ((Object) var6), (byte) -116);
                   break L3;
                 }
               }
             }
-            ol.field_g = 0;
-            t.field_n = 16777215;
-            qe.field_b = 0;
+            ol.field_g = param0;
+            t.field_n = param1;
+            qe.field_b = param4;
             lf.field_a = new hj[param2.length];
-            var7 = 0;
+            var7 = param5;
             L4: while (true) {
               if (var7 >= param2.length) {
                 qh.field_b = param2;
@@ -217,23 +233,23 @@ final class go {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var6_ref;
-            stackOut_16_1 = new StringBuilder().append("go.G(").append(0).append(',').append(16777215).append(',');
+            stackOut_16_0 = (RuntimeException) (var6_ref);
+            stackOut_16_1 = new StringBuilder().append("go.G(").append(param0).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -242,23 +258,23 @@ final class go {
             }
           }
           L6: {
-            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+            stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
             stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param3 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -266,25 +282,28 @@ final class go {
               break L6;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + 0 + ',' + 0 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final mg c(byte param0) {
-        if (null != ((go) this).field_f) {
-            return ((go) this).field_f;
+        if (null != this.field_f) {
+            return this.field_f;
         }
         int var3 = 8 / ((param0 - -58) / 47);
-        hj var2 = wd.b(((go) this).field_b, (byte) -63);
+        hj var2 = wd.b(this.field_b, (byte) -63);
         if (var2 != null) {
-            ((go) this).field_f = new mg(var2, ((go) this).field_c, ((go) this).field_h, ((go) this).field_m);
+            this.field_f = new mg(var2, this.field_c, this.field_h, this.field_m);
         }
-        return ((go) this).field_f;
+        return this.field_f;
     }
 
     public static void a(byte param0) {
-        field_g = null;
+        field_g = (int[][]) null;
         field_l = null;
+        if (param0 > -90) {
+            field_e = -50;
+        }
         field_a = null;
         field_k = null;
         field_d = null;
@@ -294,33 +313,29 @@ final class go {
 
     go(String param0) {
         try {
-            ((go) this).field_m = false;
-            ((go) this).field_b = param0;
-            ((go) this).field_c = 4096;
-            ((go) this).field_h = false;
-            ((go) this).field_f = null;
+            this.field_m = false;
+            this.field_b = param0;
+            this.field_c = 4096;
+            this.field_h = false;
+            this.field_f = null;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "go.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     go(String param0, int param1, boolean param2, boolean param3) {
         try {
-            ((go) this).field_b = param0;
-            ((go) this).field_m = param3 ? true : false;
-            ((go) this).field_h = param2 ? true : false;
-            ((go) this).field_f = null;
-            ((go) this).field_c = param1;
+            this.field_b = param0;
+            this.field_m = param3 ? true : false;
+            this.field_h = param2 ? true : false;
+            this.field_f = null;
+            this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new float[]{1.0f, 10.0f, 10.0f, 10.0f};
         field_a = new int[]{6, 7};
         field_d = new int[]{3, 2};

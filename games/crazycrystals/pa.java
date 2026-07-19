@@ -48,38 +48,38 @@ final class pa extends pc {
               }
             }
             if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
-              var8_int = param6 + -((pa) this).field_J + -((pa) this).field_r + -param0;
-              var9 = param1 - (((pa) this).field_K + (param4 + ((pa) this).field_j));
-              if (((pa) this).field_I * ((pa) this).field_I > var8_int * var8_int - -(var9 * var9)) {
+              var8_int = param6 + -this.field_J + -this.field_r + -param0;
+              var9 = param1 - (this.field_K + (param4 + this.field_j));
+              if (this.field_I * this.field_I > var8_int * var8_int - -(var9 * var9)) {
                 L2: {
                   var10 = Math.atan2((double)var9, (double)var8_int) - lk.field_a;
                   if (0.0 <= var10) {
                     if (var10 <= 0.0) {
                       break L2;
                     } else {
-                      var10 = var10 + 3.141592653589793 / (double)((pa) this).field_D;
+                      var10 = var10 + 3.141592653589793 / (double)this.field_D;
                       break L2;
                     }
                   } else {
-                    var10 = var10 - 3.141592653589793 / (double)((pa) this).field_D;
+                    var10 = var10 - 3.141592653589793 / (double)this.field_D;
                     break L2;
                   }
                 }
-                ((pa) this).field_B = (int)((double)((pa) this).field_D * var10 / 6.283185307179586);
+                this.field_B = (int)((double)this.field_D * var10 / 6.283185307179586);
                 L3: while (true) {
-                  if (((pa) this).field_B < ((pa) this).field_D) {
+                  if (this.field_B < this.field_D) {
                     L4: while (true) {
-                      if (((pa) this).field_B >= 0) {
+                      if (this.field_B >= 0) {
                         stackOut_16_0 = 1;
                         stackIn_17_0 = stackOut_16_0;
                         break L0;
                       } else {
-                        ((pa) this).field_B = ((pa) this).field_B + ((pa) this).field_D;
+                        this.field_B = this.field_B + this.field_D;
                         continue L4;
                       }
                     }
                   } else {
-                    ((pa) this).field_B = ((pa) this).field_B - ((pa) this).field_D;
+                    this.field_B = this.field_B - this.field_D;
                     continue L3;
                   }
                 }
@@ -94,23 +94,23 @@ final class pa extends pc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var8;
+            stackOut_18_0 = (RuntimeException) (var8);
             stackOut_18_1 = new StringBuilder().append("pa.KA(").append(param0).append(',').append(param1).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param2 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L5;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -118,7 +118,7 @@ final class pa extends pc {
               break L5;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_17_0 != 0;
     }
@@ -178,23 +178,23 @@ final class pa extends pc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var4;
+            stackOut_10_0 = (RuntimeException) (var4);
             stackOut_10_1 = new StringBuilder().append("pa.B(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -202,7 +202,7 @@ final class pa extends pc {
               break L4;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -218,10 +218,6 @@ final class pa extends pc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_E = 56;
     }
 }

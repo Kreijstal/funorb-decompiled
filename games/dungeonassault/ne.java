@@ -12,18 +12,18 @@ class ne {
     static cn field_d;
 
     final void a(boolean param0) {
-        if (((ne) this).field_a == null) {
+        if (this.field_a == null) {
           return;
         } else {
           L0: {
-            ((ne) this).field_a.field_e = ((ne) this).field_e;
-            ((ne) this).field_e.field_a = ((ne) this).field_a;
-            ((ne) this).field_e = null;
-            ((ne) this).field_a = null;
+            this.field_a.field_e = this.field_e;
+            this.field_e.field_a = this.field_a;
+            this.field_e = null;
+            this.field_a = null;
             if (!param0) {
               break L0;
             } else {
-              field_d = null;
+              field_d = (cn) null;
               break L0;
             }
           }
@@ -32,11 +32,11 @@ class ne {
     }
 
     final boolean c(int param0) {
-        if (!(null != ((ne) this).field_a)) {
+        if (!(null != this.field_a)) {
             return false;
         }
         if (param0 >= -15) {
-            field_f = null;
+            field_f = (String[]) null;
             return true;
         }
         return true;
@@ -44,16 +44,21 @@ class ne {
 
     public static void b(int param0) {
         field_b = null;
-        field_d = null;
-        field_c = null;
-        field_f = null;
+        if (param0 != -18880) {
+          field_c = (gp) null;
+          field_d = null;
+          field_c = null;
+          field_f = null;
+          return;
+        } else {
+          field_d = null;
+          field_c = null;
+          field_f = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new String[]{"Pit Immunity", "Success against all pit traps."};
     }
 }

@@ -19,22 +19,26 @@ final class kh {
 
     final void a(java.applet.Applet param0, int param1) {
         try {
-            hi.a(param1, 31536000L, "jagex-last-login-method", ((kh) this).field_a, param0);
+            hi.a(param1, 31536000L, "jagex-last-login-method", this.field_a, param0);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "kh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "kh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, boolean param1) {
+        jc discarded$0 = null;
         ci.field_f.a(0, -46, 0);
         if (param0 > -28) {
-            jc discarded$0 = kh.a((byte) 88);
+            discarded$0 = kh.a((byte) 88);
         }
     }
 
     public static void a(int param0) {
         field_c = null;
         field_e = null;
+        if (param0 != 0) {
+            field_e = (String) null;
+        }
     }
 
     final boolean a(String param0, int param1) {
@@ -67,7 +71,7 @@ final class kh {
                 break L1;
               }
             }
-            stackOut_2_0 = ((kh) this).field_a.equals((Object) (Object) param0);
+            stackOut_2_0 = this.field_a.equals(param0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -75,23 +79,23 @@ final class kh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("kh.D(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -99,24 +103,20 @@ final class kh {
               break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     kh(String param0) {
         try {
-            ((kh) this).field_a = param0;
+            this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "kh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "kh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Loading music";
     }
 }

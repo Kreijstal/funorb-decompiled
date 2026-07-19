@@ -9,16 +9,20 @@ final class wpa extends ge {
         try {
             kn.field_p = param0.a(kv.field_a, rc.field_b, true);
             eda.field_f = param0.a(ds.field_n, ff.field_j, true);
+            if (param1 > -66) {
+                field_K = (String) null;
+            }
             qr.field_v = param0.a(wb.field_a, ps.field_O, true);
             qf.field_j = param0.a(qp.field_r, gga.field_O, true);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wpa.WB(" + (param0 != null ? "{...}" : "null") + ',' + -90 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "wpa.WB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final boolean z(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 0) {
-            boolean discarded$0 = ((wpa) this).A(101);
+            discarded$0 = this.A(101);
             return false;
         }
         return false;
@@ -28,7 +32,7 @@ final class wpa extends ge {
         iu[] var2 = null;
         RuntimeException var2_ref = null;
         iu[] var3 = null;
-        Object stackIn_2_0 = null;
+        iu[] stackIn_2_0 = null;
         iu[] stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -37,9 +41,10 @@ final class wpa extends ge {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         iu[] stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        iu[] stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -54,36 +59,38 @@ final class wpa extends ge {
               var3 = new iu[9];
               var2 = var3;
               var3[4] = param1;
-              stackOut_3_0 = (iu[]) var2;
+              stackOut_3_0 = (iu[]) (var2);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (iu[]) null;
               stackIn_2_0 = stackOut_1_0;
-              return (iu[]) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2_ref;
+            stackOut_5_0 = (RuntimeException) (var2_ref);
             stackOut_5_1 = new StringBuilder().append("wpa.BC(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -91,9 +98,13 @@ final class wpa extends ge {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final boolean C(int param0) {
@@ -105,7 +116,7 @@ final class wpa extends ge {
 
     final int t(int param0) {
         if (param0 != 8) {
-            field_J = null;
+            field_J = (String) null;
             return 7;
         }
         return 7;
@@ -141,15 +152,15 @@ final class wpa extends ge {
           L0: {
             L1: {
               var9 = new fsa(param2, param0);
-              var9.b((byte) -11, ((wpa) this).field_k, ((wpa) this).field_l);
+              var9.b((byte) -11, this.field_k, this.field_l);
               var9.h(param1, 0);
-              var9.a((byte) 83, (nv) (Object) new eq(param2, param0));
+              var9.a((byte) 83, (nv) (new eq(param2, param0)));
               var5 = new ska(param2, param0);
               var6 = ci.a(0, -1);
               var6.a(91, true);
-              if (((wpa) this).s((byte) 73)) {
+              if (this.s((byte) 73)) {
                 var7_int = var6.a(true);
-                if (var7_int > 0) {
+                if ((var7_int ^ -1) < -1) {
                   var6.b(param2.q(122).a(var7_int, 0), false);
                   break L1;
                 } else {
@@ -160,13 +171,13 @@ final class wpa extends ge {
               }
             }
             var5.a(var6, (byte) 66);
-            ((wpa) this).a((byte) 43, (mra) (Object) var5, param2);
-            var9.a((byte) 83, (nv) (Object) var5);
+            this.a((byte) 43, var5, param2);
+            var9.a((byte) 83, (nv) (var5));
             var7 = rm.field_a;
-            var8 = (boa) (Object) var7.a(7, 86);
+            var8 = (boa) ((Object) var7.a(7, 86));
             var8.b(127, 12);
-            var9.a((gr) (Object) var5, (byte) 124, (dg) (Object) var8);
-            stackOut_5_0 = (fsa) var9;
+            var9.a(var5, (byte) 124, var8);
+            stackOut_5_0 = (fsa) (var9);
             stackIn_6_0 = stackOut_5_0;
             break L0;
           }
@@ -174,23 +185,23 @@ final class wpa extends ge {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
+            stackOut_7_0 = (RuntimeException) (var4);
             stackOut_7_1 = new StringBuilder().append("wpa.AC(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -198,12 +209,15 @@ final class wpa extends ge {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
 
     public static void D(int param0) {
+        if (param0 != -129) {
+            return;
+        }
         field_K = null;
         field_J = null;
     }
@@ -225,35 +239,39 @@ final class wpa extends ge {
     final static char a(byte param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
-        var2 = 255 & param1;
-        if (var2 != 0) {
-          if (var2 >= 128) {
-            if (160 <= var2) {
-              return (char)var2;
-            } else {
-              L0: {
-                var3 = gha.field_a[var2 - 128];
-                if (var3 == 0) {
-                  var3 = 63;
-                  break L0;
-                } else {
-                  break L0;
+        if (param0 == 11) {
+          var2 = 255 & param1;
+          if (var2 != 0) {
+            if (-129 >= (var2 ^ -1)) {
+              if (160 <= var2) {
+                return (char)var2;
+              } else {
+                L0: {
+                  var3 = gha.field_a[var2 - 128];
+                  if (var3 == 0) {
+                    var3 = 63;
+                    break L0;
+                  } else {
+                    break L0;
+                  }
                 }
+                var2 = var3;
+                return (char)var2;
               }
-              var2 = var3;
+            } else {
               return (char)var2;
             }
           } else {
-            return (char)var2;
+            throw new IllegalArgumentException("" + Integer.toString(var2, 16));
           }
         } else {
-          throw new IllegalArgumentException("" + Integer.toString(var2, 16));
+          return '';
         }
     }
 
     final boolean B(int param0) {
         if (param0 != -23309) {
-            field_K = null;
+            field_K = (String) null;
             return true;
         }
         return true;
@@ -270,7 +288,7 @@ final class wpa extends ge {
         try {
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wpa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "wpa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -284,14 +302,10 @@ final class wpa extends ge {
 
     final void q(byte param0) {
         super.q(param0);
-        ((wpa) this).b(-79, 2097152, 2097152);
+        this.b(-79, 2097152, 2097152);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = "Failed!";
         field_J = "Room complete +<%0>, Speed bonus +<%1>";
     }

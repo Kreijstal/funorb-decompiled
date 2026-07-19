@@ -12,10 +12,10 @@ final class bs {
         llb[] var4 = null;
         try {
             var3 = new String[]{param0, pp.field_q, dpa.field_o};
-            var4 = new llb[]{param1, ci.field_c, (llb) (Object) vra.field_b};
-            ((bs) this).field_a = new ooa(0L, vhb.field_c, var3, gfb.field_a, var4, 0);
+            var4 = new llb[]{param1, ci.field_c, (llb) ((Object) vra.field_b)};
+            this.field_a = new ooa(0L, vhb.field_c, var3, gfb.field_a, var4, 0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "bs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,7 +38,7 @@ final class bs {
         if (param1 > -71) {
           return;
         } else {
-          ((bs) this).field_a.a(param3, param4, var6, var7, 60, param2, param0);
+          this.field_a.a(param3, param4, var6, var7, 60, param2, param0);
           rtb.field_h.a(0, 120, ci.field_c.field_hb, 0, nna.field_w);
           aha.field_o.a(0, -25, ci.field_c.field_hb + -rba.field_a + -84, 2 + nna.field_w, 18);
           rrb.field_b.a(-2 + (ci.field_c.field_hb + -rba.field_a) + -80, 120, rba.field_a + 82, nna.field_w + 2, 18);
@@ -49,10 +49,6 @@ final class bs {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[1024];
         field_c = 0;
         field_d = new gj();

@@ -27,10 +27,6 @@ abstract class hl {
     abstract byte[] a(byte param0, int param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "hl.L(";
         field_c = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
     }

@@ -5,7 +5,7 @@ final class bg extends jm {
     static String field_m;
 
     public bg() {
-        ((bg) this).field_j = 5;
+        this.field_j = 5;
     }
 
     final void a(boolean param0, op param1) {
@@ -13,15 +13,15 @@ final class bg extends jm {
             param1.field_K = 0;
             param1.field_x = param0 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "bg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "bg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     bg(lu param0) {
         try {
-            ((bg) this).field_j = 5;
+            this.field_j = 5;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "bg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "bg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -56,10 +56,6 @@ final class bg extends jm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Find opponents";
     }
 }

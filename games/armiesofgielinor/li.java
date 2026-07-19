@@ -26,10 +26,10 @@ final class li extends tc {
         try {
           L0: {
             L1: {
-              var1_int = pr.field_g.field_i >> 16;
+              var1_int = pr.field_g.field_i >> -1007998672;
               var2 = we.a(var1_int, true);
               io.a(var2, (byte) -34);
-              if (bv.field_w.field_sb <= -1) {
+              if ((bv.field_w.field_sb ^ -1) >= 0) {
                 stackOut_3_0 = bv.field_w.field_gb;
                 stackIn_4_0 = stackOut_3_0;
                 break L1;
@@ -39,28 +39,49 @@ final class li extends tc {
                 break L1;
               }
             }
-            ne.field_i = stackIn_4_0;
-            ic.field_f = (int)(106.0 + Math.sin((double)uk.field_n / 3.141592653589793 / (double)param0) * 50.0);
-            if (!cu.field_a) {
-              kl.field_a.g(200);
-              return;
-            } else {
-              var3 = 0;
-              L2: while (true) {
-                if (var3 >= 4) {
+            L2: {
+              ne.field_i = stackIn_4_0;
+              ic.field_f = (int)(106.0 + Math.sin((double)uk.field_n / 3.141592653589793 / (double)param0) * 50.0);
+              if (!cu.field_a) {
+                break L2;
+              } else {
+                var3 = 0;
+                L3: while (true) {
+                  L4: {
+                    L5: {
+                      if (-5 >= (var3 ^ -1)) {
+                        break L5;
+                      } else {
+                        kl.field_a.b(var3, param0 + 1745035901);
+                        var3++;
+                        if (var4 != 0) {
+                          break L4;
+                        } else {
+                          if (var4 == 0) {
+                            continue L3;
+                          } else {
+                            break L5;
+                          }
+                        }
+                      }
+                    }
+                    if (var4 == 0) {
+                      break L4;
+                    } else {
+                      break L2;
+                    }
+                  }
                   break L0;
-                } else {
-                  kl.field_a.b(var3, param0 + 1745035901);
-                  var3++;
-                  continue L2;
                 }
               }
             }
+            kl.field_a.g(200);
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var1, "li.B(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "li.B(" + param0 + ')');
         }
     }
 
@@ -68,22 +89,23 @@ final class li extends tc {
         field_p = null;
         field_k = null;
         field_m = null;
+        if (param0 != 74) {
+            li.a(-95);
+            field_n = null;
+            return;
+        }
         field_n = null;
     }
 
     li(byte[] param0) {
         try {
-            ((li) this).field_l = param0;
+            this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new int[8192];
         field_p = "Create a free Account";
         field_n = new Random(6L);

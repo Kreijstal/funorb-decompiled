@@ -31,15 +31,15 @@ final class cm {
         int var4 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((cm) this).field_k) {
+          if (var3 >= this.field_k) {
             return;
           } else {
             L1: {
-              var4 = ((cm) this).field_i[var3];
-              if (((cm) this).field_g.field_n[var4] == 0) {
+              var4 = this.field_i[var3];
+              if (this.field_g.field_n[var4] == 0) {
                 break L1;
               } else {
-                if (((cm) this).field_g.field_n[var4] == 1) {
+                if (this.field_g.field_n[var4] == 1) {
                   break L1;
                 } else {
                   var3++;
@@ -47,9 +47,9 @@ final class cm {
                 }
               }
             }
-            ((cm) this).field_c[var3] = (short)(((cm) this).field_c[var3] * param0 / param1);
-            ((cm) this).field_a[var3] = (short)(((cm) this).field_a[var3] * param0 / param1);
-            ((cm) this).field_l[var3] = (short)(((cm) this).field_l[var3] * param0 / param1);
+            this.field_c[var3] = (short)(this.field_c[var3] * param0 / param1);
+            this.field_a[var3] = (short)(this.field_a[var3] * param0 / param1);
+            this.field_l[var3] = (short)(this.field_l[var3] * param0 / param1);
             var3++;
             continue L0;
           }
@@ -57,6 +57,7 @@ final class cm {
     }
 
     cm(byte[] param0, ij param1) {
+        int discarded$1 = 0;
         Exception var3 = null;
         kg var4 = null;
         int var5 = 0;
@@ -70,14 +71,14 @@ final class cm {
         int var13 = 0;
         kg var14 = null;
         Throwable decompiledCaughtException = null;
-        ((cm) this).field_g = null;
-        ((cm) this).field_k = -1;
-        ((cm) this).field_g = param1;
+        this.field_g = null;
+        this.field_k = -1;
+        this.field_g = param1;
         try {
           L0: {
             var14 = new kg(param0);
             var4 = new kg(param0);
-            int discarded$1 = var14.c(32);
+            discarded$1 = var14.c(32);
             var14.field_n = var14.field_n + 2;
             var5 = var14.c(32);
             var6 = 0;
@@ -88,25 +89,25 @@ final class cm {
             L1: while (true) {
               if (var9 >= var5) {
                 if (var4.field_n == param0.length) {
-                  ((cm) this).field_k = var6;
-                  ((cm) this).field_i = new short[var6];
-                  ((cm) this).field_c = new short[var6];
-                  ((cm) this).field_a = new short[var6];
-                  ((cm) this).field_l = new short[var6];
-                  ((cm) this).field_n = new short[var6];
-                  ((cm) this).field_d = new byte[var6];
+                  this.field_k = var6;
+                  this.field_i = new short[var6];
+                  this.field_c = new short[var6];
+                  this.field_a = new short[var6];
+                  this.field_l = new short[var6];
+                  this.field_n = new short[var6];
+                  this.field_d = new byte[var6];
                   var13 = 0;
                   var9 = var13;
                   L2: while (true) {
                     if (var13 >= var6) {
                       break L0;
                     } else {
-                      ((cm) this).field_i[var13] = field_e[var13];
-                      ((cm) this).field_c[var13] = field_j[var13];
-                      ((cm) this).field_a[var13] = field_b[var13];
-                      ((cm) this).field_l[var13] = field_f[var13];
-                      ((cm) this).field_n[var13] = field_m[var13];
-                      ((cm) this).field_d[var13] = field_h[var13];
+                      this.field_i[var13] = field_e[var13];
+                      this.field_c[var13] = field_j[var13];
+                      this.field_a[var13] = field_b[var13];
+                      this.field_l[var13] = field_f[var13];
+                      this.field_n[var13] = field_m[var13];
+                      this.field_d[var13] = field_h[var13];
                       var13++;
                       continue L2;
                     }
@@ -116,7 +117,7 @@ final class cm {
                 }
               } else {
                 L3: {
-                  var10 = ((cm) this).field_g.field_n[var9];
+                  var10 = this.field_g.field_n[var9];
                   if (var10 != 0) {
                     break L3;
                   } else {
@@ -187,7 +188,7 @@ final class cm {
                     }
                     L11: {
                       L12: {
-                        field_m[var6] = (short) -1;
+                        field_m[var6] = (short)-1;
                         if (var10 == 1) {
                           break L12;
                         } else {
@@ -231,17 +232,13 @@ final class cm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L13: {
             var3 = (Exception) (Object) decompiledCaughtException;
-            ((cm) this).field_k = 0;
+            this.field_k = 0;
             break L13;
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = new short[500];
         field_h = new byte[500];
         field_b = new short[500];

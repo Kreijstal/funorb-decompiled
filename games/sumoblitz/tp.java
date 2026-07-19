@@ -10,15 +10,15 @@ final class tp {
     private int[] field_a;
 
     final float[] c() {
-        return ((tp) this).field_b[((tp) this).b()];
+        return this.field_b[this.b()];
     }
 
     final int b() {
         int var1 = 0;
-        while (((tp) this).field_e[var1] >= 0) {
-            var1 = q.b() != 0 ? ((tp) this).field_e[var1] : var1 + 1;
+        while (this.field_e[var1] >= 0) {
+            var1 = q.b() != 0 ? this.field_e[var1] : var1 + 1;
         }
-        return ~((tp) this).field_e[var1];
+        return this.field_e[var1] ^ -1;
     }
 
     private final void a() {
@@ -36,33 +36,29 @@ final class tp {
         int var11 = 0;
         int[] var12 = null;
         int[] var14 = null;
-        int[] var16 = null;
-        int[] var18 = null;
-        int[] var19 = null;
-        var19 = new int[((tp) this).field_f];
-        var18 = new int[33];
-        var16 = var18;
-        var14 = var16;
+        int[] var17 = null;
+        var17 = new int[this.field_f];
+        var14 = new int[33];
         var12 = var14;
         var2_ref_int__ = var12;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((tp) this).field_f) {
-            ((tp) this).field_e = new int[8];
+          if (var3 >= this.field_f) {
+            this.field_e = new int[8];
             var2 = 0;
             var3 = 0;
             L1: while (true) {
-              if (var3 >= ((tp) this).field_f) {
+              if (var3 >= this.field_f) {
                 return;
               } else {
-                var4 = ((tp) this).field_d[var3];
+                var4 = this.field_d[var3];
                 if (var4 != 0) {
-                  var5 = var19[var3];
+                  var5 = var17[var3];
                   var6 = 0;
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((tp) this).field_e[var6] = ~var3;
+                      this.field_e[var6] = var3 ^ -1;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -79,30 +75,30 @@ final class tp {
                           break L3;
                         } else {
                           L4: {
-                            if (((tp) this).field_e[var6] != 0) {
+                            if (this.field_e[var6] != 0) {
                               break L4;
                             } else {
-                              ((tp) this).field_e[var6] = var2;
+                              this.field_e[var6] = var2;
                               break L4;
                             }
                           }
-                          var6 = ((tp) this).field_e[var6];
+                          var6 = this.field_e[var6];
                           break L3;
                         }
                       }
                       L5: {
-                        if (var6 < ((tp) this).field_e.length) {
+                        if (var6 < this.field_e.length) {
                           break L5;
                         } else {
-                          var9 = new int[((tp) this).field_e.length * 2];
+                          var9 = new int[this.field_e.length * 2];
                           var11 = 0;
                           var10 = var11;
                           L6: while (true) {
-                            if (var11 >= ((tp) this).field_e.length) {
-                              ((tp) this).field_e = var9;
+                            if (var11 >= this.field_e.length) {
+                              this.field_e = var9;
                               break L5;
                             } else {
-                              var9[var11] = ((tp) this).field_e[var11];
+                              var9[var11] = this.field_e[var11];
                               var11++;
                               continue L6;
                             }
@@ -121,12 +117,12 @@ final class tp {
               }
             }
           } else {
-            var4 = ((tp) this).field_d[var3];
+            var4 = this.field_d[var3];
             if (var4 != 0) {
               L7: {
                 var5 = 1 << 32 - var4;
-                var6 = var18[var4];
-                var19[var3] = var6;
+                var6 = var14[var4];
+                var17[var3] = var6;
                 if ((var6 & var5) == 0) {
                   var7 = var6 | var5;
                   var8 = var4 - 1;
@@ -134,7 +130,7 @@ final class tp {
                     if (var8 < 1) {
                       break L7;
                     } else {
-                      var9_int = var18[var8];
+                      var9_int = var14[var8];
                       if (var9_int != var6) {
                         break L7;
                       } else {
@@ -155,13 +151,13 @@ final class tp {
                   break L7;
                 }
               }
-              var18[var4] = var7;
+              var14[var4] = var7;
               var8 = var4 + 1;
               L9: while (true) {
                 if (var8 <= 32) {
-                  var9_int = var18[var8];
+                  var9_int = var14[var8];
                   if (var9_int == var6) {
-                    var18[var8] = var7;
+                    var14[var8] = var7;
                     var8++;
                     continue L9;
                   } else {
@@ -189,6 +185,8 @@ final class tp {
     }
 
     tp() {
+        int discarded$2 = 0;
+        int incrementValue$3 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3_int = 0;
@@ -216,10 +214,10 @@ final class tp {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$2 = q.a(24);
-          ((tp) this).field_c = q.a(16);
-          ((tp) this).field_f = q.a(24);
-          ((tp) this).field_d = new int[((tp) this).field_f];
+          discarded$2 = q.a(24);
+          this.field_c = q.a(16);
+          this.field_f = q.a(24);
+          this.field_d = new int[this.field_f];
           if (q.b() == 0) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -248,7 +246,7 @@ final class tp {
             var14 = 0;
             var3_int = var14;
             L3: while (true) {
-              if (var14 >= ((tp) this).field_f) {
+              if (var14 >= this.field_f) {
                 break L1;
               } else {
                 L4: {
@@ -258,13 +256,13 @@ final class tp {
                     if (q.b() != 0) {
                       break L4;
                     } else {
-                      ((tp) this).field_d[var14] = 0;
+                      this.field_d[var14] = 0;
                       var14++;
                       continue L3;
                     }
                   }
                 }
-                ((tp) this).field_d[var14] = q.a(5) + 1;
+                this.field_d[var14] = q.a(5) + 1;
                 var14++;
                 continue L3;
               }
@@ -273,19 +271,19 @@ final class tp {
             var2 = 0;
             var3_int = q.a(5) + 1;
             L5: while (true) {
-              if (var2 >= ((tp) this).field_f) {
+              if (var2 >= this.field_f) {
                 break L1;
               } else {
-                var4_int = q.a(mr.a(((tp) this).field_f - var2, (byte) -115));
+                var4_int = q.a(mr.a(this.field_f - var2, (byte) -115));
                 var5 = 0;
                 L6: while (true) {
                   if (var5 >= var4_int) {
                     var3_int++;
                     continue L5;
                   } else {
-                    int incrementValue$3 = var2;
+                    incrementValue$3 = var2;
                     var2++;
-                    ((tp) this).field_d[incrementValue$3] = var3_int;
+                    this.field_d[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }
@@ -317,34 +315,34 @@ final class tp {
             L9: {
               var6 = stackIn_23_0;
               if (var2 != 1) {
-                var7 = ((tp) this).field_f * ((tp) this).field_c;
+                var7 = this.field_f * this.field_c;
                 break L9;
               } else {
-                var7 = tp.a(((tp) this).field_f, ((tp) this).field_c);
+                var7 = tp.a(this.field_f, this.field_c);
                 break L9;
               }
             }
-            ((tp) this).field_a = new int[var7];
+            this.field_a = new int[var7];
             var8 = 0;
             L10: while (true) {
               if (var8 >= var7) {
-                ((tp) this).field_b = new float[((tp) this).field_f][((tp) this).field_c];
+                this.field_b = new float[this.field_f][this.field_c];
                 if (var2 != 1) {
                   var8 = 0;
                   L11: while (true) {
-                    if (var8 >= ((tp) this).field_f) {
+                    if (var8 >= this.field_f) {
                       break L7;
                     } else {
                       var9 = 0.0f;
-                      var10 = var8 * ((tp) this).field_c;
+                      var10 = var8 * this.field_c;
                       var11 = 0;
                       L12: while (true) {
-                        if (var11 >= ((tp) this).field_c) {
+                        if (var11 >= this.field_c) {
                           var8++;
                           continue L11;
                         } else {
-                          var12 = (float)((tp) this).field_a[var10] * var4 + var3 + var9;
-                          ((tp) this).field_b[var8][var11] = var12;
+                          var12 = (float)this.field_a[var10] * var4 + var3 + var9;
+                          this.field_b[var8][var11] = var12;
                           if (var6 != 0) {
                             var9 = var12;
                             var10++;
@@ -362,21 +360,21 @@ final class tp {
                 } else {
                   var8 = 0;
                   L13: while (true) {
-                    if (var8 >= ((tp) this).field_f) {
+                    if (var8 >= this.field_f) {
                       break L7;
                     } else {
                       var9 = 0.0f;
                       var10 = 1;
                       var11 = 0;
                       L14: while (true) {
-                        if (var11 >= ((tp) this).field_c) {
+                        if (var11 >= this.field_c) {
                           var8++;
                           continue L13;
                         } else {
                           L15: {
                             var12_int = var8 / var10 % var7;
-                            var13 = (float)((tp) this).field_a[var12_int] * var4 + var3 + var9;
-                            ((tp) this).field_b[var8][var11] = var13;
+                            var13 = (float)this.field_a[var12_int] * var4 + var3 + var9;
+                            this.field_b[var8][var11] = var13;
                             if (var6 == 0) {
                               break L15;
                             } else {
@@ -393,7 +391,7 @@ final class tp {
                   }
                 }
               } else {
-                ((tp) this).field_a[var8] = q.a(var5);
+                this.field_a[var8] = q.a(var5);
                 var8++;
                 continue L10;
               }

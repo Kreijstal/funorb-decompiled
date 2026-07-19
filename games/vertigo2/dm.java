@@ -18,38 +18,45 @@ final class dm extends cr {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        ((dm) this).field_wb = param5;
-        ((dm) this).field_db = param0;
-        ((dm) this).field_N = param7;
+        this.field_wb = param5;
+        this.field_db = param0;
+        this.field_N = param7;
         if (param4 != 1) {
-            field_Jb = null;
+            field_Jb = (String) null;
         }
-        ((dm) this).field_Fb = param2;
-        ((dm) this).a(param6, true, param3, param1);
+        this.field_Fb = param2;
+        this.a(param6, true, param3, param1);
     }
 
     final void a(int param0, boolean param1, int param2, int param3) {
-        int var5 = (param2 + ((dm) this).field_Fb) / 2;
-        int var6 = ((dm) this).field_db + -param3;
-        ((dm) this).field_Lb.a(0, param2, param0, var6 - param2, 0, ((dm) this).field_Fb, 3124);
-        ((dm) this).field_Hb.field_wb = 0;
-        ((dm) this).field_Hb.field_N = var6;
-        ((dm) this).field_Hb.field_Fb = var5 - param2;
+        int var5 = (param2 + this.field_Fb) / 2;
+        int var6 = this.field_db + -param3;
+        this.field_Lb.a(0, param2, param0, var6 - param2, 0, this.field_Fb, 3124);
+        this.field_Hb.field_wb = 0;
+        this.field_Hb.field_N = var6;
+        this.field_Hb.field_Fb = var5 - param2;
         if (!param1) {
             dm.l(-112);
         }
-        ((dm) this).field_Hb.field_db = param3;
-        ((dm) this).field_Kb.field_Fb = -var5 + ((dm) this).field_Fb;
-        ((dm) this).field_Kb.field_N = var6;
-        ((dm) this).field_Kb.field_db = param3;
-        ((dm) this).field_Kb.field_wb = var5;
+        this.field_Hb.field_db = param3;
+        this.field_Kb.field_Fb = -var5 + this.field_Fb;
+        this.field_Kb.field_N = var6;
+        this.field_Kb.field_db = param3;
+        this.field_Kb.field_wb = var5;
     }
 
     dm(long param0, dm param1, String param2, String param3) {
-        this(param0, (cr) (Object) param1, param1.field_Lb.field_Lb, param1.field_Lb.field_Hb, param1.field_Hb, param2, param3);
+        this(param0, param1, param1.field_Lb.field_Lb, param1.field_Lb.field_Hb, param1.field_Hb, param2, param3);
     }
 
     final static void k(int param0) {
+        int discarded$7 = 0;
+        String[][] dupTemp$8 = null;
+        long[][] dupTemp$9 = null;
+        int[][] dupTemp$10 = null;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -79,31 +86,40 @@ final class dm extends cr {
         int var25 = 0;
         int var26 = 0;
         mi var27 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var26 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
             L1: {
+              if (param0 == 0) {
+                break L1;
+              } else {
+                discarded$7 = dm.a(-79, 39, -11, -30);
+                break L1;
+              }
+            }
+            L2: {
               var27 = id.field_f;
               var2 = var27.h(-11);
-              if (var2 == 0) {
+              if (-1 == (var2 ^ -1)) {
                 var3 = var27.a((byte) -11);
-                var4 = (s) (Object) wg.field_i.a((byte) 100);
-                L2: while (true) {
-                  L3: {
+                var4 = (s) ((Object) wg.field_i.a((byte) 100));
+                L3: while (true) {
+                  L4: {
                     if (var4 == null) {
-                      break L3;
+                      break L4;
                     } else {
                       if (var4.field_p != var3) {
-                        var4 = (s) (Object) wg.field_i.b(110);
-                        continue L2;
+                        var4 = (s) ((Object) wg.field_i.b(param0 + 110));
+                        continue L3;
                       } else {
-                        break L3;
+                        break L4;
                       }
                     }
                   }
                   if (var4 != null) {
-                    L4: {
+                    L5: {
                       var5 = var27.h(-11);
                       if (var5 != 0) {
                         var6 = var4.field_q;
@@ -112,18 +128,18 @@ final class dm extends cr {
                         rk.field_w[0].field_i = null;
                         rk.field_w[0].field_l = qe.field_V;
                         var8_int = 1;
-                        L5: while (true) {
+                        L6: while (true) {
                           if (var8_int >= var5) {
-                            String[][] dupTemp$6 = new String[3][var6];
-                            var4.field_x = dupTemp$6;
-                            var8 = dupTemp$6;
+                            dupTemp$8 = new String[3][var6];
+                            var4.field_x = dupTemp$8;
+                            var8 = dupTemp$8;
                             var9 = new String[3][var6];
-                            long[][] dupTemp$7 = new long[3][var6];
-                            var4.field_w = dupTemp$7;
-                            var10 = dupTemp$7;
-                            int[][] dupTemp$8 = new int[3][var6 * var7];
-                            var4.field_n = dupTemp$8;
-                            var11 = dupTemp$8;
+                            dupTemp$9 = new long[3][var6];
+                            var4.field_w = dupTemp$9;
+                            var10 = dupTemp$9;
+                            dupTemp$10 = new int[3][var6 * var7];
+                            var4.field_n = dupTemp$10;
+                            var11 = dupTemp$10;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -131,41 +147,41 @@ final class dm extends cr {
                             var16 = 0;
                             var17 = 0;
                             var18 = var27.h(-11);
-                            if (var18 > 0) {
+                            if (-1 > (var18 ^ -1)) {
                               var19 = 0;
-                              L6: while (true) {
+                              L7: while (true) {
                                 if (var19 >= var18) {
-                                  break L4;
+                                  break L5;
                                 } else {
-                                  L7: {
+                                  L8: {
                                     var20 = var27.h(-11);
                                     var21 = rk.field_w[var20].field_l;
-                                    var22 = var27.i(-31016);
+                                    var22 = var27.i(param0 ^ -31016);
                                     var24 = var27.field_u;
                                     if (var6 <= var19) {
-                                      break L7;
+                                      break L8;
                                     } else {
                                       var8[0][var12] = var21;
                                       var9[0][var12] = rk.field_w[var20].field_i;
                                       var10[0][var12] = var22;
                                       var25 = 0;
-                                      L8: while (true) {
+                                      L9: while (true) {
                                         if (var7 <= var25) {
                                           var12++;
-                                          break L7;
+                                          break L8;
                                         } else {
-                                          int incrementValue$9 = var15;
+                                          incrementValue$11 = var15;
                                           var15++;
-                                          var11[0][incrementValue$9] = var27.b(true);
+                                          var11[0][incrementValue$11] = var27.b(true);
                                           var25++;
-                                          continue L8;
+                                          continue L9;
                                         }
                                       }
                                     }
                                   }
-                                  L9: {
+                                  L10: {
                                     if (var21 == null) {
-                                      break L9;
+                                      break L10;
                                     } else {
                                       if (wc.a(var21, true)) {
                                         var8[1][var13] = qe.field_V;
@@ -174,25 +190,25 @@ final class dm extends cr {
                                         var13++;
                                         var27.field_u = var24;
                                         var25 = 0;
-                                        L10: while (true) {
+                                        L11: while (true) {
                                           if (var7 <= var25) {
-                                            break L9;
+                                            break L10;
                                           } else {
-                                            int incrementValue$10 = var16;
+                                            incrementValue$12 = var16;
                                             var16++;
-                                            var11[1][incrementValue$10] = var27.b(true);
+                                            var11[1][incrementValue$12] = var27.b(true);
                                             var25++;
-                                            continue L10;
+                                            continue L11;
                                           }
                                         }
                                       } else {
-                                        break L9;
+                                        break L10;
                                       }
                                     }
                                   }
-                                  L11: {
+                                  L12: {
                                     if (var6 <= var14) {
-                                      break L11;
+                                      break L12;
                                     } else {
                                       if (!rk.field_w[var20].field_m) {
                                         rk.field_w[var20].field_m = true;
@@ -202,101 +218,115 @@ final class dm extends cr {
                                         var27.field_u = var24;
                                         var14++;
                                         var25 = 0;
-                                        L12: while (true) {
+                                        L13: while (true) {
                                           if (var25 >= var7) {
-                                            break L11;
+                                            break L12;
                                           } else {
-                                            int incrementValue$11 = var17;
+                                            incrementValue$13 = var17;
                                             var17++;
-                                            var11[2][incrementValue$11] = var27.b(true);
+                                            var11[2][incrementValue$13] = var27.b(true);
                                             var25++;
-                                            continue L12;
+                                            continue L13;
                                           }
                                         }
                                       } else {
-                                        break L11;
+                                        break L12;
                                       }
                                     }
                                   }
                                   var19++;
-                                  continue L6;
+                                  continue L7;
                                 }
                               }
                             } else {
-                              break L4;
+                              break L5;
                             }
                           } else {
-                            L13: {
-                              rk.field_w[var8_int].field_l = var27.f(128);
+                            L14: {
+                              rk.field_w[var8_int].field_l = var27.f(param0 + 128);
                               rk.field_w[var8_int].field_m = false;
-                              if (var27.h(-11) != 1) {
+                              if (-2 != (var27.h(-11) ^ -1)) {
                                 rk.field_w[var8_int].field_i = null;
-                                break L13;
+                                break L14;
                               } else {
                                 rk.field_w[var8_int].field_i = var27.f(128);
-                                break L13;
+                                break L14;
                               }
                             }
                             var8_int++;
-                            continue L5;
+                            continue L6;
                           }
                         }
                       } else {
-                        break L4;
+                        break L5;
                       }
                     }
                     var4.field_s = true;
-                    var4.c(2);
-                    break L1;
+                    var4.c(param0 ^ 2);
+                    break L2;
                   } else {
                     rm.b((byte) 122);
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   }
                 }
               } else {
-                if (var2 != 1) {
-                  ke.a((Throwable) null, "HS1: " + or.a(121), 0);
+                if ((var2 ^ -1) != -2) {
+                  ke.a((Throwable) null, "HS1: " + or.a(param0 + 121), 0);
                   rm.b((byte) 5);
-                  break L1;
+                  break L2;
                 } else {
                   var3 = var27.a((byte) -11);
                   var4_long = var27.i(-31016);
-                  var6_ref_vi = (vi) (Object) mc.field_i.a((byte) 100);
-                  L14: while (true) {
-                    L15: {
+                  var6_ref_vi = (vi) ((Object) mc.field_i.a((byte) 100));
+                  L15: while (true) {
+                    L16: {
                       if (var6_ref_vi == null) {
-                        break L15;
+                        break L16;
                       } else {
                         if (var3 == var6_ref_vi.field_u) {
-                          break L15;
+                          break L16;
                         } else {
-                          var6_ref_vi = (vi) (Object) mc.field_i.b(62);
-                          continue L14;
+                          var6_ref_vi = (vi) ((Object) mc.field_i.b(param0 + 62));
+                          continue L15;
                         }
                       }
                     }
                     if (var6_ref_vi == null) {
                       rm.b((byte) 107);
-                      return;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     } else {
                       var6_ref_vi.field_r = var4_long;
-                      var6_ref_vi.c(2);
-                      break L1;
+                      var6_ref_vi.c(param0 ^ 2);
+                      break L2;
                     }
                   }
                 }
               }
             }
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "dm.G(" + 0 + ')');
+          throw wn.a((Throwable) ((Object) var1), "dm.G(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -305,8 +335,6 @@ final class dm extends cr {
         int var10 = 0;
         int[] var11 = null;
         int[] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
         RuntimeException decompiledCaughtException = null;
         var10 = Vertigo2.field_L ? 1 : 0;
         try {
@@ -350,7 +378,7 @@ final class dm extends cr {
                   }
                   L4: {
                     if (ua.field_e <= param2) {
-                      int incrementValue$2 = param2;
+                      incrementValue$2 = param2;
                       param2++;
                       ki.a(-93, param1, vl.field_e[incrementValue$2], param3, param4);
                       break L4;
@@ -361,7 +389,7 @@ final class dm extends cr {
                   }
                   L5: {
                     if (param5 <= cj.field_D) {
-                      int incrementValue$3 = param5;
+                      incrementValue$3 = param5;
                       param5--;
                       ki.a(-116, param1, vl.field_e[incrementValue$3], param3, param4);
                       break L5;
@@ -382,12 +410,10 @@ final class dm extends cr {
                           if (var8 > param5) {
                             break L1;
                           } else {
-                            var14 = vl.field_e[var8];
-                            var13 = var14;
-                            var12 = var13;
+                            var12 = vl.field_e[var8];
                             var11 = var12;
                             var9 = var11;
-                            var14[param3] = param4;
+                            var12[param3] = param4;
                             var9[param1] = param4;
                             var8++;
                             continue L7;
@@ -441,7 +467,7 @@ final class dm extends cr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var6, "dm.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw wn.a((Throwable) ((Object) var6), "dm.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -458,25 +484,21 @@ final class dm extends cr {
     dm(long param0, cr param1, cr param2, ie param3, cr param4, String param5, String param6) {
         super(param0, param1);
         try {
-            ((dm) this).field_Mb = new cr(0L, (cr) null);
-            ((dm) this).field_Lb = new od(0L, ((dm) this).field_Mb, param2, param3);
-            ((dm) this).field_Hb = new cr(0L, param4);
-            ((dm) this).field_Kb = new cr(0L, param4);
-            ((dm) this).field_Hb.field_S = param5;
-            ((dm) this).field_Kb.field_S = param6;
-            ((dm) this).b((cr) (Object) ((dm) this).field_Lb, 121);
-            ((dm) this).b(((dm) this).field_Hb, 118);
-            ((dm) this).b(((dm) this).field_Kb, 126);
+            this.field_Mb = new cr(0L, (cr) null);
+            this.field_Lb = new od(0L, this.field_Mb, param2, param3);
+            this.field_Hb = new cr(0L, param4);
+            this.field_Kb = new cr(0L, param4);
+            this.field_Hb.field_S = param5;
+            this.field_Kb.field_S = param6;
+            this.b(this.field_Lb, 121);
+            this.b(this.field_Hb, 118);
+            this.b(this.field_Kb, 126);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "dm.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "dm.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Ib = "Ignore";
         field_Jb = "Offer draw";
     }

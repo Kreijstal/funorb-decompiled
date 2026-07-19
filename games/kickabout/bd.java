@@ -2,8 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.io.*;
-import java.net.URL;
-import java.lang.String;
 
 final class bd extends qt {
     static boolean field_D;
@@ -37,12 +35,12 @@ final class bd extends qt {
           }
         }
         var3 = rp.a(stackIn_3_0 != 0, -587);
-        if (var3 == 3) {
+        if ((var3 ^ -1) == -4) {
           if (null == e.field_m) {
             cq.a(so.a(-98), (byte) 126);
-            if (var3 != 1) {
+            if ((var3 ^ -1) != -2) {
               L1: {
-                if (var3 == 2) {
+                if ((var3 ^ -1) == -3) {
                   jm.a(0, true, -2);
                   break L1;
                 } else {
@@ -54,7 +52,7 @@ final class bd extends qt {
             } else {
               L2: {
                 jm.a(0, false, -2);
-                if (var3 == 2) {
+                if ((var3 ^ -1) == -3) {
                   jm.a(0, true, -2);
                   break L2;
                 } else {
@@ -67,10 +65,10 @@ final class bd extends qt {
           } else {
             fd.h(0);
             cq.a(so.a(-98), (byte) 126);
-            if (var3 == 1) {
+            if ((var3 ^ -1) == -2) {
               L3: {
                 jm.a(0, false, -2);
-                if (var3 == 2) {
+                if ((var3 ^ -1) == -3) {
                   jm.a(0, true, -2);
                   break L3;
                 } else {
@@ -81,7 +79,7 @@ final class bd extends qt {
               return;
             } else {
               L4: {
-                if (var3 == 2) {
+                if ((var3 ^ -1) == -3) {
                   jm.a(0, true, -2);
                   break L4;
                 } else {
@@ -93,9 +91,9 @@ final class bd extends qt {
             }
           }
         } else {
-          if (var3 != 1) {
+          if ((var3 ^ -1) != -2) {
             L5: {
-              if (var3 == 2) {
+              if ((var3 ^ -1) == -3) {
                 jm.a(0, true, -2);
                 break L5;
               } else {
@@ -107,7 +105,7 @@ final class bd extends qt {
           } else {
             L6: {
               jm.a(0, false, -2);
-              if (var3 == 2) {
+              if ((var3 ^ -1) == -3) {
                 jm.a(0, true, -2);
                 break L6;
               } else {
@@ -121,11 +119,19 @@ final class bd extends qt {
     }
 
     final static int a(int param0, boolean param1, int param2) {
-        int var3 = param2 >> 16;
-        int var4 = param2 & 65535;
-        int var5 = param0 >> 16;
-        int var6 = 65535 & param0;
-        return (var6 * var4 >> 16) + param0 * var3 - -(var5 * var4);
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        var3 = param2 >> 2141048528;
+        var4 = param2 & 65535;
+        if (param1) {
+          return 87;
+        } else {
+          var5 = param0 >> -196501712;
+          var6 = 65535 & param0;
+          return (var6 * var4 >> 293067888) + param0 * var3 - -(var5 * var4);
+        }
     }
 
     final void a(int param0, boolean param1) {
@@ -141,35 +147,40 @@ final class bd extends qt {
         var2 = Kickabout.field_G;
         st.field_m = null;
         wq.field_g = false;
-        if (hk.field_G) {
-          rk.field_f.r(2121792);
-          return;
-        } else {
-          var1 = rl.field_n;
-          if (var1 > 0) {
-            if (var1 != 1) {
-              st.field_m = vo.a((byte) -18, tk.field_Lb, new String[1]);
-              st.field_m = kr.a(new CharSequence[3], false);
-              rk.field_f.q(-105);
-              fj.a(-45);
-              return;
+        if (param0 == -1) {
+          if (!hk.field_G) {
+            var1 = rl.field_n;
+            if (-1 > (var1 ^ -1)) {
+              if (-2 != (var1 ^ -1)) {
+                st.field_m = vo.a((byte) -18, tk.field_Lb, new String[]{Integer.toString(var1)});
+                st.field_m = kr.a(new CharSequence[]{(CharSequence) ((Object) st.field_m), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) he.field_Kb)}, false);
+                rk.field_f.q(-105);
+                fj.a(param0 ^ 44);
+                return;
+              } else {
+                st.field_m = dq.field_h;
+                st.field_m = kr.a(new CharSequence[]{(CharSequence) ((Object) st.field_m), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) he.field_Kb)}, false);
+                rk.field_f.q(-105);
+                fj.a(param0 ^ 44);
+                return;
+              }
             } else {
-              st.field_m = dq.field_h;
-              st.field_m = kr.a(new CharSequence[3], false);
               rk.field_f.q(-105);
-              fj.a(-45);
+              fj.a(param0 ^ 44);
               return;
             }
           } else {
-            rk.field_f.q(-105);
-            fj.a(-45);
+            rk.field_f.r(2121792);
             return;
           }
+        } else {
+          return;
         }
     }
 
     final static void a(String param0, Throwable param1, int param2) {
         try {
+            int discarded$1 = 0;
             Exception var3 = null;
             String var3_ref = null;
             wu var4 = null;
@@ -195,6 +206,7 @@ final class bd extends qt {
             java.net.URL stackIn_14_3 = null;
             StringBuilder stackIn_14_4 = null;
             String stackIn_14_5 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             bu stackOut_11_0 = null;
             java.net.URL stackOut_11_1 = null;
@@ -241,7 +253,7 @@ final class bd extends qt {
                     break L2;
                   }
                 }
-                or.a(var3_ref, param2);
+                or.a(var3_ref, param2 ^ 0);
                 var7 = aj.a(-1, ":", "%3a", var3_ref);
                 var8 = aj.a(param2 ^ -2, "@", "%40", var7);
                 var9 = aj.a(-1, "&", "%26", var8);
@@ -264,11 +276,11 @@ final class bd extends qt {
                     stackIn_12_3 = stackOut_11_3;
                     stackIn_12_4 = stackOut_11_4;
                     if (null == ds.field_b) {
-                      stackOut_13_0 = (bu) (Object) stackIn_13_0;
+                      stackOut_13_0 = (bu) ((Object) stackIn_13_0);
                       stackOut_13_1 = null;
                       stackOut_13_2 = null;
-                      stackOut_13_3 = (java.net.URL) (Object) stackIn_13_3;
-                      stackOut_13_4 = (StringBuilder) (Object) stackIn_13_4;
+                      stackOut_13_3 = (java.net.URL) ((Object) stackIn_13_3);
+                      stackOut_13_4 = (StringBuilder) ((Object) stackIn_13_4);
                       stackOut_13_5 = "" + tn.field_a;
                       stackIn_14_0 = stackOut_13_0;
                       stackIn_14_1 = stackOut_13_1;
@@ -278,11 +290,11 @@ final class bd extends qt {
                       stackIn_14_5 = stackOut_13_5;
                       break L4;
                     } else {
-                      stackOut_12_0 = (bu) (Object) stackIn_12_0;
+                      stackOut_12_0 = (bu) ((Object) stackIn_12_0);
                       stackOut_12_1 = null;
                       stackOut_12_2 = null;
-                      stackOut_12_3 = (java.net.URL) (Object) stackIn_12_3;
-                      stackOut_12_4 = (StringBuilder) (Object) stackIn_12_4;
+                      stackOut_12_3 = (java.net.URL) ((Object) stackIn_12_3);
+                      stackOut_12_4 = (StringBuilder) ((Object) stackIn_12_4);
                       stackOut_12_5 = ds.field_b;
                       stackIn_14_0 = stackOut_12_0;
                       stackIn_14_1 = stackOut_12_1;
@@ -300,28 +312,36 @@ final class bd extends qt {
                         if (param2 != var4.field_a) {
                           break L6;
                         } else {
-                          var5 = (DataInputStream) var4.field_b;
-                          int discarded$1 = var5.read();
+                          var5 = (DataInputStream) (var4.field_b);
+                          discarded$1 = var5.read();
                           var5.close();
                           break L6;
                         }
                       }
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
-                      aj.a(1L, param2);
+                      aj.a(1L, param2 + 0);
                       continue L5;
                     }
                   }
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L7: {
                 var3 = (Exception) (Object) decompiledCaughtException;
+                decompiledRegionSelector0 = 1;
                 break L7;
               }
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -331,10 +351,6 @@ final class bd extends qt {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_B = "This auction has been bought out! Your bid of <%0> was returned to you.";
     }
 }

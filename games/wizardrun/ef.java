@@ -31,7 +31,7 @@ final class ef extends pl {
           stackOut_0_0 = this;
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
-          if (((ef) this).field_z) {
+          if (this.field_z) {
             stackOut_2_0 = this;
             stackOut_2_1 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -45,10 +45,10 @@ final class ef extends pl {
             break L0;
           }
         }
-        ((ef) this).field_z = stackIn_3_1 != 0;
+        ((ef) (this)).field_z = stackIn_3_1 != 0;
         super.b(-108, param1, param2, param3);
         if (param0 > -45) {
-          ((ef) this).b(-80, 25, -112, 4);
+          this.b(-80, 25, -112, 4);
           return;
         } else {
           return;
@@ -58,35 +58,31 @@ final class ef extends pl {
     ef(String param0, ce param1, boolean param2) {
         this(param0, param1);
         try {
-            ((ef) this).field_z = param2 ? true : false;
+            this.field_z = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private ef(String param0, ce param1) {
         this(param0, kc.field_H.field_c, param1);
         try {
-            ((ef) this).field_w = kc.field_H.field_a;
+            this.field_w = kc.field_H.field_a;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private ef(String param0, bf param1, ce param2) {
         super(param0, param1, param2);
         try {
-            ((ef) this).field_w = kc.field_H.field_a;
+            this.field_w = kc.field_H.field_a;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_G = "yet submitted scores in this game.";
         field_F = "Intro";
     }

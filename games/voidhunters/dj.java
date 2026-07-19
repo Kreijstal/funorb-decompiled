@@ -12,22 +12,22 @@ final class dj {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = 11;
+        int var1 = -35 / ((param0 - 60) / 53);
     }
 
     final String b(byte param0) {
         if (param0 < 40) {
-            ((dj) this).field_c = false;
-            return ((dj) this).field_b;
+            this.field_c = false;
+            return this.field_b;
         }
-        return ((dj) this).field_b;
+        return this.field_b;
     }
 
     final boolean a(boolean param0) {
         if (!param0) {
             return true;
         }
-        return ((dj) this).field_c;
+        return this.field_c;
     }
 
     dj(String param0, boolean param1) {
@@ -60,11 +60,11 @@ final class dj {
         try {
           L0: {
             L1: {
-              ((dj) this).field_b = param0;
-              if (null != ((dj) this).field_b) {
+              this.field_b = param0;
+              if (null != this.field_b) {
                 break L1;
               } else {
-                ((dj) this).field_b = "";
+                this.field_b = "";
                 break L1;
               }
             }
@@ -86,9 +86,9 @@ final class dj {
                 break L2;
               }
             }
-            ((dj) this).field_c = stackIn_6_1 != 0;
-            if (((dj) this).field_b.length() == 0) {
-              ((dj) this).field_c = false;
+            ((dj) (this)).field_c = stackIn_6_1 != 0;
+            if (-1 == (this.field_b.length() ^ -1)) {
+              this.field_c = false;
               break L0;
             } else {
               return;
@@ -98,23 +98,23 @@ final class dj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_0 = (RuntimeException) (var3);
             stackOut_10_1 = new StringBuilder().append("dj.<init>(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -122,15 +122,11 @@ final class dj {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Type your email address again to make sure it's correct";
     }
 }

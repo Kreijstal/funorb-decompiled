@@ -22,68 +22,80 @@ final class rd extends wh {
     }
 
     final Object b(byte param0) {
+        he[] discarded$0 = null;
         if (param0 <= 57) {
-            Object var3 = null;
-            he[] discarded$0 = rd.a(-9, true, -89, (vj) null);
-            return ((rd) this).field_I;
+            vj var3 = (vj) null;
+            discarded$0 = rd.a(-9, true, -89, (vj) null);
+            return this.field_I;
         }
-        return ((rd) this).field_I;
+        return this.field_I;
     }
 
     final static he[] a(int param0, boolean param1, int param2, vj param3) {
         RuntimeException var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
+        he[] stackIn_2_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
+        he[] stackOut_1_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
-          if (fl.a(param0, param3, param2, (byte) -98)) {
-            return ih.k(24782);
-          } else {
-            return null;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
-            var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("rd.B(").append(param0).append(',').append(true).append(',').append(param2).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
-            if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L0;
+            if (param1) {
+              if (fl.a(param0, param3, param2, (byte) -98)) {
+                return ih.k(24782);
+              } else {
+                return null;
+              }
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackOut_1_0 = (he[]) null;
+              stackIn_2_0 = stackOut_1_0;
               break L0;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) (var4);
+            stackOut_7_1 = new StringBuilder().append("rd.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param3 == null) {
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L1;
+            } else {
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L1;
+            }
+          }
+          throw ie.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
+        return stackIn_2_0;
     }
 
     public static void g(int param0) {
@@ -99,7 +111,7 @@ final class rd extends wh {
 
     final static void h(int param0) {
         if (param0 == 300) {
-          if (-11 < dg.field_e) {
+          if (-11 > (dg.field_e ^ -1)) {
             lc.a(dg.field_e - 10, (byte) 24);
             return;
           } else {
@@ -108,7 +120,7 @@ final class rd extends wh {
           }
         } else {
           rd.g(37);
-          if (-11 > dg.field_e) {
+          if (-11 > (dg.field_e ^ -1)) {
             lc.a(dg.field_e - 10, (byte) 24);
             return;
           } else {
@@ -121,17 +133,13 @@ final class rd extends wh {
     rd(Object param0, int param1) {
         super(param1);
         try {
-            ((rd) this).field_I = param0;
+            this.field_I = param0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "rd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "rd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_E = "This password contains your email address, and would be easy to guess";
         field_J = new int[]{100, 100, 100, 100, 100, 300, 300, 200, 200, 100, 100, 200, 300, 200, 1000};
         ah.a((byte) 127, 50);

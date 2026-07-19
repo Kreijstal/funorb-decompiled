@@ -9,7 +9,7 @@ abstract class af {
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = 47;
+        int var1 = -94 / ((param0 - -42) / 41);
         field_b = null;
         field_c = null;
     }
@@ -21,10 +21,6 @@ abstract class af {
     abstract void a(byte param0, byte[] param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "af.E(";
         field_a = "Sound: ";
         field_b = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};

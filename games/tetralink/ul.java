@@ -9,7 +9,7 @@ final class ul implements kg {
     static kh[] field_c;
 
     public static void a(int param0) {
-        int var1 = 102;
+        int var1 = -102 / ((-25 - param0) / 36);
         field_b = null;
         field_e = null;
         field_c = null;
@@ -21,7 +21,7 @@ final class ul implements kg {
         int var6_int = 0;
         int var7 = 0;
         oh var8 = null;
-        Object var9 = null;
+        gd var9 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -44,7 +44,7 @@ final class ul implements kg {
               if (param3) {
                 break L1;
               } else {
-                var9 = null;
+                var9 = (gd) null;
                 ul.a((byte) 88, (gd) null);
                 break L1;
               }
@@ -57,10 +57,10 @@ final class ul implements kg {
               if (!(param0 instanceof ae)) {
                 break L2;
               } else {
-                if (!((ae) (Object) param0).field_N) {
+                if (!((ae) ((Object) param0)).field_N) {
                   break L2;
                 } else {
-                  var8.b((param0.field_F + -var8.field_t >> 1) + 1 + var6_int, 1 + (var7 - -(param0.field_u + -var8.field_F >> 1)), 256);
+                  var8.b((param0.field_F + -var8.field_t >> -522780447) + 1 + var6_int, 1 + (var7 - -(param0.field_u + -var8.field_F >> 1502553345)), 256);
                   break L2;
                 }
               }
@@ -76,23 +76,23 @@ final class ul implements kg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var6;
+            stackOut_9_0 = (RuntimeException) (var6);
             stackOut_9_1 = new StringBuilder().append("ul.L(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -100,7 +100,7 @@ final class ul implements kg {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -128,9 +128,9 @@ final class ul implements kg {
         var4 = TetraLink.field_J;
         try {
           L0: {
-            var3 = 114 / (param0 / 52);
+            var3 = 114 / ((param0 - 0) / 52);
             param1.b(false);
-            var2 = (gd) (Object) gl.field_p.c(false);
+            var2 = (gd) ((Object) gl.field_p.c(false));
             L1: while (true) {
               L2: {
                 if (var2 == null) {
@@ -139,16 +139,16 @@ final class ul implements kg {
                   if (!var2.a((byte) -115, param1)) {
                     break L2;
                   } else {
-                    var2 = (gd) (Object) gl.field_p.a((byte) -70);
+                    var2 = (gd) ((Object) gl.field_p.a((byte) -70));
                     continue L1;
                   }
                 }
               }
               if (var2 != null) {
-                cl.a((mc) (Object) var2, -94, (mc) (Object) param1);
+                cl.a(var2, -94, param1);
                 break L0;
               } else {
-                gl.field_p.a((mc) (Object) param1, false);
+                gl.field_p.a(param1, false);
                 return;
               }
             }
@@ -157,23 +157,23 @@ final class ul implements kg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var2_ref;
+            stackOut_9_0 = (RuntimeException) (var2_ref);
             stackOut_9_1 = new StringBuilder().append("ul.B(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -181,15 +181,11 @@ final class ul implements kg {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Unable to connect to the data server. Please check any firewall you are using.";
         field_b = "You have resigned.";
     }

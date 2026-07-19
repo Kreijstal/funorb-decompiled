@@ -11,10 +11,10 @@ final class jma extends jtb {
 
     final byte[] a(int param0) {
         int var2 = -61 % ((17 - param0) / 58);
-        if (((jma) this).field_n) {
+        if (this.field_n) {
             throw new RuntimeException();
         }
-        return ((jma) this).field_p;
+        return this.field_p;
     }
 
     public static void e(int param0) {
@@ -26,14 +26,14 @@ final class jma extends jtb {
 
     final int e(byte param0) {
         if (param0 == -4) {
-          if (((jma) this).field_n) {
+          if (this.field_n) {
             return 0;
           } else {
             return 100;
           }
         } else {
           jma.e(-40);
-          if (((jma) this).field_n) {
+          if (this.field_n) {
             return 0;
           } else {
             return 100;
@@ -45,10 +45,6 @@ final class jma extends jtb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = new Hashtable();
     }
 }

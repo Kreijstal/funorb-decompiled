@@ -13,7 +13,7 @@ final class ajb extends ksa {
 
     final static void a(byte param0, String param1) {
         RuntimeException runtimeException = null;
-        Object var3 = null;
+        String var3 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -37,7 +37,7 @@ final class ajb extends ksa {
               if (param0 == -74) {
                 break L1;
               } else {
-                var3 = null;
+                var3 = (String) null;
                 ajb.a((byte) 76, (String) null);
                 break L1;
               }
@@ -48,23 +48,23 @@ final class ajb extends ksa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ajb.C(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -72,7 +72,7 @@ final class ajb extends ksa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -85,18 +85,18 @@ final class ajb extends ksa {
 
     final void a(int param0, int[] param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
         try {
-            ((ajb) this).field_g = param2;
-            ((ajb) this).field_e = param5;
-            ((ajb) this).field_d = param6;
-            ((ajb) this).field_k = param1;
+            this.field_g = param2;
+            this.field_e = param5;
+            this.field_d = param6;
+            this.field_k = param1;
             if (param3 >= -84) {
-                ((ajb) this).field_j = -65;
+                this.field_j = -65;
             }
-            ((ajb) this).field_i = param0;
-            ((ajb) this).field_h = param4;
-            ((ajb) this).field_j = param7;
+            this.field_i = param0;
+            this.field_h = param4;
+            this.field_j = param7;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ajb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ajb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -104,10 +104,6 @@ final class ajb extends ksa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new clb();
     }
 }

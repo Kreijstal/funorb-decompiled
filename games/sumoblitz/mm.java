@@ -23,13 +23,12 @@ final class mm {
         field_d = null;
         field_b = null;
         field_e = null;
+        if (param0 <= 62) {
+            field_h = (mi) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "This password is part of your Player Name, and would be easy to guess";
         field_d = "Level select";
         field_a = new jf();

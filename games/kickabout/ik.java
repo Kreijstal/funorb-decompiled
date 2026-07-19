@@ -46,23 +46,23 @@ final class ik extends tm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ik.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -70,7 +70,7 @@ final class ik extends tm {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -251,13 +251,13 @@ final class ik extends tm {
             var8 = var14;
             var9 = th.field_c[param6];
             var10 = te.field_a[param6];
-            if (~(param5 - 5) < ~param1) {
+            if ((param5 - 5 ^ -1) < (param1 ^ -1)) {
               break L1;
             } else {
-              if (~(param7 + 5) > ~param1) {
+              if ((param7 + 5 ^ -1) > (param1 ^ -1)) {
                 break L1;
               } else {
-                if (~(param4 + -5) < ~param3) {
+                if ((param4 + -5 ^ -1) < (param3 ^ -1)) {
                   break L1;
                 } else {
                   if (param2 + 5 < param3) {
@@ -277,18 +277,18 @@ final class ik extends tm {
         }
         L2: {
           var11 = stackIn_6_0;
-          if (var14.field_u == 7) {
+          if ((var14.field_u ^ -1) == -8) {
             break L2;
           } else {
             if (var14.field_u == 8) {
               break L2;
             } else {
-              if (var14.field_u == 9) {
+              if ((var14.field_u ^ -1) == -10) {
                 break L2;
               } else {
                 if (var14.field_u != 10) {
                   L3: {
-                    if (var14.field_u == 3) {
+                    if (-4 == (var14.field_u ^ -1)) {
                       break L3;
                     } else {
                       if (var14.field_u == 12) {
@@ -298,19 +298,19 @@ final class ik extends tm {
                           if (0 == et.field_d.field_V.field_m) {
                             var12 = -var14.a(true) + param3;
                             var13 = param1 + -var14.f(-124);
-                            if (var12 * var12 + var13 * var13 >= 3600) {
+                            if ((var12 * var12 + var13 * var13 ^ -1) <= -3601) {
                               L4: {
                                 L5: {
-                                  if (ld.field_f.field_u == 9) {
+                                  if (-10 == (ld.field_f.field_u ^ -1)) {
                                     break L5;
                                   } else {
                                     if (7 == ld.field_f.field_u) {
                                       break L5;
                                     } else {
-                                      if (ld.field_f.field_u == 12) {
+                                      if ((ld.field_f.field_u ^ -1) == -13) {
                                         break L5;
                                       } else {
-                                        if (ld.field_f.field_u == 3) {
+                                        if (-4 == (ld.field_f.field_u ^ -1)) {
                                           break L5;
                                         } else {
                                           if (ld.field_f.field_u == 10) {
@@ -339,7 +339,7 @@ final class ik extends tm {
                                     nq.a(30, param3, var14, 0, (byte) 42, param1);
                                     return;
                                   } else {
-                                    if (et.field_d.field_V.field_m != 0) {
+                                    if ((et.field_d.field_V.field_m ^ -1) != -1) {
                                       break L6;
                                     } else {
                                       if (var12 != 0) {
@@ -349,17 +349,17 @@ final class ik extends tm {
                                         L7: {
                                           stackOut_100_0 = 10;
                                           stackOut_100_1 = var10;
-                                          stackOut_100_2 = (nl) var8;
+                                          stackOut_100_2 = (nl) (var8);
                                           stackIn_102_0 = stackOut_100_0;
                                           stackIn_102_1 = stackOut_100_1;
                                           stackIn_102_2 = stackOut_100_2;
                                           stackIn_101_0 = stackOut_100_0;
                                           stackIn_101_1 = stackOut_100_1;
                                           stackIn_101_2 = stackOut_100_2;
-                                          if (param6 == 1) {
+                                          if (-2 == (param6 ^ -1)) {
                                             stackOut_102_0 = stackIn_102_0;
                                             stackOut_102_1 = stackIn_102_1;
-                                            stackOut_102_2 = (nl) (Object) stackIn_102_2;
+                                            stackOut_102_2 = (nl) ((Object) stackIn_102_2);
                                             stackOut_102_3 = 8;
                                             stackIn_103_0 = stackOut_102_0;
                                             stackIn_103_1 = stackOut_102_1;
@@ -369,7 +369,7 @@ final class ik extends tm {
                                           } else {
                                             stackOut_101_0 = stackIn_101_0;
                                             stackOut_101_1 = stackIn_101_1;
-                                            stackOut_101_2 = (nl) (Object) stackIn_101_2;
+                                            stackOut_101_2 = (nl) ((Object) stackIn_101_2);
                                             stackOut_101_3 = 2;
                                             stackIn_103_0 = stackOut_101_0;
                                             stackIn_103_1 = stackOut_101_1;
@@ -388,17 +388,17 @@ final class ik extends tm {
                               L8: {
                                 stackOut_104_0 = 10;
                                 stackOut_104_1 = var10;
-                                stackOut_104_2 = (nl) var8;
+                                stackOut_104_2 = (nl) (var8);
                                 stackIn_106_0 = stackOut_104_0;
                                 stackIn_106_1 = stackOut_104_1;
                                 stackIn_106_2 = stackOut_104_2;
                                 stackIn_105_0 = stackOut_104_0;
                                 stackIn_105_1 = stackOut_104_1;
                                 stackIn_105_2 = stackOut_104_2;
-                                if (param6 == 1) {
+                                if (-2 == (param6 ^ -1)) {
                                   stackOut_106_0 = stackIn_106_0;
                                   stackOut_106_1 = stackIn_106_1;
-                                  stackOut_106_2 = (nl) (Object) stackIn_106_2;
+                                  stackOut_106_2 = (nl) ((Object) stackIn_106_2);
                                   stackOut_106_3 = 8;
                                   stackIn_107_0 = stackOut_106_0;
                                   stackIn_107_1 = stackOut_106_1;
@@ -408,7 +408,7 @@ final class ik extends tm {
                                 } else {
                                   stackOut_105_0 = stackIn_105_0;
                                   stackOut_105_1 = stackIn_105_1;
-                                  stackOut_105_2 = (nl) (Object) stackIn_105_2;
+                                  stackOut_105_2 = (nl) ((Object) stackIn_105_2);
                                   stackOut_105_3 = 2;
                                   stackIn_107_0 = stackOut_105_0;
                                   stackIn_107_1 = stackOut_105_1;
@@ -423,16 +423,16 @@ final class ik extends tm {
                               L9: {
                                 L10: {
                                   var14.b(0, -1);
-                                  if (ld.field_f.field_u == 9) {
+                                  if (-10 == (ld.field_f.field_u ^ -1)) {
                                     break L10;
                                   } else {
                                     if (7 == ld.field_f.field_u) {
                                       break L10;
                                     } else {
-                                      if (ld.field_f.field_u == 12) {
+                                      if ((ld.field_f.field_u ^ -1) == -13) {
                                         break L10;
                                       } else {
-                                        if (ld.field_f.field_u == 3) {
+                                        if (-4 == (ld.field_f.field_u ^ -1)) {
                                           break L10;
                                         } else {
                                           if (ld.field_f.field_u == 10) {
@@ -461,7 +461,7 @@ final class ik extends tm {
                                     nq.a(30, param3, var14, 0, (byte) 42, param1);
                                     return;
                                   } else {
-                                    if (et.field_d.field_V.field_m != 0) {
+                                    if ((et.field_d.field_V.field_m ^ -1) != -1) {
                                       break L11;
                                     } else {
                                       if (var12 != 0) {
@@ -477,17 +477,17 @@ final class ik extends tm {
                               L12: {
                                 stackOut_83_0 = 10;
                                 stackOut_83_1 = var10;
-                                stackOut_83_2 = (nl) var8;
+                                stackOut_83_2 = (nl) (var8);
                                 stackIn_85_0 = stackOut_83_0;
                                 stackIn_85_1 = stackOut_83_1;
                                 stackIn_85_2 = stackOut_83_2;
                                 stackIn_84_0 = stackOut_83_0;
                                 stackIn_84_1 = stackOut_83_1;
                                 stackIn_84_2 = stackOut_83_2;
-                                if (param6 == 1) {
+                                if (-2 == (param6 ^ -1)) {
                                   stackOut_85_0 = stackIn_85_0;
                                   stackOut_85_1 = stackIn_85_1;
-                                  stackOut_85_2 = (nl) (Object) stackIn_85_2;
+                                  stackOut_85_2 = (nl) ((Object) stackIn_85_2);
                                   stackOut_85_3 = 8;
                                   stackIn_86_0 = stackOut_85_0;
                                   stackIn_86_1 = stackOut_85_1;
@@ -497,7 +497,7 @@ final class ik extends tm {
                                 } else {
                                   stackOut_84_0 = stackIn_84_0;
                                   stackOut_84_1 = stackIn_84_1;
-                                  stackOut_84_2 = (nl) (Object) stackIn_84_2;
+                                  stackOut_84_2 = (nl) ((Object) stackIn_84_2);
                                   stackOut_84_3 = 2;
                                   stackIn_86_0 = stackOut_84_0;
                                   stackIn_86_1 = stackOut_84_1;
@@ -512,16 +512,16 @@ final class ik extends tm {
                           } else {
                             L13: {
                               L14: {
-                                if (ld.field_f.field_u == 9) {
+                                if (-10 == (ld.field_f.field_u ^ -1)) {
                                   break L14;
                                 } else {
                                   if (7 == ld.field_f.field_u) {
                                     break L14;
                                   } else {
-                                    if (ld.field_f.field_u == 12) {
+                                    if ((ld.field_f.field_u ^ -1) == -13) {
                                       break L14;
                                     } else {
-                                      if (ld.field_f.field_u == 3) {
+                                      if (-4 == (ld.field_f.field_u ^ -1)) {
                                         break L14;
                                       } else {
                                         if (ld.field_f.field_u == 10) {
@@ -550,7 +550,7 @@ final class ik extends tm {
                                   nq.a(30, param3, var14, 0, (byte) 42, param1);
                                   return;
                                 } else {
-                                  if (et.field_d.field_V.field_m != 0) {
+                                  if ((et.field_d.field_V.field_m ^ -1) != -1) {
                                     break L15;
                                   } else {
                                     if (var12 != 0) {
@@ -560,17 +560,17 @@ final class ik extends tm {
                                       L16: {
                                         stackOut_60_0 = 10;
                                         stackOut_60_1 = var10;
-                                        stackOut_60_2 = (nl) var8;
+                                        stackOut_60_2 = (nl) (var8);
                                         stackIn_62_0 = stackOut_60_0;
                                         stackIn_62_1 = stackOut_60_1;
                                         stackIn_62_2 = stackOut_60_2;
                                         stackIn_61_0 = stackOut_60_0;
                                         stackIn_61_1 = stackOut_60_1;
                                         stackIn_61_2 = stackOut_60_2;
-                                        if (param6 == 1) {
+                                        if (-2 == (param6 ^ -1)) {
                                           stackOut_62_0 = stackIn_62_0;
                                           stackOut_62_1 = stackIn_62_1;
-                                          stackOut_62_2 = (nl) (Object) stackIn_62_2;
+                                          stackOut_62_2 = (nl) ((Object) stackIn_62_2);
                                           stackOut_62_3 = 8;
                                           stackIn_63_0 = stackOut_62_0;
                                           stackIn_63_1 = stackOut_62_1;
@@ -580,7 +580,7 @@ final class ik extends tm {
                                         } else {
                                           stackOut_61_0 = stackIn_61_0;
                                           stackOut_61_1 = stackIn_61_1;
-                                          stackOut_61_2 = (nl) (Object) stackIn_61_2;
+                                          stackOut_61_2 = (nl) ((Object) stackIn_61_2);
                                           stackOut_61_3 = 2;
                                           stackIn_63_0 = stackOut_61_0;
                                           stackIn_63_1 = stackOut_61_1;
@@ -599,17 +599,17 @@ final class ik extends tm {
                             L17: {
                               stackOut_64_0 = 10;
                               stackOut_64_1 = var10;
-                              stackOut_64_2 = (nl) var8;
+                              stackOut_64_2 = (nl) (var8);
                               stackIn_66_0 = stackOut_64_0;
                               stackIn_66_1 = stackOut_64_1;
                               stackIn_66_2 = stackOut_64_2;
                               stackIn_65_0 = stackOut_64_0;
                               stackIn_65_1 = stackOut_64_1;
                               stackIn_65_2 = stackOut_64_2;
-                              if (param6 == 1) {
+                              if (-2 == (param6 ^ -1)) {
                                 stackOut_66_0 = stackIn_66_0;
                                 stackOut_66_1 = stackIn_66_1;
-                                stackOut_66_2 = (nl) (Object) stackIn_66_2;
+                                stackOut_66_2 = (nl) ((Object) stackIn_66_2);
                                 stackOut_66_3 = 8;
                                 stackIn_67_0 = stackOut_66_0;
                                 stackIn_67_1 = stackOut_66_1;
@@ -619,7 +619,7 @@ final class ik extends tm {
                               } else {
                                 stackOut_65_0 = stackIn_65_0;
                                 stackOut_65_1 = stackIn_65_1;
-                                stackOut_65_2 = (nl) (Object) stackIn_65_2;
+                                stackOut_65_2 = (nl) ((Object) stackIn_65_2);
                                 stackOut_65_3 = 2;
                                 stackIn_67_0 = stackOut_65_0;
                                 stackIn_67_1 = stackOut_65_1;
@@ -634,16 +634,16 @@ final class ik extends tm {
                         } else {
                           L18: {
                             L19: {
-                              if (ld.field_f.field_u == 9) {
+                              if (-10 == (ld.field_f.field_u ^ -1)) {
                                 break L19;
                               } else {
                                 if (7 == ld.field_f.field_u) {
                                   break L19;
                                 } else {
-                                  if (ld.field_f.field_u == 12) {
+                                  if ((ld.field_f.field_u ^ -1) == -13) {
                                     break L19;
                                   } else {
-                                    if (ld.field_f.field_u == 3) {
+                                    if (-4 == (ld.field_f.field_u ^ -1)) {
                                       break L19;
                                     } else {
                                       if (ld.field_f.field_u == 10) {
@@ -672,7 +672,7 @@ final class ik extends tm {
                                 nq.a(30, param3, var14, 0, (byte) 42, param1);
                                 return;
                               } else {
-                                if (et.field_d.field_V.field_m != 0) {
+                                if ((et.field_d.field_V.field_m ^ -1) != -1) {
                                   break L20;
                                 } else {
                                   if (var12 != 0) {
@@ -682,17 +682,17 @@ final class ik extends tm {
                                     L21: {
                                       stackOut_38_0 = 10;
                                       stackOut_38_1 = var10;
-                                      stackOut_38_2 = (nl) var8;
+                                      stackOut_38_2 = (nl) (var8);
                                       stackIn_40_0 = stackOut_38_0;
                                       stackIn_40_1 = stackOut_38_1;
                                       stackIn_40_2 = stackOut_38_2;
                                       stackIn_39_0 = stackOut_38_0;
                                       stackIn_39_1 = stackOut_38_1;
                                       stackIn_39_2 = stackOut_38_2;
-                                      if (param6 == 1) {
+                                      if (-2 == (param6 ^ -1)) {
                                         stackOut_40_0 = stackIn_40_0;
                                         stackOut_40_1 = stackIn_40_1;
-                                        stackOut_40_2 = (nl) (Object) stackIn_40_2;
+                                        stackOut_40_2 = (nl) ((Object) stackIn_40_2);
                                         stackOut_40_3 = 8;
                                         stackIn_41_0 = stackOut_40_0;
                                         stackIn_41_1 = stackOut_40_1;
@@ -702,7 +702,7 @@ final class ik extends tm {
                                       } else {
                                         stackOut_39_0 = stackIn_39_0;
                                         stackOut_39_1 = stackIn_39_1;
-                                        stackOut_39_2 = (nl) (Object) stackIn_39_2;
+                                        stackOut_39_2 = (nl) ((Object) stackIn_39_2);
                                         stackOut_39_3 = 2;
                                         stackIn_41_0 = stackOut_39_0;
                                         stackIn_41_1 = stackOut_39_1;
@@ -721,17 +721,17 @@ final class ik extends tm {
                           L22: {
                             stackOut_42_0 = 10;
                             stackOut_42_1 = var10;
-                            stackOut_42_2 = (nl) var8;
+                            stackOut_42_2 = (nl) (var8);
                             stackIn_44_0 = stackOut_42_0;
                             stackIn_44_1 = stackOut_42_1;
                             stackIn_44_2 = stackOut_42_2;
                             stackIn_43_0 = stackOut_42_0;
                             stackIn_43_1 = stackOut_42_1;
                             stackIn_43_2 = stackOut_42_2;
-                            if (param6 == 1) {
+                            if (-2 == (param6 ^ -1)) {
                               stackOut_44_0 = stackIn_44_0;
                               stackOut_44_1 = stackIn_44_1;
-                              stackOut_44_2 = (nl) (Object) stackIn_44_2;
+                              stackOut_44_2 = (nl) ((Object) stackIn_44_2);
                               stackOut_44_3 = 8;
                               stackIn_45_0 = stackOut_44_0;
                               stackIn_45_1 = stackOut_44_1;
@@ -741,7 +741,7 @@ final class ik extends tm {
                             } else {
                               stackOut_43_0 = stackIn_43_0;
                               stackOut_43_1 = stackIn_43_1;
-                              stackOut_43_2 = (nl) (Object) stackIn_43_2;
+                              stackOut_43_2 = (nl) ((Object) stackIn_43_2);
                               stackOut_43_3 = 2;
                               stackIn_45_0 = stackOut_43_0;
                               stackIn_45_1 = stackOut_43_1;
@@ -811,21 +811,20 @@ final class ik extends tm {
         try {
             if (nm.field_d == null) {
                 nm.field_d = new oj(wd.field_l, st.field_m);
-                wd.field_l.a((fd) (Object) nm.field_d, false);
+                wd.field_l.a(nm.field_d, false);
+            }
+            if (param3 < 71) {
+                ik.a((byte) -14, 61, 24, 8, -65, -11, 102, -101);
             }
             nm.field_d.a(param1, param0, 9255, param2);
             on.b();
             oa.a((byte) -106, true);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ik.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + 84 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "ik.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_E = "Too Low";
         field_F = "Game options";
         field_C = new tf();

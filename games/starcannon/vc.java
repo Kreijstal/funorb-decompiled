@@ -14,10 +14,20 @@ final class vc extends rf {
     int field_h;
 
     final static void a(int param0, byte param1, int param2) {
-        ff.field_o = param0;
-        nh.field_e = 1;
-        jb.field_e = 0;
-        vj.field_ab = param2;
+        if (param1 != 60) {
+          vc.b((byte) 96);
+          ff.field_o = param0;
+          nh.field_e = 1;
+          jb.field_e = 0;
+          vj.field_ab = param2;
+          return;
+        } else {
+          ff.field_o = param0;
+          nh.field_e = 1;
+          jb.field_e = 0;
+          vj.field_ab = param2;
+          return;
+        }
     }
 
     public static void b(byte param0) {
@@ -33,6 +43,9 @@ final class vc extends rf {
 
     final static void a(int param0, int param1, int param2) {
         a.field_e = param1;
+        if (param2 != 1) {
+            return;
+        }
         dg.field_n = param0;
     }
 
@@ -40,10 +53,6 @@ final class vc extends rf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "POWERUPS 1/2:";
         field_f = "Sound: ";
     }

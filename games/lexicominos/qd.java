@@ -7,10 +7,13 @@ final class qd {
 
     public static void b(boolean param0) {
         field_a = null;
+        if (param0) {
+            field_a = (int[]) null;
+        }
     }
 
     final static gb a(boolean param0) {
-        String var1 = dg.a(false);
+        String var1 = dg.a(param0);
         if (var1 != null) {
             if (0 <= var1.indexOf('@')) {
                 var1 = "";
@@ -20,14 +23,25 @@ final class qd {
     }
 
     final static vb a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        vb var8 = new vb(param5, param4, param7, param3, param2, param0);
-        jl.field_a.b(123, (kd) (Object) var8);
-        vi.a(4, var8, 1);
-        return var8;
+        gb discarded$2 = null;
+        vb var8 = null;
+        var8 = new vb(param5, param4, param7, param3, param2, param0);
+        jl.field_a.b(param1 + -11680, var8);
+        if (param1 != 11803) {
+          discarded$2 = qd.a(false);
+          vi.a(param6, var8, 1);
+          return var8;
+        } else {
+          vi.a(param6, var8, 1);
+          return var8;
+        }
     }
 
     final static df a(int param0, boolean param1) {
-        th var2 = null;
+        int discarded$4 = 0;
+        String discarded$5 = null;
+        int discarded$6 = 0;
+        String discarded$7 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -36,21 +50,20 @@ final class qd {
         th var8 = null;
         me var9 = null;
         int stackIn_3_0 = 0;
-        int stackIn_9_0 = 0;
-        int[] stackIn_22_0 = null;
+        int stackIn_11_0 = 0;
+        int[] stackIn_26_0 = null;
         Throwable decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        Object stackOut_21_0 = null;
-        int[] stackOut_20_0 = null;
+        int stackOut_10_0 = 0;
+        int stackOut_9_0 = 0;
+        Object stackOut_25_0 = null;
+        int[] stackOut_24_0 = null;
         L0: {
           var7 = Lexicominos.field_L ? 1 : 0;
           var8 = ig.field_a;
-          var2 = var8;
           var3 = var8.d(true);
-          if ((128 & var3) == 0) {
+          if ((128 & var3) == param0) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -72,40 +85,51 @@ final class qd {
           } else {
             fd.field_g = var8.b(-1698573656);
             kc.field_c = var8.a(86);
-            break L1;
+            if (var7 == 0) {
+              break L1;
+            } else {
+              kc.field_c = 0;
+              fd.field_g = 0;
+              break L1;
+            }
           }
         }
         L2: {
           if (1 != var8.d(true)) {
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackOut_10_0 = 0;
+            stackIn_11_0 = stackOut_10_0;
             break L2;
           } else {
-            stackOut_7_0 = 1;
-            stackIn_9_0 = stackOut_7_0;
+            stackOut_9_0 = 1;
+            stackIn_11_0 = stackOut_9_0;
             break L2;
           }
         }
         L3: {
-          var4 = stackIn_9_0;
+          var4 = stackIn_11_0;
           ik.field_k = var8.c(false);
           if (var4 != 0) {
             gk.field_c = var8.c(false);
             break L3;
           } else {
             gk.field_c = ik.field_k;
-            break L3;
+            if (var7 == 0) {
+              break L3;
+            } else {
+              gk.field_c = var8.c(false);
+              break L3;
+            }
           }
         }
         L4: {
           if (1 == kb.field_a) {
-            int discarded$4 = var8.b(-1698573656);
-            String discarded$5 = var8.c(false);
+            discarded$4 = var8.b(-1698573656);
+            discarded$5 = var8.c(false);
             break L4;
           } else {
-            if (kb.field_a == 4) {
-              int discarded$6 = var8.b(-1698573656);
-              String discarded$7 = var8.c(false);
+            if ((kb.field_a ^ -1) == -5) {
+              discarded$6 = var8.b(-1698573656);
+              discarded$7 = var8.c(false);
               break L4;
             } else {
               break L4;
@@ -113,7 +137,7 @@ final class qd {
           }
         }
         if (!param1) {
-          oe.field_b = ij.a(80, -22651, (wf) (Object) var8);
+          oe.field_b = ij.a(80, -22651, var8);
           eb.field_d = null;
           return new df(param1);
         } else {
@@ -121,38 +145,42 @@ final class qd {
           try {
             L5: {
               L6: {
-                var9 = hi.field_d.a(27467, var5);
+                var9 = hi.field_d.a(param0 + 27467, var5);
                 oe.field_b = var9.c(-97);
-                if (gk.field_c.equals((Object) (Object) og.field_c)) {
-                  stackOut_21_0 = null;
-                  stackIn_22_0 = (int[]) (Object) stackOut_21_0;
+                if (gk.field_c.equals(og.field_c)) {
+                  stackOut_25_0 = null;
+                  stackIn_26_0 = (int[]) ((Object) stackOut_25_0);
                   break L6;
                 } else {
-                  stackOut_20_0 = var9.field_r;
-                  stackIn_22_0 = stackOut_20_0;
+                  stackOut_24_0 = var9.field_r;
+                  stackIn_26_0 = stackOut_24_0;
                   break L6;
                 }
               }
-              eb.field_d = stackIn_22_0;
+              eb.field_d = stackIn_26_0;
               break L5;
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var6 = (Exception) (Object) decompiledCaughtException;
-            uj.a("CC1", (Throwable) (Object) var6, 1);
+            L7: {
+              var6 = (Exception) (Object) decompiledCaughtException;
+              uj.a("CC1", (Throwable) ((Object) var6), 1);
+              eb.field_d = null;
+              oe.field_b = null;
+              break L7;
+            }
+          }
+          if (var7 != 0) {
+            oe.field_b = ij.a(80, -22651, var8);
             eb.field_d = null;
-            oe.field_b = null;
+            return new df(param1);
+          } else {
             return new df(param1);
           }
-          return new df(param1);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new int[8192];
     }
 }

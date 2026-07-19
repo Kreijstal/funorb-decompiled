@@ -15,10 +15,6 @@ final class ik {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ik.<init>()";
     }
 }

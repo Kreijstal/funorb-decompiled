@@ -15,46 +15,54 @@ final class qs extends pu {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        String[][] stackIn_8_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
+        String[][] stackIn_10_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String[][] stackOut_7_0 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
+        String[][] stackOut_9_0 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         var7 = BachelorFridge.field_y;
         try {
           L0: {
+            L1: {
+              if (!param0) {
+                break L1;
+              } else {
+                field_l = (kv[][]) null;
+                break L1;
+              }
+            }
             var2_int = param1.e((byte) 117);
             var3 = param1.e((byte) 95);
             var4 = new String[var2_int][var3];
             var5 = 0;
-            L1: while (true) {
+            L2: while (true) {
               if (var5 >= var2_int) {
-                stackOut_7_0 = (String[][]) var4;
-                stackIn_8_0 = stackOut_7_0;
+                stackOut_9_0 = (String[][]) (var4);
+                stackIn_10_0 = stackOut_9_0;
                 break L0;
               } else {
                 var6 = 0;
-                L2: while (true) {
+                L3: while (true) {
                   if (var6 >= var3) {
                     var5++;
-                    continue L1;
+                    continue L2;
                   } else {
                     var4[var5][var6] = param1.h((byte) 120);
                     var6++;
-                    continue L2;
+                    continue L3;
                   }
                 }
               }
@@ -62,35 +70,35 @@ final class qs extends pu {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var2;
-            stackOut_9_1 = new StringBuilder().append("qs.D(").append(false).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackOut_11_0 = (RuntimeException) (var2);
+            stackOut_11_1 = new StringBuilder().append("qs.D(").append(param0).append(',');
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L3;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L3;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
-        return stackIn_8_0;
+        return stackIn_10_0;
     }
 
     final static void b(boolean param0) {
@@ -101,51 +109,67 @@ final class qs extends pu {
         var2 = BachelorFridge.field_y;
         try {
           L0: {
-            i.field_h = new js(16);
-            var1_int = 0;
-            L1: while (true) {
+            L1: {
+              i.field_h = new js(16);
+              var1_int = 0;
+              if (!param0) {
+                break L1;
+              } else {
+                field_l = (kv[][]) null;
+                break L1;
+              }
+            }
+            L2: while (true) {
               if (nm.field_C.length <= var1_int) {
                 break L0;
               } else {
-                i.field_h.a((long)nm.field_C[var1_int].toLowerCase().hashCode(), (byte) 127, (bw) (Object) new ji(var1_int));
+                i.field_h.a((long)nm.field_C[var1_int].toLowerCase().hashCode(), (byte) 127, new ji(var1_int));
                 var1_int++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "qs.B(" + false + ')');
+          throw pe.a((Throwable) ((Object) var1), "qs.B(" + param0 + ')');
         }
     }
 
     public static void b(int param0) {
+        if (param0 != -5232) {
+            return;
+        }
         field_m = null;
-        field_l = null;
+        field_l = (kv[][]) null;
     }
 
     final static void c(int param0) {
+        String[][] discarded$0 = null;
         int var2 = BachelorFridge.field_y;
-        if (lfa.field_q > 0) {
+        if ((lfa.field_q ^ -1) < -1) {
             lfa.field_q = lfa.field_q - 1;
         } else {
-            if (ld.field_p > 0) {
+            if (-1 > (ld.field_p ^ -1)) {
                 ld.field_p = ld.field_p - 1;
             } else {
-                if (!(dja.field_m <= 0)) {
+                if (!((dja.field_m ^ -1) >= -1)) {
                     dja.field_m = dja.field_m - 1;
                 }
             }
         }
-        if (lfa.field_q > 0) {
-            pm.f(199);
+        if ((lfa.field_q ^ -1) < -1) {
+            pm.f(param0 + 11100);
         }
-        if (ld.field_p > 0) {
+        if ((ld.field_p ^ -1) < -1) {
             dna.c(ld.field_p, false);
         }
-        if (!(dja.field_m <= 0)) {
+        if (!((dja.field_m ^ -1) >= -1)) {
             dna.c(dja.field_m, false);
+        }
+        if (param0 != -10901) {
+            lu var3 = (lu) null;
+            discarded$0 = qs.a(false, (lu) null);
         }
     }
 

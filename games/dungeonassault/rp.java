@@ -34,7 +34,7 @@ final class rp {
                       if (param1 < -102) {
                         return false;
                       } else {
-                        field_f = null;
+                        field_f = (String[]) null;
                         return false;
                       }
                     }
@@ -58,6 +58,7 @@ final class rp {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
@@ -79,6 +80,7 @@ final class rp {
                   var7_int = 0;
                   L2: while (true) {
                     if (var7_int >= param5.length) {
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       te.a(-1 + param3, param6 + -1, 2 + param1, param5[var7_int]);
@@ -103,30 +105,31 @@ final class rp {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var7 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var7;
+            stackOut_10_0 = (RuntimeException) (var7);
             stackOut_10_1 = new StringBuilder().append("rp.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param5 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -134,19 +137,30 @@ final class rp {
               break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param6 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static void a(byte param0) {
+        byte[] discarded$0 = null;
         if (!(null == a.field_n)) {
             a.field_n.j((byte) 73);
         }
+        if (param0 > -33) {
+            String var2 = (String) null;
+            discarded$0 = rp.a((String) null, -9);
+        }
         pj.field_c = new gk();
-        ta.field_a.b(1, (lm) (Object) pj.field_c);
+        ta.field_a.b(1, pj.field_c);
     }
 
     final static boolean a(int param0, int param1) {
+        boolean discarded$2 = false;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
         int stackOut_13_0 = 0;
@@ -157,7 +171,7 @@ final class rp {
           if (param0 == 15204376) {
             break L0;
           } else {
-            boolean discarded$2 = rp.a(-31, -32);
+            discarded$2 = rp.a(-31, -32);
             break L0;
           }
         }
@@ -257,23 +271,23 @@ final class rp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("rp.E(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -281,7 +295,7 @@ final class rp {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -291,17 +305,16 @@ final class rp {
         field_h = null;
         field_d = null;
         field_f = null;
-        field_c = null;
+        if (param0 != -68) {
+            rp.a((byte) 9);
+        }
+        field_c = (byte[][]) null;
         field_a = null;
         field_b = null;
         field_e = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new ef();
         field_c = new byte[250][];
         field_b = new String[]{"Gift of the Trees", "Double target <%sneak> in the next room. (Single use)"};

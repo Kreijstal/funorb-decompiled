@@ -20,18 +20,24 @@ final class rm implements Iterable {
         field_h = null;
         field_g = null;
         field_i = null;
+        if (param0 != -1215) {
+            rm.b(57);
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new fl((rm) this);
+        return (Iterator) ((Object) new fl((rm) (this)));
     }
 
     final static void b(int param0) {
+        String discarded$0 = null;
         ai.a(true, -1, ae.field_g, aa.field_G);
         if (param0 > -28) {
-            Object var2 = null;
-            String discarded$0 = rm.a((byte[]) null, -113);
+            byte[] var2 = (byte[]) null;
+            discarded$0 = rm.a((byte[]) null, -113);
             jh.field_D = true;
             return;
         }
@@ -64,7 +70,7 @@ final class rm implements Iterable {
               if (param1 == 17746) {
                 break L1;
               } else {
-                field_a = null;
+                field_a = (java.awt.Image) null;
                 break L1;
               }
             }
@@ -76,23 +82,23 @@ final class rm implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("rm.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -100,7 +106,7 @@ final class rm implements Iterable {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -109,44 +115,40 @@ final class rm implements Iterable {
         oh var4 = null;
         oh var5 = null;
         int var6 = 0;
-        oh var7 = null;
-        oh var8 = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 < -72) {
-          var7 = ((rm) this).field_f[(int)((long)(((rm) this).field_d - 1) & param1)];
-          var4 = var7;
-          ((rm) this).field_j = var7.field_f;
+          var4 = this.field_f[(int)((long)(this.field_d - 1) & param1)];
+          this.field_j = var4.field_f;
           L0: while (true) {
-            if (((rm) this).field_j == var4) {
-              ((rm) this).field_j = null;
+            if (this.field_j == var4) {
+              this.field_j = null;
               return null;
             } else {
-              if (~((rm) this).field_j.field_b != ~param1) {
-                ((rm) this).field_j = ((rm) this).field_j.field_f;
+              if ((this.field_j.field_b ^ -1L) != (param1 ^ -1L)) {
+                this.field_j = this.field_j.field_f;
                 continue L0;
               } else {
-                var5 = ((rm) this).field_j;
-                ((rm) this).field_j = ((rm) this).field_j.field_f;
+                var5 = this.field_j;
+                this.field_j = this.field_j.field_f;
                 return var5;
               }
             }
           }
         } else {
-          ((rm) this).a((oh) null, true, 61L);
-          var8 = ((rm) this).field_f[(int)((long)(((rm) this).field_d - 1) & param1)];
-          var4 = var8;
-          ((rm) this).field_j = var8.field_f;
+          this.a((oh) null, true, 61L);
+          var4 = this.field_f[(int)((long)(this.field_d - 1) & param1)];
+          this.field_j = var4.field_f;
           L1: while (true) {
-            if (((rm) this).field_j == var4) {
-              ((rm) this).field_j = null;
+            if (this.field_j == var4) {
+              this.field_j = null;
               return null;
             } else {
-              if (~((rm) this).field_j.field_b != ~param1) {
-                ((rm) this).field_j = ((rm) this).field_j.field_f;
+              if ((this.field_j.field_b ^ -1L) != (param1 ^ -1L)) {
+                this.field_j = this.field_j.field_f;
                 continue L1;
               } else {
-                var5 = ((rm) this).field_j;
-                ((rm) this).field_j = ((rm) this).field_j.field_f;
+                var5 = this.field_j;
+                this.field_j = this.field_j.field_f;
                 return var5;
               }
             }
@@ -161,42 +163,43 @@ final class rm implements Iterable {
                 param0.b((byte) -58);
             }
             if (!param1) {
-                ((rm) this).field_f = null;
+                this.field_f = (oh[]) null;
             }
-            var5 = ((rm) this).field_f[(int)((long)(-1 + ((rm) this).field_d) & param2)];
+            var5 = this.field_f[(int)((long)(-1 + this.field_d) & param2)];
             param0.field_f = var5;
             param0.field_e = var5.field_e;
             param0.field_e.field_f = param0;
             param0.field_f.field_e = param0;
             param0.field_b = param2;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "rm.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "rm.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     rm(int param0) {
         int var2 = 0;
+        oh dupTemp$0 = null;
         oh var3 = null;
-        ((rm) this).field_d = param0;
-        ((rm) this).field_f = new oh[param0];
+        this.field_d = param0;
+        this.field_f = new oh[param0];
         for (var2 = 0; var2 < param0; var2++) {
-            oh dupTemp$0 = new oh();
+            dupTemp$0 = new oh();
             var3 = dupTemp$0;
-            ((rm) this).field_f[var2] = dupTemp$0;
+            this.field_f[var2] = dupTemp$0;
             var3.field_f = var3;
             var3.field_e = var3;
         }
     }
 
     final static bc a(int param0, boolean param1, boolean param2, boolean param3, boolean param4) {
-        return cc.a(0, false, 5, 12000, true, false);
+        if (!param3) {
+            field_c = (String) null;
+            return cc.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
+        }
+        return cc.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
         field_h = new int[]{2, 21, 22, 7, 6, 10};
         field_i = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";

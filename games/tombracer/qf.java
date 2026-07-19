@@ -8,42 +8,61 @@ final class qf extends uia {
     static int field_i;
 
     final void a(byte param0, float param1) {
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
         int var3 = 0;
         var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
-        int fieldTemp$6 = ((qf) this).field_h;
-        ((qf) this).field_h = ((qf) this).field_h + 1;
-        ((qf) this).field_g[fieldTemp$6] = (byte)var3;
-        int fieldTemp$7 = ((qf) this).field_h;
-        ((qf) this).field_h = ((qf) this).field_h + 1;
-        ((qf) this).field_g[fieldTemp$7] = (byte)(var3 >> 8);
+        int fieldTemp$6 = this.field_h;
+        this.field_h = this.field_h + 1;
+        this.field_g[fieldTemp$6] = (byte)var3;
+        int fieldTemp$7 = this.field_h;
+        this.field_h = this.field_h + 1;
+        this.field_g[fieldTemp$7] = (byte)(var3 >> 288130152);
         if (param0 != 114) {
-          field_k = null;
-          int fieldTemp$8 = ((qf) this).field_h;
-          ((qf) this).field_h = ((qf) this).field_h + 1;
-          ((qf) this).field_g[fieldTemp$8] = (byte)(var3 >> 16);
-          int fieldTemp$9 = ((qf) this).field_h;
-          ((qf) this).field_h = ((qf) this).field_h + 1;
-          ((qf) this).field_g[fieldTemp$9] = (byte)(var3 >> 24);
+          field_k = (nh[]) null;
+          fieldTemp$8 = this.field_h;
+          this.field_h = this.field_h + 1;
+          this.field_g[fieldTemp$8] = (byte)(var3 >> 966747152);
+          fieldTemp$9 = this.field_h;
+          this.field_h = this.field_h + 1;
+          this.field_g[fieldTemp$9] = (byte)(var3 >> 1944967576);
           return;
         } else {
-          int fieldTemp$10 = ((qf) this).field_h;
-          ((qf) this).field_h = ((qf) this).field_h + 1;
-          ((qf) this).field_g[fieldTemp$10] = (byte)(var3 >> 16);
-          int fieldTemp$11 = ((qf) this).field_h;
-          ((qf) this).field_h = ((qf) this).field_h + 1;
-          ((qf) this).field_g[fieldTemp$11] = (byte)(var3 >> 24);
+          fieldTemp$10 = this.field_h;
+          this.field_h = this.field_h + 1;
+          this.field_g[fieldTemp$10] = (byte)(var3 >> 966747152);
+          fieldTemp$11 = this.field_h;
+          this.field_h = this.field_h + 1;
+          this.field_g[fieldTemp$11] = (byte)(var3 >> 1944967576);
           return;
         }
     }
 
     final static String a(int param0, String param1, String param2, String param3) {
-        int var5 = TombRacer.field_G ? 1 : 0;
-        int var4 = param3.indexOf(param2);
-        while (var4 != -1) {
+        int var4 = 0;
+        int var5 = 0;
+        var5 = TombRacer.field_G ? 1 : 0;
+        var4 = param3.indexOf(param2);
+        L0: while (true) {
+          if ((var4 ^ -1) == 0) {
+            if (param0 != 966747152) {
+              field_k = (nh[]) null;
+              return param3;
+            } else {
+              return param3;
+            }
+          } else {
             param3 = param3.substring(0, var4) + param1 + param3.substring(var4 + param2.length());
             var4 = param3.indexOf(param2, param1.length() + var4);
+            if (var5 == 0) {
+              continue L0;
+            } else {
+              return param3;
+            }
+          }
         }
-        return param3;
     }
 
     public static void g(byte param0) {
@@ -63,42 +82,44 @@ final class qf extends uia {
     }
 
     final void a(int param0, float param1) {
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
         int var3 = 0;
         var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
-        int fieldTemp$7 = ((qf) this).field_h;
-        ((qf) this).field_h = ((qf) this).field_h + 1;
-        ((qf) this).field_g[fieldTemp$7] = (byte)(var3 >> 24);
+        int fieldTemp$7 = this.field_h;
+        this.field_h = this.field_h + 1;
+        this.field_g[fieldTemp$7] = (byte)(var3 >> -1327975528);
         if (param0 != 17133) {
-          field_l = null;
-          int fieldTemp$8 = ((qf) this).field_h;
-          ((qf) this).field_h = ((qf) this).field_h + 1;
-          ((qf) this).field_g[fieldTemp$8] = (byte)(var3 >> 16);
-          int fieldTemp$9 = ((qf) this).field_h;
-          ((qf) this).field_h = ((qf) this).field_h + 1;
-          ((qf) this).field_g[fieldTemp$9] = (byte)(var3 >> 8);
-          int fieldTemp$10 = ((qf) this).field_h;
-          ((qf) this).field_h = ((qf) this).field_h + 1;
-          ((qf) this).field_g[fieldTemp$10] = (byte)var3;
+          field_l = (String) null;
+          fieldTemp$8 = this.field_h;
+          this.field_h = this.field_h + 1;
+          this.field_g[fieldTemp$8] = (byte)(var3 >> 203947568);
+          fieldTemp$9 = this.field_h;
+          this.field_h = this.field_h + 1;
+          this.field_g[fieldTemp$9] = (byte)(var3 >> -620773848);
+          fieldTemp$10 = this.field_h;
+          this.field_h = this.field_h + 1;
+          this.field_g[fieldTemp$10] = (byte)var3;
           return;
         } else {
-          int fieldTemp$11 = ((qf) this).field_h;
-          ((qf) this).field_h = ((qf) this).field_h + 1;
-          ((qf) this).field_g[fieldTemp$11] = (byte)(var3 >> 16);
-          int fieldTemp$12 = ((qf) this).field_h;
-          ((qf) this).field_h = ((qf) this).field_h + 1;
-          ((qf) this).field_g[fieldTemp$12] = (byte)(var3 >> 8);
-          int fieldTemp$13 = ((qf) this).field_h;
-          ((qf) this).field_h = ((qf) this).field_h + 1;
-          ((qf) this).field_g[fieldTemp$13] = (byte)var3;
+          fieldTemp$11 = this.field_h;
+          this.field_h = this.field_h + 1;
+          this.field_g[fieldTemp$11] = (byte)(var3 >> 203947568);
+          fieldTemp$12 = this.field_h;
+          this.field_h = this.field_h + 1;
+          this.field_g[fieldTemp$12] = (byte)(var3 >> -620773848);
+          fieldTemp$13 = this.field_h;
+          this.field_h = this.field_h + 1;
+          this.field_g[fieldTemp$13] = (byte)var3;
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Sound: ";
     }
 }

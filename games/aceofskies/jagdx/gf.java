@@ -5,6 +5,7 @@ package jagdx;
 
 public final class gf {
     public final static boolean a(int param0, int param1) {
+        boolean discarded$10 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -13,8 +14,8 @@ public final class gf {
         int stackOut_2_0 = 0;
         if (param0 != -1) {
           L0: {
-            boolean discarded$10 = gf.a(-75, -97);
-            if (param1 >= 0) {
+            discarded$10 = jagdx.gf.a(-75, -97);
+            if ((param1 ^ -1) <= -1) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -27,7 +28,7 @@ public final class gf {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (param1 >= 0) {
+            if ((param1 ^ -1) <= -1) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;

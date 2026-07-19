@@ -8,7 +8,7 @@ final class gn extends tg {
     static String field_I;
 
     final void b(byte param0, int param1, int param2, int param3) {
-        ((gn) this).field_z = !((gn) this).field_z ? true : false;
+        this.field_z = !this.field_z ? true : false;
         super.b((byte) 69, param1, param2, param3);
         int var5 = 65 % ((param0 - -33) / 42);
     }
@@ -16,14 +16,18 @@ final class gn extends tg {
     private gn(String param0, cd param1) {
         this(param0, vi.field_g.field_l, param1);
         try {
-            ((gn) this).field_w = vi.field_g.field_i;
+            this.field_w = vi.field_g.field_i;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void g(boolean param0) {
         field_H = null;
+        if (!param0) {
+            String var2 = (String) null;
+            gn.a((byte) 42, (String) null, 7);
+        }
         field_G = null;
         field_I = null;
         field_F = null;
@@ -39,6 +43,9 @@ final class gn extends tg {
             var3[var4_int] = k.field_c[rb.a((int) var2[var4_int], 255)];
         }
         mg var4 = new mg(oj.field_Kb, se.field_d, el.field_w[0], mb.field_bb[0], db.field_k[0], gb.field_F[0], var3);
+        if (param0 != -9) {
+            gn.g(true);
+        }
         pe.b((byte) -28);
         return var4;
     }
@@ -46,36 +53,32 @@ final class gn extends tg {
     final static void a(byte param0, String param1, int param2) {
         try {
             tg.field_x = 1;
-            int var3_int = 33;
+            int var3_int = -66 / ((-14 - param0) / 41);
             pm.field_k = param2;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "gn.A(" + 86 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "gn.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private gn(String param0, ol param1, cd param2) {
         super(param0, param1, param2);
         try {
-            ((gn) this).field_w = vi.field_g.field_i;
+            this.field_w = vi.field_g.field_i;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     gn(String param0, cd param1, boolean param2) {
         this(param0, param1);
         try {
-            ((gn) this).field_z = param2 ? true : false;
+            this.field_z = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_H = "Waiting for textures";
         field_I = "Don't mind";
     }

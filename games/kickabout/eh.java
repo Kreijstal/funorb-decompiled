@@ -20,14 +20,14 @@ final class eh implements pk {
         int stackOut_23_0 = 0;
         L0: {
           var3 = Kickabout.field_G;
-          if (((eh) this).field_a) {
+          if (this.field_a) {
             break L0;
           } else {
             if (!ob.m(99)) {
               break L0;
             } else {
-              ((eh) this).field_a = true;
-              var2_ref_oi = (oi) (Object) ec.field_f.g(24009);
+              this.field_a = true;
+              var2_ref_oi = (oi) ((Object) ec.field_f.g(24009));
               L1: while (true) {
                 if (var2_ref_oi == null) {
                   ok.field_a.b(22997);
@@ -42,7 +42,7 @@ final class eh implements pk {
                       break L2;
                     }
                   }
-                  var2_ref_oi = (oi) (Object) ec.field_f.c(param0 ^ -27629);
+                  var2_ref_oi = (oi) ((Object) ec.field_f.c(param0 ^ -27629));
                   continue L1;
                 }
               }
@@ -53,51 +53,51 @@ final class eh implements pk {
           if (param0 == -27598) {
             break L3;
           } else {
-            ((eh) this).field_a = true;
+            this.field_a = true;
             break L3;
           }
         }
         L4: {
-          if (!((eh) this).field_c) {
+          if (!this.field_c) {
             L5: {
-              if (-1 != (1 & vp.field_h)) {
+              if (-1 != (1 & vp.field_h ^ -1)) {
                 break L5;
               } else {
                 var2 = js.field_e;
-                if (-1 < var2) {
+                if (-1 > (var2 ^ -1)) {
                   break L5;
                 } else {
                   break L5;
                 }
               }
             }
-            ((eh) this).field_c = true;
+            this.field_c = true;
             break L4;
           } else {
             break L4;
           }
         }
         L6: {
-          if (((eh) this).field_d) {
+          if (this.field_d) {
             break L6;
           } else {
-            if (!((eh) this).e(0)) {
+            if (!this.e(0)) {
               break L6;
             } else {
-              ((eh) this).field_d = true;
+              this.field_d = true;
               break L6;
             }
           }
         }
         L7: {
           L8: {
-            if (!((eh) this).field_d) {
+            if (!this.field_d) {
               break L8;
             } else {
-              if (!((eh) this).field_c) {
+              if (!this.field_c) {
                 break L8;
               } else {
-                if (!((eh) this).field_a) {
+                if (!this.field_a) {
                   break L8;
                 } else {
                   if (!ui.field_y) {
@@ -119,19 +119,25 @@ final class eh implements pk {
     }
 
     public final boolean a(boolean param0) {
+        ut[] discarded$0 = null;
         ut var4 = null;
+        kg var5 = null;
         ut var6 = null;
         ut[] var7 = null;
         ut[] var8 = null;
         int var9 = 0;
-        int var10_int = 0;
         int var11_int = 0;
+        ut discarded$1 = null;
         kg[] var10 = null;
         ut[][] var11 = null;
         ut[][] var12 = null;
+        ut discarded$2 = null;
+        ut discarded$3 = null;
+        ut discarded$4 = null;
+        int var10_int = 0;
         int var13 = Kickabout.field_G;
         if (!param0) {
-            Object var14 = null;
+            ot var14 = (ot) null;
             this.a(28, (ot) null);
         }
         mf.h((byte) -19);
@@ -169,7 +175,7 @@ final class eh implements pk {
             eo.field_m = se.a(bo.field_Cb, -121, "lobby", "exhibition_icons");
             eo.field_m[0] = new ut(0, 0);
             eo.field_f = jo.a(bo.field_Cb, 17369, "lobby", "orb_icons");
-            ut[] discarded$0 = se.a(bo.field_Cb, -127, "lobby", "players");
+            discarded$0 = se.a(bo.field_Cb, -127, "lobby", "players");
             tf.field_e = eo.field_q;
             un.field_d = gm.a(v.field_b, 10, "font2", bo.field_Cb, "fonts");
             q.field_d = qk.a("font", v.field_b, 75, "fonts", bo.field_Cb);
@@ -179,13 +185,13 @@ final class eh implements pk {
             on.d(4, 4, 3, 7829367);
             on.d(4, 4, 2, 13421772);
             ta.e(122);
-            kg var5 = eo.a(var4);
-            pb.field_C.a((qd[]) (Object) new kg[1], new int[1]);
+            var5 = eo.a(var4);
+            pb.field_C.a(new kg[]{var5}, new int[]{10});
             sk.a(83, 100, 10);
             var6 = wa.a((byte) 100, "basic", var16, "orbcoin");
-            ch.a(var6, (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 77, "locked"), (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 77, "unachieved"), -123);
+            ch.a(var6, (ot) ((Object) bg.a("menu", bo.field_Cb, (byte) 77, "locked")), (ot) ((Object) bg.a("menu", bo.field_Cb, (byte) 77, "unachieved")), -123);
             sh.field_g = nh.b(nh.a(var6));
-            nn.field_B = (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 69, "divider");
+            nn.field_B = (ot) ((Object) bg.a("menu", bo.field_Cb, (byte) 69, "divider"));
             tt.field_e = wa.a((byte) 122, "menu", bo.field_Cb, "button_left_shine");
             ah.field_l = wa.a((byte) 106, "menu", bo.field_Cb, "button_middle_shine");
             sk.a(-109, 100, 20);
@@ -196,8 +202,8 @@ final class eh implements pk {
             sk.a(90, 100, 25);
             wt.field_z = ng.a("swatch_overlay", "menu", 2, bo.field_Cb);
             var7 = ng.a("arrows", "menu", 2, bo.field_Cb);
-            eo.field_k = new ot[]{(ot) (Object) var7[0], (ot) (Object) var7[2], (ot) (Object) var7[4]};
-            eo.field_i = new ot[]{(ot) (Object) var7[1], (ot) (Object) var7[3], (ot) (Object) var7[5]};
+            eo.field_k = new ot[]{(ot) ((Object) var7[0]), (ot) ((Object) var7[2]), (ot) ((Object) var7[4])};
+            eo.field_i = new ot[]{(ot) ((Object) var7[1]), (ot) ((Object) var7[3]), (ot) ((Object) var7[5])};
             sk.a(86, 100, 30);
             sk.a(103, 100, 35);
             sk.a(-94, 100, 40);
@@ -215,32 +221,32 @@ final class eh implements pk {
             var9 = 0;
             for (var10_int = 0; var10_int < 3; var10_int++) {
                 for (var11_int = 0; var11_int < 6; var11_int++) {
-                    tk.field_Fb[var10_int][var11_int] = (ot) (Object) var8[var9];
+                    tk.field_Fb[var10_int][var11_int] = (ot) ((Object) var8[var9]);
                     var9++;
                 }
             }
-            for (var10_int = 0; var10_int < 6; var10_int++) {
-                tk.field_Fb[3][var10_int] = (ot) (Object) var8[var9];
+            for (var10_int = 0; (var10_int ^ -1) > -7; var10_int++) {
+                tk.field_Fb[3][var10_int] = (ot) ((Object) var8[var9]);
             }
             ca.field_c = new ot[4];
             for (var10_int = 0; var10_int < ca.field_c.length; var10_int++) {
                 ca.field_c[var10_int] = ri.a(tk.field_Fb[var10_int][0], param0);
             }
-            kl.field_m = (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 96, "help_up");
-            ut discarded$1 = bg.a("menu", bo.field_Cb, (byte) 100, "help_dwn");
+            kl.field_m = (ot) ((Object) bg.a("menu", bo.field_Cb, (byte) 96, "help_up"));
+            discarded$1 = bg.a("menu", bo.field_Cb, (byte) 100, "help_dwn");
             mf.a(se.a(bo.field_Cb, -124, "menu", "tickbox"), true);
             sk.a(80, 100, 75);
-            eq.field_h = (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 93, "hammer_icon");
-            ml.field_q = (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 89, "hammer_icon_buy");
+            eq.field_h = (ot) ((Object) bg.a("menu", bo.field_Cb, (byte) 93, "hammer_icon"));
+            ml.field_q = (ot) ((Object) bg.a("menu", bo.field_Cb, (byte) 89, "hammer_icon_buy"));
             sk.a(113, 100, 70);
             qj.field_f = bg.a("menu", bo.field_Cb, (byte) 60, "tactics_pitch");
-            fc.field_h = (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 109, "lock_icon");
+            fc.field_h = (ot) ((Object) bg.a("menu", bo.field_Cb, (byte) 109, "lock_icon"));
             sk.a(90, 100, 80);
             es.field_f = bg.a("menu", bo.field_Cb, (byte) 78, "kit");
             kb.field_E = ng.a("cups", "menu", 2, bo.field_Cb);
             jm.field_i = ng.a("cups_empty", "menu", 2, bo.field_Cb);
             sk.a(102, 100, 90);
-            fn.field_d = (ot) (Object) bg.a("menu", bo.field_Cb, (byte) 88, "shelf");
+            fn.field_d = (ot) ((Object) bg.a("menu", bo.field_Cb, (byte) 88, "shelf"));
             rk.field_g = bg.a("menu", bo.field_Cb, (byte) 76, "scroll_button");
             bn.field_B = this.a("menu", bo.field_Cb, (byte) 26, "scroll_bar");
             su.field_a = wa.a((byte) 106, "menu", bo.field_Cb, "mini_ball");
@@ -248,7 +254,7 @@ final class eh implements pk {
             var10 = eo.field_f;
             var11 = new ut[][]{eo.field_p, null, eo.field_m, eo.field_j};
             var12 = new ut[][]{eo.field_p, null, eo.field_m, eo.field_j};
-            Object var15 = null;
+            int[] var15 = (int[]) null;
             uf.a(var11, id.field_y, ow.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, rk.field_e, var17, sn.field_c, rp.field_y, ld.field_h, os.field_i, var12, (int[]) null, 8, 3, jd.field_i);
             la.field_k = da.field_k;
             qd.field_e = lr.field_n;
@@ -257,7 +263,7 @@ final class eh implements pk {
             mr.a(false, 200);
             sk.a(-61, 100, 95);
             m.a(var17, var16, 5198);
-            bf.a(-70, rm.field_A, 0, (java.applet.Applet) (Object) nm.field_g, 0, 16777215);
+            bf.a(-70, rm.field_A, 0, nm.field_g, 0, 16777215);
             Object var3 = null;
             v.field_b = null;
             dd.a((byte) 104);
@@ -265,47 +271,47 @@ final class eh implements pk {
         }
         if (!(sj.field_f == null)) {
             ml.k(61, 3);
-            cq.field_j = new ut(sj.field_f.a("background_guy.png", "", 36), (java.awt.Component) (Object) ln.l(64));
-            mk.field_a = new ut(sj.field_f.a("background.png", "", 66), (java.awt.Component) (Object) ln.l(64));
-            iu.field_k = new ut(sj.field_f.a("splash.jpg", "", 8), (java.awt.Component) (Object) ln.l(64));
-            ai.field_E = new ut(sj.field_f.a("botbar.png", "", 66), (java.awt.Component) (Object) ln.l(64));
+            cq.field_j = new ut(sj.field_f.a("background_guy.png", "", 36), (java.awt.Component) ((Object) ln.l(64)));
+            mk.field_a = new ut(sj.field_f.a("background.png", "", 66), (java.awt.Component) ((Object) ln.l(64)));
+            iu.field_k = new ut(sj.field_f.a("splash.jpg", "", 8), (java.awt.Component) ((Object) ln.l(64)));
+            ai.field_E = new ut(sj.field_f.a("botbar.png", "", 66), (java.awt.Component) ((Object) ln.l(64)));
             sk.a(-114, 23, 2);
-            vo.field_cb = nh.a(new ot(sj.field_f.a("bank_top.png", "", 3), (java.awt.Component) (Object) ln.l(64)));
-            nn.field_C = nh.a(new ot(sj.field_f.a("bank_mid.png", "", 52), (java.awt.Component) (Object) ln.l(64)));
-            du.field_i = nh.a(new ot(sj.field_f.a("bank_bot.png", "", 123), (java.awt.Component) (Object) ln.l(64)));
-            lb.field_L = nh.a(new ot(sj.field_f.a("button_lrg.png", "", 91), (java.awt.Component) (Object) ln.l(64)));
-            ll.field_m = nh.a(new ot(sj.field_f.a("button_sml.png", "", 81), (java.awt.Component) (Object) ln.l(64)));
+            vo.field_cb = nh.a(new ot(sj.field_f.a("bank_top.png", "", 3), (java.awt.Component) ((Object) ln.l(64))));
+            nn.field_C = nh.a(new ot(sj.field_f.a("bank_mid.png", "", 52), (java.awt.Component) ((Object) ln.l(64))));
+            du.field_i = nh.a(new ot(sj.field_f.a("bank_bot.png", "", 123), (java.awt.Component) ((Object) ln.l(64))));
+            lb.field_L = nh.a(new ot(sj.field_f.a("button_lrg.png", "", 91), (java.awt.Component) ((Object) ln.l(64))));
+            ll.field_m = nh.a(new ot(sj.field_f.a("button_sml.png", "", 81), (java.awt.Component) ((Object) ln.l(64))));
             sk.a(122, 23, 4);
-            nn.field_K = new ot(sj.field_f.a("cone_1.png", "", 91), (java.awt.Component) (Object) ln.l(64));
-            re.field_o = new ot(sj.field_f.a("cone_2.png", "", 91), (java.awt.Component) (Object) ln.l(64));
-            uv.field_m = nh.a(new ot(sj.field_f.a("button_left.png", "", 8), (java.awt.Component) (Object) ln.l(64)));
-            uj.field_B = nh.a(new ot(sj.field_f.a("button_middle.png", "", 97), (java.awt.Component) (Object) ln.l(64)));
+            nn.field_K = new ot(sj.field_f.a("cone_1.png", "", 91), (java.awt.Component) ((Object) ln.l(64)));
+            re.field_o = new ot(sj.field_f.a("cone_2.png", "", 91), (java.awt.Component) ((Object) ln.l(64)));
+            uv.field_m = nh.a(new ot(sj.field_f.a("button_left.png", "", 8), (java.awt.Component) ((Object) ln.l(64))));
+            uj.field_B = nh.a(new ot(sj.field_f.a("button_middle.png", "", 97), (java.awt.Component) ((Object) ln.l(64))));
             sk.a(-114, 23, 6);
-            mf.field_Cb = nh.a(new ot(sj.field_f.a("button_right.png", "", 90), (java.awt.Component) (Object) ln.l(64)));
-            pw.field_H = (ut) (Object) new ot(sj.field_f.a("stopwatch.png", "", 101), (java.awt.Component) (Object) ln.l(64));
+            mf.field_Cb = nh.a(new ot(sj.field_f.a("button_right.png", "", 90), (java.awt.Component) ((Object) ln.l(64))));
+            pw.field_H = (ut) ((Object) new ot(sj.field_f.a("stopwatch.png", "", 101), (java.awt.Component) ((Object) ln.l(64))));
             sk.a(-58, 23, 8);
-            ut discarded$2 = nh.a(new ot(sj.field_f.a("thin_button_endl.png", "", 89), (java.awt.Component) (Object) ln.l(64)));
-            ut discarded$3 = nh.a(new ot(sj.field_f.a("thin_button_mid.png", "", 5), (java.awt.Component) (Object) ln.l(64)));
+            discarded$2 = nh.a(new ot(sj.field_f.a("thin_button_endl.png", "", 89), (java.awt.Component) ((Object) ln.l(64))));
+            discarded$3 = nh.a(new ot(sj.field_f.a("thin_button_mid.png", "", 5), (java.awt.Component) ((Object) ln.l(64))));
             sk.a(-105, 23, 10);
-            ut discarded$4 = nh.a(new ot(sj.field_f.a("thin_button_endr.png", "", 58), (java.awt.Component) (Object) ln.l(64)));
-            gu.field_zb = nh.a(new ot(sj.field_f.a("small_button_L.png", "", 52), (java.awt.Component) (Object) ln.l(64)));
+            discarded$4 = nh.a(new ot(sj.field_f.a("thin_button_endr.png", "", 58), (java.awt.Component) ((Object) ln.l(64))));
+            gu.field_zb = nh.a(new ot(sj.field_f.a("small_button_L.png", "", 52), (java.awt.Component) ((Object) ln.l(64))));
             sk.a(-61, 23, 12);
-            ae.field_H = nh.a(new ot(sj.field_f.a("small_button_mid.png", "", 53), (java.awt.Component) (Object) ln.l(64)));
-            fv.field_b = nh.a(new ot(sj.field_f.a("small_button_R.png", "", 117), (java.awt.Component) (Object) ln.l(64)));
+            ae.field_H = nh.a(new ot(sj.field_f.a("small_button_mid.png", "", 53), (java.awt.Component) ((Object) ln.l(64))));
+            fv.field_b = nh.a(new ot(sj.field_f.a("small_button_R.png", "", 117), (java.awt.Component) ((Object) ln.l(64))));
             sk.a(-85, 23, 14);
-            mg.field_g = nh.a(new ot(sj.field_f.a("top_bar_Seg.png", "", 127), (java.awt.Component) (Object) ln.l(64)));
+            mg.field_g = nh.a(new ot(sj.field_f.a("top_bar_Seg.png", "", 127), (java.awt.Component) ((Object) ln.l(64))));
             sk.a(-49, 23, 16);
-            qt.field_u = nh.a(new ot(sj.field_f.a("top.png", "", 82), (java.awt.Component) (Object) ln.l(64)));
+            qt.field_u = nh.a(new ot(sj.field_f.a("top.png", "", 82), (java.awt.Component) ((Object) ln.l(64))));
             sk.a(-98, 23, 18);
-            fn.field_f = new ot(sj.field_f.a("asphalt_corner.png", "", 6), (java.awt.Component) (Object) ln.l(64));
-            kn.field_J = new ut(sj.field_f.a("asphalt_v.png", "", 69), (java.awt.Component) (Object) ln.l(64));
+            fn.field_f = new ot(sj.field_f.a("asphalt_corner.png", "", 6), (java.awt.Component) ((Object) ln.l(64)));
+            kn.field_J = new ut(sj.field_f.a("asphalt_v.png", "", 69), (java.awt.Component) ((Object) ln.l(64)));
             sk.a(126, 23, 20);
-            vl.field_g = new ut(sj.field_f.a("asphalt_h.png", "", 124), (java.awt.Component) (Object) ln.l(64));
-            eo.field_a = new ot(sj.field_f.a("arrow_on.png", "", 63), (java.awt.Component) (Object) ln.l(64));
-            eo.field_b = new ot(sj.field_f.a("arrow_off.png", "", 4), (java.awt.Component) (Object) ln.l(64));
+            vl.field_g = new ut(sj.field_f.a("asphalt_h.png", "", 124), (java.awt.Component) ((Object) ln.l(64)));
+            eo.field_a = new ot(sj.field_f.a("arrow_on.png", "", 63), (java.awt.Component) ((Object) ln.l(64)));
+            eo.field_b = new ot(sj.field_f.a("arrow_off.png", "", 4), (java.awt.Component) ((Object) ln.l(64)));
             sk.a(-89, 23, 23);
-            this.a(11264, new ot(sj.field_f.a("achievements_large.png", "", 63), (java.awt.Component) (Object) ln.l(64)));
-            sf.field_C = (ut) (Object) new ot(sj.field_f.a("ka_logo.png", "", 37), (java.awt.Component) (Object) ln.l(64));
+            this.a(11264, new ot(sj.field_f.a("achievements_large.png", "", 63), (java.awt.Component) ((Object) ln.l(64))));
+            sf.field_C = (ut) ((Object) new ot(sj.field_f.a("ka_logo.png", "", 37), (java.awt.Component) ((Object) ln.l(64))));
             sj.field_f = null;
             dd.a((byte) 99);
             return false;
@@ -340,10 +346,40 @@ final class eh implements pk {
         if (param0 != 115) {
             return;
         }
-        wc.field_k = new sn((ma) (Object) nm.field_g);
+        wc.field_k = new sn(nm.field_g);
     }
 
     final static void a(byte param0) {
+        int incrementValue$30 = 0;
+        int incrementValue$31 = 0;
+        int incrementValue$32 = 0;
+        int incrementValue$33 = 0;
+        int incrementValue$34 = 0;
+        int incrementValue$35 = 0;
+        int incrementValue$36 = 0;
+        int incrementValue$37 = 0;
+        int incrementValue$38 = 0;
+        int incrementValue$39 = 0;
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
+        int incrementValue$48 = 0;
+        int incrementValue$49 = 0;
+        int incrementValue$50 = 0;
+        int incrementValue$51 = 0;
+        int incrementValue$52 = 0;
+        int incrementValue$53 = 0;
+        int incrementValue$54 = 0;
+        int incrementValue$55 = 0;
+        int incrementValue$56 = 0;
+        int incrementValue$57 = 0;
+        int incrementValue$58 = 0;
+        int incrementValue$59 = 0;
         RuntimeException var1 = null;
         ut var2 = null;
         ut var3 = null;
@@ -352,88 +388,98 @@ final class eh implements pk {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ut var9 = null;
+        StringBuilder var9 = null;
         ut var10 = null;
+        ut var11 = null;
         RuntimeException decompiledCaughtException = null;
         var8 = Kickabout.field_G;
         try {
           L0: {
             L1: {
-              var9 = tv.field_b[2];
-              var10 = var9;
-              var2 = nh.a((ot) (Object) c.field_e);
-              var3 = nh.a((ot) (Object) st.field_q);
+              if (param0 < -42) {
+                break L1;
+              } else {
+                var9 = (StringBuilder) null;
+                eh.a(-123, -22, (StringBuilder) null);
+                break L1;
+              }
+            }
+            L2: {
+              var10 = tv.field_b[2];
+              var11 = var10;
+              var2 = nh.a((ot) ((Object) c.field_e));
+              var3 = nh.a((ot) ((Object) st.field_q));
               if (rm.field_C != 0) {
-                if (rm.field_C == 1) {
+                if ((rm.field_C ^ -1) == -2) {
                   oi.field_e = new oh[34];
                   var4 = 0;
-                  int incrementValue$30 = var4;
+                  incrementValue$30 = var4;
                   var4++;
                   oi.field_e[incrementValue$30] = new oh(el.field_D, 0, 1375);
                   var5 = 0;
-                  L2: while (true) {
+                  L3: while (true) {
                     if (12 <= var5) {
-                      int incrementValue$31 = var4;
+                      incrementValue$31 = var4;
                       var4++;
                       oi.field_e[incrementValue$31] = new oh(var3, -203, 169);
-                      int incrementValue$32 = var4;
+                      incrementValue$32 = var4;
                       var4++;
                       oi.field_e[incrementValue$32] = new oh(je.field_h, -219, 292);
-                      int incrementValue$33 = var4;
+                      incrementValue$33 = var4;
                       var4++;
                       oi.field_e[incrementValue$33] = new oh(ns.field_c, 824, -60);
-                      int incrementValue$34 = var4;
+                      incrementValue$34 = var4;
                       var4++;
                       oi.field_e[incrementValue$34] = new oh(je.field_h, 753, -69);
-                      int incrementValue$35 = var4;
+                      incrementValue$35 = var4;
                       var4++;
                       oi.field_e[incrementValue$35] = new oh(el.field_D, 1030, 568);
                       var5 = 0;
-                      L3: while (true) {
-                        if (var5 >= 8) {
-                          break L1;
+                      L4: while (true) {
+                        if ((var5 ^ -1) <= -9) {
+                          break L2;
                         } else {
-                          L4: {
+                          L5: {
                             var6 = el.a(29430, 20, -170);
                             var7 = -50 - -(var5 / 2 * 400);
                             if ((1 & var5) != 0) {
                               var7 = var7 + el.a(29430, 20, 60);
-                              break L4;
+                              break L5;
                             } else {
-                              break L4;
+                              break L5;
                             }
                           }
-                          int incrementValue$36 = var4;
+                          incrementValue$36 = var4;
                           var4++;
                           oi.field_e[incrementValue$36] = new oh(wn.field_a[p.a((byte) -24, wn.field_a.length)], var6, var7);
-                          int incrementValue$37 = var4;
+                          incrementValue$37 = var4;
                           var4++;
                           oi.field_e[incrementValue$37] = new oh(wn.field_a[p.a((byte) -24, wn.field_a.length)], -var6 + 876, var7);
                           var5++;
-                          continue L3;
+                          continue L4;
                         }
                       }
                     } else {
-                      L5: {
+                      L6: {
                         var6 = el.a(29430, 30, -300 - -(100 * var5));
                         var7 = el.a(29430, 60, -290);
                         if (p.a((byte) -24, 2) != 0) {
-                          break L5;
+                          break L6;
                         } else {
                           var6 = -var6 + 896;
                           var7 += 1724;
-                          break L5;
+                          break L6;
                         }
                       }
-                      int incrementValue$38 = var4;
+                      incrementValue$38 = var4;
                       var4++;
                       oi.field_e[incrementValue$38] = new oh(c.field_e, var6, var7);
                       var5++;
-                      continue L2;
+                      continue L3;
                     }
                   }
                 } else {
-                  if (rm.field_C == 2) {
+                  if ((rm.field_C ^ -1) == -3) {
                     oi.field_e = new oh[9];
                     oi.field_e[0] = new oh(var3, -142, 231);
                     oi.field_e[1] = new oh(c.field_e, -140, 549);
@@ -444,13 +490,13 @@ final class eh implements pk {
                     oi.field_e[6] = new oh(c.field_e, 925, 1294);
                     oi.field_e[7] = new oh(el.field_D, -131, 957);
                     oi.field_e[8] = new oh(el.field_D, 924, 240);
-                    break L1;
+                    break L2;
                   } else {
-                    if (rm.field_C == 3) {
+                    if (-4 == (rm.field_C ^ -1)) {
                       oi.field_e = new oh[]{};
-                      break L1;
+                      break L2;
                     } else {
-                      break L1;
+                      break L2;
                     }
                   }
                 }
@@ -458,87 +504,87 @@ final class eh implements pk {
                 oi.field_e = new oh[30];
                 var4 = 0;
                 var5 = 0;
-                L6: while (true) {
+                L7: while (true) {
                   if (4 <= var5) {
-                    int incrementValue$39 = var4;
+                    incrementValue$39 = var4;
                     var4++;
                     oi.field_e[incrementValue$39] = new oh(ns.field_c, 50, -100);
-                    int incrementValue$40 = var4;
+                    incrementValue$40 = var4;
                     var4++;
                     oi.field_e[incrementValue$40] = new oh(je.field_h, 80, -150);
-                    int incrementValue$41 = var4;
+                    incrementValue$41 = var4;
                     var4++;
                     oi.field_e[incrementValue$41] = new oh(je.field_h, 120, -105);
-                    int incrementValue$42 = var4;
+                    incrementValue$42 = var4;
                     var4++;
                     oi.field_e[incrementValue$42] = new oh(var3, -100, -170);
-                    int incrementValue$43 = var4;
+                    incrementValue$43 = var4;
                     var4++;
                     oi.field_e[incrementValue$43] = new oh(var2, 530, -240);
-                    int incrementValue$44 = var4;
+                    incrementValue$44 = var4;
                     var4++;
                     oi.field_e[incrementValue$44] = new oh(var3, 670, -170);
-                    int incrementValue$45 = var4;
+                    incrementValue$45 = var4;
                     var4++;
                     oi.field_e[incrementValue$45] = new oh(var2, 790, -195);
-                    int incrementValue$46 = var4;
+                    incrementValue$46 = var4;
                     var4++;
                     oi.field_e[incrementValue$46] = new oh(ns.field_c, 700, 1354);
-                    int incrementValue$47 = var4;
+                    incrementValue$47 = var4;
                     var4++;
                     oi.field_e[incrementValue$47] = new oh(je.field_h, 720, 1394);
-                    int incrementValue$48 = var4;
+                    incrementValue$48 = var4;
                     var4++;
                     oi.field_e[incrementValue$48] = new oh(je.field_h, 780, 1374);
-                    int incrementValue$49 = var4;
+                    incrementValue$49 = var4;
                     var4++;
                     oi.field_e[incrementValue$49] = new oh(var3, -171, 1037);
-                    int incrementValue$50 = var4;
+                    incrementValue$50 = var4;
                     var4++;
                     oi.field_e[incrementValue$50] = new oh(vq.field_a, -51, 1082);
-                    int incrementValue$51 = var4;
+                    incrementValue$51 = var4;
                     var4++;
                     oi.field_e[incrementValue$51] = new oh(vq.field_a, -30, 1105);
-                    int incrementValue$52 = var4;
+                    incrementValue$52 = var4;
                     var4++;
                     oi.field_e[incrementValue$52] = new oh(vq.field_a, -20, 1055);
-                    int incrementValue$53 = var4;
+                    incrementValue$53 = var4;
                     var4++;
                     oi.field_e[incrementValue$53] = new oh(ns.field_c, -68, 1143);
                     var5 = 0;
-                    L7: while (true) {
+                    L8: while (true) {
                       if (7 <= var5) {
-                        int incrementValue$54 = var4;
+                        incrementValue$54 = var4;
                         var4++;
                         oi.field_e[incrementValue$54] = new oh(var2, -111, 138);
-                        int incrementValue$55 = var4;
+                        incrementValue$55 = var4;
                         var4++;
                         oi.field_e[incrementValue$55] = new oh(var2, -191, 290);
-                        int incrementValue$56 = var4;
+                        incrementValue$56 = var4;
                         var4++;
                         oi.field_e[incrementValue$56] = new oh(var2, 30, 1324);
-                        int incrementValue$57 = var4;
+                        incrementValue$57 = var4;
                         var4++;
                         oi.field_e[incrementValue$57] = new oh(var2, 170, 1364);
-                        break L1;
+                        break L2;
                       } else {
                         var6 = el.a(29430, 40, 956);
                         var7 = el.a(29430, 70, var5 * 150 + 200);
-                        int incrementValue$58 = var4;
+                        incrementValue$58 = var4;
                         var4++;
                         oi.field_e[incrementValue$58] = new oh(c.field_e, var6, var7);
                         var5++;
-                        continue L7;
+                        continue L8;
                       }
                     }
                   } else {
-                    var6 = p.a((byte) -24, 896 + -var10.field_o);
-                    var7 = p.a((byte) -24, 1344 - var10.field_v);
-                    int incrementValue$59 = var4;
+                    var6 = p.a((byte) -24, 896 + -var11.field_o);
+                    var7 = p.a((byte) -24, 1344 - var11.field_v);
+                    incrementValue$59 = var4;
                     var4++;
-                    oi.field_e[incrementValue$59] = new oh(var9, var6, var7);
+                    oi.field_e[incrementValue$59] = new oh(var10, var6, var7);
                     var5++;
-                    continue L6;
+                    continue L7;
                   }
                 }
               }
@@ -548,13 +594,17 @@ final class eh implements pk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "eh.H(" + -48 + ')');
+          throw nb.a((Throwable) ((Object) var1), "eh.H(" + param0 + ')');
         }
     }
 
     public static void d(int param0) {
-        field_f = null;
+        field_f = (int[][]) null;
         field_b = null;
+        if (param0 != 1) {
+            StringBuilder var2 = (StringBuilder) null;
+            eh.a(58, 40, (StringBuilder) null);
+        }
     }
 
     public final void b(int param0) {
@@ -590,7 +640,7 @@ final class eh implements pk {
         sk.a(-69, 4, 2);
         os.a(param0 + -12857);
         sk.a(-124, 4, 3);
-        b.field_U = (ut[]) (Object) new ot[kb.field_E.length];
+        b.field_U = (ut[]) ((Object) new ot[kb.field_E.length]);
         var2 = 0;
         L0: while (true) {
           if (var2 >= kb.field_E.length) {
@@ -602,26 +652,26 @@ final class eh implements pk {
               jm.a(-5, false, -2);
               ml.k(61, 12);
               sk.a(-71, 4, 1);
-              nr.a(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, (hu) (Object) pb.field_C, (hu) (Object) un.field_d, (dg) (Object) new nk(), 20, 16777215, 30, (dg) (Object) new pa(true), 16777215, 9, (dg) (Object) new pa(false), 16777215);
+              nr.a(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, pb.field_C, un.field_d, new nk(), 20, 16777215, 30, new pa(true), 16777215, 9, new pa(false), 16777215);
               sk.a(-57, 4, 2);
               nb.a((byte) -94);
               sk.a(75, 4, 3);
               cm.a(param0 ^ 922092267, 50);
               Kickabout.t(param0 + -826888154);
               ml.k(61, 13);
-              oa.a(false, (hc) (Object) new md());
-              oa.a(false, (hc) (Object) new tr());
-              oa.a(false, (hc) (Object) new w());
-              oa.a(false, (hc) (Object) new vp());
-              oa.a(false, (hc) (Object) new ac());
-              oa.a(false, (hc) (Object) new fv());
+              oa.a(false, new md());
+              oa.a(false, new tr());
+              oa.a(false, new w());
+              oa.a(false, new vp());
+              oa.a(false, new ac());
+              oa.a(false, new fv());
               return;
             } else {
               return;
             }
           } else {
             var3 = new ot(40, 40);
-            iw.a(-100, (ut) (Object) var3);
+            iw.a(-100, var3);
             kb.field_E[var2].c(0, 0);
             ta.e(param0 + -12637);
             var4 = 0;
@@ -629,7 +679,7 @@ final class eh implements pk {
               if (var3.field_y.length <= var4) {
                 var3.a(-16777216);
                 var3.a(2130706432);
-                b.field_U[var2] = (ut) (Object) nh.b(var3);
+                b.field_U[var2] = (ut) ((Object) nh.b(var3));
                 var2++;
                 continue L0;
               } else {
@@ -692,11 +742,11 @@ final class eh implements pk {
                       var8.field_n = var10.field_i;
                       var14 = new byte[var10.field_h];
                       var8.a(var14, 0, (byte) -6, var10.field_h);
-                      jm.field_g = new ot(var14, (java.awt.Component) (Object) nm.field_g);
+                      jm.field_g = new ot(var14, (java.awt.Component) ((Object) nm.field_g));
                       if (-1 != jm.field_g.field_q) {
                         break L2;
                       } else {
-                        if (jm.field_g.field_w != -1) {
+                        if (0 != (jm.field_g.field_w ^ -1)) {
                           break L2;
                         } else {
                           jm.field_g = null;
@@ -712,7 +762,7 @@ final class eh implements pk {
                 var3 = (Exception) (Object) decompiledCaughtException;
                 lf.field_b = null;
                 jm.field_g = null;
-                bd.a("Error when unpacking the MOTD data in KickaboutLoader.service_motd()", (Throwable) (Object) var3, 1);
+                bd.a("Error when unpacking the MOTD data in KickaboutLoader.service_motd()", (Throwable) ((Object) var3), 1);
                 return true;
               }
               return true;
@@ -729,7 +779,7 @@ final class eh implements pk {
         sj var3 = null;
         sj var4 = null;
         L0: {
-          ((eh) this).b((byte) 115);
+          this.b((byte) 115);
           if (fn.field_b == null) {
             break L0;
           } else {
@@ -751,7 +801,7 @@ final class eh implements pk {
           if (param0 == 7312) {
             break L1;
           } else {
-            ((eh) this).field_d = false;
+            this.field_d = false;
             break L1;
           }
         }
@@ -793,7 +843,7 @@ final class eh implements pk {
           }
         }
         L4: {
-          if (ih.field_c == 2) {
+          if (-3 == (ih.field_c ^ -1)) {
             mp.field_h.a(bo.field_Cb, h.field_d, param0 + -14181, "street", nu.field_M);
             mp.field_h.a(bo.field_Cb, h.field_d, -6869, "beach_surface0", nu.field_M);
             break L4;
@@ -849,7 +899,7 @@ final class eh implements pk {
               if (param0 == 11264) {
                 break L1;
               } else {
-                field_f = null;
+                field_f = (int[][]) null;
                 break L1;
               }
             }
@@ -880,23 +930,23 @@ final class eh implements pk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_0 = (RuntimeException) (var3);
             stackOut_10_1 = new StringBuilder().append("eh.K(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -904,7 +954,7 @@ final class eh implements pk {
               break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 
@@ -912,166 +962,174 @@ final class eh implements pk {
         ut[] var5 = null;
         RuntimeException var5_ref = null;
         ut[] var6 = null;
-        ut[] stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        ut[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ut[] stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        ut[] stackOut_2_0 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         try {
           L0: {
+            L1: {
+              if (param2 >= 16) {
+                break L1;
+              } else {
+                eh.a((byte) 120);
+                break L1;
+              }
+            }
             var6 = se.a(param1, -42, param0, param3);
             var5 = var6;
             var6[3].field_v = var6[3].field_w;
             var6[1].field_o = var6[1].field_q;
             var6[5].field_v = var6[5].field_w;
             var6[7].field_o = var6[7].field_q;
-            stackOut_0_0 = (ut[]) var5;
-            stackIn_1_0 = stackOut_0_0;
+            stackOut_2_0 = (ut[]) (var5);
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var5_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var5_ref;
-            stackOut_2_1 = new StringBuilder().append("eh.F(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
-            } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
-            }
-          }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+            var5_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) (var5_ref);
+            stackOut_4_1 = new StringBuilder().append("eh.F(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L2;
             }
           }
           L3: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(26).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param3 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
               break L3;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          L4: {
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',');
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param3 == null) {
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw nb.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     final static void a(int param0, int param1, StringBuilder param2) {
-        int var3_int = param0 >> 16;
+        StringBuilder discarded$7 = null;
+        int var3_int = param0 >> 758424112;
         StringBuilder discarded$0 = param2.append(var3_int);
         int var4 = (int)(1000.0f * ((float)(65535 & param0) / 65536.0f));
-        StringBuilder discarded$1 = param2.append('.');
+        StringBuilder discarded$6 = param2.append('.');
+        if (param1 != 100) {
+            return;
+        }
         try {
-            StringBuilder discarded$2 = param2.append(var4);
+            discarded$7 = param2.append(var4);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "eh.I(" + param0 + ',' + 100 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "eh.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
         field_f = new int[7][3];
         field_f[0][0] = 60;

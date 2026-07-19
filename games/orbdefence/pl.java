@@ -15,20 +15,27 @@ final class pl implements Iterator {
     static String field_f;
 
     public final boolean hasNext() {
+        ca[] fieldTemp$2 = null;
+        int fieldTemp$3 = 0;
         int var2 = 0;
         var2 = OrbDefence.field_D ? 1 : 0;
-        if (((pl) this).field_c == ((pl) this).field_e.field_b[-1 + ((pl) this).field_b]) {
+        if (this.field_c == this.field_e.field_b[-1 + this.field_b]) {
           L0: while (true) {
-            if (((pl) this).field_e.field_d > ((pl) this).field_b) {
-              ca[] fieldTemp$2 = ((pl) this).field_e.field_b;
-              int fieldTemp$3 = ((pl) this).field_b;
-              ((pl) this).field_b = ((pl) this).field_b + 1;
-              if (fieldTemp$2[fieldTemp$3].field_e != ((pl) this).field_e.field_b[-1 + ((pl) this).field_b]) {
-                ((pl) this).field_c = ((pl) this).field_e.field_b[((pl) this).field_b + -1].field_e;
-                return true;
+            if (this.field_e.field_d > this.field_b) {
+              fieldTemp$2 = this.field_e.field_b;
+              fieldTemp$3 = this.field_b;
+              this.field_b = this.field_b + 1;
+              if (fieldTemp$2[fieldTemp$3].field_e == this.field_e.field_b[-1 + this.field_b]) {
+                this.field_c = this.field_e.field_b[-1 + this.field_b];
+                if (var2 == 0) {
+                  continue L0;
+                } else {
+                  this.field_c = this.field_e.field_b[this.field_b + -1].field_e;
+                  return true;
+                }
               } else {
-                ((pl) this).field_c = ((pl) this).field_e.field_b[-1 + ((pl) this).field_b];
-                continue L0;
+                this.field_c = this.field_e.field_b[this.field_b + -1].field_e;
+                return true;
               }
             } else {
               return false;
@@ -40,40 +47,52 @@ final class pl implements Iterator {
     }
 
     public final Object next() {
+        ca[] fieldTemp$2 = null;
+        int fieldTemp$3 = 0;
         int var2 = 0;
         ca var3 = null;
         ca var4 = null;
         var2 = OrbDefence.field_D ? 1 : 0;
-        if (((pl) this).field_e.field_b[((pl) this).field_b - 1] == ((pl) this).field_c) {
+        if (this.field_e.field_b[this.field_b - 1] == this.field_c) {
           L0: while (true) {
-            if (((pl) this).field_b < ((pl) this).field_e.field_d) {
-              ca[] fieldTemp$4 = ((pl) this).field_e.field_b;
-              int fieldTemp$5 = ((pl) this).field_b;
-              ((pl) this).field_b = ((pl) this).field_b + 1;
-              var3 = fieldTemp$4[fieldTemp$5].field_e;
-              if (((pl) this).field_e.field_b[-1 + ((pl) this).field_b] != var3) {
-                ((pl) this).field_c = var3.field_e;
-                ((pl) this).field_g = var3;
-                return (Object) (Object) var3;
+            if (this.field_b < this.field_e.field_d) {
+              fieldTemp$2 = this.field_e.field_b;
+              fieldTemp$3 = this.field_b;
+              this.field_b = this.field_b + 1;
+              var3 = fieldTemp$2[fieldTemp$3].field_e;
+              if (this.field_e.field_b[-1 + this.field_b] != var3) {
+                this.field_c = var3.field_e;
+                this.field_g = var3;
+                return var3;
               } else {
-                continue L0;
+                if (var2 == 0) {
+                  continue L0;
+                } else {
+                  return null;
+                }
               }
             } else {
               return null;
             }
           }
         } else {
-          var4 = ((pl) this).field_c;
-          ((pl) this).field_c = var4.field_e;
-          ((pl) this).field_g = var4;
-          return (Object) (Object) var4;
+          var4 = this.field_c;
+          this.field_c = var4.field_e;
+          this.field_g = var4;
+          return var4;
         }
     }
 
     private final void a(byte param0) {
-        ((pl) this).field_b = 1;
-        ((pl) this).field_c = ((pl) this).field_e.field_b[0].field_e;
-        ((pl) this).field_g = null;
+        this.field_b = 1;
+        this.field_c = this.field_e.field_b[0].field_e;
+        this.field_g = null;
+        if (param0 == 103) {
+          return;
+        } else {
+          this.field_e = (ek) null;
+          return;
+        }
     }
 
     public static void a(int param0) {
@@ -92,28 +111,24 @@ final class pl implements Iterator {
     }
 
     pl(ek param0) {
-        ((pl) this).field_g = null;
+        this.field_g = null;
         try {
-            ((pl) this).field_e = param0;
+            this.field_e = param0;
             this.a((byte) 103);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "pl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dd.a((Throwable) ((Object) runtimeException), "pl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void remove() {
-        if (!(((pl) this).field_g != null)) {
+        if (!(this.field_g != null)) {
             throw new IllegalStateException();
         }
-        ((pl) this).field_g.b(57);
-        ((pl) this).field_g = null;
+        this.field_g.b(57);
+        this.field_g = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Unable to connect to the data server. Please check any firewall you are using.";
         field_i = "Names can only contain letters, numbers, spaces and underscores";
         field_f = "This password contains your email address, and would be easy to guess";

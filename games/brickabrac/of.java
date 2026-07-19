@@ -20,7 +20,7 @@ final class of extends gf {
 
     final void a(boolean param0, boolean param1, int param2) {
         if (param2 > -52) {
-            ((of) this).a(true, false, -69);
+            this.a(true, false, -69);
         }
     }
 
@@ -35,19 +35,20 @@ final class of extends gf {
     }
 
     final static void a(int param0, og param1) {
+        String discarded$0 = null;
         try {
             if (param0 != -2) {
-                String discarded$0 = of.d((byte) 104);
+                discarded$0 = of.d((byte) 104);
             }
-            wd.field_w.a((mh) (Object) param1, 0);
+            wd.field_w.a(param1, 0);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "of.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "of.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean a(char param0, int param1, int param2) {
         if (param1 < 98) {
-            field_j = null;
+            field_j = (String) null;
             return false;
         }
         return false;
@@ -69,15 +70,11 @@ final class of extends gf {
             return null;
           }
         } else {
-          return null;
+          return (String) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "<%0> has declined the invitation.";
         field_j = "Player Name: ";
     }

@@ -22,7 +22,7 @@ final class sa extends l {
             }
             gk.a(param3, bn.field_a, false);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "sa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "sa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -33,7 +33,7 @@ final class sa extends l {
     public static void a(byte param0) {
         field_m = null;
         field_o = null;
-        int var1 = -84;
+        int var1 = 84 / ((param0 - 23) / 62);
         field_l = null;
         field_p = null;
     }
@@ -43,10 +43,6 @@ final class sa extends l {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "You have been removed from <%0>'s game.";
         field_l = "Invalid name";
         field_p = "Unable to add name - system busy";

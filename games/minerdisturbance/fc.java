@@ -9,6 +9,7 @@ final class fc extends al {
     static long field_u;
 
     private final void a(int param0, byte param1, sb param2) {
+        int[] array$1 = null;
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -16,22 +17,22 @@ final class fc extends al {
         bg var7 = null;
         int var8 = 0;
         int var9 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
         RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         var9 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -39,28 +40,28 @@ final class fc extends al {
               if (param0 != 1) {
                 if (2 == param0) {
                   var4_int = param2.d((byte) -54);
-                  ((fc) this).field_y = new int[var4_int];
+                  this.field_y = new int[var4_int];
                   var5 = 0;
                   L2: while (true) {
                     if (var4_int <= var5) {
                       break L1;
                     } else {
-                      ((fc) this).field_y[var5] = param2.e(-64);
+                      this.field_y[var5] = param2.e(-64);
                       var5++;
                       continue L2;
                     }
                   }
                 } else {
-                  if (param0 != 3) {
-                    if (param0 == 4) {
+                  if (-4 != (param0 ^ -1)) {
+                    if ((param0 ^ -1) == -5) {
                       break L1;
                     } else {
                       break L1;
                     }
                   } else {
                     var4_int = param2.d((byte) -54);
-                    ((fc) this).field_x = new int[var4_int];
-                    ((fc) this).field_v = new int[var4_int][];
+                    this.field_x = new int[var4_int];
+                    this.field_v = new int[var4_int][];
                     var5 = 0;
                     L3: while (true) {
                       if (var5 >= var4_int) {
@@ -70,14 +71,15 @@ final class fc extends al {
                           var6 = param2.e(-103);
                           var7 = in.a(var6, (byte) 77);
                           if (var7 != null) {
-                            ((fc) this).field_x[var5] = var6;
-                            ((fc) this).field_v[var5] = new int[var7.field_a];
+                            this.field_x[var5] = var6;
+                            array$1 = new int[var7.field_a];
+                            this.field_v[var5] = array$1;
                             var8 = 0;
                             L5: while (true) {
                               if (var7.field_a <= var8) {
                                 break L4;
                               } else {
-                                ((fc) this).field_v[var5][var8] = param2.e(-55);
+                                this.field_v[var5][var8] = param2.e(-55);
                                 var8++;
                                 continue L5;
                               }
@@ -93,47 +95,59 @@ final class fc extends al {
                   }
                 }
               } else {
-                ((fc) this).field_w = h.a('<', true, param2.a(false));
+                this.field_w = h.a('<', true, param2.a(false));
                 break L1;
+              }
+            }
+            L6: {
+              if (param1 > 91) {
+                break L6;
+              } else {
+                this.field_v = (int[][]) null;
+                break L6;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var4 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var4;
-            stackOut_19_1 = new StringBuilder().append("fc.C(").append(param0).append(',').append(119).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackOut_21_0 = (RuntimeException) (var4);
+            stackOut_21_1 = new StringBuilder().append("fc.C(").append(param0).append(',').append(param1).append(',');
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
             if (param2 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
-              break L6;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
-              break L6;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L7;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
         }
     }
 
     final static void a(boolean param0) {
+        String discarded$0 = null;
         int var1 = 0;
-        if (oc.field_f > 32) {
+        if (param0) {
+            discarded$0 = fc.b((byte) -36);
+        }
+        if ((oc.field_f ^ -1) < -33) {
             var1 = oc.field_f % 32;
             if (0 == var1) {
                 var1 = 32;
@@ -146,7 +160,7 @@ final class fc extends al {
 
     final static String b(byte param0) {
         if (param0 <= 115) {
-            return null;
+            return (String) null;
         }
         if (!(ci.field_e != ic.field_l)) {
             return wm.field_d;
@@ -162,21 +176,24 @@ final class fc extends al {
 
     final String f(int param0) {
         int var3 = 0;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
         int var4 = MinerDisturbance.field_ab;
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
-        if (!(null != ((fc) this).field_w)) {
+        if (!(null != this.field_w)) {
             return "";
         }
-        StringBuilder discarded$0 = var5.append(((fc) this).field_w[0]);
-        for (var3 = param0; ((fc) this).field_w.length > var3; var3++) {
-            StringBuilder discarded$1 = var2.append("...");
-            StringBuilder discarded$2 = var5.append(((fc) this).field_w[var3]);
+        StringBuilder discarded$0 = var5.append(this.field_w[0]);
+        for (var3 = param0; this.field_w.length > var3; var3++) {
+            discarded$1 = var2.append("...");
+            discarded$2 = var5.append(this.field_w[var3]);
         }
         return var2.toString();
     }
 
     final void a(int param0, sb param1) {
+        String discarded$1 = null;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -209,7 +226,7 @@ final class fc extends al {
                   if (param0 == 32768) {
                     break L2;
                   } else {
-                    String discarded$1 = fc.b((byte) -29);
+                    discarded$1 = fc.b((byte) -29);
                     break L2;
                   }
                 }
@@ -221,23 +238,23 @@ final class fc extends al {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_0 = (RuntimeException) (var3);
             stackOut_7_1 = new StringBuilder().append("fc.A(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -245,7 +262,7 @@ final class fc extends al {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
     }
 
@@ -253,12 +270,12 @@ final class fc extends al {
         int var2 = 0;
         int var3 = MinerDisturbance.field_ab;
         if (param0 != 60) {
-            Object var4 = null;
-            ((fc) this).a(80, (sb) null);
+            sb var4 = (sb) null;
+            this.a(80, (sb) null);
         }
-        if (!(null == ((fc) this).field_y)) {
-            for (var2 = 0; ((fc) this).field_y.length > var2; var2++) {
-                ((fc) this).field_y[var2] = hi.a(((fc) this).field_y[var2], 32768);
+        if (!(null == this.field_y)) {
+            for (var2 = 0; this.field_y.length > var2; var2++) {
+                this.field_y[var2] = hi.a(this.field_y[var2], 32768);
             }
         }
     }

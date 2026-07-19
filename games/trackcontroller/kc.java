@@ -9,9 +9,10 @@ final class kc {
     final static void a(int param0, byte param1, ei param2) {
         la var6 = null;
         int var4 = 0;
+        int discarded$0 = 0;
         try {
             var6 = ra.field_C;
-            var6.c(6, 7);
+            var6.c(param0, 7);
             var6.field_k = var6.field_k + 1;
             var4 = var6.field_k;
             var6.a(1, (byte) -75);
@@ -21,13 +22,13 @@ final class kc {
                 var6.a(param2.field_l.length, (byte) -102);
                 var6.a(param2.field_l.length, 96, 0, param2.field_l);
             }
-            int discarded$0 = var6.a(var4, false);
+            discarded$0 = var6.a(var4, false);
             var6.field_k = var6.field_k - 4;
             param2.field_n = var6.e((byte) 113);
-            int var5 = -7;
+            int var5 = -14 / ((param1 - -66) / 49);
             var6.a(true, -var4 + var6.field_k);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "kc.D(" + 6 + ',' + 75 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "kc.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,12 +49,19 @@ final class kc {
         th var14 = null;
         th var15 = null;
         int[] var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var8 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
+            L1: {
+              if (param0 <= -83) {
+                break L1;
+              } else {
+                field_c = (int[][]) null;
+                break L1;
+              }
+            }
             var12 = ne.field_a;
             var2 = var12.h(16383);
             if (var2 != 0) {
@@ -61,12 +69,14 @@ final class kc {
                 if (var2 != 2) {
                   hb.a((Throwable) null, 0, "A1: " + jc.b(96));
                   lj.a((byte) 120);
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  var15 = (th) (Object) fh.field_b.b(2);
+                  var15 = (th) ((Object) fh.field_b.b(2));
                   if (var15 == null) {
                     lj.a((byte) 125);
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     var15.field_k = lc.b(false);
                     var15.field_m = var15.field_k[0];
@@ -76,44 +86,44 @@ final class kc {
                   }
                 }
               } else {
-                var11 = (cf) (Object) kd.field_b.b(2);
+                var11 = (cf) ((Object) kd.field_b.b(2));
                 if (var11 != null) {
                   var11.a(-77);
                   return;
                 } else {
                   lj.a((byte) 114);
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
             } else {
               var10 = lc.b(false);
-              var18 = var10;
-              var17 = var18;
-              var16 = var17;
+              var16 = var10;
               var13 = var16;
               var3 = var13;
               var9 = var10;
               var4 = var9;
               var5 = var12;
-              var6 = ((be) (Object) var5).h(16383);
+              var6 = ((be) ((Object) var5)).h(16383);
               var7 = 0;
-              L1: while (true) {
+              L2: while (true) {
                 if (var6 <= var7) {
-                  var14 = (th) (Object) fh.field_b.b(2);
+                  var14 = (th) ((Object) fh.field_b.b(2));
                   if (var14 == null) {
                     lj.a((byte) 116);
-                    return;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   } else {
-                    var14.field_m = var18[0];
+                    var14.field_m = var16[0];
                     var14.field_k = var3;
                     var14.field_j = true;
                     var14.a(-67);
                     return;
                   }
                 } else {
-                  var9[var7] = ((be) (Object) var5).e((byte) 113);
+                  var9[var7] = ((be) ((Object) var5)).e((byte) 113);
                   var7++;
-                  continue L1;
+                  continue L2;
                 }
               }
             }
@@ -121,15 +131,28 @@ final class kc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1, "kc.B(" + -107 + ')');
+          throw sl.a((Throwable) ((Object) var1), "kc.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
     public static void a(int param0) {
-        field_c = null;
+        field_c = (int[][]) null;
         field_a = null;
         if (param0 != 2) {
-            field_a = null;
+            field_a = (String) null;
         }
     }
 
@@ -148,15 +171,18 @@ final class kc {
                     var5 = var4;
                     var5 = var4;
                     var5 = var3 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
-                    if (param2.length() == 0) {
+                    if (-1 == (param2.length() ^ -1)) {
                         var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                    }
+                    if (param1 != 1263) {
+                        kc.b(-38);
                     }
                     sj.a(param0, "document.cookie=\"" + var5 + "\"", -24531);
                 } catch (Throwable throwable) {
                 }
                 rj.a(param0, (byte) -128);
             } catch (RuntimeException runtimeException) {
-                throw sl.a((Throwable) (Object) runtimeException, "kc.C(" + (param0 != null ? "{...}" : "null") + ',' + 1263 + ',' + (param2 != null ? "{...}" : "null") + ')');
+                throw sl.a((Throwable) ((Object) runtimeException), "kc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -166,10 +192,6 @@ final class kc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 256;
         field_a = "Orb points: <%0>";
     }

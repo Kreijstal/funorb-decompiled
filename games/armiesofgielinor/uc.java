@@ -10,33 +10,43 @@ final class uc {
     public static void a(byte param0) {
         field_c = null;
         field_b = null;
-        field_d = null;
+        field_d = (int[][]) null;
+        if (param0 != -39) {
+            field_b = (je) null;
+        }
     }
 
     final static void a(int param0) {
+        if (param0 != 0) {
+            return;
+        }
         bc.a(2858);
     }
 
     final static void a(dq param0, int param1) {
         try {
+            if (param1 != 4) {
+                field_b = (je) null;
+            }
             ds.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "uc.C(" + (param0 != null ? "{...}" : "null") + ',' + 4 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "uc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4) {
         fh.field_e = param0;
+        if (param3) {
+            uc.a(29);
+            q.field_B = param4;
+            return;
+        }
         q.field_B = param4;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = false;
-        field_d = new int[][]{new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9], new int[9]};
+        field_d = new int[][]{new int[]{10, 2, 72, 1, 4, 4, 2, 0, 37}, new int[]{15, 3, 73, 1, 4, 4, 5, 0, 37}, new int[]{20, 4, 74, 1, 4, 4, 7, 0, 37}, new int[]{25, 5, 75, 1, 4, 4, 10, 0, 37}, new int[]{30, 6, 76, 1, 4, 4, 15, 0, 37}, new int[]{40, 7, 77, 1, 4, 4, 20, 0, 37}, new int[]{50, 8, 78, 1, 4, 4, 30, 0, 37}, new int[]{5, 2, 97, 4, 7, 0, 50, 0, -1}, new int[]{10, 2, 98, 4, 7, 0, 100, 0, -1}, new int[]{15, 2, 99, 4, 7, 0, 150, 0, -1}, new int[]{20, 2, 100, 4, 7, 0, 200, 0, -1}, new int[]{25, 2, 101, 4, 7, 0, 250, 0, -1}, new int[]{4, 2, 49, 0, 3, 3, 0, 0, 15}, new int[]{6, 2, 113, 0, 4, 64, -1, 0, 19}, new int[]{8, 3, 114, 0, 4, 64, -2, 0, 19}, new int[]{10, 4, 115, 0, 4, 64, -3, 0, 19}, new int[]{12, 5, 116, 0, 4, 64, -4, 0, 19}, new int[]{15, 6, 117, 0, 4, 64, -5, 0, 19}, new int[]{6, 2, 118, 1, 4, 64, 1, 0, 19}, new int[]{8, 3, 119, 1, 4, 64, 2, 0, 19}, new int[]{10, 4, 120, 1, 4, 64, 3, 0, 19}, new int[]{12, 5, 121, 1, 4, 64, 4, 0, 19}, new int[]{15, 6, 122, 1, 4, 64, 5, 0, 19}, new int[]{10, 2, 109, 3, 6, 6, 0, 0, 29}, new int[]{30, 2, 110, 3, 6, 6, 0, 1, 30}, new int[]{6, 2, 107, 3, 6, 5, 0, 0, 31}, new int[]{20, 2, 108, 3, 6, 5, 0, 1, 31}, new int[]{20, 2, 112, 7, 6, 7, -1, 0, 17}, new int[]{7, 2, 52, 0, 3, 2, 0, 0, 13}, new int[]{5, 2, 123, 0, 2, 19, 1, 0, 19}, new int[]{10, 2, 124, 0, 2, 19, 2, 0, 19}, new int[]{20, 2, 125, 0, 2, 19, 3, 0, 19}, new int[]{30, 2, 126, 0, 2, 19, 4, 0, 19}, new int[]{40, 2, 127, 0, 2, 19, 5, 0, 19}, new int[]{5, 2, 79, 0, 5, 24, 8, 0, 41}, new int[]{30, 4, 80, 0, 5, 24, -1, 0, 41}, new int[]{15, 2, 88, 8, 5, 25, 1, 0, 41}, new int[]{10, 2, 90, 4, 7, 1, 0, 0, 27}, new int[]{10, 2, 91, 4, 7, 1, 1, 0, 27}, new int[]{10, 2, 92, 4, 7, 1, 2, 0, 27}, new int[]{10, 2, 93, 4, 7, 1, 3, 0, 27}, new int[]{10, 2, 94, 4, 7, 1, 4, 0, 27}, new int[]{10, 2, 95, 4, 7, 1, 5, 0, 27}, new int[]{50, 2, 111, 5, 6, 3, 9, 0, 16}, new int[]{10, 2, 106, 6, 6, 4, 10, 0, 32}, new int[]{35, 2, 96, 4, 7, 2, 0, 0, 28}, new int[]{20, 2, 134, 0, 4, 0, 16, 0, 40}, new int[]{15, 2, 81, 3, 4, 8, 2, 1, 38}, new int[]{20, 3, 84, 3, 4, 8, 2, 2, 38}, new int[]{25, 4, 82, 3, 4, 8, 5, 1, 38}, new int[]{30, 5, 85, 3, 4, 8, 5, 2, 38}, new int[]{35, 6, 83, 3, 4, 8, 7, 1, 38}, new int[]{45, 7, 86, 3, 4, 8, 7, 2, 38}, new int[]{55, 8, 87, 3, 4, 8, 10, 1, 38}, new int[]{10, 2, 54, 0, 4, 32, -2, 0, 40}, new int[]{15, 3, 55, 0, 4, 32, -5, 0, 40}, new int[]{20, 4, 56, 0, 4, 32, -7, 0, 40}, new int[]{25, 5, 57, 0, 4, 32, -10, 0, 40}, new int[]{30, 6, 58, 0, 4, 32, -15, 0, 40}, new int[]{40, 7, 59, 0, 4, 32, -20, 0, 40}, new int[]{50, 8, 60, 0, 4, 32, -30, 0, 40}, new int[]{15, 2, 63, 3, 4, 32, -2, 1, 39}, new int[]{20, 3, 66, 3, 4, 32, -2, 2, 39}, new int[]{25, 4, 64, 3, 4, 32, -5, 1, 39}, new int[]{30, 5, 67, 3, 4, 32, -5, 2, 39}, new int[]{35, 6, 65, 3, 4, 32, -7, 1, 39}, new int[]{45, 7, 68, 3, 4, 32, -7, 2, 39}, new int[]{55, 8, 69, 3, 4, 32, -10, 1, 39}, new int[]{10, 2, 71, 1, 4, 0, 7, 0, 18}, new int[]{20, 2, 51, 0, 3, 5, 0, 0, 14}, new int[]{1, 0, 0, 0, 0, 1, 1, 0, 4}, new int[]{2, 0, 1, 0, 0, 1, 2, 0, 4}, new int[]{3, 0, 2, 0, 0, 1, 3, 0, 4}, new int[]{4, 0, 3, 0, 0, 1, 4, 0, 4}, new int[]{1, 0, 4, 0, 0, 2, 1, 0, 3}, new int[]{2, 0, 5, 0, 0, 2, 2, 0, 3}, new int[]{3, 0, 6, 0, 0, 2, 3, 0, 3}, new int[]{4, 0, 7, 0, 0, 2, 4, 0, 3}, new int[]{2, 0, 9, 0, 0, 3, 1, 0, 2}, new int[]{3, 0, 10, 0, 0, 3, 2, 0, 2}, new int[]{4, 0, 11, 0, 0, 3, 3, 0, 2}, new int[]{5, 0, 12, 0, 0, 3, 4, 0, 2}, new int[]{2, 0, 13, 0, 0, 4, 1, 0, 1}, new int[]{3, 0, 14, 0, 0, 4, 2, 0, 1}, new int[]{4, 0, 15, 0, 0, 4, 3, 0, 1}, new int[]{5, 0, 16, 0, 0, 4, 4, 0, 1}, new int[]{3, 0, 22, 0, 0, 5, 1, 0, 5}, new int[]{5, 0, 23, 0, 0, 5, 2, 0, 5}, new int[]{7, 0, 24, 0, 0, 5, 3, 0, 5}, new int[]{9, 0, 25, 0, 0, 5, 4, 0, 5}, new int[]{1, 0, 18, 0, 0, 6, 1, 0, 0}, new int[]{2, 0, 19, 0, 0, 6, 2, 0, 0}, new int[]{3, 0, 20, 0, 0, 6, 3, 0, 0}, new int[]{4, 0, 21, 0, 0, 6, 4, 0, 0}, new int[]{1, 0, 26, 0, 1, 0, 1, 0, 8}, new int[]{2, 0, 27, 0, 1, 0, 2, 0, 8}, new int[]{4, 0, 28, 0, 1, 0, 3, 0, 8}, new int[]{1, 0, 30, 0, 1, 1, 1, 0, 9}, new int[]{2, 0, 31, 0, 1, 1, 2, 0, 9}, new int[]{4, 0, 32, 0, 1, 1, 3, 0, 9}, new int[]{1, 0, 39, 0, 1, 2, 1, 0, 7}, new int[]{2, 0, 40, 0, 1, 2, 2, 0, 7}, new int[]{4, 0, 41, 0, 1, 2, 3, 0, 7}, new int[]{3, 0, 8, 0, 0, 7, 1, 0, 6}, new int[]{5, 1, 17, 0, 0, 8, 2, 0, 6}, new int[]{3, 0, 29, 0, 1, 0, 6, 0, 8}, new int[]{3, 0, 33, 0, 1, 1, 6, 0, 9}, new int[]{3, 0, 42, 0, 1, 2, 6, 0, 7}, new int[]{15, 4, 53, 0, 3, 1, 0, 0, 12}, new int[]{15, 2, 89, 0, 5, 18, 0, 0, 40}, new int[]{15, 2, 50, 0, 3, 4, 0, 0, 15}, new int[]{20, 2, 102, 3, 6, 3, 3, 1, 33}, new int[]{25, 2, 103, 3, 6, 3, 5, 1, 36}, new int[]{30, 2, 104, 3, 6, 3, 4, 1, 35}, new int[]{40, 2, 105, 3, 6, 3, 0, 1, 34}, new int[]{10, 2, 128, 0, 2, 0, 1, 0, 23}, new int[]{10, 2, 129, 0, 2, 0, 1, 0, 22}, new int[]{10, 2, 130, 0, 2, 0, 1, 0, 24}, new int[]{10, 2, 131, 0, 2, 0, 1, 0, 20}, new int[]{10, 2, 132, 0, 2, 0, 1, 0, 21}, new int[]{40, 2, 133, 0, 2, 13, 0, 0, 25}, new int[]{10, 2, 61, 1, 2, 21, 1, 0, 18}, new int[]{15, 2, 62, 1, 2, 21, 2, 0, 18}, new int[]{25, 2, 70, 1, 2, 21, 3, 0, 18}, new int[]{6, 0, 34, 0, 1, 1, 4, 0, 9}, new int[]{6, 0, 43, 0, 1, 2, 5, 0, 7}, new int[]{6, 0, 48, 0, 1, 3, 4, 0, 11}, new int[]{1, 0, 44, 0, 1, 3, 1, 0, 11}, new int[]{2, 0, 45, 0, 1, 3, 2, 0, 11}, new int[]{4, 0, 46, 0, 1, 3, 3, 0, 11}, new int[]{3, 0, 47, 0, 1, 3, 6, 0, 11}, new int[]{1, 0, 35, 0, 1, 4, 1, 0, 10}, new int[]{2, 0, 36, 0, 1, 4, 3, 0, 10}, new int[]{4, 0, 37, 0, 1, 4, 2, 0, 10}, new int[]{3, 0, 38, 0, 1, 4, 6, 0, 10}};
         field_c = "You can only use Revolt on enemy villages or towers.";
     }
 }

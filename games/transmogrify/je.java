@@ -9,13 +9,22 @@ final class je {
 
     public static void a(byte param0) {
         field_c = null;
-        field_a = null;
-        field_d = null;
-        field_b = null;
+        if (param0 >= -125) {
+          field_a = (String) null;
+          field_a = null;
+          field_d = null;
+          field_b = null;
+          return;
+        } else {
+          field_a = null;
+          field_d = null;
+          field_b = null;
+          return;
+        }
     }
 
     final static void a(int param0) {
-        if (gl.field_y != 10) {
+        if ((gl.field_y ^ -1) != param0) {
           if (Transmogrify.d(false)) {
             g.field_A = true;
             return;
@@ -34,10 +43,6 @@ final class je {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new qd();
         field_c = "Create a free Account";
         field_b = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};

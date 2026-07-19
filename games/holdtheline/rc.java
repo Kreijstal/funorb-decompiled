@@ -12,16 +12,15 @@ final class rc {
     public static void a(boolean param0) {
         field_d = null;
         field_a = null;
+        if (!param0) {
+            return;
+        }
         field_b = null;
         field_e = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "rc.A(";
         field_d = "Email: ";
         field_b = "Click";

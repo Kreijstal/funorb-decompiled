@@ -11,9 +11,9 @@ final class h extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            ((h) this).field_a = true;
+            this.field_a = true;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "h.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "h.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -22,92 +22,126 @@ final class h extends java.awt.Canvas implements java.awt.event.FocusListener {
         RuntimeException var3 = null;
         int var4 = 0;
         int stackIn_3_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_5_0 = 0;
         int stackOut_2_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            if (mi.a(1203, false, param2)) {
-              var3_int = 0;
-              L1: while (true) {
-                if (param2.length() <= var3_int) {
-                  stackOut_12_0 = 1;
-                  stackIn_13_0 = stackOut_12_0;
-                  break L0;
-                } else {
-                  if (!ad.a(param2.charAt(var3_int), 15232)) {
-                    stackOut_9_0 = 0;
-                    stackIn_10_0 = stackOut_9_0;
-                    return stackIn_10_0 != 0;
+            if (mi.a(param0 + 5826, param1, param2)) {
+              if (param0 == -4623) {
+                var3_int = 0;
+                L1: while (true) {
+                  if (param2.length() <= var3_int) {
+                    stackOut_14_0 = 1;
+                    stackIn_15_0 = stackOut_14_0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   } else {
-                    var3_int++;
-                    continue L1;
+                    if (!ad.a(param2.charAt(var3_int), 15232)) {
+                      stackOut_11_0 = 0;
+                      stackIn_12_0 = stackOut_11_0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
+                    } else {
+                      var3_int++;
+                      continue L1;
+                    }
                   }
                 }
+              } else {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("h.A(").append(-4623).append(',').append(false).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_16_0 = (RuntimeException) (var3);
+            stackOut_16_1 = new StringBuilder().append("h.A(").append(param0).append(',').append(param1).append(',');
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
-        return stackIn_13_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_12_0 != 0;
+            } else {
+              return stackIn_15_0 != 0;
+            }
+          }
+        }
     }
 
     public static void a(boolean param0) {
         field_d = null;
-        field_f = null;
-        field_b = null;
-        field_c = null;
+        if (!param0) {
+          field_f = (char[]) null;
+          field_f = null;
+          field_b = null;
+          field_c = null;
+          return;
+        } else {
+          field_f = null;
+          field_b = null;
+          field_c = null;
+          return;
+        }
     }
 
     final void a(int param0, pd param1) {
@@ -131,11 +165,11 @@ final class h extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           L0: {
             L1: {
-              ah.a((byte) 31, param1, ((h) this).field_e);
+              ah.a((byte) 31, param1, this.field_e);
               if (param0 == 109) {
                 break L1;
               } else {
-                field_f = null;
+                field_f = (char[]) null;
                 break L1;
               }
             }
@@ -145,23 +179,23 @@ final class h extends java.awt.Canvas implements java.awt.event.FocusListener {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("h.C(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -169,7 +203,7 @@ final class h extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -186,11 +220,7 @@ final class h extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_f = new char[]{'_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+        field_f = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
         field_d = "You have resigned.";
         field_c = new int[]{100, 100, 100, 300, 200, 100, 100, 200, 500, 100};
         field_b = "Here you can set up a rated game. If you win, your rating will go up. If<nbsp>you lose, it will go down!<br><br>Please specify your preferences and click '<%0>'. Our system will then attempt to find a suitable opponent in under a minute, depending on how busy the lobby<nbsp>is.<br><br>This is an excellent way to get to know new people!";

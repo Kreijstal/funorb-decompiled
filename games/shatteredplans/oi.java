@@ -13,14 +13,18 @@ final class oi {
     static bi field_d;
 
     final static void a(boolean param0) {
+        bi discarded$0 = null;
         k.field_b = false;
+        if (!param0) {
+            discarded$0 = oi.a(-116, (byte) -74);
+        }
     }
 
     final static void a(byte param0, bc param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        Object var4 = null;
+        bc var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -51,7 +55,7 @@ final class oi {
                   if (param0 == -126) {
                     break L2;
                   } else {
-                    var4 = null;
+                    var4 = (bc) null;
                     oi.a((byte) -117, (bc) null);
                     break L2;
                   }
@@ -68,23 +72,23 @@ final class oi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_0 = (RuntimeException) (var2);
             stackOut_7_1 = new StringBuilder().append("oi.C(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -92,7 +96,7 @@ final class oi {
               break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
     }
 
@@ -103,16 +107,17 @@ final class oi {
             oi.a(52);
         }
         field_d = null;
-        field_i = null;
+        field_i = (bi[][]) null;
         field_g = null;
         field_c = null;
     }
 
     final static bi a(int param0, byte param1) {
+        bi dupTemp$0 = null;
         bi var3 = null;
         bi var2 = bd.field_C[param0];
         if (!(var2 != null)) {
-            bi dupTemp$0 = new bi(32, 32);
+            dupTemp$0 = new bi(32, 32);
             var3 = dupTemp$0;
             var2 = var3;
             bd.field_C[param0] = dupTemp$0;
@@ -120,14 +125,13 @@ final class oi {
             jd.field_j[param0].g(0, 0);
             cg.i(0);
         }
+        if (param1 != 66) {
+            oi.a(-57);
+        }
         return var2;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "You cannot chat to <%0> because <%0> is offline in your friend list.";
         field_b = new ds(2);
     }

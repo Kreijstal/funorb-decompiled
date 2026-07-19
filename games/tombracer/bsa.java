@@ -23,6 +23,7 @@ final class bsa implements isa {
     }
 
     public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -55,16 +56,16 @@ final class bsa implements isa {
             L1: {
               if (!(param0 instanceof rr)) {
                 stackOut_2_0 = null;
-                stackIn_3_0 = (ae) (Object) stackOut_2_0;
+                stackIn_3_0 = (ae) ((Object) stackOut_2_0);
                 break L1;
               } else {
-                stackOut_1_0 = (ae) param0;
+                stackOut_1_0 = (ae) (param0);
                 stackIn_3_0 = stackOut_1_0;
                 break L1;
               }
             }
             L2: {
-              var14 = (rr) (Object) stackIn_3_0;
+              var14 = (rr) ((Object) stackIn_3_0);
               if (var14 == null) {
                 break L2;
               } else {
@@ -72,15 +73,15 @@ final class bsa implements isa {
               }
             }
             L3: {
-              bea.e(param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, ((bsa) this).field_d);
+              bea.e(param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, this.field_d);
               var7 = var14.field_E + param0.field_i + param1;
               var8 = var14.field_C + param3 + param0.field_n;
-              bea.e(var7, var8, var14.field_F, ((bsa) this).field_f);
-              if (var14.field_z != -1) {
+              bea.e(var7, var8, var14.field_F, this.field_f);
+              if (0 != (var14.field_z ^ -1)) {
                 var9 = 3.141592653589793 * (double)var14.field_z * 2.0 / (double)var14.field_B;
                 var11 = (int)(-Math.sin(var9) * (double)var14.field_F);
                 var12 = (int)(Math.cos(var9) * (double)var14.field_F);
-                bea.e(var11 + var7, var8 - -var12, 1, ((bsa) this).field_e);
+                bea.e(var11 + var7, var8 - -var12, 1, this.field_e);
                 break L3;
               } else {
                 break L3;
@@ -100,11 +101,11 @@ final class bsa implements isa {
               var11 = (int)(-Math.sin(var9) * (double)var14.field_F);
               var12 = (int)(Math.cos(var9) * (double)var14.field_F);
               bea.a(var7, var8, var11 + var7, var8 + var12, 1);
-              if (((bsa) this).field_a == null) {
+              if (this.field_a == null) {
                 break L5;
               } else {
-                var13 = var14.field_F + (var14.field_E + ((bsa) this).field_h);
-                int discarded$1 = ((bsa) this).field_a.a(param0.field_o, param1 - -param0.field_i + var13, ((bsa) this).field_b + (param3 - -param0.field_n), -((bsa) this).field_h - (var13 - param0.field_m), param0.field_p - (((bsa) this).field_h << 1), ((bsa) this).field_g, ((bsa) this).field_c, 1, 1, 0);
+                var13 = var14.field_F + (var14.field_E + this.field_h);
+                discarded$1 = this.field_a.a(param0.field_o, param1 - -param0.field_i + var13, this.field_b + (param3 - -param0.field_n), -this.field_h - (var13 - param0.field_m), param0.field_p - (this.field_h << -1716952159), this.field_g, this.field_c, 1, 1, 0);
                 break L5;
               }
             }
@@ -114,23 +115,23 @@ final class bsa implements isa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var6;
+            stackOut_12_0 = (RuntimeException) (var6);
             stackOut_12_1 = new StringBuilder().append("bsa.B(");
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L6;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -138,30 +139,26 @@ final class bsa implements isa {
               break L6;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     bsa(il param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
-            ((bsa) this).field_c = param4;
-            ((bsa) this).field_e = param6;
-            ((bsa) this).field_f = param5;
-            ((bsa) this).field_h = param1;
-            ((bsa) this).field_a = param0;
-            ((bsa) this).field_d = param7;
-            ((bsa) this).field_b = param2;
-            ((bsa) this).field_g = param3;
+            this.field_c = param4;
+            this.field_e = param6;
+            this.field_f = param5;
+            this.field_h = param1;
+            this.field_a = param0;
+            this.field_d = param7;
+            this.field_b = param2;
+            this.field_g = param3;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "bsa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "bsa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = true;
     }
 }

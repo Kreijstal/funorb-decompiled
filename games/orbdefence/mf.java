@@ -8,6 +8,9 @@ final class mf {
     static boolean field_d;
 
     public static void a(int param0) {
+        if (param0 < 84) {
+            return;
+        }
         field_b = null;
         field_a = null;
     }
@@ -22,9 +25,9 @@ final class mf {
         int stackOut_2_0 = 0;
         var2 = 12 / ((-77 - param1) / 45);
         param0 = param0 & 8191;
-        if (param0 >= 4096) {
+        if (-4097 >= (param0 ^ -1)) {
           L0: {
-            if (param0 >= 6144) {
+            if ((param0 ^ -1) <= -6145) {
               stackOut_7_0 = th.field_c[param0 + -6144];
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -52,10 +55,6 @@ final class mf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "This password contains your Player Name, and would be easy to guess";
     }
 }

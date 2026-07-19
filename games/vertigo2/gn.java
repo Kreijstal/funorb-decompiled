@@ -11,6 +11,9 @@ final class gn {
 
     public static void a(byte param0) {
         field_c = null;
+        if (param0 != 37) {
+            return;
+        }
         field_e = null;
         field_f = null;
         field_a = null;
@@ -18,16 +21,12 @@ final class gn {
 
     final static java.awt.Canvas a(int param0) {
         if (param0 != -22798) {
-            return null;
+            return (java.awt.Canvas) null;
         }
-        return dc.field_L != null ? (java.awt.Canvas) (Object) dc.field_L : ne.field_F;
+        return dc.field_L != null ? (java.awt.Canvas) ((Object) dc.field_L) : ne.field_F;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "<%0> is offering a rematch.";
         field_c = "Who can join";
         field_a = "Logging in...";

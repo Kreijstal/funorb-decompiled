@@ -13,12 +13,12 @@ final class qc extends rj implements ag {
     final void a(kf param0, boolean param1) {
         try {
             if (!param1) {
-                Object var4 = null;
-                ((qc) this).a((we) null, 53, 72, (byte) 12);
+                we var4 = (we) null;
+                this.a((we) null, 53, 72, (byte) 12);
             }
-            ((qc) this).field_M = param0;
+            this.field_M = param0;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "qc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw la.a((Throwable) ((Object) runtimeException), "qc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -27,27 +27,27 @@ final class qc extends rj implements ag {
         try {
             var3 = gf.field_c;
             if (param1 <= 100) {
-                Object var4 = null;
+                me var4 = (me) null;
                 qc.a((me) null, (byte) 35, -2);
             }
             var3.b(true, param2);
             var3.b(param0.field_k, -49152);
             var3.c(param0.field_m, 71);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "qc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw la.a((Throwable) ((Object) runtimeException), "qc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final String a(byte param0) {
-        if (((qc) this).field_g) {
-          if (((qc) this).field_m != null) {
+        if (this.field_g) {
+          if (this.field_m != null) {
             if (param0 != 54) {
-              ((qc) this).m(90);
-              oh.a(p.field_a, ei.field_a + ((qc) this).field_l - ((qc) this).field_Q, 94);
-              return ((qc) this).field_m;
+              this.m(90);
+              oh.a(p.field_a, ei.field_a + this.field_l - this.field_Q, 94);
+              return this.field_m;
             } else {
-              oh.a(p.field_a, ei.field_a + ((qc) this).field_l - ((qc) this).field_Q, 94);
-              return ((qc) this).field_m;
+              oh.a(p.field_a, ei.field_a + this.field_l - this.field_Q, 94);
+              return this.field_m;
             }
           } else {
             return null;
@@ -60,6 +60,9 @@ final class qc extends rj implements ag {
     public static void q(int param0) {
         field_L = null;
         field_O = null;
+        if (param0 < 92) {
+            return;
+        }
         field_R = null;
         field_P = null;
     }
@@ -68,24 +71,24 @@ final class qc extends rj implements ag {
         try {
             super.a(param0, param1, param2, (byte) -24);
             if (param3 > -13) {
-                Object var6 = null;
-                ((qc) this).a((kf) null, false);
+                kf var6 = (kf) null;
+                this.a((kf) null, false);
             }
-            ((qc) this).field_Q = -param2 + (ei.field_a + -((qc) this).field_r);
+            this.field_Q = -param2 + (ei.field_a + -this.field_r);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "qc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw la.a((Throwable) ((Object) runtimeException), "qc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public final kf a(int param0) {
         int var2 = -110 % ((-50 - param0) / 55);
-        return ((qc) this).field_M;
+        return this.field_M;
     }
 
     final void m(int param0) {
         super.m(param0 ^ param0);
-        if (null != ((qc) this).field_M) {
-            ((qc) this).field_M.a((byte) -94);
+        if (null != this.field_M) {
+            this.field_M.a((byte) -94);
         }
     }
 
@@ -94,10 +97,6 @@ final class qc extends rj implements ag {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_R = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
         field_N = 0;
         field_O = "No highscores";

@@ -11,6 +11,6 @@ public class mob {
     int field_e;
 
     mob() {
-        ((mob) this).field_f = 0;
+        this.field_f = 0;
     }
 }

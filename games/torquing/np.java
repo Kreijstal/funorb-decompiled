@@ -12,12 +12,12 @@ final class np extends ha {
     private long field_h;
 
     final void b(int param0) {
-        ((np) this).field_g = 0L;
-        if (((np) this).field_h > ((np) this).field_i) {
-            ((np) this).field_i = ((np) this).field_i + (-((np) this).field_i + ((np) this).field_h);
+        this.field_g = 0L;
+        if (this.field_h > this.field_i) {
+            this.field_i = this.field_i + (-this.field_i + this.field_h);
         }
         if (param0 != 30752) {
-            field_m = null;
+            field_m = (String) null;
         }
     }
 
@@ -25,22 +25,25 @@ final class np extends ha {
         int var8 = 0;
         int var9 = Torquing.field_u;
         long var2 = System.nanoTime();
-        long var4 = -((np) this).field_g + var2;
-        ((np) this).field_g = var2;
+        long var4 = -this.field_g + var2;
+        if (param0 != 103) {
+            return -4L;
+        }
+        this.field_g = var2;
         if (-5000000000L < var4) {
             if (5000000000L > var4) {
-                ((np) this).field_f[((np) this).field_j] = var4;
-                ((np) this).field_j = (((np) this).field_j + 1) % 10;
-                if (((np) this).field_l < 1) {
-                    ((np) this).field_l = ((np) this).field_l + 1;
+                this.field_f[this.field_j] = var4;
+                this.field_j = (this.field_j + 1) % 10;
+                if ((this.field_l ^ -1) > -2) {
+                    this.field_l = this.field_l + 1;
                 }
             }
         }
         long var6 = 0L;
-        for (var8 = 1; ((np) this).field_l >= var8; var8++) {
-            var6 = var6 + ((np) this).field_f[(10 + (((np) this).field_j + -var8)) % 10];
+        for (var8 = 1; this.field_l >= var8; var8++) {
+            var6 = var6 + this.field_f[(10 + (this.field_j + -var8)) % 10];
         }
-        return var6 / (long)((np) this).field_l;
+        return var6 / (long)this.field_l;
     }
 
     final int a(long param0, boolean param1) {
@@ -48,16 +51,16 @@ final class np extends ha {
         int var5 = 0;
         var5 = Torquing.field_u;
         if (param1) {
-          if (((np) this).field_i >= ((np) this).field_h) {
+          if (this.field_i >= this.field_h) {
             var4 = 0;
             L0: while (true) {
               L1: {
-                ((np) this).field_h = ((np) this).field_h + param0;
+                this.field_h = this.field_h + param0;
                 var4++;
                 if (var4 >= 10) {
                   break L1;
                 } else {
-                  if (((np) this).field_h < ((np) this).field_i) {
+                  if (this.field_h < this.field_i) {
                     continue L0;
                   } else {
                     break L1;
@@ -65,8 +68,8 @@ final class np extends ha {
                 }
               }
               L2: {
-                if (~((np) this).field_i < ~((np) this).field_h) {
-                  ((np) this).field_h = ((np) this).field_i;
+                if ((this.field_i ^ -1L) < (this.field_h ^ -1L)) {
+                  this.field_h = this.field_i;
                   break L2;
                 } else {
                   break L2;
@@ -75,9 +78,9 @@ final class np extends ha {
               return var4;
             }
           } else {
-            ((np) this).field_g = ((np) this).field_g + (((np) this).field_h - ((np) this).field_i);
-            ((np) this).field_i = ((np) this).field_i + (-((np) this).field_i + ((np) this).field_h);
-            ((np) this).field_h = ((np) this).field_h + param0;
+            this.field_g = this.field_g + (this.field_h - this.field_i);
+            this.field_i = this.field_i + (-this.field_i + this.field_h);
+            this.field_h = this.field_h + param0;
             return 1;
           }
         } else {
@@ -94,6 +97,7 @@ final class np extends ha {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
@@ -123,7 +127,7 @@ final class np extends ha {
                     if (null == vd.field_c) {
                       break L3;
                     } else {
-                      ti.field_e.c((sl) (Object) vd.field_c);
+                      ti.field_e.c(vd.field_c);
                       break L3;
                     }
                   }
@@ -137,36 +141,38 @@ final class np extends ha {
                       break L4;
                     }
                   }
-                  ti.field_e.a((sl) (Object) vd.field_c);
+                  ti.field_e.a(vd.field_c);
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   break L1;
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             runtimeException = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) runtimeException;
+            stackOut_11_0 = (RuntimeException) (runtimeException);
             stackOut_11_1 = new StringBuilder().append("np.G(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -174,36 +180,49 @@ final class np extends ha {
               break L5;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static boolean a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
+        int stackIn_8_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
         int stackOut_5_0 = 0;
-        var1 = (Object) (Object) ha.field_b;
+        int stackOut_7_0 = 0;
+        var1 = ha.field_b;
         synchronized (var1) {
           L0: {
+            L1: {
+              if (param0 == -13) {
+                break L1;
+              } else {
+                np.d(-95);
+                break L1;
+              }
+            }
             if (q.field_g == mj.field_d) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              stackOut_5_0 = 0;
+              stackIn_6_0 = stackOut_5_0;
+              return stackIn_6_0 != 0;
             } else {
               e.field_f = ol.field_c[q.field_g];
               m.field_t = pe.field_H[q.field_g];
               q.field_g = 127 & 1 + q.field_g;
-              stackOut_5_0 = 1;
-              stackIn_6_0 = stackOut_5_0;
+              stackOut_7_0 = 1;
+              stackIn_8_0 = stackOut_7_0;
               break L0;
             }
           }
         }
-        return stackIn_6_0 != 0;
+        return stackIn_8_0 != 0;
     }
 
     final static byte[] a(int param0, byte[] param1, int param2, int param3) {
@@ -258,7 +277,7 @@ final class np extends ha {
               if (param3 <= -68) {
                 break L3;
               } else {
-                field_m = null;
+                field_m = (String) null;
                 break L3;
               }
             }
@@ -267,7 +286,7 @@ final class np extends ha {
             var5.a(var4, (long)(param2 * 8), (byte) 95);
             var6 = new byte[64];
             var5.a(0, var6, 128);
-            stackOut_8_0 = (byte[]) var6;
+            stackOut_8_0 = (byte[]) (var6);
             stackIn_9_0 = stackOut_8_0;
             break L0;
           }
@@ -275,23 +294,23 @@ final class np extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var4_ref;
+            stackOut_10_0 = (RuntimeException) (var4_ref);
             stackOut_10_1 = new StringBuilder().append("np.A(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -299,7 +318,7 @@ final class np extends ha {
               break L4;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ',' + param3 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_9_0;
     }
@@ -308,7 +327,7 @@ final class np extends ha {
         int var4 = 0;
         L0: {
           var4 = Torquing.field_u;
-          if (param0 == -1) {
+          if (0 == (param0 ^ -1)) {
             if (null != j.field_a) {
               lj.a(j.field_a, (byte) -101);
               j.field_a = null;
@@ -344,43 +363,47 @@ final class np extends ha {
             }
           }
         }
+        L3: {
+          if (param1 == -32596) {
+            break L3;
+          } else {
+            field_m = (String) null;
+            break L3;
+          }
+        }
     }
 
     final long c(int param0) {
         if (param0 != 20520) {
-            ((np) this).field_j = 53;
+            this.field_j = 53;
         }
-        ((np) this).field_i = ((np) this).field_i + this.b((byte) 103);
-        if (!(((np) this).field_i >= ((np) this).field_h)) {
-            return (-((np) this).field_i + ((np) this).field_h) / 1000000L;
+        this.field_i = this.field_i + this.b((byte) 103);
+        if (!(this.field_i >= this.field_h)) {
+            return (-this.field_i + this.field_h) / 1000000L;
         }
         return 0L;
     }
 
     np() {
-        ((np) this).field_f = new long[10];
-        ((np) this).field_j = 0;
-        ((np) this).field_l = 1;
-        ((np) this).field_g = 0L;
-        ((np) this).field_i = 0L;
-        ((np) this).field_h = 0L;
-        ((np) this).field_i = System.nanoTime();
-        ((np) this).field_h = System.nanoTime();
+        this.field_f = new long[10];
+        this.field_j = 0;
+        this.field_l = 1;
+        this.field_g = 0L;
+        this.field_i = 0L;
+        this.field_h = 0L;
+        this.field_i = System.nanoTime();
+        this.field_h = System.nanoTime();
     }
 
     public static void d(int param0) {
         field_k = null;
         if (param0 != 0) {
-            field_m = null;
+            field_m = (String) null;
         }
         field_m = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new k(1, 2, 2, 0);
     }
 }

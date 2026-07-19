@@ -11,25 +11,36 @@ final class cf implements Iterator {
     static volatile int field_a;
 
     final static cr a(boolean param0) {
+        if (!param0) {
+            return (cr) null;
+        }
         return pp.f(-126);
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (!(de.field_f != 13)) {
+        if (param0 == 31077) {
+          if ((de.field_f ^ -1) == -14) {
             on.a(9110);
             return true;
+          } else {
+            if (-103 == (de.field_f ^ -1)) {
+              ji.field_n.a((byte) 34);
+              return true;
+            } else {
+              if (ji.field_n != null) {
+                if (!ji.field_n.a(param1, false, param2)) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
+                return false;
+              }
+            }
+          }
+        } else {
+          return true;
         }
-        if (!(de.field_f != 102)) {
-            ji.field_n.a((byte) 34);
-            return true;
-        }
-        if (ji.field_n == null) {
-            return false;
-        }
-        if (!ji.field_n.a(13, false, 15)) {
-            return false;
-        }
-        return true;
     }
 
     final static void a(int param0, int param1, int param2, byte param3) {
@@ -44,7 +55,7 @@ final class cf implements Iterator {
                 jm.d(1, param2);
                 break L0;
               } else {
-                if (param0 == 1) {
+                if (-2 == (param0 ^ -1)) {
                   L1: {
                     if (param1 != oa.field_p) {
                       oa.field_p = param1;
@@ -85,7 +96,7 @@ final class cf implements Iterator {
             }
           }
           L2: {
-            if (param0 != 1) {
+            if (-2 != (param0 ^ -1)) {
               break L2;
             } else {
               if (param1 != oa.field_p) {
@@ -127,15 +138,15 @@ final class cf implements Iterator {
     }
 
     public final void remove() {
-        if (null == ((cf) this).field_c) {
+        if (null == this.field_c) {
             throw new IllegalStateException();
         }
-        ((cf) this).field_c.a(-105);
-        ((cf) this).field_c = null;
+        this.field_c.a(-105);
+        this.field_c = null;
     }
 
     public static void a(int param0) {
-        int var1 = -21;
+        int var1 = 21 / ((36 - param0) / 55);
         field_b = null;
     }
 
@@ -150,6 +161,7 @@ final class cf implements Iterator {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
@@ -166,34 +178,36 @@ final class cf implements Iterator {
             if (param0 > 68) {
               stackOut_3_0 = li.a(10, true, param1, true);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = -31;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_0 = (RuntimeException) (var2);
             stackOut_5_1 = new StringBuilder().append("cf.D(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -201,21 +215,25 @@ final class cf implements Iterator {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     public final Object next() {
-        gp var1 = ((cf) this).field_d;
-        if (((cf) this).field_e.field_b == var1) {
-            ((cf) this).field_d = null;
+        gp var1 = this.field_d;
+        if (this.field_e.field_b == var1) {
+            this.field_d = null;
             var1 = null;
         } else {
-            ((cf) this).field_d = var1.field_p;
+            this.field_d = var1.field_p;
         }
-        ((cf) this).field_c = var1;
-        return (Object) (Object) var1;
+        this.field_c = var1;
+        return var1;
     }
 
     final static int a(int param0, CharSequence param1, byte param2) {
@@ -242,7 +260,7 @@ final class cf implements Iterator {
         try {
           L0: {
             var3_int = 83 % ((param2 - 8) / 48);
-            stackOut_0_0 = li.a(16, true, param1, true);
+            stackOut_0_0 = li.a(param0, true, param1, true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -250,23 +268,23 @@ final class cf implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("cf.F(").append(16).append(',');
+            stackOut_2_0 = (RuntimeException) (var3);
+            stackOut_2_1 = new StringBuilder().append("cf.F(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -274,31 +292,27 @@ final class cf implements Iterator {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }
 
     public final boolean hasNext() {
-        return ((cf) this).field_e.field_b != ((cf) this).field_d;
+        return this.field_e.field_b != this.field_d;
     }
 
     cf(sr param0) {
-        ((cf) this).field_c = null;
+        this.field_c = null;
         try {
-            ((cf) this).field_e = param0;
-            ((cf) this).field_c = null;
-            ((cf) this).field_d = ((cf) this).field_e.field_b.field_p;
+            this.field_e = param0;
+            this.field_c = null;
+            this.field_d = this.field_e.field_b.field_p;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "cf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "cf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
         field_b = "Your request to join has been declined.";
     }

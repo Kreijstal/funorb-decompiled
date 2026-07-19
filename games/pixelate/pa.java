@@ -39,7 +39,7 @@ final class pa {
             var3 = new id(false);
             var3.field_c = param1;
             var3.field_a = param0;
-            stackOut_2_0 = (id) var3;
+            stackOut_2_0 = (id) (var3);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -47,23 +47,23 @@ final class pa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_0 = (RuntimeException) (var3_ref);
             stackOut_4_1 = new StringBuilder().append("pa.B(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -71,13 +71,18 @@ final class pa {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
 
     public static void a(int param0) {
-        field_a = null;
+        id discarded$0 = null;
+        field_a = (int[][]) null;
+        if (param0 < 8) {
+            String var2 = (String) null;
+            discarded$0 = pa.a(-122, (String) null, (byte) -98);
+        }
     }
 
     static {

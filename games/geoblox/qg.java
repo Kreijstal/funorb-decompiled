@@ -10,6 +10,9 @@ final class qg {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 <= 55) {
+            return;
+        }
         field_e = null;
     }
 
@@ -18,24 +21,37 @@ final class qg {
     }
 
     qg(int param0) {
-        ((qg) this).field_c = param0;
+        this.field_c = param0;
     }
 
     final static void b(int param0) {
-        if (fh.c(-114)) {
+        if (param0 == 9313) {
+          if (!fh.c(-114)) {
+            if (vk.field_b != null) {
+              return;
+            } else {
+              vk.field_b = cf.a(4, 94);
+              return;
+            }
+          } else {
             return;
-        }
-        if (vk.field_b != null) {
+          }
+        } else {
+          qg.a(116);
+          if (!fh.c(-114)) {
+            if (vk.field_b != null) {
+              return;
+            } else {
+              vk.field_b = cf.a(4, 94);
+              return;
+            }
+          } else {
             return;
+          }
         }
-        vk.field_b = cf.a(4, 94);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Level: <%0>";
         field_d = 4;
         field_b = "Password: ";

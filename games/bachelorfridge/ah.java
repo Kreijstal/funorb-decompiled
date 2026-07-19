@@ -12,10 +12,13 @@ final class ah extends tia {
     private double field_k;
 
     private final int[] b(int param0) {
+        if (param0 <= 31) {
+            field_l = -48;
+        }
         int[] var3 = new int[2];
         int[] var2 = var3;
-        var3[1] = (int)(((ah) this).field_m * (double)(128 + -(((ah) this).field_g * 2)));
-        var3[0] = (int)(((ah) this).field_k * (double)(128 - ((ah) this).field_g * 2));
+        var3[1] = (int)(this.field_m * (double)(128 + -(this.field_g * 2)));
+        var3[0] = (int)(this.field_k * (double)(128 - this.field_g * 2));
         return var3;
     }
 
@@ -23,10 +26,12 @@ final class ah extends tia {
         if (param1 != 25415) {
             return;
         }
-        lr.a(65280, param2, 100, ((ah) this).field_n, param1 + 265923678, param0);
+        lr.a(65280, param2, 100, this.field_n, param1 + 265923678, param0);
     }
 
     final boolean a(int param0) {
+        boolean discarded$4 = false;
+        int discarded$5 = 0;
         int var2 = 0;
         double var3 = 0.0;
         int var6 = 0;
@@ -35,38 +40,38 @@ final class ah extends tia {
         int var9 = 0;
         int[] var13 = null;
         var9 = BachelorFridge.field_y;
-        int fieldTemp$3 = ((ah) this).field_g - 1;
-        ((ah) this).field_g = ((ah) this).field_g - 1;
-        if (fieldTemp$3 > 0) {
+        int fieldTemp$3 = this.field_g - 1;
+        this.field_g = this.field_g - 1;
+        if ((fieldTemp$3 ^ -1) < -1) {
           L0: {
             if (param0 <= 0) {
               break L0;
             } else {
-              boolean discarded$4 = ((ah) this).a(-70);
+              discarded$4 = this.a(-70);
               break L0;
             }
           }
           L1: {
-            if (((ah) this).field_g > 32) {
+            if (this.field_g > 32) {
               var2 = 0;
               L2: while (true) {
-                if (var2 >= 2) {
+                if ((var2 ^ -1) <= -3) {
                   break L1;
                 } else {
-                  var3 = -(3.141592653589793 * (double)((kla.a(50, ((ah) this).field_f, -2147483648) + 50 * (-1 + ((ah) this).field_j)) * 2) / 200.0 - 1.5707963267948966);
+                  var3 = -(3.141592653589793 * (double)((kla.a(50, this.field_f, -2147483648) + 50 * (-1 + this.field_j)) * 2) / 200.0 - 1.5707963267948966);
                   var13 = this.b(64);
-                  var6 = var13[0] - -(kla.a(30, ((ah) this).field_f, -2147483648) + -15 >> 1);
-                  var7 = var13[1] - -(kla.a(30, ((ah) this).field_f, -2147483648) - 15 >> 1);
-                  var8 = new lh(var6 << 4, 0, var7 << 4);
-                  int discarded$5 = kla.a(30, ((ah) this).field_f, -2147483648);
-                  var8.field_p = 4 - kla.a(8, ((ah) this).field_f, -2147483648);
-                  var8.field_k = -kla.a(8, ((ah) this).field_f, -2147483648) + 4;
-                  var8.field_g = 4 + -kla.a(8, ((ah) this).field_f, -2147483648);
+                  var6 = var13[0] - -(kla.a(30, this.field_f, -2147483648) + -15 >> 909556833);
+                  var7 = var13[1] - -(kla.a(30, this.field_f, -2147483648) - 15 >> 1240756449);
+                  var8 = new lh(var6 << 353055460, 0, var7 << -1738651740);
+                  discarded$5 = kla.a(30, this.field_f, -2147483648);
+                  var8.field_p = 4 - kla.a(8, this.field_f, -2147483648);
+                  var8.field_k = -kla.a(8, this.field_f, -2147483648) + 4;
+                  var8.field_g = 4 + -kla.a(8, this.field_f, -2147483648);
                   var8.field_m = -1;
                   var8.field_o = 32;
                   var8.field_l = 0;
                   var8.field_r = var3;
-                  ((ah) this).field_n.a((bw) (Object) var8, true);
+                  this.field_n.a(var8, true);
                   var2++;
                   continue L2;
                 }
@@ -75,7 +80,7 @@ final class ah extends tia {
               break L1;
             }
           }
-          gj.a((byte) 116, ((ah) this).field_n, ((ah) this).field_f, ((ah) this).field_g);
+          gj.a((byte) 116, this.field_n, this.field_f, this.field_g);
           return true;
         } else {
           return false;
@@ -119,25 +124,25 @@ final class ah extends tia {
         try {
           L0: {
             L1: {
-              ((ah) this).field_i = param3;
-              ((ah) this).field_j = param2;
-              ((ah) this).field_g = 64;
-              ((ah) this).field_n = new eaa();
-              ((ah) this).field_k = (double)(128 * ((ah) this).field_i / 64);
-              ((ah) this).field_m = (double)(((ah) this).field_i * 64 / 64);
-              if (((ah) this).field_j == 1) {
-                ((ah) this).field_m = ((ah) this).field_m * -1.0;
+              this.field_i = param3;
+              this.field_j = param2;
+              this.field_g = 64;
+              this.field_n = new eaa();
+              this.field_k = (double)(128 * this.field_i / 64);
+              this.field_m = (double)(this.field_i * 64 / 64);
+              if (-2 == (this.field_j ^ -1)) {
+                this.field_m = this.field_m * -1.0;
                 break L1;
               } else {
-                if (((ah) this).field_j == 3) {
-                  ((ah) this).field_k = ((ah) this).field_k * -1.0;
+                if ((this.field_j ^ -1) == -4) {
+                  this.field_k = this.field_k * -1.0;
                   break L1;
                 } else {
-                  if (((ah) this).field_j != 2) {
+                  if (-3 != (this.field_j ^ -1)) {
                     break L1;
                   } else {
-                    ((ah) this).field_m = ((ah) this).field_m * -1.0;
-                    ((ah) this).field_k = ((ah) this).field_k * -1.0;
+                    this.field_m = this.field_m * -1.0;
+                    this.field_k = this.field_k * -1.0;
                     break L1;
                   }
                 }
@@ -149,23 +154,23 @@ final class ah extends tia {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var5;
+            stackOut_8_0 = (RuntimeException) (var5);
             stackOut_8_1 = new StringBuilder().append("ah.<init>(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -174,23 +179,23 @@ final class ah extends tia {
             }
           }
           L3: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -198,12 +203,11 @@ final class ah extends tia {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static String a(gs param0, byte param1) {
-        Object var4_ref = null;
         Object var2 = null;
         int var3 = 0;
         String var4 = null;
@@ -227,23 +231,24 @@ final class ah extends tia {
         Object stackOut_34_0 = null;
         StringBuilder stackOut_34_1 = null;
         String stackOut_34_2 = null;
-        var4_ref = null;
+        Object var4_ref = null;
         var5 = BachelorFridge.field_y;
         try {
           L0: {
             L1: {
-              var3 = 0;
+              var3 = -85 % ((param1 - -11) / 55);
               var2 = null;
               if (param0.field_e == null) {
                 break L1;
               } else {
                 L2: {
                   var6 = param0.field_e;
-                  var2 = (Object) (Object) var6;
+                  var2 = var6;
                   var4_ref = var2;
-                  var2 = (Object) (Object) var6;
-                  if (param0.field_b == 1) {
-                    var2 = (Object) (Object) ("<img=0>" + var6);
+                  var2 = var6;
+                  var2 = var6;
+                  if (-2 == (param0.field_b ^ -1)) {
+                    var2 = "<img=0>" + var6;
                     break L2;
                   } else {
                     break L2;
@@ -252,7 +257,7 @@ final class ah extends tia {
                 if (2 != param0.field_b) {
                   break L1;
                 } else {
-                  var2 = (Object) (Object) ("<img=1>" + (String) var2);
+                  var2 = "<img=1>" + (String) (var2);
                   var4_ref = var2;
                   var4_ref = var2;
                   break L1;
@@ -261,7 +266,7 @@ final class ah extends tia {
             }
             L3: {
               var4 = "";
-              if (param0.field_p != 2) {
+              if (-3 != (param0.field_p ^ -1)) {
                 L4: {
                   if (param0.field_p != 0) {
                     break L4;
@@ -276,7 +281,7 @@ final class ah extends tia {
                 }
                 L5: {
                   if (1 == param0.field_p) {
-                    var4 = "[" + lga.a(true, new String[1], fq.field_r) + "] ";
+                    var4 = "[" + lga.a(true, new String[]{param0.field_k}, fq.field_r) + "] ";
                     break L5;
                   } else {
                     break L5;
@@ -303,7 +308,7 @@ final class ah extends tia {
                   }
                 }
                 if (!param0.field_i) {
-                  var4 = var4 + (String) var2 + ": ";
+                  var4 = var4 + (String) (var2) + ": ";
                   break L3;
                 } else {
                   break L3;
@@ -315,28 +320,28 @@ final class ah extends tia {
                       break L8;
                     } else {
                       if (param0.field_j == 0) {
-                        var4 = lga.a(true, new String[1], iia.field_q);
+                        var4 = lga.a(true, new String[]{(String) (var2)}, iia.field_q);
                         break L3;
                       } else {
                         break L8;
                       }
                     }
                   }
-                  var4 = lga.a(true, new String[1], wla.field_n);
+                  var4 = lga.a(true, new String[]{(String) (var2)}, wla.field_n);
                   break L3;
                 } else {
                   break L3;
                 }
               }
             }
-            stackOut_31_0 = (String) var4;
+            stackOut_31_0 = (String) (var4);
             stackIn_32_0 = stackOut_31_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
-            var2 = (Object) (Object) decompiledCaughtException;
+            var2 = decompiledCaughtException;
             stackOut_33_0 = var2;
             stackOut_33_1 = new StringBuilder().append("ah.E(");
             stackIn_35_0 = stackOut_33_0;
@@ -345,7 +350,7 @@ final class ah extends tia {
             stackIn_34_1 = stackOut_33_1;
             if (param0 == null) {
               stackOut_35_0 = stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackOut_35_2 = "null";
               stackIn_36_0 = stackOut_35_0;
               stackIn_36_1 = stackOut_35_1;
@@ -353,7 +358,7 @@ final class ah extends tia {
               break L9;
             } else {
               stackOut_34_0 = stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "{...}";
               stackIn_36_0 = stackOut_34_0;
               stackIn_36_1 = stackOut_34_1;
@@ -361,16 +366,16 @@ final class ah extends tia {
               break L9;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + -118 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ',' + param1 + ')');
         }
         return stackIn_32_0;
     }
 
     final static void a(int param0, int param1) {
         pf var2 = sja.field_fb;
-        var2.c(4, (byte) 118);
+        var2.c(param1, (byte) 118);
         var2.d(1, 0);
-        var2.d(2, 0);
+        var2.d(2, param0 ^ param0);
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {

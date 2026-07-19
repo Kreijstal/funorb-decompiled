@@ -15,18 +15,25 @@ final class ad {
     public static void a(boolean param0) {
         field_a = null;
         field_e = null;
-        field_c = null;
-        field_f = null;
-        field_b = null;
-        field_d = null;
-        field_g = null;
+        if (!param0) {
+          field_h = true;
+          field_c = null;
+          field_f = null;
+          field_b = null;
+          field_d = null;
+          field_g = null;
+          return;
+        } else {
+          field_c = null;
+          field_f = null;
+          field_b = null;
+          field_d = null;
+          field_g = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ad.A(";
         field_d = "The invitation has been withdrawn.";
         field_c = "Report abuse";

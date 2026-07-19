@@ -12,10 +12,10 @@ abstract class sg extends pg {
     }
 
     final void b(int[] param0, int param1, int param2) {
-        if (((sg) this).field_i) {
-            ((sg) this).a(param0, param1, param2);
+        if (this.field_i) {
+            this.a(param0, param1, param2);
         } else {
-            ((sg) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class sg extends pg {
     abstract sg a();
 
     protected sg() {
-        ((sg) this).field_i = true;
+        this.field_i = true;
     }
 }

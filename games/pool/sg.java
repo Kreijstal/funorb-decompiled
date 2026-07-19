@@ -16,16 +16,17 @@ final class sg extends ob {
     private static int field_R;
 
     final int d(int param0, int param1) {
+        int discarded$0 = 0;
         if (param0 != 0) {
-            int discarded$0 = ((sg) this).a(true, -54);
+            discarded$0 = this.a(true, -54);
         }
         if (this.g(1) > param1) {
-            if (param1 < 2) {
+            if (-3 < (param1 ^ -1)) {
                 return 152 * (param1 % 3) + 173;
             }
             return 98 + (-2 + param1) * 152;
         }
-        return super.d(param0, param1);
+        return super.d(param0 ^ 0, param1);
     }
 
     final static byte[] a(int param0, int param1, byte[] param2, byte param3) {
@@ -61,14 +62,14 @@ final class sg extends ob {
             var5 = 0;
             L1: while (true) {
               if (var5 >= param2.length) {
-                var6 = 22;
+                var6 = 45 / ((44 - param0) / 56);
                 L2: while (true) {
                   if (var5 >= var8.length) {
-                    stackOut_7_0 = (byte[]) var4;
+                    stackOut_7_0 = (byte[]) (var4);
                     stackIn_8_0 = stackOut_7_0;
                     break L0;
                   } else {
-                    var8[var5] = (byte) 0;
+                    var8[var5] = (byte)param3;
                     var5++;
                     continue L2;
                   }
@@ -84,23 +85,23 @@ final class sg extends ob {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var4_ref;
-            stackOut_9_1 = new StringBuilder().append("sg.IB(").append(-116).append(',').append(param1).append(',');
+            stackOut_9_0 = (RuntimeException) (var4_ref);
+            stackOut_9_1 = new StringBuilder().append("sg.IB(").append(param0).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -108,18 +109,22 @@ final class sg extends ob {
               break L3;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + 0 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param3 + ')');
         }
         return stackIn_8_0;
     }
 
     private final int g(int param0) {
-        return ((sg) this).field_h.length - 1;
+        if (param0 != 1) {
+            this.a(31, 61, 50, -68, 43, 50);
+        }
+        return this.field_h.length - 1;
     }
 
     final boolean a(int param0, boolean param1) {
+        int discarded$0 = 0;
         if (!param1) {
-            int discarded$0 = ((sg) this).a(-39, -95);
+            discarded$0 = this.a(-39, -95);
         }
         if (!(this.g(1) != param0)) {
             return true;
@@ -128,6 +133,7 @@ final class sg extends ob {
     }
 
     public static void f(int param0) {
+        dd[] discarded$0 = null;
         field_H = null;
         field_L = null;
         field_I = null;
@@ -136,29 +142,30 @@ final class sg extends ob {
         field_N = null;
         field_M = null;
         if (param0 != 506724193) {
-            dd[] discarded$0 = sg.h(89);
+            discarded$0 = sg.h(89);
         }
     }
 
     final int a(boolean param0, int param1) {
+        int discarded$0 = 0;
         if (param0) {
-            int discarded$0 = ((sg) this).a(112, -81);
+            discarded$0 = this.a(112, -81);
         }
         if (this.g(1) > param1) {
-            return ((sg) this).d(0, param1) + 140;
+            return this.d(0, param1) + 140;
         }
         return super.a(false, param1);
     }
 
     final int b(byte param0, int param1) {
-        if (param1 < 2) {
+        if ((param1 ^ -1) > -3) {
             return 130;
         }
         if (param1 < this.g(1)) {
             return 260;
         }
         if (param0 != 6) {
-            Object var4 = null;
+            sj var4 = (sj) null;
             sg.a((java.awt.Component) null, (vk) null, -11, (sj) null, -109, true);
         }
         return 390;
@@ -174,7 +181,7 @@ final class sg extends ob {
         int var6 = 0;
         dd[] var1 = new dd[wf.field_d];
         if (param0 != 152) {
-            Object var7 = null;
+            sj var7 = (sj) null;
             sg.a((java.awt.Component) null, (vk) null, -111, (sj) null, -54, true);
         }
         for (var2 = 0; var2 < wf.field_d; var2++) {
@@ -196,11 +203,11 @@ final class sg extends ob {
         dd var7 = null;
         int var8 = 0;
         if (!(this.g(1) <= param0)) {
-            var7 = !((sg) this).a(param0, true) ? ne.field_t[param0] : og.field_K[param0];
-            var8 = -var7.field_z + (-param2 + param1) >> 1;
+            var7 = !this.a(param0, true) ? ne.field_t[param0] : og.field_K[param0];
+            var8 = -var7.field_z + (-param2 + param1) >> 506724193;
             var7.a(param2 + var8, var8 + param5);
         }
-        if (((sg) this).a(param0, true)) {
+        if (this.a(param0, true)) {
         }
         if (param4 != -24267) {
             field_K = 78;
@@ -211,7 +218,7 @@ final class sg extends ob {
         if (param1 != 6402) {
             return 118;
         }
-        if (param0 != ((sg) this).field_h.length + -1) {
+        if (param0 != this.field_h.length + -1) {
             return 80;
         }
         return 0;
@@ -229,7 +236,7 @@ final class sg extends ob {
 
     final static void a(java.awt.Component param0, vk param1, int param2, sj param3, int param4, boolean param5) {
         RuntimeException runtimeException = null;
-        Object var7 = null;
+        sj var7 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -283,7 +290,7 @@ final class sg extends ob {
               if (param4 == 10282) {
                 break L1;
               } else {
-                var7 = null;
+                var7 = (sj) null;
                 sg.a((java.awt.Component) null, (vk) null, 11, (sj) null, -77, false);
                 break L1;
               }
@@ -294,23 +301,23 @@ final class sg extends ob {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("sg.HB(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -319,23 +326,23 @@ final class sg extends ob {
             }
           }
           L3: {
-            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -344,23 +351,23 @@ final class sg extends ob {
             }
           }
           L4: {
-            stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+            stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
             stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param3 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -368,7 +375,7 @@ final class sg extends ob {
               break L4;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param4 + ',' + param5 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -377,10 +384,6 @@ final class sg extends ob {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_N = "Private";
         field_Q = "<%0> is not on your ignore list.";
         field_H = "Enter the name you'd prefer. This is the name displayed to other players.";

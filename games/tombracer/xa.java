@@ -9,17 +9,17 @@ final class xa implements mw, e {
     private final native void r(int param0, int param1);
 
     protected final void finalize() {
-        if (((xa) this).field_nativeid != 0L) {
-            ho.a(-1, (e) this);
+        if (this.field_nativeid != 0L) {
+            ho.a(-1, (e) (this));
         }
     }
 
     public final void w(boolean param0) {
-        this.va(((xa) this).field_nativeid, param0);
+        this.va(this.field_nativeid, param0);
     }
 
     xa(int param0, int param1) {
-        ((xa) this).field_nativeid = 0L;
+        this.field_nativeid = 0L;
         this.r(param0, param1);
     }
 }

@@ -11,6 +11,6 @@ public class eb {
     Object field_e;
 
     eb() {
-        ((eb) this).field_a = 0;
+        this.field_a = 0;
     }
 }

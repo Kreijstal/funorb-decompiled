@@ -33,7 +33,7 @@ final class sh extends uf {
         field_x = null;
         field_E = null;
         if (param0 > -26) {
-            field_x = null;
+            field_x = (String) null;
         }
         field_q = null;
     }
@@ -41,6 +41,9 @@ final class sh extends uf {
     final static void a(byte param0, int param1, int param2) {
         ll.field_a = param1;
         tf.field_k = param2;
+        if (param0 > -110) {
+            sh.c(-18);
+        }
     }
 
     final static void a(int param0) {
@@ -92,7 +95,7 @@ final class sh extends uf {
               } else {
                 var3_long = -hj.field_I + ll.a(1000);
                 var2 = (int)((10999L + -var3_long) / 1000L);
-                if (var2 < 0) {
+                if ((var2 ^ -1) > -1) {
                   var2 = 0;
                   break L1;
                 } else {
@@ -119,7 +122,7 @@ final class sh extends uf {
                     var5 = pl.field_P;
                     break L4;
                   } else {
-                    if (~ai.field_i.field_h != ~var4) {
+                    if (ai.field_i.field_h != var4) {
                       var5 = eb.field_I;
                       break L4;
                     } else {
@@ -130,10 +133,10 @@ final class sh extends uf {
                 }
                 L5: {
                   var6 = rb.field_d[var3];
-                  if (pe.field_e != 2) {
+                  if ((pe.field_e ^ -1) != -3) {
                     break L5;
                   } else {
-                    if (var2 != 1) {
+                    if (-2 != (var2 ^ -1)) {
                       break L5;
                     } else {
                       L6: {
@@ -149,7 +152,7 @@ final class sh extends uf {
                       }
                       L7: {
                         var7 = stackIn_19_0;
-                        if (~kj.field_c.length > ~ec.field_d.length) {
+                        if (kj.field_c.length < ec.field_d.length) {
                           stackOut_21_0 = ec.field_d.length;
                           stackIn_22_0 = stackOut_21_0;
                           break L7;
@@ -219,7 +222,7 @@ final class sh extends uf {
                   stackOut_37_0 = 87;
                   stackIn_39_0 = stackOut_37_0;
                   stackIn_38_0 = stackOut_37_0;
-                  if (var4 < 0) {
+                  if ((var4 ^ -1) > -1) {
                     stackOut_39_0 = stackIn_39_0;
                     stackOut_39_1 = 0;
                     stackIn_40_0 = stackOut_39_0;
@@ -235,7 +238,7 @@ final class sh extends uf {
                 }
                 L13: {
                   var7 = bb.a((byte) stackIn_40_0, stackIn_40_1 != 0, var6);
-                  var8 = -(var7 >> 1) + nd.field_r;
+                  var8 = -(var7 >> 708820321) + nd.field_r;
                   if (var4 >= 0) {
                     L14: {
                       if (var4 == ai.field_i.field_h) {
@@ -254,7 +257,7 @@ final class sh extends uf {
                       if (var9 == null) {
                         break L15;
                       } else {
-                        var9.a(var7 - -(se.field_j << 1), var8 + -se.field_j, lm.field_d - -(dc.field_b << 1), 0, var1_int);
+                        var9.a(var7 - -(se.field_j << 1941204129), var8 + -se.field_j, lm.field_d - -(dc.field_b << -52449087), 0, var1_int);
                         break L15;
                       }
                     }
@@ -283,15 +286,15 @@ final class sh extends uf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var1, "sh.A(" + param0 + ')');
+          throw qk.a((Throwable) ((Object) var1), "sh.A(" + param0 + ')');
         }
     }
 
     final void c(byte param0) {
-        ((sh) this).field_F = null;
-        ((sh) this).field_m = null;
-        ((sh) this).field_k = null;
-        ((sh) this).field_B = null;
+        this.field_F = null;
+        this.field_m = null;
+        this.field_k = null;
+        this.field_B = null;
         if (param0 >= -107) {
             sh.c(-17);
         }
@@ -301,10 +304,6 @@ final class sh extends uf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = "Account created successfully!";
         field_z = 0;
         field_E = new int[192];

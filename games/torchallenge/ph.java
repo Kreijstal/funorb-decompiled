@@ -19,6 +19,9 @@ final class ph implements j {
     static String field_f;
 
     final static boolean a(byte param0) {
+        if (param0 != -40) {
+            return false;
+        }
         return gi.field_d != null ? true : m.field_d;
     }
 
@@ -29,7 +32,7 @@ final class ph implements j {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        Object var12 = null;
+        ee var12 = null;
         bl var13 = null;
         ee stackIn_6_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -57,25 +60,25 @@ final class ph implements j {
               if (param3 == 97) {
                 break L1;
               } else {
-                var12 = null;
-                ((ph) this).a((ee) null, 19, 73, (byte) 52, true);
+                var12 = (ee) null;
+                this.a((ee) null, 19, 73, (byte) 52, true);
                 break L1;
               }
             }
             L2: {
               if (param0 instanceof bl) {
-                stackOut_5_0 = (ee) param0;
+                stackOut_5_0 = (ee) (param0);
                 stackIn_6_0 = stackOut_5_0;
                 break L2;
               } else {
                 stackOut_4_0 = null;
-                stackIn_6_0 = (ee) (Object) stackOut_4_0;
+                stackIn_6_0 = (ee) ((Object) stackOut_4_0);
                 break L2;
               }
             }
             L3: {
-              var13 = (bl) (Object) stackIn_6_0;
-              qg.f(param2 - -param0.field_m, param1 + param0.field_i, param0.field_p, param0.field_l, ((ph) this).field_j);
+              var13 = (bl) ((Object) stackIn_6_0);
+              qg.f(param2 - -param0.field_m, param1 + param0.field_i, param0.field_p, param0.field_l, this.field_j);
               if (var13 == null) {
                 break L3;
               } else {
@@ -85,13 +88,13 @@ final class ph implements j {
             var7 = param0.field_p + -(2 * var13.field_W);
             var8 = param0.field_m + (param2 + var13.field_W);
             var9 = var13.field_Y + (param1 + param0.field_i);
-            qg.d(var8, var9, var7 + var8, var9, ((ph) this).field_n);
+            qg.d(var8, var9, var7 + var8, var9, this.field_n);
             var10 = -1 + var13.d(true);
             L4: while (true) {
-              if (var10 < 0) {
+              if (-1 < (var10 ^ -1)) {
                 L5: {
-                  if (((ph) this).field_l != null) {
-                    ((ph) this).field_l.a(var13.field_v, var7 / 2 + var8, ((ph) this).field_l.field_G + (var9 + var13.field_Y), ((ph) this).field_g, ((ph) this).field_i);
+                  if (this.field_l != null) {
+                    this.field_l.a(var13.field_v, var7 / 2 + var8, this.field_l.field_G + (var9 + var13.field_Y), this.field_g, this.field_i);
                     break L5;
                   } else {
                     break L5;
@@ -99,7 +102,7 @@ final class ph implements j {
                 }
                 break L0;
               } else {
-                qg.e(var8 - -(var7 * var13.a(-20, var10) / var13.a(-1)), var9, ((ph) this).field_k, ((ph) this).field_c);
+                qg.e(var8 - -(var7 * var13.a(-20, var10) / var13.a(-1)), var9, this.field_k, this.field_c);
                 var10--;
                 continue L4;
               }
@@ -109,23 +112,23 @@ final class ph implements j {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var6;
+            stackOut_14_0 = (RuntimeException) (var6);
             stackOut_14_1 = new StringBuilder().append("ph.A(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -133,7 +136,7 @@ final class ph implements j {
               break L6;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -151,23 +154,19 @@ final class ph implements j {
 
     ph(eg param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            ((ph) this).field_n = param3;
-            ((ph) this).field_k = param5;
-            ((ph) this).field_i = param2;
-            ((ph) this).field_c = param6;
-            ((ph) this).field_l = param0;
-            ((ph) this).field_g = param1;
-            ((ph) this).field_j = param4;
+            this.field_n = param3;
+            this.field_k = param5;
+            this.field_i = param2;
+            this.field_c = param6;
+            this.field_l = param0;
+            this.field_g = param1;
+            this.field_j = param4;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_a = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
         field_d = 0;

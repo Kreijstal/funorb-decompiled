@@ -14,7 +14,7 @@ final class ll {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
-        Object var5 = null;
+        java.awt.Canvas var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -40,7 +40,7 @@ final class ll {
                 if (param1 == 115) {
                   break L1;
                 } else {
-                  var5 = null;
+                  var5 = (java.awt.Canvas) null;
                   ll.a(95, (byte) 7, (java.awt.Canvas) null, 48);
                   break L1;
                 }
@@ -59,23 +59,23 @@ final class ll {
           decompiledCaughtException = decompiledCaughtParameter1;
           L2: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4_ref2;
+            stackOut_6_0 = (RuntimeException) (var4_ref2);
             stackOut_6_1 = new StringBuilder().append("ll.B(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -83,23 +83,22 @@ final class ll {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param3 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ')');
         }
     }
 
     public static void a(int param0) {
         field_e = null;
         field_b = null;
+        if (param0 != 0) {
+            return;
+        }
         field_a = null;
         field_f = null;
         field_g = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Password is valid";
         field_a = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
         field_c = 0;

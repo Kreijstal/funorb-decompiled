@@ -18,6 +18,7 @@ final class ao {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
@@ -31,14 +32,15 @@ final class ao {
         try {
           L0: {
             if (null == param0.field_h) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 L2: {
                   if (param0.field_g != 0) {
                     break L2;
                   } else {
-                    if (param0.field_s == 0) {
+                    if (-1 == (param0.field_s ^ -1)) {
                       break L1;
                     } else {
                       break L2;
@@ -52,14 +54,15 @@ final class ao {
                   } else {
                     L4: {
                       var3 = n.field_L[var2_int];
-                      if (var3.field_i != 2) {
+                      if ((var3.field_i ^ -1) != -3) {
                         break L4;
                       } else {
                         if (var3.field_g != param0.field_g) {
                           break L4;
                         } else {
                           if (param0.field_s == var3.field_s) {
-                            return;
+                            decompiledRegionSelector0 = 1;
+                            break L0;
                           } else {
                             break L4;
                           }
@@ -72,7 +75,7 @@ final class ao {
                 }
               }
               L5: {
-                var2_int = -3;
+                var2_int = -43 % ((param1 - 48) / 38);
                 if (null == param0.field_a) {
                   break L5;
                 } else {
@@ -84,6 +87,7 @@ final class ao {
                 }
               }
               ei.a(-2792, param0);
+              decompiledRegionSelector0 = 2;
               break L0;
             }
           }
@@ -91,23 +95,23 @@ final class ao {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var2;
+            stackOut_19_0 = (RuntimeException) (var2);
             stackOut_19_1 = new StringBuilder().append("ao.A(");
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -115,19 +119,27 @@ final class ao {
               break L6;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + -127 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     public static void a(boolean param0) {
         field_c = null;
+        if (!param0) {
+            field_c = (tl) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0L;
     }
 }

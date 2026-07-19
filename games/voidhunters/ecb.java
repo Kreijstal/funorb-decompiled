@@ -7,37 +7,37 @@ final class ecb implements dja {
     public static void a(int param0) {
         field_a = null;
         if (param0 <= 14) {
-            field_a = null;
+            field_a = (int[]) null;
         }
     }
 
     public final tv a(byte param0) {
         int var2 = -7 % ((-64 - param0) / 50);
-        return (tv) (Object) new rsb();
+        return (tv) ((Object) new rsb());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            field_a = null;
-            return (tv[]) (Object) new rsb[param1];
+            field_a = (int[]) null;
+            return (tv[]) ((Object) new rsb[param1]);
         }
-        return (tv[]) (Object) new rsb[param1];
+        return (tv[]) ((Object) new rsb[param1]);
     }
 
     final static int a(int param0, byte param1, int param2) {
-        if (param2 < 16384) {
-          if (param2 >= -16384) {
+        if ((param2 ^ -1) > -16385) {
+          if ((param2 ^ -1) <= 16383) {
             L0: {
               if (16384 <= param0) {
                 L1: {
                   L2: {
-                    if (param2 >= 536870912) {
+                    if (-536870913 >= (param2 ^ -1)) {
                       break L2;
                     } else {
-                      if (param2 < -536870912) {
+                      if ((param2 ^ -1) > 536870911) {
                         break L2;
                       } else {
-                        if (param0 >= 536870912) {
+                        if ((param0 ^ -1) <= -536870913) {
                           break L2;
                         } else {
                           if (param0 >= -536870912) {
@@ -50,13 +50,13 @@ final class ecb implements dja {
                                 if (2097152 <= param2) {
                                   break L4;
                                 } else {
-                                  if (param2 < -2097152) {
+                                  if ((param2 ^ -1) > 2097151) {
                                     break L4;
                                   } else {
-                                    if (param0 >= 2097152) {
+                                    if (-2097153 >= (param0 ^ -1)) {
                                       break L4;
                                     } else {
-                                      if (param0 < -2097152) {
+                                      if (2097151 < (param0 ^ -1)) {
                                         break L4;
                                       } else {
                                         break L3;
@@ -80,23 +80,23 @@ final class ecb implements dja {
                                     if (131072 <= param0) {
                                       break L6;
                                     } else {
-                                      if (param0 >= -131072) {
+                                      if (131071 >= (param0 ^ -1)) {
                                         break L5;
                                       } else {
                                         L7: {
                                           L8: {
                                             param0 = param0 >> 4;
                                             param2 = param2 >> 4;
-                                            if (param2 >= 32768) {
+                                            if ((param2 ^ -1) <= -32769) {
                                               break L8;
                                             } else {
-                                              if (param2 < -32768) {
+                                              if (32767 < (param2 ^ -1)) {
                                                 break L8;
                                               } else {
                                                 if (param0 >= 32768) {
                                                   break L8;
                                                 } else {
-                                                  if (param0 < -32768) {
+                                                  if (32767 < (param0 ^ -1)) {
                                                     break L8;
                                                   } else {
                                                     break L7;
@@ -120,7 +120,7 @@ final class ecb implements dja {
                                                 if (16384 <= param0) {
                                                   break L10;
                                                 } else {
-                                                  if (param0 < -16384) {
+                                                  if ((param0 ^ -1) > 16383) {
                                                     break L10;
                                                   } else {
                                                     break L9;
@@ -153,16 +153,16 @@ final class ecb implements dja {
                             }
                             L12: {
                               L13: {
-                                if (param2 >= 32768) {
+                                if ((param2 ^ -1) <= -32769) {
                                   break L13;
                                 } else {
-                                  if (param2 < -32768) {
+                                  if (32767 < (param2 ^ -1)) {
                                     break L13;
                                   } else {
                                     if (param0 >= 32768) {
                                       break L13;
                                     } else {
-                                      if (param0 < -32768) {
+                                      if (32767 < (param0 ^ -1)) {
                                         break L13;
                                       } else {
                                         break L12;
@@ -186,7 +186,7 @@ final class ecb implements dja {
                                     if (16384 <= param0) {
                                       break L15;
                                     } else {
-                                      if (param0 < -16384) {
+                                      if ((param0 ^ -1) > 16383) {
                                         break L15;
                                       } else {
                                         break L14;
@@ -219,13 +219,13 @@ final class ecb implements dja {
                     if (2097152 <= param2) {
                       break L17;
                     } else {
-                      if (param2 < -2097152) {
+                      if ((param2 ^ -1) > 2097151) {
                         break L17;
                       } else {
-                        if (param0 >= 2097152) {
+                        if (-2097153 >= (param0 ^ -1)) {
                           break L17;
                         } else {
-                          if (param0 < -2097152) {
+                          if (2097151 < (param0 ^ -1)) {
                             break L17;
                           } else {
                             break L16;
@@ -249,23 +249,23 @@ final class ecb implements dja {
                         if (131072 <= param0) {
                           break L19;
                         } else {
-                          if (param0 >= -131072) {
+                          if (131071 >= (param0 ^ -1)) {
                             break L18;
                           } else {
                             L20: {
                               L21: {
                                 param0 = param0 >> 4;
                                 param2 = param2 >> 4;
-                                if (param2 >= 32768) {
+                                if ((param2 ^ -1) <= -32769) {
                                   break L21;
                                 } else {
-                                  if (param2 < -32768) {
+                                  if (32767 < (param2 ^ -1)) {
                                     break L21;
                                   } else {
                                     if (param0 >= 32768) {
                                       break L21;
                                     } else {
-                                      if (param0 < -32768) {
+                                      if (32767 < (param0 ^ -1)) {
                                         break L21;
                                       } else {
                                         break L20;
@@ -289,7 +289,7 @@ final class ecb implements dja {
                                     if (16384 <= param0) {
                                       break L23;
                                     } else {
-                                      if (param0 < -16384) {
+                                      if ((param0 ^ -1) > 16383) {
                                         break L23;
                                       } else {
                                         break L22;
@@ -319,16 +319,16 @@ final class ecb implements dja {
                 }
                 L24: {
                   L25: {
-                    if (param2 >= 32768) {
+                    if ((param2 ^ -1) <= -32769) {
                       break L25;
                     } else {
-                      if (param2 < -32768) {
+                      if (32767 < (param2 ^ -1)) {
                         break L25;
                       } else {
                         if (param0 >= 32768) {
                           break L25;
                         } else {
-                          if (param0 < -32768) {
+                          if (32767 < (param0 ^ -1)) {
                             break L25;
                           } else {
                             break L24;
@@ -351,7 +351,7 @@ final class ecb implements dja {
                       if (16384 <= param0) {
                         break L26;
                       } else {
-                        if (param0 < -16384) {
+                        if ((param0 ^ -1) > 16383) {
                           break L26;
                         } else {
                           if (param1 == -77) {
@@ -369,18 +369,18 @@ final class ecb implements dja {
                 param2 = param2 >> 1;
                 break L0;
               } else {
-                if (param0 >= -16384) {
+                if ((param0 ^ -1) <= 16383) {
                   break L0;
                 } else {
                   L27: {
                     L28: {
-                      if (param2 >= 536870912) {
+                      if (-536870913 >= (param2 ^ -1)) {
                         break L28;
                       } else {
-                        if (param2 < -536870912) {
+                        if ((param2 ^ -1) > 536870911) {
                           break L28;
                         } else {
-                          if (param0 >= 536870912) {
+                          if ((param0 ^ -1) <= -536870913) {
                             break L28;
                           } else {
                             if (param0 >= -536870912) {
@@ -401,13 +401,13 @@ final class ecb implements dja {
                       if (2097152 <= param2) {
                         break L30;
                       } else {
-                        if (param2 < -2097152) {
+                        if ((param2 ^ -1) > 2097151) {
                           break L30;
                         } else {
-                          if (param0 >= 2097152) {
+                          if (-2097153 >= (param0 ^ -1)) {
                             break L30;
                           } else {
-                            if (param0 < -2097152) {
+                            if (2097151 < (param0 ^ -1)) {
                               break L30;
                             } else {
                               break L29;
@@ -431,23 +431,23 @@ final class ecb implements dja {
                           if (131072 <= param0) {
                             break L32;
                           } else {
-                            if (param0 >= -131072) {
+                            if (131071 >= (param0 ^ -1)) {
                               break L31;
                             } else {
                               L33: {
                                 L34: {
                                   param0 = param0 >> 4;
                                   param2 = param2 >> 4;
-                                  if (param2 >= 32768) {
+                                  if ((param2 ^ -1) <= -32769) {
                                     break L34;
                                   } else {
-                                    if (param2 < -32768) {
+                                    if (32767 < (param2 ^ -1)) {
                                       break L34;
                                     } else {
                                       if (param0 >= 32768) {
                                         break L34;
                                       } else {
-                                        if (param0 < -32768) {
+                                        if (32767 < (param0 ^ -1)) {
                                           break L34;
                                         } else {
                                           break L33;
@@ -471,7 +471,7 @@ final class ecb implements dja {
                                       if (16384 <= param0) {
                                         break L36;
                                       } else {
-                                        if (param0 < -16384) {
+                                        if ((param0 ^ -1) > 16383) {
                                           break L36;
                                         } else {
                                           break L35;
@@ -504,16 +504,16 @@ final class ecb implements dja {
                   }
                   L38: {
                     L39: {
-                      if (param2 >= 32768) {
+                      if ((param2 ^ -1) <= -32769) {
                         break L39;
                       } else {
-                        if (param2 < -32768) {
+                        if (32767 < (param2 ^ -1)) {
                           break L39;
                         } else {
                           if (param0 >= 32768) {
                             break L39;
                           } else {
-                            if (param0 < -32768) {
+                            if (32767 < (param0 ^ -1)) {
                               break L39;
                             } else {
                               break L38;
@@ -537,7 +537,7 @@ final class ecb implements dja {
                           if (16384 <= param0) {
                             break L41;
                           } else {
-                            if (param0 < -16384) {
+                            if ((param0 ^ -1) > 16383) {
                               break L41;
                             } else {
                               break L40;
@@ -568,13 +568,13 @@ final class ecb implements dja {
           } else {
             L42: {
               L43: {
-                if (param2 >= 536870912) {
+                if (-536870913 >= (param2 ^ -1)) {
                   break L43;
                 } else {
-                  if (param2 < -536870912) {
+                  if ((param2 ^ -1) > 536870911) {
                     break L43;
                   } else {
-                    if (param0 >= 536870912) {
+                    if ((param0 ^ -1) <= -536870913) {
                       break L43;
                     } else {
                       if (param0 >= -536870912) {
@@ -587,13 +587,13 @@ final class ecb implements dja {
                             if (2097152 <= param2) {
                               break L45;
                             } else {
-                              if (param2 < -2097152) {
+                              if ((param2 ^ -1) > 2097151) {
                                 break L45;
                               } else {
-                                if (param0 >= 2097152) {
+                                if (-2097153 >= (param0 ^ -1)) {
                                   break L45;
                                 } else {
-                                  if (param0 < -2097152) {
+                                  if (2097151 < (param0 ^ -1)) {
                                     break L45;
                                   } else {
                                     break L44;
@@ -617,7 +617,7 @@ final class ecb implements dja {
                                 if (131072 <= param0) {
                                   break L47;
                                 } else {
-                                  if (param0 >= -131072) {
+                                  if (131071 >= (param0 ^ -1)) {
                                     break L46;
                                   } else {
                                     break L47;
@@ -632,16 +632,16 @@ final class ecb implements dja {
                         }
                         L48: {
                           L49: {
-                            if (param2 >= 32768) {
+                            if ((param2 ^ -1) <= -32769) {
                               break L49;
                             } else {
-                              if (param2 < -32768) {
+                              if (32767 < (param2 ^ -1)) {
                                 break L49;
                               } else {
                                 if (param0 >= 32768) {
                                   break L49;
                                 } else {
-                                  if (param0 < -32768) {
+                                  if (32767 < (param0 ^ -1)) {
                                     break L49;
                                   } else {
                                     break L48;
@@ -665,7 +665,7 @@ final class ecb implements dja {
                                 if (16384 <= param0) {
                                   break L51;
                                 } else {
-                                  if (param0 < -16384) {
+                                  if ((param0 ^ -1) > 16383) {
                                     break L51;
                                   } else {
                                     break L50;
@@ -701,13 +701,13 @@ final class ecb implements dja {
                 if (2097152 <= param2) {
                   break L54;
                 } else {
-                  if (param2 < -2097152) {
+                  if ((param2 ^ -1) > 2097151) {
                     break L54;
                   } else {
-                    if (param0 >= 2097152) {
+                    if (-2097153 >= (param0 ^ -1)) {
                       break L54;
                     } else {
-                      if (param0 < -2097152) {
+                      if (2097151 < (param0 ^ -1)) {
                         break L54;
                       } else {
                         break L53;
@@ -731,23 +731,23 @@ final class ecb implements dja {
                     if (131072 <= param0) {
                       break L56;
                     } else {
-                      if (param0 >= -131072) {
+                      if (131071 >= (param0 ^ -1)) {
                         break L55;
                       } else {
                         L57: {
                           L58: {
                             param0 = param0 >> 4;
                             param2 = param2 >> 4;
-                            if (param2 >= 32768) {
+                            if ((param2 ^ -1) <= -32769) {
                               break L58;
                             } else {
-                              if (param2 < -32768) {
+                              if (32767 < (param2 ^ -1)) {
                                 break L58;
                               } else {
                                 if (param0 >= 32768) {
                                   break L58;
                                 } else {
-                                  if (param0 < -32768) {
+                                  if (32767 < (param0 ^ -1)) {
                                     break L58;
                                   } else {
                                     break L57;
@@ -771,7 +771,7 @@ final class ecb implements dja {
                                 if (16384 <= param0) {
                                   break L60;
                                 } else {
-                                  if (param0 < -16384) {
+                                  if ((param0 ^ -1) > 16383) {
                                     break L60;
                                   } else {
                                     break L59;
@@ -804,16 +804,16 @@ final class ecb implements dja {
             }
             L62: {
               L63: {
-                if (param2 >= 32768) {
+                if ((param2 ^ -1) <= -32769) {
                   break L63;
                 } else {
-                  if (param2 < -32768) {
+                  if (32767 < (param2 ^ -1)) {
                     break L63;
                   } else {
                     if (param0 >= 32768) {
                       break L63;
                     } else {
-                      if (param0 < -32768) {
+                      if (32767 < (param0 ^ -1)) {
                         break L63;
                       } else {
                         break L62;
@@ -836,7 +836,7 @@ final class ecb implements dja {
                   if (16384 <= param0) {
                     break L64;
                   } else {
-                    if (param0 < -16384) {
+                    if ((param0 ^ -1) > 16383) {
                       break L64;
                     } else {
                       L65: {
@@ -865,13 +865,13 @@ final class ecb implements dja {
         } else {
           L66: {
             L67: {
-              if (param2 >= 536870912) {
+              if (-536870913 >= (param2 ^ -1)) {
                 break L67;
               } else {
-                if (param2 < -536870912) {
+                if ((param2 ^ -1) > 536870911) {
                   break L67;
                 } else {
-                  if (param0 >= 536870912) {
+                  if ((param0 ^ -1) <= -536870913) {
                     break L67;
                   } else {
                     if (param0 >= -536870912) {
@@ -884,13 +884,13 @@ final class ecb implements dja {
                           if (2097152 <= param2) {
                             break L69;
                           } else {
-                            if (param2 < -2097152) {
+                            if ((param2 ^ -1) > 2097151) {
                               break L69;
                             } else {
-                              if (param0 >= 2097152) {
+                              if (-2097153 >= (param0 ^ -1)) {
                                 break L69;
                               } else {
-                                if (param0 < -2097152) {
+                                if (2097151 < (param0 ^ -1)) {
                                   break L69;
                                 } else {
                                   break L68;
@@ -914,7 +914,7 @@ final class ecb implements dja {
                               if (131072 <= param0) {
                                 break L71;
                               } else {
-                                if (param0 >= -131072) {
+                                if (131071 >= (param0 ^ -1)) {
                                   break L70;
                                 } else {
                                   break L71;
@@ -929,16 +929,16 @@ final class ecb implements dja {
                       }
                       L72: {
                         L73: {
-                          if (param2 >= 32768) {
+                          if ((param2 ^ -1) <= -32769) {
                             break L73;
                           } else {
-                            if (param2 < -32768) {
+                            if (32767 < (param2 ^ -1)) {
                               break L73;
                             } else {
                               if (param0 >= 32768) {
                                 break L73;
                               } else {
-                                if (param0 < -32768) {
+                                if (32767 < (param0 ^ -1)) {
                                   break L73;
                                 } else {
                                   break L72;
@@ -962,7 +962,7 @@ final class ecb implements dja {
                               if (16384 <= param0) {
                                 break L75;
                               } else {
-                                if (param0 < -16384) {
+                                if ((param0 ^ -1) > 16383) {
                                   break L75;
                                 } else {
                                   break L74;
@@ -998,13 +998,13 @@ final class ecb implements dja {
               if (2097152 <= param2) {
                 break L78;
               } else {
-                if (param2 < -2097152) {
+                if ((param2 ^ -1) > 2097151) {
                   break L78;
                 } else {
-                  if (param0 >= 2097152) {
+                  if (-2097153 >= (param0 ^ -1)) {
                     break L78;
                   } else {
-                    if (param0 < -2097152) {
+                    if (2097151 < (param0 ^ -1)) {
                       break L78;
                     } else {
                       break L77;
@@ -1028,23 +1028,23 @@ final class ecb implements dja {
                   if (131072 <= param0) {
                     break L80;
                   } else {
-                    if (param0 >= -131072) {
+                    if (131071 >= (param0 ^ -1)) {
                       break L79;
                     } else {
                       L81: {
                         L82: {
                           param0 = param0 >> 4;
                           param2 = param2 >> 4;
-                          if (param2 >= 32768) {
+                          if ((param2 ^ -1) <= -32769) {
                             break L82;
                           } else {
-                            if (param2 < -32768) {
+                            if (32767 < (param2 ^ -1)) {
                               break L82;
                             } else {
                               if (param0 >= 32768) {
                                 break L82;
                               } else {
-                                if (param0 < -32768) {
+                                if (32767 < (param0 ^ -1)) {
                                   break L82;
                                 } else {
                                   break L81;
@@ -1068,7 +1068,7 @@ final class ecb implements dja {
                               if (16384 <= param0) {
                                 break L84;
                               } else {
-                                if (param0 < -16384) {
+                                if ((param0 ^ -1) > 16383) {
                                   break L84;
                                 } else {
                                   break L83;
@@ -1101,16 +1101,16 @@ final class ecb implements dja {
           }
           L86: {
             L87: {
-              if (param2 >= 32768) {
+              if ((param2 ^ -1) <= -32769) {
                 break L87;
               } else {
-                if (param2 < -32768) {
+                if (32767 < (param2 ^ -1)) {
                   break L87;
                 } else {
                   if (param0 >= 32768) {
                     break L87;
                   } else {
-                    if (param0 < -32768) {
+                    if (32767 < (param0 ^ -1)) {
                       break L87;
                     } else {
                       break L86;
@@ -1133,7 +1133,7 @@ final class ecb implements dja {
                 if (16384 <= param0) {
                   break L88;
                 } else {
-                  if (param0 < -16384) {
+                  if ((param0 ^ -1) > 16383) {
                     break L88;
                   } else {
                     L89: {
@@ -1162,10 +1162,6 @@ final class ecb implements dja {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new int[]{25, 16, 17, 18, 19, 20, 21, 22, 23, 24};
     }
 }

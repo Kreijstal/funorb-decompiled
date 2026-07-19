@@ -19,21 +19,17 @@ final class he extends za {
     }
 
     he(int param0) {
-        ((he) this).field_p = new jaclib.memory.heap.NativeHeap(param0);
+        this.field_p = new jaclib.memory.heap.NativeHeap(param0);
     }
 
     final void c(int param0) {
-        ((he) this).field_p.a();
+        this.field_p.a();
         if (param0 != -14365) {
-            field_m = null;
+            field_m = (tf) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = new tf();
     }
 }

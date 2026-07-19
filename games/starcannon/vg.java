@@ -7,29 +7,42 @@ final class vg {
     static String field_a;
 
     final static void a(int param0) {
-        if (!(tc.field_x)) {
-            throw new IllegalStateException();
+        String var1 = null;
+        if (!tc.field_x) {
+          throw new IllegalStateException();
+        } else {
+          L0: {
+            if (null != fa.field_G) {
+              fa.field_G.n(-125);
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          var1 = ob.c(param0 ^ 32013);
+          wi.field_c = new rg(var1, (String) null, true, false, false);
+          ti.field_b.a((byte) 86, (uj) (t.field_h));
+          t.field_h.c(param0 ^ 12814, wi.field_c);
+          if (param0 != 32083) {
+            vg.b(-60);
+            t.field_h.j(-125);
+            return;
+          } else {
+            t.field_h.j(-125);
+            return;
+          }
         }
-        if (!(null == fa.field_G)) {
-            fa.field_G.n(-125);
-        }
-        String var1 = ob.c(94);
-        wi.field_c = new rg(var1, (String) null, true, false, false);
-        ti.field_b.a((byte) 86, (uj) (Object) t.field_h);
-        t.field_h.c(20317, (uj) (Object) wi.field_c);
-        t.field_h.j(-125);
     }
 
     public static void b(int param0) {
         field_c = null;
         field_a = null;
+        if (param0 > -87) {
+            field_c = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Instructions";
         field_a = "achievements to collect";
     }

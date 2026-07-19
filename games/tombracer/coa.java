@@ -34,7 +34,7 @@ class coa extends ci {
               if (param0 == 107) {
                 break L1;
               } else {
-                ((coa) this).field_r = -60;
+                this.field_r = -60;
                 break L1;
               }
             }
@@ -42,7 +42,7 @@ class coa extends ci {
               if (0 != param2) {
                 break L2;
               } else {
-                ((coa) this).field_o = param1.d(122);
+                this.field_o = param1.d(122);
                 break L2;
               }
             }
@@ -52,23 +52,23 @@ class coa extends ci {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_0 = (RuntimeException) (var4);
             stackOut_5_1 = new StringBuilder().append("coa.A(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -76,20 +76,20 @@ class coa extends ci {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ')');
         }
     }
 
     public coa() {
         super(0, false);
-        ((coa) this).field_o = -1;
+        this.field_o = -1;
     }
 
     final int a(int param0) {
         if (param0 < 96) {
-            ((coa) this).b(-44);
+            this.b(-44);
         }
-        return ((coa) this).field_o;
+        return this.field_o;
     }
 
     final void b(int param0) {
@@ -97,10 +97,11 @@ class coa extends ci {
         if (param0 >= -32) {
             return;
         }
-        ((coa) this).field_p = null;
+        this.field_p = null;
     }
 
     int[][] b(int param0, int param1) {
+        int incrementValue$1 = 0;
         int[][] var3 = null;
         int[] var4 = null;
         int[] var5 = null;
@@ -113,8 +114,6 @@ class coa extends ci {
         int[][] var12 = null;
         int[][] var13 = null;
         int[][] var14 = null;
-        int[][] var15 = null;
-        int[][] var16 = null;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_7_0 = 0;
@@ -125,30 +124,28 @@ class coa extends ci {
         int stackOut_5_0 = 0;
         int stackOut_5_1 = 0;
         var11 = TombRacer.field_G ? 1 : 0;
-        var16 = ((coa) this).field_h.a(param0, (byte) -66);
-        var15 = var16;
-        var14 = var15;
+        var14 = this.field_h.a(param0, (byte) -66);
         var13 = var14;
         var12 = var13;
         var3 = var12;
         if (param1 == -1) {
           L0: {
-            if (!((coa) this).field_h.field_f) {
+            if (!this.field_h.field_f) {
               break L0;
             } else {
-              if (!((coa) this).a(false)) {
+              if (!this.a(false)) {
                 break L0;
               } else {
                 L1: {
-                  var4 = var16[0];
-                  var5 = var16[1];
-                  var6 = var16[2];
-                  stackOut_4_0 = ((coa) this).field_m;
+                  var4 = var14[0];
+                  var5 = var14[1];
+                  var6 = var14[2];
+                  stackOut_4_0 = this.field_m;
                   stackIn_6_0 = stackOut_4_0;
                   stackIn_5_0 = stackOut_4_0;
-                  if (qda.field_i != ((coa) this).field_r) {
+                  if (qda.field_i != this.field_r) {
                     stackOut_6_0 = stackIn_6_0;
-                    stackOut_6_1 = ((coa) this).field_r * param0 / qda.field_i;
+                    stackOut_6_1 = this.field_r * param0 / qda.field_i;
                     stackIn_7_0 = stackOut_6_0;
                     stackIn_7_1 = stackOut_6_1;
                     break L1;
@@ -160,63 +157,102 @@ class coa extends ci {
                     break L1;
                   }
                 }
-                var7 = stackIn_7_0 * stackIn_7_1;
-                if (((coa) this).field_m != ns.field_g) {
-                  var8 = 0;
-                  L2: while (true) {
-                    if (var8 >= ns.field_g) {
-                      break L0;
-                    } else {
-                      var9 = ((coa) this).field_m * var8 / ns.field_g;
-                      var10 = ((coa) this).field_p[var7 - -var9];
-                      var6[var8] = sea.c(4080, var10 << 4);
-                      var5[var8] = sea.c(var10, 65280) >> 4;
-                      var4[var8] = sea.c(16711680, var10) >> 12;
-                      var8++;
-                      continue L2;
+                L2: {
+                  var7 = stackIn_7_0 * stackIn_7_1;
+                  if (this.field_m != ns.field_g) {
+                    var8 = 0;
+                    L3: while (true) {
+                      if (var8 >= ns.field_g) {
+                        break L0;
+                      } else {
+                        var9 = this.field_m * var8 / ns.field_g;
+                        var10 = this.field_p[var7 - -var9];
+                        var6[var8] = sea.c(4080, var10 << -2003868700);
+                        var5[var8] = sea.c(var10, 65280) >> -1311564892;
+                        var4[var8] = sea.c(16711680, var10) >> 943686380;
+                        var8++;
+                        if (var11 == 0) {
+                          continue L3;
+                        } else {
+                          break L2;
+                        }
+                      }
+                    }
+                  } else {
+                    var8 = 0;
+                    L4: while (true) {
+                      L5: {
+                        if (ns.field_g <= var8) {
+                          break L5;
+                        } else {
+                          incrementValue$1 = var7;
+                          var7++;
+                          var9 = this.field_p[incrementValue$1];
+                          var6[var8] = sea.c(4080, var9 << 768834820);
+                          var5[var8] = sea.c(4080, var9 >> -521245468);
+                          var4[var8] = sea.c(var9, 16711680) >> -939575860;
+                          var8++;
+                          if (var11 != 0) {
+                            break L0;
+                          } else {
+                            if (var11 == 0) {
+                              continue L4;
+                            } else {
+                              break L5;
+                            }
+                          }
+                        }
+                      }
+                      if (var11 == 0) {
+                        break L0;
+                      } else {
+                        break L2;
+                      }
                     }
                   }
-                } else {
-                  var8 = 0;
-                  L3: while (true) {
-                    if (ns.field_g <= var8) {
-                      break L0;
+                }
+                var8 = 0;
+                L6: while (true) {
+                  if (var8 >= ns.field_g) {
+                    break L0;
+                  } else {
+                    var9 = this.field_m * var8 / ns.field_g;
+                    var10 = this.field_p[var7 - -var9];
+                    var6[var8] = sea.c(4080, var10 << -2003868700);
+                    var5[var8] = sea.c(var10, 65280) >> -1311564892;
+                    var4[var8] = sea.c(16711680, var10) >> 943686380;
+                    var8++;
+                    if (var11 == 0) {
+                      continue L6;
                     } else {
-                      int incrementValue$1 = var7;
-                      var7++;
-                      var9 = ((coa) this).field_p[incrementValue$1];
-                      var6[var8] = sea.c(4080, var9 << 4);
-                      var5[var8] = sea.c(4080, var9 >> 4);
-                      var4[var8] = sea.c(var9, 16711680) >> 12;
-                      var8++;
-                      continue L3;
+                      break L0;
                     }
                   }
                 }
               }
             }
           }
-          return var3;
+          return var12;
         } else {
-          return null;
+          return (int[][]) null;
         }
     }
 
     final boolean a(boolean param0) {
-        if (!(null == ((coa) this).field_p)) {
+        if (!(null == this.field_p)) {
             return true;
         }
         if (param0) {
             return true;
         }
-        if (((coa) this).field_o < 0) {
+        if ((this.field_o ^ -1) > -1) {
             return false;
         }
-        jpa var2 = gla.field_m >= 0 ? jpa.a(np.field_m, gla.field_m, ((coa) this).field_o) : jpa.a(np.field_m, ((coa) this).field_o);
+        jpa var2 = -1 >= (gla.field_m ^ -1) ? jpa.a(np.field_m, gla.field_m, this.field_o) : jpa.a(np.field_m, this.field_o);
         var2.d();
-        ((coa) this).field_p = var2.e();
-        ((coa) this).field_r = var2.field_a;
-        ((coa) this).field_m = var2.field_i;
+        this.field_p = var2.e();
+        this.field_r = var2.field_a;
+        this.field_m = var2.field_i;
         return true;
     }
 
@@ -230,26 +266,39 @@ class coa extends ci {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        int var1 = 0;
-        int var0 = 0;
-        int var2 = 0;
-        field_n = "<%0> chose character: <%1>";
-        field_s = new mla();
-        field_q = new int[256];
-        for (var1 = 0; var1 < 256; var1++) {
-            var0 = var1;
-            for (var2 = 0; var2 < 8; var2++) {
-                if ((var0 & 1) != 1) {
-                    var0 = var0 >>> 1;
-                } else {
-                    var0 = var0 >>> 1 ^ -306674912;
+        $cfr$clinit: {
+            int var0 = 0;
+            int var1 = 0;
+            int var2 = 0;
+            field_n = "<%0> chose character: <%1>";
+            field_s = new mla();
+            field_q = new int[256];
+            var1 = 0;
+            L0: while (true) {
+              if (-257 >= (var1 ^ -1)) {
+                break $cfr$clinit;
+              } else {
+                var0 = var1;
+                var2 = 0;
+                L1: while (true) {
+                  if (var2 >= 8) {
+                    field_q[var1] = var0;
+                    var1++;
+                    continue L0;
+                  } else {
+                    if (-2 == (var0 & 1 ^ -1)) {
+                      var0 = var0 >>> -743502079 ^ -306674912;
+                      var2++;
+                      continue L1;
+                    } else {
+                      var0 = var0 >>> 1;
+                      var2++;
+                      continue L1;
+                    }
+                  }
                 }
+              }
             }
-            field_q[var1] = var0;
         }
     }
 }

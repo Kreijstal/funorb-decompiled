@@ -10,7 +10,7 @@ class ao extends kda {
 
     public static void a(byte param0) {
         field_c = null;
-        int var1 = 0;
+        int var1 = 113 % ((param0 - 21) / 43);
         field_d = null;
     }
 
@@ -29,6 +29,7 @@ class ao extends kda {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
@@ -45,55 +46,62 @@ class ao extends kda {
               if (param1 == null) {
                 break L1;
               } else {
-                if (param2 <= 0) {
+                if ((param2 ^ -1) >= -1) {
                   break L1;
                 } else {
                   var5_int = param1[0].field_n;
                   var6 = param1[2].field_n;
-                  var7 = param1[1].field_n;
-                  param1[0].e(param0, param4);
-                  param1[2].e(param0 + param2 + -var6, param4);
-                  dg.a(eha.field_q);
-                  dg.c(param0 - -var5_int, param4, -var6 + param0 + param2, param4 + param1[1].field_o);
-                  var8 = param0 + var5_int;
-                  var9 = -var6 + param2 + param0;
-                  param0 = var8;
-                  L2: while (true) {
-                    if (var9 <= param0) {
-                      dg.b(eha.field_q);
-                      break L0;
-                    } else {
-                      param1[1].e(param0, param4);
-                      param0 = param0 + var7;
-                      continue L2;
+                  if (param3 == -128) {
+                    var7 = param1[1].field_n;
+                    param1[0].e(param0, param4);
+                    param1[2].e(param0 + param2 + -var6, param4);
+                    dg.a(eha.field_q);
+                    dg.c(param0 - -var5_int, param4, -var6 + param0 + param2, param4 + param1[1].field_o);
+                    var8 = param0 + var5_int;
+                    var9 = -var6 + param2 + param0;
+                    param0 = var8;
+                    L2: while (true) {
+                      if (var9 <= param0) {
+                        dg.b(eha.field_q);
+                        decompiledRegionSelector0 = 2;
+                        break L0;
+                      } else {
+                        param1[1].e(param0, param4);
+                        param0 = param0 + var7;
+                        continue L2;
+                      }
                     }
+                  } else {
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var5;
+            stackOut_12_0 = (RuntimeException) (var5);
             stackOut_12_1 = new StringBuilder().append("ao.B(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -101,15 +109,20 @@ class ao extends kda {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ',' + -128 + ',' + param4 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Month";
     }
 }

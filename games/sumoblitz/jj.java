@@ -46,11 +46,11 @@ final class jj {
               if (param1 == -2183) {
                 break L1;
               } else {
-                field_f = null;
+                field_f = (qr) null;
                 break L1;
               }
             }
-            stackOut_2_0 = ((jj) this).field_e.equals((Object) (Object) param0);
+            stackOut_2_0 = this.field_e.equals(param0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -58,23 +58,23 @@ final class jj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("jj.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -82,7 +82,7 @@ final class jj {
               break L2;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -93,25 +93,21 @@ final class jj {
 
     final void a(boolean param0, java.applet.Applet param1) {
         try {
-            gj.a(31536000L, param1, param0, ((jj) this).field_e, "jagex-last-login-method");
+            gj.a(31536000L, param1, param0, this.field_e, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "jj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "jj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     jj(String param0) {
         try {
-            ((jj) this).field_e = param0;
+            this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "jj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "jj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new jn();
         field_b = 0;
         field_d = 0;

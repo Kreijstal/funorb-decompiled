@@ -13,6 +13,7 @@ final class vc extends fp {
     static bt field_x;
 
     final static vc a(int param0, iw param1) {
+        int discarded$1 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         vc var4 = null;
@@ -47,7 +48,7 @@ final class vc extends fp {
               }
             }
             L2: {
-              if ((var3 & 65) >> 6 == 1) {
+              if (((var3 & 65) >> 877127974 ^ -1) == -2) {
                 var4.field_j = true;
                 break L2;
               } else {
@@ -55,7 +56,7 @@ final class vc extends fp {
               }
             }
             L3: {
-              if (1 != (23 & var3) >> 4) {
+              if (1 != (23 & var3) >> -1878011356) {
                 break L3;
               } else {
                 var4.field_r = true;
@@ -63,21 +64,21 @@ final class vc extends fp {
               }
             }
             L4: {
-              if ((1 & var3 >> 1) != -2) {
+              if ((1 & var3 >> 48774625 ^ -1) != -2) {
                 break L4;
               } else {
                 break L4;
               }
             }
             L5: {
-              if (-2 != (var3 >> 2 & 1)) {
+              if (-2 != (var3 >> 2048926690 & 1 ^ -1)) {
                 break L5;
               } else {
                 break L5;
               }
             }
             L6: {
-              if ((var3 >> 3 & 1) != 1) {
+              if (-2 != (var3 >> -862602461 & 1 ^ -1)) {
                 break L6;
               } else {
                 var4.field_h = true;
@@ -85,7 +86,7 @@ final class vc extends fp {
               }
             }
             L7: {
-              if ((var3 & 63) >> 5 != 1) {
+              if ((var3 & 63) >> -375784251 != 1) {
                 break L7;
               } else {
                 var4.field_q = true;
@@ -97,7 +98,7 @@ final class vc extends fp {
               if (param0 == -21832) {
                 break L8;
               } else {
-                int discarded$1 = vc.b(20);
+                discarded$1 = vc.b(20);
                 break L8;
               }
             }
@@ -106,7 +107,7 @@ final class vc extends fp {
             var4.field_s = param1.h((byte) -108);
             var4.field_m = new up();
             var4.field_m.a(28, param1);
-            stackOut_14_0 = (vc) var4;
+            stackOut_14_0 = (vc) (var4);
             stackIn_15_0 = stackOut_14_0;
             break L0;
           }
@@ -114,23 +115,23 @@ final class vc extends fp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var2;
+            stackOut_16_0 = (RuntimeException) (var2);
             stackOut_16_1 = new StringBuilder().append("vc.B(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L9;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -138,7 +139,7 @@ final class vc extends fp {
               break L9;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
         return stackIn_15_0;
     }
@@ -146,11 +147,11 @@ final class vc extends fp {
     final static void a(String param0, int param1) {
         try {
             if (param1 != -1) {
-                field_H = null;
+                field_H = (String) null;
             }
             ct.field_x = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "vc.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "vc.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -158,15 +159,22 @@ final class vc extends fp {
     }
 
     final static int a(int param0, int param1, byte param2) {
-        int var3 = param1 >>> 31;
+        if (param2 != -72) {
+            vc.f((byte) 120);
+        }
+        int var3 = param1 >>> 617989727;
         return -var3 + (var3 + param1) / param0;
     }
 
     final static void f(byte param0) {
+        int discarded$0 = 0;
         da.b(67);
         ra.i((byte) -90);
         ck.field_b = null;
         fa.b(47);
+        if (param0 != 119) {
+            discarded$0 = vc.b(104);
+        }
     }
 
     final static void h(byte param0) {
@@ -179,108 +187,126 @@ final class vc extends fp {
         int var5 = 0;
         la var6 = null;
         int var7 = 0;
-        tj var8 = null;
+        String var8 = null;
+        tj var9 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = Kickabout.field_G;
         try {
           L0: {
+            L1: {
+              if (param0 == 125) {
+                break L1;
+              } else {
+                var8 = (String) null;
+                vc.a((String) null, 94);
+                break L1;
+              }
+            }
             if (!sl.field_Eb) {
-              L1: {
-                var8 = et.field_d.field_V;
+              L2: {
+                var9 = et.field_d.field_V;
                 if (ic.field_i) {
-                  L2: {
-                    var2 = et.field_d.field_R[0].field_g;
-                    if (var8.field_m != 1) {
-                      break L2;
-                    } else {
-                      var8.field_m = -1;
-                      break L2;
-                    }
-                  }
                   L3: {
-                    if (0 != var8.field_m) {
+                    var2 = et.field_d.field_R[0].field_g;
+                    if ((var9.field_m ^ -1) != -2) {
                       break L3;
                     } else {
-                      if (var2 != var8.field_s) {
-                        var8.field_m = -1;
-                        break L3;
-                      } else {
-                        break L3;
-                      }
+                      var9.field_m = -1;
+                      break L3;
                     }
                   }
                   L4: {
-                    if (0 != var8.field_m) {
+                    if (0 != var9.field_m) {
                       break L4;
                     } else {
-                      if (var8.field_s == var2) {
-                        ic.field_i = false;
-                        break L1;
+                      if (var2 != var9.field_s) {
+                        var9.field_m = -1;
+                        break L4;
                       } else {
                         break L4;
                       }
                     }
                   }
+                  L5: {
+                    if (0 != var9.field_m) {
+                      break L5;
+                    } else {
+                      if (var9.field_s == var2) {
+                        ic.field_i = false;
+                        break L2;
+                      } else {
+                        break L5;
+                      }
+                    }
+                  }
                   var3 = et.field_d.field_P[0][var2];
                   if (!qg.a(2235, var3.field_w, 20, var3.field_M)) {
-                    var8.field_r = 3;
-                    break L1;
+                    var9.field_r = 3;
+                    break L2;
                   } else {
-                    var8.field_r = 0;
+                    var9.field_r = 0;
                     if (var3.field_u == 0) {
-                      break L1;
+                      break L2;
                     } else {
                       var3.a((byte) -31, 0);
-                      break L1;
+                      break L2;
                     }
                   }
                 } else {
-                  if (var8.field_m != -1) {
-                    break L1;
+                  if (0 != (var9.field_m ^ -1)) {
+                    break L2;
                   } else {
-                    if (var8.field_p <= 0) {
-                      break L1;
+                    if ((var9.field_p ^ -1) >= -1) {
+                      break L2;
                     } else {
-                      if (var8.field_p < 88080384) {
+                      if ((var9.field_p ^ -1) > -88080385) {
                         var2_ref_nl = et.field_d.a((byte) 120, 0);
                         var3_int = 0;
                         var4 = et.field_d.field_x;
                         var5 = 0;
-                        L5: while (true) {
+                        L6: while (true) {
                           if (var5 >= var4.length) {
                             if (var3_int != 0) {
-                              break L1;
+                              break L2;
                             } else {
-                              if (262144 > var8.e(-111)) {
+                              if (262144 > var9.e(-111)) {
                                 ic.field_i = true;
-                                break L1;
+                                break L2;
                               } else {
-                                break L1;
+                                break L2;
                               }
                             }
                           } else {
                             var6 = var4[var5];
                             var3_int = var3_int != 0 | var6.a(var2_ref_nl.field_M, var2_ref_nl.field_w, 703166480, var2_ref_nl.field_v) ? 1 : 0;
                             var5++;
-                            continue L5;
+                            continue L6;
                           }
                         }
                       } else {
-                        break L1;
+                        break L2;
                       }
                     }
                   }
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "vc.A(" + 125 + ')');
+          throw nb.a((Throwable) ((Object) var1), "vc.A(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -288,7 +314,7 @@ final class vc extends fp {
         field_A = null;
         field_D = null;
         field_F = null;
-        int var1 = 0;
+        int var1 = -118 % ((param0 - -81) / 42);
         field_x = null;
         field_z = null;
         field_E = null;
@@ -298,13 +324,18 @@ final class vc extends fp {
     final static void i(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
+        gm var2 = null;
+        int var3 = 0;
         int var4 = 0;
+        int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
         var4 = Kickabout.field_G;
         try {
           L0: {
             L1: {
-              wo.a(ar.field_c, (gm) (Object) tq.field_F.b((byte) -96), (byte) 118, 256);
+              wo.a(ar.field_c, (gm) ((Object) tq.field_F.b((byte) -96)), (byte) 118, 256);
               if (param0 == 45) {
                 break L1;
               } else {
@@ -317,22 +348,39 @@ final class vc extends fp {
               if (var1_int >= tq.field_F.field_I) {
                 break L0;
               } else {
-                L3: {
-                  if (!tq.field_F.field_R[var1_int].d(3511)) {
-                    break L3;
+                if (tq.field_F.field_R[var1_int].d(3511)) {
+                  if (wp.field_c == tq.field_F.field_g[var1_int].field_p) {
+                    L3: {
+                      var2 = (gm) ((Object) tq.field_F.a((byte) -60, var1_int));
+                      if (jn.field_kb != var1_int) {
+                        stackOut_11_0 = 160;
+                        stackIn_12_0 = stackOut_11_0;
+                        break L3;
+                      } else {
+                        stackOut_10_0 = 256;
+                        stackIn_12_0 = stackOut_10_0;
+                        break L3;
+                      }
+                    }
+                    var3 = stackIn_12_0;
+                    wo.a(da.field_u[va.field_J], var2, (byte) -17, var3);
+                    var1_int++;
+                    continue L2;
                   } else {
-                    break L3;
+                    var1_int++;
+                    continue L2;
                   }
+                } else {
+                  var1_int++;
+                  continue L2;
                 }
-                var1_int++;
-                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "vc.F(" + param0 + ')');
+          throw nb.a((Throwable) ((Object) var1), "vc.F(" + param0 + ')');
         }
     }
 
@@ -357,10 +405,6 @@ final class vc extends fp {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_z = "Decline invitation to <%0>'s game";
         field_A = "left ";

@@ -14,20 +14,16 @@ final class u {
             aj.field_t = param3;
             la.field_a = param1;
             if (param2 != 250) {
-                Object var5 = null;
+                hj var5 = (hj) null;
                 u.a(-59, (hj) null, -43, 103);
             }
             vh.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "u.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "u.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 250;
     }
 }

@@ -14,6 +14,7 @@ final class wp {
     static di field_g;
 
     final static void a(int param0) {
+        int fieldTemp$5 = 0;
         ga var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -36,19 +37,23 @@ final class wp {
                 break L0;
               } else {
                 var1.b((byte) -35, 8);
-                int fieldTemp$5 = var1.field_j + 1;
+                fieldTemp$5 = var1.field_j + 1;
                 var1.field_j = var1.field_j + 1;
                 var2 = fieldTemp$5;
                 hd.a(var1, param0 + 10995);
                 ma.field_a.e(param0 + 11021, var1.field_j - var2);
-                continue L2;
+                if (var3 == 0) {
+                  continue L2;
+                } else {
+                  return;
+                }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1_ref, "wp.D(" + param0 + ')');
+          throw fa.a((Throwable) ((Object) var1_ref), "wp.D(" + param0 + ')');
         }
     }
 
@@ -62,84 +67,133 @@ final class wp {
         field_j = null;
         field_e = null;
         field_h = null;
-        field_g = null;
-        field_d = null;
-        field_i = null;
-        field_b = null;
-        field_a = null;
-        field_f = null;
-        field_c = null;
+        if (param0 != 26) {
+          field_j = (ja[]) null;
+          field_g = null;
+          field_d = null;
+          field_i = null;
+          field_b = null;
+          field_a = null;
+          field_f = null;
+          field_c = null;
+          return;
+        } else {
+          field_g = null;
+          field_d = null;
+          field_i = null;
+          field_b = null;
+          field_a = null;
+          field_f = null;
+          field_c = null;
+          return;
+        }
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        em.field_ab[param1][0] = param0;
+        em.field_ab[param1][param3] = param0;
         em.field_ab[param1][1] = param2;
     }
 
     final static void b(int param0) {
+        RuntimeException runtimeException = null;
         we var1 = null;
-        RuntimeException var1_ref = null;
         int var1_int = 0;
         int var2 = 0;
+        boolean stackIn_5_0 = false;
+        boolean stackIn_12_0 = false;
+        int stackIn_17_0 = 0;
         RuntimeException decompiledCaughtException = null;
+        boolean stackOut_4_0 = false;
+        boolean stackOut_11_0 = false;
+        int stackOut_16_0 = 0;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
             L1: {
-              rm.field_b.a();
-              ga.field_u.a();
-              mn.field_p = mn.field_p - 1;
-              if (mn.field_p != 0) {
-                break L1;
-              } else {
-                mn.field_p = 200;
-                var1 = (we) (Object) gb.field_e.c(75);
-                L2: while (true) {
-                  if (var1 == null) {
-                    if (wc.field_K == null) {
-                      break L1;
-                    } else {
-                      var1 = (we) (Object) wc.field_K.c(51);
-                      L3: while (true) {
-                        if (var1 == null) {
+              L2: {
+                rm.field_b.a();
+                ga.field_u.a();
+                mn.field_p = mn.field_p - 1;
+                if (mn.field_p != 0) {
+                  break L2;
+                } else {
+                  mn.field_p = 200;
+                  var1 = (we) ((Object) gb.field_e.c(75));
+                  L3: while (true) {
+                    L4: {
+                      if (var1 == null) {
+                        break L4;
+                      } else {
+                        stackOut_4_0 = var1.field_h.b(4);
+                        stackIn_17_0 = stackOut_4_0 ? 1 : 0;
+                        stackIn_5_0 = stackOut_4_0;
+                        if (var2 != 0) {
                           break L1;
                         } else {
-                          L4: {
-                            if (!var1.field_h.b(4)) {
-                              var1.a(true);
-                              break L4;
+                          L5: {
+                            if (stackIn_5_0) {
+                              break L5;
                             } else {
-                              break L4;
+                              var1.a(true);
+                              break L5;
                             }
                           }
-                          var1 = (we) (Object) wc.field_K.b(6);
-                          continue L3;
+                          var1 = (we) ((Object) gb.field_e.b(6));
+                          if (var2 == 0) {
+                            continue L3;
+                          } else {
+                            break L4;
+                          }
                         }
                       }
                     }
-                  } else {
-                    L5: {
-                      if (var1.field_h.b(4)) {
-                        break L5;
-                      } else {
-                        var1.a(true);
-                        break L5;
+                    if (wc.field_K == null) {
+                      break L2;
+                    } else {
+                      var1 = (we) ((Object) wc.field_K.c(51));
+                      L6: while (true) {
+                        if (var1 == null) {
+                          break L2;
+                        } else {
+                          stackOut_11_0 = var1.field_h.b(4);
+                          stackIn_17_0 = stackOut_11_0 ? 1 : 0;
+                          stackIn_12_0 = stackOut_11_0;
+                          if (var2 != 0) {
+                            break L1;
+                          } else {
+                            L7: {
+                              if (!stackIn_12_0) {
+                                var1.a(true);
+                                break L7;
+                              } else {
+                                break L7;
+                              }
+                            }
+                            var1 = (we) ((Object) wc.field_K.b(6));
+                            if (var2 == 0) {
+                              continue L6;
+                            } else {
+                              break L2;
+                            }
+                          }
+                        }
                       }
                     }
-                    var1 = (we) (Object) gb.field_e.b(6);
-                    continue L2;
                   }
                 }
               }
+              stackOut_16_0 = 107 / ((param0 - 76) / 39);
+              stackIn_17_0 = stackOut_16_0;
+              break L1;
             }
-            L6: {
-              var1_int = 107;
+            L8: {
+              var1_int = stackIn_17_0;
               if (wd.field_L == null) {
-                break L6;
+                break L8;
               } else {
                 if (!wd.field_L.c(-119)) {
                   bb.field_g = null;
-                  break L6;
+                  break L8;
                 } else {
                   return;
                 }
@@ -149,23 +203,19 @@ final class wp {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1_ref, "wp.A(" + 127 + ')');
+          runtimeException = decompiledCaughtException;
+          throw fa.a((Throwable) ((Object) runtimeException), "wp.A(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_b = new bo("email");
         field_d = "SCORE: <%0>";
         field_a = "Confuse their senses.";
         field_i = new int[8192];
         field_f = new int[256];
-        for (var0 = 0; var0 < 255; var0++) {
+        for (var0 = 0; -256 < (var0 ^ -1); var0++) {
             field_f[var0] = var0 * 65793;
         }
         field_c = new int[5];

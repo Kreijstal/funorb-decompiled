@@ -14,38 +14,57 @@ final class gd {
     }
 
     final static void a(int param0) {
-        if (!(null != va.field_d)) {
+        int var1 = 0;
+        int var2 = 0;
+        L0: {
+          if (null == va.field_d) {
             va.field_d = new bi[]{lg.a(0, qq.field_w[0]), lg.a(0, qq.field_w[1])};
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        gf.b();
-        int var1 = 240;
-        wc.a(-27030, di.field_m << 1, -va.field_d[0].field_z + 640 >> 1, va.field_d[0], var1, 256);
-        wc.a(-27030, -128 + (di.field_m << 1), -va.field_d[1].field_z + 640 >> 1, va.field_d[1], var1 - -va.field_d[1].field_w, 256);
-        int var2 = hp.field_n.a("intro", (byte) 53);
-        kl.a((byte) 73, 455, 15, 16711680, 10, var2, 100);
+        L1: {
+          gf.b();
+          var1 = 240;
+          wc.a(-27030, di.field_m << -1330491135, -va.field_d[0].field_z + 640 >> 1546540257, va.field_d[0], var1, 256);
+          wc.a(-27030, -128 + (di.field_m << 1752734369), -va.field_d[1].field_z + 640 >> 1500005281, va.field_d[1], var1 - -va.field_d[1].field_w, 256);
+          if (mf.field_r) {
+            break L1;
+          } else {
+            var2 = hp.field_n.a("intro", (byte) 53);
+            kl.a((byte) 73, 455, 15, 16711680, 10, var2, 100);
+            break L1;
+          }
+        }
+        if (param0 > -63) {
+          gd.b(-96);
+          return;
+        } else {
+          return;
+        }
     }
 
     final static void a(int param0, int param1) {
         sl var2 = js.field_f;
         var2.h(param0, 255);
-        var2.c(1, (byte) -123);
+        var2.c(param1, (byte) -123);
         var2.c(0, (byte) -78);
     }
 
     final static void a(lq param0, int param1, int param2) {
         try {
-            rs.field_Bb.a((byte) -113, (oh) (Object) param0);
-            wj.a(320, 4, param0);
+            rs.field_Bb.a((byte) -113, param0);
+            if (param1 != 1500005281) {
+                gd.b(66);
+            }
+            wj.a(320, param2, param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "gd.D(" + (param0 != null ? "{...}" : "null") + ',' + 1500005281 + ',' + 4 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "gd.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[1024];
         field_c = "Name";
         field_a = null;

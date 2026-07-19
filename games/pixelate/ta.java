@@ -12,13 +12,13 @@ final class ta {
     private static int field_g;
 
     private final static void b() {
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        int var2 = 0;
         if (field_h < 0) {
             field_g = 0;
             field_d = 0;
@@ -56,6 +56,14 @@ final class ta {
     }
 
     private final static void a(int[] param0, int param1, int param2) {
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
+        int fieldTemp$15 = 0;
         int var3 = 0;
         int[] var4_ref_int__ = null;
         int var4 = 0;
@@ -89,9 +97,9 @@ final class ta {
             }
           }
         }
-        param2 = param2;
+        param2 = param2 + param1;
         var4 = param2 - 2;
-        var8 = 0;
+        var8 = param1;
         var5 = var8;
         L3: while (true) {
           if (var8 >= param2) {
@@ -104,14 +112,18 @@ final class ta {
                 if (var7 >= var6) {
                   break L4;
                 } else {
+                  fieldTemp$8 = field_h;
                   field_h = field_h + 1;
-                  field_c[field_h] = param0[var8];
+                  field_c[fieldTemp$8] = param0[var8];
+                  fieldTemp$9 = field_h;
                   field_h = field_h + 1;
-                  field_c[field_h] = var7;
+                  field_c[fieldTemp$9] = var7;
+                  fieldTemp$10 = field_h;
                   field_h = field_h + 1;
-                  field_c[field_h] = param0[var4];
+                  field_c[fieldTemp$10] = param0[var4];
+                  fieldTemp$11 = field_h;
                   field_h = field_h + 1;
-                  field_c[field_h] = var6;
+                  field_c[fieldTemp$11] = var6;
                   break L4;
                 }
               }
@@ -119,14 +131,18 @@ final class ta {
               var8 += 2;
               continue L3;
             } else {
+              fieldTemp$12 = field_h;
               field_h = field_h + 1;
-              field_c[field_h] = param0[var4];
+              field_c[fieldTemp$12] = param0[var4];
+              fieldTemp$13 = field_h;
               field_h = field_h + 1;
-              field_c[field_h] = var6;
+              field_c[fieldTemp$13] = var6;
+              fieldTemp$14 = field_h;
               field_h = field_h + 1;
-              field_c[field_h] = param0[var8];
+              field_c[fieldTemp$14] = param0[var8];
+              fieldTemp$15 = field_h;
               field_h = field_h + 1;
-              field_c[field_h] = var7;
+              field_c[fieldTemp$15] = var7;
               var4 = var8;
               var8 += 2;
               continue L3;
@@ -282,7 +298,7 @@ final class ta {
 
     private final static void a(int[] param0, int param1, int param2, int param3) {
         ta.c();
-        ta.a(param0, 0, param2);
+        ta.a(param0, param1, param2);
         ta.a(param3);
     }
 

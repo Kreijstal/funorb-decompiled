@@ -14,7 +14,8 @@ final class vh {
     static int field_c;
 
     final static boolean a(int param0, int param1, int param2) {
-        if (vg.field_a == 13) {
+        boolean discarded$7 = false;
+        if (-14 == (vg.field_a ^ -1)) {
           kf.a(-87);
           return true;
         } else {
@@ -33,7 +34,7 @@ final class vh {
                 return false;
               }
             } else {
-              boolean discarded$7 = vh.a(-29, -66, -74);
+              discarded$7 = vh.a(-29, -66, -74);
               if (null != tl.field_Fb) {
                 if (!tl.field_Fb.b((byte) -63, param2, param1)) {
                   return false;
@@ -49,15 +50,26 @@ final class vh {
     }
 
     public static void a(int param0) {
+        byte[] discarded$2 = null;
+        String var2 = null;
         field_d = null;
         field_h = null;
         field_f = null;
         field_b = null;
-        field_a = null;
+        if (param0 != 102) {
+          var2 = (String) null;
+          discarded$2 = vh.a((byte) 46, (String) null);
+          field_a = null;
+          return;
+        } else {
+          field_a = null;
+          return;
+        }
     }
 
     final static void a(int param0, byte param1) {
         try {
+            IOException iOException = null;
             int var2 = 0;
             Throwable decompiledCaughtException = null;
             L0: {
@@ -66,7 +78,7 @@ final class vh {
                 break L0;
               } else {
                 L1: {
-                  if (param0 < 0) {
+                  if ((param0 ^ -1) > -1) {
                     break L1;
                   } else {
                     if (tb.field_f == ik.field_e) {
@@ -80,7 +92,7 @@ final class vh {
                   if (qn.field_U.field_l != 0) {
                     break L2;
                   } else {
-                    if (~(10000L + ta.field_t) > ~ud.a(2)) {
+                    if ((10000L + ta.field_t ^ -1L) > (ud.a(2) ^ -1L)) {
                       qn.field_U.f(param0, -105);
                       break L2;
                     } else {
@@ -89,12 +101,19 @@ final class vh {
                   }
                 }
                 L3: {
-                  if (qn.field_U.field_l > 0) {
-                    {
+                  if (-1 > (qn.field_U.field_l ^ -1)) {
+                    try {
                       L4: {
                         lj.field_a.a(0, qn.field_U.field_l, (byte) -92, qn.field_U.field_o);
                         ta.field_t = ud.a(2);
                         break L4;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L5: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        si.d(65280);
+                        break L5;
                       }
                     }
                     qn.field_U.field_l = 0;
@@ -140,7 +159,7 @@ final class vh {
               if (param0 > 41) {
                 break L1;
               } else {
-                field_d = null;
+                field_d = (String) null;
                 break L1;
               }
             }
@@ -152,23 +171,23 @@ final class vh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("vh.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -176,16 +195,12 @@ final class vh {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "2D MODE";
         field_h = "Set up new game";
         field_a = "You have been removed from <%0>'s game.";

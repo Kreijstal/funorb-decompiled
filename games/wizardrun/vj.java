@@ -6,6 +6,14 @@ final class vj {
     static kl field_b;
 
     final static void b(int param0) {
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -18,34 +26,34 @@ final class vj {
           L0: {
             var5 = id.field_b;
             var1 = var5;
-            var2 = 0;
+            var2 = param0;
             var3 = var5.length;
             L1: while (true) {
               if (var2 >= var3) {
                 break L0;
               } else {
-                int incrementValue$40 = var2;
+                incrementValue$40 = var2;
                 var2++;
                 var5[incrementValue$40] = 0;
-                int incrementValue$41 = var2;
+                incrementValue$41 = var2;
                 var2++;
                 var5[incrementValue$41] = 0;
-                int incrementValue$42 = var2;
+                incrementValue$42 = var2;
                 var2++;
                 var5[incrementValue$42] = 0;
-                int incrementValue$43 = var2;
+                incrementValue$43 = var2;
                 var2++;
                 var5[incrementValue$43] = 0;
-                int incrementValue$44 = var2;
+                incrementValue$44 = var2;
                 var2++;
                 var5[incrementValue$44] = 0;
-                int incrementValue$45 = var2;
+                incrementValue$45 = var2;
                 var2++;
                 var5[incrementValue$45] = 0;
-                int incrementValue$46 = var2;
+                incrementValue$46 = var2;
                 var2++;
                 var5[incrementValue$46] = 0;
-                int incrementValue$47 = var2;
+                incrementValue$47 = var2;
                 var2++;
                 var5[incrementValue$47] = 0;
                 continue L1;
@@ -55,7 +63,7 @@ final class vj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1_ref, "vj.A(" + 0 + ')');
+          throw bd.a((Throwable) ((Object) var1_ref), "vj.A(" + param0 + ')');
         }
     }
 
@@ -74,13 +82,13 @@ final class vj {
             var6 = var5;
             var5.field_b = 0;
             L1: while (true) {
-              if (var6.field_b >= 20) {
+              if ((var6.field_b ^ -1) <= -21) {
                 var2 = -113 % ((param0 - -79) / 33);
                 break L0;
               } else {
                 var6.field_a = 0;
                 L2: while (true) {
-                  if (var6.field_a >= 15) {
+                  if (-16 >= (var6.field_a ^ -1)) {
                     var6.field_b = var6.field_b + 1;
                     continue L1;
                   } else {
@@ -95,10 +103,10 @@ final class vj {
                             if (var3 != 1) {
                               if (var3 != 2) {
                                 if (var3 != 3) {
-                                  if (var3 != 4) {
-                                    if (var3 == 5) {
+                                  if (-5 != (var3 ^ -1)) {
+                                    if (-6 == (var3 ^ -1)) {
                                       L5: {
-                                        if (tc.field_l.field_a[var6.a((byte) -68)] != 1) {
+                                        if ((tc.field_l.field_a[var6.a((byte) -68)] ^ -1) != -2) {
                                           break L5;
                                         } else {
                                           var2 = 36;
@@ -106,7 +114,7 @@ final class vj {
                                         }
                                       }
                                       L6: {
-                                        if (tc.field_l.field_a[var6.a((byte) -68)] != 2) {
+                                        if ((tc.field_l.field_a[var6.a((byte) -68)] ^ -1) != -3) {
                                           break L6;
                                         } else {
                                           var2 = 37;
@@ -114,7 +122,7 @@ final class vj {
                                         }
                                       }
                                       L7: {
-                                        if (tc.field_l.field_a[var6.a((byte) -68)] != 3) {
+                                        if (-4 != (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                                           break L7;
                                         } else {
                                           var2 = 38;
@@ -122,7 +130,7 @@ final class vj {
                                         }
                                       }
                                       L8: {
-                                        if (tc.field_l.field_a[var6.a((byte) -68)] == 4) {
+                                        if ((tc.field_l.field_a[var6.a((byte) -68)] ^ -1) == -5) {
                                           var2 = 39;
                                           break L8;
                                         } else {
@@ -140,7 +148,7 @@ final class vj {
                                     }
                                   } else {
                                     L9: {
-                                      if (tc.field_l.field_a[var6.a((byte) -68)] == 1) {
+                                      if (-2 == (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                                         var2 = 29;
                                         break L9;
                                       } else {
@@ -156,7 +164,7 @@ final class vj {
                                       }
                                     }
                                     L11: {
-                                      if (tc.field_l.field_a[var6.a((byte) -68)] != 3) {
+                                      if (-4 != (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                                         break L11;
                                       } else {
                                         var2 = 31;
@@ -164,7 +172,7 @@ final class vj {
                                       }
                                     }
                                     L12: {
-                                      if (tc.field_l.field_a[var6.a((byte) -68)] != 4) {
+                                      if ((tc.field_l.field_a[var6.a((byte) -68)] ^ -1) != -5) {
                                         break L12;
                                       } else {
                                         var2 = 32;
@@ -188,7 +196,7 @@ final class vj {
                                     }
                                   }
                                   L14: {
-                                    if (tc.field_l.field_a[var6.a((byte) -68)] != 2) {
+                                    if ((tc.field_l.field_a[var6.a((byte) -68)] ^ -1) != -3) {
                                       break L14;
                                     } else {
                                       var2 = 23;
@@ -204,7 +212,7 @@ final class vj {
                                     }
                                   }
                                   L16: {
-                                    if (tc.field_l.field_a[var6.a((byte) -68)] == 4) {
+                                    if ((tc.field_l.field_a[var6.a((byte) -68)] ^ -1) == -5) {
                                       var2 = 25;
                                       break L16;
                                     } else {
@@ -228,7 +236,7 @@ final class vj {
                                   }
                                 }
                                 L18: {
-                                  if (tc.field_l.field_a[var6.a((byte) -68)] != 2) {
+                                  if (-3 != (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                                     break L18;
                                   } else {
                                     var2 = 14;
@@ -236,7 +244,7 @@ final class vj {
                                   }
                                 }
                                 L19: {
-                                  if (tc.field_l.field_a[var6.a((byte) -68)] != 3) {
+                                  if (-4 != (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                                     break L19;
                                   } else {
                                     var2 = 15;
@@ -260,7 +268,7 @@ final class vj {
                               }
                             } else {
                               L21: {
-                                if (tc.field_l.field_a[var6.a((byte) -68)] == 1) {
+                                if (-2 == (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                                   var2 = 7;
                                   break L21;
                                 } else {
@@ -268,7 +276,7 @@ final class vj {
                                 }
                               }
                               L22: {
-                                if (tc.field_l.field_a[var6.a((byte) -68)] == 2) {
+                                if ((tc.field_l.field_a[var6.a((byte) -68)] ^ -1) == -3) {
                                   var2 = 8;
                                   break L22;
                                 } else {
@@ -284,7 +292,7 @@ final class vj {
                                 }
                               }
                               L24: {
-                                if (tc.field_l.field_a[var6.a((byte) -68)] != 4) {
+                                if ((tc.field_l.field_a[var6.a((byte) -68)] ^ -1) != -5) {
                                   break L24;
                                 } else {
                                   var2 = 10;
@@ -304,7 +312,7 @@ final class vj {
                             }
                           } else {
                             L25: {
-                              if (tc.field_l.field_a[var6.a((byte) -68)] == 1) {
+                              if (-2 == (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                                 var2 = 3;
                                 break L25;
                               } else {
@@ -312,7 +320,7 @@ final class vj {
                               }
                             }
                             L26: {
-                              if (tc.field_l.field_a[var6.a((byte) -68)] == 2) {
+                              if (-3 == (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                                 var2 = 4;
                                 break L26;
                               } else {
@@ -327,7 +335,7 @@ final class vj {
                                 break L27;
                               }
                             }
-                            if (tc.field_l.field_a[var6.a((byte) -68)] == 5) {
+                            if (-6 == (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                               var2 = 6;
                               break L4;
                             } else {
@@ -351,7 +359,7 @@ final class vj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1, "vj.C(" + param0 + ')');
+          throw bd.a((Throwable) ((Object) var1), "vj.C(" + param0 + ')');
         }
     }
 
@@ -364,10 +372,6 @@ final class vj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new rc();
     }
 }

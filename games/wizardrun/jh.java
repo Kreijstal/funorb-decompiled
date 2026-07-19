@@ -11,6 +11,6 @@ public class jh {
     int field_f;
 
     jh() {
-        ((jh) this).field_a = 0;
+        this.field_a = 0;
     }
 }

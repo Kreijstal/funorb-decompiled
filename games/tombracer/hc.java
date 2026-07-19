@@ -20,10 +20,10 @@ final class hc extends rra {
 
     hc(int param0, int param1, int param2, int param3, int param4, int param5) {
         super(-1, param4, param5);
-        ((hc) this).field_j = param3;
-        ((hc) this).field_i = param0;
-        ((hc) this).field_f = param2;
-        ((hc) this).field_g = param1;
+        this.field_j = param3;
+        this.field_i = param0;
+        this.field_f = param2;
+        this.field_g = param1;
     }
 
     final void a(int param0, int param1, boolean param2) {
@@ -31,11 +31,11 @@ final class hc extends rra {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var4 = ((hc) this).field_i * param0 >> 12;
-        var5 = ((hc) this).field_f * param0 >> 12;
-        var6 = param1 * ((hc) this).field_g >> 12;
-        var7 = param1 * ((hc) this).field_j >> 12;
-        ik.a(var5, var4, -49, ((hc) this).field_b, var7, var6);
+        var4 = this.field_i * param0 >> -432891284;
+        var5 = this.field_f * param0 >> 2107257548;
+        var6 = param1 * this.field_g >> -1386539956;
+        var7 = param1 * this.field_j >> 1315183084;
+        ik.a(var5, var4, -49, this.field_b, var7, var6);
         if (!param2) {
           field_h = 68;
           return;
@@ -45,10 +45,6 @@ final class hc extends rra {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = 100;
     }
 }

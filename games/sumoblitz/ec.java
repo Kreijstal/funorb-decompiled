@@ -10,11 +10,12 @@ final class ec extends fj implements ru {
 
     public final int a(byte param0) {
         int var2 = 10 / ((-39 - param0) / 40);
-        return ((ec) this).field_i;
+        return this.field_i;
     }
 
     ec(ir param0, iw param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
         super(param0, param1, io.field_g, false, param3 * param2);
+        boolean discarded$1 = false;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -57,8 +58,8 @@ final class ec extends fj implements ru {
         L0: {
           L1: {
             stackOut_0_0 = this;
-            stackOut_0_1 = (ir) param0;
-            stackOut_0_2 = (iw) param1;
+            stackOut_0_1 = (ir) (param0);
+            stackOut_0_2 = (iw) (param1);
             stackOut_0_3 = io.field_g;
             stackIn_3_0 = stackOut_0_0;
             stackIn_3_1 = stackOut_0_1;
@@ -72,9 +73,9 @@ final class ec extends fj implements ru {
               break L1;
             } else {
               stackOut_1_0 = this;
-              stackOut_1_1 = (ir) (Object) stackIn_1_1;
-              stackOut_1_2 = (iw) (Object) stackIn_1_2;
-              stackOut_1_3 = (io) (Object) stackIn_1_3;
+              stackOut_1_1 = (ir) ((Object) stackIn_1_1);
+              stackOut_1_2 = (iw) ((Object) stackIn_1_2);
+              stackOut_1_3 = (io) ((Object) stackIn_1_3);
               stackIn_3_0 = stackOut_1_0;
               stackIn_3_1 = stackOut_1_1;
               stackIn_3_2 = stackOut_1_2;
@@ -87,9 +88,9 @@ final class ec extends fj implements ru {
                 break L1;
               } else {
                 stackOut_2_0 = this;
-                stackOut_2_1 = (ir) (Object) stackIn_2_1;
-                stackOut_2_2 = (iw) (Object) stackIn_2_2;
-                stackOut_2_3 = (io) (Object) stackIn_2_3;
+                stackOut_2_1 = (ir) ((Object) stackIn_2_1);
+                stackOut_2_2 = (iw) ((Object) stackIn_2_2);
+                stackOut_2_3 = (io) ((Object) stackIn_2_3);
                 stackOut_2_4 = 1;
                 stackIn_4_0 = stackOut_2_0;
                 stackIn_4_1 = stackOut_2_1;
@@ -101,9 +102,9 @@ final class ec extends fj implements ru {
             }
           }
           stackOut_3_0 = this;
-          stackOut_3_1 = (ir) (Object) stackIn_3_1;
-          stackOut_3_2 = (iw) (Object) stackIn_3_2;
-          stackOut_3_3 = (io) (Object) stackIn_3_3;
+          stackOut_3_1 = (ir) ((Object) stackIn_3_1);
+          stackOut_3_2 = (iw) ((Object) stackIn_3_2);
+          stackOut_3_3 = (io) ((Object) stackIn_3_3);
           stackOut_3_4 = 0;
           stackIn_4_0 = stackOut_3_0;
           stackIn_4_1 = stackOut_3_1;
@@ -113,33 +114,33 @@ final class ec extends fj implements ru {
           break L0;
         }
         L2: {
-          if (!((ec) this).field_b.field_Oc) {
-            ((ec) this).field_j = hn.a(false, param2);
-            ((ec) this).field_i = hn.a(false, param3);
+          if (!this.field_b.field_Oc) {
+            this.field_j = hn.a(false, param2);
+            this.field_i = hn.a(false, param3);
             break L2;
           } else {
-            ((ec) this).field_j = param2;
-            ((ec) this).field_i = param3;
+            this.field_j = param2;
+            this.field_i = param3;
             break L2;
           }
         }
         L3: {
           if (param4) {
-            ((ec) this).field_f = ((ec) this).field_b.field_Cc.a(((ec) this).field_j, ((ec) this).field_i, 0, 1024, ir.a(((ec) this).field_d, 126, io.field_g), 1);
+            this.field_f = this.field_b.field_Cc.a(this.field_j, this.field_i, 0, 1024, ir.a(this.field_d, 126, io.field_g), 1);
             break L3;
           } else {
-            ((ec) this).field_f = ((ec) this).field_b.field_Cc.a(((ec) this).field_j, ((ec) this).field_i, 1, 0, ir.a(((ec) this).field_d, -88, io.field_g), 1);
+            this.field_f = this.field_b.field_Cc.a(this.field_j, this.field_i, 1, 0, ir.a(this.field_d, -88, io.field_g), 1);
             break L3;
           }
         }
         L4: {
-          var13 = ((ec) this).field_b.field_Jc;
-          var10 = ((ec) this).field_f.LockRect(0, 0, 0, param2, param3, 0, var13);
+          var13 = this.field_b.field_Jc;
+          var10 = this.field_f.LockRect(0, 0, 0, param2, param3, 0, var13);
           if (!jagdx.gv.b(var10, -111)) {
             break L4;
           } else {
             L5: {
-              if (param7 != 0) {
+              if (-1 != (param7 ^ -1)) {
                 break L5;
               } else {
                 param7 = param2;
@@ -148,8 +149,8 @@ final class ec extends fj implements ru {
             }
             L6: {
               L7: {
-                param7 = param7 * ((ec) this).field_d.field_c;
-                param2 = param2 * ((ec) this).field_d.field_c;
+                param7 = param7 * this.field_d.field_c;
+                param2 = param2 * this.field_d.field_c;
                 var11 = var13.getRowPitch();
                 if (var11 != param2) {
                   break L7;
@@ -173,22 +174,23 @@ final class ec extends fj implements ru {
                 }
               }
             }
-            boolean discarded$1 = ((ec) this).field_f.UnlockRect(0);
+            discarded$1 = this.field_f.UnlockRect(0);
             break L4;
           }
         }
     }
 
     public final void a(boolean param0, boolean param1, boolean param2) {
-        ((ec) this).field_g = param1 ? true : false;
-        ((ec) this).field_h = param0 ? true : false;
+        this.field_g = param1 ? true : false;
+        this.field_h = param0 ? true : false;
         if (!param2) {
-            ((ec) this).field_g = true;
+            this.field_g = true;
         }
     }
 
     ec(ir param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
         super(param0, nl.field_p, io.field_g, false, param1 * param2);
+        boolean discarded$1 = false;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -231,7 +233,7 @@ final class ec extends fj implements ru {
         L0: {
           L1: {
             stackOut_0_0 = this;
-            stackOut_0_1 = (ir) param0;
+            stackOut_0_1 = (ir) (param0);
             stackOut_0_2 = nl.field_p;
             stackOut_0_3 = io.field_g;
             stackIn_3_0 = stackOut_0_0;
@@ -246,9 +248,9 @@ final class ec extends fj implements ru {
               break L1;
             } else {
               stackOut_1_0 = this;
-              stackOut_1_1 = (ir) (Object) stackIn_1_1;
-              stackOut_1_2 = (iw) (Object) stackIn_1_2;
-              stackOut_1_3 = (io) (Object) stackIn_1_3;
+              stackOut_1_1 = (ir) ((Object) stackIn_1_1);
+              stackOut_1_2 = (iw) ((Object) stackIn_1_2);
+              stackOut_1_3 = (io) ((Object) stackIn_1_3);
               stackIn_3_0 = stackOut_1_0;
               stackIn_3_1 = stackOut_1_1;
               stackIn_3_2 = stackOut_1_2;
@@ -261,9 +263,9 @@ final class ec extends fj implements ru {
                 break L1;
               } else {
                 stackOut_2_0 = this;
-                stackOut_2_1 = (ir) (Object) stackIn_2_1;
-                stackOut_2_2 = (iw) (Object) stackIn_2_2;
-                stackOut_2_3 = (io) (Object) stackIn_2_3;
+                stackOut_2_1 = (ir) ((Object) stackIn_2_1);
+                stackOut_2_2 = (iw) ((Object) stackIn_2_2);
+                stackOut_2_3 = (io) ((Object) stackIn_2_3);
                 stackOut_2_4 = 1;
                 stackIn_4_0 = stackOut_2_0;
                 stackIn_4_1 = stackOut_2_1;
@@ -275,9 +277,9 @@ final class ec extends fj implements ru {
             }
           }
           stackOut_3_0 = this;
-          stackOut_3_1 = (ir) (Object) stackIn_3_1;
-          stackOut_3_2 = (iw) (Object) stackIn_3_2;
-          stackOut_3_3 = (io) (Object) stackIn_3_3;
+          stackOut_3_1 = (ir) ((Object) stackIn_3_1);
+          stackOut_3_2 = (iw) ((Object) stackIn_3_2);
+          stackOut_3_3 = (io) ((Object) stackIn_3_3);
           stackOut_3_4 = 0;
           stackIn_4_0 = stackOut_3_0;
           stackIn_4_1 = stackOut_3_1;
@@ -287,28 +289,28 @@ final class ec extends fj implements ru {
           break L0;
         }
         L2: {
-          if (!((ec) this).field_b.field_Oc) {
-            ((ec) this).field_j = hn.a(false, param1);
-            ((ec) this).field_i = hn.a(false, param2);
+          if (!this.field_b.field_Oc) {
+            this.field_j = hn.a(false, param1);
+            this.field_i = hn.a(false, param2);
             break L2;
           } else {
-            ((ec) this).field_j = param1;
-            ((ec) this).field_i = param2;
+            this.field_j = param1;
+            this.field_i = param2;
             break L2;
           }
         }
         L3: {
           if (!param3) {
-            ((ec) this).field_f = ((ec) this).field_b.field_Cc.a(((ec) this).field_j, ((ec) this).field_i, 1, 0, 21, 1);
+            this.field_f = this.field_b.field_Cc.a(this.field_j, this.field_i, 1, 0, 21, 1);
             break L3;
           } else {
-            ((ec) this).field_f = ((ec) this).field_b.field_Cc.a(((ec) this).field_j, ((ec) this).field_i, 0, 1024, 21, 1);
+            this.field_f = this.field_b.field_Cc.a(this.field_j, this.field_i, 0, 1024, 21, 1);
             break L3;
           }
         }
         L4: {
-          var12 = ((ec) this).field_b.field_Jc;
-          var9 = ((ec) this).field_f.LockRect(0, 0, 0, param1, param2, 0, var12);
+          var12 = this.field_b.field_Jc;
+          var9 = this.field_f.LockRect(0, 0, 0, param1, param2, 0, var12);
           if (!jagdx.gv.b(var9, -45)) {
             break L4;
           } else {
@@ -351,7 +353,7 @@ final class ec extends fj implements ru {
                 }
               }
             }
-            boolean discarded$1 = ((ec) this).field_f.UnlockRect(0);
+            discarded$1 = this.field_f.UnlockRect(0);
             break L4;
           }
         }
@@ -369,50 +371,51 @@ final class ec extends fj implements ru {
     }
 
     public final int b(int param0) {
+        float discarded$0 = 0.0f;
         if (param0 != -16625) {
-            float discarded$0 = ((ec) this).b(-1.7616260051727295f, 87);
+            discarded$0 = this.b(-1.7616260051727295f, 87);
         }
-        return ((ec) this).field_j;
+        return this.field_j;
     }
 
     ec(ir param0, iw param1, io param2, int param3, int param4) {
         super(param0, param1, param2, false, param4 * param3);
-        if (!((ec) this).field_b.field_Oc) {
-            ((ec) this).field_j = hn.a(false, param3);
-            ((ec) this).field_i = hn.a(false, param4);
+        if (!this.field_b.field_Oc) {
+            this.field_j = hn.a(false, param3);
+            this.field_i = hn.a(false, param4);
         } else {
-            ((ec) this).field_j = param3;
-            ((ec) this).field_i = param4;
+            this.field_j = param3;
+            this.field_i = param4;
         }
-        ((ec) this).field_f = ((ec) this).field_b.field_Cc.a(param3, param4, 1, 0, ir.a(((ec) this).field_d, -120, ((ec) this).field_c), 1);
+        this.field_f = this.field_b.field_Cc.a(param3, param4, 1, 0, ir.a(this.field_d, -120, this.field_c), 1);
     }
 
     public final void a(int param0) {
         if (param0 != 8905) {
             return;
         }
-        ((ec) this).field_b.a(param0 ^ 8904, (ec) this);
+        this.field_b.a(param0 ^ 8904, (ec) (this));
     }
 
     public final float a(float param0, int param1) {
         if (param1 > -10) {
             return 0.4205271005630493f;
         }
-        return param0 / (float)((ec) this).field_j;
+        return param0 / (float)this.field_j;
     }
 
     final jagdx.IDirect3DBaseTexture d(int param0) {
         if (param0 != -22689) {
-            return null;
+            return (jagdx.IDirect3DBaseTexture) null;
         }
-        return (jagdx.IDirect3DBaseTexture) (Object) ((ec) this).field_f;
+        return (jagdx.IDirect3DBaseTexture) ((Object) this.field_f);
     }
 
     public final float b(float param0, int param1) {
         if (param1 != -19230) {
-            Object var4 = null;
-            ((ec) this).a((ji) null, 47);
+            ji var4 = (ji) null;
+            this.a((ji) null, 47);
         }
-        return param0 / (float)((ec) this).field_i;
+        return param0 / (float)this.field_i;
     }
 }

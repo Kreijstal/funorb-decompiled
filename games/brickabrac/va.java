@@ -10,16 +10,21 @@ final class va {
     private static String field_z;
 
     public static void a(int param0) {
-        field_c = null;
-        field_d = null;
-        field_b = null;
+        if (param0 != -15504) {
+          field_b = (jp) null;
+          field_c = null;
+          field_d = null;
+          field_b = null;
+          return;
+        } else {
+          field_c = null;
+          field_d = null;
+          field_b = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "va.A(";
         field_d = "Press <img=2> or <img=5> to launch the ball!";
         field_c = "Become a member to get this expansion and...";

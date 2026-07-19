@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class pw extends i {
     static ut field_H;
     static np field_G;
@@ -41,7 +39,7 @@ final class pw extends i {
                 } else {
                   if (param0 > 60) {
                     L2: {
-                      if (param1 == 0) {
+                      if (-1 == (param1 ^ -1)) {
                         if (ad.field_f < an.field_c) {
                           break L0;
                         } else {
@@ -83,7 +81,7 @@ final class pw extends i {
                               if (!ng.field_e) {
                                 break L6;
                               } else {
-                                if (hk.field_L > 0) {
+                                if ((hk.field_L ^ -1) < -1) {
                                   var3 = var3 | 4;
                                   break L6;
                                 } else {
@@ -104,7 +102,7 @@ final class pw extends i {
                               stackIn_26_0 = stackOut_25_0;
                               stackIn_26_1 = stackOut_25_1;
                               if (!ng.field_e) {
-                                stackOut_27_0 = (ml) (Object) stackIn_27_0;
+                                stackOut_27_0 = (ml) ((Object) stackIn_27_0);
                                 stackOut_27_1 = stackIn_27_1;
                                 stackOut_27_2 = 0;
                                 stackIn_28_0 = stackOut_27_0;
@@ -112,7 +110,7 @@ final class pw extends i {
                                 stackIn_28_2 = stackOut_27_2;
                                 break L7;
                               } else {
-                                stackOut_26_0 = (ml) (Object) stackIn_26_0;
+                                stackOut_26_0 = (ml) ((Object) stackIn_26_0);
                                 stackOut_26_1 = stackIn_26_1;
                                 stackOut_26_2 = hk.field_L;
                                 stackIn_28_0 = stackOut_26_0;
@@ -122,7 +120,7 @@ final class pw extends i {
                               }
                             }
                             ((ml) (Object) stackIn_28_0).b(stackIn_28_1, stackIn_28_2);
-                            ((wf) (Object) cq.field_h).a(0, 0, true);
+                            ((wf) ((Object) cq.field_h)).a(0, 0, true);
                             break L2;
                           }
                         }
@@ -143,6 +141,9 @@ final class pw extends i {
     }
 
     final boolean a(int param0, byte param1, char param2) {
+        boolean discarded$3 = false;
+        boolean discarded$4 = false;
+        boolean discarded$5 = false;
         int var4 = 0;
         int var6 = 0;
         String var7 = null;
@@ -333,7 +334,7 @@ final class pw extends i {
           stackIn_8_1 = stackOut_6_1;
           stackIn_7_0 = stackOut_6_0;
           stackIn_7_1 = stackOut_6_1;
-          if (param0 != 96) {
+          if ((param0 ^ -1) != -97) {
             stackOut_8_0 = stackIn_8_0;
             stackOut_8_1 = stackIn_8_1;
             stackOut_8_2 = 0;
@@ -388,7 +389,7 @@ final class pw extends i {
               stackOut_13_0 = stackIn_13_0;
               stackIn_15_0 = stackOut_13_0;
               stackIn_14_0 = stackOut_13_0;
-              if (cc.field_e != 66) {
+              if (-67 != (cc.field_e ^ -1)) {
                 break L5;
               } else {
                 stackOut_14_0 = stackIn_14_0;
@@ -457,7 +458,7 @@ final class pw extends i {
                   stackOut_21_0 = stackIn_21_0;
                   stackIn_24_0 = stackOut_21_0;
                   stackIn_22_0 = stackOut_21_0;
-                  if (!((pw) this).field_F) {
+                  if (!this.field_F) {
                     break L11;
                   } else {
                     stackOut_22_0 = stackIn_22_0;
@@ -475,7 +476,7 @@ final class pw extends i {
                 stackOut_24_0 = stackIn_24_0;
                 stackIn_28_0 = stackOut_24_0;
                 stackIn_25_0 = stackOut_24_0;
-                if (!((pw) this).field_I) {
+                if (!this.field_I) {
                   break L9;
                 } else {
                   stackOut_25_0 = stackIn_25_0;
@@ -517,7 +518,7 @@ final class pw extends i {
                   stackOut_30_0 = stackIn_30_0;
                   stackIn_34_0 = stackOut_30_0;
                   stackIn_31_0 = stackOut_30_0;
-                  if (!((pw) this).field_F) {
+                  if (!this.field_F) {
                     break L15;
                   } else {
                     stackOut_31_0 = stackIn_31_0;
@@ -529,7 +530,7 @@ final class pw extends i {
                       stackOut_32_0 = stackIn_32_0;
                       stackIn_38_0 = stackOut_32_0;
                       stackIn_33_0 = stackOut_32_0;
-                      if (bd.field_A.i((byte) 35).length() > 0) {
+                      if (-1 > (bd.field_A.i((byte) 35).length() ^ -1)) {
                         break L14;
                       } else {
                         stackOut_33_0 = stackIn_33_0;
@@ -542,7 +543,7 @@ final class pw extends i {
                 stackOut_34_0 = stackIn_34_0;
                 stackIn_39_0 = stackOut_34_0;
                 stackIn_35_0 = stackOut_34_0;
-                if (!((pw) this).field_I) {
+                if (!this.field_I) {
                   break L13;
                 } else {
                   stackOut_35_0 = stackIn_35_0;
@@ -554,7 +555,7 @@ final class pw extends i {
                     stackOut_36_0 = stackIn_36_0;
                     stackIn_39_0 = stackOut_36_0;
                     stackIn_37_0 = stackOut_36_0;
-                    if (rt.field_F.i((byte) 35).length() <= 0) {
+                    if ((rt.field_F.i((byte) 35).length() ^ -1) >= -1) {
                       break L13;
                     } else {
                       stackOut_37_0 = stackIn_37_0;
@@ -580,12 +581,12 @@ final class pw extends i {
         var4 = stackIn_40_0 | stackIn_40_1;
         if (var4 != 0) {
           L16: {
-            if (((pw) this).field_F) {
+            if (this.field_F) {
               L17: {
                 if (param2 != 48) {
                   break L17;
                 } else {
-                  if (bd.field_A.j((byte) -16).length() != 0) {
+                  if (-1 != (bd.field_A.j((byte) -16).length() ^ -1)) {
                     break L17;
                   } else {
                     return true;
@@ -594,12 +595,12 @@ final class pw extends i {
               }
               L18: {
                 L19: {
-                  boolean discarded$3 = bd.field_A.a(param0, param2, 875);
+                  discarded$3 = bd.field_A.a(param0, param2, 875);
                   var8 = bd.field_A.j((byte) -16);
                   if (var8 == null) {
                     break L19;
                   } else {
-                    if (var8.length() > 0) {
+                    if ((var8.length() ^ -1) < -1) {
                       stackOut_61_0 = Integer.parseInt(var8);
                       stackIn_62_0 = stackOut_61_0;
                       break L18;
@@ -616,7 +617,7 @@ final class pw extends i {
               ad.field_f = var6;
               break L16;
             } else {
-              if (((pw) this).field_I) {
+              if (this.field_I) {
                 L20: {
                   if (48 != param2) {
                     break L20;
@@ -630,7 +631,7 @@ final class pw extends i {
                 }
                 L21: {
                   L22: {
-                    boolean discarded$4 = rt.field_F.a(param0, param2, param1 + 896);
+                    discarded$4 = rt.field_F.a(param0, param2, param1 + 896);
                     var7 = rt.field_F.j((byte) -16);
                     if (var7 == null) {
                       break L22;
@@ -659,11 +660,11 @@ final class pw extends i {
           return true;
         } else {
           L23: {
-            if (((pw) this).field_F) {
+            if (this.field_F) {
               break L23;
             } else {
-              if (!((pw) this).field_I) {
-                boolean discarded$5 = super.a(param0, param1, param2);
+              if (!this.field_I) {
+                discarded$5 = super.a(param0, param1, param2);
                 return false;
               } else {
                 break L23;
@@ -683,12 +684,13 @@ final class pw extends i {
 
     final int a(byte param0) {
         if (param0 <= 75) {
-            ((pw) this).a((byte) 120, 52, 33);
+            this.a((byte) 120, 52, 33);
         }
         return 400;
     }
 
     final void a(byte param0, int param1, int param2) {
+        int discarded$1 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -706,11 +708,11 @@ final class pw extends i {
           var12 = Kickabout.field_G;
           super.a((byte) -124, param1, param2);
           wk.field_c.a(150 + param2, 23, param1 + 98);
-          int discarded$1 = pb.field_C.a(qa.field_G, 25 + param1, param2 + 270, 150, 40, 16729156, -1, 1, 1, 0);
+          discarded$1 = pb.field_C.a(qa.field_G, 25 + param1, param2 + 270, 150, 40, 16729156, -1, 1, 1, 0);
           if (param0 <= -11) {
             break L0;
           } else {
-            field_J = null;
+            field_J = (hd) null;
             break L0;
           }
         }
@@ -733,7 +735,7 @@ final class pw extends i {
           un.field_d.d(gl.field_f.toLowerCase(), 130 + var4, 21 + var6, 16777215, -1);
           un.field_d.d(Kickabout.field_F.toLowerCase(), var4 - -130, var9 + 21, 16777215, -1);
           if (pn.g(2368)) {
-            if (nj.a(-51) % 500L < 250L) {
+            if (-251L < (nj.a(-51) % 500L ^ -1L)) {
               stackOut_6_0 = 1;
               stackIn_8_0 = stackOut_6_0;
               break L1;
@@ -754,7 +756,7 @@ final class pw extends i {
           uq.field_b.field_J = 27 + var6;
           on.a(uq.field_b.field_s + 85, uq.field_b.field_J + 6, bd.field_A.field_q + 4, -4 + bd.field_A.field_mb, 7829367, 128);
           pb.field_C.a('£', 91 + uq.field_b.field_s, uq.field_b.field_J - -19, 16777215);
-          uq.field_b.a(110, var10 != 0 & ((pw) this).field_F);
+          uq.field_b.a(110, var10 != 0 & this.field_F);
           oa.field_b.field_J = 5 + (var8 + -13);
           oa.field_b.field_s = var4 - -10;
           on.a(oa.field_b.field_s + 85, 40 + oa.field_b.field_J, rt.field_F.field_q + 4, -4 + rt.field_F.field_mb, 7829367, 128);
@@ -766,7 +768,7 @@ final class pw extends i {
           }
         }
         L3: {
-          oa.field_b.a(94, var10 != 0 & ((pw) this).field_I);
+          oa.field_b.a(94, var10 != 0 & this.field_I);
           kr.field_a.a(false, (byte) 46);
           if (ad.field_f < an.field_c) {
             pb.field_C.d(ik.field_E, var4 + 130, 75 + var6 - 8, 16711680, -1);
@@ -814,7 +816,7 @@ final class pw extends i {
         }
         var11 = 0;
         L5: while (true) {
-          if (var11 >= 5) {
+          if (-6 >= (var11 ^ -1)) {
             return;
           } else {
             L6: {
@@ -876,7 +878,7 @@ final class pw extends i {
           qd.field_g = af.a(wk.field_c, -31);
           ad.field_f = an.field_c;
           kt.field_l = 8;
-          if (gp.a(wk.field_c, -576054046) > 0) {
+          if (-1 > (gp.a(wk.field_c, -576054046) ^ -1)) {
             stackOut_2_0 = gp.a(wk.field_c, -576054046);
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -891,7 +893,7 @@ final class pw extends i {
         of.field_d = new hd[5];
         var9.field_y = 16777215;
         var9.field_ub = 65793;
-        var9.field_X = (hu) (Object) pb.field_C;
+        var9.field_X = (hu) ((Object) pb.field_C);
         var9.field_D = 95;
         var3_int = 0;
         L1: while (true) {
@@ -902,16 +904,16 @@ final class pw extends i {
             uq.field_b.field_A = 1;
             uq.field_b.field_mb = 24;
             uq.field_b.field_q = 240;
-            uq.field_b.field_X = (hu) (Object) pb.field_C;
+            uq.field_b.field_X = (hu) ((Object) pb.field_C);
             oa.field_b = new hd();
             oa.field_b.field_B = 40;
             oa.field_b.field_mb = 60;
-            oa.field_b.field_X = (hu) (Object) pb.field_C;
+            oa.field_b.field_X = (hu) ((Object) pb.field_C);
             oa.field_b.field_A = 1;
             oa.field_b.field_q = 240;
             oa.field_b.field_y = 16777215;
             var3 = new hd();
-            var3.field_X = (hu) (Object) pb.field_C;
+            var3.field_X = (hu) ((Object) pb.field_C);
             var3.field_p = 1;
             var3.field_A = 1;
             var3.field_y = 16777215;
@@ -920,38 +922,38 @@ final class pw extends i {
             var5 = new hd();
             var5.field_B = 2;
             var5.field_y = 16777215;
-            var5.field_X = (hu) (Object) pb.field_C;
+            var5.field_X = (hu) ((Object) pb.field_C);
             var5.field_D = 5;
             bd.field_A = new vg(0L, var3, var10, var5, 20);
             bd.field_A.field_R = null;
-            bd.field_A.a(-630, 5 + (uq.field_b.field_q >> 1) - 33, (uq.field_b.field_mb >> 2) + -2, 4 + (pb.field_C.field_G - -pb.field_C.field_p), 67);
-            uq.field_b.a((byte) -113, (hd) (Object) bd.field_A);
+            bd.field_A.a(-630, 5 + (uq.field_b.field_q >> -1190307391) - 33, (uq.field_b.field_mb >> -2107428414) + -2, 4 + (pb.field_C.field_G - -pb.field_C.field_p), 67);
+            uq.field_b.a((byte) -113, (hd) (bd.field_A));
             rt.field_F = new vg(0L, var3, var10, var5, 20);
             rt.field_F.field_R = null;
-            rt.field_F.a(-630, 5 + (-33 + (oa.field_b.field_q >> 1)), 8 + (oa.field_b.field_mb >> 1), 4 + (pb.field_C.field_G - -pb.field_C.field_p), 67);
-            oa.field_b.a((byte) -121, (hd) (Object) rt.field_F);
-            kr.field_a = new jw(jc.field_k.toLowerCase(), (hu) (Object) un.field_d);
+            rt.field_F.a(-630, 5 + (-33 + (oa.field_b.field_q >> 874783681)), 8 + (oa.field_b.field_mb >> 586066881), 4 + (pb.field_C.field_G - -pb.field_C.field_p), 67);
+            oa.field_b.a((byte) -121, (hd) (rt.field_F));
+            kr.field_a = new jw(jc.field_k.toLowerCase(), un.field_d);
             kr.field_a.field_J = 5;
-            kr.field_a.field_s = 5 + (oa.field_b.field_q + -kr.field_a.field_q >> 1);
+            kr.field_a.field_s = 5 + (oa.field_b.field_q + -kr.field_a.field_q >> 1762416737);
             hk.field_I = eo.a(false, 0);
             qp.field_L = eo.a(true, 0);
             hq.field_c = eo.a(false, 0);
             fn.field_a = eo.a(true, 0);
-            qp.field_L.field_s = (uq.field_b.field_q >> 1) + ((qp.field_L.field_q >> 1) + qp.field_L.field_q);
-            fn.field_a.field_s = fn.field_a.field_q - (-(fn.field_a.field_q >> 1) - (oa.field_b.field_q >> 1));
-            hk.field_I.field_s = -(hk.field_I.field_q >> 1) + (-(hk.field_I.field_q * 2) + (uq.field_b.field_q >> 1));
-            hq.field_c.field_s = (oa.field_b.field_q >> 1) + (-(2 * hq.field_c.field_q) - (hq.field_c.field_q >> 1));
+            qp.field_L.field_s = (uq.field_b.field_q >> -51019711) + ((qp.field_L.field_q >> -1870640415) + qp.field_L.field_q);
+            fn.field_a.field_s = fn.field_a.field_q - (-(fn.field_a.field_q >> -44624287) - (oa.field_b.field_q >> -1165049951));
+            hk.field_I.field_s = -(hk.field_I.field_q >> 1542852833) + (-(hk.field_I.field_q * 2) + (uq.field_b.field_q >> -1566680447));
+            hq.field_c.field_s = (oa.field_b.field_q >> 871264545) + (-(2 * hq.field_c.field_q) - (hq.field_c.field_q >> 1674853633));
             fn.field_a.field_J = 35;
             hq.field_c.field_J = 35;
             uq.field_b.a((byte) -108, hk.field_I);
             uq.field_b.a((byte) -125, qp.field_L);
             oa.field_b.a((byte) -117, hq.field_c);
             oa.field_b.a((byte) -115, fn.field_a);
-            oa.field_b.a((byte) -113, (hd) (Object) kr.field_a);
+            oa.field_b.a((byte) -113, (hd) (kr.field_a));
             bd.field_A.b(Integer.toString(ad.field_f), -23174);
             rt.field_F.b(Integer.toString(hk.field_L), -23174);
-            ((pw) this).field_F = true;
-            ((pw) this).field_I = false;
+            this.field_F = true;
+            this.field_I = false;
             return;
           } else {
             of.field_d[var3_int] = new hd();
@@ -970,11 +972,21 @@ final class pw extends i {
 
     public static void g(int param0) {
         field_J = null;
+        if (param0 != -8332) {
+            field_H = (ut) null;
+        }
         field_G = null;
         field_H = null;
     }
 
     final void a(int param0, boolean param1) {
+        wh discarded$7 = null;
+        boolean discarded$8 = false;
+        wh discarded$9 = null;
+        wh discarded$10 = null;
+        wh discarded$11 = null;
+        wh discarded$12 = null;
+        wh discarded$13 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1158,7 +1170,7 @@ final class pw extends i {
             rt.field_F.b(11570);
             var3 = 0;
             L1: while (true) {
-              if (var3 >= 5) {
+              if ((var3 ^ -1) <= -6) {
                 L2: {
                   if (!qp.field_L.field_Q) {
                     break L2;
@@ -1179,7 +1191,7 @@ final class pw extends i {
                           }
                         }
                       }
-                      qd.a((byte) -67, vo.a((byte) -18, ij.field_q, new String[1]));
+                      qd.a((byte) -67, vo.a((byte) -18, ij.field_q, new String[]{ad.a(1, 26300)}));
                       break L2;
                     }
                   }
@@ -1189,7 +1201,7 @@ final class pw extends i {
                     break L4;
                   } else {
                     if (an.field_c != ad.field_f) {
-                      qd.a((byte) -67, vo.a((byte) -18, np.field_Ib, new String[1]));
+                      qd.a((byte) -67, vo.a((byte) -18, np.field_Ib, new String[]{ad.a(1, 26300)}));
                       break L4;
                     } else {
                       qd.a((byte) -67, fd.field_j);
@@ -1206,7 +1218,7 @@ final class pw extends i {
                         qd.a((byte) -67, hm.field_E);
                         break L5;
                       } else {
-                        qd.a((byte) -67, vo.a((byte) -18, nw.field_c, new String[1]));
+                        qd.a((byte) -67, vo.a((byte) -18, nw.field_c, new String[]{ad.a(1, param0 ^ 26303)}));
                         break L5;
                       }
                     } else {
@@ -1223,7 +1235,7 @@ final class pw extends i {
                           qd.a((byte) -67, sd.field_e);
                           break L6;
                         } else {
-                          qd.a((byte) -67, vo.a((byte) -18, up.field_d, new String[1]));
+                          qd.a((byte) -67, vo.a((byte) -18, up.field_d, new String[]{ad.a(1, 26300)}));
                           break L6;
                         }
                       } else {
@@ -1246,7 +1258,7 @@ final class pw extends i {
                   stackIn_39_0 = stackOut_38_0;
                   stackIn_39_1 = stackOut_38_1;
                   if (ng.field_e) {
-                    stackOut_40_0 = (hd) (Object) stackIn_40_0;
+                    stackOut_40_0 = (hd) ((Object) stackIn_40_0);
                     stackOut_40_1 = stackIn_40_1;
                     stackOut_40_2 = hk.field_L;
                     stackIn_41_0 = stackOut_40_0;
@@ -1254,7 +1266,7 @@ final class pw extends i {
                     stackIn_41_2 = stackOut_40_2;
                     break L7;
                   } else {
-                    stackOut_39_0 = (hd) (Object) stackIn_39_0;
+                    stackOut_39_0 = (hd) ((Object) stackIn_39_0);
                     stackOut_39_1 = stackIn_39_1;
                     stackOut_39_2 = qd.field_g;
                     stackIn_41_0 = stackOut_39_0;
@@ -1264,17 +1276,17 @@ final class pw extends i {
                   }
                 }
                 L8: {
-                  stackOut_41_0 = (hd) (Object) stackIn_41_0;
+                  stackOut_41_0 = (hd) ((Object) stackIn_41_0);
                   stackIn_43_0 = stackOut_41_0;
                   stackIn_42_0 = stackOut_41_0;
                   if (stackIn_41_1 >= stackIn_41_2) {
-                    stackOut_43_0 = (hd) (Object) stackIn_43_0;
+                    stackOut_43_0 = (hd) ((Object) stackIn_43_0);
                     stackOut_43_1 = 0;
                     stackIn_44_0 = stackOut_43_0;
                     stackIn_44_1 = stackOut_43_1;
                     break L8;
                   } else {
-                    stackOut_42_0 = (hd) (Object) stackIn_42_0;
+                    stackOut_42_0 = (hd) ((Object) stackIn_42_0);
                     stackOut_42_1 = 1;
                     stackIn_44_0 = stackOut_42_0;
                     stackIn_44_1 = stackOut_42_1;
@@ -1287,13 +1299,13 @@ final class pw extends i {
                   stackIn_46_0 = stackOut_44_0;
                   stackIn_45_0 = stackOut_44_0;
                   if (ad.field_f <= an.field_c) {
-                    stackOut_46_0 = (hd) (Object) stackIn_46_0;
+                    stackOut_46_0 = (hd) ((Object) stackIn_46_0);
                     stackOut_46_1 = 0;
                     stackIn_47_0 = stackOut_46_0;
                     stackIn_47_1 = stackOut_46_1;
                     break L9;
                   } else {
-                    stackOut_45_0 = (hd) (Object) stackIn_45_0;
+                    stackOut_45_0 = (hd) ((Object) stackIn_45_0);
                     stackOut_45_1 = 1;
                     stackIn_47_0 = stackOut_45_0;
                     stackIn_47_1 = stackOut_45_1;
@@ -1306,13 +1318,13 @@ final class pw extends i {
                   stackIn_49_0 = stackOut_47_0;
                   stackIn_48_0 = stackOut_47_0;
                   if (qd.field_g <= hk.field_L) {
-                    stackOut_49_0 = (hd) (Object) stackIn_49_0;
+                    stackOut_49_0 = (hd) ((Object) stackIn_49_0);
                     stackOut_49_1 = 0;
                     stackIn_50_0 = stackOut_49_0;
                     stackIn_50_1 = stackOut_49_1;
                     break L10;
                   } else {
-                    stackOut_48_0 = (hd) (Object) stackIn_48_0;
+                    stackOut_48_0 = (hd) ((Object) stackIn_48_0);
                     stackOut_48_1 = 1;
                     stackIn_50_0 = stackOut_48_0;
                     stackIn_50_1 = stackOut_48_1;
@@ -1325,13 +1337,13 @@ final class pw extends i {
                   stackIn_52_0 = stackOut_50_0;
                   stackIn_51_0 = stackOut_50_0;
                   if (hk.field_L <= ad.field_f) {
-                    stackOut_52_0 = (hd) (Object) stackIn_52_0;
+                    stackOut_52_0 = (hd) ((Object) stackIn_52_0);
                     stackOut_52_1 = 0;
                     stackIn_53_0 = stackOut_52_0;
                     stackIn_53_1 = stackOut_52_1;
                     break L11;
                   } else {
-                    stackOut_51_0 = (hd) (Object) stackIn_51_0;
+                    stackOut_51_0 = (hd) ((Object) stackIn_51_0);
                     stackOut_51_1 = 1;
                     stackIn_53_0 = stackOut_51_0;
                     stackIn_53_1 = stackOut_51_1;
@@ -1366,7 +1378,7 @@ final class pw extends i {
                   }
                 }
                 L14: {
-                  if (kr.field_a.field_sb != 1) {
+                  if ((kr.field_a.field_sb ^ -1) != -2) {
                     break L14;
                   } else {
                     L15: {
@@ -1381,7 +1393,7 @@ final class pw extends i {
                       }
                     }
                     ng.field_e = stackIn_63_0 != 0;
-                    wh discarded$7 = sp.c(61, -17);
+                    discarded$7 = sp.c(61, -17);
                     if (ng.field_e) {
                       rt.field_F.b(Integer.toString(hk.field_L), -23174);
                       break L14;
@@ -1393,9 +1405,9 @@ final class pw extends i {
                 }
                 L16: {
                   kr.field_a.field_Gb = ng.field_e;
-                  if (bd.field_A.field_sb == 1) {
-                    ((pw) this).field_I = false;
-                    ((pw) this).field_F = true;
+                  if (-2 == (bd.field_A.field_sb ^ -1)) {
+                    this.field_I = false;
+                    this.field_F = true;
                     break L16;
                   } else {
                     break L16;
@@ -1403,8 +1415,8 @@ final class pw extends i {
                 }
                 L17: {
                   if (rt.field_F.field_sb == 1) {
-                    ((pw) this).field_F = false;
-                    ((pw) this).field_I = true;
+                    this.field_F = false;
+                    this.field_I = true;
                     break L17;
                   } else {
                     break L17;
@@ -1414,7 +1426,7 @@ final class pw extends i {
                   if (ng.field_e) {
                     break L18;
                   } else {
-                    ((pw) this).field_I = false;
+                    this.field_I = false;
                     break L18;
                   }
                 }
@@ -1423,7 +1435,7 @@ final class pw extends i {
                 var5 = 5;
                 var6 = 0;
                 L19: while (true) {
-                  if (var6 >= 3) {
+                  if ((var6 ^ -1) <= -4) {
                     L20: {
                       if (var3 == 0) {
                         wo.field_o = 0;
@@ -1437,13 +1449,13 @@ final class pw extends i {
                       if (var4 != 0) {
                         L22: {
                           L23: {
-                            ((pw) this).field_F = false;
-                            ((pw) this).field_I = false;
+                            this.field_F = false;
+                            this.field_I = false;
                             var6_ref_String = bd.field_A.j((byte) -16);
                             if (var6_ref_String == null) {
                               break L23;
                             } else {
-                              if (var6_ref_String.length() < -1) {
+                              if ((var6_ref_String.length() ^ -1) < -1) {
                                 stackOut_128_0 = Integer.parseInt(var6_ref_String);
                                 stackIn_129_0 = stackOut_128_0;
                                 break L22;
@@ -1465,14 +1477,14 @@ final class pw extends i {
                               stackOut_130_0 = bd.field_A;
                               stackIn_132_0 = stackOut_130_0;
                               stackIn_131_0 = stackOut_130_0;
-                              if (-1 < ad.field_f) {
-                                stackOut_132_0 = (vg) (Object) stackIn_132_0;
+                              if (-1 > (ad.field_f ^ -1)) {
+                                stackOut_132_0 = (vg) ((Object) stackIn_132_0);
                                 stackOut_132_1 = Integer.toString(ad.field_f);
                                 stackIn_133_0 = stackOut_132_0;
                                 stackIn_133_1 = stackOut_132_1;
                                 break L25;
                               } else {
-                                stackOut_131_0 = (vg) (Object) stackIn_131_0;
+                                stackOut_131_0 = (vg) ((Object) stackIn_131_0);
                                 stackOut_131_1 = "";
                                 stackIn_133_0 = stackOut_131_0;
                                 stackIn_133_1 = stackOut_131_1;
@@ -1492,7 +1504,7 @@ final class pw extends i {
                               if (var8 == null) {
                                 break L27;
                               } else {
-                                if (-1 <= var8.length()) {
+                                if (-1 <= (var8.length() ^ -1)) {
                                   break L27;
                                 } else {
                                   stackOut_137_0 = Integer.parseInt(var8);
@@ -1511,14 +1523,14 @@ final class pw extends i {
                               stackOut_141_0 = rt.field_F;
                               stackIn_143_0 = stackOut_141_0;
                               stackIn_142_0 = stackOut_141_0;
-                              if (-1 >= hk.field_L) {
-                                stackOut_143_0 = (vg) (Object) stackIn_143_0;
+                              if (-1 <= (hk.field_L ^ -1)) {
+                                stackOut_143_0 = (vg) ((Object) stackIn_143_0);
                                 stackOut_143_1 = "";
                                 stackIn_144_0 = stackOut_143_0;
                                 stackIn_144_1 = stackOut_143_1;
                                 break L28;
                               } else {
-                                stackOut_142_0 = (vg) (Object) stackIn_142_0;
+                                stackOut_142_0 = (vg) ((Object) stackIn_142_0);
                                 stackOut_142_1 = Integer.toString(hk.field_L);
                                 stackIn_144_0 = stackOut_142_0;
                                 stackIn_144_1 = stackOut_142_1;
@@ -1543,7 +1555,7 @@ final class pw extends i {
                             if (bd.field_A.j((byte) -16) == null) {
                               break L31;
                             } else {
-                              if (bd.field_A.j((byte) -16).length() <= 0) {
+                              if (-1 <= (bd.field_A.j((byte) -16).length() ^ -1)) {
                                 break L31;
                               } else {
                                 stackOut_153_0 = Integer.parseInt(bd.field_A.j((byte) -16));
@@ -1593,7 +1605,7 @@ final class pw extends i {
                                 if (rt.field_F.j((byte) -16) == null) {
                                   break L37;
                                 } else {
-                                  if (rt.field_F.j((byte) -16).length() > 0) {
+                                  if ((rt.field_F.j((byte) -16).length() ^ -1) < -1) {
                                     stackOut_167_0 = Integer.parseInt(rt.field_F.j((byte) -16));
                                     stackIn_168_0 = stackOut_167_0;
                                     break L36;
@@ -1750,17 +1762,17 @@ final class pw extends i {
                           }
                         }
                         L46: {
-                          stackOut_194_0 = ((pw) this).field_i[0];
+                          stackOut_194_0 = this.field_i[0];
                           stackIn_196_0 = stackOut_194_0;
                           stackIn_195_0 = stackOut_194_0;
                           if (var7 == 0) {
-                            stackOut_196_0 = (hd) (Object) stackIn_196_0;
+                            stackOut_196_0 = (hd) ((Object) stackIn_196_0);
                             stackOut_196_1 = 0;
                             stackIn_197_0 = stackOut_196_0;
                             stackIn_197_1 = stackOut_196_1;
                             break L46;
                           } else {
-                            stackOut_195_0 = (hd) (Object) stackIn_195_0;
+                            stackOut_195_0 = (hd) ((Object) stackIn_195_0);
                             stackOut_195_1 = 1;
                             stackIn_197_0 = stackOut_195_0;
                             stackIn_197_1 = stackOut_195_1;
@@ -1772,17 +1784,17 @@ final class pw extends i {
                           if (param0 == 3) {
                             break L47;
                           } else {
-                            boolean discarded$8 = ((pw) this).a(-126, (byte) 75, '￺');
+                            discarded$8 = this.a(-126, (byte) 75, '￺');
                             break L47;
                           }
                         }
                         return;
                       } else {
-                        if (of.field_d[var6].field_sb == 1) {
+                        if (-2 == (of.field_d[var6].field_sb ^ -1)) {
                           ee.field_d = var6;
-                          wh discarded$9 = sp.c(61, 14);
-                          ((pw) this).field_I = false;
-                          ((pw) this).field_F = false;
+                          discarded$9 = sp.c(61, 14);
+                          this.field_I = false;
+                          this.field_F = false;
                           var6++;
                           continue L29;
                         } else {
@@ -1793,7 +1805,7 @@ final class pw extends i {
                     }
                   } else {
                     L48: {
-                      if (qp.field_L.field_qb == 1) {
+                      if ((qp.field_L.field_qb ^ -1) == -2) {
                         L49: {
                           if (wo.field_o % var5 != 0) {
                             break L49;
@@ -1843,7 +1855,7 @@ final class pw extends i {
                                   break L52;
                                 }
                               }
-                              wh discarded$10 = sp.c(60, param0 ^ -17);
+                              discarded$10 = sp.c(60, param0 ^ -17);
                               var4 = 1;
                               break L49;
                             }
@@ -1873,7 +1885,7 @@ final class pw extends i {
                                   break L56;
                                 }
                               }
-                              wh discarded$11 = sp.c(59, -94);
+                              discarded$11 = sp.c(59, -94);
                               var4 = 1;
                               break L55;
                             }
@@ -1886,7 +1898,7 @@ final class pw extends i {
                       }
                     }
                     L57: {
-                      if (fn.field_a.field_qb != 1) {
+                      if ((fn.field_a.field_qb ^ -1) != -2) {
                         break L57;
                       } else {
                         L58: {
@@ -1905,7 +1917,7 @@ final class pw extends i {
                                   break L59;
                                 }
                               }
-                              wh discarded$12 = sp.c(60, param0 + -125);
+                              discarded$12 = sp.c(60, param0 + -125);
                               var4 = 1;
                               break L58;
                             }
@@ -1917,7 +1929,7 @@ final class pw extends i {
                     }
                     if (1 == hq.field_c.field_qb) {
                       L60: {
-                        if (wo.field_o % var5 != 0) {
+                        if (-1 != (wo.field_o % var5 ^ -1)) {
                           break L60;
                         } else {
                           if (ad.field_f < hk.field_L) {
@@ -1930,7 +1942,7 @@ final class pw extends i {
                                 break L61;
                               }
                             }
-                            wh discarded$13 = sp.c(59, 88);
+                            discarded$13 = sp.c(59, 88);
                             var4 = 1;
                             break L60;
                           } else {
@@ -1952,11 +1964,11 @@ final class pw extends i {
               } else {
                 if (of.field_d[var3].field_gb) {
                   if (var3 == ee.field_d) {
-                    qd.a((byte) -67, vo.a((byte) -18, jh.field_Jb, new String[1]));
+                    qd.a((byte) -67, vo.a((byte) -18, jh.field_Jb, new String[]{ni.field_k[var3]}));
                     var3++;
                     continue L1;
                   } else {
-                    qd.a((byte) -67, vo.a((byte) -18, kn.field_H, new String[1]));
+                    qd.a((byte) -67, vo.a((byte) -18, kn.field_H, new String[]{ni.field_k[var3]}));
                     var3++;
                     continue L1;
                   }

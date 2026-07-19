@@ -24,9 +24,9 @@ final class br extends ob {
         int stackOut_6_1 = 0;
         Object stackOut_5_0 = null;
         int stackOut_5_1 = 0;
-        var4 = ((br) this).field_h[param2];
+        var4 = this.field_h[param2];
         if (23 == var4) {
-          if (((br) this).field_B.b((byte) 61)) {
+          if (this.field_B.b((byte) 61)) {
             L0: {
               stackOut_4_0 = null;
               stackIn_6_0 = stackOut_4_0;
@@ -45,7 +45,7 @@ final class br extends ob {
                 break L0;
               }
             }
-            nk.a((String) (Object) stackIn_7_0, stackIn_7_1, (byte) 121);
+            nk.a((String) ((Object) stackIn_7_0), stackIn_7_1, (byte) 121);
             return;
           } else {
             super.b(param0, param1, param2);
@@ -59,20 +59,33 @@ final class br extends ob {
 
     final static void f(int param0) {
         lh.field_c = new nf();
-        tn.field_n.d((ei) (Object) lh.field_c, 30);
+        tn.field_n.d(lh.field_c, 30);
+        if (param0 != 35) {
+            field_J = (vh) null;
+        }
     }
 
     final void a(byte param0) {
         if (param0 >= -11) {
-            field_J = null;
+            field_J = (vh) null;
         }
     }
 
     public static void b(boolean param0) {
-        field_K = null;
-        field_J = null;
-        field_M = null;
-        field_L = null;
+        if (param0) {
+          field_J = (vh) null;
+          field_K = null;
+          field_J = null;
+          field_M = null;
+          field_L = null;
+          return;
+        } else {
+          field_K = null;
+          field_J = null;
+          field_M = null;
+          field_L = null;
+          return;
+        }
     }
 
     final void c(int param0) {
@@ -100,18 +113,14 @@ final class br extends ob {
           return;
         } else {
           var4 = oe.field_O;
-          var4 = var4 + " " + o.a('#', "<br><br>", nr.a(new String[1], -1, n.a(var2 != 0, var3 != 0, false, (byte) 39)), 1);
-          ((br) this).a((lr) (Object) sa.field_h, new int[1], 140, -16097, var4, 280, 15658734);
-          ((br) this).b(140, false);
+          var4 = var4 + " " + o.a('#', "<br><br>", nr.a(new String[]{de.field_f}, -1, n.a(var2 != 0, var3 != 0, false, (byte) 39)), 1);
+          this.a(sa.field_h, new int[]{sa.field_h.field_G}, 140, -16097, var4, 280, 15658734);
+          this.b(140, false);
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_L = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
         field_K = "Quick Chat game";
     }

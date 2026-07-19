@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class h {
     static String field_e;
     static String field_a;
@@ -13,69 +11,89 @@ final class h {
 
     final static int a(String param0, byte param1, boolean param2) {
         RuntimeException var3 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_6_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
+        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
-            if (param2) {
-              stackOut_5_0 = q.field_a.a(param0);
-              stackIn_6_0 = stackOut_5_0;
-              break L0;
+            if (param1 == -113) {
+              if (param2) {
+                stackOut_6_0 = q.field_a.a(param0);
+                stackIn_7_0 = stackOut_6_0;
+                decompiledRegionSelector0 = 2;
+                break L0;
+              } else {
+                stackOut_4_0 = sj.field_G.a(param0);
+                stackIn_5_0 = stackOut_4_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
+              }
             } else {
-              stackOut_3_0 = sj.field_G.a(param0);
-              stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              stackOut_1_0 = -102;
+              stackIn_2_0 = stackOut_1_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("h.B(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_8_0 = (RuntimeException) (var3);
+            stackOut_8_1 = new StringBuilder().append("h.B(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
               break L1;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + -113 + ',' + param2 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_6_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_5_0;
+          } else {
+            return stackIn_7_0;
+          }
+        }
     }
 
     public final String toString() {
@@ -83,15 +101,54 @@ final class h {
     }
 
     public static void a(byte param0) {
+        int discarded$0 = 0;
         field_c = null;
         field_a = null;
         field_f = null;
         field_d = null;
         field_e = null;
+        if (param0 <= 6) {
+            String var2 = (String) null;
+            discarded$0 = h.a((String) null, (byte) 43, false);
+        }
         field_b = null;
     }
 
     final static void b(byte param0) {
+        StringBuilder discarded$34 = null;
+        StringBuilder discarded$35 = null;
+        StringBuilder discarded$36 = null;
+        StringBuilder discarded$37 = null;
+        StringBuilder discarded$38 = null;
+        StringBuilder discarded$39 = null;
+        StringBuilder discarded$40 = null;
+        StringBuilder discarded$41 = null;
+        StringBuilder discarded$42 = null;
+        StringBuilder discarded$43 = null;
+        StringBuilder discarded$44 = null;
+        StringBuilder discarded$45 = null;
+        StringBuilder discarded$46 = null;
+        StringBuilder discarded$47 = null;
+        StringBuilder discarded$48 = null;
+        StringBuilder discarded$49 = null;
+        StringBuilder discarded$50 = null;
+        StringBuilder discarded$51 = null;
+        StringBuilder discarded$52 = null;
+        StringBuilder discarded$53 = null;
+        StringBuilder discarded$54 = null;
+        StringBuilder discarded$55 = null;
+        StringBuilder discarded$56 = null;
+        StringBuilder discarded$57 = null;
+        StringBuilder discarded$58 = null;
+        StringBuilder discarded$59 = null;
+        StringBuilder discarded$60 = null;
+        StringBuilder discarded$61 = null;
+        StringBuilder discarded$62 = null;
+        StringBuilder discarded$63 = null;
+        StringBuilder discarded$64 = null;
+        StringBuilder discarded$65 = null;
+        StringBuilder discarded$66 = null;
+        StringBuilder discarded$67 = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -146,7 +203,7 @@ final class h {
           L0: {
             L1: {
               var2 = -127 % ((45 - param0) / 55);
-              var16_ref = (ec) (Object) l.field_a[13];
+              var16_ref = (ec) ((Object) l.field_a[13]);
               if (mi.field_d != 7) {
                 L2: {
                   if (1 == mi.field_d) {
@@ -164,7 +221,7 @@ final class h {
                       var14 = 0;
                       var8 = var14;
                       L3: while (true) {
-                        if (~var3 >= ~var14) {
+                        if (var3 <= var14) {
                           var16_ref.field_F[0] = var37;
                           var16_ref.field_X[0] = var27;
                           var16_ref.field_G[0] = var30;
@@ -183,11 +240,11 @@ final class h {
                                 if (!var26.field_r) {
                                   var5[var14] = var26.field_b;
                                   var29 = new StringBuilder(20);
-                                  StringBuilder discarded$34 = var29.append("<col=1>");
-                                  StringBuilder discarded$35 = var29.append(var26.field_b);
-                                  StringBuilder discarded$36 = var29.append("</col><br>(");
-                                  StringBuilder discarded$37 = var29.append(gh.field_t[var26.field_p]);
-                                  StringBuilder discarded$38 = var29.append(")");
+                                  discarded$34 = var29.append("<col=1>");
+                                  discarded$35 = var29.append(var26.field_b);
+                                  discarded$36 = var29.append("</col><br>(");
+                                  discarded$37 = var29.append(gh.field_t[var26.field_p]);
+                                  discarded$38 = var29.append(")");
                                   var6[var14] = var29.toString();
                                   var7[var14] = var26.a(9392, 2, 111);
                                   break L4;
@@ -198,14 +255,14 @@ final class h {
                             }
                             L6: {
                               var27[var14] = "";
-                              stackOut_47_0 = (String[]) var6;
+                              stackOut_47_0 = (String[]) (var6);
                               stackOut_47_1 = var14;
                               stackIn_49_0 = stackOut_47_0;
                               stackIn_49_1 = stackOut_47_1;
                               stackIn_48_0 = stackOut_47_0;
                               stackIn_48_1 = stackOut_47_1;
                               if (1 != var10) {
-                                stackOut_49_0 = (String[]) (Object) stackIn_49_0;
+                                stackOut_49_0 = (String[]) ((Object) stackIn_49_0);
                                 stackOut_49_1 = stackIn_49_1;
                                 stackOut_49_2 = ug.field_m;
                                 stackIn_50_0 = stackOut_49_0;
@@ -213,7 +270,7 @@ final class h {
                                 stackIn_50_2 = stackOut_49_2;
                                 break L6;
                               } else {
-                                stackOut_48_0 = (String[]) (Object) stackIn_48_0;
+                                stackOut_48_0 = (String[]) ((Object) stackIn_48_0);
                                 stackOut_48_1 = stackIn_48_1;
                                 stackOut_48_2 = lf.field_f[var14];
                                 stackIn_50_0 = stackOut_48_0;
@@ -226,7 +283,7 @@ final class h {
                             var28 = var26.a(9392, 2, 111).e();
                             qm.a(var28, 64, -1);
                             vb.a(-109, var28);
-                            rf.field_ab.a(-rf.field_ab.field_s + var28.field_s >> 1, var28.field_y + -rf.field_ab.field_y >> 1);
+                            rf.field_ab.a(-rf.field_ab.field_s + var28.field_s >> -1217858815, var28.field_y + -rf.field_ab.field_y >> 1723919233);
                             ug.b(-1);
                             var7[var14] = var28;
                             break L4;
@@ -242,7 +299,7 @@ final class h {
                 }
                 var3 = 0;
                 L7: while (true) {
-                  if (var3 >= 4) {
+                  if (-5 >= (var3 ^ -1)) {
                     var3 = pc.field_l[cf.field_w];
                     var36 = new int[var3];
                     var20 = new String[var3];
@@ -272,38 +329,38 @@ final class h {
                                 L11: {
                                   var5[var8] = var19.field_b;
                                   var22 = new StringBuilder(20);
-                                  StringBuilder discarded$39 = var22.append("<col=1>");
-                                  StringBuilder discarded$40 = var22.append(var19.field_b);
-                                  StringBuilder discarded$41 = var22.append("</col><br><br>");
+                                  discarded$39 = var22.append("<col=1>");
+                                  discarded$40 = var22.append(var19.field_b);
+                                  discarded$41 = var22.append("</col><br><br>");
                                   var11 = hk.field_c[cf.field_w][var8];
-                                  if (var11 == -1) {
-                                    StringBuilder discarded$42 = var22.append(sm.field_d);
+                                  if ((var11 ^ -1) == 0) {
+                                    discarded$42 = var22.append(sm.field_d);
                                     break L11;
                                   } else {
                                     L12: {
-                                      StringBuilder discarded$43 = var22.append(bj.field_I);
-                                      StringBuilder discarded$44 = var22.append(cb.a(53, var11));
-                                      StringBuilder discarded$45 = var22.append(' ');
-                                      StringBuilder discarded$46 = var22.append('(');
-                                      if (ha.field_j[cf.field_w][var8] < 0) {
+                                      discarded$43 = var22.append(bj.field_I);
+                                      discarded$44 = var22.append(cb.a(53, var11));
+                                      discarded$45 = var22.append(' ');
+                                      discarded$46 = var22.append('(');
+                                      if (-1 < (ha.field_j[cf.field_w][var8] ^ -1)) {
                                         break L12;
                                       } else {
                                         if (ha.field_j[cf.field_w][var8] < 4) {
-                                          StringBuilder discarded$47 = var22.append(rf.field_Y[ha.field_j[cf.field_w][var8]]);
+                                          discarded$47 = var22.append(rf.field_Y[ha.field_j[cf.field_w][var8]]);
                                           break L12;
                                         } else {
                                           break L12;
                                         }
                                       }
                                     }
-                                    StringBuilder discarded$48 = var22.append(')');
-                                    StringBuilder discarded$49 = var22.append(vm.field_zb);
+                                    discarded$48 = var22.append(')');
+                                    discarded$49 = var22.append(vm.field_zb);
                                     var12 = on.field_v[cf.field_w][var8];
-                                    if (var12 != -1) {
-                                      StringBuilder discarded$50 = var22.append(cb.a(61, var12));
+                                    if (0 != (var12 ^ -1)) {
+                                      discarded$50 = var22.append(cb.a(61, var12));
                                       break L11;
                                     } else {
-                                      StringBuilder discarded$51 = var22.append(on.field_p);
+                                      discarded$51 = var22.append(on.field_p);
                                       break L11;
                                     }
                                   }
@@ -321,7 +378,7 @@ final class h {
                           var21 = var19.a(9392, mi.field_d, 111).e();
                           qm.a(var21, 64, -1);
                           vb.a(-97, var21);
-                          rf.field_ab.a(-rf.field_ab.field_s + var21.field_s >> 1, var21.field_y + -rf.field_ab.field_y >> 1);
+                          rf.field_ab.a(-rf.field_ab.field_s + var21.field_s >> -634087295, var21.field_y + -rf.field_ab.field_y >> -623843199);
                           ug.b(-1);
                           var7[var8] = var21;
                           break L9;
@@ -333,20 +390,20 @@ final class h {
                   } else {
                     L13: {
                       var17 = new StringBuilder(20);
-                      StringBuilder discarded$52 = var17.append("<col=1>");
-                      StringBuilder discarded$53 = var17.append(gh.field_t[var3]);
-                      StringBuilder discarded$54 = var17.append("</col><br><br>");
+                      discarded$52 = var17.append("<col=1>");
+                      discarded$53 = var17.append(gh.field_t[var3]);
+                      discarded$54 = var17.append("</col><br><br>");
                       var5_int = pf.a((byte) 2, var3);
-                      if (var5_int != 2) {
+                      if ((var5_int ^ -1) != -3) {
                         if (var5_int != 1) {
-                          StringBuilder discarded$55 = var17.append(sa.field_d[var3]);
+                          discarded$55 = var17.append(sa.field_d[var3]);
                           break L13;
                         } else {
-                          StringBuilder discarded$56 = var17.append(lf.field_f[var3]);
+                          discarded$56 = var17.append(lf.field_f[var3]);
                           break L13;
                         }
                       } else {
-                        StringBuilder discarded$57 = var17.append(ug.field_m);
+                        discarded$57 = var17.append(ug.field_m);
                         break L13;
                       }
                     }
@@ -360,35 +417,35 @@ final class h {
               } else {
                 var3 = 0;
                 L14: while (true) {
-                  if (var3 >= 4) {
+                  if ((var3 ^ -1) <= -5) {
                     var16_ref.field_Q[0] = hb.field_a;
                     break L1;
                   } else {
                     L15: {
                       var15 = new StringBuilder(20);
-                      StringBuilder discarded$58 = var15.append("<col=1>");
-                      StringBuilder discarded$59 = var15.append(gh.field_t[var3]);
-                      StringBuilder discarded$60 = var15.append("</col><br><br>");
+                      discarded$58 = var15.append("<col=1>");
+                      discarded$59 = var15.append(gh.field_t[var3]);
+                      discarded$60 = var15.append("</col><br><br>");
                       var5_int = pf.a((byte) 105, var3);
                       if (2 != var5_int) {
-                        if (var5_int == 1) {
-                          StringBuilder discarded$61 = var15.append(ac.field_a[var3]);
+                        if (-2 == (var5_int ^ -1)) {
+                          discarded$61 = var15.append(ac.field_a[var3]);
                           break L15;
                         } else {
-                          StringBuilder discarded$62 = var15.append(sa.field_d[var3]);
-                          StringBuilder discarded$63 = var15.append("<br><br>");
+                          discarded$62 = var15.append(sa.field_d[var3]);
+                          discarded$63 = var15.append("<br><br>");
                           var6_int = d.field_c[var3];
-                          if (var6_int == -1) {
-                            StringBuilder discarded$64 = var15.append(vm.field_tb);
+                          if (0 == (var6_int ^ -1)) {
+                            discarded$64 = var15.append(vm.field_tb);
                             break L15;
                           } else {
-                            StringBuilder discarded$65 = var15.append(bj.field_I);
-                            StringBuilder discarded$66 = var15.append(cb.a(90, var6_int));
+                            discarded$65 = var15.append(bj.field_I);
+                            discarded$66 = var15.append(cb.a(90, var6_int));
                             break L15;
                           }
                         }
                       } else {
-                        StringBuilder discarded$67 = var15.append(ug.field_m);
+                        discarded$67 = var15.append(ug.field_m);
                         break L15;
                       }
                     }
@@ -406,15 +463,11 @@ final class h {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1, "h.A(" + param0 + ')');
+          throw kk.a((Throwable) ((Object) var1), "h.A(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "2P";
         field_f = "Close";
         field_c = "You have <%0> unread messages!";

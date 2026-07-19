@@ -12,13 +12,12 @@ final class btb {
         field_b = null;
         field_c = null;
         field_d = null;
+        if (param0 != 94) {
+            field_c = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "btb.A(";
         field_c = "<%0> cannot join; the game has started.";
         field_a = true;

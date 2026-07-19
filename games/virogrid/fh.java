@@ -22,10 +22,18 @@ final class fh {
             var2 = 1;
             L1: while (true) {
               if (var2 >= da.field_g.length) {
+                L2: {
+                  if (param0 == -80) {
+                    break L2;
+                  } else {
+                    fh.a(-100);
+                    break L2;
+                  }
+                }
                 break L0;
               } else {
                 var3 = da.field_g[var2];
-                ek.a(bf.field_m, var2 << 4, bf.field_m, var1_int, var3);
+                ek.a(bf.field_m, var2 << 404055524, bf.field_m, var1_int, var3);
                 var1_int = var1_int + var3;
                 var2++;
                 continue L1;
@@ -35,7 +43,7 @@ final class fh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "fh.A(" + -80 + ')');
+          throw kg.a((Throwable) ((Object) var1), "fh.A(" + param0 + ')');
         }
     }
 
@@ -47,23 +55,23 @@ final class fh {
         int var7 = 0;
         int var8 = 0;
         var8 = Virogrid.field_F ? 1 : 0;
-        if (kf.field_e < 0) {
+        if ((kf.field_e ^ -1) > -1) {
           return;
         } else {
           L0: {
-            var3 = 185;
-            var4 = 205;
+            var3 = -135 + param2;
+            var4 = param0 - 35;
             var5 = 256;
-            if (kf.field_e >= 75) {
+            if (-76 >= (kf.field_e ^ -1)) {
               break L0;
             } else {
-              var5 = (kf.field_e << 8) / 75;
+              var5 = (kf.field_e << -944889048) / 75;
               break L0;
             }
           }
           L1: {
-            if (kf.field_e > 200) {
-              var5 = (250 + -kf.field_e << 8) / 50;
+            if ((kf.field_e ^ -1) < -201) {
+              var5 = (250 + -kf.field_e << -317383896) / 50;
               break L1;
             } else {
               break L1;
@@ -83,7 +91,7 @@ final class fh {
           }
           L3: {
             ai.a(true);
-            if (kf.field_e < 150) {
+            if ((kf.field_e ^ -1) > -151) {
               ag.field_g.e(var3, var4);
               break L3;
             } else {
@@ -93,7 +101,7 @@ final class fh {
           }
           L4: {
             var6 = kf.field_e + -125;
-            if (var6 <= 0) {
+            if ((var6 ^ -1) >= -1) {
               break L4;
             } else {
               if (var6 >= 50) {
@@ -104,7 +112,7 @@ final class fh {
                   cc.field_u.e(var3, var4, var7);
                   break L4;
                 } else {
-                  if (var6 >= 30) {
+                  if ((var6 ^ -1) <= -31) {
                     var7 = 256 * (50 - var6) / 20;
                     cc.field_u.e(var3, var4, var7);
                     break L4;
@@ -118,17 +126,17 @@ final class fh {
           }
           L5: {
             var6 = kf.field_e + -140;
-            if (var6 > 0) {
+            if (var6 > param1) {
               L6: {
                 var7 = 256;
-                if (var6 < 20) {
+                if ((var6 ^ -1) > -21) {
                   var7 = 256 * var6 / 20;
                   break L6;
                 } else {
                   break L6;
                 }
               }
-              dn.field_c.a(var3 + 15, var4 - -10, var5 * var7 >> 8);
+              dn.field_c.a(var3 + 15, var4 - -10, var5 * var7 >> -214432376);
               break L5;
             } else {
               break L5;
@@ -153,6 +161,9 @@ final class fh {
         jk.field_c = 2;
         lj.field_r = 80.0f;
         em.field_c = 80.0f;
+        if (param0 > -83) {
+            field_e = true;
+        }
         vm.field_d[0] = (double)lj.field_r * Math.sin((double)cf.field_c);
         vm.field_d[2] = (double)lj.field_r * Math.cos((double)cf.field_c);
         gb.c((byte) -44);
@@ -162,14 +173,13 @@ final class fh {
         field_a = null;
         field_d = null;
         field_c = null;
+        if (param0 != 10061) {
+            field_e = true;
+        }
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "You have the most pieces";
         field_b = "You cannot chat to <%0> because <%0> is offline in your friend list.";
         field_d = "Options";

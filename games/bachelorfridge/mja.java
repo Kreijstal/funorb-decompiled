@@ -39,14 +39,14 @@ final class mja extends td {
               if (param1 == 3) {
                 break L1;
               } else {
-                field_t = null;
+                field_t = (sna) null;
                 break L1;
               }
             }
             L2: {
-              var7 = ((mja) this).field_h.a(69, param0);
-              var4 = new oo(((mja) this).field_g, new nq(var7), ((mja) this).field_i);
-              if (2 == ((mja) this).field_i) {
+              var7 = this.field_h.a(69, param0);
+              var4 = new oo(this.field_g, new nq(var7), this.field_i);
+              if (2 == this.field_i) {
                 var5 = 0;
                 L3: while (true) {
                   if (var7.field_x <= var5) {
@@ -60,8 +60,8 @@ final class mja extends td {
                   }
                 }
               } else {
-                if (((mja) this).field_i != 4) {
-                  if (1 == ((mja) this).field_i) {
+                if ((this.field_i ^ -1) != -5) {
+                  if (1 == this.field_i) {
                     var5 = 0;
                     L4: while (true) {
                       if (var5 >= var7.field_J) {
@@ -75,7 +75,7 @@ final class mja extends td {
                       }
                     }
                   } else {
-                    if (((mja) this).field_i == 3) {
+                    if (this.field_i == 3) {
                       var5 = 1 + var7.field_J;
                       L5: while (true) {
                         if (var5 >= param0.field_B) {
@@ -108,7 +108,7 @@ final class mja extends td {
                 }
               }
             }
-            stackOut_20_0 = (oo) var4;
+            stackOut_20_0 = (oo) (var4);
             stackIn_21_0 = stackOut_20_0;
             break L0;
           }
@@ -116,23 +116,23 @@ final class mja extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var3;
+            stackOut_22_0 = (RuntimeException) (var3);
             stackOut_22_1 = new StringBuilder().append("mja.A(");
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -140,12 +140,15 @@ final class mja extends td {
               break L7;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
         }
-        return (ii) (Object) stackIn_21_0;
+        return (ii) ((Object) stackIn_21_0);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
+        if (param2 != 3) {
+            field_r = (String) null;
+        }
         tca.field_f = param1;
         gaa.field_k = param0;
         mm.field_z = param3;
@@ -155,26 +158,22 @@ final class mja extends td {
     mja(int param0, aga param1, int param2) {
         super(param0, param1);
         try {
-            ((mja) this).field_i = param2;
+            this.field_i = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "mja.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "mja.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public static void b(int param0) {
         field_q = null;
         field_r = null;
-        int var1 = -25;
+        int var1 = 25 / ((16 - param0) / 44);
         field_t = null;
         field_s = null;
         field_p = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Accept";
         field_p = "Arrow keys or right click drag to move the camera.  <br><col=BBFF00> Next</col>";
     }

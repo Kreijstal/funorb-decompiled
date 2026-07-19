@@ -13,23 +13,22 @@ final class bd extends hg {
     public static void d(int param0) {
         field_m = null;
         field_h = null;
+        if (param0 >= -45) {
+            return;
+        }
         field_g = null;
         field_l = null;
     }
 
     bd(byte[] param0) {
         try {
-            ((bd) this).field_j = param0;
+            this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "bd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "bd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Service unavailable";
         field_g = "Waiting for sound effects";
     }

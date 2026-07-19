@@ -16,10 +16,6 @@ final class kca {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "kca.A(";
         field_a = 0;
         field_b = new vaa();

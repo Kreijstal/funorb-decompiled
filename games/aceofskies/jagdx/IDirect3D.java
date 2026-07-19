@@ -8,7 +8,7 @@ public class IDirect3D extends jaclib.peer.IUnknown {
 
     private IDirect3D(jaclib.peer.qt param0) {
         super(param0);
-        ((jagdx.IDirect3D) this).a = param0;
+        this.a = param0;
     }
 
     private final native int _GetDeviceCaps(int param0, int param1, jagdx.D3DCAPS param2);
@@ -24,7 +24,7 @@ public class IDirect3D extends jaclib.peer.IUnknown {
     public final jagdx.IDirect3DDevice a(int param0, int param1, java.awt.Canvas param2, int param3, jagdx.D3DPRESENT_PARAMETERS param4) {
         jagdx.IDirect3DDevice var6 = null;
         int var7 = 0;
-        var6 = new jagdx.IDirect3DDevice(((jagdx.IDirect3D) this).a);
+        var6 = new jagdx.IDirect3DDevice(this.a);
         var7 = this._CreateDevice(param0, param1, param2, param3, param4, var6);
         if (jagdx.gf.a(-1, var7)) {
           throw new jagdx.ie(String.valueOf(var7));
@@ -37,7 +37,7 @@ public class IDirect3D extends jaclib.peer.IUnknown {
 
     public final static jagdx.IDirect3D a(int param0, jaclib.peer.qt param1) {
         jagdx.IDirect3D var2 = new jagdx.IDirect3D(param1);
-        int var3 = IDirect3D._Direct3DCreate(param0, var2);
+        int var3 = jagdx.IDirect3D._Direct3DCreate(param0, var2);
         if (!(!jagdx.gf.a(-1, var3))) {
             throw new jagdx.ie(String.valueOf(var3));
         }

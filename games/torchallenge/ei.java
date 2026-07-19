@@ -47,13 +47,13 @@ final class ei {
             if (14 > param1) {
               if (param0 == 66) {
                 var3 = rb.field_c[param1];
-                if (var3 >= 0) {
-                  if (var3 < 6) {
+                if ((var3 ^ -1) <= -1) {
+                  if ((var3 ^ -1) > -7) {
                     var4 = kc.field_p[var3];
                     if (var4 < wa.field_sb[var3]) {
                       L1: {
                         wa.field_sb[var3] = var4;
-                        if (-1 < wa.field_sb[var3]) {
+                        if (-1 < (wa.field_sb[var3] ^ -1)) {
                           wh.a(param2, param1, -112);
                           wa.field_sb[var3] = var4;
                           break L1;
@@ -64,7 +64,7 @@ final class ei {
                       return;
                     } else {
                       L2: {
-                        if (-1 > wa.field_sb[var3]) {
+                        if (-1 < (wa.field_sb[var3] ^ -1)) {
                           wh.a(param2, param1, -112);
                           wa.field_sb[var3] = var4;
                           break L2;
@@ -81,15 +81,15 @@ final class ei {
                   return;
                 }
               } else {
-                field_y = null;
+                field_y = (String) null;
                 var3 = rb.field_c[param1];
-                if (var3 >= 0) {
-                  if (var3 < 6) {
+                if ((var3 ^ -1) <= -1) {
+                  if ((var3 ^ -1) > -7) {
                     var4 = kc.field_p[var3];
                     if (var4 < wa.field_sb[var3]) {
                       L3: {
                         wa.field_sb[var3] = var4;
-                        if (-1 < wa.field_sb[var3]) {
+                        if (-1 < (wa.field_sb[var3] ^ -1)) {
                           wh.a(param2, param1, -112);
                           wa.field_sb[var3] = var4;
                           break L3;
@@ -100,7 +100,7 @@ final class ei {
                       return;
                     } else {
                       L4: {
-                        if (-1 > wa.field_sb[var3]) {
+                        if (-1 < (wa.field_sb[var3] ^ -1)) {
                           wh.a(param2, param1, -112);
                           wa.field_sb[var3] = var4;
                           break L4;
@@ -126,92 +126,99 @@ final class ei {
 
     final static boolean a(byte param0, CharSequence param1) {
         RuntimeException var2 = null;
-        boolean stackIn_1_0 = false;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_0_0 = false;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        boolean stackOut_2_0 = false;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            stackOut_0_0 = ci.a(10, param1, -18, true);
-            stackIn_1_0 = stackOut_0_0;
+            L1: {
+              if (param0 == -117) {
+                break L1;
+              } else {
+                ei.a(68);
+                break L1;
+              }
+            }
+            stackOut_2_0 = ci.a(10, param1, -18, true);
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("ei.C(").append(-117).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackOut_4_0 = (RuntimeException) (var2);
+            stackOut_4_1 = new StringBuilder().append("ei.C(").append(param0).append(',');
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     public static void a(int param0) {
         field_w = null;
+        if (param0 >= -35) {
+            return;
+        }
         field_y = null;
     }
 
     ei() {
-        ((ei) this).field_l = 0;
-        ((ei) this).field_D = 0;
-        ((ei) this).field_q = new int[6][258];
-        ((ei) this).field_j = new byte[256];
-        ((ei) this).field_F = new byte[18002];
-        ((ei) this).field_s = new int[6][258];
-        ((ei) this).field_v = new boolean[16];
-        ((ei) this).field_g = new byte[6][258];
-        ((ei) this).field_r = new byte[18002];
-        ((ei) this).field_H = new boolean[256];
-        ((ei) this).field_i = new int[6];
-        ((ei) this).field_z = new int[257];
-        ((ei) this).field_p = new int[256];
-        ((ei) this).field_A = new byte[4096];
-        ((ei) this).field_e = new int[6][258];
-        ((ei) this).field_c = new int[16];
+        this.field_l = 0;
+        this.field_D = 0;
+        this.field_q = new int[6][258];
+        this.field_j = new byte[256];
+        this.field_F = new byte[18002];
+        this.field_s = new int[6][258];
+        this.field_v = new boolean[16];
+        this.field_g = new byte[6][258];
+        this.field_r = new byte[18002];
+        this.field_H = new boolean[256];
+        this.field_i = new int[6];
+        this.field_z = new int[257];
+        this.field_p = new int[256];
+        this.field_A = new byte[4096];
+        this.field_e = new int[6][258];
+        this.field_c = new int[16];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
     }
 }

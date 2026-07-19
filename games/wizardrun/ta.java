@@ -17,7 +17,7 @@ abstract class ta {
           if (param0 == 60) {
             break L0;
           } else {
-            field_f = null;
+            field_f = (String) null;
             break L0;
           }
         }
@@ -58,7 +58,7 @@ abstract class ta {
         field_f = null;
         field_c = null;
         if (param0 != -1) {
-            field_c = null;
+            field_c = (rc) null;
         }
         field_e = null;
         field_b = null;
@@ -71,6 +71,7 @@ abstract class ta {
     abstract int a(int param0);
 
     final static String a(int param0, CharSequence param1) {
+        StringBuilder discarded$1 = null;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -100,124 +101,123 @@ abstract class ta {
         String stackOut_32_2 = null;
         var9 = wizardrun.field_H;
         try {
-          if (param1 != null) {
-            var2_int = 0;
-            var3 = param1.length();
-            L0: while (true) {
-              L1: {
-                if (var2_int >= var3) {
-                  break L1;
-                } else {
-                  if (!d.a(true, param1.charAt(var2_int))) {
-                    break L1;
-                  } else {
-                    var2_int++;
-                    continue L0;
-                  }
-                }
-              }
-              L2: while (true) {
-                L3: {
+          L0: {
+            if (param1 != null) {
+              var2_int = 0;
+              var3 = param1.length();
+              L1: while (true) {
+                L2: {
                   if (var2_int >= var3) {
-                    break L3;
+                    break L2;
                   } else {
-                    if (!d.a(true, param1.charAt(var3 + -1))) {
-                      break L3;
+                    if (!d.a(true, param1.charAt(var2_int))) {
+                      break L2;
                     } else {
-                      var3--;
-                      continue L2;
+                      var2_int++;
+                      continue L1;
                     }
                   }
                 }
-                L4: {
-                  var4 = -var2_int + var3;
-                  if (param0 <= -48) {
-                    break L4;
-                  } else {
-                    field_b = null;
-                    break L4;
-                  }
-                }
-                if (var4 >= 1) {
-                  if (var4 <= 12) {
-                    var5 = new StringBuilder(var4);
-                    var6 = var2_int;
-                    L5: while (true) {
-                      if (var6 >= var3) {
-                        if (var5.length() != 0) {
-                          return var5.toString();
-                        } else {
-                          return null;
-                        }
+                L3: while (true) {
+                  L4: {
+                    if (var2_int >= var3) {
+                      break L4;
+                    } else {
+                      if (!d.a(true, param1.charAt(var3 + -1))) {
+                        break L4;
                       } else {
-                        L6: {
-                          var7 = param1.charAt(var6);
-                          if (fg.a((char) var7, 0)) {
-                            var8 = sf.a(-1514, (char) var7);
-                            if (var8 != 0) {
-                              StringBuilder discarded$1 = var5.append((char) var8);
-                              break L6;
-                            } else {
-                              break L6;
-                            }
-                          } else {
-                            break L6;
-                          }
-                        }
-                        var6++;
-                        continue L5;
+                        var3--;
+                        continue L3;
                       }
+                    }
+                  }
+                  L5: {
+                    var4 = -var2_int + var3;
+                    if (param0 <= -48) {
+                      break L5;
+                    } else {
+                      field_b = (o) null;
+                      break L5;
+                    }
+                  }
+                  if (var4 >= 1) {
+                    if ((var4 ^ -1) >= -13) {
+                      var5 = new StringBuilder(var4);
+                      var6 = var2_int;
+                      L6: while (true) {
+                        if (var6 >= var3) {
+                          if (var5.length() != 0) {
+                            return var5.toString();
+                          } else {
+                            return null;
+                          }
+                        } else {
+                          L7: {
+                            var7 = param1.charAt(var6);
+                            if (fg.a((char) var7, 0)) {
+                              var8 = sf.a(-1514, (char) var7);
+                              if (var8 != 0) {
+                                discarded$1 = var5.append((char) var8);
+                                break L7;
+                              } else {
+                                break L7;
+                              }
+                            } else {
+                              break L7;
+                            }
+                          }
+                          var6++;
+                          continue L6;
+                        }
+                      }
+                    } else {
+                      return null;
                     }
                   } else {
                     return null;
                   }
-                } else {
-                  return null;
                 }
               }
+            } else {
+              stackOut_2_0 = null;
+              stackIn_3_0 = stackOut_2_0;
+              break L0;
             }
-          } else {
-            stackOut_2_0 = null;
-            stackIn_3_0 = stackOut_2_0;
-            return (String) (Object) stackIn_3_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L8: {
             var2 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var2;
+            stackOut_31_0 = (RuntimeException) (var2);
             stackOut_31_1 = new StringBuilder().append("ta.D(").append(param0).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param1 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
-              break L7;
+              break L8;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
               stackIn_34_2 = stackOut_32_2;
-              break L7;
+              break L8;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');
         }
+        return (String) ((Object) stackIn_3_0);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
         field_e = "Members";
         field_f = "take you to the top.  Beware of the rats doing this.";

@@ -27,22 +27,18 @@ final class gs implements dja {
 
     public final tv a(byte param0) {
         int var2 = -113 % ((param0 - -64) / 50);
-        return (tv) (Object) new so();
+        return (tv) ((Object) new so());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
             gs.b((byte) 40);
-            return (tv[]) (Object) new so[param1];
+            return (tv[]) ((Object) new so[param1]);
         }
-        return (tv[]) (Object) new so[param1];
+        return (tv[]) ((Object) new so[param1]);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Set up new game";
         field_e = new oe();
         field_c = 262144;

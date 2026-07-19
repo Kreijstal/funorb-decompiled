@@ -10,16 +10,15 @@ final class fr {
     public static void a(byte param0) {
         field_a = null;
         field_b = null;
+        if (param0 != 1) {
+            field_a = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fr.A(";
         field_c = 0;
-        field_b = new byte[]{(byte) 2, (byte) 1};
+        field_b = new byte[]{(byte)2, (byte) 1};
         field_a = "Controls";
     }
 }

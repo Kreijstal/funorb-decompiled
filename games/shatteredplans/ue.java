@@ -9,11 +9,22 @@ final class ue {
     static int[] field_e;
 
     public static void a(int param0) {
+        String var2 = null;
         field_c = null;
         field_a = null;
-        field_e = null;
-        field_b = null;
-        field_d = null;
+        if (param0 != 18031) {
+          var2 = (String) null;
+          ue.a((java.applet.Applet) null, false, (String) null, -37);
+          field_e = null;
+          field_b = null;
+          field_d = null;
+          return;
+        } else {
+          field_e = null;
+          field_b = null;
+          field_d = null;
+          return;
+        }
     }
 
     final static void a(java.applet.Applet param0, boolean param1, String param2, int param3) {
@@ -34,6 +45,7 @@ final class ue {
             RuntimeException stackIn_16_0 = null;
             StringBuilder stackIn_16_1 = null;
             String stackIn_16_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_10_0 = null;
             StringBuilder stackOut_10_1 = null;
@@ -52,82 +64,96 @@ final class ue {
             StringBuilder stackOut_14_1 = null;
             String stackOut_14_2 = null;
             try {
-              if (param3 < -75) {
-                L0: {
-                  if (!qb.field_b.startsWith("win")) {
-                    break L0;
-                  } else {
-                    if (af.b(param2, -1495)) {
-                      return;
+              L0: {
+                if (param3 < -75) {
+                  L1: {
+                    if (!qb.field_b.startsWith("win")) {
+                      break L1;
                     } else {
-                      break L0;
+                      if (af.b(param2, -1495)) {
+                        decompiledRegionSelector0 = 1;
+                        break L0;
+                      } else {
+                        break L1;
+                      }
                     }
                   }
-                }
-                {
-                  L1: {
-                    param0.getAppletContext().showDocument(new java.net.URL(param2), "_blank");
-                    break L1;
+                  try {
+                    L2: {
+                      param0.getAppletContext().showDocument(new java.net.URL(param2), "_blank");
+                      break L2;
+                    }
+                  } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
+                    jq.a(-29901, (Throwable) null, "MGR1: " + param2);
+                    return;
                   }
+                  return;
+                } else {
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
-                return;
-              } else {
-                return;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L2: {
+              L3: {
                 var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_10_0 = (RuntimeException) var4_ref;
+                stackOut_10_0 = (RuntimeException) (var4_ref);
                 stackOut_10_1 = new StringBuilder().append("ue.B(");
                 stackIn_12_0 = stackOut_10_0;
                 stackIn_12_1 = stackOut_10_1;
                 stackIn_11_0 = stackOut_10_0;
                 stackIn_11_1 = stackOut_10_1;
                 if (param0 == null) {
-                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+                  stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+                  stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
                   stackOut_12_2 = "null";
                   stackIn_13_0 = stackOut_12_0;
                   stackIn_13_1 = stackOut_12_1;
                   stackIn_13_2 = stackOut_12_2;
-                  break L2;
+                  break L3;
                 } else {
-                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+                  stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
                   stackOut_11_2 = "{...}";
                   stackIn_13_0 = stackOut_11_0;
                   stackIn_13_1 = stackOut_11_1;
                   stackIn_13_2 = stackOut_11_2;
-                  break L2;
+                  break L3;
                 }
               }
-              L3: {
-                stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              L4: {
+                stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
                 stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',');
                 stackIn_15_0 = stackOut_13_0;
                 stackIn_15_1 = stackOut_13_1;
                 stackIn_14_0 = stackOut_13_0;
                 stackIn_14_1 = stackOut_13_1;
                 if (param2 == null) {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+                  stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
                   stackOut_15_2 = "null";
                   stackIn_16_0 = stackOut_15_0;
                   stackIn_16_1 = stackOut_15_1;
                   stackIn_16_2 = stackOut_15_2;
-                  break L3;
+                  break L4;
                 } else {
-                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+                  stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
                   stackOut_14_2 = "{...}";
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_16_1 = stackOut_14_1;
                   stackIn_16_2 = stackOut_14_2;
-                  break L3;
+                  break L4;
                 }
               }
-              throw r.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param3 + ')');
+              throw r.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param3 + ')');
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -137,10 +163,6 @@ final class ue {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Game Type: Points";
         field_b = "Click to hide the Projects window.";
         field_a = new mp();

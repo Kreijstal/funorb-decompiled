@@ -15,7 +15,7 @@ final class i {
             return true;
           } else {
             L0: {
-              if (param0 < 160) {
+              if (param0 < param1) {
                 break L0;
               } else {
                 if (255 < param0) {
@@ -51,7 +51,7 @@ final class i {
             return true;
           }
         } else {
-          if (param0 >= 160) {
+          if (param0 >= param1) {
             if (255 >= param0) {
               return true;
             } else {
@@ -108,36 +108,58 @@ final class i {
 
     final static void a(boolean param0) {
         ng.field_i = null;
-        ej.field_n = false;
+        ej.field_n = param0 ? true : false;
         ne.field_a = null;
         th.field_d = null;
         bd.field_p = null;
     }
 
     final static boolean b(boolean param0) {
-        if (null == nk.field_b) {
+        if (param0) {
+          if (null != nk.field_b) {
+            if (lj.field_z != ll.field_Q) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (lj.field_z != ll.field_Q) {
+          }
+        } else {
+          field_c = (String) null;
+          if (null != nk.field_b) {
+            if (lj.field_z != ll.field_Q) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     public static void c(boolean param0) {
         field_f = null;
-        field_d = null;
-        field_e = null;
-        field_b = null;
-        field_a = null;
-        field_c = null;
+        if (!param0) {
+          field_e = (String) null;
+          field_d = null;
+          field_e = null;
+          field_b = null;
+          field_a = null;
+          field_c = null;
+          return;
+        } else {
+          field_d = null;
+          field_e = null;
+          field_b = null;
+          field_a = null;
+          field_c = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "End Tutorial";
         field_d = "Waiting for music";
         field_b = new int[16384];

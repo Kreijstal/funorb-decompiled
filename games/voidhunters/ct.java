@@ -6,6 +6,10 @@ final class ct {
     static String field_b;
 
     final static int a(int param0, int param1) {
+        if (param0 != 19143) {
+            ij var3 = (ij) null;
+            ct.a((ml) null, 95, (ij) null);
+        }
         if (li.field_i) {
             return mmb.field_d[param1].a();
         }
@@ -56,12 +60,12 @@ final class ct {
               if (param1 > 30) {
                 break L1;
               } else {
-                field_a = null;
+                field_a = (gj) null;
                 break L1;
               }
             }
             L2: {
-              param2.b(-10258, (ksa) (Object) new hua(param0.field_j));
+              param2.b(-10258, new hua(param0.field_j));
               if (null == param0.field_d) {
                 break L2;
               } else {
@@ -71,7 +75,7 @@ final class ct {
                   L3: while (true) {
                     if (var4 >= param0.field_d.length) {
                       if (var3_int == 0) {
-                        param2.b(-10258, (ksa) (Object) new hua(-1));
+                        param2.b(-10258, new hua(-1));
                         break L2;
                       } else {
                         break L2;
@@ -79,8 +83,8 @@ final class ct {
                     } else {
                       L4: {
                         var5 = param0.field_d[var4];
-                        if (var5.field_c != -1) {
-                          param2.b(-10258, (ksa) (Object) new hua(var4));
+                        if (0 != (var5.field_c ^ -1)) {
+                          param2.b(-10258, new hua(var4));
                           ct.a(param0.field_f[var5.field_c], 108, param2);
                           if (-1 + param0.field_d.length == var4) {
                             var3_int = 1;
@@ -107,23 +111,23 @@ final class ct {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var3;
+            stackOut_18_0 = (RuntimeException) (var3);
             stackOut_18_1 = new StringBuilder().append("ct.B(");
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L5;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -132,23 +136,23 @@ final class ct {
             }
           }
           L6: {
-            stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
             stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param1).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param2 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -156,21 +160,17 @@ final class ct {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
         }
     }
 
     public static void a(byte param0) {
-        int var1 = 0;
+        int var1 = 100 % ((param0 - 79) / 38);
         field_b = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new gj();
         field_b = " KEYS";
     }

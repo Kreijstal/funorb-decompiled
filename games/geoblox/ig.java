@@ -18,7 +18,7 @@ final class ig {
                 if (gk.field_a[param3] <= gk.field_a[param1]) {
                   var4 = cj.field_b[param3] + fb.field_m[param3] + k.field_i[param3];
                   var5 = fb.field_m[param1] + (k.field_i[param1] + cj.field_b[param1]);
-                  var6 = 0;
+                  var6 = 76 % ((-38 - param2) / 45);
                   if (var4 < var5) {
                     return true;
                   } else {
@@ -53,7 +53,7 @@ final class ig {
                 if (hg.field_a[param3] <= hg.field_a[param1]) {
                   var4 = cj.field_b[param3] + fb.field_m[param3] + k.field_i[param3];
                   var5 = fb.field_m[param1] + (k.field_i[param1] + cj.field_b[param1]);
-                  var6 = 0;
+                  var6 = 76 % ((-38 - param2) / 45);
                   if (var4 < var5) {
                     return true;
                   } else {
@@ -108,10 +108,10 @@ final class ig {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var3 = new sl(false);
+            var3 = new sl(param2);
             var3.field_j = param1;
             var3.field_e = param0;
-            stackOut_0_0 = (sl) var3;
+            stackOut_0_0 = (sl) (var3);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -119,23 +119,23 @@ final class ig {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3_ref;
+            stackOut_2_0 = (RuntimeException) (var3_ref);
             stackOut_2_1 = new StringBuilder().append("ig.B(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -143,7 +143,7 @@ final class ig {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + false + ')');
+          throw t.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }

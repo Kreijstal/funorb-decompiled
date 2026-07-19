@@ -13,6 +13,9 @@ final class hf extends pi {
 
     public static void a(int param0) {
         field_p = null;
+        if (param0 != -16935) {
+            return;
+        }
         field_q = null;
         field_u = null;
         field_s = null;
@@ -20,17 +23,13 @@ final class hf extends pi {
 
     hf(byte[] param0) {
         try {
-            ((hf) this).field_n = param0;
+            this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "hf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = "Went with a Bang";
         field_p = "Aqualung: Extends time that can be spent underwater.";
     }

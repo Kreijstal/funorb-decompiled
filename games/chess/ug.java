@@ -20,10 +20,13 @@ final class ug {
     }
 
     final static void b(boolean param0) {
+        if (param0) {
+            ug.a(-48);
+        }
     }
 
     ug(int param0) {
-        ((ug) this).field_c = param0;
+        this.field_c = param0;
     }
 
     final static boolean a(boolean param0) {
@@ -34,19 +37,16 @@ final class ug {
     }
 
     final static r a(byte param0, long param1) {
+        r discarded$2 = null;
         if (param0 > -75) {
-          r discarded$2 = ug.a((byte) -33, -47L);
-          return (r) (Object) d.field_Mb.a(param1, 3000);
+          discarded$2 = ug.a((byte) -33, -47L);
+          return (r) ((Object) d.field_Mb.a(param1, 3000));
         } else {
-          return (r) (Object) d.field_Mb.a(param1, 3000);
+          return (r) ((Object) d.field_Mb.a(param1, 3000));
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 20;
     }
 }

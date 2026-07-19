@@ -51,16 +51,16 @@ final class a {
               var7 = param5;
               var8 = param2 * param2;
               var9 = param5 * param5;
-              var10 = var9 << 1;
-              var11 = var8 << 1;
-              var12 = param5 << 1;
+              var10 = var9 << 747253889;
+              var11 = var8 << 1232801121;
+              var12 = param5 << 1015189633;
               var13 = var8 * (1 - var12) + var10;
               var14 = -((-1 + var12) * var11) + var9;
-              var15 = var8 << 2;
-              var16 = var9 << 2;
-              var17 = ((var6_int << 1) + 3) * var10;
-              var18 = var11 * ((var7 << 1) - 3);
-              var21 = 0;
+              var15 = var8 << 754288802;
+              var16 = var9 << -301934078;
+              var17 = ((var6_int << 640877281) + 3) * var10;
+              var18 = var11 * ((var7 << 1959717441) - 3);
+              var21 = -103 % ((82 - param3) / 34);
               var19 = var16 * (1 + var6_int);
               if (j.field_q > param4) {
                 break L1;
@@ -77,7 +77,7 @@ final class a {
             }
             var20 = (var7 + -1) * var15;
             L2: while (true) {
-              if (var7 <= 0) {
+              if (-1 <= (var7 ^ -1)) {
                 break L0;
               } else {
                 L3: {
@@ -99,7 +99,7 @@ final class a {
                   }
                 }
                 L5: {
-                  if (var14 < 0) {
+                  if ((var14 ^ -1) > -1) {
                     var14 = var14 + var19;
                     var13 = var13 + var17;
                     var17 = var17 + var16;
@@ -147,7 +147,7 @@ final class a {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var6, "a.C(" + param0 + ',' + param1 + ',' + param2 + ',' + 123 + ',' + param4 + ',' + param5 + ')');
+          throw rb.a((Throwable) ((Object) var6), "a.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class a {
         try {
             java.net.MalformedURLException var4 = null;
             RuntimeException var4_ref = null;
-            Object var5 = null;
+            java.applet.Applet var5 = null;
             RuntimeException stackIn_11_0 = null;
             StringBuilder stackIn_11_1 = null;
             RuntimeException stackIn_12_0 = null;
@@ -170,6 +170,7 @@ final class a {
             RuntimeException stackIn_16_0 = null;
             StringBuilder stackIn_16_1 = null;
             String stackIn_16_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_10_0 = null;
             StringBuilder stackOut_10_1 = null;
@@ -192,7 +193,8 @@ final class a {
                 L1: {
                   if (vh.field_i.startsWith("win")) {
                     if (fq.a(param1, 0)) {
-                      return;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     } else {
                       break L1;
                     }
@@ -206,7 +208,7 @@ final class a {
                     if (param3 == 3) {
                       break L2;
                     } else {
-                      var5 = null;
+                      var5 = (java.applet.Applet) null;
                       a.a(false, (String) null, (java.applet.Applet) null, -43);
                       return;
                     }
@@ -217,29 +219,30 @@ final class a {
                   nn.a("MGR1: " + param1, (Throwable) null, param3 ^ -9959);
                   return;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_10_0 = (RuntimeException) var4_ref;
+                stackOut_10_0 = (RuntimeException) (var4_ref);
                 stackOut_10_1 = new StringBuilder().append("a.A(").append(param0).append(',');
                 stackIn_12_0 = stackOut_10_0;
                 stackIn_12_1 = stackOut_10_1;
                 stackIn_11_0 = stackOut_10_0;
                 stackIn_11_1 = stackOut_10_1;
                 if (param1 == null) {
-                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+                  stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+                  stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
                   stackOut_12_2 = "null";
                   stackIn_13_0 = stackOut_12_0;
                   stackIn_13_1 = stackOut_12_1;
                   stackIn_13_2 = stackOut_12_2;
                   break L3;
                 } else {
-                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+                  stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
                   stackOut_11_2 = "{...}";
                   stackIn_13_0 = stackOut_11_0;
                   stackIn_13_1 = stackOut_11_1;
@@ -248,23 +251,23 @@ final class a {
                 }
               }
               L4: {
-                stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+                stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
                 stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
                 stackIn_15_0 = stackOut_13_0;
                 stackIn_15_1 = stackOut_13_1;
                 stackIn_14_0 = stackOut_13_0;
                 stackIn_14_1 = stackOut_13_1;
                 if (param2 == null) {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+                  stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
                   stackOut_15_2 = "null";
                   stackIn_16_0 = stackOut_15_0;
                   stackIn_16_1 = stackOut_15_1;
                   stackIn_16_2 = stackOut_15_2;
                   break L4;
                 } else {
-                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+                  stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
                   stackOut_14_2 = "{...}";
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_16_1 = stackOut_14_1;
@@ -272,7 +275,12 @@ final class a {
                   break L4;
                 }
               }
-              throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param3 + ')');
+              throw rb.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param3 + ')');
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -282,10 +290,6 @@ final class a {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new int[128];
         field_b = "Email (Login):";
         field_a = "Unfortunately you are not eligible to create an account.";

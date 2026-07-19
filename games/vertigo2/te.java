@@ -18,9 +18,18 @@ final class te extends ji {
     }
 
     private final void d(int param0, int param1) {
-        ((te) this).field_K = 4080 & param1 >> 4;
-        ((te) this).field_G = (16711680 & param1) >> 12;
-        ((te) this).field_A = (255 & param1) << 4;
+        if (param0 != -17016) {
+          field_y = (String) null;
+          this.field_K = 4080 & param1 >> 300287300;
+          this.field_G = (16711680 & param1) >> -688124244;
+          this.field_A = (255 & param1) << -1977088540;
+          return;
+        } else {
+          this.field_K = 4080 & param1 >> 300287300;
+          this.field_G = (16711680 & param1) >> -688124244;
+          this.field_A = (255 & param1) << -1977088540;
+          return;
+        }
     }
 
     private te(int param0) {
@@ -53,7 +62,7 @@ final class te extends ji {
               if (param0 == 110) {
                 break L1;
               } else {
-                field_z = null;
+                field_z = (nj) null;
                 break L1;
               }
             }
@@ -72,23 +81,23 @@ final class te extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) runtimeException;
+            stackOut_5_0 = (RuntimeException) (runtimeException);
             stackOut_5_1 = new StringBuilder().append("te.C(").append(param0).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -96,7 +105,7 @@ final class te extends ji {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
     }
 
@@ -108,45 +117,41 @@ final class te extends ji {
         int var7 = 0;
         int var8 = 0;
         int[][] var9 = null;
-        int[][] var10 = null;
-        int[][] var11 = null;
         var8 = Vertigo2.field_L ? 1 : 0;
-        var11 = ((te) this).field_v.a(param1, param0 + 3778);
-        var10 = var11;
-        var9 = var10;
+        var9 = this.field_v.a(param1, param0 + 3778);
         var3 = var9;
         if (param0 == -3780) {
-          if (!((te) this).field_v.field_c) {
+          if (!this.field_v.field_c) {
             return var9;
           } else {
-            var4 = var11[0];
-            var5 = var11[1];
-            var6 = var11[2];
+            var4 = var9[0];
+            var5 = var9[1];
+            var6 = var9[2];
             var7 = 0;
             L0: while (true) {
               if (we.field_M <= var7) {
                 return var9;
               } else {
-                var4[var7] = ((te) this).field_G;
-                var5[var7] = ((te) this).field_K;
-                var6[var7] = ((te) this).field_A;
+                var4[var7] = this.field_G;
+                var5[var7] = this.field_K;
+                var6[var7] = this.field_A;
                 var7++;
                 continue L0;
               }
             }
           }
         } else {
-          field_I = null;
-          if (((te) this).field_v.field_c) {
-            var4 = var11[0];
-            var5 = var11[1];
-            var6 = var11[2];
+          field_I = (String) null;
+          if (this.field_v.field_c) {
+            var4 = var9[0];
+            var5 = var9[1];
+            var6 = var9[2];
             var7 = 0;
             L1: while (true) {
               if (we.field_M > var7) {
-                var4[var7] = ((te) this).field_G;
-                var5[var7] = ((te) this).field_K;
-                var6[var7] = ((te) this).field_A;
+                var4[var7] = this.field_G;
+                var5[var7] = this.field_K;
+                var6[var7] = this.field_A;
                 var7++;
                 continue L1;
               } else {
@@ -163,17 +168,23 @@ final class te extends ji {
         field_F = null;
         field_B = null;
         field_z = null;
-        field_I = null;
-        field_D = null;
-        field_y = null;
-        field_H = null;
+        if (param0 != -30443) {
+          field_z = (nj) null;
+          field_I = null;
+          field_D = (int[][]) null;
+          field_y = null;
+          field_H = null;
+          return;
+        } else {
+          field_I = null;
+          field_D = (int[][]) null;
+          field_y = null;
+          field_H = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_F = new int[8192];
         field_y = "Accept <%0> into this game";
         field_H = new String[]{"Low", "Medium", "High"};

@@ -14,9 +14,13 @@ final class kh implements Runnable {
     public static void a(int param0) {
         field_a = null;
         field_h = null;
+        if (param0 < 82) {
+            field_h = (dm[]) null;
+        }
     }
 
     final static String a(byte param0) {
+        String discarded$0 = null;
         if (mi.field_C < 2) {
             return j.field_lb;
         }
@@ -30,7 +34,7 @@ final class kh implements Runnable {
             return ff.field_l;
         }
         if (param0 >= -59) {
-            String discarded$0 = kh.a((byte) -7);
+            discarded$0 = kh.a((byte) -7);
         }
         if (!l.field_h.a("commonui", (byte) -127)) {
             return wi.field_F + " - " + l.field_h.a(0, "commonui") + "%";
@@ -54,38 +58,34 @@ final class kh implements Runnable {
         int var1_int = 0;
         qk var2 = null;
         int var4 = Geoblox.field_C;
-        ((kh) this).field_c = true;
+        this.field_c = true;
         try {
-            while (!((kh) this).field_f) {
-                for (var1_int = 0; var1_int < 2; var1_int++) {
-                    var2 = ((kh) this).field_g[var1_int];
+            while (!this.field_f) {
+                for (var1_int = 0; (var1_int ^ -1) > -3; var1_int++) {
+                    var2 = this.field_g[var1_int];
                     if (var2 != null) {
                         var2.b();
                     }
                 }
                 bc.a(0, 10L);
-                Object var5 = null;
-                wj.a(((kh) this).field_b, (byte) 116, (Object) null);
+                Object var5 = (Object) null;
+                wj.a(this.field_b, (byte) 116, (Object) null);
             }
         } catch (Exception exception) {
-            Object var6 = null;
-            gi.a((Throwable) (Object) exception, (String) null, (byte) 125);
+            String var6 = (String) null;
+            gi.a((Throwable) ((Object) exception), (String) null, (byte) 125);
         } finally {
-            ((kh) this).field_c = false;
+            this.field_c = false;
         }
     }
 
     kh() {
-        ((kh) this).field_g = new qk[2];
-        ((kh) this).field_f = false;
-        ((kh) this).field_c = false;
+        this.field_g = new qk[2];
+        this.field_f = false;
+        this.field_c = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = new dm[10];
     }
 }

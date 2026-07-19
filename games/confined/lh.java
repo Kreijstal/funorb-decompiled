@@ -16,10 +16,6 @@ final class lh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "lh.A(";
         field_b = 0;
         field_a = "Previous";

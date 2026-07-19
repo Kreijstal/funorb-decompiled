@@ -5,6 +5,7 @@ final class fr {
     static sm field_a;
 
     final static void a(int param0, int param1) {
+        gg discarded$2 = null;
         if (rr.field_z[param0]) {
           if (param1 < 58) {
             fr.a(116, -22);
@@ -13,7 +14,7 @@ final class fr {
             return;
           }
         } else {
-          gg discarded$2 = sp.a(rr.field_B[param0], -84);
+          discarded$2 = sp.a(rr.field_B[param0], -84);
           rr.field_z[param0] = true;
           if (param1 >= 58) {
             return;
@@ -25,6 +26,9 @@ final class fr {
     }
 
     public static void a(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_a = null;
     }
 

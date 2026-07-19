@@ -15,91 +15,136 @@ final class ai {
     static String[] field_a;
 
     final static void a(boolean param0, int param1, int param2) {
+        byte discarded$5 = 0;
+        byte discarded$6 = 0;
+        byte discarded$7 = 0;
+        byte discarded$8 = 0;
+        byte discarded$9 = 0;
         int var3 = 0;
         String var4 = null;
         Object var5 = null;
-        Object var6 = null;
-        CharSequence var7 = null;
+        String var6 = null;
+        Object var16 = null;
+        Object var17 = null;
+        Object var18 = null;
+        Object var19 = null;
+        Object var20 = null;
+        Object var21 = null;
+        Object var22 = null;
+        Object var23 = null;
+        CharSequence var31 = null;
+        var16 = null;
+        var17 = null;
+        var18 = null;
+        var19 = null;
+        var20 = null;
+        var21 = null;
+        var22 = null;
+        var23 = null;
         if (me.field_a != null) {
           var3 = me.field_a.a(3, param0);
           if (var3 != 0) {
-            if (var3 == 2) {
-              if (null != me.field_a.field_db) {
-                if (!me.field_a.field_db.equals((Object) (Object) "")) {
-                  L0: {
-                    if (me.field_a.field_db.charAt(0) != 91) {
-                      var7 = (CharSequence) (Object) me.field_a.field_db;
-                      var4 = ad.a(var7, -2);
+            L0: {
+              if (var3 != 2) {
+                break L0;
+              } else {
+                if (null == me.field_a.field_db) {
+                  break L0;
+                } else {
+                  if (!me.field_a.field_db.equals("")) {
+                    L1: {
+                      if (me.field_a.field_db.charAt(0) != 91) {
+                        var31 = (CharSequence) ((Object) me.field_a.field_db);
+                        var4 = ad.a(var31, -2);
+                        break L1;
+                      } else {
+                        var4 = me.field_a.field_db;
+                        break L1;
+                      }
+                    }
+                    L2: {
+                      var5 = null;
+                      if (pk.field_b == 0) {
+                        var5 = hf.a(param2, 79, var4);
+                        break L2;
+                      } else {
+                        break L2;
+                      }
+                    }
+                    L3: {
+                      if (pk.field_b != 1) {
+                        break L3;
+                      } else {
+                        var5 = ab.a(param2, param1 + 21247, var4);
+                        break L3;
+                      }
+                    }
+                    L4: {
+                      if (pk.field_b != 2) {
+                        break L4;
+                      } else {
+                        var5 = a.a(param2, var4, (byte) 64);
+                        break L4;
+                      }
+                    }
+                    L5: {
+                      if (3 == pk.field_b) {
+                        var5 = of.a(var4, param2, var4, -1);
+                        break L5;
+                      } else {
+                        break L5;
+                      }
+                    }
+                    if (var5 == null) {
                       break L0;
                     } else {
-                      var4 = me.field_a.field_db;
-                      break L0;
+                      var6 = (String) null;
+                      lc.a(var4, (String) null, 2, 0, (String) (var5), false);
+                      pk.field_b = -1;
+                      me.field_a = null;
+                      if (param1 == 3) {
+                        return;
+                      } else {
+                        discarded$5 = ai.a((byte) 43, '�');
+                        return;
+                      }
                     }
-                  }
-                  L1: {
-                    var5 = null;
-                    if (pk.field_b == 0) {
-                      var5 = (Object) (Object) hf.a(13, 79, var4);
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  }
-                  L2: {
-                    if (pk.field_b != 1) {
-                      break L2;
-                    } else {
-                      var5 = (Object) (Object) ab.a(13, 21250, var4);
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    if (pk.field_b != 2) {
-                      break L3;
-                    } else {
-                      var5 = (Object) (Object) a.a(13, var4, (byte) 64);
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    if (3 == pk.field_b) {
-                      var5 = (Object) (Object) of.a(var4, 13, var4, -1);
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                  if (var5 != null) {
-                    var6 = null;
-                    lc.a(var4, (String) null, 2, 0, (String) var5, false);
-                    pk.field_b = -1;
-                    me.field_a = null;
-                    return;
                   } else {
                     pk.field_b = -1;
                     me.field_a = null;
-                    return;
+                    if (param1 == 3) {
+                      return;
+                    } else {
+                      discarded$6 = ai.a((byte) 43, '�');
+                      return;
+                    }
                   }
-                } else {
-                  pk.field_b = -1;
-                  me.field_a = null;
-                  return;
                 }
-              } else {
-                pk.field_b = -1;
-                me.field_a = null;
-                return;
               }
+            }
+            pk.field_b = -1;
+            me.field_a = null;
+            if (param1 == 3) {
+              return;
             } else {
-              pk.field_b = -1;
-              me.field_a = null;
+              discarded$7 = ai.a((byte) 43, '�');
               return;
             }
           } else {
-            return;
+            if (param1 != 3) {
+              discarded$8 = ai.a((byte) 43, '�');
+              return;
+            } else {
+              return;
+            }
           }
         } else {
-          return;
+          if (param1 == 3) {
+            return;
+          } else {
+            discarded$9 = ai.a((byte) 43, '�');
+            return;
+          }
         }
     }
 
@@ -109,540 +154,187 @@ final class ai {
         var3 = Chess.field_G;
         if (param1 > 0) {
           if (128 <= param1) {
-            if (param1 >= 160) {
-              if (255 < param1) {
-                if (param1 != 8364) {
-                  if (param1 == 8218) {
-                    var2 = -126;
+            L0: {
+              L1: {
+                if (param1 < 160) {
+                  break L1;
+                } else {
+                  if (255 >= param1) {
+                    var2 = (byte)param1;
+                    break L0;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              if (param1 == 8364) {
+                var2 = -128;
+                if (param0 == -43) {
+                  return (byte) var2;
+                } else {
+                  field_h = (byte[]) null;
+                  return (byte) var2;
+                }
+              } else {
+                if (param1 == 8218) {
+                  var2 = -126;
+                  if (param0 == -43) {
                     return (byte) var2;
                   } else {
-                    if (402 == param1) {
-                      var2 = -125;
+                    field_h = (byte[]) null;
+                    return (byte) var2;
+                  }
+                } else {
+                  if (402 == param1) {
+                    var2 = -125;
+                    if (param0 == -43) {
                       return (byte) var2;
                     } else {
-                      L0: {
-                        if (param1 != 8222) {
-                          if (param1 != 8230) {
-                            if (param1 == 8224) {
-                              var2 = -122;
-                              return (byte) var2;
-                            } else {
-                              if (param1 == 8225) {
-                                var2 = -121;
-                                return (byte) var2;
-                              } else {
-                                if (param1 == 710) {
-                                  var2 = -120;
-                                  return (byte) var2;
-                                } else {
-                                  if (param1 != 8240) {
-                                    if (param1 == 352) {
-                                      var2 = -118;
-                                      return (byte) var2;
-                                    } else {
-                                      if (8249 == param1) {
-                                        var2 = -117;
-                                        return (byte) var2;
-                                      } else {
-                                        if (338 != param1) {
-                                          if (param1 == 381) {
-                                            var2 = -114;
-                                            return (byte) var2;
-                                          } else {
-                                            if (8216 == param1) {
-                                              var2 = -111;
-                                              return (byte) var2;
-                                            } else {
-                                              if (param1 == 8217) {
-                                                var2 = -110;
-                                                return (byte) var2;
-                                              } else {
-                                                if (param1 == 8220) {
-                                                  var2 = -109;
-                                                  return (byte) var2;
-                                                } else {
-                                                  if (8221 != param1) {
-                                                    if (param1 != 8226) {
-                                                      if (8211 == param1) {
-                                                        var2 = -106;
-                                                        return (byte) var2;
-                                                      } else {
-                                                        if (8212 != param1) {
-                                                          if (param1 != 732) {
-                                                            if (8482 == param1) {
-                                                              var2 = -103;
-                                                              return (byte) var2;
-                                                            } else {
-                                                              if (param1 == 353) {
-                                                                var2 = -102;
-                                                                return (byte) var2;
-                                                              } else {
-                                                                if (param1 != 8250) {
-                                                                  if (339 == param1) {
-                                                                    var2 = -100;
-                                                                    return (byte) var2;
-                                                                  } else {
-                                                                    if (param1 == 382) {
-                                                                      var2 = -98;
-                                                                      return (byte) var2;
-                                                                    } else {
-                                                                      if (param1 == 376) {
-                                                                        var2 = -97;
-                                                                        return (byte) var2;
-                                                                      } else {
-                                                                        var2 = 63;
-                                                                        break L0;
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                } else {
-                                                                  var2 = -101;
-                                                                  break L0;
-                                                                }
-                                                              }
-                                                            }
-                                                          } else {
-                                                            var2 = -104;
-                                                            break L0;
-                                                          }
-                                                        } else {
-                                                          var2 = -105;
-                                                          break L0;
-                                                        }
-                                                      }
-                                                    } else {
-                                                      var2 = -107;
-                                                      break L0;
-                                                    }
-                                                  } else {
-                                                    var2 = -108;
-                                                    break L0;
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        } else {
-                                          var2 = -116;
-                                          break L0;
-                                        }
-                                      }
-                                    }
-                                  } else {
-                                    var2 = -119;
-                                    break L0;
-                                  }
-                                }
-                              }
-                            }
-                          } else {
-                            var2 = -123;
-                            break L0;
-                          }
-                        } else {
-                          var2 = -124;
-                          break L0;
-                        }
-                      }
+                      field_h = (byte[]) null;
                       return (byte) var2;
                     }
-                  }
-                } else {
-                  var2 = -128;
-                  return (byte) var2;
-                }
-              } else {
-                var2 = (byte)param1;
-                return (byte) var2;
-              }
-            } else {
-              if (param1 != 8364) {
-                if (param1 != 8218) {
-                  if (402 != param1) {
-                    L1: {
-                      if (param1 != 8222) {
-                        if (param1 != 8230) {
-                          if (param1 != 8224) {
-                            if (param1 != 8225) {
-                              if (param1 != 710) {
-                                if (param1 != 8240) {
-                                  if (param1 != 352) {
-                                    if (8249 != param1) {
-                                      if (338 != param1) {
-                                        if (param1 != 381) {
-                                          if (8216 != param1) {
-                                            if (param1 != 8217) {
-                                              if (param1 == 8220) {
-                                                var2 = -109;
-                                                return (byte) var2;
-                                              } else {
-                                                if (8221 != param1) {
-                                                  if (param1 != 8226) {
-                                                    if (8211 == param1) {
-                                                      var2 = -106;
-                                                      break L1;
-                                                    } else {
-                                                      if (8212 != param1) {
-                                                        if (param1 != 732) {
-                                                          if (8482 == param1) {
-                                                            var2 = -103;
-                                                            break L1;
-                                                          } else {
-                                                            if (param1 == 353) {
-                                                              var2 = -102;
-                                                              break L1;
-                                                            } else {
-                                                              if (param1 != 8250) {
-                                                                if (339 == param1) {
-                                                                  var2 = -100;
-                                                                  break L1;
-                                                                } else {
-                                                                  if (param1 == 382) {
-                                                                    var2 = -98;
-                                                                    break L1;
-                                                                  } else {
-                                                                    if (param1 == 376) {
-                                                                      var2 = -97;
-                                                                      break L1;
-                                                                    } else {
-                                                                      var2 = 63;
-                                                                      break L1;
-                                                                    }
-                                                                  }
-                                                                }
-                                                              } else {
-                                                                var2 = -101;
-                                                                break L1;
-                                                              }
-                                                            }
-                                                          }
-                                                        } else {
-                                                          var2 = -104;
-                                                          break L1;
-                                                        }
-                                                      } else {
-                                                        var2 = -105;
-                                                        break L1;
-                                                      }
-                                                    }
-                                                  } else {
-                                                    var2 = -107;
-                                                    break L1;
-                                                  }
-                                                } else {
-                                                  var2 = -108;
-                                                  break L1;
-                                                }
-                                              }
-                                            } else {
-                                              var2 = -110;
-                                              return (byte) var2;
-                                            }
-                                          } else {
-                                            var2 = -111;
-                                            return (byte) var2;
-                                          }
-                                        } else {
-                                          var2 = -114;
-                                          return (byte) var2;
-                                        }
-                                      } else {
-                                        var2 = -116;
-                                        break L1;
-                                      }
-                                    } else {
-                                      var2 = -117;
-                                      return (byte) var2;
-                                    }
-                                  } else {
-                                    var2 = -118;
-                                    return (byte) var2;
-                                  }
-                                } else {
-                                  var2 = -119;
-                                  break L1;
-                                }
-                              } else {
-                                var2 = -120;
-                                return (byte) var2;
-                              }
-                            } else {
-                              var2 = -121;
-                              return (byte) var2;
-                            }
-                          } else {
-                            var2 = -122;
-                            return (byte) var2;
-                          }
-                        } else {
-                          var2 = -123;
-                          break L1;
-                        }
-                      } else {
-                        var2 = -124;
-                        break L1;
-                      }
-                    }
-                    return (byte) var2;
                   } else {
-                    var2 = -125;
-                    return (byte) var2;
-                  }
-                } else {
-                  var2 = -126;
-                  return (byte) var2;
-                }
-              } else {
-                var2 = -128;
-                return (byte) var2;
-              }
-            }
-          } else {
-            var2 = (byte)param1;
-            return (byte) var2;
-          }
-        } else {
-          if (param1 >= 160) {
-            if (255 < param1) {
-              if (param1 != 8364) {
-                if (param1 != 8218) {
-                  if (402 != param1) {
-                    L2: {
-                      if (param1 != 8222) {
-                        if (param1 != 8230) {
-                          if (param1 != 8224) {
-                            if (param1 != 8225) {
-                              if (param1 == 710) {
-                                var2 = -120;
-                                return (byte) var2;
-                              } else {
-                                if (param1 != 8240) {
-                                  if (param1 == 352) {
-                                    var2 = -118;
-                                    break L2;
-                                  } else {
-                                    if (8249 == param1) {
-                                      var2 = -117;
-                                      break L2;
-                                    } else {
-                                      if (338 != param1) {
-                                        if (param1 == 381) {
-                                          var2 = -114;
-                                          break L2;
-                                        } else {
-                                          if (8216 == param1) {
-                                            var2 = -111;
-                                            break L2;
-                                          } else {
-                                            if (param1 == 8217) {
-                                              var2 = -110;
-                                              break L2;
-                                            } else {
-                                              if (param1 == 8220) {
-                                                var2 = -109;
-                                                break L2;
-                                              } else {
-                                                if (8221 != param1) {
-                                                  if (param1 != 8226) {
-                                                    if (8211 == param1) {
-                                                      var2 = -106;
-                                                      break L2;
-                                                    } else {
-                                                      if (8212 != param1) {
-                                                        if (param1 != 732) {
-                                                          if (8482 == param1) {
-                                                            var2 = -103;
-                                                            break L2;
-                                                          } else {
-                                                            if (param1 == 353) {
-                                                              var2 = -102;
-                                                              break L2;
-                                                            } else {
-                                                              if (param1 != 8250) {
-                                                                if (339 == param1) {
-                                                                  var2 = -100;
-                                                                  break L2;
-                                                                } else {
-                                                                  if (param1 == 382) {
-                                                                    var2 = -98;
-                                                                    break L2;
-                                                                  } else {
-                                                                    if (param1 == 376) {
-                                                                      var2 = -97;
-                                                                      break L2;
-                                                                    } else {
-                                                                      var2 = 63;
-                                                                      break L2;
-                                                                    }
-                                                                  }
-                                                                }
-                                                              } else {
-                                                                var2 = -101;
-                                                                break L2;
-                                                              }
-                                                            }
-                                                          }
-                                                        } else {
-                                                          var2 = -104;
-                                                          break L2;
-                                                        }
-                                                      } else {
-                                                        var2 = -105;
-                                                        break L2;
-                                                      }
-                                                    }
-                                                  } else {
-                                                    var2 = -107;
-                                                    break L2;
-                                                  }
-                                                } else {
-                                                  var2 = -108;
-                                                  break L2;
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      } else {
-                                        var2 = -116;
-                                        break L2;
-                                      }
-                                    }
-                                  }
-                                } else {
-                                  var2 = -119;
-                                  break L2;
-                                }
-                              }
-                            } else {
-                              var2 = -121;
-                              return (byte) var2;
-                            }
-                          } else {
-                            var2 = -122;
-                            return (byte) var2;
-                          }
-                        } else {
-                          var2 = -123;
-                          break L2;
-                        }
-                      } else {
-                        var2 = -124;
-                        break L2;
-                      }
-                    }
-                    return (byte) var2;
-                  } else {
-                    var2 = -125;
-                    return (byte) var2;
-                  }
-                } else {
-                  var2 = -126;
-                  return (byte) var2;
-                }
-              } else {
-                var2 = -128;
-                return (byte) var2;
-              }
-            } else {
-              var2 = (byte)param1;
-              return (byte) var2;
-            }
-          } else {
-            if (param1 != 8364) {
-              if (param1 != 8218) {
-                if (402 != param1) {
-                  L3: {
                     if (param1 != 8222) {
                       if (param1 != 8230) {
-                        if (param1 != 8224) {
-                          if (param1 != 8225) {
+                        if (param1 == 8224) {
+                          var2 = -122;
+                          if (param0 == -43) {
+                            return (byte) var2;
+                          } else {
+                            field_h = (byte[]) null;
+                            return (byte) var2;
+                          }
+                        } else {
+                          if (param1 == 8225) {
+                            var2 = -121;
+                            if (param0 == -43) {
+                              return (byte) var2;
+                            } else {
+                              field_h = (byte[]) null;
+                              return (byte) var2;
+                            }
+                          } else {
                             if (param1 == 710) {
                               var2 = -120;
-                              return (byte) var2;
+                              if (param0 == -43) {
+                                return (byte) var2;
+                              } else {
+                                field_h = (byte[]) null;
+                                return (byte) var2;
+                              }
                             } else {
                               if (param1 != 8240) {
                                 if (param1 == 352) {
                                   var2 = -118;
-                                  break L3;
+                                  if (param0 == -43) {
+                                    return (byte) var2;
+                                  } else {
+                                    field_h = (byte[]) null;
+                                    return (byte) var2;
+                                  }
                                 } else {
                                   if (8249 == param1) {
                                     var2 = -117;
-                                    break L3;
+                                    if (param0 == -43) {
+                                      return (byte) var2;
+                                    } else {
+                                      field_h = (byte[]) null;
+                                      return (byte) var2;
+                                    }
                                   } else {
                                     if (338 != param1) {
                                       if (param1 == 381) {
                                         var2 = -114;
-                                        break L3;
+                                        if (param0 == -43) {
+                                          return (byte) var2;
+                                        } else {
+                                          field_h = (byte[]) null;
+                                          return (byte) var2;
+                                        }
                                       } else {
                                         if (8216 == param1) {
                                           var2 = -111;
-                                          break L3;
+                                          if (param0 == -43) {
+                                            return (byte) var2;
+                                          } else {
+                                            field_h = (byte[]) null;
+                                            return (byte) var2;
+                                          }
                                         } else {
                                           if (param1 == 8217) {
                                             var2 = -110;
-                                            break L3;
+                                            if (param0 == -43) {
+                                              return (byte) var2;
+                                            } else {
+                                              field_h = (byte[]) null;
+                                              return (byte) var2;
+                                            }
                                           } else {
                                             if (param1 == 8220) {
                                               var2 = -109;
-                                              break L3;
+                                              if (param0 == -43) {
+                                                return (byte) var2;
+                                              } else {
+                                                field_h = (byte[]) null;
+                                                return (byte) var2;
+                                              }
                                             } else {
                                               if (8221 != param1) {
                                                 if (param1 != 8226) {
                                                   if (8211 == param1) {
                                                     var2 = -106;
-                                                    break L3;
+                                                    break L0;
                                                   } else {
                                                     if (8212 != param1) {
                                                       if (param1 != 732) {
                                                         if (8482 == param1) {
                                                           var2 = -103;
-                                                          break L3;
+                                                          break L0;
                                                         } else {
                                                           if (param1 == 353) {
                                                             var2 = -102;
-                                                            break L3;
+                                                            break L0;
                                                           } else {
                                                             if (param1 != 8250) {
                                                               if (339 == param1) {
                                                                 var2 = -100;
-                                                                break L3;
+                                                                break L0;
                                                               } else {
                                                                 if (param1 == 382) {
                                                                   var2 = -98;
-                                                                  break L3;
+                                                                  break L0;
                                                                 } else {
                                                                   if (param1 == 376) {
                                                                     var2 = -97;
-                                                                    break L3;
+                                                                    break L0;
                                                                   } else {
                                                                     var2 = 63;
-                                                                    break L3;
+                                                                    break L0;
                                                                   }
                                                                 }
                                                               }
                                                             } else {
                                                               var2 = -101;
-                                                              break L3;
+                                                              break L0;
                                                             }
                                                           }
                                                         }
                                                       } else {
                                                         var2 = -104;
-                                                        break L3;
+                                                        break L0;
                                                       }
                                                     } else {
                                                       var2 = -105;
-                                                      break L3;
+                                                      break L0;
                                                     }
                                                   }
                                                 } else {
                                                   var2 = -107;
-                                                  break L3;
+                                                  break L0;
                                                 }
                                               } else {
                                                 var2 = -108;
-                                                break L3;
+                                                break L0;
                                               }
                                             }
                                           }
@@ -650,52 +342,236 @@ final class ai {
                                       }
                                     } else {
                                       var2 = -116;
-                                      break L3;
+                                      break L0;
                                     }
                                   }
                                 }
                               } else {
                                 var2 = -119;
-                                break L3;
+                                break L0;
                               }
                             }
-                          } else {
-                            var2 = -121;
-                            return (byte) var2;
                           }
-                        } else {
-                          var2 = -122;
-                          return (byte) var2;
                         }
                       } else {
                         var2 = -123;
-                        break L3;
+                        break L0;
                       }
                     } else {
                       var2 = -124;
-                      break L3;
+                      break L0;
                     }
                   }
+                }
+              }
+            }
+            if (param0 == -43) {
+              return (byte) var2;
+            } else {
+              field_h = (byte[]) null;
+              return (byte) var2;
+            }
+          } else {
+            var2 = (byte)param1;
+            if (param0 == -43) {
+              return (byte) var2;
+            } else {
+              field_h = (byte[]) null;
+              return (byte) var2;
+            }
+          }
+        } else {
+          L2: {
+            L3: {
+              if (param1 < 160) {
+                break L3;
+              } else {
+                if (255 >= param1) {
+                  var2 = (byte)param1;
+                  break L2;
+                } else {
+                  break L3;
+                }
+              }
+            }
+            if (param1 != 8364) {
+              if (param1 == 8218) {
+                var2 = -126;
+                if (param0 != -43) {
+                  field_h = (byte[]) null;
                   return (byte) var2;
                 } else {
-                  var2 = -125;
                   return (byte) var2;
                 }
               } else {
-                var2 = -126;
-                return (byte) var2;
+                if (402 == param1) {
+                  var2 = -125;
+                  if (param0 != -43) {
+                    field_h = (byte[]) null;
+                    return (byte) var2;
+                  } else {
+                    return (byte) var2;
+                  }
+                } else {
+                  if (param1 != 8222) {
+                    if (param1 != 8230) {
+                      if (param1 == 8224) {
+                        var2 = -122;
+                        if (param0 == -43) {
+                          return (byte) var2;
+                        } else {
+                          field_h = (byte[]) null;
+                          return (byte) var2;
+                        }
+                      } else {
+                        if (param1 == 8225) {
+                          var2 = -121;
+                          if (param0 == -43) {
+                            return (byte) var2;
+                          } else {
+                            field_h = (byte[]) null;
+                            return (byte) var2;
+                          }
+                        } else {
+                          if (param1 == 710) {
+                            var2 = -120;
+                            break L2;
+                          } else {
+                            if (param1 != 8240) {
+                              if (param1 == 352) {
+                                var2 = -118;
+                                break L2;
+                              } else {
+                                if (8249 == param1) {
+                                  var2 = -117;
+                                  break L2;
+                                } else {
+                                  if (338 != param1) {
+                                    if (param1 == 381) {
+                                      var2 = -114;
+                                      break L2;
+                                    } else {
+                                      if (8216 == param1) {
+                                        var2 = -111;
+                                        break L2;
+                                      } else {
+                                        if (param1 == 8217) {
+                                          var2 = -110;
+                                          break L2;
+                                        } else {
+                                          if (param1 == 8220) {
+                                            var2 = -109;
+                                            break L2;
+                                          } else {
+                                            if (8221 != param1) {
+                                              if (param1 != 8226) {
+                                                if (8211 == param1) {
+                                                  var2 = -106;
+                                                  break L2;
+                                                } else {
+                                                  if (8212 != param1) {
+                                                    if (param1 != 732) {
+                                                      if (8482 == param1) {
+                                                        var2 = -103;
+                                                        break L2;
+                                                      } else {
+                                                        if (param1 == 353) {
+                                                          var2 = -102;
+                                                          break L2;
+                                                        } else {
+                                                          if (param1 != 8250) {
+                                                            if (339 == param1) {
+                                                              var2 = -100;
+                                                              break L2;
+                                                            } else {
+                                                              if (param1 == 382) {
+                                                                var2 = -98;
+                                                                break L2;
+                                                              } else {
+                                                                if (param1 == 376) {
+                                                                  var2 = -97;
+                                                                  break L2;
+                                                                } else {
+                                                                  var2 = 63;
+                                                                  break L2;
+                                                                }
+                                                              }
+                                                            }
+                                                          } else {
+                                                            var2 = -101;
+                                                            break L2;
+                                                          }
+                                                        }
+                                                      }
+                                                    } else {
+                                                      var2 = -104;
+                                                      break L2;
+                                                    }
+                                                  } else {
+                                                    var2 = -105;
+                                                    break L2;
+                                                  }
+                                                }
+                                              } else {
+                                                var2 = -107;
+                                                break L2;
+                                              }
+                                            } else {
+                                              var2 = -108;
+                                              break L2;
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  } else {
+                                    var2 = -116;
+                                    break L2;
+                                  }
+                                }
+                              }
+                            } else {
+                              var2 = -119;
+                              break L2;
+                            }
+                          }
+                        }
+                      }
+                    } else {
+                      var2 = -123;
+                      break L2;
+                    }
+                  } else {
+                    var2 = -124;
+                    break L2;
+                  }
+                }
               }
             } else {
-              var2 = -128;
+              L4: {
+                var2 = -128;
+                if (param0 == -43) {
+                  break L4;
+                } else {
+                  field_h = (byte[]) null;
+                  break L4;
+                }
+              }
               return (byte) var2;
             }
+          }
+          if (param0 == -43) {
+            return (byte) var2;
+          } else {
+            field_h = (byte[]) null;
+            return (byte) var2;
           }
         }
     }
 
     final ai a(byte param0, km[] param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        ai stackIn_2_0 = null;
         Object stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -704,9 +580,10 @@ final class ai {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        ai stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -717,38 +594,40 @@ final class ai {
         String stackOut_6_2 = null;
         try {
           L0: {
-            ((ai) this).field_e = param1;
+            this.field_e = param1;
             if (param0 >= 72) {
               stackOut_3_0 = this;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (ai) null;
               stackIn_2_0 = stackOut_1_0;
-              return (ai) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("ai.D(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -756,28 +635,33 @@ final class ai {
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
-        return (ai) this;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return (ai) (this);
+        }
     }
 
     final ai a(byte param0, boolean param1) {
         if (param0 >= -36) {
-            return null;
+            return (ai) null;
         }
-        ((ai) this).field_i = param1 ? true : false;
-        return (ai) this;
+        this.field_i = param1 ? true : false;
+        return (ai) (this);
     }
 
     final ai a(int param0, int param1) {
         if (param1 != 26631) {
-            return null;
+            return (ai) null;
         }
-        ((ai) this).field_g = param0;
-        return (ai) this;
+        this.field_g = param0;
+        return (ai) (this);
     }
 
     final void a(mf param0, ai param1, int param2, int param3, nj param4, int param5) {
+        ai discarded$1 = null;
         RuntimeException var7 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -828,7 +712,7 @@ final class ai {
         try {
           L0: {
             L1: {
-              if (((ai) this).field_i) {
+              if (this.field_i) {
                 param1.a(param5, param4, param3 + 22057, param0, param2);
                 param1.a((byte) 102);
                 break L1;
@@ -837,42 +721,42 @@ final class ai {
               }
             }
             L2: {
-              if (((ai) this).field_e != null) {
-                param1.field_e = ((ai) this).field_e;
+              if (this.field_e != null) {
+                param1.field_e = this.field_e;
                 break L2;
               } else {
                 break L2;
               }
             }
             L3: {
-              if (null == ((ai) this).field_k) {
+              if (null == this.field_k) {
                 break L3;
               } else {
-                param1.field_k = ((ai) this).field_k;
+                param1.field_k = this.field_k;
                 break L3;
               }
             }
             L4: {
-              if (((ai) this).field_d == -2147483648) {
+              if (2147483647 == (this.field_d ^ -1)) {
                 break L4;
               } else {
-                param1.field_d = ((ai) this).field_d;
+                param1.field_d = this.field_d;
                 break L4;
               }
             }
             L5: {
-              if (-1 <= ((ai) this).field_b) {
-                param1.field_b = ((ai) this).field_b;
+              if (-1 <= this.field_b) {
+                param1.field_b = this.field_b;
                 break L5;
               } else {
                 break L5;
               }
             }
             L6: {
-              if (((ai) this).field_g == -2147483648) {
+              if ((this.field_g ^ -1) == 2147483647) {
                 break L6;
               } else {
-                param1.field_g = ((ai) this).field_g;
+                param1.field_g = this.field_g;
                 break L6;
               }
             }
@@ -880,23 +764,23 @@ final class ai {
               if (param3 == -22160) {
                 break L7;
               } else {
-                ai discarded$1 = ((ai) this).a(16, -69);
+                discarded$1 = this.a(16, -69);
                 break L7;
               }
             }
             L8: {
-              if (2147483647 == ((ai) this).field_c) {
+              if (2147483647 == (this.field_c ^ -1)) {
                 break L8;
               } else {
-                param1.field_c = ((ai) this).field_c;
+                param1.field_c = this.field_c;
                 break L8;
               }
             }
             L9: {
-              if (0 > ((ai) this).field_f) {
+              if (0 < (this.field_f ^ -1)) {
                 break L9;
               } else {
-                param1.field_f = ((ai) this).field_f;
+                param1.field_f = this.field_f;
                 break L9;
               }
             }
@@ -906,23 +790,23 @@ final class ai {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var7 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var7;
+            stackOut_22_0 = (RuntimeException) (var7);
             stackOut_22_1 = new StringBuilder().append("ai.M(");
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L10;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -931,23 +815,23 @@ final class ai {
             }
           }
           L11: {
-            stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+            stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
             stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L11;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -956,23 +840,23 @@ final class ai {
             }
           }
           L12: {
-            stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+            stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
             stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
             stackIn_29_1 = stackOut_28_1;
             if (param4 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "null";
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
               break L12;
             } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "{...}";
               stackIn_31_0 = stackOut_29_0;
               stackIn_31_1 = stackOut_29_1;
@@ -980,52 +864,58 @@ final class ai {
               break L12;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + param5 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ',' + param5 + ')');
         }
     }
 
     final ai a(byte param0, int param1) {
-        Object var4 = null;
+        ai discarded$2 = null;
+        km[] var4 = null;
         if (param0 != -128) {
-          var4 = null;
-          ai discarded$2 = ((ai) this).a((byte) 114, (km[]) null);
-          ((ai) this).field_c = param1;
-          return (ai) this;
+          var4 = (km[]) null;
+          discarded$2 = this.a((byte) 114, (km[]) null);
+          this.field_c = param1;
+          return (ai) (this);
         } else {
-          ((ai) this).field_c = param1;
-          return (ai) this;
+          this.field_c = param1;
+          return (ai) (this);
         }
     }
 
     final void a(ai param0, byte param1) {
         try {
-            param0.field_d = ((ai) this).field_d;
-            param0.field_b = ((ai) this).field_b;
+            param0.field_d = this.field_d;
+            param0.field_b = this.field_b;
             if (param1 != -103) {
-                ((ai) this).field_k = null;
+                this.field_k = (km) null;
             }
-            param0.field_f = ((ai) this).field_f;
-            param0.field_g = ((ai) this).field_g;
-            param0.field_i = ((ai) this).field_i;
-            param0.field_c = ((ai) this).field_c;
-            param0.field_e = ((ai) this).field_e;
-            param0.field_k = ((ai) this).field_k;
+            param0.field_f = this.field_f;
+            param0.field_g = this.field_g;
+            param0.field_i = this.field_i;
+            param0.field_c = this.field_c;
+            param0.field_e = this.field_e;
+            param0.field_k = this.field_k;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ai.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "ai.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final ai a(int param0, byte param1) {
-        ((ai) this).field_b = param0;
+        this.field_b = param0;
         if (param1 >= -31) {
-            ((ai) this).field_f = -126;
-            return (ai) this;
+            this.field_f = -126;
+            return (ai) (this);
         }
-        return (ai) this;
+        return (ai) (this);
     }
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 >= -90) {
+            field_h = (byte[]) null;
+            field_h = null;
+            return;
+        }
         field_h = null;
     }
 
@@ -1033,178 +923,188 @@ final class ai {
         km[] var4 = null;
         RuntimeException var4_ref = null;
         km[] var5 = null;
-        km[] stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        km[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        km[] stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        km[] stackOut_2_0 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         try {
           L0: {
-            var5 = ao.a(param3, param1, 2993, param2);
-            var4 = var5;
+            L1: {
+              var5 = ao.a(param3, param1, param0 ^ 24985, param2);
+              var4 = var5;
+              if (param0 == 27176) {
+                break L1;
+              } else {
+                field_j = -12;
+                break L1;
+              }
+            }
             var5[1].field_v = var5[1].field_w;
             var5[3].field_u = var5[3].field_t;
             var5[5].field_u = var5[5].field_t;
             var5[7].field_v = var5[7].field_w;
-            stackOut_0_0 = (km[]) var4;
-            stackIn_1_0 = stackOut_0_0;
+            stackOut_2_0 = (km[]) (var4);
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4_ref;
-            stackOut_2_1 = new StringBuilder().append("ai.I(").append(27176).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
-            } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
-            }
-          }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+            var4_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) (var4_ref);
+            stackOut_4_1 = new StringBuilder().append("ai.I(").append(param0).append(',');
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L2;
             }
           }
           L3: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param3 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param2 == null) {
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
               break L3;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          L4: {
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param3 == null) {
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw fk.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     final void a(byte param0) {
-        ((ai) this).field_d = 256;
-        ((ai) this).field_g = 0;
-        ((ai) this).field_k = null;
-        ((ai) this).field_f = 0;
+        ai discarded$2 = null;
+        this.field_d = 256;
+        this.field_g = 0;
+        this.field_k = null;
+        this.field_f = 0;
         if (param0 != 102) {
-          ai discarded$2 = ((ai) this).a(69, false);
-          ((ai) this).field_c = 0;
-          ((ai) this).field_b = -1;
-          ((ai) this).field_e = null;
+          discarded$2 = this.a(69, false);
+          this.field_c = 0;
+          this.field_b = -1;
+          this.field_e = null;
           return;
         } else {
-          ((ai) this).field_c = 0;
-          ((ai) this).field_b = -1;
-          ((ai) this).field_e = null;
+          this.field_c = 0;
+          this.field_b = -1;
+          this.field_e = null;
           return;
         }
     }
 
     final ai a(int param0, boolean param1) {
-        ((ai) this).field_f = param0;
+        this.field_f = param0;
         if (param1) {
-            ((ai) this).field_g = 24;
-            return (ai) this;
+            this.field_g = 24;
+            return (ai) (this);
         }
-        return (ai) this;
+        return (ai) (this);
     }
 
     final void a(int param0, nj param1, int param2, mf param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         String var6_ref = null;
@@ -1277,6 +1177,7 @@ final class ai {
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         String stackIn_36_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         lh stackOut_19_0 = null;
         String stackOut_19_1 = null;
@@ -1354,45 +1255,45 @@ final class ai {
         try {
           L0: {
             L1: {
-              em.a(param4 + param3.field_r, ((ai) this).field_e, param3.field_y, param0 + param3.field_u, 24599, param3.field_C);
-              if (null == ((ai) this).field_k) {
+              em.a(param4 + param3.field_r, this.field_e, param3.field_y, param0 + param3.field_u, 24599, param3.field_C);
+              if (null == this.field_k) {
                 break L1;
               } else {
                 L2: {
-                  var6_int = ((ai) this).field_g + (param3.field_u + param0);
+                  var6_int = this.field_g + (param3.field_u + param0);
                   if (param1.field_l == 1) {
-                    var6_int = var6_int + (param3.field_y + -((ai) this).field_k.field_v) / 2;
+                    var6_int = var6_int + (param3.field_y + -this.field_k.field_v) / 2;
                     break L2;
                   } else {
                     break L2;
                   }
                 }
                 L3: {
-                  var7 = ((ai) this).field_c + param4 - -param3.field_r;
+                  var7 = this.field_c + param4 - -param3.field_r;
                   if (param1.field_c == 1) {
-                    var7 = var7 + (param3.field_C + -((ai) this).field_k.field_u) / 2;
+                    var7 = var7 + (param3.field_C + -this.field_k.field_u) / 2;
                     break L3;
                   } else {
                     break L3;
                   }
                 }
                 L4: {
-                  if (-3 == param1.field_l) {
-                    var6_int = var6_int + (param3.field_y + -((ai) this).field_k.field_v);
+                  if (-3 == (param1.field_l ^ -1)) {
+                    var6_int = var6_int + (param3.field_y + -this.field_k.field_v);
                     break L4;
                   } else {
                     break L4;
                   }
                 }
                 L5: {
-                  if (-3 == param1.field_c) {
-                    var7 = var7 + (-((ai) this).field_k.field_u + param3.field_C);
+                  if (-3 == (param1.field_c ^ -1)) {
+                    var7 = var7 + (-this.field_k.field_u + param3.field_C);
                     break L5;
                   } else {
                     break L5;
                   }
                 }
-                ((ai) this).field_k.b(var6_int, var7);
+                this.field_k.b(var6_int, var7);
                 break L1;
               }
             }
@@ -1405,12 +1306,12 @@ final class ai {
                   if (null == param1.field_e) {
                     break L6;
                   } else {
-                    if (0 > ((ai) this).field_f) {
+                    if (0 > this.field_f) {
                       break L6;
                     } else {
                       L7: {
                         stackOut_19_0 = param1.field_e;
-                        stackOut_19_1 = (String) var6_ref;
+                        stackOut_19_1 = (String) (var6_ref);
                         stackOut_19_2 = param1.field_r;
                         stackOut_19_3 = param3.field_u + param0;
                         stackIn_21_0 = stackOut_19_0;
@@ -1421,9 +1322,9 @@ final class ai {
                         stackIn_20_1 = stackOut_19_1;
                         stackIn_20_2 = stackOut_19_2;
                         stackIn_20_3 = stackOut_19_3;
-                        if (-2147483648 == ((ai) this).field_g) {
-                          stackOut_21_0 = (lh) (Object) stackIn_21_0;
-                          stackOut_21_1 = (String) (Object) stackIn_21_1;
+                        if (-2147483648 == this.field_g) {
+                          stackOut_21_0 = (lh) ((Object) stackIn_21_0);
+                          stackOut_21_1 = (String) ((Object) stackIn_21_1);
                           stackOut_21_2 = stackIn_21_2;
                           stackOut_21_3 = stackIn_21_3;
                           stackOut_21_4 = 0;
@@ -1434,11 +1335,11 @@ final class ai {
                           stackIn_22_4 = stackOut_21_4;
                           break L7;
                         } else {
-                          stackOut_20_0 = (lh) (Object) stackIn_20_0;
-                          stackOut_20_1 = (String) (Object) stackIn_20_1;
+                          stackOut_20_0 = (lh) ((Object) stackIn_20_0);
+                          stackOut_20_1 = (String) ((Object) stackIn_20_1);
                           stackOut_20_2 = stackIn_20_2;
                           stackOut_20_3 = stackIn_20_3;
-                          stackOut_20_4 = ((ai) this).field_g;
+                          stackOut_20_4 = this.field_g;
                           stackIn_22_0 = stackOut_20_0;
                           stackIn_22_1 = stackOut_20_1;
                           stackIn_22_2 = stackOut_20_2;
@@ -1448,8 +1349,8 @@ final class ai {
                         }
                       }
                       L8: {
-                        stackOut_22_0 = (lh) (Object) stackIn_22_0;
-                        stackOut_22_1 = (String) (Object) stackIn_22_1;
+                        stackOut_22_0 = (lh) ((Object) stackIn_22_0);
+                        stackOut_22_1 = (String) ((Object) stackIn_22_1);
                         stackOut_22_2 = stackIn_22_2 + (stackIn_22_3 - -stackIn_22_4);
                         stackOut_22_3 = param3.field_r + param4;
                         stackOut_22_4 = -param1.field_m;
@@ -1463,9 +1364,9 @@ final class ai {
                         stackIn_23_2 = stackOut_22_2;
                         stackIn_23_3 = stackOut_22_3;
                         stackIn_23_4 = stackOut_22_4;
-                        if (-2147483648 == ((ai) this).field_c) {
-                          stackOut_24_0 = (lh) (Object) stackIn_24_0;
-                          stackOut_24_1 = (String) (Object) stackIn_24_1;
+                        if (-2147483648 == this.field_c) {
+                          stackOut_24_0 = (lh) ((Object) stackIn_24_0);
+                          stackOut_24_1 = (String) ((Object) stackIn_24_1);
                           stackOut_24_2 = stackIn_24_2;
                           stackOut_24_3 = stackIn_24_3;
                           stackOut_24_4 = stackIn_24_4;
@@ -1478,12 +1379,12 @@ final class ai {
                           stackIn_25_5 = stackOut_24_5;
                           break L8;
                         } else {
-                          stackOut_23_0 = (lh) (Object) stackIn_23_0;
-                          stackOut_23_1 = (String) (Object) stackIn_23_1;
+                          stackOut_23_0 = (lh) ((Object) stackIn_23_0);
+                          stackOut_23_1 = (String) ((Object) stackIn_23_1);
                           stackOut_23_2 = stackIn_23_2;
                           stackOut_23_3 = stackIn_23_3;
                           stackOut_23_4 = stackIn_23_4;
-                          stackOut_23_5 = ((ai) this).field_c;
+                          stackOut_23_5 = this.field_c;
                           stackIn_25_0 = stackOut_23_0;
                           stackIn_25_1 = stackOut_23_1;
                           stackIn_25_2 = stackOut_23_2;
@@ -1494,14 +1395,14 @@ final class ai {
                         }
                       }
                       L9: {
-                        stackOut_25_0 = (lh) (Object) stackIn_25_0;
-                        stackOut_25_1 = (String) (Object) stackIn_25_1;
+                        stackOut_25_0 = (lh) ((Object) stackIn_25_0);
+                        stackOut_25_1 = (String) ((Object) stackIn_25_1);
                         stackOut_25_2 = stackIn_25_2;
                         stackOut_25_3 = stackIn_25_3 - (stackIn_25_4 - stackIn_25_5);
                         stackOut_25_4 = -param1.field_n + param3.field_y + -param1.field_r;
                         stackOut_25_5 = -param1.field_m + param3.field_C + -param1.field_k;
-                        stackOut_25_6 = ((ai) this).field_f;
-                        stackOut_25_7 = ((ai) this).field_b;
+                        stackOut_25_6 = this.field_f;
+                        stackOut_25_7 = this.field_b;
                         stackIn_27_0 = stackOut_25_0;
                         stackIn_27_1 = stackOut_25_1;
                         stackIn_27_2 = stackOut_25_2;
@@ -1518,9 +1419,9 @@ final class ai {
                         stackIn_26_5 = stackOut_25_5;
                         stackIn_26_6 = stackOut_25_6;
                         stackIn_26_7 = stackOut_25_7;
-                        if (((ai) this).field_d == -2147483648) {
-                          stackOut_27_0 = (lh) (Object) stackIn_27_0;
-                          stackOut_27_1 = (String) (Object) stackIn_27_1;
+                        if (this.field_d == -2147483648) {
+                          stackOut_27_0 = (lh) ((Object) stackIn_27_0);
+                          stackOut_27_1 = (String) ((Object) stackIn_27_1);
                           stackOut_27_2 = stackIn_27_2;
                           stackOut_27_3 = stackIn_27_3;
                           stackOut_27_4 = stackIn_27_4;
@@ -1539,15 +1440,15 @@ final class ai {
                           stackIn_28_8 = stackOut_27_8;
                           break L9;
                         } else {
-                          stackOut_26_0 = (lh) (Object) stackIn_26_0;
-                          stackOut_26_1 = (String) (Object) stackIn_26_1;
+                          stackOut_26_0 = (lh) ((Object) stackIn_26_0);
+                          stackOut_26_1 = (String) ((Object) stackIn_26_1);
                           stackOut_26_2 = stackIn_26_2;
                           stackOut_26_3 = stackIn_26_3;
                           stackOut_26_4 = stackIn_26_4;
                           stackOut_26_5 = stackIn_26_5;
                           stackOut_26_6 = stackIn_26_6;
                           stackOut_26_7 = stackIn_26_7;
-                          stackOut_26_8 = ((ai) this).field_d;
+                          stackOut_26_8 = this.field_d;
                           stackIn_28_0 = stackOut_26_0;
                           stackIn_28_1 = stackOut_26_1;
                           stackIn_28_2 = stackOut_26_2;
@@ -1560,38 +1461,40 @@ final class ai {
                           break L9;
                         }
                       }
-                      int discarded$1 = ((lh) (Object) stackIn_28_0).a(stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_28_5, stackIn_28_6, stackIn_28_7, stackIn_28_8, param1.field_l, param1.field_c, param1.field_j);
+                      discarded$1 = ((lh) (Object) stackIn_28_0).a(stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_28_5, stackIn_28_6, stackIn_28_7, stackIn_28_8, param1.field_l, param1.field_c, param1.field_j);
                       break L6;
                     }
                   }
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var6 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var6;
+            stackOut_30_0 = (RuntimeException) (var6);
             stackOut_30_1 = new StringBuilder().append("ai.E(").append(param0).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param1 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "null";
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
               break L10;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_33_0 = stackOut_31_0;
               stackIn_33_1 = stackOut_31_1;
@@ -1600,23 +1503,23 @@ final class ai {
             }
           }
           L11: {
-            stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+            stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
             stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',').append(param2).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
             stackIn_34_1 = stackOut_33_1;
             if (param3 == null) {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackOut_35_2 = "null";
               stackIn_36_0 = stackOut_35_0;
               stackIn_36_1 = stackOut_35_1;
               stackIn_36_2 = stackOut_35_2;
               break L11;
             } else {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "{...}";
               stackIn_36_0 = stackOut_34_0;
               stackIn_36_1 = stackOut_34_1;
@@ -1624,27 +1527,28 @@ final class ai {
               break L11;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + param4 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     ai() {
-        ((ai) this).field_g = -2147483648;
-        ((ai) this).field_b = -2;
-        ((ai) this).field_k = null;
-        ((ai) this).field_i = false;
-        ((ai) this).field_e = null;
-        ((ai) this).field_f = -2;
-        ((ai) this).field_c = -2147483648;
-        ((ai) this).field_d = -2147483648;
+        this.field_g = -2147483648;
+        this.field_b = -2;
+        this.field_k = null;
+        this.field_i = false;
+        this.field_e = null;
+        this.field_f = -2;
+        this.field_c = -2147483648;
+        this.field_d = -2147483648;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_h = new byte[]{(byte) 7};
+        field_h = new byte[]{(byte)7};
         field_a = new String[]{"Promote a pawn to a queen in a Rated game", "Perform the king's castling move in a Rated game", "Win a Rated game in no more than six moves from both players combined", "Win a Rated game without losing any pieces", "Win a Rated game without taking any pieces", "Play 5 Rated games", "Play 10 Rated games", "Win 5 Rated games", "Win 10 Rated games", "Win 25 Rated games", "Win a Rated game with the Halloween set"};
     }
 }

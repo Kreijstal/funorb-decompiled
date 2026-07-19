@@ -9,17 +9,17 @@ final class oe extends el {
     int field_n;
 
     oe(int param0, byte[] param1, int param2, int param3) {
-        ((oe) this).field_l = param0;
-        ((oe) this).field_m = param1;
-        ((oe) this).field_n = param2;
-        ((oe) this).field_k = param3;
+        this.field_l = param0;
+        this.field_m = param1;
+        this.field_n = param2;
+        this.field_k = param3;
     }
 
     oe(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((oe) this).field_l = param0;
-        ((oe) this).field_m = param1;
-        ((oe) this).field_n = param2;
-        ((oe) this).field_k = param3;
-        ((oe) this).field_j = param4 ? true : false;
+        this.field_l = param0;
+        this.field_m = param1;
+        this.field_n = param2;
+        this.field_k = param3;
+        this.field_j = param4 ? true : false;
     }
 }

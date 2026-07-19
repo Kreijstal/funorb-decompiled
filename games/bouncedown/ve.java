@@ -38,6 +38,7 @@ final class ve {
         RuntimeException stackIn_74_0 = null;
         StringBuilder stackIn_74_1 = null;
         String stackIn_74_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
@@ -60,7 +61,7 @@ final class ve {
           L0: {
             if (param2 != null) {
               L1: {
-                if (param4 <= 0) {
+                if (-1 <= (param4 ^ -1)) {
                   break L1;
                 } else {
                   if (param0 <= 0) {
@@ -276,7 +277,7 @@ final class ve {
                         if (null == param2[4]) {
                           break L20;
                         } else {
-                          if (param2[4].field_t == 0) {
+                          if (-1 == (param2[4].field_t ^ -1)) {
                             break L20;
                           } else {
                             if (param2[4].field_o == 0) {
@@ -306,39 +307,43 @@ final class ve {
                           }
                         }
                       }
+                      decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
-                      return;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     }
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L23: {
             var6 = decompiledCaughtException;
-            stackOut_71_0 = (RuntimeException) var6;
+            stackOut_71_0 = (RuntimeException) (var6);
             stackOut_71_1 = new StringBuilder().append("ve.C(").append(param0).append(',').append(param1).append(',');
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;
             stackIn_72_1 = stackOut_71_1;
             if (param2 == null) {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackOut_73_2 = "null";
               stackIn_74_0 = stackOut_73_0;
               stackIn_74_1 = stackOut_73_1;
               stackIn_74_2 = stackOut_73_2;
               break L23;
             } else {
-              stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
-              stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
+              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
               stackOut_72_2 = "{...}";
               stackIn_74_0 = stackOut_72_0;
               stackIn_74_1 = stackOut_72_1;
@@ -346,19 +351,35 @@ final class ve {
               break L23;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_74_0), stackIn_74_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
     final boolean a(byte param0) {
         if (param0 != 56) {
-            field_b = null;
+            field_b = (String) null;
         }
-        return ((ve) this).field_e;
+        return this.field_e;
     }
 
     public static void d(byte param0) {
         field_b = null;
+        if (param0 != 85) {
+            return;
+        }
         field_c = null;
     }
 
@@ -366,7 +387,7 @@ final class ve {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        var1 = (Object) (Object) nj.field_o;
+        var1 = nj.field_o;
         synchronized (var1) {
           L0: {
             L1: {
@@ -394,7 +415,7 @@ final class ve {
 
     final static void a(int param0) {
         n var1 = null;
-        var1 = (n) (Object) qb.field_g.e((byte) 60);
+        var1 = (n) ((Object) qb.field_g.e((byte) 60));
         if (var1 == null) {
           throw new IllegalStateException();
         } else {
@@ -409,16 +430,16 @@ final class ve {
             }
           }
           var1.field_g = null;
-          k.field_B.a(1, (ai) (Object) var1);
+          k.field_B.a(1, var1);
           return;
         }
     }
 
     final String c(byte param0) {
         if (param0 >= -49) {
-            return null;
+            return (String) null;
         }
-        return ((ve) this).field_d;
+        return this.field_d;
     }
 
     ve(String param0) {
@@ -455,11 +476,11 @@ final class ve {
         try {
           L0: {
             L1: {
-              ((ve) this).field_d = param0;
-              if (((ve) this).field_d != null) {
+              this.field_d = param0;
+              if (this.field_d != null) {
                 break L1;
               } else {
-                ((ve) this).field_d = "";
+                this.field_d = "";
                 break L1;
               }
             }
@@ -482,11 +503,11 @@ final class ve {
               }
             }
             L3: {
-              ((ve) this).field_e = stackIn_6_1 != 0;
-              if (((ve) this).field_d.length() != 0) {
+              ((ve) (this)).field_e = stackIn_6_1 != 0;
+              if (-1 != (this.field_d.length() ^ -1)) {
                 break L3;
               } else {
-                ((ve) this).field_e = false;
+                this.field_e = false;
                 break L3;
               }
             }
@@ -496,23 +517,23 @@ final class ve {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             runtimeException = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) runtimeException;
+            stackOut_9_0 = (RuntimeException) (runtimeException);
             stackOut_9_1 = new StringBuilder().append("ve.<init>(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -520,15 +541,11 @@ final class ve {
               break L4;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Passwords must be between 5 and 20 characters long";
         field_c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
     }

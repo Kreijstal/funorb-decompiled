@@ -7,22 +7,24 @@ final class ah extends qd {
     private byte[] field_q;
 
     final void b(int param0, int param1, byte param2) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         int var4 = 0;
-        param2 = (byte)(127 + (127 & param2 >> 1));
+        param2 = (byte)(127 + (127 & param2 >> 1512442177));
         if (param0 != 255) {
-          field_r = null;
+          field_r = (String) null;
           var4 = param1 * 2;
-          int incrementValue$4 = var4;
+          incrementValue$4 = var4;
           var4++;
-          ((ah) this).field_q[incrementValue$4] = (byte)param2;
-          ((ah) this).field_q[var4] = (byte)param2;
+          this.field_q[incrementValue$4] = (byte)param2;
+          this.field_q[var4] = (byte)param2;
           return;
         } else {
           var4 = param1 * 2;
-          int incrementValue$5 = var4;
+          incrementValue$5 = var4;
           var4++;
-          ((ah) this).field_q[incrementValue$5] = (byte)param2;
-          ((ah) this).field_q[var4] = (byte)param2;
+          this.field_q[incrementValue$5] = (byte)param2;
+          this.field_q[var4] = (byte)param2;
           return;
         }
     }
@@ -39,17 +41,13 @@ final class ah extends qd {
     }
 
     final byte[] a(int param0, int param1, int param2, byte param3) {
-        ((ah) this).field_q = new byte[param0 * (param2 * param1) * 2];
-        ((ah) this).a(true, param1, param0, param2);
+        this.field_q = new byte[param0 * (param2 * param1) * 2];
+        this.a(true, param1, param0, param2);
         int var5 = 29 / ((60 - param3) / 42);
-        return ((ah) this).field_q;
+        return this.field_q;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Email (Login):";
     }
 }

@@ -47,7 +47,7 @@ final class rl extends rqa {
               L2: {
                 qi.field_p.field_F = 1;
                 qi.field_p.field_w = mla.field_q.field_w;
-                if (nf.field_a > 0) {
+                if (-1 > (nf.field_a ^ -1)) {
                   soa.a(param0, -99, param7, param5);
                   break L2;
                 } else {
@@ -55,7 +55,7 @@ final class rl extends rqa {
                 }
               }
               L3: {
-                if (~tba.field_p < param1) {
+                if ((tba.field_p ^ -1) < param1) {
                   fka.a(param5, (byte) 105, param8, param0, param7);
                   break L3;
                 } else {
@@ -67,7 +67,7 @@ final class rl extends rqa {
                   tja.field_a.field_xb.field_R = null;
                   fh.field_f.field_y = true;
                   bm.a(param6, (byte) 1, tja.field_a, param4, param5);
-                  me.a(param2, param6, param4, true, param5, param3, (byte) 119);
+                  me.a(param2, param6, param4, param9, param5, param3, (byte) 119);
                   bm.a(param6, (byte) 1, rga.field_f, param4, param5);
                   ls.field_o = ls.field_o + 1;
                   return;
@@ -75,7 +75,7 @@ final class rl extends rqa {
                   fh.field_f.field_y = false;
                   tja.field_a.field_xb.field_R = ukb.field_q;
                   igb.a(tja.field_a.field_wb, (byte) -93);
-                  me.a(param2, param6, param4, true, param5, param3, (byte) 119);
+                  me.a(param2, param6, param4, param9, param5, param3, (byte) 119);
                   bm.a(param6, (byte) 1, rga.field_f, param4, param5);
                   ls.field_o = ls.field_o + 1;
                   return;
@@ -84,7 +84,7 @@ final class rl extends rqa {
                 tja.field_a.field_xb.field_R = null;
                 fh.field_f.field_y = true;
                 bm.a(param6, (byte) 1, tja.field_a, param4, param5);
-                me.a(param2, param6, param4, true, param5, param3, (byte) 119);
+                me.a(param2, param6, param4, param9, param5, param3, (byte) 119);
                 bm.a(param6, (byte) 1, rga.field_f, param4, param5);
                 ls.field_o = ls.field_o + 1;
                 return;
@@ -103,7 +103,7 @@ final class rl extends rqa {
               L5: {
                 qi.field_p.field_F = 1;
                 qi.field_p.field_w = mla.field_q.field_w;
-                if (nf.field_a > 0) {
+                if (-1 > (nf.field_a ^ -1)) {
                   soa.a(param0, -99, param7, param5);
                   break L5;
                 } else {
@@ -111,7 +111,7 @@ final class rl extends rqa {
                 }
               }
               L6: {
-                if (~tba.field_p < param1) {
+                if ((tba.field_p ^ -1) < param1) {
                   fka.a(param5, (byte) 105, param8, param0, param7);
                   break L6;
                 } else {
@@ -138,7 +138,7 @@ final class rl extends rqa {
                 bm.a(param6, (byte) 1, tja.field_a, param4, param5);
                 break L7;
               }
-              me.a(param2, param6, param4, true, param5, param3, (byte) 119);
+              me.a(param2, param6, param4, param9, param5, param3, (byte) 119);
               bm.a(param6, (byte) 1, rga.field_f, param4, param5);
               ls.field_o = ls.field_o + 1;
               return;
@@ -180,7 +180,7 @@ final class rl extends rqa {
               L11: {
                 qi.field_p.field_F = 1;
                 qi.field_p.field_w = mla.field_q.field_w;
-                if (nf.field_a > 0) {
+                if (-1 > (nf.field_a ^ -1)) {
                   soa.a(param0, -99, param7, param5);
                   break L11;
                 } else {
@@ -188,7 +188,7 @@ final class rl extends rqa {
                 }
               }
               L12: {
-                if (~tba.field_p < param1) {
+                if ((tba.field_p ^ -1) < param1) {
                   fka.a(param5, (byte) 105, param8, param0, param7);
                   break L12;
                 } else {
@@ -215,7 +215,7 @@ final class rl extends rqa {
                 bm.a(param6, (byte) 1, tja.field_a, param4, param5);
                 break L13;
               }
-              me.a(param2, param6, param4, true, param5, param3, (byte) 119);
+              me.a(param2, param6, param4, param9, param5, param3, (byte) 119);
               bm.a(param6, (byte) 1, rga.field_f, param4, param5);
               ls.field_o = ls.field_o + 1;
               return;
@@ -233,7 +233,7 @@ final class rl extends rqa {
               L16: {
                 qi.field_p.field_F = 1;
                 qi.field_p.field_w = mla.field_q.field_w;
-                if (nf.field_a > 0) {
+                if (-1 > (nf.field_a ^ -1)) {
                   soa.a(param0, -99, param7, param5);
                   break L16;
                 } else {
@@ -241,7 +241,7 @@ final class rl extends rqa {
                 }
               }
               L17: {
-                if (~tba.field_p < param1) {
+                if ((tba.field_p ^ -1) < param1) {
                   fka.a(param5, (byte) 105, param8, param0, param7);
                   break L17;
                 } else {
@@ -268,7 +268,7 @@ final class rl extends rqa {
                 bm.a(param6, (byte) 1, tja.field_a, param4, param5);
                 break L18;
               }
-              me.a(param2, param6, param4, true, param5, param3, (byte) 119);
+              me.a(param2, param6, param4, param9, param5, param3, (byte) 119);
               bm.a(param6, (byte) 1, rga.field_f, param4, param5);
               ls.field_o = ls.field_o + 1;
               return;
@@ -288,7 +288,7 @@ final class rl extends rqa {
           L21: {
             qi.field_p.field_F = 1;
             qi.field_p.field_w = mla.field_q.field_w;
-            if (nf.field_a > 0) {
+            if (-1 > (nf.field_a ^ -1)) {
               soa.a(param0, -99, param7, param5);
               break L21;
             } else {
@@ -296,7 +296,7 @@ final class rl extends rqa {
             }
           }
           L22: {
-            if (~tba.field_p < param1) {
+            if ((tba.field_p ^ -1) < param1) {
               fka.a(param5, (byte) 105, param8, param0, param7);
               break L22;
             } else {
@@ -323,7 +323,7 @@ final class rl extends rqa {
             bm.a(param6, (byte) 1, tja.field_a, param4, param5);
             break L23;
           }
-          me.a(param2, param6, param4, true, param5, param3, (byte) 119);
+          me.a(param2, param6, param4, param9, param5, param3, (byte) 119);
           bm.a(param6, (byte) 1, rga.field_f, param4, param5);
           ls.field_o = ls.field_o + 1;
           return;
@@ -372,23 +372,23 @@ final class rl extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("rl.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -396,7 +396,7 @@ final class rl extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

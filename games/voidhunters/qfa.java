@@ -149,8 +149,11 @@ final class qfa extends ha {
     private int field_o;
 
     private final void d(boolean param0) {
-        ((qfa) this).field_Xb[14] = ((qfa) this).field_Wb;
-        ((qfa) this).field_Xb[10] = ((qfa) this).field_mb;
+        if (param0) {
+            this.field_ic = -58L;
+        }
+        this.field_Xb[14] = this.field_Wb;
+        this.field_Xb[10] = this.field_mb;
     }
 
     private final void a(boolean param0, boolean param1, int param2, int param3) {
@@ -181,14 +184,14 @@ final class qfa extends ha {
         L0: {
           L1: {
             var13 = VoidHunters.field_G;
-            if (param3 != ((qfa) this).field_o) {
+            if (param3 != this.field_o) {
               break L1;
             } else {
               L2: {
-                stackOut_1_0 = ((qfa) this).field_Yb;
+                stackOut_1_0 = this.field_Yb;
                 stackIn_3_0 = stackOut_1_0;
                 stackIn_2_0 = stackOut_1_0;
-                if (((qfa) this).field_kb) {
+                if (this.field_kb) {
                   stackOut_3_0 = stackIn_3_0;
                   stackOut_3_1 = 0;
                   stackIn_4_0 = stackOut_3_0;
@@ -214,7 +217,7 @@ final class qfa extends ha {
             var6 = 0;
             var7 = 0;
             var8 = 0;
-            if (!((qfa) this).field_kb) {
+            if (!this.field_kb) {
               stackOut_8_0 = 0;
               stackIn_9_0 = stackOut_8_0;
               break L3;
@@ -229,15 +232,15 @@ final class qfa extends ha {
             if (param3 >= 0) {
               L5: {
                 L6: {
-                  var5 = (Object) (Object) ((qfa) this).field_r.a((byte) -125, param3);
-                  var10 = ((qfa) this).field_a.a(-20292, param3);
+                  var5 = this.field_r.a((byte) -125, param3);
+                  var10 = this.field_a.a(-20292, param3);
                   if (0 != var10.field_p) {
                     break L6;
                   } else {
                     if (var10.field_d != 0) {
                       break L6;
                     } else {
-                      this.k(0);
+                      this.k(param2 + 0);
                       break L5;
                     }
                   }
@@ -255,11 +258,11 @@ final class qfa extends ha {
                 }
                 var11 = stackIn_17_0;
                 var12 = 50 * var11;
-                this.a(0.0f, (float)(((qfa) this).field_Mc % var12 * var10.field_p) / (float)var12, 5890, (float)(var10.field_d * (((qfa) this).field_Mc % var12)) / (float)var12);
+                this.a(0.0f, (float)(this.field_Mc % var12 * var10.field_p) / (float)var12, 5890, (float)(var10.field_d * (this.field_Mc % var12)) / (float)var12);
                 break L5;
               }
               L8: {
-                if (((qfa) this).field_kb) {
+                if (this.field_kb) {
                   break L8;
                 } else {
                   var8 = var10.field_o;
@@ -271,43 +274,51 @@ final class qfa extends ha {
               var6 = var10.field_f;
               break L4;
             } else {
-              this.k(0);
+              this.k(param2 ^ 0);
               break L4;
             }
           }
           L9: {
-            ((qfa) this).field_d.a(true, true, var7, -109, var9, var8);
-            if (((qfa) this).field_d.a((pib) var5, 74, var6)) {
+            this.field_d.a(param0, param1, var7, -109, var9, var8);
+            if (this.field_d.a((pib) (var5), 74, var6)) {
               break L9;
             } else {
-              ((qfa) this).a(58, (pib) var5);
-              ((qfa) this).c(0, var6);
+              this.a(58, (pib) (var5));
+              this.c(param2 + 0, var6);
               break L9;
             }
           }
-          ((qfa) this).field_Yb = ((qfa) this).field_kb;
-          ((qfa) this).field_o = param3;
+          this.field_Yb = this.field_kb;
+          this.field_o = param3;
           break L0;
         }
-        ((qfa) this).field_x = ((qfa) this).field_x & -8;
+        L10: {
+          if (param2 == 0) {
+            break L10;
+          } else {
+            this.field_yb = (nk) null;
+            break L10;
+          }
+        }
+        this.field_x = this.field_x & -8;
     }
 
     final void h(int param0, int param1) {
-        if (param1 != ((qfa) this).field_Z) {
+        if (param1 != this.field_Z) {
             jaggl.OpenGL.glActiveTexture(33984 + param1);
-            ((qfa) this).field_Z = param1;
+            this.field_Z = param1;
         }
         if (param0 != 33984) {
-            Object var4 = null;
-            ((qfa) this).b(46, (jaa) null);
+            jaa var4 = (jaa) null;
+            this.b(46, (jaa) null);
         }
     }
 
     final void b(boolean param0, int param1) {
-        tdb.field_o[3] = (float)(param1 >>> 24) / 255.0f;
+        tdb.field_o[3] = (float)(param1 >>> -1748731848) / 255.0f;
         tdb.field_o[2] = (float)dla.a(param1, 255) / 255.0f;
         if (!param0) {
-            ((qfa) this).field_U = true;
+            this.field_U = true;
         }
         tdb.field_o[0] = (float)dla.a(16711680, param1) / 16711680.0f;
         tdb.field_o[1] = (float)dla.a(param1, 65280) / 65280.0f;
@@ -315,6 +326,9 @@ final class qfa extends ha {
     }
 
     final aja a(ima param0, boolean param1) {
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
         RuntimeException var3 = null;
         int[] var3_array = null;
         int var4 = 0;
@@ -327,8 +341,6 @@ final class qfa extends ha {
         int[] var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
         int[] stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int[] stackIn_8_0 = null;
@@ -367,9 +379,7 @@ final class qfa extends ha {
           L0: {
             L1: {
               var10 = new int[param0.field_f * param0.field_e];
-              var14 = var10;
-              var13 = var14;
-              var12 = var13;
+              var12 = var10;
               var11 = var12;
               var3_array = var11;
               var4 = 0;
@@ -386,9 +396,9 @@ final class qfa extends ha {
                         var6_int++;
                         continue L2;
                       } else {
-                        int incrementValue$3 = var5;
+                        incrementValue$3 = var5;
                         var5++;
-                        var3_array[incrementValue$3] = knb.a(param0.field_b[dla.a(255, (int) param0.field_h[var4])], param0.field_a[var4] << 24);
+                        var3_array[incrementValue$3] = knb.a(param0.field_b[dla.a(255, (int) param0.field_h[var4])], param0.field_a[var4] << -85105096);
                         var4++;
                         var7++;
                         continue L3;
@@ -409,19 +419,19 @@ final class qfa extends ha {
                         continue L4;
                       } else {
                         L6: {
-                          int incrementValue$4 = var4;
+                          incrementValue$4 = var4;
                           var4++;
                           var8 = param0.field_b[param0.field_h[incrementValue$4] & 255];
-                          int incrementValue$5 = var5;
+                          incrementValue$5 = var5;
                           var5++;
-                          stackOut_6_0 = (int[]) var10;
+                          stackOut_6_0 = (int[]) (var10);
                           stackOut_6_1 = incrementValue$5;
                           stackIn_8_0 = stackOut_6_0;
                           stackIn_8_1 = stackOut_6_1;
                           stackIn_7_0 = stackOut_6_0;
                           stackIn_7_1 = stackOut_6_1;
                           if (var8 == 0) {
-                            stackOut_8_0 = (int[]) (Object) stackIn_8_0;
+                            stackOut_8_0 = (int[]) ((Object) stackIn_8_0);
                             stackOut_8_1 = stackIn_8_1;
                             stackOut_8_2 = 0;
                             stackIn_9_0 = stackOut_8_0;
@@ -429,7 +439,7 @@ final class qfa extends ha {
                             stackIn_9_2 = stackOut_8_2;
                             break L6;
                           } else {
-                            stackOut_7_0 = (int[]) (Object) stackIn_7_0;
+                            stackOut_7_0 = (int[]) ((Object) stackIn_7_0);
                             stackOut_7_1 = stackIn_7_1;
                             stackOut_7_2 = knb.a(var8, -16777216);
                             stackIn_9_0 = stackOut_7_0;
@@ -447,9 +457,9 @@ final class qfa extends ha {
                 }
               }
             }
-            var6 = ((qfa) this).a(param0.field_f, param0.field_f, var14, 0, (byte) 96, param0.field_e);
+            var6 = this.a(param0.field_f, param0.field_f, var12, 0, (byte) 96, param0.field_e);
             var6.a(param0.field_c, param0.field_g, param0.field_i, param0.field_d);
-            stackOut_17_0 = (aja) var6;
+            stackOut_17_0 = (aja) (var6);
             stackIn_18_0 = stackOut_17_0;
             break L0;
           }
@@ -457,23 +467,23 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var3;
+            stackOut_19_0 = (RuntimeException) (var3);
             stackOut_19_1 = new StringBuilder().append("qfa.AB(");
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -481,7 +491,7 @@ final class qfa extends ha {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param1 + ')');
         }
         return stackIn_18_0;
     }
@@ -489,28 +499,28 @@ final class qfa extends ha {
     final void b(int param0, int param1, boolean param2) {
         int var4 = 0;
         L0: {
-          if (((qfa) this).field_Z != 0) {
+          if (this.field_Z != 0) {
             jaggl.OpenGL.glTexEnvi(8960, 34161, param0);
             jaggl.OpenGL.glTexEnvi(8960, 34162, param1);
             break L0;
           } else {
             L1: {
               var4 = 0;
-              if (param0 == ((qfa) this).field_Bc) {
+              if (param0 == this.field_Bc) {
                 break L1;
               } else {
                 jaggl.OpenGL.glTexEnvi(8960, 34161, param0);
                 var4 = 1;
-                ((qfa) this).field_Bc = param0;
+                this.field_Bc = param0;
                 break L1;
               }
             }
             L2: {
-              if (param1 == ((qfa) this).field_tb) {
+              if (param1 == this.field_tb) {
                 break L2;
               } else {
                 jaggl.OpenGL.glTexEnvi(8960, 34162, param1);
-                ((qfa) this).field_tb = param1;
+                this.field_tb = param1;
                 var4 = 1;
                 break L2;
               }
@@ -518,7 +528,7 @@ final class qfa extends ha {
             if (var4 == 0) {
               break L0;
             } else {
-              ((qfa) this).field_x = ((qfa) this).field_x & -30;
+              this.field_x = this.field_x & -30;
               break L0;
             }
           }
@@ -527,13 +537,15 @@ final class qfa extends ha {
           if (!param2) {
             break L3;
           } else {
-            ((qfa) this).field_jb = null;
+            this.field_jb = (rpa) null;
             break L3;
           }
         }
     }
 
     final void a(za param0) {
+        od discarded$2 = null;
+        od discarded$3 = null;
         RuntimeException var2 = null;
         mb var3 = null;
         RuntimeException stackIn_7_0 = null;
@@ -555,13 +567,13 @@ final class qfa extends ha {
         try {
           L0: {
             L1: {
-              ((qfa) this).field_Kb = ((gpa) (Object) param0).field_e;
-              if (((qfa) this).field_z != null) {
+              this.field_Kb = ((gpa) ((Object) param0)).field_e;
+              if (this.field_z != null) {
                 break L1;
               } else {
                 L2: {
                   var3 = new mb(80);
-                  if (!((qfa) this).field_ac) {
+                  if (!this.field_ac) {
                     var3.a(-1.0f, 1059949744);
                     var3.a(-1.0f, 1059949744);
                     var3.a(0.0f, 1059949744);
@@ -607,10 +619,10 @@ final class qfa extends ha {
                     break L2;
                   }
                 }
-                ((qfa) this).field_z = ((qfa) this).a(var3.field_h, 20, var3.field_e, false, (byte) 121);
-                od discarded$2 = new od(((qfa) this).field_z, 5126, 3, 0);
-                od discarded$3 = new od(((qfa) this).field_z, 5126, 2, 12);
-                ((qfa) this).field_Ec.a(8, (qfa) this);
+                this.field_z = this.a(var3.field_h, 20, var3.field_e, false, (byte) 121);
+                discarded$2 = new od(this.field_z, 5126, 3, 0);
+                discarded$3 = new od(this.field_z, 5126, 2, 12);
+                this.field_Ec.a(8, (qfa) (this));
                 break L1;
               }
             }
@@ -620,23 +632,23 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_0 = (RuntimeException) (var2);
             stackOut_6_1 = new StringBuilder().append("qfa.GB(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -644,47 +656,48 @@ final class qfa extends ha {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
     final void KA(int param0, int param1, int param2, int param3) {
-        if (((qfa) this).field_Sb < param2) {
-            param2 = ((qfa) this).field_Sb;
+        if (this.field_Sb < param2) {
+            param2 = this.field_Sb;
         }
-        if (((qfa) this).field_Y < param3) {
-            param3 = ((qfa) this).field_Y;
+        if (this.field_Y < param3) {
+            param3 = this.field_Y;
         }
         if (!(param1 >= 0)) {
             param1 = 0;
         }
-        if (!(param0 >= 0)) {
+        if (!((param0 ^ -1) <= -1)) {
             param0 = 0;
         }
-        ((qfa) this).field_fb = param1;
-        ((qfa) this).field_oc = param0;
-        ((qfa) this).field_ab = param2;
-        ((qfa) this).field_C = param3;
+        this.field_fb = param1;
+        this.field_oc = param0;
+        this.field_ab = param2;
+        this.field_C = param3;
         jaggl.OpenGL.glEnable(3089);
         this.o(124);
         this.l(10);
     }
 
     final void b(int param0, jaa param1) {
+        int fieldTemp$0 = 0;
         try {
-            if (!(3 > ((qfa) this).field_rc)) {
+            if (!(3 > this.field_rc)) {
                 throw new RuntimeException();
             }
-            if (((qfa) this).field_rc >= param0) {
-                ((qfa) this).field_Gb[((qfa) this).field_rc].a((byte) 90);
+            if (this.field_rc >= param0) {
+                this.field_Gb[this.field_rc].a((byte) 90);
             }
-            int fieldTemp$0 = ((qfa) this).field_rc + 1;
-            ((qfa) this).field_rc = ((qfa) this).field_rc + 1;
-            ((qfa) this).field_Gb[fieldTemp$0] = param1;
-            ((qfa) this).field_lc = param1;
-            ((qfa) this).field_lc.c(31636);
+            fieldTemp$0 = this.field_rc + 1;
+            this.field_rc = this.field_rc + 1;
+            this.field_Gb[fieldTemp$0] = param1;
+            this.field_lc = param1;
+            this.field_lc.c(31636);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qfa.WD(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "qfa.WD(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -712,21 +725,21 @@ final class qfa extends ha {
               if (param0 == 34962) {
                 break L1;
               } else {
-                ((qfa) this).a(0.2658414840698242f, 1.4282253980636597f, 20);
+                this.a(0.2658414840698242f, 1.4282253980636597f, 20);
                 break L1;
               }
             }
             L2: {
-              if (param1 != ((qfa) this).field_T) {
+              if (param1 != this.field_T) {
                 L3: {
-                  if (!((qfa) this).field_cb) {
+                  if (!this.field_cb) {
                     break L3;
                   } else {
                     jaggl.OpenGL.glBindBufferARB(34962, param1.a(true));
                     break L3;
                   }
                 }
-                ((qfa) this).field_T = param1;
+                this.field_T = param1;
                 break L2;
               } else {
                 break L2;
@@ -738,23 +751,23 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_0 = (RuntimeException) (var3);
             stackOut_8_1 = new StringBuilder().append("qfa.FC(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -762,11 +775,12 @@ final class qfa extends ha {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
     }
 
     final void a(byte param0, jaa param1) {
+        int fieldTemp$2 = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -790,34 +804,34 @@ final class qfa extends ha {
               if (param0 < -105) {
                 break L1;
               } else {
-                ((qfa) this).a(34, -50, (byte) 51);
+                this.a(34, -50, (byte) 51);
                 break L1;
               }
             }
             L2: {
-              if (!((qfa) this).field_Ob) {
-                if (((qfa) this).field_zc < 3) {
+              if (!this.field_Ob) {
+                if (this.field_zc < 3) {
                   L3: {
-                    if (((qfa) this).field_zc < 0) {
+                    if (this.field_zc < 0) {
                       break L3;
                     } else {
-                      ((qfa) this).field_p[((qfa) this).field_zc].b((byte) -128);
+                      this.field_p[this.field_zc].b((byte) -128);
                       break L3;
                     }
                   }
-                  int fieldTemp$2 = ((qfa) this).field_zc + 1;
-                  ((qfa) this).field_zc = ((qfa) this).field_zc + 1;
-                  ((qfa) this).field_p[fieldTemp$2] = param1;
-                  ((qfa) this).field_lc = param1;
-                  ((qfa) this).field_W = param1;
-                  ((qfa) this).field_W.b(-5574);
+                  fieldTemp$2 = this.field_zc + 1;
+                  this.field_zc = this.field_zc + 1;
+                  this.field_p[fieldTemp$2] = param1;
+                  this.field_lc = param1;
+                  this.field_W = param1;
+                  this.field_W.b(-5574);
                   break L2;
                 } else {
                   throw new RuntimeException();
                 }
               } else {
-                ((qfa) this).a(75, param1);
-                ((qfa) this).b(0, param1);
+                this.a(75, param1);
+                this.b(0, param1);
                 break L2;
               }
             }
@@ -827,23 +841,23 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_0 = (RuntimeException) (var3);
             stackOut_10_1 = new StringBuilder().append("qfa.MA(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -851,16 +865,16 @@ final class qfa extends ha {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 
     final void c(int param0, boolean param1) {
         if (param0 != 32925) {
-            ((qfa) this).field_vb = -92;
+            this.field_vb = -92;
         }
-        if (param1 != ((qfa) this).field_j) {
-            ((qfa) this).field_j = param1 ? true : false;
+        if (param1 != this.field_j) {
+            this.field_j = param1 ? true : false;
             this.e(false);
         }
     }
@@ -893,7 +907,7 @@ final class qfa extends ha {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = new ne((qfa) this, param0, param1, param3, param4, param2);
+            stackOut_0_0 = new ne((qfa) (this), param0, param1, param3, param4, param2);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -901,23 +915,23 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var6 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var6;
+            stackOut_2_0 = (RuntimeException) (var6);
             stackOut_2_1 = new StringBuilder().append("qfa.H(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -925,16 +939,16 @@ final class qfa extends ha {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
-        return (ka) (Object) stackIn_1_0;
+        return (ka) ((Object) stackIn_1_0);
     }
 
     final void t(int param0) {
-        ((qfa) this).field_oc = 0;
-        ((qfa) this).field_C = ((qfa) this).field_Y;
-        ((qfa) this).field_fb = 0;
-        ((qfa) this).field_ab = ((qfa) this).field_Sb;
+        this.field_oc = 0;
+        this.field_C = this.field_Y;
+        this.field_fb = 0;
+        this.field_ab = this.field_Sb;
         jaggl.OpenGL.glDisable(3089);
         int var2 = -12 % ((45 - param0) / 61);
         this.o(107);
@@ -970,132 +984,132 @@ final class qfa extends ha {
         try {
           L0: {
             L1: {
-              ((qfa) this).field_qc = (tla) (Object) param0;
-              if (!((qfa) this).field_U) {
-                if (((qfa) this).field_O) {
+              this.field_qc = (tla) ((Object) param0);
+              if (!this.field_U) {
+                if (this.field_O) {
                   L2: {
-                    var3_ref = (tob) (Object) ((qfa) this).field_Ic.a((long)(((qfa) this).field_qc.d() << 16 | ((qfa) this).field_qc.a()), 116);
+                    var3_ref = (tob) ((Object) this.field_Ic.a((long)(this.field_qc.d() << -112855472 | this.field_qc.a()), 116));
                     if (var3_ref != null) {
                       break L2;
                     } else {
-                      var9 = new tob((qfa) this, ((qfa) this).field_qc.d(), ((qfa) this).field_qc.a());
+                      var9 = new tob((qfa) (this), this.field_qc.d(), this.field_qc.a());
                       var3_ref = var9;
-                      ((qfa) this).field_Gc = ((qfa) this).field_Gc + 4 * var9.field_m;
+                      this.field_Gc = this.field_Gc + 4 * var9.field_m;
                       L3: while (true) {
                         L4: {
-                          if (((qfa) this).field_Gc <= 2097152) {
+                          if (-2097153 <= (this.field_Gc ^ -1)) {
                             break L4;
                           } else {
-                            var4 = ((qfa) this).field_E.b(1);
+                            var4 = this.field_E.b(1);
                             if (var4 == null) {
                               break L4;
                             } else {
-                              var10 = (tob) (Object) var4;
+                              var10 = (tob) ((Object) var4);
                               var10.d((byte) -35);
                               var10.b(-3846);
-                              ((qfa) this).field_c.releasePbuffer(var10.f(-128));
-                              ((qfa) this).field_Gc = ((qfa) this).field_Gc - var10.field_m;
+                              this.field_c.releasePbuffer(var10.f(-128));
+                              this.field_Gc = this.field_Gc - var10.field_m;
                               continue L3;
                             }
                           }
                         }
-                        ((qfa) this).field_Ic.a((long)(((qfa) this).field_qc.d() << 16 | ((qfa) this).field_qc.a()), (ksa) (Object) var9, (byte) -120);
+                        this.field_Ic.a((long)(this.field_qc.d() << -1298095344 | this.field_qc.a()), var9, (byte) -120);
                         break L2;
                       }
                     }
                   }
-                  ((qfa) this).field_E.a((fh) (Object) var3_ref, (byte) -22);
-                  ((qfa) this).field_c.setPbuffer(var3_ref.f(-128));
+                  this.field_E.a((fh) (var3_ref), (byte) -22);
+                  this.field_c.setPbuffer(var3_ref.f(-128));
                   break L1;
                 } else {
                   throw new RuntimeException("");
                 }
               } else {
                 L5: {
-                  if (((qfa) this).field_jb == null) {
-                    ((qfa) this).field_jb = new rpa((qfa) this);
+                  if (this.field_jb == null) {
+                    this.field_jb = new rpa((qfa) (this));
                     break L5;
                   } else {
                     break L5;
                   }
                 }
-                if ((Object) (Object) ((qfa) this).field_lc != (Object) (Object) ((qfa) this).field_jb) {
+                if (this.field_lc != this.field_jb) {
                   L6: {
-                    ((qfa) this).a((byte) -109, (jaa) (Object) ((qfa) this).field_jb);
+                    this.a((byte) -109, (jaa) (this.field_jb));
                     if (!param1) {
                       break L6;
                     } else {
                       L7: {
-                        var3_ref2 = (nv) (Object) ((qfa) this).field_Ic.a((long)(((qfa) this).field_qc.d() << 16 | ((qfa) this).field_qc.a()), 100);
+                        var3_ref2 = (nv) ((Object) this.field_Ic.a((long)(this.field_qc.d() << 1088783632 | this.field_qc.a()), 100));
                         if (var3_ref2 != null) {
                           break L7;
                         } else {
-                          var7 = new nv((qfa) this, 6402, ((qfa) this).field_qc.d(), ((qfa) this).field_qc.a());
+                          var7 = new nv((qfa) (this), 6402, this.field_qc.d(), this.field_qc.a());
                           var3_ref2 = var7;
-                          ((qfa) this).field_Gc = ((qfa) this).field_Gc + var7.field_m;
+                          this.field_Gc = this.field_Gc + var7.field_m;
                           L8: while (true) {
                             L9: {
-                              if (((qfa) this).field_Gc <= 2097152) {
+                              if ((this.field_Gc ^ -1) >= -2097153) {
                                 break L9;
                               } else {
-                                var4 = ((qfa) this).field_E.b(1);
+                                var4 = this.field_E.b(1);
                                 if (var4 == null) {
                                   break L9;
                                 } else {
-                                  var8 = (nv) (Object) var4;
+                                  var8 = (nv) ((Object) var4);
                                   var8.d((byte) -35);
                                   var8.b(-3846);
                                   var8.e((byte) 124);
-                                  ((qfa) this).field_Gc = ((qfa) this).field_Gc - var8.field_m;
+                                  this.field_Gc = this.field_Gc - var8.field_m;
                                   continue L8;
                                 }
                               }
                             }
-                            ((qfa) this).field_Ic.a((long)(((qfa) this).field_qc.d() << 16 | ((qfa) this).field_qc.a()), (ksa) (Object) var7, (byte) -124);
+                            this.field_Ic.a((long)(this.field_qc.d() << 475764976 | this.field_qc.a()), var7, (byte) -124);
                             break L7;
                           }
                         }
                       }
-                      ((qfa) this).field_E.a((fh) (Object) var3_ref2, (byte) -22);
-                      ((qfa) this).field_jb.a(8, var3_ref2, (byte) -20);
+                      this.field_E.a((fh) (var3_ref2), (byte) -22);
+                      this.field_jb.a(8, var3_ref2, (byte) -20);
                       break L6;
                     }
                   }
-                  ((qfa) this).field_jb.a(0, (byte) -126, (aia) (Object) ((qfa) this).field_qc.field_f);
+                  this.field_jb.a(0, (byte) -126, this.field_qc.field_f);
                   break L1;
                 } else {
                   throw new RuntimeException();
                 }
               }
             }
-            ((qfa) this).field_Sb = param0.d();
-            ((qfa) this).field_Y = param0.a();
+            this.field_Sb = param0.d();
+            this.field_Y = param0.a();
             this.f((byte) -61);
             this.f(27818);
-            ((qfa) this).t(-70);
+            this.t(-70);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var3 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var3;
+            stackOut_27_0 = (RuntimeException) (var3);
             stackOut_27_1 = new StringBuilder().append("qfa.A(");
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
             stackIn_28_1 = stackOut_27_1;
             if (param0 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "null";
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
               break L10;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "{...}";
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
@@ -1103,7 +1117,7 @@ final class qfa extends ha {
               break L10;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param1 + ')');
         }
     }
 
@@ -1119,27 +1133,27 @@ final class qfa extends ha {
         int var10 = 0;
         L0: {
           var10 = VoidHunters.field_G;
-          if (param2 < 0) {
+          if ((param2 ^ -1) > -1) {
             param2 = -param2;
             break L0;
           } else {
             break L0;
           }
         }
-        if (param0 + param2 < ((qfa) this).field_oc) {
+        if (param0 + param2 < this.field_oc) {
           return;
         } else {
           L1: {
-            if (((qfa) this).field_ab < -param2 + param0) {
+            if (this.field_ab < -param2 + param0) {
               break L1;
             } else {
-              if (((qfa) this).field_fb > param2 + param1) {
+              if (this.field_fb > param2 + param1) {
                 break L1;
               } else {
-                if (((qfa) this).field_C >= -param2 + param1) {
+                if (this.field_C >= -param2 + param1) {
                   this.m(-88);
-                  ((qfa) this).d(param4, 114);
-                  jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
+                  this.d(param4, 114);
+                  jaggl.OpenGL.glColor4ub((byte)(param3 >> -1050627216), (byte)(param3 >> -1637302616), (byte)param3, (byte)(param3 >> -2060627592));
                   if (1 >= param2) {
                     jaggl.OpenGL.glBegin(7);
                     jaggl.OpenGL.glVertex2f((float)(param0 - -1), (float)(1 + param1));
@@ -1158,7 +1172,7 @@ final class qfa extends ha {
                         var8 = 64;
                         break L2;
                       } else {
-                        if (var8 > 512) {
+                        if (-513 > (var8 ^ -1)) {
                           var8 = 512;
                           break L2;
                         } else {
@@ -1227,7 +1241,7 @@ final class qfa extends ha {
         String stackOut_6_2 = null;
         try {
           L0: {
-            stackOut_0_0 = new fn((qfa) this, param0, param1, param2);
+            stackOut_0_0 = new fn((qfa) (this), param0, param1, param2);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -1235,23 +1249,23 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_0 = (RuntimeException) (var4);
             stackOut_2_1 = new StringBuilder().append("qfa.BA(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -1260,23 +1274,23 @@ final class qfa extends ha {
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
             stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -1284,31 +1298,34 @@ final class qfa extends ha {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ')');
         }
-        return (da) (Object) stackIn_1_0;
+        return (da) ((Object) stackIn_1_0);
     }
 
     final void xa(float param0) {
-        if (!(param0 == ((qfa) this).field_pc)) {
-            ((qfa) this).field_pc = param0;
+        if (!(param0 == this.field_pc)) {
+            this.field_pc = param0;
             this.e((byte) -122);
         }
     }
 
     private final void i(int param0) {
-        if (!(((qfa) this).field_Jb == 1)) {
+        if (param0 != 3) {
+            return;
+        }
+        if (!((this.field_Jb ^ -1) == -2)) {
             jaggl.OpenGL.glMatrixMode(5889);
             jaggl.OpenGL.glLoadIdentity();
-            if (((qfa) this).field_Sb > 0) {
-                if (0 < ((qfa) this).field_Y) {
-                    jaggl.OpenGL.glOrtho(0.0, (double)((qfa) this).field_Sb, (double)((qfa) this).field_Y, 0.0, -1.0, 1.0);
+            if (this.field_Sb > 0) {
+                if (0 < this.field_Y) {
+                    jaggl.OpenGL.glOrtho(0.0, (double)this.field_Sb, (double)this.field_Y, 0.0, -1.0, 1.0);
                 }
             }
             jaggl.OpenGL.glMatrixMode(5888);
             jaggl.OpenGL.glLoadIdentity();
-            ((qfa) this).field_Jb = 1;
-            ((qfa) this).field_x = ((qfa) this).field_x & -25;
+            this.field_Jb = 1;
+            this.field_x = this.field_x & -25;
         }
     }
 
@@ -1318,20 +1335,20 @@ final class qfa extends ha {
 
     final void K(int[] param0) {
         try {
-            param0[0] = ((qfa) this).field_oc;
-            param0[2] = ((qfa) this).field_ab;
-            param0[3] = ((qfa) this).field_C;
-            param0[1] = ((qfa) this).field_fb;
+            param0[0] = this.field_oc;
+            param0[2] = this.field_ab;
+            param0[3] = this.field_C;
+            param0[1] = this.field_fb;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qfa.K(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "qfa.K(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void r(int param0) {
-        float var2 = (float)(-((qfa) this).field_lb) * ((qfa) this).field_Cb / (float)((qfa) this).field_Qb;
-        float var3 = ((qfa) this).field_Cb * (float)(-((qfa) this).field_gc) / (float)((qfa) this).field_yc;
-        float var4 = (float)(-((qfa) this).field_lb + ((qfa) this).field_Sb) * ((qfa) this).field_Cb / (float)((qfa) this).field_Qb;
-        float var5 = (float)(-((qfa) this).field_gc + ((qfa) this).field_Y) * ((qfa) this).field_Cb / (float)((qfa) this).field_yc;
+        float var2 = (float)(-this.field_lb) * this.field_Cb / (float)this.field_Qb;
+        float var3 = this.field_Cb * (float)(-this.field_gc) / (float)this.field_yc;
+        float var4 = (float)(-this.field_lb + this.field_Sb) * this.field_Cb / (float)this.field_Qb;
+        float var5 = (float)(-this.field_gc + this.field_Y) * this.field_Cb / (float)this.field_yc;
         jaggl.OpenGL.glMatrixMode(5889);
         jaggl.OpenGL.glLoadIdentity();
         if (param0 >= -80) {
@@ -1339,7 +1356,7 @@ final class qfa extends ha {
         }
         if (var2 != var4) {
             if (var3 != var5) {
-                jaggl.OpenGL.glOrtho((double)var2, (double)var4, (double)(-var5), (double)(-var3), (double)((qfa) this).field_ob, (double)((qfa) this).field_bb);
+                jaggl.OpenGL.glOrtho((double)var2, (double)var4, (double)(-var5), (double)(-var3), (double)this.field_ob, (double)this.field_bb);
             }
         }
         jaggl.OpenGL.glMatrixMode(5888);
@@ -1351,7 +1368,7 @@ final class qfa extends ha {
         int[] var8 = new int[param2 * param3];
         int[] var5 = var8;
         for (var6 = 0; var6 < param3; var6++) {
-            jaggl.OpenGL.glReadPixelsi(param0, -var6 + -param1 + ((qfa) this).field_Y, param2, 1, 32993, ((qfa) this).field_cc, var8, var6 * param2);
+            jaggl.OpenGL.glReadPixelsi(param0, -var6 + -param1 + this.field_Y, param2, 1, 32993, this.field_cc, var8, var6 * param2);
         }
         return var8;
     }
@@ -1362,14 +1379,14 @@ final class qfa extends ha {
         int stackOut_5_0 = 0;
         L0: {
           L1: {
-            if (((qfa) this).field_A == null) {
+            if (this.field_A == null) {
               break L1;
             } else {
               L2: {
-                if (((qfa) this).field_Kc <= 1) {
+                if ((this.field_Kc ^ -1) >= -2) {
                   break L2;
                 } else {
-                  if (!((qfa) this).field_sc) {
+                  if (!this.field_sc) {
                     break L1;
                   } else {
                     break L2;
@@ -1390,11 +1407,13 @@ final class qfa extends ha {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         jaggl.OpenGL.glLineWidth((float)param5);
-        ((qfa) this).b(param0, param1, param2, param3, param4, param6);
+        this.b(param0, param1, param2, param3, param4, param6);
         jaggl.OpenGL.glLineWidth(1.0f);
     }
 
     final void b(byte param0, jaa param1) {
+        int fieldTemp$4 = 0;
+        int discarded$5 = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -1415,21 +1434,21 @@ final class qfa extends ha {
         try {
           L0: {
             L1: {
-              if (((qfa) this).field_rc < 0) {
+              if (this.field_rc < 0) {
                 break L1;
               } else {
-                if (param1 == ((qfa) this).field_Gb[((qfa) this).field_rc]) {
+                if (param1 == this.field_Gb[this.field_rc]) {
                   L2: {
-                    int fieldTemp$4 = ((qfa) this).field_rc;
-                    ((qfa) this).field_rc = ((qfa) this).field_rc - 1;
-                    ((qfa) this).field_Gb[fieldTemp$4] = null;
+                    fieldTemp$4 = this.field_rc;
+                    this.field_rc = this.field_rc - 1;
+                    this.field_Gb[fieldTemp$4] = null;
                     param1.a((byte) 55);
-                    if (0 <= ((qfa) this).field_rc) {
-                      ((qfa) this).field_lc = ((qfa) this).field_Gb[((qfa) this).field_rc];
-                      ((qfa) this).field_lc.c(31636);
+                    if (0 <= this.field_rc) {
+                      this.field_lc = this.field_Gb[this.field_rc];
+                      this.field_lc.c(31636);
                       break L2;
                     } else {
-                      ((qfa) this).field_lc = null;
+                      this.field_lc = null;
                       break L2;
                     }
                   }
@@ -1437,7 +1456,7 @@ final class qfa extends ha {
                     if (param0 == 101) {
                       break L3;
                     } else {
-                      int discarded$5 = ((qfa) this).e(-34, -7);
+                      discarded$5 = this.e(-34, -7);
                       break L3;
                     }
                   }
@@ -1453,23 +1472,23 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_0 = (RuntimeException) (var3);
             stackOut_10_1 = new StringBuilder().append("qfa.DC(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -1477,21 +1496,21 @@ final class qfa extends ha {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 
     private final void s(int param0) {
-        ((qfa) this).field_w = -((qfa) this).field_u + (float)(-((qfa) this).field_ub + ((qfa) this).field_bb);
-        ((qfa) this).field_wb = ((qfa) this).field_w - (float)((qfa) this).field_jc * ((qfa) this).field_Q;
-        if (!(((qfa) this).field_wb >= (float)((qfa) this).field_ob)) {
-            ((qfa) this).field_wb = (float)((qfa) this).field_ob;
+        this.field_w = -this.field_u + (float)(-this.field_ub + this.field_bb);
+        this.field_wb = this.field_w - (float)this.field_jc * this.field_Q;
+        if (!(this.field_wb >= (float)this.field_ob)) {
+            this.field_wb = (float)this.field_ob;
         }
-        jaggl.OpenGL.glFogf(2915, ((qfa) this).field_wb);
-        jaggl.OpenGL.glFogf(2916, ((qfa) this).field_w);
-        tdb.field_o[1] = (float)dla.a(((qfa) this).field_J, 65280) / 65280.0f;
-        tdb.field_o[2] = (float)dla.a(((qfa) this).field_J, 255) / 255.0f;
-        tdb.field_o[0] = (float)dla.a(((qfa) this).field_J, 16711680) / 16711680.0f;
+        jaggl.OpenGL.glFogf(param0, this.field_wb);
+        jaggl.OpenGL.glFogf(2916, this.field_w);
+        tdb.field_o[1] = (float)dla.a(this.field_J, 65280) / 65280.0f;
+        tdb.field_o[2] = (float)dla.a(this.field_J, 255) / 255.0f;
+        tdb.field_o[0] = (float)dla.a(this.field_J, 16711680) / 16711680.0f;
         jaggl.OpenGL.glFogfv(2918, tdb.field_o, 0);
     }
 
@@ -1501,48 +1520,48 @@ final class qfa extends ha {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.m(-125);
-        ((qfa) this).d(param9, 126);
+        this.d(param9, 126);
         jaggl.OpenGL.glBegin(4);
-        jaggl.OpenGL.glColor4ub((byte)(param6 >> 16), (byte)(param6 >> 8), (byte)param6, (byte)(param6 >> 24));
+        jaggl.OpenGL.glColor4ub((byte)(param6 >> 1887091632), (byte)(param6 >> 706434024), (byte)param6, (byte)(param6 >> -1140492488));
         jaggl.OpenGL.glVertex2f(0.3499999940395355f + (float)param0, (float)param1 + 0.3499999940395355f);
-        jaggl.OpenGL.glColor4ub((byte)(param7 >> 16), (byte)(param7 >> 8), (byte)param7, (byte)(param7 >> 24));
+        jaggl.OpenGL.glColor4ub((byte)(param7 >> 232477776), (byte)(param7 >> 683011304), (byte)param7, (byte)(param7 >> -965313640));
         jaggl.OpenGL.glVertex2f(0.3499999940395355f + (float)param2, 0.3499999940395355f + (float)param3);
-        jaggl.OpenGL.glColor4ub((byte)(param8 >> 16), (byte)(param8 >> 8), (byte)param8, (byte)(param8 >> 24));
+        jaggl.OpenGL.glColor4ub((byte)(param8 >> -313381392), (byte)(param8 >> 419515048), (byte)param8, (byte)(param8 >> -1253720712));
         jaggl.OpenGL.glVertex2f((float)param4 + 0.3499999940395355f, 0.3499999940395355f + (float)param5);
         jaggl.OpenGL.glEnd();
     }
 
     final void c(boolean param0) {
-        if (!(((qfa) this).field_x == 4)) {
+        if (!(this.field_x == 4)) {
             this.i(3);
             this.a(false, -119);
             this.b(-20951, false);
             this.a((byte) 32, false);
             this.a(false, (byte) 66);
             this.i(5888, -2);
-            ((qfa) this).d(1, 74);
-            ((qfa) this).field_x = 4;
+            this.d(1, 74);
+            this.field_x = 4;
         }
         if (param0) {
-            ((qfa) this).T(-60, 98, 93, -48);
+            this.T(-60, 98, 93, -48);
         }
     }
 
     final synchronized void a(int param0, int param1, byte param2) {
         hua var4 = new hua(param0);
         var4.field_b = (long)param1;
-        ((qfa) this).field_ec.b(-10258, (ksa) (Object) var4);
+        this.field_ec.b(-10258, var4);
         if (param2 < 8) {
-            ((qfa) this).field_s = null;
+            this.field_s = (bu) null;
         }
     }
 
     private final void a(boolean param0, byte param1) {
         int var3 = 102 / ((param1 - 17) / 41);
-        if (!(param0 == ((qfa) this).field_Ub)) {
-            ((qfa) this).field_Ub = param0 ? true : false;
+        if (!(param0 == this.field_Ub)) {
+            this.field_Ub = param0 ? true : false;
             this.b((byte) 98);
-            ((qfa) this).field_x = ((qfa) this).field_x & -32;
+            this.field_x = this.field_x & -32;
         }
     }
 
@@ -1552,9 +1571,9 @@ final class qfa extends ha {
         float var9 = -1.0f + (var7 + (float)param2);
         float var10 = -1.0f + ((float)param3 + var8);
         this.m(-71);
-        ((qfa) this).d(param5, 124);
-        jaggl.OpenGL.glColor4ub((byte)(param4 >> 16), (byte)(param4 >> 8), (byte)param4, (byte)(param4 >> 24));
-        if (((qfa) this).field_y) {
+        this.d(param5, 124);
+        jaggl.OpenGL.glColor4ub((byte)(param4 >> -2106934416), (byte)(param4 >> -662840120), (byte)param4, (byte)(param4 >> 1941830808));
+        if (this.field_y) {
             jaggl.OpenGL.glDisable(32925);
         }
         jaggl.OpenGL.glBegin(2);
@@ -1563,16 +1582,20 @@ final class qfa extends ha {
         jaggl.OpenGL.glVertex2f(var9, var10);
         jaggl.OpenGL.glVertex2f(var9, var8);
         jaggl.OpenGL.glEnd();
-        if (!(!((qfa) this).field_y)) {
+        if (!(!this.field_y)) {
             jaggl.OpenGL.glEnable(32925);
         }
     }
 
     private final void w(int param0) {
+        int incrementValue$0 = 0;
         int var3 = VoidHunters.field_G;
         int var2 = 0;
-        while (!((qfa) this).field_c.a()) {
-            int incrementValue$0 = var2;
+        if (param0 < 40) {
+            this.field_Cc = (ij) null;
+        }
+        while (!this.field_c.a()) {
+            incrementValue$0 = var2;
             var2++;
             if (!(5 >= incrementValue$0)) {
                 throw new RuntimeException("");
@@ -1589,7 +1612,7 @@ final class qfa extends ha {
     final uq a(byte[] param0, int param1, int param2, boolean param3, byte param4) {
         RuntimeException var6 = null;
         oaa stackIn_5_0 = null;
-        Object stackIn_8_0 = null;
+        uq stackIn_8_0 = null;
         dda stackIn_10_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -1598,10 +1621,11 @@ final class qfa extends ha {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         oaa stackOut_4_0 = null;
         dda stackOut_9_0 = null;
-        Object stackOut_7_0 = null;
+        uq stackOut_7_0 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_13_0 = null;
@@ -1613,56 +1637,59 @@ final class qfa extends ha {
         try {
           L0: {
             L1: {
-              if (!((qfa) this).field_cb) {
+              if (!this.field_cb) {
                 break L1;
               } else {
                 L2: {
                   if (!param3) {
                     break L2;
                   } else {
-                    if (!((qfa) this).field_k) {
+                    if (!this.field_k) {
                       break L1;
                     } else {
                       break L2;
                     }
                   }
                 }
-                stackOut_4_0 = new oaa((qfa) this, param1, param0, param2, param3);
+                stackOut_4_0 = new oaa((qfa) (this), param1, param0, param2, param3);
                 stackIn_5_0 = stackOut_4_0;
-                return (uq) (Object) stackIn_5_0;
+                decompiledRegionSelector0 = 0;
+                break L0;
               }
             }
             if (param4 >= 115) {
-              stackOut_9_0 = new dda((qfa) this, param1, param0, param2);
+              stackOut_9_0 = new dda((qfa) (this), param1, param0, param2);
               stackIn_10_0 = stackOut_9_0;
+              decompiledRegionSelector0 = 2;
               break L0;
             } else {
-              stackOut_7_0 = null;
+              stackOut_7_0 = (uq) null;
               stackIn_8_0 = stackOut_7_0;
-              return (uq) (Object) stackIn_8_0;
+              decompiledRegionSelector0 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var6;
+            stackOut_11_0 = (RuntimeException) (var6);
             stackOut_11_1 = new StringBuilder().append("qfa.ME(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -1670,14 +1697,22 @@ final class qfa extends ha {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
-        return (uq) (Object) stackIn_10_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (uq) ((Object) stackIn_5_0);
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0;
+          } else {
+            return (uq) ((Object) stackIn_10_0);
+          }
+        }
     }
 
     private final void o(int param0) {
         if (param0 <= 98) {
-            ((qfa) this).t(-19);
+            this.t(-19);
         }
     }
 
@@ -1705,7 +1740,7 @@ final class qfa extends ha {
         try {
           L0: {
             L1: {
-              var3 = ((qfa) this).field_wc[((qfa) this).field_Z];
+              var3 = this.field_wc[this.field_Z];
               if (var3 == param1) {
                 break L1;
               } else {
@@ -1732,16 +1767,16 @@ final class qfa extends ha {
                     break L2;
                   }
                 }
-                ((qfa) this).field_wc[((qfa) this).field_Z] = param1;
+                this.field_wc[this.field_Z] = param1;
                 break L1;
               }
             }
             L4: {
-              ((qfa) this).field_x = ((qfa) this).field_x & -2;
+              this.field_x = this.field_x & -2;
               if (param0 >= 24) {
                 break L4;
               } else {
-                ((qfa) this).field_kb = true;
+                this.field_kb = true;
                 break L4;
               }
             }
@@ -1751,23 +1786,23 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3_ref;
+            stackOut_14_0 = (RuntimeException) (var3_ref);
             stackOut_14_1 = new StringBuilder().append("qfa.EC(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -1775,17 +1810,17 @@ final class qfa extends ha {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
     }
 
     final synchronized void a(byte param0, long param1) {
         if (param0 != 18) {
-            ((qfa) this).field_Fc = -96;
+            this.field_Fc = -96;
         }
         ksa var4 = new ksa();
         var4.field_b = param1;
-        ((qfa) this).field_zb.b(-10258, var4);
+        this.field_zb.b(-10258, var4);
     }
 
     final wib b(int param0, int param1) {
@@ -1793,19 +1828,22 @@ final class qfa extends ha {
     }
 
     private final void a(byte param0, boolean param1) {
-        if (((qfa) this).field_R != param1) {
+        if (param0 != 32) {
+            this.field_Lc = false;
+        }
+        if (this.field_R != param1) {
             if (param1) {
                 jaggl.OpenGL.glEnable(2929);
             } else {
                 jaggl.OpenGL.glDisable(2929);
             }
-            ((qfa) this).field_R = param1 ? true : false;
-            ((qfa) this).field_x = ((qfa) this).field_x & -32;
+            this.field_R = param1 ? true : false;
+            this.field_x = this.field_x & -32;
         }
     }
 
     final void u() {
-        ((qfa) this).field_fc.c(124);
+        this.field_fc.c(124);
     }
 
     final void o() {
@@ -1813,38 +1851,38 @@ final class qfa extends ha {
         java.awt.Canvas var2 = null;
         Long var3 = null;
         int var4 = VoidHunters.field_G;
-        ksa var1 = ((qfa) this).field_D.d(0);
+        ksa var1 = this.field_D.d(0);
         while (var1 != null) {
-            ((gpa) (Object) var1).a(false);
-            var1 = ((qfa) this).field_D.a((byte) 25);
+            ((gpa) ((Object) var1)).a(false);
+            var1 = this.field_D.a((byte) 25);
         }
-        if (!(((qfa) this).field_fc == null)) {
-            ((qfa) this).field_fc.a(true);
+        if (!(this.field_fc == null)) {
+            this.field_fc.a(true);
         }
-        if (null != ((qfa) this).field_c) {
+        if (null != this.field_c) {
             this.h((byte) -46);
-            var1_ref = ((qfa) this).field_hb.keys();
+            var1_ref = this.field_hb.keys();
             while (var1_ref.hasMoreElements()) {
-                var2 = (java.awt.Canvas) var1_ref.nextElement();
-                var3 = (Long) ((qfa) this).field_hb.get((Object) (Object) var2);
-                ((qfa) this).field_c.releaseSurface(var2, var3.longValue());
+                var2 = (java.awt.Canvas) (var1_ref.nextElement());
+                var3 = (Long) (this.field_hb.get(var2));
+                this.field_c.releaseSurface(var2, var3.longValue());
             }
-            ((qfa) this).field_c.release();
-            ((qfa) this).field_c = null;
+            this.field_c.release();
+            this.field_c = null;
         }
-        if (((qfa) this).field_m) {
+        if (this.field_m) {
             uhb.a((byte) 102, true, false);
-            ((qfa) this).field_m = false;
+            this.field_m = false;
         }
     }
 
     private final void d(int param0) {
         if (param0 <= 111) {
-            Object var3 = null;
-            ((qfa) this).SA(15, 87, -102, 81, (int[]) null, -122, 82);
+            int[] var3 = (int[]) null;
+            this.SA(15, 87, -102, 81, (int[]) null, -122, 82);
         }
         jaggl.OpenGL.glMatrixMode(5889);
-        jaggl.OpenGL.glLoadMatrixf(((qfa) this).field_Xb, 0);
+        jaggl.OpenGL.glLoadMatrixf(this.field_Xb, 0);
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
@@ -1855,28 +1893,28 @@ final class qfa extends ha {
         int var5 = 0;
         float[] var6 = null;
         var5 = VoidHunters.field_G;
-        this.i(5888, -2);
-        var2 = ((qfa) this).field_Dc - 1;
+        this.i(param0 ^ 5122, -2);
+        var2 = this.field_Dc - 1;
         L0: while (true) {
           if (var2 < 0) {
-            ((qfa) this).b(8448, 8448, false);
-            ((qfa) this).c(2, 34192, 770, 34168);
-            this.k(0);
-            ((qfa) this).field_e = 1;
+            this.b(8448, 8448, false);
+            this.c(2, 34192, param0, 34168);
+            this.k(param0 ^ 770);
+            this.field_e = 1;
             jaggl.OpenGL.glEnable(3042);
             jaggl.OpenGL.glBlendFunc(770, 771);
-            ((qfa) this).field_xb = 1;
+            this.field_xb = 1;
             jaggl.OpenGL.glEnable(3008);
             jaggl.OpenGL.glAlphaFunc(516, 0.0f);
-            ((qfa) this).field_db = true;
+            this.field_db = true;
             jaggl.OpenGL.glColorMask(true, true, true, true);
-            ((qfa) this).field_Lb = true;
+            this.field_Lb = true;
             this.a(true, -123);
             this.b(-20951, true);
             this.a((byte) 32, true);
             this.a(true, (byte) -75);
             this.f((byte) -25);
-            ((qfa) this).field_c.setSwapInterval(0);
+            this.field_c.setSwapInterval(0);
             jaggl.OpenGL.glShadeModel(7425);
             jaggl.OpenGL.glClearDepth(1.0f);
             jaggl.OpenGL.glDepthFunc(515);
@@ -1896,9 +1934,9 @@ final class qfa extends ha {
                 jaggl.OpenGL.glFogf(2914, 0.949999988079071f);
                 jaggl.OpenGL.glFogi(2917, 9729);
                 jaggl.OpenGL.glHint(3156, 4353);
-                ((qfa) this).field_Jc = -1;
-                ((qfa) this).field_J = -1;
-                ((qfa) this).t(107);
+                this.field_Jc = -1;
+                this.field_J = -1;
+                this.t(107);
                 return;
               } else {
                 var4 = var3 + 16384;
@@ -1910,8 +1948,8 @@ final class qfa extends ha {
               }
             }
           } else {
-            ((qfa) this).h(33984, var2);
-            ((qfa) this).a(41, (pib) null);
+            this.h(33984, var2);
+            this.a(param0 + -729, (pib) null);
             jaggl.OpenGL.glTexEnvi(8960, 8704, 34160);
             var2--;
             continue L0;
@@ -1920,41 +1958,41 @@ final class qfa extends ha {
     }
 
     private final void f(byte param0) {
-        if (0 != ((qfa) this).field_Jb) {
-            ((qfa) this).field_Jb = 0;
-            ((qfa) this).field_x = ((qfa) this).field_x & -32;
+        if (0 != this.field_Jb) {
+            this.field_Jb = 0;
+            this.field_x = this.field_x & -32;
         }
         if (param0 > -4) {
-            ((qfa) this).field_jb = null;
+            this.field_jb = (rpa) null;
         }
     }
 
     private final void m(int param0) {
-        if (!(((qfa) this).field_x == 1)) {
+        if (!(this.field_x == 1)) {
             this.i(3);
             this.a(false, -127);
             this.b(-20951, false);
             this.a((byte) 32, false);
             this.a(false, (byte) 122);
-            ((qfa) this).a(115, (pib) null);
+            this.a(115, (pib) null);
             this.i(5888, -2);
-            ((qfa) this).c(0, 1);
-            ((qfa) this).field_x = 1;
+            this.c(0, 1);
+            this.field_x = 1;
         }
         int var2 = 89 % ((param0 - -17) / 44);
     }
 
     final int XA() {
-        return ((qfa) this).field_bb;
+        return this.field_bb;
     }
 
     final boolean b() {
-        if (null != ((qfa) this).field_A) {
-            if (!((qfa) this).field_A.e((byte) 117)) {
-                if (!((qfa) this).field_fc.a(2998, (mea) (Object) ((qfa) this).field_A)) {
+        if (null != this.field_A) {
+            if (!this.field_A.e((byte) 117)) {
+                if (!this.field_fc.a(2998, this.field_A)) {
                     return false;
                 }
-                ((qfa) this).field_r.b(-58);
+                this.field_r.b(-58);
             }
             return true;
         }
@@ -1962,17 +2000,20 @@ final class qfa extends ha {
     }
 
     private final void a(float param0, float param1, int param2, float param3) {
-        jaggl.OpenGL.glMatrixMode(5890);
-        if (((qfa) this).field_Vb) {
+        jaggl.OpenGL.glMatrixMode(param2);
+        if (this.field_Vb) {
             jaggl.OpenGL.glLoadIdentity();
         }
         jaggl.OpenGL.glTranslatef(param1, param3, param0);
         jaggl.OpenGL.glMatrixMode(5888);
-        ((qfa) this).field_Vb = true;
+        this.field_Vb = true;
     }
 
     private final void f(int param0) {
-        jaggl.OpenGL.glViewport(((qfa) this).field_N, ((qfa) this).field_Fb, ((qfa) this).field_Sb, ((qfa) this).field_Y);
+        jaggl.OpenGL.glViewport(this.field_N, this.field_Fb, this.field_Sb, this.field_Y);
+        if (param0 != 27818) {
+            this.m(14);
+        }
     }
 
     final boolean l() {
@@ -1982,30 +2023,34 @@ final class qfa extends ha {
     final synchronized void a(int param0, int param1, int param2) {
         hua var4 = new hua(param2);
         var4.field_b = (long)param0;
-        ((qfa) this).field_Nc.b(-10258, (ksa) (Object) var4);
+        this.field_Nc.b(-10258, var4);
         if (param1 <= 14) {
-            ((qfa) this).field_w = 0.8722803592681885f;
+            this.field_w = 0.8722803592681885f;
         }
     }
 
     private final void c(byte param0) {
-        ((qfa) this).field_wc = new pib[((qfa) this).field_Dc];
-        ((qfa) this).field_qb = new aia((qfa) this, 3553, 6408, 1, 1);
-        aia discarded$0 = new aia((qfa) this, 3553, 6408, 1, 1);
-        aia discarded$1 = new aia((qfa) this, 3553, 6408, 1, 1);
-        ne discarded$2 = new ne((qfa) this);
-        ne discarded$3 = new ne((qfa) this);
-        ne discarded$4 = new ne((qfa) this);
-        ne discarded$5 = new ne((qfa) this);
-        ne discarded$6 = new ne((qfa) this);
-        ne discarded$7 = new ne((qfa) this);
-        ne discarded$8 = new ne((qfa) this);
-        ne discarded$9 = new ne((qfa) this);
-        ne discarded$10 = new ne((qfa) this);
-        ne discarded$12 = new ne((qfa) this);
-        if (((qfa) this).field_U) {
-            ((qfa) this).field_pb = new rpa((qfa) this);
-            rpa discarded$13 = new rpa((qfa) this);
+        rpa discarded$14 = null;
+        this.field_wc = new pib[this.field_Dc];
+        this.field_qb = new aia((qfa) (this), 3553, 6408, 1, 1);
+        aia discarded$0 = new aia((qfa) (this), 3553, 6408, 1, 1);
+        aia discarded$1 = new aia((qfa) (this), 3553, 6408, 1, 1);
+        ne discarded$2 = new ne((qfa) (this));
+        ne discarded$3 = new ne((qfa) (this));
+        ne discarded$4 = new ne((qfa) (this));
+        ne discarded$5 = new ne((qfa) (this));
+        ne discarded$6 = new ne((qfa) (this));
+        ne discarded$7 = new ne((qfa) (this));
+        ne discarded$8 = new ne((qfa) (this));
+        ne discarded$10 = new ne((qfa) (this));
+        if (param0 > -54) {
+            this.c(102, -80);
+        }
+        ne discarded$11 = new ne((qfa) (this));
+        ne discarded$13 = new ne((qfa) (this));
+        if (this.field_U) {
+            this.field_pb = new rpa((qfa) (this));
+            discarded$14 = new rpa((qfa) (this));
         }
     }
 
@@ -2030,11 +2075,11 @@ final class qfa extends ha {
         try {
           L0: {
             L1: {
-              ((qfa) this).field_Db.a(false, param0);
-              ((qfa) this).field_F.a(false, (pw) (Object) ((qfa) this).field_Db);
-              ((qfa) this).field_F.b(5);
-              ((qfa) this).field_Bb.a((pw) (Object) ((qfa) this).field_F, 14);
-              if (((qfa) this).field_Jb == 1) {
+              this.field_Db.a(false, param0);
+              this.field_F.a(false, this.field_Db);
+              this.field_F.b(5);
+              this.field_Bb.a(this.field_F, 14);
+              if (-2 == (this.field_Jb ^ -1)) {
                 break L1;
               } else {
                 this.b(true);
@@ -2047,23 +2092,23 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("qfa.FB(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -2071,7 +2116,7 @@ final class qfa extends ha {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -2081,9 +2126,9 @@ final class qfa extends ha {
         float var9 = (float)param2 + var7;
         float var10 = var8 + (float)param3;
         this.m(80);
-        ((qfa) this).d(param5, 67);
-        jaggl.OpenGL.glColor4ub((byte)(param4 >> 16), (byte)(param4 >> 8), (byte)param4, (byte)(param4 >> 24));
-        if (!(!((qfa) this).field_y)) {
+        this.d(param5, 67);
+        jaggl.OpenGL.glColor4ub((byte)(param4 >> 1768708912), (byte)(param4 >> 491600392), (byte)param4, (byte)(param4 >> -717469448));
+        if (!(!this.field_y)) {
             jaggl.OpenGL.glDisable(32925);
         }
         jaggl.OpenGL.glBegin(7);
@@ -2092,27 +2137,27 @@ final class qfa extends ha {
         jaggl.OpenGL.glVertex2f(var9, var10);
         jaggl.OpenGL.glVertex2f(var9, var8);
         jaggl.OpenGL.glEnd();
-        if (!(!((qfa) this).field_y)) {
+        if (!(!this.field_y)) {
             jaggl.OpenGL.glEnable(32925);
         }
     }
 
     final boolean s() {
-        return null != ((qfa) this).field_A && ((qfa) this).field_A.e((byte) 57);
+        return null != this.field_A && this.field_A.e((byte) 57);
     }
 
     final void a(float param0, float param1, int param2) {
-        ((qfa) this).field_u = param0;
-        ((qfa) this).field_Q = param1;
+        this.field_u = param0;
+        this.field_Q = param1;
         this.s(2915);
         if (param2 != 0) {
-            ((qfa) this).field_k = false;
+            this.field_k = false;
         }
     }
 
     final void a(float param0, float param1, boolean param2, float param3, float param4) {
         if (param2) {
-            ((qfa) this).field_Qb = 91;
+            this.field_Qb = 91;
         }
         tdb.field_o[3] = param0;
         tdb.field_o[0] = param4;
@@ -2123,9 +2168,9 @@ final class qfa extends ha {
 
     final void P(int param0, int param1, int param2, int param3, int param4) {
         this.m(106);
-        ((qfa) this).d(param4, 62);
+        this.d(param4, 62);
         float var6 = (float)param0 + 0.3499999940395355f;
-        jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
+        jaggl.OpenGL.glColor4ub((byte)(param3 >> 2038225936), (byte)(param3 >> 949524232), (byte)param3, (byte)(param3 >> 956297624));
         float var7 = (float)param1 + 0.3499999940395355f;
         jaggl.OpenGL.glBegin(1);
         jaggl.OpenGL.glVertex2f(var6, var7);
@@ -2134,11 +2179,11 @@ final class qfa extends ha {
     }
 
     private final void g(byte param0) {
-        jaggl.OpenGL.glLightfv(16384, 4611, ((qfa) this).field_Eb, 0);
+        jaggl.OpenGL.glLightfv(16384, 4611, this.field_Eb, 0);
         if (param0 <= 67) {
-            ((qfa) this).field_Gc = 124;
+            this.field_Gc = 124;
         }
-        jaggl.OpenGL.glLightfv(16385, 4611, ((qfa) this).field_Tb, 0);
+        jaggl.OpenGL.glLightfv(16385, 4611, this.field_Tb, 0);
     }
 
     final void c(int param0, int param1) {
@@ -2147,28 +2192,28 @@ final class qfa extends ha {
           var4 = VoidHunters.field_G;
           if (param1 != 1) {
             if (param1 != 0) {
-              if (param1 == 2) {
-                ((qfa) this).b(34165, 7681, false);
+              if ((param1 ^ -1) == -3) {
+                this.b(34165, 7681, false);
                 break L0;
               } else {
-                if (param1 != 3) {
-                  if (param1 != 4) {
+                if (-4 != (param1 ^ -1)) {
+                  if ((param1 ^ -1) != -5) {
                     break L0;
                   } else {
-                    ((qfa) this).b(34023, 34023, false);
+                    this.b(34023, 34023, false);
                     break L0;
                   }
                 } else {
-                  ((qfa) this).b(260, 8448, false);
+                  this.b(260, 8448, false);
                   break L0;
                 }
               }
             } else {
-              ((qfa) this).b(8448, 8448, false);
+              this.b(8448, 8448, false);
               break L0;
             }
           } else {
-            ((qfa) this).b(7681, 7681, false);
+            this.b(7681, 7681, false);
             break L0;
           }
         }
@@ -2183,14 +2228,15 @@ final class qfa extends ha {
     }
 
     private final void i(int param0, int param1) {
+        za discarded$0 = null;
         if (param0 != 5888) {
-            za discarded$0 = ((qfa) this).e(-78);
+            discarded$0 = this.e(-78);
         }
         this.a(false, param1, true);
     }
 
     final boolean e() {
-        return ((qfa) this).field_d.a(8, 3);
+        return this.field_d.a(8, 3);
     }
 
     final static int[] a(int param0, int[] param1) {
@@ -2237,7 +2283,7 @@ final class qfa extends ha {
             var4 = -2 + param1.length;
             L2: while (true) {
               if (0 > var4) {
-                stackOut_6_0 = (int[]) var2;
+                stackOut_6_0 = (int[]) (var2);
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
@@ -2255,23 +2301,23 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2_ref;
+            stackOut_8_0 = (RuntimeException) (var2_ref);
             stackOut_8_1 = new StringBuilder().append("qfa.BD(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -2279,12 +2325,13 @@ final class qfa extends ha {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
 
     final void a(jaa param0, byte param1) {
+        int fieldTemp$2 = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -2305,31 +2352,31 @@ final class qfa extends ha {
         try {
           L0: {
             L1: {
-              if (((qfa) this).field_Oc < 0) {
+              if (-1 < (this.field_Oc ^ -1)) {
                 break L1;
               } else {
-                if (param0 != ((qfa) this).field_kc[((qfa) this).field_Oc]) {
+                if (param0 != this.field_kc[this.field_Oc]) {
                   break L1;
                 } else {
                   L2: {
-                    int fieldTemp$2 = ((qfa) this).field_Oc;
-                    ((qfa) this).field_Oc = ((qfa) this).field_Oc - 1;
-                    ((qfa) this).field_kc[fieldTemp$2] = null;
+                    fieldTemp$2 = this.field_Oc;
+                    this.field_Oc = this.field_Oc - 1;
+                    this.field_kc[fieldTemp$2] = null;
                     param0.d(70);
                     if (param1 < -68) {
                       break L2;
                     } else {
-                      ((qfa) this).field_ic = -61L;
+                      this.field_ic = -61L;
                       break L2;
                     }
                   }
                   L3: {
-                    if (0 <= ((qfa) this).field_Oc) {
-                      ((qfa) this).field_W = ((qfa) this).field_kc[((qfa) this).field_Oc];
-                      ((qfa) this).field_W.a(-62);
+                    if (0 <= this.field_Oc) {
+                      this.field_W = this.field_kc[this.field_Oc];
+                      this.field_W.a(-62);
                       break L3;
                     } else {
-                      ((qfa) this).field_W = null;
+                      this.field_W = null;
                       break L3;
                     }
                   }
@@ -2343,23 +2390,23 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_0 = (RuntimeException) (var3);
             stackOut_10_1 = new StringBuilder().append("qfa.FD(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -2367,16 +2414,20 @@ final class qfa extends ha {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }
     }
 
     final aja a(int param0, int param1, boolean param2) {
-        return (aja) (Object) new tla((qfa) this, param0, param1, param2);
+        return (aja) ((Object) new tla((qfa) (this), param0, param1, param2));
     }
 
     private final void a(boolean param0, int param1, boolean param2) {
-        this.a(true, true, 0, param1);
+        this.a(true, param2, 0, param1);
+        if (param0) {
+            int[] var5 = (int[]) null;
+            this.K((int[]) null);
+        }
     }
 
     private final void l(int param0) {
@@ -2384,19 +2435,19 @@ final class qfa extends ha {
           if (param0 == 10) {
             break L0;
           } else {
-            ((qfa) this).c(78);
+            this.c(78);
             break L0;
           }
         }
         L1: {
           L2: {
-            if (((qfa) this).field_oc > ((qfa) this).field_ab) {
+            if (this.field_oc > this.field_ab) {
               break L2;
             } else {
-              if (((qfa) this).field_fb > ((qfa) this).field_C) {
+              if (this.field_fb > this.field_C) {
                 break L2;
               } else {
-                jaggl.OpenGL.glScissor(((qfa) this).field_oc + ((qfa) this).field_N, -((qfa) this).field_C + ((qfa) this).field_Y + ((qfa) this).field_Fb, ((qfa) this).field_ab + -((qfa) this).field_oc, ((qfa) this).field_C - ((qfa) this).field_fb);
+                jaggl.OpenGL.glScissor(this.field_oc + this.field_N, -this.field_C + this.field_Y + this.field_Fb, this.field_ab + -this.field_oc, this.field_C - this.field_fb);
                 break L1;
               }
             }
@@ -2451,23 +2502,23 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_0 = (RuntimeException) (var3);
             stackOut_2_1 = new StringBuilder().append("qfa.OB(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -2476,23 +2527,23 @@ final class qfa extends ha {
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
             stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -2500,28 +2551,28 @@ final class qfa extends ha {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
-        return (hf) (Object) stackIn_1_0;
+        return (hf) ((Object) stackIn_1_0);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        boolean discarded$0 = ((qfa) this).field_fc.a(param0, param1, param2, param3, -5214);
+        boolean discarded$0 = this.field_fc.a(param0, param1, param2, param3, -5214);
     }
 
     final void DA(int param0, int param1, int param2, int param3) {
         L0: {
-          ((qfa) this).field_yc = param3;
-          ((qfa) this).field_Qb = param2;
-          ((qfa) this).field_gc = param1;
-          ((qfa) this).field_lb = param0;
+          this.field_yc = param3;
+          this.field_Qb = param2;
+          this.field_gc = param1;
+          this.field_lb = param0;
           this.q(-2);
           this.o(100);
-          if (((qfa) this).field_Jb == 3) {
+          if ((this.field_Jb ^ -1) == -4) {
             this.r(-108);
             break L0;
           } else {
-            if (2 == ((qfa) this).field_Jb) {
+            if (2 == this.field_Jb) {
               this.d(118);
               break L0;
             } else {
@@ -2540,35 +2591,35 @@ final class qfa extends ha {
         int var11 = 0;
         L0: {
           var11 = VoidHunters.field_G;
-          if (param2 >= 0) {
+          if ((param2 ^ -1) <= -1) {
             break L0;
           } else {
             param2 = -param2;
             break L0;
           }
         }
-        if (((qfa) this).field_oc > param2 + param0) {
+        if (this.field_oc > param2 + param0) {
           return;
         } else {
           L1: {
-            if (((qfa) this).field_ab < -param2 + param0) {
+            if (this.field_ab < -param2 + param0) {
               break L1;
             } else {
-              if (((qfa) this).field_fb > param1 + param2) {
+              if (this.field_fb > param1 + param2) {
                 break L1;
               } else {
-                if (((qfa) this).field_C < param1 + -param2) {
+                if (this.field_C < param1 + -param2) {
                   break L1;
                 } else {
                   this.m(-63);
-                  ((qfa) this).d(param4, 69);
-                  jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
+                  this.d(param4, 69);
+                  jaggl.OpenGL.glColor4ub((byte)(param3 >> -278248688), (byte)(param3 >> 188865608), (byte)param3, (byte)(param3 >> 1545398136));
                   var6 = 0.3499999940395355f + (float)param0;
                   var7 = (float)param1 + 0.3499999940395355f;
-                  var8 = param2 << 1;
-                  if ((float)var8 >= ((qfa) this).field_Mb) {
+                  var8 = param2 << -1663794911;
+                  if ((float)var8 >= this.field_Mb) {
                     L2: {
-                      if ((float)var8 > ((qfa) this).field_Ac) {
+                      if ((float)var8 > this.field_Ac) {
                         L3: {
                           jaggl.OpenGL.glBegin(6);
                           jaggl.OpenGL.glVertex2f(var6, var7);
@@ -2577,7 +2628,7 @@ final class qfa extends ha {
                             var9 = 64;
                             break L3;
                           } else {
-                            if (var9 > 512) {
+                            if (-513 > (var9 ^ -1)) {
                               var9 = 512;
                               break L3;
                             } else {
@@ -2589,7 +2640,7 @@ final class qfa extends ha {
                         jaggl.OpenGL.glVertex2f(var6 + (float)param2, var7);
                         var10 = -var9 + 16384;
                         L4: while (true) {
-                          if (var10 <= 0) {
+                          if (-1 <= (var10 ^ -1)) {
                             jaggl.OpenGL.glVertex2f(var6 + (float)param2, var7);
                             jaggl.OpenGL.glEnd();
                             break L2;
@@ -2633,7 +2684,7 @@ final class qfa extends ha {
         }
         hua var4 = new hua(param1);
         var4.field_b = (long)param2;
-        ((qfa) this).field_xc.b(-10258, (ksa) (Object) var4);
+        this.field_xc.b(-10258, var4);
     }
 
     final void v() {
@@ -2641,19 +2692,19 @@ final class qfa extends ha {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        if (!((qfa) this).field_Hb) {
+        if (!this.field_Hb) {
           return;
         } else {
           L0: {
-            if (0 >= ((qfa) this).field_Sb) {
+            if (0 >= this.field_Sb) {
               break L0;
             } else {
-              if (0 < ((qfa) this).field_Y) {
-                var1 = ((qfa) this).field_oc;
-                var2 = ((qfa) this).field_ab;
-                var3 = ((qfa) this).field_fb;
-                var4 = ((qfa) this).field_C;
-                ((qfa) this).t(-79);
+              if (0 < this.field_Y) {
+                var1 = this.field_oc;
+                var2 = this.field_ab;
+                var3 = this.field_fb;
+                var4 = this.field_C;
+                this.t(-79);
                 jaggl.OpenGL.glReadBuffer(1028);
                 jaggl.OpenGL.glDrawBuffer(1029);
                 this.f((byte) -74);
@@ -2661,21 +2712,21 @@ final class qfa extends ha {
                 this.b(-20951, false);
                 this.a((byte) 32, false);
                 this.a(false, (byte) 85);
-                ((qfa) this).a(111, (pib) null);
+                this.a(111, (pib) null);
                 this.i(5888, -2);
-                ((qfa) this).c(0, 1);
-                ((qfa) this).d(0, 127);
+                this.c(0, 1);
+                this.d(0, 127);
                 jaggl.OpenGL.glMatrixMode(5889);
                 jaggl.OpenGL.glLoadIdentity();
                 jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
                 jaggl.OpenGL.glMatrixMode(5888);
                 jaggl.OpenGL.glLoadIdentity();
                 jaggl.OpenGL.glRasterPos2i(0, 0);
-                jaggl.OpenGL.glCopyPixels(0, 0, ((qfa) this).field_Sb, ((qfa) this).field_Y, 6144);
+                jaggl.OpenGL.glCopyPixels(0, 0, this.field_Sb, this.field_Y, 6144);
                 jaggl.OpenGL.glFlush();
                 jaggl.OpenGL.glReadBuffer(1029);
                 jaggl.OpenGL.glDrawBuffer(1029);
-                ((qfa) this).KA(var1, var3, var2, var4);
+                this.KA(var1, var3, var2, var4);
                 return;
               } else {
                 break L0;
@@ -2688,7 +2739,7 @@ final class qfa extends ha {
 
     qfa(java.awt.Canvas param0, d param1, int param2) {
         super(param1);
-        String var13_ref = null;
+        long dupTemp$7 = 0L;
         Throwable var4 = null;
         RuntimeException var4_ref = null;
         int var4_int = 0;
@@ -2760,96 +2811,96 @@ final class qfa extends ha {
         RuntimeException stackOut_67_0 = null;
         StringBuilder stackOut_67_1 = null;
         String stackOut_67_2 = null;
-        var13_ref = null;
+        String var13_ref = null;
         var18 = null;
         var19 = null;
         var20 = null;
-        ((qfa) this).field_hb = new Hashtable();
-        ((qfa) this).field_X = 128;
-        ((qfa) this).field_Ec = new vf();
+        this.field_hb = new Hashtable();
+        this.field_X = 128;
+        this.field_Ec = new vf();
         epb discarded$4 = new epb();
         epb discarded$5 = new epb();
-        ((qfa) this).field_m = false;
-        ((qfa) this).field_D = new ij();
-        ((qfa) this).field_zc = -1;
-        ((qfa) this).field_rc = -1;
-        ((qfa) this).field_p = new jaa[4];
-        ((qfa) this).field_kc = new jaa[4];
-        ((qfa) this).field_Oc = -1;
-        ((qfa) this).field_Gb = new jaa[4];
-        ((qfa) this).field_E = new vga();
-        ((qfa) this).field_Ic = new gnb(16);
-        ((qfa) this).field_v = new ij();
-        ((qfa) this).field_xc = new ij();
-        ((qfa) this).field_Nc = new ij();
-        ((qfa) this).field_hc = new ij();
-        ((qfa) this).field_ec = new ij();
-        ((qfa) this).field_Cc = new ij();
-        ((qfa) this).field_zb = new ij();
-        ((qfa) this).field_Db = new epb();
-        ((qfa) this).field_F = new epb();
-        ((qfa) this).field_Bb = new epb();
-        ((qfa) this).field_i = 1.0f;
-        ((qfa) this).field_J = -1;
-        ((qfa) this).field_yc = 512;
-        ((qfa) this).field_Xb = new float[16];
-        ((qfa) this).field_tb = 8448;
-        ((qfa) this).field_Jc = -1;
-        ((qfa) this).field_G = -1.0f;
-        ((qfa) this).field_H = -1.0f;
-        ((qfa) this).field_oc = 0;
-        ((qfa) this).field_jc = -1;
-        ((qfa) this).field_Qb = 512;
-        ((qfa) this).field_M = 0;
-        ((qfa) this).field_C = 0;
-        ((qfa) this).field_Pb = new float[4];
-        ((qfa) this).field_N = 0;
-        ((qfa) this).field_ob = 50;
-        ((qfa) this).field_u = 0.0f;
-        ((qfa) this).field_L = new float[4];
-        ((qfa) this).field_lb = 0;
-        ((qfa) this).field_Mb = -1.0f;
-        ((qfa) this).field_gc = 0;
-        ((qfa) this).field_nb = 1.0f;
-        ((qfa) this).field_Hc = -1;
-        ((qfa) this).field_Yb = false;
-        ((qfa) this).field_ab = 0;
-        ((qfa) this).field_Eb = new float[4];
-        ((qfa) this).field_h = true;
-        ((qfa) this).field_Fc = -1;
-        ((qfa) this).field_K = new fsb[u.field_p];
-        ((qfa) this).field_ub = 0;
-        ((qfa) this).field_Ac = -1.0f;
-        ((qfa) this).field_fb = 0;
-        ((qfa) this).field_bb = 3584;
-        ((qfa) this).field_Fb = 0;
-        ((qfa) this).field_Cb = 1.0f;
-        ((qfa) this).field_nc = 1.0f;
-        ((qfa) this).field_Bc = 8448;
-        ((qfa) this).field_Q = 1.0f;
-        ((qfa) this).field_Tb = new float[4];
+        this.field_m = false;
+        this.field_D = new ij();
+        this.field_zc = -1;
+        this.field_rc = -1;
+        this.field_p = new jaa[4];
+        this.field_kc = new jaa[4];
+        this.field_Oc = -1;
+        this.field_Gb = new jaa[4];
+        this.field_E = new vga();
+        this.field_Ic = new gnb(16);
+        this.field_v = new ij();
+        this.field_xc = new ij();
+        this.field_Nc = new ij();
+        this.field_hc = new ij();
+        this.field_ec = new ij();
+        this.field_Cc = new ij();
+        this.field_zb = new ij();
+        this.field_Db = new epb();
+        this.field_F = new epb();
+        this.field_Bb = new epb();
+        this.field_i = 1.0f;
+        this.field_J = -1;
+        this.field_yc = 512;
+        this.field_Xb = new float[16];
+        this.field_tb = 8448;
+        this.field_Jc = -1;
+        this.field_G = -1.0f;
+        this.field_H = -1.0f;
+        this.field_oc = 0;
+        this.field_jc = -1;
+        this.field_Qb = 512;
+        this.field_M = 0;
+        this.field_C = 0;
+        this.field_Pb = new float[4];
+        this.field_N = 0;
+        this.field_ob = 50;
+        this.field_u = 0.0f;
+        this.field_L = new float[4];
+        this.field_lb = 0;
+        this.field_Mb = -1.0f;
+        this.field_gc = 0;
+        this.field_nb = 1.0f;
+        this.field_Hc = -1;
+        this.field_Yb = false;
+        this.field_ab = 0;
+        this.field_Eb = new float[4];
+        this.field_h = true;
+        this.field_Fc = -1;
+        this.field_K = new fsb[u.field_p];
+        this.field_ub = 0;
+        this.field_Ac = -1.0f;
+        this.field_fb = 0;
+        this.field_bb = 3584;
+        this.field_Fb = 0;
+        this.field_Cb = 1.0f;
+        this.field_nc = 1.0f;
+        this.field_Bc = 8448;
+        this.field_Q = 1.0f;
+        this.field_Tb = new float[4];
         mb discarded$6 = new mb(8192);
         try {
           L0: {
-            ((qfa) this).field_ib = param0;
-            ((qfa) this).field_Kc = param2;
+            this.field_ib = param0;
+            this.field_Kc = param2;
             if (gpb.a("jaclib", (byte) 114)) {
               if (gpb.a("jaggl", (byte) 114)) {
                 try {
                   L1: {
-                    ((qfa) this).field_c = new jaggl.OpenGL();
-                    long dupTemp$7 = ((qfa) this).field_c.init(param0, 8, 8, 8, 24, 0, ((qfa) this).field_Kc);
-                    ((qfa) this).field_uc = dupTemp$7;
-                    ((qfa) this).field_ic = dupTemp$7;
-                    if (((qfa) this).field_uc != 0L) {
+                    this.field_c = new jaggl.OpenGL();
+                    dupTemp$7 = this.field_c.init(param0, 8, 8, 8, 24, 0, this.field_Kc);
+                    this.field_uc = dupTemp$7;
+                    this.field_ic = dupTemp$7;
+                    if (this.field_uc != 0L) {
                       this.w(127);
                       var4_int = this.d((byte) 109);
-                      if (var4_int == 0) {
+                      if (-1 == (var4_int ^ -1)) {
                         L2: {
                           stackOut_9_0 = this;
                           stackIn_11_0 = stackOut_9_0;
                           stackIn_10_0 = stackOut_9_0;
-                          if (((qfa) this).field_ac) {
+                          if (this.field_ac) {
                             stackOut_11_0 = this;
                             stackOut_11_1 = 33639;
                             stackIn_12_0 = stackOut_11_0;
@@ -2864,14 +2915,14 @@ final class qfa extends ha {
                           }
                         }
                         L3: {
-                          ((qfa) this).field_cc = stackIn_12_1;
-                          if (((qfa) this).field_Nb.indexOf("radeon") == -1) {
+                          ((qfa) (this)).field_cc = stackIn_12_1;
+                          if ((this.field_Nb.indexOf("radeon") ^ -1) == 0) {
                             break L3;
                           } else {
                             var5_int = 0;
                             var6 = 0;
                             var7 = 0;
-                            var8_array = up.a((byte) -67, ' ', ((qfa) this).field_Nb.replace('/', ' '));
+                            var8_array = up.a((byte) -67, ' ', this.field_Nb.replace('/', ' '));
                             var9 = 0;
                             L4: while (true) {
                               L5: {
@@ -2879,6 +2930,7 @@ final class qfa extends ha {
                                   break L5;
                                 } else {
                                   var13_ref = var8_array[var9];
+                                  var10_ref = var13_ref;
                                   var10_ref = var13_ref;
                                   var10_ref = var13_ref;
                                   try {
@@ -2894,7 +2946,7 @@ final class qfa extends ha {
                                               if (var13_ref.length() < 3) {
                                                 break L8;
                                               } else {
-                                                var21 = (CharSequence) (Object) var13_ref.substring(1, 3);
+                                                var21 = (CharSequence) ((Object) var13_ref.substring(1, 3));
                                                 if (!hwa.a(var21, 10)) {
                                                   break L8;
                                                 } else {
@@ -2905,7 +2957,7 @@ final class qfa extends ha {
                                               }
                                             }
                                           }
-                                          if (var10_ref.equals((Object) (Object) "hd")) {
+                                          if (var10_ref.equals("hd")) {
                                             var6 = 1;
                                             break L7;
                                           } else {
@@ -2921,11 +2973,11 @@ final class qfa extends ha {
                                             if (var10_ref.length() < 4) {
                                               break L7;
                                             } else {
-                                              var22 = (CharSequence) (Object) var10_ref.substring(0, 4);
+                                              var22 = (CharSequence) ((Object) var10_ref.substring(0, 4));
                                               if (!hwa.a(var22, 10)) {
                                                 break L7;
                                               } else {
-                                                var23 = (CharSequence) (Object) var10_ref.substring(0, 4);
+                                                var23 = (CharSequence) ((Object) var10_ref.substring(0, 4));
                                                 var5_int = lob.a(-86, var23);
                                                 decompiledRegionSelector0 = 1;
                                                 break L6;
@@ -2958,14 +3010,14 @@ final class qfa extends ha {
                                   if (var6 == 0) {
                                     break L12;
                                   } else {
-                                    if (var5_int >= 4000) {
+                                    if ((var5_int ^ -1) <= -4001) {
                                       break L11;
                                     } else {
                                       break L12;
                                     }
                                   }
                                 }
-                                ((qfa) this).field_I = false;
+                                this.field_I = false;
                                 break L11;
                               }
                               L13: {
@@ -2976,13 +3028,13 @@ final class qfa extends ha {
                                     break L13;
                                   } else {
                                     L14: {
-                                      if (var5_int < 7000) {
+                                      if (-7001 < (var5_int ^ -1)) {
                                         break L14;
                                       } else {
-                                        if (var5_int > 9250) {
+                                        if ((var5_int ^ -1) < -9251) {
                                           break L14;
                                         } else {
-                                          ((qfa) this).field_tc = false;
+                                          this.field_tc = false;
                                           break L14;
                                         }
                                       }
@@ -2990,27 +3042,27 @@ final class qfa extends ha {
                                     if (7000 > var5_int) {
                                       break L13;
                                     } else {
-                                      if (var5_int > 7999) {
+                                      if (-8000 > (var5_int ^ -1)) {
                                         break L13;
                                       } else {
-                                        ((qfa) this).field_cb = false;
+                                        this.field_cb = false;
                                         break L13;
                                       }
                                     }
                                   }
                                 }
                               }
-                              ((qfa) this).field_g = ((qfa) this).field_g & ((qfa) this).field_c.a("GL_ARB_half_float_pixel");
-                              ((qfa) this).field_k = ((qfa) this).field_cb;
+                              this.field_g = this.field_g & this.field_c.a("GL_ARB_half_float_pixel");
+                              this.field_k = this.field_cb;
                               break L3;
                             }
                           }
                         }
                         L15: {
-                          if (((qfa) this).field_Ab.indexOf("intel") == -1) {
+                          if ((this.field_Ab.indexOf("intel") ^ -1) == 0) {
                             break L15;
                           } else {
-                            ((qfa) this).field_U = false;
+                            this.field_U = false;
                             break L15;
                           }
                         }
@@ -3018,7 +3070,7 @@ final class qfa extends ha {
                           stackOut_49_0 = this;
                           stackIn_51_0 = stackOut_49_0;
                           stackIn_50_0 = stackOut_49_0;
-                          if (((qfa) this).field_Ab.equals((Object) (Object) "s3 graphics")) {
+                          if (this.field_Ab.equals("s3 graphics")) {
                             stackOut_51_0 = this;
                             stackOut_51_1 = 0;
                             stackIn_52_0 = stackOut_51_0;
@@ -3033,8 +3085,8 @@ final class qfa extends ha {
                           }
                         }
                         L17: {
-                          ((qfa) this).field_Hb = stackIn_52_1 != 0;
-                          if (((qfa) this).field_cb) {
+                          ((qfa) (this)).field_Hb = stackIn_52_1 != 0;
+                          if (this.field_cb) {
                             try {
                               L18: {
                                 var17 = new int[1];
@@ -3053,28 +3105,28 @@ final class qfa extends ha {
                         }
                         L19: {
                           ocb.a(false, (byte) 33, true);
-                          ((qfa) this).field_m = true;
-                          ((qfa) this).field_r = new rlb((qfa) this, ((qfa) this).field_a);
+                          this.field_m = true;
+                          this.field_r = new rlb((qfa) (this), this.field_a);
                           this.c((byte) -92);
-                          ((qfa) this).field_yb = new nk((qfa) this);
-                          ((qfa) this).field_fc = new kha((qfa) this);
-                          if (!((qfa) this).field_fc.a(-128)) {
+                          this.field_yb = new nk((qfa) (this));
+                          this.field_fc = new kha((qfa) (this));
+                          if (!this.field_fc.a(-128)) {
                             break L19;
                           } else {
-                            ((qfa) this).field_A = new mpb((qfa) this);
-                            if (((qfa) this).field_A.f((byte) 72)) {
+                            this.field_A = new mpb((qfa) (this));
+                            if (this.field_A.f((byte) 72)) {
                               break L19;
                             } else {
-                              ((qfa) this).field_A.c((byte) 66);
-                              ((qfa) this).field_A = null;
+                              this.field_A.c((byte) 66);
+                              this.field_A = null;
                               break L19;
                             }
                           }
                         }
-                        ((qfa) this).field_d = new fbb((qfa) this);
+                        this.field_d = new fbb((qfa) (this));
                         this.v(770);
                         this.p(-1001);
-                        ((qfa) this).v();
+                        this.v();
                         break L1;
                       } else {
                         throw new RuntimeException("");
@@ -3087,7 +3139,7 @@ final class qfa extends ha {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var4 = decompiledCaughtException;
                   var4.printStackTrace();
-                  ((qfa) this).o();
+                  this.o();
                   throw new RuntimeException("");
                 }
                 break L0;
@@ -3102,23 +3154,23 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter3;
           L20: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_63_0 = (RuntimeException) var4_ref;
+            stackOut_63_0 = (RuntimeException) (var4_ref);
             stackOut_63_1 = new StringBuilder().append("qfa.<init>(");
             stackIn_65_0 = stackOut_63_0;
             stackIn_65_1 = stackOut_63_1;
             stackIn_64_0 = stackOut_63_0;
             stackIn_64_1 = stackOut_63_1;
             if (param0 == null) {
-              stackOut_65_0 = (RuntimeException) (Object) stackIn_65_0;
-              stackOut_65_1 = (StringBuilder) (Object) stackIn_65_1;
+              stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
+              stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
               stackOut_65_2 = "null";
               stackIn_66_0 = stackOut_65_0;
               stackIn_66_1 = stackOut_65_1;
               stackIn_66_2 = stackOut_65_2;
               break L20;
             } else {
-              stackOut_64_0 = (RuntimeException) (Object) stackIn_64_0;
-              stackOut_64_1 = (StringBuilder) (Object) stackIn_64_1;
+              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
               stackOut_64_2 = "{...}";
               stackIn_66_0 = stackOut_64_0;
               stackIn_66_1 = stackOut_64_1;
@@ -3127,23 +3179,23 @@ final class qfa extends ha {
             }
           }
           L21: {
-            stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
+            stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
             stackOut_66_1 = ((StringBuilder) (Object) stackIn_66_1).append(stackIn_66_2).append(',');
             stackIn_68_0 = stackOut_66_0;
             stackIn_68_1 = stackOut_66_1;
             stackIn_67_0 = stackOut_66_0;
             stackIn_67_1 = stackOut_66_1;
             if (param1 == null) {
-              stackOut_68_0 = (RuntimeException) (Object) stackIn_68_0;
-              stackOut_68_1 = (StringBuilder) (Object) stackIn_68_1;
+              stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
+              stackOut_68_1 = (StringBuilder) ((Object) stackIn_68_1);
               stackOut_68_2 = "null";
               stackIn_69_0 = stackOut_68_0;
               stackIn_69_1 = stackOut_68_1;
               stackIn_69_2 = stackOut_68_2;
               break L21;
             } else {
-              stackOut_67_0 = (RuntimeException) (Object) stackIn_67_0;
-              stackOut_67_1 = (StringBuilder) (Object) stackIn_67_1;
+              stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
+              stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
               stackOut_67_2 = "{...}";
               stackIn_69_0 = stackOut_67_0;
               stackIn_69_1 = stackOut_67_1;
@@ -3151,7 +3203,7 @@ final class qfa extends ha {
               break L21;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_69_0, stackIn_69_2 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_69_0), stackIn_69_2 + ',' + param2 + ')');
         }
     }
 
@@ -3159,7 +3211,7 @@ final class qfa extends ha {
         ksa var3 = new ksa();
         int var4 = -64 % ((60 - param1) / 52);
         var3.field_b = (long)param0;
-        ((qfa) this).field_Cc.b(-10258, var3);
+        this.field_Cc.b(-10258, var3);
     }
 
     private final void q(int param0) {
@@ -3170,62 +3222,67 @@ final class qfa extends ha {
         float var6 = 0.0f;
         float var7 = 0.0f;
         float[] var8 = null;
-        L0: {
-          L1: {
-            var8 = ((qfa) this).field_Xb;
-            var2 = var8;
-            var3 = (float)(((qfa) this).field_ob * -((qfa) this).field_lb) / (float)((qfa) this).field_Qb;
-            var4 = (float)(((qfa) this).field_ob * (-((qfa) this).field_lb + ((qfa) this).field_Sb)) / (float)((qfa) this).field_Qb;
-            var5 = (float)(((qfa) this).field_gc * ((qfa) this).field_ob) / (float)((qfa) this).field_yc;
-            var6 = (float)((((qfa) this).field_gc + -((qfa) this).field_Y) * ((qfa) this).field_ob) / (float)((qfa) this).field_yc;
-            if (var4 == var3) {
-              break L1;
-            } else {
-              if (var5 != var6) {
-                var7 = 2.0f * (float)((qfa) this).field_ob;
-                var2[1] = 0.0f;
-                var2[5] = var7 / (var5 - var6);
-                var2[6] = 0.0f;
-                var2[7] = 0.0f;
-                var2[12] = 0.0f;
-                ((qfa) this).field_Wb = -(var7 * (float)((qfa) this).field_bb) / (float)(-((qfa) this).field_ob + ((qfa) this).field_bb);
-                var2[14] = -(var7 * (float)((qfa) this).field_bb) / (float)(-((qfa) this).field_ob + ((qfa) this).field_bb);
-                var2[8] = (var4 + var3) / (var4 - var3);
-                var2[2] = 0.0f;
-                var2[3] = 0.0f;
-                var2[0] = var7 / (-var3 + var4);
-                var2[4] = 0.0f;
-                var2[11] = -1.0f;
-                var2[9] = (var6 + var5) / (var5 - var6);
-                var2[15] = 0.0f;
-                ((qfa) this).field_mb = (float)(-(((qfa) this).field_bb + ((qfa) this).field_ob)) / (float)(-((qfa) this).field_ob + ((qfa) this).field_bb);
-                var2[10] = (float)(-(((qfa) this).field_bb + ((qfa) this).field_ob)) / (float)(-((qfa) this).field_ob + ((qfa) this).field_bb);
-                var2[13] = 0.0f;
-                break L0;
-              } else {
+        var8 = this.field_Xb;
+        var2 = var8;
+        if (param0 == -2) {
+          L0: {
+            L1: {
+              var3 = (float)(this.field_ob * -this.field_lb) / (float)this.field_Qb;
+              var4 = (float)(this.field_ob * (-this.field_lb + this.field_Sb)) / (float)this.field_Qb;
+              var5 = (float)(this.field_gc * this.field_ob) / (float)this.field_yc;
+              var6 = (float)((this.field_gc + -this.field_Y) * this.field_ob) / (float)this.field_yc;
+              if (var4 == var3) {
                 break L1;
+              } else {
+                if (var5 != var6) {
+                  var7 = 2.0f * (float)this.field_ob;
+                  var2[1] = 0.0f;
+                  var2[5] = var7 / (var5 - var6);
+                  var2[6] = 0.0f;
+                  var2[7] = 0.0f;
+                  var2[12] = 0.0f;
+                  this.field_Wb = -(var7 * (float)this.field_bb) / (float)(-this.field_ob + this.field_bb);
+                  var2[14] = -(var7 * (float)this.field_bb) / (float)(-this.field_ob + this.field_bb);
+                  var2[8] = (var4 + var3) / (var4 - var3);
+                  var2[2] = 0.0f;
+                  var2[3] = 0.0f;
+                  var2[0] = var7 / (-var3 + var4);
+                  var2[4] = 0.0f;
+                  var2[11] = -1.0f;
+                  var2[9] = (var6 + var5) / (var5 - var6);
+                  var2[15] = 0.0f;
+                  this.field_mb = (float)(-(this.field_bb + this.field_ob)) / (float)(-this.field_ob + this.field_bb);
+                  var2[10] = (float)(-(this.field_bb + this.field_ob)) / (float)(-this.field_ob + this.field_bb);
+                  var2[13] = 0.0f;
+                  break L0;
+                } else {
+                  break L1;
+                }
               }
             }
+            var8[8] = 0.0f;
+            var8[12] = 0.0f;
+            var8[6] = 0.0f;
+            var8[14] = 0.0f;
+            var8[10] = 1.0f;
+            var8[15] = 1.0f;
+            var8[11] = 0.0f;
+            var8[3] = 0.0f;
+            var8[2] = 0.0f;
+            var8[13] = 0.0f;
+            var8[0] = 1.0f;
+            var8[5] = 1.0f;
+            var8[1] = 0.0f;
+            var8[7] = 0.0f;
+            var8[4] = 0.0f;
+            var8[9] = 0.0f;
+            break L0;
           }
-          var8[8] = 0.0f;
-          var8[12] = 0.0f;
-          var8[6] = 0.0f;
-          var8[14] = 0.0f;
-          var8[10] = 1.0f;
-          var8[15] = 1.0f;
-          var8[11] = 0.0f;
-          var8[3] = 0.0f;
-          var8[2] = 0.0f;
-          var8[13] = 0.0f;
-          var8[0] = 1.0f;
-          var8[5] = 1.0f;
-          var8[1] = 0.0f;
-          var8[7] = 0.0f;
-          var8[4] = 0.0f;
-          var8[9] = 0.0f;
-          break L0;
+          this.d(false);
+          return;
+        } else {
+          return;
         }
-        this.d(false);
     }
 
     final void a(float param0, float param1, float param2) {
@@ -3235,21 +3292,21 @@ final class qfa extends ha {
     }
 
     final pw d() {
-        return (pw) (Object) new epb();
+        return (pw) ((Object) new epb());
     }
 
     final void T(int param0, int param1, int param2, int param3) {
-        if (param2 < ((qfa) this).field_ab) {
-            ((qfa) this).field_ab = param2;
+        if (param2 < this.field_ab) {
+            this.field_ab = param2;
         }
-        if (!(param1 <= ((qfa) this).field_fb)) {
-            ((qfa) this).field_fb = param1;
+        if (!(param1 <= this.field_fb)) {
+            this.field_fb = param1;
         }
-        if (!(((qfa) this).field_C <= param3)) {
-            ((qfa) this).field_C = param3;
+        if (!(this.field_C <= param3)) {
+            this.field_C = param3;
         }
-        if (!(((qfa) this).field_oc >= param0)) {
-            ((qfa) this).field_oc = param0;
+        if (!(this.field_oc >= param0)) {
+            this.field_oc = param0;
         }
         jaggl.OpenGL.glEnable(3089);
         this.o(111);
@@ -3268,7 +3325,7 @@ final class qfa extends ha {
         L0: {
           L1: {
             this.m(-97);
-            ((qfa) this).d(param5, 124);
+            this.d(param5, 124);
             var7 = (float)param2 - (float)param0;
             var8 = (float)(-param1) + (float)param3;
             if (0.0f != var7) {
@@ -3287,7 +3344,7 @@ final class qfa extends ha {
           var8 = var8 * var9;
           break L0;
         }
-        jaggl.OpenGL.glColor4ub((byte)(param4 >> 16), (byte)(param4 >> 8), (byte)param4, (byte)(param4 >> 24));
+        jaggl.OpenGL.glColor4ub((byte)(param4 >> 695307952), (byte)(param4 >> -1289785560), (byte)param4, (byte)(param4 >> 478806392));
         jaggl.OpenGL.glBegin(1);
         jaggl.OpenGL.glVertex2f(0.3499999940395355f + (float)param0, 0.3499999940395355f + (float)param1);
         jaggl.OpenGL.glVertex2f(var7 + (float)param2 + 0.3499999940395355f, 0.3499999940395355f + ((float)param3 + var8));
@@ -3299,11 +3356,11 @@ final class qfa extends ha {
           if (param1 == 25887) {
             break L0;
           } else {
-            ((qfa) this).j();
+            this.j();
             break L0;
           }
         }
-        if (param0 == 1) {
+        if (-2 == (param0 ^ -1)) {
           return 7681;
         } else {
           if (param0 != 0) {
@@ -3330,18 +3387,18 @@ final class qfa extends ha {
         if (6406 == param0) {
           return 1;
         } else {
-          if (param0 != 6409) {
+          if (-6410 != (param0 ^ -1)) {
             L0: {
-              if (param0 == 6410) {
+              if ((param0 ^ -1) == -6411) {
                 break L0;
               } else {
-                if (param0 == 34846) {
+                if ((param0 ^ -1) == -34847) {
                   break L0;
                 } else {
                   if (34844 == param0) {
                     break L0;
                   } else {
-                    if (param0 != 6407) {
+                    if ((param0 ^ -1) != -6408) {
                       L1: {
                         if (6408 == param0) {
                           break L1;
@@ -3353,8 +3410,8 @@ final class qfa extends ha {
                               if (34842 == param0) {
                                 return 8;
                               } else {
-                                if (param0 != 6402) {
-                                  if (param0 != 6401) {
+                                if ((param0 ^ -1) != -6403) {
+                                  if (-6402 != (param0 ^ -1)) {
                                     if (param1 == 2) {
                                       throw new IllegalArgumentException("");
                                     } else {
@@ -3389,7 +3446,7 @@ final class qfa extends ha {
     }
 
     final boolean r() {
-        return !((qfa) this).field_U && ((qfa) this).field_O;
+        return !this.field_U && this.field_O;
     }
 
     final int t() {
@@ -3397,31 +3454,34 @@ final class qfa extends ha {
     }
 
     final int[] Y() {
-        return new int[]{((qfa) this).field_lb, ((qfa) this).field_gc, ((qfa) this).field_Qb, ((qfa) this).field_yc};
+        return new int[]{this.field_lb, this.field_gc, this.field_Qb, this.field_yc};
     }
 
     private final void p(int param0) {
         java.awt.Dimension var2 = null;
-        if (null == ((qfa) this).field_ib) {
-            ((qfa) this).field_rb = 0;
-            ((qfa) this).field_vb = 0;
+        if (null == this.field_ib) {
+            this.field_rb = 0;
+            this.field_vb = 0;
         } else {
-            var2 = ((qfa) this).field_ib.getSize();
-            ((qfa) this).field_vb = var2.height;
-            ((qfa) this).field_rb = var2.width;
+            var2 = this.field_ib.getSize();
+            this.field_vb = var2.height;
+            this.field_rb = var2.width;
         }
-        if (!(((qfa) this).field_lc != null)) {
-            ((qfa) this).field_Sb = ((qfa) this).field_rb;
-            ((qfa) this).field_Y = ((qfa) this).field_vb;
+        if (param0 != -1001) {
+            this.r(-4);
+        }
+        if (!(this.field_lc != null)) {
+            this.field_Sb = this.field_rb;
+            this.field_Y = this.field_vb;
             this.f(27818);
         }
         this.f((byte) -92);
-        ((qfa) this).t(108);
+        this.t(108);
     }
 
     final void GA(int param0) {
-        ((qfa) this).d(0, 100);
-        jaggl.OpenGL.glClearColor((float)(param0 & 16711680) / 16711680.0f, (float)(65280 & param0) / 65280.0f, (float)(255 & param0) / 255.0f, (float)(param0 >>> 24) / 255.0f);
+        this.d(0, 100);
+        jaggl.OpenGL.glClearColor((float)(param0 & 16711680) / 16711680.0f, (float)(65280 & param0) / 65280.0f, (float)(255 & param0) / 255.0f, (float)(param0 >>> -1583281640) / 255.0f);
         jaggl.OpenGL.glClear(16384);
     }
 
@@ -3431,9 +3491,31 @@ final class qfa extends ha {
         int var4 = 0;
         int var5 = 0;
         float var6 = 0.0f;
-        int var7 = VoidHunters.field_G;
-        for (var2 = 0; ((qfa) this).field_P > var2; var2++) {
-            var3 = ((qfa) this).field_K[var2];
+        int var7 = 0;
+        var7 = VoidHunters.field_G;
+        var2 = 0;
+        L0: while (true) {
+          if (this.field_P <= var2) {
+            L1: while (true) {
+              if (var2 >= this.field_Rb) {
+                L2: {
+                  if (param0 > 16) {
+                    break L2;
+                  } else {
+                    this.m(-35);
+                    break L2;
+                  }
+                }
+                this.field_Rb = this.field_P;
+                return;
+              } else {
+                jaggl.OpenGL.glDisable(var2 + 16386);
+                var2++;
+                continue L1;
+              }
+            }
+          } else {
+            var3 = this.field_K[var2];
             var4 = 16386 + var2;
             we.field_o[0] = (float)var3.c((byte) -79);
             we.field_o[1] = (float)var3.a(true);
@@ -3443,33 +3525,32 @@ final class qfa extends ha {
             var5 = var3.a(-62);
             var6 = var3.d(-392138175) / 255.0f;
             we.field_o[2] = var6 * (float)dla.a(255, var5);
-            we.field_o[0] = var6 * (float)dla.a(var5 >> 16, 255);
-            we.field_o[1] = (float)dla.a(var5 >> 8, 255) * var6;
+            we.field_o[0] = var6 * (float)dla.a(var5 >> -1179188048, 255);
+            we.field_o[1] = (float)dla.a(var5 >> 837707208, 255) * var6;
             jaggl.OpenGL.glLightfv(var4, 4609, we.field_o, 0);
             jaggl.OpenGL.glLightf(var4, 4617, 1.0f / (float)(var3.c(16777215) * var3.c(16777215)));
             jaggl.OpenGL.glEnable(var4);
-        }
-        while (var2 < ((qfa) this).field_Rb) {
-            jaggl.OpenGL.glDisable(var2 + 16386);
             var2++;
+            continue L0;
+          }
         }
-        ((qfa) this).field_Rb = ((qfa) this).field_P;
     }
 
     private final void j(int param0) {
-        tdb.field_o[2] = ((qfa) this).field_H * ((qfa) this).field_i;
+        tdb.field_o[2] = this.field_H * this.field_i;
         tdb.field_o[3] = 1.0f;
-        tdb.field_o[0] = ((qfa) this).field_H * ((qfa) this).field_nb;
-        tdb.field_o[1] = ((qfa) this).field_H * ((qfa) this).field_nc;
-        jaggl.OpenGL.glLightfv(16384, 4609, tdb.field_o, 0);
-        tdb.field_o[1] = -((qfa) this).field_G * ((qfa) this).field_nc;
-        tdb.field_o[2] = -((qfa) this).field_G * ((qfa) this).field_i;
-        tdb.field_o[0] = -((qfa) this).field_G * ((qfa) this).field_nb;
+        tdb.field_o[0] = this.field_H * this.field_nb;
+        tdb.field_o[1] = this.field_H * this.field_nc;
+        jaggl.OpenGL.glLightfv(param0, 4609, tdb.field_o, 0);
+        tdb.field_o[1] = -this.field_G * this.field_nc;
+        tdb.field_o[2] = -this.field_G * this.field_i;
+        tdb.field_o[0] = -this.field_G * this.field_nb;
         tdb.field_o[3] = 1.0f;
         jaggl.OpenGL.glLightfv(16385, 4609, tdb.field_o, 0);
     }
 
     private final int d(byte param0) {
+        boolean discarded$1 = false;
         int var2 = 0;
         String var3 = null;
         String[] var4 = null;
@@ -3477,15 +3558,15 @@ final class qfa extends ha {
         int var5_int = 0;
         int var6 = 0;
         int[] var9 = null;
-        int stackIn_28_0 = 0;
+        int stackIn_30_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
+        int stackOut_29_0 = 0;
+        int stackOut_28_0 = 0;
         L0: {
-          ((qfa) this).field_Ab = jaggl.OpenGL.glGetString(7936).toLowerCase();
+          this.field_Ab = jaggl.OpenGL.glGetString(7936).toLowerCase();
           var2 = 0;
-          ((qfa) this).field_Nb = jaggl.OpenGL.glGetString(7937).toLowerCase();
-          if (((qfa) this).field_Ab.indexOf("microsoft") != -1) {
+          this.field_Nb = jaggl.OpenGL.glGetString(7937).toLowerCase();
+          if (0 != (this.field_Ab.indexOf("microsoft") ^ -1)) {
             var2 = var2 | 1;
             break L0;
           } else {
@@ -3494,10 +3575,10 @@ final class qfa extends ha {
         }
         L1: {
           L2: {
-            if (((qfa) this).field_Ab.indexOf("brian paul") != 0) {
+            if ((this.field_Ab.indexOf("brian paul") ^ -1) != 0) {
               break L2;
             } else {
-              if (0 == ((qfa) this).field_Ab.indexOf("mesa")) {
+              if (0 == (this.field_Ab.indexOf("mesa") ^ -1)) {
                 break L1;
               } else {
                 break L2;
@@ -3510,15 +3591,15 @@ final class qfa extends ha {
         L3: {
           var3 = jaggl.OpenGL.glGetString(7938);
           var4 = up.a((byte) -67, ' ', var3.replace('.', ' '));
-          if (var4.length >= 2) {
+          if ((var4.length ^ -1) <= -3) {
             try {
               L4: {
-                var5_int = lob.a(107, (CharSequence) (Object) var4[0]);
-                var6 = lob.a(46, (CharSequence) (Object) var4[1]);
-                ((qfa) this).field_f = 10 * var5_int + var6;
+                var5_int = lob.a(107, (CharSequence) ((Object) var4[0]));
+                var6 = lob.a(46, (CharSequence) ((Object) var4[1]));
+                this.field_f = 10 * var5_int + var6;
                 break L4;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
+            } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L5: {
                 var5 = (NumberFormatException) (Object) decompiledCaughtException;
@@ -3533,7 +3614,7 @@ final class qfa extends ha {
           }
         }
         L6: {
-          if (12 <= ((qfa) this).field_f) {
+          if (12 <= this.field_f) {
             break L6;
           } else {
             var2 = var2 | 2;
@@ -3541,7 +3622,7 @@ final class qfa extends ha {
           }
         }
         L7: {
-          if (!((qfa) this).field_c.a("GL_ARB_multitexture")) {
+          if (!this.field_c.a("GL_ARB_multitexture")) {
             var2 = var2 | 8;
             break L7;
           } else {
@@ -3549,72 +3630,76 @@ final class qfa extends ha {
           }
         }
         L8: {
-          if (!((qfa) this).field_c.a("GL_ARB_texture_env_combine")) {
+          if (!this.field_c.a("GL_ARB_texture_env_combine")) {
             var2 = var2 | 32;
             break L8;
           } else {
             break L8;
           }
         }
-        L9: {
-          L10: {
-            var9 = new int[1];
-            jaggl.OpenGL.glGetIntegerv(34018, var9, 0);
-            ((qfa) this).field_Dc = var9[0];
-            jaggl.OpenGL.glGetIntegerv(34929, var9, 0);
-            ((qfa) this).field_t = var9[0];
-            jaggl.OpenGL.glGetIntegerv(34930, var9, 0);
-            ((qfa) this).field_dc = var9[0];
-            if (((qfa) this).field_Dc < 2) {
-              break L10;
-            } else {
-              if (2 > ((qfa) this).field_t) {
+        var9 = new int[1];
+        jaggl.OpenGL.glGetIntegerv(34018, var9, 0);
+        this.field_Dc = var9[0];
+        if (param0 > 76) {
+          L9: {
+            L10: {
+              jaggl.OpenGL.glGetIntegerv(34929, var9, 0);
+              this.field_t = var9[0];
+              jaggl.OpenGL.glGetIntegerv(34930, var9, 0);
+              this.field_dc = var9[0];
+              if ((this.field_Dc ^ -1) > -3) {
                 break L10;
               } else {
-                if (((qfa) this).field_dc < 2) {
+                if (2 > this.field_t) {
                   break L10;
                 } else {
-                  break L9;
+                  if (this.field_dc < 2) {
+                    break L10;
+                  } else {
+                    break L9;
+                  }
                 }
               }
             }
+            var2 = var2 | 16;
+            break L9;
           }
-          var2 = var2 | 16;
-          break L9;
-        }
-        L11: {
-          ((qfa) this).field_ac = jaclib.memory.Stream.a();
-          ((qfa) this).field_O = ((qfa) this).field_c.arePbuffersAvailable();
-          ((qfa) this).field_cb = ((qfa) this).field_c.a("GL_ARB_vertex_buffer_object");
-          ((qfa) this).field_y = ((qfa) this).field_c.a("GL_ARB_multisample");
-          ((qfa) this).field_Zb = ((qfa) this).field_c.a("GL_ARB_vertex_program");
-          boolean discarded$1 = ((qfa) this).field_c.a("GL_ARB_fragment_program");
-          ((qfa) this).field_bc = ((qfa) this).field_c.a("GL_ARB_vertex_shader");
-          ((qfa) this).field_B = ((qfa) this).field_c.a("GL_ARB_fragment_shader");
-          ((qfa) this).field_tc = ((qfa) this).field_c.a("GL_EXT_texture3D");
-          ((qfa) this).field_g = ((qfa) this).field_c.a("GL_ARB_texture_rectangle");
-          ((qfa) this).field_S = ((qfa) this).field_c.a("GL_ARB_texture_cube_map");
-          ((qfa) this).field_I = ((qfa) this).field_c.a("GL_ARB_texture_float");
-          ((qfa) this).field_n = false;
-          ((qfa) this).field_U = ((qfa) this).field_c.a("GL_EXT_framebuffer_object");
-          ((qfa) this).field_Ob = ((qfa) this).field_c.a("GL_EXT_framebuffer_blit");
-          ((qfa) this).field_gb = ((qfa) this).field_c.a("GL_EXT_framebuffer_multisample");
-          ((qfa) this).field_sc = ((qfa) this).field_Ob & ((qfa) this).field_gb;
-          ((qfa) this).field_eb = fjb.field_b.startsWith("mac");
-          jaggl.OpenGL.glGetFloatv(2834, tdb.field_o, 0);
-          ((qfa) this).field_Ac = tdb.field_o[1];
-          ((qfa) this).field_Mb = tdb.field_o[0];
-          if (var2 == 0) {
-            stackOut_27_0 = 0;
-            stackIn_28_0 = stackOut_27_0;
-            break L11;
-          } else {
-            stackOut_26_0 = var2;
-            stackIn_28_0 = stackOut_26_0;
-            break L11;
+          L11: {
+            this.field_ac = jaclib.memory.Stream.a();
+            this.field_O = this.field_c.arePbuffersAvailable();
+            this.field_cb = this.field_c.a("GL_ARB_vertex_buffer_object");
+            this.field_y = this.field_c.a("GL_ARB_multisample");
+            this.field_Zb = this.field_c.a("GL_ARB_vertex_program");
+            discarded$1 = this.field_c.a("GL_ARB_fragment_program");
+            this.field_bc = this.field_c.a("GL_ARB_vertex_shader");
+            this.field_B = this.field_c.a("GL_ARB_fragment_shader");
+            this.field_tc = this.field_c.a("GL_EXT_texture3D");
+            this.field_g = this.field_c.a("GL_ARB_texture_rectangle");
+            this.field_S = this.field_c.a("GL_ARB_texture_cube_map");
+            this.field_I = this.field_c.a("GL_ARB_texture_float");
+            this.field_n = false;
+            this.field_U = this.field_c.a("GL_EXT_framebuffer_object");
+            this.field_Ob = this.field_c.a("GL_EXT_framebuffer_blit");
+            this.field_gb = this.field_c.a("GL_EXT_framebuffer_multisample");
+            this.field_sc = this.field_Ob & this.field_gb;
+            this.field_eb = fjb.field_b.startsWith("mac");
+            jaggl.OpenGL.glGetFloatv(2834, tdb.field_o, 0);
+            this.field_Ac = tdb.field_o[1];
+            this.field_Mb = tdb.field_o[0];
+            if (var2 == 0) {
+              stackOut_29_0 = 0;
+              stackIn_30_0 = stackOut_29_0;
+              break L11;
+            } else {
+              stackOut_28_0 = var2;
+              stackIn_30_0 = stackOut_28_0;
+              break L11;
+            }
           }
+          return stackIn_30_0;
+        } else {
+          return -61;
         }
-        return stackIn_28_0;
     }
 
     final synchronized void a(byte param0, int param1) {
@@ -3622,7 +3707,7 @@ final class qfa extends ha {
             return;
         }
         hua var3 = new hua(param1);
-        ((qfa) this).field_hc.b(-10258, (ksa) (Object) var3);
+        this.field_hc.b(-10258, var3);
     }
 
     final boolean k() {
@@ -3635,10 +3720,10 @@ final class qfa extends ha {
 
     final void U(int param0, int param1, int param2, int param3, int param4) {
         this.m(54);
-        ((qfa) this).d(param4, 107);
+        this.d(param4, 107);
         float var6 = 0.3499999940395355f + (float)param0;
         float var7 = (float)param1 + 0.3499999940395355f;
-        jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
+        jaggl.OpenGL.glColor4ub((byte)(param3 >> -495500048), (byte)(param3 >> 1188027464), (byte)param3, (byte)(param3 >> -642194312));
         jaggl.OpenGL.glBegin(1);
         jaggl.OpenGL.glVertex2f(var6, var7);
         jaggl.OpenGL.glVertex2f((float)param2 + var6, var7);
@@ -3647,9 +3732,9 @@ final class qfa extends ha {
 
     private final void b(boolean param0) {
         jaggl.OpenGL.glLoadIdentity();
-        jaggl.OpenGL.glMultMatrixf(((qfa) this).field_F.a(true), 0);
-        if (!(!((qfa) this).field_Yb)) {
-            ((qfa) this).field_d.field_b.e(34336);
+        jaggl.OpenGL.glMultMatrixf(this.field_F.a(param0), 0);
+        if (!(!this.field_Yb)) {
+            this.field_d.field_b.e(34336);
         }
         this.g((byte) 95);
         this.g(22);
@@ -3657,52 +3742,53 @@ final class qfa extends ha {
 
     final rtb a(boolean param0) {
         if (param0) {
+            return (rtb) null;
+        }
+        if (null == this.field_s) {
             return null;
         }
-        if (null == ((qfa) this).field_s) {
-            return null;
-        }
-        return ((qfa) this).field_s.a((byte) -123);
+        return this.field_s.a((byte) -123);
     }
 
     final void a(hf param0) {
     }
 
     final void j() {
-        if (!((qfa) this).field_U) {
-            if (!((qfa) this).field_O) {
+        boolean discarded$0 = false;
+        if (!this.field_U) {
+            if (!this.field_O) {
                 throw new RuntimeException("");
             }
-            ((qfa) this).field_qc.c(0, ((qfa) this).field_Sb, 0, 0, 101, 0, ((qfa) this).field_Y);
-            boolean discarded$0 = ((qfa) this).field_c.setSurface(((qfa) this).field_ic);
+            this.field_qc.c(0, this.field_Sb, 0, 0, 101, 0, this.field_Y);
+            discarded$0 = this.field_c.setSurface(this.field_ic);
         } else {
-            if ((Object) (Object) ((qfa) this).field_jb != (Object) (Object) ((qfa) this).field_lc) {
+            if (this.field_jb != this.field_lc) {
                 throw new RuntimeException();
             }
-            ((qfa) this).field_jb.a(0, (byte) -14);
-            ((qfa) this).field_jb.a(8, (byte) -6);
-            ((qfa) this).a((jaa) (Object) ((qfa) this).field_jb, 2896);
+            this.field_jb.a(0, (byte) -14);
+            this.field_jb.a(8, (byte) -6);
+            this.a(this.field_jb, 2896);
         }
-        ((qfa) this).field_Sb = ((qfa) this).field_rb;
-        ((qfa) this).field_qc = null;
-        ((qfa) this).field_Y = ((qfa) this).field_vb;
+        this.field_Sb = this.field_rb;
+        this.field_qc = null;
+        this.field_Y = this.field_vb;
         this.f((byte) -100);
         this.f(27818);
-        ((qfa) this).t(119);
+        this.t(119);
     }
 
     final void n(int param0) {
         if (param0 != 27841) {
             this.b(28, false);
         }
-        if (((qfa) this).field_x != 2) {
+        if (-3 != (this.field_x ^ -1)) {
             this.i(3);
             this.a(false, -128);
             this.b(-20951, false);
             this.a((byte) 32, false);
             this.a(false, (byte) -103);
             this.i(5888, -2);
-            ((qfa) this).field_x = 2;
+            this.field_x = 2;
         }
     }
 
@@ -3755,12 +3841,12 @@ final class qfa extends ha {
         int stackOut_31_1 = 0;
         L0: {
           var6 = VoidHunters.field_G;
-          if (((qfa) this).field_e == param0) {
+          if (this.field_e == param0) {
             break L0;
           } else {
             L1: {
               if (1 != param0) {
-                if (param0 == 2) {
+                if ((param0 ^ -1) == -3) {
                   var4 = 0;
                   var5 = 2;
                   var3 = 1;
@@ -3786,7 +3872,7 @@ final class qfa extends ha {
               }
             }
             L2: {
-              if (((qfa) this).field_Lb) {
+              if (this.field_Lb) {
                 stackOut_10_0 = 0;
                 stackIn_11_0 = stackOut_10_0;
                 break L2;
@@ -3837,7 +3923,7 @@ final class qfa extends ha {
                     break L5;
                   }
                 }
-                ((qfa) this).field_Lb = stackIn_18_1 != 0;
+                ((qfa) (this)).field_Lb = stackIn_18_1 != 0;
                 break L4;
               }
             }
@@ -3856,7 +3942,7 @@ final class qfa extends ha {
               stackOut_22_0 = stackIn_22_0;
               stackIn_24_0 = stackOut_22_0;
               stackIn_23_0 = stackOut_22_0;
-              if (((qfa) this).field_db) {
+              if (this.field_db) {
                 stackOut_24_0 = stackIn_24_0;
                 stackOut_24_1 = 0;
                 stackIn_25_0 = stackOut_24_0;
@@ -3899,14 +3985,14 @@ final class qfa extends ha {
                     break L10;
                   }
                 }
-                ((qfa) this).field_db = stackIn_33_1 != 0;
+                ((qfa) (this)).field_db = stackIn_33_1 != 0;
                 break L8;
               } else {
                 break L8;
               }
             }
             L11: {
-              if (var5 == ((qfa) this).field_xb) {
+              if (var5 == this.field_xb) {
                 break L11;
               } else {
                 L12: {
@@ -3931,12 +4017,12 @@ final class qfa extends ha {
                     break L12;
                   }
                 }
-                ((qfa) this).field_xb = var5;
+                this.field_xb = var5;
                 break L11;
               }
             }
-            ((qfa) this).field_e = param0;
-            ((qfa) this).field_x = ((qfa) this).field_x & -29;
+            this.field_e = param0;
+            this.field_x = this.field_x & -29;
             break L0;
           }
         }
@@ -3951,32 +4037,40 @@ final class qfa extends ha {
     }
 
     final int i() {
-        return ((qfa) this).field_ob;
+        return this.field_ob;
     }
 
     private final void b(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_3_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
         L0: {
-          L1: {
-            if (!((qfa) this).field_Ub) {
-              break L1;
+          if (param0 >= 84) {
+            break L0;
+          } else {
+            this.a(85, 1, 117, -49);
+            break L0;
+          }
+        }
+        L1: {
+          L2: {
+            if (!this.field_Ub) {
+              break L2;
             } else {
-              if (!((qfa) this).field_h) {
-                break L1;
+              if (!this.field_h) {
+                break L2;
               } else {
-                stackOut_2_0 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                break L0;
+                stackOut_4_0 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                break L1;
               }
             }
           }
-          stackOut_3_0 = 0;
-          stackIn_4_0 = stackOut_3_0;
-          break L0;
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L1;
         }
-        jaggl.OpenGL.glDepthMask(stackIn_4_0 != 0);
+        jaggl.OpenGL.glDepthMask(stackIn_6_0 != 0);
     }
 
     final boolean w() {
@@ -3987,10 +4081,10 @@ final class qfa extends ha {
         if (param1 >= -114) {
             return;
         }
-        if ((!((qfa) this).field_Lc ? 1 : 0) != (!param0 ? 1 : 0)) {
-            ((qfa) this).field_Lc = param0 ? true : false;
+        if ((!this.field_Lc ? 1 : 0) != (!param0 ? 1 : 0)) {
+            this.field_Lc = param0 ? true : false;
             this.h(0);
-            ((qfa) this).field_x = ((qfa) this).field_x & -32;
+            this.field_x = this.field_x & -32;
         }
     }
 
@@ -4001,7 +4095,7 @@ final class qfa extends ha {
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
         L0: {
-          if (param0 == ((qfa) this).field_Jc) {
+          if (param0 == this.field_Jc) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -4017,10 +4111,10 @@ final class qfa extends ha {
             if (var7 != 0) {
               break L2;
             } else {
-              if (param1 != ((qfa) this).field_H) {
+              if (param1 != this.field_H) {
                 break L2;
               } else {
-                if (((qfa) this).field_G != param2) {
+                if (this.field_G != param2) {
                   break L2;
                 } else {
                   break L1;
@@ -4029,15 +4123,15 @@ final class qfa extends ha {
             }
           }
           L3: {
-            ((qfa) this).field_G = param2;
-            ((qfa) this).field_H = param1;
-            ((qfa) this).field_Jc = param0;
+            this.field_G = param2;
+            this.field_H = param1;
+            this.field_Jc = param0;
             if (var7 == 0) {
               break L3;
             } else {
-              ((qfa) this).field_nc = (float)(65280 & ((qfa) this).field_Jc) / 65280.0f;
-              ((qfa) this).field_nb = (float)(((qfa) this).field_Jc & 16711680) / 16711680.0f;
-              ((qfa) this).field_i = (float)(((qfa) this).field_Jc & 255) / 255.0f;
+              this.field_nc = (float)(65280 & this.field_Jc) / 65280.0f;
+              this.field_nb = (float)(this.field_Jc & 16711680) / 16711680.0f;
+              this.field_i = (float)(this.field_Jc & 255) / 255.0f;
               this.e((byte) -115);
               break L3;
             }
@@ -4047,13 +4141,13 @@ final class qfa extends ha {
         }
         L4: {
           L5: {
-            if (((qfa) this).field_L[0] != param3) {
+            if (this.field_L[0] != param3) {
               break L5;
             } else {
-              if (param4 != ((qfa) this).field_L[1]) {
+              if (param4 != this.field_L[1]) {
                 break L5;
               } else {
-                if (((qfa) this).field_L[2] == param5) {
+                if (this.field_L[2] == param5) {
                   break L4;
                 } else {
                   break L5;
@@ -4061,44 +4155,48 @@ final class qfa extends ha {
               }
             }
           }
-          ((qfa) this).field_L[1] = param4;
-          ((qfa) this).field_L[0] = param3;
-          ((qfa) this).field_L[2] = param5;
-          ((qfa) this).field_Pb[2] = -param5;
-          ((qfa) this).field_Pb[1] = -param4;
-          ((qfa) this).field_Pb[0] = -param3;
+          this.field_L[1] = param4;
+          this.field_L[0] = param3;
+          this.field_L[2] = param5;
+          this.field_Pb[2] = -param5;
+          this.field_Pb[1] = -param4;
+          this.field_Pb[0] = -param3;
           var8 = (float)(1.0 / Math.sqrt((double)(param5 * param5 + (param3 * param3 + param4 * param4))));
-          ((qfa) this).field_Eb[1] = param4 * var8;
-          ((qfa) this).field_Eb[0] = param3 * var8;
-          ((qfa) this).field_Eb[2] = param5 * var8;
-          ((qfa) this).field_Tb[0] = -((qfa) this).field_Eb[0];
-          ((qfa) this).field_Tb[2] = -((qfa) this).field_Eb[2];
-          ((qfa) this).field_Tb[1] = -((qfa) this).field_Eb[1];
+          this.field_Eb[1] = param4 * var8;
+          this.field_Eb[0] = param3 * var8;
+          this.field_Eb[2] = param5 * var8;
+          this.field_Tb[0] = -this.field_Eb[0];
+          this.field_Tb[2] = -this.field_Eb[2];
+          this.field_Tb[1] = -this.field_Eb[1];
           this.g((byte) 84);
           break L4;
         }
     }
 
     private final void k(int param0) {
-        if (!(!((qfa) this).field_Vb)) {
+        if (!(!this.field_Vb)) {
             jaggl.OpenGL.glMatrixMode(5890);
             jaggl.OpenGL.glLoadIdentity();
             jaggl.OpenGL.glMatrixMode(5888);
-            ((qfa) this).field_Vb = false;
+            this.field_Vb = false;
+        }
+        if (param0 != 0) {
+            this.c(true);
         }
     }
 
     final void c(int param0, int param1, int param2) {
-        ((qfa) this).field_Fb = param0;
-        ((qfa) this).field_N = param1;
+        this.field_Fb = param0;
+        this.field_N = param1;
         this.f(27818);
         this.l(param2 + 10);
         if (param2 != 0) {
-            ((qfa) this).field_Gb = null;
+            this.field_Gb = (jaa[]) null;
         }
     }
 
     final void a(jaa param0, int param1) {
+        int fieldTemp$2 = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -4108,6 +4206,7 @@ final class qfa extends ha {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
@@ -4122,24 +4221,24 @@ final class qfa extends ha {
           L0: {
             if (param1 == 2896) {
               L1: {
-                if (!((qfa) this).field_Ob) {
+                if (!this.field_Ob) {
                   L2: {
-                    if (0 > ((qfa) this).field_zc) {
+                    if (0 > this.field_zc) {
                       break L2;
                     } else {
-                      if (param0 == ((qfa) this).field_p[((qfa) this).field_zc]) {
-                        int fieldTemp$2 = ((qfa) this).field_zc;
-                        ((qfa) this).field_zc = ((qfa) this).field_zc - 1;
-                        ((qfa) this).field_p[fieldTemp$2] = null;
+                      if (param0 == this.field_p[this.field_zc]) {
+                        fieldTemp$2 = this.field_zc;
+                        this.field_zc = this.field_zc - 1;
+                        this.field_p[fieldTemp$2] = null;
                         param0.b((byte) -75);
-                        if (((qfa) this).field_zc < 0) {
-                          ((qfa) this).field_lc = null;
-                          ((qfa) this).field_W = null;
+                        if ((this.field_zc ^ -1) > -1) {
+                          this.field_lc = null;
+                          this.field_W = null;
                           break L1;
                         } else {
-                          ((qfa) this).field_lc = ((qfa) this).field_p[((qfa) this).field_zc];
-                          ((qfa) this).field_W = ((qfa) this).field_p[((qfa) this).field_zc];
-                          ((qfa) this).field_W.b(param1 + -8470);
+                          this.field_lc = this.field_p[this.field_zc];
+                          this.field_W = this.field_p[this.field_zc];
+                          this.field_W.b(param1 + -8470);
                           break L1;
                         }
                       } else {
@@ -4149,37 +4248,39 @@ final class qfa extends ha {
                   }
                   throw new RuntimeException();
                 } else {
-                  ((qfa) this).a(param0, (byte) -120);
-                  ((qfa) this).b((byte) 101, param0);
+                  this.a(param0, (byte) -120);
+                  this.b((byte) 101, param0);
                   break L1;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_0 = (RuntimeException) (var3);
             stackOut_13_1 = new StringBuilder().append("qfa.SD(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -4187,7 +4288,12 @@ final class qfa extends ha {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -4196,6 +4302,11 @@ final class qfa extends ha {
     }
 
     final synchronized void c(int param0) {
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         int var2 = 0;
         int var4 = 0;
         hua var5 = null;
@@ -4210,9 +4321,9 @@ final class qfa extends ha {
         param0 = param0 & 2147483647;
         var2 = 0;
         L0: while (true) {
-          if (((qfa) this).field_xc.b(-67)) {
+          if (this.field_xc.b(-67)) {
             L1: {
-              if (var2 <= 0) {
+              if ((var2 ^ -1) >= -1) {
                 break L1;
               } else {
                 jaggl.OpenGL.glDeleteBuffersARB(var2, cm.field_j, 0);
@@ -4221,157 +4332,141 @@ final class qfa extends ha {
               }
             }
             L2: while (true) {
-              if (((qfa) this).field_Nc.b(121)) {
+              if (this.field_Nc.b(121)) {
                 L3: {
-                  if (var2 > 0) {
-                    jaggl.OpenGL.glDeleteTextures(var2, cm.field_j, 0);
-                    var2 = 0;
-                    L4: while (true) {
-                      if (((qfa) this).field_hc.b(114)) {
-                        break L3;
-                      } else {
-                        var7 = (hua) (Object) ((qfa) this).field_hc.a(true);
-                        int incrementValue$6 = var2;
-                        var2++;
-                        cm.field_j[incrementValue$6] = var7.field_d;
-                        if (var2 == 1000) {
-                          jaggl.OpenGL.glDeleteFramebuffersEXT(var2, cm.field_j, 0);
-                          var2 = 0;
-                          continue L4;
+                  L4: {
+                    if (var2 > 0) {
+                      jaggl.OpenGL.glDeleteTextures(var2, cm.field_j, 0);
+                      var2 = 0;
+                      break L4;
+                    } else {
+                      L5: while (true) {
+                        if (this.field_hc.b(114)) {
+                          break L3;
                         } else {
-                          continue L4;
-                        }
-                      }
-                    }
-                  } else {
-                    L5: while (true) {
-                      if (((qfa) this).field_hc.b(114)) {
-                        break L3;
-                      } else {
-                        var7 = (hua) (Object) ((qfa) this).field_hc.a(true);
-                        int incrementValue$7 = var2;
-                        var2++;
-                        cm.field_j[incrementValue$7] = var7.field_d;
-                        if (var2 == 1000) {
-                          L6: while (true) {
+                          var7 = (hua) ((Object) this.field_hc.a(true));
+                          incrementValue$5 = var2;
+                          var2++;
+                          cm.field_j[incrementValue$5] = var7.field_d;
+                          if ((var2 ^ -1) != -1001) {
+                            continue L5;
+                          } else {
                             jaggl.OpenGL.glDeleteFramebuffersEXT(var2, cm.field_j, 0);
                             var2 = 0;
-                            L7: while (true) {
-                              if (((qfa) this).field_hc.b(114)) {
-                                break L3;
-                              } else {
-                                var7 = (hua) (Object) ((qfa) this).field_hc.a(true);
-                                int incrementValue$8 = var2;
-                                var2++;
-                                cm.field_j[incrementValue$8] = var7.field_d;
-                                if (var2 == 1000) {
-                                  continue L6;
-                                } else {
-                                  continue L7;
-                                }
-                              }
-                            }
+                            break L4;
                           }
-                        } else {
-                          continue L5;
                         }
                       }
                     }
                   }
-                }
-                L8: {
-                  if (var2 > 0) {
-                    jaggl.OpenGL.glDeleteFramebuffersEXT(var2, cm.field_j, 0);
-                    var2 = 0;
-                    break L8;
-                  } else {
-                    break L8;
+                  L6: while (true) {
+                    if (this.field_hc.b(114)) {
+                      break L3;
+                    } else {
+                      var7 = (hua) ((Object) this.field_hc.a(true));
+                      incrementValue$6 = var2;
+                      var2++;
+                      cm.field_j[incrementValue$6] = var7.field_d;
+                      if ((var2 ^ -1) == -1001) {
+                        jaggl.OpenGL.glDeleteFramebuffersEXT(var2, cm.field_j, 0);
+                        var2 = 0;
+                        continue L6;
+                      } else {
+                        continue L6;
+                      }
+                    }
                   }
                 }
-                L9: while (true) {
-                  if (((qfa) this).field_ec.b(105)) {
-                    L10: {
+                L7: {
+                  if (-1 > (var2 ^ -1)) {
+                    jaggl.OpenGL.glDeleteFramebuffersEXT(var2, cm.field_j, 0);
+                    var2 = 0;
+                    break L7;
+                  } else {
+                    break L7;
+                  }
+                }
+                L8: while (true) {
+                  if (this.field_ec.b(105)) {
+                    L9: {
                       if (var2 <= 0) {
-                        break L10;
+                        break L9;
                       } else {
                         jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, cm.field_j, 0);
                         var2 = 0;
-                        break L10;
+                        break L9;
                       }
                     }
-                    L11: while (true) {
-                      if (((qfa) this).field_v.b(124)) {
-                        L12: while (true) {
-                          if (((qfa) this).field_Cc.b(112)) {
-                            L13: while (true) {
-                              if (((qfa) this).field_zb.b(106)) {
-                                L14: while (true) {
-                                  if (((qfa) this).field_v.b(-104)) {
-                                    L15: {
-                                      ((qfa) this).field_r.a(true);
-                                      if (this.u(97) <= 100663296) {
-                                        break L15;
+                    L10: while (true) {
+                      if (this.field_v.b(124)) {
+                        L11: while (true) {
+                          if (this.field_Cc.b(112)) {
+                            L12: while (true) {
+                              if (this.field_zb.b(106)) {
+                                L13: while (true) {
+                                  if (this.field_v.b(-104)) {
+                                    L14: {
+                                      this.field_r.a(true);
+                                      if (-100663297 <= (this.u(97) ^ -1)) {
+                                        break L14;
                                       } else {
-                                        if (60000L + ((qfa) this).field_vc >= wt.a(false)) {
-                                          break L15;
+                                        if (60000L + this.field_vc >= wt.a(false)) {
+                                          break L14;
                                         } else {
                                           System.gc();
-                                          ((qfa) this).field_vc = wt.a(false);
-                                          break L15;
+                                          this.field_vc = wt.a(false);
+                                          break L14;
                                         }
                                       }
                                     }
-                                    ((qfa) this).field_Mc = param0;
+                                    this.field_Mc = param0;
                                     return;
                                   } else {
-                                    var12 = (hua) (Object) ((qfa) this).field_v.a(true);
+                                    var12 = (hua) ((Object) this.field_v.a(true));
                                     jaggl.OpenGL.glDeleteLists((int)var12.field_b, var12.field_d);
-                                    continue L14;
+                                    continue L13;
                                   }
                                 }
                               } else {
-                                var11 = ((qfa) this).field_zb.a(true);
+                                var11 = this.field_zb.a(true);
                                 jaggl.OpenGL.glDeleteObjectARB(var11.field_b);
-                                continue L13;
+                                continue L12;
                               }
                             }
                           } else {
-                            var10 = ((qfa) this).field_Cc.a(true);
+                            var10 = this.field_Cc.a(true);
                             jaggl.OpenGL.glDeleteProgramARB((int)var10.field_b);
-                            continue L12;
+                            continue L11;
                           }
                         }
                       } else {
-                        var9 = (hua) (Object) ((qfa) this).field_v.a(true);
+                        var9 = (hua) ((Object) this.field_v.a(true));
                         jaggl.OpenGL.glDeleteLists((int)var9.field_b, var9.field_d);
-                        continue L11;
+                        continue L10;
                       }
                     }
                   } else {
-                    L16: {
-                      var8 = (hua) (Object) ((qfa) this).field_ec.a(true);
-                      int incrementValue$9 = var2;
-                      var2++;
-                      cm.field_j[incrementValue$9] = (int)var8.field_b;
-                      ((qfa) this).field_q = ((qfa) this).field_q - var8.field_d;
-                      if (var2 != 1000) {
-                        break L16;
-                      } else {
-                        jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, cm.field_j, 0);
-                        var2 = 0;
-                        break L16;
-                      }
+                    var8 = (hua) ((Object) this.field_ec.a(true));
+                    incrementValue$7 = var2;
+                    var2++;
+                    cm.field_j[incrementValue$7] = (int)var8.field_b;
+                    this.field_q = this.field_q - var8.field_d;
+                    if ((var2 ^ -1) != -1001) {
+                      continue L8;
+                    } else {
+                      jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, cm.field_j, 0);
+                      var2 = 0;
+                      continue L8;
                     }
-                    continue L9;
                   }
                 }
               } else {
-                var6 = (hua) (Object) ((qfa) this).field_Nc.a(true);
-                int incrementValue$10 = var2;
+                var6 = (hua) ((Object) this.field_Nc.a(true));
+                incrementValue$8 = var2;
                 var2++;
-                cm.field_j[incrementValue$10] = (int)var6.field_b;
-                ((qfa) this).field_sb = ((qfa) this).field_sb - var6.field_d;
-                if (var2 == 1000) {
+                cm.field_j[incrementValue$8] = (int)var6.field_b;
+                this.field_sb = this.field_sb - var6.field_d;
+                if (-1001 == (var2 ^ -1)) {
                   jaggl.OpenGL.glDeleteTextures(var2, cm.field_j, 0);
                   var2 = 0;
                   continue L2;
@@ -4381,37 +4476,34 @@ final class qfa extends ha {
               }
             }
           } else {
-            L17: {
-              var5 = (hua) (Object) ((qfa) this).field_xc.a(true);
-              int incrementValue$11 = var2;
-              var2++;
-              cm.field_j[incrementValue$11] = (int)var5.field_b;
-              ((qfa) this).field_mc = ((qfa) this).field_mc - var5.field_d;
-              if (var2 != 1000) {
-                break L17;
-              } else {
-                jaggl.OpenGL.glDeleteBuffersARB(var2, cm.field_j, 0);
-                var2 = 0;
-                break L17;
-              }
+            var5 = (hua) ((Object) this.field_xc.a(true));
+            incrementValue$9 = var2;
+            var2++;
+            cm.field_j[incrementValue$9] = (int)var5.field_b;
+            this.field_mc = this.field_mc - var5.field_d;
+            if (-1001 != (var2 ^ -1)) {
+              continue L0;
+            } else {
+              jaggl.OpenGL.glDeleteBuffersARB(var2, cm.field_j, 0);
+              var2 = 0;
+              continue L0;
             }
-            continue L0;
           }
         }
     }
 
     private final int u(int param0) {
-        int var2 = 0;
-        return ((qfa) this).field_mc + ((qfa) this).field_sb - -((qfa) this).field_q;
+        int var2 = 0 / ((param0 - 29) / 37);
+        return this.field_mc + this.field_sb - -this.field_q;
     }
 
     private final void e(boolean param0) {
         L0: {
           L1: {
-            if (!((qfa) this).field_l) {
+            if (!this.field_l) {
               break L1;
             } else {
-              if (!((qfa) this).field_j) {
+              if (!this.field_j) {
                 jaggl.OpenGL.glEnable(2896);
                 break L0;
               } else {
@@ -4422,7 +4514,14 @@ final class qfa extends ha {
           jaggl.OpenGL.glDisable(2896);
           break L0;
         }
-        ((qfa) this).field_M = 70;
+        L2: {
+          if (!param0) {
+            break L2;
+          } else {
+            this.field_M = 70;
+            break L2;
+          }
+        }
     }
 
     final aja a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
@@ -4447,7 +4546,7 @@ final class qfa extends ha {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = new tla((qfa) this, param3, param4, param0, param1, param2);
+            stackOut_0_0 = new tla((qfa) (this), param3, param4, param0, param1, param2);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -4455,23 +4554,23 @@ final class qfa extends ha {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var7;
+            stackOut_2_0 = (RuntimeException) (var7);
             stackOut_2_1 = new StringBuilder().append("qfa.W(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -4479,41 +4578,41 @@ final class qfa extends ha {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
-        return (aja) (Object) stackIn_1_0;
+        return (aja) ((Object) stackIn_1_0);
     }
 
     private final void b(int param0, boolean param1) {
-        if (!((!param1 ? 1 : 0) != (((qfa) this).field_l ? 1 : 0))) {
-            ((qfa) this).field_l = param1 ? true : false;
+        if (!((!param1 ? 1 : 0) != (this.field_l ? 1 : 0))) {
+            this.field_l = param1 ? true : false;
             this.e(false);
-            ((qfa) this).field_x = ((qfa) this).field_x & -8;
+            this.field_x = this.field_x & -8;
         }
         if (param0 != -20951) {
-            ((qfa) this).field_Vb = true;
+            this.field_Vb = true;
         }
     }
 
     final void f(int param0, int param1) {
         L0: {
           L1: {
-            if (param0 != ((qfa) this).field_ob) {
+            if (param0 != this.field_ob) {
               break L1;
             } else {
-              if (param1 == ((qfa) this).field_bb) {
+              if (param1 == this.field_bb) {
                 break L0;
               } else {
                 break L1;
               }
             }
           }
-          ((qfa) this).field_ob = param0;
-          ((qfa) this).field_bb = param1;
+          this.field_ob = param0;
+          this.field_bb = param1;
           this.q(-2);
           this.s(2915);
-          if (((qfa) this).field_Jb != 3) {
-            if (((qfa) this).field_Jb == 2) {
+          if (this.field_Jb != 3) {
+            if ((this.field_Jb ^ -1) == -3) {
               this.d(115);
               break L0;
             } else {
@@ -4537,17 +4636,17 @@ final class qfa extends ha {
 
     final za e(int param0) {
         gpa var2 = new gpa(param0);
-        ((qfa) this).field_D.b(-10258, (ksa) (Object) var2);
-        return (za) (Object) var2;
+        this.field_D.b(-10258, var2);
+        return (za) ((Object) var2);
     }
 
     private final void h(int param0) {
         L0: {
           L1: {
-            if (!((qfa) this).field_Lc) {
+            if (!this.field_Lc) {
               break L1;
             } else {
-              if (((qfa) this).field_jc >= 0) {
+              if (-1 >= (this.field_jc ^ -1)) {
                 jaggl.OpenGL.glEnable(2912);
                 break L0;
               } else {
@@ -4558,27 +4657,36 @@ final class qfa extends ha {
           jaggl.OpenGL.glDisable(2912);
           break L0;
         }
-        ((qfa) this).a(-73, -124, 96);
+        L2: {
+          if (param0 == 0) {
+            break L2;
+          } else {
+            this.a(-73, -124, 96);
+            break L2;
+          }
+        }
     }
 
     final void a(int param0, jaa param1) {
+        rtb discarded$0 = null;
+        int fieldTemp$1 = 0;
         try {
-            if (3 <= ((qfa) this).field_Oc) {
+            if (3 <= this.field_Oc) {
                 throw new RuntimeException();
             }
             if (param0 < 41) {
-                rtb discarded$0 = ((qfa) this).a(false);
+                discarded$0 = this.a(false);
             }
-            if (!(((qfa) this).field_Oc < 0)) {
-                ((qfa) this).field_kc[((qfa) this).field_Oc].d(105);
+            if (!(-1 < (this.field_Oc ^ -1))) {
+                this.field_kc[this.field_Oc].d(105);
             }
-            int fieldTemp$1 = ((qfa) this).field_Oc + 1;
-            ((qfa) this).field_Oc = ((qfa) this).field_Oc + 1;
-            ((qfa) this).field_kc[fieldTemp$1] = param1;
-            ((qfa) this).field_W = param1;
-            ((qfa) this).field_W.a(86);
+            fieldTemp$1 = this.field_Oc + 1;
+            this.field_Oc = this.field_Oc + 1;
+            this.field_kc[fieldTemp$1] = param1;
+            this.field_W = param1;
+            this.field_W.a(86);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qfa.ND(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "qfa.ND(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -4587,7 +4695,7 @@ final class qfa extends ha {
         Throwable decompiledCaughtException = null;
         try {
           L0: {
-            ((qfa) this).field_c.swapBuffers();
+            this.field_c.swapBuffers();
             break L0;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -4601,9 +4709,9 @@ final class qfa extends ha {
 
     private final void e(byte param0) {
         tdb.field_o[3] = 1.0f;
-        tdb.field_o[2] = ((qfa) this).field_pc * ((qfa) this).field_i;
-        tdb.field_o[0] = ((qfa) this).field_nb * ((qfa) this).field_pc;
-        tdb.field_o[1] = ((qfa) this).field_nc * ((qfa) this).field_pc;
+        tdb.field_o[2] = this.field_pc * this.field_i;
+        tdb.field_o[0] = this.field_nb * this.field_pc;
+        tdb.field_o[1] = this.field_nc * this.field_pc;
         jaggl.OpenGL.glLightModelfv(2899, tdb.field_o, 0);
         if (param0 >= -33) {
             this.e(false);
@@ -4613,15 +4721,15 @@ final class qfa extends ha {
     final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         try {
             this.i(3);
-            ((qfa) this).a(61, (pib) null);
-            ((qfa) this).d(0, 127);
+            this.a(61, (pib) null);
+            this.d(0, 127);
             jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);
             jaggl.OpenGL.glRasterPos2i(param0, param1);
-            jaggl.OpenGL.glDrawPixelsi(param2, param3, 32993, ((qfa) this).field_cc, param4, param5);
+            jaggl.OpenGL.glDrawPixelsi(param2, param3, 32993, this.field_cc, param4, param5);
             jaggl.OpenGL.glRasterPos2i(0, 0);
             jaggl.OpenGL.glPixelZoom(1.0f, 1.0f);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qfa.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "qfa.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -4631,14 +4739,14 @@ final class qfa extends ha {
         int stackOut_5_0 = 0;
         L0: {
           L1: {
-            if (!((qfa) this).field_y) {
+            if (!this.field_y) {
               break L1;
             } else {
               L2: {
-                if (!((qfa) this).s()) {
+                if (!this.s()) {
                   break L2;
                 } else {
-                  if (!((qfa) this).field_sc) {
+                  if (!this.field_sc) {
                     break L1;
                   } else {
                     break L2;
@@ -4658,11 +4766,14 @@ final class qfa extends ha {
     }
 
     private final void h(byte param0) {
-        boolean discarded$0 = ((qfa) this).field_c.b();
+        boolean discarded$5 = this.field_c.b();
+        if (param0 != -46) {
+            this.o(46);
+        }
     }
 
     final boolean x() {
-        return ((qfa) this).field_U || ((qfa) this).field_O;
+        return this.field_U || this.field_O;
     }
 
     static {

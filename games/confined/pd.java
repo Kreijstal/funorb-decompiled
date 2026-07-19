@@ -11,12 +11,12 @@ final class pd extends nf {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((pd) this).field_s;
-          param1 = param1 + ((pd) this).field_v;
+          param0 = param0 + this.field_s;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * fn.field_g;
           var5 = 0;
-          var6 = ((pd) this).field_w;
-          var7 = ((pd) this).field_u;
+          var6 = this.field_w;
+          var7 = this.field_u;
           var8 = fn.field_g - var7;
           var9 = 0;
           if (param1 >= fn.field_b) {
@@ -68,7 +68,7 @@ final class pd extends nf {
             break L4;
           } else {
             if (var6 > 0) {
-              pd.d(fn.field_h, ((pd) this).field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+              pd.d(fn.field_h, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -86,12 +86,12 @@ final class pd extends nf {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((pd) this).field_s;
-          param1 = param1 + ((pd) this).field_v;
+          param0 = param0 + this.field_s;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * fn.field_g;
           var5 = 0;
-          var6 = ((pd) this).field_w;
-          var7 = ((pd) this).field_u;
+          var6 = this.field_w;
+          var7 = this.field_u;
           var8 = fn.field_g - var7;
           var9 = 0;
           if (param1 >= fn.field_b) {
@@ -143,7 +143,7 @@ final class pd extends nf {
             break L4;
           } else {
             if (var6 > 0) {
-              pd.b(0, 0, 0, fn.field_h, ((pd) this).field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+              pd.b(0, 0, 0, fn.field_h, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -157,17 +157,19 @@ final class pd extends nf {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int incrementValue$0 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = -param5; var11 < 0; var11++) {
                 var12 = (param1[param3] >>> 24) * param9 >> 8;
                 var13 = 256 - var12;
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
                 var14 = param1[incrementValue$0];
                 var15 = param0[param4];
-                int incrementValue$1 = param4;
+                incrementValue$1 = param4;
                 param4++;
                 param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
             }
@@ -182,6 +184,7 @@ final class pd extends nf {
         int var15 = 0;
         int var16 = 0;
         int var18 = 0;
+        int incrementValue$0 = 0;
         int var17 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
@@ -192,7 +195,7 @@ final class pd extends nf {
                 if (var16 != 0) {
                     var17 = 256 - var16;
                     var18 = param0[param5];
-                    int incrementValue$0 = param5;
+                    incrementValue$0 = param5;
                     param5++;
                     param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
                 } else {
@@ -214,6 +217,7 @@ final class pd extends nf {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
+        int incrementValue$0 = 0;
         int var18 = 0;
         int var13 = param3;
         for (var14 = -param8; var14 < 0; var14++) {
@@ -227,7 +231,7 @@ final class pd extends nf {
                     var20 = (param2 & 16711935) * param12 & -16711936;
                     var21 = (param2 & 65280) * param12 & 16711680;
                     param2 = (var20 | var21) >>> 8;
-                    int incrementValue$0 = param5;
+                    incrementValue$0 = param5;
                     param5++;
                     param0[incrementValue$0] = ((param2 & 16711935) * var17 + (var18 & 16711935) * var19 & -16711936) + ((param2 & 65280) * var17 + (var18 & 65280) * var19 & 16711680) >>> 8;
                 } else {
@@ -260,30 +264,30 @@ final class pd extends nf {
             } else {
               if (param3 > 0) {
                 L1: {
-                  var6 = ((pd) this).field_u;
-                  var7 = ((pd) this).field_w;
+                  var6 = this.field_u;
+                  var7 = this.field_w;
                   var8 = 0;
                   var9 = 0;
-                  var10 = ((pd) this).field_t;
-                  var11 = ((pd) this).field_x;
+                  var10 = this.field_t;
+                  var11 = this.field_x;
                   var12 = (var10 << 16) / param2;
                   var13 = (var11 << 16) / param3;
-                  if (((pd) this).field_s <= 0) {
+                  if (this.field_s <= 0) {
                     break L1;
                   } else {
-                    var14 = ((((pd) this).field_s << 16) + var12 - 1) / var12;
+                    var14 = ((this.field_s << 16) + var12 - 1) / var12;
                     param0 = param0 + var14;
-                    var8 = var8 + (var14 * var12 - (((pd) this).field_s << 16));
+                    var8 = var8 + (var14 * var12 - (this.field_s << 16));
                     break L1;
                   }
                 }
                 L2: {
-                  if (((pd) this).field_v <= 0) {
+                  if (this.field_v <= 0) {
                     break L2;
                   } else {
-                    var14 = ((((pd) this).field_v << 16) + var13 - 1) / var13;
+                    var14 = ((this.field_v << 16) + var13 - 1) / var13;
                     param1 = param1 + var14;
-                    var9 = var9 + (var14 * var13 - (((pd) this).field_v << 16));
+                    var9 = var9 + (var14 * var13 - (this.field_v << 16));
                     break L2;
                   }
                 }
@@ -346,7 +350,7 @@ final class pd extends nf {
                     break L8;
                   }
                 }
-                pd.b(fn.field_h, ((pd) this).field_z, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
+                pd.b(fn.field_h, this.field_z, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
                 return;
               } else {
                 break L0;
@@ -355,7 +359,7 @@ final class pd extends nf {
           }
           return;
         } else {
-          ((pd) this).b(param0, param1, param2, param3);
+          this.b(param0, param1, param2, param3);
           return;
         }
     }
@@ -365,6 +369,8 @@ final class pd extends nf {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -385,7 +391,7 @@ final class pd extends nf {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -396,7 +402,7 @@ final class pd extends nf {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
@@ -417,12 +423,12 @@ final class pd extends nf {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((pd) this).field_s;
-          param1 = param1 + ((pd) this).field_v;
+          param0 = param0 + this.field_s;
+          param1 = param1 + this.field_v;
           var3 = param0 + param1 * fn.field_g;
           var4 = 0;
-          var5 = ((pd) this).field_w;
-          var6 = ((pd) this).field_u;
+          var5 = this.field_w;
+          var6 = this.field_u;
           var7 = fn.field_g - var6;
           var8 = 0;
           if (param1 >= fn.field_b) {
@@ -474,7 +480,7 @@ final class pd extends nf {
             break L4;
           } else {
             if (var5 > 0) {
-              pd.c(fn.field_h, ((pd) this).field_z, 0, var4, var3, var6, var5, var7, var8);
+              pd.c(fn.field_h, this.field_z, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -484,6 +490,8 @@ final class pd extends nf {
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var14 = 0;
         param8 = -param10;
         L0: while (true) {
@@ -498,7 +506,7 @@ final class pd extends nf {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -513,7 +521,7 @@ final class pd extends nf {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -534,12 +542,12 @@ final class pd extends nf {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((pd) this).field_s;
-          param1 = param1 + ((pd) this).field_v;
+          param0 = param0 + this.field_s;
+          param1 = param1 + this.field_v;
           var3 = param0 + param1 * fn.field_g;
           var4 = 0;
-          var5 = ((pd) this).field_w;
-          var6 = ((pd) this).field_u;
+          var5 = this.field_w;
+          var6 = this.field_u;
           var7 = fn.field_g - var6;
           var8 = 0;
           if (param1 >= fn.field_b) {
@@ -591,7 +599,7 @@ final class pd extends nf {
             break L4;
           } else {
             if (var5 > 0) {
-              pd.c(fn.field_h, ((pd) this).field_z, 0, var4, var3, var6, var5, var7, var8);
+              pd.c(fn.field_h, this.field_z, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -609,12 +617,12 @@ final class pd extends nf {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((pd) this).field_s;
-          param1 = param1 + ((pd) this).field_v;
+          param0 = param0 + this.field_s;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * fn.field_g;
           var5 = 0;
-          var6 = ((pd) this).field_w;
-          var7 = ((pd) this).field_u;
+          var6 = this.field_w;
+          var7 = this.field_u;
           var8 = fn.field_g - var7;
           var9 = 0;
           if (param1 >= fn.field_b) {
@@ -666,7 +674,7 @@ final class pd extends nf {
             break L4;
           } else {
             if (var6 > 0) {
-              pd.c(fn.field_h, ((pd) this).field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+              pd.c(fn.field_h, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -693,30 +701,30 @@ final class pd extends nf {
           } else {
             if (param3 > 0) {
               L1: {
-                var5 = ((pd) this).field_u;
-                var6 = ((pd) this).field_w;
+                var5 = this.field_u;
+                var6 = this.field_w;
                 var7 = 0;
                 var8 = 0;
-                var9 = ((pd) this).field_t;
-                var10 = ((pd) this).field_x;
+                var9 = this.field_t;
+                var10 = this.field_x;
                 var11 = (var9 << 16) / param2;
                 var12 = (var10 << 16) / param3;
-                if (((pd) this).field_s <= 0) {
+                if (this.field_s <= 0) {
                   break L1;
                 } else {
-                  var13 = ((((pd) this).field_s << 16) + var11 - 1) / var11;
+                  var13 = ((this.field_s << 16) + var11 - 1) / var11;
                   param0 = param0 + var13;
-                  var7 = var7 + (var13 * var11 - (((pd) this).field_s << 16));
+                  var7 = var7 + (var13 * var11 - (this.field_s << 16));
                   break L1;
                 }
               }
               L2: {
-                if (((pd) this).field_v <= 0) {
+                if (this.field_v <= 0) {
                   break L2;
                 } else {
-                  var13 = ((((pd) this).field_v << 16) + var12 - 1) / var12;
+                  var13 = ((this.field_v << 16) + var12 - 1) / var12;
                   param1 = param1 + var13;
-                  var8 = var8 + (var13 * var12 - (((pd) this).field_v << 16));
+                  var8 = var8 + (var13 * var12 - (this.field_v << 16));
                   break L2;
                 }
               }
@@ -779,7 +787,7 @@ final class pd extends nf {
                   break L8;
                 }
               }
-              pd.b(fn.field_h, ((pd) this).field_z, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+              pd.b(fn.field_h, this.field_z, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
               return;
             } else {
               break L0;
@@ -836,10 +844,10 @@ final class pd extends nf {
         int stackOut_19_1 = 0;
         int stackOut_19_2 = 0;
         L0: {
-          var3 = ((pd) this).field_u >> 1;
-          var4 = ((pd) this).field_w >> 1;
-          param0 = param0 + ((pd) this).field_s / 2;
-          param1 = param1 + ((pd) this).field_v / 2;
+          var3 = this.field_u >> 1;
+          var4 = this.field_w >> 1;
+          param0 = param0 + this.field_s / 2;
+          param1 = param1 + this.field_v / 2;
           if (param0 >= fn.field_c) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -853,7 +861,7 @@ final class pd extends nf {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= fn.field_i) {
-            stackOut_5_0 = ((pd) this).field_u - 2;
+            stackOut_5_0 = this.field_u - 2;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -877,7 +885,7 @@ final class pd extends nf {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= fn.field_j) {
-            stackOut_11_0 = ((pd) this).field_w - 2;
+            stackOut_11_0 = this.field_w - 2;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -892,7 +900,7 @@ final class pd extends nf {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((pd) this).field_u + var5;
+            var10 = var9 * this.field_u + var5;
             var11 = (param1 + (var9 >> 1)) * fn.field_g + (param0 + (var5 >> 1));
             var12 = var5;
             L5: while (true) {
@@ -928,14 +936,14 @@ final class pd extends nf {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = ((pd) this).field_z;
+                      stackOut_18_0 = this.field_z;
                       stackOut_18_1 = var10 + (var19 & 1);
                       stackIn_20_0 = stackOut_18_0;
                       stackIn_20_1 = stackOut_18_1;
                       stackIn_19_0 = stackOut_18_0;
                       stackIn_19_1 = stackOut_18_1;
                       if ((var19 & 2) != 0) {
-                        stackOut_20_0 = (int[]) (Object) stackIn_20_0;
+                        stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
                         stackOut_20_1 = stackIn_20_1;
                         stackOut_20_2 = 0;
                         stackIn_21_0 = stackOut_20_0;
@@ -943,9 +951,9 @@ final class pd extends nf {
                         stackIn_21_2 = stackOut_20_2;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) (Object) stackIn_19_0;
+                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
                         stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = ((pd) this).field_u;
+                        stackOut_19_2 = this.field_u;
                         stackIn_21_0 = stackOut_19_0;
                         stackIn_21_1 = stackOut_19_1;
                         stackIn_21_2 = stackOut_19_2;
@@ -969,6 +977,8 @@ final class pd extends nf {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1002,7 +1012,7 @@ final class pd extends nf {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
                 param2 = param1[incrementValue$2];
                 var17 = param2 >>> 24;
@@ -1037,7 +1047,7 @@ final class pd extends nf {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
-                  int incrementValue$3 = param4;
+                  incrementValue$3 = param4;
                   param4++;
                   param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;

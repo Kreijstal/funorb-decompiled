@@ -20,16 +20,16 @@ final class pm implements Runnable {
 
     final int a(int param0) throws IOException {
         if (param0 != 15166) {
-            ((pm) this).field_h = -24;
+            this.field_h = -24;
         }
-        if (((pm) this).field_c) {
+        if (this.field_c) {
             return 0;
         }
-        return ((pm) this).field_m.available();
+        return this.field_m.available();
     }
 
     protected final void finalize() {
-        ((pm) this).b(0);
+        this.b(0);
     }
 
     public final void run() {
@@ -43,7 +43,7 @@ final class pm implements Runnable {
             InterruptedException var4 = null;
             Throwable var5 = null;
             int var6 = 0;
-            Object var7 = null;
+            String var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var6 = Vertigo2.field_L ? 1 : 0;
@@ -54,17 +54,23 @@ final class pm implements Runnable {
                   synchronized (var3) {
                     L2: {
                       L3: {
-                        if (((pm) this).field_i != ((pm) this).field_l) {
+                        if (this.field_i != this.field_l) {
                           break L3;
                         } else {
-                          if (((pm) this).field_c) {
+                          if (this.field_c) {
                             decompiledRegionSelector0 = 0;
                             break L2;
                           } else {
-                            {
+                            try {
                               L4: {
                                 this.wait();
                                 break L4;
+                              }
+                            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                              decompiledCaughtException = decompiledCaughtParameter0;
+                              L5: {
+                                var4 = (InterruptedException) (Object) decompiledCaughtException;
+                                break L5;
                               }
                             }
                             break L3;
@@ -72,15 +78,15 @@ final class pm implements Runnable {
                         }
                       }
                       L6: {
-                        if (((pm) this).field_i >= ((pm) this).field_l) {
-                          var1_int = ((pm) this).field_i - ((pm) this).field_l;
+                        if (this.field_i >= this.field_l) {
+                          var1_int = this.field_i - this.field_l;
                           break L6;
                         } else {
-                          var1_int = -((pm) this).field_l + ((pm) this).field_h;
+                          var1_int = -this.field_l + this.field_h;
                           break L6;
                         }
                       }
-                      var2 = ((pm) this).field_l;
+                      var2 = this.field_l;
                       decompiledRegionSelector0 = 1;
                       break L2;
                     }
@@ -89,26 +95,26 @@ final class pm implements Runnable {
                     try {
                       L7: {
                         L8: {
-                          if (((pm) this).field_m != null) {
-                            ((pm) this).field_m.close();
+                          if (this.field_m != null) {
+                            this.field_m.close();
                             break L8;
                           } else {
                             break L8;
                           }
                         }
                         L9: {
-                          if (((pm) this).field_f == null) {
+                          if (this.field_f == null) {
                             break L9;
                           } else {
-                            ((pm) this).field_f.close();
+                            this.field_f.close();
                             break L9;
                           }
                         }
                         L10: {
-                          if (((pm) this).field_g == null) {
+                          if (this.field_g == null) {
                             break L10;
                           } else {
-                            ((pm) this).field_g.close();
+                            this.field_g.close();
                             break L10;
                           }
                         }
@@ -121,7 +127,7 @@ final class pm implements Runnable {
                         break L11;
                       }
                     }
-                    ((pm) this).field_j = null;
+                    this.field_j = null;
                     break L0;
                   } else {
                     if (0 >= var1_int) {
@@ -129,35 +135,35 @@ final class pm implements Runnable {
                     } else {
                       try {
                         L12: {
-                          ((pm) this).field_f.write(((pm) this).field_j, var2, var1_int);
+                          this.field_f.write(this.field_j, var2, var1_int);
                           break L12;
                         }
-                      } catch (java.lang.Exception decompiledCaughtParameter2) {
+                      } catch (java.io.IOException decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
                         L13: {
                           var3_ref = (IOException) (Object) decompiledCaughtException;
-                          ((pm) this).field_b = true;
+                          this.field_b = true;
                           break L13;
                         }
                       }
-                      ((pm) this).field_l = (((pm) this).field_l + var1_int) % ((pm) this).field_h;
+                      this.field_l = (this.field_l + var1_int) % this.field_h;
                       try {
                         L14: {
                           L15: {
-                            if (((pm) this).field_i != ((pm) this).field_l) {
+                            if (this.field_i != this.field_l) {
                               break L15;
                             } else {
-                              ((pm) this).field_f.flush();
+                              this.field_f.flush();
                               break L15;
                             }
                           }
                           break L14;
                         }
-                      } catch (java.lang.Exception decompiledCaughtParameter3) {
+                      } catch (java.io.IOException decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         L16: {
                           var3_ref = (IOException) (Object) decompiledCaughtException;
-                          ((pm) this).field_b = true;
+                          this.field_b = true;
                           break L16;
                         }
                       }
@@ -170,8 +176,8 @@ final class pm implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter4;
               L17: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
-                var7 = null;
-                ke.a((Throwable) (Object) var1_ref, (String) null, 0);
+                var7 = (String) null;
+                ke.a((Throwable) ((Object) var1_ref), (String) null, 0);
                 break L17;
               }
             }
@@ -183,63 +189,36 @@ final class pm implements Runnable {
     }
 
     final void b(int param0) {
-        InterruptedException interruptedException = null;
-        Object var2 = null;
-        Throwable var3 = null;
-        int var4 = 0;
-        Throwable decompiledCaughtException = null;
-        var4 = Vertigo2.field_L ? 1 : 0;
-        if (((pm) this).field_c) {
-          return;
-        } else {
-          L0: {
-            if (param0 == 0) {
-              break L0;
-            } else {
-              r discarded$3 = pm.a(79, 67);
-              break L0;
+        try {
+            r discarded$5 = null;
+            int var4 = 0;
+            var4 = Vertigo2.field_L ? 1 : 0;
+            if (!(!this.field_c)) {
+                return;
             }
-          }
-          var2 = this;
-          synchronized (var2) {
-            L1: {
-              ((pm) this).field_c = true;
-              this.notifyAll();
-              break L1;
+            if (param0 != 0) {
+                discarded$5 = pm.a(79, 67);
             }
-          }
-          L2: {
-            if (((pm) this).field_e == null) {
-              break L2;
-            } else {
-              L3: while (true) {
-                if (((pm) this).field_e.field_b != 0) {
-                  if (((pm) this).field_e.field_b == 1) {
-                    try {
-                      L4: {
-                        ((Thread) ((pm) this).field_e.field_d).join();
-                        break L4;
-                      }
-                    } catch (java.lang.Exception decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L5: {
-                        interruptedException = (InterruptedException) (Object) decompiledCaughtException;
-                        break L5;
-                      }
-                    }
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                } else {
-                  um.a(true, 1L);
-                  continue L3;
+            synchronized (this) {
+                this.field_c = true;
+                this.notifyAll();
+            }
+            if (this.field_e != null) {
+                while (this.field_e.field_b == 0) {
+                    um.a(true, 1L);
                 }
-              }
+                if (!(-2 != (this.field_e.field_b ^ -1))) {
+                    try {
+                        ((Thread) (this.field_e.field_d)).join();
+                    } catch (InterruptedException interruptedException) {
+                    }
+                }
             }
-          }
-          ((pm) this).field_e = null;
-          return;
+            this.field_e = null;
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -254,6 +233,7 @@ final class pm implements Runnable {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
@@ -266,8 +246,9 @@ final class pm implements Runnable {
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            if (((pm) this).field_c) {
-              return;
+            if (this.field_c) {
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: while (true) {
                 if (0 >= param2) {
@@ -275,13 +256,14 @@ final class pm implements Runnable {
                     if (!param1) {
                       break L2;
                     } else {
-                      ((pm) this).field_k = null;
+                      this.field_k = (jj) null;
                       break L2;
                     }
                   }
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  var5_int = ((pm) this).field_m.read(param0, param3, param2);
+                  var5_int = this.field_m.read(param0, param3, param2);
                   if (var5_int > 0) {
                     param3 = param3 + var5_int;
                     param2 = param2 - var5_int;
@@ -297,23 +279,23 @@ final class pm implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var5;
+            stackOut_11_0 = (RuntimeException) (var5);
             stackOut_11_1 = new StringBuilder().append("pm.F(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -321,25 +303,34 @@ final class pm implements Runnable {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final void c(int param0) throws IOException {
         if (param0 != -26206) {
-            ((pm) this).run();
+            this.run();
         }
-        if (!(!((pm) this).field_c)) {
+        if (!(!this.field_c)) {
             return;
         }
-        if (!(!((pm) this).field_b)) {
-            ((pm) this).field_b = false;
+        if (!(!this.field_b)) {
+            this.field_b = false;
             throw new IOException();
         }
     }
 
     final static void a(byte param0, boolean param1) {
+        r discarded$0 = null;
         ak.a(false, param1, 3);
+        if (param0 != 52) {
+            discarded$0 = pm.a(-23, -49);
+        }
     }
 
     pm(java.net.Socket param0, jj param1) throws IOException {
@@ -348,10 +339,10 @@ final class pm implements Runnable {
 
     final int a(byte param0) throws IOException {
         int var2 = 29 / ((42 - param0) / 42);
-        if (!(!((pm) this).field_c)) {
+        if (!(!this.field_c)) {
             return 0;
         }
-        return ((pm) this).field_m.read();
+        return this.field_m.read();
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
@@ -368,6 +359,7 @@ final class pm implements Runnable {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
@@ -380,15 +372,16 @@ final class pm implements Runnable {
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            if (((pm) this).field_c) {
-              return;
+            if (this.field_c) {
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              if (!((pm) this).field_b) {
+              if (!this.field_b) {
                 L1: {
-                  if (null != ((pm) this).field_j) {
+                  if (null != this.field_j) {
                     break L1;
                   } else {
-                    ((pm) this).field_j = new byte[((pm) this).field_h];
+                    this.field_j = new byte[this.field_h];
                     break L1;
                   }
                 }
@@ -400,8 +393,8 @@ final class pm implements Runnable {
                       if (var6 >= param1) {
                         L4: {
                           var7 = -118 / ((param2 - -29) / 52);
-                          if (((pm) this).field_e == null) {
-                            ((pm) this).field_e = ((pm) this).field_k.a(3, (Runnable) this, 0);
+                          if (this.field_e == null) {
+                            this.field_e = this.field_k.a(3, (Runnable) (this), 0);
                             break L4;
                           } else {
                             break L4;
@@ -410,9 +403,9 @@ final class pm implements Runnable {
                         this.notifyAll();
                         break L2;
                       } else {
-                        ((pm) this).field_j[((pm) this).field_i] = param3[var6 + param0];
-                        ((pm) this).field_i = (1 + ((pm) this).field_i) % ((pm) this).field_h;
-                        if ((((pm) this).field_h + ((pm) this).field_l - 100) % ((pm) this).field_h == ((pm) this).field_i) {
+                        this.field_j[this.field_i] = param3[var6 + param0];
+                        this.field_i = (1 + this.field_i) % this.field_h;
+                        if ((this.field_h + this.field_l - 100) % this.field_h == this.field_i) {
                           throw new IOException();
                         } else {
                           var6++;
@@ -422,9 +415,10 @@ final class pm implements Runnable {
                     }
                   }
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                ((pm) this).field_b = false;
+                this.field_b = false;
                 throw new IOException();
               }
             }
@@ -433,23 +427,23 @@ final class pm implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var5;
+            stackOut_23_0 = (RuntimeException) (var5);
             stackOut_23_1 = new StringBuilder().append("pm.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param3 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L5;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -457,7 +451,12 @@ final class pm implements Runnable {
               break L5;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -469,28 +468,24 @@ final class pm implements Runnable {
     }
 
     private pm(java.net.Socket param0, jj param1, int param2) throws IOException {
-        ((pm) this).field_l = 0;
-        ((pm) this).field_i = 0;
-        ((pm) this).field_c = false;
-        ((pm) this).field_b = false;
+        this.field_l = 0;
+        this.field_i = 0;
+        this.field_c = false;
+        this.field_b = false;
         try {
-            ((pm) this).field_k = param1;
-            ((pm) this).field_g = param0;
-            ((pm) this).field_g.setSoTimeout(30000);
-            ((pm) this).field_g.setTcpNoDelay(true);
-            ((pm) this).field_m = ((pm) this).field_g.getInputStream();
-            ((pm) this).field_f = ((pm) this).field_g.getOutputStream();
-            ((pm) this).field_h = param2;
+            this.field_k = param1;
+            this.field_g = param0;
+            this.field_g.setSoTimeout(30000);
+            this.field_g.setTcpNoDelay(true);
+            this.field_m = this.field_g.getInputStream();
+            this.field_f = this.field_g.getOutputStream();
+            this.field_h = param2;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "pm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "pm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = false;
     }
 }

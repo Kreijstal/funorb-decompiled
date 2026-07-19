@@ -22,18 +22,15 @@ final class gk {
     }
 
     final static hl a(int param0) {
+        hl discarded$0 = null;
         if (param0 != 21) {
-            hl discarded$0 = gk.a(47);
+            discarded$0 = gk.a(47);
             return hn.field_Q.field_Pb;
         }
         return hn.field_Q.field_Pb;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[]{20, 21, 8};
         field_a = new String[3];
         field_f = "Waiting for animations";

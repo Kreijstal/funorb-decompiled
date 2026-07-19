@@ -7,14 +7,15 @@ final class u {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != -2355) {
+            field_a = 71;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "u.A(";
         field_b = new ed();
     }

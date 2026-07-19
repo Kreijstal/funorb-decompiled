@@ -36,10 +36,10 @@ final class pm {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((pm) this).field_b[var4] != null) {
-                    var5 = ((pm) this).field_b[var4].field_v * 22050 / 1000;
-                    var6 = ((pm) this).field_b[var4].field_e * 22050 / 1000;
-                    var13 = ((pm) this).field_b[var4].a(var5, ((pm) this).field_b[var4].field_v);
+                  if (this.field_b[var4] != null) {
+                    var5 = this.field_b[var4].field_v * 22050 / 1000;
+                    var6 = this.field_b[var4].field_e * 22050 / 1000;
+                    var13 = this.field_b[var4].a(var5, this.field_b[var4].field_v);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -70,9 +70,9 @@ final class pm {
               return new byte[]{};
             }
           } else {
-            if (((pm) this).field_b[var2] != null) {
-              if (((pm) this).field_b[var2].field_v + ((pm) this).field_b[var2].field_e > var1) {
-                var1 = ((pm) this).field_b[var2].field_v + ((pm) this).field_b[var2].field_e;
+            if (this.field_b[var2] != null) {
+              if (this.field_b[var2].field_v + this.field_b[var2].field_e > var1) {
+                var1 = this.field_b[var2].field_v + this.field_b[var2].field_e;
                 var2++;
                 continue L0;
               } else {
@@ -89,25 +89,25 @@ final class pm {
 
     final el b() {
         byte[] var1 = this.a();
-        return new el(22050, var1, 22050 * ((pm) this).field_c / 1000, 22050 * ((pm) this).field_a / 1000);
+        return new el(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
     private pm(th param0) {
         int var2 = 0;
         int var3 = 0;
-        ((pm) this).field_b = new ke[10];
+        this.field_b = new ke[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((pm) this).field_c = param0.k(-105);
-            ((pm) this).field_a = param0.k(118);
+            this.field_c = param0.k(-105);
+            this.field_a = param0.k(118);
             return;
           } else {
             var3 = param0.f((byte) -24);
             if (var3 != 0) {
               param0.field_l = param0.field_l - 1;
-              ((pm) this).field_b[var2] = new ke();
-              ((pm) this).field_b[var2].a(param0);
+              this.field_b[var2] = new ke();
+              this.field_b[var2].a(param0);
               var2++;
               continue L0;
             } else {

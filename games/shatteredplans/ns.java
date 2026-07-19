@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 class ns extends il implements bp {
     static boolean field_pb;
     static np field_nb;
@@ -20,17 +18,17 @@ class ns extends il implements bp {
     final void p(int param0) {
         cf var2 = null;
         if (param0 != -7011) {
-          ((ns) this).field_tb = false;
-          ((ns) this).field_yb.a(4210752, 2121792, -27855);
-          var2 = new cf((ns) this, ((ns) this).field_ub, pr.field_f);
+          this.field_tb = false;
+          this.field_yb.a(4210752, 2121792, -27855);
+          var2 = new cf((ns) (this), this.field_ub, pr.field_f);
           var2.a(t.field_a, (byte) 112, 15);
-          ((ns) this).b((vg) (Object) var2, param0 + 6907);
+          this.b(var2, param0 + 6907);
           return;
         } else {
-          ((ns) this).field_yb.a(4210752, 2121792, -27855);
-          var2 = new cf((ns) this, ((ns) this).field_ub, pr.field_f);
+          this.field_yb.a(4210752, 2121792, -27855);
+          var2 = new cf((ns) (this), this.field_ub, pr.field_f);
           var2.a(t.field_a, (byte) 112, 15);
-          ((ns) this).b((vg) (Object) var2, param0 + 6907);
+          this.b(var2, param0 + 6907);
           return;
         }
     }
@@ -40,35 +38,38 @@ class ns extends il implements bp {
         field_rb = null;
         field_qb = null;
         field_xb = null;
+        if (param0 > -71) {
+            field_pb = false;
+        }
     }
 
     final void i(byte param0) {
-        if (!((ns) this).field_E) {
+        if (!this.field_E) {
           return;
         } else {
-          ((ns) this).field_E = false;
-          if (((ns) this).field_tb) {
+          this.field_E = false;
+          if (this.field_tb) {
             nb.a(126);
             if (param0 != -104) {
-              ((ns) this).i((byte) -32);
+              this.i((byte) -32);
               return;
             } else {
               return;
             }
           } else {
-            if (((ns) this).field_vb) {
+            if (this.field_vb) {
               ur.j(0);
               if (param0 == -104) {
                 return;
               } else {
-                ((ns) this).i((byte) -32);
+                this.i((byte) -32);
                 return;
               }
             } else {
               if (param0 == -104) {
                 return;
               } else {
-                ((ns) this).i((byte) -32);
+                this.i((byte) -32);
                 return;
               }
             }
@@ -99,39 +100,39 @@ class ns extends il implements bp {
             if (param1 == 6) {
               break L0;
             } else {
-              ((ns) this).field_sb = false;
+              this.field_sb = false;
               break L0;
             }
           }
-          if (!((ns) this).field_sb) {
+          if (!this.field_sb) {
             sl.a("tochangedisplayname.ws", kq.f((byte) 126), (byte) 63);
             return;
           } else {
             qj.a((byte) -127, 3);
-            ((ns) this).i((byte) -104);
+            this.i((byte) -104);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var6;
+            stackOut_6_0 = (RuntimeException) (var6);
             stackOut_6_1 = new StringBuilder().append("ns.F(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -139,23 +140,23 @@ class ns extends il implements bp {
               break L1;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw r.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     ns(tc param0, nq param1, String param2, boolean param3, boolean param4) {
-        super(param0, (vg) (Object) new cf((ns) null, param1, param2), 77, 10, 10);
+        super(param0, new cf((ns) null, param1, param2), 77, 10, 10);
         try {
-            ((ns) this).field_sb = false;
-            ((ns) this).field_tb = param3 ? true : false;
-            ((ns) this).field_vb = param4 ? true : false;
-            ((ns) this).field_wb = false;
-            ((ns) this).field_ub = param1;
-            ((ns) this).field_yb = new md(13, 50, 274, 30, 15, 2113632, 4210752);
-            ((ns) this).field_yb.field_L = true;
-            ((ns) this).b((byte) -43, (vg) (Object) ((ns) this).field_yb);
+            this.field_sb = false;
+            this.field_tb = param3 ? true : false;
+            this.field_vb = param4 ? true : false;
+            this.field_wb = false;
+            this.field_ub = param1;
+            this.field_yb = new md(13, 50, 274, 30, 15, 2113632, 4210752);
+            this.field_yb.field_L = true;
+            this.b((byte) -43, this.field_yb);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ns.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "ns.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -170,6 +171,7 @@ class ns extends il implements bp {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         boolean stackOut_4_0 = false;
@@ -184,13 +186,15 @@ class ns extends il implements bp {
         try {
           L0: {
             if (param0 == param2) {
-              ((ns) this).i((byte) -104);
+              this.i((byte) -104);
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              stackOut_4_0 = super.a(param0, param1, param2, param3);
+              stackOut_4_0 = super.a(param0, param1, param2 + 0, param3);
               stackIn_5_0 = stackOut_4_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -198,23 +202,23 @@ class ns extends il implements bp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var5;
+            stackOut_6_0 = (RuntimeException) (var5);
             stackOut_6_1 = new StringBuilder().append("ns.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -222,12 +226,18 @@ class ns extends il implements bp {
               break L1;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
-        return stackIn_5_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          return stackIn_5_0;
+        }
     }
 
     final void a(String param0, int param1, int param2) {
+        kg discarded$2 = null;
+        kg discarded$3 = null;
         RuntimeException var4 = null;
         cf var4_ref = null;
         int var5 = 0;
@@ -247,6 +257,7 @@ class ns extends il implements bp {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
         Object stackOut_5_0 = null;
@@ -269,7 +280,7 @@ class ns extends il implements bp {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            if (!((ns) this).field_wb) {
+            if (!this.field_wb) {
               L1: {
                 stackOut_3_0 = this;
                 stackIn_5_0 = stackOut_3_0;
@@ -289,32 +300,32 @@ class ns extends il implements bp {
                 }
               }
               L2: {
-                ((ns) this).field_sb = stackIn_6_1 != 0;
-                ((ns) this).field_wb = true;
-                ((ns) this).field_yb.a(4210752, 8405024, -27855);
-                var6 = new cf((ns) this, ((ns) this).field_ub, param0);
+                ((ns) (this)).field_sb = stackIn_6_1 != 0;
+                this.field_wb = true;
+                this.field_yb.a(4210752, 8405024, -27855);
+                var6 = new cf((ns) (this), this.field_ub, param0);
                 var4_ref = var6;
                 if (5 == param1) {
                   var6.a(gg.field_b, (byte) 125, 11);
                   var6.a(em.field_g, (byte) 120, 17);
                   break L2;
                 } else {
-                  if (param1 == 256) {
-                    kg discarded$2 = var6.a((ko) this, 121, ts.field_E);
+                  if ((param1 ^ -1) == -257) {
+                    discarded$2 = var6.a((ko) (this), 121, ts.field_E);
                     break L2;
                   } else {
                     L3: {
-                      stackOut_8_0 = (cf) var6;
+                      stackOut_8_0 = (cf) (var6);
                       stackIn_10_0 = stackOut_8_0;
                       stackIn_9_0 = stackOut_8_0;
-                      if (!((ns) this).field_tb) {
-                        stackOut_10_0 = (cf) (Object) stackIn_10_0;
+                      if (!this.field_tb) {
+                        stackOut_10_0 = (cf) ((Object) stackIn_10_0);
                         stackOut_10_1 = ss.field_e;
                         stackIn_11_0 = stackOut_10_0;
                         stackIn_11_1 = stackOut_10_1;
                         break L3;
                       } else {
-                        stackOut_9_0 = (cf) (Object) stackIn_9_0;
+                        stackOut_9_0 = (cf) ((Object) stackIn_9_0);
                         stackOut_9_1 = ts.field_E;
                         stackIn_11_0 = stackOut_9_0;
                         stackIn_11_1 = stackOut_9_1;
@@ -332,16 +343,16 @@ class ns extends il implements bp {
                     var6.a(rs.field_yb, (byte) 100, 7);
                     break L4;
                   } else {
-                    if (param1 != 4) {
-                      if (param1 == 6) {
+                    if (-5 != (param1 ^ -1)) {
+                      if (-7 == (param1 ^ -1)) {
                         var6.a(bf.field_d, (byte) 107, 9);
                         break L4;
                       } else {
                         if (param1 == 9) {
-                          kg discarded$3 = var6.a((ko) this, 126, ib.field_d);
+                          discarded$3 = var6.a((ko) (this), 126, ib.field_d);
                           break L4;
                         } else {
-                          ((ns) this).b((vg) (Object) var6, 110);
+                          this.b(var6, 110);
                           return;
                         }
                       }
@@ -351,36 +362,39 @@ class ns extends il implements bp {
                     }
                   }
                 }
-                ((ns) this).b((vg) (Object) var6, 110);
+                this.b(var6, 110);
+                decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var4;
+            stackOut_27_0 = (RuntimeException) (var4);
             stackOut_27_1 = new StringBuilder().append("ns.J(");
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
             stackIn_28_1 = stackOut_27_1;
             if (param0 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "null";
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
               break L5;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "{...}";
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
@@ -388,15 +402,20 @@ class ns extends il implements bp {
               break L5;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param1 + ',' + param2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_qb = "You can join this game";
         field_pb = true;
         field_nb = new np(1);

@@ -8,7 +8,7 @@ final class bc {
 
     final static void a(byte param0, int param1, int param2) {
         int var3 = 0;
-        var3 = -116;
+        var3 = -116 / ((-20 - param0) / 43);
         if (null != he.field_m) {
           if (he.field_m.length < param2) {
             L0: {
@@ -916,6 +916,7 @@ final class bc {
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             String stackIn_9_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_6_0 = null;
             StringBuilder stackOut_6_1 = null;
@@ -942,32 +943,34 @@ final class bc {
                       break L2;
                     }
                   }
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_0 = (RuntimeException) (var2_ref2);
                 stackOut_6_1 = new StringBuilder().append("bc.A(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
                   break L3;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
@@ -975,7 +978,12 @@ final class bc {
                   break L3;
                 }
               }
-              throw bd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+              throw bd.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -985,10 +993,6 @@ final class bc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "OVER <%0>";
         field_c = "Achieved";
     }

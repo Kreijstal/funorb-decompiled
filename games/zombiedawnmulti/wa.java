@@ -25,41 +25,42 @@ final class wa implements nl {
         int var11 = 0;
         wm var12 = null;
         cf stackIn_4_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         cf stackOut_3_0 = null;
         Object stackOut_2_0 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
             L1: {
               if (param4 instanceof wm) {
-                stackOut_3_0 = (cf) param4;
+                stackOut_3_0 = (cf) (param4);
                 stackIn_4_0 = stackOut_3_0;
                 break L1;
               } else {
                 stackOut_2_0 = null;
-                stackIn_4_0 = (cf) (Object) stackOut_2_0;
+                stackIn_4_0 = (cf) ((Object) stackOut_2_0);
                 break L1;
               }
             }
             L2: {
-              var12 = (wm) (Object) stackIn_4_0;
-              oo.e(param4.field_y + param3, param4.field_i + param1, param4.field_n, param4.field_w, ((wa) this).field_i);
+              var12 = (wm) ((Object) stackIn_4_0);
+              oo.e(param4.field_y + param3, param4.field_i + param1, param4.field_n, param4.field_w, this.field_i);
               if (var12 != null) {
                 break L2;
               } else {
@@ -70,55 +71,76 @@ final class wa implements nl {
               var7 = -(var12.field_M * 2) + param4.field_n;
               var8 = param4.field_y + param3 - -var12.field_M;
               var9 = param1 + (param4.field_i + var12.field_N);
-              oo.g(var8, var9, var8 - -var7, var9, ((wa) this).field_c);
+              oo.g(var8, var9, var8 - -var7, var9, this.field_c);
               var10 = var12.a((byte) -72) + -1;
               L3: while (true) {
-                if (0 > var10) {
-                  if (null != ((wa) this).field_h) {
-                    ((wa) this).field_h.b(var12.field_j, var8 + var7 / 2, var9 - (-((wa) this).field_h.field_w - var12.field_N), ((wa) this).field_e, ((wa) this).field_m);
-                    break L0;
+                L4: {
+                  L5: {
+                    if (0 > var10) {
+                      break L5;
+                    } else {
+                      oo.d(var8 + var7 * var12.a(var10, false) / var12.g((byte) -106), var9, this.field_f, this.field_l);
+                      var10--;
+                      if (var11 != 0) {
+                        break L4;
+                      } else {
+                        if (var11 == 0) {
+                          continue L3;
+                        } else {
+                          break L5;
+                        }
+                      }
+                    }
+                  }
+                  if (null != this.field_h) {
+                    break L4;
                   } else {
                     return;
                   }
-                } else {
-                  oo.d(var8 + var7 * var12.a(var10, false) / var12.g((byte) -106), var9, ((wa) this).field_f, ((wa) this).field_l);
-                  var10--;
-                  continue L3;
                 }
+                this.field_h.b(var12.field_j, var8 + var7 / 2, var9 - (-this.field_h.field_w - var12.field_N), this.field_e, this.field_m);
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L6: {
             var6 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var6;
-            stackOut_14_1 = new StringBuilder().append("wa.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_16_0 = (RuntimeException) (var6);
+            stackOut_16_1 = new StringBuilder().append("wa.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
             if (param4 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L4;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L4;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L6;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -126,20 +148,25 @@ final class wa implements nl {
         field_b = null;
         field_j = null;
         field_a = null;
+        if (param0 != 2) {
+            wa.a((byte) -21);
+            field_d = null;
+            return;
+        }
         field_d = null;
     }
 
     wa(fm param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            ((wa) this).field_e = param1;
-            ((wa) this).field_i = param4;
-            ((wa) this).field_c = param3;
-            ((wa) this).field_m = param2;
-            ((wa) this).field_f = param5;
-            ((wa) this).field_l = param6;
-            ((wa) this).field_h = param0;
+            this.field_e = param1;
+            this.field_i = param4;
+            this.field_c = param3;
+            this.field_m = param2;
+            this.field_f = param5;
+            this.field_l = param6;
+            this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "wa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "wa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -150,32 +177,46 @@ final class wa implements nl {
             Throwable var2 = null;
             Runtime var2_ref = null;
             Long var3 = null;
-            Object var4 = null;
+            Object[] var4 = null;
             Throwable decompiledCaughtException = null;
             try {
-              var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
-              if (var1 != null) {
-                try {
-                  L0: {
-                    var2_ref = Runtime.getRuntime();
-                    var4 = null;
-                    var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
-                    mk.field_d = (int)(var3.longValue() / 1048576L) + 1;
-                    break L0;
+              L0: {
+                L1: {
+                  var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+                  if (var1 != null) {
+                    try {
+                      L2: {
+                        var2_ref = Runtime.getRuntime();
+                        var4 = (Object[]) null;
+                        var3 = (Long) (var1.invoke((Object) (var2_ref), (Object[]) null));
+                        mk.field_d = (int)(var3.longValue() / 1048576L) + 1;
+                        break L2;
+                      }
+                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L3: {
+                        var2 = decompiledCaughtException;
+                        break L3;
+                      }
+                    }
+                    break L1;
+                  } else {
+                    break L1;
                   }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2 = decompiledCaughtException;
+                }
+                if (param0 == 43) {
+                  break L0;
+                } else {
+                  field_g = 6;
                   return;
                 }
-                return;
-              } else {
-                return;
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              var1_ref = (Exception) (Object) decompiledCaughtException;
-              return;
+              L4: {
+                var1_ref = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -185,10 +226,6 @@ final class wa implements nl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = false;
         field_d = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_j = "Screech";

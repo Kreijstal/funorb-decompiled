@@ -32,6 +32,8 @@ final class lf extends ji {
 
     final static void d(int param0, int param1) {
         try {
+            int discarded$2 = 0;
+            IOException iOException = null;
             Throwable decompiledCaughtException = null;
             L0: {
               if (lo.field_k == null) {
@@ -52,7 +54,7 @@ final class lf extends ji {
                   if (0 != uh.field_Wb.field_u) {
                     break L2;
                   } else {
-                    if (~(10000L + bm.field_H) > ~gk.a(55)) {
+                    if ((10000L + bm.field_H ^ -1L) > (gk.a(55) ^ -1L)) {
                       uh.field_Wb.j(param1, 121);
                       break L2;
                     } else {
@@ -64,17 +66,24 @@ final class lf extends ji {
                   if (param0 > 37) {
                     break L3;
                   } else {
-                    int discarded$2 = lf.g(-114);
+                    discarded$2 = lf.g(-114);
                     break L3;
                   }
                 }
                 L4: {
                   if (uh.field_Wb.field_u > 0) {
-                    {
+                    try {
                       L5: {
                         lo.field_k.a(0, uh.field_Wb.field_u, -93, uh.field_Wb.field_p);
                         bm.field_H = gk.a(48);
                         break L5;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L6: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        rm.b((byte) 115);
+                        break L6;
                       }
                     }
                     uh.field_Wb.field_u = 0;
@@ -99,20 +108,16 @@ final class lf extends ji {
         int var1 = -86 / ((64 - param0) / 42);
         field_z = null;
         field_y = null;
-        field_A = null;
+        field_A = (byte[][]) null;
         field_D = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         int var1 = 0;
         field_A = new byte[12][4096];
-        for (var0 = 0; var0 < 12; var0++) {
-            for (var1 = 0; var1 < 4096; var1++) {
+        for (var0 = 0; -13 < (var0 ^ -1); var0++) {
+            for (var1 = 0; (var1 ^ -1) > -4097; var1++) {
                 field_A[var0][var1] = (byte)(19 * var0 + 19);
             }
         }

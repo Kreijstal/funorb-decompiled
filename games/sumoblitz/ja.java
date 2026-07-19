@@ -7,8 +7,8 @@ final class ja extends eu implements e {
     private final native void la();
 
     protected final void finalize() {
-        if (((ja) this).field_nativeid != 0L) {
-            pa.a((e) this, (byte) -37);
+        if (this.field_nativeid != 0L) {
+            pa.a((e) (this), (byte) -37);
         }
     }
 
@@ -17,7 +17,7 @@ final class ja extends eu implements e {
     }
 
     public final void w(boolean param0) {
-        this.AA(((ja) this).field_nativeid, param0);
+        this.AA(this.field_nativeid, param0);
     }
 
     private final native void AA(long param0, boolean param1);

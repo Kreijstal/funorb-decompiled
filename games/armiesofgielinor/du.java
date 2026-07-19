@@ -14,12 +14,19 @@ abstract class du {
     static String[] field_g;
 
     final static boolean c(int param0) {
+        if (param0 != 10) {
+            field_h = true;
+            return true;
+        }
         return true;
     }
 
     public static void b(int param0) {
         field_d = null;
         field_e = null;
+        if (param0 != 16) {
+            return;
+        }
         field_b = null;
         field_g = null;
         field_f = null;
@@ -29,16 +36,12 @@ abstract class du {
 
     final java.net.Socket a(byte param0) throws IOException {
         if (param0 != 15) {
-            return null;
+            return (java.net.Socket) null;
         }
-        return new java.net.Socket(((du) this).field_a, ((du) this).field_c);
+        return new java.net.Socket(this.field_a, this.field_c);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new me(10, 2, 2, 0);
         field_d = new wm();
         field_f = "No special attribute";

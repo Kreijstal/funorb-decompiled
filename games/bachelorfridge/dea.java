@@ -8,8 +8,8 @@ final class dea extends lw {
     static int field_n;
 
     dea() {
-        super(true, new String[2], via.field_c);
-        ((dea) this).field_c = new int[][]{new int[2], new int[2]};
+        super(true, new String[]{mja.field_p, nw.field_t}, via.field_c);
+        this.field_c = new int[][]{new int[]{150, 190}, new int[]{160, 390}};
     }
 
     final static void a(String param0, float param1, int param2) {
@@ -48,23 +48,23 @@ final class dea extends lw {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("dea.A(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -72,7 +72,7 @@ final class dea extends lw {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -89,49 +89,49 @@ final class dea extends lw {
         int var4 = 0;
         var4 = BachelorFridge.field_y;
         if (param0 == 18) {
-          ((dea) this).c(111);
+          this.c(111);
           if (param1 == 73) {
             return;
           } else {
-            field_o = null;
+            field_o = (java.awt.Color) null;
             return;
           }
         } else {
           if (param0 == 20) {
-            if (((dea) this).field_e == 1) {
+            if ((this.field_e ^ -1) == -2) {
               fla.b(param1 ^ 23564);
               if (param1 == 73) {
                 return;
               } else {
-                field_o = null;
+                field_o = (java.awt.Color) null;
                 return;
               }
             } else {
-              if (param0 == 40) {
-                if (0 == ((dea) this).field_e) {
-                  ((dea) this).b(1);
-                  ((dea) this).c(109);
+              if (-41 == (param0 ^ -1)) {
+                if (0 == this.field_e) {
+                  this.b(1);
+                  this.c(109);
                   if (param1 == 73) {
                     return;
                   } else {
-                    field_o = null;
+                    field_o = (java.awt.Color) null;
                     return;
                   }
                 } else {
-                  if (param0 == 34) {
-                    if (((dea) this).field_e < 1) {
+                  if (-35 == (param0 ^ -1)) {
+                    if (-2 < (this.field_e ^ -1)) {
                       L0: {
-                        ((dea) this).b((byte) 112);
-                        if (((dea) this).field_e == 0) {
-                          ((dea) this).b(param1 ^ 72);
-                          ((dea) this).c(127);
+                        this.b((byte) 112);
+                        if (this.field_e == 0) {
+                          this.b(param1 ^ 72);
+                          this.c(127);
                           break L0;
                         } else {
                           break L0;
                         }
                       }
                       L1: {
-                        if (((dea) this).field_e == 1) {
+                        if (this.field_e == 1) {
                           wf.field_x = true;
                           break L1;
                         } else {
@@ -142,14 +142,14 @@ final class dea extends lw {
                         if (!um.a(true)) {
                           break L2;
                         } else {
-                          if (!((dea) this).c((byte) 95)) {
+                          if (!this.c((byte) 95)) {
                             break L2;
                           } else {
                             fla.b(23621);
                             if (param1 == 73) {
                               return;
                             } else {
-                              field_o = null;
+                              field_o = (java.awt.Color) null;
                               return;
                             }
                           }
@@ -158,7 +158,7 @@ final class dea extends lw {
                       if (param1 == 73) {
                         return;
                       } else {
-                        field_o = null;
+                        field_o = (java.awt.Color) null;
                         return;
                       }
                     } else {
@@ -168,26 +168,26 @@ final class dea extends lw {
                     if (param1 == 73) {
                       return;
                     } else {
-                      field_o = null;
+                      field_o = (java.awt.Color) null;
                       return;
                     }
                   }
                 }
               } else {
-                if (param0 == 34) {
-                  if (((dea) this).field_e < 1) {
+                if (-35 == (param0 ^ -1)) {
+                  if (-2 < (this.field_e ^ -1)) {
                     L3: {
-                      ((dea) this).b((byte) 112);
-                      if (((dea) this).field_e == 0) {
-                        ((dea) this).b(param1 ^ 72);
-                        ((dea) this).c(127);
+                      this.b((byte) 112);
+                      if (this.field_e == 0) {
+                        this.b(param1 ^ 72);
+                        this.c(127);
                         break L3;
                       } else {
                         break L3;
                       }
                     }
                     L4: {
-                      if (((dea) this).field_e == 1) {
+                      if (this.field_e == 1) {
                         wf.field_x = true;
                         break L4;
                       } else {
@@ -195,11 +195,11 @@ final class dea extends lw {
                       }
                     }
                     if (um.a(true)) {
-                      if (!((dea) this).c((byte) 95)) {
+                      if (!this.c((byte) 95)) {
                         if (param1 == 73) {
                           return;
                         } else {
-                          field_o = null;
+                          field_o = (java.awt.Color) null;
                           return;
                         }
                       } else {
@@ -207,7 +207,7 @@ final class dea extends lw {
                         if (param1 == 73) {
                           return;
                         } else {
-                          field_o = null;
+                          field_o = (java.awt.Color) null;
                           return;
                         }
                       }
@@ -215,7 +215,7 @@ final class dea extends lw {
                       if (param1 == 73) {
                         return;
                       } else {
-                        field_o = null;
+                        field_o = (java.awt.Color) null;
                         return;
                       }
                     }
@@ -224,7 +224,7 @@ final class dea extends lw {
                   }
                 } else {
                   if (param1 != 73) {
-                    field_o = null;
+                    field_o = (java.awt.Color) null;
                     return;
                   } else {
                     return;
@@ -233,21 +233,21 @@ final class dea extends lw {
               }
             }
           } else {
-            if (param0 != 40) {
-              if (param0 == 34) {
-                if (((dea) this).field_e < 1) {
+            if (-41 != (param0 ^ -1)) {
+              if (-35 == (param0 ^ -1)) {
+                if (-2 < (this.field_e ^ -1)) {
                   L5: {
-                    ((dea) this).b((byte) 112);
-                    if (((dea) this).field_e == 0) {
-                      ((dea) this).b(param1 ^ 72);
-                      ((dea) this).c(127);
+                    this.b((byte) 112);
+                    if (this.field_e == 0) {
+                      this.b(param1 ^ 72);
+                      this.c(127);
                       break L5;
                     } else {
                       break L5;
                     }
                   }
                   L6: {
-                    if (((dea) this).field_e == 1) {
+                    if (this.field_e == 1) {
                       wf.field_x = true;
                       break L6;
                     } else {
@@ -255,19 +255,19 @@ final class dea extends lw {
                     }
                   }
                   if (um.a(true)) {
-                    if (((dea) this).c((byte) 95)) {
+                    if (this.c((byte) 95)) {
                       fla.b(23621);
                       if (param1 == 73) {
                         return;
                       } else {
-                        field_o = null;
+                        field_o = (java.awt.Color) null;
                         return;
                       }
                     } else {
                       if (param1 == 73) {
                         return;
                       } else {
-                        field_o = null;
+                        field_o = (java.awt.Color) null;
                         return;
                       }
                     }
@@ -275,7 +275,7 @@ final class dea extends lw {
                     if (param1 == 73) {
                       return;
                     } else {
-                      field_o = null;
+                      field_o = (java.awt.Color) null;
                       return;
                     }
                   }
@@ -283,38 +283,38 @@ final class dea extends lw {
                   return;
                 }
               } else {
-                if (param1 == 73) {
+                if (param1 != 73) {
+                  field_o = (java.awt.Color) null;
                   return;
                 } else {
-                  field_o = null;
                   return;
                 }
               }
             } else {
-              if (0 == ((dea) this).field_e) {
-                ((dea) this).b(1);
-                ((dea) this).c(109);
+              if (0 == this.field_e) {
+                this.b(1);
+                this.c(109);
                 if (param1 == 73) {
                   return;
                 } else {
-                  field_o = null;
+                  field_o = (java.awt.Color) null;
                   return;
                 }
               } else {
-                if (param0 == 34) {
-                  if (((dea) this).field_e < 1) {
+                if (-35 == (param0 ^ -1)) {
+                  if (-2 < (this.field_e ^ -1)) {
                     L7: {
-                      ((dea) this).b((byte) 112);
-                      if (((dea) this).field_e == 0) {
-                        ((dea) this).b(param1 ^ 72);
-                        ((dea) this).c(127);
+                      this.b((byte) 112);
+                      if (this.field_e == 0) {
+                        this.b(param1 ^ 72);
+                        this.c(127);
                         break L7;
                       } else {
                         break L7;
                       }
                     }
                     L8: {
-                      if (((dea) this).field_e == 1) {
+                      if (this.field_e == 1) {
                         wf.field_x = true;
                         break L8;
                       } else {
@@ -325,7 +325,7 @@ final class dea extends lw {
                       if (!um.a(true)) {
                         break L9;
                       } else {
-                        if (!((dea) this).c((byte) 95)) {
+                        if (!this.c((byte) 95)) {
                           break L9;
                         } else {
                           L10: {
@@ -333,7 +333,7 @@ final class dea extends lw {
                             if (param1 == 73) {
                               break L10;
                             } else {
-                              field_o = null;
+                              field_o = (java.awt.Color) null;
                               break L10;
                             }
                           }
@@ -341,10 +341,10 @@ final class dea extends lw {
                         }
                       }
                     }
-                    if (param1 == 73) {
+                    if (param1 != 73) {
+                      field_o = (java.awt.Color) null;
                       return;
                     } else {
-                      field_o = null;
                       return;
                     }
                   } else {
@@ -355,7 +355,7 @@ final class dea extends lw {
                     if (param1 == 73) {
                       break L11;
                     } else {
-                      field_o = null;
+                      field_o = (java.awt.Color) null;
                       break L11;
                     }
                   }
@@ -374,10 +374,6 @@ final class dea extends lw {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Tips";
         field_o = new java.awt.Color(10040319);
     }

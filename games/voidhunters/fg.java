@@ -59,7 +59,7 @@ abstract class fg {
             return true;
           }
         } else {
-          field_a = null;
+          field_a = (String) null;
           if (param0 != 160) {
             if (param0 != 32) {
               if (param0 != 95) {
@@ -83,10 +83,6 @@ abstract class fg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Private";
     }
 }

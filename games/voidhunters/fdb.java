@@ -23,28 +23,31 @@ final class fdb extends hbb {
             this.f(-17);
             super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "fdb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "fdb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     private final void f(int param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
-        for (var2 = 0; var2 < 16; var2++) {
-            ((fdb) this).field_R[var2] = 1048576;
+        if (param0 != -17) {
+            return;
+        }
+        for (var2 = 0; (var2 ^ -1) > -17; var2++) {
+            this.field_R[var2] = 1048576;
         }
         super.b(256, (byte) 18, -1);
     }
 
     fdb(hbb param0) {
         super(param0);
-        ((fdb) this).field_Q = 256;
-        ((fdb) this).field_J = new int[16];
-        ((fdb) this).field_R = new int[16];
+        this.field_Q = 256;
+        this.field_J = new int[16];
+        this.field_R = new int[16];
         try {
             this.f(-17);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "fdb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "fdb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -102,7 +105,7 @@ final class fdb extends hbb {
             nna.field_v.field_R = null;
             break L0;
           } else {
-            nna.field_v.field_R = isa.a(gcb.field_t, new String[1], 78);
+            nna.field_v.field_R = isa.a(gcb.field_t, new String[]{Integer.toString(tg.field_q)}, 78);
             break L0;
           }
         }
@@ -114,31 +117,31 @@ final class fdb extends hbb {
             if (!param0) {
               break L2;
             } else {
-              stackOut_4_0 = (llb) (Object) stackIn_4_0;
+              stackOut_4_0 = (llb) ((Object) stackIn_4_0);
               stackIn_9_0 = stackOut_4_0;
               stackIn_5_0 = stackOut_4_0;
               if (param1) {
                 break L2;
               } else {
-                stackOut_5_0 = (llb) (Object) stackIn_5_0;
+                stackOut_5_0 = (llb) ((Object) stackIn_5_0);
                 stackIn_9_0 = stackOut_5_0;
                 stackIn_6_0 = stackOut_5_0;
                 if (bv.field_d) {
                   break L2;
                 } else {
-                  stackOut_6_0 = (llb) (Object) stackIn_6_0;
+                  stackOut_6_0 = (llb) ((Object) stackIn_6_0);
                   stackIn_9_0 = stackOut_6_0;
                   stackIn_7_0 = stackOut_6_0;
                   if (lqa.field_o != null) {
                     break L2;
                   } else {
-                    stackOut_7_0 = (llb) (Object) stackIn_7_0;
+                    stackOut_7_0 = (llb) ((Object) stackIn_7_0);
                     stackIn_9_0 = stackOut_7_0;
                     stackIn_8_0 = stackOut_7_0;
                     if (null != ohb.field_o) {
                       break L2;
                     } else {
-                      stackOut_8_0 = (llb) (Object) stackIn_8_0;
+                      stackOut_8_0 = (llb) ((Object) stackIn_8_0);
                       stackOut_8_1 = 1;
                       stackIn_10_0 = stackOut_8_0;
                       stackIn_10_1 = stackOut_8_1;
@@ -149,7 +152,7 @@ final class fdb extends hbb {
               }
             }
           }
-          stackOut_9_0 = (llb) (Object) stackIn_9_0;
+          stackOut_9_0 = (llb) ((Object) stackIn_9_0);
           stackOut_9_1 = 0;
           stackIn_10_0 = stackOut_9_0;
           stackIn_10_1 = stackOut_9_1;
@@ -164,31 +167,31 @@ final class fdb extends hbb {
             if (!param0) {
               break L4;
             } else {
-              stackOut_11_0 = (llb) (Object) stackIn_11_0;
+              stackOut_11_0 = (llb) ((Object) stackIn_11_0);
               stackIn_16_0 = stackOut_11_0;
               stackIn_12_0 = stackOut_11_0;
               if (param1) {
                 break L4;
               } else {
-                stackOut_12_0 = (llb) (Object) stackIn_12_0;
+                stackOut_12_0 = (llb) ((Object) stackIn_12_0);
                 stackIn_16_0 = stackOut_12_0;
                 stackIn_13_0 = stackOut_12_0;
                 if (bv.field_d) {
                   break L4;
                 } else {
-                  stackOut_13_0 = (llb) (Object) stackIn_13_0;
+                  stackOut_13_0 = (llb) ((Object) stackIn_13_0);
                   stackIn_16_0 = stackOut_13_0;
                   stackIn_14_0 = stackOut_13_0;
                   if (null != lqa.field_o) {
                     break L4;
                   } else {
-                    stackOut_14_0 = (llb) (Object) stackIn_14_0;
+                    stackOut_14_0 = (llb) ((Object) stackIn_14_0);
                     stackIn_16_0 = stackOut_14_0;
                     stackIn_15_0 = stackOut_14_0;
                     if (null != ohb.field_o) {
                       break L4;
                     } else {
-                      stackOut_15_0 = (llb) (Object) stackIn_15_0;
+                      stackOut_15_0 = (llb) ((Object) stackIn_15_0);
                       stackOut_15_1 = 1;
                       stackIn_17_0 = stackOut_15_0;
                       stackIn_17_1 = stackOut_15_1;
@@ -199,7 +202,7 @@ final class fdb extends hbb {
               }
             }
           }
-          stackOut_16_0 = (llb) (Object) stackIn_16_0;
+          stackOut_16_0 = (llb) ((Object) stackIn_16_0);
           stackOut_16_1 = 0;
           stackIn_17_0 = stackOut_16_0;
           stackIn_17_1 = stackOut_16_1;
@@ -214,19 +217,19 @@ final class fdb extends hbb {
             if (!param0) {
               break L6;
             } else {
-              stackOut_18_0 = (llb) (Object) stackIn_18_0;
+              stackOut_18_0 = (llb) ((Object) stackIn_18_0);
               stackIn_21_0 = stackOut_18_0;
               stackIn_19_0 = stackOut_18_0;
               if (param1) {
                 break L6;
               } else {
-                stackOut_19_0 = (llb) (Object) stackIn_19_0;
+                stackOut_19_0 = (llb) ((Object) stackIn_19_0);
                 stackIn_21_0 = stackOut_19_0;
                 stackIn_20_0 = stackOut_19_0;
                 if (!bv.field_d) {
                   break L6;
                 } else {
-                  stackOut_20_0 = (llb) (Object) stackIn_20_0;
+                  stackOut_20_0 = (llb) ((Object) stackIn_20_0);
                   stackOut_20_1 = 1;
                   stackIn_22_0 = stackOut_20_0;
                   stackIn_22_1 = stackOut_20_1;
@@ -235,7 +238,7 @@ final class fdb extends hbb {
               }
             }
           }
-          stackOut_21_0 = (llb) (Object) stackIn_21_0;
+          stackOut_21_0 = (llb) ((Object) stackIn_21_0);
           stackOut_21_1 = 0;
           stackIn_22_0 = stackOut_21_0;
           stackIn_22_1 = stackOut_21_1;
@@ -252,68 +255,76 @@ final class fdb extends hbb {
           }
         }
         L8: {
-          if (gha.field_p.field_o == 0) {
+          if (param3 >= 96) {
             break L8;
+          } else {
+            field_S = (String) null;
+            break L8;
+          }
+        }
+        L9: {
+          if (gha.field_p.field_o == 0) {
+            break L9;
           } else {
             if (ufa.field_o) {
               w.a(param2, (byte) 92);
-              break L8;
+              break L9;
             } else {
-              if (hcb.field_o > 0) {
+              if (-1 > (hcb.field_o ^ -1)) {
                 w.a(param2, (byte) 92);
-                break L8;
+                break L9;
               } else {
                 if (go.field_p < 2) {
-                  break L8;
+                  break L9;
                 } else {
                   if (!si.field_o[12]) {
-                    break L8;
+                    break L9;
                   } else {
                     w.a(param2, (byte) 92);
-                    break L8;
+                    break L9;
                   }
                 }
               }
             }
           }
         }
-        L9: {
+        L10: {
           if (0 == oib.field_a.field_o) {
-            break L9;
+            break L10;
           } else {
-            L10: {
+            L11: {
               if (ieb.field_o.length != 1) {
-                break L10;
+                break L11;
               } else {
                 if (sha.field_w == ieb.field_o[0]) {
-                  break L10;
+                  break L11;
                 } else {
                   sha.field_w = ieb.field_o[0];
-                  break L10;
+                  break L11;
                 }
               }
             }
             eaa.a((byte) 127, true, vva.field_u, 0, sha.field_w, param2);
-            break L9;
+            break L10;
           }
         }
-        L11: {
-          if (ss.field_o.field_o != 0) {
+        L12: {
+          if (-1 != (ss.field_o.field_o ^ -1)) {
             bv.field_d = false;
-            break L11;
+            break L12;
           } else {
-            break L11;
+            break L12;
           }
         }
     }
 
     final synchronized void b(int param0, byte param1, int param2) {
         if (!(param2 != -1)) {
-            ((fdb) this).field_Q = param0;
+            this.field_Q = param0;
             return;
         }
         super.b(param0, param1, param2);
-        ((fdb) this).field_R[param2] = param0 << 12;
+        this.field_R[param2] = param0 << 1456890540;
     }
 
     final synchronized void a(byte param0, int param1, cl param2) {
@@ -323,35 +334,38 @@ final class fdb extends hbb {
             this.a(-91, param2, var4_int);
             int var5 = 76 % ((param0 - 80) / 33);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "fdb.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "fdb.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public fdb() {
-        ((fdb) this).field_Q = 256;
-        ((fdb) this).field_J = new int[16];
-        ((fdb) this).field_R = new int[16];
+        this.field_Q = 256;
+        this.field_J = new int[16];
+        this.field_R = new int[16];
         this.f(-17);
     }
 
     private final synchronized void b(int param0, int param1, int param2, byte param3) {
-        ((fdb) this).field_P = false;
-        if (!(((fdb) this).field_U != null)) {
-            ((fdb) this).field_U = new cl();
+        this.field_P = false;
+        if (!(this.field_U != null)) {
+            this.field_U = new cl();
         }
-        ((fdb) this).field_U.field_a[param1] = param2;
-        int var5 = ((fdb) this).field_R[param1];
-        int var6 = -var5 + (((fdb) this).field_U.field_a[param1] << 12);
+        this.field_U.field_a[param1] = param2;
+        if (param3 != -48) {
+            return;
+        }
+        int var5 = this.field_R[param1];
+        int var6 = -var5 + (this.field_U.field_a[param1] << -602087796);
         int var7 = 0;
         int var8 = 0;
         if (!(0 <= var6)) {
             var6 = -var6;
             var8 = 1;
         }
-        if (var6 > 0) {
+        if ((var6 ^ -1) < -1) {
             var7 = (1 + var6) / (param0 + 1);
         }
-        ((fdb) this).field_J[param1] = var8 != 0 ? -var7 : var7;
+        this.field_J[param1] = var8 != 0 ? -var7 : var7;
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
@@ -394,30 +408,30 @@ final class fdb extends hbb {
         try {
           L0: {
             L1: {
-              var4_int = ((fdb) this).e(127);
-              ((fdb) this).b(((fdb) this).field_Q * var4_int >> 8, (byte) 14);
+              var4_int = this.e(127);
+              this.b(this.field_Q * var4_int >> 38622248, (byte) 14);
               super.a(param0, param1, param2);
-              if (((fdb) this).field_P) {
+              if (this.field_P) {
                 break L1;
               } else {
                 var5 = 1;
                 var6 = 0;
                 L2: while (true) {
-                  if (var6 >= 16) {
+                  if ((var6 ^ -1) <= -17) {
                     if (var5 == 0) {
                       break L1;
                     } else {
-                      ((fdb) this).field_P = true;
+                      this.field_P = true;
                       break L1;
                     }
                   } else {
                     L3: {
-                      var7 = ((fdb) this).field_J[var6];
+                      var7 = this.field_J[var6];
                       if (0 != var7) {
                         L4: {
-                          ((fdb) this).field_R[var6] = ((fdb) this).field_R[var6] + param2 * var7;
-                          var8 = ((fdb) this).field_U.field_a[var6];
-                          if (((fdb) this).field_R[var6] >> 12 >= var8) {
+                          this.field_R[var6] = this.field_R[var6] + param2 * var7;
+                          var8 = this.field_U.field_a[var6];
+                          if (this.field_R[var6] >> -1384590612 >= var8) {
                             stackOut_8_0 = 0;
                             stackIn_9_0 = stackOut_8_0;
                             break L4;
@@ -431,7 +445,7 @@ final class fdb extends hbb {
                           stackOut_9_0 = stackIn_9_0;
                           stackIn_11_0 = stackOut_9_0;
                           stackIn_10_0 = stackOut_9_0;
-                          if (var7 <= 0) {
+                          if (-1 <= (var7 ^ -1)) {
                             stackOut_11_0 = stackIn_11_0;
                             stackOut_11_1 = 0;
                             stackIn_12_0 = stackOut_11_0;
@@ -450,12 +464,12 @@ final class fdb extends hbb {
                             var5 = 0;
                             break L6;
                           } else {
-                            ((fdb) this).field_J[var6] = 0;
-                            ((fdb) this).field_R[var6] = var8 << 12;
+                            this.field_J[var6] = 0;
+                            this.field_R[var6] = var8 << -2072469812;
                             break L6;
                           }
                         }
-                        super.b(((fdb) this).field_R[var6] >> 12, (byte) 18, var6);
+                        super.b(this.field_R[var6] >> 1060521228, (byte) 18, var6);
                         break L3;
                       } else {
                         break L3;
@@ -467,30 +481,30 @@ final class fdb extends hbb {
                 }
               }
             }
-            ((fdb) this).b(var4_int, (byte) 14);
+            this.b(var4_int, (byte) 14);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var4 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var4;
+            stackOut_21_0 = (RuntimeException) (var4);
             stackOut_21_1 = new StringBuilder().append("fdb.E(");
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -498,7 +512,7 @@ final class fdb extends hbb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -513,6 +527,7 @@ final class fdb extends hbb {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
@@ -525,39 +540,45 @@ final class fdb extends hbb {
         var5 = VoidHunters.field_G;
         try {
           L0: {
-            ((fdb) this).field_U = param1;
-            var4_int = 0;
-            L1: while (true) {
-              if (var4_int >= 16) {
-                break L0;
-              } else {
-                this.b(param2, var4_int, ((fdb) this).field_U.field_a[var4_int], (byte) -48);
-                var4_int++;
-                continue L1;
+            this.field_U = param1;
+            if (param0 <= 0) {
+              var4_int = 0;
+              L1: while (true) {
+                if (var4_int >= 16) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  this.b(param2, var4_int, this.field_U.field_a[var4_int], (byte) -48);
+                  var4_int++;
+                  continue L1;
+                }
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("fdb.F(").append(-91).append(',');
+            stackOut_7_0 = (RuntimeException) (var4);
+            stackOut_7_1 = new StringBuilder().append("fdb.F(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -565,15 +586,16 @@ final class fdb extends hbb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_S = "Bullfrog chassis";
         field_T = "Get your turret to the escape zone";
     }

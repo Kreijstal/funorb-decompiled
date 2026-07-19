@@ -11,6 +11,6 @@ public class vi {
     Object field_g;
 
     vi() {
-        ((vi) this).field_a = 0;
+        this.field_a = 0;
     }
 }

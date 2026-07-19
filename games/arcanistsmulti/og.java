@@ -11,6 +11,6 @@ public class og {
     public volatile int field_e;
 
     og() {
-        ((og) this).field_e = 0;
+        this.field_e = 0;
     }
 }

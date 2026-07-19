@@ -28,11 +28,11 @@ final class k implements Runnable {
         if (param0) {
             return;
         }
-        if (((k) this).field_g) {
+        if (this.field_g) {
             return;
         }
-        if (!(!((k) this).field_l)) {
-            ((k) this).field_l = false;
+        if (!(!this.field_l)) {
+            this.field_l = false;
             throw new IOException();
         }
     }
@@ -40,13 +40,13 @@ final class k implements Runnable {
     final static void a(le param0, boolean param1) {
         try {
             if (!param1) {
-                Object var3 = null;
+                le var3 = (le) null;
                 k.a((le) null, false);
             }
             rk.field_O = param0.field_V;
             qn.field_ob = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "k.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "k.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -55,6 +55,9 @@ final class k implements Runnable {
         field_k = null;
         field_f = null;
         field_p = null;
+        if (param0 != 11138) {
+            return;
+        }
         field_d = null;
         field_m = null;
     }
@@ -70,6 +73,7 @@ final class k implements Runnable {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
@@ -82,21 +86,22 @@ final class k implements Runnable {
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            if (!((k) this).field_g) {
+            if (!this.field_g) {
               L1: while (true) {
                 if (param3 <= 0) {
                   L2: {
                     if (param1 < -122) {
                       break L2;
                     } else {
-                      ((k) this).field_a = null;
+                      this.field_a = (og) null;
                       break L2;
                     }
                   }
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  var5_int = ((k) this).field_i.read(param0, param2, param3);
-                  if (var5_int <= 0) {
+                  var5_int = this.field_i.read(param0, param2, param3);
+                  if ((var5_int ^ -1) >= -1) {
                     throw new EOFException();
                   } else {
                     param2 = param2 + var5_int;
@@ -106,30 +111,31 @@ final class k implements Runnable {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var5;
+            stackOut_11_0 = (RuntimeException) (var5);
             stackOut_11_1 = new StringBuilder().append("k.C(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -137,7 +143,12 @@ final class k implements Runnable {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -154,6 +165,7 @@ final class k implements Runnable {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException stackOut_25_0 = null;
         StringBuilder stackOut_25_1 = null;
@@ -166,14 +178,14 @@ final class k implements Runnable {
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            if (!((k) this).field_g) {
-              if (((k) this).field_l) {
-                ((k) this).field_l = false;
+            if (!this.field_g) {
+              if (this.field_l) {
+                this.field_l = false;
                 throw new IOException();
               } else {
                 L1: {
-                  if (((k) this).field_b == null) {
-                    ((k) this).field_b = new byte[((k) this).field_n];
+                  if (this.field_b == null) {
+                    this.field_b = new byte[this.field_n];
                     break L1;
                   } else {
                     break L1;
@@ -186,19 +198,19 @@ final class k implements Runnable {
                     L3: while (true) {
                       if (var6 >= param0) {
                         L4: {
-                          if (((k) this).field_a != null) {
+                          if (this.field_a != null) {
                             break L4;
                           } else {
-                            ((k) this).field_a = ((k) this).field_h.a(124, 3, (Runnable) this);
+                            this.field_a = this.field_h.a(124, 3, (Runnable) (this));
                             break L4;
                           }
                         }
                         this.notifyAll();
                         break L2;
                       } else {
-                        ((k) this).field_b[((k) this).field_s] = param3[param1 + var6];
-                        ((k) this).field_s = (1 + ((k) this).field_s) % ((k) this).field_n;
-                        if (((k) this).field_s == (((k) this).field_j - (-((k) this).field_n - -100)) % ((k) this).field_n) {
+                        this.field_b[this.field_s] = param3[param1 + var6];
+                        this.field_s = (1 + this.field_s) % this.field_n;
+                        if (this.field_s == (this.field_j - (-this.field_n - -100)) % this.field_n) {
                           throw new IOException();
                         } else {
                           var6++;
@@ -212,37 +224,39 @@ final class k implements Runnable {
                   if (param2 > 114) {
                     break L5;
                   } else {
-                    ((k) this).field_r = null;
+                    this.field_r = (OutputStream) null;
                     break L5;
                   }
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var5;
+            stackOut_25_0 = (RuntimeException) (var5);
             stackOut_25_1 = new StringBuilder().append("k.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param3 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L6;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -250,68 +264,45 @@ final class k implements Runnable {
               break L6;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final void d(int param0) {
-        InterruptedException interruptedException = null;
-        Object var2 = null;
-        Throwable var3 = null;
-        int var4 = 0;
-        Throwable decompiledCaughtException = null;
-        L0: {
-          var4 = ArcanistsMulti.field_G ? 1 : 0;
-          if (param0 == -23482) {
-            break L0;
-          } else {
-            field_f = null;
-            break L0;
-          }
-        }
-        if (!((k) this).field_g) {
-          var2 = this;
-          synchronized (var2) {
-            L1: {
-              ((k) this).field_g = true;
-              this.notifyAll();
-              break L1;
+        try {
+            int var4 = 0;
+            var4 = ArcanistsMulti.field_G ? 1 : 0;
+            if (param0 != -23482) {
+                field_f = (String) null;
             }
-          }
-          L2: {
-            if (null == ((k) this).field_a) {
-              break L2;
-            } else {
-              L3: while (true) {
-                if (((k) this).field_a.field_e != 0) {
-                  if (((k) this).field_a.field_e == 1) {
-                    try {
-                      L4: {
-                        ((Thread) ((k) this).field_a.field_g).join();
-                        break L4;
-                      }
-                    } catch (java.lang.Exception decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L5: {
-                        interruptedException = (InterruptedException) (Object) decompiledCaughtException;
-                        break L5;
-                      }
-                    }
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                } else {
-                  ao.a(1L, 1);
-                  continue L3;
+            if (this.field_g) {
+                return;
+            }
+            synchronized (this) {
+                this.field_g = true;
+                this.notifyAll();
+            }
+            if (null != this.field_a) {
+                while (this.field_a.field_e == 0) {
+                    ao.a(1L, 1);
                 }
-              }
+                if (!((this.field_a.field_e ^ -1) != -2)) {
+                    try {
+                        ((Thread) (this.field_a.field_g)).join();
+                    } catch (InterruptedException interruptedException) {
+                    }
+                }
             }
-          }
-          ((k) this).field_a = null;
-          return;
-        } else {
-          return;
+            this.field_a = null;
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -326,7 +317,7 @@ final class k implements Runnable {
             InterruptedException var4 = null;
             Throwable var5 = null;
             int var6 = 0;
-            Object var7 = null;
+            String var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var6 = ArcanistsMulti.field_G ? 1 : 0;
@@ -337,17 +328,23 @@ final class k implements Runnable {
                   synchronized (var3_ref) {
                     L2: {
                       L3: {
-                        if (((k) this).field_j != ((k) this).field_s) {
+                        if (this.field_j != this.field_s) {
                           break L3;
                         } else {
-                          if (((k) this).field_g) {
+                          if (this.field_g) {
                             decompiledRegionSelector0 = 0;
                             break L2;
                           } else {
-                            {
+                            try {
                               L4: {
                                 this.wait();
                                 break L4;
+                              }
+                            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                              decompiledCaughtException = decompiledCaughtParameter0;
+                              L5: {
+                                var4 = (InterruptedException) (Object) decompiledCaughtException;
+                                break L5;
                               }
                             }
                             break L3;
@@ -355,12 +352,12 @@ final class k implements Runnable {
                         }
                       }
                       L6: {
-                        var2 = ((k) this).field_j;
-                        if (((k) this).field_j <= ((k) this).field_s) {
-                          var1_int = -((k) this).field_j + ((k) this).field_s;
+                        var2 = this.field_j;
+                        if (this.field_j <= this.field_s) {
+                          var1_int = -this.field_j + this.field_s;
                           break L6;
                         } else {
-                          var1_int = ((k) this).field_n - ((k) this).field_j;
+                          var1_int = this.field_n - this.field_j;
                           break L6;
                         }
                       }
@@ -372,24 +369,24 @@ final class k implements Runnable {
                     try {
                       L7: {
                         L8: {
-                          if (((k) this).field_i == null) {
+                          if (this.field_i == null) {
                             break L8;
                           } else {
-                            ((k) this).field_i.close();
+                            this.field_i.close();
                             break L8;
                           }
                         }
                         L9: {
-                          if (((k) this).field_r == null) {
+                          if (this.field_r == null) {
                             break L9;
                           } else {
-                            ((k) this).field_r.close();
+                            this.field_r.close();
                             break L9;
                           }
                         }
                         L10: {
-                          if (null != ((k) this).field_e) {
-                            ((k) this).field_e.close();
+                          if (null != this.field_e) {
+                            this.field_e.close();
                             break L10;
                           } else {
                             break L10;
@@ -404,29 +401,29 @@ final class k implements Runnable {
                         break L11;
                       }
                     }
-                    ((k) this).field_b = null;
+                    this.field_b = null;
                     break L0;
                   } else {
                     if (var1_int > 0) {
                       try {
                         L12: {
-                          ((k) this).field_r.write(((k) this).field_b, var2, var1_int);
+                          this.field_r.write(this.field_b, var2, var1_int);
                           break L12;
                         }
-                      } catch (java.lang.Exception decompiledCaughtParameter2) {
+                      } catch (java.io.IOException decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
                         L13: {
                           var3 = (IOException) (Object) decompiledCaughtException;
-                          ((k) this).field_l = true;
+                          this.field_l = true;
                           break L13;
                         }
                       }
-                      ((k) this).field_j = (var1_int + ((k) this).field_j) % ((k) this).field_n;
+                      this.field_j = (var1_int + this.field_j) % this.field_n;
                       try {
                         L14: {
                           L15: {
-                            if (((k) this).field_s == ((k) this).field_j) {
-                              ((k) this).field_r.flush();
+                            if (this.field_s == this.field_j) {
+                              this.field_r.flush();
                               break L15;
                             } else {
                               break L15;
@@ -434,11 +431,11 @@ final class k implements Runnable {
                           }
                           break L14;
                         }
-                      } catch (java.lang.Exception decompiledCaughtParameter3) {
+                      } catch (java.io.IOException decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         L16: {
                           var3 = (IOException) (Object) decompiledCaughtException;
-                          ((k) this).field_l = true;
+                          this.field_l = true;
                           break L16;
                         }
                       }
@@ -453,8 +450,8 @@ final class k implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter4;
               L17: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
-                var7 = null;
-                jh.a((Throwable) (Object) var1_ref, (String) null, (byte) 20);
+                var7 = (String) null;
+                jh.a((Throwable) ((Object) var1_ref), (String) null, (byte) 20);
                 break L17;
               }
             }
@@ -473,7 +470,9 @@ final class k implements Runnable {
         if (!(in.field_Gb != sk.field_a)) {
             return on.field_d;
         }
-        field_k = null;
+        if (param0 != 0) {
+            field_k = (String[]) null;
+        }
         if (!(wn.field_z.a((byte) -106))) {
             return wn.field_z.a(true);
         }
@@ -484,52 +483,48 @@ final class k implements Runnable {
     }
 
     protected final void finalize() {
-        ((k) this).d(-23482);
+        this.d(-23482);
     }
 
     final int b(int param0) throws IOException {
         if (param0 != 0) {
-            ((k) this).field_s = -21;
+            this.field_s = -21;
         }
-        if (((k) this).field_g) {
+        if (this.field_g) {
             return 0;
         }
-        return ((k) this).field_i.available();
+        return this.field_i.available();
     }
 
     final int a(byte param0) throws IOException {
-        if (((k) this).field_g) {
+        if (this.field_g) {
             return 0;
         }
         if (param0 != 120) {
-            ((k) this).d(-9);
+            this.d(-9);
         }
-        return ((k) this).field_i.read();
+        return this.field_i.read();
     }
 
     private k(java.net.Socket param0, dl param1, int param2) throws IOException {
-        ((k) this).field_s = 0;
-        ((k) this).field_l = false;
-        ((k) this).field_g = false;
-        ((k) this).field_j = 0;
+        this.field_s = 0;
+        this.field_l = false;
+        this.field_g = false;
+        this.field_j = 0;
         try {
-            ((k) this).field_e = param0;
-            ((k) this).field_h = param1;
-            ((k) this).field_e.setSoTimeout(30000);
-            ((k) this).field_e.setTcpNoDelay(true);
-            ((k) this).field_i = ((k) this).field_e.getInputStream();
-            ((k) this).field_r = ((k) this).field_e.getOutputStream();
-            ((k) this).field_n = param2;
+            this.field_e = param0;
+            this.field_h = param1;
+            this.field_e.setSoTimeout(30000);
+            this.field_e.setTcpNoDelay(true);
+            this.field_i = this.field_e.getInputStream();
+            this.field_r = this.field_e.getOutputStream();
+            this.field_n = param2;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "k.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "<%0> is not on your ignore list.";
         field_p = "You";
         field_q = new ch(3);

@@ -20,7 +20,7 @@ final class ai {
             wf.field_d = param1;
             md.field_e = new dj(param7, param4, param5, param3, param6, param0, param2);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "ai.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -28,6 +28,9 @@ final class ai {
         field_a = null;
         field_i = null;
         field_b = null;
+        if (param0) {
+            field_i = (String) null;
+        }
     }
 
     final static void a(boolean param0) {
@@ -35,36 +38,32 @@ final class ai {
         qg var1_ref = null;
         var1 = null;
         if (param0) {
-          var1_ref = (qg) (Object) jk.field_a.b(15);
+          var1_ref = (qg) ((Object) jk.field_a.b(15));
           if (var1_ref == null) {
             throw new IllegalStateException();
           } else {
             df.a(var1_ref.field_p, var1_ref.field_q, var1_ref.field_v);
             df.a(var1_ref.field_o, var1_ref.field_k, var1_ref.field_t, var1_ref.field_i);
             var1_ref.field_p = null;
-            sg.field_m.a((l) (Object) var1_ref, (byte) -84);
+            sg.field_m.a(var1_ref, (byte) -84);
             return;
           }
         } else {
           ai.a(false);
-          var1_ref = (qg) (Object) jk.field_a.b(15);
+          var1_ref = (qg) ((Object) jk.field_a.b(15));
           if (var1_ref == null) {
             throw new IllegalStateException();
           } else {
             df.a(var1_ref.field_p, var1_ref.field_q, var1_ref.field_v);
             df.a(var1_ref.field_o, var1_ref.field_k, var1_ref.field_t, var1_ref.field_i);
             var1_ref.field_p = null;
-            sg.field_m.a((l) (Object) var1_ref, (byte) -84);
+            sg.field_m.a(var1_ref, (byte) -84);
             return;
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Suggest muting this player";
         field_b = "Back";
     }

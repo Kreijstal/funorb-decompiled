@@ -24,20 +24,25 @@ final class mna extends mfb {
         otb.field_q = si.field_p;
         ao.field_o = 0;
         nna.field_z = new ae(2);
-        nna.field_z.a(param0, -1, -1, pmb.a(-1, uia.field_b, kc.field_b));
+        nna.field_z.a(param0, param1 + -91, -1, pmb.a(param1 + -91, uia.field_b, kc.field_b));
+        if (param1 != 90) {
+            mna.i((byte) 38);
+        }
     }
 
     final int f(byte param0) {
+        int discarded$0 = 0;
         if (param0 < 0) {
-            int discarded$0 = ((mna) this).b(true);
+            discarded$0 = this.b(true);
             return tta.field_p;
         }
         return tta.field_p;
     }
 
     final int g(byte param0) {
+        int discarded$0 = 0;
         if (param0 > -12) {
-            int discarded$0 = ((mna) this).b(true);
+            discarded$0 = this.b(true);
             return ww.field_o;
         }
         return ww.field_o;
@@ -49,8 +54,9 @@ final class mna extends mfb {
     }
 
     final int k(int param0) {
+        int discarded$0 = 0;
         if (param0 != 0) {
-            int discarded$0 = ((mna) this).g(34);
+            discarded$0 = this.g(34);
             return 2;
         }
         return 2;
@@ -58,7 +64,7 @@ final class mna extends mfb {
 
     public static void i(byte param0) {
         if (param0 != 9) {
-            field_c = null;
+            field_c = (String) null;
             field_c = null;
             return;
         }
@@ -79,8 +85,9 @@ final class mna extends mfb {
     }
 
     final int g(int param0) {
+        int discarded$0 = 0;
         if (param0 != 2769) {
-            int discarded$0 = ((mna) this).a(71);
+            discarded$0 = this.a(71);
             return mtb.field_o;
         }
         return mtb.field_o;
@@ -105,10 +112,6 @@ final class mna extends mfb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 10;
         field_c = "SPAWN";
     }

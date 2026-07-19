@@ -29,6 +29,7 @@ abstract class gl {
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             String stackIn_9_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_6_0 = null;
             StringBuilder stackOut_6_1 = null;
@@ -39,45 +40,60 @@ abstract class gl {
             StringBuilder stackOut_7_1 = null;
             String stackOut_7_2 = null;
             try {
-              try {
-                var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-                param0.getAppletContext().showDocument(mc.a(var2, -1, param0), "_top");
-                return;
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = (Exception) (Object) decompiledCaughtException;
-                var2_ref.printStackTrace();
-                return;
+              L0: {
+                try {
+                  L1: {
+                    if (param1 == 17) {
+                      var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
+                      param0.getAppletContext().showDocument(mc.a(var2, param1 ^ -18, param0), "_top");
+                      decompiledRegionSelector0 = 1;
+                      break L1;
+                    } else {
+                      decompiledRegionSelector0 = 0;
+                      break L1;
+                    }
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2_ref = (Exception) (Object) decompiledCaughtException;
+                  var2_ref.printStackTrace();
+                  return;
+                }
+                if (decompiledRegionSelector0 == 0) {
+                  break L0;
+                } else {
+                  return;
+                }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L0: {
+              L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_0 = (RuntimeException) (var2_ref2);
                 stackOut_6_1 = new StringBuilder().append("gl.J(");
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param0 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
-                  break L0;
+                  break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
                   stackIn_9_2 = stackOut_7_2;
-                  break L0;
+                  break L2;
                 }
               }
-              throw oj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 17 + ')');
+              throw oj.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -91,9 +107,9 @@ abstract class gl {
         field_j = null;
         field_g = null;
         field_e = null;
-        field_c = null;
+        field_c = (int[][]) null;
         field_b = null;
-        field_l = null;
+        field_l = (int[][][][]) null;
         if (param0 != -26425) {
             gl.a(-19);
         }
@@ -102,9 +118,10 @@ abstract class gl {
     abstract java.net.Socket a(byte param0) throws IOException;
 
     final static nf a(byte[] param0, byte param1) {
+        nf discarded$2 = null;
         nf var2 = null;
         RuntimeException var2_ref = null;
-        Object var3 = null;
+        byte[] var3 = null;
         nf stackIn_6_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -132,12 +149,12 @@ abstract class gl {
                 if (param1 > 107) {
                   break L1;
                 } else {
-                  var3 = null;
-                  nf discarded$2 = gl.a((byte[]) null, (byte) -57);
+                  var3 = (byte[]) null;
+                  discarded$2 = gl.a((byte[]) null, (byte) -57);
                   break L1;
                 }
               }
-              stackOut_5_0 = (nf) var2;
+              stackOut_5_0 = (nf) (var2);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -148,23 +165,23 @@ abstract class gl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2_ref;
+            stackOut_7_0 = (RuntimeException) (var2_ref);
             stackOut_7_1 = new StringBuilder().append("gl.K(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -172,28 +189,24 @@ abstract class gl {
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
         }
         return stackIn_6_0;
     }
 
     final java.net.Socket b(int param0) throws IOException {
         if (param0 != 1) {
-            return null;
+            return (java.net.Socket) null;
         }
-        return new java.net.Socket(((gl) this).field_i, ((gl) this).field_d);
+        return new java.net.Socket(this.field_i, this.field_d);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = new int[25][2][3][2];
         field_f = false;
         field_g = new int[]{1, 0, -1, -1, -1, -1, -1, -1, 2, 2, 0, 0};
         field_j = "Email (Login):";
         field_a = false;
-        field_c = new int[][]{new int[2], new int[2]};
+        field_c = new int[][]{new int[]{17, 20}, new int[]{42, 45}};
     }
 }

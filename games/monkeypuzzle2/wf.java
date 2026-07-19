@@ -22,14 +22,27 @@ final class wf extends ug {
     public static void a(byte param0) {
         field_h = null;
         field_i = null;
+        if (param0 != -47) {
+            field_m = null;
+            return;
+        }
         field_m = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         da.field_a = param2;
-        nf.field_M = param1;
-        hb.field_n = param0;
-        gi.field_a = param4;
+        if (param3 != 8192) {
+          wf.a((byte) 47);
+          nf.field_M = param1;
+          hb.field_n = param0;
+          gi.field_a = param4;
+          return;
+        } else {
+          nf.field_M = param1;
+          hb.field_n = param0;
+          gi.field_a = param4;
+          return;
+        }
     }
 
     private wf() throws Throwable {
@@ -37,10 +50,6 @@ final class wf extends ug {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Login: ";
         field_m = new int[8192];
     }

@@ -45,7 +45,7 @@ abstract class hk {
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                var3 = hj.a(param0.charAt(var4), (byte) -124) + (-var3 + (var3 << 5));
+                var3 = hj.a(param0.charAt(var4), (byte) -124) + (-var3 + (var3 << -972512891));
                 var4++;
                 continue L1;
               }
@@ -55,23 +55,23 @@ abstract class hk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_0 = (RuntimeException) (var2);
             stackOut_6_1 = new StringBuilder().append("hk.B(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -79,22 +79,27 @@ abstract class hk {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_5_0;
     }
 
     final java.net.Socket b(int param0) throws IOException {
         if (param0 != 0) {
-          ((hk) this).field_c = -46;
-          return new java.net.Socket(((hk) this).field_b, ((hk) this).field_c);
+          this.field_c = -46;
+          return new java.net.Socket(this.field_b, this.field_c);
         } else {
-          return new java.net.Socket(((hk) this).field_b, ((hk) this).field_c);
+          return new java.net.Socket(this.field_b, this.field_c);
         }
     }
 
     public static void a(int param0) {
+        int discarded$0 = 0;
         field_a = null;
+        if (param0 >= -19) {
+            CharSequence var2 = (CharSequence) null;
+            discarded$0 = hk.a((CharSequence) null, 33);
+        }
     }
 
     abstract java.net.Socket c(int param0) throws IOException;

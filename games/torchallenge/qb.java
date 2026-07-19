@@ -58,23 +58,23 @@ final class qb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_0 = (RuntimeException) (var2);
             stackOut_6_1 = new StringBuilder().append("qb.D(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -82,7 +82,7 @@ final class qb {
               break L3;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class qb {
           var8 = -(param3 / 32) + param4;
           var9 = -var7 + 32 * var8;
           var10 = 328;
-          if (var9 >= 0) {
+          if ((var9 ^ -1) <= -1) {
             var11 = 1;
             break L0;
           } else {
@@ -109,7 +109,7 @@ final class qb {
         }
         L1: {
           var9 = var9 * var11;
-          if (var9 <= 1024) {
+          if (-1025 <= (var9 ^ -1)) {
             break L1;
           } else {
             if (var9 < 2048) {
@@ -130,17 +130,31 @@ final class qb {
               break L2;
             }
           }
-          var12 = 320 + (fj.a(1870096848, wi.field_a[var9], var10 << 16) >> 16) * var11;
+          var12 = 320 + (fj.a(1870096848, wi.field_a[var9], var10 << -2140919664) >> -920221616) * var11;
           var13 = param5 * 64 / 256 + (param1 * 64 + -param2);
           dl.field_n[1] = var12;
           dl.field_n[0] = var12;
-          dl.field_n[2] = var13;
-          return;
+          if (param6 != -2140919664) {
+            field_d = -116;
+            dl.field_n[2] = var13;
+            return;
+          } else {
+            dl.field_n[2] = var13;
+            return;
+          }
         } else {
-          var12 = 320 + (fj.a(1870096848, wi.field_a[var9], var10 << 16) >> 16) * var11;
-          var13 = param5 * 64 / 256 + (param1 * 64 + -param2);
-          dl.field_n[1] = var12;
-          dl.field_n[0] = var12;
+          L3: {
+            var12 = 320 + (fj.a(1870096848, wi.field_a[var9], var10 << -2140919664) >> -920221616) * var11;
+            var13 = param5 * 64 / 256 + (param1 * 64 + -param2);
+            dl.field_n[1] = var12;
+            dl.field_n[0] = var12;
+            if (param6 == -2140919664) {
+              break L3;
+            } else {
+              field_d = -116;
+              break L3;
+            }
+          }
           dl.field_n[2] = var13;
           return;
         }
@@ -172,28 +186,25 @@ final class qb {
     }
 
     public static void a(int param0) {
+        boolean discarded$2 = false;
         field_e = null;
         field_c = null;
         if (param0 != 2316) {
-          boolean discarded$2 = qb.a('', false);
-          field_a = null;
+          discarded$2 = qb.a('', false);
+          field_a = (int[][]) null;
           field_f = null;
           return;
         } else {
-          field_a = null;
+          field_a = (int[][]) null;
           field_f = null;
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "That name is not available";
         field_d = 0;
-        field_a = new int[][]{new int[2], new int[2], new int[2]};
+        field_a = new int[][]{new int[]{171, 61}, new int[]{157, 61}, new int[]{175, 61}};
         field_i = -1;
         field_g = -1;
         field_h = -1;

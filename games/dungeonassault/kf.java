@@ -44,23 +44,23 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var7;
+            stackOut_2_0 = (RuntimeException) (var7);
             stackOut_2_1 = new StringBuilder().append("kf.imageUpdate(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -68,7 +68,7 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
@@ -82,12 +82,24 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
 
     public static void b(boolean param0) {
         field_q = null;
-        field_k = null;
-        field_j = null;
-        field_i = null;
-        field_o = null;
-        field_p = null;
-        field_m = null;
+        if (param0) {
+          field_j = (eh) null;
+          field_k = null;
+          field_j = null;
+          field_i = null;
+          field_o = null;
+          field_p = null;
+          field_m = null;
+          return;
+        } else {
+          field_k = null;
+          field_j = null;
+          field_i = null;
+          field_o = null;
+          field_p = null;
+          field_m = null;
+          return;
+        }
     }
 
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
@@ -95,34 +107,34 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
         try {
-            ((kf) this).addConsumer(param0);
+            this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "kf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "kf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            ((kf) this).field_n = param0;
-            param0.setDimensions(((kf) this).field_b, ((kf) this).field_f);
+            this.field_n = param0;
+            param0.setDimensions(this.field_b, this.field_f);
             param0.setProperties((Hashtable) null);
-            param0.setColorModel(((kf) this).field_l);
+            param0.setColorModel(this.field_l);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "kf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "kf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
-        return param0 == ((kf) this).field_n;
+        return param0 == this.field_n;
     }
 
     private final synchronized void b(int param0) {
-        if (!(((kf) this).field_n != null)) {
+        if (!(this.field_n != null)) {
             return;
         }
-        ((kf) this).field_n.setPixels(0, 0, ((kf) this).field_b, ((kf) this).field_f, ((kf) this).field_l, ((kf) this).field_g, 0, ((kf) this).field_b);
-        ((kf) this).field_n.imageComplete(2);
+        this.field_n.setPixels(param0, 0, this.field_b, this.field_f, this.field_l, this.field_g, 0, this.field_b);
+        this.field_n.imageComplete(2);
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
@@ -146,10 +158,10 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
         try {
           L0: {
             L1: {
-              if (param0 != ((kf) this).field_n) {
+              if (param0 != this.field_n) {
                 break L1;
               } else {
-                ((kf) this).field_n = null;
+                this.field_n = null;
                 break L1;
               }
             }
@@ -159,23 +171,23 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("kf.removeConsumer(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -183,13 +195,14 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     final void a(int param0, boolean param1, java.awt.Graphics param2, int param3) {
+        boolean discarded$3 = false;
         RuntimeException runtimeException = null;
-        Object var6 = null;
+        java.awt.Graphics var6 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -210,12 +223,12 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
           L0: {
             L1: {
               this.b(0);
-              boolean discarded$3 = param2.drawImage(((kf) this).field_a, param0, param3, (java.awt.image.ImageObserver) this);
+              discarded$3 = param2.drawImage(this.field_a, param0, param3, (java.awt.image.ImageObserver) (this));
               if (param1) {
                 break L1;
               } else {
-                var6 = null;
-                ((kf) this).a(-93, true, (java.awt.Graphics) null, -124);
+                var6 = (java.awt.Graphics) null;
+                this.a(-93, true, (java.awt.Graphics) null, -124);
                 break L1;
               }
             }
@@ -225,23 +238,23 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("kf.B(").append(param0).append(',').append(param1).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param2 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -249,27 +262,30 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param3 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param3 + ')');
         }
     }
 
     final void a(byte param0, java.awt.Component param1, int param2, int param3) {
+        boolean discarded$0 = false;
+        boolean discarded$1 = false;
+        boolean discarded$2 = false;
         try {
-            ((kf) this).field_b = param3;
-            ((kf) this).field_f = param2;
-            ((kf) this).field_g = new int[param3 * param2 - -1];
-            ((kf) this).field_l = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-            ((kf) this).field_a = param1.createImage((java.awt.image.ImageProducer) this);
+            this.field_b = param3;
+            this.field_f = param2;
+            this.field_g = new int[param3 * param2 - -1];
+            this.field_l = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+            this.field_a = param1.createImage((java.awt.image.ImageProducer) (this));
             this.b(0);
-            boolean discarded$0 = param1.prepareImage(((kf) this).field_a, (java.awt.image.ImageObserver) this);
+            discarded$0 = param1.prepareImage(this.field_a, (java.awt.image.ImageObserver) (this));
             this.b(0);
-            boolean discarded$1 = param1.prepareImage(((kf) this).field_a, (java.awt.image.ImageObserver) this);
+            discarded$1 = param1.prepareImage(this.field_a, (java.awt.image.ImageObserver) (this));
             int var5_int = -26 % ((-15 - param0) / 33);
             this.b(0);
-            boolean discarded$2 = param1.prepareImage(((kf) this).field_a, (java.awt.image.ImageObserver) this);
-            ((kf) this).a(true);
+            discarded$2 = param1.prepareImage(this.field_a, (java.awt.image.ImageObserver) (this));
+            this.a(true);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "kf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "kf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -277,10 +293,6 @@ final class kf extends c implements java.awt.image.ImageProducer, java.awt.image
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = "Hell Beast";
         field_i = "Sorceress";
     }

@@ -9,19 +9,19 @@ final class mq extends qq implements vca {
     mq(jp param0, mj param1, boolean param2) {
         super(param0, 34963, param2);
         try {
-            ((mq) this).field_i = param1;
+            this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "mq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "mq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public final void a(int param0, int param1) {
-        super.a(param0, param1 * ((mq) this).field_i.field_h);
+        super.a(param0, param1 * this.field_i.field_h);
     }
 
     public final boolean b(int param0) {
         int var2 = 10 / ((param0 - 13) / 37);
-        return super.a((byte) -81, ((mq) this).field_d.field_Sc);
+        return super.a((byte) -81, this.field_d.field_Sc);
     }
 
     public final void a(int param0) {
@@ -32,23 +32,22 @@ final class mq extends qq implements vca {
     }
 
     final static boolean a(int param0, int param1, boolean param2) {
-        return 0 != (param1 & 2048);
+        if (param2) {
+            return false;
+        }
+        return 0 != (param1 & 2048) ? true : false;
     }
 
     public final jaclib.memory.Buffer a(byte param0, boolean param1) {
         if (param0 > -23) {
           field_k = 77;
-          return super.a(false, param1, ((mq) this).field_d.field_Sc);
+          return super.a(false, param1, this.field_d.field_Sc);
         } else {
-          return super.a(false, param1, ((mq) this).field_d.field_Sc);
+          return super.a(false, param1, this.field_d.field_Sc);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = 100;
     }
 }

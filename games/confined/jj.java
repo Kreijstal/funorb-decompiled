@@ -13,7 +13,13 @@ final class jj extends ug {
     private ib field_kb;
 
     public static void h(byte param0) {
+        in discarded$0 = null;
         field_lb = null;
+        if (param0 >= -64) {
+            discarded$0 = jj.a((byte) -108, true);
+            field_hb = null;
+            return;
+        }
         field_hb = null;
     }
 
@@ -21,18 +27,18 @@ final class jj extends ug {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
-            ((jj) this).field_ib = param1;
-            if (((jj) this).field_ib != null) {
-                var3_int = fd.field_k.b(((jj) this).field_ib, 260, fd.field_k.field_C);
-                ((jj) this).a(-68, var3_int + 150, 300);
+            this.field_ib = param1;
+            if (this.field_ib != null) {
+                var3_int = fd.field_k.b(this.field_ib, 260, fd.field_k.field_C);
+                this.a(-68, var3_int + 150, 300);
             }
-            ((jj) this).field_kb = new ib(13, 50, 274, 30, 15, 2113632, 4210752);
-            ((jj) this).field_kb.field_N = true;
-            ((jj) this).field_jb = false;
-            ((jj) this).field_nb = false;
-            ((jj) this).b((fj) (Object) ((jj) this).field_kb, 10);
+            this.field_kb = new ib(13, 50, 274, 30, 15, 2113632, 4210752);
+            this.field_kb.field_N = true;
+            this.field_jb = false;
+            this.field_nb = false;
+            this.b(this.field_kb, 10);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "jj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "jj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,12 +91,12 @@ final class jj extends ug {
               if (param0 < -57) {
                 break L1;
               } else {
-                field_lb = null;
+                field_lb = (int[]) null;
                 break L1;
               }
             }
             L2: {
-              stackOut_2_0 = ((jj) this).field_nb;
+              stackOut_2_0 = this.field_nb;
               stackIn_4_0 = stackOut_2_0;
               stackIn_3_0 = stackOut_2_0;
               if (param1) {
@@ -127,27 +133,27 @@ final class jj extends ug {
                 }
               }
               L4: {
-                ((jj) this).field_nb = stackIn_10_1 != 0;
-                if (((jj) this).field_nb) {
-                  ((jj) this).field_kb.a(8405024, false, 4210752);
-                  ((jj) this).field_kb.field_N = true;
+                ((jj) (this)).field_nb = stackIn_10_1 != 0;
+                if (this.field_nb) {
+                  this.field_kb.a(8405024, false, 4210752);
+                  this.field_kb.field_N = true;
                   break L4;
                 } else {
-                  ((jj) this).field_kb.a(2113632, false, 4210752);
-                  if (!((jj) this).field_jb) {
+                  this.field_kb.a(2113632, false, 4210752);
+                  if (!this.field_jb) {
                     break L4;
                   } else {
-                    ((jj) this).field_kb.field_N = false;
+                    this.field_kb.field_N = false;
                     break L4;
                   }
                 }
               }
-              ((jj) this).field_kb.field_R = (int)(65536.0f * (param2 / 100.0f));
-              ((jj) this).field_mb = param3;
+              this.field_kb.field_R = (int)(65536.0f * (param2 / 100.0f));
+              this.field_mb = param3;
               break L0;
             } else {
-              ((jj) this).field_kb.field_R = (int)(65536.0f * (param2 / 100.0f));
-              ((jj) this).field_mb = param3;
+              this.field_kb.field_R = (int)(65536.0f * (param2 / 100.0f));
+              this.field_mb = param3;
               return;
             }
           }
@@ -155,23 +161,23 @@ final class jj extends ug {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var5;
+            stackOut_16_0 = (RuntimeException) (var5);
             stackOut_16_1 = new StringBuilder().append("jj.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param3 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -179,7 +185,7 @@ final class jj extends ug {
               break L5;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
     }
 
@@ -190,6 +196,7 @@ final class jj extends ug {
             IOException var3 = null;
             int stackIn_12_0 = 0;
             int stackIn_14_0 = 0;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             int stackOut_11_0 = 0;
             int stackOut_13_0 = 0;
@@ -214,19 +221,22 @@ final class jj extends ug {
                       if (param0 > e.field_c.field_n) {
                         stackOut_11_0 = 0;
                         stackIn_12_0 = stackOut_11_0;
-                        return stackIn_12_0 != 0;
+                        decompiledRegionSelector0 = 0;
+                        break L0;
                       } else {
                         e.field_c.field_n = 0;
                         stackOut_13_0 = 1;
                         stackIn_14_0 = stackOut_13_0;
-                        return stackIn_14_0 != 0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       }
                     } else {
                       if (0 > var3_int) {
                         dc.d(125);
                         return false;
                       } else {
-                        if (la.h(118) <= 30000L) {
+                        if ((la.h(118) ^ -1L) >= -30001L) {
+                          decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
                           dc.d(125);
@@ -241,7 +251,15 @@ final class jj extends ug {
                   dc.d(111);
                   return false;
                 }
-                return false;
+                if (decompiledRegionSelector0 == 0) {
+                  return stackIn_12_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 1) {
+                    return stackIn_14_0 != 0;
+                  } else {
+                    return false;
+                  }
+                }
               } else {
                 return false;
               }
@@ -256,14 +274,16 @@ final class jj extends ug {
     }
 
     final void b(int param0, byte param1, int param2) {
+        int discarded$2 = 0;
+        int discarded$3 = 0;
         super.b(param0, (byte) -112, param2);
-        fd.field_k.b(((jj) this).field_mb, param0 - -(((jj) this).field_F >> 1), param2 - -103, 16777215, -1);
+        fd.field_k.b(this.field_mb, param0 - -(this.field_F >> 252509569), param2 - -103, 16777215, -1);
         if (param1 >= -58) {
           L0: {
-            ((jj) this).field_ib = null;
-            if (((jj) this).field_ib != null) {
-              fn.b(20 + param0, param2 + 113, 260, 8421504);
-              int discarded$2 = fd.field_k.a(((jj) this).field_ib, param0 - -20, param2 - -128, 260, 100, 16777215, -1, 1, 0, fd.field_k.field_C);
+            this.field_ib = (String) null;
+            if (this.field_ib != null) {
+              fn.b(20 + param0, param2 - -120 + -7, 260, 8421504);
+              discarded$2 = fd.field_k.a(this.field_ib, param0 - -20, param2 - -128, 260, 100, 16777215, -1, 1, 0, fd.field_k.field_C);
               break L0;
             } else {
               break L0;
@@ -272,9 +292,9 @@ final class jj extends ug {
           return;
         } else {
           L1: {
-            if (((jj) this).field_ib != null) {
-              fn.b(20 + param0, param2 + 113, 260, 8421504);
-              int discarded$3 = fd.field_k.a(((jj) this).field_ib, param0 - -20, param2 - -128, 260, 100, 16777215, -1, 1, 0, fd.field_k.field_C);
+            if (this.field_ib != null) {
+              fn.b(20 + param0, param2 - -120 + -7, 260, 8421504);
+              discarded$3 = fd.field_k.a(this.field_ib, param0 - -20, param2 - -128, 260, 100, 16777215, -1, 1, 0, fd.field_k.field_C);
               break L1;
             } else {
               break L1;
@@ -286,15 +306,11 @@ final class jj extends ug {
 
     final void i(byte param0) {
         int var2 = -38 % ((67 - param0) / 57);
-        ((jj) this).field_kb.field_N = false;
-        ((jj) this).field_jb = true;
+        this.field_kb.field_N = false;
+        this.field_jb = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_hb = "Passwords must be between 5 and 20 letters and numbers";
     }
 }

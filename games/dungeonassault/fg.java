@@ -19,7 +19,7 @@ final class fg extends gj {
         int var16 = 0;
         int var17 = 0;
         var17 = DungeonAssault.field_K;
-        var16 = 1;
+        var16 = 53 % ((param12 - 24) / 48);
         if (param3 < param2) {
           if (param0 <= param2) {
             if (param0 > param3) {
@@ -54,64 +54,64 @@ final class fg extends gj {
         int var5 = 0;
         var5 = DungeonAssault.field_K;
         if (param1 == 2048) {
-          if (~((fg) this).field_h <= ~((fg) this).field_l) {
+          if ((this.field_h ^ -1L) <= (this.field_l ^ -1L)) {
             var4 = 0;
             L0: while (true) {
               L1: {
-                ((fg) this).field_l = ((fg) this).field_l + param0;
+                this.field_l = this.field_l + param0;
                 var4++;
-                if (var4 >= 10) {
+                if ((var4 ^ -1) <= -11) {
                   break L1;
                 } else {
-                  if (((fg) this).field_l < ((fg) this).field_h) {
+                  if (this.field_l < this.field_h) {
                     continue L0;
                   } else {
                     break L1;
                   }
                 }
               }
-              if (~((fg) this).field_h < ~((fg) this).field_l) {
-                ((fg) this).field_l = ((fg) this).field_h;
+              if ((this.field_h ^ -1L) < (this.field_l ^ -1L)) {
+                this.field_l = this.field_h;
                 return var4;
               } else {
                 return var4;
               }
             }
           } else {
-            ((fg) this).field_k = ((fg) this).field_k + (((fg) this).field_l - ((fg) this).field_h);
-            ((fg) this).field_h = ((fg) this).field_h + (-((fg) this).field_h + ((fg) this).field_l);
-            ((fg) this).field_l = ((fg) this).field_l + param0;
+            this.field_k = this.field_k + (this.field_l - this.field_h);
+            this.field_h = this.field_h + (-this.field_h + this.field_l);
+            this.field_l = this.field_l + param0;
             return 1;
           }
         } else {
-          field_m = null;
-          if (~((fg) this).field_h <= ~((fg) this).field_l) {
+          field_m = (String) null;
+          if ((this.field_h ^ -1L) <= (this.field_l ^ -1L)) {
             var4 = 0;
             L2: while (true) {
               L3: {
-                ((fg) this).field_l = ((fg) this).field_l + param0;
+                this.field_l = this.field_l + param0;
                 var4++;
-                if (var4 >= 10) {
+                if ((var4 ^ -1) <= -11) {
                   break L3;
                 } else {
-                  if (((fg) this).field_l < ((fg) this).field_h) {
+                  if (this.field_l < this.field_h) {
                     continue L2;
                   } else {
                     break L3;
                   }
                 }
               }
-              if (~((fg) this).field_h >= ~((fg) this).field_l) {
+              if ((this.field_h ^ -1L) >= (this.field_l ^ -1L)) {
                 return var4;
               } else {
-                ((fg) this).field_l = ((fg) this).field_h;
+                this.field_l = this.field_h;
                 return var4;
               }
             }
           } else {
-            ((fg) this).field_k = ((fg) this).field_k + (((fg) this).field_l - ((fg) this).field_h);
-            ((fg) this).field_h = ((fg) this).field_h + (-((fg) this).field_h + ((fg) this).field_l);
-            ((fg) this).field_l = ((fg) this).field_l + param0;
+            this.field_k = this.field_k + (this.field_l - this.field_h);
+            this.field_h = this.field_h + (-this.field_h + this.field_l);
+            this.field_l = this.field_l + param0;
             return 1;
           }
         }
@@ -119,9 +119,9 @@ final class fg extends gj {
 
     final long a(int param0) {
         int var2 = 0;
-        ((fg) this).field_h = ((fg) this).field_h + this.c(0);
-        if (((fg) this).field_h < ((fg) this).field_l) {
-          return (((fg) this).field_l - ((fg) this).field_h) / 1000000L;
+        this.field_h = this.field_h + this.c(0);
+        if (this.field_h < this.field_l) {
+          return (this.field_l - this.field_h) / 1000000L;
         } else {
           var2 = -20 % ((64 - param0) / 62);
           return 0L;
@@ -140,12 +140,12 @@ final class fg extends gj {
     }
 
     final void b(int param0) {
-        ((fg) this).field_k = 0L;
+        this.field_k = 0L;
         if (param0 >= -86) {
           L0: {
             fg.d(110);
-            if (((fg) this).field_h < ((fg) this).field_l) {
-              ((fg) this).field_h = ((fg) this).field_h + (-((fg) this).field_h + ((fg) this).field_l);
+            if (this.field_h < this.field_l) {
+              this.field_h = this.field_h + (-this.field_h + this.field_l);
               break L0;
             } else {
               break L0;
@@ -154,8 +154,8 @@ final class fg extends gj {
           return;
         } else {
           L1: {
-            if (((fg) this).field_h < ((fg) this).field_l) {
-              ((fg) this).field_h = ((fg) this).field_h + (-((fg) this).field_h + ((fg) this).field_l);
+            if (this.field_h < this.field_l) {
+              this.field_h = this.field_h + (-this.field_h + this.field_l);
               break L1;
             } else {
               break L1;
@@ -173,52 +173,52 @@ final class fg extends gj {
         int var9 = 0;
         var9 = DungeonAssault.field_K;
         var2 = System.nanoTime();
-        var4 = -((fg) this).field_k + var2;
-        ((fg) this).field_k = var2;
+        var4 = -this.field_k + var2;
+        this.field_k = var2;
         if (-5000000000L < var4) {
-          if (var4 >= 5000000000L) {
-            var6 = 0L;
+          if ((var4 ^ -1L) <= -5000000001L) {
+            var6 = (long)param0;
             var8 = 1;
             L0: while (true) {
-              if (((fg) this).field_n < var8) {
-                return var6 / (long)((fg) this).field_n;
+              if (this.field_n < var8) {
+                return var6 / (long)this.field_n;
               } else {
-                var6 = var6 + ((fg) this).field_j[(10 + (((fg) this).field_e - var8)) % 10];
+                var6 = var6 + this.field_j[(10 + (this.field_e - var8)) % 10];
                 var8++;
                 continue L0;
               }
             }
           } else {
             L1: {
-              ((fg) this).field_j[((fg) this).field_e] = var4;
-              if (((fg) this).field_n < 1) {
-                ((fg) this).field_n = ((fg) this).field_n + 1;
+              this.field_j[this.field_e] = var4;
+              if (-2 < (this.field_n ^ -1)) {
+                this.field_n = this.field_n + 1;
                 break L1;
               } else {
                 break L1;
               }
             }
-            ((fg) this).field_e = (1 + ((fg) this).field_e) % 10;
-            var6 = 0L;
+            this.field_e = (1 + this.field_e) % 10;
+            var6 = (long)param0;
             var8 = 1;
             L2: while (true) {
-              if (((fg) this).field_n < var8) {
-                return var6 / (long)((fg) this).field_n;
+              if (this.field_n < var8) {
+                return var6 / (long)this.field_n;
               } else {
-                var6 = var6 + ((fg) this).field_j[(10 + (((fg) this).field_e - var8)) % 10];
+                var6 = var6 + this.field_j[(10 + (this.field_e - var8)) % 10];
                 var8++;
                 continue L2;
               }
             }
           }
         } else {
-          var6 = 0L;
+          var6 = (long)param0;
           var8 = 1;
           L3: while (true) {
-            if (((fg) this).field_n < var8) {
-              return var6 / (long)((fg) this).field_n;
+            if (this.field_n < var8) {
+              return var6 / (long)this.field_n;
             } else {
-              var6 = var6 + ((fg) this).field_j[(10 + (((fg) this).field_e - var8)) % 10];
+              var6 = var6 + this.field_j[(10 + (this.field_e - var8)) % 10];
               var8++;
               continue L3;
             }
@@ -227,21 +227,17 @@ final class fg extends gj {
     }
 
     fg() {
-        ((fg) this).field_h = 0L;
-        ((fg) this).field_n = 1;
-        ((fg) this).field_k = 0L;
-        ((fg) this).field_l = 0L;
-        ((fg) this).field_j = new long[10];
-        ((fg) this).field_e = 0;
-        ((fg) this).field_h = System.nanoTime();
-        ((fg) this).field_l = System.nanoTime();
+        this.field_h = 0L;
+        this.field_n = 1;
+        this.field_k = 0L;
+        this.field_l = 0L;
+        this.field_j = new long[10];
+        this.field_e = 0;
+        this.field_h = System.nanoTime();
+        this.field_l = System.nanoTime();
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "This huge, black-skinned, winged demon's claws and muscly build make it a raider's worst nightmare.<br><br>If this monster's <%attack> is at least twice as high as the <%defence> of the raider it encounters, the entire party will flee in terror!";
         field_o = "Whirling Blades";
         field_g = "Unfortunately your configuration doesn't support fullscreen mode.";

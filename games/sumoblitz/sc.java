@@ -8,10 +8,10 @@ final class sc extends ua implements pv {
 
     final int g(int param0) {
         if (param0 != 34962) {
-            ((sc) this).field_p = (byte) -127;
-            return ((sc) this).field_p;
+            this.field_p = (byte) -127;
+            return this.field_p;
         }
-        return ((sc) this).field_p;
+        return this.field_p;
     }
 
     public final void b(int param0) {
@@ -19,32 +19,36 @@ final class sc extends ua implements pv {
     }
 
     public final jaclib.memory.Buffer a(int param0, boolean param1) {
+        int discarded$2 = 0;
         if (param0 != 7454) {
-          int discarded$2 = ((sc) this).g(127);
-          return super.a(param1, 2, ((sc) this).field_f.field_Bc);
+          discarded$2 = this.g(127);
+          return super.a(param1, 2, this.field_f.field_Bc);
         } else {
-          return super.a(param1, 2, ((sc) this).field_f.field_Bc);
+          return super.a(param1, 2, this.field_f.field_Bc);
         }
     }
 
     public static void a(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_o = null;
         field_q = null;
     }
 
     public final boolean a(int param0) {
         if (param0 != 22957) {
-          field_q = null;
-          return super.a(((sc) this).field_f.field_Bc, (byte) 92);
+          field_q = (qr) null;
+          return super.a(this.field_f.field_Bc, (byte) 92);
         } else {
-          return super.a(((sc) this).field_f.field_Bc, (byte) 92);
+          return super.a(this.field_f.field_Bc, (byte) 92);
         }
     }
 
     public final boolean a(int param0, byte param1, int param2) {
-        ((sc) this).field_p = (byte)param0;
+        this.field_p = (byte)param0;
         if (param1 != -35) {
-          ((sc) this).field_p = (byte) -114;
+          this.field_p = (byte) -114;
           super.a((byte) -103, param2);
           return true;
         } else {
@@ -58,10 +62,6 @@ final class sc extends ua implements pv {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = new qr();
         field_o = new int[2];
     }

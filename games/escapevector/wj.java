@@ -15,56 +15,57 @@ final class wj {
     private int field_g;
 
     final int a(int param0) {
-        if (((wj) this).field_c >= ((wj) this).field_f) {
-            int fieldTemp$0 = ((wj) this).field_a;
-            ((wj) this).field_a = ((wj) this).field_a + 1;
-            ((wj) this).field_i = ((wj) this).field_h[fieldTemp$0] << 15;
-            if (((wj) this).field_a >= ((wj) this).field_g) {
-                ((wj) this).field_a = ((wj) this).field_g - 1;
+        int fieldTemp$0 = 0;
+        if (this.field_c >= this.field_f) {
+            fieldTemp$0 = this.field_a;
+            this.field_a = this.field_a + 1;
+            this.field_i = this.field_h[fieldTemp$0] << 15;
+            if (this.field_a >= this.field_g) {
+                this.field_a = this.field_g - 1;
             }
-            ((wj) this).field_f = (int)((double)((wj) this).field_k[((wj) this).field_a] / 65536.0 * (double)param0);
-            if (((wj) this).field_f > ((wj) this).field_c) {
-                ((wj) this).field_d = ((((wj) this).field_h[((wj) this).field_a] << 15) - ((wj) this).field_i) / (((wj) this).field_f - ((wj) this).field_c);
+            this.field_f = (int)((double)this.field_k[this.field_a] / 65536.0 * (double)param0);
+            if (this.field_f > this.field_c) {
+                this.field_d = ((this.field_h[this.field_a] << 15) - this.field_i) / (this.field_f - this.field_c);
             }
         }
-        ((wj) this).field_i = ((wj) this).field_i + ((wj) this).field_d;
-        ((wj) this).field_c = ((wj) this).field_c + 1;
-        return ((wj) this).field_i - ((wj) this).field_d >> 15;
+        this.field_i = this.field_i + this.field_d;
+        this.field_c = this.field_c + 1;
+        return this.field_i - this.field_d >> 15;
     }
 
     final void a() {
-        ((wj) this).field_f = 0;
-        ((wj) this).field_a = 0;
-        ((wj) this).field_d = 0;
-        ((wj) this).field_i = 0;
-        ((wj) this).field_c = 0;
+        this.field_f = 0;
+        this.field_a = 0;
+        this.field_d = 0;
+        this.field_i = 0;
+        this.field_c = 0;
     }
 
     final void a(n param0) {
-        ((wj) this).field_e = param0.e(0);
-        ((wj) this).field_j = param0.g(-5053);
-        ((wj) this).field_b = param0.g(-5053);
-        ((wj) this).b(param0);
+        this.field_e = param0.e(0);
+        this.field_j = param0.g(-5053);
+        this.field_b = param0.g(-5053);
+        this.b(param0);
     }
 
     final void b(n param0) {
         int var2 = 0;
-        ((wj) this).field_g = param0.e(0);
-        ((wj) this).field_k = new int[((wj) this).field_g];
-        ((wj) this).field_h = new int[((wj) this).field_g];
-        for (var2 = 0; var2 < ((wj) this).field_g; var2++) {
-            ((wj) this).field_k[var2] = param0.f(1952);
-            ((wj) this).field_h[var2] = param0.f(1952);
+        this.field_g = param0.e(0);
+        this.field_k = new int[this.field_g];
+        this.field_h = new int[this.field_g];
+        for (var2 = 0; var2 < this.field_g; var2++) {
+            this.field_k[var2] = param0.f(1952);
+            this.field_h[var2] = param0.f(1952);
         }
     }
 
     wj() {
-        ((wj) this).field_g = 2;
-        ((wj) this).field_k = new int[2];
-        ((wj) this).field_h = new int[2];
-        ((wj) this).field_k[0] = 0;
-        ((wj) this).field_k[1] = 65535;
-        ((wj) this).field_h[0] = 0;
-        ((wj) this).field_h[1] = 65535;
+        this.field_g = 2;
+        this.field_k = new int[2];
+        this.field_h = new int[2];
+        this.field_k[0] = 0;
+        this.field_k[1] = 65535;
+        this.field_h[0] = 0;
+        this.field_h[1] = 65535;
     }
 }

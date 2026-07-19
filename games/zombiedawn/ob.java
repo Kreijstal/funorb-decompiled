@@ -9,15 +9,14 @@ final class ob {
 
     public static void a(int param0) {
         field_a = null;
-        field_b = null;
+        if (param0 < 30) {
+            return;
+        }
+        field_b = (vn[][]) null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ob.A(";
         field_b = new vn[10][];
         field_a = new String[]{"All scores", "My scores", "Best each"};

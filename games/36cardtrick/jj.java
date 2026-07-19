@@ -6,10 +6,6 @@ final class jj {
     static fj field_a;
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = null;
     }
 }

@@ -20,11 +20,12 @@ final class nd implements jm {
 
     public static void a(int param0) {
         field_b = null;
-        int var1 = 0;
+        int var1 = 44 % ((param0 - -28) / 59);
         field_h = null;
     }
 
     public final void a(byte param0, int param1, int param2, boolean param3, mf param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -39,6 +40,7 @@ final class nd implements jm {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_2_0 = null;
         mf stackOut_1_0 = null;
@@ -55,16 +57,16 @@ final class nd implements jm {
             L1: {
               if (!(param4 instanceof ki)) {
                 stackOut_2_0 = null;
-                stackIn_3_0 = (mf) (Object) stackOut_2_0;
+                stackIn_3_0 = (mf) ((Object) stackOut_2_0);
                 break L1;
               } else {
-                stackOut_1_0 = (mf) param4;
+                stackOut_1_0 = (mf) (param4);
                 stackIn_3_0 = stackOut_1_0;
                 break L1;
               }
             }
             L2: {
-              var11 = (ki) (Object) stackIn_3_0;
+              var11 = (ki) ((Object) stackIn_3_0);
               if (var11 != null) {
                 param3 = param3 & var11.field_H;
                 break L2;
@@ -83,51 +85,53 @@ final class nd implements jm {
             }
             if (param0 >= 58) {
               L4: {
-                wb.f(param4.field_u + param1, param4.field_r + param2, param4.field_y, param4.field_C, ((nd) this).field_k);
-                var8 = ((nd) this).field_c + param4.field_u + param1;
-                var9 = param2 + (param4.field_r - -((nd) this).field_d);
-                wb.c(var8, var9, ((nd) this).field_f, ((nd) this).field_a, 5592405);
-                wb.f(var8, var9, ((nd) this).field_f, ((nd) this).field_a, var7);
+                wb.f(param4.field_u + param1, param4.field_r + param2, param4.field_y, param4.field_C, this.field_k);
+                var8 = this.field_c + param4.field_u + param1;
+                var9 = param2 + (param4.field_r - -this.field_d);
+                wb.c(var8, var9, this.field_f, this.field_a, 5592405);
+                wb.f(var8, var9, this.field_f, this.field_a, var7);
                 if (var11.field_I) {
-                  wb.b(var8, var9, ((nd) this).field_f + var8, var9 - -((nd) this).field_a, 1);
-                  wb.b(((nd) this).field_f + var8, var9, var8, ((nd) this).field_a + var9, 1);
+                  wb.b(var8, var9, this.field_f + var8, var9 - -this.field_a, 1);
+                  wb.b(this.field_f + var8, var9, var8, this.field_a + var9, 1);
                   break L4;
                 } else {
                   break L4;
                 }
               }
-              if (((nd) this).field_m != null) {
-                var10 = ((nd) this).field_o + (((nd) this).field_c + ((nd) this).field_f);
-                int discarded$1 = ((nd) this).field_m.a(param4.field_v, var10 + (param4.field_u + param1), ((nd) this).field_e + param4.field_r + param2, param4.field_y + (-var10 - ((nd) this).field_o), -(((nd) this).field_o << 1) + param4.field_C, ((nd) this).field_g, ((nd) this).field_i, ((nd) this).field_j, ((nd) this).field_n, 0);
+              if (this.field_m != null) {
+                var10 = this.field_o + (this.field_c + this.field_f);
+                discarded$1 = this.field_m.a(param4.field_v, var10 + (param4.field_u + param1), this.field_e + param4.field_r + param2, param4.field_y + (-var10 - this.field_o), -(this.field_o << 134573473) + param4.field_C, this.field_g, this.field_i, this.field_j, this.field_n, 0);
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var6;
+            stackOut_18_0 = (RuntimeException) (var6);
             stackOut_18_1 = new StringBuilder().append("nd.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param4 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L5;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -135,34 +139,35 @@ final class nd implements jm {
               break L5;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     nd(lh param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        ((nd) this).field_j = 1;
-        ((nd) this).field_n = 1;
+        this.field_j = 1;
+        this.field_n = 1;
         try {
-            ((nd) this).field_f = param8;
-            ((nd) this).field_o = param1;
-            ((nd) this).field_m = param0;
-            ((nd) this).field_g = param3;
-            ((nd) this).field_e = param2;
-            ((nd) this).field_a = param7;
-            ((nd) this).field_c = param5;
-            ((nd) this).field_i = param4;
-            ((nd) this).field_d = param6;
-            ((nd) this).field_k = param9;
+            this.field_f = param8;
+            this.field_o = param1;
+            this.field_m = param0;
+            this.field_g = param3;
+            this.field_e = param2;
+            this.field_a = param7;
+            this.field_c = param5;
+            this.field_i = param4;
+            this.field_d = param6;
+            this.field_k = param9;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "nd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "nd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = new jc();
         field_b = "Send private Quick Chat to <%0>";
         field_l = 0;

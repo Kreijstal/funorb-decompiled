@@ -8,7 +8,7 @@ final class sn extends os implements oo {
     private rq field_X;
 
     public final void a(int param0, int param1, int param2, htb param3, int param4) {
-        if (!(!((sn) this).field_ab)) {
+        if (!(!this.field_ab)) {
             rga.a(false, true, false);
             return;
         }
@@ -17,9 +17,9 @@ final class sn extends os implements oo {
             return;
         }
         try {
-            ((sn) this).l((byte) -106);
+            this.l((byte) -106);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sn.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "sn.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -62,23 +62,23 @@ final class sn extends os implements oo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("sn.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param6 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -86,7 +86,7 @@ final class sn extends os implements oo {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class sn extends os implements oo {
         int var10 = 0;
         int var11 = 0;
         try {
-            pea.a(param2.field_zb, (llb) (Object) param2, -1, (int[]) null, param2.field_Hb, param5, param2.field_xb, (byte) 103, -1);
+            pea.a(param2.field_zb, param2, -1, (int[]) null, param2.field_Hb, param5, param2.field_xb, (byte) 103, -1);
             cka.field_o.a(true, param3 + -35);
             cka.field_o.a(-70, 0, (int[]) null);
             cka.field_o.b(param3 + -9994);
@@ -106,22 +106,24 @@ final class sn extends os implements oo {
             var9 = param0;
             var10 = param6;
             if (param3 != 71) {
-                Object var12 = null;
+                lta var12 = (lta) null;
                 sn.a(64, (byte) -32, -119, -6, 29, 12, (lta) null);
             }
             var11 = param1;
             var13.field_i.b(var8, -29060, var9, var10, var11);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sn.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "sn.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
     private final void a(boolean param0, boolean param1, tpa param2) {
+        htb discarded$2 = null;
+        htb discarded$3 = null;
         RuntimeException var4 = null;
         String var4_ref = null;
         nna var5 = null;
         int var6 = 0;
-        Object var7 = null;
+        soa var7 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
@@ -129,6 +131,7 @@ final class sn extends os implements oo {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_34_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_31_0 = null;
         StringBuilder stackOut_31_1 = null;
@@ -142,14 +145,14 @@ final class sn extends os implements oo {
         try {
           L0: {
             L1: {
-              ((sn) this).field_Z = true;
+              this.field_Z = true;
               if (param2.field_g) {
                 var4_ref = uj.field_c;
                 break L1;
               } else {
                 if (null == param2.field_e) {
                   var4_ref = param2.field_f;
-                  if (param2.field_d == 248) {
+                  if (-249 == (param2.field_d ^ -1)) {
                     L2: {
                       if (!param0) {
                         qlb.b((byte) -75);
@@ -159,36 +162,37 @@ final class sn extends os implements oo {
                       }
                     }
                     var4_ref = mtb.field_q;
-                    ((sn) this).field_ab = true;
+                    this.field_ab = true;
                     break L1;
                   } else {
                     break L1;
                   }
                 } else {
                   var4_ref = ks.field_p;
-                  if (null == ((sn) this).field_X) {
+                  if (null == this.field_X) {
                     break L1;
                   } else {
-                    ((sn) this).field_X.a(1546);
+                    this.field_X.a(1546);
                     break L1;
                   }
                 }
               }
             }
             L3: {
-              var5 = new nna((os) this, vob.field_r, var4_ref);
+              var5 = new nna((os) (this), vob.field_r, var4_ref);
               if (param2.field_g) {
                 if (param2.field_c) {
-                  ((sn) this).b((shb) (Object) new w((sn) this), -99);
-                  return;
+                  this.b(new w((sn) (this)), -99);
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
-                  htb discarded$2 = var5.a((byte) 107, tn.field_b, (sba) this);
+                  discarded$2 = var5.a((byte) 107, tn.field_b, (sba) (this));
                   break L3;
                 }
               } else {
                 L4: {
-                  if (((sn) this).field_ab) {
-                    htb discarded$3 = var5.a((byte) 98, tn.field_b, (sba) this);
+                  if (this.field_ab) {
+                    discarded$3 = var5.a((byte) 98, tn.field_b, (sba) (this));
                     break L4;
                   } else {
                     if (param2.field_d == 5) {
@@ -218,35 +222,36 @@ final class sn extends os implements oo {
               if (!param1) {
                 break L5;
               } else {
-                var7 = null;
+                var7 = (soa) null;
                 sn.a(-93, 7, (jk) null, (byte) 42, -22, (soa) null, 46);
                 break L5;
               }
             }
-            ((sn) this).b((shb) (Object) var5, 99);
+            this.b(var5, 99);
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var4;
+            stackOut_31_0 = (RuntimeException) (var4);
             stackOut_31_1 = new StringBuilder().append("sn.P(").append(param0).append(',').append(param1).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param2 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L6;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
@@ -254,24 +259,29 @@ final class sn extends os implements oo {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     sn(ida param0, rq param1) {
         super(param0, vob.field_r, oma.field_c, false, false);
         try {
-            ((sn) this).field_X = param1;
+            this.field_X = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "sn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean a(int param0) {
         tpa var2 = null;
         if (param0 == 248) {
-          if (((sn) this).field_z) {
-            if (!((sn) this).field_Z) {
+          if (this.field_z) {
+            if (!this.field_Z) {
               var2 = nkb.a(10589);
               if (var2 == null) {
                 return super.a(248);
@@ -286,9 +296,9 @@ final class sn extends os implements oo {
             return super.a(248);
           }
         } else {
-          ((sn) this).field_ab = false;
-          if (((sn) this).field_z) {
-            if (!((sn) this).field_Z) {
+          this.field_ab = false;
+          if (this.field_z) {
+            if (!this.field_Z) {
               var2 = nkb.a(10589);
               if (var2 == null) {
                 return super.a(248);
@@ -306,10 +316,6 @@ final class sn extends os implements oo {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Y = true;
     }
 }

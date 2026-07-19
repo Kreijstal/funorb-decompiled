@@ -52,12 +52,12 @@ final class rl {
         int var7 = Pixelate.field_H ? 1 : 0;
         int var6 = 0;
         if (!param3) {
-            field_G = null;
+            field_G = (double[]) null;
         }
-        while (((rl) this).field_A > var6) {
-            ((rl) this).field_k[var6] = (short)(param2 * ((rl) this).field_k[var6] / param4);
-            ((rl) this).field_N[var6] = (short)(((rl) this).field_N[var6] * param0 / param4);
-            ((rl) this).field_E[var6] = (short)(((rl) this).field_E[var6] * param1 / param4);
+        while (this.field_A > var6) {
+            this.field_k[var6] = (short)(param2 * this.field_k[var6] / param4);
+            this.field_N[var6] = (short)(this.field_N[var6] * param0 / param4);
+            this.field_E[var6] = (short)(this.field_E[var6] * param1 / param4);
             var6++;
         }
         this.a(-125);
@@ -69,6 +69,9 @@ final class rl {
         field_m = null;
         field_f = null;
         field_G = null;
+        if (param0 >= -77) {
+            field_f = (double[]) null;
+        }
     }
 
     final void a(byte param0) {
@@ -84,11 +87,11 @@ final class rl {
         int var11 = 0;
         int var12 = 0;
         var12 = Pixelate.field_H ? 1 : 0;
-        if (((rl) this).field_Q) {
+        if (this.field_Q) {
           return;
         } else {
           L0: {
-            ((rl) this).field_Q = true;
+            this.field_Q = true;
             var2 = 32767;
             var3 = 32767;
             var4 = 32767;
@@ -98,25 +101,25 @@ final class rl {
             if (param0 == -17) {
               break L0;
             } else {
-              ((rl) this).field_j = (short) -116;
+              this.field_j = (short) -116;
               break L0;
             }
           }
           var8 = 0;
           L1: while (true) {
-            if (((rl) this).field_A <= var8) {
-              ((rl) this).field_g = var7;
-              ((rl) this).field_t = var3;
-              ((rl) this).field_x = var4;
-              ((rl) this).field_b = var2;
-              ((rl) this).field_F = var6;
-              ((rl) this).field_c = var5;
+            if (this.field_A <= var8) {
+              this.field_g = var7;
+              this.field_t = var3;
+              this.field_x = var4;
+              this.field_b = var2;
+              this.field_F = var6;
+              this.field_c = var5;
               return;
             } else {
               L2: {
-                var9 = ((rl) this).field_k[var8];
-                var10 = ((rl) this).field_N[var8];
-                var11 = ((rl) this).field_E[var8];
+                var9 = this.field_k[var8];
+                var10 = this.field_N[var8];
+                var11 = this.field_E[var8];
                 if (var9 >= var2) {
                   break L2;
                 } else {
@@ -173,12 +176,12 @@ final class rl {
         int var5 = 0;
         int var6 = Pixelate.field_H ? 1 : 0;
         if (param3 != -83) {
-            ((rl) this).a((byte) 65);
+            this.a((byte) 65);
         }
-        for (var5 = 0; ((rl) this).field_A > var5; var5++) {
-            ((rl) this).field_k[var5] = (short)(((rl) this).field_k[var5] + param0);
-            ((rl) this).field_N[var5] = (short)(((rl) this).field_N[var5] + param2);
-            ((rl) this).field_E[var5] = (short)(((rl) this).field_E[var5] + param1);
+        for (var5 = 0; this.field_A > var5; var5++) {
+            this.field_k[var5] = (short)(this.field_k[var5] + param0);
+            this.field_N[var5] = (short)(this.field_N[var5] + param2);
+            this.field_E[var5] = (short)(this.field_E[var5] + param1);
         }
         this.a(-126);
     }
@@ -187,10 +190,11 @@ final class rl {
         if (param0 >= -122) {
             return;
         }
-        ((rl) this).field_Q = false;
+        this.field_Q = false;
     }
 
     final static int b(byte param0) {
+        int discarded$1 = 0;
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -213,7 +217,7 @@ final class rl {
                   if (param0 > 74) {
                     break L2;
                   } else {
-                    int discarded$1 = rl.b((byte) -77);
+                    discarded$1 = rl.b((byte) -77);
                     break L2;
                   }
                 }
@@ -231,7 +235,7 @@ final class rl {
                     if (var1_int == 0) {
                       break L5;
                     } else {
-                      if (mj.field_c.field_j >= 0) {
+                      if ((mj.field_c.field_j ^ -1) <= -1) {
                         L6: {
                           var3 = jj.field_h[mj.field_c.field_j];
                           if (var3 == 2) {
@@ -254,7 +258,7 @@ final class rl {
                   if (var2 == 0) {
                     break L4;
                   } else {
-                    if (ha.field_h != 2) {
+                    if (-3 != (ha.field_h ^ -1)) {
                       dh.a(0);
                       break L4;
                     } else {
@@ -306,27 +310,23 @@ final class rl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "rl.B(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) var1), "rl.B(" + param0 + ')');
         }
         return stackIn_31_0;
     }
 
     rl() {
-        ((rl) this).field_B = (byte) 0;
-        ((rl) this).field_Q = false;
+        this.field_B = (byte) 0;
+        this.field_Q = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_O = "Age:";
         field_e = "Logging in...";
         field_f = new double[65536];
         field_G = new double[65536];
-        for (var0 = 0; var0 < 65536; var0++) {
+        for (var0 = 0; (var0 ^ -1) > -65537; var0++) {
             field_f[var0] = Math.sin((double)var0 * 3.141592653589793 / 32768.0);
             field_G[var0] = Math.cos((double)var0 * 3.141592653589793 / 32768.0);
         }

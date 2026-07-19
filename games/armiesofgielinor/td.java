@@ -14,12 +14,22 @@ final class td implements kh {
     public static void a(int param0) {
         field_h = null;
         field_a = null;
-        field_f = null;
-        field_d = null;
-        field_g = null;
+        if (param0 >= -9) {
+          field_g = (je) null;
+          field_f = null;
+          field_d = (sn[][]) null;
+          field_g = null;
+          return;
+        } else {
+          field_f = null;
+          field_d = (sn[][]) null;
+          field_g = null;
+          return;
+        }
     }
 
     public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -35,6 +45,7 @@ final class td implements kh {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_6_0 = 0;
@@ -70,78 +81,99 @@ final class td implements kh {
               }
               L3: {
                 var6_int = stackIn_7_0;
-                int discarded$1 = ((td) this).field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_v + "</u>", param0.field_B + param1, param0.field_p + param4, param0.field_l, param0.field_w, var6_int, -1, ((td) this).field_e, ((td) this).field_c, ((td) this).field_b.field_H - -((td) this).field_b.field_L);
+                discarded$1 = this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_v + "</u>", param0.field_B + param1, param0.field_p + param4, param0.field_l, param0.field_w, var6_int, -1, this.field_e, this.field_c, this.field_b.field_H - -this.field_b.field_L);
                 if (!param0.a(false)) {
                   break L3;
                 } else {
                   L4: {
-                    var7 = ((td) this).field_b.a(param0.field_v);
-                    var8 = ((td) this).field_b.field_H + ((td) this).field_b.field_L;
-                    var9 = param1 - -param0.field_B;
-                    if (((td) this).field_e == 2) {
-                      var9 = var9 + (-var7 + param0.field_l);
-                      break L4;
-                    } else {
-                      if (((td) this).field_e == 1) {
-                        var9 = var9 + (param0.field_l - var7 >> 1);
-                        break L4;
+                    L5: {
+                      var7 = this.field_b.a(param0.field_v);
+                      var8 = this.field_b.field_H + this.field_b.field_L;
+                      var9 = param1 - -param0.field_B;
+                      if (-3 == (this.field_e ^ -1)) {
+                        break L5;
                       } else {
-                        break L4;
+                        if ((this.field_e ^ -1) == -2) {
+                          var9 = var9 + (param0.field_l - var7 >> -237831007);
+                          if (var11 == 0) {
+                            break L4;
+                          } else {
+                            break L5;
+                          }
+                        } else {
+                          break L4;
+                        }
                       }
                     }
+                    var9 = var9 + (-var7 + param0.field_l);
+                    break L4;
                   }
-                  L5: {
-                    var10 = param4 + param0.field_p;
-                    if (((td) this).field_c == 2) {
-                      var10 = var10 + (param0.field_w + -var8);
-                      break L5;
-                    } else {
-                      if (((td) this).field_c != 1) {
-                        break L5;
+                  L6: {
+                    L7: {
+                      var10 = param4 + param0.field_p;
+                      if (-3 == (this.field_c ^ -1)) {
+                        break L7;
                       } else {
-                        var10 = var10 + (param0.field_w - var8 >> 1);
-                        break L5;
+                        if (this.field_c != 1) {
+                          break L6;
+                        } else {
+                          var10 = var10 + (param0.field_w - var8 >> 1595299585);
+                          if (var11 == 0) {
+                            break L6;
+                          } else {
+                            break L7;
+                          }
+                        }
                       }
                     }
+                    var10 = var10 + (param0.field_w + -var8);
+                    break L6;
                   }
                   na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
                   break L3;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L8: {
             var6 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var6;
+            stackOut_19_0 = (RuntimeException) (var6);
             stackOut_19_1 = new StringBuilder().append("td.C(");
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
-              break L6;
+              break L8;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
               stackIn_22_2 = stackOut_20_2;
-              break L6;
+              break L8;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -150,21 +182,37 @@ final class td implements kh {
         int var3 = 0;
         var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         var2 = param0;
-        if (var2 != -60) {
-          if (-54 != var2) {
+        if ((var2 ^ -1) != -60) {
+          if (-54 != (var2 ^ -1)) {
             if (var2 != 43) {
               if (var2 != 63) {
-                if (var2 != 58) {
+                if (-59 != (var2 ^ -1)) {
                   if (param1 > -40) {
                     return -5;
                   } else {
                     return -1;
                   }
                 } else {
-                  return 1;
+                  if (var3 != 0) {
+                    return 2;
+                  } else {
+                    return 1;
+                  }
                 }
               } else {
-                return 0;
+                if (var3 != 0) {
+                  if (-59 != (var2 ^ -1)) {
+                    if (param1 > -40) {
+                      return -5;
+                    } else {
+                      return -1;
+                    }
+                  } else {
+                    return 2;
+                  }
+                } else {
+                  return 0;
+                }
               }
             } else {
               return 4;
@@ -178,34 +226,31 @@ final class td implements kh {
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
-        Object var4 = null;
+        int discarded$0 = 0;
+        String var4 = (String) null;
         rn.a(3, (String) null, param0, param1);
         if (param2 <= 4) {
-            int discarded$0 = td.a(46, (byte) -104);
+            discarded$0 = td.a(46, (byte) -104);
         }
     }
 
     public td() {
-        ((td) this).field_b = ArmiesOfGielinor.field_J;
-        ((td) this).field_e = 1;
-        ((td) this).field_c = 1;
+        this.field_b = ArmiesOfGielinor.field_J;
+        this.field_e = 1;
+        this.field_c = 1;
     }
 
     td(ka param0, int param1, int param2) {
         try {
-            ((td) this).field_b = param0;
-            ((td) this).field_c = param2;
-            ((td) this).field_e = param1;
+            this.field_b = param0;
+            this.field_c = param2;
+            this.field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "td.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "This unit has ingested a cloning catalyst and will leave behind a perfect replica when it next moves.";
         field_a = "<%0>-<%1>";
     }

@@ -10,6 +10,9 @@ final class jf {
     private static String field_z;
 
     public static void a(byte param0) {
+        if (param0 > -7) {
+            return;
+        }
         field_a = null;
         field_d = null;
         field_c = null;
@@ -17,10 +20,6 @@ final class jf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "jf.A(";
         field_c = "Modifiers enhance powerups. Drag RED (pentagon) research here (if it applies).";
         field_e = 0;

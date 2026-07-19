@@ -14,6 +14,7 @@ final class ea {
     private int field_b;
 
     final void a(int param0, double param1, int[] param2) {
+        int incrementValue$1 = 0;
         double var5 = 0.0;
         double var7 = 0.0;
         double var9 = 0.0;
@@ -41,28 +42,24 @@ final class ea {
         int var37 = 0;
         int[] var38 = null;
         int[] var39 = null;
-        int[] var40 = null;
-        int[] var41 = null;
         var29 = 0;
-        var41 = oo.field_i;
-        var40 = var41;
-        var39 = var40;
+        var39 = oo.field_i;
         var38 = var39;
         var30 = var38;
         var31 = 0;
         L0: while (true) {
-          if (var31 >= ((ea) this).field_b) {
+          if (var31 >= this.field_b) {
             return;
           } else {
             var32 = 0;
             L1: while (true) {
-              if (var32 >= ((ea) this).field_j) {
+              if (var32 >= this.field_j) {
                 var31++;
                 continue L0;
               } else {
-                if (var41[var29] != 0) {
-                  var7 = ((ea) this).field_h[var32][var31];
-                  var5 = ((ea) this).field_d[var32][var31];
+                if (var39[var29] != 0) {
+                  var7 = this.field_h[var32][var31];
+                  var5 = this.field_d[var32][var31];
                   var16 = 0;
                   var33 = var7 / 64.0;
                   var35 = var5 / 4.0;
@@ -84,7 +81,7 @@ final class ea {
                           break L3;
                         }
                       }
-                      int incrementValue$1 = var29;
+                      incrementValue$1 = var29;
                       var29++;
                       var30[incrementValue$1] = param2[var16];
                       var32++;
@@ -100,8 +97,8 @@ final class ea {
                         var23 = var9 - (double)var13;
                         var25 = var11 - (double)var14;
                         var37 = var28 * var13;
-                        var17 = ((ea) this).field_e[var14 + var37 & 65535];
-                        var18 = ((ea) this).field_e[var14 + var37 + var28 & 65535];
+                        var17 = this.field_e[var14 + var37 & 65535];
+                        var18 = this.field_e[var14 + var37 + var28 & 65535];
                         var14++;
                         if (var14 < var28) {
                           break L4;
@@ -110,8 +107,8 @@ final class ea {
                           break L4;
                         }
                       }
-                      var19 = ((ea) this).field_e[var14 + var37 & 65535];
-                      var20 = ((ea) this).field_e[var14 + var37 + var28 & 65535];
+                      var19 = this.field_e[var14 + var37 & 65535];
+                      var20 = this.field_e[var14 + var37 + var28 & 65535];
                       var21 = ea.a(var17, var18, var23);
                       var22 = ea.a(var19, var20, var23);
                       var16 = var16 + (ea.a(var21, var22, var25) << 8) / var27;
@@ -146,47 +143,47 @@ final class ea {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        ((ea) this).field_j = oo.field_b;
-        ((ea) this).field_b = oo.field_l;
-        ((ea) this).field_g = oo.field_b / 2;
-        ((ea) this).field_c = oo.field_l / 2;
-        ((ea) this).field_f = (int)Math.sqrt((double)(((ea) this).field_c * ((ea) this).field_c + ((ea) this).field_g * ((ea) this).field_g));
-        ((ea) this).field_a = 3.141592653589793 / (double)(2 * ((ea) this).field_f);
-        ((ea) this).field_i = 40.74366543152521;
-        ((ea) this).field_d = new double[oo.field_b][oo.field_l];
-        ((ea) this).field_h = new double[oo.field_b][oo.field_l];
+        this.field_j = oo.field_b;
+        this.field_b = oo.field_l;
+        this.field_g = oo.field_b / 2;
+        this.field_c = oo.field_l / 2;
+        this.field_f = (int)Math.sqrt((double)(this.field_c * this.field_c + this.field_g * this.field_g));
+        this.field_a = 3.141592653589793 / (double)(2 * this.field_f);
+        this.field_i = 40.74366543152521;
+        this.field_d = new double[oo.field_b][oo.field_l];
+        this.field_h = new double[oo.field_b][oo.field_l];
         var3 = 0;
         L0: while (true) {
           if (var3 >= oo.field_b) {
-            ((ea) this).field_e = new int[65536];
+            this.field_e = new int[65536];
             var3 = 0;
             L1: while (true) {
               if (var3 >= 65536) {
                 return;
               } else {
-                ((ea) this).field_e[var3] = ea.a(var3);
+                this.field_e[var3] = ea.a(var3);
                 var3++;
                 continue L1;
               }
             }
           } else {
-            var1 = var3 - ((ea) this).field_g;
+            var1 = var3 - this.field_g;
             var4 = 0;
             L2: while (true) {
               if (var4 >= oo.field_l) {
                 var3++;
                 continue L0;
               } else {
-                var2 = var4 - ((ea) this).field_c;
-                ((ea) this).field_d[var3][var4] = Math.tan(((ea) this).field_a * ((double)((ea) this).field_f - Math.sqrt((double)(var1 * var1 + var2 * var2))));
-                ((ea) this).field_h[var3][var4] = 128.0 + ((ea) this).field_i * Math.atan((double)var2 / ((double)var1 + 0.5));
+                var2 = var4 - this.field_c;
+                this.field_d[var3][var4] = Math.tan(this.field_a * ((double)this.field_f - Math.sqrt((double)(var1 * var1 + var2 * var2))));
+                this.field_h[var3][var4] = 128.0 + this.field_i * Math.atan((double)var2 / ((double)var1 + 0.5));
                 if (var1 < 0) {
                   if (var2 <= 0) {
-                    ((ea) this).field_h[var3][var4] = ((ea) this).field_h[var3][var4] - 128.0;
+                    this.field_h[var3][var4] = this.field_h[var3][var4] - 128.0;
                     var4++;
                     continue L2;
                   } else {
-                    ((ea) this).field_h[var3][var4] = ((ea) this).field_h[var3][var4] + 128.0;
+                    this.field_h[var3][var4] = this.field_h[var3][var4] + 128.0;
                     var4++;
                     continue L2;
                   }

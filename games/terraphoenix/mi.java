@@ -9,13 +9,13 @@ final class mi extends nb {
 
     final static void d(int param0) {
         if (param0 != -22284) {
-            field_h = null;
+            field_h = (fa) null;
         }
     }
 
     final cm c(int param0) {
         if (param0 != 0) {
-            field_h = null;
+            field_h = (fa) null;
             return rj.field_a;
         }
         return rj.field_a;
@@ -23,7 +23,7 @@ final class mi extends nb {
 
     final static boolean a(byte param0) {
         if (param0 > -71) {
-            field_i = null;
+            field_i = (String) null;
             return true;
         }
         return true;
@@ -38,31 +38,27 @@ final class mi extends nb {
     }
 
     final void a(byte param0, dh param1) {
-        param1.b(((mi) this).field_k, -89);
+        param1.b(this.field_k, -89);
         if (param0 != -2) {
             return;
         }
         try {
-            param1.a(-97, ((mi) this).field_j);
+            param1.a(-97, this.field_j);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "mi.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "mi.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     mi(String param0, String param1) {
         try {
-            ((mi) this).field_j = param1;
-            ((mi) this).field_k = param0;
+            this.field_j = param1;
+            this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "mi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "mi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "To server list";
     }
 }

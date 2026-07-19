@@ -8,7 +8,7 @@ final class vd {
     static String field_b;
 
     public static void a(byte param0) {
-        int var1 = 0;
+        int var1 = 80 % ((param0 - -41) / 47);
         field_b = null;
         field_c = null;
         field_d = null;
@@ -53,10 +53,10 @@ final class vd {
               }
             }
             L4: while (true) {
-              if (~param0 >= ~var7) {
+              if (param0 <= var7) {
                 L5: {
                   jh.b();
-                  if (param3 == 2) {
+                  if ((param3 ^ -1) == -3) {
                     wh.field_g.j(-var6_int + param4, param5);
                     break L5;
                   } else {
@@ -64,7 +64,7 @@ final class vd {
                   }
                 }
                 L6: {
-                  if (param1 != 2) {
+                  if (-3 != (param1 ^ -1)) {
                     break L6;
                   } else {
                     wh.field_g.h(param0 + param4, param5);
@@ -72,7 +72,7 @@ final class vd {
                   }
                 }
                 L7: {
-                  if (param3 != 1) {
+                  if ((param3 ^ -1) != -2) {
                     break L7;
                   } else {
                     var7 = 0;
@@ -114,15 +114,11 @@ final class vd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var6, "vd.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw vk.a((Throwable) ((Object) var6), "vd.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "ACHIEVEMENTS";
         field_a = 94;
         field_d = "End Game";

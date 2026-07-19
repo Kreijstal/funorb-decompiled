@@ -10,6 +10,7 @@ final class gj {
     static String field_a;
 
     final static boolean b(int param0) {
+        boolean discarded$5 = false;
         if (param0 == -26966) {
           if (ng.field_g != null) {
             if (!ng.field_g.a(0)) {
@@ -21,7 +22,7 @@ final class gj {
             return false;
           }
         } else {
-          boolean discarded$5 = gj.b(17);
+          discarded$5 = gj.b(17);
           if (ng.field_g != null) {
             if (!ng.field_g.a(0)) {
               return false;
@@ -36,34 +37,105 @@ final class gj {
 
     final static void a(int param0) {
         br var1 = null;
-        int var2 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (!df.field_H) {
-            return;
-        }
+        RuntimeException var1_ref = null;
+        int var2 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var2 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-            var1 = fd.field_M.c(54);
-            while (var1 instanceof wj) {
-                aa.a(true, ((wj) (Object) var1).field_m);
-                var1 = var1.field_d;
+          L0: {
+            if (df.field_H) {
+              var1 = fd.field_M.c(54);
+              L1: while (true) {
+                L2: {
+                  if (!(var1 instanceof wj)) {
+                    var1 = qo.field_q.c(53);
+                    break L2;
+                  } else {
+                    aa.a(true, ((wj) ((Object) var1)).field_m);
+                    var1 = var1.field_d;
+                    if (var2 != 0) {
+                      break L2;
+                    } else {
+                      if (var2 == 0) {
+                        continue L1;
+                      } else {
+                        var1 = qo.field_q.c(53);
+                        break L2;
+                      }
+                    }
+                  }
+                }
+                L3: while (true) {
+                  L4: {
+                    L5: {
+                      if (!(var1 instanceof wj)) {
+                        break L5;
+                      } else {
+                        aa.a(true, ((wj) ((Object) var1)).field_m);
+                        var1 = var1.field_d;
+                        if (var2 != 0) {
+                          break L4;
+                        } else {
+                          if (var2 == 0) {
+                            continue L3;
+                          } else {
+                            break L5;
+                          }
+                        }
+                      }
+                    }
+                    if (param0 == 6962) {
+                      break L4;
+                    } else {
+                      gj.a((byte) 105);
+                      break L4;
+                    }
+                  }
+                  var1 = jp.field_c.c(83);
+                  L6: while (true) {
+                    L7: {
+                      L8: {
+                        if (!(var1 instanceof wj)) {
+                          break L8;
+                        } else {
+                          aa.a(true, ((wj) ((Object) var1)).field_m);
+                          var1 = var1.field_d;
+                          if (var2 != 0) {
+                            break L7;
+                          } else {
+                            if (var2 == 0) {
+                              continue L6;
+                            } else {
+                              break L8;
+                            }
+                          }
+                        }
+                      }
+                      fd.field_M.e(-30986);
+                      qo.field_q.e(-30986);
+                      jp.field_c.e(param0 ^ -25148);
+                      break L7;
+                    }
+                    decompiledRegionSelector0 = 1;
+                    break L0;
+                  }
+                }
+              }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-            var1 = qo.field_q.c(53);
-            while (var1 instanceof wj) {
-                aa.a(true, ((wj) (Object) var1).field_m);
-                var1 = var1.field_d;
-            }
-            if (param0 != 6962) {
-                gj.a((byte) 105);
-            }
-            var1 = jp.field_c.c(83);
-            while (var1 instanceof wj) {
-                aa.a(true, ((wj) (Object) var1).field_m);
-                var1 = var1.field_d;
-            }
-            fd.field_M.e(-30986);
-            qo.field_q.e(-30986);
-            jp.field_c.e(param0 ^ -25148);
-        } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "gj.A(" + param0 + ')');
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw fa.a((Throwable) ((Object) var1_ref), "gj.A(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -84,10 +156,6 @@ final class gj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = false;
         field_b = null;
         field_c = "Mobile";

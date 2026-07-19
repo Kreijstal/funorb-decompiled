@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.Class;
-
 final class hh {
     static db field_b;
     static hl field_c;
@@ -28,6 +26,7 @@ final class hh {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Class stackOut_5_0 = null;
         Class stackOut_9_0 = null;
@@ -49,79 +48,88 @@ final class hh {
         try {
           L0: {
             var2_int = -29 % ((param1 - -14) / 52);
-            if (!param0.equals((Object) (Object) "B")) {
-              if (param0.equals((Object) (Object) "I")) {
+            if (!param0.equals("B")) {
+              if (param0.equals("I")) {
                 stackOut_5_0 = Integer.TYPE;
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
-                if (param0.equals((Object) (Object) "S")) {
+                if (param0.equals("S")) {
                   stackOut_9_0 = Short.TYPE;
                   stackIn_10_0 = stackOut_9_0;
-                  return stackIn_10_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
-                  if (!param0.equals((Object) (Object) "J")) {
-                    if (!param0.equals((Object) (Object) "Z")) {
-                      if (param0.equals((Object) (Object) "F")) {
+                  if (!param0.equals("J")) {
+                    if (!param0.equals("Z")) {
+                      if (param0.equals("F")) {
                         stackOut_19_0 = Float.TYPE;
                         stackIn_20_0 = stackOut_19_0;
-                        return stackIn_20_0;
+                        decompiledRegionSelector0 = 5;
+                        break L0;
                       } else {
-                        if (param0.equals((Object) (Object) "D")) {
+                        if (param0.equals("D")) {
                           stackOut_23_0 = Double.TYPE;
                           stackIn_24_0 = stackOut_23_0;
-                          return stackIn_24_0;
+                          decompiledRegionSelector0 = 6;
+                          break L0;
                         } else {
-                          if (!param0.equals((Object) (Object) "C")) {
+                          if (!param0.equals("C")) {
                             stackOut_28_0 = Class.forName(param0);
                             stackIn_29_0 = stackOut_28_0;
+                            decompiledRegionSelector0 = 8;
                             break L0;
                           } else {
                             stackOut_26_0 = Character.TYPE;
                             stackIn_27_0 = stackOut_26_0;
-                            return stackIn_27_0;
+                            decompiledRegionSelector0 = 7;
+                            break L0;
                           }
                         }
                       }
                     } else {
                       stackOut_15_0 = Boolean.TYPE;
                       stackIn_16_0 = stackOut_15_0;
-                      return stackIn_16_0;
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     }
                   } else {
                     stackOut_12_0 = Long.TYPE;
                     stackIn_13_0 = stackOut_12_0;
-                    return stackIn_13_0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   }
                 }
               }
             } else {
               stackOut_1_0 = Byte.TYPE;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var2;
+            stackOut_30_0 = (RuntimeException) (var2);
             stackOut_30_1 = new StringBuilder().append("hh.A(");
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param0 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "null";
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
               break L1;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_33_0 = stackOut_31_0;
               stackIn_33_1 = stackOut_31_1;
@@ -129,9 +137,41 @@ final class hh {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + param1 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ',' + param1 + ')');
         }
-        return stackIn_29_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_10_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_13_0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_16_0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_20_0;
+                  } else {
+                    if (decompiledRegionSelector0 == 6) {
+                      return stackIn_24_0;
+                    } else {
+                      if (decompiledRegionSelector0 == 7) {
+                        return stackIn_27_0;
+                      } else {
+                        return stackIn_29_0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     public static void a(byte param0) {
@@ -167,10 +207,6 @@ final class hh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Loading fonts";
         field_b = new db(12, 0, 1, 0);
         field_d = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};

@@ -24,19 +24,23 @@ final class ti {
     }
 
     final static boolean b(int param0) {
+        String discarded$0 = null;
+        if (param0 != 10618) {
+            discarded$0 = ti.a((byte) -1);
+            return ma.a(-120, rl.a((byte) -77));
+        }
         return ma.a(-120, rl.a((byte) -77));
     }
 
     public static void a(int param0) {
+        if (param0 != -23740) {
+            return;
+        }
         field_a = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "<shad=808080>";
         field_b = "<%0>Barriers:<%1> Acts like a normal wall, but can be removed by triggering a blue switch.";
     }

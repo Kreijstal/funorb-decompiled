@@ -67,10 +67,11 @@ public class aj {
     }
 
     public static File a(String param0, byte param1) {
-        Object var3 = null;
+        File discarded$2 = null;
+        String var3 = null;
         if (param1 > -67) {
-          var3 = null;
-          File discarded$2 = aj.a((String) null, (byte) -120);
+          var3 = (String) null;
+          discarded$2 = aj.a((String) null, (byte) -120);
           return aj.a(field_d, -27533, param0, field_a);
         } else {
           return aj.a(field_d, -27533, param0, field_a);
@@ -78,10 +79,6 @@ public class aj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = false;
         field_c = new Hashtable(16);
     }

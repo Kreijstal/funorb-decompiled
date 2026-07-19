@@ -31,7 +31,7 @@ final class ie {
         try {
           L0: {
             var3_int = 1 / ((param0 - -10) / 62);
-            stackOut_0_0 = wl.a(true, param2, false, 16);
+            stackOut_0_0 = wl.a(true, param2, false, param1);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -39,23 +39,23 @@ final class ie {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("ie.C(").append(param0).append(',').append(16).append(',');
+            stackOut_2_0 = (RuntimeException) (var3);
+            stackOut_2_1 = new StringBuilder().append("ie.C(").append(param0).append(',').append(param1).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -63,26 +63,34 @@ final class ie {
               break L1;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
 
     public static void a(byte param0) {
-        field_b = null;
-        field_a = null;
-        field_c = null;
+        int discarded$2 = 0;
+        CharSequence var2 = null;
+        if (param0 != -15) {
+          var2 = (CharSequence) null;
+          discarded$2 = ie.a((byte) -127, -18, (CharSequence) null);
+          field_b = null;
+          field_a = null;
+          field_c = null;
+          return;
+        } else {
+          field_b = null;
+          field_a = null;
+          field_c = null;
+          return;
+        }
     }
 
     final static void a(int param0) {
-        bm.a(4, (byte) 1);
+        bm.a(param0, (byte) 1);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = -1;
         field_c = "Warning: if you quit, you will lose any game you are in the middle of!";
         field_a = "No Highscores";

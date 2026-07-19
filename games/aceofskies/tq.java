@@ -10,23 +10,32 @@ final class tq extends fa {
     static String[] field_e;
 
     final static boolean c(boolean param0) {
-        if (!(ei.a("jaclib", (byte) -16))) {
-            return false;
+        if (!ei.a("jaclib", (byte) -16)) {
+          return false;
+        } else {
+          if (!param0) {
+            field_d = (kp) null;
+            return ei.a("hw3d", (byte) -16);
+          } else {
+            return ei.a("hw3d", (byte) -16);
+          }
         }
-        return ei.a("hw3d", (byte) -16);
     }
 
     public static void b(int param0) {
-        field_f = null;
+        field_f = (byte[][]) null;
         field_h = null;
         field_d = null;
         field_e = null;
         field_i = null;
+        if (param0 != 400) {
+            field_f = (byte[][]) null;
+        }
     }
 
     final static void b(boolean param0) {
         L0: {
-          ua.field_l[4] = new int[1];
+          ua.field_l[4] = new int[]{5};
           if (param0) {
             break L0;
           } else {
@@ -35,14 +44,14 @@ final class tq extends fa {
           }
         }
         aa.field_b[4] = new nk(4);
-        za.a(32, new int[6], 400, 30, 2, 468, (byte) 120);
+        za.a(32, new int[]{8, 9, 10, 21, 5, 20}, 400, 30, 2, 468, (byte) 120);
         aa.field_b[2] = new nk(2);
         if (qr.field_a > 0) {
           L1: {
             if (cn.a(pt.field_b, (byte) 75)) {
-              za.a(32, new int[6], 180, 170, 1, 470, (byte) 121);
+              za.a(32, new int[]{1, 12, 13, 4, 3, 7}, 180, 170, 1, 470, (byte) 121);
               aa.field_b[1] = new nk(1);
-              za.a(32, new int[4], 180, 170, 7, 470, (byte) 87);
+              za.a(32, new int[]{12, 13, 4, 5}, 180, 170, 7, 470, (byte) 87);
               aa.field_b[7] = new nk(7);
               break L1;
             } else {
@@ -51,7 +60,7 @@ final class tq extends fa {
           }
           co.field_b = 0;
           if ((64 & hg.field_D) == 0) {
-            if (ln.field_d < 2) {
+            if ((ln.field_d ^ -1) > -3) {
               return;
             } else {
               si.c(true);
@@ -64,7 +73,7 @@ final class tq extends fa {
         } else {
           co.field_b = 0;
           if ((64 & hg.field_D) == 0) {
-            if (ln.field_d >= 2) {
+            if ((ln.field_d ^ -1) <= -3) {
               si.c(true);
               return;
             } else {
@@ -79,17 +88,13 @@ final class tq extends fa {
 
     tq(pl[] param0) {
         try {
-            ((tq) this).field_g = param0;
+            this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "tq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "tq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new byte[250][];
         field_d = new kp();
         field_e = new String[]{"All scores", "My scores", "Best each"};

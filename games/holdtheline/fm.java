@@ -23,10 +23,6 @@ final class fm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fm.A(";
         field_c = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
         field_b = "Fetching highscores...";

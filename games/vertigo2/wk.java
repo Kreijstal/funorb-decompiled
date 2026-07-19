@@ -11,6 +11,6 @@ public class wk {
     public volatile int field_b;
 
     wk() {
-        ((wk) this).field_b = 0;
+        this.field_b = 0;
     }
 }

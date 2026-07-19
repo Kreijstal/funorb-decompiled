@@ -5,6 +5,6 @@ final class bg {
     int[] field_a;
 
     bg(qa param0, rp param1) {
-        ((bg) this).field_a = new int[4096];
+        this.field_a = new int[4096];
     }
 }

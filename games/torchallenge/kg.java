@@ -59,36 +59,40 @@ class kg extends rc {
     }
 
     final static boolean a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
+        int stackIn_7_0 = 0;
         int stackOut_5_0 = 0;
-        L0: {
-          L1: {
-            if (param3 > param4) {
-              break L1;
-            } else {
-              if (param4 >= param3 + param2) {
+        int stackOut_6_0 = 0;
+        if (param0 >= -86) {
+          return true;
+        } else {
+          L0: {
+            L1: {
+              if (param3 > param4) {
                 break L1;
               } else {
-                if (param5 < param1) {
+                if (param4 >= param3 + param2) {
                   break L1;
                 } else {
-                  if (param6 + param1 <= param5) {
+                  if (param5 < param1) {
                     break L1;
                   } else {
-                    stackOut_4_0 = 1;
-                    stackIn_6_0 = stackOut_4_0;
-                    break L0;
+                    if (param6 + param1 <= param5) {
+                      break L1;
+                    } else {
+                      stackOut_5_0 = 1;
+                      stackIn_7_0 = stackOut_5_0;
+                      break L0;
+                    }
                   }
                 }
               }
             }
+            stackOut_6_0 = 0;
+            stackIn_7_0 = stackOut_6_0;
+            break L0;
           }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
-          break L0;
+          return stackIn_7_0 != 0;
         }
-        return stackIn_6_0 != 0;
     }
 
     private final void a(byte param0, kg param1) {
@@ -115,24 +119,24 @@ class kg extends rc {
             L1: {
               if (param1 != null) {
                 L2: {
-                  if (-1 == param1.field_I) {
+                  if (-1 == (param1.field_I ^ -1)) {
                     break L2;
                   } else {
-                    ((kg) this).field_I = param1.field_I;
+                    this.field_I = param1.field_I;
                     break L2;
                   }
                 }
                 L3: {
-                  if (2147483647 == param1.field_B) {
+                  if (2147483647 == (param1.field_B ^ -1)) {
                     break L3;
                   } else {
-                    ((kg) this).field_B = param1.field_B;
+                    this.field_B = param1.field_B;
                     break L3;
                   }
                 }
                 L4: {
                   if (0 <= param1.field_Z) {
-                    ((kg) this).field_Z = param1.field_Z;
+                    this.field_Z = param1.field_Z;
                     break L4;
                   } else {
                     break L4;
@@ -142,7 +146,7 @@ class kg extends rc {
                   if (param1.field_M == 0) {
                     break L5;
                   } else {
-                    ((kg) this).field_M = param1.field_M;
+                    this.field_M = param1.field_M;
                     break L5;
                   }
                 }
@@ -150,7 +154,7 @@ class kg extends rc {
                   if (null == param1.field_hb) {
                     break L6;
                   } else {
-                    ((kg) this).field_hb = param1.field_hb;
+                    this.field_hb = param1.field_hb;
                     break L6;
                   }
                 }
@@ -158,7 +162,7 @@ class kg extends rc {
                   if (param1.field_fb == null) {
                     break L7;
                   } else {
-                    ((kg) this).field_fb = param1.field_fb;
+                    this.field_fb = param1.field_fb;
                     break L7;
                   }
                 }
@@ -166,23 +170,23 @@ class kg extends rc {
                   if (!param1.field_K) {
                     break L8;
                   } else {
-                    ((kg) this).field_K = param1.field_K;
+                    this.field_K = param1.field_K;
                     break L8;
                   }
                 }
                 L9: {
                   if (null != param1.field_T) {
-                    ((kg) this).field_T = param1.field_T;
+                    this.field_T = param1.field_T;
                     break L9;
                   } else {
                     break L9;
                   }
                 }
                 L10: {
-                  if (param1.field_bb < 0) {
+                  if (-1 < (param1.field_bb ^ -1)) {
                     break L10;
                   } else {
-                    ((kg) this).field_bb = param1.field_bb;
+                    this.field_bb = param1.field_bb;
                     break L10;
                   }
                 }
@@ -190,15 +194,15 @@ class kg extends rc {
                   if (param1.field_gb == null) {
                     break L11;
                   } else {
-                    ((kg) this).field_gb = param1.field_gb;
+                    this.field_gb = param1.field_gb;
                     break L11;
                   }
                 }
                 L12: {
-                  if (param1.field_U == 0) {
+                  if (-1 == (param1.field_U ^ -1)) {
                     break L12;
                   } else {
-                    ((kg) this).field_U = param1.field_U;
+                    this.field_U = param1.field_U;
                     break L12;
                   }
                 }
@@ -206,7 +210,7 @@ class kg extends rc {
                   if (param1.field_G == null) {
                     break L13;
                   } else {
-                    ((kg) this).field_G = param1.field_G;
+                    this.field_G = param1.field_G;
                     break L13;
                   }
                 }
@@ -214,7 +218,7 @@ class kg extends rc {
                   if (param1.field_A == null) {
                     break L14;
                   } else {
-                    ((kg) this).field_A = param1.field_A;
+                    this.field_A = param1.field_A;
                     break L14;
                   }
                 }
@@ -222,23 +226,23 @@ class kg extends rc {
                   if (param1.field_S == null) {
                     break L15;
                   } else {
-                    ((kg) this).field_S = param1.field_S;
+                    this.field_S = param1.field_S;
                     break L15;
                   }
                 }
                 L16: {
-                  if (2147483647 != param1.field_ib) {
-                    ((kg) this).field_ib = param1.field_ib;
+                  if (2147483647 != (param1.field_ib ^ -1)) {
+                    this.field_ib = param1.field_ib;
                     break L16;
                   } else {
                     break L16;
                   }
                 }
                 L17: {
-                  if (-257 == param1.field_C) {
+                  if (-257 == (param1.field_C ^ -1)) {
                     break L17;
                   } else {
-                    ((kg) this).field_C = param1.field_C;
+                    this.field_C = param1.field_C;
                     break L17;
                   }
                 }
@@ -246,13 +250,13 @@ class kg extends rc {
                   if (!param1.field_w) {
                     break L18;
                   } else {
-                    ((kg) this).field_w = param1.field_w;
+                    this.field_w = param1.field_w;
                     break L18;
                   }
                 }
                 L19: {
                   if (param1.field_x >= 0) {
-                    ((kg) this).field_x = param1.field_x;
+                    this.field_x = param1.field_x;
                     break L19;
                   } else {
                     break L19;
@@ -262,15 +266,15 @@ class kg extends rc {
                   if (param1.field_E == -2147483648) {
                     break L20;
                   } else {
-                    ((kg) this).field_E = param1.field_E;
+                    this.field_E = param1.field_E;
                     break L20;
                   }
                 }
                 L21: {
-                  if (param1.field_D == 0) {
+                  if (-1 == (param1.field_D ^ -1)) {
                     break L21;
                   } else {
-                    ((kg) this).field_D = param1.field_D;
+                    this.field_D = param1.field_D;
                     break L21;
                   }
                 }
@@ -278,7 +282,7 @@ class kg extends rc {
                   if (param1.field_W) {
                     break L22;
                   } else {
-                    ((kg) this).field_W = param1.field_W;
+                    this.field_W = param1.field_W;
                     break L22;
                   }
                 }
@@ -286,7 +290,7 @@ class kg extends rc {
                   if (0 == param1.field_N) {
                     break L23;
                   } else {
-                    ((kg) this).field_N = param1.field_N;
+                    this.field_N = param1.field_N;
                     break L23;
                   }
                 }
@@ -294,21 +298,21 @@ class kg extends rc {
                   if (null == param1.field_v) {
                     break L24;
                   } else {
-                    ((kg) this).field_v = param1.field_v;
+                    this.field_v = param1.field_v;
                     break L24;
                   }
                 }
                 L25: {
-                  if (param1.field_Q < 0) {
+                  if ((param1.field_Q ^ -1) > -1) {
                     break L25;
                   } else {
-                    ((kg) this).field_Q = param1.field_Q;
+                    this.field_Q = param1.field_Q;
                     break L25;
                   }
                 }
                 L26: {
                   if (param1.field_Y != null) {
-                    ((kg) this).field_Y = param1.field_Y;
+                    this.field_Y = param1.field_Y;
                     break L26;
                   } else {
                     break L26;
@@ -316,7 +320,7 @@ class kg extends rc {
                 }
                 L27: {
                   if (null != param1.field_R) {
-                    ((kg) this).field_R = param1.field_R;
+                    this.field_R = param1.field_R;
                     break L27;
                   } else {
                     break L27;
@@ -324,7 +328,7 @@ class kg extends rc {
                 }
                 L28: {
                   if (param1.field_H) {
-                    ((kg) this).field_H = param1.field_H;
+                    this.field_H = param1.field_H;
                     break L28;
                   } else {
                     break L28;
@@ -332,23 +336,23 @@ class kg extends rc {
                 }
                 L29: {
                   if (param1.field_J) {
-                    ((kg) this).field_J = param1.field_J;
+                    this.field_J = param1.field_J;
                     break L29;
                   } else {
                     break L29;
                   }
                 }
                 L30: {
-                  if (param1.field_V == -2147483648) {
+                  if ((param1.field_V ^ -1) == 2147483647) {
                     break L30;
                   } else {
-                    ((kg) this).field_V = param1.field_V;
+                    this.field_V = param1.field_V;
                     break L30;
                   }
                 }
                 L31: {
                   if (param1.field_L != null) {
-                    ((kg) this).field_L = param1.field_L;
+                    this.field_L = param1.field_L;
                     break L31;
                   } else {
                     break L31;
@@ -356,17 +360,17 @@ class kg extends rc {
                 }
                 L32: {
                   if (param1.field_O != null) {
-                    ((kg) this).field_O = param1.field_O;
+                    this.field_O = param1.field_O;
                     break L32;
                   } else {
                     break L32;
                   }
                 }
                 L33: {
-                  if (param1.field_ab == -2147483648) {
+                  if ((param1.field_ab ^ -1) == 2147483647) {
                     break L33;
                   } else {
-                    ((kg) this).field_ab = param1.field_ab;
+                    this.field_ab = param1.field_ab;
                     break L33;
                   }
                 }
@@ -374,7 +378,7 @@ class kg extends rc {
                   if (!param1.field_kb) {
                     break L34;
                   } else {
-                    ((kg) this).field_kb = param1.field_kb;
+                    this.field_kb = param1.field_kb;
                     break L34;
                   }
                 }
@@ -382,13 +386,13 @@ class kg extends rc {
                   if (param1.field_jb == 0) {
                     break L35;
                   } else {
-                    ((kg) this).field_jb = param1.field_jb;
+                    this.field_jb = param1.field_jb;
                     break L35;
                   }
                 }
                 L36: {
-                  if (param1.field_y != -2147483648) {
-                    ((kg) this).field_y = param1.field_y;
+                  if (2147483647 != (param1.field_y ^ -1)) {
+                    this.field_y = param1.field_y;
                     break L36;
                   } else {
                     break L36;
@@ -396,7 +400,7 @@ class kg extends rc {
                 }
                 L37: {
                   if (0 != param1.field_z) {
-                    ((kg) this).field_z = param1.field_z;
+                    this.field_z = param1.field_z;
                     break L37;
                   } else {
                     break L37;
@@ -405,37 +409,37 @@ class kg extends rc {
                 if (param1.field_X == null) {
                   break L1;
                 } else {
-                  ((kg) this).field_X = param1.field_X;
+                  this.field_X = param1.field_X;
                   break L1;
                 }
               } else {
                 break L1;
               }
             }
-            var3_int = -3;
+            var3_int = -119 % ((param0 - -75) / 42);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L38: {
             var3 = decompiledCaughtException;
-            stackOut_90_0 = (RuntimeException) var3;
-            stackOut_90_1 = new StringBuilder().append("kg.H(").append(122).append(',');
+            stackOut_90_0 = (RuntimeException) (var3);
+            stackOut_90_1 = new StringBuilder().append("kg.H(").append(param0).append(',');
             stackIn_92_0 = stackOut_90_0;
             stackIn_92_1 = stackOut_90_1;
             stackIn_91_0 = stackOut_90_0;
             stackIn_91_1 = stackOut_90_1;
             if (param1 == null) {
-              stackOut_92_0 = (RuntimeException) (Object) stackIn_92_0;
-              stackOut_92_1 = (StringBuilder) (Object) stackIn_92_1;
+              stackOut_92_0 = (RuntimeException) ((Object) stackIn_92_0);
+              stackOut_92_1 = (StringBuilder) ((Object) stackIn_92_1);
               stackOut_92_2 = "null";
               stackIn_93_0 = stackOut_92_0;
               stackIn_93_1 = stackOut_92_1;
               stackIn_93_2 = stackOut_92_2;
               break L38;
             } else {
-              stackOut_91_0 = (RuntimeException) (Object) stackIn_91_0;
-              stackOut_91_1 = (StringBuilder) (Object) stackIn_91_1;
+              stackOut_91_0 = (RuntimeException) ((Object) stackIn_91_0);
+              stackOut_91_1 = (StringBuilder) ((Object) stackIn_91_1);
               stackOut_91_2 = "{...}";
               stackIn_93_0 = stackOut_91_0;
               stackIn_93_1 = stackOut_91_1;
@@ -443,7 +447,7 @@ class kg extends rc {
               break L38;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_93_0, stackIn_93_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_93_0), stackIn_93_2 + ')');
         }
     }
 
@@ -480,28 +484,28 @@ class kg extends rc {
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         String stackOut_8_2 = null;
-        ((kg) this).field_y = -2147483648;
-        ((kg) this).field_x = -1;
-        ((kg) this).field_Z = -1;
-        ((kg) this).field_V = -2147483648;
-        ((kg) this).field_Q = -1;
-        ((kg) this).field_B = -2147483648;
-        ((kg) this).field_bb = -1;
-        ((kg) this).field_W = true;
-        ((kg) this).field_ab = -2147483648;
-        ((kg) this).field_w = false;
-        ((kg) this).field_E = -2147483648;
-        ((kg) this).field_C = 256;
-        ((kg) this).field_ib = -2147483648;
+        this.field_y = -2147483648;
+        this.field_x = -1;
+        this.field_Z = -1;
+        this.field_V = -2147483648;
+        this.field_Q = -1;
+        this.field_B = -2147483648;
+        this.field_bb = -1;
+        this.field_W = true;
+        this.field_ab = -2147483648;
+        this.field_w = false;
+        this.field_E = -2147483648;
+        this.field_C = 256;
+        this.field_ib = -2147483648;
         try {
           L0: {
             L1: {
-              ((kg) this).field_d = param0;
+              this.field_d = param0;
               this.a((byte) 122, param1);
               if (param6 == null) {
                 break L1;
               } else {
-                ((kg) this).field_T = param6;
+                this.field_T = param6;
                 break L1;
               }
             }
@@ -511,23 +515,23 @@ class kg extends rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) runtimeException;
+            stackOut_4_0 = (RuntimeException) (runtimeException);
             stackOut_4_1 = new StringBuilder().append("kg.<init>(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -536,23 +540,23 @@ class kg extends rc {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param6 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -560,15 +564,11 @@ class kg extends rc {
               break L3;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_P = null;
         field_eb = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
         field_cb = "Email address is unavailable";

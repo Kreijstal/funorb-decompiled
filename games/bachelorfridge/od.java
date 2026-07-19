@@ -12,13 +12,13 @@ final class od extends ana {
     private boolean field_v;
 
     od(gj param0, me param1, boolean param2) {
-        super(param0, (bca) (Object) param1);
-        ((od) this).field_v = false;
+        super(param0, param1);
+        this.field_v = false;
         try {
-            ((od) this).field_x = param2 ? true : false;
-            ((od) this).field_y = param1;
+            this.field_x = param2 ? true : false;
+            this.field_y = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -49,23 +49,27 @@ final class od extends ana {
 
     final static void a(long param0, String param1, boolean param2) {
         CharSequence var5 = null;
+        boolean discarded$0 = false;
         try {
             gk.field_d = 2;
             bd.field_k = param1;
-            var5 = (CharSequence) (Object) param1;
+            var5 = (CharSequence) ((Object) param1);
             df.field_s = fq.a(0, var5);
             if (param2) {
-                boolean discarded$0 = od.e((byte) 9);
+                discarded$0 = od.e((byte) 9);
             }
             eaa.field_a = param0;
             lna.field_q = true;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "od.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "od.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public static void b(boolean param0) {
-        field_A = null;
+        field_A = (int[][]) null;
+        if (param0) {
+            return;
+        }
         field_w = null;
         field_C = null;
         field_B = null;
@@ -90,11 +94,14 @@ final class od extends ana {
     }
 
     private final void f(byte param0) {
+        if (param0 > -16) {
+            field_A = (int[][]) null;
+        }
     }
 
     final static byte[] a(String param0, byte param1) {
         RuntimeException var2 = null;
-        Object var3 = null;
+        String var3 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -119,7 +126,7 @@ final class od extends ana {
               if (param1 > 69) {
                 break L1;
               } else {
-                var3 = null;
+                var3 = (String) null;
                 od.a(-51L, (String) null, true);
                 break L1;
               }
@@ -132,23 +139,23 @@ final class od extends ana {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("od.B(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -156,26 +163,27 @@ final class od extends ana {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     final boolean c(byte param0) {
+        int fieldTemp$1 = 0;
         int var2_int = 0;
         tka var2 = null;
-        if (!((od) this).field_x) {
-          if (!((od) this).field_m.a((byte) -106)) {
-            int fieldTemp$1 = ((od) this).field_l - 1;
-            ((od) this).field_l = ((od) this).field_l - 1;
+        if (!this.field_x) {
+          if (!this.field_m.a((byte) -106)) {
+            fieldTemp$1 = this.field_l - 1;
+            this.field_l = this.field_l - 1;
             if (0 <= fieldTemp$1) {
-              if (((od) this).field_v) {
+              if (this.field_v) {
                 return false;
               } else {
-                ((od) this).field_y.field_l.a(-27449, ((od) this).field_q).b(-1, 2);
-                var2 = new tka(((od) this).field_q, ((od) this).field_y.field_r, ((od) this).field_y.field_u);
-                ((kj) (Object) var2).a(0);
-                ((od) this).field_v = true;
+                this.field_y.field_l.a(-27449, this.field_q).b(-1, 2);
+                var2 = new tka(this.field_q, this.field_y.field_r, this.field_y.field_u);
+                ((kj) ((Object) var2)).a(0);
+                this.field_v = true;
                 return false;
               }
             } else {
@@ -192,11 +200,7 @@ final class od extends ana {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_A = new int[][]{new int[2], new int[2], new int[2], new int[2], new int[2]};
+        field_A = new int[][]{new int[]{89, 367}, new int[]{134, 382}, new int[]{181, 388}, new int[]{228, 382}, new int[]{273, 367}};
         field_z = "Name";
         field_w = new hja[40];
     }

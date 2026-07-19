@@ -19,12 +19,16 @@ final class ab {
     static fa field_a;
 
     final static int b(int param0) {
+        if (param0 != -27737) {
+            return -43;
+        }
         return wf.field_q;
     }
 
     final static String c(int param0) {
+        String discarded$0 = null;
         if (param0 != -14700) {
-            String discarded$0 = ab.c(23);
+            discarded$0 = ab.c(23);
             return mk.field_j.e(-1);
         }
         return mk.field_j.e(-1);
@@ -35,9 +39,9 @@ final class ab {
         Object var2 = null;
         Throwable var3 = null;
         Throwable decompiledCaughtException = null;
-        var1 = 23;
+        var1 = 23 / ((-57 - param0) / 59);
         if (null != th.field_g) {
-          var2 = (Object) (Object) th.field_g;
+          var2 = th.field_g;
           synchronized (var2) {
             L0: {
               th.field_g = null;
@@ -57,18 +61,19 @@ final class ab {
         field_g = null;
         field_a = null;
         field_j = null;
-        field_e = null;
-        field_d = null;
-        field_c = null;
-        field_l = null;
-        field_f = null;
+        if (param0 != 0) {
+          return;
+        } else {
+          field_e = null;
+          field_d = null;
+          field_c = null;
+          field_l = null;
+          field_f = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new int[4];
         field_e = "Damage: ";
         field_b = null;

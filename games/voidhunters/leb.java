@@ -18,17 +18,21 @@ final class leb extends rqa {
             var3 = new ml(29);
             var3.a(1, 0, new ml(27));
             param1.a(1, 4, var3);
+            if (param0 >= -77) {
+                field_o = (dja) null;
+            }
             var4 = new ml(29);
             var4.a(1, 0, new ml(27));
             param1.a(1, 11, var4);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "leb.B(" + -107 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "leb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final nc a(nc[] param0, int param1) {
+        nc discarded$2 = null;
         RuntimeException var3 = null;
-        Object var4 = null;
+        nc[] var4 = null;
         nc stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -53,8 +57,8 @@ final class leb extends rqa {
               if (param1 < -119) {
                 break L1;
               } else {
-                var4 = null;
-                nc discarded$2 = ((leb) this).a((nc[]) null, -56);
+                var4 = (nc[]) null;
+                discarded$2 = this.a((nc[]) null, -56);
                 break L1;
               }
             }
@@ -66,23 +70,23 @@ final class leb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("leb.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -90,14 +94,14 @@ final class leb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     public static void e(byte param0) {
         field_o = null;
-        int var1 = 0;
+        int var1 = 76 % ((45 - param0) / 48);
     }
 
     leb(String param0, Class[] param1, String param2) {
@@ -105,10 +109,6 @@ final class leb extends rqa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_o = (dja) (Object) new jdb();
+        field_o = (dja) ((Object) new jdb());
     }
 }

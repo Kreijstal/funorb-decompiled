@@ -28,27 +28,27 @@ final class vh {
         int[] var6 = null;
         int var4 = 0;
         int var5 = CrazyCrystals.field_B;
-        if (((vh) this).field_k.length * 32 <= ((vh) this).field_j) {
-            var6 = new int[2 * ((vh) this).field_k.length];
+        if (this.field_k.length * 32 <= this.field_j) {
+            var6 = new int[2 * this.field_k.length];
             int[] var3 = var6;
-            for (var4 = 0; var4 < ((vh) this).field_k.length; var4++) {
-                var6[var4] = ((vh) this).field_k[var4];
+            for (var4 = 0; var4 < this.field_k.length; var4++) {
+                var6[var4] = this.field_k[var4];
             }
         }
         if (param1 >= -122) {
             return;
         }
         if (!(!param0)) {
-            ((vh) this).field_k[((vh) this).field_j >> 5] = hm.a(((vh) this).field_k[((vh) this).field_j >> 5], 1 << pf.b(31, ((vh) this).field_j));
+            this.field_k[this.field_j >> 1151845829] = hm.a(this.field_k[this.field_j >> 1151845829], 1 << pf.b(31, this.field_j));
         }
-        ((vh) this).field_j = ((vh) this).field_j + 1;
+        this.field_j = this.field_j + 1;
     }
 
     final boolean a(byte param0, int param1) {
         if (param0 <= 26) {
             return true;
         }
-        return (((vh) this).field_k[param1 >> 5] & 1 << (param1 & 31)) != 0 ? true : false;
+        return (this.field_k[param1 >> 2065069605] & 1 << (param1 & 31)) != 0 ? true : false;
     }
 
     final static void a(int param0, int param1) {
@@ -69,7 +69,7 @@ final class vh {
               var2 = (-40960 + 16384 * var3) / 220;
               break L0;
             } else {
-              if (var3 < 120) {
+              if ((var3 ^ -1) > -121) {
                 var3 = -var3 + 120;
                 var2 = 8192 + -(var3 * var3 * 8192 / 3300);
                 break L0;
@@ -129,7 +129,7 @@ final class vh {
             if (7 == param0) {
               break L7;
             } else {
-              if (param0 != 8) {
+              if ((param0 ^ -1) != -9) {
                 break L6;
               } else {
                 break L7;
@@ -150,7 +150,7 @@ final class vh {
         }
         if (param1 == 10718) {
           L9: {
-            if (param0 != 12) {
+            if ((param0 ^ -1) != -13) {
               break L9;
             } else {
               var5 = -1;
@@ -159,7 +159,7 @@ final class vh {
             }
           }
           L10: {
-            if (param0 == 13) {
+            if (-14 == (param0 ^ -1)) {
               var5 = -1;
               var4 = 1;
               break L10;
@@ -177,7 +177,7 @@ final class vh {
             }
           }
           L12: {
-            if (param0 != 15) {
+            if (-16 != (param0 ^ -1)) {
               break L12;
             } else {
               var5 = 1;
@@ -193,26 +193,22 @@ final class vh {
     }
 
     final void a(byte param0) {
-        ((vh) this).field_m = 0;
-        ((vh) this).field_c = new int[4];
-        ((vh) this).field_l = 0;
-        ((vh) this).field_e = new int[2];
-        ((vh) this).field_d = 0;
-        ((vh) this).field_h = false;
-        ((vh) this).field_k = new int[4];
-        ((vh) this).field_g = 0;
+        this.field_m = 0;
+        this.field_c = new int[4];
+        this.field_l = 0;
+        this.field_e = new int[2];
+        this.field_d = 0;
+        this.field_h = false;
+        this.field_k = new int[4];
+        this.field_g = 0;
         if (param0 <= 104) {
             vh.b((byte) 20);
         }
-        ((vh) this).field_j = 0;
-        ((vh) this).field_b = false;
+        this.field_j = 0;
+        this.field_b = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "Secret achievement";
         field_a = false;
     }

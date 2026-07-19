@@ -13,13 +13,14 @@ final class ai extends ck {
     static String field_r;
 
     public static void e(int param0) {
+        boolean discarded$0 = false;
         field_o = null;
         field_v = null;
         field_p = null;
         field_s = null;
         if (param0 != 0) {
-            Object var2 = null;
-            boolean discarded$0 = ai.a((gi) null, 92);
+            gi var2 = (gi) null;
+            discarded$0 = ai.a((gi) null, 92);
         }
         field_t = null;
         field_r = null;
@@ -34,12 +35,8 @@ final class ai extends ck {
         int[] var6 = null;
         int[] var8 = null;
         int var10 = 0;
-        int[] var11 = null;
         int[] var13 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
+        int[] var14 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = SteelSentinels.field_G;
         try {
@@ -59,17 +56,13 @@ final class ai extends ck {
                 }
                 L3: {
                   if (al.field_i.field_t) {
-                    var15 = ge.field_m;
-                    var11 = var15;
-                    var6 = var11;
-                    var16 = al.field_i.field_s;
+                    var6 = ge.field_m;
+                    var13 = al.field_i.field_s;
                     var4 = 0;
                     L4: while (true) {
-                      if (var4 >= 8) {
-                        var17 = ce.field_t;
-                        var13 = var17;
-                        var8 = var13;
-                        var18 = al.field_i.field_s;
+                      if ((var4 ^ -1) <= -9) {
+                        var8 = ce.field_t;
+                        var14 = al.field_i.field_s;
                         var10 = 0;
                         var4 = var10;
                         L5: while (true) {
@@ -79,13 +72,13 @@ final class ai extends ck {
                             wl.c((byte) 8);
                             break L3;
                           } else {
-                            var8[var10] = ec.a(var17[var10], ~var18[var10]);
+                            var8[var10] = ec.a(var8[var10], var14[var10] ^ -1);
                             var10++;
                             continue L5;
                           }
                         }
                       } else {
-                        var6[var4] = vn.a(var15[var4], var16[var4]);
+                        var6[var4] = vn.a(var6[var4], var13[var4]);
                         var4++;
                         continue L4;
                       }
@@ -133,16 +126,16 @@ final class ai extends ck {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1, "ai.A(" + param0 + ')');
+          throw ci.a((Throwable) ((Object) var1), "ai.A(" + param0 + ')');
         }
     }
 
     ai(wk param0, String param1) {
         try {
-            ((ai) this).field_u = param1;
-            ((ai) this).field_q = param0;
+            this.field_u = param1;
+            this.field_q = param0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ai.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "ai.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -183,7 +176,7 @@ final class ai extends ck {
             }
             L2: {
               var2_int = param0.f((byte) -123);
-              if (var2_int == 1) {
+              if (-2 == (var2_int ^ -1)) {
                 stackOut_4_0 = 1;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
@@ -202,23 +195,23 @@ final class ai extends ck {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_0 = (RuntimeException) (var2);
             stackOut_7_1 = new StringBuilder().append("ai.C(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -226,16 +219,12 @@ final class ai extends ck {
               break L3;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
         }
         return stackIn_6_0 != 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "Reject";
         field_s = "Offer draw";
         field_o = new wk(540, 140);

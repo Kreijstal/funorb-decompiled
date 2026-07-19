@@ -29,6 +29,10 @@ final class ima {
     }
 
     final void d() {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var1 = 0;
         int var2 = 0;
         byte[] var3 = null;
@@ -41,10 +45,10 @@ final class ima {
         L0: {
           var1 = this.a();
           var2 = this.c();
-          if (((ima) this).field_f != var1) {
+          if (this.field_f != var1) {
             break L0;
           } else {
-            if (((ima) this).field_e != var2) {
+            if (this.field_e != var2) {
               break L0;
             } else {
               return;
@@ -53,25 +57,25 @@ final class ima {
         }
         L1: {
           var3 = new byte[var1 * var2];
-          if (((ima) this).field_a == null) {
+          if (this.field_a == null) {
             var4 = 0;
             L2: while (true) {
-              if (var4 >= ((ima) this).field_e) {
+              if (var4 >= this.field_e) {
                 break L1;
               } else {
-                var5 = var4 * ((ima) this).field_f;
-                var6 = (var4 + ((ima) this).field_g) * var1 + ((ima) this).field_c;
+                var5 = var4 * this.field_f;
+                var6 = (var4 + this.field_g) * var1 + this.field_c;
                 var7 = 0;
                 L3: while (true) {
-                  if (var7 >= ((ima) this).field_f) {
+                  if (var7 >= this.field_f) {
                     var4++;
                     continue L2;
                   } else {
-                    int incrementValue$4 = var6;
+                    incrementValue$4 = var6;
                     var6++;
-                    int incrementValue$5 = var5;
+                    incrementValue$5 = var5;
                     var5++;
-                    var3[incrementValue$4] = ((ima) this).field_h[incrementValue$5];
+                    var3[incrementValue$4] = this.field_h[incrementValue$5];
                     var7++;
                     continue L3;
                   }
@@ -82,24 +86,24 @@ final class ima {
             var4_ref_byte__ = new byte[var1 * var2];
             var5 = 0;
             L4: while (true) {
-              if (var5 >= ((ima) this).field_e) {
-                ((ima) this).field_a = var4_ref_byte__;
+              if (var5 >= this.field_e) {
+                this.field_a = var4_ref_byte__;
                 break L1;
               } else {
-                var6 = var5 * ((ima) this).field_f;
-                var7 = (var5 + ((ima) this).field_g) * var1 + ((ima) this).field_c;
+                var6 = var5 * this.field_f;
+                var7 = (var5 + this.field_g) * var1 + this.field_c;
                 var8 = 0;
                 L5: while (true) {
-                  if (var8 >= ((ima) this).field_f) {
+                  if (var8 >= this.field_f) {
                     var5++;
                     continue L4;
                   } else {
-                    var3[var7] = ((ima) this).field_h[var6];
-                    int incrementValue$6 = var7;
+                    var3[var7] = this.field_h[var6];
+                    incrementValue$6 = var7;
                     var7++;
-                    int incrementValue$7 = var6;
+                    incrementValue$7 = var6;
                     var6++;
-                    var4_ref_byte__[incrementValue$6] = ((ima) this).field_a[incrementValue$7];
+                    var4_ref_byte__[incrementValue$6] = this.field_a[incrementValue$7];
                     var8++;
                     continue L5;
                   }
@@ -108,16 +112,20 @@ final class ima {
             }
           }
         }
-        ((ima) this).field_d = 0;
-        ((ima) this).field_g = 0;
-        ((ima) this).field_i = 0;
-        ((ima) this).field_c = 0;
-        ((ima) this).field_f = var1;
-        ((ima) this).field_e = var2;
-        ((ima) this).field_h = var3;
+        this.field_d = 0;
+        this.field_g = 0;
+        this.field_i = 0;
+        this.field_c = 0;
+        this.field_f = var1;
+        this.field_e = var2;
+        this.field_h = var3;
     }
 
     final int[] b() {
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int var1 = 0;
         int[] var2 = null;
         int var3 = 0;
@@ -128,31 +136,31 @@ final class ima {
         L0: {
           var1 = this.a();
           var2 = new int[var1 * this.c()];
-          if (((ima) this).field_a == null) {
+          if (this.field_a == null) {
             var3 = 0;
             L1: while (true) {
-              if (var3 >= ((ima) this).field_e) {
+              if (var3 >= this.field_e) {
                 break L0;
               } else {
-                var4 = var3 * ((ima) this).field_f;
-                var5 = ((ima) this).field_c + (var3 + ((ima) this).field_g) * var1;
+                var4 = var3 * this.field_f;
+                var5 = this.field_c + (var3 + this.field_g) * var1;
                 var6 = 0;
                 L2: while (true) {
-                  if (var6 >= ((ima) this).field_f) {
+                  if (var6 >= this.field_f) {
                     var3++;
                     continue L1;
                   } else {
-                    int incrementValue$12 = var4;
+                    incrementValue$12 = var4;
                     var4++;
-                    var7 = ((ima) this).field_b[((ima) this).field_h[incrementValue$12] & 255];
+                    var7 = this.field_b[this.field_h[incrementValue$12] & 255];
                     if (var7 == 0) {
-                      int incrementValue$13 = var5;
+                      incrementValue$13 = var5;
                       var5++;
                       var2[incrementValue$13] = 0;
                       var6++;
                       continue L2;
                     } else {
-                      int incrementValue$14 = var5;
+                      incrementValue$14 = var5;
                       var5++;
                       var2[incrementValue$14] = -16777216 | var7;
                       var6++;
@@ -165,20 +173,20 @@ final class ima {
           } else {
             var3 = 0;
             L3: while (true) {
-              if (var3 >= ((ima) this).field_e) {
+              if (var3 >= this.field_e) {
                 break L0;
               } else {
-                var4 = var3 * ((ima) this).field_f;
-                var5 = ((ima) this).field_c + (var3 + ((ima) this).field_g) * var1;
+                var4 = var3 * this.field_f;
+                var5 = this.field_c + (var3 + this.field_g) * var1;
                 var6 = 0;
                 L4: while (true) {
-                  if (var6 >= ((ima) this).field_f) {
+                  if (var6 >= this.field_f) {
                     var3++;
                     continue L3;
                   } else {
-                    int incrementValue$15 = var5;
+                    incrementValue$15 = var5;
                     var5++;
-                    var2[incrementValue$15] = ((ima) this).field_a[var4] << 24 | ((ima) this).field_b[((ima) this).field_h[var4] & 255];
+                    var2[incrementValue$15] = this.field_a[var4] << 24 | this.field_b[this.field_h[var4] & 255];
                     var4++;
                     var6++;
                     continue L4;
@@ -192,6 +200,8 @@ final class ima {
     }
 
     private final static ima[] a(byte[] param0) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         ds var1 = null;
         int var2 = 0;
         ima[] var3 = null;
@@ -211,8 +221,6 @@ final class ima {
         int var15 = 0;
         int[] var16 = null;
         int[] var17 = null;
-        int[] var18 = null;
-        int[] var19 = null;
         int stackIn_48_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_50_0 = 0;
@@ -258,9 +266,7 @@ final class ima {
                             L5: while (true) {
                               if (var7_int >= var2) {
                                 var1.field_e = param0.length - 7 - var2 * 8 - (var6 - 1) * 3;
-                                var19 = new int[var6];
-                                var18 = var19;
-                                var17 = var18;
+                                var17 = new int[var6];
                                 var16 = var17;
                                 var7 = var16;
                                 var8 = 1;
@@ -299,7 +305,7 @@ final class ima {
                                                               continue L11;
                                                             } else {
                                                               L13: {
-                                                                byte dupTemp$2 = var1.d((byte) -114);
+                                                                dupTemp$2 = var1.d((byte) -114);
                                                                 var9.field_a[var13 + var14 * var9.field_f] = dupTemp$2;
                                                                 var15 = dupTemp$2;
                                                                 stackOut_61_0 = var12;
@@ -350,7 +356,7 @@ final class ima {
                                                           break L9;
                                                         } else {
                                                           L17: {
-                                                            byte dupTemp$3 = var1.d((byte) -114);
+                                                            dupTemp$3 = var1.d((byte) -114);
                                                             var9.field_a[var13] = dupTemp$3;
                                                             var14 = dupTemp$3;
                                                             stackOut_47_0 = var12;
@@ -436,8 +442,8 @@ final class ima {
                                     }
                                   } else {
                                     var7[var8] = var1.c((byte) -117);
-                                    if (var19[var8] == 0) {
-                                      var19[var8] = 1;
+                                    if (var17[var8] == 0) {
+                                      var17[var8] = 1;
                                       var8++;
                                       continue L6;
                                     } else {
@@ -495,7 +501,7 @@ final class ima {
     }
 
     private final int c() {
-        return ((ima) this).field_e + ((ima) this).field_g + ((ima) this).field_d;
+        return this.field_e + this.field_g + this.field_d;
     }
 
     final static ima[] a(asb param0, String param1, String param2) {
@@ -507,6 +513,6 @@ final class ima {
     }
 
     private final int a() {
-        return ((ima) this).field_f + ((ima) this).field_c + ((ima) this).field_i;
+        return this.field_f + this.field_c + this.field_i;
     }
 }

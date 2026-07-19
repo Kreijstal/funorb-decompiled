@@ -10,12 +10,15 @@ final class be {
     static int field_d;
 
     final static void a(boolean param0, byte param1) {
+        if (param1 != 86) {
+            return;
+        }
         ji.field_k.a((byte) 80, param0);
     }
 
     final static ef a(int param0, boolean param1) {
         if (param0 > -111) {
-            field_e = null;
+            field_e = (TorChallenge) null;
         }
         ef var2 = new ef(true);
         var2.field_c = param1 ? true : false;
@@ -28,7 +31,7 @@ final class be {
             be.a(19, (byte) -122, true);
         }
         hk.field_e = 0;
-        if (!(bb.field_h < 0)) {
+        if (!(-1 < (bb.field_h ^ -1))) {
             ug.field_i[bb.field_h].a(3, param2);
         }
     }
@@ -49,9 +52,9 @@ final class be {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        int stackIn_26_0 = 0;
+        int stackIn_28_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_25_0 = 0;
+        int stackOut_27_0 = 0;
         var21 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
@@ -67,16 +70,24 @@ final class be {
               ie.field_f[param2][1].d(param4, param3, 160);
               qg.a(sh.field_w);
               var18 = ie.field_f[param2][1].field_q;
+              if (param5 == 25) {
+                break L1;
+              } else {
+                field_e = (TorChallenge) null;
+                break L1;
+              }
+            }
+            L2: {
               var19 = ie.field_f[param2][1].field_v;
               if (!param0) {
-                if (lj.field_b > 0) {
+                if (-1 > (lj.field_b ^ -1)) {
                   var17 = var18 / 4;
                   var17 = var17 * (25 + lj.field_b / 25 * 25 - lj.field_b) / 25;
                   var18 = (param1 + -(lj.field_b / 25) + -1) * var18 / 4 + var17;
                   qg.f(param4, param3, param4 - -var18, param3 + var19);
                   fd.field_h.d(param4, param3, var8_int);
                   qg.b(sh.field_w);
-                  break L1;
+                  break L2;
                 } else {
                   if (0 < fh.field_d) {
                     var17 = var18 / 4;
@@ -85,113 +96,119 @@ final class be {
                     qg.f(param4, param3, var18 + param4, var19 + param3);
                     fd.field_h.d(param4, param3, var8_int);
                     qg.b(sh.field_w);
-                    break L1;
+                    break L2;
                   } else {
                     var18 = var18 * param1 / 4;
                     qg.f(param4, param3, param4 + var18, param3 + var19);
                     fd.field_h.d(param4, param3, var8_int);
                     qg.b(sh.field_w);
-                    break L1;
+                    break L2;
                   }
                 }
               } else {
-                L2: {
+                L3: {
                   param6++;
                   var9 = -var13 + param6 % (var13 * 2);
-                  if (var9 < 0) {
+                  if (-1 < (var9 ^ -1)) {
                     var9 = -var9;
                     var15 = -1;
-                    break L2;
+                    break L3;
                   } else {
-                    break L2;
+                    break L3;
                   }
                 }
-                L3: {
+                L4: {
                   var16 = var9 / var14;
                   ac.field_a.d();
-                  if (var15 >= 0) {
+                  if ((var15 ^ -1) <= -1) {
                     if (0 <= var15) {
                       var8_int = var11;
                       var20 = 1;
-                      L4: while (true) {
+                      L5: while (true) {
                         if (var20 > var16) {
-                          break L3;
+                          break L4;
                         } else {
                           var8_int = var8_int - var20;
                           var20++;
-                          continue L4;
+                          continue L5;
                         }
                       }
                     } else {
-                      break L3;
+                      break L4;
                     }
                   } else {
                     var16 = var12 + -var16;
                     var8_int = var10;
                     var20 = 1;
-                    L5: while (true) {
+                    L6: while (true) {
                       if (var16 < var20) {
-                        break L3;
+                        break L4;
                       } else {
                         var8_int = var8_int + (var12 - var20);
                         var20++;
-                        continue L5;
+                        continue L6;
                       }
                     }
                   }
                 }
-                L6: {
+                L7: {
                   qg.b();
                   qg.f(0, 0, var18, var19);
                   fd.field_h.g(0, 0);
                   qg.d(2, 2, 0, 0, var18, var19);
                   qg.b(sh.field_w);
                   la.field_f.a(-123);
-                  if (param1 != 4) {
-                    break L6;
+                  if (-5 != (param1 ^ -1)) {
+                    break L7;
                   } else {
                     var19 += 2;
                     param3--;
                     var18 += 2;
                     param4--;
-                    break L6;
+                    break L7;
                   }
                 }
-                L7: {
+                L8: {
                   var20 = param7;
                   if (125 > var20) {
                     var18 = 2 * (var18 * var20) / 250;
-                    break L7;
+                    break L8;
                   } else {
-                    break L7;
+                    break L8;
                   }
                 }
                 qg.f(param4, param3, var18 + param4, var19 + param3);
                 ac.field_a.d(param4, param3, var8_int);
                 qg.b(sh.field_w);
-                break L1;
+                break L2;
               }
             }
-            stackOut_25_0 = param6;
-            stackIn_26_0 = stackOut_25_0;
+            stackOut_27_0 = param6;
+            stackIn_28_0 = stackOut_27_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var8, "be.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + 25 + ',' + param6 + ',' + param7 + ')');
+          throw oj.a((Throwable) ((Object) var8), "be.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
-        return stackIn_26_0;
+        return stackIn_28_0;
     }
 
     public static void a(int param0) {
         field_e = null;
+        if (param0 != 3366) {
+            return;
+        }
         field_f = null;
         field_c = null;
         field_a = null;
     }
 
     final static qa a(boolean param0) {
+        if (!param0) {
+            return (qa) null;
+        }
         String var1 = si.h(-118);
         if (var1 != null) {
             if (0 <= var1.indexOf('@')) {
@@ -203,16 +220,15 @@ final class be {
 
     final static ql a(int param0, int param1) {
         ql var2 = new ql();
-        ji.field_q.a((da) (Object) var2, -77);
-        af.b(9245, 4);
+        if (param1 != 31315) {
+            field_e = (TorChallenge) null;
+        }
+        ji.field_q.a(var2, -77);
+        af.b(9245, param0);
         return var2;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Continue";
         field_c = new boolean[]{true, true, false, true, false, false, false, false, false, false};
         field_d = 0;

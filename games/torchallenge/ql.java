@@ -12,19 +12,21 @@ final class ql extends da {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != 4707) {
+            field_l = (int[]) null;
+            field_k = null;
+            field_l = null;
+            return;
+        }
         field_k = null;
         field_l = null;
     }
 
     ql() {
-        ((ql) this).field_i = false;
+        this.field_i = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ql.A(";
         field_k = new char[128];
         field_n = 0;

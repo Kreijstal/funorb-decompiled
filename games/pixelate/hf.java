@@ -18,27 +18,27 @@ final class hf extends fa {
 
     public static void a(byte param0) {
         field_m = null;
-        int var1 = 0;
+        int var1 = -120 % ((-78 - param0) / 48);
     }
 
     final static boolean b(byte param0) {
+        if (param0 != 100) {
+            field_q = -107;
+            return sm.field_l;
+        }
         return sm.field_l;
     }
 
     hf(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((hf) this).field_u = param0;
-        ((hf) this).field_l = param4;
-        ((hf) this).field_s = param2;
-        ((hf) this).field_r = param3;
-        ((hf) this).field_v = param1;
-        ((hf) this).field_p = param5;
+        this.field_u = param0;
+        this.field_l = param4;
+        this.field_s = param2;
+        this.field_r = param3;
+        this.field_v = param1;
+        this.field_p = param5;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = 0;
     }
 }

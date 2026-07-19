@@ -8,6 +8,7 @@ final class wa implements de {
     private int field_c;
 
     public final void a(int param0, boolean param1, int param2, int param3, uj param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -59,18 +60,18 @@ final class wa implements de {
             }
             L3: {
               var6_int = stackIn_6_0;
-              int discarded$1 = ((wa) this).field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_k + "</u>", param0 + param4.field_s, param4.field_j + param3, param4.field_i, param4.field_f, var6_int, -1, ((wa) this).field_d, ((wa) this).field_c, ((wa) this).field_b.field_p - -((wa) this).field_b.field_q);
+              discarded$1 = this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_k + "</u>", param0 + param4.field_s, param4.field_j + param3, param4.field_i, param4.field_f, var6_int, -1, this.field_d, this.field_c, this.field_b.field_p - -this.field_b.field_q);
               if (!param4.d(true)) {
                 break L3;
               } else {
                 L4: {
-                  var8 = ((wa) this).field_b.a(param4.field_k);
-                  var9 = ((wa) this).field_b.field_q + ((wa) this).field_b.field_p;
+                  var8 = this.field_b.a(param4.field_k);
+                  var9 = this.field_b.field_q + this.field_b.field_p;
                   var10 = param0 + param4.field_s;
                   var11 = param3 - -param4.field_j;
-                  if (((wa) this).field_d != 2) {
-                    if (((wa) this).field_d == 1) {
-                      var10 = var10 + (-var8 + param4.field_i >> 1);
+                  if ((this.field_d ^ -1) != -3) {
+                    if (this.field_d == 1) {
+                      var10 = var10 + (-var8 + param4.field_i >> -641468159);
                       break L4;
                     } else {
                       break L4;
@@ -81,9 +82,9 @@ final class wa implements de {
                   }
                 }
                 L5: {
-                  if (-3 != ((wa) this).field_c) {
-                    if (-2 == ((wa) this).field_c) {
-                      var11 = var11 + (param4.field_f + -var9 >> 1);
+                  if (-3 != (this.field_c ^ -1)) {
+                    if (-2 == (this.field_c ^ -1)) {
+                      var11 = var11 + (param4.field_f + -var9 >> -352277535);
                       break L5;
                     } else {
                       break L5;
@@ -103,23 +104,23 @@ final class wa implements de {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var6;
+            stackOut_19_0 = (RuntimeException) (var6);
             stackOut_19_1 = new StringBuilder().append("wa.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param4 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -127,18 +128,21 @@ final class wa implements de {
               break L6;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
         }
     }
 
     final static int[] a(byte param0) {
         if (param0 >= -74) {
-            return null;
+            return (int[]) null;
         }
         return new int[8];
     }
 
     final static void a(boolean param0, boolean param1) {
+        if (!param0) {
+            return;
+        }
         ti.field_b.a(0, (byte) -98, 0);
     }
 
@@ -184,7 +188,7 @@ final class wa implements de {
           L0: {
             L1: {
               t.field_q = param5.getParameter("overxgames");
-              var6_int = 29;
+              var6_int = -29 / ((param1 - -30) / 42);
               if (t.field_q != null) {
                 break L1;
               } else {
@@ -207,8 +211,8 @@ final class wa implements de {
                 fc.field_c = 2;
                 break L3;
               } else {
-                if (ba.a(6, (CharSequence) (Object) var7)) {
-                  fc.field_c = pd.a((CharSequence) (Object) var7, 10);
+                if (ba.a(6, (CharSequence) ((Object) var7))) {
+                  fc.field_c = pd.a((CharSequence) ((Object) var7), 10);
                   break L3;
                 } else {
                   fc.field_c = 2;
@@ -216,9 +220,9 @@ final class wa implements de {
                 }
               }
             }
-            jk.field_l = 0;
-            mc.field_c = 16777215;
-            nh.field_i = 0;
+            jk.field_l = param3;
+            mc.field_c = param2;
+            nh.field_i = param0;
             pa.field_I = new hl[param4.length];
             var8 = 0;
             L4: while (true) {
@@ -236,23 +240,23 @@ final class wa implements de {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var6;
-            stackOut_17_1 = new StringBuilder().append("wa.C(").append(0).append(',').append(-75).append(',').append(16777215).append(',').append(0).append(',');
+            stackOut_17_0 = (RuntimeException) (var6);
+            stackOut_17_1 = new StringBuilder().append("wa.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param4 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -261,23 +265,23 @@ final class wa implements de {
             }
           }
           L6: {
-            stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+            stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
             stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param5 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -285,7 +289,7 @@ final class wa implements de {
               break L6;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
         }
     }
 
@@ -303,8 +307,7 @@ final class wa implements de {
         ia var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var8 = StarCannon.field_A;
         try {
@@ -314,9 +317,9 @@ final class wa implements de {
               var2 = var9.j(7909);
               var3 = var9.j(7909);
               if (var2 != 0) {
-                if (var2 == 1) {
+                if (-2 == (var2 ^ -1)) {
                   var4 = var9.d((byte) 43);
-                  var5 = (dg) (Object) vb.field_k.c(-3905);
+                  var5 = (dg) ((Object) vb.field_k.c(param0 ^ 3876));
                   L2: while (true) {
                     L3: {
                       if (var5 == null) {
@@ -333,13 +336,14 @@ final class wa implements de {
                             }
                           }
                         }
-                        var5 = (dg) (Object) vb.field_k.a(-16913);
+                        var5 = (dg) ((Object) vb.field_k.a(-16913));
                         continue L2;
                       }
                     }
                     if (var5 == null) {
                       ec.a((byte) 27);
-                      return;
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     } else {
                       var5.b(4);
                       break L1;
@@ -351,20 +355,19 @@ final class wa implements de {
                   break L1;
                 }
               } else {
-                var4_ref_we = (we) (Object) ma.field_h.c(-3905);
+                var4_ref_we = (we) ((Object) ma.field_h.c(param0 + -3804));
                 if (var4_ref_we == null) {
                   ec.a((byte) 27);
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   L5: {
                     var5_int = -var9.field_g + il.field_g;
-                    var13 = var4_ref_we.field_j;
-                    var12 = var13;
-                    var11 = var12;
+                    var11 = var4_ref_we.field_j;
                     var10 = var11;
                     var6 = var10;
-                    if (var13.length << 2 < var5_int) {
-                      var5_int = var13.length << 2;
+                    if (var11.length << 650401986 < var5_int) {
+                      var5_int = var11.length << 1168630882;
                       break L5;
                     } else {
                       break L5;
@@ -376,7 +379,7 @@ final class wa implements de {
                       var4_ref_we.b(4);
                       break L1;
                     } else {
-                      var6[var7 >> 2] = var6[var7 >> 2] + (var9.j(7909) << (w.a(var7, 3) << 8));
+                      var6[var7 >> 1614205186] = var6[var7 >> 1614205186] + (var9.j(7909) << (w.a(var7, 3) << -1845542328));
                       var7++;
                       continue L6;
                     }
@@ -384,28 +387,43 @@ final class wa implements de {
                 }
               }
             }
-            break L0;
+            if (param0 == -101) {
+              decompiledRegionSelector0 = 2;
+              break L0;
+            } else {
+              field_a = 71L;
+              return;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "wa.D(" + -101 + ')');
+          throw sd.a((Throwable) ((Object) var1), "wa.D(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     public wa() {
-        ((wa) this).field_c = 1;
-        ((wa) this).field_d = 1;
-        ((wa) this).field_b = nb.field_c;
+        this.field_c = 1;
+        this.field_d = 1;
+        this.field_b = nb.field_c;
     }
 
     wa(qe param0, int param1, int param2) {
         try {
-            ((wa) this).field_b = param0;
-            ((wa) this).field_d = param1;
-            ((wa) this).field_c = param2;
+            this.field_b = param0;
+            this.field_d = param1;
+            this.field_c = param2;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "wa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "wa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

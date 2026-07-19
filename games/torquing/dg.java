@@ -23,20 +23,20 @@ final class dg extends af {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param1 = param1 + (((dg) this).field_k.field_a - -((dg) this).field_c);
-          param2 = param2 + (((dg) this).field_d + ((dg) this).field_k.field_g);
+          param1 = param1 + (this.field_k.field_a - -this.field_c);
+          param2 = param2 + (this.field_d + this.field_k.field_g);
           var4 = param2 * ph.field_j + param1;
           if (!param0) {
             break L0;
           } else {
-            ((dg) this).b(97);
+            this.b(97);
             break L0;
           }
         }
         L1: {
           var5 = 0;
-          var6 = ((dg) this).field_k.field_d;
-          var7 = ((dg) this).field_k.field_c;
+          var6 = this.field_k.field_d;
+          var7 = this.field_k.field_c;
           var8 = -var7 + ph.field_j;
           if (param2 < ph.field_c) {
             var10 = -param2 + ph.field_c;
@@ -84,10 +84,10 @@ final class dg extends af {
           }
         }
         if (0 < var7) {
-          if (var6 <= 0) {
+          if (-1 <= (var6 ^ -1)) {
             return;
           } else {
-            wh.a(0, var5, ((dg) this).field_k.field_l, var6, ((dg) this).field_l, var8, ph.field_e, (byte) 29, var9, var4, var7, ((dg) this).field_k.field_k);
+            wh.a(0, var5, this.field_k.field_l, var6, this.field_l, var8, ph.field_e, (byte) 29, var9, var4, var7, this.field_k.field_k);
             return;
           }
         } else {
@@ -97,11 +97,11 @@ final class dg extends af {
 
     final void b(int param0) {
         if (param0 != 6) {
-            field_j = null;
-            ((dg) this).a(false, 0, 0);
+            field_j = (String) null;
+            this.a(false, 0, 0);
             return;
         }
-        ((dg) this).a(false, 0, 0);
+        this.a(false, 0, 0);
     }
 
     public static void c(int param0) {
@@ -109,26 +109,25 @@ final class dg extends af {
         field_e = null;
         field_i = null;
         field_j = null;
+        if (param0 != 12949) {
+            return;
+        }
         field_m = null;
-        field_f = null;
+        field_f = (double[][]) null;
     }
 
     dg(sm param0, int param1, int param2, int param3) {
         try {
-            ((dg) this).field_l = param3;
-            ((dg) this).field_k = param0;
-            ((dg) this).field_c = param1;
-            ((dg) this).field_d = param2;
+            this.field_l = param3;
+            this.field_k = param0;
+            this.field_c = param1;
+            this.field_d = param2;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "dg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = 50;
         field_j = "Cancel";
         field_f = new double[8][3];

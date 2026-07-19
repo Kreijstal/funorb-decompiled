@@ -66,7 +66,7 @@ public class vf {
 
     public static File a(int param0, String param1) {
         if (param0 != 0) {
-            return null;
+            return (File) null;
         }
         return vf.a(field_d, 1387, field_b, param1);
     }
@@ -76,10 +76,6 @@ public class vf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = false;
         field_c = new Hashtable(16);
     }

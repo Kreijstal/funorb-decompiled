@@ -13,12 +13,15 @@ final class tc extends da {
     final static void a(h param0, h param1, byte param2, int param3, int param4, int param5) {
         try {
             kk.field_e = param1;
-            ai.field_a = 8;
+            if (param2 != 27) {
+                tc.c(-10);
+            }
+            ai.field_a = param3;
             tf.field_f = param0;
-            uc.field_Y = 2;
-            ni.field_i = 32;
+            uc.field_Y = param5;
+            ni.field_i = param4;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "tc.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + 27 + ',' + 8 + ',' + 32 + ',' + 2 + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "tc.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -27,9 +30,9 @@ final class tc extends da {
         Object var2 = null;
         Throwable var3 = null;
         Throwable decompiledCaughtException = null;
-        var1 = 0;
+        var1 = 124 % ((param0 - -32) / 63);
         if (null != te.field_b) {
-          var2 = (Object) (Object) te.field_b;
+          var2 = te.field_b;
           synchronized (var2) {
             L0: {
               te.field_b = null;
@@ -46,15 +49,16 @@ final class tc extends da {
     }
 
     public static void a(int param0) {
-        field_m = null;
+        field_m = (int[][]) null;
+        if (param0 < 97) {
+            field_m = (int[][]) null;
+            field_o = null;
+            return;
+        }
         field_o = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_m = new int[][]{new int[3], new int[2], new int[4], new int[6], new int[3], new int[1], new int[6]};
+        field_m = new int[][]{new int[]{-1, 0, 1}, new int[]{-1, 0}, new int[]{-1, 0, 1, -1}, new int[]{-1, -1, -1, -1, -1, -1}, new int[]{-1, 0, 1}, new int[]{-1}, new int[]{-1, -1, -1, -1, -1, -1}};
     }
 }

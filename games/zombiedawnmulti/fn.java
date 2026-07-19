@@ -17,6 +17,9 @@ final class fn extends RuntimeException {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != 26677) {
+            return;
+        }
         field_a = null;
         field_g = null;
         field_h = null;
@@ -28,10 +31,10 @@ final class fn extends RuntimeException {
     final static uo a(int param0, int param1, int param2, byte param3, int param4, int param5) {
         uo var6 = null;
         if (param3 <= 86) {
-          return null;
+          return (uo) null;
         } else {
           L0: {
-            var6 = (uo) (Object) ic.field_c.g(62);
+            var6 = (uo) ((Object) ic.field_c.g(62));
             if (var6 != null) {
               break L0;
             } else {
@@ -45,15 +48,11 @@ final class fn extends RuntimeException {
     }
 
     fn(Throwable param0, String param1) {
-        ((fn) this).field_f = param0;
-        ((fn) this).field_k = param1;
+        this.field_f = param0;
+        this.field_k = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fn.A(";
         field_e = new ja(640, 480);
         field_l = "Your game";

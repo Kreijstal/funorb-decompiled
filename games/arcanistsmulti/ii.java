@@ -21,6 +21,7 @@ final class ii implements pf {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
@@ -41,8 +42,8 @@ final class ii implements pf {
                 if (!(param0 instanceof ag)) {
                   break L1;
                 } else {
-                  if (((ag) (Object) param0).field_z) {
-                    var8.b((-var8.field_n + param0.field_v >> 1) + 1 + var6_int, (param0.field_k + -var8.field_w >> 1) + (var7 - -1), 256);
+                  if (((ag) ((Object) param0)).field_z) {
+                    var8.b((-var8.field_n + param0.field_v >> 1549596449) + 1 + var6_int, (param0.field_k + -var8.field_w >> 360001057) + (var7 - -1), 256);
                     break L1;
                   } else {
                     break L1;
@@ -50,36 +51,38 @@ final class ii implements pf {
                 }
               }
               if (!param0.d(param1 ^ -5594391)) {
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 oj.a(param1 + -5624576, var7 + 2, var6_int - -2, param0.field_k - 4, -4 + param0.field_v);
                 return;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var6;
+            stackOut_9_0 = (RuntimeException) (var6);
             stackOut_9_1 = new StringBuilder().append("ii.A(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -87,7 +90,12 @@ final class ii implements pf {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -100,6 +108,7 @@ final class ii implements pf {
     }
 
     final static fk a(int param0, boolean param1, wf param2, int param3) {
+        int discarded$2 = 0;
         RuntimeException var4 = null;
         fk stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -125,7 +134,7 @@ final class ii implements pf {
               if (!param1) {
                 break L1;
               } else {
-                int discarded$2 = ii.a((byte) 81);
+                discarded$2 = ii.a((byte) 81);
                 break L1;
               }
             }
@@ -137,23 +146,23 @@ final class ii implements pf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_0 = (RuntimeException) (var4);
             stackOut_4_1 = new StringBuilder().append("ii.B(").append(param0).append(',').append(param1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -161,7 +170,7 @@ final class ii implements pf {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param3 + ')');
         }
         return stackIn_3_0;
     }
@@ -172,12 +181,13 @@ final class ii implements pf {
         int var2 = 0;
         int stackIn_19_0 = 0;
         int stackIn_24_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_23_0 = 0;
         int stackOut_18_0 = 0;
         try {
           L0: {
-            var1_int = -53;
+            var1_int = 53 / ((26 - param0) / 49);
             L1: while (true) {
               if (!ib.b(false)) {
                 L2: {
@@ -191,10 +201,11 @@ final class ii implements pf {
                 var2 = 0;
                 stackOut_23_0 = var2;
                 stackIn_24_0 = stackOut_23_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 L3: {
-                  if (vn.field_d == 16) {
+                  if (-17 == (vn.field_d ^ -1)) {
                     io.a(65, (byte) -84);
                     break L3;
                   } else {
@@ -210,7 +221,7 @@ final class ii implements pf {
                   }
                 }
                 L5: {
-                  if (vn.field_d != 18) {
+                  if ((vn.field_d ^ -1) != -19) {
                     break L5;
                   } else {
                     io.a(97, (byte) -93);
@@ -218,7 +229,7 @@ final class ii implements pf {
                   }
                 }
                 L6: {
-                  if (vn.field_d == 19) {
+                  if ((vn.field_d ^ -1) == -20) {
                     io.a(69, (byte) 76);
                     break L6;
                   } else {
@@ -226,7 +237,7 @@ final class ii implements pf {
                   }
                 }
                 L7: {
-                  if (vn.field_d != 20) {
+                  if ((vn.field_d ^ -1) != -21) {
                     break L7;
                   } else {
                     io.a(67, (byte) 89);
@@ -234,7 +245,7 @@ final class ii implements pf {
                   }
                 }
                 L8: {
-                  if (vn.field_d != 21) {
+                  if (-22 != (vn.field_d ^ -1)) {
                     break L8;
                   } else {
                     io.a(17, (byte) 31);
@@ -245,12 +256,13 @@ final class ii implements pf {
                   if (vn.field_d != 13) {
                     break L9;
                   } else {
-                    if ((ch.field_b & 64) <= 0) {
+                    if ((ch.field_b & 64 ^ -1) >= -1) {
                       break L9;
                     } else {
                       stackOut_18_0 = 2;
                       stackIn_19_0 = stackOut_18_0;
-                      return stackIn_19_0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   }
                 }
@@ -266,22 +278,25 @@ final class ii implements pf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "ii.E(" + 89 + ')');
+          throw aa.a((Throwable) ((Object) var1), "ii.E(" + param0 + ')');
         }
-        return stackIn_24_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_19_0;
+        } else {
+          return stackIn_24_0;
+        }
     }
 
     public static void b(byte param0) {
         field_b = null;
         field_e = null;
         field_d = null;
+        if (param0 != 106) {
+            field_a = 84;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 0;
         field_a = field_c;
         field_e = "Loading music";

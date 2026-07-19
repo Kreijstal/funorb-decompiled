@@ -11,7 +11,7 @@ final class dn {
 
     public static void a(int param0) {
         field_b = null;
-        int var1 = 1;
+        int var1 = 88 % ((72 - param0) / 51);
         field_c = null;
         field_f = null;
         field_e = null;
@@ -38,7 +38,7 @@ final class dn {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        Object var24 = null;
+        nf[] var24 = null;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -50,6 +50,7 @@ final class dn {
         RuntimeException stackIn_80_0 = null;
         StringBuilder stackIn_80_1 = null;
         String stackIn_80_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
@@ -71,13 +72,14 @@ final class dn {
         try {
           L0: {
             if (param3 == null) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
-                if (param0 <= 0) {
+                if ((param0 ^ -1) >= -1) {
                   break L1;
                 } else {
-                  if (param6 <= 0) {
+                  if (-1 <= (param6 ^ -1)) {
                     break L1;
                   } else {
                     if (param4 != 0) {
@@ -138,7 +140,7 @@ final class dn {
                         if (param5 == -7992) {
                           break L6;
                         } else {
-                          var24 = null;
+                          var24 = (nf[]) null;
                           dn.a(100, 4, -112, (nf[]) null, 66, 93, 126);
                           break L6;
                         }
@@ -147,7 +149,7 @@ final class dn {
                         var16 = var12 - var10;
                         var17 = var13;
                         var18 = var14;
-                        if (~var18 <= ~var17) {
+                        if (var18 >= var17) {
                           break L7;
                         } else {
                           var18 = var7_int * param0 / (var7_int - -var8) + param1;
@@ -158,7 +160,7 @@ final class dn {
                       L8: {
                         var19 = var15;
                         var20 = var16;
-                        if (~var19 < ~var20) {
+                        if (var19 > var20) {
                           var20 = var9 * param6 / (var9 + var10) + param2;
                           var19 = var9 * param6 / (var9 + var10) + param2;
                           break L8;
@@ -215,7 +217,7 @@ final class dn {
                             fn.f(var17, param2, var18, var19);
                             var21 = var13;
                             L14: while (true) {
-                              if (~var14 >= ~var21) {
+                              if (var14 <= var21) {
                                 fn.a(fj.field_E);
                                 break L13;
                               } else {
@@ -237,7 +239,7 @@ final class dn {
                             fn.f(var17, var20, var18, var12);
                             var21 = var13;
                             L16: while (true) {
-                              if (~var14 >= ~var21) {
+                              if (var14 <= var21) {
                                 fn.a(fj.field_E);
                                 break L15;
                               } else {
@@ -255,11 +257,11 @@ final class dn {
                         if (param3[3] == null) {
                           break L17;
                         } else {
-                          if (param3[3].field_x != 0) {
+                          if (-1 != (param3[3].field_x ^ -1)) {
                             fn.f(param1, var19, var17, var20);
                             var21 = var15;
                             L18: while (true) {
-                              if (~var16 >= ~var21) {
+                              if (var16 <= var21) {
                                 fn.a(fj.field_E);
                                 break L17;
                               } else {
@@ -302,7 +304,7 @@ final class dn {
                           if (0 == param3[4].field_t) {
                             break L21;
                           } else {
-                            if (param3[4].field_x == 0) {
+                            if (-1 == (param3[4].field_x ^ -1)) {
                               break L21;
                             } else {
                               fn.f(var17, var19, var18, var20);
@@ -329,6 +331,7 @@ final class dn {
                           }
                         }
                       }
+                      decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
                       break L1;
@@ -336,30 +339,31 @@ final class dn {
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L24: {
             var7 = decompiledCaughtException;
-            stackOut_77_0 = (RuntimeException) var7;
+            stackOut_77_0 = (RuntimeException) (var7);
             stackOut_77_1 = new StringBuilder().append("dn.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_79_0 = stackOut_77_0;
             stackIn_79_1 = stackOut_77_1;
             stackIn_78_0 = stackOut_77_0;
             stackIn_78_1 = stackOut_77_1;
             if (param3 == null) {
-              stackOut_79_0 = (RuntimeException) (Object) stackIn_79_0;
-              stackOut_79_1 = (StringBuilder) (Object) stackIn_79_1;
+              stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
+              stackOut_79_1 = (StringBuilder) ((Object) stackIn_79_1);
               stackOut_79_2 = "null";
               stackIn_80_0 = stackOut_79_0;
               stackIn_80_1 = stackOut_79_1;
               stackIn_80_2 = stackOut_79_2;
               break L24;
             } else {
-              stackOut_78_0 = (RuntimeException) (Object) stackIn_78_0;
-              stackOut_78_1 = (StringBuilder) (Object) stackIn_78_1;
+              stackOut_78_0 = (RuntimeException) ((Object) stackIn_78_0);
+              stackOut_78_1 = (StringBuilder) ((Object) stackIn_78_1);
               stackOut_78_2 = "{...}";
               stackIn_80_0 = stackOut_78_0;
               stackIn_80_1 = stackOut_78_1;
@@ -367,15 +371,20 @@ final class dn {
               break L24;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_80_0, stackIn_80_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_80_0), stackIn_80_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new String[]{"All scores", "My scores", "Best each"};
         field_a = "You already have five wing pods";
     }

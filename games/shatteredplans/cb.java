@@ -17,15 +17,17 @@ final class cb extends le {
     }
 
     final void a(byte[] param0, byte param1) {
+        java.nio.Buffer discarded$6 = null;
+        java.nio.ByteBuffer discarded$7 = null;
         try {
-            ((cb) this).field_k = java.nio.ByteBuffer.allocateDirect(param0.length);
-            java.nio.Buffer discarded$6 = ((cb) this).field_k.position(0);
+            this.field_k = java.nio.ByteBuffer.allocateDirect(param0.length);
+            discarded$6 = this.field_k.position(0);
             if (param1 != 95) {
                 cb.a((byte) -7);
             }
-            java.nio.ByteBuffer discarded$7 = ((cb) this).field_k.put(param0);
+            discarded$7 = this.field_k.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "cb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "cb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -57,6 +59,7 @@ final class cb extends le {
     }
 
     public static void a(byte param0) {
+        boolean discarded$2 = false;
         field_m = null;
         field_g = null;
         field_l = null;
@@ -64,7 +67,7 @@ final class cb extends le {
         field_h = null;
         field_o = null;
         if (param0 != 104) {
-          boolean discarded$2 = cb.c((byte) 27);
+          discarded$2 = cb.c((byte) 27);
           field_f = null;
           return;
         } else {
@@ -74,24 +77,21 @@ final class cb extends le {
     }
 
     final byte[] a(boolean param0) {
+        java.nio.ByteBuffer discarded$10 = null;
         byte[] var2 = null;
         byte[] var3 = null;
-        var3 = new byte[((cb) this).field_k.capacity()];
+        var3 = new byte[this.field_k.capacity()];
         var2 = var3;
-        java.nio.Buffer discarded$9 = ((cb) this).field_k.position(0);
+        java.nio.Buffer discarded$9 = this.field_k.position(0);
         if (param0) {
-          return null;
+          return (byte[]) null;
         } else {
-          java.nio.ByteBuffer discarded$10 = ((cb) this).field_k.get(var3);
+          discarded$10 = this.field_k.get(var3);
           return var3;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Our territory currently has balanced production, so you should seek to acquire all resources equally.";
         field_g = "Show players in <%0>'s game";
         field_f = new int[4];

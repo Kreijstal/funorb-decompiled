@@ -13,10 +13,6 @@ final class ce {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ce.A(";
         field_a = "Confirm Password: ";
     }

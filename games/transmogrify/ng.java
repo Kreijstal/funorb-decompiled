@@ -16,7 +16,7 @@ final class ng extends wf {
         field_j = null;
         field_l = null;
         field_h = null;
-        int var1 = 36;
+        int var1 = 36 / ((param0 - 32) / 49);
     }
 
     private ng() throws Throwable {
@@ -28,18 +28,17 @@ final class ng extends wf {
             if (!(gl.field_y != 11)) {
                 sd.q(274);
             }
+            if (param0) {
+                ng.a((byte) 43);
+            }
             ch.a(58, ea.field_n, g.field_A, ah.field_a);
             ah.a(0, 0, (byte) 90, param1);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "ng.B(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "ng.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Names cannot contain consecutive spaces";
         field_j = new hi();
         field_l = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};

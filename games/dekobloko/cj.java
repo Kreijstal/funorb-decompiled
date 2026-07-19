@@ -8,7 +8,7 @@ final class cj {
     private static String field_z;
 
     public static void a(int param0) {
-        int var1 = 0;
+        int var1 = 110 % ((-1 - param0) / 35);
         field_b = null;
     }
 

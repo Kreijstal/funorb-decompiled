@@ -13,7 +13,7 @@ public class e {
 
     public static File a(int param0, String param1) {
         if (param0 != 0) {
-            return null;
+            return (File) null;
         }
         return e.a(param1, field_d, -8204, field_c);
     }
@@ -68,10 +68,6 @@ public class e {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_a = new Hashtable(16);
     }

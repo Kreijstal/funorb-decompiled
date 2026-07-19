@@ -14,9 +14,9 @@ final class ac extends oh {
     private ac(int param0, int param1, int param2, int param3, ur param4, uf param5, iq param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
-            ((ac) this).field_C = param6;
+            this.field_C = param6;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ac.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "ac.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -25,10 +25,20 @@ final class ac extends oh {
         field_M = null;
         field_K = null;
         field_I = null;
-        field_O = null;
-        field_L = null;
-        field_J = null;
-        field_N = null;
+        if (param0 <= 61) {
+          field_G = (r) null;
+          field_O = (byte[][]) null;
+          field_L = null;
+          field_J = null;
+          field_N = null;
+          return;
+        } else {
+          field_O = (byte[][]) null;
+          field_L = null;
+          field_J = null;
+          field_N = null;
+          return;
+        }
     }
 
     final void a(iq param0, byte param1, int param2, int param3, int param4, int param5) {
@@ -58,19 +68,19 @@ final class ac extends oh {
               if (var7 == null) {
                 break L1;
               } else {
-                if (!((ac) this).a(0, param3, param2, param4, param5)) {
+                if (!this.a(0, param3, param2, param4, param5)) {
                   break L1;
                 } else {
-                  if (!(((ac) this).field_v instanceof sh)) {
+                  if (!(this.field_v instanceof sh)) {
                     if (var7.field_v instanceof sh) {
-                      ((sh) (Object) var7.field_v).a(param1 ^ -13387, var7, (ac) this);
+                      ((sh) ((Object) var7.field_v)).a(param1 ^ -13387, var7, (ac) (this));
                       um.field_E = null;
                       break L1;
                     } else {
                       return;
                     }
                   } else {
-                    ((sh) (Object) ((ac) this).field_v).a(param1 ^ -13387, var7, (ac) this);
+                    ((sh) ((Object) this.field_v)).a(param1 ^ -13387, var7, (ac) (this));
                     um.field_E = null;
                     return;
                   }
@@ -83,23 +93,23 @@ final class ac extends oh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) runtimeException;
+            stackOut_8_0 = (RuntimeException) (runtimeException);
             stackOut_8_1 = new StringBuilder().append("ac.HA(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -107,15 +117,11 @@ final class ac extends oh {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_M = "Offensive account name";
         field_J = "<%0> might change the options - wait and see.";
         field_N = "Shortcut Reference";

@@ -25,10 +25,6 @@ final class rl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 9;
         field_a = new bh(13, 0, 1, 0);
     }

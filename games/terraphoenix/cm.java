@@ -9,14 +9,18 @@ final class cm {
     static String field_a;
 
     final static void a(byte param0) {
-        if (nb.field_b != null) {
-          nb.field_b.h((byte) -126);
-          rd.field_s = new ae();
-          bj.field_f.a((gl) (Object) rd.field_s, -24);
-          return;
+        if (param0 >= 121) {
+          if (nb.field_b != null) {
+            nb.field_b.h((byte) -126);
+            rd.field_s = new ae();
+            bj.field_f.a(rd.field_s, -24);
+            return;
+          } else {
+            rd.field_s = new ae();
+            bj.field_f.a(rd.field_s, -24);
+            return;
+          }
         } else {
-          rd.field_s = new ae();
-          bj.field_f.a((gl) (Object) rd.field_s, -24);
           return;
         }
     }
@@ -33,7 +37,7 @@ final class cm {
     final static boolean b(byte param0) {
         if (param0 < -8) {
           L0: {
-            if (qh.field_d != -1) {
+            if ((qh.field_d ^ -1) != 0) {
               break L0;
             } else {
               if (vc.a(-127, 1)) {
@@ -45,7 +49,7 @@ final class cm {
               }
             }
           }
-          if (qh.field_d == -2) {
+          if ((qh.field_d ^ -1) == 1) {
             if (!vc.a(-104, 2)) {
               return false;
             } else {
@@ -59,7 +63,7 @@ final class cm {
         } else {
           L1: {
             cm.c((byte) 60);
-            if (qh.field_d != -1) {
+            if ((qh.field_d ^ -1) != 0) {
               break L1;
             } else {
               if (vc.a(-127, 1)) {
@@ -71,7 +75,7 @@ final class cm {
               }
             }
           }
-          if (qh.field_d == -2) {
+          if ((qh.field_d ^ -1) == 1) {
             if (!vc.a(-104, 2)) {
               return false;
             } else {
@@ -86,7 +90,7 @@ final class cm {
     }
 
     cm(int param0) {
-        ((cm) this).field_c = param0;
+        this.field_c = param0;
     }
 
     public final String toString() {
@@ -94,14 +98,14 @@ final class cm {
     }
 
     final static boolean a(int param0) {
+        if (param0 > -116) {
+            field_a = (String) null;
+            return nf.field_c;
+        }
         return nf.field_c;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "    Ground level";
         field_a = "Right click to return to move mode";
     }

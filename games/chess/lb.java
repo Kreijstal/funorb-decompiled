@@ -8,30 +8,30 @@ final class lb extends nm {
     private int field_p;
 
     private final void c(int[] param0, int param1, int param2) {
-        nm var4 = (nm) (Object) ((lb) this).field_o.g(-18110);
+        nm var4 = (nm) ((Object) this.field_o.g(-18110));
         while (var4 != null) {
             var4.b(param0, param1, param2);
-            var4 = (nm) (Object) ((lb) this).field_o.a((byte) -114);
+            var4 = (nm) ((Object) this.field_o.a((byte) -114));
         }
     }
 
     final nm a() {
-        return (nm) (Object) ((lb) this).field_o.g(-18110);
+        return (nm) ((Object) this.field_o.g(-18110));
     }
 
     private final void a(pl param0) {
         param0.c(-2193);
         param0.a();
-        o var2 = ((lb) this).field_q.field_a.field_h;
-        if (var2 == ((lb) this).field_q.field_a) {
-            ((lb) this).field_p = -1;
+        o var2 = this.field_q.field_a.field_h;
+        if (var2 == this.field_q.field_a) {
+            this.field_p = -1;
         } else {
-            ((lb) this).field_p = ((pl) (Object) var2).field_j;
+            this.field_p = ((pl) ((Object) var2)).field_j;
         }
     }
 
     final nm b() {
-        return (nm) (Object) ((lb) this).field_o.a((byte) -106);
+        return (nm) ((Object) this.field_o.a((byte) -106));
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
@@ -42,20 +42,20 @@ final class lb extends nm {
         Throwable var8 = null;
         Throwable decompiledCaughtException = null;
         L0: while (true) {
-          if (((lb) this).field_p >= 0) {
-            if (((lb) this).field_n + param2 >= ((lb) this).field_p) {
-              var4 = ((lb) this).field_p - ((lb) this).field_n;
+          if (this.field_p >= 0) {
+            if (this.field_n + param2 >= this.field_p) {
+              var4 = this.field_p - this.field_n;
               this.c(param0, param1, var4);
               param1 = param1 + var4;
               param2 = param2 - var4;
-              ((lb) this).field_n = ((lb) this).field_n + var4;
+              this.field_n = this.field_n + var4;
               this.e();
-              var5 = (pl) (Object) ((lb) this).field_q.g(-18110);
-              var6 = (Object) (Object) var5;
+              var5 = (pl) ((Object) this.field_q.g(-18110));
+              var6 = var5;
               synchronized (var6) {
                 L1: {
                   L2: {
-                    var7 = var5.a((lb) this);
+                    var7 = var5.a((lb) (this));
                     if (var7 >= 0) {
                       var5.field_j = var7;
                       this.a(var5.field_h, var5);
@@ -75,7 +75,7 @@ final class lb extends nm {
                 return;
               }
             } else {
-              ((lb) this).field_n = ((lb) this).field_n + param2;
+              this.field_n = this.field_n + param2;
               this.c(param0, param1, param2);
               return;
             }
@@ -98,19 +98,19 @@ final class lb extends nm {
         Throwable var6 = null;
         Throwable decompiledCaughtException = null;
         L0: while (true) {
-          if (((lb) this).field_p >= 0) {
-            if (((lb) this).field_n + param0 >= ((lb) this).field_p) {
-              var2 = ((lb) this).field_p - ((lb) this).field_n;
+          if (this.field_p >= 0) {
+            if (this.field_n + param0 >= this.field_p) {
+              var2 = this.field_p - this.field_n;
               this.d(var2);
               param0 = param0 - var2;
-              ((lb) this).field_n = ((lb) this).field_n + var2;
+              this.field_n = this.field_n + var2;
               this.e();
-              var3 = (pl) (Object) ((lb) this).field_q.g(-18110);
-              var4 = (Object) (Object) var3;
+              var3 = (pl) ((Object) this.field_q.g(-18110));
+              var4 = var3;
               synchronized (var4) {
                 L1: {
                   L2: {
-                    var5 = var3.a((lb) this);
+                    var5 = var3.a((lb) (this));
                     if (var5 >= 0) {
                       var3.field_j = var5;
                       this.a(var3.field_h, var3);
@@ -130,7 +130,7 @@ final class lb extends nm {
                 return;
               }
             } else {
-              ((lb) this).field_n = ((lb) this).field_n + param0;
+              this.field_n = this.field_n + param0;
               this.d(param0);
               return;
             }
@@ -143,52 +143,52 @@ final class lb extends nm {
 
     private final void e() {
         pl var1 = null;
-        if (((lb) this).field_n > 0) {
-            var1 = (pl) (Object) ((lb) this).field_q.g(-18110);
+        if (this.field_n > 0) {
+            var1 = (pl) ((Object) this.field_q.g(-18110));
             while (var1 != null) {
-                var1.field_j = var1.field_j - ((lb) this).field_n;
-                var1 = (pl) (Object) ((lb) this).field_q.a((byte) -116);
+                var1.field_j = var1.field_j - this.field_n;
+                var1 = (pl) ((Object) this.field_q.a((byte) -116));
             }
-            ((lb) this).field_p = ((lb) this).field_p - ((lb) this).field_n;
-            ((lb) this).field_n = 0;
+            this.field_p = this.field_p - this.field_n;
+            this.field_n = 0;
         }
     }
 
     private final void a(o param0, pl param1) {
         L0: while (true) {
-          if (param0 != ((lb) this).field_q.field_a) {
-            if (((pl) (Object) param0).field_j <= param1.field_j) {
+          if (param0 != this.field_q.field_a) {
+            if (((pl) ((Object) param0)).field_j <= param1.field_j) {
               param0 = param0.field_h;
               continue L0;
             } else {
-              he.a((o) (Object) param1, param0, true);
-              ((lb) this).field_p = ((pl) (Object) ((lb) this).field_q.field_a.field_h).field_j;
+              he.a(param1, param0, true);
+              this.field_p = ((pl) ((Object) this.field_q.field_a.field_h)).field_j;
               return;
             }
           } else {
-            he.a((o) (Object) param1, param0, true);
-            ((lb) this).field_p = ((pl) (Object) ((lb) this).field_q.field_a.field_h).field_j;
+            he.a(param1, param0, true);
+            this.field_p = ((pl) ((Object) this.field_q.field_a.field_h)).field_j;
             return;
           }
         }
     }
 
     final synchronized void a(nm param0) {
-        ((lb) this).field_o.a((o) (Object) param0, 69);
+        this.field_o.a(param0, 69);
     }
 
     private final void d(int param0) {
-        nm var2 = (nm) (Object) ((lb) this).field_o.g(-18110);
+        nm var2 = (nm) ((Object) this.field_o.g(-18110));
         while (var2 != null) {
             var2.a(param0);
-            var2 = (nm) (Object) ((lb) this).field_o.a((byte) -127);
+            var2 = (nm) ((Object) this.field_o.a((byte) -127));
         }
     }
 
     public lb() {
-        ((lb) this).field_o = new jc();
-        ((lb) this).field_q = new jc();
-        ((lb) this).field_n = 0;
-        ((lb) this).field_p = -1;
+        this.field_o = new jc();
+        this.field_q = new jc();
+        this.field_n = 0;
+        this.field_p = -1;
     }
 }

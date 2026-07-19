@@ -10,11 +10,11 @@ class l {
     l field_f;
 
     final boolean b(boolean param0) {
-        if (null == ((l) this).field_a) {
+        if (null == this.field_a) {
             return false;
         }
         if (param0) {
-            field_b = null;
+            field_b = (km) null;
             return true;
         }
         return true;
@@ -24,26 +24,25 @@ class l {
         if (param0) {
             return;
         }
-        if (!(((l) this).field_a != null)) {
+        if (!(this.field_a != null)) {
             return;
         }
-        ((l) this).field_a.field_f = ((l) this).field_f;
-        ((l) this).field_f.field_a = ((l) this).field_a;
-        ((l) this).field_a = null;
-        ((l) this).field_f = null;
+        this.field_a.field_f = this.field_f;
+        this.field_f.field_a = this.field_a;
+        this.field_a = null;
+        this.field_f = null;
     }
 
     public static void b(int param0) {
         field_b = null;
+        if (param0 != -6325) {
+            return;
+        }
         field_e = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new p();
         field_e = "(<%0> players want to join)";
     }

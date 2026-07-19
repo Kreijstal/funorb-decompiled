@@ -35,8 +35,8 @@ final class ee implements isa {
               if (!(param0 instanceof rj)) {
                 break L1;
               } else {
-                if (((rj) (Object) param0).field_w) {
-                  var8.a(1 + var6_int + (-var8.field_n + param0.field_m >> 1), var7 - -1 + (-var8.field_k + param0.field_p >> 1), 256);
+                if (((rj) ((Object) param0)).field_w) {
+                  var8.a(1 + var6_int + (-var8.field_n + param0.field_m >> 1955757601), var7 - -1 + (-var8.field_k + param0.field_p >> 1794290785), 256);
                   break L1;
                 } else {
                   break L1;
@@ -62,23 +62,23 @@ final class ee implements isa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var6;
+            stackOut_10_0 = (RuntimeException) (var6);
             stackOut_10_1 = new StringBuilder().append("ee.B(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -86,7 +86,7 @@ final class ee implements isa {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -99,10 +99,6 @@ final class ee implements isa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = -1;
     }
 }

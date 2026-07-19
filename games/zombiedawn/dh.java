@@ -14,16 +14,20 @@ abstract class dh {
 
     final void b(int param0) {
         int var2 = -12 % ((param0 - -53) / 62);
-        bi.a(((dh) this).field_c, ((dh) this).field_d, ((dh) this).field_a);
+        bi.a(this.field_c, this.field_d, this.field_a);
     }
 
     abstract void a(int param0, int param1, java.awt.Component param2, int param3);
 
     final static void c(int param0) {
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
         int var2 = 0;
         var2 = ZombieDawn.field_J;
         if (param0 != 256) {
-          field_e = null;
+          field_e = (de) null;
           if (rc.field_p != f.field_k) {
             if (rc.field_p == bg.field_k) {
               if (!po.w(13296)) {
@@ -57,7 +61,7 @@ abstract class dh {
               }
             } else {
               if (bb.field_f == rc.field_p) {
-                int fieldTemp$4 = ln.field_b;
+                fieldTemp$4 = ln.field_b;
                 ln.field_b = ln.field_b - 1;
                 if (0 < fieldTemp$4) {
                   return;
@@ -70,7 +74,7 @@ abstract class dh {
               }
             }
           } else {
-            int fieldTemp$5 = ln.field_b;
+            fieldTemp$5 = ln.field_b;
             ln.field_b = ln.field_b + 1;
             if (fieldTemp$5 >= 16) {
               if (sc.field_a) {
@@ -120,7 +124,7 @@ abstract class dh {
               }
             } else {
               if (bb.field_f == rc.field_p) {
-                int fieldTemp$6 = ln.field_b;
+                fieldTemp$6 = ln.field_b;
                 ln.field_b = ln.field_b - 1;
                 if (0 < fieldTemp$6) {
                   return;
@@ -133,7 +137,7 @@ abstract class dh {
               }
             }
           } else {
-            int fieldTemp$7 = ln.field_b;
+            fieldTemp$7 = ln.field_b;
             ln.field_b = ln.field_b + 1;
             if (fieldTemp$7 >= 16) {
               if (sc.field_a) {
@@ -154,14 +158,15 @@ abstract class dh {
 
     public static void a(int param0) {
         field_e = null;
+        if (param0 != 16) {
+            dh.c(-103);
+            field_g = null;
+            return;
+        }
         field_g = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new de(256);
         field_g = "Unpacking graphics";
     }

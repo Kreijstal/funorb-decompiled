@@ -29,20 +29,20 @@ final class gqb implements ntb {
         try {
           L0: {
             L1: {
-              var3 = (gqb) (Object) param0;
+              var3 = (gqb) ((Object) param0);
               var4 = 0;
               if (param1 < -19) {
                 break L1;
               } else {
-                field_b = null;
+                field_b = (String) null;
                 break L1;
               }
             }
             L2: {
-              if (((gqb) this).field_c == var3.field_c) {
+              if (this.field_c == var3.field_c) {
                 break L2;
               } else {
-                System.out.println("int cooldown has changed. before=" + var3.field_c + ", now=" + ((gqb) this).field_c);
+                System.out.println("int cooldown has changed. before=" + var3.field_c + ", now=" + this.field_c);
                 var4 = 1;
                 break L2;
               }
@@ -58,23 +58,23 @@ final class gqb implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_0 = (RuntimeException) (var3_ref);
             stackOut_8_1 = new StringBuilder().append("gqb.F(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -82,7 +82,7 @@ final class gqb implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
         }
     }
 
@@ -113,8 +113,8 @@ final class gqb implements ntb {
           L0: {
             L1: {
               var4 = -108 / ((param0 - 22) / 59);
-              var3 = (gqb) (Object) param1;
-              if (var3.field_c == ((gqb) this).field_c) {
+              var3 = (gqb) ((Object) param1);
+              if (var3.field_c == this.field_c) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -130,23 +130,23 @@ final class gqb implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_0 = (RuntimeException) (var3_ref);
             stackOut_4_1 = new StringBuilder().append("gqb.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -154,7 +154,7 @@ final class gqb implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -166,11 +166,11 @@ final class gqb implements ntb {
             return;
         }
         try {
-            var5 = (gqb) (Object) param1;
+            var5 = (gqb) ((Object) param1);
             var6 = var5;
-            var6.field_c = ((gqb) this).field_c;
+            var6.field_c = this.field_c;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "gqb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "gqb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -179,50 +179,68 @@ final class gqb implements ntb {
             if (param1 >= -109) {
                 gqb.a(55);
             }
-            param0.a(-632, ((gqb) this).field_c, 32);
+            param0.a(-632, this.field_c, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "gqb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "gqb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static sg a(boolean param0) {
-        sg var9 = new sg();
-        ml var2 = new ml(0);
-        ml var4 = new ml(14);
+        ml var2 = null;
+        ml var4 = null;
+        ml var5 = null;
+        ml var6 = null;
+        ml var7 = null;
+        ml var8 = null;
+        sg var9 = null;
+        var9 = new sg();
+        var2 = new ml(0);
+        var4 = new ml(14);
         var2.a(1, 0, var4);
-        ml var5 = new ml(12);
+        var5 = new ml(12);
         var5.field_a = new aqa();
         var5.a((byte) -82, 8);
         var5.field_a.a(true, 1024);
         var2.a(1, 1, var5);
-        ml var6 = new ml(12);
+        var6 = new ml(12);
         var6.field_a = new aqa();
         var6.a((byte) -64, 4);
         var6.field_a.a(true, 1024);
         var2.a(1, 2, var6);
-        ml var7 = new ml(12);
+        var7 = new ml(12);
         var7.field_a = new aqa();
         var7.a((byte) -113, 2);
         var7.field_a.a(true, 1024);
         var2.a(1, 3, var7);
-        ml var8 = new ml(12);
-        var8.field_a = new aqa();
-        var8.a((byte) -92, 1);
-        var8.field_a.a(true, 1024);
-        var2.a(1, 4, var8);
-        var9.field_k = var2;
-        var9.e((byte) 119);
-        return var9;
+        var8 = new ml(12);
+        if (param0) {
+          field_a = 66;
+          var8.field_a = new aqa();
+          var8.a((byte) -92, 1);
+          var8.field_a.a(true, 1024);
+          var2.a(1, 4, var8);
+          var9.field_k = var2;
+          var9.e((byte) 119);
+          return var9;
+        } else {
+          var8.field_a = new aqa();
+          var8.a((byte) -92, 1);
+          var8.field_a.a(true, 1024);
+          var2.a(1, 4, var8);
+          var9.field_k = var2;
+          var9.e((byte) 119);
+          return var9;
+        }
     }
 
     public final void a(faa param0, boolean param1) {
         try {
             if (param1) {
-                ((gqb) this).field_c = 57;
+                this.field_c = 57;
             }
-            ((gqb) this).field_c = param0.i(0, 32);
+            this.field_c = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "gqb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "gqb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -234,10 +252,6 @@ final class gqb implements ntb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Create a free Account";
         field_a = 0;
     }

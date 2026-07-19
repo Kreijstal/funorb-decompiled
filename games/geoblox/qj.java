@@ -7,19 +7,27 @@ final class qj {
     static ck field_a;
 
     public static void a(byte param0) {
+        int discarded$0 = 0;
         field_c = null;
         field_a = null;
+        if (param0 != -23) {
+            discarded$0 = qj.b((byte) 28);
+        }
     }
 
     final static int b(byte param0) {
+        int discarded$0 = 0;
         if (param0 != 81) {
-            int discarded$0 = qj.b((byte) -12);
+            discarded$0 = qj.b((byte) -12);
             return rd.field_u;
         }
         return rd.field_u;
     }
 
     final static String a(String param0, String param1, char param2, byte param3) {
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -84,7 +92,7 @@ final class qj {
               } else {
                 var8_int = 0;
                 L3: while (true) {
-                  var8_int = param0.indexOf('_', var8_int);
+                  var8_int = param0.indexOf((int) param2, var8_int);
                   if (var8_int >= 0) {
                     var6 = var6 + var7;
                     var8_int++;
@@ -98,14 +106,14 @@ final class qj {
             var8 = new StringBuilder(var6);
             var9 = 0;
             L4: while (true) {
-              var10 = param0.indexOf('_', var9);
+              var10 = param0.indexOf((int) param2, var9);
               if (var10 >= 0) {
-                StringBuilder discarded$3 = var8.append(param0.substring(var9, var10));
+                discarded$3 = var8.append(param0.substring(var9, var10));
                 var9 = 1 + var10;
-                StringBuilder discarded$4 = var8.append(param1);
+                discarded$4 = var8.append(param1);
                 continue L4;
               } else {
-                StringBuilder discarded$5 = var8.append(param0.substring(var9));
+                discarded$5 = var8.append(param0.substring(var9));
                 stackOut_12_0 = var8.toString();
                 stackIn_13_0 = stackOut_12_0;
                 break L0;
@@ -116,23 +124,23 @@ final class qj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var4;
+            stackOut_14_0 = (RuntimeException) (var4);
             stackOut_14_1 = new StringBuilder().append("qj.B(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -141,23 +149,23 @@ final class qj {
             }
           }
           L6: {
-            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+            stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
             stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -165,16 +173,12 @@ final class qj {
               break L6;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + '_' + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_13_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new ck(10, 2, 2, 0);
     }
 }

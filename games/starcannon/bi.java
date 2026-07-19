@@ -17,7 +17,7 @@ final class bi {
         var4 = StarCannon.field_A;
         try {
           L0: {
-            var1 = (Object) (Object) hj.field_c;
+            var1 = hj.field_c;
             synchronized (var1) {
               L1: {
                 L2: {
@@ -30,8 +30,8 @@ final class bi {
                       } else {
                         var2 = ab.field_A[ec.field_a];
                         ec.field_a = 127 & 1 + ec.field_a;
-                        if (var2 < 0) {
-                          wc.field_c[~var2] = false;
+                        if (-1 < (var2 ^ -1)) {
+                          wc.field_c[var2 ^ -1] = false;
                           continue L3;
                         } else {
                           wc.field_c[var2] = true;
@@ -42,7 +42,7 @@ final class bi {
                   } else {
                     var2 = 0;
                     L4: while (true) {
-                      if (var2 >= 112) {
+                      if ((var2 ^ -1) <= -113) {
                         ah.field_c = ec.field_a;
                         break L2;
                       } else {
@@ -54,29 +54,28 @@ final class bi {
                   }
                 }
                 hc.field_b = pd.field_b;
-                var1_int = 0;
                 break L1;
               }
             }
+            var1_int = -111 % ((param0 - 35) / 57);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1_ref, "bi.A(" + 119 + ')');
+          throw sd.a((Throwable) ((Object) var1_ref), "bi.A(" + param0 + ')');
         }
     }
 
     public static void b(int param0) {
+        if (param0 != 0) {
+            bi.a(-10);
+        }
         field_c = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new hl(640, 480);
         field_c = new int[8];
     }

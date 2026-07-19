@@ -12,21 +12,20 @@ final class jj extends Exception {
     }
 
     final static int a(int param0, byte param1) {
+        boolean discarded$7 = false;
         if (param1 < -56) {
-          if (6406 == param0) {
-            return 1;
-          } else {
+          if (6406 != param0) {
             if (param0 != 6409) {
-              if (param0 != 32841) {
+              if ((param0 ^ -1) != -32842) {
                 if (6410 != param0) {
-                  if (param0 == 6407) {
-                    return 3;
-                  } else {
-                    if (6408 != param0) {
-                      throw new IllegalArgumentException("");
-                    } else {
+                  if (-6408 != (param0 ^ -1)) {
+                    if (6408 == param0) {
                       return 4;
+                    } else {
+                      throw new IllegalArgumentException("");
                     }
+                  } else {
+                    return 3;
                   }
                 } else {
                   return 2;
@@ -37,23 +36,23 @@ final class jj extends Exception {
             } else {
               return 1;
             }
+          } else {
+            return 1;
           }
         } else {
-          boolean discarded$8 = jj.a(-126, -76, -57);
-          if (6406 == param0) {
-            return 1;
-          } else {
+          discarded$7 = jj.a(-126, -76, -57);
+          if (6406 != param0) {
             if (param0 != 6409) {
-              if (param0 != 32841) {
+              if ((param0 ^ -1) != -32842) {
                 if (6410 != param0) {
-                  if (param0 == 6407) {
-                    return 3;
-                  } else {
-                    if (6408 != param0) {
-                      throw new IllegalArgumentException("");
-                    } else {
+                  if (-6408 != (param0 ^ -1)) {
+                    if (6408 == param0) {
                       return 4;
+                    } else {
+                      throw new IllegalArgumentException("");
                     }
+                  } else {
+                    return 3;
                   }
                 } else {
                   return 2;
@@ -64,12 +63,14 @@ final class jj extends Exception {
             } else {
               return 1;
             }
+          } else {
+            return 1;
           }
         }
     }
 
     jj(int param0) {
-        ((jj) this).field_a = param0;
+        this.field_a = param0;
     }
 
     static {

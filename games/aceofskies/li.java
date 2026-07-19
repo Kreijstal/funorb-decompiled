@@ -6,25 +6,25 @@ abstract class li implements sp {
     static String field_b;
 
     public final String a(boolean param0) {
-        Object var3 = null;
+        String var3 = null;
         if (param0) {
-          if (!((li) this).a(26921)) {
-            if (kh.a(-104) < ((li) this).field_a + 350L) {
+          if (!this.a(26921)) {
+            if (kh.a(-104) < this.field_a + 350L) {
               return null;
             } else {
-              return ((li) this).b(8192);
+              return this.b(8192);
             }
           } else {
             return null;
           }
         } else {
-          var3 = null;
+          var3 = (String) null;
           li.a(-62, -108, (String) null);
-          if (!((li) this).a(26921)) {
-            if (kh.a(-104) < ((li) this).field_a + 350L) {
+          if (!this.a(26921)) {
+            if (kh.a(-104) < this.field_a + 350L) {
               return null;
             } else {
-              return ((li) this).b(8192);
+              return this.b(8192);
             }
           } else {
             return null;
@@ -35,35 +35,40 @@ abstract class li implements sp {
     abstract pt c(int param0);
 
     public final void a(byte param0) {
+        String discarded$0 = null;
         if (param0 <= 62) {
-            String discarded$0 = ((li) this).b(-122);
-            ((li) this).field_a = kh.a(-74);
+            discarded$0 = this.b(-122);
+            this.field_a = kh.a(-74);
             return;
         }
-        ((li) this).field_a = kh.a(-74);
+        this.field_a = kh.a(-74);
     }
 
     abstract String b(int param0);
 
     public final pt b(boolean param0) {
-        if (!(!((li) this).a(26921))) {
+        if (!(!this.a(26921))) {
             return vb.field_o;
         }
         if (!param0) {
-            ((li) this).a((byte) 120);
-            if (!(~kh.a(-113) <= ~(((li) this).field_a - -350L))) {
+            this.a((byte) 120);
+            if (!((kh.a(-113) ^ -1L) <= (this.field_a - -350L ^ -1L))) {
                 return jc.field_Pc;
             }
-            return ((li) this).c(0);
+            return this.c(0);
         }
-        if (!(~kh.a(-113) <= ~(((li) this).field_a - -350L))) {
+        if (!((kh.a(-113) ^ -1L) <= (this.field_a - -350L ^ -1L))) {
             return jc.field_Pc;
         }
-        return ((li) this).c(0);
+        return this.c(0);
     }
 
     public static void b(byte param0) {
         field_b = null;
+        if (param0 != -90) {
+            String var2 = (String) null;
+            li.a(0, -79, (String) null);
+        }
     }
 
     final static void a(int param0, int param1, String param2) {
@@ -99,7 +104,7 @@ abstract class li implements sp {
                   break L1;
                 } else {
                   L2: {
-                    if (param1 == 8) {
+                    if ((param1 ^ -1) == -9) {
                       L3: {
                         if (nf.field_a) {
                           param2 = jr.field_p;
@@ -132,7 +137,7 @@ abstract class li implements sp {
                     } else {
                       L6: {
                         if (nm.field_a) {
-                          param2 = sn.a(bc.field_v, 107, new String[1]);
+                          param2 = sn.a(bc.field_v, 107, new String[]{param2});
                           break L6;
                         } else {
                           break L6;
@@ -173,23 +178,23 @@ abstract class li implements sp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var3;
+            stackOut_24_0 = (RuntimeException) (var3);
             stackOut_24_1 = new StringBuilder().append("li.I(").append(param0).append(',').append(param1).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param2 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
               break L8;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
@@ -197,15 +202,11 @@ abstract class li implements sp {
               break L8;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "to return to the normal view.";
     }
 }

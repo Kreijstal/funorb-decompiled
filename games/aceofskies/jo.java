@@ -12,11 +12,12 @@ final class jo extends wf {
     int field_h;
 
     public static void a(byte param0) {
-        Object var2 = null;
+        rh discarded$2 = null;
+        al var2 = null;
         field_j = null;
         if (param0 >= -118) {
-          var2 = null;
-          rh discarded$2 = jo.a((al) null, -12, (byte) -87);
+          var2 = (al) null;
+          discarded$2 = jo.a((al) null, -12, (byte) -87);
           field_l = null;
           return;
         } else {
@@ -63,23 +64,23 @@ final class jo extends wf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("jo.B(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -87,24 +88,20 @@ final class jo extends wf {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
 
     jo(int param0, int param1, int param2, int param3, int param4) {
-        ((jo) this).field_g = param2;
-        ((jo) this).field_e = param4;
-        ((jo) this).field_k = param0;
-        ((jo) this).field_h = param3;
-        ((jo) this).field_i = param1;
+        this.field_g = param2;
+        this.field_e = param4;
+        this.field_k = param0;
+        this.field_h = param3;
+        this.field_i = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "BEST HIGHSCORES";
         field_j = new int[4];
     }

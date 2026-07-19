@@ -7,14 +7,18 @@ final class hi {
     static int field_c;
 
     public static void a(boolean param0) {
+        boolean discarded$0 = false;
         field_b = null;
         field_a = null;
+        if (param0) {
+            discarded$0 = hi.a((byte) 43);
+        }
     }
 
     final static boolean a(byte param0) {
         if (param0 <= -99) {
           if (10 <= mh.field_U) {
-            if (sa.field_k < 13) {
+            if ((sa.field_k ^ -1) > -14) {
               return false;
             } else {
               return true;
@@ -28,10 +32,6 @@ final class hi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Names cannot start or end with space or underscore";
         field_b = "Main Menu";
     }

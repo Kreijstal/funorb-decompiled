@@ -17,10 +17,6 @@ final class fm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fm.A(";
         field_b = new long[32];
     }

@@ -10,15 +10,14 @@ final class mf {
 
     public static void a(boolean param0) {
         field_b = null;
+        if (!param0) {
+            return;
+        }
         field_c = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mf.A(";
         field_a = "Enter the name you'd prefer. This is the name displayed to other players.";
         field_b = new qj();

@@ -10,6 +10,8 @@ final class ctb extends da {
     private int[] field_f;
 
     private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -28,7 +30,7 @@ final class ctb extends da {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var12 = param0[incrementValue$66] & 255;
                 if (var12 == 0) {
@@ -39,7 +41,7 @@ final class ctb extends da {
                   var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
                   var12 = 256 - var12;
                   var14 = param1[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param1[incrementValue$67] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
                   var11++;
@@ -62,41 +64,41 @@ final class ctb extends da {
         int var16 = 0;
         if (param5 != null) {
           L0: {
-            param1 = param1 + ((ctb) this).field_e[param0];
-            param2 = param2 + ((ctb) this).field_d[param0];
-            var9 = ((ctb) this).field_h[param0];
-            var10 = ((ctb) this).field_f[param0];
-            var11 = ((ctb) this).field_g.field_i;
+            param1 = param1 + this.field_e[param0];
+            param2 = param2 + this.field_d[param0];
+            var9 = this.field_h[param0];
+            var10 = this.field_f[param0];
+            var11 = this.field_g.field_i;
             var12 = param1 + param2 * var11;
             var13 = var11 - var9;
             var14 = 0;
             var15 = 0;
-            if (param2 >= ((ctb) this).field_g.field_n) {
+            if (param2 >= this.field_g.field_n) {
               break L0;
             } else {
-              var16 = ((ctb) this).field_g.field_n - param2;
+              var16 = this.field_g.field_n - param2;
               var10 = var10 - var16;
-              param2 = ((ctb) this).field_g.field_n;
+              param2 = this.field_g.field_n;
               var15 = var15 + var16 * var9;
               var12 = var12 + var16 * var11;
               break L0;
             }
           }
           L1: {
-            if (param2 + var10 <= ((ctb) this).field_g.field_p) {
+            if (param2 + var10 <= this.field_g.field_p) {
               break L1;
             } else {
-              var10 = var10 - (param2 + var10 - ((ctb) this).field_g.field_p);
+              var10 = var10 - (param2 + var10 - this.field_g.field_p);
               break L1;
             }
           }
           L2: {
-            if (param1 >= ((ctb) this).field_g.field_H) {
+            if (param1 >= this.field_g.field_H) {
               break L2;
             } else {
-              var16 = ((ctb) this).field_g.field_H - param1;
+              var16 = this.field_g.field_H - param1;
               var9 = var9 - var16;
-              param1 = ((ctb) this).field_g.field_H;
+              param1 = this.field_g.field_H;
               var15 = var15 + var16;
               var12 = var12 + var16;
               var14 = var14 + var16;
@@ -105,10 +107,10 @@ final class ctb extends da {
             }
           }
           L3: {
-            if (param1 + var9 <= ((ctb) this).field_g.field_A) {
+            if (param1 + var9 <= this.field_g.field_A) {
               break L3;
             } else {
-              var16 = param1 + var9 - ((ctb) this).field_g.field_A;
+              var16 = param1 + var9 - this.field_g.field_A;
               var9 = var9 - var16;
               var14 = var14 + var16;
               var13 = var13 + var16;
@@ -120,7 +122,7 @@ final class ctb extends da {
               break L4;
             } else {
               if (var10 > 0) {
-                this.a(((ctb) this).field_c[param0], ((ctb) this).field_g.field_k, param3, var15, var12, var9, var10, var13, var14, param1, param2, ((ctb) this).field_h[param0], param5, param6, param7);
+                this.a(this.field_c[param0], this.field_g.field_k, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_h[param0], param5, param6, param7);
                 return;
               } else {
                 break L4;
@@ -129,12 +131,14 @@ final class ctb extends da {
           }
           return;
         } else {
-          ((ctb) this).fa(param0, param1, param2, param3, param4);
+          this.fa(param0, param1, param2, param3, param4);
           return;
         }
     }
 
     private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         Object var16 = null;
         tka var16_ref = null;
         int[] var17 = null;
@@ -153,38 +157,34 @@ final class ctb extends da {
         int var30 = 0;
         int[] var31 = null;
         int[] var32 = null;
-        int[] var33 = null;
-        int[] var34 = null;
         int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
         L0: {
           var16 = null;
-          var16_ref = (tka) (Object) param12;
-          var34 = var16_ref.field_a;
-          var33 = var34;
-          var32 = var33;
+          var16_ref = (tka) ((Object) param12);
+          var32 = var16_ref.field_a;
           var31 = var32;
           var17 = var31;
           var18 = var16_ref.field_b;
-          var19 = param9 - ((ctb) this).field_g.field_H;
+          var19 = param9 - this.field_g.field_H;
           var20 = param10;
           if (param14 <= var20) {
             break L0;
           } else {
             var20 = param14;
-            param4 = param4 + (param14 - param10) * ((ctb) this).field_g.field_i;
+            param4 = param4 + (param14 - param10) * this.field_g.field_i;
             param3 = param3 + (param14 - param10) * param11;
             break L0;
           }
         }
         L1: {
-          if (param14 + var34.length >= param10 + param6) {
+          if (param14 + var32.length >= param10 + param6) {
             stackOut_4_0 = param10 + param6;
             stackIn_5_0 = stackOut_4_0;
             break L1;
           } else {
-            stackOut_3_0 = param14 + var34.length;
+            stackOut_3_0 = param14 + var32.length;
             stackIn_5_0 = stackOut_3_0;
             break L1;
           }
@@ -243,7 +243,7 @@ final class ctb extends da {
                 var22++;
                 continue L2;
               } else {
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
                 var28 = param0[incrementValue$2] & 255;
                 if (var28 == 0) {
@@ -254,7 +254,7 @@ final class ctb extends da {
                   var29 = ((param2 & 16711935) * var28 & -16711936) + ((param2 & 65280) * var28 & 16711680) >> 8;
                   var28 = 256 - var28;
                   var30 = param1[param4];
-                  int incrementValue$3 = param4;
+                  incrementValue$3 = param4;
                   param4++;
                   param1[incrementValue$3] = (((var30 & 16711935) * var28 & -16711936) + ((var30 & 65280) * var28 & 16711680) >> 8) + var29;
                   var27++;
@@ -267,33 +267,35 @@ final class ctb extends da {
     }
 
     ctb(sob param0, sw param1, ima[] param2, int[] param3, int[] param4) {
-        super((ha) (Object) param0, param1);
+        super(param0, param1);
         int var6 = 0;
         ima var7 = null;
         byte[] var14 = null;
+        byte[] array$0 = null;
         byte[] var9 = null;
         int var10 = 0;
-        ((ctb) this).field_g = param0;
-        ((ctb) this).field_g = param0;
-        ((ctb) this).field_h = param3;
-        ((ctb) this).field_f = param4;
-        ((ctb) this).field_c = new byte[param2.length][];
-        ((ctb) this).field_d = new int[param2.length];
-        ((ctb) this).field_e = new int[param2.length];
+        this.field_g = param0;
+        this.field_g = param0;
+        this.field_h = param3;
+        this.field_f = param4;
+        this.field_c = new byte[param2.length][];
+        this.field_d = new int[param2.length];
+        this.field_e = new int[param2.length];
         for (var6 = 0; var6 < param2.length; var6++) {
             var7 = param2[var6];
             if (var7.field_a != null) {
-                ((ctb) this).field_c[var6] = var7.field_a;
+                this.field_c[var6] = var7.field_a;
             } else {
                 var14 = var7.field_h;
-                ((ctb) this).field_c[var6] = new byte[var14.length];
-                var9 = new byte[var14.length];
+                array$0 = new byte[var14.length];
+                this.field_c[var6] = array$0;
+                var9 = array$0;
                 for (var10 = 0; var10 < var14.length; var10++) {
                     var9[var10] = (byte)(var14[var10] == 0 ? 0 : -1);
                 }
             }
-            ((ctb) this).field_d[var6] = var7.field_g;
-            ((ctb) this).field_e[var6] = var7.field_c;
+            this.field_d[var6] = var7.field_g;
+            this.field_e[var6] = var7.field_c;
         }
     }
 
@@ -307,41 +309,41 @@ final class ctb extends da {
         int var12 = 0;
         int var13 = 0;
         L0: {
-          param1 = param1 + ((ctb) this).field_e[param0];
-          param2 = param2 + ((ctb) this).field_d[param0];
-          var6 = ((ctb) this).field_h[param0];
-          var7 = ((ctb) this).field_f[param0];
-          var8 = ((ctb) this).field_g.field_i;
+          param1 = param1 + this.field_e[param0];
+          param2 = param2 + this.field_d[param0];
+          var6 = this.field_h[param0];
+          var7 = this.field_f[param0];
+          var8 = this.field_g.field_i;
           var9 = param1 + param2 * var8;
           var10 = var8 - var6;
           var11 = 0;
           var12 = 0;
-          if (param2 >= ((ctb) this).field_g.field_n) {
+          if (param2 >= this.field_g.field_n) {
             break L0;
           } else {
-            var13 = ((ctb) this).field_g.field_n - param2;
+            var13 = this.field_g.field_n - param2;
             var7 = var7 - var13;
-            param2 = ((ctb) this).field_g.field_n;
+            param2 = this.field_g.field_n;
             var12 = var12 + var13 * var6;
             var9 = var9 + var13 * var8;
             break L0;
           }
         }
         L1: {
-          if (param2 + var7 <= ((ctb) this).field_g.field_p) {
+          if (param2 + var7 <= this.field_g.field_p) {
             break L1;
           } else {
-            var7 = var7 - (param2 + var7 - ((ctb) this).field_g.field_p);
+            var7 = var7 - (param2 + var7 - this.field_g.field_p);
             break L1;
           }
         }
         L2: {
-          if (param1 >= ((ctb) this).field_g.field_H) {
+          if (param1 >= this.field_g.field_H) {
             break L2;
           } else {
-            var13 = ((ctb) this).field_g.field_H - param1;
+            var13 = this.field_g.field_H - param1;
             var6 = var6 - var13;
-            param1 = ((ctb) this).field_g.field_H;
+            param1 = this.field_g.field_H;
             var12 = var12 + var13;
             var9 = var9 + var13;
             var11 = var11 + var13;
@@ -350,10 +352,10 @@ final class ctb extends da {
           }
         }
         L3: {
-          if (param1 + var6 <= ((ctb) this).field_g.field_A) {
+          if (param1 + var6 <= this.field_g.field_A) {
             break L3;
           } else {
-            var13 = param1 + var6 - ((ctb) this).field_g.field_A;
+            var13 = param1 + var6 - this.field_g.field_A;
             var6 = var6 - var13;
             var11 = var11 + var13;
             var10 = var10 + var13;
@@ -365,7 +367,7 @@ final class ctb extends da {
             break L4;
           } else {
             if (var7 > 0) {
-              this.a(((ctb) this).field_c[param0], ((ctb) this).field_g.field_k, param3, var12, var9, var6, var7, var10, var11);
+              this.a(this.field_c[param0], this.field_g.field_k, param3, var12, var9, var6, var7, var10, var11);
               return;
             } else {
               break L4;

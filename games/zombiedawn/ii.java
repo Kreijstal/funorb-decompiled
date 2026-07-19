@@ -10,10 +10,13 @@ final class ii implements Iterable {
     static String[] field_b;
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new ag((ii) this);
+        return (Iterator) ((Object) new ag((ii) (this)));
     }
 
     public static void a(byte param0) {
+        if (param0 >= -102) {
+            return;
+        }
         field_b = null;
         field_a = null;
     }
@@ -44,7 +47,7 @@ final class ii implements Iterable {
               if (param0 == 8099) {
                 break L1;
               } else {
-                field_b = null;
+                field_b = (String[]) null;
                 break L1;
               }
             }
@@ -56,23 +59,23 @@ final class ii implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ii.D(").append(param0).append(',').append(param1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -80,16 +83,16 @@ final class ii implements Iterable {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     final nb a(int param0) {
         nb var2 = null;
-        var2 = ((ii) this).field_c.field_i;
+        var2 = this.field_c.field_i;
         if (param0 >= 46) {
-          if (var2 == ((ii) this).field_c) {
+          if (var2 == this.field_c) {
             return null;
           } else {
             var2.c((byte) -34);
@@ -97,7 +100,7 @@ final class ii implements Iterable {
           }
         } else {
           field_d = 104;
-          if (var2 == ((ii) this).field_c) {
+          if (var2 == this.field_c) {
             return null;
           } else {
             var2.c((byte) -34);
@@ -107,20 +110,21 @@ final class ii implements Iterable {
     }
 
     final void a(int param0, nb param1) {
+        int discarded$0 = 0;
         try {
             if (!(param1.field_h == null)) {
                 param1.c((byte) -12);
             }
-            param1.field_i = ((ii) this).field_c;
-            param1.field_h = ((ii) this).field_c.field_h;
+            param1.field_i = this.field_c;
+            param1.field_h = this.field_c.field_h;
             param1.field_h.field_i = param1;
             if (param0 != 0) {
-                Object var4 = null;
-                int discarded$0 = ii.a(-82, 33, (byte[]) null);
+                byte[] var4 = (byte[]) null;
+                discarded$0 = ii.a(-82, 33, (byte[]) null);
             }
             param1.field_i.field_h = param1;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "ii.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "ii.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -129,10 +133,6 @@ final class ii implements Iterable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
     }
 }

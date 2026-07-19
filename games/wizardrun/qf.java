@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class qf extends mf {
     static vh field_m;
     static int field_l;
@@ -30,7 +28,7 @@ final class qf extends mf {
         String stackOut_5_2 = null;
         try {
           L0: {
-            if (((qf) this).a(param1, param0) == hg.field_c) {
+            if (this.a(param1, param0) == hg.field_c) {
               stackOut_2_0 = di.field_a;
               stackIn_3_0 = stackOut_2_0;
               break L0;
@@ -42,23 +40,23 @@ final class qf extends mf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("qf.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -66,7 +64,7 @@ final class qf extends mf {
               break L1;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -85,6 +83,7 @@ final class qf extends mf {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ok stackOut_2_0 = null;
         ok stackOut_7_0 = null;
@@ -98,16 +97,17 @@ final class qf extends mf {
         String stackOut_10_2 = null;
         try {
           L0: {
-            var4 = (CharSequence) (Object) param1;
+            var4 = (CharSequence) ((Object) param1);
             if (!af.a(var4, (byte) 78)) {
               stackOut_2_0 = hg.field_c;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
-                var5 = (CharSequence) (Object) param1;
+                var5 = (CharSequence) ((Object) param1);
                 var3_int = ph.a(1124, var5);
-                if (param0 <= ~var3_int) {
+                if (param0 <= (var3_int ^ -1)) {
                   break L1;
                 } else {
                   if (130 < var3_int) {
@@ -119,6 +119,7 @@ final class qf extends mf {
               }
               stackOut_7_0 = hg.field_c;
               stackIn_8_0 = stackOut_7_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -126,23 +127,23 @@ final class qf extends mf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("qf.C(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -150,28 +151,55 @@ final class qf extends mf {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
-        return stackIn_8_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_8_0;
+        }
     }
 
     public static void c(boolean param0) {
         field_k = null;
+        if (!param0) {
+            return;
+        }
         field_m = null;
     }
 
     final static String c(byte param0) {
-        String var1 = "";
-        if (!(r.field_b == null)) {
+        String var1 = null;
+        L0: {
+          var1 = "";
+          if (r.field_b != null) {
             var1 = r.field_b.d(false);
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        if (!(0 != var1.length())) {
+        L1: {
+          if (0 == var1.length()) {
             var1 = vk.d((byte) -110);
+            break L1;
+          } else {
+            break L1;
+          }
         }
-        if (0 == var1.length()) {
-            var1 = ei.field_i;
+        if (param0 != 77) {
+          return (String) null;
+        } else {
+          L2: {
+            if (0 != var1.length()) {
+              break L2;
+            } else {
+              var1 = ei.field_i;
+              break L2;
+            }
+          }
+          return var1;
         }
-        return var1;
     }
 
     qf(og param0) {
@@ -179,10 +207,6 @@ final class qf extends mf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "Achievements";
     }
 }

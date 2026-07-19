@@ -14,13 +14,18 @@ final class bl extends gg {
     static int field_k;
 
     public static void a(int param0) {
+        boolean discarded$0 = false;
         field_m = null;
+        if (param0 != 0) {
+            discarded$0 = bl.a((byte) 16);
+        }
     }
 
     final static od a(od param0, int[] param1, byte param2) {
+        od discarded$2 = null;
         od var3 = null;
         RuntimeException var3_ref = null;
-        Object var4 = null;
+        int[] var4 = null;
         od stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -60,8 +65,8 @@ final class bl extends gg {
               if (param2 == 100) {
                 break L1;
               } else {
-                var4 = null;
-                od discarded$2 = bl.a((od) null, (int[]) null, (byte) -77);
+                var4 = (int[]) null;
+                discarded$2 = bl.a((od) null, (int[]) null, (byte) -77);
                 break L1;
               }
             }
@@ -74,7 +79,7 @@ final class bl extends gg {
             var3.field_d = param0.field_d;
             var3.field_l = param0.field_l;
             var3.field_j = param0.field_j;
-            stackOut_2_0 = (od) var3;
+            stackOut_2_0 = (od) (var3);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -82,23 +87,23 @@ final class bl extends gg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_0 = (RuntimeException) (var3_ref);
             stackOut_4_1 = new StringBuilder().append("bl.B(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -107,23 +112,23 @@ final class bl extends gg {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -131,68 +136,95 @@ final class bl extends gg {
               break L3;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
 
     final static boolean a(byte param0) {
-        if (param0 != -81) {
-            boolean discarded$3 = bl.a((byte) -9);
-            if (kj.field_R < 20) {
-                return true;
-            }
-            if (!bb.h(param0 + -44)) {
-                return true;
-            }
-            if (c.field_H <= 0) {
+        boolean discarded$5 = false;
+        if (param0 == -81) {
+          if ((kj.field_R ^ -1) <= -21) {
+            if (bb.h(param0 + -44)) {
+              if (-1 > (c.field_H ^ -1)) {
+                if (rd.b(6144)) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
                 return false;
+              }
+            } else {
+              return true;
             }
-            if (rd.b(6144)) {
+          } else {
+            return true;
+          }
+        } else {
+          discarded$5 = bl.a((byte) -9);
+          if ((kj.field_R ^ -1) <= -21) {
+            if (bb.h(param0 + -44)) {
+              if (-1 > (c.field_H ^ -1)) {
+                if (rd.b(6144)) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
                 return false;
+              }
+            } else {
+              return true;
             }
+          } else {
             return true;
+          }
         }
-        if (kj.field_R < 20) {
-            return true;
-        }
-        if (!bb.h(param0 + -44)) {
-            return true;
-        }
-        if (c.field_H <= 0) {
-            return false;
-        }
-        if (rd.b(6144)) {
-            return false;
-        }
-        return true;
     }
 
     final static od[] b(boolean param0) {
+        od[] discarded$1 = null;
+        od[] var1 = null;
         int var2 = 0;
-        int var3 = SolKnight.field_L ? 1 : 0;
-        od[] var1 = new od[nb.field_c];
-        for (var2 = 0; nb.field_c > var2; var2++) {
-            var1[var2] = new od(kl.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], jc.field_c[var2], ig.field_H);
+        int var3 = 0;
+        L0: {
+          var3 = SolKnight.field_L ? 1 : 0;
+          var1 = new od[nb.field_c];
+          if (!param0) {
+            break L0;
+          } else {
+            discarded$1 = bl.b(false);
+            break L0;
+          }
         }
-        og.a((byte) -97);
-        return var1;
+        var2 = 0;
+        L1: while (true) {
+          if (nb.field_c > var2) {
+            var1[var2] = new od(kl.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], jc.field_c[var2], ig.field_H);
+            var2++;
+            if (var3 == 0) {
+              continue L1;
+            } else {
+              return var1;
+            }
+          } else {
+            og.a((byte) -97);
+            return var1;
+          }
+        }
     }
 
     bl(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((bl) this).field_q = param2;
-        ((bl) this).field_j = param1;
-        ((bl) this).field_h = param3;
-        ((bl) this).field_n = param0;
-        ((bl) this).field_l = param5;
-        ((bl) this).field_o = param4;
+        this.field_q = param2;
+        this.field_j = param1;
+        this.field_h = param3;
+        this.field_n = param0;
+        this.field_l = param5;
+        this.field_o = param4;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = false;
         field_m = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
     }

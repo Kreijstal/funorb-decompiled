@@ -13,6 +13,9 @@ final class ph {
     static he[] field_a;
 
     final static String a(String param0, byte param1, char param2, String param3) {
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -68,7 +71,7 @@ final class ph {
               if (0 != var7) {
                 var8_int = 0;
                 L2: while (true) {
-                  var8_int = param0.indexOf('_', var8_int);
+                  var8_int = param0.indexOf((int) param2, var8_int);
                   if (var8_int >= 0) {
                     var6 = var6 + var7;
                     var8_int++;
@@ -85,15 +88,15 @@ final class ph {
             var10 = 115 / ((87 - param1) / 34);
             var9 = 0;
             L3: while (true) {
-              var11 = param0.indexOf('_', var9);
-              if (var11 < 0) {
-                StringBuilder discarded$3 = var8.append(param0.substring(var9));
+              var11 = param0.indexOf((int) param2, var9);
+              if (-1 < (var11 ^ -1)) {
+                discarded$3 = var8.append(param0.substring(var9));
                 stackOut_10_0 = var8.toString();
                 stackIn_11_0 = stackOut_10_0;
                 break L0;
               } else {
-                StringBuilder discarded$4 = var8.append(param0.substring(var9, var11));
-                StringBuilder discarded$5 = var8.append(param3);
+                discarded$4 = var8.append(param0.substring(var9, var11));
+                discarded$5 = var8.append(param3);
                 var9 = var11 + 1;
                 continue L3;
               }
@@ -103,23 +106,23 @@ final class ph {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_0 = (RuntimeException) (var4);
             stackOut_12_1 = new StringBuilder().append("ph.A(");
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -128,23 +131,23 @@ final class ph {
             }
           }
           L5: {
-            stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param1).append(',').append('_').append(',');
+            stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param3 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -152,7 +155,7 @@ final class ph {
               break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
         return stackIn_11_0;
     }
@@ -164,15 +167,16 @@ final class ph {
         field_h = null;
         field_g = null;
         field_i = null;
-        field_c = null;
-        field_d = null;
+        field_c = (he[][]) null;
+        if (param0 != 1) {
+          return;
+        } else {
+          field_d = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new he[3][];
         field_g = new long[32];
         field_i = "log in or create a free account.";

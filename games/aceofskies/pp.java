@@ -6,6 +6,7 @@ abstract class pp {
     co[] field_b;
 
     final int a(int param0, byte param1, int param2) {
+        int discarded$2 = 0;
         int var4 = 0;
         int var5 = 0;
         co var6 = null;
@@ -13,35 +14,35 @@ abstract class pp {
         int var8 = 0;
         L0: {
           var8 = AceOfSkies.field_G ? 1 : 0;
-          if (((pp) this).field_b == null) {
+          if (this.field_b == null) {
             break L0;
           } else {
-            if (0 == ((pp) this).field_b.length) {
+            if (0 == this.field_b.length) {
               break L0;
             } else {
-              if (param2 >= ((pp) this).field_b[0].field_f) {
-                if (((pp) this).field_b[-1 + ((pp) this).field_b.length].field_d < param2) {
+              if (param2 >= this.field_b[0].field_f) {
+                if (this.field_b[-1 + this.field_b.length].field_d < param2) {
                   return -1;
                 } else {
-                  if (1 == ((pp) this).field_b.length) {
-                    return ((pp) this).field_b[0].a(true, param0);
+                  if (1 == this.field_b.length) {
+                    return this.field_b[0].a(true, param0);
                   } else {
                     L1: {
                       var4 = 0;
                       if (param1 >= 34) {
                         break L1;
                       } else {
-                        int discarded$2 = ((pp) this).a(103);
+                        discarded$2 = this.a(103);
                         break L1;
                       }
                     }
                     var5 = 0;
                     L2: while (true) {
-                      if (((pp) this).field_b.length <= var5) {
+                      if (this.field_b.length <= var5) {
                         return -1;
                       } else {
                         L3: {
-                          var6 = ((pp) this).field_b[var5];
+                          var6 = this.field_b[var5];
                           if (param2 < var6.field_f) {
                             break L3;
                           } else {
@@ -80,20 +81,20 @@ abstract class pp {
         if (param0 != 1) {
             return 124;
         }
-        for (var3 = 0; var3 < ((pp) this).field_b.length; var3++) {
-            var4 = ((pp) this).field_b[var3];
+        for (var3 = 0; var3 < this.field_b.length; var3++) {
+            var4 = this.field_b[var3];
             if (!(var4.field_h.length <= param1)) {
                 return var3;
             }
             param1 = param1 - (var4.field_h.length - 1);
         }
-        return ((pp) this).field_b.length;
+        return this.field_b.length;
     }
 
     final int b(int param0, int param1) {
         co var5 = null;
         int var6 = AceOfSkies.field_G ? 1 : 0;
-        co[] var7 = ((pp) this).field_b;
+        co[] var7 = this.field_b;
         co[] var3 = var7;
         int var4 = 0;
         if (param1 >= -101) {
@@ -118,24 +119,24 @@ abstract class pp {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int stackIn_14_0 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
+        int stackIn_16_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
+        int stackOut_15_0 = 0;
         RuntimeException stackOut_18_0 = null;
         StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var10 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -145,9 +146,9 @@ abstract class pp {
             var8 = 0;
             L1: while (true) {
               if (var7 <= var8) {
-                if (~var5_int < param1) {
-                  stackOut_13_0 = (-param3 + param0 << 8) / var5_int;
-                  stackIn_14_0 = stackOut_13_0;
+                if ((var5_int ^ -1) < param1) {
+                  stackOut_15_0 = (-param3 + param0 << -1233796248) / var5_int;
+                  stackIn_16_0 = stackOut_15_0;
                   break L0;
                 } else {
                   return 0;
@@ -160,15 +161,18 @@ abstract class pp {
                     break L2;
                   } else {
                     if (var9 != 62) {
-                      L3: {
-                        if (var6 != 0) {
-                          break L3;
+                      if (var6 == 0) {
+                        if (var9 == 32) {
+                          var5_int++;
+                          break L2;
                         } else {
-                          break L3;
+                          var8++;
+                          continue L1;
                         }
+                      } else {
+                        var8++;
+                        continue L1;
                       }
-                      var8++;
-                      continue L1;
                     } else {
                       var6 = 0;
                       break L2;
@@ -182,35 +186,35 @@ abstract class pp {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var5;
-            stackOut_16_1 = new StringBuilder().append("pp.J(").append(param0).append(',').append(param1).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackOut_18_0 = (RuntimeException) (var5);
+            stackOut_18_1 = new StringBuilder().append("pp.J(").append(param0).append(',').append(param1).append(',');
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
-              break L4;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
-              break L4;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L3;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param3 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param3 + ')');
         }
-        return stackIn_14_0;
+        return stackIn_16_0;
     }
 
     final static void a(String[] args, int param1, String param2, int param3) {
@@ -234,6 +238,7 @@ abstract class pp {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_11_0 = 0;
@@ -262,12 +267,12 @@ abstract class pp {
             if (param3 == 26326) {
               L1: {
                 ht.field_k = uk.field_j;
-                if (param1 == 255) {
+                if (-256 == (param1 ^ -1)) {
                   L2: {
                     stackOut_9_0 = 111;
                     stackIn_11_0 = stackOut_9_0;
                     stackIn_10_0 = stackOut_9_0;
-                    if (sd.field_h >= 13) {
+                    if (-14 >= (sd.field_h ^ -1)) {
                       stackOut_11_0 = stackIn_11_0;
                       stackOut_11_1 = 0;
                       stackIn_12_0 = stackOut_11_0;
@@ -285,7 +290,7 @@ abstract class pp {
                   break L1;
                 } else {
                   L3: {
-                    if (param1 < 100) {
+                    if ((param1 ^ -1) > -101) {
                       break L3;
                     } else {
                       if (param1 <= 105) {
@@ -300,32 +305,34 @@ abstract class pp {
                   break L1;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var4;
+            stackOut_14_0 = (RuntimeException) (var4);
             stackOut_14_1 = new StringBuilder().append("pp.I(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (args == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -334,23 +341,23 @@ abstract class pp {
             }
           }
           L5: {
-            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+            stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
             stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param1).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param2 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -358,7 +365,12 @@ abstract class pp {
               break L5;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param3 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -369,23 +381,23 @@ abstract class pp {
         co var5 = null;
         int var6 = 0;
         int var7 = 0;
-        Object var8 = null;
+        String var8 = null;
         L0: {
           var7 = AceOfSkies.field_G ? 1 : 0;
           var2 = -1;
           if (param0 == 24) {
             break L0;
           } else {
-            var8 = null;
+            var8 = (String) null;
             pp.a((String[]) null, -43, (String) null, -67);
             break L0;
           }
         }
         L1: {
-          if (null == ((pp) this).field_b) {
+          if (null == this.field_b) {
             break L1;
           } else {
-            var3 = ((pp) this).field_b;
+            var3 = this.field_b;
             var4 = 0;
             L2: while (true) {
               if (var3.length <= var4) {
@@ -414,6 +426,7 @@ abstract class pp {
     }
 
     final int a(int param0) {
+        int discarded$2 = 0;
         int stackIn_6_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_5_0 = 0;
@@ -421,19 +434,19 @@ abstract class pp {
           if (param0 == 0) {
             break L0;
           } else {
-            int discarded$2 = ((pp) this).a((byte) 95);
+            discarded$2 = this.a((byte) 95);
             break L0;
           }
         }
         L1: {
           L2: {
-            if (((pp) this).field_b == null) {
+            if (this.field_b == null) {
               break L2;
             } else {
-              if (((pp) this).field_b.length <= 0) {
+              if (-1 <= (this.field_b.length ^ -1)) {
                 break L2;
               } else {
-                stackOut_4_0 = ((pp) this).field_b[-1 + ((pp) this).field_b.length].field_d + -((pp) this).field_b[0].field_f;
+                stackOut_4_0 = this.field_b[-1 + this.field_b.length].field_d + -this.field_b[0].field_f;
                 stackIn_6_0 = stackOut_4_0;
                 break L1;
               }

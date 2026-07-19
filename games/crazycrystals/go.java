@@ -13,6 +13,7 @@ final class go extends ln {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = CrazyCrystals.field_B;
         try {
@@ -21,7 +22,22 @@ final class go extends ln {
             var2_int = 0;
             L1: while (true) {
               if (be.field_c <= var2_int) {
-                break L0;
+                if (param1 == 240) {
+                  L2: {
+                    pj.a(db.field_i, param0 + param0, be.field_c + param0, false, em.field_i, (byte) 119, param0);
+                    if (param0 < be.field_c) {
+                      be.field_c = param0;
+                      break L2;
+                    } else {
+                      break L2;
+                    }
+                  }
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  decompiledRegionSelector0 = 0;
+                  break L0;
+                }
               } else {
                 wp.field_d[var2_int + param0] = var2_int;
                 var2_int++;
@@ -32,7 +48,12 @@ final class go extends ln {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var2, "go.C(" + param0 + ',' + 240 + ')');
+          throw dn.a((Throwable) ((Object) var2), "go.C(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -56,62 +77,85 @@ final class go extends ln {
     }
 
     final static void a(int param0) {
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = CrazyCrystals.field_B;
         try {
           L0: {
-            var5 = ga.field_J;
-            var1 = var5;
-            var2 = 0;
-            var3 = var5.length;
-            L1: while (true) {
-              if (var2 >= var3) {
-                break L0;
-              } else {
-                int incrementValue$40 = var2;
-                var2++;
-                var5[incrementValue$40] = 0;
-                int incrementValue$41 = var2;
-                var2++;
-                var5[incrementValue$41] = 0;
-                int incrementValue$42 = var2;
-                var2++;
-                var5[incrementValue$42] = 0;
-                int incrementValue$43 = var2;
-                var2++;
-                var5[incrementValue$43] = 0;
-                int incrementValue$44 = var2;
-                var2++;
-                var5[incrementValue$44] = 0;
-                int incrementValue$45 = var2;
-                var2++;
-                var5[incrementValue$45] = 0;
-                int incrementValue$46 = var2;
-                var2++;
-                var5[incrementValue$46] = 0;
-                int incrementValue$47 = var2;
-                var2++;
-                var5[incrementValue$47] = 0;
-                continue L1;
+            if (param0 == -21587) {
+              var5 = ga.field_J;
+              var1 = var5;
+              var2 = 0;
+              var3 = var5.length;
+              L1: while (true) {
+                if (var2 >= var3) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  incrementValue$40 = var2;
+                  var2++;
+                  var5[incrementValue$40] = 0;
+                  incrementValue$41 = var2;
+                  var2++;
+                  var5[incrementValue$41] = 0;
+                  incrementValue$42 = var2;
+                  var2++;
+                  var5[incrementValue$42] = 0;
+                  incrementValue$43 = var2;
+                  var2++;
+                  var5[incrementValue$43] = 0;
+                  incrementValue$44 = var2;
+                  var2++;
+                  var5[incrementValue$44] = 0;
+                  incrementValue$45 = var2;
+                  var2++;
+                  var5[incrementValue$45] = 0;
+                  incrementValue$46 = var2;
+                  var2++;
+                  var5[incrementValue$46] = 0;
+                  incrementValue$47 = var2;
+                  var2++;
+                  var5[incrementValue$47] = 0;
+                  continue L1;
+                }
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1_ref, "go.B(" + -21587 + ')');
+          throw dn.a((Throwable) ((Object) var1_ref), "go.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static void b(int param0) {
         ne.field_b = false;
-        int discarded$0 = kd.field_n.h(255);
+        int discarded$7 = kd.field_n.h(param0 ^ 287);
+        if (param0 != 480) {
+            field_l = (ef) null;
+        }
     }
 
     final static void a(int param0, int param1, boolean param2) {
@@ -142,24 +186,32 @@ final class go extends ln {
             var9 = -1;
             L1: while (true) {
               if (param1 < var9) {
-                var9 = 0;
-                L2: while (true) {
+                L2: {
+                  var9 = 0;
+                  if (!param2) {
+                    break L2;
+                  } else {
+                    field_l = (ef) null;
+                    break L2;
+                  }
+                }
+                L3: while (true) {
                   if (var9 >= param0) {
                     var9 = -1;
-                    L3: while (true) {
+                    L4: while (true) {
                       if (var9 > param1) {
                         break L0;
                       } else {
                         var8.b(var9 * 24 + (240 + -(12 * param1)), 234 - -(12 * param0), 24, 36);
                         var9++;
-                        continue L3;
+                        continue L4;
                       }
                     }
                   } else {
                     var8.b(-24 + (240 + -(param1 * 12)), var9 * 24 + (-(param0 * 12) + 234), 24, 36);
                     var8.b(240 - -(param1 * 12), 234 - 12 * param0 - -(var9 * 24), 24, 36);
                     var9++;
-                    continue L2;
+                    continue L3;
                   }
                 }
               } else {
@@ -172,15 +224,11 @@ final class go extends ln {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var3, "go.E(" + param0 + ',' + param1 + ',' + false + ')');
+          throw dn.a((Throwable) ((Object) var3), "go.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "You cannot play this level yet.";
         field_g = "Your email address is used to identify this account";
         field_j = "Continue";

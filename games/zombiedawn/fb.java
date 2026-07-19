@@ -20,21 +20,21 @@ abstract class fb extends fa {
         int var4 = 0;
         if (!ng.field_e) {
           var2 = -113 / ((param0 - 66) / 50);
-          var3 = ((fb) this).field_y >> 23;
-          var4 = ((fb) this).field_x >> 23;
-          if (((fb) this).field_B == var3) {
-            if (((fb) this).field_u != var4) {
-              ((fb) this).field_u = var4;
-              ((fb) this).field_B = var3;
-              dj.field_e.a(false, (fb) this);
+          var3 = this.field_y >> -711645929;
+          var4 = this.field_x >> -957330697;
+          if (this.field_B == var3) {
+            if (this.field_u != var4) {
+              this.field_u = var4;
+              this.field_B = var3;
+              dj.field_e.a(false, (fb) (this));
               return;
             } else {
               return;
             }
           } else {
-            ((fb) this).field_u = var4;
-            ((fb) this).field_B = var3;
-            dj.field_e.a(false, (fb) this);
+            this.field_u = var4;
+            this.field_B = var3;
+            dj.field_e.a(false, (fb) (this));
             return;
           }
         } else {
@@ -46,16 +46,16 @@ abstract class fb extends fa {
         fb var3 = null;
         fb var6 = null;
         if (param0 == 32) {
-          if (-1 != ((fb) this).field_v) {
+          if (-1 != this.field_v) {
             L0: while (true) {
-              var6 = (fb) (Object) dj.field_e.field_n.b(false);
+              var6 = (fb) ((Object) dj.field_e.field_n.b(false));
               if (var6 != null) {
-                if (var6.a((byte) 75, ((fb) this).field_v)) {
+                if (var6.a((byte) 75, this.field_v)) {
                   L1: {
-                    if (-1 == ((fb) this).field_A) {
+                    if (-1 == this.field_A) {
                       break L1;
                     } else {
-                      if (((fb) this).a(var6, 1654152400) < ((fb) this).field_A) {
+                      if (this.a(var6, 1654152400) < this.field_A) {
                         break L1;
                       } else {
                         continue L0;
@@ -71,17 +71,17 @@ abstract class fb extends fa {
               }
             }
           } else {
-            return (fb) (Object) dj.field_e.field_n.b(false);
+            return (fb) ((Object) dj.field_e.field_n.b(false));
           }
         } else {
-          ((fb) this).field_x = -55;
-          if (-1 != ((fb) this).field_v) {
+          this.field_x = -55;
+          if (-1 != this.field_v) {
             L2: while (true) {
-              var3 = (fb) (Object) dj.field_e.field_n.b(false);
+              var3 = (fb) ((Object) dj.field_e.field_n.b(false));
               if (var3 != null) {
-                if (var3.a((byte) 75, ((fb) this).field_v)) {
-                  if (-1 != ((fb) this).field_A) {
-                    if (((fb) this).a(var3, 1654152400) >= ((fb) this).field_A) {
+                if (var3.a((byte) 75, this.field_v)) {
+                  if (-1 != this.field_A) {
+                    if (this.a(var3, 1654152400) >= this.field_A) {
                       continue L2;
                     } else {
                       return var3;
@@ -97,12 +97,13 @@ abstract class fb extends fa {
               }
             }
           } else {
-            return (fb) (Object) dj.field_e.field_n.b(false);
+            return (fb) ((Object) dj.field_e.field_n.b(false));
           }
         }
     }
 
     final int a(fb param0, int param1) {
+        boolean discarded$2 = false;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -127,17 +128,17 @@ abstract class fb extends fa {
         try {
           L0: {
             L1: {
-              var3_int = param0.field_y - ((fb) this).field_y >> 16;
+              var3_int = param0.field_y - this.field_y >> 1654152400;
               if (param1 == 1654152400) {
                 break L1;
               } else {
-                boolean discarded$2 = ((fb) this).a((byte) 21, -16);
+                discarded$2 = this.a((byte) 21, -16);
                 break L1;
               }
             }
-            var4 = -((fb) this).field_x + param0.field_x >> 16;
-            ((fb) this).field_s = var3_int * var3_int - -(var4 * var4);
-            stackOut_2_0 = ((fb) this).field_s;
+            var4 = -this.field_x + param0.field_x >> -190016048;
+            this.field_s = var3_int * var3_int - -(var4 * var4);
+            stackOut_2_0 = this.field_s;
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -145,23 +146,23 @@ abstract class fb extends fa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("fb.BB(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -169,7 +170,7 @@ abstract class fb extends fa {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -191,7 +192,7 @@ abstract class fb extends fa {
         int stackOut_20_0 = 0;
         if (this instanceof ah) {
           L0: {
-            if ((param1 & 1) == 0) {
+            if (-1 == (param1 & 1 ^ -1)) {
               stackOut_4_0 = 0;
               stackIn_5_0 = stackOut_4_0;
               break L0;
@@ -268,61 +269,61 @@ abstract class fb extends fa {
         Object var4 = null;
         fb var4_ref = null;
         int var5 = 0;
-        if (param1 != -1) {
+        if ((param1 ^ -1) != 0) {
           L0: {
-            ((fb) this).field_A = param1 * param1;
-            ((fb) this).field_v = param2;
+            this.field_A = param1 * param1;
+            this.field_v = param2;
             var4 = null;
             if (param1 != -1) {
-              var5 = 1 + (param1 >> 7);
-              var4_ref = (fb) (Object) dj.field_e.field_n.a(var5, ((fb) this).field_u, 29845, ((fb) this).field_B);
+              var5 = 1 + (param1 >> -1058930521);
+              var4_ref = (fb) ((Object) dj.field_e.field_n.a(var5, this.field_u, 29845, this.field_B));
               break L0;
             } else {
-              var4_ref = (fb) (Object) dj.field_e.field_n.a(true);
+              var4_ref = (fb) ((Object) dj.field_e.field_n.a(true));
               break L0;
             }
           }
           if (param0 == -74) {
             if (var4_ref != null) {
               if (var4_ref.a((byte) 114, param2)) {
-                if (((fb) this).field_A != -1) {
-                  if (((fb) this).a(var4_ref, param0 ^ -1654152346) < ((fb) this).field_A) {
+                if ((this.field_A ^ -1) != 0) {
+                  if (this.a(var4_ref, param0 ^ -1654152346) < this.field_A) {
                     return var4_ref;
                   } else {
-                    return ((fb) this).e((byte) 32);
+                    return this.e((byte) 32);
                   }
                 } else {
                   return var4_ref;
                 }
               } else {
-                return ((fb) this).e((byte) 32);
+                return this.e((byte) 32);
               }
             } else {
               return null;
             }
           } else {
-            return null;
+            return (fb) null;
           }
         } else {
           L1: {
-            ((fb) this).field_A = -1;
-            ((fb) this).field_v = param2;
+            this.field_A = -1;
+            this.field_v = param2;
             var4_ref = null;
             if (param1 != -1) {
-              var5 = 1 + (param1 >> 7);
-              var4_ref = (fb) (Object) dj.field_e.field_n.a(var5, ((fb) this).field_u, 29845, ((fb) this).field_B);
+              var5 = 1 + (param1 >> -1058930521);
+              var4_ref = (fb) ((Object) dj.field_e.field_n.a(var5, this.field_u, 29845, this.field_B));
               break L1;
             } else {
-              var4_ref = (fb) (Object) dj.field_e.field_n.a(true);
+              var4_ref = (fb) ((Object) dj.field_e.field_n.a(true));
               break L1;
             }
           }
           if (param0 == -74) {
             if (var4_ref != null) {
               if (var4_ref.a((byte) 114, param2)) {
-                if (((fb) this).field_A != -1) {
-                  if (((fb) this).a(var4_ref, param0 ^ -1654152346) >= ((fb) this).field_A) {
-                    return ((fb) this).e((byte) 32);
+                if ((this.field_A ^ -1) != 0) {
+                  if (this.a(var4_ref, param0 ^ -1654152346) >= this.field_A) {
+                    return this.e((byte) 32);
                   } else {
                     return var4_ref;
                   }
@@ -330,55 +331,55 @@ abstract class fb extends fa {
                   return var4_ref;
                 }
               } else {
-                return ((fb) this).e((byte) 32);
+                return this.e((byte) 32);
               }
             } else {
               return null;
             }
           } else {
-            return null;
+            return (fb) null;
           }
         }
     }
 
     final fb b(int param0, int param1) {
         int var3 = 0;
-        if (param0 == -1) {
-          ((fb) this).field_A = -1;
-          ((fb) this).field_v = -1;
+        if ((param0 ^ -1) == 0) {
+          this.field_A = -1;
+          this.field_v = -1;
           if (param1 != 16) {
-            ((fb) this).field_x = 64;
+            this.field_x = 64;
             if (param0 != -1) {
-              var3 = (param0 >> 7) + 1;
-              return (fb) (Object) dj.field_e.field_n.a(var3, ((fb) this).field_u, 29845, ((fb) this).field_B);
+              var3 = (param0 >> 1311979239) + 1;
+              return (fb) ((Object) dj.field_e.field_n.a(var3, this.field_u, 29845, this.field_B));
             } else {
-              return (fb) (Object) dj.field_e.field_n.a(true);
+              return (fb) ((Object) dj.field_e.field_n.a(true));
             }
           } else {
             if (param0 != -1) {
-              var3 = (param0 >> 7) + 1;
-              return (fb) (Object) dj.field_e.field_n.a(var3, ((fb) this).field_u, 29845, ((fb) this).field_B);
+              var3 = (param0 >> 1311979239) + 1;
+              return (fb) ((Object) dj.field_e.field_n.a(var3, this.field_u, 29845, this.field_B));
             } else {
-              return (fb) (Object) dj.field_e.field_n.a(true);
+              return (fb) ((Object) dj.field_e.field_n.a(true));
             }
           }
         } else {
-          ((fb) this).field_A = param0 * param0;
-          ((fb) this).field_v = -1;
+          this.field_A = param0 * param0;
+          this.field_v = -1;
           if (param1 != 16) {
-            ((fb) this).field_x = 64;
+            this.field_x = 64;
             if (param0 != -1) {
-              var3 = (param0 >> 7) + 1;
-              return (fb) (Object) dj.field_e.field_n.a(var3, ((fb) this).field_u, 29845, ((fb) this).field_B);
+              var3 = (param0 >> 1311979239) + 1;
+              return (fb) ((Object) dj.field_e.field_n.a(var3, this.field_u, 29845, this.field_B));
             } else {
-              return (fb) (Object) dj.field_e.field_n.a(true);
+              return (fb) ((Object) dj.field_e.field_n.a(true));
             }
           } else {
             if (param0 != -1) {
-              var3 = (param0 >> 7) + 1;
-              return (fb) (Object) dj.field_e.field_n.a(var3, ((fb) this).field_u, 29845, ((fb) this).field_B);
+              var3 = (param0 >> 1311979239) + 1;
+              return (fb) ((Object) dj.field_e.field_n.a(var3, this.field_u, 29845, this.field_B));
             } else {
-              return (fb) (Object) dj.field_e.field_n.a(true);
+              return (fb) ((Object) dj.field_e.field_n.a(true));
             }
           }
         }
@@ -387,33 +388,34 @@ abstract class fb extends fa {
     final static void a(int param0, byte[] param1, byte param2, int param3) {
         try {
             int var4_int = -40 / ((param2 - -5) / 42);
-            param1[param0 * 4] = (byte)(param3 >>> 24);
-            param1[1 + param0 * 4] = (byte)(param3 >>> 16);
-            param1[2 + 4 * param0] = (byte)(param3 >>> 8);
+            param1[param0 * 4] = (byte)(param3 >>> -334589448);
+            param1[1 + param0 * 4] = (byte)(param3 >>> -1382138256);
+            param1[2 + 4 * param0] = (byte)(param3 >>> -463986840);
             param1[param0 * 4 - -3] = (byte)param3;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "fb.CB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "fb.CB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final int f(int param0) {
         if (param0 != 237239984) {
             fb.h(-58);
-            return ((fb) this).field_x >> 16;
+            return this.field_x >> 237239984;
         }
-        return ((fb) this).field_x >> 16;
+        return this.field_x >> 237239984;
     }
 
     final int a(boolean param0) {
+        int discarded$0 = 0;
         if (!param0) {
-            int discarded$0 = fb.a(-36, -98);
-            return ((fb) this).field_y >> 16;
+            discarded$0 = fb.a(-36, -98);
+            return this.field_y >> 644333776;
         }
-        return ((fb) this).field_y >> 16;
+        return this.field_y >> 644333776;
     }
 
     final static int a(int param0, int param1) {
-        Object var3 = null;
+        byte[] var3 = null;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
@@ -456,7 +458,7 @@ abstract class fb extends fa {
             return stackIn_15_0;
           }
         } else {
-          var3 = null;
+          var3 = (byte[]) null;
           fb.a(28, (byte[]) null, (byte) -56, 124);
           param1 = param1 & 8191;
           if (4096 > param1) {
@@ -493,7 +495,7 @@ abstract class fb extends fa {
 
     public static void h(int param0) {
         if (param0 != 237239984) {
-            field_w = null;
+            field_w = (vn[]) null;
             field_w = null;
             return;
         }
@@ -501,13 +503,13 @@ abstract class fb extends fa {
     }
 
     fb(int param0, int param1, int param2) {
-        ((fb) this).field_z = 0;
-        ((fb) this).field_C = false;
-        ((fb) this).field_B = -1;
-        ((fb) this).field_u = -1;
-        ((fb) this).field_x = param1 << 16;
-        ((fb) this).field_y = param0 << 16;
-        ((fb) this).field_t = param2;
+        this.field_z = 0;
+        this.field_C = false;
+        this.field_B = -1;
+        this.field_u = -1;
+        this.field_x = param1 << 471093520;
+        this.field_y = param0 << -959571120;
+        this.field_t = param2;
     }
 
     static {

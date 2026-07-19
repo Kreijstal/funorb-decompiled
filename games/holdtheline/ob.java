@@ -27,30 +27,31 @@ abstract class ob implements ia {
 
     public final String b(byte param0) {
         if (param0 == -59) {
-          if (!((ob) this).a((byte) -41)) {
-            if (~bb.b(-1) > ~(350L + ((ob) this).field_a)) {
+          if (!this.a((byte) -41)) {
+            if ((bb.b(-1) ^ -1L) > (350L + this.field_a ^ -1L)) {
               return null;
             } else {
-              return ((ob) this).d(97);
+              return this.d(97);
             }
           } else {
             return null;
           }
         } else {
-          return null;
+          return (String) null;
         }
     }
 
     public final fd b(int param0) {
-        if (((ob) this).a((byte) -114)) {
+        String discarded$2 = null;
+        if (this.a((byte) -114)) {
           return di.field_q;
         } else {
-          if (~bb.b(-1) <= ~(((ob) this).field_a + 350L)) {
+          if ((bb.b(-1) ^ -1L) <= (this.field_a + 350L ^ -1L)) {
             if (param0 != -7447) {
-              String discarded$2 = ob.d((byte) -36);
-              return ((ob) this).c((byte) -92);
+              discarded$2 = ob.d((byte) -36);
+              return this.c((byte) -92);
             } else {
-              return ((ob) this).c((byte) -92);
+              return this.c((byte) -92);
             }
           } else {
             return hh.field_d;
@@ -60,27 +61,24 @@ abstract class ob implements ia {
 
     public final void a(int param0) {
         if (param0 != 21871) {
-            field_b = null;
-            ((ob) this).field_a = bb.b(-1);
+            field_b = (ah) null;
+            this.field_a = bb.b(-1);
             return;
         }
-        ((ob) this).field_a = bb.b(-1);
+        this.field_a = bb.b(-1);
     }
 
     public static void c(int param0) {
+        String discarded$0 = null;
         field_b = null;
         if (param0 != -24581) {
-            String discarded$0 = ob.d((byte) 45);
+            discarded$0 = ob.d((byte) 45);
         }
     }
 
     abstract fd c(byte param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = null;
     }
 }

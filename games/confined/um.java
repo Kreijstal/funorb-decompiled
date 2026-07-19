@@ -14,10 +14,6 @@ final class um {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "um.A(";
         field_a = 0;
     }

@@ -19,9 +19,9 @@ final class il extends l {
         int var9 = 0;
         int var10 = 0;
         var10 = CrazyCrystals.field_B;
-        if (((il) this).field_f != 0) {
-          ((il) this).field_f = ((il) this).field_f - 1;
-          return (l) this;
+        if (this.field_f != 0) {
+          this.field_f = this.field_f - 1;
+          return (l) (this);
         } else {
           L0: {
             var2 = 0;
@@ -38,13 +38,13 @@ final class il extends l {
           L1: while (true) {
             if (var5_int >= pd.field_g.length) {
               if (0 >= var4) {
-                tb.field_d.a((od) (Object) ((il) this).field_g);
+                tb.field_d.a(this.field_g);
                 tb.field_d.a(dn.field_e, 100, 128 * gi.field_m, 8192);
                 var5 = new pj(-1, 1);
                 var6 = 0;
                 L2: while (true) {
                   if (var6 >= pd.field_g.length) {
-                    return (l) (Object) new o(60, (l) (Object) new sm());
+                    return (l) ((Object) new o(60, new sm()));
                   } else {
                     var7 = q.field_a[ma.field_n[var6]].field_i;
                     var8 = 0;
@@ -52,9 +52,9 @@ final class il extends l {
                       if (var7 <= 0) {
                         var9 = 9 + (m.field_l[var6] + -1);
                         L4: while (true) {
-                          if (var8 < 8) {
+                          if ((var8 ^ -1) > -9) {
                             if (var8 >= 4) {
-                              kk.field_a[14][var9] = (f) (Object) var5;
+                              kk.field_a[14][var9] = (f) ((Object) var5);
                               var6++;
                               continue L2;
                             } else {
@@ -88,24 +88,24 @@ final class il extends l {
                 }
                 L6: {
                   var6 = var3 / var4;
-                  if (((il) this).field_g == null) {
-                    ((il) this).field_g = kg.a(je.field_f, 150, var5_int, var6);
-                    ((il) this).field_g.f(-1);
-                    tb.field_d.b((od) (Object) ((il) this).field_g);
+                  if (this.field_g == null) {
+                    this.field_g = kg.a(je.field_f, 150, var5_int, var6);
+                    this.field_g.f(-1);
+                    tb.field_d.b(this.field_g);
                     break L6;
                   } else {
                     break L6;
                   }
                 }
-                ((il) this).field_g.c(var5_int, var6);
-                ((il) this).field_f = 2;
-                return (l) this;
+                this.field_g.c(var5_int, var6);
+                this.field_f = 2;
+                return (l) (this);
               }
             } else {
               L7: {
                 var6 = 10;
                 var7 = pd.field_g[var5_int];
-                if (var7 >= 0) {
+                if ((var7 ^ -1) <= -1) {
                   break L7;
                 } else {
                   var7 = -var7;
@@ -115,8 +115,8 @@ final class il extends l {
               L8: while (true) {
                 if (var7 < 2000) {
                   L9: {
-                    if (var7 < 1000) {
-                      if (var7 >= 500) {
+                    if ((var7 ^ -1) > -1001) {
+                      if ((var7 ^ -1) <= -501) {
                         var6 = var6 * 2;
                         break L9;
                       } else {
@@ -180,7 +180,7 @@ final class il extends l {
     private final void a(byte param0, int param1) {
         int var3 = 0;
         if (uo.field_o <= ke.field_b[jo.field_o]) {
-            if (!(jo.field_o < 1)) {
+            if (!((jo.field_o ^ -1) > -2)) {
                 var3 = q.field_a[ma.field_n[param1]].field_i;
                 if (!(1000 > var3)) {
                     rc.a(1, fn.field_j, mb.field_g, 247, wd.field_j, 8, ob.field_l);
@@ -201,22 +201,25 @@ final class il extends l {
     }
 
     final static boolean b(int param0) {
+        if (param0 >= -108) {
+            return false;
+        }
         return hl.a(le.b((byte) -20), -94);
     }
 
     final void c(byte param0) {
         if (param0 < 123) {
-            field_h = null;
+            field_h = (am[]) null;
         }
-        if (!(null == ((il) this).field_g)) {
-            tb.field_d.a((od) (Object) ((il) this).field_g);
+        if (!(null == this.field_g)) {
+            tb.field_d.a(this.field_g);
         }
     }
 
     final l b(byte param0) {
         int var3 = CrazyCrystals.field_B;
-        if (!(null == ((il) this).field_g)) {
-            tb.field_d.a((od) (Object) ((il) this).field_g);
+        if (!(null == this.field_g)) {
+            tb.field_d.a(this.field_g);
         }
         int var2 = 0;
         if (param0 != -90) {
@@ -227,7 +230,7 @@ final class il extends l {
             this.a((byte) -94, var2);
             var2++;
         }
-        return (l) (Object) new sm();
+        return (l) ((Object) new sm());
     }
 
     public static void a(boolean param0) {
@@ -239,11 +242,14 @@ final class il extends l {
     }
 
     il() {
-        ((il) this).field_f = 0;
-        ((il) this).field_g = null;
+        this.field_f = 0;
+        this.field_g = null;
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
+        if (param5) {
+            field_h = (am[]) null;
+        }
         dl[] var6 = h.field_d;
         if (!(!param1)) {
             var6 = af.field_c;
@@ -252,10 +258,6 @@ final class il extends l {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = new am[4];
     }
 }

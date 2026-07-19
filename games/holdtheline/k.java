@@ -5,6 +5,8 @@ final class k extends qi {
     private byte[][] field_M;
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -23,7 +25,7 @@ final class k extends qi {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var12 = (255 & param1[incrementValue$66]) * param9 >> 8;
                 if (var12 == 0) {
@@ -34,7 +36,7 @@ final class k extends qi {
                   var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
                   var12 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
                   var11++;
@@ -108,10 +110,10 @@ final class k extends qi {
             if (param4 > 0) {
               L5: {
                 if (!param6) {
-                  k.a(tc.field_b, ((k) this).field_M[param0], param5, var11, var8, param3, param4, var9, var10);
+                  k.a(tc.field_b, this.field_M[param0], param5, var11, var8, param3, param4, var9, var10);
                   break L5;
                 } else {
-                  fn.a(tc.field_b, ((k) this).field_M[param0], param5, var11, var8, param3, param4, var9, var10);
+                  fn.a(tc.field_b, this.field_M[param0], param5, var11, var8, param3, param4, var9, var10);
                   break L5;
                 }
               }
@@ -124,6 +126,8 @@ final class k extends qi {
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -142,7 +146,7 @@ final class k extends qi {
                 var9++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var11 = 255 & param1[incrementValue$66];
                 if (var11 == 0) {
@@ -153,7 +157,7 @@ final class k extends qi {
                   var12 = ((param2 & 16711935) * var11 & -16711936) + ((param2 & 65280) * var11 & 16711680) >> 8;
                   var11 = 256 - var11;
                   var13 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (((var13 & 16711935) * var11 & -16711936) + ((var13 & 65280) * var11 & 16711680) >> 8) + var12;
                   var10++;
@@ -227,10 +231,10 @@ final class k extends qi {
             if (param4 > 0) {
               L5: {
                 if (!param7) {
-                  k.a(tc.field_b, ((k) this).field_M[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+                  k.a(tc.field_b, this.field_M[param0], param5, var12, var9, param3, param4, var10, var11, param6);
                   break L5;
                 } else {
-                  fn.a(tc.field_b, ((k) this).field_M[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+                  fn.a(tc.field_b, this.field_M[param0], param5, var12, var9, param3, param4, var10, var11, param6);
                   break L5;
                 }
               }
@@ -291,7 +295,7 @@ final class k extends qi {
 
     k(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
         super(param0, param1, param2, param3, param4);
-        ((k) this).field_M = new byte[256][];
-        ((k) this).field_M = k.a(param5, param6);
+        this.field_M = new byte[256][];
+        this.field_M = k.a(param5, param6);
     }
 }

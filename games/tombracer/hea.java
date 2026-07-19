@@ -66,10 +66,10 @@ final class hea extends il {
             if (param4 > 0) {
               L5: {
                 if (bea.field_f == null) {
-                  hea.a(bea.field_l, ((hea) this).field_E[param0], param5, var11, var8, param3, param4, var9, var10);
+                  hea.a(bea.field_l, this.field_E[param0], param5, var11, var8, param3, param4, var9, var10);
                   break L5;
                 } else {
-                  hea.a(bea.field_l, ((hea) this).field_E[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, bea.field_f, bea.field_c);
+                  hea.a(bea.field_l, this.field_E[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, bea.field_f, bea.field_c);
                   break L5;
                 }
               }
@@ -82,6 +82,8 @@ final class hea extends il {
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -145,14 +147,14 @@ final class hea extends il {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$2 = param7;
+                incrementValue$2 = param7;
                 param7++;
                 if (param1[incrementValue$2] == 0) {
                   param8++;
                   var20++;
                   continue L3;
                 } else {
-                  int incrementValue$3 = param8;
+                  incrementValue$3 = param8;
                   param8++;
                   bea.field_l[incrementValue$3] = param6;
                   var20++;
@@ -224,7 +226,7 @@ final class hea extends il {
             break L4;
           } else {
             if (param4 > 0) {
-              hea.a(bea.field_l, ((hea) this).field_E[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+              hea.a(bea.field_l, this.field_E[param0], param5, var12, var9, param3, param4, var10, var11, param6);
               return;
             } else {
               break L4;
@@ -234,6 +236,8 @@ final class hea extends il {
     }
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -252,7 +256,7 @@ final class hea extends il {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 if (param1[incrementValue$66] == 0) {
                   param4++;
@@ -260,7 +264,7 @@ final class hea extends il {
                   continue L1;
                 } else {
                   var12 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (((var12 & 16711935) * param9 & -16711936) + ((var12 & 65280) * param9 & 16711680) >> 8) + param2;
                   var11++;
@@ -273,6 +277,16 @@ final class hea extends il {
     }
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -294,14 +308,14 @@ final class hea extends il {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     if (param1[incrementValue$218] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -311,52 +325,52 @@ final class hea extends il {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   if (param1[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   if (param1[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   if (param1[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 if (param1[incrementValue$226] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -370,7 +384,7 @@ final class hea extends il {
 
     hea(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
         super(param0, param1, param2, param3, param4);
-        ((hea) this).field_E = new byte[256][];
-        ((hea) this).field_E = param5;
+        this.field_E = new byte[256][];
+        this.field_E = param5;
     }
 }

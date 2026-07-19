@@ -13,6 +13,9 @@ final class ki extends am {
     byte field_p;
 
     final static int a(int param0, byte param1, int param2) {
+        if (param1 > -24) {
+            field_n = (mb) null;
+        }
         if (param2 >= 2) {
             return 2;
         }
@@ -32,7 +35,7 @@ final class ki extends am {
             }
             return ep.field_e;
         }
-        int var1 = 0;
+        int var1 = 27 % ((param0 - -48) / 56);
         if (!bw.field_b.d(-78)) {
             return nu.field_M;
         }
@@ -55,11 +58,16 @@ final class ki extends am {
     }
 
     public static void a(int param0) {
+        if (param0 != 0) {
+            return;
+        }
         field_n = null;
         field_q = null;
     }
 
     final static void a(boolean param0) {
+        String[][] dupTemp$2 = null;
+        int[][] dupTemp$3 = null;
         RuntimeException var1 = null;
         int var2 = 0;
         wd var3 = null;
@@ -76,20 +84,30 @@ final class ki extends am {
         int var13 = 0;
         int var14 = 0;
         ml var15 = null;
+        wd stackIn_34_0 = null;
+        wd stackIn_35_0 = null;
+        wd stackIn_36_0 = null;
+        int stackIn_36_1 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        wd stackOut_33_0 = null;
+        wd stackOut_35_0 = null;
+        int stackOut_35_1 = 0;
+        wd stackOut_34_0 = null;
+        int stackOut_34_1 = 0;
         var12 = Kickabout.field_G;
         try {
           L0: {
             var15 = un.field_e;
             var2 = var15.h((byte) -109);
-            var3 = (wd) (Object) ak.field_i.g(24009);
+            var3 = (wd) ((Object) ak.field_i.g(24009));
             L1: while (true) {
               L2: {
                 if (var3 == null) {
                   break L2;
                 } else {
                   if (var2 != var3.field_k) {
-                    var3 = (wd) (Object) ak.field_i.c(33);
+                    var3 = (wd) ((Object) ak.field_i.c(33));
                     continue L1;
                   } else {
                     break L2;
@@ -110,10 +128,10 @@ final class ki extends am {
                         L5: while (true) {
                           if (var6_int >= var4) {
                             kf.a(var5, (byte) 63);
-                            String[][] dupTemp$2 = new String[2][var5];
+                            dupTemp$2 = new String[2][var5];
                             var3.field_i = dupTemp$2;
                             var6 = dupTemp$2;
-                            int[][] dupTemp$3 = new int[2][4 * var5];
+                            dupTemp$3 = new int[2][4 * var5];
                             var3.field_o = dupTemp$3;
                             var7 = dupTemp$3;
                             var8 = wf.field_O;
@@ -137,7 +155,7 @@ final class ki extends am {
                                       var7[1][var14 * 4 - -2] = fo.field_j[var11];
                                       var7[1][4 * var14 + 3] = ln.field_B[var11];
                                       if (hm.a((byte) 52, sc.field_B[var11])) {
-                                        if (qp.field_G[var11] + fo.field_j[var11] + ln.field_B[var11] != 0) {
+                                        if (-1 != (qp.field_G[var11] + fo.field_j[var11] + ln.field_B[var11] ^ -1)) {
                                           break L8;
                                         } else {
                                           var6[1][var14] = null;
@@ -164,7 +182,7 @@ final class ki extends am {
                                   if (!hm.a((byte) -89, sc.field_B[var11])) {
                                     break L9;
                                   } else {
-                                    if (ln.field_B[var11] + qp.field_G[var11] + fo.field_j[var11] != 0) {
+                                    if (-1 != (ln.field_B[var11] + qp.field_G[var11] + fo.field_j[var11] ^ -1)) {
                                       break L9;
                                     } else {
                                       var6[0][var10] = null;
@@ -180,7 +198,7 @@ final class ki extends am {
                             }
                           } else {
                             L10: {
-                              pf.a((iw) (Object) var15, 542439655);
+                              pf.a(var15, 542439655);
                               if (var6_int == 0) {
                                 var3.field_f = lr.field_r;
                                 var3.field_m = pl.field_d;
@@ -207,19 +225,44 @@ final class ki extends am {
                     break L3;
                   }
                 }
-                var3.field_e = true;
+                L11: {
+                  stackOut_33_0 = (wd) (var3);
+                  stackIn_35_0 = stackOut_33_0;
+                  stackIn_34_0 = stackOut_33_0;
+                  if (!param0) {
+                    stackOut_35_0 = (wd) ((Object) stackIn_35_0);
+                    stackOut_35_1 = 0;
+                    stackIn_36_0 = stackOut_35_0;
+                    stackIn_36_1 = stackOut_35_1;
+                    break L11;
+                  } else {
+                    stackOut_34_0 = (wd) ((Object) stackIn_34_0);
+                    stackOut_34_1 = 1;
+                    stackIn_36_0 = stackOut_34_0;
+                    stackIn_36_1 = stackOut_34_1;
+                    break L11;
+                  }
+                }
+                stackIn_36_0.field_e = stackIn_36_1 != 0;
                 var3.c((byte) -109);
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 lr.b((byte) -116);
-                return;
+                decompiledRegionSelector0 = 0;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "ki.D(" + true + ')');
+          throw nb.a((Throwable) ((Object) var1), "ki.D(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -253,8 +296,8 @@ final class ki extends am {
           L0: {
             L1: {
               var2_int = param0.h((byte) -121);
-              var4 = 0;
-              if (var2_int != 1) {
+              var4 = 4 % ((param1 - 15) / 62);
+              if (-2 != (var2_int ^ -1)) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -273,23 +316,23 @@ final class ki extends am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_0 = (RuntimeException) (var2);
             stackOut_5_1 = new StringBuilder().append("ki.E(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -297,17 +340,17 @@ final class ki extends am {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 93 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0 != 0;
     }
 
     ki(int param0, int param1, int param2, byte param3, byte param4) {
-        ((ki) this).field_r = param0;
-        ((ki) this).field_v = param2;
-        ((ki) this).field_u = param1;
-        ((ki) this).field_o = param3;
-        ((ki) this).field_p = param4;
+        this.field_r = param0;
+        this.field_v = param2;
+        this.field_u = param1;
+        this.field_o = param3;
+        this.field_p = param4;
     }
 
     public final String toString() {
@@ -318,29 +361,29 @@ final class ki extends am {
         L0: {
           var4 = Kickabout.field_G;
           var1 = null;
-          if (((ki) this).field_r == 0) {
-            var1 = (Object) (Object) "Keyheld";
+          if (-1 == (this.field_r ^ -1)) {
+            var1 = "Keyheld";
             break L0;
           } else {
             break L0;
           }
         }
         L1: {
-          var2 = " " + ((ki) this).field_v;
-          if (((ki) this).field_r != 2) {
+          var2 = " " + this.field_v;
+          if ((this.field_r ^ -1) != -3) {
             break L1;
           } else {
-            var1 = (Object) (Object) "Mouse";
-            var2 = "Click(" + ((ki) this).field_o + "," + ((ki) this).field_p + ") ";
+            var1 = "Mouse";
+            var2 = "Click(" + this.field_o + "," + this.field_p + ") ";
             break L1;
           }
         }
         L2: {
-          if (((ki) this).field_r != 1) {
+          if (this.field_r != 1) {
             break L2;
           } else {
-            var1 = (Object) (Object) "Keypress";
-            var3 = ((ki) this).field_v;
+            var1 = "Keypress";
+            var3 = this.field_v;
             if (0 == var3) {
               var2 = " DASH";
               break L2;
@@ -350,10 +393,10 @@ final class ki extends am {
                 break L2;
               } else {
                 if (2 != var3) {
-                  if (var3 != 3) {
+                  if ((var3 ^ -1) != -4) {
                     if (var3 != 4) {
                       if (5 != var3) {
-                        if (var3 == 6) {
+                        if ((var3 ^ -1) == -7) {
                           var2 = " CHARGE_KICK_LEFT";
                           break L2;
                         } else {
@@ -385,12 +428,12 @@ final class ki extends am {
           }
         }
         L3: {
-          if (4 != ((ki) this).field_r) {
+          if (4 != this.field_r) {
             break L3;
           } else {
             L4: {
-              var1 = (Object) (Object) "Team";
-              var3 = ((ki) this).field_v;
+              var1 = "Team";
+              var3 = this.field_v;
               if (0 == var3) {
                 var2 = " Left";
                 break L4;
@@ -408,32 +451,32 @@ final class ki extends am {
                 }
               }
             }
-            var2 = " data=" + ((ki) this).field_v;
+            var2 = " data=" + this.field_v;
             break L3;
           }
         }
         L5: {
-          if (5 != ((ki) this).field_r) {
+          if (5 != this.field_r) {
             break L5;
           } else {
-            var2 = " data=" + ((ki) this).field_v;
-            var1 = (Object) (Object) "LineUp";
+            var2 = " data=" + this.field_v;
+            var1 = "LineUp";
             break L5;
           }
         }
         L6: {
-          if (((ki) this).field_r != 7) {
+          if (-8 != (this.field_r ^ -1)) {
             break L6;
           } else {
-            var1 = (Object) (Object) "Cheat";
-            var2 = " data=" + ((ki) this).field_v;
+            var1 = "Cheat";
+            var2 = " data=" + this.field_v;
             break L6;
           }
         }
         L7: {
-          if (6 == ((ki) this).field_r) {
+          if (6 == this.field_r) {
             L8: {
-              var3 = ((ki) this).field_v;
+              var3 = this.field_v;
               if (var3 != 0) {
                 if (var3 != 1) {
                   if (2 != var3) {
@@ -456,26 +499,26 @@ final class ki extends am {
                 break L8;
               }
             }
-            var1 = (Object) (Object) "meta";
-            var2 = (String) var1;
-            var2 = (String) var1;
+            var1 = "meta";
+            var2 = (String) (var1);
+            var2 = (String) (var1);
             break L7;
           } else {
             break L7;
           }
         }
         L9: {
-          if (((ki) this).field_r != 3) {
+          if (this.field_r != 3) {
             break L9;
           } else {
             L10: {
-              var3 = ((ki) this).field_v;
+              var3 = this.field_v;
               if (var3 != 0) {
-                if (var3 == 1) {
+                if ((var3 ^ -1) == -2) {
                   var2 = " Right";
                   break L10;
                 } else {
-                  if (var3 != 2) {
+                  if (-3 != (var3 ^ -1)) {
                     break L10;
                   } else {
                     var2 = " OK";
@@ -487,11 +530,11 @@ final class ki extends am {
                 break L10;
               }
             }
-            var1 = (Object) (Object) "formation";
+            var1 = "formation";
             break L9;
           }
         }
-        return new String("{Move" + (String) var1 + var2 + "}");
+        return new String("{Move" + (String) (var1) + var2 + "}");
     }
 
     static {

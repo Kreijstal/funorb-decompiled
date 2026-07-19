@@ -8,13 +8,15 @@ final class kj {
     static eg field_c;
 
     final static void a(int param0) {
+        tm dupTemp$0 = null;
         tm var4 = null;
-        tm var1 = null;
+        tm dupTemp$1 = null;
         tm var5 = null;
         int var2 = 0;
+        tm var1 = null;
         int var3 = MinerDisturbance.field_ab;
         while (true) {
-            tm dupTemp$0 = (tm) (Object) ok.field_b.e(63854);
+            dupTemp$0 = (tm) ((Object) ok.field_b.e(63854));
             var4 = dupTemp$0;
             var1 = var4;
             if (null == dupTemp$0) {
@@ -23,7 +25,7 @@ final class kj {
             ke.field_X[var4.field_s] = false;
         }
         while (true) {
-            tm dupTemp$1 = (tm) (Object) ec.field_c.e(63854);
+            dupTemp$1 = (tm) ((Object) ec.field_c.e(63854));
             var5 = dupTemp$1;
             var1 = var5;
             if (null == dupTemp$1) {
@@ -35,21 +37,29 @@ final class kj {
             return;
         }
         try {
-            for (var2 = 0; var2 < 35; var2++) {
+            for (var2 = 0; -36 < (var2 ^ -1); var2++) {
                 ke.field_X[var2] = false;
             }
             jn.a(0);
             ja.field_u = 150;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "kj.B(" + param0 + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "kj.B(" + param0 + ')');
         }
     }
 
     final static void a(int param0, int param1) {
+        if (param1 != -22156) {
+            field_b = (String) null;
+            pj.field_b = param0 ^ -1422590333;
+            return;
+        }
         pj.field_b = param0 ^ -1422590333;
     }
 
     final static void a(byte param0) {
+        if (param0 != -123) {
+            return;
+        }
         mk.a(false, aa.field_e, 0);
     }
 
@@ -67,16 +77,31 @@ final class kj {
             }
           }
         }
-        if (-2 == rj.field_d) {
-          if (!ta.a(0, 2)) {
-            return false;
+        if (param0 == -9319) {
+          if (-2 == rj.field_d) {
+            if (!ta.a(0, 2)) {
+              return false;
+            } else {
+              rj.field_d = field_a.e(-81);
+              field_a.field_o = 0;
+              return ta.a(0, rj.field_d);
+            }
           } else {
-            rj.field_d = field_a.e(-81);
-            field_a.field_o = 0;
             return ta.a(0, rj.field_d);
           }
         } else {
-          return ta.a(0, rj.field_d);
+          field_b = (String) null;
+          if (-2 == rj.field_d) {
+            if (!ta.a(0, 2)) {
+              return false;
+            } else {
+              rj.field_d = field_a.e(-81);
+              field_a.field_o = 0;
+              return ta.a(0, rj.field_d);
+            }
+          } else {
+            return ta.a(0, rj.field_d);
+          }
         }
     }
 
@@ -84,6 +109,10 @@ final class kj {
         field_a = null;
         field_b = null;
         field_c = null;
+        if (!param0) {
+            return;
+        }
+        byte discarded$0 = kj.a('[', 105);
     }
 
     final static boolean a(boolean param0) {
@@ -553,10 +582,6 @@ final class kj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Unable to connect to the data server. Please check any firewall you are using.";
     }
 }

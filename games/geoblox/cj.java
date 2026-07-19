@@ -20,7 +20,7 @@ abstract class cj {
     final int a(byte param0, long param1) {
         long var4 = 0L;
         L0: {
-          var4 = ((cj) this).a((byte) -49);
+          var4 = this.a((byte) -49);
           if (0L < var4) {
             bc.a(0, var4);
             break L0;
@@ -31,7 +31,7 @@ abstract class cj {
         if (param0 != -6) {
           return -30;
         } else {
-          return ((cj) this).a(true, param1);
+          return this.a(true, param1);
         }
     }
 

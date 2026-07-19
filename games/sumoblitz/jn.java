@@ -9,15 +9,16 @@ final class jn {
     private ms field_a;
 
     final ms a(int param0) {
+        boolean discarded$2 = false;
         ms var2 = null;
-        var2 = ((jn) this).field_e.field_g;
-        if (((jn) this).field_e == var2) {
-          ((jn) this).field_a = null;
+        var2 = this.field_e.field_g;
+        if (this.field_e == var2) {
+          this.field_a = null;
           return null;
         } else {
-          ((jn) this).field_a = var2.field_g;
+          this.field_a = var2.field_g;
           if (param0 != 9) {
-            boolean discarded$2 = ((jn) this).a((byte) 19);
+            discarded$2 = this.a((byte) 19);
             return var2;
           } else {
             return var2;
@@ -26,24 +27,25 @@ final class jn {
     }
 
     final ms d(byte param0) {
+        ms discarded$2 = null;
         ms var2 = null;
         if (param0 == 18) {
-          var2 = ((jn) this).field_a;
-          if (var2 == ((jn) this).field_e) {
-            ((jn) this).field_a = null;
+          var2 = this.field_a;
+          if (var2 == this.field_e) {
+            this.field_a = null;
             return null;
           } else {
-            ((jn) this).field_a = var2.field_b;
+            this.field_a = var2.field_b;
             return var2;
           }
         } else {
-          ms discarded$2 = ((jn) this).b((byte) -83);
-          var2 = ((jn) this).field_a;
-          if (var2 == ((jn) this).field_e) {
-            ((jn) this).field_a = null;
+          discarded$2 = this.b((byte) -83);
+          var2 = this.field_a;
+          if (var2 == this.field_e) {
+            this.field_a = null;
             return null;
           } else {
-            ((jn) this).field_a = var2.field_b;
+            this.field_a = var2.field_b;
             return var2;
           }
         }
@@ -77,14 +79,14 @@ final class jn {
                 break L1;
               }
             }
-            param0.field_g = ((jn) this).field_e;
-            param0.field_b = ((jn) this).field_e.field_b;
+            param0.field_g = this.field_e;
+            param0.field_b = this.field_e.field_b;
             param0.field_g.field_b = param0;
             param0.field_b.field_g = param0;
             if (param1 == -10295) {
               break L0;
             } else {
-              ((jn) this).field_a = null;
+              this.field_a = (ms) null;
               return;
             }
           }
@@ -92,23 +94,23 @@ final class jn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("jn.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -116,24 +118,25 @@ final class jn {
               break L2;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
     final ms d(int param0) {
+        ms discarded$2 = null;
         ms var2 = null;
-        var2 = ((jn) this).field_a;
-        if (var2 != ((jn) this).field_e) {
+        var2 = this.field_a;
+        if (var2 != this.field_e) {
           if (param0 != 9) {
-            ms discarded$2 = ((jn) this).d((byte) 68);
-            ((jn) this).field_a = var2.field_g;
+            discarded$2 = this.d((byte) 68);
+            this.field_a = var2.field_g;
             return var2;
           } else {
-            ((jn) this).field_a = var2.field_g;
+            this.field_a = var2.field_g;
             return var2;
           }
         } else {
-          ((jn) this).field_a = null;
+          this.field_a = null;
           return null;
         }
     }
@@ -147,8 +150,8 @@ final class jn {
         int stackOut_2_0 = 0;
         if (param0 > -65) {
           L0: {
-            ((jn) this).e(-106);
-            if (((jn) this).field_e.field_b != ((jn) this).field_e) {
+            this.e(-106);
+            if (this.field_e.field_b != this.field_e) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -161,7 +164,7 @@ final class jn {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((jn) this).field_e.field_b != ((jn) this).field_e) {
+            if (this.field_e.field_b != this.field_e) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -179,8 +182,8 @@ final class jn {
         if (!(param0.field_g == null)) {
             param0.b(false);
         }
-        param0.field_b = ((jn) this).field_e;
-        param0.field_g = ((jn) this).field_e.field_g;
+        param0.field_b = this.field_e;
+        param0.field_g = this.field_e.field_g;
         param0.field_g.field_b = param0;
         if (param1 != 39) {
             return;
@@ -188,33 +191,33 @@ final class jn {
         try {
             param0.field_b.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "jn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "jn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final ms b(byte param0) {
         ms var2 = null;
         if (param0 < -98) {
-          var2 = ((jn) this).field_e.field_g;
-          if (((jn) this).field_e == var2) {
+          var2 = this.field_e.field_g;
+          if (this.field_e == var2) {
             return null;
           } else {
             var2.b(false);
             return var2;
           }
         } else {
-          return null;
+          return (ms) null;
         }
     }
 
     final ms c(int param0) {
         ms var2 = null;
-        Object var3 = null;
-        var2 = ((jn) this).field_e.field_b;
-        if (var2 != ((jn) this).field_e) {
+        ms var3 = null;
+        var2 = this.field_e.field_b;
+        if (var2 != this.field_e) {
           if (param0 != 9) {
-            var3 = null;
-            ((jn) this).a((ms) null, (byte) 81);
+            var3 = (ms) null;
+            this.a((ms) null, (byte) 81);
             var2.b(false);
             return var2;
           } else {
@@ -228,6 +231,11 @@ final class jn {
 
     public static void c(byte param0) {
         field_d = null;
+        if (param0 != 117) {
+            field_b = 93;
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
@@ -235,12 +243,12 @@ final class jn {
         ms var2 = null;
         int var3 = 0;
         var3 = 64 % ((5 - param0) / 61);
-        var2 = ((jn) this).field_e.field_b;
-        if (((jn) this).field_e == var2) {
-          ((jn) this).field_a = null;
+        var2 = this.field_e.field_b;
+        if (this.field_e == var2) {
+          this.field_a = null;
           return null;
         } else {
-          ((jn) this).field_a = var2.field_b;
+          this.field_a = var2.field_b;
           return var2;
         }
     }
@@ -250,34 +258,34 @@ final class jn {
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         L0: while (true) {
-          var2 = ((jn) this).field_e.field_b;
-          if (((jn) this).field_e == var2) {
-            if (param0 < 114) {
-              field_d = null;
-              ((jn) this).field_a = null;
+          var2 = this.field_e.field_b;
+          if (this.field_e == var2) {
+            if (param0 >= 114) {
+              this.field_a = null;
               return;
             } else {
-              ((jn) this).field_a = null;
+              field_d = (hr) null;
+              this.field_a = null;
               return;
             }
           } else {
             var2.b(false);
-            continue L0;
+            if (var3 == 0) {
+              continue L0;
+            } else {
+              return;
+            }
           }
         }
     }
 
     public jn() {
-        ((jn) this).field_e = new ms();
-        ((jn) this).field_e.field_g = ((jn) this).field_e;
-        ((jn) this).field_e.field_b = ((jn) this).field_e;
+        this.field_e = new ms();
+        this.field_e.field_g = this.field_e;
+        this.field_e.field_b = this.field_e;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 9;
     }
 }

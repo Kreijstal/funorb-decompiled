@@ -21,6 +21,7 @@ final class la {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_11_0 = 0;
         int stackOut_6_0 = 0;
@@ -38,9 +39,15 @@ final class la {
             var2_int = 0;
             L1: while (true) {
               if (var2_int >= param1.length()) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
-                break L0;
+                if (param0 == 96) {
+                  stackOut_11_0 = 0;
+                  stackIn_12_0 = stackOut_11_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  field_c = -105;
+                  return false;
+                }
               } else {
                 L2: {
                   var3 = param1.charAt(var2_int);
@@ -50,7 +57,8 @@ final class la {
                     if (!wc.a(48, (char) var3)) {
                       stackOut_6_0 = 1;
                       stackIn_7_0 = stackOut_6_0;
-                      return stackIn_7_0 != 0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     } else {
                       break L2;
                     }
@@ -65,23 +73,23 @@ final class la {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var2;
-            stackOut_13_1 = new StringBuilder().append("la.A(").append(96).append(',');
+            stackOut_13_0 = (RuntimeException) (var2);
+            stackOut_13_1 = new StringBuilder().append("la.A(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -89,25 +97,32 @@ final class la {
               break L3;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
-        return stackIn_12_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_7_0 != 0;
+        } else {
+          return stackIn_12_0 != 0;
+        }
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = param2 >> 31 & param1 - 1;
-        return var3 + ((param2 >>> 31) + param2) % param1;
+        if (param0 != 64) {
+            return 110;
+        }
+        int var3 = param2 >> 689455647 & param1 - 1;
+        return var3 + ((param2 >>> -1931279585) + param2) % param1;
     }
 
     final static void a(int param0) {
-        re.a(0);
+        re.a(param0 ^ param0);
         if (kj.field_E != null) {
             wf.a(kj.field_E, false);
         }
         te.a((byte) 98);
         li.a(1392);
         vf.a(79);
-        if (jb.b(-125)) {
+        if (jb.b(param0 + -127)) {
             d.field_b.d((byte) 76, 1);
             nf.a(0, (byte) 95);
         }
@@ -117,27 +132,23 @@ final class la {
     public static void a(byte param0) {
         field_a = null;
         field_d = null;
-        int var1 = -33;
+        int var1 = -33 / ((param0 - -66) / 38);
     }
 
     final static void a(int param0, we param1, int param2) {
         ia var3 = null;
         try {
             var3 = d.field_b;
-            var3.d((byte) 73, 5);
+            var3.d((byte) 73, param2);
             var3.a(2, -111);
-            var3.a(0, -73);
+            var3.a(param0, -73);
             var3.a(param1.field_g, -86);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "la.B(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 5 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Collecting the same power-up as the currently active laser will increase the power of all your weapons.";
         field_b = 64;
         field_c = 0;

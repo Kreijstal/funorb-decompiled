@@ -11,27 +11,27 @@ final class rg implements Iterator {
     static boolean field_a;
 
     public final void remove() {
-        if (null == ((rg) this).field_c) {
+        if (null == this.field_c) {
             throw new IllegalStateException();
         }
-        ((rg) this).field_c.d(12);
-        ((rg) this).field_c = null;
+        this.field_c.d(12);
+        this.field_c = null;
     }
 
     public final Object next() {
-        he var1 = ((rg) this).field_b;
-        if (var1 == ((rg) this).field_d.field_a) {
-            ((rg) this).field_b = null;
+        he var1 = this.field_b;
+        if (var1 == this.field_d.field_a) {
+            this.field_b = null;
             var1 = null;
         } else {
-            ((rg) this).field_b = var1.field_h;
+            this.field_b = var1.field_h;
         }
-        ((rg) this).field_c = var1;
-        return (Object) (Object) var1;
+        this.field_c = var1;
+        return var1;
     }
 
     public final boolean hasNext() {
-        return ((rg) this).field_b != ((rg) this).field_d.field_a;
+        return this.field_b != this.field_d.field_a;
     }
 
     final static void a(byte param0) {
@@ -41,21 +41,17 @@ final class rg implements Iterator {
     }
 
     rg(va param0) {
-        ((rg) this).field_c = null;
+        this.field_c = null;
         try {
-            ((rg) this).field_d = param0;
-            ((rg) this).field_b = ((rg) this).field_d.field_a.field_h;
-            ((rg) this).field_c = null;
+            this.field_d = param0;
+            this.field_b = this.field_d.field_a.field_h;
+            this.field_c = null;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "rg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "rg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = -2147483648;
         field_a = true;
     }

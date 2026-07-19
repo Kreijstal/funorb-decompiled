@@ -17,15 +17,15 @@ final class qg {
         if (param0 > -22) {
             return true;
         }
-        return ((qg) this).field_b;
+        return this.field_b;
     }
 
     qg(g[] param0, boolean param1) {
         try {
-            ((qg) this).field_c = param0;
-            ((qg) this).field_b = param1 ? true : false;
+            this.field_c = param0;
+            this.field_b = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "qg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

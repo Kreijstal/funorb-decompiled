@@ -11,13 +11,13 @@ final class lu {
         wf var2 = null;
         int var3 = 0;
         var3 = AceOfSkies.field_G ? 1 : 0;
-        ((lu) this).field_b = null;
+        this.field_b = null;
         if (param0 == 1) {
-          if (!((lu) this).field_c.a(true)) {
-            var2 = ((lu) this).field_c.d(268435455);
+          if (!this.field_c.a(true)) {
+            var2 = this.field_c.d(268435455);
             L0: while (true) {
-              if (var2 != ((lu) this).field_c.field_e) {
-                ((eq) (Object) var2).a((byte) -93);
+              if (var2 != this.field_c.field_e) {
+                ((eq) ((Object) var2)).a((byte) -93);
                 var2 = var2.field_a;
                 continue L0;
               } else {
@@ -45,7 +45,7 @@ final class lu {
         if (param0 != 1) {
             return false;
         }
-        return ((lu) this).field_b != null ? true : false;
+        return this.field_b != null ? true : false;
     }
 
     lu(wl param0) {
@@ -66,24 +66,24 @@ final class lu {
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
         String stackOut_11_2 = null;
-        ((lu) this).field_c = new kp();
+        this.field_c = new kp();
         try {
           L0: {
             L1: {
-              ((lu) this).field_d = param0;
-              if (!((lu) this).field_d.field_A) {
+              this.field_d = param0;
+              if (!this.field_d.field_A) {
                 break L1;
               } else {
-                if (((lu) this).field_d.field_u) {
-                  ((lu) this).field_b = new wj(((lu) this).field_d);
-                  if (((lu) this).field_d.field_Hb <= 1) {
+                if (this.field_d.field_u) {
+                  this.field_b = new wj(this.field_d);
+                  if (this.field_d.field_Hb <= 1) {
                     break L1;
                   } else {
-                    if (!((lu) this).field_d.field_i) {
+                    if (!this.field_d.field_i) {
                       break L1;
                     } else {
-                      if (((lu) this).field_d.field_Nb) {
-                        ((lu) this).field_b = new wj(((lu) this).field_d);
+                      if (this.field_d.field_Nb) {
+                        this.field_b = new wj(this.field_d);
                         break L1;
                       } else {
                         return;
@@ -101,23 +101,23 @@ final class lu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) runtimeException;
+            stackOut_10_0 = (RuntimeException) (runtimeException);
             stackOut_10_1 = new StringBuilder().append("lu.<init>(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L2;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -125,15 +125,11 @@ final class lu {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "To server list";
     }
 }

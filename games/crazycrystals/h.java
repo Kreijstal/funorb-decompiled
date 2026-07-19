@@ -8,6 +8,9 @@ final class h {
     static dl[] field_d;
 
     final static void a(byte[] param0, boolean param1) {
+        byte[] discarded$3 = null;
+        byte dupTemp$4 = 0;
+        byte dupTemp$5 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -28,10 +31,6 @@ final class h {
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        byte[] var22 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        byte[] var25 = null;
         int stackIn_35_0 = 0;
         int stackIn_36_0 = 0;
         int stackIn_37_0 = 0;
@@ -86,7 +85,7 @@ final class h {
               if (param1) {
                 break L1;
               } else {
-                byte[] discarded$3 = h.a((byte) 24, 15);
+                discarded$3 = h.a((byte) 24, 15);
                 break L1;
               }
             }
@@ -119,38 +118,34 @@ final class h {
                                       var5 = uo.field_l[var4];
                                       var6 = je.field_c[var4];
                                       var7 = var5 * var6;
-                                      var24 = new byte[var7];
-                                      var22 = var24;
-                                      var20 = var22;
+                                      var20 = new byte[var7];
                                       var18 = var20;
                                       var8 = var18;
-                                      ui.field_c[var4] = var24;
-                                      var25 = new byte[var7];
-                                      var23 = var25;
-                                      var21 = var23;
+                                      ui.field_c[var4] = var20;
+                                      var21 = new byte[var7];
                                       var19 = var21;
                                       var9 = var19;
-                                      ng.field_g[var4] = var25;
+                                      ng.field_g[var4] = var21;
                                       var10 = 0;
                                       var11 = var17.h(255);
                                       if (0 == (1 & var11)) {
                                         var12 = 0;
                                         L9: while (true) {
                                           if (var12 >= var7) {
-                                            if ((2 & var11) != 0) {
+                                            if (-1 != (2 & var11 ^ -1)) {
                                               var12 = 0;
                                               L10: while (true) {
                                                 if (var7 <= var12) {
                                                   break L8;
                                                 } else {
                                                   L11: {
-                                                    byte dupTemp$4 = var17.d((byte) -113);
+                                                    dupTemp$4 = var17.d((byte) -113);
                                                     var9[var12] = dupTemp$4;
                                                     var13 = dupTemp$4;
                                                     stackOut_46_0 = var10;
                                                     stackIn_48_0 = stackOut_46_0;
                                                     stackIn_47_0 = stackOut_46_0;
-                                                    if (var13 == -1) {
+                                                    if (0 == (var13 ^ -1)) {
                                                       stackOut_48_0 = stackIn_48_0;
                                                       stackOut_48_1 = 0;
                                                       stackIn_49_0 = stackOut_48_0;
@@ -197,7 +192,7 @@ final class h {
                                                       continue L13;
                                                     } else {
                                                       L15: {
-                                                        byte dupTemp$5 = var17.d((byte) 119);
+                                                        dupTemp$5 = var17.d((byte) 119);
                                                         var9[var13 * var5 + var12] = dupTemp$5;
                                                         var14 = dupTemp$5;
                                                         stackOut_34_0 = var10;
@@ -289,23 +284,23 @@ final class h {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var2 = decompiledCaughtException;
-            stackOut_52_0 = (RuntimeException) var2;
+            stackOut_52_0 = (RuntimeException) (var2);
             stackOut_52_1 = new StringBuilder().append("h.C(");
             stackIn_54_0 = stackOut_52_0;
             stackIn_54_1 = stackOut_52_1;
             stackIn_53_0 = stackOut_52_0;
             stackIn_53_1 = stackOut_52_1;
             if (param0 == null) {
-              stackOut_54_0 = (RuntimeException) (Object) stackIn_54_0;
-              stackOut_54_1 = (StringBuilder) (Object) stackIn_54_1;
+              stackOut_54_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackOut_54_1 = (StringBuilder) ((Object) stackIn_54_1);
               stackOut_54_2 = "null";
               stackIn_55_0 = stackOut_54_0;
               stackIn_55_1 = stackOut_54_1;
               stackIn_55_2 = stackOut_54_2;
               break L18;
             } else {
-              stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
-              stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
+              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
               stackOut_53_2 = "{...}";
               stackIn_55_0 = stackOut_53_0;
               stackIn_55_1 = stackOut_53_1;
@@ -313,7 +308,7 @@ final class h {
               break L18;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + ',' + param1 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_55_0), stackIn_55_2 + ',' + param1 + ')');
         }
     }
 
@@ -325,17 +320,21 @@ final class h {
     }
 
     final synchronized static byte[] a(byte param0, int param1) {
+        int fieldTemp$4 = 0;
+        byte[][] fieldTemp$5 = null;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;
         L0: {
-          if (param1 != 100) {
+          if (-101 != (param1 ^ -1)) {
             break L0;
           } else {
-            if (so.field_e <= 0) {
+            if (-1 <= (so.field_e ^ -1)) {
               break L0;
             } else {
-              int fieldTemp$4 = so.field_e - 1;
+              fieldTemp$4 = so.field_e - 1;
               so.field_e = so.field_e - 1;
               var2_ref_byte__ = mn.field_i[fieldTemp$4];
               mn.field_i[so.field_e] = null;
@@ -347,11 +346,11 @@ final class h {
           if (param1 != 5000) {
             break L1;
           } else {
-            if (je.field_e <= 0) {
+            if ((je.field_e ^ -1) >= -1) {
               break L1;
             } else {
-              byte[][] fieldTemp$5 = tg.field_e;
-              int fieldTemp$6 = je.field_e - 1;
+              fieldTemp$5 = tg.field_e;
+              fieldTemp$6 = je.field_e - 1;
               je.field_e = je.field_e - 1;
               var2_ref_byte__ = fieldTemp$5[fieldTemp$6];
               tg.field_e[je.field_e] = null;
@@ -363,16 +362,16 @@ final class h {
           if (param0 == 26) {
             break L2;
           } else {
-            field_d = null;
+            field_d = (dl[]) null;
             break L2;
           }
         }
         L3: {
-          if (param1 != 30000) {
+          if ((param1 ^ -1) != -30001) {
             break L3;
           } else {
-            if (ed.field_z > 0) {
-              int fieldTemp$7 = ed.field_z - 1;
+            if (-1 > (ed.field_z ^ -1)) {
+              fieldTemp$7 = ed.field_z - 1;
               ed.field_z = ed.field_z - 1;
               var2_ref_byte__ = oc.field_a[fieldTemp$7];
               oc.field_a[ed.field_z] = null;
@@ -388,25 +387,23 @@ final class h {
           } else {
             var2 = 0;
             L5: while (true) {
-              if (~kk.field_e.length >= ~var2) {
+              if (kk.field_e.length <= var2) {
                 break L4;
               } else {
-                L6: {
-                  if (~kk.field_e[var2] != ~param1) {
-                    break L6;
+                if (kk.field_e[var2] == param1) {
+                  if ((jd.field_K[var2] ^ -1) < -1) {
+                    jd.field_K[var2] = jd.field_K[var2] - 1;
+                    var3 = lp.field_a[var2][jd.field_K[var2] - 1];
+                    lp.field_a[var2][jd.field_K[var2]] = null;
+                    return var3;
                   } else {
-                    if (jd.field_K[var2] <= 0) {
-                      break L6;
-                    } else {
-                      jd.field_K[var2] = jd.field_K[var2] - 1;
-                      var3 = lp.field_a[var2][jd.field_K[var2] - 1];
-                      lp.field_a[var2][jd.field_K[var2]] = null;
-                      return var3;
-                    }
+                    var2++;
+                    continue L5;
                   }
+                } else {
+                  var2++;
+                  continue L5;
                 }
-                var2++;
-                continue L5;
               }
             }
           }
@@ -415,10 +412,6 @@ final class h {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         qd.a(-82, 50);
     }
 }

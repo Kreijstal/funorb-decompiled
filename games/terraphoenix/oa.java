@@ -13,6 +13,9 @@ final class oa {
     public static void a(int param0) {
         field_c = null;
         field_a = null;
+        if (param0 != 7463) {
+            return;
+        }
         field_b = null;
     }
 
@@ -24,22 +27,22 @@ final class oa {
             Throwable var3 = null;
             Runtime var3_ref = null;
             Long var4 = null;
-            Object var5 = null;
+            Object[] var5 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
                 L1: {
-                  var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
-                  var2 = -8;
+                  var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+                  var2 = -16 / ((33 - param0) / 62);
                   if (var1 == null) {
                     break L1;
                   } else {
                     try {
                       L2: {
                         var3_ref = Runtime.getRuntime();
-                        var5 = null;
-                        var4 = (Long) var1.invoke((Object) (Object) var3_ref, (Object[]) null);
+                        var5 = (Object[]) null;
+                        var4 = (Long) (var1.invoke((Object) (var3_ref), (Object[]) null));
                         qb.field_g = (int)(var4.longValue() / 1048576L) + 1;
                         decompiledRegionSelector0 = 0;
                         break L2;
@@ -76,10 +79,6 @@ final class oa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "10000pts";
     }
 }

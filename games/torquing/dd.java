@@ -15,16 +15,21 @@ final class dd {
 
     public static void a(byte param0) {
         field_c = null;
-        field_i = null;
-        field_e = null;
-        field_b = null;
+        if (param0 >= -124) {
+          field_i = (t) null;
+          field_i = null;
+          field_e = null;
+          field_b = null;
+          return;
+        } else {
+          field_i = null;
+          field_e = null;
+          field_b = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "dd.A(";
         field_e = new String[16];
         field_b = "You are unable to access this level yet.";

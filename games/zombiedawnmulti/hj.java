@@ -13,6 +13,9 @@ final class hj {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != 27964) {
+            return;
+        }
         field_e = null;
         field_d = null;
         field_h = null;
@@ -20,10 +23,6 @@ final class hj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "hj.A(";
         field_e = "Loading...";
         field_h = "Off";

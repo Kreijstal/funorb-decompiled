@@ -6,7 +6,7 @@ final class sf extends hl implements eja {
 
     public final void a(int param0, int param1) {
         int var3 = -28 / ((param0 - -30) / 36);
-        super.a(69, ((sf) this).field_l.field_e * param1);
+        super.a(69, this.field_l.field_e * param1);
     }
 
     public final void a(int param0) {
@@ -15,32 +15,34 @@ final class sf extends hl implements eja {
 
     public final boolean a(byte param0) {
         int var2 = -26 % ((54 - param0) / 41);
-        return super.a(((sf) this).field_h.field_Qc, 99);
+        return super.a(this.field_h.field_Qc, 99);
     }
 
     public final una b(int param0) {
+        boolean discarded$0 = false;
         if (param0 != -32491) {
-            boolean discarded$0 = ((sf) this).a((byte) -127);
-            return ((sf) this).field_l;
+            discarded$0 = this.a((byte) -127);
+            return this.field_l;
         }
-        return ((sf) this).field_l;
+        return this.field_l;
     }
 
     public final jaclib.memory.Buffer a(boolean param0, byte param1) {
+        boolean discarded$2 = false;
         if (param1 >= -9) {
-          boolean discarded$2 = ((sf) this).a((byte) 69);
-          return super.a(((sf) this).field_h.field_Qc, param0, 1);
+          discarded$2 = this.a((byte) 69);
+          return super.a(this.field_h.field_Qc, param0, 1);
         } else {
-          return super.a(((sf) this).field_h.field_Qc, param0, 1);
+          return super.a(this.field_h.field_Qc, param0, 1);
         }
     }
 
     sf(kda param0, una param1, boolean param2) {
         super(param0, 34963, param2);
         try {
-            ((sf) this).field_l = param1;
+            this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "sf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

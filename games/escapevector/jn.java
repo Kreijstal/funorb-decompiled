@@ -13,14 +13,14 @@ final class jn {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        var3 = (((jn) this).field_f.length >> 1) - param1;
+        var3 = (this.field_f.length >> 725054529) - param1;
         var4 = var3 & param0;
         L0: while (true) {
-          var5 = ((jn) this).field_f[1 + (var4 + var4)];
+          var5 = this.field_f[1 + (var4 + var4)];
           if (var5 == -1) {
             return -1;
           } else {
-            if (((jn) this).field_f[var4 - -var4] != param0) {
+            if (this.field_f[var4 - -var4] != param0) {
               var4 = 1 + var4 & var3;
               continue L0;
             } else {
@@ -31,8 +31,9 @@ final class jn {
     }
 
     final static byte[] a(int param0, String param1) {
+        byte[] discarded$2 = null;
         RuntimeException var2 = null;
-        Object var3 = null;
+        String var3 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -57,8 +58,8 @@ final class jn {
               if (param0 >= 13) {
                 break L1;
               } else {
-                var3 = null;
-                byte[] discarded$2 = jn.a(-106, (String) null);
+                var3 = (String) null;
+                discarded$2 = jn.a(-106, (String) null);
                 break L1;
               }
             }
@@ -70,23 +71,23 @@ final class jn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("jn.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -94,7 +95,7 @@ final class jn {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -124,8 +125,8 @@ final class jn {
           L0: {
             var2_int = 1;
             L1: while (true) {
-              if ((param0.length >> 1) + param0.length < var2_int) {
-                ((jn) this).field_f = new int[var2_int - -var2_int];
+              if ((param0.length >> 295360545) + param0.length < var2_int) {
+                this.field_f = new int[var2_int - -var2_int];
                 var3 = 0;
                 L2: while (true) {
                   if (var2_int + var2_int <= var3) {
@@ -136,9 +137,9 @@ final class jn {
                       } else {
                         var4 = param0[var3] & var2_int - 1;
                         L4: while (true) {
-                          if (((jn) this).field_f[var4 + (var4 - -1)] == -1) {
-                            ((jn) this).field_f[var4 - -var4] = param0[var3];
-                            ((jn) this).field_f[var4 - (-var4 + -1)] = var3;
+                          if (this.field_f[var4 + (var4 - -1)] == -1) {
+                            this.field_f[var4 - -var4] = param0[var3];
+                            this.field_f[var4 - (-var4 + -1)] = var3;
                             var3++;
                             continue L3;
                           } else {
@@ -149,7 +150,7 @@ final class jn {
                       }
                     }
                   } else {
-                    ((jn) this).field_f[var3] = -1;
+                    this.field_f[var3] = -1;
                     var3++;
                     continue L2;
                   }
@@ -164,23 +165,23 @@ final class jn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_0 = (RuntimeException) (var2);
             stackOut_14_1 = new StringBuilder().append("jn.<init>(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -188,15 +189,11 @@ final class jn {
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         id.a(400, 50);
     }
 }

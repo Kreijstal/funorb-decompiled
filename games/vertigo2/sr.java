@@ -10,30 +10,34 @@ final class sr implements Iterable {
     static String field_c;
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new cf((sr) this);
+        return (Iterator) ((Object) new cf((sr) (this)));
     }
 
     final gp a(int param0) {
         gp var2 = null;
-        var2 = ((sr) this).field_b.field_p;
+        var2 = this.field_b.field_p;
         if (param0 < -3) {
-          if (var2 == ((sr) this).field_b) {
+          if (var2 == this.field_b) {
             return null;
           } else {
             var2.a(-120);
             return var2;
           }
         } else {
-          return null;
+          return (gp) null;
         }
     }
 
     public static void a(boolean param0) {
         field_d = null;
+        if (!param0) {
+            return;
+        }
         field_c = null;
     }
 
     final void a(byte param0, gp param1) {
+        Iterator discarded$2 = null;
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -61,14 +65,14 @@ final class sr implements Iterable {
                 break L1;
               }
             }
-            param1.field_p = ((sr) this).field_b;
-            param1.field_o = ((sr) this).field_b.field_o;
+            param1.field_p = this.field_b;
+            param1.field_o = this.field_b.field_o;
             param1.field_o.field_p = param1;
             param1.field_p.field_o = param1;
             if (param0 >= 7) {
               break L0;
             } else {
-              Iterator discarded$2 = ((sr) this).iterator();
+              discarded$2 = this.iterator();
               return;
             }
           }
@@ -76,23 +80,23 @@ final class sr implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_0 = (RuntimeException) (var3);
             stackOut_6_1 = new StringBuilder().append("sr.C(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -100,21 +104,17 @@ final class sr implements Iterable {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
     sr() {
-        ((sr) this).field_b = new gp();
-        ((sr) this).field_b.field_p = ((sr) this).field_b;
-        ((sr) this).field_b.field_o = ((sr) this).field_b;
+        this.field_b = new gp();
+        this.field_b.field_p = this.field_b;
+        this.field_b.field_o = this.field_b;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Please check if address is correct";
         field_c = "game over";
     }

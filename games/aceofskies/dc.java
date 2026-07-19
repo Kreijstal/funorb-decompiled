@@ -102,10 +102,6 @@ final class dc extends aa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 20;
     }
 }

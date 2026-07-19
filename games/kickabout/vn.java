@@ -42,6 +42,7 @@ final class vn extends cv {
     private byte field_F;
 
     private final int a(vn param0, int param1, short param2) {
+        int fieldTemp$1 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -51,27 +52,27 @@ final class vn extends cv {
         var6 = param0.field_A[param1];
         var7 = 0;
         L0: while (true) {
-          if (var7 >= ((vn) this).field_m) {
+          if (var7 >= this.field_m) {
             L1: {
-              ((vn) this).field_H[((vn) this).field_m] = var4;
-              ((vn) this).field_l[((vn) this).field_m] = var5;
-              ((vn) this).field_A[((vn) this).field_m] = var6;
-              ((vn) this).field_n[((vn) this).field_m] = (short)param2;
+              this.field_H[this.field_m] = var4;
+              this.field_l[this.field_m] = var5;
+              this.field_A[this.field_m] = var6;
+              this.field_n[this.field_m] = (short)param2;
               if (param0.field_C == null) {
                 break L1;
               } else {
-                ((vn) this).field_C[((vn) this).field_m] = param0.field_C[param1];
+                this.field_C[this.field_m] = param0.field_C[param1];
                 break L1;
               }
             }
-            int fieldTemp$1 = ((vn) this).field_m;
-            ((vn) this).field_m = ((vn) this).field_m + 1;
+            fieldTemp$1 = this.field_m;
+            this.field_m = this.field_m + 1;
             return fieldTemp$1;
           } else {
-            if (var4 == ((vn) this).field_H[var7]) {
-              if (var5 == ((vn) this).field_l[var7]) {
-                if (var6 == ((vn) this).field_A[var7]) {
-                  ((vn) this).field_n[var7] = (short)(((vn) this).field_n[var7] | param2);
+            if (var4 == this.field_H[var7]) {
+              if (var5 == this.field_l[var7]) {
+                if (var6 == this.field_A[var7]) {
+                  this.field_n[var7] = (short)(this.field_n[var7] | param2);
                   return var7;
                 } else {
                   var7++;
@@ -225,22 +226,22 @@ final class vn extends cv {
           var21 = var21 + var18;
           var34 = var21;
           var21 = var21 + var19;
-          ((vn) this).field_m = var9;
-          ((vn) this).field_D = var10;
-          ((vn) this).field_R = var11;
-          ((vn) this).field_H = new int[var9];
-          ((vn) this).field_l = new int[var9];
-          ((vn) this).field_A = new int[var9];
-          ((vn) this).field_r = new int[var10];
-          ((vn) this).field_L = new int[var10];
-          ((vn) this).field_w = new int[var10];
+          this.field_m = var9;
+          this.field_D = var10;
+          this.field_R = var11;
+          this.field_H = new int[var9];
+          this.field_l = new int[var9];
+          this.field_A = new int[var9];
+          this.field_r = new int[var10];
+          this.field_L = new int[var10];
+          this.field_w = new int[var10];
           if (var11 <= 0) {
             break L5;
           } else {
-            ((vn) this).field_T = new byte[var11];
-            ((vn) this).field_h = new short[var11];
-            ((vn) this).field_B = new short[var11];
-            ((vn) this).field_y = new short[var11];
+            this.field_T = new byte[var11];
+            this.field_h = new short[var11];
+            this.field_B = new short[var11];
+            this.field_y = new short[var11];
             break L5;
           }
         }
@@ -248,7 +249,7 @@ final class vn extends cv {
           if (var16 != 1) {
             break L6;
           } else {
-            ((vn) this).field_C = new int[var9];
+            this.field_C = new int[var9];
             break L6;
           }
         }
@@ -256,18 +257,18 @@ final class vn extends cv {
           if (var12 != 1) {
             break L7;
           } else {
-            ((vn) this).field_o = new byte[var10];
-            ((vn) this).field_I = new byte[var10];
-            ((vn) this).field_u = new short[var10];
+            this.field_o = new byte[var10];
+            this.field_I = new byte[var10];
+            this.field_u = new short[var10];
             break L7;
           }
         }
         L8: {
           if (var13 != 255) {
-            ((vn) this).field_F = (byte)var13;
+            this.field_F = (byte)var13;
             break L8;
           } else {
-            ((vn) this).field_z = new byte[var10];
+            this.field_z = new byte[var10];
             break L8;
           }
         }
@@ -275,7 +276,7 @@ final class vn extends cv {
           if (var14 != 1) {
             break L9;
           } else {
-            ((vn) this).field_k = new byte[var10];
+            this.field_k = new byte[var10];
             break L9;
           }
         }
@@ -283,11 +284,11 @@ final class vn extends cv {
           if (var15 != 1) {
             break L10;
           } else {
-            ((vn) this).field_O = new int[var10];
+            this.field_O = new int[var10];
             break L10;
           }
         }
-        ((vn) this).field_p = new short[var10];
+        this.field_p = new short[var10];
         var4.field_n = var22;
         var5.field_n = var32;
         var6.field_n = var33;
@@ -307,7 +308,7 @@ final class vn extends cv {
             var38 = 0;
             L12: while (true) {
               if (var38 >= var10) {
-                ((vn) this).field_t = -1;
+                this.field_t = -1;
                 var4.field_n = var29;
                 var5.field_n = var23;
                 var38 = 0;
@@ -317,13 +318,13 @@ final class vn extends cv {
                 var42 = 0;
                 L13: while (true) {
                   if (var42 >= var10) {
-                    ((vn) this).field_t = ((vn) this).field_t + 1;
+                    this.field_t = this.field_t + 1;
                     var4.field_n = var31;
                     var42 = 0;
                     L14: while (true) {
                       if (var42 >= var11) {
                         L15: {
-                          if (((vn) this).field_I == null) {
+                          if (this.field_I == null) {
                             break L15;
                           } else {
                             var42 = 0;
@@ -334,23 +335,23 @@ final class vn extends cv {
                                 if (var42 != 0) {
                                   break L15;
                                 } else {
-                                  ((vn) this).field_I = null;
+                                  this.field_I = null;
                                   break L15;
                                 }
                               } else {
-                                var44 = ((vn) this).field_I[var45] & 255;
+                                var44 = this.field_I[var45] & 255;
                                 if (var44 != 255) {
                                   L17: {
-                                    if ((((vn) this).field_h[var44] & 65535) != ((vn) this).field_r[var45]) {
+                                    if ((this.field_h[var44] & 65535) != this.field_r[var45]) {
                                       break L17;
                                     } else {
-                                      if ((((vn) this).field_B[var44] & 65535) != ((vn) this).field_L[var45]) {
+                                      if ((this.field_B[var44] & 65535) != this.field_L[var45]) {
                                         break L17;
                                       } else {
-                                        if ((((vn) this).field_y[var44] & 65535) != ((vn) this).field_w[var45]) {
+                                        if ((this.field_y[var44] & 65535) != this.field_w[var45]) {
                                           break L17;
                                         } else {
-                                          ((vn) this).field_I[var45] = (byte) -1;
+                                          this.field_I[var45] = (byte)-1;
                                           var45++;
                                           continue L16;
                                         }
@@ -372,7 +373,7 @@ final class vn extends cv {
                           if (var3 != 0) {
                             break L18;
                           } else {
-                            ((vn) this).field_u = null;
+                            this.field_u = null;
                             break L18;
                           }
                         }
@@ -380,16 +381,16 @@ final class vn extends cv {
                           if (var2 != 0) {
                             break L19;
                           } else {
-                            ((vn) this).field_o = null;
+                            this.field_o = null;
                             break L19;
                           }
                         }
                         return;
                       } else {
-                        ((vn) this).field_T[var42] = (byte) 0;
-                        ((vn) this).field_h[var42] = (short)var4.a((byte) 81);
-                        ((vn) this).field_B[var42] = (short)var4.a((byte) 81);
-                        ((vn) this).field_y[var42] = (short)var4.a((byte) 81);
+                        this.field_T[var42] = (byte) 0;
+                        this.field_h[var42] = (short)var4.a((byte) 81);
+                        this.field_B[var42] = (short)var4.a((byte) 81);
+                        this.field_y[var42] = (short)var4.a((byte) 81);
                         var42++;
                         continue L14;
                       }
@@ -407,28 +408,28 @@ final class vn extends cv {
                           var41 = var39;
                           var40 = var4.e(-124) + var41;
                           var41 = var40;
-                          ((vn) this).field_r[var42] = var38;
-                          ((vn) this).field_L[var42] = var39;
-                          ((vn) this).field_w[var42] = var40;
-                          if (var38 <= ((vn) this).field_t) {
+                          this.field_r[var42] = var38;
+                          this.field_L[var42] = var39;
+                          this.field_w[var42] = var40;
+                          if (var38 <= this.field_t) {
                             break L21;
                           } else {
-                            ((vn) this).field_t = var38;
+                            this.field_t = var38;
                             break L21;
                           }
                         }
                         L22: {
-                          if (var39 <= ((vn) this).field_t) {
+                          if (var39 <= this.field_t) {
                             break L22;
                           } else {
-                            ((vn) this).field_t = var39;
+                            this.field_t = var39;
                             break L22;
                           }
                         }
-                        if (var40 <= ((vn) this).field_t) {
+                        if (var40 <= this.field_t) {
                           break L20;
                         } else {
-                          ((vn) this).field_t = var40;
+                          this.field_t = var40;
                           break L20;
                         }
                       }
@@ -440,13 +441,13 @@ final class vn extends cv {
                         var39 = var40;
                         var40 = var4.e(-110) + var41;
                         var41 = var40;
-                        ((vn) this).field_r[var42] = var38;
-                        ((vn) this).field_L[var42] = var39;
-                        ((vn) this).field_w[var42] = var40;
-                        if (var40 <= ((vn) this).field_t) {
+                        this.field_r[var42] = var38;
+                        this.field_L[var42] = var39;
+                        this.field_w[var42] = var40;
+                        if (var40 <= this.field_t) {
                           break L23;
                         } else {
-                          ((vn) this).field_t = var40;
+                          this.field_t = var40;
                           break L23;
                         }
                       }
@@ -458,13 +459,13 @@ final class vn extends cv {
                         var38 = var40;
                         var40 = var4.e(15) + var41;
                         var41 = var40;
-                        ((vn) this).field_r[var42] = var38;
-                        ((vn) this).field_L[var42] = var39;
-                        ((vn) this).field_w[var42] = var40;
-                        if (var40 <= ((vn) this).field_t) {
+                        this.field_r[var42] = var38;
+                        this.field_L[var42] = var39;
+                        this.field_w[var42] = var40;
+                        if (var40 <= this.field_t) {
                           break L24;
                         } else {
-                          ((vn) this).field_t = var40;
+                          this.field_t = var40;
                           break L24;
                         }
                       }
@@ -475,11 +476,11 @@ final class vn extends cv {
                       var39 = var44;
                       var40 = var4.e(-113) + var41;
                       var41 = var40;
-                      ((vn) this).field_r[var42] = var38;
-                      ((vn) this).field_L[var42] = var39;
-                      ((vn) this).field_w[var42] = var40;
-                      if (var40 > ((vn) this).field_t) {
-                        ((vn) this).field_t = var40;
+                      this.field_r[var42] = var38;
+                      this.field_L[var42] = var39;
+                      this.field_w[var42] = var40;
+                      if (var40 > this.field_t) {
+                        this.field_t = var40;
                         var42++;
                         continue L13;
                       } else {
@@ -494,30 +495,30 @@ final class vn extends cv {
                 }
               } else {
                 L25: {
-                  ((vn) this).field_p[var38] = (short)var4.a((byte) 81);
+                  this.field_p[var38] = (short)var4.a((byte) 81);
                   if (var12 != 1) {
                     break L25;
                   } else {
                     L26: {
                       var39 = var5.h((byte) -108);
                       if ((var39 & 1) != 1) {
-                        ((vn) this).field_o[var38] = (byte) 0;
+                        this.field_o[var38] = (byte) 0;
                         break L26;
                       } else {
-                        ((vn) this).field_o[var38] = (byte) 1;
+                        this.field_o[var38] = (byte) 1;
                         var2 = 1;
                         break L26;
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((vn) this).field_I[var38] = (byte) -1;
-                      ((vn) this).field_u[var38] = (short) -1;
+                      this.field_I[var38] = (byte)-1;
+                      this.field_u[var38] = (short)-1;
                       break L25;
                     } else {
-                      ((vn) this).field_I[var38] = (byte)(var39 >> 2);
-                      ((vn) this).field_u[var38] = ((vn) this).field_p[var38];
-                      ((vn) this).field_p[var38] = (short) 127;
-                      if (((vn) this).field_u[var38] == -1) {
+                      this.field_I[var38] = (byte)(var39 >> 2);
+                      this.field_u[var38] = this.field_p[var38];
+                      this.field_p[var38] = (short)127;
+                      if (this.field_u[var38] == -1) {
                         break L25;
                       } else {
                         var3 = 1;
@@ -530,7 +531,7 @@ final class vn extends cv {
                   if (var13 != 255) {
                     break L27;
                   } else {
-                    ((vn) this).field_z[var38] = var6.j((byte) -81);
+                    this.field_z[var38] = var6.j((byte) -81);
                     break L27;
                   }
                 }
@@ -538,12 +539,12 @@ final class vn extends cv {
                   if (var14 != 1) {
                     break L28;
                   } else {
-                    ((vn) this).field_k[var38] = var7.j((byte) -70);
+                    this.field_k[var38] = var7.j((byte) -70);
                     break L28;
                   }
                 }
                 if (var15 == 1) {
-                  ((vn) this).field_O[var38] = var8.h((byte) -106);
+                  this.field_O[var38] = var8.h((byte) -106);
                   var38++;
                   continue L12;
                 } else {
@@ -581,14 +582,14 @@ final class vn extends cv {
                 break L31;
               }
             }
-            ((vn) this).field_H[var38] = var35 + var40;
-            ((vn) this).field_l[var38] = var36 + var41;
-            ((vn) this).field_A[var38] = var37 + var42;
-            var35 = ((vn) this).field_H[var38];
-            var36 = ((vn) this).field_l[var38];
-            var37 = ((vn) this).field_A[var38];
+            this.field_H[var38] = var35 + var40;
+            this.field_l[var38] = var36 + var41;
+            this.field_A[var38] = var37 + var42;
+            var35 = this.field_H[var38];
+            var36 = this.field_l[var38];
+            var37 = this.field_A[var38];
             if (var16 == 1) {
-              ((vn) this).field_C[var38] = var8.h((byte) -122);
+              this.field_C[var38] = var8.h((byte) -122);
               var38++;
               continue L11;
             } else {
@@ -600,10 +601,11 @@ final class vn extends cv {
     }
 
     final eg b(int param0, int param1, int param2, int param3, int param4) {
-        return new eg((vn) this, param0, param1, param2, param3, param4);
+        return new eg((vn) (this), param0, param1, param2, param3, param4);
     }
 
     final void b() {
+        ia dupTemp$1 = null;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -623,25 +625,25 @@ final class vn extends cv {
         rn var17 = null;
         rn var18 = null;
         rn var19 = null;
-        if (((vn) this).field_i == null) {
-          ((vn) this).field_i = new rn[((vn) this).field_t];
+        if (this.field_i == null) {
+          this.field_i = new rn[this.field_t];
           var1 = 0;
           L0: while (true) {
-            if (var1 >= ((vn) this).field_t) {
+            if (var1 >= this.field_t) {
               var1 = 0;
               L1: while (true) {
-                if (var1 >= ((vn) this).field_D) {
+                if (var1 >= this.field_D) {
                   return;
                 } else {
-                  var2 = ((vn) this).field_r[var1];
-                  var3 = ((vn) this).field_L[var1];
-                  var4 = ((vn) this).field_w[var1];
-                  var5 = ((vn) this).field_H[var3] - ((vn) this).field_H[var2];
-                  var6 = ((vn) this).field_l[var3] - ((vn) this).field_l[var2];
-                  var7 = ((vn) this).field_A[var3] - ((vn) this).field_A[var2];
-                  var8 = ((vn) this).field_H[var4] - ((vn) this).field_H[var2];
-                  var9 = ((vn) this).field_l[var4] - ((vn) this).field_l[var2];
-                  var10 = ((vn) this).field_A[var4] - ((vn) this).field_A[var2];
+                  var2 = this.field_r[var1];
+                  var3 = this.field_L[var1];
+                  var4 = this.field_w[var1];
+                  var5 = this.field_H[var3] - this.field_H[var2];
+                  var6 = this.field_l[var3] - this.field_l[var2];
+                  var7 = this.field_A[var3] - this.field_A[var2];
+                  var8 = this.field_H[var4] - this.field_H[var2];
+                  var9 = this.field_l[var4] - this.field_l[var2];
+                  var10 = this.field_A[var4] - this.field_A[var2];
                   var11 = var6 * var10 - var9 * var7;
                   var12 = var7 * var8 - var10 * var5;
                   var13 = var5 * var9 - var8 * var6;
@@ -676,8 +678,8 @@ final class vn extends cv {
                                     var11 = var11 * 256 / var14;
                                     var12 = var12 * 256 / var14;
                                     var13 = var13 * 256 / var14;
-                                    if (((vn) this).field_o != null) {
-                                      var15 = ((vn) this).field_o[var1];
+                                    if (this.field_o != null) {
+                                      var15 = this.field_o[var1];
                                       break L5;
                                     } else {
                                       var15 = 0;
@@ -687,15 +689,15 @@ final class vn extends cv {
                                   if (var15 != 0) {
                                     if (var15 == 1) {
                                       L6: {
-                                        if (((vn) this).field_J != null) {
+                                        if (this.field_J != null) {
                                           break L6;
                                         } else {
-                                          ((vn) this).field_J = new ia[((vn) this).field_D];
+                                          this.field_J = new ia[this.field_D];
                                           break L6;
                                         }
                                       }
-                                      ia dupTemp$1 = new ia();
-                                      ((vn) this).field_J[var1] = dupTemp$1;
+                                      dupTemp$1 = new ia();
+                                      this.field_J[var1] = dupTemp$1;
                                       var16 = dupTemp$1;
                                       var16.field_f = var11;
                                       var16.field_a = var12;
@@ -707,17 +709,17 @@ final class vn extends cv {
                                       continue L1;
                                     }
                                   } else {
-                                    var17 = ((vn) this).field_i[var2];
+                                    var17 = this.field_i[var2];
                                     var17.field_a = var17.field_a + var11;
                                     var17.field_b = var17.field_b + var12;
                                     var17.field_f = var17.field_f + var13;
                                     var17.field_g = var17.field_g + 1;
-                                    var18 = ((vn) this).field_i[var3];
+                                    var18 = this.field_i[var3];
                                     var18.field_a = var18.field_a + var11;
                                     var18.field_b = var18.field_b + var12;
                                     var18.field_f = var18.field_f + var13;
                                     var18.field_g = var18.field_g + 1;
-                                    var19 = ((vn) this).field_i[var4];
+                                    var19 = this.field_i[var4];
                                     var19.field_a = var19.field_a + var11;
                                     var19.field_b = var19.field_b + var12;
                                     var19.field_f = var19.field_f + var13;
@@ -742,7 +744,7 @@ final class vn extends cv {
                 }
               }
             } else {
-              ((vn) this).field_i[var1] = new rn();
+              this.field_i[var1] = new rn();
               var1++;
               continue L0;
             }
@@ -753,6 +755,7 @@ final class vn extends cv {
     }
 
     private final void a(byte[] param0) {
+        byte dupTemp$1 = 0;
         iw var2 = null;
         iw var3 = null;
         iw var4 = null;
@@ -870,7 +873,7 @@ final class vn extends cv {
           if (var11 <= 0) {
             break L2;
           } else {
-            ((vn) this).field_T = new byte[var11];
+            this.field_T = new byte[var11];
             var2.field_n = 0;
             var28 = 0;
             L3: while (true) {
@@ -878,8 +881,8 @@ final class vn extends cv {
                 break L2;
               } else {
                 L4: {
-                  byte dupTemp$1 = var2.j((byte) -114);
-                  ((vn) this).field_T[var28] = dupTemp$1;
+                  dupTemp$1 = var2.j((byte) -114);
+                  this.field_T[var28] = dupTemp$1;
                   var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
@@ -997,19 +1000,19 @@ final class vn extends cv {
           var48 = var28;
           var28 = var28 + (var26 + var27 * 2);
           var49 = var28;
-          ((vn) this).field_m = var9;
-          ((vn) this).field_D = var10;
-          ((vn) this).field_R = var11;
-          ((vn) this).field_H = new int[var9];
-          ((vn) this).field_l = new int[var9];
-          ((vn) this).field_A = new int[var9];
-          ((vn) this).field_r = new int[var10];
-          ((vn) this).field_L = new int[var10];
-          ((vn) this).field_w = new int[var10];
+          this.field_m = var9;
+          this.field_D = var10;
+          this.field_R = var11;
+          this.field_H = new int[var9];
+          this.field_l = new int[var9];
+          this.field_A = new int[var9];
+          this.field_r = new int[var10];
+          this.field_L = new int[var10];
+          this.field_w = new int[var10];
           if (var19 != 1) {
             break L12;
           } else {
-            ((vn) this).field_C = new int[var9];
+            this.field_C = new int[var9];
             break L12;
           }
         }
@@ -1017,16 +1020,16 @@ final class vn extends cv {
           if (var13 == 0) {
             break L13;
           } else {
-            ((vn) this).field_o = new byte[var10];
+            this.field_o = new byte[var10];
             break L13;
           }
         }
         L14: {
           if (var15 != 255) {
-            ((vn) this).field_F = (byte)var15;
+            this.field_F = (byte)var15;
             break L14;
           } else {
-            ((vn) this).field_z = new byte[var10];
+            this.field_z = new byte[var10];
             break L14;
           }
         }
@@ -1034,7 +1037,7 @@ final class vn extends cv {
           if (var16 != 1) {
             break L15;
           } else {
-            ((vn) this).field_k = new byte[var10];
+            this.field_k = new byte[var10];
             break L15;
           }
         }
@@ -1042,7 +1045,7 @@ final class vn extends cv {
           if (var17 != 1) {
             break L16;
           } else {
-            ((vn) this).field_O = new int[var10];
+            this.field_O = new int[var10];
             break L16;
           }
         }
@@ -1050,7 +1053,7 @@ final class vn extends cv {
           if (var18 != 1) {
             break L17;
           } else {
-            ((vn) this).field_u = new short[var10];
+            this.field_u = new short[var10];
             break L17;
           }
         }
@@ -1061,37 +1064,37 @@ final class vn extends cv {
             if (var11 <= 0) {
               break L18;
             } else {
-              ((vn) this).field_I = new byte[var10];
+              this.field_I = new byte[var10];
               break L18;
             }
           }
         }
         L19: {
-          ((vn) this).field_p = new short[var10];
+          this.field_p = new short[var10];
           if (var11 <= 0) {
             break L19;
           } else {
             L20: {
-              ((vn) this).field_h = new short[var11];
-              ((vn) this).field_B = new short[var11];
-              ((vn) this).field_y = new short[var11];
+              this.field_h = new short[var11];
+              this.field_B = new short[var11];
+              this.field_y = new short[var11];
               if (var26 <= 0) {
                 break L20;
               } else {
-                ((vn) this).field_S = new short[var26];
-                ((vn) this).field_P = new short[var26];
-                ((vn) this).field_j = new short[var26];
-                ((vn) this).field_x = new byte[var26];
-                ((vn) this).field_E = new byte[var26];
-                ((vn) this).field_Q = new byte[var26];
+                this.field_S = new short[var26];
+                this.field_P = new short[var26];
+                this.field_j = new short[var26];
+                this.field_x = new byte[var26];
+                this.field_E = new byte[var26];
+                this.field_Q = new byte[var26];
                 break L20;
               }
             }
             if (var27 <= 0) {
               break L19;
             } else {
-              ((vn) this).field_N = new byte[var27];
-              ((vn) this).field_G = new byte[var27];
+              this.field_N = new byte[var27];
+              this.field_G = new byte[var27];
               break L19;
             }
           }
@@ -1117,7 +1120,7 @@ final class vn extends cv {
             var53 = 0;
             L22: while (true) {
               if (var53 >= var10) {
-                ((vn) this).field_t = -1;
+                this.field_t = -1;
                 var2.field_n = var36;
                 var3.field_n = var31;
                 var53 = 0;
@@ -1127,7 +1130,7 @@ final class vn extends cv {
                 var57 = 0;
                 L23: while (true) {
                   if (var57 >= var10) {
-                    ((vn) this).field_t = ((vn) this).field_t + 1;
+                    this.field_t = this.field_t + 1;
                     var2.field_n = var43;
                     var3.field_n = var44;
                     var4.field_n = var45;
@@ -1163,13 +1166,13 @@ final class vn extends cv {
                         return;
                       } else {
                         L27: {
-                          var58 = ((vn) this).field_T[var57] & 255;
+                          var58 = this.field_T[var57] & 255;
                           if (var58 != 0) {
                             break L27;
                           } else {
-                            ((vn) this).field_h[var57] = (short)var2.a((byte) 81);
-                            ((vn) this).field_B[var57] = (short)var2.a((byte) 81);
-                            ((vn) this).field_y[var57] = (short)var2.a((byte) 81);
+                            this.field_h[var57] = (short)var2.a((byte) 81);
+                            this.field_B[var57] = (short)var2.a((byte) 81);
+                            this.field_y[var57] = (short)var2.a((byte) 81);
                             break L27;
                           }
                         }
@@ -1177,15 +1180,15 @@ final class vn extends cv {
                           if (var58 != 1) {
                             break L28;
                           } else {
-                            ((vn) this).field_h[var57] = (short)var3.a((byte) 81);
-                            ((vn) this).field_B[var57] = (short)var3.a((byte) 81);
-                            ((vn) this).field_y[var57] = (short)var3.a((byte) 81);
-                            ((vn) this).field_S[var57] = (short)var4.a((byte) 81);
-                            ((vn) this).field_P[var57] = (short)var4.a((byte) 81);
-                            ((vn) this).field_j[var57] = (short)var4.a((byte) 81);
-                            ((vn) this).field_x[var57] = var5.j((byte) -100);
-                            ((vn) this).field_E[var57] = var6.j((byte) -58);
-                            ((vn) this).field_Q[var57] = var7.j((byte) -48);
+                            this.field_h[var57] = (short)var3.a((byte) 81);
+                            this.field_B[var57] = (short)var3.a((byte) 81);
+                            this.field_y[var57] = (short)var3.a((byte) 81);
+                            this.field_S[var57] = (short)var4.a((byte) 81);
+                            this.field_P[var57] = (short)var4.a((byte) 81);
+                            this.field_j[var57] = (short)var4.a((byte) 81);
+                            this.field_x[var57] = var5.j((byte) -100);
+                            this.field_E[var57] = var6.j((byte) -58);
+                            this.field_Q[var57] = var7.j((byte) -48);
                             break L28;
                           }
                         }
@@ -1193,30 +1196,30 @@ final class vn extends cv {
                           if (var58 != 2) {
                             break L29;
                           } else {
-                            ((vn) this).field_h[var57] = (short)var3.a((byte) 81);
-                            ((vn) this).field_B[var57] = (short)var3.a((byte) 81);
-                            ((vn) this).field_y[var57] = (short)var3.a((byte) 81);
-                            ((vn) this).field_S[var57] = (short)var4.a((byte) 81);
-                            ((vn) this).field_P[var57] = (short)var4.a((byte) 81);
-                            ((vn) this).field_j[var57] = (short)var4.a((byte) 81);
-                            ((vn) this).field_x[var57] = var5.j((byte) -109);
-                            ((vn) this).field_E[var57] = var6.j((byte) -113);
-                            ((vn) this).field_Q[var57] = var7.j((byte) -111);
-                            ((vn) this).field_N[var57] = var7.j((byte) -92);
-                            ((vn) this).field_G[var57] = var7.j((byte) -111);
+                            this.field_h[var57] = (short)var3.a((byte) 81);
+                            this.field_B[var57] = (short)var3.a((byte) 81);
+                            this.field_y[var57] = (short)var3.a((byte) 81);
+                            this.field_S[var57] = (short)var4.a((byte) 81);
+                            this.field_P[var57] = (short)var4.a((byte) 81);
+                            this.field_j[var57] = (short)var4.a((byte) 81);
+                            this.field_x[var57] = var5.j((byte) -109);
+                            this.field_E[var57] = var6.j((byte) -113);
+                            this.field_Q[var57] = var7.j((byte) -111);
+                            this.field_N[var57] = var7.j((byte) -92);
+                            this.field_G[var57] = var7.j((byte) -111);
                             break L29;
                           }
                         }
                         if (var58 == 3) {
-                          ((vn) this).field_h[var57] = (short)var3.a((byte) 81);
-                          ((vn) this).field_B[var57] = (short)var3.a((byte) 81);
-                          ((vn) this).field_y[var57] = (short)var3.a((byte) 81);
-                          ((vn) this).field_S[var57] = (short)var4.a((byte) 81);
-                          ((vn) this).field_P[var57] = (short)var4.a((byte) 81);
-                          ((vn) this).field_j[var57] = (short)var4.a((byte) 81);
-                          ((vn) this).field_x[var57] = var5.j((byte) -102);
-                          ((vn) this).field_E[var57] = var6.j((byte) -102);
-                          ((vn) this).field_Q[var57] = var7.j((byte) -76);
+                          this.field_h[var57] = (short)var3.a((byte) 81);
+                          this.field_B[var57] = (short)var3.a((byte) 81);
+                          this.field_y[var57] = (short)var3.a((byte) 81);
+                          this.field_S[var57] = (short)var4.a((byte) 81);
+                          this.field_P[var57] = (short)var4.a((byte) 81);
+                          this.field_j[var57] = (short)var4.a((byte) 81);
+                          this.field_x[var57] = var5.j((byte) -102);
+                          this.field_E[var57] = var6.j((byte) -102);
+                          this.field_Q[var57] = var7.j((byte) -76);
                           var57++;
                           continue L24;
                         } else {
@@ -1238,28 +1241,28 @@ final class vn extends cv {
                           var56 = var54;
                           var55 = var2.e(-116) + var56;
                           var56 = var55;
-                          ((vn) this).field_r[var57] = var53;
-                          ((vn) this).field_L[var57] = var54;
-                          ((vn) this).field_w[var57] = var55;
-                          if (var53 <= ((vn) this).field_t) {
+                          this.field_r[var57] = var53;
+                          this.field_L[var57] = var54;
+                          this.field_w[var57] = var55;
+                          if (var53 <= this.field_t) {
                             break L31;
                           } else {
-                            ((vn) this).field_t = var53;
+                            this.field_t = var53;
                             break L31;
                           }
                         }
                         L32: {
-                          if (var54 <= ((vn) this).field_t) {
+                          if (var54 <= this.field_t) {
                             break L32;
                           } else {
-                            ((vn) this).field_t = var54;
+                            this.field_t = var54;
                             break L32;
                           }
                         }
-                        if (var55 <= ((vn) this).field_t) {
+                        if (var55 <= this.field_t) {
                           break L30;
                         } else {
-                          ((vn) this).field_t = var55;
+                          this.field_t = var55;
                           break L30;
                         }
                       }
@@ -1271,13 +1274,13 @@ final class vn extends cv {
                         var54 = var55;
                         var55 = var2.e(-127) + var56;
                         var56 = var55;
-                        ((vn) this).field_r[var57] = var53;
-                        ((vn) this).field_L[var57] = var54;
-                        ((vn) this).field_w[var57] = var55;
-                        if (var55 <= ((vn) this).field_t) {
+                        this.field_r[var57] = var53;
+                        this.field_L[var57] = var54;
+                        this.field_w[var57] = var55;
+                        if (var55 <= this.field_t) {
                           break L33;
                         } else {
-                          ((vn) this).field_t = var55;
+                          this.field_t = var55;
                           break L33;
                         }
                       }
@@ -1289,13 +1292,13 @@ final class vn extends cv {
                         var53 = var55;
                         var55 = var2.e(-115) + var56;
                         var56 = var55;
-                        ((vn) this).field_r[var57] = var53;
-                        ((vn) this).field_L[var57] = var54;
-                        ((vn) this).field_w[var57] = var55;
-                        if (var55 <= ((vn) this).field_t) {
+                        this.field_r[var57] = var53;
+                        this.field_L[var57] = var54;
+                        this.field_w[var57] = var55;
+                        if (var55 <= this.field_t) {
                           break L34;
                         } else {
-                          ((vn) this).field_t = var55;
+                          this.field_t = var55;
                           break L34;
                         }
                       }
@@ -1306,11 +1309,11 @@ final class vn extends cv {
                       var54 = var59;
                       var55 = var2.e(-123) + var56;
                       var56 = var55;
-                      ((vn) this).field_r[var57] = var53;
-                      ((vn) this).field_L[var57] = var54;
-                      ((vn) this).field_w[var57] = var55;
-                      if (var55 > ((vn) this).field_t) {
-                        ((vn) this).field_t = var55;
+                      this.field_r[var57] = var53;
+                      this.field_L[var57] = var54;
+                      this.field_w[var57] = var55;
+                      if (var55 > this.field_t) {
+                        this.field_t = var55;
                         var57++;
                         continue L23;
                       } else {
@@ -1325,11 +1328,11 @@ final class vn extends cv {
                 }
               } else {
                 L35: {
-                  ((vn) this).field_p[var53] = (short)var2.a((byte) 81);
+                  this.field_p[var53] = (short)var2.a((byte) 81);
                   if (var13 == 0) {
                     break L35;
                   } else {
-                    ((vn) this).field_o[var53] = var3.j((byte) -125);
+                    this.field_o[var53] = var3.j((byte) -125);
                     break L35;
                   }
                 }
@@ -1337,7 +1340,7 @@ final class vn extends cv {
                   if (var15 != 255) {
                     break L36;
                   } else {
-                    ((vn) this).field_z[var53] = var4.j((byte) -120);
+                    this.field_z[var53] = var4.j((byte) -120);
                     break L36;
                   }
                 }
@@ -1345,7 +1348,7 @@ final class vn extends cv {
                   if (var16 != 1) {
                     break L37;
                   } else {
-                    ((vn) this).field_k[var53] = var5.j((byte) -96);
+                    this.field_k[var53] = var5.j((byte) -96);
                     break L37;
                   }
                 }
@@ -1353,7 +1356,7 @@ final class vn extends cv {
                   if (var17 != 1) {
                     break L38;
                   } else {
-                    ((vn) this).field_O[var53] = var6.h((byte) -125);
+                    this.field_O[var53] = var6.h((byte) -125);
                     break L38;
                   }
                 }
@@ -1361,17 +1364,17 @@ final class vn extends cv {
                   if (var18 != 1) {
                     break L39;
                   } else {
-                    ((vn) this).field_u[var53] = (short)(var7.a((byte) 81) - 1);
+                    this.field_u[var53] = (short)(var7.a((byte) 81) - 1);
                     break L39;
                   }
                 }
-                if (((vn) this).field_I != null) {
-                  if (((vn) this).field_u[var53] == -1) {
-                    ((vn) this).field_I[var53] = (byte) -1;
+                if (this.field_I != null) {
+                  if (this.field_u[var53] == -1) {
+                    this.field_I[var53] = (byte)-1;
                     var53++;
                     continue L22;
                   } else {
-                    ((vn) this).field_I[var53] = (byte)(var8.h((byte) -108) - 1);
+                    this.field_I[var53] = (byte)(var8.h((byte) -108) - 1);
                     var53++;
                     continue L22;
                   }
@@ -1410,14 +1413,14 @@ final class vn extends cv {
                 break L42;
               }
             }
-            ((vn) this).field_H[var53] = var50 + var55;
-            ((vn) this).field_l[var53] = var51 + var56;
-            ((vn) this).field_A[var53] = var52 + var57;
-            var50 = ((vn) this).field_H[var53];
-            var51 = ((vn) this).field_l[var53];
-            var52 = ((vn) this).field_A[var53];
+            this.field_H[var53] = var50 + var55;
+            this.field_l[var53] = var51 + var56;
+            this.field_A[var53] = var52 + var57;
+            var50 = this.field_H[var53];
+            var51 = this.field_l[var53];
+            var52 = this.field_A[var53];
             if (var19 == 1) {
-              ((vn) this).field_C[var53] = var6.h((byte) -112);
+              this.field_C[var53] = var6.h((byte) -112);
               var53++;
               continue L21;
             } else {
@@ -1429,52 +1432,49 @@ final class vn extends cv {
     }
 
     final void a() {
+        int[] array$2 = null;
+        int[] array$3 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
         L0: {
-          if (((vn) this).field_C == null) {
+          if (this.field_C == null) {
             break L0;
           } else {
-            var9 = new int[256];
-            var7 = var9;
-            var5 = var7;
+            var5 = new int[256];
             var2 = 0;
             var3 = 0;
             L1: while (true) {
-              if (var3 >= ((vn) this).field_m) {
-                ((vn) this).field_s = new int[var2 + 1][];
+              if (var3 >= this.field_m) {
+                this.field_s = new int[var2 + 1][];
                 var3 = 0;
                 L2: while (true) {
                   if (var3 > var2) {
                     var3 = 0;
                     L3: while (true) {
-                      if (var3 >= ((vn) this).field_m) {
-                        ((vn) this).field_C = null;
+                      if (var3 >= this.field_m) {
+                        this.field_C = null;
                         break L0;
                       } else {
-                        var4 = ((vn) this).field_C[var3];
+                        var4 = this.field_C[var3];
                         var5[var4] = var5[var4] + 1;
-                        ((vn) this).field_s[var4][var5[var4]] = var3;
+                        this.field_s[var4][var5[var4]] = var3;
                         var3++;
                         continue L3;
                       }
                     }
                   } else {
-                    ((vn) this).field_s[var3] = new int[var9[var3]];
-                    var9[var3] = 0;
+                    array$2 = new int[var5[var3]];
+                    this.field_s[var3] = array$2;
+                    var5[var3] = 0;
                     var3++;
                     continue L2;
                   }
                 }
               } else {
-                var4 = ((vn) this).field_C[var3];
+                var4 = this.field_C[var3];
                 var5[var4] = var5[var4] + 1;
                 if (var4 > var2) {
                   var2 = var4;
@@ -1489,42 +1489,41 @@ final class vn extends cv {
           }
         }
         L4: {
-          if (((vn) this).field_O == null) {
+          if (this.field_O == null) {
             break L4;
           } else {
-            var10 = new int[256];
-            var8 = var10;
-            var6 = var8;
+            var6 = new int[256];
             var2 = 0;
             var3 = 0;
             L5: while (true) {
-              if (var3 >= ((vn) this).field_D) {
-                ((vn) this).field_v = new int[var2 + 1][];
+              if (var3 >= this.field_D) {
+                this.field_v = new int[var2 + 1][];
                 var3 = 0;
                 L6: while (true) {
                   if (var3 > var2) {
                     var3 = 0;
                     L7: while (true) {
-                      if (var3 >= ((vn) this).field_D) {
-                        ((vn) this).field_O = null;
+                      if (var3 >= this.field_D) {
+                        this.field_O = null;
                         break L4;
                       } else {
-                        var4 = ((vn) this).field_O[var3];
+                        var4 = this.field_O[var3];
                         var6[var4] = var6[var4] + 1;
-                        ((vn) this).field_v[var4][var6[var4]] = var3;
+                        this.field_v[var4][var6[var4]] = var3;
                         var3++;
                         continue L7;
                       }
                     }
                   } else {
-                    ((vn) this).field_v[var3] = new int[var10[var3]];
-                    var10[var3] = 0;
+                    array$3 = new int[var6[var3]];
+                    this.field_v[var3] = array$3;
+                    var6[var3] = 0;
                     var3++;
                     continue L6;
                   }
                 }
               } else {
-                var4 = ((vn) this).field_O[var3];
+                var4 = this.field_O[var3];
                 var6[var4] = var6[var4] + 1;
                 if (var4 > var2) {
                   var2 = var4;
@@ -1541,16 +1540,16 @@ final class vn extends cv {
     }
 
     final qc a(int param0, int param1, int param2, int param3, int param4) {
-        return (qc) (Object) new eg((vn) this, param0, param1, param2, param3, param4);
+        return (qc) ((Object) new eg((vn) (this), param0, param1, param2, param3, param4));
     }
 
     private vn(byte[] param0) {
         L0: {
           L1: {
-            ((vn) this).field_D = 0;
-            ((vn) this).field_m = 0;
-            ((vn) this).field_t = 0;
-            ((vn) this).field_F = (byte) 0;
+            this.field_D = 0;
+            this.field_m = 0;
+            this.field_t = 0;
+            this.field_F = (byte) 0;
             if (param0[param0.length - 1] != -1) {
               break L1;
             } else {
@@ -1568,6 +1567,7 @@ final class vn extends cv {
     }
 
     vn(vn[] param0, int param1) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1650,36 +1650,36 @@ final class vn extends cv {
         int stackOut_24_1 = 0;
         int stackOut_23_0 = 0;
         int stackOut_23_1 = 0;
-        ((vn) this).field_D = 0;
-        ((vn) this).field_m = 0;
-        ((vn) this).field_t = 0;
-        ((vn) this).field_F = (byte) 0;
+        this.field_D = 0;
+        this.field_m = 0;
+        this.field_t = 0;
+        this.field_F = (byte) 0;
         var3 = 0;
         var4 = 0;
         var5 = 0;
         var6 = 0;
         var7 = 0;
         var8 = 0;
-        ((vn) this).field_m = 0;
-        ((vn) this).field_D = 0;
-        ((vn) this).field_R = 0;
-        ((vn) this).field_F = (byte) -1;
+        this.field_m = 0;
+        this.field_D = 0;
+        this.field_R = 0;
+        this.field_F = (byte) -1;
         var9 = 0;
         L0: while (true) {
           if (var9 >= param1) {
             L1: {
-              ((vn) this).field_H = new int[((vn) this).field_m];
-              ((vn) this).field_l = new int[((vn) this).field_m];
-              ((vn) this).field_A = new int[((vn) this).field_m];
-              ((vn) this).field_C = new int[((vn) this).field_m];
-              ((vn) this).field_n = new short[((vn) this).field_m];
-              ((vn) this).field_r = new int[((vn) this).field_D];
-              ((vn) this).field_L = new int[((vn) this).field_D];
-              ((vn) this).field_w = new int[((vn) this).field_D];
+              this.field_H = new int[this.field_m];
+              this.field_l = new int[this.field_m];
+              this.field_A = new int[this.field_m];
+              this.field_C = new int[this.field_m];
+              this.field_n = new short[this.field_m];
+              this.field_r = new int[this.field_D];
+              this.field_L = new int[this.field_D];
+              this.field_w = new int[this.field_D];
               if (var3 == 0) {
                 break L1;
               } else {
-                ((vn) this).field_o = new byte[((vn) this).field_D];
+                this.field_o = new byte[this.field_D];
                 break L1;
               }
             }
@@ -1687,7 +1687,7 @@ final class vn extends cv {
               if (var4 == 0) {
                 break L2;
               } else {
-                ((vn) this).field_z = new byte[((vn) this).field_D];
+                this.field_z = new byte[this.field_D];
                 break L2;
               }
             }
@@ -1695,7 +1695,7 @@ final class vn extends cv {
               if (var5 == 0) {
                 break L3;
               } else {
-                ((vn) this).field_k = new byte[((vn) this).field_D];
+                this.field_k = new byte[this.field_D];
                 break L3;
               }
             }
@@ -1703,7 +1703,7 @@ final class vn extends cv {
               if (var6 == 0) {
                 break L4;
               } else {
-                ((vn) this).field_O = new int[((vn) this).field_D];
+                this.field_O = new int[this.field_D];
                 break L4;
               }
             }
@@ -1711,7 +1711,7 @@ final class vn extends cv {
               if (var7 == 0) {
                 break L5;
               } else {
-                ((vn) this).field_u = new short[((vn) this).field_D];
+                this.field_u = new short[this.field_D];
                 break L5;
               }
             }
@@ -1719,39 +1719,39 @@ final class vn extends cv {
               if (var8 == 0) {
                 break L6;
               } else {
-                ((vn) this).field_I = new byte[((vn) this).field_D];
+                this.field_I = new byte[this.field_D];
                 break L6;
               }
             }
             L7: {
-              ((vn) this).field_p = new short[((vn) this).field_D];
-              ((vn) this).field_K = new short[((vn) this).field_D];
-              if (((vn) this).field_R <= 0) {
+              this.field_p = new short[this.field_D];
+              this.field_K = new short[this.field_D];
+              if (this.field_R <= 0) {
                 break L7;
               } else {
-                ((vn) this).field_T = new byte[((vn) this).field_R];
-                ((vn) this).field_h = new short[((vn) this).field_R];
-                ((vn) this).field_B = new short[((vn) this).field_R];
-                ((vn) this).field_y = new short[((vn) this).field_R];
-                ((vn) this).field_S = new short[((vn) this).field_R];
-                ((vn) this).field_P = new short[((vn) this).field_R];
-                ((vn) this).field_j = new short[((vn) this).field_R];
-                ((vn) this).field_x = new byte[((vn) this).field_R];
-                ((vn) this).field_E = new byte[((vn) this).field_R];
-                ((vn) this).field_Q = new byte[((vn) this).field_R];
-                ((vn) this).field_N = new byte[((vn) this).field_R];
-                ((vn) this).field_G = new byte[((vn) this).field_R];
+                this.field_T = new byte[this.field_R];
+                this.field_h = new short[this.field_R];
+                this.field_B = new short[this.field_R];
+                this.field_y = new short[this.field_R];
+                this.field_S = new short[this.field_R];
+                this.field_P = new short[this.field_R];
+                this.field_j = new short[this.field_R];
+                this.field_x = new byte[this.field_R];
+                this.field_E = new byte[this.field_R];
+                this.field_Q = new byte[this.field_R];
+                this.field_N = new byte[this.field_R];
+                this.field_G = new byte[this.field_R];
                 break L7;
               }
             }
-            ((vn) this).field_m = 0;
-            ((vn) this).field_D = 0;
-            ((vn) this).field_R = 0;
+            this.field_m = 0;
+            this.field_D = 0;
+            this.field_R = 0;
             var9 = 0;
             L8: while (true) {
               if (var9 >= param1) {
                 var9 = 0;
-                ((vn) this).field_t = ((vn) this).field_m;
+                this.field_t = this.field_m;
                 var10 = 0;
                 L9: while (true) {
                   if (var10 >= param1) {
@@ -1770,14 +1770,14 @@ final class vn extends cv {
                           L11: while (true) {
                             if (var17 < var19.field_R) {
                               L12: {
-                                ((vn) this).field_T[((vn) this).field_R] = var16.field_T[var17];
+                                this.field_T[this.field_R] = var16.field_T[var17];
                                 var14 = var16.field_T[var17];
                                 if (var14 != 0) {
                                   break L12;
                                 } else {
-                                  ((vn) this).field_h[((vn) this).field_R] = (short)this.a(var16, (int) var16.field_h[var17], (short) var12);
-                                  ((vn) this).field_B[((vn) this).field_R] = (short)this.a(var16, (int) var16.field_B[var17], (short) var12);
-                                  ((vn) this).field_y[((vn) this).field_R] = (short)this.a(var16, (int) var16.field_y[var17], (short) var12);
+                                  this.field_h[this.field_R] = (short)this.a(var16, (int) var16.field_h[var17], (short) var12);
+                                  this.field_B[this.field_R] = (short)this.a(var16, (int) var16.field_B[var17], (short) var12);
+                                  this.field_y[this.field_R] = (short)this.a(var16, (int) var16.field_y[var17], (short) var12);
                                   break L12;
                                 }
                               }
@@ -1788,15 +1788,15 @@ final class vn extends cv {
                                   if (var14 > 3) {
                                     break L13;
                                   } else {
-                                    ((vn) this).field_h[((vn) this).field_R] = var16.field_h[var17];
-                                    ((vn) this).field_B[((vn) this).field_R] = var16.field_B[var17];
-                                    ((vn) this).field_y[((vn) this).field_R] = var16.field_y[var17];
-                                    ((vn) this).field_S[((vn) this).field_R] = var16.field_S[var17];
-                                    ((vn) this).field_P[((vn) this).field_R] = var16.field_P[var17];
-                                    ((vn) this).field_j[((vn) this).field_R] = var16.field_j[var17];
-                                    ((vn) this).field_x[((vn) this).field_R] = var16.field_x[var17];
-                                    ((vn) this).field_E[((vn) this).field_R] = var16.field_E[var17];
-                                    ((vn) this).field_Q[((vn) this).field_R] = var16.field_Q[var17];
+                                    this.field_h[this.field_R] = var16.field_h[var17];
+                                    this.field_B[this.field_R] = var16.field_B[var17];
+                                    this.field_y[this.field_R] = var16.field_y[var17];
+                                    this.field_S[this.field_R] = var16.field_S[var17];
+                                    this.field_P[this.field_R] = var16.field_P[var17];
+                                    this.field_j[this.field_R] = var16.field_j[var17];
+                                    this.field_x[this.field_R] = var16.field_x[var17];
+                                    this.field_E[this.field_R] = var16.field_E[var17];
+                                    this.field_Q[this.field_R] = var16.field_Q[var17];
                                     break L13;
                                   }
                                 }
@@ -1805,12 +1805,12 @@ final class vn extends cv {
                                 if (var14 != 2) {
                                   break L14;
                                 } else {
-                                  ((vn) this).field_N[((vn) this).field_R] = var16.field_N[var17];
-                                  ((vn) this).field_G[((vn) this).field_R] = var16.field_G[var17];
+                                  this.field_N[this.field_R] = var16.field_N[var17];
+                                  this.field_G[this.field_R] = var16.field_G[var17];
                                   break L14;
                                 }
                               }
-                              ((vn) this).field_R = ((vn) this).field_R + 1;
+                              this.field_R = this.field_R + 1;
                               var17++;
                               continue L11;
                             } else {
@@ -1822,9 +1822,9 @@ final class vn extends cv {
                           if (var8 != 0) {
                             L15: {
                               L16: {
-                                int incrementValue$1 = var9;
+                                incrementValue$1 = var9;
                                 var9++;
-                                stackOut_74_0 = ((vn) this).field_I;
+                                stackOut_74_0 = this.field_I;
                                 stackOut_74_1 = incrementValue$1;
                                 stackIn_77_0 = stackOut_74_0;
                                 stackIn_77_1 = stackOut_74_1;
@@ -1833,7 +1833,7 @@ final class vn extends cv {
                                 if (var19.field_I == null) {
                                   break L16;
                                 } else {
-                                  stackOut_75_0 = (byte[]) (Object) stackIn_75_0;
+                                  stackOut_75_0 = (byte[]) ((Object) stackIn_75_0);
                                   stackOut_75_1 = stackIn_75_1;
                                   stackIn_77_0 = stackOut_75_0;
                                   stackIn_77_1 = stackOut_75_1;
@@ -1842,9 +1842,9 @@ final class vn extends cv {
                                   if (var16.field_I[var13] == -1) {
                                     break L16;
                                   } else {
-                                    stackOut_76_0 = (byte[]) (Object) stackIn_76_0;
+                                    stackOut_76_0 = (byte[]) ((Object) stackIn_76_0);
                                     stackOut_76_1 = stackIn_76_1;
-                                    stackOut_76_2 = var16.field_I[var13] + ((vn) this).field_R;
+                                    stackOut_76_2 = var16.field_I[var13] + this.field_R;
                                     stackIn_78_0 = stackOut_76_0;
                                     stackIn_78_1 = stackOut_76_1;
                                     stackIn_78_2 = stackOut_76_2;
@@ -1852,7 +1852,7 @@ final class vn extends cv {
                                   }
                                 }
                               }
-                              stackOut_77_0 = (byte[]) (Object) stackIn_77_0;
+                              stackOut_77_0 = (byte[]) ((Object) stackIn_77_0);
                               stackOut_77_1 = stackIn_77_1;
                               stackOut_77_2 = -1;
                               stackIn_78_0 = stackOut_77_0;
@@ -1891,7 +1891,7 @@ final class vn extends cv {
                           if (var18.field_o == null) {
                             break L18;
                           } else {
-                            ((vn) this).field_o[((vn) this).field_D] = var15.field_o[var12];
+                            this.field_o[this.field_D] = var15.field_o[var12];
                             break L18;
                           }
                         }
@@ -1901,10 +1901,10 @@ final class vn extends cv {
                           break L19;
                         } else {
                           if (var18.field_z == null) {
-                            ((vn) this).field_z[((vn) this).field_D] = var15.field_F;
+                            this.field_z[this.field_D] = var15.field_F;
                             break L19;
                           } else {
-                            ((vn) this).field_z[((vn) this).field_D] = var15.field_z[var12];
+                            this.field_z[this.field_D] = var15.field_z[var12];
                             break L19;
                           }
                         }
@@ -1916,7 +1916,7 @@ final class vn extends cv {
                           if (var18.field_k == null) {
                             break L20;
                           } else {
-                            ((vn) this).field_k[((vn) this).field_D] = var15.field_k[var12];
+                            this.field_k[this.field_D] = var15.field_k[var12];
                             break L20;
                           }
                         }
@@ -1928,7 +1928,7 @@ final class vn extends cv {
                           if (var18.field_O == null) {
                             break L21;
                           } else {
-                            ((vn) this).field_O[((vn) this).field_D] = var15.field_O[var12];
+                            this.field_O[this.field_D] = var15.field_O[var12];
                             break L21;
                           }
                         }
@@ -1938,20 +1938,20 @@ final class vn extends cv {
                           break L22;
                         } else {
                           if (var18.field_u == null) {
-                            ((vn) this).field_u[((vn) this).field_D] = (short) -1;
+                            this.field_u[this.field_D] = (short)-1;
                             break L22;
                           } else {
-                            ((vn) this).field_u[((vn) this).field_D] = var15.field_u[var12];
+                            this.field_u[this.field_D] = var15.field_u[var12];
                             break L22;
                           }
                         }
                       }
-                      ((vn) this).field_p[((vn) this).field_D] = var15.field_p[var12];
-                      ((vn) this).field_K[((vn) this).field_D] = (short)var10;
-                      ((vn) this).field_r[((vn) this).field_D] = this.a(var15, var15.field_r[var12], (short) var10);
-                      ((vn) this).field_L[((vn) this).field_D] = this.a(var15, var15.field_L[var12], (short) var10);
-                      ((vn) this).field_w[((vn) this).field_D] = this.a(var15, var15.field_w[var12], (short) var10);
-                      ((vn) this).field_D = ((vn) this).field_D + 1;
+                      this.field_p[this.field_D] = var15.field_p[var12];
+                      this.field_K[this.field_D] = (short)var10;
+                      this.field_r[this.field_D] = this.a(var15, var15.field_r[var12], (short) var10);
+                      this.field_L[this.field_D] = this.a(var15, var15.field_L[var12], (short) var10);
+                      this.field_w[this.field_D] = this.a(var15, var15.field_w[var12], (short) var10);
+                      this.field_D = this.field_D + 1;
                       var12++;
                       continue L17;
                     } else {
@@ -1969,19 +1969,19 @@ final class vn extends cv {
             var10_ref_vn = param0[var9];
             if (var10_ref_vn != null) {
               L23: {
-                ((vn) this).field_m = ((vn) this).field_m + var10_ref_vn.field_m;
-                ((vn) this).field_D = ((vn) this).field_D + var10_ref_vn.field_D;
-                ((vn) this).field_R = ((vn) this).field_R + var10_ref_vn.field_R;
+                this.field_m = this.field_m + var10_ref_vn.field_m;
+                this.field_D = this.field_D + var10_ref_vn.field_D;
+                this.field_R = this.field_R + var10_ref_vn.field_R;
                 if (var10_ref_vn.field_z == null) {
                   L24: {
-                    if (((vn) this).field_F != -1) {
+                    if (this.field_F != -1) {
                       break L24;
                     } else {
-                      ((vn) this).field_F = var10_ref_vn.field_F;
+                      this.field_F = var10_ref_vn.field_F;
                       break L24;
                     }
                   }
-                  if (((vn) this).field_F == var10_ref_vn.field_F) {
+                  if (this.field_F == var10_ref_vn.field_F) {
                     break L23;
                   } else {
                     var4 = 1;
@@ -2100,52 +2100,52 @@ final class vn extends cv {
     vn(vn param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         int var6 = 0;
         L0: {
-          ((vn) this).field_D = 0;
-          ((vn) this).field_m = 0;
-          ((vn) this).field_t = 0;
-          ((vn) this).field_F = (byte) 0;
-          ((vn) this).field_m = param0.field_m;
-          ((vn) this).field_t = param0.field_t;
-          ((vn) this).field_D = param0.field_D;
-          ((vn) this).field_R = param0.field_R;
+          this.field_D = 0;
+          this.field_m = 0;
+          this.field_t = 0;
+          this.field_F = (byte) 0;
+          this.field_m = param0.field_m;
+          this.field_t = param0.field_t;
+          this.field_D = param0.field_D;
+          this.field_R = param0.field_R;
           if (!param1) {
-            ((vn) this).field_H = new int[((vn) this).field_m];
-            ((vn) this).field_l = new int[((vn) this).field_m];
-            ((vn) this).field_A = new int[((vn) this).field_m];
+            this.field_H = new int[this.field_m];
+            this.field_l = new int[this.field_m];
+            this.field_A = new int[this.field_m];
             var6 = 0;
             L1: while (true) {
-              if (var6 >= ((vn) this).field_m) {
+              if (var6 >= this.field_m) {
                 break L0;
               } else {
-                ((vn) this).field_H[var6] = param0.field_H[var6];
-                ((vn) this).field_l[var6] = param0.field_l[var6];
-                ((vn) this).field_A[var6] = param0.field_A[var6];
+                this.field_H[var6] = param0.field_H[var6];
+                this.field_l[var6] = param0.field_l[var6];
+                this.field_A[var6] = param0.field_A[var6];
                 var6++;
                 continue L1;
               }
             }
           } else {
-            ((vn) this).field_H = param0.field_H;
-            ((vn) this).field_l = param0.field_l;
-            ((vn) this).field_A = param0.field_A;
+            this.field_H = param0.field_H;
+            this.field_l = param0.field_l;
+            this.field_A = param0.field_A;
             break L0;
           }
         }
         L2: {
           if (!param2) {
-            ((vn) this).field_p = new short[((vn) this).field_D];
+            this.field_p = new short[this.field_D];
             var6 = 0;
             L3: while (true) {
-              if (var6 >= ((vn) this).field_D) {
+              if (var6 >= this.field_D) {
                 break L2;
               } else {
-                ((vn) this).field_p[var6] = param0.field_p[var6];
+                this.field_p[var6] = param0.field_p[var6];
                 var6++;
                 continue L3;
               }
             }
           } else {
-            ((vn) this).field_p = param0.field_p;
+            this.field_p = param0.field_p;
             break L2;
           }
         }
@@ -2155,13 +2155,13 @@ final class vn extends cv {
               break L5;
             } else {
               if (param0.field_u != null) {
-                ((vn) this).field_u = new short[((vn) this).field_D];
+                this.field_u = new short[this.field_D];
                 var6 = 0;
                 L6: while (true) {
-                  if (var6 >= ((vn) this).field_D) {
+                  if (var6 >= this.field_D) {
                     break L4;
                   } else {
-                    ((vn) this).field_u[var6] = param0.field_u[var6];
+                    this.field_u[var6] = param0.field_u[var6];
                     var6++;
                     continue L6;
                   }
@@ -2171,19 +2171,19 @@ final class vn extends cv {
               }
             }
           }
-          ((vn) this).field_u = param0.field_u;
+          this.field_u = param0.field_u;
           break L4;
         }
         L7: {
           if (!param4) {
-            ((vn) this).field_k = new byte[((vn) this).field_D];
+            this.field_k = new byte[this.field_D];
             if (param0.field_k != null) {
               var6 = 0;
               L8: while (true) {
-                if (var6 >= ((vn) this).field_D) {
+                if (var6 >= this.field_D) {
                   break L7;
                 } else {
-                  ((vn) this).field_k[var6] = param0.field_k[var6];
+                  this.field_k[var6] = param0.field_k[var6];
                   var6++;
                   continue L8;
                 }
@@ -2191,45 +2191,45 @@ final class vn extends cv {
             } else {
               var6 = 0;
               L9: while (true) {
-                if (var6 >= ((vn) this).field_D) {
+                if (var6 >= this.field_D) {
                   break L7;
                 } else {
-                  ((vn) this).field_k[var6] = (byte) 0;
+                  this.field_k[var6] = (byte) 0;
                   var6++;
                   continue L9;
                 }
               }
             }
           } else {
-            ((vn) this).field_k = param0.field_k;
+            this.field_k = param0.field_k;
             break L7;
           }
         }
-        ((vn) this).field_r = param0.field_r;
-        ((vn) this).field_L = param0.field_L;
-        ((vn) this).field_w = param0.field_w;
-        ((vn) this).field_o = param0.field_o;
-        ((vn) this).field_z = param0.field_z;
-        ((vn) this).field_I = param0.field_I;
-        ((vn) this).field_F = param0.field_F;
-        ((vn) this).field_T = param0.field_T;
-        ((vn) this).field_h = param0.field_h;
-        ((vn) this).field_B = param0.field_B;
-        ((vn) this).field_y = param0.field_y;
-        ((vn) this).field_S = param0.field_S;
-        ((vn) this).field_P = param0.field_P;
-        ((vn) this).field_j = param0.field_j;
-        ((vn) this).field_x = param0.field_x;
-        ((vn) this).field_E = param0.field_E;
-        ((vn) this).field_Q = param0.field_Q;
-        ((vn) this).field_N = param0.field_N;
-        ((vn) this).field_G = param0.field_G;
-        ((vn) this).field_C = param0.field_C;
-        ((vn) this).field_O = param0.field_O;
-        ((vn) this).field_s = param0.field_s;
-        ((vn) this).field_v = param0.field_v;
-        ((vn) this).field_i = param0.field_i;
-        ((vn) this).field_J = param0.field_J;
-        ((vn) this).field_q = param0.field_q;
+        this.field_r = param0.field_r;
+        this.field_L = param0.field_L;
+        this.field_w = param0.field_w;
+        this.field_o = param0.field_o;
+        this.field_z = param0.field_z;
+        this.field_I = param0.field_I;
+        this.field_F = param0.field_F;
+        this.field_T = param0.field_T;
+        this.field_h = param0.field_h;
+        this.field_B = param0.field_B;
+        this.field_y = param0.field_y;
+        this.field_S = param0.field_S;
+        this.field_P = param0.field_P;
+        this.field_j = param0.field_j;
+        this.field_x = param0.field_x;
+        this.field_E = param0.field_E;
+        this.field_Q = param0.field_Q;
+        this.field_N = param0.field_N;
+        this.field_G = param0.field_G;
+        this.field_C = param0.field_C;
+        this.field_O = param0.field_O;
+        this.field_s = param0.field_s;
+        this.field_v = param0.field_v;
+        this.field_i = param0.field_i;
+        this.field_J = param0.field_J;
+        this.field_q = param0.field_q;
     }
 }

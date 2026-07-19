@@ -16,12 +16,19 @@ final class gfa {
     static String field_b;
 
     final static void a(boolean param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, int param8, boolean param9, int param10, int param11) {
-        oa.a(16777215, param7, 11, 15, param0, param5, 14, param4, 0, 16777215, param6, 13, false, true);
+        if (param10 < 107) {
+          field_b = (String) null;
+          oa.a(16777215, param7, param11, param3, param0, param5, param1, param4, param8, 16777215, param6, param2, false, param9);
+          return;
+        } else {
+          oa.a(16777215, param7, param11, param3, param0, param5, param1, param4, param8, 16777215, param6, param2, false, param9);
+          return;
+        }
     }
 
     gfa(int param0, int param1) {
-        ((gfa) this).field_h = param0;
-        ((gfa) this).field_l = param1;
+        this.field_h = param0;
+        this.field_l = param1;
     }
 
     public static void a(int param0) {
@@ -30,13 +37,12 @@ final class gfa {
         field_k = null;
         field_g = null;
         field_b = null;
+        if (param0 != 17733) {
+            gfa.a(false, -37, 15, -89, true, 19, true, true, 68, false, -72, 72);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 0;
         field_k = "Players: ";
         field_a = new wca[50];

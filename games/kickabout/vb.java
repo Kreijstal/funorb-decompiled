@@ -44,14 +44,14 @@ final class vb {
           L0: {
             var2_int = param1.length();
             var3 = 0L;
-            var5 = 0;
+            var5 = param0;
             L1: while (true) {
               if (var2_int <= var5) {
                 stackOut_4_0 = var3;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                var3 = -var3 + ((var3 << 5) + (long)param1.charAt(var5));
+                var3 = -var3 + ((var3 << 1347056389) + (long)param1.charAt(var5));
                 var5++;
                 continue L1;
               }
@@ -61,23 +61,23 @@ final class vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("vb.D(").append(0).append(',');
+            stackOut_6_0 = (RuntimeException) (var2);
+            stackOut_6_1 = new StringBuilder().append("vb.D(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -85,7 +85,7 @@ final class vb {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
         return stackIn_5_0;
     }
@@ -95,8 +95,11 @@ final class vb {
         field_i = null;
         field_l = null;
         field_e = null;
-        field_g = null;
+        field_g = (byte[][]) null;
         field_a = null;
+        if (param0 != 0) {
+            field_c = 0.39487605170744977;
+        }
     }
 
     final static boolean b(int param0) {
@@ -107,6 +110,7 @@ final class vb {
     }
 
     final static void a(boolean param0) {
+        boolean discarded$1 = false;
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -122,7 +126,7 @@ final class vb {
         try {
           L0: {
             L1: {
-              if (rm.field_C == 0) {
+              if (-1 == (rm.field_C ^ -1)) {
                 bv.field_l = null;
                 break L1;
               } else {
@@ -130,9 +134,9 @@ final class vb {
                   bv.field_l = null;
                   break L1;
                 } else {
-                  if (rm.field_C != 1) {
-                    if (rm.field_C != 2) {
-                      if (rm.field_C != 3) {
+                  if (-2 != (rm.field_C ^ -1)) {
+                    if (-3 != (rm.field_C ^ -1)) {
+                      if ((rm.field_C ^ -1) != -4) {
                         break L1;
                       } else {
                         bv.field_l = null;
@@ -143,39 +147,38 @@ final class vb {
                       var1_int = 0;
                       var2 = 0;
                       L2: while (true) {
-                        if (var2 >= 17) {
+                        if (-18 >= (var2 ^ -1)) {
                           var1_int = 0;
                           var2 = 17;
                           L3: while (true) {
-                            if (var2 >= 34) {
+                            if ((var2 ^ -1) <= -35) {
                               break L1;
                             } else {
-                              L4: {
-                                if (p.a((byte) -24, 3) == 0) {
-                                  break L4;
-                                } else {
-                                  var3 = 1424;
-                                  var4 = p.a((byte) -24, 5);
-                                  var5 = p.a((byte) -24, 100);
-                                  bv.field_l[var2] = new rk(var1_int - -var4, var3 - -var5, 4);
-                                  break L4;
-                                }
+                              if (p.a((byte) -24, 3) != 0) {
+                                var3 = 1424;
+                                var4 = p.a((byte) -24, 5);
+                                var5 = p.a((byte) -24, 100);
+                                bv.field_l[var2] = new rk(var1_int - -var4, var3 - -var5, 4);
+                                var1_int += 54;
+                                var2++;
+                                continue L3;
+                              } else {
+                                var1_int += 54;
+                                var2++;
+                                continue L3;
                               }
-                              var1_int += 54;
-                              var2++;
-                              continue L3;
                             }
                           }
                         } else {
-                          L5: {
+                          L4: {
                             if (p.a((byte) -24, 3) != 0) {
                               var3 = -170;
                               var4 = p.a((byte) -24, 5);
                               var5 = p.a((byte) -24, 100);
                               bv.field_l[var2] = new rk(var4 + var1_int, var5 + var3, 0);
-                              break L5;
+                              break L4;
                             } else {
-                              break L5;
+                              break L4;
                             }
                           }
                           var1_int += 54;
@@ -187,22 +190,22 @@ final class vb {
                   } else {
                     bv.field_l = new rk[30];
                     var1_int = 0;
-                    L6: while (true) {
-                      if (~var1_int <= ~bv.field_l.length) {
+                    L5: while (true) {
+                      if (var1_int >= bv.field_l.length) {
                         break L1;
                       } else {
-                        L7: {
+                        L6: {
                           if (ih.field_c != 2) {
                             stackOut_8_0 = -60;
                             stackIn_9_0 = stackOut_8_0;
-                            break L7;
+                            break L6;
                           } else {
                             stackOut_7_0 = -120;
                             stackIn_9_0 = stackOut_7_0;
-                            break L7;
+                            break L6;
                           }
                         }
-                        L8: {
+                        L7: {
                           var2 = stackIn_9_0;
                           var2 = el.a(29430, 15, var2);
                           var3 = 20 + var1_int * 45;
@@ -210,18 +213,26 @@ final class vb {
                           if (0 == p.a((byte) -24, 2)) {
                             var4 = 2;
                             var2 = 896 + -var2;
-                            break L8;
+                            break L7;
                           } else {
-                            break L8;
+                            break L7;
                           }
                         }
                         bv.field_l[var1_int] = new rk(var2, var3, var4);
                         var1_int++;
-                        continue L6;
+                        continue L5;
                       }
                     }
                   }
                 }
+              }
+            }
+            L8: {
+              if (param0) {
+                break L8;
+              } else {
+                discarded$1 = vb.b(-46);
+                break L8;
               }
             }
             break L0;
@@ -229,15 +240,11 @@ final class vb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "vb.B(" + true + ')');
+          throw nb.a((Throwable) ((Object) var1), "vb.B(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Go Back";
         field_b = 0;
         field_i = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";

@@ -21,6 +21,7 @@ final class es extends oh {
             int var3 = 0;
             int stackIn_10_0 = 0;
             int stackIn_12_0 = 0;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             int stackOut_11_0 = 0;
             int stackOut_9_0 = 0;
@@ -30,7 +31,7 @@ final class es extends oh {
                   L0: {
                     var3 = 52 % ((param0 - 38) / 63);
                     var2_int = wg.field_f.a(-1);
-                    if (var2_int > 0) {
+                    if ((var2_int ^ -1) < -1) {
                       L1: {
                         if (var2_int <= param1 + -sa.field_a.field_j) {
                           break L1;
@@ -46,18 +47,21 @@ final class es extends oh {
                         sa.field_a.field_j = 0;
                         stackOut_11_0 = 1;
                         stackIn_12_0 = stackOut_11_0;
-                        return stackIn_12_0 != 0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       } else {
                         stackOut_9_0 = 0;
                         stackIn_10_0 = stackOut_9_0;
-                        return stackIn_10_0 != 0;
+                        decompiledRegionSelector0 = 0;
+                        break L0;
                       }
                     } else {
-                      if (var2_int < 0) {
+                      if (-1 < (var2_int ^ -1)) {
                         q.g(-114);
                         return false;
                       } else {
-                        if (wh.a(18) <= 30000L) {
+                        if ((wh.a(18) ^ -1L) >= -30001L) {
+                          decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
                           q.g(-114);
@@ -72,7 +76,15 @@ final class es extends oh {
                   q.g(-117);
                   return false;
                 }
-                return false;
+                if (decompiledRegionSelector0 == 0) {
+                  return stackIn_10_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 1) {
+                    return stackIn_12_0 != 0;
+                  } else {
+                    return false;
+                  }
+                }
               } else {
                 return false;
               }
@@ -108,7 +120,7 @@ final class es extends oh {
         L0: {
           var14 = ShatteredPlansClient.field_F ? 1 : 0;
           if (param0 instanceof rg) {
-            var15 = (rg) (Object) param0;
+            var15 = (rg) ((Object) param0);
             param0 = var15.field_e;
             var2 = var15.field_b + " | ";
             var12 = var2;
@@ -121,15 +133,15 @@ final class es extends oh {
           }
         }
         var16 = new StringWriter();
-        var4 = new PrintWriter((Writer) (Object) var16);
+        var4 = new PrintWriter((Writer) ((Object) var16));
         param0.printStackTrace(var4);
         var4.close();
         var5 = var16.toString();
         var12 = var5;
         var2 = var12;
         var12 = var5;
-        var8 = 0;
-        var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
+        var8 = 30 % ((-57 - param1) / 33);
+        var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
         var7 = var6.readLine();
         var12 = var7;
         var2 = var12;
@@ -146,7 +158,7 @@ final class es extends oh {
             L2: {
               var10 = var9.indexOf('(');
               var11 = var9.indexOf(')', var10 - -1);
-              if (var10 == -1) {
+              if ((var10 ^ -1) == 0) {
                 var12 = var9;
                 var2 = var12;
                 var2 = var12;
@@ -169,14 +181,15 @@ final class es extends oh {
               var20 = var2 + var19;
               var2 = var20;
               var2 = var20;
-              if (var10 == -1) {
+              var2 = var20;
+              if (0 == (var10 ^ -1)) {
                 break L3;
               } else {
                 if (var11 == -1) {
                   break L3;
                 } else {
                   var13 = var9.indexOf(".java:", var10);
-                  if (var13 < 0) {
+                  if ((var13 ^ -1) > -1) {
                     break L3;
                   } else {
                     var2 = var20 + var9.substring(var13 - -5, var11);
@@ -201,25 +214,25 @@ final class es extends oh {
 
     es(ln param0, fs param1, int param2, int param3) {
         try {
-            ((es) this).field_o = param2;
-            ((es) this).field_p = param0;
-            ((es) this).field_i = param1;
-            ((es) this).field_k = param3;
-            ((es) this).field_h = 0;
+            this.field_o = param2;
+            this.field_p = param0;
+            this.field_i = param1;
+            this.field_k = param3;
+            this.field_h = 0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "es.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "es.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     es(ln param0, fs param1, int param2, int param3, int param4) {
         try {
-            ((es) this).field_h = param3;
-            ((es) this).field_p = param0;
-            ((es) this).field_o = param2;
-            ((es) this).field_k = param4;
-            ((es) this).field_i = param1;
+            this.field_h = param3;
+            this.field_p = param0;
+            this.field_o = param2;
+            this.field_k = param4;
+            this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "es.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "es.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -11,17 +11,17 @@ public final class qt {
     public final void a(byte param0) {
         this.a(-25120);
         if (param0 != 23) {
-            Object var3 = null;
+            jaclib.peer.PeerReference var3 = (jaclib.peer.PeerReference) null;
             this.a((jaclib.peer.PeerReference) null, 2);
         }
     }
 
     private final void a(jaclib.peer.PeerReference param0, int param1) {
         if (param1 == -26315) {
-          if (param0 != ((jaclib.peer.qt) this).c) {
-            if (param0 == ((jaclib.peer.qt) this).b) {
+          if (param0 != this.c) {
+            if (param0 == this.b) {
               L0: {
-                ((jaclib.peer.qt) this).b = param0.a;
+                this.b = param0.a;
                 if (null != param0.a) {
                   param0.a.b = param0.b;
                   break L0;
@@ -58,10 +58,10 @@ public final class qt {
               return;
             }
           } else {
-            ((jaclib.peer.qt) this).c = param0.b;
-            if (param0 == ((jaclib.peer.qt) this).b) {
+            this.c = param0.b;
+            if (param0 == this.b) {
               L4: {
-                ((jaclib.peer.qt) this).b = param0.a;
+                this.b = param0.a;
                 if (null != param0.a) {
                   param0.a.b = param0.b;
                   break L4;
@@ -99,10 +99,10 @@ public final class qt {
             }
           }
         } else {
-          ((jaclib.peer.qt) this).a = null;
-          if (param0 == ((jaclib.peer.qt) this).c) {
-            ((jaclib.peer.qt) this).c = param0.b;
-            if (param0 != ((jaclib.peer.qt) this).b) {
+          this.a = (java.lang.ref.ReferenceQueue) null;
+          if (param0 == this.c) {
+            this.c = param0.b;
+            if (param0 != this.b) {
               L8: {
                 if (null != param0.a) {
                   param0.a.b = param0.b;
@@ -122,7 +122,7 @@ public final class qt {
               return;
             } else {
               L10: {
-                ((jaclib.peer.qt) this).b = param0.a;
+                this.b = param0.a;
                 if (null != param0.a) {
                   param0.a.b = param0.b;
                   break L10;
@@ -141,9 +141,9 @@ public final class qt {
               return;
             }
           } else {
-            if (param0 == ((jaclib.peer.qt) this).b) {
+            if (param0 == this.b) {
               L12: {
-                ((jaclib.peer.qt) this).b = param0.a;
+                this.b = param0.a;
                 if (null != param0.a) {
                   param0.a.b = param0.b;
                   break L12;
@@ -186,9 +186,9 @@ public final class qt {
     public final void b(byte param0) {
         this.a(-25120);
         L0: while (true) {
-          if (((jaclib.peer.qt) this).c == null) {
+          if (this.c == null) {
             if (param0 < 46) {
-              ((jaclib.peer.qt) this).a = null;
+              this.a = (java.lang.ref.ReferenceQueue) null;
               this.a(-25120);
               return;
             } else {
@@ -196,7 +196,7 @@ public final class qt {
               return;
             }
           } else {
-            this.a(((jaclib.peer.qt) this).c, -26315);
+            this.a(this.c, -26315);
             continue L0;
           }
         }
@@ -206,37 +206,42 @@ public final class qt {
         java.lang.ref.Reference var2 = null;
         jaclib.peer.PeerReference var3 = null;
         L0: while (true) {
-          var2 = ((jaclib.peer.qt) this).a.poll();
+          var2 = this.a.poll();
           if (var2 != null) {
-            var3 = (jaclib.peer.PeerReference) (Object) var2;
+            var3 = (jaclib.peer.PeerReference) ((Object) var2);
             this.a(var3, -26315);
             continue L0;
           } else {
-            return;
+            if (param0 != -25120) {
+              this.b((byte) 50);
+              return;
+            } else {
+              return;
+            }
           }
         }
     }
 
     public qt() {
-        ((jaclib.peer.qt) this).a = new java.lang.ref.ReferenceQueue();
+        this.a = new java.lang.ref.ReferenceQueue();
     }
 
     final void b(jaclib.peer.PeerReference param0, int param1) {
         param0.a = null;
-        param0.b = ((jaclib.peer.qt) this).c;
+        param0.b = this.c;
         if (param1 != -19676) {
           return;
         } else {
           L0: {
-            if (null == ((jaclib.peer.qt) this).b) {
-              ((jaclib.peer.qt) this).b = param0;
+            if (null == this.b) {
+              this.b = param0;
               break L0;
             } else {
-              ((jaclib.peer.qt) this).c.a = param0;
+              this.c.a = param0;
               break L0;
             }
           }
-          ((jaclib.peer.qt) this).c = param0;
+          this.c = param0;
           return;
         }
     }

@@ -10,21 +10,21 @@ class mh extends ag {
     final static void i(byte param0) {
         L0: {
           rk.field_O.q(-256);
-          if (mj.field_p >= 6) {
+          if (-7 >= (mj.field_p ^ -1)) {
             if (7 != mj.field_p) {
               gj.a(true, true, 14, mn.field_r);
               df.a((byte) 120, mj.field_p - -1);
               break L0;
             } else {
-              if (param0 != 74) {
-                mh.g((byte) 11);
+              if (param0 == 74) {
                 return;
               } else {
+                mh.g((byte) 11);
                 return;
               }
             }
           } else {
-            if (co.a(-20675) != 0) {
+            if (-1 != (co.a(-20675) ^ -1)) {
               break L0;
             } else {
               L1: {
@@ -36,19 +36,19 @@ class mh extends ag {
                   break L1;
                 }
               }
-              if (param0 != 74) {
-                mh.g((byte) 11);
+              if (param0 == 74) {
                 return;
               } else {
+                mh.g((byte) 11);
                 return;
               }
             }
           }
         }
-        if (param0 == 74) {
+        if (param0 != 74) {
+          mh.g((byte) 11);
           return;
         } else {
-          mh.g((byte) 11);
           return;
         }
     }
@@ -79,11 +79,11 @@ class mh extends ag {
               if (param0 == 0) {
                 break L1;
               } else {
-                ((mh) this).field_J = null;
+                this.field_J = (qm) null;
                 break L1;
               }
             }
-            stackOut_2_0 = ((mh) this).field_J.a(param0, param1);
+            stackOut_2_0 = this.field_J.a(param0 + 0, param1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -91,23 +91,23 @@ class mh extends ag {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("mh.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -115,21 +115,21 @@ class mh extends ag {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     mh(qm param0) {
         try {
-            ((mh) this).field_J = param0;
+            this.field_J = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void h(byte param0) {
-        int var1 = 0;
+        int var1 = 53 % ((33 - param0) / 61);
         field_I = null;
     }
 
@@ -148,7 +148,7 @@ class mh extends ag {
         if (null == ch.field_a) {
           return;
         } else {
-          var1 = (Object) (Object) ch.field_a;
+          var1 = ch.field_a;
           synchronized (var1) {
             L1: {
               ch.field_a = null;
@@ -160,10 +160,6 @@ class mh extends ag {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_I = "Wands ";
     }
 }

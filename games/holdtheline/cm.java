@@ -8,6 +8,7 @@ final class cm {
     static int field_a;
 
     final static boolean a(int param0) {
+        boolean discarded$2 = false;
         int stackIn_6_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_5_0 = 0;
@@ -15,7 +16,7 @@ final class cm {
           if (param0 == -2043140287) {
             break L0;
           } else {
-            boolean discarded$2 = cm.a(-80);
+            discarded$2 = cm.a(-80);
             break L0;
           }
         }
@@ -48,64 +49,78 @@ final class cm {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_11_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_13_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_6_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_8_0 = 0;
         var8 = HoldTheLine.field_D;
         try {
           L0: {
+            L1: {
+              if (param0 == 110) {
+                break L1;
+              } else {
+                cm.a((byte) 84);
+                break L1;
+              }
+            }
             var3_int = 0;
             var4 = ie.field_j;
-            L1: while (true) {
+            L2: while (true) {
               if (var3_int >= ii.field_b.length) {
-                stackOut_10_0 = -1;
-                stackIn_11_0 = stackOut_10_0;
+                stackOut_12_0 = -1;
+                stackIn_13_0 = stackOut_12_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                L2: {
+                L3: {
                   var5 = cd.field_f[var3_int];
-                  if (var5 >= 0) {
+                  if ((var5 ^ -1) <= -1) {
                     var6 = h.a(ii.field_b[var3_int], (byte) -113, true);
-                    var7 = -(var6 >> 1) + mk.field_i;
+                    var7 = -(var6 >> 943837537) + mk.field_i;
                     var4 = var4 + dc.field_bb;
-                    if (!mo.a((vf.field_w << 1) + w.field_b, param2, var6 - -(pg.field_G << 1), param1, 27, -pg.field_G + var7, var4)) {
-                      var4 = var4 + ((vf.field_w << 1) + dc.field_bb - -w.field_b);
-                      break L2;
+                    if (!mo.a((vf.field_w << -221223775) + w.field_b, param2, var6 - -(pg.field_G << -2043140287), param1, 27, -pg.field_G + var7, var4)) {
+                      var4 = var4 + ((vf.field_w << -1855829503) + dc.field_bb - -w.field_b);
+                      break L3;
                     } else {
-                      stackOut_6_0 = var5;
-                      stackIn_7_0 = stackOut_6_0;
-                      return stackIn_7_0;
+                      stackOut_8_0 = var5;
+                      stackIn_9_0 = stackOut_8_0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   } else {
                     var4 = var4 + hn.field_M;
-                    break L2;
+                    break L3;
                   }
                 }
                 var3_int++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var3, "cm.C(" + 110 + ',' + param1 + ',' + param2 + ')');
+          throw kk.a((Throwable) ((Object) var3), "cm.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_11_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_9_0;
+        } else {
+          return stackIn_13_0;
+        }
     }
 
     public static void a(byte param0) {
         field_d = null;
+        if (param0 >= -28) {
+            field_a = 78;
+        }
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Email (Login):";
     }
 }

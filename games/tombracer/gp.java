@@ -45,10 +45,6 @@ final class gp {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "gp.A(";
         field_d = new float[4];
         field_m = 20;

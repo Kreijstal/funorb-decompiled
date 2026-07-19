@@ -13,8 +13,8 @@ final class p extends ksa implements e {
 
     final void a(int param0, int param1) {
         java.awt.Dimension var4 = null;
-        synchronized (((p) this).field_f.getTreeLock()) {
-            var4 = ((p) this).field_f.getSize();
+        synchronized (this.field_f.getTreeLock()) {
+            var4 = this.field_f.getSize();
             this.H(param0, param1, var4.width, var4.height);
             field_d = false;
         }
@@ -29,7 +29,7 @@ final class p extends ksa implements e {
     private final void a(Exception param0) {
         if (field_d) {
           if (wt.a(false) - field_h < 30000L) {
-            ((p) this).field_f.repaint();
+            this.field_f.repaint();
             return;
           } else {
             throw new RuntimeException(param0.getMessage());
@@ -42,30 +42,26 @@ final class p extends ksa implements e {
     }
 
     p(oa param0, java.awt.Canvas param1, int param2, int param3) {
-        ((p) this).field_f = param1;
-        ((p) this).field_e = param2;
-        ((p) this).field_g = param3;
-        this.sa(param0, ((p) this).field_f, param2, param3);
+        this.field_f = param1;
+        this.field_e = param2;
+        this.field_g = param3;
+        this.sa(param0, this.field_f, param2, param3);
     }
 
     final void a(java.awt.Canvas param0, int param1, int param2) {
-        ((p) this).field_e = param1;
-        ((p) this).field_g = param2;
+        this.field_e = param1;
+        this.field_g = param2;
         this.oa(param0, param1, param2);
     }
 
     protected final void finalize() {
-        if (((p) this).field_nativeid != 0L) {
-            pq.a(0, (e) this);
+        if (this.field_nativeid != 0L) {
+            pq.a(0, (e) (this));
             return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = false;
     }
 }

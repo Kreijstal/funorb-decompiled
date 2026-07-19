@@ -35,6 +35,7 @@ final class oc {
         RuntimeException stackIn_75_0 = null;
         StringBuilder stackIn_75_1 = null;
         String stackIn_75_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
@@ -60,7 +61,7 @@ final class oc {
                 if (0 >= param4) {
                   break L1;
                 } else {
-                  if (param1 <= 0) {
+                  if (-1 <= (param1 ^ -1)) {
                     break L1;
                   } else {
                     L2: {
@@ -132,7 +133,7 @@ final class oc {
                       if (param5 < -45) {
                         break L7;
                       } else {
-                        field_a = null;
+                        field_a = (byte[][]) null;
                         break L7;
                       }
                     }
@@ -192,7 +193,7 @@ final class oc {
                       if (null == param0[1]) {
                         break L13;
                       } else {
-                        if (param0[1].field_n != 0) {
+                        if (-1 != (param0[1].field_n ^ -1)) {
                           kh.a(var16, param2, var17, var18);
                           var20 = var12;
                           L14: while (true) {
@@ -236,7 +237,7 @@ final class oc {
                       if (null == param0[3]) {
                         break L17;
                       } else {
-                        if (param0[3].field_o != 0) {
+                        if (-1 != (param0[3].field_o ^ -1)) {
                           kh.a(param3, var18, var16, var19);
                           var20 = var14;
                           L18: while (true) {
@@ -310,36 +311,39 @@ final class oc {
                         }
                       }
                     }
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L24: {
             var6 = decompiledCaughtException;
-            stackOut_72_0 = (RuntimeException) var6;
+            stackOut_72_0 = (RuntimeException) (var6);
             stackOut_72_1 = new StringBuilder().append("oc.A(");
             stackIn_74_0 = stackOut_72_0;
             stackIn_74_1 = stackOut_72_1;
             stackIn_73_0 = stackOut_72_0;
             stackIn_73_1 = stackOut_72_1;
             if (param0 == null) {
-              stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
-              stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
+              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
+              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
               stackOut_74_2 = "null";
               stackIn_75_0 = stackOut_74_0;
               stackIn_75_1 = stackOut_74_1;
               stackIn_75_2 = stackOut_74_2;
               break L24;
             } else {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackOut_73_2 = "{...}";
               stackIn_75_0 = stackOut_73_0;
               stackIn_75_1 = stackOut_73_1;
@@ -347,19 +351,27 @@ final class oc {
               break L24;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_75_0), stackIn_75_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     public static void a(byte param0) {
-        field_a = null;
+        if (param0 != -121) {
+            return;
+        }
+        field_a = (byte[][]) null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new byte[50][];
     }
 }

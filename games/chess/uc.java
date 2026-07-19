@@ -11,12 +11,15 @@ final class uc {
     static int[] field_e;
 
     final static ci b(int param0) {
+        if (param0 != -17260) {
+            return (ci) null;
+        }
         return ib.field_c.field_Kb;
     }
 
     public static void a(int param0) {
         field_c = null;
-        int var1 = 0;
+        int var1 = -95 % ((-52 - param0) / 46);
         field_e = null;
         field_g = null;
         field_b = null;
@@ -27,14 +30,22 @@ final class uc {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
+        L0: {
+          if (param0 <= -33) {
+            break L0;
+          } else {
+            field_g = (le) null;
+            break L0;
+          }
+        }
         if (bj.field_cb == null) {
           return;
         } else {
-          var1 = (Object) (Object) bj.field_cb;
+          var1 = bj.field_cb;
           synchronized (var1) {
-            L0: {
+            L1: {
               bj.field_cb = null;
-              break L0;
+              break L1;
             }
           }
           return;
@@ -42,10 +53,6 @@ final class uc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = 24;
         field_f = "Similar rating";
         field_a = 2;

@@ -21,10 +21,6 @@ final class rm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "rm.A(";
         field_b = "You need to play 1 more rated game to unlock this option.";
         field_d = new ur(7);

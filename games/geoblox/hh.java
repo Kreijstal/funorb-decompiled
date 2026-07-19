@@ -29,7 +29,7 @@ final class hh {
         int stackOut_6_0 = 0;
         int stackOut_8_0 = 0;
         int stackOut_2_0 = 0;
-        var1_ref = (Object) (Object) je.field_j;
+        var1_ref = je.field_j;
         synchronized (var1_ref) {
           L0: {
             if (param0 > 41) {
@@ -56,17 +56,19 @@ final class hh {
     }
 
     public static void a(boolean param0) {
+        sl discarded$0 = null;
         field_a = null;
         field_b = null;
         field_d = null;
+        if (param0) {
+            discarded$0 = hh.a(102, true);
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Close";
     }
 }

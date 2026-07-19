@@ -11,37 +11,38 @@ final class lca implements fo {
     int field_d;
 
     public final boolean d(byte param0) {
+        int discarded$0 = 0;
         if (param0 != 48) {
-            int discarded$0 = ((lca) this).e((byte) 127);
-            return ((lca) this).field_a.d((byte) 48);
+            discarded$0 = this.e((byte) 127);
+            return this.field_a.d((byte) 48);
         }
-        return ((lca) this).field_a.d((byte) 48);
+        return this.field_a.d((byte) 48);
     }
 
     public final void f(int param0) {
         if (param0 != -4366) {
-            ((lca) this).field_a = null;
+            this.field_a = (oo) null;
         }
     }
 
     public final int e(byte param0) {
         if (param0 > -86) {
-            ((lca) this).field_d = -90;
-            return ((lca) this).field_a.e((byte) -121);
+            this.field_d = -90;
+            return this.field_a.e((byte) -121);
         }
-        return ((lca) this).field_a.e((byte) -121);
+        return this.field_a.e((byte) -121);
     }
 
     public final int c(byte param0) {
         if (param0 <= 91) {
             return -97;
         }
-        return ((lca) this).field_a.c((byte) 117) - -((lca) this).field_d;
+        return this.field_a.c((byte) 117) - -this.field_d;
     }
 
     public final int b(byte param0) {
         int var2 = 1 % ((-23 - param0) / 53);
-        return ((lca) this).field_a.b((byte) -79) - -((lca) this).field_b;
+        return this.field_a.b((byte) -79) - -this.field_b;
     }
 
     final static boolean a(boolean param0) {
@@ -73,22 +74,22 @@ final class lca implements fo {
         if (param0 <= 103) {
             return;
         }
-        gr var3 = ((lca) this).field_a.c(-114);
+        gr var3 = this.field_a.c(-114);
         if (var3 != null) {
             if (!var3.a(-50)) {
                 return;
             }
         }
         try {
-            gqa.a(dfa.a(((lca) this).field_e, 2048, -108), -83584144, ((lca) this).c((byte) 97), ((lca) this).b((byte) -92), ((lca) this).field_a.a(false, (lca) this), ((lca) this).e((byte) -110));
+            gqa.a(dfa.a(this.field_e, 2048, -108), -83584144, this.c((byte) 97), this.b((byte) -92), this.field_a.a(false, (lca) (this)), this.e((byte) -110));
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "lca.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "lca.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 != -22593) {
-            field_g = null;
+            field_g = (String[]) null;
             field_g = null;
             return;
         }
@@ -96,10 +97,6 @@ final class lca implements fo {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new String[8];
         field_g[3] = "Rolling Boulder";
         field_g[7] = "Key";

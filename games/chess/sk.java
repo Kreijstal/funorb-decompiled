@@ -25,12 +25,19 @@ final class sk extends ph {
         field_r = null;
         field_q = null;
         field_s = null;
-        field_o = null;
+        if (param0 != 10) {
+          field_u = (String) null;
+          field_o = null;
+          return;
+        } else {
+          field_o = null;
+          return;
+        }
     }
 
     final ug b(byte param0) {
         if (param0 <= 27) {
-            field_s = null;
+            field_s = (String) null;
             return ei.field_t;
         }
         return ei.field_t;
@@ -39,7 +46,7 @@ final class sk extends ph {
     final static String a(int param0, long param1) {
         mi.field_u.setTime(new Date(param1));
         int var3 = mi.field_u.get(7);
-        int var4 = mi.field_u.get(5);
+        int var4 = mi.field_u.get(param0);
         int var5 = mi.field_u.get(2);
         int var6 = mi.field_u.get(1);
         int var7 = mi.field_u.get(11);
@@ -49,10 +56,6 @@ final class sk extends ph {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "<%0> has withdrawn the request to join.";
         field_n = new Random();
         field_s = "Accept";

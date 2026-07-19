@@ -15,14 +15,13 @@ final class uh {
         field_d = null;
         field_e = null;
         field_a = null;
+        if (param0 >= -37) {
+            return;
+        }
         field_g = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "uh.A(";
         field_e = new double[]{0.9, 0.7, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9, 0.8, 1.0, 1.0, 1.0, 1.0, 0.9, 0.8, 0.8, 0.9, 0.9};
         field_d = "<col=FFFFFF>Concussion missiles:</col> good old-fashioned physical explosives, these missiles can add an edge to your attack. You get four at once and can carry up to 20. Tap <col=FFFFFF><%0></col> to fire one. Hold <col=FFFFFF><%0></col> to fire many.";

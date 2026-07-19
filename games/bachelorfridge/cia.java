@@ -16,13 +16,28 @@ class cia extends bw {
     int field_q;
 
     final static boolean a(int param0) {
-        if (dma.field_b == null) {
+        if (param0 == 0) {
+          if (dma.field_b != null) {
+            if (uca.field_a != eia.field_a) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (uca.field_a != eia.field_a) {
+          }
+        } else {
+          field_f = (String[]) null;
+          if (dma.field_b != null) {
+            if (uca.field_a != eia.field_a) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     private cia(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -30,22 +45,22 @@ class cia extends bw {
     }
 
     final boolean b(boolean param0) {
-        int fieldTemp$2 = ((cia) this).field_o + ((cia) this).field_m;
-        ((cia) this).field_o = ((cia) this).field_o + ((cia) this).field_m;
+        int fieldTemp$2 = this.field_o + this.field_m;
+        this.field_o = this.field_o + this.field_m;
         if (fieldTemp$2 >= 0) {
-          ((cia) this).field_q = ((cia) this).field_q + ((cia) this).field_g;
-          ((cia) this).field_h = ((cia) this).field_h + ((cia) this).field_k;
-          ((cia) this).field_i = ((cia) this).field_i + ((cia) this).field_p;
+          this.field_q = this.field_q + this.field_g;
+          this.field_h = this.field_h + this.field_k;
+          this.field_i = this.field_i + this.field_p;
           if (!param0) {
-            ((cia) this).field_k = 57;
-            ((cia) this).field_k = ((cia) this).field_k + ((cia) this).field_l;
+            this.field_k = 57;
+            this.field_k = this.field_k + this.field_l;
             return true;
           } else {
-            ((cia) this).field_k = ((cia) this).field_k + ((cia) this).field_l;
+            this.field_k = this.field_k + this.field_l;
             return true;
           }
         } else {
-          ((cia) this).a(false);
+          this.a(false);
           return false;
         }
     }
@@ -55,43 +70,50 @@ class cia extends bw {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        ((cia) this).field_k = param2;
+        boolean discarded$2 = false;
+        this.field_k = param2;
         if (param0 != 0) {
-          boolean discarded$2 = ((cia) this).b(false);
-          ((cia) this).field_p = param3;
-          ((cia) this).field_g = param1;
+          discarded$2 = this.b(false);
+          this.field_p = param3;
+          this.field_g = param1;
           return;
         } else {
-          ((cia) this).field_p = param3;
-          ((cia) this).field_g = param1;
+          this.field_p = param3;
+          this.field_g = param1;
           return;
         }
     }
 
     private final void b(int param0, int param1, int param2, int param3) {
-        ((cia) this).field_h = param3;
-        ((cia) this).field_i = param1;
-        ((cia) this).field_q = param0;
+        if (param2 != 15704) {
+            return;
+        }
+        this.field_h = param3;
+        this.field_i = param1;
+        this.field_q = param0;
     }
 
     public static void c(byte param0) {
         field_n = null;
+        if (param0 >= -70) {
+            return;
+        }
         field_f = null;
     }
 
     final void a(int param0, int param1) {
         int var3 = 25 / ((param0 - -17) / 57);
-        ((cia) this).field_l = param1;
+        this.field_l = param1;
     }
 
     final void a(int param0, int param1, int param2) {
-        ((cia) this).field_o = param1;
+        this.field_o = param1;
         if (param0 < 33) {
-            ((cia) this).field_o = 117;
-            ((cia) this).field_m = param2;
+            this.field_o = 117;
+            this.field_m = param2;
             return;
         }
-        ((cia) this).field_m = param2;
+        this.field_m = param2;
     }
 
     cia(int param0, int param1, int param2) {
@@ -100,16 +122,12 @@ class cia extends bw {
 
     private cia(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         this.b(param2, param0, 15704, param1);
-        ((cia) this).a(0, param5, param4, param3);
-        ((cia) this).a(124, param6, param7);
-        ((cia) this).a(108, param8);
+        this.a(0, param5, param4, param3);
+        this.a(124, param6, param7);
+        this.a(108, param8);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "Unable to delete name - system busy";
         field_j = false;
     }

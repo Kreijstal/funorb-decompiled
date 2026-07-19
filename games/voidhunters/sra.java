@@ -7,14 +7,10 @@ final class sra {
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = 105;
+        int var1 = -105 / ((38 - param0) / 53);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "sra.A(";
     }
 }

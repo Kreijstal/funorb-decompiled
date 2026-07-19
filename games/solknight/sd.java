@@ -14,17 +14,13 @@ final class sd extends gg {
 
     public static void a(byte param0) {
         field_j = null;
-        int var1 = 5;
+        int var1 = -16 / ((param0 - 44) / 50);
     }
 
     sd() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "sd.A(";
         field_j = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
     }

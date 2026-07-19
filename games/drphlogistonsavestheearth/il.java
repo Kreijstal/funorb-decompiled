@@ -11,6 +11,6 @@ public class il {
     int field_e;
 
     il() {
-        ((il) this).field_b = 0;
+        this.field_b = 0;
     }
 }

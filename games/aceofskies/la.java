@@ -20,28 +20,42 @@ final class la {
     }
 
     public static void a(byte param0) {
+        String discarded$2 = null;
         field_d = null;
         field_g = null;
         field_f = null;
         field_i = null;
         field_e = null;
         field_b = null;
-        field_a = null;
-        field_j = null;
-        field_h = null;
+        if (param0 != -86) {
+          discarded$2 = la.a(119);
+          field_a = null;
+          field_j = null;
+          field_h = null;
+          return;
+        } else {
+          field_a = null;
+          field_j = null;
+          field_h = null;
+          return;
+        }
     }
 
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
             rr.a("", (byte) -112, param1);
+            if (!param0) {
+                java.applet.Applet var3 = (java.applet.Applet) null;
+                la.a(true, (java.applet.Applet) null);
+            }
             jn.a((byte) 120, param1);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "la.A(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "la.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private la(int param0) {
-        ((la) this).field_c = param0;
+        this.field_c = param0;
     }
 
     final static String a(int param0) {
@@ -50,6 +64,13 @@ final class la {
         }
         if (nb.field_c == jq.field_fb) {
             return ua.field_j;
+        }
+        if (param0 != 4) {
+            field_h = (la) null;
+            if (!(gm.field_x.a(false))) {
+                return ua.field_j;
+            }
+            return se.field_a;
         }
         if (!(gm.field_x.a(false))) {
             return ua.field_j;
@@ -62,10 +83,6 @@ final class la {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new la(1);
         field_j = new la(2);
         field_e = new la(4);

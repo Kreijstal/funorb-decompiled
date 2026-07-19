@@ -42,7 +42,7 @@ final class qea extends rqa {
               }
             }
             si.a(74, 62, param0[0].a(118));
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -50,23 +50,23 @@ final class qea extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("qea.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -74,7 +74,7 @@ final class qea extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -98,7 +98,7 @@ final class qea extends rqa {
               if (param0 == -29) {
                 break L1;
               } else {
-                field_r = null;
+                field_r = (int[]) null;
                 break L1;
               }
             }
@@ -123,14 +123,14 @@ final class qea extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "qea.B(" + param0 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) var2), "qea.B(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         String var7 = null;
         int var8 = 105 / ((27 - param1) / 52);
-        if (ow.field_b == 2) {
+        if ((ow.field_b ^ -1) == -3) {
             var7 = iqa.field_o;
         } else {
             var7 = kia.field_b;
@@ -139,10 +139,6 @@ final class qea extends rqa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = new int[16];
         field_q = 100;
         field_o = 0;

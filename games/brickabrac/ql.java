@@ -11,6 +11,6 @@ public class ql {
     ql field_a;
 
     ql() {
-        ((ql) this).field_f = 0;
+        this.field_f = 0;
     }
 }

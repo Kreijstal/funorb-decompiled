@@ -30,14 +30,14 @@ final class hl {
               if (2 != this.field_m) {
                 break L1;
               } else {
-                if (this.field_l > 0) {
+                if (-1 > (this.field_l ^ -1)) {
                   break L0;
                 } else {
                   break L1;
                 }
               }
             }
-            if (~uc.field_g != ~this.field_r) {
+            if ((uc.field_g ^ -1L) != (this.field_r ^ -1L)) {
               L2: {
                 if (2 != jj.field_b) {
                   break L2;
@@ -64,6 +64,9 @@ final class hl {
     }
 
     final static boolean a(byte param0) {
+        if (param0 != -53) {
+            return false;
+        }
         return sg.a(cf.field_c, 113, fm.field_d);
     }
 
@@ -152,16 +155,27 @@ final class hl {
     }
 
     hl(boolean param0) {
-        this.field_i = vl.field_k;
-        this.field_r = fc.field_h;
-        this.field_g = qm.field_e;
-        this.field_p = ad.field_x;
-        this.field_n = ic.field_a;
-        this.field_l = tg.field_c;
-        if (!param0) {
-            this.field_q = null;
-        } else {
-            this.field_q = fa.field_q;
+        L0: {
+          L1: {
+            this.field_i = vl.field_k;
+            this.field_r = fc.field_h;
+            this.field_g = qm.field_e;
+            this.field_p = ad.field_x;
+            this.field_n = ic.field_a;
+            this.field_l = tg.field_c;
+            if (param0) {
+              break L1;
+            } else {
+              this.field_q = null;
+              if (!client.field_A) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          this.field_q = fa.field_q;
+          break L0;
         }
         this.field_m = mf.field_R;
         this.field_j = fm.field_f;

@@ -11,6 +11,6 @@ public class wu {
     public volatile Object field_b;
 
     wu() {
-        ((wu) this).field_a = 0;
+        this.field_a = 0;
     }
 }

@@ -9,11 +9,24 @@ final class wj extends e {
     static sm field_k;
 
     final static void a(int param0) {
-        if (on.field_c >= 140) {
+        if (param0 >= 26) {
+          if ((on.field_c ^ -1) <= -141) {
             bd.a(false, 160);
             return;
+          } else {
+            bd.a(false, 20 + on.field_c);
+            return;
+          }
+        } else {
+          field_j = (String) null;
+          if ((on.field_c ^ -1) <= -141) {
+            bd.a(false, 160);
+            return;
+          } else {
+            bd.a(false, 20 + on.field_c);
+            return;
+          }
         }
-        bd.a(false, 20 + on.field_c);
     }
 
     public static void c(boolean param0) {
@@ -33,17 +46,13 @@ final class wj extends e {
 
     final gq a(boolean param0) {
         if (param0) {
-            field_j = null;
+            field_j = (String) null;
             return pa.field_d;
         }
         return pa.field_d;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
         field_i = new ce();
     }

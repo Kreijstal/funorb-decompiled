@@ -9,43 +9,45 @@ final class l extends bj implements qb {
 
     public l() {
         super(0, 0, 476, 225, (db) null);
-        ((l) this).field_I = new hc(pc.field_g, (wn) null);
-        ((l) this).field_G = new hc(c.field_p, (wn) null);
-        ((l) this).field_J = new hc(cj.field_c, (wn) null);
+        this.field_I = new hc(pc.field_g, (wn) null);
+        this.field_G = new hc(c.field_p, (wn) null);
+        this.field_J = new hc(cj.field_c, (wn) null);
         ck var1 = new ck();
-        ((l) this).field_I.field_s = (db) (Object) var1;
-        ((l) this).field_G.field_s = (db) (Object) var1;
-        ((l) this).field_J.field_s = (db) (Object) var1;
+        this.field_I.field_s = (db) ((Object) var1);
+        this.field_G.field_s = (db) ((Object) var1);
+        this.field_J.field_s = (db) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
-        int var4 = var3 + -var2 >> 1;
-        ((l) this).field_G.a(var4, ((l) this).field_x - (48 - -var2), -var3 + ((l) this).field_g >> 1, true, 30);
-        ((l) this).field_J.a(var4, -48 + (((l) this).field_x - var2), (((l) this).field_g + -var3 >> 1) + (var4 - -var2), true, 30);
-        ((l) this).field_I.a(var3, -78 + (((l) this).field_x + -(2 * var2)), -var3 + ((l) this).field_g >> 1, true, 30);
-        ((l) this).field_G.field_q = (wn) this;
-        ((l) this).field_I.field_q = (wn) this;
-        ((l) this).field_J.field_q = (wn) this;
-        ((l) this).field_I.field_i = mm.field_c;
-        ((l) this).field_J.field_i = lf.field_G;
-        ((l) this).b((hm) (Object) ((l) this).field_G, false);
-        ((l) this).b((hm) (Object) ((l) this).field_I, false);
-        ((l) this).b((hm) (Object) ((l) this).field_J, false);
+        int var4 = var3 + -var2 >> -977047807;
+        this.field_G.a(var4, this.field_x - (48 - -var2), -var3 + this.field_g >> 1555371649, true, 30);
+        this.field_J.a(var4, -48 + (this.field_x - var2), (this.field_g + -var3 >> -1699240159) + (var4 - -var2), true, 30);
+        this.field_I.a(var3, -78 + (this.field_x + -(2 * var2)), -var3 + this.field_g >> -2127206143, true, 30);
+        this.field_G.field_q = (wn) (this);
+        this.field_I.field_q = (wn) (this);
+        this.field_J.field_q = (wn) (this);
+        this.field_I.field_i = mm.field_c;
+        this.field_J.field_i = lf.field_G;
+        this.b(this.field_G, false);
+        this.b(this.field_I, false);
+        this.b(this.field_J, false);
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
+        int discarded$2 = 0;
+        int discarded$3 = 0;
         int var5 = 0;
         int var6 = 0;
         if (param1 <= 85) {
-          ((l) this).field_J = null;
-          var5 = ((l) this).field_k - -param3;
-          var6 = param0 + ((l) this).field_j;
-          int discarded$2 = sb.field_a.a(q.field_F, var5 + 20, var6 + 20, ((l) this).field_g + -40, ((l) this).field_x + -50, 16777215, -1, 1, 0, sb.field_a.field_r);
+          this.field_J = (hc) null;
+          var5 = this.field_k - -param3;
+          var6 = param0 + this.field_j;
+          discarded$2 = sb.field_a.a(q.field_F, var5 + 20, var6 + 20, this.field_g + -40, this.field_x + -50, 16777215, -1, 1, 0, sb.field_a.field_r);
           super.a(param0, (byte) 99, param2, param3);
           return;
         } else {
-          var5 = ((l) this).field_k - -param3;
-          var6 = param0 + ((l) this).field_j;
-          int discarded$3 = sb.field_a.a(q.field_F, var5 + 20, var6 + 20, ((l) this).field_g + -40, ((l) this).field_x + -50, 16777215, -1, 1, 0, sb.field_a.field_r);
+          var5 = this.field_k - -param3;
+          var6 = param0 + this.field_j;
+          discarded$3 = sb.field_a.a(q.field_F, var5 + 20, var6 + 20, this.field_g + -40, this.field_x + -50, 16777215, -1, 1, 0, sb.field_a.field_r);
           super.a(param0, (byte) 99, param2, param3);
           return;
         }
@@ -77,6 +79,7 @@ final class l extends bj implements qb {
     }
 
     public final void a(hc param0, int param1, int param2, int param3, int param4) {
+        boolean discarded$1 = false;
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -99,12 +102,12 @@ final class l extends bj implements qb {
         try {
           L0: {
             L1: {
-              if (((l) this).field_G != param0) {
-                if (((l) this).field_I == param0) {
+              if (this.field_G != param0) {
+                if (this.field_I == param0) {
                   fe.a((byte) -83);
                   break L1;
                 } else {
-                  if (((l) this).field_J == param0) {
+                  if (this.field_J == param0) {
                     bm.a(4);
                     break L1;
                   } else {
@@ -119,7 +122,7 @@ final class l extends bj implements qb {
             if (param3 == 1) {
               break L0;
             } else {
-              boolean discarded$1 = l.a((byte) -64);
+              discarded$1 = l.a((byte) -64);
               return;
             }
           }
@@ -127,23 +130,23 @@ final class l extends bj implements qb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var6;
+            stackOut_11_0 = (RuntimeException) (var6);
             stackOut_11_1 = new StringBuilder().append("l.K(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -151,7 +154,7 @@ final class l extends bj implements qb {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -168,6 +171,7 @@ final class l extends bj implements qb {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         boolean stackOut_12_0 = false;
@@ -186,13 +190,15 @@ final class l extends bj implements qb {
             if (super.a(param0, param1, param2, 71)) {
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param2 != 98) {
                 if (param3 >= 0) {
-                  if (param2 == 99) {
-                    stackOut_12_0 = ((l) this).a(param0, true);
+                  if ((param2 ^ -1) == -100) {
+                    stackOut_12_0 = this.a(param0, true);
                     stackIn_13_0 = stackOut_12_0;
+                    decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
                     return false;
@@ -200,12 +206,14 @@ final class l extends bj implements qb {
                 } else {
                   stackOut_8_0 = 1;
                   stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0 != 0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               } else {
-                stackOut_5_0 = ((l) this).a((byte) 22, param0);
+                stackOut_5_0 = this.a((byte) 22, param0);
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -213,23 +221,23 @@ final class l extends bj implements qb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var5;
+            stackOut_14_0 = (RuntimeException) (var5);
             stackOut_14_1 = new StringBuilder().append("l.G(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L1;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -237,12 +245,27 @@ final class l extends bj implements qb {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_13_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_9_0 != 0;
+            } else {
+              return stackIn_13_0;
+            }
+          }
+        }
     }
 
     final static int a(int param0, int param1) {
+        if (param0 != -8462) {
+            return -107;
+        }
         if (!qd.a(param1, -99)) {
             return -1;
         }
@@ -250,10 +273,6 @@ final class l extends bj implements qb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_H = 4;
     }
 }

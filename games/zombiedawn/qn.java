@@ -54,23 +54,23 @@ final class qn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("qn.C(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -78,58 +78,59 @@ final class qn {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     final void a(byte param0, long param1) throws IOException {
         if (param0 > -63) {
-          field_k = null;
-          ((qn) this).field_c.seek(param1);
-          ((qn) this).field_f = param1;
+          field_k = (vn[]) null;
+          this.field_c.seek(param1);
+          this.field_f = param1;
           return;
         } else {
-          ((qn) this).field_c.seek(param1);
-          ((qn) this).field_f = param1;
+          this.field_c.seek(param1);
+          this.field_f = param1;
           return;
         }
     }
 
     protected final void finalize() throws Throwable {
-        if (((qn) this).field_c != null) {
+        if (this.field_c != null) {
             System.out.println("");
-            ((qn) this).c(-100);
+            this.c(-100);
         }
     }
 
     qn(File param0, String param1, long param2) throws IOException {
+        boolean discarded$0 = false;
         int var5_int = 0;
         try {
-            if (param2 == -1L) {
+            if (0L == (param2 ^ -1L)) {
                 param2 = 9223372036854775807L;
             }
             if (param0.length() > param2) {
-                boolean discarded$0 = param0.delete();
+                discarded$0 = param0.delete();
             }
-            ((qn) this).field_c = new RandomAccessFile(param0, param1);
-            ((qn) this).field_d = param2;
-            ((qn) this).field_f = 0L;
-            var5_int = ((qn) this).field_c.read();
+            this.field_c = new RandomAccessFile(param0, param1);
+            this.field_d = param2;
+            this.field_f = 0L;
+            var5_int = this.field_c.read();
             if (var5_int != -1) {
-                if (!param1.equals((Object) (Object) "r")) {
-                    ((qn) this).field_c.seek(0L);
-                    ((qn) this).field_c.write(var5_int);
+                if (!param1.equals("r")) {
+                    this.field_c.seek(0L);
+                    this.field_c.write(var5_int);
                 }
             }
-            ((qn) this).field_c.seek(0L);
+            this.field_c.seek(0L);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "qn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "qn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void c(int param0) throws IOException {
-        if (null == ((qn) this).field_c) {
+        if (null == this.field_c) {
           if (param0 >= -68) {
             field_h = true;
             return;
@@ -137,8 +138,8 @@ final class qn {
             return;
           }
         } else {
-          ((qn) this).field_c.close();
-          ((qn) this).field_c = null;
+          this.field_c.close();
+          this.field_c = null;
           if (param0 < -68) {
             return;
           } else {
@@ -149,9 +150,10 @@ final class qn {
     }
 
     final int a(int param0, byte[] param1, int param2, byte param3) throws IOException {
+        byte[] discarded$2 = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        Object var6 = null;
+        String var6 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -176,17 +178,17 @@ final class qn {
               if (param3 <= -63) {
                 break L1;
               } else {
-                var6 = null;
-                byte[] discarded$2 = qn.a((String) null, -105);
+                var6 = (String) null;
+                discarded$2 = qn.a((String) null, -105);
                 break L1;
               }
             }
             L2: {
-              var5_int = ((qn) this).field_c.read(param1, param0, param2);
+              var5_int = this.field_c.read(param1, param0, param2);
               if (0 >= var5_int) {
                 break L2;
               } else {
-                ((qn) this).field_f = ((qn) this).field_f + (long)var5_int;
+                this.field_f = this.field_f + (long)var5_int;
                 break L2;
               }
             }
@@ -198,23 +200,23 @@ final class qn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var5;
+            stackOut_6_0 = (RuntimeException) (var5);
             stackOut_6_1 = new StringBuilder().append("qn.G(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -222,45 +224,46 @@ final class qn {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ',' + param3 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_5_0;
     }
 
     public static void a(int param0) {
+        byte[] discarded$0 = null;
         field_a = null;
         field_i = null;
         field_g = null;
         field_k = null;
+        if (param0 != 0) {
+            String var2 = (String) null;
+            discarded$0 = qn.a((String) null, -58);
+        }
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
         try {
             if (param0 != 0) {
-                field_g = null;
+                field_g = (vn) null;
             }
-            if (!(~((long)param1 - -((qn) this).field_f) >= ~((qn) this).field_d)) {
-                ((qn) this).field_c.seek(((qn) this).field_d);
-                ((qn) this).field_c.write(1);
+            if (!(((long)param1 - -this.field_f ^ -1L) >= (this.field_d ^ -1L))) {
+                this.field_c.seek(this.field_d);
+                this.field_c.write(1);
                 throw new EOFException();
             }
-            ((qn) this).field_c.write(param2, param3, param1);
-            ((qn) this).field_f = ((qn) this).field_f + (long)param1;
+            this.field_c.write(param2, param3, param1);
+            this.field_f = this.field_f + (long)param1;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "qn.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "qn.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final long b(int param0) throws IOException {
         int var2 = 106 % ((param0 - 30) / 37);
-        return ((qn) this).field_c.length();
+        return this.field_c.length();
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = false;
         field_h = true;
         field_g = new vn(300, 200);

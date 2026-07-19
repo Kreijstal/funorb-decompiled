@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class kn extends ob implements vb {
     static long[] field_tb;
     private boolean field_nb;
@@ -24,6 +22,7 @@ final class kn extends ob implements vb {
     private ua field_ob;
 
     final void a(qm param0, int param1, int param2, int param3) {
+        boolean discarded$2 = false;
         ag[] var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -62,7 +61,7 @@ final class kn extends ob implements vb {
               super.a(param0, param1, param2, param3);
               if (tl.field_d) {
                 param0.d((byte) 29);
-                var9 = ((kn) this).field_vb;
+                var9 = this.field_vb;
                 var5 = var9;
                 var6 = 0;
                 L2: while (true) {
@@ -74,7 +73,7 @@ final class kn extends ob implements vb {
                       if (!var7.field_w) {
                         break L3;
                       } else {
-                        boolean discarded$2 = var7.a(0, (qm) this);
+                        discarded$2 = var7.a(0, (qm) (this));
                         break L3;
                       }
                     }
@@ -87,27 +86,27 @@ final class kn extends ob implements vb {
               }
             }
             L4: {
-              if (((kn) this).field_wb) {
+              if (this.field_wb) {
                 break L4;
               } else {
                 if (lc.a((byte) 112)) {
                   break L4;
                 } else {
                   this.g(param2 + -171);
-                  ((kn) this).field_H.b((qm) (Object) new kn(((kn) this).field_H), 15637);
+                  this.field_H.b(new kn(this.field_H), 15637);
                   break L4;
                 }
               }
             }
             L5: {
-              if (null == ((kn) this).field_zb) {
+              if (null == this.field_zb) {
                 break L5;
               } else {
                 L6: {
-                  stackOut_12_0 = ((kn) this).field_zb.j(2);
+                  stackOut_12_0 = this.field_zb.j(2);
                   stackIn_14_0 = stackOut_12_0;
                   stackIn_13_0 = stackOut_12_0;
-                  if (((kn) this).field_nb) {
+                  if (this.field_nb) {
                     stackOut_14_0 = stackIn_14_0;
                     stackOut_14_1 = 0;
                     stackIn_15_0 = stackOut_14_0;
@@ -124,8 +123,8 @@ final class kn extends ob implements vb {
                 if ((stackIn_15_0 ? 1 : 0) != stackIn_15_1) {
                   break L5;
                 } else {
-                  this.a(((kn) this).field_lb, 0);
-                  ((kn) this).field_nb = ((kn) this).field_zb.j(2);
+                  this.a(this.field_lb, 0);
+                  this.field_nb = this.field_zb.j(2);
                   break L5;
                 }
               }
@@ -136,23 +135,23 @@ final class kn extends ob implements vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var5_ref = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var5_ref;
+            stackOut_18_0 = (RuntimeException) (var5_ref);
             stackOut_18_1 = new StringBuilder().append("kn.E(");
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L7;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -160,119 +159,135 @@ final class kn extends ob implements vb {
               break L7;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static lg a(eg param0, int param1, boolean param2, int param3, eg param4) {
         RuntimeException var5 = null;
-        Object stackIn_2_0 = null;
-        lg stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
+        Object stackIn_4_0 = null;
+        lg stackIn_6_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        lg stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
+        lg stackOut_5_0 = null;
+        Object stackOut_3_0 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         try {
           L0: {
+            L1: {
+              if (param2) {
+                break L1;
+              } else {
+                kn.h(-104);
+                break L1;
+              }
+            }
             if (fc.a(-123, param0, param1, param3)) {
-              stackOut_3_0 = ge.a(param4.b(param3, 26219, param1), 3417);
-              stackIn_4_0 = stackOut_3_0;
+              stackOut_5_0 = ge.a(param4.b(param3, 26219, param1), 3417);
+              stackIn_6_0 = stackOut_5_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (lg) (Object) stackIn_2_0;
+              stackOut_3_0 = null;
+              stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var5 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var5;
-            stackOut_5_1 = new StringBuilder().append("kn.J(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
-            } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
-              break L1;
-            }
-          }
           L2: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(',').append(true).append(',').append(param3).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param4 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+            var5 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) (var5);
+            stackOut_7_1 = new StringBuilder().append("kn.J(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          L3: {
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param4 == null) {
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
+            } else {
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
+            }
+          }
+          throw aa.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (lg) ((Object) stackIn_4_0);
+        } else {
+          return stackIn_6_0;
+        }
     }
 
     kn(h param0) {
         super(param0, 430, 254);
+        int incrementValue$1 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -382,33 +397,33 @@ final class kn extends ob implements vb {
         try {
           L0: {
             L1: {
-              ((kn) this).field_V = aa.a(fi.field_d, (byte) 77);
-              if (((kn) this).field_V.length <= 0) {
+              this.field_V = aa.a(fi.field_d, (byte) 77);
+              if (-1 <= (this.field_V.length ^ -1)) {
                 break L1;
               } else {
                 var2_int = 0;
                 L2: while (true) {
-                  if (var2_int >= ((kn) this).field_V.length) {
+                  if (var2_int >= this.field_V.length) {
                     var2_int = 0;
                     var3 = 0;
                     L3: while (true) {
-                      if (((kn) this).field_V.length <= var3) {
-                        var3_ref_uj__ = ((kn) this).field_V;
-                        ((kn) this).field_V = new uj[var2_int];
+                      if (this.field_V.length <= var3) {
+                        var3_ref_uj__ = this.field_V;
+                        this.field_V = new uj[var2_int];
                         var4 = 0;
                         var5 = 0;
                         L4: while (true) {
                           if (var5 >= var3_ref_uj__.length) {
-                            pm.a(((kn) this).field_V, -1);
+                            pm.a(this.field_V, -1);
                             break L1;
                           } else {
                             L5: {
                               if (var3_ref_uj__[var5] == null) {
                                 break L5;
                               } else {
-                                int incrementValue$1 = var4;
+                                incrementValue$1 = var4;
                                 var4++;
-                                ((kn) this).field_V[incrementValue$1] = var3_ref_uj__[var5];
+                                this.field_V[incrementValue$1] = var3_ref_uj__[var5];
                                 break L5;
                               }
                             }
@@ -418,7 +433,7 @@ final class kn extends ob implements vb {
                         }
                       } else {
                         L6: {
-                          if (((kn) this).field_V[var3] == null) {
+                          if (this.field_V[var3] == null) {
                             break L6;
                           } else {
                             var2_int++;
@@ -431,38 +446,38 @@ final class kn extends ob implements vb {
                     }
                   } else {
                     L7: {
-                      if (null == ((kn) this).field_V[var2_int]) {
+                      if (null == this.field_V[var2_int]) {
                         break L7;
                       } else {
                         var3 = 1 + var2_int;
                         L8: while (true) {
-                          if (((kn) this).field_V.length <= var3) {
+                          if (this.field_V.length <= var3) {
                             if (ob.field_Y == null) {
                               break L7;
                             } else {
-                              if (null == ((kn) this).field_V[var2_int]) {
+                              if (null == this.field_V[var2_int]) {
                                 break L7;
                               } else {
-                                if (ob.field_Y.a(((kn) this).field_V[var2_int].field_g, ((kn) this).field_V[var2_int].field_e, -17969)) {
+                                if (ob.field_Y.a(this.field_V[var2_int].field_g, this.field_V[var2_int].field_e, -17969)) {
                                   break L7;
                                 } else {
-                                  ((kn) this).field_V[var2_int] = null;
+                                  this.field_V[var2_int] = null;
                                   break L7;
                                 }
                               }
                             }
                           } else {
                             L9: {
-                              if (((kn) this).field_V[var3] == null) {
+                              if (this.field_V[var3] == null) {
                                 break L9;
                               } else {
-                                if (((kn) this).field_V[var2_int].field_g != ((kn) this).field_V[var3].field_g) {
+                                if (this.field_V[var2_int].field_g != this.field_V[var3].field_g) {
                                   break L9;
                                 } else {
-                                  if (((kn) this).field_V[var2_int].field_e != ((kn) this).field_V[var3].field_e) {
+                                  if (this.field_V[var2_int].field_e != this.field_V[var3].field_e) {
                                     break L9;
                                   } else {
-                                    ((kn) this).field_V[var3] = null;
+                                    this.field_V[var3] = null;
                                     break L9;
                                   }
                                 }
@@ -484,7 +499,7 @@ final class kn extends ob implements vb {
               stackOut_28_0 = this;
               stackIn_30_0 = stackOut_28_0;
               stackIn_29_0 = stackOut_28_0;
-              if (0 >= ((kn) this).field_V.length) {
+              if (0 >= this.field_V.length) {
                 stackOut_30_0 = this;
                 stackOut_30_1 = 0;
                 stackIn_31_0 = stackOut_30_0;
@@ -499,7 +514,7 @@ final class kn extends ob implements vb {
               }
             }
             L11: {
-              ((kn) this).field_yb = stackIn_31_1 != 0;
+              ((kn) (this)).field_yb = stackIn_31_1 != 0;
               if (!ne.b(-22768)) {
                 stackOut_33_0 = 0;
                 stackIn_34_0 = stackOut_33_0;
@@ -542,7 +557,7 @@ final class kn extends ob implements vb {
               }
             }
             L14: {
-              ((kn) this).field_wb = stackIn_40_1 != 0;
+              ((kn) (this)).field_wb = stackIn_40_1 != 0;
               if (var2_int == 0) {
                 if (null != ob.field_Y) {
                   if (ob.field_Y.b(false)) {
@@ -625,20 +640,20 @@ final class kn extends ob implements vb {
               break L15;
             }
             L17: {
-              ((kn) this).field_ob = new ua(stackIn_52_3, stackIn_52_4, 410, 105, (pf) null, var3, 1);
-              ((kn) this).field_ob.field_R = 83;
-              ((kn) this).field_ob.d(0, 5, 5);
-              ((kn) this).c(-123, (qm) (Object) ((kn) this).field_ob);
-              ((kn) this).field_jb = this.a(-1, ci.field_b, oa.field_d, (wc) this);
+              ((kn) (this)).field_ob = new ua(stackIn_52_3, stackIn_52_4, 410, 105, (pf) null, var3, 1);
+              this.field_ob.field_R = 83;
+              this.field_ob.d(0, 5, 5);
+              this.c(-123, this.field_ob);
+              this.field_jb = this.a(-1, ci.field_b, oa.field_d, (wc) (this));
               if (var2_int == 0) {
                 break L17;
               } else {
-                ((kn) this).field_mb = this.a(-1, fo.field_f, fg.field_k, (wc) this);
+                this.field_mb = this.a(-1, fo.field_f, fg.field_k, (wc) (this));
                 break L17;
               }
             }
             L18: {
-              ((kn) this).field_lb = this.a(-1, oj.field_g, qj.field_j, (wc) this);
+              this.field_lb = this.a(-1, oj.field_g, qj.field_j, (wc) (this));
               stackOut_54_0 = this;
               stackIn_56_0 = stackOut_54_0;
               stackIn_55_0 = stackOut_54_0;
@@ -657,35 +672,35 @@ final class kn extends ob implements vb {
               }
             }
             L19: {
-              ((kn) this).field_vb = new ag[stackIn_57_1];
-              ((kn) this).field_vb[1] = ((kn) this).field_lb;
+              ((kn) (this)).field_vb = new ag[stackIn_57_1];
+              this.field_vb[1] = this.field_lb;
               if (var2_int == 0) {
                 break L19;
               } else {
-                ((kn) this).field_vb[2] = ((kn) this).field_mb;
+                this.field_vb[2] = this.field_mb;
                 break L19;
               }
             }
             L20: {
-              ((kn) this).field_vb[0] = ((kn) this).field_jb;
-              if (!((kn) this).field_yb) {
+              this.field_vb[0] = this.field_jb;
+              if (!this.field_yb) {
                 break L20;
               } else {
                 if (var2_int == 0) {
                   break L20;
                 } else {
-                  var5_ref_String__ = new String[((kn) this).field_V.length];
+                  var5_ref_String__ = new String[this.field_V.length];
                   var6_int = -1 + var5_ref_String__.length;
                   var7_int = 0;
                   L21: while (true) {
-                    if (var7_int >= ((kn) this).field_V.length) {
-                      ((kn) this).field_zb = new ti((Object[]) (Object) var5_ref_String__, var6_int, 150);
-                      ((kn) this).field_zb.a(18, ((kn) this).field_lb.field_k + (((kn) this).field_lb.field_j + (((kn) this).field_ob.field_j - 19)), 126, ((kn) this).field_ob.field_n - -((kn) this).field_lb.field_n, -54);
-                      ((kn) this).field_B.a((pg) (Object) ((kn) this).field_zb, (byte) -58);
+                    if (var7_int >= this.field_V.length) {
+                      this.field_zb = new ti(var5_ref_String__, var6_int, 150);
+                      this.field_zb.a(18, this.field_lb.field_k + (this.field_lb.field_j + (this.field_ob.field_j - 19)), 126, this.field_ob.field_n - -this.field_lb.field_n, -54);
+                      this.field_B.a((pg) (this.field_zb), (byte) -58);
                       break L20;
                     } else {
                       L22: {
-                        var8 = ((kn) this).field_V[var7_int];
+                        var8 = this.field_V[var7_int];
                         if (null == ka.field_m) {
                           break L22;
                         } else {
@@ -711,14 +726,14 @@ final class kn extends ob implements vb {
             }
             L23: {
               L24: {
-                ((kn) this).field_kb = this.a((wc) this, lm.field_a, 410);
-                var5 = ((kn) this).field_kb.field_v / 2 + ((kn) this).field_kb.field_n;
-                ((kn) this).field_kb.field_v = 150;
-                ((kn) this).field_kb.field_n = var5 - (20 + ((kn) this).field_kb.field_v);
-                ((kn) this).field_ub = this.a((wc) this, hj.field_e, 410);
-                ((kn) this).field_ub.field_B = false;
-                ((kn) this).field_ub.field_v = ((kn) this).field_kb.field_v;
-                ((kn) this).field_ub.field_n = var5 - -20;
+                this.field_kb = this.a((wc) (this), lm.field_a, 410);
+                var5 = this.field_kb.field_v / 2 + this.field_kb.field_n;
+                this.field_kb.field_v = 150;
+                this.field_kb.field_n = var5 - (20 + this.field_kb.field_v);
+                this.field_ub = this.a((wc) (this), hj.field_e, 410);
+                this.field_ub.field_B = false;
+                this.field_ub.field_v = this.field_kb.field_v;
+                this.field_ub.field_n = var5 - -20;
                 if (var2_int != 0) {
                   break L24;
                 } else {
@@ -745,14 +760,14 @@ final class kn extends ob implements vb {
               var7 = new qm(var10, (wc) null);
               var7.field_j = 163;
               var7.field_k = 80;
-              var7.field_v = ((kn) this).field_v;
+              var7.field_v = this.field_v;
               var7.field_n = 0;
-              var7.field_r = (pf) (Object) new jm(ia.field_c, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true);
-              ((kn) this).c(-96, var7);
+              var7.field_r = (pf) ((Object) new jm(ia.field_c, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
+              this.c(-96, var7);
               break L23;
             }
             L26: {
-              ((kn) this).field_nb = false;
+              this.field_nb = false;
               var6 = this.j(2);
               if (var6 == null) {
                 break L26;
@@ -767,23 +782,23 @@ final class kn extends ob implements vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L27: {
             var2 = decompiledCaughtException;
-            stackOut_78_0 = (RuntimeException) var2;
+            stackOut_78_0 = (RuntimeException) (var2);
             stackOut_78_1 = new StringBuilder().append("kn.<init>(");
             stackIn_80_0 = stackOut_78_0;
             stackIn_80_1 = stackOut_78_1;
             stackIn_79_0 = stackOut_78_0;
             stackIn_79_1 = stackOut_78_1;
             if (param0 == null) {
-              stackOut_80_0 = (RuntimeException) (Object) stackIn_80_0;
-              stackOut_80_1 = (StringBuilder) (Object) stackIn_80_1;
+              stackOut_80_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackOut_80_1 = (StringBuilder) ((Object) stackIn_80_1);
               stackOut_80_2 = "null";
               stackIn_81_0 = stackOut_80_0;
               stackIn_81_1 = stackOut_80_1;
               stackIn_81_2 = stackOut_80_2;
               break L27;
             } else {
-              stackOut_79_0 = (RuntimeException) (Object) stackIn_79_0;
-              stackOut_79_1 = (StringBuilder) (Object) stackIn_79_1;
+              stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
+              stackOut_79_1 = (StringBuilder) ((Object) stackIn_79_1);
               stackOut_79_2 = "{...}";
               stackIn_81_0 = stackOut_79_0;
               stackIn_81_1 = stackOut_79_1;
@@ -791,7 +806,7 @@ final class kn extends ob implements vb {
               break L27;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_81_0, stackIn_81_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_81_0), stackIn_81_2 + ')');
         }
     }
 
@@ -799,9 +814,15 @@ final class kn extends ob implements vb {
         ql.field_a = param2;
         pn.field_d = param0;
         wm.field_I = param1;
+        if (param3 != -43) {
+            field_tb = (long[]) null;
+        }
     }
 
     public static void h(int param0) {
+        if (param0 != 3) {
+            return;
+        }
         field_tb = null;
         field_qb = null;
         field_sb = null;
@@ -834,7 +855,7 @@ final class kn extends ob implements vb {
             try {
               L1: {
                 var4 = param0.getGraphics();
-                ce.field_m.a(0, var4, 0, 0);
+                ce.field_m.a(param3, var4, 0, param2);
                 var4.dispose();
                 break L1;
               }
@@ -850,7 +871,7 @@ final class kn extends ob implements vb {
               if (param1 < -87) {
                 break L3;
               } else {
-                field_pb = null;
+                field_pb = (String) null;
                 break L3;
               }
             }
@@ -860,23 +881,23 @@ final class kn extends ob implements vb {
           decompiledCaughtException = decompiledCaughtParameter1;
           L4: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4_ref2;
+            stackOut_6_0 = (RuntimeException) (var4_ref2);
             stackOut_6_1 = new StringBuilder().append("kn.H(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L4;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -884,117 +905,127 @@ final class kn extends ob implements vb {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + 0 + ',' + 0 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     private final ag a(wc param0, String param1, int param2) {
+        ag discarded$2 = null;
         ag var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ag stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        ag stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ag stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        ag stackOut_2_0 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
+            L1: {
+              if (param2 == 410) {
+                break L1;
+              } else {
+                discarded$2 = this.j(-10);
+                break L1;
+              }
+            }
             var4 = new ag(param1, param0);
-            var4.field_r = (pf) (Object) new mm();
-            var5 = -46 + ((kn) this).field_k;
-            var4.a(30, var5, -30 + ((kn) this).field_v, 15, -92);
-            ((kn) this).c(-116, (qm) (Object) var4);
-            stackOut_0_0 = (ag) var4;
-            stackIn_1_0 = stackOut_0_0;
+            var4.field_r = (pf) ((Object) new mm());
+            var5 = -46 + this.field_k;
+            var4.a(30, var5, -30 + this.field_v, 15, -92);
+            this.c(param2 + -526, var4);
+            stackOut_2_0 = (ag) (var4);
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4_ref;
-            stackOut_2_1 = new StringBuilder().append("kn.T(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
-            } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
-            }
-          }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+            var4_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) (var4_ref);
+            stackOut_4_1 = new StringBuilder().append("kn.T(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 410 + ')');
+          L3: {
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw aa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     final static void a(int param0, int param1, boolean param2, boolean param3) {
+        boolean discarded$1 = false;
         RuntimeException var4 = null;
         int var4_int = 0;
         kc var5 = null;
@@ -1002,6 +1033,7 @@ final class kn extends ob implements vb {
         int var7 = 0;
         String var8 = null;
         jg var9 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
@@ -1023,84 +1055,99 @@ final class kn extends ob implements vb {
                 break L2;
               }
             }
-            if (jo.field_e > 0) {
+            if ((jo.field_e ^ -1) < -1) {
               L3: {
                 ed.j(120);
                 n.field_g.b(param3, (byte) 60);
-                if (null == ln.field_U) {
+                if (!param2) {
                   break L3;
+                } else {
+                  field_tb = (long[]) null;
+                  break L3;
+                }
+              }
+              L4: {
+                if (null == ln.field_U) {
+                  break L4;
                 } else {
                   if (!wh.field_g) {
                     ln.field_U = null;
-                    break L3;
+                    break L4;
                   } else {
-                    boolean discarded$1 = ln.field_U.a(n.field_g.field_V, n.field_g.field_nb, param3, (byte) -104);
-                    break L3;
+                    discarded$1 = ln.field_U.a(n.field_g.field_V, n.field_g.field_nb, param3, (byte) -104);
+                    break L4;
                   }
                 }
               }
               var4_int = 0;
-              L4: while (true) {
-                if (var4_int >= 5) {
-                  L5: {
+              L5: while (true) {
+                if (-6 >= (var4_int ^ -1)) {
+                  L6: {
                     if (g.field_g.field_U != 0) {
                       db.field_a = new w(g.field_g.field_V, g.field_g.field_nb, g.field_g.field_x, g.field_g.field_I, param0, mf.field_d, be.field_l, wj.field_b, pg.field_c, ec.field_g, nj.field_d, (String) null, 0L);
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  L6: {
-                    var9 = f.a(16711422, param1, ga.field_r, dh.field_Gb);
-                    if (var9 == null) {
                       break L6;
                     } else {
-                      eb.a(0, var9);
                       break L6;
                     }
                   }
                   L7: {
-                    var8 = jl.b(0);
-                    if (var8 == null) {
+                    var9 = f.a(16711422, param1, ga.field_r, dh.field_Gb);
+                    if (var9 == null) {
                       break L7;
                     } else {
-                      kh.field_c = var8;
+                      eb.a(0, var9);
                       break L7;
                     }
                   }
+                  L8: {
+                    var8 = jl.b(0);
+                    if (var8 == null) {
+                      break L8;
+                    } else {
+                      kh.field_c = var8;
+                      break L8;
+                    }
+                  }
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  L8: {
+                  L9: {
                     var5 = mn.field_s[var4_int];
                     if (var5 != null) {
-                      L9: {
-                        if (var5.field_U == 0) {
-                          break L9;
+                      L10: {
+                        if (-1 == (var5.field_U ^ -1)) {
+                          break L10;
                         } else {
                           ko.a(var4_int, var5, (byte) -86);
-                          break L9;
+                          break L10;
                         }
                       }
                       var6 = oh.a((byte) 119, var4_int);
                       ia.field_b[var4_int].field_W = tl.field_a[var6];
                       oc.field_f[var4_int].field_rb = cf.field_b[var6];
-                      break L8;
+                      break L9;
                     } else {
-                      break L8;
+                      break L9;
                     }
                   }
                   var4_int++;
-                  continue L4;
+                  continue L5;
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var4, "kn.R(" + param0 + ',' + param1 + ',' + false + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) var4), "kn.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -1110,32 +1157,32 @@ final class kn extends ob implements vb {
         L0: {
           L1: {
             var3 = ArcanistsMulti.field_G ? 1 : 0;
-            if (((kn) this).field_jb == ((kn) this).field_xb) {
+            if (this.field_jb == this.field_xb) {
               u.b(6);
               tl.a(-30267);
               break L1;
             } else {
-              if (((kn) this).field_xb != ((kn) this).field_mb) {
-                if (((kn) this).field_xb == ((kn) this).field_lb) {
+              if (this.field_xb != this.field_mb) {
+                if (this.field_xb == this.field_lb) {
                   L2: {
-                    if (((kn) this).field_zb == null) {
+                    if (this.field_zb == null) {
                       break L2;
                     } else {
-                      var2 = ((kn) this).field_zb.g((byte) 37);
+                      var2 = this.field_zb.g((byte) 37);
                       if (var2 < 0) {
                         break L2;
                       } else {
-                        ob.field_Y.a(((kn) this).field_V[var2].field_e, ((kn) this).field_V[var2].field_g, (byte) -64);
+                        ob.field_Y.a(this.field_V[var2].field_e, this.field_V[var2].field_g, (byte) -64);
                         break L2;
                       }
                     }
                   }
                   nb.a(true, 5);
-                  ((kn) this).field_H.b((qm) (Object) new bj(((kn) this).field_H), 15637);
+                  this.field_H.b(new bj(this.field_H), 15637);
                   break L1;
                 } else {
-                  ((kn) this).field_ub.field_B = false;
-                  var2 = 0;
+                  this.field_ub.field_B = false;
+                  var2 = -94 % ((-8 - param0) / 49);
                   break L0;
                 }
               } else {
@@ -1145,13 +1192,18 @@ final class kn extends ob implements vb {
               }
             }
           }
-          ((kn) this).field_ub.field_B = false;
-          var2 = 0;
+          this.field_ub.field_B = false;
+          var2 = -94 % ((-8 - param0) / 49);
           break L0;
         }
     }
 
     final static void g(boolean param0) {
+        lg discarded$0 = null;
+        if (param0) {
+            eg var2 = (eg) null;
+            discarded$0 = kn.a((eg) null, -48, false, -99, (eg) null);
+        }
         k.field_o = 0;
     }
 
@@ -1183,22 +1235,22 @@ final class kn extends ob implements vb {
         try {
           L0: {
             L1: {
-              if (param4 != ((kn) this).field_kb) {
-                if (param4 == ((kn) this).field_ub) {
+              if (param4 != this.field_kb) {
+                if (param4 == this.field_ub) {
                   this.k(46);
                   break L1;
                 } else {
-                  if (param4 == ((kn) this).field_jb) {
+                  if (param4 == this.field_jb) {
                     this.a(param4, 0);
                     break L1;
                   } else {
-                    if (((kn) this).field_mb == param4) {
+                    if (this.field_mb == param4) {
                       this.a(param4, 0);
                       break L1;
                     } else {
                       L2: {
-                        if (null != ((kn) this).field_zb) {
-                          if (((kn) this).field_zb.field_w) {
+                        if (null != this.field_zb) {
+                          if (this.field_zb.field_w) {
                             stackOut_10_0 = 1;
                             stackIn_12_0 = stackOut_10_0;
                             break L2;
@@ -1217,16 +1269,16 @@ final class kn extends ob implements vb {
                       if (var6_int != 0) {
                         break L1;
                       } else {
-                        if (param4 == ((kn) this).field_lb) {
-                          if (!((kn) this).field_yb) {
-                            ((kn) this).field_H.b((qm) (Object) new qn(((kn) this).field_H, oo.field_C), 15637);
+                        if (param4 == this.field_lb) {
+                          if (!this.field_yb) {
+                            this.field_H.b(new qn(this.field_H, oo.field_C), 15637);
                             break L1;
                           } else {
-                            if (ah.field_c > 0) {
+                            if (-1 > (ah.field_c ^ -1)) {
                               this.a(param4, 0);
                               break L1;
                             } else {
-                              ((kn) this).field_H.b((qm) (Object) new gf(((kn) this).field_H), 15637);
+                              this.field_H.b(new gf(this.field_H), 15637);
                               break L1;
                             }
                           }
@@ -1246,7 +1298,7 @@ final class kn extends ob implements vb {
               if (param0) {
                 break L3;
               } else {
-                ((kn) this).field_xb = null;
+                this.field_xb = (ag) null;
                 break L3;
               }
             }
@@ -1256,23 +1308,23 @@ final class kn extends ob implements vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var6;
+            stackOut_26_0 = (RuntimeException) (var6);
             stackOut_26_1 = new StringBuilder().append("kn.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param4 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L4;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -1280,7 +1332,7 @@ final class kn extends ob implements vb {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
         }
     }
 
@@ -1288,11 +1340,14 @@ final class kn extends ob implements vb {
         int var3 = 0;
         ag var4 = null;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
-        ag[] var6 = ((kn) this).field_vb;
+        ag[] var6 = this.field_vb;
         ag[] var2 = var6;
+        if (param0 > -95) {
+            return;
+        }
         for (var3 = 0; var3 < var6.length; var3++) {
             var4 = var6[var3];
-            var4.field_z = ((kn) this).field_xb == var4 ? true : false;
+            var4.field_z = this.field_xb == var4 ? true : false;
         }
     }
 
@@ -1301,174 +1356,205 @@ final class kn extends ob implements vb {
         RuntimeException var5_ref = null;
         ua var6 = null;
         ag var7 = null;
-        ag stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
+        ag stackIn_2_0 = null;
+        ag stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ag stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
+        ag stackOut_3_0 = null;
+        ag stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
         String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
             var5 = new ag(param1, param3);
-            var5.field_r = (pf) (Object) new cd(param2);
-            var6 = ((kn) this).field_ob;
-            var7 = var5;
-            var6.a((qm) (Object) var7, 122, var6.field_R);
-            ((kn) this).field_ob.e((byte) 64);
-            stackOut_2_0 = (ag) var5;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
+            var5.field_r = (pf) ((Object) new cd(param2));
+            if (param0 == -1) {
+              var6 = this.field_ob;
+              var7 = var5;
+              var6.a(var7, param0 ^ -123, var6.field_R);
+              this.field_ob.e((byte) 64);
+              stackOut_3_0 = (ag) (var5);
+              stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              stackOut_1_0 = (ag) null;
+              stackIn_2_0 = stackOut_1_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var5_ref;
-            stackOut_4_1 = new StringBuilder().append("kn.C(").append(-1).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_5_0 = (RuntimeException) (var5_ref);
+            stackOut_5_1 = new StringBuilder().append("kn.C(").append(param0).append(',');
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
               break L1;
             }
           }
           L2: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
               break L2;
             }
           }
           L3: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
-        return stackIn_3_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     private final ag j(int param0) {
+        if (param0 != 2) {
+            return (ag) null;
+        }
         if (null != ka.field_m) {
-            return ((kn) this).field_lb;
+            return this.field_lb;
         }
         if (null != ob.field_Y) {
             if (ob.field_Y.field_l) {
-                if (((kn) this).field_mb != null) {
-                    return ((kn) this).field_mb;
+                if (this.field_mb != null) {
+                    return this.field_mb;
                 }
             }
         }
-        return ((kn) this).field_jb;
+        return this.field_jb;
     }
 
     private final void g(int param0) {
-        if (!((kn) this).field_G) {
+        if (!this.field_G) {
             return;
         }
-        ((kn) this).field_G = false;
+        this.field_G = false;
         if (param0 != -1) {
-            ((kn) this).field_zb = null;
+            this.field_zb = (ti) null;
         }
     }
 
     final boolean a(qm param0, byte param1, char param2, int param3) {
+        boolean discarded$13 = false;
+        boolean discarded$14 = false;
+        boolean discarded$15 = false;
+        boolean discarded$16 = false;
+        boolean discarded$17 = false;
+        boolean discarded$18 = false;
+        boolean discarded$19 = false;
+        boolean discarded$20 = false;
+        boolean discarded$21 = false;
+        boolean discarded$22 = false;
+        boolean discarded$23 = false;
+        boolean discarded$24 = false;
+        boolean discarded$25 = false;
         Object var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -1490,6 +1576,7 @@ final class kn extends ob implements vb {
         Object stackIn_78_0 = null;
         StringBuilder stackIn_78_1 = null;
         String stackIn_78_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_48_0 = 0;
         int stackOut_52_0 = 0;
@@ -1515,49 +1602,49 @@ final class kn extends ob implements vb {
           L0: {
             L1: {
               var5 = null;
-              if (((kn) this).field_jb.d(-2116)) {
-                var5 = (Object) (Object) ((kn) this).field_jb;
+              if (this.field_jb.d(-2116)) {
+                var5 = this.field_jb;
                 break L1;
               } else {
                 L2: {
-                  if (((kn) this).field_mb == null) {
+                  if (this.field_mb == null) {
                     break L2;
                   } else {
-                    if (((kn) this).field_mb.d(-2116)) {
-                      var5 = (Object) (Object) ((kn) this).field_mb;
+                    if (this.field_mb.d(-2116)) {
+                      var5 = this.field_mb;
                       break L1;
                     } else {
                       break L2;
                     }
                   }
                 }
-                if (((kn) this).field_lb.d(-2116)) {
-                  var5 = (Object) (Object) ((kn) this).field_lb;
+                if (this.field_lb.d(-2116)) {
+                  var5 = this.field_lb;
                   break L1;
                 } else {
-                  if (!((kn) this).field_kb.d(-2116)) {
-                    if (((kn) this).field_ub.d(-2116)) {
-                      var5 = (Object) (Object) ((kn) this).field_ub;
+                  if (!this.field_kb.d(-2116)) {
+                    if (this.field_ub.d(-2116)) {
+                      var5 = this.field_ub;
                       break L1;
                     } else {
-                      if (((kn) this).field_jb.field_z) {
-                        var5 = (Object) (Object) ((kn) this).field_jb;
+                      if (this.field_jb.field_z) {
+                        var5 = this.field_jb;
                         break L1;
                       } else {
                         L3: {
-                          if (null == ((kn) this).field_mb) {
+                          if (null == this.field_mb) {
                             break L3;
                           } else {
-                            if (!((kn) this).field_mb.field_z) {
+                            if (!this.field_mb.field_z) {
                               break L3;
                             } else {
-                              var5 = (Object) (Object) ((kn) this).field_mb;
+                              var5 = this.field_mb;
                               break L1;
                             }
                           }
                         }
-                        if (((kn) this).field_lb.field_z) {
-                          var5 = (Object) (Object) ((kn) this).field_lb;
+                        if (this.field_lb.field_z) {
+                          var5 = this.field_lb;
                           break L1;
                         } else {
                           break L1;
@@ -1565,7 +1652,7 @@ final class kn extends ob implements vb {
                       }
                     }
                   } else {
-                    var5 = (Object) (Object) ((kn) this).field_kb;
+                    var5 = this.field_kb;
                     break L1;
                   }
                 }
@@ -1575,7 +1662,7 @@ final class kn extends ob implements vb {
               if (param1 < -120) {
                 break L4;
               } else {
-                ((kn) this).field_xb = null;
+                this.field_xb = (ag) null;
                 break L4;
               }
             }
@@ -1583,55 +1670,60 @@ final class kn extends ob implements vb {
               var6 = param3;
               if (var6 != 96) {
                 if (97 == var6) {
-                  if ((Object) (Object) ((kn) this).field_jb != var5) {
-                    if ((Object) (Object) ((kn) this).field_mb == var5) {
-                      boolean discarded$13 = ((kn) this).field_lb.a(0, (qm) this);
+                  if (this.field_jb != var5) {
+                    if (this.field_mb == var5) {
+                      discarded$13 = this.field_lb.a(0, (qm) (this));
                       stackOut_48_0 = 1;
                       stackIn_49_0 = stackOut_48_0;
-                      return stackIn_49_0 != 0;
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     } else {
-                      if ((Object) (Object) ((kn) this).field_kb != var5) {
+                      if (this.field_kb != var5) {
                         break L5;
                       } else {
-                        if (!((kn) this).field_ub.field_B) {
+                        if (!this.field_ub.field_B) {
                           break L5;
                         } else {
-                          boolean discarded$14 = ((kn) this).field_ub.a(0, (qm) this);
+                          discarded$14 = this.field_ub.a(0, (qm) (this));
                           stackOut_52_0 = 1;
                           stackIn_53_0 = stackOut_52_0;
-                          return stackIn_53_0 != 0;
+                          decompiledRegionSelector0 = 5;
+                          break L0;
                         }
                       }
                     }
                   } else {
                     L6: {
-                      if (null == ((kn) this).field_mb) {
-                        boolean discarded$15 = ((kn) this).field_lb.a(0, (qm) this);
+                      if (null == this.field_mb) {
+                        discarded$15 = this.field_lb.a(0, (qm) (this));
                         break L6;
                       } else {
-                        boolean discarded$16 = ((kn) this).field_mb.a(0, (qm) this);
+                        discarded$16 = this.field_mb.a(0, (qm) (this));
                         break L6;
                       }
                     }
                     stackOut_44_0 = 1;
                     stackIn_45_0 = stackOut_44_0;
-                    return stackIn_45_0 != 0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   }
                 } else {
                   if (98 == var6) {
-                    if ((Object) (Object) ((kn) this).field_kb == var5) {
-                      boolean discarded$17 = ((kn) this).field_jb.a(0, (qm) this);
+                    if (this.field_kb == var5) {
+                      discarded$17 = this.field_jb.a(0, (qm) (this));
                       stackOut_56_0 = 1;
                       stackIn_57_0 = stackOut_56_0;
-                      return stackIn_57_0 != 0;
+                      decompiledRegionSelector0 = 6;
+                      break L0;
                     } else {
-                      if ((Object) (Object) ((kn) this).field_ub != var5) {
+                      if (this.field_ub != var5) {
                         break L5;
                       } else {
-                        boolean discarded$18 = ((kn) this).field_lb.a(0, (qm) this);
+                        discarded$18 = this.field_lb.a(0, (qm) (this));
                         stackOut_59_0 = 1;
                         stackIn_60_0 = stackOut_59_0;
-                        return stackIn_60_0 != 0;
+                        decompiledRegionSelector0 = 7;
+                        break L0;
                       }
                     }
                   } else {
@@ -1639,63 +1731,68 @@ final class kn extends ob implements vb {
                       break L5;
                     } else {
                       L7: {
-                        if ((Object) (Object) ((kn) this).field_jb == var5) {
+                        if (this.field_jb == var5) {
                           break L7;
                         } else {
-                          if (var5 == (Object) (Object) ((kn) this).field_mb) {
+                          if (var5 == this.field_mb) {
                             break L7;
                           } else {
-                            if ((Object) (Object) ((kn) this).field_lb == var5) {
+                            if (this.field_lb == var5) {
                               L8: {
-                                if (!((kn) this).field_ub.field_B) {
-                                  boolean discarded$19 = ((kn) this).field_kb.a(0, (qm) this);
+                                if (!this.field_ub.field_B) {
+                                  discarded$19 = this.field_kb.a(0, (qm) (this));
                                   break L8;
                                 } else {
-                                  boolean discarded$20 = ((kn) this).field_ub.a(0, (qm) this);
+                                  discarded$20 = this.field_ub.a(0, (qm) (this));
                                   break L8;
                                 }
                               }
                               stackOut_71_0 = 1;
                               stackIn_72_0 = stackOut_71_0;
-                              return stackIn_72_0 != 0;
+                              decompiledRegionSelector0 = 9;
+                              break L0;
                             } else {
                               break L5;
                             }
                           }
                         }
                       }
-                      boolean discarded$21 = ((kn) this).field_kb.a(0, (qm) this);
+                      discarded$21 = this.field_kb.a(0, (qm) (this));
                       stackOut_64_0 = 1;
                       stackIn_65_0 = stackOut_64_0;
-                      return stackIn_65_0 != 0;
+                      decompiledRegionSelector0 = 8;
+                      break L0;
                     }
                   }
                 }
               } else {
-                if (var5 != (Object) (Object) ((kn) this).field_lb) {
-                  if (var5 != (Object) (Object) ((kn) this).field_mb) {
-                    if ((Object) (Object) ((kn) this).field_ub != var5) {
+                if (var5 != this.field_lb) {
+                  if (var5 != this.field_mb) {
+                    if (this.field_ub != var5) {
                       break L5;
                     } else {
-                      boolean discarded$22 = ((kn) this).field_kb.a(0, (qm) this);
+                      discarded$22 = this.field_kb.a(0, (qm) (this));
                       stackOut_38_0 = 1;
                       stackIn_39_0 = stackOut_38_0;
-                      return stackIn_39_0 != 0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     }
                   } else {
-                    boolean discarded$23 = ((kn) this).field_jb.a(0, (qm) this);
+                    discarded$23 = this.field_jb.a(0, (qm) (this));
                     stackOut_35_0 = 1;
                     stackIn_36_0 = stackOut_35_0;
-                    return stackIn_36_0 != 0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 } else {
-                  if (((kn) this).field_mb == null) {
-                    boolean discarded$24 = ((kn) this).field_jb.a(0, (qm) this);
+                  if (this.field_mb == null) {
+                    discarded$24 = this.field_jb.a(0, (qm) (this));
                     stackOut_32_0 = 1;
                     stackIn_33_0 = stackOut_32_0;
-                    return stackIn_33_0 != 0;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   } else {
-                    boolean discarded$25 = ((kn) this).field_mb.a(0, (qm) this);
+                    discarded$25 = this.field_mb.a(0, (qm) (this));
                     return true;
                   }
                 }
@@ -1703,12 +1800,13 @@ final class kn extends ob implements vb {
             }
             stackOut_73_0 = super.a(param0, (byte) -122, param2, param3);
             stackIn_74_0 = stackOut_73_0;
+            decompiledRegionSelector0 = 10;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
-            var5 = (Object) (Object) decompiledCaughtException;
+            var5 = decompiledCaughtException;
             stackOut_75_0 = var5;
             stackOut_75_1 = new StringBuilder().append("kn.N(");
             stackIn_77_0 = stackOut_75_0;
@@ -1717,7 +1815,7 @@ final class kn extends ob implements vb {
             stackIn_76_1 = stackOut_75_1;
             if (param0 == null) {
               stackOut_77_0 = stackIn_77_0;
-              stackOut_77_1 = (StringBuilder) (Object) stackIn_77_1;
+              stackOut_77_1 = (StringBuilder) ((Object) stackIn_77_1);
               stackOut_77_2 = "null";
               stackIn_78_0 = stackOut_77_0;
               stackIn_78_1 = stackOut_77_1;
@@ -1725,7 +1823,7 @@ final class kn extends ob implements vb {
               break L9;
             } else {
               stackOut_76_0 = stackIn_76_0;
-              stackOut_76_1 = (StringBuilder) (Object) stackIn_76_1;
+              stackOut_76_1 = (StringBuilder) ((Object) stackIn_76_1);
               stackOut_76_2 = "{...}";
               stackIn_78_0 = stackOut_76_0;
               stackIn_78_1 = stackOut_76_1;
@@ -1733,12 +1831,53 @@ final class kn extends ob implements vb {
               break L9;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_78_0), stackIn_78_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_74_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_33_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_36_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_39_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_45_0 != 0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_49_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_53_0 != 0;
+                  } else {
+                    if (decompiledRegionSelector0 == 6) {
+                      return stackIn_57_0 != 0;
+                    } else {
+                      if (decompiledRegionSelector0 == 7) {
+                        return stackIn_60_0 != 0;
+                      } else {
+                        if (decompiledRegionSelector0 == 8) {
+                          return stackIn_65_0 != 0;
+                        } else {
+                          if (decompiledRegionSelector0 == 9) {
+                            return stackIn_72_0 != 0;
+                          } else {
+                            return stackIn_74_0;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     private final void a(ag param0, int param1) {
+        boolean discarded$3 = false;
         ag var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -1771,20 +1910,20 @@ final class kn extends ob implements vb {
         try {
           L0: {
             L1: {
-              ((kn) this).field_xb = param0;
-              boolean discarded$3 = param0.a(0, (qm) this);
+              this.field_xb = param0;
+              discarded$3 = param0.a(param1, (qm) (this));
               var3 = this.j(2);
-              stackOut_0_0 = ((kn) this).field_ub;
+              stackOut_0_0 = this.field_ub;
               stackIn_2_0 = stackOut_0_0;
               stackIn_1_0 = stackOut_0_0;
               if (var3 == param0) {
-                stackOut_2_0 = (ag) (Object) stackIn_2_0;
+                stackOut_2_0 = (ag) ((Object) stackIn_2_0);
                 stackOut_2_1 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 stackIn_3_1 = stackOut_2_1;
                 break L1;
               } else {
-                stackOut_1_0 = (ag) (Object) stackIn_1_0;
+                stackOut_1_0 = (ag) ((Object) stackIn_1_0);
                 stackOut_1_1 = 1;
                 stackIn_3_0 = stackOut_1_0;
                 stackIn_3_1 = stackOut_1_1;
@@ -1793,12 +1932,12 @@ final class kn extends ob implements vb {
             }
             L2: {
               stackIn_3_0.field_B = stackIn_3_1 != 0;
-              if (param0 == ((kn) this).field_lb) {
+              if (param0 == this.field_lb) {
                 if (param0 == var3) {
-                  if (((kn) this).field_zb != null) {
+                  if (this.field_zb != null) {
                     L3: {
-                      var4 = ((kn) this).field_zb.g((byte) 37);
-                      var5 = ((kn) this).field_V[var4];
+                      var4 = this.field_zb.g((byte) 37);
+                      var5 = this.field_V[var4];
                       if (var5.field_g != ob.field_Y.field_m) {
                         break L3;
                       } else {
@@ -1810,7 +1949,7 @@ final class kn extends ob implements vb {
                         }
                       }
                     }
-                    ((kn) this).field_ub.field_B = true;
+                    this.field_ub.field_B = true;
                     this.i(-121);
                     break L2;
                   } else {
@@ -1832,23 +1971,23 @@ final class kn extends ob implements vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var3_ref;
+            stackOut_16_0 = (RuntimeException) (var3_ref);
             stackOut_16_1 = new StringBuilder().append("kn.V(");
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -1856,15 +1995,11 @@ final class kn extends ob implements vb {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + 0 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_sb = "Seriously offensive language";
         field_rb = "Go Back";
         field_tb = new long[32];

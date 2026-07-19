@@ -20,14 +20,19 @@ final class kl extends bh {
     static String field_w;
 
     public static void a(boolean param0) {
-        field_B = null;
-        field_r = null;
-        field_x = null;
-        field_p = null;
-        field_z = null;
-        field_n = null;
-        field_w = null;
-        field_v = null;
+        if (!param0) {
+          return;
+        } else {
+          field_B = null;
+          field_r = null;
+          field_x = null;
+          field_p = null;
+          field_z = null;
+          field_n = null;
+          field_w = null;
+          field_v = null;
+          return;
+        }
     }
 
     final static void a(int param0, int param1, int param2) {

@@ -14,34 +14,66 @@ final class ko extends IOException {
 
     final static String a(boolean param0, byte param1, boolean param2, boolean param3) {
         int var4 = 0;
-        L0: {
-          var4 = 0;
-          if (param3) {
-            var4 += 4;
-            break L0;
-          } else {
-            break L0;
+        if (param1 == 100) {
+          L0: {
+            var4 = 0;
+            if (param3) {
+              var4 += 4;
+              break L0;
+            } else {
+              break L0;
+            }
           }
-        }
-        if (!param0) {
-          if (param2) {
-            var4++;
-            return qa.field_k[var4];
+          if (!param0) {
+            if (param2) {
+              var4++;
+              return qa.field_k[var4];
+            } else {
+              return qa.field_k[var4];
+            }
           } else {
-            return qa.field_k[var4];
+            var4 += 2;
+            if (param2) {
+              var4++;
+              return qa.field_k[var4];
+            } else {
+              return qa.field_k[var4];
+            }
           }
         } else {
-          var4 += 2;
-          if (!param2) {
-            return qa.field_k[var4];
+          L1: {
+            field_a = (String[]) null;
+            var4 = 0;
+            if (param3) {
+              var4 += 4;
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          if (param0) {
+            var4 += 2;
+            if (!param2) {
+              return qa.field_k[var4];
+            } else {
+              var4++;
+              return qa.field_k[var4];
+            }
           } else {
-            var4++;
-            return qa.field_k[var4];
+            if (param2) {
+              var4++;
+              return qa.field_k[var4];
+            } else {
+              return qa.field_k[var4];
+            }
           }
         }
     }
 
     public static void a(byte param0) {
+        if (param0 > -97) {
+            return;
+        }
         field_c = null;
         field_a = null;
     }
@@ -136,10 +168,6 @@ final class ko extends IOException {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[25];
         dk.a(field_c, 0, 25, -1);
         field_c[1] = 0;

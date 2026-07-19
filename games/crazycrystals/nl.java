@@ -26,8 +26,8 @@ final class nl extends fb {
         int stackOut_10_0 = 0;
         L0: {
           var16 = CrazyCrystals.field_B;
-          if (24 <= ((nl) this).field_i) {
-            if (((nl) this).field_i < 48) {
+          if (24 <= this.field_i) {
+            if ((this.field_i ^ -1) > -49) {
               L1: {
                 if (24 != param1) {
                   break L1;
@@ -35,20 +35,20 @@ final class nl extends fb {
                   if (24 != param2) {
                     break L1;
                   } else {
-                    vj.field_a[4 - -(1 ^ ((nl) this).field_j)][((nl) this).field_i % 12].b(param5, -param2 + param6, 2 * param1, 3 * param2, ek.field_f[((nl) this).field_a.field_u]);
+                    vj.field_a[4 - -(1 ^ this.field_j)][this.field_i % 12].b(param5, -param2 + param6, 2 * param1, 3 * param2, ek.field_f[this.field_a.field_u]);
                     break L0;
                   }
                 }
               }
-              vj.field_a[4 - -(((nl) this).field_j ^ 1)][((nl) this).field_i % 12].c(param5, param6 + -param2, ek.field_f[((nl) this).field_a.field_u]);
+              vj.field_a[4 - -(this.field_j ^ 1)][this.field_i % 12].c(param5, param6 + -param2, ek.field_f[this.field_a.field_u]);
               break L0;
             } else {
               L2: {
-                var8 = (72 + -((nl) this).field_i) * param1 / 24;
+                var8 = (72 + -this.field_i) * param1 / 24;
                 var9 = -var8 + (param5 - -param1);
-                var10 = (((nl) this).field_i - 24) * param2 / 24;
+                var10 = (this.field_i - 24) * param2 / 24;
                 var11 = -(var10 * 2) + (param2 + param6);
-                var11 = var11 + (-48 + ((nl) this).field_i) * (var10 * ((((nl) this).field_i - 48) * (-48 + ((nl) this).field_i))) / 4608;
+                var11 = var11 + (-48 + this.field_i) * (var10 * ((this.field_i - 48) * (-48 + this.field_i))) / 4608;
                 if (param0) {
                   stackOut_8_0 = param2 + param6;
                   stackIn_9_0 = stackOut_8_0;
@@ -82,7 +82,7 @@ final class nl extends fb {
               }
               var14 = jf.a(var13, 0, 0, 640, var12);
               if (var14 != null) {
-                vj.field_a[(1 ^ ((nl) this).field_j) + 4][((nl) this).field_i % 12].b(var9, var11, var8 * 2, 3 * var10, ek.field_f[((nl) this).field_a.field_u]);
+                vj.field_a[(1 ^ this.field_j) + 4][this.field_i % 12].b(var9, var11, var8 * 2, 3 * var10, ek.field_f[this.field_a.field_u]);
                 var14.a((byte) -99);
                 if (!param4) {
                   break L0;
@@ -107,15 +107,15 @@ final class nl extends fb {
               if (param1 != 24) {
                 break L6;
               } else {
-                if (param2 != 24) {
+                if (-25 != (param2 ^ -1)) {
                   break L6;
                 } else {
-                  vj.field_a[4 - -((nl) this).field_j][0].c(param5, param6 - param2, ek.field_f[((nl) this).field_a.field_u]);
+                  vj.field_a[4 - -this.field_j][0].c(param5, param6 - param2, ek.field_f[this.field_a.field_u]);
                   break L0;
                 }
               }
             }
-            vj.field_a[4 + ((nl) this).field_j][0].b(param5, -param2 + param6, 2 * param1, param2 * 3, ek.field_f[((nl) this).field_a.field_u]);
+            vj.field_a[4 + this.field_j][0].b(param5, -param2 + param6, 2 * param1, param2 * 3, ek.field_f[this.field_a.field_u]);
             break L0;
           }
         }
@@ -123,7 +123,7 @@ final class nl extends fb {
           if (param3 <= -59) {
             break L7;
           } else {
-            ((nl) this).field_j = 30;
+            this.field_j = 30;
             break L7;
           }
         }
@@ -138,53 +138,53 @@ final class nl extends fb {
     }
 
     final fb a(int param0) {
-        ((nl) this).field_i = ((nl) this).field_i + 1;
-        if (!(((nl) this).field_i != 24)) {
-            be.field_d.a(96, 12 * ((nl) this).field_a.field_A, ((nl) this).field_a.field_t * 12, 0, (byte) -111);
+        this.field_i = this.field_i + 1;
+        if (!(-25 != (this.field_i ^ -1))) {
+            be.field_d.a(96, 12 * this.field_a.field_A, this.field_a.field_t * 12, 0, (byte) -111);
         }
-        if (((nl) this).field_i == 48) {
-            ((nl) this).field_h.field_j = (ea) (Object) ((nl) this).field_a;
+        if (this.field_i == 48) {
+            this.field_h.field_j = (ea) ((Object) this.field_a);
         }
-        if (!(((nl) this).field_i >= 72)) {
-            return (fb) this;
+        if (!((this.field_i ^ -1) <= -73)) {
+            return (fb) (this);
         }
         int var2 = 116 / ((param0 - 36) / 62);
-        ((nl) this).field_h.field_j = null;
+        this.field_h.field_j = null;
         return null;
     }
 
     nl(fq param0, f[][] param1) {
         super(param0);
         f var3 = null;
-        ((nl) this).field_i = 0;
+        this.field_i = 0;
         try {
             var3 = param0.field_l;
             while (!(var3 instanceof de)) {
-                var3 = ((pn) (Object) var3).field_l;
+                var3 = ((pn) ((Object) var3)).field_l;
             }
-            ((nl) this).field_j = param0.field_w & 3;
-            ((nl) this).field_h = (de) (Object) var3;
+            this.field_j = param0.field_w & 3;
+            this.field_h = (de) ((Object) var3);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "nl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "nl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(db param0, int param1) {
         bl var2 = null;
+        ko discarded$0 = null;
         try {
             bl.b(param0.a(7693, "", "headers.packvorbis"));
+            if (param1 != 640) {
+                nl.b(100);
+            }
             var2 = bl.a(param0, "jagex logo2.packvorbis", "");
-            ko discarded$0 = var2.a();
+            discarded$0 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "nl.A(" + (param0 != null ? "{...}" : "null") + ',' + 640 + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "nl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Friends can be added in multiplayer<nbsp>games";
     }
 }

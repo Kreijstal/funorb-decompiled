@@ -8,6 +8,9 @@ final class ql extends am {
 
     public static void b(int param0) {
         field_s = null;
+        if (param0 != 16711935) {
+            return;
+        }
         field_u = null;
     }
 
@@ -23,64 +26,60 @@ final class ql extends am {
         int[][] var20 = null;
         int[][] var21 = null;
         int[][] var31 = null;
-        int[][] var41 = null;
+        int[][] var50 = null;
         int[][] var51 = null;
-        int[][] var52 = null;
-        int[][] var53 = null;
+        int[] var52 = null;
+        int[] var53 = null;
         int[] var54 = null;
         int[] var55 = null;
         int[] var56 = null;
         int[] var57 = null;
         int[] var58 = null;
-        int[] var59 = null;
-        int[] var60 = null;
         L0: {
           var19 = Torquing.field_u;
-          var51 = ((ql) this).field_r.a(15142, param1);
-          var41 = var51;
-          var31 = var41;
+          var31 = this.field_r.a(15142, param1);
           var21 = var31;
           var20 = var21;
           var3 = var20;
-          if (!((ql) this).field_r.field_b) {
+          if (!this.field_r.field_b) {
             break L0;
           } else {
-            var54 = ((ql) this).b(0, 2, param1);
-            var52 = ((ql) this).c(24066, param1, 0);
-            var53 = ((ql) this).c(24066, param1, 1);
-            var7 = var51[0];
-            var8 = var51[1];
-            var9 = var51[2];
-            var55 = var52[0];
-            var58 = var52[1];
-            var59 = var52[2];
-            var56 = var53[0];
-            var57 = var53[1];
-            var60 = var53[2];
+            var52 = this.b(0, 2, param1);
+            var50 = this.c(24066, param1, 0);
+            var51 = this.c(24066, param1, 1);
+            var7 = var31[0];
+            var8 = var31[1];
+            var9 = var31[2];
+            var53 = var50[0];
+            var56 = var50[1];
+            var57 = var50[2];
+            var54 = var51[0];
+            var55 = var51[1];
+            var58 = var51[2];
             var16 = 0;
             L1: while (true) {
               if (ci.field_c <= var16) {
                 break L0;
               } else {
-                var17 = var54[var16];
-                if (var17 == 4096) {
-                  var7[var16] = var55[var16];
-                  var8[var16] = var58[var16];
-                  var9[var16] = var59[var16];
+                var17 = var52[var16];
+                if ((var17 ^ -1) == -4097) {
+                  var7[var16] = var53[var16];
+                  var8[var16] = var56[var16];
+                  var9[var16] = var57[var16];
                   var16++;
                   continue L1;
                 } else {
                   if (0 == var17) {
-                    var7[var16] = var56[var16];
-                    var8[var16] = var57[var16];
-                    var9[var16] = var60[var16];
+                    var7[var16] = var54[var16];
+                    var8[var16] = var55[var16];
+                    var9[var16] = var58[var16];
                     var16++;
                     continue L1;
                   } else {
                     var18 = -var17 + 4096;
-                    var7[var16] = var17 * var55[var16] + var18 * var56[var16] >> 12;
-                    var8[var16] = var18 * var57[var16] + var58[var16] * var17 >> 12;
-                    var9[var16] = var17 * var59[var16] + var60[var16] * var18 >> 12;
+                    var7[var16] = var17 * var53[var16] + var18 * var54[var16] >> 824710124;
+                    var8[var16] = var18 * var55[var16] + var56[var16] * var17 >> 2012907180;
+                    var9[var16] = var17 * var57[var16] + var58[var16] * var18 >> -1125359892;
                     var16++;
                     continue L1;
                   }
@@ -93,7 +92,7 @@ final class ql extends am {
           if (param0 == -29116) {
             break L2;
           } else {
-            field_u = null;
+            field_u = (ed) null;
             break L2;
           }
         }
@@ -135,7 +134,7 @@ final class ql extends am {
                   stackOut_2_0 = this;
                   stackIn_4_0 = stackOut_2_0;
                   stackIn_3_0 = stackOut_2_0;
-                  if (param0.i((byte) -101) != 1) {
+                  if (-2 != (param0.i((byte) -101) ^ -1)) {
                     stackOut_4_0 = this;
                     stackOut_4_1 = 0;
                     stackIn_5_0 = stackOut_4_0;
@@ -149,7 +148,7 @@ final class ql extends am {
                     break L2;
                   }
                 }
-                ((ql) this).field_p = stackIn_5_1 != 0;
+                ((ql) (this)).field_p = stackIn_5_1 != 0;
                 break L1;
               } else {
                 break L1;
@@ -159,7 +158,7 @@ final class ql extends am {
               if (param1 == 35) {
                 break L3;
               } else {
-                field_u = null;
+                field_u = (ed) null;
                 break L3;
               }
             }
@@ -169,23 +168,23 @@ final class ql extends am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var4;
+            stackOut_9_0 = (RuntimeException) (var4);
             stackOut_9_1 = new StringBuilder().append("ql.H(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -193,7 +192,7 @@ final class ql extends am {
               break L4;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -201,16 +200,17 @@ final class ql extends am {
         try {
             tb.field_l = param2;
             if (param0 != -1618866100) {
-                field_u = null;
+                field_u = (ed) null;
             }
-            tb.field_l.b((lf) (Object) Torquing.field_v);
+            tb.field_l.b(Torquing.field_v);
             ti.field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "ql.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "ql.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, t param2, int param3, int param4, byte param5) {
+        int incrementValue$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -234,6 +234,7 @@ final class ql extends am {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_34_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_31_0 = null;
         StringBuilder stackOut_31_1 = null;
@@ -247,8 +248,8 @@ final class ql extends am {
         try {
           L0: {
             L1: {
-              var6_int = (param0 - param4 << 8) / param2.field_w;
-              var7 = (param4 << 8) + var6_int * param2.field_v;
+              var6_int = (param0 - param4 << -101308696) / param2.field_w;
+              var7 = (param4 << 578178792) + var6_int * param2.field_v;
               param3 = param3 + param2.field_r;
               param1 = param1 + param2.field_v;
               var8 = param3 * ph.field_j + param1;
@@ -313,6 +314,7 @@ final class ql extends am {
                     param3 = -var10;
                     L6: while (true) {
                       if (0 <= param3) {
+                        decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
                         var14 = var7;
@@ -325,19 +327,19 @@ final class ql extends am {
                             continue L6;
                           } else {
                             L8: {
-                              var15 = var14 >> 8;
+                              var15 = var14 >> -1668928952;
                               var14 = var14 + var6_int;
                               var16 = -var15 + 256;
                               if (0 <= var15) {
                                 L9: {
-                                  int incrementValue$1 = var9;
+                                  incrementValue$1 = var9;
                                   var9++;
                                   var17 = param2.field_y[incrementValue$1];
                                   if (var17 != 0) {
                                     if (var15 <= 255) {
                                       var18 = ph.field_e[var8];
-                                      var19 = 16711935 & var16 * (var18 & 16711935) + (var17 & 16711935) * var15 >> 8;
-                                      ph.field_e[var8] = var19 - -(ie.a(var16 * ie.a(var18, 65280) - -(ie.a(65280, var17) * var15), 16711913) >> 8);
+                                      var19 = 16711935 & var16 * (var18 & 16711935) + (var17 & 16711935) * var15 >> -1902863832;
+                                      ph.field_e[var8] = var19 - -(ie.a(var16 * ie.a(var18, 65280) - -(ie.a(65280, var17) * var15), 16711913) >> 2145960904);
                                       break L9;
                                     } else {
                                       ph.field_e[var8] = var17;
@@ -364,32 +366,34 @@ final class ql extends am {
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var6 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var6;
+            stackOut_31_0 = (RuntimeException) (var6);
             stackOut_31_1 = new StringBuilder().append("ql.C(").append(param0).append(',').append(param1).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param2 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L10;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
@@ -397,7 +401,16 @@ final class ql extends am {
               break L10;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -415,7 +428,7 @@ final class ql extends am {
         int[] var15 = null;
         L0: {
           var9 = Torquing.field_u;
-          var3 = ((ql) this).field_l.a(param1, 25657);
+          var3 = this.field_l.a(param1, 25657);
           if (param0 > 86) {
             break L0;
           } else {
@@ -424,12 +437,12 @@ final class ql extends am {
           }
         }
         L1: {
-          if (!((ql) this).field_l.field_b) {
+          if (!this.field_l.field_b) {
             break L1;
           } else {
-            var14 = ((ql) this).b(0, 0, param1);
-            var15 = ((ql) this).b(0, 1, param1);
-            var13 = ((ql) this).b(0, 2, param1);
+            var14 = this.b(0, 0, param1);
+            var15 = this.b(0, 1, param1);
+            var13 = this.b(0, 2, param1);
             var7 = 0;
             L2: while (true) {
               if (var7 >= ci.field_c) {
@@ -438,7 +451,7 @@ final class ql extends am {
                 var8 = var13[var7];
                 if (var8 != 4096) {
                   if (var8 != 0) {
-                    var3[var7] = var14[var7] * var8 + (4096 - var8) * var15[var7] >> 12;
+                    var3[var7] = var14[var7] * var8 + (4096 - var8) * var15[var7] >> -1618866100;
                     var7++;
                     continue L2;
                   } else {
@@ -459,10 +472,6 @@ final class ql extends am {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = new ed();
         field_s = new qd();
     }

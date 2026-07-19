@@ -11,33 +11,15 @@ final class us extends gn {
     static String[] field_h;
 
     final static int a(byte param0) {
-        RuntimeException var1 = null;
-        int stackIn_4_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        try {
-          L0: {
-            L1: {
-              if (param0 < -69) {
-                break L1;
-              } else {
-                field_g = null;
-                break L1;
-              }
-            }
-            stackOut_3_0 = ck.field_d;
-            stackIn_4_0 = stackOut_3_0;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "us.B(" + param0 + ')');
+        if (param0 >= -69) {
+            field_g = (String) null;
+            return ck.field_d;
         }
-        return stackIn_4_0;
+        return ck.field_d;
     }
 
     final static void g(byte param0) {
+        int discarded$1 = 0;
         Object var1 = null;
         int var2 = 0;
         String var3 = null;
@@ -46,116 +28,98 @@ final class us extends gn {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_33_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_32_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_29_0 = 0;
-        try {
-          L0: {
-            if (null == et.field_d) {
-              return;
-            } else {
-              kb.h(-92);
-              if (mc.field_a != 0) {
-                L1: {
-                  var1 = null;
-                  var2 = je.a(false);
-                  if (var2 != -1) {
-                    var1 = (Object) (Object) rr.field_g[var2];
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                if (param0 <= -75) {
-                  L2: {
-                    ul.a((byte) -126, (String) var1);
-                    if (-1 == var2) {
-                      break L2;
+        String var9 = null;
+        int stackIn_24_0 = 0;
+        int stackOut_23_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_21_0 = 0;
+        if (null == et.field_d) {
+          return;
+        } else {
+          kb.h(-92);
+          if (-1 != (mc.field_a ^ -1)) {
+            L0: {
+              var1 = null;
+              var2 = je.a(false);
+              if ((var2 ^ -1) != 0) {
+                var1 = rr.field_g[var2];
+                break L0;
+              } else {
+                break L0;
+              }
+            }
+            if (param0 <= -75) {
+              ul.a((byte) -126, (String) (var1));
+              if (-1 != var2) {
+                if ((dd.field_f ^ -1) <= -61) {
+                  return;
+                } else {
+                  L1: {
+                    var9 = ep.field_c[var2];
+                    var3 = var9;
+                    var4 = pb.field_C.b(var9, mc.field_a + -44);
+                    if (dd.field_f > 0) {
+                      L2: {
+                        var6 = 60;
+                        var7 = dd.field_f;
+                        if (var9.length() < 70) {
+                          var6 = 10;
+                          var7 = Math.max(0, var6 - (60 - var7));
+                          break L2;
+                        } else {
+                          break L2;
+                        }
+                      }
+                      var8 = (-var7 + var6) * var9.length() / var6;
+                      var3 = var9.substring(0, var8);
+                      break L1;
                     } else {
-                      if (dd.field_f < 60) {
-                        L3: {
-                          var3 = ep.field_c[var2];
-                          var4 = pb.field_C.b(var3, mc.field_a + -44);
-                          if (dd.field_f > 0) {
-                            L4: {
-                              var6 = 60;
-                              var7 = dd.field_f;
-                              if (var3.length() < 70) {
-                                var6 = 10;
-                                var7 = Math.max(0, var6 - (60 - var7));
-                                break L4;
-                              } else {
-                                break L4;
-                              }
-                            }
-                            var8 = (-var7 + var6) * var3.length() / var6;
-                            var3 = var3.substring(0, var8);
-                            break L3;
-                          } else {
-                            break L3;
-                          }
-                        }
-                        L5: {
-                          if (var4 == 1) {
-                            stackOut_32_0 = 16;
-                            stackIn_33_0 = stackOut_32_0;
-                            break L5;
-                          } else {
-                            if (var4 == 2) {
-                              stackOut_31_0 = 6;
-                              stackIn_33_0 = stackOut_31_0;
-                              break L5;
-                            } else {
-                              stackOut_29_0 = 0;
-                              stackIn_33_0 = stackOut_29_0;
-                              break L5;
-                            }
-                          }
-                        }
-                        var5 = stackIn_33_0;
-                        var3 = wj.a("</>", "</shad></col>", true, wj.a("<>", "<col=ffff00><shad=010101>", true, var3));
-                        int discarded$1 = pb.field_C.a(var3, (-mc.field_a + 640 >> -1128845375) - -72, -10 + (var5 - -458) + -48, -44 + mc.field_a - 50, 48, 16777215, -1, 0, 0, 16);
-                        break L2;
+                      break L1;
+                    }
+                  }
+                  L3: {
+                    if (var4 == 1) {
+                      stackOut_23_0 = 16;
+                      stackIn_24_0 = stackOut_23_0;
+                      break L3;
+                    } else {
+                      if (-3 == (var4 ^ -1)) {
+                        stackOut_22_0 = 6;
+                        stackIn_24_0 = stackOut_22_0;
+                        break L3;
                       } else {
-                        break L2;
+                        stackOut_21_0 = 0;
+                        stackIn_24_0 = stackOut_21_0;
+                        break L3;
                       }
                     }
                   }
-                  break L0;
-                } else {
+                  var5 = stackIn_24_0;
+                  var3 = wj.a("</>", "</shad></col>", true, wj.a("<>", "<col=ffff00><shad=010101>", true, var3));
+                  discarded$1 = pb.field_C.a(var3, (-mc.field_a + 640 >> -1128845375) - -72, -10 + (var5 - -458) + -48, -44 + mc.field_a - 50, 48, 16777215, -1, 0, 0, 16);
                   return;
                 }
               } else {
                 return;
               }
+            } else {
+              return;
             }
+          } else {
+            return;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Object) (Object) decompiledCaughtException;
-          throw nb.a((Throwable) var1, "us.C(" + param0 + ')');
         }
     }
 
     public static void f(byte param0) {
-        try {
-            field_h = null;
-            field_f = null;
-            field_g = null;
-            field_i = null;
-            int var1_int = 36 % ((-42 - param0) / 32);
-        } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "us.A(" + param0 + ')');
-        }
+        field_h = null;
+        field_f = null;
+        field_g = null;
+        field_i = null;
+        int var1 = 36 % ((-42 - param0) / 32);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Player Shop";
         field_f = "Loading sound effects";
         field_e = 50;

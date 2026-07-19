@@ -15,8 +15,8 @@ final class jl extends wf {
         if (param0 != 4595) {
             return;
         }
-        ((jl) this).field_eb = true;
-        ((jl) this).field_cb.field_O = false;
+        this.field_eb = true;
+        this.field_cb.field_O = false;
     }
 
     final void a(int param0, String param1, float param2, boolean param3) {
@@ -72,7 +72,7 @@ final class jl extends wf {
             }
             L3: {
               L4: {
-                if (stackIn_5_0 == (((jl) this).field_Z ? 1 : 0)) {
+                if (stackIn_5_0 == (this.field_Z ? 1 : 0)) {
                   L5: {
                     stackOut_7_0 = this;
                     stackIn_9_0 = stackOut_7_0;
@@ -91,19 +91,19 @@ final class jl extends wf {
                       break L5;
                     }
                   }
-                  ((jl) this).field_Z = stackIn_10_1 != 0;
-                  if (((jl) this).field_Z) {
-                    ((jl) this).field_cb.a(4210752, 8405024, (byte) -107);
-                    ((jl) this).field_cb.field_O = true;
+                  ((jl) (this)).field_Z = stackIn_10_1 != 0;
+                  if (this.field_Z) {
+                    this.field_cb.a(4210752, 8405024, (byte) -107);
+                    this.field_cb.field_O = true;
                     break L4;
                   } else {
-                    ((jl) this).field_cb.a(4210752, 2113632, (byte) -115);
-                    if (((jl) this).field_eb) {
-                      ((jl) this).field_cb.field_O = false;
+                    this.field_cb.a(4210752, 2113632, (byte) -115);
+                    if (this.field_eb) {
+                      this.field_cb.field_O = false;
                       break L4;
                     } else {
-                      ((jl) this).field_cb.field_R = (int)(65536.0f * (param2 / 100.0f));
-                      ((jl) this).field_db = param1;
+                      this.field_cb.field_R = (int)(65536.0f * (param2 / 100.0f));
+                      this.field_db = param1;
                       break L3;
                     }
                   }
@@ -111,8 +111,8 @@ final class jl extends wf {
                   break L4;
                 }
               }
-              ((jl) this).field_cb.field_R = (int)(65536.0f * (param2 / 100.0f));
-              ((jl) this).field_db = param1;
+              this.field_cb.field_R = (int)(65536.0f * (param2 / 100.0f));
+              this.field_db = param1;
               break L3;
             }
             break L0;
@@ -121,23 +121,23 @@ final class jl extends wf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var5;
+            stackOut_17_0 = (RuntimeException) (var5);
             stackOut_17_1 = new StringBuilder().append("jl.N(").append(param0).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -145,7 +145,7 @@ final class jl extends wf {
               break L6;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param2 + ',' + param3 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -162,67 +162,66 @@ final class jl extends wf {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
-            ((jl) this).field_ab = param1;
-            if (null != ((jl) this).field_ab) {
-                var3_int = cn.field_g.b(((jl) this).field_ab, 260, cn.field_g.field_I);
-                ((jl) this).a(150 - -var3_int, 300, (byte) 55);
+            this.field_ab = param1;
+            if (null != this.field_ab) {
+                var3_int = cn.field_g.b(this.field_ab, 260, cn.field_g.field_I);
+                this.a(150 - -var3_int, 300, (byte) 55);
             }
-            ((jl) this).field_cb = new oi(13, 50, 274, 30, 15, 2113632, 4210752);
-            ((jl) this).field_Z = false;
-            ((jl) this).field_cb.field_O = true;
-            ((jl) this).field_eb = false;
-            ((jl) this).a(-1, (fe) (Object) ((jl) this).field_cb);
+            this.field_cb = new oi(13, 50, 274, 30, 15, 2113632, 4210752);
+            this.field_Z = false;
+            this.field_cb.field_O = true;
+            this.field_eb = false;
+            this.a(-1, this.field_cb);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "jl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "jl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(int param0, int param1, int param2) {
+        int discarded$0 = 0;
         super.b(param0, param1, param2);
-        cn.field_g.b(((jl) this).field_db, (((jl) this).field_v >> 1) + param2, 103 + param1, 16777215, -1);
-        if (((jl) this).field_ab != null) {
+        cn.field_g.b(this.field_db, (this.field_v >> -2072418207) + param2, 103 + param1, 16777215, -1);
+        if (this.field_ab != null) {
             eh.e(20 + param2, 120 + param1 + -7, 260, 8421504);
-            int discarded$0 = cn.field_g.a(((jl) this).field_ab, param2 + 20, 120 + (param1 + 8), 260, 100, 16777215, -1, 1, 0, cn.field_g.field_I);
+            discarded$0 = cn.field_g.a(this.field_ab, param2 + 20, 120 + (param1 + 8), 260, 100, 16777215, -1, 1, 0, cn.field_g.field_I);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        int var0 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        double var7 = 0.0;
-        field_gb = new int[9216];
-        field_bb = "Black Gold<br>Crude Death";
-        var0 = 48;
-        var1 = 48;
-        var2 = 0;
-        L0: while (true) {
-          if (var2 >= field_gb.length) {
-            return;
-          } else {
-            var3 = var2 / 96;
-            var4 = -(96 * var3) + var2;
-            var5 = -var0 + var4;
-            var6 = var3 + -var1;
-            var7 = -(255.0 * Math.sqrt((double)(var5 * var5 + var6 * var6)) / (double)var0) + 255.0;
-            field_gb[var2] = (int)(var7 + 0.5);
-            if (field_gb[var2] < 0) {
-              field_gb[var2] = 0;
-              var2++;
-              continue L0;
-            } else {
-              var2++;
-              continue L0;
+        $cfr$clinit: {
+            int var0 = 0;
+            int var1 = 0;
+            int var2 = 0;
+            int var3 = 0;
+            int var4 = 0;
+            int var5 = 0;
+            int var6 = 0;
+            double var7 = 0.0;
+            field_gb = new int[9216];
+            field_bb = "Black Gold<br>Crude Death";
+            var0 = 48;
+            var1 = 48;
+            var2 = 0;
+            L0: while (true) {
+              if (var2 >= field_gb.length) {
+                break $cfr$clinit;
+              } else {
+                var3 = var2 / 96;
+                var4 = -(96 * var3) + var2;
+                var5 = -var0 + var4;
+                var6 = var3 + -var1;
+                var7 = -(255.0 * Math.sqrt((double)(var5 * var5 + var6 * var6)) / (double)var0) + 255.0;
+                field_gb[var2] = (int)(var7 + 0.5);
+                if ((field_gb[var2] ^ -1) > -1) {
+                  field_gb[var2] = 0;
+                  var2++;
+                  continue L0;
+                } else {
+                  var2++;
+                  continue L0;
+                }
+              }
             }
-          }
         }
     }
 }

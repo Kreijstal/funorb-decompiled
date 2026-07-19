@@ -14,22 +14,22 @@ final class hk {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -38,17 +38,21 @@ final class hk {
               if (param0 == 7054) {
                 break L1;
               } else {
-                ((hk) this).field_d = null;
+                this.field_d = (int[]) null;
                 break L1;
               }
             }
             L2: while (true) {
-              if (((hk) this).field_b.length <= var3_int) {
+              if (this.field_b.length <= var3_int) {
                 break L0;
               } else {
-                ((hk) this).field_b[var3_int] = param1.d((byte) 69);
+                this.field_b[var3_int] = param1.d((byte) 69);
                 var3_int++;
-                continue L2;
+                if (var4 == 0) {
+                  continue L2;
+                } else {
+                  return;
+                }
               }
             }
           }
@@ -56,39 +60,39 @@ final class hk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("hk.A(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_9_0 = (RuntimeException) (var3);
+            stackOut_9_1 = new StringBuilder().append("hk.A(").append(param0).append(',');
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
               break L3;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
     }
 
     hk() {
-        ((hk) this).field_b = new int[5];
-        ((hk) this).field_c = new int[3];
-        ((hk) this).field_d = new int[5];
-        ((hk) this).field_f = new int[5];
+        this.field_b = new int[5];
+        this.field_c = new int[3];
+        this.field_d = new int[5];
+        this.field_f = new int[5];
     }
 
     public static void a(byte param0) {
@@ -100,10 +104,6 @@ final class hk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Service unavailable";
     }
 }

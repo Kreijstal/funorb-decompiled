@@ -27,10 +27,6 @@ final class lk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "lk.A(";
         field_f = "Checking";
         field_a = "Miniboss? Is that what you call me?";

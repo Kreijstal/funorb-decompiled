@@ -87,6 +87,7 @@ final class ht extends jea {
         RuntimeException stackIn_79_0 = null;
         StringBuilder stackIn_79_1 = null;
         String stackIn_79_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
@@ -146,8 +147,8 @@ final class ht extends jea {
         try {
           L0: {
             L1: {
-              if (!((ht) this).field_gc) {
-                if (((ht) this).field_Ib == 6) {
+              if (!this.field_gc) {
+                if ((this.field_Ib ^ -1) == -7) {
                   stackOut_4_0 = 1;
                   stackIn_6_0 = stackOut_4_0;
                   break L1;
@@ -203,12 +204,13 @@ final class ht extends jea {
             if (stackIn_15_0 == stackIn_15_1) {
               stackOut_17_0 = var3_int;
               stackIn_18_0 = stackOut_17_0;
-              return stackIn_18_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L4: {
                 if (var3_int == 0) {
                   L5: {
-                    stackOut_21_0 = ((ht) this).field_Bb;
+                    stackOut_21_0 = this.field_Bb;
                     stackIn_23_0 = stackOut_21_0;
                     stackIn_22_0 = stackOut_21_0;
                     if (param0.field_Bb) {
@@ -226,18 +228,19 @@ final class ht extends jea {
                     }
                   }
                   if ((stackIn_24_0 ? 1 : 0) == stackIn_24_1) {
-                    stackOut_26_0 = ((ht) this).field_Bb;
+                    stackOut_26_0 = this.field_Bb;
                     stackIn_27_0 = stackOut_26_0;
-                    return stackIn_27_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
-                    if (!((ht) this).field_Bb) {
+                    if (!this.field_Bb) {
                       break L4;
                     } else {
-                      if (param0.field_cc == ((ht) this).field_cc) {
+                      if (param0.field_cc == this.field_cc) {
                         break L4;
                       } else {
                         L6: {
-                          if (((ht) this).field_cc >= param0.field_cc) {
+                          if (this.field_cc >= param0.field_cc) {
                             stackOut_32_0 = 0;
                             stackIn_33_0 = stackOut_32_0;
                             break L6;
@@ -247,7 +250,8 @@ final class ht extends jea {
                             break L6;
                           }
                         }
-                        return stackIn_33_0 != 0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       }
                     }
                   }
@@ -256,7 +260,7 @@ final class ht extends jea {
                 }
               }
               L7: {
-                if (((ht) this).field_ec) {
+                if (this.field_ec) {
                   stackOut_36_0 = 0;
                   stackIn_37_0 = stackOut_36_0;
                   break L7;
@@ -286,7 +290,7 @@ final class ht extends jea {
               }
               if (stackIn_40_0 != stackIn_40_1) {
                 L9: {
-                  if (((ht) this).field_ec) {
+                  if (this.field_ec) {
                     stackOut_44_0 = 0;
                     stackIn_45_0 = stackOut_44_0;
                     break L9;
@@ -296,16 +300,17 @@ final class ht extends jea {
                     break L9;
                   }
                 }
-                return stackIn_45_0 != 0;
+                decompiledRegionSelector0 = 3;
+                break L0;
               } else {
-                if (((ht) this).field_ec) {
+                if (this.field_ec) {
                   L10: {
-                    if (((ht) this).field_Yb) {
+                    if (this.field_Yb) {
                       stackOut_55_0 = 1;
                       stackIn_57_0 = stackOut_55_0;
                       break L10;
                     } else {
-                      if (((ht) this).field_yb == 2) {
+                      if (this.field_yb == 2) {
                         stackOut_54_0 = 1;
                         stackIn_57_0 = stackOut_54_0;
                         break L10;
@@ -366,7 +371,7 @@ final class ht extends jea {
                   }
                   if (stackIn_69_0 == stackIn_69_1) {
                     L14: {
-                      if (~param0.field_Gb <= ~((ht) this).field_Gb) {
+                      if ((param0.field_Gb ^ -1L) <= (this.field_Gb ^ -1L)) {
                         stackOut_74_0 = 0;
                         stackIn_75_0 = stackOut_74_0;
                         break L14;
@@ -376,15 +381,17 @@ final class ht extends jea {
                         break L14;
                       }
                     }
+                    decompiledRegionSelector0 = 6;
                     break L0;
                   } else {
                     stackOut_70_0 = var6;
                     stackIn_71_0 = stackOut_70_0;
-                    return stackIn_71_0 != 0;
+                    decompiledRegionSelector0 = 5;
+                    break L0;
                   }
                 } else {
                   L15: {
-                    if (param0.field_Gb <= ((ht) this).field_Gb) {
+                    if (param0.field_Gb <= this.field_Gb) {
                       stackOut_49_0 = 0;
                       stackIn_50_0 = stackOut_49_0;
                       break L15;
@@ -394,7 +401,8 @@ final class ht extends jea {
                       break L15;
                     }
                   }
-                  return stackIn_50_0 != 0;
+                  decompiledRegionSelector0 = 4;
+                  break L0;
                 }
               }
             }
@@ -403,23 +411,23 @@ final class ht extends jea {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var3 = decompiledCaughtException;
-            stackOut_76_0 = (RuntimeException) var3;
+            stackOut_76_0 = (RuntimeException) (var3);
             stackOut_76_1 = new StringBuilder().append("ht.A(");
             stackIn_78_0 = stackOut_76_0;
             stackIn_78_1 = stackOut_76_1;
             stackIn_77_0 = stackOut_76_0;
             stackIn_77_1 = stackOut_76_1;
             if (param0 == null) {
-              stackOut_78_0 = (RuntimeException) (Object) stackIn_78_0;
-              stackOut_78_1 = (StringBuilder) (Object) stackIn_78_1;
+              stackOut_78_0 = (RuntimeException) ((Object) stackIn_78_0);
+              stackOut_78_1 = (StringBuilder) ((Object) stackIn_78_1);
               stackOut_78_2 = "null";
               stackIn_79_0 = stackOut_78_0;
               stackIn_79_1 = stackOut_78_1;
               stackIn_79_2 = stackOut_78_2;
               break L16;
             } else {
-              stackOut_77_0 = (RuntimeException) (Object) stackIn_77_0;
-              stackOut_77_1 = (StringBuilder) (Object) stackIn_77_1;
+              stackOut_77_0 = (RuntimeException) ((Object) stackIn_77_0);
+              stackOut_77_1 = (StringBuilder) ((Object) stackIn_77_1);
               stackOut_77_2 = "{...}";
               stackIn_79_0 = stackOut_77_0;
               stackIn_79_1 = stackOut_77_1;
@@ -427,58 +435,138 @@ final class ht extends jea {
               break L16;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_79_0, stackIn_79_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_79_0), stackIn_79_2 + ',' + param1 + ')');
         }
-        return stackIn_75_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_18_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_27_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_33_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_45_0 != 0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_50_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_71_0 != 0;
+                  } else {
+                    return stackIn_75_0 != 0;
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     public static void d(byte param0) {
         field_Fb = null;
         field_Db = null;
         field_Pb = null;
+        if (param0 > -101) {
+            field_Db = (jpa) null;
+        }
     }
 
     ht(int param0) {
         super(0L, (jea) null);
-        ((ht) this).field_ac = new byte[param0];
+        this.field_ac = new byte[param0];
     }
 
     final int f(int param0) {
         if (param0 != 0) {
-            ((ht) this).field_Cb = null;
+            this.field_Cb = (String[]) null;
+            return (int)this.e(0);
         }
-        return (int)((ht) this).e(0);
+        return (int)this.e(0);
     }
 
     final boolean g(int param0) {
         if (param0 != 0) {
             return false;
         }
-        return !((ht) this).d(param0) ? true : false;
+        return !this.d(param0 ^ 0) ? true : false;
     }
 
     final static int[] d(int param0, boolean param1) {
-        int var5 = 0;
-        g var6 = null;
-        int var7 = TombRacer.field_G ? 1 : 0;
-        int[] var8 = new int[rga.b(26499, param0)];
-        int[] var2 = var8;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int[] var2 = null;
         int var3 = 0;
-        g[] var4 = cm.field_a[param0].field_c;
-        for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = var4[var5];
-            int incrementValue$0 = var3;
-            var3++;
-            var8[incrementValue$0] = var6.field_f;
+        g[] var4 = null;
+        int var5 = 0;
+        int var7 = 0;
+        int[] var8 = null;
+        g[] var9 = null;
+        g var11 = null;
+        g[] var12 = null;
+        g var13 = null;
+        int[] stackIn_6_0 = null;
+        int[] stackIn_8_0 = null;
+        int[] stackIn_13_0 = null;
+        int[] stackIn_14_0 = null;
+        int[] stackOut_12_0 = null;
+        int[] stackOut_5_0 = null;
+        var7 = TombRacer.field_G ? 1 : 0;
+        var8 = new int[rga.b(26499, param0)];
+        var2 = var8;
+        if (param1) {
+          var3 = 0;
+          var12 = cm.field_a[param0].field_c;
+          var5 = 0;
+          L0: while (true) {
+            if (var5 < var12.length) {
+              var13 = var12[var5];
+              stackOut_12_0 = (int[]) (var8);
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_13_0 = stackOut_12_0;
+              if (var7 == 0) {
+                incrementValue$18 = var3;
+                var3++;
+                stackIn_14_0[incrementValue$18] = var13.field_f;
+                var5++;
+                continue L0;
+              } else {
+                return stackIn_13_0;
+              }
+            } else {
+              return var8;
+            }
+          }
+        } else {
+          field_Db = (jpa) null;
+          var3 = 0;
+          var9 = cm.field_a[param0].field_c;
+          var4 = var9;
+          var5 = 0;
+          L1: while (true) {
+            if (var5 < var9.length) {
+              var11 = var9[var5];
+              stackOut_5_0 = (int[]) (var8);
+              stackIn_8_0 = stackOut_5_0;
+              stackIn_6_0 = stackOut_5_0;
+              if (var7 != 0) {
+                return stackIn_8_0;
+              } else {
+                incrementValue$19 = var3;
+                var3++;
+                stackIn_6_0[incrementValue$19] = var11.field_f;
+                var5++;
+                continue L1;
+              }
+            } else {
+              return var8;
+            }
+          }
         }
-        return var2;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Pb = new int[]{0, 23, 24, 25};
         field_Xb = 0;
     }

@@ -26,6 +26,15 @@ final class t {
     static int[] field_g;
 
     private final static void c() {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         int var0 = 0;
         int var1 = 0;
         int var2 = 0;
@@ -58,7 +67,7 @@ final class t {
                 var9 = (field_c - var3) * field_n[var5 - var3];
                 field_b[var2] = var0 + (var6 + ((field_f[2] - var6) * var9 >> 16) << 9) / field_c;
                 field_q[var2] = var1 + (var7 + ((field_m[2] - var7) * var9 >> 16) << 9) / field_c;
-                int incrementValue$9 = var2;
+                incrementValue$9 = var2;
                 var2++;
                 field_l[incrementValue$9] = var8 + ((field_s - var8) * var9 >> 16);
                 break L1;
@@ -70,7 +79,7 @@ final class t {
               var9 = (field_c - var3) * field_n[var4 - var3];
               field_b[var2] = var0 + (var6 + ((field_f[1] - var6) * var9 >> 16) << 9) / field_c;
               field_q[var2] = var1 + (var7 + ((field_m[1] - var7) * var9 >> 16) << 9) / field_c;
-              int incrementValue$10 = var2;
+              incrementValue$10 = var2;
               var2++;
               field_l[incrementValue$10] = var8 + ((field_t - var8) * var9 >> 16);
               break L0;
@@ -78,7 +87,7 @@ final class t {
           } else {
             field_b[var2] = field_r[0];
             field_q[var2] = field_d[0];
-            int incrementValue$11 = var2;
+            incrementValue$11 = var2;
             var2++;
             field_l[incrementValue$11] = field_k;
             break L0;
@@ -96,7 +105,7 @@ final class t {
                 var9 = (field_c - var4) * field_n[var3 - var4];
                 field_b[var2] = var0 + (var6 + ((field_f[0] - var6) * var9 >> 16) << 9) / field_c;
                 field_q[var2] = var1 + (var7 + ((field_m[0] - var7) * var9 >> 16) << 9) / field_c;
-                int incrementValue$12 = var2;
+                incrementValue$12 = var2;
                 var2++;
                 field_l[incrementValue$12] = var8 + ((field_k - var8) * var9 >> 16);
                 break L3;
@@ -108,7 +117,7 @@ final class t {
               var9 = (field_c - var4) * field_n[var5 - var4];
               field_b[var2] = var0 + (var6 + ((field_f[2] - var6) * var9 >> 16) << 9) / field_c;
               field_q[var2] = var1 + (var7 + ((field_m[2] - var7) * var9 >> 16) << 9) / field_c;
-              int incrementValue$13 = var2;
+              incrementValue$13 = var2;
               var2++;
               field_l[incrementValue$13] = var8 + ((field_s - var8) * var9 >> 16);
               break L2;
@@ -116,7 +125,7 @@ final class t {
           } else {
             field_b[var2] = field_r[1];
             field_q[var2] = field_d[1];
-            int incrementValue$14 = var2;
+            incrementValue$14 = var2;
             var2++;
             field_l[incrementValue$14] = field_t;
             break L2;
@@ -134,7 +143,7 @@ final class t {
                 var9 = (field_c - var5) * field_n[var4 - var5];
                 field_b[var2] = var0 + (var6 + ((field_f[1] - var6) * var9 >> 16) << 9) / field_c;
                 field_q[var2] = var1 + (var7 + ((field_m[1] - var7) * var9 >> 16) << 9) / field_c;
-                int incrementValue$15 = var2;
+                incrementValue$15 = var2;
                 var2++;
                 field_l[incrementValue$15] = var8 + ((field_t - var8) * var9 >> 16);
                 break L5;
@@ -146,7 +155,7 @@ final class t {
               var9 = (field_c - var5) * field_n[var3 - var5];
               field_b[var2] = var0 + (var6 + ((field_f[0] - var6) * var9 >> 16) << 9) / field_c;
               field_q[var2] = var1 + (var7 + ((field_m[0] - var7) * var9 >> 16) << 9) / field_c;
-              int incrementValue$16 = var2;
+              incrementValue$16 = var2;
               var2++;
               field_l[incrementValue$16] = var8 + ((field_k - var8) * var9 >> 16);
               break L4;
@@ -154,7 +163,7 @@ final class t {
           } else {
             field_b[var2] = field_r[2];
             field_q[var2] = field_d[2];
-            int incrementValue$17 = var2;
+            incrementValue$17 = var2;
             var2++;
             field_l[incrementValue$17] = field_s;
             break L4;
@@ -362,8 +371,8 @@ final class t {
         int var14 = 0;
         int var15 = 0;
         Throwable decompiledCaughtException = null;
-        field_j = 0;
-        field_i = 2;
+        field_j = param0;
+        field_i = param1;
         field_e = param2;
         field_k = param6;
         field_t = param7;
@@ -521,10 +530,6 @@ final class t {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[3];
         field_u = new int[3];
         field_n = ti.field_i;

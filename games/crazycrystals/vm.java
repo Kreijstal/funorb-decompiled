@@ -18,9 +18,10 @@ final class vm {
     static Vector[] field_j;
 
     public static void b(byte param0) {
+        mb[] discarded$2 = null;
         field_h = null;
         if (param0 <= 111) {
-          mb[] discarded$2 = vm.a((byte) 36);
+          discarded$2 = vm.a((byte) 36);
           field_d = null;
           field_g = null;
           field_e = null;
@@ -41,53 +42,50 @@ final class vm {
         lm var2 = null;
         int var3 = 0;
         lm var4 = null;
-        lm var5 = null;
-        lm var6 = null;
         var3 = CrazyCrystals.field_B;
         if (param0 != 0) {
-          field_d = null;
+          field_d = (int[]) null;
           L0: while (true) {
-            if (((vm) this).field_c > ((vm) this).field_i) {
-              var6 = ((vm) this).field_f[((vm) this).field_i];
-              var4 = var6;
+            if (this.field_c > this.field_i) {
+              var4 = this.field_f[this.field_i];
               var2 = var4;
-              if (var6.field_h.a((byte) 102)) {
+              if (var4.field_h.a((byte) 102)) {
                 L1: {
-                  if (var6.field_i < 0) {
+                  if (var4.field_i < 0) {
                     break L1;
                   } else {
-                    if (var6.field_h.e(var6.field_i, 75)) {
+                    if (var4.field_h.e(var4.field_i, 75)) {
                       break L1;
                     } else {
-                      this.a(var2, 1, var6.field_h.b(25030, var6.field_i));
+                      this.a(var2, 1, var4.field_h.b(25030, var4.field_i));
                       return false;
                     }
                   }
                 }
                 L2: {
-                  if (var6.field_b == null) {
+                  if (var4.field_b == null) {
                     break L2;
                   } else {
-                    if (var6.field_h.a(-20402, var6.field_b)) {
+                    if (var4.field_h.a(-20402, var4.field_b)) {
                       break L2;
                     } else {
-                      this.a(var2, 1, var6.field_h.b(var6.field_b, param0 ^ -75));
+                      this.a(var2, 1, var4.field_h.b(var4.field_b, param0 ^ -75));
                       return false;
                     }
                   }
                 }
                 L3: {
-                  if (var6.field_i >= 0) {
+                  if ((var4.field_i ^ -1) <= -1) {
                     break L3;
                   } else {
-                    if (null != var6.field_b) {
+                    if (null != var4.field_b) {
                       break L3;
                     } else {
-                      if (null == var6.field_f) {
+                      if (null == var4.field_f) {
                         break L3;
                       } else {
-                        if (!var6.field_h.a(false)) {
-                          this.a(var2, param0 ^ 1, var6.field_h.b(param0 + 3492));
+                        if (!var4.field_h.a(false)) {
+                          this.a(var2, param0 ^ 1, var4.field_h.b(param0 + 3492));
                           return false;
                         } else {
                           break L3;
@@ -96,10 +94,10 @@ final class vm {
                     }
                   }
                 }
-                ((vm) this).field_i = ((vm) this).field_i + 1;
+                this.field_i = this.field_i + 1;
                 continue L0;
               } else {
-                this.a(var6, 1, 0);
+                this.a(var4, 1, 0);
                 return false;
               }
             } else {
@@ -108,47 +106,46 @@ final class vm {
           }
         } else {
           L4: while (true) {
-            if (((vm) this).field_c > ((vm) this).field_i) {
-              var5 = ((vm) this).field_f[((vm) this).field_i];
-              var4 = var5;
+            if (this.field_c > this.field_i) {
+              var4 = this.field_f[this.field_i];
               var2 = var4;
-              if (var5.field_h.a((byte) 102)) {
+              if (var4.field_h.a((byte) 102)) {
                 L5: {
-                  if (var5.field_i < 0) {
+                  if (var4.field_i < 0) {
                     break L5;
                   } else {
-                    if (var5.field_h.e(var5.field_i, 75)) {
+                    if (var4.field_h.e(var4.field_i, 75)) {
                       break L5;
                     } else {
-                      this.a(var2, 1, var5.field_h.b(25030, var5.field_i));
+                      this.a(var2, 1, var4.field_h.b(25030, var4.field_i));
                       return false;
                     }
                   }
                 }
                 L6: {
-                  if (var5.field_b == null) {
+                  if (var4.field_b == null) {
                     break L6;
                   } else {
-                    if (var5.field_h.a(-20402, var5.field_b)) {
+                    if (var4.field_h.a(-20402, var4.field_b)) {
                       break L6;
                     } else {
-                      this.a(var2, 1, var5.field_h.b(var5.field_b, param0 ^ -75));
+                      this.a(var2, 1, var4.field_h.b(var4.field_b, param0 ^ -75));
                       return false;
                     }
                   }
                 }
                 L7: {
-                  if (var5.field_i >= 0) {
+                  if ((var4.field_i ^ -1) <= -1) {
                     break L7;
                   } else {
-                    if (null != var5.field_b) {
+                    if (null != var4.field_b) {
                       break L7;
                     } else {
-                      if (null == var5.field_f) {
+                      if (null == var4.field_f) {
                         break L7;
                       } else {
-                        if (!var5.field_h.a(false)) {
-                          this.a(var2, param0 ^ 1, var5.field_h.b(param0 + 3492));
+                        if (!var4.field_h.a(false)) {
+                          this.a(var2, param0 ^ 1, var4.field_h.b(param0 + 3492));
                           return false;
                         } else {
                           break L7;
@@ -157,10 +154,10 @@ final class vm {
                     }
                   }
                 }
-                ((vm) this).field_i = ((vm) this).field_i + 1;
+                this.field_i = this.field_i + 1;
                 continue L4;
               } else {
-                this.a(var5, 1, 0);
+                this.a(var4, 1, 0);
                 return false;
               }
             } else {
@@ -182,6 +179,7 @@ final class vm {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
@@ -199,34 +197,36 @@ final class vm {
             if (param1) {
               stackOut_3_0 = gh.field_F.a(param2);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = ec.field_m.a(param2);
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("vm.D(").append(param0).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -234,9 +234,13 @@ final class vm {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final static mb[] a(byte param0) {
@@ -270,13 +274,13 @@ final class vm {
         try {
           L0: {
             L1: {
-              var4_float = (float)(param1 + ((vm) this).field_i) + (float)param2 / 100.0f;
-              ((vm) this).field_b = (float)((vm) this).field_a * var4_float / (float)(1 + ((vm) this).field_c);
+              var4_float = (float)(param1 + this.field_i) + (float)param2 / 100.0f;
+              this.field_b = (float)this.field_a * var4_float / (float)(1 + this.field_c);
               if (param2 == 0) {
-                ((vm) this).field_l = param0.field_c;
+                this.field_l = param0.field_c;
                 break L1;
               } else {
-                ((vm) this).field_l = param0.field_f + " - " + param2 + "%";
+                this.field_l = param0.field_f + " - " + param2 + "%";
                 break L1;
               }
             }
@@ -286,23 +290,23 @@ final class vm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_0 = (RuntimeException) (var4);
             stackOut_4_1 = new StringBuilder().append("vm.E(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -310,7 +314,7 @@ final class vm {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -319,10 +323,6 @@ final class vm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Return to game";
         field_h = "Email (Login):";
         field_g = new wb();

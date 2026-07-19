@@ -10,10 +10,20 @@ final class kc {
 
     public static void a(boolean param0) {
         field_a = null;
-        field_c = null;
-        field_d = null;
-        field_b = null;
-        field_e = null;
+        if (!param0) {
+          kc.a(true);
+          field_c = null;
+          field_d = null;
+          field_b = null;
+          field_e = null;
+          return;
+        } else {
+          field_c = null;
+          field_d = null;
+          field_b = null;
+          field_e = null;
+          return;
+        }
     }
 
     static int a(int param0, int param1) {
@@ -21,10 +31,6 @@ final class kc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Activate powerup";
     }
 }

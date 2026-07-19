@@ -8,9 +8,9 @@ abstract class aba extends pk implements fca {
     final jg c(byte param0) {
         if (param0 != 35) {
           field_f = true;
-          return ((aba) this).a(((aba) this).field_e.field_w, false);
+          return this.a(this.field_e.field_w, false);
         } else {
-          return ((aba) this).a(((aba) this).field_e.field_w, false);
+          return this.a(this.field_e.field_w, false);
         }
     }
 
@@ -21,8 +21,8 @@ abstract class aba extends pk implements fca {
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
         if (param0 == 5) {
-          if (null != ((aba) this).field_e.field_w) {
-            if (((aba) this).field_e.field_w.length() == 0) {
+          if (null != this.field_e.field_w) {
+            if (this.field_e.field_w.length() == 0) {
               return true;
             } else {
               return false;
@@ -34,11 +34,11 @@ abstract class aba extends pk implements fca {
           }
         } else {
           field_f = true;
-          if (null == ((aba) this).field_e.field_w) {
+          if (null == this.field_e.field_w) {
             return true;
           } else {
             L0: {
-              if (((aba) this).field_e.field_w.length() != 0) {
+              if (this.field_e.field_w.length() != 0) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
@@ -54,83 +54,94 @@ abstract class aba extends pk implements fca {
     }
 
     final static kv[] a(kv param0, boolean param1) {
+        kv[] discarded$2 = null;
         kv[] var2 = null;
         RuntimeException var2_ref = null;
-        kv[] var3 = null;
-        kv[] stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        kv var3 = null;
+        kv[] var4 = null;
+        kv[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kv[] stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        kv[] stackOut_2_0 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            var3 = new kv[9];
-            var2 = var3;
-            var3[4] = param0;
-            stackOut_0_0 = (kv[]) var2;
-            stackIn_1_0 = stackOut_0_0;
+            L1: {
+              if (param1) {
+                break L1;
+              } else {
+                var3 = (kv) null;
+                discarded$2 = aba.a((kv) null, true);
+                break L1;
+              }
+            }
+            var4 = new kv[9];
+            var2 = var4;
+            var4[4] = param0;
+            stackOut_2_0 = (kv[]) (var2);
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("aba.CA(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackOut_4_0 = (RuntimeException) (var2_ref);
+            stackOut_4_1 = new StringBuilder().append("aba.CA(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + true + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     public final void a(lka param0, byte param1) {
         try {
-            int var3_int = 96 % (param1 / 49);
-            ((aba) this).a(574);
+            int var3_int = 96 % ((param1 - 0) / 49);
+            this.a(574);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "aba.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "aba.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final String d(byte param0) {
         if (param0 < 97) {
-            return null;
+            return (String) null;
         }
-        return ((aba) this).a((byte) 112, ((aba) this).field_e.field_w);
+        return this.a((byte) 112, this.field_e.field_w);
     }
 
     final static void a(byte param0, int param1) {
@@ -139,6 +150,7 @@ abstract class aba extends pk implements fca {
     }
 
     public final void a(lka param0, int param1) {
+        jg discarded$2 = null;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -162,7 +174,7 @@ abstract class aba extends pk implements fca {
               if (param1 == 0) {
                 break L1;
               } else {
-                jg discarded$2 = ((aba) this).c((byte) 6);
+                discarded$2 = this.c((byte) 6);
                 break L1;
               }
             }
@@ -172,23 +184,23 @@ abstract class aba extends pk implements fca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("aba.G(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -196,13 +208,14 @@ abstract class aba extends pk implements fca {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     final static pp a(lu param0, int param1) {
+        pp discarded$2 = null;
         RuntimeException var2 = null;
-        Object var3 = null;
+        lu var3 = null;
         eba stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -227,8 +240,8 @@ abstract class aba extends pk implements fca {
               if (param1 == 9) {
                 break L1;
               } else {
-                var3 = null;
-                pp discarded$2 = aba.a((lu) null, 85);
+                var3 = (lu) null;
+                discarded$2 = aba.a((lu) null, 85);
                 break L1;
               }
             }
@@ -240,23 +253,23 @@ abstract class aba extends pk implements fca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("aba.BA(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -264,9 +277,9 @@ abstract class aba extends pk implements fca {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return (pp) (Object) stackIn_3_0;
+        return (pp) ((Object) stackIn_3_0);
     }
 
     abstract jg a(String param0, boolean param1);
@@ -275,9 +288,9 @@ abstract class aba extends pk implements fca {
 
     aba(lka param0) {
         try {
-            ((aba) this).field_e = param0;
+            this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "aba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "aba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

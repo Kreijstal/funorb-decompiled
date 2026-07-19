@@ -33,15 +33,15 @@ final class kk extends bca {
         String stackOut_6_2 = null;
         try {
           L0: {
-            ((kk) this).field_k = param0.e((byte) 100);
-            ((kk) this).field_o = new eaa();
+            this.field_k = param0.e((byte) 100);
+            this.field_o = new eaa();
             var2_int = param0.b(16711935);
             L1: while (true) {
               var2_int--;
-              if (var2_int < 0) {
+              if (-1 < (var2_int ^ -1)) {
                 break L0;
               } else {
-                ((kk) this).field_o.a((bw) (Object) dca.a((byte) 102, param0), true);
+                this.field_o.a(dca.a((byte) 102, param0), true);
                 continue L1;
               }
             }
@@ -50,23 +50,23 @@ final class kk extends bca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_0 = (RuntimeException) (var2);
             stackOut_5_1 = new StringBuilder().append("kk.<init>(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -74,7 +74,7 @@ final class kk extends bca {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
     }
 
@@ -108,20 +108,23 @@ final class kk extends bca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "kk.B(" + param0 + ')');
+          throw pe.a((Throwable) ((Object) var1), "kk.B(" + param0 + ')');
         }
     }
 
     final void a(op param0, int param1) {
         try {
-            ((kk) this).a(param0, (byte) -2);
+            this.a(param0, (byte) -2);
             int var3_int = 65 / ((12 - param1) / 35);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "kk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "kk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean d(byte param0) {
+        if (param0 < 72) {
+            return true;
+        }
         return tc.a(24215, nia.d(-31768));
     }
 
@@ -160,11 +163,11 @@ final class kk extends bca {
               if (param0 == 5) {
                 break L1;
               } else {
-                field_q = null;
+                field_q = (String) null;
                 break L1;
               }
             }
-            stackOut_2_0 = new bp(param1, (kk) this);
+            stackOut_2_0 = new bp(param1, (kk) (this));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -172,23 +175,23 @@ final class kk extends bca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("kk.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -196,16 +199,12 @@ final class kk extends bca {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
-        return (at) (Object) stackIn_3_0;
+        return (at) ((Object) stackIn_3_0);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = 0;
         field_t = "Show private chat from my friends and opponents";
         field_r = "Here you can set up a rated game. If you win, your rating will go up. If<nbsp>you lose, it will go down!<br><br>Please specify your preferences and click '<%0>'. Our system will then attempt to find suitable opponents in under a minute, depending on how busy the lobby<nbsp>is.<br><br>This is an excellent way to get to know new people!";

@@ -14,7 +14,7 @@ final class oo extends ki {
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
         var5 = 100 % ((-28 - param0) / 43);
-        if (((oo) this).b((byte) -124)) {
+        if (this.b((byte) -124)) {
           if (-1 >= param1) {
             u.field_c.c(param2, param3);
             dj.field_a.c(param2, param3);
@@ -30,17 +30,18 @@ final class oo extends ki {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
+        jp[] discarded$1 = null;
         pb var7 = null;
         pb var8 = null;
         if (param1 <= -84) {
-          if (((oo) this).b((byte) -128)) {
-            var8 = kd.a(((oo) this).field_m, param3, (byte) -50);
-            if (var8.a((byte) -84, param3, ((oo) this).field_m)) {
+          if (this.b((byte) -128)) {
+            var8 = kd.a(this.field_m, param3, (byte) -50);
+            if (var8.a((byte) -84, param3, this.field_m)) {
               ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var8.field_p, param4, param3, 2, up.field_w, -35);
               return;
             } else {
               l.a(-35, 26746, var8, param3, 2, rg.field_f);
-              var8.a(((oo) this).field_m, param3, (byte) 78);
+              var8.a(this.field_m, param3, (byte) 78);
               ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var8.field_p, param4, param3, 2, up.field_w, -35);
               return;
             }
@@ -49,15 +50,15 @@ final class oo extends ki {
             return;
           }
         } else {
-          jp[] discarded$1 = ((oo) this).b(33);
-          if (((oo) this).b((byte) -128)) {
-            var7 = kd.a(((oo) this).field_m, param3, (byte) -50);
-            if (var7.a((byte) -84, param3, ((oo) this).field_m)) {
+          discarded$1 = this.b(33);
+          if (this.b((byte) -128)) {
+            var7 = kd.a(this.field_m, param3, (byte) -50);
+            if (var7.a((byte) -84, param3, this.field_m)) {
               ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var7.field_p, param4, param3, 2, up.field_w, -35);
               return;
             } else {
               l.a(-35, 26746, var7, param3, 2, rg.field_f);
-              var7.a(((oo) this).field_m, param3, (byte) 78);
+              var7.a(this.field_m, param3, (byte) 78);
               ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var7.field_p, param4, param3, 2, up.field_w, -35);
               return;
             }
@@ -69,9 +70,9 @@ final class oo extends ki {
     }
 
     final jp a(boolean param0, int param1) {
-        Object var4 = null;
+        java.applet.Applet var4 = null;
         if (!param0) {
-          var4 = null;
+          var4 = (java.applet.Applet) null;
           oo.a((java.applet.Applet) null, 68);
           return lm.field_e[param1 + -1];
         } else {
@@ -105,7 +106,7 @@ final class oo extends ki {
 
     final jp c(byte param0) {
         if (param0 >= -74) {
-            ((oo) this).a(false, 35, 0, 38, 68);
+            this.a(false, 35, 0, 38, 68);
             return dc.field_c;
         }
         return dc.field_c;
@@ -113,7 +114,7 @@ final class oo extends ki {
 
     final jp[] a(int param0, boolean param1) {
         if (!param1) {
-            field_t = null;
+            field_t = (String) null;
             return aj.field_a[-1 + param0];
         }
         return aj.field_a[-1 + param0];
@@ -122,15 +123,32 @@ final class oo extends ki {
     final static m f(int param0) {
         String var1 = null;
         var1 = ud.d(true);
-        if (var1 != null) {
-          if (0 > var1.indexOf('@')) {
-            return new m(ud.d(true), la.b((byte) 118));
+        if (param0 >= 68) {
+          if (var1 != null) {
+            if (0 > var1.indexOf('@')) {
+              return new m(ud.d(true), la.b((byte) 118));
+            } else {
+              var1 = "";
+              return new m(ud.d(true), la.b((byte) 118));
+            }
           } else {
-            var1 = "";
             return new m(ud.d(true), la.b((byte) 118));
           }
         } else {
-          return new m(ud.d(true), la.b((byte) 118));
+          oo.d((byte) 97);
+          if (var1 == null) {
+            return new m(ud.d(true), la.b((byte) 118));
+          } else {
+            L0: {
+              if (0 <= var1.indexOf('@')) {
+                var1 = "";
+                break L0;
+              } else {
+                break L0;
+              }
+            }
+            return new m(ud.d(true), la.b((byte) 118));
+          }
         }
     }
 
@@ -144,20 +162,20 @@ final class oo extends ki {
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
         pb var6 = null;
-        if (!((oo) this).b((byte) -112)) {
+        if (!this.b((byte) -112)) {
           lb.g(param4, param2, 640, 480, 16777215);
           if (param0) {
             return;
           } else {
-            field_t = null;
+            field_t = (String) null;
             return;
           }
         } else {
           L0: {
-            var6 = ge.a(((oo) this).field_m, param3, -20777);
-            if (!var6.a((byte) -84, param3, ((oo) this).field_m)) {
+            var6 = ge.a(this.field_m, param3, -20777);
+            if (!var6.a((byte) -84, param3, this.field_m)) {
               l.a(0, 26746, var6, param3, 1, rg.field_f);
-              var6.a(((oo) this).field_m, param3, (byte) 78);
+              var6.a(this.field_m, param3, (byte) 78);
               break L0;
             } else {
               break L0;
@@ -167,7 +185,7 @@ final class oo extends ki {
           if (param0) {
             return;
           } else {
-            field_t = null;
+            field_t = (String) null;
             return;
           }
         }
@@ -185,7 +203,7 @@ final class oo extends ki {
             lm.field_e = new jp[2];
             on.field_I = new jp[2][];
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "oo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "oo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -234,7 +252,7 @@ final class oo extends ki {
             return false;
           }
         } else {
-          field_y = null;
+          field_y = (String) null;
           if (nl.field_d != null) {
             if (null != field_x) {
               if (rg.field_f != null) {
@@ -302,7 +320,7 @@ final class oo extends ki {
                     if (param1 == 0) {
                       break L1;
                     } else {
-                      field_x = null;
+                      field_x = (jp) null;
                       break L1;
                     }
                   }
@@ -321,23 +339,23 @@ final class oo extends ki {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_0 = (RuntimeException) (var2_ref2);
                 stackOut_6_1 = new StringBuilder().append("oo.R(");
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param0 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
@@ -345,7 +363,7 @@ final class oo extends ki {
                   break L2;
                 }
               }
-              throw qb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+              throw qb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -355,19 +373,29 @@ final class oo extends ki {
     }
 
     public static void d(byte param0) {
-        field_t = null;
-        field_x = null;
-        field_y = null;
-        field_w = null;
-        field_u = null;
-        field_s = null;
+        java.applet.Applet var2 = null;
+        if (param0 >= -29) {
+          var2 = (java.applet.Applet) null;
+          oo.a((java.applet.Applet) null, -87);
+          field_t = null;
+          field_x = null;
+          field_y = null;
+          field_w = null;
+          field_u = null;
+          field_s = null;
+          return;
+        } else {
+          field_t = null;
+          field_x = null;
+          field_y = null;
+          field_w = null;
+          field_u = null;
+          field_s = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = "This is <%0>'s RuneScape clan if they have one.";
         field_s = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
         field_v = -1;

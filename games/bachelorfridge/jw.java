@@ -17,25 +17,43 @@ final class jw extends ana {
     }
 
     private final void e(int param0) {
-        aga var2 = null;
+        oha discarded$1 = null;
         iv var3 = null;
         int var5 = 0;
-        ad var6 = null;
+        aga var6 = null;
+        ad var7 = null;
+        ad var8 = null;
         var5 = BachelorFridge.field_y;
-        var2 = ((jw) this).field_w.field_l.a(14, ((jw) this).field_q.field_h);
-        if (!var2.i(80)) {
-          var3 = (iv) (Object) ((jw) this).field_w.field_o.b((byte) 90);
-          oha discarded$8 = al.a(-44, ((jw) this).field_w.field_k);
-          L0: while (true) {
-            if (var3 != null) {
-              var3.a(var2, ((jw) this).field_q.field_h, 12);
-              var6 = var3.field_h.a(-27449, ((jw) this).field_q);
-              var6.b(-1, 7);
-              var6.a(24831, 9, kna.field_g[32]);
-              var3 = (iv) (Object) ((jw) this).field_w.field_o.c(0);
-              continue L0;
-            } else {
-              return;
+        var6 = this.field_w.field_l.a(14, this.field_q.field_h);
+        if (!var6.i(80)) {
+          var3 = (iv) ((Object) this.field_w.field_o.b((byte) 90));
+          discarded$1 = al.a(-44, this.field_w.field_k);
+          if (param0 != -23403) {
+            jw.d(-10);
+            L0: while (true) {
+              if (var3 != null) {
+                var3.a(var6, this.field_q.field_h, param0 ^ -23399);
+                var8 = var3.field_h.a(param0 + -4046, this.field_q);
+                var8.b(param0 ^ 23402, 7);
+                var8.a(24831, 9, kna.field_g[32]);
+                var3 = (iv) ((Object) this.field_w.field_o.c(0));
+                continue L0;
+              } else {
+                return;
+              }
+            }
+          } else {
+            L1: while (true) {
+              if (var3 != null) {
+                var3.a(var6, this.field_q.field_h, param0 ^ -23399);
+                var7 = var3.field_h.a(param0 + -4046, this.field_q);
+                var7.b(param0 ^ 23402, 7);
+                var7.a(24831, 9, kna.field_g[32]);
+                var3 = (iv) ((Object) this.field_w.field_o.c(0));
+                continue L1;
+              } else {
+                return;
+              }
             }
           }
         } else {
@@ -44,13 +62,17 @@ final class jw extends ana {
     }
 
     private final void f(int param0) {
+        if (param0 == 7) {
+            return;
+        }
+        this.e(48);
     }
 
     final boolean c(byte param0) {
-        int fieldTemp$0 = ((jw) this).field_l - 1;
-        ((jw) this).field_l = ((jw) this).field_l - 1;
-        if (!(fieldTemp$0 > -1)) {
-            if (-26 == ((jw) this).field_l) {
+        int fieldTemp$0 = this.field_l - 1;
+        this.field_l = this.field_l - 1;
+        if (!((fieldTemp$0 ^ -1) > -1)) {
+            if (-26 == (this.field_l ^ -1)) {
                 jja.a(256, -1, 33);
                 this.e(-23403);
                 return false;
@@ -63,19 +85,15 @@ final class jw extends ana {
     }
 
     jw(gj param0, fia param1) {
-        super(param0, (bca) (Object) param1);
+        super(param0, param1);
         try {
-            ((jw) this).field_w = param1;
+            this.field_w = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "jw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "jw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = "FULL ACCESS";
     }
 }

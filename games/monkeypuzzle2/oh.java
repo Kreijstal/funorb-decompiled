@@ -8,9 +8,19 @@ final class oh {
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 != 4) {
+            java.awt.Canvas var2 = (java.awt.Canvas) null;
+            oh.a(-36, (byte) -57, -3, (java.awt.Canvas) null);
+        }
     }
 
     final static void a(int param0, int param1, int param2) {
+        if (param2 <= 50) {
+            field_a = (String) null;
+            gk.field_e = param1;
+            oi.field_f = param0;
+            return;
+        }
         gk.field_e = param1;
         oi.field_f = param0;
     }
@@ -47,7 +57,7 @@ final class oh {
                 }
               }
               var4 = param3.getGraphics();
-              ac.field_a.a(0, 7, var4, 0);
+              ac.field_a.a(param2, 7, var4, param0);
               var4.dispose();
               break L0;
             }
@@ -62,23 +72,23 @@ final class oh {
           decompiledCaughtException = decompiledCaughtParameter1;
           L2: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4_ref2;
-            stackOut_6_1 = new StringBuilder().append("oh.C(").append(0).append(',').append(param1).append(',').append(0).append(',');
+            stackOut_6_0 = (RuntimeException) (var4_ref2);
+            stackOut_6_1 = new StringBuilder().append("oh.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -86,15 +96,11 @@ final class oh {
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw la.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Loading music";
         field_b = false;
     }

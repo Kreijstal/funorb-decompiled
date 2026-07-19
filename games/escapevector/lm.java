@@ -13,6 +13,9 @@ final class lm {
     public static void b(byte param0) {
         field_b = null;
         field_d = null;
+        if (param0 != -10) {
+            field_b = (String[]) null;
+        }
     }
 
     final static void a(byte param0) {
@@ -70,14 +73,10 @@ final class lm {
     }
 
     lm(boolean param0) {
-        ((lm) this).field_a = param0 ? true : false;
+        this.field_a = param0 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new String[]{"infracstructure_glow_asteroid", "infracstructure_glow_ice", null, "infracstructure_glow_alien", null};
     }
 }

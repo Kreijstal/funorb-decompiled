@@ -24,7 +24,7 @@ final class nl extends ksa {
           L0: {
             L1: {
               kt.field_l = param0;
-              var2 = (ana) (Object) cg.field_p.d(param1 + 13205);
+              var2 = (ana) ((Object) cg.field_p.d(param1 + 13205));
               if (param1 == -13205) {
                 break L1;
               } else {
@@ -38,7 +38,7 @@ final class nl extends ksa {
                   if (null == rd.field_o) {
                     break L3;
                   } else {
-                    var2 = (ana) (Object) rd.field_o.d(0);
+                    var2 = (ana) ((Object) rd.field_o.d(0));
                     L4: while (true) {
                       if (var2 == null) {
                         break L3;
@@ -48,11 +48,11 @@ final class nl extends ksa {
                             var2.b(param1 ^ 15505);
                             break L5;
                           } else {
-                            var2.field_e.e(kt.field_l * var2.field_d + 128 >> 8);
+                            var2.field_e.e(kt.field_l * var2.field_d + 128 >> -1771790904);
                             break L5;
                           }
                         }
-                        var2 = (ana) (Object) rd.field_o.a((byte) 100);
+                        var2 = (ana) ((Object) rd.field_o.a((byte) 100));
                         continue L4;
                       }
                     }
@@ -62,14 +62,14 @@ final class nl extends ksa {
               } else {
                 L6: {
                   if (var2.field_g.b((byte) -63)) {
-                    var2.field_e.e(128 + kt.field_l * var2.field_d >> 8);
+                    var2.field_e.e(128 + kt.field_l * var2.field_d >> 2128263208);
                     break L6;
                   } else {
                     var2.b(-3846);
                     break L6;
                   }
                 }
-                var2 = (ana) (Object) cg.field_p.a((byte) 61);
+                var2 = (ana) ((Object) cg.field_p.a((byte) 61));
                 continue L2;
               }
             }
@@ -77,7 +77,7 @@ final class nl extends ksa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2_ref, "nl.B(" + param0 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) var2_ref), "nl.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -96,10 +96,6 @@ final class nl extends ksa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = 0.20000000298023224f;
         field_j = "No";
     }

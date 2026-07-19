@@ -9,13 +9,13 @@ abstract class li implements n {
     static nj field_a;
 
     public final String a(int param0) {
-        if (!((li) this).a((byte) -41)) {
-          if (~lo.a((byte) -72) <= ~(350L + ((li) this).field_b)) {
+        if (!this.a((byte) -41)) {
+          if ((lo.a((byte) -72) ^ -1L) <= (350L + this.field_b ^ -1L)) {
             if (param0 != -16774) {
-              ((li) this).b((byte) -60);
-              return ((li) this).a(false);
+              this.b((byte) -60);
+              return this.a(false);
             } else {
-              return ((li) this).a(false);
+              return this.a(false);
             }
           } else {
             return null;
@@ -27,24 +27,24 @@ abstract class li implements n {
 
     public final oi c(byte param0) {
         if (param0 == 45) {
-          if (((li) this).a((byte) -41)) {
+          if (this.a((byte) -41)) {
             return pe.field_p;
           } else {
-            if (~(((li) this).field_b + 350L) < ~lo.a((byte) 84)) {
+            if ((this.field_b + 350L ^ -1L) < (lo.a((byte) 84) ^ -1L)) {
               return ta.field_h;
             } else {
-              return ((li) this).b(51);
+              return this.b(51);
             }
           }
         } else {
-          return null;
+          return (oi) null;
         }
     }
 
     public final void b(byte param0) {
-        ((li) this).field_b = lo.a((byte) 76);
+        this.field_b = lo.a((byte) 76);
         if (param0 != 78) {
-            field_e = null;
+            field_e = (String) null;
         }
     }
 
@@ -52,7 +52,7 @@ abstract class li implements n {
         field_d = null;
         field_e = null;
         if (param0 != 350) {
-            field_e = null;
+            field_e = (String) null;
             field_a = null;
             return;
         }
@@ -64,10 +64,6 @@ abstract class li implements n {
     abstract String a(boolean param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Two-Player Puzzles";
         field_c = 9;
     }

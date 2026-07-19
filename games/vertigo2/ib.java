@@ -6,16 +6,28 @@ final class ib {
     static String field_b;
 
     final static int a(int param0, byte param1) {
-        int var2 = param0 >>> 1;
-        var2 = var2 | var2 >>> 1;
-        var2 = var2 | var2 >>> 2;
-        var2 = var2 | var2 >>> 4;
-        var2 = var2 | var2 >>> 8;
-        var2 = var2 | var2 >>> 16;
-        return param0 & ~var2;
+        int var2 = 0;
+        var2 = param0 >>> 919942305;
+        var2 = var2 | var2 >>> 74094113;
+        var2 = var2 | var2 >>> 1333931202;
+        var2 = var2 | var2 >>> -1145977020;
+        var2 = var2 | var2 >>> 1839161864;
+        if (param1 != 79) {
+          field_b = (String) null;
+          var2 = var2 | var2 >>> -1502730896;
+          return param0 & (var2 ^ -1);
+        } else {
+          var2 = var2 | var2 >>> -1502730896;
+          return param0 & (var2 ^ -1);
+        }
     }
 
     public static void a(byte param0) {
+        if (param0 != -35) {
+            field_a = 119;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
@@ -30,7 +42,7 @@ final class ib {
         try {
           L0: {
             L1: {
-              var3_int = 0;
+              var3_int = 68 % ((9 - param0) / 62);
               if (param2 != we.field_M) {
                 rh.field_O = new int[param2];
                 var4 = 0;
@@ -41,7 +53,7 @@ final class ib {
                     h.field_y = param2 * 32;
                     break L1;
                   } else {
-                    rh.field_O[var4] = (var4 << 12) / param2;
+                    rh.field_O[var4] = (var4 << 1134132076) / param2;
                     var4++;
                     continue L2;
                   }
@@ -63,7 +75,7 @@ final class ib {
                     if (param1 <= var6) {
                       break L3;
                     } else {
-                      lf.field_y[var6] = (var6 << 12) / param1;
+                      lf.field_y[var6] = (var6 << 100997836) / param1;
                       var6++;
                       continue L4;
                     }
@@ -80,15 +92,11 @@ final class ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var3, "ib.A(" + -122 + ',' + param1 + ',' + param2 + ')');
+          throw wn.a((Throwable) ((Object) var3), "ib.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Waiting for graphics";
         field_a = 100;
     }

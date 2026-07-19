@@ -13,12 +13,12 @@ final class oe implements so {
         }
         try {
             param1.d(param2.field_e, 0);
-            param1.d(param2.field_h, 0);
+            param1.d(param2.field_h, param0 + 21332);
             param1.d(param2.field_m, 0);
             param1.b(param2.field_b, -114);
-            param1.d(param2.field_a ? 1 : 0, 0);
+            param1.d(param2.field_a ? 1 : 0, param0 ^ param0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oe.B(" + -21332 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "oe.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -26,11 +26,14 @@ final class oe implements so {
         if (0 > param0) {
             param0 = 0;
         } else {
-            if (param0 > 230) {
+            if ((param0 ^ -1) < -231) {
                 param0 = 230;
             }
         }
         gka.a(102, param0);
+        if (param1 < 11) {
+            oe.a(-101, -109, 0, -60, 10, -92);
+        }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -48,6 +51,7 @@ final class oe implements so {
         int var16 = 0;
         int stackIn_20_0 = 0;
         int stackIn_28_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_19_0 = 0;
         int stackOut_18_0 = 0;
@@ -68,7 +72,8 @@ final class oe implements so {
                     break L1;
                   }
                 }
-                return;
+                decompiledRegionSelector0 = 2;
+                break L0;
               } else {
                 if (0 != var6_int) {
                   L2: {
@@ -129,7 +134,7 @@ final class oe implements so {
                     var9 = param0;
                     var10 = -param5 + param3;
                     var11 = -param0 + param4;
-                    var12 = -(var10 >> 1);
+                    var12 = -(var10 >> 1707955873);
                     if (param0 < param4) {
                       stackOut_27_0 = 1;
                       stackIn_28_0 = stackOut_27_0;
@@ -178,35 +183,51 @@ final class oe implements so {
                         if (var14 > param3) {
                           break L9;
                         } else {
-                          L13: {
-                            tj.field_b[var9][var14] = param1;
-                            var12 = var12 + var11;
-                            if (var12 <= 0) {
-                              break L13;
-                            } else {
-                              break L13;
-                            }
+                          tj.field_b[var9][var14] = param1;
+                          var12 = var12 + var11;
+                          if (-1 > (var12 ^ -1)) {
+                            var9 = var9 + var13;
+                            var12 = var12 - var10;
+                            var14++;
+                            continue L12;
+                          } else {
+                            var14++;
+                            continue L12;
                           }
-                          var14++;
-                          continue L12;
                         }
                       }
                     }
                   }
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
                   ew.a(param5, param0, -94, param1, param3);
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var6, "oe.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.a((Throwable) ((Object) var6), "oe.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -214,14 +235,13 @@ final class oe implements so {
         field_c = null;
         field_b = null;
         field_a = null;
+        if (param0) {
+            field_d = (String) null;
+        }
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Honour";
         field_b = new String[]{"By rating", "By win percentage"};
         field_d = "Now feel free to experiment and breed more creatures. When you're ready, click the arena portal to enter the arena! Click here to close.";

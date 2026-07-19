@@ -8,9 +8,16 @@ final class gm extends di {
 
     final static void a(int param0, int param1) {
         ql.field_d = new int[3];
-        kf.field_M = 200;
-        pd.field_g = new hl[3000];
-        ic.field_c = 0;
+        kf.field_M = param1;
+        pd.field_g = new hl[param1 * 15];
+        if (param0 != -3504) {
+          field_J = (String) null;
+          ic.field_c = 0;
+          return;
+        } else {
+          ic.field_c = 0;
+          return;
+        }
     }
 
     private gm(mm param0, int param1) {
@@ -22,7 +29,7 @@ final class gm extends di {
     }
 
     public static void d(int param0) {
-        int var1 = -85;
+        int var1 = 85 / ((-16 - param0) / 51);
         field_J = null;
     }
 

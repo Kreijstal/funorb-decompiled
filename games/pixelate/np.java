@@ -28,10 +28,10 @@ final class np {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((np) this).field_b[var4] != null) {
-                    var5 = ((np) this).field_b[var4].field_k * 22050 / 1000;
-                    var6 = ((np) this).field_b[var4].field_e * 22050 / 1000;
-                    var13 = ((np) this).field_b[var4].a(var5, ((np) this).field_b[var4].field_k);
+                  if (this.field_b[var4] != null) {
+                    var5 = this.field_b[var4].field_k * 22050 / 1000;
+                    var6 = this.field_b[var4].field_e * 22050 / 1000;
+                    var13 = this.field_b[var4].a(var5, this.field_b[var4].field_k);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -62,9 +62,9 @@ final class np {
               return new byte[]{};
             }
           } else {
-            if (((np) this).field_b[var2] != null) {
-              if (((np) this).field_b[var2].field_k + ((np) this).field_b[var2].field_e > var1) {
-                var1 = ((np) this).field_b[var2].field_k + ((np) this).field_b[var2].field_e;
+            if (this.field_b[var2] != null) {
+              if (this.field_b[var2].field_k + this.field_b[var2].field_e > var1) {
+                var1 = this.field_b[var2].field_k + this.field_b[var2].field_e;
                 var2++;
                 continue L0;
               } else {
@@ -89,25 +89,25 @@ final class np {
 
     final sp b() {
         byte[] var1 = this.a();
-        return new sp(22050, var1, 22050 * ((np) this).field_c / 1000, 22050 * ((np) this).field_a / 1000);
+        return new sp(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
     private np(we param0) {
         int var2 = 0;
         int var3 = 0;
-        ((np) this).field_b = new qc[10];
+        this.field_b = new qc[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((np) this).field_c = param0.a((byte) -116);
-            ((np) this).field_a = param0.a((byte) -112);
+            this.field_c = param0.a((byte) -116);
+            this.field_a = param0.a((byte) -112);
             return;
           } else {
             var3 = param0.f(255);
             if (var3 != 0) {
               param0.field_m = param0.field_m - 1;
-              ((np) this).field_b[var2] = new qc();
-              ((np) this).field_b[var2].a(param0);
+              this.field_b[var2] = new qc();
+              this.field_b[var2].a(param0);
               var2++;
               continue L0;
             } else {

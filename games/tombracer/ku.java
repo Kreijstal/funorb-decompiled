@@ -14,6 +14,7 @@ final class ku extends qe {
     private pva field_h;
 
     final void a(int param0, int param1, kl param2) {
+        boolean discarded$2 = false;
         RuntimeException var4 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -34,92 +35,103 @@ final class ku extends qe {
         try {
           L0: {
             L1: {
-              if (param2 == null) {
-                if (!((ku) this).field_c) {
-                  ((ku) this).field_a.a(true, (kl) (Object) ((ku) this).field_a.field_lc);
-                  ((ku) this).field_a.d(1, 1);
-                  ((ku) this).field_a.c(0, param1 + -32221, 34168, 768);
-                  ((ku) this).field_a.b(34168, param1 + -32218, 0, 770);
-                  ((ku) this).field_c = true;
-                  break L1;
+              L2: {
+                if (param2 == null) {
+                  break L2;
                 } else {
-                  break L1;
-                }
-              } else {
-                L2: {
-                  if (((ku) this).field_c) {
-                    ((ku) this).field_a.c(0, 0, 5890, 768);
-                    ((ku) this).field_a.b(5890, 3, 0, 770);
-                    ((ku) this).field_c = false;
-                    break L2;
+                  L3: {
+                    if (this.field_c) {
+                      this.field_a.c(0, 0, 5890, 768);
+                      this.field_a.b(5890, 3, 0, 770);
+                      this.field_c = false;
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
+                  this.field_a.a(true, param2);
+                  this.field_a.d(1, param0);
+                  if (!TombRacer.field_G) {
+                    break L1;
                   } else {
                     break L2;
                   }
                 }
-                ((ku) this).field_a.a(true, param2);
-                ((ku) this).field_a.d(1, param0);
+              }
+              if (!this.field_c) {
+                this.field_a.a(true, this.field_a.field_lc);
+                this.field_a.d(1, 1);
+                this.field_a.c(0, param1 + -32221, 34168, 768);
+                this.field_a.b(34168, param1 + -32218, 0, 770);
+                this.field_c = true;
+                break L1;
+              } else {
                 break L1;
               }
             }
             if (param1 == 32221) {
               break L0;
             } else {
-              boolean discarded$2 = ((ku) this).b(-28);
+              discarded$2 = this.b(-28);
               return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var4;
+            stackOut_11_0 = (RuntimeException) (var4);
             stackOut_11_1 = new StringBuilder().append("ku.A(").append(param0).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
-              break L3;
+              break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
               stackIn_14_2 = stackOut_12_2;
-              break L3;
+              break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
     }
 
     final void a(boolean param0, int param1) {
-        ((ku) this).field_e = param0 ? true : false;
-        ((ku) this).field_a.e(1, true);
-        ((ku) this).field_a.a(true, (kl) (Object) ((ku) this).field_l);
-        ((ku) this).field_a.b(34165, 8960, 7681);
+        this.field_e = param0 ? true : false;
+        this.field_a.e(1, true);
+        this.field_a.a(true, this.field_l);
+        this.field_a.b(34165, 8960, 7681);
         int var3 = 90 % ((param1 - 56) / 48);
-        ((ku) this).field_a.c(0, 0, 34166, 768);
-        ((ku) this).field_a.c(2, 0, 5890, 770);
-        ((ku) this).field_a.b(34168, 3, 0, 770);
-        ((ku) this).field_a.e(0, true);
-        ((ku) this).a((byte) -120);
+        this.field_a.c(0, 0, 34166, 768);
+        this.field_a.c(2, 0, 5890, 770);
+        this.field_a.b(34168, 3, 0, 770);
+        this.field_a.e(0, true);
+        this.a((byte) -120);
     }
 
     public static void d(int param0) {
         field_j = null;
+        if (param0 <= 101) {
+            field_j = (int[]) null;
+        }
     }
 
     ku(cka param0) {
         super(param0);
         RuntimeException var2 = null;
+        int var3 = 0;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_7_0 = 0;
@@ -139,13 +151,13 @@ final class ku extends qe {
         int stackIn_14_0 = 0;
         int stackIn_14_1 = 0;
         int stackIn_14_2 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
@@ -170,148 +182,166 @@ final class ku extends qe {
         int stackOut_12_0 = 0;
         int stackOut_12_1 = 0;
         int stackOut_12_2 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
         RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        ((ku) this).field_c = false;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        var3 = TombRacer.field_G ? 1 : 0;
+        this.field_c = false;
         try {
-          if (!((ku) this).field_a.field_G) {
-            ((ku) this).field_f = false;
-            return;
-          } else {
-            L0: {
-              ((ku) this).field_h = ea.a(17, 34336, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   tMatrix[4]   = { state.matrix.texture[0] };\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nTEMP    viewPos, fogFactor;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nMAD   fogFactor.y, iTexCoord.z, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMUL   fogFactor.x, fogFactor.x, fogFactor.y;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, iTexCoord.z;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nMOV   oColour, iColour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP3   oTexCoord0.x, tMatrix[0], iTexCoord;\nDP3   oTexCoord0.y, tMatrix[1], iTexCoord;\nMOV   oTexCoord0.zw, iTexCoord;\nEND\n", ((ku) this).field_a);
-              ((ku) this).field_d = ea.a(17, 34336, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iNormal      = vertex.normal;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   tMatrix[4]   = { state.matrix.texture[0] };\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nTEMP    viewPos, viewNormal, fogFactor, colour, ndotl;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nMAD   fogFactor.y, iTexCoord.z, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMUL   fogFactor.x, fogFactor.x, fogFactor.y;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, iTexCoord.z;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nDP3   viewNormal.x, mvMatrix[0], iNormal;\nDP3   viewNormal.y, mvMatrix[1], iNormal;\nDP3   viewNormal.z, mvMatrix[2], iNormal;\nDP3   ndotl.x, viewNormal, state.light[0].position;\nDP3   ndotl.y, viewNormal, state.light[1].position;\nMAX   ndotl, ndotl, 0;\nMOV   colour, state.lightmodel.ambient;\nMAD   colour, state.light[0].diffuse, ndotl.xxxx, colour;\nMAD   colour, state.light[1].diffuse, ndotl.yyyy, colour;\nMUL   oColour, iColour, colour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP3   oTexCoord0.x, tMatrix[0], iTexCoord;\nDP3   oTexCoord0.y, tMatrix[1], iTexCoord;\nMOV   oTexCoord0.zw, iTexCoord;\nEND\n", ((ku) this).field_a);
-              ((ku) this).field_g = ea.a(17, 34336, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   texMatrix[4] = { state.matrix.texture[0] };\nTEMP    viewPos, fogFactor, depth;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nDP4   depth, waterPlane, viewPos;\nMAD   fogFactor.y, -depth, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, -depth;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nMOV   oColour, iColour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP4   oTexCoord0.x, texMatrix[0], iTexCoord;\nDP4   oTexCoord0.y, texMatrix[1], iTexCoord;\nDP4   oTexCoord0.z, texMatrix[2], iTexCoord;\nMOV   oTexCoord0.w, 1;\nEND\n", ((ku) this).field_a);
-              ((ku) this).field_k = ea.a(17, 34336, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iNormal      = vertex.normal;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   texMatrix[4] = { state.matrix.texture[0] };\nTEMP    viewPos, viewNormal, fogFactor, depth, colour, ndotl;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nDP4   depth, waterPlane, viewPos;\nMAD   fogFactor.y, -depth, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, -depth;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nDP3   viewNormal.x, mvMatrix[0], iNormal;\nDP3   viewNormal.y, mvMatrix[1], iNormal;\nDP3   viewNormal.z, mvMatrix[2], iNormal;\nDP3   ndotl.x, viewNormal, state.light[0].position;\nDP3   ndotl.y, viewNormal, state.light[1].position;\nMAX   ndotl, ndotl, 0;\nMOV   colour, state.lightmodel.ambient;\nMAD   colour, state.light[0].diffuse, ndotl.xxxx, colour;\nMAD   colour, state.light[1].diffuse, ndotl.yyyy, colour;\nMUL   oColour, iColour, colour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP4   oTexCoord0.x, texMatrix[0], iTexCoord;\nDP4   oTexCoord0.y, texMatrix[1], iTexCoord;\nDP4   oTexCoord0.z, texMatrix[2], iTexCoord;\nMOV   oTexCoord0.w, 1;\nEND\n", ((ku) this).field_a);
-              if (null == ((ku) this).field_k) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L0;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L0;
-              }
-            }
-            L1: {
-              stackOut_5_0 = stackIn_5_0;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_6_0 = stackOut_5_0;
-              if (((ku) this).field_d == null) {
-                stackOut_7_0 = stackIn_7_0;
-                stackOut_7_1 = 0;
-                stackIn_8_0 = stackOut_7_0;
-                stackIn_8_1 = stackOut_7_1;
-                break L1;
-              } else {
-                stackOut_6_0 = stackIn_6_0;
-                stackOut_6_1 = 1;
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                break L1;
-              }
-            }
-            L2: {
-              stackOut_8_0 = stackIn_8_0;
-              stackOut_8_1 = stackIn_8_1;
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              if (((ku) this).field_h == null) {
-                stackOut_10_0 = stackIn_10_0;
-                stackOut_10_1 = stackIn_10_1;
-                stackOut_10_2 = 0;
-                stackIn_11_0 = stackOut_10_0;
-                stackIn_11_1 = stackOut_10_1;
-                stackIn_11_2 = stackOut_10_2;
-                break L2;
-              } else {
-                stackOut_9_0 = stackIn_9_0;
-                stackOut_9_1 = stackIn_9_1;
-                stackOut_9_2 = 1;
-                stackIn_11_0 = stackOut_9_0;
-                stackIn_11_1 = stackOut_9_1;
-                stackIn_11_2 = stackOut_9_2;
-                break L2;
-              }
-            }
-            L3: {
-              stackOut_11_0 = stackIn_11_0;
-              stackOut_11_1 = stackIn_11_1 & stackIn_11_2;
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              if (null == ((ku) this).field_g) {
-                stackOut_13_0 = stackIn_13_0;
-                stackOut_13_1 = stackIn_13_1;
-                stackOut_13_2 = 0;
-                stackIn_14_0 = stackOut_13_0;
-                stackIn_14_1 = stackOut_13_1;
-                stackIn_14_2 = stackOut_13_2;
-                break L3;
-              } else {
-                stackOut_12_0 = stackIn_12_0;
-                stackOut_12_1 = stackIn_12_1;
-                stackOut_12_2 = 1;
-                stackIn_14_0 = stackOut_12_0;
-                stackIn_14_1 = stackOut_12_1;
-                stackIn_14_2 = stackOut_12_2;
-                break L3;
-              }
-            }
-            if ((stackIn_14_0 & (stackIn_14_1 & stackIn_14_2)) == 0) {
-              ((ku) this).field_f = false;
+          L0: {
+            if (!this.field_a.field_G) {
+              this.field_f = false;
               return;
             } else {
-              ((ku) this).field_l = new rt(param0, 3553, 6406, 2, 1, false, new byte[2], 6406, false);
-              ((ku) this).field_l.a(false, false, -3554);
-              ((ku) this).field_f = true;
-              return;
+              L1: {
+                this.field_h = ea.a(17, 34336, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   tMatrix[4]   = { state.matrix.texture[0] };\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nTEMP    viewPos, fogFactor;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nMAD   fogFactor.y, iTexCoord.z, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMUL   fogFactor.x, fogFactor.x, fogFactor.y;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, iTexCoord.z;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nMOV   oColour, iColour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP3   oTexCoord0.x, tMatrix[0], iTexCoord;\nDP3   oTexCoord0.y, tMatrix[1], iTexCoord;\nMOV   oTexCoord0.zw, iTexCoord;\nEND\n", this.field_a);
+                this.field_d = ea.a(17, 34336, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iNormal      = vertex.normal;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   tMatrix[4]   = { state.matrix.texture[0] };\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nTEMP    viewPos, viewNormal, fogFactor, colour, ndotl;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nMAD   fogFactor.y, iTexCoord.z, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMUL   fogFactor.x, fogFactor.x, fogFactor.y;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, iTexCoord.z;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nDP3   viewNormal.x, mvMatrix[0], iNormal;\nDP3   viewNormal.y, mvMatrix[1], iNormal;\nDP3   viewNormal.z, mvMatrix[2], iNormal;\nDP3   ndotl.x, viewNormal, state.light[0].position;\nDP3   ndotl.y, viewNormal, state.light[1].position;\nMAX   ndotl, ndotl, 0;\nMOV   colour, state.lightmodel.ambient;\nMAD   colour, state.light[0].diffuse, ndotl.xxxx, colour;\nMAD   colour, state.light[1].diffuse, ndotl.yyyy, colour;\nMUL   oColour, iColour, colour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP3   oTexCoord0.x, tMatrix[0], iTexCoord;\nDP3   oTexCoord0.y, tMatrix[1], iTexCoord;\nMOV   oTexCoord0.zw, iTexCoord;\nEND\n", this.field_a);
+                this.field_g = ea.a(17, 34336, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   texMatrix[4] = { state.matrix.texture[0] };\nTEMP    viewPos, fogFactor, depth;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nDP4   depth, waterPlane, viewPos;\nMAD   fogFactor.y, -depth, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, -depth;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nMOV   oColour, iColour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP4   oTexCoord0.x, texMatrix[0], iTexCoord;\nDP4   oTexCoord0.y, texMatrix[1], iTexCoord;\nDP4   oTexCoord0.z, texMatrix[2], iTexCoord;\nMOV   oTexCoord0.w, 1;\nEND\n", this.field_a);
+                this.field_k = ea.a(17, 34336, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iNormal      = vertex.normal;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   texMatrix[4] = { state.matrix.texture[0] };\nTEMP    viewPos, viewNormal, fogFactor, depth, colour, ndotl;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nDP4   depth, waterPlane, viewPos;\nMAD   fogFactor.y, -depth, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, -depth;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nDP3   viewNormal.x, mvMatrix[0], iNormal;\nDP3   viewNormal.y, mvMatrix[1], iNormal;\nDP3   viewNormal.z, mvMatrix[2], iNormal;\nDP3   ndotl.x, viewNormal, state.light[0].position;\nDP3   ndotl.y, viewNormal, state.light[1].position;\nMAX   ndotl, ndotl, 0;\nMOV   colour, state.lightmodel.ambient;\nMAD   colour, state.light[0].diffuse, ndotl.xxxx, colour;\nMAD   colour, state.light[1].diffuse, ndotl.yyyy, colour;\nMUL   oColour, iColour, colour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP4   oTexCoord0.x, texMatrix[0], iTexCoord;\nDP4   oTexCoord0.y, texMatrix[1], iTexCoord;\nDP4   oTexCoord0.z, texMatrix[2], iTexCoord;\nMOV   oTexCoord0.w, 1;\nEND\n", this.field_a);
+                if (null == this.field_k) {
+                  stackOut_4_0 = 0;
+                  stackIn_5_0 = stackOut_4_0;
+                  break L1;
+                } else {
+                  stackOut_3_0 = 1;
+                  stackIn_5_0 = stackOut_3_0;
+                  break L1;
+                }
+              }
+              L2: {
+                stackOut_5_0 = stackIn_5_0;
+                stackIn_7_0 = stackOut_5_0;
+                stackIn_6_0 = stackOut_5_0;
+                if (this.field_d == null) {
+                  stackOut_7_0 = stackIn_7_0;
+                  stackOut_7_1 = 0;
+                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_1 = stackOut_7_1;
+                  break L2;
+                } else {
+                  stackOut_6_0 = stackIn_6_0;
+                  stackOut_6_1 = 1;
+                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_1 = stackOut_6_1;
+                  break L2;
+                }
+              }
+              L3: {
+                stackOut_8_0 = stackIn_8_0;
+                stackOut_8_1 = stackIn_8_1;
+                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_1 = stackOut_8_1;
+                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_1 = stackOut_8_1;
+                if (this.field_h == null) {
+                  stackOut_10_0 = stackIn_10_0;
+                  stackOut_10_1 = stackIn_10_1;
+                  stackOut_10_2 = 0;
+                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_1 = stackOut_10_1;
+                  stackIn_11_2 = stackOut_10_2;
+                  break L3;
+                } else {
+                  stackOut_9_0 = stackIn_9_0;
+                  stackOut_9_1 = stackIn_9_1;
+                  stackOut_9_2 = 1;
+                  stackIn_11_0 = stackOut_9_0;
+                  stackIn_11_1 = stackOut_9_1;
+                  stackIn_11_2 = stackOut_9_2;
+                  break L3;
+                }
+              }
+              L4: {
+                stackOut_11_0 = stackIn_11_0;
+                stackOut_11_1 = stackIn_11_1 & stackIn_11_2;
+                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_1 = stackOut_11_1;
+                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_1 = stackOut_11_1;
+                if (null == this.field_g) {
+                  stackOut_13_0 = stackIn_13_0;
+                  stackOut_13_1 = stackIn_13_1;
+                  stackOut_13_2 = 0;
+                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_1 = stackOut_13_1;
+                  stackIn_14_2 = stackOut_13_2;
+                  break L4;
+                } else {
+                  stackOut_12_0 = stackIn_12_0;
+                  stackOut_12_1 = stackIn_12_1;
+                  stackOut_12_2 = 1;
+                  stackIn_14_0 = stackOut_12_0;
+                  stackIn_14_1 = stackOut_12_1;
+                  stackIn_14_2 = stackOut_12_2;
+                  break L4;
+                }
+              }
+              L5: {
+                L6: {
+                  if ((stackIn_14_0 & (stackIn_14_1 & stackIn_14_2)) == 0) {
+                    break L6;
+                  } else {
+                    this.field_l = new rt(param0, 3553, 6406, 2, 1, false, new byte[]{(byte) 0, (byte)-1}, 6406, false);
+                    this.field_l.a(false, false, -3554);
+                    this.field_f = true;
+                    if (var3 == 0) {
+                      break L5;
+                    } else {
+                      break L6;
+                    }
+                  }
+                }
+                this.field_f = false;
+                if (var3 == 0) {
+                  break L5;
+                } else {
+                  this.field_f = false;
+                  return;
+                }
+              }
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L7: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var2;
-            stackOut_19_1 = new StringBuilder().append("ku.<init>(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackOut_21_0 = (RuntimeException) (var2);
+            stackOut_21_1 = new StringBuilder().append("ku.<init>(");
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
-              break L4;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
-              break L4;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L7;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2) {
         if (param2 <= 117) {
-            ((ku) this).b(false, 0);
+            this.b(false, 0);
         }
     }
 
@@ -371,25 +401,25 @@ final class ku extends qe {
         int stackOut_11_1 = 0;
         int stackOut_11_2 = 0;
         L0: {
-          if (((ku) this).field_i) {
+          if (this.field_i) {
             jaggl.OpenGL.glBindProgramARB(34336, 0);
             jaggl.OpenGL.glDisable(34820);
             jaggl.OpenGL.glDisable(34336);
-            ((ku) this).field_i = false;
+            this.field_i = false;
             break L0;
           } else {
             break L0;
           }
         }
         L1: {
-          stackOut_3_0 = ((ku) this).field_a;
+          stackOut_3_0 = this.field_a;
           stackOut_3_1 = 1;
           stackIn_5_0 = stackOut_3_0;
           stackIn_5_1 = stackOut_3_1;
           stackIn_4_0 = stackOut_3_0;
           stackIn_4_1 = stackOut_3_1;
           if (param0) {
-            stackOut_5_0 = (cka) (Object) stackIn_5_0;
+            stackOut_5_0 = (cka) ((Object) stackIn_5_0);
             stackOut_5_1 = stackIn_5_1;
             stackOut_5_2 = 0;
             stackIn_6_0 = stackOut_5_0;
@@ -397,7 +427,7 @@ final class ku extends qe {
             stackIn_6_2 = stackOut_5_2;
             break L1;
           } else {
-            stackOut_4_0 = (cka) (Object) stackIn_4_0;
+            stackOut_4_0 = (cka) ((Object) stackIn_4_0);
             stackOut_4_1 = stackIn_4_1;
             stackOut_4_2 = 1;
             stackIn_6_0 = stackOut_4_0;
@@ -408,17 +438,17 @@ final class ku extends qe {
         }
         L2: {
           ((cka) (Object) stackIn_6_0).e(stackIn_6_1, stackIn_6_2 != 0);
-          stackOut_6_0 = ((ku) this).field_a;
+          stackOut_6_0 = this.field_a;
           stackIn_8_0 = stackOut_6_0;
           stackIn_7_0 = stackOut_6_0;
           if (param0) {
-            stackOut_8_0 = (cka) (Object) stackIn_8_0;
+            stackOut_8_0 = (cka) ((Object) stackIn_8_0);
             stackOut_8_1 = 0;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             break L2;
           } else {
-            stackOut_7_0 = (cka) (Object) stackIn_7_0;
+            stackOut_7_0 = (cka) ((Object) stackIn_7_0);
             stackOut_7_1 = 1;
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
@@ -428,18 +458,18 @@ final class ku extends qe {
         ((cka) (Object) stackIn_9_0).a(stackIn_9_1 != 0, (kl) null);
         if (!param0) {
           L3: {
-            ((ku) this).field_a.b(8448, 8960, 8448);
-            ((ku) this).field_a.c(0, 0, 5890, 768);
-            ((ku) this).field_a.c(2, 0, 34166, 770);
-            ((ku) this).field_a.b(5890, 3, 0, 770);
-            stackOut_17_0 = ((ku) this).field_a;
+            this.field_a.b(8448, 8960, 8448);
+            this.field_a.c(0, 0, 5890, 768);
+            this.field_a.c(2, 0, 34166, 770);
+            this.field_a.b(5890, 3, 0, 770);
+            stackOut_17_0 = this.field_a;
             stackOut_17_1 = 0;
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param0) {
-              stackOut_19_0 = (cka) (Object) stackIn_19_0;
+              stackOut_19_0 = (cka) ((Object) stackIn_19_0);
               stackOut_19_1 = stackIn_19_1;
               stackOut_19_2 = 0;
               stackIn_20_0 = stackOut_19_0;
@@ -447,7 +477,7 @@ final class ku extends qe {
               stackIn_20_2 = stackOut_19_2;
               break L3;
             } else {
-              stackOut_18_0 = (cka) (Object) stackIn_18_0;
+              stackOut_18_0 = (cka) ((Object) stackIn_18_0);
               stackOut_18_1 = stackIn_18_1;
               stackOut_18_2 = 1;
               stackIn_20_0 = stackOut_18_0;
@@ -457,29 +487,29 @@ final class ku extends qe {
             }
           }
           ((cka) (Object) stackIn_20_0).e(stackIn_20_1, stackIn_20_2 != 0);
-          if (((ku) this).field_c) {
-            ((ku) this).field_a.c(0, 0, 5890, 768);
-            ((ku) this).field_a.b(5890, 3, 0, 770);
-            ((ku) this).field_c = false;
+          if (this.field_c) {
+            this.field_a.c(0, 0, 5890, 768);
+            this.field_a.b(5890, 3, 0, 770);
+            this.field_c = false;
             return;
           } else {
             return;
           }
         } else {
           L4: {
-            field_j = null;
-            ((ku) this).field_a.b(8448, 8960, 8448);
-            ((ku) this).field_a.c(0, 0, 5890, 768);
-            ((ku) this).field_a.c(2, 0, 34166, 770);
-            ((ku) this).field_a.b(5890, 3, 0, 770);
-            stackOut_10_0 = ((ku) this).field_a;
+            field_j = (int[]) null;
+            this.field_a.b(8448, 8960, 8448);
+            this.field_a.c(0, 0, 5890, 768);
+            this.field_a.c(2, 0, 34166, 770);
+            this.field_a.b(5890, 3, 0, 770);
+            stackOut_10_0 = this.field_a;
             stackOut_10_1 = 0;
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0) {
-              stackOut_12_0 = (cka) (Object) stackIn_12_0;
+              stackOut_12_0 = (cka) ((Object) stackIn_12_0);
               stackOut_12_1 = stackIn_12_1;
               stackOut_12_2 = 0;
               stackIn_13_0 = stackOut_12_0;
@@ -487,7 +517,7 @@ final class ku extends qe {
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (cka) (Object) stackIn_11_0;
+              stackOut_11_0 = (cka) ((Object) stackIn_11_0);
               stackOut_11_1 = stackIn_11_1;
               stackOut_11_2 = 1;
               stackIn_13_0 = stackOut_11_0;
@@ -497,10 +527,10 @@ final class ku extends qe {
             }
           }
           ((cka) (Object) stackIn_13_0).e(stackIn_13_1, stackIn_13_2 != 0);
-          if (((ku) this).field_c) {
-            ((ku) this).field_a.c(0, 0, 5890, 768);
-            ((ku) this).field_a.b(5890, 3, 0, 770);
-            ((ku) this).field_c = false;
+          if (this.field_c) {
+            this.field_a.c(0, 0, 5890, 768);
+            this.field_a.b(5890, 3, 0, 770);
+            this.field_c = false;
             return;
           } else {
             return;
@@ -518,66 +548,73 @@ final class ku extends qe {
         int stackIn_7_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_7_1 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
         int stackOut_1_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_3_1 = 0;
         int stackOut_2_0 = 0;
         int stackOut_2_1 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_7_1 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_6_1 = 0;
         L0: {
-          var2 = ((ku) this).field_a.field_j;
-          if (!((ku) this).field_e) {
-            L1: {
-              stackOut_5_0 = 34336;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_6_0 = stackOut_5_0;
-              if (((ku) this).field_a.field_N != 2147483647) {
-                stackOut_7_0 = stackIn_7_0;
-                stackOut_7_1 = ((ku) this).field_g.field_a;
-                stackIn_8_0 = stackOut_7_0;
-                stackIn_8_1 = stackOut_7_1;
-                break L1;
+          L1: {
+            var2 = this.field_a.field_j;
+            if (!this.field_e) {
+              break L1;
+            } else {
+              L2: {
+                stackOut_1_0 = 34336;
+                stackIn_3_0 = stackOut_1_0;
+                stackIn_2_0 = stackOut_1_0;
+                if (this.field_a.field_N != 2147483647) {
+                  stackOut_3_0 = stackIn_3_0;
+                  stackOut_3_1 = this.field_k.field_a;
+                  stackIn_4_0 = stackOut_3_0;
+                  stackIn_4_1 = stackOut_3_1;
+                  break L2;
+                } else {
+                  stackOut_2_0 = stackIn_2_0;
+                  stackOut_2_1 = this.field_d.field_a;
+                  stackIn_4_0 = stackOut_2_0;
+                  stackIn_4_1 = stackOut_2_1;
+                  break L2;
+                }
+              }
+              jaggl.OpenGL.glBindProgramARB(stackIn_4_0, stackIn_4_1);
+              if (!TombRacer.field_G) {
+                break L0;
               } else {
-                stackOut_6_0 = stackIn_6_0;
-                stackOut_6_1 = ((ku) this).field_h.field_a;
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
                 break L1;
               }
             }
-            jaggl.OpenGL.glBindProgramARB(stackIn_8_0, stackIn_8_1);
-            break L0;
-          } else {
-            L2: {
-              stackOut_1_0 = 34336;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
-              if (((ku) this).field_a.field_N != 2147483647) {
-                stackOut_3_0 = stackIn_3_0;
-                stackOut_3_1 = ((ku) this).field_k.field_a;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                break L2;
-              } else {
-                stackOut_2_0 = stackIn_2_0;
-                stackOut_2_1 = ((ku) this).field_d.field_a;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                break L2;
-              }
-            }
-            jaggl.OpenGL.glBindProgramARB(stackIn_4_0, stackIn_4_1);
-            break L0;
           }
+          L3: {
+            stackOut_5_0 = 34336;
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_6_0 = stackOut_5_0;
+            if (this.field_a.field_N != 2147483647) {
+              stackOut_7_0 = stackIn_7_0;
+              stackOut_7_1 = this.field_g.field_a;
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              break L3;
+            } else {
+              stackOut_6_0 = stackIn_6_0;
+              stackOut_6_1 = this.field_h.field_a;
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              break L3;
+            }
+          }
+          jaggl.OpenGL.glBindProgramARB(stackIn_8_0, stackIn_8_1);
+          break L0;
         }
-        var2.a(sla.field_f, 0.0f, (float)((ku) this).field_a.field_N, 0.0f, -9479, -1.0f);
+        var2.a(sla.field_f, 0.0f, (float)this.field_a.field_N, 0.0f, -9479, -1.0f);
         jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, sla.field_f[0], sla.field_f[1], sla.field_f[2], sla.field_f[3]);
         jaggl.OpenGL.glEnable(34336);
-        ((ku) this).field_i = true;
+        this.field_i = true;
         if (param0 != -120) {
           this.c(-94);
           this.c(param0 ^ 19);
@@ -594,22 +631,22 @@ final class ku extends qe {
         float var4 = 0.0f;
         float var5 = 0.0f;
         L0: {
-          if (((ku) this).field_i) {
-            var2 = ((ku) this).field_a.XA();
-            var3 = ((ku) this).field_a.i();
+          if (this.field_i) {
+            var2 = this.field_a.XA();
+            var3 = this.field_a.i();
             var4 = -(0.125f * (float)(var2 + -var3)) + (float)var2;
             var5 = -((float)(var2 - var3) * 0.25f) + (float)var2;
-            jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)((ku) this).field_a.field_vb, (float)((ku) this).field_a.field_nb / 255.0f);
-            ((ku) this).field_a.e(1, true);
-            ((ku) this).field_a.h(1104971864, ((ku) this).field_a.field_xc);
-            ((ku) this).field_a.e(0, true);
+            jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.field_a.field_vb, (float)this.field_a.field_nb / 255.0f);
+            this.field_a.e(1, true);
+            this.field_a.h(1104971864, this.field_a.field_xc);
+            this.field_a.e(0, true);
             break L0;
           } else {
             break L0;
           }
         }
         if (param0 > -48) {
-          ((ku) this).a(true, -105);
+          this.a(true, -105);
           return;
         } else {
           return;
@@ -617,24 +654,21 @@ final class ku extends qe {
     }
 
     final void b(boolean param0, int param1) {
+        boolean discarded$0 = false;
         if (param1 < 77) {
-            boolean discarded$0 = ((ku) this).b(9);
+            discarded$0 = this.b(9);
         }
     }
 
     final boolean b(int param0) {
         if (param0 != -11921) {
-            ((ku) this).field_c = false;
-            return ((ku) this).field_f;
+            this.field_c = false;
+            return this.field_f;
         }
-        return ((ku) this).field_f;
+        return this.field_f;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new int[]{0, 512, 512, 0};
     }
 }

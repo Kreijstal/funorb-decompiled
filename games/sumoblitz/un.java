@@ -11,13 +11,12 @@ final class un {
         field_c = null;
         field_a = null;
         field_b = null;
+        if (!param0) {
+            field_a = (int[]) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "un.A(";
         field_a = new int[]{1, 2, 3, 4, 5, 6};
         field_c = "Player Name: ";

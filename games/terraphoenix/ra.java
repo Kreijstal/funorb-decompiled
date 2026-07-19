@@ -23,7 +23,7 @@ final class ra extends uf {
             return false;
           }
         } else {
-          field_j = null;
+          field_j = (String) null;
           if (null != ig.field_e) {
             if (mh.field_a != od.field_g) {
               return false;
@@ -40,25 +40,24 @@ final class ra extends uf {
         field_j = null;
         field_i = null;
         field_h = null;
+        if (param0 != 7876) {
+            return;
+        }
         field_m = null;
         field_l = null;
     }
 
     ra(long param0, int param1, byte[] param2) {
         try {
-            ((ra) this).field_o = param0;
-            ((ra) this).field_k = param2;
-            ((ra) this).field_n = param1;
+            this.field_o = param0;
+            this.field_k = param2;
+            this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ra.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "ra.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
         field_j = "Achievements";
     }

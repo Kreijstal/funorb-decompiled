@@ -7,13 +7,15 @@ final class t extends ni {
     static volatile int field_c;
 
     final void a(byte param0, byte[] param1) {
+        java.nio.Buffer discarded$0 = null;
+        java.nio.ByteBuffer discarded$1 = null;
         try {
             int var3_int = 33 % ((param0 - -54) / 63);
-            ((t) this).field_e = java.nio.ByteBuffer.allocateDirect(param1.length);
-            java.nio.Buffer discarded$0 = ((t) this).field_e.position(0);
-            java.nio.ByteBuffer discarded$1 = ((t) this).field_e.put(param1);
+            this.field_e = java.nio.ByteBuffer.allocateDirect(param1.length);
+            discarded$0 = this.field_e.position(0);
+            discarded$1 = this.field_e.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "t.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "t.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -28,26 +30,33 @@ final class t extends ni {
         wc.field_b = true;
         oh.field_F = param0 ? true : false;
         sj.field_h = new rg(mb.field_b, cn.field_g, param1, gd.field_B, oh.field_F);
+        if (param2 != 0) {
+            return;
+        }
         try {
-            mb.field_b.b(1, (fe) (Object) sj.field_h);
+            mb.field_b.b(1, sj.field_h);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "t.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 0 + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "t.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final byte[] a(int param0) {
+        java.nio.Buffer discarded$8 = null;
+        java.nio.ByteBuffer discarded$9 = null;
+        java.nio.Buffer discarded$10 = null;
+        java.nio.ByteBuffer discarded$11 = null;
         byte[] var2 = null;
         byte[] var3 = null;
-        var3 = new byte[((t) this).field_e.capacity()];
+        var3 = new byte[this.field_e.capacity()];
         var2 = var3;
         if (param0 != 3006) {
-          ((t) this).field_e = null;
-          java.nio.Buffer discarded$8 = ((t) this).field_e.position(0);
-          java.nio.ByteBuffer discarded$9 = ((t) this).field_e.get(var3);
+          this.field_e = (java.nio.ByteBuffer) null;
+          discarded$8 = this.field_e.position(0);
+          discarded$9 = this.field_e.get(var3);
           return var3;
         } else {
-          java.nio.Buffer discarded$10 = ((t) this).field_e.position(0);
-          java.nio.ByteBuffer discarded$11 = ((t) this).field_e.get(var3);
+          discarded$10 = this.field_e.position(0);
+          discarded$11 = this.field_e.get(var3);
           return var3;
         }
     }
@@ -56,10 +65,6 @@ final class t extends ni {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Confirm Password: ";
         field_c = 0;
     }

@@ -47,7 +47,7 @@ final class vbb extends rqa {
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -55,23 +55,23 @@ final class vbb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("vbb.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -79,7 +79,7 @@ final class vbb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -145,7 +145,7 @@ final class vbb extends rqa {
               var14 = param7 * param7;
               var15 = var11 * var11;
               var16 = var12 * var12;
-              var17 = var14 << 1;
+              var17 = var14 << 1760782817;
               if (param0 == 2051507073) {
                 break L1;
               } else {
@@ -154,19 +154,19 @@ final class vbb extends rqa {
               }
             }
             L2: {
-              var18 = var13 << 1;
-              var19 = var16 << 1;
-              var20 = var15 << 1;
-              var21 = param7 << 1;
-              var22 = var12 << 1;
+              var18 = var13 << -1376935935;
+              var19 = var16 << -283643775;
+              var20 = var15 << 2051507073;
+              var21 = param7 << 1721104481;
+              var22 = var12 << -2107995199;
               var23 = var17 + var13 * (-var21 + 1);
               var24 = -(var18 * (var21 + -1)) + var14;
               var25 = var15 * (-var22 + 1) - -var19;
               var26 = -((-1 + var22) * var20) + var16;
-              var27 = var13 << 2;
-              var28 = var14 << 2;
-              var29 = var15 << 2;
-              var30 = var16 << 2;
+              var27 = var13 << -1587186878;
+              var28 = var14 << 1265805730;
+              var29 = var15 << 1353969378;
+              var30 = var16 << 2054131330;
               var31 = 3 * var17;
               var32 = (-3 + var21) * var18;
               var33 = 3 * var19;
@@ -210,7 +210,7 @@ final class vbb extends rqa {
                 }
                 L5: {
                   var39 = stackIn_10_0;
-                  if (var23 < 0) {
+                  if (-1 < (var23 ^ -1)) {
                     L6: while (true) {
                       if (var23 >= 0) {
                         break L5;
@@ -230,11 +230,11 @@ final class vbb extends rqa {
                 L7: {
                   if (var39 != 0) {
                     L8: {
-                      if (var25 >= 0) {
+                      if ((var25 ^ -1) <= -1) {
                         break L8;
                       } else {
                         L9: while (true) {
-                          if (var25 >= 0) {
+                          if ((var25 ^ -1) <= -1) {
                             break L8;
                           } else {
                             var26 = var26 + var37;
@@ -269,7 +269,7 @@ final class vbb extends rqa {
                   }
                 }
                 L11: {
-                  if (var24 < 0) {
+                  if (-1 < (var24 ^ -1)) {
                     var23 = var23 + var31;
                     var24 = var24 + var35;
                     var31 = var31 + var28;
@@ -342,12 +342,12 @@ final class vbb extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var8, "vbb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw rta.a((Throwable) ((Object) var8), "vbb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     final static void e(int param0) {
-        ajb var1 = (ajb) (Object) ce.field_p.c((byte) -113);
+        ajb var1 = (ajb) ((Object) ce.field_p.c((byte) -113));
         if (!(var1 != null)) {
             var1 = new ajb();
         }
@@ -355,14 +355,10 @@ final class vbb extends rqa {
             vbb.e(15);
         }
         var1.a(dma.field_j, dma.field_i, dma.field_c, (byte) -88, dma.field_a, dma.field_f, dma.field_g, dma.field_d);
-        bc.field_b.b(-10258, (ksa) (Object) var1);
+        bc.field_b.b(-10258, var1);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = true;
         field_o = new int[]{36064, 36065, 36066, 36067, 36068, 36069, 36070, 36071, 36096};
     }

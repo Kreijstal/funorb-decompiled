@@ -22,30 +22,30 @@ class ea extends hi {
           if (param3 > 0) {
             if (param4 != 256) {
               L0: {
-                var6 = ((ea) this).field_y;
-                var7 = ((ea) this).field_C;
+                var6 = this.field_y;
+                var7 = this.field_C;
                 var8 = 0;
                 var9 = 0;
-                var10 = ((ea) this).field_x;
-                var11 = ((ea) this).field_A;
+                var10 = this.field_x;
+                var11 = this.field_A;
                 var12 = (var10 << 16) / param2;
                 var13 = (var11 << 16) / param3;
-                if (((ea) this).field_B <= 0) {
+                if (this.field_B <= 0) {
                   break L0;
                 } else {
-                  var14 = ((((ea) this).field_B << 16) + var12 - 1) / var12;
+                  var14 = ((this.field_B << 16) + var12 - 1) / var12;
                   param0 = param0 + var14;
-                  var8 = var8 + (var14 * var12 - (((ea) this).field_B << 16));
+                  var8 = var8 + (var14 * var12 - (this.field_B << 16));
                   break L0;
                 }
               }
               L1: {
-                if (((ea) this).field_u <= 0) {
+                if (this.field_u <= 0) {
                   break L1;
                 } else {
-                  var14 = ((((ea) this).field_u << 16) + var13 - 1) / var13;
+                  var14 = ((this.field_u << 16) + var13 - 1) / var13;
                   param1 = param1 + var14;
-                  var9 = var9 + (var14 * var13 - (((ea) this).field_u << 16));
+                  var9 = var9 + (var14 * var13 - (this.field_u << 16));
                   break L1;
                 }
               }
@@ -108,10 +108,10 @@ class ea extends hi {
                   break L7;
                 }
               }
-              ea.a(eh.field_f, ((ea) this).field_D, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
+              ea.a(eh.field_f, this.field_D, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
               return;
             } else {
-              ((ea) this).c(param0, param1, param2, param3);
+              this.c(param0, param1, param2, param3);
               return;
             }
           } else {
@@ -130,20 +130,20 @@ class ea extends hi {
         int[] var7 = null;
         int var8 = 0;
         int var9 = 0;
-        var1 = ((ea) this).field_C - 1;
+        var1 = this.field_C - 1;
         L0: while (true) {
           L1: {
             if (var1 < 0) {
               break L1;
             } else {
-              var2 = var1 * ((ea) this).field_y;
+              var2 = var1 * this.field_y;
               var3 = 0;
               L2: while (true) {
-                if (var3 >= ((ea) this).field_y) {
+                if (var3 >= this.field_y) {
                   var1--;
                   continue L0;
                 } else {
-                  if (((ea) this).field_D[var2 + var3] == 0) {
+                  if (this.field_D[var2 + var3] == 0) {
                     var3++;
                     continue L2;
                   } else {
@@ -159,14 +159,14 @@ class ea extends hi {
               if (var2 >= var1) {
                 break L4;
               } else {
-                var3 = var2 * ((ea) this).field_y;
+                var3 = var2 * this.field_y;
                 var4 = 0;
                 L5: while (true) {
-                  if (var4 >= ((ea) this).field_y) {
+                  if (var4 >= this.field_y) {
                     var2++;
                     continue L3;
                   } else {
-                    if (((ea) this).field_D[var3 + var4] == 0) {
+                    if (this.field_D[var3 + var4] == 0) {
                       var4++;
                       continue L5;
                     } else {
@@ -176,7 +176,7 @@ class ea extends hi {
                 }
               }
             }
-            var3 = ((ea) this).field_y - 1;
+            var3 = this.field_y - 1;
             L6: while (true) {
               L7: {
                 if (var3 < 0) {
@@ -188,7 +188,7 @@ class ea extends hi {
                       var3--;
                       continue L6;
                     } else {
-                      if (((ea) this).field_D[var4 * ((ea) this).field_y + var3] == 0) {
+                      if (this.field_D[var4 * this.field_y + var3] == 0) {
                         var4++;
                         continue L8;
                       } else {
@@ -210,7 +210,7 @@ class ea extends hi {
                         var4++;
                         continue L9;
                       } else {
-                        if (((ea) this).field_D[var5 * ((ea) this).field_y + var4] == 0) {
+                        if (this.field_D[var5 * this.field_y + var4] == 0) {
                           var5++;
                           continue L11;
                         } else {
@@ -224,13 +224,13 @@ class ea extends hi {
                   if (var4 != 0) {
                     break L12;
                   } else {
-                    if (var3 != ((ea) this).field_y - 1) {
+                    if (var3 != this.field_y - 1) {
                       break L12;
                     } else {
                       if (var2 != 0) {
                         break L12;
                       } else {
-                        if (var1 != ((ea) this).field_C - 1) {
+                        if (var1 != this.field_C - 1) {
                           break L12;
                         } else {
                           return;
@@ -245,11 +245,11 @@ class ea extends hi {
                 var8 = 0;
                 L13: while (true) {
                   if (var8 >= var6) {
-                    ((ea) this).field_D = var7;
-                    ((ea) this).field_y = var5;
-                    ((ea) this).field_C = var6;
-                    ((ea) this).field_B = ((ea) this).field_B + var4;
-                    ((ea) this).field_u = ((ea) this).field_u + var2;
+                    this.field_D = var7;
+                    this.field_y = var5;
+                    this.field_C = var6;
+                    this.field_B = this.field_B + var4;
+                    this.field_u = this.field_u + var2;
                     return;
                   } else {
                     var9 = 0;
@@ -258,7 +258,7 @@ class ea extends hi {
                         var8++;
                         continue L13;
                       } else {
-                        var7[var8 * var5 + var9] = ((ea) this).field_D[(var8 + var2) * ((ea) this).field_y + (var9 + var4)];
+                        var7[var8 * var5 + var9] = this.field_D[(var8 + var2) * this.field_y + (var9 + var4)];
                         var9++;
                         continue L14;
                       }
@@ -279,10 +279,10 @@ class ea extends hi {
         int var8 = 0;
         var4 = 0;
         L0: while (true) {
-          if (var4 >= ((ea) this).field_D.length) {
+          if (var4 >= this.field_D.length) {
             return;
           } else {
-            var5 = ((ea) this).field_D[var4];
+            var5 = this.field_D[var4];
             if (var5 != 0) {
               L1: {
                 var6 = var5 >> 16 & 255;
@@ -329,7 +329,7 @@ class ea extends hi {
                   break L3;
                 }
               }
-              ((ea) this).field_D[var4] = (var6 << 16) + (var7 << 8) + var8;
+              this.field_D[var4] = (var6 << 16) + (var7 << 8) + var8;
               var4++;
               continue L0;
             } else {
@@ -341,6 +341,16 @@ class ea extends hi {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, byte[] param11) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -363,12 +373,12 @@ class ea extends hi {
                     var13++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param3;
+                    incrementValue$10 = param3;
                     param3++;
                     param2 = param1[incrementValue$10];
                     if (param2 != 0) {
                       if (param11[param5] == 0) {
-                        int incrementValue$11 = param4;
+                        incrementValue$11 = param4;
                         param4++;
                         param0[incrementValue$11] = param2;
                         param5++;
@@ -391,7 +401,7 @@ class ea extends hi {
               } else {
                 L3: {
                   L4: {
-                    int incrementValue$12 = param3;
+                    incrementValue$12 = param3;
                     param3++;
                     param2 = param1[incrementValue$12];
                     if (param2 == 0) {
@@ -400,7 +410,7 @@ class ea extends hi {
                       if (param11[param5] != 0) {
                         break L4;
                       } else {
-                        int incrementValue$13 = param4;
+                        incrementValue$13 = param4;
                         param4++;
                         param0[incrementValue$13] = param2;
                         break L3;
@@ -413,7 +423,7 @@ class ea extends hi {
                 L5: {
                   L6: {
                     param5++;
-                    int incrementValue$14 = param3;
+                    incrementValue$14 = param3;
                     param3++;
                     param2 = param1[incrementValue$14];
                     if (param2 == 0) {
@@ -422,7 +432,7 @@ class ea extends hi {
                       if (param11[param5] != 0) {
                         break L6;
                       } else {
-                        int incrementValue$15 = param4;
+                        incrementValue$15 = param4;
                         param4++;
                         param0[incrementValue$15] = param2;
                         break L5;
@@ -435,7 +445,7 @@ class ea extends hi {
                 L7: {
                   L8: {
                     param5++;
-                    int incrementValue$16 = param3;
+                    incrementValue$16 = param3;
                     param3++;
                     param2 = param1[incrementValue$16];
                     if (param2 == 0) {
@@ -444,7 +454,7 @@ class ea extends hi {
                       if (param11[param5] != 0) {
                         break L8;
                       } else {
-                        int incrementValue$17 = param4;
+                        incrementValue$17 = param4;
                         param4++;
                         param0[incrementValue$17] = param2;
                         break L7;
@@ -455,12 +465,12 @@ class ea extends hi {
                   break L7;
                 }
                 param5++;
-                int incrementValue$18 = param3;
+                incrementValue$18 = param3;
                 param3++;
                 param2 = param1[incrementValue$18];
                 if (param2 != 0) {
                   if (param11[param5] == 0) {
-                    int incrementValue$19 = param4;
+                    incrementValue$19 = param4;
                     param4++;
                     param0[incrementValue$19] = param2;
                     param5++;
@@ -519,19 +529,19 @@ class ea extends hi {
         int var40 = 0;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((ea) this).field_B << 4);
-            param1 = param1 - (((ea) this).field_u << 4);
+            param0 = param0 - (this.field_B << 4);
+            param1 = param1 - (this.field_u << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((ea) this).field_y << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((ea) this).field_y << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((ea) this).field_C << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((ea) this).field_C << 4) - param1) * var10;
-            var17 = ((((ea) this).field_y << 4) - param0) * var10 + ((((ea) this).field_C << 4) - param1) * var9;
-            var18 = -((((ea) this).field_y << 4) - param0) * var9 + ((((ea) this).field_C << 4) - param1) * var10;
+            var13 = ((this.field_y << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_y << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_C << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_C << 4) - param1) * var10;
+            var17 = ((this.field_y << 4) - param0) * var10 + ((this.field_C << 4) - param1) * var9;
+            var18 = -((this.field_y << 4) - param0) * var9 + ((this.field_C << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -740,11 +750,11 @@ class ea extends hi {
                                     break L20;
                                   } else {
                                     var33 = var37 >> 12;
-                                    if (var37 >> 12 >= ((ea) this).field_y) {
+                                    if (var37 >> 12 >= this.field_y) {
                                       break L20;
                                     } else {
                                       var34 = var38 >> 12;
-                                      if (var38 >> 12 < ((ea) this).field_C) {
+                                      if (var38 >> 12 < this.field_C) {
                                         this.c(var23, var33, var34, var37, var38);
                                         var39++;
                                         var37 = var37 + var28;
@@ -806,7 +816,7 @@ class ea extends hi {
                           } else {
                             L24: {
                               var40 = 0;
-                              var35 = var38 - (((ea) this).field_C << 12);
+                              var35 = var38 - (this.field_C << 12);
                               if (var35 >= 0) {
                                 if (var27 != 0) {
                                   var35 = (var27 - var35) / var27;
@@ -837,7 +847,7 @@ class ea extends hi {
                                       break L26;
                                     } else {
                                       var33 = var37 >> 12;
-                                      if (var37 >> 12 < ((ea) this).field_y) {
+                                      if (var37 >> 12 < this.field_y) {
                                         var34 = var38 >> 12;
                                         this.c(var23, var33, var34, var37, var38);
                                         var39++;
@@ -877,7 +887,7 @@ class ea extends hi {
                           var38 = var32 + (var29 * var27 >> 4);
                           var39 = var20;
                           var40 = 0;
-                          var35 = var37 - (((ea) this).field_y << 12);
+                          var35 = var37 - (this.field_y << 12);
                           if (var35 >= 0) {
                             if (var28 != 0) {
                               var35 = (var28 - var35) / var28;
@@ -933,7 +943,7 @@ class ea extends hi {
                                       break L32;
                                     } else {
                                       var34 = var38 >> 12;
-                                      if (var38 >> 12 < ((ea) this).field_C) {
+                                      if (var38 >> 12 < this.field_C) {
                                         var33 = var37 >> 12;
                                         this.c(var23, var33, var34, var37, var38);
                                         var39++;
@@ -971,7 +981,7 @@ class ea extends hi {
                           var38 = var32 + (var29 * var27 >> 4);
                           var39 = var20;
                           var40 = 0;
-                          var35 = var37 - (((ea) this).field_y << 12);
+                          var35 = var37 - (this.field_y << 12);
                           if (var35 >= 0) {
                             if (var28 != 0) {
                               var35 = (var28 - var35) / var28;
@@ -996,7 +1006,7 @@ class ea extends hi {
                           } else {
                             L36: {
                               var40 = 0;
-                              var35 = var38 - (((ea) this).field_C << 12);
+                              var35 = var38 - (this.field_C << 12);
                               if (var35 >= 0) {
                                 if (var27 != 0) {
                                   var35 = (var27 - var35) / var27;
@@ -1073,13 +1083,14 @@ class ea extends hi {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
             var14 = (param4 >> 16) * param11;
             for (var15 = -param7; var15 < 0; var15++) {
                 param2 = param1[(param3 >> 16) + var14];
                 if (param2 != 0) {
-                    int incrementValue$1 = param5;
+                    incrementValue$1 = param5;
                     param5++;
                     param0[incrementValue$1] = param2;
                 } else {
@@ -1094,6 +1105,16 @@ class ea extends hi {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -1115,7 +1136,7 @@ class ea extends hi {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3--;
                     param2 = param1[incrementValue$218];
                     if (param2 == 0) {
@@ -1123,7 +1144,7 @@ class ea extends hi {
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -1133,48 +1154,48 @@ class ea extends hi {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3--;
                   param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3--;
                   param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3--;
                   param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3--;
                 param2 = param1[incrementValue$226];
                 if (param2 == 0) {
@@ -1182,7 +1203,7 @@ class ea extends hi {
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -1203,12 +1224,12 @@ class ea extends hi {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ea) this).field_B;
-          param1 = param1 + ((ea) this).field_u;
+          param0 = param0 + this.field_B;
+          param1 = param1 + this.field_u;
           var4 = param0 + param1 * eh.field_g;
           var5 = 0;
-          var6 = ((ea) this).field_C;
-          var7 = ((ea) this).field_y;
+          var6 = this.field_C;
+          var7 = this.field_y;
           var8 = eh.field_g - var7;
           var9 = 0;
           if (param1 >= eh.field_d) {
@@ -1259,7 +1280,7 @@ class ea extends hi {
           return;
         } else {
           if (var6 > 0) {
-            ea.a(eh.field_f, ((ea) this).field_D, 0, var5, var4, var7, var6, var8, var9, param2);
+            ea.a(eh.field_f, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -1294,7 +1315,7 @@ class ea extends hi {
         int stackOut_24_0 = 0;
         int stackOut_23_0 = 0;
         L0: {
-          var6 = param2 * ((ea) this).field_y + param1;
+          var6 = param2 * this.field_y + param1;
           param3 = param3 & 4095;
           param4 = param4 & 4095;
           if (param2 < 0) {
@@ -1311,7 +1332,7 @@ class ea extends hi {
                 break L1;
               } else {
                 L2: {
-                  var7 = ((ea) this).field_D[var6];
+                  var7 = this.field_D[var6];
                   if (var7 == 0) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
@@ -1326,13 +1347,13 @@ class ea extends hi {
                 break L1;
               }
             }
-            if (param1 >= ((ea) this).field_y - 1) {
+            if (param1 >= this.field_y - 1) {
               var12 = 0;
               var8 = 0;
               break L0;
             } else {
               L3: {
-                var8 = ((ea) this).field_D[var6 + 1];
+                var8 = this.field_D[var6 + 1];
                 if (var8 == 0) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
@@ -1349,7 +1370,7 @@ class ea extends hi {
           }
         }
         L4: {
-          if (param2 >= ((ea) this).field_C - 1) {
+          if (param2 >= this.field_C - 1) {
             var14 = 0;
             var13 = 0;
             var10 = 0;
@@ -1363,7 +1384,7 @@ class ea extends hi {
                 break L5;
               } else {
                 L6: {
-                  var9 = ((ea) this).field_D[var6 + ((ea) this).field_y];
+                  var9 = this.field_D[var6 + this.field_y];
                   if (var9 == 0) {
                     stackOut_18_0 = 0;
                     stackIn_19_0 = stackOut_18_0;
@@ -1378,13 +1399,13 @@ class ea extends hi {
                 break L5;
               }
             }
-            if (param1 >= ((ea) this).field_y - 1) {
+            if (param1 >= this.field_y - 1) {
               var14 = 0;
               var10 = 0;
               break L4;
             } else {
               L7: {
-                var10 = ((ea) this).field_D[var6 + ((ea) this).field_y + 1];
+                var10 = this.field_D[var6 + this.field_y + 1];
                 if (var10 == 0) {
                   stackOut_24_0 = 0;
                   stackIn_25_0 = stackOut_24_0;
@@ -1447,7 +1468,7 @@ class ea extends hi {
     }
 
     final void g() {
-        eh.a(((ea) this).field_D, ((ea) this).field_y, ((ea) this).field_C);
+        eh.a(this.field_D, this.field_y, this.field_C);
     }
 
     void a(int param0, int param1, int param2) {
@@ -1459,12 +1480,12 @@ class ea extends hi {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ea) this).field_B;
-          param1 = param1 + ((ea) this).field_u;
+          param0 = param0 + this.field_B;
+          param1 = param1 + this.field_u;
           var4 = param0 + param1 * eh.field_g;
           var5 = 0;
-          var6 = ((ea) this).field_C;
-          var7 = ((ea) this).field_y;
+          var6 = this.field_C;
+          var7 = this.field_y;
           var8 = eh.field_g - var7;
           var9 = 0;
           if (param1 >= eh.field_d) {
@@ -1515,7 +1536,7 @@ class ea extends hi {
           return;
         } else {
           if (var6 > 0) {
-            ea.a(eh.field_f, ((ea) this).field_D, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+            ea.a(eh.field_f, this.field_D, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -1532,12 +1553,12 @@ class ea extends hi {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ea) this).field_B;
-          param1 = param1 + ((ea) this).field_u;
+          param0 = param0 + this.field_B;
+          param1 = param1 + this.field_u;
           var4 = param0 + param1 * eh.field_g;
           var5 = 0;
-          var6 = ((ea) this).field_C;
-          var7 = ((ea) this).field_y;
+          var6 = this.field_C;
+          var7 = this.field_y;
           var8 = eh.field_g - var7;
           var9 = 0;
           if (param1 >= eh.field_d) {
@@ -1588,7 +1609,7 @@ class ea extends hi {
           return;
         } else {
           if (var6 > 0) {
-            ea.c(eh.field_f, ((ea) this).field_D, 0, var5, var4, var7, var6, var8, var9, param2);
+            ea.c(eh.field_f, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -1597,6 +1618,8 @@ class ea extends hi {
     }
 
     private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1615,7 +1638,7 @@ class ea extends hi {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$14 = param4;
+                incrementValue$14 = param4;
                 param4++;
                 param3 = param2[incrementValue$14];
                 if (param3 != 0) {
@@ -1624,7 +1647,7 @@ class ea extends hi {
                     var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
                     var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
                     var14 = (param3 & 255) * (param0 & 255) >>> 8;
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param1[incrementValue$15] = (var12 << 16) + (var13 << 8) + var14;
                     var11++;
@@ -1646,6 +1669,9 @@ class ea extends hi {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$403 = 0;
+        int incrementValue$404 = 0;
+        int incrementValue$405 = 0;
         int var12 = 0;
         int var13 = 0;
         var12 = param11 & 16711935;
@@ -1663,7 +1689,7 @@ class ea extends hi {
                 param6++;
                 continue L0;
               } else {
-                int incrementValue$403 = param3;
+                incrementValue$403 = param3;
                 param3++;
                 param2 = param1[incrementValue$403];
                 if (param2 == 0) {
@@ -1672,14 +1698,14 @@ class ea extends hi {
                   continue L1;
                 } else {
                   if (param2 >> 8 != (param2 & 65535)) {
-                    int incrementValue$404 = param4;
+                    incrementValue$404 = param4;
                     param4++;
                     param0[incrementValue$404] = param2;
                     param5++;
                     continue L1;
                   } else {
                     param2 = param2 & 255;
-                    int incrementValue$405 = param4;
+                    incrementValue$405 = param4;
                     param4++;
                     param0[incrementValue$405] = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
                     param5++;
@@ -1693,14 +1719,16 @@ class ea extends hi {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = ((ea) this).field_x << 3;
-        int var6 = ((ea) this).field_A << 3;
+        int var5 = this.field_x << 3;
+        int var6 = this.field_A << 3;
         param0 = (param0 << 4) + (var5 & 15);
         param1 = (param1 << 4) + (var6 & 15);
-        ((ea) this).b(var5, var6, param0, param1, param2, param3);
+        this.b(var5, var6, param0, param1, param2, param3);
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -1714,7 +1742,7 @@ class ea extends hi {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -1728,7 +1756,7 @@ class ea extends hi {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -1741,6 +1769,7 @@ class ea extends hi {
     }
 
     private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+        int incrementValue$0 = 0;
         int var17 = param3;
         while (param8 < 0) {
             param7 = (param9 >> 16) * param15;
@@ -1753,7 +1782,7 @@ class ea extends hi {
                     param2 = param0 + param1;
                     param0 = (param0 & 16711935) + (param1 & 16711935);
                     param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                    int incrementValue$0 = param10;
+                    incrementValue$0 = param10;
                     param10++;
                     param5[incrementValue$0] = param2 - param1 | param1 - (param1 >>> 8);
                 } else {
@@ -1769,27 +1798,28 @@ class ea extends hi {
     }
 
     final void f(int param0) {
+        int incrementValue$2 = 0;
         int[] var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        var2 = new int[((ea) this).field_y * ((ea) this).field_C];
+        var2 = new int[this.field_y * this.field_C];
         var3 = 0;
         var4 = 0;
         L0: while (true) {
-          if (var4 >= ((ea) this).field_C) {
-            ((ea) this).field_D = var2;
+          if (var4 >= this.field_C) {
+            this.field_D = var2;
             return;
           } else {
             var5 = 0;
             L1: while (true) {
-              if (var5 >= ((ea) this).field_y) {
+              if (var5 >= this.field_y) {
                 var4++;
                 continue L0;
               } else {
                 L2: {
-                  var6 = ((ea) this).field_D[var3];
+                  var6 = this.field_D[var3];
                   if (var6 != 0) {
                     break L2;
                   } else {
@@ -1797,7 +1827,7 @@ class ea extends hi {
                       if (var5 <= 0) {
                         break L3;
                       } else {
-                        if (((ea) this).field_D[var3 - 1] == 0) {
+                        if (this.field_D[var3 - 1] == 0) {
                           break L3;
                         } else {
                           var6 = param0;
@@ -1809,7 +1839,7 @@ class ea extends hi {
                       if (var4 <= 0) {
                         break L4;
                       } else {
-                        if (((ea) this).field_D[var3 - ((ea) this).field_y] == 0) {
+                        if (this.field_D[var3 - this.field_y] == 0) {
                           break L4;
                         } else {
                           var6 = param0;
@@ -1818,10 +1848,10 @@ class ea extends hi {
                       }
                     }
                     L5: {
-                      if (var5 >= ((ea) this).field_y - 1) {
+                      if (var5 >= this.field_y - 1) {
                         break L5;
                       } else {
-                        if (((ea) this).field_D[var3 + 1] == 0) {
+                        if (this.field_D[var3 + 1] == 0) {
                           break L5;
                         } else {
                           var6 = param0;
@@ -1829,10 +1859,10 @@ class ea extends hi {
                         }
                       }
                     }
-                    if (var4 >= ((ea) this).field_C - 1) {
+                    if (var4 >= this.field_C - 1) {
                       break L2;
                     } else {
-                      if (((ea) this).field_D[var3 + ((ea) this).field_y] == 0) {
+                      if (this.field_D[var3 + this.field_y] == 0) {
                         break L2;
                       } else {
                         var6 = param0;
@@ -1841,7 +1871,7 @@ class ea extends hi {
                     }
                   }
                 }
-                int incrementValue$2 = var3;
+                incrementValue$2 = var3;
                 var3++;
                 var2[incrementValue$2] = var6;
                 var5++;
@@ -1862,12 +1892,12 @@ class ea extends hi {
         int var10 = 0;
         if (param2 != 256) {
           L0: {
-            param0 = param0 + ((ea) this).field_B;
-            param1 = param1 + ((ea) this).field_u;
+            param0 = param0 + this.field_B;
+            param1 = param1 + this.field_u;
             var4 = param0 + param1 * eh.field_g;
             var5 = 0;
-            var6 = ((ea) this).field_C;
-            var7 = ((ea) this).field_y;
+            var6 = this.field_C;
+            var7 = this.field_y;
             var8 = eh.field_g - var7;
             var9 = 0;
             if (param1 >= eh.field_d) {
@@ -1918,19 +1948,29 @@ class ea extends hi {
             return;
           } else {
             if (var6 > 0) {
-              ea.b(eh.field_f, ((ea) this).field_D, 0, var5, var4, var7, var6, var8, var9, param2);
+              ea.b(eh.field_f, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               return;
             }
           }
         } else {
-          ((ea) this).f(param0, param1);
+          this.f(param0, param1);
           return;
         }
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -1952,7 +1992,7 @@ class ea extends hi {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     param2 = param1[incrementValue$218];
                     if (param2 == 0) {
@@ -1960,7 +2000,7 @@ class ea extends hi {
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -1970,48 +2010,48 @@ class ea extends hi {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 param2 = param1[incrementValue$226];
                 if (param2 == 0) {
@@ -2019,7 +2059,7 @@ class ea extends hi {
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -2032,16 +2072,18 @@ class ea extends hi {
     }
 
     void d(int param0, int param1) {
-        param0 = param0 + (((ea) this).field_B >> 1);
-        param1 = param1 + (((ea) this).field_u >> 1);
+        param0 = param0 + (this.field_B >> 1);
+        param1 = param1 + (this.field_u >> 1);
         int var3 = param0 < eh.field_a ? eh.field_a - param0 << 1 : 0;
-        int var4 = param0 + (((ea) this).field_y >> 1) > eh.field_k ? eh.field_k - param0 << 1 : ((ea) this).field_y;
+        int var4 = param0 + (this.field_y >> 1) > eh.field_k ? eh.field_k - param0 << 1 : this.field_y;
         int var5 = param1 < eh.field_d ? eh.field_d - param1 << 1 : 0;
-        int var6 = param1 + (((ea) this).field_C >> 1) > eh.field_e ? eh.field_e - param1 << 1 : ((ea) this).field_C;
-        ea.a(((ea) this).field_D, var5 * ((ea) this).field_y + var3, (param1 + (var5 >> 1)) * eh.field_g + (param0 + (var3 >> 1)), (((ea) this).field_y << 1) - (var4 - var3) + (((ea) this).field_y & 1), eh.field_g - (var4 - var3 >> 1), ((ea) this).field_y, var4 - var3 >> 1, var6 - var5 >> 1);
+        int var6 = param1 + (this.field_C >> 1) > eh.field_e ? eh.field_e - param1 << 1 : this.field_C;
+        ea.a(this.field_D, var5 * this.field_y + var3, (param1 + (var5 >> 1)) * eh.field_g + (param0 + (var3 >> 1)), (this.field_y << 1) - (var4 - var3) + (this.field_y & 1), eh.field_g - (var4 - var3 >> 1), this.field_y, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -2055,7 +2097,7 @@ class ea extends hi {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -2067,7 +2109,7 @@ class ea extends hi {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -2088,12 +2130,12 @@ class ea extends hi {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ea) this).field_B;
-          param1 = param1 + ((ea) this).field_u;
+          param0 = param0 + this.field_B;
+          param1 = param1 + this.field_u;
           var4 = param0 + param1 * eh.field_g;
           var5 = 0;
-          var6 = ((ea) this).field_C;
-          var7 = ((ea) this).field_y;
+          var6 = this.field_C;
+          var7 = this.field_y;
           var8 = eh.field_g - var7;
           var9 = 0;
           if (param1 >= eh.field_d) {
@@ -2144,7 +2186,7 @@ class ea extends hi {
           return;
         } else {
           if (var6 > 0) {
-            ea.a(eh.field_f, ((ea) this).field_D, param2, var5, var4, var7, var6, var8, var9);
+            ea.a(eh.field_f, this.field_D, param2, var5, var4, var7, var6, var8, var9);
             return;
           } else {
             return;
@@ -2161,12 +2203,12 @@ class ea extends hi {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ea) this).field_B;
-          param1 = param1 + (((ea) this).field_A - ((ea) this).field_C - ((ea) this).field_u);
-          var3 = param0 + (param1 + ((ea) this).field_C - 1) * eh.field_g;
+          param0 = param0 + this.field_B;
+          param1 = param1 + (this.field_A - this.field_C - this.field_u);
+          var3 = param0 + (param1 + this.field_C - 1) * eh.field_g;
           var4 = 0;
-          var5 = ((ea) this).field_C;
-          var6 = ((ea) this).field_y;
+          var5 = this.field_C;
+          var6 = this.field_y;
           var7 = -eh.field_g - var6;
           var8 = 0;
           if (param1 >= eh.field_d) {
@@ -2217,7 +2259,7 @@ class ea extends hi {
           return;
         } else {
           if (var5 > 0) {
-            ea.c(eh.field_f, ((ea) this).field_D, 0, var4, var3, var6, var5, var7, var8);
+            ea.c(eh.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -2231,11 +2273,11 @@ class ea extends hi {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int[] var1 = ((ea) this).field_D;
-        for (var2 = (((ea) this).field_C >> 1) - 1; var2 >= 0; var2--) {
-            var3 = var2 * ((ea) this).field_y;
-            var4 = (((ea) this).field_C - var2 - 1) * ((ea) this).field_y;
-            for (var5 = -((ea) this).field_y; var5 < 0; var5++) {
+        int[] var1 = this.field_D;
+        for (var2 = (this.field_C >> 1) - 1; var2 >= 0; var2--) {
+            var3 = var2 * this.field_y;
+            var4 = (this.field_C - var2 - 1) * this.field_y;
+            for (var5 = -this.field_y; var5 < 0; var5++) {
                 var6 = var1[var3];
                 var1[var3] = var1[var4];
                 var1[var4] = var6;
@@ -2243,7 +2285,7 @@ class ea extends hi {
                 var4++;
             }
         }
-        ((ea) this).field_u = ((ea) this).field_A - ((ea) this).field_C - ((ea) this).field_u;
+        this.field_u = this.field_A - this.field_C - this.field_u;
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
@@ -2251,6 +2293,7 @@ class ea extends hi {
         int var15 = 0;
         int var16 = 0;
         int var18 = 0;
+        int incrementValue$0 = 0;
         int var17 = 0;
         int var13 = param3;
         for (var14 = -param8; var14 < 0; var14++) {
@@ -2260,7 +2303,7 @@ class ea extends hi {
                 if (param2 != 0) {
                     var17 = (param2 & 16711935) * param12 & -16711936;
                     var18 = (param2 & 65280) * param12 & 16711680;
-                    int incrementValue$0 = param5;
+                    incrementValue$0 = param5;
                     param5++;
                     param0[incrementValue$0] = (var17 | var18) >>> 8;
                 } else {
@@ -2304,15 +2347,15 @@ class ea extends hi {
         int var31 = 0;
         int var32 = 0;
         L0: {
-          if (param2 > ((ea) this).field_x) {
+          if (param2 > this.field_x) {
             break L0;
           } else {
-            if (param3 <= ((ea) this).field_A) {
+            if (param3 <= this.field_A) {
               L1: {
-                var5 = param0 + ((ea) this).field_B * param2 / ((ea) this).field_x;
-                var6 = param0 + ((((ea) this).field_B + ((ea) this).field_y) * param2 + ((ea) this).field_x - 1) / ((ea) this).field_x;
-                var7 = param1 + ((ea) this).field_u * param3 / ((ea) this).field_A;
-                var8 = param1 + ((((ea) this).field_u + ((ea) this).field_C) * param3 + ((ea) this).field_A - 1) / ((ea) this).field_A;
+                var5 = param0 + this.field_B * param2 / this.field_x;
+                var6 = param0 + ((this.field_B + this.field_y) * param2 + this.field_x - 1) / this.field_x;
+                var7 = param1 + this.field_u * param3 / this.field_A;
+                var8 = param1 + ((this.field_u + this.field_C) * param3 + this.field_A - 1) / this.field_A;
                 if (var5 >= eh.field_a) {
                   break L1;
                 } else {
@@ -2364,10 +2407,10 @@ class ea extends hi {
                         } else {
                           var13 = var12 - param0 << 4;
                           var14 = var11 - param1 << 4;
-                          var15 = var13 * ((ea) this).field_x / param2 - (((ea) this).field_B << 4);
-                          var16 = (var13 + 16) * ((ea) this).field_x / param2 - (((ea) this).field_B << 4);
-                          var17 = var14 * ((ea) this).field_A / param3 - (((ea) this).field_u << 4);
-                          var18 = (var14 + 16) * ((ea) this).field_A / param3 - (((ea) this).field_u << 4);
+                          var15 = var13 * this.field_x / param2 - (this.field_B << 4);
+                          var16 = (var13 + 16) * this.field_x / param2 - (this.field_B << 4);
+                          var17 = var14 * this.field_A / param3 - (this.field_u << 4);
+                          var18 = (var14 + 16) * this.field_A / param3 - (this.field_u << 4);
                           var19 = (var16 - var15) * (var18 - var17) >> 1;
                           if (var19 != 0) {
                             L7: {
@@ -2379,10 +2422,10 @@ class ea extends hi {
                               }
                             }
                             L8: {
-                              if (var16 <= ((ea) this).field_y << 4) {
+                              if (var16 <= this.field_y << 4) {
                                 break L8;
                               } else {
-                                var16 = ((ea) this).field_y << 4;
+                                var16 = this.field_y << 4;
                                 break L8;
                               }
                             }
@@ -2395,10 +2438,10 @@ class ea extends hi {
                               }
                             }
                             L10: {
-                              if (var18 <= ((ea) this).field_C << 4) {
+                              if (var18 <= this.field_C << 4) {
                                 break L10;
                               } else {
-                                var18 = ((ea) this).field_C << 4;
+                                var18 = this.field_C << 4;
                                 break L10;
                               }
                             }
@@ -2462,7 +2505,7 @@ class ea extends hi {
                                     var28++;
                                     continue L11;
                                   } else {
-                                    var31 = ((ea) this).field_D[var28 * ((ea) this).field_y + var30];
+                                    var31 = this.field_D[var28 * this.field_y + var30];
                                     if (var31 != 0) {
                                       L16: {
                                         var32 = var29;
@@ -2514,13 +2557,13 @@ class ea extends hi {
     }
 
     ea(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        ((ea) this).field_x = param0;
-        ((ea) this).field_A = param1;
-        ((ea) this).field_B = param2;
-        ((ea) this).field_u = param3;
-        ((ea) this).field_y = param4;
-        ((ea) this).field_C = param5;
-        ((ea) this).field_D = param6;
+        this.field_x = param0;
+        this.field_A = param1;
+        this.field_B = param2;
+        this.field_u = param3;
+        this.field_y = param4;
+        this.field_C = param5;
+        this.field_D = param6;
     }
 
     void c(int param0, int param1, int param2, int param3) {
@@ -2540,30 +2583,30 @@ class ea extends hi {
         } else {
           if (param3 > 0) {
             L0: {
-              var5 = ((ea) this).field_y;
-              var6 = ((ea) this).field_C;
+              var5 = this.field_y;
+              var6 = this.field_C;
               var7 = 0;
               var8 = 0;
-              var9 = ((ea) this).field_x;
-              var10 = ((ea) this).field_A;
+              var9 = this.field_x;
+              var10 = this.field_A;
               var11 = (var9 << 16) / param2;
               var12 = (var10 << 16) / param3;
-              if (((ea) this).field_B <= 0) {
+              if (this.field_B <= 0) {
                 break L0;
               } else {
-                var13 = ((((ea) this).field_B << 16) + var11 - 1) / var11;
+                var13 = ((this.field_B << 16) + var11 - 1) / var11;
                 param0 = param0 + var13;
-                var7 = var7 + (var13 * var11 - (((ea) this).field_B << 16));
+                var7 = var7 + (var13 * var11 - (this.field_B << 16));
                 break L0;
               }
             }
             L1: {
-              if (((ea) this).field_u <= 0) {
+              if (this.field_u <= 0) {
                 break L1;
               } else {
-                var13 = ((((ea) this).field_u << 16) + var12 - 1) / var12;
+                var13 = ((this.field_u << 16) + var12 - 1) / var12;
                 param1 = param1 + var13;
-                var8 = var8 + (var13 * var12 - (((ea) this).field_u << 16));
+                var8 = var8 + (var13 * var12 - (this.field_u << 16));
                 break L1;
               }
             }
@@ -2626,7 +2669,7 @@ class ea extends hi {
                 break L7;
               }
             }
-            ea.b(eh.field_f, ((ea) this).field_D, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+            ea.b(eh.field_f, this.field_D, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
             return;
           } else {
             return;
@@ -2635,6 +2678,7 @@ class ea extends hi {
     }
 
     private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+        int incrementValue$0 = 0;
         int var16 = param3;
         while (param8 < 0) {
             param7 = (param9 >> 16) * param15;
@@ -2645,7 +2689,7 @@ class ea extends hi {
                     param2 = param0 + param1;
                     param0 = (param0 & 16711935) + (param1 & 16711935);
                     param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                    int incrementValue$0 = param10;
+                    incrementValue$0 = param10;
                     param10++;
                     param5[incrementValue$0] = param2 - param1 | param1 - (param1 >>> 8);
                 } else {
@@ -2661,27 +2705,28 @@ class ea extends hi {
     }
 
     final void b() {
-        int var3 = 0;
         int var4 = 0;
-        int[] var1 = new int[((ea) this).field_y * ((ea) this).field_C];
+        int incrementValue$0 = 0;
+        int var3 = 0;
+        int[] var1 = new int[this.field_y * this.field_C];
         int var2 = 0;
-        for (var3 = 0; var3 < ((ea) this).field_y; var3++) {
-            for (var4 = ((ea) this).field_C - 1; var4 >= 0; var4--) {
-                int incrementValue$0 = var2;
+        for (var3 = 0; var3 < this.field_y; var3++) {
+            for (var4 = this.field_C - 1; var4 >= 0; var4--) {
+                incrementValue$0 = var2;
                 var2++;
-                var1[incrementValue$0] = ((ea) this).field_D[var3 + var4 * ((ea) this).field_y];
+                var1[incrementValue$0] = this.field_D[var3 + var4 * this.field_y];
             }
         }
-        ((ea) this).field_D = var1;
-        var3 = ((ea) this).field_u;
-        ((ea) this).field_u = ((ea) this).field_B;
-        ((ea) this).field_B = ((ea) this).field_A - ((ea) this).field_C - var3;
-        var3 = ((ea) this).field_C;
-        ((ea) this).field_C = ((ea) this).field_y;
-        ((ea) this).field_y = var3;
-        var3 = ((ea) this).field_A;
-        ((ea) this).field_A = ((ea) this).field_x;
-        ((ea) this).field_x = var3;
+        this.field_D = var1;
+        var3 = this.field_u;
+        this.field_u = this.field_B;
+        this.field_B = this.field_A - this.field_C - var3;
+        var3 = this.field_C;
+        this.field_C = this.field_y;
+        this.field_y = var3;
+        var3 = this.field_A;
+        this.field_A = this.field_x;
+        this.field_x = var3;
     }
 
     void c(int param0, int param1) {
@@ -2713,10 +2758,10 @@ class ea extends hi {
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
         L0: {
-          var3 = ((ea) this).field_y >> 2;
-          var4 = ((ea) this).field_C >> 2;
-          param0 = param0 + ((ea) this).field_B / 4;
-          param1 = param1 + ((ea) this).field_u / 4;
+          var3 = this.field_y >> 2;
+          var4 = this.field_C >> 2;
+          param0 = param0 + this.field_B / 4;
+          param1 = param1 + this.field_u / 4;
           if (param0 >= eh.field_a) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -2730,7 +2775,7 @@ class ea extends hi {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= eh.field_k) {
-            stackOut_5_0 = ((ea) this).field_y - 4;
+            stackOut_5_0 = this.field_y - 4;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -2754,7 +2799,7 @@ class ea extends hi {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= eh.field_e) {
-            stackOut_11_0 = ((ea) this).field_C - 4;
+            stackOut_11_0 = this.field_C - 4;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -2769,7 +2814,7 @@ class ea extends hi {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((ea) this).field_y + var5;
+            var10 = var9 * this.field_y + var5;
             var11 = (param1 + (var9 >> 2)) * eh.field_g + (param0 + (var5 >> 2));
             var12 = var5;
             L5: while (true) {
@@ -2796,7 +2841,7 @@ class ea extends hi {
                         continue L6;
                       } else {
                         L8: {
-                          var13 = ((ea) this).field_D[var10 + var16 * ((ea) this).field_y + var17];
+                          var13 = this.field_D[var10 + var16 * this.field_y + var17];
                           if (var13 != 0) {
                             break L8;
                           } else {
@@ -2821,20 +2866,21 @@ class ea extends hi {
     final ea e() {
         int var2 = 0;
         int var3 = 0;
-        ea var1 = new ea(((ea) this).field_y, ((ea) this).field_C);
-        var1.field_x = ((ea) this).field_x;
-        var1.field_A = ((ea) this).field_A;
-        var1.field_B = ((ea) this).field_x - ((ea) this).field_y - ((ea) this).field_B;
-        var1.field_u = ((ea) this).field_u;
-        for (var2 = 0; var2 < ((ea) this).field_C; var2++) {
-            for (var3 = 0; var3 < ((ea) this).field_y; var3++) {
-                var1.field_D[var2 * ((ea) this).field_y + var3] = ((ea) this).field_D[var2 * ((ea) this).field_y + ((ea) this).field_y - 1 - var3];
+        ea var1 = new ea(this.field_y, this.field_C);
+        var1.field_x = this.field_x;
+        var1.field_A = this.field_A;
+        var1.field_B = this.field_x - this.field_y - this.field_B;
+        var1.field_u = this.field_u;
+        for (var2 = 0; var2 < this.field_C; var2++) {
+            for (var3 = 0; var3 < this.field_y; var3++) {
+                var1.field_D[var2 * this.field_y + var3] = this.field_D[var2 * this.field_y + this.field_y - 1 - var3];
             }
         }
         return var1;
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int incrementValue$1 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -2907,7 +2953,7 @@ class ea extends hi {
                     break L5;
                   }
                 }
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 eh.field_f[incrementValue$1] = (var13 & 66847740 | var14 & 261120) >> 2;
                 var9++;
@@ -2936,30 +2982,30 @@ class ea extends hi {
         } else {
           if (param3 > 0) {
             L0: {
-              var6 = ((ea) this).field_y;
-              var7 = ((ea) this).field_C;
+              var6 = this.field_y;
+              var7 = this.field_C;
               var8 = 0;
               var9 = 0;
-              var10 = ((ea) this).field_x;
-              var11 = ((ea) this).field_A;
+              var10 = this.field_x;
+              var11 = this.field_A;
               var12 = (var10 << 16) / param2;
               var13 = (var11 << 16) / param3;
-              if (((ea) this).field_B <= 0) {
+              if (this.field_B <= 0) {
                 break L0;
               } else {
-                var14 = ((((ea) this).field_B << 16) + var12 - 1) / var12;
+                var14 = ((this.field_B << 16) + var12 - 1) / var12;
                 param0 = param0 + var14;
-                var8 = var8 + (var14 * var12 - (((ea) this).field_B << 16));
+                var8 = var8 + (var14 * var12 - (this.field_B << 16));
                 break L0;
               }
             }
             L1: {
-              if (((ea) this).field_u <= 0) {
+              if (this.field_u <= 0) {
                 break L1;
               } else {
-                var14 = ((((ea) this).field_u << 16) + var13 - 1) / var13;
+                var14 = ((this.field_u << 16) + var13 - 1) / var13;
                 param1 = param1 + var14;
-                var9 = var9 + (var14 * var13 - (((ea) this).field_u << 16));
+                var9 = var9 + (var14 * var13 - (this.field_u << 16));
                 break L1;
               }
             }
@@ -3024,10 +3070,10 @@ class ea extends hi {
             }
             L8: {
               if (param4 != 256) {
-                ea.a(0, 0, 0, var8, ((ea) this).field_D, eh.field_f, 0, 0, -param3, var9, var14, var15, param2, var12, var13, var6, param4);
+                ea.a(0, 0, 0, var8, this.field_D, eh.field_f, 0, 0, -param3, var9, var14, var15, param2, var12, var13, var6, param4);
                 break L8;
               } else {
-                ea.a(0, 0, 0, var8, ((ea) this).field_D, eh.field_f, 0, 0, -param3, var9, var14, var15, param2, var12, var13, var6);
+                ea.a(0, 0, 0, var8, this.field_D, eh.field_f, 0, 0, -param3, var9, var14, var15, param2, var12, var13, var6);
                 break L8;
               }
             }
@@ -3039,6 +3085,16 @@ class ea extends hi {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -3060,14 +3116,14 @@ class ea extends hi {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     if (param1[incrementValue$218] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -3077,52 +3133,52 @@ class ea extends hi {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   if (param1[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   if (param1[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   if (param1[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 if (param1[incrementValue$226] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -3135,16 +3191,18 @@ class ea extends hi {
     }
 
     ea(int param0, int param1) {
-        ((ea) this).field_D = new int[param0 * param1];
-        ((ea) this).field_x = param0;
-        ((ea) this).field_y = param0;
-        ((ea) this).field_A = param1;
-        ((ea) this).field_C = param1;
-        ((ea) this).field_u = 0;
-        ((ea) this).field_B = 0;
+        this.field_D = new int[param0 * param1];
+        this.field_x = param0;
+        this.field_y = param0;
+        this.field_A = param1;
+        this.field_C = param1;
+        this.field_u = 0;
+        this.field_B = 0;
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -3162,7 +3220,7 @@ class ea extends hi {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -3172,7 +3230,7 @@ class ea extends hi {
                 } else {
                   var12 = (param2 & 16711935) * param9 & -16711936;
                   var13 = (param2 & 65280) * param9 & 16711680;
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (var12 | var13) >>> 8;
                   var11++;
@@ -3189,10 +3247,10 @@ class ea extends hi {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int[] var1 = ((ea) this).field_D;
-        for (var2 = ((ea) this).field_C - 1; var2 >= 0; var2--) {
-            var3 = var2 * ((ea) this).field_y;
-            var4 = (var2 + 1) * ((ea) this).field_y;
+        int[] var1 = this.field_D;
+        for (var2 = this.field_C - 1; var2 >= 0; var2--) {
+            var3 = var2 * this.field_y;
+            var4 = (var2 + 1) * this.field_y;
             while (var3 < var4) {
                 var4--;
                 var5 = var1[var3];
@@ -3201,10 +3259,14 @@ class ea extends hi {
                 var3++;
             }
         }
-        ((ea) this).field_B = ((ea) this).field_x - ((ea) this).field_y - ((ea) this).field_B;
+        this.field_B = this.field_x - this.field_y - this.field_B;
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -3234,7 +3296,7 @@ class ea extends hi {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
                 param2 = param1[incrementValue$4];
                 if (param2 == 0) {
@@ -3253,13 +3315,13 @@ class ea extends hi {
                         break L2;
                       } else {
                         if (var17 > 128) {
-                          int incrementValue$5 = param4;
+                          incrementValue$5 = param4;
                           param4++;
                           param0[incrementValue$5] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
                           var16++;
                           continue L1;
                         } else {
-                          int incrementValue$6 = param4;
+                          incrementValue$6 = param4;
                           param4++;
                           param0[incrementValue$6] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
                           var16++;
@@ -3268,7 +3330,7 @@ class ea extends hi {
                       }
                     }
                   }
-                  int incrementValue$7 = param4;
+                  incrementValue$7 = param4;
                   param4++;
                   param0[incrementValue$7] = param2;
                   var16++;
@@ -3281,6 +3343,15 @@ class ea extends hi {
     }
 
     void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         double var7 = 0.0;
         int var9 = 0;
         int var10 = 0;
@@ -3313,19 +3384,19 @@ class ea extends hi {
         int var38 = 0;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((ea) this).field_B << 4);
-            param1 = param1 - (((ea) this).field_u << 4);
+            param0 = param0 - (this.field_B << 4);
+            param1 = param1 - (this.field_u << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((ea) this).field_y << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((ea) this).field_y << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((ea) this).field_C << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((ea) this).field_C << 4) - param1) * var10;
-            var17 = ((((ea) this).field_y << 4) - param0) * var10 + ((((ea) this).field_C << 4) - param1) * var9;
-            var18 = -((((ea) this).field_y << 4) - param0) * var9 + ((((ea) this).field_C << 4) - param1) * var10;
+            var13 = ((this.field_y << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_y << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_C << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_C << 4) - param1) * var10;
+            var17 = ((this.field_y << 4) - param0) * var10 + ((this.field_C << 4) - param1) * var9;
+            var18 = -((this.field_y << 4) - param0) * var9 + ((this.field_C << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -3494,8 +3565,8 @@ class ea extends hi {
                               }
                             }
                             L17: {
-                              var32 = (1 + var35 - (((ea) this).field_y << 12) - var27) / var27;
-                              if ((1 + var35 - (((ea) this).field_y << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_y << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_y << 12) - var27) / var27 <= var37) {
                                 break L17;
                               } else {
                                 var37 = var32;
@@ -3515,8 +3586,8 @@ class ea extends hi {
                               }
                             }
                             L19: {
-                              var32 = (1 + var36 - (((ea) this).field_C << 12) - var26) / var26;
-                              if ((1 + var36 - (((ea) this).field_C << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_C << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_C << 12) - var26) / var26 <= var37) {
                                 break L19;
                               } else {
                                 var37 = var32;
@@ -3532,12 +3603,12 @@ class ea extends hi {
                                 continue L15;
                               } else {
                                 L21: {
-                                  var38 = ((ea) this).field_D[(var36 >> 12) * ((ea) this).field_y + (var35 >> 12)];
+                                  var38 = this.field_D[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                   if (var38 == 0) {
                                     var34++;
                                     break L21;
                                   } else {
-                                    int incrementValue$9 = var34;
+                                    incrementValue$9 = var34;
                                     var34++;
                                     eh.field_f[incrementValue$9] = var38;
                                     break L21;
@@ -3574,8 +3645,8 @@ class ea extends hi {
                               }
                             }
                             L24: {
-                              var32 = (1 + var35 - (((ea) this).field_y << 12) - var27) / var27;
-                              if ((1 + var35 - (((ea) this).field_y << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_y << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_y << 12) - var27) / var27 <= var37) {
                                 break L24;
                               } else {
                                 var37 = var32;
@@ -3583,8 +3654,8 @@ class ea extends hi {
                               }
                             }
                             L25: {
-                              var32 = var36 - (((ea) this).field_C << 12);
-                              if (var36 - (((ea) this).field_C << 12) < 0) {
+                              var32 = var36 - (this.field_C << 12);
+                              if (var36 - (this.field_C << 12) < 0) {
                                 break L25;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -3613,12 +3684,12 @@ class ea extends hi {
                                 continue L22;
                               } else {
                                 L28: {
-                                  var38 = ((ea) this).field_D[(var36 >> 12) * ((ea) this).field_y + (var35 >> 12)];
+                                  var38 = this.field_D[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                   if (var38 == 0) {
                                     var34++;
                                     break L28;
                                   } else {
-                                    int incrementValue$10 = var34;
+                                    incrementValue$10 = var34;
                                     var34++;
                                     eh.field_f[incrementValue$10] = var38;
                                     break L28;
@@ -3645,7 +3716,7 @@ class ea extends hi {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((ea) this).field_C << 12) < 0) {
+                              if (var36 - (this.field_C << 12) < 0) {
                                 L31: {
                                   if (var35 >= 0) {
                                     break L31;
@@ -3658,8 +3729,8 @@ class ea extends hi {
                                   }
                                 }
                                 L32: {
-                                  var32 = (1 + var35 - (((ea) this).field_y << 12) - var27) / var27;
-                                  if ((1 + var35 - (((ea) this).field_y << 12) - var27) / var27 <= var37) {
+                                  var32 = (1 + var35 - (this.field_y << 12) - var27) / var27;
+                                  if ((1 + var35 - (this.field_y << 12) - var27) / var27 <= var37) {
                                     break L32;
                                   } else {
                                     var37 = var32;
@@ -3671,12 +3742,12 @@ class ea extends hi {
                                     break L30;
                                   } else {
                                     L34: {
-                                      var38 = ((ea) this).field_D[(var36 >> 12) * ((ea) this).field_y + (var35 >> 12)];
+                                      var38 = this.field_D[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         break L34;
                                       } else {
-                                        int incrementValue$11 = var34;
+                                        incrementValue$11 = var34;
                                         var34++;
                                         eh.field_f[incrementValue$11] = var38;
                                         break L34;
@@ -3714,8 +3785,8 @@ class ea extends hi {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((ea) this).field_y << 12);
-                              if (var35 - (((ea) this).field_y << 12) < 0) {
+                              var32 = var35 - (this.field_y << 12);
+                              if (var35 - (this.field_y << 12) < 0) {
                                 break L36;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -3748,8 +3819,8 @@ class ea extends hi {
                               }
                             }
                             L39: {
-                              var32 = (1 + var36 - (((ea) this).field_C << 12) - var26) / var26;
-                              if ((1 + var36 - (((ea) this).field_C << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_C << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_C << 12) - var26) / var26 <= var37) {
                                 break L39;
                               } else {
                                 var37 = var32;
@@ -3765,12 +3836,12 @@ class ea extends hi {
                                 continue L35;
                               } else {
                                 L41: {
-                                  var38 = ((ea) this).field_D[(var36 >> 12) * ((ea) this).field_y + (var35 >> 12)];
+                                  var38 = this.field_D[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                   if (var38 == 0) {
                                     var34++;
                                     break L41;
                                   } else {
-                                    int incrementValue$12 = var34;
+                                    incrementValue$12 = var34;
                                     var34++;
                                     eh.field_f[incrementValue$12] = var38;
                                     break L41;
@@ -3795,8 +3866,8 @@ class ea extends hi {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((ea) this).field_y << 12);
-                              if (var35 - (((ea) this).field_y << 12) < 0) {
+                              var32 = var35 - (this.field_y << 12);
+                              if (var35 - (this.field_y << 12) < 0) {
                                 break L43;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -3817,8 +3888,8 @@ class ea extends hi {
                               }
                             }
                             L45: {
-                              var32 = var36 - (((ea) this).field_C << 12);
-                              if (var36 - (((ea) this).field_C << 12) < 0) {
+                              var32 = var36 - (this.field_C << 12);
+                              if (var36 - (this.field_C << 12) < 0) {
                                 break L45;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -3847,12 +3918,12 @@ class ea extends hi {
                                 continue L42;
                               } else {
                                 L48: {
-                                  var38 = ((ea) this).field_D[(var36 >> 12) * ((ea) this).field_y + (var35 >> 12)];
+                                  var38 = this.field_D[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                   if (var38 == 0) {
                                     var34++;
                                     break L48;
                                   } else {
-                                    int incrementValue$13 = var34;
+                                    incrementValue$13 = var34;
                                     var34++;
                                     eh.field_f[incrementValue$13] = var38;
                                     break L48;
@@ -3879,10 +3950,10 @@ class ea extends hi {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((ea) this).field_C << 12) < 0) {
+                              if (var36 - (this.field_C << 12) < 0) {
                                 L51: {
-                                  var32 = var35 - (((ea) this).field_y << 12);
-                                  if (var35 - (((ea) this).field_y << 12) < 0) {
+                                  var32 = var35 - (this.field_y << 12);
+                                  if (var35 - (this.field_y << 12) < 0) {
                                     break L51;
                                   } else {
                                     var32 = (var27 - var32) / var27;
@@ -3906,12 +3977,12 @@ class ea extends hi {
                                     break L50;
                                   } else {
                                     L54: {
-                                      var38 = ((ea) this).field_D[(var36 >> 12) * ((ea) this).field_y + (var35 >> 12)];
+                                      var38 = this.field_D[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         break L54;
                                       } else {
-                                        int incrementValue$14 = var34;
+                                        incrementValue$14 = var34;
                                         var34++;
                                         eh.field_f[incrementValue$14] = var38;
                                         break L54;
@@ -3951,7 +4022,7 @@ class ea extends hi {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((ea) this).field_y << 12) < 0) {
+                              if (var35 - (this.field_y << 12) < 0) {
                                 L57: {
                                   if (var36 >= 0) {
                                     break L57;
@@ -3964,8 +4035,8 @@ class ea extends hi {
                                   }
                                 }
                                 L58: {
-                                  var32 = (1 + var36 - (((ea) this).field_C << 12) - var26) / var26;
-                                  if ((1 + var36 - (((ea) this).field_C << 12) - var26) / var26 <= var37) {
+                                  var32 = (1 + var36 - (this.field_C << 12) - var26) / var26;
+                                  if ((1 + var36 - (this.field_C << 12) - var26) / var26 <= var37) {
                                     break L58;
                                   } else {
                                     var37 = var32;
@@ -3977,12 +4048,12 @@ class ea extends hi {
                                     break L56;
                                   } else {
                                     L60: {
-                                      var38 = ((ea) this).field_D[(var36 >> 12) * ((ea) this).field_y + (var35 >> 12)];
+                                      var38 = this.field_D[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         break L60;
                                       } else {
-                                        int incrementValue$15 = var34;
+                                        incrementValue$15 = var34;
                                         var34++;
                                         eh.field_f[incrementValue$15] = var38;
                                         break L60;
@@ -4018,10 +4089,10 @@ class ea extends hi {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((ea) this).field_y << 12) < 0) {
+                              if (var35 - (this.field_y << 12) < 0) {
                                 L63: {
-                                  var32 = var36 - (((ea) this).field_C << 12);
-                                  if (var36 - (((ea) this).field_C << 12) < 0) {
+                                  var32 = var36 - (this.field_C << 12);
+                                  if (var36 - (this.field_C << 12) < 0) {
                                     break L63;
                                   } else {
                                     var32 = (var26 - var32) / var26;
@@ -4045,12 +4116,12 @@ class ea extends hi {
                                     break L62;
                                   } else {
                                     L66: {
-                                      var38 = ((ea) this).field_D[(var36 >> 12) * ((ea) this).field_y + (var35 >> 12)];
+                                      var38 = this.field_D[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         break L66;
                                       } else {
-                                        int incrementValue$16 = var34;
+                                        incrementValue$16 = var34;
                                         var34++;
                                         eh.field_f[incrementValue$16] = var38;
                                         break L66;
@@ -4091,19 +4162,19 @@ class ea extends hi {
                         if (var35 >= 0) {
                           L68: {
                             if (var36 >= 0) {
-                              if (var35 - (((ea) this).field_y << 12) < 0) {
-                                if (var36 - (((ea) this).field_C << 12) < 0) {
+                              if (var35 - (this.field_y << 12) < 0) {
+                                if (var36 - (this.field_C << 12) < 0) {
                                   L69: while (true) {
                                     if (var37 >= 0) {
                                       break L68;
                                     } else {
-                                      var38 = ((ea) this).field_D[(var36 >> 12) * ((ea) this).field_y + (var35 >> 12)];
+                                      var38 = this.field_D[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         var37++;
                                         continue L69;
                                       } else {
-                                        int incrementValue$17 = var34;
+                                        incrementValue$17 = var34;
                                         var34++;
                                         eh.field_f[incrementValue$17] = var38;
                                         var37++;
@@ -4155,12 +4226,12 @@ class ea extends hi {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + (((ea) this).field_x - ((ea) this).field_y - ((ea) this).field_B);
-          param1 = param1 + ((ea) this).field_u;
+          param0 = param0 + (this.field_x - this.field_y - this.field_B);
+          param1 = param1 + this.field_u;
           var3 = param0 + param1 * eh.field_g;
-          var4 = ((ea) this).field_y - 1;
-          var5 = ((ea) this).field_C;
-          var6 = ((ea) this).field_y;
+          var4 = this.field_y - 1;
+          var5 = this.field_C;
+          var6 = this.field_y;
           var7 = eh.field_g - var6;
           var8 = var6 + var6;
           if (param1 >= eh.field_d) {
@@ -4211,7 +4282,7 @@ class ea extends hi {
           return;
         } else {
           if (var5 > 0) {
-            ea.b(eh.field_f, ((ea) this).field_D, 0, var4, var3, var6, var5, var7, var8);
+            ea.b(eh.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -4228,12 +4299,12 @@ class ea extends hi {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ea) this).field_B;
-          param1 = param1 + ((ea) this).field_u;
+          param0 = param0 + this.field_B;
+          param1 = param1 + this.field_u;
           var3 = param0 + param1 * eh.field_g;
           var4 = 0;
-          var5 = ((ea) this).field_C;
-          var6 = ((ea) this).field_y;
+          var5 = this.field_C;
+          var6 = this.field_y;
           var7 = eh.field_g - var6;
           var8 = 0;
           if (param1 >= eh.field_d) {
@@ -4284,7 +4355,7 @@ class ea extends hi {
           return;
         } else {
           if (var5 > 0) {
-            ea.c(eh.field_f, ((ea) this).field_D, 0, var4, var3, var6, var5, var7, var8);
+            ea.c(eh.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -4301,12 +4372,12 @@ class ea extends hi {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ea) this).field_B;
-          param1 = param1 + ((ea) this).field_u;
+          param0 = param0 + this.field_B;
+          param1 = param1 + this.field_u;
           var3 = param0 + param1 * eh.field_g;
           var4 = 0;
-          var5 = ((ea) this).field_C;
-          var6 = ((ea) this).field_y;
+          var5 = this.field_C;
+          var6 = this.field_y;
           var7 = eh.field_g - var6;
           var8 = 0;
           if (param1 >= eh.field_d) {
@@ -4357,7 +4428,7 @@ class ea extends hi {
           return;
         } else {
           if (var5 > 0) {
-            ea.a(eh.field_f, ((ea) this).field_D, var4, var3, var6, var5, var7, var8);
+            ea.a(eh.field_f, this.field_D, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -4367,19 +4438,20 @@ class ea extends hi {
 
     final ea c() {
         int var3 = 0;
-        ea var1 = new ea(((ea) this).field_y, ((ea) this).field_C);
-        var1.field_x = ((ea) this).field_x;
-        var1.field_A = ((ea) this).field_A;
-        var1.field_B = ((ea) this).field_B;
-        var1.field_u = ((ea) this).field_u;
-        int var2 = ((ea) this).field_D.length;
+        ea var1 = new ea(this.field_y, this.field_C);
+        var1.field_x = this.field_x;
+        var1.field_A = this.field_A;
+        var1.field_B = this.field_B;
+        var1.field_u = this.field_u;
+        int var2 = this.field_D.length;
         for (var3 = 0; var3 < var2; var3++) {
-            var1.field_D[var3] = ((ea) this).field_D[var3];
+            var1.field_D[var3] = this.field_D[var3];
         }
         return var1;
     }
 
     ea(byte[] param0, java.awt.Component param1) {
+        boolean discarded$1 = false;
         InterruptedException var3 = null;
         java.awt.Image var3_ref = null;
         java.awt.MediaTracker var4 = null;
@@ -4391,18 +4463,18 @@ class ea extends hi {
             var4 = new java.awt.MediaTracker(param1);
             var4.addImage(var3_ref, 0);
             var4.waitForAll();
-            ((ea) this).field_y = var3_ref.getWidth((java.awt.image.ImageObserver) (Object) param1);
-            ((ea) this).field_C = var3_ref.getHeight((java.awt.image.ImageObserver) (Object) param1);
-            ((ea) this).field_x = ((ea) this).field_y;
-            ((ea) this).field_A = ((ea) this).field_C;
-            ((ea) this).field_B = 0;
-            ((ea) this).field_u = 0;
-            ((ea) this).field_D = new int[((ea) this).field_y * ((ea) this).field_C];
-            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, ((ea) this).field_y, ((ea) this).field_C, ((ea) this).field_D, 0, ((ea) this).field_y);
-            boolean discarded$1 = var5.grabPixels();
+            this.field_y = var3_ref.getWidth((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_C = var3_ref.getHeight((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_x = this.field_y;
+            this.field_A = this.field_C;
+            this.field_B = 0;
+            this.field_u = 0;
+            this.field_D = new int[this.field_y * this.field_C];
+            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, this.field_y, this.field_C, this.field_D, 0, this.field_y);
+            discarded$1 = var5.grabPixels();
             break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = (InterruptedException) (Object) decompiledCaughtException;
@@ -4414,35 +4486,45 @@ class ea extends hi {
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
             var9 = param3 + param4 - 3;
             while (param3 < var9) {
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 param0[incrementValue$0] = param1[incrementValue$1];
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
-                int incrementValue$3 = param2;
+                incrementValue$3 = param2;
                 param2++;
                 param0[incrementValue$2] = param1[incrementValue$3];
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
-                int incrementValue$5 = param2;
+                incrementValue$5 = param2;
                 param2++;
                 param0[incrementValue$4] = param1[incrementValue$5];
-                int incrementValue$6 = param3;
+                incrementValue$6 = param3;
                 param3++;
-                int incrementValue$7 = param2;
+                incrementValue$7 = param2;
                 param2++;
                 param0[incrementValue$6] = param1[incrementValue$7];
             }
             var9 += 3;
             while (param3 < var9) {
-                int incrementValue$8 = param3;
+                incrementValue$8 = param3;
                 param3++;
-                int incrementValue$9 = param2;
+                incrementValue$9 = param2;
                 param2++;
                 param0[incrementValue$8] = param1[incrementValue$9];
             }
@@ -4460,12 +4542,12 @@ class ea extends hi {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ea) this).field_B;
-          param1 = param1 + ((ea) this).field_u;
+          param0 = param0 + this.field_B;
+          param1 = param1 + this.field_u;
           var4 = param0 + param1 * eh.field_g;
           var5 = 0;
-          var6 = ((ea) this).field_C;
-          var7 = ((ea) this).field_y;
+          var6 = this.field_C;
+          var7 = this.field_y;
           var8 = eh.field_g - var7;
           var9 = 0;
           if (param1 >= eh.field_d) {
@@ -4518,10 +4600,10 @@ class ea extends hi {
           if (var6 > 0) {
             L4: {
               if (param2 != 256) {
-                ea.a(0, 0, 0, eh.field_f, ((ea) this).field_D, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+                ea.a(0, 0, 0, eh.field_f, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9, param2);
                 break L4;
               } else {
-                ea.a(0, 0, 0, eh.field_f, ((ea) this).field_D, var5, 0, var4, 0, var7, var6, var8, var9);
+                ea.a(0, 0, 0, eh.field_f, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9);
                 break L4;
               }
             }
@@ -4533,6 +4615,8 @@ class ea extends hi {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -4551,7 +4635,7 @@ class ea extends hi {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -4560,7 +4644,7 @@ class ea extends hi {
                   continue L1;
                 } else {
                   var13 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -4587,12 +4671,12 @@ class ea extends hi {
           } else {
             if (eh.field_e - eh.field_d == param0.field_f) {
               L1: {
-                param1 = param1 + ((ea) this).field_B;
-                param2 = param2 + ((ea) this).field_u;
+                param1 = param1 + this.field_B;
+                param2 = param2 + this.field_u;
                 var4 = param1 + param2 * eh.field_g;
                 var5 = 0;
-                var6 = ((ea) this).field_C;
-                var7 = ((ea) this).field_y;
+                var6 = this.field_C;
+                var7 = this.field_y;
                 var8 = eh.field_g - var7;
                 var9 = 0;
                 if (param2 >= eh.field_d) {
@@ -4645,7 +4729,7 @@ class ea extends hi {
                 if (var6 > 0) {
                   var10 = param1 - eh.field_a + (param2 - eh.field_d) * param0.field_a;
                   var11 = param0.field_a - var7;
-                  ea.a(eh.field_f, ((ea) this).field_D, 0, var5, var4, var10, var7, var6, var8, var9, var11, param0.field_m);
+                  ea.a(eh.field_f, this.field_D, 0, var5, var4, var10, var7, var6, var8, var9, var11, param0.field_m);
                   return;
                 } else {
                   return;
@@ -4668,12 +4752,12 @@ class ea extends hi {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ea) this).field_B;
-          param1 = param1 + ((ea) this).field_u;
+          param0 = param0 + this.field_B;
+          param1 = param1 + this.field_u;
           var3 = param0 + param1 * eh.field_g;
           var4 = 0;
-          var5 = ((ea) this).field_C;
-          var6 = ((ea) this).field_y;
+          var5 = this.field_C;
+          var6 = this.field_y;
           var7 = eh.field_g - var6;
           var8 = 0;
           if (param1 >= eh.field_d) {
@@ -4724,7 +4808,7 @@ class ea extends hi {
           return;
         } else {
           if (var5 > 0) {
-            ea.a(0, eh.field_f, ((ea) this).field_D, 0, var4, var3, var6, var5, var7, var8);
+            ea.a(0, eh.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;

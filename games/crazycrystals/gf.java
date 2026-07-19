@@ -10,15 +10,14 @@ final class gf {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 < 5) {
+            return;
+        }
         field_d = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "gf.A(";
         field_d = "Waiting for extra data";
     }

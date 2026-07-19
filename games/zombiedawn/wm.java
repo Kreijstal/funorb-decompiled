@@ -12,29 +12,30 @@ final class wm implements Iterable {
     static int field_b;
 
     final le a(boolean param0, long param1) {
+        int discarded$2 = 0;
         le var4 = null;
         le var5 = null;
         int var6 = 0;
         var6 = ZombieDawn.field_J;
-        var4 = ((wm) this).field_c[(int)((long)(-1 + ((wm) this).field_f) & param1)];
-        ((wm) this).field_a = var4.field_b;
+        var4 = this.field_c[(int)((long)(-1 + this.field_f) & param1)];
+        this.field_a = var4.field_b;
         L0: while (true) {
-          if (var4 == ((wm) this).field_a) {
+          if (var4 == this.field_a) {
             if (param0) {
-              int discarded$2 = wm.a(17, (byte) 50);
-              ((wm) this).field_a = null;
+              discarded$2 = wm.a(17, (byte) 50);
+              this.field_a = null;
               return null;
             } else {
-              ((wm) this).field_a = null;
+              this.field_a = null;
               return null;
             }
           } else {
-            if (((wm) this).field_a.field_f != param1) {
-              ((wm) this).field_a = ((wm) this).field_a.field_b;
+            if (this.field_a.field_f != param1) {
+              this.field_a = this.field_a.field_b;
               continue L0;
             } else {
-              var5 = ((wm) this).field_a;
-              ((wm) this).field_a = ((wm) this).field_a.field_b;
+              var5 = this.field_a;
+              this.field_a = this.field_a.field_b;
               return var5;
             }
           }
@@ -46,10 +47,12 @@ final class wm implements Iterable {
         int var3 = 0;
         var2 = 41 / ((-39 - param1) / 56);
         var3 = 0;
-        if (param0 >= 0) {
-          if (param0 < 65536) {
+        if (-1 >= (param0 ^ -1)) {
+          if ((param0 ^ -1) <= -65537) {
             L0: {
-              if (param0 < 256) {
+              param0 = param0 >>> 16;
+              var3 += 16;
+              if (-257 < (param0 ^ -1)) {
                 break L0;
               } else {
                 param0 = param0 >>> 8;
@@ -58,7 +61,7 @@ final class wm implements Iterable {
               }
             }
             L1: {
-              if (param0 >= 16) {
+              if ((param0 ^ -1) <= -17) {
                 param0 = param0 >>> 4;
                 var3 += 4;
                 break L1;
@@ -76,7 +79,7 @@ final class wm implements Iterable {
               }
             }
             L3: {
-              if (param0 >= 1) {
+              if ((param0 ^ -1) <= -2) {
                 var3++;
                 param0 = param0 >>> 1;
                 break L3;
@@ -87,9 +90,7 @@ final class wm implements Iterable {
             return var3 - -param0;
           } else {
             L4: {
-              param0 = param0 >>> 16;
-              var3 += 16;
-              if (param0 < 256) {
+              if (-257 < (param0 ^ -1)) {
                 break L4;
               } else {
                 param0 = param0 >>> 8;
@@ -98,7 +99,7 @@ final class wm implements Iterable {
               }
             }
             L5: {
-              if (param0 >= 16) {
+              if ((param0 ^ -1) <= -17) {
                 param0 = param0 >>> 4;
                 var3 += 4;
                 break L5;
@@ -116,7 +117,7 @@ final class wm implements Iterable {
               }
             }
             L7: {
-              if (param0 >= 1) {
+              if ((param0 ^ -1) <= -2) {
                 var3++;
                 param0 = param0 >>> 1;
                 break L7;
@@ -130,7 +131,7 @@ final class wm implements Iterable {
           L8: {
             param0 = param0 >>> 16;
             var3 += 16;
-            if (param0 < 256) {
+            if (-257 < (param0 ^ -1)) {
               break L8;
             } else {
               param0 = param0 >>> 8;
@@ -139,7 +140,7 @@ final class wm implements Iterable {
             }
           }
           L9: {
-            if (param0 >= 16) {
+            if ((param0 ^ -1) <= -17) {
               param0 = param0 >>> 4;
               var3 += 4;
               break L9;
@@ -157,7 +158,7 @@ final class wm implements Iterable {
             }
           }
           L11: {
-            if (param0 >= 1) {
+            if ((param0 ^ -1) <= -2) {
               var3++;
               param0 = param0 >>> 1;
               break L11;
@@ -207,23 +208,23 @@ final class wm implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("wm.B(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -231,32 +232,33 @@ final class wm implements Iterable {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new hl((wm) this);
+        return (Iterator) ((Object) new hl((wm) (this)));
     }
 
     final void a(long param0, boolean param1, le param2) {
         le var5 = null;
+        Iterator discarded$0 = null;
         try {
             if (null != param2.field_d) {
                 param2.b(-27598);
             }
-            var5 = ((wm) this).field_c[(int)((long)(((wm) this).field_f - 1) & param0)];
+            var5 = this.field_c[(int)((long)(this.field_f - 1) & param0)];
             param2.field_b = var5;
             if (!param1) {
-                Iterator discarded$0 = ((wm) this).iterator();
+                discarded$0 = this.iterator();
             }
             param2.field_d = var5.field_d;
             param2.field_d.field_b = param2;
             param2.field_f = param0;
             param2.field_b.field_d = param2;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "wm.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "wm.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -265,10 +267,6 @@ final class wm implements Iterable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = 0;
         field_b = -1;
     }

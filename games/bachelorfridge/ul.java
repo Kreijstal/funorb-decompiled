@@ -6,6 +6,11 @@ abstract class ul extends eo {
     int field_n;
 
     public static void b(boolean param0) {
+        if (param0) {
+            field_o = (String) null;
+            field_o = null;
+            return;
+        }
         field_o = null;
     }
 
@@ -13,18 +18,18 @@ abstract class ul extends eo {
 
     final static int a(int param0, int param1) {
         param1--;
-        param1 = param1 | param1 >>> 1;
-        param1 = param1 | param1 >>> 2;
+        param1 = param1 | param1 >>> 999823585;
+        param1 = param1 | param1 >>> 2040846850;
         if (param0 > -48) {
-          field_o = null;
-          param1 = param1 | param1 >>> 4;
-          param1 = param1 | param1 >>> 8;
-          param1 = param1 | param1 >>> 16;
+          field_o = (String) null;
+          param1 = param1 | param1 >>> -1527520284;
+          param1 = param1 | param1 >>> -580620856;
+          param1 = param1 | param1 >>> 1551319728;
           return param1 + 1;
         } else {
-          param1 = param1 | param1 >>> 4;
-          param1 = param1 | param1 >>> 8;
-          param1 = param1 | param1 >>> 16;
+          param1 = param1 | param1 >>> -1527520284;
+          param1 = param1 | param1 >>> -580620856;
+          param1 = param1 | param1 >>> 1551319728;
           return param1 + 1;
         }
     }
@@ -32,14 +37,10 @@ abstract class ul extends eo {
     abstract boolean f(int param0);
 
     ul(int param0) {
-        ((ul) this).field_n = param0;
+        this.field_n = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "End Game";
     }
 }

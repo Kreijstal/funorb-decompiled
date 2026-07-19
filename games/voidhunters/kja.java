@@ -11,35 +11,35 @@ class kja extends htb {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        ((kja) this).g((byte) 122);
+        this.g((byte) 122);
     }
 
     final void c(int param0, int param1, int param2, int param3) {
-        super.c(param0, param1, param2, param3);
-        int var5 = param1 - ((kja) this).field_g;
-        int var6 = param3 + -((kja) this).field_r;
+        super.c(param0, param1, param2 + 0, param3);
+        int var5 = param1 - this.field_g;
+        int var6 = param3 + -this.field_r;
         hob var7 = this.b(var5, var6, param2 ^ param2);
         if (var7 != null) {
-            if (null != ((kja) this).field_l) {
-                ((ln) (Object) ((kja) this).field_l).a(-1, param0, var7.field_i, (kja) this);
+            if (!(null == this.field_l)) {
+                ((ln) ((Object) this.field_l)).a(-1, param0, var7.field_i, (kja) (this));
             }
         }
     }
 
     String d(byte param0) {
-        if (null == ((kja) this).field_F) {
+        if (null == this.field_F) {
             return null;
         }
-        if (null == ((kja) this).field_D) {
+        if (null == this.field_D) {
             return null;
         }
-        if (((kja) this).field_F.field_i >= ((kja) this).field_D.length) {
+        if (this.field_F.field_i >= this.field_D.length) {
             return null;
         }
         if (param0 != 125) {
-            return null;
+            return (String) null;
         }
-        return ((kja) this).field_D[((kja) this).field_F.field_i];
+        return this.field_D[this.field_F.field_i];
     }
 
     private final hob b(int param0, int param1, int param2) {
@@ -47,13 +47,13 @@ class kja extends htb {
         hob var5 = null;
         int var6 = 0;
         var6 = VoidHunters.field_G;
-        var4 = (hob) (Object) ((kja) this).field_B.d(param2 + param2);
+        var4 = (hob) ((Object) this.field_B.d(param2 + param2));
         L0: while (true) {
           if (var4 != null) {
             var5 = var4;
             L1: while (true) {
               if (var5 == null) {
-                var4 = (hob) (Object) ((kja) this).field_B.a((byte) 95);
+                var4 = (hob) ((Object) this.field_B.a((byte) 95));
                 continue L0;
               } else {
                 L2: {
@@ -87,53 +87,55 @@ class kja extends htb {
 
     kja(String param0, wwa param1) {
         super(param0, (sba) null);
-        ((kja) this).field_F = null;
+        this.field_F = null;
         try {
-            ((kja) this).field_q = param1;
+            this.field_q = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "kja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "kja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
+        boolean discarded$0 = false;
         if (param3 != -23) {
-            Object var6 = null;
-            boolean discarded$0 = ((kja) this).a(110, (shb) null);
+            shb var6 = (shb) null;
+            discarded$0 = this.a(110, (shb) null);
         }
-        ((kja) this).a(param2, param0, ((at) (Object) ((kja) this).field_q).a((shb) this, (byte) 81), 1, param1);
+        this.a(param2, param0, ((at) ((Object) this.field_q)).a((shb) (this), (byte) 81), 1, param1);
     }
 
     final void a(int param0, int param1, String param2) {
+        RuntimeException runtimeException = null;
         String[] var4 = null;
-        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         String[] var7 = null;
+        String[] var8 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
         String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {
             L1: {
               L2: {
-                if (null == ((kja) this).field_D) {
+                if (null == this.field_D) {
                   break L2;
                 } else {
-                  if (param0 < ((kja) this).field_D.length) {
+                  if (param0 < this.field_D.length) {
                     break L1;
                   } else {
                     break L2;
@@ -142,14 +144,15 @@ class kja extends htb {
               }
               L3: {
                 var7 = new String[param0 - -1];
-                var4 = var7;
-                if (((kja) this).field_D != null) {
+                var8 = var7;
+                var4 = var8;
+                if (this.field_D != null) {
                   var5 = 0;
                   L4: while (true) {
-                    if (((kja) this).field_D.length <= var5) {
+                    if (this.field_D.length <= var5) {
                       break L3;
                     } else {
-                      var7[var5] = ((kja) this).field_D[var5];
+                      var7[var5] = this.field_D[var5];
                       var5++;
                       continue L4;
                     }
@@ -158,49 +161,49 @@ class kja extends htb {
                   break L3;
                 }
               }
-              ((kja) this).field_D = var4;
+              this.field_D = var8;
               break L1;
             }
             L5: {
               if (param1 == -1) {
                 break L5;
               } else {
-                ((kja) this).a(87, 68, 4, -44, 106);
+                this.a(87, 68, 4, -44, 106);
                 break L5;
               }
             }
-            ((kja) this).field_D[param0] = param2;
+            this.field_D[param0] = param2;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var4_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var4_ref;
-            stackOut_15_1 = new StringBuilder().append("kja.I(").append(param0).append(',').append(param1).append(',');
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            runtimeException = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) (runtimeException);
+            stackOut_14_1 = new StringBuilder().append("kja.I(").append(param0).append(',').append(param1).append(',');
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
             if (param2 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
     }
 
@@ -231,7 +234,7 @@ class kja extends htb {
               stackIn_3_0 = stackOut_2_0;
               break L0;
             } else {
-              field_G = null;
+              field_G = (String) null;
               return false;
             }
           }
@@ -239,23 +242,23 @@ class kja extends htb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("kja.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -263,7 +266,7 @@ class kja extends htb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -292,11 +295,11 @@ class kja extends htb {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              ((kja) this).field_F = null;
-              if (((kja) this).field_e) {
-                var5_int = -((kja) this).field_g + kc.field_b + -param1;
-                var6 = -param0 + (uia.field_b - ((kja) this).field_r);
-                ((kja) this).field_F = this.b(var5_int, var6, 0);
+              this.field_F = null;
+              if (this.field_e) {
+                var5_int = -this.field_g + kc.field_b + -param1;
+                var6 = -param0 + (uia.field_b - this.field_r);
+                this.field_F = this.b(var5_int, var6, 0);
                 break L1;
               } else {
                 break L1;
@@ -308,23 +311,23 @@ class kja extends htb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var5;
+            stackOut_4_0 = (RuntimeException) (var5);
             stackOut_4_1 = new StringBuilder().append("kja.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param3 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -332,16 +335,30 @@ class kja extends htb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
     }
 
     void b(int param0, int param1, int param2, int param3) {
+        int var7 = 0;
+        int var8 = 0;
         super.b(param0, param1, 52, param3);
-        if (0 != param1) {
-          return;
+        if (!(0 == param1)) {
+            return;
+        }
+        if (param2 < 47) {
+            return;
+        }
+        at var9 = (at) ((Object) this.field_q);
+        hob var6 = this.field_F;
+        if (var6 == null) {
         } else {
-          return;
+            var7 = var9.a(0, param0, (shb) (this));
+            var8 = var9.b(-3, param3, (shb) (this));
+            do {
+                aha.a(var6.field_k + var8 + -2, var6.field_g - -2, var7 - -var6.field_h - 2, 2 + var6.field_j, (byte) -90);
+                var6 = var6.field_f;
+            } while (var6 != null);
         }
     }
 
@@ -369,27 +386,27 @@ class kja extends htb {
         int stackOut_10_0 = 0;
         int stackOut_8_0 = 0;
         var16 = VoidHunters.field_G;
-        ((kja) this).field_B = new ij();
+        this.field_B = new ij();
         var2 = 0;
-        var3 = (at) (Object) ((kja) this).field_q;
-        var4 = var3.a((shb) this, 3);
+        var3 = (at) ((Object) this.field_q);
+        var4 = var3.a((shb) (this), 3);
         L0: while (true) {
-          var5 = ((kja) this).field_j.indexOf("<hotspot=", var2);
+          var5 = this.field_j.indexOf("<hotspot=", var2);
           if (var5 == -1) {
             L1: {
               if (param0 > 110) {
                 break L1;
               } else {
-                ((kja) this).field_D = null;
+                this.field_D = (String[]) null;
                 break L1;
               }
             }
             return;
           } else {
-            var7 = ((kja) this).field_j.indexOf(">", var5);
-            var6 = ((kja) this).field_j.substring(var5 + 9, var7);
+            var7 = this.field_j.indexOf(">", var5);
+            var6 = this.field_j.substring(var5 + 9, var7);
             var7 = Integer.parseInt(var6);
-            var2 = ((kja) this).field_j.indexOf("</hotspot>", var5);
+            var2 = this.field_j.indexOf("</hotspot>", var5);
             var8 = var4.a(true, var5);
             var9 = var4.a(true, var2);
             var10 = null;
@@ -432,14 +449,14 @@ class kja extends htb {
                   var14 = stackIn_12_0;
                   var15 = new hob(var7, var13, var12.field_b, var14 + -var13, Math.max(var3.a(124), -var12.field_b + var12.field_a));
                   if (var10 != null) {
-                    ((hob) var10).field_f = var15;
+                    ((hob) (var10)).field_f = var15;
                     break L5;
                   } else {
                     break L5;
                   }
                 }
-                ((kja) this).field_B.b(-10258, (ksa) (Object) var15);
-                var10 = (Object) (Object) var15;
+                this.field_B.b(-10258, var15);
+                var10 = var15;
                 var11++;
                 continue L2;
               }
@@ -452,14 +469,10 @@ class kja extends htb {
         field_G = null;
         field_E = null;
         field_C = null;
-        int var1 = 0;
+        int var1 = 34 % ((param0 - 20) / 47);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = "Software";
         field_G = "Spawn Nebula";
     }

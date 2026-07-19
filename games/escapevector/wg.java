@@ -10,10 +10,10 @@ abstract class wg extends hg {
     abstract wg c();
 
     final void a(int[] param0, int param1, int param2) {
-        if (((wg) this).field_i) {
-            ((wg) this).b(param0, param1, param2);
+        if (this.field_i) {
+            this.b(param0, param1, param2);
         } else {
-            ((wg) this).d(param2);
+            this.d(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class wg extends hg {
     abstract void d(int param0);
 
     protected wg() {
-        ((wg) this).field_i = true;
+        this.field_i = true;
     }
 }

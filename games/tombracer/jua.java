@@ -11,14 +11,10 @@ final class jua {
     private static String field_z;
 
     jua(boolean param0) {
-        ((jua) this).field_e = param0 ? true : false;
+        this.field_e = param0 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "jua.<init>(";
     }
 }

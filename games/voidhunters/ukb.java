@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class ukb extends rqa {
     static String field_q;
     static llb field_o;
@@ -28,6 +26,7 @@ final class ukb extends rqa {
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         String stackIn_36_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_2_0 = null;
         String stackOut_6_0 = null;
@@ -47,49 +46,56 @@ final class ukb extends rqa {
         String stackOut_34_2 = null;
         try {
           L0: {
-            var6 = (CharSequence) (Object) param0;
+            var6 = (CharSequence) ((Object) param0);
             if (!mn.a(var6, (byte) -122)) {
               stackOut_2_0 = tjb.field_Cb;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (iwa.field_b != 2) {
                 stackOut_6_0 = oha.field_p;
                 stackIn_7_0 = stackOut_6_0;
-                return stackIn_7_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (qja.a((byte) -75, param0)) {
                   stackOut_10_0 = oja.field_o;
                   stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   if (uaa.a(param0, (byte) -23)) {
-                    stackOut_14_0 = isa.a(dfa.field_b, new String[1], 73);
+                    stackOut_14_0 = isa.a(dfa.field_b, new String[]{param0}, 73);
                     stackIn_15_0 = stackOut_14_0;
-                    return stackIn_15_0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   } else {
                     L1: {
-                      if (vob.field_p < 100) {
+                      if (-101 < (vob.field_p ^ -1)) {
                         break L1;
                       } else {
-                        if (hcb.field_o <= 0) {
+                        if (-1 <= (hcb.field_o ^ -1)) {
                           stackOut_19_0 = haa.field_o;
                           stackIn_20_0 = stackOut_19_0;
-                          return stackIn_20_0;
+                          decompiledRegionSelector0 = 4;
+                          break L0;
                         } else {
                           break L1;
                         }
                       }
                     }
-                    if (vob.field_p >= 200) {
+                    if ((vob.field_p ^ -1) <= -201) {
                       stackOut_23_0 = haa.field_o;
                       stackIn_24_0 = stackOut_23_0;
-                      return stackIn_24_0;
+                      decompiledRegionSelector0 = 5;
+                      break L0;
                     } else {
                       if (ltb.a((byte) -94, param0)) {
-                        stackOut_27_0 = isa.a(mn.field_a, new String[1], 111);
+                        stackOut_27_0 = isa.a(mn.field_a, new String[]{param0}, 111);
                         stackIn_28_0 = stackOut_27_0;
-                        return stackIn_28_0;
+                        decompiledRegionSelector0 = 6;
+                        break L0;
                       } else {
                         L2: {
                           var5 = dpa.field_p;
@@ -101,13 +107,14 @@ final class ukb extends rqa {
                           if (param2 == 9602) {
                             break L2;
                           } else {
-                            field_p = null;
+                            field_p = (String) null;
                             break L2;
                           }
                         }
                         var5.e(-var4 + var5.field_e, -129);
                         stackOut_31_0 = null;
                         stackIn_32_0 = stackOut_31_0;
+                        decompiledRegionSelector0 = 7;
                         break L0;
                       }
                     }
@@ -120,23 +127,23 @@ final class ukb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) var3;
+            stackOut_33_0 = (RuntimeException) (var3);
             stackOut_33_1 = new StringBuilder().append("ukb.C(");
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
             stackIn_34_1 = stackOut_33_1;
             if (param0 == null) {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackOut_35_2 = "null";
               stackIn_36_0 = stackOut_35_0;
               stackIn_36_1 = stackOut_35_1;
               stackIn_36_2 = stackOut_35_2;
               break L3;
             } else {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "{...}";
               stackIn_36_0 = stackOut_34_0;
               stackIn_36_1 = stackOut_34_1;
@@ -144,9 +151,37 @@ final class ukb extends rqa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + param1 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ',' + param1 + ',' + param2 + ')');
         }
-        return (String) (Object) stackIn_32_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_11_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_15_0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_20_0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_24_0;
+                  } else {
+                    if (decompiledRegionSelector0 == 6) {
+                      return stackIn_28_0;
+                    } else {
+                      return (String) ((Object) stackIn_32_0);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     final static void a(String param0, byte param1) {
@@ -157,6 +192,7 @@ final class ukb extends rqa {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        int discarded$0 = 0;
         try {
             var2_int = kc.field_b;
             var3 = uia.field_b;
@@ -170,15 +206,15 @@ final class ukb extends rqa {
                 ukb.e((byte) 26);
             }
             dma.d(1 + var7, 1 + var8, var5 + -2, -2 + var6, 16777088);
-            int discarded$0 = qc.field_q.field_eb.a(param0, 3 + var7, var8 + 1 - -atb.field_d - qc.field_q.field_eb.field_k, 500, 1000, 0, -1, 0, 0, nna.field_w);
+            discarded$0 = qc.field_q.field_eb.a(param0, 3 + var7, var8 + 1 - -atb.field_d - qc.field_q.field_eb.field_k, 500, 1000, 0, -1, 0, 0, nna.field_w);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ukb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ukb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void e(byte param0) {
         if (param0 >= -36) {
-          field_p = null;
+          field_p = (String) null;
           field_q = null;
           field_o = null;
           field_p = null;
@@ -196,8 +232,9 @@ final class ukb extends rqa {
     }
 
     final nc a(nc[] param0, int param1) {
+        nc discarded$2 = null;
         RuntimeException var3 = null;
-        Object var4 = null;
+        nc[] var4 = null;
         nc stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -222,13 +259,13 @@ final class ukb extends rqa {
               if (param1 <= -119) {
                 break L1;
               } else {
-                var4 = null;
-                nc discarded$2 = ((ukb) this).a((nc[]) null, -36);
+                var4 = (nc[]) null;
+                discarded$2 = this.a((nc[]) null, -36);
                 break L1;
               }
             }
             si.a(186, 62, param0[0].a(15));
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -236,23 +273,23 @@ final class ukb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ukb.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -260,16 +297,12 @@ final class ukb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "Sandbox mode";
         field_q = "Game full";
     }

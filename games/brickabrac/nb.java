@@ -13,7 +13,10 @@ abstract class nb {
     abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);
 
     final static void b(byte param0) {
-        ef.a(-30);
+        if (param0 != 40) {
+            return;
+        }
+        ef.a(param0 ^ -54);
         kg.a((byte) 93, om.field_oc, ef.field_b[0].field_x, np.field_a, ec.field_J, re.field_g);
     }
 
@@ -21,13 +24,13 @@ abstract class nb {
         if (param0 < 72) {
             return;
         }
-        lb.a(((nb) this).field_d, ((nb) this).field_g, ((nb) this).field_f);
+        lb.a(this.field_d, this.field_g, this.field_f);
     }
 
     public static void a(int param0) {
         field_b = null;
         field_e = null;
-        int var1 = 0;
+        int var1 = 112 % ((param0 - -44) / 63);
     }
 
     final static void a(int param0, int param1, int param2, jp param3) {
@@ -46,6 +49,7 @@ abstract class nb {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
@@ -119,36 +123,39 @@ abstract class nb {
                     break L5;
                   } else {
                     sp.a(lb.field_l, var8, 0, var5, var6, var9, var7, -1, var4_int, param3.field_G);
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var4;
+            stackOut_19_0 = (RuntimeException) (var4);
             stackOut_19_1 = new StringBuilder().append("nb.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param3 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -156,17 +163,22 @@ abstract class nb {
               break L6;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     abstract void a(java.awt.Component param0, int param1, boolean param2, int param3);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_b = new pk[255];
         for (var0 = 0; var0 < field_b.length; var0++) {

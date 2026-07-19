@@ -17,10 +17,10 @@ final class oj extends hc {
 
     final void a(int param0, int param1, int param2, hm param3) {
         try {
-            ((oj) this).field_R = ((oj) this).field_R + 1;
+            this.field_R = this.field_R + 1;
             super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oj.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "oj.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,10 +29,17 @@ final class oj extends hc {
         field_N = null;
         field_O = null;
         field_Q = null;
-        field_E = null;
+        field_E = (int[][]) null;
         field_P = null;
         field_I = null;
-        field_L = null;
+        if (param0 != 113) {
+          field_N = (hh) null;
+          field_L = null;
+          return;
+        } else {
+          field_L = null;
+          return;
+        }
     }
 
     final boolean a(int param0, hm param1) {
@@ -62,7 +69,7 @@ final class oj extends hc {
               stackIn_3_0 = stackOut_2_0;
               break L0;
             } else {
-              field_P = null;
+              field_P = (int[]) null;
               return false;
             }
           }
@@ -70,23 +77,23 @@ final class oj extends hc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("oj.M(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -94,7 +101,7 @@ final class oj extends hc {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -121,9 +128,9 @@ final class oj extends hc {
             return;
           } else {
             L0: {
-              var5 = ((oj) this).field_k + param3 + (((oj) this).field_g >> 1);
-              var6 = ((oj) this).field_j + param0 - -(((oj) this).field_x >> 1);
-              var8 = ((oj) this).field_F.a(17124);
+              var5 = this.field_k + param3 + (this.field_g >> -86772895);
+              var6 = this.field_j + param0 - -(this.field_x >> -1490929535);
+              var8 = this.field_F.a(17124);
               if (var8 == of.field_f) {
                 break L0;
               } else {
@@ -133,35 +140,35 @@ final class oj extends hc {
                   if (ob.field_a != var8) {
                     if (df.field_h == var8) {
                       var23 = ul.field_E[1];
-                      var23.c(-(var23.field_s >> 1) + var5, var6 + -(var23.field_x >> 1), 256);
+                      var23.c(-(var23.field_s >> -429218591) + var5, var6 + -(var23.field_x >> -1172708191), 256);
                       return;
                     } else {
                       return;
                     }
                   } else {
                     var24 = ul.field_E[2];
-                    var24.c(var5 + -(var24.field_s >> 1), var6 + -(var24.field_x >> 1), 256);
+                    var24.c(var5 + -(var24.field_s >> -1406410079), var6 + -(var24.field_x >> -880059167), 256);
                     return;
                   }
                 }
               }
             }
             var25 = ul.field_E[0];
-            var9 = var25.field_A << 1;
-            var10 = var25.field_z << 1;
+            var9 = var25.field_A << -798013407;
+            var10 = var25.field_z << -2116837599;
             if (pi.field_j != null) {
               if (pi.field_j.field_s >= var9) {
                 if (var10 <= pi.field_j.field_x) {
                   eo.a(pi.field_j, (byte) -79);
                   em.d();
-                  var25.b(112, 144, var25.field_A << 4, var25.field_z << 4, -((oj) this).field_R << 10, 4096);
+                  var25.b(112, 144, var25.field_A << 187351172, var25.field_z << -1578871420, -this.field_R << -43194902, 4096);
                   dl.a((byte) 116);
                   pi.field_j.c(var5 - var25.field_A, -var25.field_z + var6, 256);
                   return;
                 } else {
                   pi.field_j = new ed(var9, var10);
                   eo.a(pi.field_j, (byte) -111);
-                  var25.b(112, 144, var25.field_A << 4, var25.field_z << 4, -((oj) this).field_R << 10, 4096);
+                  var25.b(112, 144, var25.field_A << 187351172, var25.field_z << -1578871420, -this.field_R << -43194902, 4096);
                   dl.a((byte) 116);
                   pi.field_j.c(var5 - var25.field_A, -var25.field_z + var6, 256);
                   return;
@@ -169,7 +176,7 @@ final class oj extends hc {
               } else {
                 pi.field_j = new ed(var9, var10);
                 eo.a(pi.field_j, (byte) -111);
-                var25.b(112, 144, var25.field_A << 4, var25.field_z << 4, -((oj) this).field_R << 10, 4096);
+                var25.b(112, 144, var25.field_A << 187351172, var25.field_z << -1578871420, -this.field_R << -43194902, 4096);
                 dl.a((byte) 116);
                 pi.field_j.c(var5 - var25.field_A, -var25.field_z + var6, 256);
                 return;
@@ -177,33 +184,33 @@ final class oj extends hc {
             } else {
               pi.field_j = new ed(var9, var10);
               eo.a(pi.field_j, (byte) -111);
-              var25.b(112, 144, var25.field_A << 4, var25.field_z << 4, -((oj) this).field_R << 10, 4096);
+              var25.b(112, 144, var25.field_A << 187351172, var25.field_z << -1578871420, -this.field_R << -43194902, 4096);
               dl.a((byte) 116);
               pi.field_j.c(var5 - var25.field_A, -var25.field_z + var6, 256);
               return;
             }
           }
         } else {
-          field_I = null;
+          field_I = (int[]) null;
           if (param2 != 0) {
             return;
           } else {
-            var5 = ((oj) this).field_k + param3 + (((oj) this).field_g >> 1);
-            var6 = ((oj) this).field_j + param0 - -(((oj) this).field_x >> 1);
-            var8 = ((oj) this).field_F.a(17124);
+            var5 = this.field_k + param3 + (this.field_g >> -86772895);
+            var6 = this.field_j + param0 - -(this.field_x >> -1490929535);
+            var8 = this.field_F.a(17124);
             if (var8 != of.field_f) {
               if (ug.field_c != var8) {
                 if (ob.field_a != var8) {
                   if (df.field_h == var8) {
                     var17 = ul.field_E[1];
-                    var17.c(-(var17.field_s >> 1) + var5, var6 + -(var17.field_x >> 1), 256);
+                    var17.c(-(var17.field_s >> -429218591) + var5, var6 + -(var17.field_x >> -1172708191), 256);
                     return;
                   } else {
                     return;
                   }
                 } else {
                   var18 = ul.field_E[2];
-                  var18.c(var5 + -(var18.field_s >> 1), var6 + -(var18.field_x >> 1), 256);
+                  var18.c(var5 + -(var18.field_s >> -1406410079), var6 + -(var18.field_x >> -880059167), 256);
                   return;
                 }
               } else {
@@ -211,8 +218,8 @@ final class oj extends hc {
                   L2: {
                     var16 = ul.field_E[0];
                     var14 = var16;
-                    var9 = var16.field_A << 1;
-                    var10 = var16.field_z << 1;
+                    var9 = var16.field_A << -798013407;
+                    var10 = var16.field_z << -2116837599;
                     if (pi.field_j == null) {
                       break L2;
                     } else {
@@ -233,7 +240,7 @@ final class oj extends hc {
                   eo.a(pi.field_j, (byte) -111);
                   break L1;
                 }
-                var16.b(112, 144, var16.field_A << 4, var16.field_z << 4, -((oj) this).field_R << 10, 4096);
+                var16.b(112, 144, var16.field_A << 187351172, var16.field_z << -1578871420, -this.field_R << -43194902, 4096);
                 dl.a((byte) 116);
                 pi.field_j.c(var5 - var16.field_A, -var16.field_z + var6, 256);
                 return;
@@ -242,8 +249,8 @@ final class oj extends hc {
               L3: {
                 L4: {
                   var15 = ul.field_E[0];
-                  var9 = var15.field_A << 1;
-                  var10 = var15.field_z << 1;
+                  var9 = var15.field_A << -798013407;
+                  var10 = var15.field_z << -2116837599;
                   if (pi.field_j == null) {
                     break L4;
                   } else {
@@ -264,7 +271,7 @@ final class oj extends hc {
                 eo.a(pi.field_j, (byte) -111);
                 break L3;
               }
-              var15.b(112, 144, var15.field_A << 4, var15.field_z << 4, -((oj) this).field_R << 10, 4096);
+              var15.b(112, 144, var15.field_A << 187351172, var15.field_z << -1578871420, -this.field_R << -43194902, 4096);
               dl.a((byte) 116);
               pi.field_j.c(var5 - var15.field_A, -var15.field_z + var6, 256);
               return;
@@ -275,20 +282,23 @@ final class oj extends hc {
 
     final static void a(int param0, int param1, byte param2, String param3) {
         try {
-            fh.field_g.a(param3, 339, -1 + param0, 0, -1, 64);
-            fh.field_g.a(param3, 341, -1 + param0, 0, -1, 64);
-            fh.field_g.a(param3, 339, param0 - -1, 0, -1, 64);
-            fh.field_g.a(param3, 341, param0 - -1, 0, -1, 64);
-            fh.field_g.b(param3, 340, param0, 16777215, -1);
+            fh.field_g.a(param3, param1 - 1, -1 + param0, 0, -1, 64);
+            fh.field_g.a(param3, param1 - -1, -1 + param0, 0, -1, 64);
+            fh.field_g.a(param3, -1 + param1, param0 - -1, 0, -1, 64);
+            fh.field_g.a(param3, 1 + param1, param0 - -1, 0, -1, 64);
+            fh.field_g.b(param3, param1, param0, 16777215, -1);
             int var4_int = -103 / ((param2 - 7) / 46);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oj.D(" + param0 + ',' + 340 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "oj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int[] k(int param0) {
+        if (param0 != 64) {
+            return (int[]) null;
+        }
         if (!(null == bk.field_r)) {
-            return bk.field_r.d(31304);
+            return bk.field_r.d(param0 + 31240);
         }
         return null;
     }
@@ -298,31 +308,30 @@ final class oj extends hc {
             return;
         }
         sn.a(4, 0, false);
+        if (param0 < 79) {
+            field_Q = (ed) null;
+        }
     }
 
     final String d(int param0) {
         if (param0 != 1) {
+            return (String) null;
+        }
+        if (!this.field_u) {
             return null;
         }
-        if (!((oj) this).field_u) {
-            return null;
-        }
-        return ((oj) this).field_F.b(param0 ^ 64);
+        return this.field_F.b(param0 ^ 64);
     }
 
     oj(el param0) {
         try {
-            ((oj) this).field_F = param0;
+            this.field_F = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = new int[]{4, 4, 4, 4};
         field_O = new int[]{1, 4, 4, 4, 4};
         field_M = -1;

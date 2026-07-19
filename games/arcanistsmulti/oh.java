@@ -19,8 +19,16 @@ final class oh extends pg {
     public static void a(int param0) {
         field_k = null;
         field_q = null;
-        field_h = null;
-        field_r = null;
+        if (param0 != -791) {
+          field_r = (hb) null;
+          field_h = null;
+          field_r = null;
+          return;
+        } else {
+          field_h = null;
+          field_r = null;
+          return;
+        }
     }
 
     final static int a(byte param0, int param1) {
@@ -46,7 +54,7 @@ final class oh extends pg {
             }
           }
           L2: {
-            if (param1 != 2) {
+            if ((param1 ^ -1) != -3) {
               break L2;
             } else {
               var2 = hd.field_b;
@@ -61,10 +69,6 @@ final class oh extends pg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = "Show all lobby chat";
         field_i = false;
     }

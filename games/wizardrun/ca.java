@@ -14,14 +14,13 @@ final class ca {
     public static void a(byte param0) {
         field_g = null;
         field_a = null;
+        if (param0 > -68) {
+            return;
+        }
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ca.A(";
         field_f = 5;
         field_d = "Connection lost. <%0>";

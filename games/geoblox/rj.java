@@ -13,6 +13,11 @@ final class rj {
     int field_h;
 
     final static void a(byte param0, int param1) {
+        if (param0 != 121) {
+            field_e = (String) null;
+            oj.field_c = 1000000000L / (long)param1;
+            return;
+        }
         oj.field_c = 1000000000L / (long)param1;
     }
 
@@ -24,9 +29,9 @@ final class rj {
 
     final static rh a(int param0, byte param1, boolean param2, boolean param3, int param4) {
         if (param1 >= -13) {
-            return null;
+            return (rh) null;
         }
-        return am.a(-90, param0, false, 1, true, false);
+        return am.a(-90, param0, param3, param4, param2, false);
     }
 
     final static boolean a(byte param0, rh param1) {
@@ -52,7 +57,7 @@ final class rj {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2_int = 0;
+            var2_int = 12 % ((-57 - param0) / 57);
             stackOut_0_0 = param1.b(true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -61,23 +66,23 @@ final class rj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("rj.C(").append(-127).append(',');
+            stackOut_2_0 = (RuntimeException) (var2);
+            stackOut_2_1 = new StringBuilder().append("rj.C(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -85,16 +90,12 @@ final class rj {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 5167632;
         field_i = 500;
         field_e = "Quit to website";

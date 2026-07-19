@@ -12,10 +12,6 @@ final class dm extends aa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "dm.<init>()";
         field_e = -1;
     }

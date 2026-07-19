@@ -11,6 +11,6 @@ public class mi {
     int field_f;
 
     mi() {
-        ((mi) this).field_d = 0;
+        this.field_d = 0;
     }
 }

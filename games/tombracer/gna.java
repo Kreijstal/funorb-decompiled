@@ -10,8 +10,8 @@ final class gna {
     }
 
     gna(gna param0) {
-        ((gna) this).field_a = param0.field_a;
-        ((gna) this).field_c = param0.field_c;
-        ((gna) this).field_b = param0.field_b;
+        this.field_a = param0.field_a;
+        this.field_c = param0.field_c;
+        this.field_b = param0.field_b;
     }
 }

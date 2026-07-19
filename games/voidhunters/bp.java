@@ -30,6 +30,7 @@ final class bp extends rqa {
         int[] var42 = null;
         int[] var43 = null;
         int stackIn_42_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_41_0 = 0;
         int stackOut_40_0 = 0;
@@ -37,193 +38,196 @@ final class bp extends rqa {
         try {
           L0: {
             dda.a(param1, 98);
-            L1: {
-              var7_int = 0;
-              var8 = -param6 + param1;
-              if (var8 < 0) {
-                var8 = 0;
-                break L1;
-              } else {
-                break L1;
+            if (param3 < -6) {
+              L1: {
+                var7_int = 0;
+                var8 = -param6 + param1;
+                if (var8 < 0) {
+                  var8 = 0;
+                  break L1;
+                } else {
+                  break L1;
+                }
               }
-            }
-            L2: {
-              var9 = param1;
-              var10 = -param1;
-              var11 = var8;
-              var12 = -var8;
-              var13 = -1;
-              if (param2 < lua.field_c) {
-                break L2;
-              } else {
-                if (hab.field_i < param2) {
+              L2: {
+                var9 = param1;
+                var10 = -param1;
+                var11 = var8;
+                var12 = -var8;
+                var13 = -1;
+                if (param2 < lua.field_c) {
                   break L2;
                 } else {
-                  var39 = rba.field_b[param2];
-                  var16 = ksa.a(31123, ob.field_j, mt.field_o, param0 + -param1);
-                  var17 = ksa.a(31123, ob.field_j, mt.field_o, param1 + param0);
-                  var18 = ksa.a(31123, ob.field_j, mt.field_o, -var8 + param0);
-                  var19 = ksa.a(31123, ob.field_j, mt.field_o, param0 + var8);
-                  ww.a(param4, var18, var39, (byte) 75, var16);
-                  ww.a(param5, var19, var39, (byte) 75, var18);
-                  ww.a(param4, var17, var39, (byte) 75, var19);
-                  break L2;
-                }
-              }
-            }
-            var14 = -1;
-            L3: while (true) {
-              if (var7_int >= var9) {
-                break L0;
-              } else {
-                L4: {
-                  var13 += 2;
-                  var14 += 2;
-                  var10 = var10 + var13;
-                  var12 = var12 + var14;
-                  if (var12 < 0) {
-                    break L4;
+                  if (hab.field_i < param2) {
+                    break L2;
                   } else {
-                    if (var11 >= 1) {
-                      var11--;
-                      dw.field_a[var11] = var7_int;
-                      var12 = var12 - (var11 << 1);
-                      break L4;
-                    } else {
-                      break L4;
-                    }
+                    var39 = rba.field_b[param2];
+                    var16 = ksa.a(31123, ob.field_j, mt.field_o, param0 + -param1);
+                    var17 = ksa.a(31123, ob.field_j, mt.field_o, param1 + param0);
+                    var18 = ksa.a(31123, ob.field_j, mt.field_o, -var8 + param0);
+                    var19 = ksa.a(31123, ob.field_j, mt.field_o, param0 + var8);
+                    ww.a(param4, var18, var39, (byte) 75, var16);
+                    ww.a(param5, var19, var39, (byte) 75, var18);
+                    ww.a(param4, var17, var39, (byte) 75, var19);
+                    break L2;
                   }
                 }
-                L5: {
-                  var7_int++;
-                  if (var10 < 0) {
-                    break L5;
-                  } else {
-                    var9--;
-                    var10 = var10 - (var9 << 1);
-                    var15 = -var9 + param2;
-                    var16 = var9 + param2;
-                    if (lua.field_c > var16) {
+              }
+              var14 = -1;
+              L3: while (true) {
+                if (var7_int >= var9) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  L4: {
+                    var13 += 2;
+                    var14 += 2;
+                    var10 = var10 + var13;
+                    var12 = var12 + var14;
+                    if (-1 < (var12 ^ -1)) {
+                      break L4;
+                    } else {
+                      if (var11 >= 1) {
+                        var11--;
+                        dw.field_a[var11] = var7_int;
+                        var12 = var12 - (var11 << 704154945);
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
+                  }
+                  L5: {
+                    var7_int++;
+                    if (-1 < (var10 ^ -1)) {
                       break L5;
                     } else {
-                      if (var15 > hab.field_i) {
+                      var9--;
+                      var10 = var10 - (var9 << -1088584127);
+                      var15 = -var9 + param2;
+                      var16 = var9 + param2;
+                      if (lua.field_c > var16) {
                         break L5;
                       } else {
-                        if (var9 < var8) {
-                          L6: {
-                            var17 = dw.field_a[var9];
-                            var18 = ksa.a(31123, ob.field_j, mt.field_o, param0 + var7_int);
-                            var19 = ksa.a(31123, ob.field_j, mt.field_o, param0 + -var7_int);
-                            var20 = ksa.a(31123, ob.field_j, mt.field_o, var17 + param0);
-                            var21 = ksa.a(31123, ob.field_j, mt.field_o, -var17 + param0);
-                            if (var16 > hab.field_i) {
-                              break L6;
-                            } else {
-                              var40 = rba.field_b[var16];
-                              ww.a(param4, var21, var40, (byte) 75, var19);
-                              ww.a(param5, var20, var40, (byte) 75, var21);
-                              ww.a(param4, var18, var40, (byte) 75, var20);
-                              break L6;
-                            }
-                          }
-                          if (lua.field_c <= var15) {
-                            var41 = rba.field_b[var15];
-                            ww.a(param4, var21, var41, (byte) 75, var19);
-                            ww.a(param5, var20, var41, (byte) 75, var21);
-                            ww.a(param4, var18, var41, (byte) 75, var20);
-                            break L5;
-                          } else {
-                            break L5;
-                          }
+                        if (var15 > hab.field_i) {
+                          break L5;
                         } else {
-                          L7: {
-                            var17 = ksa.a(31123, ob.field_j, mt.field_o, param0 + var7_int);
-                            var18 = ksa.a(31123, ob.field_j, mt.field_o, param0 + -var7_int);
-                            if (hab.field_i >= var16) {
-                              ww.a(param4, var17, rba.field_b[var16], (byte) 75, var18);
-                              break L7;
-                            } else {
-                              break L7;
+                          if (var9 < var8) {
+                            L6: {
+                              var17 = dw.field_a[var9];
+                              var18 = ksa.a(31123, ob.field_j, mt.field_o, param0 + var7_int);
+                              var19 = ksa.a(31123, ob.field_j, mt.field_o, param0 + -var7_int);
+                              var20 = ksa.a(31123, ob.field_j, mt.field_o, var17 + param0);
+                              var21 = ksa.a(31123, ob.field_j, mt.field_o, -var17 + param0);
+                              if (var16 > hab.field_i) {
+                                break L6;
+                              } else {
+                                var40 = rba.field_b[var16];
+                                ww.a(param4, var21, var40, (byte) 75, var19);
+                                ww.a(param5, var20, var40, (byte) 75, var21);
+                                ww.a(param4, var18, var40, (byte) 75, var20);
+                                break L6;
+                              }
                             }
-                          }
-                          if (var15 < lua.field_c) {
-                            break L5;
+                            if (lua.field_c <= var15) {
+                              var41 = rba.field_b[var15];
+                              ww.a(param4, var21, var41, (byte) 75, var19);
+                              ww.a(param5, var20, var41, (byte) 75, var21);
+                              ww.a(param4, var18, var41, (byte) 75, var20);
+                              break L5;
+                            } else {
+                              break L5;
+                            }
                           } else {
-                            ww.a(param4, var17, rba.field_b[var15], (byte) 75, var18);
-                            break L5;
+                            L7: {
+                              var17 = ksa.a(31123, ob.field_j, mt.field_o, param0 + var7_int);
+                              var18 = ksa.a(31123, ob.field_j, mt.field_o, param0 + -var7_int);
+                              if (hab.field_i >= var16) {
+                                ww.a(param4, var17, rba.field_b[var16], (byte) 75, var18);
+                                break L7;
+                              } else {
+                                break L7;
+                              }
+                            }
+                            if (var15 < lua.field_c) {
+                              break L5;
+                            } else {
+                              ww.a(param4, var17, rba.field_b[var15], (byte) 75, var18);
+                              break L5;
+                            }
                           }
                         }
                       }
                     }
                   }
-                }
-                var15 = param2 + -var7_int;
-                var16 = var7_int + param2;
-                if (var16 < lua.field_c) {
-                  continue L3;
-                } else {
-                  if (hab.field_i < var15) {
+                  var15 = param2 + -var7_int;
+                  var16 = var7_int + param2;
+                  if (var16 < lua.field_c) {
                     continue L3;
                   } else {
-                    var17 = var9 + param0;
-                    var18 = -var9 + param0;
-                    if (ob.field_j > var17) {
+                    if (hab.field_i < var15) {
                       continue L3;
                     } else {
-                      if (var18 > mt.field_o) {
+                      var17 = var9 + param0;
+                      var18 = -var9 + param0;
+                      if (ob.field_j > var17) {
                         continue L3;
                       } else {
-                        var17 = ksa.a(31123, ob.field_j, mt.field_o, var17);
-                        var18 = ksa.a(31123, ob.field_j, mt.field_o, var18);
-                        if (var8 > var7_int) {
-                          L8: {
-                            if (var11 >= var7_int) {
-                              stackOut_41_0 = var11;
-                              stackIn_42_0 = stackOut_41_0;
-                              break L8;
-                            } else {
-                              stackOut_40_0 = dw.field_a[var7_int];
-                              stackIn_42_0 = stackOut_40_0;
-                              break L8;
-                            }
-                          }
-                          L9: {
-                            var19 = stackIn_42_0;
-                            var20 = ksa.a(31123, ob.field_j, mt.field_o, var19 + param0);
-                            var21 = ksa.a(31123, ob.field_j, mt.field_o, -var19 + param0);
-                            if (var16 > hab.field_i) {
-                              break L9;
-                            } else {
-                              var42 = rba.field_b[var16];
-                              ww.a(param4, var21, var42, (byte) 75, var18);
-                              ww.a(param5, var20, var42, (byte) 75, var21);
-                              ww.a(param4, var17, var42, (byte) 75, var20);
-                              break L9;
-                            }
-                          }
-                          if (var15 < lua.field_c) {
-                            continue L3;
-                          } else {
-                            var43 = rba.field_b[var15];
-                            ww.a(param4, var21, var43, (byte) 75, var18);
-                            ww.a(param5, var20, var43, (byte) 75, var21);
-                            ww.a(param4, var17, var43, (byte) 75, var20);
-                            continue L3;
-                          }
+                        if (var18 > mt.field_o) {
+                          continue L3;
                         } else {
-                          L10: {
-                            if (var16 > hab.field_i) {
-                              break L10;
-                            } else {
-                              ww.a(param4, var17, rba.field_b[var16], (byte) 75, var18);
-                              break L10;
+                          var17 = ksa.a(31123, ob.field_j, mt.field_o, var17);
+                          var18 = ksa.a(31123, ob.field_j, mt.field_o, var18);
+                          if (var8 > var7_int) {
+                            L8: {
+                              if (var11 >= var7_int) {
+                                stackOut_41_0 = var11;
+                                stackIn_42_0 = stackOut_41_0;
+                                break L8;
+                              } else {
+                                stackOut_40_0 = dw.field_a[var7_int];
+                                stackIn_42_0 = stackOut_40_0;
+                                break L8;
+                              }
                             }
-                          }
-                          if (var15 >= lua.field_c) {
-                            ww.a(param4, var17, rba.field_b[var15], (byte) 75, var18);
-                            continue L3;
+                            L9: {
+                              var19 = stackIn_42_0;
+                              var20 = ksa.a(31123, ob.field_j, mt.field_o, var19 + param0);
+                              var21 = ksa.a(31123, ob.field_j, mt.field_o, -var19 + param0);
+                              if (var16 > hab.field_i) {
+                                break L9;
+                              } else {
+                                var42 = rba.field_b[var16];
+                                ww.a(param4, var21, var42, (byte) 75, var18);
+                                ww.a(param5, var20, var42, (byte) 75, var21);
+                                ww.a(param4, var17, var42, (byte) 75, var20);
+                                break L9;
+                              }
+                            }
+                            if (var15 < lua.field_c) {
+                              continue L3;
+                            } else {
+                              var43 = rba.field_b[var15];
+                              ww.a(param4, var21, var43, (byte) 75, var18);
+                              ww.a(param5, var20, var43, (byte) 75, var21);
+                              ww.a(param4, var17, var43, (byte) 75, var20);
+                              continue L3;
+                            }
                           } else {
-                            continue L3;
+                            L10: {
+                              if (var16 > hab.field_i) {
+                                break L10;
+                              } else {
+                                ww.a(param4, var17, rba.field_b[var16], (byte) 75, var18);
+                                break L10;
+                              }
+                            }
+                            if (var15 >= lua.field_c) {
+                              ww.a(param4, var17, rba.field_b[var15], (byte) 75, var18);
+                              continue L3;
+                            } else {
+                              continue L3;
+                            }
                           }
                         }
                       }
@@ -231,18 +235,26 @@ final class bp extends rqa {
                   }
                 }
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var7, "bp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + -8 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw rta.a((Throwable) ((Object) var7), "bp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -251,9 +263,10 @@ final class bp extends rqa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         nc stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        nc stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -266,36 +279,38 @@ final class bp extends rqa {
           L0: {
             if (param1 < -119) {
               si.a(198, 62, param0[0].a(125));
-              stackOut_3_0 = new nc((Object) (Object) "void");
+              stackOut_3_0 = new nc("void");
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (nc) null;
               stackIn_2_0 = stackOut_1_0;
-              return (nc) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("bp.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -303,9 +318,13 @@ final class bp extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final static void a(int param0) {
@@ -401,7 +420,7 @@ final class bp extends rqa {
           stackIn_1_2 = stackOut_0_2;
           stackIn_1_3 = stackOut_0_3;
           if (!ll.field_o) {
-            stackOut_2_0 = (llb) (Object) stackIn_2_0;
+            stackOut_2_0 = (llb) ((Object) stackIn_2_0);
             stackOut_2_1 = stackIn_2_1;
             stackOut_2_2 = stackIn_2_2;
             stackOut_2_3 = stackIn_2_3;
@@ -413,7 +432,7 @@ final class bp extends rqa {
             stackIn_3_4 = stackOut_2_4;
             break L0;
           } else {
-            stackOut_1_0 = (llb) (Object) stackIn_1_0;
+            stackOut_1_0 = (llb) ((Object) stackIn_1_0);
             stackOut_1_1 = stackIn_1_1;
             stackOut_1_2 = stackIn_1_2;
             stackOut_1_3 = stackIn_1_3;
@@ -427,7 +446,7 @@ final class bp extends rqa {
           }
         }
         L1: {
-          stackOut_3_0 = (llb) (Object) stackIn_3_0;
+          stackOut_3_0 = (llb) ((Object) stackIn_3_0);
           stackOut_3_1 = stackIn_3_1;
           stackOut_3_2 = stackIn_3_2;
           stackOut_3_3 = stackIn_3_3;
@@ -446,7 +465,7 @@ final class bp extends rqa {
           stackIn_4_4 = stackOut_3_4;
           stackIn_4_5 = stackOut_3_5;
           if (!ll.field_o) {
-            stackOut_5_0 = (llb) (Object) stackIn_5_0;
+            stackOut_5_0 = (llb) ((Object) stackIn_5_0);
             stackOut_5_1 = stackIn_5_1;
             stackOut_5_2 = stackIn_5_2;
             stackOut_5_3 = stackIn_5_3;
@@ -462,7 +481,7 @@ final class bp extends rqa {
             stackIn_6_6 = stackOut_5_6;
             break L1;
           } else {
-            stackOut_4_0 = (llb) (Object) stackIn_4_0;
+            stackOut_4_0 = (llb) ((Object) stackIn_4_0);
             stackOut_4_1 = stackIn_4_1;
             stackOut_4_2 = stackIn_4_2;
             stackOut_4_3 = stackIn_4_3;
@@ -485,10 +504,10 @@ final class bp extends rqa {
           gmb.field_c.a(0, 124, tb.field_a.field_hb, -40 + tb.field_a.field_G, 40);
           qpb.field_w.a(0, -65, bqa.field_d.field_hb, 0, 30);
           sra.field_a.a(0, 124, bqa.field_d.field_hb, 30, -32 + bqa.field_d.field_G + -40);
-          fwa.field_a.a(5, 125, 68, 5, 30);
+          fwa.field_a.a(5, param0 ^ 120, 68, 5, 30);
           wrb.field_q.a(75, 18, 78, 5, 30);
           gs.field_b.a(155, 124, 48, 5, 30);
-          mqb.field_C.a(205, 116, 48, 5, 30);
+          mqb.field_C.a(205, param0 ^ 113, 48, 5, 30);
           if (!ll.field_o) {
             stackOut_8_0 = 200;
             stackIn_9_0 = stackOut_8_0;
@@ -503,7 +522,7 @@ final class bp extends rqa {
           var2 = stackIn_9_0;
           jna.field_o.a(var2 + 5, 123, -var2 + 363, 5, 30);
           uga.field_h.a(370, 116, -365 + (bqa.field_d.field_hb + -10), 5, 30);
-          rgb.field_f.a(-5 + (sra.field_a.field_hb - 5), 2, -1, -5 + (-37 + sra.field_a.field_G), 37, 5, rba.field_a);
+          rgb.field_f.a(-5 + (sra.field_a.field_hb - 5), 2, -1, -5 + (-37 + sra.field_a.field_G), 37, param0, rba.field_a);
           var3 = (bqa.field_d.field_hb + 2) / 2;
           gha.field_p.a(0, -116, -2 + var3, -40 + bqa.field_d.field_G, 40);
           if (ll.field_o) {

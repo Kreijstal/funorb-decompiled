@@ -12,15 +12,16 @@ final class uk extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            ((uk) this).field_e = true;
+            this.field_e = true;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "uk.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "uk.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String a(CharSequence param0, byte param1) {
+        String discarded$2 = null;
         RuntimeException var2 = null;
-        Object var3 = null;
+        CharSequence var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -45,8 +46,8 @@ final class uk extends java.awt.Canvas implements java.awt.event.FocusListener {
               if (param1 == -118) {
                 break L1;
               } else {
-                var3 = null;
-                String discarded$2 = uk.a((CharSequence) null, (byte) 121);
+                var3 = (CharSequence) null;
+                discarded$2 = uk.a((CharSequence) null, (byte) 121);
                 break L1;
               }
             }
@@ -58,23 +59,23 @@ final class uk extends java.awt.Canvas implements java.awt.event.FocusListener {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("uk.C(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -82,7 +83,7 @@ final class uk extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -90,11 +91,11 @@ final class uk extends java.awt.Canvas implements java.awt.event.FocusListener {
     final void a(dl param0, byte param1) {
         try {
             if (param1 != 67) {
-                field_f = null;
+                field_f = (String) null;
             }
-            fh.a(100, param0, ((uk) this).field_b);
+            fh.a(100, param0, this.field_b);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "uk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "uk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -112,17 +113,13 @@ final class uk extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_g = null;
         field_f = null;
         field_a = null;
-        int var1 = 33;
+        int var1 = -33 / ((51 - param0) / 56);
     }
 
     uk() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         long var4 = 0L;
         long var6 = 0L;
@@ -132,11 +129,11 @@ final class uk extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_g = new wf[79];
         field_c = "Orb coins: <%0>";
         field_a = new int[98304];
-        for (var0 = 92682; var0 >= 46341; var0--) {
-            var4 = (long)(-1 + (var0 << 1));
-            var6 = (long)(1 + (var0 << 1));
-            var3 = (int)((var6 * var6 >> 18) - 32768L);
-            var2 = (int)(-32768L + (var4 * var4 >> 18));
+        for (var0 = 92682; -46342 >= (var0 ^ -1); var0--) {
+            var4 = (long)(-1 + (var0 << 753917857));
+            var6 = (long)(1 + (var0 << 1457081729));
+            var3 = (int)((var6 * var6 >> -1833308270) - 32768L);
+            var2 = (int)(-32768L + (var4 * var4 >> 500559250));
             if (var3 >= field_a.length) {
                 var3 = field_a.length + -1;
             }

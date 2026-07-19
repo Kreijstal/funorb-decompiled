@@ -36,16 +36,6 @@ abstract class gg extends be {
         int[] var18 = null;
         int[] var19 = null;
         byte[][] var20 = null;
-        int[] var21 = null;
-        int[] var22 = null;
-        int[] var23 = null;
-        int[] var24 = null;
-        byte[][] var25 = null;
-        int[] var26 = null;
-        int[] var27 = null;
-        int[] var28 = null;
-        int[] var29 = null;
-        byte[][] var30 = null;
         lm stackIn_10_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -82,7 +72,7 @@ abstract class gg extends be {
         var9 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (param0.length != 256) {
+            if ((param0.length ^ -1) != -257) {
               throw new IllegalArgumentException();
             } else {
               L1: {
@@ -93,53 +83,50 @@ abstract class gg extends be {
                   break L1;
                 }
               }
-              var26 = new int[256];
-              var21 = var26;
-              var16 = var21;
+              var16 = new int[256];
               var11 = var16;
               var10 = var11;
               var3_array = var10;
-              var27 = new int[256];
-              var22 = var27;
-              var17 = var22;
+              var17 = new int[256];
               var12 = var17;
               var4 = var12;
-              var28 = new int[256];
-              var23 = var28;
-              var18 = var23;
+              var18 = new int[256];
               var13 = var18;
               var5 = var13;
-              var29 = new int[256];
-              var24 = var29;
-              var19 = var24;
+              var19 = new int[256];
               var14 = var19;
               var6 = var14;
-              var30 = new byte[256][];
-              var25 = var30;
-              var20 = var25;
+              var20 = new byte[256][];
               var15 = var20;
               var7 = var15;
               var8 = 0;
               L2: while (true) {
-                if (256 <= var8) {
-                  stackOut_9_0 = new lm(param2, var26, var27, var28, var29, var30);
-                  stackIn_10_0 = stackOut_9_0;
-                  break L0;
-                } else {
-                  var10[var8] = param0[var8].field_d;
-                  var4[var8] = param0[var8].field_c;
-                  var5[var8] = param0[var8].field_b;
-                  var6[var8] = param0[var8].field_i;
-                  var7[var8] = param0[var8].field_k;
-                  var8++;
-                  continue L2;
+                L3: {
+                  if (256 <= var8) {
+                    break L3;
+                  } else {
+                    var10[var8] = param0[var8].field_d;
+                    var4[var8] = param0[var8].field_c;
+                    var5[var8] = param0[var8].field_b;
+                    var6[var8] = param0[var8].field_i;
+                    var7[var8] = param0[var8].field_k;
+                    var8++;
+                    if (var9 == 0) {
+                      continue L2;
+                    } else {
+                      break L3;
+                    }
+                  }
                 }
+                stackOut_9_0 = new lm(param2, var16, var17, var18, var19, var20);
+                stackIn_10_0 = stackOut_9_0;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var3 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) (var3);
             stackOut_11_1 = new StringBuilder().append("gg.D(");
@@ -154,7 +141,7 @@ abstract class gg extends be {
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
-              break L3;
+              break L4;
             } else {
               stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
               stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
@@ -162,10 +149,10 @@ abstract class gg extends be {
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
               stackIn_14_2 = stackOut_12_2;
-              break L3;
+              break L4;
             }
           }
-          L4: {
+          L5: {
             stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
             stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
@@ -179,7 +166,7 @@ abstract class gg extends be {
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
-              break L4;
+              break L5;
             } else {
               stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
               stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
@@ -187,7 +174,7 @@ abstract class gg extends be {
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
               stackIn_17_2 = stackOut_15_2;
-              break L4;
+              break L5;
             }
           }
           throw dh.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
@@ -196,12 +183,23 @@ abstract class gg extends be {
     }
 
     final static int b(int param0, int param1) {
+        if (param1 != 27935) {
+            return 72;
+        }
         return 5 * ((param0 - -1) * param0);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
+        int discarded$2 = 0;
         uh.a(-9074);
-        hk.f(param3, param0, param2, param4);
+        if (param1 != 20763) {
+          discarded$2 = gg.b(119, 2);
+          hk.f(param3, param0, param2, param4);
+          return;
+        } else {
+          hk.f(param3, param0, param2, param4);
+          return;
+        }
     }
 
     public static void c(int param0) {

@@ -7,35 +7,34 @@ abstract class ip {
     static int[] field_b;
 
     final static String a(byte param0, CharSequence param1) {
+        String discarded$2 = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        Object var7 = null;
+        CharSequence var7 = null;
         char[] var8 = null;
         char[] var9 = null;
-        char[] var10 = null;
-        char[] var11 = null;
-        String stackIn_26_0 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_30_2 = null;
+        String stackIn_23_0 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_25_0 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
+        String stackOut_22_0 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
         var6 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
@@ -49,24 +48,22 @@ abstract class ip {
               }
             }
             L2: {
-              var11 = new char[var2_int];
-              var10 = var11;
-              var9 = var10;
+              var9 = new char[var2_int];
               var8 = var9;
               var3 = var8;
               if (param0 == -81) {
                 break L2;
               } else {
-                var7 = null;
-                String discarded$2 = ip.a((byte) -114, (CharSequence) null);
+                var7 = (CharSequence) null;
+                discarded$2 = ip.a((byte) -114, (CharSequence) null);
                 break L2;
               }
             }
             var4 = 0;
             L3: while (true) {
               if (var2_int <= var4) {
-                stackOut_25_0 = new String(var11);
-                stackIn_26_0 = stackOut_25_0;
+                stackOut_22_0 = new String(var9);
+                stackIn_23_0 = stackOut_22_0;
                 break L0;
               } else {
                 L4: {
@@ -77,7 +74,6 @@ abstract class ip {
                     } else {
                       if (var5 <= 90) {
                         var3[var4] = (char)(-65 + (var5 - -97));
-                        var4++;
                         break L4;
                       } else {
                         break L5;
@@ -107,12 +103,10 @@ abstract class ip {
                         }
                       }
                     }
-                    var3[var4] = '_';
-                    var4++;
+                    var3[var4] = (char)95;
                     break L4;
                   }
                   var3[var4] = (char)var5;
-                  var4++;
                   break L4;
                 }
                 var4++;
@@ -124,41 +118,49 @@ abstract class ip {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var2;
-            stackOut_27_1 = new StringBuilder().append("ip.E(").append(param0).append(',');
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackOut_24_0 = (RuntimeException) (var2);
+            stackOut_24_1 = new StringBuilder().append("ip.E(").append(param0).append(',');
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
             if (param1 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
               break L9;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
               break L9;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
         }
-        return stackIn_26_0;
+        return stackIn_23_0;
     }
 
     abstract int b(int param0, int param1);
 
     public static void a(int param0) {
         field_b = null;
-        field_c = null;
-        field_a = null;
+        if (param0 >= -3) {
+          field_c = (ll[]) null;
+          field_c = null;
+          field_a = (int[][]) null;
+          return;
+        } else {
+          field_c = null;
+          field_a = (int[][]) null;
+          return;
+        }
     }
 
     abstract ps a(boolean param0);
@@ -166,11 +168,7 @@ abstract class ip {
     abstract byte[] a(int param0, int param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[8192];
-        field_a = new int[][]{new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7], new int[7]};
+        field_a = new int[][]{new int[]{3, 0, 0, 0, 0, 0, 0}, new int[]{4, 0, 0, 0, 0, 0, 1}, new int[]{4, 1, 0, 0, 0, 0, 2}, new int[]{8, 0, 0, 0, 0, 0, 3}, new int[]{6, 0, 1, 0, 0, 0, 2}, new int[]{4, 2, 0, 0, 0, 0, 3}, new int[]{0, 6, 0, 0, 0, 0, 3}, new int[]{2, 4, 0, 0, 0, 0, 3}, new int[]{6, 0, 0, 1, 0, 0, 2}, new int[]{0, 5, 2, 0, 0, 0, 3}, new int[]{0, 6, 0, 1, 0, 0, 3}, new int[]{0, 0, 0, 3, 0, 0, 1}, new int[]{0, 1, 0, 4, 0, 0, 2}, new int[]{6, 2, 0, 0, 1, 0, 3}, new int[]{0, 0, 1, 6, 0, 0, 2}, new int[]{0, 6, 0, 0, 1, 0, 3}, new int[]{0, 6, 0, 0, 2, 0, 3}, new int[]{0, 0, 0, 0, 4, 0, 2}, new int[]{0, 0, 0, 8, 0, 0, 3}, new int[]{0, 0, 2, 6, 0, 0, 3}, new int[]{0, 0, 0, 0, 4, 1, 2}};
     }
 }

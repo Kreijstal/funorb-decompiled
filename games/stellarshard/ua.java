@@ -18,6 +18,9 @@ final class ua {
         field_c = null;
         field_g = null;
         field_e = null;
+        if (param0 != -50) {
+            return;
+        }
         field_f = null;
     }
 
@@ -26,10 +29,11 @@ final class ua {
     }
 
     ua(int param0) {
-        ((ua) this).field_h = param0;
+        this.field_h = param0;
     }
 
     final static void a(int param0, int param1, pb param2, int param3, int param4, int param5) {
+        int incrementValue$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -53,6 +57,7 @@ final class ua {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_30_0 = null;
         StringBuilder stackOut_30_1 = null;
@@ -66,16 +71,16 @@ final class ua {
         try {
           L0: {
             L1: {
-              var6_int = (param0 + -param1 << 8) / param2.field_w;
+              var6_int = (param0 + -param1 << -1513262808) / param2.field_w;
               param4 = param4 + param2.field_t;
               param5 = param5 + param2.field_s;
-              var7 = (param1 << 8) - -(var6_int * param2.field_t);
+              var7 = (param1 << -2002548056) - -(var6_int * param2.field_t);
               var8 = param4 - -(param5 * ti.field_i);
               var9 = 0;
               var10 = param2.field_y;
               var11 = param2.field_v;
               var12 = ti.field_i + -var11;
-              var13 = 0;
+              var13 = param3;
               if (param5 >= ti.field_f) {
                 break L1;
               } else {
@@ -129,6 +134,7 @@ final class ua {
                   param5 = -var10;
                   L6: while (true) {
                     if (param5 >= 0) {
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       var14 = var7;
@@ -141,22 +147,22 @@ final class ua {
                           continue L6;
                         } else {
                           L8: {
-                            var15 = var14 >> 8;
+                            var15 = var14 >> -1516799512;
                             var16 = 256 - var15;
                             var14 = var14 + var6_int;
                             if (0 <= var15) {
                               L9: {
-                                int incrementValue$1 = var9;
+                                incrementValue$1 = var9;
                                 var9++;
                                 var17 = param2.field_z[incrementValue$1];
                                 if (0 != var17) {
-                                  if (var15 > 255) {
+                                  if ((var15 ^ -1) < -256) {
                                     ti.field_a[var8] = var17;
                                     break L9;
                                   } else {
                                     var18 = ti.field_a[var8];
-                                    var19 = var15 * (16711935 & var17) + var16 * (var18 & 16711935) >> 8 & 16711935;
-                                    ti.field_a[var8] = (sa.a(16711841, var15 * sa.a(65280, var17) + var16 * sa.a(65280, var18)) >> 8) + var19;
+                                    var19 = var15 * (16711935 & var17) + var16 * (var18 & 16711935) >> 135472296 & 16711935;
+                                    ti.field_a[var8] = (sa.a(16711841, var15 * sa.a(65280, var17) + var16 * sa.a(65280, var18)) >> 2034937352) + var19;
                                     break L9;
                                   }
                                 } else {
@@ -182,29 +188,30 @@ final class ua {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var6 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var6;
+            stackOut_30_0 = (RuntimeException) (var6);
             stackOut_30_1 = new StringBuilder().append("ua.A(").append(param0).append(',').append(param1).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param2 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "null";
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
               break L10;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_33_0 = stackOut_31_0;
               stackIn_33_1 = stackOut_31_1;
@@ -212,15 +219,16 @@ final class ua {
               break L10;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + 0 + ',' + param4 + ',' + param5 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new int[8192];
         field_g = "Unpacking graphics";
         field_i = new qd(1);

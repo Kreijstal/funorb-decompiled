@@ -19,10 +19,6 @@ final class oo {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "oo.A(";
         field_a = true;
         field_e = "The upper body of a man and the lower body of a horse; the centaur's wild eyes and mane of straggly hair belie his ability with a bow.";

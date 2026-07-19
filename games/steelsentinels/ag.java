@@ -17,6 +17,9 @@ class ag extends cn {
     public static void b(int param0) {
         field_t = null;
         field_o = null;
+        if (param0 != 9) {
+            return;
+        }
         field_p = null;
         field_r = null;
     }
@@ -28,34 +31,80 @@ class ag extends cn {
             }
             super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ag.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "ag.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
         var4 = 0;
-        if (param0) {
-          L0: {
-            var4 += 4;
-            if (param2) {
-              var4 += 2;
-              break L0;
+        if (param1) {
+          if (!param0) {
+            L0: {
+              if (param2) {
+                var4 += 2;
+                break L0;
+              } else {
+                break L0;
+              }
+            }
+            if (param3) {
+              var4++;
+              return tf.field_d[var4];
             } else {
-              break L0;
+              return tf.field_d[var4];
+            }
+          } else {
+            L1: {
+              var4 += 4;
+              if (param2) {
+                var4 += 2;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            if (param3) {
+              var4++;
+              return tf.field_d[var4];
+            } else {
+              return tf.field_d[var4];
             }
           }
-          return tf.field_d[var4];
         } else {
-          L1: {
-            if (param2) {
-              var4 += 2;
-              break L1;
+          field_q = -53;
+          if (param0) {
+            L2: {
+              var4 += 4;
+              if (param2) {
+                var4 += 2;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            if (!param3) {
+              return tf.field_d[var4];
             } else {
-              break L1;
+              var4++;
+              return tf.field_d[var4];
+            }
+          } else {
+            L3: {
+              if (param2) {
+                var4 += 2;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            if (param3) {
+              var4++;
+              return tf.field_d[var4];
+            } else {
+              return tf.field_d[var4];
             }
           }
-          return tf.field_d[var4];
         }
     }
 
@@ -63,7 +112,7 @@ class ag extends cn {
         int var2 = 0;
         int var3 = 0;
         var3 = SteelSentinels.field_G;
-        if (rd.field_b > 0) {
+        if ((rd.field_b ^ -1) < -1) {
           if (null != ve.field_a) {
             L0: {
               wb.field_c = ve.field_a.b(param0 ^ -32476);
@@ -73,7 +122,7 @@ class ag extends cn {
                 break L0;
               } else {
                 var2 = 2;
-                hg.a((byte) -93, (java.awt.Canvas) (Object) wb.field_c);
+                hg.a((byte) -93, wb.field_c);
                 break L0;
               }
             }
@@ -89,7 +138,7 @@ class ag extends cn {
                 return;
               }
             } else {
-              field_t = null;
+              field_t = (String) null;
               if (null == ve.field_a) {
                 if (ff.field_fb) {
                   cl.a(113, param1, var2);
@@ -109,7 +158,7 @@ class ag extends cn {
                 break L1;
               } else {
                 var2 = 2;
-                hg.a((byte) -93, (java.awt.Canvas) (Object) wb.field_c);
+                hg.a((byte) -93, wb.field_c);
                 break L1;
               }
             }
@@ -125,7 +174,7 @@ class ag extends cn {
                 return;
               }
             } else {
-              field_t = null;
+              field_t = (String) null;
               if (null == ve.field_a) {
                 if (ff.field_fb) {
                   cl.a(113, param1, var2);
@@ -142,7 +191,7 @@ class ag extends cn {
           if (ni.b(89)) {
             var2 = 0;
             if (param0 != -4) {
-              field_t = null;
+              field_t = (String) null;
               if (null == ve.field_a) {
                 if (ff.field_fb) {
                   cl.a(113, param1, var2);
@@ -179,7 +228,7 @@ class ag extends cn {
                 return;
               }
             } else {
-              field_t = null;
+              field_t = (String) null;
               if (null == ve.field_a) {
                 if (ff.field_fb) {
                   cl.a(113, param1, var2);
@@ -200,7 +249,7 @@ class ag extends cn {
     }
 
     final static int a(int param0, int param1) {
-        if (param1 >= 5) {
+        if (-6 >= (param1 ^ -1)) {
           if (param1 <= 9) {
             if (param0 <= 15) {
               field_u = -95;
@@ -217,10 +266,6 @@ class ag extends cn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = 0;
         field_t = "Team Battle";
         field_r = new int[5];

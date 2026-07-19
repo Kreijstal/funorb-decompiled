@@ -24,10 +24,11 @@ abstract class gf {
     abstract void a(boolean param0, boolean param1, int param2);
 
     gf(int param0) {
-        ((gf) this).field_a = param0;
+        this.field_a = param0;
     }
 
     public static void c(byte param0) {
+        cq discarded$2 = null;
         field_g = null;
         field_b = null;
         field_d = null;
@@ -37,7 +38,7 @@ abstract class gf {
         if (param0 == -91) {
           return;
         } else {
-          cq discarded$2 = gf.a(119, 39, -126, (byte) 48);
+          discarded$2 = gf.a(119, 39, -126, (byte) 48);
           return;
         }
     }
@@ -48,13 +49,13 @@ abstract class gf {
         cq var6 = null;
         cq var7 = null;
         var5 = BrickABrac.field_J ? 1 : 0;
-        var4 = (cq) (Object) fk.field_f.d(-55);
+        var4 = (cq) ((Object) fk.field_f.d(-55));
         if (param3 >= -102) {
           gf.c((byte) -109);
           L0: while (true) {
             if (var4 != null) {
               if (param1 != var4.field_m) {
-                var4 = (cq) (Object) fk.field_f.a((byte) 116);
+                var4 = (cq) ((Object) fk.field_f.a((byte) 116));
                 continue L0;
               } else {
                 return var4;
@@ -64,7 +65,7 @@ abstract class gf {
               var4 = var7;
               var7.field_s = param2;
               var7.field_m = param1;
-              fk.field_f.a((nm) (Object) var7, (byte) 3);
+              fk.field_f.a(var7, (byte) 3);
               gn.a(-21167, var7, param0);
               return var7;
             }
@@ -73,7 +74,7 @@ abstract class gf {
           L1: while (true) {
             if (var4 != null) {
               if (param1 != var4.field_m) {
-                var4 = (cq) (Object) fk.field_f.a((byte) 116);
+                var4 = (cq) ((Object) fk.field_f.a((byte) 116));
                 continue L1;
               } else {
                 return var4;
@@ -83,7 +84,7 @@ abstract class gf {
               var4 = var6;
               var6.field_s = param2;
               var6.field_m = param1;
-              fk.field_f.a((nm) (Object) var6, (byte) 3);
+              fk.field_f.a(var6, (byte) 3);
               gn.a(-21167, var6, param0);
               return var6;
             }
@@ -92,10 +93,6 @@ abstract class gf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new n();
         field_b = "Connection lost - attempting to reconnect";
         field_g = "Charge: instantly charges the ball.";

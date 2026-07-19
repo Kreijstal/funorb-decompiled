@@ -31,14 +31,10 @@ final class mj {
     }
 
     private mj(int param0) {
-        ((mj) this).field_h = param0;
+        this.field_h = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new mj(1);
         field_i = new mj(2);
         field_c = new mj(4);

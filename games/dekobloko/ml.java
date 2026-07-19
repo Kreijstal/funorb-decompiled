@@ -271,6 +271,7 @@ final class ml {
         StringBuilder stackIn_2619_1 = null;
         String stackIn_2619_2 = null;
         int stackIn_2627_0 = 0;
+        int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_2615_0 = null;
@@ -6985,9 +6986,11 @@ final class ml {
                 }
               }
               lc.field_h = null;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7020,24 +7023,29 @@ final class ml {
           }
           throw dh.a((Throwable) ((Object) stackIn_2619_0), stackIn_2619_2 + ',' + param1 + ')');
         }
-        L746: {
-          if (var3 == 0) {
-            break L746;
-          } else {
-            L747: {
-              if (!hn.field_j) {
-                stackOut_2626_0 = 1;
-                stackIn_2627_0 = stackOut_2626_0;
-                break L747;
-              } else {
-                stackOut_2624_0 = 0;
-                stackIn_2627_0 = stackOut_2624_0;
-                break L747;
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          L746: {
+            if (var3 == 0) {
+              break L746;
+            } else {
+              L747: {
+                if (!hn.field_j) {
+                  stackOut_2626_0 = 1;
+                  stackIn_2627_0 = stackOut_2626_0;
+                  break L747;
+                } else {
+                  stackOut_2624_0 = 0;
+                  stackIn_2627_0 = stackOut_2624_0;
+                  break L747;
+                }
               }
+              hn.field_j = stackIn_2627_0 != 0;
+              break L746;
             }
-            hn.field_j = stackIn_2627_0 != 0;
-            break L746;
           }
+          return;
         }
     }
 

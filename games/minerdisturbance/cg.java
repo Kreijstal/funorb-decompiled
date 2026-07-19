@@ -31,15 +31,15 @@ final class cg extends pi {
 
     final void a(byte param0) {
         int var2 = 106 / ((param0 - -1) / 54);
-        ((cg) this).field_I = null;
-        ((cg) this).field_z = null;
-        ((cg) this).field_w = null;
-        ((cg) this).field_D = null;
+        this.field_I = null;
+        this.field_z = null;
+        this.field_w = null;
+        this.field_D = null;
     }
 
     public static void a(int param0) {
         field_r = null;
-        field_K = null;
+        field_K = (String[][]) null;
         if (param0 != 0) {
             cg.a(-85);
         }
@@ -49,12 +49,8 @@ final class cg extends pi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = false;
-        field_K = new String[][]{new String[3]};
+        field_K = new String[][]{new String[]{"What's that there? Maybe it's my imagination or maybe there's something moving over there...", "", "There are myths of dark and dangerous creatures that live within the volcano. Keep your eyes peeled, but don't let it get to you. Keep mining!"}};
         field_r = "Create";
         field_H = 0;
     }

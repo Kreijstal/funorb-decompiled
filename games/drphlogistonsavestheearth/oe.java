@@ -11,31 +11,31 @@ final class oe {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (null == ji.field_c) {
-          return;
-        } else {
-          var1 = (Object) (Object) ji.field_c;
-          synchronized (var1) {
-            L0: {
-              ji.field_c = null;
-              break L0;
+        if (param0 == -19495) {
+          if (null == ji.field_c) {
+            return;
+          } else {
+            var1 = ji.field_c;
+            synchronized (var1) {
+              L0: {
+                ji.field_c = null;
+                break L0;
+              }
             }
+            return;
           }
+        } else {
           return;
         }
     }
 
     public static void a(int param0) {
-        int var1 = 0;
+        int var1 = -112 % ((-73 - param0) / 51);
         field_c = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new cd();
     }
 }

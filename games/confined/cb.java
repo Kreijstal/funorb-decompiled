@@ -15,10 +15,6 @@ final class cb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "cb.A(";
         field_b = null;
     }

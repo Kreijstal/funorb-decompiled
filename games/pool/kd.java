@@ -12,10 +12,10 @@ abstract class kd extends ma {
     abstract kd a();
 
     final void b(int[] param0, int param1, int param2) {
-        if (((kd) this).field_l) {
-            ((kd) this).a(param0, param1, param2);
+        if (this.field_l) {
+            this.a(param0, param1, param2);
         } else {
-            ((kd) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class kd extends ma {
     }
 
     protected kd() {
-        ((kd) this).field_l = true;
+        this.field_l = true;
     }
 }

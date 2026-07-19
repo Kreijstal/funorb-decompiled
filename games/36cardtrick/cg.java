@@ -18,6 +18,7 @@ abstract class cg extends k implements pi {
         int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_13_0 = 0;
@@ -32,7 +33,8 @@ abstract class cg extends k implements pi {
                 if (param1 < 128) {
                   stackOut_7_0 = 1;
                   stackIn_8_0 = stackOut_7_0;
-                  return stackIn_8_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   break L1;
                 }
@@ -67,26 +69,47 @@ abstract class cg extends k implements pi {
                     } else {
                       stackOut_13_0 = 1;
                       stackIn_14_0 = stackOut_13_0;
-                      return stackIn_14_0 != 0;
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     }
                   }
                 }
               }
             }
+            L5: {
+              if (param0 >= 94) {
+                break L5;
+              } else {
+                field_f = true;
+                break L5;
+              }
+            }
             stackOut_18_0 = 0;
             stackIn_19_0 = stackOut_18_0;
+            decompiledRegionSelector0 = 2;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2_ref, "cg.P(" + 111 + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) var2_ref), "cg.P(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_19_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_8_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_14_0 != 0;
+          } else {
+            return stackIn_19_0 != 0;
+          }
+        }
     }
 
     public static void f(int param0) {
         field_e = null;
+        if (param0 != 1) {
+            return;
+        }
         field_i = null;
     }
 
@@ -97,8 +120,8 @@ abstract class cg extends k implements pi {
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
         if (param0 <= -1) {
-          if (null != ((cg) this).field_g.field_r) {
-            if (((cg) this).field_g.field_r.length() == 0) {
+          if (null != this.field_g.field_r) {
+            if (this.field_g.field_r.length() == 0) {
               return true;
             } else {
               return false;
@@ -109,12 +132,12 @@ abstract class cg extends k implements pi {
             return stackIn_11_0 != 0;
           }
         } else {
-          ((cg) this).field_g = null;
-          if (null == ((cg) this).field_g.field_r) {
+          this.field_g = (hf) null;
+          if (null == this.field_g.field_r) {
             return true;
           } else {
             L0: {
-              if (((cg) this).field_g.field_r.length() != 0) {
+              if (this.field_g.field_r.length() != 0) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
@@ -131,17 +154,18 @@ abstract class cg extends k implements pi {
 
     final sg e(int param0) {
         if (param0 != 14) {
-          field_i = null;
-          return ((cg) this).a(((cg) this).field_g.field_r, -103);
+          field_i = (kc) null;
+          return this.a(this.field_g.field_r, -103);
         } else {
-          return ((cg) this).a(((cg) this).field_g.field_r, -103);
+          return this.a(this.field_g.field_r, -103);
         }
     }
 
     abstract sg a(String param0, int param1);
 
     final static aj b(boolean param0) {
-        if (!(aj.field_a != null)) {
+        L0: {
+          if (aj.field_a == null) {
             aj.field_a = new aj();
             aj.field_a.a(-1, j.field_C);
             aj.field_a.field_d = 2763306;
@@ -152,8 +176,16 @@ abstract class cg extends k implements pi {
             aj.field_a.field_f = 4;
             aj.field_a.field_j = 5;
             aj.field_a.field_c = 14;
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        return aj.field_a;
+        if (!param0) {
+          return (aj) null;
+        } else {
+          return aj.field_a;
+        }
     }
 
     public final void a(hf param0, int param1) {
@@ -177,7 +209,7 @@ abstract class cg extends k implements pi {
         try {
           L0: {
             L1: {
-              ((cg) this).a(-98);
+              this.a(-98);
               if (param1 == 12891) {
                 break L1;
               } else {
@@ -191,23 +223,23 @@ abstract class cg extends k implements pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("cg.MA(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -215,11 +247,12 @@ abstract class cg extends k implements pi {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     public final void a(int param0, hf param1) {
+        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -243,7 +276,7 @@ abstract class cg extends k implements pi {
               if (param0 == -1) {
                 break L1;
               } else {
-                boolean discarded$2 = ((cg) this).a((byte) -37);
+                discarded$2 = this.a((byte) -37);
                 break L1;
               }
             }
@@ -253,23 +286,23 @@ abstract class cg extends k implements pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("cg.GA(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -277,32 +310,28 @@ abstract class cg extends k implements pi {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     final String d(int param0) {
         if (param0 != -5777) {
-            return null;
+            return (String) null;
         }
-        return ((cg) this).a(((cg) this).field_g.field_r, false);
+        return this.a(this.field_g.field_r, false);
     }
 
     abstract String a(String param0, boolean param1);
 
     cg(hf param0) {
         try {
-            ((cg) this).field_g = param0;
+            this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "cg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new lh(1);
     }
 }

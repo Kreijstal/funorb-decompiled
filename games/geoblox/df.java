@@ -11,18 +11,22 @@ abstract class df {
 
     final static void a(boolean param0, java.awt.Component param1) {
         try {
-            param1.removeMouseListener((java.awt.event.MouseListener) (Object) pg.field_c);
-            param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) pg.field_c);
-            param1.removeFocusListener((java.awt.event.FocusListener) (Object) pg.field_c);
+            param1.removeMouseListener(pg.field_c);
+            param1.removeMouseMotionListener(pg.field_c);
+            if (param0) {
+                field_a = (na) null;
+            }
+            param1.removeFocusListener(pg.field_c);
             s.field_I = 0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "df.F(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "df.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static ob b(byte param0) {
+        ob discarded$0 = null;
         if (param0 <= 11) {
-            ob discarded$0 = df.b((byte) 74);
+            discarded$0 = df.b((byte) 74);
             return uf.field_e;
         }
         return uf.field_e;
@@ -30,7 +34,7 @@ abstract class df {
 
     public static void a(int param0) {
         if (param0 != 0) {
-            field_b = null;
+            field_b = (String) null;
             field_a = null;
             field_b = null;
             return;
@@ -40,10 +44,6 @@ abstract class df {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "End Game";
     }
 }

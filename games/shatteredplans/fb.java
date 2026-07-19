@@ -49,7 +49,7 @@ final class fb extends qr {
 
     fb(int param0) {
         super(0L, (qr) null);
-        ((fb) this).field_dc = new byte[param0];
+        this.field_dc = new byte[param0];
     }
 
     public static void h(int param0) {
@@ -59,6 +59,9 @@ final class fb extends qr {
         field_Cb = null;
         field_yb = null;
         field_zb = null;
+        if (param0 != 32) {
+            field_Vb = (bi) null;
+        }
         field_gc = null;
     }
 
@@ -131,7 +134,7 @@ final class fb extends qr {
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            var9 = 0;
+            var9 = -18 % ((param2 - -43) / 35);
             var17 = new lp(0, 0, 182, cc.field_n);
             var10 = 0;
             var11_ref_fs__ = param6;
@@ -165,14 +168,14 @@ final class fb extends qr {
               L4: {
                 var11 = stackIn_9_0;
                 var12 = new b(pf.field_a[param4.field_x].field_z / 2, -(rs.field_Cb.field_J / 2) + (var17.field_i / 2 - 4), -(pf.field_a[param4.field_x].field_z / 2) + var17.field_m, rs.field_Cb.field_J + 8, 2, var11);
-                var17.a((vd) (Object) var12, 8);
+                var17.a(var12, 8);
                 if ((param7.field_w & 1 << param4.field_x) == 0) {
                   var13_ref = new ff(pf.field_a[param4.field_x].field_z / 2, -1 + (var17.field_i / 2 - rs.field_Cb.field_J / 2), er.a(param5, (byte) -127, param1, param4, param3));
-                  var17.a((vd) (Object) var13_ref, 8);
+                  var17.a(var13_ref, 8);
                   break L4;
                 } else {
                   var13_ref2 = new qk(pf.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, var17.field_m - pf.field_a[param4.field_x].field_z, rs.field_Cb.field_J, of.field_d.toUpperCase());
-                  var17.a((vd) (Object) var13_ref2, 8);
+                  var17.a(var13_ref2, 8);
                   break L4;
                 }
               }
@@ -180,14 +183,14 @@ final class fb extends qr {
                 if (var10 == 0) {
                   break L5;
                 } else {
-                  if (param0 > 3) {
+                  if ((param0 ^ -1) < -4) {
                     break L5;
                   } else {
                     if (0 >= param0) {
                       break L5;
                     } else {
-                      var13_ref2 = new qk(pf.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, -pf.field_a[param4.field_x].field_z + var17.field_m, rs.field_Cb.field_J, re.a(ka.field_m, 4371, new String[1]));
-                      var17.a((vd) (Object) var13_ref2, 8);
+                      var13_ref2 = new qk(pf.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, -pf.field_a[param4.field_x].field_z + var17.field_m, rs.field_Cb.field_J, re.a(ka.field_m, 4371, new String[]{Integer.toString(param0)}));
+                      var17.a(var13_ref2, 8);
                       break L5;
                     }
                   }
@@ -195,22 +198,22 @@ final class fb extends qr {
               }
               L6: {
                 var13_ref = new ff(0, (-pf.field_a[param4.field_x].field_w + var17.field_i) / 2, pf.field_a[param4.field_x]);
-                var17.a((vd) (Object) var13_ref, 8);
+                var17.a(var13_ref, 8);
                 if ((param7.field_w & 1 << param4.field_x) != 0) {
                   break L6;
                 } else {
                   L7: {
                     if (1 != param3) {
-                      if (param5 == 1) {
-                        var14 = re.a(fa.field_S, 4371, new String[1]);
+                      if (-2 == (param5 ^ -1)) {
+                        var14 = re.a(fa.field_S, 4371, new String[]{Integer.toString(param3)});
                         break L7;
                       } else {
-                        var14 = re.a(jm.field_q, 4371, new String[2]);
+                        var14 = re.a(jm.field_q, 4371, new String[]{Integer.toString(param3), Integer.toString(param5)});
                         break L7;
                       }
                     } else {
-                      if (param5 != 1) {
-                        var14 = re.a(ms.field_b, 4371, new String[1]);
+                      if ((param5 ^ -1) != -2) {
+                        var14 = re.a(ms.field_b, 4371, new String[]{Integer.toString(param5)});
                         break L7;
                       } else {
                         var14 = bc.field_a;
@@ -231,19 +234,19 @@ final class fb extends qr {
                     }
                   }
                   var17.field_o = var14;
-                  var15 = (vd) (Object) var17.field_l.d(0);
+                  var15 = (vd) ((Object) var17.field_l.d(0));
                   L9: while (true) {
                     if (var15 == null) {
                       break L6;
                     } else {
                       var15.field_o = var14;
-                      var15 = (vd) (Object) var17.field_l.a((byte) -71);
+                      var15 = (vd) ((Object) var17.field_l.a((byte) -71));
                       continue L9;
                     }
                   }
                 }
               }
-              stackOut_31_0 = (lp) var17;
+              stackOut_31_0 = (lp) (var17);
               stackIn_32_0 = stackOut_31_0;
               break L0;
             }
@@ -252,23 +255,23 @@ final class fb extends qr {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var8 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) var8;
-            stackOut_33_1 = new StringBuilder().append("fb.F(").append(param0).append(',').append(param1).append(',').append(28).append(',').append(param3).append(',');
+            stackOut_33_0 = (RuntimeException) (var8);
+            stackOut_33_1 = new StringBuilder().append("fb.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
             stackIn_34_1 = stackOut_33_1;
             if (param4 == null) {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackOut_35_2 = "null";
               stackIn_36_0 = stackOut_35_0;
               stackIn_36_1 = stackOut_35_1;
               stackIn_36_2 = stackOut_35_2;
               break L10;
             } else {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "{...}";
               stackIn_36_0 = stackOut_34_0;
               stackIn_36_1 = stackOut_34_1;
@@ -277,23 +280,23 @@ final class fb extends qr {
             }
           }
           L11: {
-            stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
+            stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
             stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(',').append(param5).append(',');
             stackIn_38_0 = stackOut_36_0;
             stackIn_38_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
             stackIn_37_1 = stackOut_36_1;
             if (param6 == null) {
-              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
               stackOut_38_2 = "null";
               stackIn_39_0 = stackOut_38_0;
               stackIn_39_1 = stackOut_38_1;
               stackIn_39_2 = stackOut_38_2;
               break L11;
             } else {
-              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
               stackOut_37_2 = "{...}";
               stackIn_39_0 = stackOut_37_0;
               stackIn_39_1 = stackOut_37_1;
@@ -302,23 +305,23 @@ final class fb extends qr {
             }
           }
           L12: {
-            stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
+            stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
             stackOut_39_1 = ((StringBuilder) (Object) stackIn_39_1).append(stackIn_39_2).append(',');
             stackIn_41_0 = stackOut_39_0;
             stackIn_41_1 = stackOut_39_1;
             stackIn_40_0 = stackOut_39_0;
             stackIn_40_1 = stackOut_39_1;
             if (param7 == null) {
-              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
-              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
+              stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
+              stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
               stackOut_41_2 = "null";
               stackIn_42_0 = stackOut_41_0;
               stackIn_42_1 = stackOut_41_1;
               stackIn_42_2 = stackOut_41_2;
               break L12;
             } else {
-              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
-              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
               stackOut_40_2 = "{...}";
               stackIn_42_0 = stackOut_40_0;
               stackIn_42_1 = stackOut_40_1;
@@ -326,7 +329,7 @@ final class fb extends qr {
               break L12;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_42_0), stackIn_42_2 + ')');
         }
         return stackIn_32_0;
     }
@@ -335,7 +338,7 @@ final class fb extends qr {
         if (param0 != -78) {
             return false;
         }
-        return !((fb) this).a((byte) 98) ? true : false;
+        return !this.a((byte) 98) ? true : false;
     }
 
     final static void a(boolean param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9) {
@@ -364,10 +367,10 @@ final class fb extends qr {
               } else {
                 if (null == np.field_a) {
                   if (null == he.field_p) {
-                    tc.j(97);
+                    tc.j(param9 ^ 97);
                     break L0;
                   } else {
-                    en.a(15471, true);
+                    en.a(param9 + 15471, true);
                     break L0;
                   }
                 } else {
@@ -389,8 +392,8 @@ final class fb extends qr {
         }
         L3: {
           mf.a(true, param5);
-          if (qa.field_t > 0) {
-            hi.a(param0, -26671, param5, param2);
+          if (qa.field_t > param9) {
+            hi.a(param0, param9 ^ -26671, param5, param2);
             break L3;
           } else {
             break L3;
@@ -399,7 +402,7 @@ final class fb extends qr {
         L4: {
           dn.field_f.field_y = 1;
           dn.field_f.field_kb = fg.field_b.field_kb;
-          if (bc.field_b <= 0) {
+          if (-1 <= (bc.field_b ^ -1)) {
             break L4;
           } else {
             bb.a(param5, param0, (byte) -2, param2);
@@ -407,7 +410,7 @@ final class fb extends qr {
           }
         }
         L5: {
-          if (ee.field_k <= 0) {
+          if ((ee.field_k ^ -1) >= -1) {
             break L5;
           } else {
             uo.a((byte) 23, param0, param2, param7, param5);
@@ -434,25 +437,27 @@ final class fb extends qr {
           dm.a(param4, 0, ls.field_a, param1, param2);
           break L6;
         }
-        ga.a(param1, (byte) 116, 16777215, param6, param2, param4, true);
+        ga.a(param1, (byte) 116, param3, param6, param2, param4, param8);
         dm.a(param4, 0, ro.field_a, param1, param2);
         ln.field_w = ln.field_w + 1;
     }
 
     final int g(int param0) {
+        int discarded$0 = 0;
         if (param0 >= -74) {
-            int discarded$0 = ((fb) this).g(-46);
+            discarded$0 = this.g(-46);
         }
-        return (int)((fb) this).d((byte) 118);
+        return (int)this.d((byte) 118);
     }
 
     final boolean a(fb param0, int param1) {
+        boolean discarded$1 = false;
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        Object var7 = null;
+        fb var7 = null;
         int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_15_0 = 0;
@@ -482,6 +487,7 @@ final class fb extends qr {
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
         String stackIn_76_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -536,14 +542,14 @@ final class fb extends qr {
               if (param1 == -1) {
                 break L1;
               } else {
-                var7 = null;
-                boolean discarded$1 = ((fb) this).a((fb) null, -74);
+                var7 = (fb) null;
+                discarded$1 = this.a((fb) null, -74);
                 break L1;
               }
             }
             L2: {
-              if (!((fb) this).field_Jb) {
-                if (((fb) this).field_hc == 6) {
+              if (!this.field_Jb) {
+                if (this.field_hc == 6) {
                   stackOut_6_0 = 1;
                   stackIn_8_0 = stackOut_6_0;
                   break L2;
@@ -561,7 +567,7 @@ final class fb extends qr {
             L3: {
               var3_int = stackIn_8_0;
               if (!param0.field_Jb) {
-                if (param0.field_hc == 6) {
+                if (-7 == (param0.field_hc ^ -1)) {
                   stackOut_12_0 = 1;
                   stackIn_14_0 = stackOut_12_0;
                   break L3;
@@ -601,7 +607,7 @@ final class fb extends qr {
                   break L5;
                 } else {
                   L6: {
-                    if (((fb) this).field_cc) {
+                    if (this.field_cc) {
                       stackOut_23_0 = 0;
                       stackIn_24_0 = stackOut_23_0;
                       break L6;
@@ -612,18 +618,19 @@ final class fb extends qr {
                     }
                   }
                   if (stackIn_24_0 == (param0.field_cc ? 1 : 0)) {
-                    stackOut_26_0 = ((fb) this).field_cc;
+                    stackOut_26_0 = this.field_cc;
                     stackIn_27_0 = stackOut_26_0;
-                    return stackIn_27_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
-                    if (!((fb) this).field_cc) {
+                    if (!this.field_cc) {
                       break L5;
                     } else {
-                      if (param0.field_nc == ((fb) this).field_nc) {
+                      if (param0.field_nc == this.field_nc) {
                         break L5;
                       } else {
                         L7: {
-                          if (param0.field_nc <= ((fb) this).field_nc) {
+                          if (param0.field_nc <= this.field_nc) {
                             stackOut_32_0 = 0;
                             stackIn_33_0 = stackOut_32_0;
                             break L7;
@@ -633,14 +640,15 @@ final class fb extends qr {
                             break L7;
                           }
                         }
-                        return stackIn_33_0 != 0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       }
                     }
                   }
                 }
               }
               L8: {
-                if (((fb) this).field_Ab) {
+                if (this.field_Ab) {
                   stackOut_36_0 = 0;
                   stackIn_37_0 = stackOut_36_0;
                   break L8;
@@ -652,7 +660,7 @@ final class fb extends qr {
               }
               if (stackIn_37_0 == (param0.field_Ab ? 1 : 0)) {
                 L9: {
-                  if (((fb) this).field_Ab) {
+                  if (this.field_Ab) {
                     stackOut_41_0 = 0;
                     stackIn_42_0 = stackOut_41_0;
                     break L9;
@@ -662,16 +670,17 @@ final class fb extends qr {
                     break L9;
                   }
                 }
-                return stackIn_42_0 != 0;
+                decompiledRegionSelector0 = 3;
+                break L0;
               } else {
-                if (((fb) this).field_Ab) {
+                if (this.field_Ab) {
                   L10: {
-                    if (((fb) this).field_mc) {
+                    if (this.field_mc) {
                       stackOut_52_0 = 1;
                       stackIn_54_0 = stackOut_52_0;
                       break L10;
                     } else {
-                      if (2 == ((fb) this).field_Fb) {
+                      if (2 == this.field_Fb) {
                         stackOut_51_0 = 1;
                         stackIn_54_0 = stackOut_51_0;
                         break L10;
@@ -685,7 +694,7 @@ final class fb extends qr {
                   L11: {
                     var5 = stackIn_54_0;
                     if (!param0.field_mc) {
-                      if (param0.field_Fb == 2) {
+                      if ((param0.field_Fb ^ -1) == -3) {
                         stackOut_58_0 = 1;
                         stackIn_60_0 = stackOut_58_0;
                         break L11;
@@ -732,7 +741,7 @@ final class fb extends qr {
                   }
                   if (stackIn_66_0 == stackIn_66_1) {
                     L14: {
-                      if (~((fb) this).field_Gb >= ~param0.field_Gb) {
+                      if ((this.field_Gb ^ -1L) >= (param0.field_Gb ^ -1L)) {
                         stackOut_71_0 = 0;
                         stackIn_72_0 = stackOut_71_0;
                         break L14;
@@ -742,15 +751,17 @@ final class fb extends qr {
                         break L14;
                       }
                     }
+                    decompiledRegionSelector0 = 6;
                     break L0;
                   } else {
                     stackOut_67_0 = var5;
                     stackIn_68_0 = stackOut_67_0;
-                    return stackIn_68_0 != 0;
+                    decompiledRegionSelector0 = 5;
+                    break L0;
                   }
                 } else {
                   L15: {
-                    if (((fb) this).field_Gb >= param0.field_Gb) {
+                    if (this.field_Gb >= param0.field_Gb) {
                       stackOut_46_0 = 0;
                       stackIn_47_0 = stackOut_46_0;
                       break L15;
@@ -760,36 +771,38 @@ final class fb extends qr {
                       break L15;
                     }
                   }
-                  return stackIn_47_0 != 0;
+                  decompiledRegionSelector0 = 4;
+                  break L0;
                 }
               }
             } else {
               stackOut_18_0 = var3_int;
               stackIn_19_0 = stackOut_18_0;
-              return stackIn_19_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var3 = decompiledCaughtException;
-            stackOut_73_0 = (RuntimeException) var3;
+            stackOut_73_0 = (RuntimeException) (var3);
             stackOut_73_1 = new StringBuilder().append("fb.A(");
             stackIn_75_0 = stackOut_73_0;
             stackIn_75_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;
             stackIn_74_1 = stackOut_73_1;
             if (param0 == null) {
-              stackOut_75_0 = (RuntimeException) (Object) stackIn_75_0;
-              stackOut_75_1 = (StringBuilder) (Object) stackIn_75_1;
+              stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
+              stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
               stackOut_75_2 = "null";
               stackIn_76_0 = stackOut_75_0;
               stackIn_76_1 = stackOut_75_1;
               stackIn_76_2 = stackOut_75_2;
               break L16;
             } else {
-              stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
-              stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
+              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
+              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
               stackOut_74_2 = "{...}";
               stackIn_76_0 = stackOut_74_0;
               stackIn_76_1 = stackOut_74_1;
@@ -797,16 +810,36 @@ final class fb extends qr {
               break L16;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) stackIn_76_0), stackIn_76_2 + ',' + param1 + ')');
         }
-        return stackIn_72_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_19_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_27_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_33_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_42_0 != 0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_47_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_68_0 != 0;
+                  } else {
+                    return stackIn_72_0 != 0;
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_gc = "Awaiting response";
         field_kc = "<%0> is not a member, and cannot play with the current options.";
         field_Cb = new long[32];

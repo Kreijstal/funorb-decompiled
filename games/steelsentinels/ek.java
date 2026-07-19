@@ -20,30 +20,30 @@ final class ek extends wk {
           } else {
             if (param3 > 0) {
               L1: {
-                var5 = ((ek) this).field_A;
-                var6 = ((ek) this).field_F;
+                var5 = this.field_A;
+                var6 = this.field_F;
                 var7 = 0;
                 var8 = 0;
-                var9 = ((ek) this).field_z;
-                var10 = ((ek) this).field_B;
+                var9 = this.field_z;
+                var10 = this.field_B;
                 var11 = (var9 << 16) / param2;
                 var12 = (var10 << 16) / param3;
-                if (((ek) this).field_D <= 0) {
+                if (this.field_D <= 0) {
                   break L1;
                 } else {
-                  var13 = ((((ek) this).field_D << 16) + var11 - 1) / var11;
+                  var13 = ((this.field_D << 16) + var11 - 1) / var11;
                   param0 = param0 + var13;
-                  var7 = var7 + (var13 * var11 - (((ek) this).field_D << 16));
+                  var7 = var7 + (var13 * var11 - (this.field_D << 16));
                   break L1;
                 }
               }
               L2: {
-                if (((ek) this).field_H <= 0) {
+                if (this.field_H <= 0) {
                   break L2;
                 } else {
-                  var13 = ((((ek) this).field_H << 16) + var12 - 1) / var12;
+                  var13 = ((this.field_H << 16) + var12 - 1) / var12;
                   param1 = param1 + var13;
-                  var8 = var8 + (var13 * var12 - (((ek) this).field_H << 16));
+                  var8 = var8 + (var13 * var12 - (this.field_H << 16));
                   break L2;
                 }
               }
@@ -106,7 +106,7 @@ final class ek extends wk {
                   break L8;
                 }
               }
-              ek.c(pb.field_g, ((ek) this).field_E, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+              ek.c(pb.field_g, this.field_E, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
               return;
             } else {
               break L0;
@@ -116,6 +116,8 @@ final class ek extends wk {
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -136,7 +138,7 @@ final class ek extends wk {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3--;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -147,7 +149,7 @@ final class ek extends wk {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
@@ -168,12 +170,12 @@ final class ek extends wk {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ek) this).field_D;
-          param1 = param1 + ((ek) this).field_H;
+          param0 = param0 + this.field_D;
+          param1 = param1 + this.field_H;
           var3 = param0 + param1 * pb.field_c;
           var4 = 0;
-          var5 = ((ek) this).field_F;
-          var6 = ((ek) this).field_A;
+          var5 = this.field_F;
+          var6 = this.field_A;
           var7 = pb.field_c - var6;
           var8 = 0;
           if (param1 >= pb.field_l) {
@@ -225,7 +227,7 @@ final class ek extends wk {
             break L4;
           } else {
             if (var5 > 0) {
-              ek.e(pb.field_g, ((ek) this).field_E, 0, var4, var3, var6, var5, var7, var8);
+              ek.e(pb.field_g, this.field_E, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -243,12 +245,12 @@ final class ek extends wk {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ek) this).field_D;
-          param1 = param1 + ((ek) this).field_H;
+          param0 = param0 + this.field_D;
+          param1 = param1 + this.field_H;
           var4 = param0 + param1 * pb.field_c;
           var5 = 0;
-          var6 = ((ek) this).field_F;
-          var7 = ((ek) this).field_A;
+          var6 = this.field_F;
+          var7 = this.field_A;
           var8 = pb.field_c - var7;
           var9 = 0;
           if (param1 >= pb.field_l) {
@@ -300,7 +302,7 @@ final class ek extends wk {
             break L4;
           } else {
             if (var6 > 0) {
-              ek.d(pb.field_g, ((ek) this).field_E, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+              ek.d(pb.field_g, this.field_E, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -314,17 +316,19 @@ final class ek extends wk {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int incrementValue$0 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = -param5; var11 < 0; var11++) {
                 var12 = (param1[param3] >>> 24) * param9 >> 8;
                 var13 = 256 - var12;
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
                 var14 = param1[incrementValue$0];
                 var15 = param0[param4];
-                int incrementValue$1 = param4;
+                incrementValue$1 = param4;
                 param4++;
                 param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
             }
@@ -334,6 +338,8 @@ final class ek extends wk {
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var14 = 0;
         param8 = -param10;
         L0: while (true) {
@@ -348,7 +354,7 @@ final class ek extends wk {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -363,7 +369,7 @@ final class ek extends wk {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -381,6 +387,7 @@ final class ek extends wk {
         int var15 = 0;
         int var16 = 0;
         int var18 = 0;
+        int incrementValue$0 = 0;
         int var17 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
@@ -391,7 +398,7 @@ final class ek extends wk {
                 if (var16 != 0) {
                     var17 = 256 - var16;
                     var18 = param0[param5];
-                    int incrementValue$0 = param5;
+                    incrementValue$0 = param5;
                     param5++;
                     param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
                 } else {
@@ -414,12 +421,12 @@ final class ek extends wk {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ek) this).field_D;
-          param1 = param1 + ((ek) this).field_H;
+          param0 = param0 + this.field_D;
+          param1 = param1 + this.field_H;
           var3 = param0 + param1 * pb.field_c;
           var4 = 0;
-          var5 = ((ek) this).field_F;
-          var6 = ((ek) this).field_A;
+          var5 = this.field_F;
+          var6 = this.field_A;
           var7 = pb.field_c - var6;
           var8 = 0;
           if (param1 >= pb.field_l) {
@@ -471,7 +478,7 @@ final class ek extends wk {
             break L4;
           } else {
             if (var5 > 0) {
-              ek.e(pb.field_g, ((ek) this).field_E, 0, var4, var3, var6, var5, var7, var8);
+              ek.e(pb.field_g, this.field_E, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -493,12 +500,12 @@ final class ek extends wk {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ek) this).field_D;
-          param1 = param1 + ((ek) this).field_H;
+          param0 = param0 + this.field_D;
+          param1 = param1 + this.field_H;
           var4 = param0 + param1 * pb.field_c;
           var5 = 0;
-          var6 = ((ek) this).field_F;
-          var7 = ((ek) this).field_A;
+          var6 = this.field_F;
+          var7 = this.field_A;
           var8 = pb.field_c - var7;
           var9 = 0;
           if (param1 >= pb.field_l) {
@@ -550,7 +557,7 @@ final class ek extends wk {
             break L4;
           } else {
             if (var6 > 0) {
-              ek.b(0, 0, 0, pb.field_g, ((ek) this).field_E, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+              ek.b(0, 0, 0, pb.field_g, this.field_E, var5, 0, var4, 0, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -567,6 +574,7 @@ final class ek extends wk {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
+        int incrementValue$0 = 0;
         int var13 = param3;
         for (var14 = -param8; var14 < 0; var14++) {
             var15 = (param4 >> 16) * param11;
@@ -575,7 +583,7 @@ final class ek extends wk {
                 var18 = param0[param5];
                 var19 = (var17 >>> 24) * param12 >> 8;
                 var20 = 256 - var19;
-                int incrementValue$0 = param5;
+                incrementValue$0 = param5;
                 param5++;
                 param0[incrementValue$0] = ((var17 & 16711935) * var19 + (var18 & 16711935) * var20 & -16711936) + ((var17 & 65280) * var19 + (var18 & 65280) * var20 & 16711680) >>> 8;
                 param3 = param3 + param9;
@@ -595,12 +603,12 @@ final class ek extends wk {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ek) this).field_D;
-          param1 = param1 + (((ek) this).field_B - ((ek) this).field_F - ((ek) this).field_H);
-          var3 = param0 + (param1 + ((ek) this).field_F - 1) * pb.field_c;
+          param0 = param0 + this.field_D;
+          param1 = param1 + (this.field_B - this.field_F - this.field_H);
+          var3 = param0 + (param1 + this.field_F - 1) * pb.field_c;
           var4 = 0;
-          var5 = ((ek) this).field_F;
-          var6 = ((ek) this).field_A;
+          var5 = this.field_F;
+          var6 = this.field_A;
           var7 = -pb.field_c - var6;
           var8 = 0;
           if (param1 >= pb.field_l) {
@@ -652,7 +660,7 @@ final class ek extends wk {
             break L4;
           } else {
             if (var5 > 0) {
-              ek.e(pb.field_g, ((ek) this).field_E, 0, var4, var3, var6, var5, var7, var8);
+              ek.e(pb.field_g, this.field_E, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -670,12 +678,12 @@ final class ek extends wk {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ek) this).field_D;
-          param1 = param1 + ((ek) this).field_H;
+          param0 = param0 + this.field_D;
+          param1 = param1 + this.field_H;
           var4 = param0 + param1 * pb.field_c;
           var5 = 0;
-          var6 = ((ek) this).field_F;
-          var7 = ((ek) this).field_A;
+          var6 = this.field_F;
+          var7 = this.field_A;
           var8 = pb.field_c - var7;
           var9 = 0;
           if (param1 >= pb.field_l) {
@@ -727,7 +735,7 @@ final class ek extends wk {
             break L4;
           } else {
             if (var6 > 0) {
-              ek.d(pb.field_g, ((ek) this).field_E, 0, var5, var4, var7, var6, var8, var9, param2);
+              ek.d(pb.field_g, this.field_E, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -737,6 +745,8 @@ final class ek extends wk {
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -758,7 +768,7 @@ final class ek extends wk {
                 param6++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var14 = param2 >>> 24;
@@ -781,7 +791,7 @@ final class ek extends wk {
                   }
                   var16 = 256 - var14;
                   var17 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
                   param5++;
@@ -806,12 +816,12 @@ final class ek extends wk {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + (((ek) this).field_z - ((ek) this).field_A - ((ek) this).field_D);
-          param1 = param1 + ((ek) this).field_H;
+          param0 = param0 + (this.field_z - this.field_A - this.field_D);
+          param1 = param1 + this.field_H;
           var3 = param0 + param1 * pb.field_c;
-          var4 = ((ek) this).field_A - 1;
-          var5 = ((ek) this).field_F;
-          var6 = ((ek) this).field_A;
+          var4 = this.field_A - 1;
+          var5 = this.field_F;
+          var6 = this.field_A;
           var7 = pb.field_c - var6;
           var8 = var6 + var6;
           if (param1 >= pb.field_l) {
@@ -863,7 +873,7 @@ final class ek extends wk {
             break L4;
           } else {
             if (var5 > 0) {
-              ek.d(pb.field_g, ((ek) this).field_E, 0, var4, var3, var6, var5, var7, var8);
+              ek.d(pb.field_g, this.field_E, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -894,8 +904,6 @@ final class ek extends wk {
         int var21 = 0;
         int[] var22 = null;
         int[] var23 = null;
-        int[] var24 = null;
-        int[] var25 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -909,10 +917,10 @@ final class ek extends wk {
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
         L0: {
-          var3 = ((ek) this).field_A >> 2;
-          var4 = ((ek) this).field_F >> 2;
-          param0 = param0 + ((ek) this).field_D / 4;
-          param1 = param1 + ((ek) this).field_H / 4;
+          var3 = this.field_A >> 2;
+          var4 = this.field_F >> 2;
+          param0 = param0 + this.field_D / 4;
+          param1 = param1 + this.field_H / 4;
           if (param0 >= pb.field_i) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -926,7 +934,7 @@ final class ek extends wk {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= pb.field_b) {
-            stackOut_5_0 = ((ek) this).field_A - 4;
+            stackOut_5_0 = this.field_A - 4;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -950,7 +958,7 @@ final class ek extends wk {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= pb.field_d) {
-            stackOut_11_0 = ((ek) this).field_F - 4;
+            stackOut_11_0 = this.field_F - 4;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -960,9 +968,7 @@ final class ek extends wk {
           }
         }
         var8 = stackIn_12_0;
-        var25 = new int[16];
-        var24 = var25;
-        var23 = var24;
+        var23 = new int[16];
         var22 = var23;
         var9 = var22;
         var10 = var7;
@@ -976,12 +982,12 @@ final class ek extends wk {
                 var10 += 4;
                 continue L4;
               } else {
-                var12 = var10 * ((ek) this).field_A + var11;
+                var12 = var10 * this.field_A + var11;
                 var13 = (param1 + (var10 >> 2)) * pb.field_c + (param0 + (var11 >> 2));
                 var14 = 0;
                 L6: while (true) {
                   if (var14 >= 4) {
-                    var25 = var24;
+                    var23 = var22;
                     var14 = 0;
                     var15 = 0;
                     var16 = 0;
@@ -1004,11 +1010,11 @@ final class ek extends wk {
                           continue L5;
                         }
                       } else {
-                        var14 = var25[var19] >>> 24;
+                        var14 = var23[var19] >>> 24;
                         var15 = var15 + var14;
-                        var16 = var16 + var14 * (var25[var19] >> 16 & 255);
-                        var17 = var17 + var14 * (var25[var19] >> 8 & 255);
-                        var18 = var18 + var14 * (var25[var19] & 255);
+                        var16 = var16 + var14 * (var23[var19] >> 16 & 255);
+                        var17 = var17 + var14 * (var23[var19] >> 8 & 255);
+                        var18 = var18 + var14 * (var23[var19] & 255);
                         var19++;
                         continue L7;
                       }
@@ -1020,7 +1026,7 @@ final class ek extends wk {
                         var14++;
                         continue L6;
                       } else {
-                        var9[(var14 << 2) + var15] = ((ek) this).field_E[var12 + var14 * ((ek) this).field_A + var15];
+                        var9[(var14 << 2) + var15] = this.field_E[var12 + var14 * this.field_A + var15];
                         var15++;
                         continue L8;
                       }
@@ -1051,30 +1057,30 @@ final class ek extends wk {
           } else {
             if (param3 > 0) {
               L1: {
-                var6 = ((ek) this).field_A;
-                var7 = ((ek) this).field_F;
+                var6 = this.field_A;
+                var7 = this.field_F;
                 var8 = 0;
                 var9 = 0;
-                var10 = ((ek) this).field_z;
-                var11 = ((ek) this).field_B;
+                var10 = this.field_z;
+                var11 = this.field_B;
                 var12 = (var10 << 16) / param2;
                 var13 = (var11 << 16) / param3;
-                if (((ek) this).field_D <= 0) {
+                if (this.field_D <= 0) {
                   break L1;
                 } else {
-                  var14 = ((((ek) this).field_D << 16) + var12 - 1) / var12;
+                  var14 = ((this.field_D << 16) + var12 - 1) / var12;
                   param0 = param0 + var14;
-                  var8 = var8 + (var14 * var12 - (((ek) this).field_D << 16));
+                  var8 = var8 + (var14 * var12 - (this.field_D << 16));
                   break L1;
                 }
               }
               L2: {
-                if (((ek) this).field_H <= 0) {
+                if (this.field_H <= 0) {
                   break L2;
                 } else {
-                  var14 = ((((ek) this).field_H << 16) + var13 - 1) / var13;
+                  var14 = ((this.field_H << 16) + var13 - 1) / var13;
                   param1 = param1 + var14;
-                  var9 = var9 + (var14 * var13 - (((ek) this).field_H << 16));
+                  var9 = var9 + (var14 * var13 - (this.field_H << 16));
                   break L2;
                 }
               }
@@ -1137,7 +1143,7 @@ final class ek extends wk {
                   break L8;
                 }
               }
-              ek.c(pb.field_g, ((ek) this).field_E, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
+              ek.c(pb.field_g, this.field_E, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
               return;
             } else {
               break L0;
@@ -1147,6 +1153,8 @@ final class ek extends wk {
     }
 
     final void e(int param0, int param1, int param2, int param3) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1160,10 +1168,10 @@ final class ek extends wk {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        if (((ek) this).field_F != 0) {
+        if (this.field_F != 0) {
           L0: {
-            var5 = ((ek) this).field_F;
-            var6 = ((ek) this).field_A;
+            var5 = this.field_F;
+            var6 = this.field_A;
             var7 = param2 << 8;
             var8 = (param3 - param2 << 8) / var5;
             var9 = 0;
@@ -1204,7 +1212,7 @@ final class ek extends wk {
             }
           }
           var10 = pb.field_c - var6;
-          var11 = ((ek) this).field_A - var6;
+          var11 = this.field_A - var6;
           var12 = param0 + param1 * pb.field_c;
           param1 = -var5;
           L4: while (true) {
@@ -1222,13 +1230,13 @@ final class ek extends wk {
                     param1++;
                     continue L4;
                   } else {
-                    var14 = (((ek) this).field_E[var9] >>> 24) * var13 >> 8;
+                    var14 = (this.field_E[var9] >>> 24) * var13 >> 8;
                     var15 = 256 - var14;
-                    int incrementValue$2 = var9;
+                    incrementValue$2 = var9;
                     var9++;
-                    var16 = ((ek) this).field_E[incrementValue$2];
+                    var16 = this.field_E[incrementValue$2];
                     var17 = pb.field_g[var12];
-                    int incrementValue$3 = var12;
+                    incrementValue$3 = var12;
                     var12++;
                     pb.field_g[incrementValue$3] = ((var16 & 16711935) * var14 + (var17 & 16711935) * var15 & -16711936) + ((var16 & 65280) * var14 + (var17 & 65280) * var15 & 16711680) >>> 8;
                     param0++;
@@ -1294,10 +1302,10 @@ final class ek extends wk {
         int stackOut_19_1 = 0;
         int stackOut_19_2 = 0;
         L0: {
-          var3 = ((ek) this).field_A >> 1;
-          var4 = ((ek) this).field_F >> 1;
-          param0 = param0 + ((ek) this).field_D / 2;
-          param1 = param1 + ((ek) this).field_H / 2;
+          var3 = this.field_A >> 1;
+          var4 = this.field_F >> 1;
+          param0 = param0 + this.field_D / 2;
+          param1 = param1 + this.field_H / 2;
           if (param0 >= pb.field_i) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -1311,7 +1319,7 @@ final class ek extends wk {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= pb.field_b) {
-            stackOut_5_0 = ((ek) this).field_A - 2;
+            stackOut_5_0 = this.field_A - 2;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -1335,7 +1343,7 @@ final class ek extends wk {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= pb.field_d) {
-            stackOut_11_0 = ((ek) this).field_F - 2;
+            stackOut_11_0 = this.field_F - 2;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -1350,7 +1358,7 @@ final class ek extends wk {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((ek) this).field_A + var5;
+            var10 = var9 * this.field_A + var5;
             var11 = (param1 + (var9 >> 1)) * pb.field_c + (param0 + (var5 >> 1));
             var12 = var5;
             L5: while (true) {
@@ -1386,14 +1394,14 @@ final class ek extends wk {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = ((ek) this).field_E;
+                      stackOut_18_0 = this.field_E;
                       stackOut_18_1 = var10 + (var19 & 1);
                       stackIn_20_0 = stackOut_18_0;
                       stackIn_20_1 = stackOut_18_1;
                       stackIn_19_0 = stackOut_18_0;
                       stackIn_19_1 = stackOut_18_1;
                       if ((var19 & 2) != 0) {
-                        stackOut_20_0 = (int[]) (Object) stackIn_20_0;
+                        stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
                         stackOut_20_1 = stackIn_20_1;
                         stackOut_20_2 = 0;
                         stackIn_21_0 = stackOut_20_0;
@@ -1401,9 +1409,9 @@ final class ek extends wk {
                         stackIn_21_2 = stackOut_20_2;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) (Object) stackIn_19_0;
+                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
                         stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = ((ek) this).field_A;
+                        stackOut_19_2 = this.field_A;
                         stackIn_21_0 = stackOut_19_0;
                         stackIn_21_1 = stackOut_19_1;
                         stackIn_21_2 = stackOut_19_2;
@@ -1427,6 +1435,8 @@ final class ek extends wk {
     }
 
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -1447,7 +1457,7 @@ final class ek extends wk {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -1458,7 +1468,7 @@ final class ek extends wk {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
@@ -1475,6 +1485,8 @@ final class ek extends wk {
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1508,7 +1520,7 @@ final class ek extends wk {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
                 param2 = param1[incrementValue$2];
                 var17 = param2 >>> 24;
@@ -1543,7 +1555,7 @@ final class ek extends wk {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
-                  int incrementValue$3 = param4;
+                  incrementValue$3 = param4;
                   param4++;
                   param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
@@ -1564,12 +1576,12 @@ final class ek extends wk {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ek) this).field_D;
-          param1 = param1 + ((ek) this).field_H;
+          param0 = param0 + this.field_D;
+          param1 = param1 + this.field_H;
           var4 = param0 + param1 * pb.field_c;
           var5 = 0;
-          var6 = ((ek) this).field_F;
-          var7 = ((ek) this).field_A;
+          var6 = this.field_F;
+          var7 = this.field_A;
           var8 = pb.field_c - var7;
           var9 = 0;
           if (param1 >= pb.field_l) {
@@ -1621,7 +1633,7 @@ final class ek extends wk {
             break L4;
           } else {
             if (var6 > 0) {
-              ek.c(pb.field_g, ((ek) this).field_E, 0, var5, var4, var7, var6, var8, var9, param2);
+              ek.c(pb.field_g, this.field_E, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;

@@ -12,13 +12,14 @@ final class bb {
     static java.awt.Frame field_a;
 
     final boolean a(boolean param0) {
+        boolean discarded$5 = false;
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
         if (!param0) {
-          if (this != (Object) (Object) uf.field_c) {
-            if (this != (Object) (Object) sg.field_d) {
-              if (this == (Object) (Object) ik.field_d) {
+          if (this != uf.field_c) {
+            if (this != sg.field_d) {
+              if (this == ik.field_d) {
                 return true;
               } else {
                 return false;
@@ -30,13 +31,13 @@ final class bb {
             return true;
           }
         } else {
-          boolean discarded$5 = bb.a((byte) 20);
-          if (this != (Object) (Object) uf.field_c) {
-            if (this == (Object) (Object) sg.field_d) {
+          discarded$5 = bb.a((byte) 20);
+          if (this != uf.field_c) {
+            if (this == sg.field_d) {
               return true;
             } else {
               L0: {
-                if (this != (Object) (Object) ik.field_d) {
+                if (this != ik.field_d) {
                   stackOut_6_0 = 0;
                   stackIn_7_0 = stackOut_6_0;
                   break L0;
@@ -110,10 +111,6 @@ final class bb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new nh(540, 140);
         field_e = new String[]{"Showing by rating", "Showing by win percentage"};
         field_d = "To Customer Support";

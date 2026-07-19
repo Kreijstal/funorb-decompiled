@@ -30,15 +30,14 @@ final class rg {
     public static void a(byte param0) {
         field_c = null;
         field_b = null;
+        if (param0 != -20) {
+            return;
+        }
         field_a = null;
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "This password contains repeated characters, and would be easy to guess";
         field_d = "From only <%0>/month";
         field_c = new he[1];

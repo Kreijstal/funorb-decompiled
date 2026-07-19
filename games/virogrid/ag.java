@@ -77,13 +77,14 @@ final class ag extends java.awt.Canvas {
 
     public final void update(java.awt.Graphics param0) {
         try {
-            ((ag) this).field_k.update(param0);
+            this.field_k.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "ag.update(" + (param0 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "ag.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0) {
+        int discarded$2 = 0;
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -93,41 +94,49 @@ final class ag extends java.awt.Canvas {
         var4 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            fk.a();
-            dm.field_x = new int[260];
+            L1: {
+              fk.a();
+              dm.field_x = new int[260];
+              if (param0 == 255) {
+                break L1;
+              } else {
+                discarded$2 = ag.a(false);
+                break L1;
+              }
+            }
             gb.field_N = 11;
             var1_int = 0;
-            L1: while (true) {
+            L2: while (true) {
               if (256 <= var1_int) {
                 var5 = 256;
                 var1_int = var5;
-                L2: while (true) {
+                L3: while (true) {
                   if (var5 >= dm.field_x.length) {
                     break L0;
                   } else {
                     dm.field_x[var5] = 255;
                     var5++;
-                    continue L2;
+                    continue L3;
                   }
                 }
               } else {
                 var2 = 15.0;
                 dm.field_x[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
                 var1_int++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "ag.D(" + 255 + ')');
+          throw kg.a((Throwable) ((Object) var1), "ag.D(" + param0 + ')');
         }
     }
 
     public static void b(int param0) {
         field_h = null;
-        field_j = null;
+        field_j = (int[][]) null;
         field_i = null;
         field_a = null;
         field_f = null;
@@ -141,29 +150,29 @@ final class ag extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            ((ag) this).field_k.paint(param0);
+            this.field_k.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "ag.paint(" + (param0 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "ag.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int a(boolean param0) {
+        if (!param0) {
+            ag.b(39);
+            return nf.field_d;
+        }
         return nf.field_d;
     }
 
     ag(java.awt.Component param0) {
         try {
-            ((ag) this).field_k = param0;
+            this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "ag.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "ag.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new mg(540, 140);
         field_b = new int[12];
         field_f = new int[12];
@@ -172,17 +181,17 @@ final class ag extends java.awt.Canvas {
         field_i = new int[8192];
         field_c = 256;
         field_j = new int[12][];
-        og.a(0, 490, 116, new int[8], 32, (byte) 126, 150);
-        og.a(1, 490, 136, new int[6], 32, (byte) 97, 150);
-        og.a(2, 490, 102, new int[8], 32, (byte) 90, 150);
-        og.a(3, 490, 88, new int[9], 29, (byte) 66, 150);
-        og.a(4, 490, 92, new int[8], 32, (byte) 71, 150);
-        og.a(5, 490, 92, new int[7], 32, (byte) 61, 150);
-        og.a(6, 490, 328, new int[2], 32, (byte) 90, 150);
-        og.a(7, 490, 330, new int[2], 32, (byte) 106, 150);
-        og.a(8, 490, 328, new int[2], 32, (byte) 109, 150);
-        og.a(9, 490, 300, new int[1], 32, (byte) 58, 150);
-        og.a(10, 490, 300, new int[0], 32, (byte) 103, 150);
-        og.a(11, 490, 116, new int[5], 32, (byte) 78, 150);
+        og.a(0, 490, 116, new int[]{0, 1, 5, 23, 6, 4, 3, 13}, 32, (byte) 126, 150);
+        og.a(1, 490, 136, new int[]{14, 15, 16, 17, 28, 8}, 32, (byte) 97, 150);
+        og.a(2, 490, 102, new int[]{2, 18, 14, 15, 5, 16, 17, 9}, 32, (byte) 90, 150);
+        og.a(3, 490, 88, new int[]{2, 14, 15, 5, 16, 17, 10, 11, 12}, 29, (byte) 66, 150);
+        og.a(4, 490, 92, new int[]{2, 14, 15, 5, 16, 17, 18, 12}, 32, (byte) 71, 150);
+        og.a(5, 490, 92, new int[]{2, 14, 15, 5, 16, 17, 12}, 32, (byte) 61, 150);
+        og.a(6, 490, 328, new int[]{22, 8}, 32, (byte) 90, 150);
+        og.a(7, 490, 330, new int[]{19, 8}, 32, (byte) 106, 150);
+        og.a(8, 490, 328, new int[]{22, 8}, 32, (byte) 109, 150);
+        og.a(9, 490, 300, new int[]{7}, 32, (byte) 58, 150);
+        og.a(10, 490, 300, new int[]{}, 32, (byte) 103, 150);
+        og.a(11, 490, 116, new int[]{24, 25, 26, 27, 8}, 32, (byte) 78, 150);
     }
 }

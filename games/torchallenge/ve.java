@@ -18,11 +18,11 @@ final class ve {
           if (0 != param1) {
             if (1 == param1) {
               var3 = nk.field_h;
-              if (param2 * 7 >> 3 > var3) {
+              if (param2 * 7 >> 879808291 > var3) {
                 L0: {
-                  var4 = var3 % (param2 >> 3);
-                  var5 = (param2 >> 3) + (var3 - var4);
-                  var6 = -(param2 >> 3 << 3) + param2;
+                  var4 = var3 % (param2 >> -952840093);
+                  var5 = (param2 >> 1829086403) + (var3 - var4);
+                  var6 = -(param2 >> -103974045 << 350476579) + param2;
                   if (var6 >= param2 + -var5) {
                     var5 = param2;
                     break L0;
@@ -31,7 +31,7 @@ final class ve {
                   }
                 }
                 if (0 != param1) {
-                  if (param1 == 1) {
+                  if ((param1 ^ -1) == -2) {
                     nb.b(var5, -1);
                     return;
                   } else {
@@ -59,11 +59,11 @@ final class ve {
             }
           } else {
             var3 = sh.field_r;
-            if (param2 * 7 >> 3 > var3) {
+            if (param2 * 7 >> 879808291 > var3) {
               L1: {
-                var4 = var3 % (param2 >> 3);
-                var5 = (param2 >> 3) + (var3 - var4);
-                var6 = -(param2 >> 3 << 3) + param2;
+                var4 = var3 % (param2 >> -952840093);
+                var5 = (param2 >> 1829086403) + (var3 - var4);
+                var6 = -(param2 >> -103974045 << 350476579) + param2;
                 if (var6 >= param2 + -var5) {
                   var5 = param2;
                   break L1;
@@ -72,7 +72,7 @@ final class ve {
                 }
               }
               if (0 != param1) {
-                if (param1 == 1) {
+                if ((param1 ^ -1) == -2) {
                   nb.b(var5, -1);
                   return;
                 } else {
@@ -100,11 +100,11 @@ final class ve {
           if (0 != param1) {
             if (1 == param1) {
               var3 = nk.field_h;
-              if (param2 * 7 >> 3 > var3) {
+              if (param2 * 7 >> 879808291 > var3) {
                 L2: {
-                  var4 = var3 % (param2 >> 3);
-                  var5 = (param2 >> 3) + (var3 - var4);
-                  var6 = -(param2 >> 3 << 3) + param2;
+                  var4 = var3 % (param2 >> -952840093);
+                  var5 = (param2 >> 1829086403) + (var3 - var4);
+                  var6 = -(param2 >> -103974045 << 350476579) + param2;
                   if (var6 >= param2 + -var5) {
                     var5 = param2;
                     break L2;
@@ -113,7 +113,7 @@ final class ve {
                   }
                 }
                 if (0 != param1) {
-                  if (param1 != 1) {
+                  if ((param1 ^ -1) != -2) {
                     return;
                   } else {
                     nb.b(var5, -1);
@@ -141,11 +141,11 @@ final class ve {
             }
           } else {
             var3 = sh.field_r;
-            if (param2 * 7 >> 3 > var3) {
+            if (param2 * 7 >> 879808291 > var3) {
               L3: {
-                var4 = var3 % (param2 >> 3);
-                var5 = (param2 >> 3) + (var3 - var4);
-                var6 = -(param2 >> 3 << 3) + param2;
+                var4 = var3 % (param2 >> -952840093);
+                var5 = (param2 >> 1829086403) + (var3 - var4);
+                var6 = -(param2 >> -103974045 << 350476579) + param2;
                 if (var6 >= param2 + -var5) {
                   var5 = param2;
                   break L3;
@@ -154,7 +154,7 @@ final class ve {
                 }
               }
               if (0 != param1) {
-                if (param1 != 1) {
+                if ((param1 ^ -1) != -2) {
                   return;
                 } else {
                   nb.b(var5, -1);
@@ -182,17 +182,13 @@ final class ve {
     }
 
     public static void a(int param0) {
-        int var1 = 0;
+        int var1 = 26 % ((-23 - param0) / 43);
         field_b = null;
         field_a = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new sl();
     }
 }

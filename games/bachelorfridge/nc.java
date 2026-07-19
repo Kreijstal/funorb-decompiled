@@ -17,10 +17,6 @@ final class nc extends bw {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "nc.<init>()";
     }
 }

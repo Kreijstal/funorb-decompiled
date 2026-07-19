@@ -9,10 +9,6 @@ abstract class aa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "aa.<init>()";
     }
 }

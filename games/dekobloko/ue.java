@@ -20,6 +20,7 @@ final class ue {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
@@ -45,7 +46,7 @@ final class ue {
                 }
               }
               L2: {
-                if (param1.toLowerCase().indexOf(jk.field_a.toLowerCase()) < 0) {
+                if (-1 < (param1.toLowerCase().indexOf(jk.field_a.toLowerCase()) ^ -1)) {
                   stackOut_7_0 = 0;
                   stackIn_8_0 = stackOut_7_0;
                   break L2;
@@ -55,11 +56,13 @@ final class ue {
                   break L2;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 0;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -92,14 +95,26 @@ final class ue {
           }
           throw dh.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
-        return stackIn_8_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_8_0 != 0;
+        }
     }
 
     public static void a(byte param0) {
+        int discarded$2 = 0;
         field_b = null;
         field_a = null;
         field_d = null;
-        field_c = null;
+        if (param0 >= -4) {
+          discarded$2 = ue.a(-36, 12);
+          field_c = null;
+          return;
+        } else {
+          field_c = null;
+          return;
+        }
     }
 
     final static int a(int param0, int param1) {
@@ -112,7 +127,7 @@ final class ue {
         int stackOut_2_0 = 0;
         param0 = param0 & 8191;
         var2 = -44 % ((param1 - -3) / 44);
-        if (param0 < 4096) {
+        if ((param0 ^ -1) > -4097) {
           L0: {
             if (2048 > param0) {
               stackOut_7_0 = pd.field_i[-param0 + 2048];

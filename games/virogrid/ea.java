@@ -21,10 +21,6 @@ final class ea {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ea.A(";
         field_c = new int[8192];
     }

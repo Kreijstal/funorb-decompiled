@@ -12,43 +12,56 @@ final class ve extends ak {
     private int field_Hb;
 
     public static void b(byte param0) {
+        if (param0 != -70) {
+            return;
+        }
         field_Ib = null;
         field_Jb = null;
         field_Gb = null;
     }
 
     final boolean c(byte param0) {
+        StringBuilder discarded$10 = null;
+        StringBuilder discarded$11 = null;
+        StringBuilder discarded$12 = null;
+        StringBuilder discarded$13 = null;
+        StringBuilder discarded$14 = null;
+        StringBuilder discarded$15 = null;
+        StringBuilder discarded$16 = null;
+        StringBuilder discarded$17 = null;
+        StringBuilder discarded$18 = null;
+        StringBuilder discarded$19 = null;
         int var2 = 0;
         int var3 = 0;
-        if (((ve) this).field_Hb == 0) {
-          if (ke.field_a == 85) {
-            if (((ve) this).field_Eb.length() > 0) {
-              StringBuilder discarded$10 = nk.a(((ve) this).field_Eb, ((ve) this).field_Eb.length() - 1, ' ', 16736352);
+        if (this.field_Hb == 0) {
+          if (-86 == (ke.field_a ^ -1)) {
+            if (-1 > (this.field_Eb.length() ^ -1)) {
+              discarded$10 = nk.a(this.field_Eb, this.field_Eb.length() - 1, ' ', 16736352);
               var2 = 17 / ((-8 - param0) / 50);
-              if (((ve) this).field_Eb.length() >= 12) {
-                if (ke.field_a != 84) {
+              if (this.field_Eb.length() >= 12) {
+                if ((ke.field_a ^ -1) != -85) {
                   if (ke.field_a != 13) {
                     return true;
                   } else {
-                    ((ve) this).field_Hb = 1;
+                    this.field_Hb = 1;
                     return true;
                   }
                 } else {
-                  if (((ve) this).field_Eb.length() <= 0) {
-                    ((ve) this).field_Hb = 1;
+                  if (this.field_Eb.length() <= 0) {
+                    this.field_Hb = 1;
                     if (ke.field_a != 13) {
                       return true;
                     } else {
-                      ((ve) this).field_Hb = 1;
+                      this.field_Hb = 1;
                       return true;
                     }
                   } else {
-                    ((ve) this).field_cb = ((ve) this).field_Eb.toString();
-                    ((ve) this).field_Hb = 2;
+                    this.field_cb = this.field_Eb.toString();
+                    this.field_Hb = 2;
                     if (ke.field_a != 13) {
                       return true;
                     } else {
-                      ((ve) this).field_Hb = 1;
+                      this.field_Hb = 1;
                       return true;
                     }
                   }
@@ -67,26 +80,26 @@ final class ve extends ak {
                   if (var3 != 95) {
                     break L1;
                   } else {
-                    if (((ve) this).field_Eb.length() <= 0) {
+                    if (this.field_Eb.length() <= 0) {
                       break L1;
                     } else {
-                      StringBuilder discarded$11 = ((ve) this).field_Eb.append((char) var3);
+                      discarded$11 = this.field_Eb.append((char) var3);
                       break L1;
                     }
                   }
                 }
                 if (tk.a(-66, (char) var3)) {
                   L2: {
-                    StringBuilder discarded$12 = ((ve) this).field_Eb.append((char) var3);
-                    if (ke.field_a != 84) {
+                    discarded$12 = this.field_Eb.append((char) var3);
+                    if ((ke.field_a ^ -1) != -85) {
                       break L2;
                     } else {
-                      if (((ve) this).field_Eb.length() <= 0) {
-                        ((ve) this).field_Hb = 1;
+                      if (this.field_Eb.length() <= 0) {
+                        this.field_Hb = 1;
                         break L2;
                       } else {
-                        ((ve) this).field_cb = ((ve) this).field_Eb.toString();
-                        ((ve) this).field_Hb = 2;
+                        this.field_cb = this.field_Eb.toString();
+                        this.field_Hb = 2;
                         break L2;
                       }
                     }
@@ -94,50 +107,50 @@ final class ve extends ak {
                   if (ke.field_a != 13) {
                     return true;
                   } else {
-                    ((ve) this).field_Hb = 1;
+                    this.field_Hb = 1;
                     return true;
                   }
                 } else {
                   if (ti.a(124, (char) var3)) {
-                    StringBuilder discarded$13 = ((ve) this).field_Eb.append((char) var3);
-                    if (ke.field_a != 84) {
+                    discarded$13 = this.field_Eb.append((char) var3);
+                    if ((ke.field_a ^ -1) != -85) {
                       if (ke.field_a != 13) {
                         return true;
                       } else {
-                        ((ve) this).field_Hb = 1;
+                        this.field_Hb = 1;
                         return true;
                       }
                     } else {
-                      if (((ve) this).field_Eb.length() <= 0) {
-                        ((ve) this).field_Hb = 1;
+                      if (this.field_Eb.length() <= 0) {
+                        this.field_Hb = 1;
                         if (ke.field_a != 13) {
                           return true;
                         } else {
-                          ((ve) this).field_Hb = 1;
+                          this.field_Hb = 1;
                           return true;
                         }
                       } else {
-                        ((ve) this).field_cb = ((ve) this).field_Eb.toString();
-                        ((ve) this).field_Hb = 2;
+                        this.field_cb = this.field_Eb.toString();
+                        this.field_Hb = 2;
                         if (ke.field_a != 13) {
                           return true;
                         } else {
-                          ((ve) this).field_Hb = 1;
+                          this.field_Hb = 1;
                           return true;
                         }
                       }
                     }
                   } else {
                     L3: {
-                      if (ke.field_a != 84) {
+                      if ((ke.field_a ^ -1) != -85) {
                         break L3;
                       } else {
-                        if (((ve) this).field_Eb.length() <= 0) {
-                          ((ve) this).field_Hb = 1;
+                        if (this.field_Eb.length() <= 0) {
+                          this.field_Hb = 1;
                           break L3;
                         } else {
-                          ((ve) this).field_cb = ((ve) this).field_Eb.toString();
-                          ((ve) this).field_Hb = 2;
+                          this.field_cb = this.field_Eb.toString();
+                          this.field_Hb = 2;
                           break L3;
                         }
                       }
@@ -146,7 +159,7 @@ final class ve extends ak {
                       if (ke.field_a != 13) {
                         break L4;
                       } else {
-                        ((ve) this).field_Hb = 1;
+                        this.field_Hb = 1;
                         break L4;
                       }
                     }
@@ -156,30 +169,30 @@ final class ve extends ak {
               }
             } else {
               var2 = 17 / ((-8 - param0) / 50);
-              if (((ve) this).field_Eb.length() >= 12) {
-                if (ke.field_a != 84) {
+              if (this.field_Eb.length() >= 12) {
+                if ((ke.field_a ^ -1) != -85) {
                   if (ke.field_a != 13) {
                     return true;
                   } else {
-                    ((ve) this).field_Hb = 1;
+                    this.field_Hb = 1;
                     return true;
                   }
                 } else {
-                  if (((ve) this).field_Eb.length() <= 0) {
-                    ((ve) this).field_Hb = 1;
+                  if (this.field_Eb.length() <= 0) {
+                    this.field_Hb = 1;
                     if (ke.field_a == 13) {
-                      ((ve) this).field_Hb = 1;
+                      this.field_Hb = 1;
                       return true;
                     } else {
                       return true;
                     }
                   } else {
-                    ((ve) this).field_cb = ((ve) this).field_Eb.toString();
-                    ((ve) this).field_Hb = 2;
+                    this.field_cb = this.field_Eb.toString();
+                    this.field_Hb = 2;
                     if (ke.field_a != 13) {
                       return true;
                     } else {
-                      ((ve) this).field_Hb = 1;
+                      this.field_Hb = 1;
                       return true;
                     }
                   }
@@ -198,10 +211,10 @@ final class ve extends ak {
                   if (var3 != 95) {
                     break L6;
                   } else {
-                    if (((ve) this).field_Eb.length() <= 0) {
+                    if (this.field_Eb.length() <= 0) {
                       break L6;
                     } else {
-                      StringBuilder discarded$14 = ((ve) this).field_Eb.append((char) var3);
+                      discarded$14 = this.field_Eb.append((char) var3);
                       break L6;
                     }
                   }
@@ -209,15 +222,15 @@ final class ve extends ak {
                 if (!tk.a(-66, (char) var3)) {
                   if (!ti.a(124, (char) var3)) {
                     L7: {
-                      if (ke.field_a != 84) {
+                      if ((ke.field_a ^ -1) != -85) {
                         break L7;
                       } else {
-                        if (((ve) this).field_Eb.length() <= 0) {
-                          ((ve) this).field_Hb = 1;
+                        if (this.field_Eb.length() <= 0) {
+                          this.field_Hb = 1;
                           break L7;
                         } else {
-                          ((ve) this).field_cb = ((ve) this).field_Eb.toString();
-                          ((ve) this).field_Hb = 2;
+                          this.field_cb = this.field_Eb.toString();
+                          this.field_Hb = 2;
                           break L7;
                         }
                       }
@@ -226,23 +239,23 @@ final class ve extends ak {
                       if (ke.field_a != 13) {
                         break L8;
                       } else {
-                        ((ve) this).field_Hb = 1;
+                        this.field_Hb = 1;
                         break L8;
                       }
                     }
                     return true;
                   } else {
                     L9: {
-                      StringBuilder discarded$15 = ((ve) this).field_Eb.append((char) var3);
-                      if (ke.field_a != 84) {
+                      discarded$15 = this.field_Eb.append((char) var3);
+                      if ((ke.field_a ^ -1) != -85) {
                         break L9;
                       } else {
-                        if (((ve) this).field_Eb.length() <= 0) {
-                          ((ve) this).field_Hb = 1;
+                        if (this.field_Eb.length() <= 0) {
+                          this.field_Hb = 1;
                           break L9;
                         } else {
-                          ((ve) this).field_cb = ((ve) this).field_Eb.toString();
-                          ((ve) this).field_Hb = 2;
+                          this.field_cb = this.field_Eb.toString();
+                          this.field_Hb = 2;
                           break L9;
                         }
                       }
@@ -251,7 +264,7 @@ final class ve extends ak {
                       if (ke.field_a != 13) {
                         break L10;
                       } else {
-                        ((ve) this).field_Hb = 1;
+                        this.field_Hb = 1;
                         break L10;
                       }
                     }
@@ -259,16 +272,16 @@ final class ve extends ak {
                   }
                 } else {
                   L11: {
-                    StringBuilder discarded$16 = ((ve) this).field_Eb.append((char) var3);
-                    if (ke.field_a != 84) {
+                    discarded$16 = this.field_Eb.append((char) var3);
+                    if ((ke.field_a ^ -1) != -85) {
                       break L11;
                     } else {
-                      if (((ve) this).field_Eb.length() <= 0) {
-                        ((ve) this).field_Hb = 1;
+                      if (this.field_Eb.length() <= 0) {
+                        this.field_Hb = 1;
                         break L11;
                       } else {
-                        ((ve) this).field_cb = ((ve) this).field_Eb.toString();
-                        ((ve) this).field_Hb = 2;
+                        this.field_cb = this.field_Eb.toString();
+                        this.field_Hb = 2;
                         break L11;
                       }
                     }
@@ -277,7 +290,7 @@ final class ve extends ak {
                     if (ke.field_a != 13) {
                       break L12;
                     } else {
-                      ((ve) this).field_Hb = 1;
+                      this.field_Hb = 1;
                       break L12;
                     }
                   }
@@ -287,34 +300,34 @@ final class ve extends ak {
             }
           } else {
             var2 = 17 / ((-8 - param0) / 50);
-            if (((ve) this).field_Eb.length() >= 12) {
-              if (ke.field_a != 84) {
+            if (this.field_Eb.length() >= 12) {
+              if ((ke.field_a ^ -1) != -85) {
                 if (ke.field_a == 13) {
-                  ((ve) this).field_Hb = 1;
+                  this.field_Hb = 1;
                   return true;
                 } else {
                   return true;
                 }
               } else {
-                if (((ve) this).field_Eb.length() > 0) {
+                if (this.field_Eb.length() > 0) {
                   L13: {
-                    ((ve) this).field_cb = ((ve) this).field_Eb.toString();
-                    ((ve) this).field_Hb = 2;
+                    this.field_cb = this.field_Eb.toString();
+                    this.field_Hb = 2;
                     if (ke.field_a != 13) {
                       break L13;
                     } else {
-                      ((ve) this).field_Hb = 1;
+                      this.field_Hb = 1;
                       break L13;
                     }
                   }
                   return true;
                 } else {
                   L14: {
-                    ((ve) this).field_Hb = 1;
+                    this.field_Hb = 1;
                     if (ke.field_a != 13) {
                       break L14;
                     } else {
-                      ((ve) this).field_Hb = 1;
+                      this.field_Hb = 1;
                       break L14;
                     }
                   }
@@ -335,10 +348,10 @@ final class ve extends ak {
                 if (var3 != 95) {
                   break L16;
                 } else {
-                  if (((ve) this).field_Eb.length() <= 0) {
+                  if (this.field_Eb.length() <= 0) {
                     break L16;
                   } else {
-                    StringBuilder discarded$17 = ((ve) this).field_Eb.append((char) var3);
+                    discarded$17 = this.field_Eb.append((char) var3);
                     break L16;
                   }
                 }
@@ -346,37 +359,37 @@ final class ve extends ak {
               if (!tk.a(-66, (char) var3)) {
                 if (!ti.a(124, (char) var3)) {
                   L17: {
-                    if (ke.field_a != 84) {
+                    if ((ke.field_a ^ -1) != -85) {
                       break L17;
                     } else {
-                      if (((ve) this).field_Eb.length() <= 0) {
-                        ((ve) this).field_Hb = 1;
+                      if (this.field_Eb.length() <= 0) {
+                        this.field_Hb = 1;
                         break L17;
                       } else {
-                        ((ve) this).field_cb = ((ve) this).field_Eb.toString();
-                        ((ve) this).field_Hb = 2;
+                        this.field_cb = this.field_Eb.toString();
+                        this.field_Hb = 2;
                         break L17;
                       }
                     }
                   }
                   if (ke.field_a == 13) {
-                    ((ve) this).field_Hb = 1;
+                    this.field_Hb = 1;
                     return true;
                   } else {
                     return true;
                   }
                 } else {
                   L18: {
-                    StringBuilder discarded$18 = ((ve) this).field_Eb.append((char) var3);
-                    if (ke.field_a != 84) {
+                    discarded$18 = this.field_Eb.append((char) var3);
+                    if ((ke.field_a ^ -1) != -85) {
                       break L18;
                     } else {
-                      if (((ve) this).field_Eb.length() <= 0) {
-                        ((ve) this).field_Hb = 1;
+                      if (this.field_Eb.length() <= 0) {
+                        this.field_Hb = 1;
                         break L18;
                       } else {
-                        ((ve) this).field_cb = ((ve) this).field_Eb.toString();
-                        ((ve) this).field_Hb = 2;
+                        this.field_cb = this.field_Eb.toString();
+                        this.field_Hb = 2;
                         break L18;
                       }
                     }
@@ -385,7 +398,7 @@ final class ve extends ak {
                     if (ke.field_a != 13) {
                       break L19;
                     } else {
-                      ((ve) this).field_Hb = 1;
+                      this.field_Hb = 1;
                       break L19;
                     }
                   }
@@ -393,16 +406,16 @@ final class ve extends ak {
                 }
               } else {
                 L20: {
-                  StringBuilder discarded$19 = ((ve) this).field_Eb.append((char) var3);
-                  if (ke.field_a != 84) {
+                  discarded$19 = this.field_Eb.append((char) var3);
+                  if ((ke.field_a ^ -1) != -85) {
                     break L20;
                   } else {
-                    if (((ve) this).field_Eb.length() <= 0) {
-                      ((ve) this).field_Hb = 1;
+                    if (this.field_Eb.length() <= 0) {
+                      this.field_Hb = 1;
                       break L20;
                     } else {
-                      ((ve) this).field_cb = ((ve) this).field_Eb.toString();
-                      ((ve) this).field_Hb = 2;
+                      this.field_cb = this.field_Eb.toString();
+                      this.field_Hb = 2;
                       break L20;
                     }
                   }
@@ -411,7 +424,7 @@ final class ve extends ak {
                   if (ke.field_a != 13) {
                     break L21;
                   } else {
-                    ((ve) this).field_Hb = 1;
+                    this.field_Hb = 1;
                     break L21;
                   }
                 }
@@ -432,89 +445,131 @@ final class ve extends ak {
         Object var10 = null;
         Object var11 = null;
         int[] var12 = null;
-        tf var13 = null;
-        tf var14 = null;
         int[] var15 = null;
         int[] var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
-        L0: {
-          var18 = t.field_k;
-          var17 = var18;
-          var16 = var17;
-          var15 = var16;
-          var12 = var15;
-          var6 = var12;
-          var7 = t.field_j;
-          var8 = t.field_d;
-          var9 = new tf(16, param3);
-          var9.c();
-          t.g(0, 0, 16, param3, param5, param2);
-          var10 = null;
-          if (param0) {
-            var13 = var9.a();
-            var10 = (Object) (Object) var13;
-            var13.c();
-            t.b(0, 0, 5, 0);
-            t.b(0, 1, 3, 0);
-            t.b(0, 2, 2, 0);
-            t.b(0, 3, 1, 0);
-            t.b(0, 4, 1, 0);
-            break L0;
-          } else {
-            break L0;
+        tf var17 = null;
+        tf var18 = null;
+        tf var19 = null;
+        tf var20 = null;
+        var16 = t.field_k;
+        var15 = var16;
+        var12 = var15;
+        var6 = var12;
+        var7 = t.field_j;
+        var8 = t.field_d;
+        var9 = new tf(16, param3);
+        var9.c();
+        if (!param4) {
+          L0: {
+            field_Kb = 20;
+            t.g(0, 0, 16, param3, param5, param2);
+            var10 = null;
+            if (param0) {
+              var17 = var9.a();
+              var10 = var17;
+              var17.c();
+              t.b(0, 0, 5, 0);
+              t.b(0, 1, 3, 0);
+              t.b(0, 2, 2, 0);
+              t.b(0, 3, 1, 0);
+              t.b(0, 4, 1, 0);
+              break L0;
+            } else {
+              break L0;
+            }
           }
-        }
-        L1: {
-          var11 = null;
-          if (param1) {
-            var14 = var9.a();
-            var11 = (Object) (Object) var14;
-            var14.c();
-            t.b(11, 0, 5, 0);
-            t.b(13, 1, 3, 0);
-            t.b(14, 2, 2, 0);
-            t.b(15, 3, 1, 0);
-            t.b(15, 4, 1, 0);
-            break L1;
-          } else {
-            break L1;
+          L1: {
+            var11 = null;
+            if (param1) {
+              var18 = var9.a();
+              var11 = var18;
+              var18.c();
+              t.b(11, 0, 5, 0);
+              t.b(13, 1, 3, 0);
+              t.b(14, 2, 2, 0);
+              t.b(15, 3, 1, 0);
+              t.b(15, 4, 1, 0);
+              break L1;
+            } else {
+              break L1;
+            }
           }
+          t.a(var16, var7, var8);
+          return new tf[]{null, null, null, (tf) (var10), var9, (tf) (var11), null, null, null};
+        } else {
+          L2: {
+            t.g(0, 0, 16, param3, param5, param2);
+            var10 = null;
+            if (param0) {
+              var19 = var9.a();
+              var10 = var19;
+              var19.c();
+              t.b(0, 0, 5, 0);
+              t.b(0, 1, 3, 0);
+              t.b(0, 2, 2, 0);
+              t.b(0, 3, 1, 0);
+              t.b(0, 4, 1, 0);
+              break L2;
+            } else {
+              break L2;
+            }
+          }
+          L3: {
+            var11 = null;
+            if (param1) {
+              var20 = var9.a();
+              var11 = var20;
+              var20.c();
+              t.b(11, 0, 5, 0);
+              t.b(13, 1, 3, 0);
+              t.b(14, 2, 2, 0);
+              t.b(15, 3, 1, 0);
+              t.b(15, 4, 1, 0);
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          t.a(var16, var7, var8);
+          return new tf[]{null, null, null, (tf) (var10), var9, (tf) (var11), null, null, null};
         }
-        t.a(var18, var7, var8);
-        return new tf[]{null, null, null, (tf) var10, var9, (tf) var11, null, null, null};
     }
 
     final int b(int param0, boolean param1) {
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$7 = null;
+        StringBuilder discarded$8 = null;
+        StringBuilder discarded$9 = null;
         int var4 = 0;
         var4 = Pixelate.field_H ? 1 : 0;
-        ((ve) this).a(-28476, param1);
+        this.a(-28476, param1);
         if (param0 < -92) {
           if (!param1) {
-            ((ve) this).field_Lb.field_cb = ((ve) this).field_Eb.toString();
+            this.field_Lb.field_cb = this.field_Eb.toString();
             if (param1) {
               if (nm.field_c != 0) {
-                if (((ve) this).field_P == 0) {
-                  ((ve) this).field_Hb = 1;
-                  return ((ve) this).field_Hb;
+                if (this.field_P != 0) {
+                  return this.field_Hb;
                 } else {
-                  return ((ve) this).field_Hb;
+                  this.field_Hb = 1;
+                  return this.field_Hb;
                 }
               } else {
-                return ((ve) this).field_Hb;
+                return this.field_Hb;
               }
             } else {
-              return ((ve) this).field_Hb;
+              return this.field_Hb;
             }
           } else {
             L0: while (true) {
               if (bh.b((byte) 108)) {
                 L1: {
-                  if (ke.field_a != 85) {
+                  if (-86 != (ke.field_a ^ -1)) {
                     break L1;
                   } else {
-                    if (((ve) this).field_Eb.length() > 0) {
-                      StringBuilder discarded$5 = nk.a(((ve) this).field_Eb, -1 + ((ve) this).field_Eb.length(), ' ', 16736352);
+                    if (-1 > (this.field_Eb.length() ^ -1)) {
+                      discarded$5 = nk.a(this.field_Eb, -1 + this.field_Eb.length(), ' ', 16736352);
                       break L1;
                     } else {
                       break L1;
@@ -522,16 +577,16 @@ final class ve extends ak {
                   }
                 }
                 L2: {
-                  if (aq.a(nj.field_f, (CharSequence) (Object) ((ve) this).field_Eb, (byte) -117)) {
-                    StringBuilder discarded$6 = ((ve) this).field_Eb.append(nj.field_f);
+                  if (aq.a(nj.field_f, (CharSequence) ((Object) this.field_Eb), (byte) -117)) {
+                    discarded$6 = this.field_Eb.append(nj.field_f);
                     break L2;
                   } else {
                     L3: {
-                      if (((ve) this).field_Eb.length() != 0) {
+                      if (this.field_Eb.length() != 0) {
                         break L3;
                       } else {
                         if (nj.field_f == 91) {
-                          StringBuilder discarded$7 = ((ve) this).field_Eb.append(nj.field_f);
+                          discarded$7 = this.field_Eb.append(nj.field_f);
                           break L2;
                         } else {
                           break L3;
@@ -539,11 +594,11 @@ final class ve extends ak {
                       }
                     }
                     L4: {
-                      if (((ve) this).field_Eb.length() != 1) {
+                      if (-2 != (this.field_Eb.length() ^ -1)) {
                         break L4;
                       } else {
                         if (nj.field_f == 35) {
-                          StringBuilder discarded$8 = ((ve) this).field_Eb.append(nj.field_f);
+                          discarded$8 = this.field_Eb.append(nj.field_f);
                           break L2;
                         } else {
                           break L4;
@@ -553,7 +608,7 @@ final class ve extends ak {
                     if (nj.field_f != 93) {
                       break L2;
                     } else {
-                      StringBuilder discarded$9 = ((ve) this).field_Eb.append(nj.field_f);
+                      discarded$9 = this.field_Eb.append(nj.field_f);
                       break L2;
                     }
                   }
@@ -565,32 +620,29 @@ final class ve extends ak {
                     continue L0;
                   }
                 } else {
-                  if (((ve) this).field_Eb.length() <= 0) {
-                    return 1;
-                  } else {
-                    ((ve) this).field_cb = ((ve) this).field_Eb.toString();
+                  if ((this.field_Eb.length() ^ -1) < -1) {
+                    this.field_cb = this.field_Eb.toString();
                     return 2;
+                  } else {
+                    return 1;
                   }
                 }
               } else {
-                L5: {
-                  ((ve) this).field_Lb.field_cb = ((ve) this).field_Eb.toString();
-                  if (!param1) {
-                    break L5;
-                  } else {
-                    if (nm.field_c == 0) {
-                      break L5;
+                this.field_Lb.field_cb = this.field_Eb.toString();
+                if (param1) {
+                  if (nm.field_c != 0) {
+                    if (this.field_P == 0) {
+                      this.field_Hb = 1;
+                      return this.field_Hb;
                     } else {
-                      if (((ve) this).field_P != 0) {
-                        break L5;
-                      } else {
-                        ((ve) this).field_Hb = 1;
-                        return ((ve) this).field_Hb;
-                      }
+                      return this.field_Hb;
                     }
+                  } else {
+                    return this.field_Hb;
                   }
+                } else {
+                  return this.field_Hb;
                 }
-                return ((ve) this).field_Hb;
               }
             }
           }
@@ -668,47 +720,47 @@ final class ve extends ak {
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
         String stackOut_13_2 = null;
-        ((ve) this).field_Hb = 0;
+        this.field_Hb = 0;
         try {
           L0: {
-            ((ve) this).field_Fb = new ak(0L, param6, param4);
-            ((ve) this).a(((ve) this).field_Fb, (byte) 26);
-            ((ve) this).field_Lb = new ak(0L, param7);
-            ((ve) this).field_Lb.field_N = 16764006;
-            ((ve) this).a(((ve) this).field_Lb, (byte) 26);
-            ((ve) this).field_Lb.field_qb = "|";
-            ((ve) this).field_Eb = new StringBuilder(12);
-            var9_int = ((ve) this).field_Fb.g(0);
-            ((ve) this).field_Fb.a(3, fq.field_q, 5, 256, var9_int);
-            ((ve) this).field_Lb.a(3 - -fq.field_q, fq.field_q, 5, 256, var9_int);
+            this.field_Fb = new ak(0L, param6, param4);
+            this.a(this.field_Fb, (byte) 26);
+            this.field_Lb = new ak(0L, param7);
+            this.field_Lb.field_N = 16764006;
+            this.a(this.field_Lb, (byte) 26);
+            this.field_Lb.field_qb = "|";
+            this.field_Eb = new StringBuilder(12);
+            var9_int = this.field_Fb.g(0);
+            this.field_Fb.a(3, fq.field_q, 5, 256, var9_int);
+            this.field_Lb.a(3 - -fq.field_q, fq.field_q, 5, 256, var9_int);
             var10 = var9_int + 10;
             var11 = 6 + 2 * fq.field_q;
             var12 = ui.a(param2, param0, var10, (byte) -1);
             var13 = pj.a(var11, param1, param3, (byte) 67);
-            ((ve) this).a(var13, var11, var12, 256, var10);
+            this.a(var13, var11, var12, 256, var10);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var9 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var9;
+            stackOut_3_0 = (RuntimeException) (var9);
             stackOut_3_1 = new StringBuilder().append("ve.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param4 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -717,23 +769,23 @@ final class ve extends ak {
             }
           }
           L2: {
-            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param5 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -742,23 +794,23 @@ final class ve extends ak {
             }
           }
           L3: {
-            stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+            stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
             stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param6 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -767,23 +819,23 @@ final class ve extends ak {
             }
           }
           L4: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param7 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -791,7 +843,7 @@ final class ve extends ak {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
     }
 
@@ -806,18 +858,19 @@ final class ve extends ak {
         cd.field_e[7] = uc.field_m;
         cd.field_e[19] = nk.field_h;
         cd.field_e[4] = ch.field_G;
-        cd.field_e[11] = nj.field_d;
-        cd.field_e[13] = no.field_n;
-        cd.field_e[9] = ke.field_c;
-        cd.field_e[6] = ae.field_j;
-        cd.field_e[16] = w.field_u;
+        if (param0 != 1565) {
+          return;
+        } else {
+          cd.field_e[11] = nj.field_d;
+          cd.field_e[13] = no.field_n;
+          cd.field_e[9] = ke.field_c;
+          cd.field_e[6] = ae.field_j;
+          cd.field_e[16] = w.field_u;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Jb = "Withdraw request to join <%0>'s game";
         field_Gb = "You have withdrawn your request to join.";
     }

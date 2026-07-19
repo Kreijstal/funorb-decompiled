@@ -20,6 +20,7 @@ final class va extends rf {
     static String field_o;
 
     final static String a(int param0, int param1, byte[] param2, int param3) {
+        int incrementValue$5 = 0;
         char[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -29,32 +30,28 @@ final class va extends rf {
         char[] var9 = null;
         char[] var10 = null;
         char[] var11 = null;
-        char[] var12 = null;
-        char[] var13 = null;
-        String stackIn_19_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_23_2 = null;
+        String stackIn_16_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_18_0 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
+        String stackOut_15_0 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         try {
           L0: {
             L1: {
-              var13 = new char[param3];
-              var12 = var13;
-              var11 = var12;
+              var11 = new char[param3];
               var10 = var11;
               var9 = var10;
               var4 = var9;
@@ -69,8 +66,8 @@ final class va extends rf {
             var6 = 0;
             L2: while (true) {
               if (param3 <= var6) {
-                stackOut_18_0 = new String(var13, 0, var5);
-                stackIn_19_0 = stackOut_18_0;
+                stackOut_15_0 = new String(var11, 0, var5);
+                stackIn_16_0 = stackOut_15_0;
                 break L0;
               } else {
                 L3: {
@@ -80,7 +77,7 @@ final class va extends rf {
                       if (128 > var7) {
                         break L4;
                       } else {
-                        if (var7 >= 160) {
+                        if (-161 >= (var7 ^ -1)) {
                           break L4;
                         } else {
                           L5: {
@@ -97,14 +94,11 @@ final class va extends rf {
                         }
                       }
                     }
-                    int incrementValue$13 = var5;
+                    incrementValue$5 = var5;
                     var5++;
-                    var9[incrementValue$13] = (char)var7;
-                    var6++;
+                    var9[incrementValue$5] = (char)var7;
                     break L3;
                   } else {
-                    var6++;
-                    var6++;
                     break L3;
                   }
                 }
@@ -117,33 +111,33 @@ final class va extends rf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4_ref = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var4_ref;
-            stackOut_20_1 = new StringBuilder().append("va.A(").append(param0).append(',').append(param1).append(',');
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackOut_17_0 = (RuntimeException) (var4_ref);
+            stackOut_17_1 = new StringBuilder().append("va.A(").append(param0).append(',').append(param1).append(',');
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
             if (param2 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
               break L6;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param3 + ')');
         }
-        return stackIn_19_0;
+        return stackIn_16_0;
     }
 
     public static void b(byte param0) {
@@ -159,10 +153,6 @@ final class va extends rf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = "Friends can be added in multiplayer<nbsp>games";
         field_h = new rk();
         field_m = new o(0, 2, 2, 1);

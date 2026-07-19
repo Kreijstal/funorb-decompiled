@@ -15,9 +15,9 @@ final class ufb extends java.awt.Canvas implements java.awt.event.FocusListener 
             if (param1 != -32335) {
                 ufb.a(false);
             }
-            db.a(((ufb) this).field_b, param0, (byte) 126);
+            db.a(this.field_b, param0, (byte) 126);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ufb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ufb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -26,9 +26,9 @@ final class ufb extends java.awt.Canvas implements java.awt.event.FocusListener 
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            ((ufb) this).field_a = true;
+            this.field_a = true;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ufb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ufb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,15 +39,14 @@ final class ufb extends java.awt.Canvas implements java.awt.event.FocusListener 
     }
 
     public static void a(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_d = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
         field_c = "Wasp chassis";
     }

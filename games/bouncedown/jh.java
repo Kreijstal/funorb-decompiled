@@ -11,6 +11,7 @@ final class jh extends jd {
     private int field_v;
 
     public final void a(int param0, lk param1, byte param2, boolean param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -67,30 +68,30 @@ final class jh extends jd {
               if (!(param1 instanceof wd)) {
                 break L2;
               } else {
-                param3 = param3 & ((wd) (Object) param1).field_y;
+                param3 = param3 & ((wd) ((Object) param1)).field_y;
                 break L2;
               }
             }
             L3: {
               if (param3) {
                 if (var6_int != 0) {
-                  stackOut_12_0 = ((jh) this).field_v;
+                  stackOut_12_0 = this.field_v;
                   stackIn_13_0 = stackOut_12_0;
                   break L3;
                 } else {
-                  stackOut_11_0 = ((jh) this).field_w;
+                  stackOut_11_0 = this.field_w;
                   stackIn_13_0 = stackOut_11_0;
                   break L3;
                 }
               } else {
-                stackOut_9_0 = ((jh) this).field_q;
+                stackOut_9_0 = this.field_q;
                 stackIn_13_0 = stackOut_9_0;
                 break L3;
               }
             }
             L4: {
               var7 = stackIn_13_0;
-              th.a(var7, (byte) 99, param1.field_i + param0 - -(-((jh) this).field_u[0].field_o + param1.field_m >> 1), ((jh) this).field_u, param4 - -param1.field_r, param1.field_k);
+              th.a(var7, (byte) 99, param1.field_i + param0 - -(-this.field_u[0].field_o + param1.field_m >> 767564065), this.field_u, param4 - -param1.field_r, param1.field_k);
               var9 = 113 / ((-60 - param2) / 56);
               if (param3) {
                 stackOut_15_0 = 16777215;
@@ -103,30 +104,30 @@ final class jh extends jd {
               }
             }
             var8 = stackIn_16_0;
-            int discarded$1 = ((jh) this).field_b.a(param1.field_h, param1.field_r + param4, -2 + (param0 + param1.field_i), param1.field_k, param1.field_m, var8, -1, 1, 1, ((jh) this).field_b.field_s);
+            discarded$1 = this.field_b.a(param1.field_h, param1.field_r + param4, -2 + (param0 + param1.field_i), param1.field_k, param1.field_m, var8, -1, 1, 1, this.field_b.field_s);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var6;
+            stackOut_18_0 = (RuntimeException) (var6);
             stackOut_18_1 = new StringBuilder().append("jh.B(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L5;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -134,7 +135,7 @@ final class jh extends jd {
               break L5;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -144,7 +145,7 @@ final class jh extends jd {
 
     public static void c(int param0) {
         field_s = null;
-        field_r = null;
+        field_r = (byte[][]) null;
         if (param0 != -1) {
             return;
         }
@@ -160,18 +161,14 @@ final class jh extends jd {
     }
 
     private jh(int param0, int param1, int param2) {
-        ((jh) this).field_q = param2;
-        ((jh) this).field_w = param0;
-        ((jh) this).field_u = ih.field_T;
-        ((jh) this).field_b = ne.field_v;
-        ((jh) this).field_v = param1;
+        this.field_q = param2;
+        this.field_w = param0;
+        this.field_u = ih.field_T;
+        this.field_b = ne.field_v;
+        this.field_v = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = "Connection timed out. Please try using a different server.";
         field_r = new byte[250][];
     }

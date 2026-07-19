@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class ei extends om {
     private vc field_B;
     static int field_E;
@@ -16,6 +14,7 @@ final class ei extends om {
     static String field_G;
 
     final void a(int param0, byte param1, int param2, int param3) {
+        int discarded$8 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -73,32 +72,32 @@ final class ei extends om {
         int stackOut_7_6 = 0;
         int stackOut_7_7 = 0;
         int stackOut_7_8 = 0;
-        var5 = param2 + ((ei) this).field_r;
-        var6 = ((ei) this).field_j + param0;
+        var5 = param2 + this.field_r;
+        var6 = this.field_j + param0;
         super.a(param0, (byte) -128, param2, param3);
         if (0 != param3) {
           return;
         } else {
           L0: {
-            if (!((ei) this).field_y) {
+            if (!this.field_y) {
               stackOut_5_0 = 0;
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
-              stackOut_4_0 = ((ei) this).field_g - (((ei) this).field_z - -(((ei) this).field_C * 2));
+              stackOut_4_0 = this.field_g - (this.field_z - -(this.field_C * 2));
               stackIn_6_0 = stackOut_4_0;
               break L0;
             }
           }
           L1: {
             var7 = stackIn_6_0;
-            stackOut_6_0 = ((ei) this).field_B;
-            stackOut_6_1 = ((ei) this).field_I;
-            stackOut_6_2 = var7 + (var5 - -((ei) this).field_C);
-            stackOut_6_3 = var6 + ((ei) this).field_C;
-            stackOut_6_4 = -((ei) this).field_C + ((ei) this).field_z;
-            stackOut_6_5 = ((ei) this).field_f + -(2 * ((ei) this).field_C);
-            stackOut_6_6 = ((ei) this).field_H;
+            stackOut_6_0 = this.field_B;
+            stackOut_6_1 = this.field_I;
+            stackOut_6_2 = var7 + (var5 - -this.field_C);
+            stackOut_6_3 = var6 + this.field_C;
+            stackOut_6_4 = -this.field_C + this.field_z;
+            stackOut_6_5 = this.field_f + -(2 * this.field_C);
+            stackOut_6_6 = this.field_H;
             stackOut_6_7 = -1;
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
@@ -116,9 +115,9 @@ final class ei extends om {
             stackIn_7_5 = stackOut_6_5;
             stackIn_7_6 = stackOut_6_6;
             stackIn_7_7 = stackOut_6_7;
-            if (!((ei) this).field_y) {
-              stackOut_8_0 = (vc) (Object) stackIn_8_0;
-              stackOut_8_1 = (String) (Object) stackIn_8_1;
+            if (!this.field_y) {
+              stackOut_8_0 = (vc) ((Object) stackIn_8_0);
+              stackOut_8_1 = (String) ((Object) stackIn_8_1);
               stackOut_8_2 = stackIn_8_2;
               stackOut_8_3 = stackIn_8_3;
               stackOut_8_4 = stackIn_8_4;
@@ -137,8 +136,8 @@ final class ei extends om {
               stackIn_9_8 = stackOut_8_8;
               break L1;
             } else {
-              stackOut_7_0 = (vc) (Object) stackIn_7_0;
-              stackOut_7_1 = (String) (Object) stackIn_7_1;
+              stackOut_7_0 = (vc) ((Object) stackIn_7_0);
+              stackOut_7_1 = (String) ((Object) stackIn_7_1);
               stackOut_7_2 = stackIn_7_2;
               stackOut_7_3 = stackIn_7_3;
               stackOut_7_4 = stackIn_7_4;
@@ -158,7 +157,7 @@ final class ei extends om {
               break L1;
             }
           }
-          int discarded$8 = ((vc) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_9_4, stackIn_9_5, stackIn_9_6, stackIn_9_7, stackIn_9_8, 1, ((ei) this).field_B.field_o);
+          discarded$8 = ((vc) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_9_4, stackIn_9_5, stackIn_9_6, stackIn_9_7, stackIn_9_8, 1, this.field_B.field_o);
           if (param1 >= -12) {
             ei.a(-13, -55, true);
             return;
@@ -885,7 +884,7 @@ final class ei extends om {
     }
 
     public static void f(byte param0) {
-        int var1 = 0;
+        int var1 = -26 % ((4 - param0) / 38);
         field_G = null;
     }
 
@@ -902,23 +901,23 @@ final class ei extends om {
         qm stackOut_2_0 = null;
         int stackOut_2_1 = 0;
         if (param0 > -23) {
-          return null;
+          return (String) null;
         } else {
           L0: {
-            var2 = ((ei) this).field_w.field_m ? 1 : 0;
-            ((ei) this).field_w.field_m = ((ei) this).field_m;
-            var3 = ((ei) this).field_w.a((byte) -28);
-            stackOut_1_0 = ((ei) this).field_w;
+            var2 = this.field_w.field_m ? 1 : 0;
+            this.field_w.field_m = this.field_m;
+            var3 = this.field_w.a((byte) -28);
+            stackOut_1_0 = this.field_w;
             stackIn_3_0 = stackOut_1_0;
             stackIn_2_0 = stackOut_1_0;
             if (var2 == 0) {
-              stackOut_3_0 = (qm) (Object) stackIn_3_0;
+              stackOut_3_0 = (qm) ((Object) stackIn_3_0);
               stackOut_3_1 = 0;
               stackIn_4_0 = stackOut_3_0;
               stackIn_4_1 = stackOut_3_1;
               break L0;
             } else {
-              stackOut_2_0 = (qm) (Object) stackIn_2_0;
+              stackOut_2_0 = (qm) ((Object) stackIn_2_0);
               stackOut_2_1 = 1;
               stackIn_4_0 = stackOut_2_0;
               stackIn_4_1 = stackOut_2_1;
@@ -997,8 +996,8 @@ final class ei extends om {
         try {
           L0: {
             L1: {
-              ((ei) this).field_I = param10;
-              ((ei) this).field_w = param4;
+              this.field_I = param10;
+              this.field_w = param4;
               stackOut_1_0 = this;
               stackIn_3_0 = stackOut_1_0;
               stackIn_2_0 = stackOut_1_0;
@@ -1017,24 +1016,24 @@ final class ei extends om {
               }
             }
             L2: {
-              ((ei) this).field_y = stackIn_4_1 != 0;
-              ((ei) this).field_H = param9;
-              ((ei) this).field_B = param8;
-              ((ei) this).field_C = param7;
-              ((ei) this).field_z = param6;
-              var12_int = -((ei) this).field_C + ((ei) this).field_z;
-              var13 = ((ei) this).field_B.b(param10, var12_int, ((ei) this).field_B.field_o) - -(((ei) this).field_C * 2);
+              ((ei) (this)).field_y = stackIn_4_1 != 0;
+              this.field_H = param9;
+              this.field_B = param8;
+              this.field_C = param7;
+              this.field_z = param6;
+              var12_int = -this.field_C + this.field_z;
+              var13 = this.field_B.b(param10, var12_int, this.field_B.field_o) - -(this.field_C * 2);
               if (var13 <= param3) {
                 var13 = param3;
                 break L2;
               } else {
-                ((ei) this).a(var13, param0, param1, param2, (byte) -52);
+                this.a(var13, param0, param1, param2, (byte) -52);
                 break L2;
               }
             }
             L3: {
-              if (!((ei) this).field_y) {
-                stackOut_9_0 = ((ei) this).field_C * 2 + ((ei) this).field_z;
+              if (!this.field_y) {
+                stackOut_9_0 = this.field_C * 2 + this.field_z;
                 stackIn_10_0 = stackOut_9_0;
                 break L3;
               } else {
@@ -1044,30 +1043,30 @@ final class ei extends om {
               }
             }
             var14 = stackIn_10_0;
-            ((ei) this).field_w.a(-(((ei) this).field_C * 2) + param3, var14, (var13 + -param3 >> 1) + ((ei) this).field_C, -((ei) this).field_z + param2 + -(3 * ((ei) this).field_C), (byte) -52);
+            this.field_w.a(-(this.field_C * 2) + param3, var14, (var13 + -param3 >> -1495820223) + this.field_C, -this.field_z + param2 + -(3 * this.field_C), (byte) -52);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var12 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var12;
+            stackOut_12_0 = (RuntimeException) (var12);
             stackOut_12_1 = new StringBuilder().append("ei.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param4 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -1076,23 +1075,23 @@ final class ei extends om {
             }
           }
           L5: {
-            stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+            stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
             stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param8 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -1101,23 +1100,23 @@ final class ei extends om {
             }
           }
           L6: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
             stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param9).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param10 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L6;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -1125,15 +1124,11 @@ final class ei extends om {
               break L6;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_F = 45;
         field_A = 0;
         field_G = "Crazy Crystals";

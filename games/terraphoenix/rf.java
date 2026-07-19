@@ -21,12 +21,24 @@ abstract class rf extends vh {
         field_t = null;
         field_s = null;
         field_z = null;
-        field_w = null;
-        field_u = null;
-        field_B = null;
-        field_p = null;
-        field_y = null;
-        field_q = null;
+        if (!param0) {
+          rf.d((byte) -6);
+          field_w = null;
+          field_u = null;
+          field_B = null;
+          field_p = null;
+          field_y = null;
+          field_q = null;
+          return;
+        } else {
+          field_w = null;
+          field_u = null;
+          field_B = null;
+          field_p = null;
+          field_y = null;
+          field_q = null;
+          return;
+        }
     }
 
     abstract byte[] b(boolean param0);
@@ -38,13 +50,26 @@ abstract class rf extends vh {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (null == a.field_d) {
-          return;
+          if (param0 < 81) {
+            field_y = (String) null;
+            return;
+          } else {
+            return;
+          }
         } else {
-          var1 = (Object) (Object) a.field_d;
+          var1 = a.field_d;
           synchronized (var1) {
             L0: {
               a.field_d = null;
               break L0;
+            }
+          }
+          L1: {
+            if (param0 >= 81) {
+              break L1;
+            } else {
+              field_y = (String) null;
+              break L1;
             }
           }
           return;
@@ -52,14 +77,10 @@ abstract class rf extends vh {
     }
 
     rf() {
-        ((rf) this).field_A = true;
+        this.field_A = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = new oa();
         field_y = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_s = "OBJECTIVE FAILED";

@@ -11,9 +11,10 @@ final class sa {
     int field_a;
 
     final static og a(byte param0, String[] param1) {
+        og discarded$2 = null;
         og var2 = null;
         RuntimeException var2_ref = null;
-        Object var3 = null;
+        String[] var3 = null;
         og stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -38,14 +39,14 @@ final class sa {
               if (param0 == 3) {
                 break L1;
               } else {
-                var3 = null;
-                og discarded$2 = sa.a((byte) -13, (String[]) null);
+                var3 = (String[]) null;
+                discarded$2 = sa.a((byte) -13, (String[]) null);
                 break L1;
               }
             }
             var2 = new og(false);
             var2.field_h = param1;
-            stackOut_2_0 = (og) var2;
+            stackOut_2_0 = (og) (var2);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -53,23 +54,23 @@ final class sa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2_ref;
+            stackOut_4_0 = (RuntimeException) (var2_ref);
             stackOut_4_1 = new StringBuilder().append("sa.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -77,13 +78,13 @@ final class sa {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     final static void b(int param0) {
-        if (vb.field_n != -wk.field_i) {
+        if (vb.field_n != param0 + -wk.field_i) {
           if (vb.field_n == -wk.field_i + 250) {
             vb.field_n = vb.field_n + 1;
             return;
@@ -99,14 +100,23 @@ final class sa {
 
     public static void a(int param0) {
         field_c = null;
-        field_b = null;
-        field_e = null;
-        field_g = null;
+        if (param0 != 250) {
+          field_g = (String) null;
+          field_b = null;
+          field_e = null;
+          field_g = null;
+          return;
+        } else {
+          field_b = null;
+          field_e = null;
+          field_g = null;
+          return;
+        }
     }
 
     sa(int param0, int param1, int param2, int param3) {
-        ((sa) this).field_d = param0;
-        ((sa) this).field_a = param3;
+        this.field_d = param0;
+        this.field_a = param3;
     }
 
     public final String toString() {
@@ -114,10 +124,6 @@ final class sa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Total score: ";
         field_b = "Loading graphics";
     }

@@ -8,11 +8,18 @@ final class ld {
 
     public static void a(boolean param0) {
         field_c = null;
+        if (!param0) {
+            field_b = (dm[]) null;
+            field_a = null;
+            field_b = null;
+            return;
+        }
         field_a = null;
         field_b = null;
     }
 
     final static boolean a(int param0) {
+        int incrementValue$1 = 0;
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -37,6 +44,7 @@ final class ld {
         int stackIn_41_0 = 0;
         int stackIn_45_0 = 0;
         int stackIn_47_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_10_0 = 0;
@@ -66,22 +74,25 @@ final class ld {
             if (vb.field_c[-var5 + var1_int] != 0) {
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (0 == vb.field_c[var1_int - -var5]) {
-                if (vb.field_c[var3] != -1) {
+                if (vb.field_c[var3] != 0) {
                   stackOut_10_0 = 1;
                   stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0 != 0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
-                  if (-1 != vb.field_c[var4]) {
+                  if (-1 != (vb.field_c[var4] ^ -1)) {
                     stackOut_14_0 = 1;
                     stackIn_15_0 = stackOut_14_0;
-                    return stackIn_15_0 != 0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   } else {
                     L1: while (true) {
                       L2: {
-                        int incrementValue$1 = var6;
+                        incrementValue$1 = var6;
                         var6++;
                         var9 = var9 + (incrementValue$1 - -var6);
                         var2 = var2 + vb.field_f;
@@ -99,6 +110,7 @@ final class ld {
                       if (var6 > var5) {
                         stackOut_46_0 = 0;
                         stackIn_47_0 = stackOut_46_0;
+                        decompiledRegionSelector0 = 12;
                         break L0;
                       } else {
                         if (0 == vb.field_c[-var6 + var3]) {
@@ -108,18 +120,21 @@ final class ld {
                                 if (vb.field_c[var2 - var5] != 0) {
                                   stackOut_33_0 = 1;
                                   stackIn_34_0 = stackOut_33_0;
-                                  return stackIn_34_0 != 0;
+                                  decompiledRegionSelector0 = 8;
+                                  break L0;
                                 } else {
                                   if (vb.field_c[var5 + var2] == 0) {
                                     if (vb.field_c[var4 - var6] != 0) {
                                       stackOut_40_0 = 1;
                                       stackIn_41_0 = stackOut_40_0;
-                                      return stackIn_41_0 != 0;
+                                      decompiledRegionSelector0 = 10;
+                                      break L0;
                                     } else {
                                       if (vb.field_c[var4 - -var6] != 0) {
                                         stackOut_44_0 = 1;
                                         stackIn_45_0 = stackOut_44_0;
-                                        return stackIn_45_0 != 0;
+                                        decompiledRegionSelector0 = 11;
+                                        break L0;
                                       } else {
                                         continue L1;
                                       }
@@ -127,28 +142,33 @@ final class ld {
                                   } else {
                                     stackOut_36_0 = 1;
                                     stackIn_37_0 = stackOut_36_0;
-                                    return stackIn_37_0 != 0;
+                                    decompiledRegionSelector0 = 9;
+                                    break L0;
                                   }
                                 }
                               } else {
                                 stackOut_29_0 = 1;
                                 stackIn_30_0 = stackOut_29_0;
-                                return stackIn_30_0 != 0;
+                                decompiledRegionSelector0 = 7;
+                                break L0;
                               }
                             } else {
                               stackOut_26_0 = 1;
                               stackIn_27_0 = stackOut_26_0;
-                              return stackIn_27_0 != 0;
+                              decompiledRegionSelector0 = 6;
+                              break L0;
                             }
                           } else {
                             stackOut_23_0 = 1;
                             stackIn_24_0 = stackOut_23_0;
-                            return stackIn_24_0 != 0;
+                            decompiledRegionSelector0 = 5;
+                            break L0;
                           }
                         } else {
                           stackOut_20_0 = 1;
                           stackIn_21_0 = stackOut_20_0;
-                          return stackIn_21_0 != 0;
+                          decompiledRegionSelector0 = 4;
+                          break L0;
                         }
                       }
                     }
@@ -157,16 +177,65 @@ final class ld {
               } else {
                 stackOut_6_0 = 1;
                 stackIn_7_0 = stackOut_6_0;
-                return stackIn_7_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "ld.B(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1), "ld.B(" + param0 + ')');
         }
-        return stackIn_47_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_11_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_15_0 != 0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_21_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_24_0 != 0;
+                  } else {
+                    if (decompiledRegionSelector0 == 6) {
+                      return stackIn_27_0 != 0;
+                    } else {
+                      if (decompiledRegionSelector0 == 7) {
+                        return stackIn_30_0 != 0;
+                      } else {
+                        if (decompiledRegionSelector0 == 8) {
+                          return stackIn_34_0 != 0;
+                        } else {
+                          if (decompiledRegionSelector0 == 9) {
+                            return stackIn_37_0 != 0;
+                          } else {
+                            if (decompiledRegionSelector0 == 10) {
+                              return stackIn_41_0 != 0;
+                            } else {
+                              if (decompiledRegionSelector0 == 11) {
+                                return stackIn_45_0 != 0;
+                              } else {
+                                return stackIn_47_0 != 0;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     final static void b(boolean param0) {
@@ -247,10 +316,10 @@ final class ld {
             if (ag.field_k >= 7) {
               if (!param0) {
                 L2: {
-                  if ((kd.field_f[ji.field_h] & 2) == 0) {
+                  if (-1 == (kd.field_f[ji.field_h] & 2 ^ -1)) {
                     break L2;
                   } else {
-                    if (f.field_qb < 7) {
+                    if ((f.field_qb ^ -1) > -8) {
                       f.field_qb = f.field_qb + 1;
                       break L2;
                     } else {
@@ -508,10 +577,10 @@ final class ld {
               } else {
                 L27: {
                   ld.b(true);
-                  if ((kd.field_f[ji.field_h] & 2) == 0) {
+                  if (-1 == (kd.field_f[ji.field_h] & 2 ^ -1)) {
                     break L27;
                   } else {
-                    if (f.field_qb < 7) {
+                    if ((f.field_qb ^ -1) > -8) {
                       f.field_qb = f.field_qb + 1;
                       break L27;
                     } else {
@@ -674,10 +743,10 @@ final class ld {
                 }
               }
               L44: {
-                if ((kd.field_f[ji.field_h] & 2) == 0) {
+                if (-1 == (kd.field_f[ji.field_h] & 2 ^ -1)) {
                   break L44;
                 } else {
-                  if (f.field_qb < 7) {
+                  if ((f.field_qb ^ -1) > -8) {
                     f.field_qb = f.field_qb + 1;
                     break L44;
                   } else {
@@ -733,7 +802,7 @@ final class ld {
           } else {
             if (param0) {
               ld.b(true);
-              if ((kd.field_f[ji.field_h] & 2) == 0) {
+              if (-1 == (kd.field_f[ji.field_h] & 2 ^ -1)) {
                 L50: {
                   if (0 == (kd.field_f[ji.field_h] & 16)) {
                     break L50;
@@ -780,7 +849,7 @@ final class ld {
                 return;
               } else {
                 L55: {
-                  if (f.field_qb < 7) {
+                  if ((f.field_qb ^ -1) > -8) {
                     f.field_qb = f.field_qb + 1;
                     break L55;
                   } else {
@@ -834,10 +903,10 @@ final class ld {
               }
             } else {
               L61: {
-                if ((kd.field_f[ji.field_h] & 2) == 0) {
+                if (-1 == (kd.field_f[ji.field_h] & 2 ^ -1)) {
                   break L61;
                 } else {
-                  if (f.field_qb < 7) {
+                  if ((f.field_qb ^ -1) > -8) {
                     f.field_qb = f.field_qb + 1;
                     break L61;
                   } else {
@@ -913,10 +982,6 @@ final class ld {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "+2,000 for being great!";
         field_c = new java.math.BigInteger("65537");
     }

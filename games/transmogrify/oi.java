@@ -15,6 +15,9 @@ final class oi extends wf {
         field_k = null;
         field_j = null;
         field_l = null;
+        if (param0 >= -36) {
+            field_g = (ci) null;
+        }
     }
 
     private oi() throws Throwable {
@@ -22,10 +25,6 @@ final class oi extends wf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "to return to the normal view.";
     }
 }

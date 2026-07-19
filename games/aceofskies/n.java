@@ -7,7 +7,7 @@ final class n extends da implements e {
     final native void fa(char param0, int param1, int param2, int param3, boolean param4);
 
     n(oa param0, ya param1, vs param2, vd[] param3, pa[] param4) {
-        super((ha) (Object) param0, param2);
+        super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];
         int[] var7 = new int[param3.length];
@@ -33,8 +33,8 @@ final class n extends da implements e {
     private final native void S(oa param0, ya param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6, int[] param7);
 
     protected final void finalize() {
-        if (((n) this).field_nativeid != 0L) {
-            vk.a((e) this, 80);
+        if (this.field_nativeid != 0L) {
+            vk.a((e) (this), 80);
         }
     }
 

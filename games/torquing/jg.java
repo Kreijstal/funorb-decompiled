@@ -47,7 +47,7 @@ final class jg extends am {
                           if (param2 < -108) {
                             break L4;
                           } else {
-                            field_u = null;
+                            field_u = (String) null;
                             break L4;
                           }
                         }
@@ -76,7 +76,7 @@ final class jg extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var7, "jg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw rb.a((Throwable) ((Object) var7), "jg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -115,15 +115,15 @@ final class jg extends am {
           if (param0 > 86) {
             break L0;
           } else {
-            ((jg) this).field_s = 60;
+            this.field_s = 60;
             break L0;
           }
         }
         L1: {
-          var8 = ((jg) this).field_l.a(param1, 25657);
+          var8 = this.field_l.a(param1, 25657);
           var3 = var8;
-          if (((jg) this).field_l.field_b) {
-            var4 = ((jg) this).b(0, 0, param1);
+          if (this.field_l.field_b) {
+            var4 = this.b(0, 0, param1);
             var5 = 0;
             L2: while (true) {
               if (var5 >= ci.field_c) {
@@ -132,23 +132,23 @@ final class jg extends am {
                 L3: {
                   L4: {
                     var6 = var4[var5];
-                    stackOut_6_0 = (int[]) var8;
+                    stackOut_6_0 = (int[]) (var8);
                     stackOut_6_1 = var5;
                     stackIn_9_0 = stackOut_6_0;
                     stackIn_9_1 = stackOut_6_1;
                     stackIn_7_0 = stackOut_6_0;
                     stackIn_7_1 = stackOut_6_1;
-                    if (((jg) this).field_s > var6) {
+                    if (this.field_s > var6) {
                       break L4;
                     } else {
-                      stackOut_7_0 = (int[]) (Object) stackIn_7_0;
+                      stackOut_7_0 = (int[]) ((Object) stackIn_7_0);
                       stackOut_7_1 = stackIn_7_1;
                       stackIn_10_0 = stackOut_7_0;
                       stackIn_10_1 = stackOut_7_1;
                       stackIn_8_0 = stackOut_7_0;
                       stackIn_8_1 = stackOut_7_1;
-                      if (var6 <= ((jg) this).field_x) {
-                        stackOut_10_0 = (int[]) (Object) stackIn_10_0;
+                      if (var6 <= this.field_x) {
+                        stackOut_10_0 = (int[]) ((Object) stackIn_10_0);
                         stackOut_10_1 = stackIn_10_1;
                         stackOut_10_2 = 4096;
                         stackIn_11_0 = stackOut_10_0;
@@ -156,7 +156,7 @@ final class jg extends am {
                         stackIn_11_2 = stackOut_10_2;
                         break L3;
                       } else {
-                        stackOut_8_0 = (int[]) (Object) stackIn_8_0;
+                        stackOut_8_0 = (int[]) ((Object) stackIn_8_0);
                         stackOut_8_1 = stackIn_8_1;
                         stackIn_9_0 = stackOut_8_0;
                         stackIn_9_1 = stackOut_8_1;
@@ -164,7 +164,7 @@ final class jg extends am {
                       }
                     }
                   }
-                  stackOut_9_0 = (int[]) (Object) stackIn_9_0;
+                  stackOut_9_0 = (int[]) ((Object) stackIn_9_0);
                   stackOut_9_1 = stackIn_9_1;
                   stackOut_9_2 = 0;
                   stackIn_11_0 = stackOut_9_0;
@@ -188,10 +188,16 @@ final class jg extends am {
         field_v = null;
         field_w = null;
         field_t = null;
+        if (param0 < 68) {
+            jg.a(124, 87, (byte) 71, 65, 68, 33, -72);
+        }
         field_u = null;
     }
 
     final static String a(boolean param0) {
+        if (!param0) {
+            return (String) null;
+        }
         if (!(null != re.field_e)) {
             return "";
         }
@@ -224,14 +230,14 @@ final class jg extends am {
             L1: {
               var4_int = param2;
               if (0 != var4_int) {
-                if (var4_int != 1) {
+                if (-2 != (var4_int ^ -1)) {
                   break L1;
                 } else {
-                  ((jg) this).field_x = param0.i(7088);
+                  this.field_x = param0.i(7088);
                   break L1;
                 }
               } else {
-                ((jg) this).field_s = param0.i(7088);
+                this.field_s = param0.i(7088);
                 break L1;
               }
             }
@@ -249,23 +255,23 @@ final class jg extends am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var4;
+            stackOut_10_0 = (RuntimeException) (var4);
             stackOut_10_1 = new StringBuilder().append("jg.H(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -273,17 +279,18 @@ final class jg extends am {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public jg() {
         super(1, true);
-        ((jg) this).field_s = 0;
-        ((jg) this).field_x = 4096;
+        this.field_s = 0;
+        this.field_x = 4096;
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+        int incrementValue$1 = 0;
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -294,6 +301,7 @@ final class jg extends am {
         int var13 = 0;
         int var14 = 0;
         int stackIn_26_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_25_0 = 0;
         int stackOut_24_0 = 0;
@@ -302,14 +310,15 @@ final class jg extends am {
           L0: {
             if (param4 < param0) {
               if (param4 + 1 >= param6) {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 L1: {
                   if (param4 - -5 >= param6) {
                     break L1;
                   } else {
                     if (param3 != param5) {
-                      var7_int = (1 & (param3 & param5)) + ((param3 >> 1) + (param5 >> 1));
+                      var7_int = (1 & (param3 & param5)) + ((param3 >> 1653788577) + (param5 >> 315164833));
                       var8 = param4;
                       if (param1 <= -27) {
                         var9 = param3;
@@ -319,6 +328,7 @@ final class jg extends am {
                           if (var11 >= param6) {
                             jg.a(param0, -101, param2, param3, param4, var9, var8);
                             jg.a(param0, -29, param2, var10, var8, param5, param6);
+                            decompiledRegionSelector0 = 4;
                             break L0;
                           } else {
                             L3: {
@@ -333,37 +343,36 @@ final class jg extends am {
                                 break L3;
                               }
                             }
-                            var13 = stackIn_26_0;
-                            if (var13 <= var7_int) {
-                              L4: {
+                            L4: {
+                              var13 = stackIn_26_0;
+                              if (var13 <= var7_int) {
                                 if (var10 < var13) {
                                   var10 = var13;
                                   break L4;
                                 } else {
                                   break L4;
                                 }
-                              }
-                              var11++;
-                              continue L2;
-                            } else {
-                              L5: {
+                              } else {
                                 lp.field_g[var11] = lp.field_g[var8];
-                                int incrementValue$1 = var8;
+                                incrementValue$1 = var8;
                                 var8++;
                                 lp.field_g[incrementValue$1] = var12;
-                                if (var9 <= var13) {
-                                  break L5;
+                                if (var9 > var13) {
+                                  var9 = var13;
+                                  break L4;
                                 } else {
-                                  break L5;
+                                  var11++;
+                                  continue L2;
                                 }
                               }
-                              var11++;
-                              continue L2;
                             }
+                            var11++;
+                            continue L2;
                           }
                         }
                       } else {
-                        return;
+                        decompiledRegionSelector0 = 3;
+                        break L0;
                       }
                     } else {
                       break L1;
@@ -371,50 +380,65 @@ final class jg extends am {
                   }
                 }
                 var7_int = -1 + param6;
-                L6: while (true) {
+                L5: while (true) {
                   if (var7_int <= param4) {
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     var8 = param4;
-                    L7: while (true) {
+                    L6: while (true) {
                       if (var7_int <= var8) {
                         var7_int--;
-                        continue L6;
+                        continue L5;
                       } else {
-                        L8: {
+                        L7: {
                           var9 = lp.field_g[var8];
                           var10 = lp.field_g[1 + var8];
                           if (vc.a(param2, var10, 0, var9)) {
                             lp.field_g[var8] = var10;
                             lp.field_g[var8 + 1] = var9;
-                            break L8;
+                            break L7;
                           } else {
-                            break L8;
+                            break L7;
                           }
                         }
                         var8++;
-                        continue L7;
+                        continue L6;
                       }
                     }
                   }
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var7, "jg.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw rb.a((Throwable) ((Object) var7), "jg.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                return;
+              }
+            }
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = "Connection lost. <%0>";
         field_u = "This password contains repeated characters, and would be easy to guess";
         field_v = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";

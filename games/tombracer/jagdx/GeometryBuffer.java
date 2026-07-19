@@ -140,7 +140,7 @@ public class GeometryBuffer extends jaclib.peer.nca implements jaclib.memory.Buf
           }
         }
         if ((stackIn_12_0 | (stackIn_12_1 | stackIn_12_2)) == 0) {
-          if (((jagdx.GeometryBuffer) this).getSize() < param2 + param3) {
+          if (this.getSize() < param2 + param3) {
             throw new jagdx.eva();
           } else {
             this.putub(param0, param1, param2, param3);

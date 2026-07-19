@@ -6,10 +6,17 @@ final class oi {
     static int field_b;
 
     final static int a(int param0) {
+        if (param0 > -89) {
+            oi.a((byte) -32);
+            return -sg.field_d + c.field_e;
+        }
         return -sg.field_d + c.field_e;
     }
 
     public static void a(byte param0) {
+        if (param0 < 76) {
+            return;
+        }
         field_a = null;
     }
 

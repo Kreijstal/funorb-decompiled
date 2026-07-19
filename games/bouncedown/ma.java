@@ -13,26 +13,32 @@ abstract class ma extends ug {
     static String field_n;
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
-        this.a(param1 << 8, true, param0, param4, param3 << 5);
+        this.a(param1 << -665256472, true, param0, param4, param3 << -741572379);
         if (param2 != -741572379) {
-            Object var7 = null;
+            CharSequence var7 = (CharSequence) null;
         }
     }
 
     public static void d(int param0) {
         field_n = null;
         field_u = null;
+        if (param0 != 65) {
+            field_u = (String) null;
+        }
         field_m = null;
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
 
     private final void a(int param0, boolean param1, int param2, int param3, int param4) {
-        int var6 = ((ma) this).field_t << 3;
-        param2 = (param2 << 4) + (var6 & 15);
-        int var7 = ((ma) this).field_o << 3;
-        param3 = (param3 << 4) - -(15 & var7);
-        ((ma) this).a(var6, var7, param2, param3, param0, param4);
+        int var6 = this.field_t << 930633251;
+        if (!param1) {
+            this.a(-84, -19, 80, 103, -64, 69);
+        }
+        param2 = (param2 << 754375524) + (var6 & 15);
+        int var7 = this.field_o << 450269283;
+        param3 = (param3 << -1704518684) - -(15 & var7);
+        this.a(var6, var7, param2, param3, param0, param4);
     }
 
     ma() {
@@ -122,10 +128,10 @@ abstract class ma extends ug {
               }
               L6: while (true) {
                 L7: {
-                  if (var2_long % 37L != 0L) {
+                  if ((var2_long % 37L ^ -1L) != -1L) {
                     break L7;
                   } else {
-                    if (var2_long == 0L) {
+                    if (-1L == (var2_long ^ -1L)) {
                       break L7;
                     } else {
                       var2_long = var2_long / 37L;
@@ -144,23 +150,23 @@ abstract class ma extends ug {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_0 = (RuntimeException) (var2);
             stackOut_22_1 = new StringBuilder().append("ma.E(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L8;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -168,16 +174,12 @@ abstract class ma extends ug {
               break L8;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
         return stackIn_21_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = "to return to the normal view.";
         field_n = "That name is not available";
     }

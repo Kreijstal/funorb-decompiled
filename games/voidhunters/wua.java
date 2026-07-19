@@ -7,6 +7,7 @@ final class wua extends le {
     private int field_i;
 
     final void a(int param0, int param1, ds param2) {
+        int[] discarded$2 = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -33,7 +34,7 @@ final class wua extends le {
               if (param1 < -60) {
                 break L1;
               } else {
-                int[] discarded$2 = ((wua) this).a(28, false);
+                discarded$2 = this.a(28, false);
                 break L1;
               }
             }
@@ -42,11 +43,11 @@ final class wua extends le {
               if (1 != var4_int) {
                 break L0;
               } else {
-                ((wua) this).field_i = param2.e(1869);
+                this.field_i = param2.e(1869);
                 return;
               }
             } else {
-              ((wua) this).field_j = param2.e(1869);
+              this.field_j = param2.e(1869);
               return;
             }
           }
@@ -54,23 +55,23 @@ final class wua extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var4;
+            stackOut_10_0 = (RuntimeException) (var4);
             stackOut_10_1 = new StringBuilder().append("wua.F(").append(param0).append(',').append(param1).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L2;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -78,7 +79,7 @@ final class wua extends le {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 
@@ -109,36 +110,36 @@ final class wua extends le {
         int stackOut_10_1 = 0;
         int stackOut_10_2 = 0;
         var7 = VoidHunters.field_G;
-        var8 = ((wua) this).field_f.a((byte) 117, param0);
+        var8 = this.field_f.a((byte) 117, param0);
         var3 = var8;
         if (param1) {
-          if (((wua) this).field_f.field_e) {
-            var4 = ((wua) this).a(0, param0, 255);
+          if (this.field_f.field_e) {
+            var4 = this.a(0, param0, 255);
             var5 = 0;
             L0: while (true) {
               if (hob.field_d > var5) {
                 L1: {
                   L2: {
                     var6 = var4[var5];
-                    stackOut_7_0 = (int[]) var8;
+                    stackOut_7_0 = (int[]) (var8);
                     stackOut_7_1 = var5;
                     stackIn_10_0 = stackOut_7_0;
                     stackIn_10_1 = stackOut_7_1;
                     stackIn_8_0 = stackOut_7_0;
                     stackIn_8_1 = stackOut_7_1;
-                    if (((wua) this).field_j > var6) {
+                    if (this.field_j > var6) {
                       break L2;
                     } else {
-                      stackOut_8_0 = (int[]) (Object) stackIn_8_0;
+                      stackOut_8_0 = (int[]) ((Object) stackIn_8_0);
                       stackOut_8_1 = stackIn_8_1;
                       stackIn_10_0 = stackOut_8_0;
                       stackIn_10_1 = stackOut_8_1;
                       stackIn_9_0 = stackOut_8_0;
                       stackIn_9_1 = stackOut_8_1;
-                      if (((wua) this).field_i < var6) {
+                      if (this.field_i < var6) {
                         break L2;
                       } else {
-                        stackOut_9_0 = (int[]) (Object) stackIn_9_0;
+                        stackOut_9_0 = (int[]) ((Object) stackIn_9_0);
                         stackOut_9_1 = stackIn_9_1;
                         stackOut_9_2 = 4096;
                         stackIn_11_0 = stackOut_9_0;
@@ -148,7 +149,7 @@ final class wua extends le {
                       }
                     }
                   }
-                  stackOut_10_0 = (int[]) (Object) stackIn_10_0;
+                  stackOut_10_0 = (int[]) ((Object) stackIn_10_0);
                   stackOut_10_1 = stackIn_10_1;
                   stackOut_10_2 = 0;
                   stackIn_11_0 = stackOut_10_0;
@@ -167,14 +168,14 @@ final class wua extends le {
             return var8;
           }
         } else {
-          return null;
+          return (int[]) null;
         }
     }
 
     public wua() {
         super(1, true);
-        ((wua) this).field_i = 4096;
-        ((wua) this).field_j = 0;
+        this.field_i = 4096;
+        this.field_j = 0;
     }
 
     static {

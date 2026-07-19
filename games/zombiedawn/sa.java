@@ -13,25 +13,27 @@ final class sa extends pn {
     static ZombieDawn field_Y;
 
     final void a(int param0, int param1, byte param2) {
+        int discarded$2 = 0;
+        int discarded$3 = 0;
         if (param2 <= -111) {
           super.a(param0, param1, (byte) -121);
-          rk.field_b.a(((sa) this).field_W, param0 - -(((sa) this).field_i >> 1), 103 + param1, 16777215, -1);
-          if (((sa) this).field_X != null) {
+          rk.field_b.a(this.field_W, param0 - -(this.field_i >> 1998798337), 103 + param1, 16777215, -1);
+          if (this.field_X != null) {
             bi.b(param0 + 20, -7 + (param1 - -120), 260, 8421504);
-            int discarded$2 = rk.field_b.a(((sa) this).field_X, 20 + param0, 8 + (120 + param1), 260, 100, 16777215, -1, 1, 0, rk.field_b.field_I);
+            discarded$2 = rk.field_b.a(this.field_X, 20 + param0, 8 + (120 + param1), 260, 100, 16777215, -1, 1, 0, rk.field_b.field_I);
             return;
           } else {
             return;
           }
         } else {
-          ((sa) this).m(-92);
+          this.m(-92);
           super.a(param0, param1, (byte) -121);
-          rk.field_b.a(((sa) this).field_W, param0 - -(((sa) this).field_i >> 1), 103 + param1, 16777215, -1);
-          if (((sa) this).field_X == null) {
+          rk.field_b.a(this.field_W, param0 - -(this.field_i >> 1998798337), 103 + param1, 16777215, -1);
+          if (this.field_X == null) {
             return;
           } else {
             bi.b(param0 + 20, -7 + (param1 - -120), 260, 8421504);
-            int discarded$3 = rk.field_b.a(((sa) this).field_X, 20 + param0, 8 + (120 + param1), 260, 100, 16777215, -1, 1, 0, rk.field_b.field_I);
+            discarded$3 = rk.field_b.a(this.field_X, 20 + param0, 8 + (120 + param1), 260, 100, 16777215, -1, 1, 0, rk.field_b.field_I);
             return;
           }
         }
@@ -61,7 +63,7 @@ final class sa extends pn {
         try {
           L0: {
             var3_int = 61 % ((param1 - 51) / 40);
-            stackOut_0_0 = tf.a(true, 5, param0, 16);
+            stackOut_0_0 = tf.a(true, 5, param0, param2);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -69,23 +71,23 @@ final class sa extends pn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_0 = (RuntimeException) (var3);
             stackOut_2_1 = new StringBuilder().append("sa.J(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -93,7 +95,7 @@ final class sa extends pn {
               break L1;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + 16 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }
@@ -140,7 +142,7 @@ final class sa extends pn {
               if (param2 <= -60) {
                 break L1;
               } else {
-                field_Y = null;
+                field_Y = (ZombieDawn) null;
                 break L1;
               }
             }
@@ -148,7 +150,7 @@ final class sa extends pn {
               stackOut_2_0 = param0;
               stackIn_4_0 = stackOut_2_0;
               stackIn_3_0 = stackOut_2_0;
-              if (((sa) this).field_ab) {
+              if (this.field_ab) {
                 stackOut_4_0 = stackIn_4_0;
                 stackOut_4_1 = 0;
                 stackIn_5_0 = stackOut_4_0;
@@ -184,49 +186,49 @@ final class sa extends pn {
                     break L4;
                   }
                 }
-                ((sa) this).field_ab = stackIn_9_1 != 0;
-                if (((sa) this).field_ab) {
-                  ((sa) this).field_V.c(-16, 4210752, 8405024);
-                  ((sa) this).field_V.field_F = true;
+                ((sa) (this)).field_ab = stackIn_9_1 != 0;
+                if (this.field_ab) {
+                  this.field_V.c(-16, 4210752, 8405024);
+                  this.field_V.field_F = true;
                   break L3;
                 } else {
-                  ((sa) this).field_V.c(-51, 4210752, 2113632);
-                  if (((sa) this).field_U) {
-                    ((sa) this).field_V.field_F = false;
+                  this.field_V.c(-51, 4210752, 2113632);
+                  if (this.field_U) {
+                    this.field_V.field_F = false;
                     break L3;
                   } else {
-                    ((sa) this).field_V.field_C = (int)(param1 / 100.0f * 65536.0f);
-                    ((sa) this).field_W = param3;
+                    this.field_V.field_C = (int)(param1 / 100.0f * 65536.0f);
+                    this.field_W = param3;
                     return;
                   }
                 }
               }
             }
-            ((sa) this).field_V.field_C = (int)(param1 / 100.0f * 65536.0f);
-            ((sa) this).field_W = param3;
+            this.field_V.field_C = (int)(param1 / 100.0f * 65536.0f);
+            this.field_W = param3;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var5;
+            stackOut_16_0 = (RuntimeException) (var5);
             stackOut_16_1 = new StringBuilder().append("sa.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param3 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -234,7 +236,7 @@ final class sa extends pn {
               break L5;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
     }
 
@@ -242,18 +244,18 @@ final class sa extends pn {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
-            ((sa) this).field_X = param1;
-            if (((sa) this).field_X != null) {
-                var3_int = rk.field_b.b(((sa) this).field_X, 260, rk.field_b.field_I);
-                ((sa) this).a((byte) 94, var3_int + 150, 300);
+            this.field_X = param1;
+            if (this.field_X != null) {
+                var3_int = rk.field_b.b(this.field_X, 260, rk.field_b.field_I);
+                this.a((byte) 94, var3_int + 150, 300);
             }
-            ((sa) this).field_V = new hb(13, 50, 274, 30, 15, 2113632, 4210752);
-            ((sa) this).field_V.field_F = true;
-            ((sa) this).field_U = false;
-            ((sa) this).field_ab = false;
-            ((sa) this).a((ga) (Object) ((sa) this).field_V, 10);
+            this.field_V = new hb(13, 50, 274, 30, 15, 2113632, 4210752);
+            this.field_V.field_F = true;
+            this.field_U = false;
+            this.field_ab = false;
+            this.a(this.field_V, 10);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -269,20 +271,16 @@ final class sa extends pn {
     }
 
     final void m(int param0) {
-        ((sa) this).field_U = true;
+        this.field_U = true;
         if (param0 != -31361) {
             field_T = false;
-            ((sa) this).field_V.field_F = false;
+            this.field_V.field_F = false;
             return;
         }
-        ((sa) this).field_V.field_F = false;
+        this.field_V.field_F = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_T = false;
         field_Z = "Please enter your age in years";
         field_bb = "Zombies across: ";

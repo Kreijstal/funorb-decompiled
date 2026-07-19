@@ -13,27 +13,34 @@ abstract class fsb extends ksa {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
         try {
           L0: {
             if (param0 >= 15) {
-              stackOut_3_0 = ((fsb) this).field_d;
+              stackOut_3_0 = this.field_d;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = -90;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "fsb.F(" + param0 + ')');
+          throw rta.a((Throwable) ((Object) var2), "fsb.F(" + param0 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final int c(int param0) {
@@ -47,18 +54,18 @@ abstract class fsb extends ksa {
               if (param0 == 16777215) {
                 break L1;
               } else {
-                ((fsb) this).field_g = -0.24781356751918793f;
+                this.field_g = -0.24781356751918793f;
                 break L1;
               }
             }
-            stackOut_3_0 = ((fsb) this).field_h;
+            stackOut_3_0 = this.field_h;
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "fsb.C(" + param0 + ')');
+          throw rta.a((Throwable) ((Object) var2), "fsb.C(" + param0 + ')');
         }
         return stackIn_4_0;
     }
@@ -67,30 +74,38 @@ abstract class fsb extends ksa {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
         try {
           L0: {
             if (param0 == -79) {
-              stackOut_3_0 = ((fsb) this).field_e;
+              stackOut_3_0 = this.field_e;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 99;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "fsb.D(" + param0 + ')');
+          throw rta.a((Throwable) ((Object) var2), "fsb.D(" + param0 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final int a(int param0) {
+        int discarded$2 = 0;
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -101,18 +116,18 @@ abstract class fsb extends ksa {
               if (param0 < -49) {
                 break L1;
               } else {
-                int discarded$2 = ((fsb) this).a(true);
+                discarded$2 = this.a(true);
                 break L1;
               }
             }
-            stackOut_3_0 = ((fsb) this).field_i;
+            stackOut_3_0 = this.field_i;
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "fsb.E(" + param0 + ')');
+          throw rta.a((Throwable) ((Object) var2), "fsb.E(" + param0 + ')');
         }
         return stackIn_4_0;
     }
@@ -128,18 +143,18 @@ abstract class fsb extends ksa {
               if (param0 == -392138175) {
                 break L1;
               } else {
-                ((fsb) this).field_d = -10;
+                this.field_d = -10;
                 break L1;
               }
             }
-            stackOut_3_0 = ((fsb) this).field_g;
+            stackOut_3_0 = this.field_g;
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "fsb.A(" + param0 + ')');
+          throw rta.a((Throwable) ((Object) var2), "fsb.A(" + param0 + ')');
         }
         return stackIn_4_0;
     }
@@ -152,6 +167,7 @@ abstract class fsb extends ksa {
         int stackIn_35_0 = 0;
         int stackIn_46_0 = 0;
         int stackIn_51_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_50_0 = 0;
         int stackOut_45_0 = 0;
@@ -161,97 +177,126 @@ abstract class fsb extends ksa {
         int stackOut_7_0 = 0;
         try {
           L0: {
-            if (6407 == param0) {
-              break L0;
-            } else {
-              if (param0 == 34843) {
-                break L0;
+            L1: {
+              if (6407 == param0) {
+                break L1;
               } else {
-                if (param0 != 34837) {
-                  L1: {
-                    if (6408 == param0) {
-                      break L1;
-                    } else {
-                      if (param0 == 34842) {
-                        break L1;
+                if (-34844 == (param0 ^ -1)) {
+                  break L1;
+                } else {
+                  if (param0 != 34837) {
+                    L2: {
+                      if (6408 == param0) {
+                        break L2;
                       } else {
-                        if (param0 == 34836) {
-                          break L1;
+                        if (param0 == 34842) {
+                          break L2;
                         } else {
-                          L2: {
-                            if (param0 == 6406) {
-                              break L2;
-                            } else {
-                              if (param0 == 34844) {
-                                break L2;
+                          if ((param0 ^ -1) == -34837) {
+                            break L2;
+                          } else {
+                            L3: {
+                              if (param0 == 6406) {
+                                break L3;
                               } else {
-                                L3: {
-                                  if (6409 == param0) {
-                                    break L3;
-                                  } else {
-                                    if (param0 == 34846) {
-                                      break L3;
+                                if (param0 == 34844) {
+                                  break L3;
+                                } else {
+                                  L4: {
+                                    if (6409 == param0) {
+                                      break L4;
                                     } else {
-                                      L4: {
-                                        if (!param1) {
-                                          break L4;
-                                        } else {
-                                          fsb.a((lta) null, (int[]) null, 84, -107, (int[]) null, (int[]) null, -96, (int[]) null, 2);
-                                          break L4;
-                                        }
-                                      }
-                                      L5: {
-                                        if (6410 == param0) {
-                                          break L5;
-                                        } else {
-                                          if (param0 == 34847) {
+                                      if ((param0 ^ -1) == -34847) {
+                                        break L4;
+                                      } else {
+                                        L5: {
+                                          if (!param1) {
                                             break L5;
                                           } else {
-                                            if (6402 == param0) {
-                                              stackOut_50_0 = 6402;
-                                              stackIn_51_0 = stackOut_50_0;
-                                              return stackIn_51_0;
+                                            fsb.a((lta) null, (int[]) null, 84, -107, (int[]) null, (int[]) null, -96, (int[]) null, 2);
+                                            break L5;
+                                          }
+                                        }
+                                        L6: {
+                                          if (6410 == param0) {
+                                            break L6;
+                                          } else {
+                                            if (-34848 == (param0 ^ -1)) {
+                                              break L6;
                                             } else {
-                                              throw new IllegalArgumentException("");
+                                              if (6402 == param0) {
+                                                stackOut_50_0 = 6402;
+                                                stackIn_51_0 = stackOut_50_0;
+                                                decompiledRegionSelector0 = 5;
+                                                break L0;
+                                              } else {
+                                                throw new IllegalArgumentException("");
+                                              }
                                             }
                                           }
                                         }
+                                        stackOut_45_0 = 6410;
+                                        stackIn_46_0 = stackOut_45_0;
+                                        decompiledRegionSelector0 = 4;
+                                        break L0;
                                       }
-                                      stackOut_45_0 = 6410;
-                                      stackIn_46_0 = stackOut_45_0;
-                                      return stackIn_46_0;
                                     }
                                   }
+                                  stackOut_34_0 = 6409;
+                                  stackIn_35_0 = stackOut_34_0;
+                                  decompiledRegionSelector0 = 3;
+                                  break L0;
                                 }
-                                stackOut_34_0 = 6409;
-                                stackIn_35_0 = stackOut_34_0;
-                                return stackIn_35_0;
                               }
                             }
+                            stackOut_26_0 = 6406;
+                            stackIn_27_0 = stackOut_26_0;
+                            decompiledRegionSelector0 = 2;
+                            break L0;
                           }
-                          stackOut_26_0 = 6406;
-                          stackIn_27_0 = stackOut_26_0;
-                          return stackIn_27_0;
                         }
                       }
                     }
+                    stackOut_18_0 = 6408;
+                    stackIn_19_0 = stackOut_18_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
+                  } else {
+                    break L1;
                   }
-                  stackOut_18_0 = 6408;
-                  stackIn_19_0 = stackOut_18_0;
-                  return stackIn_19_0;
+                }
+              }
+            }
+            stackOut_7_0 = 6407;
+            stackIn_8_0 = stackOut_7_0;
+            decompiledRegionSelector0 = 0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw rta.a((Throwable) ((Object) var2), "fsb.B(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_8_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_19_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_27_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_35_0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_46_0;
                 } else {
-                  break L0;
+                  return stackIn_51_0;
                 }
               }
             }
           }
-          stackOut_7_0 = 6407;
-          stackIn_8_0 = stackOut_7_0;
-          return stackIn_8_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "fsb.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -361,6 +406,7 @@ abstract class fsb extends ksa {
         RuntimeException stackIn_67_0 = null;
         StringBuilder stackIn_67_1 = null;
         String stackIn_67_2 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException stackOut_47_0 = null;
         StringBuilder stackOut_47_1 = null;
@@ -405,7 +451,7 @@ abstract class fsb extends ksa {
         var76 = VoidHunters.field_G;
         try {
           L0: {
-            var9_int = param4.length >> 1;
+            var9_int = param4.length >> 1562975457;
             if (param2 == 6407) {
               L1: {
                 var10 = kdb.field_o;
@@ -415,11 +461,11 @@ abstract class fsb extends ksa {
                 var14 = param7[(-1 + (var9_int + var12)) % var9_int];
                 if (var13 > 0) {
                   L2: {
-                    if (~var13 > ~var14) {
+                    if ((var13 ^ -1) > (var14 ^ -1)) {
                       break L2;
                     } else {
                       var15 = 40;
-                      var13 = (var11 * var15 >> 16) + (255 - var15);
+                      var13 = (var11 * var15 >> -824169456) + (255 - var15);
                       if (var76 == 0) {
                         break L1;
                       } else {
@@ -433,7 +479,7 @@ abstract class fsb extends ksa {
                   break L1;
                 }
               }
-              var15 = var12 << 1;
+              var15 = var12 << 151370657;
               var16 = param4[var15];
               var17 = param4[var15 - -1];
               var18 = param1[var15];
@@ -458,7 +504,7 @@ abstract class fsb extends ksa {
               var29 = param0.b(true, var19);
               var30 = param0.a(var20, (byte) 118);
               var31 = param0.b(true, var21);
-              hcb.a(param2 + -6399, var29, 1, param8, var26, var28, var31, var27, 16777215 | var13 << 24, var30, param8);
+              hcb.a(param2 + -6399, var29, 1, param8, var26, var28, var31, var27, 16777215 | var13 << -439624616, var30, param8);
               var32 = 1;
               L3: while (true) {
                 L4: {
@@ -482,13 +528,13 @@ abstract class fsb extends ksa {
                                 var35 = 5;
                                 var36 = var35 * (-var32 + var9_int) + param3;
                                 var37 = var35 * (-1 + (var9_int + -var32)) - -param3;
-                                var38 = var33 << 1;
+                                var38 = var33 << -392138175;
                                 var39 = param4[var38];
                                 var40 = param4[var38 + 1];
-                                var41 = var34 << 1;
+                                var41 = var34 << -1133398335;
                                 var42 = param4[var41];
                                 var43 = param4[1 + var41];
-                                if (~var42 != ~var39) {
+                                if ((var42 ^ -1) != (var39 ^ -1)) {
                                   break L7;
                                 } else {
                                   if (var40 != var43) {
@@ -512,8 +558,8 @@ abstract class fsb extends ksa {
                                 var50 = var42 - var39;
                                 var51 = -var40 + var43;
                                 var52 = ar.a(var50, (byte) 110, var51);
-                                var53 = var52 >> 6;
-                                var54 = Math.min(var53, -(var36 / 4) + 64) * param7[var33] >> 8;
+                                var53 = var52 >> -1029074490;
+                                var54 = Math.min(var53, -(var36 / 4) + 64) * param7[var33] >> 1449389288;
                                 if (0 <= var54) {
                                   break L8;
                                 } else {
@@ -522,8 +568,8 @@ abstract class fsb extends ksa {
                                 }
                               }
                               L9: {
-                                var55 = Math.min(var53, -(var37 / 4) + 64) * param7[var34] >> 8;
-                                if (var55 >= 0) {
+                                var55 = Math.min(var53, -(var37 / 4) + 64) * param7[var34] >> -81674200;
+                                if ((var55 ^ -1) <= -1) {
                                   break L9;
                                 } else {
                                   var55 = 0;
@@ -531,7 +577,7 @@ abstract class fsb extends ksa {
                                 }
                               }
                               L10: {
-                                if (var55 != 0) {
+                                if (-1 != (var55 ^ -1)) {
                                   break L10;
                                 } else {
                                   if (var54 != 0) {
@@ -546,9 +592,9 @@ abstract class fsb extends ksa {
                                 }
                               }
                               L11: {
-                                var56 = var54 << 24 | param8;
+                                var56 = var54 << -1983148072 | param8;
                                 var57 = 1;
-                                if (bta.field_q == 0) {
+                                if ((bta.field_q ^ -1) == -1) {
                                   break L11;
                                 } else {
                                   L12: {
@@ -564,7 +610,7 @@ abstract class fsb extends ksa {
                                     var59 = wob.a(var45, var59, 1, var40, var44);
                                     var60 = wob.a(var45, var60, param2 + -6406, var39, var44);
                                     var61 = wob.a(var45, var61, 1, var40, var44);
-                                    if (var37 <= 0) {
+                                    if (-1 <= (var37 ^ -1)) {
                                       break L12;
                                     } else {
                                       var45 = 16 * var37 - -var44;
@@ -583,7 +629,7 @@ abstract class fsb extends ksa {
                                   var71 = param0.b(true, var61);
                                   var72 = param0.a(var64, (byte) 121);
                                   var73 = param0.b(true, var65);
-                                  var74 = param8 | var55 << 24;
+                                  var74 = param8 | var55 << 122085560;
                                   var75 = param8;
                                   hcb.a(8, var69, var57, var75, var46, var68, var67, var47, var56, var66, var75);
                                   hcb.a(8, var69, var57, var56, var48, var68, var47, var49, var74, var46, var75);
@@ -600,7 +646,7 @@ abstract class fsb extends ksa {
                                 L13: {
                                   L14: {
                                     var58_int = (int)(param0.field_a * 2048.0f);
-                                    if (var58_int >= 1) {
+                                    if (-2 >= (var58_int ^ -1)) {
                                       break L14;
                                     } else {
                                       var58_int = 1;
@@ -632,33 +678,35 @@ abstract class fsb extends ksa {
                   }
                   break L4;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           L16: {
             var9 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_47_0 = (RuntimeException) var9;
+            stackOut_47_0 = (RuntimeException) (var9);
             stackOut_47_1 = new StringBuilder().append("fsb.G(");
             stackIn_50_0 = stackOut_47_0;
             stackIn_50_1 = stackOut_47_1;
             stackIn_48_0 = stackOut_47_0;
             stackIn_48_1 = stackOut_47_1;
             if (param0 == null) {
-              stackOut_50_0 = (RuntimeException) (Object) stackIn_50_0;
-              stackOut_50_1 = (StringBuilder) (Object) stackIn_50_1;
+              stackOut_50_0 = (RuntimeException) ((Object) stackIn_50_0);
+              stackOut_50_1 = (StringBuilder) ((Object) stackIn_50_1);
               stackOut_50_2 = "null";
               stackIn_51_0 = stackOut_50_0;
               stackIn_51_1 = stackOut_50_1;
               stackIn_51_2 = stackOut_50_2;
               break L16;
             } else {
-              stackOut_48_0 = (RuntimeException) (Object) stackIn_48_0;
-              stackOut_48_1 = (StringBuilder) (Object) stackIn_48_1;
+              stackOut_48_0 = (RuntimeException) ((Object) stackIn_48_0);
+              stackOut_48_1 = (StringBuilder) ((Object) stackIn_48_1);
               stackOut_48_2 = "{...}";
               stackIn_51_0 = stackOut_48_0;
               stackIn_51_1 = stackOut_48_1;
@@ -667,23 +715,23 @@ abstract class fsb extends ksa {
             }
           }
           L17: {
-            stackOut_51_0 = (RuntimeException) (Object) stackIn_51_0;
+            stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
             stackOut_51_1 = ((StringBuilder) (Object) stackIn_51_1).append(stackIn_51_2).append(',');
             stackIn_54_0 = stackOut_51_0;
             stackIn_54_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;
             stackIn_52_1 = stackOut_51_1;
             if (param1 == null) {
-              stackOut_54_0 = (RuntimeException) (Object) stackIn_54_0;
-              stackOut_54_1 = (StringBuilder) (Object) stackIn_54_1;
+              stackOut_54_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackOut_54_1 = (StringBuilder) ((Object) stackIn_54_1);
               stackOut_54_2 = "null";
               stackIn_55_0 = stackOut_54_0;
               stackIn_55_1 = stackOut_54_1;
               stackIn_55_2 = stackOut_54_2;
               break L17;
             } else {
-              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
-              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
+              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
               stackOut_52_2 = "{...}";
               stackIn_55_0 = stackOut_52_0;
               stackIn_55_1 = stackOut_52_1;
@@ -692,23 +740,23 @@ abstract class fsb extends ksa {
             }
           }
           L18: {
-            stackOut_55_0 = (RuntimeException) (Object) stackIn_55_0;
+            stackOut_55_0 = (RuntimeException) ((Object) stackIn_55_0);
             stackOut_55_1 = ((StringBuilder) (Object) stackIn_55_1).append(stackIn_55_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_58_0 = stackOut_55_0;
             stackIn_58_1 = stackOut_55_1;
             stackIn_56_0 = stackOut_55_0;
             stackIn_56_1 = stackOut_55_1;
             if (param4 == null) {
-              stackOut_58_0 = (RuntimeException) (Object) stackIn_58_0;
-              stackOut_58_1 = (StringBuilder) (Object) stackIn_58_1;
+              stackOut_58_0 = (RuntimeException) ((Object) stackIn_58_0);
+              stackOut_58_1 = (StringBuilder) ((Object) stackIn_58_1);
               stackOut_58_2 = "null";
               stackIn_59_0 = stackOut_58_0;
               stackIn_59_1 = stackOut_58_1;
               stackIn_59_2 = stackOut_58_2;
               break L18;
             } else {
-              stackOut_56_0 = (RuntimeException) (Object) stackIn_56_0;
-              stackOut_56_1 = (StringBuilder) (Object) stackIn_56_1;
+              stackOut_56_0 = (RuntimeException) ((Object) stackIn_56_0);
+              stackOut_56_1 = (StringBuilder) ((Object) stackIn_56_1);
               stackOut_56_2 = "{...}";
               stackIn_59_0 = stackOut_56_0;
               stackIn_59_1 = stackOut_56_1;
@@ -717,23 +765,23 @@ abstract class fsb extends ksa {
             }
           }
           L19: {
-            stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
+            stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
             stackOut_59_1 = ((StringBuilder) (Object) stackIn_59_1).append(stackIn_59_2).append(',');
             stackIn_62_0 = stackOut_59_0;
             stackIn_62_1 = stackOut_59_1;
             stackIn_60_0 = stackOut_59_0;
             stackIn_60_1 = stackOut_59_1;
             if (param5 == null) {
-              stackOut_62_0 = (RuntimeException) (Object) stackIn_62_0;
-              stackOut_62_1 = (StringBuilder) (Object) stackIn_62_1;
+              stackOut_62_0 = (RuntimeException) ((Object) stackIn_62_0);
+              stackOut_62_1 = (StringBuilder) ((Object) stackIn_62_1);
               stackOut_62_2 = "null";
               stackIn_63_0 = stackOut_62_0;
               stackIn_63_1 = stackOut_62_1;
               stackIn_63_2 = stackOut_62_2;
               break L19;
             } else {
-              stackOut_60_0 = (RuntimeException) (Object) stackIn_60_0;
-              stackOut_60_1 = (StringBuilder) (Object) stackIn_60_1;
+              stackOut_60_0 = (RuntimeException) ((Object) stackIn_60_0);
+              stackOut_60_1 = (StringBuilder) ((Object) stackIn_60_1);
               stackOut_60_2 = "{...}";
               stackIn_63_0 = stackOut_60_0;
               stackIn_63_1 = stackOut_60_1;
@@ -742,23 +790,23 @@ abstract class fsb extends ksa {
             }
           }
           L20: {
-            stackOut_63_0 = (RuntimeException) (Object) stackIn_63_0;
+            stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
             stackOut_63_1 = ((StringBuilder) (Object) stackIn_63_1).append(stackIn_63_2).append(',').append(param6).append(',');
             stackIn_66_0 = stackOut_63_0;
             stackIn_66_1 = stackOut_63_1;
             stackIn_64_0 = stackOut_63_0;
             stackIn_64_1 = stackOut_63_1;
             if (param7 == null) {
-              stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
-              stackOut_66_1 = (StringBuilder) (Object) stackIn_66_1;
+              stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
               stackOut_66_2 = "null";
               stackIn_67_0 = stackOut_66_0;
               stackIn_67_1 = stackOut_66_1;
               stackIn_67_2 = stackOut_66_2;
               break L20;
             } else {
-              stackOut_64_0 = (RuntimeException) (Object) stackIn_64_0;
-              stackOut_64_1 = (StringBuilder) (Object) stackIn_64_1;
+              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
               stackOut_64_2 = "{...}";
               stackIn_67_0 = stackOut_64_0;
               stackIn_67_1 = stackOut_64_1;
@@ -766,7 +814,12 @@ abstract class fsb extends ksa {
               break L20;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_67_0, stackIn_67_2 + ',' + param8 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_67_0), stackIn_67_2 + ',' + param8 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -778,7 +831,7 @@ abstract class fsb extends ksa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "fsb.<init>()");
+          throw rta.a((Throwable) ((Object) var1), "fsb.<init>()");
         }
     }
 
@@ -786,27 +839,34 @@ abstract class fsb extends ksa {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
         try {
           L0: {
             if (param0) {
-              stackOut_3_0 = ((fsb) this).field_f;
+              stackOut_3_0 = this.field_f;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 19;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "fsb.H(" + param0 + ')');
+          throw rta.a((Throwable) ((Object) var2), "fsb.H(" + param0 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     static {

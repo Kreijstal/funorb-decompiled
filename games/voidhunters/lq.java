@@ -6,8 +6,11 @@ final class lq extends le {
     static String field_j;
 
     private final int c(int param0, int param1, int param2) {
+        if (param2 != 789221) {
+            field_j = (String) null;
+        }
         int var4 = param1 * 57 + param0;
-        var4 = var4 << 1 ^ var4;
+        var4 = var4 << -2144966559 ^ var4;
         return -((2147483647 & 1376312589 + (789221 + var4 * (var4 * 15731)) * var4) / 262144) + 4096;
     }
 
@@ -20,15 +23,16 @@ final class lq extends le {
     }
 
     final int[] a(int param0, boolean param1) {
+        int[] discarded$0 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = VoidHunters.field_G;
         if (!param1) {
-            int[] discarded$0 = ((lq) this).a(-57, false);
+            discarded$0 = this.a(-57, false);
         }
-        int[] var7 = ((lq) this).field_f.a((byte) -21, param0);
+        int[] var7 = this.field_f.a((byte) -21, param0);
         int[] var3 = var7;
-        if (((lq) this).field_f.field_e) {
+        if (this.field_f.field_e) {
             var4 = sj.field_p[param0];
             for (var5 = 0; var5 < hob.field_d; var5++) {
                 var7[var5] = this.c(grb.field_l[var5], var4, 789221) % 4096;
@@ -42,11 +46,7 @@ final class lq extends le {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_i = (dja) (Object) new upb();
+        field_i = (dja) ((Object) new upb());
         field_j = "Type your age in years";
     }
 }

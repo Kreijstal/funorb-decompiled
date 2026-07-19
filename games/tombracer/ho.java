@@ -8,12 +8,17 @@ final class ho {
 
     final synchronized static void a(int param0) {
         field_c = field_c - 1;
-        if (!(field_c != 0)) {
+        if (!((field_c ^ -1) != param0)) {
             ho.a(true);
         }
     }
 
     final synchronized static void b(boolean param0) {
+        if (param0) {
+            ho.a(76);
+            field_c = field_c + 1;
+            return;
+        }
         field_c = field_c + 1;
     }
 
@@ -23,10 +28,10 @@ final class ho {
           return;
         } else {
           L0: {
-            if (field_c > 0) {
+            if (param0 > (field_c ^ -1)) {
               var2 = new rw();
               var2.field_f = param1;
-              field_a.b((byte) -118, (vg) (Object) var2);
+              field_a.b((byte) -118, var2);
               break L0;
             } else {
               param1.w(false);
@@ -39,10 +44,16 @@ final class ho {
 
     final synchronized static void a(boolean param0) {
         rw var1 = null;
+        RuntimeException var1_ref = null;
         L0: while (true) {
-          var1 = (rw) (Object) field_a.c(-113);
+          var1 = (rw) ((Object) field_a.c(-113));
           if (var1 == null) {
-            return;
+            if (param0) {
+              return;
+            } else {
+              ho.a(-115);
+              return;
+            }
           } else {
             var1.field_f.w(true);
             var1.p(120);
@@ -52,10 +63,6 @@ final class ho {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 0;
         field_b = false;
         field_a = new vna();

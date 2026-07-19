@@ -16,15 +16,14 @@ final class fh {
         field_a = null;
         field_e = null;
         field_h = null;
+        if (param0 != -29988) {
+            return;
+        }
         field_b = null;
         field_f = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fh.A(";
         field_a = "Cancel draw";
         field_e = "Close";

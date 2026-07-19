@@ -7,21 +7,22 @@ final class bi extends wt {
 
     bi(byte[] param0) {
         try {
-            ((bi) this).field_n = param0;
+            this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "bi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "bi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(boolean param0) {
+        if (param0) {
+            field_o = (String) null;
+            field_o = null;
+            return;
+        }
         field_o = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
     }
 }

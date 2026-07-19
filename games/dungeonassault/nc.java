@@ -70,7 +70,7 @@ public class nc {
 
     public static File a(int param0, String param1) {
         if (param0 != 0) {
-            return null;
+            return (File) null;
         }
         return nc.a(param1, field_d, field_e, -6665);
     }
@@ -80,10 +80,6 @@ public class nc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_a = new Hashtable(16);
     }

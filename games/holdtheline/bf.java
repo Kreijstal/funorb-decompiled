@@ -11,6 +11,9 @@ final class bf implements Runnable {
 
     public static void a(byte param0) {
         field_b = null;
+        if (param0 != -48) {
+            return;
+        }
         field_a = null;
     }
 
@@ -20,67 +23,67 @@ final class bf implements Runnable {
         lo var2 = null;
         Throwable var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        String var5 = null;
         Throwable decompiledCaughtException = null;
         var4 = HoldTheLine.field_D;
-        ((bf) this).field_e = true;
+        this.field_e = true;
         try {
-          L0: while (true) {
-            if (((bf) this).field_f) {
-              ((bf) this).field_e = false;
-              return;
-            } else {
-              var1_int = 0;
-              L1: while (true) {
-                if (var1_int >= 2) {
-                  qe.a(10L, (byte) 45);
-                  vn.a(0, (Object) null, ((bf) this).field_c);
-                  continue L0;
-                } else {
-                  L2: {
-                    var2 = ((bf) this).field_d[var1_int];
-                    if (var2 == null) {
-                      var1_int++;
-                      var1_int++;
-                      break L2;
-                    } else {
-                      var2.d();
-                      var1_int++;
-                      break L2;
+          L0: {
+            try {
+              L1: {
+                L2: while (true) {
+                  if (this.field_f) {
+                    break L1;
+                  } else {
+                    var1_int = 0;
+                    L3: while (true) {
+                      if (-3 >= (var1_int ^ -1)) {
+                        qe.a(10L, (byte) 45);
+                        vn.a(0, (Object) null, this.field_c);
+                        continue L2;
+                      } else {
+                        L4: {
+                          var2 = this.field_d[var1_int];
+                          if (var2 == null) {
+                            break L4;
+                          } else {
+                            var2.d();
+                            break L4;
+                          }
+                        }
+                        var1_int++;
+                        continue L3;
+                      }
                     }
                   }
-                  var1_int++;
-                  continue L1;
                 }
               }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = (Exception) (Object) decompiledCaughtException;
+              var5 = (String) null;
+              bl.a((Throwable) ((Object) var1), (byte) 57, (String) null);
+              this.field_e = false;
+              return;
             }
+            break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Exception) (Object) decompiledCaughtException;
-          var5 = null;
-          bl.a((Throwable) (Object) var1, (byte) 57, (String) null);
-          ((bf) this).field_e = false;
-          return;
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
-          ((bf) this).field_e = false;
+          this.field_e = false;
           throw bf.<RuntimeException>$cfr$sneakyThrow(var3);
         }
+        this.field_e = false;
     }
 
     bf() {
-        ((bf) this).field_d = new lo[2];
-        ((bf) this).field_f = false;
-        ((bf) this).field_e = false;
+        this.field_d = new lo[2];
+        this.field_f = false;
+        this.field_e = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Shields";
         field_b = new long[32];
     }

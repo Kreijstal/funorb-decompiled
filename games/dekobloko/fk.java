@@ -124,7 +124,7 @@ final class fk extends a {
               }
             }
             var8 = stackIn_18_0;
-            rm.a(param2 - (-param4.field_D + -(param4.field_y - this.field_C[0].field_C >> 1)), this.field_C, param4.field_u + param1, param4.field_t, var7, -121);
+            rm.a(param2 - (-param4.field_D + -(param4.field_y - this.field_C[0].field_C >> 2089386273)), this.field_C, param4.field_u + param1, param4.field_t, var7, -121);
             discarded$1 = this.field_z.a(param4.field_E, param4.field_u + param1, -2 + (param4.field_D + param2), param4.field_t, param4.field_y, var8, -1, 1, 1, this.field_z.field_R);
             break L0;
           }

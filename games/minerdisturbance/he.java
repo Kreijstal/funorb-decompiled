@@ -22,10 +22,6 @@ final class he {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "he.A(";
         field_c = "OK";
         field_d = "Account created successfully!";

@@ -11,10 +11,10 @@ final class ns extends jm {
 
     final void b(lu param0, byte param1) {
         try {
-            er.a(((ns) this).field_n, 108, param0);
+            er.a(this.field_n, 108, param0);
             int var3_int = -18 / ((param1 - 37) / 38);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ns.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ns.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -26,7 +26,7 @@ final class ns extends jm {
     }
 
     final void a(boolean param0, op param1) {
-        aga var3 = ((ns) this).field_n.a(107, param1);
+        aga var3 = this.field_n.a(107, param1);
         if (!(var3 != null)) {
             return;
         }
@@ -35,14 +35,14 @@ final class ns extends jm {
             var3.field_A = param0 ? true : false;
             param1.field_R = false;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ns.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ns.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(String param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        Object var4 = null;
+        String var4 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -71,7 +71,7 @@ final class ns extends jm {
                   break L1;
                 } else {
                   L2: {
-                    if (param2 == 8) {
+                    if (-9 == (param2 ^ -1)) {
                       L3: {
                         param2 = 2;
                         if (!gfa.field_i) {
@@ -104,7 +104,7 @@ final class ns extends jm {
                     } else {
                       L6: {
                         if (uka.field_j) {
-                          param0 = lga.a(true, new String[1], ok.field_Cb);
+                          param0 = lga.a(true, new String[]{param0}, ok.field_Cb);
                           break L6;
                         } else {
                           break L6;
@@ -122,10 +122,10 @@ final class ns extends jm {
                       break L5;
                     }
                   }
-                  if (param2 == 256) {
+                  if (-257 == (param2 ^ -1)) {
                     break L1;
                   } else {
-                    if (param2 == 10) {
+                    if (-11 == (param2 ^ -1)) {
                       break L1;
                     } else {
                       if (gfa.field_i) {
@@ -142,7 +142,7 @@ final class ns extends jm {
             if (param1 == -11) {
               break L0;
             } else {
-              var4 = null;
+              var4 = (String) null;
               ns.a((String) null, 125, 54);
               return;
             }
@@ -151,23 +151,23 @@ final class ns extends jm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var3;
+            stackOut_24_0 = (RuntimeException) (var3);
             stackOut_24_1 = new StringBuilder().append("ns.D(");
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
               break L8;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
@@ -175,22 +175,22 @@ final class ns extends jm {
               break L8;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param1 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     ns(nq param0) {
         try {
-            ((ns) this).field_j = 8;
-            ((ns) this).field_n = param0;
+            this.field_j = 8;
+            this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ns.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ns.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(ub param0, int param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        op var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -210,12 +210,12 @@ final class ns extends jm {
         try {
           L0: {
             L1: {
-              param0.a(27799, (at) (Object) new gka(param0.field_o, (ns) this));
+              param0.a(27799, new gka(param0.field_o, (ns) (this)));
               if (param1 <= -2) {
                 break L1;
               } else {
-                var4 = null;
-                ((ns) this).a(false, (op) null);
+                var4 = (op) null;
+                this.a(false, (op) null);
                 break L1;
               }
             }
@@ -225,23 +225,23 @@ final class ns extends jm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ns.B(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -249,7 +249,7 @@ final class ns extends jm {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 

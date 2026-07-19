@@ -9,16 +9,30 @@ final class pj {
     static String field_e;
 
     final static void a(int param0) {
-        Object var2 = null;
+        String var2 = (String) null;
         nd.a((byte) 119, "", (String) null);
+        if (param0 != 256) {
+            pj.a(false);
+        }
     }
 
     public static void a(boolean param0) {
-        field_a = null;
-        field_c = null;
-        field_b = null;
-        field_d = null;
-        field_e = null;
+        if (param0) {
+          field_e = (String) null;
+          field_a = null;
+          field_c = null;
+          field_b = null;
+          field_d = null;
+          field_e = null;
+          return;
+        } else {
+          field_a = null;
+          field_c = null;
+          field_b = null;
+          field_d = null;
+          field_e = null;
+          return;
+        }
     }
 
     final static void a(int param0, int param1) {
@@ -30,7 +44,7 @@ final class pj {
         var3 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            var4 = (sa) (Object) fj.field_b.a((byte) -46);
+            var4 = (sa) ((Object) fj.field_b.a((byte) -46));
             L1: while (true) {
               if (var4 == null) {
                 L2: {
@@ -46,14 +60,14 @@ final class pj {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    fn.a(4, true);
+                    fn.a(param0, true);
                     var2 = tf.field_a.a(16213);
                     continue L3;
                   }
                 }
               } else {
-                te.a(param1 ^ -11514, var4, 4);
-                var4 = (sa) (Object) fj.field_b.a(param1 ^ -5038);
+                te.a(param1 ^ -11514, var4, param0);
+                var4 = (sa) ((Object) fj.field_b.a(param1 ^ -5038));
                 continue L1;
               }
             }
@@ -61,7 +75,7 @@ final class pj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var2_ref, "pj.C(" + 4 + ',' + param1 + ')');
+          throw kg.a((Throwable) ((Object) var2_ref), "pj.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -69,19 +83,15 @@ final class pj {
         try {
             qc.a(param1 + -142);
             if (param1 != 256) {
-                field_d = null;
+                field_d = (int[]) null;
             }
             param0.b();
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "pj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "pj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[256];
         field_b = "Warning: if you quit, you will lose any game you are in the middle of!";
         field_e = "Options";

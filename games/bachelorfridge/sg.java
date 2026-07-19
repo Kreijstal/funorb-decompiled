@@ -7,13 +7,14 @@ final class sg extends td {
     static boolean field_r;
 
     final ii a(op param0, int param1) {
+        ii discarded$1 = null;
         RuntimeException var3 = null;
         ps var4 = null;
         int var5 = 0;
         int var6 = 0;
         aga var7 = null;
         int var8 = 0;
-        Object var9 = null;
+        op var9 = null;
         aga var10 = null;
         ps stackIn_16_0 = null;
         RuntimeException stackIn_18_0 = null;
@@ -37,20 +38,20 @@ final class sg extends td {
         try {
           L0: {
             L1: {
-              var10 = ((sg) this).field_h.a(91, param0);
-              var4 = new ps(((sg) this).field_g, new nq(var10));
+              var10 = this.field_h.a(91, param0);
+              var4 = new ps(this.field_g, new nq(var10));
               var5 = 0;
               if (param1 == 3) {
                 break L1;
               } else {
-                var9 = null;
-                ii discarded$1 = ((sg) this).a((op) null, -50);
+                var9 = (op) null;
+                discarded$1 = this.a((op) null, -50);
                 break L1;
               }
             }
             L2: while (true) {
               if (var5 >= param0.field_d) {
-                stackOut_15_0 = (ps) var4;
+                stackOut_15_0 = (ps) (var4);
                 stackIn_16_0 = stackOut_15_0;
                 break L0;
               } else {
@@ -70,8 +71,8 @@ final class sg extends td {
                             break L4;
                           } else {
                             if (param0.field_a[var7.field_x][var7.field_J].field_l == null) {
-                              var4.field_o.a((bw) (Object) new iv(new nq(var7), false, 1, -10, 35), true);
-                              var4.field_o.a((bw) (Object) new cn(new nq(var7), var7.field_x, var7.field_J), true);
+                              var4.field_o.a(new iv(new nq(var7), false, 1, -10, 35), true);
+                              var4.field_o.a(new cn(new nq(var7), var7.field_x, var7.field_J), true);
                               break L4;
                             } else {
                               break L4;
@@ -93,23 +94,23 @@ final class sg extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var3;
+            stackOut_17_0 = (RuntimeException) (var3);
             stackOut_17_1 = new StringBuilder().append("sg.A(");
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -117,9 +118,9 @@ final class sg extends td {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ')');
         }
-        return (ii) (Object) stackIn_16_0;
+        return (ii) ((Object) stackIn_16_0);
     }
 
     sg(int param0, aga param1) {
@@ -127,7 +128,7 @@ final class sg extends td {
     }
 
     public static void c(byte param0) {
-        int var1 = 1;
+        int var1 = 46 % ((param0 - -42) / 51);
         field_q = null;
         field_p = null;
     }
@@ -136,15 +137,11 @@ final class sg extends td {
         if (param1 != 1816304479) {
             field_r = false;
         }
-        int var3 = param2 >> 31 & -1 + param0;
-        return var3 + ((param2 >>> 31) + param2) % param0;
+        int var3 = param2 >> 1816304479 & -1 + param0;
+        return var3 + ((param2 >>> -885124769) + param2) % param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = vv.a((byte) 121);
     }
 }

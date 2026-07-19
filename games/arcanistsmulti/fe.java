@@ -774,28 +774,36 @@ final class fe extends pg {
     }
 
     fe() {
-        ((fe) this).field_l = false;
+        this.field_l = false;
     }
 
     public static void a(int param0) {
+        byte discarded$2 = 0;
         field_k = null;
         field_h = null;
         field_o = null;
         field_m = null;
         field_g = null;
-        field_p = null;
-        field_n = null;
+        if (param0 != 32369) {
+          discarded$2 = fe.a((byte) -127, 'ﾎ');
+          field_p = null;
+          field_n = null;
+          return;
+        } else {
+          field_p = null;
+          field_n = null;
+          return;
+        }
     }
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, boolean param9, int param10, boolean param11) {
-        f.a(param8, param3, param2, param11, (byte) -38, 16777215, true, param4, param10, param7, param5, param6, 16777215, param1);
+        f.a(param8, param3, param2, param11, (byte) -38, 16777215, param9, param4, param10, param7, param5, param6, 16777215, param1);
+        if (!param0) {
+            field_h = (ll[]) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = new ch(0);
         field_m = "Reading Book of Stone";
         field_j = 4;

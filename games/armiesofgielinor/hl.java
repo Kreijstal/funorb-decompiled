@@ -20,29 +20,34 @@ final class hl extends je {
         wk var3 = null;
         int var4 = 0;
         int var5 = 0;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
-        var3 = new wk(param2, param2);
-        var4 = 0;
-        if (param0) {
-          field_Lb = null;
-          L0: while (true) {
-            if (var3.field_B.length <= var4) {
-              return var3;
-            } else {
-              var3.field_B[var4] = param1;
-              var4++;
-              continue L0;
-            }
+        wk stackIn_5_0 = null;
+        wk stackIn_6_0 = null;
+        wk stackOut_4_0 = null;
+        L0: {
+          var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var3 = new wk(param2, param2);
+          var4 = 0;
+          if (!param0) {
+            break L0;
+          } else {
+            field_Lb = (String) null;
+            break L0;
           }
-        } else {
-          L1: while (true) {
-            if (var3.field_B.length <= var4) {
-              return var3;
-            } else {
-              var3.field_B[var4] = param1;
+        }
+        L1: while (true) {
+          if (var3.field_B.length > var4) {
+            stackOut_4_0 = (wk) (var3);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_5_0 = stackOut_4_0;
+            if (var5 == 0) {
+              stackIn_6_0.field_B[var4] = param1;
               var4++;
               continue L1;
+            } else {
+              return stackIn_5_0;
             }
+          } else {
+            return var3;
           }
         }
     }
@@ -56,10 +61,6 @@ final class hl extends je {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Lb = "Ranged";
     }
 }

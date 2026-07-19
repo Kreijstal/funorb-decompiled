@@ -8,6 +8,12 @@ final class ej {
     int field_d;
 
     public static void a(int param0) {
+        if (param0 != -29373) {
+            field_a = (mg) null;
+            field_a = null;
+            field_b = null;
+            return;
+        }
         field_a = null;
         field_b = null;
     }
@@ -17,15 +23,11 @@ final class ej {
     }
 
     ej(int param0, int param1, int param2, int param3) {
-        ((ej) this).field_c = param3;
-        ((ej) this).field_d = param0;
+        this.field_c = param3;
+        this.field_d = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new ej(8, 0, 4, 1);
     }
 }

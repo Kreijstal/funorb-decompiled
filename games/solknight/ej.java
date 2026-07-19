@@ -10,10 +10,10 @@ abstract class ej extends gg {
     abstract ej a();
 
     final void b(int[] param0, int param1, int param2) {
-        if (((ej) this).field_k) {
-            ((ej) this).a(param0, param1, param2);
+        if (this.field_k) {
+            this.a(param0, param1, param2);
         } else {
-            ((ej) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -28,7 +28,7 @@ abstract class ej extends gg {
     abstract void a(int[] param0, int param1, int param2);
 
     protected ej() {
-        ((ej) this).field_k = true;
+        this.field_k = true;
     }
 
     abstract int d();

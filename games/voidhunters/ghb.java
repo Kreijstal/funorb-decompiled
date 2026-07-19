@@ -6,6 +6,7 @@ final class ghb extends ksa {
 
     final static fg c(byte param0) {
         try {
+            fg discarded$2 = null;
             Throwable var1 = null;
             fg stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
@@ -16,11 +17,11 @@ final class ghb extends ksa {
                   if (param0 == -127) {
                     break L1;
                   } else {
-                    fg discarded$2 = ghb.c((byte) 73);
+                    discarded$2 = ghb.c((byte) 73);
                     break L1;
                   }
                 }
-                stackOut_2_0 = (fg) Class.forName("an").newInstance();
+                stackOut_2_0 = (fg) (Class.forName("an").newInstance());
                 stackIn_3_0 = stackOut_2_0;
                 break L0;
               }
@@ -39,9 +40,9 @@ final class ghb extends ksa {
 
     ghb(byte[] param0) {
         try {
-            ((ghb) this).field_d = param0;
+            this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ghb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ghb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

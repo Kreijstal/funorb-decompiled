@@ -10,11 +10,12 @@ final class hj {
     private static String[] field_d;
 
     final boolean a(int param0, int param1, byte param2) {
+        boolean discarded$8 = false;
         if (param2 == -128) {
           if (0 <= param0) {
             if (0 <= param1) {
-              if (((hj) this).field_f > param0) {
-                if (((hj) this).field_a <= param1) {
+              if (this.field_f > param0) {
+                if (this.field_a <= param1) {
                   return false;
                 } else {
                   return true;
@@ -29,11 +30,11 @@ final class hj {
             return false;
           }
         } else {
-          boolean discarded$8 = ((hj) this).a(52, -84, (byte) -119);
+          discarded$8 = this.a(52, -84, (byte) -119);
           if (0 <= param0) {
             if (0 <= param1) {
-              if (((hj) this).field_f > param0) {
-                if (((hj) this).field_a <= param1) {
+              if (this.field_f > param0) {
+                if (this.field_a <= param1) {
                   return false;
                 } else {
                   return true;
@@ -53,52 +54,66 @@ final class hj {
     public static void a(boolean param0) {
         field_e = null;
         field_d = null;
+        if (param0) {
+            hj.a(false);
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
     private final int a(byte param0, int param1, int param2) {
-        return param2 + ((hj) this).field_f * param1;
+        if (param0 != -37) {
+          field_d = (String[]) null;
+          return param2 + this.field_f * param1;
+        } else {
+          return param2 + this.field_f * param1;
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        ((hj) this).field_c[this.a((byte) -37, param0, param3)] = param1;
+        this.field_c[this.a((byte) -37, param0, param3)] = param1;
         if (param2 != 0) {
-            field_d = null;
+            field_d = (String[]) null;
         }
     }
 
     final int b(byte param0, int param1, int param2) {
         if (param0 != -5) {
-          field_d = null;
-          return ((hj) this).field_c[this.a((byte) -37, param1, param2)];
+          field_d = (String[]) null;
+          return this.field_c[this.a((byte) -37, param1, param2)];
         } else {
-          return ((hj) this).field_c[this.a((byte) -37, param1, param2)];
+          return this.field_c[this.a((byte) -37, param1, param2)];
         }
     }
 
     hj(int param0, int param1, int param2) {
+        int var5 = TombRacer.field_G ? 1 : 0;
+        this.field_c = new int[param1 * param0];
+        this.field_a = param1;
+        this.field_f = param0;
         int var4 = 0;
-        ((hj) this).field_c = new int[param1 * param0];
-        ((hj) this).field_a = param1;
-        ((hj) this).field_f = param0;
-        for (var4 = 0; ((hj) this).field_c.length > var4; var4++) {
-            ((hj) this).field_c[var4] = param2;
+        while (this.field_c.length > var4) {
+            this.field_c[var4] = param2;
+            var4++;
+            if (var5 != 0) {
+                return;
+            }
         }
     }
 
     final static void a(eua param0, byte param1) {
         try {
-            rua.field_gb.b(-127, (jea) (Object) param0);
+            if (param1 < 120) {
+                field_d = (String[]) null;
+            }
+            rua.field_gb.b(-127, param0);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "hj.D(" + (param0 != null ? "{...}" : "null") + ',' + 122 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "hj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Join";
         field_e = "You have entered another game.";
         field_d = new String[17];

@@ -7,6 +7,11 @@ final class be {
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 > -103) {
+            field_a = (String) null;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
@@ -19,38 +24,42 @@ final class be {
         var3 = EscapeVector.field_A;
         try {
           L0: {
-            var4 = (bd) (Object) rd.field_b.a(false);
-            L1: while (true) {
+            L1: {
+              if (param1 == 17205) {
+                break L1;
+              } else {
+                be.a((byte) 71);
+                break L1;
+              }
+            }
+            var4 = (bd) ((Object) rd.field_b.a(false));
+            L2: while (true) {
               if (var4 == null) {
                 var2 = nf.field_w.a(false);
-                L2: while (true) {
+                L3: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    q.c(6, (byte) -63);
+                    q.c(param0, (byte) -63);
                     var2 = nf.field_w.b((byte) 70);
-                    continue L2;
+                    continue L3;
                   }
                 }
               } else {
-                r.a(-118, var4, 6);
-                var4 = (bd) (Object) rd.field_b.b((byte) 70);
-                continue L1;
+                r.a(-118, var4, param0);
+                var4 = (bd) ((Object) rd.field_b.b((byte) 70));
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2_ref, "be.B(" + 6 + ',' + 17205 + ')');
+          throw t.a((Throwable) ((Object) var2_ref), "be.B(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Play Tutorial";
         cn discarded$0 = new cn();
     }

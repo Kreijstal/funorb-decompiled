@@ -10,6 +10,7 @@ final class ji extends rqa {
     }
 
     final static boolean b(boolean param0) {
+        boolean discarded$2 = false;
         boolean[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -18,6 +19,7 @@ final class ji extends rqa {
         boolean[] var5 = null;
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_4_0 = 0;
@@ -32,9 +34,10 @@ final class ji extends rqa {
                 if (param0) {
                   stackOut_9_0 = 1;
                   stackIn_10_0 = stackOut_9_0;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  boolean discarded$2 = ji.b(false);
+                  discarded$2 = ji.b(false);
                   return true;
                 }
               } else {
@@ -45,7 +48,8 @@ final class ji extends rqa {
                 } else {
                   stackOut_4_0 = 0;
                   stackIn_5_0 = stackOut_4_0;
-                  return stackIn_5_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             }
@@ -53,88 +57,105 @@ final class ji extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1_ref, "ji.D(" + param0 + ')');
+          throw rta.a((Throwable) ((Object) var1_ref), "ji.D(" + param0 + ')');
         }
-        return stackIn_10_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0 != 0;
+        } else {
+          return stackIn_10_0 != 0;
+        }
     }
 
     final static void e(int param0) {
         ana var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = VoidHunters.field_G;
         try {
           L0: {
-            L1: {
-              flb.field_o.h();
-              aaa.field_b.h();
-              m.field_o = m.field_o - 1;
-              if (m.field_o == 0) {
-                m.field_o = 200;
-                var1 = (ana) (Object) cg.field_p.d(0);
-                L2: while (true) {
-                  if (var1 == null) {
-                    if (rd.field_o == null) {
-                      break L1;
-                    } else {
-                      var1 = (ana) (Object) rd.field_o.d(0);
-                      L3: while (true) {
-                        if (var1 == null) {
-                          break L1;
-                        } else {
-                          L4: {
-                            if (var1.field_g.b((byte) -63)) {
-                              break L4;
-                            } else {
-                              var1.b(-3846);
-                              break L4;
+            if (param0 == 200) {
+              L1: {
+                flb.field_o.h();
+                aaa.field_b.h();
+                m.field_o = m.field_o - 1;
+                if (m.field_o == 0) {
+                  m.field_o = 200;
+                  var1 = (ana) ((Object) cg.field_p.d(0));
+                  L2: while (true) {
+                    if (var1 == null) {
+                      if (rd.field_o == null) {
+                        break L1;
+                      } else {
+                        var1 = (ana) ((Object) rd.field_o.d(0));
+                        L3: while (true) {
+                          if (var1 == null) {
+                            break L1;
+                          } else {
+                            L4: {
+                              if (var1.field_g.b((byte) -63)) {
+                                break L4;
+                              } else {
+                                var1.b(-3846);
+                                break L4;
+                              }
                             }
+                            var1 = (ana) ((Object) rd.field_o.a((byte) 47));
+                            continue L3;
                           }
-                          var1 = (ana) (Object) rd.field_o.a((byte) 47);
-                          continue L3;
                         }
                       }
-                    }
-                  } else {
-                    L5: {
-                      if (var1.field_g.b((byte) -63)) {
-                        break L5;
-                      } else {
-                        var1.b(-3846);
-                        break L5;
+                    } else {
+                      L5: {
+                        if (var1.field_g.b((byte) -63)) {
+                          break L5;
+                        } else {
+                          var1.b(-3846);
+                          break L5;
+                        }
                       }
+                      var1 = (ana) ((Object) cg.field_p.a((byte) 96));
+                      continue L2;
                     }
-                    var1 = (ana) (Object) cg.field_p.a((byte) 96);
-                    continue L2;
                   }
+                } else {
+                  break L1;
                 }
-              } else {
-                break L1;
               }
-            }
-            L6: {
-              if (aab.field_o == null) {
-                break L6;
-              } else {
-                if (aab.field_o.c(-100)) {
+              L6: {
+                if (aab.field_o == null) {
                   break L6;
                 } else {
-                  dha.field_u = null;
-                  return;
+                  if (aab.field_o.c(-100)) {
+                    break L6;
+                  } else {
+                    dha.field_u = null;
+                    return;
+                  }
                 }
               }
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1_ref, "ji.B(" + 200 + ')');
+          throw rta.a((Throwable) ((Object) var1_ref), "ji.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final nc a(nc[] param0, int param1) {
+        boolean discarded$2 = false;
         RuntimeException var3 = null;
         nc stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -160,12 +181,12 @@ final class ji extends rqa {
               if (param1 < -119) {
                 break L1;
               } else {
-                boolean discarded$2 = ji.b(true);
+                discarded$2 = ji.b(true);
                 break L1;
               }
             }
             qua.field_b = param0[0].d(0);
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -173,23 +194,23 @@ final class ji extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ji.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -197,21 +218,20 @@ final class ji extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     public static void a(int param0) {
+        if (param0 != 200) {
+            return;
+        }
         field_o = null;
         field_p = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new int[8192];
     }
 }

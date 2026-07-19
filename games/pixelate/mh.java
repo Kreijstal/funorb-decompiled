@@ -15,10 +15,10 @@ final class mh {
             if (param1 < 73) {
                 field_b = 37;
             }
-            bn.field_I.a((ak) (Object) bo.field_h, (byte) 26);
+            bn.field_I.a(bo.field_h, (byte) 26);
             un.field_l = true;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class mh {
           }
         }
         L1: {
-          var9 = 0;
+          var9 = param3;
           if (t.field_e <= param2) {
             break L1;
           } else {
@@ -83,11 +83,11 @@ final class mh {
             break L3;
           }
         }
-        if (var7 > 0) {
+        if (-1 > (var7 ^ -1)) {
           if (var6 <= 0) {
             return;
           } else {
-            wd.a(t.field_k, -123, param1, var6, var9, var4, var5, var7, var8, hp.field_Gb.field_G);
+            wd.a(t.field_k, param3 ^ -123, param1, var6, var9, var4, var5, var7, var8, hp.field_Gb.field_G);
             return;
           }
         } else {

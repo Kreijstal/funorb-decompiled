@@ -18,7 +18,7 @@ final class lp extends Exception {
         field_f = null;
         field_a = null;
         field_b = null;
-        int var1 = -115;
+        int var1 = 115 / ((param0 - -7) / 44);
         field_c = null;
     }
 
@@ -38,15 +38,23 @@ final class lp extends Exception {
             var1_int = 0;
             L1: while (true) {
               if (256 <= var1_int) {
-                var5 = 256;
-                var1_int = var5;
-                L2: while (true) {
+                L2: {
+                  var5 = 256;
+                  var1_int = var5;
+                  if (!param0) {
+                    break L2;
+                  } else {
+                    field_g = (al[]) null;
+                    break L2;
+                  }
+                }
+                L3: while (true) {
                   if (var5 >= em.field_b.length) {
                     break L0;
                   } else {
                     em.field_b[var5] = 255;
                     var5++;
-                    continue L2;
+                    continue L3;
                   }
                 }
               } else {
@@ -60,7 +68,7 @@ final class lp extends Exception {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var1, "lp.A(" + false + ')');
+          throw pn.a((Throwable) ((Object) var1), "lp.A(" + param0 + ')');
         }
     }
 
@@ -68,10 +76,6 @@ final class lp extends Exception {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[8192];
         field_f = new gu("usename");
         field_e = new int[8192];

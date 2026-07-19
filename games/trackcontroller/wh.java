@@ -10,10 +10,10 @@ abstract class wh extends fc {
     abstract void a(int[] param0, int param1, int param2);
 
     final void b(int[] param0, int param1, int param2) {
-        if (((wh) this).field_k) {
-            ((wh) this).a(param0, param1, param2);
+        if (this.field_k) {
+            this.a(param0, param1, param2);
         } else {
-            ((wh) this).d(param2);
+            this.d(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class wh extends fc {
     abstract int c();
 
     protected wh() {
-        ((wh) this).field_k = true;
+        this.field_k = true;
     }
 }

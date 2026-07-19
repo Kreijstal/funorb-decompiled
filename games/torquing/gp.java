@@ -13,9 +13,9 @@ final class gp extends tk implements wg {
     public final sk a(int param0) {
         if (param0 != -10116) {
             field_K = -4;
-            return ((gp) this).field_N;
+            return this.field_N;
         }
-        return ((gp) this).field_N;
+        return this.field_N;
     }
 
     gp(String param0, ca param1, int param2) {
@@ -25,21 +25,21 @@ final class gp extends tk implements wg {
     final void a(int param0, gm param1, int param2, int param3) {
         try {
             super.a(-73, param1, param2, param3);
-            ((gp) this).field_O = -((gp) this).field_w + n.field_t + -param3;
+            this.field_O = -this.field_w + n.field_t + -param3;
             int var5_int = -91 % ((param0 - -28) / 43);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "gp.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "gp.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final String b(int param0) {
-        if (((gp) this).field_s) {
-          if (((gp) this).field_n != null) {
-            bm.a(k.field_e, (byte) 113, -((gp) this).field_O + (((gp) this).field_p + n.field_t));
+        if (this.field_s) {
+          if (this.field_n != null) {
+            bm.a(k.field_e, (byte) 113, -this.field_O + (this.field_p + n.field_t));
             if (param0 != 0) {
-              return null;
+              return (String) null;
             } else {
-              return ((gp) this).field_n;
+              return this.field_n;
             }
           } else {
             return null;
@@ -53,8 +53,8 @@ final class gp extends tk implements wg {
         int var2 = 0;
         super.l(100);
         var2 = -94 / ((-17 - param0) / 63);
-        if (null != ((gp) this).field_N) {
-          ((gp) this).field_N.a(true);
+        if (null != this.field_N) {
+          this.field_N.a(true);
           return;
         } else {
           return;
@@ -82,7 +82,7 @@ final class gp extends tk implements wg {
         try {
           L0: {
             L1: {
-              ((gp) this).field_N = param0;
+              this.field_N = param0;
               if (param1 > 74) {
                 break L1;
               } else {
@@ -96,23 +96,23 @@ final class gp extends tk implements wg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("gp.F(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -120,7 +120,7 @@ final class gp extends tk implements wg {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -128,6 +128,11 @@ final class gp extends tk implements wg {
         field_L = null;
         field_M = null;
         field_P = null;
+        if (param0 <= 113) {
+            field_K = -13;
+            field_Q = null;
+            return;
+        }
         field_Q = null;
     }
 
@@ -135,7 +140,7 @@ final class gp extends tk implements wg {
         dc.field_a.h(6);
         if (param0 != -34) {
           L0: {
-            field_P = null;
+            field_P = (String) null;
             if (d.field_r == null) {
               d.field_r = new sp(dc.field_a, bi.field_u);
               break L0;
@@ -143,7 +148,7 @@ final class gp extends tk implements wg {
               break L0;
             }
           }
-          dc.field_a.a((gm) (Object) d.field_r, (byte) 112);
+          dc.field_a.a(d.field_r, (byte) 112);
           return;
         } else {
           L1: {
@@ -154,16 +159,12 @@ final class gp extends tk implements wg {
               break L1;
             }
           }
-          dc.field_a.a((gm) (Object) d.field_r, (byte) 112);
+          dc.field_a.a(d.field_r, (byte) 112);
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_L = new k(8, 0, 4, 1);
         field_Q = "to return to the normal view.";
         field_M = "Next";

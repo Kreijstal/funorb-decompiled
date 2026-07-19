@@ -77,16 +77,16 @@ final class lia extends pw {
                 if (var24 > 4096) {
                   break L1;
                 } else {
-                  var25 = var24 * var24 >> 12;
-                  var26 = var24 * var25 >> 12;
+                  var25 = var24 * var24 >> -2115857012;
+                  var26 = var24 * var25 >> 673008108;
                   var27 = var18 * var26;
                   var28 = var19 * var26;
                   var29 = var25 * var20;
                   var30 = var21 * var25;
                   var31 = var24 * var22;
                   var32 = var23 * var24;
-                  var33 = (var29 + (var27 + var31) >> 12) + param3;
-                  var34 = (var32 + var28 + var30 >> 12) + param8;
+                  var33 = (var29 + (var27 + var31) >> 1145396172) + param3;
+                  var34 = (var32 + var28 + var30 >> 2063301740) + param8;
                   rsa.a(param5, var33, param9 ^ 56, var11, var34, var10_int);
                   var11 = var34;
                   var10_int = var33;
@@ -105,7 +105,7 @@ final class lia extends pw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var10, "lia.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw rta.a((Throwable) ((Object) var10), "lia.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -124,13 +124,12 @@ final class lia extends pw {
     }
 
     private final void b(byte param0) {
+        if (param0 < 120) {
+            lia.a(30, 28, 74, -119, -54, -124, 48, 123, 14, (byte) 25);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "To Customer Support";
     }
 }

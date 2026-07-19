@@ -12,16 +12,16 @@ final class gg {
 
     final void a(int param0) {
         L0: {
-          if (((gg) this).field_d != null) {
-            ((gg) this).field_d.a(12574);
+          if (this.field_d != null) {
+            this.field_d.a(12574);
             break L0;
           } else {
             break L0;
           }
         }
-        ((gg) this).field_a = false;
+        this.field_a = false;
         if (param0 != -17253) {
-          ((gg) this).field_d = null;
+          this.field_d = (eja) null;
           return;
         } else {
           return;
@@ -30,8 +30,8 @@ final class gg {
 
     final boolean a(boolean param0) {
         if (!param0) {
-          if (((gg) this).field_a) {
-            if (((gg) this).field_g) {
+          if (this.field_a) {
+            if (this.field_g) {
               return false;
             } else {
               return true;
@@ -41,8 +41,8 @@ final class gg {
           }
         } else {
           gg.a((byte) 69);
-          if (((gg) this).field_a) {
-            if (((gg) this).field_g) {
+          if (this.field_a) {
+            if (this.field_g) {
               return false;
             } else {
               return true;
@@ -65,14 +65,10 @@ final class gg {
     }
 
     gg(boolean param0) {
-        ((gg) this).field_g = param0 ? true : false;
+        this.field_g = param0 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new vna();
     }
 }

@@ -10,14 +10,14 @@ final class ph extends ki {
     static String field_E;
 
     final int a(boolean param0) {
-        if (null == ((ph) this).field_G) {
+        if (null == this.field_G) {
           return 0;
         } else {
           if (!param0) {
-            ((ph) this).field_F = (byte) 65;
-            return 100 * ((ph) this).field_G.field_k / (-((ph) this).field_F + ((ph) this).field_G.field_r.length);
+            this.field_F = (byte) 65;
+            return 100 * this.field_G.field_k / (-this.field_F + this.field_G.field_r.length);
           } else {
-            return 100 * ((ph) this).field_G.field_k / (-((ph) this).field_F + ((ph) this).field_G.field_r.length);
+            return 100 * this.field_G.field_k / (-this.field_F + this.field_G.field_r.length);
           }
         }
     }
@@ -25,16 +25,20 @@ final class ph extends ki {
     final static void a(int param0, qc param1, int param2, int param3, int param4, qc param5) {
         le.field_k = param3;
         nh.field_h = param2;
+        if (param0 != 14835) {
+            return;
+        }
         try {
             nh.field_f = param4;
             ld.field_y = param5;
             pk.field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ph.B(" + 14835 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "ph.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(String param0, int param1, java.awt.Color param2, int param3, boolean param4) {
+        boolean discarded$1 = false;
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
@@ -119,11 +123,11 @@ final class ph extends ki {
                     var10.fillRect(2, 2, 3 * param3, 30);
                     var10.setColor(java.awt.Color.black);
                     var10.drawRect(1, 1, 301, 31);
-                    var10.fillRect(3 * param3 + 2, 2, -(3 * param3) + 300, 30);
+                    var10.fillRect(3 * param3 + 2, param1, -(3 * param3) + 300, 30);
                     var10.setFont(sj.field_F);
                     var10.setColor(java.awt.Color.white);
                     var10.drawString(param0, (-(6 * param0.length()) + 304) / 2, 22);
-                    boolean discarded$1 = var9.drawImage(wc.field_C, lk.field_j / 2 + -152, -18 + td.field_d / 2, (java.awt.image.ImageObserver) null);
+                    discarded$1 = var9.drawImage(wc.field_C, lk.field_j / 2 + -152, -18 + td.field_d / 2, (java.awt.image.ImageObserver) null);
                     break L5;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -165,23 +169,23 @@ final class ph extends ki {
           decompiledCaughtException = decompiledCaughtParameter2;
           L8: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var5_ref;
+            stackOut_18_0 = (RuntimeException) (var5_ref);
             stackOut_18_1 = new StringBuilder().append("ph.C(");
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L8;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -190,23 +194,23 @@ final class ph extends ki {
             }
           }
           L9: {
-            stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(2).append(',');
+            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param1).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param2 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L9;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -214,23 +218,23 @@ final class ph extends ki {
               break L9;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param3 + ',' + param4 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final byte[] g(int param0) {
         if (param0 == -27203) {
-          if (!((ph) this).field_w) {
-            if (((ph) this).field_G.field_k < -((ph) this).field_F + ((ph) this).field_G.field_r.length) {
+          if (!this.field_w) {
+            if (this.field_G.field_k < -this.field_F + this.field_G.field_r.length) {
               throw new RuntimeException();
             } else {
-              return ((ph) this).field_G.field_r;
+              return this.field_G.field_r;
             }
           } else {
             throw new RuntimeException();
           }
         } else {
-          return null;
+          return (byte[]) null;
         }
     }
 
@@ -243,10 +247,6 @@ final class ph extends ki {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_B = 20000000L;
         field_E = "FULL ACCESS";
     }

@@ -7,17 +7,20 @@ final class bc {
     static long[] field_b;
 
     final synchronized static byte[] a(boolean param0, int param1) {
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
+        int fieldTemp$8 = 0;
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;
         L0: {
-          if (param1 != 100) {
+          if ((param1 ^ -1) != -101) {
             break L0;
           } else {
             if (hk.field_Hb <= 0) {
               break L0;
             } else {
-              int fieldTemp$6 = hk.field_Hb - 1;
+              fieldTemp$6 = hk.field_Hb - 1;
               hk.field_Hb = hk.field_Hb - 1;
               var2_ref_byte__ = k.field_b[fieldTemp$6];
               k.field_b[hk.field_Hb] = null;
@@ -29,8 +32,8 @@ final class bc {
           if (param1 != 5000) {
             break L1;
           } else {
-            if (te.field_i > 0) {
-              int fieldTemp$7 = te.field_i - 1;
+            if (-1 > (te.field_i ^ -1)) {
+              fieldTemp$7 = te.field_i - 1;
               te.field_i = te.field_i - 1;
               var2_ref_byte__ = sm.field_b[fieldTemp$7];
               sm.field_b[te.field_i] = null;
@@ -45,7 +48,7 @@ final class bc {
             break L2;
           } else {
             if (nm.field_b > 0) {
-              int fieldTemp$8 = nm.field_b - 1;
+              fieldTemp$8 = nm.field_b - 1;
               nm.field_b = nm.field_b - 1;
               var2_ref_byte__ = bj.field_k[fieldTemp$8];
               bj.field_k[nm.field_b] = null;
@@ -56,14 +59,21 @@ final class bc {
           }
         }
         L3: {
-          field_c = 50;
-          if (gk.field_c == null) {
+          if (!param0) {
             break L3;
           } else {
+            field_c = 50;
+            break L3;
+          }
+        }
+        L4: {
+          if (gk.field_c == null) {
+            break L4;
+          } else {
             var2 = 0;
-            L4: while (true) {
+            L5: while (true) {
               if (var2 >= a.field_E.length) {
-                break L3;
+                break L4;
               } else {
                 if (param1 == a.field_E[var2]) {
                   if (nh.field_s[var2] > 0) {
@@ -73,11 +83,11 @@ final class bc {
                     return var3;
                   } else {
                     var2++;
-                    continue L4;
+                    continue L5;
                   }
                 } else {
                   var2++;
-                  continue L4;
+                  continue L5;
                 }
               }
             }
@@ -471,13 +481,12 @@ final class bc {
     public static void a(byte param0) {
         field_a = null;
         field_b = null;
+        if (param0 != -101) {
+            bc.a(true, (byte) -43);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new long[1000];
     }
 }

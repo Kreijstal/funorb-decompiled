@@ -36,13 +36,13 @@ final class sdb extends rqa {
             L2: {
               var1 = null;
               var2 = null;
-              if (ow.field_b != 0) {
+              if ((ow.field_b ^ -1) != -1) {
                 break L2;
               } else {
                 if (null == ohb.field_o) {
                   break L2;
                 } else {
-                  var2 = (Object) (Object) ldb.field_p;
+                  var2 = ldb.field_p;
                   break L2;
                 }
               }
@@ -59,7 +59,7 @@ final class sdb extends rqa {
                       if (!uaa.a(nkb.field_o, (byte) -47)) {
                         break L5;
                       } else {
-                        var2 = (Object) (Object) isa.a(cc.field_d, new String[1], 78);
+                        var2 = isa.a(cc.field_d, new String[]{waa.field_x}, 78);
                         if (var10 == 0) {
                           break L4;
                         } else {
@@ -67,11 +67,11 @@ final class sdb extends rqa {
                         }
                       }
                     }
-                    var2 = (Object) (Object) isa.a(fab.field_b, new String[1], 114);
+                    var2 = isa.a(fab.field_b, new String[]{waa.field_x}, 114);
                     break L4;
                   }
                   if (uga.field_d) {
-                    lh.a((byte) -112, 0, (String) null, (String) null, (String) var2, 2);
+                    lh.a((byte) -112, 0, (String) null, (String) null, (String) (var2), 2);
                     fj.b(param0 ^ -22377);
                     break L3;
                   } else {
@@ -90,7 +90,7 @@ final class sdb extends rqa {
                   if (qw.field_l != null) {
                     break L6;
                   } else {
-                    var2 = (Object) (Object) tta.field_o;
+                    var2 = tta.field_o;
                     break L6;
                   }
                 }
@@ -98,7 +98,7 @@ final class sdb extends rqa {
             }
             L7: {
               if (var2 != null) {
-                flb.a(19204, (String) var2, 0, (String) null, kmb.field_a);
+                flb.a(19204, (String) (var2), 0, (String) null, kmb.field_a);
                 break L7;
               } else {
                 L8: {
@@ -109,12 +109,12 @@ final class sdb extends rqa {
                     var5 = "|";
                     var6 = ow.field_b;
                     var7 = 0;
-                    if (var6 != 2) {
+                    if ((var6 ^ -1) != -3) {
                       break L9;
                     } else {
                       L10: {
-                        var4 = isa.a(tia.field_G, new String[1], 91);
-                        var8 = isa.a(ejb.field_o, new String[1], 79);
+                        var4 = isa.a(tia.field_G, new String[]{waa.field_x}, 91);
+                        var8 = isa.a(ejb.field_o, new String[]{var3}, 79);
                         var7 = fgb.field_l.field_hb + (bpa.field_c.field_hb - 485 + ej.field_c.b(var8)) + -ej.field_c.b(var4);
                         if (0 <= var7) {
                           break L10;
@@ -166,7 +166,7 @@ final class sdb extends rqa {
                             }
                           }
                         }
-                        var4 = "[" + isa.a(wt.field_b, new String[1], param0 + 8147) + "] ";
+                        var4 = "[" + isa.a(wt.field_b, new String[]{lqa.field_o.field_Vb}, param0 + 8147) + "] ";
                         break L11;
                       }
                     }
@@ -218,16 +218,16 @@ final class sdb extends rqa {
                           break L17;
                         } else {
                           if (!erb.field_p) {
-                            var1 = (Object) (Object) vq.field_y;
+                            var1 = vq.field_y;
                             break L17;
                           } else {
-                            var1 = (Object) (Object) "Broken!";
+                            var1 = "Broken!";
                             break L17;
                           }
                         }
                       }
                     }
-                    if (bpa.field_c.field_o == 0) {
+                    if (-1 == (bpa.field_c.field_o ^ -1)) {
                       break L8;
                     } else {
                       if (var9 > bpa.field_c.field_r) {
@@ -256,7 +256,7 @@ final class sdb extends rqa {
                   if (!fgb.field_l.field_O) {
                     break L19;
                   } else {
-                    var1 = (Object) (Object) isa.a(rc.field_a, new String[2], 100);
+                    var1 = isa.a(rc.field_a, new String[]{var3, waa.field_x}, 100);
                     break L19;
                   }
                 }
@@ -269,10 +269,10 @@ final class sdb extends rqa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Object) (Object) decompiledCaughtException;
-          throw rta.a((Throwable) var1, "sdb.B(" + param0 + ')');
+          var1 = decompiledCaughtException;
+          throw rta.a((Throwable) (var1), "sdb.B(" + param0 + ')');
         }
-        return (String) (Object) stackIn_94_0;
+        return (String) ((Object) stackIn_94_0);
     }
 
     final nc a(nc[] param0, int param1) {
@@ -301,11 +301,11 @@ final class sdb extends rqa {
               if (param1 < -119) {
                 break L1;
               } else {
-                field_o = null;
+                field_o = (String) null;
                 break L1;
               }
             }
-            stackOut_3_0 = new nc((Object) (Object) frb.a(48, 117));
+            stackOut_3_0 = new nc(frb.a(48, 117));
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
@@ -313,23 +313,23 @@ final class sdb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("sdb.A(");
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
@@ -337,7 +337,7 @@ final class sdb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -352,15 +352,11 @@ final class sdb extends rqa {
             field_p = null;
             int var1_int = -99 % ((-65 - param0) / 39);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sdb.C(" + param0 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "sdb.C(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Scale up map zone";
     }
 }

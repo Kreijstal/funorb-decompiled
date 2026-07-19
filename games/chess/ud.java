@@ -8,14 +8,16 @@ final class ud {
     static km field_c;
 
     final synchronized static long a(int param0) {
+        tm[] discarded$4 = null;
+        tm[] discarded$5 = null;
         long var1 = 0L;
-        Object var3 = null;
+        jk var3 = null;
         var1 = System.currentTimeMillis();
         if (v.field_a <= var1) {
           v.field_a = var1;
           if (param0 != 2) {
-            var3 = null;
-            tm[] discarded$4 = ud.a(-100, (jk) null);
+            var3 = (jk) null;
+            discarded$4 = ud.a(-100, (jk) null);
             return var1 + cl.field_b;
           } else {
             return var1 + cl.field_b;
@@ -26,31 +28,33 @@ final class ud {
           if (param0 == 2) {
             return var1 + cl.field_b;
           } else {
-            var3 = null;
-            tm[] discarded$5 = ud.a(-100, (jk) null);
+            var3 = (jk) null;
+            discarded$5 = ud.a(-100, (jk) null);
             return var1 + cl.field_b;
           }
         }
     }
 
     public static void a(byte param0) {
+        if (param0 != -109) {
+            return;
+        }
         field_c = null;
         field_d = null;
     }
 
     final static tm[] a(int param0, jk param1) {
+        tm[] discarded$1 = null;
         RuntimeException var2 = null;
         int[] var3 = null;
         tm[] var4 = null;
         int var5 = 0;
         tm var6 = null;
         int var7 = 0;
-        Object var8 = null;
+        jk var8 = null;
         nl var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
         tm[] stackIn_4_0 = null;
         tm[] stackIn_10_0 = null;
         tm[] stackIn_17_0 = null;
@@ -61,6 +65,7 @@ final class ud {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         tm[] stackOut_3_0 = null;
         tm[] stackOut_16_0 = null;
@@ -79,40 +84,40 @@ final class ud {
             if (!param1.a(true)) {
               stackOut_3_0 = new tm[]{};
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               var9 = param1.a(param0 + -624985114);
               L1: while (true) {
                 if (var9.field_f != 0) {
-                  if (var9.field_f != 2) {
+                  if (-3 != (var9.field_f ^ -1)) {
                     L2: {
                       if (param0 == 624968802) {
                         break L2;
                       } else {
-                        var8 = null;
-                        tm[] discarded$1 = ud.a(42, (jk) null);
+                        var8 = (jk) null;
+                        discarded$1 = ud.a(42, (jk) null);
                         break L2;
                       }
                     }
-                    var13 = (int[]) var9.field_b;
-                    var12 = var13;
-                    var11 = var12;
+                    var11 = (int[]) (var9.field_b);
                     var10 = var11;
                     var3 = var10;
-                    var4 = new tm[var13.length >> 2];
+                    var4 = new tm[var11.length >> 254555330];
                     var5 = 0;
                     L3: while (true) {
                       if (var4.length <= var5) {
-                        stackOut_16_0 = (tm[]) var4;
+                        stackOut_16_0 = (tm[]) (var4);
                         stackIn_17_0 = stackOut_16_0;
+                        decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
                         var6 = new tm();
                         var4[var5] = var6;
-                        var6.field_g = var3[var5 << 2];
-                        var6.field_e = var3[1 + (var5 << 2)];
-                        var6.field_i = var3[2 + (var5 << 2)];
-                        var6.field_f = var3[3 + (var5 << 2)];
+                        var6.field_g = var3[var5 << -1550667262];
+                        var6.field_e = var3[1 + (var5 << -157112990)];
+                        var6.field_i = var3[2 + (var5 << 624968802)];
+                        var6.field_f = var3[3 + (var5 << 1710185090)];
                         var5++;
                         continue L3;
                       }
@@ -120,7 +125,8 @@ final class ud {
                   } else {
                     stackOut_9_0 = new tm[]{};
                     stackIn_10_0 = stackOut_9_0;
-                    return stackIn_10_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 } else {
                   bc.a(10L, (byte) 95);
@@ -133,23 +139,23 @@ final class ud {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var2;
+            stackOut_18_0 = (RuntimeException) (var2);
             stackOut_18_1 = new StringBuilder().append("ud.C(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -157,9 +163,17 @@ final class ud {
               break L4;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
         }
-        return stackIn_17_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_10_0;
+          } else {
+            return stackIn_17_0;
+          }
+        }
     }
 
     static {

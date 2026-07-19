@@ -8,6 +8,12 @@ final class tb {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != -7778) {
+            field_a = (String) null;
+            field_a = null;
+            field_c = null;
+            return;
+        }
         field_a = null;
         field_c = null;
     }
@@ -27,6 +33,7 @@ final class tb {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         byte[] stackOut_10_0 = null;
         byte[] stackOut_8_0 = null;
@@ -42,77 +49,92 @@ final class tb {
         String stackOut_18_2 = null;
         try {
           L0: {
-            if (param1 >= 57) {
-              break L0;
-            } else {
-              field_b = null;
-              break L0;
-            }
-          }
-          if (param2 != null) {
-            if (param2 instanceof byte[]) {
-              var3 = (byte[]) param2;
-              if (param0) {
-                stackOut_10_0 = gs.a((byte) 120, var3);
-                stackIn_11_0 = stackOut_10_0;
-                return stackIn_11_0;
+            L1: {
+              if (param1 >= 57) {
+                break L1;
               } else {
-                stackOut_8_0 = (byte[]) var3;
-                stackIn_9_0 = stackOut_8_0;
-                return stackIn_9_0;
-              }
-            } else {
-              if (param2 instanceof nu) {
-                var4 = (nu) param2;
-                stackOut_14_0 = var4.a(false);
-                stackIn_15_0 = stackOut_14_0;
-                return stackIn_15_0;
-              } else {
-                throw new IllegalArgumentException();
+                field_b = (java.awt.Font) null;
+                break L1;
               }
             }
-          } else {
-            stackOut_3_0 = null;
-            stackIn_4_0 = stackOut_3_0;
-            return (byte[]) (Object) stackIn_4_0;
+            if (param2 != null) {
+              if (param2 instanceof byte[]) {
+                var3 = (byte[]) (param2);
+                if (param0) {
+                  stackOut_10_0 = gs.a((byte) 120, var3);
+                  stackIn_11_0 = stackOut_10_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
+                } else {
+                  stackOut_8_0 = (byte[]) (var3);
+                  stackIn_9_0 = stackOut_8_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                }
+              } else {
+                if (param2 instanceof nu) {
+                  var4 = (nu) (param2);
+                  stackOut_14_0 = var4.a(false);
+                  stackIn_15_0 = stackOut_14_0;
+                  decompiledRegionSelector0 = 3;
+                  break L0;
+                } else {
+                  throw new IllegalArgumentException();
+                }
+              }
+            } else {
+              stackOut_3_0 = null;
+              stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var3_ref;
+            stackOut_17_0 = (RuntimeException) (var3_ref);
             stackOut_17_1 = new StringBuilder().append("tb.A(").append(param0).append(',').append(param1).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param2 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
-              break L1;
+              break L2;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
               stackIn_20_2 = stackOut_18_2;
-              break L1;
+              break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return (byte[]) ((Object) stackIn_4_0);
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_11_0;
+            } else {
+              return stackIn_15_0;
+            }
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new eaa();
         field_a = "Names should contain a maximum of 12 characters";
     }

@@ -26,6 +26,7 @@ final class vp extends hn implements ng {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
@@ -39,46 +40,47 @@ final class vp extends hn implements ng {
         try {
           L0: {
             L1: {
-              ((vp) this).field_y.a(0);
+              this.field_y.a(0);
               if (param0 == null) {
                 break L1;
               } else {
                 if (param0.length != 0) {
                   var3_int = param0.length;
-                  ((vp) this).field_J = new String[var3_int];
+                  this.field_J = new String[var3_int];
                   var4_int = 0;
                   L2: while (true) {
                     if (var3_int <= var4_int) {
                       L3: {
                         var4 = new je(dg.field_e, 0, 1);
-                        ((vp) this).field_H = new lg[1 + var3_int];
+                        this.field_H = new lg[1 + var3_int];
                         if (param1 < -41) {
                           break L3;
                         } else {
-                          field_D = null;
+                          field_D = (la) null;
                           break L3;
                         }
                       }
                       var5 = 0;
                       L4: while (true) {
                         if (var5 >= var3_int) {
-                          ((vp) this).field_H[var3_int] = new lg(jf.field_b, (ca) this);
-                          ((vp) this).field_H[var3_int].field_q = (el) (Object) var4;
-                          ((vp) this).field_H[var3_int].a((byte) -36, 0, (var3_int + 1) * 16 + 20, 15, 100);
-                          ((vp) this).a((gm) (Object) ((vp) this).field_H[var3_int], -6938);
+                          this.field_H[var3_int] = new lg(jf.field_b, (ca) (this));
+                          this.field_H[var3_int].field_q = (el) ((Object) var4);
+                          this.field_H[var3_int].a((byte) -36, 0, (var3_int + 1) * 16 + 20, 15, 100);
+                          this.a(this.field_H[var3_int], -6938);
+                          decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
-                          ((vp) this).field_H[var5] = new lg(((vp) this).field_J[var5], (ca) this);
-                          ((vp) this).field_H[var5].field_q = (el) (Object) var4;
-                          ((vp) this).field_H[var5].field_n = ai.field_l;
-                          ((vp) this).field_H[var5].a((byte) 123, 0, 20 + var5 * 16, 15, 80);
-                          ((vp) this).a((gm) (Object) ((vp) this).field_H[var5], -6938);
+                          this.field_H[var5] = new lg(this.field_J[var5], (ca) (this));
+                          this.field_H[var5].field_q = (el) ((Object) var4);
+                          this.field_H[var5].field_n = ai.field_l;
+                          this.field_H[var5].a((byte) 123, 0, 20 + var5 * 16, 15, 80);
+                          this.a(this.field_H[var5], -6938);
                           var5++;
                           continue L4;
                         }
                       }
                     } else {
-                      ((vp) this).field_J[var4_int] = ab.a((byte) -114, (CharSequence) (Object) param0[var4_int]).replace(' ', ' ');
+                      this.field_J[var4_int] = ab.a((byte) -114, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }
@@ -88,30 +90,31 @@ final class vp extends hn implements ng {
                 }
               }
             }
-            ((vp) this).field_J = null;
-            return;
+            this.field_J = null;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var3;
+            stackOut_16_0 = (RuntimeException) (var3);
             stackOut_16_1 = new StringBuilder().append("vp.A(");
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -119,16 +122,21 @@ final class vp extends hn implements ng {
               break L5;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     vp(ba param0) {
         super(0, 0, 0, 0, (el) null);
         try {
-            ((vp) this).field_B = param0;
+            this.field_B = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "vp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "vp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -157,18 +165,18 @@ final class vp extends hn implements ng {
           L0: {
             var6_int = 0;
             L1: while (true) {
-              if (var6_int >= ((vp) this).field_J.length) {
+              if (var6_int >= this.field_J.length) {
                 L2: {
                   if (param0 <= -85) {
                     break L2;
                   } else {
-                    field_C = null;
+                    field_C = (String[]) null;
                     break L2;
                   }
                 }
                 L3: {
-                  if (param1 == ((vp) this).field_H[((vp) this).field_J.length]) {
-                    ((vp) this).field_B.a((byte) 97);
+                  if (param1 == this.field_H[this.field_J.length]) {
+                    this.field_B.a((byte) 97);
                     break L3;
                   } else {
                     break L3;
@@ -177,8 +185,8 @@ final class vp extends hn implements ng {
                 break L0;
               } else {
                 L4: {
-                  if (param1 == ((vp) this).field_H[var6_int]) {
-                    ((vp) this).field_B.a((byte) 21, ((vp) this).field_J[var6_int]);
+                  if (param1 == this.field_H[var6_int]) {
+                    this.field_B.a((byte) 21, this.field_J[var6_int]);
                     break L4;
                   } else {
                     break L4;
@@ -193,23 +201,23 @@ final class vp extends hn implements ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var6;
+            stackOut_13_0 = (RuntimeException) (var6);
             stackOut_13_1 = new StringBuilder().append("vp.NA(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -217,21 +225,22 @@ final class vp extends hn implements ng {
               break L5;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
+        int discarded$0 = 0;
         super.a(param0, (byte) -114, param2, param3);
-        if (param0 != 0) {
+        if (-1 != (param0 ^ -1)) {
             return;
         }
         if (param1 >= -7) {
             return;
         }
         uc var5 = dg.field_e;
-        if (null != ((vp) this).field_J) {
-            int discarded$0 = var5.a(bi.field_I, param3 - -((vp) this).field_w, param2 - -((vp) this).field_k, ((vp) this).field_p, 20, 16777215, -1, 0, 0, var5.field_t + var5.field_x);
+        if (null != this.field_J) {
+            discarded$0 = var5.a(bi.field_I, param3 - -this.field_w, param2 - -this.field_k, this.field_p, 20, 16777215, -1, 0, 0, var5.field_t + var5.field_x);
         }
     }
 
@@ -240,22 +249,34 @@ final class vp extends hn implements ng {
         field_D = null;
         field_F = null;
         field_G = null;
+        if (param0 != -1) {
+            field_C = (String[]) null;
+        }
     }
 
     final static void b(int param0, int param1) {
         try {
+            Object discarded$1 = null;
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                Object discarded$1 = hp.a(ip.a(9), new Object[1], 28989, "resizing");
+                L1: {
+                  discarded$1 = hp.a(ip.a(9), new Object[]{new Integer(param0)}, 28989, "resizing");
+                  if (param1 < -57) {
+                    break L1;
+                  } else {
+                    field_G = (String) null;
+                    break L1;
+                  }
+                }
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
+              L2: {
                 var2 = decompiledCaughtException;
-                break L1;
+                break L2;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -279,6 +300,7 @@ final class vp extends hn implements ng {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_5_0 = false;
         int stackOut_10_0 = 0;
@@ -295,49 +317,53 @@ final class vp extends hn implements ng {
         try {
           L0: {
             if (!super.a(param0, param1, param2, -96)) {
-              if (param0 == 98) {
-                stackOut_5_0 = ((vp) this).a((byte) 66, param1);
+              if ((param0 ^ -1) == -99) {
+                stackOut_5_0 = this.a((byte) 66, param1);
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 var5_int = -103 % ((-33 - param3) / 57);
-                if (param0 != 99) {
+                if ((param0 ^ -1) != -100) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_8_0 = ((vp) this).b(param1, -9928);
+                  stackOut_8_0 = this.b(param1, -9928);
                   stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               }
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var5;
+            stackOut_12_0 = (RuntimeException) (var5);
             stackOut_12_1 = new StringBuilder().append("vp.D(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L1;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -345,16 +371,24 @@ final class vp extends hn implements ng {
               break L1;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ',' + param3 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_11_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_9_0;
+            } else {
+              return stackIn_11_0 != 0;
+            }
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = new String[]{"All scores", "My scores", "Best each"};
         field_E = 0;
         field_G = "<col=2>Surfaces:</col>";

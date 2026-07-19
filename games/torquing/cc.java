@@ -9,7 +9,7 @@ final class cc {
 
     public static void a(byte param0) {
         field_d = null;
-        int var1 = 20;
+        int var1 = 20 / ((param0 - -5) / 58);
         field_b = null;
         field_a = null;
     }
@@ -42,14 +42,14 @@ final class cc {
               if (param1 > 1) {
                 break L1;
               } else {
-                field_d = null;
+                field_d = (cb) null;
                 break L1;
               }
             }
             var4 = new byte[param0];
             var3 = var4;
             dk.a(param2, 0, var4, 0, param0);
-            stackOut_2_0 = (byte[]) var4;
+            stackOut_2_0 = (byte[]) (var4);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -57,23 +57,23 @@ final class cc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_0 = (RuntimeException) (var3_ref);
             stackOut_4_1 = new StringBuilder().append("cc.B(").append(param0).append(',').append(param1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -81,16 +81,12 @@ final class cc {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Names cannot start or end with space or underscore";
         field_a = new k(2, 4, 4, 0);
     }

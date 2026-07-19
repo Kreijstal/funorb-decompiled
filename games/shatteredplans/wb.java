@@ -13,12 +13,12 @@ final class wb {
         if (param0 > -96) {
             wb.a(79);
         }
-        cn var2 = ((wb) this).field_e;
-        if (!(var2 != ((wb) this).field_c)) {
-            ((wb) this).field_e = null;
+        cn var2 = this.field_e;
+        if (!(var2 != this.field_c)) {
+            this.field_e = null;
             return null;
         }
-        ((wb) this).field_e = var2.field_x;
+        this.field_e = var2.field_x;
         return var2;
     }
 
@@ -27,17 +27,17 @@ final class wb {
         int var3 = 0;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         L0: while (true) {
-          var2 = ((wb) this).field_c.field_x;
-          if (((wb) this).field_c != var2) {
+          var2 = this.field_c.field_x;
+          if (this.field_c != var2) {
             var2.f((byte) -62);
             continue L0;
           } else {
             L1: {
-              ((wb) this).field_e = null;
+              this.field_e = null;
               if (param0 == 112) {
                 break L1;
               } else {
-                ((wb) this).a((byte) 101);
+                this.a((byte) 101);
                 break L1;
               }
             }
@@ -47,15 +47,16 @@ final class wb {
     }
 
     final int c(int param0) {
+        int discarded$0 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = 0;
-        cn var3 = ((wb) this).field_c.field_x;
-        while (((wb) this).field_c != var3) {
+        cn var3 = this.field_c.field_x;
+        while (this.field_c != var3) {
             var3 = var3.field_x;
             var2++;
         }
         if (param0 != -7432) {
-            int discarded$0 = ((wb) this).c(107);
+            discarded$0 = this.c(107);
         }
         return var2;
     }
@@ -74,8 +75,6 @@ final class wb {
         int var9 = 0;
         int[][] var10 = null;
         int[][] var11 = null;
-        int[][] var12 = null;
-        int[][] var13 = null;
         int[][] stackIn_29_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -98,18 +97,16 @@ final class wb {
         try {
           L0: {
             var2_int = param0.length;
-            var13 = new int[var2_int][var2_int];
-            var12 = var13;
-            var11 = var12;
+            var11 = new int[var2_int][var2_int];
             var10 = var11;
             var3 = var10;
             var4 = 0;
             L1: while (true) {
               if (var4 >= var2_int) {
-                var4 = 0;
+                var4 = param1;
                 L2: while (true) {
                   if (var2_int <= var4) {
-                    stackOut_28_0 = (int[][]) var3;
+                    stackOut_28_0 = (int[][]) (var3);
                     stackIn_29_0 = stackOut_28_0;
                     break L0;
                   } else {
@@ -127,23 +124,23 @@ final class wb {
                             continue L3;
                           } else {
                             L5: {
-                              if (-1 == var13[var5][var4]) {
+                              if (-1 == var11[var5][var4]) {
                                 break L5;
                               } else {
-                                if (-1 != var13[var4][var9]) {
+                                if (-1 != var11[var4][var9]) {
                                   L6: {
-                                    var7 = var13[var4][var9] + var13[var5][var4];
-                                    if (var13[var5][var9] == -1) {
+                                    var7 = var11[var4][var9] + var11[var5][var4];
+                                    if (var11[var5][var9] == -1) {
                                       break L6;
                                     } else {
-                                      if (var7 >= var13[var5][var9]) {
+                                      if (var7 >= var11[var5][var9]) {
                                         break L5;
                                       } else {
                                         break L6;
                                       }
                                     }
                                   }
-                                  var13[var5][var9] = var7;
+                                  var11[var5][var9] = var7;
                                   break L5;
                                 } else {
                                   break L5;
@@ -162,7 +159,7 @@ final class wb {
                 var5 = 0;
                 L7: while (true) {
                   if (var5 >= var2_int) {
-                    var13[var4][var4] = 0;
+                    var11[var4][var4] = 0;
                     var5_ref_ln__ = param0[var4].field_D;
                     var6 = 0;
                     L8: while (true) {
@@ -175,7 +172,7 @@ final class wb {
                           if (var7_ref_ln.field_R != param0[var4].field_R) {
                             break L9;
                           } else {
-                            var13[var4][var7_ref_ln.field_p] = 1;
+                            var11[var4][var7_ref_ln.field_p] = 1;
                             break L9;
                           }
                         }
@@ -184,7 +181,7 @@ final class wb {
                       }
                     }
                   } else {
-                    var13[var4][var5] = -1;
+                    var11[var4][var5] = -1;
                     var5++;
                     continue L7;
                   }
@@ -196,23 +193,23 @@ final class wb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var2 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var2;
+            stackOut_30_0 = (RuntimeException) (var2);
             stackOut_30_1 = new StringBuilder().append("wb.C(");
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param0 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "null";
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
               break L10;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_33_0 = stackOut_31_0;
               stackIn_33_1 = stackOut_31_1;
@@ -220,7 +217,7 @@ final class wb {
               break L10;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ',' + 0 + ')');
+          throw r.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ',' + param1 + ')');
         }
         return stackIn_29_0;
     }
@@ -233,12 +230,12 @@ final class wb {
             if (!(null == param1.field_u)) {
                 param1.f((byte) -62);
             }
-            param1.field_x = ((wb) this).field_c;
-            param1.field_u = ((wb) this).field_c.field_u;
+            param1.field_x = this.field_c;
+            param1.field_u = this.field_c.field_u;
             param1.field_u.field_x = param1;
             param1.field_x.field_u = param1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "wb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "wb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -248,14 +245,14 @@ final class wb {
         field_b = null;
         field_a = null;
         if (param0 >= -72) {
-            field_a = null;
+            field_a = (String[]) null;
         }
     }
 
     public wb() {
-        ((wb) this).field_c = new cn();
-        ((wb) this).field_c.field_u = ((wb) this).field_c;
-        ((wb) this).field_c.field_x = ((wb) this).field_c;
+        this.field_c = new cn();
+        this.field_c.field_u = this.field_c;
+        this.field_c.field_x = this.field_c;
     }
 
     final static boolean b(int param0) {
@@ -272,10 +269,10 @@ final class wb {
         }
         L1: {
           L2: {
-            if (gm.field_i < 10) {
+            if (-11 < (gm.field_i ^ -1)) {
               break L2;
             } else {
-              if (ma.field_p < 13) {
+              if (-14 < (ma.field_p ^ -1)) {
                 break L2;
               } else {
                 stackOut_4_0 = 1;
@@ -292,23 +289,19 @@ final class wb {
     }
 
     final cn e(int param0) {
-        cn var2 = ((wb) this).field_c.field_x;
-        if (!(((wb) this).field_c != var2)) {
-            ((wb) this).field_e = null;
+        cn var2 = this.field_c.field_x;
+        if (!(this.field_c != var2)) {
+            this.field_e = null;
             return null;
         }
         if (param0 != -31364) {
-            field_d = null;
+            field_d = (String) null;
         }
-        ((wb) this).field_e = var2.field_x;
+        this.field_e = var2.field_x;
         return var2;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "You cannot add yourself!";
         field_d = "Error connecting to server. Please try using a different server.";
         field_a = new String[255];

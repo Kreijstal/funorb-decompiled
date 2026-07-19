@@ -31,18 +31,18 @@ final class rj extends vo {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var4 = ((rj) this).field_r * param0 >> 12;
-        var5 = param2 * ((rj) this).field_p >> 12;
-        var6 = ((rj) this).field_s * param0 >> 12;
+        var4 = this.field_r * param0 >> 1291318284;
+        var5 = param2 * this.field_p >> 1774861004;
+        var6 = this.field_s * param0 >> -903849492;
         if (param1 != -25222) {
           return;
         } else {
-          var7 = ((rj) this).field_n * param2 >> 12;
-          var8 = param0 * ((rj) this).field_g >> 12;
-          var9 = ((rj) this).field_h * param2 >> 12;
-          var10 = ((rj) this).field_k * param0 >> 12;
-          var11 = param2 * ((rj) this).field_m >> 12;
-          ok.a(var5, false, var11, var7, var4, var6, var8, var9, var10, ((rj) this).field_f);
+          var7 = this.field_n * param2 >> 837395372;
+          var8 = param0 * this.field_g >> 617557900;
+          var9 = this.field_h * param2 >> -882733876;
+          var10 = this.field_k * param0 >> 503105292;
+          var11 = param2 * this.field_m >> -146848180;
+          ok.a(var5, false, var11, var7, var4, var6, var8, var9, var10, this.field_f);
           return;
         }
     }
@@ -52,7 +52,7 @@ final class rj extends vo {
             java.net.URL var2 = null;
             Exception var2_ref = null;
             RuntimeException var2_ref2 = null;
-            Object var3 = null;
+            java.applet.Applet var3 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
             RuntimeException stackIn_8_0 = null;
@@ -76,7 +76,7 @@ final class rj extends vo {
                     if (param0 == -30136) {
                       break L1;
                     } else {
-                      var3 = null;
+                      var3 = (java.applet.Applet) null;
                       rj.a(33, (java.applet.Applet) null);
                       break L1;
                     }
@@ -96,23 +96,23 @@ final class rj extends vo {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_0 = (RuntimeException) (var2_ref2);
                 stackOut_6_1 = new StringBuilder().append("rj.G(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
@@ -120,7 +120,7 @@ final class rj extends vo {
                   break L2;
                 }
               }
-              throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+              throw pe.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -135,28 +135,24 @@ final class rj extends vo {
 
     rj(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         super(-1, param8, param9);
-        ((rj) this).field_p = param1;
-        ((rj) this).field_h = param5;
-        ((rj) this).field_m = param7;
-        ((rj) this).field_s = param2;
-        ((rj) this).field_k = param6;
-        ((rj) this).field_n = param3;
-        ((rj) this).field_g = param4;
-        ((rj) this).field_r = param0;
+        this.field_p = param1;
+        this.field_h = param5;
+        this.field_m = param7;
+        this.field_s = param2;
+        this.field_k = param6;
+        this.field_n = param3;
+        this.field_g = param4;
+        this.field_r = param0;
     }
 
     public static void b(byte param0) {
         field_q = null;
-        int var1 = 0;
+        int var1 = -2 % ((param0 - -17) / 59);
         field_o = null;
         field_l = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = 15;
         field_o = "You must play <%1> more rated games before playing with the current options.";
     }

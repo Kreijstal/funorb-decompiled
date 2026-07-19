@@ -17,14 +17,15 @@ class ce extends nb {
     public static void d(int param0) {
         field_r = null;
         field_v = null;
+        if (param0 >= -121) {
+            field_q = false;
+            field_t = null;
+            return;
+        }
         field_t = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ce.E(";
         field_v = new int[8192];
         field_p = 0;

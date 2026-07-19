@@ -11,15 +11,11 @@ final class ch {
         field_b = null;
         field_a = null;
         if (param0 <= 35) {
-            field_a = null;
+            field_a = (e) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ch.A(";
         field_b = "Unpacking animations";
         field_a = new e(9, 0, 4, 1);

@@ -10,38 +10,38 @@ final class gb {
         if (null != param1.field_j) {
             param1.h(0);
         }
-        param1.field_j = ((gb) this).field_a.field_j;
+        param1.field_j = this.field_a.field_j;
         if (param0 <= 116) {
             return;
         }
         try {
-            param1.field_p = ((gb) this).field_a;
+            param1.field_p = this.field_a;
             param1.field_j.field_p = param1;
             param1.field_p.field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "gb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "gb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final ta c(int param0) {
         ta var2 = null;
         if (param0 == 24542) {
-          var2 = ((gb) this).field_b;
-          if (((gb) this).field_a == var2) {
-            ((gb) this).field_b = null;
+          var2 = this.field_b;
+          if (this.field_a == var2) {
+            this.field_b = null;
             return null;
           } else {
-            ((gb) this).field_b = var2.field_p;
+            this.field_b = var2.field_p;
             return var2;
           }
         } else {
-          ((gb) this).field_a = null;
-          var2 = ((gb) this).field_b;
-          if (((gb) this).field_a == var2) {
-            ((gb) this).field_b = null;
+          this.field_a = (ta) null;
+          var2 = this.field_b;
+          if (this.field_a == var2) {
+            this.field_b = null;
             return null;
           } else {
-            ((gb) this).field_b = var2.field_p;
+            this.field_b = var2.field_p;
             return var2;
           }
         }
@@ -51,15 +51,15 @@ final class gb {
         int var2 = 0;
         ta var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        ta var5 = null;
         var4 = Torquing.field_u;
         if (param0 != -24088) {
-          var5 = null;
-          ((gb) this).a((byte) -124, (ta) null);
+          var5 = (ta) null;
+          this.a((byte) -124, (ta) null);
           var2 = 0;
-          var3 = ((gb) this).field_a.field_p;
+          var3 = this.field_a.field_p;
           L0: while (true) {
-            if (((gb) this).field_a == var3) {
+            if (this.field_a == var3) {
               return var2;
             } else {
               var3 = var3.field_p;
@@ -69,9 +69,9 @@ final class gb {
           }
         } else {
           var2 = 0;
-          var3 = ((gb) this).field_a.field_p;
+          var3 = this.field_a.field_p;
           L1: while (true) {
-            if (((gb) this).field_a == var3) {
+            if (this.field_a == var3) {
               return var2;
             } else {
               var3 = var3.field_p;
@@ -86,8 +86,8 @@ final class gb {
         int var2 = 0;
         ta var3 = null;
         var2 = 25 / ((69 - param0) / 55);
-        var3 = ((gb) this).field_a.field_p;
-        if (var3 == ((gb) this).field_a) {
+        var3 = this.field_a.field_p;
+        if (var3 == this.field_a) {
           return null;
         } else {
           var3.h(0);
@@ -97,15 +97,15 @@ final class gb {
 
     final ta a(byte param0) {
         ta var2 = null;
-        var2 = ((gb) this).field_a.field_p;
-        if (var2 == ((gb) this).field_a) {
-          ((gb) this).field_b = null;
+        var2 = this.field_a.field_p;
+        if (var2 == this.field_a) {
+          this.field_b = null;
           return null;
         } else {
           if (param0 >= -35) {
-            return null;
+            return (ta) null;
           } else {
-            ((gb) this).field_b = var2.field_p;
+            this.field_b = var2.field_p;
             return var2;
           }
         }
@@ -113,13 +113,13 @@ final class gb {
 
     public static void d(int param0) {
         field_c = null;
-        int var1 = -51;
+        int var1 = -51 / ((-42 - param0) / 39);
     }
 
     public gb() {
-        ((gb) this).field_a = new ta();
-        ((gb) this).field_a.field_p = ((gb) this).field_a;
-        ((gb) this).field_a.field_j = ((gb) this).field_a;
+        this.field_a = new ta();
+        this.field_a.field_p = this.field_a;
+        this.field_a.field_j = this.field_a;
     }
 
     static {

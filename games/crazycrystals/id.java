@@ -25,7 +25,7 @@ class id {
     private od[] field_a;
 
     int h() throws Exception {
-        return ((id) this).field_f;
+        return this.field_f;
     }
 
     void f() {
@@ -37,25 +37,26 @@ class id {
             Exception var3 = null;
             int var3_int = 0;
             int var4 = 0;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            if (!((id) this).field_n) {
+            if (!this.field_n) {
               var1 = lo.a((byte) -46);
               try {
                 L0: {
                   L1: {
-                    if (var1 <= ((id) this).field_k + 6000L) {
+                    if (var1 <= this.field_k + 6000L) {
                       break L1;
                     } else {
-                      ((id) this).field_k = var1 - 6000L;
+                      this.field_k = var1 - 6000L;
                       break L1;
                     }
                   }
                   L2: while (true) {
-                    if (var1 <= ((id) this).field_k + 5000L) {
+                    if (var1 <= this.field_k + 5000L) {
                       break L0;
                     } else {
                       this.a(256);
-                      ((id) this).field_k = ((id) this).field_k + (long)(256000 / field_m);
+                      this.field_k = this.field_k + (long)(256000 / field_m);
                       var1 = lo.a((byte) 119);
                       continue L2;
                     }
@@ -65,38 +66,39 @@ class id {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 L3: {
                   var3 = (Exception) (Object) decompiledCaughtException;
-                  ((id) this).field_k = var1;
+                  this.field_k = var1;
                   break L3;
                 }
               }
-              if (((id) this).field_d != null) {
+              if (this.field_d != null) {
                 try {
                   L4: {
                     L5: {
-                      if (((id) this).field_g == 0L) {
+                      if (this.field_g == 0L) {
                         break L5;
                       } else {
-                        if (var1 >= ((id) this).field_g) {
-                          ((id) this).b(((id) this).field_f);
-                          ((id) this).field_g = 0L;
-                          ((id) this).field_e = true;
+                        if (var1 >= this.field_g) {
+                          this.b(this.field_f);
+                          this.field_g = 0L;
+                          this.field_e = true;
                           break L5;
                         } else {
-                          return;
+                          decompiledRegionSelector0 = 0;
+                          break L4;
                         }
                       }
                     }
                     L6: {
-                      var3_int = ((id) this).h();
-                      if (((id) this).field_j - var3_int <= ((id) this).field_r) {
+                      var3_int = this.h();
+                      if (this.field_j - var3_int <= this.field_r) {
                         break L6;
                       } else {
-                        ((id) this).field_r = ((id) this).field_j - var3_int;
+                        this.field_r = this.field_j - var3_int;
                         break L6;
                       }
                     }
                     L7: {
-                      var4 = ((id) this).field_i + ((id) this).field_b;
+                      var4 = this.field_i + this.field_b;
                       if (var4 + 256 <= 16384) {
                         break L7;
                       } else {
@@ -105,27 +107,27 @@ class id {
                       }
                     }
                     L8: {
-                      if (var4 + 256 <= ((id) this).field_f) {
+                      if (var4 + 256 <= this.field_f) {
                         break L8;
                       } else {
                         L9: {
-                          ((id) this).field_f = ((id) this).field_f + 1024;
-                          if (((id) this).field_f <= 16384) {
+                          this.field_f = this.field_f + 1024;
+                          if (this.field_f <= 16384) {
                             break L9;
                           } else {
-                            ((id) this).field_f = 16384;
+                            this.field_f = 16384;
                             break L9;
                           }
                         }
-                        ((id) this).f();
-                        ((id) this).b(((id) this).field_f);
+                        this.f();
+                        this.b(this.field_f);
                         var3_int = 0;
-                        ((id) this).field_e = true;
-                        if (var4 + 256 <= ((id) this).field_f) {
+                        this.field_e = true;
+                        if (var4 + 256 <= this.field_f) {
                           break L8;
                         } else {
-                          var4 = ((id) this).field_f - 256;
-                          ((id) this).field_b = var4 - ((id) this).field_i;
+                          var4 = this.field_f - 256;
+                          this.field_b = var4 - this.field_i;
                           break L8;
                         }
                       }
@@ -133,42 +135,44 @@ class id {
                     L10: while (true) {
                       if (var3_int >= var4) {
                         L11: {
-                          if (var1 <= ((id) this).field_t) {
+                          if (var1 <= this.field_t) {
                             break L11;
                           } else {
                             L12: {
-                              if (((id) this).field_e) {
-                                ((id) this).field_e = false;
+                              if (this.field_e) {
+                                this.field_e = false;
                                 break L12;
                               } else {
                                 L13: {
-                                  if (((id) this).field_r != 0) {
+                                  if (this.field_r != 0) {
                                     break L13;
                                   } else {
-                                    if (((id) this).field_c != 0) {
+                                    if (this.field_c != 0) {
                                       break L13;
                                     } else {
-                                      ((id) this).f();
-                                      ((id) this).field_g = var1 + 2000L;
-                                      return;
+                                      this.f();
+                                      this.field_g = var1 + 2000L;
+                                      decompiledRegionSelector0 = 1;
+                                      break L4;
                                     }
                                   }
                                 }
-                                ((id) this).field_b = Math.min(((id) this).field_c, ((id) this).field_r);
-                                ((id) this).field_c = ((id) this).field_r;
+                                this.field_b = Math.min(this.field_c, this.field_r);
+                                this.field_c = this.field_r;
                                 break L12;
                               }
                             }
-                            ((id) this).field_r = 0;
-                            ((id) this).field_t = var1 + 2000L;
+                            this.field_r = 0;
+                            this.field_t = var1 + 2000L;
                             break L11;
                           }
                         }
-                        ((id) this).field_j = var3_int;
+                        this.field_j = var3_int;
+                        decompiledRegionSelector0 = 2;
                         break L4;
                       } else {
-                        this.a(((id) this).field_d, 256);
-                        ((id) this).e();
+                        this.a(this.field_d, 256);
+                        this.e();
                         var3_int += 256;
                         continue L10;
                       }
@@ -178,12 +182,21 @@ class id {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   L14: {
                     var3 = (Exception) (Object) decompiledCaughtException;
-                    ((id) this).f();
-                    ((id) this).field_g = var1 + 2000L;
+                    this.f();
+                    this.field_g = var1 + 2000L;
+                    decompiledRegionSelector0 = 2;
                     break L14;
                   }
                 }
-                return;
+                if (decompiledRegionSelector0 == 0) {
+                  return;
+                } else {
+                  if (decompiledRegionSelector0 == 1) {
+                    return;
+                  } else {
+                    return;
+                  }
+                }
               } else {
                 return;
               }
@@ -224,7 +237,7 @@ class id {
                 }
               } else {
                 L3: {
-                  if ((Object) (Object) field_q.field_c[var2] != this) {
+                  if (field_q.field_c[var2] != this) {
                     break L3;
                   } else {
                     field_q.field_c[var2] = null;
@@ -243,9 +256,9 @@ class id {
             }
           }
         }
-        ((id) this).f();
-        ((id) this).field_d = null;
-        ((id) this).field_n = true;
+        this.f();
+        this.field_d = null;
+        this.field_n = true;
     }
 
     private final static void a(od param0) {
@@ -262,12 +275,12 @@ class id {
 
     final synchronized void a() {
         try {
-            ((id) this).field_e = true;
+            this.field_e = true;
             try {
-                ((id) this).g();
+                this.g();
             } catch (Exception exception) {
-                ((id) this).f();
-                ((id) this).field_g = lo.a((byte) -29) + 2000L;
+                this.f();
+                this.field_g = lo.a((byte) -29) + 2000L;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -288,36 +301,62 @@ class id {
 
     private final void a(od param0, int param1) {
         int var3 = param1 >> 5;
-        od var4 = ((id) this).field_a[var3];
+        od var4 = this.field_a[var3];
         if (var4 == null) {
-            ((id) this).field_l[var3] = param0;
+            this.field_l[var3] = param0;
         } else {
             var4.field_i = param0;
         }
-        ((id) this).field_a[var3] = param0;
+        this.field_a[var3] = param0;
         param0.field_g = param1;
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        field_m = 22050;
-        field_o = true;
-        field_u = 10;
+        int stackIn_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_5_0 = 0;
+        L0: {
+          if (param0 < 8000) {
+            break L0;
+          } else {
+            if (param0 <= 48000) {
+              L1: {
+                field_m = param0;
+                if (!param1) {
+                  stackOut_6_0 = 0;
+                  stackIn_7_0 = stackOut_6_0;
+                  break L1;
+                } else {
+                  stackOut_5_0 = 1;
+                  stackIn_7_0 = stackOut_5_0;
+                  break L1;
+                }
+              }
+              field_o = stackIn_7_0 != 0;
+              field_u = param2;
+              return;
+            } else {
+              break L0;
+            }
+          }
+        }
+        throw new IllegalArgumentException();
     }
 
     void b(int param0) throws Exception {
     }
 
     final synchronized void b(od param0) {
-        ((id) this).field_h = param0;
+        this.field_h = param0;
     }
 
     private final void a(int param0) {
-        ((id) this).field_p = ((id) this).field_p - param0;
-        if (((id) this).field_p < 0) {
-            ((id) this).field_p = 0;
+        this.field_p = this.field_p - param0;
+        if (this.field_p < 0) {
+            this.field_p = 0;
         }
-        if (((id) this).field_h != null) {
-            ((id) this).field_h.a(param0);
+        if (this.field_h != null) {
+            this.field_h.a(param0);
             return;
         }
     }
@@ -353,16 +392,16 @@ class id {
         }
         L1: {
           eg.a(param0, 0, var3);
-          ((id) this).field_p = ((id) this).field_p - param1;
-          if (((id) this).field_h == null) {
+          this.field_p = this.field_p - param1;
+          if (this.field_h == null) {
             break L1;
           } else {
-            if (((id) this).field_p > 0) {
+            if (this.field_p > 0) {
               break L1;
             } else {
-              ((id) this).field_p = ((id) this).field_p + (field_m >> 4);
-              id.a(((id) this).field_h);
-              this.a(((id) this).field_h, ((id) this).field_h.b());
+              this.field_p = this.field_p + (field_m >> 4);
+              id.a(this.field_h);
+              this.a(this.field_h, this.field_h.b());
               var4 = 0;
               var5 = 255;
               var6 = 7;
@@ -387,9 +426,9 @@ class id {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & ~(1 << var7_int);
+                            var5 = var5 & (1 << var7_int ^ -1);
                             var10 = null;
-                            var11 = ((id) this).field_l[var7_int];
+                            var11 = this.field_l[var7_int];
                             var14 = var11;
                             var14 = var11;
                             L7: while (true) {
@@ -405,7 +444,7 @@ class id {
                                       break L8;
                                     } else {
                                       var5 = var5 | 1 << var7_int;
-                                      var10 = (Object) (Object) var11;
+                                      var10 = var11;
                                       var11 = var11.field_i;
                                       continue L7;
                                     }
@@ -422,7 +461,7 @@ class id {
                                     break L9;
                                   }
                                 }
-                                if (var4 < ((id) this).field_s) {
+                                if (var4 < this.field_s) {
                                   L10: {
                                     var14 = var11.d();
                                     if (var14 == null) {
@@ -444,10 +483,10 @@ class id {
                                     var15 = var11.field_i;
                                     var11.field_i = null;
                                     if (var10 != null) {
-                                      ((od) var10).field_i = var15;
+                                      ((od) (var10)).field_i = var15;
                                       break L12;
                                     } else {
-                                      ((id) this).field_l[var7_int] = var15;
+                                      this.field_l[var7_int] = var15;
                                       break L12;
                                     }
                                   }
@@ -455,7 +494,7 @@ class id {
                                     if (var15 != null) {
                                       break L13;
                                     } else {
-                                      ((id) this).field_a[var7_int] = (od) var10;
+                                      this.field_a[var7_int] = (od) (var10);
                                       break L13;
                                     }
                                   }
@@ -486,19 +525,19 @@ class id {
                   if (var6 >= 8) {
                     break L1;
                   } else {
-                    var7 = ((id) this).field_l[var6];
-                    var8 = ((id) this).field_l;
+                    var7 = this.field_l[var6];
+                    var8 = this.field_l;
                     var9 = var6;
-                    ((id) this).field_a[var6] = null;
+                    this.field_a[var6] = null;
                     var8[var9] = null;
                     L15: while (true) {
                       if (var7 == null) {
                         var6++;
                         continue L14;
                       } else {
-                        var10 = (Object) (Object) var7.field_i;
+                        var10 = var7.field_i;
                         var7.field_i = null;
-                        var7 = (od) var10;
+                        var7 = (od) (var10);
                         continue L15;
                       }
                     }
@@ -509,26 +548,27 @@ class id {
           }
         }
         L16: {
-          if (((id) this).field_p >= 0) {
+          if (this.field_p >= 0) {
             break L16;
           } else {
-            ((id) this).field_p = 0;
+            this.field_p = 0;
             break L16;
           }
         }
         L17: {
-          if (((id) this).field_h == null) {
+          if (this.field_h == null) {
             break L17;
           } else {
-            ((id) this).field_h.a(param0, 0, param1);
+            this.field_h.a(param0, 0, param1);
             break L17;
           }
         }
-        ((id) this).field_k = lo.a((byte) -90);
+        this.field_k = lo.a((byte) -90);
     }
 
     final static id a(un param0, java.awt.Component param1, int param2, int param3) {
         try {
+            gb discarded$2 = null;
             eo var4 = null;
             Throwable var4_ref = null;
             eo var5 = null;
@@ -569,14 +609,14 @@ class id {
                         L3: {
                           var5 = new eo();
                           var4 = var5;
-                          stackOut_8_0 = (eo) var4;
+                          stackOut_8_0 = (eo) (var4);
                           stackOut_8_1 = 256;
                           stackIn_10_0 = stackOut_8_0;
                           stackIn_10_1 = stackOut_8_1;
                           stackIn_9_0 = stackOut_8_0;
                           stackIn_9_1 = stackOut_8_1;
                           if (!field_o) {
-                            stackOut_10_0 = (eo) (Object) stackIn_10_0;
+                            stackOut_10_0 = (eo) ((Object) stackIn_10_0);
                             stackOut_10_1 = stackIn_10_1;
                             stackOut_10_2 = 1;
                             stackIn_11_0 = stackOut_10_0;
@@ -584,7 +624,7 @@ class id {
                             stackIn_11_2 = stackOut_10_2;
                             break L3;
                           } else {
-                            stackOut_9_0 = (eo) (Object) stackIn_9_0;
+                            stackOut_9_0 = (eo) ((Object) stackIn_9_0);
                             stackOut_9_1 = stackIn_9_1;
                             stackOut_9_2 = 2;
                             stackIn_11_0 = stackOut_9_0;
@@ -594,19 +634,19 @@ class id {
                           }
                         }
                         L4: {
-                          ((id) (Object) stackIn_11_0).field_d = new int[stackIn_11_1 * stackIn_11_2];
-                          ((id) (Object) var4).field_i = param3;
-                          ((id) (Object) var4).a(param1);
-                          ((id) (Object) var4).field_f = (param3 & -1024) + 1024;
-                          if (((id) (Object) var4).field_f <= 16384) {
+                          ((id) ((Object) stackIn_11_0)).field_d = new int[stackIn_11_1 * stackIn_11_2];
+                          ((id) ((Object) var4)).field_i = param3;
+                          ((id) ((Object) var4)).a(param1);
+                          ((id) ((Object) var4)).field_f = (param3 & -1024) + 1024;
+                          if (((id) ((Object) var4)).field_f <= 16384) {
                             break L4;
                           } else {
-                            ((id) (Object) var4).field_f = 16384;
+                            ((id) ((Object) var4)).field_f = 16384;
                             break L4;
                           }
                         }
                         L5: {
-                          ((id) (Object) var4).b(((id) (Object) var4).field_f);
+                          ((id) ((Object) var4)).b(((id) ((Object) var4)).field_f);
                           if (field_u <= 0) {
                             break L5;
                           } else {
@@ -615,7 +655,7 @@ class id {
                             } else {
                               field_q = new rp();
                               field_q.field_e = param0;
-                              gb discarded$2 = param0.a((Runnable) (Object) field_q, 2, field_u);
+                              discarded$2 = param0.a((Runnable) ((Object) field_q), 2, field_u);
                               break L5;
                             }
                           }
@@ -625,14 +665,14 @@ class id {
                             break L6;
                           } else {
                             if (field_q.field_c[param2] == null) {
-                              field_q.field_c[param2] = (id) (Object) var5;
+                              field_q.field_c[param2] = (id) ((Object) var5);
                               break L6;
                             } else {
                               throw new IllegalArgumentException();
                             }
                           }
                         }
-                        stackOut_20_0 = (eo) var4;
+                        stackOut_20_0 = (eo) (var4);
                         stackIn_21_0 = stackOut_20_0;
                         break L2;
                       }
@@ -641,7 +681,7 @@ class id {
                       var4_ref = decompiledCaughtException;
                       return new id();
                     }
-                    return (id) (Object) stackIn_21_0;
+                    return (id) ((Object) stackIn_21_0);
                   } else {
                     break L0;
                   }
@@ -659,17 +699,17 @@ class id {
     }
 
     id() {
-        ((id) this).field_n = false;
-        ((id) this).field_s = 32;
-        ((id) this).field_k = lo.a((byte) 79);
-        ((id) this).field_j = 0;
-        ((id) this).field_a = new od[8];
-        ((id) this).field_t = 0L;
-        ((id) this).field_e = true;
-        ((id) this).field_p = 0;
-        ((id) this).field_c = 0;
-        ((id) this).field_g = 0L;
-        ((id) this).field_l = new od[8];
-        ((id) this).field_r = 0;
+        this.field_n = false;
+        this.field_s = 32;
+        this.field_k = lo.a((byte) 79);
+        this.field_j = 0;
+        this.field_a = new od[8];
+        this.field_t = 0L;
+        this.field_e = true;
+        this.field_p = 0;
+        this.field_c = 0;
+        this.field_g = 0L;
+        this.field_l = new od[8];
+        this.field_r = 0;
     }
 }

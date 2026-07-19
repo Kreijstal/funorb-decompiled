@@ -23,10 +23,6 @@ final class sv {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "sv.A(";
         field_a = new cf();
         field_b = "Report abuse";

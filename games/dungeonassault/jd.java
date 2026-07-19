@@ -12,14 +12,29 @@ final class jd extends ne {
 
     final static void b(boolean param0) {
         int var1 = 0;
-        if (ql.field_d <= 32) {
-            um.a(0, false);
-        } else {
-            var1 = ql.field_d % 32;
-            if (0 == var1) {
+        L0: {
+          if (ql.field_d > 32) {
+            L1: {
+              var1 = ql.field_d % 32;
+              if (0 != var1) {
+                break L1;
+              } else {
                 var1 = 32;
+                break L1;
+              }
             }
             um.a(-var1 + ql.field_d, false);
+            break L0;
+          } else {
+            um.a(0, false);
+            break L0;
+          }
+        }
+        if (!param0) {
+          field_i = (String) null;
+          return;
+        } else {
+          return;
         }
     }
 
@@ -37,10 +52,6 @@ final class jd extends ne {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = false;
         field_j = Math.atan2(1.0, 0.0);
         field_n = "Dryads are tree nymphs, specifically of oak trees; these creatures of trees and wood can move swiftly and unnoticed through dungeons.";

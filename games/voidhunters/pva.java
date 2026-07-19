@@ -24,7 +24,7 @@ final class pva extends uj {
 
     final int b(byte param0) {
         if (param0 <= 79) {
-            field_d = null;
+            field_d = (llb) null;
             return 109;
         }
         return 109;
@@ -40,13 +40,20 @@ final class pva extends uj {
 
     public static void d(int param0) {
         field_f = null;
+        if (param0 != 109) {
+            field_d = (llb) null;
+            field_e = null;
+            field_d = null;
+            return;
+        }
         field_e = null;
         field_d = null;
     }
 
     final int d(byte param0) {
+        boolean discarded$0 = false;
         if (param0 != 64) {
-            boolean discarded$0 = ((pva) this).c((byte) -72);
+            discarded$0 = this.c((byte) -72);
             return oq.field_t;
         }
         return oq.field_t;
@@ -56,10 +63,6 @@ final class pva extends uj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Set up new unrated game";
     }
 }

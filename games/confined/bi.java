@@ -9,17 +9,17 @@ final class bi extends ob {
     int field_n;
 
     bi(int param0, byte[] param1, int param2, int param3) {
-        ((bi) this).field_n = param0;
-        ((bi) this).field_o = param1;
-        ((bi) this).field_p = param2;
-        ((bi) this).field_r = param3;
+        this.field_n = param0;
+        this.field_o = param1;
+        this.field_p = param2;
+        this.field_r = param3;
     }
 
     bi(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((bi) this).field_n = param0;
-        ((bi) this).field_o = param1;
-        ((bi) this).field_p = param2;
-        ((bi) this).field_r = param3;
-        ((bi) this).field_q = param4 ? true : false;
+        this.field_n = param0;
+        this.field_o = param1;
+        this.field_p = param2;
+        this.field_r = param3;
+        this.field_q = param4 ? true : false;
     }
 }

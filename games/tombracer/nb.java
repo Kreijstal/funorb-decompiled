@@ -11,14 +11,15 @@ final class nb {
     public static void a(byte param0) {
         field_b = null;
         field_d = null;
+        if (param0 != -95) {
+            field_b = (iw) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "nb.A(";
         field_c = 22238L;
         field_a = "Allow spectators?";

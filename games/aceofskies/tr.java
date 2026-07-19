@@ -5,6 +5,10 @@ final class tr {
     static st field_a;
 
     final static void a(s param0, int param1) {
+        int dupTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int incrementValue$6 = 0;
+        int dupTemp$7 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -36,21 +40,21 @@ final class tr {
                   if (param1 <= -85) {
                     break L2;
                   } else {
-                    field_a = null;
+                    field_a = (st) null;
                     break L2;
                   }
                 }
                 var2_int = 0;
                 L3: while (true) {
                   if (var2_int >= dd.field_a) {
-                    int dupTemp$4 = param0.a(0);
+                    dupTemp$4 = param0.a(0);
                     aa.field_c[dupTemp$4] = aa.field_c[dupTemp$4] + 1;
                     var2_int = 0;
                     var3 = 0;
                     L4: while (true) {
                       if (dd.field_a <= var3) {
                         dd.field_a = var2_int;
-                        int fieldTemp$5 = dd.field_a;
+                        fieldTemp$5 = dd.field_a;
                         dd.field_a = dd.field_a + 1;
                         ve.field_b[fieldTemp$5] = param0;
                         break L0;
@@ -69,7 +73,7 @@ final class tr {
                               break L6;
                             }
                           }
-                          int incrementValue$6 = var2_int;
+                          incrementValue$6 = var2_int;
                           var2_int++;
                           ve.field_b[incrementValue$6] = ve.field_b[var3];
                           break L5;
@@ -83,7 +87,7 @@ final class tr {
                       if (param0.field_f != ve.field_b[var2_int].field_f) {
                         break L7;
                       } else {
-                        int dupTemp$7 = ve.field_b[var2_int].a(0);
+                        dupTemp$7 = ve.field_b[var2_int].a(0);
                         aa.field_c[dupTemp$7] = aa.field_c[dupTemp$7] + 1;
                         break L7;
                       }
@@ -103,23 +107,23 @@ final class tr {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_0 = (RuntimeException) (var2);
             stackOut_22_1 = new StringBuilder().append("tr.B(");
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L8;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -127,7 +131,7 @@ final class tr {
               break L8;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
         }
     }
 
@@ -139,7 +143,7 @@ final class tr {
     }
 
     final static void a(gk param0, byte param1) {
-        ll var2 = new ll(param0.a("final_frame.jpg", (byte) -71, ""), (java.awt.Component) (Object) ci.field_f);
+        ll var2 = new ll(param0.a("final_frame.jpg", (byte) -71, ""), (java.awt.Component) ((Object) ci.field_f));
         int var3 = var2.field_r;
         int var4 = var2.field_n;
         qk.a((byte) -92);
@@ -150,16 +154,19 @@ final class tr {
         gt.field_o.b();
         var2.c(0, -gl.field_d.field_n);
         gt.field_o.field_p = gl.field_d.field_n;
+        if (param1 > -64) {
+            return;
+        }
         try {
             sl.c(2765);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "tr.C(" + (param0 != null ? "{...}" : "null") + ',' + -88 + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "tr.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(rb param0, int param1, int param2, int param3, int param4) {
         RuntimeException runtimeException = null;
-        Object var6 = null;
+        rb var6 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -187,7 +194,7 @@ final class tr {
               if (param4 == 0) {
                 break L1;
               } else {
-                var6 = null;
+                var6 = (rb) null;
                 tr.a((rb) null, 50, -109, 117, 45);
                 break L1;
               }
@@ -198,23 +205,23 @@ final class tr {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("tr.D(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -222,15 +229,11 @@ final class tr {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new st();
     }
 }

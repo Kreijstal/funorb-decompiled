@@ -2,7 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.util.*;
-import java.lang.String;
 
 final class eb implements Iterable {
     static km field_b;
@@ -14,6 +13,7 @@ final class eb implements Iterable {
     static km field_c;
 
     final void a(boolean param0, wb param1) {
+        wb discarded$2 = null;
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -42,14 +42,14 @@ final class eb implements Iterable {
               }
             }
             L2: {
-              param1.field_k = ((eb) this).field_e.field_k;
-              param1.field_h = ((eb) this).field_e;
+              param1.field_k = this.field_e.field_k;
+              param1.field_h = this.field_e;
               param1.field_k.field_h = param1;
               param1.field_h.field_k = param1;
               if (param0) {
                 break L2;
               } else {
-                wb discarded$2 = ((eb) this).a(27);
+                discarded$2 = this.a(27);
                 break L2;
               }
             }
@@ -59,23 +59,23 @@ final class eb implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_0 = (RuntimeException) (var3);
             stackOut_6_1 = new StringBuilder().append("eb.C(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -83,7 +83,7 @@ final class eb implements Iterable {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
@@ -99,11 +99,11 @@ final class eb implements Iterable {
 
     final wb a(int param0) {
         if (param0 != -32314) {
-            Object var3 = null;
-            ((eb) this).a(true, (wb) null);
+            wb var3 = (wb) null;
+            this.a(true, (wb) null);
         }
-        wb var2 = ((eb) this).field_e.field_h;
-        if (((eb) this).field_e == var2) {
+        wb var2 = this.field_e.field_h;
+        if (this.field_e == var2) {
             return null;
         }
         var2.c(63);
@@ -111,7 +111,7 @@ final class eb implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new f((eb) this);
+        return (Iterator) ((Object) new f((eb) (this)));
     }
 
     final static void a(boolean param0, boolean param1, int param2, boolean param3) {
@@ -223,10 +223,10 @@ final class eb implements Iterable {
                     var7 = (dm.field_r.field_K - -2) / 2;
                     jk.field_b.a(0, 40, -2 + var7, (byte) -96, dm.field_r.field_ub - 40);
                     ii.field_d.a(var7, 40, dm.field_r.field_K + -var7, (byte) -64, -40 + dm.field_r.field_ub);
-                    if (vj.field_b.length != -2) {
+                    if ((vj.field_b.length ^ -1) != -2) {
                       break L3;
                     } else {
-                      if (-3 != vj.field_b[0]) {
+                      if (-3 != (vj.field_b[0] ^ -1)) {
                         break L3;
                       } else {
                         var8 = 0;
@@ -266,7 +266,7 @@ final class eb implements Iterable {
                           if (var11_int == 0) {
                             break L8;
                           } else {
-                            if (vj.field_b[var10] == 2) {
+                            if ((vj.field_b[var10] ^ -1) == -3) {
                               break L8;
                             } else {
                               var8 = 1;
@@ -293,13 +293,13 @@ final class eb implements Iterable {
                     stackIn_36_0 = stackOut_34_0;
                     stackIn_35_0 = stackOut_34_0;
                     if (var8 != 0) {
-                      stackOut_36_0 = (km) (Object) stackIn_36_0;
+                      stackOut_36_0 = (km) ((Object) stackIn_36_0);
                       stackOut_36_1 = p.field_g;
                       stackIn_37_0 = stackOut_36_0;
                       stackIn_37_1 = stackOut_36_1;
                       break L9;
                     } else {
-                      stackOut_35_0 = (km) (Object) stackIn_35_0;
+                      stackOut_35_0 = (km) ((Object) stackIn_35_0);
                       stackOut_35_1 = gf.field_x;
                       stackIn_37_0 = stackOut_35_0;
                       stackIn_37_1 = stackOut_35_1;
@@ -315,16 +315,16 @@ final class eb implements Iterable {
                     stackIn_38_0 = stackOut_37_0;
                     stackIn_38_1 = stackOut_37_1;
                     if (var8 != 0) {
-                      stackOut_39_0 = (km) (Object) stackIn_39_0;
-                      stackOut_39_1 = (String[]) (Object) stackIn_39_1;
+                      stackOut_39_0 = (km) ((Object) stackIn_39_0);
+                      stackOut_39_1 = (String[]) ((Object) stackIn_39_1);
                       stackOut_39_2 = ok.field_K;
                       stackIn_40_0 = stackOut_39_0;
                       stackIn_40_1 = stackOut_39_1;
                       stackIn_40_2 = stackOut_39_2;
                       break L10;
                     } else {
-                      stackOut_38_0 = (km) (Object) stackIn_38_0;
-                      stackOut_38_1 = (String[]) (Object) stackIn_38_1;
+                      stackOut_38_0 = (km) ((Object) stackIn_38_0);
+                      stackOut_38_1 = (String[]) ((Object) stackIn_38_1);
                       stackOut_38_2 = h.field_b;
                       stackIn_40_0 = stackOut_38_0;
                       stackIn_40_1 = stackOut_38_1;
@@ -382,7 +382,7 @@ final class eb implements Iterable {
                         if (!vi.field_l) {
                           break L14;
                         } else {
-                          var9 = (Object) (Object) ("<col=A00000>" + wg.field_d + "</col>");
+                          var9 = "<col=A00000>" + wg.field_d + "</col>";
                           var11 = var9;
                           var9 = var11;
                           var11 = var9;
@@ -393,19 +393,19 @@ final class eb implements Iterable {
                       var10 = 0;
                       L15: while (true) {
                         if (var10 >= vb.field_h) {
-                          wc.field_g = "<col=A00000>" + eg.field_F + "<br>" + ij.field_h + (String) var9;
+                          wc.field_g = "<col=A00000>" + eg.field_F + "<br>" + ij.field_h + (String) (var9);
                           break L1;
                         } else {
                           L16: {
                             if (hk.field_Lb[var10]) {
                               var11_ref = "<col=A00000>" + bd.field_a[var10] + "</col>";
-                              var9 = (Object) (Object) var11_ref;
-                              var9 = (Object) (Object) var11_ref;
+                              var9 = var11_ref;
+                              var9 = var11_ref;
                               if (var9 != null) {
-                                var9 = (Object) (Object) ((String) var9 + ", " + var11_ref);
+                                var9 = (String) (var9) + ", " + var11_ref;
                                 break L16;
                               } else {
-                                var9 = (Object) (Object) var11_ref;
+                                var9 = var11_ref;
                                 break L16;
                               }
                             } else {
@@ -438,11 +438,11 @@ final class eb implements Iterable {
                   }
                   L18: {
                     var16 = stackIn_24_0;
-                    var9 = (Object) (Object) var16;
+                    var9 = var16;
                     var10 = jk.field_b.field_C.a(var16) - -(3 * jk.field_b.field_C.a('.'));
                     jk.field_b.field_lb = 0;
-                    if ((rl.field_y & 48) == 16) {
-                      var9 = (Object) (Object) (var16 + ".");
+                    if ((rl.field_y & 48 ^ -1) == -17) {
+                      var9 = var16 + ".";
                       break L18;
                     } else {
                       break L18;
@@ -450,8 +450,8 @@ final class eb implements Iterable {
                   }
                   L19: {
                     jk.field_b.field_z = (-var10 + jk.field_b.field_K) / 2;
-                    if ((48 & rl.field_y) == 32) {
-                      var9 = (Object) (Object) ((String) var9 + "..");
+                    if ((48 & rl.field_y ^ -1) == -33) {
+                      var9 = (String) (var9) + "..";
                       break L19;
                     } else {
                       break L19;
@@ -459,13 +459,13 @@ final class eb implements Iterable {
                   }
                   L20: {
                     if ((48 & rl.field_y) == 48) {
-                      var9 = (Object) (Object) ((String) var9 + "...");
+                      var9 = (String) (var9) + "...";
                       break L20;
                     } else {
                       break L20;
                     }
                   }
-                  jk.field_b.field_V = (String) var9;
+                  jk.field_b.field_V = (String) (var9);
                   ii.field_d.field_V = vb.field_g.toUpperCase();
                   break L1;
                 }
@@ -481,19 +481,19 @@ final class eb implements Iterable {
                 if (!param3) {
                   break L22;
                 } else {
-                  stackOut_67_0 = (km) (Object) stackIn_67_0;
+                  stackOut_67_0 = (km) ((Object) stackIn_67_0);
                   stackIn_70_0 = stackOut_67_0;
                   stackIn_68_0 = stackOut_67_0;
                   if (param1) {
                     break L22;
                   } else {
-                    stackOut_68_0 = (km) (Object) stackIn_68_0;
+                    stackOut_68_0 = (km) ((Object) stackIn_68_0);
                     stackIn_70_0 = stackOut_68_0;
                     stackIn_69_0 = stackOut_68_0;
                     if (ad.field_h) {
                       break L22;
                     } else {
-                      stackOut_69_0 = (km) (Object) stackIn_69_0;
+                      stackOut_69_0 = (km) ((Object) stackIn_69_0);
                       stackOut_69_1 = 1;
                       stackIn_71_0 = stackOut_69_0;
                       stackIn_71_1 = stackOut_69_1;
@@ -502,7 +502,7 @@ final class eb implements Iterable {
                   }
                 }
               }
-              stackOut_70_0 = (km) (Object) stackIn_70_0;
+              stackOut_70_0 = (km) ((Object) stackIn_70_0);
               stackOut_70_1 = 0;
               stackIn_71_0 = stackOut_70_0;
               stackIn_71_1 = stackOut_70_1;
@@ -517,19 +517,19 @@ final class eb implements Iterable {
                 if (!param3) {
                   break L24;
                 } else {
-                  stackOut_72_0 = (km) (Object) stackIn_72_0;
+                  stackOut_72_0 = (km) ((Object) stackIn_72_0);
                   stackIn_75_0 = stackOut_72_0;
                   stackIn_73_0 = stackOut_72_0;
                   if (param1) {
                     break L24;
                   } else {
-                    stackOut_73_0 = (km) (Object) stackIn_73_0;
+                    stackOut_73_0 = (km) ((Object) stackIn_73_0);
                     stackIn_75_0 = stackOut_73_0;
                     stackIn_74_0 = stackOut_73_0;
                     if (ad.field_h) {
                       break L24;
                     } else {
-                      stackOut_74_0 = (km) (Object) stackIn_74_0;
+                      stackOut_74_0 = (km) ((Object) stackIn_74_0);
                       stackOut_74_1 = 1;
                       stackIn_76_0 = stackOut_74_0;
                       stackIn_76_1 = stackOut_74_1;
@@ -538,7 +538,7 @@ final class eb implements Iterable {
                   }
                 }
               }
-              stackOut_75_0 = (km) (Object) stackIn_75_0;
+              stackOut_75_0 = (km) ((Object) stackIn_75_0);
               stackOut_75_1 = 0;
               stackIn_76_0 = stackOut_75_0;
               stackIn_76_1 = stackOut_75_1;
@@ -553,19 +553,19 @@ final class eb implements Iterable {
                 if (!param3) {
                   break L26;
                 } else {
-                  stackOut_77_0 = (km) (Object) stackIn_77_0;
+                  stackOut_77_0 = (km) ((Object) stackIn_77_0);
                   stackIn_80_0 = stackOut_77_0;
                   stackIn_78_0 = stackOut_77_0;
                   if (param1) {
                     break L26;
                   } else {
-                    stackOut_78_0 = (km) (Object) stackIn_78_0;
+                    stackOut_78_0 = (km) ((Object) stackIn_78_0);
                     stackIn_80_0 = stackOut_78_0;
                     stackIn_79_0 = stackOut_78_0;
                     if (!ad.field_h) {
                       break L26;
                     } else {
-                      stackOut_79_0 = (km) (Object) stackIn_79_0;
+                      stackOut_79_0 = (km) ((Object) stackIn_79_0);
                       stackOut_79_1 = 1;
                       stackIn_81_0 = stackOut_79_0;
                       stackIn_81_1 = stackOut_79_1;
@@ -574,41 +574,49 @@ final class eb implements Iterable {
                   }
                 }
               }
-              stackOut_80_0 = (km) (Object) stackIn_80_0;
+              stackOut_80_0 = (km) ((Object) stackIn_80_0);
               stackOut_80_1 = 0;
               stackIn_81_0 = stackOut_80_0;
               stackIn_81_1 = stackOut_80_1;
               break L25;
             }
-            ((km) (Object) stackIn_81_0).a(stackIn_81_1 != 0, (byte) 100);
-            he.field_pc.field_c.g(0);
             L27: {
+              ((km) (Object) stackIn_81_0).a(stackIn_81_1 != 0, (byte) 100);
+              he.field_pc.field_c.g(0);
+              if (!param0) {
+                break L27;
+              } else {
+                field_f = 123;
+                break L27;
+              }
+            }
+            L28: {
               if (null != la.field_h) {
-                L28: {
-                  if (fb.field_o.field_nb != 0) {
-                    ub.b(11, -12508);
-                    break L28;
-                  } else {
-                    break L28;
-                  }
-                }
                 L29: {
-                  if (0 != ii.field_d.field_nb) {
-                    if (!ld.field_c) {
-                      em.a((byte) -55, 11);
-                      break L29;
-                    } else {
-                      qa.a(3, 11);
-                      break L29;
-                    }
+                  if (-1 != (fb.field_o.field_nb ^ -1)) {
+                    ub.b(param2, -12508);
+                    break L29;
                   } else {
                     break L29;
                   }
                 }
-                co.a(11, true, -2137400888, la.field_h);
-                break L27;
+                L30: {
+                  if (0 != ii.field_d.field_nb) {
+                    if (!ld.field_c) {
+                      em.a((byte) -55, param2);
+                      break L30;
+                    } else {
+                      qa.a(3, param2);
+                      break L30;
+                    }
+                  } else {
+                    break L30;
+                  }
+                }
+                co.a(param2, true, -2137400888, la.field_h);
+                break L28;
               } else {
-                break L27;
+                break L28;
               }
             }
             break L0;
@@ -616,21 +624,17 @@ final class eb implements Iterable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var4, "eb.B(" + false + ',' + param1 + ',' + 11 + ',' + param3 + ')');
+          throw kg.a((Throwable) ((Object) var4), "eb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     eb() {
-        ((eb) this).field_e = new wb();
-        ((eb) this).field_e.field_h = ((eb) this).field_e;
-        ((eb) this).field_e.field_k = ((eb) this).field_e;
+        this.field_e = new wb();
+        this.field_e.field_h = this.field_e;
+        this.field_e.field_k = this.field_e;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Offer rematch";
         field_a = "Cancel";
     }

@@ -29,36 +29,36 @@ final class oa {
         var5 = CrazyCrystals.field_B;
         if (param0 != 2) {
           this.a(-86);
-          var2 = ((oa) this).field_h;
-          var3 = ((oa) this).field_f;
-          if (((oa) this).b(true)) {
+          var2 = this.field_h;
+          var3 = this.field_f;
+          if (this.b(true)) {
             L0: {
-              if (((oa) this).field_d >= var3) {
-                if (((oa) this).field_j > var3) {
-                  var3 = ((oa) this).field_j;
+              if (this.field_d >= var3) {
+                if (this.field_j > var3) {
+                  var3 = this.field_j;
                   break L0;
                 } else {
                   break L0;
                 }
               } else {
-                var3 = ((oa) this).field_d;
+                var3 = this.field_d;
                 break L0;
               }
             }
             L1: {
-              if (var2 <= ((oa) this).field_p) {
-                if (var2 < ((oa) this).field_k) {
-                  var2 = ((oa) this).field_k;
+              if (var2 <= this.field_p) {
+                if (var2 < this.field_k) {
+                  var2 = this.field_k;
                   break L1;
                 } else {
-                  if (0.0f >= ((oa) this).field_n) {
+                  if (0.0f >= this.field_n) {
                     L2: {
                       if (ap.field_r != var2) {
-                        ((oa) this).field_q.a(118, var3, var2);
+                        this.field_q.a(118, var3, var2);
                         break L2;
                       } else {
                         if (var3 != rh.field_f) {
-                          ((oa) this).field_q.a(118, var3, var2);
+                          this.field_q.a(118, var3, var2);
                           break L2;
                         } else {
                           break L2;
@@ -66,8 +66,8 @@ final class oa {
                       }
                     }
                     L3: {
-                      if (((oa) this).field_h > 0) {
-                        ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                      if (this.field_h > 0) {
+                        ui.field_a = (this.field_h - ap.field_r) / 2;
                         break L3;
                       } else {
                         break L3;
@@ -76,7 +76,7 @@ final class oa {
                     return;
                   } else {
                     L4: {
-                      var4 = (int)(0.5f + ((oa) this).field_n * (float)var3);
+                      var4 = (int)(0.5f + this.field_n * (float)var3);
                       if (var2 >= var4) {
                         if (var4 < var2) {
                           var2 = var4;
@@ -85,17 +85,17 @@ final class oa {
                           break L4;
                         }
                       } else {
-                        var3 = (int)((float)var2 / ((oa) this).field_n);
+                        var3 = (int)((float)var2 / this.field_n);
                         break L4;
                       }
                     }
                     L5: {
                       if (ap.field_r != var2) {
-                        ((oa) this).field_q.a(118, var3, var2);
+                        this.field_q.a(118, var3, var2);
                         break L5;
                       } else {
                         if (var3 != rh.field_f) {
-                          ((oa) this).field_q.a(118, var3, var2);
+                          this.field_q.a(118, var3, var2);
                           break L5;
                         } else {
                           break L5;
@@ -103,8 +103,8 @@ final class oa {
                       }
                     }
                     L6: {
-                      if (((oa) this).field_h > 0) {
-                        ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                      if (this.field_h > 0) {
+                        ui.field_a = (this.field_h - ap.field_r) / 2;
                         break L6;
                       } else {
                         break L6;
@@ -114,15 +114,15 @@ final class oa {
                   }
                 }
               } else {
-                var2 = ((oa) this).field_p;
+                var2 = this.field_p;
                 break L1;
               }
             }
             L7: {
-              if (0.0f >= ((oa) this).field_n) {
+              if (0.0f >= this.field_n) {
                 break L7;
               } else {
-                var4 = (int)(0.5f + ((oa) this).field_n * (float)var3);
+                var4 = (int)(0.5f + this.field_n * (float)var3);
                 if (var2 >= var4) {
                   if (var4 < var2) {
                     var2 = var4;
@@ -131,8 +131,8 @@ final class oa {
                     if (ap.field_r == var2) {
                       if (var3 == rh.field_f) {
                         L8: {
-                          if (((oa) this).field_h > 0) {
-                            ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                          if (this.field_h > 0) {
+                            ui.field_a = (this.field_h - ap.field_r) / 2;
                             break L8;
                           } else {
                             break L8;
@@ -141,9 +141,9 @@ final class oa {
                         return;
                       } else {
                         L9: {
-                          ((oa) this).field_q.a(118, var3, var2);
-                          if (((oa) this).field_h > 0) {
-                            ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                          this.field_q.a(118, var3, var2);
+                          if (this.field_h > 0) {
+                            ui.field_a = (this.field_h - ap.field_r) / 2;
                             break L9;
                           } else {
                             break L9;
@@ -153,9 +153,9 @@ final class oa {
                       }
                     } else {
                       L10: {
-                        ((oa) this).field_q.a(118, var3, var2);
-                        if (((oa) this).field_h > 0) {
-                          ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                        this.field_q.a(118, var3, var2);
+                        if (this.field_h > 0) {
+                          ui.field_a = (this.field_h - ap.field_r) / 2;
                           break L10;
                         } else {
                           break L10;
@@ -165,12 +165,12 @@ final class oa {
                     }
                   }
                 } else {
-                  var3 = (int)((float)var2 / ((oa) this).field_n);
+                  var3 = (int)((float)var2 / this.field_n);
                   if (ap.field_r == var2) {
                     if (var3 == rh.field_f) {
                       L11: {
-                        if (((oa) this).field_h > 0) {
-                          ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                        if (this.field_h > 0) {
+                          ui.field_a = (this.field_h - ap.field_r) / 2;
                           break L11;
                         } else {
                           break L11;
@@ -179,9 +179,9 @@ final class oa {
                       return;
                     } else {
                       L12: {
-                        ((oa) this).field_q.a(118, var3, var2);
-                        if (((oa) this).field_h > 0) {
-                          ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                        this.field_q.a(118, var3, var2);
+                        if (this.field_h > 0) {
+                          ui.field_a = (this.field_h - ap.field_r) / 2;
                           break L12;
                         } else {
                           break L12;
@@ -191,9 +191,9 @@ final class oa {
                     }
                   } else {
                     L13: {
-                      ((oa) this).field_q.a(118, var3, var2);
-                      if (((oa) this).field_h > 0) {
-                        ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                      this.field_q.a(118, var3, var2);
+                      if (this.field_h > 0) {
+                        ui.field_a = (this.field_h - ap.field_r) / 2;
                         break L13;
                       } else {
                         break L13;
@@ -207,9 +207,9 @@ final class oa {
             if (ap.field_r == var2) {
               if (var3 != rh.field_f) {
                 L14: {
-                  ((oa) this).field_q.a(118, var3, var2);
-                  if (((oa) this).field_h > 0) {
-                    ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                  this.field_q.a(118, var3, var2);
+                  if (this.field_h > 0) {
+                    ui.field_a = (this.field_h - ap.field_r) / 2;
                     break L14;
                   } else {
                     break L14;
@@ -218,8 +218,8 @@ final class oa {
                 return;
               } else {
                 L15: {
-                  if (((oa) this).field_h > 0) {
-                    ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                  if (this.field_h > 0) {
+                    ui.field_a = (this.field_h - ap.field_r) / 2;
                     break L15;
                   } else {
                     break L15;
@@ -229,9 +229,9 @@ final class oa {
               }
             } else {
               L16: {
-                ((oa) this).field_q.a(118, var3, var2);
-                if (((oa) this).field_h > 0) {
-                  ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                this.field_q.a(118, var3, var2);
+                if (this.field_h > 0) {
+                  ui.field_a = (this.field_h - ap.field_r) / 2;
                   break L16;
                 } else {
                   break L16;
@@ -240,37 +240,37 @@ final class oa {
               return;
             }
           } else {
-            ((oa) this).field_c = false;
+            this.field_c = false;
             return;
           }
         } else {
-          var2 = ((oa) this).field_h;
-          var3 = ((oa) this).field_f;
-          if (((oa) this).b(true)) {
+          var2 = this.field_h;
+          var3 = this.field_f;
+          if (this.b(true)) {
             L17: {
-              if (((oa) this).field_d >= var3) {
-                if (((oa) this).field_j > var3) {
-                  var3 = ((oa) this).field_j;
+              if (this.field_d >= var3) {
+                if (this.field_j > var3) {
+                  var3 = this.field_j;
                   break L17;
                 } else {
                   break L17;
                 }
               } else {
-                var3 = ((oa) this).field_d;
+                var3 = this.field_d;
                 break L17;
               }
             }
             L18: {
-              if (var2 <= ((oa) this).field_p) {
-                if (var2 < ((oa) this).field_k) {
-                  var2 = ((oa) this).field_k;
+              if (var2 <= this.field_p) {
+                if (var2 < this.field_k) {
+                  var2 = this.field_k;
                   break L18;
                 } else {
                   L19: {
-                    if (0.0f >= ((oa) this).field_n) {
+                    if (0.0f >= this.field_n) {
                       break L19;
                     } else {
-                      var4 = (int)(0.5f + ((oa) this).field_n * (float)var3);
+                      var4 = (int)(0.5f + this.field_n * (float)var3);
                       if (var2 >= var4) {
                         if (var4 < var2) {
                           var2 = var4;
@@ -279,18 +279,18 @@ final class oa {
                           break L19;
                         }
                       } else {
-                        var3 = (int)((float)var2 / ((oa) this).field_n);
+                        var3 = (int)((float)var2 / this.field_n);
                         break L19;
                       }
                     }
                   }
                   L20: {
                     if (ap.field_r != var2) {
-                      ((oa) this).field_q.a(118, var3, var2);
+                      this.field_q.a(118, var3, var2);
                       break L20;
                     } else {
                       if (var3 != rh.field_f) {
-                        ((oa) this).field_q.a(118, var3, var2);
+                        this.field_q.a(118, var3, var2);
                         break L20;
                       } else {
                         break L20;
@@ -298,8 +298,8 @@ final class oa {
                     }
                   }
                   L21: {
-                    if (((oa) this).field_h > 0) {
-                      ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                    if (this.field_h > 0) {
+                      ui.field_a = (this.field_h - ap.field_r) / 2;
                       break L21;
                     } else {
                       break L21;
@@ -308,15 +308,15 @@ final class oa {
                   return;
                 }
               } else {
-                var2 = ((oa) this).field_p;
+                var2 = this.field_p;
                 break L18;
               }
             }
             L22: {
-              if (0.0f >= ((oa) this).field_n) {
+              if (0.0f >= this.field_n) {
                 break L22;
               } else {
-                var4 = (int)(0.5f + ((oa) this).field_n * (float)var3);
+                var4 = (int)(0.5f + this.field_n * (float)var3);
                 if (var2 >= var4) {
                   if (var4 < var2) {
                     var2 = var4;
@@ -324,11 +324,11 @@ final class oa {
                   } else {
                     L23: {
                       if (ap.field_r != var2) {
-                        ((oa) this).field_q.a(118, var3, var2);
+                        this.field_q.a(118, var3, var2);
                         break L23;
                       } else {
                         if (var3 != rh.field_f) {
-                          ((oa) this).field_q.a(118, var3, var2);
+                          this.field_q.a(118, var3, var2);
                           break L23;
                         } else {
                           break L23;
@@ -336,8 +336,8 @@ final class oa {
                       }
                     }
                     L24: {
-                      if (((oa) this).field_h > 0) {
-                        ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                      if (this.field_h > 0) {
+                        ui.field_a = (this.field_h - ap.field_r) / 2;
                         break L24;
                       } else {
                         break L24;
@@ -347,13 +347,13 @@ final class oa {
                   }
                 } else {
                   L25: {
-                    var3 = (int)((float)var2 / ((oa) this).field_n);
+                    var3 = (int)((float)var2 / this.field_n);
                     if (ap.field_r != var2) {
-                      ((oa) this).field_q.a(118, var3, var2);
+                      this.field_q.a(118, var3, var2);
                       break L25;
                     } else {
                       if (var3 != rh.field_f) {
-                        ((oa) this).field_q.a(118, var3, var2);
+                        this.field_q.a(118, var3, var2);
                         break L25;
                       } else {
                         break L25;
@@ -361,8 +361,8 @@ final class oa {
                     }
                   }
                   L26: {
-                    if (((oa) this).field_h > 0) {
-                      ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                    if (this.field_h > 0) {
+                      ui.field_a = (this.field_h - ap.field_r) / 2;
                       break L26;
                     } else {
                       break L26;
@@ -375,8 +375,8 @@ final class oa {
             if (ap.field_r == var2) {
               if (var3 == rh.field_f) {
                 L27: {
-                  if (((oa) this).field_h > 0) {
-                    ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                  if (this.field_h > 0) {
+                    ui.field_a = (this.field_h - ap.field_r) / 2;
                     break L27;
                   } else {
                     break L27;
@@ -385,9 +385,9 @@ final class oa {
                 return;
               } else {
                 L28: {
-                  ((oa) this).field_q.a(118, var3, var2);
-                  if (((oa) this).field_h > 0) {
-                    ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                  this.field_q.a(118, var3, var2);
+                  if (this.field_h > 0) {
+                    ui.field_a = (this.field_h - ap.field_r) / 2;
                     break L28;
                   } else {
                     break L28;
@@ -397,9 +397,9 @@ final class oa {
               }
             } else {
               L29: {
-                ((oa) this).field_q.a(118, var3, var2);
-                if (((oa) this).field_h > 0) {
-                  ui.field_a = (((oa) this).field_h - ap.field_r) / 2;
+                this.field_q.a(118, var3, var2);
+                if (this.field_h > 0) {
+                  ui.field_a = (this.field_h - ap.field_r) / 2;
                   break L29;
                 } else {
                   break L29;
@@ -408,7 +408,7 @@ final class oa {
               return;
             }
           } else {
-            ((oa) this).field_c = false;
+            this.field_c = false;
             return;
           }
         }
@@ -416,8 +416,8 @@ final class oa {
 
     final boolean b(boolean param0) {
         if (param0) {
-          if (((oa) this).field_l <= jk.field_f) {
-            if (mo.field_l <= 0) {
+          if (this.field_l <= jk.field_f) {
+            if ((mo.field_l ^ -1) >= -1) {
               return false;
             } else {
               return true;
@@ -426,9 +426,9 @@ final class oa {
             return false;
           }
         } else {
-          ((oa) this).a(true);
-          if (((oa) this).field_l <= jk.field_f) {
-            if (mo.field_l <= 0) {
+          this.a(true);
+          if (this.field_l <= jk.field_f) {
+            if ((mo.field_l ^ -1) >= -1) {
               return false;
             } else {
               return true;
@@ -440,60 +440,62 @@ final class oa {
     }
 
     final void a(boolean param0) {
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         if (ph.field_E != null) {
           return;
         } else {
           if (param0) {
             if (mo.field_l > 0) {
-              if (!((oa) this).field_c) {
-                if (ap.field_r < ((oa) this).field_h) {
-                  ui.field_a = (-ap.field_r + ((oa) this).field_h) / 2;
-                  if (((oa) this).field_r == ap.field_r) {
-                    if (rh.field_f != ((oa) this).field_g) {
-                      ((oa) this).field_q.a(126, ((oa) this).field_g, ((oa) this).field_r);
+              if (!this.field_c) {
+                if (ap.field_r < this.field_h) {
+                  ui.field_a = (-ap.field_r + this.field_h) / 2;
+                  if (this.field_r == ap.field_r) {
+                    if (rh.field_f != this.field_g) {
+                      this.field_q.a(126, this.field_g, this.field_r);
                       return;
                     } else {
                       return;
                     }
                   } else {
-                    ((oa) this).field_q.a(126, ((oa) this).field_g, ((oa) this).field_r);
+                    this.field_q.a(126, this.field_g, this.field_r);
                     return;
                   }
                 } else {
-                  if (0 < ((oa) this).field_h) {
+                  if (0 < this.field_h) {
                     ui.field_a = 0;
-                    if (((oa) this).field_r == ap.field_r) {
-                      if (rh.field_f != ((oa) this).field_g) {
-                        ((oa) this).field_q.a(126, ((oa) this).field_g, ((oa) this).field_r);
+                    if (this.field_r == ap.field_r) {
+                      if (rh.field_f != this.field_g) {
+                        this.field_q.a(126, this.field_g, this.field_r);
                         return;
                       } else {
                         return;
                       }
                     } else {
-                      ((oa) this).field_q.a(126, ((oa) this).field_g, ((oa) this).field_r);
+                      this.field_q.a(126, this.field_g, this.field_r);
                       return;
                     }
                   } else {
-                    if (((oa) this).field_r == ap.field_r) {
-                      if (rh.field_f == ((oa) this).field_g) {
+                    if (this.field_r == ap.field_r) {
+                      if (rh.field_f == this.field_g) {
                         return;
                       } else {
-                        ((oa) this).field_q.a(126, ((oa) this).field_g, ((oa) this).field_r);
+                        this.field_q.a(126, this.field_g, this.field_r);
                         return;
                       }
                     } else {
-                      ((oa) this).field_q.a(126, ((oa) this).field_g, ((oa) this).field_r);
+                      this.field_q.a(126, this.field_g, this.field_r);
                       return;
                     }
                   }
                 }
               } else {
-                int fieldTemp$2 = ((oa) this).field_i - 1;
-                ((oa) this).field_i = ((oa) this).field_i - 1;
-                if (fieldTemp$2 <= 0) {
-                  ((oa) this).field_i = ((oa) this).field_o;
-                  if (jk.field_f < ((oa) this).field_l) {
-                    ((oa) this).field_c = false;
+                fieldTemp$2 = this.field_i - 1;
+                this.field_i = this.field_i - 1;
+                if (-1 <= (fieldTemp$2 ^ -1)) {
+                  this.field_i = this.field_o;
+                  if (jk.field_f < this.field_l) {
+                    this.field_c = false;
                     return;
                   } else {
                     this.a(2);
@@ -504,14 +506,14 @@ final class oa {
                 }
               }
             } else {
-              ((oa) this).field_c = false;
-              if (!((oa) this).field_c) {
+              this.field_c = false;
+              if (!this.field_c) {
                 L0: {
-                  if (ap.field_r < ((oa) this).field_h) {
-                    ui.field_a = (-ap.field_r + ((oa) this).field_h) / 2;
+                  if (ap.field_r < this.field_h) {
+                    ui.field_a = (-ap.field_r + this.field_h) / 2;
                     break L0;
                   } else {
-                    if (0 < ((oa) this).field_h) {
+                    if (0 < this.field_h) {
                       ui.field_a = 0;
                       break L0;
                     } else {
@@ -519,24 +521,24 @@ final class oa {
                     }
                   }
                 }
-                if (((oa) this).field_r == ap.field_r) {
-                  if (rh.field_f == ((oa) this).field_g) {
+                if (this.field_r == ap.field_r) {
+                  if (rh.field_f == this.field_g) {
                     return;
                   } else {
-                    ((oa) this).field_q.a(126, ((oa) this).field_g, ((oa) this).field_r);
+                    this.field_q.a(126, this.field_g, this.field_r);
                     return;
                   }
                 } else {
-                  ((oa) this).field_q.a(126, ((oa) this).field_g, ((oa) this).field_r);
+                  this.field_q.a(126, this.field_g, this.field_r);
                   return;
                 }
               } else {
-                int fieldTemp$3 = ((oa) this).field_i - 1;
-                ((oa) this).field_i = ((oa) this).field_i - 1;
-                if (fieldTemp$3 <= 0) {
-                  ((oa) this).field_i = ((oa) this).field_o;
-                  if (jk.field_f < ((oa) this).field_l) {
-                    ((oa) this).field_c = false;
+                fieldTemp$3 = this.field_i - 1;
+                this.field_i = this.field_i - 1;
+                if (-1 <= (fieldTemp$3 ^ -1)) {
+                  this.field_i = this.field_o;
+                  if (jk.field_f < this.field_l) {
+                    this.field_c = false;
                     return;
                   } else {
                     this.a(2);
@@ -556,10 +558,10 @@ final class oa {
     final void a(byte param0) {
         if (param0 != 96) {
           oa.b(-71);
-          ((oa) this).field_q.a(117, ((oa) this).field_m, ((oa) this).field_a);
+          this.field_q.a(117, this.field_m, this.field_a);
           return;
         } else {
-          ((oa) this).field_q.a(117, ((oa) this).field_m, ((oa) this).field_a);
+          this.field_q.a(117, this.field_m, this.field_a);
           return;
         }
     }
@@ -570,10 +572,10 @@ final class oa {
     }
 
     final void a(int param0, byte param1, int param2) {
-        ((oa) this).field_h = param2;
-        ((oa) this).field_f = param0;
+        this.field_h = param2;
+        this.field_f = param0;
         if (param1 < 18) {
-            field_e = null;
+            field_e = (ko) null;
         }
     }
 

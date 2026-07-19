@@ -127,7 +127,7 @@ abstract class rf {
                         }
                         L8: {
                           var13 = ah.field_i[var10];
-                          if (var13 != -2147483648) {
+                          if ((var13 ^ -1) != 2147483647) {
                             break L8;
                           } else {
                             if (var19 == 0) {
@@ -138,7 +138,7 @@ abstract class rf {
                           }
                         }
                         var14 = ah.field_i[var11];
-                        if (var14 == -2147483648) {
+                        if ((var14 ^ -1) == 2147483647) {
                           break L5;
                         } else {
                           L9: {
@@ -146,7 +146,7 @@ abstract class rf {
                             stackOut_26_0 = hb.field_l.length - 1;
                             stackIn_29_0 = stackOut_26_0;
                             stackIn_27_0 = stackOut_26_0;
-                            if (var7 < 0) {
+                            if ((var7 ^ -1) > -1) {
                               stackOut_29_0 = stackIn_29_0;
                               stackOut_29_1 = var15 << -var7;
                               stackIn_30_0 = stackOut_29_0;
@@ -165,7 +165,7 @@ abstract class rf {
                           L10: while (true) {
                             L11: {
                               L12: {
-                                if (var17 >> 4 == 0) {
+                                if ((var17 >> 1128381412 ^ -1) == -1) {
                                   break L12;
                                 } else {
                                   var16--;
@@ -196,7 +196,7 @@ abstract class rf {
                                   }
                                 }
                               }
-                              stackOut_40_0 = var17 + (var16 << 4);
+                              stackOut_40_0 = var17 + (var16 << 773402116);
                               stackIn_41_0 = stackOut_40_0;
                               break L11;
                             }
@@ -204,7 +204,7 @@ abstract class rf {
                               var18 = stackIn_41_0;
                               dj.field_c[var18] = var8;
                               hb.field_l[var16] = 1 + var17;
-                              if (param4.field_D <= 0) {
+                              if ((param4.field_D ^ -1) >= -1) {
                                 break L14;
                               } else {
                                 if (param4.field_N == null) {
@@ -274,23 +274,23 @@ abstract class rf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var5 = decompiledCaughtException;
-            stackOut_61_0 = (RuntimeException) var5;
+            stackOut_61_0 = (RuntimeException) (var5);
             stackOut_61_1 = new StringBuilder().append("rf.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_64_0 = stackOut_61_0;
             stackIn_64_1 = stackOut_61_1;
             stackIn_62_0 = stackOut_61_0;
             stackIn_62_1 = stackOut_61_1;
             if (param4 == null) {
-              stackOut_64_0 = (RuntimeException) (Object) stackIn_64_0;
-              stackOut_64_1 = (StringBuilder) (Object) stackIn_64_1;
+              stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
+              stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
               stackOut_64_2 = "null";
               stackIn_65_0 = stackOut_64_0;
               stackIn_65_1 = stackOut_64_1;
               stackIn_65_2 = stackOut_64_2;
               break L18;
             } else {
-              stackOut_62_0 = (RuntimeException) (Object) stackIn_62_0;
-              stackOut_62_1 = (StringBuilder) (Object) stackIn_62_1;
+              stackOut_62_0 = (RuntimeException) ((Object) stackIn_62_0);
+              stackOut_62_1 = (StringBuilder) ((Object) stackIn_62_1);
               stackOut_62_2 = "{...}";
               stackIn_65_0 = stackOut_62_0;
               stackIn_65_1 = stackOut_62_1;
@@ -298,7 +298,7 @@ abstract class rf {
               break L18;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + ')');
+          throw la.a((Throwable) ((Object) stackIn_65_0), stackIn_65_2 + ')');
         }
     }
 
@@ -310,7 +310,7 @@ abstract class rf {
                 rf.a(true);
             }
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "rf.J(" + param0 + ')');
+            throw la.a((Throwable) ((Object) runtimeException), "rf.J(" + param0 + ')');
         }
     }
 
@@ -321,10 +321,6 @@ abstract class rf {
     abstract int a(int param0, int param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Type your email address again to make sure it's correct";
         field_a = new pj();
     }

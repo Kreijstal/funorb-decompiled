@@ -7,18 +7,18 @@ final class ed extends rh {
     private ed(String param0, tg param1) {
         this(param0, lb.field_O.field_h, param1);
         try {
-            ((ed) this).field_y = lb.field_O.field_j;
+            this.field_y = lb.field_O.field_j;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private ed(String param0, t param1, tg param2) {
         super(param0, param1, param2);
         try {
-            ((ed) this).field_y = lb.field_O.field_j;
+            this.field_y = lb.field_O.field_j;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class ed extends rh {
         RuntimeException var4 = null;
         String[] var5 = null;
         int var6 = 0;
-        Object var7 = null;
+        String[] var7 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -66,12 +66,12 @@ final class ed extends rh {
         try {
           var4_int = 67 / ((param3 - -20) / 57);
           rk.field_X = cj.field_e;
-          if (param1 != 255) {
+          if (-256 != (param1 ^ -1)) {
             if (100 > param1) {
               fh.field_c = wg.a((byte) -118, param1, param2);
               return;
             } else {
-              if (param1 > 105) {
+              if ((param1 ^ -1) < -106) {
                 fh.field_c = wg.a((byte) -118, param1, param2);
                 return;
               } else {
@@ -83,7 +83,7 @@ final class ed extends rh {
             }
           } else {
             L0: {
-              if (da.field_o >= 13) {
+              if ((da.field_o ^ -1) <= -14) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
@@ -94,7 +94,7 @@ final class ed extends rh {
               }
             }
             fh.field_c = oc.a(stackIn_5_0 != 0, -21017);
-            var7 = null;
+            var7 = (String[]) null;
             gk.a((String[]) null, (byte) -93);
             return;
           }
@@ -102,23 +102,23 @@ final class ed extends rh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_0 = (RuntimeException) (var4);
             stackOut_12_1 = new StringBuilder().append("ed.HA(");
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (args == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L1;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -127,23 +127,23 @@ final class ed extends rh {
             }
           }
           L2: {
-            stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+            stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
             stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param1).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param2 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L2;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -151,7 +151,7 @@ final class ed extends rh {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param3 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param3 + ')');
         }
     }
 
@@ -160,27 +160,30 @@ final class ed extends rh {
             return;
         }
         ij.a((byte) 111, 4, false);
+        if (param0 > -91) {
+            field_I = (kk) null;
+        }
     }
 
     public static void j(int param0) {
         field_I = null;
         if (param0 != -3621) {
-            Object var2 = null;
+            String var2 = (String) null;
             ed.a((String[]) null, 26, (String) null, (byte) 99);
         }
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        ((ed) this).field_G = !((ed) this).field_G ? true : false;
+        this.field_G = !this.field_G ? true : false;
         super.b(param0, param1, param2, param3);
     }
 
     ed(String param0, tg param1, boolean param2) {
         this(param0, param1);
         try {
-            ((ed) this).field_G = param2 ? true : false;
+            this.field_G = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

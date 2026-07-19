@@ -20,16 +20,21 @@ final class j {
         field_b = null;
         field_l = null;
         field_h = null;
-        field_j = null;
-        field_e = null;
-        field_a = null;
+        if (param0 != -3) {
+          field_j = (String) null;
+          field_j = null;
+          field_e = null;
+          field_a = null;
+          return;
+        } else {
+          field_j = null;
+          field_e = null;
+          field_a = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "j.A(";
         field_j = "Full screen";
         field_l = null;

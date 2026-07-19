@@ -12,6 +12,11 @@ final class kg {
     public static void a(int param0) {
         field_a = null;
         field_e = null;
+        if (param0 != -1) {
+            field_c = -1;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
@@ -39,7 +44,7 @@ final class kg {
         try {
           L0: {
             L1: {
-              var4_int = -1;
+              var4_int = -101 % ((param1 - 11) / 46);
               if (null == da.field_n) {
                 break L1;
               } else {
@@ -50,7 +55,7 @@ final class kg {
             if (fj.field_P == null) {
               break L0;
             } else {
-              var5 = (Object) (Object) sb.field_b;
+              var5 = sb.field_b;
               synchronized (var5) {
                 L2: {
                   fj.field_P.a(param2, (byte) -113, -1);
@@ -79,23 +84,23 @@ final class kg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var4;
-            stackOut_16_1 = new StringBuilder().append("kg.B(").append(param0).append(',').append(116).append(',').append(param2).append(',');
+            stackOut_16_0 = (RuntimeException) (var4);
+            stackOut_16_1 = new StringBuilder().append("kg.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param3 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -103,15 +108,11 @@ final class kg {
               break L4;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 480;
         field_b = new int[256];
     }

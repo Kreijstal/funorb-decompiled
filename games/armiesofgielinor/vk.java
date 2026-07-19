@@ -11,21 +11,20 @@ final class vk {
     private static String field_z;
 
     public vk() {
-        ((vk) this).field_a = new int[16];
+        this.field_a = new int[16];
     }
 
     public static void a(int param0) {
         field_d = null;
+        if (param0 != -4740) {
+            return;
+        }
         field_c = null;
         field_e = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "vk.A(";
         field_b = "Password is valid";
         field_c = "Show all game chat";

@@ -13,7 +13,7 @@ final class qqa extends le {
         int var2_int = 0;
         int var3 = VoidHunters.field_G;
         try {
-            for (var2_int = 0; var2_int < 11; var2_int++) {
+            for (var2_int = 0; -12 < (var2_int ^ -1); var2_int++) {
                 lu.field_f[var2_int] = 0;
                 qd.field_a[var2_int] = !param0 ? true : false;
             }
@@ -28,7 +28,7 @@ final class qqa extends le {
             gk.field_p = !param0 ? true : false;
             m.a(37);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qqa.C(" + param0 + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "qqa.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -46,10 +46,10 @@ final class qqa extends le {
         int var9 = 0;
         int[] var10 = null;
         var9 = VoidHunters.field_G;
-        var10 = ((qqa) this).field_f.a((byte) -62, param0);
+        var10 = this.field_f.a((byte) -62, param0);
         var3 = var10;
-        if (((qqa) this).field_f.field_e) {
-          var4 = ((qqa) this).a((byte) 69, 0, param0);
+        if (this.field_f.field_e) {
+          var4 = this.a((byte) 69, 0, param0);
           var5 = var4[0];
           var6 = var4[1];
           var7 = var4[2];
@@ -61,7 +61,7 @@ final class qqa extends le {
               continue L0;
             } else {
               if (!param1) {
-                field_i = null;
+                field_i = (String[]) null;
                 return var3;
               } else {
                 return var3;
@@ -70,7 +70,7 @@ final class qqa extends le {
           }
         } else {
           if (!param1) {
-            field_i = null;
+            field_i = (String[]) null;
             return var3;
           } else {
             return var3;
@@ -79,10 +79,6 @@ final class qqa extends le {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
     }
 }

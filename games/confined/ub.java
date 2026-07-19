@@ -17,8 +17,9 @@ public class ub {
     }
 
     public static void a(String param0, int param1, int param2) {
+        File discarded$2 = null;
         Exception var3 = null;
-        Object var4 = null;
+        String var4 = null;
         Throwable decompiledCaughtException = null;
         field_a = param1;
         field_d = param0;
@@ -37,8 +38,8 @@ public class ub {
               break L0;
             } else {
               L2: {
-                var4 = null;
-                File discarded$2 = ub.a((String) null, (byte) 19);
+                var4 = (String) null;
+                discarded$2 = ub.a((String) null, (byte) 19);
                 field_b = true;
                 if (null == field_e) {
                   field_e = "~/";
@@ -77,10 +78,6 @@ public class ub {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_c = new Hashtable(16);
     }

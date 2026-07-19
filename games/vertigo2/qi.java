@@ -26,13 +26,18 @@ final class qi extends java.awt.Canvas implements java.awt.event.FocusListener {
             bi.a();
             ln.field_f.c(param2 + param1, param3, 64);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "qi.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "qi.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void a(int param0) {
         field_f = null;
         field_b = null;
+        if (param0 != 8462) {
+            field_f = (String) null;
+            field_d = null;
+            return;
+        }
         field_d = null;
     }
 
@@ -41,9 +46,9 @@ final class qi extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            ((qi) this).field_e = true;
+            this.field_e = true;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "qi.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "qi.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,9 +63,9 @@ final class qi extends java.awt.Canvas implements java.awt.event.FocusListener {
             return;
         }
         try {
-            br.a(((qi) this).field_c, param0, 8);
+            br.a(this.field_c, param0, 8);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "qi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "qi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -68,10 +73,6 @@ final class qi extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Music: ";
     }
 }

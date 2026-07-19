@@ -11,6 +11,6 @@ public class rc {
     int field_c;
 
     rc() {
-        ((rc) this).field_a = 0;
+        this.field_a = 0;
     }
 }

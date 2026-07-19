@@ -10,6 +10,11 @@ final class sq {
 
     public static void a(int param0) {
         field_d = null;
+        if (param0 != 26371) {
+            sq.a((byte) 120);
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
@@ -30,16 +35,12 @@ final class sq {
         wj.field_c[11] = ie.field_Sb;
         wj.field_c[5] = ro.field_a;
         wj.field_c[7] = dk.field_l;
-        wj.field_c[13] = jp.field_j;
+        wj.field_c[param0] = jp.field_j;
         wj.field_c[15] = pp.field_x;
         wj.field_c[20] = hr.field_z;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = true;
         field_d = "No players";
     }

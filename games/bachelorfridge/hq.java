@@ -53,6 +53,7 @@ final class hq extends tda {
         RuntimeException stackIn_57_0 = null;
         StringBuilder stackIn_57_1 = null;
         String stackIn_57_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_18_0 = null;
         Object stackOut_20_0 = null;
@@ -96,50 +97,51 @@ final class hq extends tda {
           L0: {
             if (param5) {
               L1: {
-                if (!((hq) this).field_p) {
+                if (!this.field_p) {
                   break L1;
                 } else {
                   if (!param1) {
                     break L1;
                   } else {
                     L2: {
-                      if (0 >= ((hq) this).field_w) {
+                      if (0 >= this.field_w) {
                         L3: {
-                          if (null != ((hq) this).field_m) {
-                            ((hq) this).field_o.b(true);
+                          if (null != this.field_m) {
+                            this.field_o.b(true);
                             break L3;
                           } else {
                             break L3;
                           }
                         }
-                        ((hq) this).field_m = param0;
+                        this.field_m = param0;
                         if (param0 == null) {
                           break L2;
                         } else {
-                          ((hq) this).field_o.a(param0, (byte) -115, false);
-                          this.a(param3, param2, ((hq) this).field_o, -49);
+                          this.field_o.a(param0, (byte) -115, false);
+                          this.a(param3, param2, this.field_o, -49);
                           break L2;
                         }
                       } else {
                         L4: {
-                          if (null != ((hq) this).field_u) {
-                            ((hq) this).field_s.b(true);
+                          if (null != this.field_u) {
+                            this.field_s.b(true);
                             break L4;
                           } else {
                             break L4;
                           }
                         }
-                        ((hq) this).field_u = param0;
+                        this.field_u = param0;
                         if (param0 != null) {
-                          ((hq) this).field_s.a(param0, (byte) -113, false);
-                          this.a(param3, param2, ((hq) this).field_s, -72);
+                          this.field_s.a(param0, (byte) -113, false);
+                          this.a(param3, param2, this.field_s, -72);
                           break L2;
                         } else {
                           break L2;
                         }
                       }
                     }
-                    return;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               }
@@ -161,17 +163,17 @@ final class hq extends tda {
                   break L5;
                 }
               }
-              ((hq) this).field_p = stackIn_21_1 != 0;
-              if (param0 != ((hq) this).field_u) {
-                if (((hq) this).field_m != param0) {
+              ((hq) (this)).field_p = stackIn_21_1 != 0;
+              if (param0 != this.field_u) {
+                if (this.field_m != param0) {
                   L6: {
-                    if (((hq) this).field_u != null) {
-                      if (((hq) this).field_m == null) {
+                    if (this.field_u != null) {
+                      if (this.field_m == null) {
                         var7_int = 0;
                         break L6;
                       } else {
                         L7: {
-                          if (((hq) this).field_t >= 524288) {
+                          if (-524289 >= (this.field_t ^ -1)) {
                             stackOut_32_0 = 0;
                             stackIn_33_0 = stackOut_32_0;
                             break L7;
@@ -192,21 +194,21 @@ final class hq extends tda {
                   L8: {
                     if (var7_int == 0) {
                       L9: {
-                        if (null == ((hq) this).field_m) {
+                        if (null == this.field_m) {
                           break L9;
                         } else {
-                          ((hq) this).field_o.b(true);
+                          this.field_o.b(true);
                           break L9;
                         }
                       }
                       L10: {
-                        ((hq) this).field_m = param0;
+                        this.field_m = param0;
                         if (param0 == null) {
                           break L10;
                         } else {
                           L11: {
-                            stackOut_48_0 = ((hq) this).field_o;
-                            stackOut_48_1 = (kia) param0;
+                            stackOut_48_0 = this.field_o;
+                            stackOut_48_1 = (kia) (param0);
                             stackOut_48_2 = -111;
                             stackIn_50_0 = stackOut_48_0;
                             stackIn_50_1 = stackOut_48_1;
@@ -215,8 +217,8 @@ final class hq extends tda {
                             stackIn_49_1 = stackOut_48_1;
                             stackIn_49_2 = stackOut_48_2;
                             if (param1) {
-                              stackOut_50_0 = (jp) (Object) stackIn_50_0;
-                              stackOut_50_1 = (kia) (Object) stackIn_50_1;
+                              stackOut_50_0 = (jp) ((Object) stackIn_50_0);
+                              stackOut_50_1 = (kia) ((Object) stackIn_50_1);
                               stackOut_50_2 = stackIn_50_2;
                               stackOut_50_3 = 0;
                               stackIn_51_0 = stackOut_50_0;
@@ -225,8 +227,8 @@ final class hq extends tda {
                               stackIn_51_3 = stackOut_50_3;
                               break L11;
                             } else {
-                              stackOut_49_0 = (jp) (Object) stackIn_49_0;
-                              stackOut_49_1 = (kia) (Object) stackIn_49_1;
+                              stackOut_49_0 = (jp) ((Object) stackIn_49_0);
+                              stackOut_49_1 = (kia) ((Object) stackIn_49_1);
                               stackOut_49_2 = stackIn_49_2;
                               stackOut_49_3 = 1;
                               stackIn_51_0 = stackOut_49_0;
@@ -237,27 +239,27 @@ final class hq extends tda {
                             }
                           }
                           ((jp) (Object) stackIn_51_0).a(stackIn_51_1, (byte) stackIn_51_2, stackIn_51_3 != 0);
-                          this.a(param3, param2, ((hq) this).field_o, -53);
+                          this.a(param3, param2, this.field_o, -53);
                           break L10;
                         }
                       }
-                      ((hq) this).field_w = -param4;
+                      this.field_w = -param4;
                       break L8;
                     } else {
                       L12: {
-                        if (null == ((hq) this).field_u) {
+                        if (null == this.field_u) {
                           break L12;
                         } else {
-                          ((hq) this).field_s.b(true);
+                          this.field_s.b(true);
                           break L12;
                         }
                       }
                       L13: {
-                        ((hq) this).field_u = param0;
+                        this.field_u = param0;
                         if (param0 != null) {
                           L14: {
-                            stackOut_40_0 = ((hq) this).field_s;
-                            stackOut_40_1 = (kia) param0;
+                            stackOut_40_0 = this.field_s;
+                            stackOut_40_1 = (kia) (param0);
                             stackOut_40_2 = -115;
                             stackIn_42_0 = stackOut_40_0;
                             stackIn_42_1 = stackOut_40_1;
@@ -266,8 +268,8 @@ final class hq extends tda {
                             stackIn_41_1 = stackOut_40_1;
                             stackIn_41_2 = stackOut_40_2;
                             if (param1) {
-                              stackOut_42_0 = (jp) (Object) stackIn_42_0;
-                              stackOut_42_1 = (kia) (Object) stackIn_42_1;
+                              stackOut_42_0 = (jp) ((Object) stackIn_42_0);
+                              stackOut_42_1 = (kia) ((Object) stackIn_42_1);
                               stackOut_42_2 = stackIn_42_2;
                               stackOut_42_3 = 0;
                               stackIn_43_0 = stackOut_42_0;
@@ -276,8 +278,8 @@ final class hq extends tda {
                               stackIn_43_3 = stackOut_42_3;
                               break L14;
                             } else {
-                              stackOut_41_0 = (jp) (Object) stackIn_41_0;
-                              stackOut_41_1 = (kia) (Object) stackIn_41_1;
+                              stackOut_41_0 = (jp) ((Object) stackIn_41_0);
+                              stackOut_41_1 = (kia) ((Object) stackIn_41_1);
                               stackOut_41_2 = stackIn_41_2;
                               stackOut_41_3 = 1;
                               stackIn_43_0 = stackOut_41_0;
@@ -288,52 +290,56 @@ final class hq extends tda {
                             }
                           }
                           ((jp) (Object) stackIn_43_0).a(stackIn_43_1, (byte) stackIn_43_2, stackIn_43_3 != 0);
-                          this.a(param3, param2, ((hq) this).field_s, -83);
+                          this.a(param3, param2, this.field_s, -83);
                           break L13;
                         } else {
                           break L13;
                         }
                       }
-                      ((hq) this).field_w = param4;
+                      this.field_w = param4;
                       break L8;
                     }
                   }
+                  decompiledRegionSelector0 = 4;
                   break L0;
                 } else {
-                  ((hq) this).field_w = -param4;
-                  this.a(param3, param2, ((hq) this).field_o, -91);
-                  return;
+                  this.field_w = -param4;
+                  this.a(param3, param2, this.field_o, -91);
+                  decompiledRegionSelector0 = 3;
+                  break L0;
                 }
               } else {
-                ((hq) this).field_w = param4;
-                this.a(param3, param2, ((hq) this).field_s, -75);
-                return;
+                this.field_w = param4;
+                this.a(param3, param2, this.field_s, -75);
+                decompiledRegionSelector0 = 2;
+                break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var7 = decompiledCaughtException;
-            stackOut_54_0 = (RuntimeException) var7;
+            stackOut_54_0 = (RuntimeException) (var7);
             stackOut_54_1 = new StringBuilder().append("hq.H(");
             stackIn_56_0 = stackOut_54_0;
             stackIn_56_1 = stackOut_54_1;
             stackIn_55_0 = stackOut_54_0;
             stackIn_55_1 = stackOut_54_1;
             if (param0 == null) {
-              stackOut_56_0 = (RuntimeException) (Object) stackIn_56_0;
-              stackOut_56_1 = (StringBuilder) (Object) stackIn_56_1;
+              stackOut_56_0 = (RuntimeException) ((Object) stackIn_56_0);
+              stackOut_56_1 = (StringBuilder) ((Object) stackIn_56_1);
               stackOut_56_2 = "null";
               stackIn_57_0 = stackOut_56_0;
               stackIn_57_1 = stackOut_56_1;
               stackIn_57_2 = stackOut_56_2;
               break L15;
             } else {
-              stackOut_55_0 = (RuntimeException) (Object) stackIn_55_0;
-              stackOut_55_1 = (StringBuilder) (Object) stackIn_55_1;
+              stackOut_55_0 = (RuntimeException) ((Object) stackIn_55_0);
+              stackOut_55_1 = (StringBuilder) ((Object) stackIn_55_1);
               stackOut_55_2 = "{...}";
               stackIn_57_0 = stackOut_55_0;
               stackIn_57_1 = stackOut_55_1;
@@ -341,7 +347,24 @@ final class hq extends tda {
               break L15;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_57_0), stackIn_57_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                return;
+              }
+            }
+          }
         }
     }
 
@@ -349,123 +372,215 @@ final class hq extends tda {
         int var3 = 0;
         L0: {
           var3 = BachelorFridge.field_y;
-          if (((hq) this).field_t <= 0) {
-            break L0;
-          } else {
-            if (((hq) this).field_u == null) {
-              break L0;
+          if (-1 > (this.field_t ^ -1)) {
+            if (this.field_u != null) {
+              this.field_s.a(param0);
+              if (-1048577 < (this.field_t ^ -1)) {
+                if (null != this.field_m) {
+                  this.field_o.a(param0);
+                  if ((this.field_l ^ -1) >= -1) {
+                    break L0;
+                  } else {
+                    if (this.field_v == null) {
+                      break L0;
+                    } else {
+                      this.field_r.a(param0);
+                      break L0;
+                    }
+                  }
+                } else {
+                  if ((this.field_l ^ -1) >= -1) {
+                    break L0;
+                  } else {
+                    if (this.field_v == null) {
+                      break L0;
+                    } else {
+                      this.field_r.a(param0);
+                      break L0;
+                    }
+                  }
+                }
+              } else {
+                if ((this.field_l ^ -1) >= -1) {
+                  break L0;
+                } else {
+                  if (this.field_v == null) {
+                    break L0;
+                  } else {
+                    this.field_r.a(param0);
+                    break L0;
+                  }
+                }
+              }
             } else {
-              ((hq) this).field_s.a(param0);
-              break L0;
+              if (-1048577 < (this.field_t ^ -1)) {
+                if (null != this.field_m) {
+                  this.field_o.a(param0);
+                  if ((this.field_l ^ -1) >= -1) {
+                    break L0;
+                  } else {
+                    if (this.field_v == null) {
+                      break L0;
+                    } else {
+                      this.field_r.a(param0);
+                      break L0;
+                    }
+                  }
+                } else {
+                  if ((this.field_l ^ -1) >= -1) {
+                    break L0;
+                  } else {
+                    if (this.field_v == null) {
+                      break L0;
+                    } else {
+                      this.field_r.a(param0);
+                      break L0;
+                    }
+                  }
+                }
+              } else {
+                if ((this.field_l ^ -1) >= -1) {
+                  break L0;
+                } else {
+                  if (this.field_v == null) {
+                    break L0;
+                  } else {
+                    this.field_r.a(param0);
+                    break L0;
+                  }
+                }
+              }
+            }
+          } else {
+            if (-1048577 < (this.field_t ^ -1)) {
+              if (null == this.field_m) {
+                if ((this.field_l ^ -1) >= -1) {
+                  break L0;
+                } else {
+                  if (this.field_v != null) {
+                    this.field_r.a(param0);
+                    break L0;
+                  } else {
+                    if ((this.field_l ^ -1) >= -1) {
+                      break L0;
+                    } else {
+                      if (this.field_v == null) {
+                        break L0;
+                      } else {
+                        this.field_r.a(param0);
+                        break L0;
+                      }
+                    }
+                  }
+                }
+              } else {
+                if ((this.field_l ^ -1) >= -1) {
+                  break L0;
+                } else {
+                  if (this.field_v == null) {
+                    break L0;
+                  } else {
+                    this.field_r.a(param0);
+                    break L0;
+                  }
+                }
+              }
+            } else {
+              if ((this.field_l ^ -1) >= -1) {
+                break L0;
+              } else {
+                if (this.field_v == null) {
+                  break L0;
+                } else {
+                  this.field_r.a(param0);
+                  break L0;
+                }
+              }
             }
           }
         }
         L1: {
-          if (((hq) this).field_t >= 1048576) {
+          if (!this.field_p) {
             break L1;
           } else {
-            if (null == ((hq) this).field_m) {
-              break L1;
-            } else {
-              ((hq) this).field_o.a(param0);
-              break L1;
+            L2: {
+              if (this.field_w <= 0) {
+                break L2;
+              } else {
+                if (this.field_s.c(28607)) {
+                  break L2;
+                } else {
+                  this.field_u = null;
+                  this.field_p = false;
+                  this.field_w = -this.field_w;
+                  break L1;
+                }
+              }
             }
-          }
-        }
-        L2: {
-          if (((hq) this).field_l <= 0) {
-            break L2;
-          } else {
-            if (((hq) this).field_v == null) {
-              break L2;
+            if (0 <= this.field_w) {
+              break L1;
             } else {
-              ((hq) this).field_r.a(param0);
-              break L2;
+              if (!this.field_o.c(28607)) {
+                this.field_m = null;
+                this.field_w = -this.field_w;
+                this.field_p = false;
+                break L1;
+              } else {
+                break L1;
+              }
             }
           }
         }
         L3: {
-          if (!((hq) this).field_p) {
+          if (this.field_w == 0) {
             break L3;
           } else {
-            L4: {
-              if (((hq) this).field_w <= 0) {
-                break L4;
-              } else {
-                if (((hq) this).field_s.c(28607)) {
-                  break L4;
+            this.field_t = this.field_t + param0 * this.field_w;
+            if ((this.field_t ^ -1) <= -1048577) {
+              this.field_t = 1048576;
+              if (!this.field_p) {
+                this.field_w = 0;
+                if (!this.field_n) {
+                  L4: {
+                    if (this.field_m != null) {
+                      this.field_o.b(true);
+                      break L4;
+                    } else {
+                      break L4;
+                    }
+                  }
+                  this.field_m = null;
+                  break L3;
                 } else {
-                  ((hq) this).field_u = null;
-                  ((hq) this).field_p = false;
-                  ((hq) this).field_w = -((hq) this).field_w;
                   break L3;
                 }
-              }
-            }
-            if (0 <= ((hq) this).field_w) {
-              break L3;
-            } else {
-              if (!((hq) this).field_o.c(28607)) {
-                ((hq) this).field_m = null;
-                ((hq) this).field_w = -((hq) this).field_w;
-                ((hq) this).field_p = false;
-                break L3;
               } else {
                 break L3;
               }
-            }
-          }
-        }
-        L5: {
-          if (((hq) this).field_w == 0) {
-            break L5;
-          } else {
-            ((hq) this).field_t = ((hq) this).field_t + param0 * ((hq) this).field_w;
-            if (((hq) this).field_t >= 1048576) {
-              ((hq) this).field_t = 1048576;
-              if (!((hq) this).field_p) {
-                ((hq) this).field_w = 0;
-                if (!((hq) this).field_n) {
-                  L6: {
-                    if (((hq) this).field_m != null) {
-                      ((hq) this).field_o.b(true);
-                      break L6;
-                    } else {
-                      break L6;
-                    }
-                  }
-                  ((hq) this).field_m = null;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              } else {
-                break L5;
-              }
             } else {
-              if (((hq) this).field_t <= 0) {
-                ((hq) this).field_t = 0;
-                if (!((hq) this).field_p) {
-                  ((hq) this).field_w = 0;
-                  if (((hq) this).field_n) {
-                    break L5;
+              if (-1 <= (this.field_t ^ -1)) {
+                this.field_t = 0;
+                if (!this.field_p) {
+                  this.field_w = 0;
+                  if (this.field_n) {
+                    break L3;
                   } else {
-                    L7: {
-                      if (null == ((hq) this).field_u) {
-                        break L7;
+                    L5: {
+                      if (null == this.field_u) {
+                        break L5;
                       } else {
-                        ((hq) this).field_s.b(true);
-                        break L7;
+                        this.field_s.b(true);
+                        break L5;
                       }
                     }
-                    ((hq) this).field_u = null;
-                    break L5;
+                    this.field_u = null;
+                    break L3;
                   }
                 } else {
-                  break L5;
+                  break L3;
                 }
               } else {
-                break L5;
+                break L3;
               }
             }
           }
@@ -496,6 +611,7 @@ final class hq extends tda {
         RuntimeException stackIn_69_0 = null;
         StringBuilder stackIn_69_1 = null;
         String stackIn_69_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_33_0 = 0;
         int stackOut_32_0 = 0;
@@ -514,35 +630,36 @@ final class hq extends tda {
         var11 = BachelorFridge.field_y;
         try {
           L0: {
-            if (((hq) this).field_q <= 0) {
-              ((hq) this).a(param2);
-              return;
+            if (-1 <= (this.field_q ^ -1)) {
+              this.a(param2);
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
-                if (((hq) this).field_p) {
+                if (this.field_p) {
                   L2: {
-                    if (((hq) this).field_w <= 0) {
+                    if ((this.field_w ^ -1) >= -1) {
                       break L2;
                     } else {
-                      if (!((hq) this).field_s.c(28607)) {
-                        ((hq) this).field_u = null;
-                        ((hq) this).field_w = -((hq) this).field_w;
-                        ((hq) this).field_p = false;
+                      if (!this.field_s.c(28607)) {
+                        this.field_u = null;
+                        this.field_w = -this.field_w;
+                        this.field_p = false;
                         break L1;
                       } else {
                         break L2;
                       }
                     }
                   }
-                  if (((hq) this).field_w >= 0) {
+                  if (this.field_w >= 0) {
                     break L1;
                   } else {
-                    if (((hq) this).field_o.c(28607)) {
+                    if (this.field_o.c(28607)) {
                       break L1;
                     } else {
-                      ((hq) this).field_w = -((hq) this).field_w;
-                      ((hq) this).field_m = null;
-                      ((hq) this).field_p = false;
+                      this.field_w = -this.field_w;
+                      this.field_m = null;
+                      this.field_p = false;
                       break L1;
                     }
                   }
@@ -551,26 +668,26 @@ final class hq extends tda {
                 }
               }
               L3: {
-                var4_int = ((hq) this).field_q * (((hq) this).field_t >> 12) / 256;
-                var5 = -var4_int + ((hq) this).field_q;
-                if (0 == ((hq) this).field_w) {
+                var4_int = this.field_q * (this.field_t >> -1198266804) / 256;
+                var5 = -var4_int + this.field_q;
+                if (0 == this.field_w) {
                   break L3;
                 } else {
-                  ((hq) this).field_t = ((hq) this).field_t + ((hq) this).field_w * param2;
-                  if (((hq) this).field_t >= 1048576) {
-                    ((hq) this).field_t = 1048576;
-                    if (!((hq) this).field_p) {
-                      ((hq) this).field_w = 0;
-                      if (!((hq) this).field_n) {
+                  this.field_t = this.field_t + this.field_w * param2;
+                  if (-1048577 >= (this.field_t ^ -1)) {
+                    this.field_t = 1048576;
+                    if (!this.field_p) {
+                      this.field_w = 0;
+                      if (!this.field_n) {
                         L4: {
-                          if (((hq) this).field_m == null) {
+                          if (this.field_m == null) {
                             break L4;
                           } else {
-                            ((hq) this).field_o.b(true);
+                            this.field_o.b(true);
                             break L4;
                           }
                         }
-                        ((hq) this).field_m = null;
+                        this.field_m = null;
                         break L3;
                       } else {
                         break L3;
@@ -579,24 +696,24 @@ final class hq extends tda {
                       break L3;
                     }
                   } else {
-                    if (((hq) this).field_t > 0) {
+                    if (this.field_t > 0) {
                       break L3;
                     } else {
-                      ((hq) this).field_t = 0;
-                      if (((hq) this).field_p) {
+                      this.field_t = 0;
+                      if (this.field_p) {
                         break L3;
                       } else {
-                        ((hq) this).field_w = 0;
-                        if (!((hq) this).field_n) {
+                        this.field_w = 0;
+                        if (!this.field_n) {
                           L5: {
-                            if (((hq) this).field_u != null) {
-                              ((hq) this).field_s.b(true);
+                            if (this.field_u != null) {
+                              this.field_s.b(true);
                               break L5;
                             } else {
                               break L5;
                             }
                           }
-                          ((hq) this).field_u = null;
+                          this.field_u = null;
                           break L3;
                         } else {
                           break L3;
@@ -612,21 +729,21 @@ final class hq extends tda {
                   stackIn_34_0 = stackOut_33_0;
                   break L6;
                 } else {
-                  stackOut_32_0 = param2 << 1;
+                  stackOut_32_0 = param2 << 893102177;
                   stackIn_34_0 = stackOut_32_0;
                   break L6;
                 }
               }
               L7: {
                 var6 = stackIn_34_0;
-                if (((hq) this).field_l >= 256) {
+                if (this.field_l >= 256) {
                   break L7;
                 } else {
                   L8: {
-                    if (((hq) this).field_u != null) {
+                    if (this.field_u != null) {
                       break L8;
                     } else {
-                      if (null != ((hq) this).field_m) {
+                      if (null != this.field_m) {
                         break L8;
                       } else {
                         break L7;
@@ -634,31 +751,31 @@ final class hq extends tda {
                     }
                   }
                   if (256 != var4_int) {
-                    if (var5 == 256) {
-                      ((hq) this).field_o.a(param0, param1, param2);
+                    if ((var5 ^ -1) == -257) {
+                      this.field_o.a(param0, param1, param2);
                       break L7;
                     } else {
                       L9: {
                         L10: {
-                          if (((hq) this).field_j == null) {
+                          if (this.field_j == null) {
                             break L10;
                           } else {
-                            if (((hq) this).field_j.length < var6) {
+                            if (this.field_j.length < var6) {
                               break L10;
                             } else {
-                              bl.a(((hq) this).field_j, 0, var6);
-                              bl.a(((hq) this).field_k, 0, var6);
+                              bl.a(this.field_j, 0, var6);
+                              bl.a(this.field_k, 0, var6);
                               break L9;
                             }
                           }
                         }
-                        ((hq) this).field_k = new int[var6];
-                        ((hq) this).field_j = new int[var6];
+                        this.field_k = new int[var6];
+                        this.field_j = new int[var6];
                         break L9;
                       }
                       L11: {
-                        ((hq) this).field_s.a(((hq) this).field_j, 0, param2);
-                        ((hq) this).field_o.a(((hq) this).field_k, 0, param2);
+                        this.field_s.a(this.field_j, 0, param2);
+                        this.field_o.a(this.field_k, 0, param2);
                         if (!pb.field_q) {
                           stackOut_47_0 = param1;
                           stackIn_48_0 = stackOut_47_0;
@@ -676,42 +793,42 @@ final class hq extends tda {
                         if (var8 >= var6) {
                           break L7;
                         } else {
-                          param0[var8 + var7] = param0[var8 + var7] + (var4_int * ((hq) this).field_j[var8] + var5 * ((hq) this).field_k[var8] >> 8);
+                          param0[var8 + var7] = param0[var8 + var7] + (var4_int * this.field_j[var8] + var5 * this.field_k[var8] >> 202956008);
                           var8++;
                           continue L12;
                         }
                       }
                     }
                   } else {
-                    ((hq) this).field_s.a(param0, param1, param2);
+                    this.field_s.a(param0, param1, param2);
                     break L7;
                   }
                 }
               }
               L13: {
-                if (((hq) this).field_v == null) {
+                if (this.field_v == null) {
                   break L13;
                 } else {
-                  if (((hq) this).field_l != 0) {
+                  if (this.field_l != 0) {
                     L14: {
                       L15: {
-                        if (((hq) this).field_j == null) {
+                        if (this.field_j == null) {
                           break L15;
                         } else {
-                          if (((hq) this).field_j.length < var6) {
+                          if (this.field_j.length < var6) {
                             break L15;
                           } else {
-                            bl.a(((hq) this).field_j, 0, var6);
+                            bl.a(this.field_j, 0, var6);
                             break L14;
                           }
                         }
                       }
-                      ((hq) this).field_k = new int[var6];
-                      ((hq) this).field_j = new int[var6];
+                      this.field_k = new int[var6];
+                      this.field_j = new int[var6];
                       break L14;
                     }
                     L16: {
-                      ((hq) this).field_r.a(((hq) this).field_j, 0, param2);
+                      this.field_r.a(this.field_j, 0, param2);
                       if (pb.field_q) {
                         param1 = param1 << 1;
                         stackOut_61_0 = param1 << 1;
@@ -724,14 +841,14 @@ final class hq extends tda {
                       }
                     }
                     var7 = stackIn_62_0;
-                    var8 = ((hq) this).field_l * ((hq) this).field_q / 256;
-                    var9 = ((hq) this).field_q + -var8;
+                    var8 = this.field_l * this.field_q / 256;
+                    var9 = this.field_q + -var8;
                     var10 = 0;
                     L17: while (true) {
                       if (var10 >= var6) {
                         break L13;
                       } else {
-                        param0[var7 - -var10] = ((hq) this).field_j[var10] * var8 + var9 * param0[var7 + var10] >> 8;
+                        param0[var7 - -var10] = this.field_j[var10] * var8 + var9 * param0[var7 + var10] >> -1222271384;
                         var10++;
                         continue L17;
                       }
@@ -741,6 +858,7 @@ final class hq extends tda {
                   }
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -748,23 +866,23 @@ final class hq extends tda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var4 = decompiledCaughtException;
-            stackOut_66_0 = (RuntimeException) var4;
+            stackOut_66_0 = (RuntimeException) (var4);
             stackOut_66_1 = new StringBuilder().append("hq.C(");
             stackIn_68_0 = stackOut_66_0;
             stackIn_68_1 = stackOut_66_1;
             stackIn_67_0 = stackOut_66_0;
             stackIn_67_1 = stackOut_66_1;
             if (param0 == null) {
-              stackOut_68_0 = (RuntimeException) (Object) stackIn_68_0;
-              stackOut_68_1 = (StringBuilder) (Object) stackIn_68_1;
+              stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
+              stackOut_68_1 = (StringBuilder) ((Object) stackIn_68_1);
               stackOut_68_2 = "null";
               stackIn_69_0 = stackOut_68_0;
               stackIn_69_1 = stackOut_68_1;
               stackIn_69_2 = stackOut_68_2;
               break L18;
             } else {
-              stackOut_67_0 = (RuntimeException) (Object) stackIn_67_0;
-              stackOut_67_1 = (StringBuilder) (Object) stackIn_67_1;
+              stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
+              stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
               stackOut_67_2 = "{...}";
               stackIn_69_0 = stackOut_67_0;
               stackIn_69_1 = stackOut_67_1;
@@ -772,7 +890,12 @@ final class hq extends tda {
               break L18;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_69_0, stackIn_69_2 + ',' + param1 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_69_0), stackIn_69_2 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -786,21 +909,22 @@ final class hq extends tda {
 
     final synchronized void a(int param0, boolean param1) {
         if (!param1) {
-            Object var4 = null;
-            ((hq) this).a((int[]) null, 70, 31);
+            int[] var4 = (int[]) null;
+            this.a((int[]) null, 70, 31);
         }
-        ((hq) this).field_q = param0;
+        this.field_q = param0;
     }
 
     private final void a(int param0, int param1, jp param2, int param3) {
+        int discarded$0 = 0;
         try {
             if (param3 > 0) {
-                int discarded$0 = ((hq) this).d();
+                discarded$0 = this.d();
             }
             param2.a(-1, param0, (byte) -107);
             param2.c(224, param1);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "hq.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "hq.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

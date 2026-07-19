@@ -53,43 +53,43 @@ final class ae extends ca implements ke {
               var3 = null;
               if (rk.field_b != param1) {
                 if (param1 == uf.field_a) {
-                  var3 = (Object) (Object) o.field_f;
-                  ((ae) this).field_k = ((ae) this).field_k + 10;
+                  var3 = o.field_f;
+                  this.field_k = this.field_k + 10;
                   if (!l.b(-1)) {
                     break L1;
                   } else {
-                    ((ae) this).field_k = ((ae) this).field_k + 20;
-                    var3 = (Object) (Object) ei.field_j;
+                    this.field_k = this.field_k + 20;
+                    var3 = ei.field_j;
                     break L1;
                   }
                 } else {
                   if (param1 != bk.field_e) {
                     break L1;
                   } else {
-                    var3 = (Object) (Object) de.field_z;
-                    ((ae) this).field_k = ((ae) this).field_k + 30;
+                    var3 = de.field_z;
+                    this.field_k = this.field_k + 30;
                     break L1;
                   }
                 }
               } else {
-                var3 = (Object) (Object) of.field_u;
+                var3 = of.field_u;
                 break L1;
               }
             }
-            var4 = new vg((String) var3, (fd) null);
-            var4.field_w = ((ae) this).field_w;
+            var4 = new vg((String) (var3), (fd) null);
+            var4.field_w = this.field_w;
             var4.field_k = 80;
             var4.field_m = 50;
             var4.field_o = 0;
-            var4.field_l = (cg) (Object) new l(u.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
-            ((ae) this).b(var4, (byte) 121);
-            ((ae) this).field_fb = this.a((fd) this, ei.field_h, 10);
+            var4.field_l = (cg) ((Object) new l(u.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+            this.b(var4, (byte) 121);
+            this.field_fb = this.a((fd) (this), ei.field_h, 10);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
-            var3 = (Object) (Object) decompiledCaughtException;
+            var3 = decompiledCaughtException;
             stackOut_10_0 = var3;
             stackOut_10_1 = new StringBuilder().append("ae.<init>(");
             stackIn_12_0 = stackOut_10_0;
@@ -98,7 +98,7 @@ final class ae extends ca implements ke {
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
               stackOut_12_0 = stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
@@ -106,7 +106,7 @@ final class ae extends ca implements ke {
               break L2;
             } else {
               stackOut_11_0 = stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -123,7 +123,7 @@ final class ae extends ca implements ke {
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
               stackOut_15_0 = stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
@@ -131,7 +131,7 @@ final class ae extends ca implements ke {
               break L3;
             } else {
               stackOut_14_0 = stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -139,20 +139,24 @@ final class ae extends ca implements ke {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
     }
 
     public static void n(int param0) {
         field_lb = null;
         field_ib = null;
+        if (param0 != 1) {
+            ae.a(53, -128, 35, 24, true, 96, 70);
+        }
         field_hb = null;
         field_jb = null;
     }
 
     public final void a(int param0, int param1, boolean param2, hf param3, int param4) {
+        hf discarded$3 = null;
         RuntimeException var6 = null;
-        Object var7 = null;
+        String var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -175,13 +179,13 @@ final class ae extends ca implements ke {
               if (param2) {
                 break L1;
               } else {
-                var7 = null;
-                hf discarded$3 = this.a((fd) null, (String) null, -72);
+                var7 = (String) null;
+                discarded$3 = this.a((fd) null, (String) null, -72);
                 break L1;
               }
             }
             L2: {
-              if (((ae) this).field_fb == param3) {
+              if (this.field_fb == param3) {
                 this.o(0);
                 break L2;
               } else {
@@ -194,23 +198,23 @@ final class ae extends ca implements ke {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var6;
+            stackOut_6_0 = (RuntimeException) (var6);
             stackOut_6_1 = new StringBuilder().append("ae.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -218,11 +222,12 @@ final class ae extends ca implements ke {
               break L3;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param4 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param4 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+        int incrementValue$1 = 0;
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -233,6 +238,7 @@ final class ae extends ca implements ke {
         int var13 = 0;
         int var14 = 0;
         int stackIn_24_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_23_0 = 0;
         int stackOut_22_0 = 0;
@@ -241,7 +247,8 @@ final class ae extends ca implements ke {
           L0: {
             if (param6 > param5) {
               if (param3 <= param5 - -1) {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 L1: {
                   if (5 + param5 >= param3) {
@@ -250,15 +257,16 @@ final class ae extends ca implements ke {
                     if (param1 == param2) {
                       break L1;
                     } else {
-                      var7_int = (param1 >> 1) + (param2 >> 1) + (1 & (param1 & param2));
+                      var7_int = (param1 >> 435470049) + (param2 >> 825875361) + (1 & (param1 & param2));
                       var8 = param5;
                       var9 = param1;
                       var10 = param2;
                       var11 = param5;
                       L2: while (true) {
                         if (var11 >= param3) {
-                          ae.a(param0, param1, var9, var8, param4, param5, param6);
+                          ae.a(param0 + 0, param1, var9, var8, param4, param5, param6);
                           ae.a(param0, var10, param2, param3, param4, var8, param6);
+                          decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
                           L3: {
@@ -277,7 +285,7 @@ final class ae extends ca implements ke {
                             var13 = stackIn_24_0;
                             if (var7_int < var13) {
                               bj.field_a[var11] = bj.field_a[var8];
-                              int incrementValue$1 = var8;
+                              incrementValue$1 = var8;
                               var8++;
                               bj.field_a[incrementValue$1] = var12;
                               if (var13 < var9) {
@@ -305,7 +313,8 @@ final class ae extends ca implements ke {
                 var7_int = -1 + param3;
                 L5: while (true) {
                   if (param5 >= var7_int) {
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     var8 = param5;
                     L6: while (true) {
@@ -332,13 +341,27 @@ final class ae extends ca implements ke {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var7, "ae.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ie.a((Throwable) ((Object) var7), "ae.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -346,7 +369,7 @@ final class ae extends ca implements ke {
         hf var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        Object stackIn_2_0 = null;
+        hf stackIn_2_0 = null;
         hf stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -362,9 +385,10 @@ final class ae extends ca implements ke {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         hf stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        hf stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -384,43 +408,45 @@ final class ae extends ca implements ke {
         try {
           L0: {
             var4 = new hf(param1, param0);
-            var4.field_l = (cg) (Object) new ie();
-            var5 = ((ae) this).field_k + -6;
-            ((ae) this).field_k = ((ae) this).field_k + 38;
-            var4.a(var5, 30, 15, 16535, -14 + ((ae) this).field_w - 16);
+            var4.field_l = (cg) ((Object) new ie());
+            var5 = this.field_k + -6;
+            this.field_k = this.field_k + 38;
+            var4.a(var5, 30, 15, 16535, -14 + this.field_w - 16);
             if (param2 == 10) {
-              ((ae) this).b((vg) (Object) var4, (byte) 63);
-              ((ae) this).e((byte) 64);
-              stackOut_3_0 = (hf) var4;
+              this.b(var4, (byte) 63);
+              this.e((byte) 64);
+              stackOut_3_0 = (hf) (var4);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (hf) null;
               stackIn_2_0 = stackOut_1_0;
-              return (hf) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4_ref;
+            stackOut_5_0 = (RuntimeException) (var4_ref);
             stackOut_5_1 = new StringBuilder().append("ae.E(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -429,23 +455,23 @@ final class ae extends ca implements ke {
             }
           }
           L2: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
             stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -453,22 +479,26 @@ final class ae extends ca implements ke {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     private final void o(int param0) {
-        if (!((ae) this).field_Q) {
+        if (!this.field_Q) {
             return;
         }
+        if (param0 != 0) {
+            return;
+        }
+        this.field_Q = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_jb = "Password is valid";
         field_ib = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
         field_gb = 0;

@@ -13,7 +13,7 @@ public class gl {
 
     public static File a(String param0, int param1) {
         if (param1 != -1) {
-            return null;
+            return (File) null;
         }
         return gl.a(-1, param0, field_c, field_d);
     }
@@ -34,7 +34,7 @@ public class gl {
               if (param0 > 87) {
                 break L1;
               } else {
-                field_c = null;
+                field_c = (String) null;
                 break L1;
               }
             }
@@ -84,10 +84,6 @@ public class gl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = false;
         field_b = new Hashtable(16);
     }

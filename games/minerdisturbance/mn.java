@@ -44,23 +44,23 @@ final class mn extends gk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_0 = (RuntimeException) (var3);
             stackOut_2_1 = new StringBuilder().append("mn.H(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -68,7 +68,7 @@ final class mn extends gk {
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
@@ -102,7 +102,7 @@ final class mn extends gk {
                 break L1;
               } else {
                 bd.field_e = new jl(mb.field_b, ic.field_i);
-                mb.field_b.b(1, (fe) (Object) bd.field_e);
+                mb.field_b.b(1, bd.field_e);
                 break L1;
               }
             }
@@ -120,23 +120,23 @@ final class mn extends gk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_0 = (RuntimeException) (var4);
             stackOut_5_1 = new StringBuilder().append("mn.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param3 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -144,17 +144,17 @@ final class mn extends gk {
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
     }
 
     public static void d(int param0) {
-        Object var2 = null;
+        String var2 = null;
         field_w = null;
         field_u = null;
         field_v = null;
         if (param0 != 42) {
-          var2 = null;
+          var2 = (String) null;
           mn.a((byte) 86, 0.39803603291511536f, true, (String) null);
           field_t = null;
           return;
@@ -165,10 +165,6 @@ final class mn extends gk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = new String[]{"For the paranoid miner: the Scannox 5001! If there's anything living in the volcano, this will let you see it before it sees you. It will also make spotting ore in boulders easier.", "For the paranoid miner: the Scannox 5001! If there's anything living in the Super Volcano, this will let you see it before it sees you. It will also make spotting ore in boulders easier."};
         field_u = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
         field_v = "Main Menu";

@@ -28,16 +28,12 @@ abstract class oe {
 
     final void a(int param0) {
         int var2 = 109 / ((37 - param0) / 63);
-        qg.a(((oe) this).field_c, ((oe) this).field_i, ((oe) this).field_h);
+        qg.a(this.field_c, this.field_i, this.field_h);
     }
 
     abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new int[]{0, 0, 0};
         field_b = new int[]{31, 992, 31744};
         field_j = new String[]{"Welcome to Tor Challenge!", "Characters", "Basic controls", "Special attacks", "Combo attack", "Interface", "Coins", "Bonus crystals", "Health", "Help"};

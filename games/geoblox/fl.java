@@ -20,10 +20,6 @@ final class fl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fl.A(";
         field_c = new gd[33];
     }

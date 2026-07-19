@@ -10,18 +10,17 @@ final class oda extends vg {
     public static void a(boolean param0) {
         field_i = null;
         field_h = null;
+        if (!param0) {
+            field_i = (String) null;
+        }
     }
 
     oda(int param0, int param1) {
-        ((oda) this).field_f = param1;
-        ((oda) this).field_g = param0;
+        this.field_f = param1;
+        this.field_g = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Scamming";
         field_i = "Day";
     }

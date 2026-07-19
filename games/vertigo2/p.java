@@ -21,27 +21,36 @@ final class p {
         hq var14 = null;
         hq var15 = null;
         int[] var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            var12 = id.field_f;
-            var2 = var12.h(-11);
+            L1: {
+              var12 = id.field_f;
+              var2 = var12.h(-11);
+              if (param0 <= -108) {
+                break L1;
+              } else {
+                field_a = (String) null;
+                break L1;
+              }
+            }
             if (var2 != 0) {
               if (1 == var2) {
-                var11 = (nf) (Object) ki.field_a.a((byte) 100);
+                var11 = (nf) ((Object) ki.field_a.a((byte) 100));
                 if (var11 == null) {
                   rm.b((byte) 11);
-                  return;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   var11.c(2);
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 }
               } else {
                 if (var2 == 2) {
-                  var15 = (hq) (Object) mo.field_h.a((byte) 100);
+                  var15 = (hq) ((Object) mo.field_h.a((byte) 100));
                   if (var15 != null) {
                     var15.field_n = mm.a(8);
                     var15.field_o = true;
@@ -50,7 +59,8 @@ final class p {
                     return;
                   } else {
                     rm.b((byte) 100);
-                    return;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 } else {
                   ke.a((Throwable) null, "A1: " + or.a(117), 0);
@@ -60,33 +70,32 @@ final class p {
               }
             } else {
               var10 = mm.a(8);
-              var18 = var10;
-              var17 = var18;
-              var16 = var17;
+              var16 = var10;
               var13 = var16;
               var3 = var13;
               var9 = var10;
               var4 = var9;
               var5 = var12;
-              var6 = ((ed) (Object) var5).h(-11);
+              var6 = ((ed) ((Object) var5)).h(-11);
               var7 = 0;
-              L1: while (true) {
+              L2: while (true) {
                 if (var6 <= var7) {
-                  var14 = (hq) (Object) mo.field_h.a((byte) 100);
+                  var14 = (hq) ((Object) mo.field_h.a((byte) 100));
                   if (var14 == null) {
                     rm.b((byte) 88);
-                    return;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   } else {
                     var14.field_o = true;
                     var14.field_n = var3;
-                    var14.field_p = var18[0];
+                    var14.field_p = var16[0];
                     var14.c(2);
                     return;
                   }
                 } else {
-                  var9[var7] = ((ed) (Object) var5).b(true);
+                  var9[var7] = ((ed) ((Object) var5)).b(true);
                   var7++;
-                  continue L1;
+                  continue L2;
                 }
               }
             }
@@ -94,54 +103,42 @@ final class p {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "p.B(" + -118 + ')');
+          throw wn.a((Throwable) ((Object) var1), "p.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
     final static boolean a(int param0, char param1) {
-        if (param1 < 32) {
-          if (param1 < 160) {
-            L0: {
-              if (param1 == 8364) {
-                break L0;
-              } else {
-                if (param1 == 338) {
+        if (param0 == 376) {
+          if (param1 < 32) {
+            if (param1 < 160) {
+              L0: {
+                if (param1 == 8364) {
                   break L0;
                 } else {
-                  if (param1 == 8212) {
+                  if (param1 == 338) {
                     break L0;
                   } else {
-                    if (param1 == 339) {
+                    if (param1 == 8212) {
                       break L0;
                     } else {
-                      if (376 == param1) {
+                      if (param1 == 339) {
                         break L0;
                       } else {
-                        return false;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            return true;
-          } else {
-            if (param1 > 255) {
-              L1: {
-                if (param1 == 8364) {
-                  break L1;
-                } else {
-                  if (param1 == 338) {
-                    break L1;
-                  } else {
-                    if (param1 == 8212) {
-                      break L1;
-                    } else {
-                      if (param1 == 339) {
-                        break L1;
-                      } else {
                         if (376 == param1) {
-                          break L1;
+                          break L0;
                         } else {
                           return false;
                         }
@@ -152,17 +149,42 @@ final class p {
               }
               return true;
             } else {
-              return true;
-            }
-          }
-        } else {
-          if (126 < param1) {
-            if (param1 >= 160) {
-              if (param1 <= 255) {
+              if (param1 > 255) {
+                L1: {
+                  if (param1 == 8364) {
+                    break L1;
+                  } else {
+                    if (param1 == 338) {
+                      break L1;
+                    } else {
+                      if (param1 == 8212) {
+                        break L1;
+                      } else {
+                        if (param1 == 339) {
+                          break L1;
+                        } else {
+                          if (376 == param1) {
+                            break L1;
+                          } else {
+                            return false;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
                 return true;
               } else {
-                if (param1 != 8364) {
-                  L2: {
+                return true;
+              }
+            }
+          } else {
+            if (126 < param1) {
+              if (param1 < 160) {
+                L2: {
+                  if (param1 == 8364) {
+                    break L2;
+                  } else {
                     if (param1 == 338) {
                       break L2;
                     } else {
@@ -181,25 +203,29 @@ final class p {
                       }
                     }
                   }
-                  return true;
-                } else {
-                  return true;
                 }
-              }
-            } else {
-              if (param1 != 8364) {
-                if (param1 != 338) {
+                return true;
+              } else {
+                if (param1 > 255) {
                   L3: {
-                    if (param1 == 8212) {
+                    if (param1 == 8364) {
                       break L3;
                     } else {
-                      if (param1 == 339) {
+                      if (param1 == 338) {
                         break L3;
                       } else {
-                        if (376 == param1) {
+                        if (param1 == 8212) {
                           break L3;
                         } else {
-                          return false;
+                          if (param1 == 339) {
+                            break L3;
+                          } else {
+                            if (376 == param1) {
+                              break L3;
+                            } else {
+                              return false;
+                            }
+                          }
                         }
                       }
                     }
@@ -208,22 +234,136 @@ final class p {
                 } else {
                   return true;
                 }
+              }
+            } else {
+              return true;
+            }
+          }
+        } else {
+          field_a = (String) null;
+          if (param1 >= 32) {
+            if (126 >= param1) {
+              return true;
+            } else {
+              if (param1 >= 160) {
+                if (param1 <= 255) {
+                  return true;
+                } else {
+                  L4: {
+                    if (param1 == 8364) {
+                      break L4;
+                    } else {
+                      if (param1 == 338) {
+                        break L4;
+                      } else {
+                        if (param1 == 8212) {
+                          break L4;
+                        } else {
+                          if (param1 == 339) {
+                            break L4;
+                          } else {
+                            if (376 == param1) {
+                              break L4;
+                            } else {
+                              return false;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  return true;
+                }
               } else {
+                L5: {
+                  if (param1 == 8364) {
+                    break L5;
+                  } else {
+                    if (param1 == 338) {
+                      break L5;
+                    } else {
+                      if (param1 == 8212) {
+                        break L5;
+                      } else {
+                        if (param1 == 339) {
+                          break L5;
+                        } else {
+                          if (376 == param1) {
+                            break L5;
+                          } else {
+                            return false;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
                 return true;
               }
             }
           } else {
-            return true;
+            if (param1 < 160) {
+              L6: {
+                if (param1 == 8364) {
+                  break L6;
+                } else {
+                  if (param1 == 338) {
+                    break L6;
+                  } else {
+                    if (param1 == 8212) {
+                      break L6;
+                    } else {
+                      if (param1 == 339) {
+                        break L6;
+                      } else {
+                        if (376 == param1) {
+                          break L6;
+                        } else {
+                          return false;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              return true;
+            } else {
+              if (param1 > 255) {
+                if (param1 != 8364) {
+                  if (param1 != 338) {
+                    if (param1 != 8212) {
+                      if (param1 != 339) {
+                        if (376 != param1) {
+                          return false;
+                        } else {
+                          return true;
+                        }
+                      } else {
+                        return true;
+                      }
+                    } else {
+                      return true;
+                    }
+                  } else {
+                    return true;
+                  }
+                } else {
+                  return true;
+                }
+              } else {
+                return true;
+              }
+            }
           }
         }
     }
 
     final static void a(int param0) {
-        ch.field_e.i(0);
+        ch.field_e.i(param0 ^ param0);
         if (!(null != bb.field_F)) {
             bb.field_F = new fg(ch.field_e, eg.field_t);
         }
-        ch.field_e.b((iq) (Object) bb.field_F, 0);
+        ch.field_e.b(bb.field_F, 0);
     }
 
     public static void b(int param0) {
@@ -236,10 +376,6 @@ final class p {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Please remove <%0> from your ignore list first.";
     }
 }

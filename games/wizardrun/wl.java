@@ -13,18 +13,19 @@ class wl {
 
     final boolean c(byte param0) {
         int var2 = 124 % ((18 - param0) / 36);
-        if (null != ((wl) this).field_c) {
+        if (null != this.field_c) {
             return true;
         }
         return false;
     }
 
     final static md b(int param0) {
+        md discarded$0 = null;
         if (param0 != 250) {
-            md discarded$0 = wl.b(58);
-            return (md) (Object) new ia();
+            discarded$0 = wl.b(58);
+            return (md) ((Object) new ia());
         }
-        return (md) (Object) new ia();
+        return (md) ((Object) new ia());
     }
 
     final static void a(String param0, java.applet.Applet param1, byte param2) {
@@ -48,6 +49,8 @@ class wl {
             RuntimeException stackIn_17_0 = null;
             StringBuilder stackIn_17_1 = null;
             String stackIn_17_2 = null;
+            int decompiledRegionSelector0 = 0;
+            int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_11_0 = null;
             StringBuilder stackOut_11_1 = null;
@@ -83,42 +86,51 @@ class wl {
                     }
                     if (param2 < -89) {
                       cl.a(param1, "document.cookie=\"" + var5 + "\"", (byte) -102);
+                      decompiledRegionSelector0 = 1;
                       break L1;
                     } else {
-                      return;
+                      decompiledRegionSelector0 = 0;
+                      break L1;
                     }
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   L3: {
                     var3_ref = decompiledCaughtException;
+                    decompiledRegionSelector0 = 1;
                     break L3;
                   }
                 }
-                jf.a((byte) 121, param1);
-                break L0;
+                if (decompiledRegionSelector0 == 0) {
+                  decompiledRegionSelector1 = 0;
+                  break L0;
+                } else {
+                  jf.a((byte) 121, param1);
+                  decompiledRegionSelector1 = 1;
+                  break L0;
+                }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_11_0 = (RuntimeException) var3_ref2;
+                stackOut_11_0 = (RuntimeException) (var3_ref2);
                 stackOut_11_1 = new StringBuilder().append("wl.MB(");
                 stackIn_13_0 = stackOut_11_0;
                 stackIn_13_1 = stackOut_11_1;
                 stackIn_12_0 = stackOut_11_0;
                 stackIn_12_1 = stackOut_11_1;
                 if (param0 == null) {
-                  stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-                  stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+                  stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+                  stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
                   stackOut_13_2 = "null";
                   stackIn_14_0 = stackOut_13_0;
                   stackIn_14_1 = stackOut_13_1;
                   stackIn_14_2 = stackOut_13_2;
                   break L4;
                 } else {
-                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+                  stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+                  stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
                   stackOut_12_2 = "{...}";
                   stackIn_14_0 = stackOut_12_0;
                   stackIn_14_1 = stackOut_12_1;
@@ -127,23 +139,23 @@ class wl {
                 }
               }
               L5: {
-                stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+                stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
                 stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
                 stackIn_16_0 = stackOut_14_0;
                 stackIn_16_1 = stackOut_14_1;
                 stackIn_15_0 = stackOut_14_0;
                 stackIn_15_1 = stackOut_14_1;
                 if (param1 == null) {
-                  stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                  stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+                  stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+                  stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
                   stackOut_16_2 = "null";
                   stackIn_17_0 = stackOut_16_0;
                   stackIn_17_1 = stackOut_16_1;
                   stackIn_17_2 = stackOut_16_2;
                   break L5;
                 } else {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+                  stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
                   stackOut_15_2 = "{...}";
                   stackIn_17_0 = stackOut_15_0;
                   stackIn_17_1 = stackOut_15_1;
@@ -151,7 +163,12 @@ class wl {
                   break L5;
                 }
               }
-              throw bd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param2 + ')');
+              throw bd.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ')');
+            }
+            if (decompiledRegionSelector1 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -161,36 +178,42 @@ class wl {
     }
 
     final void a(boolean param0) {
-        if (((wl) this).field_c == null) {
+        if (this.field_c == null) {
           return;
         } else {
-          ((wl) this).field_c.field_b = ((wl) this).field_b;
-          ((wl) this).field_b.field_c = ((wl) this).field_c;
-          ((wl) this).field_b = null;
+          this.field_c.field_b = this.field_b;
+          this.field_b.field_c = this.field_c;
+          this.field_b = null;
           if (param0) {
-            field_a = null;
-            ((wl) this).field_c = null;
+            field_a = (String) null;
+            this.field_c = null;
             return;
           } else {
-            ((wl) this).field_c = null;
+            this.field_c = null;
             return;
           }
         }
     }
 
     public static void b(byte param0) {
+        md discarded$2 = null;
         field_f = null;
         field_h = null;
-        field_a = null;
-        field_d = null;
-        field_g = null;
+        if (param0 != 81) {
+          discarded$2 = wl.b(-85);
+          field_a = null;
+          field_d = null;
+          field_g = (byte[][]) null;
+          return;
+        } else {
+          field_a = null;
+          field_d = null;
+          field_g = (byte[][]) null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Email address is unavailable";
         field_g = new byte[250][];
         field_h = new String[]{null, "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "Esc", null, null, "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "`", null, null, null, "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]", null, null, null, null, "A", "S", "D", "F", "G", "H", "J", "K", "L", ";", "'", "#", null, null, null, null, "Z", "X", "C", "V", "B", "N", "M", "<", ">", "/", "\\", null, null, null, null, null, "Tab", "Shift", "Ctrl", "Space", "Enter", "Backspace", "Alt", "Keypad +", "Keypad -", "Keypad *", "Keypad /", "Keypad 5", null, null, null, null, "Left Arrow", "Right Arrow", "Up Arrow", "Down Arrow", "Insert", "Delete", "Home", "End", "Page Up", "Page Down", null, null, null, null, null, null};

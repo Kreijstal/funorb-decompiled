@@ -21,6 +21,7 @@ final class up extends ji {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
@@ -36,49 +37,51 @@ final class up extends ji {
             if (param0 == 110) {
               L1: {
                 var4_int = param1;
-                if (var4_int != 0) {
-                  if (var4_int != 1) {
+                if (-1 != (var4_int ^ -1)) {
+                  if (-2 != (var4_int ^ -1)) {
                     if (var4_int == 2) {
-                      ((up) this).field_A = param2.a((byte) -11);
+                      this.field_A = param2.a((byte) -11);
                       break L1;
                     } else {
                       break L1;
                     }
                   } else {
-                    ((up) this).field_E = param2.h(-11);
+                    this.field_E = param2.h(-11);
                     break L1;
                   }
                 } else {
-                  ((up) this).field_C = param2.h(-11);
+                  this.field_C = param2.h(-11);
                   break L1;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var4;
+            stackOut_13_0 = (RuntimeException) (var4);
             stackOut_13_1 = new StringBuilder().append("up.C(").append(param0).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -86,11 +89,19 @@ final class up extends ji {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void g(int param0) {
+        if (param0 != -3144) {
+            field_y = (String) null;
+        }
         field_B = null;
         field_z = null;
         field_y = null;
@@ -109,24 +120,20 @@ final class up extends ji {
         int var11 = 0;
         int[] var12 = null;
         int[] var13 = null;
-        int[] var14 = null;
-        int[] var15 = null;
         L0: {
           var11 = Vertigo2.field_L ? 1 : 0;
           if (param1 >= 91) {
             break L0;
           } else {
-            ((up) this).field_A = 97;
+            this.field_A = 97;
             break L0;
           }
         }
         L1: {
-          var15 = ((up) this).field_x.a(param0, (byte) 62);
-          var14 = var15;
-          var13 = var14;
+          var13 = this.field_x.a(param0, (byte) 62);
           var12 = var13;
           var3 = var12;
-          if (!((up) this).field_x.field_i) {
+          if (!this.field_x.field_i) {
             break L1;
           } else {
             var4 = 0;
@@ -137,11 +144,11 @@ final class up extends ji {
                 L3: {
                   var5 = rh.field_O[var4];
                   var6 = lf.field_y[param0];
-                  var7 = var5 * ((up) this).field_C >> 12;
-                  var8 = var6 * ((up) this).field_E >> 12;
-                  var9 = var5 % (4096 / ((up) this).field_C) * ((up) this).field_C;
-                  var10 = ((up) this).field_E * (var6 % (4096 / ((up) this).field_E));
-                  if (((up) this).field_A <= var10) {
+                  var7 = var5 * this.field_C >> 327136492;
+                  var8 = var6 * this.field_E >> -1006957460;
+                  var9 = var5 % (4096 / this.field_C) * this.field_C;
+                  var10 = this.field_E * (var6 % (4096 / this.field_E));
+                  if (this.field_A <= var10) {
                     break L3;
                   } else {
                     var7 = var7 - var8;
@@ -149,18 +156,18 @@ final class up extends ji {
                       if (var7 >= 0) {
                         L5: while (true) {
                           if (var7 <= 3) {
-                            var15 = var14;
+                            var13 = var12;
                             if (var7 == 1) {
-                              var15 = var14;
-                              if (((up) this).field_A <= var9) {
+                              var13 = var12;
+                              if (this.field_A <= var9) {
                                 break L3;
                               } else {
-                                var15[var4] = 0;
+                                var13[var4] = 0;
                                 var4++;
                                 continue L2;
                               }
                             } else {
-                              var15[var4] = 0;
+                              var13[var4] = 0;
                               var4++;
                               continue L2;
                             }
@@ -177,18 +184,18 @@ final class up extends ji {
                   }
                 }
                 L6: {
-                  if (var9 >= ((up) this).field_A) {
+                  if (var9 >= this.field_A) {
                     break L6;
                   } else {
                     var7 = var7 - var8;
                     L7: while (true) {
-                      if (var7 >= 0) {
+                      if (-1 >= (var7 ^ -1)) {
                         L8: while (true) {
-                          if (var7 <= 3) {
+                          if ((var7 ^ -1) >= -4) {
                             if (var7 <= 0) {
                               break L6;
                             } else {
-                              var15[var4] = 0;
+                              var13[var4] = 0;
                               var4++;
                               continue L2;
                             }
@@ -204,7 +211,7 @@ final class up extends ji {
                     }
                   }
                 }
-                var15[var4] = 4096;
+                var13[var4] = 4096;
                 var4++;
                 continue L2;
               }
@@ -216,16 +223,12 @@ final class up extends ji {
 
     public up() {
         super(0, true);
-        ((up) this).field_E = 1;
-        ((up) this).field_A = 204;
-        ((up) this).field_C = 1;
+        this.field_E = 1;
+        this.field_A = 204;
+        this.field_C = 1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_D = "Message game";
         field_y = "Unrated game";
         field_B = new si[3];

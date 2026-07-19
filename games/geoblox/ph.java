@@ -13,6 +13,11 @@ final class ph extends hf {
         field_j = null;
         field_k = null;
         field_i = null;
+        if (param0 != 112) {
+            field_k = (String) null;
+            field_g = null;
+            return;
+        }
         field_g = null;
     }
 
@@ -21,10 +26,6 @@ final class ph extends hf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Name is available";
         field_g = "Waiting for extra data";
         field_k = "Unfortunately we are unable to create an account for you at this time.";

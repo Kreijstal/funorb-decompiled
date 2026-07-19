@@ -9,6 +9,7 @@ abstract class za extends ksa {
     }
 
     final static int c(byte param0) {
+        int discarded$2 = 0;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -16,6 +17,7 @@ abstract class za extends ksa {
         int var4 = 0;
         int stackIn_11_0 = 0;
         int stackIn_15_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_10_0 = 0;
         int stackOut_14_0 = 0;
@@ -29,7 +31,8 @@ abstract class za extends ksa {
                 if (var2 >= 12) {
                   stackOut_10_0 = var1_int;
                   stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   L2: {
                     L3: {
@@ -56,28 +59,29 @@ abstract class za extends ksa {
                 if (param0 == -93) {
                   break L4;
                 } else {
-                  int discarded$2 = za.c((byte) 43);
+                  discarded$2 = za.c((byte) 43);
                   break L4;
                 }
               }
               stackOut_14_0 = 12;
               stackIn_15_0 = stackOut_14_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, field_z + param0 + ')');
+          throw rta.a((Throwable) ((Object) var1), field_z + param0 + ')');
         }
-        return stackIn_15_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_11_0;
+        } else {
+          return stackIn_15_0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "za.C(";
     }
 }

@@ -26,16 +26,16 @@ final class uh {
         uf var6 = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != -1) {
-          ((uh) this).field_a = 107;
+          this.field_a = 107;
           L0: while (true) {
-            if (((uh) this).field_j < ((uh) this).field_f) {
-              var6 = ((uh) this).field_b[((uh) this).field_j];
+            if (this.field_j < this.field_f) {
+              var6 = this.field_b[this.field_j];
               if (!var6.field_a.b((byte) -42)) {
                 this.a(true, 0, var6);
                 return false;
               } else {
                 L1: {
-                  if (var6.field_e < 0) {
+                  if (-1 < (var6.field_e ^ -1)) {
                     break L1;
                   } else {
                     if (!var6.field_a.b(109, var6.field_e)) {
@@ -78,7 +78,7 @@ final class uh {
                     }
                   }
                 }
-                ((uh) this).field_j = ((uh) this).field_j + 1;
+                this.field_j = this.field_j + 1;
                 continue L0;
               }
             } else {
@@ -87,14 +87,14 @@ final class uh {
           }
         } else {
           L4: while (true) {
-            if (((uh) this).field_j < ((uh) this).field_f) {
-              var5 = ((uh) this).field_b[((uh) this).field_j];
+            if (this.field_j < this.field_f) {
+              var5 = this.field_b[this.field_j];
               if (!var5.field_a.b((byte) -42)) {
                 this.a(true, 0, var5);
                 return false;
               } else {
                 L5: {
-                  if (var5.field_e < 0) {
+                  if (-1 < (var5.field_e ^ -1)) {
                     break L5;
                   } else {
                     if (!var5.field_a.b(109, var5.field_e)) {
@@ -137,7 +137,7 @@ final class uh {
                     }
                   }
                 }
-                ((uh) this).field_j = ((uh) this).field_j + 1;
+                this.field_j = this.field_j + 1;
                 continue L4;
               }
             } else {
@@ -156,18 +156,18 @@ final class uh {
           if (gf.field_b >= param2 + param1) {
             return param1;
           } else {
-            if (param3 + param1 - param2 >= 0) {
+            if (-1 >= (param3 + param1 - param2 ^ -1)) {
               return -param2 + param3 + param1;
             } else {
               return -param2 + gf.field_b;
             }
           }
         } else {
-          field_e = null;
+          field_e = (String) null;
           if (gf.field_b >= param2 + param1) {
             return param1;
           } else {
-            if (param3 + param1 - param2 >= 0) {
+            if (-1 >= (param3 + param1 - param2 ^ -1)) {
               return -param2 + param3 + param1;
             } else {
               return -param2 + gf.field_b;
@@ -186,6 +186,7 @@ final class uh {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
@@ -197,40 +198,46 @@ final class uh {
         String stackOut_7_2 = null;
         try {
           L0: {
-            L1: {
-              var4_float = (float)param1 / 100.0f + (float)(((uh) this).field_j + 1);
-              ((uh) this).field_h = var4_float * (float)((uh) this).field_a / (float)(1 + ((uh) this).field_f);
-              if (param1 == 0) {
-                ((uh) this).field_c = param2.field_f;
-                break L1;
-              } else {
-                ((uh) this).field_c = param2.field_c + " - " + param1 + "%";
-                break L1;
+            if (param0) {
+              L1: {
+                var4_float = (float)param1 / 100.0f + (float)(this.field_j + 1);
+                this.field_h = var4_float * (float)this.field_a / (float)(1 + this.field_f);
+                if (param1 == 0) {
+                  this.field_c = param2.field_f;
+                  break L1;
+                } else {
+                  this.field_c = param2.field_c + " - " + param1 + "%";
+                  break L1;
+                }
               }
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("uh.D(").append(true).append(',').append(param1).append(',');
+            stackOut_6_0 = (RuntimeException) (var4);
+            stackOut_6_1 = new StringBuilder().append("uh.D(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -238,15 +245,16 @@ final class uh {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Chat is currently disabled.";
         field_e = "You have resigned.";
         field_g = new String[]{"Showing by rating", "Showing by win percentage"};

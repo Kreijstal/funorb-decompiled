@@ -2,8 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.io.*;
-import java.net.URL;
-import java.lang.String;
 
 final class tc {
     static int[] field_d;
@@ -14,14 +12,17 @@ final class tc {
 
     public static void a(boolean param0) {
         field_d = null;
+        if (param0) {
+            field_d = (int[]) null;
+        }
     }
 
     final int a(byte param0) {
         if (param0 <= 86) {
             this.b(-74, -82);
-            return ((tc) this).field_c + 1;
+            return this.field_c + 1;
         }
-        return ((tc) this).field_c + 1;
+        return this.field_c + 1;
     }
 
     private final void b(int param0, int param1) {
@@ -30,13 +31,13 @@ final class tc {
         var4 = new int[this.a(param1, (byte) -41)];
         var3 = var4;
         if (param0 != 28083) {
-          ((tc) this).field_b = -28;
-          qn.a(((tc) this).field_e, 0, var4, 0, ((tc) this).field_e.length);
-          ((tc) this).field_e = var4;
+          this.field_b = -28;
+          qn.a(this.field_e, 0, var4, 0, this.field_e.length);
+          this.field_e = var4;
           return;
         } else {
-          qn.a(((tc) this).field_e, 0, var4, 0, ((tc) this).field_e.length);
-          ((tc) this).field_e = var4;
+          qn.a(this.field_e, 0, var4, 0, this.field_e.length);
+          this.field_e = var4;
           return;
         }
     }
@@ -44,62 +45,64 @@ final class tc {
     final void a(int param0, int param1, int param2) {
         if (param0 == 10499) {
           L0: {
-            if (((tc) this).field_c < param2) {
-              ((tc) this).field_c = param2;
+            if (this.field_c < param2) {
+              this.field_c = param2;
               break L0;
             } else {
               break L0;
             }
           }
-          if (param2 >= ((tc) this).field_e.length) {
+          if (param2 >= this.field_e.length) {
             this.b(28083, param2);
-            ((tc) this).field_e[param2] = param1;
+            this.field_e[param2] = param1;
             return;
           } else {
-            ((tc) this).field_e[param2] = param1;
+            this.field_e[param2] = param1;
             return;
           }
         } else {
           L1: {
             this.b(115, -65);
-            if (((tc) this).field_c < param2) {
-              ((tc) this).field_c = param2;
+            if (this.field_c < param2) {
+              this.field_c = param2;
               break L1;
             } else {
               break L1;
             }
           }
-          if (param2 < ((tc) this).field_e.length) {
-            ((tc) this).field_e[param2] = param1;
+          if (param2 < this.field_e.length) {
+            this.field_e[param2] = param1;
             return;
           } else {
             this.b(28083, param2);
-            ((tc) this).field_e[param2] = param1;
+            this.field_e[param2] = param1;
             return;
           }
         }
     }
 
     final void c(int param0, int param1) {
+        int discarded$2 = 0;
+        int discarded$3 = 0;
         if (param0 >= 0) {
-          if (((tc) this).field_c >= param0) {
-            if (param0 == ((tc) this).field_c) {
+          if (this.field_c >= param0) {
+            if (param0 == this.field_c) {
               if (param1 < 16) {
-                int discarded$2 = ((tc) this).a(17, -11);
-                ((tc) this).field_c = ((tc) this).field_c - 1;
+                discarded$2 = this.a(17, -11);
+                this.field_c = this.field_c - 1;
                 return;
               } else {
-                ((tc) this).field_c = ((tc) this).field_c - 1;
+                this.field_c = this.field_c - 1;
                 return;
               }
             } else {
-              qn.a(((tc) this).field_e, param0 - -1, ((tc) this).field_e, param0, -param0 + ((tc) this).field_c);
+              qn.a(this.field_e, param0 - -1, this.field_e, param0, -param0 + this.field_c);
               if (param1 < 16) {
-                int discarded$3 = ((tc) this).a(17, -11);
-                ((tc) this).field_c = ((tc) this).field_c - 1;
+                discarded$3 = this.a(17, -11);
+                this.field_c = this.field_c - 1;
                 return;
               } else {
-                ((tc) this).field_c = ((tc) this).field_c - 1;
+                this.field_c = this.field_c - 1;
                 return;
               }
             }
@@ -112,29 +115,34 @@ final class tc {
     }
 
     final void a(byte param0, int param1) {
-        ((tc) this).a(10499, param1, ((tc) this).field_c - -1);
+        this.a(10499, param1, this.field_c - -1);
         if (param0 != -2) {
-            field_d = null;
+            field_d = (int[]) null;
         }
     }
 
     private final int a(int param0, byte param1) {
         int var3 = 0;
-        var3 = ((tc) this).field_e.length;
+        var3 = this.field_e.length;
         L0: while (true) {
           if (var3 > param0) {
-            return var3;
+            if (param1 > -12) {
+              this.b(-26, -84);
+              return var3;
+            } else {
+              return var3;
+            }
           } else {
-            if (((tc) this).field_a) {
+            if (this.field_a) {
               if (var3 != 0) {
-                var3 = var3 * ((tc) this).field_b;
+                var3 = var3 * this.field_b;
                 continue L0;
               } else {
                 var3 = 1;
                 continue L0;
               }
             } else {
-              var3 = var3 + ((tc) this).field_b;
+              var3 = var3 + this.field_b;
               continue L0;
             }
           }
@@ -143,28 +151,29 @@ final class tc {
 
     final int a(int param0, int param1) {
         if (param1 != 2229) {
-            ((tc) this).field_a = false;
-            if (!(param0 <= ((tc) this).field_c)) {
+            this.field_a = false;
+            if (!(param0 <= this.field_c)) {
                 throw new ArrayIndexOutOfBoundsException(param0);
             }
-            return ((tc) this).field_e[param0];
+            return this.field_e[param0];
         }
-        if (!(param0 <= ((tc) this).field_c)) {
+        if (!(param0 <= this.field_c)) {
             throw new ArrayIndexOutOfBoundsException(param0);
         }
-        return ((tc) this).field_e[param0];
+        return this.field_e[param0];
     }
 
     tc(int param0, boolean param1) {
-        ((tc) this).field_c = -1;
-        ((tc) this).field_e = new int[]{};
-        ((tc) this).field_a = false;
-        ((tc) this).field_b = param0;
-        ((tc) this).field_a = param1 ? true : false;
+        this.field_c = -1;
+        this.field_e = new int[]{};
+        this.field_a = false;
+        this.field_b = param0;
+        this.field_a = param1 ? true : false;
     }
 
     final static void a(Throwable param0, String param1, int param2) {
         try {
+            int discarded$1 = 0;
             String var3 = null;
             Exception var3_ref = null;
             le var4 = null;
@@ -189,6 +198,7 @@ final class tc {
             java.net.URL stackIn_15_3 = null;
             StringBuilder stackIn_15_4 = null;
             String stackIn_15_5 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             sj stackOut_12_0 = null;
             java.net.URL stackOut_12_1 = null;
@@ -240,7 +250,8 @@ final class tc {
                 var8 = dg.a(123, "%26", var7, "&");
                 var9 = dg.a(-61, "%23", var8, "#");
                 if (null == gj.field_W) {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   L4: {
                     stackOut_12_0 = wh.field_c;
@@ -259,11 +270,11 @@ final class tc {
                     stackIn_13_3 = stackOut_12_3;
                     stackIn_13_4 = stackOut_12_4;
                     if (ma.field_j == null) {
-                      stackOut_14_0 = (sj) (Object) stackIn_14_0;
+                      stackOut_14_0 = (sj) ((Object) stackIn_14_0);
                       stackOut_14_1 = null;
                       stackOut_14_2 = null;
-                      stackOut_14_3 = (java.net.URL) (Object) stackIn_14_3;
-                      stackOut_14_4 = (StringBuilder) (Object) stackIn_14_4;
+                      stackOut_14_3 = (java.net.URL) ((Object) stackIn_14_3);
+                      stackOut_14_4 = (StringBuilder) ((Object) stackIn_14_4);
                       stackOut_14_5 = "" + hf.field_e;
                       stackIn_15_0 = stackOut_14_0;
                       stackIn_15_1 = stackOut_14_1;
@@ -273,11 +284,11 @@ final class tc {
                       stackIn_15_5 = stackOut_14_5;
                       break L4;
                     } else {
-                      stackOut_13_0 = (sj) (Object) stackIn_13_0;
+                      stackOut_13_0 = (sj) ((Object) stackIn_13_0);
                       stackOut_13_1 = null;
                       stackOut_13_2 = null;
-                      stackOut_13_3 = (java.net.URL) (Object) stackIn_13_3;
-                      stackOut_13_4 = (StringBuilder) (Object) stackIn_13_4;
+                      stackOut_13_3 = (java.net.URL) ((Object) stackIn_13_3);
+                      stackOut_13_4 = (StringBuilder) ((Object) stackIn_13_4);
                       stackOut_13_5 = ma.field_j;
                       stackIn_15_0 = stackOut_13_0;
                       stackIn_15_1 = stackOut_13_1;
@@ -295,7 +306,7 @@ final class tc {
                         if (param2 == -8555) {
                           break L6;
                         } else {
-                          field_d = null;
+                          field_d = (int[]) null;
                           break L6;
                         }
                       }
@@ -303,12 +314,13 @@ final class tc {
                         if (1 != var4.field_f) {
                           break L7;
                         } else {
-                          var5 = (DataInputStream) var4.field_e;
-                          int discarded$1 = var5.read();
+                          var5 = (DataInputStream) (var4.field_e);
+                          discarded$1 = var5.read();
                           var5.close();
                           break L7;
                         }
                       }
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       cf.a(-100, 1L);
@@ -321,8 +333,14 @@ final class tc {
               decompiledCaughtException = decompiledCaughtParameter0;
               L8: {
                 var3_ref = (Exception) (Object) decompiledCaughtException;
+                decompiledRegionSelector0 = 1;
                 break L8;
               }
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -13,17 +13,20 @@ final class md extends pu {
         field_m = null;
         field_n = null;
         field_p = null;
+        if (param0 != 28075) {
+            field_m = (String) null;
+        }
     }
 
     final static int d(byte param0) {
+        if (param0 > -64) {
+            field_p = (String[]) null;
+            return 1;
+        }
         return 1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Certain creatures will eat certain foods, the key to Bachelor Fridge is figuring out what your creatures want to eat.";
         field_n = "Fish";
         field_o = new jg();

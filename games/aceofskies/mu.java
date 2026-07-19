@@ -14,50 +14,50 @@ final class mu extends da {
         float var12 = 0.0f;
         L0: {
           L1: {
-            var9 = (dc) (Object) param5;
+            var9 = (dc) ((Object) param5);
             var10 = var9.field_e;
-            ((mu) this).field_f.a((byte) 10);
-            ((mu) this).field_f.a((rt) (Object) ((mu) this).field_h, 1);
-            if (((mu) this).field_e) {
+            this.field_f.a((byte) 10);
+            this.field_f.a(this.field_h, 1);
+            if (this.field_e) {
               break L1;
             } else {
               if (!param4) {
-                ((mu) this).field_f.a(7681, -26625, 7681);
+                this.field_f.a(7681, -26625, 7681);
                 break L0;
               } else {
                 break L1;
               }
             }
           }
-          ((mu) this).field_f.a(7681, -26625, 8448);
-          ((mu) this).field_f.a(34168, 768, 34176, 0);
+          this.field_f.a(7681, -26625, 8448);
+          this.field_f.a(34168, 768, 34176, 0);
           break L0;
         }
         L2: {
           L3: {
-            ((mu) this).field_f.a(false, 1);
-            ((mu) this).field_f.a((rt) (Object) var10, 1);
-            ((mu) this).field_f.a(7681, -26625, 8448);
-            ((mu) this).field_f.a(34168, 768, 34176, 0);
+            this.field_f.a(false, 1);
+            this.field_f.a(var10, 1);
+            this.field_f.a(7681, -26625, 8448);
+            this.field_f.a(34168, 768, 34176, 0);
             jaggl.OpenGL.glTexGeni(8192, 9472, 9216);
             jaggl.OpenGL.glTexGeni(8193, 9472, 9216);
             var11 = var10.field_r / (float)var10.field_q;
             var12 = var10.field_p / (float)var10.field_o;
-            jaggl.OpenGL.glTexGenfv(8192, 9474, new float[4], 0);
-            jaggl.OpenGL.glTexGenfv(8193, 9474, new float[4], 0);
+            jaggl.OpenGL.glTexGenfv(8192, 9474, new float[]{var11, 0.0f, 0.0f, (float)(-param6) * var11}, 0);
+            jaggl.OpenGL.glTexGenfv(8193, 9474, new float[]{0.0f, var12, 0.0f, (float)(-param7) * var12}, 0);
             jaggl.OpenGL.glEnable(3168);
             jaggl.OpenGL.glEnable(3169);
             jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
             jaggl.OpenGL.glTranslatef((float)param1, (float)param2, 0.0f);
-            ((mu) this).field_g.a(-23085, param0);
+            this.field_g.a(-23085, param0);
             jaggl.OpenGL.glLoadIdentity();
             jaggl.OpenGL.glDisable(3168);
             jaggl.OpenGL.glDisable(3169);
-            ((mu) this).field_f.a(5890, 768, 34176, 0);
-            ((mu) this).field_f.a(8448, -26625, 8448);
-            ((mu) this).field_f.a((rt) null, 1);
-            ((mu) this).field_f.a(false, 0);
-            if (((mu) this).field_e) {
+            this.field_f.a(5890, 768, 34176, 0);
+            this.field_f.a(8448, -26625, 8448);
+            this.field_f.a((rt) null, 1);
+            this.field_f.a(false, 0);
+            if (this.field_e) {
               break L3;
             } else {
               if (!param4) {
@@ -67,7 +67,7 @@ final class mu extends da {
               }
             }
           }
-          ((mu) this).field_f.a(5890, 768, 34176, 0);
+          this.field_f.a(5890, 768, 34176, 0);
           break L2;
         }
     }
@@ -75,30 +75,30 @@ final class mu extends da {
     final void fa(char param0, int param1, int param2, int param3, boolean param4) {
         L0: {
           L1: {
-            ((mu) this).field_f.a((byte) 10);
-            ((mu) this).field_f.a((rt) (Object) ((mu) this).field_h, 1);
-            if (((mu) this).field_e) {
+            this.field_f.a((byte) 10);
+            this.field_f.a(this.field_h, 1);
+            if (this.field_e) {
               break L1;
             } else {
               if (!param4) {
-                ((mu) this).field_f.a(7681, -26625, 7681);
+                this.field_f.a(7681, -26625, 7681);
                 break L0;
               } else {
                 break L1;
               }
             }
           }
-          ((mu) this).field_f.a(7681, -26625, 8448);
-          ((mu) this).field_f.a(34168, 768, 34176, 0);
+          this.field_f.a(7681, -26625, 8448);
+          this.field_f.a(34168, 768, 34176, 0);
           break L0;
         }
         L2: {
           L3: {
             jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
             jaggl.OpenGL.glTranslatef((float)param1, (float)param2, 0.0f);
-            ((mu) this).field_g.a(-23085, param0);
+            this.field_g.a(-23085, param0);
             jaggl.OpenGL.glLoadIdentity();
-            if (((mu) this).field_e) {
+            if (this.field_e) {
               break L3;
             } else {
               if (!param4) {
@@ -108,13 +108,20 @@ final class mu extends da {
               }
             }
           }
-          ((mu) this).field_f.a(5890, 768, 34176, 0);
+          this.field_f.a(5890, 768, 34176, 0);
           break L2;
         }
     }
 
     mu(wl param0, vs param1, vd[] param2, boolean param3) {
-        super((ha) (Object) param0, param1);
+        super(param0, param1);
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
         int var5 = 0;
         int var6 = 0;
         int[] var7_ref_int__ = null;
@@ -157,14 +164,6 @@ final class mu extends da {
         byte[] var31 = null;
         byte[] var32 = null;
         int[] var33 = null;
-        byte[] var34 = null;
-        byte[] var35 = null;
-        byte[] var36 = null;
-        int[] var37 = null;
-        byte[] var38 = null;
-        byte[] var39 = null;
-        byte[] var40 = null;
-        int[] var41 = null;
         byte[] stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         byte[] stackIn_18_0 = null;
@@ -180,7 +179,7 @@ final class mu extends da {
         byte[] stackOut_17_0 = null;
         int stackOut_17_1 = 0;
         int stackOut_17_2 = 0;
-        ((mu) this).field_f = param0;
+        this.field_f = param0;
         var5 = 0;
         var6 = 0;
         L0: while (true) {
@@ -188,28 +187,22 @@ final class mu extends da {
             L1: {
               var6 = var5 * 16;
               if (!param3) {
-                var41 = new int[var6 * var6];
-                var37 = var41;
-                var33 = var37;
+                var33 = new int[var6 * var6];
                 var28 = var33;
                 var7_ref_int__ = var28;
                 var8_int = 0;
                 L2: while (true) {
                   if (var8_int >= 256) {
-                    ((mu) this).field_h = ab.a(param0, -125, false, var41, 0, 0, var6, var6);
-                    ((mu) this).field_e = false;
+                    this.field_h = ab.a(param0, -125, false, var33, 0, 0, var6, var6);
+                    this.field_e = false;
                     break L1;
                   } else {
                     var25 = param2[var8_int];
                     var10 = var25.field_f;
-                    var39 = var25.field_e;
-                    var35 = var39;
-                    var31 = var35;
+                    var31 = var25.field_e;
                     var26 = var31;
                     var11_ref_byte__ = var26;
-                    var40 = var25.field_d;
-                    var36 = var40;
-                    var32 = var36;
+                    var32 = var25.field_d;
                     var27 = var32;
                     var12_ref_byte__ = var27;
                     var13 = var25.field_c;
@@ -229,7 +222,7 @@ final class mu extends da {
                               var19_int++;
                               continue L3;
                             } else {
-                              int incrementValue$7 = var18_int;
+                              incrementValue$7 = var18_int;
                               var18_int++;
                               var21 = var12_ref_byte__[incrementValue$7];
                               if (var12_ref_byte__[incrementValue$7] == 0) {
@@ -237,7 +230,7 @@ final class mu extends da {
                                 var20_int++;
                                 continue L4;
                               } else {
-                                int incrementValue$8 = var17_int;
+                                incrementValue$8 = var17_int;
                                 var17_int++;
                                 var7_ref_int__[incrementValue$8] = -16777216 | var10[var21 & 255];
                                 var20_int++;
@@ -261,9 +254,9 @@ final class mu extends da {
                               var19_int++;
                               continue L5;
                             } else {
-                              int incrementValue$9 = var17_int;
+                              incrementValue$9 = var17_int;
                               var17_int++;
-                              var7_ref_int__[incrementValue$9] = var39[var18_int] << 24 | var10[var40[var18_int] & 255];
+                              var7_ref_int__[incrementValue$9] = var31[var18_int] << 24 | var10[var32[var18_int] & 255];
                               var18_int++;
                               var20_int++;
                               continue L6;
@@ -278,16 +271,14 @@ final class mu extends da {
                   }
                 }
               } else {
-                var38 = new byte[var6 * var6];
-                var34 = var38;
-                var30 = var34;
+                var30 = new byte[var6 * var6];
                 var24 = var30;
                 var7_ref_byte__ = var24;
                 var8_int = 0;
                 L7: while (true) {
                   if (var8_int >= 256) {
-                    ((mu) this).field_h = wq.a(param0, var6, var6, false, 6406, 6406, 9980, var38);
-                    ((mu) this).field_e = true;
+                    this.field_h = wq.a(param0, var6, var6, false, 6406, 6406, 9980, var30);
+                    this.field_e = true;
                     break L1;
                   } else {
                     var23 = param2[var8_int];
@@ -309,9 +300,9 @@ final class mu extends da {
                               var17_int++;
                               continue L8;
                             } else {
-                              int incrementValue$10 = var14;
+                              incrementValue$10 = var14;
                               var14++;
-                              int incrementValue$11 = var15_int;
+                              incrementValue$11 = var15_int;
                               var15_int++;
                               var7_ref_byte__[incrementValue$10] = var16_ref_byte__[incrementValue$11];
                               var18_int++;
@@ -336,18 +327,18 @@ final class mu extends da {
                               continue L10;
                             } else {
                               L12: {
-                                int incrementValue$12 = var14;
+                                incrementValue$12 = var14;
                                 var14++;
-                                int incrementValue$13 = var15_int;
+                                incrementValue$13 = var15_int;
                                 var15_int++;
-                                stackOut_16_0 = (byte[]) var7_ref_byte__;
+                                stackOut_16_0 = (byte[]) (var7_ref_byte__);
                                 stackOut_16_1 = incrementValue$12;
                                 stackIn_18_0 = stackOut_16_0;
                                 stackIn_18_1 = stackOut_16_1;
                                 stackIn_17_0 = stackOut_16_0;
                                 stackIn_17_1 = stackOut_16_1;
                                 if (var16_ref_byte__[incrementValue$13] != 0) {
-                                  stackOut_18_0 = (byte[]) (Object) stackIn_18_0;
+                                  stackOut_18_0 = (byte[]) ((Object) stackIn_18_0);
                                   stackOut_18_1 = stackIn_18_1;
                                   stackOut_18_2 = -1;
                                   stackIn_19_0 = stackOut_18_0;
@@ -355,7 +346,7 @@ final class mu extends da {
                                   stackIn_19_2 = stackOut_18_2;
                                   break L12;
                                 } else {
-                                  stackOut_17_0 = (byte[]) (Object) stackIn_17_0;
+                                  stackOut_17_0 = (byte[]) ((Object) stackIn_17_0);
                                   stackOut_17_1 = stackIn_17_1;
                                   stackOut_17_2 = 0;
                                   stackIn_19_0 = stackOut_17_0;
@@ -379,10 +370,10 @@ final class mu extends da {
                 }
               }
             }
-            ((mu) this).field_h.a(false, -128);
-            ((mu) this).field_g = new si(param0, 256);
-            var7 = ((mu) this).field_h.field_r / (float)((mu) this).field_h.field_q;
-            var8 = ((mu) this).field_h.field_p / (float)((mu) this).field_h.field_o;
+            this.field_h.a(false, -128);
+            this.field_g = new si(param0, 256);
+            var7 = this.field_h.field_r / (float)this.field_h.field_q;
+            var8 = this.field_h.field_p / (float)this.field_h.field_o;
             var9 = 0;
             L13: while (true) {
               if (var9 >= 256) {
@@ -399,18 +390,18 @@ final class mu extends da {
                 var18 = var16 * var8;
                 var19 = (var15 + (float)var12) * var7;
                 var20 = (var16 + (float)var11) * var8;
-                ((mu) this).field_g.a((byte) 111, var9);
+                this.field_g.a((byte) 111, var9);
                 jaggl.OpenGL.glBegin(7);
-                jaggl.OpenGL.glTexCoord2f(var17, ((mu) this).field_h.field_p - var18);
+                jaggl.OpenGL.glTexCoord2f(var17, this.field_h.field_p - var18);
                 jaggl.OpenGL.glVertex2i(var14, var13);
-                jaggl.OpenGL.glTexCoord2f(var17, ((mu) this).field_h.field_p - var20);
+                jaggl.OpenGL.glTexCoord2f(var17, this.field_h.field_p - var20);
                 jaggl.OpenGL.glVertex2i(var14, var13 + var11);
-                jaggl.OpenGL.glTexCoord2f(var19, ((mu) this).field_h.field_p - var20);
+                jaggl.OpenGL.glTexCoord2f(var19, this.field_h.field_p - var20);
                 jaggl.OpenGL.glVertex2i(var14 + var12, var13 + var11);
-                jaggl.OpenGL.glTexCoord2f(var19, ((mu) this).field_h.field_p - var18);
+                jaggl.OpenGL.glTexCoord2f(var19, this.field_h.field_p - var18);
                 jaggl.OpenGL.glVertex2i(var14 + var12, var13);
                 jaggl.OpenGL.glEnd();
-                ((mu) this).field_g.b(false);
+                this.field_g.b(false);
                 var9++;
                 continue L13;
               }

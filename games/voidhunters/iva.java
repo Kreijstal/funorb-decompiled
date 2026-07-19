@@ -35,7 +35,7 @@ final class iva extends rqa {
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) frb.a(135, 116));
+            stackOut_2_0 = new nc(frb.a(135, 116));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -43,23 +43,23 @@ final class iva extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("iva.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -67,7 +67,7 @@ final class iva extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -89,6 +89,7 @@ final class iva extends rqa {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_17_0 = null;
         String stackOut_19_0 = null;
@@ -117,15 +118,15 @@ final class iva extends rqa {
             L2: {
               var4 = VoidHunters.b(var3_int, -1);
               var5 = param1;
-              if (var5 != 0) {
-                if (var5 == 4) {
+              if (-1 != (var5 ^ -1)) {
+                if (-5 == (var5 ^ -1)) {
                   break L2;
                 } else {
                   L3: {
                     if (1 == var5) {
                       break L3;
                     } else {
-                      if (var5 == 5) {
+                      if (-6 == (var5 ^ -1)) {
                         break L3;
                       } else {
                         L4: {
@@ -135,13 +136,15 @@ final class iva extends rqa {
                             if (var5 == 6) {
                               break L4;
                             } else {
-                              if (var5 == 3) {
+                              if ((var5 ^ -1) == -4) {
                                 stackOut_17_0 = cma.a(var4, dob.field_o, cib.field_a, (byte) -126);
                                 stackIn_18_0 = stackOut_17_0;
-                                return stackIn_18_0;
+                                decompiledRegionSelector0 = 3;
+                                break L0;
                               } else {
                                 stackOut_19_0 = cma.a(var4, dob.field_o, gu.field_o, (byte) -74);
                                 stackIn_20_0 = stackOut_19_0;
+                                decompiledRegionSelector0 = 4;
                                 break L0;
                               }
                             }
@@ -149,13 +152,15 @@ final class iva extends rqa {
                         }
                         stackOut_15_0 = cma.a(var4, dob.field_o, kg.field_t, (byte) -91);
                         stackIn_16_0 = stackOut_15_0;
-                        return stackIn_16_0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       }
                     }
                   }
                   stackOut_13_0 = cma.a(var4, dob.field_o, iua.field_o, (byte) -96);
                   stackIn_14_0 = stackOut_13_0;
-                  return stackIn_14_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               } else {
                 break L2;
@@ -163,29 +168,30 @@ final class iva extends rqa {
             }
             stackOut_11_0 = cma.a(var4, dob.field_o, cib.field_a, (byte) -64);
             stackIn_12_0 = stackOut_11_0;
-            return stackIn_12_0;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var3;
+            stackOut_21_0 = (RuntimeException) (var3);
             stackOut_21_1 = new StringBuilder().append("iva.B(").append(param0).append(',').append(param1).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param2 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L5;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -193,14 +199,30 @@ final class iva extends rqa {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
         }
-        return stackIn_20_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_12_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_14_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_16_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_18_0;
+              } else {
+                return stackIn_20_0;
+              }
+            }
+          }
+        }
     }
 
     final static void a(int param0, String param1) {
         RuntimeException var2 = null;
-        Object var3 = null;
+        String var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -223,7 +245,7 @@ final class iva extends rqa {
               if (param0 == -6940) {
                 break L1;
               } else {
-                var3 = null;
+                var3 = (String) null;
                 iva.a(-26, (String) null);
                 break L1;
               }
@@ -239,23 +261,23 @@ final class iva extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_0 = (RuntimeException) (var2);
             stackOut_5_1 = new StringBuilder().append("iva.C(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -263,7 +285,7 @@ final class iva extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
     }
 
@@ -272,10 +294,6 @@ final class iva extends rqa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = 115;
     }
 }

@@ -15,6 +15,9 @@ final class vj {
         field_g = null;
         field_a = null;
         field_e = null;
+        if (param0 != 111) {
+            field_g = (hd) null;
+        }
         field_f = null;
     }
 
@@ -33,12 +36,12 @@ final class vj {
                 int[] var5 = var9;
                 var6 = param1;
                 var7 = param3;
-                var9[var6] = var7 + (qj.b(var9[var6], 16711422) >> 1);
+                var9[var6] = var7 + (qj.b(var9[var6], 16711422) >> 338678817);
                 param1++;
             }
             int var5_int = -26 / ((42 - param4) / 56);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "vj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "vj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -65,11 +68,7 @@ final class vj {
         int var12 = 0;
         int[] var13 = null;
         int[] var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        var16 = on.field_a;
-        var15 = var16;
-        var14 = var15;
+        var14 = on.field_a;
         var13 = var14;
         var1 = var13;
         var2 = 1;
@@ -84,7 +83,7 @@ final class vj {
                 continue L0;
               } else {
                 var4 = on.field_g * var2 + var3;
-                var5 = var16[var4];
+                var5 = var14[var4];
                 var6 = var5 >>> 24;
                 var7 = var1[var4 - 1] >>> 24;
                 var8 = var1[var4 + 1] >>> 24;
@@ -110,10 +109,6 @@ final class vj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new vd();
         field_d = "to keep fullscreen or";
         field_f = "RuneScape clan";

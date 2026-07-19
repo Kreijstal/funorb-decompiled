@@ -26,6 +26,9 @@ final class ha extends w {
 
     final static void e(int param0) {
         da.field_e = new tf();
+        if (param0 != 0) {
+            return;
+        }
         de.field_W.c(da.field_e, (byte) 62);
     }
 

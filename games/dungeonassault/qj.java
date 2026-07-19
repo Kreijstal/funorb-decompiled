@@ -15,7 +15,7 @@ final class qj {
         field_c = null;
         field_d = null;
         if (param0 != -2418) {
-            Object var2 = null;
+            int[] var2 = (int[]) null;
             qj.a(68, -99, 85, 14, (int[]) null, 57, 16, 52, 84, 64, 97, 118, (int[]) null, 57, -36, -28);
         }
         field_e = null;
@@ -23,7 +23,7 @@ final class qj {
     }
 
     final static void a(byte param0) {
-        int var1 = -7;
+        int var1 = -31 / ((param0 - -45) / 35);
         hl.field_a = ea.b(120);
         lg.field_w = new ji();
         na.a(true, 2591221, true);
@@ -33,36 +33,44 @@ final class qj {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
-              var2 = param0.getParameter("username");
-              if (var2 == null) {
+              if (param1 == 89) {
                 break L1;
               } else {
-                var3 = (CharSequence) (Object) var2;
-                if (ci.a(var3, 2) != 0L) {
+                field_e = (String[]) null;
+                break L1;
+              }
+            }
+            L2: {
+              var2 = param0.getParameter("username");
+              if (var2 == null) {
+                break L2;
+              } else {
+                var3 = (CharSequence) ((Object) var2);
+                if ((ci.a(var3, param1 ^ 91) ^ -1L) != -1L) {
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  break L1;
+                  break L2;
                 }
               }
             }
@@ -71,33 +79,33 @@ final class qj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2_ref;
-            stackOut_4_1 = new StringBuilder().append("qj.C(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_6_0 = (RuntimeException) (var2_ref);
+            stackOut_6_1 = new StringBuilder().append("qj.C(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 89 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -107,6 +115,8 @@ final class qj {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int[] param12, int param13, int param14, int param15) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         RuntimeException var16 = null;
         int var16_int = 0;
         int var17 = 0;
@@ -162,14 +172,14 @@ final class qj {
               } else {
                 param8 = -param13;
                 L3: while (true) {
-                  if (param8 >= 0) {
+                  if ((param8 ^ -1) <= -1) {
                     param14 = param14 + param5;
                     param3 = param3 + param7;
                     param10++;
                     continue L1;
                   } else {
                     L4: {
-                      int incrementValue$2 = param3;
+                      incrementValue$2 = param3;
                       param3++;
                       param2 = param4[incrementValue$2];
                       if (0 == param2) {
@@ -177,16 +187,16 @@ final class qj {
                         break L4;
                       } else {
                         param2 = param2 >> 16;
-                        param2 = (var16_int * param2 & -16711936 | 16711680 & var17 * param2) >>> 8;
+                        param2 = (var16_int * param2 & -16711936 | 16711680 & var17 * param2) >>> -290534424;
                         param9 = (param2 & 16711935) * param6;
-                        param2 = (-param9 + param2 * param6 & 16711680) + (-16711936 & param9) >>> 8;
+                        param2 = (-param9 + param2 * param6 & 16711680) + (-16711936 & param9) >>> 1566873192;
                         param9 = param12[param14];
                         param1 = param2 - -param9;
                         param2 = (16711935 & param2) + (16711935 & param9);
                         param9 = (65536 & -param2 + param1) + (16777472 & param2);
-                        int incrementValue$3 = param14;
+                        incrementValue$3 = param14;
                         param14++;
-                        param12[incrementValue$3] = mp.a(param9 + -(param9 >>> 8), -param9 + param1);
+                        param12[incrementValue$3] = mp.a(param9 + -(param9 >>> 443472456), -param9 + param1);
                         break L4;
                       }
                     }
@@ -201,23 +211,23 @@ final class qj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var16 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var16;
+            stackOut_13_0 = (RuntimeException) (var16);
             stackOut_13_1 = new StringBuilder().append("qj.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param4 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -226,23 +236,23 @@ final class qj {
             }
           }
           L6: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param12 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -250,15 +260,11 @@ final class qj {
               break L6;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param13 + ',' + param14 + ',' + param15 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param13 + ',' + param14 + ',' + param15 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Confirm Password: ";
         field_b = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         field_f = new String[]{"Thievery", "Drawing on a lifetime of experience, the <%0> can coordinate great acts of larceny. With his skills to assist, the likelihood of waking the dungeon's master when stealing its gold is reduced."};

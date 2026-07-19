@@ -25,10 +25,12 @@ final class gf extends mc {
     }
 
     final void a() {
-        ((gf) this).field_u = null;
+        this.field_u = null;
     }
 
     final boolean a(float param0, int param1, ah param2) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var4 = 0;
         int var5 = 0;
         kh var6 = null;
@@ -43,35 +45,27 @@ final class gf extends mc {
         byte[] var15 = null;
         int[] var16 = null;
         byte[] var17 = null;
-        int[] var18 = null;
-        byte[] var19 = null;
-        int[] var20 = null;
-        byte[] var21 = null;
         var4 = 0;
         L0: while (true) {
-          if (var4 >= ((gf) this).field_s.length) {
+          if (var4 >= this.field_s.length) {
             var4 = param1 * param1;
-            ((gf) this).field_u = new int[var4];
+            this.field_u = new int[var4];
             var5 = 0;
             L1: while (true) {
-              if (var5 >= ((gf) this).field_s.length) {
-                ((gf) this).field_n = param0;
+              if (var5 >= this.field_s.length) {
+                this.field_n = param0;
                 return true;
               } else {
                 L2: {
-                  var6 = hd.a(1, ((gf) this).field_s[var5], param2);
+                  var6 = hd.a(1, this.field_s[var5], param2);
                   var6.a();
-                  var21 = var6.field_o;
-                  var19 = var21;
-                  var17 = var19;
+                  var17 = var6.field_o;
                   var15 = var17;
                   var7 = var15;
-                  var20 = var6.field_p;
-                  var18 = var20;
-                  var16 = var18;
+                  var16 = var6.field_p;
                   var14 = var16;
                   var8 = var14;
-                  var9 = ((gf) this).field_t[var5];
+                  var9 = this.field_t[var5];
                   if ((var9 & -16777216) != 50331648) {
                     break L2;
                   } else {
@@ -79,10 +73,10 @@ final class gf extends mc {
                     var11 = var9 >> 8 & 255;
                     var12 = 0;
                     L3: while (true) {
-                      if (var12 >= var20.length) {
+                      if (var12 >= var16.length) {
                         break L2;
                       } else {
-                        var13 = var20[var12];
+                        var13 = var16[var12];
                         if ((var13 & 65535) == var13 >> 8) {
                           var13 = var13 & 255;
                           var8[var12] = var10 * var13 >> 8 & 16711935 | var11 * var13 & 65280;
@@ -98,10 +92,10 @@ final class gf extends mc {
                 }
                 var10 = 0;
                 L4: while (true) {
-                  if (var10 >= var20.length) {
+                  if (var10 >= var16.length) {
                     L5: {
                       if (var5 != 0) {
-                        var10 = ((gf) this).field_r[var5 - 1];
+                        var10 = this.field_r[var5 - 1];
                         break L5;
                       } else {
                         var10 = 0;
@@ -134,9 +128,9 @@ final class gf extends mc {
                                       var12++;
                                       continue L8;
                                     } else {
-                                      int incrementValue$2 = var11;
+                                      incrementValue$2 = var11;
                                       var11++;
-                                      ((gf) this).field_u[incrementValue$2] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
+                                      this.field_u[incrementValue$2] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
                                       var13++;
                                       continue L9;
                                     }
@@ -166,9 +160,9 @@ final class gf extends mc {
                                       var12++;
                                       continue L11;
                                     } else {
-                                      int incrementValue$3 = var11;
+                                      incrementValue$3 = var11;
                                       var11++;
-                                      ((gf) this).field_u[incrementValue$3] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
+                                      this.field_u[incrementValue$3] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
                                       var13++;
                                       continue L12;
                                     }
@@ -186,7 +180,7 @@ final class gf extends mc {
                         var11 = 0;
                         L13: while (true) {
                           if (var11 < var4) {
-                            ((gf) this).field_u[var11] = var8[var21[var11] & 255];
+                            this.field_u[var11] = var8[var17[var11] & 255];
                             var11++;
                             continue L13;
                           } else {
@@ -200,7 +194,7 @@ final class gf extends mc {
                       continue L1;
                     }
                   } else {
-                    var8[var10] = gf.a(var20[var10], (double)param0);
+                    var8[var10] = gf.a(var16[var10], (double)param0);
                     var10++;
                     continue L4;
                   }
@@ -208,7 +202,7 @@ final class gf extends mc {
               }
             }
           } else {
-            if (param2.f(((gf) this).field_s[var4], 88)) {
+            if (param2.f(this.field_s[var4], 88)) {
               var4++;
               continue L0;
             } else {
@@ -219,6 +213,8 @@ final class gf extends mc {
     }
 
     gf(bh param0) {
+        int discarded$2 = 0;
+        int discarded$3 = 0;
         int var2 = 0;
         int var3 = 0;
         Object stackIn_1_0 = null;
@@ -231,7 +227,7 @@ final class gf extends mc {
         Object stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          ((gf) this).field_o = param0.e(127);
+          this.field_o = param0.e(127);
           stackOut_0_0 = this;
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
@@ -250,13 +246,13 @@ final class gf extends mc {
           }
         }
         L1: {
-          ((gf) this).field_p = stackIn_3_1 != 0;
+          ((gf) (this)).field_p = stackIn_3_1 != 0;
           var2 = param0.d((byte) -99);
           if (var2 < 1) {
             break L1;
           } else {
             if (var2 <= 4) {
-              ((gf) this).field_s = new int[var2];
+              this.field_s = new int[var2];
               var3 = 0;
               L2: while (true) {
                 if (var3 >= var2) {
@@ -264,13 +260,13 @@ final class gf extends mc {
                     if (var2 <= 1) {
                       break L3;
                     } else {
-                      ((gf) this).field_r = new int[var2 - 1];
+                      this.field_r = new int[var2 - 1];
                       var3 = 0;
                       L4: while (true) {
                         if (var3 >= var2 - 1) {
                           break L3;
                         } else {
-                          ((gf) this).field_r[var3] = param0.d((byte) -99);
+                          this.field_r[var3] = param0.d((byte) -99);
                           var3++;
                           continue L4;
                         }
@@ -281,35 +277,35 @@ final class gf extends mc {
                     if (var2 <= 1) {
                       break L5;
                     } else {
-                      ((gf) this).field_q = new int[var2 - 1];
+                      this.field_q = new int[var2 - 1];
                       var3 = 0;
                       L6: while (true) {
                         if (var3 >= var2 - 1) {
                           break L5;
                         } else {
-                          ((gf) this).field_q[var3] = param0.d((byte) -99);
+                          this.field_q[var3] = param0.d((byte) -99);
                           var3++;
                           continue L6;
                         }
                       }
                     }
                   }
-                  ((gf) this).field_t = new int[var2];
+                  this.field_t = new int[var2];
                   var3 = 0;
                   L7: while (true) {
                     if (var3 >= var2) {
-                      int discarded$2 = param0.d((byte) -99);
-                      int discarded$3 = param0.d((byte) -99);
-                      ((gf) this).field_u = null;
+                      discarded$2 = param0.d((byte) -99);
+                      discarded$3 = param0.d((byte) -99);
+                      this.field_u = null;
                       return;
                     } else {
-                      ((gf) this).field_t[var3] = param0.f(119);
+                      this.field_t[var3] = param0.f(119);
                       var3++;
                       continue L7;
                     }
                   }
                 } else {
-                  ((gf) this).field_s[var3] = param0.e(127);
+                  this.field_s[var3] = param0.e(127);
                   var3++;
                   continue L2;
                 }

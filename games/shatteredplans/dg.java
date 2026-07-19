@@ -8,7 +8,7 @@ final class dg extends qr {
     final static va g(int param0) {
         va var1 = new va();
         var1.field_k = false;
-        var1.field_a = 1;
+        var1.field_a = param0;
         var1.field_h = 1;
         var1.field_f = true;
         var1.field_c = 1;
@@ -17,14 +17,14 @@ final class dg extends qr {
 
     public static void f(byte param0) {
         field_yb = null;
-        int var1 = -9;
+        int var1 = -29 / ((12 - param0) / 44);
     }
 
     final boolean c(boolean param0, int param1) {
         int stackIn_9_0 = 0;
         int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
-        ((dg) this).a(true, -20429);
+        this.a(true, -20429);
         if (param1 == -1) {
           L0: {
             L1: {
@@ -32,14 +32,14 @@ final class dg extends qr {
                 if (je.field_d == 0) {
                   break L2;
                 } else {
-                  if (((dg) this).field_rb == 0) {
+                  if (this.field_rb == 0) {
                     break L1;
                   } else {
                     break L2;
                   }
                 }
               }
-              if (((dg) this).field_xb.field_rb == 0) {
+              if (-1 == (this.field_xb.field_rb ^ -1)) {
                 stackOut_8_0 = 0;
                 stackIn_9_0 = stackOut_8_0;
                 break L0;
@@ -163,7 +163,7 @@ final class dg extends qr {
           L0: {
             var17 = new qr(0L, param1, qh.field_u.toUpperCase());
             var17.field_y = 1;
-            ((dg) this).field_xb = new qr(0L, param2);
+            this.field_xb = new qr(0L, param2);
             var8 = new qr(0L, param3);
             var9 = new qr(0L, param3, rn.field_g);
             var9.field_y = 1;
@@ -174,17 +174,17 @@ final class dg extends qr {
               if (var12 >= tf.field_c.length) {
                 var10 += 15;
                 var17.a(20 + var11 + 90, 24, (byte) 113, 0, 0);
-                ((dg) this).a(var17.field_K, var10 + var17.field_mb, (byte) 83, 100, 100);
-                ((dg) this).field_xb.a(15, 15, (byte) 126, 5, -20 + var17.field_K);
-                var8.a(((dg) this).field_K, -var17.field_mb + ((dg) this).field_mb, (byte) 79, var17.field_mb, 0);
-                var9.a(((dg) this).field_K, 15, (byte) 75, 20, 0);
+                this.a(var17.field_K, var10 + var17.field_mb, (byte) 83, 100, 100);
+                this.field_xb.a(15, 15, (byte) 126, 5, -20 + var17.field_K);
+                var8.a(this.field_K, -var17.field_mb + this.field_mb, (byte) 79, var17.field_mb, 0);
+                var9.a(this.field_K, 15, (byte) 75, 20, 0);
                 var8.field_F = cs.a(16, 3, var8.field_mb, 11579568, 8421504, 2105376);
-                var17.a(4, ((dg) this).field_xb);
+                var17.a(4, this.field_xb);
                 var8.a(4, var9);
-                ((dg) this).a(4, var17);
-                ((dg) this).a(4, var8);
-                ((dg) this).field_hb = 320 + -(((dg) this).field_K >> 1);
-                var10 = -(((dg) this).field_mb >> 1) + 240;
+                this.a(4, var17);
+                this.a(4, var8);
+                this.field_hb = 320 + -(this.field_K >> -1584323295);
+                var10 = -(this.field_mb >> -1174470335) + 240;
                 break L0;
               } else {
                 L2: {
@@ -212,23 +212,23 @@ final class dg extends qr {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var7 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var7;
+            stackOut_8_0 = (RuntimeException) (var7);
             stackOut_8_1 = new StringBuilder().append("dg.<init>(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -237,23 +237,23 @@ final class dg extends qr {
             }
           }
           L4: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -262,23 +262,23 @@ final class dg extends qr {
             }
           }
           L5: {
-            stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+            stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
             stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -287,23 +287,23 @@ final class dg extends qr {
             }
           }
           L6: {
-            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+            stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
             stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param3 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -312,23 +312,23 @@ final class dg extends qr {
             }
           }
           L7: {
-            stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+            stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
             stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param4 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -337,23 +337,23 @@ final class dg extends qr {
             }
           }
           L8: {
-            stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+            stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
             stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param5 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L8;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -361,15 +361,11 @@ final class dg extends qr {
               break L8;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_yb = new int[8192];
     }
 }

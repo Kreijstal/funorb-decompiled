@@ -13,29 +13,32 @@ abstract class hi extends al {
     static String field_w;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        ((hi) this).b(-76, param3, param0 << 5, param1 << 8, param2);
+        this.b(-76, param3, param0 << -284609371, param1 << -1902255992, param2);
         if (param4 != -1271909436) {
-            ((hi) this).a(-8, 64, 41, -87, -94);
+            this.a(-8, 64, 41, -87, -94);
         }
     }
 
     public static void a(boolean param0) {
+        if (!param0) {
+            return;
+        }
         field_w = null;
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
-        var6 = ((hi) this).field_x << 3;
-        var7 = ((hi) this).field_A << 3;
-        param1 = (15 & var6) + (param1 << 4);
-        param4 = (15 & var7) + (param4 << 4);
+        var6 = this.field_x << 1711113379;
+        var7 = this.field_A << -493640925;
+        param1 = (15 & var6) + (param1 << -1271909436);
+        param4 = (15 & var7) + (param4 << -927498652);
         if (param0 > -68) {
-          ((hi) this).field_B = -126;
-          ((hi) this).a(var6, var7, param1, param4, param3, param2);
+          this.field_B = -126;
+          this.a(var6, var7, param1, param4, param3, param2);
           return;
         } else {
-          ((hi) this).a(var6, var7, param1, param4, param3, param2);
+          this.a(var6, var7, param1, param4, param3, param2);
           return;
         }
     }
@@ -50,10 +53,6 @@ abstract class hi extends al {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_v = 50;
         field_w = "Player names can be up to 12 letters, numbers and underscores";
     }

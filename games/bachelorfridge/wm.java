@@ -6,14 +6,13 @@ final class wm extends pu {
     private static String field_z;
 
     public static void b(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_l = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "wm.A(";
         field_l = "Your request to join has been declined.";
     }

@@ -17,7 +17,7 @@ final class wb {
             param1 = param1 >>> 16;
             break L0;
           } else {
-            if (param1 < 65536) {
+            if ((param1 ^ -1) > -65537) {
               break L0;
             } else {
               L1: {
@@ -32,7 +32,7 @@ final class wb {
                 }
               }
               L2: {
-                if (param1 < 16) {
+                if ((param1 ^ -1) > -17) {
                   break L2;
                 } else {
                   var2 += 4;
@@ -40,25 +40,29 @@ final class wb {
                   break L2;
                 }
               }
-              L3: {
-                if (param1 >= 4) {
-                  var2 += 2;
-                  param1 = param1 >>> 2;
-                  break L3;
-                } else {
-                  break L3;
+              if (param0 != 100) {
+                return -116;
+              } else {
+                L3: {
+                  if (-5 >= (param1 ^ -1)) {
+                    var2 += 2;
+                    param1 = param1 >>> 2;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
                 }
-              }
-              L4: {
-                if (param1 < 1) {
-                  break L4;
-                } else {
-                  var2++;
-                  param1 = param1 >>> 1;
-                  break L4;
+                L4: {
+                  if (param1 < 1) {
+                    break L4;
+                  } else {
+                    var2++;
+                    param1 = param1 >>> 1;
+                    break L4;
+                  }
                 }
+                return var2 - -param1;
               }
-              return var2 - -param1;
             }
           }
         }
@@ -72,7 +76,7 @@ final class wb {
           }
         }
         L6: {
-          if (param1 < 16) {
+          if ((param1 ^ -1) > -17) {
             break L6;
           } else {
             var2 += 4;
@@ -80,31 +84,35 @@ final class wb {
             break L6;
           }
         }
-        L7: {
-          if (param1 >= 4) {
-            var2 += 2;
-            param1 = param1 >>> 2;
-            break L7;
-          } else {
-            break L7;
+        if (param0 != 100) {
+          return -116;
+        } else {
+          L7: {
+            if (-5 >= (param1 ^ -1)) {
+              var2 += 2;
+              param1 = param1 >>> 2;
+              break L7;
+            } else {
+              break L7;
+            }
           }
-        }
-        L8: {
-          if (param1 < 1) {
-            break L8;
-          } else {
-            var2++;
-            param1 = param1 >>> 1;
-            break L8;
+          L8: {
+            if (param1 < 1) {
+              break L8;
+            } else {
+              var2++;
+              param1 = param1 >>> 1;
+              break L8;
+            }
           }
+          return var2 - -param1;
         }
-        return var2 - -param1;
     }
 
     final static rg a(int param0, int param1, String param2) {
         rg var3 = null;
         RuntimeException var3_ref = null;
-        Object stackIn_2_0 = null;
+        rg stackIn_2_0 = null;
         rg stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -113,9 +121,10 @@ final class wb {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         rg stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        rg stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -130,36 +139,38 @@ final class wb {
               var3 = new rg(false);
               var3.field_c = param2;
               var3.field_g = param0;
-              stackOut_3_0 = (rg) var3;
+              stackOut_3_0 = (rg) (var3);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (rg) null;
               stackIn_2_0 = stackOut_1_0;
-              return (rg) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3_ref;
+            stackOut_5_0 = (RuntimeException) (var3_ref);
             stackOut_5_1 = new StringBuilder().append("wb.C(").append(param0).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -167,23 +178,23 @@ final class wb {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     public static void a(byte param0) {
         field_e = null;
         field_d = null;
-        int var1 = -2;
+        int var1 = -38 % ((-58 - param0) / 38);
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Names can only contain letters, numbers, spaces and underscores";
         field_c = new int[8192];
     }

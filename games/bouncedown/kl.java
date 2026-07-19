@@ -29,26 +29,25 @@ final class kl extends ai {
 
     public static void a(int param0) {
         field_m = null;
+        if (param0 != 0) {
+            field_g = -121;
+        }
     }
 
     final void d(int param0) {
-        ((kl) this).field_i = null;
+        this.field_i = null;
         if (param0 != 0) {
             return;
         }
-        ((kl) this).field_w = null;
-        ((kl) this).field_o = null;
-        ((kl) this).field_D = null;
+        this.field_w = null;
+        this.field_o = null;
+        this.field_D = null;
     }
 
     kl() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = 0;
         field_m = "Three Player Battle";
     }

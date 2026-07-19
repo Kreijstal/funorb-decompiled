@@ -11,10 +11,10 @@ class ec extends kd {
             if (param0 != -6) {
                 ec.b((byte) 6);
             }
-            param1.a(((ec) this).field_e, 2147483647);
-            param1.a(((ec) this).field_c, param0 + 27939);
+            param1.a(this.field_e, 2147483647);
+            param1.a(this.field_c, param0 + 27939);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ec.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "ec.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -24,7 +24,7 @@ class ec extends kd {
         int var1 = cf.field_p[0] * j.field_f[0];
         byte[] var2 = qk.field_M[0];
         int[] var3 = new int[var1];
-        for (var4_int = 0; var4_int < var1; var4_int++) {
+        for (var4_int = param0; var4_int < var1; var4_int++) {
             var3[var4_int] = qe.field_z[tc.a((int) var2[var4_int], 255)];
         }
         qj var4 = new qj(ab.field_a, qe.field_p, ka.field_f[0], vb.field_a[0], cf.field_p[0], j.field_f[0], var3);
@@ -41,17 +41,17 @@ class ec extends kd {
 
     nh a(boolean param0) {
         if (param0) {
-            return null;
+            return (nh) null;
         }
         return ji.field_a;
     }
 
     ec(long param0, String param1) {
         try {
-            ((ec) this).field_e = param0;
-            ((ec) this).field_c = param1;
+            this.field_e = param0;
+            this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ec.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "ec.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

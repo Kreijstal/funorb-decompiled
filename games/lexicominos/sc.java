@@ -46,14 +46,21 @@ final class sc {
                     var4 = 1;
                     if (param0 == 8) {
                       L3: {
-                        param0 = 2;
-                        if (!ca.field_k) {
-                          param2 = l.field_C;
-                          break L3;
-                        } else {
-                          param2 = fk.field_j;
-                          break L3;
+                        L4: {
+                          param0 = 2;
+                          if (!ca.field_k) {
+                            break L4;
+                          } else {
+                            param2 = fk.field_j;
+                            if (!Lexicominos.field_L) {
+                              break L3;
+                            } else {
+                              break L4;
+                            }
+                          }
                         }
+                        param2 = l.field_C;
+                        break L3;
                       }
                       eb.field_b.a(3, dd.field_d);
                       break L2;
@@ -61,40 +68,40 @@ final class sc {
                       break L2;
                     }
                   }
-                  L4: {
-                    if (param0 == 10) {
+                  L5: {
+                    if ((param0 ^ -1) == -11) {
                       var4 = 0;
                       qf.g(-94);
-                      break L4;
+                      break L5;
                     } else {
-                      break L4;
+                      break L5;
                     }
                   }
-                  L5: {
+                  L6: {
                     if (var4 != 0) {
-                      L6: {
+                      L7: {
                         if (!dl.field_g) {
-                          break L6;
+                          break L7;
                         } else {
-                          param2 = da.a(new String[1], Lexicominos.field_F, false);
-                          break L6;
+                          param2 = da.a(new String[]{param2}, Lexicominos.field_F, false);
+                          break L7;
                         }
                       }
-                      L7: {
+                      L8: {
                         if (!lh.field_w) {
-                          break L7;
+                          break L8;
                         } else {
                           param2 = id.field_u;
-                          break L7;
+                          break L8;
                         }
                       }
                       jj.field_a.a(-109, param0, param2);
-                      break L5;
+                      break L6;
                     } else {
-                      break L5;
+                      break L6;
                     }
                   }
-                  if (param0 == 256) {
+                  if (-257 == (param0 ^ -1)) {
                     break L1;
                   } else {
                     if (param0 != 10) {
@@ -115,38 +122,41 @@ final class sc {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L9: {
             runtimeException = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) runtimeException;
+            stackOut_25_0 = (RuntimeException) (runtimeException);
             stackOut_25_1 = new StringBuilder().append("sc.A(").append(param0).append(',').append(param1).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param2 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
-              break L8;
+              break L9;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
               stackIn_28_2 = stackOut_26_2;
-              break L8;
+              break L9;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
         g.field_n = param1;
+        if (param0 >= -32) {
+            return;
+        }
         ec.field_c = param2;
         ea.field_b = param3;
     }
@@ -154,7 +164,7 @@ final class sc {
     public static void a(int param0) {
         field_c = null;
         field_a = null;
-        int var1 = -110;
+        int var1 = -110 / ((-24 - param0) / 45);
         field_d = null;
     }
 
@@ -163,10 +173,6 @@ final class sc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Confirm Password: ";
         field_f = 0;
         field_e = false;

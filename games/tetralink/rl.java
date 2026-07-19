@@ -14,15 +14,19 @@ final class rl {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (vi.field_a != null) {
-          var1 = (Object) (Object) vi.field_a;
-          synchronized (var1) {
-            L0: {
-              vi.field_a = null;
-              break L0;
+        if (param0 == -9648) {
+          if (vi.field_a != null) {
+            var1 = vi.field_a;
+            synchronized (var1) {
+              L0: {
+                vi.field_a = null;
+                break L0;
+              }
             }
+            return;
+          } else {
+            return;
           }
-          return;
         } else {
           return;
         }
@@ -30,17 +34,16 @@ final class rl {
 
     public static void a(int param0) {
         field_e = null;
-        field_b = null;
+        field_b = (oh[][]) null;
         field_g = null;
         field_f = null;
         field_c = null;
+        if (param0 != 14236) {
+            rl.b(109);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Game";
         field_g = "Loading music";
     }

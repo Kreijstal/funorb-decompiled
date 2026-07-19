@@ -12,16 +12,16 @@ class eo extends bw {
     eo field_i;
 
     final void b(int param0) {
-        if (null == ((eo) this).field_i) {
+        if (null == this.field_i) {
           return;
         } else {
-          ((eo) this).field_i.field_m = ((eo) this).field_m;
+          this.field_i.field_m = this.field_m;
           if (param0 != 0) {
             return;
           } else {
-            ((eo) this).field_m.field_i = ((eo) this).field_i;
-            ((eo) this).field_i = null;
-            ((eo) this).field_m = null;
+            this.field_m.field_i = this.field_i;
+            this.field_i = null;
+            this.field_m = null;
             return;
           }
         }
@@ -31,6 +31,9 @@ class eo extends bw {
         field_j = null;
         field_k = null;
         field_g = null;
+        if (param0 != 114) {
+            return;
+        }
         field_f = null;
     }
 
@@ -38,19 +41,19 @@ class eo extends bw {
         if (param0 >= -97) {
             return 6L;
         }
-        return ((eo) this).field_h;
+        return this.field_h;
     }
 
     final boolean a(int param0) {
         if (param0 == 0) {
-          if (((eo) this).field_i == null) {
+          if (this.field_i == null) {
             return false;
           } else {
             return true;
           }
         } else {
-          ((eo) this).b(115);
-          if (((eo) this).field_i == null) {
+          this.b(115);
+          if (this.field_i == null) {
             return false;
           } else {
             return true;
@@ -61,62 +64,70 @@ class eo extends bw {
     final static pp a(lu param0, int param1) {
         nq var2 = null;
         RuntimeException var2_ref = null;
-        fda stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        fda stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fda stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        fda stackOut_2_0 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
+            L1: {
+              if (param1 == -4479) {
+                break L1;
+              } else {
+                field_l = 115;
+                break L1;
+              }
+            }
             var2 = qi.a(param0, (byte) 64);
-            stackOut_0_0 = new fda(var2);
-            stackIn_1_0 = stackOut_0_0;
+            stackOut_2_0 = new fda(var2);
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("eo.J(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackOut_4_0 = (RuntimeException) (var2_ref);
+            stackOut_4_1 = new StringBuilder().append("eo.J(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -4479 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return (pp) (Object) stackIn_1_0;
+        return (pp) ((Object) stackIn_3_0);
     }
 
     final static void c(int param0) {
@@ -141,28 +152,24 @@ class eo extends bw {
             }
             um.field_c = 0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "eo.I(" + param0 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "eo.I(" + param0 + ')');
         }
     }
 
     final void a(boolean param0, long param1) {
-        if (null != ((eo) this).field_i) {
+        if (null != this.field_i) {
             throw new RuntimeException();
         }
         if (!param0) {
             return;
         }
-        ((eo) this).field_h = param1;
+        this.field_h = param1;
     }
 
     protected eo() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = 0;
         field_j = "Visit the Account Management section on the main site to view.";
         field_g = "Achieved";

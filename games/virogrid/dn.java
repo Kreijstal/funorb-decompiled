@@ -9,15 +9,15 @@ final class dn {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-            param1.removeKeyListener((java.awt.event.KeyListener) (Object) w.field_L);
+            param1.removeKeyListener(w.field_L);
             if (param0 != 2) {
-                Object var3 = null;
+                java.awt.Component var3 = (java.awt.Component) null;
                 dn.a(-122, (java.awt.Component) null);
             }
-            param1.removeFocusListener((java.awt.event.FocusListener) (Object) w.field_L);
+            param1.removeFocusListener(w.field_L);
             ch.field_f = -1;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "dn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "dn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class dn {
         field_a = null;
         field_d = null;
         if (param0 < 34) {
-            field_a = null;
+            field_a = (int[]) null;
         }
     }
 
@@ -48,10 +48,6 @@ final class dn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new lc(1, 2, 2, 0);
         field_b = "Hide chat";
         field_a = new int[8192];

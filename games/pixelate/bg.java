@@ -40,22 +40,22 @@ abstract class bg {
 
     void a(byte param0) {
         int var2 = 0;
-        ((bg) this).field_e = ((bg) this).field_e + ((bg) this).field_g;
-        var2 = hp.field_Gb.field_A << 16;
-        if (((bg) this).field_e <= var2) {
-          if (0 < ((bg) this).field_h) {
-            ((bg) this).field_h = ((bg) this).field_h - 12;
-            if (((bg) this).field_h < 0) {
-              ((bg) this).field_h = 0;
+        this.field_e = this.field_e + this.field_g;
+        var2 = hp.field_Gb.field_A << 1884989552;
+        if (this.field_e <= var2) {
+          if (0 < this.field_h) {
+            this.field_h = this.field_h - 12;
+            if ((this.field_h ^ -1) > -1) {
+              this.field_h = 0;
               if (param0 != 21) {
-                ((bg) this).b(38);
+                this.b(38);
                 return;
               } else {
                 return;
               }
             } else {
               if (param0 != 21) {
-                ((bg) this).b(38);
+                this.b(38);
                 return;
               } else {
                 return;
@@ -65,27 +65,27 @@ abstract class bg {
             if (param0 == 21) {
               return;
             } else {
-              ((bg) this).b(38);
+              this.b(38);
               return;
             }
           }
         } else {
-          ((bg) this).field_e = ((bg) this).field_e - var2;
-          if (0 < ((bg) this).field_h) {
-            ((bg) this).field_h = ((bg) this).field_h - 12;
-            if (((bg) this).field_h < 0) {
-              ((bg) this).field_h = 0;
+          this.field_e = this.field_e - var2;
+          if (0 < this.field_h) {
+            this.field_h = this.field_h - 12;
+            if ((this.field_h ^ -1) > -1) {
+              this.field_h = 0;
               if (param0 == 21) {
                 return;
               } else {
-                ((bg) this).b(38);
+                this.b(38);
                 return;
               }
             } else {
               if (param0 == 21) {
                 return;
               } else {
-                ((bg) this).b(38);
+                this.b(38);
                 return;
               }
             }
@@ -93,7 +93,7 @@ abstract class bg {
             if (param0 == 21) {
               return;
             } else {
-              ((bg) this).b(38);
+              this.b(38);
               return;
             }
           }
@@ -105,10 +105,15 @@ abstract class bg {
         field_d = null;
         field_l = null;
         field_f = null;
-        field_b = null;
-        field_j = null;
-        field_c = null;
-        field_i = null;
+        if (param0 >= -63) {
+          return;
+        } else {
+          field_b = null;
+          field_j = null;
+          field_c = null;
+          field_i = null;
+          return;
+        }
     }
 
     final static void a(int param0, java.applet.Applet param1) {
@@ -141,8 +146,8 @@ abstract class bg {
               if (var3 == null) {
                 break L1;
               } else {
-                var4 = (CharSequence) (Object) var3;
-                if (nh.a(var4, -29667) == 0L) {
+                var4 = (CharSequence) ((Object) var3);
+                if ((nh.a(var4, -29667) ^ -1L) == -1L) {
                   break L1;
                 } else {
                   decompiledRegionSelector0 = 1;
@@ -157,23 +162,23 @@ abstract class bg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("bg.O(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -181,7 +186,7 @@ abstract class bg {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -191,13 +196,13 @@ abstract class bg {
     }
 
     final static void a(int param0) {
-        oa.field_j = 2;
+        oa.field_j = param0;
     }
 
     final void a(int param0, int param1) {
-        ((bg) this).field_g = param0;
+        this.field_g = param0;
         if (param1 > -21) {
-            ((bg) this).a(-61, 51);
+            this.a(-61, 51);
         }
     }
 
@@ -221,7 +226,7 @@ abstract class bg {
           t.b(bf.field_r);
           t.b(var6, param2, -(2 * ui.field_f.field_A) + param3, 0);
           t.b(var6, 25 + param2 - 1, param3 - 2 * ui.field_f.field_A, 0);
-          var8 = ((bg) this).field_e >> 16;
+          var8 = this.field_e >> -1205348624;
           mh.a(param2, gd.field_h[param1], var8 - hp.field_Gb.field_A, 0);
           mh.a(param2, gd.field_h[param1], var8, 0);
           t.a(bf.field_r);
@@ -239,10 +244,10 @@ abstract class bg {
             t.e(var6 - -2, param2 - -2, var9, 0, 128);
             t.e(2 + var6, param2 + 22, var9, 0, 128);
             fi.a(var6, 7 + param2, var7, param2 + 7, 4, 7, gd.field_b);
-            if (((bg) this).field_h > 0) {
-              var10 = gd.field_c.length * ((bg) this).field_h >> 8;
+            if (-1 > (this.field_h ^ -1)) {
+              var10 = gd.field_c.length * this.field_h >> 1518253512;
               var10 -= 2;
-              if (var10 > 0) {
+              if ((var10 ^ -1) < -1) {
                 fi.a(var6, 12 + param2, var7, param2 - -12, 12, var10, gd.field_c);
                 return;
               } else {
@@ -260,20 +265,16 @@ abstract class bg {
     abstract void c(int param0);
 
     final void b(int param0) {
-        ((bg) this).field_h = param0;
+        this.field_h = param0;
     }
 
     bg() {
-        ((bg) this).field_g = 65536;
-        ((bg) this).field_h = 0;
-        ((bg) this).field_e = 0;
+        this.field_g = 65536;
+        this.field_h = 0;
+        this.field_e = 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Try again";
         field_a = new int[12];
         field_f = "<%0> has entered a game.";

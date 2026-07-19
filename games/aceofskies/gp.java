@@ -11,17 +11,17 @@ final class gp extends ag {
 
     final byte[] a(boolean param0) {
         if (param0) {
-          if (!((gp) this).field_p) {
-            if (((gp) this).field_u.field_g < -((gp) this).field_z + ((gp) this).field_u.field_f.length) {
+          if (!this.field_p) {
+            if (this.field_u.field_g < -this.field_z + this.field_u.field_f.length) {
               throw new RuntimeException();
             } else {
-              return ((gp) this).field_u.field_f;
+              return this.field_u.field_f;
             }
           } else {
             throw new RuntimeException();
           }
         } else {
-          return null;
+          return (byte[]) null;
         }
     }
 
@@ -34,11 +34,11 @@ final class gp extends ag {
     }
 
     final int e(int param0) {
-        if (null != ((gp) this).field_u) {
+        if (null != this.field_u) {
           if (param0 != 21513) {
             return 115;
           } else {
-            return 100 * ((gp) this).field_u.field_g / (((gp) this).field_u.field_f.length + -((gp) this).field_z);
+            return 100 * this.field_u.field_g / (this.field_u.field_f.length + -this.field_z);
           }
         } else {
           return 0;
@@ -49,10 +49,6 @@ final class gp extends ag {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = 480;
     }
 }

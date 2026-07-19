@@ -9,17 +9,17 @@ final class ke extends kh {
     boolean field_l;
 
     ke(int param0, byte[] param1, int param2, int param3) {
-        ((ke) this).field_m = param0;
-        ((ke) this).field_i = param1;
-        ((ke) this).field_k = param2;
-        ((ke) this).field_j = param3;
+        this.field_m = param0;
+        this.field_i = param1;
+        this.field_k = param2;
+        this.field_j = param3;
     }
 
     ke(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((ke) this).field_m = param0;
-        ((ke) this).field_i = param1;
-        ((ke) this).field_k = param2;
-        ((ke) this).field_j = param3;
-        ((ke) this).field_l = param4 ? true : false;
+        this.field_m = param0;
+        this.field_i = param1;
+        this.field_k = param2;
+        this.field_j = param3;
+        this.field_l = param4 ? true : false;
     }
 }

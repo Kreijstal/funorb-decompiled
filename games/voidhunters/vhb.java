@@ -21,10 +21,6 @@ class vhb extends tb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "vhb.A(";
     }
 }

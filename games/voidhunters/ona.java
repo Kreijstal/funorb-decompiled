@@ -21,7 +21,7 @@ abstract class ona {
     public static void c(int param0) {
         field_l = null;
         if (param0 < 124) {
-            field_l = null;
+            field_l = (String) null;
         }
     }
 
@@ -37,9 +37,9 @@ abstract class ona {
         int stackOut_2_0 = 0;
         if (param0 <= 38) {
           L0: {
-            var3 = null;
-            ((ona) this).a((Object) null, true, false);
-            if (((ona) this).f(13223) < 20) {
+            var3 = (Object) null;
+            this.a((Object) null, true, false);
+            if (this.f(13223) < 20) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -52,7 +52,7 @@ abstract class ona {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((ona) this).f(13223) < 20) {
+            if (this.f(13223) < 20) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -76,7 +76,7 @@ abstract class ona {
         if (param0 != 32) {
           L0: {
             ona.c(58);
-            if (-21 < ((ona) this).b(-3666)) {
+            if (-21 < (this.b(-3666) ^ -1)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -89,7 +89,7 @@ abstract class ona {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (-21 > ((ona) this).b(-3666)) {
+            if (-21 < (this.b(-3666) ^ -1)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -109,28 +109,28 @@ abstract class ona {
         if (param0 != 13223) {
             return -111;
         }
-        return ((ona) this).field_a.c(0) + ((ona) this).field_d.c(param0 + -13223);
+        return this.field_a.c(0) + this.field_d.c(param0 + -13223);
     }
 
     abstract void a(byte param0);
 
     final km a(boolean param0, int param1, int param2, byte param3, int param4) {
         if (param1 != -21) {
-            return null;
+            return (km) null;
         }
-        long var6 = ((long)param4 << 32) + (long)param2;
+        long var6 = ((long)param4 << 1633492640) + (long)param2;
         km var8 = new km();
         var8.field_i = var6;
         var8.field_l = param0 ? true : false;
         var8.field_q = param3;
         if (param0) {
-            if (!(((ona) this).f(13223) > -21)) {
+            if (!((this.f(13223) ^ -1) > -21)) {
                 throw new RuntimeException();
             }
-            ((ona) this).field_a.a((fh) (Object) var8, -75);
+            this.field_a.a(var8, -75);
         } else {
-            if (-21 > ((ona) this).b(-3666)) {
-                ((ona) this).field_c.a((fh) (Object) var8, -90);
+            if (-21 < (this.b(-3666) ^ -1)) {
+                this.field_c.a(var8, -90);
                 return var8;
             }
             throw new RuntimeException();
@@ -142,26 +142,22 @@ abstract class ona {
         if (param0 != -3666) {
             return -55;
         }
-        return ((ona) this).field_c.c(0) + ((ona) this).field_f.c(0);
+        return this.field_c.c(0) + this.field_f.c(0);
     }
 
     ona() {
-        ((ona) this).field_a = new vga();
-        ((ona) this).field_d = new vga();
-        ((ona) this).field_c = new vga();
-        ((ona) this).field_f = new vga();
-        ((ona) this).field_e = new ds(6);
-        ((ona) this).field_j = (byte) 0;
-        ((ona) this).field_g = 0;
-        ((ona) this).field_k = 0;
-        ((ona) this).field_i = new ds(10);
+        this.field_a = new vga();
+        this.field_d = new vga();
+        this.field_c = new vga();
+        this.field_f = new vga();
+        this.field_e = new ds(6);
+        this.field_j = (byte) 0;
+        this.field_g = 0;
+        this.field_k = 0;
+        this.field_i = new ds(10);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Report <%0> for abuse";
     }
 }

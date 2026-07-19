@@ -15,13 +15,13 @@ final class wa extends kd {
 
     final static void a(byte param0, long param1) {
         try {
-            InterruptedException var3 = null;
-            Throwable decompiledCaughtException = null;
-            {
-              L0: {
+            try {
                 Thread.sleep(param1);
-                break L0;
-              }
+            } catch (InterruptedException interruptedException) {
+            }
+            if (param0 != 5) {
+                field_k = (String) null;
+                return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -32,10 +32,10 @@ final class wa extends kd {
 
     final static void a(int param0) {
         try {
-            IOException var1 = null;
-            RuntimeException var1_ref = null;
+            IOException iOException = null;
+            IOException var2_ref = null;
             int var1_int = 0;
-            IOException var2 = null;
+            RuntimeException var1 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
             var3 = Lexicominos.field_L ? 1 : 0;
@@ -50,52 +50,74 @@ final class wa extends kd {
                   }
                 }
                 L2: {
-                  if (null == u.field_pb) {
+                  if (param0 <= 0) {
                     break L2;
                   } else {
-                    u.field_pb.a((byte) -114);
+                    field_k = (String) null;
                     break L2;
                   }
                 }
                 L3: {
-                  if (wj.field_s == null) {
+                  if (null == u.field_pb) {
                     break L3;
                   } else {
-                    {
-                      L4: {
-                        wj.field_s.c(0);
-                        break L4;
-                      }
-                    }
+                    u.field_pb.a((byte) -114);
                     break L3;
                   }
                 }
-                L6: {
+                L4: {
+                  if (wj.field_s == null) {
+                    break L4;
+                  } else {
+                    try {
+                      L5: {
+                        wj.field_s.c(0);
+                        break L5;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L6: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        break L6;
+                      }
+                    }
+                    break L4;
+                  }
+                }
+                L7: {
                   if (null == bd.field_i) {
-                    break L6;
+                    break L7;
                   } else {
                     var1_int = 0;
-                    L7: while (true) {
+                    L8: while (true) {
                       if (bd.field_i.length <= var1_int) {
-                        break L6;
+                        break L7;
                       } else {
-                        L8: {
-                          if (null == bd.field_i[var1_int]) {
-                            var1_int++;
-                            break L8;
-                          } else {
-                            {
-                              L9: {
-                                bd.field_i[var1_int].c(0);
-                                var1_int++;
-                                break L9;
+                        if (var3 == 0) {
+                          L9: {
+                            if (null == bd.field_i[var1_int]) {
+                              break L9;
+                            } else {
+                              try {
+                                L10: {
+                                  bd.field_i[var1_int].c(0);
+                                  break L10;
+                                }
+                              } catch (java.io.IOException decompiledCaughtParameter1) {
+                                decompiledCaughtException = decompiledCaughtParameter1;
+                                L11: {
+                                  var2_ref = (IOException) (Object) decompiledCaughtException;
+                                  break L11;
+                                }
                               }
+                              break L9;
                             }
-                            break L8;
                           }
+                          var1_int++;
+                          continue L8;
+                        } else {
+                          return;
                         }
-                        var1_int++;
-                        continue L7;
                       }
                     }
                   }
@@ -104,8 +126,8 @@ final class wa extends kd {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
-              var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw ld.a((Throwable) (Object) var1_ref, "wa.C(" + -45 + ')');
+              var1 = (RuntimeException) (Object) decompiledCaughtException;
+              throw ld.a((Throwable) ((Object) var1), "wa.C(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -116,7 +138,7 @@ final class wa extends kd {
 
     public static void a(byte param0) {
         field_k = null;
-        int var1 = 1;
+        int var1 = 115 % ((param0 - -66) / 60);
         field_j = null;
     }
 
@@ -125,10 +147,6 @@ final class wa extends kd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         ng discarded$0 = new ng();
         field_j = new boolean[112];
     }

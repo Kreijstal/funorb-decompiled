@@ -8,7 +8,7 @@ final class dl extends gn {
 
     public static void a(byte param0) {
         field_g = null;
-        int var1 = 0;
+        int var1 = -50 % ((param0 - 23) / 48);
     }
 
     private dl() throws Throwable {
@@ -16,10 +16,6 @@ final class dl extends gn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Email is valid";
     }
 }

@@ -48,15 +48,15 @@ final class qva extends kva implements hdb {
         try {
           L0: {
             L1: {
-              ((qva) this).field_h.a((ura) this, -110);
+              this.field_h.a((ura) (this), -110);
               if (!param2) {
                 var7 = 0;
                 var5_int = var7;
                 L2: while (true) {
-                  if (var7 >= 6) {
+                  if ((var7 ^ -1) <= -7) {
                     break L1;
                   } else {
-                    jaggl.OpenGL.glTexImage2Di(var7 + 34069, 0, ((qva) this).e((byte) -31), param1, param1, 0, una.a(-29328, ((qva) this).field_f), ((qva) this).field_h.field_Nc, param3[var7], 0);
+                    jaggl.OpenGL.glTexImage2Di(var7 + 34069, 0, this.e((byte) -31), param1, param1, 0, una.a(-29328, this.field_f), this.field_h.field_Nc, param3[var7], 0);
                     var7++;
                     continue L2;
                   }
@@ -64,10 +64,10 @@ final class qva extends kva implements hdb {
               } else {
                 var5_int = 0;
                 L3: while (true) {
-                  if (var5_int >= 6) {
+                  if (-7 >= (var5_int ^ -1)) {
                     break L1;
                   } else {
-                    ((qva) this).a((byte) 14, 34069 - -var5_int, param1, param1, param3[var5_int]);
+                    this.a((byte) 14, 34069 - -var5_int, param1, param1, param3[var5_int]);
                     var5_int++;
                     continue L3;
                   }
@@ -80,23 +80,23 @@ final class qva extends kva implements hdb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var5;
+            stackOut_9_0 = (RuntimeException) (var5);
             stackOut_9_1 = new StringBuilder().append("qva.<init>(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -105,23 +105,23 @@ final class qva extends kva implements hdb {
             }
           }
           L5: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param3 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -129,7 +129,7 @@ final class qva extends kva implements hdb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class qva extends kva implements hdb {
         try {
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qva.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "qva.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -152,10 +152,6 @@ final class qva extends kva implements hdb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new gj();
         field_j = null;
     }

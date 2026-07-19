@@ -7,6 +7,7 @@ final class mm implements uj {
 
     final static boolean b(byte param0) {
         Object var1 = null;
+        Object var1_ref = null;
         Throwable var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_7_0 = 0;
@@ -17,12 +18,12 @@ final class mm implements uj {
           if (param0 >= 32) {
             break L0;
           } else {
-            field_b = null;
+            field_b = (vf) null;
             break L0;
           }
         }
-        var1 = (Object) (Object) di.field_O;
-        synchronized (var1) {
+        var1_ref = di.field_O;
+        synchronized (var1_ref) {
           L1: {
             if (dn.field_w != ll.field_d) {
               lj.field_t = jk.field_ib[dn.field_w];
@@ -52,34 +53,32 @@ final class mm implements uj {
     public final void a(boolean param0) {
         je.l();
         if (param0) {
-            field_a = null;
+            field_a = (vm) null;
         }
     }
 
     final static void a(boolean param0, wh param1, int param2, int param3, boolean param4, int param5) {
         Object var6 = null;
-        Object var6_ref = null;
-        RuntimeException var6_ref2 = null;
         Throwable var7 = null;
-        RuntimeException stackIn_15_0 = null;
+        Object stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
+        Object stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
+        Object stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
+        Object stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
+        Object stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
         String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
+        Object stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
         String stackOut_15_2 = null;
         try {
-          var6_ref = (Object) (Object) mj.field_o;
-          synchronized (var6_ref) {
+          var6 = mj.field_o;
+          synchronized (var6) {
             L0: {
               if (de.field_b != param1) {
                 L1: {
@@ -93,7 +92,7 @@ final class mm implements uj {
                 L2: {
                   de.field_b = param1;
                   if (null != de.field_b) {
-                    km.field_a.a(de.field_b, true, false, 2, 2, -22604);
+                    km.field_a.a(de.field_b, param4, param0, param5, param2, -22604);
                     break L2;
                   } else {
                     break L2;
@@ -109,24 +108,24 @@ final class mm implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var6_ref2;
-            stackOut_14_1 = new StringBuilder().append("mm.C(").append(false).append(',');
+            var6 = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_14_0 = var6;
+            stackOut_14_1 = new StringBuilder().append("mm.C(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -134,7 +133,7 @@ final class mm implements uj {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + 2 + ',' + param3 + ',' + true + ',' + 2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

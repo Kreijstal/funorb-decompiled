@@ -57,10 +57,10 @@ final class pe {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = SteelSentinels.field_G;
-        for (var6 = 0; var6 < ((pe) this).field_L; var6++) {
-            ((pe) this).field_z[var6] = (short)(((pe) this).field_z[var6] * param1 / param2);
-            ((pe) this).field_m[var6] = (short)(((pe) this).field_m[var6] * param3 / param2);
-            ((pe) this).field_C[var6] = (short)(param0 * ((pe) this).field_C[var6] / param2);
+        for (var6 = 0; var6 < this.field_L; var6++) {
+            this.field_z[var6] = (short)(this.field_z[var6] * param1 / param2);
+            this.field_m[var6] = (short)(this.field_m[var6] * param3 / param2);
+            this.field_C[var6] = (short)(param0 * this.field_C[var6] / param2);
         }
         if (param4 != 14866) {
             return;
@@ -81,10 +81,10 @@ final class pe {
         int var11 = 0;
         int var12 = 0;
         var12 = SteelSentinels.field_G;
-        if (((pe) this).field_f) {
+        if (this.field_f) {
           return;
         } else {
-          ((pe) this).field_f = true;
+          this.field_f = true;
           var2 = 32767;
           var3 = 32767;
           var4 = param0;
@@ -93,18 +93,18 @@ final class pe {
           var7 = -32768;
           var8 = 0;
           L0: while (true) {
-            if (var8 >= ((pe) this).field_L) {
-              ((pe) this).field_n = var7;
-              ((pe) this).field_W = var6;
-              ((pe) this).field_s = var4;
-              ((pe) this).field_J = var2;
-              ((pe) this).field_c = var5;
-              ((pe) this).field_p = var3;
+            if (var8 >= this.field_L) {
+              this.field_n = var7;
+              this.field_W = var6;
+              this.field_s = var4;
+              this.field_J = var2;
+              this.field_c = var5;
+              this.field_p = var3;
               return;
             } else {
               L1: {
-                var9 = ((pe) this).field_z[var8];
-                var10 = ((pe) this).field_m[var8];
+                var9 = this.field_z[var8];
+                var10 = this.field_m[var8];
                 if (var9 < var2) {
                   var2 = var9;
                   break L1;
@@ -121,7 +121,7 @@ final class pe {
                 }
               }
               L3: {
-                var11 = ((pe) this).field_C[var8];
+                var11 = this.field_C[var8];
                 if (var10 <= var6) {
                   break L3;
                 } else {
@@ -168,11 +168,11 @@ final class pe {
           var6 = SteelSentinels.field_G;
           var2 = 0;
           var3 = vn.field_h;
-          if (var3 < 5) {
+          if (-6 < (var3 ^ -1)) {
             var2 = var3 * var3 * 8192 / 1100;
             break L0;
           } else {
-            if (var3 < 105) {
+            if ((var3 ^ -1) > -106) {
               var2 = (16384 * var3 - 40960) / 220;
               break L0;
             } else {
@@ -205,7 +205,7 @@ final class pe {
           }
         }
         L3: {
-          if (param0 == 4) {
+          if (-5 == (param0 ^ -1)) {
             var5 = 1;
             var4 = 1;
             break L3;
@@ -214,7 +214,7 @@ final class pe {
           }
         }
         L4: {
-          if (param0 != 5) {
+          if (-6 != (param0 ^ -1)) {
             break L4;
           } else {
             var4 = -1;
@@ -234,7 +234,7 @@ final class pe {
         if (param1 < -24) {
           L6: {
             L7: {
-              if (param0 == 7) {
+              if (-8 == (param0 ^ -1)) {
                 break L7;
               } else {
                 if (8 == param0) {
@@ -275,7 +275,7 @@ final class pe {
             }
           }
           L11: {
-            if (param0 != 14) {
+            if (-15 != (param0 ^ -1)) {
               break L11;
             } else {
               var4 = -1;
@@ -284,7 +284,7 @@ final class pe {
             }
           }
           L12: {
-            if (param0 != 15) {
+            if (-16 != (param0 ^ -1)) {
               break L12;
             } else {
               var4 = 1;
@@ -302,10 +302,10 @@ final class pe {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = SteelSentinels.field_G;
-        for (var5 = param0; var5 < ((pe) this).field_L; var5++) {
-            ((pe) this).field_z[var5] = (short)(((pe) this).field_z[var5] + param3);
-            ((pe) this).field_m[var5] = (short)(((pe) this).field_m[var5] + param1);
-            ((pe) this).field_C[var5] = (short)(((pe) this).field_C[var5] + param2);
+        for (var5 = param0; var5 < this.field_L; var5++) {
+            this.field_z[var5] = (short)(this.field_z[var5] + param3);
+            this.field_m[var5] = (short)(this.field_m[var5] + param1);
+            this.field_C[var5] = (short)(this.field_C[var5] + param2);
         }
         this.a(-20);
     }
@@ -319,6 +319,9 @@ final class pe {
         field_b = null;
         field_h = null;
         field_O = null;
+        if (param0 >= -114) {
+            return;
+        }
         field_v = null;
         field_o = null;
         field_U = null;
@@ -326,71 +329,69 @@ final class pe {
 
     private final void a(int param0) {
         int var2 = 77 % ((param0 - 64) / 62);
-        ((pe) this).field_f = false;
+        this.field_f = false;
     }
 
     pe() {
-        ((pe) this).field_K = (byte) 0;
-        ((pe) this).field_f = false;
+        this.field_K = (byte) 0;
+        this.field_f = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        int var0 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        field_R = "Help";
-        field_D = new String[]{"<%1> fell into <%0>'s flak", "<%1> was perforated by <%0>'s minigun", "<%1> was incinerated by <%0>", "<%1> felt <%0>'s electrostatic force", "<%1> was lasered by <%0>", "<%1> was melted by <%0>", "<%1> couldn't dodge <%0>'s missile", "<%1> was pierced by <%0>", "<%1> short-circuited because of <%0>", "<%1> was fragged by <%0>", "<%1> was electrocuted by <%0>", "<%1> fell into <%0>'s heavy flak", "<%1> was perforated by <%0>'s heavy gun", "<%1> decided to catch <%0>'s shell", "<%1> fell foul of <%0>'s artillery", "<%1> was sniped by <%0>", "<%1> got erased by <%0>", "<%1> was taught about the power of light by <%0>", "<%1> was vaporised by <%0>", "<%1> was engulfed by <%0>'s rocket spread", "<%1> got a present from <%0>", "<%1> caught <%0>'s lightning", "", "", "", "", "<%1> looked down the barrel of <%0>'s ultra gun", "<%1> rode <%0>'s shell", "<%1> had death rained down from <%0>", "<%1> was turned into slag by <%0>", "<%1> stared into <%0>'s sun for too long", "<%1> was atomised by <%0>", "<%1> fell to <%0>'s judgement", "<%1> was lost when <%0>'s rocket found its mark", "<%1> failed to avoid <%0>'s missile", "<%1> received serenity from <%0>"};
-        field_U = "Game full";
-        field_h = new String[]{"NAME", "RATING", "PLAYED", "WON", "DRAWN", "LOST"};
-        field_A = new fm(15, 0, 1, 0);
-        field_O = new int[]{0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 7, 4, 4, 4, 7, 0, 4, 5, 5, 6, 5, 3, 3, 6, 6, 4, 5, 3, 3, 7};
-        field_d = -1;
-        field_N = new int[128];
-        field_o = new int[128];
-        var2 = 0;
-        L0: while (true) {
-          if (var2 >= 128) {
-            field_b = new int[128];
+        $cfr$clinit: {
+            int var0 = 0;
+            int var1 = 0;
+            int var2 = 0;
+            int var3 = 0;
+            int var4 = 0;
+            field_R = "Help";
+            field_D = new String[]{"<%1> fell into <%0>'s flak", "<%1> was perforated by <%0>'s minigun", "<%1> was incinerated by <%0>", "<%1> felt <%0>'s electrostatic force", "<%1> was lasered by <%0>", "<%1> was melted by <%0>", "<%1> couldn't dodge <%0>'s missile", "<%1> was pierced by <%0>", "<%1> short-circuited because of <%0>", "<%1> was fragged by <%0>", "<%1> was electrocuted by <%0>", "<%1> fell into <%0>'s heavy flak", "<%1> was perforated by <%0>'s heavy gun", "<%1> decided to catch <%0>'s shell", "<%1> fell foul of <%0>'s artillery", "<%1> was sniped by <%0>", "<%1> got erased by <%0>", "<%1> was taught about the power of light by <%0>", "<%1> was vaporised by <%0>", "<%1> was engulfed by <%0>'s rocket spread", "<%1> got a present from <%0>", "<%1> caught <%0>'s lightning", "", "", "", "", "<%1> looked down the barrel of <%0>'s ultra gun", "<%1> rode <%0>'s shell", "<%1> had death rained down from <%0>", "<%1> was turned into slag by <%0>", "<%1> stared into <%0>'s sun for too long", "<%1> was atomised by <%0>", "<%1> fell to <%0>'s judgement", "<%1> was lost when <%0>'s rocket found its mark", "<%1> failed to avoid <%0>'s missile", "<%1> received serenity from <%0>"};
+            field_U = "Game full";
+            field_h = new String[]{"NAME", "RATING", "PLAYED", "WON", "DRAWN", "LOST"};
+            field_A = new fm(15, 0, 1, 0);
+            field_O = new int[]{0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 7, 4, 4, 4, 7, 0, 4, 5, 5, 6, 5, 3, 3, 6, 6, 4, 5, 3, 3, 7};
+            field_d = -1;
+            field_N = new int[128];
+            field_o = new int[128];
             var2 = 0;
-            L1: while (true) {
-              if (var2 >= 128) {
-                field_q = new int[128];
+            L0: while (true) {
+              if ((var2 ^ -1) <= -129) {
+                field_b = new int[128];
                 var2 = 0;
-                L2: while (true) {
-                  if (128 <= var2) {
-                    return;
+                L1: while (true) {
+                  if (-129 >= (var2 ^ -1)) {
+                    field_q = new int[128];
+                    var2 = 0;
+                    L2: while (true) {
+                      if (128 <= var2) {
+                        break $cfr$clinit;
+                      } else {
+                        var3 = field_o[var2] & 255;
+                        var4 = (16719614 & field_o[var2]) >> -689682448;
+                        field_q[var2] = var4 + 65792 * var3;
+                        var2++;
+                        continue L2;
+                      }
+                    }
                   } else {
-                    var3 = field_o[var2] & 255;
-                    var4 = (16719614 & field_o[var2]) >> 16;
-                    field_q[var2] = var4 + 65792 * var3;
+                    var3 = 255 & field_o[var2];
+                    var4 = field_o[var2] >> -937322256 & 255;
+                    field_b[var2] = (var3 << 248522256) - -(257 * var4);
                     var2++;
-                    continue L2;
+                    continue L1;
                   }
                 }
               } else {
-                var3 = 255 & field_o[var2];
-                var4 = field_o[var2] >> 16 & 255;
-                field_b[var2] = (var3 << 16) - -(257 * var4);
+                var0 = 1114111;
+                var1 = (var0 & 16711935) * ((255 + var2 * 255) / 128);
+                field_o[var2] = ec.a(-16711936, var1) - -ec.a(16711680, var0 * (255 * (1 + var2) / 128) - var1) >>> -930670712;
+                var0 = 16776976;
+                var1 = (255 + var2 * 255) / 128 * (var0 & 16711935);
+                field_N[var2] = ec.a(-var1 + (1 + var2) * 255 / 128 * var0, 16711680) + ec.a(var1, -16711936) >>> -1086323128;
                 var2++;
-                continue L1;
+                continue L0;
               }
             }
-          } else {
-            var0 = 1114111;
-            var1 = (var0 & 16711935) * ((255 + var2 * 255) / 128);
-            field_o[var2] = ec.a(-16711936, var1) - -ec.a(16711680, var0 * (255 * (1 + var2) / 128) - var1) >>> 8;
-            var0 = 16776976;
-            var1 = (255 + var2 * 255) / 128 * (var0 & 16711935);
-            field_N[var2] = ec.a(-var1 + (1 + var2) * 255 / 128 * var0, 16711680) + ec.a(var1, -16711936) >>> 8;
-            var2++;
-            continue L0;
-          }
         }
     }
 }

@@ -31,11 +31,11 @@ final class ep extends rqa {
               if (param1 < -119) {
                 break L1;
               } else {
-                field_o = null;
+                field_o = (kb) null;
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -43,23 +43,23 @@ final class ep extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ep.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -67,7 +67,7 @@ final class ep extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -107,15 +107,15 @@ final class ep extends rqa {
               var7 = param4;
               var8 = param3 * param3;
               var9 = param4 * param4;
-              var10 = var9 << 1;
-              var11 = var8 << 1;
-              var12 = param4 << 1;
+              var10 = var9 << 1928738817;
+              var11 = var8 << -309614431;
+              var12 = param4 << -746754367;
               var13 = var10 + var8 * (-var12 + 1);
               var14 = var9 + -((var12 - 1) * var11);
-              var15 = var8 << 2;
-              var16 = var9 << 2;
-              var17 = var10 * ((var6_int << 1) - -3);
-              var18 = var11 * ((var7 << 1) + -3);
+              var15 = var8 << -796816286;
+              var16 = var9 << -95260862;
+              var17 = var10 * ((var6_int << 1104085825) - -3);
+              var18 = var11 * ((var7 << 837083265) + -3);
               var19 = var16 * (1 + var6_int);
               if (lua.field_c > param1) {
                 break L1;
@@ -130,39 +130,47 @@ final class ep extends rqa {
                 }
               }
             }
-            var20 = (var7 + -1) * var15;
-            L2: while (true) {
-              if (var7 <= 0) {
+            L2: {
+              var20 = (var7 + -1) * var15;
+              if (param0 <= -112) {
+                break L2;
+              } else {
+                field_o = (kb) null;
+                break L2;
+              }
+            }
+            L3: while (true) {
+              if ((var7 ^ -1) >= -1) {
                 break L0;
               } else {
-                L3: {
+                L4: {
                   if (0 > var13) {
-                    L4: while (true) {
-                      if (var13 >= 0) {
-                        break L3;
+                    L5: while (true) {
+                      if ((var13 ^ -1) <= -1) {
+                        break L4;
                       } else {
                         var14 = var14 + var19;
                         var13 = var13 + var17;
                         var6_int++;
                         var19 = var19 + var16;
                         var17 = var17 + var16;
-                        continue L4;
+                        continue L5;
                       }
                     }
                   } else {
-                    break L3;
+                    break L4;
                   }
                 }
-                L5: {
-                  if (var14 < 0) {
+                L6: {
+                  if (-1 < (var14 ^ -1)) {
                     var14 = var14 + var19;
                     var13 = var13 + var17;
                     var19 = var19 + var16;
                     var17 = var17 + var16;
                     var6_int++;
-                    break L5;
+                    break L6;
                   } else {
-                    break L5;
+                    break L6;
                   }
                 }
                 var14 = var14 + -var18;
@@ -173,27 +181,27 @@ final class ep extends rqa {
                 var21 = param1 - var7;
                 var22 = var7 + param1;
                 if (var22 < lua.field_c) {
-                  continue L2;
+                  continue L3;
                 } else {
                   if (hab.field_i >= var21) {
-                    L6: {
+                    L7: {
                       var23 = ksa.a(31123, ob.field_j, mt.field_o, param5 + var6_int);
                       var24 = ksa.a(31123, ob.field_j, mt.field_o, -var6_int + param5);
                       if (lua.field_c <= var21) {
                         ww.a(param2, var23, rba.field_b[var21], (byte) 75, var24);
-                        break L6;
+                        break L7;
                       } else {
-                        break L6;
+                        break L7;
                       }
                     }
                     if (hab.field_i >= var22) {
                       ww.a(param2, var23, rba.field_b[var22], (byte) 75, var24);
-                      continue L2;
+                      continue L3;
                     } else {
-                      continue L2;
+                      continue L3;
                     }
                   } else {
-                    continue L2;
+                    continue L3;
                   }
                 }
               }
@@ -202,20 +210,16 @@ final class ep extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var6, "ep.B(" + -126 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) var6), "ep.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     public static void e(byte param0) {
-        int var1 = 1;
+        int var1 = 85 % ((-42 - param0) / 42);
         field_o = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new kb(3);
     }
 }

@@ -30,6 +30,9 @@ final class je extends gn {
     }
 
     final static void a(byte param0, pu param1) {
+        if (param0 != 100) {
+            field_g = (rd[]) null;
+        }
         et.field_b = true;
         if (vl.a(false)) {
             return;
@@ -38,13 +41,14 @@ final class je extends gn {
             fp.field_e = 6;
             pc.field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "je.B(" + 100 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "je.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int a(boolean param0) {
+        int discarded$1 = 0;
         L0: {
-          if (ks.field_e != 1) {
+          if ((ks.field_e ^ -1) != -2) {
             break L0;
           } else {
             if (!sl.field_Eb) {
@@ -55,57 +59,64 @@ final class je extends gn {
           }
         }
         if (ks.field_e != 2) {
-          if (ks.field_e == 3) {
+          if ((ks.field_e ^ -1) == -4) {
             return 4;
           } else {
             L1: {
-              int discarded$1 = je.a(false);
-              if (ks.field_e != 4) {
+              if (!param0) {
                 break L1;
               } else {
+                discarded$1 = je.a(false);
+                break L1;
+              }
+            }
+            L2: {
+              if (ks.field_e != 4) {
+                break L2;
+              } else {
                 if (sl.field_Eb) {
-                  break L1;
+                  break L2;
                 } else {
                   return 5;
                 }
               }
             }
-            L2: {
-              if (ks.field_e != 5) {
-                break L2;
+            L3: {
+              if ((ks.field_e ^ -1) != -6) {
+                break L3;
               } else {
                 if (!sl.field_Eb) {
                   return 6;
                 } else {
-                  break L2;
+                  break L3;
                 }
               }
             }
-            L3: {
+            L4: {
               if (ks.field_e != 6) {
-                break L3;
+                break L4;
               } else {
                 if (sl.field_Eb) {
-                  break L3;
+                  break L4;
                 } else {
                   return 7;
                 }
               }
             }
-            L4: {
+            L5: {
               if (ks.field_e != 7) {
-                if (ks.field_e == 8) {
+                if ((ks.field_e ^ -1) == -9) {
                   if (!sl.field_Eb) {
                     if (sl.field_Eb) {
-                      break L4;
+                      break L5;
                     } else {
-                      if (ld.field_f.f(-120) >= 248) {
-                        break L4;
+                      if (-249 >= (ld.field_f.f(-120) ^ -1)) {
+                        break L5;
                       } else {
                         if (400 > ld.field_f.a(true)) {
                           return 11;
                         } else {
-                          break L4;
+                          break L5;
                         }
                       }
                     }
@@ -113,7 +124,7 @@ final class je extends gn {
                     return 10;
                   }
                 } else {
-                  if (ks.field_e == 9) {
+                  if (-10 == (ks.field_e ^ -1)) {
                     if (sl.field_Eb) {
                       return 12;
                     } else {
@@ -122,9 +133,9 @@ final class je extends gn {
                   } else {
                     if (10 != ks.field_e) {
                       if (ks.field_e != 11) {
-                        if (ks.field_e == 12) {
+                        if ((ks.field_e ^ -1) == -13) {
                           if (et.field_d.field_V.field_m != 0) {
-                            break L4;
+                            break L5;
                           } else {
                             return 16;
                           }
@@ -133,7 +144,7 @@ final class je extends gn {
                             if (!sl.field_Eb) {
                               return 17;
                             } else {
-                              break L4;
+                              break L5;
                             }
                           } else {
                             if (ks.field_e == 14) {
@@ -143,11 +154,11 @@ final class je extends gn {
                                 if (et.field_d.field_u == 3) {
                                   return 19;
                                 } else {
-                                  if (et.field_d.field_u != 4) {
-                                    break L4;
+                                  if ((et.field_d.field_u ^ -1) != -5) {
+                                    break L5;
                                   } else {
-                                    if (field_m <= 0) {
-                                      break L4;
+                                    if (-1 <= (field_m ^ -1)) {
+                                      break L5;
                                     } else {
                                       return 20;
                                     }
@@ -155,7 +166,7 @@ final class je extends gn {
                                 }
                               }
                             } else {
-                              break L4;
+                              break L5;
                             }
                           }
                         }
@@ -166,7 +177,7 @@ final class je extends gn {
                       if (!sl.field_Eb) {
                         return 14;
                       } else {
-                        break L4;
+                        break L5;
                       }
                     }
                   }
@@ -176,15 +187,15 @@ final class je extends gn {
                   return 9;
                 } else {
                   if (!sl.field_Eb) {
-                    break L4;
+                    break L5;
                   } else {
                     if (1 != et.field_d.field_V.field_m) {
-                      break L4;
+                      break L5;
                     } else {
-                      if (et.field_d.b((byte) -96).field_u == 0) {
+                      if (-1 == (et.field_d.b((byte) -96).field_u ^ -1)) {
                         return 8;
                       } else {
-                        break L4;
+                        break L5;
                       }
                     }
                   }
@@ -194,10 +205,10 @@ final class je extends gn {
             return -1;
           }
         } else {
-          if (mh.field_k.a(true) > 477) {
+          if ((mh.field_k.a(true) ^ -1) < -478) {
             return 1;
           } else {
-            if (mh.field_k.field_C > 0) {
+            if (-1 > (mh.field_k.field_C ^ -1)) {
               return 2;
             } else {
               return 3;
@@ -207,6 +218,7 @@ final class je extends gn {
     }
 
     je(int param0, byte[] param1) {
+        int[] array$1 = null;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -245,38 +257,38 @@ final class je extends gn {
         String stackOut_24_2 = null;
         try {
           L0: {
-            ((je) this).field_l = param0;
+            this.field_l = param0;
             var7 = new iw(param1);
             var8 = var7;
-            ((je) this).field_j = var8.h((byte) -116);
-            ((je) this).field_r = new int[((je) this).field_j];
-            ((je) this).field_q = new int[((je) this).field_j][];
-            ((je) this).field_o = new int[((je) this).field_j];
-            ((je) this).field_i = new boolean[((je) this).field_j];
+            this.field_j = var8.h((byte) -116);
+            this.field_r = new int[this.field_j];
+            this.field_q = new int[this.field_j][];
+            this.field_o = new int[this.field_j];
+            this.field_i = new boolean[this.field_j];
             var4 = 0;
             L1: while (true) {
-              if (var4 >= ((je) this).field_j) {
+              if (var4 >= this.field_j) {
                 var4 = 0;
                 L2: while (true) {
-                  if (var4 >= ((je) this).field_j) {
+                  if (var4 >= this.field_j) {
                     var4 = 0;
                     L3: while (true) {
-                      if (((je) this).field_j <= var4) {
+                      if (this.field_j <= var4) {
                         var4 = 0;
                         L4: while (true) {
-                          if (var4 >= ((je) this).field_j) {
+                          if (var4 >= this.field_j) {
                             var4 = 0;
                             L5: while (true) {
-                              if (((je) this).field_j <= var4) {
+                              if (this.field_j <= var4) {
                                 break L0;
                               } else {
                                 var5 = 0;
                                 L6: while (true) {
-                                  if (var5 >= ((je) this).field_q[var4].length) {
+                                  if (var5 >= this.field_q[var4].length) {
                                     var4++;
                                     continue L5;
                                   } else {
-                                    ((je) this).field_q[var4][var5] = var7.h((byte) -105);
+                                    this.field_q[var4][var5] = var7.h((byte) -105);
                                     var5++;
                                     continue L6;
                                   }
@@ -284,27 +296,28 @@ final class je extends gn {
                               }
                             }
                           } else {
-                            ((je) this).field_q[var4] = new int[var7.h((byte) -106)];
+                            array$1 = new int[var7.h((byte) -106)];
+                            this.field_q[var4] = array$1;
                             var4++;
                             continue L4;
                           }
                         }
                       } else {
-                        ((je) this).field_r[var4] = var7.a((byte) 81);
+                        this.field_r[var4] = var7.a((byte) 81);
                         var4++;
                         continue L3;
                       }
                     }
                   } else {
                     L7: {
-                      stackOut_6_0 = ((je) this).field_i;
+                      stackOut_6_0 = this.field_i;
                       stackOut_6_1 = var4;
                       stackIn_8_0 = stackOut_6_0;
                       stackIn_8_1 = stackOut_6_1;
                       stackIn_7_0 = stackOut_6_0;
                       stackIn_7_1 = stackOut_6_1;
                       if (var8.h((byte) -124) != 1) {
-                        stackOut_8_0 = (boolean[]) (Object) stackIn_8_0;
+                        stackOut_8_0 = (boolean[]) ((Object) stackIn_8_0);
                         stackOut_8_1 = stackIn_8_1;
                         stackOut_8_2 = 0;
                         stackIn_9_0 = stackOut_8_0;
@@ -312,7 +325,7 @@ final class je extends gn {
                         stackIn_9_2 = stackOut_8_2;
                         break L7;
                       } else {
-                        stackOut_7_0 = (boolean[]) (Object) stackIn_7_0;
+                        stackOut_7_0 = (boolean[]) ((Object) stackIn_7_0);
                         stackOut_7_1 = stackIn_7_1;
                         stackOut_7_2 = 1;
                         stackIn_9_0 = stackOut_7_0;
@@ -327,7 +340,7 @@ final class je extends gn {
                   }
                 }
               } else {
-                ((je) this).field_o[var4] = var7.h((byte) -107);
+                this.field_o[var4] = var7.h((byte) -107);
                 var4++;
                 continue L1;
               }
@@ -337,23 +350,23 @@ final class je extends gn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var3;
+            stackOut_23_0 = (RuntimeException) (var3);
             stackOut_23_1 = new StringBuilder().append("je.<init>(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L8;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -361,15 +374,11 @@ final class je extends gn {
               break L8;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_n = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
         field_g = new rd[25];

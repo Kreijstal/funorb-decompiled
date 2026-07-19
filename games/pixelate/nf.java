@@ -14,13 +14,12 @@ final class nf {
         field_b = null;
         field_d = null;
         field_e = null;
+        if (param0 != -107) {
+            field_d = (ak) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "nf.A(";
         field_f = 360;
         field_e = "Send private message to <%0>";

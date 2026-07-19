@@ -13,29 +13,30 @@ final class wa {
         al var2 = null;
         int var3 = 0;
         var3 = -97 / ((param0 - 73) / 51);
-        var2 = ((wa) this).field_a;
-        if (((wa) this).field_c == var2) {
-          ((wa) this).field_a = null;
+        var2 = this.field_a;
+        if (this.field_c == var2) {
+          this.field_a = null;
           return null;
         } else {
-          ((wa) this).field_a = var2.field_t;
+          this.field_a = var2.field_t;
           return var2;
         }
     }
 
     final al c(int param0) {
+        int discarded$7 = 0;
         al var2 = null;
-        var2 = ((wa) this).field_c.field_t;
+        var2 = this.field_c.field_t;
         if (param0 == 8192) {
-          if (var2 == ((wa) this).field_c) {
+          if (var2 == this.field_c) {
             return null;
           } else {
             var2.a((byte) -119);
             return var2;
           }
         } else {
-          int discarded$7 = ((wa) this).b(-20);
-          if (var2 == ((wa) this).field_c) {
+          discarded$7 = this.b(-20);
+          if (var2 == this.field_c) {
             return null;
           } else {
             var2.a((byte) -119);
@@ -46,12 +47,12 @@ final class wa {
 
     final al a(int param0) {
         int var2 = 13 / ((param0 - 24) / 52);
-        al var3 = ((wa) this).field_c.field_t;
-        if (!(var3 != ((wa) this).field_c)) {
-            ((wa) this).field_a = null;
+        al var3 = this.field_c.field_t;
+        if (!(var3 != this.field_c)) {
+            this.field_a = null;
             return null;
         }
-        ((wa) this).field_a = var3.field_t;
+        this.field_a = var3.field_t;
         return var3;
     }
 
@@ -59,8 +60,8 @@ final class wa {
         int var5 = MinerDisturbance.field_ab;
         int var2 = 0;
         int var4 = 119 / ((param0 - 25) / 53);
-        al var3 = ((wa) this).field_c.field_t;
-        while (var3 != ((wa) this).field_c) {
+        al var3 = this.field_c.field_t;
+        while (var3 != this.field_c) {
             var3 = var3.field_t;
             var2++;
         }
@@ -75,31 +76,32 @@ final class wa {
             return;
         }
         try {
-            param0.field_t = ((wa) this).field_c;
-            param0.field_q = ((wa) this).field_c.field_q;
+            param0.field_t = this.field_c;
+            param0.field_q = this.field_c.field_q;
             param0.field_q.field_t = param0;
             param0.field_t.field_q = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "wa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "wa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public wa() {
-        ((wa) this).field_c = new al();
-        ((wa) this).field_c.field_q = ((wa) this).field_c;
-        ((wa) this).field_c.field_t = ((wa) this).field_c;
+        this.field_c = new al();
+        this.field_c.field_q = this.field_c;
+        this.field_c.field_t = this.field_c;
     }
 
     public static void e(int param0) {
         field_b = null;
+        if (param0 < 10) {
+            field_b = (java.util.zip.CRC32) null;
+            field_d = null;
+            return;
+        }
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[8192];
         field_b = new java.util.zip.CRC32();
     }

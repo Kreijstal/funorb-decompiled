@@ -825,6 +825,7 @@ final class o extends da {
     }
 
     final static void a(int param0, int param1, boolean param2, java.awt.Color param3, String param4) {
+        boolean discarded$1 = false;
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
@@ -913,7 +914,7 @@ final class o extends da {
                     var10.setFont(hh.field_a);
                     var10.setColor(java.awt.Color.white);
                     var10.drawString(param4, (304 + -(param4.length() * 6)) / 2, 22);
-                    boolean discarded$1 = var9.drawImage(uf.field_i, sd.field_c / 2 + -152, fl.field_v / 2 - 18, (java.awt.image.ImageObserver) null);
+                    discarded$1 = var9.drawImage(uf.field_i, sd.field_c / 2 + -152, fl.field_v / 2 - 18, (java.awt.image.ImageObserver) null);
                     break L5;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -960,23 +961,23 @@ final class o extends da {
           decompiledCaughtException = decompiledCaughtParameter2;
           L10: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var5_ref;
+            stackOut_19_0 = (RuntimeException) (var5_ref);
             stackOut_19_1 = new StringBuilder().append("o.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param3 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L10;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -985,23 +986,23 @@ final class o extends da {
             }
           }
           L11: {
-            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+            stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
             stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param4 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L11;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -1009,41 +1010,120 @@ final class o extends da {
               break L11;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
     }
 
     final static void a(int param0, int param1) {
-        eh.field_o = 21845;
+        eh.field_o = (param1 << 537050192) / 150;
         int var2 = -7 % ((param0 - -81) / 33);
-        eh.field_m = 133;
-        eh.field_k = 33;
+        eh.field_m = 400 * param1 / 150;
+        eh.field_k = 100 * param1 / 150;
     }
 
     public static void b(boolean param0) {
         field_j = null;
         field_k = null;
         field_n = null;
+        if (!param0) {
+            field_m = false;
+        }
     }
 
     final static void a(int param0, boolean param1) {
+        int stackIn_5_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_19_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
         md.field_a = false;
         rj.field_g = param0;
-        if (rj.field_g == 0) {
-          gh.field_x = false;
-          rf.field_ib = 0;
-          nd.field_e = s.field_k[1 + rj.field_g];
-          bc.field_o = 13;
-          bb.field_h = 13;
-          ch.b(false);
-          return;
+        if (rj.field_g != 0) {
+          if (!param1) {
+            L0: {
+              o.b(false);
+              rf.field_ib = 0;
+              nd.field_e = s.field_k[1 + rj.field_g];
+              bc.field_o = 13;
+              bb.field_h = 13;
+              if (param1) {
+                stackOut_18_0 = 0;
+                stackIn_19_0 = stackOut_18_0;
+                break L0;
+              } else {
+                stackOut_17_0 = 1;
+                stackIn_19_0 = stackOut_17_0;
+                break L0;
+              }
+            }
+            ch.b(stackIn_19_0 != 0);
+            return;
+          } else {
+            L1: {
+              rf.field_ib = 0;
+              nd.field_e = s.field_k[1 + rj.field_g];
+              bc.field_o = 13;
+              bb.field_h = 13;
+              if (param1) {
+                stackOut_14_0 = 0;
+                stackIn_15_0 = stackOut_14_0;
+                break L1;
+              } else {
+                stackOut_13_0 = 1;
+                stackIn_15_0 = stackOut_13_0;
+                break L1;
+              }
+            }
+            ch.b(stackIn_15_0 != 0);
+            return;
+          }
         } else {
-          rf.field_ib = 0;
-          nd.field_e = s.field_k[1 + rj.field_g];
-          bc.field_o = 13;
-          bb.field_h = 13;
-          ch.b(false);
-          return;
+          gh.field_x = false;
+          if (param1) {
+            L2: {
+              rf.field_ib = 0;
+              nd.field_e = s.field_k[1 + rj.field_g];
+              bc.field_o = 13;
+              bb.field_h = 13;
+              if (param1) {
+                stackOut_8_0 = 0;
+                stackIn_9_0 = stackOut_8_0;
+                break L2;
+              } else {
+                stackOut_7_0 = 1;
+                stackIn_9_0 = stackOut_7_0;
+                break L2;
+              }
+            }
+            ch.b(stackIn_9_0 != 0);
+            return;
+          } else {
+            L3: {
+              o.b(false);
+              rf.field_ib = 0;
+              nd.field_e = s.field_k[1 + rj.field_g];
+              bc.field_o = 13;
+              bb.field_h = 13;
+              if (param1) {
+                stackOut_4_0 = 0;
+                stackIn_5_0 = stackOut_4_0;
+                break L3;
+              } else {
+                stackOut_3_0 = 1;
+                stackIn_5_0 = stackOut_3_0;
+                break L3;
+              }
+            }
+            ch.b(stackIn_5_0 != 0);
+            return;
+          }
         }
     }
 
@@ -1052,14 +1132,14 @@ final class o extends da {
     }
 
     final static int a(int param0) {
+        if (param0 != 18) {
+            field_i = 4;
+            return fh.field_c;
+        }
         return fh.field_c;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "Help posts: OFF";
         field_i = 2;
     }

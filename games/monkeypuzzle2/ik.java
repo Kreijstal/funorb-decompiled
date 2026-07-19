@@ -29,10 +29,6 @@ abstract class ik extends bf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ik.WA(";
         field_l = 10;
     }

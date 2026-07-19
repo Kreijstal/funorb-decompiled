@@ -51,6 +51,9 @@ abstract class gn extends lm {
         field_w = null;
         field_y = null;
         field_u = null;
+        if (param0 >= -91) {
+            field_z = (int[]) null;
+        }
     }
 
     abstract byte[] h(int param0);
@@ -58,14 +61,10 @@ abstract class gn extends lm {
     abstract int g(int param0);
 
     gn() {
-        ((gn) this).field_v = true;
+        this.field_v = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = new int[128];
         field_w = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
         field_u = new wm(9, 0, 4, 1);

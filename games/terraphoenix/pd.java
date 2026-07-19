@@ -16,17 +16,27 @@ final class pd {
         field_f = null;
         field_e = null;
         field_g = null;
+        if (param0 != 122) {
+            java.awt.Component var2 = (java.awt.Component) null;
+            pd.a(-110, (java.awt.Component) null);
+        }
     }
 
     final static pd a(int param0) {
-        if (og.field_a == qe.field_f) {
-            throw new IllegalStateException();
+        if (og.field_a != qe.field_f) {
+          if (param0 == -352) {
+            if (k.field_b != qe.field_f) {
+              return null;
+            } else {
+              qe.field_f = og.field_a;
+              return wl.field_Q;
+            }
+          } else {
+            return (pd) null;
+          }
+        } else {
+          throw new IllegalStateException();
         }
-        if (k.field_b != qe.field_f) {
-            return null;
-        }
-        qe.field_f = og.field_a;
-        return wl.field_Q;
     }
 
     final static boolean a(int param0, char param1) {
@@ -132,7 +142,7 @@ final class pd {
             }
           }
         } else {
-          field_g = null;
+          field_g = (jj) null;
           if (48 <= param1) {
             if (57 < param1) {
               if (param1 < 65) {
@@ -219,7 +229,7 @@ final class pd {
         var7 = Terraphoenix.field_V;
         try {
           L0: {
-            var1_int = 0;
+            var1_int = param0 ? 1 : 0;
             var2 = 0;
             L1: while (true) {
               if (!fd.d(1)) {
@@ -238,11 +248,11 @@ final class pd {
                     if (var1_int == 0) {
                       break L4;
                     } else {
-                      if (ai.field_i.field_h < 0) {
+                      if (-1 < (ai.field_i.field_h ^ -1)) {
                         break L4;
                       } else {
                         var3 = pj.field_l[ai.field_i.field_h];
-                        if (var3 == 2) {
+                        if (-3 == (var3 ^ -1)) {
                           wf.c(25501);
                           break L3;
                         } else {
@@ -254,12 +264,12 @@ final class pd {
                               if (var3 != 0) {
                                 break L5;
                               } else {
-                                if (pe.field_e != 2) {
+                                if (-3 != (pe.field_e ^ -1)) {
                                   break L5;
                                 } else {
                                   var4 = ll.a(1000) - hj.field_I;
                                   var6 = (int)((-var4 + 10999L) / 1000L);
-                                  if (var6 > 0) {
+                                  if (-1 > (var6 ^ -1)) {
                                     break L5;
                                   } else {
                                     var3 = 2;
@@ -290,12 +300,12 @@ final class pd {
                   if (var3 != 0) {
                     break L6;
                   } else {
-                    if (pe.field_e != 2) {
+                    if (-3 != (pe.field_e ^ -1)) {
                       break L6;
                     } else {
                       var4 = ll.a(1000) - hj.field_I;
                       var6 = (int)((-var4 + 10999L) / 1000L);
-                      if (var6 > 0) {
+                      if (-1 > (var6 ^ -1)) {
                         break L6;
                       } else {
                         var3 = 2;
@@ -318,7 +328,7 @@ final class pd {
                     break L7;
                   }
                 }
-                if (lf.field_c == 13) {
+                if ((lf.field_c ^ -1) == -14) {
                   var2 = 1;
                   continue L1;
                 } else {
@@ -330,31 +340,30 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var1, "pd.C(" + false + ')');
+          throw qk.a((Throwable) ((Object) var1), "pd.C(" + param0 + ')');
         }
         return stackIn_31_0;
     }
 
     pd(boolean param0) {
-        ((pd) this).field_i = param0 ? true : false;
+        this.field_i = param0 ? true : false;
     }
 
     final static void a(int param0, java.awt.Component param1) {
-        param1.removeMouseListener((java.awt.event.MouseListener) (Object) a.field_d);
+        param1.removeMouseListener(a.field_d);
+        if (param0 > -2) {
+            return;
+        }
         try {
-            param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) a.field_d);
-            param1.removeFocusListener((java.awt.event.FocusListener) (Object) a.field_d);
+            param1.removeMouseMotionListener(a.field_d);
+            param1.removeFocusListener(a.field_d);
             wa.field_p = 0;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "pd.D(" + -26 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "pd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "REC";
         field_f = "HARD MODE UNLOCKED";
         field_g = new jj();

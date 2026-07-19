@@ -18,11 +18,20 @@ final class lc {
         field_j = null;
         field_f = null;
         field_b = null;
-        field_g = null;
+        field_g = (String[][]) null;
         field_c = null;
-        field_d = null;
-        field_i = null;
-        field_e = null;
+        if (param0 != 120) {
+          field_c = (String) null;
+          field_d = null;
+          field_i = null;
+          field_e = null;
+          return;
+        } else {
+          field_d = null;
+          field_i = null;
+          field_e = null;
+          return;
+        }
     }
 
     final static void a(byte param0) {
@@ -35,10 +44,6 @@ final class lc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Unfortunately your configuration doesn't support fullscreen mode.";
         field_j = new dk("usename");
         field_i = "Elapsed time";

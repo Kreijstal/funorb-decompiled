@@ -12,14 +12,15 @@ final class na {
 
     public static void a(int param0) {
         field_e = null;
+        if (param0 != 426388817) {
+            field_c = -42;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "na.A(";
         field_e = new og();
         field_d = 0;

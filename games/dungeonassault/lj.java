@@ -41,21 +41,21 @@ final class lj implements cl {
               if (param0) {
                 break L1;
               } else {
-                ((lj) this).field_c = null;
+                this.field_c = (cn) null;
                 break L1;
               }
             }
             L2: {
-              if (((lj) this).field_t <= 0) {
+              if (this.field_t <= 0) {
                 break L2;
               } else {
-                var2_int = (((lj) this).field_t << 8) / 80;
-                var3 = ((lj) this).field_h.field_B;
+                var2_int = (this.field_t << 1122320104) / 80;
+                var3 = this.field_h.field_B;
                 var4 = var3 / 7;
                 var5 = var3 % 7;
-                var6 = -224 - (-((var5 + var4) * 32) - ((lj) this).field_q);
-                var7 = -24 + (24 * (var4 + -var5) + (168 + ((lj) this).field_l));
-                ((lj) this).field_b.b(var6, var7, var2_int);
+                var6 = -224 - (-((var5 + var4) * 32) - this.field_q);
+                var7 = -24 + (24 * (var4 + -var5) + (168 + this.field_l));
+                this.field_b.b(var6, var7, var2_int);
                 break L2;
               }
             }
@@ -64,7 +64,7 @@ final class lj implements cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var2, "lj.C(" + param0 + ')');
+          throw vk.a((Throwable) ((Object) var2), "lj.C(" + param0 + ')');
         }
     }
 
@@ -91,31 +91,31 @@ final class lj implements cl {
           L0: {
             param0.setFocusTraversalKeysEnabled(false);
             var2_int = -126 % ((21 - param1) / 40);
-            param0.addKeyListener((java.awt.event.KeyListener) (Object) in.field_C);
-            param0.addFocusListener((java.awt.event.FocusListener) (Object) in.field_C);
+            param0.addKeyListener(in.field_C);
+            param0.addFocusListener(in.field_C);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) runtimeException;
+            stackOut_2_0 = (RuntimeException) (runtimeException);
             stackOut_2_1 = new StringBuilder().append("lj.N(");
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
@@ -123,7 +123,7 @@ final class lj implements cl {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -136,6 +136,7 @@ final class lj implements cl {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
@@ -150,32 +151,34 @@ final class lj implements cl {
             if (param1 > 2) {
               this.a(param4.field_a, -32, param3, param2, param0);
               param4.d(param2, param0);
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) runtimeException;
+            stackOut_4_0 = (RuntimeException) (runtimeException);
             stackOut_4_1 = new StringBuilder().append("lj.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_7_0 = stackOut_4_0;
             stackIn_7_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param4 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_8_0 = stackOut_5_0;
               stackIn_8_1 = stackOut_5_1;
@@ -183,11 +186,17 @@ final class lj implements cl {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public final void c(int param0) {
+        int discarded$1 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         rh[] var3 = null;
@@ -238,7 +247,7 @@ final class lj implements cl {
               if (param0 == -30876) {
                 break L1;
               } else {
-                int discarded$1 = this.a(false, 55);
+                discarded$1 = this.a(false, 55);
                 break L1;
               }
             }
@@ -253,7 +262,7 @@ final class lj implements cl {
                     if (stackIn_5_0 >= stackIn_5_1) {
                       break L5;
                     } else {
-                      stackOut_6_0 = ((lj) this).field_h.field_p.a(var2_int, (byte) 122);
+                      stackOut_6_0 = this.field_h.field_p.a(var2_int, (byte) 122);
                       stackIn_28_0 = stackOut_6_0 ? 1 : 0;
                       stackIn_7_0 = stackOut_6_0;
                       if (var11 != 0) {
@@ -263,20 +272,20 @@ final class lj implements cl {
                           if (!stackIn_7_0) {
                             break L6;
                           } else {
-                            ((lj) this).field_n[var2_int] = ((lj) this).field_n[var2_int] + 4;
+                            this.field_n[var2_int] = this.field_n[var2_int] + 4;
                             break L6;
                           }
                         }
                         L7: {
-                          if (((lj) this).field_n[var2_int] > 256) {
-                            ((lj) this).field_n[var2_int] = 256;
+                          if (this.field_n[var2_int] > 256) {
+                            this.field_n[var2_int] = 256;
                             if ((3 & mo.field_a) != 0) {
                               break L7;
                             } else {
-                              if (null == ((lj) this).field_v[var2_int]) {
+                              if (null == this.field_v[var2_int]) {
                                 break L7;
                               } else {
-                                var3 = ((lj) this).field_v[var2_int];
+                                var3 = this.field_v[var2_int];
                                 var4 = 0;
                                 L8: while (true) {
                                   if (var3.length <= var4) {
@@ -285,7 +294,7 @@ final class lj implements cl {
                                     var5_ref = var3[var4];
                                     var5_ref.field_a = var5_ref.field_a - 1;
                                     stackOut_21_0 = -236;
-                                    stackOut_21_1 = ~var5_ref.field_a;
+                                    stackOut_21_1 = var5_ref.field_a ^ -1;
                                     stackIn_5_0 = stackOut_21_0;
                                     stackIn_5_1 = stackOut_21_1;
                                     stackIn_22_0 = stackOut_21_0;
@@ -325,7 +334,7 @@ final class lj implements cl {
                       }
                     }
                   }
-                  stackOut_27_0 = ~((lj) this).field_s;
+                  stackOut_27_0 = this.field_s ^ -1;
                   stackIn_28_0 = stackOut_27_0;
                   break L4;
                 }
@@ -336,13 +345,13 @@ final class lj implements cl {
                         if (stackIn_28_0 == 0) {
                           break L13;
                         } else {
-                          if (((lj) this).field_s + 160 <= mo.field_a) {
+                          if (this.field_s + 160 <= mo.field_a) {
                             break L13;
                           } else {
                             L14: {
-                              var2_int = mo.field_a - ((lj) this).field_s;
+                              var2_int = mo.field_a - this.field_s;
                               if (16 <= var2_int) {
-                                if (var2_int >= 72) {
+                                if (-73 >= (var2_int ^ -1)) {
                                   stackOut_38_0 = -(2 * var2_int) + 400;
                                   stackIn_39_0 = stackOut_38_0;
                                   break L14;
@@ -365,7 +374,7 @@ final class lj implements cl {
                             L15: while (true) {
                               L16: {
                                 L17: {
-                                  if (~var7 <= ~var4) {
+                                  if ((var7 ^ -1) <= (var4 ^ -1)) {
                                     break L17;
                                   } else {
                                     var5[var7] = hj.a((byte) 113, 12582912, var3_int, je.field_d[var7]);
@@ -387,7 +396,7 @@ final class lj implements cl {
                               }
                               L18: while (true) {
                                 stackOut_46_0 = -50;
-                                stackOut_46_1 = ~var7;
+                                stackOut_46_1 = var7 ^ -1;
                                 stackIn_47_0 = stackOut_46_0;
                                 stackIn_47_1 = stackOut_46_1;
                                 L19: while (true) {
@@ -399,19 +408,19 @@ final class lj implements cl {
                                         break L12;
                                       } else {
                                         L21: {
-                                          if (null == ((lj) this).field_v[var7]) {
+                                          if (null == this.field_v[var7]) {
                                             break L21;
                                           } else {
-                                            var8 = ((lj) this).field_v[var7];
+                                            var8 = this.field_v[var7];
                                             var9 = 0;
                                             L22: while (true) {
-                                              if (~var9 <= ~var8.length) {
+                                              if ((var9 ^ -1) <= (var8.length ^ -1)) {
                                                 break L21;
                                               } else {
                                                 var10 = var8[var9];
-                                                var10.field_e = var5[((lj) this).field_a[var7]];
-                                                var10.field_h = var6[((lj) this).field_a[var7]];
-                                                stackOut_54_0 = ~var2_int;
+                                                var10.field_e = var5[this.field_a[var7]];
+                                                var10.field_h = var6[this.field_a[var7]];
+                                                stackOut_54_0 = var2_int ^ -1;
                                                 stackOut_54_1 = -121;
                                                 stackIn_47_0 = stackOut_54_0;
                                                 stackIn_47_1 = stackOut_54_1;
@@ -473,7 +482,7 @@ final class lj implements cl {
                             L25: {
                               L26: {
                                 L27: {
-                                  if (((lj) this).field_v[var2_int] != null) {
+                                  if (((lj) (this)).field_v[var2_int] != null) {
                                     break L27;
                                   } else {
                                     if (var11 == 0) {
@@ -483,15 +492,15 @@ final class lj implements cl {
                                     }
                                   }
                                 }
-                                var3 = ((lj) this).field_v[var2_int];
+                                var3 = this.field_v[var2_int];
                                 var4 = 0;
                                 L28: while (true) {
-                                  if (~var4 <= ~var3.length) {
+                                  if ((var4 ^ -1) <= (var3.length ^ -1)) {
                                     break L26;
                                   } else {
                                     var5_ref = var3[var4];
-                                    var5_ref.field_e = je.field_d[((lj) this).field_a[var2_int]];
-                                    var5_ref.field_h = rg.field_P[((lj) this).field_a[var2_int]];
+                                    var5_ref.field_e = je.field_d[this.field_a[var2_int]];
+                                    var5_ref.field_h = rg.field_P[this.field_a[var2_int]];
                                     var4++;
                                     if (var11 != 0) {
                                       break L25;
@@ -517,7 +526,7 @@ final class lj implements cl {
                         }
                       }
                     }
-                    if (((lj) this).field_t > 0) {
+                    if (-1 > (this.field_t ^ -1)) {
                       stackOut_81_0 = this;
                       stackIn_82_0 = stackOut_81_0;
                       break L11;
@@ -525,7 +534,7 @@ final class lj implements cl {
                       break L10;
                     }
                   }
-                  ((lj) this).field_t = ((lj) this).field_t - 1;
+                  ((lj) (this)).field_t = ((lj) (this)).field_t - 1;
                   break L10;
                 }
                 break L0;
@@ -535,7 +544,7 @@ final class lj implements cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var2, "lj.E(" + param0 + ')');
+          throw vk.a((Throwable) ((Object) var2), "lj.E(" + param0 + ')');
         }
     }
 
@@ -557,10 +566,10 @@ final class lj implements cl {
                 }
               }
               L3: {
-                if (param2 % 30 < 15) {
+                if ((param2 % 30 ^ -1) > -16) {
                   break L3;
                 } else {
-                  ec.a(((lj) this).field_l, ((lj) this).field_q + -224, (byte) -72, ((lj) this).field_f, 16711680, 256);
+                  ec.a(this.field_l, this.field_q + -224, (byte) -72, this.field_f, 16711680, 256);
                   if (DungeonAssault.field_K == 0) {
                     break L1;
                   } else {
@@ -568,14 +577,14 @@ final class lj implements cl {
                   }
                 }
               }
-              ((lj) this).field_f.b(-224 + ((lj) this).field_q, ((lj) this).field_l, 256);
+              this.field_f.b(-224 + this.field_q, this.field_l, 256);
               break L1;
             }
             L4: {
               if (param1 == -1723) {
                 break L4;
               } else {
-                ((lj) this).field_l = -37;
+                this.field_l = -37;
                 break L4;
               }
             }
@@ -584,7 +593,7 @@ final class lj implements cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var4, "lj.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw vk.a((Throwable) ((Object) var4), "lj.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -601,7 +610,7 @@ final class lj implements cl {
               if (param1 % 7 == 0) {
                 break L1;
               } else {
-                if (((lj) this).field_i.a(-(param1 / 7) + (param1 - 1), (byte) 87)) {
+                if (this.field_i.a(-(param1 / 7) + (param1 - 1), (byte) 87)) {
                   var3_int = var3_int | 1;
                   break L1;
                 } else {
@@ -610,10 +619,10 @@ final class lj implements cl {
               }
             }
             L2: {
-              if (param1 % 7 == 6) {
+              if ((param1 % 7 ^ -1) == -7) {
                 break L2;
               } else {
-                if (!((lj) this).field_i.a(-(param1 / 7) + param1, (byte) 123)) {
+                if (!this.field_i.a(-(param1 / 7) + param1, (byte) 123)) {
                   break L2;
                 } else {
                   var3_int = var3_int | 2;
@@ -625,15 +634,15 @@ final class lj implements cl {
               if (!param0) {
                 break L3;
               } else {
-                ((lj) this).b(-31);
+                this.b(-31);
                 break L3;
               }
             }
             L4: {
-              if (param1 <= 6) {
+              if ((param1 ^ -1) >= -7) {
                 break L4;
               } else {
-                if (((lj) this).field_i.a(param1 + 35, (byte) 122)) {
+                if (this.field_i.a(param1 + 35, (byte) 122)) {
                   var3_int = var3_int | 4;
                   break L4;
                 } else {
@@ -642,10 +651,10 @@ final class lj implements cl {
               }
             }
             L5: {
-              if (param1 >= 42) {
+              if (-43 >= (param1 ^ -1)) {
                 break L5;
               } else {
-                if (!((lj) this).field_i.a(param1 + 42, (byte) 118)) {
+                if (!this.field_i.a(param1 + 42, (byte) 118)) {
                   break L5;
                 } else {
                   var3_int = var3_int | 8;
@@ -660,7 +669,7 @@ final class lj implements cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var3, "lj.U(" + param0 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) var3), "lj.U(" + param0 + ',' + param1 + ')');
         }
         return stackIn_28_0;
     }
@@ -675,7 +684,7 @@ final class lj implements cl {
             field_o = null;
             field_e = null;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "lj.M(" + param0 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "lj.M(" + param0 + ')');
         }
     }
 
@@ -685,13 +694,15 @@ final class lj implements cl {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var10 = DungeonAssault.field_K;
         try {
           L0: {
             var7_ref = fm.b(param1 + -29348, param3);
             if (null == var7_ref) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 L2: {
@@ -700,12 +711,12 @@ final class lj implements cl {
                   } else {
                     L3: {
                       L4: {
-                        var8 = var7_ref.field_E * param2 >> 8;
-                        var9 = param2 * var7_ref.field_G >> 8;
+                        var8 = var7_ref.field_E * param2 >> -1614342680;
+                        var9 = param2 * var7_ref.field_G >> 303333288;
                         if (param4 != 256) {
                           break L4;
                         } else {
-                          var7_ref.c(-(var8 >> 1) + param0, param5 + -var9, var8, var9);
+                          var7_ref.c(-(var8 >> -78626143) + param0, param5 + -var9, var8, var9);
                           if (var10 == 0) {
                             break L3;
                           } else {
@@ -713,7 +724,7 @@ final class lj implements cl {
                           }
                         }
                       }
-                      var7_ref.d(param0 - (var8 >> 1), -var9 + param5, var8, var9, param4);
+                      var7_ref.d(param0 - (var8 >> -1992543999), -var9 + param5, var8, var9, param4);
                       break L3;
                     }
                     if (var10 == 0) {
@@ -727,7 +738,7 @@ final class lj implements cl {
                   if (param4 == 256) {
                     break L5;
                   } else {
-                    var7_ref.d(-(var7_ref.field_E >> 1) + param0, param5 + -var7_ref.field_G, param4);
+                    var7_ref.d(-(var7_ref.field_E >> 876227201) + param0, param5 + -var7_ref.field_G, param4);
                     if (var10 == 0) {
                       break L1;
                     } else {
@@ -735,16 +746,22 @@ final class lj implements cl {
                     }
                   }
                 }
-                var7_ref.h(param0 + -(var7_ref.field_E >> 1), -var7_ref.field_G + param5);
+                var7_ref.h(param0 + -(var7_ref.field_E >> 144681697), -var7_ref.field_G + param5);
                 break L1;
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var7, "lj.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw vk.a((Throwable) ((Object) var7), "lj.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -757,11 +774,11 @@ final class lj implements cl {
           L0: {
             L1: {
               var7 = -95 % ((43 - param2) / 50);
-              var6_int = ((lj) this).field_h.field_h[param1].field_a;
-              if (((lj) this).field_h.field_p.a(param1, (byte) 106)) {
+              var6_int = this.field_h.field_h[param1].field_a;
+              if (this.field_h.field_p.a(param1, (byte) 106)) {
                 break L1;
               } else {
-                if (param1 != 24) {
+                if (-25 != (param1 ^ -1)) {
                   var6_int = 0;
                   break L1;
                 } else {
@@ -775,7 +792,7 @@ final class lj implements cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) runtimeException, "lj.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "lj.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -810,17 +827,17 @@ final class lj implements cl {
           L0: {
             L1: {
               jh.c();
-              if (null != ((lj) this).field_c) {
+              if (null != this.field_c) {
                 break L1;
               } else {
-                ((lj) this).field_c = new cn(448, 356);
-                ((lj) this).field_f = new cn(480, 388);
-                ((lj) this).field_f.field_w = -16;
-                ((lj) this).field_f.field_A = -16;
+                this.field_c = new cn(448, 356);
+                this.field_f = new cn(480, 388);
+                this.field_f.field_w = -16;
+                this.field_f.field_A = -16;
                 break L1;
               }
             }
-            ((lj) this).field_c.e();
+            this.field_c.e();
             gf.a();
             var2_int = 0;
             L2: while (true) {
@@ -829,7 +846,7 @@ final class lj implements cl {
               L3: while (true) {
                 L4: {
                   L5: {
-                    if (stackIn_6_0 >= ~var2_int) {
+                    if (stackIn_6_0 >= (var2_int ^ -1)) {
                       break L5;
                     } else {
                       var3 = 32 * (6 - var2_int);
@@ -844,11 +861,11 @@ final class lj implements cl {
                         var6 = stackIn_8_0;
                         L6: while (true) {
                           L7: {
-                            if (~var6 <= ~(1 + var2_int)) {
+                            if ((var6 ^ -1) <= (1 + var2_int ^ -1)) {
                               break L7;
                             } else {
                               var7 = 16777215;
-                              stackOut_10_0 = ((lj) this).field_h.field_m.a(var5, (byte) 92);
+                              stackOut_10_0 = this.field_h.field_m.a(var5, (byte) 92);
                               stackIn_6_0 = stackOut_10_0 ? 1 : 0;
                               stackIn_11_0 = stackOut_10_0;
                               if (var8 != 0) {
@@ -859,7 +876,7 @@ final class lj implements cl {
                                     if (!stackIn_11_0) {
                                       break L9;
                                     } else {
-                                      if (((lj) this).field_h.field_j.a(var5, (byte) 86)) {
+                                      if (this.field_h.field_j.a(var5, (byte) 86)) {
                                         break L9;
                                       } else {
                                         break L8;
@@ -885,7 +902,7 @@ final class lj implements cl {
                                   if (6 == var5) {
                                     break L11;
                                   } else {
-                                    if (var5 == 48) {
+                                    if (-49 == (var5 ^ -1)) {
                                       break L11;
                                     } else {
                                       ri.field_d[4].e(32 + var3, var4, var7);
@@ -945,7 +962,7 @@ final class lj implements cl {
                                   break L17;
                                 } else {
                                   var7 = 16777215;
-                                  stackOut_39_0 = ((lj) this).field_h.field_m.a(var5, (byte) 106);
+                                  stackOut_39_0 = this.field_h.field_m.a(var5, (byte) 106);
                                   stackIn_35_0 = stackOut_39_0 ? 1 : 0;
                                   stackIn_40_0 = stackOut_39_0;
                                   if (var8 != 0) {
@@ -956,7 +973,7 @@ final class lj implements cl {
                                         if (!stackIn_40_0) {
                                           break L19;
                                         } else {
-                                          if (((lj) this).field_h.field_j.a(var5, (byte) 74)) {
+                                          if (this.field_h.field_j.a(var5, (byte) 74)) {
                                             break L19;
                                           } else {
                                             break L18;
@@ -973,10 +990,10 @@ final class lj implements cl {
                                       if (var6 != 0) {
                                         break L20;
                                       } else {
-                                        if (var5 == 0) {
+                                        if (-1 == (var5 ^ -1)) {
                                           break L20;
                                         } else {
-                                          if (var5 == 42) {
+                                          if (-43 == (var5 ^ -1)) {
                                             break L20;
                                           } else {
                                             ri.field_d[5].e(var3 - -32, 24 + var4, 0);
@@ -1030,15 +1047,15 @@ final class lj implements cl {
                       if (stackIn_69_0 == -20827) {
                         break L22;
                       } else {
-                        ((lj) this).field_w = null;
+                        this.field_w = (int[][]) null;
                         break L22;
                       }
                     }
-                    ((lj) this).field_f.e();
+                    this.field_f.e();
                     gf.a();
-                    ((lj) this).field_c.e(16, 16, 16744448);
-                    gf.d(8, 8, 0, 0, ((lj) this).field_f.field_y, ((lj) this).field_f.field_v);
-                    ((lj) this).field_c.e(16, 16, 0);
+                    this.field_c.e(16, 16, 16744448);
+                    gf.d(8, 8, 0, 0, this.field_f.field_y, this.field_f.field_v);
+                    this.field_c.e(16, 16, 0);
                     jh.b();
                     break L0;
                   }
@@ -1049,16 +1066,16 @@ final class lj implements cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var2, "lj.J(" + param0 + ')');
+          throw vk.a((Throwable) ((Object) var2), "lj.J(" + param0 + ')');
         }
     }
 
     public final void a(byte param0) {
         try {
             int var2_int = -126 / ((4 - param0) / 45);
-            ((lj) this).field_s = mo.field_a;
+            this.field_s = mo.field_a;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "lj.H(" + param0 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "lj.H(" + param0 + ')');
         }
     }
 
@@ -1068,6 +1085,7 @@ final class lj implements cl {
         int var5 = 0;
         int stackIn_14_0 = 0;
         int stackIn_16_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_13_0 = 0;
         int stackOut_15_0 = 0;
@@ -1077,30 +1095,31 @@ final class lj implements cl {
               if (param1 == 19091) {
                 break L1;
               } else {
-                ((lj) this).field_s = 60;
+                this.field_s = 60;
                 break L1;
               }
             }
             L2: {
-              param2 = param2 - ((lj) this).field_l;
-              param0 = param0 - ((lj) this).field_q;
+              param2 = param2 - this.field_l;
+              param0 = param0 - this.field_q;
               var4_int = (3 * param0 - (-672 + 4 * (-168 + param2))) / 192;
               var5 = (param2 * 4 + param0 * 3) / 192;
               if (var4_int < 0) {
                 break L2;
               } else {
-                if (var5 < 0) {
+                if ((var5 ^ -1) > -1) {
                   break L2;
                 } else {
-                  if (var4_int >= 7) {
+                  if ((var4_int ^ -1) <= -8) {
                     break L2;
                   } else {
-                    if (var5 >= 7) {
+                    if ((var5 ^ -1) <= -8) {
                       break L2;
                     } else {
                       stackOut_13_0 = var5 * 7 - -var4_int;
                       stackIn_14_0 = stackOut_13_0;
-                      return stackIn_14_0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   }
                 }
@@ -1108,14 +1127,19 @@ final class lj implements cl {
             }
             stackOut_15_0 = -1;
             stackIn_16_0 = stackOut_15_0;
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var4, "lj.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw vk.a((Throwable) ((Object) var4), "lj.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_16_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_14_0;
+        } else {
+          return stackIn_16_0;
+        }
     }
 
     public final gg b(int param0, int param1) {
@@ -1137,14 +1161,14 @@ final class lj implements cl {
                 break L1;
               }
             }
-            stackOut_3_0 = new gg(-192 + (32 * (var3_int + var4) + ((lj) this).field_q), 168 + (24 * (var4 + -var3_int) + ((lj) this).field_l));
+            stackOut_3_0 = new gg(-192 + (32 * (var3_int + var4) + this.field_q), 168 + (24 * (var4 + -var3_int) + this.field_l));
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var3, "lj.F(" + param0 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) var3), "lj.F(" + param0 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -1212,22 +1236,22 @@ final class lj implements cl {
             }
             L2: {
               L3: {
-                if (null != ((lj) this).field_h) {
+                if (null != this.field_h) {
                   break L3;
                 } else {
                   L4: {
                     var10 = 256;
                     var11 = 10066329;
-                    if (gm.field_d.field_L[param2].field_a != 0) {
+                    if ((gm.field_d.field_L[param2].field_a ^ -1) != -1) {
                       break L4;
                     } else {
                       var10 = 128;
                       break L4;
                     }
                   }
-                  var6_int = var10 * (192 - -((16711680 & var11) >> 18)) / 255;
-                  var7 = var10 * (192 - -(63 & var11 >> 10)) / 255;
-                  var8 = var10 * ((var11 >> 2 & 63) + 192) / 255;
+                  var6_int = var10 * (192 - -((16711680 & var11) >> -950308110)) / 255;
+                  var7 = var10 * (192 - -(63 & var11 >> 505295658)) / 255;
+                  var8 = var10 * ((var11 >> 573505410 & 63) + 192) / 255;
                   if (var19 == 0) {
                     break L2;
                   } else {
@@ -1236,11 +1260,11 @@ final class lj implements cl {
                 }
               }
               L5: {
-                if (((lj) this).field_h.field_p.a(param2, (byte) 89)) {
+                if (this.field_h.field_p.a(param2, (byte) 89)) {
                   break L5;
                 } else {
                   L6: {
-                    if (param2 != 24) {
+                    if (-25 != (param2 ^ -1)) {
                       break L6;
                     } else {
                       var6_int = 96;
@@ -1256,18 +1280,18 @@ final class lj implements cl {
                   var6_int = 0;
                   var7 = 0;
                   var8 = 0;
-                  var10_ref_int__ = ((lj) this).field_h.a((byte) 120, param2);
+                  var10_ref_int__ = this.field_h.a((byte) 120, param2);
                   var11 = 0;
                   var12_ref_int__ = var10_ref_int__;
                   var13 = 0;
                   L7: while (true) {
                     L8: {
                       L9: {
-                        if (~var12_ref_int__.length >= ~var13) {
+                        if ((var12_ref_int__.length ^ -1) >= (var13 ^ -1)) {
                           break L9;
                         } else {
                           var14 = var12_ref_int__[var13];
-                          stackOut_17_0 = ((lj) this).field_h.field_p.a(var14, (byte) 80);
+                          stackOut_17_0 = this.field_h.field_p.a(var14, (byte) 80);
                           stackIn_25_0 = stackOut_17_0 ? 1 : 0;
                           stackIn_18_0 = stackOut_17_0;
                           if (var19 != 0) {
@@ -1276,10 +1300,10 @@ final class lj implements cl {
                             L10: {
                               if (stackIn_18_0) {
                                 var15 = this.a((byte) -103, var14);
-                                var16 = je.field_d[((lj) this).field_a[var14]];
-                                var6_int = var6_int + (192 + ((16711680 & var16) >> 18)) * var15 / 255;
-                                var7 = var7 + (192 - -(var16 >> 10 & 63)) * var15 / 255;
-                                var8 = var8 + (192 - -((var16 & 255) >> 2)) * var15 / 255;
+                                var16 = je.field_d[this.field_a[var14]];
+                                var6_int = var6_int + (192 + ((16711680 & var16) >> -1756144974)) * var15 / 255;
+                                var7 = var7 + (192 - -(var16 >> -1575707670 & 63)) * var15 / 255;
+                                var8 = var8 + (192 - -((var16 & 255) >> -141094046)) * var15 / 255;
                                 var11++;
                                 break L10;
                               } else {
@@ -1313,7 +1337,7 @@ final class lj implements cl {
                     var7 += 16;
                     var6_int += 16;
                     var8 += 16;
-                    var9 = var6_int - (-(var7 << 1) - var8) >> 2;
+                    var9 = var6_int - (-(var7 << -1366984671) - var8) >> -192553822;
                     if (var19 == 0) {
                       break L2;
                     } else {
@@ -1323,15 +1347,15 @@ final class lj implements cl {
                 }
               }
               var9 = this.a((byte) -72, param2);
-              var10 = je.field_d[((lj) this).field_a[param2]];
-              var8 = (192 + ((255 & var10) >> 2)) * var9 / 255;
-              var6_int = (192 - -((var10 & 16711680) >> 18)) * var9 / 255;
-              var7 = var9 * ((var10 >> 10 & 63) + 192) / 255;
-              if (((lj) this).field_s != -1) {
-                var11 = mo.field_a - ((lj) this).field_s;
+              var10 = je.field_d[this.field_a[param2]];
+              var8 = (192 + ((255 & var10) >> 1450323330)) * var9 / 255;
+              var6_int = (192 - -((var10 & 16711680) >> -684997678)) * var9 / 255;
+              var7 = var9 * ((var10 >> -230926646 & 63) + 192) / 255;
+              if ((this.field_s ^ -1) != 0) {
+                var11 = mo.field_a - this.field_s;
                 if (var11 < 200) {
                   L12: {
-                    if (var11 >= 16) {
+                    if (-17 >= (var11 ^ -1)) {
                       if (72 > var11) {
                         stackOut_40_0 = 256;
                         stackIn_41_0 = stackOut_40_0;
@@ -1348,9 +1372,9 @@ final class lj implements cl {
                     }
                   }
                   var12 = stackIn_41_0;
-                  var8 = var8 * (256 + -var12) >>> 8;
-                  var7 = (-var12 + 256) * var7 >>> 8;
-                  var6_int = (var12 >> 1) + ((-var12 + 256) * var6_int >>> 8);
+                  var8 = var8 * (256 + -var12) >>> -458713016;
+                  var7 = (-var12 + 256) * var7 >>> -692228536;
+                  var6_int = (var12 >> 1009643937) + ((-var12 + 256) * var6_int >>> 933025288);
                   break L2;
                 } else {
                   break L2;
@@ -1366,7 +1390,7 @@ final class lj implements cl {
             L13: while (true) {
               L14: {
                 L15: {
-                  if (var14 >= 0) {
+                  if ((var14 ^ -1) <= -1) {
                     break L15;
                   } else {
                     if (var19 != 0) {
@@ -1376,11 +1400,11 @@ final class lj implements cl {
                       L16: while (true) {
                         L17: {
                           L18: {
-                            if (var13 >= 0) {
+                            if (-1 >= (var13 ^ -1)) {
                               break L18;
                             } else {
                               var15 = param0.field_B[var10];
-                              stackOut_47_0 = ~var15;
+                              stackOut_47_0 = var15 ^ -1;
                               stackOut_47_1 = -1;
                               stackIn_54_0 = stackOut_47_0;
                               stackIn_54_1 = stackOut_47_1;
@@ -1400,7 +1424,7 @@ final class lj implements cl {
                                     var16 = var16 * var6_int;
                                     var18 = var18 * var8;
                                     var15 = 65280 & var18 | (16711680 & var17 | var16 & -16777216);
-                                    gf.field_b[var11] = mp.a(var15 >>> 8, -16777216);
+                                    gf.field_b[var11] = mp.a(var15 >>> -324538328, -16777216);
                                     break L19;
                                   }
                                 }
@@ -1441,23 +1465,23 @@ final class lj implements cl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L20: {
             var6 = decompiledCaughtException;
-            stackOut_56_0 = (RuntimeException) var6;
+            stackOut_56_0 = (RuntimeException) (var6);
             stackOut_56_1 = new StringBuilder().append("lj.R(");
             stackIn_59_0 = stackOut_56_0;
             stackIn_59_1 = stackOut_56_1;
             stackIn_57_0 = stackOut_56_0;
             stackIn_57_1 = stackOut_56_1;
             if (param0 == null) {
-              stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
-              stackOut_59_1 = (StringBuilder) (Object) stackIn_59_1;
+              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
+              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
               stackOut_59_2 = "null";
               stackIn_60_0 = stackOut_59_0;
               stackIn_60_1 = stackOut_59_1;
               stackIn_60_2 = stackOut_59_2;
               break L20;
             } else {
-              stackOut_57_0 = (RuntimeException) (Object) stackIn_57_0;
-              stackOut_57_1 = (StringBuilder) (Object) stackIn_57_1;
+              stackOut_57_0 = (RuntimeException) ((Object) stackIn_57_0);
+              stackOut_57_1 = (StringBuilder) ((Object) stackIn_57_1);
               stackOut_57_2 = "{...}";
               stackIn_60_0 = stackOut_57_0;
               stackIn_60_1 = stackOut_57_1;
@@ -1465,7 +1489,7 @@ final class lj implements cl {
               break L20;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_60_0, stackIn_60_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_60_0), stackIn_60_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1478,31 +1502,31 @@ final class lj implements cl {
           L0: {
             L1: {
               jh.c();
-              if (((lj) this).field_d == null) {
-                ((lj) this).field_d = new cn(64, 68);
-                ((lj) this).field_b = new cn(96, 100);
-                ((lj) this).field_b.field_w = -16;
-                ((lj) this).field_b.field_A = -16;
+              if (this.field_d == null) {
+                this.field_d = new cn(64, 68);
+                this.field_b = new cn(96, 100);
+                this.field_b.field_w = -16;
+                this.field_b.field_A = -16;
                 break L1;
               } else {
                 break L1;
               }
             }
             L2: {
-              ((lj) this).field_d.e();
+              this.field_d.e();
               gf.a();
               var4_int = 0;
               var5 = 0;
               ri.field_d[5].e(var4_int, var5, 16777215);
               ri.field_d[4].e(var4_int + 32, var5, 16777215);
               this.b(var5, param2, -127, 16777215, var4_int);
-              ((lj) this).field_b.e();
+              this.field_b.e();
               gf.a();
-              ((lj) this).field_d.e(16, 16, param1);
-              gf.d(16, 16, 0, 0, ((lj) this).field_b.field_y, ((lj) this).field_b.field_v);
-              ((lj) this).field_d.e(16, 16, 0);
+              this.field_d.e(16, 16, param1);
+              gf.d(16, 16, 0, 0, this.field_b.field_y, this.field_b.field_v);
+              this.field_d.e(16, 16, 0);
               jh.b();
-              ((lj) this).field_t = 80;
+              this.field_t = 80;
               if (param0 == -9398) {
                 break L2;
               } else {
@@ -1515,11 +1539,12 @@ final class lj implements cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var4, "lj.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw vk.a((Throwable) ((Object) var4), "lj.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     private final void a(byte param0, int param1, int param2, int param3) {
+        int incrementValue$1 = 0;
         RuntimeException var5 = null;
         int var5_int = 0;
         hb[] var6 = null;
@@ -1527,6 +1552,7 @@ final class lj implements cl {
         int var8 = 0;
         Object stackIn_4_0 = null;
         Object stackIn_35_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
         Object stackOut_33_0 = null;
@@ -1550,15 +1576,15 @@ final class lj implements cl {
                         break L3;
                       } else {
                         L5: {
-                          if (((lj) this).field_h.field_A[var7] == null) {
+                          if (((lj) (this)).field_h.field_A[var7] == null) {
                             break L5;
                           } else {
-                            if ((6 & ((lj) this).field_h.field_A[var7].field_o) != 0) {
+                            if ((6 & this.field_h.field_A[var7].field_o ^ -1) != -1) {
                               break L5;
                             } else {
-                              int incrementValue$1 = var5_int;
+                              incrementValue$1 = var5_int;
                               var5_int++;
-                              var6[incrementValue$1] = ((lj) this).field_h.field_A[var7];
+                              var6[incrementValue$1] = this.field_h.field_A[var7];
                               break L5;
                             }
                           }
@@ -1573,10 +1599,11 @@ final class lj implements cl {
                     }
                   }
                   if (0 == var5_int) {
-                    return;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   } else {
                     L6: {
-                      if (var5_int == 1) {
+                      if (-2 == (var5_int ^ -1)) {
                         break L6;
                       } else {
                         L7: {
@@ -1584,7 +1611,7 @@ final class lj implements cl {
                             break L7;
                           } else {
                             L8: {
-                              if (var5_int != 3) {
+                              if ((var5_int ^ -1) != -4) {
                                 break L8;
                               } else {
                                 this.a(param1 + 20, 256, 128, var6[0].field_c, param2, param3 + 37);
@@ -1626,13 +1653,19 @@ final class lj implements cl {
                 break L2;
               }
               var7 = -60 % ((param0 - -54) / 39);
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var5, "lj.V(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw vk.a((Throwable) ((Object) var5), "lj.V(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -1663,7 +1696,7 @@ final class lj implements cl {
             }
             L2: {
               L3: {
-                if (null != ((lj) this).field_h) {
+                if (null != this.field_h) {
                   break L3;
                 } else {
                   L4: {
@@ -1684,8 +1717,8 @@ final class lj implements cl {
                   }
                 }
               }
-              var5_int = ((lj) this).field_h.field_h[param2].field_a;
-              var6 = ((lj) this).field_h.field_p.a(param2, (byte) 106) ? 1 : 0;
+              var5_int = this.field_h.field_h[param2].field_a;
+              var6 = this.field_h.field_p.a(param2, (byte) 106) ? 1 : 0;
               break L2;
             }
             L5: {
@@ -1698,32 +1731,32 @@ final class lj implements cl {
                   } else {
                     L7: {
                       this.a(i.field_r[0], -32, param2, param0, param1 + 1);
-                      if (param2 <= 6) {
+                      if (-7 <= (param2 ^ -1)) {
                         break L7;
                       } else {
                         var7_int = param2 - 7;
-                        if (!((lj) this).field_h.field_p.a(var7_int, (byte) 110)) {
+                        if (!this.field_h.field_p.a(var7_int, (byte) 110)) {
                           break L7;
                         } else {
-                          if (!((lj) this).field_i.a(var7_int + 42, (byte) 78)) {
+                          if (!this.field_i.a(var7_int + 42, (byte) 78)) {
                             break L7;
                           } else {
-                            ec.a(18 + param1, param0, (byte) -80, mf.field_b[0], (je.field_d[((lj) this).field_a[var7_int]] >> 1 & 8355711) + 8421504, this.a((byte) -11, var7_int) >> 2);
+                            ec.a(18 + param1, param0, (byte) -80, mf.field_b[0], (je.field_d[this.field_a[var7_int]] >> 146653889 & 8355711) + 8421504, this.a((byte) -11, var7_int) >> -1966915710);
                             break L7;
                           }
                         }
                       }
                     }
                     L8: {
-                      if (param2 % 7 != 6) {
+                      if (-7 != (param2 % 7 ^ -1)) {
                         var7_int = 1 + param2;
-                        if (!((lj) this).field_h.field_p.a(var7_int, (byte) 93)) {
+                        if (!this.field_h.field_p.a(var7_int, (byte) 93)) {
                           break L8;
                         } else {
-                          if (!((lj) this).field_i.a(param2 + -(param2 / 7), (byte) 121)) {
+                          if (!this.field_i.a(param2 + -(param2 / 7), (byte) 121)) {
                             break L8;
                           } else {
-                            ec.a(param1 + 18, param0, (byte) -90, mf.field_b[1], 8421504 + (8355711 & je.field_d[((lj) this).field_a[var7_int]] >> 1), this.a((byte) -8, var7_int) >> 2);
+                            ec.a(param1 + 18, param0, (byte) -90, mf.field_b[1], 8421504 + (8355711 & je.field_d[this.field_a[var7_int]] >> -334941183), this.a((byte) -8, var7_int) >> 1256560866);
                             break L8;
                           }
                         }
@@ -1732,15 +1765,15 @@ final class lj implements cl {
                       }
                     }
                     L9: {
-                      if (param2 >= 42) {
+                      if ((param2 ^ -1) <= -43) {
                         break L9;
                       } else {
                         var7_int = 7 + param2;
-                        if (!((lj) this).field_h.field_p.a(var7_int, (byte) 104)) {
+                        if (!this.field_h.field_p.a(var7_int, (byte) 104)) {
                           break L9;
                         } else {
-                          if (((lj) this).field_i.a(param2 + 42, (byte) 97)) {
-                            ec.a(param1 + 18, param0, (byte) -128, mf.field_b[2], (8355711 & je.field_d[((lj) this).field_a[var7_int]] >> 1) + 8421504, this.a((byte) -67, var7_int) >> 2);
+                          if (this.field_i.a(param2 + 42, (byte) 97)) {
+                            ec.a(param1 + 18, param0, (byte) -128, mf.field_b[2], (8355711 & je.field_d[this.field_a[var7_int]] >> -1841161023) + 8421504, this.a((byte) -67, var7_int) >> 454150434);
                             break L9;
                           } else {
                             break L9;
@@ -1753,11 +1786,11 @@ final class lj implements cl {
                     } else {
                       L10: {
                         var7_int = -1 + param2;
-                        if (!((lj) this).field_h.field_p.a(var7_int, (byte) 114)) {
+                        if (!this.field_h.field_p.a(var7_int, (byte) 114)) {
                           break L10;
                         } else {
-                          if (((lj) this).field_i.a(var7_int - var7_int / 7, (byte) 101)) {
-                            ec.a(18 + param1, param0, (byte) -105, mf.field_b[3], ((je.field_d[((lj) this).field_a[var7_int]] & 16711422) >> 1) + 8421504, this.a((byte) -36, var7_int) >> 2);
+                          if (this.field_i.a(var7_int - var7_int / 7, (byte) 101)) {
+                            ec.a(18 + param1, param0, (byte) -105, mf.field_b[3], ((je.field_d[this.field_a[var7_int]] & 16711422) >> -890446015) + 8421504, this.a((byte) -36, var7_int) >> -1342066270);
                             break L10;
                           } else {
                             break L10;
@@ -1779,7 +1812,7 @@ final class lj implements cl {
                     break L12;
                   } else {
                     L13: {
-                      if (var5_int == 0) {
+                      if (-1 == (var5_int ^ -1)) {
                         break L13;
                       } else {
                         i.field_r[var5_int].h(param0, param1 + 1);
@@ -1790,7 +1823,7 @@ final class lj implements cl {
                         }
                       }
                     }
-                    var7_int = ((lj) this).field_h.d(param2, 30813);
+                    var7_int = this.field_h.d(param2, 30813);
                     mc.field_w[var7_int].h(param0, 1 + param1);
                     if (var10 == 0) {
                       break L11;
@@ -1801,7 +1834,7 @@ final class lj implements cl {
                 }
                 L14: {
                   L15: {
-                    if (var5_int != 0) {
+                    if (-1 != (var5_int ^ -1)) {
                       break L15;
                     } else {
                       var7_int = this.a(false, param2);
@@ -1814,14 +1847,14 @@ final class lj implements cl {
                     }
                   }
                   this.a(i.field_r[var5_int], -32, param2, param0, param1 + 1);
-                  if (gh.field_i[var5_int].field_g != 2) {
+                  if (-3 != (gh.field_i[var5_int].field_g ^ -1)) {
                     break L14;
                   } else {
                     L16: {
-                      if (((lj) this).field_h == null) {
+                      if (this.field_h == null) {
                         break L16;
                       } else {
-                        if (!((lj) this).field_h.field_j.a(param2, (byte) 101)) {
+                        if (!this.field_h.field_j.a(param2, (byte) 101)) {
                           break L16;
                         } else {
                           break L14;
@@ -1833,15 +1866,15 @@ final class lj implements cl {
                       break L14;
                     } else {
                       L17: {
-                        if (null != ((lj) this).field_h) {
+                        if (null != this.field_h) {
                           break L17;
                         } else {
                           if (null == var7_ref) {
                             break L14;
                           } else {
-                            var8 = var7_ref.field_E * 5 >> 3;
-                            var9_int = var7_ref.field_G * 5 >> 3;
-                            var7_ref.c(param0 + (-var8 + 48 >> 1), 40 + (param1 + -var9_int), var8, var9_int);
+                            var8 = var7_ref.field_E * 5 >> 1647428707;
+                            var9_int = var7_ref.field_G * 5 >> 1567600547;
+                            var7_ref.c(param0 + (-var8 + 48 >> -278782943), 40 + (param1 + -var9_int), var8, var9_int);
                             if (var10 == 0) {
                               break L14;
                             } else {
@@ -1850,25 +1883,25 @@ final class lj implements cl {
                           }
                         }
                       }
-                      var7_ref.h(-(var7_ref.field_y >> 1) + (param0 - -32), -var7_ref.field_v + (24 + (21 + param1)));
+                      var7_ref.h(-(var7_ref.field_y >> 510270497) + (param0 - -32), -var7_ref.field_v + (24 + (21 + param1)));
                       break L14;
                     }
                   }
                 }
-                if (((lj) this).field_h == null) {
+                if (this.field_h == null) {
                   break L11;
                 } else {
                   L18: {
                     L19: {
                       L20: {
-                        if (((lj) this).field_v[param2] == null) {
+                        if (this.field_v[param2] == null) {
                           break L20;
                         } else {
-                          var7_array = ((lj) this).field_w[param2];
+                          var7_array = this.field_w[param2];
                           var8 = 0;
                           L21: while (true) {
                             L22: {
-                              if (~var8 <= ~var7_array.length) {
+                              if ((var8 ^ -1) <= (var7_array.length ^ -1)) {
                                 break L22;
                               } else {
                                 var9_int = var7_array[var8];
@@ -1885,10 +1918,10 @@ final class lj implements cl {
                                 }
                               }
                             }
-                            var7_array2 = ((lj) this).field_v[param2];
+                            var7_array2 = this.field_v[param2];
                             var8 = 0;
                             L23: while (true) {
-                              if (~var7_array2.length >= ~var8) {
+                              if ((var7_array2.length ^ -1) >= (var8 ^ -1)) {
                                 break L20;
                               } else {
                                 var9 = var7_array2[var8];
@@ -1908,34 +1941,34 @@ final class lj implements cl {
                           }
                         }
                       }
-                      if (param2 > 6) {
+                      if ((param2 ^ -1) < -7) {
                         break L19;
                       } else {
                         break L18;
                       }
                     }
                     var7_int = -7 + param2;
-                    if (!((lj) this).field_h.field_p.a(var7_int, (byte) 106)) {
+                    if (!this.field_h.field_p.a(var7_int, (byte) 106)) {
                       break L18;
                     } else {
-                      if (!((lj) this).field_i.a(var7_int - -42, (byte) 86)) {
+                      if (!this.field_i.a(var7_int - -42, (byte) 86)) {
                         break L18;
                       } else {
-                        ec.a(18 + param1, param0, (byte) -111, mf.field_b[0], 8421504 - -((16711422 & je.field_d[((lj) this).field_a[var7_int]]) >> 1), this.a((byte) -39, var7_int) >> 2);
+                        ec.a(18 + param1, param0, (byte) -111, mf.field_b[0], 8421504 - -((16711422 & je.field_d[this.field_a[var7_int]]) >> 558277505), this.a((byte) -39, var7_int) >> -2125722846);
                         break L18;
                       }
                     }
                   }
                   L24: {
-                    if (param2 % 7 != 6) {
+                    if (-7 != (param2 % 7 ^ -1)) {
                       var7_int = param2 + 1;
-                      if (!((lj) this).field_h.field_p.a(var7_int, (byte) 110)) {
+                      if (!this.field_h.field_p.a(var7_int, (byte) 110)) {
                         break L24;
                       } else {
-                        if (!((lj) this).field_i.a(-(param2 / 7) + param2, (byte) 92)) {
+                        if (!this.field_i.a(-(param2 / 7) + param2, (byte) 92)) {
                           break L24;
                         } else {
-                          ec.a(param1 - -18, param0, (byte) -82, mf.field_b[1], ((je.field_d[((lj) this).field_a[var7_int]] & 16711422) >> 1) + 8421504, this.a((byte) -57, var7_int) >> 2);
+                          ec.a(param1 - -18, param0, (byte) -82, mf.field_b[1], ((je.field_d[this.field_a[var7_int]] & 16711422) >> 623078305) + 8421504, this.a((byte) -57, var7_int) >> -82065854);
                           break L24;
                         }
                       }
@@ -1944,17 +1977,17 @@ final class lj implements cl {
                     }
                   }
                   L25: {
-                    if (param2 >= 42) {
+                    if (-43 >= (param2 ^ -1)) {
                       break L25;
                     } else {
                       var7_int = 7 + param2;
-                      if (!((lj) this).field_h.field_p.a(var7_int, (byte) 93)) {
+                      if (!this.field_h.field_p.a(var7_int, (byte) 93)) {
                         break L25;
                       } else {
-                        if (!((lj) this).field_i.a(param2 + 42, (byte) 92)) {
+                        if (!this.field_i.a(param2 + 42, (byte) 92)) {
                           break L25;
                         } else {
-                          ec.a(param1 + 18, param0, (byte) -111, mf.field_b[2], 8421504 + ((je.field_d[((lj) this).field_a[var7_int]] & 16711422) >> 1), this.a((byte) -56, var7_int) >> 2);
+                          ec.a(param1 + 18, param0, (byte) -111, mf.field_b[2], 8421504 + ((je.field_d[this.field_a[var7_int]] & 16711422) >> 131974177), this.a((byte) -56, var7_int) >> -162370494);
                           break L25;
                         }
                       }
@@ -1964,11 +1997,11 @@ final class lj implements cl {
                     break L11;
                   } else {
                     var7_int = param2 + -1;
-                    if (!((lj) this).field_h.field_p.a(var7_int, (byte) 69)) {
+                    if (!this.field_h.field_p.a(var7_int, (byte) 69)) {
                       break L11;
                     } else {
-                      if (((lj) this).field_i.a(var7_int + -(var7_int / 7), (byte) 67)) {
-                        ec.a(18 + param1, param0, (byte) -104, mf.field_b[3], 8421504 - -(8355711 & je.field_d[((lj) this).field_a[var7_int]] >> 1), this.a((byte) -52, var7_int) >> 2);
+                      if (this.field_i.a(var7_int + -(var7_int / 7), (byte) 67)) {
+                        ec.a(18 + param1, param0, (byte) -104, mf.field_b[3], 8421504 - -(8355711 & je.field_d[this.field_a[var7_int]] >> 623681569), this.a((byte) -52, var7_int) >> -1825618174);
                         break L11;
                       } else {
                         break L11;
@@ -1977,9 +2010,9 @@ final class lj implements cl {
                   }
                 }
               }
-              if (((lj) this).field_h != null) {
+              if (this.field_h != null) {
                 L26: {
-                  if (((lj) this).field_h.field_q != param2) {
+                  if (this.field_h.field_q != param2) {
                     break L26;
                   } else {
                     this.a((byte) 56, param0, 256, param1);
@@ -1990,16 +2023,16 @@ final class lj implements cl {
                     }
                   }
                 }
-                if (~param2 != ~((lj) this).field_h.field_B) {
+                if ((param2 ^ -1) != (this.field_h.field_B ^ -1)) {
                   break L5;
                 } else {
-                  if (gh.field_i[var5_int].field_g != 2) {
+                  if (-3 != (gh.field_i[var5_int].field_g ^ -1)) {
                     L27: {
-                      var7_ref = fm.b(-29092, ((lj) this).field_h.field_u.field_c);
+                      var7_ref = fm.b(-29092, this.field_h.field_u.field_c);
                       if (null == var7_ref) {
                         break L27;
                       } else {
-                        var7_ref.d((64 + -var7_ref.field_y >> 1) + param0, -var7_ref.field_v + param1 - -45, 80);
+                        var7_ref.d((64 + -var7_ref.field_y >> 2048171169) + param0, -var7_ref.field_v + param1 - -45, 80);
                         break L27;
                       }
                     }
@@ -2018,7 +2051,7 @@ final class lj implements cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var5, "lj.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw vk.a((Throwable) ((Object) var5), "lj.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2043,43 +2076,43 @@ final class lj implements cl {
         String stackOut_4_2 = null;
         try {
           L0: {
-            ((lj) this).field_h = param0.field_Y;
-            ((lj) this).field_i = ((lj) this).field_h.field_v;
-            ((lj) this).field_a = new int[49];
-            ((lj) this).field_n = new int[49];
-            ((lj) this).field_w = new int[49][];
-            ((lj) this).field_v = new rh[49][];
-            ((lj) this).field_k = new wm(84);
-            ((lj) this).field_s = -1;
-            ((lj) this).a(15122, 0);
-            ((lj) this).a(15122, 6);
-            ((lj) this).a(15122, 42);
-            ((lj) this).a(15122, 48);
+            this.field_h = param0.field_Y;
+            this.field_i = this.field_h.field_v;
+            this.field_a = new int[49];
+            this.field_n = new int[49];
+            this.field_w = new int[49][];
+            this.field_v = new rh[49][];
+            this.field_k = new wm(84);
+            this.field_s = -1;
+            this.a(15122, 0);
+            this.a(15122, 6);
+            this.a(15122, 42);
+            this.a(15122, 48);
             this.c((byte) 125);
-            ((lj) this).b(-20827);
+            this.b(-20827);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("lj.<init>(");
             stackIn_6_0 = stackOut_3_0;
             stackIn_6_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_7_0 = stackOut_4_0;
               stackIn_7_1 = stackOut_4_1;
@@ -2087,7 +2120,7 @@ final class lj implements cl {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2096,9 +2129,9 @@ final class lj implements cl {
             return;
         }
         try {
-            ((lj) this).field_t = 0;
+            this.field_t = 0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "lj.D(" + param0 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "lj.D(" + param0 + ')');
         }
     }
 
@@ -2106,14 +2139,14 @@ final class lj implements cl {
         int var6_int = 0;
         int var7 = 0;
         try {
-            ((lj) this).field_w[param1][param0] = param4;
-            var6_int = 1 + ((lj) this).field_q + (32 * (param1 / 7 - -(param1 % 7)) - 224 - -ud.field_w[param4]);
+            this.field_w[param1][param0] = param4;
+            var6_int = 1 + this.field_q + (32 * (param1 / 7 - -(param1 % 7)) - 224 - -ud.field_w[param4]);
             int var8 = -118 / ((param2 - 32) / 44);
-            var7 = -21 + r.field_b[param4] + (168 - -(24 * (-(param1 % 7) + param1 / 7))) + ((lj) this).field_l;
-            ((lj) this).field_a[param1] = param3;
-            ((lj) this).field_v[param1][param0] = new rh(var6_int, var7, 20, 40, je.field_d[param3], rg.field_P[param3], 256);
+            var7 = -21 + r.field_b[param4] + (168 - -(24 * (-(param1 % 7) + param1 / 7))) + this.field_l;
+            this.field_a[param1] = param3;
+            this.field_v[param1][param0] = new rh(var6_int, var7, 20, 40, je.field_d[param3], rg.field_P[param3], 256);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "lj.O(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "lj.O(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -2181,7 +2214,7 @@ final class lj implements cl {
         var13 = DungeonAssault.field_K;
         try {
           L0: {
-            nb.field_d.h(13 + (-320 + (((lj) this).field_q + 79)), ((lj) this).field_l - -13);
+            nb.field_d.h(13 + (-320 + (this.field_q + 79)), this.field_l - -13);
             var2_int = 0;
             L1: while (true) {
               L2: {
@@ -2189,8 +2222,8 @@ final class lj implements cl {
                   if (168 < var2_int) {
                     break L3;
                   } else {
-                    gf.b(-(var2_int * 4 / 3) + ((lj) this).field_q, var2_int + (18 + ((lj) this).field_l), 8 * var2_int / 3, 0);
-                    gf.b(-(4 * var2_int / 3) + ((lj) this).field_q, -var2_int + 354 + ((lj) this).field_l, 8 * var2_int / 3, 0);
+                    gf.b(-(var2_int * 4 / 3) + this.field_q, var2_int + (18 + this.field_l), 8 * var2_int / 3, 0);
+                    gf.b(-(4 * var2_int / 3) + this.field_q, -var2_int + 336 + 18 + this.field_l, 8 * var2_int / 3, 0);
                     var2_int++;
                     if (var13 != 0) {
                       break L2;
@@ -2206,7 +2239,7 @@ final class lj implements cl {
                 if (param0 == -55) {
                   break L2;
                 } else {
-                  ((lj) this).field_n = null;
+                  this.field_n = (int[]) null;
                   break L2;
                 }
               }
@@ -2214,11 +2247,11 @@ final class lj implements cl {
               L4: while (true) {
                 L5: {
                   L6: {
-                    if (var2_int >= 7) {
+                    if (-8 >= (var2_int ^ -1)) {
                       break L6;
                     } else {
-                      var3 = -(32 * (1 + var2_int)) + ((lj) this).field_q;
-                      var4 = var2_int * 24 + ((lj) this).field_l;
+                      var3 = -(32 * (1 + var2_int)) + this.field_q;
+                      var4 = var2_int * 24 + this.field_l;
                       var5 = -var2_int + 6;
                       stackOut_12_0 = 0;
                       stackIn_119_0 = stackOut_12_0;
@@ -2238,10 +2271,10 @@ final class lj implements cl {
                                 } else {
                                   L10: {
                                     L11: {
-                                      if (null == ((lj) this).field_h) {
+                                      if (null == this.field_h) {
                                         break L11;
                                       } else {
-                                        if (!((lj) this).field_h.field_p.a(var5, (byte) 104)) {
+                                        if (!this.field_h.field_p.a(var5, (byte) 104)) {
                                           stackOut_24_0 = 0;
                                           stackIn_25_0 = stackOut_24_0;
                                           break L10;
@@ -2257,13 +2290,13 @@ final class lj implements cl {
                                   L12: {
                                     L13: {
                                       var7 = stackIn_25_0;
-                                      if (var6 != 0) {
+                                      if (-1 != (var6 ^ -1)) {
                                         break L13;
                                       } else {
-                                        if (var5 == 0) {
+                                        if ((var5 ^ -1) == -1) {
                                           break L12;
                                         } else {
-                                          if (var5 != 6) {
+                                          if ((var5 ^ -1) != -7) {
                                             this.a(var4, 9, var3, var5, ua.field_b[5]);
                                             if (var13 == 0) {
                                               break L12;
@@ -2282,7 +2315,7 @@ final class lj implements cl {
                                         if (var7 != 0) {
                                           break L15;
                                         } else {
-                                          if (!((lj) this).field_h.field_p.a(var8, (byte) 67)) {
+                                          if (!this.field_h.field_p.a(var8, (byte) 67)) {
                                             stackOut_41_0 = 0;
                                             stackIn_42_0 = stackOut_41_0;
                                             break L14;
@@ -2299,29 +2332,29 @@ final class lj implements cl {
                                       var9 = stackIn_42_0;
                                       var10 = 5;
                                       if (var9 != 0) {
-                                        var11 = ((lj) this).field_i.a(42 + var8, (byte) 123) ? 1 : 0;
+                                        var11 = this.field_i.a(42 + var8, (byte) 123) ? 1 : 0;
                                         if (var11 != 0) {
                                           L17: {
                                             L18: {
-                                              if (((lj) this).field_h == null) {
+                                              if (this.field_h == null) {
                                                 break L18;
                                               } else {
                                                 L19: {
                                                   L20: {
-                                                    if (((lj) this).field_h.field_j.a(var5, (byte) 110)) {
+                                                    if (this.field_h.field_j.a(var5, (byte) 110)) {
                                                       break L20;
                                                     } else {
-                                                      if (~((lj) this).field_h.field_B != ~var5) {
+                                                      if ((this.field_h.field_B ^ -1) != (var5 ^ -1)) {
                                                         break L19;
                                                       } else {
                                                         break L20;
                                                       }
                                                     }
                                                   }
-                                                  if (((lj) this).field_h.field_j.a(var8, (byte) 103)) {
+                                                  if (this.field_h.field_j.a(var8, (byte) 103)) {
                                                     break L18;
                                                   } else {
-                                                    if (~var8 != ~((lj) this).field_h.field_B) {
+                                                    if ((var8 ^ -1) != (this.field_h.field_B ^ -1)) {
                                                       break L19;
                                                     } else {
                                                       break L18;
@@ -2363,13 +2396,13 @@ final class lj implements cl {
                                   }
                                   L22: {
                                     L23: {
-                                      if (~var2_int != ~var6) {
+                                      if ((var2_int ^ -1) != (var6 ^ -1)) {
                                         break L23;
                                       } else {
                                         if (var5 == 6) {
                                           break L22;
                                         } else {
-                                          if (var5 != 48) {
+                                          if ((var5 ^ -1) != -49) {
                                             this.a(var4, 121, 32 + var3, var5, ua.field_b[4]);
                                             if (var13 == 0) {
                                               break L22;
@@ -2388,7 +2421,7 @@ final class lj implements cl {
                                         if (var7 != 0) {
                                           break L25;
                                         } else {
-                                          if (!((lj) this).field_h.field_p.a(var8, (byte) 89)) {
+                                          if (!this.field_h.field_p.a(var8, (byte) 89)) {
                                             stackOut_86_0 = 0;
                                             stackIn_87_0 = stackOut_86_0;
                                             break L24;
@@ -2405,29 +2438,29 @@ final class lj implements cl {
                                       var9 = stackIn_87_0;
                                       var10 = 4;
                                       if (var9 != 0) {
-                                        var11 = ((lj) this).field_i.a(-(var5 / 7) + var5, (byte) 90) ? 1 : 0;
+                                        var11 = this.field_i.a(-(var5 / 7) + var5, (byte) 90) ? 1 : 0;
                                         if (var11 != 0) {
                                           L27: {
                                             L28: {
-                                              if (((lj) this).field_h == null) {
+                                              if (this.field_h == null) {
                                                 break L28;
                                               } else {
                                                 L29: {
                                                   L30: {
-                                                    if (((lj) this).field_h.field_j.a(var5, (byte) 66)) {
+                                                    if (this.field_h.field_j.a(var5, (byte) 66)) {
                                                       break L30;
                                                     } else {
-                                                      if (var5 != ((lj) this).field_h.field_B) {
+                                                      if (var5 != this.field_h.field_B) {
                                                         break L29;
                                                       } else {
                                                         break L30;
                                                       }
                                                     }
                                                   }
-                                                  if (((lj) this).field_h.field_j.a(var8, (byte) 80)) {
+                                                  if (this.field_h.field_j.a(var8, (byte) 80)) {
                                                     break L28;
                                                   } else {
-                                                    if (~var8 != ~((lj) this).field_h.field_B) {
+                                                    if ((var8 ^ -1) != (this.field_h.field_B ^ -1)) {
                                                       break L29;
                                                     } else {
                                                       break L28;
@@ -2499,11 +2532,11 @@ final class lj implements cl {
                 L32: while (true) {
                   L33: {
                     L34: {
-                      if (var2_int >= 13) {
+                      if ((var2_int ^ -1) <= -14) {
                         break L34;
                       } else {
-                        var3 = -(32 * (-var2_int + 13)) + ((lj) this).field_q;
-                        var4 = var2_int * 24 + ((lj) this).field_l;
+                        var3 = -(32 * (-var2_int + 13)) + this.field_q;
+                        var4 = var2_int * 24 + this.field_l;
                         var5 = 7 * var2_int - 42;
                         if (var13 != 0) {
                           break L33;
@@ -2520,10 +2553,10 @@ final class lj implements cl {
                                   } else {
                                     L38: {
                                       L39: {
-                                        if (((lj) this).field_h == null) {
+                                        if (this.field_h == null) {
                                           break L39;
                                         } else {
-                                          if (!((lj) this).field_h.field_p.a(var5, (byte) 75)) {
+                                          if (!this.field_h.field_p.a(var5, (byte) 75)) {
                                             stackOut_133_0 = 0;
                                             stackIn_134_0 = stackOut_133_0;
                                             break L38;
@@ -2543,7 +2576,7 @@ final class lj implements cl {
                                         if (var7 != 0) {
                                           break L41;
                                         } else {
-                                          if (!((lj) this).field_h.field_p.a(var8, (byte) 122)) {
+                                          if (!this.field_h.field_p.a(var8, (byte) 122)) {
                                             stackOut_140_0 = 0;
                                             stackIn_141_0 = stackOut_140_0;
                                             break L40;
@@ -2560,29 +2593,29 @@ final class lj implements cl {
                                       var9 = stackIn_141_0;
                                       var10 = 5;
                                       if (var9 != 0) {
-                                        var11 = ((lj) this).field_i.a(42 + var8, (byte) 121) ? 1 : 0;
+                                        var11 = this.field_i.a(42 + var8, (byte) 121) ? 1 : 0;
                                         if (var11 != 0) {
                                           L43: {
                                             L44: {
-                                              if (((lj) this).field_h == null) {
+                                              if (this.field_h == null) {
                                                 break L44;
                                               } else {
                                                 L45: {
                                                   L46: {
-                                                    if (((lj) this).field_h.field_j.a(var5, (byte) 68)) {
+                                                    if (this.field_h.field_j.a(var5, (byte) 68)) {
                                                       break L46;
                                                     } else {
-                                                      if (~var5 != ~((lj) this).field_h.field_B) {
+                                                      if ((var5 ^ -1) != (this.field_h.field_B ^ -1)) {
                                                         break L45;
                                                       } else {
                                                         break L46;
                                                       }
                                                     }
                                                   }
-                                                  if (((lj) this).field_h.field_j.a(var8, (byte) 103)) {
+                                                  if (this.field_h.field_j.a(var8, (byte) 103)) {
                                                     break L44;
                                                   } else {
-                                                    if (~((lj) this).field_h.field_B != ~var8) {
+                                                    if ((this.field_h.field_B ^ -1) != (var8 ^ -1)) {
                                                       break L45;
                                                     } else {
                                                       break L44;
@@ -2627,7 +2660,7 @@ final class lj implements cl {
                                         if (var7 != 0) {
                                           break L49;
                                         } else {
-                                          if (!((lj) this).field_h.field_p.a(var8, (byte) 95)) {
+                                          if (!this.field_h.field_p.a(var8, (byte) 95)) {
                                             stackOut_174_0 = 0;
                                             stackIn_175_0 = stackOut_174_0;
                                             break L48;
@@ -2645,29 +2678,29 @@ final class lj implements cl {
                                       if (var9 == 0) {
                                         break L50;
                                       } else {
-                                        var11 = ((lj) this).field_i.a(-(var5 / 7) + var5, (byte) 116) ? 1 : 0;
+                                        var11 = this.field_i.a(-(var5 / 7) + var5, (byte) 116) ? 1 : 0;
                                         if (var11 != 0) {
                                           L51: {
                                             L52: {
-                                              if (null == ((lj) this).field_h) {
+                                              if (null == this.field_h) {
                                                 break L52;
                                               } else {
                                                 L53: {
                                                   L54: {
-                                                    if (((lj) this).field_h.field_j.a(var5, (byte) 88)) {
+                                                    if (this.field_h.field_j.a(var5, (byte) 88)) {
                                                       break L54;
                                                     } else {
-                                                      if (var5 != ((lj) this).field_h.field_B) {
+                                                      if (var5 != this.field_h.field_B) {
                                                         break L53;
                                                       } else {
                                                         break L54;
                                                       }
                                                     }
                                                   }
-                                                  if (((lj) this).field_h.field_j.a(var8, (byte) 70)) {
+                                                  if (this.field_h.field_j.a(var8, (byte) 70)) {
                                                     break L52;
                                                   } else {
-                                                    if (var8 != ((lj) this).field_h.field_B) {
+                                                    if (var8 != this.field_h.field_B) {
                                                       break L53;
                                                     } else {
                                                       break L52;
@@ -2708,7 +2741,7 @@ final class lj implements cl {
                                       if (var6 != 0) {
                                         break L56;
                                       } else {
-                                        if (var5 == 0) {
+                                        if (-1 == (var5 ^ -1)) {
                                           break L56;
                                         } else {
                                           if (42 != var5) {
@@ -2721,13 +2754,13 @@ final class lj implements cl {
                                       }
                                     }
                                     L57: {
-                                      if (~var6 != ~(12 - var2_int)) {
+                                      if ((var6 ^ -1) != (12 - var2_int ^ -1)) {
                                         break L57;
                                       } else {
-                                        if (var5 == 42) {
+                                        if ((var5 ^ -1) == -43) {
                                           break L57;
                                         } else {
-                                          if (var5 == 48) {
+                                          if (-49 == (var5 ^ -1)) {
                                             break L57;
                                           } else {
                                             ua.field_b[5].h(32 + var3, var4 + 24);
@@ -2769,11 +2802,17 @@ final class lj implements cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var2, "lj.G(" + param0 + ')');
+          throw vk.a((Throwable) ((Object) var2), "lj.G(" + param0 + ')');
         }
     }
 
     public final void a(int param0, int param1) {
+        rh[] array$6 = null;
+        int[] array$7 = null;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
         RuntimeException var3 = null;
         int[] var3_array = null;
         int var4 = 0;
@@ -2787,20 +2826,21 @@ final class lj implements cl {
         int var10 = 0;
         boolean stackIn_9_0 = false;
         int stackIn_15_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_8_0 = false;
         int stackOut_14_0 = 0;
         var10 = DungeonAssault.field_K;
         try {
           L0: {
-            if (null == ((lj) this).field_w[param1]) {
+            if (null == this.field_w[param1]) {
               L1: {
-                var3_array = ((lj) this).field_h.b(param1, (byte) -36);
+                var3_array = this.field_h.b(param1, (byte) -36);
                 var4 = 0;
                 if (param0 == 15122) {
                   break L1;
                 } else {
-                  ((lj) this).field_w = null;
+                  this.field_w = (int[][]) null;
                   break L1;
                 }
               }
@@ -2809,11 +2849,11 @@ final class lj implements cl {
               L2: while (true) {
                 L3: {
                   L4: {
-                    if (~var6 <= ~var5_ref_int__.length) {
+                    if ((var6 ^ -1) <= (var5_ref_int__.length ^ -1)) {
                       break L4;
                     } else {
                       var7_int = var5_ref_int__[var6];
-                      stackOut_8_0 = ((lj) this).field_k.a(var7_int, (byte) 88);
+                      stackOut_8_0 = this.field_k.a(var7_int, (byte) 88);
                       stackIn_15_0 = stackOut_8_0 ? 1 : 0;
                       stackIn_9_0 = stackOut_8_0;
                       if (var10 != 0) {
@@ -2847,8 +2887,8 @@ final class lj implements cl {
                       if (var4 > 0) {
                         break L8;
                       } else {
-                        ((lj) this).field_v[param1] = new rh[0];
-                        ((lj) this).field_w[param1] = new int[0];
+                        this.field_v[param1] = new rh[]{};
+                        this.field_w[param1] = new int[]{};
                         if (var10 == 0) {
                           break L7;
                         } else {
@@ -2856,13 +2896,15 @@ final class lj implements cl {
                         }
                       }
                     }
-                    ((lj) this).field_v[param1] = new rh[var4];
-                    ((lj) this).field_w[param1] = new int[var4];
+                    array$6 = new rh[var4];
+                    this.field_v[param1] = array$6;
+                    array$7 = new int[var4];
+                    this.field_w[param1] = array$7;
                     var6 = 0;
                     var7 = var3_array;
                     var8 = 0;
                     L9: while (true) {
-                      if (~var8 <= ~var7.length) {
+                      if ((var8 ^ -1) <= (var7.length ^ -1)) {
                         break L7;
                       } else {
                         var9 = var7[var8];
@@ -2870,46 +2912,46 @@ final class lj implements cl {
                           break L6;
                         } else {
                           L10: {
-                            if (((lj) this).field_k.a(var9, (byte) 93)) {
+                            if (this.field_k.a(var9, (byte) 93)) {
                               break L10;
                             } else {
                               L11: {
-                                ((lj) this).field_k.a(var9, param0 + -15183);
-                                if (~var9 != ~(-(param1 / 7) + (param1 - 1))) {
+                                this.field_k.a(var9, param0 + -15183);
+                                if ((var9 ^ -1) != (-(param1 / 7) + (param1 - 1) ^ -1)) {
                                   break L11;
                                 } else {
-                                  int incrementValue$4 = var6;
+                                  incrementValue$8 = var6;
                                   var6++;
-                                  this.a(incrementValue$4, param1, param0 + -15007, var5, 6);
+                                  this.a(incrementValue$8, param1, param0 + -15007, var5, 6);
                                   break L11;
                                 }
                               }
                               L12: {
-                                if (~var9 == ~(param1 + -(param1 / 7))) {
-                                  int incrementValue$5 = var6;
+                                if ((var9 ^ -1) == (param1 + -(param1 / 7) ^ -1)) {
+                                  incrementValue$9 = var6;
                                   var6++;
-                                  this.a(incrementValue$5, param1, 98, var5, 3);
+                                  this.a(incrementValue$9, param1, 98, var5, 3);
                                   break L12;
                                 } else {
                                   break L12;
                                 }
                               }
                               L13: {
-                                if (~(param1 + 35) != ~var9) {
+                                if ((param1 + 35 ^ -1) != (var9 ^ -1)) {
                                   break L13;
                                 } else {
-                                  int incrementValue$6 = var6;
+                                  incrementValue$10 = var6;
                                   var6++;
-                                  this.a(incrementValue$6, param1, param0 + -15007, var5, 1);
+                                  this.a(incrementValue$10, param1, param0 + -15007, var5, 1);
                                   break L13;
                                 }
                               }
                               if (var9 != param1 + 42) {
                                 break L10;
                               } else {
-                                int incrementValue$7 = var6;
+                                incrementValue$11 = var6;
                                 var6++;
-                                this.a(incrementValue$7, param1, 100, var5, 4);
+                                this.a(incrementValue$11, param1, 100, var5, 4);
                                 break L10;
                               }
                             }
@@ -2926,16 +2968,23 @@ final class lj implements cl {
                   }
                   break L6;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var3, "lj.K(" + param0 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) var3), "lj.K(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -2962,7 +3011,7 @@ final class lj implements cl {
                   if (var2_int >= 49) {
                     break L3;
                   } else {
-                    stackOut_3_0 = ~var2_int;
+                    stackOut_3_0 = var2_int ^ -1;
                     stackOut_3_1 = -1;
                     stackIn_23_0 = stackOut_3_0;
                     stackIn_23_1 = stackOut_3_1;
@@ -2975,19 +3024,19 @@ final class lj implements cl {
                         if (stackIn_4_0 == stackIn_4_1) {
                           break L4;
                         } else {
-                          if (var2_int == 6) {
+                          if (-7 == (var2_int ^ -1)) {
                             break L4;
                           } else {
                             if (42 == var2_int) {
                               break L4;
                             } else {
-                              if (var2_int == 48) {
+                              if (-49 == (var2_int ^ -1)) {
                                 break L4;
                               } else {
-                                if (!((lj) this).field_h.field_p.a(var2_int, (byte) 73)) {
+                                if (!this.field_h.field_p.a(var2_int, (byte) 73)) {
                                   break L4;
                                 } else {
-                                  ((lj) this).a(15122, var2_int);
+                                  this.a(15122, var2_int);
                                   break L4;
                                 }
                               }
@@ -3014,7 +3063,7 @@ final class lj implements cl {
                 if (stackIn_23_0 > stackIn_23_1) {
                   break L5;
                 } else {
-                  ((lj) this).field_c = null;
+                  this.field_c = (cn) null;
                   break L5;
                 }
               }
@@ -3024,7 +3073,7 @@ final class lj implements cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) runtimeException, "lj.Q(" + param0 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "lj.Q(" + param0 + ')');
         }
     }
 
@@ -3040,7 +3089,7 @@ final class lj implements cl {
           L0: {
             L1: {
               L2: {
-                var3_int = ((lj) this).field_n[param1];
+                var3_int = this.field_n[param1];
                 if (var3_int >= 256) {
                   break L2;
                 } else {
@@ -3062,13 +3111,13 @@ final class lj implements cl {
               if (param0 <= -1) {
                 break L3;
               } else {
-                ((lj) this).field_n = null;
+                this.field_n = (int[]) null;
                 break L3;
               }
             }
             L4: {
               var3_int = var3_int >> 1;
-              if (var3_int >= 40) {
+              if (-41 >= (var3_int ^ -1)) {
                 break L4;
               } else {
                 var3_int = 40;
@@ -3082,20 +3131,20 @@ final class lj implements cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var3, "lj.L(" + param0 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) var3), "lj.L(" + param0 + ',' + param1 + ')');
         }
         return stackIn_9_0;
     }
 
     private lj(int param0, int param1) {
-        ((lj) this).field_c = null;
-        ((lj) this).field_d = null;
+        this.field_c = null;
+        this.field_d = null;
         try {
-            ((lj) this).field_l = -168 + param1;
-            ((lj) this).field_q = param0;
-            ((lj) this).field_i = gm.field_d.field_k;
+            this.field_l = -168 + param1;
+            this.field_q = param0;
+            this.field_i = gm.field_d.field_k;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "lj.<init>(" + param0 + ',' + param1 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "lj.<init>(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3132,45 +3181,45 @@ final class lj implements cl {
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         String stackOut_8_2 = null;
-        ((lj) this).field_c = null;
-        ((lj) this).field_d = null;
+        this.field_c = null;
+        this.field_d = null;
         try {
           L0: {
-            ((lj) this).field_q = param1.field_q;
-            ((lj) this).field_l = param1.field_l;
-            ((lj) this).field_h = param0.field_Y;
-            ((lj) this).field_a = param1.field_a;
-            ((lj) this).field_n = param1.field_n;
-            ((lj) this).field_v = param1.field_v;
-            ((lj) this).field_w = param1.field_w;
-            ((lj) this).field_k = param1.field_k;
-            ((lj) this).field_s = -1;
-            ((lj) this).field_i = ((lj) this).field_h.field_v;
+            this.field_q = param1.field_q;
+            this.field_l = param1.field_l;
+            this.field_h = param0.field_Y;
+            this.field_a = param1.field_a;
+            this.field_n = param1.field_n;
+            this.field_v = param1.field_v;
+            this.field_w = param1.field_w;
+            this.field_k = param1.field_k;
+            this.field_s = -1;
+            this.field_i = this.field_h.field_v;
             this.c((byte) 126);
-            ((lj) this).b(-20827);
+            this.b(-20827);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("lj.<init>(");
             stackIn_6_0 = stackOut_3_0;
             stackIn_6_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_7_0 = stackOut_4_0;
               stackIn_7_1 = stackOut_4_1;
@@ -3179,23 +3228,23 @@ final class lj implements cl {
             }
           }
           L2: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_10_0 = stackOut_7_0;
             stackIn_10_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_11_0 = stackOut_8_0;
               stackIn_11_1 = stackOut_8_1;
@@ -3203,15 +3252,11 @@ final class lj implements cl {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = 100;
         field_p = "Raider wins!";
         field_j = "Your initial Renown after the next reset will be increased by 100.";

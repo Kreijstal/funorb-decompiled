@@ -8,7 +8,7 @@ final class bva {
 
     public static void a(byte param0) {
         if (param0 > -7) {
-            field_b = null;
+            field_b = (fta) null;
             field_b = null;
             field_a = null;
             return;
@@ -44,10 +44,6 @@ final class bva {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new fta();
         field_a = "<%0> is already on your ignore list.";
     }

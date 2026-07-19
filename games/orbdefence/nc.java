@@ -25,15 +25,15 @@ final class nc extends sf {
             s.field_x = param0;
             fm.field_c = param3;
             if (param4 <= 87) {
-                Object var10 = null;
+                be var10 = (be) null;
                 nc.a(13, 122, -103, (String) null, (byte) 38, 59, -112, (be) null, -9);
             }
             hf.field_k = param8;
-            kg.field_h = (ge) (Object) new a();
+            kg.field_h = (ge) ((Object) new a());
             wj.field_o = new vl(param7);
             ed.field_b = new pi(kg.field_h, wj.field_o);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "nc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+            throw dd.a((Throwable) ((Object) runtimeException), "nc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -46,14 +46,17 @@ final class nc extends sf {
         field_ab = null;
         field_Z = null;
         field_cb = null;
-        field_bb = null;
+        if (param0 != 8864) {
+          nc.a(109, 73, 59, 19, -97);
+          field_bb = null;
+          return;
+        } else {
+          field_bb = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_ab = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
         field_bb = new qd();
         field_cb = new ja[9];

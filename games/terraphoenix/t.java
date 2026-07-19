@@ -18,6 +18,9 @@ final class t {
         field_e = null;
         field_c = null;
         field_a = null;
+        if (param0 <= 121) {
+            field_e = (java.awt.Font) null;
+        }
     }
 
     private t(int param0, int param1, int param2) {
@@ -25,6 +28,7 @@ final class t {
 
     final void a(dh param0, int param1, byte[] param2) {
         try {
+            int discarded$2 = 0;
             Exception exception = null;
             RuntimeException runtimeException = null;
             RuntimeException stackIn_13_0 = null;
@@ -61,13 +65,13 @@ final class t {
             try {
               L0: {
                 L1: {
-                  if (param0.field_i[param0.field_k] != 31) {
+                  if ((param0.field_i[param0.field_k] ^ -1) != -32) {
                     break L1;
                   } else {
-                    if (param0.field_i[1 + param0.field_k] == -117) {
+                    if ((param0.field_i[1 + param0.field_k] ^ -1) == 116) {
                       L2: {
-                        if (null == ((t) this).field_d) {
-                          ((t) this).field_d = new java.util.zip.Inflater(true);
+                        if (null == this.field_d) {
+                          this.field_d = new java.util.zip.Inflater(true);
                           break L2;
                         } else {
                           break L2;
@@ -75,17 +79,17 @@ final class t {
                       }
                       try {
                         L3: {
-                          ((t) this).field_d.setInput(param0.field_i, param0.field_k + param1, -param0.field_k + (-18 + param0.field_i.length));
-                          int discarded$2 = ((t) this).field_d.inflate(param2);
+                          this.field_d.setInput(param0.field_i, param0.field_k + param1, -param0.field_k + (-18 + param0.field_i.length));
+                          discarded$2 = this.field_d.inflate(param2);
                           break L3;
                         }
                       } catch (java.lang.Exception decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
                         exception = (Exception) (Object) decompiledCaughtException;
-                        ((t) this).field_d.reset();
+                        this.field_d.reset();
                         throw new RuntimeException("");
                       }
-                      ((t) this).field_d.reset();
+                      this.field_d.reset();
                       break L0;
                     } else {
                       break L1;
@@ -98,23 +102,23 @@ final class t {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_12_0 = (RuntimeException) runtimeException;
+                stackOut_12_0 = (RuntimeException) (runtimeException);
                 stackOut_12_1 = new StringBuilder().append("t.B(");
                 stackIn_14_0 = stackOut_12_0;
                 stackIn_14_1 = stackOut_12_1;
                 stackIn_13_0 = stackOut_12_0;
                 stackIn_13_1 = stackOut_12_1;
                 if (param0 == null) {
-                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+                  stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
                   stackOut_14_2 = "null";
                   stackIn_15_0 = stackOut_14_0;
                   stackIn_15_1 = stackOut_14_1;
                   stackIn_15_2 = stackOut_14_2;
                   break L4;
                 } else {
-                  stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-                  stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+                  stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+                  stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
                   stackOut_13_2 = "{...}";
                   stackIn_15_0 = stackOut_13_0;
                   stackIn_15_1 = stackOut_13_1;
@@ -123,23 +127,23 @@ final class t {
                 }
               }
               L5: {
-                stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+                stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
                 stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param1).append(',');
                 stackIn_17_0 = stackOut_15_0;
                 stackIn_17_1 = stackOut_15_1;
                 stackIn_16_0 = stackOut_15_0;
                 stackIn_16_1 = stackOut_15_1;
                 if (param2 == null) {
-                  stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-                  stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                  stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+                  stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
                   stackOut_17_2 = "null";
                   stackIn_18_0 = stackOut_17_0;
                   stackIn_18_1 = stackOut_17_1;
                   stackIn_18_2 = stackOut_17_2;
                   break L5;
                 } else {
-                  stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                  stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+                  stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+                  stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
                   stackOut_16_2 = "{...}";
                   stackIn_18_0 = stackOut_16_0;
                   stackIn_18_1 = stackOut_16_1;
@@ -147,7 +151,7 @@ final class t {
                   break L5;
                 }
               }
-              throw qk.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+              throw qk.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -157,10 +161,6 @@ final class t {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new int[8192];
     }
 }

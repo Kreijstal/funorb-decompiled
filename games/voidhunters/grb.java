@@ -37,10 +37,6 @@ final class grb extends le {
         int[][] var17 = null;
         int[] var18 = null;
         int[][] var19 = null;
-        int[] var20 = null;
-        int[][] var21 = null;
-        int[] var22 = null;
-        int[][] var23 = null;
         L0: {
           var14 = VoidHunters.field_G;
           if (param1) {
@@ -51,20 +47,18 @@ final class grb extends le {
           }
         }
         L1: {
-          var3 = ((grb) this).field_f.a((byte) 121, param0);
-          if (((grb) this).field_f.field_e) {
-            var4 = 1 + (((grb) this).field_k + ((grb) this).field_k);
+          var3 = this.field_f.a((byte) 121, param0);
+          if (this.field_f.field_e) {
+            var4 = 1 + (this.field_k + this.field_k);
             var5 = 65536 / var4;
-            var6 = ((grb) this).field_m + (((grb) this).field_m + 1);
+            var6 = this.field_m + (this.field_m + 1);
             var7 = 65536 / var6;
-            var23 = new int[var4][];
-            var21 = var23;
-            var19 = var21;
+            var19 = new int[var4][];
             var17 = var19;
             var8 = var17;
-            var9 = param0 + -((grb) this).field_k;
+            var9 = param0 + -this.field_k;
             L2: while (true) {
-              if (var9 > ((grb) this).field_k + param0) {
+              if (var9 > this.field_k + param0) {
                 var9 = 0;
                 L3: while (true) {
                   if (var9 >= hob.field_d) {
@@ -74,11 +68,11 @@ final class grb extends le {
                     var11 = 0;
                     L4: while (true) {
                       if (var4 <= var11) {
-                        var3[var9] = var10 * var5 >> 16;
+                        var3[var9] = var10 * var5 >> 1600430576;
                         var9++;
                         continue L3;
                       } else {
-                        var10 = var10 + var23[var11][var9];
+                        var10 = var10 + var19[var11][var9];
                         var11++;
                         continue L4;
                       }
@@ -86,28 +80,26 @@ final class grb extends le {
                   }
                 }
               } else {
-                var10_ref_int__ = ((grb) this).a(0, var9 & wf.field_d, 255);
-                var22 = new int[hob.field_d];
-                var20 = var22;
-                var18 = var20;
+                var10_ref_int__ = this.a(0, var9 & wf.field_d, 255);
+                var18 = new int[hob.field_d];
                 var16 = var18;
                 var11_ref_int__ = var16;
                 var12 = 0;
-                var13 = -((grb) this).field_m;
+                var13 = -this.field_m;
                 L5: while (true) {
-                  if (var13 > ((grb) this).field_m) {
+                  if (var13 > this.field_m) {
                     var15 = 0;
                     var13 = var15;
                     L6: while (true) {
                       if (hob.field_d <= var15) {
-                        var8[-param0 + (var9 - -((grb) this).field_k)] = var22;
+                        var8[-param0 + (var9 - -this.field_k)] = var18;
                         var9++;
                         continue L2;
                       } else {
-                        var11_ref_int__[var15] = var12 * var7 >> 16;
-                        var12 = var12 - var10_ref_int__[gbb.field_q & var15 + -((grb) this).field_m];
+                        var11_ref_int__[var15] = var12 * var7 >> -1845368240;
+                        var12 = var12 - var10_ref_int__[gbb.field_q & var15 + -this.field_m];
                         var15++;
-                        var12 = var12 + var10_ref_int__[((grb) this).field_m + var15 & gbb.field_q];
+                        var12 = var12 + var10_ref_int__[this.field_m + var15 & gbb.field_q];
                         continue L6;
                       }
                     }
@@ -128,8 +120,8 @@ final class grb extends le {
 
     public grb() {
         super(1, false);
-        ((grb) this).field_m = 1;
-        ((grb) this).field_k = 1;
+        this.field_m = 1;
+        this.field_k = 1;
     }
 
     final void a(int param0, int param1, ds param2) {
@@ -167,11 +159,11 @@ final class grb extends le {
             L1: {
               var4_int = param0;
               if (var4_int == 0) {
-                ((grb) this).field_m = param2.e((byte) -119);
+                this.field_m = param2.e((byte) -119);
                 break L1;
               } else {
-                if (var4_int == 1) {
-                  ((grb) this).field_k = param2.e((byte) -123);
+                if ((var4_int ^ -1) == -2) {
+                  this.field_k = param2.e((byte) -123);
                   break L1;
                 } else {
                   if (2 == var4_int) {
@@ -179,7 +171,7 @@ final class grb extends le {
                       stackOut_7_0 = this;
                       stackIn_9_0 = stackOut_7_0;
                       stackIn_8_0 = stackOut_7_0;
-                      if (param2.e((byte) -121) != 1) {
+                      if (-2 != (param2.e((byte) -121) ^ -1)) {
                         stackOut_9_0 = this;
                         stackOut_9_1 = 0;
                         stackIn_10_0 = stackOut_9_0;
@@ -193,7 +185,7 @@ final class grb extends le {
                         break L2;
                       }
                     }
-                    ((grb) this).field_g = stackIn_10_1 != 0;
+                    ((grb) (this)).field_g = stackIn_10_1 != 0;
                     break L1;
                   } else {
                     break L1;
@@ -215,23 +207,23 @@ final class grb extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var4;
+            stackOut_14_0 = (RuntimeException) (var4);
             stackOut_14_1 = new StringBuilder().append("grb.F(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -239,7 +231,7 @@ final class grb extends le {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
     }
 
@@ -271,41 +263,33 @@ final class grb extends le {
         int[][][] var30 = null;
         int[][] var37 = null;
         int[][][] var38 = null;
-        int[][] var45 = null;
-        int[][][] var46 = null;
-        int[][] var48 = null;
+        int[][] var46 = null;
+        int[] var47 = null;
+        int[] var48 = null;
         int[] var49 = null;
-        int[] var50 = null;
-        int[] var51 = null;
-        int[][] var52 = null;
-        int[][] var53 = null;
-        int[][][] var54 = null;
-        int[][] var55 = null;
+        int[][] var50 = null;
+        int[][] var51 = null;
         L0: {
           var23 = VoidHunters.field_G;
-          var53 = ((grb) this).field_d.a(param1, (byte) -94);
-          var45 = var53;
-          var37 = var45;
+          var37 = this.field_d.a(param1, (byte) -94);
           var29 = var37;
           var3 = var29;
-          if (!((grb) this).field_d.field_g) {
+          if (!this.field_d.field_g) {
             break L0;
           } else {
-            var4 = ((grb) this).field_k + ((grb) this).field_k - -1;
+            var4 = this.field_k + this.field_k - -1;
             var5 = 65536 / var4;
-            var6 = ((grb) this).field_m + ((grb) this).field_m + 1;
+            var6 = this.field_m + this.field_m + 1;
             var7 = 65536 / var6;
-            var54 = new int[var4][][];
-            var46 = var54;
-            var38 = var46;
+            var38 = new int[var4][][];
             var30 = var38;
             var8 = var30;
-            var9_int = -((grb) this).field_k + param1;
+            var9_int = -this.field_k + param1;
             L1: while (true) {
-              if (param1 - -((grb) this).field_k < var9_int) {
-                var9 = var53[0];
-                var10 = var53[1];
-                var11 = var53[2];
+              if (param1 - -this.field_k < var9_int) {
+                var9 = var37[0];
+                var10 = var37[1];
+                var11 = var37[2];
                 var12 = 0;
                 L2: while (true) {
                   if (var12 >= hob.field_d) {
@@ -317,16 +301,16 @@ final class grb extends le {
                     var16 = 0;
                     L3: while (true) {
                       if (var4 <= var16) {
-                        var9[var12] = var5 * var13 >> 16;
-                        var10[var12] = var14 * var5 >> 16;
-                        var11[var12] = var15 * var5 >> 16;
+                        var9[var12] = var5 * var13 >> -775821776;
+                        var10[var12] = var14 * var5 >> 109355792;
+                        var11[var12] = var15 * var5 >> 1070671088;
                         var12++;
                         continue L2;
                       } else {
-                        var55 = var54[var16];
-                        var14 = var14 + var55[1][var12];
-                        var13 = var13 + var55[0][var12];
-                        var15 = var15 + var55[2][var12];
+                        var51 = var38[var16];
+                        var14 = var14 + var51[1][var12];
+                        var13 = var13 + var51[0][var12];
+                        var15 = var15 + var51[2][var12];
                         var16++;
                         continue L3;
                       }
@@ -334,47 +318,47 @@ final class grb extends le {
                   }
                 }
               } else {
-                var48 = ((grb) this).a((byte) 110, 0, wf.field_d & var9_int);
-                var52 = new int[3][hob.field_d];
+                var46 = this.a((byte) 110, 0, wf.field_d & var9_int);
+                var50 = new int[3][hob.field_d];
                 var12 = 0;
                 var13 = 0;
                 var14 = 0;
-                var50 = var48[0];
-                var51 = var48[1];
-                var49 = var48[2];
-                var18_int = -((grb) this).field_m;
+                var48 = var46[0];
+                var49 = var46[1];
+                var47 = var46[2];
+                var18_int = -this.field_m;
                 L4: while (true) {
-                  if (var18_int > ((grb) this).field_m) {
-                    var18 = var52[0];
-                    var19 = var52[1];
-                    var20 = var52[2];
+                  if (var18_int > this.field_m) {
+                    var18 = var50[0];
+                    var19 = var50[1];
+                    var20 = var50[2];
                     var21 = 0;
                     L5: while (true) {
                       if (hob.field_d <= var21) {
-                        var8[var9_int + ((grb) this).field_k - param1] = var52;
+                        var8[var9_int + this.field_k - param1] = var50;
                         var9_int++;
                         continue L1;
                       } else {
-                        var18[var21] = var7 * var12 >> 16;
-                        var19[var21] = var7 * var13 >> 16;
-                        var20[var21] = var7 * var14 >> 16;
-                        var22 = -((grb) this).field_m + var21 & gbb.field_q;
+                        var18[var21] = var7 * var12 >> -2027696400;
+                        var19[var21] = var7 * var13 >> -1486867408;
+                        var20[var21] = var7 * var14 >> -305495184;
+                        var22 = -this.field_m + var21 & gbb.field_q;
                         var21++;
-                        var12 = var12 - var50[var22];
-                        var13 = var13 - var51[var22];
-                        var14 = var14 - var49[var22];
-                        var22 = gbb.field_q & ((grb) this).field_m + var21;
-                        var14 = var14 + var49[var22];
-                        var13 = var13 + var51[var22];
-                        var12 = var12 + var50[var22];
+                        var12 = var12 - var48[var22];
+                        var13 = var13 - var49[var22];
+                        var14 = var14 - var47[var22];
+                        var22 = gbb.field_q & this.field_m + var21;
+                        var14 = var14 + var47[var22];
+                        var13 = var13 + var49[var22];
+                        var12 = var12 + var48[var22];
                         continue L5;
                       }
                     }
                   } else {
                     var19_int = gbb.field_q & var18_int;
-                    var14 = var14 + var49[var19_int];
-                    var12 = var12 + var50[var19_int];
-                    var13 = var13 + var51[var19_int];
+                    var14 = var14 + var47[var19_int];
+                    var12 = var12 + var48[var19_int];
+                    var13 = var13 + var49[var19_int];
                     var18_int++;
                     continue L4;
                   }
@@ -386,15 +370,11 @@ final class grb extends le {
         if (param0 == 255) {
           return var3;
         } else {
-          return null;
+          return (int[][]) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new int[2];
         field_i = "Laser beam";
     }

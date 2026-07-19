@@ -15,21 +15,25 @@ final class pe {
         sa var5 = null;
         int var6 = 0;
         var6 = Bounce.field_N;
-        var5 = (sa) (Object) jl.field_f.a((byte) -50);
+        var5 = (sa) ((Object) jl.field_f.a((byte) -50));
         L0: while (true) {
           if (var5 == null) {
             var5 = new sa();
-            var5.field_n = 13;
-            var5.field_g = 10;
-            var5.field_m = 1;
-            jl.field_f.a(1, (ai) (Object) var5);
-            ha.a(-17765, var5, 3);
-            return var5;
+            var5.field_n = param4;
+            var5.field_g = param1;
+            var5.field_m = param2;
+            jl.field_f.a(1, var5);
+            ha.a(-17765, var5, param0);
+            if (param3 != -16947) {
+              return (sa) null;
+            } else {
+              return var5;
+            }
           } else {
-            if (var5.field_n == 13) {
+            if (param4 == var5.field_n) {
               return var5;
             } else {
-              var5 = (sa) (Object) jl.field_f.d((byte) -24);
+              var5 = (sa) ((Object) jl.field_f.d((byte) -24));
               continue L0;
             }
           }
@@ -56,7 +60,7 @@ final class pe {
         int var2 = 0;
         int var3 = Bounce.field_N;
         we[] var1 = new we[nj.field_p];
-        for (var2 = 0; nj.field_p > var2; var2++) {
+        for (var2 = param0; nj.field_p > var2; var2++) {
             var1[var2] = new we(se.field_C, fk.field_e, cl.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], ph.field_c[var2], he.field_k);
         }
         vb.a((byte) 122);
@@ -64,10 +68,6 @@ final class pe {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = false;
         field_h = "Back";
         field_b = "Player Name: ";

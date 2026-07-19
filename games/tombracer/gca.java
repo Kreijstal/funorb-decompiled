@@ -34,56 +34,55 @@ final class gca {
 
     final gca a(int param0) {
         if (param0 != 6) {
-          field_j = null;
-          return new gca(((gca) this).field_h, ((gca) this).field_m, ((gca) this).field_k, ((gca) this).field_e, ((gca) this).field_b, ((gca) this).field_c);
+          field_j = (String[]) null;
+          return new gca(this.field_h, this.field_m, this.field_k, this.field_e, this.field_b, this.field_c);
         } else {
-          return new gca(((gca) this).field_h, ((gca) this).field_m, ((gca) this).field_k, ((gca) this).field_e, ((gca) this).field_b, ((gca) this).field_c);
+          return new gca(this.field_h, this.field_m, this.field_k, this.field_e, this.field_b, this.field_c);
         }
     }
 
     final void a(byte param0, gca param1) {
         try {
-            ((gca) this).field_b = param1.field_b;
+            this.field_b = param1.field_b;
             if (param0 >= -58) {
-                ((gca) this).field_h = 8;
+                this.field_h = 8;
             }
-            ((gca) this).field_e = param1.field_e;
-            ((gca) this).field_h = param1.field_h;
-            ((gca) this).field_k = param1.field_k;
-            ((gca) this).field_c = param1.field_c;
-            ((gca) this).field_m = param1.field_m;
+            this.field_e = param1.field_e;
+            this.field_h = param1.field_h;
+            this.field_k = param1.field_k;
+            this.field_c = param1.field_c;
+            this.field_m = param1.field_m;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "gca.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "gca.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     gca(int param0) {
-        ((gca) this).field_m = 128;
-        ((gca) this).field_k = 128;
-        ((gca) this).field_h = param0;
+        this.field_m = 128;
+        this.field_k = 128;
+        this.field_h = param0;
     }
 
     final static void a(int param0, int param1, int param2) {
         eq.field_r = param1;
         tqa.field_g = param2;
+        if (param0 != 2533) {
+            field_i = (String[]) null;
+        }
     }
 
     private gca(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((gca) this).field_m = 128;
-        ((gca) this).field_k = 128;
-        ((gca) this).field_b = param4;
-        ((gca) this).field_h = param0;
-        ((gca) this).field_c = param5;
-        ((gca) this).field_m = param1;
-        ((gca) this).field_k = param2;
-        ((gca) this).field_e = param3;
+        this.field_m = 128;
+        this.field_k = 128;
+        this.field_b = param4;
+        this.field_h = param0;
+        this.field_c = param5;
+        this.field_m = param1;
+        this.field_k = param2;
+        this.field_e = param3;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new String[]{"<%0> communed with the dead", "<%0> stumbled into a skeleton", "<%0> got a bit too close to a skeleton", "<%0> forgot to load their gun", "<%0> finally realised what 'Tomb of the Dead' meant", "Someone had a bone to pick with <%0>", "<%0> messed with the undead", "<%0> now believes in the afterlife", "<%0> now realises that the walking dead aren't friendly"};
         field_d = 0;
         field_f = new int[]{28, 32};

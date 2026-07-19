@@ -38,15 +38,18 @@ final class pn extends ij {
     }
 
     final static boolean g(int param0) {
+        if (param0 != 2368) {
+            return false;
+        }
         return null == e.field_m ? vb.field_k : true;
     }
 
     pn(Object param0, int param1) {
         super(param1);
         try {
-            ((pn) this).field_x = param0;
+            this.field_x = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -61,16 +64,12 @@ final class pn extends ij {
     final Object a(int param0) {
         if (param0 > -25) {
             field_t = 51;
-            return ((pn) this).field_x;
+            return this.field_x;
         }
-        return ((pn) this).field_x;
+        return this.field_x;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = new tf();
         field_t = -1;
         field_v = "Please send me news and updates (I can unsubscribe at any time)";

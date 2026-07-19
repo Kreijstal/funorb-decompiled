@@ -15,8 +15,16 @@ final class ta extends gg {
     static String field_l;
 
     final static void a(byte param0) {
-        la.field_B = new mj();
-        sf.field_f.b((rj) (Object) la.field_B, 23143);
+        if (param0 != 91) {
+          ta.a(true, -47);
+          la.field_B = new mj();
+          sf.field_f.b(la.field_B, 23143);
+          return;
+        } else {
+          la.field_B = new mj();
+          sf.field_f.b(la.field_B, 23143);
+          return;
+        }
     }
 
     final static void a(boolean param0, int param1) {
@@ -36,11 +44,22 @@ final class ta extends gg {
     }
 
     public static void a(boolean param0) {
-        field_m = null;
-        field_r = null;
-        field_l = null;
-        field_s = null;
-        field_k = null;
+        if (!param0) {
+          field_l = (String) null;
+          field_m = null;
+          field_r = null;
+          field_l = null;
+          field_s = null;
+          field_k = null;
+          return;
+        } else {
+          field_m = null;
+          field_r = null;
+          field_l = null;
+          field_s = null;
+          field_k = null;
+          return;
+        }
     }
 
     private ta() throws Throwable {
@@ -48,10 +67,6 @@ final class ta extends gg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Highscores";
         field_k = "Create";
         field_m = new uc();

@@ -13,15 +13,14 @@ abstract class wi {
 
     public static void a(boolean param0) {
         field_c = null;
+        if (param0) {
+            wi.a(false);
+        }
     }
 
     abstract pc a(int param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "wi.J(";
         field_b = 9;
         field_c = new jb();

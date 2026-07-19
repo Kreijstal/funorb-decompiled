@@ -8,8 +8,8 @@ final class su extends RuntimeException {
     Throwable field_b;
 
     final static qj a(int param0, on param1, byte[] param2, int param3) {
-        long var4_long = 0L;
         RuntimeException var4 = null;
+        long var4_long = 0L;
         byte[] var10 = null;
         Object stackIn_15_0 = null;
         qj stackIn_19_0 = null;
@@ -27,6 +27,7 @@ final class su extends RuntimeException {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_14_0 = null;
         qj stackOut_18_0 = null;
@@ -55,11 +56,11 @@ final class su extends RuntimeException {
                   jaggl.OpenGL.glShaderSourceRawARB(var4_long, param2);
                   jaggl.OpenGL.glCompileShaderARB(var4_long);
                   jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, dh.field_H, 0);
-                  if (-1 != dh.field_H[0]) {
+                  if (-1 != (dh.field_H[0] ^ -1)) {
                     break L1;
                   } else {
                     L2: {
-                      if (-1 == dh.field_H[0]) {
+                      if (-1 == (dh.field_H[0] ^ -1)) {
                         System.out.println("Shader compile failed:");
                         break L2;
                       } else {
@@ -81,7 +82,8 @@ final class su extends RuntimeException {
                       jaggl.OpenGL.glDeleteObjectARB(var4_long);
                       stackOut_14_0 = null;
                       stackIn_15_0 = stackOut_14_0;
-                      return (qj) (Object) stackIn_15_0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     } else {
                       break L1;
                     }
@@ -97,6 +99,7 @@ final class su extends RuntimeException {
                 }
                 stackOut_18_0 = new qj(param1, var4_long, param0);
                 stackIn_19_0 = stackOut_18_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return null;
@@ -109,23 +112,23 @@ final class su extends RuntimeException {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var4;
+            stackOut_20_0 = (RuntimeException) (var4);
             stackOut_20_1 = new StringBuilder().append("su.A(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L5;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -134,23 +137,23 @@ final class su extends RuntimeException {
             }
           }
           L6: {
-            stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+            stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
             stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param2 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L6;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -158,13 +161,18 @@ final class su extends RuntimeException {
               break L6;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param3 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param3 + ')');
         }
-        return stackIn_19_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (qj) ((Object) stackIn_15_0);
+        } else {
+          return stackIn_19_0;
+        }
     }
 
     final static boolean a(int param0) {
-        Object var2 = null;
+        qj discarded$5 = null;
+        byte[] var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         int stackOut_9_0 = 0;
@@ -183,8 +191,8 @@ final class su extends RuntimeException {
             return stackIn_11_0 != 0;
           }
         } else {
-          var2 = null;
-          qj discarded$5 = su.a(6, (on) null, (byte[]) null, -63);
+          var2 = (byte[]) null;
+          discarded$5 = su.a(6, (on) null, (byte[]) null, -63);
           if (nt.field_r) {
             return true;
           } else {
@@ -205,14 +213,14 @@ final class su extends RuntimeException {
     }
 
     final static void a(byte param0) {
-        rl var1 = (rl) (Object) te.field_g.b((byte) -124);
+        rl var1 = (rl) ((Object) te.field_g.b((byte) -124));
         if (!(var1 != null)) {
             throw new IllegalStateException();
         }
         lk.a(var1.field_v, var1.field_t, var1.field_m);
         lk.d(var1.field_s, var1.field_r, var1.field_u, var1.field_p);
         var1.field_v = null;
-        ko.field_m.a((ms) (Object) var1, (byte) 39);
+        ko.field_m.a((ms) (var1), (byte) 39);
         int var2 = -37 / ((param0 - 1) / 38);
     }
 
@@ -225,15 +233,11 @@ final class su extends RuntimeException {
     }
 
     su(Throwable param0, String param1) {
-        ((su) this).field_a = param1;
-        ((su) this).field_b = param0;
+        this.field_a = param1;
+        this.field_b = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Unpacking music";
         field_c = "Creating your account";
     }

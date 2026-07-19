@@ -29,7 +29,7 @@ final class wh {
         in var4 = null;
         var3 = TetraLink.field_J;
         L0: while (true) {
-          if (((wh) this).field_b <= ((wh) this).field_h) {
+          if (this.field_b <= this.field_h) {
             if (param0 != -1210) {
               field_i = 124;
               return true;
@@ -37,13 +37,13 @@ final class wh {
               return true;
             }
           } else {
-            var4 = ((wh) this).field_d[((wh) this).field_h];
+            var4 = this.field_d[this.field_h];
             if (!var4.field_b.c(124)) {
               this.a(-1, 0, var4);
               return false;
             } else {
               L1: {
-                if (var4.field_f < 0) {
+                if (-1 < (var4.field_f ^ -1)) {
                   break L1;
                 } else {
                   if (!var4.field_b.d(var4.field_f, 0)) {
@@ -67,7 +67,7 @@ final class wh {
                 }
               }
               L3: {
-                if (var4.field_f >= 0) {
+                if (-1 >= (var4.field_f ^ -1)) {
                   break L3;
                 } else {
                   if (null != var4.field_a) {
@@ -86,7 +86,7 @@ final class wh {
                   }
                 }
               }
-              ((wh) this).field_h = ((wh) this).field_h + 1;
+              this.field_h = this.field_h + 1;
               continue L0;
             }
           }
@@ -96,7 +96,7 @@ final class wh {
     private final void a(int param0, int param1, in param2) {
         float var4_float = 0.0f;
         RuntimeException var4 = null;
-        Object var5 = null;
+        in var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -118,41 +118,41 @@ final class wh {
             if (param0 == -1) {
               break L0;
             } else {
-              var5 = null;
+              var5 = (in) null;
               this.a(-72, 55, (in) null);
               break L0;
             }
           }
-          var4_float = (float)param1 / 100.0f + (float)(((wh) this).field_h + 1);
-          ((wh) this).field_f = var4_float * (float)((wh) this).field_g / (float)(((wh) this).field_b + 1);
+          var4_float = (float)param1 / 100.0f + (float)(this.field_h + 1);
+          this.field_f = var4_float * (float)this.field_g / (float)(this.field_b + 1);
           if (param1 != 0) {
-            ((wh) this).field_e = param2.field_e + " - " + param1 + "%";
+            this.field_e = param2.field_e + " - " + param1 + "%";
             return;
           } else {
-            ((wh) this).field_e = param2.field_h;
+            this.field_e = param2.field_h;
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_0 = (RuntimeException) (var4);
             stackOut_6_1 = new StringBuilder().append("wh.C(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -160,7 +160,7 @@ final class wh {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
@@ -169,10 +169,6 @@ final class wh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Please check if address is correct";
         field_a = "2D";
         field_i = -1;

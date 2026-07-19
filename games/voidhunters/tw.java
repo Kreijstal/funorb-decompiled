@@ -80,12 +80,12 @@ final class tw implements ntb {
         try {
           L0: {
             L1: {
-              var5 = (tw) (Object) param0;
-              if (((tw) this).field_d == null) {
+              var5 = (tw) ((Object) param0);
+              if (this.field_d == null) {
                 break L1;
               } else {
                 if (var5.field_d != null) {
-                  ((tw) this).field_d.a((tv) (Object) var5.field_d, -52);
+                  this.field_d.a(var5.field_d, -52);
                   break L1;
                 } else {
                   break L1;
@@ -93,11 +93,11 @@ final class tw implements ntb {
               }
             }
             L2: {
-              if (((tw) this).field_e == null) {
+              if (this.field_e == null) {
                 break L2;
               } else {
                 if (var5.field_e != null) {
-                  ((tw) this).field_e.a((tv) (Object) var5.field_e, -93);
+                  this.field_e.a(var5.field_e, -93);
                   break L2;
                 } else {
                   break L2;
@@ -105,35 +105,35 @@ final class tw implements ntb {
               }
             }
             L3: {
-              if (null == ((tw) this).field_c) {
+              if (null == this.field_c) {
                 break L3;
               } else {
                 if (null == var5.field_c) {
                   break L3;
                 } else {
-                  ((tw) this).field_c.a((tv) (Object) var5.field_c, -60);
+                  this.field_c.a(var5.field_c, -60);
                   break L3;
                 }
               }
             }
             L4: {
-              if (((tw) this).field_a == null) {
+              if (this.field_a == null) {
                 break L4;
               } else {
                 if (null == var5.field_a) {
                   break L4;
                 } else {
-                  ((tw) this).field_a.a((tv) (Object) var5.field_a, -68);
+                  this.field_a.a(var5.field_a, -68);
                   break L4;
                 }
               }
             }
             L5: {
               var4 = 0;
-              if (((tw) this).field_b == var5.field_b) {
+              if (this.field_b == var5.field_b) {
                 break L5;
               } else {
-                System.out.println("int ordertype has changed. before=" + var5.field_b + ", now=" + ((tw) this).field_b);
+                System.out.println("int ordertype has changed. before=" + var5.field_b + ", now=" + this.field_b);
                 var4 = 1;
                 break L5;
               }
@@ -153,7 +153,7 @@ final class tw implements ntb {
               stackOut_19_0 = stackIn_19_0;
               stackIn_21_0 = stackOut_19_0;
               stackIn_20_0 = stackOut_19_0;
-              if (null != ((tw) this).field_d) {
+              if (null != this.field_d) {
                 stackOut_21_0 = stackIn_21_0;
                 stackOut_21_1 = 0;
                 stackIn_22_0 = stackOut_21_0;
@@ -172,10 +172,10 @@ final class tw implements ntb {
                 if ((stackIn_22_0 ^ stackIn_22_1) != 0) {
                   break L9;
                 } else {
-                  if (((tw) this).field_d == null) {
+                  if (this.field_d == null) {
                     break L8;
                   } else {
-                    if (((tw) this).field_d.a((byte) -80, (tv) (Object) var5.field_d)) {
+                    if (this.field_d.a((byte) -80, var5.field_d)) {
                       break L9;
                     } else {
                       break L8;
@@ -184,19 +184,19 @@ final class tw implements ntb {
                 }
               }
               var4 = 1;
-              System.out.println("SettingsChange settings_change has changed. before=" + (Object) (Object) var5.field_d + ", now=" + (Object) (Object) ((tw) this).field_d);
+              System.out.println("SettingsChange settings_change has changed. before=" + var5.field_d + ", now=" + this.field_d);
               break L8;
             }
             L10: {
               if (param1 < -19) {
                 break L10;
               } else {
-                ((tw) this).field_b = 9;
+                this.field_b = 9;
                 break L10;
               }
             }
             L11: {
-              if (null != ((tw) this).field_e) {
+              if (null != this.field_e) {
                 stackOut_31_0 = 0;
                 stackIn_32_0 = stackOut_31_0;
                 break L11;
@@ -229,10 +229,10 @@ final class tw implements ntb {
                 if ((stackIn_35_0 ^ stackIn_35_1) != 0) {
                   break L14;
                 } else {
-                  if (((tw) this).field_e == null) {
+                  if (this.field_e == null) {
                     break L13;
                   } else {
-                    if (((tw) this).field_e.a((byte) -64, (tv) (Object) var5.field_e)) {
+                    if (this.field_e.a((byte) -64, var5.field_e)) {
                       break L14;
                     } else {
                       break L13;
@@ -241,7 +241,7 @@ final class tw implements ntb {
                 }
               }
               var4 = 1;
-              System.out.println("SpawnChoice spawnchoice has changed. before=" + (Object) (Object) var5.field_e + ", now=" + (Object) (Object) ((tw) this).field_e);
+              System.out.println("SpawnChoice spawnchoice has changed. before=" + var5.field_e + ", now=" + this.field_e);
               break L13;
             }
             L15: {
@@ -259,7 +259,7 @@ final class tw implements ntb {
               stackOut_43_0 = stackIn_43_0;
               stackIn_45_0 = stackOut_43_0;
               stackIn_44_0 = stackOut_43_0;
-              if (null != ((tw) this).field_c) {
+              if (null != this.field_c) {
                 stackOut_45_0 = stackIn_45_0;
                 stackOut_45_1 = 0;
                 stackIn_46_0 = stackOut_45_0;
@@ -278,10 +278,10 @@ final class tw implements ntb {
                 if ((stackIn_46_0 ^ stackIn_46_1) != 0) {
                   break L18;
                 } else {
-                  if (((tw) this).field_c == null) {
+                  if (this.field_c == null) {
                     break L17;
                   } else {
-                    if (!((tw) this).field_c.a((byte) -42, (tv) (Object) var5.field_c)) {
+                    if (!this.field_c.a((byte) -42, var5.field_c)) {
                       break L17;
                     } else {
                       break L18;
@@ -290,7 +290,7 @@ final class tw implements ntb {
                 }
               }
               var4 = 1;
-              System.out.println("PlayerVote vote has changed. before=" + (Object) (Object) var5.field_c + ", now=" + (Object) (Object) ((tw) this).field_c);
+              System.out.println("PlayerVote vote has changed. before=" + var5.field_c + ", now=" + this.field_c);
               break L17;
             }
             L19: {
@@ -308,7 +308,7 @@ final class tw implements ntb {
               stackOut_54_0 = stackIn_54_0;
               stackIn_56_0 = stackOut_54_0;
               stackIn_55_0 = stackOut_54_0;
-              if (((tw) this).field_a != null) {
+              if (this.field_a != null) {
                 stackOut_56_0 = stackIn_56_0;
                 stackOut_56_1 = 0;
                 stackIn_57_0 = stackOut_56_0;
@@ -327,10 +327,10 @@ final class tw implements ntb {
                 if ((stackIn_57_0 ^ stackIn_57_1) != 0) {
                   break L22;
                 } else {
-                  if (null == ((tw) this).field_a) {
+                  if (null == this.field_a) {
                     break L21;
                   } else {
-                    if (((tw) this).field_a.a((byte) -40, (tv) (Object) var5.field_a)) {
+                    if (this.field_a.a((byte) -40, var5.field_a)) {
                       break L22;
                     } else {
                       break L21;
@@ -338,7 +338,7 @@ final class tw implements ntb {
                   }
                 }
               }
-              System.out.println("ShipBlueprint blueprint has changed. before=" + (Object) (Object) var5.field_a + ", now=" + (Object) (Object) ((tw) this).field_a);
+              System.out.println("ShipBlueprint blueprint has changed. before=" + var5.field_a + ", now=" + this.field_a);
               var4 = 1;
               break L21;
             }
@@ -353,23 +353,23 @@ final class tw implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L23: {
             var3 = decompiledCaughtException;
-            stackOut_65_0 = (RuntimeException) var3;
+            stackOut_65_0 = (RuntimeException) (var3);
             stackOut_65_1 = new StringBuilder().append("tw.F(");
             stackIn_67_0 = stackOut_65_0;
             stackIn_67_1 = stackOut_65_1;
             stackIn_66_0 = stackOut_65_0;
             stackIn_66_1 = stackOut_65_1;
             if (param0 == null) {
-              stackOut_67_0 = (RuntimeException) (Object) stackIn_67_0;
-              stackOut_67_1 = (StringBuilder) (Object) stackIn_67_1;
+              stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
+              stackOut_67_1 = (StringBuilder) ((Object) stackIn_67_1);
               stackOut_67_2 = "null";
               stackIn_68_0 = stackOut_67_0;
               stackIn_68_1 = stackOut_67_1;
               stackIn_68_2 = stackOut_67_2;
               break L23;
             } else {
-              stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
-              stackOut_66_1 = (StringBuilder) (Object) stackIn_66_1;
+              stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
               stackOut_66_2 = "{...}";
               stackIn_68_0 = stackOut_66_0;
               stackIn_68_1 = stackOut_66_1;
@@ -377,7 +377,7 @@ final class tw implements ntb {
               break L23;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_68_0), stackIn_68_2 + ',' + param1 + ')');
         }
     }
 
@@ -425,7 +425,7 @@ final class tw implements ntb {
                 var5 = var3 + -1;
                 L3: while (true) {
                   L4: {
-                    if (var5 < 0) {
+                    if ((var5 ^ -1) > -1) {
                       break L4;
                     } else {
                       if (!uk.a(param1 ^ -27562, param0[var5], var4)) {
@@ -448,23 +448,23 @@ final class tw implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var2;
+            stackOut_11_0 = (RuntimeException) (var2);
             stackOut_11_1 = new StringBuilder().append("tw.A(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -472,14 +472,14 @@ final class tw implements ntb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
         }
     }
 
     public final void b(byte param0, tv param1) {
         RuntimeException var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        fm[] var5 = null;
         tw var6 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -501,9 +501,9 @@ final class tw implements ntb {
         try {
           L0: {
             L1: {
-              var6 = (tw) (Object) param1;
-              var6.field_b = ((tw) this).field_b;
-              if (null == ((tw) this).field_d) {
+              var6 = (tw) ((Object) param1);
+              var6.field_b = this.field_b;
+              if (null == this.field_d) {
                 var6.field_d = null;
                 break L1;
               } else {
@@ -515,12 +515,12 @@ final class tw implements ntb {
                     break L2;
                   }
                 }
-                ((tw) this).field_d.b((byte) 64, (tv) (Object) var6.field_d);
+                this.field_d.b((byte) 64, var6.field_d);
                 break L1;
               }
             }
             L3: {
-              if (null != ((tw) this).field_e) {
+              if (null != this.field_e) {
                 L4: {
                   if (null != var6.field_e) {
                     break L4;
@@ -529,7 +529,7 @@ final class tw implements ntb {
                     break L4;
                   }
                 }
-                ((tw) this).field_e.b((byte) 111, (tv) (Object) var6.field_e);
+                this.field_e.b((byte) 111, var6.field_e);
                 break L3;
               } else {
                 var6.field_e = null;
@@ -540,13 +540,13 @@ final class tw implements ntb {
               if (param0 > 54) {
                 break L5;
               } else {
-                var5 = null;
+                var5 = (fm[]) null;
                 tw.a((fm[]) null, (byte) -120);
                 break L5;
               }
             }
             L6: {
-              if (((tw) this).field_c != null) {
+              if (this.field_c != null) {
                 L7: {
                   if (null == var6.field_c) {
                     var6.field_c = new dv();
@@ -555,14 +555,14 @@ final class tw implements ntb {
                     break L7;
                   }
                 }
-                ((tw) this).field_c.b((byte) 88, (tv) (Object) var6.field_c);
+                this.field_c.b((byte) 88, var6.field_c);
                 break L6;
               } else {
                 var6.field_c = null;
                 break L6;
               }
             }
-            if (((tw) this).field_a != null) {
+            if (this.field_a != null) {
               L8: {
                 if (var6.field_a != null) {
                   break L8;
@@ -571,7 +571,7 @@ final class tw implements ntb {
                   break L8;
                 }
               }
-              ((tw) this).field_a.b((byte) 86, (tv) (Object) var6.field_a);
+              this.field_a.b((byte) 86, var6.field_a);
               break L0;
             } else {
               var6.field_a = null;
@@ -582,23 +582,23 @@ final class tw implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var3 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var3;
+            stackOut_26_0 = (RuntimeException) (var3);
             stackOut_26_1 = new StringBuilder().append("tw.D(").append(param0).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param1 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L9;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -606,7 +606,7 @@ final class tw implements ntb {
               break L9;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
         }
     }
 
@@ -694,8 +694,8 @@ final class tw implements ntb {
             L1: {
               L2: {
                 var3_int = 114 / ((22 - param0) / 59);
-                var4 = (tw) (Object) param1;
-                if (((tw) this).field_b != var4.field_b) {
+                var4 = (tw) ((Object) param1);
+                if (this.field_b != var4.field_b) {
                   break L2;
                 } else {
                   L3: {
@@ -713,7 +713,7 @@ final class tw implements ntb {
                     stackOut_4_0 = stackIn_4_0;
                     stackIn_6_0 = stackOut_4_0;
                     stackIn_5_0 = stackOut_4_0;
-                    if (null != ((tw) this).field_d) {
+                    if (null != this.field_d) {
                       stackOut_6_0 = stackIn_6_0;
                       stackOut_6_1 = 0;
                       stackIn_7_0 = stackOut_6_0;
@@ -731,10 +731,10 @@ final class tw implements ntb {
                     break L2;
                   } else {
                     L5: {
-                      if (((tw) this).field_d == null) {
+                      if (this.field_d == null) {
                         break L5;
                       } else {
-                        if (((tw) this).field_d.a((byte) 123, (tv) (Object) var4.field_d)) {
+                        if (this.field_d.a((byte) 123, var4.field_d)) {
                           break L2;
                         } else {
                           break L5;
@@ -742,7 +742,7 @@ final class tw implements ntb {
                       }
                     }
                     L6: {
-                      if (((tw) this).field_e != null) {
+                      if (this.field_e != null) {
                         stackOut_13_0 = 0;
                         stackIn_14_0 = stackOut_13_0;
                         break L6;
@@ -774,10 +774,10 @@ final class tw implements ntb {
                       break L2;
                     } else {
                       L8: {
-                        if (((tw) this).field_e == null) {
+                        if (this.field_e == null) {
                           break L8;
                         } else {
-                          if (((tw) this).field_e.a((byte) -38, (tv) (Object) var4.field_e)) {
+                          if (this.field_e.a((byte) -38, var4.field_e)) {
                             break L2;
                           } else {
                             break L8;
@@ -799,7 +799,7 @@ final class tw implements ntb {
                         stackOut_24_0 = stackIn_24_0;
                         stackIn_26_0 = stackOut_24_0;
                         stackIn_25_0 = stackOut_24_0;
-                        if (((tw) this).field_c != null) {
+                        if (this.field_c != null) {
                           stackOut_26_0 = stackIn_26_0;
                           stackOut_26_1 = 0;
                           stackIn_27_0 = stackOut_26_0;
@@ -817,10 +817,10 @@ final class tw implements ntb {
                         break L2;
                       } else {
                         L11: {
-                          if (((tw) this).field_c == null) {
+                          if (this.field_c == null) {
                             break L11;
                           } else {
-                            if (((tw) this).field_c.a((byte) 110, (tv) (Object) var4.field_c)) {
+                            if (this.field_c.a((byte) 110, var4.field_c)) {
                               break L2;
                             } else {
                               break L11;
@@ -828,7 +828,7 @@ final class tw implements ntb {
                           }
                         }
                         L12: {
-                          if (((tw) this).field_a != null) {
+                          if (this.field_a != null) {
                             stackOut_33_0 = 0;
                             stackIn_34_0 = stackOut_33_0;
                             break L12;
@@ -860,10 +860,10 @@ final class tw implements ntb {
                           break L2;
                         } else {
                           L14: {
-                            if (((tw) this).field_a == null) {
+                            if (this.field_a == null) {
                               break L14;
                             } else {
-                              if (!((tw) this).field_a.a((byte) -118, (tv) (Object) var4.field_a)) {
+                              if (!this.field_a.a((byte) -118, var4.field_a)) {
                                 break L14;
                               } else {
                                 break L2;
@@ -889,23 +889,23 @@ final class tw implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var3 = decompiledCaughtException;
-            stackOut_44_0 = (RuntimeException) var3;
+            stackOut_44_0 = (RuntimeException) (var3);
             stackOut_44_1 = new StringBuilder().append("tw.C(").append(param0).append(',');
             stackIn_46_0 = stackOut_44_0;
             stackIn_46_1 = stackOut_44_1;
             stackIn_45_0 = stackOut_44_0;
             stackIn_45_1 = stackOut_44_1;
             if (param1 == null) {
-              stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
-              stackOut_46_1 = (StringBuilder) (Object) stackIn_46_1;
+              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
               stackOut_46_2 = "null";
               stackIn_47_0 = stackOut_46_0;
               stackIn_47_1 = stackOut_46_1;
               stackIn_47_2 = stackOut_46_2;
               break L15;
             } else {
-              stackOut_45_0 = (RuntimeException) (Object) stackIn_45_0;
-              stackOut_45_1 = (StringBuilder) (Object) stackIn_45_1;
+              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
               stackOut_45_2 = "{...}";
               stackIn_47_0 = stackOut_45_0;
               stackIn_47_1 = stackOut_45_1;
@@ -913,7 +913,7 @@ final class tw implements ntb {
               break L15;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_47_0, stackIn_47_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_47_0), stackIn_47_2 + ')');
         }
         return stackIn_43_0 != 0;
     }
@@ -955,6 +955,7 @@ final class tw implements ntb {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         faa stackOut_2_0 = null;
         int stackOut_2_1 = 0;
@@ -998,17 +999,17 @@ final class tw implements ntb {
         String stackOut_26_2 = null;
         try {
           L0: {
-            param0.a(-632, ((tw) this).field_b, 32);
+            param0.a(-632, this.field_b, 32);
             if (param1 < -109) {
               L1: {
-                stackOut_2_0 = (faa) param0;
+                stackOut_2_0 = (faa) (param0);
                 stackOut_2_1 = 66;
                 stackIn_4_0 = stackOut_2_0;
                 stackIn_4_1 = stackOut_2_1;
                 stackIn_3_0 = stackOut_2_0;
                 stackIn_3_1 = stackOut_2_1;
-                if (null == ((tw) this).field_d) {
-                  stackOut_4_0 = (faa) (Object) stackIn_4_0;
+                if (null == this.field_d) {
+                  stackOut_4_0 = (faa) ((Object) stackIn_4_0);
                   stackOut_4_1 = stackIn_4_1;
                   stackOut_4_2 = 0;
                   stackIn_5_0 = stackOut_4_0;
@@ -1016,7 +1017,7 @@ final class tw implements ntb {
                   stackIn_5_2 = stackOut_4_2;
                   break L1;
                 } else {
-                  stackOut_3_0 = (faa) (Object) stackIn_3_0;
+                  stackOut_3_0 = (faa) ((Object) stackIn_3_0);
                   stackOut_3_1 = stackIn_3_1;
                   stackOut_3_2 = 1;
                   stackIn_5_0 = stackOut_3_0;
@@ -1027,21 +1028,21 @@ final class tw implements ntb {
               }
               L2: {
                 if (vq.a(stackIn_5_0, stackIn_5_1, stackIn_5_2 != 0)) {
-                  ((tw) this).field_d.b(param0, -110);
+                  this.field_d.b(param0, -110);
                   break L2;
                 } else {
                   break L2;
                 }
               }
               L3: {
-                stackOut_8_0 = (faa) param0;
+                stackOut_8_0 = (faa) (param0);
                 stackOut_8_1 = 80;
                 stackIn_10_0 = stackOut_8_0;
                 stackIn_10_1 = stackOut_8_1;
                 stackIn_9_0 = stackOut_8_0;
                 stackIn_9_1 = stackOut_8_1;
-                if (((tw) this).field_e == null) {
-                  stackOut_10_0 = (faa) (Object) stackIn_10_0;
+                if (this.field_e == null) {
+                  stackOut_10_0 = (faa) ((Object) stackIn_10_0);
                   stackOut_10_1 = stackIn_10_1;
                   stackOut_10_2 = 0;
                   stackIn_11_0 = stackOut_10_0;
@@ -1049,7 +1050,7 @@ final class tw implements ntb {
                   stackIn_11_2 = stackOut_10_2;
                   break L3;
                 } else {
-                  stackOut_9_0 = (faa) (Object) stackIn_9_0;
+                  stackOut_9_0 = (faa) ((Object) stackIn_9_0);
                   stackOut_9_1 = stackIn_9_1;
                   stackOut_9_2 = 1;
                   stackIn_11_0 = stackOut_9_0;
@@ -1062,19 +1063,19 @@ final class tw implements ntb {
                 if (vq.a(stackIn_11_0, stackIn_11_1, stackIn_11_2 == 0)) {
                   break L4;
                 } else {
-                  ((tw) this).field_e.b(param0, -125);
+                  this.field_e.b(param0, -125);
                   break L4;
                 }
               }
               L5: {
-                stackOut_13_0 = (faa) param0;
+                stackOut_13_0 = (faa) (param0);
                 stackOut_13_1 = 117;
                 stackIn_15_0 = stackOut_13_0;
                 stackIn_15_1 = stackOut_13_1;
                 stackIn_14_0 = stackOut_13_0;
                 stackIn_14_1 = stackOut_13_1;
-                if (((tw) this).field_c == null) {
-                  stackOut_15_0 = (faa) (Object) stackIn_15_0;
+                if (this.field_c == null) {
+                  stackOut_15_0 = (faa) ((Object) stackIn_15_0);
                   stackOut_15_1 = stackIn_15_1;
                   stackOut_15_2 = 0;
                   stackIn_16_0 = stackOut_15_0;
@@ -1082,7 +1083,7 @@ final class tw implements ntb {
                   stackIn_16_2 = stackOut_15_2;
                   break L5;
                 } else {
-                  stackOut_14_0 = (faa) (Object) stackIn_14_0;
+                  stackOut_14_0 = (faa) ((Object) stackIn_14_0);
                   stackOut_14_1 = stackIn_14_1;
                   stackOut_14_2 = 1;
                   stackIn_16_0 = stackOut_14_0;
@@ -1095,19 +1096,19 @@ final class tw implements ntb {
                 if (vq.a(stackIn_16_0, stackIn_16_1, stackIn_16_2 == 0)) {
                   break L6;
                 } else {
-                  ((tw) this).field_c.b(param0, -126);
+                  this.field_c.b(param0, -126);
                   break L6;
                 }
               }
               L7: {
-                stackOut_18_0 = (faa) param0;
+                stackOut_18_0 = (faa) (param0);
                 stackOut_18_1 = 122;
                 stackIn_20_0 = stackOut_18_0;
                 stackIn_20_1 = stackOut_18_1;
                 stackIn_19_0 = stackOut_18_0;
                 stackIn_19_1 = stackOut_18_1;
-                if (null == ((tw) this).field_a) {
-                  stackOut_20_0 = (faa) (Object) stackIn_20_0;
+                if (null == this.field_a) {
+                  stackOut_20_0 = (faa) ((Object) stackIn_20_0);
                   stackOut_20_1 = stackIn_20_1;
                   stackOut_20_2 = 0;
                   stackIn_21_0 = stackOut_20_0;
@@ -1115,7 +1116,7 @@ final class tw implements ntb {
                   stackIn_21_2 = stackOut_20_2;
                   break L7;
                 } else {
-                  stackOut_19_0 = (faa) (Object) stackIn_19_0;
+                  stackOut_19_0 = (faa) ((Object) stackIn_19_0);
                   stackOut_19_1 = stackIn_19_1;
                   stackOut_19_2 = 1;
                   stackIn_21_0 = stackOut_19_0;
@@ -1125,36 +1126,38 @@ final class tw implements ntb {
                 }
               }
               if (vq.a(stackIn_21_0, stackIn_21_1, stackIn_21_2 != 0)) {
-                ((tw) this).field_a.b(param0, -113);
+                this.field_a.b(param0, -113);
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var3;
+            stackOut_25_0 = (RuntimeException) (var3);
             stackOut_25_1 = new StringBuilder().append("tw.B(");
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L8;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -1162,12 +1165,17 @@ final class tw implements ntb {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     tw(int param0) {
-        ((tw) this).field_b = param0;
+        this.field_b = param0;
     }
 
     public final void a(faa param0, boolean param1) {
@@ -1193,68 +1201,68 @@ final class tw implements ntb {
         try {
           L0: {
             L1: {
-              ((tw) this).field_b = param0.i(0, 32);
+              this.field_b = param0.i(0, 32);
               if (kv.a(param1, param0)) {
                 L2: {
-                  if (null == ((tw) this).field_d) {
-                    ((tw) this).field_d = new so();
+                  if (null == this.field_d) {
+                    this.field_d = new so();
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                ((tw) this).field_d.a(param0, false);
+                this.field_d.a(param0, false);
                 break L1;
               } else {
-                ((tw) this).field_d = null;
+                this.field_d = null;
                 break L1;
               }
             }
             L3: {
               if (!kv.a(false, param0)) {
-                ((tw) this).field_e = null;
+                this.field_e = null;
                 break L3;
               } else {
                 L4: {
-                  if (null == ((tw) this).field_e) {
-                    ((tw) this).field_e = new twa();
+                  if (null == this.field_e) {
+                    this.field_e = new twa();
                     break L4;
                   } else {
                     break L4;
                   }
                 }
-                ((tw) this).field_e.a(param0, false);
+                this.field_e.a(param0, false);
                 break L3;
               }
             }
             L5: {
               if (!kv.a(false, param0)) {
-                ((tw) this).field_c = null;
+                this.field_c = null;
                 break L5;
               } else {
-                if (((tw) this).field_c != null) {
-                  ((tw) this).field_c.a(param0, false);
+                if (this.field_c != null) {
+                  this.field_c.a(param0, false);
                   break L5;
                 } else {
-                  ((tw) this).field_c = new dv();
-                  ((tw) this).field_c.a(param0, false);
+                  this.field_c = new dv();
+                  this.field_c.a(param0, false);
                   break L5;
                 }
               }
             }
             if (kv.a(param1, param0)) {
               L6: {
-                if (null != ((tw) this).field_a) {
+                if (null != this.field_a) {
                   break L6;
                 } else {
-                  ((tw) this).field_a = new boa();
+                  this.field_a = new boa();
                   break L6;
                 }
               }
-              ((tw) this).field_a.a(param0, param1);
+              this.field_a.a(param0, param1);
               break L0;
             } else {
-              ((tw) this).field_a = null;
+              this.field_a = null;
               return;
             }
           }
@@ -1262,23 +1270,23 @@ final class tw implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var3;
+            stackOut_25_0 = (RuntimeException) (var3);
             stackOut_25_1 = new StringBuilder().append("tw.H(");
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -1286,7 +1294,7 @@ final class tw implements ntb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ')');
         }
     }
 

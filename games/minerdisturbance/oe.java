@@ -14,12 +14,18 @@ abstract class oe {
 
     final static void a(boolean param0) {
         ef.field_a = 0;
+        if (!param0) {
+            field_b = true;
+        }
     }
 
     abstract void a(int param0, java.awt.Component param1);
 
     public static void b(byte param0) {
-        field_e = null;
+        if (param0 <= 103) {
+            return;
+        }
+        field_e = (byte[][]) null;
         field_c = null;
         field_g = null;
         field_f = null;
@@ -28,10 +34,6 @@ abstract class oe {
     abstract int a(byte param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Login: ";
         field_f = "DANGER!";
         field_e = new byte[1000][];

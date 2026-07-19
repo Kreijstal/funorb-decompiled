@@ -18,7 +18,7 @@ final class fi {
         int var7 = 0;
         param0 = param0 - (param3.field_A >> 1);
         var5 = param2 - 5;
-        var6 = param2 - 4;
+        var6 = param2 - 3 - 1;
         var7 = 0;
         L0: while (true) {
           if (var7 >= param2) {
@@ -59,6 +59,8 @@ final class fi {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+        int incrementValue$82 = 0;
+        int incrementValue$83 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -82,7 +84,7 @@ final class fi {
                   if (var14 >= 0) {
                     break L1;
                   } else {
-                    int incrementValue$82 = param3;
+                    incrementValue$82 = param3;
                     param3++;
                     param2 = param1[incrementValue$82];
                     if (param2 == 0) {
@@ -91,7 +93,7 @@ final class fi {
                       continue L2;
                     } else {
                       var15 = param0[param4];
-                      int incrementValue$83 = param4;
+                      incrementValue$83 = param4;
                       param4++;
                       param0[incrementValue$83] = ((param2 & 16711935) * var11 + (var15 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var11 + (var15 & 65280) * var12 & 16711680) >> 8;
                       var14++;
@@ -280,6 +282,10 @@ final class fi {
     }
 
     final static void a(int[] param0, int param1, int param2) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -319,12 +325,12 @@ final class fi {
                     if (var11 >= 0) {
                       break L1;
                     } else {
-                      int incrementValue$4 = var7;
+                      incrementValue$4 = var7;
                       var7++;
                       var15 = param0[incrementValue$4];
                       var16 = t.field_k[var10];
                       var17 = (var16 & 16711935) * var14 + (var15 & 16711935) * var13 >> 8 & 16711935;
-                      int incrementValue$5 = var10;
+                      incrementValue$5 = var10;
                       var10++;
                       t.field_k[incrementValue$5] = var17 + ((var16 & 65280) * var14 + (var15 & 65280) * var13 >> 8 & 65280);
                       var11++;
@@ -337,10 +343,10 @@ final class fi {
                     if (var11 >= 0) {
                       break L1;
                     } else {
-                      int incrementValue$6 = var7;
+                      incrementValue$6 = var7;
                       var7++;
                       var15 = param0[incrementValue$6];
-                      int incrementValue$7 = var10;
+                      incrementValue$7 = var10;
                       var10++;
                       t.field_k[incrementValue$7] = var15;
                       var11++;
@@ -530,6 +536,8 @@ final class fi {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -543,7 +551,7 @@ final class fi {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66] & 255;
                 if (param0 == 0) {
@@ -553,7 +561,7 @@ final class fi {
                 } else {
                   param2 = param3[param7];
                   param1 = 255 - param0;
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = ((param2 & 16711935) * param1 & -16711936) + ((param2 & 65280) * param1 & 16711680) + ((param13 & 16711935) * param0 & -16711936) + ((param13 & 65280) * param0 & 16711680) >> 8;
                   param6++;
@@ -566,44 +574,90 @@ final class fi {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var10 = 0;
-        int var11 = 0;
+        int incrementValue$1 = 0;
+        int var6 = 0;
+        int var7 = 0;
         int var8 = 0;
         int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         int var12 = 0;
-        if (param0 < t.field_e) {
+        L0: {
+          if (param0 >= t.field_e) {
+            break L0;
+          } else {
             param2 = param2 - (t.field_e - param0);
             param0 = t.field_e;
+            break L0;
+          }
         }
-        if (param1 < t.field_f) {
+        L1: {
+          if (param1 >= t.field_f) {
+            break L1;
+          } else {
             param3 = param3 - (t.field_f - param1);
             param1 = t.field_f;
+            break L1;
+          }
         }
-        if (param0 + param2 > t.field_h) {
+        L2: {
+          if (param0 + param2 <= t.field_h) {
+            break L2;
+          } else {
             param2 = t.field_h - param0;
+            break L2;
+          }
         }
-        if (param1 + param3 > t.field_a) {
+        L3: {
+          if (param1 + param3 <= t.field_a) {
+            break L3;
+          } else {
             param3 = t.field_a - param1;
+            break L3;
+          }
         }
-        int var6 = t.field_j - param2;
-        int var7 = param0 + param1 * t.field_j;
-        for (var10 = -param3; var10 < 0; var10++) {
-            for (var11 = -param2; var11 < 0; var11++) {
-                var8 = 668477400;
-                var9 = (var8 & -16711936) + (671088600 - var8 & 16711680) >>> 8;
+        var6 = t.field_j - param2;
+        var7 = param0 + param1 * t.field_j;
+        var10 = -param3;
+        L4: while (true) {
+          if (var10 >= 0) {
+            return;
+          } else {
+            var11 = -param2;
+            L5: while (true) {
+              if (var11 >= 0) {
+                var7 = var7 + var6;
+                var10++;
+                continue L4;
+              } else {
+                var8 = (param4 & 16711935) * param5;
+                var9 = (var8 & -16711936) + (param4 * param5 - var8 & 16711680) >>> 8;
                 var8 = t.field_k[var7];
                 var12 = var9 + var8;
                 var9 = (var9 & 16711935) + (var8 & 16711935);
                 var8 = (var9 & 16777472) + (var12 - var9 & 65536);
-                int incrementValue$0 = var7;
+                incrementValue$1 = var7;
                 var7++;
-                t.field_k[incrementValue$0] = var12 - var8 | var8 - (var8 >>> 8);
+                t.field_k[incrementValue$1] = var12 - var8 | var8 - (var8 >>> 8);
+                var11++;
+                continue L5;
+              }
             }
-            var7 = var7 + var6;
+          }
         }
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, byte[] param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -626,11 +680,11 @@ final class fi {
                     continue L0;
                   } else {
                     param2 = param1[param3];
-                    int incrementValue$10 = param3;
+                    incrementValue$10 = param3;
                     param3++;
                     if (param9[incrementValue$10] != 0) {
                       if (param2 != 0) {
-                        int incrementValue$11 = param4;
+                        incrementValue$11 = param4;
                         param4++;
                         param0[incrementValue$11] = param2;
                         var12++;
@@ -651,7 +705,7 @@ final class fi {
                 L3: {
                   L4: {
                     param2 = param1[param3];
-                    int incrementValue$12 = param3;
+                    incrementValue$12 = param3;
                     param3++;
                     if (param9[incrementValue$12] == 0) {
                       break L4;
@@ -659,7 +713,7 @@ final class fi {
                       if (param2 == 0) {
                         break L4;
                       } else {
-                        int incrementValue$13 = param4;
+                        incrementValue$13 = param4;
                         param4++;
                         param0[incrementValue$13] = param2;
                         break L3;
@@ -672,7 +726,7 @@ final class fi {
                 L5: {
                   L6: {
                     param2 = param1[param3];
-                    int incrementValue$14 = param3;
+                    incrementValue$14 = param3;
                     param3++;
                     if (param9[incrementValue$14] == 0) {
                       break L6;
@@ -680,7 +734,7 @@ final class fi {
                       if (param2 == 0) {
                         break L6;
                       } else {
-                        int incrementValue$15 = param4;
+                        incrementValue$15 = param4;
                         param4++;
                         param0[incrementValue$15] = param2;
                         break L5;
@@ -693,7 +747,7 @@ final class fi {
                 L7: {
                   L8: {
                     param2 = param1[param3];
-                    int incrementValue$16 = param3;
+                    incrementValue$16 = param3;
                     param3++;
                     if (param9[incrementValue$16] == 0) {
                       break L8;
@@ -701,7 +755,7 @@ final class fi {
                       if (param2 == 0) {
                         break L8;
                       } else {
-                        int incrementValue$17 = param4;
+                        incrementValue$17 = param4;
                         param4++;
                         param0[incrementValue$17] = param2;
                         break L7;
@@ -712,11 +766,11 @@ final class fi {
                   break L7;
                 }
                 param2 = param1[param3];
-                int incrementValue$18 = param3;
+                incrementValue$18 = param3;
                 param3++;
                 if (param9[incrementValue$18] != 0) {
                   if (param2 != 0) {
-                    int incrementValue$19 = param4;
+                    incrementValue$19 = param4;
                     param4++;
                     param0[incrementValue$19] = param2;
                     var12++;
@@ -815,8 +869,8 @@ final class fi {
     }
 
     final static void a(jl param0, String param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        param0.b(param1, 30, param5, 0, -1, param8);
-        param0.b(param2, 30 + param3, param5, 0, -1, param8);
+        param0.b(param1, param4, param5, param6, param7, param8);
+        param0.b(param2, param4 + param3, param5, param6, param7, param8);
     }
 
     final static tf a(int param0) {
@@ -831,6 +885,8 @@ final class fi {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -848,7 +904,7 @@ final class fi {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -858,7 +914,7 @@ final class fi {
                 } else {
                   var9 = param0[param4];
                   var10 = 256 - (param2 & 255);
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (var9 & 16711935) * var10 >> 8 & 16711935 | (var9 & 65280) * var10 >> 8 & 65280;
                   var12++;

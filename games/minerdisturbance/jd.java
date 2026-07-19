@@ -8,7 +8,7 @@ final class jd {
 
     final ji a() {
         byte[] var1 = this.b();
-        return new ji(22050, var1, 22050 * ((jd) this).field_a / 1000, 22050 * ((jd) this).field_c / 1000);
+        return new ji(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
     final static jd a(bj param0, String param1, String param2) {
@@ -49,10 +49,10 @@ final class jd {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((jd) this).field_b[var4] != null) {
-                    var5 = ((jd) this).field_b[var4].field_h * 22050 / 1000;
-                    var6 = ((jd) this).field_b[var4].field_d * 22050 / 1000;
-                    var13 = ((jd) this).field_b[var4].a(var5, ((jd) this).field_b[var4].field_h);
+                  if (this.field_b[var4] != null) {
+                    var5 = this.field_b[var4].field_h * 22050 / 1000;
+                    var6 = this.field_b[var4].field_d * 22050 / 1000;
+                    var13 = this.field_b[var4].a(var5, this.field_b[var4].field_h);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -83,9 +83,9 @@ final class jd {
               return new byte[]{};
             }
           } else {
-            if (((jd) this).field_b[var2] != null) {
-              if (((jd) this).field_b[var2].field_h + ((jd) this).field_b[var2].field_d > var1) {
-                var1 = ((jd) this).field_b[var2].field_h + ((jd) this).field_b[var2].field_d;
+            if (this.field_b[var2] != null) {
+              if (this.field_b[var2].field_h + this.field_b[var2].field_d > var1) {
+                var1 = this.field_b[var2].field_h + this.field_b[var2].field_d;
                 var2++;
                 continue L0;
               } else {
@@ -103,19 +103,19 @@ final class jd {
     private jd(sb param0) {
         int var2 = 0;
         int var3 = 0;
-        ((jd) this).field_b = new ve[10];
+        this.field_b = new ve[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((jd) this).field_a = param0.e(-102);
-            ((jd) this).field_c = param0.e(-65);
+            this.field_a = param0.e(-102);
+            this.field_c = param0.e(-65);
             return;
           } else {
             var3 = param0.d((byte) -54);
             if (var3 != 0) {
               param0.field_o = param0.field_o - 1;
-              ((jd) this).field_b[var2] = new ve();
-              ((jd) this).field_b[var2].a(param0);
+              this.field_b[var2] = new ve();
+              this.field_b[var2].a(param0);
               var2++;
               continue L0;
             } else {

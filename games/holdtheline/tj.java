@@ -22,14 +22,14 @@ abstract class tj extends hl {
     abstract tj a();
 
     final void a(int[] param0, int param1, int param2) {
-        if (((tj) this).field_l) {
-            ((tj) this).b(param0, param1, param2);
+        if (this.field_l) {
+            this.b(param0, param1, param2);
         } else {
-            ((tj) this).a(param2);
+            this.a(param2);
         }
     }
 
     protected tj() {
-        ((tj) this).field_l = true;
+        this.field_l = true;
     }
 }

@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.awt.Canvas;
-
 public final class HoldTheLine extends oh {
     static ql field_F;
     private int field_C;
@@ -15,9 +13,9 @@ public final class HoldTheLine extends oh {
 
     public final void init() {
         try {
-            ((HoldTheLine) this).a(13, 6165, "holdtheline");
+            this.a(13, 6165, "holdtheline");
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "HoldTheLine.init()");
+            throw kk.a((Throwable) ((Object) runtimeException), "HoldTheLine.init()");
         }
     }
 
@@ -317,13 +315,13 @@ public final class HoldTheLine extends oh {
             fd.a(115);
             ob.c(param0 + -24709);
             sh.a(11);
-            ((HoldTheLine) this).field_n = null;
+            this.field_n = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var2, "HoldTheLine.IA(" + param0 + ')');
+          throw kk.a((Throwable) ((Object) var2), "HoldTheLine.IA(" + param0 + ')');
         }
     }
 
@@ -336,7 +334,7 @@ public final class HoldTheLine extends oh {
               if (param0 == -35) {
                 break L1;
               } else {
-                field_F = null;
+                field_F = (ql) null;
                 break L1;
               }
             }
@@ -364,7 +362,7 @@ public final class HoldTheLine extends oh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var2, "HoldTheLine.NA(" + param0 + ')');
+          throw kk.a((Throwable) ((Object) var2), "HoldTheLine.NA(" + param0 + ')');
         }
     }
 
@@ -387,7 +385,7 @@ public final class HoldTheLine extends oh {
               if (param0 == 30) {
                 break L2;
               } else {
-                ((HoldTheLine) this).field_C = -31;
+                this.field_C = -31;
                 break L2;
               }
             }
@@ -396,7 +394,7 @@ public final class HoldTheLine extends oh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var2, "HoldTheLine.MA(" + param0 + ')');
+          throw kk.a((Throwable) ((Object) var2), "HoldTheLine.MA(" + param0 + ')');
         }
     }
 
@@ -411,32 +409,35 @@ public final class HoldTheLine extends oh {
             Object stackOut_5_0 = null;
             try {
               L0: {
-                if (param0 <= -37) {
-                  break L0;
-                } else {
-                  field_B = null;
-                  break L0;
-                }
-              }
-              try {
                 L1: {
-                  stackOut_3_0 = (jf) Class.forName("f").newInstance();
-                  stackIn_4_0 = stackOut_3_0;
-                  break L1;
+                  if (param0 <= -37) {
+                    break L1;
+                  } else {
+                    field_B = (String) null;
+                    break L1;
+                  }
                 }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var1 = decompiledCaughtException;
-                stackOut_5_0 = null;
-                stackIn_6_0 = stackOut_5_0;
-                return (jf) (Object) stackIn_6_0;
+                try {
+                  L2: {
+                    stackOut_3_0 = (jf) (Class.forName("f").newInstance());
+                    stackIn_4_0 = stackOut_3_0;
+                    break L2;
+                  }
+                } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var1 = decompiledCaughtException;
+                  stackOut_5_0 = null;
+                  stackIn_6_0 = stackOut_5_0;
+                  return (jf) ((Object) stackIn_6_0);
+                }
+                break L0;
               }
-              return stackIn_4_0;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw kk.a((Throwable) (Object) var1_ref, "HoldTheLine.QA(" + param0 + ')');
+              throw kk.a((Throwable) ((Object) var1_ref), "HoldTheLine.QA(" + param0 + ')');
             }
+            return stackIn_4_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -450,29 +451,34 @@ public final class HoldTheLine extends oh {
         try {
           L0: {
             L1: {
-              ((HoldTheLine) this).a(8, false, 1, 0, (byte) 63, 11, 12, 2);
-              ((HoldTheLine) this).a(false, true, true, true, 640);
-              ((HoldTheLine) this).field_z = false;
+              this.a(8, false, 1, 0, (byte) 63, 11, 12, 2);
+              this.a(false, true, true, true, 640);
+              this.field_z = false;
               if (param0 >= 78) {
                 break L1;
               } else {
-                ((HoldTheLine) this).init();
+                this.init();
                 break L1;
               }
             }
-            lh.a(wi.field_b, -81, (java.awt.Component) (Object) kd.field_b);
+            lh.a(wi.field_b, -81, (java.awt.Component) ((Object) kd.field_b));
             ec.field_y = null;
-            go.a(0, 16777215, co.field_a, (java.applet.Applet) this, 0, 0);
+            go.a(0, 16777215, co.field_a, (java.applet.Applet) (this), 0, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var2, "HoldTheLine.FA(" + param0 + ')');
+          throw kk.a((Throwable) ((Object) var2), "HoldTheLine.FA(" + param0 + ')');
         }
     }
 
     final void a(int param0) {
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -498,6 +504,7 @@ public final class HoldTheLine extends oh {
         Object stackIn_284_0 = null;
         int stackIn_284_1 = 0;
         int stackIn_284_2 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_1_0 = null;
         int stackOut_1_1 = 0;
@@ -557,7 +564,7 @@ public final class HoldTheLine extends oh {
               }
             }
             L2: {
-              ((HoldTheLine) this).b(stackIn_5_1, stackIn_5_2 != 0);
+              this.b(stackIn_5_1, stackIn_5_2 != 0);
               if (!nk.field_R) {
                 break L2;
               } else {
@@ -572,7 +579,7 @@ public final class HoldTheLine extends oh {
                   if (!tl.a(ae.field_e, 31881)) {
                     break L5;
                   } else {
-                    ((HoldTheLine) this).j(-6);
+                    this.j(-6);
                     if (var5 != 0) {
                       break L4;
                     } else {
@@ -591,7 +598,7 @@ public final class HoldTheLine extends oh {
                 if (!nn.a((byte) -127)) {
                   break L6;
                 } else {
-                  ((HoldTheLine) this).l(0);
+                  this.l(0);
                   if (!nn.a((byte) -127)) {
                     break L6;
                   } else {
@@ -603,11 +610,12 @@ public final class HoldTheLine extends oh {
                         break L7;
                       }
                     }
-                    return;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   }
                 }
               }
-              if (((HoldTheLine) this).field_z) {
+              if (this.field_z) {
                 L8: {
                   L9: {
                     if (!mg.field_c) {
@@ -645,8 +653,8 @@ public final class HoldTheLine extends oh {
                   } else {
                     L12: {
                       L13: {
-                        var3 = ((HoldTheLine) this).d((byte) 89);
-                        if (var3 == 0) {
+                        var3 = this.d((byte) 89);
+                        if ((var3 ^ -1) == -1) {
                           break L13;
                         } else {
                           if (1 == var3) {
@@ -727,7 +735,7 @@ public final class HoldTheLine extends oh {
                   L19: {
                     L20: {
                       var3 = 4 % ((param0 - -18) / 44);
-                      if (((HoldTheLine) this).field_C > 0) {
+                      if ((this.field_C ^ -1) < -1) {
                         break L20;
                       } else {
                         L21: {
@@ -737,7 +745,7 @@ public final class HoldTheLine extends oh {
                             L22: {
                               L23: {
                                 var4 = sk.a((byte) 18);
-                                if (var4 == 2) {
+                                if (-3 == (var4 ^ -1)) {
                                   break L23;
                                 } else {
                                   L24: {
@@ -781,21 +789,21 @@ public final class HoldTheLine extends oh {
                             break L25;
                           } else {
                             L26: {
-                              if (~ej.field_b != ~dg.field_c) {
+                              if ((ej.field_b ^ -1) != (dg.field_c ^ -1)) {
                                 break L26;
                               } else {
                                 if (vg.field_G != 0) {
                                   break L26;
                                 } else {
                                   L27: {
-                                    if (dg.field_c == -1) {
+                                    if (0 == (dg.field_c ^ -1)) {
                                       break L27;
                                     } else {
                                       L28: {
                                         if (!kk.field_j) {
                                           break L28;
                                         } else {
-                                          if (dg.field_c == 0) {
+                                          if (-1 == (dg.field_c ^ -1)) {
                                             mg.a(-1);
                                             break L28;
                                           } else {
@@ -812,7 +820,7 @@ public final class HoldTheLine extends oh {
                                               if (1 == ud.field_d) {
                                                 break L30;
                                               } else {
-                                                if (ma.field_k == 1) {
+                                                if (-2 == (ma.field_k ^ -1)) {
                                                   break L30;
                                                 } else {
                                                   break L31;
@@ -820,7 +828,7 @@ public final class HoldTheLine extends oh {
                                               }
                                             }
                                           }
-                                          int fieldTemp$5 = pc.field_h - 2;
+                                          fieldTemp$5 = pc.field_h - 2;
                                           pc.field_h = pc.field_h - 2;
                                           if (0 <= fieldTemp$5) {
                                             break L29;
@@ -834,9 +842,9 @@ public final class HoldTheLine extends oh {
                                           }
                                         }
                                         ra.m(126);
-                                        int fieldTemp$6 = pc.field_h + 2;
+                                        fieldTemp$6 = pc.field_h + 2;
                                         pc.field_h = pc.field_h + 2;
-                                        if (fieldTemp$6 > 255) {
+                                        if (-256 > (fieldTemp$6 ^ -1)) {
                                           pc.field_h = 255;
                                           break L29;
                                         } else {
@@ -852,8 +860,8 @@ public final class HoldTheLine extends oh {
                                               break L33;
                                             } else {
                                               L34: {
-                                                ((ec) (Object) l.field_a[dg.field_c]).c((byte) -109);
-                                                if (((ec) (Object) l.field_a[dg.field_c]).field_P != 1) {
+                                                ((ec) ((Object) l.field_a[dg.field_c])).c((byte) -109);
+                                                if (((ec) ((Object) l.field_a[dg.field_c])).field_P != 1) {
                                                   stackOut_151_0 = 0;
                                                   stackIn_152_0 = stackOut_151_0;
                                                   break L34;
@@ -872,8 +880,8 @@ public final class HoldTheLine extends oh {
                                             }
                                           }
                                           L35: {
-                                            ((ti) (Object) l.field_a[dg.field_c]).a(116, false);
-                                            if (((ti) (Object) l.field_a[dg.field_c]).field_y != 1) {
+                                            ((ti) ((Object) l.field_a[dg.field_c])).a(116, false);
+                                            if (-2 != (((ti) ((Object) l.field_a[dg.field_c])).field_y ^ -1)) {
                                               stackOut_158_0 = 0;
                                               stackIn_159_0 = stackOut_158_0;
                                               break L35;
@@ -917,7 +925,7 @@ public final class HoldTheLine extends oh {
                               }
                             }
                             L37: {
-                              if (dg.field_c == -1) {
+                              if (0 == (dg.field_c ^ -1)) {
                                 break L37;
                               } else {
                                 if (-1 == ej.field_b) {
@@ -932,7 +940,7 @@ public final class HoldTheLine extends oh {
                                           if (1 == ud.field_d) {
                                             break L39;
                                           } else {
-                                            if (ma.field_k == 1) {
+                                            if (-2 == (ma.field_k ^ -1)) {
                                               break L39;
                                             } else {
                                               break L40;
@@ -940,9 +948,9 @@ public final class HoldTheLine extends oh {
                                           }
                                         }
                                       }
-                                      int fieldTemp$7 = pc.field_h - 2;
+                                      fieldTemp$7 = pc.field_h - 2;
                                       pc.field_h = pc.field_h - 2;
-                                      if (fieldTemp$7 >= 0) {
+                                      if (-1 >= (fieldTemp$7 ^ -1)) {
                                         break L38;
                                       } else {
                                         pc.field_h = 0;
@@ -954,7 +962,7 @@ public final class HoldTheLine extends oh {
                                       }
                                     }
                                     L41: {
-                                      int fieldTemp$8 = pc.field_h + 2;
+                                      fieldTemp$8 = pc.field_h + 2;
                                       pc.field_h = pc.field_h + 2;
                                       if (255 < fieldTemp$8) {
                                         pc.field_h = 255;
@@ -971,8 +979,8 @@ public final class HoldTheLine extends oh {
                                       if (dg.field_c != 13) {
                                         break L43;
                                       } else {
-                                        ((ec) (Object) l.field_a[dg.field_c]).c((byte) -109);
-                                        var4 = ((ec) (Object) l.field_a[dg.field_c]).b((byte) -77) ? 1 : 0;
+                                        ((ec) ((Object) l.field_a[dg.field_c])).c((byte) -109);
+                                        var4 = ((ec) ((Object) l.field_a[dg.field_c])).b((byte) -77) ? 1 : 0;
                                         if (var5 == 0) {
                                           break L42;
                                         } else {
@@ -980,8 +988,8 @@ public final class HoldTheLine extends oh {
                                         }
                                       }
                                     }
-                                    ((ti) (Object) l.field_a[dg.field_c]).a(73, true);
-                                    var4 = ((ti) (Object) l.field_a[dg.field_c]).b(false) ? 1 : 0;
+                                    ((ti) ((Object) l.field_a[dg.field_c])).a(73, true);
+                                    var4 = ((ti) ((Object) l.field_a[dg.field_c])).b(false) ? 1 : 0;
                                     break L42;
                                   }
                                   L44: {
@@ -1021,7 +1029,7 @@ public final class HoldTheLine extends oh {
                                           break L48;
                                         } else {
                                           L49: {
-                                            if (ej.field_b == 0) {
+                                            if (-1 == (ej.field_b ^ -1)) {
                                               qd.a(20830, 0);
                                               break L49;
                                             } else {
@@ -1063,10 +1071,10 @@ public final class HoldTheLine extends oh {
                                       }
                                       L52: {
                                         L53: {
-                                          if (dg.field_c != 13) {
+                                          if ((dg.field_c ^ -1) != -14) {
                                             break L53;
                                           } else {
-                                            ((ec) (Object) l.field_a[dg.field_c]).a((byte) 69, false);
+                                            ((ec) ((Object) l.field_a[dg.field_c])).a((byte) 69, false);
                                             if (var5 == 0) {
                                               break L52;
                                             } else {
@@ -1074,7 +1082,7 @@ public final class HoldTheLine extends oh {
                                             }
                                           }
                                         }
-                                        ((ti) (Object) l.field_a[dg.field_c]).b(false, -121);
+                                        ((ti) ((Object) l.field_a[dg.field_c])).b(false, -121);
                                         break L52;
                                       }
                                       vg.field_G = 0;
@@ -1123,7 +1131,7 @@ public final class HoldTheLine extends oh {
                                   if (13 != dg.field_c) {
                                     break L57;
                                   } else {
-                                    ((ec) (Object) l.field_a[dg.field_c]).c((byte) -109);
+                                    ((ec) ((Object) l.field_a[dg.field_c])).c((byte) -109);
                                     if (var5 == 0) {
                                       break L19;
                                     } else {
@@ -1131,7 +1139,7 @@ public final class HoldTheLine extends oh {
                                     }
                                   }
                                 }
-                                ((ti) (Object) l.field_a[dg.field_c]).a(102, true);
+                                ((ti) ((Object) l.field_a[dg.field_c])).a(102, true);
                                 if (var5 == 0) {
                                   break L19;
                                 } else {
@@ -1140,10 +1148,10 @@ public final class HoldTheLine extends oh {
                               }
                             }
                             L58: {
-                              if (ej.field_b != 13) {
+                              if ((ej.field_b ^ -1) != -14) {
                                 break L58;
                               } else {
-                                ((ec) (Object) l.field_a[ej.field_b]).c((byte) -109);
+                                ((ec) ((Object) l.field_a[ej.field_b])).c((byte) -109);
                                 if (var5 == 0) {
                                   break L19;
                                 } else {
@@ -1151,7 +1159,7 @@ public final class HoldTheLine extends oh {
                                 }
                               }
                             }
-                            ((ti) (Object) l.field_a[ej.field_b]).a(50, true);
+                            ((ti) ((Object) l.field_a[ej.field_b])).a(50, true);
                             if (var5 == 0) {
                               break L19;
                             } else {
@@ -1190,8 +1198,8 @@ public final class HoldTheLine extends oh {
                         }
                         L60: {
                           L61: {
-                            var4 = ((HoldTheLine) this).c(stackIn_284_1, stackIn_284_2 != 0);
-                            if (var4 != 1) {
+                            var4 = this.c(stackIn_284_1, stackIn_284_2 != 0);
+                            if ((var4 ^ -1) != -2) {
                               break L61;
                             } else {
                               em.a(-29486, false);
@@ -1217,10 +1225,10 @@ public final class HoldTheLine extends oh {
                       }
                     }
                     L62: {
-                      if (gg.field_J != 0) {
+                      if (-1 != (gg.field_J ^ -1)) {
                         break L62;
                       } else {
-                        ((HoldTheLine) this).field_C = ((HoldTheLine) this).field_C - 1;
+                        this.field_C = this.field_C - 1;
                         if (var5 == 0) {
                           break L19;
                         } else {
@@ -1228,20 +1236,20 @@ public final class HoldTheLine extends oh {
                         }
                       }
                     }
-                    ((HoldTheLine) this).field_C = 0;
+                    this.field_C = 0;
                     break L19;
                   }
                   L63: {
-                    if (~ma.field_k == ~ud.field_d) {
+                    if ((ma.field_k ^ -1) == (ud.field_d ^ -1)) {
                       break L63;
                     } else {
-                      int fieldTemp$9 = kd.field_c + 1;
+                      fieldTemp$9 = kd.field_c + 1;
                       kd.field_c = kd.field_c + 1;
                       if (fieldTemp$9 < 80) {
                         break L63;
                       } else {
                         L64: {
-                          if (ma.field_k == 1) {
+                          if ((ma.field_k ^ -1) == -2) {
                             break L64;
                           } else {
                             if (o.a(ma.field_k, 2) == null) {
@@ -1258,7 +1266,7 @@ public final class HoldTheLine extends oh {
                     }
                   }
                   L65: {
-                    if (ca.field_r == -1) {
+                    if (0 == (ca.field_r ^ -1)) {
                       break L65;
                     } else {
                       if (!pd.a(nm.field_b, true)) {
@@ -1270,21 +1278,37 @@ public final class HoldTheLine extends oh {
                       }
                     }
                   }
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
                   kb.a((byte) 0);
-                  return;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               } else {
                 this.b(true, false);
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var2, "HoldTheLine.DA(" + param0 + ')');
+          throw kk.a((Throwable) ((Object) var2), "HoldTheLine.DA(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -1312,7 +1336,7 @@ public final class HoldTheLine extends oh {
               kb.field_c = false;
               vg.field_P = 0;
               mi.field_d = 7;
-              ((HoldTheLine) this).field_C = 125;
+              this.field_C = 125;
               t.field_l = -1;
               var2_int = 84 / ((42 - param0) / 51);
               cf.field_w = 0;
@@ -1322,9 +1346,9 @@ public final class HoldTheLine extends oh {
               vg.field_G = 0;
               gg.field_L = true;
               h.b((byte) 115);
-              ((HoldTheLine) this).field_z = true;
+              this.field_z = true;
               var3 = new i();
-              eg.a(20, 0, 480, field_F.field_G, 0, 0, 5, field_F.field_G, 0, (qi) (Object) field_F, (qi) (Object) field_F, 2, (vn) null, 320, 0, 240, (vn) null, 20, 0, 1, (vn) (Object) var3);
+              eg.a(20, 0, 480, field_F.field_G, 0, 0, 5, field_F.field_G, 0, field_F, field_F, 2, (vn) null, 320, 0, 240, (vn) null, 20, 0, 1, var3);
               if (rb.field_x < 2) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
@@ -1344,11 +1368,12 @@ public final class HoldTheLine extends oh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var2, "HoldTheLine.PA(" + param0 + ')');
+          throw kk.a((Throwable) ((Object) var2), "HoldTheLine.PA(" + param0 + ')');
         }
     }
 
     public static void p(int param0) {
+        jf discarded$2 = null;
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -1359,7 +1384,7 @@ public final class HoldTheLine extends oh {
               if (param0 < -13) {
                 break L1;
               } else {
-                jf discarded$2 = HoldTheLine.f((byte) -81);
+                discarded$2 = HoldTheLine.f((byte) -81);
                 break L1;
               }
             }
@@ -1370,12 +1395,11 @@ public final class HoldTheLine extends oh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1, "HoldTheLine.RA(" + param0 + ')');
+          throw kk.a((Throwable) ((Object) var1), "HoldTheLine.RA(" + param0 + ')');
         }
     }
 
     final void c(int param0) {
-        Object var2_ref = null;
         RuntimeException var2 = null;
         int var3_int = 0;
         long var3 = 0L;
@@ -1396,6 +1420,7 @@ public final class HoldTheLine extends oh {
         RuntimeException stackIn_23_1 = null;
         int stackIn_23_2 = 0;
         int stackIn_103_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         java.awt.Canvas stackOut_4_0 = null;
         ef stackOut_2_0 = null;
@@ -1413,18 +1438,18 @@ public final class HoldTheLine extends oh {
         int stackOut_20_2 = 0;
         int stackOut_102_0 = 0;
         int stackOut_100_0 = 0;
-        var2_ref = null;
+        Object var2_ref = null;
         var10 = field_D;
         try {
           L0: {
             L1: {
               if (kf.field_U == null) {
                 stackOut_4_0 = kd.field_b;
-                stackIn_5_0 = (Object) (Object) stackOut_4_0;
+                stackIn_5_0 = stackOut_4_0;
                 break L1;
               } else {
                 stackOut_2_0 = kf.field_U;
-                stackIn_5_0 = (Object) (Object) stackOut_2_0;
+                stackIn_5_0 = stackOut_2_0;
                 break L1;
               }
             }
@@ -1435,21 +1460,21 @@ public final class HoldTheLine extends oh {
                   stackOut_16_0 = -63;
                   stackOut_16_1 = var2_ref;
                   stackIn_20_0 = stackOut_16_0;
-                  stackIn_20_1 = (RuntimeException) (Object) stackOut_16_1;
+                  stackIn_20_1 = (RuntimeException) ((Object) stackOut_16_1);
                   stackIn_17_0 = stackOut_16_0;
-                  stackIn_17_1 = (RuntimeException) (Object) stackOut_16_1;
+                  stackIn_17_1 = (RuntimeException) ((Object) stackOut_16_1);
                   if (null != kf.field_U) {
                     break L3;
                   } else {
                     stackOut_17_0 = stackIn_17_0;
-                    stackOut_17_1 = (RuntimeException) (Object) stackIn_17_1;
+                    stackOut_17_1 = (RuntimeException) ((Object) stackIn_17_1);
                     stackIn_22_0 = stackOut_17_0;
                     stackIn_22_1 = stackOut_17_1;
                     stackIn_18_0 = stackOut_17_0;
                     stackIn_18_1 = stackOut_17_1;
                     if (!vk.field_a) {
                       stackOut_22_0 = stackIn_22_0;
-                      stackOut_22_1 = (RuntimeException) (Object) stackIn_22_1;
+                      stackOut_22_1 = (RuntimeException) ((Object) stackIn_22_1);
                       stackOut_22_2 = 0;
                       stackIn_23_0 = stackOut_22_0;
                       stackIn_23_1 = stackOut_22_1;
@@ -1457,7 +1482,7 @@ public final class HoldTheLine extends oh {
                       break L2;
                     } else {
                       stackOut_18_0 = stackIn_18_0;
-                      stackOut_18_1 = (RuntimeException) (Object) stackIn_18_1;
+                      stackOut_18_1 = (RuntimeException) ((Object) stackIn_18_1);
                       stackIn_20_0 = stackOut_18_0;
                       stackIn_20_1 = stackOut_18_1;
                       break L3;
@@ -1465,23 +1490,25 @@ public final class HoldTheLine extends oh {
                   }
                 }
                 stackOut_20_0 = stackIn_20_0;
-                stackOut_20_1 = (RuntimeException) (Object) stackIn_20_1;
+                stackOut_20_1 = (RuntimeException) ((Object) stackIn_20_1);
                 stackOut_20_2 = 1;
                 stackIn_23_0 = stackOut_20_0;
                 stackIn_23_1 = stackOut_20_1;
                 stackIn_23_2 = stackOut_20_2;
                 break L2;
               }
-              ko.a((byte) stackIn_23_0, (java.awt.Canvas) (Object) stackIn_23_1, stackIn_23_2 != 0);
-              return;
+              ko.a((byte) stackIn_23_0, (java.awt.Canvas) ((Object) stackIn_23_1), stackIn_23_2 != 0);
+              decompiledRegionSelector0 = 2;
+              break L0;
             } else {
-              if (!((HoldTheLine) this).field_z) {
-                ck.a((byte) -97, (java.awt.Canvas) var2_ref);
-                return;
+              if (!this.field_z) {
+                ck.a((byte) -97, (java.awt.Canvas) (var2_ref));
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (go.a(param0 ^ 318)) {
                   oj.a((byte) 120);
-                  if (((HoldTheLine) this).field_C <= 0) {
+                  if ((this.field_C ^ -1) >= -1) {
                     if (param0 == 256) {
                       L4: {
                         L5: {
@@ -1510,7 +1537,7 @@ public final class HoldTheLine extends oh {
                           }
                         }
                         L7: {
-                          if (dg.field_c != -1) {
+                          if (0 != (dg.field_c ^ -1)) {
                             break L7;
                           } else {
                             L8: {
@@ -1518,7 +1545,7 @@ public final class HoldTheLine extends oh {
                                 break L8;
                               } else {
                                 L9: {
-                                  if (ie.field_n >= 40) {
+                                  if (-41 >= (ie.field_n ^ -1)) {
                                     break L9;
                                   } else {
                                     vl.a(0);
@@ -1541,7 +1568,7 @@ public final class HoldTheLine extends oh {
                               }
                             }
                             vl.a(0);
-                            th.e(param0 + -152, (ie.field_n << 8) / 80);
+                            th.e(param0 + -152, (ie.field_n << -294095320) / 80);
                             l.field_a[ej.field_b].a(-55);
                             if (var10 == 0) {
                               break L4;
@@ -1559,7 +1586,7 @@ public final class HoldTheLine extends oh {
                                 break L11;
                               } else {
                                 vl.a(0);
-                                th.e(116, 256 + -((ie.field_n << 8) / 80));
+                                th.e(116, 256 + -((ie.field_n << 696449288) / 80));
                                 l.field_a[dg.field_c].a(-55);
                                 if (var10 == 0) {
                                   break L4;
@@ -1569,11 +1596,11 @@ public final class HoldTheLine extends oh {
                               }
                             }
                             L12: {
-                              if (ie.field_n < 40) {
+                              if (-41 < (ie.field_n ^ -1)) {
                                 break L12;
                               } else {
                                 vl.a(0);
-                                tc.c(0, 0, 640, 480, 12566463, -((ie.field_n << 9) / 80) + 512);
+                                tc.c(0, 0, 640, 480, 12566463, -((ie.field_n << 235530697) / 80) + 512);
                                 if (var10 == 0) {
                                   break L4;
                                 } else {
@@ -1583,7 +1610,7 @@ public final class HoldTheLine extends oh {
                             }
                             eg.a(false);
                             l.field_a[dg.field_c].a(param0 ^ -311);
-                            tc.c(0, 0, 640, 480, 12566463, (ie.field_n << 9) / 80);
+                            tc.c(0, 0, 640, 480, 12566463, (ie.field_n << -48649527) / 80);
                             if (var10 == 0) {
                               break L4;
                             } else {
@@ -1642,24 +1669,26 @@ public final class HoldTheLine extends oh {
                           var3 = Runtime.getRuntime().totalMemory();
                           var5 = Runtime.getRuntime().freeMemory();
                           var7 = var3 - var5;
-                          var9 = (int)(var7 >> 10) + "kB";
+                          var9 = (int)(var7 >> 1863179018) + "kB";
                           nm.field_c.a(var9, 10, 50, 0, -1);
                           break L17;
                         }
                       }
-                      hi.a((java.awt.Canvas) var2_ref, 0, true, 0);
+                      hi.a((java.awt.Canvas) (var2_ref), 0, true, 0);
+                      decompiledRegionSelector0 = 5;
                       break L0;
                     } else {
-                      return;
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     }
                   } else {
                     L18: {
                       tc.c();
                       td.field_a.b(0, 0);
-                      if (((HoldTheLine) this).field_C < 25) {
+                      if (-26 < (this.field_C ^ -1)) {
                         L19: {
-                          var3_int = 1280 * ((HoldTheLine) this).field_C / 25 - 640;
-                          if (var3_int >= 0) {
+                          var3_int = 1280 * this.field_C / 25 - 640;
+                          if ((var3_int ^ -1) <= -1) {
                             break L19;
                           } else {
                             vl.a(param0 + -256);
@@ -1673,13 +1702,15 @@ public final class HoldTheLine extends oh {
                         break L18;
                       }
                     }
-                    hi.a((java.awt.Canvas) var2_ref, 0, true, 0);
-                    return;
+                    hi.a((java.awt.Canvas) (var2_ref), 0, true, 0);
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   }
                 } else {
                   jj.a(param0 ^ 350, uj.field_b, 100.0f);
-                  ck.a((byte) -97, (java.awt.Canvas) var2_ref);
-                  return;
+                  ck.a((byte) -97, (java.awt.Canvas) (var2_ref));
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             }
@@ -1687,7 +1718,28 @@ public final class HoldTheLine extends oh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var2, "HoldTheLine.LA(" + param0 + ')');
+          throw kk.a((Throwable) ((Object) var2), "HoldTheLine.LA(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return;
+                } else {
+                  return;
+                }
+              }
+            }
+          }
         }
     }
 
@@ -1695,6 +1747,7 @@ public final class HoldTheLine extends oh {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = field_D;
         try {
@@ -1740,7 +1793,8 @@ public final class HoldTheLine extends oh {
               if (null != b.field_d) {
                 if (!b.field_d.b((byte) -90)) {
                   jj.a(107, oh.field_r, 2.0f);
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   break L4;
                 }
@@ -1754,13 +1808,15 @@ public final class HoldTheLine extends oh {
               } else {
                 if (!th.field_m.b((byte) -49)) {
                   jj.a(125, oh.field_r, 3.0f);
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 } else {
                   if (co.a(th.field_m, b.field_d, 10302)) {
                     break L5;
                   } else {
                     jj.a(85, um.field_f, 4.0f);
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   }
                 }
               }
@@ -1779,7 +1835,8 @@ public final class HoldTheLine extends oh {
                   }
                 }
                 jj.a(91, kj.field_o, 10.0f);
-                return;
+                decompiledRegionSelector0 = 3;
+                break L0;
               } else {
                 break L6;
               }
@@ -1788,22 +1845,26 @@ public final class HoldTheLine extends oh {
               if (null != pg.field_J) {
                 if (!pg.field_J.b((byte) -67)) {
                   jj.a(117, in.field_d, 12.0f);
-                  return;
+                  decompiledRegionSelector0 = 4;
+                  break L0;
                 } else {
                   if (!si.field_lb.b((byte) -86)) {
                     jj.a(104, in.field_d, 14.0f);
-                    return;
+                    decompiledRegionSelector0 = 5;
+                    break L0;
                   } else {
                     if (ta.field_a.b((byte) -102)) {
                       if (!t.a(ta.field_a, pg.field_J, (byte) 111, si.field_lb)) {
                         jj.a(98, ge.field_a, 16.0f);
-                        return;
+                        decompiledRegionSelector0 = 7;
+                        break L0;
                       } else {
                         break L8;
                       }
                     } else {
                       jj.a(119, uf.field_d, 15.0f);
-                      return;
+                      decompiledRegionSelector0 = 6;
+                      break L0;
                     }
                   }
                 }
@@ -1832,19 +1893,22 @@ public final class HoldTheLine extends oh {
                         }
                       }
                       jj.a(89, ej.a(rm.field_E, rd.field_a, "", false, cc.field_y), 35.0f);
-                      return;
+                      decompiledRegionSelector0 = 9;
+                      break L0;
                     } else {
                       break L10;
                     }
                   }
                 }
                 jj.a(114, ej.a(rm.field_E, rd.field_a, "", param1, oe.field_j), 30.0f);
-                return;
+                decompiledRegionSelector0 = 8;
+                break L0;
               }
             }
             if (!param0) {
               jj.a(126, ul.field_a, 40.0f);
-              return;
+              decompiledRegionSelector0 = 10;
+              break L0;
             } else {
               L12: {
                 if (nd.field_h) {
@@ -1861,12 +1925,13 @@ public final class HoldTheLine extends oh {
                 } else {
                   if (null != th.field_m) {
                     jj.a(108, ul.field_a, 40.0f);
-                    ((HoldTheLine) this).c(256);
+                    this.c(256);
                     ph.a(th.field_m, (byte) -66, b.field_d);
                     b.field_d = null;
                     th.field_m = null;
                     qd.d(72);
-                    return;
+                    decompiledRegionSelector0 = 11;
+                    break L0;
                   } else {
                     break L13;
                   }
@@ -1875,21 +1940,23 @@ public final class HoldTheLine extends oh {
               if (ld.field_c == null) {
                 if (null != pg.field_J) {
                   jj.a(111, mm.field_g, 65.0f);
-                  ((HoldTheLine) this).c(256);
+                  this.c(256);
                   pg.a(30865, si.field_lb, pg.field_J, ta.field_a);
                   pg.field_J = null;
                   ta.field_a = null;
                   qd.d(116);
-                  return;
+                  decompiledRegionSelector0 = 13;
+                  break L0;
                 } else {
                   if (null != oe.field_j) {
                     jj.a(110, fj.field_r, 90.0f);
-                    ((HoldTheLine) this).c(256);
+                    this.c(256);
                     pg.a(oe.field_j, -121);
                     cd.b(121);
                     oe.field_j = null;
                     qd.d(94);
-                    return;
+                    decompiledRegionSelector0 = 14;
+                    break L0;
                   } else {
                     L14: {
                       if (null == cc.field_y) {
@@ -1902,11 +1969,12 @@ public final class HoldTheLine extends oh {
                             break L14;
                           } else {
                             jj.a(106, fj.field_r, 95.0f);
-                            ((HoldTheLine) this).c(256);
+                            this.c(256);
                             ai.a(cc.field_y, ec.field_y.field_i, -95);
                             cc.field_y = null;
                             qd.d(88);
-                            return;
+                            decompiledRegionSelector0 = 15;
+                            break L0;
                           }
                         }
                       }
@@ -1916,7 +1984,7 @@ public final class HoldTheLine extends oh {
                     L15: while (true) {
                       L16: {
                         L17: {
-                          if (var3_int >= 8) {
+                          if (-9 >= (var3_int ^ -1)) {
                             break L17;
                           } else {
                             ge.field_c[var3_int] = new dn(var3_int);
@@ -1947,7 +2015,7 @@ public final class HoldTheLine extends oh {
                         if (!param1) {
                           break L18;
                         } else {
-                          ((HoldTheLine) this).b((byte) 4);
+                          this.b((byte) 4);
                           break L18;
                         }
                       }
@@ -1955,10 +2023,10 @@ public final class HoldTheLine extends oh {
                       L19: while (true) {
                         L20: {
                           L21: {
-                            if (var3_int >= 13) {
+                            if ((var3_int ^ -1) <= -14) {
                               break L21;
                             } else {
-                              l.field_a[var3_int] = (pc) (Object) new ti(var3_int);
+                              l.field_a[var3_int] = (pc) ((Object) new ti(var3_int));
                               var3_int++;
                               if (var4 != 0) {
                                 break L20;
@@ -1971,11 +2039,12 @@ public final class HoldTheLine extends oh {
                               }
                             }
                           }
-                          l.field_a[13] = (pc) (Object) new ec(13, new int[4], new hj[4], gh.field_t, new String[6], vb.field_c, 8355711);
+                          l.field_a[13] = (pc) ((Object) new ec(13, new int[]{0, 1, 2, 3}, new hj[4], gh.field_t, new String[6], vb.field_c, 8355711));
                           dg.field_c = 0;
                           this.h((byte) 107);
                           break L20;
                         }
+                        decompiledRegionSelector0 = 16;
                         break L0;
                       }
                     }
@@ -1983,19 +2052,85 @@ public final class HoldTheLine extends oh {
                 }
               } else {
                 jj.a(113, oc.field_b, 60.0f);
-                ((HoldTheLine) this).c(256);
+                this.c(256);
                 jn.a(kk.field_i, -127, ld.field_c);
                 kk.field_i = null;
                 ld.field_c = null;
                 qd.d(56);
-                return;
+                decompiledRegionSelector0 = 12;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var3, "HoldTheLine.OA(" + param0 + ',' + param1 + ')');
+          throw kk.a((Throwable) ((Object) var3), "HoldTheLine.OA(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return;
+                  } else {
+                    if (decompiledRegionSelector0 == 6) {
+                      return;
+                    } else {
+                      if (decompiledRegionSelector0 == 7) {
+                        return;
+                      } else {
+                        if (decompiledRegionSelector0 == 8) {
+                          return;
+                        } else {
+                          if (decompiledRegionSelector0 == 9) {
+                            return;
+                          } else {
+                            if (decompiledRegionSelector0 == 10) {
+                              return;
+                            } else {
+                              if (decompiledRegionSelector0 == 11) {
+                                return;
+                              } else {
+                                if (decompiledRegionSelector0 == 12) {
+                                  return;
+                                } else {
+                                  if (decompiledRegionSelector0 == 13) {
+                                    return;
+                                  } else {
+                                    if (decompiledRegionSelector0 == 14) {
+                                      return;
+                                    } else {
+                                      if (decompiledRegionSelector0 == 15) {
+                                        return;
+                                      } else {
+                                        return;
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
     }
 
@@ -2003,10 +2138,6 @@ public final class HoldTheLine extends oh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = 50;
         field_B = "no effect";
         field_E = new int[12];

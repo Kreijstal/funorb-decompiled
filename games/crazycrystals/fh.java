@@ -14,39 +14,51 @@ final class fh extends ln {
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = CrazyCrystals.field_B;
         try {
           L0: {
             nb.b();
-            li.field_c = 11;
-            s.field_h = new int[260];
-            var1_int = 0;
-            L1: while (true) {
-              if (256 <= var1_int) {
-                var5 = 256;
-                var1_int = var5;
-                L2: while (true) {
-                  if (var5 >= s.field_h.length) {
-                    break L0;
-                  } else {
-                    s.field_h[var5] = 255;
-                    var5++;
-                    continue L2;
+            if (param0) {
+              li.field_c = 11;
+              s.field_h = new int[260];
+              var1_int = 0;
+              L1: while (true) {
+                if (256 <= var1_int) {
+                  var5 = 256;
+                  var1_int = var5;
+                  L2: while (true) {
+                    if (var5 >= s.field_h.length) {
+                      decompiledRegionSelector0 = 1;
+                      break L0;
+                    } else {
+                      s.field_h[var5] = 255;
+                      var5++;
+                      continue L2;
+                    }
                   }
+                } else {
+                  var2 = 15.0;
+                  s.field_h[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+                  var1_int++;
+                  continue L1;
                 }
-              } else {
-                var2 = 15.0;
-                s.field_h[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
-                var1_int++;
-                continue L1;
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1, "fh.D(" + true + ')');
+          throw dn.a((Throwable) ((Object) var1), "fh.D(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -56,6 +68,17 @@ final class fh extends ln {
 
     final static void a(boolean param0, long param1) {
         if (0L >= param1) {
+            return;
+        }
+        if (!param0) {
+            field_j = (String) null;
+            if (0L == param1 % 10L) {
+                g.a((byte) -98, -1L + param1);
+                g.a((byte) 6, 1L);
+            } else {
+                g.a((byte) 112, param1);
+                return;
+            }
             return;
         }
         if (0L == param1 % 10L) {
@@ -69,7 +92,7 @@ final class fh extends ln {
 
     public static void a(int param0) {
         field_k = null;
-        int var1 = 112;
+        int var1 = -112 / ((70 - param0) / 52);
         field_i = null;
         field_g = null;
         field_h = null;
@@ -82,10 +105,6 @@ final class fh extends ln {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "This is one of you.";
         field_h = "Password: ";
         field_g = "Player names can be up to 12 letters, numbers and underscores";

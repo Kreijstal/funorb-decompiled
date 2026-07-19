@@ -8,7 +8,7 @@ final class ji {
     final static void a(boolean param0) {
         eh var1 = null;
         L0: {
-          var1 = (eh) (Object) lk.field_g.b(-48);
+          var1 = (eh) ((Object) lk.field_g.b(-48));
           if (var1 == null) {
             var1 = new eh();
             break L0;
@@ -19,11 +19,11 @@ final class ji {
         if (!param0) {
           ji.a(false);
           var1.a(vj.field_l, vj.field_h, vj.field_g, 107, vj.field_a, vj.field_b, vj.field_j, vj.field_f);
-          ai.field_k.a((qb) (Object) var1, 27362);
+          ai.field_k.a(var1, 27362);
           return;
         } else {
           var1.a(vj.field_l, vj.field_h, vj.field_g, 107, vj.field_a, vj.field_b, vj.field_j, vj.field_f);
-          ai.field_k.a((qb) (Object) var1, 27362);
+          ai.field_k.a(var1, 27362);
           return;
         }
     }
@@ -33,14 +33,157 @@ final class ji {
     }
 
     final static void a(int param0, int param1) {
-        jc.field_O.field_l[oj.field_c] = (short)(param0 >> 1);
-        jc.field_O.field_l[eb.field_d] = (short)(param0 >> 1);
-        byte dupTemp$0 = 0 != bc.a(param0, 1) ? ng.field_H : db.field_p;
-        jc.field_O.field_O[eb.field_d] = dupTemp$0;
-        jc.field_O.field_O[oj.field_c] = dupTemp$0;
+        byte[] stackIn_2_0 = null;
+        int stackIn_2_1 = 0;
+        byte[] stackIn_2_2 = null;
+        int stackIn_2_3 = 0;
+        byte[] stackIn_3_0 = null;
+        int stackIn_3_1 = 0;
+        byte[] stackIn_3_2 = null;
+        int stackIn_3_3 = 0;
+        byte[] stackIn_4_0 = null;
+        int stackIn_4_1 = 0;
+        byte[] stackIn_4_2 = null;
+        int stackIn_4_3 = 0;
+        byte stackIn_4_4 = 0;
+        byte[] stackIn_6_0 = null;
+        int stackIn_6_1 = 0;
+        byte[] stackIn_6_2 = null;
+        int stackIn_6_3 = 0;
+        byte[] stackIn_7_0 = null;
+        int stackIn_7_1 = 0;
+        byte[] stackIn_7_2 = null;
+        int stackIn_7_3 = 0;
+        byte[] stackIn_8_0 = null;
+        int stackIn_8_1 = 0;
+        byte[] stackIn_8_2 = null;
+        int stackIn_8_3 = 0;
+        byte stackIn_8_4 = 0;
+        byte[] stackOut_5_0 = null;
+        int stackOut_5_1 = 0;
+        byte[] stackOut_5_2 = null;
+        int stackOut_5_3 = 0;
+        byte[] stackOut_7_0 = null;
+        int stackOut_7_1 = 0;
+        byte[] stackOut_7_2 = null;
+        int stackOut_7_3 = 0;
+        byte stackOut_7_4 = 0;
+        byte[] stackOut_6_0 = null;
+        int stackOut_6_1 = 0;
+        byte[] stackOut_6_2 = null;
+        int stackOut_6_3 = 0;
+        byte stackOut_6_4 = 0;
+        byte[] stackOut_1_0 = null;
+        int stackOut_1_1 = 0;
+        byte[] stackOut_1_2 = null;
+        int stackOut_1_3 = 0;
+        byte[] stackOut_3_0 = null;
+        int stackOut_3_1 = 0;
+        byte[] stackOut_3_2 = null;
+        int stackOut_3_3 = 0;
+        byte stackOut_3_4 = 0;
+        byte[] stackOut_2_0 = null;
+        int stackOut_2_1 = 0;
+        byte[] stackOut_2_2 = null;
+        int stackOut_2_3 = 0;
+        byte stackOut_2_4 = 0;
+        jc.field_O.field_l[oj.field_c] = (short)(param0 >> -2127145567);
+        jc.field_O.field_l[eb.field_d] = (short)(param0 >> -2127145567);
+        if (param1 != 24355) {
+          L0: {
+            field_b = (String) null;
+            stackOut_5_0 = jc.field_O.field_O;
+            stackOut_5_1 = oj.field_c;
+            stackOut_5_2 = jc.field_O.field_O;
+            stackOut_5_3 = eb.field_d;
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_7_2 = stackOut_5_2;
+            stackIn_7_3 = stackOut_5_3;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            stackIn_6_2 = stackOut_5_2;
+            stackIn_6_3 = stackOut_5_3;
+            if (0 == bc.a(param0, 1)) {
+              stackOut_7_0 = (byte[]) ((Object) stackIn_7_0);
+              stackOut_7_1 = stackIn_7_1;
+              stackOut_7_2 = (byte[]) ((Object) stackIn_7_2);
+              stackOut_7_3 = stackIn_7_3;
+              stackOut_7_4 = db.field_p;
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_3 = stackOut_7_3;
+              stackIn_8_4 = stackOut_7_4;
+              break L0;
+            } else {
+              stackOut_6_0 = (byte[]) ((Object) stackIn_6_0);
+              stackOut_6_1 = stackIn_6_1;
+              stackOut_6_2 = (byte[]) ((Object) stackIn_6_2);
+              stackOut_6_3 = stackIn_6_3;
+              stackOut_6_4 = ng.field_H;
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_3 = stackOut_6_3;
+              stackIn_8_4 = stackOut_6_4;
+              break L0;
+            }
+          }
+          stackIn_8_2[stackIn_8_3] = stackIn_8_4;
+          stackIn_8_0[stackIn_8_1] = stackIn_8_4;
+          return;
+        } else {
+          L1: {
+            stackOut_1_0 = jc.field_O.field_O;
+            stackOut_1_1 = oj.field_c;
+            stackOut_1_2 = jc.field_O.field_O;
+            stackOut_1_3 = eb.field_d;
+            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_2 = stackOut_1_2;
+            stackIn_3_3 = stackOut_1_3;
+            stackIn_2_0 = stackOut_1_0;
+            stackIn_2_1 = stackOut_1_1;
+            stackIn_2_2 = stackOut_1_2;
+            stackIn_2_3 = stackOut_1_3;
+            if (0 == bc.a(param0, 1)) {
+              stackOut_3_0 = (byte[]) ((Object) stackIn_3_0);
+              stackOut_3_1 = stackIn_3_1;
+              stackOut_3_2 = (byte[]) ((Object) stackIn_3_2);
+              stackOut_3_3 = stackIn_3_3;
+              stackOut_3_4 = db.field_p;
+              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_1 = stackOut_3_1;
+              stackIn_4_2 = stackOut_3_2;
+              stackIn_4_3 = stackOut_3_3;
+              stackIn_4_4 = stackOut_3_4;
+              break L1;
+            } else {
+              stackOut_2_0 = (byte[]) ((Object) stackIn_2_0);
+              stackOut_2_1 = stackIn_2_1;
+              stackOut_2_2 = (byte[]) ((Object) stackIn_2_2);
+              stackOut_2_3 = stackIn_2_3;
+              stackOut_2_4 = ng.field_H;
+              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_1 = stackOut_2_1;
+              stackIn_4_2 = stackOut_2_2;
+              stackIn_4_3 = stackOut_2_3;
+              stackIn_4_4 = stackOut_2_4;
+              break L1;
+            }
+          }
+          stackIn_4_2[stackIn_4_3] = stackIn_4_4;
+          stackIn_4_0[stackIn_4_1] = stackIn_4_4;
+          return;
+        }
     }
 
     final static void a(byte param0, kc[] param1) {
+        int discarded$4 = 0;
+        int discarded$5 = 0;
+        int discarded$6 = 0;
+        int discarded$7 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -80,7 +223,7 @@ final class ji {
             L1: {
               ab.field_p = new cf(param1);
               jb.b();
-              jb.a((b) (Object) ab.field_p);
+              jb.a(ab.field_p);
               jb.b(1.0f);
               var19 = new bb(16, 8, 4);
               var3 = ml.a(var19, 0, 0, 0, (byte) -72);
@@ -99,10 +242,10 @@ final class ji {
               var16 = ml.a(var19, 2, 0, -1, (byte) -118);
               var17 = ml.a(var19, -1, 1, -1, (byte) -94);
               var18 = ml.a(var19, 1, 1, 2, (byte) -82);
-              int discarded$4 = var19.a(var6, var5, var4, (byte) 1, (byte) -1, (short) 63, (short) -1);
-              int discarded$5 = var19.a(var4, var5, var3, (byte) 1, (byte) -1, (short) 63, (short) -1);
-              int discarded$6 = var19.a(var9, var10, var7, (byte) 1, (byte) -1, (short) 63, (short) -1);
-              int discarded$7 = var19.a(var7, var10, var8, (byte) 1, (byte) -1, (short) 63, (short) -1);
+              discarded$4 = var19.a(var6, var5, var4, (byte) 1, (byte) -1, (short) 63, (short) -1);
+              discarded$5 = var19.a(var4, var5, var3, (byte) 1, (byte) -1, (short) 63, (short) -1);
+              discarded$6 = var19.a(var9, var10, var7, (byte) 1, (byte) -1, (short) 63, (short) -1);
+              discarded$7 = var19.a(var7, var10, var8, (byte) 1, (byte) -1, (short) 63, (short) -1);
               cf.field_d = var19.a((short) var3, (short) var11, (short) var12);
               db.field_p = var19.a((short) var8, (short) var15, (short) var18);
               sc.field_a = var19.a((short) var13, (short) var16, (short) var5);
@@ -118,7 +261,7 @@ final class ji {
             od.field_a = var19.a(var7, var5, var9, (byte) 1, cf.field_d, (short) 0, (short) 0);
             eb.field_d = var19.a(var4, var10, var6, (byte) 1, db.field_p, (short) 1, (short) 1);
             oj.field_c = var19.a(var8, var10, var4, (byte) 1, db.field_p, (short) 1, (short) 1);
-            jc.field_O = (ik) (Object) var19.a(127, 65535, -1, 0, 0);
+            jc.field_O = (ik) ((Object) var19.a(127, 65535, -1, 0, 0));
             jc.field_O.field_h = qa.a(-100, var19.field_d);
             jc.field_O.field_u = qa.a(-36, var19.field_B);
             jc.field_O.field_U = qa.a(-107, var19.field_z);
@@ -129,23 +272,23 @@ final class ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("ji.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -153,14 +296,14 @@ final class ji {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
     }
 
     public static void a(int param0) {
         field_b = null;
         if (param0 >= -15) {
-            Object var2 = null;
+            kc[] var2 = (kc[]) null;
             ji.a((byte) -45, (kc[]) null);
             field_a = null;
             return;

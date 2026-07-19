@@ -6,7 +6,7 @@ final class kb {
     static int field_b;
 
     kb(int param0) {
-        ((kb) this).field_a = param0;
+        this.field_a = param0;
     }
 
     public final String toString() {
@@ -14,10 +14,6 @@ final class kb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 4;
     }
 }

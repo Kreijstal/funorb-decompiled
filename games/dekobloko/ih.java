@@ -411,8 +411,6 @@ final class ih {
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
         var1 = va.c(16);
         if (var1 == 1) {
           var2 = va.c(5);
@@ -496,12 +494,10 @@ final class ih {
                     }
                   }
                   var5 = 1 << var5;
-                  var12 = new int[var5];
-                  var11 = var12;
-                  var10 = var11;
+                  var10 = new int[var5];
                   var9 = var10;
                   var6_ref_int__ = var9;
-                  this.field_k[var4] = var12;
+                  this.field_k[var4] = var10;
                   var7 = 0;
                   L8: while (true) {
                     if (var7 >= var5) {

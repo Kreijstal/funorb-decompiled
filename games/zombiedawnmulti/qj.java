@@ -39,11 +39,11 @@ final class qj extends br {
               bl.field_h = param1;
               nj.field_f = true;
               h.field_L = new ne(nb.field_a, ci.field_d, param0, ch.field_e, bl.field_h);
-              nb.field_a.b(3016, (cf) (Object) h.field_L);
+              nb.field_a.b(3016, h.field_L);
               if (param2 > 89) {
                 break L1;
               } else {
-                field_j = null;
+                field_j = (String) null;
                 break L1;
               }
             }
@@ -53,23 +53,23 @@ final class qj extends br {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("qj.A(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -77,31 +77,38 @@ final class qj extends br {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void b(boolean param0) {
+        String var2 = null;
         field_j = null;
-        field_m = null;
-        field_o = null;
-        field_l = null;
+        if (param0) {
+          var2 = (String) null;
+          qj.a((String) null, false, 17);
+          field_m = null;
+          field_o = null;
+          field_l = null;
+          return;
+        } else {
+          field_m = null;
+          field_o = null;
+          field_l = null;
+          return;
+        }
     }
 
     qj(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((qj) this).field_k = param5;
-        ((qj) this).field_h = param3;
-        ((qj) this).field_q = param2;
-        ((qj) this).field_f = param4;
-        ((qj) this).field_g = param0;
-        ((qj) this).field_n = param1;
+        this.field_k = param5;
+        this.field_h = param3;
+        this.field_q = param2;
+        this.field_f = param4;
+        this.field_g = param0;
+        this.field_n = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "This will help you organise your horde. Use CTRL + '1', '2' or '3' to set unit groups, then press '1', '2' or '3' to quickly select each group.";
         field_p = true;
         field_j = "Allow spectators?";

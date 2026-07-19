@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class ug {
     static ut[] field_c;
     static java.applet.Applet field_a;
@@ -17,7 +15,11 @@ final class ug {
         field_d = null;
         field_c = null;
         field_a = null;
-        field_b = null;
+        field_b = (ut[][]) null;
+        if (param0 != -1) {
+            gn var2 = (gn) null;
+            ug.a((gn) null, 81, (gn) null);
+        }
     }
 
     final static int a(int param0, int param1) {
@@ -36,11 +38,14 @@ final class ug {
         }
         param2.field_b = param0.field_b;
         param2.field_d = param0;
+        if (param1 != 16737894) {
+            return;
+        }
         try {
             param2.field_b.field_d = param2;
             param2.field_d.field_b = param2;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ug.B(" + (param0 != null ? "{...}" : "null") + ',' + 16737894 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "ug.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -100,7 +105,7 @@ final class ug {
               stackIn_2_0 = stackOut_1_0;
               stackIn_2_1 = stackOut_1_1;
               if (nq.field_F.field_Cb != ig.field_f) {
-                stackOut_3_0 = (np) (Object) stackIn_3_0;
+                stackOut_3_0 = (np) ((Object) stackIn_3_0);
                 stackOut_3_1 = stackIn_3_1;
                 stackOut_3_2 = 0;
                 stackIn_4_0 = stackOut_3_0;
@@ -108,7 +113,7 @@ final class ug {
                 stackIn_4_2 = stackOut_3_2;
                 break L1;
               } else {
-                stackOut_2_0 = (np) (Object) stackIn_2_0;
+                stackOut_2_0 = (np) ((Object) stackIn_2_0);
                 stackOut_2_1 = stackIn_2_1;
                 stackOut_2_2 = 1;
                 stackIn_4_0 = stackOut_2_0;
@@ -119,9 +124,9 @@ final class ug {
             }
             L2: {
               L3: {
-                var3_int = ((np) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2 != 0, param2, 2, false, 2 + sh.field_c) ? 1 : 0;
+                var3_int = ((np) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2 != 0, param2, param1, false, 2 + sh.field_c) ? 1 : 0;
                 var4 = nq.field_F.field_yb.field_jb;
-                if (ts.field_d == 2) {
+                if (-3 == (ts.field_d ^ -1)) {
                   break L3;
                 } else {
                   if (1 != ts.field_d) {
@@ -137,11 +142,11 @@ final class ug {
               nq.field_F.field_lb = true;
               nq.field_F.field_Cb.field_zb.field_E = null;
               var5 = null;
-              var6 = (gg) (Object) var4.g(24009);
+              var6 = (gg) ((Object) var4.g(24009));
               L4: while (true) {
                 if (var6 == null) {
                   L5: {
-                    if (nq.field_F.field_Eb.field_sb == 0) {
+                    if (-1 == (nq.field_F.field_Eb.field_sb ^ -1)) {
                       break L5;
                     } else {
                       k.field_m = new sl(nq.field_F.field_Eb.field_F, nq.field_F.field_Eb.field_T, nq.field_F.field_Eb.field_q, nq.field_F.field_Eb.field_mb, gt.field_j, pn.field_u, dw.field_e, dw.field_e);
@@ -178,7 +183,7 @@ final class ug {
                     if (null == var6.field_Eb) {
                       break L7;
                     } else {
-                      if (var6.field_Eb.equals((Object) (Object) "")) {
+                      if (var6.field_Eb.equals("")) {
                         break L7;
                       } else {
                         var6.field_Fb.field_ub = 16737894;
@@ -205,13 +210,13 @@ final class ug {
                     stackIn_18_0 = stackOut_16_0;
                     stackIn_17_0 = stackOut_16_0;
                     if (0 < var10) {
-                      stackOut_18_0 = (hd) (Object) stackIn_18_0;
+                      stackOut_18_0 = (hd) ((Object) stackIn_18_0);
                       stackOut_18_1 = hu.a(var6.field_Bb.field_X, var6.field_Gb, var10);
                       stackIn_19_0 = stackOut_18_0;
                       stackIn_19_1 = stackOut_18_1;
                       break L9;
                     } else {
-                      stackOut_17_0 = (hd) (Object) stackIn_17_0;
+                      stackOut_17_0 = (hd) ((Object) stackIn_17_0);
                       stackOut_17_1 = var6.field_Gb;
                       stackIn_19_0 = stackOut_17_0;
                       stackIn_19_1 = stackOut_17_1;
@@ -220,7 +225,7 @@ final class ug {
                   }
                   L10: {
                     stackIn_19_0.field_E = stackIn_19_1;
-                    if (var6.field_Bb.field_E.equals((Object) (Object) var6.field_Gb)) {
+                    if (var6.field_Bb.field_E.equals(var6.field_Gb)) {
                       stackOut_21_0 = 0;
                       stackIn_22_0 = stackOut_21_0;
                       break L10;
@@ -244,7 +249,7 @@ final class ug {
                     if (var7 == 0) {
                       break L12;
                     } else {
-                      nq.field_F.field_yb.a(true, 2, (hd) (Object) var6, (hd) var5);
+                      nq.field_F.field_yb.a(true, 2, var6, (hd) (var5));
                       break L12;
                     }
                   }
@@ -274,7 +279,7 @@ final class ug {
                   }
                   L15: {
                     if (var6.field_sb != 0) {
-                      el.a((hd) (Object) var6, false, nq.field_F.field_Cb, -1, var6.field_yb, (int[]) null, 0L, var6.field_Gb, -1);
+                      el.a(var6, false, nq.field_F.field_Cb, -1, var6.field_yb, (int[]) null, 0L, var6.field_Gb, -1);
                       var16 = wi.field_v;
                       var13_ref_String = pb.field_D;
                       var16.field_j.a(0, 7, var13_ref_String);
@@ -287,8 +292,8 @@ final class ug {
                       break L15;
                     }
                   }
-                  var5 = (Object) (Object) var6;
-                  var6 = (gg) (Object) var4.c(33);
+                  var5 = var6;
+                  var6 = (gg) ((Object) var4.c(33));
                   continue L4;
                 }
               }
@@ -298,15 +303,11 @@ final class ug {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var3, "ug.A(" + param0 + ',' + 2 + ',' + param2 + ')');
+          throw nb.a((Throwable) ((Object) var3), "ug.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Inviting <%0>";
         field_e = null;
     }

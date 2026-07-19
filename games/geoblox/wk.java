@@ -3,10 +3,16 @@
  */
 final class wk {
     final static Object a(int param0, Object[] param1, java.applet.Applet param2, String param3) throws Throwable {
+        if (param0 != -14882) {
+            return (Object) null;
+        }
         return netscape.javascript.JSObject.getWindow(param2).call(param3, param1);
     }
 
     final static Object a(byte param0, java.applet.Applet param1, String param2) throws Throwable {
+        if (param0 != -6) {
+            return (Object) null;
+        }
         return netscape.javascript.JSObject.getWindow(param1).call(param2, (Object[]) null);
     }
 

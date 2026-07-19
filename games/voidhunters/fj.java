@@ -25,6 +25,8 @@ final class fj {
     }
 
     final void a(byte[] param0, int param1, byte param2) {
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -50,8 +52,8 @@ final class fj {
         try {
           L0: {
             L1: {
-              ((fj) this).field_f[((fj) this).field_g] = (byte)knb.a((int) ((fj) this).field_f[((fj) this).field_g], 128 >>> dla.a(((fj) this).field_e, 7));
-              ((fj) this).field_g = ((fj) this).field_g + 1;
+              this.field_f[this.field_g] = (byte)knb.a((int) this.field_f[this.field_g], 128 >>> dla.a(this.field_e, 7));
+              this.field_g = this.field_g + 1;
               if (param2 > 37) {
                 break L1;
               } else {
@@ -60,16 +62,16 @@ final class fj {
               }
             }
             L2: {
-              if (32 < ((fj) this).field_g) {
+              if (32 < this.field_g) {
                 L3: while (true) {
-                  if (((fj) this).field_g >= 64) {
+                  if (-65 >= (this.field_g ^ -1)) {
                     this.a((byte) 66);
-                    ((fj) this).field_g = 0;
+                    this.field_g = 0;
                     break L2;
                   } else {
-                    int fieldTemp$2 = ((fj) this).field_g;
-                    ((fj) this).field_g = ((fj) this).field_g + 1;
-                    ((fj) this).field_f[fieldTemp$2] = (byte) 0;
+                    fieldTemp$2 = this.field_g;
+                    this.field_g = this.field_g + 1;
+                    this.field_f[fieldTemp$2] = (byte) 0;
                     continue L3;
                   }
                 }
@@ -78,23 +80,23 @@ final class fj {
               }
             }
             L4: while (true) {
-              if (((fj) this).field_g >= 32) {
-                cua.a(((fj) this).field_k, 0, ((fj) this).field_f, 32, 32);
+              if (-33 >= (this.field_g ^ -1)) {
+                cua.a(this.field_k, 0, this.field_f, 32, 32);
                 this.a((byte) 66);
                 var4_int = 0;
                 var5 = param1;
                 L5: while (true) {
-                  if (var4_int >= 8) {
+                  if ((var4_int ^ -1) <= -9) {
                     break L0;
                   } else {
-                    var6 = ((fj) this).field_l[var4_int];
-                    param0[var5] = (byte)(int)(var6 >>> 56);
-                    param0[1 + var5] = (byte)(int)(var6 >>> 48);
-                    param0[2 + var5] = (byte)(int)(var6 >>> 40);
-                    param0[var5 - -3] = (byte)(int)(var6 >>> 32);
-                    param0[var5 + 4] = (byte)(int)(var6 >>> 24);
-                    param0[var5 - -5] = (byte)(int)(var6 >>> 16);
-                    param0[6 + var5] = (byte)(int)(var6 >>> 8);
+                    var6 = this.field_l[var4_int];
+                    param0[var5] = (byte)(int)(var6 >>> 411123000);
+                    param0[1 + var5] = (byte)(int)(var6 >>> -2044012368);
+                    param0[2 + var5] = (byte)(int)(var6 >>> 504499880);
+                    param0[var5 - -3] = (byte)(int)(var6 >>> -1570881184);
+                    param0[var5 + 4] = (byte)(int)(var6 >>> 1661104152);
+                    param0[var5 - -5] = (byte)(int)(var6 >>> -633834480);
+                    param0[6 + var5] = (byte)(int)(var6 >>> -682044024);
                     param0[7 + var5] = (byte)(int)var6;
                     var5 += 8;
                     var4_int++;
@@ -102,9 +104,9 @@ final class fj {
                   }
                 }
               } else {
-                int fieldTemp$3 = ((fj) this).field_g;
-                ((fj) this).field_g = ((fj) this).field_g + 1;
-                ((fj) this).field_f[fieldTemp$3] = (byte) 0;
+                fieldTemp$3 = this.field_g;
+                this.field_g = this.field_g + 1;
+                this.field_f[fieldTemp$3] = (byte) 0;
                 continue L4;
               }
             }
@@ -113,23 +115,23 @@ final class fj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var4;
+            stackOut_14_0 = (RuntimeException) (var4);
             stackOut_14_1 = new StringBuilder().append("fj.F(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -137,7 +139,7 @@ final class fj {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -145,16 +147,16 @@ final class fj {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         if (param0 != -88) {
-            ((fj) this).field_k = null;
+            this.field_k = (byte[]) null;
         }
         for (var2 = 0; var2 < 32; var2++) {
-            ((fj) this).field_k[var2] = (byte) 0;
+            this.field_k[var2] = (byte) 0;
         }
-        ((fj) this).field_g = 0;
-        ((fj) this).field_e = 0;
-        ((fj) this).field_f[0] = (byte) 0;
+        this.field_g = 0;
+        this.field_e = 0;
+        this.field_f[0] = (byte) 0;
         for (var2 = 0; var2 < 8; var2++) {
-            ((fj) this).field_l[var2] = 0L;
+            this.field_l[var2] = 0L;
         }
     }
 
@@ -169,7 +171,7 @@ final class fj {
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var2 >= 8) {
+          if ((var2 ^ -1) <= -9) {
             L1: {
               if (param0 == 66) {
                 break L1;
@@ -183,13 +185,13 @@ final class fj {
               if (var2 >= 8) {
                 var2 = 1;
                 L3: while (true) {
-                  if (var2 > 10) {
+                  if ((var2 ^ -1) < -11) {
                     var2 = 0;
                     L4: while (true) {
-                      if (var2 >= 8) {
+                      if ((var2 ^ -1) <= -9) {
                         return;
                       } else {
-                        ((fj) this).field_l[var2] = ihb.a(((fj) this).field_l[var2], ihb.a(((fj) this).field_j[var2], ((fj) this).field_d[var2]));
+                        this.field_l[var2] = ihb.a(this.field_l[var2], ihb.a(this.field_j[var2], this.field_d[var2]));
                         var2++;
                         continue L4;
                       }
@@ -201,32 +203,32 @@ final class fj {
                         var3 = 0;
                         L6: while (true) {
                           if (8 <= var3) {
-                            ((fj) this).field_i[0] = ihb.a(((fj) this).field_i[0], gp.field_o[var2]);
+                            this.field_i[0] = ihb.a(this.field_i[0], gp.field_o[var2]);
                             var3 = 0;
                             L7: while (true) {
                               if (8 <= var3) {
                                 var3 = 0;
                                 L8: while (true) {
-                                  if (var3 >= 8) {
+                                  if (-9 >= (var3 ^ -1)) {
                                     var2++;
                                     continue L3;
                                   } else {
-                                    ((fj) this).field_d[var3] = ((fj) this).field_h[var3];
+                                    this.field_d[var3] = this.field_h[var3];
                                     var3++;
                                     continue L8;
                                   }
                                 }
                               } else {
-                                ((fj) this).field_h[var3] = ((fj) this).field_i[var3];
+                                this.field_h[var3] = this.field_i[var3];
                                 var7 = 0;
                                 var4 = var7;
                                 var5 = 56;
                                 L9: while (true) {
-                                  if (var7 >= 8) {
+                                  if (-9 >= (var7 ^ -1)) {
                                     var3++;
                                     continue L7;
                                   } else {
-                                    ((fj) this).field_h[var3] = ihb.a(((fj) this).field_h[var3], gp.field_r[var7][dla.a(255, (int)(((fj) this).field_d[dla.a(var3 + -var7, 7)] >>> var5))]);
+                                    this.field_h[var3] = ihb.a(this.field_h[var3], gp.field_r[var7][dla.a(255, (int)(this.field_d[dla.a(var3 + -var7, 7)] >>> var5))]);
                                     var5 -= 8;
                                     var7++;
                                     continue L9;
@@ -235,13 +237,13 @@ final class fj {
                               }
                             }
                           } else {
-                            ((fj) this).field_i[var3] = ((fj) this).field_h[var3];
+                            this.field_i[var3] = this.field_h[var3];
                             var3++;
                             continue L6;
                           }
                         }
                       } else {
-                        ((fj) this).field_h[var3] = 0L;
+                        this.field_h[var3] = 0L;
                         var4 = 0;
                         var5 = 56;
                         L10: while (true) {
@@ -249,7 +251,7 @@ final class fj {
                             var3++;
                             continue L5;
                           } else {
-                            ((fj) this).field_h[var3] = ihb.a(((fj) this).field_h[var3], gp.field_r[var4][dla.a(255, (int)(((fj) this).field_i[dla.a(-var4 + var3, 7)] >>> var5))]);
+                            this.field_h[var3] = ihb.a(this.field_h[var3], gp.field_r[var4][dla.a(255, (int)(this.field_i[dla.a(-var4 + var3, 7)] >>> var5))]);
                             var5 -= 8;
                             var4++;
                             continue L10;
@@ -260,14 +262,14 @@ final class fj {
                   }
                 }
               } else {
-                ((fj) this).field_i[var2] = ((fj) this).field_l[var2];
-                ((fj) this).field_d[var2] = ihb.a(((fj) this).field_j[var2], ((fj) this).field_l[var2]);
+                this.field_i[var2] = this.field_l[var2];
+                this.field_d[var2] = ihb.a(this.field_j[var2], this.field_l[var2]);
                 var2++;
                 continue L2;
               }
             }
           } else {
-            ((fj) this).field_j[var2] = ihb.a(ihb.a(hoa.a(255L, (long)((fj) this).field_f[6 + var3]) << 8, ihb.a(hoa.a(255L, (long)((fj) this).field_f[5 + var3]) << 16, ihb.a(hoa.a(255L, (long)((fj) this).field_f[4 + var3]) << 24, ihb.a(hoa.a(255L, (long)((fj) this).field_f[3 + var3]) << 32, ihb.a(hoa.a(280375465082880L, (long)((fj) this).field_f[var3 + 2] << 40), ihb.a(hoa.a((long)((fj) this).field_f[1 + var3], 255L) << 48, (long)((fj) this).field_f[var3] << 56)))))), hoa.a((long)((fj) this).field_f[var3 - -7], 255L));
+            this.field_j[var2] = ihb.a(ihb.a(hoa.a(255L, (long)this.field_f[6 + var3]) << 2087682312, ihb.a(hoa.a(255L, (long)this.field_f[5 + var3]) << 1248134288, ihb.a(hoa.a(255L, (long)this.field_f[4 + var3]) << 1291497112, ihb.a(hoa.a(255L, (long)this.field_f[3 + var3]) << -2010847392, ihb.a(hoa.a(280375465082880L, (long)this.field_f[var3 + 2] << 1646289704), ihb.a(hoa.a((long)this.field_f[1 + var3], 255L) << 2071146736, (long)this.field_f[var3] << -1726098824)))))), hoa.a((long)this.field_f[var3 - -7], 255L));
             var2++;
             var3 += 8;
             continue L0;
@@ -315,7 +317,7 @@ final class fj {
             L1: {
               var5_int = 0;
               var6 = 7 & 8 - (7 & (int)param2);
-              var7 = ((fj) this).field_e & 7;
+              var7 = this.field_e & 7;
               var9 = param2;
               var11 = 31;
               if (param1 == -7) {
@@ -329,11 +331,11 @@ final class fj {
             L2: while (true) {
               if (var11 < 0) {
                 L3: while (true) {
-                  if (param2 <= 8L) {
+                  if (-9L <= (param2 ^ -1L)) {
                     L4: {
-                      if (param2 > 0L) {
+                      if ((param2 ^ -1L) < -1L) {
                         var8 = param0[var5_int] << var6 & 255;
-                        ((fj) this).field_f[((fj) this).field_g] = (byte)knb.a((int) ((fj) this).field_f[((fj) this).field_g], var8 >>> var7);
+                        this.field_f[this.field_g] = (byte)knb.a((int) this.field_f[this.field_g], var8 >>> var7);
                         break L4;
                       } else {
                         var8 = 0;
@@ -341,25 +343,25 @@ final class fj {
                       }
                     }
                     L5: {
-                      if (param2 + (long)var7 >= 8L) {
+                      if ((param2 + (long)var7 ^ -1L) <= -9L) {
                         L6: {
                           param2 = param2 - (long)(-var7 + 8);
-                          ((fj) this).field_e = ((fj) this).field_e + (8 - var7);
-                          ((fj) this).field_g = ((fj) this).field_g + 1;
-                          if (((fj) this).field_e == 512) {
+                          this.field_e = this.field_e + (8 - var7);
+                          this.field_g = this.field_g + 1;
+                          if ((this.field_e ^ -1) == -513) {
                             this.a((byte) 66);
-                            ((fj) this).field_g = 0;
-                            ((fj) this).field_e = 0;
+                            this.field_g = 0;
+                            this.field_e = 0;
                             break L6;
                           } else {
                             break L6;
                           }
                         }
-                        ((fj) this).field_f[((fj) this).field_g] = (byte)dla.a(255, var8 << 8 + -var7);
-                        ((fj) this).field_e = ((fj) this).field_e + (int)param2;
+                        this.field_f[this.field_g] = (byte)dla.a(255, var8 << 8 + -var7);
+                        this.field_e = this.field_e + (int)param2;
                         break L5;
                       } else {
-                        ((fj) this).field_e = (int)((long)((fj) this).field_e + param2);
+                        this.field_e = (int)((long)this.field_e + param2);
                         break L5;
                       }
                     }
@@ -367,25 +369,25 @@ final class fj {
                   } else {
                     L7: {
                       var8 = 255 & param0[var5_int] << var6 | (255 & param0[1 + var5_int]) >>> 8 + -var6;
-                      if (var8 < 0) {
+                      if (-1 < (var8 ^ -1)) {
                         break L7;
                       } else {
-                        if (var8 < 256) {
+                        if (-257 < (var8 ^ -1)) {
                           L8: {
-                            ((fj) this).field_f[((fj) this).field_g] = (byte)knb.a((int) ((fj) this).field_f[((fj) this).field_g], var8 >>> var7);
-                            ((fj) this).field_g = ((fj) this).field_g + 1;
-                            ((fj) this).field_e = ((fj) this).field_e + (8 + -var7);
-                            if (((fj) this).field_e == 512) {
+                            this.field_f[this.field_g] = (byte)knb.a((int) this.field_f[this.field_g], var8 >>> var7);
+                            this.field_g = this.field_g + 1;
+                            this.field_e = this.field_e + (8 + -var7);
+                            if (this.field_e == 512) {
                               this.a((byte) 66);
-                              ((fj) this).field_e = 0;
-                              ((fj) this).field_g = 0;
+                              this.field_e = 0;
+                              this.field_g = 0;
                               break L8;
                             } else {
                               break L8;
                             }
                           }
-                          ((fj) this).field_f[((fj) this).field_g] = (byte)dla.a(var8 << -var7 + 8, 255);
-                          ((fj) this).field_e = ((fj) this).field_e + var7;
+                          this.field_f[this.field_g] = (byte)dla.a(var8 << -var7 + 8, 255);
+                          this.field_e = this.field_e + var7;
                           var5_int++;
                           param2 = param2 - 8L;
                           continue L3;
@@ -398,8 +400,8 @@ final class fj {
                   }
                 }
               } else {
-                var12 = var12 + ((255 & ((fj) this).field_k[var11]) + (255 & (int)var9));
-                ((fj) this).field_k[var11] = (byte)var12;
+                var12 = var12 + ((255 & this.field_k[var11]) + (255 & (int)var9));
+                this.field_k[var11] = (byte)var12;
                 var12 = var12 >>> 8;
                 var9 = var9 >>> 8;
                 var11--;
@@ -411,23 +413,23 @@ final class fj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var5 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var5;
+            stackOut_25_0 = (RuntimeException) (var5);
             stackOut_25_1 = new StringBuilder().append("fj.C(");
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L9;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -435,27 +437,23 @@ final class fj {
               break L9;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     fj() {
-        ((fj) this).field_d = new long[8];
-        ((fj) this).field_l = new long[8];
-        ((fj) this).field_i = new long[8];
-        ((fj) this).field_h = new long[8];
-        ((fj) this).field_g = 0;
-        ((fj) this).field_k = new byte[32];
-        ((fj) this).field_f = new byte[64];
-        ((fj) this).field_e = 0;
-        ((fj) this).field_j = new long[8];
+        this.field_d = new long[8];
+        this.field_l = new long[8];
+        this.field_i = new long[8];
+        this.field_h = new long[8];
+        this.field_g = 0;
+        this.field_k = new byte[32];
+        this.field_f = new byte[64];
+        this.field_e = 0;
+        this.field_j = new long[8];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Email: ";
         field_b = 1;
         field_c = "Add map zone";

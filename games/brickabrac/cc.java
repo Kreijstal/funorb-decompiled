@@ -10,10 +10,16 @@ final class cc extends af {
 
     cc() {
         super(9, oc.field_y);
-        ((cc) this).field_t = pl.field_b;
+        this.field_t = pl.field_b;
     }
 
     final static void f(int param0) {
+        if (param0 != 967) {
+            field_G = false;
+            qa.e((byte) -95);
+            bd.a(4, true);
+            return;
+        }
         qa.e((byte) -95);
         bd.a(4, true);
     }
@@ -21,9 +27,9 @@ final class cc extends af {
     final boolean a(int param0, byte param1) {
         if (param1 != 38) {
           cc.a(-57, true, false, -49);
-          return uo.a(param0, (byte) 47, ((cc) this).field_t);
+          return uo.a(param0, (byte) 47, this.field_t);
         } else {
-          return uo.a(param0, (byte) 47, ((cc) this).field_t);
+          return uo.a(param0, (byte) 47, this.field_t);
         }
     }
 
@@ -34,7 +40,7 @@ final class cc extends af {
         lb.d(qi.field_K[0].field_D + -1, gp.field_d.field_db + (-ud.field_w + -qi.field_K[0].field_C), 1 - (-var4 - -qi.field_K[0].field_D), -qi.field_K[0].field_C + gp.field_d.field_db);
         nn.field_g.c(nn.field_f, qi.field_K[0].field_D + 1, -5 + -qi.field_K[6].field_C + (gp.field_d.field_db - -2), !param1 ? 1 : 0, -1, !param2 ? 196 : 256);
         if (param3 > -105) {
-            field_I = null;
+            field_I = (int[]) null;
         } else {
             lb.b(ol.field_v);
             return;
@@ -53,10 +59,6 @@ final class cc extends af {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_F = "Find opponent";
         field_I = new int[8192];
     }

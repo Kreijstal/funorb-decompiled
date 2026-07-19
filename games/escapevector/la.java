@@ -11,6 +11,6 @@ public class la {
     int field_e;
 
     la() {
-        ((la) this).field_f = 0;
+        this.field_f = 0;
     }
 }

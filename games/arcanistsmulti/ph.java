@@ -28,10 +28,6 @@ final class ph {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ph.A(";
         field_b = "PER MONTH";
         field_d = "<%0> wants to draw.";

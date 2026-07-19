@@ -9,6 +9,12 @@ final class ge {
 
     public static void a(int param0) {
         field_d = null;
+        if (param0 > -101) {
+            field_d = (dl) null;
+            field_b = null;
+            field_a = null;
+            return;
+        }
         field_b = null;
         field_a = null;
     }
@@ -22,7 +28,7 @@ final class ge {
         Throwable decompiledCaughtException = null;
         int stackOut_6_0 = 0;
         int stackOut_2_0 = 0;
-        var1_ref = (Object) (Object) uf.field_c;
+        var1_ref = uf.field_c;
         synchronized (var1_ref) {
           L0: {
             if (ah.field_g != td.field_d) {
@@ -30,7 +36,7 @@ final class ge {
                 if (param0 <= -1) {
                   break L1;
                 } else {
-                  field_a = null;
+                  field_a = (String) null;
                   break L1;
                 }
               }

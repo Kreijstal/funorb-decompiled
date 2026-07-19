@@ -10,13 +10,12 @@ final class gp {
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
+        if (param0 < 97) {
+            field_a = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "gp.A(";
         field_a = "Time remaining";
     }

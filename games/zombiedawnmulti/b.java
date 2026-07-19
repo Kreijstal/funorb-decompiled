@@ -12,20 +12,20 @@ final class b {
     public static void a(int param0) {
         field_e = null;
         field_a = null;
-        int var1 = -5;
+        int var1 = 5 / ((42 - param0) / 45);
         field_c = null;
         field_f = null;
     }
 
     final static int a(boolean param0) {
+        if (!param0) {
+            field_a = (mj) null;
+            return gi.field_m;
+        }
         return gi.field_m;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new int[4];
         field_e = "Withdraw request to join <%0>'s game";
         field_d = 20;

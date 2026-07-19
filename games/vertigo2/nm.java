@@ -47,59 +47,59 @@ abstract class nm extends cj {
     abstract void a(byte param0, int param1, int param2);
 
     final void a(boolean param0, int param1, int param2, int param3) {
-        if (((nm) this).field_G == 0) {
-          return;
-        } else {
-          if (((nm) this).field_G >= 256) {
-            if (param1 != 0) {
+        if (this.field_G != 0) {
+          if ((this.field_G ^ -1) <= -257) {
+            if (-1 != (param1 ^ -1)) {
               return;
             } else {
-              ((nm) this).a((byte) -128, ((nm) this).field_o + param2, ((nm) this).field_t + param3);
+              this.a((byte) -128, this.field_o + param2, this.field_t + param3);
               super.a(param0, param1, param2, param3);
               return;
             }
           } else {
-            if (se.field_C == null) {
-              se.field_C = new er(((nm) this).field_n, ((nm) this).field_s);
-              lq.a(se.field_C, (byte) -94);
-              bi.c();
-              ((nm) this).a((byte) -128, 0, 0);
-              super.a(param0, param1, -((nm) this).field_o + -param2, -((nm) this).field_t + -param3);
-              ln.d(-28558);
-              se.field_C.c(((nm) this).field_o + param2, ((nm) this).field_t + param3, ((nm) this).field_G);
-              return;
-            } else {
-              if (~((nm) this).field_n < ~se.field_C.field_y) {
-                se.field_C = new er(((nm) this).field_n, ((nm) this).field_s);
-                lq.a(se.field_C, (byte) -94);
-                bi.c();
-                ((nm) this).a((byte) -128, 0, 0);
-                super.a(param0, param1, -((nm) this).field_o + -param2, -((nm) this).field_t + -param3);
-                ln.d(-28558);
-                se.field_C.c(((nm) this).field_o + param2, ((nm) this).field_t + param3, ((nm) this).field_G);
-                return;
-              } else {
-                if (~((nm) this).field_s < ~se.field_C.field_t) {
-                  se.field_C = new er(((nm) this).field_n, ((nm) this).field_s);
+            if (se.field_C != null) {
+              if (this.field_n <= se.field_C.field_y) {
+                if (this.field_s <= se.field_C.field_t) {
                   lq.a(se.field_C, (byte) -94);
                   bi.c();
-                  ((nm) this).a((byte) -128, 0, 0);
-                  super.a(param0, param1, -((nm) this).field_o + -param2, -((nm) this).field_t + -param3);
+                  this.a((byte) -128, 0, 0);
+                  super.a(param0, param1, -this.field_o + -param2, -this.field_t + -param3);
                   ln.d(-28558);
-                  se.field_C.c(((nm) this).field_o + param2, ((nm) this).field_t + param3, ((nm) this).field_G);
+                  se.field_C.c(this.field_o + param2, this.field_t + param3, this.field_G);
                   return;
                 } else {
+                  se.field_C = new er(this.field_n, this.field_s);
                   lq.a(se.field_C, (byte) -94);
                   bi.c();
-                  ((nm) this).a((byte) -128, 0, 0);
-                  super.a(param0, param1, -((nm) this).field_o + -param2, -((nm) this).field_t + -param3);
+                  this.a((byte) -128, 0, 0);
+                  super.a(param0, param1, -this.field_o + -param2, -this.field_t + -param3);
                   ln.d(-28558);
-                  se.field_C.c(((nm) this).field_o + param2, ((nm) this).field_t + param3, ((nm) this).field_G);
+                  se.field_C.c(this.field_o + param2, this.field_t + param3, this.field_G);
                   return;
                 }
+              } else {
+                se.field_C = new er(this.field_n, this.field_s);
+                lq.a(se.field_C, (byte) -94);
+                bi.c();
+                this.a((byte) -128, 0, 0);
+                super.a(param0, param1, -this.field_o + -param2, -this.field_t + -param3);
+                ln.d(-28558);
+                se.field_C.c(this.field_o + param2, this.field_t + param3, this.field_G);
+                return;
               }
+            } else {
+              se.field_C = new er(this.field_n, this.field_s);
+              lq.a(se.field_C, (byte) -94);
+              bi.c();
+              this.a((byte) -128, 0, 0);
+              super.a(param0, param1, -this.field_o + -param2, -this.field_t + -param3);
+              ln.d(-28558);
+              se.field_C.c(this.field_o + param2, this.field_t + param3, this.field_G);
+              return;
             }
           }
+        } else {
+          return;
         }
     }
 
@@ -114,13 +114,13 @@ abstract class nm extends cj {
         int stackOut_3_0 = 0;
         if (param0 >= -117) {
           L0: {
-            ((nm) this).field_I = false;
-            if (!((nm) this).field_I) {
+            this.field_I = false;
+            if (!this.field_I) {
               stackOut_11_0 = 0;
               stackIn_12_0 = stackOut_11_0;
               break L0;
             } else {
-              if (this == (Object) (Object) ((nm) this).field_H.k(0)) {
+              if (this == this.field_H.k(0)) {
                 stackOut_10_0 = 256;
                 stackIn_12_0 = stackOut_10_0;
                 break L0;
@@ -134,12 +134,12 @@ abstract class nm extends cj {
           return stackIn_12_0;
         } else {
           L1: {
-            if (!((nm) this).field_I) {
+            if (!this.field_I) {
               stackOut_5_0 = 0;
               stackIn_6_0 = stackOut_5_0;
               break L1;
             } else {
-              if (this == (Object) (Object) ((nm) this).field_H.k(0)) {
+              if (this == this.field_H.k(0)) {
                 stackOut_4_0 = 256;
                 stackIn_6_0 = stackOut_4_0;
                 break L1;
@@ -156,18 +156,27 @@ abstract class nm extends cj {
 
     final static void b(boolean param0, int param1) {
         try {
+            Object discarded$1 = null;
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                Object discarded$1 = je.a((byte) 49, "resizing", ob.e((byte) 71), new Object[1]);
+            L0: {
+              if (!param0) {
                 break L0;
+              } else {
+                nm.k(-53);
+                break L0;
+              }
+            }
+            try {
+              L1: {
+                discarded$1 = je.a((byte) 49, "resizing", ob.e((byte) 71), new Object[]{new Integer(param1)});
+                break L1;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
+              L2: {
                 var2 = decompiledCaughtException;
-                break L1;
+                break L2;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -188,9 +197,9 @@ abstract class nm extends cj {
         int stackOut_11_0 = 0;
         L0: {
           var2 = this.i(-125);
-          var3 = -((nm) this).field_G + var2;
-          if (var3 > 0) {
-            ((nm) this).field_G = ((nm) this).field_G + (8 + (var3 + -1)) / 8;
+          var3 = -this.field_G + var2;
+          if (-1 > (var3 ^ -1)) {
+            this.field_G = this.field_G + (8 + (var3 + -1)) / 8;
             break L0;
           } else {
             break L0;
@@ -198,19 +207,19 @@ abstract class nm extends cj {
         }
         if (param0 == 17) {
           L1: {
-            if (var3 < 0) {
-              ((nm) this).field_G = ((nm) this).field_G + (-16 + var3 - -1) / 16;
+            if ((var3 ^ -1) > -1) {
+              this.field_G = this.field_G + (-16 + var3 - -1) / 16;
               break L1;
             } else {
               break L1;
             }
           }
-          if (((nm) this).field_G == 0) {
+          if (this.field_G == 0) {
             if (0 != var2) {
               return false;
             } else {
               L2: {
-                if (((nm) this).field_I) {
+                if (this.field_I) {
                   stackOut_24_0 = 0;
                   stackIn_25_0 = stackOut_24_0;
                   break L2;
@@ -227,20 +236,20 @@ abstract class nm extends cj {
           }
         } else {
           L3: {
-            ((nm) this).a((byte) 65, 57, 65);
-            if (var3 < 0) {
-              ((nm) this).field_G = ((nm) this).field_G + (-16 + var3 - -1) / 16;
+            this.a((byte) 65, 57, 65);
+            if ((var3 ^ -1) > -1) {
+              this.field_G = this.field_G + (-16 + var3 - -1) / 16;
               break L3;
             } else {
               break L3;
             }
           }
-          if (((nm) this).field_G == 0) {
+          if (this.field_G == 0) {
             if (0 != var2) {
               return false;
             } else {
               L4: {
-                if (((nm) this).field_I) {
+                if (this.field_I) {
                   stackOut_12_0 = 0;
                   stackIn_13_0 = stackOut_12_0;
                   break L4;
@@ -260,9 +269,9 @@ abstract class nm extends cj {
 
     boolean a(int param0) {
         if (param0 == -1) {
-          ((nm) this).field_G = this.i(-126);
-          if (((nm) this).field_G == 0) {
-            if (((nm) this).field_I) {
+          this.field_G = this.i(-126);
+          if (this.field_G == 0) {
+            if (this.field_I) {
               return false;
             } else {
               return true;
@@ -278,22 +287,22 @@ abstract class nm extends cj {
     final void b(int param0, int param1, int param2) {
         if (param0 != -1535749535) {
           nm.k(-40);
-          ((nm) this).a(false, gi.field_m + -param1 >> 1, im.field_h + -param2 >> 1, param2, param1);
+          this.a(false, gi.field_m + -param1 >> -1535749535, im.field_h + -param2 >> 987216801, param2, param1);
           return;
         } else {
-          ((nm) this).a(false, gi.field_m + -param1 >> 1, im.field_h + -param2 >> 1, param2, param1);
+          this.a(false, gi.field_m + -param1 >> -1535749535, im.field_h + -param2 >> 987216801, param2, param1);
           return;
         }
     }
 
     nm(sd param0, int param1, int param2) {
-        super(-param1 + gi.field_m >> 1, -param2 + im.field_h >> 1, param1, param2, (ur) null);
+        super(-param1 + gi.field_m >> 439023425, -param2 + im.field_h >> 2101548673, param1, param2, (ur) null);
         try {
-            ((nm) this).field_I = false;
-            ((nm) this).field_H = param0;
-            ((nm) this).field_G = 0;
+            this.field_I = false;
+            this.field_H = param0;
+            this.field_G = 0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "nm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "nm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -302,14 +311,10 @@ abstract class nm extends cj {
         if (var2 != null) {
             return var2;
         }
-        return (iq) this;
+        return (iq) (this);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_J = false;
         field_F = -1;
     }

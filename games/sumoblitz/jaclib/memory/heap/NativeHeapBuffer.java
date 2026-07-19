@@ -16,29 +16,29 @@ public final class NativeHeapBuffer implements jaclib.memory.Buffer, jaclib.memo
 
     private final synchronized void a() {
         if (this.b()) {
-            ((jaclib.memory.heap.NativeHeapBuffer) this).a.deallocateBuffer(((jaclib.memory.heap.NativeHeapBuffer) this).b);
-            ((jaclib.memory.heap.NativeHeapBuffer) this).d = false;
+            this.a.deallocateBuffer(this.b);
+            this.d = false;
             return;
         }
-        ((jaclib.memory.heap.NativeHeapBuffer) this).d = false;
+        this.d = false;
     }
 
     public final long c() {
-        return ((jaclib.memory.heap.NativeHeapBuffer) this).a.getBufferAddress(((jaclib.memory.heap.NativeHeapBuffer) this).b);
+        return this.a.getBufferAddress(this.b);
     }
 
     private final synchronized boolean b() {
-        if (!((jaclib.memory.heap.NativeHeapBuffer) this).a.b()) {
+        if (!this.a.b()) {
             return false;
         }
-        if (!((jaclib.memory.heap.NativeHeapBuffer) this).d) {
+        if (!this.d) {
             return false;
         }
         return true;
     }
 
     public final int getSize() {
-        return ((jaclib.memory.heap.NativeHeapBuffer) this).c;
+        return this.c;
     }
 
     public final synchronized void a(byte[] param0, int param1, int param2, int param3) {
@@ -97,7 +97,7 @@ public final class NativeHeapBuffer implements jaclib.memory.Buffer, jaclib.memo
         int stackOut_16_0 = 0;
         int stackOut_16_1 = 0;
         L0: {
-          if (param1 >= 0) {
+          if (-1 >= (param1 ^ -1)) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -172,7 +172,7 @@ public final class NativeHeapBuffer implements jaclib.memory.Buffer, jaclib.memo
           stackOut_12_0 = stackIn_12_0 | stackIn_12_1;
           stackIn_14_0 = stackOut_12_0;
           stackIn_13_0 = stackOut_12_0;
-          if (param2 >= 0) {
+          if ((param2 ^ -1) <= -1) {
             stackOut_14_0 = stackIn_14_0;
             stackOut_14_1 = 0;
             stackIn_15_0 = stackOut_14_0;
@@ -190,7 +190,7 @@ public final class NativeHeapBuffer implements jaclib.memory.Buffer, jaclib.memo
           stackOut_15_0 = stackIn_15_0 | stackIn_15_1;
           stackIn_17_0 = stackOut_15_0;
           stackIn_16_0 = stackOut_15_0;
-          if (((jaclib.memory.heap.NativeHeapBuffer) this).c >= param2 - -param3) {
+          if (this.c >= param2 - -param3) {
             stackOut_17_0 = stackIn_17_0;
             stackOut_17_1 = 0;
             stackIn_18_0 = stackOut_17_0;
@@ -207,15 +207,15 @@ public final class NativeHeapBuffer implements jaclib.memory.Buffer, jaclib.memo
         if ((stackIn_18_0 | stackIn_18_1) != 0) {
           throw new RuntimeException();
         } else {
-          ((jaclib.memory.heap.NativeHeapBuffer) this).a.put(((jaclib.memory.heap.NativeHeapBuffer) this).b, param0, param1, param2, param3);
+          this.a.put(this.b, param0, param1, param2, param3);
           return;
         }
     }
 
     NativeHeapBuffer(jaclib.memory.heap.NativeHeap param0, int param1, int param2) {
-        ((jaclib.memory.heap.NativeHeapBuffer) this).d = true;
-        ((jaclib.memory.heap.NativeHeapBuffer) this).c = param2;
-        ((jaclib.memory.heap.NativeHeapBuffer) this).b = param1;
-        ((jaclib.memory.heap.NativeHeapBuffer) this).a = param0;
+        this.d = true;
+        this.c = param2;
+        this.b = param1;
+        this.a = param0;
     }
 }

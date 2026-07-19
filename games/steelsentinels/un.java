@@ -23,42 +23,55 @@ final class un {
         field_f = null;
         field_m = null;
         field_c = null;
-        field_e = null;
-        field_j = null;
-        field_o = null;
-        field_d = null;
-        field_k = null;
-        field_a = null;
-        field_h = null;
-        field_l = null;
-        field_b = null;
-    }
-
-    final static void a(int param0, int param1) {
-        cj.field_h = 200;
-        uc.field_a = 0;
-        uf.field_a = new int[3];
-        ph.field_e = new na[3000];
-        int var2 = 0;
-    }
-
-    final static void a(byte param0) {
-        int var1 = 0;
-        if (224 > ll.field_q) {
-          var1 = ll.field_q % 32;
-          ef.a(1, -var1 + (ll.field_q + 32));
+        if (param0) {
           return;
         } else {
-          ef.a(1, 256);
+          field_e = null;
+          field_j = null;
+          field_o = null;
+          field_d = null;
+          field_k = null;
+          field_a = null;
+          field_h = (qh[][]) null;
+          field_l = null;
+          field_b = null;
           return;
         }
     }
 
-    static {
-        $cfr$clinit();
+    final static void a(int param0, int param1) {
+        cj.field_h = param0;
+        uc.field_a = 0;
+        uf.field_a = new int[3];
+        ph.field_e = new na[15 * param0];
+        int var2 = -4 % ((param1 - 79) / 34);
     }
 
-    private static void $cfr$clinit() {
+    final static void a(byte param0) {
+        int var1 = 0;
+        if (param0 >= 34) {
+          if (224 > ll.field_q) {
+            var1 = ll.field_q % 32;
+            ef.a(1, -var1 + (ll.field_q + 32));
+            return;
+          } else {
+            ef.a(1, 256);
+            return;
+          }
+        } else {
+          field_g = (String) null;
+          if (224 > ll.field_q) {
+            var1 = ll.field_q % 32;
+            ef.a(1, -var1 + (ll.field_q + 32));
+            return;
+          } else {
+            ef.a(1, 256);
+            return;
+          }
+        }
+    }
+
+    static {
         field_g = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
         field_l = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
         field_d = "Pause Menu";

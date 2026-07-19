@@ -64,7 +64,7 @@ final class fea extends po {
             break L4;
           } else {
             if (param4 > 0) {
-              fea.a(dg.field_e, ((fea) this).field_L[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+              fea.a(dg.field_e, this.field_L[param0], param5, var12, var9, param3, param4, var10, var11, param6);
               return;
             } else {
               break L4;
@@ -74,6 +74,8 @@ final class fea extends po {
     }
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -92,7 +94,7 @@ final class fea extends po {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 if (param1[incrementValue$66] == 0) {
                   param4++;
@@ -100,7 +102,7 @@ final class fea extends po {
                   continue L1;
                 } else {
                   var12 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (((var12 & 16711935) * param9 & -16711936) + ((var12 & 65280) * param9 & 16711680) >> 8) + param2;
                   var11++;
@@ -114,11 +116,21 @@ final class fea extends po {
 
     fea(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
         super(param0, param1, param2, param3, param4);
-        ((fea) this).field_L = new byte[256][];
-        ((fea) this).field_L = param5;
+        this.field_L = new byte[256][];
+        this.field_L = param5;
     }
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -140,14 +152,14 @@ final class fea extends po {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     if (param1[incrementValue$218] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -157,52 +169,52 @@ final class fea extends po {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   if (param1[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   if (param1[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   if (param1[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 if (param1[incrementValue$226] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -215,6 +227,8 @@ final class fea extends po {
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -278,14 +292,14 @@ final class fea extends po {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$2 = param7;
+                incrementValue$2 = param7;
                 param7++;
                 if (param1[incrementValue$2] == 0) {
                   param8++;
                   var20++;
                   continue L3;
                 } else {
-                  int incrementValue$3 = param8;
+                  incrementValue$3 = param8;
                   param8++;
                   dg.field_e[incrementValue$3] = param6;
                   var20++;
@@ -359,10 +373,10 @@ final class fea extends po {
             if (param4 > 0) {
               L5: {
                 if (dg.field_d == null) {
-                  fea.a(dg.field_e, ((fea) this).field_L[param0], param5, var11, var8, param3, param4, var9, var10);
+                  fea.a(dg.field_e, this.field_L[param0], param5, var11, var8, param3, param4, var9, var10);
                   break L5;
                 } else {
-                  fea.a(dg.field_e, ((fea) this).field_L[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, dg.field_d, dg.field_b);
+                  fea.a(dg.field_e, this.field_L[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, dg.field_d, dg.field_b);
                   break L5;
                 }
               }

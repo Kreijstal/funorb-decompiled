@@ -32,42 +32,61 @@ final class in extends fa {
     final static void a(java.awt.Component param0, int param1) {
         try {
             param0.setFocusTraversalKeysEnabled(false);
-            param0.addKeyListener((java.awt.event.KeyListener) (Object) mc.field_r);
-            param0.addFocusListener((java.awt.event.FocusListener) (Object) mc.field_r);
+            if (param1 <= 34) {
+                field_p = (ak) null;
+            }
+            param0.addKeyListener(mc.field_r);
+            param0.addFocusListener(mc.field_r);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "in.D(" + (param0 != null ? "{...}" : "null") + ',' + 57 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "in.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean e(int param0) {
-        if (-1 == jj.field_b) {
-            if (!(rd.a(1, false))) {
-                return false;
+        L0: {
+          if (-1 != jj.field_b) {
+            break L0;
+          } else {
+            if (!rd.a(1, false)) {
+              return false;
+            } else {
+              jj.field_b = vi.field_o.f(255);
+              vi.field_o.field_m = 0;
+              break L0;
             }
-            jj.field_b = vi.field_o.f(255);
-            vi.field_o.field_m = 0;
+          }
         }
-        if (!(-2 != jj.field_b)) {
+        L1: {
+          if (-2 == jj.field_b) {
             if (rd.a(2, false)) {
-                jj.field_b = vi.field_o.a((byte) -113);
-                vi.field_o.field_m = 0;
-                return rd.a(jj.field_b, false);
+              jj.field_b = vi.field_o.a((byte) -113);
+              vi.field_o.field_m = 0;
+              break L1;
+            } else {
+              return false;
             }
-            return false;
+          } else {
+            break L1;
+          }
         }
-        return rd.a(jj.field_b, false);
+        if (param0 != -18481) {
+          field_p = (ak) null;
+          return rd.a(jj.field_b, false);
+        } else {
+          return rd.a(jj.field_b, false);
+        }
     }
 
     final void a(boolean param0) {
-        ((in) this).field_G = null;
-        ((in) this).field_q = null;
-        ((in) this).field_F = null;
+        this.field_G = null;
+        this.field_q = null;
+        this.field_F = null;
         if (param0) {
-          field_p = null;
-          ((in) this).field_x = null;
+          field_p = (ak) null;
+          this.field_x = null;
           return;
         } else {
-          ((in) this).field_x = null;
+          this.field_x = null;
           return;
         }
     }
@@ -76,6 +95,11 @@ final class in extends fa {
         field_J = null;
         field_B = null;
         field_s = null;
+        if (param0 >= -1) {
+            field_p = (ak) null;
+            field_p = null;
+            return;
+        }
         field_p = null;
     }
 
@@ -83,10 +107,6 @@ final class in extends fa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_J = new bb();
     }
 }

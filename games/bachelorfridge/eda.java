@@ -10,9 +10,11 @@ final class eda extends kj {
     private ee field_g;
 
     final boolean b(int param0) {
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
         if (param0 >= 21) {
-          int fieldTemp$4 = ((eda) this).field_f + 12;
-          ((eda) this).field_f = ((eda) this).field_f + 12;
+          fieldTemp$4 = this.field_f + 12;
+          this.field_f = this.field_f + 12;
           if (fieldTemp$4 >= bd.field_i.field_p) {
             return true;
           } else {
@@ -20,8 +22,8 @@ final class eda extends kj {
           }
         } else {
           eda.c(-107);
-          int fieldTemp$5 = ((eda) this).field_f + 12;
-          ((eda) this).field_f = ((eda) this).field_f + 12;
+          fieldTemp$5 = this.field_f + 12;
+          this.field_f = this.field_f + 12;
           if (fieldTemp$5 >= bd.field_i.field_p) {
             return true;
           } else {
@@ -41,23 +43,23 @@ final class eda extends kj {
     eda(gj param0, int param1, int param2, lna param3, ee param4) {
         super(param0, param1, param2);
         try {
-            ((eda) this).field_g = param4;
-            ((eda) this).field_h = param3;
+            this.field_g = param4;
+            this.field_h = param3;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "eda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "eda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, int param2) {
-        kv discarded$0 = ((eda) this).field_h.e(66);
-        kv var4 = lq.a(((eda) this).field_g, 8533, bd.field_i, (bd.field_i.field_p >> 1) - (((eda) this).field_f + 60), param1);
-        var4.c(param2 + 16, -64 + (param0 - (40 - (((eda) this).field_f >> 1))), var4.field_q >> 1, var4.field_p >> 1);
-        ((eda) this).field_g.a(param2, param0);
+        kv discarded$0 = this.field_h.e(66);
+        kv var4 = lq.a(this.field_g, 8533, bd.field_i, (bd.field_i.field_p >> -348265471) - (this.field_f + 60), param1);
+        var4.c(param2 + 16, -64 + (param0 - (40 - (this.field_f >> -73361215))), var4.field_q >> -116269183, var4.field_p >> 304584033);
+        this.field_g.a(param2, param0);
     }
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-            ((eda) this).field_f = 11;
+            this.field_f = 11;
         }
     }
 

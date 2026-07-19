@@ -22,8 +22,8 @@ final class tk {
           }
           var1 = kl.a((byte) 124);
           af.field_r = new la(var1, (String) null, true, false, false);
-          na.field_d.a((byte) 107, (rj) (Object) sf.field_f);
-          sf.field_f.b((rj) (Object) af.field_r, 23143);
+          na.field_d.a((byte) 107, (rj) (sf.field_f));
+          sf.field_f.b(af.field_r, 23143);
           sf.field_f.i(3642);
           var2 = -85 / ((61 - param0) / 57);
           return;
@@ -84,10 +84,6 @@ final class tk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "to return to the normal view.";
     }
 }

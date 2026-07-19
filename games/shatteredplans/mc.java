@@ -18,11 +18,14 @@ abstract class mc extends df {
         field_u = null;
         field_s = null;
         field_q = null;
+        if (param0) {
+            return;
+        }
         field_o = null;
     }
 
     mc(int param0) {
-        ((mc) this).field_p = param0;
+        this.field_p = param0;
     }
 
     abstract Object e(byte param0);
@@ -52,7 +55,7 @@ abstract class mc extends df {
             try {
               L1: {
                 var4 = param2.getGraphics();
-                so.field_q.a(var4, 0, (byte) -92, 0);
+                so.field_q.a(var4, param3, (byte) -92, param1);
                 var4.dispose();
                 break L1;
               }
@@ -67,7 +70,7 @@ abstract class mc extends df {
             if (param0 >= 21) {
               break L0;
             } else {
-              field_o = null;
+              field_o = (qr) null;
               return;
             }
           }
@@ -75,23 +78,23 @@ abstract class mc extends df {
           decompiledCaughtException = decompiledCaughtParameter1;
           L3: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4_ref;
-            stackOut_6_1 = new StringBuilder().append("mc.I(").append(param0).append(',').append(0).append(',');
+            stackOut_6_0 = (RuntimeException) (var4_ref);
+            stackOut_6_1 = new StringBuilder().append("mc.I(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -99,15 +102,11 @@ abstract class mc extends df {
               break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + 0 + ')');
+          throw r.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = new gq(13, 0, 1, 0);
     }
 }

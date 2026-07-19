@@ -13,10 +13,10 @@ final class nw extends td {
     nw(int param0, aga param1, int param2, int param3) {
         super(param0, param1);
         try {
-            ((nw) this).field_n = param3;
-            ((nw) this).field_k = param2;
+            this.field_n = param3;
+            this.field_k = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nw.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "nw.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -45,19 +45,19 @@ final class nw extends td {
         try {
           L0: {
             L1: {
-              var3 = ((nw) this).field_h.a(57, param0);
-              var4 = new cja(((nw) this).field_g, new nq(var3));
-              var4.field_s = ((nw) this).field_k;
-              var4.field_u = ((nw) this).field_n;
+              var3 = this.field_h.a(57, param0);
+              var4 = new cja(this.field_g, new nq(var3));
+              var4.field_s = this.field_k;
+              var4.field_u = this.field_n;
               if (param1 == 3) {
                 break L1;
               } else {
-                field_p = null;
+                field_p = (kv[]) null;
                 break L1;
               }
             }
             var4.field_q = 2 * kla.a(4, param0.field_w, param1 ^ -2147483645) + 6;
-            stackOut_2_0 = (cja) var4;
+            stackOut_2_0 = (cja) (var4);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -65,23 +65,23 @@ final class nw extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_0 = (RuntimeException) (var3_ref);
             stackOut_4_1 = new StringBuilder().append("nw.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -89,21 +89,32 @@ final class nw extends td {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return (ii) (Object) stackIn_3_0;
+        return (ii) ((Object) stackIn_3_0);
     }
 
     public static void c(boolean param0) {
-        field_t = null;
-        field_s = null;
-        field_p = null;
-        field_r = null;
-        field_q = null;
+        if (param0) {
+          nw.a(false, false, (byte) -101);
+          field_t = null;
+          field_s = null;
+          field_p = null;
+          field_r = null;
+          field_q = null;
+          return;
+        } else {
+          field_t = null;
+          field_s = null;
+          field_p = null;
+          field_r = null;
+          field_q = null;
+          return;
+        }
     }
 
     final static void a(boolean param0, boolean param1, byte param2) {
-        Object var4 = null;
+        String var4 = (String) null;
         vma.a((byte) -6, param0, param1, (String) null);
         int var3 = -72 / ((-21 - param2) / 58);
     }
@@ -125,77 +136,69 @@ final class nw extends td {
         byte[] var14 = null;
         byte[] var15 = null;
         byte[] var16 = null;
-        byte[] var17 = null;
-        byte[] var18 = null;
-        byte[] var19 = null;
-        byte[] var20 = null;
-        byte[] var21 = null;
-        byte[] var22 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            var21 = param0.a((byte) 123, "MoveTable.csv", "");
-            var17 = var21;
-            var13 = var17;
-            var8 = var13;
-            var4 = var8;
-            var2 = var4;
-            var9 = new lu(var21);
-            wca.a((byte) -121);
-            vi.b(16);
-            ln.f(-93);
-            hba.c(7);
-            kma.d(-107);
-            lg.c(8);
-            li.e(-117);
-            mk.a((byte) -43);
-            ut.c(-22021);
-            ev.a((byte) 80);
+            L1: {
+              var13 = param0.a((byte) 123, "MoveTable.csv", "");
+              var8 = var13;
+              var4 = var8;
+              var2 = var4;
+              var9 = new lu(var13);
+              wca.a((byte) -121);
+              vi.b(16);
+              ln.f(-93);
+              hba.c(7);
+              kma.d(param1 + -109);
+              lg.c(8);
+              li.e(-117);
+              mk.a((byte) -43);
+              ut.c(-22021);
+              ev.a((byte) 80);
+              if (param1 == 2) {
+                break L1;
+              } else {
+                field_t = (String) null;
+                break L1;
+              }
+            }
             lka.field_E = qs.a(false, var9);
-            hga.a(true, var21);
-            var22 = param0.a((byte) 123, "UnlockTable.csv", "");
-            var18 = var22;
-            var14 = var18;
+            hga.a(true, var13);
+            var14 = param0.a((byte) 123, "UnlockTable.csv", "");
             var10 = var14;
             var5 = var10;
             var2 = var5;
             qh.a((byte) -104);
-            bj.a(var22, (byte) 22);
+            bj.a(var14, (byte) 22);
             lg.a(-92);
-            var23 = param0.a((byte) 123, "UnlockerTable.csv", "");
-            var19 = var23;
-            var15 = var19;
+            var15 = param0.a((byte) 123, "UnlockerTable.csv", "");
             var11 = var15;
             var6 = var11;
             var2 = var6;
-            sp.a(var23, -7);
-            var24 = param0.a((byte) 123, "CreatureTable.csv", "");
-            var20 = var24;
-            var16 = var20;
+            sp.a(var15, param1 ^ -5);
+            var16 = param0.a((byte) 123, "CreatureTable.csv", "");
             var12 = var16;
             var7 = var12;
             var2 = var7;
-            var3 = new lu(var24);
+            var3 = new lu(var16);
             qs.b(false);
-            an.a(var24, -49);
-            wv.a((byte) -73, var24);
+            an.a(var16, -49);
+            wv.a((byte) -73, var16);
             fi.field_m = null;
             me.field_t = null;
             du.field_a = null;
@@ -211,41 +214,37 @@ final class nw extends td {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("nw.B(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackOut_4_0 = (RuntimeException) (var2_ref);
+            stackOut_4_1 = new StringBuilder().append("nw.B(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Mute this player for 48 hours";
         field_t = "Click on a creature or its portrait to select it.";
         field_s = "TAB - hide chat temporarily";

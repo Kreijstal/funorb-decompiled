@@ -9,41 +9,47 @@ final class hr extends java.awt.Canvas {
     static ee field_c;
 
     public static void a(boolean param0) {
-        field_c = null;
-        field_e = null;
-        field_b = null;
-        field_a = null;
+        if (!param0) {
+          field_a = (String) null;
+          field_c = null;
+          field_e = null;
+          field_b = (boolean[][]) null;
+          field_a = null;
+          return;
+        } else {
+          field_c = null;
+          field_e = null;
+          field_b = (boolean[][]) null;
+          field_a = null;
+          return;
+        }
     }
 
     public final void update(java.awt.Graphics param0) {
         try {
-            ((hr) this).field_d.update(param0);
+            this.field_d.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "hr.update(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "hr.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            ((hr) this).field_d.paint(param0);
+            this.field_d.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "hr.paint(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "hr.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     hr(java.awt.Component param0) {
         try {
-            ((hr) this).field_d = param0;
+            this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "hr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "hr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Equipped Actions";
         field_e = "You have declined the invitation.";
     }

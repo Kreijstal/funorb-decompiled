@@ -7,23 +7,23 @@ final class dj {
 
     private final void a(java.awt.Frame param0, int param1) {
         L0: {
-          ((dj) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param0);
+          this.field_b.setFullScreenWindow((java.awt.Window) ((Object) param0));
           if (param1 >= 23) {
             break L0;
           } else {
-            ((dj) this).field_a = null;
+            this.field_a = (java.awt.DisplayMode) null;
             break L0;
           }
         }
     }
 
     public final void exit() {
-        if (null != ((dj) this).field_a) {
-            ((dj) this).field_b.setDisplayMode(((dj) this).field_a);
-            if (!((dj) this).field_b.getDisplayMode().equals(((dj) this).field_a)) {
+        if (null != this.field_a) {
+            this.field_b.setDisplayMode(this.field_a);
+            if (!this.field_b.getDisplayMode().equals(this.field_a)) {
                 throw new RuntimeException("");
             }
-            ((dj) this).field_a = null;
+            this.field_a = null;
         }
         this.a((java.awt.Frame) null, 121);
     }
@@ -34,19 +34,19 @@ final class dj {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ((dj) this).field_a = ((dj) this).field_b.getDisplayMode();
-        if (((dj) this).field_a == null) {
+        this.field_a = this.field_b.getDisplayMode();
+        if (this.field_a == null) {
           throw new NullPointerException();
         } else {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
             this.a(param0, 80);
-            if (param4 != 0) {
+            if (-1 != (param4 ^ -1)) {
               break L0;
             } else {
-              var6 = ((dj) this).field_a.getRefreshRate();
-              var7 = ((dj) this).field_b.getDisplayModes();
+              var6 = this.field_a.getRefreshRate();
+              var7 = this.field_b.getDisplayModes();
               var8 = 0;
               var9 = 0;
               L1: while (true) {
@@ -94,21 +94,21 @@ final class dj {
               }
             }
           }
-          ((dj) this).field_b.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+          this.field_b.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
           return;
         }
     }
 
     public final int[] listmodes() {
         int var3 = 0;
-        java.awt.DisplayMode[] var4 = ((dj) this).field_b.getDisplayModes();
+        java.awt.DisplayMode[] var4 = this.field_b.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << 2];
+        int[] var2 = new int[var4.length << 1036184002];
         for (var3 = 0; var3 < var4.length; var3++) {
-            var2[var3 << 2] = var4[var3].getWidth();
-            var2[1 + (var3 << 2)] = var4[var3].getHeight();
-            var2[(var3 << 2) - -2] = var4[var3].getBitDepth();
-            var2[(var3 << 2) + 3] = var4[var3].getRefreshRate();
+            var2[var3 << -2034743230] = var4[var3].getWidth();
+            var2[1 + (var3 << 1765899586)] = var4[var3].getHeight();
+            var2[(var3 << 1450697282) - -2] = var4[var3].getBitDepth();
+            var2[(var3 << 1009877378) + 3] = var4[var3].getRefreshRate();
         }
         return var2;
     }
@@ -120,8 +120,8 @@ final class dj {
         int var4 = 0;
         java.awt.GraphicsDevice var5 = null;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
-        ((dj) this).field_b = var1.getDefaultScreenDevice();
-        if (((dj) this).field_b.isFullScreenSupported()) {
+        this.field_b = var1.getDefaultScreenDevice();
+        if (this.field_b.isFullScreenSupported()) {
           return;
         } else {
           var2 = var1.getScreenDevices();
@@ -134,7 +134,7 @@ final class dj {
               var5 = var3[var4];
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
-                  ((dj) this).field_b = var5;
+                  this.field_b = var5;
                   return;
                 } else {
                   var4++;

@@ -17,6 +17,9 @@ abstract class ms extends wi {
     private int field_p;
 
     private final void d(byte param0) {
+        if (param0 != -116) {
+            this.e((byte) 92);
+        }
         String var2 = mea.a(true);
         wva.a(vpa.b((byte) -119), (byte) 56, var2);
     }
@@ -31,27 +34,34 @@ abstract class ms extends wi {
             break L0;
           }
         }
-        if (((ms) this).field_c) {
+        if (this.field_c) {
           return -1;
         } else {
           if (!nb.b(true)) {
             return -1;
           } else {
             if (!mlb.field_o) {
-              var2 = ju.a(((ms) this).field_x, ((ms) this).field_r, wnb.a(125), (byte) 13, true, fpb.d(true));
-              if (var2 != -1) {
+              var2 = ju.a(this.field_x, this.field_r, wnb.a(125), (byte) 13, true, fpb.d(true));
+              if (0 != (var2 ^ -1)) {
                 L1: {
-                  if (var2 == 0) {
-                    break L1;
-                  } else {
-                    if (var2 == 1) {
-                      break L1;
+                  if (-1 != (var2 ^ -1)) {
+                    if (-2 == (var2 ^ -1)) {
+                      if (qmb.field_q != 11) {
+                        break L1;
+                      } else {
+                        if (0 != dmb.field_a) {
+                          break L1;
+                        } else {
+                          uk.b((byte) 50);
+                          break L1;
+                        }
+                      }
                     } else {
                       L2: {
                         if (tsb.field_q) {
                           break L2;
                         } else {
-                          ((ms) this).a("reconnect", 0);
+                          this.a("reconnect", 0);
                           break L2;
                         }
                       }
@@ -61,17 +71,16 @@ abstract class ms extends wi {
                       ska.field_p = wt.a(false) + 15000L;
                       return var2;
                     }
-                  }
-                }
-                L3: {
-                  if (qmb.field_q != 11) {
-                    break L3;
                   } else {
-                    if (0 != dmb.field_a) {
-                      break L3;
+                    if (qmb.field_q == 11) {
+                      if (0 == dmb.field_a) {
+                        uk.b((byte) 50);
+                        break L1;
+                      } else {
+                        return var2;
+                      }
                     } else {
-                      uk.b((byte) 50);
-                      break L3;
+                      return var2;
                     }
                   }
                 }
@@ -87,6 +96,8 @@ abstract class ms extends wi {
     }
 
     final void h(int param0) {
+        int discarded$321 = 0;
+        int discarded$322 = 0;
         int var3 = 0;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
@@ -131,7 +142,7 @@ abstract class ms extends wi {
                   ala.a(tcb.field_o, param0 ^ 15877);
                   break L1;
                 } else {
-                  int discarded$177 = this.a((byte) -96, false, false);
+                  discarded$321 = this.a((byte) -96, false, false);
                   break L1;
                 }
               }
@@ -169,7 +180,7 @@ abstract class ms extends wi {
                 break L2;
               }
             }
-            int discarded$178 = this.a((byte) stackIn_6_1, stackIn_6_2 != 0, stackIn_6_3 != 0);
+            discarded$322 = this.a((byte) stackIn_6_1, stackIn_6_2 != 0, stackIn_6_3 != 0);
             break L1;
           }
         }
@@ -229,7 +240,7 @@ abstract class ms extends wi {
           if (param1 == 9) {
             break L2;
           } else {
-            ((ms) this).field_w = 76;
+            this.field_w = 76;
             break L2;
           }
         }
@@ -237,7 +248,7 @@ abstract class ms extends wi {
           if (fu.a(45)) {
             break L3;
           } else {
-            if (qmb.field_q == 11) {
+            if ((qmb.field_q ^ -1) == -12) {
               break L3;
             } else {
               csb.a(true);
@@ -259,10 +270,10 @@ abstract class ms extends wi {
           } else {
             L6: {
               var3 = 1200 * wjb.e(204);
-              if (((ms) this).field_s) {
+              if (this.field_s) {
                 break L6;
               } else {
-                if (~var3 <= ~ria.a(32)) {
+                if ((var3 ^ -1) <= (ria.a(32) ^ -1)) {
                   break L5;
                 } else {
                   if (gia.d(-2) <= var3) {
@@ -273,7 +284,7 @@ abstract class ms extends wi {
                 }
               }
             }
-            ((ms) this).field_s = false;
+            this.field_s = false;
             ifb.l(-123);
             km.f((byte) -119);
             aj.a(jc.field_o, (byte) 105, 2);
@@ -288,7 +299,7 @@ abstract class ms extends wi {
             if (-1 == dmb.field_a) {
               break L8;
             } else {
-              if (dmb.field_a != 0) {
+              if ((dmb.field_a ^ -1) != -1) {
                 break L7;
               } else {
                 break L8;
@@ -313,7 +324,7 @@ abstract class ms extends wi {
               break L10;
             } else {
               if (0 == dmb.field_a) {
-                if (qmb.field_q != 11) {
+                if ((qmb.field_q ^ -1) != -12) {
                   break L10;
                 } else {
                   if (nb.b(true)) {
@@ -328,7 +339,7 @@ abstract class ms extends wi {
               }
             }
           }
-          if (dmb.field_a == -1) {
+          if ((dmb.field_a ^ -1) == 0) {
             break L7;
           } else {
             if (dmb.field_a != 0) {
@@ -343,7 +354,7 @@ abstract class ms extends wi {
           if (-1 == dmb.field_a) {
             break L11;
           } else {
-            if (dmb.field_a == 0) {
+            if (-1 == (dmb.field_a ^ -1)) {
               break L11;
             } else {
               if (10 <= ef.field_z) {
@@ -354,8 +365,8 @@ abstract class ms extends wi {
                       aj.a(lba.field_o, (byte) 84, 256);
                       break L12;
                     } else {
-                      if (dmb.field_a != 4) {
-                        if (dmb.field_a != 2) {
+                      if (-5 != (dmb.field_a ^ -1)) {
+                        if (-3 != (dmb.field_a ^ -1)) {
                           if (5 != dmb.field_a) {
                             aj.a(ca.field_o, (byte) 82, 256);
                             break L12;
@@ -380,24 +391,24 @@ abstract class ms extends wi {
                 }
               } else {
                 if (dmb.field_a == 3) {
-                  ((ms) this).a("js5crc", 0);
+                  this.a("js5crc", 0);
                   break L11;
                 } else {
-                  if (dmb.field_a != 4) {
+                  if (-5 != (dmb.field_a ^ -1)) {
                     if (dmb.field_a != 2) {
-                      if (dmb.field_a != 5) {
-                        ((ms) this).a("js5connect", 0);
+                      if (-6 != (dmb.field_a ^ -1)) {
+                        this.a("js5connect", 0);
                         break L11;
                       } else {
-                        ((ms) this).a("outofdate", 0);
+                        this.a("outofdate", 0);
                         break L11;
                       }
                     } else {
-                      ((ms) this).a("js5connect_full", 0);
+                      this.a("js5connect_full", 0);
                       break L11;
                     }
                   } else {
-                    ((ms) this).a("js5io", 0);
+                    this.a("js5io", 0);
                     break L11;
                   }
                 }
@@ -411,7 +422,7 @@ abstract class ms extends wi {
               if (-1 == dmb.field_a) {
                 break L15;
               } else {
-                if (dmb.field_a != 0) {
+                if (-1 != (dmb.field_a ^ -1)) {
                   break L14;
                 } else {
                   break L15;
@@ -431,7 +442,7 @@ abstract class ms extends wi {
             if (-1 == dmb.field_a) {
               break L13;
             } else {
-              if (dmb.field_a != 0) {
+              if ((dmb.field_a ^ -1) != -1) {
                 dmb.field_a = -1;
                 bna.e(0);
                 break L13;
@@ -522,7 +533,7 @@ abstract class ms extends wi {
           }
         }
         L22: {
-          if (ef.field_z == 3) {
+          if (-4 == (ef.field_z ^ -1)) {
             if (!maa.a(dt.field_o, 2, gdb.field_i, btb.field_b)) {
               break L22;
             } else {
@@ -604,7 +615,7 @@ abstract class ms extends wi {
                 dt.field_o = null;
                 gdb.field_i = null;
                 btb.field_b = null;
-                qd.a(0, (java.applet.Applet) this);
+                qd.a(0, (java.applet.Applet) (this));
                 fkb.a(2096);
                 ef.field_z = 10;
                 break L22;
@@ -633,7 +644,7 @@ abstract class ms extends wi {
           }
         }
         L31: {
-          if (ef.field_z != 11) {
+          if ((ef.field_z ^ -1) != -12) {
             break L31;
           } else {
             L32: {
@@ -661,7 +672,7 @@ abstract class ms extends wi {
           }
         }
         L34: {
-          if (ef.field_z != 12) {
+          if ((ef.field_z ^ -1) != -13) {
             break L34;
           } else {
             if (!gwa.field_o) {
@@ -673,7 +684,7 @@ abstract class ms extends wi {
           }
         }
         L35: {
-          if (ef.field_z != 13) {
+          if (-14 != (ef.field_z ^ -1)) {
             break L35;
           } else {
             L36: {
@@ -713,7 +724,7 @@ abstract class ms extends wi {
               break L38;
             } else {
               kl.a(igb.field_a, -125);
-              ((ms) this).c(-81);
+              this.c(-81);
               qa.a((byte) -62, igb.field_a);
               break L38;
             }
@@ -754,6 +765,9 @@ abstract class ms extends wi {
         ta.field_b[8] = -2;
         ta.field_b[2] = -2;
         ta.field_b[9] = -1;
+        if (param0 >= -80) {
+            this.field_s = true;
+        }
         ta.field_b[11] = -1;
         ta.field_b[7] = -1;
         ta.field_b[13] = -1;
@@ -792,75 +806,87 @@ abstract class ms extends wi {
             int var4_int = 1 % ((-20 - param1) / 33);
             this.a(param2, 480, 640, param0, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ms.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ms.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static byte[] b(String param0, int param1) {
         RuntimeException var2 = null;
-        byte[] stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        byte[] stackOut_2_0 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            stackOut_0_0 = hw.field_e.a(param0, true, "");
-            stackIn_1_0 = stackOut_0_0;
+            L1: {
+              if (param1 == 23100) {
+                break L1;
+              } else {
+                ms.d(true);
+                break L1;
+              }
+            }
+            stackOut_2_0 = hw.field_e.a(param0, true, "");
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("ms.RA(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackOut_4_0 = (RuntimeException) (var2);
+            stackOut_4_1 = new StringBuilder().append("ms.RA(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 23100 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     private final void i(int param0) {
+        if (param0 != 30138) {
+            String var3 = (String) null;
+            this.a((String) null, 57, -40);
+        }
         lna.field_o[2] = true;
     }
 
     private final void e(boolean param0) {
-        lna.field_o[4] = true;
+        lna.field_o[4] = param0;
     }
 
     private final void a(int param0, int param1, int param2, String param3, int param4) {
@@ -870,7 +896,7 @@ abstract class ms extends wi {
         String var7 = null;
         String var8 = null;
         String var9 = null;
-        Object var10 = null;
+        String var10 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
@@ -884,6 +910,8 @@ abstract class ms extends wi {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
+        int decompiledRegionSelector0 = 0;
+        int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
         Object stackOut_2_0 = null;
         Object stackOut_3_0 = null;
@@ -901,128 +929,145 @@ abstract class ms extends wi {
         StringBuilder stackOut_23_1 = null;
         String stackOut_23_2 = null;
         try {
-          try {
-            L0: {
-              if (((ms) this).b((byte) -114)) {
-                L1: {
+          L0: {
+            try {
+              L1: {
+                if (this.b((byte) -114)) {
                   L2: {
-                    ((ms) this).field_u = ((ms) this).getCodeBase().getHost();
-                    var6_ref2 = ((ms) this).field_u.toLowerCase();
-                    stackOut_2_0 = this;
-                    stackIn_5_0 = stackOut_2_0;
-                    stackIn_3_0 = stackOut_2_0;
-                    if (var6_ref2.equals((Object) (Object) "jagex.com")) {
-                      break L2;
-                    } else {
-                      stackOut_3_0 = this;
-                      stackIn_6_0 = stackOut_3_0;
-                      stackIn_4_0 = stackOut_3_0;
-                      if (!var6_ref2.endsWith(".jagex.com")) {
-                        stackOut_6_0 = this;
-                        stackOut_6_1 = 0;
-                        stackIn_7_0 = stackOut_6_0;
-                        stackIn_7_1 = stackOut_6_1;
-                        break L1;
+                    L3: {
+                      this.field_u = this.getCodeBase().getHost();
+                      var6_ref2 = this.field_u.toLowerCase();
+                      stackOut_2_0 = this;
+                      stackIn_5_0 = stackOut_2_0;
+                      stackIn_3_0 = stackOut_2_0;
+                      if (var6_ref2.equals("jagex.com")) {
+                        break L3;
                       } else {
-                        stackOut_4_0 = this;
-                        stackIn_5_0 = stackOut_4_0;
-                        break L2;
+                        stackOut_3_0 = this;
+                        stackIn_6_0 = stackOut_3_0;
+                        stackIn_4_0 = stackOut_3_0;
+                        if (!var6_ref2.endsWith(".jagex.com")) {
+                          stackOut_6_0 = this;
+                          stackOut_6_1 = 0;
+                          stackIn_7_0 = stackOut_6_0;
+                          stackIn_7_1 = stackOut_6_1;
+                          break L2;
+                        } else {
+                          stackOut_4_0 = this;
+                          stackIn_5_0 = stackOut_4_0;
+                          break L3;
+                        }
                       }
                     }
+                    stackOut_5_0 = this;
+                    stackOut_5_1 = 1;
+                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_1 = stackOut_5_1;
+                    break L2;
                   }
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
+                  L4: {
+                    ((ms) (this)).field_x = stackIn_7_1 != 0;
+                    this.field_p = Integer.parseInt(this.getParameter("gameport1"));
+                    this.field_v = Integer.parseInt(this.getParameter("gameport2"));
+                    var7 = this.getParameter("servernum");
+                    if (var7 != null) {
+                      this.field_w = Integer.parseInt(var7);
+                      break L4;
+                    } else {
+                      break L4;
+                    }
+                  }
+                  L5: {
+                    this.field_q = Integer.parseInt(this.getParameter("gamecrc"));
+                    this.field_t = Long.parseLong(this.getParameter("instanceid"));
+                    this.field_z = this.getParameter("member").equals("yes");
+                    var8 = this.getParameter("lang");
+                    if (var8 != null) {
+                      this.field_o = Integer.parseInt(var8);
+                      break L5;
+                    } else {
+                      break L5;
+                    }
+                  }
+                  L6: {
+                    if (-6 >= (this.field_o ^ -1)) {
+                      this.field_o = 0;
+                      break L6;
+                    } else {
+                      break L6;
+                    }
+                  }
+                  L7: {
+                    var9 = this.getParameter("affid");
+                    if (var9 == null) {
+                      break L7;
+                    } else {
+                      this.field_r = Integer.parseInt(var9);
+                      break L7;
+                    }
+                  }
+                  tc.field_a = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+                  this.a(this.field_q, param4, param0, 7, param2, param3, param1);
+                  decompiledRegionSelector0 = 1;
+                  break L1;
+                } else {
+                  decompiledRegionSelector0 = 0;
                   break L1;
                 }
-                L3: {
-                  ((ms) this).field_x = stackIn_7_1 != 0;
-                  ((ms) this).field_p = Integer.parseInt(((ms) this).getParameter("gameport1"));
-                  ((ms) this).field_v = Integer.parseInt(((ms) this).getParameter("gameport2"));
-                  var7 = ((ms) this).getParameter("servernum");
-                  if (var7 != null) {
-                    ((ms) this).field_w = Integer.parseInt(var7);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  ((ms) this).field_q = Integer.parseInt(((ms) this).getParameter("gamecrc"));
-                  ((ms) this).field_t = Long.parseLong(((ms) this).getParameter("instanceid"));
-                  ((ms) this).field_z = ((ms) this).getParameter("member").equals((Object) (Object) "yes");
-                  var8 = ((ms) this).getParameter("lang");
-                  if (var8 != null) {
-                    ((ms) this).field_o = Integer.parseInt(var8);
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                L5: {
-                  if (((ms) this).field_o >= 5) {
-                    ((ms) this).field_o = 0;
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                L6: {
-                  var9 = ((ms) this).getParameter("affid");
-                  if (var9 == null) {
-                    break L6;
-                  } else {
-                    ((ms) this).field_r = Integer.parseInt(var9);
-                    break L6;
-                  }
-                }
-                tc.field_a = Boolean.valueOf(((ms) this).getParameter("simplemode")).booleanValue();
-                ((ms) this).a(((ms) this).field_q, 32, param0, 7, 640, param3, 480);
-                break L0;
-              } else {
-                return;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L8: {
+                var6 = (Exception) (Object) decompiledCaughtException;
+                var10 = (String) null;
+                gna.a((Throwable) ((Object) var6), (String) null, 0);
+                this.a("crash", 0);
+                decompiledRegionSelector0 = 1;
+                break L8;
               }
             }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            L7: {
-              var6 = (Exception) (Object) decompiledCaughtException;
-              var10 = null;
-              gna.a((Throwable) (Object) var6, (String) null, 0);
-              ((ms) this).a("crash", 0);
-              break L7;
+            if (decompiledRegionSelector0 == 0) {
+              decompiledRegionSelector1 = 0;
+              break L0;
+            } else {
+              decompiledRegionSelector1 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L8: {
+          L9: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var6_ref;
-            stackOut_22_1 = new StringBuilder().append("ms.SA(").append(param0).append(',').append(480).append(',').append(640).append(',');
+            stackOut_22_0 = (RuntimeException) (var6_ref);
+            stackOut_22_1 = new StringBuilder().append("ms.SA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param3 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
-              break L8;
+              break L9;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
               stackIn_25_2 = stackOut_23_2;
-              break L8;
+              break L9;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + 32 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector1 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -1030,12 +1075,12 @@ abstract class ms extends wi {
         java.awt.Frame var11 = new java.awt.Frame("Jagex");
         var11.pack();
         var11.dispose();
-        ((ms) this).setBackground(java.awt.Color.black);
-        ahb.field_p = ((ms) this).field_o;
+        this.setBackground(java.awt.Color.black);
+        ahb.field_p = this.field_o;
         aeb.a(ahb.field_p, 1);
         int var10 = -52 / ((-72 - param0) / 33);
-        bmb.a(5000, ((ms) this).field_v, 60, ((ms) this).field_w, bm.field_o, ((ms) this).field_t, ((ms) this).field_u, ((ms) this).field_z, ((ms) this).field_p, ((ms) this).field_q, param6, ahb.field_p, param3, 5000);
-        sha.a(param3, ((ms) this).field_u, ((ms) this).field_p, ((ms) this).field_v, (byte) -2, ahb.field_p, ((ms) this).field_q, bm.field_o, ((ms) this).field_w);
+        bmb.a(5000, this.field_v, 60, this.field_w, bm.field_o, this.field_t, this.field_u, this.field_z, this.field_p, this.field_q, param6, ahb.field_p, param3, 5000);
+        sha.a(param3, this.field_u, this.field_p, this.field_v, (byte) -2, ahb.field_p, this.field_q, bm.field_o, this.field_w);
         ndb.b(47);
         kkb.field_o = ghb.c((byte) -127);
         qa.a((byte) 122, igb.field_a);
@@ -1054,10 +1099,14 @@ abstract class ms extends wi {
     }
 
     private final void f(byte param0) {
+        if (param0 != -1) {
+            return;
+        }
         lna.field_o[6] = true;
     }
 
     final void e(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         pgb var3 = null;
         int var4 = 0;
@@ -1086,31 +1135,31 @@ abstract class ms extends wi {
                     break L1;
                   } else {
                     if (2 != var2) {
-                      if (var2 != 3) {
+                      if ((var2 ^ -1) != -4) {
                         if (4 == var2) {
                           ogb.a(-8999);
                           break L1;
                         } else {
-                          if (var2 != 5) {
-                            if (var2 != 6) {
+                          if ((var2 ^ -1) != -6) {
+                            if (-7 != (var2 ^ -1)) {
                               if (var2 == 7) {
                                 this.d((byte) -116);
                                 break L1;
                               } else {
-                                if (var2 != 8) {
-                                  if (var2 != 16) {
+                                if ((var2 ^ -1) != -9) {
+                                  if (-17 != (var2 ^ -1)) {
                                     L2: {
-                                      if (var2 == 11) {
+                                      if ((var2 ^ -1) == -12) {
                                         break L2;
                                       } else {
-                                        if (var2 == 12) {
+                                        if ((var2 ^ -1) == -13) {
                                           break L2;
                                         } else {
                                           if (13 == var2) {
                                             lob.a(true);
                                             break L1;
                                           } else {
-                                            if (var2 == 17) {
+                                            if ((var2 ^ -1) == -18) {
                                               this.j(3);
                                               break L1;
                                             } else {
@@ -1153,7 +1202,7 @@ abstract class ms extends wi {
                                     break L1;
                                   }
                                 } else {
-                                  jnb.a(bm.field_o, vja.field_a, (ds) (Object) qga.field_b, false);
+                                  jnb.a(bm.field_o, vja.field_a, qga.field_b, false);
                                   break L1;
                                 }
                               }
@@ -1180,7 +1229,7 @@ abstract class ms extends wi {
                   if (param0 > 57) {
                     break L4;
                   } else {
-                    int discarded$1 = ((ms) this).f(-115);
+                    discarded$1 = this.f(-115);
                     break L4;
                   }
                 }
@@ -1196,24 +1245,25 @@ abstract class ms extends wi {
     }
 
     private final void c(boolean param0) {
-        lna.field_o[1] = true;
+        lna.field_o[1] = param0;
     }
 
     private final void j(int param0) {
         int var2 = qga.field_b.e((byte) -124);
-        int var3 = (var2 & 1) != 0 ? 1 : 0;
+        int var3 = -1 != (var2 & 1 ^ -1) ? 1 : 0;
         int var4 = -1 + vja.field_a;
         byte[] var5 = new byte[var4];
         qga.field_b.a(var4, 0, (byte) -50, var5);
-        qp.a(var3 != 0, 0, vpa.b((byte) -117), qpa.a((byte) -125, var5));
+        qp.a(var3 != 0, param0 ^ param0, vpa.b((byte) -117), qpa.a((byte) -125, var5));
     }
 
     private final void a(byte param0, boolean param1) {
+        int discarded$0 = 0;
         lna.field_o[0] = true;
         lna.field_o[18] = true;
         lna.field_o[3] = true;
         if (param0 <= 40) {
-            int discarded$0 = ((ms) this).c(false, 74);
+            discarded$0 = this.c(false, 74);
         }
         lna.field_o[7] = true;
         lna.field_o[17] = true;
@@ -1222,7 +1272,12 @@ abstract class ms extends wi {
     }
 
     private final void e(byte param0) {
+        byte[] discarded$0 = null;
         lna.field_o[5] = true;
+        if (param0 != -4) {
+            String var3 = (String) null;
+            discarded$0 = ms.b((String) null, -15);
+        }
     }
 
     private final int a(byte param0, boolean param1, boolean param2) {
@@ -1234,8 +1289,8 @@ abstract class ms extends wi {
             ds var7 = null;
             String var8 = null;
             int var9 = 0;
-            Object var10 = null;
-            Object var11 = null;
+            String var10 = null;
+            String var11 = null;
             Boolean var12 = null;
             Throwable decompiledCaughtException = null;
             var9 = VoidHunters.field_G;
@@ -1249,7 +1304,7 @@ abstract class ms extends wi {
                 } else {
                   L1: {
                     var5 = qua.a(wlb.g((byte) -65), true, raa.e(120));
-                    if (var5 != -1) {
+                    if (0 != (var5 ^ -1)) {
                       qga.a(dgb.field_b, var5, (byte) 70, gob.field_a);
                       gob.field_a = null;
                       dgb.field_b = null;
@@ -1269,8 +1324,8 @@ abstract class ms extends wi {
               }
               L2: {
                 var5 = 60 % ((-49 - param0) / 41);
-                if (var4 == 2) {
-                  var6_int = wna.a(pob.b(119), wpa.a(52), ((ms) this).field_r, (byte) 111, wnb.a(88), etb.a(31065), fpb.d(true));
+                if (-3 == (var4 ^ -1)) {
+                  var6_int = wna.a(pob.b(119), wpa.a(52), this.field_r, (byte) 111, wnb.a(88), etb.a(31065), fpb.d(true));
                   if (-1 == var6_int) {
                     break L2;
                   } else {
@@ -1288,10 +1343,10 @@ abstract class ms extends wi {
                   break L3;
                 } else {
                   L4: {
-                    if (dmb.field_a == -1) {
+                    if (0 == (dmb.field_a ^ -1)) {
                       break L4;
                     } else {
-                      if (dmb.field_a != 0) {
+                      if (-1 != (dmb.field_a ^ -1)) {
                         dmb.field_a = -1;
                         bna.e(0);
                         break L4;
@@ -1304,8 +1359,8 @@ abstract class ms extends wi {
                     mlb.field_o = false;
                     break L3;
                   } else {
-                    var6_int = ju.a(((ms) this).field_x, ((ms) this).field_r, wnb.a(83), (byte) 13, false, fpb.d(true));
-                    if (var6_int != -1) {
+                    var6_int = ju.a(this.field_x, this.field_r, wnb.a(83), (byte) 13, false, fpb.d(true));
+                    if (0 != (var6_int ^ -1)) {
                       if (var6_int != 0) {
                         aj.a(dgb.field_b, (byte) 110, var6_int);
                         dgb.field_b = null;
@@ -1358,7 +1413,7 @@ abstract class ms extends wi {
                 }
               }
               L8: {
-                if (var4 != 7) {
+                if (-8 != (var4 ^ -1)) {
                   break L8;
                 } else {
                   ria.a(32, vpa.b((byte) -86));
@@ -1382,7 +1437,7 @@ abstract class ms extends wi {
                 }
               }
               L11: {
-                if (var4 != 10) {
+                if ((var4 ^ -1) != -11) {
                   break L11;
                 } else {
                   dpa.field_p.h(24335, 17);
@@ -1398,7 +1453,7 @@ abstract class ms extends wi {
                 }
               }
               L13: {
-                if (var4 != 12) {
+                if ((var4 ^ -1) != -13) {
                   break L13;
                 } else {
                   lc.a((byte) 86, vpa.b((byte) -126), cg.a(27158));
@@ -1406,14 +1461,14 @@ abstract class ms extends wi {
                 }
               }
               L14: {
-                if (var4 == 13) {
+                if (-14 == (var4 ^ -1)) {
                   try {
                     L15: {
                       L16: {
                         if (tk.field_p != null) {
                           break L16;
                         } else {
-                          tk.field_p = new bi(bm.field_o, new java.net.URL(((ms) this).getCodeBase(), "countrylist.ws"), 5000);
+                          tk.field_p = new bi(bm.field_o, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
                           break L16;
                         }
                       }
@@ -1426,7 +1481,7 @@ abstract class ms extends wi {
                               ls.a(var8, (byte) 122);
                               break L18;
                             } else {
-                              var10 = null;
+                              var10 = (String) null;
                               ls.a((String) null, (byte) 125);
                               break L18;
                             }
@@ -1443,8 +1498,8 @@ abstract class ms extends wi {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     L19: {
                       var6 = (Exception) (Object) decompiledCaughtException;
-                      gna.a((Throwable) (Object) var6, "S1", 0);
-                      var11 = null;
+                      gna.a((Throwable) ((Object) var6), "S1", 0);
+                      var11 = (String) null;
                       ls.a((String) null, (byte) 122);
                       tk.field_p = null;
                       break L19;
@@ -1456,7 +1511,7 @@ abstract class ms extends wi {
                 }
               }
               L20: {
-                if (var4 != 15) {
+                if ((var4 ^ -1) != -16) {
                   break L20;
                 } else {
                   qmb.field_q = 10;
@@ -1464,10 +1519,10 @@ abstract class ms extends wi {
                 }
               }
               if (16 != var4) {
-                if (var4 != 17) {
-                  return 0;
-                } else {
+                if ((var4 ^ -1) == -18) {
                   return 2;
+                } else {
+                  return 0;
                 }
               } else {
                 return 1;
@@ -1482,6 +1537,9 @@ abstract class ms extends wi {
 
     public static void d(boolean param0) {
         field_y = null;
+        if (param0) {
+            field_y = (ij) null;
+        }
         field_A = null;
     }
 
@@ -1489,10 +1547,6 @@ abstract class ms extends wi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = new int[]{2, 3, 4, 6, 8};
     }
 }

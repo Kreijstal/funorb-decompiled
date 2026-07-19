@@ -13,31 +13,30 @@ final class lqb extends rqa {
         int var6 = 0;
         char[] var7 = null;
         char[] var8 = null;
-        char[] var9 = null;
-        char[] var10 = null;
         int stackIn_4_0 = 0;
         String stackIn_7_0 = null;
-        String stackIn_25_0 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
+        String stackIn_22_0 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
         String stackOut_6_0 = null;
-        String stackOut_24_0 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
+        String stackOut_21_0 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
         var6 = VoidHunters.field_G;
         try {
           L0: {
@@ -54,50 +53,55 @@ final class lqb extends rqa {
             }
             var2_int = stackIn_4_0;
             if (var2_int == 0) {
-              stackOut_6_0 = (String) param1;
+              stackOut_6_0 = (String) (param1);
               stackIn_7_0 = stackOut_6_0;
-              return stackIn_7_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              var10 = new char[var2_int];
-              var9 = var10;
-              var8 = var9;
+              var8 = new char[var2_int];
               var7 = var8;
               var3 = var7;
               var4 = 0;
               var5 = 0;
               L2: while (true) {
                 if (var2_int <= var5) {
-                  stackOut_24_0 = new String(var10);
-                  stackIn_25_0 = stackOut_24_0;
+                  L3: {
+                    if (param0 == -1) {
+                      break L3;
+                    } else {
+                      field_o = (int[][]) null;
+                      break L3;
+                    }
+                  }
+                  stackOut_21_0 = new String(var8);
+                  stackIn_22_0 = stackOut_21_0;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  L3: {
+                  L4: {
                     var3[var5] = param1.charAt(var5);
-                    if (60 != var10[var5]) {
-                      L4: {
-                        if (62 != var10[var5]) {
-                          break L4;
+                    if (60 != var8[var5]) {
+                      L5: {
+                        if (62 != var8[var5]) {
+                          break L5;
                         } else {
-                          if (var4 <= 0) {
-                            break L4;
+                          if (-1 <= (var4 ^ -1)) {
+                            break L5;
                           } else {
                             var4--;
-                            var5++;
-                            break L3;
+                            break L4;
                           }
                         }
                       }
                       if (var4 != 0) {
-                        var5++;
-                        break L3;
+                        break L4;
                       } else {
-                        var3[var5] = Character.toUpperCase(var10[var5]);
-                        break L3;
+                        var3[var5] = Character.toUpperCase(var8[var5]);
+                        break L4;
                       }
                     } else {
                       var4++;
-                      var5++;
-                      break L3;
+                      break L4;
                     }
                   }
                   var5++;
@@ -108,35 +112,39 @@ final class lqb extends rqa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var2 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var2;
-            stackOut_26_1 = new StringBuilder().append("lqb.C(").append(-1).append(',');
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackOut_23_0 = (RuntimeException) (var2);
+            stackOut_23_1 = new StringBuilder().append("lqb.C(").append(param0).append(',');
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
             if (param1 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
-              break L5;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              break L6;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
-              break L5;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
+              break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
-        return stackIn_25_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_7_0;
+        } else {
+          return stackIn_22_0;
+        }
     }
 
     lqb(String param0, Class[] param1, String param2) {
@@ -144,7 +152,7 @@ final class lqb extends rqa {
     }
 
     public static void a(int param0) {
-        field_o = null;
+        field_o = (int[][]) null;
         if (param0 < 101) {
             lqb.a(-22);
         }
@@ -181,7 +189,7 @@ final class lqb extends rqa {
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -189,23 +197,23 @@ final class lqb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("lqb.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -213,16 +221,12 @@ final class lqb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_o = new int[][]{new int[2], new int[2], new int[2], new int[2], new int[2], new int[2], new int[2], new int[2], new int[2], new int[2], new int[2], new int[2], new int[2], new int[2], new int[2]};
+        field_o = new int[][]{new int[]{14, 24}, new int[]{25, 28}, new int[]{29, 34}, new int[]{35, 41}, new int[]{42, 48}, new int[]{49, 52}, new int[]{53, 58}, new int[]{72, 83}, new int[]{84, 85}, new int[]{86, 90}, new int[]{94, 99}, new int[]{91, 92}, new int[]{101, 113}, new int[]{114, 116}, new int[]{117, 119}};
     }
 }

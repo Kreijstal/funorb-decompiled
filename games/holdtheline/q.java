@@ -10,7 +10,7 @@ final class q {
     static int[] field_b;
 
     final static String b(byte param0) {
-        if (!(pf.field_d >= 2)) {
+        if (!(-3 >= (pf.field_d ^ -1))) {
             return aj.field_d;
         }
         if (ml.field_a != null) {
@@ -22,20 +22,23 @@ final class q {
         if (!(ah.field_d.b((byte) -115))) {
             return in.field_d;
         }
-        if (!(ah.field_d.b("commonui", 64))) {
+        if (!(ah.field_d.b("commonui", param0 ^ 54))) {
             return ge.field_a + " - " + ah.field_d.a("commonui", 0) + "%";
         }
         if (!am.field_d.b((byte) -63)) {
             return uf.field_d;
         }
         if (!am.field_d.b("commonui", 108)) {
-            return wl.field_b + " - " + am.field_d.a("commonui", 0) + "%";
+            return wl.field_b + " - " + am.field_d.a("commonui", param0 + -118) + "%";
         }
         if (!ca.field_p.b((byte) -102)) {
             return g.field_l;
         }
+        if (param0 != 118) {
+            field_b = (int[]) null;
+        }
         if (!ca.field_p.a((byte) -63)) {
-            return uj.field_b + " - " + ca.field_p.a(0) + "%";
+            return uj.field_b + " - " + ca.field_p.a(param0 + -118) + "%";
         }
         return ng.field_b;
     }
@@ -44,12 +47,12 @@ final class q {
         try {
             param1.a(param0, param3 + 1, 1 + param5, 8, -1, 114);
             if (param4 > -126) {
-                Object var7 = null;
+                th var7 = (th) null;
                 q.a(-69, (th) null);
             }
             param1.b(param0, param3, param5, param2, -1);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "q.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "q.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -67,8 +70,7 @@ final class q {
         da var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var8 = HoldTheLine.field_D;
         try {
@@ -78,17 +80,15 @@ final class q {
               var2 = var9.f((byte) -62);
               var3 = var9.f((byte) -86);
               if (0 == var2) {
-                var4 = (t) (Object) ih.field_j.b((byte) 100);
+                var4 = (t) ((Object) ih.field_j.b((byte) 100));
                 if (var4 != null) {
                   L2: {
                     var5 = -var9.field_l + ad.field_c;
-                    var13 = var4.field_m;
-                    var12 = var13;
-                    var11 = var12;
+                    var11 = var4.field_m;
                     var10 = var11;
                     var6 = var10;
-                    if (var5 > var13.length << 2) {
-                      var5 = var13.length << 2;
+                    if (var5 > var11.length << -639570334) {
+                      var5 = var11.length << -2076945662;
                       break L2;
                     } else {
                       break L2;
@@ -100,23 +100,24 @@ final class q {
                       var4.d(0);
                       break L1;
                     } else {
-                      var6[var7 >> 2] = var6[var7 >> 2] + (var9.f((byte) -110) << pk.a(var7 << 8, 768));
+                      var6[var7 >> -2028123838] = var6[var7 >> -2028123838] + (var9.f((byte) -110) << pk.a(var7 << -1499567480, 768));
                       var7++;
                       continue L3;
                     }
                   }
                 } else {
                   r.a(-28036);
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               } else {
-                if (var2 != 1) {
+                if (-2 != (var2 ^ -1)) {
                   bl.a((Throwable) null, (byte) 59, "LR1: " + em.b(false));
                   r.a(-28036);
                   break L1;
                 } else {
                   var4_int = var9.b((byte) -84);
-                  var5_ref_se = (se) (Object) le.field_n.b((byte) 113);
+                  var5_ref_se = (se) ((Object) le.field_n.b((byte) 113));
                   L4: while (true) {
                     L5: {
                       if (var5_ref_se == null) {
@@ -133,13 +134,14 @@ final class q {
                             }
                           }
                         }
-                        var5_ref_se = (se) (Object) le.field_n.c((byte) -42);
+                        var5_ref_se = (se) ((Object) le.field_n.c((byte) -42));
                         continue L4;
                       }
                     }
                     if (var5_ref_se == null) {
                       r.a(-28036);
-                      return;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     } else {
                       var5_ref_se.d(0);
                       break L1;
@@ -148,12 +150,30 @@ final class q {
                 }
               }
             }
+            L7: {
+              if (param0 == -24) {
+                break L7;
+              } else {
+                field_a = (qi) null;
+                break L7;
+              }
+            }
+            decompiledRegionSelector0 = 2;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1, "q.D(" + -24 + ')');
+          throw kk.a((Throwable) ((Object) var1), "q.D(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -168,7 +188,7 @@ final class q {
 
     final static void a(int param0, int param1) {
         da var2 = da.field_p;
-        var2.c((byte) 33, 6);
+        var2.c((byte) 33, param0);
         var2.f(111, 1);
         var2.f(111, 0);
         if (param1 < 41) {
@@ -241,10 +261,10 @@ final class q {
                         var3 = (Exception) (Object) decompiledCaughtException;
                         var4 = 0;
                         L6: while (true) {
-                          if (var4 >= 24) {
+                          if ((var4 ^ -1) <= -25) {
                             break L5;
                           } else {
-                            var2[var4] = (byte) -1;
+                            var2[var4] = (byte)-1;
                             var4++;
                             continue L6;
                           }
@@ -259,7 +279,7 @@ final class q {
                   if (param0 >= 25) {
                     break L7;
                   } else {
-                    field_a = null;
+                    field_a = (qi) null;
                     break L7;
                   }
                 }
@@ -269,23 +289,23 @@ final class q {
               decompiledCaughtException = decompiledCaughtParameter1;
               L8: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_17_0 = (RuntimeException) var2_ref;
+                stackOut_17_0 = (RuntimeException) (var2_ref);
                 stackOut_17_1 = new StringBuilder().append("q.F(").append(param0).append(',');
                 stackIn_19_0 = stackOut_17_0;
                 stackIn_19_1 = stackOut_17_1;
                 stackIn_18_0 = stackOut_17_0;
                 stackIn_18_1 = stackOut_17_1;
                 if (param1 == null) {
-                  stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-                  stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
                   stackOut_19_2 = "null";
                   stackIn_20_0 = stackOut_19_0;
                   stackIn_20_1 = stackOut_19_1;
                   stackIn_20_2 = stackOut_19_2;
                   break L8;
                 } else {
-                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
                   stackOut_18_2 = "{...}";
                   stackIn_20_0 = stackOut_18_0;
                   stackIn_20_1 = stackOut_18_1;
@@ -293,7 +313,7 @@ final class q {
                   break L8;
                 }
               }
-              throw kk.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
+              throw kk.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -303,10 +323,6 @@ final class q {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[]{4, 4, 1};
     }
 }

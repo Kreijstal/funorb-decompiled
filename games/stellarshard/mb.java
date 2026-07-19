@@ -7,6 +7,8 @@ final class mb {
     static String field_a;
 
     final static void a(int param0, byte[] param1) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -27,10 +29,6 @@ final class mb {
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        byte[] var22 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        byte[] var25 = null;
         int stackIn_34_0 = 0;
         int stackIn_35_0 = 0;
         int stackIn_36_0 = 0;
@@ -100,7 +98,7 @@ final class mb {
                             var4 = 1;
                             L5: while (true) {
                               if (var3 <= var4) {
-                                var17.field_k = 0;
+                                var17.field_k = param0;
                                 var4 = 0;
                                 L6: while (true) {
                                   if (sb.field_b <= var4) {
@@ -110,18 +108,14 @@ final class mb {
                                       var5 = vc.field_b[var4];
                                       var6 = ih.field_d[var4];
                                       var7 = var6 * var5;
-                                      var24 = new byte[var7];
-                                      var22 = var24;
-                                      var20 = var22;
+                                      var20 = new byte[var7];
                                       var18 = var20;
                                       var8 = var18;
-                                      ih.field_b[var4] = var24;
-                                      var25 = new byte[var7];
-                                      var23 = var25;
-                                      var21 = var23;
+                                      ih.field_b[var4] = var20;
+                                      var21 = new byte[var7];
                                       var19 = var21;
                                       var9 = var19;
-                                      lj.field_D[var4] = var25;
+                                      lj.field_D[var4] = var21;
                                       var10 = 0;
                                       var11 = var17.f(4);
                                       if (0 == (1 & var11)) {
@@ -135,13 +129,13 @@ final class mb {
                                                   break L7;
                                                 } else {
                                                   L10: {
-                                                    byte dupTemp$2 = var17.g(-81);
+                                                    dupTemp$2 = var17.g(-81);
                                                     var9[var12] = dupTemp$2;
                                                     var13 = dupTemp$2;
                                                     stackOut_45_0 = var10;
                                                     stackIn_47_0 = stackOut_45_0;
                                                     stackIn_46_0 = stackOut_45_0;
-                                                    if (var13 == -1) {
+                                                    if (0 == (var13 ^ -1)) {
                                                       stackOut_47_0 = stackIn_47_0;
                                                       stackOut_47_1 = 0;
                                                       stackIn_48_0 = stackOut_47_0;
@@ -186,7 +180,7 @@ final class mb {
                                                       continue L12;
                                                     } else {
                                                       L14: {
-                                                        byte dupTemp$3 = var17.g(ih.a(0, 102));
+                                                        dupTemp$3 = var17.g(ih.a(param0, 102));
                                                         var9[var12 + var13 * var5] = dupTemp$3;
                                                         var14 = dupTemp$3;
                                                         stackOut_33_0 = var10;
@@ -280,23 +274,23 @@ final class mb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var2 = decompiledCaughtException;
-            stackOut_51_0 = (RuntimeException) var2;
-            stackOut_51_1 = new StringBuilder().append("mb.A(").append(0).append(',');
+            stackOut_51_0 = (RuntimeException) (var2);
+            stackOut_51_1 = new StringBuilder().append("mb.A(").append(param0).append(',');
             stackIn_53_0 = stackOut_51_0;
             stackIn_53_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;
             stackIn_52_1 = stackOut_51_1;
             if (param1 == null) {
-              stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
-              stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
+              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
               stackOut_53_2 = "null";
               stackIn_54_0 = stackOut_53_0;
               stackIn_54_1 = stackOut_53_1;
               stackIn_54_2 = stackOut_53_2;
               break L17;
             } else {
-              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
-              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
+              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
               stackOut_52_2 = "{...}";
               stackIn_54_0 = stackOut_52_0;
               stackIn_54_1 = stackOut_52_1;
@@ -304,7 +298,7 @@ final class mb {
               break L17;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_54_0), stackIn_54_2 + ')');
         }
     }
 
@@ -312,6 +306,9 @@ final class mb {
         field_b = null;
         field_a = null;
         field_c = null;
+        if (param0) {
+            field_a = (String) null;
+        }
     }
 
     final static boolean a(String param0, byte param1, String param2) {
@@ -357,7 +354,7 @@ final class mb {
               if (param1 >= 108) {
                 break L1;
               } else {
-                field_a = null;
+                field_a = (String) null;
                 break L1;
               }
             }
@@ -365,7 +362,7 @@ final class mb {
               L3: {
                 param2 = ci.a(param2, '_', "", 2619);
                 var3 = la.a(param2, (byte) 79);
-                if (param0.indexOf(param2) != -1) {
+                if (0 != (param0.indexOf(param2) ^ -1)) {
                   break L3;
                 } else {
                   if (-1 == param0.indexOf(var3)) {
@@ -387,23 +384,23 @@ final class mb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_0 = (RuntimeException) (var3_ref);
             stackOut_8_1 = new StringBuilder().append("mb.C(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -412,23 +409,23 @@ final class mb {
             }
           }
           L5: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -436,16 +433,12 @@ final class mb {
               break L5;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Waiting for fonts";
         field_b = new oj();
         field_a = "Account created successfully!";

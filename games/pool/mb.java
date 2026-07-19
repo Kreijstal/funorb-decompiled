@@ -12,17 +12,27 @@ abstract class mb {
 
     public static void c(int param0) {
         field_c = null;
-        field_d = null;
-        field_g = null;
-        field_b = null;
-        field_f = null;
+        if (param0 != 4) {
+          field_f = (vh) null;
+          field_d = null;
+          field_g = null;
+          field_b = null;
+          field_f = null;
+          return;
+        } else {
+          field_d = null;
+          field_g = null;
+          field_b = null;
+          field_f = null;
+          return;
+        }
     }
 
     final static void b(int param0) {
-        Object var2 = null;
+        String var2 = (String) null;
         rf.a((String) null, -125, "");
         if (param0 != 3) {
-            field_f = null;
+            field_f = (vh) null;
         }
     }
 
@@ -31,7 +41,7 @@ abstract class mb {
     abstract byte[] a(int param0);
 
     final static void d(int param0) {
-        if (un.field_e == 0) {
+        if (-1 == (un.field_e ^ -1)) {
           dp.field_c.field_hb = dq.a(3, 0, jc.field_f);
           if (param0 <= -97) {
             return;
@@ -51,10 +61,6 @@ abstract class mb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[4];
         field_d = "Owner";
         field_a = 96;

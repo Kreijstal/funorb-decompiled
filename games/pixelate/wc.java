@@ -12,7 +12,7 @@ final class wc extends jj {
         qk var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
         super.c(param0);
-        qk[] var6 = ((wc) this).field_o;
+        qk[] var6 = this.field_o;
         qk[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
             var4 = var6[var3];
@@ -22,11 +22,11 @@ final class wc extends jj {
 
     public static void b(byte param0) {
         if (param0 <= 17) {
-            field_n = null;
+            field_n = (ak) null;
         }
         field_n = null;
         field_m = null;
-        field_p = null;
+        field_p = (int[][]) null;
     }
 
     wc(String param0, tf[] param1) {
@@ -34,7 +34,7 @@ final class wc extends jj {
         try {
             this.c((byte) 97);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "wc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "wc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -43,7 +43,7 @@ final class wc extends jj {
         qk var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
         ad.field_w.f(0, 0);
-        qk[] var6 = ((wc) this).field_o;
+        qk[] var6 = this.field_o;
         qk[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
             var4 = var6[var3];
@@ -56,7 +56,7 @@ final class wc extends jj {
 
     final static String d(int param0) {
         if (param0 != 0) {
-            field_n = null;
+            field_n = (ak) null;
         }
         if (rj.field_F == tm.field_X) {
             return nk.field_b;
@@ -71,16 +71,15 @@ final class wc extends jj {
     }
 
     private final void c(byte param0) {
-        ((wc) this).field_o = new qk[2];
-        ((wc) this).field_o[0] = new qk(0);
-        ((wc) this).field_o[1] = new qk(7);
+        this.field_o = new qk[2];
+        if (param0 < 91) {
+            this.c(-106);
+        }
+        this.field_o[0] = new qk(0);
+        this.field_o[1] = new qk(7);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = new String[8];
     }
 }

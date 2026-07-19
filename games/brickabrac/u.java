@@ -15,14 +15,15 @@ final class u {
         field_c = null;
         field_e = null;
         field_b = null;
+        if (param0 != 2) {
+            field_b = (String) null;
+            field_f = null;
+            return;
+        }
         field_f = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "u.A(";
         field_b = "This game has been updated! Please reload this page.";
         field_f = "to return to the normal view.";

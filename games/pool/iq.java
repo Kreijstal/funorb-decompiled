@@ -21,25 +21,30 @@ abstract class iq {
         field_a = null;
         field_d = null;
         field_l = null;
-        field_g = null;
-        field_b = null;
-        field_f = null;
+        if (param0 != -26830) {
+          field_g = (String) null;
+          field_g = null;
+          field_b = null;
+          field_f = null;
+          return;
+        } else {
+          field_g = null;
+          field_b = null;
+          field_f = null;
+          return;
+        }
     }
 
     final void b(int param0) {
-        qh.a(((iq) this).field_h, ((iq) this).field_e, ((iq) this).field_k);
+        qh.a(this.field_h, this.field_e, this.field_k);
         if (param0 != 15100) {
-            ((iq) this).b(78);
+            this.b(78);
         }
     }
 
     abstract void a(int param0, int param1, int param2, java.awt.Component param3);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Foul! <%0>-second time penalty incurred!";
         field_i = false;
         field_g = "Names can only contain letters, numbers, spaces and underscores";

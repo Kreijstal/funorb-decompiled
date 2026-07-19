@@ -16,6 +16,9 @@ final class wc {
     private boolean field_a;
 
     final static int a(int param0, int param1, int param2) {
+        if (param0 != 29292) {
+            field_j = (ga) null;
+        }
         if (!(ef.field_H != null)) {
             return -1;
         }
@@ -44,20 +47,20 @@ final class wc {
         field_f = null;
         field_j = null;
         if (param0 != 2) {
-            field_j = null;
+            field_j = (ga) null;
         }
     }
 
     final int a(byte param0) {
         L0: {
-          if (((wc) this).field_a) {
+          if (this.field_a) {
             break L0;
           } else {
             L1: {
-              if (((wc) this).field_i != 2) {
+              if (this.field_i != 2) {
                 break L1;
               } else {
-                if (((wc) this).field_g > 0) {
+                if (-1 > (this.field_g ^ -1)) {
                   break L0;
                 } else {
                   break L1;
@@ -68,18 +71,18 @@ final class wc {
               if (param0 == 102) {
                 break L2;
               } else {
-                ((wc) this).field_i = -108;
+                this.field_i = -108;
                 break L2;
               }
             }
-            if (~tg.field_e == ~((wc) this).field_e) {
+            if ((tg.field_e ^ -1L) == (this.field_e ^ -1L)) {
               return 1;
             } else {
               L3: {
                 if (jg.field_k != 2) {
                   break L3;
                 } else {
-                  if (!aa.a(((wc) this).field_b, (byte) -85)) {
+                  if (!aa.a(this.field_b, (byte) -85)) {
                     break L3;
                   } else {
                     return 1;
@@ -94,19 +97,19 @@ final class wc {
     }
 
     wc(boolean param0) {
-        ((wc) this).field_i = dj.field_e;
-        ((wc) this).field_g = il.field_a;
-        ((wc) this).field_a = rb.field_a;
-        ((wc) this).field_c = wh.field_g;
-        ((wc) this).field_h = vl.field_f;
-        ((wc) this).field_d = ac.field_r;
-        ((wc) this).field_b = tg.field_b;
+        this.field_i = dj.field_e;
+        this.field_g = il.field_a;
+        this.field_a = rb.field_a;
+        this.field_c = wh.field_g;
+        this.field_h = vl.field_f;
+        this.field_d = ac.field_r;
+        this.field_b = tg.field_b;
         if (!param0) {
-            ((wc) this).field_l = null;
+            this.field_l = null;
         } else {
-            ((wc) this).field_l = rh.field_m;
+            this.field_l = rh.field_m;
         }
-        ((wc) this).field_e = ug.field_N;
+        this.field_e = ug.field_N;
     }
 
     static {

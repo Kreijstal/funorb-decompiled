@@ -14,6 +14,7 @@ final class hf extends aj {
     static int[] field_z;
 
     public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -28,6 +29,7 @@ final class hf extends aj {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
@@ -67,7 +69,7 @@ final class hf extends aj {
             L2: {
               var6_int = stackIn_6_0;
               if (param1 instanceof tg) {
-                param2 = param2 & ((tg) (Object) param1).field_C;
+                param2 = param2 & ((tg) ((Object) param1)).field_C;
                 break L2;
               } else {
                 break L2;
@@ -75,16 +77,16 @@ final class hf extends aj {
             }
             L3: {
               if (!param2) {
-                stackOut_13_0 = ((hf) this).field_u;
+                stackOut_13_0 = this.field_u;
                 stackIn_14_0 = stackOut_13_0;
                 break L3;
               } else {
                 if (var6_int == 0) {
-                  stackOut_12_0 = ((hf) this).field_B;
+                  stackOut_12_0 = this.field_B;
                   stackIn_14_0 = stackOut_12_0;
                   break L3;
                 } else {
-                  stackOut_11_0 = ((hf) this).field_y;
+                  stackOut_11_0 = this.field_y;
                   stackIn_14_0 = stackOut_11_0;
                   break L3;
                 }
@@ -104,34 +106,36 @@ final class hf extends aj {
                 }
               }
               var8 = stackIn_19_0;
-              kd.a(((hf) this).field_x, param1.field_u + param3 + (param1.field_m + -((hf) this).field_x[0].field_z >> 1), false, param1.field_g, param1.field_l + param0, var7);
-              int discarded$1 = ((hf) this).field_i.a(param1.field_n, param0 - -param1.field_l, param3 + param1.field_u - 2, param1.field_g, param1.field_m, var8, -1, 1, 1, ((hf) this).field_i.field_H);
+              kd.a(this.field_x, param1.field_u + param3 + (param1.field_m + -this.field_x[0].field_z >> 1149084929), false, param1.field_g, param1.field_l + param0, var7);
+              discarded$1 = this.field_i.a(param1.field_n, param0 - -param1.field_l, param3 + param1.field_u - 2, param1.field_g, param1.field_m, var8, -1, 1, 1, this.field_i.field_H);
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var6;
+            stackOut_21_0 = (RuntimeException) (var6);
             stackOut_21_1 = new StringBuilder().append("hf.E(").append(param0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L5;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -139,7 +143,12 @@ final class hf extends aj {
               break L5;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -155,11 +164,11 @@ final class hf extends aj {
     }
 
     private hf(int param0, int param1, int param2) {
-        ((hf) this).field_u = param2;
-        ((hf) this).field_x = td.field_g;
-        ((hf) this).field_B = param0;
-        ((hf) this).field_y = param1;
-        ((hf) this).field_i = on.field_b;
+        this.field_u = param2;
+        this.field_x = td.field_g;
+        this.field_B = param0;
+        this.field_y = param1;
+        this.field_i = on.field_b;
     }
 
     public hf() {
@@ -167,10 +176,6 @@ final class hf extends aj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_v = new java.awt.Color(10040319);
         field_A = new int[8192];
         field_z = new int[8192];

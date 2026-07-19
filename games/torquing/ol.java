@@ -26,9 +26,9 @@ final class ol {
                     hp.a("document.cookie=\"" + var5 + "\"", 27476, param2);
                 } catch (Throwable throwable) {
                 }
-                j.a(true, param2);
+                j.a(param1, param2);
             } catch (RuntimeException runtimeException) {
-                throw rb.a((Throwable) (Object) runtimeException, "ol.E(" + (param0 != null ? "{...}" : "null") + ',' + true + ',' + (param2 != null ? "{...}" : "null") + ')');
+                throw rb.a((Throwable) ((Object) runtimeException), "ol.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -44,7 +44,7 @@ final class ol {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        Object var8 = null;
+        double[] var8 = null;
         double[] var12 = null;
         int stackIn_16_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -54,6 +54,7 @@ final class ol {
         RuntimeException stackIn_47_0 = null;
         StringBuilder stackIn_47_1 = null;
         String stackIn_47_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_14_0 = 0;
         int stackOut_13_0 = 0;
@@ -71,7 +72,8 @@ final class ol {
         try {
           L0: {
             if (ia.field_i == 8) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 if (0.0 > param0[3]) {
@@ -113,12 +115,13 @@ final class ol {
                           if (param1 >= 25) {
                             break L4;
                           } else {
-                            var8 = null;
+                            var8 = (double[]) null;
                             ol.a((double[]) null, (byte) 52);
                             break L4;
                           }
                         }
                         ia.field_i = ia.field_i + 1;
+                        decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
                         L5: {
@@ -166,12 +169,14 @@ final class ol {
                                 if (var5 != 0) {
                                   bn.field_f[var3] = param0;
                                   nl.field_y[var3] = var2_int != 0;
-                                  return;
+                                  decompiledRegionSelector0 = 3;
+                                  break L0;
                                 } else {
                                   if (var6 == 0) {
                                     break L5;
                                   } else {
-                                    return;
+                                    decompiledRegionSelector0 = 2;
+                                    break L0;
                                   }
                                 }
                               }
@@ -187,30 +192,31 @@ final class ol {
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_44_0 = (RuntimeException) var2;
+            stackOut_44_0 = (RuntimeException) (var2);
             stackOut_44_1 = new StringBuilder().append("ol.C(");
             stackIn_46_0 = stackOut_44_0;
             stackIn_46_1 = stackOut_44_1;
             stackIn_45_0 = stackOut_44_0;
             stackIn_45_1 = stackOut_44_1;
             if (param0 == null) {
-              stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
-              stackOut_46_1 = (StringBuilder) (Object) stackIn_46_1;
+              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
               stackOut_46_2 = "null";
               stackIn_47_0 = stackOut_46_0;
               stackIn_47_1 = stackOut_46_1;
               stackIn_47_2 = stackOut_46_2;
               break L7;
             } else {
-              stackOut_45_0 = (RuntimeException) (Object) stackIn_45_0;
-              stackOut_45_1 = (StringBuilder) (Object) stackIn_45_1;
+              stackOut_45_0 = (RuntimeException) ((Object) stackIn_45_0);
+              stackOut_45_1 = (StringBuilder) ((Object) stackIn_45_1);
               stackOut_45_2 = "{...}";
               stackIn_47_0 = stackOut_45_0;
               stackIn_47_1 = stackOut_45_1;
@@ -218,16 +224,36 @@ final class ol {
               break L7;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_47_0, stackIn_47_2 + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_47_0), stackIn_47_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                return;
+              }
+            }
+          }
         }
     }
 
     final static String a(int param0) {
+        if (param0 <= 100) {
+            return (String) null;
+        }
         return kj.field_d.h((byte) 118);
     }
 
     final static int b(int param0) {
-        int var1 = -85;
+        int var1 = -85 / ((-34 - param0) / 58);
         return 1;
     }
 
@@ -235,16 +261,15 @@ final class ol {
         field_d = null;
         field_f = null;
         field_e = null;
+        if (param0 != -51) {
+            return;
+        }
         field_a = null;
         field_c = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "This is a members-only world.";
         field_c = new int[128];
         field_e = "Waiting for fonts";

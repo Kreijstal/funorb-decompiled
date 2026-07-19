@@ -13,24 +13,28 @@ final class tk implements bf {
         try {
             r.field_a = param7;
             ta.field_a = param2;
-            ka.field_i = 0;
-            cb.field_a = 0;
+            ka.field_i = param3;
+            cb.field_a = param8;
             uk.field_b = param1;
-            sl.field_r = 0;
-            jg.field_m = 0;
-            kk.field_xb = 2500;
+            sl.field_r = param0;
+            if (param6 != 2) {
+                tk.a(-15);
+            }
+            jg.field_m = param5;
+            kk.field_xb = param4;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "tk.C(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + 0 + ',' + 2500 + ',' + 0 + ',' + 2 + ',' + param7 + ',' + 0 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "tk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     public static void a(int param0) {
-        int var1 = -18;
+        int var1 = -36 / ((param0 - -42) / 63);
         field_f = null;
         field_e = null;
     }
 
     public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -83,33 +87,33 @@ final class tk implements bf {
               if (param3) {
                 break L3;
               } else {
-                ((tk) this).field_b = 65;
+                this.field_b = 65;
                 break L3;
               }
             }
-            int discarded$1 = ((tk) this).field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_k + "</u>", param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, var6_int, -1, ((tk) this).field_c, ((tk) this).field_b, ((tk) this).field_d.field_M + ((tk) this).field_d.field_B);
+            discarded$1 = this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_k + "</u>", param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, var6_int, -1, this.field_c, this.field_b, this.field_d.field_M + this.field_d.field_B);
             if (param2.d((byte) 53)) {
               L4: {
-                var7 = ((tk) this).field_d.b(param2.field_k);
-                var8 = ((tk) this).field_d.field_M - -((tk) this).field_d.field_B;
+                var7 = this.field_d.b(param2.field_k);
+                var8 = this.field_d.field_M - -this.field_d.field_B;
                 var9 = param2.field_o + param0;
                 var10 = param2.field_l + param1;
-                if (2 == ((tk) this).field_c) {
+                if (2 == this.field_c) {
                   var9 = var9 + (-var7 + param2.field_r);
                   break L4;
                 } else {
-                  if (((tk) this).field_c != 1) {
+                  if ((this.field_c ^ -1) != -2) {
                     break L4;
                   } else {
-                    var9 = var9 + (param2.field_r + -var7 >> 1);
+                    var9 = var9 + (param2.field_r + -var7 >> -1136280575);
                     break L4;
                   }
                 }
               }
               L5: {
-                if (((tk) this).field_b != 2) {
-                  if (1 == ((tk) this).field_b) {
-                    var10 = var10 + (param2.field_n + -var8 >> 1);
+                if (this.field_b != 2) {
+                  if (1 == this.field_b) {
+                    var10 = var10 + (param2.field_n + -var8 >> -2056119423);
                     break L5;
                   } else {
                     break L5;
@@ -129,23 +133,23 @@ final class tk implements bf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var6;
+            stackOut_20_0 = (RuntimeException) (var6);
             stackOut_20_1 = new StringBuilder().append("tk.B(").append(param0).append(',').append(param1).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param2 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -153,31 +157,27 @@ final class tk implements bf {
               break L6;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param3 + ',' + param4 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public tk() {
-        ((tk) this).field_d = gh.field_b;
-        ((tk) this).field_b = 1;
-        ((tk) this).field_c = 1;
+        this.field_d = gh.field_b;
+        this.field_b = 1;
+        this.field_c = 1;
     }
 
     tk(vd param0, int param1, int param2) {
         try {
-            ((tk) this).field_b = param2;
-            ((tk) this).field_d = param0;
-            ((tk) this).field_c = param1;
+            this.field_b = param2;
+            this.field_d = param0;
+            this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Loading graphics";
         field_f = "Unfortunately you are not eligible to create an account.";
         field_a = -1;

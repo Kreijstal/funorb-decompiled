@@ -12,7 +12,7 @@ final class an {
     }
 
     final static void b(int param0) {
-        ga.field_a = null;
+        ga.field_a = (byte[][]) null;
         je.field_h = null;
         sn.field_e = null;
         if (param0 >= -77) {
@@ -30,10 +30,6 @@ final class an {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new jk();
     }
 }

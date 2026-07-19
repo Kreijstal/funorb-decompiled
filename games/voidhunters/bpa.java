@@ -16,20 +16,24 @@ final class bpa implements wwa {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
-        if (param3 > param4) {
-          ww.a(param0, param3, rba.field_b[param1], (byte) 75, param4);
-          return;
+        if (param2 == -25) {
+          if (param3 > param4) {
+            ww.a(param0, param3, rba.field_b[param1], (byte) 75, param4);
+            return;
+          } else {
+            ww.a(param0, param4, rba.field_b[param1], (byte) 75, param3);
+            return;
+          }
         } else {
-          ww.a(param0, param4, rba.field_b[param1], (byte) 75, param3);
           return;
         }
     }
 
     bpa(nva param0) {
         try {
-            ((bpa) this).field_b = param0;
+            this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bpa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "bpa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -73,17 +77,17 @@ final class bpa implements wwa {
             L2: {
               dma.b(var6_int, var7, param1.field_h + (var6_int - 2), param1.field_f + var7);
               var9 = 78 % ((-27 - param0) / 35);
-              var8 = ((bpa) this).field_b.field_w.g((byte) 96);
+              var8 = this.field_b.field_w.g((byte) 96);
               if (var8 == null) {
                 break L2;
               } else {
                 var10 = var8.toString();
-                ((bpa) this).field_b.field_v.c(var10, 2 + var6_int, -1 + ((((bpa) this).field_b.field_v.field_k + param1.field_f >> 1) + var7), 10000536, -1);
-                if (!((bpa) this).field_b.e((byte) -120)) {
+                this.field_b.field_v.c(var10, 2 + var6_int, -1 + ((this.field_b.field_v.field_k + param1.field_f >> 2066420673) + var7), 10000536, -1);
+                if (!this.field_b.e((byte) -120)) {
                   break L2;
                 } else {
-                  if (var10.startsWith(((bpa) this).field_b.field_E)) {
-                    var11 = ((bpa) this).field_b.field_v.b(((bpa) this).field_b.field_E);
+                  if (var10.startsWith(this.field_b.field_E)) {
+                    var11 = this.field_b.field_v.b(this.field_b.field_E);
                     dma.e(var6_int - -2, var7 + 2, var11, -4 + param1.field_f, 2188450, 100);
                     break L2;
                   } else {
@@ -99,23 +103,23 @@ final class bpa implements wwa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var6;
+            stackOut_9_0 = (RuntimeException) (var6);
             stackOut_9_1 = new StringBuilder().append("bpa.A(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -123,15 +127,11 @@ final class bpa implements wwa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 131072;
         field_d = "This game option is only available to members.";
     }

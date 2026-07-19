@@ -11,87 +11,99 @@ final class wga implements dja {
         int var7 = 0;
         int var8 = 0;
         int[] var9 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
         String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         var8 = VoidHunters.field_G;
         try {
           L0: {
-            L1: while (true) {
+            L1: {
+              if (param0) {
+                break L1;
+              } else {
+                field_a = (lwa) null;
+                break L1;
+              }
+            }
+            L2: while (true) {
               param3--;
-              if (param3 < 0) {
+              if (-1 < (param3 ^ -1)) {
                 break L0;
               } else {
                 var9 = param4;
                 var5 = var9;
                 var6 = param1;
                 var7 = param2;
-                var9[var6] = dla.a(8355711, var9[var6] >> 1) + var7;
+                var9[var6] = dla.a(8355711, var9[var6] >> -233471167) + var7;
                 param1++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var5_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var5_ref;
-            stackOut_5_1 = new StringBuilder().append("wga.D(").append(true).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_6_0 = (RuntimeException) (var5_ref);
+            stackOut_6_1 = new StringBuilder().append("wga.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param4 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L2;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
-              break L2;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            field_a = null;
-            return (tv[]) (Object) new wna[param1];
+            field_a = (lwa) null;
+            return (tv[]) ((Object) new wna[param1]);
         }
-        return (tv[]) (Object) new wna[param1];
+        return (tv[]) ((Object) new wna[param1]);
     }
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 == -1) {
+            return;
+        }
+        field_a = (lwa) null;
     }
 
     public final tv a(byte param0) {
         int var2 = 127 % ((-64 - param0) / 50);
-        return (tv) (Object) new wna();
+        return (tv) ((Object) new wna());
     }
 
     static {

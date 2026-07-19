@@ -7,11 +7,16 @@ final class qfa {
     final static void a(int param0) {
         cl.field_o = false;
         if (param0 >= -75) {
-            field_a = null;
+            field_a = (String) null;
         }
     }
 
     public static void a(boolean param0) {
+        if (!param0) {
+            field_a = (String) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
@@ -19,10 +24,10 @@ final class qfa {
         on.field_b = new mr();
         if (param0 != 6) {
           qfa.a((byte) -122);
-          um.field_l.a(103, (ae) (Object) on.field_b);
+          um.field_l.a(103, on.field_b);
           return;
         } else {
-          um.field_l.a(103, (ae) (Object) on.field_b);
+          um.field_l.a(103, on.field_b);
           return;
         }
     }
@@ -35,10 +40,6 @@ final class qfa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Next: Learn more about the temples' items and traps!";
     }
 }

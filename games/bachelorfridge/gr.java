@@ -11,7 +11,7 @@ final class gr {
         try {
             field_a = null;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "gr.B(" + param0 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "gr.B(" + param0 + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class gr {
                 if (null == rv.field_n) {
                   break L1;
                 } else {
-                  var2 = (Object) (Object) iu.field_l;
+                  var2 = iu.field_l;
                   break L1;
                 }
               }
@@ -53,12 +53,12 @@ final class gr {
               if (param0 == 2) {
                 break L2;
               } else {
-                field_a = null;
+                field_a = (kv[]) null;
                 break L2;
               }
             }
             L3: {
-              if (gk.field_d != 2) {
+              if (-3 != (gk.field_d ^ -1)) {
                 break L3;
               } else {
                 if (!hv.a(-19229)) {
@@ -67,7 +67,7 @@ final class gr {
                       if (gl.a(3, df.field_s)) {
                         break L5;
                       } else {
-                        var2 = (Object) (Object) lga.a(true, new String[1], ja.field_r);
+                        var2 = lga.a(true, new String[]{bd.field_k}, ja.field_r);
                         if (var10 == 0) {
                           break L4;
                         } else {
@@ -75,13 +75,13 @@ final class gr {
                         }
                       }
                     }
-                    var2 = (Object) (Object) lga.a(true, new String[1], uma.field_O);
+                    var2 = lga.a(true, new String[]{bd.field_k}, uma.field_O);
                     break L4;
                   }
                   if (!gm.field_k) {
                     break L3;
                   } else {
-                    vf.a((String) null, 0, param0 + 115, (String) null, (String) var2, 2);
+                    vf.a((String) null, 0, param0 + 115, (String) null, (String) (var2), 2);
                     lc.b(-1);
                     break L3;
                   }
@@ -98,7 +98,7 @@ final class gr {
                   break L6;
                 } else {
                   if (null == bi.field_h) {
-                    var2 = (Object) (Object) cd.field_l;
+                    var2 = cd.field_l;
                     break L6;
                   } else {
                     break L6;
@@ -108,7 +108,7 @@ final class gr {
             }
             L7: {
               if (var2 != null) {
-                pp.a(vq.field_w, param0 + 3, (String) var2, 0, (String) null);
+                pp.a(vq.field_w, param0 + 3, (String) (var2), 0, (String) null);
                 break L7;
               } else {
                 L8: {
@@ -118,9 +118,9 @@ final class gr {
                   var5 = "|";
                   var6 = gk.field_d;
                   var7 = 0;
-                  if (var6 == 2) {
-                    var4 = lga.a(true, new String[1], iia.field_q);
-                    var8 = lga.a(true, new String[1], wla.field_n);
+                  if (-3 == (var6 ^ -1)) {
+                    var4 = lga.a(true, new String[]{bd.field_k}, iia.field_q);
+                    var8 = lga.a(true, new String[]{var3}, wla.field_n);
                     var7 = -485 + (ts.field_r.field_sb + jba.field_A.field_sb - -dc.field_r.a(var8) + -dc.field_r.a(var4));
                     if (var7 >= 0) {
                       break L8;
@@ -130,7 +130,7 @@ final class gr {
                     }
                   } else {
                     L9: {
-                      if (var6 != 0) {
+                      if ((var6 ^ -1) != -1) {
                         break L9;
                       } else {
                         L10: {
@@ -159,7 +159,7 @@ final class gr {
                                 }
                               }
                             }
-                            var4 = "[" + lga.a(true, new String[1], fq.field_r) + "] ";
+                            var4 = "[" + lga.a(true, new String[]{pw.field_w.field_Jb}, fq.field_r) + "] ";
                             if (var10 == 0) {
                               break L9;
                             } else {
@@ -221,10 +221,10 @@ final class gr {
                               break L17;
                             } else {
                               if (hl.field_I) {
-                                var1 = (Object) (Object) "Broken!";
+                                var1 = "Broken!";
                                 break L17;
                               } else {
-                                var1 = (Object) (Object) qca.field_m;
+                                var1 = qca.field_m;
                                 break L17;
                               }
                             }
@@ -260,7 +260,7 @@ final class gr {
                 }
                 L19: {
                   if (ts.field_r.field_T) {
-                    var1 = (Object) (Object) lga.a(true, new String[2], nl.field_a);
+                    var1 = lga.a(true, new String[]{var3, bd.field_k}, nl.field_a);
                     break L19;
                   } else {
                     break L19;
@@ -275,10 +275,10 @@ final class gr {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Object) (Object) decompiledCaughtException;
-          throw pe.a((Throwable) var1, "gr.A(" + param0 + ')');
+          var1 = decompiledCaughtException;
+          throw pe.a((Throwable) (var1), "gr.A(" + param0 + ')');
         }
-        return (String) (Object) stackIn_100_0;
+        return (String) ((Object) stackIn_100_0);
     }
 
     static {

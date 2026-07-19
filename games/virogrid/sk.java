@@ -20,10 +20,6 @@ final class sk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "sk.A(";
         field_a = new p();
         field_b = "Loading extra data";

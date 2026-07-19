@@ -21,18 +21,14 @@ final class moa extends le {
         int var11 = 0;
         int[] var12 = null;
         int[] var13 = null;
-        int[] var14 = null;
-        int[] var15 = null;
         L0: {
           var10 = VoidHunters.field_G;
-          var15 = ((moa) this).field_f.a((byte) 121, param0);
-          var14 = var15;
-          var13 = var14;
+          var13 = this.field_f.a((byte) 121, param0);
           var12 = var13;
           var3 = var12;
-          if (((moa) this).field_f.field_e) {
+          if (this.field_f.field_e) {
             var4 = sj.field_p[param0];
-            if (((moa) this).field_k != 0) {
+            if (-1 != (this.field_k ^ -1)) {
               var5 = 0;
               L1: while (true) {
                 if (hob.field_d <= var5) {
@@ -42,17 +38,17 @@ final class moa extends le {
                     var6 = 0;
                     var7 = 0;
                     var8 = grb.field_l[var5];
-                    var9 = ((moa) this).field_k;
+                    var9 = this.field_k;
                     if (var9 != 1) {
                       if (2 != var9) {
                         if (var9 != 3) {
                           break L2;
                         } else {
-                          var6 = 2048 - -(-var4 + var8 >> 1);
+                          var6 = 2048 - -(-var4 + var8 >> -1920400863);
                           break L2;
                         }
                       } else {
-                        var6 = 2048 + (var8 - (4096 + -var4) >> 1);
+                        var6 = 2048 + (var8 - (4096 + -var4) >> -341085791);
                         break L2;
                       }
                     } else {
@@ -64,12 +60,12 @@ final class moa extends le {
                   var9 = var11;
                   L3: while (true) {
                     L4: {
-                      if (var11 >= ((moa) this).field_m) {
+                      if (var11 >= this.field_m) {
                         break L4;
                       } else {
-                        if (var6 >= ((moa) this).field_j[var11]) {
-                          if (((moa) this).field_j[var11 - -1] > var6) {
-                            if (((moa) this).field_i[var11] <= var6) {
+                        if (var6 >= this.field_j[var11]) {
+                          if (this.field_j[var11 - -1] > var6) {
+                            if (this.field_i[var11] <= var6) {
                               break L4;
                             } else {
                               var7 = 4096;
@@ -85,7 +81,7 @@ final class moa extends le {
                         }
                       }
                     }
-                    var15[var5] = var7;
+                    var13[var5] = var7;
                     var5++;
                     continue L1;
                   }
@@ -96,12 +92,12 @@ final class moa extends le {
               var6 = 0;
               L5: while (true) {
                 L6: {
-                  if (var6 >= ((moa) this).field_m) {
+                  if (var6 >= this.field_m) {
                     break L6;
                   } else {
-                    if (var4 >= ((moa) this).field_j[var6]) {
-                      if (var4 < ((moa) this).field_j[1 + var6]) {
-                        if (var4 >= ((moa) this).field_i[var6]) {
+                    if (var4 >= this.field_j[var6]) {
+                      if (var4 < this.field_j[1 + var6]) {
+                        if (var4 >= this.field_i[var6]) {
                           break L6;
                         } else {
                           var5 = 4096;
@@ -117,7 +113,7 @@ final class moa extends le {
                     }
                   }
                 }
-                cua.a(var15, 0, hob.field_d, var5);
+                cua.a(var13, 0, hob.field_d, var5);
                 break L0;
               }
             }
@@ -128,7 +124,7 @@ final class moa extends le {
         if (param1) {
           return var3;
         } else {
-          return null;
+          return (int[]) null;
         }
     }
 
@@ -136,28 +132,34 @@ final class moa extends le {
         int var5 = 0;
         int var6 = VoidHunters.field_G;
         int var2 = 0;
-        ((moa) this).field_j = new int[1 + ((moa) this).field_m];
-        ((moa) this).field_i = new int[((moa) this).field_m + 1];
-        int var3 = 4096 / ((moa) this).field_m;
-        int var4 = ((moa) this).field_l * var3 >> 12;
-        for (var5 = 0; var5 < ((moa) this).field_m; var5++) {
-            ((moa) this).field_j[var5] = var2;
-            ((moa) this).field_i[var5] = var2 - -var4;
+        this.field_j = new int[1 + this.field_m];
+        if (param0 > -51) {
+            return;
+        }
+        this.field_i = new int[this.field_m + 1];
+        int var3 = 4096 / this.field_m;
+        int var4 = this.field_l * var3 >> -1077058228;
+        for (var5 = 0; var5 < this.field_m; var5++) {
+            this.field_j[var5] = var2;
+            this.field_i[var5] = var2 - -var4;
             var2 = var2 + var3;
         }
-        ((moa) this).field_j[((moa) this).field_m] = 4096;
-        ((moa) this).field_i[((moa) this).field_m] = ((moa) this).field_i[0] + 4096;
+        this.field_j[this.field_m] = 4096;
+        this.field_i[this.field_m] = this.field_i[0] + 4096;
     }
 
     public static void d(int param0) {
         field_n = null;
+        if (param0 != -120) {
+            field_n = (String) null;
+        }
     }
 
     final void a(int param0, int param1, ds param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        Object var6 = null;
+        ds var6 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
@@ -180,18 +182,18 @@ final class moa extends le {
             L1: {
               var4_int = param0;
               if (var4_int == 0) {
-                ((moa) this).field_m = param2.e((byte) -121);
+                this.field_m = param2.e((byte) -121);
                 break L1;
               } else {
-                if (var4_int != 1) {
+                if (-2 != (var4_int ^ -1)) {
                   if (2 != var4_int) {
                     break L1;
                   } else {
-                    ((moa) this).field_k = param2.e((byte) -103);
+                    this.field_k = param2.e((byte) -103);
                     break L1;
                   }
                 } else {
-                  ((moa) this).field_l = param2.e(1869);
+                  this.field_l = param2.e(1869);
                   break L1;
                 }
               }
@@ -200,8 +202,8 @@ final class moa extends le {
               if (param1 <= -60) {
                 break L2;
               } else {
-                var6 = null;
-                ((moa) this).a(61, -61, (ds) null);
+                var6 = (ds) null;
+                this.a(61, -61, (ds) null);
                 break L2;
               }
             }
@@ -211,23 +213,23 @@ final class moa extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_0 = (RuntimeException) (var4);
             stackOut_12_1 = new StringBuilder().append("moa.F(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -235,20 +237,23 @@ final class moa extends le {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
     }
 
     public moa() {
         super(0, true);
-        ((moa) this).field_k = 0;
-        ((moa) this).field_l = 2048;
-        ((moa) this).field_m = 10;
+        this.field_k = 0;
+        this.field_l = 2048;
+        this.field_m = 10;
     }
 
     final static void a(boolean param0) {
         int var1 = (gp.field_p - 640) / 2;
         int var2 = ldb.field_o * ldb.field_o;
+        if (!param0) {
+            field_n = (String) null;
+        }
         int var3 = var2 + -(lia.field_b * lia.field_b);
         tb.field_a.a(var1 + -(var3 * 199 / var2), 32, 199, 90, -124 + dma.field_j - 90);
         bqa.field_d.a(438 * var3 / var2 + (var1 + 202), -126, 438, 0, -4 + (-120 + dma.field_j));
@@ -262,10 +267,6 @@ final class moa extends le {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "Unfortunately your configuration doesn't support fullscreen mode.";
     }
 }

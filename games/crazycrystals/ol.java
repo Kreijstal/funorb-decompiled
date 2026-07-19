@@ -13,39 +13,40 @@ final class ol extends om {
     static uf[] field_D;
 
     final void h(int param0) {
+        boolean discarded$0 = false;
         int var4 = CrazyCrystals.field_B;
-        tm var2 = new tm(((ol) this).field_A);
+        tm var2 = new tm(this.field_A);
         if (param0 != 0) {
-            boolean discarded$0 = ol.f((byte) 68);
+            discarded$0 = ol.f((byte) 68);
         }
-        ab var3 = (ab) (Object) var2.a((byte) 97);
+        ab var3 = (ab) ((Object) var2.a((byte) 97));
         while (var3 != null) {
             if (var3.e((byte) 79)) {
                 var3.a(false);
             }
-            var3 = (ab) (Object) var2.b(-6);
+            var3 = (ab) ((Object) var2.b(-6));
         }
     }
 
     public ol() {
         super(0, 0, oj.field_y, pk.field_c, (wo) null, (bi) null);
-        ((ol) this).field_A = new wb();
+        this.field_A = new wb();
     }
 
     final void b(boolean param0) {
         int var4 = CrazyCrystals.field_B;
-        tm var2 = new tm(((ol) this).field_A);
+        tm var2 = new tm(this.field_A);
         if (param0) {
-            ((ol) this).field_A = null;
+            this.field_A = (wb) null;
         }
-        ab var3 = (ab) (Object) var2.a((byte) 124);
+        ab var3 = (ab) ((Object) var2.a((byte) 124));
         while (var3 != null) {
             if (var3.g((byte) 8)) {
                 var3.a(false);
             }
-            var3 = (ab) (Object) var2.b(-27);
+            var3 = (ab) ((Object) var2.b(-27));
         }
-        ((ol) this).field_w = (qm) (Object) ((ol) this).j(0);
+        this.field_w = (qm) ((Object) this.j(0));
     }
 
     final qm d(byte param0) {
@@ -53,15 +54,15 @@ final class ol extends om {
         ab var3 = null;
         int var4 = 0;
         var4 = CrazyCrystals.field_B;
-        var2 = new tm(((ol) this).field_A);
+        var2 = new tm(this.field_A);
         if (param0 >= 39) {
-          var3 = (ab) (Object) var2.a((byte) 95);
+          var3 = (ab) ((Object) var2.a((byte) 95));
           L0: while (true) {
             if (var3 != null) {
               if (var3.field_C) {
                 return var3.b(false);
               } else {
-                var3 = (ab) (Object) var2.b(122);
+                var3 = (ab) ((Object) var2.b(122));
                 continue L0;
               }
             } else {
@@ -69,7 +70,7 @@ final class ol extends om {
             }
           }
         } else {
-          return null;
+          return (qm) null;
         }
     }
 
@@ -90,19 +91,19 @@ final class ol extends om {
         int var4 = 0;
         L0: {
           var4 = CrazyCrystals.field_B;
-          var2 = new tm(((ol) this).field_A);
-          var3 = (ab) (Object) var2.a((byte) 39);
+          var2 = new tm(this.field_A);
+          var3 = (ab) ((Object) var2.a((byte) 39));
           if (param0 == 0) {
             break L0;
           } else {
-            field_C = null;
+            field_C = (int[]) null;
             break L0;
           }
         }
         L1: while (true) {
           if (var3 != null) {
             if (!var3.field_C) {
-              var3 = (ab) (Object) var2.b(104);
+              var3 = (ab) ((Object) var2.b(104));
               continue L1;
             } else {
               return var3;
@@ -114,17 +115,18 @@ final class ol extends om {
     }
 
     final void g(byte param0) {
+        qm discarded$0 = null;
         int var4 = CrazyCrystals.field_B;
         if (param0 >= -13) {
-            qm discarded$0 = ((ol) this).d((byte) -34);
+            discarded$0 = this.d((byte) -34);
         }
-        tm var2 = new tm(((ol) this).field_A);
-        ab var3 = (ab) (Object) var2.a((byte) 114);
+        tm var2 = new tm(this.field_A);
+        ab var3 = (ab) ((Object) var2.a((byte) 114));
         while (var3 != null) {
             var3.field_C = false;
-            var3 = (ab) (Object) var2.b(-60);
+            var3 = (ab) ((Object) var2.b(-60));
         }
-        ((ol) this).field_w = null;
+        this.field_w = null;
     }
 
     final static boolean f(byte param0) {
@@ -136,7 +138,7 @@ final class ol extends om {
             kd.field_n.field_f = 0;
         }
         if (param0 != 60) {
-            field_C = null;
+            field_C = (int[]) null;
         }
         if (!(rk.field_b != -2)) {
             if (!fq.a(2, (byte) 58)) {
@@ -149,6 +151,8 @@ final class ol extends om {
     }
 
     final void b(int param0, qm param1) {
+        boolean discarded$10 = false;
+        boolean discarded$11 = false;
         ab var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_6_0 = null;
@@ -171,14 +175,14 @@ final class ol extends om {
           L0: {
             if (param1 instanceof ab) {
               L1: {
-                var3 = (ab) (Object) param1;
-                ((ol) this).field_A.a(82, (jb) (Object) var3);
+                var3 = (ab) ((Object) param1);
+                this.field_A.a(82, var3);
                 var3.field_C = true;
-                boolean discarded$10 = var3.a(true, (qm) this);
+                discarded$10 = var3.a(true, (qm) (this));
                 if (param0 == -3264) {
                   break L1;
                 } else {
-                  boolean discarded$11 = ol.f((byte) -84);
+                  discarded$11 = ol.f((byte) -84);
                   break L1;
                 }
               }
@@ -191,23 +195,23 @@ final class ol extends om {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3_ref;
+            stackOut_5_0 = (RuntimeException) (var3_ref);
             stackOut_5_1 = new StringBuilder().append("ol.I(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -215,23 +219,23 @@ final class ol extends om {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
         int var7 = CrazyCrystals.field_B;
-        if (null != ((ol) this).field_i) {
-            ((ol) this).field_i.a(param0, false, param2, (qm) this, true);
+        if (null != this.field_i) {
+            this.field_i.a(param0, false, param2, (qm) (this), true);
         }
         if (param1 > -12) {
-            field_D = null;
+            field_D = (uf[]) null;
         }
-        tm var5 = new tm(((ol) this).field_A);
-        qm var6 = (qm) (Object) var5.d(107);
+        tm var5 = new tm(this.field_A);
+        qm var6 = (qm) ((Object) var5.d(107));
         while (var6 != null) {
-            var6.a(((ol) this).field_j + param0, (byte) -74, param2 + ((ol) this).field_r, param3);
-            var6 = (qm) (Object) var5.c(-50);
+            var6.a(this.field_j + param0, (byte) -74, param2 + this.field_r, param3);
+            var6 = (qm) ((Object) var5.c(-50));
         }
     }
 
@@ -283,8 +287,8 @@ final class ol extends om {
             var3.field_j = param2.field_j;
             var3.field_c = param2.field_c;
             var3.field_g = param2.field_g;
-            var4 = 0;
-            stackOut_0_0 = (wj) var3;
+            var4 = 101 % ((param1 - 67) / 51);
+            stackOut_0_0 = (wj) (var3);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -292,23 +296,23 @@ final class ol extends om {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3_ref;
+            stackOut_2_0 = (RuntimeException) (var3_ref);
             stackOut_2_1 = new StringBuilder().append("ol.G(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -317,23 +321,23 @@ final class ol extends om {
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(120).append(',');
+            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -341,16 +345,12 @@ final class ol extends om {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
         return stackIn_1_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_E = "You can make him move using the arrow keys.";
         field_z = new Vector[5];
         field_C = new int[8192];

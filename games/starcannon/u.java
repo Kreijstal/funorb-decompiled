@@ -8,7 +8,8 @@ final class u {
     static gi field_c;
 
     final static boolean a(int param0, char param1) {
-        Object var3 = null;
+        int discarded$1 = 0;
+        ag var3 = null;
         int stackIn_23_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_40_0 = 0;
@@ -111,8 +112,8 @@ final class u {
             }
           }
         } else {
-          var3 = null;
-          int discarded$1 = u.a((ag) null, false, (byte) -98);
+          var3 = (ag) null;
+          discarded$1 = u.a((ag) null, false, (byte) -98);
           if (param1 >= 48) {
             if (param1 > 57) {
               if (param1 < 65) {
@@ -187,12 +188,13 @@ final class u {
 
     final static void a(int param0, int param1) {
         ia var2 = d.field_b;
-        var2.d((byte) 61, 4);
-        var2.a(1, -109);
+        var2.d((byte) 61, param0);
+        var2.a(param1, -109);
         var2.a(2, -120);
     }
 
     final static int a(ag param0, boolean param1, byte param2) {
+        boolean discarded$2 = false;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -218,7 +220,7 @@ final class u {
               if (param2 >= 58) {
                 break L1;
               } else {
-                boolean discarded$2 = u.a(120, '#');
+                discarded$2 = u.a(120, '#');
                 break L1;
               }
             }
@@ -230,23 +232,23 @@ final class u {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("u.D(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -254,7 +256,7 @@ final class u {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
@@ -262,17 +264,19 @@ final class u {
     public static void a(int param0) {
         field_a = null;
         field_c = null;
+        if (param0 != 2) {
+            field_d = 43;
+        }
     }
 
     final static void a(boolean param0) {
+        if (!param0) {
+            return;
+        }
         mi.a(1048576, ll.b(108));
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "From only <%0>/month";
     }
 }

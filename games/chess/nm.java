@@ -12,10 +12,10 @@ abstract class nm extends o {
     abstract void a(int param0);
 
     final void b(int[] param0, int param1, int param2) {
-        if (((nm) this).field_k) {
-            ((nm) this).a(param0, param1, param2);
+        if (this.field_k) {
+            this.a(param0, param1, param2);
         } else {
-            ((nm) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class nm extends o {
     abstract int d();
 
     protected nm() {
-        ((nm) this).field_k = true;
+        this.field_k = true;
     }
 }

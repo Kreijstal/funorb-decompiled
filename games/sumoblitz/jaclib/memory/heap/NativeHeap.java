@@ -17,7 +17,7 @@ public final class NativeHeap {
     protected final synchronized void finalize() throws Throwable {
         try {
             super.finalize();
-            ((jaclib.memory.heap.NativeHeap) this).a();
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw runtimeException;
         }
@@ -26,15 +26,15 @@ public final class NativeHeap {
     final synchronized native int allocateBuffer(int param0, boolean param1);
 
     final synchronized boolean b() {
-        return ((jaclib.memory.heap.NativeHeap) this).a;
+        return this.a;
     }
 
     public final jaclib.memory.heap.NativeHeapBuffer a(int param0, boolean param1) {
         RuntimeException var3 = null;
-        if (!((jaclib.memory.heap.NativeHeap) this).a) {
+        if (!this.a) {
           throw new IllegalStateException();
         } else {
-          return new jaclib.memory.heap.NativeHeapBuffer((jaclib.memory.heap.NativeHeap) this, ((jaclib.memory.heap.NativeHeap) this).allocateBuffer(param0, param1), param0);
+          return new jaclib.memory.heap.NativeHeapBuffer((jaclib.memory.heap.NativeHeap) (this), this.allocateBuffer(param0, param1), param0);
         }
     }
 
@@ -42,9 +42,9 @@ public final class NativeHeap {
 
     public NativeHeap(int param0) {
         try {
-            ((jaclib.memory.heap.NativeHeap) this).b = param0;
-            this.allocateHeap(((jaclib.memory.heap.NativeHeap) this).b);
-            ((jaclib.memory.heap.NativeHeap) this).a = true;
+            this.b = param0;
+            this.allocateHeap(this.b);
+            this.a = true;
         } catch (RuntimeException runtimeException) {
             throw runtimeException;
         }
@@ -52,14 +52,14 @@ public final class NativeHeap {
 
     public final synchronized void a() {
         L0: {
-          if (!((jaclib.memory.heap.NativeHeap) this).a) {
+          if (!this.a) {
             break L0;
           } else {
             this.deallocateHeap();
             break L0;
           }
         }
-        ((jaclib.memory.heap.NativeHeap) this).a = false;
+        this.a = false;
     }
 
     final synchronized native void put(int param0, byte[] param1, int param2, int param3, int param4);

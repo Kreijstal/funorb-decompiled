@@ -9,33 +9,32 @@ final class ua {
 
     ua(String param0, mu param1) {
         try {
-            ((ua) this).field_c = new ola();
+            this.field_c = new ola();
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         field_d = null;
-        int var1 = 0;
+        int var1 = -19 % ((64 - param0) / 60);
         field_a = null;
     }
 
     final static void a(byte param0, int param1, int param2, lda param3) {
         try {
             it.field_s = param3;
+            if (param0 != -50) {
+                field_b = false;
+            }
             lda.field_a = param2;
             fh.field_v = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ua.B(" + -50 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ua.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Email (Login):";
     }
 }

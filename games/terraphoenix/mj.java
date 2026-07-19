@@ -30,7 +30,7 @@ abstract class mj {
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          if (vh.a(param1, param2, param0, true)) {
+          if (vh.a(param1, param2, param0, param3)) {
             return uc.l(0);
           } else {
             return null;
@@ -39,23 +39,23 @@ abstract class mj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_0 = (RuntimeException) (var4);
             stackOut_4_1 = new StringBuilder().append("mj.B(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L0;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -63,7 +63,7 @@ abstract class mj {
               break L0;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ',' + true + ')');
+          throw qk.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ abstract class mj {
         wb.field_a = null;
         sb.field_m = null;
         ha.field_s = null;
-        qc.field_b = null;
+        qc.field_b = (byte[][]) null;
         if (param0 <= 68) {
             return;
         }
@@ -82,16 +82,16 @@ abstract class mj {
     final java.net.Socket a(boolean param0) throws IOException {
         if (!param0) {
           mj.a(28);
-          return new java.net.Socket(((mj) this).field_d, ((mj) this).field_b);
+          return new java.net.Socket(this.field_d, this.field_b);
         } else {
-          return new java.net.Socket(((mj) this).field_d, ((mj) this).field_b);
+          return new java.net.Socket(this.field_d, this.field_b);
         }
     }
 
     public static void a(int param0) {
         field_c = null;
         if (param0 != 11147) {
-            field_c = null;
+            field_c = (String) null;
             field_a = null;
             return;
         }
@@ -99,10 +99,6 @@ abstract class mj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "You can press undo to cancel the last landing location.";
         field_a = "This password contains your email address, and would be easy to guess";
     }

@@ -16,15 +16,15 @@ abstract class wj {
             fj.field_T = param8;
             sa.field_T = param6;
             kf.field_a = param5;
-            int var9_int = 1;
+            int var9_int = 41 % ((-36 - param7) / 32);
             fc.field_g = param4;
             vk.field_j = param2;
             ga.field_e = param0;
-            rj.field_d = (ae) (Object) new da();
+            rj.field_d = (ae) ((Object) new da());
             rb.field_a = new sd(param1);
             ij.field_d = new wg(rj.field_d, rb.field_a);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "wj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + 101 + ',' + param8 + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "wj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -32,8 +32,8 @@ abstract class wj {
         long var4 = 0L;
         if (param0 < 105) {
           L0: {
-            field_a = null;
-            var4 = ((wj) this).a(-27042);
+            field_a = (qj[]) null;
+            var4 = this.a(-27042);
             if (var4 > 0L) {
               wl.a(var4, false);
               break L0;
@@ -41,10 +41,10 @@ abstract class wj {
               break L0;
             }
           }
-          return ((wj) this).a(119, param1);
+          return this.a(119, param1);
         } else {
           L1: {
-            var4 = ((wj) this).a(-27042);
+            var4 = this.a(-27042);
             if (var4 > 0L) {
               wl.a(var4, false);
               break L1;
@@ -52,7 +52,7 @@ abstract class wj {
               break L1;
             }
           }
-          return ((wj) this).a(119, param1);
+          return this.a(119, param1);
         }
     }
 
@@ -61,7 +61,7 @@ abstract class wj {
         int var3 = 0;
         int var4 = 0;
         var4 = TrackController.field_F ? 1 : 0;
-        var2 = 64;
+        var2 = -64 / ((44 - param0) / 37);
         if (0 < hk.field_d) {
           if (null == tk.field_u) {
             L0: {
@@ -70,7 +70,7 @@ abstract class wj {
                 var3 = 3;
                 break L0;
               } else {
-                te.a(true, (java.awt.Canvas) (Object) og.field_rb);
+                te.a(true, og.field_rb);
                 var3 = 2;
                 break L0;
               }
@@ -93,7 +93,7 @@ abstract class wj {
                 var3 = 3;
                 break L1;
               } else {
-                te.a(true, (java.awt.Canvas) (Object) og.field_rb);
+                te.a(true, og.field_rb);
                 var3 = 2;
                 break L1;
               }

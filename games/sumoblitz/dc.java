@@ -8,11 +8,11 @@ final class dc extends ur {
     final void b(byte param0, pk param1) {
         try {
             if (param0 >= -87) {
-                field_ab = null;
+                field_ab = (hr[]) null;
             }
             super.b((byte) -96, param1);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "dc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "dc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -21,16 +21,27 @@ final class dc extends ur {
     }
 
     public static void m(int param0) {
+        if (param0 < 89) {
+            field_bb = (String) null;
+            field_ab = null;
+            field_bb = null;
+            return;
+        }
         field_ab = null;
         field_bb = null;
     }
 
     final static void l(int param0) {
         int var1 = 0;
-        if (224 > kr.field_c) {
+        if (param0 > kr.field_c) {
           var1 = kr.field_c % 32;
           lf.a(32 + (kr.field_c + -var1), (byte) -58);
-          return;
+          if (Sumoblitz.field_L) {
+            lf.a(256, (byte) -58);
+            return;
+          } else {
+            return;
+          }
         } else {
           lf.a(256, (byte) -58);
           return;
@@ -38,10 +49,6 @@ final class dc extends ur {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_bb = "Type your age in years";
     }
 }

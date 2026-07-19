@@ -17,12 +17,12 @@ final class ph {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ph) this).field_a.field_w;
-          param1 = param1 + ((ph) this).field_a.field_A;
+          param0 = param0 + this.field_a.field_w;
+          param1 = param1 + this.field_a.field_A;
           var3 = param0 + param1 * gf.field_i;
           var4 = 0;
-          var5 = ((ph) this).field_b;
-          var6 = ((ph) this).field_d;
+          var5 = this.field_b;
+          var6 = this.field_d;
           var7 = gf.field_i - var6;
           var8 = 0;
           if (param1 >= gf.field_f) {
@@ -74,7 +74,7 @@ final class ph {
             break L4;
           } else {
             if (var5 > 0) {
-              ph.a(jh.field_f, ((ph) this).field_c, var4, var3, var6, var5, var7, var8);
+              ph.a(jh.field_f, this.field_c, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -92,12 +92,12 @@ final class ph {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ph) this).field_a.field_w;
-          param1 = param1 + (((ph) this).field_a.field_G - ((ph) this).field_a.field_v - ((ph) this).field_a.field_A);
-          var3 = param0 + (param1 + ((ph) this).field_b - 1) * gf.field_i;
+          param0 = param0 + this.field_a.field_w;
+          param1 = param1 + (this.field_a.field_G - this.field_a.field_v - this.field_a.field_A);
+          var3 = param0 + (param1 + this.field_b - 1) * gf.field_i;
           var4 = 0;
-          var5 = ((ph) this).field_b;
-          var6 = ((ph) this).field_d;
+          var5 = this.field_b;
+          var6 = this.field_d;
           var7 = -gf.field_i - var6;
           var8 = 0;
           if (param1 >= gf.field_f) {
@@ -149,7 +149,7 @@ final class ph {
             break L4;
           } else {
             if (var5 > 0) {
-              ph.a(jh.field_f, ((ph) this).field_c, 0, var4, var3, 65280, var6, var5, var7, var8);
+              ph.a(jh.field_f, this.field_c, 0, var4, var3, 65280, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -159,8 +159,8 @@ final class ph {
     }
 
     final void h(int param0, int param1) {
-        ((ph) this).field_a.h(param0, param1);
-        ((ph) this).d(param0, param1);
+        this.field_a.h(param0, param1);
+        this.d(param0, param1);
     }
 
     final static ph a(nh param0, String param1, String param2) {
@@ -175,42 +175,52 @@ final class ph {
     }
 
     final void f(int param0, int param1) {
-        ((ph) this).field_a.b(param0, param1);
+        this.field_a.b(param0, param1);
         this.c(param0, param1);
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         int var10 = 0;
         int var8 = -(param4 >> 2);
         param4 = -(param4 & 3);
         for (var9 = -param5; var9 < 0; var9++) {
             for (var10 = var8; var10 < 0; var10++) {
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 param0[incrementValue$0] = param1[incrementValue$1];
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
-                int incrementValue$3 = param2;
+                incrementValue$3 = param2;
                 param2++;
                 param0[incrementValue$2] = param1[incrementValue$3];
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
-                int incrementValue$5 = param2;
+                incrementValue$5 = param2;
                 param2++;
                 param0[incrementValue$4] = param1[incrementValue$5];
-                int incrementValue$6 = param3;
+                incrementValue$6 = param3;
                 param3++;
-                int incrementValue$7 = param2;
+                incrementValue$7 = param2;
                 param2++;
                 param0[incrementValue$6] = param1[incrementValue$7];
             }
             for (var10 = param4; var10 < 0; var10++) {
-                int incrementValue$8 = param3;
+                incrementValue$8 = param3;
                 param3++;
-                int incrementValue$9 = param2;
+                incrementValue$9 = param2;
                 param2++;
                 param0[incrementValue$8] = param1[incrementValue$9];
             }
@@ -220,7 +230,7 @@ final class ph {
     }
 
     final void i(int param0, int param1) {
-        ((ph) this).field_a.g(param0, param1);
+        this.field_a.g(param0, param1);
         this.g(param0, param1);
     }
 
@@ -233,12 +243,12 @@ final class ph {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ph) this).field_a.field_w;
-          param1 = param1 + (((ph) this).field_a.field_G - ((ph) this).field_b - ((ph) this).field_a.field_A);
-          var3 = param0 + (param1 + ((ph) this).field_b - 1) * gf.field_i;
-          var4 = ((ph) this).field_d - 1;
-          var5 = ((ph) this).field_b;
-          var6 = ((ph) this).field_d;
+          param0 = param0 + this.field_a.field_w;
+          param1 = param1 + (this.field_a.field_G - this.field_b - this.field_a.field_A);
+          var3 = param0 + (param1 + this.field_b - 1) * gf.field_i;
+          var4 = this.field_d - 1;
+          var5 = this.field_b;
+          var6 = this.field_d;
           var7 = -gf.field_i - var6;
           var8 = var6 + var6;
           if (param1 >= gf.field_f) {
@@ -290,7 +300,7 @@ final class ph {
             break L4;
           } else {
             if (var5 > 0) {
-              ph.b(jh.field_f, ((ph) this).field_c, 0, var4, var3, 16776960, var6, var5, var7, var8);
+              ph.b(jh.field_f, this.field_c, 0, var4, var3, 16776960, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -308,12 +318,12 @@ final class ph {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ph) this).field_a.field_w;
-          param1 = param1 + ((ph) this).field_a.field_A;
+          param0 = param0 + this.field_a.field_w;
+          param1 = param1 + this.field_a.field_A;
           var3 = param0 + param1 * gf.field_i;
           var4 = 0;
-          var5 = ((ph) this).field_b;
-          var6 = ((ph) this).field_d;
+          var5 = this.field_b;
+          var6 = this.field_d;
           var7 = gf.field_i - var6;
           var8 = 0;
           if (param1 >= gf.field_f) {
@@ -365,7 +375,7 @@ final class ph {
             break L4;
           } else {
             if (var5 > 0) {
-              ph.a(jh.field_f, ((ph) this).field_c, 0, var4, var3, 0, var6, var5, var7, var8);
+              ph.a(jh.field_f, this.field_c, 0, var4, var3, 0, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -383,12 +393,12 @@ final class ph {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + (((ph) this).field_a.field_E - ((ph) this).field_a.field_y - ((ph) this).field_a.field_w);
-          param1 = param1 + ((ph) this).field_a.field_A;
+          param0 = param0 + (this.field_a.field_E - this.field_a.field_y - this.field_a.field_w);
+          param1 = param1 + this.field_a.field_A;
           var3 = param0 + param1 * gf.field_i;
-          var4 = ((ph) this).field_a.field_y - 1;
-          var5 = ((ph) this).field_a.field_v;
-          var6 = ((ph) this).field_a.field_y;
+          var4 = this.field_a.field_y - 1;
+          var5 = this.field_a.field_v;
+          var6 = this.field_a.field_y;
           var7 = gf.field_i - var6;
           var8 = var6 + var6;
           if (param1 >= gf.field_f) {
@@ -440,7 +450,7 @@ final class ph {
             break L4;
           } else {
             if (var5 > 0) {
-              ph.b(jh.field_f, ((ph) this).field_c, 0, var4, var3, 16711680, var6, var5, var7, var8);
+              ph.b(jh.field_f, this.field_c, 0, var4, var3, 16711680, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -450,7 +460,7 @@ final class ph {
     }
 
     final void b(int param0, int param1) {
-        ((ph) this).field_a.c(param0, param1);
+        this.field_a.c(param0, param1);
         this.e(param0, param1);
     }
 
@@ -465,11 +475,7 @@ final class ph {
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
-        var12 = new int[param0.field_y * param0.field_v];
-        var11 = var12;
-        var10 = var11;
+        var10 = new int[param0.field_y * param0.field_v];
         var9 = var10;
         var1 = var9;
         var2 = 0;
@@ -552,7 +558,7 @@ final class ph {
             var3 = -1;
             L7: while (true) {
               if (var5 >= param0.field_y) {
-                var12 = var11;
+                var10 = var9;
                 if (var3 != -1) {
                   var2 = var4 * param0.field_y + var3;
                   var6 = var3;
@@ -560,7 +566,7 @@ final class ph {
                     if (var6 < var5) {
                       var7 = 64 - 128 * (var6 - var3) / (var5 - var3);
                       var8 = (byte)var7 << 16 | 16;
-                      var12[var2] = var8;
+                      var10[var2] = var8;
                       var2++;
                       var6++;
                       continue L8;
@@ -599,7 +605,7 @@ final class ph {
                         } else {
                           var7 = 64 - 128 * (var6 - var3) / (var5 - var3);
                           var8 = (byte)var7 << 16 | 16;
-                          var12[var2] = var8;
+                          var10[var2] = var8;
                           var2++;
                           var6++;
                           continue L10;
@@ -619,20 +625,30 @@ final class ph {
     }
 
     ph(cn param0, cn param1) {
-        ((ph) this).field_a = param0;
-        ((ph) this).field_c = param1.field_B;
-        ((ph) this).field_d = param0.field_y;
-        ((ph) this).field_b = param0.field_v;
+        this.field_a = param0;
+        this.field_c = param1.field_B;
+        this.field_d = param0.field_y;
+        this.field_b = param0.field_v;
     }
 
     ph(cn param0, int[] param1) {
-        ((ph) this).field_a = param0;
-        ((ph) this).field_c = param1;
-        ((ph) this).field_d = param0.field_y;
-        ((ph) this).field_b = param0.field_v;
+        this.field_a = param0;
+        this.field_c = param1;
+        this.field_d = param0.field_y;
+        this.field_b = param0.field_v;
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -654,7 +670,7 @@ final class ph {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     param2 = param1[incrementValue$218];
                     if (param2 == 0) {
@@ -662,7 +678,7 @@ final class ph {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2 ^ param5;
                       var12++;
@@ -672,48 +688,48 @@ final class ph {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2 ^ param5;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2 ^ param5;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2 ^ param5;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 param2 = param1[incrementValue$226];
                 if (param2 == 0) {
@@ -721,7 +737,7 @@ final class ph {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2 ^ param5;
                   var12++;
@@ -734,11 +750,21 @@ final class ph {
     }
 
     final void j(int param0, int param1) {
-        ((ph) this).field_a.f(param0, param1);
+        this.field_a.f(param0, param1);
         this.a(param0, param1);
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -760,7 +786,7 @@ final class ph {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3--;
                     param2 = param1[incrementValue$218];
                     if (param2 == 0) {
@@ -768,7 +794,7 @@ final class ph {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2 ^ param5;
                       var12++;
@@ -778,48 +804,48 @@ final class ph {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3--;
                   param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2 ^ param5;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3--;
                   param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2 ^ param5;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3--;
                   param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2 ^ param5;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3--;
                 param2 = param1[incrementValue$226];
                 if (param2 == 0) {
@@ -827,7 +853,7 @@ final class ph {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2 ^ param5;
                   var12++;
@@ -840,10 +866,6 @@ final class ph {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "_normals";
     }
 }

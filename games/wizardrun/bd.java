@@ -11,7 +11,7 @@ final class bd {
         if (!(param0 instanceof eb)) {
             var2 = new eb(param0, param1);
         } else {
-            var2 = (eb) (Object) param0;
+            var2 = (eb) ((Object) param0);
             var2.field_b = var2.field_b + ' ' + param1;
         }
         return var2;
@@ -28,7 +28,7 @@ final class bd {
             gd.field_c = nk.field_N.f(255);
             nk.field_N.field_m = 0;
         }
-        if (!(gd.field_c != -2)) {
+        if (!(1 != (gd.field_c ^ -1))) {
             if (hc.a(2, -28266)) {
                 gd.field_c = nk.field_N.j(-14477);
                 nk.field_N.field_m = 0;
@@ -40,22 +40,37 @@ final class bd {
     }
 
     public static void c(int param0) {
-        field_b = null;
-        field_a = null;
-        field_c = null;
+        eb discarded$2 = null;
+        String var2 = null;
+        if (param0 != 1) {
+          var2 = (String) null;
+          discarded$2 = bd.a((Throwable) null, (String) null);
+          field_b = null;
+          field_a = null;
+          field_c = null;
+          return;
+        } else {
+          field_b = null;
+          field_a = null;
+          field_c = null;
+          return;
+        }
     }
 
     final static void a(int param0) {
         kc.field_H = jl.c(4);
         u.field_A = new wi();
-        di.a(true, true, 117);
+        if (param0 > -26) {
+          field_b = (rc) null;
+          di.a(true, true, 117);
+          return;
+        } else {
+          di.a(true, true, 117);
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new rc();
     }
 }

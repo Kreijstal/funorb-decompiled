@@ -12,29 +12,43 @@ final class kn {
     private int field_g;
 
     private final void a(int param0, int param1, boolean param2) {
-        if (param0 > ((kn) this).field_g) {
+        int discarded$4 = 0;
+        int discarded$5 = 0;
+        if (param0 <= this.field_g) {
           L0: {
-            ((kn) this).field_g = param0;
-            if (((kn) this).field_a.length <= param0) {
+            if (this.field_a.length <= param0) {
               this.b(0, param0);
               break L0;
             } else {
               break L0;
             }
           }
-          ((kn) this).field_a[param0] = param1;
-          return;
+          if (param2) {
+            discarded$4 = this.a(-30, 101);
+            this.field_a[param0] = param1;
+            return;
+          } else {
+            this.field_a[param0] = param1;
+            return;
+          }
         } else {
           L1: {
-            if (((kn) this).field_a.length <= param0) {
+            this.field_g = param0;
+            if (this.field_a.length <= param0) {
               this.b(0, param0);
               break L1;
             } else {
               break L1;
             }
           }
-          ((kn) this).field_a[param0] = param1;
-          return;
+          if (!param2) {
+            this.field_a[param0] = param1;
+            return;
+          } else {
+            discarded$5 = this.a(-30, 101);
+            this.field_a[param0] = param1;
+            return;
+          }
         }
     }
 
@@ -42,22 +56,25 @@ final class kn {
         field_f = null;
         field_c = null;
         field_h = null;
+        if (!param0) {
+            kn.a((byte) 76);
+        }
     }
 
     final void c(int param0, int param1) {
         if (param1 >= param0) {
-          if (param1 > ((kn) this).field_g) {
+          if (param1 > this.field_g) {
             throw new ArrayIndexOutOfBoundsException(param1);
           } else {
             L0: {
-              if (((kn) this).field_g != param1) {
-                qg.a(((kn) this).field_a, param1 - -1, ((kn) this).field_a, param1, ((kn) this).field_g - param1);
+              if (this.field_g != param1) {
+                qg.a(this.field_a, param1 - -1, this.field_a, param1, this.field_g - param1);
                 break L0;
               } else {
                 break L0;
               }
             }
-            ((kn) this).field_g = ((kn) this).field_g - 1;
+            this.field_g = this.field_g - 1;
             return;
           }
         } else {
@@ -66,34 +83,39 @@ final class kn {
     }
 
     final void a(int param0, byte param1) {
-        this.a(((kn) this).field_g + 1, param0, false);
+        int discarded$0 = 0;
+        this.a(this.field_g + 1, param0, false);
         if (param1 != -51) {
-            int discarded$0 = ((kn) this).a(false);
+            discarded$0 = this.a(false);
         }
     }
 
     private final void b(int param0, int param1) {
-        int[] var4 = new int[this.d(0, param1)];
+        int[] var4 = new int[this.d(param0, param1)];
         int[] var3 = var4;
-        qg.a(((kn) this).field_a, 0, var4, 0, ((kn) this).field_a.length);
-        ((kn) this).field_a = var4;
+        qg.a(this.field_a, 0, var4, 0, this.field_a.length);
+        this.field_a = var4;
     }
 
     final static void a(byte param0) {
         mb.field_g = hi.c(false);
         bo.field_F = new tb();
+        if (param0 > -21) {
+            return;
+        }
         ve.a(-43, true, true);
     }
 
     final int a(int param0, int param1) {
-        if (((kn) this).field_g < param1) {
+        sn discarded$2 = null;
+        if (this.field_g < param1) {
           throw new ArrayIndexOutOfBoundsException(param1);
         } else {
           if (param0 >= -5) {
-            sn discarded$2 = kn.b(false);
-            return ((kn) this).field_a[param1];
+            discarded$2 = kn.b(false);
+            return this.field_a[param1];
           } else {
-            return ((kn) this).field_a[param1];
+            return this.field_a[param1];
           }
         }
     }
@@ -102,21 +124,25 @@ final class kn {
         int var3 = 0;
         int var4 = 0;
         var4 = EscapeVector.field_A;
-        var3 = ((kn) this).field_a.length;
-        L0: while (true) {
-          if (param1 < var3) {
-            return var3;
-          } else {
-            if (!((kn) this).field_d) {
-              var3 = var3 + ((kn) this).field_e;
-              continue L0;
+        if (param0 != 0) {
+          return 34;
+        } else {
+          var3 = this.field_a.length;
+          L0: while (true) {
+            if (param1 < var3) {
+              return var3;
             } else {
-              if (var3 != 0) {
-                var3 = var3 * ((kn) this).field_e;
+              if (!this.field_d) {
+                var3 = var3 + this.field_e;
                 continue L0;
               } else {
-                var3 = 1;
-                continue L0;
+                if (var3 != 0) {
+                  var3 = var3 * this.field_e;
+                  continue L0;
+                } else {
+                  var3 = 1;
+                  continue L0;
+                }
               }
             }
           }
@@ -129,24 +155,21 @@ final class kn {
 
     final static sn b(boolean param0) {
         if (!param0) {
-            return null;
+            return (sn) null;
         }
         return new sn(ce.c(31069), jc.c(-89));
     }
 
     final int a(boolean param0) {
+        int discarded$0 = 0;
         if (!param0) {
-            int discarded$0 = ((kn) this).a(106, 72);
-            return ((kn) this).field_g + 1;
+            discarded$0 = this.a(106, 72);
+            return this.field_g + 1;
         }
-        return ((kn) this).field_g + 1;
+        return this.field_g + 1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Names cannot start or end with space or underscore";
         field_f = "Score";
     }

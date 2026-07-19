@@ -16,23 +16,24 @@ final class iw extends tc {
     public static void a(int param0) {
         field_o = null;
         field_p = null;
+        if (param0 != -25771) {
+            field_l = (kl) null;
+            field_l = null;
+            return;
+        }
         field_l = null;
     }
 
     iw(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((iw) this).field_k = param1;
-        ((iw) this).field_t = param4;
-        ((iw) this).field_q = param2;
-        ((iw) this).field_m = param3;
-        ((iw) this).field_r = param0;
-        ((iw) this).field_s = param5;
+        this.field_k = param1;
+        this.field_t = param4;
+        this.field_q = param2;
+        this.field_m = param3;
+        this.field_r = param0;
+        this.field_s = param5;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Enter name of player to add to list";
     }
 }

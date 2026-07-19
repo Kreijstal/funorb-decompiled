@@ -15,10 +15,6 @@ final class ff {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ff.A(";
         field_a = "Email (Login):";
         field_b = new dd[50];

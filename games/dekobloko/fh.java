@@ -27,45 +27,66 @@ final class fh {
         int var15 = 0;
         int[] var16 = null;
         int var17 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var17 = client.field_A ? 1 : 0;
         try {
           L0: {
-            var4_int = 320;
-            var5 = 490;
-            var6 = 0;
-            L1: while (true) {
-              if (var6 >= rb.field_n.length) {
-                break L0;
-              } else {
-                L2: {
-                  var7 = rb.field_n[var6] >> 8 & 255;
-                  var8 = 255 & rb.field_n[var6] >> 24;
-                  var9 = (2048 * var7 >> 8) - -(bb.field_f * (1 + var8) >> 6);
-                  var10 = rb.field_n[var6] >> 16 & 255;
+            if (param2) {
+              var4_int = 320;
+              var5 = 490;
+              var6 = 0;
+              L1: while (true) {
+                if (var6 >= rb.field_n.length) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  var7 = rb.field_n[var6] >> 1058191496 & 255;
+                  var8 = 255 & rb.field_n[var6] >> -496612168;
+                  var9 = (2048 * var7 >> -208576440) - -(bb.field_f * (1 + var8) >> -1499643386);
+                  var10 = rb.field_n[var6] >> -226715728 & 255;
                   var11 = 255 & rb.field_n[var6];
-                  var12 = ke.a(2047, var9) >> 6;
-                  var13 = h.a(var9, (byte) -122) >> 6;
-                  var14 = ke.a(2047, var11 + var9) >> 6;
-                  var15 = h.a(var9 + var11, (byte) -122) >> 6;
-                  var16 = new int[]{var4_int, param0 - -var5, var12, param0 + var13, 0 - -var14, var15 + param0};
-                  if (256 == param1) {
-                    ok.a(var16, 16777215, var10);
-                    break L2;
+                  var12 = ke.a(2047, var9) >> -200783770;
+                  var13 = h.a(var9, (byte) -122) >> -1071707034;
+                  var14 = ke.a(2047, var11 + var9) >> -1246657338;
+                  var15 = h.a(var9 + var11, (byte) -122) >> -1683979834;
+                  var16 = new int[]{var4_int + param3, param0 - -var5, var12 + param3, param0 + var13, param3 - -var14, var15 + param0};
+                  if (var17 == 0) {
+                    L2: {
+                      if (256 == param1) {
+                        ok.a(var16, 16777215, var10);
+                        break L2;
+                      } else {
+                        ok.a(var16, 16777215, var10 * 256 >> 431644137);
+                        if (var17 == 0) {
+                          break L2;
+                        } else {
+                          ok.a(var16, 16777215, var10);
+                          break L2;
+                        }
+                      }
+                    }
+                    var6++;
+                    continue L1;
                   } else {
-                    ok.a(var16, 16777215, var10 * 256 >> 9);
-                    break L2;
+                    return;
                   }
                 }
-                var6++;
-                continue L1;
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw dh.a((Throwable) ((Object) var4), "fh.F(" + param0 + ',' + param1 + ',' + true + ',' + 0 + ')');
+          throw dh.a((Throwable) ((Object) var4), "fh.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -81,17 +102,17 @@ final class fh {
         try {
             var3 = we.field_b;
             int var4 = -58 / ((param0 - 59) / 33);
-            var3.f(7, -4);
+            var3.f(param2, -4);
             var3.a(true, param1.field_q);
             var3.a(true, param1.field_z);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "fh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 7 + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "fh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static boolean a(byte param0) {
         int var1 = 114 % ((param0 - 70) / 46);
-        if (sm.field_e == -1) {
+        if (0 == (sm.field_e ^ -1)) {
             if (!pe.b(25973, 1)) {
                 return false;
             }
@@ -114,15 +135,19 @@ final class fh {
         field_e = null;
         field_b = null;
         field_a = null;
+        if (param0 != 0) {
+            return;
+        }
         field_g = null;
     }
 
     final static void a(int param0) {
-        boolean discarded$15 = false;
-        boolean discarded$16 = false;
+        boolean discarded$43 = false;
+        boolean discarded$44 = false;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = client.field_A ? 1 : 0;
         try {
@@ -141,17 +166,23 @@ final class fh {
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               var1_int = -26 % ((param0 - 37) / 58);
-              discarded$15 = u.field_i.a(jd.field_Yb, true, ab.field_f, 29166);
+              discarded$43 = u.field_i.a(jd.field_Yb, true, ab.field_f, 29166);
               u.field_i.g(0);
               L2: while (true) {
                 if (!ab.c((byte) 50)) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  discarded$16 = u.field_i.a(wh.field_c, el.field_G, (byte) 121);
-                  continue L2;
+                  discarded$44 = u.field_i.a(wh.field_c, el.field_G, (byte) 121);
+                  if (var2 == 0) {
+                    continue L2;
+                  } else {
+                    return;
+                  }
                 }
               }
             }
@@ -160,6 +191,11 @@ final class fh {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw dh.a((Throwable) ((Object) var1), "fh.E(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 

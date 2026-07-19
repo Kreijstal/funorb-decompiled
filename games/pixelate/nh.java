@@ -15,7 +15,7 @@ final class nh {
         ae var5 = null;
         int var6 = 0;
         var6 = Pixelate.field_H ? 1 : 0;
-        var3 = -63;
+        var3 = -63 / ((param0 - -27) / 63);
         L0: while (true) {
           L1: {
             var1 = od.a((byte) 41, 65536, -65536);
@@ -27,7 +27,7 @@ final class nh {
               if (0 != var2) {
                 break L1;
               } else {
-                if (var4 == 0) {
+                if (-1 == (var4 ^ -1)) {
                   continue L0;
                 } else {
                   break L1;
@@ -53,18 +53,25 @@ final class nh {
     final static void a(byte param0) {
         int var1 = rk.field_e.g(16711680);
         int var2 = rk.field_e.g(16777215);
+        if (param0 <= 54) {
+            field_c = (String) null;
+        }
         int var3 = rk.field_e.field_R[0].length;
         rk.field_e.field_R = new int[4][];
-        rk.field_e.field_R[0] = new int[var3];
+        int[] array$0 = new int[var3];
+        rk.field_e.field_R[0] = array$0;
         rk.field_e.field_R[0][var1] = 65793;
         rk.field_e.field_R[0][var2] = 16777215;
-        rk.field_e.field_R[1] = new int[var3];
+        int[] array$1 = new int[var3];
+        rk.field_e.field_R[1] = array$1;
         rk.field_e.field_R[1][var1] = 65793;
         rk.field_e.field_R[1][var2] = 16711680;
-        rk.field_e.field_R[2] = new int[var3];
+        int[] array$2 = new int[var3];
+        rk.field_e.field_R[2] = array$2;
         rk.field_e.field_R[2][var1] = 65793;
         rk.field_e.field_R[2][var2] = 11184810;
-        rk.field_e.field_R[3] = new int[var3];
+        int[] array$3 = new int[var3];
+        rk.field_e.field_R[3] = array$3;
         rk.field_e.field_R[3][var1] = 65793;
         rk.field_e.field_R[3][var2] = 4473924;
     }
@@ -164,6 +171,14 @@ final class nh {
                     }
                   }
                 }
+                L8: {
+                  if (param1 == -29667) {
+                    break L8;
+                  } else {
+                    field_c = (String) null;
+                    break L8;
+                  }
+                }
                 stackOut_22_0 = var2_long;
                 stackIn_23_0 = stackOut_22_0;
                 break L0;
@@ -172,33 +187,33 @@ final class nh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L9: {
             var2 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var2;
+            stackOut_24_0 = (RuntimeException) (var2);
             stackOut_24_1 = new StringBuilder().append("nh.A(");
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
-              break L8;
+              break L9;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
               stackIn_27_2 = stackOut_25_2;
-              break L8;
+              break L9;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + -29667 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param1 + ')');
         }
         return stackIn_23_0;
     }
@@ -208,7 +223,11 @@ final class nh {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         int var12 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var12 = Pixelate.field_H ? 1 : 0;
         try {
@@ -217,7 +236,7 @@ final class nh {
               if (param4 >= 99) {
                 break L1;
               } else {
-                field_d = null;
+                field_d = (String) null;
                 break L1;
               }
             }
@@ -259,32 +278,51 @@ final class nh {
               if (0 >= param5) {
                 break L6;
               } else {
-                if (param0 > 0) {
+                if ((param0 ^ -1) < -1) {
                   var6_int = param2 - -(param3 * t.field_j);
                   var7 = -param5 + t.field_j;
                   param3 = -param0;
                   L7: while (true) {
-                    if (param3 >= 0) {
+                    if ((param3 ^ -1) <= -1) {
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       param2 = -param5;
                       L8: while (true) {
-                        if (param2 >= 0) {
+                        if ((param2 ^ -1) <= -1) {
                           var6_int = var6_int + var7;
                           param3++;
                           continue L7;
                         } else {
-                          L9: {
-                            var8 = t.field_k[var6_int];
-                            if ((var8 & 65280) >> 8 <= 64) {
-                              break L9;
+                          var8 = t.field_k[var6_int];
+                          if ((var8 & 65280) >> 437520040 > param1) {
+                            if ((255 & var8 >> -1960753624) >= (var8 >> -490448752 & 255)) {
+                              L9: {
+                                var9 = ((16711680 & var8) >> 993062639) - 60;
+                                if ((var9 ^ -1) < -256) {
+                                  var9 = 255;
+                                  break L9;
+                                } else {
+                                  break L9;
+                                }
+                              }
+                              var10 = 65280 & var8;
+                              var10 = (var10 >> -165939871) - (var10 >> -664528411) & 65280;
+                              var11 = (255 & var8) >> -734854973;
+                              t.field_k[var6_int] = bq.a(var11, bq.a(var10, var9 << 901460656));
+                              var6_int++;
+                              param2++;
+                              continue L8;
                             } else {
-                              break L9;
+                              var6_int++;
+                              param2++;
+                              continue L8;
                             }
+                          } else {
+                            var6_int++;
+                            param2++;
+                            continue L8;
                           }
-                          var6_int++;
-                          param2++;
-                          continue L8;
                         }
                       }
                     }
@@ -294,20 +332,22 @@ final class nh {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var6, "nh.B(" + param0 + ',' + 64 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.a((Throwable) ((Object) var6), "nh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "This game is full.";
         field_a = new int[4];
         field_d = "Mute this player for 48 hours";

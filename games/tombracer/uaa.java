@@ -10,6 +10,9 @@ final class uaa {
     public static void a(int param0) {
         field_b = null;
         field_c = null;
+        if (param0 != 5193) {
+            return;
+        }
         field_a = null;
         field_d = null;
     }
@@ -41,85 +44,113 @@ final class uaa {
         try {
           L0: {
             L1: {
-              var2_int = sva.field_d;
-              if (param1.field_d != 2) {
-                if (param1.field_d == 4) {
-                  var2_int = bma.field_t[param1.field_d];
-                  break L1;
+              L2: {
+                var2_int = sva.field_d;
+                if (param1.field_d != 2) {
+                  break L2;
                 } else {
-                  if (~param1.field_i != ~rb.field_r) {
-                    var2_int = bma.field_t[param1.field_d];
+                  L3: {
+                    if (param1.field_m) {
+                      break L3;
+                    } else {
+                      L4: {
+                        if (0 != param1.field_c) {
+                          break L4;
+                        } else {
+                          if (-1 != (param1.field_o ^ -1)) {
+                            break L4;
+                          } else {
+                            var2_int = pm.field_a[param1.field_d];
+                            if (var4 == 0) {
+                              break L1;
+                            } else {
+                              break L4;
+                            }
+                          }
+                        }
+                      }
+                      var2_int = bma.field_t[param1.field_d];
+                      if (var4 == 0) {
+                        break L1;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                  var2_int = sva.field_d;
+                  if (var4 == 0) {
                     break L1;
                   } else {
-                    var2_int = pm.field_a[param1.field_d];
-                    break L1;
+                    break L2;
                   }
                 }
-              } else {
-                if (param1.field_m) {
-                  var2_int = sva.field_d;
-                  break L1;
+              }
+              L5: {
+                if (-5 == (param1.field_d ^ -1)) {
+                  break L5;
                 } else {
-                  L2: {
-                    if (0 != param1.field_c) {
-                      break L2;
+                  L6: {
+                    if ((param1.field_i ^ -1L) != (rb.field_r ^ -1L)) {
+                      break L6;
                     } else {
-                      if (param1.field_o != 0) {
-                        break L2;
-                      } else {
-                        var2_int = pm.field_a[param1.field_d];
+                      var2_int = pm.field_a[param1.field_d];
+                      if (var4 == 0) {
                         break L1;
+                      } else {
+                        break L6;
                       }
                     }
                   }
                   var2_int = bma.field_t[param1.field_d];
-                  break L1;
+                  if (var4 == 0) {
+                    break L1;
+                  } else {
+                    break L5;
+                  }
                 }
               }
+              var2_int = bma.field_t[param1.field_d];
+              break L1;
             }
-            var3 = -42;
+            var3 = 42 / ((param0 - -71) / 44);
             stackOut_13_0 = var2_int;
             stackIn_14_0 = stackOut_13_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L7: {
             var2 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("uaa.B(").append(-116).append(',');
+            stackOut_15_0 = (RuntimeException) (var2);
+            stackOut_15_1 = new StringBuilder().append("uaa.B(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
-              break L3;
+              break L7;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
               stackIn_18_2 = stackOut_16_2;
-              break L3;
+              break L7;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
         return stackIn_14_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Gold Medal Award";
         field_c = "<%0> wants to join";
     }

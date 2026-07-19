@@ -27,15 +27,15 @@ final class ft extends wf {
     su field_e;
 
     final void a(int param0) {
-        ((ft) this).field_y = null;
-        ((ft) this).field_e = null;
-        ((ft) this).field_r = null;
+        this.field_y = null;
+        this.field_e = null;
+        this.field_r = null;
         if (param0 != 11821) {
-          ((ft) this).field_v = -33;
-          ((ft) this).field_x = null;
+          this.field_v = -33;
+          this.field_x = null;
           return;
         } else {
-          ((ft) this).field_x = null;
+          this.field_x = null;
           return;
         }
     }

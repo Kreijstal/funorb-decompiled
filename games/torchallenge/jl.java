@@ -12,14 +12,15 @@ abstract class jl {
     static String field_g;
 
     final int a(byte param0, long param1) {
-        long var4 = ((jl) this).c(121);
+        int discarded$0 = 0;
+        long var4 = this.c(121);
         if (param0 != -12) {
-            int discarded$0 = ((jl) this).a(69L, 62);
+            discarded$0 = this.a(69L, 62);
         }
-        if (var4 > 0L) {
+        if (-1L > (var4 ^ -1L)) {
             c.a(-127, var4);
         }
-        return ((jl) this).a(param1, param0 ^ -24);
+        return this.a(param1, param0 ^ -24);
     }
 
     abstract void a(int param0);
@@ -27,7 +28,7 @@ abstract class jl {
     abstract int a(long param0, int param1);
 
     public static void b(int param0) {
-        int var1 = 0;
+        int var1 = 46 % ((param0 - 25) / 53);
         field_a = null;
         field_b = null;
         field_g = null;
@@ -49,6 +50,7 @@ abstract class jl {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var9 = TorChallenge.field_F ? 1 : 0;
         try {
@@ -59,12 +61,12 @@ abstract class jl {
               if (hf.field_d == null) {
                 break L1;
               } else {
-                if (~var6 < ~hf.field_d.length) {
+                if (var6 > hf.field_d.length) {
                   break L1;
                 } else {
                   var7 = 0;
                   L2: while (true) {
-                    if (var7 >= 3) {
+                    if (-4 >= (var7 ^ -1)) {
                       var1_int = 0;
                       var7 = 0;
                       L3: while (true) {
@@ -84,11 +86,12 @@ abstract class jl {
                                 }
                               }
                               var3 = 0;
-                              var3 = var3 | (var1_int & 992) >> 5;
+                              var3 = var3 | (var1_int & 992) >> 165654725;
                               hd.field_c[1] = p.a(hd.field_c[1], jh.a(var3, 31));
                               var3 = 0;
-                              var3 = var3 | (var1_int & 31744) >> 10;
+                              var3 = var3 | (var1_int & 31744) >> -1439695254;
                               hd.field_c[2] = p.a(hd.field_c[2], jh.a(var3, 31));
+                              decompiledRegionSelector0 = 1;
                               break L0;
                             } else {
                               hd.field_c[var7] = 0;
@@ -101,15 +104,15 @@ abstract class jl {
                             var4 = 0;
                             var3 = 0;
                             var3 = var3 | hf.field_d[var5 - -var7];
-                            if (var7 == 0) {
+                            if (-1 == (var7 ^ -1)) {
                               var4 = 255;
                               break L6;
                             } else {
-                              if (var7 == 1) {
+                              if ((var7 ^ -1) == -2) {
                                 var4 = 65280;
                                 break L6;
                               } else {
-                                if (var7 != 2) {
+                                if ((var7 ^ -1) != -3) {
                                   if (var7 == 3) {
                                     var4 = -16777216;
                                     break L6;
@@ -134,11 +137,11 @@ abstract class jl {
                       var1_int = 0;
                       var8 = 0;
                       L7: while (true) {
-                        if (var8 >= 4) {
+                        if (-5 >= (var8 ^ -1)) {
                           var2 = 0;
                           var8 = 0;
                           L8: while (true) {
-                            if (var8 >= 4) {
+                            if (-5 >= (var8 ^ -1)) {
                               var8 = 0;
                               L9: while (true) {
                                 if (5 <= var8) {
@@ -146,51 +149,51 @@ abstract class jl {
                                   var3 = var3 | 31 & var1_int;
                                   pi.field_d[var7][0] = p.a(pi.field_d[var7][0], jh.a(31, var3));
                                   var3 = 0;
-                                  var3 = var3 | 31 & var1_int >> 6;
+                                  var3 = var3 | 31 & var1_int >> 1694637798;
                                   pi.field_d[var7][1] = p.a(pi.field_d[var7][1], jh.a(var3, 31));
                                   var3 = 0;
-                                  var3 = var3 | var1_int >> 12 & 31;
+                                  var3 = var3 | var1_int >> -1972835892 & 31;
                                   pi.field_d[var7][2] = p.a(pi.field_d[var7][2], jh.a(31, var3));
                                   var3 = 0;
-                                  var3 = var3 | 31 & var1_int >> 18;
+                                  var3 = var3 | 31 & var1_int >> -127324206;
                                   pi.field_d[var7][3] = p.a(pi.field_d[var7][3], jh.a(31, var3));
                                   var3 = 0;
-                                  var3 = var3 | 31 & var1_int >> 24;
+                                  var3 = var3 | 31 & var1_int >> -1934140776;
                                   pi.field_d[var7][4] = p.a(pi.field_d[var7][4], jh.a(31, var3));
                                   var3 = 0;
-                                  var3 = var3 | (var1_int & -1073741824) >> 30;
+                                  var3 = var3 | (var1_int & -1073741824) >> 554067358;
                                   pi.field_d[var7][5] = p.a(pi.field_d[var7][5], jh.a(var3, 31));
                                   var3 = 0;
-                                  var3 = var3 | 28 & var2 << 2;
+                                  var3 = var3 | 28 & var2 << -823824190;
                                   pi.field_d[var7][5] = p.a(pi.field_d[var7][5], jh.a(var3, 31));
                                   hk.field_c[var7] = 0;
                                   var3 = 0;
-                                  var3 = var3 | var1_int >> 11 & 1;
+                                  var3 = var3 | var1_int >> -1176210581 & 1;
                                   hk.field_c[var7] = p.a(hk.field_c[var7], jh.a(var3, 1));
                                   var3 = 0;
-                                  var3 = var3 | 2 & var1_int >> 22;
+                                  var3 = var3 | 2 & var1_int >> 582396246;
                                   hk.field_c[var7] = p.a(hk.field_c[var7], jh.a(2, var3));
                                   var3 = 0;
-                                  var3 = var3 | var2 >> 1 & 4;
+                                  var3 = var3 | var2 >> 488680033 & 4;
                                   hk.field_c[var7] = p.a(hk.field_c[var7], jh.a(var3, 4));
                                   var3 = 0;
                                   k.field_b[var7] = 0;
-                                  var3 = var3 | 1 & var1_int >> 5;
+                                  var3 = var3 | 1 & var1_int >> 1184433829;
                                   k.field_b[var7] = p.a(k.field_b[var7], jh.a(var3, 1));
                                   var3 = 0;
-                                  var3 = var3 | (var1_int & 2048) >> 10;
+                                  var3 = var3 | (var1_int & 2048) >> -1593412758;
                                   k.field_b[var7] = p.a(k.field_b[var7], jh.a(2, var3));
                                   var3 = 0;
-                                  var3 = var3 | (131072 & var1_int) >> 15;
+                                  var3 = var3 | (131072 & var1_int) >> -726796017;
                                   k.field_b[var7] = p.a(k.field_b[var7], jh.a(4, var3));
                                   var3 = 0;
-                                  var3 = var3 | (var1_int & 8388608) >> 20;
+                                  var3 = var3 | (var1_int & 8388608) >> -1345642156;
                                   k.field_b[var7] = p.a(k.field_b[var7], jh.a(8, var3));
                                   var3 = 0;
-                                  var3 = var3 | (var1_int & 536870912) >> 25;
+                                  var3 = var3 | (var1_int & 536870912) >> 2998521;
                                   k.field_b[var7] = p.a(k.field_b[var7], jh.a(var3, 16));
                                   var3 = 0;
-                                  var3 = var3 | (var2 & 8) << 2;
+                                  var3 = var3 | (var2 & 8) << -1839608574;
                                   var5 += 8;
                                   k.field_b[var7] = p.a(k.field_b[var7], jh.a(var3, 32));
                                   var7++;
@@ -209,12 +212,12 @@ abstract class jl {
                                   var4 = 255;
                                   break L10;
                                 } else {
-                                  if (var8 != 1) {
+                                  if (-2 != (var8 ^ -1)) {
                                     if (2 == var8) {
                                       var4 = 16711680;
                                       break L10;
                                     } else {
-                                      if (var8 == 3) {
+                                      if ((var8 ^ -1) == -4) {
                                         var4 = -16777216;
                                         break L10;
                                       } else {
@@ -245,7 +248,7 @@ abstract class jl {
                                 var4 = 65280;
                                 break L11;
                               } else {
-                                if (var8 == 2) {
+                                if (-3 == (var8 ^ -1)) {
                                   var4 = 16711680;
                                   break L11;
                                 } else {
@@ -270,12 +273,18 @@ abstract class jl {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "jl.F(" + param0 + ')');
+          throw oj.a((Throwable) ((Object) var1), "jl.F(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -319,7 +328,7 @@ abstract class jl {
                 break L2;
               }
             }
-            stackOut_5_0 = (String) var2;
+            stackOut_5_0 = (String) (var2);
             stackIn_6_0 = stackOut_5_0;
             break L0;
           }
@@ -327,23 +336,23 @@ abstract class jl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2_ref;
+            stackOut_7_0 = (RuntimeException) (var2_ref);
             stackOut_7_1 = new StringBuilder().append("jl.G(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -351,16 +360,12 @@ abstract class jl {
               break L3;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "to over <%0> great games";
         field_a = new ka[3];
         field_g = "OK";

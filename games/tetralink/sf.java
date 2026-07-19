@@ -13,55 +13,59 @@ final class sf implements Iterator {
     private gb field_g;
 
     public final boolean hasNext() {
-        return ((sf) this).field_g != ((sf) this).field_e.field_e;
+        return this.field_g != this.field_e.field_e;
     }
 
     public final void remove() {
-        if (!(null != ((sf) this).field_f)) {
+        if (!(null != this.field_f)) {
             throw new IllegalStateException();
         }
-        ((sf) this).field_f.e(0);
-        ((sf) this).field_f = null;
+        this.field_f.e(0);
+        this.field_f = null;
     }
 
     public static void a(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;
+        if (param0 > -97) {
+            field_b = (String) null;
+        }
     }
 
     public final Object next() {
-        gb var1 = ((sf) this).field_g;
-        if (((sf) this).field_e.field_e != var1) {
-            ((sf) this).field_g = var1.field_o;
+        gb var1 = this.field_g;
+        if (this.field_e.field_e != var1) {
+            this.field_g = var1.field_o;
         } else {
             var1 = null;
-            ((sf) this).field_g = null;
+            this.field_g = null;
         }
-        ((sf) this).field_f = var1;
-        return (Object) (Object) var1;
+        this.field_f = var1;
+        return var1;
     }
 
     sf(rk param0) {
-        ((sf) this).field_f = null;
+        this.field_f = null;
         try {
-            ((sf) this).field_e = param0;
-            ((sf) this).field_f = null;
-            ((sf) this).field_g = ((sf) this).field_e.field_e.field_o;
+            this.field_e = param0;
+            this.field_f = null;
+            this.field_g = this.field_e.field_e.field_o;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "sf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static gd a(int param0, long param1) {
-        return (gd) (Object) dg.field_g.a(param1, 1);
+        if (param0 != -18701) {
+          sf.a((byte) -94);
+          return (gd) ((Object) dg.field_g.a(param1, param0 ^ -18702));
+        } else {
+          return (gd) ((Object) dg.field_g.a(param1, param0 ^ -18702));
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Enter the name you'd prefer. This is the name displayed to other players.";
         field_b = "<%0> is not on your friend list.";
         field_d = 0;

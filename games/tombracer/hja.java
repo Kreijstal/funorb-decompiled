@@ -6,6 +6,8 @@ final class hja extends rka {
     int[] field_g;
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -25,7 +27,7 @@ final class hja extends rka {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var13 = param1[incrementValue$66];
                 if (var13 == 0) {
@@ -35,7 +37,7 @@ final class hja extends rka {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -48,6 +50,16 @@ final class hja extends rka {
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -69,7 +81,7 @@ final class hja extends rka {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4++;
                     param3 = param1[incrementValue$10];
                     if (param3 == 0) {
@@ -77,7 +89,7 @@ final class hja extends rka {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
@@ -87,48 +99,48 @@ final class hja extends rka {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4++;
                   param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4++;
                   param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4++;
                   param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4++;
                 param3 = param1[incrementValue$18];
                 if (param3 == 0) {
@@ -136,7 +148,7 @@ final class hja extends rka {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param0[incrementValue$19] = param2[param3 & 255];
                   var12++;
@@ -157,12 +169,12 @@ final class hja extends rka {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((hja) this).field_d;
-          param1 = param1 + ((hja) this).field_e;
+          param0 = param0 + this.field_d;
+          param1 = param1 + this.field_e;
           var3 = param0 + param1 * bea.field_g;
           var4 = 0;
-          var5 = ((hja) this).field_b;
-          var6 = ((hja) this).field_a;
+          var5 = this.field_b;
+          var6 = this.field_a;
           var7 = bea.field_g - var6;
           var8 = 0;
           if (param1 >= bea.field_h) {
@@ -214,7 +226,7 @@ final class hja extends rka {
             break L4;
           } else {
             if (var5 > 0) {
-              hja.a(bea.field_l, ((hja) this).field_h, ((hja) this).field_g, 0, var4, var3, var6, var5, var7, var8);
+              hja.a(bea.field_l, this.field_h, this.field_g, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -224,14 +236,14 @@ final class hja extends rka {
     }
 
     hja(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        ((hja) this).field_c = param0;
-        ((hja) this).field_f = param1;
-        ((hja) this).field_d = param2;
-        ((hja) this).field_e = param3;
-        ((hja) this).field_a = param4;
-        ((hja) this).field_b = param5;
-        ((hja) this).field_h = param6;
-        ((hja) this).field_g = param7;
+        this.field_c = param0;
+        this.field_f = param1;
+        this.field_d = param2;
+        this.field_e = param3;
+        this.field_a = param4;
+        this.field_b = param5;
+        this.field_h = param6;
+        this.field_g = param7;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -243,12 +255,12 @@ final class hja extends rka {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((hja) this).field_d;
-          param1 = param1 + ((hja) this).field_e;
+          param0 = param0 + this.field_d;
+          param1 = param1 + this.field_e;
           var4 = param0 + param1 * bea.field_g;
           var5 = 0;
-          var6 = ((hja) this).field_b;
-          var7 = ((hja) this).field_a;
+          var6 = this.field_b;
+          var7 = this.field_a;
           var8 = bea.field_g - var7;
           var9 = 0;
           if (param1 >= bea.field_h) {
@@ -300,7 +312,7 @@ final class hja extends rka {
             break L4;
           } else {
             if (var6 > 0) {
-              hja.b(bea.field_l, ((hja) this).field_h, ((hja) this).field_g, var5, var4, var7, var6, var8, var9, param2);
+              hja.b(bea.field_l, this.field_h, this.field_g, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -310,13 +322,13 @@ final class hja extends rka {
     }
 
     hja(int param0, int param1, int param2) {
-        ((hja) this).field_a = param0;
-        ((hja) this).field_c = param0;
-        ((hja) this).field_b = param1;
-        ((hja) this).field_f = param1;
-        ((hja) this).field_e = 0;
-        ((hja) this).field_d = 0;
-        ((hja) this).field_h = new byte[param0 * param1];
-        ((hja) this).field_g = new int[param2];
+        this.field_a = param0;
+        this.field_c = param0;
+        this.field_b = param1;
+        this.field_f = param1;
+        this.field_e = 0;
+        this.field_d = 0;
+        this.field_h = new byte[param0 * param1];
+        this.field_g = new int[param2];
     }
 }

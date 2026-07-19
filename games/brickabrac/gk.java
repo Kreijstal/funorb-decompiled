@@ -13,6 +13,9 @@ abstract class gk {
         field_d = null;
         field_c = null;
         field_b = null;
+        if (param0 < 72) {
+            field_a = 14;
+        }
     }
 
     abstract int b(int param0);
@@ -27,10 +30,6 @@ abstract class gk {
     abstract void a(byte param0, java.awt.Component param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 500;
         field_b = "Please select an option in the '<%0>' row.";
         field_d = "Name is available";

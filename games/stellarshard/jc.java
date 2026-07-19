@@ -11,12 +11,12 @@ final class jc extends pb {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((jc) this).field_t;
-          param1 = param1 + ((jc) this).field_s;
+          param0 = param0 + this.field_t;
+          param1 = param1 + this.field_s;
           var4 = param0 + param1 * ti.field_i;
           var5 = 0;
-          var6 = ((jc) this).field_y;
-          var7 = ((jc) this).field_v;
+          var6 = this.field_y;
+          var7 = this.field_v;
           var8 = ti.field_i - var7;
           var9 = 0;
           if (param1 >= ti.field_f) {
@@ -67,7 +67,7 @@ final class jc extends pb {
           return;
         } else {
           if (var6 > 0) {
-            jc.b(0, 0, 0, ti.field_a, ((jc) this).field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            jc.b(0, 0, 0, ti.field_a, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -84,17 +84,19 @@ final class jc extends pb {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int incrementValue$0 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = -param5; var11 < 0; var11++) {
                 var12 = (param1[param3] >>> 24) * param9 >> 8;
                 var13 = 256 - var12;
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
                 var14 = param1[incrementValue$0];
                 var15 = param0[param4];
-                int incrementValue$1 = param4;
+                incrementValue$1 = param4;
                 param4++;
                 param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
             }
@@ -104,6 +106,8 @@ final class jc extends pb {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -137,7 +141,7 @@ final class jc extends pb {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
                 param2 = param1[incrementValue$2];
                 var17 = param2 >>> 24;
@@ -172,7 +176,7 @@ final class jc extends pb {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
-                  int incrementValue$3 = param4;
+                  incrementValue$3 = param4;
                   param4++;
                   param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
@@ -185,6 +189,8 @@ final class jc extends pb {
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var14 = 0;
         param8 = -param10;
         L0: while (true) {
@@ -199,7 +205,7 @@ final class jc extends pb {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -214,7 +220,7 @@ final class jc extends pb {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -274,10 +280,10 @@ final class jc extends pb {
         int stackOut_19_1 = 0;
         int stackOut_19_2 = 0;
         L0: {
-          var3 = ((jc) this).field_v >> 1;
-          var4 = ((jc) this).field_y >> 1;
-          param0 = param0 + ((jc) this).field_t / 2;
-          param1 = param1 + ((jc) this).field_s / 2;
+          var3 = this.field_v >> 1;
+          var4 = this.field_y >> 1;
+          param0 = param0 + this.field_t / 2;
+          param1 = param1 + this.field_s / 2;
           if (param0 >= ti.field_e) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -291,7 +297,7 @@ final class jc extends pb {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= ti.field_c) {
-            stackOut_5_0 = ((jc) this).field_v - 2;
+            stackOut_5_0 = this.field_v - 2;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -315,7 +321,7 @@ final class jc extends pb {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= ti.field_l) {
-            stackOut_11_0 = ((jc) this).field_y - 2;
+            stackOut_11_0 = this.field_y - 2;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -330,7 +336,7 @@ final class jc extends pb {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((jc) this).field_v + var5;
+            var10 = var9 * this.field_v + var5;
             var11 = (param1 + (var9 >> 1)) * ti.field_i + (param0 + (var5 >> 1));
             var12 = var5;
             L5: while (true) {
@@ -366,14 +372,14 @@ final class jc extends pb {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = ((jc) this).field_z;
+                      stackOut_18_0 = this.field_z;
                       stackOut_18_1 = var10 + (var19 & 1);
                       stackIn_20_0 = stackOut_18_0;
                       stackIn_20_1 = stackOut_18_1;
                       stackIn_19_0 = stackOut_18_0;
                       stackIn_19_1 = stackOut_18_1;
                       if ((var19 & 2) != 0) {
-                        stackOut_20_0 = (int[]) (Object) stackIn_20_0;
+                        stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
                         stackOut_20_1 = stackIn_20_1;
                         stackOut_20_2 = 0;
                         stackIn_21_0 = stackOut_20_0;
@@ -381,9 +387,9 @@ final class jc extends pb {
                         stackIn_21_2 = stackOut_20_2;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) (Object) stackIn_19_0;
+                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
                         stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = ((jc) this).field_v;
+                        stackOut_19_2 = this.field_v;
                         stackIn_21_0 = stackOut_19_0;
                         stackIn_21_1 = stackOut_19_1;
                         stackIn_21_2 = stackOut_19_2;
@@ -415,12 +421,12 @@ final class jc extends pb {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((jc) this).field_t;
-          param1 = param1 + ((jc) this).field_s;
+          param0 = param0 + this.field_t;
+          param1 = param1 + this.field_s;
           var4 = param0 + param1 * ti.field_i;
           var5 = 0;
-          var6 = ((jc) this).field_y;
-          var7 = ((jc) this).field_v;
+          var6 = this.field_y;
+          var7 = this.field_v;
           var8 = ti.field_i - var7;
           var9 = 0;
           if (param1 >= ti.field_f) {
@@ -471,7 +477,7 @@ final class jc extends pb {
           return;
         } else {
           if (var6 > 0) {
-            jc.d(ti.field_a, ((jc) this).field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+            jc.d(ti.field_a, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -488,12 +494,12 @@ final class jc extends pb {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((jc) this).field_t;
-          param1 = param1 + ((jc) this).field_s;
+          param0 = param0 + this.field_t;
+          param1 = param1 + this.field_s;
           var3 = param0 + param1 * ti.field_i;
           var4 = 0;
-          var5 = ((jc) this).field_y;
-          var6 = ((jc) this).field_v;
+          var5 = this.field_y;
+          var6 = this.field_v;
           var7 = ti.field_i - var6;
           var8 = 0;
           if (param1 >= ti.field_f) {
@@ -544,7 +550,7 @@ final class jc extends pb {
           return;
         } else {
           if (var5 > 0) {
-            jc.c(ti.field_a, ((jc) this).field_z, 0, var4, var3, var6, var5, var7, var8);
+            jc.c(ti.field_a, this.field_z, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -569,30 +575,30 @@ final class jc extends pb {
         } else {
           if (param3 > 0) {
             L0: {
-              var5 = ((jc) this).field_v;
-              var6 = ((jc) this).field_y;
+              var5 = this.field_v;
+              var6 = this.field_y;
               var7 = 0;
               var8 = 0;
-              var9 = ((jc) this).field_w;
-              var10 = ((jc) this).field_x;
+              var9 = this.field_w;
+              var10 = this.field_x;
               var11 = (var9 << 16) / param2;
               var12 = (var10 << 16) / param3;
-              if (((jc) this).field_t <= 0) {
+              if (this.field_t <= 0) {
                 break L0;
               } else {
-                var13 = ((((jc) this).field_t << 16) + var11 - 1) / var11;
+                var13 = ((this.field_t << 16) + var11 - 1) / var11;
                 param0 = param0 + var13;
-                var7 = var7 + (var13 * var11 - (((jc) this).field_t << 16));
+                var7 = var7 + (var13 * var11 - (this.field_t << 16));
                 break L0;
               }
             }
             L1: {
-              if (((jc) this).field_s <= 0) {
+              if (this.field_s <= 0) {
                 break L1;
               } else {
-                var13 = ((((jc) this).field_s << 16) + var12 - 1) / var12;
+                var13 = ((this.field_s << 16) + var12 - 1) / var12;
                 param1 = param1 + var13;
-                var8 = var8 + (var13 * var12 - (((jc) this).field_s << 16));
+                var8 = var8 + (var13 * var12 - (this.field_s << 16));
                 break L1;
               }
             }
@@ -655,7 +661,7 @@ final class jc extends pb {
                 break L7;
               }
             }
-            jc.c(ti.field_a, ((jc) this).field_z, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+            jc.c(ti.field_a, this.field_z, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
             return;
           } else {
             return;
@@ -669,6 +675,7 @@ final class jc extends pb {
         int var15 = 0;
         int var16 = 0;
         int var18 = 0;
+        int incrementValue$0 = 0;
         int var17 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
@@ -679,7 +686,7 @@ final class jc extends pb {
                 if (var16 != 0) {
                     var17 = 256 - var16;
                     var18 = param0[param5];
-                    int incrementValue$0 = param5;
+                    incrementValue$0 = param5;
                     param5++;
                     param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
                 } else {
@@ -694,6 +701,15 @@ final class jc extends pb {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         double var7 = 0.0;
         int var9 = 0;
         int var10 = 0;
@@ -729,19 +745,19 @@ final class jc extends pb {
         int var41 = 0;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((jc) this).field_t << 4);
-            param1 = param1 - (((jc) this).field_s << 4);
+            param0 = param0 - (this.field_t << 4);
+            param1 = param1 - (this.field_s << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((jc) this).field_v << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((jc) this).field_v << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((jc) this).field_y << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((jc) this).field_y << 4) - param1) * var10;
-            var17 = ((((jc) this).field_v << 4) - param0) * var10 + ((((jc) this).field_y << 4) - param1) * var9;
-            var18 = -((((jc) this).field_v << 4) - param0) * var9 + ((((jc) this).field_y << 4) - param1) * var10;
+            var13 = ((this.field_v << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_v << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_y << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_y << 4) - param1) * var10;
+            var17 = ((this.field_v << 4) - param0) * var10 + ((this.field_y << 4) - param1) * var9;
+            var18 = -((this.field_v << 4) - param0) * var9 + ((this.field_y << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -910,8 +926,8 @@ final class jc extends pb {
                               }
                             }
                             L17: {
-                              var32 = (1 + var35 - (((jc) this).field_v << 12) - var27) / var27;
-                              if ((1 + var35 - (((jc) this).field_v << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_v << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_v << 12) - var27) / var27 <= var37) {
                                 break L17;
                               } else {
                                 var37 = var32;
@@ -931,8 +947,8 @@ final class jc extends pb {
                               }
                             }
                             L19: {
-                              var32 = (1 + var36 - (((jc) this).field_y << 12) - var26) / var26;
-                              if ((1 + var36 - (((jc) this).field_y << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_y << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_y << 12) - var26) / var26 <= var37) {
                                 break L19;
                               } else {
                                 var37 = var32;
@@ -947,11 +963,11 @@ final class jc extends pb {
                                 var23 = var23 + ti.field_i;
                                 continue L15;
                               } else {
-                                var38 = ((jc) this).field_z[(var36 >> 12) * ((jc) this).field_v + (var35 >> 12)];
+                                var38 = this.field_z[(var36 >> 12) * this.field_v + (var35 >> 12)];
                                 var39 = ti.field_a[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$9 = var34;
+                                incrementValue$9 = var34;
                                 var34++;
                                 ti.field_a[incrementValue$9] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -985,8 +1001,8 @@ final class jc extends pb {
                               }
                             }
                             L23: {
-                              var32 = (1 + var35 - (((jc) this).field_v << 12) - var27) / var27;
-                              if ((1 + var35 - (((jc) this).field_v << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_v << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_v << 12) - var27) / var27 <= var37) {
                                 break L23;
                               } else {
                                 var37 = var32;
@@ -994,8 +1010,8 @@ final class jc extends pb {
                               }
                             }
                             L24: {
-                              var32 = var36 - (((jc) this).field_y << 12);
-                              if (var36 - (((jc) this).field_y << 12) < 0) {
+                              var32 = var36 - (this.field_y << 12);
+                              if (var36 - (this.field_y << 12) < 0) {
                                 break L24;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -1023,11 +1039,11 @@ final class jc extends pb {
                                 var23 = var23 + ti.field_i;
                                 continue L21;
                               } else {
-                                var38 = ((jc) this).field_z[(var36 >> 12) * ((jc) this).field_v + (var35 >> 12)];
+                                var38 = this.field_z[(var36 >> 12) * this.field_v + (var35 >> 12)];
                                 var39 = ti.field_a[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$10 = var34;
+                                incrementValue$10 = var34;
                                 var34++;
                                 ti.field_a[incrementValue$10] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -1051,7 +1067,7 @@ final class jc extends pb {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((jc) this).field_y << 12) < 0) {
+                              if (var36 - (this.field_y << 12) < 0) {
                                 L29: {
                                   if (var35 >= 0) {
                                     break L29;
@@ -1064,8 +1080,8 @@ final class jc extends pb {
                                   }
                                 }
                                 L30: {
-                                  var32 = (1 + var35 - (((jc) this).field_v << 12) - var27) / var27;
-                                  if ((1 + var35 - (((jc) this).field_v << 12) - var27) / var27 <= var37) {
+                                  var32 = (1 + var35 - (this.field_v << 12) - var27) / var27;
+                                  if ((1 + var35 - (this.field_v << 12) - var27) / var27 <= var37) {
                                     break L30;
                                   } else {
                                     var37 = var32;
@@ -1076,11 +1092,11 @@ final class jc extends pb {
                                   if (var37 >= 0) {
                                     break L28;
                                   } else {
-                                    var38 = ((jc) this).field_z[(var36 >> 12) * ((jc) this).field_v + (var35 >> 12)];
+                                    var38 = this.field_z[(var36 >> 12) * this.field_v + (var35 >> 12)];
                                     var39 = ti.field_a[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$11 = var34;
+                                    incrementValue$11 = var34;
                                     var34++;
                                     ti.field_a[incrementValue$11] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var35 = var35 + var27;
@@ -1115,8 +1131,8 @@ final class jc extends pb {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((jc) this).field_v << 12);
-                              if (var35 - (((jc) this).field_v << 12) < 0) {
+                              var32 = var35 - (this.field_v << 12);
+                              if (var35 - (this.field_v << 12) < 0) {
                                 break L33;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -1149,8 +1165,8 @@ final class jc extends pb {
                               }
                             }
                             L36: {
-                              var32 = (1 + var36 - (((jc) this).field_y << 12) - var26) / var26;
-                              if ((1 + var36 - (((jc) this).field_y << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_y << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_y << 12) - var26) / var26 <= var37) {
                                 break L36;
                               } else {
                                 var37 = var32;
@@ -1165,11 +1181,11 @@ final class jc extends pb {
                                 var23 = var23 + ti.field_i;
                                 continue L32;
                               } else {
-                                var38 = ((jc) this).field_z[(var36 >> 12) * ((jc) this).field_v + (var35 >> 12)];
+                                var38 = this.field_z[(var36 >> 12) * this.field_v + (var35 >> 12)];
                                 var39 = ti.field_a[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$12 = var34;
+                                incrementValue$12 = var34;
                                 var34++;
                                 ti.field_a[incrementValue$12] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -1191,8 +1207,8 @@ final class jc extends pb {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((jc) this).field_v << 12);
-                              if (var35 - (((jc) this).field_v << 12) < 0) {
+                              var32 = var35 - (this.field_v << 12);
+                              if (var35 - (this.field_v << 12) < 0) {
                                 break L39;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -1213,8 +1229,8 @@ final class jc extends pb {
                               }
                             }
                             L41: {
-                              var32 = var36 - (((jc) this).field_y << 12);
-                              if (var36 - (((jc) this).field_y << 12) < 0) {
+                              var32 = var36 - (this.field_y << 12);
+                              if (var36 - (this.field_y << 12) < 0) {
                                 break L41;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -1242,11 +1258,11 @@ final class jc extends pb {
                                 var23 = var23 + ti.field_i;
                                 continue L38;
                               } else {
-                                var38 = ((jc) this).field_z[(var36 >> 12) * ((jc) this).field_v + (var35 >> 12)];
+                                var38 = this.field_z[(var36 >> 12) * this.field_v + (var35 >> 12)];
                                 var39 = ti.field_a[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$13 = var34;
+                                incrementValue$13 = var34;
                                 var34++;
                                 ti.field_a[incrementValue$13] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -1270,10 +1286,10 @@ final class jc extends pb {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((jc) this).field_y << 12) < 0) {
+                              if (var36 - (this.field_y << 12) < 0) {
                                 L46: {
-                                  var32 = var35 - (((jc) this).field_v << 12);
-                                  if (var35 - (((jc) this).field_v << 12) < 0) {
+                                  var32 = var35 - (this.field_v << 12);
+                                  if (var35 - (this.field_v << 12) < 0) {
                                     break L46;
                                   } else {
                                     var32 = (var27 - var32) / var27;
@@ -1296,11 +1312,11 @@ final class jc extends pb {
                                   if (var37 >= 0) {
                                     break L45;
                                   } else {
-                                    var38 = ((jc) this).field_z[(var36 >> 12) * ((jc) this).field_v + (var35 >> 12)];
+                                    var38 = this.field_z[(var36 >> 12) * this.field_v + (var35 >> 12)];
                                     var39 = ti.field_a[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$14 = var34;
+                                    incrementValue$14 = var34;
                                     var34++;
                                     ti.field_a[incrementValue$14] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var35 = var35 + var27;
@@ -1337,7 +1353,7 @@ final class jc extends pb {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((jc) this).field_v << 12) < 0) {
+                              if (var35 - (this.field_v << 12) < 0) {
                                 L51: {
                                   if (var36 >= 0) {
                                     break L51;
@@ -1350,8 +1366,8 @@ final class jc extends pb {
                                   }
                                 }
                                 L52: {
-                                  var32 = (1 + var36 - (((jc) this).field_y << 12) - var26) / var26;
-                                  if ((1 + var36 - (((jc) this).field_y << 12) - var26) / var26 <= var37) {
+                                  var32 = (1 + var36 - (this.field_y << 12) - var26) / var26;
+                                  if ((1 + var36 - (this.field_y << 12) - var26) / var26 <= var37) {
                                     break L52;
                                   } else {
                                     var37 = var32;
@@ -1362,11 +1378,11 @@ final class jc extends pb {
                                   if (var37 >= 0) {
                                     break L50;
                                   } else {
-                                    var38 = ((jc) this).field_z[(var36 >> 12) * ((jc) this).field_v + (var35 >> 12)];
+                                    var38 = this.field_z[(var36 >> 12) * this.field_v + (var35 >> 12)];
                                     var39 = ti.field_a[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$15 = var34;
+                                    incrementValue$15 = var34;
                                     var34++;
                                     ti.field_a[incrementValue$15] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var36 = var36 + var26;
@@ -1399,10 +1415,10 @@ final class jc extends pb {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((jc) this).field_v << 12) < 0) {
+                              if (var35 - (this.field_v << 12) < 0) {
                                 L56: {
-                                  var32 = var36 - (((jc) this).field_y << 12);
-                                  if (var36 - (((jc) this).field_y << 12) < 0) {
+                                  var32 = var36 - (this.field_y << 12);
+                                  if (var36 - (this.field_y << 12) < 0) {
                                     break L56;
                                   } else {
                                     var32 = (var26 - var32) / var26;
@@ -1425,11 +1441,11 @@ final class jc extends pb {
                                   if (var37 >= 0) {
                                     break L55;
                                   } else {
-                                    var38 = ((jc) this).field_z[(var36 >> 12) * ((jc) this).field_v + (var35 >> 12)];
+                                    var38 = this.field_z[(var36 >> 12) * this.field_v + (var35 >> 12)];
                                     var39 = ti.field_a[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$16 = var34;
+                                    incrementValue$16 = var34;
                                     var34++;
                                     ti.field_a[incrementValue$16] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var36 = var36 + var26;
@@ -1464,17 +1480,17 @@ final class jc extends pb {
                           var37 = var20;
                           if (var35 >= 0) {
                             if (var36 >= 0) {
-                              if (var35 - (((jc) this).field_v << 12) < 0) {
-                                if (var36 - (((jc) this).field_y << 12) < 0) {
+                              if (var35 - (this.field_v << 12) < 0) {
+                                if (var36 - (this.field_y << 12) < 0) {
                                   L61: while (true) {
                                     if (var37 >= 0) {
                                       break L60;
                                     } else {
-                                      var38 = ((jc) this).field_z[(var36 >> 12) * ((jc) this).field_v + (var35 >> 12)];
+                                      var38 = this.field_z[(var36 >> 12) * this.field_v + (var35 >> 12)];
                                       var39 = ti.field_a[var34];
                                       var40 = var38 >>> 24;
                                       var41 = 256 - var40;
-                                      int incrementValue$17 = var34;
+                                      incrementValue$17 = var34;
                                       var34++;
                                       ti.field_a[incrementValue$17] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                       var37++;
@@ -1523,12 +1539,12 @@ final class jc extends pb {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((jc) this).field_t;
-          param1 = param1 + ((jc) this).field_s;
+          param0 = param0 + this.field_t;
+          param1 = param1 + this.field_s;
           var4 = param0 + param1 * ti.field_i;
           var5 = 0;
-          var6 = ((jc) this).field_y;
-          var7 = ((jc) this).field_v;
+          var6 = this.field_y;
+          var7 = this.field_v;
           var8 = ti.field_i - var7;
           var9 = 0;
           if (param1 >= ti.field_f) {
@@ -1579,7 +1595,7 @@ final class jc extends pb {
           return;
         } else {
           if (var6 > 0) {
-            jc.c(ti.field_a, ((jc) this).field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+            jc.c(ti.field_a, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -1588,6 +1604,8 @@ final class jc extends pb {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -1608,7 +1626,7 @@ final class jc extends pb {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -1619,7 +1637,7 @@ final class jc extends pb {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
@@ -1632,6 +1650,8 @@ final class jc extends pb {
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -1653,7 +1673,7 @@ final class jc extends pb {
                 param6++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var14 = param2 >>> 24;
@@ -1676,7 +1696,7 @@ final class jc extends pb {
                   }
                   var16 = 256 - var14;
                   var17 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
                   param5++;
@@ -1697,12 +1717,12 @@ final class jc extends pb {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((jc) this).field_t;
-          param1 = param1 + ((jc) this).field_s;
+          param0 = param0 + this.field_t;
+          param1 = param1 + this.field_s;
           var3 = param0 + param1 * ti.field_i;
           var4 = 0;
-          var5 = ((jc) this).field_y;
-          var6 = ((jc) this).field_v;
+          var5 = this.field_y;
+          var6 = this.field_v;
           var7 = ti.field_i - var6;
           var8 = 0;
           if (param1 >= ti.field_f) {
@@ -1753,7 +1773,7 @@ final class jc extends pb {
           return;
         } else {
           if (var5 > 0) {
-            jc.c(ti.field_a, ((jc) this).field_z, 0, var4, var3, var6, var5, var7, var8);
+            jc.c(ti.field_a, this.field_z, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -1787,8 +1807,6 @@ final class jc extends pb {
         int var21 = 0;
         int[] var22 = null;
         int[] var23 = null;
-        int[] var24 = null;
-        int[] var25 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -1802,10 +1820,10 @@ final class jc extends pb {
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
         L0: {
-          var3 = ((jc) this).field_v >> 2;
-          var4 = ((jc) this).field_y >> 2;
-          param0 = param0 + ((jc) this).field_t / 4;
-          param1 = param1 + ((jc) this).field_s / 4;
+          var3 = this.field_v >> 2;
+          var4 = this.field_y >> 2;
+          param0 = param0 + this.field_t / 4;
+          param1 = param1 + this.field_s / 4;
           if (param0 >= ti.field_e) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -1819,7 +1837,7 @@ final class jc extends pb {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= ti.field_c) {
-            stackOut_5_0 = ((jc) this).field_v - 4;
+            stackOut_5_0 = this.field_v - 4;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -1843,7 +1861,7 @@ final class jc extends pb {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= ti.field_l) {
-            stackOut_11_0 = ((jc) this).field_y - 4;
+            stackOut_11_0 = this.field_y - 4;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -1853,9 +1871,7 @@ final class jc extends pb {
           }
         }
         var8 = stackIn_12_0;
-        var25 = new int[16];
-        var24 = var25;
-        var23 = var24;
+        var23 = new int[16];
         var22 = var23;
         var9 = var22;
         var10 = var7;
@@ -1869,12 +1885,12 @@ final class jc extends pb {
                 var10 += 4;
                 continue L4;
               } else {
-                var12 = var10 * ((jc) this).field_v + var11;
+                var12 = var10 * this.field_v + var11;
                 var13 = (param1 + (var10 >> 2)) * ti.field_i + (param0 + (var11 >> 2));
                 var14 = 0;
                 L6: while (true) {
                   if (var14 >= 4) {
-                    var25 = var24;
+                    var23 = var22;
                     var14 = 0;
                     var15 = 0;
                     var16 = 0;
@@ -1897,11 +1913,11 @@ final class jc extends pb {
                           continue L5;
                         }
                       } else {
-                        var14 = var25[var19] >>> 24;
+                        var14 = var23[var19] >>> 24;
                         var15 = var15 + var14;
-                        var16 = var16 + var14 * (var25[var19] >> 16 & 255);
-                        var17 = var17 + var14 * (var25[var19] >> 8 & 255);
-                        var18 = var18 + var14 * (var25[var19] & 255);
+                        var16 = var16 + var14 * (var23[var19] >> 16 & 255);
+                        var17 = var17 + var14 * (var23[var19] >> 8 & 255);
+                        var18 = var18 + var14 * (var23[var19] & 255);
                         var19++;
                         continue L7;
                       }
@@ -1913,7 +1929,7 @@ final class jc extends pb {
                         var14++;
                         continue L6;
                       } else {
-                        var9[(var14 << 2) + var15] = ((jc) this).field_z[var12 + var14 * ((jc) this).field_v + var15];
+                        var9[(var14 << 2) + var15] = this.field_z[var12 + var14 * this.field_v + var15];
                         var15++;
                         continue L8;
                       }
@@ -1935,12 +1951,12 @@ final class jc extends pb {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((jc) this).field_t;
-          param1 = param1 + ((jc) this).field_s;
+          param0 = param0 + this.field_t;
+          param1 = param1 + this.field_s;
           var4 = param0 + param1 * ti.field_i;
           var5 = 0;
-          var6 = ((jc) this).field_y;
-          var7 = ((jc) this).field_v;
+          var6 = this.field_y;
+          var7 = this.field_v;
           var8 = ti.field_i - var7;
           var9 = 0;
           if (param1 >= ti.field_f) {
@@ -1991,7 +2007,7 @@ final class jc extends pb {
           return;
         } else {
           if (var6 > 0) {
-            jc.d(ti.field_a, ((jc) this).field_z, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+            jc.d(ti.field_a, this.field_z, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
             return;
           } else {
             return;

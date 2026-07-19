@@ -34,10 +34,6 @@ final class rk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "";
         field_e = null;
         field_b = new ia();

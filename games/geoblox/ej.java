@@ -26,10 +26,6 @@ final class ej {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ej.A(";
         field_c = new String[]{"By rating", "By win percentage"};
         field_a = new dm[4];

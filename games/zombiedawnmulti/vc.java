@@ -42,12 +42,15 @@ final class vc {
             if (param1.field_b != null) {
                 param1.a(true);
             }
+            if (!param2) {
+                vc.a((byte) -38);
+            }
             param1.field_b = param0.field_b;
             param1.field_d = param0;
             param1.field_b.field_d = param1;
             param1.field_d.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "vc.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + true + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "vc.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -60,13 +63,26 @@ final class vc {
         ud.field_V[61] = 27;
         ud.field_V[91] = 42;
         ud.field_V[192] = 28;
-        ud.field_V[222] = 58;
-        ud.field_V[520] = 59;
-        ud.field_V[59] = 57;
-        ud.field_V[47] = 73;
+        if (param0 < 41) {
+          field_h = (String) null;
+          ud.field_V[222] = 58;
+          ud.field_V[520] = 59;
+          ud.field_V[59] = 57;
+          ud.field_V[47] = 73;
+          return;
+        } else {
+          ud.field_V[222] = 58;
+          ud.field_V[520] = 59;
+          ud.field_V[59] = 57;
+          ud.field_V[47] = 73;
+          return;
+        }
     }
 
     final static boolean a(int param0) {
+        if (param0 != 4996418) {
+            return true;
+        }
         if (gi.field_i == null) {
             return false;
         }
@@ -77,6 +93,7 @@ final class vc {
     }
 
     final static void a(boolean param0) {
+        int[] array$1 = null;
         RuntimeException var1 = null;
         int[] var1_array = null;
         int var2 = 0;
@@ -84,12 +101,18 @@ final class vc {
         int[] var4 = null;
         int[] var5 = null;
         int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
+            L1: {
+              if (param0) {
+                break L1;
+              } else {
+                field_h = (String) null;
+                break L1;
+              }
+            }
             wm.field_Q[0] = ah.field_e.e(16711680);
             wm.field_Q[1] = ah.field_e.e(7829248);
             wm.field_Q[2] = ah.field_e.e(16776960);
@@ -102,18 +125,34 @@ final class vc {
             wm.field_Q[9] = ah.field_e.e(16745473);
             ia.field_s = ah.field_e.e(16777215);
             rj.field_F = ah.field_e.e(6710886);
-            var8 = ah.field_e.field_P[0];
-            var7 = var8;
-            var6 = var7;
+            var6 = ah.field_e.field_P[0];
             var5 = var6;
             var4 = var5;
             var1_array = var4;
             ah.field_e.field_P = new int[13][];
-            ah.field_e.field_P[0] = var8;
-            ah.field_e.field_P[4] = new int[ah.field_e.field_P[0].length];
+            ah.field_e.field_P[0] = var6;
+            array$1 = new int[ah.field_e.field_P[0].length];
+            ah.field_e.field_P[4] = array$1;
             var2 = 0;
-            L1: while (true) {
-              if (ah.field_e.field_P[4].length <= var2) {
+            L2: while (true) {
+              L3: {
+                L4: {
+                  if (ah.field_e.field_P[4].length <= var2) {
+                    break L4;
+                  } else {
+                    ah.field_e.field_P[4][var2] = 16777215;
+                    var2++;
+                    if (var3 != 0) {
+                      break L3;
+                    } else {
+                      if (var3 == 0) {
+                        continue L2;
+                      } else {
+                        break L4;
+                      }
+                    }
+                  }
+                }
                 ke.a(16777215, 2, -17895, 65793, 13369344);
                 ke.a(4194304, 0, -17895, 8388608, 16711680);
                 ke.a(16777215, 1, -17895, 65793, 5481009);
@@ -126,26 +165,19 @@ final class vc {
                 ke.a(4096, 10, -17895, 16384, 5481009);
                 ke.a(16777215, 11, -17895, 4473924, 5481009);
                 ke.a(4096, 12, -17895, 16384, 16556032);
-                break L0;
-              } else {
-                ah.field_e.field_P[4][var2] = 16777215;
-                var2++;
-                continue L1;
+                break L3;
               }
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1, "vc.D(" + true + ')');
+          throw fa.a((Throwable) ((Object) var1), "vc.D(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Your powerups will recharge faster.";
         field_a = "Select any target!";
         field_c = "Searching for opponents";

@@ -15,6 +15,7 @@ abstract class bd extends pj {
     static boolean[] field_O;
 
     private final int i(int param0) {
+        boolean discarded$11 = false;
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackOut_11_0 = 0;
@@ -25,13 +26,13 @@ abstract class bd extends pj {
         int stackOut_3_0 = 0;
         if (param0 != 0) {
           L0: {
-            boolean discarded$1 = ((bd) this).k(-92);
-            if (!((bd) this).field_Q) {
+            discarded$11 = this.k(-92);
+            if (!this.field_Q) {
               stackOut_11_0 = 0;
               stackIn_12_0 = stackOut_11_0;
               break L0;
             } else {
-              if (this != (Object) (Object) ((bd) this).field_R.k(127)) {
+              if (this != this.field_R.k(127)) {
                 stackOut_10_0 = 0;
                 stackIn_12_0 = stackOut_10_0;
                 break L0;
@@ -45,12 +46,12 @@ abstract class bd extends pj {
           return stackIn_12_0;
         } else {
           L1: {
-            if (!((bd) this).field_Q) {
+            if (!this.field_Q) {
               stackOut_5_0 = 0;
               stackIn_6_0 = stackOut_5_0;
               break L1;
             } else {
-              if (this != (Object) (Object) ((bd) this).field_R.k(127)) {
+              if (this != this.field_R.k(127)) {
                 stackOut_4_0 = 0;
                 stackIn_6_0 = stackOut_4_0;
                 break L1;
@@ -66,20 +67,20 @@ abstract class bd extends pj {
     }
 
     bd(k param0, int param1, int param2) {
-        super(-param1 + di.field_a >> 1, qe.field_l + -param2 >> 1, param1, param2, (cg) null);
+        super(-param1 + di.field_a >> -1334053151, qe.field_l + -param2 >> 1688990433, param1, param2, (cg) null);
         try {
-            ((bd) this).field_Q = false;
-            ((bd) this).field_R = param0;
-            ((bd) this).field_J = 0;
+            this.field_Q = false;
+            this.field_R = param0;
+            this.field_J = 0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "bd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "bd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     boolean j(int param0) {
-        ((bd) this).field_J = this.i(param0);
-        if (((bd) this).field_J == 0) {
-          if (((bd) this).field_Q) {
+        this.field_J = this.i(param0);
+        if (this.field_J == 0) {
+          if (this.field_Q) {
             return false;
           } else {
             return true;
@@ -92,71 +93,71 @@ abstract class bd extends pj {
     final vg g(int param0) {
         vg var2 = null;
         if (param0 == -22426) {
-          var2 = super.g(param0);
+          var2 = super.g(param0 ^ 0);
           if (var2 != null) {
             return var2;
           } else {
-            return (vg) this;
+            return (vg) (this);
           }
         } else {
-          ((bd) this).field_J = 100;
-          var2 = super.g(param0);
+          this.field_J = 100;
+          var2 = super.g(param0 ^ 0);
           if (var2 != null) {
             return var2;
           } else {
-            return (vg) this;
+            return (vg) (this);
           }
         }
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        if (((bd) this).field_J != 0) {
-          if (((bd) this).field_J < 256) {
+        if (-1 != (this.field_J ^ -1)) {
+          if ((this.field_J ^ -1) > -257) {
             if (uk.field_f != null) {
-              if (((bd) this).field_w <= uk.field_f.field_y) {
-                if (uk.field_f.field_w >= ((bd) this).field_k) {
+              if (this.field_w <= uk.field_f.field_y) {
+                if (uk.field_f.field_w >= this.field_k) {
                   aj.a(uk.field_f, (byte) 79);
                   wj.c();
-                  ((bd) this).c(0, param2 ^ -68, 0);
-                  super.a(-param0 + -((bd) this).field_o, param1, param2, -((bd) this).field_m + -param3);
+                  this.c(0, param2 ^ -68, 0);
+                  super.a(-param0 + -this.field_o, param1, param2, -this.field_m + -param3);
                   cl.d((byte) -106);
-                  uk.field_f.e(param0 + ((bd) this).field_o, param3 - -((bd) this).field_m, ((bd) this).field_J);
+                  uk.field_f.e(param0 + this.field_o, param3 - -this.field_m, this.field_J);
                   return;
                 } else {
-                  uk.field_f = new nh(((bd) this).field_w, ((bd) this).field_k);
+                  uk.field_f = new nh(this.field_w, this.field_k);
                   aj.a(uk.field_f, (byte) 79);
                   wj.c();
-                  ((bd) this).c(0, param2 ^ -68, 0);
-                  super.a(-param0 + -((bd) this).field_o, param1, param2, -((bd) this).field_m + -param3);
+                  this.c(0, param2 ^ -68, 0);
+                  super.a(-param0 + -this.field_o, param1, param2, -this.field_m + -param3);
                   cl.d((byte) -106);
-                  uk.field_f.e(param0 + ((bd) this).field_o, param3 - -((bd) this).field_m, ((bd) this).field_J);
+                  uk.field_f.e(param0 + this.field_o, param3 - -this.field_m, this.field_J);
                   return;
                 }
               } else {
-                uk.field_f = new nh(((bd) this).field_w, ((bd) this).field_k);
+                uk.field_f = new nh(this.field_w, this.field_k);
                 aj.a(uk.field_f, (byte) 79);
                 wj.c();
-                ((bd) this).c(0, param2 ^ -68, 0);
-                super.a(-param0 + -((bd) this).field_o, param1, param2, -((bd) this).field_m + -param3);
+                this.c(0, param2 ^ -68, 0);
+                super.a(-param0 + -this.field_o, param1, param2, -this.field_m + -param3);
                 cl.d((byte) -106);
-                uk.field_f.e(param0 + ((bd) this).field_o, param3 - -((bd) this).field_m, ((bd) this).field_J);
+                uk.field_f.e(param0 + this.field_o, param3 - -this.field_m, this.field_J);
                 return;
               }
             } else {
-              uk.field_f = new nh(((bd) this).field_w, ((bd) this).field_k);
+              uk.field_f = new nh(this.field_w, this.field_k);
               aj.a(uk.field_f, (byte) 79);
               wj.c();
-              ((bd) this).c(0, param2 ^ -68, 0);
-              super.a(-param0 + -((bd) this).field_o, param1, param2, -((bd) this).field_m + -param3);
+              this.c(0, param2 ^ -68, 0);
+              super.a(-param0 + -this.field_o, param1, param2, -this.field_m + -param3);
               cl.d((byte) -106);
-              uk.field_f.e(param0 + ((bd) this).field_o, param3 - -((bd) this).field_m, ((bd) this).field_J);
+              uk.field_f.e(param0 + this.field_o, param3 - -this.field_m, this.field_J);
               return;
             }
           } else {
             if (0 != param1) {
               return;
             } else {
-              ((bd) this).c(((bd) this).field_m + param3, 119, param0 + ((bd) this).field_o);
+              this.c(this.field_m + param3, 119, param0 + this.field_o);
               super.a(param0, param1, (byte) -21, param3);
               return;
             }
@@ -172,16 +173,16 @@ abstract class bd extends pj {
         field_P = null;
         field_K = null;
         field_O = null;
-        int var1 = -114;
+        int var1 = -114 / ((-67 - param0) / 45);
     }
 
     final void b(int param0, int param1, int param2) {
         if (param1 != 1688990433) {
-          field_K = null;
-          ((bd) this).a(qe.field_l + -param2 >> 1, param2, -param0 + di.field_a >> 1, 16535, param0);
+          field_K = (char[]) null;
+          this.a(qe.field_l + -param2 >> 1275705409, param2, -param0 + di.field_a >> 774742753, 16535, param0);
           return;
         } else {
-          ((bd) this).a(qe.field_l + -param2 >> 1, param2, -param0 + di.field_a >> 1, 16535, param0);
+          this.a(qe.field_l + -param2 >> 1275705409, param2, -param0 + di.field_a >> 774742753, 16535, param0);
           return;
         }
     }
@@ -194,9 +195,9 @@ abstract class bd extends pj {
         int stackOut_12_0 = 0;
         L0: {
           var2 = this.i(0);
-          var3 = -((bd) this).field_J + var2;
+          var3 = -this.field_J + var2;
           if (0 < var3) {
-            ((bd) this).field_J = ((bd) this).field_J + (-1 + (var3 - -8)) / 8;
+            this.field_J = this.field_J + (-1 + (var3 - -8)) / 8;
             break L0;
           } else {
             break L0;
@@ -205,18 +206,18 @@ abstract class bd extends pj {
         if (param0 == 2968) {
           L1: {
             if (0 > var3) {
-              ((bd) this).field_J = ((bd) this).field_J + (var3 + -15) / 16;
+              this.field_J = this.field_J + (var3 + -15) / 16;
               break L1;
             } else {
               break L1;
             }
           }
-          if (((bd) this).field_J == 0) {
-            if (var2 != 0) {
+          if (this.field_J == 0) {
+            if (-1 != (var2 ^ -1)) {
               return false;
             } else {
               L2: {
-                if (((bd) this).field_Q) {
+                if (this.field_Q) {
                   stackOut_13_0 = 0;
                   stackIn_14_0 = stackOut_13_0;
                   break L2;
@@ -239,11 +240,7 @@ abstract class bd extends pj {
     abstract void c(int param0, int param1, int param2);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_K = new char[]{'_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+        field_K = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
         field_T = new bb();
     }
 }

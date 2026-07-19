@@ -14,12 +14,12 @@ final class kh extends oi {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + (((kh) this).field_j - ((kh) this).field_b - ((kh) this).field_k);
-          param1 = param1 + ((kh) this).field_h;
+          param0 = param0 + (this.field_j - this.field_b - this.field_k);
+          param1 = param1 + this.field_h;
           var3 = param0 + param1 * ra.field_f;
-          var4 = ((kh) this).field_b - 1;
-          var5 = ((kh) this).field_d;
-          var6 = ((kh) this).field_b;
+          var4 = this.field_b - 1;
+          var5 = this.field_d;
+          var6 = this.field_b;
           var7 = ra.field_f - var6;
           var8 = var6 + var6;
           if (param1 >= ra.field_i) {
@@ -71,7 +71,7 @@ final class kh extends oi {
             break L4;
           } else {
             if (var5 > 0) {
-              kh.a(ra.field_b, ((kh) this).field_o, ((kh) this).field_p, 0, var4, var3, var6, var5, var7, var8);
+              kh.a(ra.field_b, this.field_o, this.field_p, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -81,6 +81,8 @@ final class kh extends oi {
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -100,7 +102,7 @@ final class kh extends oi {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var13 = param1[incrementValue$66];
                 if (var13 == 0) {
@@ -110,7 +112,7 @@ final class kh extends oi {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -123,6 +125,16 @@ final class kh extends oi {
     }
 
     private final static void c(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -144,7 +156,7 @@ final class kh extends oi {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4++;
                     param3 = param1[incrementValue$10];
                     if (param3 == 0) {
@@ -152,7 +164,7 @@ final class kh extends oi {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
@@ -162,48 +174,48 @@ final class kh extends oi {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4++;
                   param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4++;
                   param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4++;
                   param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4++;
                 param3 = param1[incrementValue$18];
                 if (param3 == 0) {
@@ -211,7 +223,7 @@ final class kh extends oi {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param0[incrementValue$19] = param2[param3 & 255];
                   var12++;
@@ -226,25 +238,26 @@ final class kh extends oi {
     final void a() {
         int var3 = 0;
         int var4 = 0;
-        if (((kh) this).field_b == ((kh) this).field_j) {
-            if (((kh) this).field_d == ((kh) this).field_f) {
+        int incrementValue$0 = 0;
+        if (this.field_b == this.field_j) {
+            if (this.field_d == this.field_f) {
                 return;
             }
         }
-        byte[] var1 = new byte[((kh) this).field_j * ((kh) this).field_f];
+        byte[] var1 = new byte[this.field_j * this.field_f];
         int var2 = 0;
-        for (var3 = 0; var3 < ((kh) this).field_d; var3++) {
-            for (var4 = 0; var4 < ((kh) this).field_b; var4++) {
-                int incrementValue$0 = var2;
+        for (var3 = 0; var3 < this.field_d; var3++) {
+            for (var4 = 0; var4 < this.field_b; var4++) {
+                incrementValue$0 = var2;
                 var2++;
-                var1[var4 + ((kh) this).field_k + (var3 + ((kh) this).field_h) * ((kh) this).field_j] = ((kh) this).field_o[incrementValue$0];
+                var1[var4 + this.field_k + (var3 + this.field_h) * this.field_j] = this.field_o[incrementValue$0];
             }
         }
-        ((kh) this).field_o = var1;
-        ((kh) this).field_b = ((kh) this).field_j;
-        ((kh) this).field_d = ((kh) this).field_f;
-        ((kh) this).field_k = 0;
-        ((kh) this).field_h = 0;
+        this.field_o = var1;
+        this.field_b = this.field_j;
+        this.field_d = this.field_f;
+        this.field_k = 0;
+        this.field_h = 0;
     }
 
     final void a(int param0, int param1) {
@@ -256,12 +269,12 @@ final class kh extends oi {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((kh) this).field_k;
-          param1 = param1 + ((kh) this).field_h;
+          param0 = param0 + this.field_k;
+          param1 = param1 + this.field_h;
           var3 = param0 + param1 * ra.field_f;
           var4 = 0;
-          var5 = ((kh) this).field_d;
-          var6 = ((kh) this).field_b;
+          var5 = this.field_d;
+          var6 = this.field_b;
           var7 = ra.field_f - var6;
           var8 = 0;
           if (param1 >= ra.field_i) {
@@ -313,7 +326,7 @@ final class kh extends oi {
             break L4;
           } else {
             if (var5 > 0) {
-              kh.c(ra.field_b, ((kh) this).field_o, ((kh) this).field_p, 0, var4, var3, var6, var5, var7, var8);
+              kh.c(ra.field_b, this.field_o, this.field_p, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -331,12 +344,12 @@ final class kh extends oi {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((kh) this).field_k;
-          param1 = param1 + ((kh) this).field_h;
+          param0 = param0 + this.field_k;
+          param1 = param1 + this.field_h;
           var4 = param0 + param1 * ra.field_f;
           var5 = 0;
-          var6 = ((kh) this).field_d;
-          var7 = ((kh) this).field_b;
+          var6 = this.field_d;
+          var7 = this.field_b;
           var8 = ra.field_f - var7;
           var9 = 0;
           if (param1 >= ra.field_i) {
@@ -388,7 +401,7 @@ final class kh extends oi {
             break L4;
           } else {
             if (var6 > 0) {
-              kh.b(ra.field_b, ((kh) this).field_o, ((kh) this).field_p, var5, var4, var7, var6, var8, var9, param2);
+              kh.b(ra.field_b, this.field_o, this.field_p, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -398,6 +411,16 @@ final class kh extends oi {
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -419,7 +442,7 @@ final class kh extends oi {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4--;
                     param3 = param2[param1[incrementValue$10] & 255];
                     if (param3 == 0) {
@@ -427,7 +450,7 @@ final class kh extends oi {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param0[incrementValue$11] = param3;
                       var12++;
@@ -437,48 +460,48 @@ final class kh extends oi {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4--;
                   param3 = param2[param1[incrementValue$12] & 255];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param0[incrementValue$13] = param3;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4--;
                   param3 = param2[param1[incrementValue$14] & 255];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param0[incrementValue$15] = param3;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4--;
                   param3 = param2[param1[incrementValue$16] & 255];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param0[incrementValue$17] = param3;
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4--;
                 param3 = param2[param1[incrementValue$18] & 255];
                 if (param3 == 0) {
@@ -486,7 +509,7 @@ final class kh extends oi {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param0[incrementValue$19] = param3;
                   var12++;
@@ -499,14 +522,14 @@ final class kh extends oi {
     }
 
     kh(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        ((kh) this).field_j = param0;
-        ((kh) this).field_f = param1;
-        ((kh) this).field_k = param2;
-        ((kh) this).field_h = param3;
-        ((kh) this).field_b = param4;
-        ((kh) this).field_d = param5;
-        ((kh) this).field_o = param6;
-        ((kh) this).field_p = param7;
+        this.field_j = param0;
+        this.field_f = param1;
+        this.field_k = param2;
+        this.field_h = param3;
+        this.field_b = param4;
+        this.field_d = param5;
+        this.field_o = param6;
+        this.field_p = param7;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -522,30 +545,30 @@ final class kh extends oi {
         int var14 = 0;
         int var15 = 0;
         L0: {
-          var5 = ((kh) this).field_b;
-          var6 = ((kh) this).field_d;
+          var5 = this.field_b;
+          var6 = this.field_d;
           var7 = 0;
           var8 = 0;
-          var9 = ((kh) this).field_j;
-          var10 = ((kh) this).field_f;
+          var9 = this.field_j;
+          var10 = this.field_f;
           var11 = (var9 << 16) / param2;
           var12 = (var10 << 16) / param3;
-          if (((kh) this).field_k <= 0) {
+          if (this.field_k <= 0) {
             break L0;
           } else {
-            var13 = ((((kh) this).field_k << 16) + var11 - 1) / var11;
+            var13 = ((this.field_k << 16) + var11 - 1) / var11;
             param0 = param0 + var13;
-            var7 = var7 + (var13 * var11 - (((kh) this).field_k << 16));
+            var7 = var7 + (var13 * var11 - (this.field_k << 16));
             break L0;
           }
         }
         L1: {
-          if (((kh) this).field_h <= 0) {
+          if (this.field_h <= 0) {
             break L1;
           } else {
-            var13 = ((((kh) this).field_h << 16) + var12 - 1) / var12;
+            var13 = ((this.field_h << 16) + var12 - 1) / var12;
             param1 = param1 + var13;
-            var8 = var8 + (var13 * var12 - (((kh) this).field_h << 16));
+            var8 = var8 + (var13 * var12 - (this.field_h << 16));
             break L1;
           }
         }
@@ -608,18 +631,18 @@ final class kh extends oi {
             break L7;
           }
         }
-        kh.a(ra.field_b, ((kh) this).field_o, ((kh) this).field_p, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+        kh.a(ra.field_b, this.field_o, this.field_p, var7, var8, var13, var14, param2, param3, var11, var12, var5);
     }
 
     kh(int param0, int param1, int param2) {
-        ((kh) this).field_b = param0;
-        ((kh) this).field_j = param0;
-        ((kh) this).field_d = param1;
-        ((kh) this).field_f = param1;
-        ((kh) this).field_h = 0;
-        ((kh) this).field_k = 0;
-        ((kh) this).field_o = new byte[param0 * param1];
-        ((kh) this).field_p = new int[param2];
+        this.field_b = param0;
+        this.field_j = param0;
+        this.field_d = param1;
+        this.field_f = param1;
+        this.field_h = 0;
+        this.field_k = 0;
+        this.field_o = new byte[param0 * param1];
+        this.field_p = new int[param2];
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -627,13 +650,14 @@ final class kh extends oi {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
+        int incrementValue$1 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
             var14 = (param4 >> 16) * param11;
             for (var15 = -param7; var15 < 0; var15++) {
                 var16 = param1[(param3 >> 16) + var14];
                 if (var16 != 0) {
-                    int incrementValue$1 = param5;
+                    incrementValue$1 = param5;
                     param5++;
                     param0[incrementValue$1] = param2[var16 & 255];
                 } else {

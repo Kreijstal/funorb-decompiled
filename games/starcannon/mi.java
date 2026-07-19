@@ -16,17 +16,20 @@ abstract class mi extends uh {
         long var4 = 0L;
         try {
             ve.field_d = true;
+            if (param0 != 1048576) {
+                mi.d(35);
+            }
             var2 = "tuhstatbut";
             var3 = "rvnadlm";
             var4 = -1L;
             wg.a((byte) 111, var3, param1, var2, var4);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "mi.B(" + 1048576 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "mi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     mi(int param0) {
-        ((mi) this).field_p = param0;
+        this.field_p = param0;
     }
 
     final static void e(byte param0) {
@@ -36,21 +39,21 @@ abstract class mi extends uh {
             Throwable var2 = null;
             Runtime var2_ref = null;
             Long var3 = null;
-            Object var4 = null;
+            Object[] var4 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
                 L1: {
-                  var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
+                  var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
                   if (var1 == null) {
                     break L1;
                   } else {
                     try {
                       L2: {
                         var2_ref = Runtime.getRuntime();
-                        var4 = null;
-                        var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
+                        var4 = (Object[]) null;
+                        var3 = (Long) (var1.invoke((Object) (var2_ref), (Object[]) null));
                         la.field_b = (int)(var3.longValue() / 1048576L) + 1;
                         decompiledRegionSelector0 = 0;
                         break L2;
@@ -64,7 +67,12 @@ abstract class mi extends uh {
                       }
                     }
                     if (decompiledRegionSelector0 == 0) {
-                      return;
+                      if (param0 == -6) {
+                        return;
+                      } else {
+                        field_n = (String) null;
+                        return;
+                      }
                     } else {
                       break L1;
                     }
@@ -79,6 +87,12 @@ abstract class mi extends uh {
                 break L4;
               }
             }
+            if (param0 != -6) {
+              field_n = (String) null;
+              return;
+            } else {
+              return;
+            }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -87,14 +101,13 @@ abstract class mi extends uh {
     }
 
     public static void d(int param0) {
+        if (param0 != 1) {
+            return;
+        }
         field_n = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "This game has been updated! Please reload this page.";
     }
 }

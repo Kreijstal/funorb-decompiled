@@ -16,11 +16,11 @@ final class fd {
         Object var2 = null;
         Throwable var3 = null;
         Throwable decompiledCaughtException = null;
-        var1 = 28;
+        var1 = -57 / ((param0 - 13) / 46);
         if (ad.field_b == null) {
           return;
         } else {
-          var2 = (Object) (Object) ad.field_b;
+          var2 = ad.field_b;
           synchronized (var2) {
             L0: {
               ad.field_b = null;
@@ -32,18 +32,25 @@ final class fd {
     }
 
     public static void a(int param0) {
-        field_h = null;
-        field_g = null;
-        field_d = null;
-        field_a = null;
-        field_e = null;
+        if (param0 != -32311) {
+          field_c = -92;
+          field_h = null;
+          field_g = null;
+          field_d = null;
+          field_a = null;
+          field_e = null;
+          return;
+        } else {
+          field_h = null;
+          field_g = null;
+          field_d = null;
+          field_a = null;
+          field_e = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "An orb has been destroyed!";
         field_h = new tl();
         field_g = "ICE SHOT";

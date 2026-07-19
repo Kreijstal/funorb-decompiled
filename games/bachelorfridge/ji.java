@@ -44,10 +44,10 @@ final class ji extends bw {
               }
             }
             L2: {
-              if (ld.field_n != -1) {
+              if ((ld.field_n ^ -1) != 0) {
                 break L2;
               } else {
-                if (hda.field_o != -1) {
+                if ((hda.field_o ^ -1) != 0) {
                   break L2;
                 } else {
                   ld.field_n = mk.field_p;
@@ -60,7 +60,7 @@ final class ji extends bw {
               L4: {
                 df.field_o = df.field_o + 1;
                 if (param1 != null) {
-                  if (!param1.equals((Object) (Object) ov.field_g)) {
+                  if (!param1.equals(ov.field_g)) {
                     break L4;
                   } else {
                     break L3;
@@ -173,23 +173,23 @@ final class ji extends bw {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var2 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) var2;
+            stackOut_41_0 = (RuntimeException) (var2);
             stackOut_41_1 = new StringBuilder().append("ji.A(").append(param0).append(',');
             stackIn_43_0 = stackOut_41_0;
             stackIn_43_1 = stackOut_41_1;
             stackIn_42_0 = stackOut_41_0;
             stackIn_42_1 = stackOut_41_1;
             if (param1 == null) {
-              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
-              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
               stackOut_43_2 = "null";
               stackIn_44_0 = stackOut_43_0;
               stackIn_44_1 = stackOut_43_1;
               stackIn_44_2 = stackOut_43_2;
               break L10;
             } else {
-              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
-              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
               stackOut_42_2 = "{...}";
               stackIn_44_0 = stackOut_42_0;
               stackIn_44_1 = stackOut_42_1;
@@ -197,17 +197,17 @@ final class ji extends bw {
               break L10;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_44_0), stackIn_44_2 + ')');
         }
     }
 
     ji(int param0) {
-        ((ji) this).field_h = param0;
+        this.field_h = param0;
     }
 
     final static void a(boolean param0, int param1) {
         if (param1 < 40) {
-          field_f = null;
+          field_f = (jg) null;
           jna.a(true, param0);
           hda.a((byte) -91, param0);
           return;
@@ -230,10 +230,6 @@ final class ji extends bw {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Username: ";
         field_i = new int[8192];
         field_f = new jg();

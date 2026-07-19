@@ -9,7 +9,7 @@ final class jj extends sna {
     int field_vb;
 
     jj(int param0) {
-        ((jj) this).field_zb = param0;
+        this.field_zb = param0;
     }
 
     public static void b(boolean param0) {

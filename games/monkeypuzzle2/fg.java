@@ -6,22 +6,24 @@ abstract class fg {
     static int field_a;
 
     final int a(long param0, int param1) {
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         long var4 = 0L;
-        var4 = ((fg) this).a(-43);
-        if (var4 <= 0L) {
+        var4 = this.a(-43);
+        if ((var4 ^ -1L) >= -1L) {
           if (param1 != -128) {
-            int discarded$4 = ((fg) this).a(31L, -83);
-            return ((fg) this).a(param0, (byte) 37);
+            discarded$4 = this.a(31L, -83);
+            return this.a(param0, (byte) 37);
           } else {
-            return ((fg) this).a(param0, (byte) 37);
+            return this.a(param0, (byte) 37);
           }
         } else {
           em.a(var4, false);
           if (param1 == -128) {
-            return ((fg) this).a(param0, (byte) 37);
+            return this.a(param0, (byte) 37);
           } else {
-            int discarded$5 = ((fg) this).a(31L, -83);
-            return ((fg) this).a(param0, (byte) 37);
+            discarded$5 = this.a(31L, -83);
+            return this.a(param0, (byte) 37);
           }
         }
     }
@@ -33,11 +35,12 @@ abstract class fg {
     abstract void a(boolean param0);
 
     final static char a(int param0, byte param1) {
+        char discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         var2 = param1 & 255;
         if (param0 == 16) {
-          if (var2 == 0) {
+          if (-1 == (var2 ^ -1)) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
           } else {
             if (128 <= var2) {
@@ -61,8 +64,8 @@ abstract class fg {
             }
           }
         } else {
-          char discarded$1 = fg.a(-100, (byte) -72);
-          if (var2 == 0) {
+          discarded$1 = fg.a(-100, (byte) -72);
+          if (-1 == (var2 ^ -1)) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
           } else {
             if (128 > var2) {

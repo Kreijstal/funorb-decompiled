@@ -10,6 +10,9 @@ final class ak {
         field_a = null;
         field_b = null;
         field_c = null;
+        if (param0) {
+            field_a = (ea[]) null;
+        }
     }
 
     final static boolean a(int param0) {
@@ -18,10 +21,6 @@ final class ak {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new sj("email");
     }
 }

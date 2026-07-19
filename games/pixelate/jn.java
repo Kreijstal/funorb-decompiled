@@ -35,23 +35,19 @@ final class jn extends fa {
     }
 
     jn(int param0, int param1) {
-        ((jn) this).field_r = param1;
-        ((jn) this).field_u = param0;
-        ((jn) this).field_t = od.a((byte) 41, 640, 240);
-        ((jn) this).field_y = od.a((byte) 41, 768, 256);
-        ((jn) this).field_o = nh.c((byte) 60);
-        ((jn) this).field_l = 0;
-        ((jn) this).field_s = od.a((byte) 41, 50, 20);
-        ((jn) this).field_w = od.a((byte) 41, 75, 25);
-        ((jn) this).field_n = ii.c(6, (byte) -120);
-        ((jn) this).field_k = Math.random() < 0.5 ? true : false;
+        this.field_r = param1;
+        this.field_u = param0;
+        this.field_t = od.a((byte) 41, 640, 240);
+        this.field_y = od.a((byte) 41, 768, 256);
+        this.field_o = nh.c((byte) 60);
+        this.field_l = 0;
+        this.field_s = od.a((byte) 41, 50, 20);
+        this.field_w = od.a((byte) 41, 75, 25);
+        this.field_n = ii.c(6, (byte) -120);
+        this.field_k = Math.random() < 0.5 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "You need a rating of <%1> to play with the current options.";
     }
 }

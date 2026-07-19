@@ -10,9 +10,9 @@ final class mn extends pd {
     static String field_m;
 
     final void a(byte param0) {
-        tb.field_d.a(de.field_l, 100, ((mn) this).field_h * gi.field_m * 48, ((mn) this).field_k / ((mn) this).field_h);
-        ((mn) this).field_h = 0;
-        ((mn) this).field_k = 0;
+        tb.field_d.a(de.field_l, 100, this.field_h * gi.field_m * 48, this.field_k / this.field_h);
+        this.field_h = 0;
+        this.field_k = 0;
         int var2 = 123 % ((param0 - 29) / 42);
     }
 
@@ -20,7 +20,7 @@ final class mn extends pd {
         if (param0 >= -127) {
             mn.b(true);
         }
-        return (pb) (Object) new ti();
+        return (pb) ((Object) new ti());
     }
 
     final static dl[] c(int param0) {
@@ -38,57 +38,49 @@ final class mn extends pd {
         int[] var13 = null;
         byte[] var16 = null;
         int[] var17 = null;
-        byte[] var20 = null;
-        int[] var21 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        int[] var25 = null;
-        int[] var26 = null;
+        byte[] var21 = null;
+        int[] var22 = null;
         var8 = CrazyCrystals.field_B;
         var1 = new dl[mg.field_a];
-        var2 = 0;
+        var2 = param0;
         L0: while (true) {
           if (var2 >= mg.field_a) {
-            ok.a(2188450);
+            ok.a(param0 ^ 2188450);
             return var1;
           } else {
             var3 = je.field_c[var2] * uo.field_l[var2];
-            var23 = ui.field_c[var2];
+            var21 = ui.field_c[var2];
             if (!rh.field_a[var2]) {
               var10 = new int[var3];
-              var26 = var10;
+              var22 = var10;
               var6 = 0;
               L1: while (true) {
                 if (var6 >= var3) {
-                  var1[var2] = new dl(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var26);
+                  var1[var2] = new dl(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var22);
                   var2++;
                   continue L0;
                 } else {
-                  var10[var6] = gh.field_z[pf.b((int) var23[var6], 255)];
+                  var10[var6] = gh.field_z[pf.b((int) var21[var6], 255)];
                   var6++;
                   continue L1;
                 }
               }
             } else {
-              var24 = ng.field_g[var2];
-              var20 = var24;
-              var16 = var20;
+              var16 = ng.field_g[var2];
               var12 = var16;
               var9 = var12;
               var5 = var9;
-              var25 = new int[var3];
-              var21 = var25;
-              var17 = var21;
+              var17 = new int[var3];
               var13 = var17;
               var6_ref_int__ = var13;
               var7 = 0;
               L2: while (true) {
                 if (var7 >= var3) {
-                  var1[var2] = (dl) (Object) new vi(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var25);
+                  var1[var2] = (dl) ((Object) new vi(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var17));
                   var2++;
                   continue L0;
                 } else {
-                  var6_ref_int__[var7] = hm.a(gh.field_z[pf.b((int) var23[var7], 255)], pf.b((int) var24[var7], 255) << 24);
+                  var6_ref_int__[var7] = hm.a(gh.field_z[pf.b((int) var21[var7], 255)], pf.b((int) var16[var7], 255) << -621880424);
                   var7++;
                   continue L2;
                 }
@@ -102,7 +94,7 @@ final class mn extends pd {
         vl.field_f.a((byte) -116);
         vl.field_f = null;
         if (param0) {
-            field_l = null;
+            field_l = (String[]) null;
         }
         be.field_d.a((byte) -21);
         be.field_d = null;
@@ -120,15 +112,18 @@ final class mn extends pd {
 
     public static void c(byte param0) {
         field_l = null;
-        field_i = null;
+        field_i = (byte[][]) null;
         field_m = null;
         field_j = null;
+        if (param0 != 19) {
+            field_j = (sj) null;
+        }
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
         int var6 = CrazyCrystals.field_B;
         if (!param0) {
-            field_j = null;
+            field_j = (sj) null;
         }
         param2 = param2 + param3;
         while (param2 > param3) {
@@ -138,13 +133,13 @@ final class mn extends pd {
     }
 
     mn() {
-        ((mn) this).field_h = 0;
-        ((mn) this).field_k = 0;
+        this.field_h = 0;
+        this.field_k = 0;
     }
 
     final f a(boolean param0, int param1, int param2, int param3, ta param4) {
         RuntimeException var6 = null;
-        Object stackIn_2_0 = null;
+        f stackIn_2_0 = null;
         int stackIn_6_0 = 0;
         f stackIn_7_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -154,11 +149,12 @@ final class mn extends pd {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
         f stackOut_6_0 = null;
-        Object stackOut_1_0 = null;
+        f stackOut_1_0 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_10_0 = null;
@@ -171,9 +167,9 @@ final class mn extends pd {
           L0: {
             if (!param0) {
               L1: {
-                ((mn) this).field_k = ((mn) this).field_k + param3;
-                ((mn) this).field_h = ((mn) this).field_h + 1;
-                if (q.field_a[ma.field_n[param1]].field_c[param2] < 4) {
+                this.field_k = this.field_k + param3;
+                this.field_h = this.field_h + 1;
+                if ((q.field_a[ma.field_n[param1]].field_c[param2] ^ -1) > -5) {
                   stackOut_5_0 = 50;
                   stackIn_6_0 = stackOut_5_0;
                   break L1;
@@ -186,34 +182,36 @@ final class mn extends pd {
               ph.a(stackIn_6_0, (byte) 107, param1, param4);
               stackOut_6_0 = bm.field_g;
               stackIn_7_0 = stackOut_6_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (f) null;
               stackIn_2_0 = stackOut_1_0;
-              return (f) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var6;
+            stackOut_8_0 = (RuntimeException) (var6);
             stackOut_8_1 = new StringBuilder().append("mn.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param4 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -221,16 +219,16 @@ final class mn extends pd {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
-        return stackIn_7_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_7_0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_i = new byte[1000][];
         field_j = new sj(0, 2, 2, 1);

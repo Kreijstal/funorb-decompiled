@@ -40,80 +40,96 @@ abstract class si extends ca {
         try {
           L0: {
             L1: {
-              if (0 < param0) {
-                var8 = new byte[param3];
-                var4 = var8;
-                var5_int = 0;
-                L2: while (true) {
-                  if (var5_int >= param3) {
+              L2: {
+                if (0 < param0) {
+                  break L2;
+                } else {
+                  var4 = param1;
+                  if (var7 == 0) {
                     break L1;
                   } else {
-                    var8[var5_int] = param1[var5_int + param0];
-                    var5_int++;
-                    continue L2;
+                    break L2;
                   }
                 }
-              } else {
-                var4 = param1;
-                break L1;
+              }
+              var8 = new byte[param3];
+              var4 = var8;
+              var5_int = 0;
+              L3: while (true) {
+                if (var5_int >= param3) {
+                  break L1;
+                } else {
+                  var8[var5_int] = param1[var5_int + param0];
+                  var5_int++;
+                  if (var7 == 0) {
+                    continue L3;
+                  } else {
+                    break L1;
+                  }
+                }
               }
             }
-            L3: {
+            L4: {
               var5 = new kc();
               var5.a((byte) 119);
               if (param2 <= -42) {
-                break L3;
+                break L4;
               } else {
                 si.e((byte) -111);
-                break L3;
+                break L4;
               }
             }
             var5.a((long)(param3 * 8), var4, -24893);
             var6 = new byte[64];
             var5.a(0, false, var6);
-            stackOut_8_0 = (byte[]) var6;
+            stackOut_8_0 = (byte[]) (var6);
             stackIn_9_0 = stackOut_8_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var4_ref;
+            stackOut_10_0 = (RuntimeException) (var4_ref);
             stackOut_10_1 = new StringBuilder().append("si.P(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L4;
+              break L5;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
               stackIn_13_2 = stackOut_11_2;
-              break L4;
+              break L5;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ',' + param3 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_9_0;
     }
 
     final static void e(byte param0) {
         if (param0 < 5) {
-            field_t = null;
+          field_t = (hh) null;
+          kb.field_b.field_p = 0;
+          kb.field_b.field_j = 0;
+          return;
+        } else {
+          kb.field_b.field_p = 0;
+          kb.field_b.field_j = 0;
+          return;
         }
-        kb.field_b.field_p = 0;
-        kb.field_b.field_j = 0;
     }
 
     abstract int c(byte param0);
@@ -146,7 +162,7 @@ abstract class si extends ca {
               if (param0 >= 111) {
                 break L1;
               } else {
-                field_t = null;
+                field_t = (hh) null;
                 break L1;
               }
             }
@@ -158,23 +174,23 @@ abstract class si extends ca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("si.S(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -182,26 +198,31 @@ abstract class si extends ca {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     public static void e(boolean param0) {
-        field_q = null;
-        field_t = null;
-        field_u = null;
+        if (param0) {
+          field_q = (String) null;
+          field_q = null;
+          field_t = null;
+          field_u = null;
+          return;
+        } else {
+          field_q = null;
+          field_t = null;
+          field_u = null;
+          return;
+        }
     }
 
     si() {
-        ((si) this).field_v = true;
+        this.field_v = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = null;
     }
 }

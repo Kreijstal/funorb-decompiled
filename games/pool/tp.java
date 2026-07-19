@@ -15,12 +15,24 @@ final class tp {
     public static void a(int param0) {
         field_g = null;
         field_d = null;
-        field_h = null;
-        field_a = null;
-        field_i = null;
-        field_c = null;
-        field_e = null;
-        field_f = null;
+        if (param0 != 0) {
+          field_g = (String) null;
+          field_h = null;
+          field_a = null;
+          field_i = null;
+          field_c = null;
+          field_e = null;
+          field_f = null;
+          return;
+        } else {
+          field_h = null;
+          field_a = null;
+          field_i = null;
+          field_c = null;
+          field_e = null;
+          field_f = null;
+          return;
+        }
     }
 
     final static void a(boolean param0, int param1) {
@@ -31,13 +43,18 @@ final class tp {
         var3 = Pool.field_O;
         try {
           L0: {
-            var4 = (bj) (Object) tm.field_i.c((byte) 73);
+            var4 = (bj) ((Object) tm.field_i.c((byte) 73));
             L1: while (true) {
               if (var4 == null) {
-                break L0;
+                if (param0) {
+                  break L0;
+                } else {
+                  field_f = (String) null;
+                  return;
+                }
               } else {
-                un.a(2, var4, (byte) -51);
-                var4 = (bj) (Object) tm.field_i.f((byte) -5);
+                un.a(param1, var4, (byte) -51);
+                var4 = (bj) ((Object) tm.field_i.f((byte) -5));
                 continue L1;
               }
             }
@@ -45,15 +62,11 @@ final class tp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var2, "tp.A(" + true + ',' + 2 + ')');
+          throw wm.a((Throwable) ((Object) var2), "tp.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0;
         field_h = new int[12];
         field_a = "<col=bbbbcc>Versus</col>";

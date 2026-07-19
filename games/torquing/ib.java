@@ -23,10 +23,6 @@ abstract class ib {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ib.A(";
         field_a = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
     }

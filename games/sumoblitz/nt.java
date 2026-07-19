@@ -20,11 +20,11 @@ class nt extends ms {
         int stackOut_6_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
-        ((nt) this).field_p = ((nt) this).field_p - 1;
+        this.field_p = this.field_p - 1;
         if (param0 != -2567) {
           L0: {
-            ((nt) this).field_p = -86;
-            if (((nt) this).field_p != 0) {
+            this.field_p = -86;
+            if (this.field_p != 0) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -37,7 +37,7 @@ class nt extends ms {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((nt) this).field_p != 0) {
+            if (this.field_p != 0) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -56,13 +56,14 @@ class nt extends ms {
             return;
         }
         try {
-            ua.field_g[0].a((float)((nt) this).field_k, (float)((nt) this).field_o, 1848 - (int)((double)((nt) this).field_p / 30.0 * 2048.0), 0, 1, 0, 2);
+            ua.field_g[0].a((float)this.field_k, (float)this.field_o, 1848 - (int)((double)this.field_p / 30.0 * 2048.0), 0, 1, 0, 2);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "nt.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "nt.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean a(byte param0) {
+        boolean discarded$5 = false;
         if (param0 > 82) {
           if (null != qk.field_O) {
             if (kw.field_c != ga.field_j) {
@@ -74,7 +75,7 @@ class nt extends ms {
             return false;
           }
         } else {
-          boolean discarded$5 = nt.a((byte) 13);
+          discarded$5 = nt.a((byte) 13);
           if (null != qk.field_O) {
             if (kw.field_c != ga.field_j) {
               return false;
@@ -97,32 +98,34 @@ class nt extends ms {
     final static void a(byte[] param0, int param1, File param2, int param3) throws IOException {
         DataInputStream var4 = null;
         try {
-            var4 = new DataInputStream((InputStream) (Object) new BufferedInputStream((InputStream) (Object) new FileInputStream(param2)));
+            var4 = new DataInputStream((InputStream) ((Object) new BufferedInputStream((InputStream) ((Object) new FileInputStream(param2)))));
             var4.readFully(param0, 0, param3);
+            if (param1 != 7039) {
+                field_r = true;
+            }
             var4.close();
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "nt.J(" + (param0 != null ? "{...}" : "null") + ',' + 7039 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "nt.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     nt(int param0, int param1, int param2, int param3) {
-        ((nt) this).field_q = param3;
-        ((nt) this).field_k = param1;
-        ((nt) this).field_p = param0;
-        ((nt) this).field_o = param2;
+        this.field_q = param3;
+        this.field_k = param1;
+        this.field_p = param0;
+        this.field_o = param2;
     }
 
     public static void d(int param0) {
         field_m = null;
-        field_n = null;
+        field_n = (qp[][]) null;
         field_l = null;
+        if (param0 != 31295) {
+            field_r = true;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "challenge";
         field_n = new qp[3][];
         field_m = new tv[9];

@@ -40,6 +40,11 @@ final class ku {
 
     public static void a(boolean param0) {
         field_I = null;
+        if (!param0) {
+            field_j = 2;
+            field_J = null;
+            return;
+        }
         field_J = null;
     }
 
@@ -48,58 +53,81 @@ final class ku {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int stackIn_5_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_7_0 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
-            var1_int = 0;
-            var2 = 0;
-            L1: while (true) {
-              if (var2 >= 25) {
-                stackOut_4_0 = var1_int;
-                stackIn_5_0 = stackOut_4_0;
-                break L0;
+            L1: {
+              var1_int = 0;
+              if (param0 == -94) {
+                break L1;
               } else {
-                var1_int = var1_int + go.field_j[var2];
-                var2++;
-                continue L1;
+                field_J = (wc[]) null;
+                break L1;
               }
+            }
+            var2 = 0;
+            L2: while (true) {
+              L3: {
+                L4: {
+                  if ((var2 ^ -1) <= -26) {
+                    break L4;
+                  } else {
+                    stackOut_5_0 = var1_int + go.field_j[var2];
+                    stackIn_8_0 = stackOut_5_0;
+                    stackIn_6_0 = stackOut_5_0;
+                    if (var3 != 0) {
+                      break L3;
+                    } else {
+                      var1_int = stackIn_6_0;
+                      var2++;
+                      if (var3 == 0) {
+                        continue L2;
+                      } else {
+                        break L4;
+                      }
+                    }
+                  }
+                }
+                stackOut_7_0 = var1_int;
+                stackIn_8_0 = stackOut_7_0;
+                break L3;
+              }
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "ku.B(" + -94 + ')');
+          throw qo.a((Throwable) ((Object) var1), "ku.B(" + param0 + ')');
         }
-        return stackIn_5_0;
+        return stackIn_8_0;
     }
 
     ku() {
-        ((ku) this).field_r = 0;
-        ((ku) this).field_y = new int[6][258];
-        ((ku) this).field_t = new int[16];
-        ((ku) this).field_F = new int[6];
-        ((ku) this).field_l = new byte[18002];
-        ((ku) this).field_b = new byte[18002];
-        ((ku) this).field_E = new boolean[256];
-        ((ku) this).field_m = new byte[6][258];
-        ((ku) this).field_q = new int[257];
-        ((ku) this).field_u = new byte[256];
-        ((ku) this).field_z = new byte[4096];
-        ((ku) this).field_w = 0;
-        ((ku) this).field_f = new int[6][258];
-        ((ku) this).field_v = new int[6][258];
-        ((ku) this).field_n = new boolean[16];
-        ((ku) this).field_A = new int[256];
+        this.field_r = 0;
+        this.field_y = new int[6][258];
+        this.field_t = new int[16];
+        this.field_F = new int[6];
+        this.field_l = new byte[18002];
+        this.field_b = new byte[18002];
+        this.field_E = new boolean[256];
+        this.field_m = new byte[6][258];
+        this.field_q = new int[257];
+        this.field_u = new byte[256];
+        this.field_z = new byte[4096];
+        this.field_w = 0;
+        this.field_f = new int[6][258];
+        this.field_v = new int[6][258];
+        this.field_n = new boolean[16];
+        this.field_A = new int[256];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_I = new vf();
     }
 }

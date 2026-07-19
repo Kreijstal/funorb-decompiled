@@ -12,12 +12,13 @@ final class mf {
     static String field_h;
 
     final static wa a(int param0, String param1) {
+        wa discarded$2 = null;
         String var2 = null;
         RuntimeException var2_ref = null;
         wa var3 = null;
         String var4 = null;
         int var5 = 0;
-        Object var6 = null;
+        String var6 = null;
         CharSequence var7 = null;
         CharSequence var8 = null;
         wa stackIn_17_0 = null;
@@ -40,131 +41,141 @@ final class mf {
         String stackOut_21_2 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (uc.field_c != null) {
-            L0: {
-              var7 = (CharSequence) (Object) param1;
-              var2 = gk.a(var7, -13);
-              if (var2 != null) {
-                break L0;
-              } else {
-                var2 = param1;
-                break L0;
-              }
-            }
-            L1: {
-              if (param0 == -1) {
-                break L1;
-              } else {
-                var6 = null;
-                wa discarded$2 = mf.a(-34, (String) null);
-                break L1;
-              }
-            }
-            var3 = (wa) (Object) uc.field_c.a((long)var2.hashCode(), (byte) -64);
-            L2: while (true) {
-              if (var3 != null) {
-                L3: {
-                  var8 = (CharSequence) (Object) var3.field_Cb;
-                  var4 = gk.a(var8, param0 + -12);
-                  if (var4 == null) {
-                    var4 = var3.field_Cb;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                if (var4.equals((Object) (Object) var2)) {
-                  stackOut_16_0 = (wa) var3;
-                  stackIn_17_0 = stackOut_16_0;
-                  return stackIn_17_0;
+          L0: {
+            if (uc.field_c != null) {
+              L1: {
+                var7 = (CharSequence) ((Object) param1);
+                var2 = gk.a(var7, -13);
+                if (var2 != null) {
+                  break L1;
                 } else {
-                  var3 = (wa) (Object) uc.field_c.d(param0 ^ 82);
-                  continue L2;
+                  var2 = param1;
+                  break L1;
                 }
-              } else {
-                return null;
               }
+              L2: {
+                if (param0 == -1) {
+                  break L2;
+                } else {
+                  var6 = (String) null;
+                  discarded$2 = mf.a(-34, (String) null);
+                  break L2;
+                }
+              }
+              var3 = (wa) ((Object) uc.field_c.a((long)var2.hashCode(), (byte) -64));
+              L3: while (true) {
+                if (var3 != null) {
+                  L4: {
+                    var8 = (CharSequence) ((Object) var3.field_Cb);
+                    var4 = gk.a(var8, param0 + -12);
+                    if (var4 == null) {
+                      var4 = var3.field_Cb;
+                      break L4;
+                    } else {
+                      break L4;
+                    }
+                  }
+                  if (var4.equals(var2)) {
+                    stackOut_16_0 = (wa) (var3);
+                    stackIn_17_0 = stackOut_16_0;
+                    break L0;
+                  } else {
+                    var3 = (wa) ((Object) uc.field_c.d(param0 ^ 82));
+                    continue L3;
+                  }
+                } else {
+                  return null;
+                }
+              }
+            } else {
+              return null;
             }
-          } else {
-            return null;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var2_ref = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var2_ref;
+            stackOut_20_0 = (RuntimeException) (var2_ref);
             stackOut_20_1 = new StringBuilder().append("mf.C(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
-              break L4;
+              break L5;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
               stackIn_23_2 = stackOut_21_2;
-              break L4;
+              break L5;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
         }
+        return stackIn_17_0;
     }
 
     final static void a(int param0, int param1) {
         fk var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
             si.field_l = param0;
-            var2 = (fk) (Object) qn.field_mb.b(12623);
+            var2 = (fk) ((Object) qn.field_mb.b(12623));
             L1: while (true) {
               if (var2 == null) {
-                if (null != he.field_f) {
-                  var2 = (fk) (Object) he.field_f.b(12623);
-                  L2: while (true) {
-                    if (var2 == null) {
-                      break L0;
-                    } else {
-                      L3: {
-                        if (!var2.field_n.b((byte) -36)) {
-                          var2.a(true);
-                          break L3;
-                        } else {
-                          var2.field_m.c(var2.field_l * si.field_l - -128 >> 8);
-                          break L3;
+                if (param1 == 21298) {
+                  if (null != he.field_f) {
+                    var2 = (fk) ((Object) he.field_f.b(12623));
+                    L2: while (true) {
+                      if (var2 == null) {
+                        decompiledRegionSelector0 = 1;
+                        break L0;
+                      } else {
+                        L3: {
+                          if (!var2.field_n.b((byte) -36)) {
+                            var2.a(true);
+                            break L3;
+                          } else {
+                            var2.field_m.c(var2.field_l * si.field_l - -128 >> 931454088);
+                            break L3;
+                          }
                         }
+                        var2 = (fk) ((Object) he.field_f.a(0));
+                        continue L2;
                       }
-                      var2 = (fk) (Object) he.field_f.a(0);
-                      continue L2;
                     }
+                  } else {
+                    return;
                   }
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               } else {
                 L4: {
                   if (var2.field_n.b((byte) -119)) {
-                    var2.field_m.c(si.field_l * var2.field_l - -128 >> 8);
+                    var2.field_m.c(si.field_l * var2.field_l - -128 >> -1530393656);
                     break L4;
                   } else {
                     var2.a(true);
                     break L4;
                   }
                 }
-                var2 = (fk) (Object) qn.field_mb.a(0);
+                var2 = (fk) ((Object) qn.field_mb.a(0));
                 continue L1;
               }
             }
@@ -172,7 +183,12 @@ final class mf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2_ref, "mf.B(" + param0 + ',' + 21298 + ')');
+          throw aa.a((Throwable) ((Object) var2_ref), "mf.B(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -193,10 +209,6 @@ final class mf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[8192];
         field_e = "Increases your allocated movement time each turn";
         field_f = "You have declined the invitation.";

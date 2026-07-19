@@ -9,15 +9,14 @@ final class de {
 
     public static void a(byte param0) {
         field_b = null;
+        if (param0 != 34) {
+            return;
+        }
         field_c = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "de.A(";
         field_c = "End Game";
     }

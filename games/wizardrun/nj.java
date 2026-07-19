@@ -24,7 +24,7 @@ final class nj extends wl {
     final static void a(int param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        Object var4 = null;
+        String var4 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
@@ -54,7 +54,7 @@ final class nj extends wl {
                 } else {
                   L2: {
                     var3_int = 1;
-                    if (param2 != 8) {
+                    if ((param2 ^ -1) != -9) {
                       break L2;
                     } else {
                       L3: {
@@ -72,7 +72,7 @@ final class nj extends wl {
                     }
                   }
                   L4: {
-                    if (param2 != 10) {
+                    if ((param2 ^ -1) != -11) {
                       break L4;
                     } else {
                       var3_int = 0;
@@ -86,7 +86,7 @@ final class nj extends wl {
                         if (!lc.field_d) {
                           break L6;
                         } else {
-                          param1 = di.a(new String[1], (byte) 84, ca.field_d);
+                          param1 = di.a(new String[]{param1}, (byte) 84, ca.field_d);
                           break L6;
                         }
                       }
@@ -104,7 +104,7 @@ final class nj extends wl {
                       break L5;
                     }
                   }
-                  if (param2 == 256) {
+                  if (-257 == (param2 ^ -1)) {
                     break L1;
                   } else {
                     if (10 != param2) {
@@ -124,7 +124,7 @@ final class nj extends wl {
             if (param0 == 10) {
               break L0;
             } else {
-              var4 = null;
+              var4 = (String) null;
               nj.a(-77, (String) null, 102);
               return;
             }
@@ -133,23 +133,23 @@ final class nj extends wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var3;
+            stackOut_26_0 = (RuntimeException) (var3);
             stackOut_26_1 = new StringBuilder().append("nj.B(").append(param0).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param1 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L8;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -157,7 +157,7 @@ final class nj extends wl {
               break L8;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param2 + ')');
         }
     }
 
@@ -165,10 +165,6 @@ final class nj extends wl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = 255;
         field_p = "World-Stage";
     }

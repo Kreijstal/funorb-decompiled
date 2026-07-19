@@ -7,12 +7,15 @@ final class dab extends wm implements ntb {
     static boolean field_e;
 
     public static void b(byte param0) {
+        if (param0 != -44) {
+            return;
+        }
         field_c = null;
     }
 
     final ucb[] a(pe param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_3_0 = null;
+        ucb[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -21,7 +24,7 @@ final class dab extends wm implements ntb {
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
+        ucb[] stackOut_2_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -33,7 +36,7 @@ final class dab extends wm implements ntb {
         try {
           L0: {
             if (param1 != -20605) {
-              stackOut_2_0 = null;
+              stackOut_2_0 = (ucb[]) null;
               stackIn_3_0 = stackOut_2_0;
               break L0;
             } else {
@@ -44,23 +47,23 @@ final class dab extends wm implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("dab.I(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -68,12 +71,13 @@ final class dab extends wm implements ntb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return (ucb[]) (Object) stackIn_3_0;
+        return stackIn_3_0;
     }
 
     public final void b(byte param0, tv param1) {
+        String discarded$2 = null;
         RuntimeException var3 = null;
         dab var5 = null;
         dab var6 = null;
@@ -96,13 +100,13 @@ final class dab extends wm implements ntb {
         try {
           L0: {
             super.b((byte) 83, param1);
-            var5 = (dab) (Object) param1;
+            var5 = (dab) ((Object) param1);
             var6 = var5;
-            var6.field_d = ((dab) this).field_d;
+            var6.field_d = this.field_d;
             if (param0 > 54) {
               break L0;
             } else {
-              String discarded$2 = ((dab) this).a(90);
+              discarded$2 = this.a(90);
               return;
             }
           }
@@ -110,23 +114,23 @@ final class dab extends wm implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var3;
+            stackOut_3_0 = (RuntimeException) (var3);
             stackOut_3_1 = new StringBuilder().append("dab.D(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -134,28 +138,28 @@ final class dab extends wm implements ntb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     final int a(byte param0, int param1) {
         if (param0 >= -102) {
-            ((dab) this).field_d = -122;
-            return ((dab) this).field_d;
+            this.field_d = -122;
+            return this.field_d;
         }
-        return ((dab) this).field_d;
+        return this.field_d;
     }
 
     public final void b(faa param0, int param1) {
         try {
             super.b(param0, -119);
             if (param1 > -109) {
-                Object var4 = null;
-                ((dab) this).b((byte) -36, (tv) null);
+                tv var4 = (tv) null;
+                this.b((byte) -36, (tv) null);
             }
-            param0.a(-632, ((dab) this).field_d, 32);
+            param0.a(-632, this.field_d, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "dab.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "dab.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -185,16 +189,16 @@ final class dab extends wm implements ntb {
               if (param1 <= -19) {
                 break L1;
               } else {
-                field_c = null;
+                field_c = (dja) null;
                 break L1;
               }
             }
             L2: {
-              var3 = (dab) (Object) param0;
+              var3 = (dab) ((Object) param0);
               super.a(param0, -44);
               var4 = 0;
-              if (var3.field_d != ((dab) this).field_d) {
-                System.out.println("int tick has changed. before=" + var3.field_d + ", now=" + ((dab) this).field_d);
+              if (var3.field_d != this.field_d) {
+                System.out.println("int tick has changed. before=" + var3.field_d + ", now=" + this.field_d);
                 var4 = 1;
                 break L2;
               } else {
@@ -212,23 +216,23 @@ final class dab extends wm implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3_ref;
+            stackOut_9_0 = (RuntimeException) (var3_ref);
             stackOut_9_1 = new StringBuilder().append("dab.F(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -236,16 +240,16 @@ final class dab extends wm implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
     final String a(int param0) {
         if (param0 != -1) {
-          field_c = null;
-          return "Is at tick " + ((dab) this).field_d;
+          field_c = (dja) null;
+          return "Is at tick " + this.field_d;
         } else {
-          return "Is at tick " + ((dab) this).field_d;
+          return "Is at tick " + this.field_d;
         }
     }
 
@@ -296,7 +300,7 @@ final class dab extends wm implements ntb {
               }
             }
             L2: {
-              if (param1.f((byte) -101) != ((dab) this).field_d) {
+              if (param1.f((byte) -101) != this.field_d) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
@@ -312,23 +316,23 @@ final class dab extends wm implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_0 = (RuntimeException) (var4);
             stackOut_6_1 = new StringBuilder().append("dab.G(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -337,23 +341,23 @@ final class dab extends wm implements ntb {
             }
           }
           L4: {
-            stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+            stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
             stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -361,7 +365,7 @@ final class dab extends wm implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -370,67 +374,75 @@ final class dab extends wm implements ntb {
         faa var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
-        byte[] stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        byte[] stackOut_2_0 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
+            L1: {
+              if (param0 == -30234) {
+                break L1;
+              } else {
+                field_e = false;
+                break L1;
+              }
+            }
             var2 = new faa(1000);
             var2.q(-83);
-            param1.b(var2, -115);
-            var2.r(32712);
+            param1.b(var2, param0 + 30119);
+            var2.r(param0 ^ -2514);
             var3 = new byte[var2.field_e];
             cua.a(var2.field_h, 0, var3, 0, var2.field_e);
-            stackOut_0_0 = (byte[]) var3;
-            stackIn_1_0 = stackOut_0_0;
+            stackOut_2_0 = (byte[]) (var3);
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("dab.K(").append(-30234).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackOut_4_0 = (RuntimeException) (var2_ref);
+            stackOut_4_1 = new StringBuilder().append("dab.K(").append(param0).append(',');
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     final void a(pe param0, int param1, int param2, int param3) {
@@ -438,18 +450,18 @@ final class dab extends wm implements ntb {
             return;
         }
         try {
-            ((dab) this).field_d = param3;
+            this.field_d = param3;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "dab.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "dab.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public final void a(faa param0, boolean param1) {
         try {
             super.a(param0, param1);
-            ((dab) this).field_d = param0.i(0, 32);
+            this.field_d = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "dab.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "dab.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -457,7 +469,7 @@ final class dab extends wm implements ntb {
     }
 
     dab(int param0) {
-        ((dab) this).field_d = param0;
+        this.field_d = param0;
     }
 
     public final boolean a(byte param0, tv param1) {
@@ -488,11 +500,11 @@ final class dab extends wm implements ntb {
             L1: {
               L2: {
                 var4 = -39 % ((22 - param0) / 59);
-                var3 = (dab) (Object) param1;
+                var3 = (dab) ((Object) param1);
                 if (super.a((byte) -70, param1)) {
                   break L2;
                 } else {
-                  if (var3.field_d == ((dab) this).field_d) {
+                  if (var3.field_d == this.field_d) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
                     break L1;
@@ -511,23 +523,23 @@ final class dab extends wm implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3_ref;
+            stackOut_6_0 = (RuntimeException) (var3_ref);
             stackOut_6_1 = new StringBuilder().append("dab.C(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -535,16 +547,12 @@ final class dab extends wm implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_c = (dja) (Object) new lhb();
+        field_c = (dja) ((Object) new lhb());
     }
 }

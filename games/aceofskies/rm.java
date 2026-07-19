@@ -13,17 +13,20 @@ final class rm {
     public static void a(byte param0) {
         field_g = null;
         field_c = null;
+        if (param0 <= 109) {
+            field_g = (int[]) null;
+        }
     }
 
     final static boolean a(int param0) {
-        if (!(ag.field_s != -1)) {
+        if (!((ag.field_s ^ -1) != param0)) {
             if (!(wo.a(1, true))) {
                 return false;
             }
             ag.field_s = nm.field_c.g(43);
             nm.field_c.field_g = 0;
         }
-        if (!(ag.field_s != -2)) {
+        if (!((ag.field_s ^ -1) != 1)) {
             if (wo.a(2, true)) {
                 ag.field_s = nm.field_c.i((byte) 0);
                 nm.field_c.field_g = 0;
@@ -35,10 +38,6 @@ final class rm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Connection timed out. Please try using a different server.";
         field_e = 0;
     }

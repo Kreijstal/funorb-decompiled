@@ -9,14 +9,13 @@ final class ua {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != -24750) {
+            return;
+        }
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ua.A(";
         field_b = 50;
         field_d = 0L;

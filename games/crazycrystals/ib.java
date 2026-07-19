@@ -8,6 +8,11 @@ abstract class ib extends ij {
 
     public static void g(int param0) {
         field_l = null;
+        if (param0 != 31438) {
+            field_l = (int[]) null;
+            field_m = null;
+            return;
+        }
         field_m = null;
     }
 
@@ -15,8 +20,8 @@ abstract class ib extends ij {
         sc var1 = null;
         int var2 = 0;
         md var3 = null;
-        var1 = (sc) (Object) hd.field_c.g(32073);
-        var2 = 21;
+        var1 = (sc) ((Object) hd.field_c.g(32073));
+        var2 = -21 / ((param0 - 61) / 40);
         if (var1 == null) {
           jj.a(4);
           return;
@@ -33,14 +38,10 @@ abstract class ib extends ij {
     abstract boolean h(int param0);
 
     ib(int param0) {
-        ((ib) this).field_n = param0;
+        this.field_n = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Unfortunately your configuration doesn't support fullscreen mode.";
     }
 }

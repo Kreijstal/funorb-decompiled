@@ -7,21 +7,21 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static void a(java.awt.Canvas param0, int param1) {
         try {
-            if (!(param1 != ~ob.field_d)) {
+            if (!(param1 != (ob.field_d ^ -1))) {
                 st.a((byte) 87);
             }
             hr.a(ct.field_I, 0, w.field_a, dq.field_b);
             ps.a(0, false, param0, 0);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "hj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "hj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            ((hj) this).field_b = true;
+            this.field_b = true;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "hj.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "hj.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,7 +36,7 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(byte param0, rk param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        java.awt.Canvas var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -56,11 +56,11 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           L0: {
             L1: {
-              ke.a(973, param1, ((hj) this).field_a);
+              ke.a(973, param1, this.field_a);
               if (param0 == 87) {
                 break L1;
               } else {
-                var4 = null;
+                var4 = (java.awt.Canvas) null;
                 hj.a((java.awt.Canvas) null, 95);
                 break L1;
               }
@@ -71,23 +71,23 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("hj.B(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -95,64 +95,75 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     final static ll a(boolean param0, int param1, int param2, gk param3) {
         RuntimeException var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
+        ll stackIn_2_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
+        ll stackOut_1_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
-          if (tn.a(param3, (byte) -127, param1, param2)) {
-            return fu.b(30346);
-          } else {
-            return null;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
-            var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("hj.C(").append(false).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
-            if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L0;
+            if (!param0) {
+              if (tn.a(param3, (byte) -127, param1, param2)) {
+                return fu.b(30346);
+              } else {
+                return null;
+              }
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackOut_1_0 = (ll) null;
+              stackIn_2_0 = stackOut_1_0;
               break L0;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) (var4);
+            stackOut_7_1 = new StringBuilder().append("hj.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param3 == null) {
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L1;
+            } else {
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L1;
+            }
+          }
+          throw pn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
+        return stackIn_2_0;
     }
 
     hj() {

@@ -7,13 +7,12 @@ final class ju {
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 <= 63) {
+            field_a = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ju.A(";
         field_a = "Type your email address again to make sure it's correct";
     }

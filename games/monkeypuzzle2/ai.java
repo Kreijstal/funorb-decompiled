@@ -14,12 +14,12 @@ final class ai extends bh {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ai) this).field_a;
-          param1 = param1 + ((ai) this).field_k;
+          param0 = param0 + this.field_a;
+          param1 = param1 + this.field_k;
           var3 = param0 + param1 * ge.field_h;
           var4 = 0;
-          var5 = ((ai) this).field_d;
-          var6 = ((ai) this).field_i;
+          var5 = this.field_d;
+          var6 = this.field_i;
           var7 = ge.field_h - var6;
           var8 = 0;
           if (param1 >= ge.field_f) {
@@ -70,7 +70,7 @@ final class ai extends bh {
           return;
         } else {
           if (var5 > 0) {
-            ai.b(ge.field_i, ((ai) this).field_n, ((ai) this).field_m, 0, var4, var3, var6, var5, var7, var8);
+            ai.b(ge.field_i, this.field_n, this.field_m, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -80,12 +80,12 @@ final class ai extends bh {
 
     final le a() {
         int var3 = 0;
-        int var1 = ((ai) this).field_i * ((ai) this).field_d;
+        int var1 = this.field_i * this.field_d;
         int[] var2 = new int[var1];
         for (var3 = 0; var3 < var1; var3++) {
-            var2[var3] = ((ai) this).field_m[((ai) this).field_n[var3] & 255];
+            var2[var3] = this.field_m[this.field_n[var3] & 255];
         }
-        return new le(((ai) this).field_c, ((ai) this).field_l, ((ai) this).field_a, ((ai) this).field_k, ((ai) this).field_i, ((ai) this).field_d, var2);
+        return new le(this.field_c, this.field_l, this.field_a, this.field_k, this.field_i, this.field_d, var2);
     }
 
     final void b(int param0, int param1) {
@@ -97,12 +97,12 @@ final class ai extends bh {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ai) this).field_a;
-          param1 = param1 + ((ai) this).field_k;
+          param0 = param0 + this.field_a;
+          param1 = param1 + this.field_k;
           var3 = param0 + param1 * ge.field_h;
           var4 = 0;
-          var5 = ((ai) this).field_d;
-          var6 = ((ai) this).field_i;
+          var5 = this.field_d;
+          var6 = this.field_i;
           var7 = ge.field_h - var6;
           var8 = 0;
           if (param1 >= ge.field_f) {
@@ -153,7 +153,7 @@ final class ai extends bh {
           return;
         } else {
           if (var5 > 0) {
-            ai.a(0, ((ai) this).field_n, var4, var3, 0, ge.field_i, ((ai) this).field_m, var6, var7, var8, 0, var5);
+            ai.a(0, this.field_n, var4, var3, 0, ge.field_i, this.field_m, var6, var7, var8, 0, var5);
             return;
           } else {
             return;
@@ -167,21 +167,21 @@ final class ai extends bh {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        if (((ai) this).field_m.length <= 255) {
-          var1 = ((ai) this).field_i * ((ai) this).field_d - 1;
-          var2 = ((ai) this).field_d - 1;
+        if (this.field_m.length <= 255) {
+          var1 = this.field_i * this.field_d - 1;
+          var2 = this.field_d - 1;
           L0: while (true) {
             if (var2 < 0) {
               return;
             } else {
               var3 = 0;
-              var4 = ((ai) this).field_i - 1;
+              var4 = this.field_i - 1;
               L1: while (true) {
                 if (var4 < 0) {
                   var2--;
                   continue L0;
                 } else {
-                  var5 = ((ai) this).field_n[var1];
+                  var5 = this.field_n[var1];
                   if (var5 != 0) {
                     var3 = 0;
                     var1--;
@@ -198,8 +198,8 @@ final class ai extends bh {
                       }
                     }
                     if ((var3 & 1) == 0) {
-                      ((ai) this).field_n[var1] = (byte) -1;
-                      ((ai) this).field_n[var1 + 1] = (byte)(var3 - 2 >> 1);
+                      this.field_n[var1] = (byte)-1;
+                      this.field_n[var1 + 1] = (byte)(var3 - 2 >> 1);
                       var1--;
                       var4--;
                       continue L1;
@@ -219,6 +219,16 @@ final class ai extends bh {
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -240,7 +250,7 @@ final class ai extends bh {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4++;
                     param3 = param1[incrementValue$10];
                     if (param3 == 0) {
@@ -248,7 +258,7 @@ final class ai extends bh {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
@@ -258,48 +268,48 @@ final class ai extends bh {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4++;
                   param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4++;
                   param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4++;
                   param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4++;
                 param3 = param1[incrementValue$18];
                 if (param3 == 0) {
@@ -307,7 +317,7 @@ final class ai extends bh {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param0[incrementValue$19] = param2[param3 & 255];
                   var12++;
@@ -320,6 +330,9 @@ final class ai extends bh {
     }
 
     private final static void a(int param0, byte[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+        int incrementValue$211 = 0;
+        int incrementValue$212 = 0;
+        int incrementValue$213 = 0;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -351,7 +364,7 @@ final class ai extends bh {
                 param10++;
                 continue L0;
               } else {
-                int incrementValue$211 = param2;
+                incrementValue$211 = param2;
                 param2++;
                 param0 = param1[incrementValue$211];
                 param4--;
@@ -362,13 +375,13 @@ final class ai extends bh {
                   if (param0 != -1) {
                     var14 = param5[param3];
                     var15 = param6[param0 & 255];
-                    int incrementValue$212 = param3;
+                    incrementValue$212 = param3;
                     param3++;
                     param5[incrementValue$212] = ((var15 & 16711935) * param12 + (var14 & 16711935) * var13 & -16711936) + ((var15 & 65280) * param12 + (var14 & 65280) * var13 & 16711680) >> 8;
                     continue L2;
                   } else {
                     L3: {
-                      int incrementValue$213 = param2;
+                      incrementValue$213 = param2;
                       param2++;
                       param0 = param1[incrementValue$213] & 255;
                       param4--;
@@ -401,12 +414,12 @@ final class ai extends bh {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ai) this).field_a;
-          param1 = param1 + ((ai) this).field_k;
+          param0 = param0 + this.field_a;
+          param1 = param1 + this.field_k;
           var4 = param0 + param1 * ge.field_h;
           var5 = 0;
-          var6 = ((ai) this).field_d;
-          var7 = ((ai) this).field_i;
+          var6 = this.field_d;
+          var7 = this.field_i;
           var8 = ge.field_h - var7;
           var9 = 0;
           if (param1 >= ge.field_f) {
@@ -457,7 +470,7 @@ final class ai extends bh {
           return;
         } else {
           if (var6 > 0) {
-            ai.a(ge.field_i, ((ai) this).field_n, ((ai) this).field_m, var5, var4, var7, var6, var8, var9, param2);
+            ai.a(ge.field_i, this.field_n, this.field_m, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -466,6 +479,8 @@ final class ai extends bh {
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -485,7 +500,7 @@ final class ai extends bh {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var13 = param1[incrementValue$66];
                 if (var13 == 0) {
@@ -495,7 +510,7 @@ final class ai extends bh {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -516,12 +531,12 @@ final class ai extends bh {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ai) this).field_a;
-          param1 = param1 + ((ai) this).field_k;
+          param0 = param0 + this.field_a;
+          param1 = param1 + this.field_k;
           var4 = param0 + param1 * ge.field_h;
           var5 = 0;
-          var6 = ((ai) this).field_d;
-          var7 = ((ai) this).field_i;
+          var6 = this.field_d;
+          var7 = this.field_i;
           var8 = ge.field_h - var7;
           var9 = 0;
           if (param1 >= ge.field_f) {
@@ -572,7 +587,7 @@ final class ai extends bh {
           return;
         } else {
           if (var6 > 0) {
-            ai.a(0, ((ai) this).field_n, var5, var4, 0, ge.field_i, ((ai) this).field_m, var7, var8, var9, 0, var6, param2);
+            ai.a(0, this.field_n, var5, var4, 0, ge.field_i, this.field_m, var7, var8, var9, 0, var6, param2);
             return;
           } else {
             return;
@@ -581,17 +596,20 @@ final class ai extends bh {
     }
 
     ai(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        ((ai) this).field_c = param0;
-        ((ai) this).field_l = param1;
-        ((ai) this).field_a = param2;
-        ((ai) this).field_k = param3;
-        ((ai) this).field_i = param4;
-        ((ai) this).field_d = param5;
-        ((ai) this).field_n = param6;
-        ((ai) this).field_m = param7;
+        this.field_c = param0;
+        this.field_l = param1;
+        this.field_a = param2;
+        this.field_k = param3;
+        this.field_i = param4;
+        this.field_d = param5;
+        this.field_n = param6;
+        this.field_m = param7;
     }
 
     private final static void a(int param0, byte[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$211 = 0;
+        int incrementValue$212 = 0;
+        int incrementValue$213 = 0;
         param10 = -param11;
         L0: while (true) {
           if (param10 >= 0) {
@@ -619,7 +637,7 @@ final class ai extends bh {
                 param10++;
                 continue L0;
               } else {
-                int incrementValue$211 = param2;
+                incrementValue$211 = param2;
                 param2++;
                 param0 = param1[incrementValue$211];
                 param4--;
@@ -628,13 +646,13 @@ final class ai extends bh {
                   continue L2;
                 } else {
                   if (param0 != -1) {
-                    int incrementValue$212 = param3;
+                    incrementValue$212 = param3;
                     param3++;
                     param5[incrementValue$212] = param6[param0 & 255];
                     continue L2;
                   } else {
                     L3: {
-                      int incrementValue$213 = param2;
+                      incrementValue$213 = param2;
                       param2++;
                       param0 = param1[incrementValue$213] & 255;
                       param4--;
@@ -659,13 +677,13 @@ final class ai extends bh {
     }
 
     ai(int param0, int param1, int param2) {
-        ((ai) this).field_i = param0;
-        ((ai) this).field_c = param0;
-        ((ai) this).field_d = param1;
-        ((ai) this).field_l = param1;
-        ((ai) this).field_k = 0;
-        ((ai) this).field_a = 0;
-        ((ai) this).field_n = new byte[param0 * param1];
-        ((ai) this).field_m = new int[param2];
+        this.field_i = param0;
+        this.field_c = param0;
+        this.field_d = param1;
+        this.field_l = param1;
+        this.field_k = 0;
+        this.field_a = 0;
+        this.field_n = new byte[param0 * param1];
+        this.field_m = new int[param2];
     }
 }

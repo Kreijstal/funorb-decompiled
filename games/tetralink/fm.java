@@ -10,6 +10,9 @@ final class fm {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 > -3) {
+            return;
+        }
         field_c = null;
         field_b = null;
         field_d = null;
@@ -18,10 +21,6 @@ final class fm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fm.A(";
         field_e = "Confirm Password: ";
         field_c = new char[128];

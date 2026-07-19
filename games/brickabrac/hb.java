@@ -19,20 +19,23 @@ abstract class hb extends tk {
                 hb.a(27, -126, 116, 12, -63, -53, 36, -10, -75);
             }
             param0.field_v = new int[]{-1};
-            param0.field_u = new char[]{'?'};
+            param0.field_u = new char[]{(char)63};
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "hb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "hb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void g(int param0) {
+        if (param0 < 20) {
+            return;
+        }
         bd.a(4, true);
     }
 
     public static void a(byte param0) {
         field_A = null;
         if (param0 <= 1) {
-            Object var2 = null;
+            kn var2 = (kn) null;
             hb.a((kn) null, true);
             field_z = null;
             return;
@@ -51,9 +54,9 @@ abstract class hb extends tk {
           }
         }
         param4 = 256 + -param4;
-        if (param8 == 0) {
+        if (-1 == (param8 ^ -1)) {
           if (0 != param1) {
-            rp.a(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 8, -(param1 * 2) + param5, param1 + param2);
+            rp.a(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 1588022344, -(param1 * 2) + param5, param1 + param2);
             rp.a(param0, 65280, param6, param4, param1, param2);
             rp.a(param0, 65280, param6, param4, param1, param2 + param5 - param1);
             rp.a(param0, 65280, param8, param4, -(2 * param1) + param5, param2 - -param1);
@@ -66,7 +69,7 @@ abstract class hb extends tk {
             return;
           }
         } else {
-          rp.a(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 8, -(param1 * 2) + param5, param1 + param2);
+          rp.a(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 1588022344, -(param1 * 2) + param5, param1 + param2);
           rp.a(param0, 65280, param6, param4, param1, param2);
           rp.a(param0, 65280, param6, param4, param1, param2 + param5 - param1);
           rp.a(param0, 65280, param8, param4, -(2 * param1) + param5, param2 - -param1);
@@ -79,14 +82,10 @@ abstract class hb extends tk {
     abstract int f(int param0);
 
     hb() {
-        ((hb) this).field_u = true;
+        this.field_u = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = 20000000L;
         field_w = 0;
         field_A = "Invite <%0> to this game";

@@ -20,7 +20,7 @@ abstract class ba {
         Throwable decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_5_0 = 0;
-        var1 = (Object) (Object) wj.field_k;
+        var1 = wj.field_k;
         synchronized (var1) {
           L0: {
             if (o.field_b == bh.field_e) {
@@ -30,7 +30,7 @@ abstract class ba {
             } else {
               oa.field_H = oi.field_e[o.field_b];
               rd.field_p = ia.field_d[o.field_b];
-              o.field_b = o.field_b - -1 & 127;
+              o.field_b = o.field_b - param0 & 127;
               stackOut_5_0 = 1;
               stackIn_6_0 = stackOut_5_0;
               break L0;
@@ -44,7 +44,10 @@ abstract class ba {
 
     public static void a(boolean param0) {
         field_h = null;
-        field_a = null;
+        field_a = (le[][]) null;
+        if (param0) {
+            return;
+        }
         field_f = null;
         field_d = null;
         field_c = null;
@@ -54,20 +57,16 @@ abstract class ba {
 
     final void a(byte param0) {
         if (param0 < 106) {
-          ((ba) this).field_e = null;
-          ge.a(((ba) this).field_e, ((ba) this).field_g, ((ba) this).field_i);
+          this.field_e = (int[]) null;
+          ge.a(this.field_e, this.field_g, this.field_i);
           return;
         } else {
-          ge.a(((ba) this).field_e, ((ba) this).field_g, ((ba) this).field_i);
+          ge.a(this.field_e, this.field_g, this.field_i);
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Please check if address is correct";
         field_c = "Warning: if you quit, you will lose any game you are in the middle of!";
         field_a = new le[7][];

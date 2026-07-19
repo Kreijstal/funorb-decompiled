@@ -23,11 +23,15 @@ final class rsa extends osa {
     }
 
     private final void k(byte param0) {
-        if (((rsa) this).field_v % 2 != 1) {
-            ((rsa) this).field_v = ((rsa) this).field_v + 1;
+        if (this.field_v % 2 != 1) {
+            this.field_v = this.field_v + 1;
         }
-        if (((rsa) this).field_w % 2 != 1) {
-            ((rsa) this).field_w = ((rsa) this).field_w + 1;
+        if (-2 != (this.field_w % 2 ^ -1)) {
+            this.field_w = this.field_w + 1;
+        }
+        if (param0 > -22) {
+            fsa var3 = (fsa) null;
+            this.a(-103, (fsa) null);
         }
     }
 
@@ -38,13 +42,13 @@ final class rsa extends osa {
         try {
             super.a(68, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "rsa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "rsa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(kh param0, byte param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        kh var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -65,15 +69,15 @@ final class rsa extends osa {
           L0: {
             L1: {
               super.a(param0, (byte) -123);
-              param0.a((byte) -128, ((rsa) this).field_t >> 16, 10);
-              param0.a((byte) -128, ((rsa) this).field_y >> 16, 10);
-              param0.a((byte) -127, ((rsa) this).field_v, 7);
-              param0.a((byte) -127, ((rsa) this).field_w, 7);
+              param0.a((byte) -128, this.field_t >> 927314576, 10);
+              param0.a((byte) -128, this.field_y >> -555921872, 10);
+              param0.a((byte) -127, this.field_v, 7);
+              param0.a((byte) -127, this.field_w, 7);
               if (param1 < -78) {
                 break L1;
               } else {
-                var4 = null;
-                ((rsa) this).a((kh) null, (byte) -48);
+                var4 = (kh) null;
+                this.a((kh) null, (byte) -48);
                 break L1;
               }
             }
@@ -83,23 +87,23 @@ final class rsa extends osa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("rsa.R(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -107,20 +111,20 @@ final class rsa extends osa {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     rsa(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
         try {
-            ((rsa) this).field_t = param1.b((byte) 44, 10) << 16;
-            ((rsa) this).field_y = param1.b((byte) 44, 10) << 16;
-            ((rsa) this).field_v = param1.b((byte) 44, 7);
-            ((rsa) this).field_w = param1.b((byte) 44, 7);
+            this.field_t = param1.b((byte) 44, 10) << -56700816;
+            this.field_y = param1.b((byte) 44, 10) << -89042896;
+            this.field_v = param1.b((byte) 44, 7);
+            this.field_w = param1.b((byte) 44, 7);
             this.k((byte) -56);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "rsa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "rsa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -139,8 +143,8 @@ final class rsa extends osa {
         int var13 = 0;
         L0: {
           var13 = TombRacer.field_G ? 1 : 0;
-          var2 = ((rsa) this).field_n.s(25745) + -((rsa) this).f(10);
-          var3 = ((rsa) this).field_n.e(false) + -((rsa) this).g((byte) 30);
+          var2 = this.field_n.s(25745) + -this.f(10);
+          var3 = this.field_n.e(false) + -this.g((byte) 30);
           if (var2 != 0) {
             break L0;
           } else {
@@ -153,8 +157,8 @@ final class rsa extends osa {
         }
         var4 = 0;
         var5 = 0;
-        var6 = ((rsa) this).field_t * (((rsa) this).field_v + -1) / 2;
-        var7 = ((rsa) this).field_y * (-1 + ((rsa) this).field_w) / 2;
+        var6 = this.field_t * (this.field_v + -1) / 2;
+        var7 = this.field_y * (-1 + this.field_w) / 2;
         if (param0 != 1) {
           return;
         } else {
@@ -201,44 +205,65 @@ final class rsa extends osa {
                 break L6;
               } else {
                 L7: {
-                  if (var2 >= 0) {
-                    var9 = (((rsa) this).field_t / 2 + var2) / ((rsa) this).field_t;
-                    break L7;
-                  } else {
-                    var9 = (-(((rsa) this).field_t / 2) + var2) / ((rsa) this).field_t;
-                    break L7;
+                  L8: {
+                    if (var2 >= 0) {
+                      break L8;
+                    } else {
+                      var9 = (-(this.field_t / 2) + var2) / this.field_t;
+                      if (var13 == 0) {
+                        break L7;
+                      } else {
+                        break L8;
+                      }
+                    }
                   }
+                  var9 = (this.field_t / 2 + var2) / this.field_t;
+                  break L7;
                 }
-                L8: {
-                  if (var3 >= 0) {
-                    var10 = (((rsa) this).field_y / 2 + var3) / ((rsa) this).field_y;
-                    break L8;
-                  } else {
-                    var10 = (var3 + -(((rsa) this).field_y / 2)) / ((rsa) this).field_y;
-                    break L8;
+                L9: {
+                  L10: {
+                    if ((var3 ^ -1) <= -1) {
+                      break L10;
+                    } else {
+                      var10 = (var3 + -(this.field_y / 2)) / this.field_y;
+                      if (var13 == 0) {
+                        break L9;
+                      } else {
+                        break L10;
+                      }
+                    }
                   }
+                  var10 = (this.field_y / 2 + var3) / this.field_y;
+                  break L9;
                 }
-                var11 = -var2 + ((rsa) this).field_t * var9;
-                var12 = -var3 + ((rsa) this).field_y * var10;
+                var11 = -var2 + this.field_t * var9;
+                var12 = -var3 + this.field_y * var10;
                 if (0 == var11) {
                   break L6;
                 } else {
                   if (var12 != 0) {
-                    if (ua.a(var11, param0 + 104) <= ua.a(var12, -104)) {
-                      var4 = var11;
-                      break L6;
-                    } else {
-                      var5 = var12;
-                      break L6;
+                    L11: {
+                      if (ua.a(var11, param0 + 104) <= ua.a(var12, -104)) {
+                        break L11;
+                      } else {
+                        var5 = var12;
+                        if (var13 == 0) {
+                          break L6;
+                        } else {
+                          break L11;
+                        }
+                      }
                     }
+                    var4 = var11;
+                    break L6;
                   } else {
-                    ((rsa) this).field_n.a((byte) -31, var4, var5);
+                    this.field_n.a((byte) -31, var4, var5);
                     break L5;
                   }
                 }
               }
             }
-            ((rsa) this).field_n.a((byte) -31, var4, var5);
+            this.field_n.a((byte) -31, var4, var5);
             break L5;
           }
           return;
@@ -268,13 +293,14 @@ final class rsa extends osa {
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
-        RuntimeException stackIn_71_0 = null;
-        StringBuilder stackIn_71_1 = null;
-        RuntimeException stackIn_72_0 = null;
-        StringBuilder stackIn_72_1 = null;
-        RuntimeException stackIn_73_0 = null;
-        StringBuilder stackIn_73_1 = null;
-        String stackIn_73_2 = null;
+        RuntimeException stackIn_83_0 = null;
+        StringBuilder stackIn_83_1 = null;
+        RuntimeException stackIn_84_0 = null;
+        StringBuilder stackIn_84_1 = null;
+        RuntimeException stackIn_85_0 = null;
+        StringBuilder stackIn_85_1 = null;
+        String stackIn_85_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
@@ -284,25 +310,26 @@ final class rsa extends osa {
         int stackOut_14_0 = 0;
         int stackOut_18_0 = 0;
         int stackOut_17_0 = 0;
-        RuntimeException stackOut_70_0 = null;
-        StringBuilder stackOut_70_1 = null;
-        RuntimeException stackOut_72_0 = null;
-        StringBuilder stackOut_72_1 = null;
-        String stackOut_72_2 = null;
-        RuntimeException stackOut_71_0 = null;
-        StringBuilder stackOut_71_1 = null;
-        String stackOut_71_2 = null;
+        RuntimeException stackOut_82_0 = null;
+        StringBuilder stackOut_82_1 = null;
+        RuntimeException stackOut_84_0 = null;
+        StringBuilder stackOut_84_1 = null;
+        String stackOut_84_2 = null;
+        RuntimeException stackOut_83_0 = null;
+        StringBuilder stackOut_83_1 = null;
+        String stackOut_83_2 = null;
         var22 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
             if (param1 == null) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
-                if (param4 <= 0) {
+                if (-1 <= (param4 ^ -1)) {
                   break L1;
                 } else {
-                  if (param0 > 0) {
+                  if ((param0 ^ -1) < -1) {
                     L2: {
                       if (param1[3] != null) {
                         stackOut_9_0 = param1[3].field_n;
@@ -437,7 +464,11 @@ final class rsa extends osa {
                               } else {
                                 param1[1].b(var20, param2);
                                 var20 = var20 + param1[1].field_n;
-                                continue L13;
+                                if (var22 != 0) {
+                                  break L12;
+                                } else {
+                                  continue L13;
+                                }
                               }
                             }
                           }
@@ -459,7 +490,11 @@ final class rsa extends osa {
                               } else {
                                 param1[7].b(var20, var15);
                                 var20 = var20 + param1[7].field_n;
-                                continue L15;
+                                if (var22 != 0) {
+                                  break L14;
+                                } else {
+                                  continue L15;
+                                }
                               }
                             }
                           }
@@ -469,7 +504,7 @@ final class rsa extends osa {
                         if (param1[3] == null) {
                           break L16;
                         } else {
-                          if (param1[3].field_k != 0) {
+                          if (-1 != (param1[3].field_k ^ -1)) {
                             bea.g(param5, var18, var16, var19);
                             var20 = var14;
                             L17: while (true) {
@@ -479,7 +514,11 @@ final class rsa extends osa {
                               } else {
                                 param1[3].b(param5, var20);
                                 var20 = var20 + param1[3].field_k;
-                                continue L17;
+                                if (var22 != 0) {
+                                  break L16;
+                                } else {
+                                  continue L17;
+                                }
                               }
                             }
                           } else {
@@ -503,7 +542,11 @@ final class rsa extends osa {
                               } else {
                                 param1[5].b(var13, var20);
                                 var20 = var20 + param1[5].field_k;
-                                continue L19;
+                                if (var22 != 0) {
+                                  break L18;
+                                } else {
+                                  continue L19;
+                                }
                               }
                             }
                           }
@@ -526,15 +569,26 @@ final class rsa extends osa {
                                   bea.a(bba.field_a);
                                   break L20;
                                 } else {
-                                  var21 = var12;
-                                  L22: while (true) {
-                                    if (var13 <= var21) {
-                                      var20 = var20 + param1[4].field_k;
+                                  if (var22 != 0) {
+                                    break L20;
+                                  } else {
+                                    var21 = var12;
+                                    L22: while (true) {
+                                      L23: {
+                                        if (var13 <= var21) {
+                                          var20 = var20 + param1[4].field_k;
+                                          break L23;
+                                        } else {
+                                          param1[4].b(var21, var20);
+                                          var21 = var21 + param1[4].field_n;
+                                          if (var22 != 0) {
+                                            break L23;
+                                          } else {
+                                            continue L22;
+                                          }
+                                        }
+                                      }
                                       continue L21;
-                                    } else {
-                                      param1[4].b(var21, var20);
-                                      var21 = var21 + param1[4].field_n;
-                                      continue L22;
                                     }
                                   }
                                 }
@@ -543,69 +597,84 @@ final class rsa extends osa {
                           }
                         }
                       }
+                      decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
-                      return;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     }
                   } else {
                     break L1;
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L23: {
+          L24: {
             var6 = decompiledCaughtException;
-            stackOut_70_0 = (RuntimeException) var6;
-            stackOut_70_1 = new StringBuilder().append("rsa.M(").append(param0).append(',');
-            stackIn_72_0 = stackOut_70_0;
-            stackIn_72_1 = stackOut_70_1;
-            stackIn_71_0 = stackOut_70_0;
-            stackIn_71_1 = stackOut_70_1;
+            stackOut_82_0 = (RuntimeException) (var6);
+            stackOut_82_1 = new StringBuilder().append("rsa.M(").append(param0).append(',');
+            stackIn_84_0 = stackOut_82_0;
+            stackIn_84_1 = stackOut_82_1;
+            stackIn_83_0 = stackOut_82_0;
+            stackIn_83_1 = stackOut_82_1;
             if (param1 == null) {
-              stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
-              stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
-              stackOut_72_2 = "null";
-              stackIn_73_0 = stackOut_72_0;
-              stackIn_73_1 = stackOut_72_1;
-              stackIn_73_2 = stackOut_72_2;
-              break L23;
+              stackOut_84_0 = (RuntimeException) ((Object) stackIn_84_0);
+              stackOut_84_1 = (StringBuilder) ((Object) stackIn_84_1);
+              stackOut_84_2 = "null";
+              stackIn_85_0 = stackOut_84_0;
+              stackIn_85_1 = stackOut_84_1;
+              stackIn_85_2 = stackOut_84_2;
+              break L24;
             } else {
-              stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
-              stackOut_71_1 = (StringBuilder) (Object) stackIn_71_1;
-              stackOut_71_2 = "{...}";
-              stackIn_73_0 = stackOut_71_0;
-              stackIn_73_1 = stackOut_71_1;
-              stackIn_73_2 = stackOut_71_2;
-              break L23;
+              stackOut_83_0 = (RuntimeException) ((Object) stackIn_83_0);
+              stackOut_83_1 = (StringBuilder) ((Object) stackIn_83_1);
+              stackOut_83_2 = "{...}";
+              stackIn_85_0 = stackOut_83_0;
+              stackIn_85_1 = stackOut_83_1;
+              stackIn_85_2 = stackOut_83_2;
+              break L24;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_73_0, stackIn_73_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_85_0), stackIn_85_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
     public static void j(byte param0) {
         field_x = null;
+        if (param0 <= 105) {
+            return;
+        }
         field_z = null;
         field_u = null;
     }
 
     final int c(int param0) {
         if (param0 != 1) {
-            Object var3 = null;
-            ((rsa) this).a((kh) null, (byte) 14);
+            kh var3 = (kh) null;
+            this.a((kh) null, (byte) 14);
         }
         return 12;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "Press F10 to open Quick Chat.";
     }
 }

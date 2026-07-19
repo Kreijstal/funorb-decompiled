@@ -28,10 +28,6 @@ final class baa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "baa.A(";
         field_f = "The following settings need to be changed:  ";
         field_e = new kea();

@@ -15,29 +15,29 @@ final class vo {
     }
 
     final static void a(bc param0, bc param1, int param2) {
+        qf discarded$0 = null;
+        qf discarded$1 = null;
+        qf discarded$2 = null;
+        qf discarded$3 = null;
         try {
             mj.field_Sb = new io(param1, param0);
-            qf discarded$0 = gg.a(128, 153, "shatteredplans_menu_open");
-            qf discarded$1 = gg.a(128, 153, "shatteredplans_menu_close");
+            discarded$0 = gg.a(param2 + 28, 153, "shatteredplans_menu_open");
+            discarded$1 = gg.a(128, 153, "shatteredplans_menu_close");
             us.field_d = gg.a(128, 256, "shatteredplans_ship_selection");
             hs.field_l = gg.a(128, 256, "shatteredplans_ship_move_order");
             jj.field_l = gg.a(128, 256, "shatteredplans_ship_attack_order");
             qc.field_w = gg.a(128, 256, "shatteredplans_factory_noise");
             pd.field_m = jj.a((byte) -111, 120, "shatteredplans_explosion");
-            qf discarded$2 = gg.a(128, 100, "shatteredplans_tab_open");
-            qf discarded$3 = gg.a(128, 100, "shatteredplans_tab_close");
-            ub.field_yb = gg.a(128, 256, "shatteredplans_next_open");
+            discarded$2 = gg.a(128, param2, "shatteredplans_tab_open");
+            discarded$3 = gg.a(128, 100, "shatteredplans_tab_close");
+            ub.field_yb = gg.a(param2 ^ 228, 256, "shatteredplans_next_open");
             sf.field_g = gg.a(128, 256, "shatteredplans_next_close");
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "vo.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + 100 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "vo.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Right click to cancel the <%0> at <%1>";
         field_a = "Battles lost in friendly space.";
     }

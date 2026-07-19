@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class ha extends di {
     static String field_m;
     static int field_q;
@@ -27,6 +25,7 @@ final class ha extends di {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         im stackOut_2_0 = null;
         im stackOut_8_0 = null;
@@ -42,21 +41,23 @@ final class ha extends di {
         String stackOut_16_2 = null;
         try {
           L0: {
-            if (((ha) this).field_r.b(param0, param1) == qf.field_d) {
+            if (this.field_r.b(param0, param1) == qf.field_d) {
               stackOut_2_0 = qf.field_d;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
-                if (!param0.equals((Object) (Object) ((ha) this).field_t)) {
+                if (!param0.equals(this.field_t)) {
                   var3 = ei.a(-110, param0);
                   if (!var3.a(-72)) {
                     stackOut_8_0 = oh.field_b;
                     stackIn_9_0 = stackOut_8_0;
-                    return stackIn_9_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
-                    ((ha) this).field_t = param0;
-                    ((ha) this).field_u = var3.a(true);
+                    this.field_t = param0;
+                    this.field_u = var3.a(true);
                     break L1;
                   }
                 } else {
@@ -64,7 +65,7 @@ final class ha extends di {
                 }
               }
               L2: {
-                if (!((ha) this).field_u) {
+                if (!this.field_u) {
                   stackOut_13_0 = qf.field_d;
                   stackIn_14_0 = stackOut_13_0;
                   break L2;
@@ -74,6 +75,7 @@ final class ha extends di {
                   break L2;
                 }
               }
+              decompiledRegionSelector0 = 2;
               break L0;
             }
           }
@@ -81,23 +83,23 @@ final class ha extends di {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var3_ref;
+            stackOut_15_0 = (RuntimeException) (var3_ref);
             stackOut_15_1 = new StringBuilder().append("ha.C(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -105,9 +107,17 @@ final class ha extends di {
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param1 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ')');
         }
-        return stackIn_14_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0;
+          } else {
+            return stackIn_14_0;
+          }
+        }
     }
 
     final String a(String param0, int param1) {
@@ -123,6 +133,7 @@ final class ha extends di {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_2_0 = null;
         String stackOut_7_0 = null;
@@ -137,20 +148,23 @@ final class ha extends di {
         String stackOut_10_2 = null;
         try {
           L0: {
-            if (((ha) this).field_r.b(param0, 0) == qf.field_d) {
-              stackOut_2_0 = ((ha) this).field_r.a(param0, -85);
+            if (this.field_r.b(param0, 0) == qf.field_d) {
+              stackOut_2_0 = this.field_r.a(param0, -85);
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              if (((ha) this).b(param0, 0) != qf.field_d) {
+              if (this.b(param0, 0) != qf.field_d) {
                 var3_int = -41 % ((param1 - 26) / 56);
                 stackOut_7_0 = vd.field_p;
                 stackIn_8_0 = stackOut_7_0;
+                decompiledRegionSelector0 = 2;
                 break L0;
               } else {
                 stackOut_5_0 = fl.field_a;
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -158,23 +172,23 @@ final class ha extends di {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("ha.B(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L1;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -182,17 +196,28 @@ final class ha extends di {
               break L1;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
-        return stackIn_8_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0;
+          } else {
+            return stackIn_8_0;
+          }
+        }
     }
 
     final static void a(eg param0, int param1, byte param2) {
+        if (param2 <= 50) {
+            return;
+        }
         try {
-            ic.field_s.a((uf) (Object) param0, -16611);
-            qc.a(4, param0, (byte) 118);
+            ic.field_s.a(param0, -16611);
+            qc.a(param1, param0, (byte) 118);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ha.D(" + (param0 != null ? "{...}" : "null") + ',' + 4 + ',' + 80 + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "ha.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -209,18 +234,18 @@ final class ha extends di {
             param2.field_a.field_d = param2;
             param2.field_d.field_a = param2;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ha.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "ha.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     ha(ej param0, ej param1) {
         super(param0);
-        ((ha) this).field_u = false;
-        ((ha) this).field_t = "";
+        this.field_u = false;
+        this.field_t = "";
         try {
-            ((ha) this).field_r = new mg(param0, param1);
+            this.field_r = new mg(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -228,13 +253,13 @@ final class ha extends di {
         field_n = null;
         field_m = null;
         field_s = null;
+        if (param0 != 0) {
+            eg var2 = (eg) null;
+            ha.a((eg) null, -9, (byte) -50);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = 0;
         field_m = "Aimed Accuracy: ";
         field_o = false;

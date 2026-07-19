@@ -17,8 +17,9 @@ final class ni extends gn {
     static ut[][] field_f;
 
     final static byte[] a(byte param0, String param1) {
+        byte[] discarded$2 = null;
         RuntimeException var2 = null;
-        Object var3 = null;
+        String var3 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -43,8 +44,8 @@ final class ni extends gn {
               if (param0 <= -49) {
                 break L1;
               } else {
-                var3 = null;
-                byte[] discarded$2 = ni.a((byte) 34, (String) null);
+                var3 = (String) null;
+                discarded$2 = ni.a((byte) 34, (String) null);
                 break L1;
               }
             }
@@ -56,23 +57,23 @@ final class ni extends gn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("ni.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -80,7 +81,7 @@ final class ni extends gn {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -90,31 +91,40 @@ final class ni extends gn {
         field_l = null;
         field_m = null;
         field_n = null;
-        field_e = null;
-        field_f = null;
-        field_h = null;
-        field_q = null;
-        field_i = null;
-        field_p = null;
+        if (param0 != -1859) {
+          return;
+        } else {
+          field_e = null;
+          field_f = (ut[][]) null;
+          field_h = null;
+          field_q = null;
+          field_i = null;
+          field_p = null;
+          return;
+        }
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (iw.field_l) {
-          return la.field_a.a(il.field_c, (byte) 127, cc.field_e);
-        } else {
-          if (!kd.field_s) {
-            if (sq.b(104, 13, 15)) {
-              return true;
-            } else {
-              if (kb.field_C) {
-                return false;
-              } else {
-                return hd.a(false, 12, 13);
-              }
-            }
+        if (param3 == -20859) {
+          if (iw.field_l) {
+            return la.field_a.a(il.field_c, (byte) 127, cc.field_e);
           } else {
-            return ov.a(15, -14, 13);
+            if (!kd.field_s) {
+              if (sq.b(param3 + 20963, param0, param1)) {
+                return true;
+              } else {
+                if (kb.field_C) {
+                  return false;
+                } else {
+                  return hd.a(false, param2, param0);
+                }
+              }
+            } else {
+              return ov.a(param1, -14, param0);
+            }
           }
+        } else {
+          return false;
         }
     }
 
@@ -123,10 +133,6 @@ final class ni extends gn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "earned: <%0>";
         field_p = "<%0> wants to join";
         field_e = "My Results";

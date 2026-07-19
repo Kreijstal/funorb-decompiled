@@ -9,54 +9,54 @@ final class mi {
     static String field_e;
 
     final void a(boolean param0, byte param1) {
-        ((mi) this).field_a = param0 ? true : false;
+        this.field_a = param0 ? true : false;
         int var3 = 15 % ((param1 - -23) / 61);
-        ((mi) this).field_b = true;
+        this.field_b = true;
     }
 
     final boolean b(byte param0) {
         if (param0 != 67) {
-            ((mi) this).field_a = true;
-            return ((mi) this).field_a;
+            this.field_a = true;
+            return this.field_a;
         }
-        return ((mi) this).field_a;
+        return this.field_a;
     }
 
     public static void a(byte param0) {
         field_e = null;
         field_d = null;
+        if (param0 != -67) {
+            field_d = (String) null;
+        }
     }
 
     final String a(int param0) {
+        boolean discarded$0 = false;
         if (param0 >= -51) {
-            boolean discarded$0 = ((mi) this).b((byte) -51);
-            return ((mi) this).field_c;
+            discarded$0 = this.b((byte) -51);
+            return this.field_c;
         }
-        return ((mi) this).field_c;
+        return this.field_c;
     }
 
     final boolean a(boolean param0) {
         if (param0) {
             return true;
         }
-        return ((mi) this).field_b;
+        return this.field_b;
     }
 
     mi(String param0) {
-        ((mi) this).field_a = false;
-        ((mi) this).field_b = false;
+        this.field_a = false;
+        this.field_b = false;
         try {
-            ((mi) this).field_c = param0;
+            this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "mi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dd.a((Throwable) ((Object) runtimeException), "mi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Previous";
     }
 }

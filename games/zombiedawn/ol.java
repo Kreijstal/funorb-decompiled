@@ -6,8 +6,8 @@ final class ol extends uc implements java.awt.event.MouseWheelListener {
 
     final synchronized int a(int param0) {
         int var3 = -21 / ((param0 - 72) / 46);
-        int var2 = ((ol) this).field_e;
-        ((ol) this).field_e = 0;
+        int var2 = this.field_e;
+        this.field_e = 0;
         return var2;
     }
 
@@ -15,22 +15,22 @@ final class ol extends uc implements java.awt.event.MouseWheelListener {
         if (param0 != 23934) {
             return;
         }
-        param1.addMouseWheelListener((java.awt.event.MouseWheelListener) this);
+        param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
     final void a(java.awt.Component param0, byte param1) {
         if (param1 != -36) {
             return;
         }
-        param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) this);
+        param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
     public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent param0) {
-        ((ol) this).field_e = ((ol) this).field_e + param0.getWheelRotation();
+        this.field_e = this.field_e + param0.getWheelRotation();
         param0.consume();
     }
 
     ol() {
-        ((ol) this).field_e = 0;
+        this.field_e = 0;
     }
 }

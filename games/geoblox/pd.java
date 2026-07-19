@@ -7,31 +7,39 @@ final class pd {
 
     public final int[] listmodes() {
         int var3 = 0;
-        java.awt.DisplayMode[] var4 = ((pd) this).field_a.getDisplayModes();
+        java.awt.DisplayMode[] var4 = this.field_a.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << 2];
+        int[] var2 = new int[var4.length << -688443102];
         for (var3 = 0; var3 < var4.length; var3++) {
-            var2[var3 << 2] = var4[var3].getWidth();
-            var2[(var3 << 2) - -1] = var4[var3].getHeight();
-            var2[2 + (var3 << 2)] = var4[var3].getBitDepth();
-            var2[(var3 << 2) - -3] = var4[var3].getRefreshRate();
+            var2[var3 << -779675038] = var4[var3].getWidth();
+            var2[(var3 << 1199279106) - -1] = var4[var3].getHeight();
+            var2[2 + (var3 << 1638972226)] = var4[var3].getBitDepth();
+            var2[(var3 << 1809051970) - -3] = var4[var3].getRefreshRate();
         }
         return var2;
     }
 
     public final void exit() {
-        if (((pd) this).field_b != null) {
-            ((pd) this).field_a.setDisplayMode(((pd) this).field_b);
-            if (!(((pd) this).field_a.getDisplayMode().equals(((pd) this).field_b))) {
+        if (this.field_b != null) {
+            this.field_a.setDisplayMode(this.field_b);
+            if (!(this.field_a.getDisplayMode().equals(this.field_b))) {
                 throw new RuntimeException("");
             }
-            ((pd) this).field_b = null;
+            this.field_b = null;
         }
         this.a(-779675038, (java.awt.Frame) null);
     }
 
     private final void a(int param0, java.awt.Frame param1) {
-        ((pd) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
+        L0: {
+          this.field_a.setFullScreenWindow((java.awt.Window) ((Object) param1));
+          if (param0 == -779675038) {
+            break L0;
+          } else {
+            this.field_a = (java.awt.GraphicsDevice) null;
+            break L0;
+          }
+        }
     }
 
     public pd() throws Exception {
@@ -41,8 +49,8 @@ final class pd {
         int var4 = 0;
         java.awt.GraphicsDevice var5 = null;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
-        ((pd) this).field_a = var1.getDefaultScreenDevice();
-        if (((pd) this).field_a.isFullScreenSupported()) {
+        this.field_a = var1.getDefaultScreenDevice();
+        if (this.field_a.isFullScreenSupported()) {
           return;
         } else {
           var2 = var1.getScreenDevices();
@@ -55,7 +63,7 @@ final class pd {
               var5 = var3[var4];
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
-                  ((pd) this).field_a = var5;
+                  this.field_a = var5;
                   return;
                 } else {
                   var4++;
@@ -76,8 +84,8 @@ final class pd {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ((pd) this).field_b = ((pd) this).field_a.getDisplayMode();
-        if (((pd) this).field_b != null) {
+        this.field_b = this.field_a.getDisplayMode();
+        if (this.field_b != null) {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
@@ -85,8 +93,8 @@ final class pd {
             if (param4 != 0) {
               break L0;
             } else {
-              var6 = ((pd) this).field_b.getRefreshRate();
-              var7 = ((pd) this).field_a.getDisplayModes();
+              var6 = this.field_b.getRefreshRate();
+              var7 = this.field_a.getDisplayModes();
               var8 = 0;
               var9 = 0;
               L1: while (true) {
@@ -134,7 +142,7 @@ final class pd {
               }
             }
           }
-          ((pd) this).field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+          this.field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
           return;
         } else {
           throw new NullPointerException();

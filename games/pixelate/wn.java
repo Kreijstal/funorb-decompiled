@@ -12,20 +12,23 @@ final class wn extends rf {
 
     final void e(byte param0) {
         try {
-            ((wn) this).field_s.b(-1);
+            this.field_s.b(-1);
         } catch (Exception exception) {
         }
-        ((wn) this).field_h = ((wn) this).field_h + 1;
+        this.field_h = this.field_h + 1;
         if (param0 != 0) {
             field_r = 79;
         }
-        ((wn) this).field_m = -1;
-        ((wn) this).field_s = null;
-        ((wn) this).field_a = (byte)(int)(1.0 + Math.random() * 255.0);
+        this.field_m = -1;
+        this.field_s = null;
+        this.field_a = (byte)(int)(1.0 + Math.random() * 255.0);
     }
 
     final static void d(int param0) {
         io.field_d = hm.a(64);
+        if (param0 >= -11) {
+            wn.c(16);
+        }
         on.field_ob = 0;
     }
 
@@ -65,10 +68,10 @@ final class wn extends rf {
                   }
                 }
                 L2: {
-                  if (((wn) this).field_s != null) {
+                  if (this.field_s != null) {
                     try {
                       L3: {
-                        ((wn) this).field_s.b(-1);
+                        this.field_s.b(-1);
                         break L3;
                       }
                     } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -78,39 +81,60 @@ final class wn extends rf {
                         break L4;
                       }
                     }
-                    ((wn) this).field_s = null;
+                    this.field_s = null;
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                ((wn) this).field_s = (mo) param0;
+                this.field_s = (mo) (param0);
                 this.e(0);
                 this.a((byte) 73, param1);
-                ((wn) this).field_g.field_m = 0;
-                ((wn) this).field_c = null;
+                this.field_g.field_m = 0;
+                this.field_c = null;
                 L5: while (true) {
-                  var4_ref3 = (rj) (Object) ((wn) this).field_f.a((byte) 80);
+                  var4_ref3 = (rj) ((Object) this.field_f.a((byte) 80));
                   if (var4_ref3 != null) {
-                    ((wn) this).field_e.a(param2 ^ 84, (lm) (Object) var4_ref3);
+                    this.field_e.a(param2 ^ 84, var4_ref3);
                     continue L5;
                   } else {
                     L6: while (true) {
-                      var4_ref3 = (rj) (Object) ((wn) this).field_p.a((byte) 80);
+                      var4_ref3 = (rj) ((Object) this.field_p.a((byte) 80));
                       if (var4_ref3 != null) {
-                        ((wn) this).field_l.a(param2 + 104, (lm) (Object) var4_ref3);
+                        this.field_l.a(param2 + 104, var4_ref3);
                         continue L6;
                       } else {
                         L7: {
-                          if (0 != ((wn) this).field_a) {
-                            {
+                          if (0 != this.field_a) {
+                            try {
                               L8: {
-                                ((wn) this).field_b.field_m = 0;
-                                ((wn) this).field_b.e(160, 4);
-                                ((wn) this).field_b.e(160, (int) ((wn) this).field_a);
-                                ((wn) this).field_b.d(0, param2 + -126);
-                                ((wn) this).field_s.a(((wn) this).field_b.field_k.length, -89, 0, ((wn) this).field_b.field_k);
+                                this.field_b.field_m = 0;
+                                this.field_b.e(160, 4);
+                                this.field_b.e(160, (int) this.field_a);
+                                this.field_b.d(0, param2 + -126);
+                                this.field_s.a(this.field_b.field_k.length, -89, 0, this.field_b.field_k);
                                 break L8;
+                              }
+                            } catch (java.io.IOException decompiledCaughtParameter1) {
+                              decompiledCaughtException = decompiledCaughtParameter1;
+                              L9: {
+                                var4_ref = (IOException) (Object) decompiledCaughtException;
+                                try {
+                                  L10: {
+                                    this.field_s.b(param2 ^ -9);
+                                    break L10;
+                                  }
+                                } catch (java.lang.Exception decompiledCaughtParameter2) {
+                                  decompiledCaughtException = decompiledCaughtParameter2;
+                                  L11: {
+                                    var5 = (Exception) (Object) decompiledCaughtException;
+                                    break L11;
+                                  }
+                                }
+                                this.field_h = this.field_h + 1;
+                                this.field_s = null;
+                                this.field_m = -2;
+                                break L9;
                               }
                             }
                             break L7;
@@ -118,8 +142,8 @@ final class wn extends rf {
                             break L7;
                           }
                         }
-                        ((wn) this).field_o = 0;
-                        ((wn) this).field_k = hm.a(64);
+                        this.field_o = 0;
+                        this.field_k = hm.a(64);
                         break L0;
                       }
                     }
@@ -130,23 +154,23 @@ final class wn extends rf {
               decompiledCaughtException = decompiledCaughtParameter3;
               L12: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_27_0 = (RuntimeException) var4_ref2;
+                stackOut_27_0 = (RuntimeException) (var4_ref2);
                 stackOut_27_1 = new StringBuilder().append("wn.D(");
                 stackIn_29_0 = stackOut_27_0;
                 stackIn_29_1 = stackOut_27_1;
                 stackIn_28_0 = stackOut_27_0;
                 stackIn_28_1 = stackOut_27_1;
                 if (param0 == null) {
-                  stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-                  stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+                  stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+                  stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
                   stackOut_29_2 = "null";
                   stackIn_30_0 = stackOut_29_0;
                   stackIn_30_1 = stackOut_29_1;
                   stackIn_30_2 = stackOut_29_2;
                   break L12;
                 } else {
-                  stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-                  stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+                  stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+                  stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
                   stackOut_28_2 = "{...}";
                   stackIn_30_0 = stackOut_28_0;
                   stackIn_30_1 = stackOut_28_1;
@@ -154,7 +178,7 @@ final class wn extends rf {
                   break L12;
                 }
               }
-              throw aa.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param1 + ',' + param2 + ')');
+              throw aa.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param1 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -197,13 +221,13 @@ final class wn extends rf {
             int stackOut_89_0 = 0;
             L0: {
               var16 = Pixelate.field_H ? 1 : 0;
-              if (null == ((wn) this).field_s) {
+              if (null == this.field_s) {
                 break L0;
               } else {
                 L1: {
                   var2_long = hm.a(64);
-                  var4 = (int)(var2_long - ((wn) this).field_k);
-                  ((wn) this).field_k = var2_long;
+                  var4 = (int)(var2_long - this.field_k);
+                  this.field_k = var2_long;
                   if (200 >= var4) {
                     break L1;
                   } else {
@@ -211,11 +235,11 @@ final class wn extends rf {
                     break L1;
                   }
                 }
-                ((wn) this).field_o = ((wn) this).field_o + var4;
-                if (((wn) this).field_o > 30000) {
+                this.field_o = this.field_o + var4;
+                if (-30001 > (this.field_o ^ -1)) {
                   try {
                     L2: {
-                      ((wn) this).field_s.b(-1);
+                      this.field_s.b(-1);
                       break L2;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -225,18 +249,18 @@ final class wn extends rf {
                       break L3;
                     }
                   }
-                  ((wn) this).field_s = null;
+                  this.field_s = null;
                   break L0;
                 } else {
                   break L0;
                 }
               }
             }
-            if (((wn) this).field_s == null) {
-              if (((wn) this).b(-97) != 0) {
+            if (this.field_s == null) {
+              if (-1 != (this.b(-97) ^ -1)) {
                 return false;
               } else {
-                if (((wn) this).a((byte) 34) == 0) {
+                if (this.a((byte) 34) == 0) {
                   return true;
                 } else {
                   return false;
@@ -245,32 +269,32 @@ final class wn extends rf {
             } else {
               try {
                 L4: {
-                  ((wn) this).field_s.b((byte) -106);
-                  var2_ref = (rj) (Object) ((wn) this).field_e.c(61);
+                  this.field_s.b((byte) -106);
+                  var2_ref = (rj) ((Object) this.field_e.c(61));
                   L5: while (true) {
                     if (var2_ref == null) {
-                      var2_ref = (rj) (Object) ((wn) this).field_l.c(72);
+                      var2_ref = (rj) ((Object) this.field_l.c(72));
                       L6: while (true) {
                         if (var2_ref == null) {
                           var2_int = 0;
                           L7: while (true) {
                             L8: {
-                              if (var2_int >= 100) {
+                              if (-101 >= (var2_int ^ -1)) {
                                 break L8;
                               } else {
-                                var3_int = ((wn) this).field_s.a(-73);
+                                var3_int = this.field_s.a(-73);
                                 if (0 > var3_int) {
                                   throw new IOException();
                                 } else {
                                   if (0 != var3_int) {
                                     L9: {
-                                      ((wn) this).field_o = 0;
+                                      this.field_o = 0;
                                       var4 = 0;
-                                      if (null == ((wn) this).field_c) {
+                                      if (null == this.field_c) {
                                         var4 = 10;
                                         break L9;
                                       } else {
-                                        if (((wn) this).field_c.field_H == 0) {
+                                        if (this.field_c.field_H == 0) {
                                           var4 = 1;
                                           break L9;
                                         } else {
@@ -281,10 +305,10 @@ final class wn extends rf {
                                     L10: {
                                       if (0 >= var4) {
                                         L11: {
-                                          var5 = -((wn) this).field_c.field_B + ((wn) this).field_c.field_D.field_k.length;
-                                          var6 = -((wn) this).field_c.field_H + 512;
-                                          if (var5 + -((wn) this).field_c.field_D.field_m < var6) {
-                                            var6 = -((wn) this).field_c.field_D.field_m + var5;
+                                          var5 = -this.field_c.field_B + this.field_c.field_D.field_k.length;
+                                          var6 = -this.field_c.field_H + 512;
+                                          if (var5 + -this.field_c.field_D.field_m < var6) {
+                                            var6 = -this.field_c.field_D.field_m + var5;
                                             break L11;
                                           } else {
                                             break L11;
@@ -299,8 +323,8 @@ final class wn extends rf {
                                           }
                                         }
                                         L13: {
-                                          ((wn) this).field_s.a(((wn) this).field_c.field_D.field_k, ((wn) this).field_c.field_D.field_m, (byte) 119, var6);
-                                          if (((wn) this).field_a == 0) {
+                                          this.field_s.a(this.field_c.field_D.field_k, this.field_c.field_D.field_m, (byte) 119, var6);
+                                          if (this.field_a == 0) {
                                             break L13;
                                           } else {
                                             var17 = 0;
@@ -309,31 +333,31 @@ final class wn extends rf {
                                               if (var17 >= var6) {
                                                 break L13;
                                               } else {
-                                                ((wn) this).field_c.field_D.field_k[((wn) this).field_c.field_D.field_m + var17] = (byte)bn.a((int) ((wn) this).field_c.field_D.field_k[((wn) this).field_c.field_D.field_m + var17], (int) ((wn) this).field_a);
+                                                this.field_c.field_D.field_k[this.field_c.field_D.field_m + var17] = (byte)bn.a((int) this.field_c.field_D.field_k[this.field_c.field_D.field_m + var17], (int) this.field_a);
                                                 var17++;
                                                 continue L14;
                                               }
                                             }
                                           }
                                         }
-                                        ((wn) this).field_c.field_H = ((wn) this).field_c.field_H + var6;
-                                        ((wn) this).field_c.field_D.field_m = ((wn) this).field_c.field_D.field_m + var6;
-                                        if (var5 != ((wn) this).field_c.field_D.field_m) {
-                                          if (((wn) this).field_c.field_H != 512) {
+                                        this.field_c.field_H = this.field_c.field_H + var6;
+                                        this.field_c.field_D.field_m = this.field_c.field_D.field_m + var6;
+                                        if (var5 != this.field_c.field_D.field_m) {
+                                          if ((this.field_c.field_H ^ -1) != -513) {
                                             break L10;
                                           } else {
-                                            ((wn) this).field_c.field_H = 0;
+                                            this.field_c.field_H = 0;
                                             break L10;
                                           }
                                         } else {
-                                          ((wn) this).field_c.e(17);
-                                          ((wn) this).field_c.field_v = false;
-                                          ((wn) this).field_c = null;
+                                          this.field_c.e(17);
+                                          this.field_c.field_v = false;
+                                          this.field_c = null;
                                           break L10;
                                         }
                                       } else {
                                         L15: {
-                                          var5 = -((wn) this).field_g.field_m + var4;
+                                          var5 = -this.field_g.field_m + var4;
                                           if (var3_int < var5) {
                                             var5 = var3_int;
                                             break L15;
@@ -342,14 +366,14 @@ final class wn extends rf {
                                           }
                                         }
                                         L16: {
-                                          ((wn) this).field_s.a(((wn) this).field_g.field_k, ((wn) this).field_g.field_m, (byte) 119, var5);
-                                          if (0 != ((wn) this).field_a) {
+                                          this.field_s.a(this.field_g.field_k, this.field_g.field_m, (byte) 119, var5);
+                                          if (0 != this.field_a) {
                                             var6 = 0;
                                             L17: while (true) {
                                               if (var5 <= var6) {
                                                 break L16;
                                               } else {
-                                                ((wn) this).field_g.field_k[var6 + ((wn) this).field_g.field_m] = (byte)bn.a((int) ((wn) this).field_g.field_k[var6 + ((wn) this).field_g.field_m], (int) ((wn) this).field_a);
+                                                this.field_g.field_k[var6 + this.field_g.field_m] = (byte)bn.a((int) this.field_g.field_k[var6 + this.field_g.field_m], (int) this.field_a);
                                                 var6++;
                                                 continue L17;
                                               }
@@ -358,15 +382,15 @@ final class wn extends rf {
                                             break L16;
                                           }
                                         }
-                                        ((wn) this).field_g.field_m = ((wn) this).field_g.field_m + var5;
-                                        if (var4 <= ((wn) this).field_g.field_m) {
-                                          if (null == ((wn) this).field_c) {
+                                        this.field_g.field_m = this.field_g.field_m + var5;
+                                        if (var4 <= this.field_g.field_m) {
+                                          if (null == this.field_c) {
                                             L18: {
-                                              ((wn) this).field_g.field_m = 0;
-                                              var6 = ((wn) this).field_g.f(255);
-                                              var7 = ((wn) this).field_g.k(0);
-                                              var8 = ((wn) this).field_g.f(255);
-                                              var9 = ((wn) this).field_g.k(0);
+                                              this.field_g.field_m = 0;
+                                              var6 = this.field_g.f(255);
+                                              var7 = this.field_g.k(0);
+                                              var8 = this.field_g.f(255);
+                                              var9 = this.field_g.k(0);
                                               var10 = 127 & var8;
                                               if ((var8 & 128) == 0) {
                                                 stackOut_49_0 = 0;
@@ -380,16 +404,16 @@ final class wn extends rf {
                                             }
                                             L19: {
                                               var11 = stackIn_50_0;
-                                              var12 = ((long)var6 << 32) - -(long)var7;
+                                              var12 = ((long)var6 << 1872827296) - -(long)var7;
                                               var14 = null;
                                               if (var11 == 0) {
-                                                var14_ref = (rj) (Object) ((wn) this).field_f.c(96);
+                                                var14_ref = (rj) ((Object) this.field_f.c(96));
                                                 L20: while (true) {
                                                   if (var14_ref == null) {
                                                     break L19;
                                                   } else {
-                                                    if (~var14_ref.field_q != ~var12) {
-                                                      var14_ref = (rj) (Object) ((wn) this).field_f.a(65151);
+                                                    if ((var14_ref.field_q ^ -1L) != (var12 ^ -1L)) {
+                                                      var14_ref = (rj) ((Object) this.field_f.a(65151));
                                                       continue L20;
                                                     } else {
                                                       break L19;
@@ -397,13 +421,13 @@ final class wn extends rf {
                                                   }
                                                 }
                                               } else {
-                                                var14_ref = (rj) (Object) ((wn) this).field_p.c(62);
+                                                var14_ref = (rj) ((Object) this.field_p.c(62));
                                                 L21: while (true) {
                                                   if (var14_ref == null) {
                                                     break L19;
                                                   } else {
                                                     if (var14_ref.field_q != var12) {
-                                                      var14_ref = (rj) (Object) ((wn) this).field_p.a(65151);
+                                                      var14_ref = (rj) ((Object) this.field_p.a(65151));
                                                       continue L21;
                                                     } else {
                                                       break L19;
@@ -425,24 +449,24 @@ final class wn extends rf {
                                                 }
                                               }
                                               var15 = stackIn_66_0;
-                                              ((wn) this).field_c = var14_ref;
-                                              ((wn) this).field_c.field_D = new we(var15 + var9 - -((wn) this).field_c.field_B);
-                                              ((wn) this).field_c.field_D.e(160, var10);
-                                              ((wn) this).field_c.field_D.d(var9, -59);
-                                              ((wn) this).field_c.field_H = 10;
-                                              ((wn) this).field_g.field_m = 0;
+                                              this.field_c = var14_ref;
+                                              this.field_c.field_D = new we(var15 + var9 - -this.field_c.field_B);
+                                              this.field_c.field_D.e(160, var10);
+                                              this.field_c.field_D.d(var9, -59);
+                                              this.field_c.field_H = 10;
+                                              this.field_g.field_m = 0;
                                               break L10;
                                             } else {
                                               throw new IOException();
                                             }
                                           } else {
-                                            if (((wn) this).field_c.field_H == 0) {
-                                              if (((wn) this).field_g.field_k[0] == -1) {
-                                                ((wn) this).field_c.field_H = 1;
-                                                ((wn) this).field_g.field_m = 0;
+                                            if (this.field_c.field_H == 0) {
+                                              if ((this.field_g.field_k[0] ^ -1) == 0) {
+                                                this.field_c.field_H = 1;
+                                                this.field_g.field_m = 0;
                                                 break L10;
                                               } else {
-                                                ((wn) this).field_c = null;
+                                                this.field_c = null;
                                                 break L10;
                                               }
                                             } else {
@@ -475,22 +499,22 @@ final class wn extends rf {
                             break L4;
                           }
                         } else {
-                          ((wn) this).field_b.field_m = 0;
-                          ((wn) this).field_b.e(160, 0);
-                          ((wn) this).field_b.a(var2_ref.field_q, 91);
-                          ((wn) this).field_s.a(((wn) this).field_b.field_k.length, -113, 0, ((wn) this).field_b.field_k);
-                          ((wn) this).field_p.a(-114, (lm) (Object) var2_ref);
-                          var2_ref = (rj) (Object) ((wn) this).field_l.a(65151);
+                          this.field_b.field_m = 0;
+                          this.field_b.e(160, 0);
+                          this.field_b.a(var2_ref.field_q, 91);
+                          this.field_s.a(this.field_b.field_k.length, -113, 0, this.field_b.field_k);
+                          this.field_p.a(-114, var2_ref);
+                          var2_ref = (rj) ((Object) this.field_l.a(65151));
                           continue L6;
                         }
                       }
                     } else {
-                      ((wn) this).field_b.field_m = 0;
-                      ((wn) this).field_b.e(160, 1);
-                      ((wn) this).field_b.a(var2_ref.field_q, 109);
-                      ((wn) this).field_s.a(((wn) this).field_b.field_k.length, -118, 0, ((wn) this).field_b.field_k);
-                      ((wn) this).field_f.a(98, (lm) (Object) var2_ref);
-                      var2_ref = (rj) (Object) ((wn) this).field_e.a(65151);
+                      this.field_b.field_m = 0;
+                      this.field_b.e(160, 1);
+                      this.field_b.a(var2_ref.field_q, 109);
+                      this.field_s.a(this.field_b.field_k.length, -118, 0, this.field_b.field_k);
+                      this.field_f.a(98, var2_ref);
+                      var2_ref = (rj) ((Object) this.field_e.a(65151));
                       continue L5;
                     }
                   }
@@ -500,7 +524,7 @@ final class wn extends rf {
                 var2 = (IOException) (Object) decompiledCaughtException;
                 try {
                   L24: {
-                    ((wn) this).field_s.b(-1);
+                    this.field_s.b(-1);
                     break L24;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
@@ -511,13 +535,13 @@ final class wn extends rf {
                   }
                 }
                 L26: {
-                  ((wn) this).field_h = ((wn) this).field_h + 1;
-                  ((wn) this).field_s = null;
-                  ((wn) this).field_m = -2;
-                  if (0 != ((wn) this).b(-30)) {
+                  this.field_h = this.field_h + 1;
+                  this.field_s = null;
+                  this.field_m = -2;
+                  if (0 != this.b(-30)) {
                     break L26;
                   } else {
-                    if (((wn) this).a((byte) 34) != 0) {
+                    if (this.a((byte) 34) != 0) {
                       break L26;
                     } else {
                       return true;
@@ -538,23 +562,48 @@ final class wn extends rf {
     public static void f(int param0) {
         field_q = null;
         field_t = null;
+        if (param0 <= 60) {
+            wn.d(81);
+        }
     }
 
     private final void e(int param0) {
         try {
+            IOException iOException = null;
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
-            if (((wn) this).field_s == null) {
+            if (this.field_s == null) {
               return;
             } else {
-              {
+              try {
                 L0: {
-                  ((wn) this).field_b.field_m = 0;
-                  ((wn) this).field_b.e(160, 6);
-                  ((wn) this).field_b.a(3, (byte) 109);
-                  ((wn) this).field_b.b(1276387944, 0);
-                  ((wn) this).field_s.a(((wn) this).field_b.field_k.length, param0 ^ -103, param0, ((wn) this).field_b.field_k);
+                  this.field_b.field_m = 0;
+                  this.field_b.e(160, 6);
+                  this.field_b.a(3, (byte) 109);
+                  this.field_b.b(1276387944, 0);
+                  this.field_s.a(this.field_b.field_k.length, param0 ^ -103, param0, this.field_b.field_k);
                   break L0;
+                }
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L1: {
+                  iOException = (IOException) (Object) decompiledCaughtException;
+                  try {
+                    L2: {
+                      this.field_s.b(-1);
+                      break L2;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    L3: {
+                      var3 = (Exception) (Object) decompiledCaughtException;
+                      break L3;
+                    }
+                  }
+                  this.field_s = null;
+                  this.field_m = -2;
+                  this.field_h = this.field_h + 1;
+                  break L1;
                 }
               }
               return;
@@ -594,14 +643,14 @@ final class wn extends rf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1_ref, "wn.E(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) var1_ref), "wn.E(" + param0 + ')');
         }
     }
 
     final void b(byte param0) {
         int var2 = -89 % ((param0 - 82) / 33);
-        if (!(((wn) this).field_s == null)) {
-            ((wn) this).field_s.b(-1);
+        if (!(this.field_s == null)) {
+            this.field_s.b(-1);
         }
     }
 
@@ -609,80 +658,84 @@ final class wn extends rf {
         try {
             IOException iOException = null;
             Exception var4 = null;
-            we stackIn_4_0 = null;
-            int stackIn_4_1 = 0;
-            we stackIn_5_0 = null;
-            int stackIn_5_1 = 0;
             we stackIn_6_0 = null;
             int stackIn_6_1 = 0;
-            int stackIn_6_2 = 0;
+            we stackIn_7_0 = null;
+            int stackIn_7_1 = 0;
+            we stackIn_8_0 = null;
+            int stackIn_8_1 = 0;
+            int stackIn_8_2 = 0;
             Throwable decompiledCaughtException = null;
-            we stackOut_3_0 = null;
-            int stackOut_3_1 = 0;
             we stackOut_5_0 = null;
             int stackOut_5_1 = 0;
-            int stackOut_5_2 = 0;
-            we stackOut_4_0 = null;
-            int stackOut_4_1 = 0;
-            int stackOut_4_2 = 0;
-            if (((wn) this).field_s == null) {
-              return;
-            } else {
-              try {
-                L0: {
-                  L1: {
-                    ((wn) this).field_b.field_m = 0;
-                    stackOut_3_0 = ((wn) this).field_b;
-                    stackOut_3_1 = 160;
-                    stackIn_5_0 = stackOut_3_0;
-                    stackIn_5_1 = stackOut_3_1;
-                    stackIn_4_0 = stackOut_3_0;
-                    stackIn_4_1 = stackOut_3_1;
-                    if (!param1) {
-                      stackOut_5_0 = (we) (Object) stackIn_5_0;
-                      stackOut_5_1 = stackIn_5_1;
-                      stackOut_5_2 = 3;
+            we stackOut_7_0 = null;
+            int stackOut_7_1 = 0;
+            int stackOut_7_2 = 0;
+            we stackOut_6_0 = null;
+            int stackOut_6_1 = 0;
+            int stackOut_6_2 = 0;
+            if (param0 == 73) {
+              if (this.field_s == null) {
+                return;
+              } else {
+                try {
+                  L0: {
+                    L1: {
+                      this.field_b.field_m = 0;
+                      stackOut_5_0 = this.field_b;
+                      stackOut_5_1 = 160;
+                      stackIn_7_0 = stackOut_5_0;
+                      stackIn_7_1 = stackOut_5_1;
                       stackIn_6_0 = stackOut_5_0;
                       stackIn_6_1 = stackOut_5_1;
-                      stackIn_6_2 = stackOut_5_2;
-                      break L1;
-                    } else {
-                      stackOut_4_0 = (we) (Object) stackIn_4_0;
-                      stackOut_4_1 = stackIn_4_1;
-                      stackOut_4_2 = 2;
-                      stackIn_6_0 = stackOut_4_0;
-                      stackIn_6_1 = stackOut_4_1;
-                      stackIn_6_2 = stackOut_4_2;
-                      break L1;
+                      if (!param1) {
+                        stackOut_7_0 = (we) ((Object) stackIn_7_0);
+                        stackOut_7_1 = stackIn_7_1;
+                        stackOut_7_2 = 3;
+                        stackIn_8_0 = stackOut_7_0;
+                        stackIn_8_1 = stackOut_7_1;
+                        stackIn_8_2 = stackOut_7_2;
+                        break L1;
+                      } else {
+                        stackOut_6_0 = (we) ((Object) stackIn_6_0);
+                        stackOut_6_1 = stackIn_6_1;
+                        stackOut_6_2 = 2;
+                        stackIn_8_0 = stackOut_6_0;
+                        stackIn_8_1 = stackOut_6_1;
+                        stackIn_8_2 = stackOut_6_2;
+                        break L1;
+                      }
                     }
+                    ((we) (Object) stackIn_8_0).e(stackIn_8_1, stackIn_8_2);
+                    this.field_b.a(0L, -59);
+                    this.field_s.a(this.field_b.field_k.length, -85, 0, this.field_b.field_k);
+                    break L0;
                   }
-                  ((we) (Object) stackIn_6_0).e(stackIn_6_1, stackIn_6_2);
-                  ((wn) this).field_b.a(0L, -59);
-                  ((wn) this).field_s.a(((wn) this).field_b.field_k.length, -85, 0, ((wn) this).field_b.field_k);
-                  break L0;
-                }
-              } catch (java.io.IOException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                L2: {
-                  iOException = (IOException) (Object) decompiledCaughtException;
-                  try {
-                    L3: {
-                      ((wn) this).field_s.b(-1);
-                      break L3;
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L2: {
+                    iOException = (IOException) (Object) decompiledCaughtException;
+                    try {
+                      L3: {
+                        this.field_s.b(-1);
+                        break L3;
+                      }
+                    } catch (java.lang.Exception decompiledCaughtParameter1) {
+                      decompiledCaughtException = decompiledCaughtParameter1;
+                      L4: {
+                        var4 = (Exception) (Object) decompiledCaughtException;
+                        break L4;
+                      }
                     }
-                  } catch (java.lang.Exception decompiledCaughtParameter1) {
-                    decompiledCaughtException = decompiledCaughtParameter1;
-                    L4: {
-                      var4 = (Exception) (Object) decompiledCaughtException;
-                      break L4;
-                    }
+                    this.field_h = this.field_h + 1;
+                    this.field_m = -2;
+                    this.field_s = null;
+                    break L2;
                   }
-                  ((wn) this).field_h = ((wn) this).field_h + 1;
-                  ((wn) this).field_m = -2;
-                  ((wn) this).field_s = null;
-                  break L2;
                 }
+                return;
               }
+            } else {
               return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -696,10 +749,6 @@ final class wn extends rf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = 256;
         field_q = new int[8192];
     }

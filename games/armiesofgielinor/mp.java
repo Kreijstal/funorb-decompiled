@@ -15,24 +15,25 @@ final class mp extends je {
     static je field_Qb;
 
     mp(long param0, mp param1, String param2, String param3) {
-        this(param0, (je) (Object) param1, param1.field_Kb.field_Nb, param1.field_Kb.field_Ib, param1.field_Ib, param2, param3);
+        this(param0, param1, param1.field_Kb.field_Nb, param1.field_Kb.field_Ib, param1.field_Ib, param2, param3);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
+        int discarded$2 = 0;
         if (param7 > -34) {
-          int discarded$2 = mp.k(17);
-          ((mp) this).field_gb = param4;
-          ((mp) this).field_S = param0;
-          ((mp) this).field_ab = param5;
-          ((mp) this).field_ob = param6;
-          ((mp) this).a((byte) -110, param1, param3, param2);
+          discarded$2 = mp.k(17);
+          this.field_gb = param4;
+          this.field_S = param0;
+          this.field_ab = param5;
+          this.field_ob = param6;
+          this.a((byte) -110, param1, param3, param2);
           return;
         } else {
-          ((mp) this).field_gb = param4;
-          ((mp) this).field_S = param0;
-          ((mp) this).field_ab = param5;
-          ((mp) this).field_ob = param6;
-          ((mp) this).a((byte) -110, param1, param3, param2);
+          this.field_gb = param4;
+          this.field_S = param0;
+          this.field_ab = param5;
+          this.field_ob = param6;
+          this.a((byte) -110, param1, param3, param2);
           return;
         }
     }
@@ -58,17 +59,17 @@ final class mp extends je {
     mp(long param0, je param1, je param2, ll param3, je param4, String param5, String param6) {
         super(param0, param1);
         try {
-            ((mp) this).field_Nb = new je(0L, (je) null);
-            ((mp) this).field_Kb = new dn(0L, ((mp) this).field_Nb, param2, param3);
-            ((mp) this).field_Ib = new je(0L, param4);
-            ((mp) this).field_Rb = new je(0L, param4);
-            ((mp) this).field_Ib.field_X = param5;
-            ((mp) this).field_Rb.field_X = param6;
-            ((mp) this).a((je) (Object) ((mp) this).field_Kb, 41);
-            ((mp) this).a(((mp) this).field_Ib, 80);
-            ((mp) this).a(((mp) this).field_Rb, 111);
+            this.field_Nb = new je(0L, (je) null);
+            this.field_Kb = new dn(0L, this.field_Nb, param2, param3);
+            this.field_Ib = new je(0L, param4);
+            this.field_Rb = new je(0L, param4);
+            this.field_Ib.field_X = param5;
+            this.field_Rb.field_X = param6;
+            this.a(this.field_Kb, 41);
+            this.a(this.field_Ib, 80);
+            this.a(this.field_Rb, 111);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "mp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "mp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -76,26 +77,26 @@ final class mp extends je {
         if (param0 > -38) {
           return 60;
         } else {
-          return nr.field_e.field_v - nr.field_e.field_L + (-(nr.field_e.field_H >> 1) - -(nr.field_e.field_y >> 2) + 3);
+          return nr.field_e.field_v - nr.field_e.field_L + (-(nr.field_e.field_H >> 1472789153) - -(nr.field_e.field_y >> 738224194) + 3);
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
-        var5 = (((mp) this).field_gb + param3) / 2;
-        var6 = ((mp) this).field_ob - param2;
-        ((mp) this).field_Kb.a(0, false, ((mp) this).field_gb, param3, param1, 0, -param3 + var6);
-        ((mp) this).field_Ib.field_S = 0;
-        ((mp) this).field_Ib.field_ob = param2;
-        ((mp) this).field_Ib.field_ab = var6;
-        ((mp) this).field_Ib.field_gb = var5 - param3;
-        ((mp) this).field_Rb.field_ab = var6;
-        ((mp) this).field_Rb.field_gb = ((mp) this).field_gb - var5;
-        ((mp) this).field_Rb.field_S = var5;
-        ((mp) this).field_Rb.field_ob = param2;
+        var5 = (this.field_gb + param3) / 2;
+        var6 = this.field_ob - param2;
+        this.field_Kb.a(0, false, this.field_gb, param3, param1, 0, -param3 + var6);
+        this.field_Ib.field_S = 0;
+        this.field_Ib.field_ob = param2;
+        this.field_Ib.field_ab = var6;
+        this.field_Ib.field_gb = var5 - param3;
+        this.field_Rb.field_ab = var6;
+        this.field_Rb.field_gb = this.field_gb - var5;
+        this.field_Rb.field_S = var5;
+        this.field_Rb.field_ob = param2;
         if (param0 != -110) {
-          ((mp) this).a((byte) 61, 6, 46, 70);
+          this.a((byte) 61, 6, 46, 70);
           return;
         } else {
           return;
@@ -103,10 +104,6 @@ final class mp extends je {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Pb = "Passwords must be between 5 and 20 characters long";
         field_Mb = new jl();
     }

@@ -49,7 +49,7 @@ final class tf {
               if (param0 >= 14) {
                 break L1;
               } else {
-                field_a = null;
+                field_a = (String) null;
                 break L1;
               }
             }
@@ -57,10 +57,10 @@ final class tf {
               L3: {
                 param2 = qe.a((byte) 36, '_', param2, "");
                 var3 = pc.a(param2, 0);
-                if (0 != param1.indexOf(param2)) {
+                if (0 != (param1.indexOf(param2) ^ -1)) {
                   break L3;
                 } else {
-                  if (0 == param1.indexOf(var3)) {
+                  if (0 == (param1.indexOf(var3) ^ -1)) {
                     stackOut_6_0 = 0;
                     stackIn_7_0 = stackOut_6_0;
                     break L2;
@@ -79,23 +79,23 @@ final class tf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_0 = (RuntimeException) (var3_ref);
             stackOut_8_1 = new StringBuilder().append("tf.B(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -104,23 +104,23 @@ final class tf {
             }
           }
           L5: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -128,7 +128,7 @@ final class tf {
               break L5;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -138,35 +138,35 @@ final class tf {
         int var5_int = 0;
         int var6 = 0;
         String var7 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
         RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         try {
           L0: {
             L1: {
               pj.field_r[0] = og.field_w.nextInt();
               pj.field_r[1] = og.field_w.nextInt();
-              pj.field_r[2] = (int)(md.field_m >> 32);
+              pj.field_r[2] = (int)(md.field_m >> 787276256);
               pj.field_r[3] = (int)md.field_m;
               sp.field_c.field_f = 0;
               sp.field_c.a(pj.field_r[0], -16384);
               sp.field_c.a(pj.field_r[1], -16384);
-              sp.field_c.a(pj.field_r[2], -16384);
+              sp.field_c.a(pj.field_r[2], param1 + -16459);
               sp.field_c.a(pj.field_r[3], -16384);
-              lo.a(24, sp.field_c);
+              lo.a(param1 + -51, sp.field_c);
               sp.field_c.c(-161478600, param3);
               param2.a(sp.field_c, (byte) 124);
               tp.field_f.field_f = 0;
@@ -218,63 +218,71 @@ final class tf {
             L6: {
               tp.field_f.a(true, var6);
               var7 = mf.a(le.b((byte) -20), -28697);
-              if (var7 == null) {
-                var7 = "";
+              if (param1 == 75) {
                 break L6;
               } else {
+                field_a = (String) null;
                 break L6;
               }
             }
             L7: {
-              tp.field_f.b(var7, (byte) -23);
-              if (null == ld.field_r) {
+              if (var7 == null) {
+                var7 = "";
                 break L7;
               } else {
-                tp.field_f.a(ld.field_r, (byte) -117);
                 break L7;
               }
             }
-            tg.a(sp.field_c, (ng) (Object) tp.field_f, gn.field_S, -107, lm.field_j);
+            L8: {
+              tp.field_f.b(var7, (byte) -23);
+              if (null == ld.field_r) {
+                break L8;
+              } else {
+                tp.field_f.a(ld.field_r, (byte) -117);
+                break L8;
+              }
+            }
+            tg.a(sp.field_c, tp.field_f, gn.field_S, -107, lm.field_j);
             tp.field_f.b(977272835, -var5_int + tp.field_f.field_f);
             ak.a(-1, (byte) -48);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L9: {
             var5 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var5;
-            stackOut_19_1 = new StringBuilder().append("tf.A(").append(param0).append(',').append(75).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackOut_21_0 = (RuntimeException) (var5);
+            stackOut_21_1 = new StringBuilder().append("tf.A(").append(param0).append(',').append(param1).append(',');
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
             if (param2 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
-              break L8;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L9;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
-              break L8;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L9;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param3 + ',' + param4 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 >= -6) {
-            field_b = null;
+            field_b = (String) null;
             field_b = null;
             return;
         }
@@ -282,10 +290,6 @@ final class tf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Last Spider";
         field_a = "Type your age in years";
     }

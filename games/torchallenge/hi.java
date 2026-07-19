@@ -7,8 +7,9 @@ final class hi extends ic {
     static ka[] field_F;
 
     public static void h(int param0) {
+        qe discarded$0 = null;
         if (param0 != -1) {
-            qe discarded$0 = hi.a(-17, -69, -84, 52, -66, 71);
+            discarded$0 = hi.a(-17, -69, -84, 52, -66, 71);
         }
         field_F = null;
         field_G = null;
@@ -17,11 +18,11 @@ final class hi extends ic {
     hi(ee param0) {
         super(param0.field_m, param0.field_i, param0.field_p, param0.field_l, (j) null, (gg) null);
         try {
-            param0.a((byte) 112, 0, ((hi) this).field_l, ((hi) this).field_p, 0);
-            ((hi) this).field_H = 256;
-            ((hi) this).field_A = param0;
+            param0.a((byte) 112, 0, this.field_l, this.field_p, 0);
+            this.field_H = 256;
+            this.field_A = param0;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "hi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,6 +59,7 @@ final class hi extends ic {
         int stackIn_46_0 = 0;
         int stackIn_87_0 = 0;
         int stackIn_95_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_44_0 = 0;
         int stackOut_43_0 = 0;
@@ -99,7 +101,8 @@ final class hi extends ic {
                 }
                 var12 = var11 - var10;
                 if (0 >= var12) {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   if (null != vk.field_i) {
                     L4: {
@@ -113,12 +116,12 @@ final class hi extends ic {
                       var20 = 0;
                       if (!pl.a(var14, -4346, var15)) {
                         var22 = ic.field_E[var15][var14];
-                        if ((var22 & 1) >= -1) {
-                          if (-1 < (var22 & 2)) {
+                        if ((var22 & 1 ^ -1) >= -1) {
+                          if (-1 > (var22 & 2 ^ -1)) {
                             var20 = 16;
                             break L4;
                           } else {
-                            if ((4 & var22) > 0) {
+                            if ((4 & var22 ^ -1) < -1) {
                               var20 = 32;
                               break L4;
                             } else {
@@ -154,7 +157,7 @@ final class hi extends ic {
                             break L5;
                           } else {
                             var24 = ic.field_E[var15][var22];
-                            if ((var24 & 1) > 0) {
+                            if (-1 > (var24 & 1 ^ -1)) {
                               var23 = 0;
                               break L5;
                             } else {
@@ -182,7 +185,7 @@ final class hi extends ic {
                     }
                     L6: {
                       if (var14 != param4) {
-                        if (var23 > 0) {
+                        if ((var23 ^ -1) < -1) {
                           if (var22 == param4) {
                             stackOut_44_0 = 1;
                             stackIn_46_0 = stackOut_44_0;
@@ -205,7 +208,8 @@ final class hi extends ic {
                     }
                     var24 = stackIn_46_0;
                     if (var24 == 0) {
-                      return;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     } else {
                       L7: {
                         var25 = kj.field_C[0].field_v;
@@ -343,12 +347,12 @@ final class hi extends ic {
                         L21: {
                           var29 = -1;
                           var30 = 1;
-                          if (var5_int < 3) {
+                          if ((var5_int ^ -1) > -4) {
                             break L21;
                           } else {
                             if (!ol.field_a) {
                               L22: {
-                                var29 = -(ef.field_k >> 8 << 8) + ef.field_k;
+                                var29 = -(ef.field_k >> -1796685848 << 932040360) + ef.field_k;
                                 var30 = 2;
                                 var29 = var29 + -128;
                                 if (0 <= var29) {
@@ -373,7 +377,7 @@ final class hi extends ic {
                                 }
                               }
                               L24: {
-                                if (var29 <= 1) {
+                                if (-2 <= (var29 ^ -1)) {
                                   var29 = 2;
                                   break L24;
                                 } else {
@@ -393,18 +397,21 @@ final class hi extends ic {
                           }
                         }
                         ll.a(var27, var30, var10, var7, var19 != 0, var18 != 0, var17 != 0, var26, var29, var28, true, var11);
+                        decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
-                        return;
+                        decompiledRegionSelector0 = 3;
+                        break L0;
                       }
                     }
                   } else {
-                    return;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               } else {
                 L25: {
-                  if ((1 << var7 & vi.field_a) > 0) {
+                  if (-1 > (1 << var7 & vi.field_a ^ -1)) {
                     var5_int++;
                     break L25;
                   } else {
@@ -419,13 +426,30 @@ final class hi extends ic {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var5, "hi.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.a((Throwable) ((Object) var5), "hi.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                return;
+              }
+            }
+          }
         }
     }
 
     public hi() {
         super(0, 0, 0, 0, (j) null, (gg) null);
-        ((hi) this).field_H = 256;
+        this.field_H = 256;
     }
 
     final static qe a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -471,9 +495,9 @@ final class hi extends ic {
               var12 = 0;
               L1: while (true) {
                 if (var12 >= var8) {
-                  return (qe) var7;
+                  return (qe) (var7);
                 } else {
-                  if (bi.field_g[param1][param5][param3][1 + var12] >= 0) {
+                  if (-1 >= (bi.field_g[param1][param5][param3][1 + var12] ^ -1)) {
                     if (ea.field_g.length > bi.field_g[param1][param5][param3][var12 - -1]) {
                       var14 = ea.field_g[bi.field_g[param1][param5][param3][var12 - -1]];
                       var6_ref = var14;
@@ -499,9 +523,9 @@ final class hi extends ic {
                             }
                             L3: {
                               var9 = stackIn_26_0;
-                              if (-14 != var14.field_L) {
+                              if (-14 != (var14.field_L ^ -1)) {
                                 if (var9 == 0) {
-                                  if (-23 != var14.field_F) {
+                                  if (-23 != (var14.field_F ^ -1)) {
                                     stackOut_32_0 = 1;
                                     stackIn_34_0 = stackOut_32_0;
                                     break L3;
@@ -527,10 +551,10 @@ final class hi extends ic {
                                 if (13 == var14.field_L) {
                                   break L5;
                                 } else {
-                                  if (var14.field_db < 0) {
+                                  if ((var14.field_db ^ -1) > -1) {
                                     break L5;
                                   } else {
-                                    if (var14.field_F == 22) {
+                                    if ((var14.field_F ^ -1) == -23) {
                                       break L5;
                                     } else {
                                       stackOut_37_0 = 0;
@@ -564,7 +588,7 @@ final class hi extends ic {
                                 }
                               }
                               L8: {
-                                if (param3 != 1) {
+                                if ((param3 ^ -1) != -2) {
                                   break L8;
                                 } else {
                                   if (var10 != 0) {
@@ -588,7 +612,7 @@ final class hi extends ic {
                             }
                             var14.a(param0, param2, var14.field_B, var14.field_H, var14.field_o, var14.field_F, 2657, var14.field_u);
                             var14.a((byte) -117, param2, param0);
-                            var7 = (Object) (Object) var6_ref;
+                            var7 = var6_ref;
                             var12++;
                             continue L1;
                           } else {
@@ -623,21 +647,21 @@ final class hi extends ic {
         if (param3 != 0) {
             return;
         }
-        if (null == ((hi) this).field_A) {
+        if (null == this.field_A) {
             return;
         }
-        if (!(((hi) this).field_H != 0)) {
+        if (!(this.field_H != 0)) {
             return;
         }
-        if (((hi) this).field_H == 256) {
-            ((hi) this).field_A.a(((hi) this).field_i + param0, ((hi) this).field_m + param1, param2, param3);
+        if ((this.field_H ^ -1) == -257) {
+            this.field_A.a(this.field_i + param0, this.field_m + param1, param2, param3);
             return;
         }
-        ka var5 = new ka(((hi) this).field_A.field_p, ((hi) this).field_A.field_l);
+        ka var5 = new ka(this.field_A.field_p, this.field_A.field_l);
         ad.a(-13, var5);
-        ((hi) this).field_A.a(0, 0, param2, param3);
+        this.field_A.a(0, 0, param2, param3);
         ie.b((byte) -9);
-        var5.d(param1 + ((hi) this).field_m, param0 + ((hi) this).field_i, ((hi) this).field_H);
+        var5.d(param1 + this.field_m, param0 + this.field_i, this.field_H);
     }
 
     static {

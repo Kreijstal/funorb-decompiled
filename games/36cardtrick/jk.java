@@ -12,14 +12,17 @@ final class jk {
     final String a(int param0) {
         if (param0 != 0) {
             jk.a(false);
-            return ((jk) this).field_e;
+            return this.field_e;
         }
-        return ((jk) this).field_e;
+        return this.field_e;
     }
 
     final static void a(boolean param0) {
         db.field_a = new kl();
-        vb.field_h.c((lk) (Object) db.field_a, (byte) 48);
+        vb.field_h.c(db.field_a, (byte) 48);
+        if (param0) {
+            jk.a((byte) 87);
+        }
     }
 
     jk(String param0) {
@@ -28,16 +31,21 @@ final class jk {
 
     final boolean b(boolean param0) {
         if (!param0) {
-            ((jk) this).field_f = false;
-            return ((jk) this).field_f;
+            this.field_f = false;
+            return this.field_f;
         }
-        return ((jk) this).field_f;
+        return this.field_f;
     }
 
     public static void a(byte param0) {
         field_c = null;
         field_b = null;
         field_d = null;
+        if (param0 != -63) {
+            field_b = (td) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
@@ -71,11 +79,11 @@ final class jk {
         try {
           L0: {
             L1: {
-              ((jk) this).field_e = param0;
-              if (null != ((jk) this).field_e) {
+              this.field_e = param0;
+              if (null != this.field_e) {
                 break L1;
               } else {
-                ((jk) this).field_e = "";
+                this.field_e = "";
                 break L1;
               }
             }
@@ -97,11 +105,11 @@ final class jk {
                 break L2;
               }
             }
-            ((jk) this).field_f = stackIn_6_1 != 0;
-            if (((jk) this).field_e.length() != 0) {
+            ((jk) (this)).field_f = stackIn_6_1 != 0;
+            if (this.field_e.length() != 0) {
               break L0;
             } else {
-              ((jk) this).field_f = false;
+              this.field_f = false;
               return;
             }
           }
@@ -109,23 +117,23 @@ final class jk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("jk.<init>(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -133,15 +141,11 @@ final class jk {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new td();
         field_d = new String[]{"All scores", "My scores", "Best each"};
     }

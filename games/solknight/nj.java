@@ -11,6 +11,6 @@ public class nj {
     nj field_g;
 
     nj() {
-        ((nj) this).field_c = 0;
+        this.field_c = 0;
     }
 }

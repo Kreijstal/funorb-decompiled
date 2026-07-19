@@ -35,8 +35,6 @@ final class wm {
         int[] var14 = null;
         int[] var16 = null;
         int[] var18 = null;
-        int[] var19 = null;
-        int[] var20 = null;
         byte[] stackIn_20_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -62,16 +60,14 @@ final class wm {
               if (param0) {
                 break L1;
               } else {
-                ((wm) this).field_h = -34;
+                this.field_h = -34;
                 break L1;
               }
             }
             L2: {
-              if (((wm) this).field_a != null) {
-                var3_int = 14 + (int)((long)((wm) this).field_h * (long)param1.length / (long)((wm) this).field_b);
-                var20 = new int[var3_int];
-                var18 = var20;
-                var16 = var18;
+              if (this.field_a != null) {
+                var3_int = 14 + (int)((long)this.field_h * (long)param1.length / (long)this.field_b);
+                var16 = new int[var3_int];
                 var14 = var16;
                 var4 = var14;
                 var5 = 0;
@@ -83,17 +79,17 @@ final class wm {
                     var12 = 0;
                     var7 = var12;
                     L4: while (true) {
-                      if (~var12 <= ~var3_int) {
+                      if ((var12 ^ -1) <= (var3_int ^ -1)) {
                         break L2;
                       } else {
                         L5: {
-                          var8 = 32768 + var20[var12] >> 16;
+                          var8 = 32768 + var16[var12] >> 1456988656;
                           if (-128 > var8) {
-                            param1[var12] = (byte) -128;
+                            param1[var12] = (byte)-128;
                             break L5;
                           } else {
-                            if (var8 > 127) {
-                              param1[var12] = (byte) 127;
+                            if (-128 > (var8 ^ -1)) {
+                              param1[var12] = (byte)127;
                               break L5;
                             } else {
                               param1[var12] = (byte)var8;
@@ -107,18 +103,18 @@ final class wm {
                     }
                   } else {
                     var8 = param1[var7];
-                    var19 = ((wm) this).field_a[var6];
+                    var18 = this.field_a[var6];
                     var10 = 0;
                     L6: while (true) {
-                      if (var10 >= 14) {
-                        var6 = var6 + ((wm) this).field_h;
-                        var10 = var6 / ((wm) this).field_b;
-                        var6 = var6 - ((wm) this).field_b * var10;
+                      if (-15 >= (var10 ^ -1)) {
+                        var6 = var6 + this.field_h;
+                        var10 = var6 / this.field_b;
+                        var6 = var6 - this.field_b * var10;
                         var5 = var5 + var10;
                         var7++;
                         continue L3;
                       } else {
-                        var4[var5 + var10] = var4[var5 + var10] + var8 * var19[var10];
+                        var4[var5 + var10] = var4[var5 + var10] + var8 * var18[var10];
                         var10++;
                         continue L6;
                       }
@@ -129,7 +125,7 @@ final class wm {
                 break L2;
               }
             }
-            stackOut_19_0 = (byte[]) param1;
+            stackOut_19_0 = (byte[]) (param1);
             stackIn_20_0 = stackOut_19_0;
             break L0;
           }
@@ -137,23 +133,23 @@ final class wm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var3;
+            stackOut_21_0 = (RuntimeException) (var3);
             stackOut_21_1 = new StringBuilder().append("wm.E(").append(param0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -161,14 +157,14 @@ final class wm {
               break L7;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
         }
         return stackIn_20_0;
     }
 
     final int b(int param0, byte param1) {
-        if (((wm) this).field_a != null) {
-            param0 = (int)((long)param0 * (long)((wm) this).field_h / (long)((wm) this).field_b);
+        if (this.field_a != null) {
+            param0 = (int)((long)param0 * (long)this.field_h / (long)this.field_b);
         }
         if (param1 < 4) {
             return -99;
@@ -187,7 +183,14 @@ final class wm {
             var1_int = -1 + ke.field_X.length;
             L1: while (true) {
               if (var1_int < 0) {
-                wm.a(false);
+                L2: {
+                  if (!param0) {
+                    break L2;
+                  } else {
+                    wm.a(false);
+                    break L2;
+                  }
+                }
                 break L0;
               } else {
                 ke.field_X[var1_int] = false;
@@ -199,16 +202,17 @@ final class wm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "wm.D(" + false + ')');
+          throw lj.a((Throwable) ((Object) var1), "wm.D(" + param0 + ')');
         }
     }
 
     final int a(int param0, byte param1) {
-        if (null != ((wm) this).field_a) {
-            param0 = 6 + (int)((long)param0 * (long)((wm) this).field_h / (long)((wm) this).field_b);
+        int discarded$0 = 0;
+        if (null != this.field_a) {
+            param0 = 6 + (int)((long)param0 * (long)this.field_h / (long)this.field_b);
         }
         if (param1 > -98) {
-            int discarded$0 = ((wm) this).b(96, (byte) -119);
+            discarded$0 = this.b(96, (byte) -119);
         }
         return param0;
     }
@@ -227,19 +231,19 @@ final class wm {
           var3 = sa.a(param1, param0, 0);
           param0 = param0 / var3;
           param1 = param1 / var3;
-          ((wm) this).field_b = param0;
-          ((wm) this).field_h = param1;
-          ((wm) this).field_a = new int[param0][14];
+          this.field_b = param0;
+          this.field_h = param1;
+          this.field_a = new int[param0][14];
           var4 = 0;
           L0: while (true) {
             if (var4 >= param0) {
               return;
             } else {
               L1: {
-                var5 = ((wm) this).field_a[var4];
+                var5 = this.field_a[var4];
                 var6 = (double)var4 / (double)param0 + 6.0;
                 var8 = (int)Math.floor(-7.0 + var6 + 1.0);
-                if (var8 >= 0) {
+                if (-1 >= (var8 ^ -1)) {
                   break L1;
                 } else {
                   var8 = 0;
@@ -292,10 +296,6 @@ final class wm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Player Name: ";
     }
 }

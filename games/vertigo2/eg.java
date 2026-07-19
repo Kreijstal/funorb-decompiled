@@ -47,32 +47,32 @@ final class eg extends tk {
               if (param0 == -3599) {
                 break L0;
               } else {
-                field_q = null;
+                field_q = (String) null;
                 break L0;
               }
             }
             L1: {
-              if (((eg) this).field_u == null) {
+              if (this.field_u == null) {
                 break L1;
               } else {
                 L2: {
                   var2_long = gk.a(param0 + 3686);
-                  var4 = (int)(-((eg) this).field_k + var2_long);
-                  if (var4 > 200) {
+                  var4 = (int)(-this.field_k + var2_long);
+                  if (-201 > (var4 ^ -1)) {
                     var4 = 200;
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                ((eg) this).field_k = var2_long;
-                ((eg) this).field_o = ((eg) this).field_o + var4;
-                if (((eg) this).field_o <= 30000) {
+                this.field_k = var2_long;
+                this.field_o = this.field_o + var4;
+                if ((this.field_o ^ -1) >= -30001) {
                   break L1;
                 } else {
                   try {
                     L3: {
-                      ((eg) this).field_u.b(0);
+                      this.field_u.b(0);
                       break L3;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -82,16 +82,16 @@ final class eg extends tk {
                       break L4;
                     }
                   }
-                  ((eg) this).field_u = null;
+                  this.field_u = null;
                   break L1;
                 }
               }
             }
-            if (null == ((eg) this).field_u) {
-              if (((eg) this).d((byte) -109) != 0) {
+            if (null == this.field_u) {
+              if (-1 != (this.d((byte) -109) ^ -1)) {
                 return false;
               } else {
-                if (0 == ((eg) this).b(param0 ^ 3598)) {
+                if (0 == this.b(param0 ^ 3598)) {
                   return true;
                 } else {
                   return false;
@@ -100,32 +100,32 @@ final class eg extends tk {
             } else {
               try {
                 L5: {
-                  ((eg) this).field_u.c(-26206);
-                  var2_ref = (ia) (Object) ((eg) this).field_b.b((byte) -50);
+                  this.field_u.c(-26206);
+                  var2_ref = (ia) ((Object) this.field_b.b((byte) -50));
                   L6: while (true) {
                     if (var2_ref == null) {
-                      var2_ref = (ia) (Object) ((eg) this).field_d.b((byte) -50);
+                      var2_ref = (ia) ((Object) this.field_d.b((byte) -50));
                       L7: while (true) {
                         if (var2_ref == null) {
                           var2_int = 0;
                           L8: while (true) {
                             L9: {
-                              if (var2_int >= 100) {
+                              if ((var2_int ^ -1) <= -101) {
                                 break L9;
                               } else {
-                                var3_int = ((eg) this).field_u.a(15166);
+                                var3_int = this.field_u.a(15166);
                                 if (var3_int < 0) {
                                   throw new IOException();
                                 } else {
-                                  if (var3_int != 0) {
+                                  if (-1 != (var3_int ^ -1)) {
                                     L10: {
-                                      ((eg) this).field_o = 0;
+                                      this.field_o = 0;
                                       var4 = 0;
-                                      if (null == ((eg) this).field_h) {
+                                      if (null == this.field_h) {
                                         var4 = 10;
                                         break L10;
                                       } else {
-                                        if (((eg) this).field_h.field_F != 0) {
+                                        if (this.field_h.field_F != 0) {
                                           break L10;
                                         } else {
                                           var4 = 1;
@@ -134,12 +134,12 @@ final class eg extends tk {
                                       }
                                     }
                                     L11: {
-                                      if (var4 <= 0) {
+                                      if (-1 <= (var4 ^ -1)) {
                                         L12: {
-                                          var5 = ((eg) this).field_h.field_J.field_p.length + -((eg) this).field_h.field_B;
-                                          var6 = -((eg) this).field_h.field_F + 512;
-                                          if (var5 - ((eg) this).field_h.field_J.field_u < var6) {
-                                            var6 = -((eg) this).field_h.field_J.field_u + var5;
+                                          var5 = this.field_h.field_J.field_p.length + -this.field_h.field_B;
+                                          var6 = -this.field_h.field_F + 512;
+                                          if (var5 - this.field_h.field_J.field_u < var6) {
+                                            var6 = -this.field_h.field_J.field_u + var5;
                                             break L12;
                                           } else {
                                             break L12;
@@ -154,15 +154,15 @@ final class eg extends tk {
                                           }
                                         }
                                         L14: {
-                                          ((eg) this).field_u.a(((eg) this).field_h.field_J.field_p, false, var6, ((eg) this).field_h.field_J.field_u);
-                                          if (((eg) this).field_l != 0) {
+                                          this.field_u.a(this.field_h.field_J.field_p, false, var6, this.field_h.field_J.field_u);
+                                          if (-1 != (this.field_l ^ -1)) {
                                             var17 = 0;
                                             var7 = var17;
                                             L15: while (true) {
-                                              if (~var17 <= ~var6) {
+                                              if (var17 >= var6) {
                                                 break L14;
                                               } else {
-                                                ((eg) this).field_h.field_J.field_p[((eg) this).field_h.field_J.field_u + var17] = (byte)tk.a((int) ((eg) this).field_h.field_J.field_p[((eg) this).field_h.field_J.field_u + var17], (int) ((eg) this).field_l);
+                                                this.field_h.field_J.field_p[this.field_h.field_J.field_u + var17] = (byte)tk.a((int) this.field_h.field_J.field_p[this.field_h.field_J.field_u + var17], (int) this.field_l);
                                                 var17++;
                                                 continue L15;
                                               }
@@ -171,24 +171,24 @@ final class eg extends tk {
                                             break L14;
                                           }
                                         }
-                                        ((eg) this).field_h.field_F = ((eg) this).field_h.field_F + var6;
-                                        ((eg) this).field_h.field_J.field_u = ((eg) this).field_h.field_J.field_u + var6;
-                                        if (~((eg) this).field_h.field_J.field_u != ~var5) {
-                                          if (((eg) this).field_h.field_F != 512) {
+                                        this.field_h.field_F = this.field_h.field_F + var6;
+                                        this.field_h.field_J.field_u = this.field_h.field_J.field_u + var6;
+                                        if (this.field_h.field_J.field_u != var5) {
+                                          if ((this.field_h.field_F ^ -1) != -513) {
                                             break L11;
                                           } else {
-                                            ((eg) this).field_h.field_F = 0;
+                                            this.field_h.field_F = 0;
                                             break L11;
                                           }
                                         } else {
-                                          ((eg) this).field_h.a(param0 ^ 3700);
-                                          ((eg) this).field_h.field_z = false;
-                                          ((eg) this).field_h = null;
+                                          this.field_h.a(param0 ^ 3700);
+                                          this.field_h.field_z = false;
+                                          this.field_h = null;
                                           break L11;
                                         }
                                       } else {
                                         L16: {
-                                          var5 = var4 + -((eg) this).field_i.field_u;
+                                          var5 = var4 + -this.field_i.field_u;
                                           if (var3_int < var5) {
                                             var5 = var3_int;
                                             break L16;
@@ -197,14 +197,14 @@ final class eg extends tk {
                                           }
                                         }
                                         L17: {
-                                          ((eg) this).field_u.a(((eg) this).field_i.field_p, false, var5, ((eg) this).field_i.field_u);
-                                          if (((eg) this).field_l != 0) {
+                                          this.field_u.a(this.field_i.field_p, false, var5, this.field_i.field_u);
+                                          if (this.field_l != 0) {
                                             var6 = 0;
                                             L18: while (true) {
-                                              if (~var6 <= ~var5) {
+                                              if (var6 >= var5) {
                                                 break L17;
                                               } else {
-                                                ((eg) this).field_i.field_p[var6 + ((eg) this).field_i.field_u] = (byte)tk.a((int) ((eg) this).field_i.field_p[var6 + ((eg) this).field_i.field_u], (int) ((eg) this).field_l);
+                                                this.field_i.field_p[var6 + this.field_i.field_u] = (byte)tk.a((int) this.field_i.field_p[var6 + this.field_i.field_u], (int) this.field_l);
                                                 var6++;
                                                 continue L18;
                                               }
@@ -213,30 +213,30 @@ final class eg extends tk {
                                             break L17;
                                           }
                                         }
-                                        ((eg) this).field_i.field_u = ((eg) this).field_i.field_u + var5;
-                                        if (~var4 >= ~((eg) this).field_i.field_u) {
-                                          if (((eg) this).field_h != null) {
-                                            if (((eg) this).field_h.field_F != 0) {
+                                        this.field_i.field_u = this.field_i.field_u + var5;
+                                        if (var4 <= this.field_i.field_u) {
+                                          if (this.field_h != null) {
+                                            if (this.field_h.field_F != 0) {
                                               throw new IOException();
                                             } else {
-                                              if (-1 != ((eg) this).field_i.field_p[0]) {
-                                                ((eg) this).field_h = null;
+                                              if (-1 != this.field_i.field_p[0]) {
+                                                this.field_h = null;
                                                 break L11;
                                               } else {
-                                                ((eg) this).field_h.field_F = 1;
-                                                ((eg) this).field_i.field_u = 0;
+                                                this.field_h.field_F = 1;
+                                                this.field_i.field_u = 0;
                                                 break L11;
                                               }
                                             }
                                           } else {
                                             L19: {
-                                              ((eg) this).field_i.field_u = 0;
-                                              var6 = ((eg) this).field_i.h(param0 + 3588);
-                                              var7 = ((eg) this).field_i.b(true);
-                                              var8 = ((eg) this).field_i.h(-11);
-                                              var9 = ((eg) this).field_i.b(true);
+                                              this.field_i.field_u = 0;
+                                              var6 = this.field_i.h(param0 + 3588);
+                                              var7 = this.field_i.b(true);
+                                              var8 = this.field_i.h(-11);
+                                              var9 = this.field_i.b(true);
                                               var10 = var8 & 127;
-                                              if ((128 & var8) == 0) {
+                                              if (-1 == (128 & var8 ^ -1)) {
                                                 stackOut_49_0 = 0;
                                                 stackIn_50_0 = stackOut_49_0;
                                                 break L19;
@@ -248,16 +248,16 @@ final class eg extends tk {
                                             }
                                             L20: {
                                               var11 = stackIn_50_0;
-                                              var12 = (long)var7 + ((long)var6 << 32);
+                                              var12 = (long)var7 + ((long)var6 << -1130058336);
                                               var14 = null;
                                               if (var11 == 0) {
-                                                var14_ref = (ia) (Object) ((eg) this).field_a.b((byte) -50);
+                                                var14_ref = (ia) ((Object) this.field_a.b((byte) -50));
                                                 L21: while (true) {
                                                   if (var14_ref == null) {
                                                     break L20;
                                                   } else {
-                                                    if (~var14_ref.field_n != ~var12) {
-                                                      var14_ref = (ia) (Object) ((eg) this).field_a.a(true);
+                                                    if ((var14_ref.field_n ^ -1L) != (var12 ^ -1L)) {
+                                                      var14_ref = (ia) ((Object) this.field_a.a(true));
                                                       continue L21;
                                                     } else {
                                                       break L20;
@@ -265,15 +265,15 @@ final class eg extends tk {
                                                   }
                                                 }
                                               } else {
-                                                var14_ref = (ia) (Object) ((eg) this).field_g.b((byte) -50);
+                                                var14_ref = (ia) ((Object) this.field_g.b((byte) -50));
                                                 L22: while (true) {
                                                   if (var14_ref == null) {
                                                     break L20;
                                                   } else {
-                                                    if (~var12 == ~var14_ref.field_n) {
+                                                    if ((var12 ^ -1L) == (var14_ref.field_n ^ -1L)) {
                                                       break L20;
                                                     } else {
-                                                      var14_ref = (ia) (Object) ((eg) this).field_g.a(true);
+                                                      var14_ref = (ia) ((Object) this.field_g.a(true));
                                                       continue L22;
                                                     }
                                                   }
@@ -284,7 +284,7 @@ final class eg extends tk {
                                               throw new IOException();
                                             } else {
                                               L23: {
-                                                ((eg) this).field_h = var14_ref;
+                                                this.field_h = var14_ref;
                                                 if (0 == var10) {
                                                   stackOut_65_0 = 5;
                                                   stackIn_66_0 = stackOut_65_0;
@@ -296,11 +296,11 @@ final class eg extends tk {
                                                 }
                                               }
                                               var15 = stackIn_66_0;
-                                              ((eg) this).field_h.field_J = new ed(var9 + (var15 - -((eg) this).field_h.field_B));
-                                              ((eg) this).field_h.field_J.f(var10, -127);
-                                              ((eg) this).field_h.field_J.e(var9, param0 + 3599);
-                                              ((eg) this).field_h.field_F = 10;
-                                              ((eg) this).field_i.field_u = 0;
+                                              this.field_h.field_J = new ed(var9 + (var15 - -this.field_h.field_B));
+                                              this.field_h.field_J.f(var10, -127);
+                                              this.field_h.field_J.e(var9, param0 + 3599);
+                                              this.field_h.field_F = 10;
+                                              this.field_i.field_u = 0;
                                               break L11;
                                             }
                                           }
@@ -322,22 +322,22 @@ final class eg extends tk {
                             break L5;
                           }
                         } else {
-                          ((eg) this).field_f.field_u = 0;
-                          ((eg) this).field_f.f(0, 93);
-                          ((eg) this).field_f.b((byte) 125, var2_ref.field_n);
-                          ((eg) this).field_u.a(0, ((eg) this).field_f.field_p.length, -93, ((eg) this).field_f.field_p);
-                          ((eg) this).field_g.a(false, (gp) (Object) var2_ref);
-                          var2_ref = (ia) (Object) ((eg) this).field_d.a(true);
+                          this.field_f.field_u = 0;
+                          this.field_f.f(0, 93);
+                          this.field_f.b((byte) 125, var2_ref.field_n);
+                          this.field_u.a(0, this.field_f.field_p.length, -93, this.field_f.field_p);
+                          this.field_g.a(false, var2_ref);
+                          var2_ref = (ia) ((Object) this.field_d.a(true));
                           continue L7;
                         }
                       }
                     } else {
-                      ((eg) this).field_f.field_u = 0;
-                      ((eg) this).field_f.f(1, param0 ^ -3703);
-                      ((eg) this).field_f.b((byte) 90, var2_ref.field_n);
-                      ((eg) this).field_u.a(0, ((eg) this).field_f.field_p.length, param0 ^ -3646, ((eg) this).field_f.field_p);
-                      ((eg) this).field_a.a(false, (gp) (Object) var2_ref);
-                      var2_ref = (ia) (Object) ((eg) this).field_b.a(true);
+                      this.field_f.field_u = 0;
+                      this.field_f.f(1, param0 ^ -3703);
+                      this.field_f.b((byte) 90, var2_ref.field_n);
+                      this.field_u.a(0, this.field_f.field_p.length, param0 ^ -3646, this.field_f.field_p);
+                      this.field_a.a(false, var2_ref);
+                      var2_ref = (ia) ((Object) this.field_b.a(true));
                       continue L6;
                     }
                   }
@@ -347,7 +347,7 @@ final class eg extends tk {
                 var2 = (IOException) (Object) decompiledCaughtException;
                 try {
                   L24: {
-                    ((eg) this).field_u.b(param0 ^ -3599);
+                    this.field_u.b(param0 ^ -3599);
                     break L24;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
@@ -358,13 +358,13 @@ final class eg extends tk {
                   }
                 }
                 L26: {
-                  ((eg) this).field_m = ((eg) this).field_m + 1;
-                  ((eg) this).field_j = -2;
-                  ((eg) this).field_u = null;
-                  if (((eg) this).d((byte) -102) != 0) {
+                  this.field_m = this.field_m + 1;
+                  this.field_j = -2;
+                  this.field_u = null;
+                  if (-1 != (this.d((byte) -102) ^ -1)) {
                     break L26;
                   } else {
-                    if (((eg) this).b(-1) != 0) {
+                    if (this.b(-1) != 0) {
                       break L26;
                     } else {
                       return true;
@@ -411,12 +411,12 @@ final class eg extends tk {
             try {
               L0: {
                 L1: {
-                  if (((eg) this).field_u == null) {
+                  if (this.field_u == null) {
                     break L1;
                   } else {
                     try {
                       L2: {
-                        ((eg) this).field_u.b(0);
+                        this.field_u.b(0);
                         break L2;
                       }
                     } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -426,31 +426,52 @@ final class eg extends tk {
                         break L3;
                       }
                     }
-                    ((eg) this).field_u = null;
+                    this.field_u = null;
                     break L1;
                   }
                 }
-                ((eg) this).field_u = (pm) param0;
+                this.field_u = (pm) (param0);
                 this.g(0);
                 this.a(param1, (byte) -50);
-                ((eg) this).field_h = null;
-                ((eg) this).field_i.field_u = 0;
+                this.field_h = null;
+                this.field_i.field_u = 0;
                 L4: while (true) {
-                  var4_ref3 = (ia) (Object) ((eg) this).field_a.a(-67);
+                  var4_ref3 = (ia) ((Object) this.field_a.a(-67));
                   if (var4_ref3 == null) {
                     L5: while (true) {
-                      var4_ref3 = (ia) (Object) ((eg) this).field_g.a(-75);
+                      var4_ref3 = (ia) ((Object) this.field_g.a(-75));
                       if (var4_ref3 == null) {
                         L6: {
-                          if (((eg) this).field_l != 0) {
-                            {
+                          if (-1 != (this.field_l ^ -1)) {
+                            try {
                               L7: {
-                                ((eg) this).field_f.field_u = 0;
-                                ((eg) this).field_f.f(4, -84);
-                                ((eg) this).field_f.f((int) ((eg) this).field_l, 115);
-                                ((eg) this).field_f.e(0, 0);
-                                ((eg) this).field_u.a(0, ((eg) this).field_f.field_p.length, -87, ((eg) this).field_f.field_p);
+                                this.field_f.field_u = 0;
+                                this.field_f.f(4, -84);
+                                this.field_f.f((int) this.field_l, 115);
+                                this.field_f.e(0, 0);
+                                this.field_u.a(0, this.field_f.field_p.length, -87, this.field_f.field_p);
                                 break L7;
+                              }
+                            } catch (java.io.IOException decompiledCaughtParameter1) {
+                              decompiledCaughtException = decompiledCaughtParameter1;
+                              L8: {
+                                var4_ref = (IOException) (Object) decompiledCaughtException;
+                                try {
+                                  L9: {
+                                    this.field_u.b(0);
+                                    break L9;
+                                  }
+                                } catch (java.lang.Exception decompiledCaughtParameter2) {
+                                  decompiledCaughtException = decompiledCaughtParameter2;
+                                  L10: {
+                                    var5 = (Exception) (Object) decompiledCaughtException;
+                                    break L10;
+                                  }
+                                }
+                                this.field_m = this.field_m + 1;
+                                this.field_j = -2;
+                                this.field_u = null;
+                                break L8;
                               }
                             }
                             break L6;
@@ -458,17 +479,17 @@ final class eg extends tk {
                             break L6;
                           }
                         }
-                        ((eg) this).field_o = 0;
-                        ((eg) this).field_k = gk.a(111);
+                        this.field_o = 0;
+                        this.field_k = gk.a(111);
                         var4_int = 76 / ((0 - param2) / 43);
                         break L0;
                       } else {
-                        ((eg) this).field_d.a(false, (gp) (Object) var4_ref3);
+                        this.field_d.a(false, var4_ref3);
                         continue L5;
                       }
                     }
                   } else {
-                    ((eg) this).field_b.a(false, (gp) (Object) var4_ref3);
+                    this.field_b.a(false, var4_ref3);
                     continue L4;
                   }
                 }
@@ -477,23 +498,23 @@ final class eg extends tk {
               decompiledCaughtException = decompiledCaughtParameter3;
               L11: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_22_0 = (RuntimeException) var4_ref2;
+                stackOut_22_0 = (RuntimeException) (var4_ref2);
                 stackOut_22_1 = new StringBuilder().append("eg.G(");
                 stackIn_24_0 = stackOut_22_0;
                 stackIn_24_1 = stackOut_22_1;
                 stackIn_23_0 = stackOut_22_0;
                 stackIn_23_1 = stackOut_22_1;
                 if (param0 == null) {
-                  stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-                  stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+                  stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+                  stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
                   stackOut_24_2 = "null";
                   stackIn_25_0 = stackOut_24_0;
                   stackIn_25_1 = stackOut_24_1;
                   stackIn_25_2 = stackOut_24_2;
                   break L11;
                 } else {
-                  stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-                  stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+                  stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+                  stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
                   stackOut_23_2 = "{...}";
                   stackIn_25_0 = stackOut_23_0;
                   stackIn_25_1 = stackOut_23_1;
@@ -501,7 +522,7 @@ final class eg extends tk {
                   break L11;
                 }
               }
-              throw wn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ',' + param2 + ')');
+              throw wn.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -514,7 +535,7 @@ final class eg extends tk {
         if (param0 != 3) {
             eg.h(116);
         }
-        field_s = null;
+        field_s = (int[][]) null;
         field_q = null;
         field_t = null;
         field_r = null;
@@ -573,7 +594,7 @@ final class eg extends tk {
         } else {
           if (var5 >= var4) {
             L1: {
-              var6 = -15;
+              var6 = -30 / ((param2 - 0) / 39);
               if (param3 <= param1) {
                 stackOut_27_0 = 0;
                 stackIn_28_0 = stackOut_27_0;
@@ -593,19 +614,41 @@ final class eg extends tk {
 
     private final void g(int param0) {
         try {
+            IOException iOException = null;
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
-            if (null == ((eg) this).field_u) {
+            if (null == this.field_u) {
               return;
             } else {
-              {
+              try {
                 L0: {
-                  ((eg) this).field_f.field_u = 0;
-                  ((eg) this).field_f.f(6, 118);
-                  ((eg) this).field_f.i(-1725083856, 3);
-                  ((eg) this).field_f.d(0, -1783);
-                  ((eg) this).field_u.a(0, ((eg) this).field_f.field_p.length, 34, ((eg) this).field_f.field_p);
+                  this.field_f.field_u = 0;
+                  this.field_f.f(6, 118);
+                  this.field_f.i(param0 ^ -1725083856, 3);
+                  this.field_f.d(0, param0 ^ -1783);
+                  this.field_u.a(param0, this.field_f.field_p.length, 34, this.field_f.field_p);
                   break L0;
+                }
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L1: {
+                  iOException = (IOException) (Object) decompiledCaughtException;
+                  try {
+                    L2: {
+                      this.field_u.b(param0 + 0);
+                      break L2;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    L3: {
+                      var3 = (Exception) (Object) decompiledCaughtException;
+                      break L3;
+                    }
+                  }
+                  this.field_m = this.field_m + 1;
+                  this.field_u = null;
+                  this.field_j = -2;
+                  break L1;
                 }
               }
               return;
@@ -619,13 +662,13 @@ final class eg extends tk {
 
     final void e(int param0) {
         try {
-            ((eg) this).field_u.b(param0);
+            this.field_u.b(param0);
         } catch (Exception exception) {
         }
-        ((eg) this).field_u = null;
-        ((eg) this).field_m = ((eg) this).field_m + 1;
-        ((eg) this).field_j = -1;
-        ((eg) this).field_l = (byte)(int)(1.0 + Math.random() * 255.0);
+        this.field_u = null;
+        this.field_m = this.field_m + 1;
+        this.field_j = -1;
+        this.field_l = (byte)(int)(1.0 + Math.random() * 255.0);
     }
 
     final static void a(int param0, ra param1) {
@@ -633,9 +676,9 @@ final class eg extends tk {
             return;
         }
         try {
-            il.field_g.b((sn) (Object) param1);
+            il.field_g.b(param1);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "eg.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "eg.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -643,11 +686,11 @@ final class eg extends tk {
     }
 
     final void b(byte param0) {
-        if (!(null == ((eg) this).field_u)) {
-            ((eg) this).field_u.b(0);
+        if (!(null == this.field_u)) {
+            this.field_u.b(0);
         }
         if (param0 != 9) {
-            field_q = null;
+            field_q = (String) null;
         }
     }
 
@@ -655,65 +698,73 @@ final class eg extends tk {
         try {
             IOException iOException = null;
             Exception var4 = null;
-            ed stackIn_4_0 = null;
-            ed stackIn_5_0 = null;
             ed stackIn_6_0 = null;
-            int stackIn_6_1 = 0;
+            ed stackIn_7_0 = null;
+            ed stackIn_8_0 = null;
+            int stackIn_8_1 = 0;
             Throwable decompiledCaughtException = null;
-            ed stackOut_3_0 = null;
             ed stackOut_5_0 = null;
-            int stackOut_5_1 = 0;
-            ed stackOut_4_0 = null;
-            int stackOut_4_1 = 0;
-            if (((eg) this).field_u == null) {
+            ed stackOut_7_0 = null;
+            int stackOut_7_1 = 0;
+            ed stackOut_6_0 = null;
+            int stackOut_6_1 = 0;
+            if (this.field_u == null) {
               return;
             } else {
               try {
                 L0: {
                   L1: {
-                    ((eg) this).field_f.field_u = 0;
-                    stackOut_3_0 = ((eg) this).field_f;
-                    stackIn_5_0 = stackOut_3_0;
-                    stackIn_4_0 = stackOut_3_0;
-                    if (!param0) {
-                      stackOut_5_0 = (ed) (Object) stackIn_5_0;
-                      stackOut_5_1 = 3;
-                      stackIn_6_0 = stackOut_5_0;
-                      stackIn_6_1 = stackOut_5_1;
+                    this.field_f.field_u = 0;
+                    if (param1 < 0) {
                       break L1;
                     } else {
-                      stackOut_4_0 = (ed) (Object) stackIn_4_0;
-                      stackOut_4_1 = 2;
-                      stackIn_6_0 = stackOut_4_0;
-                      stackIn_6_1 = stackOut_4_1;
+                      field_s = (int[][]) null;
                       break L1;
                     }
                   }
-                  ((ed) (Object) stackIn_6_0).f(stackIn_6_1, 100);
-                  ((eg) this).field_f.b((byte) 50, 0L);
-                  ((eg) this).field_u.a(0, ((eg) this).field_f.field_p.length, 26, ((eg) this).field_f.field_p);
+                  L2: {
+                    stackOut_5_0 = this.field_f;
+                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_6_0 = stackOut_5_0;
+                    if (!param0) {
+                      stackOut_7_0 = (ed) ((Object) stackIn_7_0);
+                      stackOut_7_1 = 3;
+                      stackIn_8_0 = stackOut_7_0;
+                      stackIn_8_1 = stackOut_7_1;
+                      break L2;
+                    } else {
+                      stackOut_6_0 = (ed) ((Object) stackIn_6_0);
+                      stackOut_6_1 = 2;
+                      stackIn_8_0 = stackOut_6_0;
+                      stackIn_8_1 = stackOut_6_1;
+                      break L2;
+                    }
+                  }
+                  ((ed) (Object) stackIn_8_0).f(stackIn_8_1, 100);
+                  this.field_f.b((byte) 50, 0L);
+                  this.field_u.a(0, this.field_f.field_p.length, 26, this.field_f.field_p);
                   break L0;
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                L2: {
+                L3: {
                   iOException = (IOException) (Object) decompiledCaughtException;
                   try {
-                    L3: {
-                      ((eg) this).field_u.b(0);
-                      break L3;
+                    L4: {
+                      this.field_u.b(0);
+                      break L4;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
-                    L4: {
+                    L5: {
                       var4 = (Exception) (Object) decompiledCaughtException;
-                      break L4;
+                      break L5;
                     }
                   }
-                  ((eg) this).field_m = ((eg) this).field_m + 1;
-                  ((eg) this).field_j = -2;
-                  ((eg) this).field_u = null;
-                  break L2;
+                  this.field_m = this.field_m + 1;
+                  this.field_j = -2;
+                  this.field_u = null;
+                  break L3;
                 }
               }
               return;
@@ -726,12 +777,8 @@ final class eg extends tk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = null;
         field_q = "Invite more players, or alternatively try changing the '<%0>' setting.";
-        field_s = new int[][]{new int[4], new int[4], new int[6], new int[6]};
+        field_s = new int[][]{new int[]{0, 0, 1, 6}, new int[]{0, 0, 1, 7}, new int[]{0, 0, 1, 5, 2, 2}, new int[]{0, 1, 1, 7, 2, 2}};
     }
 }

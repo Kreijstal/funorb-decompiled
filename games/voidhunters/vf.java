@@ -6,13 +6,16 @@ final class vf {
     private uq field_b;
 
     final void a(int param0, qfa param1) {
+        od discarded$0 = null;
+        od discarded$1 = null;
+        od discarded$2 = null;
         try {
-            ((vf) this).field_b = param1.a((byte[]) null, 24, 196584, true, (byte) 125);
-            od discarded$0 = new od(((vf) this).field_b, 5126, 2, 0);
-            od discarded$1 = new od(((vf) this).field_b, 5126, 3, param0);
-            od discarded$2 = new od(((vf) this).field_b, 5121, 4, 20);
+            this.field_b = param1.a((byte[]) null, 24, 196584, true, (byte) 125);
+            discarded$0 = new od(this.field_b, 5126, 2, 0);
+            discarded$1 = new od(this.field_b, 5126, 3, param0);
+            discarded$2 = new od(this.field_b, 5121, 4, 20);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "vf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "vf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,10 +34,6 @@ final class vf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new kba();
     }
 }

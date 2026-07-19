@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.net.URL;
-
 final class ge extends gb {
     static int[] field_m;
     private java.nio.ByteBuffer field_n;
@@ -16,34 +14,35 @@ final class ge extends gb {
     final byte[] a(int param0) {
         byte[] var2 = null;
         byte[] var3 = null;
-        var3 = new byte[((ge) this).field_n.capacity()];
+        var3 = new byte[this.field_n.capacity()];
         var2 = var3;
-        java.nio.Buffer discarded$19 = ((ge) this).field_n.position(0);
-        java.nio.ByteBuffer discarded$20 = ((ge) this).field_n.get(var3);
+        java.nio.Buffer discarded$19 = this.field_n.position(0);
+        java.nio.ByteBuffer discarded$20 = this.field_n.get(var3);
         if (param0 != -21109) {
-          return null;
+          return (byte[]) null;
         } else {
           return var3;
         }
     }
 
     final void a(byte param0, byte[] param1) {
-        ((ge) this).field_n = java.nio.ByteBuffer.allocateDirect(param1.length);
-        java.nio.Buffer discarded$5 = ((ge) this).field_n.position(0);
+        java.nio.ByteBuffer discarded$6 = null;
+        this.field_n = java.nio.ByteBuffer.allocateDirect(param1.length);
+        java.nio.Buffer discarded$5 = this.field_n.position(0);
         if (param0 > -30) {
             return;
         }
         try {
-            java.nio.ByteBuffer discarded$6 = ((ge) this).field_n.put(param1);
+            discarded$6 = this.field_n.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ge.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "ge.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static java.net.URL a(int param0, java.net.URL param1, java.applet.Applet param2) {
         Object var3 = null;
         Object var4 = null;
-        Object stackIn_2_0 = null;
+        java.net.URL stackIn_2_0 = null;
         java.net.URL stackIn_10_0 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -59,9 +58,10 @@ final class ge extends gb {
         Object stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         java.net.URL stackOut_9_0 = null;
-        Object stackOut_1_0 = null;
+        java.net.URL stackOut_1_0 = null;
         Object stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
         Object stackOut_13_0 = null;
@@ -86,10 +86,10 @@ final class ge extends gb {
                 if (dn.field_Ub == null) {
                   break L1;
                 } else {
-                  if (dn.field_Ub.equals((Object) (Object) param2.getParameter("settings"))) {
+                  if (dn.field_Ub.equals(param2.getParameter("settings"))) {
                     break L1;
                   } else {
-                    var3 = (Object) (Object) dn.field_Ub;
+                    var3 = dn.field_Ub;
                     var4 = var3;
                     var4 = var3;
                     break L1;
@@ -101,27 +101,29 @@ final class ge extends gb {
                 if (null == ja.field_h) {
                   break L2;
                 } else {
-                  if (ja.field_h.equals((Object) (Object) param2.getParameter("session"))) {
+                  if (ja.field_h.equals(param2.getParameter("session"))) {
                     break L2;
                   } else {
-                    var4 = (Object) (Object) ja.field_h;
+                    var4 = ja.field_h;
                     break L2;
                   }
                 }
               }
-              stackOut_9_0 = fc.a(-19571, param1, (String) var3, (String) var4, -1);
+              stackOut_9_0 = fc.a(-19571, param1, (String) (var3), (String) (var4), -1);
               stackIn_10_0 = stackOut_9_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (java.net.URL) null;
               stackIn_2_0 = stackOut_1_0;
-              return (java.net.URL) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var3 = (Object) (Object) decompiledCaughtException;
+            var3 = decompiledCaughtException;
             stackOut_11_0 = var3;
             stackOut_11_1 = new StringBuilder().append("ge.E(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
@@ -130,7 +132,7 @@ final class ge extends gb {
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
               stackOut_13_0 = stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
@@ -138,7 +140,7 @@ final class ge extends gb {
               break L3;
             } else {
               stackOut_12_0 = stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -155,7 +157,7 @@ final class ge extends gb {
             stackIn_15_1 = stackOut_14_1;
             if (param2 == null) {
               stackOut_16_0 = stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
@@ -163,7 +165,7 @@ final class ge extends gb {
               break L4;
             } else {
               stackOut_15_0 = stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -171,12 +173,19 @@ final class ge extends gb {
               break L4;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
-        return stackIn_10_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_10_0;
+        }
     }
 
     public static void b(int param0) {
+        if (param0 <= 3) {
+            return;
+        }
         field_i = null;
         field_h = null;
         field_m = null;
@@ -189,11 +198,11 @@ final class ge extends gb {
           return -20;
         } else {
           param0--;
-          param0 = param0 | param0 >>> 1;
-          param0 = param0 | param0 >>> 2;
-          param0 = param0 | param0 >>> 4;
-          param0 = param0 | param0 >>> 8;
-          param0 = param0 | param0 >>> 16;
+          param0 = param0 | param0 >>> -1882720287;
+          param0 = param0 | param0 >>> 296757634;
+          param0 = param0 | param0 >>> -1076979676;
+          param0 = param0 | param0 >>> -44437880;
+          param0 = param0 | param0 >>> 1392010064;
           return param0 + 1;
         }
     }
@@ -202,10 +211,6 @@ final class ge extends gb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = 0;
         field_k = "Add name";
         field_h = "Suggest muting this player";

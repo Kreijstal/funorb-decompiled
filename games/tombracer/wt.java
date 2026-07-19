@@ -11,6 +11,9 @@ final class wt {
         field_c = null;
         field_d = null;
         field_b = null;
+        if (param0 <= 105) {
+            wt.a((byte) -46);
+        }
     }
 
     final static String a(int param0, CharSequence param1) {
@@ -53,7 +56,7 @@ final class wt {
                 break L2;
               }
             }
-            stackOut_5_0 = (String) var2;
+            stackOut_5_0 = (String) (var2);
             stackIn_6_0 = stackOut_5_0;
             break L0;
           }
@@ -61,23 +64,23 @@ final class wt {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2_ref;
+            stackOut_7_0 = (RuntimeException) (var2_ref);
             stackOut_7_1 = new StringBuilder().append("wt.A(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -85,7 +88,7 @@ final class wt {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
@@ -95,21 +98,17 @@ final class wt {
         ej.field_a.e(true);
         if (null == ena.field_p) {
           ena.field_p = new vs(ej.field_a, sea.field_o);
-          ej.field_a.c((ae) (Object) ena.field_p, 87);
+          ej.field_a.c(ena.field_p, 87);
           var1 = 44 % ((param0 - -68) / 49);
           return;
         } else {
-          ej.field_a.c((ae) (Object) ena.field_p, 87);
+          ej.field_a.c(ena.field_p, 87);
           var1 = 44 % ((param0 - -68) / 49);
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Waiting for extra data";
     }
 }

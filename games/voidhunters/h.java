@@ -5,8 +5,8 @@ final class h extends da implements e {
     long field_nativeid;
 
     protected final void finalize() {
-        if (((h) this).field_nativeid != 0L) {
-            pq.a(0, (e) this);
+        if (this.field_nativeid != 0L) {
+            pq.a(0, (e) (this));
         }
     }
 
@@ -15,7 +15,7 @@ final class h extends da implements e {
     final native void fa(char param0, int param1, int param2, int param3, boolean param4);
 
     h(oa param0, ya param1, sw param2, ima[] param3, aja[] param4) {
-        super((ha) (Object) param0, param2);
+        super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];
         int[] var7 = new int[param3.length];

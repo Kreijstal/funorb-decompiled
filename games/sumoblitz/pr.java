@@ -8,14 +8,14 @@ final class pr extends ht {
     pr(fr param0, int param1, int param2, byte[] param3, int param4) {
         super(param0, 3552, param1, param2, false);
         try {
-            ((pr) this).field_l = param2;
-            ((pr) this).field_d.a(55, (ht) this);
+            this.field_l = param2;
+            this.field_d.a(55, (ht) (this));
             jaggl.OpenGL.glPixelStorei(3317, 1);
-            jaggl.OpenGL.glTexImage1Dub(((pr) this).field_c, 0, ((pr) this).field_a, ((pr) this).field_l, 0, param4, 5121, param3, 0);
+            jaggl.OpenGL.glTexImage1Dub(this.field_c, 0, this.field_a, this.field_l, 0, param4, 5121, param3, 0);
             jaggl.OpenGL.glPixelStorei(3317, 4);
-            ((pr) this).a(true, 0);
+            this.a(true, 0);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "pr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "pr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -59,9 +59,9 @@ final class pr extends ht {
         int stackOut_2_2 = 0;
         if (param1 < 119) {
           L0: {
-            field_k = null;
-            ((pr) this).field_d.a(69, (ht) this);
-            stackOut_5_0 = ((pr) this).field_c;
+            field_k = (hr[]) null;
+            this.field_d.a(69, (ht) (this));
+            stackOut_5_0 = this.field_c;
             stackOut_5_1 = 10242;
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
@@ -89,8 +89,8 @@ final class pr extends ht {
           return;
         } else {
           L1: {
-            ((pr) this).field_d.a(69, (ht) this);
-            stackOut_1_0 = ((pr) this).field_c;
+            this.field_d.a(69, (ht) (this));
+            stackOut_1_0 = this.field_c;
             stackOut_1_1 = 10242;
             stackIn_3_0 = stackOut_1_0;
             stackIn_3_1 = stackOut_1_1;

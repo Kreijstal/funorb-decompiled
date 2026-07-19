@@ -18,10 +18,13 @@ final class sm extends gn {
     int field_e;
 
     public static void a(int param0) {
-        field_l = null;
+        field_l = (int[][]) null;
         field_p = null;
         field_j = null;
-        field_o = null;
+        field_o = (int[][]) null;
+        if (param0 != 0) {
+            field_l = (int[][]) null;
+        }
     }
 
     final static void a(byte param0) {
@@ -39,31 +42,29 @@ final class sm extends gn {
         int var9 = 0;
         int[] var11 = null;
         int[] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var9 = Kickabout.field_G;
         try {
           L0: {
-            var1_int = 0;
+            var1_int = -114 % ((32 - param0) / 47);
             var2 = un.field_e;
             var3 = var2.h((byte) -123);
             var4 = var2.h((byte) -112);
             if (0 == var3) {
-              var5 = (dl) (Object) ru.field_M.g(24009);
+              var5 = (dl) ((Object) ru.field_M.g(24009));
               if (var5 == null) {
                 lr.b((byte) -116);
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 L1: {
                   var6 = -var2.field_n + ms.field_b;
-                  var14 = var5.field_f;
-                  var13 = var14;
-                  var12 = var13;
+                  var12 = var5.field_f;
                   var11 = var12;
                   var7 = var11;
-                  if (var14.length << 2 < var6) {
-                    var6 = var14.length << 2;
+                  if (var12.length << -1112026174 < var6) {
+                    var6 = var12.length << 400681890;
                     break L1;
                   } else {
                     break L1;
@@ -73,9 +74,10 @@ final class sm extends gn {
                 L2: while (true) {
                   if (var6 <= var8) {
                     var5.c((byte) -109);
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    var7[var8 >> 2] = var7[var8 >> 2] + (var2.h((byte) -118) << (qj.b(3, var8) << 8));
+                    var7[var8 >> 481392994] = var7[var8 >> 481392994] + (var2.h((byte) -118) << (qj.b(3, var8) << 96998984));
                     var8++;
                     continue L2;
                   }
@@ -88,7 +90,7 @@ final class sm extends gn {
                 return;
               } else {
                 var5_int = var2.e(85);
-                var6_ref_hr = (hr) (Object) ti.field_c.g(24009);
+                var6_ref_hr = (hr) ((Object) ti.field_c.g(24009));
                 L3: while (true) {
                   L4: {
                     if (var6_ref_hr == null) {
@@ -105,7 +107,7 @@ final class sm extends gn {
                           }
                         }
                       }
-                      var6_ref_hr = (hr) (Object) ti.field_c.c(33);
+                      var6_ref_hr = (hr) ((Object) ti.field_c.c(33));
                       continue L3;
                     }
                   }
@@ -114,7 +116,8 @@ final class sm extends gn {
                     return;
                   } else {
                     lr.b((byte) -116);
-                    return;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   }
                 }
               }
@@ -123,7 +126,16 @@ final class sm extends gn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "sm.B(" + 103 + ')');
+          throw nb.a((Throwable) ((Object) var1), "sm.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -132,14 +144,10 @@ final class sm extends gn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = 0;
         field_p = "Drag a player from the grid to fill slot <%0> on the pitch.<br>Click ready when done.";
         field_m = true;
-        field_o = new int[][]{new int[3], new int[3]};
+        field_o = new int[][]{new int[]{58, 26, 89}, new int[]{61, 26, 86}};
         field_j = "Loading HUDs";
     }
 }

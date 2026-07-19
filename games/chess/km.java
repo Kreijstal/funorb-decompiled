@@ -5,27 +5,28 @@ class km extends fk {
     int[] field_x;
 
     final void f(int param0) {
+        int incrementValue$2 = 0;
         int[] var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        var2 = new int[((km) this).field_w * ((km) this).field_t];
+        var2 = new int[this.field_w * this.field_t];
         var3 = 0;
         var4 = 0;
         L0: while (true) {
-          if (var4 >= ((km) this).field_t) {
-            ((km) this).field_x = var2;
+          if (var4 >= this.field_t) {
+            this.field_x = var2;
             return;
           } else {
             var5 = 0;
             L1: while (true) {
-              if (var5 >= ((km) this).field_w) {
+              if (var5 >= this.field_w) {
                 var4++;
                 continue L0;
               } else {
                 L2: {
-                  var6 = ((km) this).field_x[var3];
+                  var6 = this.field_x[var3];
                   if (var6 != 0) {
                     break L2;
                   } else {
@@ -33,7 +34,7 @@ class km extends fk {
                       if (var5 <= 0) {
                         break L3;
                       } else {
-                        if (((km) this).field_x[var3 - 1] == 0) {
+                        if (this.field_x[var3 - 1] == 0) {
                           break L3;
                         } else {
                           var6 = param0;
@@ -45,7 +46,7 @@ class km extends fk {
                       if (var4 <= 0) {
                         break L4;
                       } else {
-                        if (((km) this).field_x[var3 - ((km) this).field_w] == 0) {
+                        if (this.field_x[var3 - this.field_w] == 0) {
                           break L4;
                         } else {
                           var6 = param0;
@@ -54,10 +55,10 @@ class km extends fk {
                       }
                     }
                     L5: {
-                      if (var5 >= ((km) this).field_w - 1) {
+                      if (var5 >= this.field_w - 1) {
                         break L5;
                       } else {
-                        if (((km) this).field_x[var3 + 1] == 0) {
+                        if (this.field_x[var3 + 1] == 0) {
                           break L5;
                         } else {
                           var6 = param0;
@@ -65,10 +66,10 @@ class km extends fk {
                         }
                       }
                     }
-                    if (var4 >= ((km) this).field_t - 1) {
+                    if (var4 >= this.field_t - 1) {
                       break L2;
                     } else {
-                      if (((km) this).field_x[var3 + ((km) this).field_w] == 0) {
+                      if (this.field_x[var3 + this.field_w] == 0) {
                         break L2;
                       } else {
                         var6 = param0;
@@ -77,7 +78,7 @@ class km extends fk {
                     }
                   }
                 }
-                int incrementValue$2 = var3;
+                incrementValue$2 = var3;
                 var3++;
                 var2[incrementValue$2] = var6;
                 var5++;
@@ -93,19 +94,19 @@ class km extends fk {
         int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
         L0: {
-          param2 = param2 - (param0 + ((km) this).field_s);
+          param2 = param2 - (param0 + this.field_s);
           if (param2 < 0) {
             break L0;
           } else {
-            if (param2 < ((km) this).field_w) {
+            if (param2 < this.field_w) {
               L1: {
-                param3 = param3 - (param1 + ((km) this).field_r);
+                param3 = param3 - (param1 + this.field_r);
                 if (param3 < 0) {
                   break L1;
                 } else {
-                  if (param3 < ((km) this).field_t) {
+                  if (param3 < this.field_t) {
                     L2: {
-                      if (((km) this).field_x[param3 * ((km) this).field_w + param2] == 0) {
+                      if (this.field_x[param3 * this.field_w + param2] == 0) {
                         stackOut_8_0 = 0;
                         stackIn_9_0 = stackOut_8_0;
                         break L2;
@@ -131,6 +132,16 @@ class km extends fk {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -152,14 +163,14 @@ class km extends fk {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     if (param1[incrementValue$218] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -169,52 +180,52 @@ class km extends fk {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   if (param1[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   if (param1[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   if (param1[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 if (param1[incrementValue$226] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -236,12 +247,12 @@ class km extends fk {
         int var11 = 0;
         if (param2 != 256) {
           L0: {
-            param0 = param0 + ((km) this).field_s;
-            param1 = param1 + ((km) this).field_r;
+            param0 = param0 + this.field_s;
+            param1 = param1 + this.field_r;
             var5 = param0 + param1 * wb.field_h;
             var6 = 0;
-            var7 = ((km) this).field_t;
-            var8 = ((km) this).field_w;
+            var7 = this.field_t;
+            var8 = this.field_w;
             var9 = wb.field_h - var8;
             var10 = 0;
             if (param1 >= wb.field_a) {
@@ -292,14 +303,14 @@ class km extends fk {
             return;
           } else {
             if (var7 > 0) {
-              km.a(wb.field_d, ((km) this).field_x, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+              km.a(wb.field_d, this.field_x, 0, var6, var5, var8, var7, var9, var10, param2, param3);
               return;
             } else {
               return;
             }
           }
         } else {
-          ((km) this).b(param0, param1);
+          this.b(param0, param1);
           return;
         }
     }
@@ -333,10 +344,10 @@ class km extends fk {
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
         L0: {
-          var3 = ((km) this).field_w >> 2;
-          var4 = ((km) this).field_t >> 2;
-          param0 = param0 + ((km) this).field_s / 4;
-          param1 = param1 + ((km) this).field_r / 4;
+          var3 = this.field_w >> 2;
+          var4 = this.field_t >> 2;
+          param0 = param0 + this.field_s / 4;
+          param1 = param1 + this.field_r / 4;
           if (param0 >= wb.field_i) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -350,7 +361,7 @@ class km extends fk {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= wb.field_j) {
-            stackOut_5_0 = ((km) this).field_w - 4;
+            stackOut_5_0 = this.field_w - 4;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -374,7 +385,7 @@ class km extends fk {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= wb.field_b) {
-            stackOut_11_0 = ((km) this).field_t - 4;
+            stackOut_11_0 = this.field_t - 4;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -389,7 +400,7 @@ class km extends fk {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((km) this).field_w + var5;
+            var10 = var9 * this.field_w + var5;
             var11 = (param1 + (var9 >> 2)) * wb.field_h + (param0 + (var5 >> 2));
             var12 = var5;
             L5: while (true) {
@@ -416,7 +427,7 @@ class km extends fk {
                         continue L6;
                       } else {
                         L8: {
-                          var13 = ((km) this).field_x[var10 + var16 * ((km) this).field_w + var17];
+                          var13 = this.field_x[var10 + var16 * this.field_w + var17];
                           if (var13 != 0) {
                             break L8;
                           } else {
@@ -447,12 +458,12 @@ class km extends fk {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((km) this).field_s;
-          param1 = param1 + ((km) this).field_r;
+          param0 = param0 + this.field_s;
+          param1 = param1 + this.field_r;
           var4 = param0 + param1 * wb.field_h;
           var5 = 0;
-          var6 = ((km) this).field_t;
-          var7 = ((km) this).field_w;
+          var6 = this.field_t;
+          var7 = this.field_w;
           var8 = wb.field_h - var7;
           var9 = 0;
           if (param1 >= wb.field_a) {
@@ -505,10 +516,10 @@ class km extends fk {
           if (var6 > 0) {
             L4: {
               if (param2 != 256) {
-                km.a(0, 0, 0, wb.field_d, ((km) this).field_x, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+                km.a(0, 0, 0, wb.field_d, this.field_x, var5, 0, var4, 0, var7, var6, var8, var9, param2);
                 break L4;
               } else {
-                km.a(0, 0, 0, wb.field_d, ((km) this).field_x, var5, 0, var4, 0, var7, var6, var8, var9);
+                km.a(0, 0, 0, wb.field_d, this.field_x, var5, 0, var4, 0, var7, var6, var8, var9);
                 break L4;
               }
             }
@@ -521,14 +532,14 @@ class km extends fk {
 
     final km c() {
         int var3 = 0;
-        km var1 = new km(((km) this).field_w, ((km) this).field_t);
-        var1.field_v = ((km) this).field_v;
-        var1.field_u = ((km) this).field_u;
-        var1.field_s = ((km) this).field_s;
-        var1.field_r = ((km) this).field_r;
-        int var2 = ((km) this).field_x.length;
+        km var1 = new km(this.field_w, this.field_t);
+        var1.field_v = this.field_v;
+        var1.field_u = this.field_u;
+        var1.field_s = this.field_s;
+        var1.field_r = this.field_r;
+        int var2 = this.field_x.length;
         for (var3 = 0; var3 < var2; var3++) {
-            var1.field_x[var3] = ((km) this).field_x[var3];
+            var1.field_x[var3] = this.field_x[var3];
         }
         return var1;
     }
@@ -536,20 +547,22 @@ class km extends fk {
     final km b() {
         int var2 = 0;
         int var3 = 0;
-        km var1 = new km(((km) this).field_w, ((km) this).field_t);
-        var1.field_v = ((km) this).field_v;
-        var1.field_u = ((km) this).field_u;
-        var1.field_s = ((km) this).field_v - ((km) this).field_w - ((km) this).field_s;
-        var1.field_r = ((km) this).field_r;
-        for (var2 = 0; var2 < ((km) this).field_t; var2++) {
-            for (var3 = 0; var3 < ((km) this).field_w; var3++) {
-                var1.field_x[var2 * ((km) this).field_w + var3] = ((km) this).field_x[var2 * ((km) this).field_w + ((km) this).field_w - 1 - var3];
+        km var1 = new km(this.field_w, this.field_t);
+        var1.field_v = this.field_v;
+        var1.field_u = this.field_u;
+        var1.field_s = this.field_v - this.field_w - this.field_s;
+        var1.field_r = this.field_r;
+        for (var2 = 0; var2 < this.field_t; var2++) {
+            for (var3 = 0; var3 < this.field_w; var3++) {
+                var1.field_x[var2 * this.field_w + var3] = this.field_x[var2 * this.field_w + this.field_w - 1 - var3];
             }
         }
         return var1;
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -572,7 +585,7 @@ class km extends fk {
                 var14++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -582,7 +595,7 @@ class km extends fk {
                 } else {
                   var12 = (param2 & 16711935) * param9 & -16711936;
                   var13 = (param2 & 65280) * param9 & 16711680;
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var12 | var13) >>> 8) + param10;
                   var15++;
@@ -621,7 +634,7 @@ class km extends fk {
         int stackOut_24_0 = 0;
         int stackOut_23_0 = 0;
         L0: {
-          var6 = param2 * ((km) this).field_w + param1;
+          var6 = param2 * this.field_w + param1;
           param3 = param3 & 4095;
           param4 = param4 & 4095;
           if (param2 < 0) {
@@ -638,7 +651,7 @@ class km extends fk {
                 break L1;
               } else {
                 L2: {
-                  var7 = ((km) this).field_x[var6];
+                  var7 = this.field_x[var6];
                   if (var7 == 0) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
@@ -653,13 +666,13 @@ class km extends fk {
                 break L1;
               }
             }
-            if (param1 >= ((km) this).field_w - 1) {
+            if (param1 >= this.field_w - 1) {
               var12 = 0;
               var8 = 0;
               break L0;
             } else {
               L3: {
-                var8 = ((km) this).field_x[var6 + 1];
+                var8 = this.field_x[var6 + 1];
                 if (var8 == 0) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
@@ -676,7 +689,7 @@ class km extends fk {
           }
         }
         L4: {
-          if (param2 >= ((km) this).field_t - 1) {
+          if (param2 >= this.field_t - 1) {
             var14 = 0;
             var13 = 0;
             var10 = 0;
@@ -690,7 +703,7 @@ class km extends fk {
                 break L5;
               } else {
                 L6: {
-                  var9 = ((km) this).field_x[var6 + ((km) this).field_w];
+                  var9 = this.field_x[var6 + this.field_w];
                   if (var9 == 0) {
                     stackOut_18_0 = 0;
                     stackIn_19_0 = stackOut_18_0;
@@ -705,13 +718,13 @@ class km extends fk {
                 break L5;
               }
             }
-            if (param1 >= ((km) this).field_w - 1) {
+            if (param1 >= this.field_w - 1) {
               var14 = 0;
               var10 = 0;
               break L4;
             } else {
               L7: {
-                var10 = ((km) this).field_x[var6 + ((km) this).field_w + 1];
+                var10 = this.field_x[var6 + this.field_w + 1];
                 if (var10 == 0) {
                   stackOut_24_0 = 0;
                   stackIn_25_0 = stackOut_24_0;
@@ -782,12 +795,12 @@ class km extends fk {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((km) this).field_s;
-          param1 = param1 + ((km) this).field_r;
+          param0 = param0 + this.field_s;
+          param1 = param1 + this.field_r;
           var4 = param0 + param1 * wb.field_h;
           var5 = 0;
-          var6 = ((km) this).field_t;
-          var7 = ((km) this).field_w;
+          var6 = this.field_t;
+          var7 = this.field_w;
           var8 = wb.field_h - var7;
           var9 = 0;
           if (param1 >= wb.field_a) {
@@ -838,7 +851,7 @@ class km extends fk {
           return;
         } else {
           if (var6 > 0) {
-            km.a(wb.field_d, ((km) this).field_x, param2, var5, var4, var7, var6, var8, var9);
+            km.a(wb.field_d, this.field_x, param2, var5, var4, var7, var6, var8, var9);
             return;
           } else {
             return;
@@ -847,27 +860,28 @@ class km extends fk {
     }
 
     final void a() {
-        int var3 = 0;
         int var4 = 0;
-        int[] var1 = new int[((km) this).field_w * ((km) this).field_t];
+        int incrementValue$0 = 0;
+        int var3 = 0;
+        int[] var1 = new int[this.field_w * this.field_t];
         int var2 = 0;
-        for (var3 = 0; var3 < ((km) this).field_w; var3++) {
-            for (var4 = ((km) this).field_t - 1; var4 >= 0; var4--) {
-                int incrementValue$0 = var2;
+        for (var3 = 0; var3 < this.field_w; var3++) {
+            for (var4 = this.field_t - 1; var4 >= 0; var4--) {
+                incrementValue$0 = var2;
                 var2++;
-                var1[incrementValue$0] = ((km) this).field_x[var3 + var4 * ((km) this).field_w];
+                var1[incrementValue$0] = this.field_x[var3 + var4 * this.field_w];
             }
         }
-        ((km) this).field_x = var1;
-        var3 = ((km) this).field_r;
-        ((km) this).field_r = ((km) this).field_s;
-        ((km) this).field_s = ((km) this).field_u - ((km) this).field_t - var3;
-        var3 = ((km) this).field_t;
-        ((km) this).field_t = ((km) this).field_w;
-        ((km) this).field_w = var3;
-        var3 = ((km) this).field_u;
-        ((km) this).field_u = ((km) this).field_v;
-        ((km) this).field_v = var3;
+        this.field_x = var1;
+        var3 = this.field_r;
+        this.field_r = this.field_s;
+        this.field_s = this.field_u - this.field_t - var3;
+        var3 = this.field_t;
+        this.field_t = this.field_w;
+        this.field_w = var3;
+        var3 = this.field_u;
+        this.field_u = this.field_v;
+        this.field_v = var3;
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -905,19 +919,19 @@ class km extends fk {
         int var40 = 0;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((km) this).field_s << 4);
-            param1 = param1 - (((km) this).field_r << 4);
+            param0 = param0 - (this.field_s << 4);
+            param1 = param1 - (this.field_r << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((km) this).field_w << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((km) this).field_w << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((km) this).field_t << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((km) this).field_t << 4) - param1) * var10;
-            var17 = ((((km) this).field_w << 4) - param0) * var10 + ((((km) this).field_t << 4) - param1) * var9;
-            var18 = -((((km) this).field_w << 4) - param0) * var9 + ((((km) this).field_t << 4) - param1) * var10;
+            var13 = ((this.field_w << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_w << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_t << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_t << 4) - param1) * var10;
+            var17 = ((this.field_w << 4) - param0) * var10 + ((this.field_t << 4) - param1) * var9;
+            var18 = -((this.field_w << 4) - param0) * var9 + ((this.field_t << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -1126,11 +1140,11 @@ class km extends fk {
                                     break L20;
                                   } else {
                                     var33 = var37 >> 12;
-                                    if (var37 >> 12 >= ((km) this).field_w) {
+                                    if (var37 >> 12 >= this.field_w) {
                                       break L20;
                                     } else {
                                       var34 = var38 >> 12;
-                                      if (var38 >> 12 < ((km) this).field_t) {
+                                      if (var38 >> 12 < this.field_t) {
                                         this.a(var23, var33, var34, var37, var38);
                                         var39++;
                                         var37 = var37 + var28;
@@ -1192,7 +1206,7 @@ class km extends fk {
                           } else {
                             L24: {
                               var40 = 0;
-                              var35 = var38 - (((km) this).field_t << 12);
+                              var35 = var38 - (this.field_t << 12);
                               if (var35 >= 0) {
                                 if (var27 != 0) {
                                   var35 = (var27 - var35) / var27;
@@ -1223,7 +1237,7 @@ class km extends fk {
                                       break L26;
                                     } else {
                                       var33 = var37 >> 12;
-                                      if (var37 >> 12 < ((km) this).field_w) {
+                                      if (var37 >> 12 < this.field_w) {
                                         var34 = var38 >> 12;
                                         this.a(var23, var33, var34, var37, var38);
                                         var39++;
@@ -1263,7 +1277,7 @@ class km extends fk {
                           var38 = var32 + (var29 * var27 >> 4);
                           var39 = var20;
                           var40 = 0;
-                          var35 = var37 - (((km) this).field_w << 12);
+                          var35 = var37 - (this.field_w << 12);
                           if (var35 >= 0) {
                             if (var28 != 0) {
                               var35 = (var28 - var35) / var28;
@@ -1319,7 +1333,7 @@ class km extends fk {
                                       break L32;
                                     } else {
                                       var34 = var38 >> 12;
-                                      if (var38 >> 12 < ((km) this).field_t) {
+                                      if (var38 >> 12 < this.field_t) {
                                         var33 = var37 >> 12;
                                         this.a(var23, var33, var34, var37, var38);
                                         var39++;
@@ -1357,7 +1371,7 @@ class km extends fk {
                           var38 = var32 + (var29 * var27 >> 4);
                           var39 = var20;
                           var40 = 0;
-                          var35 = var37 - (((km) this).field_w << 12);
+                          var35 = var37 - (this.field_w << 12);
                           if (var35 >= 0) {
                             if (var28 != 0) {
                               var35 = (var28 - var35) / var28;
@@ -1382,7 +1396,7 @@ class km extends fk {
                           } else {
                             L36: {
                               var40 = 0;
-                              var35 = var38 - (((km) this).field_t << 12);
+                              var35 = var38 - (this.field_t << 12);
                               if (var35 >= 0) {
                                 if (var27 != 0) {
                                   var35 = (var27 - var35) / var27;
@@ -1456,6 +1470,15 @@ class km extends fk {
     }
 
     void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         double var7 = 0.0;
         int var9 = 0;
         int var10 = 0;
@@ -1488,19 +1511,19 @@ class km extends fk {
         int var38 = 0;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((km) this).field_s << 4);
-            param1 = param1 - (((km) this).field_r << 4);
+            param0 = param0 - (this.field_s << 4);
+            param1 = param1 - (this.field_r << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((km) this).field_w << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((km) this).field_w << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((km) this).field_t << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((km) this).field_t << 4) - param1) * var10;
-            var17 = ((((km) this).field_w << 4) - param0) * var10 + ((((km) this).field_t << 4) - param1) * var9;
-            var18 = -((((km) this).field_w << 4) - param0) * var9 + ((((km) this).field_t << 4) - param1) * var10;
+            var13 = ((this.field_w << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_w << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_t << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_t << 4) - param1) * var10;
+            var17 = ((this.field_w << 4) - param0) * var10 + ((this.field_t << 4) - param1) * var9;
+            var18 = -((this.field_w << 4) - param0) * var9 + ((this.field_t << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -1669,8 +1692,8 @@ class km extends fk {
                               }
                             }
                             L17: {
-                              var32 = (1 + var35 - (((km) this).field_w << 12) - var27) / var27;
-                              if ((1 + var35 - (((km) this).field_w << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_w << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_w << 12) - var27) / var27 <= var37) {
                                 break L17;
                               } else {
                                 var37 = var32;
@@ -1690,8 +1713,8 @@ class km extends fk {
                               }
                             }
                             L19: {
-                              var32 = (1 + var36 - (((km) this).field_t << 12) - var26) / var26;
-                              if ((1 + var36 - (((km) this).field_t << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_t << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_t << 12) - var26) / var26 <= var37) {
                                 break L19;
                               } else {
                                 var37 = var32;
@@ -1707,12 +1730,12 @@ class km extends fk {
                                 continue L15;
                               } else {
                                 L21: {
-                                  var38 = ((km) this).field_x[(var36 >> 12) * ((km) this).field_w + (var35 >> 12)];
+                                  var38 = this.field_x[(var36 >> 12) * this.field_w + (var35 >> 12)];
                                   if (var38 == 0) {
                                     var34++;
                                     break L21;
                                   } else {
-                                    int incrementValue$9 = var34;
+                                    incrementValue$9 = var34;
                                     var34++;
                                     wb.field_d[incrementValue$9] = var38;
                                     break L21;
@@ -1749,8 +1772,8 @@ class km extends fk {
                               }
                             }
                             L24: {
-                              var32 = (1 + var35 - (((km) this).field_w << 12) - var27) / var27;
-                              if ((1 + var35 - (((km) this).field_w << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_w << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_w << 12) - var27) / var27 <= var37) {
                                 break L24;
                               } else {
                                 var37 = var32;
@@ -1758,8 +1781,8 @@ class km extends fk {
                               }
                             }
                             L25: {
-                              var32 = var36 - (((km) this).field_t << 12);
-                              if (var36 - (((km) this).field_t << 12) < 0) {
+                              var32 = var36 - (this.field_t << 12);
+                              if (var36 - (this.field_t << 12) < 0) {
                                 break L25;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -1788,12 +1811,12 @@ class km extends fk {
                                 continue L22;
                               } else {
                                 L28: {
-                                  var38 = ((km) this).field_x[(var36 >> 12) * ((km) this).field_w + (var35 >> 12)];
+                                  var38 = this.field_x[(var36 >> 12) * this.field_w + (var35 >> 12)];
                                   if (var38 == 0) {
                                     var34++;
                                     break L28;
                                   } else {
-                                    int incrementValue$10 = var34;
+                                    incrementValue$10 = var34;
                                     var34++;
                                     wb.field_d[incrementValue$10] = var38;
                                     break L28;
@@ -1820,7 +1843,7 @@ class km extends fk {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((km) this).field_t << 12) < 0) {
+                              if (var36 - (this.field_t << 12) < 0) {
                                 L31: {
                                   if (var35 >= 0) {
                                     break L31;
@@ -1833,8 +1856,8 @@ class km extends fk {
                                   }
                                 }
                                 L32: {
-                                  var32 = (1 + var35 - (((km) this).field_w << 12) - var27) / var27;
-                                  if ((1 + var35 - (((km) this).field_w << 12) - var27) / var27 <= var37) {
+                                  var32 = (1 + var35 - (this.field_w << 12) - var27) / var27;
+                                  if ((1 + var35 - (this.field_w << 12) - var27) / var27 <= var37) {
                                     break L32;
                                   } else {
                                     var37 = var32;
@@ -1846,12 +1869,12 @@ class km extends fk {
                                     break L30;
                                   } else {
                                     L34: {
-                                      var38 = ((km) this).field_x[(var36 >> 12) * ((km) this).field_w + (var35 >> 12)];
+                                      var38 = this.field_x[(var36 >> 12) * this.field_w + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         break L34;
                                       } else {
-                                        int incrementValue$11 = var34;
+                                        incrementValue$11 = var34;
                                         var34++;
                                         wb.field_d[incrementValue$11] = var38;
                                         break L34;
@@ -1889,8 +1912,8 @@ class km extends fk {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((km) this).field_w << 12);
-                              if (var35 - (((km) this).field_w << 12) < 0) {
+                              var32 = var35 - (this.field_w << 12);
+                              if (var35 - (this.field_w << 12) < 0) {
                                 break L36;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -1923,8 +1946,8 @@ class km extends fk {
                               }
                             }
                             L39: {
-                              var32 = (1 + var36 - (((km) this).field_t << 12) - var26) / var26;
-                              if ((1 + var36 - (((km) this).field_t << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_t << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_t << 12) - var26) / var26 <= var37) {
                                 break L39;
                               } else {
                                 var37 = var32;
@@ -1940,12 +1963,12 @@ class km extends fk {
                                 continue L35;
                               } else {
                                 L41: {
-                                  var38 = ((km) this).field_x[(var36 >> 12) * ((km) this).field_w + (var35 >> 12)];
+                                  var38 = this.field_x[(var36 >> 12) * this.field_w + (var35 >> 12)];
                                   if (var38 == 0) {
                                     var34++;
                                     break L41;
                                   } else {
-                                    int incrementValue$12 = var34;
+                                    incrementValue$12 = var34;
                                     var34++;
                                     wb.field_d[incrementValue$12] = var38;
                                     break L41;
@@ -1970,8 +1993,8 @@ class km extends fk {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((km) this).field_w << 12);
-                              if (var35 - (((km) this).field_w << 12) < 0) {
+                              var32 = var35 - (this.field_w << 12);
+                              if (var35 - (this.field_w << 12) < 0) {
                                 break L43;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -1992,8 +2015,8 @@ class km extends fk {
                               }
                             }
                             L45: {
-                              var32 = var36 - (((km) this).field_t << 12);
-                              if (var36 - (((km) this).field_t << 12) < 0) {
+                              var32 = var36 - (this.field_t << 12);
+                              if (var36 - (this.field_t << 12) < 0) {
                                 break L45;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -2022,12 +2045,12 @@ class km extends fk {
                                 continue L42;
                               } else {
                                 L48: {
-                                  var38 = ((km) this).field_x[(var36 >> 12) * ((km) this).field_w + (var35 >> 12)];
+                                  var38 = this.field_x[(var36 >> 12) * this.field_w + (var35 >> 12)];
                                   if (var38 == 0) {
                                     var34++;
                                     break L48;
                                   } else {
-                                    int incrementValue$13 = var34;
+                                    incrementValue$13 = var34;
                                     var34++;
                                     wb.field_d[incrementValue$13] = var38;
                                     break L48;
@@ -2054,10 +2077,10 @@ class km extends fk {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((km) this).field_t << 12) < 0) {
+                              if (var36 - (this.field_t << 12) < 0) {
                                 L51: {
-                                  var32 = var35 - (((km) this).field_w << 12);
-                                  if (var35 - (((km) this).field_w << 12) < 0) {
+                                  var32 = var35 - (this.field_w << 12);
+                                  if (var35 - (this.field_w << 12) < 0) {
                                     break L51;
                                   } else {
                                     var32 = (var27 - var32) / var27;
@@ -2081,12 +2104,12 @@ class km extends fk {
                                     break L50;
                                   } else {
                                     L54: {
-                                      var38 = ((km) this).field_x[(var36 >> 12) * ((km) this).field_w + (var35 >> 12)];
+                                      var38 = this.field_x[(var36 >> 12) * this.field_w + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         break L54;
                                       } else {
-                                        int incrementValue$14 = var34;
+                                        incrementValue$14 = var34;
                                         var34++;
                                         wb.field_d[incrementValue$14] = var38;
                                         break L54;
@@ -2126,7 +2149,7 @@ class km extends fk {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((km) this).field_w << 12) < 0) {
+                              if (var35 - (this.field_w << 12) < 0) {
                                 L57: {
                                   if (var36 >= 0) {
                                     break L57;
@@ -2139,8 +2162,8 @@ class km extends fk {
                                   }
                                 }
                                 L58: {
-                                  var32 = (1 + var36 - (((km) this).field_t << 12) - var26) / var26;
-                                  if ((1 + var36 - (((km) this).field_t << 12) - var26) / var26 <= var37) {
+                                  var32 = (1 + var36 - (this.field_t << 12) - var26) / var26;
+                                  if ((1 + var36 - (this.field_t << 12) - var26) / var26 <= var37) {
                                     break L58;
                                   } else {
                                     var37 = var32;
@@ -2152,12 +2175,12 @@ class km extends fk {
                                     break L56;
                                   } else {
                                     L60: {
-                                      var38 = ((km) this).field_x[(var36 >> 12) * ((km) this).field_w + (var35 >> 12)];
+                                      var38 = this.field_x[(var36 >> 12) * this.field_w + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         break L60;
                                       } else {
-                                        int incrementValue$15 = var34;
+                                        incrementValue$15 = var34;
                                         var34++;
                                         wb.field_d[incrementValue$15] = var38;
                                         break L60;
@@ -2193,10 +2216,10 @@ class km extends fk {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((km) this).field_w << 12) < 0) {
+                              if (var35 - (this.field_w << 12) < 0) {
                                 L63: {
-                                  var32 = var36 - (((km) this).field_t << 12);
-                                  if (var36 - (((km) this).field_t << 12) < 0) {
+                                  var32 = var36 - (this.field_t << 12);
+                                  if (var36 - (this.field_t << 12) < 0) {
                                     break L63;
                                   } else {
                                     var32 = (var26 - var32) / var26;
@@ -2220,12 +2243,12 @@ class km extends fk {
                                     break L62;
                                   } else {
                                     L66: {
-                                      var38 = ((km) this).field_x[(var36 >> 12) * ((km) this).field_w + (var35 >> 12)];
+                                      var38 = this.field_x[(var36 >> 12) * this.field_w + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         break L66;
                                       } else {
-                                        int incrementValue$16 = var34;
+                                        incrementValue$16 = var34;
                                         var34++;
                                         wb.field_d[incrementValue$16] = var38;
                                         break L66;
@@ -2266,19 +2289,19 @@ class km extends fk {
                         if (var35 >= 0) {
                           L68: {
                             if (var36 >= 0) {
-                              if (var35 - (((km) this).field_w << 12) < 0) {
-                                if (var36 - (((km) this).field_t << 12) < 0) {
+                              if (var35 - (this.field_w << 12) < 0) {
+                                if (var36 - (this.field_t << 12) < 0) {
                                   L69: while (true) {
                                     if (var37 >= 0) {
                                       break L68;
                                     } else {
-                                      var38 = ((km) this).field_x[(var36 >> 12) * ((km) this).field_w + (var35 >> 12)];
+                                      var38 = this.field_x[(var36 >> 12) * this.field_w + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         var37++;
                                         continue L69;
                                       } else {
-                                        int incrementValue$17 = var34;
+                                        incrementValue$17 = var34;
                                         var34++;
                                         wb.field_d[incrementValue$17] = var38;
                                         var37++;
@@ -2322,6 +2345,16 @@ class km extends fk {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -2343,7 +2376,7 @@ class km extends fk {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     param2 = param1[incrementValue$218];
                     if (param2 == 0) {
@@ -2351,7 +2384,7 @@ class km extends fk {
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -2361,48 +2394,48 @@ class km extends fk {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 param2 = param1[incrementValue$226];
                 if (param2 == 0) {
@@ -2410,7 +2443,7 @@ class km extends fk {
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -2439,30 +2472,30 @@ class km extends fk {
         } else {
           if (param3 > 0) {
             L0: {
-              var5 = ((km) this).field_w;
-              var6 = ((km) this).field_t;
+              var5 = this.field_w;
+              var6 = this.field_t;
               var7 = 0;
               var8 = 0;
-              var9 = ((km) this).field_v;
-              var10 = ((km) this).field_u;
+              var9 = this.field_v;
+              var10 = this.field_u;
               var11 = (var9 << 16) / param2;
               var12 = (var10 << 16) / param3;
-              if (((km) this).field_s <= 0) {
+              if (this.field_s <= 0) {
                 break L0;
               } else {
-                var13 = ((((km) this).field_s << 16) + var11 - 1) / var11;
+                var13 = ((this.field_s << 16) + var11 - 1) / var11;
                 param0 = param0 + var13;
-                var7 = var7 + (var13 * var11 - (((km) this).field_s << 16));
+                var7 = var7 + (var13 * var11 - (this.field_s << 16));
                 break L0;
               }
             }
             L1: {
-              if (((km) this).field_r <= 0) {
+              if (this.field_r <= 0) {
                 break L1;
               } else {
-                var13 = ((((km) this).field_r << 16) + var12 - 1) / var12;
+                var13 = ((this.field_r << 16) + var12 - 1) / var12;
                 param1 = param1 + var13;
-                var8 = var8 + (var13 * var12 - (((km) this).field_r << 16));
+                var8 = var8 + (var13 * var12 - (this.field_r << 16));
                 break L1;
               }
             }
@@ -2525,7 +2558,7 @@ class km extends fk {
                 break L7;
               }
             }
-            km.a(wb.field_d, ((km) this).field_x, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+            km.a(wb.field_d, this.field_x, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
             return;
           } else {
             return;
@@ -2542,12 +2575,12 @@ class km extends fk {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((km) this).field_s;
-          param1 = param1 + ((km) this).field_r;
+          param0 = param0 + this.field_s;
+          param1 = param1 + this.field_r;
           var3 = param0 + param1 * wb.field_h;
           var4 = 0;
-          var5 = ((km) this).field_t;
-          var6 = ((km) this).field_w;
+          var5 = this.field_t;
+          var6 = this.field_w;
           var7 = wb.field_h - var6;
           var8 = 0;
           if (param1 >= wb.field_a) {
@@ -2598,7 +2631,7 @@ class km extends fk {
           return;
         } else {
           if (var5 > 0) {
-            km.a(0, wb.field_d, ((km) this).field_x, 0, var4, var3, var6, var5, var7, var8);
+            km.a(0, wb.field_d, this.field_x, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -2607,6 +2640,8 @@ class km extends fk {
     }
 
     private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -2625,7 +2660,7 @@ class km extends fk {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$14 = param4;
+                incrementValue$14 = param4;
                 param4++;
                 param3 = param2[incrementValue$14];
                 if (param3 != 0) {
@@ -2634,7 +2669,7 @@ class km extends fk {
                     var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
                     var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
                     var14 = (param3 & 255) * (param0 & 255) >>> 8;
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param1[incrementValue$15] = (var12 << 16) + (var13 << 8) + var14;
                     var11++;
@@ -2656,16 +2691,20 @@ class km extends fk {
     }
 
     void c(int param0, int param1) {
-        param0 = param0 + (((km) this).field_s >> 1);
-        param1 = param1 + (((km) this).field_r >> 1);
+        param0 = param0 + (this.field_s >> 1);
+        param1 = param1 + (this.field_r >> 1);
         int var3 = param0 < wb.field_i ? wb.field_i - param0 << 1 : 0;
-        int var4 = param0 + (((km) this).field_w >> 1) > wb.field_j ? wb.field_j - param0 << 1 : ((km) this).field_w;
+        int var4 = param0 + (this.field_w >> 1) > wb.field_j ? wb.field_j - param0 << 1 : this.field_w;
         int var5 = param1 < wb.field_a ? wb.field_a - param1 << 1 : 0;
-        int var6 = param1 + (((km) this).field_t >> 1) > wb.field_b ? wb.field_b - param1 << 1 : ((km) this).field_t;
-        km.a(((km) this).field_x, var5 * ((km) this).field_w + var3, (param1 + (var5 >> 1)) * wb.field_h + (param0 + (var3 >> 1)), (((km) this).field_w << 1) - (var4 - var3) + (((km) this).field_w & 1), wb.field_h - (var4 - var3 >> 1), ((km) this).field_w, var4 - var3 >> 1, var6 - var5 >> 1);
+        int var6 = param1 + (this.field_t >> 1) > wb.field_b ? wb.field_b - param1 << 1 : this.field_t;
+        km.a(this.field_x, var5 * this.field_w + var3, (param1 + (var5 >> 1)) * wb.field_h + (param0 + (var3 >> 1)), (this.field_w << 1) - (var4 - var3) + (this.field_w & 1), wb.field_h - (var4 - var3 >> 1), this.field_w, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -2695,7 +2734,7 @@ class km extends fk {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
                 param2 = param1[incrementValue$4];
                 if (param2 == 0) {
@@ -2714,13 +2753,13 @@ class km extends fk {
                         break L2;
                       } else {
                         if (var17 > 128) {
-                          int incrementValue$5 = param4;
+                          incrementValue$5 = param4;
                           param4++;
                           param0[incrementValue$5] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
                           var16++;
                           continue L1;
                         } else {
-                          int incrementValue$6 = param4;
+                          incrementValue$6 = param4;
                           param4++;
                           param0[incrementValue$6] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
                           var16++;
@@ -2729,7 +2768,7 @@ class km extends fk {
                       }
                     }
                   }
-                  int incrementValue$7 = param4;
+                  incrementValue$7 = param4;
                   param4++;
                   param0[incrementValue$7] = param2;
                   var16++;
@@ -2751,20 +2790,20 @@ class km extends fk {
         int[] var7 = null;
         int var8 = 0;
         int var9 = 0;
-        var1 = ((km) this).field_t - 1;
+        var1 = this.field_t - 1;
         L0: while (true) {
           L1: {
             if (var1 < 0) {
               break L1;
             } else {
-              var2 = var1 * ((km) this).field_w;
+              var2 = var1 * this.field_w;
               var3 = 0;
               L2: while (true) {
-                if (var3 >= ((km) this).field_w) {
+                if (var3 >= this.field_w) {
                   var1--;
                   continue L0;
                 } else {
-                  if (((km) this).field_x[var2 + var3] == 0) {
+                  if (this.field_x[var2 + var3] == 0) {
                     var3++;
                     continue L2;
                   } else {
@@ -2780,14 +2819,14 @@ class km extends fk {
               if (var2 >= var1) {
                 break L4;
               } else {
-                var3 = var2 * ((km) this).field_w;
+                var3 = var2 * this.field_w;
                 var4 = 0;
                 L5: while (true) {
-                  if (var4 >= ((km) this).field_w) {
+                  if (var4 >= this.field_w) {
                     var2++;
                     continue L3;
                   } else {
-                    if (((km) this).field_x[var3 + var4] == 0) {
+                    if (this.field_x[var3 + var4] == 0) {
                       var4++;
                       continue L5;
                     } else {
@@ -2797,7 +2836,7 @@ class km extends fk {
                 }
               }
             }
-            var3 = ((km) this).field_w - 1;
+            var3 = this.field_w - 1;
             L6: while (true) {
               L7: {
                 if (var3 < 0) {
@@ -2809,7 +2848,7 @@ class km extends fk {
                       var3--;
                       continue L6;
                     } else {
-                      if (((km) this).field_x[var4 * ((km) this).field_w + var3] == 0) {
+                      if (this.field_x[var4 * this.field_w + var3] == 0) {
                         var4++;
                         continue L8;
                       } else {
@@ -2831,7 +2870,7 @@ class km extends fk {
                         var4++;
                         continue L9;
                       } else {
-                        if (((km) this).field_x[var5 * ((km) this).field_w + var4] == 0) {
+                        if (this.field_x[var5 * this.field_w + var4] == 0) {
                           var5++;
                           continue L11;
                         } else {
@@ -2845,13 +2884,13 @@ class km extends fk {
                   if (var4 != 0) {
                     break L12;
                   } else {
-                    if (var3 != ((km) this).field_w - 1) {
+                    if (var3 != this.field_w - 1) {
                       break L12;
                     } else {
                       if (var2 != 0) {
                         break L12;
                       } else {
-                        if (var1 != ((km) this).field_t - 1) {
+                        if (var1 != this.field_t - 1) {
                           break L12;
                         } else {
                           return;
@@ -2866,11 +2905,11 @@ class km extends fk {
                 var8 = 0;
                 L13: while (true) {
                   if (var8 >= var6) {
-                    ((km) this).field_x = var7;
-                    ((km) this).field_w = var5;
-                    ((km) this).field_t = var6;
-                    ((km) this).field_s = ((km) this).field_s + var4;
-                    ((km) this).field_r = ((km) this).field_r + var2;
+                    this.field_x = var7;
+                    this.field_w = var5;
+                    this.field_t = var6;
+                    this.field_s = this.field_s + var4;
+                    this.field_r = this.field_r + var2;
                     return;
                   } else {
                     var9 = 0;
@@ -2879,7 +2918,7 @@ class km extends fk {
                         var8++;
                         continue L13;
                       } else {
-                        var7[var8 * var5 + var9] = ((km) this).field_x[(var8 + var2) * ((km) this).field_w + (var9 + var4)];
+                        var7[var8 * var5 + var9] = this.field_x[(var8 + var2) * this.field_w + (var9 + var4)];
                         var9++;
                         continue L14;
                       }
@@ -2895,35 +2934,36 @@ class km extends fk {
     final void f() {
         int var2 = 0;
         int var3 = 0;
-        if (((km) this).field_w == ((km) this).field_v) {
-            if (((km) this).field_t == ((km) this).field_u) {
+        if (this.field_w == this.field_v) {
+            if (this.field_t == this.field_u) {
                 return;
             }
         }
-        int[] var1 = new int[((km) this).field_v * ((km) this).field_u];
-        for (var2 = 0; var2 < ((km) this).field_t; var2++) {
-            for (var3 = 0; var3 < ((km) this).field_w; var3++) {
-                var1[(var2 + ((km) this).field_r) * ((km) this).field_v + (var3 + ((km) this).field_s)] = ((km) this).field_x[var2 * ((km) this).field_w + var3];
+        int[] var1 = new int[this.field_v * this.field_u];
+        for (var2 = 0; var2 < this.field_t; var2++) {
+            for (var3 = 0; var3 < this.field_w; var3++) {
+                var1[(var2 + this.field_r) * this.field_v + (var3 + this.field_s)] = this.field_x[var2 * this.field_w + var3];
             }
         }
-        ((km) this).field_x = var1;
-        ((km) this).field_w = ((km) this).field_v;
-        ((km) this).field_t = ((km) this).field_u;
-        ((km) this).field_s = 0;
-        ((km) this).field_r = 0;
+        this.field_x = var1;
+        this.field_w = this.field_v;
+        this.field_t = this.field_u;
+        this.field_s = 0;
+        this.field_r = 0;
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
             var14 = (param4 >> 16) * param11;
             for (var15 = -param7; var15 < 0; var15++) {
                 param2 = param1[(param3 >> 16) + var14];
                 if (param2 != 0) {
-                    int incrementValue$1 = param5;
+                    incrementValue$1 = param5;
                     param5++;
                     param0[incrementValue$1] = param2;
                 } else {
@@ -2946,12 +2986,12 @@ class km extends fk {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((km) this).field_s;
-          param1 = param1 + ((km) this).field_r;
+          param0 = param0 + this.field_s;
+          param1 = param1 + this.field_r;
           var4 = param0 + param1 * wb.field_h;
           var5 = 0;
-          var6 = ((km) this).field_t;
-          var7 = ((km) this).field_w;
+          var6 = this.field_t;
+          var7 = this.field_w;
           var8 = wb.field_h - var7;
           var9 = 0;
           if (param1 >= wb.field_a) {
@@ -3002,7 +3042,7 @@ class km extends fk {
           return;
         } else {
           if (var6 > 0) {
-            km.a(wb.field_d, ((km) this).field_x, 0, var5, var4, var7, var6, var8, var9, param2);
+            km.a(wb.field_d, this.field_x, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -3019,12 +3059,12 @@ class km extends fk {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((km) this).field_s;
-          param1 = param1 + ((km) this).field_r;
+          param0 = param0 + this.field_s;
+          param1 = param1 + this.field_r;
           var4 = param0 + param1 * wb.field_h;
           var5 = 0;
-          var6 = ((km) this).field_t;
-          var7 = ((km) this).field_w;
+          var6 = this.field_t;
+          var7 = this.field_w;
           var8 = wb.field_h - var7;
           var9 = 0;
           if (param1 >= wb.field_a) {
@@ -3075,7 +3115,7 @@ class km extends fk {
           return;
         } else {
           if (var6 > 0) {
-            km.b(wb.field_d, ((km) this).field_x, 0, var5, var4, var7, var6, var8, var9, param2);
+            km.b(wb.field_d, this.field_x, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -3084,6 +3124,8 @@ class km extends fk {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -3097,7 +3139,7 @@ class km extends fk {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -3109,7 +3151,7 @@ class km extends fk {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -3130,12 +3172,12 @@ class km extends fk {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((km) this).field_s;
-          param1 = param1 + ((km) this).field_r;
+          param0 = param0 + this.field_s;
+          param1 = param1 + this.field_r;
           var3 = param0 + param1 * wb.field_h;
           var4 = 0;
-          var5 = ((km) this).field_t;
-          var6 = ((km) this).field_w;
+          var5 = this.field_t;
+          var6 = this.field_w;
           var7 = wb.field_h - var6;
           var8 = 0;
           if (param1 >= wb.field_a) {
@@ -3186,7 +3228,7 @@ class km extends fk {
           return;
         } else {
           if (var5 > 0) {
-            km.b(wb.field_d, ((km) this).field_x, 0, var4, var3, var6, var5, var7, var8);
+            km.b(wb.field_d, this.field_x, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -3202,10 +3244,10 @@ class km extends fk {
         int var8 = 0;
         var4 = 0;
         L0: while (true) {
-          if (var4 >= ((km) this).field_x.length) {
+          if (var4 >= this.field_x.length) {
             return;
           } else {
-            var5 = ((km) this).field_x[var4];
+            var5 = this.field_x[var4];
             if (var5 != 0) {
               L1: {
                 var6 = var5 >> 16 & 255;
@@ -3252,7 +3294,7 @@ class km extends fk {
                   break L3;
                 }
               }
-              ((km) this).field_x[var4] = (var6 << 16) + (var7 << 8) + var8;
+              this.field_x[var4] = (var6 << 16) + (var7 << 8) + var8;
               var4++;
               continue L0;
             } else {
@@ -3264,41 +3306,51 @@ class km extends fk {
     }
 
     final void e() {
-        wb.a(((km) this).field_x, ((km) this).field_w, ((km) this).field_t);
+        wb.a(this.field_x, this.field_w, this.field_t);
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
             var9 = param3 + param4 - 3;
             while (param3 < var9) {
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 param0[incrementValue$0] = param1[incrementValue$1];
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
-                int incrementValue$3 = param2;
+                incrementValue$3 = param2;
                 param2++;
                 param0[incrementValue$2] = param1[incrementValue$3];
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
-                int incrementValue$5 = param2;
+                incrementValue$5 = param2;
                 param2++;
                 param0[incrementValue$4] = param1[incrementValue$5];
-                int incrementValue$6 = param3;
+                incrementValue$6 = param3;
                 param3++;
-                int incrementValue$7 = param2;
+                incrementValue$7 = param2;
                 param2++;
                 param0[incrementValue$6] = param1[incrementValue$7];
             }
             var9 += 3;
             while (param3 < var9) {
-                int incrementValue$8 = param3;
+                incrementValue$8 = param3;
                 param3++;
-                int incrementValue$9 = param2;
+                incrementValue$9 = param2;
                 param2++;
                 param0[incrementValue$8] = param1[incrementValue$9];
             }
@@ -3308,16 +3360,18 @@ class km extends fk {
     }
 
     km(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        ((km) this).field_v = param0;
-        ((km) this).field_u = param1;
-        ((km) this).field_s = param2;
-        ((km) this).field_r = param3;
-        ((km) this).field_w = param4;
-        ((km) this).field_t = param5;
-        ((km) this).field_x = param6;
+        this.field_v = param0;
+        this.field_u = param1;
+        this.field_s = param2;
+        this.field_r = param3;
+        this.field_w = param4;
+        this.field_t = param5;
+        this.field_x = param6;
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -3336,7 +3390,7 @@ class km extends fk {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -3345,7 +3399,7 @@ class km extends fk {
                   continue L1;
                 } else {
                   var13 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -3358,6 +3412,8 @@ class km extends fk {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -3371,7 +3427,7 @@ class km extends fk {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -3385,7 +3441,7 @@ class km extends fk {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -3406,12 +3462,12 @@ class km extends fk {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((km) this).field_s;
-          param1 = param1 + ((km) this).field_r;
+          param0 = param0 + this.field_s;
+          param1 = param1 + this.field_r;
           var3 = param0 + param1 * wb.field_h;
           var4 = 0;
-          var5 = ((km) this).field_t;
-          var6 = ((km) this).field_w;
+          var5 = this.field_t;
+          var6 = this.field_w;
           var7 = wb.field_h - var6;
           var8 = 0;
           if (param1 >= wb.field_a) {
@@ -3462,7 +3518,7 @@ class km extends fk {
           return;
         } else {
           if (var5 > 0) {
-            km.a(wb.field_d, ((km) this).field_x, var4, var3, var6, var5, var7, var8);
+            km.a(wb.field_d, this.field_x, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -3471,16 +3527,17 @@ class km extends fk {
     }
 
     km(int param0, int param1) {
-        ((km) this).field_x = new int[param0 * param1];
-        ((km) this).field_v = param0;
-        ((km) this).field_w = param0;
-        ((km) this).field_u = param1;
-        ((km) this).field_t = param1;
-        ((km) this).field_r = 0;
-        ((km) this).field_s = 0;
+        this.field_x = new int[param0 * param1];
+        this.field_v = param0;
+        this.field_w = param0;
+        this.field_u = param1;
+        this.field_t = param1;
+        this.field_r = 0;
+        this.field_s = 0;
     }
 
     km(byte[] param0, java.awt.Component param1) {
+        boolean discarded$1 = false;
         InterruptedException var3 = null;
         java.awt.Image var3_ref = null;
         java.awt.MediaTracker var4 = null;
@@ -3492,18 +3549,18 @@ class km extends fk {
             var4 = new java.awt.MediaTracker(param1);
             var4.addImage(var3_ref, 0);
             var4.waitForAll();
-            ((km) this).field_w = var3_ref.getWidth((java.awt.image.ImageObserver) (Object) param1);
-            ((km) this).field_t = var3_ref.getHeight((java.awt.image.ImageObserver) (Object) param1);
-            ((km) this).field_v = ((km) this).field_w;
-            ((km) this).field_u = ((km) this).field_t;
-            ((km) this).field_s = 0;
-            ((km) this).field_r = 0;
-            ((km) this).field_x = new int[((km) this).field_w * ((km) this).field_t];
-            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, ((km) this).field_w, ((km) this).field_t, ((km) this).field_x, 0, ((km) this).field_w);
-            boolean discarded$1 = var5.grabPixels();
+            this.field_w = var3_ref.getWidth((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_t = var3_ref.getHeight((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_v = this.field_w;
+            this.field_u = this.field_t;
+            this.field_s = 0;
+            this.field_r = 0;
+            this.field_x = new int[this.field_w * this.field_t];
+            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, this.field_w, this.field_t, this.field_x, 0, this.field_w);
+            discarded$1 = var5.grabPixels();
             break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = (InterruptedException) (Object) decompiledCaughtException;
@@ -3513,6 +3570,7 @@ class km extends fk {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int incrementValue$1 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -3585,7 +3643,7 @@ class km extends fk {
                     break L5;
                   }
                 }
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 wb.field_d[incrementValue$1] = (var13 & 66847740 | var14 & 261120) >> 2;
                 var9++;

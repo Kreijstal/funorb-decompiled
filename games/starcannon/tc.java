@@ -8,6 +8,7 @@ final class tc extends kf {
 
     final void a(byte param0, uj param1) {
         qd var3 = null;
+        boolean discarded$0 = false;
         if (param0 <= 68) {
             return;
         }
@@ -15,18 +16,18 @@ final class tc extends kf {
             if (!(param1 instanceof qd)) {
                 throw new IllegalArgumentException();
             }
-            var3 = (qd) (Object) param1;
-            ((tc) this).field_w.a(-125, (rf) (Object) var3);
+            var3 = (qd) ((Object) param1);
+            this.field_w.a(-125, var3);
             var3.field_G = true;
-            boolean discarded$0 = var3.a(0, (uj) this);
+            discarded$0 = var3.a(0, (uj) (this));
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "tc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "tc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public tc() {
         super(0, 0, ui.field_o, ak.field_h, (de) null, (qg) null);
-        ((tc) this).field_w = new rk();
+        this.field_w = new rk();
     }
 
     final static void j(int param0) {
@@ -45,19 +46,19 @@ final class tc extends kf {
             }
             sg.field_k = 0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "tc.B(" + param0 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "tc.B(" + param0 + ')');
         }
     }
 
     final qd k(int param0) {
         ba var2 = null;
         qd var3 = null;
-        var2 = new ba(((tc) this).field_w);
-        var3 = (qd) (Object) var2.a(param0 ^ param0);
+        var2 = new ba(this.field_w);
+        var3 = (qd) ((Object) var2.a(param0 ^ param0));
         L0: while (true) {
           if (var3 != null) {
             if (!var3.field_G) {
-              var3 = (qd) (Object) var2.b(param0 ^ 97);
+              var3 = (qd) ((Object) var2.b(param0 ^ 97));
               continue L0;
             } else {
               return var3;
@@ -69,8 +70,8 @@ final class tc extends kf {
     }
 
     final void h(int param0) {
-        ba var2 = new ba(((tc) this).field_w);
-        qd var3 = (qd) (Object) var2.a(0);
+        ba var2 = new ba(this.field_w);
+        qd var3 = (qd) ((Object) var2.a(0));
         if (param0 != -10597) {
             field_x = false;
         }
@@ -78,35 +79,36 @@ final class tc extends kf {
             if (var3.g((byte) -124)) {
                 var3.b(4);
             }
-            var3 = (qd) (Object) var2.b(param0 + 10679);
+            var3 = (qd) ((Object) var2.b(param0 + 10679));
         }
-        ((tc) this).field_t = (uj) (Object) ((tc) this).k(0);
+        this.field_t = (uj) ((Object) this.k(0));
     }
 
     final void l(int param0) {
-        ba var2 = new ba(((tc) this).field_w);
-        qd var3 = (qd) (Object) var2.a(0);
+        uj discarded$0 = null;
+        ba var2 = new ba(this.field_w);
+        qd var3 = (qd) ((Object) var2.a(0));
         while (var3 != null) {
             var3.field_G = false;
-            var3 = (qd) (Object) var2.b(102);
+            var3 = (qd) ((Object) var2.b(102));
         }
-        ((tc) this).field_t = null;
+        this.field_t = null;
         if (param0 != 26756) {
-            uj discarded$0 = ((tc) this).e(-38);
+            discarded$0 = this.e(-38);
         }
     }
 
     final uj e(int param0) {
         ba var2 = null;
         qd var3 = null;
-        var2 = new ba(((tc) this).field_w);
-        var3 = (qd) (Object) var2.a(param0 + param0);
+        var2 = new ba(this.field_w);
+        var3 = (qd) ((Object) var2.a(param0 + param0));
         L0: while (true) {
           if (var3 != null) {
             if (var3.field_G) {
               return var3.h(1);
             } else {
-              var3 = (qd) (Object) var2.b(99);
+              var3 = (qd) ((Object) var2.b(99));
               continue L0;
             }
           } else {
@@ -117,29 +119,29 @@ final class tc extends kf {
 
     final void a(int param0, int param1, byte param2, int param3) {
         int var7 = StarCannon.field_A;
-        if (!(((tc) this).field_o == null)) {
-            ((tc) this).field_o.a(param1, true, -93, param3, (uj) this);
+        if (!(this.field_o == null)) {
+            this.field_o.a(param1, true, -93, param3, (uj) (this));
         }
-        ba var5 = new ba(((tc) this).field_w);
+        ba var5 = new ba(this.field_w);
         if (param2 != 49) {
             return;
         }
-        uj var6 = (uj) (Object) var5.a(false);
+        uj var6 = (uj) ((Object) var5.a(false));
         while (var6 != null) {
-            var6.a(param0, ((tc) this).field_s + param1, (byte) 49, param3 + ((tc) this).field_j);
-            var6 = (uj) (Object) var5.a((byte) -34);
+            var6.a(param0, this.field_s + param1, (byte) 49, param3 + this.field_j);
+            var6 = (uj) ((Object) var5.a((byte) -34));
         }
     }
 
     final void i(int param0) {
         int var4 = StarCannon.field_A;
-        ba var2 = new ba(((tc) this).field_w);
-        qd var3 = (qd) (Object) var2.a(param0 ^ param0);
+        ba var2 = new ba(this.field_w);
+        qd var3 = (qd) ((Object) var2.a(param0 ^ param0));
         while (var3 != null) {
             if (var3.i(-126)) {
                 var3.b(4);
             }
-            var3 = (qd) (Object) var2.b(99);
+            var3 = (qd) ((Object) var2.b(99));
         }
     }
 
@@ -151,10 +153,6 @@ final class tc extends kf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = "CONTROLS:";
     }
 }

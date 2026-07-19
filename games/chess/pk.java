@@ -27,24 +27,24 @@ abstract class pk {
         nk var3 = null;
         try {
             var3 = qn.field_U;
-            var3.f(3, -126);
+            var3.f(param0, -126);
             var3.c(5, (byte) -108);
             var3.c(0, (byte) -120);
-            int var4 = -54;
+            int var4 = -54 / ((-22 - param1) / 58);
             var3.b(param2.field_j, 114);
             var3.c(param2.field_k, (byte) -111);
             var3.c(param2.field_m, (byte) -62);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "pk.D(" + 3 + ',' + -90 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "pk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     boolean a(byte param0) {
         if (param0 == -9) {
-          if (hn.field_k >= ((pk) this).field_i) {
-            if (((pk) this).field_k <= rf.field_b) {
-              if (((pk) this).field_l + ((pk) this).field_i >= hn.field_k) {
-                if (((pk) this).field_c + ((pk) this).field_k < rf.field_b) {
+          if (hn.field_k >= this.field_i) {
+            if (this.field_k <= rf.field_b) {
+              if (this.field_l + this.field_i >= hn.field_k) {
+                if (this.field_c + this.field_k < rf.field_b) {
                   return false;
                 } else {
                   return true;
@@ -66,7 +66,7 @@ abstract class pk {
     final static void a(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        int var2 = 50;
+        int var2 = 101 / ((23 - param1) / 42);
         cb.field_a = param0;
         if (!(da.field_F == ug.field_b)) {
             var3 = ug.field_b * ug.field_b;
@@ -78,16 +78,12 @@ abstract class pk {
     }
 
     pk() {
-        ((pk) this).field_f = false;
-        ((pk) this).field_e = true;
-        ((pk) this).field_d = false;
+        this.field_f = false;
+        this.field_e = true;
+        this.field_d = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Best";
         field_b = -1;
     }

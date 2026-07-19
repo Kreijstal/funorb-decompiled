@@ -13,7 +13,7 @@ final class lb {
         field_c = null;
         field_a = null;
         field_e = null;
-        int var1 = 0;
+        int var1 = -67 % ((-80 - param0) / 33);
     }
 
     final static int a(CharSequence param0, int param1) {
@@ -31,6 +31,7 @@ final class lb {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_2_0 = 0;
@@ -53,9 +54,10 @@ final class lb {
                 if (var2_int <= var4) {
                   stackOut_7_0 = var3;
                   stackIn_8_0 = stackOut_7_0;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  var3 = (var3 << 5) - var3 - -vb.a((byte) -128, param0.charAt(var4));
+                  var3 = (var3 << 590171557) - var3 - -vb.a((byte) -128, param0.charAt(var4));
                   var4++;
                   continue L1;
                 }
@@ -63,30 +65,31 @@ final class lb {
             } else {
               stackOut_2_0 = -107;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var2;
+            stackOut_9_0 = (RuntimeException) (var2);
             stackOut_9_1 = new StringBuilder().append("lb.B(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -94,9 +97,13 @@ final class lb {
               break L2;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
-        return stackIn_8_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_8_0;
+        }
     }
 
     final static void a(String param0, java.applet.Applet param1, int param2) {
@@ -110,7 +117,7 @@ final class lb {
                     var3 = param1.getParameter("cookieprefix");
                     var4 = param1.getParameter("cookiehost");
                     var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
-                    if (!(param0.length() != 0)) {
+                    if (!((param0.length() ^ -1) != param2)) {
                         var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
                     cd.a(param1, 13162, "document.cookie=\"" + var5 + "\"");
@@ -118,7 +125,7 @@ final class lb {
                 }
                 dh.a(param1, true);
             } catch (RuntimeException runtimeException) {
-                throw qk.a((Throwable) (Object) runtimeException, "lb.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + -1 + ')');
+                throw qk.a((Throwable) ((Object) runtimeException), "lb.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -128,10 +135,6 @@ final class lb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Select a mission from the main map to activate this button";
         field_f = 2;
         field_a = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";

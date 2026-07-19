@@ -22,6 +22,7 @@ final class va implements pf {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
@@ -41,12 +42,13 @@ final class va implements pf {
                   var6_int = 1;
                   L2: while (true) {
                     if (5 < var6_int) {
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       L3: {
-                        var7 = var6_int + (-5 + -(param0.field_v >> 1) + (param0.field_n + param2) - -param0.field_v);
-                        var8 = (param0.field_v >> 1) + -(var6_int * 2);
-                        var9 = var6_int + (param3 + param0.field_j - -(-4 + param0.field_k >> 1));
+                        var7 = var6_int + (-5 + -(param0.field_v >> -1245424703) + (param0.field_n + param2) - -param0.field_v);
+                        var8 = (param0.field_v >> -687975071) + -(var6_int * 2);
+                        var9 = var6_int + (param3 + param0.field_j - -(-4 + param0.field_k >> 1006381601));
                         if (var9 < de.field_c) {
                           break L3;
                         } else {
@@ -57,12 +59,12 @@ final class va implements pf {
                               if (var7 <= de.field_i) {
                                 break L4;
                               } else {
-                                de.field_l[-1 + (de.field_e * var9 + var7)] = dg.a(16711422, de.field_l[de.field_e * var9 + var7 + -1]) >> 1;
+                                de.field_l[-1 + (de.field_e * var9 + var7)] = dg.a(16711422, de.field_l[de.field_e * var9 + var7 + -1]) >> 782918177;
                                 break L4;
                               }
                             }
                             if (de.field_h > var8 + var7) {
-                              de.field_l[var9 * de.field_e - -var7 + var8] = dg.a(16711422, de.field_l[de.field_e * var9 + var7 + var8]) >> 1;
+                              de.field_l[var9 * de.field_e - -var7 + var8] = dg.a(16711422, de.field_l[de.field_e * var9 + var7 + var8]) >> 1028993697;
                               break L3;
                             } else {
                               break L3;
@@ -76,11 +78,12 @@ final class va implements pf {
                     }
                   }
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               } else {
                 var7 = 48 * var6_int / param0.field_k + 152;
-                var8 = var7 | (var7 << 8 | var7 << 16);
+                var8 = var7 | (var7 << 1592779048 | var7 << 1985315888);
                 de.f(param0.field_n + param2, param3 - (-param0.field_j - var6_int), param0.field_v, var8);
                 var6_int++;
                 continue L1;
@@ -91,23 +94,23 @@ final class va implements pf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var6;
+            stackOut_17_0 = (RuntimeException) (var6);
             stackOut_17_1 = new StringBuilder().append("va.A(");
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -115,7 +118,12 @@ final class va implements pf {
               break L5;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -139,6 +147,7 @@ final class va implements pf {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_1_0 = 0;
@@ -162,7 +171,7 @@ final class va implements pf {
           L0: {
             if (wj.a(param3, param2, param4, 2, param0)) {
               L1: {
-                if (param4 != 1) {
+                if (param4 != param1) {
                   break L1;
                 } else {
                   param4 = 0;
@@ -171,41 +180,43 @@ final class va implements pf {
               }
               nj.field_c = param4;
               so.field_p = param3;
-              var7 = (CharSequence) (Object) param3;
-              ua.field_S = gk.a(var7, -13);
+              var7 = (CharSequence) ((Object) param3);
+              ua.field_S = gk.a(var7, param1 ^ -14);
               gg.field_e = param0;
               var6 = ff.a(param2, 49, gl.field_c, mj.field_z, ab.field_p);
               ag.a(var6, (byte) -104);
               stackOut_5_0 = 1;
               stackIn_6_0 = stackOut_5_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 0;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var6_ref;
-            stackOut_7_1 = new StringBuilder().append("va.B(").append(param0).append(',').append(1).append(',');
+            stackOut_7_0 = (RuntimeException) (var6_ref);
+            stackOut_7_1 = new StringBuilder().append("va.B(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -214,23 +225,23 @@ final class va implements pf {
             }
           }
           L3: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -238,24 +249,27 @@ final class va implements pf {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param4 + ')');
         }
-        return stackIn_6_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_6_0 != 0;
+        }
     }
 
     public static void a(int param0) {
         field_c = null;
         field_e = null;
+        if (param0 < 110) {
+            field_a = (String) null;
+        }
         field_a = null;
         field_d = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "  If you don't like playing Team Games, just select the <col=ffffff>Free-For-All</col> button on the game creation screen.";
         field_b = "Imps can use the Self Destruct spell. This spell causes the Imp to explode, damaging anything nearby - the more health the Imp has, the more damage the explosion causes. It also has the effect of healing any other imps caught in the blast, which can lead to some very dangerous Imps...<br>Select an Imp's Self Destruct spell";
         field_d = "Only show private chat from my friends and opponents";

@@ -15,7 +15,7 @@ final class pg {
 
     final static int a(boolean param0) {
         if (!param0) {
-            field_i = null;
+            field_i = (String) null;
             return lj.field_g;
         }
         return lj.field_g;
@@ -44,8 +44,8 @@ final class pg {
         var3 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            param1.a(false);
-            var2 = (he) (Object) te.field_f.a((byte) -126);
+            param1.a(param0);
+            var2 = (he) ((Object) te.field_f.a((byte) -126));
             L1: while (true) {
               L2: {
                 if (var2 == null) {
@@ -54,16 +54,16 @@ final class pg {
                   if (!var2.a(param1, -12712)) {
                     break L2;
                   } else {
-                    var2 = (he) (Object) te.field_f.a(16213);
+                    var2 = (he) ((Object) te.field_f.a(16213));
                     continue L1;
                   }
                 }
               }
               if (var2 != null) {
-                td.a((l) (Object) var2, (byte) 89, (l) (Object) param1);
+                td.a(var2, (byte) 89, param1);
                 break L0;
               } else {
-                te.field_f.a((l) (Object) param1, (byte) -42);
+                te.field_f.a(param1, (byte) -42);
                 return;
               }
             }
@@ -72,23 +72,23 @@ final class pg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var2_ref;
-            stackOut_9_1 = new StringBuilder().append("pg.E(").append(false).append(',');
+            stackOut_9_0 = (RuntimeException) (var2_ref);
+            stackOut_9_1 = new StringBuilder().append("pg.E(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -96,16 +96,17 @@ final class pg {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
     }
 
     public static void b(int param0) {
+        boolean discarded$0 = false;
         field_c = null;
         field_j = null;
         field_a = null;
         if (param0 != 8192) {
-            boolean discarded$0 = pg.a((byte) 74);
+            discarded$0 = pg.a((byte) 74);
             field_i = null;
             return;
         }
@@ -113,6 +114,10 @@ final class pg {
     }
 
     final static String a(int param0) {
+        if (param0 != -1) {
+            field_g = -109;
+            return rf.field_a;
+        }
         return rf.field_a;
     }
 
@@ -122,7 +127,7 @@ final class pg {
         int stackOut_1_0 = 0;
         var1 = -1 / ((-93 - param0) / 33);
         if (!qm.i(20)) {
-          if (bn.field_d <= 0) {
+          if ((bn.field_d ^ -1) >= -1) {
             return true;
           } else {
             return false;
@@ -135,10 +140,6 @@ final class pg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "You resigned";
         field_i = "Grid width: <%0>";
         field_c = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};

@@ -2,7 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.util.*;
-import java.lang.Class;
 
 final class i extends ha implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_o;
@@ -13,19 +12,20 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            ((i) this).field_p = param0;
-            param0.setDimensions(((i) this).field_a, ((i) this).field_i);
+            this.field_p = param0;
+            param0.setDimensions(this.field_a, this.field_i);
             param0.setProperties((Hashtable) null);
-            param0.setColorModel(((i) this).field_o);
+            param0.setColorModel(this.field_o);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "i.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "i.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(int param0, String param1) {
+        boolean discarded$2 = false;
         RuntimeException var2 = null;
-        Object var3 = null;
+        String var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -51,8 +51,8 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
               if (param0 == -640) {
                 break L1;
               } else {
-                var3 = null;
-                boolean discarded$2 = i.a(54, (String) null);
+                var3 = (String) null;
+                discarded$2 = i.a(54, (String) null);
                 break L1;
               }
             }
@@ -73,23 +73,23 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_0 = (RuntimeException) (var2);
             stackOut_6_1 = new StringBuilder().append("i.F(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -97,32 +97,33 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
 
     final void a(java.awt.Graphics param0, boolean param1, int param2, int param3) {
+        boolean discarded$0 = false;
         try {
             this.b(param1);
-            boolean discarded$0 = param0.drawImage(((i) this).field_d, param3, param2, (java.awt.image.ImageObserver) this);
+            discarded$0 = param0.drawImage(this.field_d, param3, param2, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "i.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "i.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     private final synchronized void b(boolean param0) {
-        if (null == ((i) this).field_p) {
+        if (null == this.field_p) {
           return;
         } else {
           if (param0) {
             field_l = 110;
-            ((i) this).field_p.setPixels(0, 0, ((i) this).field_a, ((i) this).field_i, ((i) this).field_o, ((i) this).field_e, 0, ((i) this).field_a);
-            ((i) this).field_p.imageComplete(2);
+            this.field_p.setPixels(0, 0, this.field_a, this.field_i, this.field_o, this.field_e, 0, this.field_a);
+            this.field_p.imageComplete(2);
             return;
           } else {
-            ((i) this).field_p.setPixels(0, 0, ((i) this).field_a, ((i) this).field_i, ((i) this).field_o, ((i) this).field_e, 0, ((i) this).field_a);
-            ((i) this).field_p.imageComplete(2);
+            this.field_p.setPixels(0, 0, this.field_a, this.field_i, this.field_o, this.field_e, 0, this.field_a);
+            this.field_p.imageComplete(2);
             return;
           }
         }
@@ -130,9 +131,9 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
         try {
-            ((i) this).addConsumer(param0);
+            this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "i.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "i.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -166,23 +167,23 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var7;
+            stackOut_2_0 = (RuntimeException) (var7);
             stackOut_2_1 = new StringBuilder().append("i.imageUpdate(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -190,30 +191,33 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
 
     final void a(int param0, java.awt.Component param1, int param2, byte param3) {
+        boolean discarded$6 = false;
+        boolean discarded$7 = false;
+        boolean discarded$8 = false;
         try {
-            ((i) this).field_i = param2;
-            ((i) this).field_a = param0;
-            ((i) this).field_e = new int[1 + param0 * param2];
-            ((i) this).field_o = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-            ((i) this).field_d = param1.createImage((java.awt.image.ImageProducer) this);
+            this.field_i = param2;
+            this.field_a = param0;
+            this.field_e = new int[1 + param0 * param2];
+            this.field_o = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+            this.field_d = param1.createImage((java.awt.image.ImageProducer) (this));
             this.b(false);
-            boolean discarded$6 = param1.prepareImage(((i) this).field_d, (java.awt.image.ImageObserver) this);
+            discarded$6 = param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
             if (param3 > -51) {
                 i.a(-29, true, false, false, true, 57, -40, true, -122, -23);
             }
             this.b(false);
-            boolean discarded$7 = param1.prepareImage(((i) this).field_d, (java.awt.image.ImageObserver) this);
+            discarded$7 = param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
             this.b(false);
-            boolean discarded$8 = param1.prepareImage(((i) this).field_d, (java.awt.image.ImageObserver) this);
-            ((i) this).a(19692);
+            discarded$8 = param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
+            this.a(19692);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "i.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "i.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -221,7 +225,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
     }
 
     public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
-        return param0 == ((i) this).field_p;
+        return param0 == this.field_p;
     }
 
     i() {
@@ -253,6 +257,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_37_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Class stackOut_2_0 = null;
         Class stackOut_6_0 = null;
@@ -273,27 +278,31 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
         String stackOut_35_2 = null;
         try {
           L0: {
-            if (param0.equals((Object) (Object) "B")) {
+            if (param0.equals("B")) {
               stackOut_2_0 = Byte.TYPE;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              if (param0.equals((Object) (Object) "I")) {
+              if (param0.equals("I")) {
                 stackOut_6_0 = Integer.TYPE;
                 stackIn_7_0 = stackOut_6_0;
-                return stackIn_7_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
-                if (param0.equals((Object) (Object) "S")) {
+                if (param0.equals("S")) {
                   stackOut_10_0 = Short.TYPE;
                   stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
-                  if (param0.equals((Object) (Object) "J")) {
+                  if (param0.equals("J")) {
                     stackOut_14_0 = Long.TYPE;
                     stackIn_15_0 = stackOut_14_0;
-                    return stackIn_15_0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   } else {
-                    if (!param0.equals((Object) (Object) "Z")) {
+                    if (!param0.equals("Z")) {
                       L1: {
                         if (param1 < -66) {
                           break L1;
@@ -302,31 +311,36 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                           break L1;
                         }
                       }
-                      if (param0.equals((Object) (Object) "F")) {
+                      if (param0.equals("F")) {
                         stackOut_23_0 = Float.TYPE;
                         stackIn_24_0 = stackOut_23_0;
-                        return stackIn_24_0;
+                        decompiledRegionSelector0 = 5;
+                        break L0;
                       } else {
-                        if (param0.equals((Object) (Object) "D")) {
+                        if (param0.equals("D")) {
                           stackOut_27_0 = Double.TYPE;
                           stackIn_28_0 = stackOut_27_0;
-                          return stackIn_28_0;
+                          decompiledRegionSelector0 = 6;
+                          break L0;
                         } else {
-                          if (!param0.equals((Object) (Object) "C")) {
+                          if (!param0.equals("C")) {
                             stackOut_32_0 = Class.forName(param0);
                             stackIn_33_0 = stackOut_32_0;
+                            decompiledRegionSelector0 = 8;
                             break L0;
                           } else {
                             stackOut_30_0 = Character.TYPE;
                             stackIn_31_0 = stackOut_30_0;
-                            return stackIn_31_0;
+                            decompiledRegionSelector0 = 7;
+                            break L0;
                           }
                         }
                       }
                     } else {
                       stackOut_17_0 = Boolean.TYPE;
                       stackIn_18_0 = stackOut_17_0;
-                      return stackIn_18_0;
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     }
                   }
                 }
@@ -337,23 +351,23 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_34_0 = (RuntimeException) var2;
+            stackOut_34_0 = (RuntimeException) (var2);
             stackOut_34_1 = new StringBuilder().append("i.E(");
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;
             stackIn_35_1 = stackOut_34_1;
             if (param0 == null) {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
               stackOut_36_2 = "null";
               stackIn_37_0 = stackOut_36_0;
               stackIn_37_1 = stackOut_36_1;
               stackIn_37_2 = stackOut_36_2;
               break L2;
             } else {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackOut_35_2 = "{...}";
               stackIn_37_0 = stackOut_35_0;
               stackIn_37_1 = stackOut_35_1;
@@ -361,9 +375,41 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_37_0), stackIn_37_2 + ',' + param1 + ')');
         }
-        return stackIn_33_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_11_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_15_0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_18_0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_24_0;
+                  } else {
+                    if (decompiledRegionSelector0 == 6) {
+                      return stackIn_28_0;
+                    } else {
+                      if (decompiledRegionSelector0 == 7) {
+                        return stackIn_31_0;
+                      } else {
+                        return stackIn_33_0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     final static void a(int param0, boolean param1, boolean param2, boolean param3, boolean param4, int param5, int param6, boolean param7, int param8, int param9) {
@@ -404,7 +450,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                 if (param6 == -28362) {
                   break L1;
                 } else {
-                  field_m = null;
+                  field_m = (String) null;
                   break L1;
                 }
               }
@@ -419,7 +465,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
               L3: {
                 nk.field_e.field_Bb = 1;
                 nk.field_e.field_C = kj.field_l.field_C;
-                if (vn.field_g <= 0) {
+                if ((vn.field_g ^ -1) >= -1) {
                   break L3;
                 } else {
                   ic.a(param0, param7, 3, param4);
@@ -427,7 +473,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                 }
               }
               L4: {
-                if (h.field_W > 0) {
+                if ((h.field_W ^ -1) < -1) {
                   no.a(param1, param6 + 28363, param0, param4, param7);
                   break L4;
                 } else {
@@ -472,9 +518,9 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                 }
                 nk.field_e.field_Bb = 1;
                 nk.field_e.field_C = kj.field_l.field_C;
-                if (vn.field_g <= 0) {
+                if ((vn.field_g ^ -1) >= -1) {
                   L8: {
-                    if (h.field_W > 0) {
+                    if ((h.field_W ^ -1) < -1) {
                       no.a(param1, param6 + 28363, param0, param4, param7);
                       break L8;
                     } else {
@@ -511,7 +557,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                 } else {
                   L9: {
                     ic.a(param0, param7, 3, param4);
-                    if (h.field_W > 0) {
+                    if ((h.field_W ^ -1) < -1) {
                       no.a(param1, param6 + 28363, param0, param4, param7);
                       break L9;
                     } else {
@@ -545,7 +591,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                 }
               } else {
                 L12: {
-                  field_m = null;
+                  field_m = (String) null;
                   if (0 >= oo.field_b) {
                     break L12;
                   } else {
@@ -556,7 +602,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                 L13: {
                   nk.field_e.field_Bb = 1;
                   nk.field_e.field_C = kj.field_l.field_C;
-                  if (vn.field_g <= 0) {
+                  if ((vn.field_g ^ -1) >= -1) {
                     break L13;
                   } else {
                     ic.a(param0, param7, 3, param4);
@@ -564,7 +610,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                   }
                 }
                 L14: {
-                  if (h.field_W > 0) {
+                  if ((h.field_W ^ -1) < -1) {
                     no.a(param1, param6 + 28363, param0, param4, param7);
                     break L14;
                   } else {
@@ -627,7 +673,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                 if (param6 == -28362) {
                   break L17;
                 } else {
-                  field_m = null;
+                  field_m = (String) null;
                   break L17;
                 }
               }
@@ -642,7 +688,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
               L19: {
                 nk.field_e.field_Bb = 1;
                 nk.field_e.field_C = kj.field_l.field_C;
-                if (vn.field_g <= 0) {
+                if ((vn.field_g ^ -1) >= -1) {
                   break L19;
                 } else {
                   ic.a(param0, param7, 3, param4);
@@ -650,7 +696,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                 }
               }
               L20: {
-                if (h.field_W > 0) {
+                if ((h.field_W ^ -1) < -1) {
                   no.a(param1, param6 + 28363, param0, param4, param7);
                   break L20;
                 } else {
@@ -688,9 +734,9 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                 if (0 >= oo.field_b) {
                   nk.field_e.field_Bb = 1;
                   nk.field_e.field_C = kj.field_l.field_C;
-                  if (vn.field_g <= 0) {
+                  if ((vn.field_g ^ -1) >= -1) {
                     L23: {
-                      if (h.field_W > 0) {
+                      if ((h.field_W ^ -1) < -1) {
                         no.a(param1, param6 + 28363, param0, param4, param7);
                         break L23;
                       } else {
@@ -727,7 +773,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                   } else {
                     L24: {
                       ic.a(param0, param7, 3, param4);
-                      if (h.field_W > 0) {
+                      if ((h.field_W ^ -1) < -1) {
                         no.a(param1, param6 + 28363, param0, param4, param7);
                         break L24;
                       } else {
@@ -764,7 +810,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                     jh.a(2, param0, param7, param4);
                     nk.field_e.field_Bb = 1;
                     nk.field_e.field_C = kj.field_l.field_C;
-                    if (vn.field_g <= 0) {
+                    if ((vn.field_g ^ -1) >= -1) {
                       break L27;
                     } else {
                       ic.a(param0, param7, 3, param4);
@@ -772,7 +818,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                     }
                   }
                   L28: {
-                    if (h.field_W > 0) {
+                    if ((h.field_W ^ -1) < -1) {
                       no.a(param1, param6 + 28363, param0, param4, param7);
                       break L28;
                     } else {
@@ -806,7 +852,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                 }
               } else {
                 L31: {
-                  field_m = null;
+                  field_m = (String) null;
                   if (0 >= oo.field_b) {
                     break L31;
                   } else {
@@ -817,7 +863,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                 L32: {
                   nk.field_e.field_Bb = 1;
                   nk.field_e.field_C = kj.field_l.field_C;
-                  if (vn.field_g <= 0) {
+                  if ((vn.field_g ^ -1) >= -1) {
                     break L32;
                   } else {
                     ic.a(param0, param7, 3, param4);
@@ -825,7 +871,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                   }
                 }
                 L33: {
-                  if (h.field_W > 0) {
+                  if ((h.field_W ^ -1) < -1) {
                     no.a(param1, param6 + 28363, param0, param4, param7);
                     break L33;
                   } else {
@@ -867,7 +913,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
               if (param6 == -28362) {
                 break L36;
               } else {
-                field_m = null;
+                field_m = (String) null;
                 break L36;
               }
             }
@@ -882,7 +928,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
             L38: {
               nk.field_e.field_Bb = 1;
               nk.field_e.field_C = kj.field_l.field_C;
-              if (vn.field_g <= 0) {
+              if ((vn.field_g ^ -1) >= -1) {
                 break L38;
               } else {
                 ic.a(param0, param7, 3, param4);
@@ -890,7 +936,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
               }
             }
             L39: {
-              if (h.field_W > 0) {
+              if ((h.field_W ^ -1) < -1) {
                 no.a(param1, param6 + 28363, param0, param4, param7);
                 break L39;
               } else {
@@ -928,9 +974,9 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
               if (0 >= oo.field_b) {
                 nk.field_e.field_Bb = 1;
                 nk.field_e.field_C = kj.field_l.field_C;
-                if (vn.field_g <= 0) {
+                if ((vn.field_g ^ -1) >= -1) {
                   L42: {
-                    if (h.field_W > 0) {
+                    if ((h.field_W ^ -1) < -1) {
                       no.a(param1, param6 + 28363, param0, param4, param7);
                       break L42;
                     } else {
@@ -967,7 +1013,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                 } else {
                   L43: {
                     ic.a(param0, param7, 3, param4);
-                    if (h.field_W > 0) {
+                    if ((h.field_W ^ -1) < -1) {
                       no.a(param1, param6 + 28363, param0, param4, param7);
                       break L43;
                     } else {
@@ -1004,7 +1050,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                   jh.a(2, param0, param7, param4);
                   nk.field_e.field_Bb = 1;
                   nk.field_e.field_C = kj.field_l.field_C;
-                  if (vn.field_g <= 0) {
+                  if ((vn.field_g ^ -1) >= -1) {
                     break L46;
                   } else {
                     ic.a(param0, param7, 3, param4);
@@ -1012,7 +1058,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                   }
                 }
                 L47: {
-                  if (h.field_W > 0) {
+                  if ((h.field_W ^ -1) < -1) {
                     no.a(param1, param6 + 28363, param0, param4, param7);
                     break L47;
                   } else {
@@ -1046,7 +1092,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
               }
             } else {
               L50: {
-                field_m = null;
+                field_m = (String) null;
                 if (0 >= oo.field_b) {
                   break L50;
                 } else {
@@ -1057,7 +1103,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
               L51: {
                 nk.field_e.field_Bb = 1;
                 nk.field_e.field_C = kj.field_l.field_C;
-                if (vn.field_g <= 0) {
+                if ((vn.field_g ^ -1) >= -1) {
                   break L51;
                 } else {
                   ic.a(param0, param7, 3, param4);
@@ -1065,7 +1111,7 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
                 }
               }
               L52: {
-                if (h.field_W > 0) {
+                if ((h.field_W ^ -1) < -1) {
                   no.a(param1, param6 + 28363, param0, param4, param7);
                   break L52;
                 } else {
@@ -1122,8 +1168,8 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
         try {
           L0: {
             L1: {
-              if (param0 == ((i) this).field_p) {
-                ((i) this).field_p = null;
+              if (param0 == this.field_p) {
+                this.field_p = null;
                 break L1;
               } else {
                 break L1;
@@ -1135,23 +1181,23 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("i.removeConsumer(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -1159,15 +1205,11 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Invite <%0> to this game";
     }
 }

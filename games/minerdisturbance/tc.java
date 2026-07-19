@@ -18,15 +18,23 @@ final class tc extends pi {
         field_o = null;
         field_v = null;
         field_p = null;
-        int var1 = -5;
+        int var1 = -5 / ((-34 - param0) / 50);
     }
 
     final static void a(int param0) {
         fa.field_c = null;
         pe.field_pb = 0;
         ng.field_l = -1;
-        il.field_n = false;
-        lj.field_q = -1;
+        if (param0 != 9358) {
+          field_s = -106;
+          il.field_n = false;
+          lj.field_q = -1;
+          return;
+        } else {
+          il.field_n = false;
+          lj.field_q = -1;
+          return;
+        }
     }
 
     final static void a(int param0, int param1) {
@@ -38,20 +46,16 @@ final class tc extends pi {
 
     tc(uj param0, int param1, int param2) {
         try {
-            ((tc) this).field_u = param0;
-            ((tc) this).field_n = param0.a((byte) -115);
-            ((tc) this).field_q = param1;
-            ((tc) this).field_w = param2;
+            this.field_u = param0;
+            this.field_n = param0.a((byte) -115);
+            this.field_q = param1;
+            this.field_w = param2;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "tc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "tc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_v = new ta();
         field_r = "This password contains your Player Name, and would be easy to guess";
         field_p = "An alternative to conventional mining. Using this you can push rocks into gaps or force ore out of boulders. Essential for the eccentric dwarf.";

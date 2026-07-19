@@ -7,6 +7,7 @@ final class la {
     static boolean field_c;
 
     private final static void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$1 = 0;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -69,7 +70,7 @@ final class la {
                 var24 = (var26 & 1069563840) + (var25 & 4177920);
                 var26 = (var26 & -1073692672) + (var25 & 12582912);
                 var26 = (var26 | var26 >>> 1) & 1077952512;
-                int incrementValue$1 = var15;
+                incrementValue$1 = var15;
                 var15++;
                 lb.field_l[incrementValue$1] = (var24 | var26 - (var26 >>> 8)) >>> 6;
                 var16 = var16 + var17;
@@ -142,6 +143,7 @@ final class la {
     }
 
     private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$1 = 0;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -197,7 +199,7 @@ final class la {
                   var24 = (var26 & 1069563840) + (var25 & 4177920);
                   var26 = (var26 & -1073692672) + (var25 & 12582912);
                   var26 = (var26 | var26 >>> 1) & 1077952512;
-                  int incrementValue$1 = var15;
+                  incrementValue$1 = var15;
                   var15++;
                   lb.field_l[incrementValue$1] = (var24 | var26 - (var26 >>> 8)) >>> 6;
                   var16 = var16 + var17;
@@ -273,6 +275,9 @@ final class la {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11) {
+        int incrementValue$403 = 0;
+        int incrementValue$404 = 0;
+        int incrementValue$405 = 0;
         param6 = -param8;
         L0: while (true) {
           if (param6 >= 0) {
@@ -286,7 +291,7 @@ final class la {
                 param6++;
                 continue L0;
               } else {
-                int incrementValue$403 = param3;
+                incrementValue$403 = param3;
                 param3++;
                 param2 = param1[incrementValue$403];
                 if (param2 == 0) {
@@ -295,14 +300,14 @@ final class la {
                   continue L1;
                 } else {
                   if (param2 >> 8 != (param2 & 65535)) {
-                    int incrementValue$404 = param4;
+                    incrementValue$404 = param4;
                     param4++;
                     param0[incrementValue$404] = param2;
                     param5++;
                     continue L1;
                   } else {
                     param2 = param2 & 255;
-                    int incrementValue$405 = param4;
+                    incrementValue$405 = param4;
                     param4++;
                     param0[incrementValue$405] = param11[param2];
                     param5++;
@@ -679,9 +684,14 @@ final class la {
     public static void a(byte param0) {
         field_a = null;
         field_b = null;
+        if (param0 >= -59) {
+            int[] var2 = (int[]) null;
+            la.a(4, 89, -93, -46, -111, (int[]) null, 101);
+        }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        int incrementValue$1 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -752,7 +762,7 @@ final class la {
                 continue L4;
               } else {
                 var18 = lb.field_l[var11];
-                int incrementValue$1 = var11;
+                incrementValue$1 = var11;
                 var11++;
                 lb.field_l[incrementValue$1] = (var15 * param6 + (var18 & 16711935) * var9 & -16711936) + (var16 * param6 + (var18 & 65280) * var9 & 16711680) >>> 8;
                 var17++;
@@ -764,20 +774,32 @@ final class la {
     }
 
     final static boolean b(byte param0) {
-        return ka.field_l == jm.field_f;
+        if (param0 < 117) {
+            return true;
+        }
+        return ka.field_l == jm.field_f ? true : false;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6) {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
+        int incrementValue$0 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         int var16 = 0;
+        int incrementValue$2 = 0;
         int var17 = 0;
         int var18 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
         pa.field_i[0] = param0;
         pa.field_i[1] = param1;
-        pa.field_i[2] = 4;
+        pa.field_i[2] = param3;
         int var7 = 0;
         int var8 = 3;
         int var9 = 1;
@@ -785,19 +807,19 @@ final class la {
         int var11 = param2;
         param6 = 273 * param6 + 36;
         lb.a(param0, param1, 2 * param2, 254, param5);
-        for (var12 = 0; var12 < 4; var12++) {
+        for (var12 = 0; var12 < param3; var12++) {
             lb.a(param0, param1, var12 * param2, 254 / (1 + var12), param5);
             lb.a(param0, param1, var12 * param2, 196 / (1 + var12), param5);
             var13 = 0;
             for (var14 = 0; var14 < var9; var14++) {
                 var7 = var7 % pa.field_i.length;
-                int incrementValue$0 = var7;
+                incrementValue$0 = var7;
                 var7++;
                 var15 = pa.field_i[incrementValue$0];
-                int incrementValue$1 = var7;
+                incrementValue$1 = var7;
                 var7++;
                 var16 = pa.field_i[incrementValue$1];
-                int incrementValue$2 = var7;
+                incrementValue$2 = var7;
                 var7++;
                 var17 = pa.field_i[incrementValue$2];
                 var13 = var13 + var17;
@@ -806,21 +828,21 @@ final class la {
                 for (var18 = 0; var18 < var17; var18++) {
                     var8 = var8 % pa.field_i.length;
                     param6 = param6 % mh.field_F.length;
-                    int incrementValue$3 = var8;
+                    incrementValue$3 = var8;
                     var8++;
-                    int incrementValue$4 = param6;
+                    incrementValue$4 = param6;
                     param6++;
                     pa.field_i[incrementValue$3] = var15 + (var11 * sa.a(mh.field_F[incrementValue$4], -4097) >> 16);
-                    int incrementValue$5 = var8;
+                    incrementValue$5 = var8;
                     var8++;
-                    int incrementValue$6 = param6;
+                    incrementValue$6 = param6;
                     param6++;
                     pa.field_i[incrementValue$5] = var16 + (var11 * BrickABrac.c(2048, mh.field_F[incrementValue$6]) >> 16);
-                    int incrementValue$7 = var8;
+                    incrementValue$7 = var8;
                     var8++;
-                    int incrementValue$8 = param6;
+                    incrementValue$8 = param6;
                     param6++;
-                    pa.field_i[incrementValue$7] = 1 + er.a(-1560508993, 3, mh.field_F[incrementValue$8]);
+                    pa.field_i[incrementValue$7] = 1 + er.a(-1560508993, param4, mh.field_F[incrementValue$8]);
                 }
             }
             var9 = var13;
@@ -834,19 +856,15 @@ final class la {
         int var3 = (param0 >> 8) % 6;
         param0 = param0 & 255;
         int var4 = 256;
-        int var5 = 255 * (255 * (var4 - 255)) >> 8 >> 8;
-        int var6 = 255 * (255 * (var4 - (param0 * 255 >> 8)) >> 8) >> 8;
-        int var7 = 255 * (255 * (var4 - ((var4 - param0) * 255 >> 8)) >> 8) >> 8;
+        int var5 = 255 * (param2 * (var4 - param1)) >> 8 >> 8;
+        int var6 = 255 * (param2 * (var4 - (param0 * param1 >> 8)) >> 8) >> 8;
+        int var7 = 255 * (param2 * (var4 - ((var4 - param0) * param1 >> 8)) >> 8) >> 8;
         var4 = var3 & 1;
         var3 = var3 >> 1;
-        return (var5 << (2 - (2 + var3) % 3 << 3)) + (255 << (2 - (var3 + var4) % 3 << 3)) + (var7 + (-var4 >> 31 & var6 - var7) << (2 - (4 + var3 - var4) % 3 << 3));
+        return (var5 << (2 - (2 + var3) % 3 << 3)) + (param2 << (2 - (var3 + var4) % 3 << 3)) + (var7 + (-var4 >> 31 & var6 - var7) << (2 - (4 + var3 - var4) % 3 << 3));
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new lo();
     }
 }

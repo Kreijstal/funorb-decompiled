@@ -15,10 +15,6 @@ final class ke {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ke.A(";
         field_a = "Classic";
     }

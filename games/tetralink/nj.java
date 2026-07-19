@@ -25,7 +25,7 @@ final class nj {
                 }
               }
             } else {
-              field_h = null;
+              field_h = (int[]) null;
               if (b.a(0)) {
                 return true;
               } else {
@@ -49,7 +49,7 @@ final class nj {
                   }
                 }
               } else {
-                field_h = null;
+                field_h = (int[]) null;
                 if (b.a(0)) {
                   return true;
                 } else {
@@ -75,7 +75,7 @@ final class nj {
                 return true;
               } else {
                 if (param0 != 15780) {
-                  field_h = null;
+                  field_h = (int[]) null;
                   if (b.a(0)) {
                     return true;
                   } else {
@@ -109,7 +109,7 @@ final class nj {
                   }
                 }
               } else {
-                field_h = null;
+                field_h = (int[]) null;
                 if (b.a(0)) {
                   return true;
                 } else {
@@ -136,7 +136,7 @@ final class nj {
         Throwable decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_7_0 = 0;
-        var1 = (Object) (Object) vi.field_a;
+        var1 = vi.field_a;
         synchronized (var1) {
           L0: {
             if (dh.field_m == bb.field_e) {
@@ -166,6 +166,9 @@ final class nj {
 
     final static void a(String param0, byte param1, String param2, int param3, int param4) {
         in.field_g.field_Hb = in.field_g.field_Hb + ba.field_L.field_Hb;
+        if (param1 != -48) {
+            return;
+        }
         try {
             in.field_g.field_N = param3;
             in.field_g.field_O = param2;
@@ -175,24 +178,31 @@ final class nj {
             in.field_g.field_Hb = in.field_g.field_Hb - ba.field_L.field_Hb;
             ba.field_L.field_M = ba.field_L.field_M - ba.field_L.field_Hb;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "nj.B(" + (param0 != null ? "{...}" : "null") + ',' + -48 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "nj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(byte param0) {
+        String var2 = null;
         field_e = null;
         field_h = null;
         field_b = null;
-        field_f = null;
-        field_a = null;
-        field_c = null;
+        if (param0 <= 93) {
+          var2 = (String) null;
+          nj.a((String) null, (byte) -11, (String) null, -21, -123);
+          field_f = null;
+          field_a = null;
+          field_c = null;
+          return;
+        } else {
+          field_f = null;
+          field_a = null;
+          field_c = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Who can join";
         field_a = new String[255];
     }

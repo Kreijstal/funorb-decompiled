@@ -24,22 +24,22 @@ final class ul extends qr {
     private int field_Pb;
 
     final boolean f(byte param0) {
-        if (((ul) this).field_Bb != -2) {
+        if (this.field_Bb != -2) {
           return false;
         } else {
           if (param0 == 31) {
             if (13 == oq.field_j) {
-              ((ul) this).field_Bb = -1;
+              this.field_Bb = -1;
               return true;
             } else {
               return true;
             }
           } else {
-            ((ul) this).b(-117, 88, 37, -45, -114);
+            this.b(-117, 88, 37, -45, -114);
             if (13 != oq.field_j) {
               return true;
             } else {
-              ((ul) this).field_Bb = -1;
+              this.field_Bb = -1;
               return true;
             }
           }
@@ -76,7 +76,7 @@ final class ul extends qr {
           aj.field_d[wm.field_c] = param3;
           f.field_y[wm.field_c] = param5;
           var6 = param5 + param3 + param2;
-          if (0 == var6) {
+          if (param0 == var6) {
             stackOut_8_0 = 0;
             stackIn_9_0 = stackOut_8_0;
             break L2;
@@ -116,22 +116,23 @@ final class ul extends qr {
 
     final void a(boolean param0, bi param1, String param2, int param3) {
         try {
-            ((ul) this).field_Gb[((ul) this).field_Pb] = new sg(0L, (qr) null, (qr) null, ((ul) this).field_Mb, param1, param2);
+            this.field_Gb[this.field_Pb] = new sg(0L, (qr) null, (qr) null, this.field_Mb, param1, param2);
             if (param0) {
-                field_Ab = null;
+                field_Ab = (String) null;
             }
-            ((ul) this).field_Gb[((ul) this).field_Pb].field_lb = ((ul) this).field_Lb;
-            ((ul) this).field_Gb[((ul) this).field_Pb].field_r = true;
-            ((ul) this).field_Gb[((ul) this).field_Pb].field_G = 1;
-            ((ul) this).a(4, (qr) (Object) ((ul) this).field_Gb[((ul) this).field_Pb]);
-            ((ul) this).field_Ib[((ul) this).field_Pb] = param3;
-            ((ul) this).field_Pb = ((ul) this).field_Pb + 1;
+            this.field_Gb[this.field_Pb].field_lb = this.field_Lb;
+            this.field_Gb[this.field_Pb].field_r = true;
+            this.field_Gb[this.field_Pb].field_G = 1;
+            this.a(4, this.field_Gb[this.field_Pb]);
+            this.field_Ib[this.field_Pb] = param3;
+            this.field_Pb = this.field_Pb + 1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ul.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "ul.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     public static void g(int param0) {
+        boolean discarded$2 = false;
         field_Ob = null;
         field_Cb = null;
         field_Fb = null;
@@ -139,7 +140,7 @@ final class ul extends qr {
         field_Ab = null;
         field_Qb = null;
         if (param0 != 1000) {
-          boolean discarded$2 = ul.a(-91, 59, -35, 74, -62);
+          discarded$2 = ul.a(-91, 59, -35, 74, -62);
           field_xb = null;
           return;
         } else {
@@ -150,15 +151,15 @@ final class ul extends qr {
 
     final void a(int param0, int param1, String param2) {
         try {
-            ((ul) this).field_Gb[((ul) this).field_Pb] = new sg(0L, (qr) null, (qr) null, ((ul) this).field_Mb, (bi) null, param2);
-            ((ul) this).field_Gb[((ul) this).field_Pb].field_lb = ((ul) this).field_Lb;
-            ((ul) this).field_Gb[((ul) this).field_Pb].field_r = true;
-            ((ul) this).field_Gb[((ul) this).field_Pb].field_G = param0;
-            ((ul) this).a(4, (qr) (Object) ((ul) this).field_Gb[((ul) this).field_Pb]);
-            ((ul) this).field_Ib[((ul) this).field_Pb] = param1;
-            ((ul) this).field_Pb = ((ul) this).field_Pb + 1;
+            this.field_Gb[this.field_Pb] = new sg(0L, (qr) null, (qr) null, this.field_Mb, (bi) null, param2);
+            this.field_Gb[this.field_Pb].field_lb = this.field_Lb;
+            this.field_Gb[this.field_Pb].field_r = true;
+            this.field_Gb[this.field_Pb].field_G = param0;
+            this.a(4, this.field_Gb[this.field_Pb]);
+            this.field_Ib[this.field_Pb] = param1;
+            this.field_Pb = this.field_Pb + 1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ul.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "ul.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -179,13 +180,13 @@ final class ul extends qr {
         int stackOut_8_0 = 0;
         L0: {
           var5 = Math.atan2((double)param4, (double)param3);
-          if (param4 <= -40) {
+          if (39 <= (param4 ^ -1)) {
             break L0;
           } else {
             if (param4 >= 0) {
               break L0;
             } else {
-              if (param3 >= 0) {
+              if ((param3 ^ -1) <= -1) {
                 break L0;
               } else {
                 var5 = var5 + 6.283185307179586;
@@ -196,7 +197,7 @@ final class ul extends qr {
         }
         if (param2 == 0) {
           var7 = Math.atan2((double)param1, (double)param0);
-          if (param1 > -40) {
+          if ((param1 ^ -1) < 39) {
             if (0 > param1) {
               if (0 <= param0) {
                 L1: {
@@ -267,80 +268,72 @@ final class ul extends qr {
         int var10 = 0;
         int var11 = 0;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (((ul) this).field_Pb == 0) {
-          L0: {
-            ((ul) this).field_Gb[((ul) this).field_Pb] = new sg(0L, (qr) null, (qr) null, ((ul) this).field_Nb, (bi) null, we.field_a);
-            ((ul) this).field_Gb[((ul) this).field_Pb].field_G = 1;
-            ((ul) this).a(param2 + 4, (qr) (Object) ((ul) this).field_Gb[((ul) this).field_Pb]);
-            ((ul) this).field_Ib[((ul) this).field_Pb] = -1;
-            ((ul) this).field_Pb = ((ul) this).field_Pb + 1;
-            var6 = 0;
-            var7 = param2;
-            if (((ul) this).field_Pb <= var7) {
-              break L0;
-            } else {
-              L1: {
-                var8 = ((ul) this).field_Gb[var7].a(((ul) this).field_Jb, (byte) -98, ((ul) this).field_Eb);
-                if (var6 < var8) {
-                  var6 = var8;
-                  break L1;
+        if (this.field_Pb == 0) {
+          this.field_Gb[this.field_Pb] = new sg(0L, (qr) null, (qr) null, this.field_Nb, (bi) null, we.field_a);
+          this.field_Gb[this.field_Pb].field_G = 1;
+          this.a(param2 + 4, this.field_Gb[this.field_Pb]);
+          this.field_Ib[this.field_Pb] = -1;
+          this.field_Pb = this.field_Pb + 1;
+          var6 = 0;
+          var7 = param2;
+          L0: while (true) {
+            if (this.field_Pb <= var7) {
+              var6 = var6 + 2 * this.field_Kb;
+              var7 = this.field_yb + this.field_yb - -(this.field_Pb * this.field_zb);
+              var8 = uh.a(param2 + -60, param3, var6, param0);
+              var9 = uq.a(param1, param2 + 0, var7, param4);
+              this.a(var6, var7, (byte) 46, var9, var8);
+              var10 = 0;
+              L1: while (true) {
+                if (this.field_Pb <= var10) {
+                  return;
                 } else {
-                  var7++;
-                  break L1;
+                  this.field_Gb[var10].a(50, this.field_zb, this.field_yb + var10 * this.field_zb, this.field_Eb, this.field_Jb, -(2 * this.field_Kb) + var6, this.field_Kb);
+                  var10++;
+                  continue L1;
                 }
               }
-              var7++;
-              var7++;
-              var7++;
-              break L0;
-            }
-          }
-          var6 = var6 + 2 * ((ul) this).field_Kb;
-          var7 = ((ul) this).field_yb + ((ul) this).field_yb - -(((ul) this).field_Pb * ((ul) this).field_zb);
-          var8 = uh.a(param2 + -60, param3, var6, param0);
-          var9 = uq.a(param1, param2, var7, param4);
-          ((ul) this).a(var6, var7, (byte) 46, var9, var8);
-          var10 = 0;
-          L2: while (true) {
-            if (((ul) this).field_Pb <= var10) {
-              return;
             } else {
-              ((ul) this).field_Gb[var10].a(50, ((ul) this).field_zb, ((ul) this).field_yb + var10 * ((ul) this).field_zb, ((ul) this).field_Eb, ((ul) this).field_Jb, -(2 * ((ul) this).field_Kb) + var6, ((ul) this).field_Kb);
-              var10++;
-              continue L2;
+              var8 = this.field_Gb[var7].a(this.field_Jb, (byte) -98, this.field_Eb);
+              if (var6 < var8) {
+                var6 = var8;
+                var7++;
+                continue L0;
+              } else {
+                var7++;
+                continue L0;
+              }
             }
           }
         } else {
           var6 = 0;
           var7 = param2;
-          L3: while (true) {
-            if (((ul) this).field_Pb <= var7) {
-              var6 = var6 + 2 * ((ul) this).field_Kb;
-              var7 = ((ul) this).field_yb + ((ul) this).field_yb - -(((ul) this).field_Pb * ((ul) this).field_zb);
+          L2: while (true) {
+            if (this.field_Pb <= var7) {
+              var6 = var6 + 2 * this.field_Kb;
+              var7 = this.field_yb + this.field_yb - -(this.field_Pb * this.field_zb);
               var8 = uh.a(param2 + -60, param3, var6, param0);
-              var9 = uq.a(param1, param2, var7, param4);
-              ((ul) this).a(var6, var7, (byte) 46, var9, var8);
+              var9 = uq.a(param1, param2 + 0, var7, param4);
+              this.a(var6, var7, (byte) 46, var9, var8);
               var10 = 0;
-              L4: while (true) {
-                if (((ul) this).field_Pb <= var10) {
+              L3: while (true) {
+                if (this.field_Pb <= var10) {
                   return;
                 } else {
-                  ((ul) this).field_Gb[var10].a(50, ((ul) this).field_zb, ((ul) this).field_yb + var10 * ((ul) this).field_zb, ((ul) this).field_Eb, ((ul) this).field_Jb, -(2 * ((ul) this).field_Kb) + var6, ((ul) this).field_Kb);
+                  this.field_Gb[var10].a(50, this.field_zb, this.field_yb + var10 * this.field_zb, this.field_Eb, this.field_Jb, -(2 * this.field_Kb) + var6, this.field_Kb);
                   var10++;
-                  continue L4;
+                  continue L3;
                 }
               }
             } else {
-              var8 = ((ul) this).field_Gb[var7].a(((ul) this).field_Jb, (byte) -98, ((ul) this).field_Eb);
+              var8 = this.field_Gb[var7].a(this.field_Jb, (byte) -98, this.field_Eb);
               if (var6 < var8) {
                 var6 = var8;
                 var7++;
-                var7++;
-                continue L3;
+                continue L2;
               } else {
                 var7++;
-                var7++;
-                continue L3;
+                continue L2;
               }
             }
           }
@@ -348,52 +341,48 @@ final class ul extends qr {
     }
 
     ul(ul param0) {
-        this((qr) (Object) param0, param0.field_Lb, param0.field_Nb, param0.field_Mb, param0.field_Kb, param0.field_Eb, param0.field_Jb, param0.field_yb, param0.field_zb);
+        this(param0, param0.field_Lb, param0.field_Nb, param0.field_Mb, param0.field_Kb, param0.field_Eb, param0.field_Jb, param0.field_yb, param0.field_zb);
     }
 
     final int b(boolean param0, byte param1) {
         int var3 = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        ((ul) this).a(param0, -20429);
+        this.a(param0, -20429);
         if (!param0) {
             return -2;
         }
-        for (var3 = 0; ((ul) this).field_Pb > var3; var3++) {
-            if (((ul) this).field_Gb[var3].field_rb != 0) {
-                return ((ul) this).field_Ib[var3];
+        for (var3 = 0; this.field_Pb > var3; var3++) {
+            if (this.field_Gb[var3].field_rb != 0) {
+                return this.field_Ib[var3];
             }
         }
         int var4 = 82 % ((26 - param1) / 42);
         if (!(je.field_d == 0)) {
             return -1;
         }
-        return ((ul) this).field_Bb;
+        return this.field_Bb;
     }
 
     ul(qr param0, bi[] param1, qr param2, qr param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
-        ((ul) this).field_Ib = new int[256];
-        ((ul) this).field_Gb = new sg[256];
-        ((ul) this).field_Bb = -2;
+        this.field_Ib = new int[256];
+        this.field_Gb = new sg[256];
+        this.field_Bb = -2;
         try {
-            ((ul) this).field_Kb = param4;
-            ((ul) this).field_Lb = param1;
-            ((ul) this).field_zb = param8;
-            ((ul) this).field_Mb = param3;
-            ((ul) this).field_Jb = param6;
-            ((ul) this).field_Nb = param2;
-            ((ul) this).field_Eb = param5;
-            ((ul) this).field_yb = param7;
+            this.field_Kb = param4;
+            this.field_Lb = param1;
+            this.field_zb = param8;
+            this.field_Mb = param3;
+            this.field_Jb = param6;
+            this.field_Nb = param2;
+            this.field_Eb = param5;
+            this.field_yb = param7;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ul.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "ul.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Db = new int[4];
         field_Hb = 2;
         field_Ob = "<col=2F5FBF>'ENTER'</col>";

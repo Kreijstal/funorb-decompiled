@@ -48,14 +48,13 @@ final class mb extends le {
     }
 
     final gi a(int[] param0) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         float[] var7 = null;
-        float[] var11 = null;
-        float[] var13 = null;
-        byte[] var14 = null;
+        byte[] var12 = null;
         L0: {
           if (param0 == null) {
             break L0;
@@ -68,23 +67,23 @@ final class mb extends le {
           }
         }
         L1: {
-          if (((mb) this).field_h != null) {
+          if (this.field_h != null) {
             break L1;
           } else {
-            ((mb) this).field_u = 0;
-            ((mb) this).field_s = new float[field_K];
-            ((mb) this).field_h = new byte[((mb) this).field_y];
-            ((mb) this).field_z = 0;
-            ((mb) this).field_A = 0;
+            this.field_u = 0;
+            this.field_s = new float[field_K];
+            this.field_h = new byte[this.field_y];
+            this.field_z = 0;
+            this.field_A = 0;
             break L1;
           }
         }
         L2: while (true) {
-          if (((mb) this).field_A >= ((mb) this).field_t.length) {
-            ((mb) this).field_s = null;
-            var14 = ((mb) this).field_h;
-            ((mb) this).field_h = null;
-            return new gi(((mb) this).field_x, var14, ((mb) this).field_w, ((mb) this).field_J, ((mb) this).field_F);
+          if (this.field_A >= this.field_t.length) {
+            this.field_s = null;
+            var12 = this.field_h;
+            this.field_h = null;
+            return new gi(this.field_x, var12, this.field_w, this.field_J, this.field_F);
           } else {
             L3: {
               if (param0 == null) {
@@ -98,19 +97,17 @@ final class mb extends le {
               }
             }
             L4: {
-              var13 = this.c(((mb) this).field_A);
-              var11 = var13;
-              var7 = var11;
+              var7 = this.c(this.field_A);
               if (var7 == null) {
                 break L4;
               } else {
                 L5: {
-                  var3 = ((mb) this).field_z;
-                  var4 = var13.length;
-                  if (var4 <= ((mb) this).field_y - var3) {
+                  var3 = this.field_z;
+                  var4 = var7.length;
+                  if (var4 <= this.field_y - var3) {
                     break L5;
                   } else {
-                    var4 = ((mb) this).field_y - var3;
+                    var4 = this.field_y - var3;
                     break L5;
                   }
                 }
@@ -121,38 +118,39 @@ final class mb extends le {
                       if (param0 == null) {
                         break L7;
                       } else {
-                        param0[0] = param0[0] - (var3 - ((mb) this).field_z);
+                        param0[0] = param0[0] - (var3 - this.field_z);
                         break L7;
                       }
                     }
-                    ((mb) this).field_z = var3;
+                    this.field_z = var3;
                     break L4;
                   } else {
                     L8: {
-                      var6 = (int)(128.0f + var13[var5] * 128.0f);
+                      var6 = (int)(128.0f + var7[var5] * 128.0f);
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = ~var6 >> 31;
+                        var6 = (var6 ^ -1) >> 31;
                         break L8;
                       }
                     }
-                    int incrementValue$1 = var3;
+                    incrementValue$1 = var3;
                     var3++;
-                    ((mb) this).field_h[incrementValue$1] = (byte)(var6 - 128);
+                    this.field_h[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
                 }
               }
             }
-            ((mb) this).field_A = ((mb) this).field_A + 1;
+            this.field_A = this.field_A + 1;
             continue L2;
           }
         }
     }
 
     final gi b() {
+        int incrementValue$1 = 0;
         byte[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -160,24 +158,24 @@ final class mb extends le {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ((mb) this).field_u = 0;
-        ((mb) this).field_s = new float[field_K];
-        var1 = new byte[((mb) this).field_y];
+        this.field_u = 0;
+        this.field_s = new float[field_K];
+        var1 = new byte[this.field_y];
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((mb) this).field_t.length) {
-            ((mb) this).field_s = null;
-            return new gi(((mb) this).field_x, var1, ((mb) this).field_w, ((mb) this).field_J, ((mb) this).field_F);
+          if (var3 >= this.field_t.length) {
+            this.field_s = null;
+            return new gi(this.field_x, var1, this.field_w, this.field_J, this.field_F);
           } else {
             var4 = this.c(var3);
             if (var4 != null) {
               L1: {
                 var5 = var4.length;
-                if (var5 <= ((mb) this).field_y - var2) {
+                if (var5 <= this.field_y - var2) {
                   break L1;
                 } else {
-                  var5 = ((mb) this).field_y - var2;
+                  var5 = this.field_y - var2;
                   break L1;
                 }
               }
@@ -189,11 +187,11 @@ final class mb extends le {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = ~var7 >> 31;
+                      var7 = (var7 ^ -1) >> 31;
                       break L3;
                     }
                   }
-                  int incrementValue$1 = var2;
+                  incrementValue$1 = var2;
                   var2++;
                   var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
@@ -217,19 +215,19 @@ final class mb extends le {
         int var6_int = 0;
         byte[] var6 = null;
         de var2 = new de(param0);
-        ((mb) this).field_x = var2.c(125);
-        ((mb) this).field_y = var2.c(101);
-        ((mb) this).field_w = var2.c(109);
-        ((mb) this).field_J = var2.c(121);
-        if (((mb) this).field_J < 0) {
-            ((mb) this).field_J = ~((mb) this).field_J;
-            ((mb) this).field_F = true;
+        this.field_x = var2.c(125);
+        this.field_y = var2.c(101);
+        this.field_w = var2.c(109);
+        this.field_J = var2.c(121);
+        if (this.field_J < 0) {
+            this.field_J = this.field_J ^ -1;
+            this.field_F = true;
         }
         int var3 = var2.c(103);
         if (var3 < 0) {
             throw new IOException();
         }
-        ((mb) this).field_t = new byte[var3][];
+        this.field_t = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
             var5 = 0;
             do {
@@ -238,7 +236,7 @@ final class mb extends le {
             } while (var6_int >= 255);
             var6 = new byte[var5];
             var2.a(var5, 0, var6, 11240);
-            ((mb) this).field_t[var4] = var6;
+            this.field_t[var4] = var6;
         }
     }
 
@@ -265,8 +263,8 @@ final class mb extends le {
     }
 
     final static int d(int param0) {
-        int var3 = 0;
         int var4 = 0;
+        int var3 = 0;
         int var1 = 0;
         int var2 = 0;
         while (param0 >= 8 - field_L) {
@@ -288,9 +286,10 @@ final class mb extends le {
 
     final static mb a(dj param0, String param1, String param2) {
         try {
+            boolean discarded$0 = false;
             mb var4_ref = null;
             if (!mb.a(param0)) {
-                boolean discarded$0 = param0.a(param1, (byte) -84, param2);
+                discarded$0 = param0.a(param1, (byte) -84, param2);
                 return null;
             }
             byte[] var3 = param0.a(param2, -116, param1);
@@ -298,8 +297,10 @@ final class mb extends le {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new mb(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -330,15 +331,16 @@ final class mb extends le {
 
     private final static void a(byte[] param0, int param1) {
         field_B = param0;
-        field_D = 0;
+        field_D = param1;
         field_L = 0;
     }
 
     final static mb a(dj param0, int param1, int param2) {
         try {
+            boolean discarded$0 = false;
             mb var4_ref = null;
             if (!mb.a(param0)) {
-                boolean discarded$0 = param0.a(param2, (byte) 96, param1);
+                discarded$0 = param0.a(param2, (byte) 96, param1);
                 return null;
             }
             byte[] var3 = param0.a((byte) 51, param1, param2);
@@ -346,8 +348,10 @@ final class mb extends le {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new mb(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -358,6 +362,9 @@ final class mb extends le {
     }
 
     final static void a(byte[] param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -432,14 +439,14 @@ final class mb extends le {
                                     return;
                                   } else {
                                     L7: {
-                                      stackOut_37_0 = (boolean[]) field_M;
+                                      stackOut_37_0 = (boolean[]) (field_M);
                                       stackOut_37_1 = var6;
                                       stackIn_39_0 = stackOut_37_0;
                                       stackIn_39_1 = stackOut_37_1;
                                       stackIn_38_0 = stackOut_37_0;
                                       stackIn_38_1 = stackOut_37_1;
                                       if (mb.c() == 0) {
-                                        stackOut_39_0 = (boolean[]) (Object) stackIn_39_0;
+                                        stackOut_39_0 = (boolean[]) ((Object) stackIn_39_0);
                                         stackOut_39_1 = stackIn_39_1;
                                         stackOut_39_2 = 0;
                                         stackIn_40_0 = stackOut_39_0;
@@ -447,7 +454,7 @@ final class mb extends le {
                                         stackIn_40_2 = stackOut_39_2;
                                         break L7;
                                       } else {
-                                        stackOut_38_0 = (boolean[]) (Object) stackIn_38_0;
+                                        stackOut_38_0 = (boolean[]) ((Object) stackIn_38_0);
                                         stackOut_38_1 = stackIn_38_1;
                                         stackOut_38_2 = 1;
                                         stackIn_40_0 = stackOut_38_0;
@@ -457,8 +464,8 @@ final class mb extends le {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = mb.d(16);
-                                    int discarded$4 = mb.d(16);
+                                    discarded$3 = mb.d(16);
+                                    discarded$4 = mb.d(16);
                                     field_N[var6] = mb.d(8);
                                     var6++;
                                     continue L6;
@@ -483,7 +490,7 @@ final class mb extends le {
                       }
                     }
                   } else {
-                    int discarded$5 = mb.d(16);
+                    discarded$5 = mb.d(16);
                     var3++;
                     continue L2;
                   }
@@ -574,6 +581,7 @@ final class mb extends le {
     }
 
     private final float[] c(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -633,13 +641,7 @@ final class mb extends le {
         int[] var48 = null;
         float[] var49 = null;
         float[] var50 = null;
-        int[] var52 = null;
-        float[] var53 = null;
-        float[] var54 = null;
-        float[] var55 = null;
-        int[] var56 = null;
-        float[] var57 = null;
-        float[] var58 = null;
+        float[] var52 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -674,8 +676,8 @@ final class mb extends le {
         Object stackOut_109_0 = null;
         int stackOut_109_1 = 0;
         L0: {
-          mb.a(((mb) this).field_t[param0], 0);
-          int discarded$1 = mb.c();
+          mb.a(this.field_t[param0], 0);
+          discarded$1 = mb.c();
           var2 = mb.d(wm.a(field_N.length - 1, (byte) 26));
           var3 = field_M[var2] ? 1 : 0;
           if (var3 == 0) {
@@ -797,9 +799,7 @@ final class mb extends le {
                 var17_int = var4 >> 1;
                 var18_int = var4 >> 2;
                 var19 = var4 >> 3;
-                var57 = field_C;
-                var53 = var57;
-                var49 = var53;
+                var49 = field_C;
                 var45 = var49;
                 var20_ref_float__ = var45;
                 var21_int = 0;
@@ -811,11 +811,11 @@ final class mb extends le {
                       if (var41 >= var4) {
                         L14: {
                           if (var3 == 0) {
-                            stackOut_39_0 = (float[]) field_q;
+                            stackOut_39_0 = (float[]) (field_q);
                             stackIn_40_0 = stackOut_39_0;
                             break L14;
                           } else {
-                            stackOut_38_0 = (float[]) field_I;
+                            stackOut_38_0 = (float[]) (field_I);
                             stackIn_40_0 = stackOut_38_0;
                             break L14;
                           }
@@ -823,11 +823,11 @@ final class mb extends le {
                         L15: {
                           var21 = stackIn_40_0;
                           if (var3 == 0) {
-                            stackOut_42_0 = (float[]) field_E;
+                            stackOut_42_0 = (float[]) (field_E);
                             stackIn_43_0 = stackOut_42_0;
                             break L15;
                           } else {
-                            stackOut_41_0 = (float[]) field_m;
+                            stackOut_41_0 = (float[]) (field_m);
                             stackIn_43_0 = stackOut_41_0;
                             break L15;
                           }
@@ -835,11 +835,11 @@ final class mb extends le {
                         L16: {
                           var22 = stackIn_43_0;
                           if (var3 == 0) {
-                            stackOut_45_0 = (float[]) field_H;
+                            stackOut_45_0 = (float[]) (field_H);
                             stackIn_46_0 = stackOut_45_0;
                             break L16;
                           } else {
-                            stackOut_44_0 = (float[]) field_o;
+                            stackOut_44_0 = (float[]) (field_o);
                             stackIn_46_0 = stackOut_44_0;
                             break L16;
                           }
@@ -847,18 +847,16 @@ final class mb extends le {
                         L17: {
                           var23 = stackIn_46_0;
                           if (var3 == 0) {
-                            stackOut_48_0 = (int[]) field_G;
+                            stackOut_48_0 = (int[]) (field_G);
                             stackIn_49_0 = stackOut_48_0;
                             break L17;
                           } else {
-                            stackOut_47_0 = (int[]) field_O;
+                            stackOut_47_0 = (int[]) (field_O);
                             stackIn_49_0 = stackOut_47_0;
                             break L17;
                           }
                         }
-                        var56 = stackIn_49_0;
-                        var52 = var56;
-                        var48 = var52;
+                        var48 = stackIn_49_0;
                         var44 = var48;
                         var24 = var44;
                         var25 = 0;
@@ -938,7 +936,7 @@ final class mb extends le {
                                                               }
                                                             }
                                                           } else {
-                                                            var20_ref_float__[var4 - var18_int + var26] = -var57[var26];
+                                                            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
                                                             var26++;
                                                             continue L26;
                                                           }
@@ -983,7 +981,7 @@ final class mb extends le {
                                           }
                                         }
                                       } else {
-                                        var27_int = var56[var26];
+                                        var27_int = var48[var26];
                                         if (var26 < var27_int) {
                                           var28_int = 8 * var26;
                                           var29_int = 8 * var27_int;
@@ -1096,27 +1094,25 @@ final class mb extends le {
             }
             L35: {
               var17 = null;
-              if (((mb) this).field_u <= 0) {
+              if (this.field_u <= 0) {
                 break L35;
               } else {
                 L36: {
-                  var18_int = ((mb) this).field_u + var4 >> 2;
-                  var58 = new float[var18_int];
-                  var54 = var58;
-                  var50 = var54;
+                  var18_int = this.field_u + var4 >> 2;
+                  var50 = new float[var18_int];
                   var46 = var50;
                   var40 = var46;
-                  var17 = (Object) (Object) var40;
-                  if (((mb) this).field_r) {
+                  var17 = var40;
+                  if (this.field_r) {
                     break L36;
                   } else {
                     var19 = 0;
                     L37: while (true) {
-                      if (var19 >= ((mb) this).field_p) {
+                      if (var19 >= this.field_p) {
                         break L36;
                       } else {
-                        var20 = (((mb) this).field_u >> 1) + var19;
-                        var40[var19] = var40[var19] + ((mb) this).field_s[var20];
+                        var20 = (this.field_u >> 1) + var19;
+                        var40[var19] = var40[var19] + this.field_s[var20];
                         var19++;
                         continue L37;
                       }
@@ -1131,7 +1127,7 @@ final class mb extends le {
                     if (var19 >= var4 >> 1) {
                       break L35;
                     } else {
-                      var20 = var58.length - (var4 >> 1) + var19;
+                      var20 = var50.length - (var4 >> 1) + var19;
                       var40[var20] = var40[var20] + field_C[var19];
                       var19++;
                       continue L38;
@@ -1141,11 +1137,11 @@ final class mb extends le {
               }
             }
             L39: {
-              var18 = ((mb) this).field_s;
-              ((mb) this).field_s = field_C;
+              var18 = this.field_s;
+              this.field_s = field_C;
               field_C = var18;
-              ((mb) this).field_u = var4;
-              ((mb) this).field_p = var12 - (var4 >> 1);
+              this.field_u = var4;
+              this.field_p = var12 - (var4 >> 1);
               stackOut_108_0 = this;
               stackIn_110_0 = stackOut_108_0;
               stackIn_109_0 = stackOut_108_0;
@@ -1163,12 +1159,12 @@ final class mb extends le {
                 break L39;
               }
             }
-            ((mb) this).field_r = stackIn_111_1 != 0;
-            return (float[]) var17;
+            ((mb) (this)).field_r = stackIn_111_1 != 0;
+            return (float[]) (var17);
           } else {
             var42 = field_j[var14.field_a[var17_int]];
-            var55 = field_C;
-            var42.a(var55, var4 >> 1, var16 != 0);
+            var52 = field_C;
+            var42.a(var52, var4 >> 1, var16 != 0);
             var17_int++;
             continue L9;
           }
@@ -1180,10 +1176,6 @@ final class mb extends le {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = false;
     }
 }

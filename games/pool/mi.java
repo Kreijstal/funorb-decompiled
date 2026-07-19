@@ -28,10 +28,10 @@ final class mi {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((mi) this).field_b[var4] != null) {
-                    var5 = ((mi) this).field_b[var4].field_x * 22050 / 1000;
-                    var6 = ((mi) this).field_b[var4].field_l * 22050 / 1000;
-                    var13 = ((mi) this).field_b[var4].a(var5, ((mi) this).field_b[var4].field_x);
+                  if (this.field_b[var4] != null) {
+                    var5 = this.field_b[var4].field_x * 22050 / 1000;
+                    var6 = this.field_b[var4].field_l * 22050 / 1000;
+                    var13 = this.field_b[var4].a(var5, this.field_b[var4].field_x);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -62,9 +62,9 @@ final class mi {
               return new byte[]{};
             }
           } else {
-            if (((mi) this).field_b[var2] != null) {
-              if (((mi) this).field_b[var2].field_x + ((mi) this).field_b[var2].field_l > var1) {
-                var1 = ((mi) this).field_b[var2].field_x + ((mi) this).field_b[var2].field_l;
+            if (this.field_b[var2] != null) {
+              if (this.field_b[var2].field_x + this.field_b[var2].field_l > var1) {
+                var1 = this.field_b[var2].field_x + this.field_b[var2].field_l;
                 var2++;
                 continue L0;
               } else {
@@ -89,25 +89,25 @@ final class mi {
 
     final jg b() {
         byte[] var1 = this.a();
-        return new jg(22050, var1, 22050 * ((mi) this).field_a / 1000, 22050 * ((mi) this).field_c / 1000);
+        return new jg(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
     private mi(ge param0) {
         int var2 = 0;
         int var3 = 0;
-        ((mi) this).field_b = new pb[10];
+        this.field_b = new pb[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((mi) this).field_a = param0.d(-1034);
-            ((mi) this).field_c = param0.d(-1034);
+            this.field_a = param0.d(-1034);
+            this.field_c = param0.d(-1034);
             return;
           } else {
             var3 = param0.g(-64);
             if (var3 != 0) {
               param0.field_v = param0.field_v - 1;
-              ((mi) this).field_b[var2] = new pb();
-              ((mi) this).field_b[var2].a(param0);
+              this.field_b[var2] = new pb();
+              this.field_b[var2].a(param0);
               var2++;
               continue L0;
             } else {

@@ -18,23 +18,26 @@ class kd extends ck {
         field_t = null;
         field_q = null;
         field_x = null;
+        if (param0 != 8191) {
+            return;
+        }
         field_s = null;
     }
 
     final void e(int param0) {
-        if (((kd) this).field_v == null) {
+        if (this.field_v == null) {
           return;
         } else {
-          ((kd) this).field_v.field_o = ((kd) this).field_o;
-          ((kd) this).field_o.field_v = ((kd) this).field_v;
+          this.field_v.field_o = this.field_o;
+          this.field_o.field_v = this.field_v;
           if (param0 != 480) {
-            field_x = null;
-            ((kd) this).field_v = null;
-            ((kd) this).field_o = null;
+            field_x = (cm) null;
+            this.field_v = null;
+            this.field_o = null;
             return;
           } else {
-            ((kd) this).field_v = null;
-            ((kd) this).field_o = null;
+            this.field_v = null;
+            this.field_o = null;
             return;
           }
         }
@@ -44,25 +47,25 @@ class kd extends ck {
         if (param0 < 84) {
             return -44L;
         }
-        return ((kd) this).field_w;
+        return this.field_w;
     }
 
     final void a(byte param0, long param1) {
         if (param0 <= 41) {
             return;
         }
-        if (null != ((kd) this).field_v) {
+        if (null != this.field_v) {
             throw new RuntimeException();
         }
-        ((kd) this).field_w = param1;
+        this.field_w = param1;
     }
 
     final boolean a(byte param0) {
-        if (((kd) this).field_v == null) {
+        if (this.field_v == null) {
             return false;
         }
         if (param0 != 30) {
-            field_s = null;
+            field_s = (String) null;
             return true;
         }
         return true;
@@ -72,10 +75,6 @@ class kd extends ck {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = "Connecting to<br>friend server...";
         field_s = "Reference manual";
         field_u = 480;

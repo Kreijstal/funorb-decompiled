@@ -21,16 +21,21 @@ final class fh {
     }
 
     public static void a(byte param0) {
-        field_h = null;
-        field_a = null;
-        field_f = null;
+        if (param0 > -23) {
+          field_g = false;
+          field_h = null;
+          field_a = (ka[][]) null;
+          field_f = null;
+          return;
+        } else {
+          field_h = null;
+          field_a = (ka[][]) null;
+          field_f = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new ka[2][32];
         field_h = new int[2];
         field_d = 0;

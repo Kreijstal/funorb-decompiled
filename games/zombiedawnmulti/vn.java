@@ -16,6 +16,9 @@ final class vn {
         field_g = null;
         field_h = null;
         field_c = null;
+        if (param0 < 60) {
+            return;
+        }
         field_d = null;
     }
 
@@ -24,6 +27,9 @@ final class vn {
             return;
         }
         eb.a(false, false, 4);
+        if (param0 != -29507) {
+            vn.b(75);
+        }
     }
 
     final static ja[] a(int param0, int param1, int param2, int param3) {
@@ -36,10 +42,6 @@ final class vn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
         field_h = new ja(80, 80);
         field_a = "Asking for or providing contact information";

@@ -3,6 +3,8 @@
  */
 final class wab extends rqa {
     final static void a(int param0, byte[] param1) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -23,10 +25,6 @@ final class wab extends rqa {
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        byte[] var22 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        byte[] var25 = null;
         int stackIn_33_0 = 0;
         int stackIn_34_0 = 0;
         int stackIn_35_0 = 0;
@@ -85,7 +83,7 @@ final class wab extends rqa {
                 var4 = 0;
                 L2: while (true) {
                   if (var4 >= mma.field_a) {
-                    var4 = 0;
+                    var4 = param0;
                     L3: while (true) {
                       if (mma.field_a <= var4) {
                         var4 = 0;
@@ -106,18 +104,14 @@ final class wab extends rqa {
                                       var5 = nhb.field_o[var4];
                                       var6 = hla.field_a[var4];
                                       var7 = var6 * var5;
-                                      var24 = new byte[var7];
-                                      var22 = var24;
-                                      var20 = var22;
+                                      var20 = new byte[var7];
                                       var18 = var20;
                                       var8 = var18;
-                                      sh.field_a[var4] = var24;
-                                      var25 = new byte[var7];
-                                      var23 = var25;
-                                      var21 = var23;
+                                      sh.field_a[var4] = var20;
+                                      var21 = new byte[var7];
                                       var19 = var21;
                                       var9 = var19;
-                                      hja.field_o[var4] = var25;
+                                      hja.field_o[var4] = var21;
                                       var10 = 0;
                                       var11 = var17.e((byte) -105);
                                       if (0 == (1 & var11)) {
@@ -131,7 +125,7 @@ final class wab extends rqa {
                                                   break L7;
                                                 } else {
                                                   L10: {
-                                                    byte dupTemp$2 = var17.d((byte) -114);
+                                                    dupTemp$2 = var17.d((byte) -114);
                                                     var9[var12] = dupTemp$2;
                                                     var13 = dupTemp$2;
                                                     stackOut_44_0 = var10;
@@ -184,7 +178,7 @@ final class wab extends rqa {
                                                       continue L12;
                                                     } else {
                                                       L14: {
-                                                        byte dupTemp$3 = var17.d((byte) -114);
+                                                        dupTemp$3 = var17.d((byte) -114);
                                                         var9[var13 * var5 + var12] = dupTemp$3;
                                                         var14 = dupTemp$3;
                                                         stackOut_32_0 = var10;
@@ -276,23 +270,23 @@ final class wab extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var2 = decompiledCaughtException;
-            stackOut_50_0 = (RuntimeException) var2;
-            stackOut_50_1 = new StringBuilder().append("wab.B(").append(0).append(',');
+            stackOut_50_0 = (RuntimeException) (var2);
+            stackOut_50_1 = new StringBuilder().append("wab.B(").append(param0).append(',');
             stackIn_52_0 = stackOut_50_0;
             stackIn_52_1 = stackOut_50_1;
             stackIn_51_0 = stackOut_50_0;
             stackIn_51_1 = stackOut_50_1;
             if (param1 == null) {
-              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
-              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
+              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
               stackOut_52_2 = "null";
               stackIn_53_0 = stackOut_52_0;
               stackIn_53_1 = stackOut_52_1;
               stackIn_53_2 = stackOut_52_2;
               break L17;
             } else {
-              stackOut_51_0 = (RuntimeException) (Object) stackIn_51_0;
-              stackOut_51_1 = (StringBuilder) (Object) stackIn_51_1;
+              stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
+              stackOut_51_1 = (StringBuilder) ((Object) stackIn_51_1);
               stackOut_51_2 = "{...}";
               stackIn_53_0 = stackOut_51_0;
               stackIn_53_1 = stackOut_51_1;
@@ -300,7 +294,7 @@ final class wab extends rqa {
               break L17;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_53_0), stackIn_53_2 + ')');
         }
     }
 
@@ -310,7 +304,7 @@ final class wab extends rqa {
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -319,9 +313,10 @@ final class wab extends rqa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         nc stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        nc stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -334,36 +329,38 @@ final class wab extends rqa {
           L0: {
             if (param1 < -119) {
               ki.field_o = param0[0].a(81);
-              stackOut_3_0 = new nc((Object) (Object) "void");
+              stackOut_3_0 = new nc("void");
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (nc) null;
               stackIn_2_0 = stackOut_1_0;
-              return (nc) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("wab.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -371,9 +368,13 @@ final class wab extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     static {

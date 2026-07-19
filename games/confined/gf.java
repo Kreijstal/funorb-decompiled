@@ -16,10 +16,10 @@ abstract class gf extends rk {
     abstract int c();
 
     final void b(int[] param0, int param1, int param2) {
-        if (((gf) this).field_o) {
-            ((gf) this).a(param0, param1, param2);
+        if (this.field_o) {
+            this.a(param0, param1, param2);
         } else {
-            ((gf) this).b(param2);
+            this.b(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class gf extends rk {
     }
 
     gf() {
-        ((gf) this).field_o = true;
+        this.field_o = true;
     }
 }

@@ -15,11 +15,11 @@ abstract class di extends ln {
     int field_o;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = ((di) this).field_o << 3;
-        param3 = (param3 << 4) - -(param0 & var6);
-        int var7 = ((di) this).field_v << 3;
-        param4 = (param4 << 4) + (15 & var7);
-        ((di) this).a(var6, var7, param3, param4, param1, param2);
+        int var6 = this.field_o << 738434211;
+        param3 = (param3 << -1604764060) - -(param0 & var6);
+        int var7 = this.field_v << 1358884195;
+        param4 = (param4 << 1730408772) + (15 & var7);
+        this.a(var6, var7, param3, param4, param1, param2);
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
@@ -28,6 +28,11 @@ abstract class di extends ln {
         field_q = null;
         field_p = null;
         field_t = null;
+        if (param0 != -13503) {
+            field_w = (String) null;
+            field_w = null;
+            return;
+        }
         field_w = null;
     }
 
@@ -35,10 +40,6 @@ abstract class di extends ln {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = new fd();
         field_w = "Hold the Line";
     }

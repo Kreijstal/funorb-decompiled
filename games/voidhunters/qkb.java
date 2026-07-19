@@ -13,38 +13,38 @@ final class qkb extends f {
 
     private final void e() {
         wka var1 = null;
-        if (((qkb) this).field_j > 0) {
-            var1 = (wka) (Object) ((qkb) this).field_k.d(0);
+        if (this.field_j > 0) {
+            var1 = (wka) ((Object) this.field_k.d(0));
             while (var1 != null) {
-                var1.field_d = var1.field_d - ((qkb) this).field_j;
-                var1 = (wka) (Object) ((qkb) this).field_k.a((byte) 59);
+                var1.field_d = var1.field_d - this.field_j;
+                var1 = (wka) ((Object) this.field_k.a((byte) 59));
             }
-            ((qkb) this).field_i = ((qkb) this).field_i - ((qkb) this).field_j;
-            ((qkb) this).field_j = 0;
+            this.field_i = this.field_i - this.field_j;
+            this.field_j = 0;
         }
     }
 
     final f a() {
-        return (f) (Object) ((qkb) this).field_h.a((byte) 111);
+        return (f) ((Object) this.field_h.a((byte) 111));
     }
 
     final f c() {
-        return (f) (Object) ((qkb) this).field_h.d(0);
+        return (f) ((Object) this.field_h.d(0));
     }
 
     private final void a(wka param0) {
         param0.b(-3846);
         param0.a();
-        ksa var2 = ((qkb) this).field_k.field_a.field_c;
-        if (var2 == ((qkb) this).field_k.field_a) {
-            ((qkb) this).field_i = -1;
+        ksa var2 = this.field_k.field_a.field_c;
+        if (var2 == this.field_k.field_a) {
+            this.field_i = -1;
         } else {
-            ((qkb) this).field_i = ((wka) (Object) var2).field_d;
+            this.field_i = ((wka) ((Object) var2)).field_d;
         }
     }
 
     final synchronized void b(f param0) {
-        ((qkb) this).field_h.a((ksa) (Object) param0, (byte) -55);
+        this.field_h.a(param0, (byte) -55);
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
@@ -55,20 +55,20 @@ final class qkb extends f {
         Throwable var8 = null;
         Throwable decompiledCaughtException = null;
         L0: while (true) {
-          if (((qkb) this).field_i >= 0) {
-            if (((qkb) this).field_j + param2 >= ((qkb) this).field_i) {
-              var4 = ((qkb) this).field_i - ((qkb) this).field_j;
+          if (this.field_i >= 0) {
+            if (this.field_j + param2 >= this.field_i) {
+              var4 = this.field_i - this.field_j;
               this.c(param0, param1, var4);
               param1 = param1 + var4;
               param2 = param2 - var4;
-              ((qkb) this).field_j = ((qkb) this).field_j + var4;
+              this.field_j = this.field_j + var4;
               this.e();
-              var5 = (wka) (Object) ((qkb) this).field_k.d(0);
-              var6 = (Object) (Object) var5;
+              var5 = (wka) ((Object) this.field_k.d(0));
+              var6 = var5;
               synchronized (var6) {
                 L1: {
                   L2: {
-                    var7 = var5.a((qkb) this);
+                    var7 = var5.a((qkb) (this));
                     if (var7 >= 0) {
                       var5.field_d = var7;
                       this.a(var5.field_c, var5);
@@ -88,7 +88,7 @@ final class qkb extends f {
                 return;
               }
             } else {
-              ((qkb) this).field_j = ((qkb) this).field_j + param2;
+              this.field_j = this.field_j + param2;
               this.c(param0, param1, param2);
               return;
             }
@@ -100,10 +100,10 @@ final class qkb extends f {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        f var4 = (f) (Object) ((qkb) this).field_h.d(0);
+        f var4 = (f) ((Object) this.field_h.d(0));
         while (var4 != null) {
             var4.b(param0, param1, param2);
-            var4 = (f) (Object) ((qkb) this).field_h.a((byte) 60);
+            var4 = (f) ((Object) this.field_h.a((byte) 60));
         }
     }
 
@@ -119,19 +119,19 @@ final class qkb extends f {
         Throwable var6 = null;
         Throwable decompiledCaughtException = null;
         L0: while (true) {
-          if (((qkb) this).field_i >= 0) {
-            if (((qkb) this).field_j + param0 >= ((qkb) this).field_i) {
-              var2 = ((qkb) this).field_i - ((qkb) this).field_j;
+          if (this.field_i >= 0) {
+            if (this.field_j + param0 >= this.field_i) {
+              var2 = this.field_i - this.field_j;
               this.c(var2);
               param0 = param0 - var2;
-              ((qkb) this).field_j = ((qkb) this).field_j + var2;
+              this.field_j = this.field_j + var2;
               this.e();
-              var3 = (wka) (Object) ((qkb) this).field_k.d(0);
-              var4 = (Object) (Object) var3;
+              var3 = (wka) ((Object) this.field_k.d(0));
+              var4 = var3;
               synchronized (var4) {
                 L1: {
                   L2: {
-                    var5 = var3.a((qkb) this);
+                    var5 = var3.a((qkb) (this));
                     if (var5 >= 0) {
                       var3.field_d = var5;
                       this.a(var3.field_c, var3);
@@ -151,7 +151,7 @@ final class qkb extends f {
                 return;
               }
             } else {
-              ((qkb) this).field_j = ((qkb) this).field_j + param0;
+              this.field_j = this.field_j + param0;
               this.c(param0);
               return;
             }
@@ -163,36 +163,36 @@ final class qkb extends f {
     }
 
     private final void c(int param0) {
-        f var2 = (f) (Object) ((qkb) this).field_h.d(0);
+        f var2 = (f) ((Object) this.field_h.d(0));
         while (var2 != null) {
             var2.a(param0);
-            var2 = (f) (Object) ((qkb) this).field_h.a((byte) 59);
+            var2 = (f) ((Object) this.field_h.a((byte) 59));
         }
     }
 
     private final void a(ksa param0, wka param1) {
         L0: while (true) {
-          if (param0 != ((qkb) this).field_k.field_a) {
-            if (((wka) (Object) param0).field_d <= param1.field_d) {
+          if (param0 != this.field_k.field_a) {
+            if (((wka) ((Object) param0)).field_d <= param1.field_d) {
               param0 = param0.field_c;
               continue L0;
             } else {
-              al.a((ksa) (Object) param1, param0, 2);
-              ((qkb) this).field_i = ((wka) (Object) ((qkb) this).field_k.field_a.field_c).field_d;
+              al.a(param1, param0, 2);
+              this.field_i = ((wka) ((Object) this.field_k.field_a.field_c)).field_d;
               return;
             }
           } else {
-            al.a((ksa) (Object) param1, param0, 2);
-            ((qkb) this).field_i = ((wka) (Object) ((qkb) this).field_k.field_a.field_c).field_d;
+            al.a(param1, param0, 2);
+            this.field_i = ((wka) ((Object) this.field_k.field_a.field_c)).field_d;
             return;
           }
         }
     }
 
     public qkb() {
-        ((qkb) this).field_h = new ij();
-        ((qkb) this).field_k = new ij();
-        ((qkb) this).field_i = -1;
-        ((qkb) this).field_j = 0;
+        this.field_h = new ij();
+        this.field_k = new ij();
+        this.field_i = -1;
+        this.field_j = 0;
     }
 }

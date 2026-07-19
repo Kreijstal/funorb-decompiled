@@ -28,10 +28,10 @@ final class ha {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((ha) this).field_b[var4] != null) {
-                    var5 = ((ha) this).field_b[var4].field_w * 22050 / 1000;
-                    var6 = ((ha) this).field_b[var4].field_g * 22050 / 1000;
-                    var13 = ((ha) this).field_b[var4].a(var5, ((ha) this).field_b[var4].field_w);
+                  if (this.field_b[var4] != null) {
+                    var5 = this.field_b[var4].field_w * 22050 / 1000;
+                    var6 = this.field_b[var4].field_g * 22050 / 1000;
+                    var13 = this.field_b[var4].a(var5, this.field_b[var4].field_w);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -62,9 +62,9 @@ final class ha {
               return new byte[]{};
             }
           } else {
-            if (((ha) this).field_b[var2] != null) {
-              if (((ha) this).field_b[var2].field_w + ((ha) this).field_b[var2].field_g > var1) {
-                var1 = ((ha) this).field_b[var2].field_w + ((ha) this).field_b[var2].field_g;
+            if (this.field_b[var2] != null) {
+              if (this.field_b[var2].field_w + this.field_b[var2].field_g > var1) {
+                var1 = this.field_b[var2].field_w + this.field_b[var2].field_g;
                 var2++;
                 continue L0;
               } else {
@@ -97,25 +97,25 @@ final class ha {
 
     final ko b() {
         byte[] var1 = this.a();
-        return new ko(22050, var1, 22050 * ((ha) this).field_a / 1000, 22050 * ((ha) this).field_c / 1000);
+        return new ko(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
     private ha(ng param0) {
         int var2 = 0;
         int var3 = 0;
-        ((ha) this).field_b = new nm[10];
+        this.field_b = new nm[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((ha) this).field_a = param0.c((byte) -7);
-            ((ha) this).field_c = param0.c((byte) -7);
+            this.field_a = param0.c((byte) -7);
+            this.field_c = param0.c((byte) -7);
             return;
           } else {
             var3 = param0.h(255);
             if (var3 != 0) {
               param0.field_f = param0.field_f - 1;
-              ((ha) this).field_b[var2] = new nm();
-              ((ha) this).field_b[var2].a(param0);
+              this.field_b[var2] = new nm();
+              this.field_b[var2].a(param0);
               var2++;
               continue L0;
             } else {

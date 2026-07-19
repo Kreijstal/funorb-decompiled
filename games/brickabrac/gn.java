@@ -21,12 +21,15 @@ final class gn extends ld {
 
     final static void a(int param0, cq param1, int param2) {
         pi var3 = k.field_h;
+        if (param0 != -21167) {
+            return;
+        }
         try {
             var3.e(-13413, param2);
             var3.a(-113, param1.field_m);
-            var3.a(-114, param1.field_s);
+            var3.a(param0 ^ 21215, param1.field_s);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "gn.C(" + -21167 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "gn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -37,7 +40,7 @@ final class gn extends ld {
         int stackOut_9_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
-        var3 = ((gn) this).field_m[param1].field_f;
+        var3 = this.field_m[param1].field_f;
         if (param0 >= 80) {
           if (eg.field_k) {
             if (var3 != 12) {
@@ -72,77 +75,85 @@ final class gn extends ld {
     }
 
     final static void a(int param0, int param1, ln param2) {
+        int discarded$2 = 0;
         pi var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         pi var5 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
         String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         try {
           L0: {
-            var5 = k.field_h;
-            var3 = var5;
-            var5.e(-13413, 6);
-            var5.field_l = var5.field_l + 1;
-            var4 = var5.field_l;
-            var5.a(-125, 1);
-            if (null == param2.field_i) {
-              var5.a(-11, 0);
+            L1: {
+              var5 = k.field_h;
+              var3 = var5;
+              var5.e(-13413, param0);
+              var5.field_l = var5.field_l + 1;
+              var4 = var5.field_l;
+              var5.a(-125, 1);
+              if (null == param2.field_i) {
+                var5.a(-11, 0);
+                break L1;
+              } else {
+                var5.a(-108, param2.field_i.length);
+                var5.a(param2.field_i, -1, 0, param2.field_i.length);
+                break L1;
+              }
+            }
+            discarded$2 = var5.d(3, var4);
+            var5.field_l = var5.field_l - 4;
+            param2.field_m = var5.e(255);
+            var5.d((byte) 121, -var4 + var5.field_l);
+            if (param1 > 113) {
               break L0;
             } else {
-              var5.a(-108, param2.field_i.length);
-              var5.a(param2.field_i, -1, 0, param2.field_i.length);
-              break L0;
+              gn.i(-46);
+              return;
             }
           }
-          int discarded$2 = var5.d(3, var4);
-          var5.field_l = var5.field_l - 4;
-          param2.field_m = var5.e(255);
-          var5.d((byte) 121, -var4 + var5.field_l);
-          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3_ref;
-            stackOut_5_1 = new StringBuilder().append("gn.G(").append(6).append(',').append(125).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_6_0 = (RuntimeException) (var3_ref);
+            stackOut_6_1 = new StringBuilder().append("gn.G(").append(param0).append(',').append(param1).append(',');
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
-              break L1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
@@ -151,21 +162,21 @@ final class gn extends ld {
             ma.field_I = rm.a("", 16711935);
             ma.field_I.a(false, 20892);
             if (param4 <= 11) {
-                field_D = null;
+                field_D = (String[]) null;
             }
             nq.a(param3, param1, (byte) -59, param2);
             np.b(false);
             ka.field_l = ej.field_P;
             ik.field_g = ej.field_P;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "gn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "gn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     final int f(int param0) {
-        Object var3 = null;
+        mf var3 = null;
         if (param0 != -6) {
-          var3 = null;
+          var3 = (mf) null;
           gn.a(false, (mf) null, (mf) null, (mf) null, 63);
           return gp.field_d.field_db;
         } else {
@@ -187,10 +198,6 @@ final class gn extends ld {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_D = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
         field_y = "Quick Chat game";
         field_A = "Enter name of player to delete from list";

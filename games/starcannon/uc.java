@@ -9,37 +9,40 @@ abstract class uc implements he {
 
     public final String a(int param0) {
         if (param0 == 26162) {
-          if (!((uc) this).a(true)) {
-            if (~(((uc) this).field_c - -350L) < ~dd.b(101)) {
+          if (!this.a(true)) {
+            if ((this.field_c - -350L ^ -1L) < (dd.b(101) ^ -1L)) {
               return null;
             } else {
-              return ((uc) this).b(-128);
+              return this.b(-128);
             }
           } else {
             return null;
           }
         } else {
-          return null;
+          return (String) null;
         }
     }
 
     public final void a(byte param0) {
-        ((uc) this).field_c = dd.b(118);
+        this.field_c = dd.b(118);
         int var2 = -69 % ((param0 - -29) / 45);
     }
 
     public final p b(byte param0) {
-        if (((uc) this).a(true)) {
+        if (this.a(true)) {
             return uh.field_g;
         }
         int var2 = -87 / ((param0 - -85) / 36);
-        if (!(~(((uc) this).field_c + 350L) >= ~dd.b(61))) {
+        if (!((this.field_c + 350L ^ -1L) >= (dd.b(61) ^ -1L))) {
             return cg.field_g;
         }
-        return ((uc) this).c(4096);
+        return this.c(4096);
     }
 
     final static String c(byte param0) {
+        if (param0 <= 47) {
+            return (String) null;
+        }
         return jk.field_b;
     }
 
@@ -68,6 +71,9 @@ abstract class uc implements he {
     }
 
     public static void e(int param0) {
+        if (param0 != 1) {
+            return;
+        }
         field_d = null;
         field_a = null;
         field_b = null;
@@ -76,19 +82,33 @@ abstract class uc implements he {
     abstract p c(int param0);
 
     final static void d(int param0) {
-        if (qb.field_h == -mh.field_k) {
+        if (qb.field_h != -mh.field_k + 0) {
+          if (qb.field_h == 250 + -mh.field_k) {
+            if (param0 != 1) {
+              return;
+            } else {
+              qb.field_h = qb.field_h + 1;
+              return;
+            }
+          } else {
+            if (param0 != 1) {
+              return;
+            } else {
+              qb.field_h = qb.field_h + 1;
+              return;
+            }
+          }
+        } else {
+          if (param0 != 1) {
             return;
-        }
-        if (~qb.field_h != ~(250 + -mh.field_k)) {
+          } else {
+            qb.field_h = qb.field_h + 1;
             return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new ge();
         field_b = new rk();
     }

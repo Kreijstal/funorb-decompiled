@@ -13,10 +13,10 @@ final class bn extends qt {
     final int b(int param0, int param1) {
         if (la.a(100)) {
             if (!(param0 != 0)) {
-                return 25 + (((bn) this).field_i[0].field_d >> 1);
+                return 25 + (this.field_i[0].field_d >> 2053342177);
             }
-            if (!(param0 != 1)) {
-                return -(((bn) this).field_i[1].field_d >> 1) + 340;
+            if (!(-2 != (param0 ^ -1))) {
+                return -(this.field_i[1].field_d >> 14392225) + 340;
             }
         }
         if (param1 != -22667) {
@@ -45,15 +45,18 @@ final class bn extends qt {
         try {
             super.a(param0, param1, -116, param3);
             if (param2 >= -28) {
-                field_F = null;
+                field_F = (String[]) null;
             }
-            io.field_e.a(true, 640, ((bn) this).field_j, 0, 480);
+            io.field_e.a(true, 640, this.field_j, 0, 480);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "bn.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "bn.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0, boolean param1) {
+        int fieldTemp$3 = 0;
+        wh discarded$4 = null;
+        wh discarded$5 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -122,8 +125,8 @@ final class bn extends qt {
         }
         L2: {
           param1 = stackIn_6_0 & stackIn_6_1 != 0;
-          if (((bn) this).field_D > 0) {
-            ((bn) this).field_D = ((bn) this).field_D - 1;
+          if (this.field_D > 0) {
+            this.field_D = this.field_D - 1;
             break L2;
           } else {
             break L2;
@@ -134,7 +137,7 @@ final class bn extends qt {
           io.field_e.b(0, param1);
           w.field_b.b(11570);
           var4 = -32 % ((38 - param0) / 60);
-          if (wh.field_w <= 0) {
+          if ((wh.field_w ^ -1) >= -1) {
             break L3;
           } else {
             wh.field_w = wh.field_w - 1;
@@ -143,7 +146,7 @@ final class bn extends qt {
         }
         L4: {
           var5 = je.field_k;
-          if (sd.field_b - -un.field_d.a(gu.field_Jb) >= 20) {
+          if (-21 >= (sd.field_b - -un.field_d.a(gu.field_Jb) ^ -1)) {
             sd.field_b = sd.field_b - 1;
             break L4;
           } else {
@@ -154,7 +157,7 @@ final class bn extends qt {
         var6 = 0;
         var7 = 0;
         L5: while (true) {
-          if (~var7 <= ~ha.field_H.length) {
+          if (var7 >= ha.field_H.length) {
             L6: {
               if (1 != np.field_Cb.field_sb) {
                 break L6;
@@ -174,9 +177,9 @@ final class bn extends qt {
                 if (!uv.field_f) {
                   break L8;
                 } else {
-                  int fieldTemp$3 = ri.field_t - 1;
+                  fieldTemp$3 = ri.field_t - 1;
                   ri.field_t = ri.field_t - 1;
-                  if (fieldTemp$3 <= 0) {
+                  if ((fieldTemp$3 ^ -1) >= -1) {
                     break L8;
                   } else {
                     stackOut_25_0 = 1;
@@ -203,7 +206,7 @@ final class bn extends qt {
                   if (mf.field_Gb != var7) {
                     break L10;
                   } else {
-                    if (~je.field_k == ~var5) {
+                    if (je.field_k == var5) {
                       break L9;
                     } else {
                       break L10;
@@ -231,11 +234,11 @@ final class bn extends qt {
                   if (jh.field_Hb.field_Db.field_J <= var3) {
                     break L13;
                   } else {
-                    if (((bn) this).field_D != 0) {
+                    if (this.field_D != 0) {
                       break L13;
                     } else {
-                      wh discarded$4 = sp.c(59, 76);
-                      ((bn) this).field_D = 5;
+                      discarded$4 = sp.c(59, 76);
+                      this.field_D = 5;
                       break L13;
                     }
                   }
@@ -244,9 +247,9 @@ final class bn extends qt {
                   if (jh.field_Hb.field_Db.field_J >= var3) {
                     break L14;
                   } else {
-                    if (0 == ((bn) this).field_D) {
-                      wh discarded$5 = sp.c(60, -118);
-                      ((bn) this).field_D = 5;
+                    if (0 == this.field_D) {
+                      discarded$5 = sp.c(60, -118);
+                      this.field_D = 5;
                       break L14;
                     } else {
                       break L14;
@@ -255,35 +258,31 @@ final class bn extends qt {
                 }
                 return;
               } else {
-                L15: {
-                  if (ha.field_H[var7].field_gb) {
-                    qd.a((byte) -67, vo.a((byte) -18, fu.field_f, new String[1]));
-                    break L15;
-                  } else {
-                    break L15;
-                  }
+                if (ha.field_H[var7].field_gb) {
+                  qd.a((byte) -67, vo.a((byte) -18, fu.field_f, new String[]{q.field_h[var7]}));
+                  var7++;
+                  continue L12;
+                } else {
+                  var7++;
+                  continue L12;
                 }
-                var7++;
-                continue L12;
               }
             }
           } else {
-            L16: {
-              if (ha.field_H[var7].field_sb != 1) {
-                break L16;
-              } else {
-                nq.b(var7, 500);
-                je.field_k = var7;
-                mf.field_Gb = 0;
-                var5 = var7;
-                jh.field_Hb.field_Db.field_J = 0;
-                kj.a((byte) 80);
-                var6 = 1;
-                break L16;
-              }
+            if (-2 == (ha.field_H[var7].field_sb ^ -1)) {
+              nq.b(var7, 500);
+              je.field_k = var7;
+              mf.field_Gb = 0;
+              var5 = var7;
+              jh.field_Hb.field_Db.field_J = 0;
+              kj.a((byte) 80);
+              var6 = 1;
+              var7++;
+              continue L5;
+            } else {
+              var7++;
+              continue L5;
             }
-            var7++;
-            continue L5;
           }
         }
     }
@@ -315,7 +314,7 @@ final class bn extends qt {
         var8.field_A = 1;
         var8.field_p = 1;
         var8.field_y = 16777215;
-        var8.field_X = (hu) (Object) q.field_d;
+        var8.field_X = (hu) ((Object) q.field_d);
         var3 = new hd();
         var3.a(true, 317, 5, 5, 18);
         jh.field_Hb = new tk(0L, var3, var8, rr.field_b);
@@ -323,26 +322,26 @@ final class bn extends qt {
         jh.field_Hb.field_A = 1;
         jh.field_Hb.field_y = 16777215;
         jh.field_Hb.field_p = 1;
-        jh.field_Hb.field_X = (hu) (Object) q.field_d;
+        jh.field_Hb.field_X = (hu) ((Object) q.field_d);
         var4 = ag.a(16006912, param0 ^ param0);
         var5 = new hd();
         var5.field_y = 16777215;
         var5.field_B = 2;
-        var5.field_X = (hu) (Object) q.field_d;
+        var5.field_X = (hu) ((Object) q.field_d);
         var5.field_D = 5;
         w.field_b = new vg(0L, var8, var4, var5, 20);
         w.field_b.a(param0 + -592, 145, 64, 4 + (q.field_d.field_G + q.field_d.field_p), 160);
-        var8.field_X = (hu) (Object) q.field_d;
+        var8.field_X = (hu) ((Object) q.field_d);
         w.field_b.field_R = null;
         np.field_Cb = eo.a(ic.field_j, 7126504);
         np.field_Cb.a(true, np.field_Cb.field_q, 310, 61, np.field_Cb.field_mb);
         ha.field_H = new hd[7];
         var6 = 6;
         L1: while (true) {
-          if (var6 < 0) {
+          if ((var6 ^ -1) > -1) {
             L2: {
-              io.field_e.a((byte) -126, (hd) (Object) jh.field_Hb);
-              io.field_e.a((byte) -106, (hd) (Object) w.field_b);
+              io.field_e.a((byte) -126, (hd) (jh.field_Hb));
+              io.field_e.a((byte) -106, (hd) (w.field_b));
               io.field_e.a((byte) -112, np.field_Cb);
               if (!la.a(100)) {
                 sp.a(ow.field_e, (byte) 74);
@@ -366,7 +365,7 @@ final class bn extends qt {
         field_E = null;
         field_G = null;
         if (param0 > -31) {
-            field_B = null;
+            field_B = (ut[]) null;
         }
         field_B = null;
         field_C = null;
@@ -374,9 +373,10 @@ final class bn extends qt {
     }
 
     final boolean a(int param0, int param1, char param2) {
+        String discarded$0 = null;
         String var4 = null;
         if (param1 > -5) {
-            String discarded$0 = bn.a('c', (byte) -84);
+            discarded$0 = bn.a('c', (byte) -84);
         }
         boolean discarded$2 = super.a(param0, -11, param2);
         if (!la.a(100)) {
@@ -385,9 +385,9 @@ final class bn extends qt {
             }
         }
         if (!la.a(100)) {
-            if (param0 == 84) {
+            if ((param0 ^ -1) == -85) {
                 var4 = w.field_b.j((byte) -16);
-                if (var4.length() > 0) {
+                if (-1 > (var4.length() ^ -1)) {
                     sp.a(w.field_b.j((byte) -16), (byte) 74);
                     w.field_b.b("", -23174);
                     kj.a((byte) -115);
@@ -398,6 +398,7 @@ final class bn extends qt {
     }
 
     final void a(int param0, boolean param1) {
+        int discarded$1 = 0;
         int var3_int = 0;
         ji var3 = null;
         String var3_ref = null;
@@ -432,15 +433,15 @@ final class bn extends qt {
         int stackOut_8_0 = 0;
         L0: {
           var6 = Kickabout.field_G;
-          on.a(jh.field_Hb.field_F + ((bn) this).field_j, -4 + jh.field_Hb.field_T, jh.field_Hb.field_q - -4, jh.field_Hb.field_mb + 6, 0, 128);
-          on.a(((bn) this).field_j - -20, 60, 134 + w.field_b.field_q - -np.field_Cb.field_q, 29, 10, 0, 128);
+          on.a(jh.field_Hb.field_F + this.field_j, -4 + jh.field_Hb.field_T, jh.field_Hb.field_q - -4, jh.field_Hb.field_mb + 6, 0, 128);
+          on.a(this.field_j - -20, 60, 134 + w.field_b.field_q - -np.field_Cb.field_q, 29, 10, 0, 128);
           q.field_d.c(bi.field_e.toUpperCase(), w.field_b.field_F, w.field_b.field_T - -15, 16777215, -1);
           on.a(w.field_b.field_F, w.field_b.field_T - -4, w.field_b.field_q, w.field_b.field_mb + -5, 7829367, 128);
           if (!jh.field_Hb.field_Eb.e((byte) -113)) {
             break L0;
           } else {
             var3 = jh.field_Hb.field_Eb;
-            on.g(3 + (((hd) (Object) var3).field_F + ((bn) this).field_j), ((hd) (Object) var3).field_T, ((hd) (Object) var3).field_q + -6, ((hd) (Object) var3).field_mb);
+            on.g(3 + (((hd) ((Object) var3)).field_F + this.field_j), ((hd) ((Object) var3)).field_T, ((hd) ((Object) var3)).field_q + -6, ((hd) ((Object) var3)).field_mb);
             break L0;
           }
         }
@@ -450,10 +451,10 @@ final class bn extends qt {
           if (ha.field_H.length <= var3_int) {
             L2: {
               ta.e(param0 ^ -122);
-              on.a(20 + je.field_k * 50 + ((bn) this).field_j, 135, 48, 2, 0);
-              on.a(20 + ((bn) this).field_j, 137, 348, 26, 0);
+              on.a(20 + je.field_k * 50 + this.field_j, 135, 48, 2, 0);
+              on.a(20 + this.field_j, 137, 348, 26, 0);
               var3_ref = lh.field_C;
-              if (je.field_k <= 0) {
+              if ((je.field_k ^ -1) >= -1) {
                 break L2;
               } else {
                 if (je.field_k < q.field_h.length) {
@@ -465,11 +466,11 @@ final class bn extends qt {
               }
             }
             L3: {
-              un.field_d.d(var3_ref.toLowerCase(), ((bn) this).field_j + 194, 156, 16679959, -1);
+              un.field_d.d(var3_ref.toLowerCase(), this.field_j + 194, 156, 16679959, -1);
               var4 = un.field_d.a(var3_ref.toLowerCase());
               if (eo.field_f != null) {
-                eo.field_f[je.field_k].a(194 + ((bn) this).field_j - (var4 >> 1) + -28, 146);
-                eo.field_f[je.field_k].a(14 + ((var4 >> 1) + ((bn) this).field_j) + 194, 146);
+                eo.field_f[je.field_k].a(194 + this.field_j - (var4 >> 1773490049) + -28, 146);
+                eo.field_f[je.field_k].a(14 + ((var4 >> 323550113) + this.field_j) + 194, 146);
                 break L3;
               } else {
                 break L3;
@@ -486,16 +487,16 @@ final class bn extends qt {
                 if (!pn.g(2368)) {
                   break L5;
                 } else {
-                  stackOut_22_0 = (hd) (Object) stackIn_22_0;
+                  stackOut_22_0 = (hd) ((Object) stackIn_22_0);
                   stackOut_22_1 = stackIn_22_1;
                   stackIn_24_0 = stackOut_22_0;
                   stackIn_24_1 = stackOut_22_1;
                   stackIn_23_0 = stackOut_22_0;
                   stackIn_23_1 = stackOut_22_1;
-                  if (nj.a(127) % 500L >= 250L) {
+                  if (-251L >= (nj.a(127) % 500L ^ -1L)) {
                     break L5;
                   } else {
-                    stackOut_23_0 = (hd) (Object) stackIn_23_0;
+                    stackOut_23_0 = (hd) ((Object) stackIn_23_0);
                     stackOut_23_1 = stackIn_23_1;
                     stackOut_23_2 = 1;
                     stackIn_25_0 = stackOut_23_0;
@@ -505,7 +506,7 @@ final class bn extends qt {
                   }
                 }
               }
-              stackOut_24_0 = (hd) (Object) stackIn_24_0;
+              stackOut_24_0 = (hd) ((Object) stackIn_24_0);
               stackOut_24_1 = stackIn_24_1;
               stackOut_24_2 = 0;
               stackIn_25_0 = stackOut_24_0;
@@ -519,14 +520,14 @@ final class bn extends qt {
                 break L6;
               } else {
                 pt.a(-2 + jh.field_Hb.field_q + (jh.field_Hb.field_F - 15), -22914, jh.field_Hb.field_F, 12 + (jh.field_Hb.field_T - (-jh.field_Hb.field_mb + 15)), jh.field_Hb.field_T);
-                var7 = (cf) (Object) jh.field_Hb.field_Db.field_jb.g(24009);
+                var7 = (cf) ((Object) jh.field_Hb.field_Db.field_jb.g(24009));
                 L7: while (true) {
                   if (var7 == null) {
                     ta.e(118);
                     break L6;
                   } else {
                     var7.b(-104);
-                    var7 = (cf) (Object) jh.field_Hb.field_Db.field_jb.c(param0 ^ -38);
+                    var7 = (cf) ((Object) jh.field_Hb.field_Db.field_jb.c(param0 ^ -38));
                     continue L7;
                   }
                 }
@@ -546,14 +547,14 @@ final class bn extends qt {
               }
               if (!la.a(100)) {
                 if (!uv.field_f) {
-                  un.field_d.d(lo.field_k.toLowerCase(), 194 - -((bn) this).field_j, 290, 16777215, -1);
+                  un.field_d.d(lo.field_k.toLowerCase(), 194 - -this.field_j, 290, 16777215, -1);
                   break L8;
                 } else {
-                  jr.a(((bn) this).field_j + 194, -65, 290);
+                  jr.a(this.field_j + 194, -65, 290);
                   break L8;
                 }
               } else {
-                pb.field_C.d(sh.field_b, ((bn) this).field_j + 194, 290, 16777215, -1);
+                pb.field_C.d(sh.field_b, this.field_j + 194, 290, 16777215, -1);
                 break L8;
               }
             }
@@ -561,10 +562,10 @@ final class bn extends qt {
               on.a(jh.field_Hb.field_F, 4 + (jh.field_Hb.field_mb + jh.field_Hb.field_T), 4 + jh.field_Hb.field_q, 24, 0, 196);
               pt.a(jh.field_Hb.field_F + (jh.field_Hb.field_q - -2), -22914, 1 + jh.field_Hb.field_F, jh.field_Hb.field_T + (jh.field_Hb.field_mb - -4) - -24, 4 + (jh.field_Hb.field_mb + jh.field_Hb.field_T));
               if (wh.field_w > 0) {
-                un.field_d.d(qh.field_e.toLowerCase(), (jh.field_Hb.field_q >> 1) + jh.field_Hb.field_F, 423, 16679959, -1);
+                un.field_d.d(qh.field_e.toLowerCase(), (jh.field_Hb.field_q >> -1759026079) + jh.field_Hb.field_F, 423, 16679959, -1);
                 break L10;
               } else {
-                un.field_d.a(gu.field_Jb.toLowerCase(), sd.field_b + ((bn) this).field_j, 423, 16679959, -1);
+                un.field_d.a(gu.field_Jb.toLowerCase(), sd.field_b + this.field_j, 423, 16679959, -1);
                 break L10;
               }
             }
@@ -581,9 +582,9 @@ final class bn extends qt {
                   }
                 }
               }
-              on.g(((bn) this).field_j, 48, 450, 382);
+              on.g(this.field_j, 48, 450, 382);
               if (rr.field_f) {
-                int discarded$1 = pb.field_C.a(pi.field_d, ((bn) this).field_j, 48, 450, 382, 16777215, -1, 1, 1, 0);
+                discarded$1 = pb.field_C.a(pi.field_d, this.field_j, 48, 450, 382, 16777215, -1, 1, 1, 0);
                 break L11;
               } else {
                 break L11;
@@ -633,12 +634,12 @@ final class bn extends qt {
     final void a(boolean param0, int param1) {
         super.a(param0, 121);
         if (param1 < 99) {
-            field_E = null;
+            field_E = (ut[]) null;
         }
     }
 
     bn() {
-        ((bn) this).field_D = 0;
+        this.field_D = 0;
     }
 
     final int a(int param0, int param1) {
@@ -647,10 +648,6 @@ final class bn extends qt {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = "buyout at min";
         field_A = 3;
         field_G = null;

@@ -8,6 +8,7 @@ final class f {
     static int field_d;
 
     final static int a(byte param0, int param1, int param2, int param3, int param4) {
+        int discarded$1 = 0;
         ut var5 = null;
         L0: {
           if (10 > param1) {
@@ -18,7 +19,7 @@ final class f {
           }
         }
         if (param0 <= 109) {
-          int discarded$1 = f.a((byte) -108, -67, -1, 23, 75);
+          discarded$1 = f.a((byte) -108, -67, -1, 23, 75);
           var5 = tb.field_q[param1 % 10];
           var5.c(-var5.field_s + param4, param3, param2);
           return var5.field_q + param4 + 3;
@@ -35,7 +36,7 @@ final class f {
             sk.a(80, 8, 0);
             ad.field_d[1] = qm.a(param0, "", "KaB_beach_atmospherics_loop_lvl1_2");
             sk.a(73, 8, 1);
-            int var2_int = -54;
+            int var2_int = 109 / ((param1 - 28) / 61);
             ad.field_d[2] = qm.a(param0, "", "KaB_park_atmospherics_loop_lvl1_2");
             sk.a(94, 8, 2);
             ad.field_d[3] = qm.a(param0, "", "KaB_street_atmospherics_loop_lvl1_2");
@@ -48,19 +49,18 @@ final class f {
             sk.a(-53, 8, 6);
             ad.field_d[7] = qm.a(param0, "", "KaB_crowd_loop_END_PITCH_lvl4");
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "f.C(" + (param0 != null ? "{...}" : "null") + ',' + -122 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "f.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(byte param0) {
         field_b = null;
+        if (param0 >= -71) {
+            field_c = true;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 104;
         field_b = "Buyout smaller than Bid";
     }

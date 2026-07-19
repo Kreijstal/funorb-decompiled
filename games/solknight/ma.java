@@ -20,10 +20,6 @@ class ma extends ec {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ma.A(";
         field_m = "Combo: <%0>";
     }

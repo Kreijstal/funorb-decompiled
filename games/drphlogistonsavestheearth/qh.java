@@ -16,10 +16,6 @@ final class qh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "qh.A(";
         field_b = 500;
         field_a = new int[]{1, 1, 1, 1, 1, 3, 3, 2, 2, 1, 1, 2, 3, 2, 10};

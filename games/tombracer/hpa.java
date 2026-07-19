@@ -31,6 +31,7 @@ final class hpa extends aa {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_0_0 = null;
         Object stackOut_2_0 = null;
@@ -66,11 +67,11 @@ final class hpa extends aa {
               }
             }
             L2: {
-              paa.a((iv) (Object) stackIn_3_0, stackIn_3_1, param1.field_j, param1.field_i, -11635, (int[]) null, param1.field_l, param1.field_d, param1.field_g);
+              paa.a((iv) ((Object) stackIn_3_0), stackIn_3_1, param1.field_j, param1.field_i, -11635, (int[]) null, param1.field_l, param1.field_d, param1.field_g);
               if (0 != param1.field_d) {
                 break L2;
               } else {
-                if (nga.c(0)) {
+                if (nga.c(param0 + 2)) {
                   break L2;
                 } else {
                   if (null != uu.field_a) {
@@ -99,7 +100,7 @@ final class hpa extends aa {
               }
             }
             L4: {
-              if (param1.field_d != 1) {
+              if ((param1.field_d ^ -1) != -2) {
                 break L4;
               } else {
                 if (nga.c(0)) {
@@ -137,31 +138,37 @@ final class hpa extends aa {
             hka.field_b.a(param1, 13);
             var13 = hka.field_b;
             var3 = jm.field_m;
-            var4 = lba.field_p;
-            var13.field_f.b(var4, 0, -89, 0, var3);
-            break L0;
+            if (param0 == -2) {
+              var4 = lba.field_p;
+              var13.field_f.b(var4, 0, -89, 0, var3);
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("hpa.A(").append(-2).append(',');
+            stackOut_24_0 = (RuntimeException) (var2);
+            stackOut_24_1 = new StringBuilder().append("hpa.A(").append(param0).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
               break L6;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
@@ -169,7 +176,12 @@ final class hpa extends aa {
               break L6;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 

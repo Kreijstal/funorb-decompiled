@@ -16,7 +16,7 @@ final class kn extends bo implements Cloneable {
             if (var4 >= var3) {
               return;
             } else {
-              ((kn) this).field_r = 1 - -var4;
+              this.field_r = 1 - -var4;
               return;
             }
           } else {
@@ -28,12 +28,13 @@ final class kn extends bo implements Cloneable {
     }
 
     protected final Object clone() {
-        kn var1 = (kn) super.clone();
-        var1.field_r = ((kn) this).field_r;
-        return (Object) (Object) var1;
+        kn var1 = (kn) (super.clone());
+        var1.field_r = this.field_r;
+        return var1;
     }
 
     final nj a(int param0, nj param1) {
+        f discarded$2 = null;
         RuntimeException var3 = null;
         nj stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -59,11 +60,11 @@ final class kn extends bo implements Cloneable {
               if (param0 == 23525) {
                 break L1;
               } else {
-                f discarded$2 = ((kn) this).a(-78, (ea) null, 7, -88, (byte) 87, 74, (f[][]) null);
+                discarded$2 = this.a(-78, (ea) null, 7, -88, (byte) 87, 74, (f[][]) null);
                 break L1;
               }
             }
-            stackOut_2_0 = ng.a(dq.field_H, param1, (f) (Object) new kn((f) (Object) new kp(-1)), (byte) -83, wi.field_b);
+            stackOut_2_0 = ng.a(dq.field_H, param1, new kn(new kp(-1)), (byte) -83, wi.field_b);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -71,23 +72,23 @@ final class kn extends bo implements Cloneable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("kn.V(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -95,12 +96,13 @@ final class kn extends bo implements Cloneable {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     final f a(int param0, ea param1, int param2, int param3, byte param4, int param5, f[][] param6) {
+        f discarded$2 = null;
         RuntimeException var8 = null;
         fq var9 = null;
         f stackIn_3_0 = null;
@@ -143,7 +145,7 @@ final class kn extends bo implements Cloneable {
               if (param4 <= -87) {
                 break L1;
               } else {
-                f discarded$2 = ((kn) this).a(-12, (ea) null, -116, -77, (byte) 28, -29, (f[][]) null);
+                discarded$2 = this.a(-12, (ea) null, -116, -77, (byte) 28, -29, (f[][]) null);
                 break L1;
               }
             }
@@ -151,9 +153,9 @@ final class kn extends bo implements Cloneable {
             wd.field_j = wd.field_j - 1;
             mb.field_g = mb.field_g - ob.field_l;
             tm.field_f.a(32, (param5 + param2) * 12, (param3 - -param0) * 12, 60, (byte) -111);
-            var9 = (fq) (Object) param1;
-            ((kn) this).field_l.a(1 << var9.field_u, true, tm.field_e);
-            stackOut_2_0 = ((kn) this).field_l.a(param0, param1, param2, param3, (byte) -98, param5, param6);
+            var9 = (fq) ((Object) param1);
+            this.field_l.a(1 << var9.field_u, true, tm.field_e);
+            stackOut_2_0 = this.field_l.a(param0, param1, param2, param3, (byte) -98, param5, param6);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -161,23 +163,23 @@ final class kn extends bo implements Cloneable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var8 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var8;
+            stackOut_4_0 = (RuntimeException) (var8);
             stackOut_4_1 = new StringBuilder().append("kn.Q(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -186,23 +188,23 @@ final class kn extends bo implements Cloneable {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param6 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -210,7 +212,7 @@ final class kn extends bo implements Cloneable {
               break L3;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -265,23 +267,23 @@ final class kn extends bo implements Cloneable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var8 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var8;
+            stackOut_4_0 = (RuntimeException) (var8);
             stackOut_4_1 = new StringBuilder().append("kn.G(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -290,23 +292,23 @@ final class kn extends bo implements Cloneable {
             }
           }
           L2: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param5 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -314,7 +316,7 @@ final class kn extends bo implements Cloneable {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param6 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param6 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -350,20 +352,20 @@ final class kn extends bo implements Cloneable {
         int stackOut_2_1 = 0;
         var7 = 122 % ((param0 - 74) / 41);
         if (param1 == 24) {
-          if (param2 != 24) {
+          if (-25 != (param2 ^ -1)) {
             L0: {
               stackOut_10_0 = s.field_o;
               stackIn_12_0 = stackOut_10_0;
               stackIn_11_0 = stackOut_10_0;
               if (!jm.field_j) {
-                stackOut_12_0 = (dl[]) (Object) stackIn_12_0;
+                stackOut_12_0 = (dl[]) ((Object) stackIn_12_0);
                 stackOut_12_1 = 0;
                 stackIn_13_0 = stackOut_12_0;
                 stackIn_13_1 = stackOut_12_1;
                 break L0;
               } else {
-                stackOut_11_0 = (dl[]) (Object) stackIn_11_0;
-                stackOut_11_1 = ((kn) this).field_r;
+                stackOut_11_0 = (dl[]) ((Object) stackIn_11_0);
+                stackOut_11_1 = this.field_r;
                 stackIn_13_0 = stackOut_11_0;
                 stackIn_13_1 = stackOut_11_1;
                 break L0;
@@ -377,13 +379,13 @@ final class kn extends bo implements Cloneable {
               stackIn_8_0 = stackOut_6_0;
               stackIn_7_0 = stackOut_6_0;
               if (jm.field_j) {
-                stackOut_8_0 = (dl[]) (Object) stackIn_8_0;
-                stackOut_8_1 = ((kn) this).field_r;
+                stackOut_8_0 = (dl[]) ((Object) stackIn_8_0);
+                stackOut_8_1 = this.field_r;
                 stackIn_9_0 = stackOut_8_0;
                 stackIn_9_1 = stackOut_8_1;
                 break L1;
               } else {
-                stackOut_7_0 = (dl[]) (Object) stackIn_7_0;
+                stackOut_7_0 = (dl[]) ((Object) stackIn_7_0);
                 stackOut_7_1 = 0;
                 stackIn_9_0 = stackOut_7_0;
                 stackIn_9_1 = stackOut_7_1;
@@ -399,14 +401,14 @@ final class kn extends bo implements Cloneable {
             stackIn_3_0 = stackOut_1_0;
             stackIn_2_0 = stackOut_1_0;
             if (!jm.field_j) {
-              stackOut_3_0 = (dl[]) (Object) stackIn_3_0;
+              stackOut_3_0 = (dl[]) ((Object) stackIn_3_0);
               stackOut_3_1 = 0;
               stackIn_4_0 = stackOut_3_0;
               stackIn_4_1 = stackOut_3_1;
               break L2;
             } else {
-              stackOut_2_0 = (dl[]) (Object) stackIn_2_0;
-              stackOut_2_1 = ((kn) this).field_r;
+              stackOut_2_0 = (dl[]) ((Object) stackIn_2_0);
+              stackOut_2_1 = this.field_r;
               stackIn_4_0 = stackOut_2_0;
               stackIn_4_1 = stackOut_2_1;
               break L2;
@@ -485,7 +487,7 @@ final class kn extends bo implements Cloneable {
               if (param5 == -87) {
                 break L1;
               } else {
-                ((kn) this).field_r = 127;
+                this.field_r = 127;
                 break L1;
               }
             }
@@ -494,8 +496,8 @@ final class kn extends bo implements Cloneable {
             we.field_h = we.field_h + 128;
             fp.field_a = fp.field_a + 128;
             cn.field_e.a(64, param2 * 12, 12 * param1, 0, (byte) -111);
-            ((kn) this).field_l.a((byte) 108, param0);
-            stackOut_2_0 = new ig(param0, bd.field_n, ((kn) this).field_l, true);
+            this.field_l.a((byte) 108, param0);
+            stackOut_2_0 = new ig(param0, bd.field_n, this.field_l, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -503,23 +505,23 @@ final class kn extends bo implements Cloneable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var7 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var7;
+            stackOut_4_0 = (RuntimeException) (var7);
             stackOut_4_1 = new StringBuilder().append("kn.H(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -528,23 +530,23 @@ final class kn extends bo implements Cloneable {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param3 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -553,23 +555,23 @@ final class kn extends bo implements Cloneable {
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param4 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -577,13 +579,13 @@ final class kn extends bo implements Cloneable {
               break L4;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param5 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param5 + ')');
         }
-        return (f) (Object) stackIn_3_0;
+        return (f) ((Object) stackIn_3_0);
     }
 
     public static void g(int param0) {
-        int var1 = 0;
+        int var1 = -57 % ((-51 - param0) / 48);
         field_p = null;
     }
 

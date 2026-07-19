@@ -8,7 +8,7 @@ final class wc implements uj {
     static String field_d;
 
     final static boolean b(byte param0) {
-        int var1 = 36;
+        int var1 = -108 / ((-67 - param0) / 51);
         return !wm.field_f.a(0) ? true : false;
     }
 
@@ -26,6 +26,7 @@ final class wc implements uj {
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
+        ea[] discarded$0 = null;
         int var7 = MinerDisturbance.field_ab;
         ea[] var1 = new ea[sc.field_d];
         for (var2 = 0; sc.field_d > var2; var2++) {
@@ -38,7 +39,7 @@ final class wc implements uj {
             var1[var2] = new ea(pf.field_c, wd.field_a, bg.field_d[var2], oc.field_e[var2], qk.field_b[var2], ng.field_e[var2], var5);
         }
         if (param0 > -27) {
-            ea[] discarded$0 = wc.a(-122);
+            discarded$0 = wc.a(-122);
         }
         ec.a((byte) 96);
         return var1;
@@ -48,22 +49,22 @@ final class wc implements uj {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var4 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -99,37 +100,45 @@ final class wc implements uj {
                 break L1;
               }
             }
+            L3: {
+              if (param0 == 240) {
+                break L3;
+              } else {
+                field_d = (String) null;
+                break L3;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("wc.F(").append(240).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_13_0 = (RuntimeException) (var3);
+            stackOut_13_1 = new StringBuilder().append("wc.F(").append(param0).append(',');
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L3;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              break L3;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L4;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ')');
         }
     }
 
@@ -152,10 +161,18 @@ final class wc implements uj {
             var2 = 1;
             L1: while (true) {
               if (var2 >= mg.field_e.length) {
+                L2: {
+                  if (param0 == -29) {
+                    break L2;
+                  } else {
+                    field_a = (int[]) null;
+                    break L2;
+                  }
+                }
                 break L0;
               } else {
                 var3 = mg.field_e[var2];
-                ai.a(ta.field_d, var2 << 4, ta.field_d, var1_int, var3);
+                ai.a(ta.field_d, var2 << 594636836, ta.field_d, var1_int, var3);
                 var1_int = var1_int + var3;
                 var2++;
                 continue L1;
@@ -165,25 +182,28 @@ final class wc implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "wc.H(" + -29 + ')');
+          throw lj.a((Throwable) ((Object) var1), "wc.H(" + param0 + ')');
         }
     }
 
     public static void b(int param0) {
+        boolean discarded$0 = false;
         field_d = null;
-        field_c = null;
+        field_c = (ea[][]) null;
+        if (param0 != 0) {
+            discarded$0 = wc.b(false);
+        }
         field_a = null;
     }
 
     final static boolean b(boolean param0) {
+        if (param0) {
+            return false;
+        }
         return true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new int[8192];
         field_c = new ea[2][];
         field_b = false;

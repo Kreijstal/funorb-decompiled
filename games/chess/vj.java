@@ -19,7 +19,7 @@ abstract class vj {
         if (param0 != 48) {
             return;
         }
-        wb.a(((vj) this).field_b, ((vj) this).field_e, ((vj) this).field_i);
+        wb.a(this.field_b, this.field_e, this.field_i);
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
@@ -61,14 +61,14 @@ abstract class vj {
                   if (param3 > 115) {
                     break L4;
                   } else {
-                    field_f = null;
+                    field_f = (long[]) null;
                     break L4;
                   }
                 }
                 break L0;
               } else {
                 var8 = 48 * var7 / param1 + 152;
-                var9 = var8 | (var8 << 8 | var8 << 16);
+                var9 = var8 | (var8 << -1815103096 | var8 << -1769749328);
                 wb.field_d[param4 + (var7 + param0) * wb.field_h] = var9;
                 wb.field_d[param4 + (param0 - -var7) * wb.field_h - -param2] = var9;
                 var7++;
@@ -79,7 +79,7 @@ abstract class vj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var5, "vj.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw fk.a((Throwable) ((Object) var5), "vj.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -88,17 +88,13 @@ abstract class vj {
         field_a = null;
         field_g = null;
         field_f = null;
-        int var1 = -108;
+        int var1 = -108 / ((-34 - param0) / 62);
         field_c = null;
     }
 
     abstract void a(java.awt.Component param0, int param1, int param2, int param3);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new jc();
         field_f = new long[32];
     }

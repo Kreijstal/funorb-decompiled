@@ -17,9 +17,9 @@ final class cu extends wt implements ws {
           return;
         } else {
           L0: {
-            if (0 < ((cu) this).field_p) {
-              ((cu) this).field_t.a((byte) -126, ((cu) this).field_o, ((cu) this).field_p);
-              ((cu) this).field_p = 0;
+            if (0 < this.field_p) {
+              this.field_t.a((byte) -126, this.field_o, this.field_p);
+              this.field_p = 0;
               break L0;
             } else {
               break L0;
@@ -30,34 +30,39 @@ final class cu extends wt implements ws {
     }
 
     final static boolean a(byte param0, int param1, int param2) {
-        return (wc.a((byte) -101, param1, param2) | dk.a(param1, param2, (byte) -84) | qh.a(param1, param2, (byte) -3)) & tt.a(param1, true, param2);
+        if (param0 < 101) {
+          cu.c((byte) 81);
+          return (wc.a((byte) -101, param1, param2) | dk.a(param1, param2, (byte) -84) | qh.a(param1, param2, (byte) -3)) & tt.a(param1, true, param2);
+        } else {
+          return (wc.a((byte) -101, param1, param2) | dk.a(param1, param2, (byte) -84) | qh.a(param1, param2, (byte) -3)) & tt.a(param1, true, param2);
+        }
     }
 
     public final void a(byte param0) {
-        jaggl.OpenGL.glFramebufferRenderbufferEXT(((cu) this).field_n, ((cu) this).field_q, 36161, 0);
-        ((cu) this).field_q = -1;
-        ((cu) this).field_n = -1;
+        jaggl.OpenGL.glFramebufferRenderbufferEXT(this.field_n, this.field_q, 36161, 0);
+        this.field_q = -1;
+        this.field_n = -1;
         if (param0 != 11) {
-            ((cu) this).field_n = -123;
+            this.field_n = -123;
         }
     }
 
     protected final void finalize() throws Throwable {
-        ((cu) this).d((byte) -108);
+        this.d((byte) -108);
         super.finalize();
     }
 
     final void a(int param0, int param1, int param2) {
         if (param1 != -12658) {
-          ((cu) this).field_q = -125;
-          jaggl.OpenGL.glFramebufferRenderbufferEXT(param0, param2, 36161, ((cu) this).field_p);
-          ((cu) this).field_n = param0;
-          ((cu) this).field_q = param2;
+          this.field_q = -125;
+          jaggl.OpenGL.glFramebufferRenderbufferEXT(param0, param2, 36161, this.field_p);
+          this.field_n = param0;
+          this.field_q = param2;
           return;
         } else {
-          jaggl.OpenGL.glFramebufferRenderbufferEXT(param0, param2, 36161, ((cu) this).field_p);
-          ((cu) this).field_n = param0;
-          ((cu) this).field_q = param2;
+          jaggl.OpenGL.glFramebufferRenderbufferEXT(param0, param2, 36161, this.field_p);
+          this.field_n = param0;
+          this.field_q = param2;
           return;
         }
     }
@@ -66,38 +71,34 @@ final class cu extends wt implements ws {
         if (param0 <= 76) {
           field_r = true;
           qk.field_e = new wd();
-          ak.field_d.d((ea) (Object) qk.field_e, -30244);
+          ak.field_d.d(qk.field_e, -30244);
           return;
         } else {
           qk.field_e = new wd();
-          ak.field_d.d((ea) (Object) qk.field_e, -30244);
+          ak.field_d.d(qk.field_e, -30244);
           return;
         }
     }
 
     cu(wl param0, int param1, int param2, int param3) {
-        ((cu) this).field_n = -1;
-        ((cu) this).field_q = -1;
+        this.field_n = -1;
+        this.field_q = -1;
         try {
-            ((cu) this).field_v = param3;
-            ((cu) this).field_u = param2;
-            ((cu) this).field_t = param0;
-            ((cu) this).field_s = param1;
+            this.field_v = param3;
+            this.field_u = param2;
+            this.field_t = param0;
+            this.field_s = param1;
             jaggl.OpenGL.glGenRenderbuffersEXT(1, at.field_a, 0);
-            ((cu) this).field_p = at.field_a[0];
-            jaggl.OpenGL.glBindRenderbufferEXT(36161, ((cu) this).field_p);
-            jaggl.OpenGL.glRenderbufferStorageEXT(36161, ((cu) this).field_s, ((cu) this).field_u, ((cu) this).field_v);
-            ((cu) this).field_o = ((cu) this).field_v * ((cu) this).field_u * ((cu) this).field_t.e(-32334, ((cu) this).field_s);
+            this.field_p = at.field_a[0];
+            jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_p);
+            jaggl.OpenGL.glRenderbufferStorageEXT(36161, this.field_s, this.field_u, this.field_v);
+            this.field_o = this.field_v * this.field_u * this.field_t.e(-32334, this.field_s);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "cu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "cu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = false;
     }
 }

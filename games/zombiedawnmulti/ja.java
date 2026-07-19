@@ -7,20 +7,22 @@ class ja extends nq {
     final ja f() {
         int var2 = 0;
         int var3 = 0;
-        ja var1 = new ja(((ja) this).field_x, ((ja) this).field_w);
-        var1.field_z = ((ja) this).field_z;
-        var1.field_u = ((ja) this).field_u;
-        var1.field_r = ((ja) this).field_z - ((ja) this).field_x - ((ja) this).field_r;
-        var1.field_y = ((ja) this).field_y;
-        for (var2 = 0; var2 < ((ja) this).field_w; var2++) {
-            for (var3 = 0; var3 < ((ja) this).field_x; var3++) {
-                var1.field_B[var2 * ((ja) this).field_x + var3] = ((ja) this).field_B[var2 * ((ja) this).field_x + ((ja) this).field_x - 1 - var3];
+        ja var1 = new ja(this.field_x, this.field_w);
+        var1.field_z = this.field_z;
+        var1.field_u = this.field_u;
+        var1.field_r = this.field_z - this.field_x - this.field_r;
+        var1.field_y = this.field_y;
+        for (var2 = 0; var2 < this.field_w; var2++) {
+            for (var3 = 0; var3 < this.field_x; var3++) {
+                var1.field_B[var2 * this.field_x + var3] = this.field_B[var2 * this.field_x + this.field_x - 1 - var3];
             }
         }
         return var1;
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -39,7 +41,7 @@ class ja extends nq {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -48,7 +50,7 @@ class ja extends nq {
                   continue L1;
                 } else {
                   var13 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -61,13 +63,13 @@ class ja extends nq {
     }
 
     void f(int param0, int param1) {
-        param0 = param0 + (((ja) this).field_r >> 1);
-        param1 = param1 + (((ja) this).field_y >> 1);
+        param0 = param0 + (this.field_r >> 1);
+        param1 = param1 + (this.field_y >> 1);
         int var3 = param0 < oo.field_f ? oo.field_f - param0 << 1 : 0;
-        int var4 = param0 + (((ja) this).field_x >> 1) > oo.field_g ? oo.field_g - param0 << 1 : ((ja) this).field_x;
+        int var4 = param0 + (this.field_x >> 1) > oo.field_g ? oo.field_g - param0 << 1 : this.field_x;
         int var5 = param1 < oo.field_e ? oo.field_e - param1 << 1 : 0;
-        int var6 = param1 + (((ja) this).field_w >> 1) > oo.field_d ? oo.field_d - param1 << 1 : ((ja) this).field_w;
-        ja.a(((ja) this).field_B, var5 * ((ja) this).field_x + var3, (param1 + (var5 >> 1)) * oo.field_b + (param0 + (var3 >> 1)), (((ja) this).field_x << 1) - (var4 - var3) + (((ja) this).field_x & 1), oo.field_b - (var4 - var3 >> 1), ((ja) this).field_x, var4 - var3 >> 1, var6 - var5 >> 1);
+        int var6 = param1 + (this.field_w >> 1) > oo.field_d ? oo.field_d - param1 << 1 : this.field_w;
+        ja.a(this.field_B, var5 * this.field_x + var3, (param1 + (var5 >> 1)) * oo.field_b + (param0 + (var3 >> 1)), (this.field_x << 1) - (var4 - var3) + (this.field_x & 1), oo.field_b - (var4 - var3 >> 1), this.field_x, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void f(int param0, int param1, int param2) {
@@ -79,12 +81,12 @@ class ja extends nq {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ja) this).field_r;
-          param1 = param1 + ((ja) this).field_y;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_y;
           var4 = param0 + param1 * oo.field_b;
           var5 = 0;
-          var6 = ((ja) this).field_w;
-          var7 = ((ja) this).field_x;
+          var6 = this.field_w;
+          var7 = this.field_x;
           var8 = oo.field_b - var7;
           var9 = 0;
           if (param1 >= oo.field_e) {
@@ -135,7 +137,7 @@ class ja extends nq {
           return;
         } else {
           if (var6 > 0) {
-            ja.b(oo.field_i, ((ja) this).field_B, param2, var5, var4, var7, var6, var8, var9);
+            ja.b(oo.field_i, this.field_B, param2, var5, var4, var7, var6, var8, var9);
             return;
           } else {
             return;
@@ -144,6 +146,8 @@ class ja extends nq {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -157,7 +161,7 @@ class ja extends nq {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -169,7 +173,7 @@ class ja extends nq {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -187,8 +191,8 @@ class ja extends nq {
             oo.field_g = param0 + param2;
         }
         while (param0 < oo.field_g) {
-            ((ja) this).g(param0, param1);
-            param0 = param0 + ((ja) this).field_z;
+            this.g(param0, param1);
+            param0 = param0 + this.field_z;
         }
         oo.field_g = var4;
     }
@@ -196,49 +200,49 @@ class ja extends nq {
     final void j() {
         int var2 = 0;
         int var3 = 0;
-        if (((ja) this).field_x == ((ja) this).field_z) {
-            if (((ja) this).field_w == ((ja) this).field_u) {
+        if (this.field_x == this.field_z) {
+            if (this.field_w == this.field_u) {
                 return;
             }
         }
-        int[] var1 = new int[((ja) this).field_z * ((ja) this).field_u];
-        for (var2 = 0; var2 < ((ja) this).field_w; var2++) {
-            for (var3 = 0; var3 < ((ja) this).field_x; var3++) {
-                var1[(var2 + ((ja) this).field_y) * ((ja) this).field_z + (var3 + ((ja) this).field_r)] = ((ja) this).field_B[var2 * ((ja) this).field_x + var3];
+        int[] var1 = new int[this.field_z * this.field_u];
+        for (var2 = 0; var2 < this.field_w; var2++) {
+            for (var3 = 0; var3 < this.field_x; var3++) {
+                var1[(var2 + this.field_y) * this.field_z + (var3 + this.field_r)] = this.field_B[var2 * this.field_x + var3];
             }
         }
-        ((ja) this).field_B = var1;
-        ((ja) this).field_x = ((ja) this).field_z;
-        ((ja) this).field_w = ((ja) this).field_u;
-        ((ja) this).field_r = 0;
-        ((ja) this).field_y = 0;
+        this.field_B = var1;
+        this.field_x = this.field_z;
+        this.field_w = this.field_u;
+        this.field_r = 0;
+        this.field_y = 0;
     }
 
     final void d(int param0, int param1, int param2, int param3) {
-        int var5 = ((ja) this).field_z << 3;
-        int var6 = ((ja) this).field_u << 3;
+        int var5 = this.field_z << 3;
+        int var6 = this.field_u << 3;
         param0 = (param0 << 4) + (var5 & 15);
         param1 = (param1 << 4) + (var6 & 15);
-        ((ja) this).a(var5, var6, param0, param1, param2, param3);
+        this.a(var5, var6, param0, param1, param2, param3);
     }
 
     final boolean b(int param0, int param1, int param2, int param3) {
         int stackIn_11_0 = 0;
         int stackOut_10_0 = 0;
         int stackOut_9_0 = 0;
-        param2 = param2 - (param0 + ((ja) this).field_r);
+        param2 = param2 - (param0 + this.field_r);
         if (param2 < 0) {
           return false;
         } else {
-          if (param2 < ((ja) this).field_x) {
+          if (param2 < this.field_x) {
             L0: {
-              param3 = param3 - (param1 + ((ja) this).field_y);
+              param3 = param3 - (param1 + this.field_y);
               if (param3 < 0) {
                 break L0;
               } else {
-                if (param3 < ((ja) this).field_w) {
+                if (param3 < this.field_w) {
                   L1: {
-                    if (((ja) this).field_B[param3 * ((ja) this).field_x + param2] == 0) {
+                    if (this.field_B[param3 * this.field_x + param2] == 0) {
                       stackOut_10_0 = 0;
                       stackIn_11_0 = stackOut_10_0;
                       break L1;
@@ -267,27 +271,37 @@ class ja extends nq {
             oo.field_d = param1 + param2;
         }
         while (param1 < oo.field_d) {
-            ((ja) this).g(param0, param1);
-            param1 = param1 + ((ja) this).field_u;
+            this.g(param0, param1);
+            param1 = param1 + this.field_u;
         }
         oo.field_d = var4;
     }
 
     final ja c() {
         int var3 = 0;
-        ja var1 = new ja(((ja) this).field_x, ((ja) this).field_w);
-        var1.field_z = ((ja) this).field_z;
-        var1.field_u = ((ja) this).field_u;
-        var1.field_r = ((ja) this).field_r;
-        var1.field_y = ((ja) this).field_y;
-        int var2 = ((ja) this).field_B.length;
+        ja var1 = new ja(this.field_x, this.field_w);
+        var1.field_z = this.field_z;
+        var1.field_u = this.field_u;
+        var1.field_r = this.field_r;
+        var1.field_y = this.field_y;
+        int var2 = this.field_B.length;
         for (var3 = 0; var3 < var2; var3++) {
-            var1.field_B[var3] = ((ja) this).field_B[var3];
+            var1.field_B[var3] = this.field_B[var3];
         }
         return var1;
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -309,14 +323,14 @@ class ja extends nq {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     if (param1[incrementValue$218] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -326,52 +340,52 @@ class ja extends nq {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   if (param1[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   if (param1[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   if (param1[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 if (param1[incrementValue$226] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -387,13 +401,14 @@ class ja extends nq {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
             var14 = (param4 >> 16) * param11;
             for (var15 = -param7; var15 < 0; var15++) {
                 param2 = param1[(param3 >> 16) + var14];
                 if (param2 != 0) {
-                    int incrementValue$1 = param5;
+                    incrementValue$1 = param5;
                     param5++;
                     param0[incrementValue$1] = param2;
                 } else {
@@ -408,6 +423,8 @@ class ja extends nq {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -430,7 +447,7 @@ class ja extends nq {
                 var14++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -440,7 +457,7 @@ class ja extends nq {
                 } else {
                   var12 = (param2 & 16711935) * param9 & -16711936;
                   var13 = (param2 & 65280) * param9 & 16711680;
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var12 | var13) >>> 8) + param10;
                   var15++;
@@ -461,12 +478,12 @@ class ja extends nq {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ja) this).field_r;
-          param1 = param1 + ((ja) this).field_y;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_y;
           var4 = param0 + param1 * oo.field_b;
           var5 = 0;
-          var6 = ((ja) this).field_w;
-          var7 = ((ja) this).field_x;
+          var6 = this.field_w;
+          var7 = this.field_x;
           var8 = oo.field_b - var7;
           var9 = 0;
           if (param1 >= oo.field_e) {
@@ -519,10 +536,10 @@ class ja extends nq {
           if (var6 > 0) {
             L4: {
               if (param2 != 256) {
-                ja.a(0, 0, 0, oo.field_i, ((ja) this).field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+                ja.a(0, 0, 0, oo.field_i, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
                 break L4;
               } else {
-                ja.a(0, 0, 0, oo.field_i, ((ja) this).field_B, var5, 0, var4, 0, var7, var6, var8, var9);
+                ja.a(0, 0, 0, oo.field_i, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9);
                 break L4;
               }
             }
@@ -542,12 +559,12 @@ class ja extends nq {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ja) this).field_r;
-          param1 = param1 + ((ja) this).field_y;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_y;
           var4 = param0 + param1 * oo.field_b;
           var5 = 0;
-          var6 = ((ja) this).field_w;
-          var7 = ((ja) this).field_x;
+          var6 = this.field_w;
+          var7 = this.field_x;
           var8 = oo.field_b - var7;
           var9 = 0;
           if (param1 >= oo.field_e) {
@@ -598,7 +615,7 @@ class ja extends nq {
           return;
         } else {
           if (var6 > 0) {
-            ja.c(oo.field_i, ((ja) this).field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+            ja.c(oo.field_i, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -615,12 +632,12 @@ class ja extends nq {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ja) this).field_r;
-          param1 = param1 + ((ja) this).field_y;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_y;
           var3 = param0 + param1 * oo.field_b;
           var4 = 0;
-          var5 = ((ja) this).field_w;
-          var6 = ((ja) this).field_x;
+          var5 = this.field_w;
+          var6 = this.field_x;
           var7 = oo.field_b - var6;
           var8 = 0;
           if (param1 >= oo.field_e) {
@@ -671,7 +688,7 @@ class ja extends nq {
           return;
         } else {
           if (var5 > 0) {
-            ja.a(0, oo.field_i, ((ja) this).field_B, 0, var4, var3, var6, var5, var7, var8);
+            ja.a(0, oo.field_i, this.field_B, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -714,19 +731,19 @@ class ja extends nq {
         int var40 = 0;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((ja) this).field_r << 4);
-            param1 = param1 - (((ja) this).field_y << 4);
+            param0 = param0 - (this.field_r << 4);
+            param1 = param1 - (this.field_y << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((ja) this).field_x << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((ja) this).field_x << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((ja) this).field_w << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((ja) this).field_w << 4) - param1) * var10;
-            var17 = ((((ja) this).field_x << 4) - param0) * var10 + ((((ja) this).field_w << 4) - param1) * var9;
-            var18 = -((((ja) this).field_x << 4) - param0) * var9 + ((((ja) this).field_w << 4) - param1) * var10;
+            var13 = ((this.field_x << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_x << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_w << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_w << 4) - param1) * var10;
+            var17 = ((this.field_x << 4) - param0) * var10 + ((this.field_w << 4) - param1) * var9;
+            var18 = -((this.field_x << 4) - param0) * var9 + ((this.field_w << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -935,11 +952,11 @@ class ja extends nq {
                                     break L20;
                                   } else {
                                     var33 = var37 >> 12;
-                                    if (var37 >> 12 >= ((ja) this).field_x) {
+                                    if (var37 >> 12 >= this.field_x) {
                                       break L20;
                                     } else {
                                       var34 = var38 >> 12;
-                                      if (var38 >> 12 < ((ja) this).field_w) {
+                                      if (var38 >> 12 < this.field_w) {
                                         this.b(var23, var33, var34, var37, var38);
                                         var39++;
                                         var37 = var37 + var28;
@@ -1001,7 +1018,7 @@ class ja extends nq {
                           } else {
                             L24: {
                               var40 = 0;
-                              var35 = var38 - (((ja) this).field_w << 12);
+                              var35 = var38 - (this.field_w << 12);
                               if (var35 >= 0) {
                                 if (var27 != 0) {
                                   var35 = (var27 - var35) / var27;
@@ -1032,7 +1049,7 @@ class ja extends nq {
                                       break L26;
                                     } else {
                                       var33 = var37 >> 12;
-                                      if (var37 >> 12 < ((ja) this).field_x) {
+                                      if (var37 >> 12 < this.field_x) {
                                         var34 = var38 >> 12;
                                         this.b(var23, var33, var34, var37, var38);
                                         var39++;
@@ -1072,7 +1089,7 @@ class ja extends nq {
                           var38 = var32 + (var29 * var27 >> 4);
                           var39 = var20;
                           var40 = 0;
-                          var35 = var37 - (((ja) this).field_x << 12);
+                          var35 = var37 - (this.field_x << 12);
                           if (var35 >= 0) {
                             if (var28 != 0) {
                               var35 = (var28 - var35) / var28;
@@ -1128,7 +1145,7 @@ class ja extends nq {
                                       break L32;
                                     } else {
                                       var34 = var38 >> 12;
-                                      if (var38 >> 12 < ((ja) this).field_w) {
+                                      if (var38 >> 12 < this.field_w) {
                                         var33 = var37 >> 12;
                                         this.b(var23, var33, var34, var37, var38);
                                         var39++;
@@ -1166,7 +1183,7 @@ class ja extends nq {
                           var38 = var32 + (var29 * var27 >> 4);
                           var39 = var20;
                           var40 = 0;
-                          var35 = var37 - (((ja) this).field_x << 12);
+                          var35 = var37 - (this.field_x << 12);
                           if (var35 >= 0) {
                             if (var28 != 0) {
                               var35 = (var28 - var35) / var28;
@@ -1191,7 +1208,7 @@ class ja extends nq {
                           } else {
                             L36: {
                               var40 = 0;
-                              var35 = var38 - (((ja) this).field_w << 12);
+                              var35 = var38 - (this.field_w << 12);
                               if (var35 >= 0) {
                                 if (var27 != 0) {
                                   var35 = (var27 - var35) / var27;
@@ -1274,20 +1291,20 @@ class ja extends nq {
         int[] var7 = null;
         int var8 = 0;
         int var9 = 0;
-        var1 = ((ja) this).field_w - 1;
+        var1 = this.field_w - 1;
         L0: while (true) {
           L1: {
             if (var1 < 0) {
               break L1;
             } else {
-              var2 = var1 * ((ja) this).field_x;
+              var2 = var1 * this.field_x;
               var3 = 0;
               L2: while (true) {
-                if (var3 >= ((ja) this).field_x) {
+                if (var3 >= this.field_x) {
                   var1--;
                   continue L0;
                 } else {
-                  if (((ja) this).field_B[var2 + var3] == 0) {
+                  if (this.field_B[var2 + var3] == 0) {
                     var3++;
                     continue L2;
                   } else {
@@ -1303,14 +1320,14 @@ class ja extends nq {
               if (var2 >= var1) {
                 break L4;
               } else {
-                var3 = var2 * ((ja) this).field_x;
+                var3 = var2 * this.field_x;
                 var4 = 0;
                 L5: while (true) {
-                  if (var4 >= ((ja) this).field_x) {
+                  if (var4 >= this.field_x) {
                     var2++;
                     continue L3;
                   } else {
-                    if (((ja) this).field_B[var3 + var4] == 0) {
+                    if (this.field_B[var3 + var4] == 0) {
                       var4++;
                       continue L5;
                     } else {
@@ -1320,7 +1337,7 @@ class ja extends nq {
                 }
               }
             }
-            var3 = ((ja) this).field_x - 1;
+            var3 = this.field_x - 1;
             L6: while (true) {
               L7: {
                 if (var3 < 0) {
@@ -1332,7 +1349,7 @@ class ja extends nq {
                       var3--;
                       continue L6;
                     } else {
-                      if (((ja) this).field_B[var4 * ((ja) this).field_x + var3] == 0) {
+                      if (this.field_B[var4 * this.field_x + var3] == 0) {
                         var4++;
                         continue L8;
                       } else {
@@ -1354,7 +1371,7 @@ class ja extends nq {
                         var4++;
                         continue L9;
                       } else {
-                        if (((ja) this).field_B[var5 * ((ja) this).field_x + var4] == 0) {
+                        if (this.field_B[var5 * this.field_x + var4] == 0) {
                           var5++;
                           continue L11;
                         } else {
@@ -1368,13 +1385,13 @@ class ja extends nq {
                   if (var4 != 0) {
                     break L12;
                   } else {
-                    if (var3 != ((ja) this).field_x - 1) {
+                    if (var3 != this.field_x - 1) {
                       break L12;
                     } else {
                       if (var2 != 0) {
                         break L12;
                       } else {
-                        if (var1 != ((ja) this).field_w - 1) {
+                        if (var1 != this.field_w - 1) {
                           break L12;
                         } else {
                           return;
@@ -1389,11 +1406,11 @@ class ja extends nq {
                 var8 = 0;
                 L13: while (true) {
                   if (var8 >= var6) {
-                    ((ja) this).field_B = var7;
-                    ((ja) this).field_x = var5;
-                    ((ja) this).field_w = var6;
-                    ((ja) this).field_r = ((ja) this).field_r + var4;
-                    ((ja) this).field_y = ((ja) this).field_y + var2;
+                    this.field_B = var7;
+                    this.field_x = var5;
+                    this.field_w = var6;
+                    this.field_r = this.field_r + var4;
+                    this.field_y = this.field_y + var2;
                     return;
                   } else {
                     var9 = 0;
@@ -1402,7 +1419,7 @@ class ja extends nq {
                         var8++;
                         continue L13;
                       } else {
-                        var7[var8 * var5 + var9] = ((ja) this).field_B[(var8 + var2) * ((ja) this).field_x + (var9 + var4)];
+                        var7[var8 * var5 + var9] = this.field_B[(var8 + var2) * this.field_x + (var9 + var4)];
                         var9++;
                         continue L14;
                       }
@@ -1416,27 +1433,28 @@ class ja extends nq {
     }
 
     final void b() {
-        int var3 = 0;
         int var4 = 0;
-        int[] var1 = new int[((ja) this).field_x * ((ja) this).field_w];
+        int incrementValue$0 = 0;
+        int var3 = 0;
+        int[] var1 = new int[this.field_x * this.field_w];
         int var2 = 0;
-        for (var3 = 0; var3 < ((ja) this).field_x; var3++) {
-            for (var4 = ((ja) this).field_w - 1; var4 >= 0; var4--) {
-                int incrementValue$0 = var2;
+        for (var3 = 0; var3 < this.field_x; var3++) {
+            for (var4 = this.field_w - 1; var4 >= 0; var4--) {
+                incrementValue$0 = var2;
                 var2++;
-                var1[incrementValue$0] = ((ja) this).field_B[var3 + var4 * ((ja) this).field_x];
+                var1[incrementValue$0] = this.field_B[var3 + var4 * this.field_x];
             }
         }
-        ((ja) this).field_B = var1;
-        var3 = ((ja) this).field_y;
-        ((ja) this).field_y = ((ja) this).field_r;
-        ((ja) this).field_r = ((ja) this).field_u - ((ja) this).field_w - var3;
-        var3 = ((ja) this).field_w;
-        ((ja) this).field_w = ((ja) this).field_x;
-        ((ja) this).field_x = var3;
-        var3 = ((ja) this).field_u;
-        ((ja) this).field_u = ((ja) this).field_z;
-        ((ja) this).field_z = var3;
+        this.field_B = var1;
+        var3 = this.field_y;
+        this.field_y = this.field_r;
+        this.field_r = this.field_u - this.field_w - var3;
+        var3 = this.field_w;
+        this.field_w = this.field_x;
+        this.field_x = var3;
+        var3 = this.field_u;
+        this.field_u = this.field_z;
+        this.field_z = var3;
     }
 
     final void e(int param0, int param1, int param2, int param3) {
@@ -1449,12 +1467,12 @@ class ja extends nq {
         int var11 = 0;
         if (param2 != 256) {
           L0: {
-            param0 = param0 + ((ja) this).field_r;
-            param1 = param1 + ((ja) this).field_y;
+            param0 = param0 + this.field_r;
+            param1 = param1 + this.field_y;
             var5 = param0 + param1 * oo.field_b;
             var6 = 0;
-            var7 = ((ja) this).field_w;
-            var8 = ((ja) this).field_x;
+            var7 = this.field_w;
+            var8 = this.field_x;
             var9 = oo.field_b - var8;
             var10 = 0;
             if (param1 >= oo.field_e) {
@@ -1505,19 +1523,29 @@ class ja extends nq {
             return;
           } else {
             if (var7 > 0) {
-              ja.a(oo.field_i, ((ja) this).field_B, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+              ja.a(oo.field_i, this.field_B, 0, var6, var5, var8, var7, var9, var10, param2, param3);
               return;
             } else {
               return;
             }
           }
         } else {
-          ((ja) this).g(param0, param1);
+          this.g(param0, param1);
           return;
         }
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -1539,7 +1567,7 @@ class ja extends nq {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3--;
                     param2 = param1[incrementValue$218];
                     if (param2 == 0) {
@@ -1547,7 +1575,7 @@ class ja extends nq {
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -1557,48 +1585,48 @@ class ja extends nq {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3--;
                   param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3--;
                   param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3--;
                   param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3--;
                 param2 = param1[incrementValue$226];
                 if (param2 == 0) {
@@ -1606,7 +1634,7 @@ class ja extends nq {
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -1619,27 +1647,28 @@ class ja extends nq {
     }
 
     final void g() {
-        int var3 = 0;
         int var4 = 0;
-        int[] var1 = new int[((ja) this).field_x * ((ja) this).field_w];
+        int incrementValue$0 = 0;
+        int var3 = 0;
+        int[] var1 = new int[this.field_x * this.field_w];
         int var2 = 0;
-        for (var3 = ((ja) this).field_x - 1; var3 >= 0; var3--) {
-            for (var4 = 0; var4 < ((ja) this).field_w; var4++) {
-                int incrementValue$0 = var2;
+        for (var3 = this.field_x - 1; var3 >= 0; var3--) {
+            for (var4 = 0; var4 < this.field_w; var4++) {
+                incrementValue$0 = var2;
                 var2++;
-                var1[incrementValue$0] = ((ja) this).field_B[var3 + var4 * ((ja) this).field_x];
+                var1[incrementValue$0] = this.field_B[var3 + var4 * this.field_x];
             }
         }
-        ((ja) this).field_B = var1;
-        var3 = ((ja) this).field_r;
-        ((ja) this).field_r = ((ja) this).field_y;
-        ((ja) this).field_y = ((ja) this).field_z - ((ja) this).field_x - var3;
-        var3 = ((ja) this).field_w;
-        ((ja) this).field_w = ((ja) this).field_x;
-        ((ja) this).field_x = var3;
-        var3 = ((ja) this).field_u;
-        ((ja) this).field_u = ((ja) this).field_z;
-        ((ja) this).field_z = var3;
+        this.field_B = var1;
+        var3 = this.field_r;
+        this.field_r = this.field_y;
+        this.field_y = this.field_z - this.field_x - var3;
+        var3 = this.field_w;
+        this.field_w = this.field_x;
+        this.field_x = var3;
+        var3 = this.field_u;
+        this.field_u = this.field_z;
+        this.field_z = var3;
     }
 
     void i(int param0, int param1, int param2) {
@@ -1651,12 +1680,12 @@ class ja extends nq {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ja) this).field_r;
-          param1 = param1 + ((ja) this).field_y;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_y;
           var4 = param0 + param1 * oo.field_b;
           var5 = 0;
-          var6 = ((ja) this).field_w;
-          var7 = ((ja) this).field_x;
+          var6 = this.field_w;
+          var7 = this.field_x;
           var8 = oo.field_b - var7;
           var9 = 0;
           if (param1 >= oo.field_e) {
@@ -1707,7 +1736,7 @@ class ja extends nq {
           return;
         } else {
           if (var6 > 0) {
-            ja.b(oo.field_i, ((ja) this).field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+            ja.b(oo.field_i, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -1719,7 +1748,7 @@ class ja extends nq {
         int var1 = 0;
         int var2 = 0;
         var1 = -1;
-        var2 = ((ja) this).field_x * ((ja) this).field_w - 4;
+        var2 = this.field_x * this.field_w - 4;
         L0: while (true) {
           if (var1 >= var2) {
             var2 += 3;
@@ -1728,10 +1757,10 @@ class ja extends nq {
                 return;
               } else {
                 var1++;
-                if (((ja) this).field_B[var1] != 0) {
+                if (this.field_B[var1] != 0) {
                   continue L1;
                 } else {
-                  ((ja) this).field_B[var1] = 1;
+                  this.field_B[var1] = 1;
                   continue L1;
                 }
               }
@@ -1739,36 +1768,36 @@ class ja extends nq {
           } else {
             L2: {
               var1++;
-              if (((ja) this).field_B[var1] != 0) {
+              if (this.field_B[var1] != 0) {
                 break L2;
               } else {
-                ((ja) this).field_B[var1] = 1;
+                this.field_B[var1] = 1;
                 break L2;
               }
             }
             L3: {
               var1++;
-              if (((ja) this).field_B[var1] != 0) {
+              if (this.field_B[var1] != 0) {
                 break L3;
               } else {
-                ((ja) this).field_B[var1] = 1;
+                this.field_B[var1] = 1;
                 break L3;
               }
             }
             L4: {
               var1++;
-              if (((ja) this).field_B[var1] != 0) {
+              if (this.field_B[var1] != 0) {
                 break L4;
               } else {
-                ((ja) this).field_B[var1] = 1;
+                this.field_B[var1] = 1;
                 break L4;
               }
             }
             var1++;
-            if (((ja) this).field_B[var1] != 0) {
+            if (this.field_B[var1] != 0) {
               continue L0;
             } else {
-              ((ja) this).field_B[var1] = 1;
+              this.field_B[var1] = 1;
               continue L0;
             }
           }
@@ -1784,12 +1813,12 @@ class ja extends nq {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + (((ja) this).field_z - ((ja) this).field_x - ((ja) this).field_r);
-          param1 = param1 + ((ja) this).field_y;
+          param0 = param0 + (this.field_z - this.field_x - this.field_r);
+          param1 = param1 + this.field_y;
           var3 = param0 + param1 * oo.field_b;
-          var4 = ((ja) this).field_x - 1;
-          var5 = ((ja) this).field_w;
-          var6 = ((ja) this).field_x;
+          var4 = this.field_x - 1;
+          var5 = this.field_w;
+          var6 = this.field_x;
           var7 = oo.field_b - var6;
           var8 = var6 + var6;
           if (param1 >= oo.field_e) {
@@ -1840,7 +1869,7 @@ class ja extends nq {
           return;
         } else {
           if (var5 > 0) {
-            ja.a(oo.field_i, ((ja) this).field_B, 0, var4, var3, var6, var5, var7, var8);
+            ja.a(oo.field_i, this.field_B, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -1857,12 +1886,12 @@ class ja extends nq {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ja) this).field_r;
-          param1 = param1 + ((ja) this).field_y;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_y;
           var4 = param0 + param1 * oo.field_b;
           var5 = 0;
-          var6 = ((ja) this).field_w;
-          var7 = ((ja) this).field_x;
+          var6 = this.field_w;
+          var7 = this.field_x;
           var8 = oo.field_b - var7;
           var9 = 0;
           if (param1 >= oo.field_e) {
@@ -1913,7 +1942,7 @@ class ja extends nq {
           return;
         } else {
           if (var6 > 0) {
-            ja.b(oo.field_i, ((ja) this).field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+            ja.b(oo.field_i, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -1927,11 +1956,11 @@ class ja extends nq {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int[] var1 = ((ja) this).field_B;
-        for (var2 = (((ja) this).field_w >> 1) - 1; var2 >= 0; var2--) {
-            var3 = var2 * ((ja) this).field_x;
-            var4 = (((ja) this).field_w - var2 - 1) * ((ja) this).field_x;
-            for (var5 = -((ja) this).field_x; var5 < 0; var5++) {
+        int[] var1 = this.field_B;
+        for (var2 = (this.field_w >> 1) - 1; var2 >= 0; var2--) {
+            var3 = var2 * this.field_x;
+            var4 = (this.field_w - var2 - 1) * this.field_x;
+            for (var5 = -this.field_x; var5 < 0; var5++) {
                 var6 = var1[var3];
                 var1[var3] = var1[var4];
                 var1[var4] = var6;
@@ -1939,31 +1968,32 @@ class ja extends nq {
                 var4++;
             }
         }
-        ((ja) this).field_y = ((ja) this).field_u - ((ja) this).field_w - ((ja) this).field_y;
+        this.field_y = this.field_u - this.field_w - this.field_y;
     }
 
     final void g(int param0) {
+        int incrementValue$2 = 0;
         int[] var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        var2 = new int[((ja) this).field_x * ((ja) this).field_w];
+        var2 = new int[this.field_x * this.field_w];
         var3 = 0;
         var4 = 0;
         L0: while (true) {
-          if (var4 >= ((ja) this).field_w) {
-            ((ja) this).field_B = var2;
+          if (var4 >= this.field_w) {
+            this.field_B = var2;
             return;
           } else {
             var5 = 0;
             L1: while (true) {
-              if (var5 >= ((ja) this).field_x) {
+              if (var5 >= this.field_x) {
                 var4++;
                 continue L0;
               } else {
                 L2: {
-                  var6 = ((ja) this).field_B[var3];
+                  var6 = this.field_B[var3];
                   if (var6 != 0) {
                     break L2;
                   } else {
@@ -1971,7 +2001,7 @@ class ja extends nq {
                       if (var5 <= 0) {
                         break L3;
                       } else {
-                        if (((ja) this).field_B[var3 - 1] == 0) {
+                        if (this.field_B[var3 - 1] == 0) {
                           break L3;
                         } else {
                           var6 = param0;
@@ -1983,7 +2013,7 @@ class ja extends nq {
                       if (var4 <= 0) {
                         break L4;
                       } else {
-                        if (((ja) this).field_B[var3 - ((ja) this).field_x] == 0) {
+                        if (this.field_B[var3 - this.field_x] == 0) {
                           break L4;
                         } else {
                           var6 = param0;
@@ -1992,10 +2022,10 @@ class ja extends nq {
                       }
                     }
                     L5: {
-                      if (var5 >= ((ja) this).field_x - 1) {
+                      if (var5 >= this.field_x - 1) {
                         break L5;
                       } else {
-                        if (((ja) this).field_B[var3 + 1] == 0) {
+                        if (this.field_B[var3 + 1] == 0) {
                           break L5;
                         } else {
                           var6 = param0;
@@ -2003,10 +2033,10 @@ class ja extends nq {
                         }
                       }
                     }
-                    if (var4 >= ((ja) this).field_w - 1) {
+                    if (var4 >= this.field_w - 1) {
                       break L2;
                     } else {
-                      if (((ja) this).field_B[var3 + ((ja) this).field_x] == 0) {
+                      if (this.field_B[var3 + this.field_x] == 0) {
                         break L2;
                       } else {
                         var6 = param0;
@@ -2015,7 +2045,7 @@ class ja extends nq {
                     }
                   }
                 }
-                int incrementValue$2 = var3;
+                incrementValue$2 = var3;
                 var3++;
                 var2[incrementValue$2] = var6;
                 var5++;
@@ -2043,30 +2073,30 @@ class ja extends nq {
         } else {
           if (param3 > 0) {
             L0: {
-              var5 = ((ja) this).field_x;
-              var6 = ((ja) this).field_w;
+              var5 = this.field_x;
+              var6 = this.field_w;
               var7 = 0;
               var8 = 0;
-              var9 = ((ja) this).field_z;
-              var10 = ((ja) this).field_u;
+              var9 = this.field_z;
+              var10 = this.field_u;
               var11 = (var9 << 16) / param2;
               var12 = (var10 << 16) / param3;
-              if (((ja) this).field_r <= 0) {
+              if (this.field_r <= 0) {
                 break L0;
               } else {
-                var13 = ((((ja) this).field_r << 16) + var11 - 1) / var11;
+                var13 = ((this.field_r << 16) + var11 - 1) / var11;
                 param0 = param0 + var13;
-                var7 = var7 + (var13 * var11 - (((ja) this).field_r << 16));
+                var7 = var7 + (var13 * var11 - (this.field_r << 16));
                 break L0;
               }
             }
             L1: {
-              if (((ja) this).field_y <= 0) {
+              if (this.field_y <= 0) {
                 break L1;
               } else {
-                var13 = ((((ja) this).field_y << 16) + var12 - 1) / var12;
+                var13 = ((this.field_y << 16) + var12 - 1) / var12;
                 param1 = param1 + var13;
-                var8 = var8 + (var13 * var12 - (((ja) this).field_y << 16));
+                var8 = var8 + (var13 * var12 - (this.field_y << 16));
                 break L1;
               }
             }
@@ -2129,7 +2159,7 @@ class ja extends nq {
                 break L7;
               }
             }
-            ja.a(oo.field_i, ((ja) this).field_B, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+            ja.a(oo.field_i, this.field_B, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
             return;
           } else {
             return;
@@ -2138,6 +2168,10 @@ class ja extends nq {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -2167,7 +2201,7 @@ class ja extends nq {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
                 param2 = param1[incrementValue$4];
                 if (param2 == 0) {
@@ -2186,13 +2220,13 @@ class ja extends nq {
                         break L2;
                       } else {
                         if (var17 > 128) {
-                          int incrementValue$5 = param4;
+                          incrementValue$5 = param4;
                           param4++;
                           param0[incrementValue$5] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
                           var16++;
                           continue L1;
                         } else {
-                          int incrementValue$6 = param4;
+                          incrementValue$6 = param4;
                           param4++;
                           param0[incrementValue$6] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
                           var16++;
@@ -2201,7 +2235,7 @@ class ja extends nq {
                       }
                     }
                   }
-                  int incrementValue$7 = param4;
+                  incrementValue$7 = param4;
                   param4++;
                   param0[incrementValue$7] = param2;
                   var16++;
@@ -2223,12 +2257,12 @@ class ja extends nq {
         int var10 = 0;
         if (param2 != 256) {
           L0: {
-            param0 = param0 + ((ja) this).field_r;
-            param1 = param1 + ((ja) this).field_y;
+            param0 = param0 + this.field_r;
+            param1 = param1 + this.field_y;
             var4 = param0 + param1 * oo.field_b;
             var5 = 0;
-            var6 = ((ja) this).field_w;
-            var7 = ((ja) this).field_x;
+            var6 = this.field_w;
+            var7 = this.field_x;
             var8 = oo.field_b - var7;
             var9 = 0;
             if (param1 >= oo.field_e) {
@@ -2279,14 +2313,14 @@ class ja extends nq {
             return;
           } else {
             if (var6 > 0) {
-              ja.a(oo.field_i, ((ja) this).field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+              ja.a(oo.field_i, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               return;
             }
           }
         } else {
-          ((ja) this).g(param0, param1);
+          this.g(param0, param1);
           return;
         }
     }
@@ -2296,10 +2330,10 @@ class ja extends nq {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int[] var1 = ((ja) this).field_B;
-        for (var2 = ((ja) this).field_w - 1; var2 >= 0; var2--) {
-            var3 = var2 * ((ja) this).field_x;
-            var4 = (var2 + 1) * ((ja) this).field_x;
+        int[] var1 = this.field_B;
+        for (var2 = this.field_w - 1; var2 >= 0; var2--) {
+            var3 = var2 * this.field_x;
+            var4 = (var2 + 1) * this.field_x;
             while (var3 < var4) {
                 var4--;
                 var5 = var1[var3];
@@ -2308,7 +2342,7 @@ class ja extends nq {
                 var3++;
             }
         }
-        ((ja) this).field_r = ((ja) this).field_z - ((ja) this).field_x - ((ja) this).field_r;
+        this.field_r = this.field_z - this.field_x - this.field_r;
     }
 
     void d(int param0, int param1) {
@@ -2320,12 +2354,12 @@ class ja extends nq {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + (((ja) this).field_z - ((ja) this).field_x - ((ja) this).field_r);
-          param1 = param1 + (((ja) this).field_u - ((ja) this).field_w - ((ja) this).field_y);
-          var3 = param0 + (param1 + ((ja) this).field_w - 1) * oo.field_b;
-          var4 = ((ja) this).field_x - 1;
-          var5 = ((ja) this).field_w;
-          var6 = ((ja) this).field_x;
+          param0 = param0 + (this.field_z - this.field_x - this.field_r);
+          param1 = param1 + (this.field_u - this.field_w - this.field_y);
+          var3 = param0 + (param1 + this.field_w - 1) * oo.field_b;
+          var4 = this.field_x - 1;
+          var5 = this.field_w;
+          var6 = this.field_x;
           var7 = -oo.field_b - var6;
           var8 = var6 + var6;
           if (param1 >= oo.field_e) {
@@ -2376,7 +2410,7 @@ class ja extends nq {
           return;
         } else {
           if (var5 > 0) {
-            ja.a(oo.field_i, ((ja) this).field_B, 0, var4, var3, var6, var5, var7, var8);
+            ja.a(oo.field_i, this.field_B, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -2385,10 +2419,20 @@ class ja extends nq {
     }
 
     final void a() {
-        oo.a(((ja) this).field_B, ((ja) this).field_x, ((ja) this).field_w);
+        oo.a(this.field_B, this.field_x, this.field_w);
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -2410,7 +2454,7 @@ class ja extends nq {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     param2 = param1[incrementValue$218];
                     if (param2 == 0) {
@@ -2418,7 +2462,7 @@ class ja extends nq {
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -2428,48 +2472,48 @@ class ja extends nq {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 param2 = param1[incrementValue$226];
                 if (param2 == 0) {
@@ -2477,7 +2521,7 @@ class ja extends nq {
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -2490,6 +2534,7 @@ class ja extends nq {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int incrementValue$1 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -2562,7 +2607,7 @@ class ja extends nq {
                     break L5;
                   }
                 }
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 oo.field_i[incrementValue$1] = (var13 & 66847740 | var14 & 261120) >> 2;
                 var9++;
@@ -2577,35 +2622,45 @@ class ja extends nq {
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
             var9 = param3 + param4 - 3;
             while (param3 < var9) {
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 param0[incrementValue$0] = param1[incrementValue$1];
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
-                int incrementValue$3 = param2;
+                incrementValue$3 = param2;
                 param2++;
                 param0[incrementValue$2] = param1[incrementValue$3];
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
-                int incrementValue$5 = param2;
+                incrementValue$5 = param2;
                 param2++;
                 param0[incrementValue$4] = param1[incrementValue$5];
-                int incrementValue$6 = param3;
+                incrementValue$6 = param3;
                 param3++;
-                int incrementValue$7 = param2;
+                incrementValue$7 = param2;
                 param2++;
                 param0[incrementValue$6] = param1[incrementValue$7];
             }
             var9 += 3;
             while (param3 < var9) {
-                int incrementValue$8 = param3;
+                incrementValue$8 = param3;
                 param3++;
-                int incrementValue$9 = param2;
+                incrementValue$9 = param2;
                 param2++;
                 param0[incrementValue$8] = param1[incrementValue$9];
             }
@@ -2622,10 +2677,10 @@ class ja extends nq {
         int var8 = 0;
         var4 = 0;
         L0: while (true) {
-          if (var4 >= ((ja) this).field_B.length) {
+          if (var4 >= this.field_B.length) {
             return;
           } else {
-            var5 = ((ja) this).field_B[var4];
+            var5 = this.field_B[var4];
             if (var5 != 0) {
               L1: {
                 var6 = var5 >> 16 & 255;
@@ -2672,7 +2727,7 @@ class ja extends nq {
                   break L3;
                 }
               }
-              ((ja) this).field_B[var4] = (var6 << 16) + (var7 << 8) + var8;
+              this.field_B[var4] = (var6 << 16) + (var7 << 8) + var8;
               var4++;
               continue L0;
             } else {
@@ -2684,6 +2739,10 @@ class ja extends nq {
     }
 
     void a(int param0, int param1, int param2, int param3) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -2697,12 +2756,12 @@ class ja extends nq {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        if (((ja) this).field_w != 0) {
+        if (this.field_w != 0) {
           L0: {
-            param0 = param0 + ((ja) this).field_r;
-            param1 = param1 + ((ja) this).field_y;
-            var5 = ((ja) this).field_w;
-            var6 = ((ja) this).field_x;
+            param0 = param0 + this.field_r;
+            param1 = param1 + this.field_y;
+            var5 = this.field_w;
+            var6 = this.field_x;
             var7 = param2 << 8;
             var8 = (param3 - param2 << 8) / var5;
             var9 = 0;
@@ -2721,7 +2780,7 @@ class ja extends nq {
             } else {
               var7 = var7 + (oo.field_e - param1) * var8;
               var5 = var5 - (oo.field_e - param1);
-              var9 = var9 + (oo.field_e - param1) * ((ja) this).field_x;
+              var9 = var9 + (oo.field_e - param1) * this.field_x;
               param1 = oo.field_e;
               break L1;
             }
@@ -2743,7 +2802,7 @@ class ja extends nq {
             }
           }
           var10 = oo.field_b - var6;
-          var11 = ((ja) this).field_x - var6;
+          var11 = this.field_x - var6;
           var12 = param0 + param1 * oo.field_b;
           param1 = -var5;
           L4: while (true) {
@@ -2760,9 +2819,9 @@ class ja extends nq {
                       if (param0 >= 0) {
                         break L5;
                       } else {
-                        int incrementValue$4 = var9;
+                        incrementValue$4 = var9;
                         var9++;
-                        var15 = ((ja) this).field_B[incrementValue$4];
+                        var15 = this.field_B[incrementValue$4];
                         if (var15 == 0) {
                           var12++;
                           param0++;
@@ -2770,7 +2829,7 @@ class ja extends nq {
                         } else {
                           var16 = oo.field_i[var12];
                           var17 = (var16 & 16711935) * var14 + (var15 & 16711935) * var13 >> 8 & 16711935;
-                          int incrementValue$5 = var12;
+                          incrementValue$5 = var12;
                           var12++;
                           oo.field_i[incrementValue$5] = var17 + ((var16 & 65280) * var14 + (var15 & 65280) * var13 >> 8 & 65280);
                           param0++;
@@ -2784,15 +2843,15 @@ class ja extends nq {
                       if (param0 >= 0) {
                         break L5;
                       } else {
-                        int incrementValue$6 = var9;
+                        incrementValue$6 = var9;
                         var9++;
-                        var15 = ((ja) this).field_B[incrementValue$6];
+                        var15 = this.field_B[incrementValue$6];
                         if (var15 == 0) {
                           var12++;
                           param0++;
                           continue L7;
                         } else {
-                          int incrementValue$7 = var12;
+                          incrementValue$7 = var12;
                           var12++;
                           oo.field_i[incrementValue$7] = var15;
                           param0++;
@@ -2827,12 +2886,12 @@ class ja extends nq {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ja) this).field_r;
-          param1 = param1 + (((ja) this).field_u - ((ja) this).field_w - ((ja) this).field_y);
-          var3 = param0 + (param1 + ((ja) this).field_w - 1) * oo.field_b;
+          param0 = param0 + this.field_r;
+          param1 = param1 + (this.field_u - this.field_w - this.field_y);
+          var3 = param0 + (param1 + this.field_w - 1) * oo.field_b;
           var4 = 0;
-          var5 = ((ja) this).field_w;
-          var6 = ((ja) this).field_x;
+          var5 = this.field_w;
+          var6 = this.field_x;
           var7 = -oo.field_b - var6;
           var8 = 0;
           if (param1 >= oo.field_e) {
@@ -2883,7 +2942,7 @@ class ja extends nq {
           return;
         } else {
           if (var5 > 0) {
-            ja.c(oo.field_i, ((ja) this).field_B, 0, var4, var3, var6, var5, var7, var8);
+            ja.c(oo.field_i, this.field_B, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -2892,16 +2951,18 @@ class ja extends nq {
     }
 
     ja(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        ((ja) this).field_z = param0;
-        ((ja) this).field_u = param1;
-        ((ja) this).field_r = param2;
-        ((ja) this).field_y = param3;
-        ((ja) this).field_x = param4;
-        ((ja) this).field_w = param5;
-        ((ja) this).field_B = param6;
+        this.field_z = param0;
+        this.field_u = param1;
+        this.field_r = param2;
+        this.field_y = param3;
+        this.field_x = param4;
+        this.field_w = param5;
+        this.field_B = param6;
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -2919,7 +2980,7 @@ class ja extends nq {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -2929,7 +2990,7 @@ class ja extends nq {
                 } else {
                   var12 = (param2 & 16711935) * param9 & -16711936;
                   var13 = (param2 & 65280) * param9 & 16711680;
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (var12 | var13) >>> 8;
                   var11++;
@@ -2950,12 +3011,12 @@ class ja extends nq {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ja) this).field_r;
-          param1 = param1 + ((ja) this).field_y;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_y;
           var3 = param0 + param1 * oo.field_b;
           var4 = 0;
-          var5 = ((ja) this).field_w;
-          var6 = ((ja) this).field_x;
+          var5 = this.field_w;
+          var6 = this.field_x;
           var7 = oo.field_b - var6;
           var8 = 0;
           if (param1 >= oo.field_e) {
@@ -3006,7 +3067,7 @@ class ja extends nq {
           return;
         } else {
           if (var5 > 0) {
-            ja.a(oo.field_i, ((ja) this).field_B, var4, var3, var6, var5, var7, var8);
+            ja.a(oo.field_i, this.field_B, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -3031,30 +3092,30 @@ class ja extends nq {
         } else {
           if (param3 > 0) {
             L0: {
-              var6 = ((ja) this).field_x;
-              var7 = ((ja) this).field_w;
+              var6 = this.field_x;
+              var7 = this.field_w;
               var8 = 0;
               var9 = 0;
-              var10 = ((ja) this).field_z;
-              var11 = ((ja) this).field_u;
+              var10 = this.field_z;
+              var11 = this.field_u;
               var12 = (var10 << 16) / param2;
               var13 = (var11 << 16) / param3;
-              if (((ja) this).field_r <= 0) {
+              if (this.field_r <= 0) {
                 break L0;
               } else {
-                var14 = ((((ja) this).field_r << 16) + var12 - 1) / var12;
+                var14 = ((this.field_r << 16) + var12 - 1) / var12;
                 param0 = param0 + var14;
-                var8 = var8 + (var14 * var12 - (((ja) this).field_r << 16));
+                var8 = var8 + (var14 * var12 - (this.field_r << 16));
                 break L0;
               }
             }
             L1: {
-              if (((ja) this).field_y <= 0) {
+              if (this.field_y <= 0) {
                 break L1;
               } else {
-                var14 = ((((ja) this).field_y << 16) + var13 - 1) / var13;
+                var14 = ((this.field_y << 16) + var13 - 1) / var13;
                 param1 = param1 + var14;
-                var9 = var9 + (var14 * var13 - (((ja) this).field_y << 16));
+                var9 = var9 + (var14 * var13 - (this.field_y << 16));
                 break L1;
               }
             }
@@ -3117,7 +3178,7 @@ class ja extends nq {
                 break L7;
               }
             }
-            ja.a(oo.field_i, ((ja) this).field_B, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
+            ja.a(oo.field_i, this.field_B, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
             return;
           } else {
             return;
@@ -3126,6 +3187,9 @@ class ja extends nq {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$403 = 0;
+        int incrementValue$404 = 0;
+        int incrementValue$405 = 0;
         int var12 = 0;
         int var13 = 0;
         var12 = param11 & 16711935;
@@ -3143,7 +3207,7 @@ class ja extends nq {
                 param6++;
                 continue L0;
               } else {
-                int incrementValue$403 = param3;
+                incrementValue$403 = param3;
                 param3++;
                 param2 = param1[incrementValue$403];
                 if (param2 == 0) {
@@ -3152,14 +3216,14 @@ class ja extends nq {
                   continue L1;
                 } else {
                   if (param2 >> 8 != (param2 & 65535)) {
-                    int incrementValue$404 = param4;
+                    incrementValue$404 = param4;
                     param4++;
                     param0[incrementValue$404] = param2;
                     param5++;
                     continue L1;
                   } else {
                     param2 = param2 & 255;
-                    int incrementValue$405 = param4;
+                    incrementValue$405 = param4;
                     param4++;
                     param0[incrementValue$405] = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
                     param5++;
@@ -3181,12 +3245,12 @@ class ja extends nq {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ja) this).field_r;
-          param1 = param1 + ((ja) this).field_y;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_y;
           var3 = param0 + param1 * oo.field_b;
           var4 = 0;
-          var5 = ((ja) this).field_w;
-          var6 = ((ja) this).field_x;
+          var5 = this.field_w;
+          var6 = this.field_x;
           var7 = oo.field_b - var6;
           var8 = 0;
           if (param1 >= oo.field_e) {
@@ -3237,7 +3301,7 @@ class ja extends nq {
           return;
         } else {
           if (var5 > 0) {
-            ja.c(oo.field_i, ((ja) this).field_B, 0, var4, var3, var6, var5, var7, var8);
+            ja.c(oo.field_i, this.field_B, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -3272,7 +3336,7 @@ class ja extends nq {
         int stackOut_24_0 = 0;
         int stackOut_23_0 = 0;
         L0: {
-          var6 = param2 * ((ja) this).field_x + param1;
+          var6 = param2 * this.field_x + param1;
           param3 = param3 & 4095;
           param4 = param4 & 4095;
           if (param2 < 0) {
@@ -3289,7 +3353,7 @@ class ja extends nq {
                 break L1;
               } else {
                 L2: {
-                  var7 = ((ja) this).field_B[var6];
+                  var7 = this.field_B[var6];
                   if (var7 == 0) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
@@ -3304,13 +3368,13 @@ class ja extends nq {
                 break L1;
               }
             }
-            if (param1 >= ((ja) this).field_x - 1) {
+            if (param1 >= this.field_x - 1) {
               var12 = 0;
               var8 = 0;
               break L0;
             } else {
               L3: {
-                var8 = ((ja) this).field_B[var6 + 1];
+                var8 = this.field_B[var6 + 1];
                 if (var8 == 0) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
@@ -3327,7 +3391,7 @@ class ja extends nq {
           }
         }
         L4: {
-          if (param2 >= ((ja) this).field_w - 1) {
+          if (param2 >= this.field_w - 1) {
             var14 = 0;
             var13 = 0;
             var10 = 0;
@@ -3341,7 +3405,7 @@ class ja extends nq {
                 break L5;
               } else {
                 L6: {
-                  var9 = ((ja) this).field_B[var6 + ((ja) this).field_x];
+                  var9 = this.field_B[var6 + this.field_x];
                   if (var9 == 0) {
                     stackOut_18_0 = 0;
                     stackIn_19_0 = stackOut_18_0;
@@ -3356,13 +3420,13 @@ class ja extends nq {
                 break L5;
               }
             }
-            if (param1 >= ((ja) this).field_x - 1) {
+            if (param1 >= this.field_x - 1) {
               var14 = 0;
               var10 = 0;
               break L4;
             } else {
               L7: {
-                var10 = ((ja) this).field_B[var6 + ((ja) this).field_x + 1];
+                var10 = this.field_B[var6 + this.field_x + 1];
                 if (var10 == 0) {
                   stackOut_24_0 = 0;
                   stackIn_25_0 = stackOut_24_0;
@@ -3425,16 +3489,17 @@ class ja extends nq {
     }
 
     ja(int param0, int param1) {
-        ((ja) this).field_B = new int[param0 * param1];
-        ((ja) this).field_z = param0;
-        ((ja) this).field_x = param0;
-        ((ja) this).field_u = param1;
-        ((ja) this).field_w = param1;
-        ((ja) this).field_y = 0;
-        ((ja) this).field_r = 0;
+        this.field_B = new int[param0 * param1];
+        this.field_z = param0;
+        this.field_x = param0;
+        this.field_u = param1;
+        this.field_w = param1;
+        this.field_y = 0;
+        this.field_r = 0;
     }
 
     ja(byte[] param0, java.awt.Component param1) {
+        boolean discarded$1 = false;
         InterruptedException var3 = null;
         java.awt.Image var3_ref = null;
         java.awt.MediaTracker var4 = null;
@@ -3446,18 +3511,18 @@ class ja extends nq {
             var4 = new java.awt.MediaTracker(param1);
             var4.addImage(var3_ref, 0);
             var4.waitForAll();
-            ((ja) this).field_x = var3_ref.getWidth((java.awt.image.ImageObserver) (Object) param1);
-            ((ja) this).field_w = var3_ref.getHeight((java.awt.image.ImageObserver) (Object) param1);
-            ((ja) this).field_z = ((ja) this).field_x;
-            ((ja) this).field_u = ((ja) this).field_w;
-            ((ja) this).field_r = 0;
-            ((ja) this).field_y = 0;
-            ((ja) this).field_B = new int[((ja) this).field_x * ((ja) this).field_w];
-            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, ((ja) this).field_x, ((ja) this).field_w, ((ja) this).field_B, 0, ((ja) this).field_x);
-            boolean discarded$1 = var5.grabPixels();
+            this.field_x = var3_ref.getWidth((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_w = var3_ref.getHeight((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_z = this.field_x;
+            this.field_u = this.field_w;
+            this.field_r = 0;
+            this.field_y = 0;
+            this.field_B = new int[this.field_x * this.field_w];
+            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, this.field_x, this.field_w, this.field_B, 0, this.field_x);
+            discarded$1 = var5.grabPixels();
             break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = (InterruptedException) (Object) decompiledCaughtException;
@@ -3467,6 +3532,8 @@ class ja extends nq {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -3480,7 +3547,7 @@ class ja extends nq {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -3494,7 +3561,7 @@ class ja extends nq {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -3510,6 +3577,7 @@ class ja extends nq {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
+        int incrementValue$0 = 0;
         int var18 = 0;
         int var13 = 256 - param12;
         int var14 = param3;
@@ -3519,7 +3587,7 @@ class ja extends nq {
                 param2 = param1[(param3 >> 16) + var16];
                 if (param2 != 0) {
                     var18 = param0[param5];
-                    int incrementValue$0 = param5;
+                    incrementValue$0 = param5;
                     param5++;
                     param0[incrementValue$0] = ((param2 & 16711935) * param12 + (var18 & 16711935) * var13 & -16711936) + ((param2 & 65280) * param12 + (var18 & 65280) * var13 & 16711680) >> 8;
                 } else {
@@ -3563,15 +3631,15 @@ class ja extends nq {
         int var31 = 0;
         int var32 = 0;
         L0: {
-          if (param2 > ((ja) this).field_z) {
+          if (param2 > this.field_z) {
             break L0;
           } else {
-            if (param3 <= ((ja) this).field_u) {
+            if (param3 <= this.field_u) {
               L1: {
-                var5 = param0 + ((ja) this).field_r * param2 / ((ja) this).field_z;
-                var6 = param0 + ((((ja) this).field_r + ((ja) this).field_x) * param2 + ((ja) this).field_z - 1) / ((ja) this).field_z;
-                var7 = param1 + ((ja) this).field_y * param3 / ((ja) this).field_u;
-                var8 = param1 + ((((ja) this).field_y + ((ja) this).field_w) * param3 + ((ja) this).field_u - 1) / ((ja) this).field_u;
+                var5 = param0 + this.field_r * param2 / this.field_z;
+                var6 = param0 + ((this.field_r + this.field_x) * param2 + this.field_z - 1) / this.field_z;
+                var7 = param1 + this.field_y * param3 / this.field_u;
+                var8 = param1 + ((this.field_y + this.field_w) * param3 + this.field_u - 1) / this.field_u;
                 if (var5 >= oo.field_f) {
                   break L1;
                 } else {
@@ -3623,10 +3691,10 @@ class ja extends nq {
                         } else {
                           var13 = var12 - param0 << 4;
                           var14 = var11 - param1 << 4;
-                          var15 = var13 * ((ja) this).field_z / param2 - (((ja) this).field_r << 4);
-                          var16 = (var13 + 16) * ((ja) this).field_z / param2 - (((ja) this).field_r << 4);
-                          var17 = var14 * ((ja) this).field_u / param3 - (((ja) this).field_y << 4);
-                          var18 = (var14 + 16) * ((ja) this).field_u / param3 - (((ja) this).field_y << 4);
+                          var15 = var13 * this.field_z / param2 - (this.field_r << 4);
+                          var16 = (var13 + 16) * this.field_z / param2 - (this.field_r << 4);
+                          var17 = var14 * this.field_u / param3 - (this.field_y << 4);
+                          var18 = (var14 + 16) * this.field_u / param3 - (this.field_y << 4);
                           var19 = (var16 - var15) * (var18 - var17) >> 1;
                           if (var19 != 0) {
                             L7: {
@@ -3638,10 +3706,10 @@ class ja extends nq {
                               }
                             }
                             L8: {
-                              if (var16 <= ((ja) this).field_x << 4) {
+                              if (var16 <= this.field_x << 4) {
                                 break L8;
                               } else {
-                                var16 = ((ja) this).field_x << 4;
+                                var16 = this.field_x << 4;
                                 break L8;
                               }
                             }
@@ -3654,10 +3722,10 @@ class ja extends nq {
                               }
                             }
                             L10: {
-                              if (var18 <= ((ja) this).field_w << 4) {
+                              if (var18 <= this.field_w << 4) {
                                 break L10;
                               } else {
-                                var18 = ((ja) this).field_w << 4;
+                                var18 = this.field_w << 4;
                                 break L10;
                               }
                             }
@@ -3721,7 +3789,7 @@ class ja extends nq {
                                     var28++;
                                     continue L11;
                                   } else {
-                                    var31 = ((ja) this).field_B[var28 * ((ja) this).field_x + var30];
+                                    var31 = this.field_B[var28 * this.field_x + var30];
                                     if (var31 != 0) {
                                       L16: {
                                         var32 = var29;
@@ -3773,6 +3841,8 @@ class ja extends nq {
     }
 
     private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -3791,7 +3861,7 @@ class ja extends nq {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$14 = param4;
+                incrementValue$14 = param4;
                 param4++;
                 param3 = param2[incrementValue$14];
                 if (param3 != 0) {
@@ -3800,7 +3870,7 @@ class ja extends nq {
                     var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
                     var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
                     var14 = (param3 & 255) * (param0 & 255) >>> 8;
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param1[incrementValue$15] = (var12 << 16) + (var13 << 8) + var14;
                     var11++;

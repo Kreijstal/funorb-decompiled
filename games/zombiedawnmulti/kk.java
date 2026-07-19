@@ -14,28 +14,31 @@ abstract class kk extends qa {
 
     final static void a(int param0, boolean param1, int param2, byte param3, java.awt.Component param4, go param5, int param6, gd param7) {
         try {
-            gp.a(22050, true, 10);
-            rm.field_b = gp.a(param5, param4, 0, 22050);
-            ga.field_u = gp.a(param5, param4, 1, 1024);
+            gp.a(param0, param1, 10);
+            rm.field_b = gp.a(param5, param4, 0, param2);
+            ga.field_u = gp.a(param5, param4, 1, param6);
             bh.field_a = new vp();
-            lq.field_d = 46;
-            ga.field_u.a((gq) (Object) bh.field_a);
+            lq.field_d = param6 * 1000 / param0;
+            ga.field_u.a(bh.field_a);
             wd.field_L = param7;
             wd.field_L.a(uk.field_S, (byte) 116);
-            int var8_int = 37;
-            rm.field_b.a((gq) (Object) wd.field_L);
+            int var8_int = 37 / ((param3 - 49) / 49);
+            rm.field_b.a(wd.field_L);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "kk.M(" + 22050 + ',' + true + ',' + 22050 + ',' + 119 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + 1024 + ',' + (param7 != null ? "{...}" : "null") + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "kk.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
     abstract boolean f(int param0);
 
     kk(int param0) {
-        ((kk) this).field_t = param0;
+        this.field_t = param0;
     }
 
     public static void b(boolean param0) {
+        if (!param0) {
+            return;
+        }
         field_v = null;
         field_r = null;
         field_y = null;
@@ -55,10 +58,6 @@ abstract class kk extends qa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = false;
         field_r = new ja(270, 70);
         field_v = new String[255];

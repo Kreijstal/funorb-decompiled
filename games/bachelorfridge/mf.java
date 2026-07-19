@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 class mf extends uda implements lja {
     private boolean field_ib;
     private boolean field_gb;
@@ -13,16 +11,16 @@ class mf extends uda implements lja {
 
     final void o(int param0) {
         hc var2 = null;
-        ((mf) this).field_kb.c(1705304705, 2121792, 4210752);
-        var2 = new hc((mf) this, ((mf) this).field_hb, fr.field_r);
+        this.field_kb.c(1705304705, 2121792, 4210752);
+        var2 = new hc((mf) (this), this.field_hb, fr.field_r);
         if (param0 != 2113632) {
-          ((mf) this).field_jb = true;
+          this.field_jb = true;
           var2.a(7, wk.field_i, 15);
-          ((mf) this).e((wj) (Object) var2, 33);
+          this.e(var2, 33);
           return;
         } else {
           var2.a(7, wk.field_i, 15);
-          ((mf) this).e((wj) (Object) var2, 33);
+          this.e(var2, 33);
           return;
         }
     }
@@ -38,6 +36,7 @@ class mf extends uda implements lja {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_5_0 = false;
         int stackOut_1_0 = 0;
@@ -56,41 +55,43 @@ class mf extends uda implements lja {
                 if (param0 == 10) {
                   break L1;
                 } else {
-                  ((mf) this).o(25);
+                  this.o(25);
                   break L1;
                 }
               }
               stackOut_5_0 = super.a(10, param1, param2, param3);
               stackIn_6_0 = stackOut_5_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              ((mf) this).p(-94);
+              this.p(-94);
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_0 = (RuntimeException) (var5);
             stackOut_7_1 = new StringBuilder().append("mf.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param3 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -98,12 +99,18 @@ class mf extends uda implements lja {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
-        return stackIn_6_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_6_0;
+        }
     }
 
     final void a(int param0, String param1, boolean param2) {
+        hf discarded$2 = null;
+        hf discarded$3 = null;
         RuntimeException var4 = null;
         hc var4_ref = null;
         int var5 = 0;
@@ -130,6 +137,7 @@ class mf extends uda implements lja {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_31_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
         Object stackOut_5_0 = null;
@@ -160,12 +168,12 @@ class mf extends uda implements lja {
         var5 = BachelorFridge.field_y;
         try {
           L0: {
-            if (!((mf) this).field_gb) {
+            if (!this.field_gb) {
               L1: {
                 stackOut_3_0 = this;
                 stackIn_5_0 = stackOut_3_0;
                 stackIn_4_0 = stackOut_3_0;
-                if (param0 != 256) {
+                if ((param0 ^ -1) != -257) {
                   stackOut_5_0 = this;
                   stackOut_5_1 = 0;
                   stackIn_6_0 = stackOut_5_0;
@@ -180,7 +188,7 @@ class mf extends uda implements lja {
                 }
               }
               L2: {
-                ((mf) this).field_ib = stackIn_6_1 != 0;
+                ((mf) (this)).field_ib = stackIn_6_1 != 0;
                 stackOut_6_0 = this;
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_7_0 = stackOut_6_0;
@@ -199,24 +207,24 @@ class mf extends uda implements lja {
                 }
               }
               L3: {
-                ((mf) this).field_gb = stackIn_9_1 != 0;
-                ((mf) this).field_kb.c(1705304705, 8405024, 4210752);
-                var6 = new hc((mf) this, ((mf) this).field_hb, param1);
+                ((mf) (this)).field_gb = stackIn_9_1 != 0;
+                this.field_kb.c(1705304705, 8405024, 4210752);
+                var6 = new hc((mf) (this), this.field_hb, param1);
                 var4_ref = var6;
                 if (5 != param0) {
-                  if (param0 == 256) {
-                    hf discarded$2 = var6.a((pl) this, bga.field_k, 19528);
+                  if (-257 == (param0 ^ -1)) {
+                    discarded$2 = var6.a((pl) (this), bga.field_k, 19528);
                     break L3;
                   } else {
                     L4: {
-                      stackOut_12_0 = (hc) var6;
+                      stackOut_12_0 = (hc) (var6);
                       stackOut_12_1 = 7;
                       stackIn_14_0 = stackOut_12_0;
                       stackIn_14_1 = stackOut_12_1;
                       stackIn_13_0 = stackOut_12_0;
                       stackIn_13_1 = stackOut_12_1;
-                      if (!((mf) this).field_jb) {
-                        stackOut_14_0 = (hc) (Object) stackIn_14_0;
+                      if (!this.field_jb) {
+                        stackOut_14_0 = (hc) ((Object) stackIn_14_0);
                         stackOut_14_1 = stackIn_14_1;
                         stackOut_14_2 = ina.field_s;
                         stackIn_15_0 = stackOut_14_0;
@@ -224,7 +232,7 @@ class mf extends uda implements lja {
                         stackIn_15_2 = stackOut_14_2;
                         break L4;
                       } else {
-                        stackOut_13_0 = (hc) (Object) stackIn_13_0;
+                        stackOut_13_0 = (hc) ((Object) stackIn_13_0);
                         stackOut_13_1 = stackIn_13_1;
                         stackOut_13_2 = bga.field_k;
                         stackIn_15_0 = stackOut_13_0;
@@ -247,16 +255,16 @@ class mf extends uda implements lja {
                   var6.a(7, pr.field_c, 7);
                   break L5;
                 } else {
-                  if (param0 == 4) {
+                  if ((param0 ^ -1) == -5) {
                     var6.a(7, hd.field_r, 8);
                     break L5;
                   } else {
-                    if (param0 != 6) {
-                      if (param0 == 9) {
-                        hf discarded$3 = var6.a((pl) this, eq.field_i, 19528);
+                    if ((param0 ^ -1) != -7) {
+                      if ((param0 ^ -1) == -10) {
+                        discarded$3 = var6.a((pl) (this), eq.field_i, 19528);
                         break L5;
                       } else {
-                        ((mf) this).e((wj) (Object) var6, 33);
+                        this.e(var6, 33);
                         return;
                       }
                     } else {
@@ -266,33 +274,35 @@ class mf extends uda implements lja {
                   }
                 }
               }
-              ((mf) this).e((wj) (Object) var6, 33);
+              this.e(var6, 33);
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) var4;
+            stackOut_28_0 = (RuntimeException) (var4);
             stackOut_28_1 = new StringBuilder().append("mf.BA(").append(param0).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
             stackIn_29_1 = stackOut_28_1;
             if (param1 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "null";
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
               break L6;
             } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "{...}";
               stackIn_31_0 = stackOut_29_0;
               stackIn_31_1 = stackOut_29_1;
@@ -300,7 +310,12 @@ class mf extends uda implements lja {
               break L6;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -327,39 +342,39 @@ class mf extends uda implements lja {
             if (param3 >= 50) {
               break L0;
             } else {
-              ((mf) this).field_hb = null;
+              this.field_hb = (po) null;
               break L0;
             }
           }
-          if (!((mf) this).field_ib) {
+          if (!this.field_ib) {
             eea.a((byte) 127, "tochangedisplayname.ws", nia.d(-31768));
             return;
           } else {
             ep.a(3, 8192);
-            ((mf) this).p(-106);
+            this.p(-106);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var6;
+            stackOut_6_0 = (RuntimeException) (var6);
             stackOut_6_1 = new StringBuilder().append("mf.AA(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -367,16 +382,16 @@ class mf extends uda implements lja {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void p(int param0) {
         if (param0 < -71) {
-          if (((mf) this).field_C) {
-            ((mf) this).field_C = false;
-            if (!((mf) this).field_jb) {
-              if (!((mf) this).field_fb) {
+          if (this.field_C) {
+            this.field_C = false;
+            if (!this.field_jb) {
+              if (!this.field_fb) {
                 return;
               } else {
                 dla.b(0);
@@ -390,11 +405,11 @@ class mf extends uda implements lja {
             return;
           }
         } else {
-          ((mf) this).field_fb = false;
-          if (((mf) this).field_C) {
-            ((mf) this).field_C = false;
-            if (!((mf) this).field_jb) {
-              if (!((mf) this).field_fb) {
+          this.field_fb = false;
+          if (this.field_C) {
+            this.field_C = false;
+            if (!this.field_jb) {
+              if (!this.field_fb) {
                 return;
               } else {
                 dla.b(0);
@@ -411,18 +426,18 @@ class mf extends uda implements lja {
     }
 
     mf(rp param0, po param1, String param2, boolean param3, boolean param4) {
-        super(param0, (wj) (Object) new hc((mf) null, param1, param2), 77, 10, 10);
+        super(param0, new hc((mf) null, param1, param2), 77, 10, 10);
         try {
-            ((mf) this).field_jb = param3 ? true : false;
-            ((mf) this).field_fb = param4 ? true : false;
-            ((mf) this).field_ib = false;
-            ((mf) this).field_gb = false;
-            ((mf) this).field_hb = param1;
-            ((mf) this).field_kb = new de(13, 50, 274, 30, 15, 2113632, 4210752);
-            ((mf) this).field_kb.field_P = true;
-            ((mf) this).c((wj) (Object) ((mf) this).field_kb, -123);
+            this.field_jb = param3 ? true : false;
+            this.field_fb = param4 ? true : false;
+            this.field_ib = false;
+            this.field_gb = false;
+            this.field_hb = param1;
+            this.field_kb = new de(13, 50, 274, 30, 15, 2113632, 4210752);
+            this.field_kb.field_P = true;
+            this.c(this.field_kb, -123);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "mf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

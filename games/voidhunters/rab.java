@@ -17,9 +17,9 @@ final class rab extends kva implements gf {
             return;
         }
         try {
-            super.a(param0, param1);
+            super.a(param0, param1 ^ 0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rab.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "rab.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -35,23 +35,19 @@ final class rab extends kva implements gf {
     rab(jp param0, kb param1, int param2, int param3, int param4, byte[] param5) {
         super(param0, 32879, param1, mj.field_f, param4 * (param2 * param3), false);
         try {
-            ((rab) this).field_l = param3;
-            ((rab) this).field_k = param4;
-            ((rab) this).field_j = param2;
-            ((rab) this).field_h.a((ura) this, -116);
+            this.field_l = param3;
+            this.field_k = param4;
+            this.field_j = param2;
+            this.field_h.a((ura) (this), -116);
             jaggl.OpenGL.glPixelStorei(3317, 1);
-            jaggl.OpenGL.glTexImage3Dub(((rab) this).field_e, 0, ((rab) this).e((byte) -31), ((rab) this).field_j, ((rab) this).field_l, ((rab) this).field_k, 0, una.a(-29328, ((rab) this).field_f), 5121, param5, 0);
+            jaggl.OpenGL.glTexImage3Dub(this.field_e, 0, this.e((byte) -31), this.field_j, this.field_l, this.field_k, 0, una.a(-29328, this.field_f), 5121, param5, 0);
             jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "rab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "rab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = 0;
     }
 }

@@ -12,31 +12,36 @@ final class sha extends oda {
 
     final void a(boolean param0, vcb param1, byte param2) {
         try {
-            ((sha) this).field_B = param1;
-            ((sha) this).field_u[1] = (shb) (Object) param1;
+            this.field_B = param1;
+            this.field_u[1] = (shb) ((Object) param1);
             if (param2 > -91) {
                 this.e(17);
             }
-            ((sha) this).field_A = param0 ? true : false;
+            this.field_A = param0 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sha.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "sha.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public static void f(int param0) {
         field_x = null;
+        if (param0 != 1) {
+            eab var2 = (eab) null;
+            sha.a(56, (String) null, 29, -128, (byte) -61, -80, -20, (eab) null, 10);
+        }
     }
 
     sha(int param0, int param1, int param2, int param3, wwa param4, shb param5, wwa param6) {
         super(param0, param1, param2, param3, param4);
+        bk dupTemp$0 = null;
         try {
-            ((sha) this).field_u = new shb[3];
-            bk dupTemp$0 = new bk(param0, param1, param2, param3, param6, param5);
-            ((sha) this).field_y = dupTemp$0;
-            ((sha) this).field_u[2] = (shb) (Object) dupTemp$0;
-            ((sha) this).d(16777215);
+            this.field_u = new shb[3];
+            dupTemp$0 = new bk(param0, param1, param2, param3, param6, param5);
+            this.field_y = dupTemp$0;
+            this.field_u[2] = (shb) ((Object) dupTemp$0);
+            this.d(16777215);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sha.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "sha.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,28 +50,28 @@ final class sha extends oda {
         int var3 = 0;
         var3 = VoidHunters.field_G;
         var2 = -85 % ((param0 - -47) / 56);
-        if (((sha) this).field_B != null) {
-          if (((sha) this).field_y.field_f >= ((sha) this).field_y.field_t.field_f) {
-            ((sha) this).field_B.c(1, 1, 127);
-            if (null != ((sha) this).field_v) {
-              if (((sha) this).field_y.field_h >= ((sha) this).field_y.field_t.field_h) {
-                ((sha) this).field_v.b(1, 21944, 1);
+        if (this.field_B != null) {
+          if (this.field_y.field_f >= this.field_y.field_t.field_f) {
+            this.field_B.c(1, 1, 127);
+            if (null != this.field_v) {
+              if (this.field_y.field_h >= this.field_y.field_t.field_h) {
+                this.field_v.b(1, 21944, 1);
                 return;
               } else {
-                ((sha) this).field_v.b(((sha) this).field_y.field_h, 21944, ((sha) this).field_y.field_t.field_h);
+                this.field_v.b(this.field_y.field_h, 21944, this.field_y.field_t.field_h);
                 return;
               }
             } else {
               return;
             }
           } else {
-            ((sha) this).field_B.c(((sha) this).field_y.field_f, ((sha) this).field_y.field_t.field_f, 127);
-            if (null != ((sha) this).field_v) {
-              if (((sha) this).field_y.field_h >= ((sha) this).field_y.field_t.field_h) {
-                ((sha) this).field_v.b(1, 21944, 1);
+            this.field_B.c(this.field_y.field_f, this.field_y.field_t.field_f, 127);
+            if (null != this.field_v) {
+              if (this.field_y.field_h >= this.field_y.field_t.field_h) {
+                this.field_v.b(1, 21944, 1);
                 return;
               } else {
-                ((sha) this).field_v.b(((sha) this).field_y.field_h, 21944, ((sha) this).field_y.field_t.field_h);
+                this.field_v.b(this.field_y.field_h, 21944, this.field_y.field_t.field_h);
                 return;
               }
             } else {
@@ -74,12 +79,12 @@ final class sha extends oda {
             }
           }
         } else {
-          if (null != ((sha) this).field_v) {
-            if (((sha) this).field_y.field_h >= ((sha) this).field_y.field_t.field_h) {
-              ((sha) this).field_v.b(1, 21944, 1);
+          if (null != this.field_v) {
+            if (this.field_y.field_h >= this.field_y.field_t.field_h) {
+              this.field_v.b(1, 21944, 1);
               return;
             } else {
-              ((sha) this).field_v.b(((sha) this).field_y.field_h, 21944, ((sha) this).field_y.field_t.field_h);
+              this.field_v.b(this.field_y.field_h, 21944, this.field_y.field_t.field_h);
               return;
             }
           } else {
@@ -101,11 +106,11 @@ final class sha extends oda {
         try {
             esa.field_p = param2;
             vwa.field_p = param3;
-            ff.field_o = (ona) (Object) new wh();
+            ff.field_o = (ona) ((Object) new wh());
             nj.field_a = new pfa(param7);
             ho.field_a = new fwa(ff.field_o, nj.field_a);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sha.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "sha.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -598,80 +603,80 @@ final class sha extends oda {
         int stackOut_105_4 = 0;
         int stackOut_105_5 = 0;
         L0: {
-          if (((sha) this).field_A) {
+          if (this.field_A) {
             stackOut_86_0 = 0;
             stackIn_88_0 = stackOut_86_0;
             break L0;
           } else {
-            if (null != ((sha) this).field_B) {
-              stackOut_87_0 = ((sha) this).field_B.field_h;
+            if (null != this.field_B) {
+              stackOut_87_0 = this.field_B.field_h;
               stackIn_88_0 = stackOut_87_0;
               break L0;
             } else {
               var2 = 0;
-              if (!((sha) this).field_z) {
-                if (((sha) this).field_v != null) {
-                  var3 = ((sha) this).field_v.field_f;
+              if (!this.field_z) {
+                if (this.field_v != null) {
+                  var3 = this.field_v.field_f;
                   if (param0 != 16777215) {
                     L1: {
-                      ((sha) this).field_y = null;
-                      if (null == ((sha) this).field_B) {
-                        stackOut_68_0 = ((sha) this).field_h;
+                      this.field_y = (bk) null;
+                      if (null == this.field_B) {
+                        stackOut_68_0 = this.field_h;
                         stackIn_69_0 = stackOut_68_0;
                         break L1;
                       } else {
-                        stackOut_67_0 = -((sha) this).field_B.field_h + ((sha) this).field_h;
+                        stackOut_67_0 = -this.field_B.field_h + this.field_h;
                         stackIn_69_0 = stackOut_67_0;
                         break L1;
                       }
                     }
                     L2: {
                       var4 = stackIn_69_0;
-                      if (null != ((sha) this).field_v) {
-                        stackOut_71_0 = ((sha) this).field_f + -((sha) this).field_v.field_f;
+                      if (null != this.field_v) {
+                        stackOut_71_0 = this.field_f + -this.field_v.field_f;
                         stackIn_72_0 = stackOut_71_0;
                         break L2;
                       } else {
-                        stackOut_70_0 = ((sha) this).field_f;
+                        stackOut_70_0 = this.field_f;
                         stackIn_72_0 = stackOut_70_0;
                         break L2;
                       }
                     }
                     L3: {
                       var5 = stackIn_72_0;
-                      ((sha) this).field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
-                      if (null != ((sha) this).field_B) {
+                      this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
+                      if (null != this.field_B) {
                         L4: {
-                          stackOut_74_0 = ((sha) this).field_B;
+                          stackOut_74_0 = this.field_B;
                           stackIn_76_0 = stackOut_74_0;
                           stackIn_75_0 = stackOut_74_0;
-                          if (!((sha) this).field_A) {
-                            stackOut_76_0 = (vcb) (Object) stackIn_76_0;
+                          if (!this.field_A) {
+                            stackOut_76_0 = (vcb) ((Object) stackIn_76_0);
                             stackOut_76_1 = 0;
                             stackIn_77_0 = stackOut_76_0;
                             stackIn_77_1 = stackOut_76_1;
                             break L4;
                           } else {
-                            stackOut_75_0 = (vcb) (Object) stackIn_75_0;
-                            stackOut_75_1 = ((sha) this).field_h + -((sha) this).field_B.field_h;
+                            stackOut_75_0 = (vcb) ((Object) stackIn_75_0);
+                            stackOut_75_1 = this.field_h + -this.field_B.field_h;
                             stackIn_77_0 = stackOut_75_0;
                             stackIn_77_1 = stackOut_75_1;
                             break L4;
                           }
                         }
-                        ((vcb) (Object) stackIn_77_0).a(stackIn_77_1, ((sha) this).field_B.field_h, ((sha) this).field_y.field_f, 1, ((sha) this).field_y.field_r);
+                        ((vcb) (Object) stackIn_77_0).a(stackIn_77_1, this.field_B.field_h, this.field_y.field_f, 1, this.field_y.field_r);
                         break L3;
                       } else {
                         break L3;
                       }
                     }
                     L5: {
-                      if (null != ((sha) this).field_v) {
+                      if (null != this.field_v) {
                         L6: {
-                          stackOut_80_0 = ((sha) this).field_v;
-                          stackOut_80_1 = ((sha) this).field_y.field_g;
-                          stackOut_80_2 = ((sha) this).field_y.field_h;
-                          stackOut_80_3 = ((sha) this).field_v.field_f;
+                          stackOut_80_0 = this.field_v;
+                          stackOut_80_1 = this.field_y.field_g;
+                          stackOut_80_2 = this.field_y.field_h;
+                          stackOut_80_3 = this.field_v.field_f;
                           stackOut_80_4 = 1;
                           stackIn_82_0 = stackOut_80_0;
                           stackIn_82_1 = stackOut_80_1;
@@ -683,13 +688,13 @@ final class sha extends oda {
                           stackIn_81_2 = stackOut_80_2;
                           stackIn_81_3 = stackOut_80_3;
                           stackIn_81_4 = stackOut_80_4;
-                          if (((sha) this).field_z) {
-                            stackOut_82_0 = (vcb) (Object) stackIn_82_0;
+                          if (this.field_z) {
+                            stackOut_82_0 = (vcb) ((Object) stackIn_82_0);
                             stackOut_82_1 = stackIn_82_1;
                             stackOut_82_2 = stackIn_82_2;
                             stackOut_82_3 = stackIn_82_3;
                             stackOut_82_4 = stackIn_82_4;
-                            stackOut_82_5 = -((sha) this).field_v.field_f + ((sha) this).field_f;
+                            stackOut_82_5 = -this.field_v.field_f + this.field_f;
                             stackIn_83_0 = stackOut_82_0;
                             stackIn_83_1 = stackOut_82_1;
                             stackIn_83_2 = stackOut_82_2;
@@ -698,7 +703,7 @@ final class sha extends oda {
                             stackIn_83_5 = stackOut_82_5;
                             break L6;
                           } else {
-                            stackOut_81_0 = (vcb) (Object) stackIn_81_0;
+                            stackOut_81_0 = (vcb) ((Object) stackIn_81_0);
                             stackOut_81_1 = stackIn_81_1;
                             stackOut_81_2 = stackIn_81_2;
                             stackOut_81_3 = stackIn_81_3;
@@ -723,63 +728,63 @@ final class sha extends oda {
                     return;
                   } else {
                     L7: {
-                      if (null == ((sha) this).field_B) {
-                        stackOut_49_0 = ((sha) this).field_h;
+                      if (null == this.field_B) {
+                        stackOut_49_0 = this.field_h;
                         stackIn_50_0 = stackOut_49_0;
                         break L7;
                       } else {
-                        stackOut_48_0 = -((sha) this).field_B.field_h + ((sha) this).field_h;
+                        stackOut_48_0 = -this.field_B.field_h + this.field_h;
                         stackIn_50_0 = stackOut_48_0;
                         break L7;
                       }
                     }
                     L8: {
                       var4 = stackIn_50_0;
-                      if (null != ((sha) this).field_v) {
-                        stackOut_52_0 = ((sha) this).field_f + -((sha) this).field_v.field_f;
+                      if (null != this.field_v) {
+                        stackOut_52_0 = this.field_f + -this.field_v.field_f;
                         stackIn_53_0 = stackOut_52_0;
                         break L8;
                       } else {
-                        stackOut_51_0 = ((sha) this).field_f;
+                        stackOut_51_0 = this.field_f;
                         stackIn_53_0 = stackOut_51_0;
                         break L8;
                       }
                     }
                     L9: {
                       var5 = stackIn_53_0;
-                      ((sha) this).field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
-                      if (null != ((sha) this).field_B) {
+                      this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
+                      if (null != this.field_B) {
                         L10: {
-                          stackOut_55_0 = ((sha) this).field_B;
+                          stackOut_55_0 = this.field_B;
                           stackIn_57_0 = stackOut_55_0;
                           stackIn_56_0 = stackOut_55_0;
-                          if (!((sha) this).field_A) {
-                            stackOut_57_0 = (vcb) (Object) stackIn_57_0;
+                          if (!this.field_A) {
+                            stackOut_57_0 = (vcb) ((Object) stackIn_57_0);
                             stackOut_57_1 = 0;
                             stackIn_58_0 = stackOut_57_0;
                             stackIn_58_1 = stackOut_57_1;
                             break L10;
                           } else {
-                            stackOut_56_0 = (vcb) (Object) stackIn_56_0;
-                            stackOut_56_1 = ((sha) this).field_h + -((sha) this).field_B.field_h;
+                            stackOut_56_0 = (vcb) ((Object) stackIn_56_0);
+                            stackOut_56_1 = this.field_h + -this.field_B.field_h;
                             stackIn_58_0 = stackOut_56_0;
                             stackIn_58_1 = stackOut_56_1;
                             break L10;
                           }
                         }
-                        ((vcb) (Object) stackIn_58_0).a(stackIn_58_1, ((sha) this).field_B.field_h, ((sha) this).field_y.field_f, 1, ((sha) this).field_y.field_r);
+                        ((vcb) (Object) stackIn_58_0).a(stackIn_58_1, this.field_B.field_h, this.field_y.field_f, 1, this.field_y.field_r);
                         break L9;
                       } else {
                         break L9;
                       }
                     }
                     L11: {
-                      if (null != ((sha) this).field_v) {
+                      if (null != this.field_v) {
                         L12: {
-                          stackOut_61_0 = ((sha) this).field_v;
-                          stackOut_61_1 = ((sha) this).field_y.field_g;
-                          stackOut_61_2 = ((sha) this).field_y.field_h;
-                          stackOut_61_3 = ((sha) this).field_v.field_f;
+                          stackOut_61_0 = this.field_v;
+                          stackOut_61_1 = this.field_y.field_g;
+                          stackOut_61_2 = this.field_y.field_h;
+                          stackOut_61_3 = this.field_v.field_f;
                           stackOut_61_4 = 1;
                           stackIn_63_0 = stackOut_61_0;
                           stackIn_63_1 = stackOut_61_1;
@@ -791,13 +796,13 @@ final class sha extends oda {
                           stackIn_62_2 = stackOut_61_2;
                           stackIn_62_3 = stackOut_61_3;
                           stackIn_62_4 = stackOut_61_4;
-                          if (((sha) this).field_z) {
-                            stackOut_63_0 = (vcb) (Object) stackIn_63_0;
+                          if (this.field_z) {
+                            stackOut_63_0 = (vcb) ((Object) stackIn_63_0);
                             stackOut_63_1 = stackIn_63_1;
                             stackOut_63_2 = stackIn_63_2;
                             stackOut_63_3 = stackIn_63_3;
                             stackOut_63_4 = stackIn_63_4;
-                            stackOut_63_5 = -((sha) this).field_v.field_f + ((sha) this).field_f;
+                            stackOut_63_5 = -this.field_v.field_f + this.field_f;
                             stackIn_64_0 = stackOut_63_0;
                             stackIn_64_1 = stackOut_63_1;
                             stackIn_64_2 = stackOut_63_2;
@@ -806,7 +811,7 @@ final class sha extends oda {
                             stackIn_64_5 = stackOut_63_5;
                             break L12;
                           } else {
-                            stackOut_62_0 = (vcb) (Object) stackIn_62_0;
+                            stackOut_62_0 = (vcb) ((Object) stackIn_62_0);
                             stackOut_62_1 = stackIn_62_1;
                             stackOut_62_2 = stackIn_62_2;
                             stackOut_62_3 = stackIn_62_3;
@@ -836,68 +841,68 @@ final class sha extends oda {
                     if (param0 == 16777215) {
                       break L13;
                     } else {
-                      ((sha) this).field_y = null;
+                      this.field_y = (bk) null;
                       break L13;
                     }
                   }
                   L14: {
-                    if (null == ((sha) this).field_B) {
-                      stackOut_29_0 = ((sha) this).field_h;
+                    if (null == this.field_B) {
+                      stackOut_29_0 = this.field_h;
                       stackIn_30_0 = stackOut_29_0;
                       break L14;
                     } else {
-                      stackOut_28_0 = -((sha) this).field_B.field_h + ((sha) this).field_h;
+                      stackOut_28_0 = -this.field_B.field_h + this.field_h;
                       stackIn_30_0 = stackOut_28_0;
                       break L14;
                     }
                   }
                   L15: {
                     var4 = stackIn_30_0;
-                    if (null != ((sha) this).field_v) {
-                      stackOut_32_0 = ((sha) this).field_f + -((sha) this).field_v.field_f;
+                    if (null != this.field_v) {
+                      stackOut_32_0 = this.field_f + -this.field_v.field_f;
                       stackIn_33_0 = stackOut_32_0;
                       break L15;
                     } else {
-                      stackOut_31_0 = ((sha) this).field_f;
+                      stackOut_31_0 = this.field_f;
                       stackIn_33_0 = stackOut_31_0;
                       break L15;
                     }
                   }
                   L16: {
                     var5 = stackIn_33_0;
-                    ((sha) this).field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
-                    if (null != ((sha) this).field_B) {
+                    this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
+                    if (null != this.field_B) {
                       L17: {
-                        stackOut_35_0 = ((sha) this).field_B;
+                        stackOut_35_0 = this.field_B;
                         stackIn_37_0 = stackOut_35_0;
                         stackIn_36_0 = stackOut_35_0;
-                        if (!((sha) this).field_A) {
-                          stackOut_37_0 = (vcb) (Object) stackIn_37_0;
+                        if (!this.field_A) {
+                          stackOut_37_0 = (vcb) ((Object) stackIn_37_0);
                           stackOut_37_1 = 0;
                           stackIn_38_0 = stackOut_37_0;
                           stackIn_38_1 = stackOut_37_1;
                           break L17;
                         } else {
-                          stackOut_36_0 = (vcb) (Object) stackIn_36_0;
-                          stackOut_36_1 = ((sha) this).field_h + -((sha) this).field_B.field_h;
+                          stackOut_36_0 = (vcb) ((Object) stackIn_36_0);
+                          stackOut_36_1 = this.field_h + -this.field_B.field_h;
                           stackIn_38_0 = stackOut_36_0;
                           stackIn_38_1 = stackOut_36_1;
                           break L17;
                         }
                       }
-                      ((vcb) (Object) stackIn_38_0).a(stackIn_38_1, ((sha) this).field_B.field_h, ((sha) this).field_y.field_f, 1, ((sha) this).field_y.field_r);
+                      ((vcb) (Object) stackIn_38_0).a(stackIn_38_1, this.field_B.field_h, this.field_y.field_f, 1, this.field_y.field_r);
                       break L16;
                     } else {
                       break L16;
                     }
                   }
                   L18: {
-                    if (null != ((sha) this).field_v) {
+                    if (null != this.field_v) {
                       L19: {
-                        stackOut_41_0 = ((sha) this).field_v;
-                        stackOut_41_1 = ((sha) this).field_y.field_g;
-                        stackOut_41_2 = ((sha) this).field_y.field_h;
-                        stackOut_41_3 = ((sha) this).field_v.field_f;
+                        stackOut_41_0 = this.field_v;
+                        stackOut_41_1 = this.field_y.field_g;
+                        stackOut_41_2 = this.field_y.field_h;
+                        stackOut_41_3 = this.field_v.field_f;
                         stackOut_41_4 = 1;
                         stackIn_43_0 = stackOut_41_0;
                         stackIn_43_1 = stackOut_41_1;
@@ -909,13 +914,13 @@ final class sha extends oda {
                         stackIn_42_2 = stackOut_41_2;
                         stackIn_42_3 = stackOut_41_3;
                         stackIn_42_4 = stackOut_41_4;
-                        if (((sha) this).field_z) {
-                          stackOut_43_0 = (vcb) (Object) stackIn_43_0;
+                        if (this.field_z) {
+                          stackOut_43_0 = (vcb) ((Object) stackIn_43_0);
                           stackOut_43_1 = stackIn_43_1;
                           stackOut_43_2 = stackIn_43_2;
                           stackOut_43_3 = stackIn_43_3;
                           stackOut_43_4 = stackIn_43_4;
-                          stackOut_43_5 = -((sha) this).field_v.field_f + ((sha) this).field_f;
+                          stackOut_43_5 = -this.field_v.field_f + this.field_f;
                           stackIn_44_0 = stackOut_43_0;
                           stackIn_44_1 = stackOut_43_1;
                           stackIn_44_2 = stackOut_43_2;
@@ -924,7 +929,7 @@ final class sha extends oda {
                           stackIn_44_5 = stackOut_43_5;
                           break L19;
                         } else {
-                          stackOut_42_0 = (vcb) (Object) stackIn_42_0;
+                          stackOut_42_0 = (vcb) ((Object) stackIn_42_0);
                           stackOut_42_1 = stackIn_42_1;
                           stackOut_42_2 = stackIn_42_2;
                           stackOut_42_3 = stackIn_42_3;
@@ -954,68 +959,68 @@ final class sha extends oda {
                   if (param0 == 16777215) {
                     break L20;
                   } else {
-                    ((sha) this).field_y = null;
+                    this.field_y = (bk) null;
                     break L20;
                   }
                 }
                 L21: {
-                  if (null == ((sha) this).field_B) {
-                    stackOut_7_0 = ((sha) this).field_h;
+                  if (null == this.field_B) {
+                    stackOut_7_0 = this.field_h;
                     stackIn_8_0 = stackOut_7_0;
                     break L21;
                   } else {
-                    stackOut_6_0 = -((sha) this).field_B.field_h + ((sha) this).field_h;
+                    stackOut_6_0 = -this.field_B.field_h + this.field_h;
                     stackIn_8_0 = stackOut_6_0;
                     break L21;
                   }
                 }
                 L22: {
                   var4 = stackIn_8_0;
-                  if (null != ((sha) this).field_v) {
-                    stackOut_10_0 = ((sha) this).field_f + -((sha) this).field_v.field_f;
+                  if (null != this.field_v) {
+                    stackOut_10_0 = this.field_f + -this.field_v.field_f;
                     stackIn_11_0 = stackOut_10_0;
                     break L22;
                   } else {
-                    stackOut_9_0 = ((sha) this).field_f;
+                    stackOut_9_0 = this.field_f;
                     stackIn_11_0 = stackOut_9_0;
                     break L22;
                   }
                 }
                 L23: {
                   var5 = stackIn_11_0;
-                  ((sha) this).field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
-                  if (null != ((sha) this).field_B) {
+                  this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
+                  if (null != this.field_B) {
                     L24: {
-                      stackOut_13_0 = ((sha) this).field_B;
+                      stackOut_13_0 = this.field_B;
                       stackIn_15_0 = stackOut_13_0;
                       stackIn_14_0 = stackOut_13_0;
-                      if (!((sha) this).field_A) {
-                        stackOut_15_0 = (vcb) (Object) stackIn_15_0;
+                      if (!this.field_A) {
+                        stackOut_15_0 = (vcb) ((Object) stackIn_15_0);
                         stackOut_15_1 = 0;
                         stackIn_16_0 = stackOut_15_0;
                         stackIn_16_1 = stackOut_15_1;
                         break L24;
                       } else {
-                        stackOut_14_0 = (vcb) (Object) stackIn_14_0;
-                        stackOut_14_1 = ((sha) this).field_h + -((sha) this).field_B.field_h;
+                        stackOut_14_0 = (vcb) ((Object) stackIn_14_0);
+                        stackOut_14_1 = this.field_h + -this.field_B.field_h;
                         stackIn_16_0 = stackOut_14_0;
                         stackIn_16_1 = stackOut_14_1;
                         break L24;
                       }
                     }
-                    ((vcb) (Object) stackIn_16_0).a(stackIn_16_1, ((sha) this).field_B.field_h, ((sha) this).field_y.field_f, 1, ((sha) this).field_y.field_r);
+                    ((vcb) (Object) stackIn_16_0).a(stackIn_16_1, this.field_B.field_h, this.field_y.field_f, 1, this.field_y.field_r);
                     break L23;
                   } else {
                     break L23;
                   }
                 }
                 L25: {
-                  if (null != ((sha) this).field_v) {
+                  if (null != this.field_v) {
                     L26: {
-                      stackOut_19_0 = ((sha) this).field_v;
-                      stackOut_19_1 = ((sha) this).field_y.field_g;
-                      stackOut_19_2 = ((sha) this).field_y.field_h;
-                      stackOut_19_3 = ((sha) this).field_v.field_f;
+                      stackOut_19_0 = this.field_v;
+                      stackOut_19_1 = this.field_y.field_g;
+                      stackOut_19_2 = this.field_y.field_h;
+                      stackOut_19_3 = this.field_v.field_f;
                       stackOut_19_4 = 1;
                       stackIn_21_0 = stackOut_19_0;
                       stackIn_21_1 = stackOut_19_1;
@@ -1027,13 +1032,13 @@ final class sha extends oda {
                       stackIn_20_2 = stackOut_19_2;
                       stackIn_20_3 = stackOut_19_3;
                       stackIn_20_4 = stackOut_19_4;
-                      if (((sha) this).field_z) {
-                        stackOut_21_0 = (vcb) (Object) stackIn_21_0;
+                      if (this.field_z) {
+                        stackOut_21_0 = (vcb) ((Object) stackIn_21_0);
                         stackOut_21_1 = stackIn_21_1;
                         stackOut_21_2 = stackIn_21_2;
                         stackOut_21_3 = stackIn_21_3;
                         stackOut_21_4 = stackIn_21_4;
-                        stackOut_21_5 = -((sha) this).field_v.field_f + ((sha) this).field_f;
+                        stackOut_21_5 = -this.field_v.field_f + this.field_f;
                         stackIn_22_0 = stackOut_21_0;
                         stackIn_22_1 = stackOut_21_1;
                         stackIn_22_2 = stackOut_21_2;
@@ -1042,7 +1047,7 @@ final class sha extends oda {
                         stackIn_22_5 = stackOut_21_5;
                         break L26;
                       } else {
-                        stackOut_20_0 = (vcb) (Object) stackIn_20_0;
+                        stackOut_20_0 = (vcb) ((Object) stackIn_20_0);
                         stackOut_20_1 = stackIn_20_1;
                         stackOut_20_2 = stackIn_20_2;
                         stackOut_20_3 = stackIn_20_3;
@@ -1070,69 +1075,69 @@ final class sha extends oda {
           }
         }
         var2 = stackIn_88_0;
-        if (!((sha) this).field_z) {
-          if (((sha) this).field_v != null) {
-            var3 = ((sha) this).field_v.field_f;
+        if (!this.field_z) {
+          if (this.field_v != null) {
+            var3 = this.field_v.field_f;
             if (param0 != 16777215) {
               L27: {
-                ((sha) this).field_y = null;
-                if (null == ((sha) this).field_B) {
-                  stackOut_192_0 = ((sha) this).field_h;
+                this.field_y = (bk) null;
+                if (null == this.field_B) {
+                  stackOut_192_0 = this.field_h;
                   stackIn_193_0 = stackOut_192_0;
                   break L27;
                 } else {
-                  stackOut_191_0 = -((sha) this).field_B.field_h + ((sha) this).field_h;
+                  stackOut_191_0 = -this.field_B.field_h + this.field_h;
                   stackIn_193_0 = stackOut_191_0;
                   break L27;
                 }
               }
               L28: {
                 var4 = stackIn_193_0;
-                if (null != ((sha) this).field_v) {
-                  stackOut_195_0 = ((sha) this).field_f + -((sha) this).field_v.field_f;
+                if (null != this.field_v) {
+                  stackOut_195_0 = this.field_f + -this.field_v.field_f;
                   stackIn_196_0 = stackOut_195_0;
                   break L28;
                 } else {
-                  stackOut_194_0 = ((sha) this).field_f;
+                  stackOut_194_0 = this.field_f;
                   stackIn_196_0 = stackOut_194_0;
                   break L28;
                 }
               }
               L29: {
                 var5 = stackIn_196_0;
-                ((sha) this).field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
-                if (null != ((sha) this).field_B) {
+                this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
+                if (null != this.field_B) {
                   L30: {
-                    stackOut_198_0 = ((sha) this).field_B;
+                    stackOut_198_0 = this.field_B;
                     stackIn_200_0 = stackOut_198_0;
                     stackIn_199_0 = stackOut_198_0;
-                    if (!((sha) this).field_A) {
-                      stackOut_200_0 = (vcb) (Object) stackIn_200_0;
+                    if (!this.field_A) {
+                      stackOut_200_0 = (vcb) ((Object) stackIn_200_0);
                       stackOut_200_1 = 0;
                       stackIn_201_0 = stackOut_200_0;
                       stackIn_201_1 = stackOut_200_1;
                       break L30;
                     } else {
-                      stackOut_199_0 = (vcb) (Object) stackIn_199_0;
-                      stackOut_199_1 = ((sha) this).field_h + -((sha) this).field_B.field_h;
+                      stackOut_199_0 = (vcb) ((Object) stackIn_199_0);
+                      stackOut_199_1 = this.field_h + -this.field_B.field_h;
                       stackIn_201_0 = stackOut_199_0;
                       stackIn_201_1 = stackOut_199_1;
                       break L30;
                     }
                   }
-                  ((vcb) (Object) stackIn_201_0).a(stackIn_201_1, ((sha) this).field_B.field_h, ((sha) this).field_y.field_f, 1, ((sha) this).field_y.field_r);
+                  ((vcb) (Object) stackIn_201_0).a(stackIn_201_1, this.field_B.field_h, this.field_y.field_f, 1, this.field_y.field_r);
                   break L29;
                 } else {
                   break L29;
                 }
               }
               L31: {
-                if (null != ((sha) this).field_v) {
+                if (null != this.field_v) {
                   L32: {
-                    stackOut_204_0 = ((sha) this).field_v;
-                    stackOut_204_1 = ((sha) this).field_y.field_g;
-                    stackOut_204_2 = ((sha) this).field_y.field_h;
-                    stackOut_204_3 = ((sha) this).field_v.field_f;
+                    stackOut_204_0 = this.field_v;
+                    stackOut_204_1 = this.field_y.field_g;
+                    stackOut_204_2 = this.field_y.field_h;
+                    stackOut_204_3 = this.field_v.field_f;
                     stackOut_204_4 = 1;
                     stackIn_206_0 = stackOut_204_0;
                     stackIn_206_1 = stackOut_204_1;
@@ -1144,13 +1149,13 @@ final class sha extends oda {
                     stackIn_205_2 = stackOut_204_2;
                     stackIn_205_3 = stackOut_204_3;
                     stackIn_205_4 = stackOut_204_4;
-                    if (((sha) this).field_z) {
-                      stackOut_206_0 = (vcb) (Object) stackIn_206_0;
+                    if (this.field_z) {
+                      stackOut_206_0 = (vcb) ((Object) stackIn_206_0);
                       stackOut_206_1 = stackIn_206_1;
                       stackOut_206_2 = stackIn_206_2;
                       stackOut_206_3 = stackIn_206_3;
                       stackOut_206_4 = stackIn_206_4;
-                      stackOut_206_5 = -((sha) this).field_v.field_f + ((sha) this).field_f;
+                      stackOut_206_5 = -this.field_v.field_f + this.field_f;
                       stackIn_207_0 = stackOut_206_0;
                       stackIn_207_1 = stackOut_206_1;
                       stackIn_207_2 = stackOut_206_2;
@@ -1159,7 +1164,7 @@ final class sha extends oda {
                       stackIn_207_5 = stackOut_206_5;
                       break L32;
                     } else {
-                      stackOut_205_0 = (vcb) (Object) stackIn_205_0;
+                      stackOut_205_0 = (vcb) ((Object) stackIn_205_0);
                       stackOut_205_1 = stackIn_205_1;
                       stackOut_205_2 = stackIn_205_2;
                       stackOut_205_3 = stackIn_205_3;
@@ -1184,63 +1189,63 @@ final class sha extends oda {
               return;
             } else {
               L33: {
-                if (null == ((sha) this).field_B) {
-                  stackOut_173_0 = ((sha) this).field_h;
+                if (null == this.field_B) {
+                  stackOut_173_0 = this.field_h;
                   stackIn_174_0 = stackOut_173_0;
                   break L33;
                 } else {
-                  stackOut_172_0 = -((sha) this).field_B.field_h + ((sha) this).field_h;
+                  stackOut_172_0 = -this.field_B.field_h + this.field_h;
                   stackIn_174_0 = stackOut_172_0;
                   break L33;
                 }
               }
               L34: {
                 var4 = stackIn_174_0;
-                if (null != ((sha) this).field_v) {
-                  stackOut_176_0 = ((sha) this).field_f + -((sha) this).field_v.field_f;
+                if (null != this.field_v) {
+                  stackOut_176_0 = this.field_f + -this.field_v.field_f;
                   stackIn_177_0 = stackOut_176_0;
                   break L34;
                 } else {
-                  stackOut_175_0 = ((sha) this).field_f;
+                  stackOut_175_0 = this.field_f;
                   stackIn_177_0 = stackOut_175_0;
                   break L34;
                 }
               }
               L35: {
                 var5 = stackIn_177_0;
-                ((sha) this).field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
-                if (null != ((sha) this).field_B) {
+                this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
+                if (null != this.field_B) {
                   L36: {
-                    stackOut_179_0 = ((sha) this).field_B;
+                    stackOut_179_0 = this.field_B;
                     stackIn_181_0 = stackOut_179_0;
                     stackIn_180_0 = stackOut_179_0;
-                    if (!((sha) this).field_A) {
-                      stackOut_181_0 = (vcb) (Object) stackIn_181_0;
+                    if (!this.field_A) {
+                      stackOut_181_0 = (vcb) ((Object) stackIn_181_0);
                       stackOut_181_1 = 0;
                       stackIn_182_0 = stackOut_181_0;
                       stackIn_182_1 = stackOut_181_1;
                       break L36;
                     } else {
-                      stackOut_180_0 = (vcb) (Object) stackIn_180_0;
-                      stackOut_180_1 = ((sha) this).field_h + -((sha) this).field_B.field_h;
+                      stackOut_180_0 = (vcb) ((Object) stackIn_180_0);
+                      stackOut_180_1 = this.field_h + -this.field_B.field_h;
                       stackIn_182_0 = stackOut_180_0;
                       stackIn_182_1 = stackOut_180_1;
                       break L36;
                     }
                   }
-                  ((vcb) (Object) stackIn_182_0).a(stackIn_182_1, ((sha) this).field_B.field_h, ((sha) this).field_y.field_f, 1, ((sha) this).field_y.field_r);
+                  ((vcb) (Object) stackIn_182_0).a(stackIn_182_1, this.field_B.field_h, this.field_y.field_f, 1, this.field_y.field_r);
                   break L35;
                 } else {
                   break L35;
                 }
               }
               L37: {
-                if (null != ((sha) this).field_v) {
+                if (null != this.field_v) {
                   L38: {
-                    stackOut_185_0 = ((sha) this).field_v;
-                    stackOut_185_1 = ((sha) this).field_y.field_g;
-                    stackOut_185_2 = ((sha) this).field_y.field_h;
-                    stackOut_185_3 = ((sha) this).field_v.field_f;
+                    stackOut_185_0 = this.field_v;
+                    stackOut_185_1 = this.field_y.field_g;
+                    stackOut_185_2 = this.field_y.field_h;
+                    stackOut_185_3 = this.field_v.field_f;
                     stackOut_185_4 = 1;
                     stackIn_187_0 = stackOut_185_0;
                     stackIn_187_1 = stackOut_185_1;
@@ -1252,13 +1257,13 @@ final class sha extends oda {
                     stackIn_186_2 = stackOut_185_2;
                     stackIn_186_3 = stackOut_185_3;
                     stackIn_186_4 = stackOut_185_4;
-                    if (((sha) this).field_z) {
-                      stackOut_187_0 = (vcb) (Object) stackIn_187_0;
+                    if (this.field_z) {
+                      stackOut_187_0 = (vcb) ((Object) stackIn_187_0);
                       stackOut_187_1 = stackIn_187_1;
                       stackOut_187_2 = stackIn_187_2;
                       stackOut_187_3 = stackIn_187_3;
                       stackOut_187_4 = stackIn_187_4;
-                      stackOut_187_5 = -((sha) this).field_v.field_f + ((sha) this).field_f;
+                      stackOut_187_5 = -this.field_v.field_f + this.field_f;
                       stackIn_188_0 = stackOut_187_0;
                       stackIn_188_1 = stackOut_187_1;
                       stackIn_188_2 = stackOut_187_2;
@@ -1267,7 +1272,7 @@ final class sha extends oda {
                       stackIn_188_5 = stackOut_187_5;
                       break L38;
                     } else {
-                      stackOut_186_0 = (vcb) (Object) stackIn_186_0;
+                      stackOut_186_0 = (vcb) ((Object) stackIn_186_0);
                       stackOut_186_1 = stackIn_186_1;
                       stackOut_186_2 = stackIn_186_2;
                       stackOut_186_3 = stackIn_186_3;
@@ -1295,64 +1300,64 @@ final class sha extends oda {
             var3 = 0;
             if (param0 != 16777215) {
               L39: {
-                ((sha) this).field_y = null;
-                if (null == ((sha) this).field_B) {
-                  stackOut_152_0 = ((sha) this).field_h;
+                this.field_y = (bk) null;
+                if (null == this.field_B) {
+                  stackOut_152_0 = this.field_h;
                   stackIn_153_0 = stackOut_152_0;
                   break L39;
                 } else {
-                  stackOut_151_0 = -((sha) this).field_B.field_h + ((sha) this).field_h;
+                  stackOut_151_0 = -this.field_B.field_h + this.field_h;
                   stackIn_153_0 = stackOut_151_0;
                   break L39;
                 }
               }
               L40: {
                 var4 = stackIn_153_0;
-                if (null != ((sha) this).field_v) {
-                  stackOut_155_0 = ((sha) this).field_f + -((sha) this).field_v.field_f;
+                if (null != this.field_v) {
+                  stackOut_155_0 = this.field_f + -this.field_v.field_f;
                   stackIn_156_0 = stackOut_155_0;
                   break L40;
                 } else {
-                  stackOut_154_0 = ((sha) this).field_f;
+                  stackOut_154_0 = this.field_f;
                   stackIn_156_0 = stackOut_154_0;
                   break L40;
                 }
               }
               L41: {
                 var5 = stackIn_156_0;
-                ((sha) this).field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
-                if (null != ((sha) this).field_B) {
+                this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
+                if (null != this.field_B) {
                   L42: {
-                    stackOut_158_0 = ((sha) this).field_B;
+                    stackOut_158_0 = this.field_B;
                     stackIn_160_0 = stackOut_158_0;
                     stackIn_159_0 = stackOut_158_0;
-                    if (!((sha) this).field_A) {
-                      stackOut_160_0 = (vcb) (Object) stackIn_160_0;
+                    if (!this.field_A) {
+                      stackOut_160_0 = (vcb) ((Object) stackIn_160_0);
                       stackOut_160_1 = 0;
                       stackIn_161_0 = stackOut_160_0;
                       stackIn_161_1 = stackOut_160_1;
                       break L42;
                     } else {
-                      stackOut_159_0 = (vcb) (Object) stackIn_159_0;
-                      stackOut_159_1 = ((sha) this).field_h + -((sha) this).field_B.field_h;
+                      stackOut_159_0 = (vcb) ((Object) stackIn_159_0);
+                      stackOut_159_1 = this.field_h + -this.field_B.field_h;
                       stackIn_161_0 = stackOut_159_0;
                       stackIn_161_1 = stackOut_159_1;
                       break L42;
                     }
                   }
-                  ((vcb) (Object) stackIn_161_0).a(stackIn_161_1, ((sha) this).field_B.field_h, ((sha) this).field_y.field_f, 1, ((sha) this).field_y.field_r);
+                  ((vcb) (Object) stackIn_161_0).a(stackIn_161_1, this.field_B.field_h, this.field_y.field_f, 1, this.field_y.field_r);
                   break L41;
                 } else {
                   break L41;
                 }
               }
               L43: {
-                if (null != ((sha) this).field_v) {
+                if (null != this.field_v) {
                   L44: {
-                    stackOut_164_0 = ((sha) this).field_v;
-                    stackOut_164_1 = ((sha) this).field_y.field_g;
-                    stackOut_164_2 = ((sha) this).field_y.field_h;
-                    stackOut_164_3 = ((sha) this).field_v.field_f;
+                    stackOut_164_0 = this.field_v;
+                    stackOut_164_1 = this.field_y.field_g;
+                    stackOut_164_2 = this.field_y.field_h;
+                    stackOut_164_3 = this.field_v.field_f;
                     stackOut_164_4 = 1;
                     stackIn_166_0 = stackOut_164_0;
                     stackIn_166_1 = stackOut_164_1;
@@ -1364,13 +1369,13 @@ final class sha extends oda {
                     stackIn_165_2 = stackOut_164_2;
                     stackIn_165_3 = stackOut_164_3;
                     stackIn_165_4 = stackOut_164_4;
-                    if (((sha) this).field_z) {
-                      stackOut_166_0 = (vcb) (Object) stackIn_166_0;
+                    if (this.field_z) {
+                      stackOut_166_0 = (vcb) ((Object) stackIn_166_0);
                       stackOut_166_1 = stackIn_166_1;
                       stackOut_166_2 = stackIn_166_2;
                       stackOut_166_3 = stackIn_166_3;
                       stackOut_166_4 = stackIn_166_4;
-                      stackOut_166_5 = -((sha) this).field_v.field_f + ((sha) this).field_f;
+                      stackOut_166_5 = -this.field_v.field_f + this.field_f;
                       stackIn_167_0 = stackOut_166_0;
                       stackIn_167_1 = stackOut_166_1;
                       stackIn_167_2 = stackOut_166_2;
@@ -1379,7 +1384,7 @@ final class sha extends oda {
                       stackIn_167_5 = stackOut_166_5;
                       break L44;
                     } else {
-                      stackOut_165_0 = (vcb) (Object) stackIn_165_0;
+                      stackOut_165_0 = (vcb) ((Object) stackIn_165_0);
                       stackOut_165_1 = stackIn_165_1;
                       stackOut_165_2 = stackIn_165_2;
                       stackOut_165_3 = stackIn_165_3;
@@ -1404,63 +1409,63 @@ final class sha extends oda {
               return;
             } else {
               L45: {
-                if (null == ((sha) this).field_B) {
-                  stackOut_133_0 = ((sha) this).field_h;
+                if (null == this.field_B) {
+                  stackOut_133_0 = this.field_h;
                   stackIn_134_0 = stackOut_133_0;
                   break L45;
                 } else {
-                  stackOut_132_0 = -((sha) this).field_B.field_h + ((sha) this).field_h;
+                  stackOut_132_0 = -this.field_B.field_h + this.field_h;
                   stackIn_134_0 = stackOut_132_0;
                   break L45;
                 }
               }
               L46: {
                 var4 = stackIn_134_0;
-                if (null != ((sha) this).field_v) {
-                  stackOut_136_0 = ((sha) this).field_f + -((sha) this).field_v.field_f;
+                if (null != this.field_v) {
+                  stackOut_136_0 = this.field_f + -this.field_v.field_f;
                   stackIn_137_0 = stackOut_136_0;
                   break L46;
                 } else {
-                  stackOut_135_0 = ((sha) this).field_f;
+                  stackOut_135_0 = this.field_f;
                   stackIn_137_0 = stackOut_135_0;
                   break L46;
                 }
               }
               L47: {
                 var5 = stackIn_137_0;
-                ((sha) this).field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
-                if (null != ((sha) this).field_B) {
+                this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
+                if (null != this.field_B) {
                   L48: {
-                    stackOut_139_0 = ((sha) this).field_B;
+                    stackOut_139_0 = this.field_B;
                     stackIn_141_0 = stackOut_139_0;
                     stackIn_140_0 = stackOut_139_0;
-                    if (!((sha) this).field_A) {
-                      stackOut_141_0 = (vcb) (Object) stackIn_141_0;
+                    if (!this.field_A) {
+                      stackOut_141_0 = (vcb) ((Object) stackIn_141_0);
                       stackOut_141_1 = 0;
                       stackIn_142_0 = stackOut_141_0;
                       stackIn_142_1 = stackOut_141_1;
                       break L48;
                     } else {
-                      stackOut_140_0 = (vcb) (Object) stackIn_140_0;
-                      stackOut_140_1 = ((sha) this).field_h + -((sha) this).field_B.field_h;
+                      stackOut_140_0 = (vcb) ((Object) stackIn_140_0);
+                      stackOut_140_1 = this.field_h + -this.field_B.field_h;
                       stackIn_142_0 = stackOut_140_0;
                       stackIn_142_1 = stackOut_140_1;
                       break L48;
                     }
                   }
-                  ((vcb) (Object) stackIn_142_0).a(stackIn_142_1, ((sha) this).field_B.field_h, ((sha) this).field_y.field_f, 1, ((sha) this).field_y.field_r);
+                  ((vcb) (Object) stackIn_142_0).a(stackIn_142_1, this.field_B.field_h, this.field_y.field_f, 1, this.field_y.field_r);
                   break L47;
                 } else {
                   break L47;
                 }
               }
               L49: {
-                if (null != ((sha) this).field_v) {
+                if (null != this.field_v) {
                   L50: {
-                    stackOut_145_0 = ((sha) this).field_v;
-                    stackOut_145_1 = ((sha) this).field_y.field_g;
-                    stackOut_145_2 = ((sha) this).field_y.field_h;
-                    stackOut_145_3 = ((sha) this).field_v.field_f;
+                    stackOut_145_0 = this.field_v;
+                    stackOut_145_1 = this.field_y.field_g;
+                    stackOut_145_2 = this.field_y.field_h;
+                    stackOut_145_3 = this.field_v.field_f;
                     stackOut_145_4 = 1;
                     stackIn_147_0 = stackOut_145_0;
                     stackIn_147_1 = stackOut_145_1;
@@ -1472,13 +1477,13 @@ final class sha extends oda {
                     stackIn_146_2 = stackOut_145_2;
                     stackIn_146_3 = stackOut_145_3;
                     stackIn_146_4 = stackOut_145_4;
-                    if (((sha) this).field_z) {
-                      stackOut_147_0 = (vcb) (Object) stackIn_147_0;
+                    if (this.field_z) {
+                      stackOut_147_0 = (vcb) ((Object) stackIn_147_0);
                       stackOut_147_1 = stackIn_147_1;
                       stackOut_147_2 = stackIn_147_2;
                       stackOut_147_3 = stackIn_147_3;
                       stackOut_147_4 = stackIn_147_4;
-                      stackOut_147_5 = -((sha) this).field_v.field_f + ((sha) this).field_f;
+                      stackOut_147_5 = -this.field_v.field_f + this.field_f;
                       stackIn_148_0 = stackOut_147_0;
                       stackIn_148_1 = stackOut_147_1;
                       stackIn_148_2 = stackOut_147_2;
@@ -1487,7 +1492,7 @@ final class sha extends oda {
                       stackIn_148_5 = stackOut_147_5;
                       break L50;
                     } else {
-                      stackOut_146_0 = (vcb) (Object) stackIn_146_0;
+                      stackOut_146_0 = (vcb) ((Object) stackIn_146_0);
                       stackOut_146_1 = stackIn_146_1;
                       stackOut_146_2 = stackIn_146_2;
                       stackOut_146_3 = stackIn_146_3;
@@ -1516,64 +1521,64 @@ final class sha extends oda {
           var3 = 0;
           if (param0 != 16777215) {
             L51: {
-              ((sha) this).field_y = null;
-              if (null == ((sha) this).field_B) {
-                stackOut_111_0 = ((sha) this).field_h;
+              this.field_y = (bk) null;
+              if (null == this.field_B) {
+                stackOut_111_0 = this.field_h;
                 stackIn_112_0 = stackOut_111_0;
                 break L51;
               } else {
-                stackOut_110_0 = -((sha) this).field_B.field_h + ((sha) this).field_h;
+                stackOut_110_0 = -this.field_B.field_h + this.field_h;
                 stackIn_112_0 = stackOut_110_0;
                 break L51;
               }
             }
             L52: {
               var4 = stackIn_112_0;
-              if (null != ((sha) this).field_v) {
-                stackOut_114_0 = ((sha) this).field_f + -((sha) this).field_v.field_f;
+              if (null != this.field_v) {
+                stackOut_114_0 = this.field_f + -this.field_v.field_f;
                 stackIn_115_0 = stackOut_114_0;
                 break L52;
               } else {
-                stackOut_113_0 = ((sha) this).field_f;
+                stackOut_113_0 = this.field_f;
                 stackIn_115_0 = stackOut_113_0;
                 break L52;
               }
             }
             L53: {
               var5 = stackIn_115_0;
-              ((sha) this).field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
-              if (null != ((sha) this).field_B) {
+              this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
+              if (null != this.field_B) {
                 L54: {
-                  stackOut_117_0 = ((sha) this).field_B;
+                  stackOut_117_0 = this.field_B;
                   stackIn_119_0 = stackOut_117_0;
                   stackIn_118_0 = stackOut_117_0;
-                  if (!((sha) this).field_A) {
-                    stackOut_119_0 = (vcb) (Object) stackIn_119_0;
+                  if (!this.field_A) {
+                    stackOut_119_0 = (vcb) ((Object) stackIn_119_0);
                     stackOut_119_1 = 0;
                     stackIn_120_0 = stackOut_119_0;
                     stackIn_120_1 = stackOut_119_1;
                     break L54;
                   } else {
-                    stackOut_118_0 = (vcb) (Object) stackIn_118_0;
-                    stackOut_118_1 = ((sha) this).field_h + -((sha) this).field_B.field_h;
+                    stackOut_118_0 = (vcb) ((Object) stackIn_118_0);
+                    stackOut_118_1 = this.field_h + -this.field_B.field_h;
                     stackIn_120_0 = stackOut_118_0;
                     stackIn_120_1 = stackOut_118_1;
                     break L54;
                   }
                 }
-                ((vcb) (Object) stackIn_120_0).a(stackIn_120_1, ((sha) this).field_B.field_h, ((sha) this).field_y.field_f, 1, ((sha) this).field_y.field_r);
+                ((vcb) (Object) stackIn_120_0).a(stackIn_120_1, this.field_B.field_h, this.field_y.field_f, 1, this.field_y.field_r);
                 break L53;
               } else {
                 break L53;
               }
             }
             L55: {
-              if (null != ((sha) this).field_v) {
+              if (null != this.field_v) {
                 L56: {
-                  stackOut_123_0 = ((sha) this).field_v;
-                  stackOut_123_1 = ((sha) this).field_y.field_g;
-                  stackOut_123_2 = ((sha) this).field_y.field_h;
-                  stackOut_123_3 = ((sha) this).field_v.field_f;
+                  stackOut_123_0 = this.field_v;
+                  stackOut_123_1 = this.field_y.field_g;
+                  stackOut_123_2 = this.field_y.field_h;
+                  stackOut_123_3 = this.field_v.field_f;
                   stackOut_123_4 = 1;
                   stackIn_125_0 = stackOut_123_0;
                   stackIn_125_1 = stackOut_123_1;
@@ -1585,13 +1590,13 @@ final class sha extends oda {
                   stackIn_124_2 = stackOut_123_2;
                   stackIn_124_3 = stackOut_123_3;
                   stackIn_124_4 = stackOut_123_4;
-                  if (((sha) this).field_z) {
-                    stackOut_125_0 = (vcb) (Object) stackIn_125_0;
+                  if (this.field_z) {
+                    stackOut_125_0 = (vcb) ((Object) stackIn_125_0);
                     stackOut_125_1 = stackIn_125_1;
                     stackOut_125_2 = stackIn_125_2;
                     stackOut_125_3 = stackIn_125_3;
                     stackOut_125_4 = stackIn_125_4;
-                    stackOut_125_5 = -((sha) this).field_v.field_f + ((sha) this).field_f;
+                    stackOut_125_5 = -this.field_v.field_f + this.field_f;
                     stackIn_126_0 = stackOut_125_0;
                     stackIn_126_1 = stackOut_125_1;
                     stackIn_126_2 = stackOut_125_2;
@@ -1600,7 +1605,7 @@ final class sha extends oda {
                     stackIn_126_5 = stackOut_125_5;
                     break L56;
                   } else {
-                    stackOut_124_0 = (vcb) (Object) stackIn_124_0;
+                    stackOut_124_0 = (vcb) ((Object) stackIn_124_0);
                     stackOut_124_1 = stackIn_124_1;
                     stackOut_124_2 = stackIn_124_2;
                     stackOut_124_3 = stackIn_124_3;
@@ -1625,63 +1630,63 @@ final class sha extends oda {
             return;
           } else {
             L57: {
-              if (null == ((sha) this).field_B) {
-                stackOut_92_0 = ((sha) this).field_h;
+              if (null == this.field_B) {
+                stackOut_92_0 = this.field_h;
                 stackIn_93_0 = stackOut_92_0;
                 break L57;
               } else {
-                stackOut_91_0 = -((sha) this).field_B.field_h + ((sha) this).field_h;
+                stackOut_91_0 = -this.field_B.field_h + this.field_h;
                 stackIn_93_0 = stackOut_91_0;
                 break L57;
               }
             }
             L58: {
               var4 = stackIn_93_0;
-              if (null != ((sha) this).field_v) {
-                stackOut_95_0 = ((sha) this).field_f + -((sha) this).field_v.field_f;
+              if (null != this.field_v) {
+                stackOut_95_0 = this.field_f + -this.field_v.field_f;
                 stackIn_96_0 = stackOut_95_0;
                 break L58;
               } else {
-                stackOut_94_0 = ((sha) this).field_f;
+                stackOut_94_0 = this.field_f;
                 stackIn_96_0 = stackOut_94_0;
                 break L58;
               }
             }
             L59: {
               var5 = stackIn_96_0;
-              ((sha) this).field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
-              if (null != ((sha) this).field_B) {
+              this.field_y.a(var2, var4, var5, param0 ^ 16777214, var3);
+              if (null != this.field_B) {
                 L60: {
-                  stackOut_98_0 = ((sha) this).field_B;
+                  stackOut_98_0 = this.field_B;
                   stackIn_100_0 = stackOut_98_0;
                   stackIn_99_0 = stackOut_98_0;
-                  if (!((sha) this).field_A) {
-                    stackOut_100_0 = (vcb) (Object) stackIn_100_0;
+                  if (!this.field_A) {
+                    stackOut_100_0 = (vcb) ((Object) stackIn_100_0);
                     stackOut_100_1 = 0;
                     stackIn_101_0 = stackOut_100_0;
                     stackIn_101_1 = stackOut_100_1;
                     break L60;
                   } else {
-                    stackOut_99_0 = (vcb) (Object) stackIn_99_0;
-                    stackOut_99_1 = ((sha) this).field_h + -((sha) this).field_B.field_h;
+                    stackOut_99_0 = (vcb) ((Object) stackIn_99_0);
+                    stackOut_99_1 = this.field_h + -this.field_B.field_h;
                     stackIn_101_0 = stackOut_99_0;
                     stackIn_101_1 = stackOut_99_1;
                     break L60;
                   }
                 }
-                ((vcb) (Object) stackIn_101_0).a(stackIn_101_1, ((sha) this).field_B.field_h, ((sha) this).field_y.field_f, 1, ((sha) this).field_y.field_r);
+                ((vcb) (Object) stackIn_101_0).a(stackIn_101_1, this.field_B.field_h, this.field_y.field_f, 1, this.field_y.field_r);
                 break L59;
               } else {
                 break L59;
               }
             }
             L61: {
-              if (null != ((sha) this).field_v) {
+              if (null != this.field_v) {
                 L62: {
-                  stackOut_104_0 = ((sha) this).field_v;
-                  stackOut_104_1 = ((sha) this).field_y.field_g;
-                  stackOut_104_2 = ((sha) this).field_y.field_h;
-                  stackOut_104_3 = ((sha) this).field_v.field_f;
+                  stackOut_104_0 = this.field_v;
+                  stackOut_104_1 = this.field_y.field_g;
+                  stackOut_104_2 = this.field_y.field_h;
+                  stackOut_104_3 = this.field_v.field_f;
                   stackOut_104_4 = 1;
                   stackIn_106_0 = stackOut_104_0;
                   stackIn_106_1 = stackOut_104_1;
@@ -1693,13 +1698,13 @@ final class sha extends oda {
                   stackIn_105_2 = stackOut_104_2;
                   stackIn_105_3 = stackOut_104_3;
                   stackIn_105_4 = stackOut_104_4;
-                  if (((sha) this).field_z) {
-                    stackOut_106_0 = (vcb) (Object) stackIn_106_0;
+                  if (this.field_z) {
+                    stackOut_106_0 = (vcb) ((Object) stackIn_106_0);
                     stackOut_106_1 = stackIn_106_1;
                     stackOut_106_2 = stackIn_106_2;
                     stackOut_106_3 = stackIn_106_3;
                     stackOut_106_4 = stackIn_106_4;
-                    stackOut_106_5 = -((sha) this).field_v.field_f + ((sha) this).field_f;
+                    stackOut_106_5 = -this.field_v.field_f + this.field_f;
                     stackIn_107_0 = stackOut_106_0;
                     stackIn_107_1 = stackOut_106_1;
                     stackIn_107_2 = stackOut_106_2;
@@ -1708,7 +1713,7 @@ final class sha extends oda {
                     stackIn_107_5 = stackOut_106_5;
                     break L62;
                   } else {
-                    stackOut_105_0 = (vcb) (Object) stackIn_105_0;
+                    stackOut_105_0 = (vcb) ((Object) stackIn_105_0);
                     stackOut_105_1 = stackIn_105_1;
                     stackOut_105_2 = stackIn_105_2;
                     stackOut_105_3 = stackIn_105_3;
@@ -1736,8 +1741,8 @@ final class sha extends oda {
     }
 
     private final boolean a(int param0, int param1) {
-        if (((sha) this).field_B != null) {
-          ((sha) this).field_B.c(param1 + 1715701295, ((sha) this).field_B.field_K * param0 + ((sha) this).field_B.field_L);
+        if (this.field_B != null) {
+          this.field_B.c(param1 + 1715701295, this.field_B.field_K * param0 + this.field_B.field_L);
           return true;
         } else {
           if (param1 != -1715704688) {
@@ -1750,8 +1755,9 @@ final class sha extends oda {
     }
 
     final boolean a(int param0, int param1, shb param2, char param3) {
+        boolean discarded$2 = false;
         RuntimeException var5 = null;
-        Object var6 = null;
+        shb var6 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -1776,12 +1782,12 @@ final class sha extends oda {
               if (param0 == -15834) {
                 break L1;
               } else {
-                var6 = null;
-                boolean discarded$2 = ((sha) this).a(-106, -5, (shb) null, '￘');
+                var6 = (shb) null;
+                discarded$2 = this.a(-106, -5, (shb) null, '￘');
                 break L1;
               }
             }
-            if (super.a(param0, param1, param2, param3)) {
+            if (super.a(param0 + 0, param1, param2, param3)) {
               this.e(-1715704688);
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
@@ -1794,23 +1800,23 @@ final class sha extends oda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var5;
+            stackOut_6_0 = (RuntimeException) (var5);
             stackOut_6_1 = new StringBuilder().append("sha.N(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -1818,49 +1824,49 @@ final class sha extends oda {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param3 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ')');
         }
         return stackIn_5_0 != 0;
     }
 
     final void a(int param0, int param1, int param2, shb param3) {
         try {
-            super.a(param0, param1, param2, param3);
+            super.a(param0, param1, param2 ^ 0, param3);
             if (param2 != -981) {
-                Object var6 = null;
-                ((sha) this).a(23, 55, 77, (shb) null);
+                shb var6 = (shb) null;
+                this.a(23, 55, 77, (shb) null);
             }
             this.h((byte) -113);
             this.e(-1715704688);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sha.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "sha.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void e(int param0) {
-        Object var3 = null;
+        eab var3 = null;
         L0: {
-          if (null != ((sha) this).field_B) {
-            ((sha) this).field_y.field_t.field_r = -(int)((long)(((sha) this).field_y.field_t.field_f + -((sha) this).field_y.field_f) * (long)((sha) this).field_B.field_L >> 16);
+          if (null != this.field_B) {
+            this.field_y.field_t.field_r = -(int)((long)(this.field_y.field_t.field_f + -this.field_y.field_f) * (long)this.field_B.field_L >> -1821903600);
             break L0;
           } else {
             break L0;
           }
         }
         if (param0 == -1715704688) {
-          if (null != ((sha) this).field_v) {
-            ((sha) this).field_y.field_t.field_g = -(int)((long)(((sha) this).field_y.field_t.field_h + -((sha) this).field_y.field_h) * (long)((sha) this).field_v.field_M >> 16);
+          if (null != this.field_v) {
+            this.field_y.field_t.field_g = -(int)((long)(this.field_y.field_t.field_h + -this.field_y.field_h) * (long)this.field_v.field_M >> -1715704688);
             return;
           } else {
             return;
           }
         } else {
-          var3 = null;
+          var3 = (eab) null;
           sha.a(74, (String) null, -117, -2, (byte) 104, -89, -50, (eab) null, -99);
-          if (null == ((sha) this).field_v) {
+          if (null == this.field_v) {
             return;
           } else {
-            ((sha) this).field_y.field_t.field_g = -(int)((long)(((sha) this).field_y.field_t.field_h + -((sha) this).field_y.field_h) * (long)((sha) this).field_v.field_M >> 16);
+            this.field_y.field_t.field_g = -(int)((long)(this.field_y.field_t.field_h + -this.field_y.field_h) * (long)this.field_v.field_M >> -1715704688);
             return;
           }
         }
@@ -1877,6 +1883,7 @@ final class sha extends oda {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_6_0 = 0;
@@ -1894,11 +1901,12 @@ final class sha extends oda {
             if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 L2: {
-                  if (!((sha) this).e((byte) -120)) {
+                  if (!this.e((byte) -120)) {
                     break L2;
                   } else {
                     if (!this.a(param2, param1 + -1715698682)) {
@@ -1914,6 +1922,7 @@ final class sha extends oda {
                 stackIn_8_0 = stackOut_7_0;
                 break L1;
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -1921,23 +1930,23 @@ final class sha extends oda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var8 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var8;
+            stackOut_9_0 = (RuntimeException) (var8);
             stackOut_9_1 = new StringBuilder().append("sha.WA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param3 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -1945,16 +1954,16 @@ final class sha extends oda {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
-        return stackIn_8_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          return stackIn_8_0 != 0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
     }
 }

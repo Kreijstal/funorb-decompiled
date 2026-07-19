@@ -10,16 +10,17 @@ final class bi {
     static int field_a;
 
     public static void a(int param0) {
+        uh discarded$2 = null;
         if (param0 != 480) {
-          uh discarded$2 = bi.a((byte) -77);
+          discarded$2 = bi.a((byte) -77);
           field_c = null;
           field_d = null;
-          field_e = null;
+          field_e = (int[][]) null;
           return;
         } else {
           field_c = null;
           field_d = null;
-          field_e = null;
+          field_e = (int[][]) null;
           return;
         }
     }
@@ -27,21 +28,17 @@ final class bi {
     final static uh a(byte param0) {
         if (param0 < 48) {
             bi.a(-128);
-            return (uh) (Object) new ef();
+            return (uh) ((Object) new ef());
         }
-        return (uh) (Object) new ef();
+        return (uh) ((Object) new ef());
     }
 
     bi(int param0, int param1, int param2) {
-        ((bi) this).field_f = param1;
-        ((bi) this).field_b = param0;
+        this.field_f = param1;
+        this.field_b = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 480;
     }
 }

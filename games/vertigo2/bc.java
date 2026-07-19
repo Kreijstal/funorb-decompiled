@@ -36,6 +36,7 @@ final class bc {
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
         String stackIn_76_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
@@ -57,14 +58,15 @@ final class bc {
         try {
           L0: {
             if (param3 == null) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param2 > 68) {
                 L1: {
-                  if (param4 <= 0) {
+                  if (-1 <= (param4 ^ -1)) {
                     break L1;
                   } else {
-                    if (param0 > 0) {
+                    if ((param0 ^ -1) < -1) {
                       L2: {
                         if (param3[3] != null) {
                           stackOut_11_0 = param3[3].field_x;
@@ -186,7 +188,7 @@ final class bc {
                         if (null == param3[1]) {
                           break L12;
                         } else {
-                          if (param3[1].field_x == 0) {
+                          if (-1 == (param3[1].field_x ^ -1)) {
                             break L12;
                           } else {
                             bi.c(var16, param1, var17, var18);
@@ -208,7 +210,7 @@ final class bc {
                         if (param3[7] == null) {
                           break L14;
                         } else {
-                          if (param3[7].field_x == 0) {
+                          if (-1 == (param3[7].field_x ^ -1)) {
                             break L14;
                           } else {
                             bi.c(var16, var19, var17, var11);
@@ -304,15 +306,18 @@ final class bc {
                           }
                         }
                       }
+                      decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
                       break L1;
                     }
                   }
                 }
-                return;
+                decompiledRegionSelector0 = 2;
+                break L0;
               } else {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -320,23 +325,23 @@ final class bc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L23: {
             var6 = decompiledCaughtException;
-            stackOut_73_0 = (RuntimeException) var6;
+            stackOut_73_0 = (RuntimeException) (var6);
             stackOut_73_1 = new StringBuilder().append("bc.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_75_0 = stackOut_73_0;
             stackIn_75_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;
             stackIn_74_1 = stackOut_73_1;
             if (param3 == null) {
-              stackOut_75_0 = (RuntimeException) (Object) stackIn_75_0;
-              stackOut_75_1 = (StringBuilder) (Object) stackIn_75_1;
+              stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
+              stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
               stackOut_75_2 = "null";
               stackIn_76_0 = stackOut_75_0;
               stackIn_76_1 = stackOut_75_1;
               stackIn_76_2 = stackOut_75_2;
               break L23;
             } else {
-              stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
-              stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
+              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
+              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
               stackOut_74_2 = "{...}";
               stackIn_76_0 = stackOut_74_0;
               stackIn_76_1 = stackOut_74_1;
@@ -344,19 +349,31 @@ final class bc {
               break L23;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + ',' + param4 + ',' + param5 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_76_0), stackIn_76_2 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != 7) {
+            field_a = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 71;
         field_a = "If you do nothing the game will revert to normal view in <%0> second.";
     }

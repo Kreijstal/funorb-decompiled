@@ -11,10 +11,10 @@ abstract class bg {
 
     final java.net.Socket b(int param0) throws IOException {
         if (param0 != 5101) {
-          ((bg) this).field_a = 29;
-          return new java.net.Socket(((bg) this).field_c, ((bg) this).field_a);
+          this.field_a = 29;
+          return new java.net.Socket(this.field_c, this.field_a);
         } else {
-          return new java.net.Socket(((bg) this).field_c, ((bg) this).field_a);
+          return new java.net.Socket(this.field_c, this.field_a);
         }
     }
 
@@ -30,10 +30,6 @@ abstract class bg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "This option cannot be combined with the current settings for:  ";
     }
 }

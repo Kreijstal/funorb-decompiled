@@ -8,6 +8,8 @@ final class pi {
     static String field_b;
 
     final static void a(int param0) {
+        String[][] dupTemp$2 = null;
+        int[][] dupTemp$3 = null;
         RuntimeException var1 = null;
         int var2 = 0;
         pg var3 = null;
@@ -25,131 +27,158 @@ final class pi {
         int var14 = 0;
         int var15 = 0;
         nk var16 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var12 = Chess.field_G;
         try {
           L0: {
-            var13 = tk.field_h;
-            var16 = var13;
-            var2 = var16.i(-125);
-            var3 = (pg) (Object) nd.field_h.g(-18110);
-            L1: while (true) {
-              L2: {
+            L1: {
+              var13 = tk.field_h;
+              var16 = var13;
+              var2 = var16.i(-125);
+              if (param0 >= 102) {
+                break L1;
+              } else {
+                field_d = (dh) null;
+                break L1;
+              }
+            }
+            var3 = (pg) ((Object) nd.field_h.g(-18110));
+            L2: while (true) {
+              L3: {
                 if (var3 == null) {
-                  break L2;
+                  break L3;
                 } else {
                   if (var2 == var3.field_q) {
-                    break L2;
+                    break L3;
                   } else {
-                    var3 = (pg) (Object) nd.field_h.a((byte) -102);
-                    continue L1;
+                    var3 = (pg) ((Object) nd.field_h.a((byte) -102));
+                    continue L2;
                   }
                 }
               }
               if (var3 == null) {
                 si.d(65280);
-                return;
+                decompiledRegionSelector0 = 0;
+                break L0;
               } else {
-                L3: {
+                L4: {
                   var4 = var16.i(-89);
                   if (var4 != 0) {
                     ag.field_d[0] = ci.field_J;
                     var5 = var3.field_u;
                     var6_int = 1;
-                    L4: while (true) {
+                    L5: while (true) {
                       if (var6_int >= var4) {
                         ek.a(var5, var4, (byte) 127);
                         var6_int = 0;
-                        L5: while (true) {
+                        L6: while (true) {
                           if (var4 <= var6_int) {
                             pd.b(var5, -109);
-                            String[][] dupTemp$2 = new String[2][var5];
+                            dupTemp$2 = new String[2][var5];
                             var3.field_t = dupTemp$2;
                             var6 = dupTemp$2;
-                            int[][] dupTemp$3 = new int[2][var5 * 4];
+                            dupTemp$3 = new int[2][var5 * 4];
                             var3.field_j = dupTemp$3;
                             var7 = dupTemp$3;
                             var8 = ed.field_b;
                             var9 = 0;
                             var10 = 0;
-                            L6: while (true) {
+                            L7: while (true) {
                               if (var8 <= var9) {
                                 var14 = 0;
                                 var9 = var14;
                                 var15 = 0;
                                 var10 = var15;
-                                L7: while (true) {
+                                L8: while (true) {
                                   if (var14 >= var8) {
-                                    break L3;
+                                    break L4;
                                   } else {
-                                    L8: {
-                                      var11 = vn.field_Ab[var14 + var5];
-                                      var6[1][var15] = ag.field_d[var11];
-                                      var7[1][4 * var15] = hg.field_d[var11];
-                                      var7[1][1 + 4 * var15] = hn.field_e[var11];
-                                      var7[1][2 + var15 * 4] = in.field_j[var11];
-                                      var7[1][3 + var15 * 4] = oc.field_n[var11];
-                                      if (!qd.a((byte) 13, ag.field_d[var11])) {
-                                        break L8;
-                                      } else {
-                                        break L8;
+                                    var11 = vn.field_Ab[var14 + var5];
+                                    var6[1][var15] = ag.field_d[var11];
+                                    var7[1][4 * var15] = hg.field_d[var11];
+                                    var7[1][1 + 4 * var15] = hn.field_e[var11];
+                                    var7[1][2 + var15 * 4] = in.field_j[var11];
+                                    var7[1][3 + var15 * 4] = oc.field_n[var11];
+                                    if (qd.a((byte) 13, ag.field_d[var11])) {
+                                      L9: {
+                                        if (0 == hn.field_e[var11] - (-in.field_j[var11] - oc.field_n[var11])) {
+                                          var6[1][var15] = null;
+                                          var15--;
+                                          break L9;
+                                        } else {
+                                          break L9;
+                                        }
                                       }
+                                      var15++;
+                                      var14++;
+                                      continue L8;
+                                    } else {
+                                      var15++;
+                                      var14++;
+                                      continue L8;
                                     }
-                                    var15++;
-                                    var14++;
-                                    continue L7;
                                   }
                                 }
                               } else {
-                                L9: {
-                                  var11 = vn.field_Ab[var9];
-                                  var6[0][var10] = ag.field_d[var11];
-                                  var7[0][var10 * 4] = hg.field_d[var11];
-                                  var7[0][1 + 4 * var10] = hn.field_e[var11];
-                                  var7[0][2 + 4 * var10] = in.field_j[var11];
-                                  var7[0][3 + 4 * var10] = oc.field_n[var11];
-                                  if (!qd.a((byte) 13, ag.field_d[var11])) {
-                                    break L9;
-                                  } else {
-                                    break L9;
+                                var11 = vn.field_Ab[var9];
+                                var6[0][var10] = ag.field_d[var11];
+                                var7[0][var10 * 4] = hg.field_d[var11];
+                                var7[0][1 + 4 * var10] = hn.field_e[var11];
+                                var7[0][2 + 4 * var10] = in.field_j[var11];
+                                var7[0][3 + 4 * var10] = oc.field_n[var11];
+                                if (qd.a((byte) 13, ag.field_d[var11])) {
+                                  L10: {
+                                    if (in.field_j[var11] + (hn.field_e[var11] + oc.field_n[var11]) == 0) {
+                                      var6[0][var10] = null;
+                                      var10--;
+                                      break L10;
+                                    } else {
+                                      break L10;
+                                    }
                                   }
+                                  var9++;
+                                  var10++;
+                                  continue L7;
+                                } else {
+                                  var9++;
+                                  var10++;
+                                  continue L7;
                                 }
-                                var9++;
-                                var10++;
-                                continue L6;
                               }
                             }
                           } else {
-                            L10: {
-                              nj.a((byte) 20, (p) (Object) var16);
-                              if (var6_int != 0) {
+                            L11: {
+                              nj.a((byte) 20, var16);
+                              if (-1 != (var6_int ^ -1)) {
                                 lf.a(jb.field_b, (byte) 117, l.field_o, var6_int, gm.field_c, sl.field_e);
-                                break L10;
+                                break L11;
                               } else {
                                 var3.field_r = l.field_o;
                                 var3.field_k = sl.field_e;
                                 var3.field_p = gm.field_c;
                                 var3.field_m = jb.field_b;
                                 lf.a(jb.field_b, (byte) 117, l.field_o, var6_int, gm.field_c, sl.field_e);
-                                break L10;
+                                break L11;
                               }
                             }
                             var6_int++;
-                            continue L5;
+                            continue L6;
                           }
                         }
                       } else {
                         ag.field_d[var6_int] = var13.d(0);
                         var6_int++;
-                        continue L4;
+                        continue L5;
                       }
                     }
                   } else {
-                    break L3;
+                    break L4;
                   }
                 }
                 var3.field_l = true;
                 var3.c(-2193);
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             }
@@ -157,7 +186,12 @@ final class pi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var1, "pi.A(" + 125 + ')');
+          throw fk.a((Throwable) ((Object) var1), "pi.A(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -203,8 +237,8 @@ final class pi {
                 var12 = param8;
                 var13 = param2;
                 var14 = param6;
-                var15 = var17[var11] >> 1 & 8355711;
-                var10_array[var11] = (ce.a(var14, 33503610) >> 17) - -(ce.a(var13, 33423475) >> 9) - (-(ce.a(33423361, var12) >> 1) - var15);
+                var15 = var17[var11] >> 1170726593 & 8355711;
+                var10_array[var11] = (ce.a(var14, 33503610) >> 2014530545) - -(ce.a(var13, 33423475) >> -1207284919) - (-(ce.a(33423361, var12) >> 1443047329) - var15);
                 param8 = param8 + param4;
                 param7++;
                 param6 = param6 + param0;
@@ -217,23 +251,23 @@ final class pi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var10 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var10;
+            stackOut_5_0 = (RuntimeException) (var10);
             stackOut_5_1 = new StringBuilder().append("pi.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param3 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -241,7 +275,7 @@ final class pi {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -249,15 +283,11 @@ final class pi {
         field_c = null;
         field_d = null;
         field_a = null;
-        int var1 = 39;
+        int var1 = -39 / ((param0 - -20) / 50);
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Invite <%0> to this game";
     }
 }

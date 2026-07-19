@@ -31,7 +31,7 @@ final class gh extends km {
         var5 = wc.field_l.get(2);
         var6 = wc.field_l.get(1);
         if (param1 <= 74) {
-          return null;
+          return (String) null;
         } else {
           var7 = wc.field_l.get(11);
           var8 = wc.field_l.get(12);
@@ -55,10 +55,6 @@ final class gh extends km {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Kb = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_Lb = "AI: <%0>";
     }

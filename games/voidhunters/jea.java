@@ -11,27 +11,47 @@ final class jea extends rqa {
     }
 
     public static void e(int param0) {
+        if (param0 != -20005) {
+            field_p = 75;
+            field_q = null;
+            field_o = null;
+            return;
+        }
         field_q = null;
         field_o = null;
     }
 
     final static void a(int param0) {
+        mob discarded$4 = null;
+        mob discarded$5 = null;
         java.awt.Canvas var1 = null;
-        if (!(upa.field_a)) {
+        L0: {
+          if (!upa.field_a) {
             upa.field_a = true;
             var1 = df.e((byte) 106);
             pk.field_o = kc.field_b;
             noa.field_q = uia.field_b;
-            mob discarded$0 = bm.field_o.a((java.awt.Component) (Object) var1, stb.field_p, uqb.field_h, 14);
-            mob discarded$1 = bm.field_o.a((java.awt.Component) (Object) var1, false, (byte) -106);
+            discarded$4 = bm.field_o.a((java.awt.Component) ((Object) var1), stb.field_p, uqb.field_h, 14);
+            discarded$5 = bm.field_o.a((java.awt.Component) ((Object) var1), false, (byte) -106);
             uia.field_b = stb.field_p;
             kc.field_b = uqb.field_h;
+            break L0;
+          } else {
+            break L0;
+          }
+        }
+        if (param0 != 6045) {
+          field_p = 95;
+          return;
+        } else {
+          return;
         }
     }
 
     final nc a(nc[] param0, int param1) {
+        nc discarded$2 = null;
         RuntimeException var3 = null;
-        Object var4 = null;
+        nc[] var4 = null;
         nc stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -57,12 +77,12 @@ final class jea extends rqa {
               if (param1 <= -119) {
                 break L1;
               } else {
-                var4 = null;
-                nc discarded$2 = ((jea) this).a((nc[]) null, 3);
+                var4 = (nc[]) null;
+                discarded$2 = this.a((nc[]) null, 3);
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -70,23 +90,23 @@ final class jea extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("jea.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -94,16 +114,12 @@ final class jea extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Show all private chat";
         field_q = "Add condition (Variable at least x)";
     }

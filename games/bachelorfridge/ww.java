@@ -22,8 +22,8 @@ final class ww extends td {
           if (var6 >= rn.field_u) {
             var6 = var12.g(0);
             var7 = kla.a(var6, vj.field_o, -2147483648);
-            var8 = 0;
-            var9 = (lr) (Object) var12.b((byte) 90);
+            var8 = param0;
+            var9 = (lr) ((Object) var12.b((byte) 90));
             L1: while (true) {
               L2: {
                 if (var9 == null) {
@@ -33,7 +33,7 @@ final class ww extends td {
                     break L2;
                   } else {
                     var8++;
-                    var9 = (lr) (Object) var12.c(0);
+                    var9 = (lr) ((Object) var12.c(param0 ^ 0));
                     continue L1;
                   }
                 }
@@ -41,9 +41,9 @@ final class ww extends td {
               return var9;
             }
           } else {
-            if (rs.field_g[var6].a(param4, param1, param2, param3, -2581)) {
-              if (rs.field_g[var6].a(0, param2)) {
-                var11.a((bw) (Object) rs.field_g[var6], true);
+            if (rs.field_g[var6].a(param4, param1, param2, param3, param0 ^ -2581)) {
+              if (rs.field_g[var6].a(param0 + 0, param2)) {
+                var11.a(rs.field_g[var6], true);
                 var6++;
                 continue L0;
               } else {
@@ -83,8 +83,8 @@ final class ww extends td {
         try {
           L0: {
             L1: {
-              var3 = ((ww) this).field_h.a(46, param0);
-              var4 = new ku(((ww) this).field_g, new nq(var3));
+              var3 = this.field_h.a(46, param0);
+              var4 = new ku(this.field_g, new nq(var3));
               if (param1 == 3) {
                 break L1;
               } else {
@@ -92,8 +92,8 @@ final class ww extends td {
                 break L1;
               }
             }
-            var4.field_o.a((bw) (Object) new tfa(), true);
-            stackOut_2_0 = (ku) var4;
+            var4.field_o.a(new tfa(), true);
+            stackOut_2_0 = (ku) (var4);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -101,23 +101,23 @@ final class ww extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_0 = (RuntimeException) (var3_ref);
             stackOut_4_1 = new StringBuilder().append("ww.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -125,9 +125,9 @@ final class ww extends td {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return (ii) (Object) stackIn_3_0;
+        return (ii) ((Object) stackIn_3_0);
     }
 
     ww(int param0, aga param1) {
@@ -135,10 +135,6 @@ final class ww extends td {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = false;
     }
 }

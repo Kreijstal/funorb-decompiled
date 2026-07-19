@@ -25,15 +25,11 @@ final class ka implements uj {
         ha.field_e = 2;
         tb.field_a = 3;
         if (param0) {
-            ((ka) this).a(false);
+            this.a(false);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new ae();
         field_c = "Highscores";
         field_b = "Username: ";

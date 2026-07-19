@@ -12,14 +12,17 @@ abstract class oa extends fl {
 
     final static void a(int param0, dc param1, int param2) {
         c var3 = null;
+        if (param2 != -755) {
+            return;
+        }
         try {
             var3 = om.field_c;
-            var3.a(5, true);
+            var3.a(param0, true);
             var3.f(2, -123);
             var3.f(0, -123);
             var3.f(param1.field_j, -123);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oa.E(" + 5 + ',' + (param1 != null ? "{...}" : "null") + ',' + -755 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "oa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -39,14 +42,10 @@ abstract class oa extends fl {
     abstract byte[] a(boolean param0);
 
     oa() {
-        ((oa) this).field_u = true;
+        this.field_u = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = "End Game";
         field_v = 5;
     }

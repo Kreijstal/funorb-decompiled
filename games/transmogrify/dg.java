@@ -11,9 +11,9 @@ final class dg extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            ((dg) this).field_c = true;
+            this.field_c = true;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "dg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "dg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,20 +47,20 @@ final class dg extends java.awt.Canvas implements java.awt.event.FocusListener {
         if (null != gh.field_m) {
           if (param0 >= -9) {
             dg.a(54);
-            ci.field_f.b((qg) (Object) gh.field_m, (byte) -71);
+            ci.field_f.b((qg) (gh.field_m), (byte) -71);
             return;
           } else {
-            ci.field_f.b((qg) (Object) gh.field_m, (byte) -71);
+            ci.field_f.b((qg) (gh.field_m), (byte) -71);
             return;
           }
         } else {
           gh.field_m = new sd(ci.field_f, tg.field_c);
           if (param0 < -9) {
-            ci.field_f.b((qg) (Object) gh.field_m, (byte) -71);
+            ci.field_f.b((qg) (gh.field_m), (byte) -71);
             return;
           } else {
             dg.a(54);
-            ci.field_f.b((qg) (Object) gh.field_m, (byte) -71);
+            ci.field_f.b((qg) (gh.field_m), (byte) -71);
             return;
           }
         }
@@ -74,17 +74,13 @@ final class dg extends java.awt.Canvas implements java.awt.event.FocusListener {
             return;
         }
         try {
-            ra.a(param1, ((dg) this).field_f, 100);
+            ra.a(param1, this.field_f, 100);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "dg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "dg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new hb[13];
         field_e = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
         field_a = -1;

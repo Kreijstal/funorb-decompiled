@@ -12,20 +12,19 @@ final class nb {
             return wi.field_d;
         }
         int var1 = 37 / ((3 - param0) / 62);
-        return (java.applet.Applet) (Object) hh.field_e;
+        return (java.applet.Applet) ((Object) hh.field_e);
     }
 
     public static void a(byte param0) {
+        if (param0 != 76) {
+            return;
+        }
         field_c = null;
         field_a = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = false;
         field_a = null;
         field_c = "members-only content";

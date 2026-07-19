@@ -19,29 +19,37 @@ final class la {
     int field_m;
 
     final static int a(byte param0) {
-        int var1 = -66;
+        int var1 = 66 / ((param0 - -40) / 60);
         return -bf.field_b + d.field_e;
     }
 
     final static int a(int param0, byte param1) {
+        if (param1 != 86) {
+            field_f = false;
+            return re.field_f[param0 & 2047];
+        }
         return re.field_f[param0 & 2047];
     }
 
     final int b(byte param0) {
-        if (!((la) this).field_k) {
-          if (((la) this).field_n != 2) {
-            if (~((la) this).field_a != ~rk.field_l) {
+        int discarded$4 = 0;
+        int discarded$5 = 0;
+        int discarded$6 = 0;
+        int discarded$7 = 0;
+        if (!this.field_k) {
+          if (this.field_n != 2) {
+            if ((this.field_a ^ -1L) != (rk.field_l ^ -1L)) {
               if (ke.field_d != 2) {
                 if (param0 < 94) {
-                  int discarded$4 = ((la) this).b((byte) -110);
+                  discarded$4 = this.b((byte) -110);
                   return 0;
                 } else {
                   return 0;
                 }
               } else {
-                if (!mj.a(((la) this).field_e, (byte) -17)) {
+                if (!mj.a(this.field_e, (byte) -17)) {
                   if (param0 < 94) {
-                    int discarded$5 = ((la) this).b((byte) -110);
+                    discarded$5 = this.b((byte) -110);
                     return 0;
                   } else {
                     return 0;
@@ -54,19 +62,19 @@ final class la {
               return 1;
             }
           } else {
-            if (0 >= ((la) this).field_h) {
-              if (~((la) this).field_a != ~rk.field_l) {
+            if (0 >= this.field_h) {
+              if ((this.field_a ^ -1L) != (rk.field_l ^ -1L)) {
                 if (ke.field_d != 2) {
                   if (param0 < 94) {
-                    int discarded$6 = ((la) this).b((byte) -110);
+                    discarded$6 = this.b((byte) -110);
                     return 0;
                   } else {
                     return 0;
                   }
                 } else {
-                  if (!mj.a(((la) this).field_e, (byte) -17)) {
+                  if (!mj.a(this.field_e, (byte) -17)) {
                     if (param0 < 94) {
-                      int discarded$7 = ((la) this).b((byte) -110);
+                      discarded$7 = this.b((byte) -110);
                       return 0;
                     } else {
                       return 0;
@@ -88,37 +96,37 @@ final class la {
     }
 
     final static int a(int param0) {
+        if (param0 != 23940) {
+            field_l = (int[]) null;
+            return 1;
+        }
         return 1;
     }
 
     public static void c(byte param0) {
-        int var1 = -19;
+        int var1 = -38 / ((0 - param0) / 45);
         field_j = null;
         field_b = null;
         field_l = null;
     }
 
     la(boolean param0) {
-        ((la) this).field_e = tk.field_v;
-        ((la) this).field_n = uk.field_a;
-        ((la) this).field_o = di.field_d;
-        ((la) this).field_h = wd.field_j;
+        this.field_e = tk.field_v;
+        this.field_n = uk.field_a;
+        this.field_o = di.field_d;
+        this.field_h = wd.field_j;
         if (param0) {
-            ((la) this).field_i = kp.field_a;
+            this.field_i = kp.field_a;
         } else {
-            ((la) this).field_i = null;
+            this.field_i = null;
         }
-        ((la) this).field_a = gg.field_d;
-        ((la) this).field_d = sa.field_t;
-        ((la) this).field_m = ce.field_w;
-        ((la) this).field_k = ac.field_l;
+        this.field_a = gg.field_d;
+        this.field_d = sa.field_t;
+        this.field_m = ce.field_w;
+        this.field_k = ac.field_l;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = 0;
         field_l = new int[8192];
         field_f = true;

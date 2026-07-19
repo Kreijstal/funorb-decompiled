@@ -38,11 +38,11 @@ final class qj {
         try {
           L0: {
             L1: {
-              ((qj) this).field_e = param0;
-              if (((qj) this).field_e != null) {
+              this.field_e = param0;
+              if (this.field_e != null) {
                 break L1;
               } else {
-                ((qj) this).field_e = "";
+                this.field_e = "";
                 break L1;
               }
             }
@@ -64,11 +64,11 @@ final class qj {
                 break L2;
               }
             }
-            ((qj) this).field_d = stackIn_6_1 != 0;
-            if (0 != ((qj) this).field_e.length()) {
+            ((qj) (this)).field_d = stackIn_6_1 != 0;
+            if (0 != this.field_e.length()) {
               break L0;
             } else {
-              ((qj) this).field_d = false;
+              this.field_d = false;
               return;
             }
           }
@@ -76,23 +76,23 @@ final class qj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("qj.<init>(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -100,7 +100,7 @@ final class qj {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
@@ -108,18 +108,21 @@ final class qj {
         if (param0 <= 57) {
             return false;
         }
-        return ((qj) this).field_d;
+        return this.field_d;
     }
 
     final String a(boolean param0) {
         if (param0) {
-            ((qj) this).field_e = null;
-            return ((qj) this).field_e;
+            this.field_e = (String) null;
+            return this.field_e;
         }
-        return ((qj) this).field_e;
+        return this.field_e;
     }
 
     public static void a(byte param0) {
+        if (param0 != 56) {
+            return;
+        }
         field_b = null;
         field_a = null;
     }
@@ -129,10 +132,6 @@ final class qj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Ask to join <%0>'s game";
         field_b = new int[4096];
     }

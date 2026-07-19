@@ -17,10 +17,6 @@ final class lg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "lg.A(";
         field_b = "<%0> is offering an unrated rematch.";
         field_c = "You must play <%1> more rated games before playing with the current options.";

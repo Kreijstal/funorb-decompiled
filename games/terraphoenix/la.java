@@ -61,10 +61,6 @@ public class la {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = false;
         field_e = new Hashtable(16);
     }

@@ -15,12 +15,13 @@ final class qta extends ge {
 
     final void q(byte param0) {
         super.q(param0);
-        ((qta) this).b(81, 2097152, 2097152);
+        this.b(81, 2097152, 2097152);
     }
 
     final boolean n(byte param0) {
+        boolean discarded$0 = false;
         if (param0 != -122) {
-            boolean discarded$0 = ((qta) this).z(10);
+            discarded$0 = this.z(10);
             return true;
         }
         return true;
@@ -38,8 +39,9 @@ final class qta extends ge {
     }
 
     final boolean B(int param0) {
+        boolean discarded$0 = false;
         if (param0 != -23309) {
-            boolean discarded$0 = ((qta) this).z(-114);
+            discarded$0 = this.z(-114);
             return true;
         }
         return true;
@@ -73,20 +75,20 @@ final class qta extends ge {
         try {
           L0: {
             var9 = new fsa(param2, param0);
-            var9.b((byte) -11, ((qta) this).field_k, ((qta) this).field_l);
+            var9.b((byte) -11, this.field_k, this.field_l);
             var9.h(3, param1 ^ param1);
-            var9.a((byte) 83, (nv) (Object) new eq(param2, param0));
+            var9.a((byte) 83, (nv) (new eq(param2, param0)));
             var5 = new ska(param2, param0);
             var6 = ci.a(1, -1);
             var6.a(param1 ^ -119, true);
             var5.a(var6, (byte) 61);
-            ((qta) this).a((byte) 43, (mra) (Object) var5, param2);
-            var9.a((byte) 83, (nv) (Object) var5);
+            this.a((byte) 43, var5, param2);
+            var9.a((byte) 83, (nv) (var5));
             var7 = rm.field_a;
-            var8 = (boa) (Object) var7.a(7, param1 ^ 122);
+            var8 = (boa) ((Object) var7.a(7, param1 ^ 122));
             var8.b(106, 13);
-            var9.a((gr) (Object) var5, (byte) 124, (dg) (Object) var8);
-            stackOut_0_0 = (fsa) var9;
+            var9.a(var5, (byte) 124, var8);
+            stackOut_0_0 = (fsa) (var9);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -94,23 +96,23 @@ final class qta extends ge {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_0 = (RuntimeException) (var4);
             stackOut_2_1 = new StringBuilder().append("qta.AC(").append(param0).append(',').append(param1).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -118,23 +120,25 @@ final class qta extends ge {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
 
     final boolean C(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 128) {
-            boolean discarded$0 = ((qta) this).z(-65);
+            discarded$0 = this.z(-65);
             return true;
         }
         return true;
     }
 
     final boolean v(int param0) {
+        fsa discarded$0 = null;
         if (param0 != 555277520) {
-            Object var3 = null;
-            fsa discarded$0 = ((qta) this).a(true, -115, (la) null);
+            la var3 = (la) null;
+            discarded$0 = this.a(true, -115, (la) null);
             return false;
         }
         return false;
@@ -144,14 +148,14 @@ final class qta extends ge {
         try {
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "qta.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "qta.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final int t(int param0) {
         if (param0 != 8) {
-            Object var3 = null;
-            ((qta) this).a(false, (kh) null);
+            kh var3 = (kh) null;
+            this.a(false, (kh) null);
             return 7;
         }
         return 7;

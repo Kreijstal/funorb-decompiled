@@ -12,86 +12,114 @@ final class gi {
 
     final static rk a(int param0, int param1, int param2, um param3) {
         RuntimeException var4 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        rk stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        rk stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
-          if (tj.a(param2, param0, param3, (byte) 83)) {
-            return th.b(0);
-          } else {
-            return null;
+          L0: {
+            if (tj.a(param2, param0, param3, (byte) 83)) {
+              L1: {
+                if (param1 == 3807) {
+                  break L1;
+                } else {
+                  field_b = (String) null;
+                  break L1;
+                }
+              }
+              stackOut_5_0 = th.b(param1 ^ 3807);
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              return null;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L0: {
+          L2: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
-            stackOut_4_1 = new StringBuilder().append("gi.B(").append(param0).append(',').append(3807).append(',').append(param2).append(',');
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_7_0 = (RuntimeException) (var4);
+            stackOut_7_1 = new StringBuilder().append("gi.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param3 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L0;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L0;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
+        return stackIn_6_0;
     }
 
     final static void a(int param0, le param1, int param2, boolean param3, le param4, int param5) {
         try {
-            ek.field_b = 2;
-            kl.field_i = 8;
+            ek.field_b = param5;
+            if (param3) {
+                le var7 = (le) null;
+                gi.a(-26, (le) null, 18, false, (le) null, 96);
+            }
+            kl.field_i = param2;
             ie.field_b = param4;
             in.field_d = param1;
-            m.field_d = 8;
+            m.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "gi.C(" + 8 + ',' + (param1 != null ? "{...}" : "null") + ',' + 8 + ',' + false + ',' + (param4 != null ? "{...}" : "null") + ',' + 2 + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "gi.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
     public static void a(boolean param0) {
+        le var2 = null;
         field_f = null;
-        field_g = null;
-        field_a = null;
-        field_c = null;
-        field_b = null;
-        field_d = null;
+        if (!param0) {
+          var2 = (le) null;
+          gi.a(108, (le) null, -27, false, (le) null, -31);
+          field_g = null;
+          field_a = null;
+          field_c = null;
+          field_b = null;
+          field_d = null;
+          return;
+        } else {
+          field_g = null;
+          field_a = null;
+          field_c = null;
+          field_b = null;
+          field_d = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Please enter your date of birth to enable chat:";
         field_a = new ij();
         field_d = new tk();

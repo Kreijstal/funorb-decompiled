@@ -13,7 +13,7 @@ final class pj {
             Throwable var6 = null;
             Throwable var7 = null;
             java.lang.reflect.Field var7_ref = null;
-            Object var8 = null;
+            java.awt.Frame var8 = null;
             int statePc = 0;
             Throwable caughtException = null;
             stateLoop: while (true) {
@@ -27,7 +27,7 @@ final class pj {
                         try {
                             var4_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
                             var4_ref.setAccessible(true);
-                            if (!((Boolean) var4_ref.get((Object) (Object) ((pj) this).field_b)).booleanValue()) {
+                            if (!((Boolean) (var4_ref.get(this.field_b))).booleanValue()) {
                                 statePc = 5;
                             } else {
                                 statePc = 2;
@@ -42,7 +42,7 @@ final class pj {
                     case 2: {
                         try {
                             var3 = 1;
-                            var4_ref.set((Object) (Object) ((pj) this).field_b, (Object) (Object) Boolean.FALSE);
+                            var4_ref.set(this.field_b, Boolean.FALSE);
                             statePc = 5;
                             continue stateLoop;
                         } catch (Throwable stateCaught_2) {
@@ -65,14 +65,14 @@ final class pj {
                         continue stateLoop;
                     }
                     case 6: {
-                        var8 = null;
+                        var8 = (java.awt.Frame) null;
                         this.a((java.awt.Frame) null, -8);
                         statePc = 7;
                         continue stateLoop;
                     }
                     case 7: {
                         try {
-                            ((pj) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param0);
+                            this.field_b.setFullScreenWindow((java.awt.Window) ((Object) param0));
                             statePc = 8;
                             continue stateLoop;
                         } catch (Throwable stateCaught_7) {
@@ -92,7 +92,7 @@ final class pj {
                     case 10: {
                         try {
                             var4_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                            var4_ref.set((Object) (Object) ((pj) this).field_b, (Object) (Object) Boolean.TRUE);
+                            var4_ref.set(this.field_b, Boolean.TRUE);
                             statePc = 20;
                             continue stateLoop;
                         } catch (Throwable stateCaught_10) {
@@ -128,7 +128,7 @@ final class pj {
                     case 16: {
                         try {
                             var7_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                            var7_ref.set((Object) (Object) ((pj) this).field_b, (Object) (Object) Boolean.TRUE);
+                            var7_ref.set(this.field_b, Boolean.TRUE);
                             statePc = 19;
                             continue stateLoop;
                         } catch (Throwable stateCaught_16) {
@@ -164,15 +164,15 @@ final class pj {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ((pj) this).field_a = ((pj) this).field_b.getDisplayMode();
-        if (null != ((pj) this).field_a) {
+        this.field_a = this.field_b.getDisplayMode();
+        if (null != this.field_a) {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
             this.a(param0, 29);
             if (0 == param4) {
-              var6 = ((pj) this).field_a.getRefreshRate();
-              var7 = ((pj) this).field_b.getDisplayModes();
+              var6 = this.field_a.getRefreshRate();
+              var7 = this.field_b.getDisplayModes();
               var8 = 0;
               var9 = 0;
               L1: while (true) {
@@ -222,7 +222,7 @@ final class pj {
               break L0;
             }
           }
-          ((pj) this).field_b.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+          this.field_b.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
           return;
         } else {
           throw new NullPointerException();
@@ -230,12 +230,12 @@ final class pj {
     }
 
     public final void exit() {
-        if (null != ((pj) this).field_a) {
-            ((pj) this).field_b.setDisplayMode(((pj) this).field_a);
-            if (!(((pj) this).field_b.getDisplayMode().equals(((pj) this).field_a))) {
+        if (null != this.field_a) {
+            this.field_b.setDisplayMode(this.field_a);
+            if (!(this.field_b.getDisplayMode().equals(this.field_a))) {
                 throw new RuntimeException("");
             }
-            ((pj) this).field_a = null;
+            this.field_a = null;
         }
         this.a((java.awt.Frame) null, 84);
     }
@@ -247,8 +247,8 @@ final class pj {
         int var4 = 0;
         java.awt.GraphicsDevice var5 = null;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
-        ((pj) this).field_b = var1.getDefaultScreenDevice();
-        if (((pj) this).field_b.isFullScreenSupported()) {
+        this.field_b = var1.getDefaultScreenDevice();
+        if (this.field_b.isFullScreenSupported()) {
           return;
         } else {
           var2 = var1.getScreenDevices();
@@ -261,7 +261,7 @@ final class pj {
               var5 = var3[var4];
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
-                  ((pj) this).field_b = var5;
+                  this.field_b = var5;
                   return;
                 } else {
                   var4++;
@@ -278,14 +278,14 @@ final class pj {
 
     public final int[] listmodes() {
         int var3 = 0;
-        java.awt.DisplayMode[] var4 = ((pj) this).field_b.getDisplayModes();
+        java.awt.DisplayMode[] var4 = this.field_b.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << 2];
+        int[] var2 = new int[var4.length << 1576586498];
         for (var3 = 0; var3 < var4.length; var3++) {
-            var2[var3 << 2] = var4[var3].getWidth();
-            var2[1 + (var3 << 2)] = var4[var3].getHeight();
-            var2[(var3 << 2) - -2] = var4[var3].getBitDepth();
-            var2[3 + (var3 << 2)] = var4[var3].getRefreshRate();
+            var2[var3 << 1360154242] = var4[var3].getWidth();
+            var2[1 + (var3 << -1288111454)] = var4[var3].getHeight();
+            var2[(var3 << 147032066) - -2] = var4[var3].getBitDepth();
+            var2[3 + (var3 << -803183102)] = var4[var3].getRefreshRate();
         }
         return var2;
     }

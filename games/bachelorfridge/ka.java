@@ -8,18 +8,14 @@ final class ka {
     public static void a(byte param0) {
         if (param0 <= 0) {
             ka.a((byte) -17);
-            field_a = null;
+            field_a = (int[][]) null;
             return;
         }
-        field_a = null;
+        field_a = (int[][]) null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ka.A(";
-        field_a = new int[][]{new int[2], new int[2], new int[2], new int[2], new int[2], new int[2], new int[2], new int[2]};
+        field_a = new int[][]{new int[]{90, 104}, new int[]{209, 107}, new int[]{335, 99}, new int[]{459, 105}, new int[]{87, 230}, new int[]{207, 233}, new int[]{332, 234}, new int[]{463, 234}};
     }
 }

@@ -10,8 +10,11 @@ final class og {
     static String field_e;
 
     public static void a(byte param0) {
+        if (param0 != 92) {
+            return;
+        }
         field_d = null;
-        field_c = null;
+        field_c = (byte[][]) null;
         field_a = null;
         field_e = null;
     }
@@ -21,17 +24,20 @@ final class og {
     }
 
     final static rj a(int param0, byte param1) {
-        rj var2 = new rj();
-        sd.field_d.b(124, (rf) (Object) var2);
-        u.a(4, 1);
-        return var2;
+        rj var2 = null;
+        var2 = new rj();
+        sd.field_d.b(124, var2);
+        if (param1 != 113) {
+          field_a = (ka) null;
+          u.a(param0, 1);
+          return var2;
+        } else {
+          u.a(param0, 1);
+          return var2;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "to keep fullscreen or";
     }
 }

@@ -10,7 +10,7 @@ final class lu extends aa {
         field_g = null;
         field_e = null;
         if (param0) {
-            field_e = null;
+            field_e = (hr) null;
         }
     }
 
@@ -19,10 +19,6 @@ final class lu extends aa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new float[4];
     }
 }

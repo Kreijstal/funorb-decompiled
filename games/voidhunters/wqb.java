@@ -11,7 +11,7 @@ final class wqb extends mfb {
 
     final int a(int param0) {
         if (param0 != 0) {
-            field_b = null;
+            field_b = (String) null;
             return qra.field_o;
         }
         return qra.field_o;
@@ -19,7 +19,7 @@ final class wqb extends mfb {
 
     final int c(int param0) {
         if (param0 != 0) {
-            field_e = null;
+            field_e = (Hashtable) null;
             return bma.field_n;
         }
         return bma.field_n;
@@ -27,6 +27,9 @@ final class wqb extends mfb {
 
     public static void i(byte param0) {
         field_d = null;
+        if (param0 != 75) {
+            return;
+        }
         field_e = null;
         field_b = null;
         field_c = null;
@@ -34,7 +37,7 @@ final class wqb extends mfb {
 
     final int f(byte param0) {
         if (param0 <= 0) {
-            field_b = null;
+            field_b = (String) null;
             return nca.field_o;
         }
         return nca.field_o;
@@ -48,8 +51,9 @@ final class wqb extends mfb {
     }
 
     final int b(boolean param0) {
+        int discarded$0 = 0;
         if (param0) {
-            int discarded$0 = ((wqb) this).b(23);
+            discarded$0 = this.b(23);
             return klb.field_p;
         }
         return klb.field_p;
@@ -61,8 +65,9 @@ final class wqb extends mfb {
     }
 
     final int d(byte param0) {
+        int discarded$0 = 0;
         if (param0 >= -52) {
-            int discarded$0 = ((wqb) this).a(true);
+            discarded$0 = this.a(true);
             return cca.field_p;
         }
         return cca.field_p;
@@ -76,8 +81,9 @@ final class wqb extends mfb {
     }
 
     final int a(boolean param0) {
+        int discarded$0 = 0;
         if (param0) {
-            int discarded$0 = ((wqb) this).f((byte) -9);
+            discarded$0 = this.f((byte) -9);
             return 3;
         }
         return 3;
@@ -90,7 +96,7 @@ final class wqb extends mfb {
 
     final int g(byte param0) {
         if (param0 >= -12) {
-            field_e = null;
+            field_e = (Hashtable) null;
             return ioa.field_p;
         }
         return ioa.field_p;
@@ -100,10 +106,6 @@ final class wqb extends mfb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new String[]{"Level editing", "Events", "Conditions", "Actions", "Event editing", "Map zones & Res nodes", "Misc", "Chassis", "Thrusters", "Basic weapons", "Advanced weapons", "Arms", "Hull pieces", "Defences", "Special"};
         field_b = "Waiting for fonts";
         field_d = "Weapon Energy";

@@ -10,6 +10,9 @@ final class wh {
     static boolean field_b;
 
     public static void a(boolean param0) {
+        if (param0) {
+            field_b = false;
+        }
         field_d = null;
         field_f = null;
         field_a = null;
@@ -25,12 +28,13 @@ final class wh {
     }
 
     final static int a(byte param0, CharSequence param1) {
+        int discarded$2 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        Object var6 = null;
+        CharSequence var6 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -61,8 +65,8 @@ final class wh {
                   if (param0 == 68) {
                     break L2;
                   } else {
-                    var6 = null;
-                    int discarded$2 = wh.a((byte) -60, (CharSequence) null);
+                    var6 = (CharSequence) null;
+                    discarded$2 = wh.a((byte) -60, (CharSequence) null);
                     break L2;
                   }
                 }
@@ -70,7 +74,7 @@ final class wh {
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                var3 = (var3 << 5) + -var3 + wf.a((byte) -126, param1.charAt(var4));
+                var3 = (var3 << -1680399771) + -var3 + wf.a((byte) -126, param1.charAt(var4));
                 var4++;
                 continue L1;
               }
@@ -80,23 +84,23 @@ final class wh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_0 = (RuntimeException) (var2);
             stackOut_8_1 = new StringBuilder().append("wh.C(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -104,16 +108,12 @@ final class wh {
               break L3;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new boolean[]{false, false};
         field_e = 0;
         field_a = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";

@@ -6,6 +6,9 @@ final class ug {
     static int field_b;
 
     public static void a(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_a = null;
     }
 
@@ -14,7 +17,7 @@ final class ug {
           return;
         } else {
           L0: {
-            tf.a(-120, (java.awt.Canvas) (Object) dg.field_i);
+            tf.a(-120, dg.field_i);
             dg.field_i.a(nk.field_u, 159);
             dg.field_i = null;
             if (ki.field_D != null) {
@@ -36,10 +39,6 @@ final class ug {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Passwords must be between 5 and 20 letters and numbers";
     }
 }

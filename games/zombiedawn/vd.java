@@ -20,10 +20,6 @@ final class vd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "vd.A(";
         field_e = "Please log in to access this feature.";
         field_c = "Area Selection";

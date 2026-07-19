@@ -37,16 +37,16 @@ final class te extends en {
               if (var8 == null) {
                 break L1;
               } else {
-                if (((te) this).b(param4, 1343807649, param5, param3, param0)) {
-                  if (((te) this).field_s instanceof hf) {
-                    ((hf) (Object) ((te) this).field_s).a(var8, 108, (te) this);
+                if (this.b(param4, 1343807649, param5, param3, param0)) {
+                  if (this.field_s instanceof hf) {
+                    ((hf) ((Object) this.field_s)).a(var8, 108, (te) (this));
                     gi.field_c = null;
                     return;
                   } else {
                     if (!(var8.field_s instanceof hf)) {
                       break L1;
                     } else {
-                      ((hf) (Object) var8.field_s).a(var8, 92, (te) this);
+                      ((hf) ((Object) var8.field_s)).a(var8, 92, (te) (this));
                       gi.field_c = null;
                       return;
                     }
@@ -62,23 +62,23 @@ final class te extends en {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var7_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var7_ref;
+            stackOut_8_0 = (RuntimeException) (var7_ref);
             stackOut_8_1 = new StringBuilder().append("te.AB(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -86,7 +86,7 @@ final class te extends en {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -108,17 +108,13 @@ final class te extends en {
     private te(int param0, int param1, int param2, int param3, kg param4, dn param5, na param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
-            ((te) this).field_J = param6;
+            this.field_J = param6;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "te.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "te.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_N = "Account created successfully!";
         field_P = 480;
         field_Q = "Unable to delete friend - system busy";

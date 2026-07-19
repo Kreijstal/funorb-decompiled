@@ -8,6 +8,11 @@ class nl extends gm {
 
     public static void b(int param0) {
         field_n = null;
+        if (param0 != 2147483647) {
+            field_n = (mp) null;
+            field_p = null;
+            return;
+        }
         field_p = null;
     }
 
@@ -22,7 +27,7 @@ class nl extends gm {
             }
             super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "nl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "nl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -31,10 +36,6 @@ class nl extends gm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = new iw(4);
         field_n = new mp();
     }

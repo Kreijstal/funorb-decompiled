@@ -86,7 +86,7 @@ abstract class kk extends ni {
                     if (param5 == null) {
                       break L5;
                     } else {
-                      if (!param5[var36]) {
+                      if (param5[var36] == param6) {
                         break L5;
                       } else {
                         if (param0.field_p[var36] == 0) {
@@ -233,33 +233,33 @@ abstract class kk extends ni {
                       if (var26 == -1) {
                         break L16;
                       } else {
-                        var31 = 65535 & param0.field_s[var26];
+                        var31 = param8 & param0.field_s[var26];
                         if (var31 == 65535) {
-                          ((kk) this).a(0, param0.field_l[var26], 0, 0, 0, param7);
+                          this.a(0, param0.field_l[var26], 0, 0, 0, param7);
                           break L16;
                         } else {
-                          ((kk) this).a(0, param0.field_l[var26], 0, 0, 0, param7, var31, param9);
+                          this.a(0, param0.field_l[var26], 0, 0, 0, param7, var31, param9);
                           break L16;
                         }
                       }
                     } else {
-                      var31 = 65535 & param0.field_s[var21];
+                      var31 = param8 & param0.field_s[var21];
                       if (var31 == 65535) {
-                        ((kk) this).a(0, param0.field_l[var21], 0, 0, 0, param7);
+                        this.a(0, param0.field_l[var21], 0, 0, 0, param7);
                         break L16;
                       } else {
-                        ((kk) this).a(0, param0.field_l[var21], 0, 0, 0, param7, var31, param9);
+                        this.a(0, param0.field_l[var21], 0, 0, 0, param7, var31, param9);
                         break L16;
                       }
                     }
                   }
-                  var31 = 65535 & param0.field_s[var36];
+                  var31 = param8 & param0.field_s[var36];
                   if (var31 == 65535) {
-                    ((kk) this).a(var17, param0.field_l[var36], var28, var29, var30, param7);
+                    this.a(var17, param0.field_l[var36], var28, var29, var30, param7);
                     var36++;
                     continue L1;
                   } else {
-                    ((kk) this).a(var17, param0.field_l[var36], var28, var29, var30, param7, var31, param9);
+                    this.a(var17, param0.field_l[var36], var28, var29, var30, param7, var31, param9);
                     var36++;
                     continue L1;
                   }
@@ -280,7 +280,7 @@ abstract class kk extends ni {
               if (param5 == null) {
                 break L18;
               } else {
-                if (!param5[var12]) {
+                if (param5[var12] == param6) {
                   break L18;
                 } else {
                   if (param0.field_p[var12] == 0) {
@@ -297,23 +297,23 @@ abstract class kk extends ni {
               if (var13 == -1) {
                 break L19;
               } else {
-                var14 = 65535 & param0.field_s[var13];
+                var14 = param8 & param0.field_s[var13];
                 if (var14 == 65535) {
-                  ((kk) this).a(0, param0.field_l[var13], 0, 0, 0, param7);
+                  this.a(0, param0.field_l[var13], 0, 0, 0, param7);
                   break L19;
                 } else {
-                  ((kk) this).a(0, param0.field_l[var13], 0, 0, 0, param7, var14, param9);
+                  this.a(0, param0.field_l[var13], 0, 0, 0, param7, var14, param9);
                   break L19;
                 }
               }
             }
-            var14 = 65535 & param0.field_s[var12];
+            var14 = param8 & param0.field_s[var12];
             if (var14 == 65535) {
-              ((kk) this).a(param0.field_p[var12], param0.field_l[var12], (int) param1.field_l[var11], (int) param1.field_f[var11], (int) param1.field_h[var11], param7);
+              this.a(param0.field_p[var12], param0.field_l[var12], (int) param1.field_l[var11], (int) param1.field_f[var11], (int) param1.field_h[var11], param7);
               var11++;
               continue L17;
             } else {
-              ((kk) this).a(param0.field_p[var12], param0.field_l[var12], (int) param1.field_l[var11], (int) param1.field_f[var11], (int) param1.field_h[var11], param7, var14, param9);
+              this.a(param0.field_p[var12], param0.field_l[var12], (int) param1.field_l[var11], (int) param1.field_f[var11], (int) param1.field_h[var11], param7, var14, param9);
               var11++;
               continue L17;
             }
@@ -337,20 +337,20 @@ abstract class kk extends ni {
         if (param1 == -1) {
             return;
         }
-        if (!((kk) this).b()) {
+        if (!this.b()) {
             return;
         }
         ht var8 = param0.field_A[param1];
         ig var9 = var8.field_n;
         Object var10 = null;
         if (param2 != null) {
-            var10 = (Object) (Object) param2.field_A[param3];
-            if (((ht) var10).field_n != var9) {
+            var10 = param2.field_A[param3];
+            if (((ht) (var10)).field_n != var9) {
                 var10 = null;
             }
         }
-        this.a(var9, var8, (ht) var10, param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
-        ((kk) this).a();
+        this.a(var9, var8, (ht) (var10), param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
+        this.a();
     }
 
     kk() {

@@ -14,60 +14,71 @@ final class sc implements db {
     static Boolean field_g;
 
     final static void a(qd param0, int param1, int param2) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
+        RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
-          mi.field_l.a(-12328, (hg) (Object) param0);
-          sm.a(param0, 4, true);
-          return;
+          L0: {
+            L1: {
+              mi.field_l.a(-12328, param0);
+              sm.a(param0, param1, true);
+              if (param2 == 1) {
+                break L1;
+              } else {
+                sc.b((byte) 98);
+                break L1;
+              }
+            }
+            break L0;
+          }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L0: {
-            var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("sc.B(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
+            stackOut_3_1 = new StringBuilder().append("sc.B(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L0;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L0;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 4 + ',' + 1 + ')');
+          throw t.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public final void a(int param0, int param1, int param2, hm param3, boolean param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -75,7 +86,7 @@ final class sc implements db {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        Object var14 = null;
+        java.awt.Component var14 = null;
         eb var15 = null;
         hm stackIn_5_0 = null;
         RuntimeException stackIn_13_0 = null;
@@ -102,7 +113,7 @@ final class sc implements db {
               if (param2 <= -14) {
                 break L1;
               } else {
-                var14 = null;
+                var14 = (java.awt.Component) null;
                 sc.a((byte) 67, (java.awt.Component) null);
                 break L1;
               }
@@ -110,17 +121,17 @@ final class sc implements db {
             L2: {
               if (!(param3 instanceof eb)) {
                 stackOut_4_0 = null;
-                stackIn_5_0 = (hm) (Object) stackOut_4_0;
+                stackIn_5_0 = (hm) ((Object) stackOut_4_0);
                 break L2;
               } else {
-                stackOut_3_0 = (hm) param3;
+                stackOut_3_0 = (hm) (param3);
                 stackIn_5_0 = stackOut_3_0;
                 break L2;
               }
             }
             L3: {
-              var15 = (eb) (Object) stackIn_5_0;
-              em.a(param3.field_k + param0, param3.field_j + param1, param3.field_g, param3.field_x, ((sc) this).field_a);
+              var15 = (eb) ((Object) stackIn_5_0);
+              em.a(param3.field_k + param0, param3.field_j + param1, param3.field_g, param3.field_x, this.field_a);
               if (var15 != null) {
                 break L3;
               } else {
@@ -130,14 +141,14 @@ final class sc implements db {
             L4: {
               var7 = var15.field_D + (param0 + param3.field_k);
               var8 = param3.field_j + (param1 - -var15.field_I);
-              em.d(var7, var8, var15.field_N, ((sc) this).field_c);
+              em.d(var7, var8, var15.field_N, this.field_c);
               if (var15.field_G == -1) {
                 break L4;
               } else {
                 var9 = 2.0 * (3.141592653589793 * (double)var15.field_G) / (double)var15.field_M;
                 var11 = (int)(-Math.sin(var9) * (double)var15.field_N);
                 var12 = (int)(Math.cos(var9) * (double)var15.field_N);
-                em.d(var7 - -var11, var12 + var8, 1, ((sc) this).field_b);
+                em.d(var7 - -var11, var12 + var8, 1, this.field_b);
                 break L4;
               }
             }
@@ -146,9 +157,9 @@ final class sc implements db {
             var11 = (int)(-Math.sin(var9) * (double)var15.field_N);
             var12 = (int)(Math.cos(var9) * (double)var15.field_N);
             em.d(var7, var8, var11 + var7, var8 - -var12, 1);
-            if (null != ((sc) this).field_e) {
-              var13 = ((sc) this).field_i + (var15.field_D - -var15.field_N);
-              int discarded$1 = ((sc) this).field_e.a(param3.field_l, var13 + param3.field_k + param0, param1 + (param3.field_j + ((sc) this).field_f), param3.field_g - (var13 - -((sc) this).field_i), param3.field_x - (((sc) this).field_i << 1), ((sc) this).field_j, ((sc) this).field_d, 1, 1, 0);
+            if (null != this.field_e) {
+              var13 = this.field_i + (var15.field_D - -var15.field_N);
+              discarded$1 = this.field_e.a(param3.field_l, var13 + param3.field_k + param0, param1 + (param3.field_j + this.field_f), param3.field_g - (var13 - -this.field_i), param3.field_x - (this.field_i << 211472609), this.field_j, this.field_d, 1, 1, 0);
               break L0;
             } else {
               return;
@@ -158,23 +169,23 @@ final class sc implements db {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var6;
+            stackOut_12_0 = (RuntimeException) (var6);
             stackOut_12_1 = new StringBuilder().append("sc.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param3 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -182,12 +193,12 @@ final class sc implements db {
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param4 + ')');
         }
     }
 
     final static void b(byte param0) {
-        Object var2 = null;
+        java.awt.Component var2 = null;
         if (ff.field_e == 10) {
           fe.a(-84);
           ff.field_e = 11;
@@ -195,7 +206,7 @@ final class sc implements db {
           if (param0 < -81) {
             return;
           } else {
-            var2 = null;
+            var2 = (java.awt.Component) null;
             sc.a((byte) -55, (java.awt.Component) null);
             return;
           }
@@ -205,7 +216,7 @@ final class sc implements db {
             ff.field_e = 11;
             pb.field_d = true;
             if (param0 >= -81) {
-              var2 = null;
+              var2 = (java.awt.Component) null;
               sc.a((byte) -55, (java.awt.Component) null);
               return;
             } else {
@@ -216,7 +227,7 @@ final class sc implements db {
             if (param0 < -81) {
               return;
             } else {
-              var2 = null;
+              var2 = (java.awt.Component) null;
               sc.a((byte) -55, (java.awt.Component) null);
               return;
             }
@@ -225,43 +236,42 @@ final class sc implements db {
     }
 
     public static void a(byte param0) {
+        if (param0 >= -15) {
+            return;
+        }
         field_g = null;
         field_h = null;
     }
 
     sc(wl param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
-            ((sc) this).field_j = param3;
-            ((sc) this).field_b = param6;
-            ((sc) this).field_e = param0;
-            ((sc) this).field_d = param4;
-            ((sc) this).field_f = param2;
-            ((sc) this).field_c = param5;
-            ((sc) this).field_a = param7;
-            ((sc) this).field_i = param1;
+            this.field_j = param3;
+            this.field_b = param6;
+            this.field_e = param0;
+            this.field_d = param4;
+            this.field_f = param2;
+            this.field_c = param5;
+            this.field_a = param7;
+            this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "sc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     final static void a(byte param0, java.awt.Component param1) {
-        param1.removeKeyListener((java.awt.event.KeyListener) (Object) ck.field_v);
-        param1.removeFocusListener((java.awt.event.FocusListener) (Object) ck.field_v);
+        param1.removeKeyListener(ck.field_v);
+        param1.removeFocusListener(ck.field_v);
         if (param0 != -58) {
             return;
         }
         try {
             sb.field_b = -1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "sc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "sc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = new int[]{0, 16384, 32768, 49152};
     }
 }

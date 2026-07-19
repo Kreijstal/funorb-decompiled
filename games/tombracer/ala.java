@@ -13,19 +13,20 @@ final class ala extends dfa {
 
     ala() {
         super(-2);
-        ((ala) this).field_g = 0;
+        this.field_g = 0;
     }
 
     final void a(byte param0) {
+        boolean discarded$0 = false;
         iqa.field_c.c(104);
         if (param0 < 78) {
-            boolean discarded$0 = ((ala) this).b(-93);
+            discarded$0 = this.b(-93);
         }
     }
 
     public static void c(int param0) {
         if (param0 != 0) {
-            field_f = null;
+            field_f = (String) null;
             field_f = null;
             return;
         }
@@ -837,29 +838,50 @@ final class ala extends dfa {
           if (!param0) {
             break L0;
           } else {
-            if (256 > ((ala) this).field_g) {
-              ((ala) this).field_g = ((ala) this).field_g + 16;
+            if (256 > this.field_g) {
+              this.field_g = this.field_g + 16;
               break L0;
             } else {
-              if (((ala) this).field_g > 0) {
+              L1: {
+                if (param0) {
+                  break L1;
+                } else {
+                  if (0 < this.field_g) {
+                    this.field_g = this.field_g - 16;
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              if ((this.field_g ^ -1) < -1) {
                 var3 = 5;
                 var4 = 428 + var3;
                 var5 = 67;
                 var6 = 309;
-                bea.c(var3, var5, var4 + -var3, -var5 + var6, 0, ((ala) this).field_g >> 1);
-                if (((ala) this).field_g == 256) {
+                bea.c(var3, var5, var4 + -var3, -var5 + var6, 0, this.field_g >> -25286783);
+                if (-257 == (this.field_g ^ -1)) {
                   bea.e(0, 0, var3, 480, 0);
                   bea.e(var4, 0, -var4 + 640, 480, 0);
                   bea.e(var3, 0, var4 - var3, var5, 0);
                   bea.e(var3, var6, var4 + -var3, -var6 + 480, 0);
                   bea.c(var3, var5, -var3 + var4, -var5 + var6, 0, 128);
-                  return;
+                  if (!TombRacer.field_G) {
+                    return;
+                  } else {
+                    bea.c(0, 0, var3, 480, 0, this.field_g);
+                    bea.c(var4, 0, -var4 + 640, 480, 0, this.field_g);
+                    bea.c(var3, 0, var4 - var3, var5, 0, this.field_g);
+                    bea.c(var3, var6, var4 + -var3, 480 - var6, 0, this.field_g);
+                    bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, this.field_g >> 520343169);
+                    return;
+                  }
                 } else {
-                  bea.c(0, 0, var3, 480, 0, ((ala) this).field_g);
-                  bea.c(var4, 0, -var4 + 640, 480, 0, ((ala) this).field_g);
-                  bea.c(var3, 0, var4 - var3, var5, 0, ((ala) this).field_g);
-                  bea.c(var3, var6, var4 + -var3, 480 - var6, 0, ((ala) this).field_g);
-                  bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, ((ala) this).field_g >> 1);
+                  bea.c(0, 0, var3, 480, 0, this.field_g);
+                  bea.c(var4, 0, -var4 + 640, 480, 0, this.field_g);
+                  bea.c(var3, 0, var4 - var3, var5, 0, this.field_g);
+                  bea.c(var3, var6, var4 + -var3, 480 - var6, 0, this.field_g);
+                  bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, this.field_g >> 520343169);
                   return;
                 }
               } else {
@@ -868,33 +890,42 @@ final class ala extends dfa {
             }
           }
         }
-        L1: {
+        L2: {
           if (param0) {
-            break L1;
+            break L2;
           } else {
-            if (0 < ((ala) this).field_g) {
-              ((ala) this).field_g = ((ala) this).field_g - 16;
-              break L1;
+            if (0 < this.field_g) {
+              this.field_g = this.field_g - 16;
+              break L2;
             } else {
-              if (((ala) this).field_g > 0) {
+              if ((this.field_g ^ -1) < -1) {
                 var3 = 5;
                 var4 = 428 + var3;
                 var5 = 67;
                 var6 = 309;
-                bea.c(var3, var5, var4 + -var3, -var5 + var6, 0, ((ala) this).field_g >> 1);
-                if (((ala) this).field_g == 256) {
+                bea.c(var3, var5, var4 + -var3, -var5 + var6, 0, this.field_g >> -25286783);
+                if (-257 == (this.field_g ^ -1)) {
                   bea.e(0, 0, var3, 480, 0);
                   bea.e(var4, 0, -var4 + 640, 480, 0);
                   bea.e(var3, 0, var4 - var3, var5, 0);
                   bea.e(var3, var6, var4 + -var3, -var6 + 480, 0);
                   bea.c(var3, var5, -var3 + var4, -var5 + var6, 0, 128);
-                  return;
+                  if (TombRacer.field_G) {
+                    bea.c(0, 0, var3, 480, 0, this.field_g);
+                    bea.c(var4, 0, -var4 + 640, 480, 0, this.field_g);
+                    bea.c(var3, 0, var4 - var3, var5, 0, this.field_g);
+                    bea.c(var3, var6, var4 + -var3, 480 - var6, 0, this.field_g);
+                    bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, this.field_g >> 520343169);
+                    return;
+                  } else {
+                    return;
+                  }
                 } else {
-                  bea.c(0, 0, var3, 480, 0, ((ala) this).field_g);
-                  bea.c(var4, 0, -var4 + 640, 480, 0, ((ala) this).field_g);
-                  bea.c(var3, 0, var4 - var3, var5, 0, ((ala) this).field_g);
-                  bea.c(var3, var6, var4 + -var3, 480 - var6, 0, ((ala) this).field_g);
-                  bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, ((ala) this).field_g >> 1);
+                  bea.c(0, 0, var3, 480, 0, this.field_g);
+                  bea.c(var4, 0, -var4 + 640, 480, 0, this.field_g);
+                  bea.c(var3, 0, var4 - var3, var5, 0, this.field_g);
+                  bea.c(var3, var6, var4 + -var3, 480 - var6, 0, this.field_g);
+                  bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, this.field_g >> 520343169);
                   return;
                 }
               } else {
@@ -903,25 +934,34 @@ final class ala extends dfa {
             }
           }
         }
-        if (((ala) this).field_g > 0) {
+        if ((this.field_g ^ -1) < -1) {
           var3 = 5;
           var4 = 428 + var3;
           var5 = 67;
           var6 = 309;
-          bea.c(var3, var5, var4 + -var3, -var5 + var6, 0, ((ala) this).field_g >> 1);
-          if (((ala) this).field_g == 256) {
+          bea.c(var3, var5, var4 + -var3, -var5 + var6, 0, this.field_g >> -25286783);
+          if (-257 == (this.field_g ^ -1)) {
             bea.e(0, 0, var3, 480, 0);
             bea.e(var4, 0, -var4 + 640, 480, 0);
             bea.e(var3, 0, var4 - var3, var5, 0);
             bea.e(var3, var6, var4 + -var3, -var6 + 480, 0);
             bea.c(var3, var5, -var3 + var4, -var5 + var6, 0, 128);
-            return;
+            if (TombRacer.field_G) {
+              bea.c(0, 0, var3, 480, 0, this.field_g);
+              bea.c(var4, 0, -var4 + 640, 480, 0, this.field_g);
+              bea.c(var3, 0, var4 - var3, var5, 0, this.field_g);
+              bea.c(var3, var6, var4 + -var3, 480 - var6, 0, this.field_g);
+              bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, this.field_g >> 520343169);
+              return;
+            } else {
+              return;
+            }
           } else {
-            bea.c(0, 0, var3, 480, 0, ((ala) this).field_g);
-            bea.c(var4, 0, -var4 + 640, 480, 0, ((ala) this).field_g);
-            bea.c(var3, 0, var4 - var3, var5, 0, ((ala) this).field_g);
-            bea.c(var3, var6, var4 + -var3, 480 - var6, 0, ((ala) this).field_g);
-            bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, ((ala) this).field_g >> 1);
+            bea.c(0, 0, var3, 480, 0, this.field_g);
+            bea.c(var4, 0, -var4 + 640, 480, 0, this.field_g);
+            bea.c(var3, 0, var4 - var3, var5, 0, this.field_g);
+            bea.c(var3, var6, var4 + -var3, 480 - var6, 0, this.field_g);
+            bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, this.field_g >> 520343169);
             return;
           }
         } else {
@@ -932,14 +972,17 @@ final class ala extends dfa {
     final static void a(byte param0, String param1, boolean param2, float param3) {
         if (!(null != ena.field_p)) {
             ena.field_p = new vs(ej.field_a, sea.field_o);
-            ej.field_a.c((ae) (Object) ena.field_p, 89);
+            ej.field_a.c(ena.field_p, 89);
         }
         ena.field_p.a(param3, param1, param2, (byte) 110);
         bea.a();
+        if (param0 != -30) {
+            return;
+        }
         try {
             tqa.a(true, (byte) 99);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ala.F(" + -30 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "ala.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -954,7 +997,7 @@ final class ala extends dfa {
         this.a(true, 68);
         fca.a(qr.a(0), 7);
         if (param0 != -28) {
-            ((ala) this).a((byte) 98);
+            this.a((byte) 98);
         }
     }
 
@@ -966,10 +1009,6 @@ final class ala extends dfa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "RuneScape clan";
     }
 }

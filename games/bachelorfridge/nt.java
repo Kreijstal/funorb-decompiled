@@ -12,48 +12,58 @@ final class nt extends ana {
         field_x = null;
         field_y = null;
         field_z = null;
+        if (param0 != 4) {
+            return;
+        }
         field_w = null;
     }
 
     private final void d(int param0) {
+        oha discarded$8 = null;
         iv var3 = null;
         ad var4 = null;
         int var5 = 0;
         aga var6 = null;
         var5 = BachelorFridge.field_y;
-        var6 = ((nt) this).field_v.field_l.a(99, ((nt) this).field_q.field_h);
-        if (var6.i(-118)) {
-          return;
-        } else {
-          var3 = (iv) (Object) ((nt) this).field_v.field_o.b((byte) 90);
-          oha discarded$1 = al.a(-46, ((nt) this).field_v.field_k);
+        var6 = this.field_v.field_l.a(99, this.field_q.field_h);
+        if (!var6.i(-118)) {
+          var3 = (iv) ((Object) this.field_v.field_o.b((byte) 90));
+          discarded$8 = al.a(-46, this.field_v.field_k);
           L0: while (true) {
             if (var3 == null) {
-              return;
+              if (param0 != 24831) {
+                this.f(3);
+                return;
+              } else {
+                return;
+              }
             } else {
-              var3.a(var6, ((nt) this).field_q.field_h, 12);
-              var4 = var3.field_h.a(-27449, ((nt) this).field_q);
-              ((nt) this).a(27799, (at) (Object) new taa(((nt) this).field_q, var4));
-              ((nt) this).a(27799, (at) (Object) new cb(var4, 7));
-              ((nt) this).a(27799, (at) (Object) new wn(var4, kna.field_g[17], 24831));
-              var3 = (iv) (Object) ((nt) this).field_v.field_o.c(0);
+              var3.a(var6, this.field_q.field_h, 12);
+              var4 = var3.field_h.a(-27449, this.field_q);
+              this.a(27799, new taa(this.field_q, var4));
+              this.a(27799, new cb(var4, 7));
+              this.a(27799, new wn(var4, kna.field_g[17], 24831));
+              var3 = (iv) ((Object) this.field_v.field_o.c(0));
               continue L0;
             }
           }
+        } else {
+          return;
         }
     }
 
     final boolean c(byte param0) {
-        if (((nt) this).field_m.a((byte) -106)) {
+        int fieldTemp$0 = 0;
+        if (this.field_m.a((byte) -106)) {
             return false;
         }
         int var2 = 12 % ((param0 - 71) / 47);
-        if (((nt) this).field_l > 75) {
-            if (((nt) this).field_l % 10 != 0) {
-                int fieldTemp$0 = ((nt) this).field_l - 1;
-                ((nt) this).field_l = ((nt) this).field_l - 1;
+        if (this.field_l > 75) {
+            if (this.field_l % 10 != 0) {
+                fieldTemp$0 = this.field_l - 1;
+                this.field_l = this.field_l - 1;
                 if (!(0 > fieldTemp$0)) {
-                    if (((nt) this).field_l == 75) {
+                    if ((this.field_l ^ -1) == -76) {
                         this.d(24831);
                         return false;
                     }
@@ -64,10 +74,10 @@ final class nt extends ana {
             }
             wf.a(3, (byte) 126);
         }
-        int fieldTemp$1 = ((nt) this).field_l - 1;
-        ((nt) this).field_l = ((nt) this).field_l - 1;
+        int fieldTemp$1 = this.field_l - 1;
+        this.field_l = this.field_l - 1;
         if (!(0 > fieldTemp$1)) {
-            if (((nt) this).field_l != 75) {
+            if ((this.field_l ^ -1) != -76) {
                 return false;
             }
             this.d(24831);
@@ -78,11 +88,11 @@ final class nt extends ana {
     }
 
     nt(gj param0, lk param1) {
-        super(param0, (bca) (Object) param1);
+        super(param0, param1);
         try {
-            ((nt) this).field_v = param1;
+            this.field_v = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "nt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -101,10 +111,6 @@ final class nt extends ana {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = "Go Back";
         field_w = "Offer draw";
     }

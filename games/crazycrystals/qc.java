@@ -13,13 +13,18 @@ abstract class qc extends oh {
         } else {
             q.a(false);
         }
-        Object var3 = null;
-        qc.a(9, -14, -108, (dl[]) null, -100, -14, -83);
+        if (param1 != 0) {
+            dl[] var3 = (dl[]) null;
+            qc.a(9, -14, -108, (dl[]) null, -100, -14, -83);
+        }
     }
 
     public static void c(byte param0) {
         field_h = null;
         field_i = null;
+        if (param0 <= 114) {
+            return;
+        }
         field_g = null;
         field_f = null;
     }
@@ -41,6 +46,7 @@ abstract class qc extends oh {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_10_0 = 0;
         int stackOut_7_0 = 0;
@@ -60,7 +66,7 @@ abstract class qc extends oh {
               if (param1 < -78) {
                 break L1;
               } else {
-                field_h = null;
+                field_h = (String) null;
                 break L1;
               }
             }
@@ -69,12 +75,14 @@ abstract class qc extends oh {
               if (var3 >= param0.length()) {
                 stackOut_10_0 = 1;
                 stackIn_11_0 = stackOut_10_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (param0.charAt(var3) != var2_int) {
                   stackOut_7_0 = 0;
                   stackIn_8_0 = stackOut_7_0;
-                  return stackIn_8_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   var3++;
                   continue L2;
@@ -86,23 +94,23 @@ abstract class qc extends oh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var2;
+            stackOut_12_0 = (RuntimeException) (var2);
             stackOut_12_1 = new StringBuilder().append("qc.R(");
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -110,19 +118,26 @@ abstract class qc extends oh {
               break L3;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');
         }
-        return stackIn_11_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_8_0 != 0;
+        } else {
+          return stackIn_11_0 != 0;
+        }
     }
 
     final int a(int param0, int param1) {
         if (param0 != 1843275042) {
-            field_g = null;
+            field_g = (String[]) null;
         }
         return q.field_a[ma.field_n[param1]].field_g;
     }
 
     int a(byte param0, boolean param1) {
+        if (param0 > -53) {
+            field_i = (si) null;
+        }
         return param1 ? 16 : 2;
     }
 
@@ -156,6 +171,7 @@ abstract class qc extends oh {
         RuntimeException stackIn_79_0 = null;
         StringBuilder stackIn_79_1 = null;
         String stackIn_79_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_10_0 = 0;
         int stackOut_9_0 = 0;
@@ -181,7 +197,7 @@ abstract class qc extends oh {
                 if (0 >= param5) {
                   break L1;
                 } else {
-                  if (param2 <= 0) {
+                  if (-1 <= (param2 ^ -1)) {
                     break L1;
                   } else {
                     if (param0 == 0) {
@@ -275,7 +291,7 @@ abstract class qc extends oh {
                         }
                       }
                       L9: {
-                        if (null == param3[2]) {
+                        if (null == param3[param6]) {
                           break L9;
                         } else {
                           kh.a(var18, param1, var11, var19);
@@ -426,37 +442,40 @@ abstract class qc extends oh {
                           }
                         }
                       }
+                      decompiledRegionSelector0 = 2;
                       break L0;
                     }
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L23: {
             var7 = decompiledCaughtException;
-            stackOut_76_0 = (RuntimeException) var7;
+            stackOut_76_0 = (RuntimeException) (var7);
             stackOut_76_1 = new StringBuilder().append("qc.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_78_0 = stackOut_76_0;
             stackIn_78_1 = stackOut_76_1;
             stackIn_77_0 = stackOut_76_0;
             stackIn_77_1 = stackOut_76_1;
             if (param3 == null) {
-              stackOut_78_0 = (RuntimeException) (Object) stackIn_78_0;
-              stackOut_78_1 = (StringBuilder) (Object) stackIn_78_1;
+              stackOut_78_0 = (RuntimeException) ((Object) stackIn_78_0);
+              stackOut_78_1 = (StringBuilder) ((Object) stackIn_78_1);
               stackOut_78_2 = "null";
               stackIn_79_0 = stackOut_78_0;
               stackIn_79_1 = stackOut_78_1;
               stackIn_79_2 = stackOut_78_2;
               break L23;
             } else {
-              stackOut_77_0 = (RuntimeException) (Object) stackIn_77_0;
-              stackOut_77_1 = (StringBuilder) (Object) stackIn_77_1;
+              stackOut_77_0 = (RuntimeException) ((Object) stackIn_77_0);
+              stackOut_77_1 = (StringBuilder) ((Object) stackIn_77_1);
               stackOut_77_2 = "{...}";
               stackIn_79_0 = stackOut_77_0;
               stackIn_79_1 = stackOut_77_1;
@@ -464,15 +483,20 @@ abstract class qc extends oh {
               break L23;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_79_0, stackIn_79_2 + ',' + param4 + ',' + param5 + ',' + 2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_79_0), stackIn_79_2 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
         field_h = "Accept";
         field_f = new dl[4];

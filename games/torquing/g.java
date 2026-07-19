@@ -62,10 +62,6 @@ final class g {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new int[3];
         field_b = new int[3];
         field_c = new int[3];

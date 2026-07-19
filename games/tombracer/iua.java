@@ -43,7 +43,7 @@ final class iua {
         float var26 = 0.0f;
         float var27 = 0.0f;
         float var28 = 0.0f;
-        if (!((iua) this).field_s) {
+        if (!this.field_s) {
           L0: {
             var13 = param4 - param3;
             var14 = param1 - param0;
@@ -92,20 +92,20 @@ final class iua {
                 if (param0 > param2) {
                   break L3;
                 } else {
-                  if (param0 < (float)((iua) this).field_v) {
+                  if (param0 < (float)this.field_v) {
                     L4: {
-                      if (param1 <= (float)((iua) this).field_v) {
+                      if (param1 <= (float)this.field_v) {
                         break L4;
                       } else {
-                        param1 = (float)((iua) this).field_v;
+                        param1 = (float)this.field_v;
                         break L4;
                       }
                     }
                     L5: {
-                      if (param2 <= (float)((iua) this).field_v) {
+                      if (param2 <= (float)this.field_v) {
                         break L5;
                       } else {
-                        param2 = (float)((iua) this).field_v;
+                        param2 = (float)this.field_v;
                         break L5;
                       }
                     }
@@ -143,7 +143,7 @@ final class iua {
                           } else {
                             param1 = param1 - param2;
                             param2 = param2 - param0;
-                            param0 = (float)((iua) this).field_p[(int)param0];
+                            param0 = (float)this.field_p[(int)param0];
                             L9: while (true) {
                               param2 = param2 - 1.0f;
                               if (param2 < 0.0f) {
@@ -152,22 +152,22 @@ final class iua {
                                   if (param1 < 0.0f) {
                                     return;
                                   } else {
-                                    this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+                                    this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
                                     param5 = param5 + var21;
                                     param3 = param3 + var22;
                                     param9 = param9 + var26;
                                     param6 = param6 + var28;
-                                    param0 = param0 + (float)((iua) this).field_t;
+                                    param0 = param0 + (float)this.field_t;
                                     continue L10;
                                   }
                                 }
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
+                                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
                                 param4 = param4 + var23;
                                 param3 = param3 + var22;
                                 param9 = param9 + var26;
                                 param6 = param6 + var28;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L9;
                               }
                             }
@@ -178,7 +178,7 @@ final class iua {
                         if (var21 > var22) {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L11: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -187,29 +187,29 @@ final class iua {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+                                  this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
                                   param5 = param5 + var21;
                                   param3 = param3 + var22;
                                   param9 = param9 + var26;
                                   param6 = param6 + var28;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L12;
                                 }
                               }
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
+                              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
                               param4 = param4 + var23;
                               param3 = param3 + var22;
                               param9 = param9 + var26;
                               param6 = param6 + var28;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L11;
                             }
                           }
                         } else {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L13: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -218,22 +218,22 @@ final class iua {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+                                  this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
                                   param5 = param5 + var21;
                                   param3 = param3 + var22;
                                   param9 = param9 + var26;
                                   param6 = param6 + var28;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L14;
                                 }
                               }
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
+                              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
                               param4 = param4 + var23;
                               param3 = param3 + var22;
                               param9 = param9 + var26;
                               param6 = param6 + var28;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L13;
                             }
                           }
@@ -241,7 +241,7 @@ final class iua {
                       } else {
                         param1 = param1 - param2;
                         param2 = param2 - param0;
-                        param0 = (float)((iua) this).field_p[(int)param0];
+                        param0 = (float)this.field_p[(int)param0];
                         L15: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -250,22 +250,22 @@ final class iua {
                               if (param1 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+                                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
                                 param5 = param5 + var21;
                                 param3 = param3 + var22;
                                 param9 = param9 + var26;
                                 param6 = param6 + var28;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L16;
                               }
                             }
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
+                            this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
                             param4 = param4 + var23;
                             param3 = param3 + var22;
                             param9 = param9 + var26;
                             param6 = param6 + var28;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L15;
                           }
                         }
@@ -302,7 +302,7 @@ final class iua {
                           } else {
                             param2 = param2 - param1;
                             param1 = param1 - param0;
-                            param0 = (float)((iua) this).field_p[(int)param0];
+                            param0 = (float)this.field_p[(int)param0];
                             L20: while (true) {
                               param1 = param1 - 1.0f;
                               if (param1 < 0.0f) {
@@ -311,22 +311,22 @@ final class iua {
                                   if (param2 < 0.0f) {
                                     return;
                                   } else {
-                                    this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
+                                    this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
                                     param5 = param5 + var23;
                                     param4 = param4 + var21;
                                     param9 = param9 + var26;
                                     param6 = param6 + var28;
-                                    param0 = param0 + (float)((iua) this).field_t;
+                                    param0 = param0 + (float)this.field_t;
                                     continue L21;
                                   }
                                 }
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+                                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
                                 param5 = param5 + var23;
                                 param3 = param3 + var22;
                                 param9 = param9 + var26;
                                 param6 = param6 + var28;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L20;
                               }
                             }
@@ -337,7 +337,7 @@ final class iua {
                         if (var23 > var21) {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L22: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -346,29 +346,29 @@ final class iua {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
+                                  this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
                                   param5 = param5 + var23;
                                   param4 = param4 + var21;
                                   param9 = param9 + var26;
                                   param6 = param6 + var28;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L23;
                                 }
                               }
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+                              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
                               param5 = param5 + var23;
                               param3 = param3 + var22;
                               param9 = param9 + var26;
                               param6 = param6 + var28;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L22;
                             }
                           }
                         } else {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L24: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -377,22 +377,22 @@ final class iua {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
+                                  this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
                                   param5 = param5 + var23;
                                   param4 = param4 + var21;
                                   param9 = param9 + var26;
                                   param6 = param6 + var28;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L25;
                                 }
                               }
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+                              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
                               param5 = param5 + var23;
                               param3 = param3 + var22;
                               param9 = param9 + var26;
                               param6 = param6 + var28;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L24;
                             }
                           }
@@ -400,7 +400,7 @@ final class iua {
                       } else {
                         param2 = param2 - param1;
                         param1 = param1 - param0;
-                        param0 = (float)((iua) this).field_p[(int)param0];
+                        param0 = (float)this.field_p[(int)param0];
                         L26: while (true) {
                           param1 = param1 - 1.0f;
                           if (param1 < 0.0f) {
@@ -409,22 +409,22 @@ final class iua {
                               if (param2 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
+                                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
                                 param5 = param5 + var23;
                                 param4 = param4 + var21;
                                 param9 = param9 + var26;
                                 param6 = param6 + var28;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L27;
                               }
                             }
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+                            this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
                             param5 = param5 + var23;
                             param3 = param3 + var22;
                             param9 = param9 + var26;
                             param6 = param6 + var28;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L26;
                           }
                         }
@@ -437,20 +437,20 @@ final class iua {
               }
             }
             if (param1 > param2) {
-              if (param2 < (float)((iua) this).field_v) {
+              if (param2 < (float)this.field_v) {
                 L28: {
-                  if (param0 <= (float)((iua) this).field_v) {
+                  if (param0 <= (float)this.field_v) {
                     break L28;
                   } else {
-                    param0 = (float)((iua) this).field_v;
+                    param0 = (float)this.field_v;
                     break L28;
                   }
                 }
                 L29: {
-                  if (param1 <= (float)((iua) this).field_v) {
+                  if (param1 <= (float)this.field_v) {
                     break L29;
                   } else {
-                    param1 = (float)((iua) this).field_v;
+                    param1 = (float)this.field_v;
                     break L29;
                   }
                 }
@@ -482,7 +482,7 @@ final class iua {
                   if (var21 < var23) {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L32: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -491,29 +491,29 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
+                            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
                             param4 = param4 + var22;
                             param5 = param5 + var23;
                             param11 = param11 + var26;
                             param8 = param8 + var28;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L33;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param3, (int)param5, param11, var25, param8, var27);
+                        this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param5, param11, var25, param8, var27);
                         param3 = param3 + var21;
                         param5 = param5 + var23;
                         param11 = param11 + var26;
                         param8 = param8 + var28;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L32;
                       }
                     }
                   } else {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L34: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -522,22 +522,22 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
+                            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
                             param4 = param4 + var22;
                             param5 = param5 + var23;
                             param11 = param11 + var26;
                             param8 = param8 + var28;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L35;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param5, (int)param3, param11, var25, param8, var27);
+                        this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param3, param11, var25, param8, var27);
                         param3 = param3 + var21;
                         param5 = param5 + var23;
                         param11 = param11 + var26;
                         param8 = param8 + var28;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L34;
                       }
                     }
@@ -568,7 +568,7 @@ final class iua {
                   if (var21 < var23) {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L38: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -577,29 +577,29 @@ final class iua {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param4, (int)param3, param11, var25, param8, var27);
+                            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param3, param11, var25, param8, var27);
                             param4 = param4 + var21;
                             param3 = param3 + var22;
                             param11 = param11 + var26;
                             param8 = param8 + var28;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L39;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
+                        this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
                         param4 = param4 + var21;
                         param5 = param5 + var23;
                         param11 = param11 + var26;
                         param8 = param8 + var28;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L38;
                       }
                     }
                   } else {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L40: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -608,22 +608,22 @@ final class iua {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param3, (int)param4, param11, var25, param8, var27);
+                            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param4, param11, var25, param8, var27);
                             param4 = param4 + var21;
                             param3 = param3 + var22;
                             param11 = param11 + var26;
                             param8 = param8 + var28;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L41;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
+                        this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
                         param4 = param4 + var21;
                         param5 = param5 + var23;
                         param11 = param11 + var26;
                         param8 = param8 + var28;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L40;
                       }
                     }
@@ -633,20 +633,20 @@ final class iua {
                 return;
               }
             } else {
-              if (param1 < (float)((iua) this).field_v) {
+              if (param1 < (float)this.field_v) {
                 L42: {
-                  if (param2 <= (float)((iua) this).field_v) {
+                  if (param2 <= (float)this.field_v) {
                     break L42;
                   } else {
-                    param2 = (float)((iua) this).field_v;
+                    param2 = (float)this.field_v;
                     break L42;
                   }
                 }
                 L43: {
-                  if (param0 <= (float)((iua) this).field_v) {
+                  if (param0 <= (float)this.field_v) {
                     break L43;
                   } else {
-                    param0 = (float)((iua) this).field_v;
+                    param0 = (float)this.field_v;
                     break L43;
                   }
                 }
@@ -678,7 +678,7 @@ final class iua {
                   if (var22 < var21) {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L46: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -687,29 +687,29 @@ final class iua {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
+                            this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
                             param3 = param3 + var23;
                             param4 = param4 + var21;
                             param10 = param10 + var26;
                             param7 = param7 + var28;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L47;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param5, (int)param4, param10, var25, param7, var27);
+                        this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param4, param10, var25, param7, var27);
                         param5 = param5 + var22;
                         param4 = param4 + var21;
                         param10 = param10 + var26;
                         param7 = param7 + var28;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L46;
                       }
                     }
                   } else {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L48: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -718,22 +718,22 @@ final class iua {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
+                            this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
                             param3 = param3 + var23;
                             param4 = param4 + var21;
                             param10 = param10 + var26;
                             param7 = param7 + var28;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L49;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param5, param10, var25, param7, var27);
+                        this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param5, param10, var25, param7, var27);
                         param5 = param5 + var22;
                         param4 = param4 + var21;
                         param10 = param10 + var26;
                         param7 = param7 + var28;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L48;
                       }
                     }
@@ -770,7 +770,7 @@ final class iua {
                       } else {
                         param0 = param0 - param2;
                         param2 = param2 - param1;
-                        param1 = (float)((iua) this).field_p[(int)param1];
+                        param1 = (float)this.field_p[(int)param1];
                         L53: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -779,22 +779,22 @@ final class iua {
                               if (param0 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
+                                this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
                                 param3 = param3 + var22;
                                 param5 = param5 + var23;
                                 param10 = param10 + var26;
                                 param7 = param7 + var28;
-                                param1 = param1 + (float)((iua) this).field_t;
+                                param1 = param1 + (float)this.field_t;
                                 continue L54;
                               }
                             }
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
+                            this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
                             param3 = param3 + var22;
                             param4 = param4 + var21;
                             param10 = param10 + var26;
                             param7 = param7 + var28;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L53;
                           }
                         }
@@ -805,7 +805,7 @@ final class iua {
                     if (var22 > var23) {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((iua) this).field_p[(int)param1];
+                      param1 = (float)this.field_p[(int)param1];
                       L55: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -814,29 +814,29 @@ final class iua {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
+                              this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
                               param3 = param3 + var22;
                               param5 = param5 + var23;
                               param10 = param10 + var26;
                               param7 = param7 + var28;
-                              param1 = param1 + (float)((iua) this).field_t;
+                              param1 = param1 + (float)this.field_t;
                               continue L56;
                             }
                           }
                         } else {
-                          this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
+                          this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
                           param3 = param3 + var22;
                           param4 = param4 + var21;
                           param10 = param10 + var26;
                           param7 = param7 + var28;
-                          param1 = param1 + (float)((iua) this).field_t;
+                          param1 = param1 + (float)this.field_t;
                           continue L55;
                         }
                       }
                     } else {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((iua) this).field_p[(int)param1];
+                      param1 = (float)this.field_p[(int)param1];
                       L57: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -845,22 +845,22 @@ final class iua {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
+                              this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
                               param3 = param3 + var22;
                               param5 = param5 + var23;
                               param10 = param10 + var26;
                               param7 = param7 + var28;
-                              param1 = param1 + (float)((iua) this).field_t;
+                              param1 = param1 + (float)this.field_t;
                               continue L58;
                             }
                           }
                         } else {
-                          this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
+                          this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
                           param3 = param3 + var22;
                           param4 = param4 + var21;
                           param10 = param10 + var26;
                           param7 = param7 + var28;
-                          param1 = param1 + (float)((iua) this).field_t;
+                          param1 = param1 + (float)this.field_t;
                           continue L57;
                         }
                       }
@@ -868,7 +868,7 @@ final class iua {
                   } else {
                     param0 = param0 - param2;
                     param2 = param2 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L59: while (true) {
                       param2 = param2 - 1.0f;
                       if (param2 < 0.0f) {
@@ -877,22 +877,22 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
+                            this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
                             param3 = param3 + var22;
                             param5 = param5 + var23;
                             param10 = param10 + var26;
                             param7 = param7 + var28;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L60;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
+                        this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
                         param3 = param3 + var22;
                         param4 = param4 + var21;
                         param10 = param10 + var26;
                         param7 = param7 + var28;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L59;
                       }
                     }
@@ -906,14 +906,15 @@ final class iua {
             return;
           }
         } else {
-          ((iua) this).field_k.b((int)param0, bt.field_h[(int)param9], (int)param3, (int)param1, 1, (int)param4);
-          ((iua) this).field_k.b((int)param1, bt.field_h[(int)param9], (int)param4, (int)param2, 1, (int)param5);
-          ((iua) this).field_k.b((int)param2, bt.field_h[(int)param9], (int)param5, (int)param0, 1, (int)param3);
+          this.field_k.b((int)param0, bt.field_h[(int)param9], (int)param3, (int)param1, 1, (int)param4);
+          this.field_k.b((int)param1, bt.field_h[(int)param9], (int)param4, (int)param2, 1, (int)param5);
+          this.field_k.b((int)param2, bt.field_h[(int)param9], (int)param5, (int)param0, 1, (int)param3);
           return;
         }
     }
 
     private final void a(int[] param0, int[] param1, int param2, int param3, int param4, float param5, float param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14, float param15, float param16, float param17, float param18, float param19, float param20) {
+        int incrementValue$1 = 0;
         int var22 = 0;
         float var23 = 0.0f;
         float var24 = 0.0f;
@@ -946,14 +947,14 @@ final class iua {
           var29 = (param16 - param15) * var23;
           var30 = (param18 - param17) * var23;
           var31 = (param20 - param19) * var23;
-          if (!((iua) this).field_q) {
+          if (!this.field_q) {
             break L0;
           } else {
             L1: {
-              if (param4 <= ((iua) this).field_h) {
+              if (param4 <= this.field_h) {
                 break L1;
               } else {
-                param4 = ((iua) this).field_h;
+                param4 = this.field_h;
                 break L1;
               }
             }
@@ -977,24 +978,24 @@ final class iua {
           var22 = param4 - param3;
           param2 = param2 + param3;
           L2: while (true) {
-            int incrementValue$1 = var22;
+            incrementValue$1 = var22;
             var22--;
             if (incrementValue$1 <= 0) {
               return;
             } else {
               L3: {
                 var32 = 1.0f / param5;
-                if (var32 >= ((iua) this).field_u[param2]) {
+                if (var32 >= this.field_u[param2]) {
                   break L3;
                 } else {
                   L4: {
-                    var33 = (int)(param7 * var32 * (float)((iua) this).field_i);
-                    if (!((iua) this).field_d) {
+                    var33 = (int)(param7 * var32 * (float)this.field_i);
+                    if (!this.field_d) {
                       if (var33 >= 0) {
-                        if (var33 <= ((iua) this).field_r) {
+                        if (var33 <= this.field_r) {
                           break L4;
                         } else {
-                          var33 = ((iua) this).field_r;
+                          var33 = this.field_r;
                           break L4;
                         }
                       } else {
@@ -1002,18 +1003,18 @@ final class iua {
                         break L4;
                       }
                     } else {
-                      var33 = var33 & ((iua) this).field_r;
+                      var33 = var33 & this.field_r;
                       break L4;
                     }
                   }
                   L5: {
-                    var34 = (int)(param9 * var32 * (float)((iua) this).field_i);
-                    if (!((iua) this).field_d) {
+                    var34 = (int)(param9 * var32 * (float)this.field_i);
+                    if (!this.field_d) {
                       if (var34 >= 0) {
-                        if (var34 <= ((iua) this).field_r) {
+                        if (var34 <= this.field_r) {
                           break L5;
                         } else {
-                          var34 = ((iua) this).field_r;
+                          var34 = this.field_r;
                           break L5;
                         }
                       } else {
@@ -1021,15 +1022,15 @@ final class iua {
                         break L5;
                       }
                     } else {
-                      var34 = var34 & ((iua) this).field_r;
+                      var34 = var34 & this.field_r;
                       break L5;
                     }
                   }
                   L6: {
-                    var35 = ((iua) this).field_w[var34 * ((iua) this).field_i + var33];
+                    var35 = this.field_w[var34 * this.field_i + var33];
                     var36 = 255;
-                    if (((iua) this).field_f != 2) {
-                      if (((iua) this).field_f != 1) {
+                    if (this.field_f != 2) {
+                      if (this.field_f != 1) {
                         var36 = (int)param13;
                         break L6;
                       } else {
@@ -1062,13 +1063,13 @@ final class iua {
                           break L8;
                         } else {
                           var38 = (int)(255.0f - param11);
-                          var39 = ((((iua) this).field_l & 16711935) * (int)param11 & -16711936 | (((iua) this).field_l & 65280) * (int)param11 & 16711680) >>> 8;
+                          var39 = ((this.field_l & 16711935) * (int)param11 & -16711936 | (this.field_l & 65280) * (int)param11 & 16711680) >>> 8;
                           var37 = (((var37 & 16711935) * var38 & -16711936 | (var37 & 65280) * var38 & 16711680) >>> 8) + var39;
                           break L8;
                         }
                       }
                       param0[param2] = var37;
-                      ((iua) this).field_u[param2] = var32;
+                      this.field_u[param2] = var32;
                       break L3;
                     } else {
                       L9: {
@@ -1077,7 +1078,7 @@ final class iua {
                           break L9;
                         } else {
                           var38 = (int)(255.0f - param11);
-                          var39 = ((((iua) this).field_l & 16711935) * (int)param11 & -16711936 | (((iua) this).field_l & 65280) * (int)param11 & 16711680) >>> 8;
+                          var39 = ((this.field_l & 16711935) * (int)param11 & -16711936 | (this.field_l & 65280) * (int)param11 & 16711680) >>> 8;
                           var37 = (((var37 & 16711935) * var38 & -16711936 | (var37 & 65280) * var38 & 16711680) >>> 8) + var39;
                           break L9;
                         }
@@ -1086,7 +1087,7 @@ final class iua {
                       var39 = 255 - var36;
                       var37 = ((var38 & 16711935) * var39 + (var37 & 16711935) * var36 & -16711936) + ((var38 & 65280) * var39 + (var37 & 65280) * var36 & 16711680) >> 8;
                       param0[param2] = var37;
-                      ((iua) this).field_u[param2] = var32;
+                      this.field_u[param2] = var32;
                       break L3;
                     }
                   }
@@ -1114,14 +1115,14 @@ final class iua {
         int var11 = 0;
         int var12 = 0;
         L0: {
-          if (!((iua) this).field_q) {
+          if (!this.field_q) {
             break L0;
           } else {
             L1: {
-              if (param6 <= ((iua) this).field_h) {
+              if (param6 <= this.field_h) {
                 break L1;
               } else {
-                param6 = ((iua) this).field_h;
+                param6 = this.field_h;
                 break L1;
               }
             }
@@ -1137,12 +1138,12 @@ final class iua {
           param2 = param2 + (param5 - 1);
           param4 = param6 - param5 >> 2;
           param7 = param7 + param8 * (float)param5;
-          if (!((iua) this).field_o.field_n) {
-            if (((iua) this).field_b != 0) {
+          if (!this.field_o.field_n) {
+            if (this.field_b != 0) {
               L2: {
-                if (((iua) this).field_b != 254) {
-                  var10 = ((iua) this).field_b;
-                  var11 = 256 - ((iua) this).field_b;
+                if (this.field_b != 254) {
+                  var10 = this.field_b;
+                  var11 = 256 - this.field_b;
                   param3 = ((param3 & 16711935) * var11 >> 8 & 16711935) + ((param3 & 65280) * var11 >> 8 & 65280);
                   L3: while (true) {
                     param4--;
@@ -1217,7 +1218,7 @@ final class iua {
                   }
                 } else {
                   if (param5 != 0) {
-                    if (param6 <= ((iua) this).field_h - 1) {
+                    if (param6 <= this.field_h - 1) {
                       param4--;
                       L10: while (true) {
                         if (param4 < 0) {
@@ -1363,10 +1364,10 @@ final class iua {
               }
             }
           } else {
-            if (((iua) this).field_b != 0) {
-              if (((iua) this).field_b != 254) {
-                var10 = ((iua) this).field_b;
-                var11 = 256 - ((iua) this).field_b;
+            if (this.field_b != 0) {
+              if (this.field_b != 254) {
+                var10 = this.field_b;
+                var11 = 256 - this.field_b;
                 param3 = ((param3 & 16711935) * var11 >> 8 & 16711935) + ((param3 & 65280) * var11 >> 8 & 65280);
                 L24: while (true) {
                   param4--;
@@ -1446,7 +1447,7 @@ final class iua {
                 }
               } else {
                 if (param5 != 0) {
-                  if (param6 <= ((iua) this).field_h - 1) {
+                  if (param6 <= this.field_h - 1) {
                     param4--;
                     L31: while (true) {
                       if (param4 < 0) {
@@ -1628,7 +1629,7 @@ final class iua {
         float var37 = 0.0f;
         float var38 = 0.0f;
         float var39 = 0.0f;
-        if (!((iua) this).field_s) {
+        if (!this.field_s) {
           L0: {
             var13 = param4 - param3;
             var14 = param1 - param0;
@@ -1685,20 +1686,20 @@ final class iua {
                 if (param0 > param2) {
                   break L3;
                 } else {
-                  if (param0 < (float)((iua) this).field_v) {
+                  if (param0 < (float)this.field_v) {
                     L4: {
-                      if (param1 <= (float)((iua) this).field_v) {
+                      if (param1 <= (float)this.field_v) {
                         break L4;
                       } else {
-                        param1 = (float)((iua) this).field_v;
+                        param1 = (float)this.field_v;
                         break L4;
                       }
                     }
                     L5: {
-                      if (param2 <= (float)((iua) this).field_v) {
+                      if (param2 <= (float)this.field_v) {
                         break L5;
                       } else {
-                        param2 = (float)((iua) this).field_v;
+                        param2 = (float)this.field_v;
                         break L5;
                       }
                     }
@@ -1740,7 +1741,7 @@ final class iua {
                           } else {
                             param1 = param1 - param2;
                             param2 = param2 - param0;
-                            param0 = (float)((iua) this).field_p[(int)param0];
+                            param0 = (float)this.field_p[(int)param0];
                             L9: while (true) {
                               param2 = param2 - 1.0f;
                               if (param2 < 0.0f) {
@@ -1749,26 +1750,26 @@ final class iua {
                                   if (param1 < 0.0f) {
                                     return;
                                   } else {
-                                    this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                                    this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                                     param5 = param5 + var25;
                                     param3 = param3 + var26;
                                     param6 = param6 + var30;
                                     var37 = var37 + var32;
                                     var38 = var38 + var34;
                                     var39 = var39 + var36;
-                                    param0 = param0 + (float)((iua) this).field_t;
+                                    param0 = param0 + (float)this.field_t;
                                     continue L10;
                                   }
                                 }
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                                 param4 = param4 + var27;
                                 param3 = param3 + var26;
                                 param6 = param6 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L9;
                               }
                             }
@@ -1779,7 +1780,7 @@ final class iua {
                         if (var25 > var26) {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L11: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -1788,33 +1789,33 @@ final class iua {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                                  this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                                   param5 = param5 + var25;
                                   param3 = param3 + var26;
                                   param6 = param6 + var30;
                                   var37 = var37 + var32;
                                   var38 = var38 + var34;
                                   var39 = var39 + var36;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L12;
                                 }
                               }
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                               param4 = param4 + var27;
                               param3 = param3 + var26;
                               param6 = param6 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L11;
                             }
                           }
                         } else {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L13: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -1823,26 +1824,26 @@ final class iua {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                                  this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                                   param5 = param5 + var25;
                                   param3 = param3 + var26;
                                   param6 = param6 + var30;
                                   var37 = var37 + var32;
                                   var38 = var38 + var34;
                                   var39 = var39 + var36;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L14;
                                 }
                               }
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                               param4 = param4 + var27;
                               param3 = param3 + var26;
                               param6 = param6 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L13;
                             }
                           }
@@ -1850,7 +1851,7 @@ final class iua {
                       } else {
                         param1 = param1 - param2;
                         param2 = param2 - param0;
-                        param0 = (float)((iua) this).field_p[(int)param0];
+                        param0 = (float)this.field_p[(int)param0];
                         L15: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -1859,26 +1860,26 @@ final class iua {
                               if (param1 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                                 param5 = param5 + var25;
                                 param3 = param3 + var26;
                                 param6 = param6 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L16;
                               }
                             }
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var27;
                             param3 = param3 + var26;
                             param6 = param6 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L15;
                           }
                         }
@@ -1917,7 +1918,7 @@ final class iua {
                           } else {
                             param2 = param2 - param1;
                             param1 = param1 - param0;
-                            param0 = (float)((iua) this).field_p[(int)param0];
+                            param0 = (float)this.field_p[(int)param0];
                             L20: while (true) {
                               param1 = param1 - 1.0f;
                               if (param1 < 0.0f) {
@@ -1926,26 +1927,26 @@ final class iua {
                                   if (param2 < 0.0f) {
                                     return;
                                   } else {
-                                    this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                                    this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                                     param5 = param5 + var27;
                                     param4 = param4 + var25;
                                     param6 = param6 + var30;
                                     var37 = var37 + var32;
                                     var38 = var38 + var34;
                                     var39 = var39 + var36;
-                                    param0 = param0 + (float)((iua) this).field_t;
+                                    param0 = param0 + (float)this.field_t;
                                     continue L21;
                                   }
                                 }
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                                 param5 = param5 + var27;
                                 param3 = param3 + var26;
                                 param6 = param6 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L20;
                               }
                             }
@@ -1956,7 +1957,7 @@ final class iua {
                         if (var27 > var25) {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L22: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -1965,33 +1966,33 @@ final class iua {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                                  this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                                   param5 = param5 + var27;
                                   param4 = param4 + var25;
                                   param6 = param6 + var30;
                                   var37 = var37 + var32;
                                   var38 = var38 + var34;
                                   var39 = var39 + var36;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L23;
                                 }
                               }
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                               param5 = param5 + var27;
                               param3 = param3 + var26;
                               param6 = param6 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L22;
                             }
                           }
                         } else {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L24: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -2000,26 +2001,26 @@ final class iua {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                                  this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                                   param5 = param5 + var27;
                                   param4 = param4 + var25;
                                   param6 = param6 + var30;
                                   var37 = var37 + var32;
                                   var38 = var38 + var34;
                                   var39 = var39 + var36;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L25;
                                 }
                               }
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                               param5 = param5 + var27;
                               param3 = param3 + var26;
                               param6 = param6 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L24;
                             }
                           }
@@ -2027,7 +2028,7 @@ final class iua {
                       } else {
                         param2 = param2 - param1;
                         param1 = param1 - param0;
-                        param0 = (float)((iua) this).field_p[(int)param0];
+                        param0 = (float)this.field_p[(int)param0];
                         L26: while (true) {
                           param1 = param1 - 1.0f;
                           if (param1 < 0.0f) {
@@ -2036,26 +2037,26 @@ final class iua {
                               if (param2 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                                 param5 = param5 + var27;
                                 param4 = param4 + var25;
                                 param6 = param6 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L27;
                               }
                             }
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                             param5 = param5 + var27;
                             param3 = param3 + var26;
                             param6 = param6 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L26;
                           }
                         }
@@ -2068,20 +2069,20 @@ final class iua {
               }
             }
             if (param1 > param2) {
-              if (param2 < (float)((iua) this).field_v) {
+              if (param2 < (float)this.field_v) {
                 L28: {
-                  if (param0 <= (float)((iua) this).field_v) {
+                  if (param0 <= (float)this.field_v) {
                     break L28;
                   } else {
-                    param0 = (float)((iua) this).field_v;
+                    param0 = (float)this.field_v;
                     break L28;
                   }
                 }
                 L29: {
-                  if (param1 <= (float)((iua) this).field_v) {
+                  if (param1 <= (float)this.field_v) {
                     break L29;
                   } else {
-                    param1 = (float)((iua) this).field_v;
+                    param1 = (float)this.field_v;
                     break L29;
                   }
                 }
@@ -2117,7 +2118,7 @@ final class iua {
                   if (var25 < var27) {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L32: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -2126,33 +2127,33 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var26;
                             param5 = param5 + var27;
                             param8 = param8 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L33;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param3, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
+                        this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
                         param3 = param3 + var25;
                         param5 = param5 + var27;
                         param8 = param8 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L32;
                       }
                     }
                   } else {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L34: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -2161,26 +2162,26 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var26;
                             param5 = param5 + var27;
                             param8 = param8 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L35;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param5, (int)param3, param8, var29, var37, var31, var38, var33, var39, var35);
+                        this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param3, param8, var29, var37, var31, var38, var33, var39, var35);
                         param3 = param3 + var25;
                         param5 = param5 + var27;
                         param8 = param8 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L34;
                       }
                     }
@@ -2213,7 +2214,7 @@ final class iua {
                   if (var25 < var27) {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L38: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -2222,33 +2223,33 @@ final class iua {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param4, (int)param3, param8, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param3, param8, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var25;
                             param3 = param3 + var26;
                             param8 = param8 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L39;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
+                        this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
                         param4 = param4 + var25;
                         param5 = param5 + var27;
                         param8 = param8 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L38;
                       }
                     }
                   } else {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L40: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -2257,26 +2258,26 @@ final class iua {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param3, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var25;
                             param3 = param3 + var26;
                             param8 = param8 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L41;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
+                        this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
                         param4 = param4 + var25;
                         param5 = param5 + var27;
                         param8 = param8 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L40;
                       }
                     }
@@ -2286,20 +2287,20 @@ final class iua {
                 return;
               }
             } else {
-              if (param1 < (float)((iua) this).field_v) {
+              if (param1 < (float)this.field_v) {
                 L42: {
-                  if (param2 <= (float)((iua) this).field_v) {
+                  if (param2 <= (float)this.field_v) {
                     break L42;
                   } else {
-                    param2 = (float)((iua) this).field_v;
+                    param2 = (float)this.field_v;
                     break L42;
                   }
                 }
                 L43: {
-                  if (param0 <= (float)((iua) this).field_v) {
+                  if (param0 <= (float)this.field_v) {
                     break L43;
                   } else {
-                    param0 = (float)((iua) this).field_v;
+                    param0 = (float)this.field_v;
                     break L43;
                   }
                 }
@@ -2335,7 +2336,7 @@ final class iua {
                   if (var26 < var25) {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L46: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -2344,33 +2345,33 @@ final class iua {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
                             param3 = param3 + var27;
                             param4 = param4 + var25;
                             param7 = param7 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L47;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param5, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
+                        this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
                         param5 = param5 + var26;
                         param4 = param4 + var25;
                         param7 = param7 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L46;
                       }
                     }
                   } else {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L48: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -2379,26 +2380,26 @@ final class iua {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                             param3 = param3 + var27;
                             param4 = param4 + var25;
                             param7 = param7 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L49;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
+                        this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
                         param5 = param5 + var26;
                         param4 = param4 + var25;
                         param7 = param7 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L48;
                       }
                     }
@@ -2437,7 +2438,7 @@ final class iua {
                       } else {
                         param0 = param0 - param2;
                         param2 = param2 - param1;
-                        param1 = (float)((iua) this).field_p[(int)param1];
+                        param1 = (float)this.field_p[(int)param1];
                         L53: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -2446,26 +2447,26 @@ final class iua {
                               if (param0 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
+                                this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
                                 param3 = param3 + var26;
                                 param5 = param5 + var27;
                                 param7 = param7 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param1 = param1 + (float)((iua) this).field_t;
+                                param1 = param1 + (float)this.field_t;
                                 continue L54;
                               }
                             }
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
                             param3 = param3 + var26;
                             param4 = param4 + var25;
                             param7 = param7 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L53;
                           }
                         }
@@ -2476,7 +2477,7 @@ final class iua {
                     if (var26 > var27) {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((iua) this).field_p[(int)param1];
+                      param1 = (float)this.field_p[(int)param1];
                       L55: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -2485,33 +2486,33 @@ final class iua {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
+                              this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
                               param3 = param3 + var26;
                               param5 = param5 + var27;
                               param7 = param7 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param1 = param1 + (float)((iua) this).field_t;
+                              param1 = param1 + (float)this.field_t;
                               continue L56;
                             }
                           }
                         } else {
-                          this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
+                          this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
                           param3 = param3 + var26;
                           param4 = param4 + var25;
                           param7 = param7 + var30;
                           var37 = var37 + var32;
                           var38 = var38 + var34;
                           var39 = var39 + var36;
-                          param1 = param1 + (float)((iua) this).field_t;
+                          param1 = param1 + (float)this.field_t;
                           continue L55;
                         }
                       }
                     } else {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((iua) this).field_p[(int)param1];
+                      param1 = (float)this.field_p[(int)param1];
                       L57: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -2520,26 +2521,26 @@ final class iua {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                              this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                               param3 = param3 + var26;
                               param5 = param5 + var27;
                               param7 = param7 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param1 = param1 + (float)((iua) this).field_t;
+                              param1 = param1 + (float)this.field_t;
                               continue L58;
                             }
                           }
                         } else {
-                          this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                          this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                           param3 = param3 + var26;
                           param4 = param4 + var25;
                           param7 = param7 + var30;
                           var37 = var37 + var32;
                           var38 = var38 + var34;
                           var39 = var39 + var36;
-                          param1 = param1 + (float)((iua) this).field_t;
+                          param1 = param1 + (float)this.field_t;
                           continue L57;
                         }
                       }
@@ -2547,7 +2548,7 @@ final class iua {
                   } else {
                     param0 = param0 - param2;
                     param2 = param2 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L59: while (true) {
                       param2 = param2 - 1.0f;
                       if (param2 < 0.0f) {
@@ -2556,26 +2557,26 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                             param3 = param3 + var26;
                             param5 = param5 + var27;
                             param7 = param7 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L60;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                        this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                         param3 = param3 + var26;
                         param4 = param4 + var25;
                         param7 = param7 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L59;
                       }
                     }
@@ -2589,15 +2590,15 @@ final class iua {
             return;
           }
         } else {
-          ((iua) this).field_k.b((int)param0, -16777216 | param9, (int)param3, (int)param1, 1, (int)param4);
-          ((iua) this).field_k.b((int)param1, -16777216 | param9, (int)param4, (int)param2, 1, (int)param5);
-          ((iua) this).field_k.b((int)param2, -16777216 | param9, (int)param5, (int)param0, 1, (int)param3);
+          this.field_k.b((int)param0, -16777216 | param9, (int)param3, (int)param1, 1, (int)param4);
+          this.field_k.b((int)param1, -16777216 | param9, (int)param4, (int)param2, 1, (int)param5);
+          this.field_k.b((int)param2, -16777216 | param9, (int)param5, (int)param0, 1, (int)param3);
           return;
         }
     }
 
     final void a(boolean param0) {
-        ((iua) this).field_s = param0 ? true : false;
+        this.field_s = param0 ? true : false;
     }
 
     private final void a(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8, float param9, float param10) {
@@ -2605,14 +2606,14 @@ final class iua {
         int var13 = 0;
         int var14 = 0;
         L0: {
-          if (!((iua) this).field_q) {
+          if (!this.field_q) {
             break L0;
           } else {
             L1: {
-              if (param6 <= ((iua) this).field_h) {
+              if (param6 <= this.field_h) {
                 break L1;
               } else {
-                param6 = ((iua) this).field_h;
+                param6 = this.field_h;
                 break L1;
               }
             }
@@ -2629,12 +2630,12 @@ final class iua {
             param2 = param2 + (param5 - 1);
             param7 = param7 + param8 * (float)param5;
             param9 = param9 + param10 * (float)param5;
-            if (!((iua) this).field_o.field_n) {
-              if (!((iua) this).field_j) {
+            if (!this.field_o.field_n) {
+              if (!this.field_j) {
                 param4 = param6 - param5;
-                if (((iua) this).field_b != 0) {
-                  var12 = ((iua) this).field_b;
-                  var13 = 256 - ((iua) this).field_b;
+                if (this.field_b != 0) {
+                  var12 = this.field_b;
+                  var13 = 256 - this.field_b;
                   L3: while (true) {
                     L4: {
                       param2++;
@@ -2681,10 +2682,10 @@ final class iua {
               } else {
                 param4 = param6 - param5 >> 2;
                 param8 = param8 * 4.0f;
-                if (((iua) this).field_b != 0) {
+                if (this.field_b != 0) {
                   L7: {
-                    var12 = ((iua) this).field_b;
-                    var13 = 256 - ((iua) this).field_b;
+                    var12 = this.field_b;
+                    var13 = 256 - this.field_b;
                     if (param4 <= 0) {
                       break L7;
                     } else {
@@ -2855,11 +2856,11 @@ final class iua {
                 }
               }
             } else {
-              if (!((iua) this).field_j) {
+              if (!this.field_j) {
                 param4 = param6 - param5;
-                if (((iua) this).field_b != 0) {
-                  var12 = ((iua) this).field_b;
-                  var13 = 256 - ((iua) this).field_b;
+                if (this.field_b != 0) {
+                  var12 = this.field_b;
+                  var13 = 256 - this.field_b;
                   L23: while (true) {
                     L24: {
                       param2++;
@@ -2908,10 +2909,10 @@ final class iua {
               } else {
                 param4 = param6 - param5 >> 2;
                 param8 = param8 * 4.0f;
-                if (((iua) this).field_b != 0) {
+                if (this.field_b != 0) {
                   L27: {
-                    var12 = ((iua) this).field_b;
-                    var13 = 256 - ((iua) this).field_b;
+                    var12 = this.field_b;
+                    var13 = 256 - this.field_b;
                     if (param4 <= 0) {
                       break L27;
                     } else {
@@ -3112,7 +3113,7 @@ final class iua {
         float var20 = 0.0f;
         float var21 = 0.0f;
         float var22 = 0.0f;
-        if (!((iua) this).field_s) {
+        if (!this.field_s) {
           L0: {
             var11 = param4 - param3;
             var12 = param1 - param0;
@@ -3157,20 +3158,20 @@ final class iua {
                 if (param0 > param2) {
                   break L3;
                 } else {
-                  if (param0 < (float)((iua) this).field_v) {
+                  if (param0 < (float)this.field_v) {
                     L4: {
-                      if (param1 <= (float)((iua) this).field_v) {
+                      if (param1 <= (float)this.field_v) {
                         break L4;
                       } else {
-                        param1 = (float)((iua) this).field_v;
+                        param1 = (float)this.field_v;
                         break L4;
                       }
                     }
                     L5: {
-                      if (param2 <= (float)((iua) this).field_v) {
+                      if (param2 <= (float)this.field_v) {
                         break L5;
                       } else {
-                        param2 = (float)((iua) this).field_v;
+                        param2 = (float)this.field_v;
                         break L5;
                       }
                     }
@@ -3206,7 +3207,7 @@ final class iua {
                           } else {
                             param1 = param1 - param2;
                             param2 = param2 - param0;
-                            param0 = (float)((iua) this).field_p[(int)param0];
+                            param0 = (float)this.field_p[(int)param0];
                             L9: while (true) {
                               param2 = param2 - 1.0f;
                               if (param2 < 0.0f) {
@@ -3215,20 +3216,20 @@ final class iua {
                                   if (param1 < 0.0f) {
                                     return;
                                   } else {
-                                    this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                                    this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                                     param5 = param5 + var18;
                                     param3 = param3 + var17;
                                     param6 = param6 + var22;
-                                    param0 = param0 + (float)((iua) this).field_t;
+                                    param0 = param0 + (float)this.field_t;
                                     continue L10;
                                   }
                                 }
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
+                                this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
                                 param4 = param4 + var19;
                                 param3 = param3 + var17;
                                 param6 = param6 + var22;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L9;
                               }
                             }
@@ -3239,7 +3240,7 @@ final class iua {
                         if (var18 > var17) {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L11: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -3248,27 +3249,27 @@ final class iua {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                                  this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                                   param5 = param5 + var18;
                                   param3 = param3 + var17;
                                   param6 = param6 + var22;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L12;
                                 }
                               }
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
+                              this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
                               param4 = param4 + var19;
                               param3 = param3 + var17;
                               param6 = param6 + var22;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L11;
                             }
                           }
                         } else {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L13: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -3277,20 +3278,20 @@ final class iua {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                                  this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                                   param5 = param5 + var18;
                                   param3 = param3 + var17;
                                   param6 = param6 + var22;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L14;
                                 }
                               }
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
+                              this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
                               param4 = param4 + var19;
                               param3 = param3 + var17;
                               param6 = param6 + var22;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L13;
                             }
                           }
@@ -3298,7 +3299,7 @@ final class iua {
                       } else {
                         param1 = param1 - param2;
                         param2 = param2 - param0;
-                        param0 = (float)((iua) this).field_p[(int)param0];
+                        param0 = (float)this.field_p[(int)param0];
                         L15: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -3307,20 +3308,20 @@ final class iua {
                               if (param1 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                                this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                                 param5 = param5 + var18;
                                 param3 = param3 + var17;
                                 param6 = param6 + var22;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L16;
                               }
                             }
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
+                            this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
                             param4 = param4 + var19;
                             param3 = param3 + var17;
                             param6 = param6 + var22;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L15;
                           }
                         }
@@ -3356,7 +3357,7 @@ final class iua {
                           } else {
                             param2 = param2 - param1;
                             param1 = param1 - param0;
-                            param0 = (float)((iua) this).field_p[(int)param0];
+                            param0 = (float)this.field_p[(int)param0];
                             L20: while (true) {
                               param1 = param1 - 1.0f;
                               if (param1 < 0.0f) {
@@ -3365,20 +3366,20 @@ final class iua {
                                   if (param2 < 0.0f) {
                                     return;
                                   } else {
-                                    this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
+                                    this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
                                     param5 = param5 + var19;
                                     param4 = param4 + var18;
                                     param6 = param6 + var22;
-                                    param0 = param0 + (float)((iua) this).field_t;
+                                    param0 = param0 + (float)this.field_t;
                                     continue L21;
                                   }
                                 }
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                                this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                                 param5 = param5 + var19;
                                 param3 = param3 + var17;
                                 param6 = param6 + var22;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L20;
                               }
                             }
@@ -3389,7 +3390,7 @@ final class iua {
                         if (var19 > var18) {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L22: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -3398,27 +3399,27 @@ final class iua {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
+                                  this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
                                   param5 = param5 + var19;
                                   param4 = param4 + var18;
                                   param6 = param6 + var22;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L23;
                                 }
                               }
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                              this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                               param5 = param5 + var19;
                               param3 = param3 + var17;
                               param6 = param6 + var22;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L22;
                             }
                           }
                         } else {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L24: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -3427,20 +3428,20 @@ final class iua {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
+                                  this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
                                   param5 = param5 + var19;
                                   param4 = param4 + var18;
                                   param6 = param6 + var22;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L25;
                                 }
                               }
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                              this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                               param5 = param5 + var19;
                               param3 = param3 + var17;
                               param6 = param6 + var22;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L24;
                             }
                           }
@@ -3448,7 +3449,7 @@ final class iua {
                       } else {
                         param2 = param2 - param1;
                         param1 = param1 - param0;
-                        param0 = (float)((iua) this).field_p[(int)param0];
+                        param0 = (float)this.field_p[(int)param0];
                         L26: while (true) {
                           param1 = param1 - 1.0f;
                           if (param1 < 0.0f) {
@@ -3457,20 +3458,20 @@ final class iua {
                               if (param2 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
+                                this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
                                 param5 = param5 + var19;
                                 param4 = param4 + var18;
                                 param6 = param6 + var22;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L27;
                               }
                             }
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                            this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                             param5 = param5 + var19;
                             param3 = param3 + var17;
                             param6 = param6 + var22;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L26;
                           }
                         }
@@ -3483,20 +3484,20 @@ final class iua {
               }
             }
             if (param1 > param2) {
-              if (param2 < (float)((iua) this).field_v) {
+              if (param2 < (float)this.field_v) {
                 L28: {
-                  if (param0 <= (float)((iua) this).field_v) {
+                  if (param0 <= (float)this.field_v) {
                     break L28;
                   } else {
-                    param0 = (float)((iua) this).field_v;
+                    param0 = (float)this.field_v;
                     break L28;
                   }
                 }
                 L29: {
-                  if (param1 <= (float)((iua) this).field_v) {
+                  if (param1 <= (float)this.field_v) {
                     break L29;
                   } else {
-                    param1 = (float)((iua) this).field_v;
+                    param1 = (float)this.field_v;
                     break L29;
                   }
                 }
@@ -3526,7 +3527,7 @@ final class iua {
                   if (var18 < var19) {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L32: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -3535,27 +3536,27 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
+                            this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
                             param4 = param4 + var17;
                             param5 = param5 + var19;
                             param8 = param8 + var22;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L33;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param3, (int)param5, param8, var21);
+                        this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param3, (int)param5, param8, var21);
                         param3 = param3 + var18;
                         param5 = param5 + var19;
                         param8 = param8 + var22;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L32;
                       }
                     }
                   } else {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L34: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -3564,20 +3565,20 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
+                            this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
                             param4 = param4 + var17;
                             param5 = param5 + var19;
                             param8 = param8 + var22;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L35;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param5, (int)param3, param8, var21);
+                        this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param3, param8, var21);
                         param3 = param3 + var18;
                         param5 = param5 + var19;
                         param8 = param8 + var22;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L34;
                       }
                     }
@@ -3607,7 +3608,7 @@ final class iua {
                   if (var18 < var19) {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L38: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -3616,27 +3617,27 @@ final class iua {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param4, (int)param3, param8, var21);
+                            this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param3, param8, var21);
                             param4 = param4 + var18;
                             param3 = param3 + var17;
                             param8 = param8 + var22;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L39;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
+                        this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
                         param4 = param4 + var18;
                         param5 = param5 + var19;
                         param8 = param8 + var22;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L38;
                       }
                     }
                   } else {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L40: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -3645,20 +3646,20 @@ final class iua {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param3, (int)param4, param8, var21);
+                            this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param3, (int)param4, param8, var21);
                             param4 = param4 + var18;
                             param3 = param3 + var17;
                             param8 = param8 + var22;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L41;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
+                        this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
                         param4 = param4 + var18;
                         param5 = param5 + var19;
                         param8 = param8 + var22;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L40;
                       }
                     }
@@ -3668,20 +3669,20 @@ final class iua {
                 return;
               }
             } else {
-              if (param1 < (float)((iua) this).field_v) {
+              if (param1 < (float)this.field_v) {
                 L42: {
-                  if (param2 <= (float)((iua) this).field_v) {
+                  if (param2 <= (float)this.field_v) {
                     break L42;
                   } else {
-                    param2 = (float)((iua) this).field_v;
+                    param2 = (float)this.field_v;
                     break L42;
                   }
                 }
                 L43: {
-                  if (param0 <= (float)((iua) this).field_v) {
+                  if (param0 <= (float)this.field_v) {
                     break L43;
                   } else {
-                    param0 = (float)((iua) this).field_v;
+                    param0 = (float)this.field_v;
                     break L43;
                   }
                 }
@@ -3711,7 +3712,7 @@ final class iua {
                   if (var17 < var18) {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L46: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -3720,27 +3721,27 @@ final class iua {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+                            this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
                             param3 = param3 + var19;
                             param4 = param4 + var18;
                             param7 = param7 + var22;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L47;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param5, (int)param4, param7, var21);
+                        this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param4, param7, var21);
                         param5 = param5 + var17;
                         param4 = param4 + var18;
                         param7 = param7 + var22;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L46;
                       }
                     }
                   } else {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L48: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -3749,20 +3750,20 @@ final class iua {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                            this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                             param3 = param3 + var19;
                             param4 = param4 + var18;
                             param7 = param7 + var22;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L49;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param4, (int)param5, param7, var21);
+                        this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param5, param7, var21);
                         param5 = param5 + var17;
                         param4 = param4 + var18;
                         param7 = param7 + var22;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L48;
                       }
                     }
@@ -3798,7 +3799,7 @@ final class iua {
                       } else {
                         param0 = param0 - param2;
                         param2 = param2 - param1;
-                        param1 = (float)((iua) this).field_p[(int)param1];
+                        param1 = (float)this.field_p[(int)param1];
                         L53: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -3807,20 +3808,20 @@ final class iua {
                               if (param0 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
+                                this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
                                 param3 = param3 + var17;
                                 param5 = param5 + var19;
                                 param7 = param7 + var22;
-                                param1 = param1 + (float)((iua) this).field_t;
+                                param1 = param1 + (float)this.field_t;
                                 continue L54;
                               }
                             }
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+                            this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
                             param3 = param3 + var17;
                             param4 = param4 + var18;
                             param7 = param7 + var22;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L53;
                           }
                         }
@@ -3831,7 +3832,7 @@ final class iua {
                     if (var17 > var19) {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((iua) this).field_p[(int)param1];
+                      param1 = (float)this.field_p[(int)param1];
                       L55: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -3840,27 +3841,27 @@ final class iua {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
+                              this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
                               param3 = param3 + var17;
                               param5 = param5 + var19;
                               param7 = param7 + var22;
-                              param1 = param1 + (float)((iua) this).field_t;
+                              param1 = param1 + (float)this.field_t;
                               continue L56;
                             }
                           }
                         } else {
-                          this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+                          this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
                           param3 = param3 + var17;
                           param4 = param4 + var18;
                           param7 = param7 + var22;
-                          param1 = param1 + (float)((iua) this).field_t;
+                          param1 = param1 + (float)this.field_t;
                           continue L55;
                         }
                       }
                     } else {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((iua) this).field_p[(int)param1];
+                      param1 = (float)this.field_p[(int)param1];
                       L57: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -3869,20 +3870,20 @@ final class iua {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
+                              this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
                               param3 = param3 + var17;
                               param5 = param5 + var19;
                               param7 = param7 + var22;
-                              param1 = param1 + (float)((iua) this).field_t;
+                              param1 = param1 + (float)this.field_t;
                               continue L58;
                             }
                           }
                         } else {
-                          this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                          this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                           param3 = param3 + var17;
                           param4 = param4 + var18;
                           param7 = param7 + var22;
-                          param1 = param1 + (float)((iua) this).field_t;
+                          param1 = param1 + (float)this.field_t;
                           continue L57;
                         }
                       }
@@ -3890,7 +3891,7 @@ final class iua {
                   } else {
                     param0 = param0 - param2;
                     param2 = param2 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L59: while (true) {
                       param2 = param2 - 1.0f;
                       if (param2 < 0.0f) {
@@ -3899,20 +3900,20 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
+                            this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
                             param3 = param3 + var17;
                             param5 = param5 + var19;
                             param7 = param7 + var22;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L60;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                        this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                         param3 = param3 + var17;
                         param4 = param4 + var18;
                         param7 = param7 + var22;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L59;
                       }
                     }
@@ -3926,9 +3927,9 @@ final class iua {
             return;
           }
         } else {
-          ((iua) this).field_k.b((int)param0, param9, (int)param3, (int)param1, 1, (int)param4);
-          ((iua) this).field_k.b((int)param1, param9, (int)param4, (int)param2, 1, (int)param5);
-          ((iua) this).field_k.b((int)param2, param9, (int)param5, (int)param0, 1, (int)param3);
+          this.field_k.b((int)param0, param9, (int)param3, (int)param1, 1, (int)param4);
+          this.field_k.b((int)param1, param9, (int)param4, (int)param2, 1, (int)param5);
+          this.field_k.b((int)param2, param9, (int)param5, (int)param0, 1, (int)param3);
           return;
         }
     }
@@ -3984,18 +3985,18 @@ final class iua {
         Object stackOut_4_0 = null;
         int stackOut_4_1 = 0;
         L0: {
-          if (param22 == ((iua) this).field_c) {
+          if (param22 == this.field_c) {
             break L0;
           } else {
-            ((iua) this).field_w = ((iua) this).field_k.h(param22);
-            if (((iua) this).field_w != null) {
+            this.field_w = this.field_k.h(param22);
+            if (this.field_w != null) {
               L1: {
                 stackOut_3_0 = this;
                 stackIn_5_0 = stackOut_3_0;
                 stackIn_4_0 = stackOut_3_0;
-                if (!((iua) this).field_k.j(param22)) {
+                if (!this.field_k.j(param22)) {
                   stackOut_5_0 = this;
-                  stackOut_5_1 = ((iua) this).field_k.field_I;
+                  stackOut_5_1 = this.field_k.field_I;
                   stackIn_6_0 = stackOut_5_0;
                   stackIn_6_1 = stackOut_5_1;
                   break L1;
@@ -4007,19 +4008,19 @@ final class iua {
                   break L1;
                 }
               }
-              ((iua) this).field_i = stackIn_6_1;
-              ((iua) this).field_r = ((iua) this).field_i - 1;
-              ((iua) this).field_f = ((iua) this).field_k.f(param22);
-              ((iua) this).field_d = ((iua) this).field_k.d(param22);
+              ((iua) (this)).field_i = stackIn_6_1;
+              this.field_r = this.field_i - 1;
+              this.field_f = this.field_k.f(param22);
+              this.field_d = this.field_k.d(param22);
               break L0;
             } else {
-              ((iua) this).b((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, l.a(param18 | param19 << 24, param15, 20048), l.a(param18 | param20 << 24, param16, 20048), l.a(param18 | param21 << 24, param17, 20048));
+              this.b((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, l.a(param18 | param19 << 24, param15, 20048), l.a(param18 | param20 << 24, param16, 20048), l.a(param18 | param21 << 24, param17, 20048));
               return;
             }
           }
         }
         L2: {
-          ((iua) this).field_l = param18;
+          this.field_l = param18;
           var24 = (float)(param15 >> 24 & 255);
           var25 = (float)(param16 >> 24 & 255);
           var26 = (float)(param17 >> 24 & 255);
@@ -4125,20 +4126,20 @@ final class iua {
             if (param0 > param2) {
               break L5;
             } else {
-              if (param0 < (float)((iua) this).field_v) {
+              if (param0 < (float)this.field_v) {
                 L6: {
-                  if (param1 <= (float)((iua) this).field_v) {
+                  if (param1 <= (float)this.field_v) {
                     break L6;
                   } else {
-                    param1 = (float)((iua) this).field_v;
+                    param1 = (float)this.field_v;
                     break L6;
                   }
                 }
                 L7: {
-                  if (param2 <= (float)((iua) this).field_v) {
+                  if (param2 <= (float)this.field_v) {
                     break L7;
                   } else {
-                    param2 = (float)((iua) this).field_v;
+                    param2 = (float)this.field_v;
                     break L7;
                   }
                 }
@@ -4220,7 +4221,7 @@ final class iua {
                     }
                     param1 = param1 - param2;
                     param2 = param2 - param0;
-                    param0 = (float)((iua) this).field_p[(int)param0];
+                    param0 = (float)this.field_p[(int)param0];
                     L13: while (true) {
                       param2 = param2 - 1.0f;
                       if (param2 < 0.0f) {
@@ -4229,7 +4230,7 @@ final class iua {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
+                            this.a(this.field_a, this.field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
                             param3 = param3 + var36;
                             param5 = param5 + var45;
                             param6 = param6 + var37;
@@ -4248,12 +4249,12 @@ final class iua {
                             var32 = var32 + var52;
                             var33 = var33 + var44;
                             var35 = var35 + var53;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L14;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
+                        this.a(this.field_a, this.field_w, (int)param0, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
                         param4 = param4 + var54;
                         param3 = param3 + var36;
                         param7 = param7 + var55;
@@ -4272,14 +4273,14 @@ final class iua {
                         var30 = var30 + var43;
                         var34 = var34 + var62;
                         var33 = var33 + var44;
-                        param0 = param0 + (float)((iua) this).field_t;
+                        param0 = param0 + (float)this.field_t;
                         continue L13;
                       }
                     }
                   }
                   param1 = param1 - param2;
                   param2 = param2 - param0;
-                  param0 = (float)((iua) this).field_p[(int)param0];
+                  param0 = (float)this.field_p[(int)param0];
                   L15: while (true) {
                     param2 = param2 - 1.0f;
                     if (param2 < 0.0f) {
@@ -4288,7 +4289,7 @@ final class iua {
                         if (param1 < 0.0f) {
                           return;
                         } else {
-                          this.a(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
+                          this.a(this.field_a, this.field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
                           param5 = param5 + var45;
                           param3 = param3 + var36;
                           param8 = param8 + var46;
@@ -4307,12 +4308,12 @@ final class iua {
                           var30 = var30 + var43;
                           var35 = var35 + var53;
                           var33 = var33 + var44;
-                          param0 = param0 + (float)((iua) this).field_t;
+                          param0 = param0 + (float)this.field_t;
                           continue L16;
                         }
                       }
                     } else {
-                      this.a(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
+                      this.a(this.field_a, this.field_w, (int)param0, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
                       param3 = param3 + var36;
                       param4 = param4 + var54;
                       param6 = param6 + var37;
@@ -4331,7 +4332,7 @@ final class iua {
                       var31 = var31 + var61;
                       var33 = var33 + var44;
                       var34 = var34 + var62;
-                      param0 = param0 + (float)((iua) this).field_t;
+                      param0 = param0 + (float)this.field_t;
                       continue L15;
                     }
                   }
@@ -4413,7 +4414,7 @@ final class iua {
                     }
                     param2 = param2 - param1;
                     param1 = param1 - param0;
-                    param0 = (float)((iua) this).field_p[(int)param0];
+                    param0 = (float)this.field_p[(int)param0];
                     L22: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -4422,7 +4423,7 @@ final class iua {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.a(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+                            this.a(this.field_a, this.field_w, (int)param0, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
                             param4 = param4 + var45;
                             param5 = param5 + var54;
                             param7 = param7 + var46;
@@ -4441,12 +4442,12 @@ final class iua {
                             var32 = var32 + var61;
                             var34 = var34 + var53;
                             var35 = var35 + var62;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L23;
                           }
                         }
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
+                        this.a(this.field_a, this.field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
                         param3 = param3 + var36;
                         param5 = param5 + var54;
                         param6 = param6 + var37;
@@ -4465,14 +4466,14 @@ final class iua {
                         var32 = var32 + var61;
                         var33 = var33 + var44;
                         var35 = var35 + var62;
-                        param0 = param0 + (float)((iua) this).field_t;
+                        param0 = param0 + (float)this.field_t;
                         continue L22;
                       }
                     }
                   }
                   param2 = param2 - param1;
                   param1 = param1 - param0;
-                  param0 = (float)((iua) this).field_p[(int)param0];
+                  param0 = (float)this.field_p[(int)param0];
                   L24: while (true) {
                     param1 = param1 - 1.0f;
                     if (param1 < 0.0f) {
@@ -4481,7 +4482,7 @@ final class iua {
                         if (param2 < 0.0f) {
                           return;
                         } else {
-                          this.a(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+                          this.a(this.field_a, this.field_w, (int)param0, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
                           param4 = param4 + var45;
                           param5 = param5 + var54;
                           param7 = param7 + var46;
@@ -4500,12 +4501,12 @@ final class iua {
                           var32 = var32 + var61;
                           var34 = var34 + var53;
                           var35 = var35 + var62;
-                          param0 = param0 + (float)((iua) this).field_t;
+                          param0 = param0 + (float)this.field_t;
                           continue L25;
                         }
                       }
                     } else {
-                      this.a(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
+                      this.a(this.field_a, this.field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
                       param3 = param3 + var36;
                       param5 = param5 + var54;
                       param6 = param6 + var37;
@@ -4524,7 +4525,7 @@ final class iua {
                       var32 = var32 + var61;
                       var33 = var33 + var44;
                       var35 = var35 + var62;
-                      param0 = param0 + (float)((iua) this).field_t;
+                      param0 = param0 + (float)this.field_t;
                       continue L24;
                     }
                   }
@@ -4536,20 +4537,20 @@ final class iua {
           }
         }
         if (param1 > param2) {
-          if (param2 < (float)((iua) this).field_v) {
+          if (param2 < (float)this.field_v) {
             L26: {
-              if (param0 <= (float)((iua) this).field_v) {
+              if (param0 <= (float)this.field_v) {
                 break L26;
               } else {
-                param0 = (float)((iua) this).field_v;
+                param0 = (float)this.field_v;
                 break L26;
               }
             }
             L27: {
-              if (param1 <= (float)((iua) this).field_v) {
+              if (param1 <= (float)this.field_v) {
                 break L27;
               } else {
-                param1 = (float)((iua) this).field_v;
+                param1 = (float)this.field_v;
                 break L27;
               }
             }
@@ -4609,7 +4610,7 @@ final class iua {
               if (var45 >= var54) {
                 param0 = param0 - param1;
                 param1 = param1 - param2;
-                param2 = (float)((iua) this).field_p[(int)param2];
+                param2 = (float)this.field_p[(int)param2];
                 L30: while (true) {
                   param1 = param1 - 1.0f;
                   if (param1 < 0.0f) {
@@ -4618,7 +4619,7 @@ final class iua {
                       if (param0 < 0.0f) {
                         return;
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+                        this.a(this.field_a, this.field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
                         param5 = param5 + var54;
                         param4 = param4 + var36;
                         param8 = param8 + var55;
@@ -4637,12 +4638,12 @@ final class iua {
                         var31 = var31 + var43;
                         var35 = var35 + var62;
                         var34 = var34 + var44;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L31;
                       }
                     }
                   } else {
-                    this.a(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
+                    this.a(this.field_a, this.field_w, (int)param2, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
                     param5 = param5 + var54;
                     param3 = param3 + var45;
                     param8 = param8 + var55;
@@ -4661,14 +4662,14 @@ final class iua {
                     var30 = var30 + var52;
                     var35 = var35 + var62;
                     var33 = var33 + var53;
-                    param2 = param2 + (float)((iua) this).field_t;
+                    param2 = param2 + (float)this.field_t;
                     continue L30;
                   }
                 }
               } else {
                 param0 = param0 - param1;
                 param1 = param1 - param2;
-                param2 = (float)((iua) this).field_p[(int)param2];
+                param2 = (float)this.field_p[(int)param2];
                 L32: while (true) {
                   param1 = param1 - 1.0f;
                   if (param1 < 0.0f) {
@@ -4677,7 +4678,7 @@ final class iua {
                       if (param0 < 0.0f) {
                         return;
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+                        this.a(this.field_a, this.field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
                         param4 = param4 + var36;
                         param5 = param5 + var54;
                         param7 = param7 + var37;
@@ -4696,12 +4697,12 @@ final class iua {
                         var32 = var32 + var61;
                         var34 = var34 + var44;
                         var35 = var35 + var62;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L33;
                       }
                     }
                   } else {
-                    this.a(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
+                    this.a(this.field_a, this.field_w, (int)param2, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
                     param3 = param3 + var45;
                     param5 = param5 + var54;
                     param6 = param6 + var46;
@@ -4720,7 +4721,7 @@ final class iua {
                     var32 = var32 + var61;
                     var33 = var33 + var53;
                     var35 = var35 + var62;
-                    param2 = param2 + (float)((iua) this).field_t;
+                    param2 = param2 + (float)this.field_t;
                     continue L32;
                   }
                 }
@@ -4781,7 +4782,7 @@ final class iua {
               if (var45 >= var54) {
                 param1 = param1 - param0;
                 param0 = param0 - param2;
-                param2 = (float)((iua) this).field_p[(int)param2];
+                param2 = (float)this.field_p[(int)param2];
                 L36: while (true) {
                   param0 = param0 - 1.0f;
                   if (param0 < 0.0f) {
@@ -4790,7 +4791,7 @@ final class iua {
                       if (param1 < 0.0f) {
                         return;
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
+                        this.a(this.field_a, this.field_w, (int)param2, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
                         param3 = param3 + var36;
                         param4 = param4 + var45;
                         param6 = param6 + var37;
@@ -4809,12 +4810,12 @@ final class iua {
                         var31 = var31 + var52;
                         var33 = var33 + var44;
                         var34 = var34 + var53;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L37;
                       }
                     }
                   } else {
-                    this.a(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+                    this.a(this.field_a, this.field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
                     param5 = param5 + var54;
                     param4 = param4 + var45;
                     param8 = param8 + var55;
@@ -4833,14 +4834,14 @@ final class iua {
                     var31 = var31 + var52;
                     var35 = var35 + var62;
                     var34 = var34 + var53;
-                    param2 = param2 + (float)((iua) this).field_t;
+                    param2 = param2 + (float)this.field_t;
                     continue L36;
                   }
                 }
               } else {
                 param1 = param1 - param0;
                 param0 = param0 - param2;
-                param2 = (float)((iua) this).field_p[(int)param2];
+                param2 = (float)this.field_p[(int)param2];
                 L38: while (true) {
                   param0 = param0 - 1.0f;
                   if (param0 < 0.0f) {
@@ -4849,7 +4850,7 @@ final class iua {
                       if (param1 < 0.0f) {
                         return;
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
+                        this.a(this.field_a, this.field_w, (int)param2, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
                         param4 = param4 + var45;
                         param3 = param3 + var36;
                         param7 = param7 + var46;
@@ -4868,12 +4869,12 @@ final class iua {
                         var30 = var30 + var43;
                         var34 = var34 + var53;
                         var33 = var33 + var44;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L39;
                       }
                     }
                   } else {
-                    this.a(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+                    this.a(this.field_a, this.field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
                     param4 = param4 + var45;
                     param5 = param5 + var54;
                     param7 = param7 + var46;
@@ -4892,7 +4893,7 @@ final class iua {
                     var32 = var32 + var61;
                     var34 = var34 + var53;
                     var35 = var35 + var62;
-                    param2 = param2 + (float)((iua) this).field_t;
+                    param2 = param2 + (float)this.field_t;
                     continue L38;
                   }
                 }
@@ -4902,20 +4903,20 @@ final class iua {
             return;
           }
         } else {
-          if (param1 < (float)((iua) this).field_v) {
+          if (param1 < (float)this.field_v) {
             L40: {
-              if (param2 <= (float)((iua) this).field_v) {
+              if (param2 <= (float)this.field_v) {
                 break L40;
               } else {
-                param2 = (float)((iua) this).field_v;
+                param2 = (float)this.field_v;
                 break L40;
               }
             }
             L41: {
-              if (param0 <= (float)((iua) this).field_v) {
+              if (param0 <= (float)this.field_v) {
                 break L41;
               } else {
-                param0 = (float)((iua) this).field_v;
+                param0 = (float)this.field_v;
                 break L41;
               }
             }
@@ -4974,7 +4975,7 @@ final class iua {
               }
               param2 = param2 - param0;
               param0 = param0 - param1;
-              param1 = (float)((iua) this).field_p[(int)param1];
+              param1 = (float)this.field_p[(int)param1];
               if (var36 >= var45) {
                 L44: while (true) {
                   param0 = param0 - 1.0f;
@@ -4984,7 +4985,7 @@ final class iua {
                       if (param2 < 0.0f) {
                         return;
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
+                        this.a(this.field_a, this.field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
                         param4 = param4 + var45;
                         param3 = param3 + var54;
                         param7 = param7 + var46;
@@ -5003,12 +5004,12 @@ final class iua {
                         var30 = var30 + var61;
                         var34 = var34 + var53;
                         var33 = var33 + var62;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L45;
                       }
                     }
                   } else {
-                    this.a(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+                    this.a(this.field_a, this.field_w, (int)param1, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
                     param4 = param4 + var45;
                     param5 = param5 + var36;
                     param7 = param7 + var46;
@@ -5027,7 +5028,7 @@ final class iua {
                     var32 = var32 + var43;
                     var34 = var34 + var53;
                     var35 = var35 + var44;
-                    param1 = param1 + (float)((iua) this).field_t;
+                    param1 = param1 + (float)this.field_t;
                     continue L44;
                   }
                 }
@@ -5040,7 +5041,7 @@ final class iua {
                       if (param2 < 0.0f) {
                         return;
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
+                        this.a(this.field_a, this.field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
                         param3 = param3 + var54;
                         param4 = param4 + var45;
                         param6 = param6 + var55;
@@ -5059,12 +5060,12 @@ final class iua {
                         var31 = var31 + var52;
                         var33 = var33 + var62;
                         var34 = var34 + var53;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L47;
                       }
                     }
                   } else {
-                    this.a(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+                    this.a(this.field_a, this.field_w, (int)param1, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
                     param5 = param5 + var36;
                     param4 = param4 + var45;
                     param8 = param8 + var37;
@@ -5083,7 +5084,7 @@ final class iua {
                     var31 = var31 + var52;
                     var35 = var35 + var44;
                     var34 = var34 + var53;
-                    param1 = param1 + (float)((iua) this).field_t;
+                    param1 = param1 + (float)this.field_t;
                     continue L46;
                   }
                 }
@@ -5166,7 +5167,7 @@ final class iua {
                 }
                 param0 = param0 - param2;
                 param2 = param2 - param1;
-                param1 = (float)((iua) this).field_p[(int)param1];
+                param1 = (float)this.field_p[(int)param1];
                 L53: while (true) {
                   param2 = param2 - 1.0f;
                   if (param2 < 0.0f) {
@@ -5175,7 +5176,7 @@ final class iua {
                       if (param0 < 0.0f) {
                         return;
                       } else {
-                        this.a(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
+                        this.a(this.field_a, this.field_w, (int)param1, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
                         param5 = param5 + var54;
                         param3 = param3 + var36;
                         param8 = param8 + var55;
@@ -5194,12 +5195,12 @@ final class iua {
                         var30 = var30 + var43;
                         var35 = var35 + var62;
                         var33 = var33 + var44;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L54;
                       }
                     }
                   } else {
-                    this.a(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
+                    this.a(this.field_a, this.field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
                     param4 = param4 + var45;
                     param3 = param3 + var36;
                     param7 = param7 + var46;
@@ -5218,14 +5219,14 @@ final class iua {
                     var30 = var30 + var43;
                     var34 = var34 + var53;
                     var33 = var33 + var44;
-                    param1 = param1 + (float)((iua) this).field_t;
+                    param1 = param1 + (float)this.field_t;
                     continue L53;
                   }
                 }
               }
               param0 = param0 - param2;
               param2 = param2 - param1;
-              param1 = (float)((iua) this).field_p[(int)param1];
+              param1 = (float)this.field_p[(int)param1];
               L55: while (true) {
                 param2 = param2 - 1.0f;
                 if (param2 < 0.0f) {
@@ -5234,7 +5235,7 @@ final class iua {
                     if (param0 < 0.0f) {
                       return;
                     } else {
-                      this.a(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
+                      this.a(this.field_a, this.field_w, (int)param1, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
                       param3 = param3 + var36;
                       param5 = param5 + var54;
                       param6 = param6 + var37;
@@ -5253,12 +5254,12 @@ final class iua {
                       var32 = var32 + var61;
                       var33 = var33 + var44;
                       var35 = var35 + var62;
-                      param1 = param1 + (float)((iua) this).field_t;
+                      param1 = param1 + (float)this.field_t;
                       continue L56;
                     }
                   }
                 } else {
-                  this.a(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
+                  this.a(this.field_a, this.field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
                   param3 = param3 + var36;
                   param4 = param4 + var45;
                   param6 = param6 + var37;
@@ -5277,7 +5278,7 @@ final class iua {
                   var31 = var31 + var52;
                   var33 = var33 + var44;
                   var34 = var34 + var53;
-                  param1 = param1 + (float)((iua) this).field_t;
+                  param1 = param1 + (float)this.field_t;
                   continue L55;
                 }
               }
@@ -5289,6 +5290,24 @@ final class iua {
     }
 
     private final void a(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14) {
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
+        int incrementValue$30 = 0;
+        int incrementValue$31 = 0;
+        int incrementValue$32 = 0;
+        int incrementValue$33 = 0;
+        int incrementValue$34 = 0;
+        int incrementValue$35 = 0;
         int var16_int = 0;
         int[] var16 = null;
         int var17 = 0;
@@ -5315,14 +5334,14 @@ final class iua {
         int[] var38 = null;
         int[] var39 = null;
         L0: {
-          if (!((iua) this).field_q) {
+          if (!this.field_q) {
             break L0;
           } else {
             L1: {
-              if (param6 <= ((iua) this).field_h) {
+              if (param6 <= this.field_h) {
                 break L1;
               } else {
-                param6 = ((iua) this).field_h;
+                param6 = this.field_h;
                 break L1;
               }
             }
@@ -5335,18 +5354,18 @@ final class iua {
           }
         }
         if (param5 < param6) {
-          if (!((iua) this).field_m) {
+          if (!this.field_m) {
             param2 = param2 + (param5 - 1);
             param7 = param7 + param8 * (float)param5;
             param9 = param9 + param10 * (float)param5;
             param11 = param11 + param12 * (float)param5;
             param13 = param13 + param14 * (float)param5;
-            if (!((iua) this).field_o.field_n) {
-              if (!((iua) this).field_j) {
+            if (!this.field_o.field_n) {
+              if (!this.field_j) {
                 L2: {
                   param4 = param6 - param5;
-                  if (((iua) this).field_b != 0) {
-                    if (((iua) this).field_g) {
+                  if (this.field_b != 0) {
+                    if (this.field_g) {
                       L3: while (true) {
                         L4: {
                           param2++;
@@ -5377,8 +5396,8 @@ final class iua {
                         }
                       }
                     } else {
-                      var16_int = ((iua) this).field_b;
-                      var17 = 256 - ((iua) this).field_b;
+                      var16_int = this.field_b;
+                      var17 = 256 - this.field_b;
                       L5: while (true) {
                         L6: {
                           param2++;
@@ -5435,8 +5454,8 @@ final class iua {
                   param10 = param10 * 4.0f;
                   param12 = param12 * 4.0f;
                   param14 = param14 * 4.0f;
-                  if (((iua) this).field_b != 0) {
-                    if (((iua) this).field_g) {
+                  if (this.field_b != 0) {
+                    if (this.field_g) {
                       L10: {
                         if (param4 <= 0) {
                           break L10;
@@ -5561,8 +5580,8 @@ final class iua {
                       }
                     } else {
                       L18: {
-                        var16_int = ((iua) this).field_b;
-                        var17 = 256 - ((iua) this).field_b;
+                        var16_int = this.field_b;
+                        var17 = 256 - this.field_b;
                         if (param4 <= 0) {
                           break L18;
                         } else {
@@ -5740,11 +5759,11 @@ final class iua {
                 return;
               }
             } else {
-              if (!((iua) this).field_j) {
+              if (!this.field_j) {
                 L34: {
                   param4 = param6 - param5;
-                  if (((iua) this).field_b != 0) {
-                    if (((iua) this).field_g) {
+                  if (this.field_b != 0) {
+                    if (this.field_g) {
                       L35: while (true) {
                         L36: {
                           param2++;
@@ -5776,8 +5795,8 @@ final class iua {
                         }
                       }
                     } else {
-                      var16_int = ((iua) this).field_b;
-                      var17 = 256 - ((iua) this).field_b;
+                      var16_int = this.field_b;
+                      var17 = 256 - this.field_b;
                       L37: while (true) {
                         L38: {
                           param2++;
@@ -5836,8 +5855,8 @@ final class iua {
                   param10 = param10 * 4.0f;
                   param12 = param12 * 4.0f;
                   param14 = param14 * 4.0f;
-                  if (((iua) this).field_b != 0) {
-                    if (((iua) this).field_g) {
+                  if (this.field_b != 0) {
+                    if (this.field_g) {
                       L42: {
                         if (param4 <= 0) {
                           break L42;
@@ -5967,8 +5986,8 @@ final class iua {
                       }
                     } else {
                       L50: {
-                        var16_int = ((iua) this).field_b;
-                        var17 = 256 - ((iua) this).field_b;
+                        var16_int = this.field_b;
+                        var17 = 256 - this.field_b;
                         if (param4 <= 0) {
                           break L50;
                         } else {
@@ -6161,14 +6180,14 @@ final class iua {
             param9 = param9 + param10 * (float)param5;
             param11 = param11 + param12 * (float)param5;
             param13 = param13 + param14 * (float)param5;
-            if (((iua) this).field_j) {
+            if (this.field_j) {
               L66: {
                 param4 = param6 - param5 >> 2;
                 param10 = param10 * 4.0f;
                 param12 = param12 * 4.0f;
                 param14 = param14 * 4.0f;
-                if (((iua) this).field_b != 0) {
-                  if (((iua) this).field_g) {
+                if (this.field_b != 0) {
+                  if (this.field_g) {
                     L67: {
                       if (param4 <= 0) {
                         break L67;
@@ -6180,7 +6199,7 @@ final class iua {
                           param13 = param13 + param14;
                           var22 = param0;
                           var16 = var22;
-                          int incrementValue$18 = param2;
+                          incrementValue$18 = param2;
                           param2++;
                           var17 = incrementValue$18;
                           var18 = param3;
@@ -6191,7 +6210,7 @@ final class iua {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var23 = param0;
                           var16 = var23;
-                          int incrementValue$19 = param2;
+                          incrementValue$19 = param2;
                           param2++;
                           var17 = incrementValue$19;
                           var18 = param3;
@@ -6202,7 +6221,7 @@ final class iua {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var24 = param0;
                           var16 = var24;
-                          int incrementValue$20 = param2;
+                          incrementValue$20 = param2;
                           param2++;
                           var17 = incrementValue$20;
                           var18 = param3;
@@ -6213,7 +6232,7 @@ final class iua {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var25 = param0;
                           var16 = var25;
-                          int incrementValue$21 = param2;
+                          incrementValue$21 = param2;
                           param2++;
                           var17 = incrementValue$21;
                           var18 = param3;
@@ -6239,7 +6258,7 @@ final class iua {
                       L69: while (true) {
                         var26 = param0;
                         var16 = var26;
-                        int incrementValue$22 = param2;
+                        incrementValue$22 = param2;
                         param2++;
                         var17 = incrementValue$22;
                         var18 = param3;
@@ -6258,8 +6277,8 @@ final class iua {
                     }
                   } else {
                     L70: {
-                      var16_int = ((iua) this).field_b;
-                      var17 = 256 - ((iua) this).field_b;
+                      var16_int = this.field_b;
+                      var17 = 256 - this.field_b;
                       if (param4 <= 0) {
                         break L70;
                       } else {
@@ -6270,19 +6289,19 @@ final class iua {
                           param13 = param13 + param14;
                           param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                           var18 = param0[param2];
-                          int incrementValue$23 = param2;
+                          incrementValue$23 = param2;
                           param2++;
                           param0[incrementValue$23] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
-                          int incrementValue$24 = param2;
+                          incrementValue$24 = param2;
                           param2++;
                           param0[incrementValue$24] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
-                          int incrementValue$25 = param2;
+                          incrementValue$25 = param2;
                           param2++;
                           param0[incrementValue$25] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
-                          int incrementValue$26 = param2;
+                          incrementValue$26 = param2;
                           param2++;
                           param0[incrementValue$26] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           param4--;
@@ -6302,7 +6321,7 @@ final class iua {
                       param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                       L72: while (true) {
                         var18 = param0[param2];
-                        int incrementValue$27 = param2;
+                        incrementValue$27 = param2;
                         param2++;
                         param0[incrementValue$27] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                         param4--;
@@ -6324,16 +6343,16 @@ final class iua {
                         param9 = param9 + param10;
                         param11 = param11 + param12;
                         param13 = param13 + param14;
-                        int incrementValue$28 = param2;
+                        incrementValue$28 = param2;
                         param2++;
                         param0[incrementValue$28] = param3;
-                        int incrementValue$29 = param2;
+                        incrementValue$29 = param2;
                         param2++;
                         param0[incrementValue$29] = param3;
-                        int incrementValue$30 = param2;
+                        incrementValue$30 = param2;
                         param2++;
                         param0[incrementValue$30] = param3;
-                        int incrementValue$31 = param2;
+                        incrementValue$31 = param2;
                         param2++;
                         param0[incrementValue$31] = param3;
                         param4--;
@@ -6349,7 +6368,7 @@ final class iua {
                   if (param4 > 0) {
                     param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
                     L75: while (true) {
-                      int incrementValue$32 = param2;
+                      incrementValue$32 = param2;
                       param2++;
                       param0[incrementValue$32] = param3;
                       param4--;
@@ -6368,12 +6387,12 @@ final class iua {
             } else {
               L76: {
                 param4 = param6 - param5;
-                if (((iua) this).field_b != 0) {
-                  if (((iua) this).field_g) {
+                if (this.field_b != 0) {
+                  if (this.field_g) {
                     L77: while (true) {
                       var27 = param0;
                       var16 = var27;
-                      int incrementValue$33 = param2;
+                      incrementValue$33 = param2;
                       param2++;
                       var17 = incrementValue$33;
                       var18 = (int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255;
@@ -6393,8 +6412,8 @@ final class iua {
                       }
                     }
                   } else {
-                    var16_int = ((iua) this).field_b;
-                    var17 = 256 - ((iua) this).field_b;
+                    var16_int = this.field_b;
+                    var17 = 256 - this.field_b;
                     L78: while (true) {
                       param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
                       param9 = param9 + param10;
@@ -6402,7 +6421,7 @@ final class iua {
                       param13 = param13 + param14;
                       param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                       var18 = param0[param2];
-                      int incrementValue$34 = param2;
+                      incrementValue$34 = param2;
                       param2++;
                       param0[incrementValue$34] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                       param4--;
@@ -6415,7 +6434,7 @@ final class iua {
                   }
                 } else {
                   L79: while (true) {
-                    int incrementValue$35 = param2;
+                    incrementValue$35 = param2;
                     param2++;
                     param0[incrementValue$35] = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
                     param9 = param9 + param10;
@@ -6489,18 +6508,18 @@ final class iua {
         Object stackOut_4_0 = null;
         int stackOut_4_1 = 0;
         L0: {
-          if (param22 == ((iua) this).field_c) {
+          if (param22 == this.field_c) {
             break L0;
           } else {
-            ((iua) this).field_w = ((iua) this).field_k.h(param22);
-            if (((iua) this).field_w != null) {
+            this.field_w = this.field_k.h(param22);
+            if (this.field_w != null) {
               L1: {
                 stackOut_3_0 = this;
                 stackIn_5_0 = stackOut_3_0;
                 stackIn_4_0 = stackOut_3_0;
-                if (!((iua) this).field_k.j(param22)) {
+                if (!this.field_k.j(param22)) {
                   stackOut_5_0 = this;
-                  stackOut_5_1 = ((iua) this).field_k.field_I;
+                  stackOut_5_1 = this.field_k.field_I;
                   stackIn_6_0 = stackOut_5_0;
                   stackIn_6_1 = stackOut_5_1;
                   break L1;
@@ -6512,19 +6531,19 @@ final class iua {
                   break L1;
                 }
               }
-              ((iua) this).field_i = stackIn_6_1;
-              ((iua) this).field_r = ((iua) this).field_i - 1;
-              ((iua) this).field_f = ((iua) this).field_k.f(param22);
-              ((iua) this).field_d = ((iua) this).field_k.d(param22);
+              ((iua) (this)).field_i = stackIn_6_1;
+              this.field_r = this.field_i - 1;
+              this.field_f = this.field_k.f(param22);
+              this.field_d = this.field_k.d(param22);
               break L0;
             } else {
-              ((iua) this).a((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, l.a(param18 | param19 << 24, param15, 20048), l.a(param18 | param20 << 24, param16, 20048), l.a(param18 | param21 << 24, param17, 20048));
+              this.a((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, l.a(param18 | param19 << 24, param15, 20048), l.a(param18 | param20 << 24, param16, 20048), l.a(param18 | param21 << 24, param17, 20048));
               return;
             }
           }
         }
         L2: {
-          ((iua) this).field_l = param18;
+          this.field_l = param18;
           var24 = (float)(param15 >> 24 & 255);
           var25 = (float)(param16 >> 24 & 255);
           var26 = (float)(param17 >> 24 & 255);
@@ -6630,20 +6649,20 @@ final class iua {
             if (param0 > param2) {
               break L5;
             } else {
-              if (param0 < (float)((iua) this).field_v) {
+              if (param0 < (float)this.field_v) {
                 L6: {
-                  if (param1 <= (float)((iua) this).field_v) {
+                  if (param1 <= (float)this.field_v) {
                     break L6;
                   } else {
-                    param1 = (float)((iua) this).field_v;
+                    param1 = (float)this.field_v;
                     break L6;
                   }
                 }
                 L7: {
-                  if (param2 <= (float)((iua) this).field_v) {
+                  if (param2 <= (float)this.field_v) {
                     break L7;
                   } else {
-                    param2 = (float)((iua) this).field_v;
+                    param2 = (float)this.field_v;
                     break L7;
                   }
                 }
@@ -6725,7 +6744,7 @@ final class iua {
                     }
                     param1 = param1 - param2;
                     param2 = param2 - param0;
-                    param0 = (float)((iua) this).field_p[(int)param0];
+                    param0 = (float)this.field_p[(int)param0];
                     L13: while (true) {
                       param2 = param2 - 1.0f;
                       if (param2 < 0.0f) {
@@ -6734,7 +6753,7 @@ final class iua {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
+                            this.b(this.field_a, this.field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
                             param3 = param3 + var36;
                             param5 = param5 + var45;
                             param6 = param6 + var37;
@@ -6753,12 +6772,12 @@ final class iua {
                             var32 = var32 + var52;
                             var33 = var33 + var44;
                             var35 = var35 + var53;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L14;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
+                        this.b(this.field_a, this.field_w, (int)param0, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
                         param4 = param4 + var54;
                         param3 = param3 + var36;
                         param7 = param7 + var55;
@@ -6777,14 +6796,14 @@ final class iua {
                         var30 = var30 + var43;
                         var34 = var34 + var62;
                         var33 = var33 + var44;
-                        param0 = param0 + (float)((iua) this).field_t;
+                        param0 = param0 + (float)this.field_t;
                         continue L13;
                       }
                     }
                   }
                   param1 = param1 - param2;
                   param2 = param2 - param0;
-                  param0 = (float)((iua) this).field_p[(int)param0];
+                  param0 = (float)this.field_p[(int)param0];
                   L15: while (true) {
                     param2 = param2 - 1.0f;
                     if (param2 < 0.0f) {
@@ -6793,7 +6812,7 @@ final class iua {
                         if (param1 < 0.0f) {
                           return;
                         } else {
-                          this.b(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
+                          this.b(this.field_a, this.field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
                           param5 = param5 + var45;
                           param3 = param3 + var36;
                           param8 = param8 + var46;
@@ -6812,12 +6831,12 @@ final class iua {
                           var30 = var30 + var43;
                           var35 = var35 + var53;
                           var33 = var33 + var44;
-                          param0 = param0 + (float)((iua) this).field_t;
+                          param0 = param0 + (float)this.field_t;
                           continue L16;
                         }
                       }
                     } else {
-                      this.b(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
+                      this.b(this.field_a, this.field_w, (int)param0, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
                       param3 = param3 + var36;
                       param4 = param4 + var54;
                       param6 = param6 + var37;
@@ -6836,7 +6855,7 @@ final class iua {
                       var31 = var31 + var61;
                       var33 = var33 + var44;
                       var34 = var34 + var62;
-                      param0 = param0 + (float)((iua) this).field_t;
+                      param0 = param0 + (float)this.field_t;
                       continue L15;
                     }
                   }
@@ -6918,7 +6937,7 @@ final class iua {
                     }
                     param2 = param2 - param1;
                     param1 = param1 - param0;
-                    param0 = (float)((iua) this).field_p[(int)param0];
+                    param0 = (float)this.field_p[(int)param0];
                     L22: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -6927,7 +6946,7 @@ final class iua {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+                            this.b(this.field_a, this.field_w, (int)param0, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
                             param4 = param4 + var45;
                             param5 = param5 + var54;
                             param7 = param7 + var46;
@@ -6946,12 +6965,12 @@ final class iua {
                             var32 = var32 + var61;
                             var34 = var34 + var53;
                             var35 = var35 + var62;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L23;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
+                        this.b(this.field_a, this.field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
                         param3 = param3 + var36;
                         param5 = param5 + var54;
                         param6 = param6 + var37;
@@ -6970,14 +6989,14 @@ final class iua {
                         var32 = var32 + var61;
                         var33 = var33 + var44;
                         var35 = var35 + var62;
-                        param0 = param0 + (float)((iua) this).field_t;
+                        param0 = param0 + (float)this.field_t;
                         continue L22;
                       }
                     }
                   }
                   param2 = param2 - param1;
                   param1 = param1 - param0;
-                  param0 = (float)((iua) this).field_p[(int)param0];
+                  param0 = (float)this.field_p[(int)param0];
                   L24: while (true) {
                     param1 = param1 - 1.0f;
                     if (param1 < 0.0f) {
@@ -6986,7 +7005,7 @@ final class iua {
                         if (param2 < 0.0f) {
                           return;
                         } else {
-                          this.b(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+                          this.b(this.field_a, this.field_w, (int)param0, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
                           param4 = param4 + var45;
                           param5 = param5 + var54;
                           param7 = param7 + var46;
@@ -7005,12 +7024,12 @@ final class iua {
                           var32 = var32 + var61;
                           var34 = var34 + var53;
                           var35 = var35 + var62;
-                          param0 = param0 + (float)((iua) this).field_t;
+                          param0 = param0 + (float)this.field_t;
                           continue L25;
                         }
                       }
                     } else {
-                      this.b(((iua) this).field_a, ((iua) this).field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
+                      this.b(this.field_a, this.field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
                       param3 = param3 + var36;
                       param5 = param5 + var54;
                       param6 = param6 + var37;
@@ -7029,7 +7048,7 @@ final class iua {
                       var32 = var32 + var61;
                       var33 = var33 + var44;
                       var35 = var35 + var62;
-                      param0 = param0 + (float)((iua) this).field_t;
+                      param0 = param0 + (float)this.field_t;
                       continue L24;
                     }
                   }
@@ -7041,20 +7060,20 @@ final class iua {
           }
         }
         if (param1 > param2) {
-          if (param2 < (float)((iua) this).field_v) {
+          if (param2 < (float)this.field_v) {
             L26: {
-              if (param0 <= (float)((iua) this).field_v) {
+              if (param0 <= (float)this.field_v) {
                 break L26;
               } else {
-                param0 = (float)((iua) this).field_v;
+                param0 = (float)this.field_v;
                 break L26;
               }
             }
             L27: {
-              if (param1 <= (float)((iua) this).field_v) {
+              if (param1 <= (float)this.field_v) {
                 break L27;
               } else {
-                param1 = (float)((iua) this).field_v;
+                param1 = (float)this.field_v;
                 break L27;
               }
             }
@@ -7114,7 +7133,7 @@ final class iua {
               if (var45 >= var54) {
                 param0 = param0 - param1;
                 param1 = param1 - param2;
-                param2 = (float)((iua) this).field_p[(int)param2];
+                param2 = (float)this.field_p[(int)param2];
                 L30: while (true) {
                   param1 = param1 - 1.0f;
                   if (param1 < 0.0f) {
@@ -7123,7 +7142,7 @@ final class iua {
                       if (param0 < 0.0f) {
                         return;
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+                        this.b(this.field_a, this.field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
                         param5 = param5 + var54;
                         param4 = param4 + var36;
                         param8 = param8 + var55;
@@ -7142,12 +7161,12 @@ final class iua {
                         var31 = var31 + var43;
                         var35 = var35 + var62;
                         var34 = var34 + var44;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L31;
                       }
                     }
                   } else {
-                    this.b(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
+                    this.b(this.field_a, this.field_w, (int)param2, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
                     param5 = param5 + var54;
                     param3 = param3 + var45;
                     param8 = param8 + var55;
@@ -7166,14 +7185,14 @@ final class iua {
                     var30 = var30 + var52;
                     var35 = var35 + var62;
                     var33 = var33 + var53;
-                    param2 = param2 + (float)((iua) this).field_t;
+                    param2 = param2 + (float)this.field_t;
                     continue L30;
                   }
                 }
               } else {
                 param0 = param0 - param1;
                 param1 = param1 - param2;
-                param2 = (float)((iua) this).field_p[(int)param2];
+                param2 = (float)this.field_p[(int)param2];
                 L32: while (true) {
                   param1 = param1 - 1.0f;
                   if (param1 < 0.0f) {
@@ -7182,7 +7201,7 @@ final class iua {
                       if (param0 < 0.0f) {
                         return;
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+                        this.b(this.field_a, this.field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
                         param4 = param4 + var36;
                         param5 = param5 + var54;
                         param7 = param7 + var37;
@@ -7201,12 +7220,12 @@ final class iua {
                         var32 = var32 + var61;
                         var34 = var34 + var44;
                         var35 = var35 + var62;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L33;
                       }
                     }
                   } else {
-                    this.b(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
+                    this.b(this.field_a, this.field_w, (int)param2, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
                     param3 = param3 + var45;
                     param5 = param5 + var54;
                     param6 = param6 + var46;
@@ -7225,7 +7244,7 @@ final class iua {
                     var32 = var32 + var61;
                     var33 = var33 + var53;
                     var35 = var35 + var62;
-                    param2 = param2 + (float)((iua) this).field_t;
+                    param2 = param2 + (float)this.field_t;
                     continue L32;
                   }
                 }
@@ -7286,7 +7305,7 @@ final class iua {
               if (var45 >= var54) {
                 param1 = param1 - param0;
                 param0 = param0 - param2;
-                param2 = (float)((iua) this).field_p[(int)param2];
+                param2 = (float)this.field_p[(int)param2];
                 L36: while (true) {
                   param0 = param0 - 1.0f;
                   if (param0 < 0.0f) {
@@ -7295,7 +7314,7 @@ final class iua {
                       if (param1 < 0.0f) {
                         return;
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
+                        this.b(this.field_a, this.field_w, (int)param2, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
                         param3 = param3 + var36;
                         param4 = param4 + var45;
                         param6 = param6 + var37;
@@ -7314,12 +7333,12 @@ final class iua {
                         var31 = var31 + var52;
                         var33 = var33 + var44;
                         var34 = var34 + var53;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L37;
                       }
                     }
                   } else {
-                    this.b(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+                    this.b(this.field_a, this.field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
                     param5 = param5 + var54;
                     param4 = param4 + var45;
                     param8 = param8 + var55;
@@ -7338,14 +7357,14 @@ final class iua {
                     var31 = var31 + var52;
                     var35 = var35 + var62;
                     var34 = var34 + var53;
-                    param2 = param2 + (float)((iua) this).field_t;
+                    param2 = param2 + (float)this.field_t;
                     continue L36;
                   }
                 }
               } else {
                 param1 = param1 - param0;
                 param0 = param0 - param2;
-                param2 = (float)((iua) this).field_p[(int)param2];
+                param2 = (float)this.field_p[(int)param2];
                 L38: while (true) {
                   param0 = param0 - 1.0f;
                   if (param0 < 0.0f) {
@@ -7354,7 +7373,7 @@ final class iua {
                       if (param1 < 0.0f) {
                         return;
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
+                        this.b(this.field_a, this.field_w, (int)param2, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
                         param4 = param4 + var45;
                         param3 = param3 + var36;
                         param7 = param7 + var46;
@@ -7373,12 +7392,12 @@ final class iua {
                         var30 = var30 + var43;
                         var34 = var34 + var53;
                         var33 = var33 + var44;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L39;
                       }
                     }
                   } else {
-                    this.b(((iua) this).field_a, ((iua) this).field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+                    this.b(this.field_a, this.field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
                     param4 = param4 + var45;
                     param5 = param5 + var54;
                     param7 = param7 + var46;
@@ -7397,7 +7416,7 @@ final class iua {
                     var32 = var32 + var61;
                     var34 = var34 + var53;
                     var35 = var35 + var62;
-                    param2 = param2 + (float)((iua) this).field_t;
+                    param2 = param2 + (float)this.field_t;
                     continue L38;
                   }
                 }
@@ -7407,20 +7426,20 @@ final class iua {
             return;
           }
         } else {
-          if (param1 < (float)((iua) this).field_v) {
+          if (param1 < (float)this.field_v) {
             L40: {
-              if (param2 <= (float)((iua) this).field_v) {
+              if (param2 <= (float)this.field_v) {
                 break L40;
               } else {
-                param2 = (float)((iua) this).field_v;
+                param2 = (float)this.field_v;
                 break L40;
               }
             }
             L41: {
-              if (param0 <= (float)((iua) this).field_v) {
+              if (param0 <= (float)this.field_v) {
                 break L41;
               } else {
-                param0 = (float)((iua) this).field_v;
+                param0 = (float)this.field_v;
                 break L41;
               }
             }
@@ -7479,7 +7498,7 @@ final class iua {
               }
               param2 = param2 - param0;
               param0 = param0 - param1;
-              param1 = (float)((iua) this).field_p[(int)param1];
+              param1 = (float)this.field_p[(int)param1];
               if (var36 >= var45) {
                 L44: while (true) {
                   param0 = param0 - 1.0f;
@@ -7489,7 +7508,7 @@ final class iua {
                       if (param2 < 0.0f) {
                         return;
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
+                        this.b(this.field_a, this.field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
                         param4 = param4 + var45;
                         param3 = param3 + var54;
                         param7 = param7 + var46;
@@ -7508,12 +7527,12 @@ final class iua {
                         var30 = var30 + var61;
                         var34 = var34 + var53;
                         var33 = var33 + var62;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L45;
                       }
                     }
                   } else {
-                    this.b(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+                    this.b(this.field_a, this.field_w, (int)param1, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
                     param4 = param4 + var45;
                     param5 = param5 + var36;
                     param7 = param7 + var46;
@@ -7532,7 +7551,7 @@ final class iua {
                     var32 = var32 + var43;
                     var34 = var34 + var53;
                     var35 = var35 + var44;
-                    param1 = param1 + (float)((iua) this).field_t;
+                    param1 = param1 + (float)this.field_t;
                     continue L44;
                   }
                 }
@@ -7545,7 +7564,7 @@ final class iua {
                       if (param2 < 0.0f) {
                         return;
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
+                        this.b(this.field_a, this.field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
                         param3 = param3 + var54;
                         param4 = param4 + var45;
                         param6 = param6 + var55;
@@ -7564,12 +7583,12 @@ final class iua {
                         var31 = var31 + var52;
                         var33 = var33 + var62;
                         var34 = var34 + var53;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L47;
                       }
                     }
                   } else {
-                    this.b(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+                    this.b(this.field_a, this.field_w, (int)param1, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
                     param5 = param5 + var36;
                     param4 = param4 + var45;
                     param8 = param8 + var37;
@@ -7588,7 +7607,7 @@ final class iua {
                     var31 = var31 + var52;
                     var35 = var35 + var44;
                     var34 = var34 + var53;
-                    param1 = param1 + (float)((iua) this).field_t;
+                    param1 = param1 + (float)this.field_t;
                     continue L46;
                   }
                 }
@@ -7671,7 +7690,7 @@ final class iua {
                 }
                 param0 = param0 - param2;
                 param2 = param2 - param1;
-                param1 = (float)((iua) this).field_p[(int)param1];
+                param1 = (float)this.field_p[(int)param1];
                 L53: while (true) {
                   param2 = param2 - 1.0f;
                   if (param2 < 0.0f) {
@@ -7680,7 +7699,7 @@ final class iua {
                       if (param0 < 0.0f) {
                         return;
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
+                        this.b(this.field_a, this.field_w, (int)param1, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
                         param5 = param5 + var54;
                         param3 = param3 + var36;
                         param8 = param8 + var55;
@@ -7699,12 +7718,12 @@ final class iua {
                         var30 = var30 + var43;
                         var35 = var35 + var62;
                         var33 = var33 + var44;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L54;
                       }
                     }
                   } else {
-                    this.b(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
+                    this.b(this.field_a, this.field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
                     param4 = param4 + var45;
                     param3 = param3 + var36;
                     param7 = param7 + var46;
@@ -7723,14 +7742,14 @@ final class iua {
                     var30 = var30 + var43;
                     var34 = var34 + var53;
                     var33 = var33 + var44;
-                    param1 = param1 + (float)((iua) this).field_t;
+                    param1 = param1 + (float)this.field_t;
                     continue L53;
                   }
                 }
               }
               param0 = param0 - param2;
               param2 = param2 - param1;
-              param1 = (float)((iua) this).field_p[(int)param1];
+              param1 = (float)this.field_p[(int)param1];
               L55: while (true) {
                 param2 = param2 - 1.0f;
                 if (param2 < 0.0f) {
@@ -7739,7 +7758,7 @@ final class iua {
                     if (param0 < 0.0f) {
                       return;
                     } else {
-                      this.b(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
+                      this.b(this.field_a, this.field_w, (int)param1, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
                       param3 = param3 + var36;
                       param5 = param5 + var54;
                       param6 = param6 + var37;
@@ -7758,12 +7777,12 @@ final class iua {
                       var32 = var32 + var61;
                       var33 = var33 + var44;
                       var35 = var35 + var62;
-                      param1 = param1 + (float)((iua) this).field_t;
+                      param1 = param1 + (float)this.field_t;
                       continue L56;
                     }
                   }
                 } else {
-                  this.b(((iua) this).field_a, ((iua) this).field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
+                  this.b(this.field_a, this.field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
                   param3 = param3 + var36;
                   param4 = param4 + var45;
                   param6 = param6 + var37;
@@ -7782,7 +7801,7 @@ final class iua {
                   var31 = var31 + var52;
                   var33 = var33 + var44;
                   var34 = var34 + var53;
-                  param1 = param1 + (float)((iua) this).field_t;
+                  param1 = param1 + (float)this.field_t;
                   continue L55;
                 }
               }
@@ -7806,7 +7825,7 @@ final class iua {
         float var20 = 0.0f;
         float var21 = 0.0f;
         float var22 = 0.0f;
-        if (!((iua) this).field_s) {
+        if (!this.field_s) {
           L0: {
             var11 = param4 - param3;
             var12 = param1 - param0;
@@ -7851,20 +7870,20 @@ final class iua {
                 if (param0 > param2) {
                   break L3;
                 } else {
-                  if (param0 < (float)((iua) this).field_v) {
+                  if (param0 < (float)this.field_v) {
                     L4: {
-                      if (param1 <= (float)((iua) this).field_v) {
+                      if (param1 <= (float)this.field_v) {
                         break L4;
                       } else {
-                        param1 = (float)((iua) this).field_v;
+                        param1 = (float)this.field_v;
                         break L4;
                       }
                     }
                     L5: {
-                      if (param2 <= (float)((iua) this).field_v) {
+                      if (param2 <= (float)this.field_v) {
                         break L5;
                       } else {
-                        param2 = (float)((iua) this).field_v;
+                        param2 = (float)this.field_v;
                         break L5;
                       }
                     }
@@ -7900,7 +7919,7 @@ final class iua {
                           } else {
                             param1 = param1 - param2;
                             param2 = param2 - param0;
-                            param0 = (float)((iua) this).field_p[(int)param0];
+                            param0 = (float)this.field_p[(int)param0];
                             L9: while (true) {
                               param2 = param2 - 1.0f;
                               if (param2 < 0.0f) {
@@ -7909,20 +7928,20 @@ final class iua {
                                   if (param1 < 0.0f) {
                                     return;
                                   } else {
-                                    this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                                    this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                                     param5 = param5 + var18;
                                     param3 = param3 + var17;
                                     param6 = param6 + var22;
-                                    param0 = param0 + (float)((iua) this).field_t;
+                                    param0 = param0 + (float)this.field_t;
                                     continue L10;
                                   }
                                 }
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
+                                this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
                                 param4 = param4 + var19;
                                 param3 = param3 + var17;
                                 param6 = param6 + var22;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L9;
                               }
                             }
@@ -7933,7 +7952,7 @@ final class iua {
                         if (var18 > var17) {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L11: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -7942,27 +7961,27 @@ final class iua {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                                  this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                                   param5 = param5 + var18;
                                   param3 = param3 + var17;
                                   param6 = param6 + var22;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L12;
                                 }
                               }
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
+                              this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
                               param4 = param4 + var19;
                               param3 = param3 + var17;
                               param6 = param6 + var22;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L11;
                             }
                           }
                         } else {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L13: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -7971,20 +7990,20 @@ final class iua {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                                  this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                                   param5 = param5 + var18;
                                   param3 = param3 + var17;
                                   param6 = param6 + var22;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L14;
                                 }
                               }
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
+                              this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
                               param4 = param4 + var19;
                               param3 = param3 + var17;
                               param6 = param6 + var22;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L13;
                             }
                           }
@@ -7992,7 +8011,7 @@ final class iua {
                       } else {
                         param1 = param1 - param2;
                         param2 = param2 - param0;
-                        param0 = (float)((iua) this).field_p[(int)param0];
+                        param0 = (float)this.field_p[(int)param0];
                         L15: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -8001,20 +8020,20 @@ final class iua {
                               if (param1 < 0.0f) {
                                 return;
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                                this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                                 param5 = param5 + var18;
                                 param3 = param3 + var17;
                                 param6 = param6 + var22;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L16;
                               }
                             }
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
+                            this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
                             param4 = param4 + var19;
                             param3 = param3 + var17;
                             param6 = param6 + var22;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L15;
                           }
                         }
@@ -8050,7 +8069,7 @@ final class iua {
                           } else {
                             param2 = param2 - param1;
                             param1 = param1 - param0;
-                            param0 = (float)((iua) this).field_p[(int)param0];
+                            param0 = (float)this.field_p[(int)param0];
                             L20: while (true) {
                               param1 = param1 - 1.0f;
                               if (param1 < 0.0f) {
@@ -8059,20 +8078,20 @@ final class iua {
                                   if (param2 < 0.0f) {
                                     return;
                                   } else {
-                                    this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
+                                    this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
                                     param5 = param5 + var19;
                                     param4 = param4 + var18;
                                     param6 = param6 + var22;
-                                    param0 = param0 + (float)((iua) this).field_t;
+                                    param0 = param0 + (float)this.field_t;
                                     continue L21;
                                   }
                                 }
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                                this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                                 param5 = param5 + var19;
                                 param3 = param3 + var17;
                                 param6 = param6 + var22;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L20;
                               }
                             }
@@ -8083,7 +8102,7 @@ final class iua {
                         if (var19 > var18) {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L22: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -8092,27 +8111,27 @@ final class iua {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
+                                  this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
                                   param5 = param5 + var19;
                                   param4 = param4 + var18;
                                   param6 = param6 + var22;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L23;
                                 }
                               }
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                              this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                               param5 = param5 + var19;
                               param3 = param3 + var17;
                               param6 = param6 + var22;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L22;
                             }
                           }
                         } else {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L24: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -8121,20 +8140,20 @@ final class iua {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
+                                  this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
                                   param5 = param5 + var19;
                                   param4 = param4 + var18;
                                   param6 = param6 + var22;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L25;
                                 }
                               }
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                              this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                               param5 = param5 + var19;
                               param3 = param3 + var17;
                               param6 = param6 + var22;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L24;
                             }
                           }
@@ -8142,7 +8161,7 @@ final class iua {
                       } else {
                         param2 = param2 - param1;
                         param1 = param1 - param0;
-                        param0 = (float)((iua) this).field_p[(int)param0];
+                        param0 = (float)this.field_p[(int)param0];
                         L26: while (true) {
                           param1 = param1 - 1.0f;
                           if (param1 < 0.0f) {
@@ -8151,20 +8170,20 @@ final class iua {
                               if (param2 < 0.0f) {
                                 return;
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
+                                this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
                                 param5 = param5 + var19;
                                 param4 = param4 + var18;
                                 param6 = param6 + var22;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L27;
                               }
                             }
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                            this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                             param5 = param5 + var19;
                             param3 = param3 + var17;
                             param6 = param6 + var22;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L26;
                           }
                         }
@@ -8177,20 +8196,20 @@ final class iua {
               }
             }
             if (param1 > param2) {
-              if (param2 < (float)((iua) this).field_v) {
+              if (param2 < (float)this.field_v) {
                 L28: {
-                  if (param0 <= (float)((iua) this).field_v) {
+                  if (param0 <= (float)this.field_v) {
                     break L28;
                   } else {
-                    param0 = (float)((iua) this).field_v;
+                    param0 = (float)this.field_v;
                     break L28;
                   }
                 }
                 L29: {
-                  if (param1 <= (float)((iua) this).field_v) {
+                  if (param1 <= (float)this.field_v) {
                     break L29;
                   } else {
-                    param1 = (float)((iua) this).field_v;
+                    param1 = (float)this.field_v;
                     break L29;
                   }
                 }
@@ -8220,7 +8239,7 @@ final class iua {
                   if (var18 < var19) {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L32: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -8229,27 +8248,27 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
+                            this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
                             param4 = param4 + var17;
                             param5 = param5 + var19;
                             param8 = param8 + var22;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L33;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param3, (int)param5, param8, var21);
+                        this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param3, (int)param5, param8, var21);
                         param3 = param3 + var18;
                         param5 = param5 + var19;
                         param8 = param8 + var22;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L32;
                       }
                     }
                   } else {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L34: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -8258,20 +8277,20 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
+                            this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
                             param4 = param4 + var17;
                             param5 = param5 + var19;
                             param8 = param8 + var22;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L35;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param5, (int)param3, param8, var21);
+                        this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param3, param8, var21);
                         param3 = param3 + var18;
                         param5 = param5 + var19;
                         param8 = param8 + var22;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L34;
                       }
                     }
@@ -8301,7 +8320,7 @@ final class iua {
                   if (var18 < var19) {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L38: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -8310,27 +8329,27 @@ final class iua {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param4, (int)param3, param8, var21);
+                            this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param3, param8, var21);
                             param4 = param4 + var18;
                             param3 = param3 + var17;
                             param8 = param8 + var22;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L39;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
+                        this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
                         param4 = param4 + var18;
                         param5 = param5 + var19;
                         param8 = param8 + var22;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L38;
                       }
                     }
                   } else {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L40: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -8339,20 +8358,20 @@ final class iua {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param3, (int)param4, param8, var21);
+                            this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param3, (int)param4, param8, var21);
                             param4 = param4 + var18;
                             param3 = param3 + var17;
                             param8 = param8 + var22;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L41;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
+                        this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
                         param4 = param4 + var18;
                         param5 = param5 + var19;
                         param8 = param8 + var22;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L40;
                       }
                     }
@@ -8362,20 +8381,20 @@ final class iua {
                 return;
               }
             } else {
-              if (param1 < (float)((iua) this).field_v) {
+              if (param1 < (float)this.field_v) {
                 L42: {
-                  if (param2 <= (float)((iua) this).field_v) {
+                  if (param2 <= (float)this.field_v) {
                     break L42;
                   } else {
-                    param2 = (float)((iua) this).field_v;
+                    param2 = (float)this.field_v;
                     break L42;
                   }
                 }
                 L43: {
-                  if (param0 <= (float)((iua) this).field_v) {
+                  if (param0 <= (float)this.field_v) {
                     break L43;
                   } else {
-                    param0 = (float)((iua) this).field_v;
+                    param0 = (float)this.field_v;
                     break L43;
                   }
                 }
@@ -8405,7 +8424,7 @@ final class iua {
                   if (var17 < var18) {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L46: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -8414,27 +8433,27 @@ final class iua {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+                            this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
                             param3 = param3 + var19;
                             param4 = param4 + var18;
                             param7 = param7 + var22;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L47;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param5, (int)param4, param7, var21);
+                        this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param4, param7, var21);
                         param5 = param5 + var17;
                         param4 = param4 + var18;
                         param7 = param7 + var22;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L46;
                       }
                     }
                   } else {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L48: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -8443,20 +8462,20 @@ final class iua {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                            this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                             param3 = param3 + var19;
                             param4 = param4 + var18;
                             param7 = param7 + var22;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L49;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param4, (int)param5, param7, var21);
+                        this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param5, param7, var21);
                         param5 = param5 + var17;
                         param4 = param4 + var18;
                         param7 = param7 + var22;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L48;
                       }
                     }
@@ -8492,7 +8511,7 @@ final class iua {
                       } else {
                         param0 = param0 - param2;
                         param2 = param2 - param1;
-                        param1 = (float)((iua) this).field_p[(int)param1];
+                        param1 = (float)this.field_p[(int)param1];
                         L53: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -8501,20 +8520,20 @@ final class iua {
                               if (param0 < 0.0f) {
                                 return;
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
+                                this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
                                 param3 = param3 + var17;
                                 param5 = param5 + var19;
                                 param7 = param7 + var22;
-                                param1 = param1 + (float)((iua) this).field_t;
+                                param1 = param1 + (float)this.field_t;
                                 continue L54;
                               }
                             }
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+                            this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
                             param3 = param3 + var17;
                             param4 = param4 + var18;
                             param7 = param7 + var22;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L53;
                           }
                         }
@@ -8525,7 +8544,7 @@ final class iua {
                     if (var17 > var19) {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((iua) this).field_p[(int)param1];
+                      param1 = (float)this.field_p[(int)param1];
                       L55: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -8534,27 +8553,27 @@ final class iua {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
+                              this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
                               param3 = param3 + var17;
                               param5 = param5 + var19;
                               param7 = param7 + var22;
-                              param1 = param1 + (float)((iua) this).field_t;
+                              param1 = param1 + (float)this.field_t;
                               continue L56;
                             }
                           }
                         } else {
-                          this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+                          this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
                           param3 = param3 + var17;
                           param4 = param4 + var18;
                           param7 = param7 + var22;
-                          param1 = param1 + (float)((iua) this).field_t;
+                          param1 = param1 + (float)this.field_t;
                           continue L55;
                         }
                       }
                     } else {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((iua) this).field_p[(int)param1];
+                      param1 = (float)this.field_p[(int)param1];
                       L57: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -8563,20 +8582,20 @@ final class iua {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
+                              this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
                               param3 = param3 + var17;
                               param5 = param5 + var19;
                               param7 = param7 + var22;
-                              param1 = param1 + (float)((iua) this).field_t;
+                              param1 = param1 + (float)this.field_t;
                               continue L58;
                             }
                           }
                         } else {
-                          this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                          this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                           param3 = param3 + var17;
                           param4 = param4 + var18;
                           param7 = param7 + var22;
-                          param1 = param1 + (float)((iua) this).field_t;
+                          param1 = param1 + (float)this.field_t;
                           continue L57;
                         }
                       }
@@ -8584,7 +8603,7 @@ final class iua {
                   } else {
                     param0 = param0 - param2;
                     param2 = param2 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L59: while (true) {
                       param2 = param2 - 1.0f;
                       if (param2 < 0.0f) {
@@ -8593,20 +8612,20 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
+                            this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
                             param3 = param3 + var17;
                             param5 = param5 + var19;
                             param7 = param7 + var22;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L60;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                        this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                         param3 = param3 + var17;
                         param4 = param4 + var18;
                         param7 = param7 + var22;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L59;
                       }
                     }
@@ -8620,14 +8639,15 @@ final class iua {
             return;
           }
         } else {
-          ((iua) this).field_k.b((int)param0, param9, (int)param3, (int)param1, 1, (int)param4);
-          ((iua) this).field_k.b((int)param1, param9, (int)param4, (int)param2, 1, (int)param5);
-          ((iua) this).field_k.b((int)param2, param9, (int)param5, (int)param0, 1, (int)param3);
+          this.field_k.b((int)param0, param9, (int)param3, (int)param1, 1, (int)param4);
+          this.field_k.b((int)param1, param9, (int)param4, (int)param2, 1, (int)param5);
+          this.field_k.b((int)param2, param9, (int)param5, (int)param0, 1, (int)param3);
           return;
         }
     }
 
     private final void b(int[] param0, int[] param1, int param2, int param3, int param4, float param5, float param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14, float param15, float param16, float param17, float param18, float param19, float param20) {
+        int incrementValue$1 = 0;
         int var22 = 0;
         float var23 = 0.0f;
         float var24 = 0.0f;
@@ -8660,14 +8680,14 @@ final class iua {
           var29 = (param16 - param15) * var23;
           var30 = (param18 - param17) * var23;
           var31 = (param20 - param19) * var23;
-          if (!((iua) this).field_q) {
+          if (!this.field_q) {
             break L0;
           } else {
             L1: {
-              if (param4 <= ((iua) this).field_h) {
+              if (param4 <= this.field_h) {
                 break L1;
               } else {
-                param4 = ((iua) this).field_h;
+                param4 = this.field_h;
                 break L1;
               }
             }
@@ -8691,24 +8711,24 @@ final class iua {
           var22 = param4 - param3;
           param2 = param2 + param3;
           L2: while (true) {
-            int incrementValue$1 = var22;
+            incrementValue$1 = var22;
             var22--;
             if (incrementValue$1 <= 0) {
               return;
             } else {
               L3: {
                 var32 = 1.0f / param5;
-                if (var32 >= ((iua) this).field_u[param2]) {
+                if (var32 >= this.field_u[param2]) {
                   break L3;
                 } else {
                   L4: {
-                    var33 = (int)(param7 * var32 * (float)((iua) this).field_i);
-                    if (!((iua) this).field_d) {
+                    var33 = (int)(param7 * var32 * (float)this.field_i);
+                    if (!this.field_d) {
                       if (var33 >= 0) {
-                        if (var33 <= ((iua) this).field_r) {
+                        if (var33 <= this.field_r) {
                           break L4;
                         } else {
-                          var33 = ((iua) this).field_r;
+                          var33 = this.field_r;
                           break L4;
                         }
                       } else {
@@ -8716,18 +8736,18 @@ final class iua {
                         break L4;
                       }
                     } else {
-                      var33 = var33 & ((iua) this).field_r;
+                      var33 = var33 & this.field_r;
                       break L4;
                     }
                   }
                   L5: {
-                    var34 = (int)(param9 * var32 * (float)((iua) this).field_i);
-                    if (!((iua) this).field_d) {
+                    var34 = (int)(param9 * var32 * (float)this.field_i);
+                    if (!this.field_d) {
                       if (var34 >= 0) {
-                        if (var34 <= ((iua) this).field_r) {
+                        if (var34 <= this.field_r) {
                           break L5;
                         } else {
-                          var34 = ((iua) this).field_r;
+                          var34 = this.field_r;
                           break L5;
                         }
                       } else {
@@ -8735,15 +8755,15 @@ final class iua {
                         break L5;
                       }
                     } else {
-                      var34 = var34 & ((iua) this).field_r;
+                      var34 = var34 & this.field_r;
                       break L5;
                     }
                   }
                   L6: {
-                    var35 = ((iua) this).field_w[var34 * ((iua) this).field_i + var33];
+                    var35 = this.field_w[var34 * this.field_i + var33];
                     var36 = 255;
-                    if (((iua) this).field_f != 2) {
-                      if (((iua) this).field_f != 1) {
+                    if (this.field_f != 2) {
+                      if (this.field_f != 1) {
                         var36 = (int)param13;
                         break L6;
                       } else {
@@ -8776,13 +8796,13 @@ final class iua {
                           break L8;
                         } else {
                           var38 = (int)(255.0f - param11);
-                          var39 = ((((iua) this).field_l & 16711935) * (int)param11 & -16711936 | (((iua) this).field_l & 65280) * (int)param11 & 16711680) >>> 8;
+                          var39 = ((this.field_l & 16711935) * (int)param11 & -16711936 | (this.field_l & 65280) * (int)param11 & 16711680) >>> 8;
                           var37 = (((var37 & 16711935) * var38 & -16711936 | (var37 & 65280) * var38 & 16711680) >>> 8) + var39;
                           break L8;
                         }
                       }
                       param0[param2] = var36 << 24 | var37;
-                      ((iua) this).field_u[param2] = var32;
+                      this.field_u[param2] = var32;
                       break L3;
                     } else {
                       L9: {
@@ -8791,7 +8811,7 @@ final class iua {
                           break L9;
                         } else {
                           var38 = (int)(255.0f - param11);
-                          var39 = ((((iua) this).field_l & 16711935) * (int)param11 & -16711936 | (((iua) this).field_l & 65280) * (int)param11 & 16711680) >>> 8;
+                          var39 = ((this.field_l & 16711935) * (int)param11 & -16711936 | (this.field_l & 65280) * (int)param11 & 16711680) >>> 8;
                           var37 = (((var37 & 16711935) * var38 & -16711936 | (var37 & 65280) * var38 & 16711680) >>> 8) + var39;
                           break L9;
                         }
@@ -8800,7 +8820,7 @@ final class iua {
                       var39 = 255 - var36;
                       var37 = ((var38 & 16711935) * var39 + (var37 & 16711935) * var36 & -16711936) + ((var38 & 65280) * var39 + (var37 & 65280) * var36 & 16711680) >> 8;
                       param0[param2] = (var36 | param0[param2] >> 24) << 24 | var37;
-                      ((iua) this).field_u[param2] = var32;
+                      this.field_u[param2] = var32;
                       break L3;
                     }
                   }
@@ -8851,7 +8871,7 @@ final class iua {
         float var37 = 0.0f;
         float var38 = 0.0f;
         float var39 = 0.0f;
-        if (!((iua) this).field_s) {
+        if (!this.field_s) {
           L0: {
             var13 = param4 - param3;
             var14 = param1 - param0;
@@ -8908,20 +8928,20 @@ final class iua {
                 if (param0 > param2) {
                   break L3;
                 } else {
-                  if (param0 < (float)((iua) this).field_v) {
+                  if (param0 < (float)this.field_v) {
                     L4: {
-                      if (param1 <= (float)((iua) this).field_v) {
+                      if (param1 <= (float)this.field_v) {
                         break L4;
                       } else {
-                        param1 = (float)((iua) this).field_v;
+                        param1 = (float)this.field_v;
                         break L4;
                       }
                     }
                     L5: {
-                      if (param2 <= (float)((iua) this).field_v) {
+                      if (param2 <= (float)this.field_v) {
                         break L5;
                       } else {
-                        param2 = (float)((iua) this).field_v;
+                        param2 = (float)this.field_v;
                         break L5;
                       }
                     }
@@ -8963,7 +8983,7 @@ final class iua {
                           } else {
                             param1 = param1 - param2;
                             param2 = param2 - param0;
-                            param0 = (float)((iua) this).field_p[(int)param0];
+                            param0 = (float)this.field_p[(int)param0];
                             L9: while (true) {
                               param2 = param2 - 1.0f;
                               if (param2 < 0.0f) {
@@ -8972,26 +8992,26 @@ final class iua {
                                   if (param1 < 0.0f) {
                                     return;
                                   } else {
-                                    this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                                    this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                                     param5 = param5 + var25;
                                     param3 = param3 + var26;
                                     param6 = param6 + var30;
                                     var37 = var37 + var32;
                                     var38 = var38 + var34;
                                     var39 = var39 + var36;
-                                    param0 = param0 + (float)((iua) this).field_t;
+                                    param0 = param0 + (float)this.field_t;
                                     continue L10;
                                   }
                                 }
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                                 param4 = param4 + var27;
                                 param3 = param3 + var26;
                                 param6 = param6 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L9;
                               }
                             }
@@ -9002,7 +9022,7 @@ final class iua {
                         if (var25 > var26) {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L11: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -9011,33 +9031,33 @@ final class iua {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                                  this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                                   param5 = param5 + var25;
                                   param3 = param3 + var26;
                                   param6 = param6 + var30;
                                   var37 = var37 + var32;
                                   var38 = var38 + var34;
                                   var39 = var39 + var36;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L12;
                                 }
                               }
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                               param4 = param4 + var27;
                               param3 = param3 + var26;
                               param6 = param6 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L11;
                             }
                           }
                         } else {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L13: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -9046,26 +9066,26 @@ final class iua {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                                  this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                                   param5 = param5 + var25;
                                   param3 = param3 + var26;
                                   param6 = param6 + var30;
                                   var37 = var37 + var32;
                                   var38 = var38 + var34;
                                   var39 = var39 + var36;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L14;
                                 }
                               }
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                               param4 = param4 + var27;
                               param3 = param3 + var26;
                               param6 = param6 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L13;
                             }
                           }
@@ -9073,7 +9093,7 @@ final class iua {
                       } else {
                         param1 = param1 - param2;
                         param2 = param2 - param0;
-                        param0 = (float)((iua) this).field_p[(int)param0];
+                        param0 = (float)this.field_p[(int)param0];
                         L15: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -9082,26 +9102,26 @@ final class iua {
                               if (param1 < 0.0f) {
                                 return;
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                                 param5 = param5 + var25;
                                 param3 = param3 + var26;
                                 param6 = param6 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L16;
                               }
                             }
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                            this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var27;
                             param3 = param3 + var26;
                             param6 = param6 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L15;
                           }
                         }
@@ -9140,7 +9160,7 @@ final class iua {
                           } else {
                             param2 = param2 - param1;
                             param1 = param1 - param0;
-                            param0 = (float)((iua) this).field_p[(int)param0];
+                            param0 = (float)this.field_p[(int)param0];
                             L20: while (true) {
                               param1 = param1 - 1.0f;
                               if (param1 < 0.0f) {
@@ -9149,26 +9169,26 @@ final class iua {
                                   if (param2 < 0.0f) {
                                     return;
                                   } else {
-                                    this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                                    this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                                     param5 = param5 + var27;
                                     param4 = param4 + var25;
                                     param6 = param6 + var30;
                                     var37 = var37 + var32;
                                     var38 = var38 + var34;
                                     var39 = var39 + var36;
-                                    param0 = param0 + (float)((iua) this).field_t;
+                                    param0 = param0 + (float)this.field_t;
                                     continue L21;
                                   }
                                 }
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                                 param5 = param5 + var27;
                                 param3 = param3 + var26;
                                 param6 = param6 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L20;
                               }
                             }
@@ -9179,7 +9199,7 @@ final class iua {
                         if (var27 > var25) {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L22: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -9188,33 +9208,33 @@ final class iua {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                                  this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                                   param5 = param5 + var27;
                                   param4 = param4 + var25;
                                   param6 = param6 + var30;
                                   var37 = var37 + var32;
                                   var38 = var38 + var34;
                                   var39 = var39 + var36;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L23;
                                 }
                               }
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                               param5 = param5 + var27;
                               param3 = param3 + var26;
                               param6 = param6 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L22;
                             }
                           }
                         } else {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L24: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -9223,26 +9243,26 @@ final class iua {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                                  this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                                   param5 = param5 + var27;
                                   param4 = param4 + var25;
                                   param6 = param6 + var30;
                                   var37 = var37 + var32;
                                   var38 = var38 + var34;
                                   var39 = var39 + var36;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L25;
                                 }
                               }
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                               param5 = param5 + var27;
                               param3 = param3 + var26;
                               param6 = param6 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L24;
                             }
                           }
@@ -9250,7 +9270,7 @@ final class iua {
                       } else {
                         param2 = param2 - param1;
                         param1 = param1 - param0;
-                        param0 = (float)((iua) this).field_p[(int)param0];
+                        param0 = (float)this.field_p[(int)param0];
                         L26: while (true) {
                           param1 = param1 - 1.0f;
                           if (param1 < 0.0f) {
@@ -9259,26 +9279,26 @@ final class iua {
                               if (param2 < 0.0f) {
                                 return;
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                                 param5 = param5 + var27;
                                 param4 = param4 + var25;
                                 param6 = param6 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L27;
                               }
                             }
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                            this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                             param5 = param5 + var27;
                             param3 = param3 + var26;
                             param6 = param6 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L26;
                           }
                         }
@@ -9291,20 +9311,20 @@ final class iua {
               }
             }
             if (param1 > param2) {
-              if (param2 < (float)((iua) this).field_v) {
+              if (param2 < (float)this.field_v) {
                 L28: {
-                  if (param0 <= (float)((iua) this).field_v) {
+                  if (param0 <= (float)this.field_v) {
                     break L28;
                   } else {
-                    param0 = (float)((iua) this).field_v;
+                    param0 = (float)this.field_v;
                     break L28;
                   }
                 }
                 L29: {
-                  if (param1 <= (float)((iua) this).field_v) {
+                  if (param1 <= (float)this.field_v) {
                     break L29;
                   } else {
-                    param1 = (float)((iua) this).field_v;
+                    param1 = (float)this.field_v;
                     break L29;
                   }
                 }
@@ -9340,7 +9360,7 @@ final class iua {
                   if (var25 < var27) {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L32: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -9349,33 +9369,33 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
+                            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var26;
                             param5 = param5 + var27;
                             param8 = param8 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L33;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param3, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
+                        this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
                         param3 = param3 + var25;
                         param5 = param5 + var27;
                         param8 = param8 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L32;
                       }
                     }
                   } else {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L34: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -9384,26 +9404,26 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
+                            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var26;
                             param5 = param5 + var27;
                             param8 = param8 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L35;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param5, (int)param3, param8, var29, var37, var31, var38, var33, var39, var35);
+                        this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param3, param8, var29, var37, var31, var38, var33, var39, var35);
                         param3 = param3 + var25;
                         param5 = param5 + var27;
                         param8 = param8 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L34;
                       }
                     }
@@ -9436,7 +9456,7 @@ final class iua {
                   if (var25 < var27) {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L38: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -9445,33 +9465,33 @@ final class iua {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param4, (int)param3, param8, var29, var37, var31, var38, var33, var39, var35);
+                            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param3, param8, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var25;
                             param3 = param3 + var26;
                             param8 = param8 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L39;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
+                        this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
                         param4 = param4 + var25;
                         param5 = param5 + var27;
                         param8 = param8 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L38;
                       }
                     }
                   } else {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L40: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -9480,26 +9500,26 @@ final class iua {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param3, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
+                            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var25;
                             param3 = param3 + var26;
                             param8 = param8 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L41;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
+                        this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
                         param4 = param4 + var25;
                         param5 = param5 + var27;
                         param8 = param8 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L40;
                       }
                     }
@@ -9509,20 +9529,20 @@ final class iua {
                 return;
               }
             } else {
-              if (param1 < (float)((iua) this).field_v) {
+              if (param1 < (float)this.field_v) {
                 L42: {
-                  if (param2 <= (float)((iua) this).field_v) {
+                  if (param2 <= (float)this.field_v) {
                     break L42;
                   } else {
-                    param2 = (float)((iua) this).field_v;
+                    param2 = (float)this.field_v;
                     break L42;
                   }
                 }
                 L43: {
-                  if (param0 <= (float)((iua) this).field_v) {
+                  if (param0 <= (float)this.field_v) {
                     break L43;
                   } else {
-                    param0 = (float)((iua) this).field_v;
+                    param0 = (float)this.field_v;
                     break L43;
                   }
                 }
@@ -9558,7 +9578,7 @@ final class iua {
                   if (var26 < var25) {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L46: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -9567,33 +9587,33 @@ final class iua {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
+                            this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
                             param3 = param3 + var27;
                             param4 = param4 + var25;
                             param7 = param7 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L47;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param5, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
+                        this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
                         param5 = param5 + var26;
                         param4 = param4 + var25;
                         param7 = param7 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L46;
                       }
                     }
                   } else {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L48: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -9602,26 +9622,26 @@ final class iua {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                            this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                             param3 = param3 + var27;
                             param4 = param4 + var25;
                             param7 = param7 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L49;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
+                        this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
                         param5 = param5 + var26;
                         param4 = param4 + var25;
                         param7 = param7 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L48;
                       }
                     }
@@ -9660,7 +9680,7 @@ final class iua {
                       } else {
                         param0 = param0 - param2;
                         param2 = param2 - param1;
-                        param1 = (float)((iua) this).field_p[(int)param1];
+                        param1 = (float)this.field_p[(int)param1];
                         L53: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -9669,26 +9689,26 @@ final class iua {
                               if (param0 < 0.0f) {
                                 return;
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
+                                this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
                                 param3 = param3 + var26;
                                 param5 = param5 + var27;
                                 param7 = param7 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param1 = param1 + (float)((iua) this).field_t;
+                                param1 = param1 + (float)this.field_t;
                                 continue L54;
                               }
                             }
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
+                            this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
                             param3 = param3 + var26;
                             param4 = param4 + var25;
                             param7 = param7 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L53;
                           }
                         }
@@ -9699,7 +9719,7 @@ final class iua {
                     if (var26 > var27) {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((iua) this).field_p[(int)param1];
+                      param1 = (float)this.field_p[(int)param1];
                       L55: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -9708,33 +9728,33 @@ final class iua {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
+                              this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
                               param3 = param3 + var26;
                               param5 = param5 + var27;
                               param7 = param7 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param1 = param1 + (float)((iua) this).field_t;
+                              param1 = param1 + (float)this.field_t;
                               continue L56;
                             }
                           }
                         } else {
-                          this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
+                          this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
                           param3 = param3 + var26;
                           param4 = param4 + var25;
                           param7 = param7 + var30;
                           var37 = var37 + var32;
                           var38 = var38 + var34;
                           var39 = var39 + var36;
-                          param1 = param1 + (float)((iua) this).field_t;
+                          param1 = param1 + (float)this.field_t;
                           continue L55;
                         }
                       }
                     } else {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((iua) this).field_p[(int)param1];
+                      param1 = (float)this.field_p[(int)param1];
                       L57: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -9743,26 +9763,26 @@ final class iua {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                              this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                               param3 = param3 + var26;
                               param5 = param5 + var27;
                               param7 = param7 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param1 = param1 + (float)((iua) this).field_t;
+                              param1 = param1 + (float)this.field_t;
                               continue L58;
                             }
                           }
                         } else {
-                          this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                          this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                           param3 = param3 + var26;
                           param4 = param4 + var25;
                           param7 = param7 + var30;
                           var37 = var37 + var32;
                           var38 = var38 + var34;
                           var39 = var39 + var36;
-                          param1 = param1 + (float)((iua) this).field_t;
+                          param1 = param1 + (float)this.field_t;
                           continue L57;
                         }
                       }
@@ -9770,7 +9790,7 @@ final class iua {
                   } else {
                     param0 = param0 - param2;
                     param2 = param2 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L59: while (true) {
                       param2 = param2 - 1.0f;
                       if (param2 < 0.0f) {
@@ -9779,26 +9799,26 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                            this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                             param3 = param3 + var26;
                             param5 = param5 + var27;
                             param7 = param7 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L60;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                        this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                         param3 = param3 + var26;
                         param4 = param4 + var25;
                         param7 = param7 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L59;
                       }
                     }
@@ -9812,9 +9832,9 @@ final class iua {
             return;
           }
         } else {
-          ((iua) this).field_k.b((int)param0, -16777216 | param9, (int)param3, (int)param1, 1, (int)param4);
-          ((iua) this).field_k.b((int)param1, -16777216 | param9, (int)param4, (int)param2, 1, (int)param5);
-          ((iua) this).field_k.b((int)param2, -16777216 | param9, (int)param5, (int)param0, 1, (int)param3);
+          this.field_k.b((int)param0, -16777216 | param9, (int)param3, (int)param1, 1, (int)param4);
+          this.field_k.b((int)param1, -16777216 | param9, (int)param4, (int)param2, 1, (int)param5);
+          this.field_k.b((int)param2, -16777216 | param9, (int)param5, (int)param0, 1, (int)param3);
           return;
         }
     }
@@ -9824,14 +9844,14 @@ final class iua {
         int var13 = 0;
         int var14 = 0;
         L0: {
-          if (!((iua) this).field_q) {
+          if (!this.field_q) {
             break L0;
           } else {
             L1: {
-              if (param6 <= ((iua) this).field_h) {
+              if (param6 <= this.field_h) {
                 break L1;
               } else {
-                param6 = ((iua) this).field_h;
+                param6 = this.field_h;
                 break L1;
               }
             }
@@ -9848,12 +9868,12 @@ final class iua {
             param2 = param2 + (param5 - 1);
             param7 = param7 + param8 * (float)param5;
             param9 = param9 + param10 * (float)param5;
-            if (!((iua) this).field_o.field_n) {
-              if (!((iua) this).field_j) {
+            if (!this.field_o.field_n) {
+              if (!this.field_j) {
                 param4 = param6 - param5;
-                if (((iua) this).field_b != 0) {
-                  var12 = ((iua) this).field_b;
-                  var13 = 256 - ((iua) this).field_b;
+                if (this.field_b != 0) {
+                  var12 = this.field_b;
+                  var13 = 256 - this.field_b;
                   L3: while (true) {
                     L4: {
                       param2++;
@@ -9900,10 +9920,10 @@ final class iua {
               } else {
                 param4 = param6 - param5 >> 2;
                 param8 = param8 * 4.0f;
-                if (((iua) this).field_b != 0) {
+                if (this.field_b != 0) {
                   L7: {
-                    var12 = ((iua) this).field_b;
-                    var13 = 256 - ((iua) this).field_b;
+                    var12 = this.field_b;
+                    var13 = 256 - this.field_b;
                     if (param4 <= 0) {
                       break L7;
                     } else {
@@ -10074,11 +10094,11 @@ final class iua {
                 }
               }
             } else {
-              if (!((iua) this).field_j) {
+              if (!this.field_j) {
                 param4 = param6 - param5;
-                if (((iua) this).field_b != 0) {
-                  var12 = ((iua) this).field_b;
-                  var13 = 256 - ((iua) this).field_b;
+                if (this.field_b != 0) {
+                  var12 = this.field_b;
+                  var13 = 256 - this.field_b;
                   L23: while (true) {
                     L24: {
                       param2++;
@@ -10127,10 +10147,10 @@ final class iua {
               } else {
                 param4 = param6 - param5 >> 2;
                 param8 = param8 * 4.0f;
-                if (((iua) this).field_b != 0) {
+                if (this.field_b != 0) {
                   L27: {
-                    var12 = ((iua) this).field_b;
-                    var13 = 256 - ((iua) this).field_b;
+                    var12 = this.field_b;
+                    var13 = 256 - this.field_b;
                     if (param4 <= 0) {
                       break L27;
                     } else {
@@ -10335,7 +10355,7 @@ final class iua {
         float var26 = 0.0f;
         float var27 = 0.0f;
         float var28 = 0.0f;
-        if (!((iua) this).field_s) {
+        if (!this.field_s) {
           L0: {
             var13 = param4 - param3;
             var14 = param1 - param0;
@@ -10384,20 +10404,20 @@ final class iua {
                 if (param0 > param2) {
                   break L3;
                 } else {
-                  if (param0 < (float)((iua) this).field_v) {
+                  if (param0 < (float)this.field_v) {
                     L4: {
-                      if (param1 <= (float)((iua) this).field_v) {
+                      if (param1 <= (float)this.field_v) {
                         break L4;
                       } else {
-                        param1 = (float)((iua) this).field_v;
+                        param1 = (float)this.field_v;
                         break L4;
                       }
                     }
                     L5: {
-                      if (param2 <= (float)((iua) this).field_v) {
+                      if (param2 <= (float)this.field_v) {
                         break L5;
                       } else {
-                        param2 = (float)((iua) this).field_v;
+                        param2 = (float)this.field_v;
                         break L5;
                       }
                     }
@@ -10435,7 +10455,7 @@ final class iua {
                           } else {
                             param1 = param1 - param2;
                             param2 = param2 - param0;
-                            param0 = (float)((iua) this).field_p[(int)param0];
+                            param0 = (float)this.field_p[(int)param0];
                             L9: while (true) {
                               param2 = param2 - 1.0f;
                               if (param2 < 0.0f) {
@@ -10444,22 +10464,22 @@ final class iua {
                                   if (param1 < 0.0f) {
                                     return;
                                   } else {
-                                    this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+                                    this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
                                     param5 = param5 + var21;
                                     param3 = param3 + var22;
                                     param9 = param9 + var26;
                                     param6 = param6 + var28;
-                                    param0 = param0 + (float)((iua) this).field_t;
+                                    param0 = param0 + (float)this.field_t;
                                     continue L10;
                                   }
                                 }
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
+                                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
                                 param4 = param4 + var23;
                                 param3 = param3 + var22;
                                 param9 = param9 + var26;
                                 param6 = param6 + var28;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L9;
                               }
                             }
@@ -10470,7 +10490,7 @@ final class iua {
                         if (var21 > var22) {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L11: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -10479,29 +10499,29 @@ final class iua {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+                                  this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
                                   param5 = param5 + var21;
                                   param3 = param3 + var22;
                                   param9 = param9 + var26;
                                   param6 = param6 + var28;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L12;
                                 }
                               }
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
+                              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
                               param4 = param4 + var23;
                               param3 = param3 + var22;
                               param9 = param9 + var26;
                               param6 = param6 + var28;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L11;
                             }
                           }
                         } else {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L13: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -10510,22 +10530,22 @@ final class iua {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+                                  this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
                                   param5 = param5 + var21;
                                   param3 = param3 + var22;
                                   param9 = param9 + var26;
                                   param6 = param6 + var28;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L14;
                                 }
                               }
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
+                              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
                               param4 = param4 + var23;
                               param3 = param3 + var22;
                               param9 = param9 + var26;
                               param6 = param6 + var28;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L13;
                             }
                           }
@@ -10533,7 +10553,7 @@ final class iua {
                       } else {
                         param1 = param1 - param2;
                         param2 = param2 - param0;
-                        param0 = (float)((iua) this).field_p[(int)param0];
+                        param0 = (float)this.field_p[(int)param0];
                         L15: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -10542,22 +10562,22 @@ final class iua {
                               if (param1 < 0.0f) {
                                 return;
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+                                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
                                 param5 = param5 + var21;
                                 param3 = param3 + var22;
                                 param9 = param9 + var26;
                                 param6 = param6 + var28;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L16;
                               }
                             }
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
+                            this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
                             param4 = param4 + var23;
                             param3 = param3 + var22;
                             param9 = param9 + var26;
                             param6 = param6 + var28;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L15;
                           }
                         }
@@ -10594,7 +10614,7 @@ final class iua {
                           } else {
                             param2 = param2 - param1;
                             param1 = param1 - param0;
-                            param0 = (float)((iua) this).field_p[(int)param0];
+                            param0 = (float)this.field_p[(int)param0];
                             L20: while (true) {
                               param1 = param1 - 1.0f;
                               if (param1 < 0.0f) {
@@ -10603,22 +10623,22 @@ final class iua {
                                   if (param2 < 0.0f) {
                                     return;
                                   } else {
-                                    this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
+                                    this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
                                     param5 = param5 + var23;
                                     param4 = param4 + var21;
                                     param9 = param9 + var26;
                                     param6 = param6 + var28;
-                                    param0 = param0 + (float)((iua) this).field_t;
+                                    param0 = param0 + (float)this.field_t;
                                     continue L21;
                                   }
                                 }
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+                                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
                                 param5 = param5 + var23;
                                 param3 = param3 + var22;
                                 param9 = param9 + var26;
                                 param6 = param6 + var28;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L20;
                               }
                             }
@@ -10629,7 +10649,7 @@ final class iua {
                         if (var23 > var21) {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L22: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -10638,29 +10658,29 @@ final class iua {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
+                                  this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
                                   param5 = param5 + var23;
                                   param4 = param4 + var21;
                                   param9 = param9 + var26;
                                   param6 = param6 + var28;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L23;
                                 }
                               }
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+                              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
                               param5 = param5 + var23;
                               param3 = param3 + var22;
                               param9 = param9 + var26;
                               param6 = param6 + var28;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L22;
                             }
                           }
                         } else {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((iua) this).field_p[(int)param0];
+                          param0 = (float)this.field_p[(int)param0];
                           L24: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -10669,22 +10689,22 @@ final class iua {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
+                                  this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
                                   param5 = param5 + var23;
                                   param4 = param4 + var21;
                                   param9 = param9 + var26;
                                   param6 = param6 + var28;
-                                  param0 = param0 + (float)((iua) this).field_t;
+                                  param0 = param0 + (float)this.field_t;
                                   continue L25;
                                 }
                               }
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+                              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
                               param5 = param5 + var23;
                               param3 = param3 + var22;
                               param9 = param9 + var26;
                               param6 = param6 + var28;
-                              param0 = param0 + (float)((iua) this).field_t;
+                              param0 = param0 + (float)this.field_t;
                               continue L24;
                             }
                           }
@@ -10692,7 +10712,7 @@ final class iua {
                       } else {
                         param2 = param2 - param1;
                         param1 = param1 - param0;
-                        param0 = (float)((iua) this).field_p[(int)param0];
+                        param0 = (float)this.field_p[(int)param0];
                         L26: while (true) {
                           param1 = param1 - 1.0f;
                           if (param1 < 0.0f) {
@@ -10701,22 +10721,22 @@ final class iua {
                               if (param2 < 0.0f) {
                                 return;
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
+                                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
                                 param5 = param5 + var23;
                                 param4 = param4 + var21;
                                 param9 = param9 + var26;
                                 param6 = param6 + var28;
-                                param0 = param0 + (float)((iua) this).field_t;
+                                param0 = param0 + (float)this.field_t;
                                 continue L27;
                               }
                             }
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+                            this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
                             param5 = param5 + var23;
                             param3 = param3 + var22;
                             param9 = param9 + var26;
                             param6 = param6 + var28;
-                            param0 = param0 + (float)((iua) this).field_t;
+                            param0 = param0 + (float)this.field_t;
                             continue L26;
                           }
                         }
@@ -10729,20 +10749,20 @@ final class iua {
               }
             }
             if (param1 > param2) {
-              if (param2 < (float)((iua) this).field_v) {
+              if (param2 < (float)this.field_v) {
                 L28: {
-                  if (param0 <= (float)((iua) this).field_v) {
+                  if (param0 <= (float)this.field_v) {
                     break L28;
                   } else {
-                    param0 = (float)((iua) this).field_v;
+                    param0 = (float)this.field_v;
                     break L28;
                   }
                 }
                 L29: {
-                  if (param1 <= (float)((iua) this).field_v) {
+                  if (param1 <= (float)this.field_v) {
                     break L29;
                   } else {
-                    param1 = (float)((iua) this).field_v;
+                    param1 = (float)this.field_v;
                     break L29;
                   }
                 }
@@ -10774,7 +10794,7 @@ final class iua {
                   if (var21 < var23) {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L32: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -10783,29 +10803,29 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
+                            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
                             param4 = param4 + var22;
                             param5 = param5 + var23;
                             param11 = param11 + var26;
                             param8 = param8 + var28;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L33;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param3, (int)param5, param11, var25, param8, var27);
+                        this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param5, param11, var25, param8, var27);
                         param3 = param3 + var21;
                         param5 = param5 + var23;
                         param11 = param11 + var26;
                         param8 = param8 + var28;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L32;
                       }
                     }
                   } else {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L34: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -10814,22 +10834,22 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
+                            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
                             param4 = param4 + var22;
                             param5 = param5 + var23;
                             param11 = param11 + var26;
                             param8 = param8 + var28;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L35;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param5, (int)param3, param11, var25, param8, var27);
+                        this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param3, param11, var25, param8, var27);
                         param3 = param3 + var21;
                         param5 = param5 + var23;
                         param11 = param11 + var26;
                         param8 = param8 + var28;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L34;
                       }
                     }
@@ -10860,7 +10880,7 @@ final class iua {
                   if (var21 < var23) {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L38: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -10869,29 +10889,29 @@ final class iua {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param4, (int)param3, param11, var25, param8, var27);
+                            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param3, param11, var25, param8, var27);
                             param4 = param4 + var21;
                             param3 = param3 + var22;
                             param11 = param11 + var26;
                             param8 = param8 + var28;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L39;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
+                        this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
                         param4 = param4 + var21;
                         param5 = param5 + var23;
                         param11 = param11 + var26;
                         param8 = param8 + var28;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L38;
                       }
                     }
                   } else {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((iua) this).field_p[(int)param2];
+                    param2 = (float)this.field_p[(int)param2];
                     L40: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -10900,22 +10920,22 @@ final class iua {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param3, (int)param4, param11, var25, param8, var27);
+                            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param4, param11, var25, param8, var27);
                             param4 = param4 + var21;
                             param3 = param3 + var22;
                             param11 = param11 + var26;
                             param8 = param8 + var28;
-                            param2 = param2 + (float)((iua) this).field_t;
+                            param2 = param2 + (float)this.field_t;
                             continue L41;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
+                        this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
                         param4 = param4 + var21;
                         param5 = param5 + var23;
                         param11 = param11 + var26;
                         param8 = param8 + var28;
-                        param2 = param2 + (float)((iua) this).field_t;
+                        param2 = param2 + (float)this.field_t;
                         continue L40;
                       }
                     }
@@ -10925,20 +10945,20 @@ final class iua {
                 return;
               }
             } else {
-              if (param1 < (float)((iua) this).field_v) {
+              if (param1 < (float)this.field_v) {
                 L42: {
-                  if (param2 <= (float)((iua) this).field_v) {
+                  if (param2 <= (float)this.field_v) {
                     break L42;
                   } else {
-                    param2 = (float)((iua) this).field_v;
+                    param2 = (float)this.field_v;
                     break L42;
                   }
                 }
                 L43: {
-                  if (param0 <= (float)((iua) this).field_v) {
+                  if (param0 <= (float)this.field_v) {
                     break L43;
                   } else {
-                    param0 = (float)((iua) this).field_v;
+                    param0 = (float)this.field_v;
                     break L43;
                   }
                 }
@@ -10970,7 +10990,7 @@ final class iua {
                   if (var22 < var21) {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L46: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -10979,29 +10999,29 @@ final class iua {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
+                            this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
                             param3 = param3 + var23;
                             param4 = param4 + var21;
                             param10 = param10 + var26;
                             param7 = param7 + var28;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L47;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param5, (int)param4, param10, var25, param7, var27);
+                        this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param4, param10, var25, param7, var27);
                         param5 = param5 + var22;
                         param4 = param4 + var21;
                         param10 = param10 + var26;
                         param7 = param7 + var28;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L46;
                       }
                     }
                   } else {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L48: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -11010,22 +11030,22 @@ final class iua {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
+                            this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
                             param3 = param3 + var23;
                             param4 = param4 + var21;
                             param10 = param10 + var26;
                             param7 = param7 + var28;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L49;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param5, param10, var25, param7, var27);
+                        this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param5, param10, var25, param7, var27);
                         param5 = param5 + var22;
                         param4 = param4 + var21;
                         param10 = param10 + var26;
                         param7 = param7 + var28;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L48;
                       }
                     }
@@ -11062,7 +11082,7 @@ final class iua {
                       } else {
                         param0 = param0 - param2;
                         param2 = param2 - param1;
-                        param1 = (float)((iua) this).field_p[(int)param1];
+                        param1 = (float)this.field_p[(int)param1];
                         L53: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -11071,22 +11091,22 @@ final class iua {
                               if (param0 < 0.0f) {
                                 return;
                               } else {
-                                this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
+                                this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
                                 param3 = param3 + var22;
                                 param5 = param5 + var23;
                                 param10 = param10 + var26;
                                 param7 = param7 + var28;
-                                param1 = param1 + (float)((iua) this).field_t;
+                                param1 = param1 + (float)this.field_t;
                                 continue L54;
                               }
                             }
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
+                            this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
                             param3 = param3 + var22;
                             param4 = param4 + var21;
                             param10 = param10 + var26;
                             param7 = param7 + var28;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L53;
                           }
                         }
@@ -11097,7 +11117,7 @@ final class iua {
                     if (var22 > var23) {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((iua) this).field_p[(int)param1];
+                      param1 = (float)this.field_p[(int)param1];
                       L55: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -11106,29 +11126,29 @@ final class iua {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
+                              this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
                               param3 = param3 + var22;
                               param5 = param5 + var23;
                               param10 = param10 + var26;
                               param7 = param7 + var28;
-                              param1 = param1 + (float)((iua) this).field_t;
+                              param1 = param1 + (float)this.field_t;
                               continue L56;
                             }
                           }
                         } else {
-                          this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
+                          this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
                           param3 = param3 + var22;
                           param4 = param4 + var21;
                           param10 = param10 + var26;
                           param7 = param7 + var28;
-                          param1 = param1 + (float)((iua) this).field_t;
+                          param1 = param1 + (float)this.field_t;
                           continue L55;
                         }
                       }
                     } else {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((iua) this).field_p[(int)param1];
+                      param1 = (float)this.field_p[(int)param1];
                       L57: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -11137,22 +11157,22 @@ final class iua {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
+                              this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
                               param3 = param3 + var22;
                               param5 = param5 + var23;
                               param10 = param10 + var26;
                               param7 = param7 + var28;
-                              param1 = param1 + (float)((iua) this).field_t;
+                              param1 = param1 + (float)this.field_t;
                               continue L58;
                             }
                           }
                         } else {
-                          this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
+                          this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
                           param3 = param3 + var22;
                           param4 = param4 + var21;
                           param10 = param10 + var26;
                           param7 = param7 + var28;
-                          param1 = param1 + (float)((iua) this).field_t;
+                          param1 = param1 + (float)this.field_t;
                           continue L57;
                         }
                       }
@@ -11160,7 +11180,7 @@ final class iua {
                   } else {
                     param0 = param0 - param2;
                     param2 = param2 - param1;
-                    param1 = (float)((iua) this).field_p[(int)param1];
+                    param1 = (float)this.field_p[(int)param1];
                     L59: while (true) {
                       param2 = param2 - 1.0f;
                       if (param2 < 0.0f) {
@@ -11169,22 +11189,22 @@ final class iua {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
+                            this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
                             param3 = param3 + var22;
                             param5 = param5 + var23;
                             param10 = param10 + var26;
                             param7 = param7 + var28;
-                            param1 = param1 + (float)((iua) this).field_t;
+                            param1 = param1 + (float)this.field_t;
                             continue L60;
                           }
                         }
                       } else {
-                        this.b(((iua) this).field_a, ((iua) this).field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
+                        this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
                         param3 = param3 + var22;
                         param4 = param4 + var21;
                         param10 = param10 + var26;
                         param7 = param7 + var28;
-                        param1 = param1 + (float)((iua) this).field_t;
+                        param1 = param1 + (float)this.field_t;
                         continue L59;
                       }
                     }
@@ -11198,9 +11218,9 @@ final class iua {
             return;
           }
         } else {
-          ((iua) this).field_k.b((int)param0, bt.field_h[(int)param9], (int)param3, (int)param1, 1, (int)param4);
-          ((iua) this).field_k.b((int)param1, bt.field_h[(int)param9], (int)param4, (int)param2, 1, (int)param5);
-          ((iua) this).field_k.b((int)param2, bt.field_h[(int)param9], (int)param5, (int)param0, 1, (int)param3);
+          this.field_k.b((int)param0, bt.field_h[(int)param9], (int)param3, (int)param1, 1, (int)param4);
+          this.field_k.b((int)param1, bt.field_h[(int)param9], (int)param4, (int)param2, 1, (int)param5);
+          this.field_k.b((int)param2, bt.field_h[(int)param9], (int)param5, (int)param0, 1, (int)param3);
           return;
         }
     }
@@ -11210,14 +11230,14 @@ final class iua {
         int var11 = 0;
         int var12 = 0;
         L0: {
-          if (!((iua) this).field_q) {
+          if (!this.field_q) {
             break L0;
           } else {
             L1: {
-              if (param6 <= ((iua) this).field_h) {
+              if (param6 <= this.field_h) {
                 break L1;
               } else {
-                param6 = ((iua) this).field_h;
+                param6 = this.field_h;
                 break L1;
               }
             }
@@ -11233,12 +11253,12 @@ final class iua {
           param2 = param2 + (param5 - 1);
           param4 = param6 - param5 >> 2;
           param7 = param7 + param8 * (float)param5;
-          if (!((iua) this).field_o.field_n) {
-            if (((iua) this).field_b != 0) {
+          if (!this.field_o.field_n) {
+            if (this.field_b != 0) {
               L2: {
-                if (((iua) this).field_b != 254) {
-                  var10 = ((iua) this).field_b;
-                  var11 = 256 - ((iua) this).field_b;
+                if (this.field_b != 254) {
+                  var10 = this.field_b;
+                  var11 = 256 - this.field_b;
                   param3 = ((param3 & 16711935) * var11 >> 8 & 16711935) + ((param3 & 65280) * var11 >> 8 & 65280);
                   L3: while (true) {
                     param4--;
@@ -11313,7 +11333,7 @@ final class iua {
                   }
                 } else {
                   if (param5 != 0) {
-                    if (param6 <= ((iua) this).field_h - 1) {
+                    if (param6 <= this.field_h - 1) {
                       param4--;
                       L10: while (true) {
                         if (param4 < 0) {
@@ -11459,10 +11479,10 @@ final class iua {
               }
             }
           } else {
-            if (((iua) this).field_b != 0) {
-              if (((iua) this).field_b != 254) {
-                var10 = ((iua) this).field_b;
-                var11 = 256 - ((iua) this).field_b;
+            if (this.field_b != 0) {
+              if (this.field_b != 254) {
+                var10 = this.field_b;
+                var11 = 256 - this.field_b;
                 param3 = ((param3 & 16711935) * var11 >> 8 & 16711935) + ((param3 & 65280) * var11 >> 8 & 65280);
                 L24: while (true) {
                   param4--;
@@ -11542,7 +11562,7 @@ final class iua {
                 }
               } else {
                 if (param5 != 0) {
-                  if (param6 <= ((iua) this).field_h - 1) {
+                  if (param6 <= this.field_h - 1) {
                     param4--;
                     L31: while (true) {
                       if (param4 < 0) {
@@ -11697,6 +11717,24 @@ final class iua {
     }
 
     private final void b(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14) {
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
+        int incrementValue$30 = 0;
+        int incrementValue$31 = 0;
+        int incrementValue$32 = 0;
+        int incrementValue$33 = 0;
+        int incrementValue$34 = 0;
+        int incrementValue$35 = 0;
         int[] var16 = null;
         int var16_int = 0;
         int var17 = 0;
@@ -11723,14 +11761,14 @@ final class iua {
         int[] var38 = null;
         int[] var39 = null;
         L0: {
-          if (!((iua) this).field_q) {
+          if (!this.field_q) {
             break L0;
           } else {
             L1: {
-              if (param6 <= ((iua) this).field_h) {
+              if (param6 <= this.field_h) {
                 break L1;
               } else {
-                param6 = ((iua) this).field_h;
+                param6 = this.field_h;
                 break L1;
               }
             }
@@ -11743,18 +11781,18 @@ final class iua {
           }
         }
         if (param5 < param6) {
-          if (!((iua) this).field_m) {
+          if (!this.field_m) {
             param2 = param2 + (param5 - 1);
             param7 = param7 + param8 * (float)param5;
             param9 = param9 + param10 * (float)param5;
             param11 = param11 + param12 * (float)param5;
             param13 = param13 + param14 * (float)param5;
-            if (!((iua) this).field_o.field_n) {
-              if (!((iua) this).field_j) {
+            if (!this.field_o.field_n) {
+              if (!this.field_j) {
                 L2: {
                   param4 = param6 - param5;
-                  if (((iua) this).field_b != 0) {
-                    if (((iua) this).field_g) {
+                  if (this.field_b != 0) {
+                    if (this.field_g) {
                       L3: while (true) {
                         L4: {
                           param2++;
@@ -11785,8 +11823,8 @@ final class iua {
                         }
                       }
                     } else {
-                      var16_int = ((iua) this).field_b;
-                      var17 = 256 - ((iua) this).field_b;
+                      var16_int = this.field_b;
+                      var17 = 256 - this.field_b;
                       L5: while (true) {
                         L6: {
                           param2++;
@@ -11843,8 +11881,8 @@ final class iua {
                   param10 = param10 * 4.0f;
                   param12 = param12 * 4.0f;
                   param14 = param14 * 4.0f;
-                  if (((iua) this).field_b != 0) {
-                    if (((iua) this).field_g) {
+                  if (this.field_b != 0) {
+                    if (this.field_g) {
                       L10: {
                         if (param4 <= 0) {
                           break L10;
@@ -11969,8 +12007,8 @@ final class iua {
                       }
                     } else {
                       L18: {
-                        var16_int = ((iua) this).field_b;
-                        var17 = 256 - ((iua) this).field_b;
+                        var16_int = this.field_b;
+                        var17 = 256 - this.field_b;
                         if (param4 <= 0) {
                           break L18;
                         } else {
@@ -12148,11 +12186,11 @@ final class iua {
                 return;
               }
             } else {
-              if (!((iua) this).field_j) {
+              if (!this.field_j) {
                 L34: {
                   param4 = param6 - param5;
-                  if (((iua) this).field_b != 0) {
-                    if (((iua) this).field_g) {
+                  if (this.field_b != 0) {
+                    if (this.field_g) {
                       L35: while (true) {
                         L36: {
                           param2++;
@@ -12184,8 +12222,8 @@ final class iua {
                         }
                       }
                     } else {
-                      var16_int = ((iua) this).field_b;
-                      var17 = 256 - ((iua) this).field_b;
+                      var16_int = this.field_b;
+                      var17 = 256 - this.field_b;
                       L37: while (true) {
                         L38: {
                           param2++;
@@ -12244,8 +12282,8 @@ final class iua {
                   param10 = param10 * 4.0f;
                   param12 = param12 * 4.0f;
                   param14 = param14 * 4.0f;
-                  if (((iua) this).field_b != 0) {
-                    if (((iua) this).field_g) {
+                  if (this.field_b != 0) {
+                    if (this.field_g) {
                       L42: {
                         if (param4 <= 0) {
                           break L42;
@@ -12375,8 +12413,8 @@ final class iua {
                       }
                     } else {
                       L50: {
-                        var16_int = ((iua) this).field_b;
-                        var17 = 256 - ((iua) this).field_b;
+                        var16_int = this.field_b;
+                        var17 = 256 - this.field_b;
                         if (param4 <= 0) {
                           break L50;
                         } else {
@@ -12569,15 +12607,15 @@ final class iua {
             param9 = param9 + param10 * (float)param5;
             param11 = param11 + param12 * (float)param5;
             param13 = param13 + param14 * (float)param5;
-            if (!((iua) this).field_j) {
+            if (!this.field_j) {
               L66: {
                 param4 = param6 - param5;
-                if (((iua) this).field_b != 0) {
-                  if (((iua) this).field_g) {
+                if (this.field_b != 0) {
+                  if (this.field_g) {
                     L67: while (true) {
                       var27 = param0;
                       var16 = var27;
-                      int incrementValue$18 = param2;
+                      incrementValue$18 = param2;
                       param2++;
                       var17 = incrementValue$18;
                       var18 = (int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255;
@@ -12597,8 +12635,8 @@ final class iua {
                       }
                     }
                   } else {
-                    var16_int = ((iua) this).field_b;
-                    var17 = 256 - ((iua) this).field_b;
+                    var16_int = this.field_b;
+                    var17 = 256 - this.field_b;
                     L68: while (true) {
                       param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
                       param9 = param9 + param10;
@@ -12606,7 +12644,7 @@ final class iua {
                       param13 = param13 + param14;
                       param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                       var18 = param0[param2];
-                      int incrementValue$19 = param2;
+                      incrementValue$19 = param2;
                       param2++;
                       param0[incrementValue$19] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                       param4--;
@@ -12619,7 +12657,7 @@ final class iua {
                   }
                 } else {
                   L69: while (true) {
-                    int incrementValue$20 = param2;
+                    incrementValue$20 = param2;
                     param2++;
                     param0[incrementValue$20] = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
                     param9 = param9 + param10;
@@ -12641,8 +12679,8 @@ final class iua {
                 param10 = param10 * 4.0f;
                 param12 = param12 * 4.0f;
                 param14 = param14 * 4.0f;
-                if (((iua) this).field_b != 0) {
-                  if (((iua) this).field_g) {
+                if (this.field_b != 0) {
+                  if (this.field_g) {
                     L71: {
                       if (param4 <= 0) {
                         break L71;
@@ -12654,7 +12692,7 @@ final class iua {
                           param13 = param13 + param14;
                           var22 = param0;
                           var16 = var22;
-                          int incrementValue$21 = param2;
+                          incrementValue$21 = param2;
                           param2++;
                           var17 = incrementValue$21;
                           var18 = param3;
@@ -12665,7 +12703,7 @@ final class iua {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var23 = param0;
                           var16 = var23;
-                          int incrementValue$22 = param2;
+                          incrementValue$22 = param2;
                           param2++;
                           var17 = incrementValue$22;
                           var18 = param3;
@@ -12676,7 +12714,7 @@ final class iua {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var24 = param0;
                           var16 = var24;
-                          int incrementValue$23 = param2;
+                          incrementValue$23 = param2;
                           param2++;
                           var17 = incrementValue$23;
                           var18 = param3;
@@ -12687,7 +12725,7 @@ final class iua {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var25 = param0;
                           var16 = var25;
-                          int incrementValue$24 = param2;
+                          incrementValue$24 = param2;
                           param2++;
                           var17 = incrementValue$24;
                           var18 = param3;
@@ -12713,7 +12751,7 @@ final class iua {
                       L73: while (true) {
                         var26 = param0;
                         var16 = var26;
-                        int incrementValue$25 = param2;
+                        incrementValue$25 = param2;
                         param2++;
                         var17 = incrementValue$25;
                         var18 = param3;
@@ -12732,8 +12770,8 @@ final class iua {
                     }
                   } else {
                     L74: {
-                      var16_int = ((iua) this).field_b;
-                      var17 = 256 - ((iua) this).field_b;
+                      var16_int = this.field_b;
+                      var17 = 256 - this.field_b;
                       if (param4 <= 0) {
                         break L74;
                       } else {
@@ -12744,19 +12782,19 @@ final class iua {
                           param13 = param13 + param14;
                           param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                           var18 = param0[param2];
-                          int incrementValue$26 = param2;
+                          incrementValue$26 = param2;
                           param2++;
                           param0[incrementValue$26] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
-                          int incrementValue$27 = param2;
+                          incrementValue$27 = param2;
                           param2++;
                           param0[incrementValue$27] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
-                          int incrementValue$28 = param2;
+                          incrementValue$28 = param2;
                           param2++;
                           param0[incrementValue$28] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
-                          int incrementValue$29 = param2;
+                          incrementValue$29 = param2;
                           param2++;
                           param0[incrementValue$29] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           param4--;
@@ -12776,7 +12814,7 @@ final class iua {
                       param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                       L76: while (true) {
                         var18 = param0[param2];
-                        int incrementValue$30 = param2;
+                        incrementValue$30 = param2;
                         param2++;
                         param0[incrementValue$30] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                         param4--;
@@ -12798,16 +12836,16 @@ final class iua {
                         param9 = param9 + param10;
                         param11 = param11 + param12;
                         param13 = param13 + param14;
-                        int incrementValue$31 = param2;
+                        incrementValue$31 = param2;
                         param2++;
                         param0[incrementValue$31] = param3;
-                        int incrementValue$32 = param2;
+                        incrementValue$32 = param2;
                         param2++;
                         param0[incrementValue$32] = param3;
-                        int incrementValue$33 = param2;
+                        incrementValue$33 = param2;
                         param2++;
                         param0[incrementValue$33] = param3;
-                        int incrementValue$34 = param2;
+                        incrementValue$34 = param2;
                         param2++;
                         param0[incrementValue$34] = param3;
                         param4--;
@@ -12823,7 +12861,7 @@ final class iua {
                   if (param4 > 0) {
                     param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
                     L79: while (true) {
-                      int incrementValue$35 = param2;
+                      incrementValue$35 = param2;
                       param2++;
                       param0[incrementValue$35] = param3;
                       param4--;
@@ -12847,23 +12885,23 @@ final class iua {
     }
 
     iua(sfa param0, tw param1) {
-        ((iua) this).field_j = true;
-        ((iua) this).field_m = false;
-        ((iua) this).field_p = new int[4096];
-        ((iua) this).field_c = -1;
-        ((iua) this).field_s = false;
-        ((iua) this).field_w = null;
-        ((iua) this).field_r = 0;
-        ((iua) this).field_g = false;
-        ((iua) this).field_q = false;
-        ((iua) this).field_b = 0;
-        ((iua) this).field_i = 0;
-        ((iua) this).field_f = 0;
-        ((iua) this).field_d = true;
-        ((iua) this).field_k = param0;
-        ((iua) this).field_o = param1;
-        ((iua) this).field_t = ((iua) this).field_k.field_K;
-        ((iua) this).field_a = ((iua) this).field_k.field_r;
-        ((iua) this).field_u = ((iua) this).field_k.field_n;
+        this.field_j = true;
+        this.field_m = false;
+        this.field_p = new int[4096];
+        this.field_c = -1;
+        this.field_s = false;
+        this.field_w = null;
+        this.field_r = 0;
+        this.field_g = false;
+        this.field_q = false;
+        this.field_b = 0;
+        this.field_i = 0;
+        this.field_f = 0;
+        this.field_d = true;
+        this.field_k = param0;
+        this.field_o = param1;
+        this.field_t = this.field_k.field_K;
+        this.field_a = this.field_k.field_r;
+        this.field_u = this.field_k.field_n;
     }
 }

@@ -13,23 +13,26 @@ final class rh extends nv implements ut {
         field_o = null;
         field_q = null;
         field_r = null;
+        if (param0 != 15) {
+            field_s = true;
+        }
     }
 
     final void a(boolean param0, kh param1) {
         try {
             super.a(param0, param1);
-            ((rh) this).field_p.a(((rh) this).h((byte) 113), (byte) 82, param1);
+            this.field_p.a(this.h((byte) 113), (byte) 82, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "rh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "rh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     rh(la param0, boolean param1) {
         super(param0, param1);
         try {
-            ((rh) this).field_p = new jma(15);
+            this.field_p = new jma(15);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -42,7 +45,7 @@ final class rh extends nv implements ut {
 
     final int a(boolean param0) {
         if (param0) {
-            field_o = null;
+            field_o = (String) null;
             return 19;
         }
         return 19;
@@ -51,15 +54,15 @@ final class rh extends nv implements ut {
     final static void b(int param0, int param1) {
         kh var2 = null;
         if (param1 > -98) {
-          field_r = null;
+          field_r = (String) null;
           var2 = ql.field_k;
-          var2.k(4, -2988);
+          var2.k(param0, -2988);
           var2.i(1, 0);
           var2.i(2, 0);
           return;
         } else {
           var2 = ql.field_k;
-          var2.k(4, -2988);
+          var2.k(param0, -2988);
           var2.i(1, 0);
           var2.i(2, 0);
           return;
@@ -68,7 +71,7 @@ final class rh extends nv implements ut {
 
     final void g(int param0) {
         super.g(param0);
-        ((rh) this).field_p.a((byte) 48, ((rh) this).h((byte) 106));
+        this.field_p.a((byte) 48, this.h((byte) 106));
     }
 
     public final int b(int param0) {
@@ -79,36 +82,38 @@ final class rh extends nv implements ut {
     final int a(int param0, int param1) {
         if (param1 >= -48) {
             field_s = true;
-            return ((rh) this).field_p.a(122, param0);
+            return this.field_p.a(122, param0);
         }
-        return ((rh) this).field_p.a(122, param0);
+        return this.field_p.a(122, param0);
     }
 
     rh(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
         try {
-            ((rh) this).field_p = new jma(15, param0, param1);
+            this.field_p = new jma(15, param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void k(int param0) {
-        if (!((rh) this).field_p.f((byte) -56)) {
-          ((rh) this).field_p.a((byte) -14, ((rh) this).d(8031));
+        jma discarded$4 = null;
+        jma discarded$5 = null;
+        if (!this.field_p.f((byte) -56)) {
+          this.field_p.a((byte) -14, this.d(8031));
           if (param0 != 5418) {
-            jma discarded$4 = ((rh) this).k((byte) 120);
+            discarded$4 = this.k((byte) 120);
             return;
           } else {
             return;
           }
         } else {
-          ((rh) this).c(false);
-          ((rh) this).field_p.a((byte) -14, ((rh) this).d(8031));
+          this.c(false);
+          this.field_p.a((byte) -14, this.d(8031));
           if (param0 == 5418) {
             return;
           } else {
-            jma discarded$5 = ((rh) this).k((byte) 120);
+            discarded$5 = this.k((byte) 120);
             return;
           }
         }
@@ -131,16 +136,12 @@ final class rh extends nv implements ut {
 
     public final jma k(byte param0) {
         if (param0 >= -67) {
-            return null;
+            return (jma) null;
         }
-        return ((rh) this).field_p;
+        return this.field_p;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "<%0> has left the lobby.";
         field_q = "Ten-megawatt lasers";
         field_n = 22;

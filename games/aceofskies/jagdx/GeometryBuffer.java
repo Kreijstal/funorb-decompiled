@@ -63,7 +63,7 @@ public class GeometryBuffer extends jaclib.peer.nd implements jaclib.memory.Buff
         int stackOut_10_1 = 0;
         int stackOut_10_2 = 0;
         L0: {
-          if (param2 >= 0) {
+          if ((param2 ^ -1) <= -1) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -77,7 +77,7 @@ public class GeometryBuffer extends jaclib.peer.nd implements jaclib.memory.Buff
           stackOut_3_0 = stackIn_3_0;
           stackIn_5_0 = stackOut_3_0;
           stackIn_4_0 = stackOut_3_0;
-          if (param1 >= 0) {
+          if ((param1 ^ -1) <= -1) {
             stackOut_5_0 = stackIn_5_0;
             stackOut_5_1 = 0;
             stackIn_6_0 = stackOut_5_0;
@@ -142,7 +142,7 @@ public class GeometryBuffer extends jaclib.peer.nd implements jaclib.memory.Buff
           }
         }
         if ((stackIn_12_0 | (stackIn_12_1 | stackIn_12_2)) == 0) {
-          if (((jagdx.GeometryBuffer) this).getSize() < param3 + param2) {
+          if (this.getSize() < param3 + param2) {
             throw new jagdx.ie();
           } else {
             this.putub(param0, param1, param2, param3);

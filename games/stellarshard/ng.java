@@ -7,13 +7,12 @@ final class ng {
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 != -60) {
+            field_a = (String[]) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ng.A(";
         field_a = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
     }

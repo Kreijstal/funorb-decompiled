@@ -9,11 +9,17 @@ final class jj {
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 <= 60) {
+            field_b = (cn) null;
+        }
         field_d = null;
         field_b = null;
     }
 
     final static void b(byte param0) {
+        if (param0 >= -87) {
+            field_b = (cn) null;
+        }
         eg.a(rl.field_h, true);
     }
 
@@ -22,7 +28,11 @@ final class jj {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         int var12 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var12 = DungeonAssault.field_K;
         try {
@@ -54,66 +64,95 @@ final class jj {
               }
             }
             L4: {
-              if (param4 + param3 > gf.field_e) {
-                param4 = gf.field_e - param3;
+              if (param1 == -971598481) {
                 break L4;
               } else {
+                field_a = (String) null;
                 break L4;
               }
             }
             L5: {
-              if (param5 <= 0) {
+              if (param4 + param3 > gf.field_e) {
+                param4 = gf.field_e - param3;
                 break L5;
+              } else {
+                break L5;
+              }
+            }
+            L6: {
+              if (param5 <= 0) {
+                break L6;
               } else {
                 if (0 < param4) {
                   var6_int = param2 - -(param3 * gf.field_i);
                   var7 = -param5 + gf.field_i;
                   param3 = -param4;
-                  L6: while (true) {
+                  L7: while (true) {
                     if (param3 >= 0) {
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       param2 = -param5;
-                      L7: while (true) {
+                      L8: while (true) {
                         if (0 <= param2) {
                           var6_int = var6_int + var7;
                           param3++;
-                          continue L6;
-                        } else {
-                          L8: {
-                            var8 = gf.field_b[var6_int];
-                            if ((65280 & var8) >> 8 <= 64) {
-                              break L8;
-                            } else {
-                              break L8;
-                            }
-                          }
-                          var6_int++;
-                          param2++;
                           continue L7;
+                        } else {
+                          var8 = gf.field_b[var6_int];
+                          if ((65280 & var8) >> 1140191528 > param0) {
+                            if ((255 & var8 >> -1141426000) <= (255 & var8 >> 1378710664)) {
+                              L9: {
+                                var9 = ((var8 & 16711680) >> -971598481) + -60;
+                                if ((var9 ^ -1) < -256) {
+                                  var9 = 255;
+                                  break L9;
+                                } else {
+                                  break L9;
+                                }
+                              }
+                              var10 = var8 & 65280;
+                              var10 = 65280 & (var10 >> -172272671) - (var10 >> -887877467);
+                              var11 = 31 & var8 >> -886172061;
+                              gf.field_b[var6_int] = mp.a(var11, mp.a(var9 << 1486353968, var10));
+                              var6_int++;
+                              param2++;
+                              continue L8;
+                            } else {
+                              var6_int++;
+                              param2++;
+                              continue L8;
+                            }
+                          } else {
+                            var6_int++;
+                            param2++;
+                            continue L8;
+                          }
                         }
                       }
                     }
                   }
                 } else {
-                  break L5;
+                  break L6;
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var6, "jj.A(" + 64 + ',' + -971598481 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw vk.a((Throwable) ((Object) var6), "jj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = null;
         field_a = "Razor Construct";
     }

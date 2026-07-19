@@ -18,10 +18,6 @@ final class df {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "df.A(";
     }
 }

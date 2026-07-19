@@ -58,7 +58,7 @@ final class tm extends qm {
 
     final int f(byte param0) {
         int var2 = 108 / ((9 - param0) / 53);
-        return ((tm) this).field_W.b(1);
+        return this.field_W.b(1);
     }
 
     final static void a(int param0) {
@@ -78,7 +78,7 @@ final class tm extends qm {
           if (param1 < 0) {
             break L0;
           } else {
-            if (param1 < ((tm) this).field_W.b(1)) {
+            if (param1 < this.field_W.b(1)) {
               L1: {
                 if (param0 <= -84) {
                   break L1;
@@ -87,7 +87,7 @@ final class tm extends qm {
                   break L1;
                 }
               }
-              return ((tm) this).field_W.c(param1, -124);
+              return this.field_W.c(param1, -124);
             } else {
               break L0;
             }
@@ -100,7 +100,7 @@ final class tm extends qm {
         if (param0 != -1) {
             tm.d((byte) 62);
         }
-        return ((tm) this).field_P;
+        return this.field_P;
     }
 
     final boolean a(byte param0, ng param1, int param2, int param3, int param4, int param5, int param6) {
@@ -121,6 +121,7 @@ final class tm extends qm {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_22_0 = 0;
         int stackOut_20_0 = 0;
@@ -138,11 +139,12 @@ final class tm extends qm {
             if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
               stackOut_22_0 = 0;
               stackIn_23_0 = stackOut_22_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               L1: {
-                var8_int = -((tm) this).field_R + -param5 + param4;
-                var9 = ((tm) this).field_E - 2 * ((tm) this).field_R;
+                var8_int = -this.field_R + -param5 + param4;
+                var9 = this.field_E - 2 * this.field_R;
                 if (var9 < var8_int) {
                   var8_int = var9;
                   break L1;
@@ -151,7 +153,7 @@ final class tm extends qm {
                 }
               }
               L2: {
-                if (var8_int < 0) {
+                if (-1 < (var8_int ^ -1)) {
                   var8_int = 0;
                   break L2;
                 } else {
@@ -159,78 +161,83 @@ final class tm extends qm {
                 }
               }
               L3: {
-                var8_int = ((tm) this).field_P * var8_int / var9;
+                var8_int = this.field_P * var8_int / var9;
                 if (1 != param2) {
                   if (param2 == 2) {
                     var10 = 2147483647;
                     var11 = -1;
                     var12 = 0;
                     L4: while (true) {
-                      if (var12 >= ((tm) this).field_W.b(1)) {
+                      if (var12 >= this.field_W.b(1)) {
                         if (var11 >= 0) {
-                          ((tm) this).field_W.a((byte) -84, var11);
+                          this.field_W.a((byte) -84, var11);
                           break L3;
                         } else {
                           break L3;
                         }
                       } else {
-                        L5: {
-                          var13 = ((tm) this).field_W.c(var12, -69) - var8_int;
-                          var13 = var13 * var13;
-                          if (var10 <= var13) {
-                            break L5;
-                          } else {
-                            break L5;
-                          }
+                        var13 = this.field_W.c(var12, -69) - var8_int;
+                        var13 = var13 * var13;
+                        if (var10 > var13) {
+                          var11 = var12;
+                          var10 = var13;
+                          var12++;
+                          continue L4;
+                        } else {
+                          var12++;
+                          continue L4;
                         }
-                        var12++;
-                        continue L4;
                       }
                     }
                   } else {
                     return true;
                   }
                 } else {
-                  ((tm) this).field_W.a(true, var8_int);
+                  this.field_W.a(true, var8_int);
                   break L3;
                 }
               }
               stackOut_20_0 = 1;
               stackIn_21_0 = stackOut_20_0;
-              return stackIn_21_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var8 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var8;
+            stackOut_24_0 = (RuntimeException) (var8);
             stackOut_24_1 = new StringBuilder().append("tm.N(").append(param0).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
-              break L6;
+              break L5;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
               stackIn_27_2 = stackOut_25_2;
-              break L6;
+              break L5;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
-        return stackIn_23_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_21_0 != 0;
+        } else {
+          return stackIn_23_0 != 0;
+        }
     }
 
     final static void d(byte param0) {
@@ -243,7 +250,7 @@ final class tm extends qm {
                 }
             }
             if (param0 >= -45) {
-                field_N = null;
+                field_N = (sb) null;
             }
             vi.field_o.field_m = vi.field_o.field_m + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -257,6 +264,9 @@ final class tm extends qm {
         field_Q = null;
         field_O = null;
         field_X = null;
+        if (param0 != -89) {
+            return;
+        }
         field_Y = null;
         field_S = null;
         field_N = null;
@@ -270,39 +280,43 @@ final class tm extends qm {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_5_0 = 0;
+        int stackIn_6_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
-            var3_int = 0;
-            L1: while (true) {
-              if (param2 <= 0) {
-                stackOut_4_0 = var3_int;
-                stackIn_5_0 = stackOut_4_0;
+            L1: {
+              var3_int = 0;
+              if (param1 == -23439) {
+                break L1;
+              } else {
+                field_O = (int[]) null;
+                break L1;
+              }
+            }
+            L2: while (true) {
+              if ((param2 ^ -1) >= -1) {
+                stackOut_5_0 = var3_int;
+                stackIn_6_0 = stackOut_5_0;
                 break L0;
               } else {
-                var3_int = param0 & 1 | var3_int << 1;
+                var3_int = param0 & 1 | var3_int << -1595841631;
                 param2--;
                 param0 = param0 >>> 1;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var3, "tm.C(" + param0 + ',' + -23439 + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) var3), "tm.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_5_0;
+        return stackIn_6_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Q = "Your friend list is full. Max of 100 for free users, and 200 for members.";
         field_V = -1;
         field_U = -1;

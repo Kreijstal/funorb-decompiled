@@ -16,7 +16,7 @@ final class ht extends wf {
         field_h = null;
         field_i = null;
         field_e = null;
-        int var1 = 39;
+        int var1 = 39 / ((-1 - param0) / 63);
         field_j = null;
     }
 
@@ -25,10 +25,6 @@ final class ht extends wf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
         field_e = "Enter the name you'd prefer. This is the name displayed to other players.";
         field_g = false;

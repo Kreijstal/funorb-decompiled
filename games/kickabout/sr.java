@@ -18,12 +18,16 @@ abstract class sr {
 
     final static void a(boolean param0, byte param1) {
         cq.a(param0, 0);
+        if (param1 >= -20) {
+            field_a = (lk[]) null;
+        }
         vu.a(true, param0);
     }
 
     abstract int a(int param0);
 
     final static kg[] a(int param0, int param1, boolean param2, byte param3, int param4, int param5) {
+        ut[] array$1 = null;
         kg[] var6 = null;
         kg[][] var7 = null;
         ut[][] var8 = null;
@@ -144,7 +148,7 @@ abstract class sr {
               }
               var13 = stackIn_26_0;
               if (vi.field_n) {
-                var22 = new nr[var13][13];
+                var22 = new nr[var13][param5 + 2];
                 var24 = var22;
                 var15 = 0;
                 L7: while (true) {
@@ -155,7 +159,7 @@ abstract class sr {
                         return var6;
                       } else {
                         jm.a(100, 9863, (-param0 + param4) * var15 / 6 + param0);
-                        var16 = oa.a(param2, 11, (byte) 95);
+                        var16 = oa.a(param2, param5, (byte) 95);
                         iw.a(-101, var16);
                         var17 = 0;
                         L9: while (true) {
@@ -186,7 +190,7 @@ abstract class sr {
                                 var18 = var18 + var8[0][var17].field_o;
                                 var19 = 0;
                                 L12: while (true) {
-                                  if (var19 >= 11) {
+                                  if (param5 <= var19) {
                                     var8[2][var17].c(var18, 0);
                                     var17++;
                                     continue L9;
@@ -220,7 +224,7 @@ abstract class sr {
                         var15++;
                         continue L7;
                       } else {
-                        if (p.a((byte) -24, 256) <= 128) {
+                        if (p.a((byte) -24, 256) <= param1) {
                           L14: {
                             var17 = 39 - -(var16_int * var10) + var15;
                             var18 = var9 + var15 * var11;
@@ -229,14 +233,14 @@ abstract class sr {
                               var18 = var18 + p.a((byte) -24, 5);
                               break L14;
                             } else {
-                              if (var15 != 0) {
+                              if (-1 != (var15 ^ -1)) {
                                 break L14;
                               } else {
                                 L15: {
                                   if (0 == var19) {
                                     break L15;
                                   } else {
-                                    if (var19 == 2) {
+                                    if ((var19 ^ -1) == -3) {
                                       break L15;
                                     } else {
                                       var22[var15][var16_int] = new nr(var17, var18, var12, var19);
@@ -262,7 +266,7 @@ abstract class sr {
                   }
                 }
               } else {
-                var23 = oa.a(param2, 11, (byte) 95);
+                var23 = oa.a(param2, param5, (byte) 95);
                 iw.a(121, var23);
                 var15 = 0;
                 L16: while (true) {
@@ -271,7 +275,7 @@ abstract class sr {
                     var15_ref_kg = eo.a(var23);
                     var16_int = 0;
                     L17: while (true) {
-                      if (var16_int >= 6) {
+                      if ((var16_int ^ -1) <= -7) {
                         return var6;
                       } else {
                         var6[var16_int] = var15_ref_kg;
@@ -284,7 +288,7 @@ abstract class sr {
                       if (!param2) {
                         break L18;
                       } else {
-                        if (var15 < 2) {
+                        if (-3 < (var15 ^ -1)) {
                           break L18;
                         } else {
                           var15++;
@@ -297,7 +301,7 @@ abstract class sr {
                     var16_int = var16_int + var8[0][var15].field_o;
                     var17 = 0;
                     L19: while (true) {
-                      if (var17 >= 11) {
+                      if (var17 >= param5) {
                         var8[2][var15].c(var16_int, 0);
                         var15++;
                         continue L16;
@@ -312,10 +316,11 @@ abstract class sr {
                 }
               }
             } else {
-              return null;
+              return (kg[]) null;
             }
           } else {
-            var8[var9] = new ut[var7[var9].length];
+            array$1 = new ut[var7[var9].length];
+            var8[var9] = array$1;
             var10 = 0;
             L20: while (true) {
               if (var10 >= var8[var9].length) {
@@ -355,24 +360,20 @@ abstract class sr {
 
     final void a(boolean param0, int param1) {
         if (param1 <= 62) {
-            field_c = null;
+            field_c = (String) null;
         }
         if (param0) {
-            ((sr) this).field_i = (((sr) this).field_i + 1) % ((sr) this).a(-125);
+            this.field_i = (this.field_i + 1) % this.a(-125);
         } else {
-            ((sr) this).field_i = 0;
+            this.field_i = 0;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Enter the name you'd prefer. This is the name displayed to other players.";
         field_j = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         field_m = "This game has been updated! Please reload this page.";
-        field_k = (sr) (Object) new od();
+        field_k = (sr) ((Object) new od());
         field_e = "<%0> has been removed.";
         field_g = new String[]{"total goals", "posession"};
     }

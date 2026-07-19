@@ -93,23 +93,23 @@ class fp extends gn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var2;
+            stackOut_12_0 = (RuntimeException) (var2);
             stackOut_12_1 = new StringBuilder().append("fp.K(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -117,12 +117,17 @@ class fp extends gn {
               break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
         return stackIn_11_0 != 0;
     }
 
     final static vn a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, boolean param8, boolean param9) {
+        boolean discarded$0 = false;
+        if (param7) {
+            Class var13 = (Class) null;
+            discarded$0 = fp.a(100, (Class) null);
+        }
         int var10 = ev.field_B[param1];
         int var11 = ev.field_B[param6];
         boolean[][][] var12 = je.field_g[param0].field_l;
@@ -156,32 +161,28 @@ class fp extends gn {
         int var20 = 0;
         int[] var21 = null;
         int[] var22 = null;
-        int[] var23 = null;
-        int[] var24 = null;
         RuntimeException decompiledCaughtException = null;
         var20 = Kickabout.field_G;
         try {
           L0: {
             dh.field_i = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
             var1_int = ba.field_n.length;
-            var24 = new int[var1_int];
-            var23 = var24;
-            var22 = var23;
+            var22 = new int[var1_int];
             var21 = var22;
             var2 = var21;
             var3 = 0;
             L1: while (true) {
               if (var3 >= var1_int) {
                 L2: {
-                  var3 = dh.field_i[9] >> 8;
-                  var4 = dh.field_i[10] >> 8;
-                  var5 = dh.field_i[11] >> 8;
-                  var6 = up.field_p << 4;
+                  var3 = dh.field_i[9] >> -156617400;
+                  var4 = dh.field_i[10] >> -1729780920;
+                  var5 = dh.field_i[11] >> 825727592;
+                  var6 = up.field_p << 1924038948;
                   var7 = 0;
-                  var8 = ei.a(var6, (byte) -23) >> 8;
-                  var9 = we.a(var6, false) >> 8;
+                  var8 = ei.a(var6, (byte) -23) >> 409404392;
+                  var9 = we.a(var6, false) >> 1763278472;
                   var12 = -33 / ((-50 - param0) / 49);
-                  if (el.field_A == -1) {
+                  if ((el.field_A ^ -1) == 0) {
                     break L2;
                   } else {
                     if (-1 != n.field_m) {
@@ -214,12 +215,12 @@ class fp extends gn {
                     var18_int = 1;
                     L4: while (true) {
                       if (var18_int >= ba.field_n.length) {
-                        var24[var17] = -2147483648;
+                        var22[var17] = -2147483648;
                         var18 = ba.field_n[var17];
                         rg.a(var17, 1);
                         var19 = 0;
                         L5: while (true) {
-                          if (var19 >= 3) {
+                          if (-4 >= (var19 ^ -1)) {
                             os.a(var18, false, hh.field_g, dh.field_i, (byte) -96, false, true);
                             ei.a(var8, var7, var13, var9, var14, (byte) -125, var18, var15);
                             var16++;
@@ -232,7 +233,7 @@ class fp extends gn {
                         }
                       } else {
                         L6: {
-                          if (var24[var17] < var24[var18_int]) {
+                          if (var22[var17] < var22[var18_int]) {
                             var17 = var18_int;
                             break L6;
                           } else {
@@ -249,16 +250,16 @@ class fp extends gn {
                 var4_ref_kk = ba.field_n[var3];
                 var4_ref_kk.a(false);
                 rg.a(var3, 1);
-                var5 = var4_ref_kk.field_y - -var4_ref_kk.field_h >> 1;
-                var6 = var4_ref_kk.field_s + var4_ref_kk.field_x >> 1;
-                var7 = var4_ref_kk.field_w + var4_ref_kk.field_t >> 1;
-                var8 = dh.field_i[9] >> 2;
-                var9 = dh.field_i[10] >> 2;
-                var10_int = dh.field_i[11] >> 2;
-                var11 = hh.field_g[3] * var8 - -(var9 * hh.field_g[4]) + var10_int * hh.field_g[5] >> 14;
-                var12 = var10_int * hh.field_g[8] + var9 * hh.field_g[7] + var8 * hh.field_g[6] >> 14;
-                var13 = var8 * hh.field_g[9] - -(hh.field_g[10] * var9) - -(hh.field_g[11] * var10_int) >> 14;
-                var2[var3] = var13 * var7 + var11 * var5 + var6 * var12 >> 16;
+                var5 = var4_ref_kk.field_y - -var4_ref_kk.field_h >> 1365337729;
+                var6 = var4_ref_kk.field_s + var4_ref_kk.field_x >> 511333825;
+                var7 = var4_ref_kk.field_w + var4_ref_kk.field_t >> -638443167;
+                var8 = dh.field_i[9] >> 2121443394;
+                var9 = dh.field_i[10] >> -1883159262;
+                var10_int = dh.field_i[11] >> 925458626;
+                var11 = hh.field_g[3] * var8 - -(var9 * hh.field_g[4]) + var10_int * hh.field_g[5] >> -1743613138;
+                var12 = var10_int * hh.field_g[8] + var9 * hh.field_g[7] + var8 * hh.field_g[6] >> 1854751982;
+                var13 = var8 * hh.field_g[9] - -(hh.field_g[10] * var9) - -(hh.field_g[11] * var10_int) >> -1159802386;
+                var2[var3] = var13 * var7 + var11 * var5 + var6 * var12 >> -811187600;
                 var3++;
                 continue L1;
               }
@@ -267,12 +268,12 @@ class fp extends gn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "fp.L(" + param0 + ')');
+          throw nb.a((Throwable) ((Object) var1), "fp.L(" + param0 + ')');
         }
     }
 
     public final String toString() {
-        String var1 = ((fp) this).field_a + ": " + ((fp) this).field_m.d(100) + ", " + ((fp) this).field_i;
+        String var1 = this.field_a + ": " + this.field_m.d(100) + ", " + this.field_i;
         return var1;
     }
 
@@ -282,16 +283,15 @@ class fp extends gn {
         field_n = null;
         field_o = null;
         field_u = null;
+        if (param0 != -23834) {
+            field_p = (hd) null;
+        }
     }
 
     fp() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = 0;
         field_n = "Exploiting a bug";
         field_e = -1;

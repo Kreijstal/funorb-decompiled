@@ -14,6 +14,9 @@ final class tb extends q {
     public static void a(byte param0) {
         field_o = null;
         field_l = null;
+        if (param0 < 55) {
+            field_o = (ce) null;
+        }
     }
 
     final static t[] a(boolean param0) {
@@ -27,53 +30,57 @@ final class tb extends q {
         int[] var9 = null;
         int[] var13 = null;
         int[] var16 = null;
-        int[] var20 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
-        byte[] var23 = null;
-        int[] var24 = null;
-        var8 = Torquing.field_u;
-        var1 = new t[ti.field_g];
-        var2 = 0;
-        L0: while (true) {
+        byte[] var20 = null;
+        int[] var21 = null;
+        byte[] var22 = null;
+        L0: {
+          var8 = Torquing.field_u;
+          var1 = new t[ti.field_g];
+          var2 = 0;
+          if (param0) {
+            break L0;
+          } else {
+            tb.a(-48, -115);
+            break L0;
+          }
+        }
+        L1: while (true) {
           if (ti.field_g <= var2) {
             go.b(0);
             return var1;
           } else {
             var3 = ij.field_o[var2] * vo.field_b[var2];
-            var21 = pn.field_b[var2];
+            var20 = pn.field_b[var2];
             if (lp.field_e[var2]) {
-              var23 = fq.field_G[var2];
-              var24 = new int[var3];
-              var20 = var24;
-              var16 = var20;
+              var22 = fq.field_G[var2];
+              var16 = new int[var3];
               var13 = var16;
               var6 = var13;
               var7 = 0;
-              L1: while (true) {
+              L2: while (true) {
                 if (var7 >= var3) {
-                  var1[var2] = (t) (Object) new ep(fm.field_E, rh.field_d, fj.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var24);
+                  var1[var2] = (t) ((Object) new ep(fm.field_E, rh.field_d, fj.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var16));
                   var2++;
-                  continue L0;
-                } else {
-                  var6[var7] = gm.a(ie.a((int) var23[var7], 255) << 24, cq.field_y[ie.a((int) var21[var7], 255)]);
-                  var7++;
                   continue L1;
+                } else {
+                  var6[var7] = gm.a(ie.a((int) var22[var7], 255) << -1579077768, cq.field_y[ie.a((int) var20[var7], 255)]);
+                  var7++;
+                  continue L2;
                 }
               }
             } else {
               var9 = new int[var3];
-              var22 = var9;
+              var21 = var9;
               var6_int = 0;
-              L2: while (true) {
+              L3: while (true) {
                 if (var6_int >= var3) {
-                  var1[var2] = new t(fm.field_E, rh.field_d, fj.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var22);
+                  var1[var2] = new t(fm.field_E, rh.field_d, fj.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var21);
                   var2++;
-                  continue L0;
+                  continue L1;
                 } else {
-                  var9[var6_int] = cq.field_y[ie.a((int) var21[var6_int], 255)];
+                  var9[var6_int] = cq.field_y[ie.a((int) var20[var6_int], 255)];
                   var6_int++;
-                  continue L2;
+                  continue L3;
                 }
               }
             }
@@ -82,24 +89,23 @@ final class tb extends q {
     }
 
     tb(int param0, int param1, int param2, int param3, int param4) {
-        ((tb) this).field_n = param4;
-        ((tb) this).field_p = param2;
-        ((tb) this).field_m = param1;
-        ((tb) this).field_j = param0;
-        ((tb) this).field_q = param3;
+        this.field_n = param4;
+        this.field_p = param2;
+        this.field_m = param1;
+        this.field_j = param0;
+        this.field_q = param3;
     }
 
     final static void a(int param0, int param1) {
-        op.field_k = 21845;
-        op.field_q = 133;
-        op.field_j = 33;
+        op.field_k = (param0 << 1928525872) / 150;
+        if (param1 > -123) {
+            return;
+        }
+        op.field_q = param0 * 400 / 150;
+        op.field_j = param0 * 100 / 150;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new ce();
     }
 }

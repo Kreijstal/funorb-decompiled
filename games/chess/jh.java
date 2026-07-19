@@ -13,15 +13,14 @@ final class jh {
     public static void a(byte param0) {
         field_e = null;
         field_b = null;
+        if (param0 != -93) {
+            return;
+        }
         field_d = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "jh.A(";
         field_f = 4;
         field_c = "Clan";

@@ -11,7 +11,7 @@ final class ef extends ca {
     int field_f;
 
     public static void c(boolean param0) {
-        field_g = null;
+        field_g = (byte[][][]) null;
         field_i = null;
         if (!param0) {
           ef.c(false);
@@ -30,10 +30,6 @@ final class ef extends ca {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = 256;
         field_h = "Email (Login):";
     }

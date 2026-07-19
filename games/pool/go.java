@@ -7,12 +7,12 @@ final class go {
 
     final void a() {
         int var1 = 0;
-        for (var1 = 0; var1 < ((go) this).field_a.length; var1++) {
-            ((go) this).field_a[var1] = 0;
+        for (var1 = 0; var1 < this.field_a.length; var1++) {
+            this.field_a[var1] = 0;
         }
     }
 
     go(int param0) {
-        ((go) this).field_a = new int[param0];
+        this.field_a = new int[param0];
     }
 }

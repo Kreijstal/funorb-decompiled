@@ -15,6 +15,9 @@ final class lf extends kn {
         field_N = null;
         field_P = null;
         field_Q = null;
+        if (param0 != 1839839976) {
+            lf.a(77, (byte) -29, 121, -13, -95, 88);
+        }
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
@@ -31,7 +34,7 @@ final class lf extends kn {
         in.field_j[ed.field_b] = param2;
         oc.field_n[ed.field_b] = param4;
         int var6 = param4 + param2 + param0;
-        int var7 = var6 == 0 ? 0 : 1000 * param0 / var6;
+        int var7 = -1 == (var6 ^ -1) ? 0 : 1000 * param0 / var6;
         gh.field_a[ed.field_b] = var7;
         if (bh.field_F > var7) {
             bh.field_F = var7;
@@ -46,6 +49,7 @@ final class lf extends kn {
     }
 
     final static void a(int param0, em param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int discarded$1 = 0;
         RuntimeException var8 = null;
         int[] var8_array = null;
         int var13 = 0;
@@ -82,13 +86,11 @@ final class lf extends kn {
         em var45 = null;
         int[] var50 = null;
         int[] var55 = null;
-        int[] var60 = null;
-        byte[] var62 = null;
+        byte[] var61 = null;
+        int[] var62 = null;
         int[] var63 = null;
         int[] var64 = null;
         int[] var65 = null;
-        int[] var66 = null;
-        int[] var67 = null;
         int stackIn_18_0 = 0;
         int[] stackIn_19_0 = null;
         int[] stackIn_20_0 = null;
@@ -146,8 +148,8 @@ final class lf extends kn {
                   break L2;
                 } else {
                   if (1 < var45.field_j) {
-                    var62 = var45.field_y;
-                    h.a(var62, 0, param4 ^ 1187586933, lc.field_n, 0);
+                    var61 = var45.field_y;
+                    h.a(var61, 0, param4 ^ 1187586933, lc.field_n, 0);
                     break L1;
                   } else {
                     break L2;
@@ -158,20 +160,18 @@ final class lf extends kn {
               break L1;
             }
             L3: {
-              var66 = new int[param1.field_t];
-              var60 = var66;
-              var55 = var60;
+              var55 = new int[param1.field_t];
               var50 = var55;
               var41 = var50;
               var8_array = var41;
-              var67 = new int[param1.field_t];
-              var64 = lk.field_c;
-              var65 = ab.field_r;
-              var63 = pa.field_o;
+              var65 = new int[param1.field_t];
+              var63 = lk.field_c;
+              var64 = ab.field_r;
+              var62 = pa.field_o;
               if (param4 == 29521) {
                 break L3;
               } else {
-                int discarded$1 = lf.i(-127);
+                discarded$1 = lf.i(-127);
                 break L3;
               }
             }
@@ -251,7 +251,7 @@ final class lf extends kn {
                         }
                       }
                       stackOut_39_0 = null;
-                      stackIn_40_0 = (fn) (Object) stackOut_39_0;
+                      stackIn_40_0 = (fn) ((Object) stackOut_39_0);
                       break L9;
                     }
                     L11: {
@@ -270,8 +270,8 @@ final class lf extends kn {
                             break L12;
                           } else {
                             L13: {
-                              var28 = var66[var18];
-                              var29 = var67[var18];
+                              var28 = var55[var18];
+                              var29 = var65[var18];
                               if (var21_ref != null) {
                                 stackOut_44_0 = var21_ref.field_g;
                                 stackIn_45_0 = stackOut_44_0;
@@ -285,20 +285,20 @@ final class lf extends kn {
                             var30 = stackIn_45_0;
                             var31 = var30 & 16711935;
                             var32 = var30 & 65280;
-                            var33 = (var32 * var28 & 16711796) >>> 8 | (var31 * var28 & -16711780) >>> 8;
+                            var33 = (var32 * var28 & 16711796) >>> 510025928 | (var31 * var28 & -16711780) >>> -1191603064;
                             var33 = var33 + 65793 * var29;
-                            bb.a(var22, var26, 8355711 & var33 >> 1, var25, var24, var23, 1, var27);
+                            bb.a(var22, var26, 8355711 & var33 >> -850999391, var25, var24, var23, 1, var27);
                             break L11;
                           }
                         }
                       }
                       L14: {
-                        var28 = var66[var18];
-                        var29 = var66[var19];
-                        var30 = var66[var20];
-                        var31 = var67[var18];
-                        var32 = var67[var19];
-                        var33 = var67[var20];
+                        var28 = var55[var18];
+                        var29 = var55[var19];
+                        var30 = var55[var20];
+                        var31 = var65[var18];
+                        var32 = var65[var19];
+                        var33 = var65[var20];
                         if (var21_ref != null) {
                           stackOut_48_0 = var21_ref.field_g;
                           stackIn_49_0 = stackOut_48_0;
@@ -312,13 +312,13 @@ final class lf extends kn {
                       var34 = stackIn_49_0;
                       var35 = 16711935 & var34;
                       var36 = var34 & 65280;
-                      var37 = var36 * var28 >>> 8 & -1258225920 | var35 * var28 >>> 8 & -687931137;
-                      var38 = 1107361536 & var36 * var29 >>> 8 | (-16711811 & var29 * var35) >>> 8;
+                      var37 = var36 * var28 >>> -1047011448 & -1258225920 | var35 * var28 >>> -1625638328 & -687931137;
+                      var38 = 1107361536 & var36 * var29 >>> 722503176 | (-16711811 & var29 * var35) >>> -1900373624;
                       var37 = var37 + var31 * 65793;
                       var38 = var38 + var32 * 65793;
-                      var39 = (16711928 & var36 * var30) >>> 8 | -1929445121 & var30 * var35 >>> 8;
+                      var39 = (16711928 & var36 * var30) >>> 1839839976 | -1929445121 & var30 * var35 >>> 1355156232;
                       var39 = var39 + var33 * 65793;
-                      qn.a(var26, var37 >> 8 & 255, 255 & var37, param4 ^ 29521, var27, var37 >> 16, var23, var25, var38 >> 16, 255 & var38 >> 8, var24, 255 & var38, 255 & var39, var22, var39 >> 16, (var39 & 65501) >> 8);
+                      qn.a(var26, var37 >> 1686917640 & 255, 255 & var37, param4 ^ 29521, var27, var37 >> -213468112, var23, var25, var38 >> -1653892304, 255 & var38 >> -1379460376, var24, 255 & var38, 255 & var39, var22, var39 >> 1439970160, (var39 & 65501) >> 271842184);
                       break L11;
                     }
                     var44++;
@@ -327,8 +327,8 @@ final class lf extends kn {
                 }
               } else {
                 L15: {
-                  var14 = var63[var13] * param3 + (var64[var13] * param7 - -(var65[var13] * param0)) >> 8;
-                  if (var14 < 0) {
+                  var14 = var62[var13] * param3 + (var63[var13] * param7 - -(var64[var13] * param0)) >> 497903912;
+                  if (-1 < (var14 ^ -1)) {
                     var14 = -var14;
                     break L15;
                   } else {
@@ -336,7 +336,7 @@ final class lf extends kn {
                   }
                 }
                 L16: {
-                  if (var14 >= 0) {
+                  if ((var14 ^ -1) <= -1) {
                     if (128 <= var14) {
                       stackOut_17_0 = 256;
                       stackIn_18_0 = stackOut_17_0;
@@ -354,18 +354,18 @@ final class lf extends kn {
                 }
                 L17: {
                   var14 = stackIn_18_0;
-                  var15 = param5 * var64[var13] - -(param6 * var65[var13]) - -(param2 * var63[var13]) >> 8;
+                  var15 = param5 * var63[var13] - -(param6 * var64[var13]) - -(param2 * var62[var13]) >> -795510104;
                   stackOut_18_0 = gf.field_b;
                   stackIn_20_0 = stackOut_18_0;
                   stackIn_19_0 = stackOut_18_0;
                   if (0 <= var15) {
-                    stackOut_20_0 = (int[]) (Object) stackIn_20_0;
+                    stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
                     stackOut_20_1 = var15;
                     stackIn_21_0 = stackOut_20_0;
                     stackIn_21_1 = stackOut_20_1;
                     break L17;
                   } else {
-                    stackOut_19_0 = (int[]) (Object) stackIn_19_0;
+                    stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
                     stackOut_19_1 = -var15;
                     stackIn_21_0 = stackOut_19_0;
                     stackIn_21_1 = stackOut_19_1;
@@ -373,9 +373,9 @@ final class lf extends kn {
                   }
                 }
                 var15 = stackIn_21_0[stackIn_21_1];
-                var14 = (-var15 + 256) * var14 >>> 8;
-                var66[var13] = var14;
-                var67[var13] = var15;
+                var14 = (-var15 + 256) * var14 >>> -1689306264;
+                var55[var13] = var14;
+                var65[var13] = var15;
                 var13++;
                 continue L4;
               }
@@ -385,23 +385,23 @@ final class lf extends kn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var8 = decompiledCaughtException;
-            stackOut_52_0 = (RuntimeException) var8;
+            stackOut_52_0 = (RuntimeException) (var8);
             stackOut_52_1 = new StringBuilder().append("lf.A(").append(param0).append(',');
             stackIn_54_0 = stackOut_52_0;
             stackIn_54_1 = stackOut_52_1;
             stackIn_53_0 = stackOut_52_0;
             stackIn_53_1 = stackOut_52_1;
             if (param1 == null) {
-              stackOut_54_0 = (RuntimeException) (Object) stackIn_54_0;
-              stackOut_54_1 = (StringBuilder) (Object) stackIn_54_1;
+              stackOut_54_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackOut_54_1 = (StringBuilder) ((Object) stackIn_54_1);
               stackOut_54_2 = "null";
               stackIn_55_0 = stackOut_54_0;
               stackIn_55_1 = stackOut_54_1;
               stackIn_55_2 = stackOut_54_2;
               break L18;
             } else {
-              stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
-              stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
+              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
               stackOut_53_2 = "{...}";
               stackIn_55_0 = stackOut_53_0;
               stackIn_55_1 = stackOut_53_1;
@@ -409,72 +409,92 @@ final class lf extends kn {
               break L18;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_55_0), stackIn_55_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     public lf() {
         super(0, 0, 0, 0, (jm) null, (rg) null);
-        ((lf) this).field_R = 256;
+        this.field_R = 256;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (!(param1 == 0)) {
+        em var6 = null;
+        km var7 = null;
+        if (param1 != 0) {
+          return;
+        } else {
+          if (null != this.field_M) {
+            if (this.field_R != 0) {
+              if (-257 == (this.field_R ^ -1)) {
+                this.field_M.a(param0 + this.field_r, param1, -108, param3 - -this.field_u);
+                return;
+              } else {
+                L0: {
+                  var7 = new km(this.field_M.field_y, this.field_M.field_C);
+                  tl.a((byte) -67, var7);
+                  this.field_M.a(0, param1, -110, 0);
+                  fd.a(28773);
+                  var7.b(this.field_u + param3, param0 - -this.field_r, this.field_R);
+                  if (param2 <= -80) {
+                    break L0;
+                  } else {
+                    var6 = (em) null;
+                    lf.a(-25, (em) null, -102, -7, -85, 43, 21, 65);
+                    break L0;
+                  }
+                }
+                return;
+              }
+            } else {
+              return;
+            }
+          } else {
             return;
-        }
-        if (null == ((lf) this).field_M) {
-            return;
-        }
-        if (((lf) this).field_R == 0) {
-            return;
-        }
-        if (((lf) this).field_R == 256) {
-            ((lf) this).field_M.a(param0 + ((lf) this).field_r, param1, -108, param3 - -((lf) this).field_u);
-            return;
-        }
-        km var7 = new km(((lf) this).field_M.field_y, ((lf) this).field_M.field_C);
-        tl.a((byte) -67, var7);
-        ((lf) this).field_M.a(0, param1, -110, 0);
-        fd.a(28773);
-        var7.b(((lf) this).field_u + param3, param0 - -((lf) this).field_r, ((lf) this).field_R);
-        if (param2 > -80) {
-            Object var6 = null;
-            lf.a(-25, (em) null, -102, -7, -85, 43, 21, 65);
+          }
         }
     }
 
     final static void a(int param0, boolean param1) {
         L0: {
-          if (0 >= an.field_e) {
+          if (param0 == -1) {
             break L0;
+          } else {
+            field_T = -61;
+            break L0;
+          }
+        }
+        L1: {
+          if (0 >= an.field_e) {
+            break L1;
           } else {
             if (fm.field_V) {
               wb.g(0, 0, wb.field_h, uh.field_m.field_wb);
               la.field_c.a(false, param1);
-              break L0;
+              break L1;
             } else {
-              break L0;
+              break L1;
             }
           }
         }
-        L1: {
-          L2: {
+        L2: {
+          L3: {
             if (0 < aj.field_c) {
-              break L2;
+              break L3;
             } else {
-              if (ed.field_c <= 0) {
-                break L1;
-              } else {
+              if ((ed.field_c ^ -1) >= -1) {
                 break L2;
+              } else {
+                break L3;
               }
             }
           }
           if (!jh.field_a) {
-            break L1;
+            break L2;
           } else {
             wb.g(0, 0, wb.field_h, uh.field_m.field_wb);
             ah.field_i.a(false, param1);
-            break L1;
+            break L2;
           }
         }
     }
@@ -482,22 +502,22 @@ final class lf extends kn {
     lf(mf param0) {
         super(param0.field_u, param0.field_r, param0.field_y, param0.field_C, (jm) null, (rg) null);
         try {
-            param0.a(0, 34, ((lf) this).field_C, ((lf) this).field_y, 0);
-            ((lf) this).field_M = param0;
-            ((lf) this).field_R = 256;
+            param0.a(0, 34, this.field_C, this.field_y, 0);
+            this.field_M = param0;
+            this.field_R = 256;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "lf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "lf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int i(int param0) {
-        Object var2 = null;
-        if (il.field_a >= 2) {
+        em var2 = null;
+        if (-3 >= (il.field_a ^ -1)) {
           L0: {
             if (param0 >= 90) {
               break L0;
             } else {
-              var2 = null;
+              var2 = (em) null;
               lf.a(40, (em) null, 32, -29, 40, -127, 89, -102);
               break L0;
             }
@@ -580,10 +600,6 @@ final class lf extends kn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_S = 80;
         field_T = -1;
         field_Q = "This game option is only available to members.";

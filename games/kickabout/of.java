@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class of {
     static int field_e;
     static hd[] field_d;
@@ -16,9 +14,13 @@ final class of {
         field_b = null;
         field_c = null;
         field_d = null;
+        if (param0) {
+            field_f = (vn) null;
+        }
     }
 
     final static String a(int param0, byte param1, String param2) {
+        gn discarded$1 = null;
         RuntimeException var3 = null;
         int var5 = 0;
         int var6 = 0;
@@ -37,6 +39,7 @@ final class of {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_3_0 = null;
         String stackOut_10_0 = null;
@@ -53,22 +56,24 @@ final class of {
         var6 = Kickabout.field_G;
         try {
           L0: {
-            var10 = (CharSequence) (Object) param2;
+            var10 = (CharSequence) ((Object) param2);
             if (!ef.a(var10, -9907)) {
               stackOut_3_0 = kq.field_Ib;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              if (ts.field_d == 2) {
+              if ((ts.field_d ^ -1) == -3) {
                 var8 = tr.a(param2, (byte) 40);
                 if (var8 == null) {
-                  stackOut_10_0 = vo.a((byte) -18, af.field_c, new String[1]);
+                  stackOut_10_0 = vo.a((byte) -18, af.field_c, new String[]{param2});
                   stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
-                  gn discarded$1 = ne.field_I.b(-7584, (gn) (Object) var8);
+                  discarded$1 = ne.field_I.b(-7584, var8);
                   L1: while (true) {
-                    var7 = (gg) (Object) ne.field_I.c(33);
+                    var7 = (gg) ((Object) ne.field_I.c(33));
                     if (var7 == null) {
                       L2: {
                         var8.c((byte) -109);
@@ -90,6 +95,7 @@ final class of {
                       var9.c(62, var9.field_n - var5);
                       stackOut_17_0 = null;
                       stackIn_18_0 = stackOut_17_0;
+                      decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
                       var7.field_Cb = var7.field_Cb - 1;
@@ -100,7 +106,8 @@ final class of {
               } else {
                 stackOut_6_0 = kh.field_t;
                 stackIn_7_0 = stackOut_6_0;
-                return stackIn_7_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -108,23 +115,23 @@ final class of {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var3;
+            stackOut_19_0 = (RuntimeException) (var3);
             stackOut_19_1 = new StringBuilder().append("of.B(").append(param0).append(',').append(param1).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param2 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L3;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -132,16 +139,24 @@ final class of {
               break L3;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
         }
-        return (String) (Object) stackIn_18_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_11_0;
+            } else {
+              return (String) ((Object) stackIn_18_0);
+            }
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "lost";
         field_b = "<%0> is already on your ignore list.";
     }

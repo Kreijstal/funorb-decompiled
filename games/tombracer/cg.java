@@ -18,10 +18,10 @@ abstract class cg extends vg {
     abstract cg c();
 
     final void a(int[] param0, int param1, int param2) {
-        if (((cg) this).field_f) {
-            ((cg) this).b(param0, param1, param2);
+        if (this.field_f) {
+            this.b(param0, param1, param2);
         } else {
-            ((cg) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class cg extends vg {
     abstract void a(int param0);
 
     protected cg() {
-        ((cg) this).field_f = true;
+        this.field_f = true;
     }
 }

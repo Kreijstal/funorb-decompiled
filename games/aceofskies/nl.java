@@ -23,10 +23,6 @@ abstract class nl extends wt {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "nl.K(";
         field_w = 0;
         field_o = -1;

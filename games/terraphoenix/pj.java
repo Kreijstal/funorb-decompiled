@@ -28,7 +28,7 @@ final class pj {
 
     final void a(int param0) {
         int var2 = 91 % ((5 - param0) / 40);
-        ((pj) this).field_j.a(9887, ((pj) this).field_e, ((pj) this).field_m);
+        this.field_j.a(9887, this.field_e, this.field_m);
     }
 
     final boolean c(int param0) {
@@ -38,10 +38,10 @@ final class pj {
         if (param0 == 7468) {
           L0: {
             L1: {
-              if (((pj) this).field_c > qb.field_g) {
+              if (this.field_c > qb.field_g) {
                 break L1;
               } else {
-                if (me.field_o <= 0) {
+                if (-1 <= (me.field_o ^ -1)) {
                   break L1;
                 } else {
                   stackOut_4_0 = 1;
@@ -66,32 +66,32 @@ final class pj {
         int var4 = 0;
         int var5 = 0;
         var5 = Terraphoenix.field_V;
-        var2 = ((pj) this).field_w;
-        var3 = ((pj) this).field_s;
-        if (!((pj) this).c(7468)) {
-          ((pj) this).field_h = false;
+        var2 = this.field_w;
+        var3 = this.field_s;
+        if (!this.c(7468)) {
+          this.field_h = false;
           return;
         } else {
           L0: {
-            if (((pj) this).field_b >= var3) {
-              if (((pj) this).field_n > var3) {
-                var3 = ((pj) this).field_n;
+            if (this.field_b >= var3) {
+              if (this.field_n > var3) {
+                var3 = this.field_n;
                 break L0;
               } else {
                 break L0;
               }
             } else {
-              var3 = ((pj) this).field_b;
+              var3 = this.field_b;
               break L0;
             }
           }
           L1: {
-            if (((pj) this).field_k < var2) {
-              var2 = ((pj) this).field_k;
+            if (this.field_k < var2) {
+              var2 = this.field_k;
               break L1;
             } else {
-              if (var2 < ((pj) this).field_o) {
-                var2 = ((pj) this).field_o;
+              if (var2 < this.field_o) {
+                var2 = this.field_o;
                 break L1;
               } else {
                 break L1;
@@ -99,8 +99,8 @@ final class pj {
             }
           }
           L2: {
-            if (((pj) this).field_r > 0.0f) {
-              var4 = (int)(0.5f + (float)var3 * ((pj) this).field_r);
+            if (this.field_r > 0.0f) {
+              var4 = (int)(0.5f + (float)var3 * this.field_r);
               if (var2 >= var4) {
                 if (var2 <= var4) {
                   break L2;
@@ -109,7 +109,7 @@ final class pj {
                   break L2;
                 }
               } else {
-                var3 = (int)((float)var2 / ((pj) this).field_r);
+                var3 = (int)((float)var2 / this.field_r);
                 break L2;
               }
             } else {
@@ -136,14 +136,14 @@ final class pj {
                 }
               }
             }
-            ((pj) this).field_j.a(9887, var3, var2);
+            this.field_j.a(9887, var3, var2);
             break L4;
           }
           L6: {
-            if (((pj) this).field_w <= 0) {
+            if ((this.field_w ^ -1) >= -1) {
               break L6;
             } else {
-              ng.field_v = (((pj) this).field_w - ja.field_j) / 2;
+              ng.field_v = (this.field_w - ja.field_j) / 2;
               break L6;
             }
           }
@@ -169,6 +169,7 @@ final class pj {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         oa stackOut_6_0 = null;
         oa stackOut_18_0 = null;
@@ -184,85 +185,104 @@ final class pj {
         String stackOut_23_2 = null;
         var6 = Terraphoenix.field_V;
         try {
-          var2_int = param1.length();
-          if (var2_int != 0) {
-            if (var2_int > 63) {
-              stackOut_6_0 = lg.field_j;
-              stackIn_7_0 = stackOut_6_0;
-              return stackIn_7_0;
-            } else {
-              var4 = 0;
-              var3 = 0;
-              L0: while (true) {
-                if (var3 < var2_int) {
-                  L1: {
-                    var5 = param1.charAt(var3);
-                    if (var5 != 45) {
-                      if (ge.field_f.indexOf(var5) != -1) {
-                        break L1;
-                      } else {
-                        stackOut_18_0 = ge.field_a;
-                        stackIn_19_0 = stackOut_18_0;
-                        return stackIn_19_0;
-                      }
-                    } else {
-                      L2: {
-                        if (var3 == 0) {
+          L0: {
+            var2_int = param1.length();
+            if (-1 != (var2_int ^ -1)) {
+              if (var2_int > 63) {
+                stackOut_6_0 = lg.field_j;
+                stackIn_7_0 = stackOut_6_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
+              } else {
+                var4 = 15 % ((44 - param0) / 54);
+                var3 = 0;
+                L1: while (true) {
+                  if (var3 < var2_int) {
+                    L2: {
+                      var5 = param1.charAt(var3);
+                      if (var5 != 45) {
+                        if (0 != (ge.field_f.indexOf(var5) ^ -1)) {
                           break L2;
                         } else {
-                          if (-1 + var2_int != var3) {
-                            break L1;
+                          stackOut_18_0 = ge.field_a;
+                          stackIn_19_0 = stackOut_18_0;
+                          decompiledRegionSelector0 = 3;
+                          break L0;
+                        }
+                      } else {
+                        L3: {
+                          if (var3 == 0) {
+                            break L3;
                           } else {
-                            break L2;
+                            if (-1 + var2_int != var3) {
+                              break L2;
+                            } else {
+                              break L3;
+                            }
                           }
                         }
+                        stackOut_15_0 = ge.field_a;
+                        stackIn_16_0 = stackOut_15_0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       }
-                      stackOut_15_0 = ge.field_a;
-                      stackIn_16_0 = stackOut_15_0;
-                      return stackIn_16_0;
                     }
+                    var3++;
+                    continue L1;
+                  } else {
+                    return null;
                   }
-                  var3++;
-                  continue L0;
-                } else {
-                  return null;
                 }
               }
+            } else {
+              stackOut_2_0 = b.field_f;
+              stackIn_3_0 = stackOut_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-          } else {
-            stackOut_2_0 = b.field_f;
-            stackIn_3_0 = stackOut_2_0;
-            return stackIn_3_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("pj.D(").append(-56).append(',');
+            stackOut_22_0 = (RuntimeException) (var2);
+            stackOut_22_1 = new StringBuilder().append("pj.D(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
-              break L3;
+              break L4;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
               stackIn_25_2 = stackOut_23_2;
-              break L3;
+              break L4;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_16_0;
+            } else {
+              return stackIn_19_0;
+            }
+          }
         }
     }
 
@@ -277,36 +297,37 @@ final class pj {
     }
 
     final ck b(int param0) {
-        ((pj) this).field_m = ja.field_j;
-        ((pj) this).field_e = wc.field_p;
-        ((pj) this).field_j.a(9887, ((pj) this).field_p, ((pj) this).field_u);
+        this.field_m = ja.field_j;
+        this.field_e = wc.field_p;
+        this.field_j.a(9887, this.field_p, this.field_u);
         ai.field_h = false;
-        ck var2 = jb.a(((pj) this).field_p, ((pj) this).field_u, param0, 0, (byte) 109, nj.field_l);
+        ck var2 = jb.a(this.field_p, this.field_u, param0, 0, (byte) 109, nj.field_l);
         if (!(var2 != null)) {
-            ((pj) this).a(param0 + 97);
+            this.a(param0 + 97);
         }
         return var2;
     }
 
     final void a(byte param0) {
+        int fieldTemp$1 = 0;
         if (a.field_b != null) {
           return;
         } else {
           L0: {
-            if (me.field_o > 0) {
+            if ((me.field_o ^ -1) < -1) {
               break L0;
             } else {
-              ((pj) this).field_h = false;
+              this.field_h = false;
               break L0;
             }
           }
-          if (!((pj) this).field_h) {
+          if (!this.field_h) {
             L1: {
-              if (((pj) this).field_w > ja.field_j) {
-                ng.field_v = (((pj) this).field_w - ja.field_j) / 2;
+              if (this.field_w > ja.field_j) {
+                ng.field_v = (this.field_w - ja.field_j) / 2;
                 break L1;
               } else {
-                if (((pj) this).field_w > 0) {
+                if ((this.field_w ^ -1) < -1) {
                   ng.field_v = 0;
                   break L1;
                 } else {
@@ -316,38 +337,38 @@ final class pj {
             }
             L2: {
               L3: {
-                if (ja.field_j != ((pj) this).field_g) {
+                if (ja.field_j != this.field_g) {
                   break L3;
                 } else {
-                  if (((pj) this).field_d != wc.field_p) {
+                  if (this.field_d != wc.field_p) {
                     break L3;
                   } else {
                     break L2;
                   }
                 }
               }
-              ((pj) this).field_j.a(param0 + 9795, ((pj) this).field_d, ((pj) this).field_g);
+              this.field_j.a(param0 + 9795, this.field_d, this.field_g);
               break L2;
             }
             return;
           } else {
-            int fieldTemp$1 = ((pj) this).field_i - 1;
-            ((pj) this).field_i = ((pj) this).field_i - 1;
+            fieldTemp$1 = this.field_i - 1;
+            this.field_i = this.field_i - 1;
             if (fieldTemp$1 <= 0) {
               L4: {
                 if (param0 == 92) {
                   break L4;
                 } else {
-                  ((pj) this).a((byte) 40);
+                  this.a((byte) 40);
                   break L4;
                 }
               }
-              ((pj) this).field_i = ((pj) this).field_f;
-              if (qb.field_g >= ((pj) this).field_c) {
+              this.field_i = this.field_f;
+              if (qb.field_g >= this.field_c) {
                 this.b((byte) 78);
                 return;
               } else {
-                ((pj) this).field_h = false;
+                this.field_h = false;
                 return;
               }
             } else {
@@ -363,18 +384,18 @@ final class pj {
         }
         int var5 = 256 + -param2;
         int var6 = l.field_i[param4];
-        int var7 = ((16711680 & param3) >> 16) * param2 + var5 * (var6 >> 16 & 255) >> 8;
-        int var8 = (255 & param3 >> 8) * param2 + var5 * ((65280 & var6) >> 8) >> 8;
-        int var9 = param2 * (param3 & 255) + var5 * (var6 & 255) >> 8;
+        int var7 = ((16711680 & param3) >> -1986506000) * param2 + var5 * (var6 >> 849544784 & 255) >> 201178408;
+        int var8 = (255 & param3 >> 863857416) * param2 + var5 * ((65280 & var6) >> 41944136) >> -1204005816;
+        int var9 = param2 * (param3 & 255) + var5 * (var6 & 255) >> 695670792;
         l.field_i[param4] = var9 + 65536 * var7 - -(var8 * 256);
     }
 
     final void a(byte param0, int param1, int param2) {
-        ((pj) this).field_s = param2;
+        this.field_s = param2;
         if (param0 <= 48) {
             this.b((byte) -79);
         }
-        ((pj) this).field_w = param1;
+        this.field_w = param1;
     }
 
     private pj() throws Throwable {
@@ -382,10 +403,6 @@ final class pj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_v = "RECRUIT";
         field_a = new int[8192];
     }

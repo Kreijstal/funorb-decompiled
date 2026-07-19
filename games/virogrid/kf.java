@@ -14,32 +14,35 @@ final class kf {
     private int field_a;
 
     final wb b(int param0) {
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
         wb var2 = null;
         int var3 = 0;
         wb var4 = null;
         var3 = Virogrid.field_F ? 1 : 0;
         if (param0 == -1) {
           L0: {
-            if (0 >= ((kf) this).field_b) {
+            if (0 >= this.field_b) {
               break L0;
             } else {
-              if (((kf) this).field_h == ((kf) this).field_f[((kf) this).field_b + -1]) {
+              if (this.field_h == this.field_f[this.field_b + -1]) {
                 break L0;
               } else {
-                var2 = ((kf) this).field_h;
-                ((kf) this).field_h = var2.field_h;
+                var2 = this.field_h;
+                this.field_h = var2.field_h;
                 return var2;
               }
             }
           }
           L1: while (true) {
-            if (((kf) this).field_b < ((kf) this).field_a) {
-              int fieldTemp$3 = ((kf) this).field_b;
-              ((kf) this).field_b = ((kf) this).field_b + 1;
-              var4 = ((kf) this).field_f[fieldTemp$3].field_h;
+            if (this.field_b < this.field_a) {
+              fieldTemp$3 = this.field_b;
+              this.field_b = this.field_b + 1;
+              var4 = this.field_f[fieldTemp$3].field_h;
               var2 = var4;
-              if (var4 != ((kf) this).field_f[((kf) this).field_b + -1]) {
-                ((kf) this).field_h = var2.field_h;
+              if (var4 != this.field_f[this.field_b + -1]) {
+                this.field_h = var2.field_h;
                 return var2;
               } else {
                 continue L1;
@@ -50,16 +53,16 @@ final class kf {
           }
         } else {
           kf.a(-101, -32);
-          if (0 < ((kf) this).field_b) {
-            if (((kf) this).field_h == ((kf) this).field_f[((kf) this).field_b + -1]) {
+          if (0 < this.field_b) {
+            if (this.field_h == this.field_f[this.field_b + -1]) {
               L2: while (true) {
-                if (((kf) this).field_b < ((kf) this).field_a) {
-                  int fieldTemp$4 = ((kf) this).field_b;
-                  ((kf) this).field_b = ((kf) this).field_b + 1;
-                  var4 = ((kf) this).field_f[fieldTemp$4].field_h;
+                if (this.field_b < this.field_a) {
+                  fieldTemp$4 = this.field_b;
+                  this.field_b = this.field_b + 1;
+                  var4 = this.field_f[fieldTemp$4].field_h;
                   var2 = var4;
-                  if (var4 != ((kf) this).field_f[((kf) this).field_b + -1]) {
-                    ((kf) this).field_h = var2.field_h;
+                  if (var4 != this.field_f[this.field_b + -1]) {
+                    this.field_h = var2.field_h;
                     return var2;
                   } else {
                     continue L2;
@@ -69,19 +72,19 @@ final class kf {
                 }
               }
             } else {
-              var2 = ((kf) this).field_h;
-              ((kf) this).field_h = var2.field_h;
+              var2 = this.field_h;
+              this.field_h = var2.field_h;
               return var2;
             }
           } else {
             L3: while (true) {
-              if (((kf) this).field_b < ((kf) this).field_a) {
-                int fieldTemp$5 = ((kf) this).field_b;
-                ((kf) this).field_b = ((kf) this).field_b + 1;
-                var4 = ((kf) this).field_f[fieldTemp$5].field_h;
+              if (this.field_b < this.field_a) {
+                fieldTemp$5 = this.field_b;
+                this.field_b = this.field_b + 1;
+                var4 = this.field_f[fieldTemp$5].field_h;
                 var2 = var4;
-                if (var4 != ((kf) this).field_f[((kf) this).field_b + -1]) {
-                  ((kf) this).field_h = var2.field_h;
+                if (var4 != this.field_f[this.field_b + -1]) {
+                  this.field_h = var2.field_h;
                   return var2;
                 } else {
                   continue L3;
@@ -102,11 +105,11 @@ final class kf {
     }
 
     final wb a(boolean param0) {
-        ((kf) this).field_b = 0;
+        this.field_b = 0;
         if (!param0) {
-            return null;
+            return (wb) null;
         }
-        return ((kf) this).b(-1);
+        return this.b(-1);
     }
 
     public static void a(int param0) {
@@ -126,8 +129,11 @@ final class kf {
 
     final static void a(int param0, int param1, long param2, int param3, String param4, boolean param5) {
         int var7_int = 0;
-        gk.field_g.g(14, 8);
+        gk.field_g.g(param0, 8);
         gk.field_g.field_l = gk.field_g.field_l + 1;
+        if (param3 < 4) {
+            return;
+        }
         try {
             var7_int = gk.field_g.field_l;
             gk.field_g.a((byte) -66, param2);
@@ -136,11 +142,12 @@ final class kf {
             gk.field_g.a(!param5 ? 0 : 1, 125);
             gk.field_g.b(-var7_int + gk.field_g.field_l, -1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "kf.E(" + 14 + ',' + param1 + ',' + param2 + ',' + 125 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "kf.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, wg param4, wg param5) {
+        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -184,7 +191,7 @@ final class kf {
               if (param0 == 0) {
                 break L1;
               } else {
-                boolean discarded$2 = kf.a((byte) -53);
+                discarded$2 = kf.a((byte) -53);
                 break L1;
               }
             }
@@ -194,23 +201,23 @@ final class kf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("kf.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param4 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -219,23 +226,23 @@ final class kf {
             }
           }
           L3: {
-            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param5 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -243,18 +250,33 @@ final class kf {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
     final static boolean a(int param0, char param1) {
-        if (48 > param1) {
+        if (param0 == 0) {
+          if (48 <= param1) {
+            if (param1 > 57) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (param1 > 57) {
+          }
+        } else {
+          field_e = -105;
+          if (48 <= param1) {
+            if (param1 > 57) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     final wb c(int param0) {
@@ -262,23 +284,23 @@ final class kf {
         wb var3 = null;
         int var4 = 0;
         var4 = Virogrid.field_F ? 1 : 0;
-        if (((kf) this).field_i != null) {
-          var2 = ((kf) this).field_f[(int)(((kf) this).field_d & (long)(-1 + ((kf) this).field_a))];
+        if (this.field_i != null) {
+          var2 = this.field_f[(int)(this.field_d & (long)(-1 + this.field_a))];
           L0: while (true) {
-            if (var2 == ((kf) this).field_i) {
+            if (var2 == this.field_i) {
               if (param0 != 48) {
-                return null;
+                return (wb) null;
               } else {
-                ((kf) this).field_i = null;
+                this.field_i = null;
                 return null;
               }
             } else {
-              if (~((kf) this).field_d == ~((kf) this).field_i.field_j) {
-                var3 = ((kf) this).field_i;
-                ((kf) this).field_i = ((kf) this).field_i.field_h;
+              if ((this.field_d ^ -1L) == (this.field_i.field_j ^ -1L)) {
+                var3 = this.field_i;
+                this.field_i = this.field_i.field_h;
                 return var3;
               } else {
-                ((kf) this).field_i = ((kf) this).field_i.field_h;
+                this.field_i = this.field_i.field_h;
                 continue L0;
               }
             }
@@ -294,22 +316,22 @@ final class kf {
         wb var5 = null;
         int var6 = 0;
         var6 = Virogrid.field_F ? 1 : 0;
-        ((kf) this).field_d = param0;
-        var4 = ((kf) this).field_f[(int)((long)(((kf) this).field_a + -1) & param0)];
-        ((kf) this).field_i = var4.field_h;
+        this.field_d = param0;
+        var4 = this.field_f[(int)((long)(this.field_a + -1) & param0)];
+        this.field_i = var4.field_h;
         L0: while (true) {
-          if (((kf) this).field_i != var4) {
-            if (((kf) this).field_i.field_j != param0) {
-              ((kf) this).field_i = ((kf) this).field_i.field_h;
+          if (this.field_i != var4) {
+            if (this.field_i.field_j != param0) {
+              this.field_i = this.field_i.field_h;
               continue L0;
             } else {
-              var5 = ((kf) this).field_i;
-              ((kf) this).field_i = ((kf) this).field_i.field_h;
+              var5 = this.field_i;
+              this.field_i = this.field_i.field_h;
               return var5;
             }
           } else {
             var5_int = 59 / ((43 - param1) / 33);
-            ((kf) this).field_i = null;
+            this.field_i = null;
             return null;
           }
         }
@@ -319,7 +341,7 @@ final class kf {
         if (!(null == param1.field_k)) {
             param1.c(92);
         }
-        wb var5 = ((kf) this).field_f[(int)((long)(((kf) this).field_a + -1) & param0)];
+        wb var5 = this.field_f[(int)((long)(this.field_a + -1) & param0)];
         param1.field_h = var5;
         param1.field_k = var5.field_k;
         param1.field_k.field_h = param1;
@@ -330,11 +352,12 @@ final class kf {
         try {
             param1.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "kf.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "kf.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static boolean a(byte param0) {
+        boolean discarded$2 = false;
         bf var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -344,6 +367,7 @@ final class kf {
         int stackIn_11_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_18_0 = 0;
         int stackOut_10_0 = 0;
@@ -352,14 +376,14 @@ final class kf {
         var3 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            var4 = (bf) (Object) l.field_c.a((byte) -66);
+            var4 = (bf) ((Object) l.field_c.a((byte) -66));
             var1 = var4;
             if (var1 != null) {
               L1: {
                 if (param0 == -74) {
                   break L1;
                 } else {
-                  boolean discarded$2 = kf.a((byte) -15);
+                  discarded$2 = kf.a((byte) -15);
                   break L1;
                 }
               }
@@ -368,6 +392,7 @@ final class kf {
                 if (var1.field_n <= var2) {
                   stackOut_18_0 = 1;
                   stackIn_19_0 = stackOut_18_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
                   L3: {
@@ -379,7 +404,8 @@ final class kf {
                       } else {
                         stackOut_10_0 = 0;
                         stackIn_11_0 = stackOut_10_0;
-                        return stackIn_11_0 != 0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       }
                     }
                   }
@@ -390,7 +416,8 @@ final class kf {
                       } else {
                         stackOut_15_0 = 0;
                         stackIn_16_0 = stackOut_15_0;
-                        return stackIn_16_0 != 0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       }
                     } else {
                       break L4;
@@ -403,29 +430,43 @@ final class kf {
             } else {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1_ref, "kf.D(" + param0 + ')');
+          throw kg.a((Throwable) ((Object) var1_ref), "kf.D(" + param0 + ')');
         }
-        return stackIn_19_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_11_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_16_0 != 0;
+            } else {
+              return stackIn_19_0 != 0;
+            }
+          }
+        }
     }
 
     kf(int param0) {
+        wb dupTemp$2 = null;
         int var2 = 0;
         wb var3 = null;
-        ((kf) this).field_b = 0;
-        ((kf) this).field_f = new wb[param0];
-        ((kf) this).field_a = param0;
+        this.field_b = 0;
+        this.field_f = new wb[param0];
+        this.field_a = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            wb dupTemp$2 = new wb();
+            dupTemp$2 = new wb();
             var3 = dupTemp$2;
-            ((kf) this).field_f[var2] = dupTemp$2;
+            this.field_f[var2] = dupTemp$2;
             var3.field_h = var3;
             var3.field_k = var3;
             var2++;

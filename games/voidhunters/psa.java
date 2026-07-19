@@ -34,12 +34,12 @@ final class psa extends rqa {
               if (param1 <= -119) {
                 break L1;
               } else {
-                field_o = null;
+                field_o = (dja) null;
                 break L1;
               }
             }
             si.a(34, 62, param0[0].a(94));
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -47,23 +47,23 @@ final class psa extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("psa.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -71,12 +71,13 @@ final class psa extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     final static void e(int param0) {
+        int incrementValue$1 = 0;
         RuntimeException var1 = null;
         double var1_double = 0.0;
         int var3 = 0;
@@ -101,27 +102,30 @@ final class psa extends rqa {
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var24 = VoidHunters.field_G;
         try {
           L0: {
             if (null != mpb.field_h) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               mpb.field_h = new int[65536];
               var1_double = 0.7 + (-0.015 + 0.03 * Math.random());
               var3 = 0;
-              var4 = -1;
+              var4 = -119 % ((-10 - param0) / 52);
               var5 = 0;
               L1: while (true) {
                 if (var5 >= 512) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  var6 = 360.0f * ((float)(var5 >> 3) / 64.0f + 0.0078125f);
+                  var6 = 360.0f * ((float)(var5 >> 808122595) / 64.0f + 0.0078125f);
                   var7 = 0.0625f + (float)(var5 & 7) / 8.0f;
                   var8 = 0;
                   L2: while (true) {
-                    if (var8 >= 128) {
+                    if ((var8 ^ -1) <= -129) {
                       var5++;
                       continue L1;
                     } else {
@@ -137,13 +141,13 @@ final class psa extends rqa {
                         var17 = (1.0f - var7) * var9;
                         var18 = var9 * (1.0f - var7 * var16);
                         var19 = var9 * (-(var7 * (1.0f - var16)) + 1.0f);
-                        if (var15 == 0) {
+                        if (-1 == (var15 ^ -1)) {
                           var11 = var19;
                           var10 = var9;
                           var12 = var17;
                           break L3;
                         } else {
-                          if (var15 != 1) {
+                          if (-2 != (var15 ^ -1)) {
                             if (var15 == 2) {
                               var11 = var9;
                               var12 = var19;
@@ -152,7 +156,7 @@ final class psa extends rqa {
                             } else {
                               if (3 != var15) {
                                 if (4 != var15) {
-                                  if (var15 == 5) {
+                                  if ((var15 ^ -1) == -6) {
                                     var11 = var17;
                                     var10 = var9;
                                     var12 = var18;
@@ -187,8 +191,8 @@ final class psa extends rqa {
                       var20 = (int)(256.0f * var10);
                       var21 = (int)(var11 * 256.0f);
                       var22 = (int)(256.0f * var12);
-                      var23 = var22 + (var21 << 8) + (-16777216 - -(var20 << 16));
-                      int incrementValue$1 = var3;
+                      var23 = var22 + (var21 << 1501463016) + (-16777216 - -(var20 << -1851724336));
+                      incrementValue$1 = var3;
                       var3++;
                       mpb.field_h[incrementValue$1] = var23;
                       var8++;
@@ -202,19 +206,23 @@ final class psa extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "psa.C(" + 127 + ')');
+          throw rta.a((Throwable) ((Object) var1), "psa.C(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(int param0) {
+        if (param0 != 0) {
+            psa.e(13);
+        }
         field_o = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_o = (dja) (Object) new mbb();
+        field_o = (dja) ((Object) new mbb());
     }
 }

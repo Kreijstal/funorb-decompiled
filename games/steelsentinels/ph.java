@@ -10,6 +10,9 @@ final class ph {
     static na[] field_e;
 
     public static void a(int param0) {
+        if (param0 < 33) {
+            return;
+        }
         field_e = null;
         field_b = null;
         field_f = null;
@@ -62,14 +65,14 @@ final class ph {
               stackOut_0_0 = param0.field_m;
               stackIn_2_0 = stackOut_0_0;
               stackIn_1_0 = stackOut_0_0;
-              if (param0.field_k != 1) {
-                stackOut_2_0 = (gh) (Object) stackIn_2_0;
+              if ((param0.field_k ^ -1) != -2) {
+                stackOut_2_0 = (gh) ((Object) stackIn_2_0);
                 stackOut_2_1 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 stackIn_3_1 = stackOut_2_1;
                 break L1;
               } else {
-                stackOut_1_0 = (gh) (Object) stackIn_1_0;
+                stackOut_1_0 = (gh) ((Object) stackIn_1_0);
                 stackOut_1_1 = param0.field_e;
                 stackIn_3_0 = stackOut_1_0;
                 stackIn_3_1 = stackOut_1_1;
@@ -78,7 +81,7 @@ final class ph {
             }
             L2: {
               kk.a(stackIn_3_0, stackIn_3_1, param0.field_k, (int[]) null, param0.field_p, param0.field_d, 1073741824, param0.field_j, (kg) null);
-              if (param0.field_k != 0) {
+              if ((param0.field_k ^ -1) != param1) {
                 break L2;
               } else {
                 if (kg.d((byte) 120)) {
@@ -110,7 +113,7 @@ final class ph {
               }
             }
             L4: {
-              if (param0.field_k != 1) {
+              if ((param0.field_k ^ -1) != -2) {
                 break L4;
               } else {
                 if (kg.d((byte) 37)) {
@@ -128,7 +131,7 @@ final class ph {
                         } else {
                           var10 = an.field_i;
                           var11 = qi.field_g;
-                          var10.field_j.a(2, 14, var11);
+                          var10.field_j.a(param1 + 3, 14, var11);
                           break L5;
                         }
                       }
@@ -156,23 +159,23 @@ final class ph {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var2;
+            stackOut_19_0 = (RuntimeException) (var2);
             stackOut_19_1 = new StringBuilder().append("ph.D(");
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -180,31 +183,45 @@ final class ph {
               break L6;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + -1 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param1 + ')');
         }
     }
 
     final static boolean b(int param0) {
-        if (ve.field_a == null) {
+        if (param0 == 12412) {
+          if (ve.field_a != null) {
+            if (!ve.field_a.a((byte) -60)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (!ve.field_a.a((byte) -60)) {
+          }
+        } else {
+          field_f = (String) null;
+          if (ve.field_a != null) {
+            if (!ve.field_a.a((byte) -60)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        km.field_i = 0;
-        se.field_e = 16777215;
-        kj.field_I = 1146810;
+        km.field_i = param0;
+        if (param3 >= -62) {
+            return;
+        }
+        se.field_e = param1;
+        kj.field_I = param2;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Please try again in a few minutes.";
         field_a = "Players: ";
         field_b = "Open in popup window";

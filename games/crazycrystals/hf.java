@@ -7,8 +7,8 @@ final class hf {
     static String[] field_b;
 
     final static void a(int param0) {
-        rf.a(3);
-        rc.a(-25537, 4);
+        rf.a(param0 ^ 7);
+        rc.a(param0 + -25541, param0);
     }
 
     public static void b(int param0) {
@@ -23,10 +23,6 @@ final class hf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new String[]{"crystalrocknroll", "metropolitation", "twinkle", "mysteriousmaze", "trickncheat", "tarantulum", "pluckyparade", "gardenersgauntlet", "megamix1", "megamix2"};
     }
 }

@@ -49,12 +49,12 @@ final class fp extends lh {
               var5 = ma.field_O.field_N;
               var6 = new jp(var4_int, var5);
               var6.g();
-              ma.field_O.b(param2, var4_int / 2, 2 + ma.field_O.field_F, 0, -1);
+              ma.field_O.b(param2, var4_int / param0, 2 + ma.field_O.field_F, 0, -1);
               kc.field_q.a((byte) 124);
               var7 = new jp(var4_int * param1, var5 * param1);
               var7.g();
               var6.a(0, 0, param1 * var4_int, param1 * var5);
-              gp.a(var5 * param1, 0, param1 * var4_int, 0, 0);
+              gp.a(var5 * param1, 0, param1 * var4_int, param0 ^ 2, 0);
               kc.field_q.a((byte) 126);
               if (param3) {
                 var8 = var7.field_D;
@@ -65,7 +65,7 @@ final class fp extends lh {
                   if (var9 <= var11) {
                     var7.field_G = var10;
                     var7.field_F = var7.field_F + var9 / 2;
-                    var7.field_E = var7.field_E;
+                    var7.field_E = var7.field_E + 0;
                     var7.field_D = var8;
                     var7.field_C = var9;
                     break L1;
@@ -76,7 +76,7 @@ final class fp extends lh {
                         var11++;
                         continue L2;
                       } else {
-                        var10[var8 * var11 - -var12] = var7.field_G[(var11 - -var7.field_C - var9) * var7.field_D + var12];
+                        var10[var8 * var11 - -var12] = var7.field_G[(var11 - -var7.field_C - var9) * var7.field_D + (0 + var12)];
                         var12++;
                         continue L3;
                       }
@@ -87,7 +87,7 @@ final class fp extends lh {
                 break L1;
               }
             }
-            stackOut_10_0 = (jp) var7;
+            stackOut_10_0 = (jp) (var7);
             stackIn_11_0 = stackOut_10_0;
             break L0;
           }
@@ -95,23 +95,23 @@ final class fp extends lh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("fp.B(").append(2).append(',').append(param1).append(',');
+            stackOut_12_0 = (RuntimeException) (var4);
+            stackOut_12_1 = new StringBuilder().append("fp.B(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -119,7 +119,7 @@ final class fp extends lh {
               break L4;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param3 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param3 + ')');
         }
         return stackIn_11_0;
     }
@@ -128,7 +128,7 @@ final class fp extends lh {
         if (lb.field_c >= param2 - -param1) {
             return param2;
         }
-        if (-param1 + (param2 - -param3) >= 0) {
+        if (param0 >= (-param1 + (param2 - -param3) ^ -1)) {
             return param2 + param3 - param1;
         }
         return lb.field_c + -param1;
@@ -143,9 +143,9 @@ final class fp extends lh {
         if (param0 > -14) {
             return;
         }
-        al.a(((fp) this).field_a, 19);
-        ((fp) this).g(68);
-        ((fp) this).a(0);
+        al.a(this.field_a, 19);
+        this.g(68);
+        this.a(0);
     }
 
     public static void c(boolean param0) {
@@ -153,15 +153,14 @@ final class fp extends lh {
         field_u = null;
         field_y = null;
         field_v = null;
+        if (param0) {
+            return;
+        }
         field_A = null;
         field_w = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = "This game has started.";
         field_y = null;
         field_A = new StringBuilder(80);

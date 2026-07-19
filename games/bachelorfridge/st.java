@@ -11,6 +11,9 @@ final class st {
 
     public static void a(byte param0) {
         field_c = null;
+        if (param0 < 77) {
+            return;
+        }
         field_b = null;
         field_a = null;
         field_e = null;
@@ -18,10 +21,6 @@ final class st {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "st.A(";
         field_d = new int[]{20, 30, 50, 100};
         field_e = "Right click a creature to view stats";

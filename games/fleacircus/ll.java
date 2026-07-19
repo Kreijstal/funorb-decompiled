@@ -60,10 +60,6 @@ final class ll extends lh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Logging in...";
         field_r = new ed();
         field_m = 640;

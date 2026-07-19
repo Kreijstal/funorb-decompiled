@@ -14,9 +14,10 @@ abstract class ms {
     abstract void a(ob param0, byte param1);
 
     final static boolean a(String param0, byte param1, String param2) {
+        boolean discarded$2 = false;
         String var3 = null;
         RuntimeException var3_ref = null;
-        Object var4 = null;
+        String var4 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -59,8 +60,8 @@ abstract class ms {
               if (param1 == -53) {
                 break L1;
               } else {
-                var4 = null;
-                boolean discarded$2 = ms.a((String) null, (byte) 116, (String) null);
+                var4 = (String) null;
+                discarded$2 = ms.a((String) null, (byte) 116, (String) null);
                 break L1;
               }
             }
@@ -69,7 +70,7 @@ abstract class ms {
                 if (-1 != param2.indexOf(param0)) {
                   break L3;
                 } else {
-                  if (param2.indexOf(var3) == -1) {
+                  if ((param2.indexOf(var3) ^ -1) == 0) {
                     stackOut_6_0 = 0;
                     stackIn_7_0 = stackOut_6_0;
                     break L2;
@@ -88,23 +89,23 @@ abstract class ms {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_0 = (RuntimeException) (var3_ref);
             stackOut_8_1 = new StringBuilder().append("ms.C(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -113,23 +114,23 @@ abstract class ms {
             }
           }
           L5: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -137,7 +138,7 @@ abstract class ms {
               break L5;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -151,30 +152,49 @@ abstract class ms {
         field_b = null;
         if (param0 != -1) {
           ms.a(42);
-          field_c = null;
+          field_c = (int[][]) null;
           return;
         } else {
-          field_c = null;
+          field_c = (int[][]) null;
           return;
         }
     }
 
     final static void b(int param0) {
-        if (!(!dp.field_t)) {
-            gf.h(gf.field_i, gf.field_a, -gf.field_i + gf.field_l, -gf.field_a + gf.field_f);
-            ua.field_f.b(false, -104);
+        boolean discarded$6 = false;
+        String var2 = null;
+        if (param0 != 20975) {
+          L0: {
+            var2 = (String) null;
+            discarded$6 = ms.a((String) null, (byte) -111, (String) null);
+            if (dp.field_t) {
+              gf.h(gf.field_i, gf.field_a, -gf.field_i + gf.field_l, -gf.field_a + gf.field_f);
+              ua.field_f.b(false, -104);
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          return;
+        } else {
+          L1: {
+            if (dp.field_t) {
+              gf.h(gf.field_i, gf.field_a, -gf.field_i + gf.field_l, -gf.field_a + gf.field_f);
+              ua.field_f.b(false, -104);
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          return;
         }
     }
 
     abstract ds a(byte param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Names cannot contain consecutive spaces";
-        field_c = new int[][]{new int[4], new int[4], new int[4], new int[4]};
+        field_c = new int[][]{new int[]{2, 1, 3, 4}, new int[]{2, 1, 3, 3}, new int[]{2, 1, 3, 1}, new int[]{2, 1, 3, 0}};
         field_a = 0;
         field_f = "Total projects used";
         field_b = "1 point, <%0> points per turn.";

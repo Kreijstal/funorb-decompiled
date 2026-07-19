@@ -9,17 +9,17 @@ final class be extends lj {
     int field_j;
 
     be(int param0, byte[] param1, int param2, int param3) {
-        ((be) this).field_h = param0;
-        ((be) this).field_i = param1;
-        ((be) this).field_g = param2;
-        ((be) this).field_j = param3;
+        this.field_h = param0;
+        this.field_i = param1;
+        this.field_g = param2;
+        this.field_j = param3;
     }
 
     be(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((be) this).field_h = param0;
-        ((be) this).field_i = param1;
-        ((be) this).field_g = param2;
-        ((be) this).field_j = param3;
-        ((be) this).field_k = param4 ? true : false;
+        this.field_h = param0;
+        this.field_i = param1;
+        this.field_g = param2;
+        this.field_j = param3;
+        this.field_k = param4 ? true : false;
     }
 }

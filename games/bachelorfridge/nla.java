@@ -21,6 +21,7 @@ final class nla {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
@@ -36,43 +37,45 @@ final class nla {
             if (param1) {
               var3_int = 0;
               L1: while (true) {
-                if (var3_int >= 11) {
+                if (-12 >= (var3_int ^ -1)) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  ((nla) this).field_g[var3_int].field_h = param0.field_b[var3_int].field_h;
-                  ((nla) this).field_g[var3_int].field_l = param0.field_b[var3_int].field_l;
-                  ((nla) this).field_g[var3_int].field_d = param0.field_b[var3_int].field_d;
-                  ((nla) this).field_g[var3_int].field_e = param0.field_b[var3_int].field_e;
-                  ((nla) this).field_g[var3_int].field_j = param0.field_b[var3_int].field_j;
+                  this.field_g[var3_int].field_h = param0.field_b[var3_int].field_h;
+                  this.field_g[var3_int].field_l = param0.field_b[var3_int].field_l;
+                  this.field_g[var3_int].field_d = param0.field_b[var3_int].field_d;
+                  this.field_g[var3_int].field_e = param0.field_b[var3_int].field_e;
+                  this.field_g[var3_int].field_j = param0.field_b[var3_int].field_j;
                   var3_int++;
                   continue L1;
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_0 = (RuntimeException) (var3);
             stackOut_7_1 = new StringBuilder().append("nla.A(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -80,12 +83,20 @@ final class nla {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(boolean param0) {
         field_c = null;
+        if (param0) {
+            return;
+        }
         field_e = null;
         field_b = null;
         field_a = null;
@@ -93,17 +104,13 @@ final class nla {
 
     nla() {
         int var1 = 0;
-        ((nla) this).field_g = new gfa[11];
-        for (var1 = 0; ((nla) this).field_g.length > var1; var1++) {
-            ((nla) this).field_g[var1] = new gfa(0, 0);
+        this.field_g = new gfa[11];
+        for (var1 = 0; this.field_g.length > var1; var1++) {
+            this.field_g[var1] = new gfa(0, 0);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = false;
         field_d = 0.0;
         field_e = "You have withdrawn your request to join.";

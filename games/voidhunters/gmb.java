@@ -20,22 +20,18 @@ final class gmb implements dja {
 
     public final tv a(byte param0) {
         int var2 = -119 % ((param0 - -64) / 50);
-        return (tv) (Object) new twa();
+        return (tv) ((Object) new twa());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            field_a = null;
-            return (tv[]) (Object) new twa[param1];
+            field_a = (String) null;
+            return (tv[]) ((Object) new twa[param1]);
         }
-        return (tv[]) (Object) new twa[param1];
+        return (tv[]) ((Object) new twa[param1]);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Missile lock";
         field_b = "Share your ship";
     }

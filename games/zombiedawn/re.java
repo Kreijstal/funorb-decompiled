@@ -12,7 +12,7 @@ final class re {
 
     final static void a(byte param0) {
         if (cn.field_b != null) {
-          fa.a((byte) -46, (java.awt.Canvas) (Object) cn.field_b);
+          fa.a((byte) -46, cn.field_b);
           cn.field_b.a(vh.field_a, (byte) 115);
           if (param0 == -71) {
             cn.field_b = null;
@@ -43,10 +43,6 @@ final class re {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = 0;
         field_c = "Close";
     }

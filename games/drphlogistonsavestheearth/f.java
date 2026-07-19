@@ -10,12 +10,23 @@ final class f extends gi {
     static nh[] field_i;
 
     public static void d(int param0) {
+        int discarded$0 = 0;
+        if (param0 != -1) {
+            String var2 = (String) null;
+            discarded$0 = f.a(11, -55, true, (String) null, (String) null, false);
+        }
         field_m = null;
         field_i = null;
     }
 
     final static int a(int param0, int param1, boolean param2, String param3, String param4, boolean param5) {
         try {
+            int discarded$6 = 0;
+            int discarded$7 = 0;
+            int discarded$8 = 0;
+            int discarded$9 = 0;
+            Object discarded$10 = null;
+            Object discarded$11 = null;
             RuntimeException var6 = null;
             int var6_int = 0;
             int var7 = 0;
@@ -24,7 +35,7 @@ final class f extends gi {
             Throwable var9_ref_Throwable = null;
             int var9 = 0;
             int var10 = 0;
-            Object var11 = null;
+            String var11 = null;
             CharSequence var12 = null;
             int stackIn_4_0 = 0;
             int stackIn_31_0 = 0;
@@ -49,6 +60,7 @@ final class f extends gi {
             RuntimeException stackIn_105_0 = null;
             StringBuilder stackIn_105_1 = null;
             String stackIn_105_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             int stackOut_3_0 = 0;
             int stackOut_30_0 = 0;
@@ -89,7 +101,8 @@ final class f extends gi {
                     } else {
                       stackOut_3_0 = -1;
                       stackIn_4_0 = stackOut_3_0;
-                      return stackIn_4_0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   }
                 }
@@ -98,7 +111,7 @@ final class f extends gi {
                   if (hh.field_b == tl.field_O) {
                     L3: {
                       if (param2) {
-                        var11 = null;
+                        var11 = (String) null;
                         dl.field_H = tc.a(ld.field_b, param3, (String) null, 0, false);
                         break L3;
                       } else {
@@ -168,8 +181,8 @@ final class f extends gi {
                         if (0 == var7) {
                           break L8;
                         } else {
-                          if (var7 != 1) {
-                            if (var7 != 8) {
+                          if ((var7 ^ -1) != -2) {
+                            if ((var7 ^ -1) != -9) {
                               tl.field_O = tf.field_qb;
                               gf.field_C = -1;
                               break L7;
@@ -178,7 +191,8 @@ final class f extends gi {
                               dk.field_b = false;
                               stackOut_30_0 = var7;
                               stackIn_31_0 = stackOut_30_0;
-                              return stackIn_31_0;
+                              decompiledRegionSelector0 = 1;
+                              break L0;
                             }
                           } else {
                             break L8;
@@ -201,7 +215,7 @@ final class f extends gi {
                       L10: {
                         ld.field_b = dh.field_N.a((byte) -53);
                         nj.field_j = dh.field_N.l(31760);
-                        int discarded$6 = dh.field_N.l(31760);
+                        discarded$6 = dh.field_N.l(31760);
                         hb.field_g = dh.field_N.j(-788751192);
                         var7_ref_String = dh.field_N.i(715718304);
                         var8 = dh.field_N.l(31760);
@@ -249,9 +263,9 @@ final class f extends gi {
                       }
                       L14: {
                         if (wg.field_d) {
-                          int discarded$7 = dh.field_N.l(31760);
-                          int discarded$8 = dh.field_N.l(31760);
-                          int discarded$9 = dh.field_N.h(-108);
+                          discarded$7 = dh.field_N.l(31760);
+                          discarded$8 = dh.field_N.l(31760);
+                          discarded$9 = dh.field_N.h(-108);
                           ka.field_n = dh.field_N.j(-788751192);
                           cf.field_b = new byte[ka.field_n];
                           var9 = 0;
@@ -270,7 +284,7 @@ final class f extends gi {
                       }
                       L16: {
                         oa.field_d = dh.field_N.b((byte) -64);
-                        var12 = (CharSequence) (Object) oa.field_d;
+                        var12 = (CharSequence) ((Object) oa.field_d);
                         tf.field_pb = rh.a(117, var12);
                         rh.field_a = dh.field_N.l(31760);
                         tl.field_O = ik.field_d;
@@ -305,7 +319,7 @@ final class f extends gi {
                             } else {
                               try {
                                 L20: {
-                                  Object discarded$10 = pb.a("unzap", nb.a(-114), true);
+                                  discarded$10 = pb.a("unzap", nb.a(-114), true);
                                   break L20;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -321,7 +335,7 @@ final class f extends gi {
                         }
                         try {
                           L22: {
-                            Object discarded$11 = pb.a(nb.a(-128), -11455, new Object[1], "zap");
+                            discarded$11 = pb.a(nb.a(-128), -11455, new Object[]{lf.a(ld.field_b, (byte) 105)}, "zap");
                             break L22;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -348,7 +362,8 @@ final class f extends gi {
                           dh.field_N.a((byte) -105, fb.field_b);
                           stackOut_74_0 = t.field_b;
                           stackIn_75_0 = stackOut_74_0;
-                          return stackIn_75_0;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         } else {
                           fb.field_b[var9] = fb.field_b[var9] + 50;
                           var9++;
@@ -367,21 +382,22 @@ final class f extends gi {
                     if (li.d(-29427)) {
                       L27: {
                         eg.a((byte) 126);
-                        if (t.field_b != 7) {
+                        if ((t.field_b ^ -1) != -8) {
                           break L27;
                         } else {
                           if (!dk.field_b) {
                             dk.field_b = true;
                             stackOut_86_0 = -1;
                             stackIn_87_0 = stackOut_86_0;
-                            return stackIn_87_0;
+                            decompiledRegionSelector0 = 4;
+                            break L0;
                           } else {
                             break L27;
                           }
                         }
                       }
                       L28: {
-                        if (t.field_b != 7) {
+                        if (-8 != (t.field_b ^ -1)) {
                           break L28;
                         } else {
                           t.field_b = 3;
@@ -392,7 +408,8 @@ final class f extends gi {
                       dk.field_b = false;
                       stackOut_84_0 = t.field_b;
                       stackIn_85_0 = stackOut_84_0;
-                      return stackIn_85_0;
+                      decompiledRegionSelector0 = 3;
+                      break L0;
                     } else {
                       break L26;
                     }
@@ -413,7 +430,8 @@ final class f extends gi {
                       dk.field_b = false;
                       stackOut_95_0 = 3;
                       stackIn_96_0 = stackOut_95_0;
-                      return stackIn_96_0;
+                      decompiledRegionSelector0 = 5;
+                      break L0;
                     } else {
                       var7 = ei.field_o;
                       ei.field_o = ia.field_c;
@@ -427,29 +445,30 @@ final class f extends gi {
                 }
                 stackOut_97_0 = -1;
                 stackIn_98_0 = stackOut_97_0;
+                decompiledRegionSelector0 = 6;
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               L31: {
                 var6 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_99_0 = (RuntimeException) var6;
+                stackOut_99_0 = (RuntimeException) (var6);
                 stackOut_99_1 = new StringBuilder().append("f.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
                 stackIn_101_0 = stackOut_99_0;
                 stackIn_101_1 = stackOut_99_1;
                 stackIn_100_0 = stackOut_99_0;
                 stackIn_100_1 = stackOut_99_1;
                 if (param3 == null) {
-                  stackOut_101_0 = (RuntimeException) (Object) stackIn_101_0;
-                  stackOut_101_1 = (StringBuilder) (Object) stackIn_101_1;
+                  stackOut_101_0 = (RuntimeException) ((Object) stackIn_101_0);
+                  stackOut_101_1 = (StringBuilder) ((Object) stackIn_101_1);
                   stackOut_101_2 = "null";
                   stackIn_102_0 = stackOut_101_0;
                   stackIn_102_1 = stackOut_101_1;
                   stackIn_102_2 = stackOut_101_2;
                   break L31;
                 } else {
-                  stackOut_100_0 = (RuntimeException) (Object) stackIn_100_0;
-                  stackOut_100_1 = (StringBuilder) (Object) stackIn_100_1;
+                  stackOut_100_0 = (RuntimeException) ((Object) stackIn_100_0);
+                  stackOut_100_1 = (StringBuilder) ((Object) stackIn_100_1);
                   stackOut_100_2 = "{...}";
                   stackIn_102_0 = stackOut_100_0;
                   stackIn_102_1 = stackOut_100_1;
@@ -458,23 +477,23 @@ final class f extends gi {
                 }
               }
               L32: {
-                stackOut_102_0 = (RuntimeException) (Object) stackIn_102_0;
+                stackOut_102_0 = (RuntimeException) ((Object) stackIn_102_0);
                 stackOut_102_1 = ((StringBuilder) (Object) stackIn_102_1).append(stackIn_102_2).append(',');
                 stackIn_104_0 = stackOut_102_0;
                 stackIn_104_1 = stackOut_102_1;
                 stackIn_103_0 = stackOut_102_0;
                 stackIn_103_1 = stackOut_102_1;
                 if (param4 == null) {
-                  stackOut_104_0 = (RuntimeException) (Object) stackIn_104_0;
-                  stackOut_104_1 = (StringBuilder) (Object) stackIn_104_1;
+                  stackOut_104_0 = (RuntimeException) ((Object) stackIn_104_0);
+                  stackOut_104_1 = (StringBuilder) ((Object) stackIn_104_1);
                   stackOut_104_2 = "null";
                   stackIn_105_0 = stackOut_104_0;
                   stackIn_105_1 = stackOut_104_1;
                   stackIn_105_2 = stackOut_104_2;
                   break L32;
                 } else {
-                  stackOut_103_0 = (RuntimeException) (Object) stackIn_103_0;
-                  stackOut_103_1 = (StringBuilder) (Object) stackIn_103_1;
+                  stackOut_103_0 = (RuntimeException) ((Object) stackIn_103_0);
+                  stackOut_103_1 = (StringBuilder) ((Object) stackIn_103_1);
                   stackOut_103_2 = "{...}";
                   stackIn_105_0 = stackOut_103_0;
                   stackIn_105_1 = stackOut_103_1;
@@ -482,9 +501,33 @@ final class f extends gi {
                   break L32;
                 }
               }
-              throw ie.a((Throwable) (Object) stackIn_105_0, stackIn_105_2 + ',' + param5 + ')');
+              throw ie.a((Throwable) ((Object) stackIn_105_0), stackIn_105_2 + ',' + param5 + ')');
             }
-            return stackIn_98_0;
+            if (decompiledRegionSelector0 == 0) {
+              return stackIn_4_0;
+            } else {
+              if (decompiledRegionSelector0 == 1) {
+                return stackIn_31_0;
+              } else {
+                if (decompiledRegionSelector0 == 2) {
+                  return stackIn_75_0;
+                } else {
+                  if (decompiledRegionSelector0 == 3) {
+                    return stackIn_85_0;
+                  } else {
+                    if (decompiledRegionSelector0 == 4) {
+                      return stackIn_87_0;
+                    } else {
+                      if (decompiledRegionSelector0 == 5) {
+                        return stackIn_96_0;
+                      } else {
+                        return stackIn_98_0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -493,14 +536,10 @@ final class f extends gi {
     }
 
     f() {
-        ((f) this).field_l = false;
+        this.field_l = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = 0;
         field_m = "Back";
     }

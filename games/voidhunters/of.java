@@ -7,28 +7,27 @@ final class of {
     private qfa field_b;
 
     protected final void finalize() throws Throwable {
-        ((of) this).field_b.a((byte) 18, ((of) this).field_c);
+        this.field_b.a((byte) 18, this.field_c);
         super.finalize();
     }
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != 8345) {
+            field_a = (gj) null;
+        }
     }
 
     of(qfa param0, long param1, ts[] param2) {
         try {
-            ((of) this).field_c = param1;
-            ((of) this).field_b = param0;
+            this.field_c = param1;
+            this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new gj();
         gs discarded$0 = new gs();
     }

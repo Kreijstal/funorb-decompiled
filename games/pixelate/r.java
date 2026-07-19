@@ -18,29 +18,33 @@ final class r {
     final static void a(int param0, int param1, boolean param2, int param3) {
         int var4 = 0;
         jh.field_O.b(param1, param0);
-        if (param2) {
-          L0: {
-            var4 = qk.field_e % jh.field_O.field_F * 2;
-            if (jh.field_O.field_F <= var4) {
-              var4 = jh.field_O.field_F + (-var4 + jh.field_O.field_F);
-              break L0;
-            } else {
-              break L0;
+        if (param3 == -40) {
+          if (param2) {
+            L0: {
+              var4 = qk.field_e % jh.field_O.field_F * 2;
+              if (jh.field_O.field_F <= var4) {
+                var4 = jh.field_O.field_F + (-var4 + jh.field_O.field_F);
+                break L0;
+              } else {
+                break L0;
+              }
             }
-          }
-          if (10 > var4) {
-            var4 = 10;
-            uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
-            return;
+            if (10 > var4) {
+              var4 = 10;
+              uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
+              return;
+            } else {
+              if (-40 + jh.field_O.field_F < var4) {
+                var4 = jh.field_O.field_F - 40;
+                uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
+                return;
+              } else {
+                uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
+                return;
+              }
+            }
           } else {
-            if (-40 + jh.field_O.field_F < var4) {
-              var4 = jh.field_O.field_F - 40;
-              uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
-              return;
-            } else {
-              uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
-              return;
-            }
+            return;
           }
         } else {
           return;
@@ -70,10 +74,6 @@ final class r {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Confirm Password: ";
     }
 }

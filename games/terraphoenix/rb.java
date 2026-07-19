@@ -12,6 +12,9 @@ final class rb {
         field_c = null;
         field_d = null;
         field_b = null;
+        if (param0 > -60) {
+            field_c = (String) null;
+        }
     }
 
     final static boolean a(int param0, boolean param1, byte param2, int param3) {
@@ -37,7 +40,7 @@ final class rb {
                   if (var4 < var5) {
                     return true;
                   } else {
-                    var6 = 40;
+                    var6 = 40 / ((param2 - 73) / 45);
                     if (var4 > var5) {
                       return false;
                     } else {
@@ -77,7 +80,7 @@ final class rb {
                   if (var4 < var5) {
                     return true;
                   } else {
-                    var6 = 40;
+                    var6 = 40 / ((param2 - 73) / 45);
                     if (var4 <= var5) {
                       if (param3 <= param0) {
                         return false;
@@ -98,10 +101,6 @@ final class rb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Retry";
         field_a = new int[4];
         field_b = new String[]{"All scores", "My scores", "Best each"};

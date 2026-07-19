@@ -18,7 +18,7 @@ final class gl {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        Object var17 = null;
+        int[] var17 = null;
         int[] var18 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -46,7 +46,7 @@ final class gl {
                   if (param9 >= 116) {
                     break L2;
                   } else {
-                    var17 = null;
+                    var17 = (int[]) null;
                     gl.a(-42, -39, 14, -51, (int[]) null, 44, -111, -12, -52, (byte) 102);
                     break L2;
                   }
@@ -59,8 +59,8 @@ final class gl {
                 var12 = param6;
                 var13 = param5;
                 var14 = param0;
-                var15 = (16711422 & var18[var11]) >> 1;
-                var10_array[var11] = dg.a(255, var14 >> 17) - (-(dg.a(var13, 33423780) >> 9) + -dg.a(16711680, var12 >> 1)) + var15;
+                var15 = (16711422 & var18[var11]) >> -469845279;
+                var10_array[var11] = dg.a(255, var14 >> -858249455) - (-(dg.a(var13, 33423780) >> -1006873719) + -dg.a(16711680, var12 >> 225687201)) + var15;
                 param6 = param6 + param7;
                 param1++;
                 param0 = param0 + param8;
@@ -73,23 +73,23 @@ final class gl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var10 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var10;
+            stackOut_6_0 = (RuntimeException) (var10);
             stackOut_6_1 = new StringBuilder().append("gl.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param4 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -97,7 +97,7 @@ final class gl {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -142,6 +142,7 @@ final class gl {
         RuntimeException stackIn_75_0 = null;
         StringBuilder stackIn_75_1 = null;
         String stackIn_75_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
@@ -163,7 +164,8 @@ final class gl {
         try {
           L0: {
             if (param4 == null) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 if (param3 <= 0) {
@@ -299,7 +301,7 @@ final class gl {
                       if (param4[1] == null) {
                         break L13;
                       } else {
-                        if (param4[1].field_n == 0) {
+                        if (-1 == (param4[1].field_n ^ -1)) {
                           break L13;
                         } else {
                           de.a(var16, param5, var17, var18);
@@ -343,7 +345,7 @@ final class gl {
                       if (null == param4[3]) {
                         break L17;
                       } else {
-                        if (param4[3].field_w != 0) {
+                        if (-1 != (param4[3].field_w ^ -1)) {
                           de.a(param1, var18, var16, var19);
                           var20 = var14;
                           L18: while (true) {
@@ -417,36 +419,38 @@ final class gl {
                         }
                       }
                     }
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
                     break L1;
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L24: {
             var6 = decompiledCaughtException;
-            stackOut_72_0 = (RuntimeException) var6;
+            stackOut_72_0 = (RuntimeException) (var6);
             stackOut_72_1 = new StringBuilder().append("gl.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_74_0 = stackOut_72_0;
             stackIn_74_1 = stackOut_72_1;
             stackIn_73_0 = stackOut_72_0;
             stackIn_73_1 = stackOut_72_1;
             if (param4 == null) {
-              stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
-              stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
+              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
+              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
               stackOut_74_2 = "null";
               stackIn_75_0 = stackOut_74_0;
               stackIn_75_1 = stackOut_74_1;
               stackIn_75_2 = stackOut_74_2;
               break L24;
             } else {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackOut_73_2 = "{...}";
               stackIn_75_0 = stackOut_73_0;
               stackIn_75_1 = stackOut_73_1;
@@ -454,13 +458,22 @@ final class gl {
               break L24;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + ',' + param5 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_75_0), stackIn_75_2 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     final static void a(boolean param0, int param1) {
         int var3 = 0;
-        Object var4 = null;
+        qb[] var4 = null;
         L0: {
           L1: {
             var3 = ArcanistsMulti.field_G ? 1 : 0;
@@ -479,8 +492,8 @@ final class gl {
         }
         L2: {
           if (param0) {
-            if (ce.field_h <= 0) {
-              if (sm.field_a <= 0) {
+            if ((ce.field_h ^ -1) >= -1) {
+              if ((sm.field_a ^ -1) >= -1) {
                 if (0 < oo.field_y) {
                   oo.field_y = oo.field_y - 1;
                   break L2;
@@ -528,8 +541,8 @@ final class gl {
                   ce.field_h = ce.field_h - 1;
                   break L2;
                 } else {
-                  if (oo.field_y <= 0) {
-                    if (~ea.field_F >= ~sm.field_a) {
+                  if (-1 <= (oo.field_y ^ -1)) {
+                    if (ea.field_F <= sm.field_a) {
                       break L2;
                     } else {
                       L4: {
@@ -551,15 +564,15 @@ final class gl {
               }
             } else {
               if (ce.field_h <= 0) {
-                if (sm.field_a > 0) {
+                if ((sm.field_a ^ -1) < -1) {
                   sm.field_a = sm.field_a - 1;
                   break L2;
                 } else {
-                  if (~oo.field_y <= ~ea.field_F) {
+                  if (oo.field_y >= ea.field_F) {
                     break L2;
                   } else {
                     L5: {
-                      if (oo.field_y == 0) {
+                      if (-1 == (oo.field_y ^ -1)) {
                         ik.a(false, 95);
                         break L5;
                       } else {
@@ -581,7 +594,7 @@ final class gl {
           if (param1 == 0) {
             break L6;
           } else {
-            var4 = null;
+            var4 = (qb[]) null;
             gl.a(126, -38, -58, 81, (qb[]) null, 13);
             break L6;
           }
@@ -589,10 +602,6 @@ final class gl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Invalid date";
         field_b = new aj(9, 0, 4, 1);
         field_a = "Team Play:";

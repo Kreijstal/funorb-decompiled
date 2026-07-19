@@ -16,10 +16,10 @@ final class db extends sh {
         if (param0 != 100) {
             db.h(115);
         }
-        if (!(((db) this).field_A != null)) {
+        if (!(this.field_A != null)) {
             return 0;
         }
-        return ((db) this).field_A.field_q * 100 / (-((db) this).field_F + ((db) this).field_A.field_m.length);
+        return this.field_A.field_q * 100 / (-this.field_F + this.field_A.field_m.length);
     }
 
     final static void j(int param0) {
@@ -36,10 +36,18 @@ final class db extends sh {
             var2 = 1;
             L1: while (true) {
               if (vf.field_b.length <= var2) {
+                L2: {
+                  if (param0 == 2) {
+                    break L2;
+                  } else {
+                    field_E = (int[]) null;
+                    break L2;
+                  }
+                }
                 break L0;
               } else {
                 var3 = vf.field_b[var2];
-                he.a(k.field_e, var2 << 4, k.field_e, var1_int, var3);
+                he.a(k.field_e, var2 << 1607896580, k.field_e, var1_int, var3);
                 var1_int = var1_int + var3;
                 var2++;
                 continue L1;
@@ -49,7 +57,7 @@ final class db extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "db.A(" + 2 + ')');
+          throw oj.a((Throwable) ((Object) var1), "db.A(" + param0 + ')');
         }
     }
 
@@ -67,8 +75,7 @@ final class db extends sh {
         pa var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
-        byte[] var13 = null;
-        byte[] var14 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
@@ -77,7 +84,7 @@ final class db extends sh {
               var10 = id.field_b;
               var2 = var10.j(-99);
               if (var2 == 0) {
-                var9 = (eb) (Object) ga.field_w.c((byte) -71);
+                var9 = (eb) ((Object) ga.field_w.c((byte) -71));
                 if (var9 != null) {
                   L2: {
                     var4 = var10.j(-119);
@@ -85,20 +92,19 @@ final class db extends sh {
                       var5_array = null;
                       break L2;
                     } else {
-                      var14 = new byte[var4];
-                      var13 = var14;
-                      var12 = var13;
+                      var12 = new byte[var4];
                       var11 = var12;
                       var8 = var11;
                       var5_array = var8;
-                      var10.a(111, var14, var4, 0);
+                      var10.a(111, var12, var4, 0);
                       break L2;
                     }
                   }
                   var10.field_q = var10.field_q + 4;
                   if (!var10.e(0)) {
                     ob.b(-90);
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     var9.field_j = true;
                     var9.field_q = var5_array;
@@ -107,16 +113,17 @@ final class db extends sh {
                   }
                 } else {
                   ob.b(-128);
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               } else {
-                if (var2 != 1) {
+                if ((var2 ^ -1) != -2) {
                   td.a("A1: " + ck.a(-13299), (Throwable) null, (byte) -85);
                   ob.b(-96);
                   break L1;
                 } else {
                   var3 = var10.i(30);
-                  var4_ref_eh = (eh) (Object) nh.field_cb.c((byte) 105);
+                  var4_ref_eh = (eh) ((Object) nh.field_cb.c((byte) 105));
                   L3: while (true) {
                     L4: {
                       if (var4_ref_eh == null) {
@@ -125,7 +132,7 @@ final class db extends sh {
                         if (var4_ref_eh.field_j == var3) {
                           break L4;
                         } else {
-                          var4_ref_eh = (eh) (Object) nh.field_cb.c(-270);
+                          var4_ref_eh = (eh) ((Object) nh.field_cb.c(-270));
                           continue L3;
                         }
                       }
@@ -135,24 +142,39 @@ final class db extends sh {
                       break L1;
                     } else {
                       ob.b(-114);
-                      return;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   }
                 }
               }
             }
-            var3 = 0;
+            var3 = -65 % ((param0 - -75) / 32);
+            decompiledRegionSelector0 = 3;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "db.F(" + -123 + ')');
+          throw oj.a((Throwable) ((Object) var1), "db.F(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
     public static void h(int param0) {
-        field_x = null;
+        field_x = (int[][]) null;
         int var1 = 106 % ((74 - param0) / 41);
         field_E = null;
         field_D = null;
@@ -174,7 +196,7 @@ final class db extends sh {
         try {
           L0: {
             L1: {
-              var2 = -68;
+              var2 = 68 / ((param0 - -12) / 39);
               var3 = 5;
               if (null == vk.field_i) {
                 break L1;
@@ -227,16 +249,16 @@ final class db extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "db.C(" + -56 + ')');
+          throw oj.a((Throwable) ((Object) var1), "db.C(" + param0 + ')');
         }
     }
 
     final byte[] e(int param0) {
         L0: {
-          if (((db) this).field_v) {
+          if (this.field_v) {
             break L0;
           } else {
-            if (-((db) this).field_F + ((db) this).field_A.field_m.length > ((db) this).field_A.field_q) {
+            if (-this.field_F + this.field_A.field_m.length > this.field_A.field_q) {
               break L0;
             } else {
               L1: {
@@ -247,7 +269,7 @@ final class db extends sh {
                   break L1;
                 }
               }
-              return ((db) this).field_A.field_m;
+              return this.field_A.field_m;
             }
           }
         }
@@ -258,11 +280,7 @@ final class db extends sh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_x = new int[][]{new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3]};
+        field_x = new int[][]{new int[]{4, 4, 4}, new int[]{6, 6, 6}, new int[]{2, 2, 2}, new int[]{2, 2, 2}, new int[]{1, 1, 1}, new int[]{2, 2, 2}, new int[]{2, 2, 2}, new int[]{1, 1, 1}, new int[]{2, 2, 2}, new int[]{2, 2, 2}, new int[]{2, 2, 2}, new int[]{3, 2, 3}, new int[]{2, 4, 2}, new int[]{2, 6, 4}, new int[]{6, 6, 6}, new int[]{2, 5, 3}, new int[]{0, 5, 0}, new int[]{6, 0, 6}, new int[]{2, 2, 2}, new int[]{1, 1, 1}};
         field_D = new sl();
         field_E = new int[]{-5, -5, -5};
         field_z = -1;

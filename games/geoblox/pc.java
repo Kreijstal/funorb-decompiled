@@ -30,7 +30,7 @@ final class pc extends hf {
 
     final static void a(byte param0) {
         int var1 = 0;
-        var1 = -125;
+        var1 = -125 / ((param0 - 56) / 54);
         jk.a((byte) -90);
         if (null == f.field_kb) {
           kj.c(-11099);
@@ -63,20 +63,25 @@ final class pc extends hf {
     }
 
     final static void a(int param0, boolean param1) {
+        if (param1) {
+            field_C = 99;
+            fe.field_d = param0;
+            return;
+        }
         fe.field_d = param0;
     }
 
     final void b(int param0) {
-        ((pc) this).field_u = null;
-        ((pc) this).field_x = null;
+        this.field_u = null;
+        this.field_x = null;
         if (param0 != -1) {
           field_f = 41;
-          ((pc) this).field_i = null;
-          ((pc) this).field_z = null;
+          this.field_i = null;
+          this.field_z = null;
           return;
         } else {
-          ((pc) this).field_i = null;
-          ((pc) this).field_z = null;
+          this.field_i = null;
+          this.field_z = null;
           return;
         }
     }
@@ -85,10 +90,6 @@ final class pc extends hf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = 0;
         field_f = -1;
     }

@@ -12,14 +12,15 @@ final class wk {
         field_a = null;
         field_b = null;
         field_d = null;
+        if (!param0) {
+            field_c = (bj) null;
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "wk.A(";
         field_b = "Ranking: Meddling Miner";
         field_d = "Open in popup window";

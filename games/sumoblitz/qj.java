@@ -9,21 +9,21 @@ final class qj {
 
     qj(on param0, long param1, int param2) {
         try {
-            ((qj) this).field_a = param1;
-            ((qj) this).field_b = param0;
+            this.field_a = param1;
+            this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "qj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "qj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     protected final void finalize() throws Throwable {
-        ((qj) this).field_b.a(33984, ((qj) this).field_a);
+        this.field_b.a(33984, this.field_a);
         super.finalize();
     }
 
     public static void a(byte param0) {
         field_c = null;
-        int var1 = 0;
+        int var1 = 0 % ((8 - param0) / 63);
     }
 
     static {

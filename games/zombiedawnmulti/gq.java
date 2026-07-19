@@ -14,10 +14,10 @@ abstract class gq extends br {
     abstract int a();
 
     final void a(int[] param0, int param1, int param2) {
-        if (((gq) this).field_f) {
-            ((gq) this).b(param0, param1, param2);
+        if (this.field_f) {
+            this.b(param0, param1, param2);
         } else {
-            ((gq) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class gq extends br {
     abstract gq b();
 
     protected gq() {
-        ((gq) this).field_f = true;
+        this.field_f = true;
     }
 }

@@ -12,42 +12,44 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
     static java.applet.Applet field_i;
 
     final void a(java.awt.Graphics param0, int param1, byte param2, int param3) {
+        boolean discarded$0 = false;
         try {
             int var5_int = -29 / ((83 - param2) / 34);
             this.c(126);
-            boolean discarded$0 = param0.drawImage(((tk) this).field_b, param3, param1, (java.awt.image.ImageObserver) this);
+            discarded$0 = param0.drawImage(this.field_b, param3, param1, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "tk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "tk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static char a(int param0, char param1) {
+        char discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         var3 = CrazyCrystals.field_B;
         if (param0 != 235) {
           L0: {
-            char discarded$1 = tk.a(-103, '');
+            discarded$1 = tk.a(-103, '');
             var2 = param1;
             if (var2 != 32) {
               if (160 != var2) {
                 if (var2 != 95) {
-                  if (var2 == 45) {
+                  if ((var2 ^ -1) == -46) {
                     break L0;
                   } else {
                     L1: {
                       if (var2 == 91) {
                         break L1;
                       } else {
-                        if (var2 == 93) {
+                        if ((var2 ^ -1) == -94) {
                           break L1;
                         } else {
-                          if (var2 != 35) {
+                          if ((var2 ^ -1) != -36) {
                             L2: {
                               if (var2 == 224) {
                                 break L2;
                               } else {
-                                if (var2 != 225) {
+                                if ((var2 ^ -1) != -226) {
                                   if (var2 == 226) {
                                     break L2;
                                   } else {
@@ -60,59 +62,59 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
                                         if (var2 == 192) {
                                           break L2;
                                         } else {
-                                          if (var2 != 193) {
-                                            if (var2 == 194) {
+                                          if ((var2 ^ -1) != -194) {
+                                            if (-195 == (var2 ^ -1)) {
                                               break L2;
                                             } else {
-                                              if (var2 == 196) {
+                                              if (-197 == (var2 ^ -1)) {
                                                 break L2;
                                               } else {
-                                                if (var2 == 195) {
+                                                if (-196 == (var2 ^ -1)) {
                                                   break L2;
                                                 } else {
                                                   L3: {
-                                                    if (var2 != 232) {
+                                                    if (-233 != (var2 ^ -1)) {
                                                       if (var2 != 233) {
-                                                        if (var2 == 234) {
+                                                        if (-235 == (var2 ^ -1)) {
                                                           break L3;
                                                         } else {
                                                           if (var2 == 235) {
                                                             break L3;
                                                           } else {
-                                                            if (var2 != 200) {
-                                                              if (var2 == 201) {
+                                                            if ((var2 ^ -1) != -201) {
+                                                              if ((var2 ^ -1) == -202) {
                                                                 break L3;
                                                               } else {
                                                                 if (var2 == 202) {
                                                                   break L3;
                                                                 } else {
-                                                                  if (var2 != 203) {
+                                                                  if ((var2 ^ -1) != -204) {
                                                                     L4: {
                                                                       if (237 == var2) {
                                                                         break L4;
                                                                       } else {
                                                                         if (238 != var2) {
-                                                                          if (var2 != 239) {
-                                                                            if (var2 == 205) {
+                                                                          if ((var2 ^ -1) != -240) {
+                                                                            if (-206 == (var2 ^ -1)) {
                                                                               break L4;
                                                                             } else {
                                                                               if (206 != var2) {
-                                                                                if (var2 == 207) {
+                                                                                if (-208 == (var2 ^ -1)) {
                                                                                   break L4;
                                                                                 } else {
-                                                                                  if (var2 != 242) {
+                                                                                  if ((var2 ^ -1) != -243) {
                                                                                     if (var2 != 243) {
                                                                                       L5: {
-                                                                                        if (var2 == 244) {
+                                                                                        if ((var2 ^ -1) == -245) {
                                                                                           break L5;
                                                                                         } else {
-                                                                                          if (var2 != 246) {
+                                                                                          if ((var2 ^ -1) != -247) {
                                                                                             if (var2 != 245) {
                                                                                               if (var2 == 210) {
                                                                                                 break L5;
                                                                                               } else {
                                                                                                 if (211 != var2) {
-                                                                                                  if (var2 != 212) {
+                                                                                                  if ((var2 ^ -1) != -213) {
                                                                                                     if (214 == var2) {
                                                                                                       break L5;
                                                                                                     } else {
@@ -123,7 +125,7 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
                                                                                                           if (250 != var2) {
                                                                                                             if (var2 != 251) {
                                                                                                               L6: {
-                                                                                                                if (var2 == 252) {
+                                                                                                                if ((var2 ^ -1) == -253) {
                                                                                                                   break L6;
                                                                                                                 } else {
                                                                                                                   if (217 != var2) {
@@ -133,14 +135,14 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
                                                                                                                           break L6;
                                                                                                                         } else {
                                                                                                                           L7: {
-                                                                                                                            if (var2 == 231) {
+                                                                                                                            if ((var2 ^ -1) == -232) {
                                                                                                                               break L7;
                                                                                                                             } else {
-                                                                                                                              if (var2 == 199) {
+                                                                                                                              if ((var2 ^ -1) == -200) {
                                                                                                                                 break L7;
                                                                                                                               } else {
                                                                                                                                 if (255 != var2) {
-                                                                                                                                  if (var2 == 376) {
+                                                                                                                                  if (-377 == (var2 ^ -1)) {
                                                                                                                                     return 'y';
                                                                                                                                   } else {
                                                                                                                                     L8: {
@@ -286,15 +288,15 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
             if (var2 != 32) {
               if (160 != var2) {
                 if (var2 != 95) {
-                  if (var2 != 45) {
+                  if ((var2 ^ -1) != -46) {
                     if (var2 != 91) {
-                      if (var2 != 93) {
-                        if (var2 != 35) {
+                      if ((var2 ^ -1) != -94) {
+                        if ((var2 ^ -1) != -36) {
                           L10: {
                             if (var2 == 224) {
                               break L10;
                             } else {
-                              if (var2 != 225) {
+                              if ((var2 ^ -1) != -226) {
                                 if (var2 == 226) {
                                   break L10;
                                 } else {
@@ -307,59 +309,59 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
                                       if (var2 == 192) {
                                         break L10;
                                       } else {
-                                        if (var2 != 193) {
-                                          if (var2 == 194) {
+                                        if ((var2 ^ -1) != -194) {
+                                          if (-195 == (var2 ^ -1)) {
                                             break L10;
                                           } else {
-                                            if (var2 == 196) {
+                                            if (-197 == (var2 ^ -1)) {
                                               break L10;
                                             } else {
-                                              if (var2 == 195) {
+                                              if (-196 == (var2 ^ -1)) {
                                                 break L10;
                                               } else {
                                                 L11: {
-                                                  if (var2 != 232) {
+                                                  if (-233 != (var2 ^ -1)) {
                                                     if (var2 != 233) {
-                                                      if (var2 == 234) {
+                                                      if (-235 == (var2 ^ -1)) {
                                                         break L11;
                                                       } else {
                                                         if (var2 == 235) {
                                                           break L11;
                                                         } else {
-                                                          if (var2 != 200) {
-                                                            if (var2 == 201) {
+                                                          if ((var2 ^ -1) != -201) {
+                                                            if ((var2 ^ -1) == -202) {
                                                               break L11;
                                                             } else {
                                                               if (var2 == 202) {
                                                                 break L11;
                                                               } else {
-                                                                if (var2 != 203) {
+                                                                if ((var2 ^ -1) != -204) {
                                                                   L12: {
                                                                     if (237 == var2) {
                                                                       break L12;
                                                                     } else {
                                                                       if (238 != var2) {
-                                                                        if (var2 != 239) {
-                                                                          if (var2 == 205) {
+                                                                        if ((var2 ^ -1) != -240) {
+                                                                          if (-206 == (var2 ^ -1)) {
                                                                             break L12;
                                                                           } else {
                                                                             if (206 != var2) {
-                                                                              if (var2 == 207) {
+                                                                              if (-208 == (var2 ^ -1)) {
                                                                                 break L12;
                                                                               } else {
                                                                                 L13: {
-                                                                                  if (var2 != 242) {
+                                                                                  if ((var2 ^ -1) != -243) {
                                                                                     if (var2 != 243) {
-                                                                                      if (var2 == 244) {
+                                                                                      if ((var2 ^ -1) == -245) {
                                                                                         break L13;
                                                                                       } else {
-                                                                                        if (var2 != 246) {
+                                                                                        if ((var2 ^ -1) != -247) {
                                                                                           if (var2 != 245) {
                                                                                             if (var2 == 210) {
                                                                                               break L13;
                                                                                             } else {
                                                                                               if (211 != var2) {
-                                                                                                if (var2 != 212) {
+                                                                                                if ((var2 ^ -1) != -213) {
                                                                                                   if (214 == var2) {
                                                                                                     break L13;
                                                                                                   } else {
@@ -370,7 +372,7 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
                                                                                                         if (var2 != 249) {
                                                                                                           if (250 != var2) {
                                                                                                             if (var2 != 251) {
-                                                                                                              if (var2 == 252) {
+                                                                                                              if ((var2 ^ -1) == -253) {
                                                                                                                 break L14;
                                                                                                               } else {
                                                                                                                 if (217 != var2) {
@@ -380,14 +382,14 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
                                                                                                                         break L14;
                                                                                                                       } else {
                                                                                                                         L15: {
-                                                                                                                          if (var2 == 231) {
+                                                                                                                          if ((var2 ^ -1) == -232) {
                                                                                                                             break L15;
                                                                                                                           } else {
-                                                                                                                            if (var2 == 199) {
+                                                                                                                            if ((var2 ^ -1) == -200) {
                                                                                                                               break L15;
                                                                                                                             } else {
                                                                                                                               if (255 != var2) {
-                                                                                                                                if (var2 == 376) {
+                                                                                                                                if (-377 == (var2 ^ -1)) {
                                                                                                                                   return 'y';
                                                                                                                                 } else {
                                                                                                                                   L16: {
@@ -539,51 +541,55 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            ((tk) this).field_g = param0;
-            param0.setDimensions(((tk) this).field_d, ((tk) this).field_e);
+            this.field_g = param0;
+            param0.setDimensions(this.field_d, this.field_e);
             param0.setProperties((Hashtable) null);
-            param0.setColorModel(((tk) this).field_j);
+            param0.setColorModel(this.field_j);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "tk.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "tk.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final synchronized void c(int param0) {
+        boolean discarded$4 = false;
         if (param0 <= 78) {
-            Object var3 = null;
-            boolean discarded$4 = ((tk) this).isConsumer((java.awt.image.ImageConsumer) null);
-            if (!(((tk) this).field_g != null)) {
+            java.awt.image.ImageConsumer var3 = (java.awt.image.ImageConsumer) null;
+            discarded$4 = this.isConsumer((java.awt.image.ImageConsumer) null);
+            if (!(this.field_g != null)) {
                 return;
             }
-            ((tk) this).field_g.setPixels(0, 0, ((tk) this).field_d, ((tk) this).field_e, ((tk) this).field_j, ((tk) this).field_c, 0, ((tk) this).field_d);
-            ((tk) this).field_g.imageComplete(2);
+            this.field_g.setPixels(0, 0, this.field_d, this.field_e, this.field_j, this.field_c, 0, this.field_d);
+            this.field_g.imageComplete(2);
             return;
         }
-        if (!(((tk) this).field_g != null)) {
+        if (!(this.field_g != null)) {
             return;
         }
-        ((tk) this).field_g.setPixels(0, 0, ((tk) this).field_d, ((tk) this).field_e, ((tk) this).field_j, ((tk) this).field_c, 0, ((tk) this).field_d);
-        ((tk) this).field_g.imageComplete(2);
+        this.field_g.setPixels(0, 0, this.field_d, this.field_e, this.field_j, this.field_c, 0, this.field_d);
+        this.field_g.imageComplete(2);
     }
 
     final void a(int param0, int param1, java.awt.Component param2, int param3) {
+        boolean discarded$0 = false;
+        boolean discarded$1 = false;
+        boolean discarded$2 = false;
         try {
-            ((tk) this).field_c = new int[1 + param1 * param3];
-            ((tk) this).field_e = param3;
-            ((tk) this).field_d = param1;
-            ((tk) this).field_j = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-            ((tk) this).field_b = param2.createImage((java.awt.image.ImageProducer) this);
+            this.field_c = new int[1 + param1 * param3];
+            this.field_e = param3;
+            this.field_d = param1;
+            this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+            this.field_b = param2.createImage((java.awt.image.ImageProducer) (this));
             int var5_int = -79 % ((50 - param0) / 32);
             this.c(110);
-            boolean discarded$0 = param2.prepareImage(((tk) this).field_b, (java.awt.image.ImageObserver) this);
+            discarded$0 = param2.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
             this.c(108);
-            boolean discarded$1 = param2.prepareImage(((tk) this).field_b, (java.awt.image.ImageObserver) this);
+            discarded$1 = param2.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
             this.c(79);
-            boolean discarded$2 = param2.prepareImage(((tk) this).field_b, (java.awt.image.ImageObserver) this);
-            ((tk) this).a(6945);
+            discarded$2 = param2.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
+            this.a(6945);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "tk.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "tk.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -608,10 +614,10 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             L1: {
-              if (((tk) this).field_g != param0) {
+              if (this.field_g != param0) {
                 break L1;
               } else {
-                ((tk) this).field_g = null;
+                this.field_g = null;
                 break L1;
               }
             }
@@ -621,23 +627,23 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("tk.removeConsumer(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -645,15 +651,15 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
         try {
-            ((tk) this).addConsumer(param0);
+            this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "tk.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "tk.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -661,13 +667,18 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
-        return ((tk) this).field_g == param0;
+        return this.field_g == param0;
     }
 
     public static void a(byte param0) {
         field_k = null;
         field_i = null;
         field_l = null;
+        if (param0 > -123) {
+            field_k = (mk) null;
+            field_h = null;
+            return;
+        }
         field_h = null;
     }
 
@@ -701,23 +712,23 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var7;
+            stackOut_2_0 = (RuntimeException) (var7);
             stackOut_2_1 = new StringBuilder().append("tk.imageUpdate(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -725,16 +736,12 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new mk();
     }
 }

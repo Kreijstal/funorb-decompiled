@@ -11,6 +11,7 @@ final class e {
     static int field_e;
 
     final static String b(int param0) {
+        String discarded$6 = null;
         if (param0 == -1) {
           if (!wk.field_c) {
             if (pc.field_g <= ki.field_v) {
@@ -26,7 +27,7 @@ final class e {
             return null;
           }
         } else {
-          String discarded$6 = e.b(31);
+          discarded$6 = e.b(31);
           if (!wk.field_c) {
             if (pc.field_g <= ki.field_v) {
               if (pc.field_g + ul.field_D <= ki.field_v) {
@@ -45,6 +46,9 @@ final class e {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != 186) {
+            return;
+        }
         field_g = null;
         field_a = null;
         field_f = null;
@@ -52,10 +56,6 @@ final class e {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
         field_g = new pb[16];
         field_f = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};

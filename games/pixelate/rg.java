@@ -32,6 +32,9 @@ abstract class rg {
         int var2_int = qa.field_f.field_a;
         int var3 = qa.field_f.field_i;
         int var4 = jm.field_h.field_Db.a(param0, 272, jm.field_h.field_mb);
+        if (param1) {
+            return;
+        }
         try {
             var5 = -(var4 / 2) + -110 + var3 / 2 + 7;
             nc.field_e.a(var5, -(var5 * 2) + (-120 + var3), (-320 + var2_int) / 2, 256, 320);
@@ -39,7 +42,7 @@ abstract class rg {
             jm.field_h.a(16, -24 + nc.field_e.field_nb + -20, 24, 256, -24 + (nc.field_e.field_K + -24));
             hk.field_h.a(-24 + (nc.field_e.field_nb - 20), 24, 120, 256, 80);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "rg.H(" + (param0 != null ? "{...}" : "null") + ',' + false + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "rg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -48,13 +51,9 @@ abstract class rg {
     abstract ea b(int param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new String[3];
         field_c = new bb();
         field_b = null;
-        field_d = new byte[]{(byte) 3, (byte) 3};
+        field_d = new byte[]{(byte)3, (byte)3};
     }
 }

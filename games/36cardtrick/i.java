@@ -15,13 +15,13 @@ final class i {
         var4 = Main.field_T;
         try {
           L0: {
-            var1 = (Object) (Object) sj.field_d;
+            var1 = sj.field_d;
             synchronized (var1) {
               L1: {
                 L2: {
                   ab.field_t = ce.field_b;
                   mh.field_b = mh.field_b + 1;
-                  if (bg.field_rb >= 0) {
+                  if (-1 >= (bg.field_rb ^ -1)) {
                     L3: while (true) {
                       if (bg.field_rb == be.field_b) {
                         break L2;
@@ -32,7 +32,7 @@ final class i {
                           ge.field_c[var2] = true;
                           continue L3;
                         } else {
-                          ge.field_c[~var2] = false;
+                          ge.field_c[var2 ^ -1] = false;
                           continue L3;
                         }
                       }
@@ -55,25 +55,30 @@ final class i {
                 break L1;
               }
             }
-            break L0;
+            if (param0 < -123) {
+              break L0;
+            } else {
+              field_a = (ak) null;
+              return;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1_ref, "i.A(" + -125 + ')');
+          throw ma.a((Throwable) ((Object) var1_ref), "i.A(" + param0 + ')');
         }
     }
 
     public static void b(int param0) {
         field_a = null;
         field_b = null;
+        if (param0 >= 40) {
+            return;
+        }
+        field_a = (ak) null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "This password is part of your Player Name, and would be easy to guess";
     }
 }

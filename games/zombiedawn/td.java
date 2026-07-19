@@ -16,13 +16,18 @@ final class td {
         var3 = ZombieDawn.field_J;
         try {
           L0: {
-            var4 = (nn) (Object) ro.field_a.b((byte) 26);
+            var4 = (nn) ((Object) ro.field_a.b((byte) 26));
             L1: while (true) {
               if (var4 == null) {
-                break L0;
+                if (param1 <= -62) {
+                  break L0;
+                } else {
+                  field_b = (af) null;
+                  return;
+                }
               } else {
-                pi.a((byte) 25, 2, var4);
-                var4 = (nn) (Object) ro.field_a.a(false);
+                pi.a((byte) 25, param0, var4);
+                var4 = (nn) ((Object) ro.field_a.a(false));
                 continue L1;
               }
             }
@@ -30,7 +35,7 @@ final class td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2, "td.A(" + 2 + ',' + -95 + ')');
+          throw sh.a((Throwable) ((Object) var2), "td.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -58,10 +63,6 @@ final class td {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new af();
         field_c = new vo();
         field_d = 50;

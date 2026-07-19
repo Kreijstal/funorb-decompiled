@@ -44,6 +44,9 @@ final class wma {
     short[] field_G;
 
     public static void b(int param0) {
+        if (param0 < 94) {
+            field_M = (String) null;
+        }
         field_M = null;
     }
 
@@ -60,11 +63,11 @@ final class wma {
         int var11 = 0;
         int var12 = 0;
         var12 = VoidHunters.field_G;
-        if (((wma) this).field_F) {
+        if (this.field_F) {
           return;
         } else {
           L0: {
-            ((wma) this).field_F = true;
+            this.field_F = true;
             var2 = 32767;
             var3 = 32767;
             var4 = 32767;
@@ -72,7 +75,7 @@ final class wma {
             if (param0 > 75) {
               break L0;
             } else {
-              ((wma) this).field_p = null;
+              this.field_p = (short[]) null;
               break L0;
             }
           }
@@ -80,18 +83,18 @@ final class wma {
           var7 = -32768;
           var8 = 0;
           L1: while (true) {
-            if (((wma) this).field_J <= var8) {
-              ((wma) this).field_B = var5;
-              ((wma) this).field_q = var7;
-              ((wma) this).field_u = var3;
-              ((wma) this).field_s = var4;
-              ((wma) this).field_a = var6;
-              ((wma) this).field_d = var2;
+            if (this.field_J <= var8) {
+              this.field_B = var5;
+              this.field_q = var7;
+              this.field_u = var3;
+              this.field_s = var4;
+              this.field_a = var6;
+              this.field_d = var2;
               return;
             } else {
               L2: {
-                var9 = ((wma) this).field_r[var8];
-                var10 = ((wma) this).field_o[var8];
+                var9 = this.field_r[var8];
+                var10 = this.field_o[var8];
                 if (var10 <= var6) {
                   break L2;
                 } else {
@@ -116,7 +119,7 @@ final class wma {
                 }
               }
               L5: {
-                var11 = ((wma) this).field_p[var8];
+                var11 = this.field_p[var8];
                 if (var2 > var9) {
                   var2 = var9;
                   break L5;
@@ -151,19 +154,19 @@ final class wma {
         if (param0 != -21227) {
             return;
         }
-        while (var6 < ((wma) this).field_J) {
-            ((wma) this).field_r[var6] = (short)(param3 * ((wma) this).field_r[var6] / param4);
-            ((wma) this).field_o[var6] = (short)(((wma) this).field_o[var6] * param2 / param4);
-            ((wma) this).field_p[var6] = (short)(((wma) this).field_p[var6] * param1 / param4);
+        while (var6 < this.field_J) {
+            this.field_r[var6] = (short)(param3 * this.field_r[var6] / param4);
+            this.field_o[var6] = (short)(this.field_o[var6] * param2 / param4);
+            this.field_p[var6] = (short)(this.field_p[var6] * param1 / param4);
             var6++;
         }
         this.a((byte) -61);
     }
 
     private final void a(byte param0) {
-        ((wma) this).field_F = false;
+        this.field_F = false;
         if (param0 > -21) {
-            ((wma) this).field_B = -74;
+            this.field_B = -74;
         }
     }
 
@@ -171,24 +174,20 @@ final class wma {
         int var6 = 0;
         int var7 = VoidHunters.field_G;
         int var5 = -12 / ((param0 - 49) / 52);
-        for (var6 = 0; ((wma) this).field_J > var6; var6++) {
-            ((wma) this).field_r[var6] = (short)(((wma) this).field_r[var6] + param2);
-            ((wma) this).field_o[var6] = (short)(((wma) this).field_o[var6] + param3);
-            ((wma) this).field_p[var6] = (short)(((wma) this).field_p[var6] + param1);
+        for (var6 = 0; this.field_J > var6; var6++) {
+            this.field_r[var6] = (short)(this.field_r[var6] + param2);
+            this.field_o[var6] = (short)(this.field_o[var6] + param3);
+            this.field_p[var6] = (short)(this.field_p[var6] + param1);
         }
         this.a((byte) -103);
     }
 
     wma() {
-        ((wma) this).field_F = false;
-        ((wma) this).field_z = (byte) 0;
+        this.field_F = false;
+        this.field_z = (byte) 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_M = "If you do nothing the game will revert to normal view in <%0> second.";
     }
 }

@@ -16,57 +16,100 @@ abstract class of {
 
     public static void a(byte param0) {
         field_b = null;
-        field_f = (byte[][]) null;
-        field_g = null;
-        field_a = null;
+        if (param0 <= 88) {
+          field_g = (String) null;
+          field_f = (byte[][]) null;
+          field_g = null;
+          field_a = null;
+          return;
+        } else {
+          field_f = (byte[][]) null;
+          field_g = null;
+          field_a = null;
+          return;
+        }
     }
 
     abstract int a(int param0, int param1);
 
     final static void a(int param0) {
         bb.field_f = bb.field_f + 1;
-        jg.field_g = jg.field_g + 1;
-        if (bb.field_f < 131072) {
-          if (jg.field_g > 255) {
-            if (sl.field_f > 20) {
-              jm.field_p = jm.field_p + 1;
-              jg.field_g = 0;
-              sl.field_f = 0;
-              if (mc.field_b.length > jm.field_p) {
-                return;
+        if (param0 == 0) {
+          jg.field_g = jg.field_g + 1;
+          if (bb.field_f < 131072) {
+            if (jg.field_g > 255) {
+              if (-21 > (sl.field_f ^ -1)) {
+                jm.field_p = jm.field_p + 1;
+                jg.field_g = 0;
+                sl.field_f = 0;
+                if (mc.field_b.length > jm.field_p) {
+                  return;
+                } else {
+                  jm.field_p = 0;
+                  return;
+                }
               } else {
-                jm.field_p = 0;
-                return;
+                sl.field_f = sl.field_f + 1;
+                jg.field_g = 255;
+                if (!client.field_A) {
+                  return;
+                } else {
+                  L0: {
+                    jm.field_p = jm.field_p + 1;
+                    jg.field_g = 0;
+                    sl.field_f = 0;
+                    if (mc.field_b.length <= jm.field_p) {
+                      jm.field_p = 0;
+                      break L0;
+                    } else {
+                      break L0;
+                    }
+                  }
+                  return;
+                }
               }
             } else {
-              sl.field_f = sl.field_f + 1;
-              jg.field_g = 255;
               return;
             }
           } else {
-            return;
+            bb.field_f = 0;
+            if (jg.field_g > 255) {
+              if (-21 <= (sl.field_f ^ -1)) {
+                sl.field_f = sl.field_f + 1;
+                jg.field_g = 255;
+                if (client.field_A) {
+                  jm.field_p = jm.field_p + 1;
+                  jg.field_g = 0;
+                  sl.field_f = 0;
+                  if (mc.field_b.length > jm.field_p) {
+                    return;
+                  } else {
+                    jm.field_p = 0;
+                    return;
+                  }
+                } else {
+                  return;
+                }
+              } else {
+                L1: {
+                  jm.field_p = jm.field_p + 1;
+                  jg.field_g = 0;
+                  sl.field_f = 0;
+                  if (mc.field_b.length <= jm.field_p) {
+                    jm.field_p = 0;
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                }
+                return;
+              }
+            } else {
+              return;
+            }
           }
         } else {
-          bb.field_f = 0;
-          if (jg.field_g > 255) {
-            if (sl.field_f > 20) {
-              jm.field_p = jm.field_p + 1;
-              jg.field_g = 0;
-              sl.field_f = 0;
-              if (mc.field_b.length > jm.field_p) {
-                return;
-              } else {
-                jm.field_p = 0;
-                return;
-              }
-            } else {
-              sl.field_f = sl.field_f + 1;
-              jg.field_g = 255;
-              return;
-            }
-          } else {
-            return;
-          }
+          return;
         }
     }
 
@@ -83,29 +126,44 @@ abstract class of {
           L0: {
             var4 = (ki) ((Object) cg.field_c.c((byte) -112));
             L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  if (!param0) {
-                    break L2;
+              L2: {
+                L3: {
+                  if (var4 == null) {
+                    break L3;
                   } else {
-                    of.a(true, -48);
-                    break L2;
+                    kk.a(param1, -15016, var4);
+                    var4 = (ki) ((Object) cg.field_c.d(true));
+                    if (var3 != 0) {
+                      break L2;
+                    } else {
+                      if (var3 == 0) {
+                        continue L1;
+                      } else {
+                        break L3;
+                      }
+                    }
                   }
                 }
-                var2 = rc.field_e.c((byte) 109);
-                L3: while (true) {
-                  if (var2 == null) {
-                    break L0;
+                if (!param0) {
+                  break L2;
+                } else {
+                  of.a(true, -48);
+                  break L2;
+                }
+              }
+              var2 = rc.field_e.c((byte) 109);
+              L4: while (true) {
+                if (var2 == null) {
+                  break L0;
+                } else {
+                  gm.b(param1, 47);
+                  var2 = rc.field_e.d(true);
+                  if (var3 == 0) {
+                    continue L4;
                   } else {
-                    gm.b(param1, 47);
-                    var2 = rc.field_e.d(true);
-                    continue L3;
+                    return;
                   }
                 }
-              } else {
-                kk.a(param1, -15016, var4);
-                var4 = (ki) ((Object) cg.field_c.d(true));
-                continue L1;
               }
             }
           }

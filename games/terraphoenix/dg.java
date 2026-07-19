@@ -16,44 +16,105 @@ final class dg {
         if (le.field_r != null) {
             return le.field_r;
         }
-        dg.b(false);
-        return (java.applet.Applet) (Object) gm.field_f;
+        if (param0) {
+            dg.b(false);
+            return (java.applet.Applet) ((Object) gm.field_f);
+        }
+        return (java.applet.Applet) ((Object) gm.field_f);
     }
 
     public static void b(boolean param0) {
-        field_e = null;
-        field_a = null;
-        field_c = null;
+        java.applet.Applet discarded$2 = null;
+        if (!param0) {
+          discarded$2 = dg.a(false);
+          field_e = (byte[][]) null;
+          field_a = null;
+          field_c = null;
+          return;
+        } else {
+          field_e = (byte[][]) null;
+          field_a = null;
+          field_c = null;
+          return;
+        }
     }
 
     final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
         int var4 = 0;
-        var4 = 0;
-        if (param0) {
-          L0: {
-            var4 += 4;
-            if (param1) {
-              var4 += 2;
-              break L0;
+        if (param2 == -76) {
+          var4 = 0;
+          if (!param0) {
+            L0: {
+              if (param1) {
+                var4 += 2;
+                break L0;
+              } else {
+                break L0;
+              }
+            }
+            if (param3) {
+              var4++;
+              return ug.field_a[var4];
             } else {
-              break L0;
+              return ug.field_a[var4];
+            }
+          } else {
+            L1: {
+              var4 += 4;
+              if (param1) {
+                var4 += 2;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            if (param3) {
+              var4++;
+              return ug.field_a[var4];
+            } else {
+              return ug.field_a[var4];
             }
           }
-          return ug.field_a[var4];
         } else {
-          L1: {
-            if (param1) {
-              var4 += 2;
-              break L1;
+          field_c = (im) null;
+          var4 = 0;
+          if (param0) {
+            L2: {
+              var4 += 4;
+              if (param1) {
+                var4 += 2;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            if (!param3) {
+              return ug.field_a[var4];
             } else {
-              break L1;
+              var4++;
+              return ug.field_a[var4];
+            }
+          } else {
+            L3: {
+              if (param1) {
+                var4 += 2;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            if (param3) {
+              var4++;
+              return ug.field_a[var4];
+            } else {
+              return ug.field_a[var4];
             }
           }
-          return ug.field_a[var4];
         }
     }
 
     final static void a(int param0) {
+        int fieldTemp$5 = 0;
         uc var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -62,33 +123,37 @@ final class dg {
         var3 = Terraphoenix.field_V;
         try {
           L0: {
-            var1 = di.field_l;
-            L1: while (true) {
+            L1: {
+              var1 = di.field_l;
+              if (param0 >= 37) {
+                break L1;
+              } else {
+                field_c = (im) null;
+                break L1;
+              }
+            }
+            L2: while (true) {
               if (!b.a((byte) -102)) {
                 break L0;
               } else {
                 var1.k(-17410, 8);
-                int fieldTemp$5 = var1.field_k + 1;
+                fieldTemp$5 = var1.field_k + 1;
                 var1.field_k = var1.field_k + 1;
                 var2 = fieldTemp$5;
                 ql.a(-124, var1);
                 di.field_l.j(var1.field_k + -var2, -119);
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var1_ref, "dg.A(" + 81 + ')');
+          throw qk.a((Throwable) ((Object) var1_ref), "dg.A(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = false;
         field_e = new byte[50][];
         field_c = new im();

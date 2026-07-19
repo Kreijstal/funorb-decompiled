@@ -17,15 +17,15 @@ final class wc extends id {
 
     final static uj b(int param0, int param1) {
         wj var2 = new wj(param1);
-        var2.field_m.g(-1);
-        fd.field_M.a((br) (Object) var2, false);
+        var2.field_m.g(param0);
+        fd.field_M.a(var2, false);
         return var2.field_m;
     }
 
     final static void i(int param0) {
-        RuntimeException var1 = null;
+        dm var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
-        dm var3 = null;
         RuntimeException decompiledCaughtException = null;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -65,35 +65,64 @@ final class wc extends id {
             L4: {
               kp.field_o = null;
               if (hq.field_c != null) {
-                var3 = (dm) (Object) hq.field_c.a((byte) 7);
+                var1 = (dm) ((Object) hq.field_c.a((byte) 7));
                 L5: while (true) {
-                  if (var3 == null) {
-                    hq.field_c = null;
-                    break L4;
-                  } else {
-                    var3.a(-4564);
-                    var3 = (dm) (Object) hq.field_c.c((byte) 97);
-                    continue L5;
+                  L6: {
+                    if (var1 == null) {
+                      break L6;
+                    } else {
+                      var1.a(param0 ^ 32692);
+                      var1 = (dm) ((Object) hq.field_c.c((byte) 97));
+                      if (var2 != 0) {
+                        break L4;
+                      } else {
+                        if (var2 == 0) {
+                          continue L5;
+                        } else {
+                          break L6;
+                        }
+                      }
+                    }
                   }
+                  hq.field_c = null;
+                  break L4;
                 }
               } else {
                 break L4;
+              }
+            }
+            L7: {
+              if (param0 == -28264) {
+                break L7;
+              } else {
+                field_M = (ja[]) null;
+                break L7;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1, "wc.L(" + -28264 + ')');
+          var1_ref = decompiledCaughtException;
+          throw fa.a((Throwable) ((Object) var1_ref), "wc.L(" + param0 + ')');
         }
     }
 
     public static void g(byte param0) {
-        field_H = null;
-        field_M = null;
-        field_K = null;
-        field_G = null;
+        if (param0 != -66) {
+          wc.a(62, false);
+          field_H = null;
+          field_M = null;
+          field_K = null;
+          field_G = null;
+          return;
+        } else {
+          field_H = null;
+          field_M = null;
+          field_K = null;
+          field_G = null;
+          return;
+        }
     }
 
     final static void a(int param0, boolean param1) {
@@ -320,7 +349,7 @@ final class wc extends id {
         int stackOut_5_2 = 0;
         hi.h(2);
         if (null != mh.field_c) {
-          if (-3 == mh.field_c.field_cc) {
+          if (-3 == (mh.field_c.field_cc ^ -1)) {
             var2 = 1;
             stackOut_135_0 = 1;
             stackIn_151_0 = stackOut_135_0;
@@ -501,7 +530,7 @@ final class wc extends id {
               return;
             }
           } else {
-            if (-5 == mh.field_c.field_cc) {
+            if (-5 == (mh.field_c.field_cc ^ -1)) {
               var2 = 1;
               stackOut_91_0 = 1;
               stackIn_107_0 = stackOut_91_0;
@@ -1048,32 +1077,63 @@ final class wc extends id {
 
     final void f(byte param0) {
         if (param0 < -79) {
-          if (0 < ((wc) this).field_F) {
-            ((wc) this).field_F = ((wc) this).field_F - 7;
-            ((wc) this).field_E = ((wc) this).field_E - 131072;
-            if (0 <= ((wc) this).field_F) {
+          if (0 < this.field_F) {
+            this.field_F = this.field_F - 7;
+            this.field_E = this.field_E - 131072;
+            if (0 <= this.field_F) {
               return;
             } else {
-              ((wc) this).field_F = 0;
+              this.field_F = 0;
               return;
             }
           } else {
-            ((wc) this).a(true);
-            return;
+            this.a(true);
+            if (ZombieDawnMulti.field_E) {
+              L0: {
+                this.field_F = this.field_F - 7;
+                this.field_E = this.field_E - 131072;
+                if (0 > this.field_F) {
+                  this.field_F = 0;
+                  break L0;
+                } else {
+                  break L0;
+                }
+              }
+              return;
+            } else {
+              return;
+            }
           }
         } else {
           wc.a(8, false);
-          if (0 < ((wc) this).field_F) {
-            ((wc) this).field_F = ((wc) this).field_F - 7;
-            ((wc) this).field_E = ((wc) this).field_E - 131072;
-            if (0 <= ((wc) this).field_F) {
+          if (0 >= this.field_F) {
+            this.a(true);
+            if (!ZombieDawnMulti.field_E) {
               return;
             } else {
-              ((wc) this).field_F = 0;
+              L1: {
+                this.field_F = this.field_F - 7;
+                this.field_E = this.field_E - 131072;
+                if (0 > this.field_F) {
+                  this.field_F = 0;
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
               return;
             }
           } else {
-            ((wc) this).a(true);
+            L2: {
+              this.field_F = this.field_F - 7;
+              this.field_E = this.field_E - 131072;
+              if (0 > this.field_F) {
+                this.field_F = 0;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
             return;
           }
         }
@@ -1084,86 +1144,96 @@ final class wc extends id {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
         String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
-              var3_int = param1.c(((wc) this).g(param0 ^ -10199), -20126);
-              var4 = param1.d(((wc) this).h(-109), 116);
-              ah.field_e.a(((wc) this).field_P, var3_int, var4, 3, -1, ((wc) this).field_F);
-              if (null != ((wc) this).field_R) {
-                if (((wc) this).field_R.k()) {
-                  ((wc) this).field_R = null;
-                  ((wc) this).field_L = null;
-                  break L1;
-                } else {
-                  var5 = sd.b(125, var4, var3_int);
-                  ((wc) this).field_R.h(var5);
-                  if (((wc) this).field_L == null) {
-                    break L1;
+              var3_int = param1.c(this.g(param0 ^ -10199), -20126);
+              var4 = param1.d(this.h(-109), 116);
+              ah.field_e.a(this.field_P, var3_int, var4, 3, -1, this.field_F);
+              if (null != this.field_R) {
+                L2: {
+                  if (this.field_R.k()) {
+                    break L2;
                   } else {
-                    ((wc) this).field_L.h(var5);
-                    break L1;
+                    L3: {
+                      var5 = sd.b(125, var4, var3_int);
+                      this.field_R.h(var5);
+                      if (this.field_L == null) {
+                        break L3;
+                      } else {
+                        this.field_L.h(var5);
+                        break L3;
+                      }
+                    }
+                    if (!ZombieDawnMulti.field_E) {
+                      break L1;
+                    } else {
+                      break L2;
+                    }
                   }
                 }
+                this.field_R = null;
+                this.field_L = null;
+                break L1;
               } else {
                 break L1;
               }
             }
-            L2: {
+            L4: {
               if (param0 == -10136) {
-                break L2;
+                break L4;
               } else {
-                field_H = null;
-                break L2;
+                field_H = (cj) null;
+                break L4;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L5: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("wc.H(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackOut_10_0 = (RuntimeException) (var3);
+            stackOut_10_1 = new StringBuilder().append("wc.H(").append(param0).append(',');
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L3;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L5;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L3;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L5;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 
@@ -1176,20 +1246,16 @@ final class wc extends id {
 
     wc(int param0, int param1, int param2, boolean param3) {
         super(param0, param1, 0);
-        ((wc) this).field_R = null;
-        ((wc) this).field_L = null;
-        ((wc) this).field_P = Integer.toString(param2);
-        ((wc) this).field_F = 255;
+        this.field_R = null;
+        this.field_L = null;
+        this.field_P = Integer.toString(param2);
+        this.field_F = 255;
         if (!param3) {
-            ((wc) this).field_R = nm.b(-128, 55);
+            this.field_R = nm.b(-128, 55);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_J = false;
         field_I = '/';
         field_K = null;

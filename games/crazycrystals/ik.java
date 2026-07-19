@@ -11,6 +11,8 @@ abstract class ik {
     static String field_f;
 
     final static String[] a(String param0, byte param1, char param2) {
+        String[] discarded$4 = null;
+        int incrementValue$5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;
@@ -19,7 +21,7 @@ abstract class ik {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        Object var10 = null;
+        String var10 = null;
         CharSequence var11 = null;
         String[] stackIn_10_0 = null;
         RuntimeException stackIn_12_0 = null;
@@ -42,7 +44,7 @@ abstract class ik {
         var9 = CrazyCrystals.field_B;
         try {
           L0: {
-            var11 = (CharSequence) (Object) param0;
+            var11 = (CharSequence) ((Object) param0);
             var3_int = lp.a(var11, (byte) -40, param2);
             var4 = new String[var3_int + 1];
             var5 = 0;
@@ -54,20 +56,20 @@ abstract class ik {
                   if (param1 == -76) {
                     break L2;
                   } else {
-                    var10 = null;
-                    String[] discarded$4 = ik.a((String) null, (byte) 127, 'ﾸ');
+                    var10 = (String) null;
+                    discarded$4 = ik.a((String) null, (byte) 127, 'ﾸ');
                     break L2;
                   }
                 }
                 var4[var3_int] = param0.substring(var6);
-                stackOut_9_0 = (String[]) var4;
+                stackOut_9_0 = (String[]) (var4);
                 stackIn_10_0 = stackOut_9_0;
                 break L0;
               } else {
                 var8 = var6;
                 L3: while (true) {
                   if (param2 == param0.charAt(var8)) {
-                    int incrementValue$5 = var5;
+                    incrementValue$5 = var5;
                     var5++;
                     var4[incrementValue$5] = param0.substring(var6, var8);
                     var6 = var8 - -1;
@@ -85,23 +87,23 @@ abstract class ik {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_0 = (RuntimeException) (var3);
             stackOut_11_1 = new StringBuilder().append("ik.G(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -109,7 +111,7 @@ abstract class ik {
               break L4;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_10_0;
     }
@@ -121,16 +123,16 @@ abstract class ik {
         if (param0 == 0) {
           L0: {
             L1: {
-              if (qh.field_i < ((ik) this).field_a) {
+              if (qh.field_i < this.field_a) {
                 break L1;
               } else {
-                if (qh.field_i >= ((ik) this).field_a + ((ik) this).field_b) {
+                if (qh.field_i >= this.field_a + this.field_b) {
                   break L1;
                 } else {
-                  if (bm.field_h < ((ik) this).field_d) {
+                  if (bm.field_h < this.field_d) {
                     break L1;
                   } else {
-                    if (bm.field_h >= ((ik) this).field_c + ((ik) this).field_d) {
+                    if (bm.field_h >= this.field_c + this.field_d) {
                       break L1;
                     } else {
                       stackOut_6_0 = 1;
@@ -159,22 +161,22 @@ abstract class ik {
           if (param0 < -59) {
             break L0;
           } else {
-            ((ik) this).a(false, -29, -81);
+            this.a(false, -29, -81);
             break L0;
           }
         }
         L1: {
           L2: {
-            if (((ik) this).field_a > to.field_a) {
+            if (this.field_a > to.field_a) {
               break L2;
             } else {
-              if (to.field_a >= ((ik) this).field_b + ((ik) this).field_a) {
+              if (to.field_a >= this.field_b + this.field_a) {
                 break L2;
               } else {
-                if (dp.field_h < ((ik) this).field_d) {
+                if (dp.field_h < this.field_d) {
                   break L2;
                 } else {
-                  if (((ik) this).field_d + ((ik) this).field_c <= dp.field_h) {
+                  if (this.field_d + this.field_c <= dp.field_h) {
                     break L2;
                   } else {
                     stackOut_6_0 = 1;
@@ -195,15 +197,14 @@ abstract class ik {
     abstract void a(boolean param0, int param1, int param2);
 
     public static void a(byte param0) {
+        if (param0 <= 99) {
+            field_e = -126;
+        }
         field_f = null;
         field_g = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "To server list";
     }
 }

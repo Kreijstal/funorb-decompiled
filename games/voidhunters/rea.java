@@ -7,7 +7,7 @@ final class rea extends uj {
 
     public static void d(int param0) {
         if (param0 < 56) {
-            field_d = null;
+            field_d = (String) null;
             field_d = null;
             field_e = null;
             return;
@@ -26,7 +26,7 @@ final class rea extends uj {
 
     final int d(byte param0) {
         if (param0 != 64) {
-            field_d = null;
+            field_d = (String) null;
             return oq.field_t;
         }
         return oq.field_t;
@@ -37,7 +37,7 @@ final class rea extends uj {
 
     final boolean a(boolean param0) {
         if (param0) {
-            field_d = null;
+            field_d = (String) null;
             return false;
         }
         return false;
@@ -45,17 +45,13 @@ final class rea extends uj {
 
     final int b(byte param0) {
         if (param0 < 79) {
-            field_d = null;
+            field_d = (String) null;
             return 103;
         }
         return 103;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new String[16];
     }
 }

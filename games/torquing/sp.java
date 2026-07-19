@@ -11,36 +11,40 @@ final class sp extends im {
     private String field_N;
 
     final void h(byte param0) {
-        ((sp) this).field_T.field_M = false;
-        ((sp) this).field_O = true;
+        this.field_T.field_M = false;
+        this.field_O = true;
         if (param0 >= 59) {
             return;
         }
-        ((sp) this).h((byte) -28);
+        this.h((byte) -28);
     }
 
     sp(ln param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
-            ((sp) this).field_N = param1;
-            if (((sp) this).field_N != null) {
-                var3_int = pe.field_E.a(((sp) this).field_N, 260, pe.field_E.field_x);
-                ((sp) this).a(300, (byte) -25, 150 + var3_int);
+            this.field_N = param1;
+            if (this.field_N != null) {
+                var3_int = pe.field_E.a(this.field_N, 260, pe.field_E.field_x);
+                this.a(300, (byte) -25, 150 + var3_int);
             }
-            ((sp) this).field_T = new kf(13, 50, 274, 30, 15, 2113632, 4210752);
-            ((sp) this).field_T.field_M = true;
-            ((sp) this).field_O = false;
-            ((sp) this).field_P = false;
-            ((sp) this).a((gm) (Object) ((sp) this).field_T, -6938);
+            this.field_T = new kf(13, 50, 274, 30, 15, 2113632, 4210752);
+            this.field_T.field_M = true;
+            this.field_O = false;
+            this.field_P = false;
+            this.a(this.field_T, -6938);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "sp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "sp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void m(int param0) {
         field_R = null;
         field_Q = null;
+        if (param0 == -7361) {
+            return;
+        }
+        field_R = (uc) null;
     }
 
     final void a(boolean param0, int param1, String param2, float param3) {
@@ -88,12 +92,12 @@ final class sp extends im {
               if (param1 > 51) {
                 break L1;
               } else {
-                ((sp) this).field_S = null;
+                this.field_S = (String) null;
                 break L1;
               }
             }
             L2: {
-              if (((sp) this).field_P) {
+              if (this.field_P) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
@@ -141,27 +145,27 @@ final class sp extends im {
                 }
               }
               L5: {
-                ((sp) this).field_P = stackIn_13_1 != 0;
-                if (((sp) this).field_P) {
-                  ((sp) this).field_T.c(4210752, 8405024, (byte) 125);
-                  ((sp) this).field_T.field_M = true;
+                ((sp) (this)).field_P = stackIn_13_1 != 0;
+                if (this.field_P) {
+                  this.field_T.c(4210752, 8405024, (byte) 125);
+                  this.field_T.field_M = true;
                   break L5;
                 } else {
-                  ((sp) this).field_T.c(4210752, 2113632, (byte) 125);
-                  if (!((sp) this).field_O) {
+                  this.field_T.c(4210752, 2113632, (byte) 125);
+                  if (!this.field_O) {
                     break L5;
                   } else {
-                    ((sp) this).field_T.field_M = false;
+                    this.field_T.field_M = false;
                     break L5;
                   }
                 }
               }
-              ((sp) this).field_T.field_L = (int)(65536.0f * (param3 / 100.0f));
-              ((sp) this).field_S = param2;
+              this.field_T.field_L = (int)(65536.0f * (param3 / 100.0f));
+              this.field_S = param2;
               break L0;
             } else {
-              ((sp) this).field_T.field_L = (int)(65536.0f * (param3 / 100.0f));
-              ((sp) this).field_S = param2;
+              this.field_T.field_L = (int)(65536.0f * (param3 / 100.0f));
+              this.field_S = param2;
               return;
             }
           }
@@ -169,23 +173,23 @@ final class sp extends im {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var5 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var5;
+            stackOut_19_0 = (RuntimeException) (var5);
             stackOut_19_1 = new StringBuilder().append("sp.E(").append(param0).append(',').append(param1).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param2 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -193,20 +197,21 @@ final class sp extends im {
               break L6;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param3 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param3 + ')');
         }
     }
 
     final void b(int param0, int param1, byte param2) {
+        int discarded$1 = 0;
         if (param2 > -16) {
           return;
         } else {
           L0: {
             super.b(param0, param1, (byte) -75);
-            pe.field_E.c(((sp) this).field_S, param1 + (((sp) this).field_p >> 1), param0 - -103, 16777215, -1);
-            if (null != ((sp) this).field_N) {
+            pe.field_E.c(this.field_S, param1 + (this.field_p >> -111395007), param0 - -103, 16777215, -1);
+            if (null != this.field_N) {
               ph.b(20 + param1, -7 + (param0 + 120), 260, 8421504);
-              int discarded$1 = pe.field_E.a(((sp) this).field_N, 20 + param1, 8 + param0 - -120, 260, 100, 16777215, -1, 1, 0, pe.field_E.field_x);
+              discarded$1 = pe.field_E.a(this.field_N, 20 + param1, 8 + param0 - -120, 260, 100, 16777215, -1, 1, 0, pe.field_E.field_x);
               break L0;
             } else {
               break L0;
@@ -232,7 +237,7 @@ final class sp extends im {
             }
           }
         } else {
-          return null;
+          return (String) null;
         }
     }
 

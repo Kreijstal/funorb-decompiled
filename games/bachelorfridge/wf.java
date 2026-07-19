@@ -7,33 +7,47 @@ final class wf extends ana {
     private vk field_w;
 
     private final void d(int param0) {
+        if (param0 < -60) {
+            return;
+        }
+        jfa var3 = (jfa) null;
+        wf.a(-28, -56, 3, (jfa) null, 27);
     }
 
     public static void e(int param0) {
         field_v = null;
+        if (param0 == 2) {
+            return;
+        }
+        field_x = false;
     }
 
     private final void e(byte param0) {
+        oha discarded$8 = null;
         aga var2 = null;
         iv var3 = null;
         int var5 = 0;
         ad var6 = null;
         var5 = BachelorFridge.field_y;
-        var2 = ((wf) this).field_w.field_l.a(40, ((wf) this).field_q.field_h);
+        var2 = this.field_w.field_l.a(40, this.field_q.field_h);
         if (!var2.i(-99)) {
-          var3 = (iv) (Object) ((wf) this).field_w.field_o.b((byte) 90);
-          oha discarded$8 = al.a(-48, ((wf) this).field_w.field_k);
-          L0: while (true) {
-            if (var3 != null) {
-              var3.a(var2, ((wf) this).field_q.field_h, 12);
-              var6 = var3.field_h.a(-27449, ((wf) this).field_q);
-              var6.b(-1, 7);
-              var6.a(24831, 41, kna.field_g[31]);
-              var3 = (iv) (Object) ((wf) this).field_w.field_o.c(0);
-              continue L0;
-            } else {
-              return;
+          var3 = (iv) ((Object) this.field_w.field_o.b((byte) 90));
+          discarded$8 = al.a(-48, this.field_w.field_k);
+          if (param0 > 60) {
+            L0: while (true) {
+              if (var3 != null) {
+                var3.a(var2, this.field_q.field_h, 12);
+                var6 = var3.field_h.a(-27449, this.field_q);
+                var6.b(-1, 7);
+                var6.a(24831, 41, kna.field_g[31]);
+                var3 = (iv) ((Object) this.field_w.field_o.c(0));
+                continue L0;
+              } else {
+                return;
+              }
             }
+          } else {
+            return;
           }
         } else {
           return;
@@ -41,30 +55,33 @@ final class wf extends ana {
     }
 
     wf(gj param0, vk param1) {
-        super(param0, (bca) (Object) param1);
+        super(param0, param1);
         try {
-            ((wf) this).field_w = param1;
+            this.field_w = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "wf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "wf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, jfa param3, int param4) {
         int var5_int = 0;
-        if (bp.e(-29919)) {
+        if (bp.e(param0 + -33828)) {
             return;
         }
         try {
             sja.field_fb.c(90, (byte) 126);
             sja.field_fb.field_g = sja.field_fb.field_g + 2;
             var5_int = sja.field_fb.field_g;
-            rha.a(param3.field_g, (lu) (Object) sja.field_fb, (byte) -93);
+            rha.a(param3.field_g, sja.field_fb, (byte) -93);
+            if (param0 != 3909) {
+                field_x = true;
+            }
             sja.field_fb.d(param2, 0);
             sja.field_fb.d(param1, 0);
             sja.field_fb.d(param4, 0);
             sja.field_fb.a((byte) -88, -var5_int + sja.field_fb.field_g);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "wf.B(" + 3909 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "wf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -76,10 +93,10 @@ final class wf extends ana {
     final boolean c(byte param0) {
         int var2 = 0;
         var2 = -56 % ((71 - param0) / 47);
-        int fieldTemp$2 = ((wf) this).field_l - 1;
-        ((wf) this).field_l = ((wf) this).field_l - 1;
-        if (fieldTemp$2 >= 0) {
-          if (((wf) this).field_l == 25) {
+        int fieldTemp$2 = this.field_l - 1;
+        this.field_l = this.field_l - 1;
+        if ((fieldTemp$2 ^ -1) <= -1) {
+          if (this.field_l == 25) {
             wf.a(34, (byte) -101);
             this.e((byte) 120);
             return false;
@@ -93,10 +110,6 @@ final class wf extends ana {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_v = "Now click End Phase again and watch the attack.  <br><col=BBFF00> Next</col>";
         field_x = true;
     }

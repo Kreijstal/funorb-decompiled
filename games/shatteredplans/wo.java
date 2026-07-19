@@ -15,8 +15,8 @@ final class wo {
     final static void a(int param0, byte param1, String[] param2, String param3) {
         RuntimeException var4 = null;
         int var5 = 0;
-        Object var6 = null;
-        Object var7 = null;
+        String var6 = null;
+        String[] var7 = null;
         String[] var8 = null;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
@@ -65,13 +65,13 @@ final class wo {
               if (param1 == -88) {
                 break L1;
               } else {
-                var6 = null;
+                var6 = (String) null;
                 wo.a(10, (byte) 112, (String[]) null, (String) null);
                 break L1;
               }
             }
             fj.field_s = rh.field_g;
-            if (param0 != 255) {
+            if ((param0 ^ -1) != -256) {
               L2: {
                 if (100 > param0) {
                   break L2;
@@ -108,7 +108,7 @@ final class wo {
                 }
               }
               ij.field_a = ub.a((byte) stackIn_7_0, stackIn_7_1 != 0);
-              var7 = null;
+              var7 = (String[]) null;
               jp.a((String[]) null, false);
               return;
             }
@@ -117,23 +117,23 @@ final class wo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var4;
+            stackOut_14_0 = (RuntimeException) (var4);
             stackOut_14_1 = new StringBuilder().append("wo.B(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -142,23 +142,23 @@ final class wo {
             }
           }
           L5: {
-            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+            stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
             stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param3 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -166,7 +166,7 @@ final class wo {
               break L5;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
         }
     }
 

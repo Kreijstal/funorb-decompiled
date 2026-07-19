@@ -12,9 +12,9 @@ final class nn implements dja {
             for (var6_int = param2; var6_int <= param5; var6_int++) {
                 ww.a(param4, param1, rba.field_b[var6_int], (byte) 75, param0);
             }
-            int var7 = 0;
+            int var7 = -38 % ((-5 - param3) / 63);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "nn.D(" + param0 + ',' + param1 + ',' + param2 + ',' + 112 + ',' + param4 + ',' + param5 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "nn.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -66,16 +66,16 @@ final class nn implements dja {
             var12 = var11;
             var13 = -var10;
             var14 = ar.a(var12, (byte) 103, var13);
-            var13 = (var13 << 8) / var14;
-            var12 = (var12 << 8) / var14;
+            var13 = (var13 << 1557493768) / var14;
+            var12 = (var12 << 1515227016) / var14;
             var15 = 64;
-            var16 = 1;
+            var16 = param1;
             L1: while (true) {
               if (var15 + 1 <= var16) {
                 break L0;
               } else {
-                var17 = fc.a(512 * kdb.field_o - (var16 << 8), (byte) -65) >> 14;
-                var18 = fc.a(-(var16 << 8) + kdb.field_o * 500, (byte) 59) >> 14;
+                var17 = fc.a(512 * kdb.field_o - (var16 << 1779826984), (byte) -65) >> -1727635698;
+                var18 = fc.a(-(var16 << 1816191304) + kdb.field_o * 500, (byte) 59) >> 1273255374;
                 var19 = var12 * var17 + var10 * var16 / var15 + param5;
                 var20 = var17 * var13 + var16 * var11 / var15 + param0;
                 var21 = param5 - -(var10 * var16 / var15) + -(var18 * var12);
@@ -95,23 +95,23 @@ final class nn implements dja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var6;
-            stackOut_5_1 = new StringBuilder().append("nn.C(").append(param0).append(',').append(1).append(',').append(param2).append(',').append(param3).append(',');
+            stackOut_5_0 = (RuntimeException) (var6);
+            stackOut_5_1 = new StringBuilder().append("nn.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param4 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -119,7 +119,7 @@ final class nn implements dja {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param5 + ')');
         }
     }
 
@@ -127,19 +127,15 @@ final class nn implements dja {
         if (param0 != 11995) {
             field_b = -83;
         }
-        return (tv[]) (Object) new bha[param1];
+        return (tv[]) ((Object) new bha[param1]);
     }
 
     public final tv a(byte param0) {
         int var2 = -59 % ((param0 - -64) / 50);
-        return (tv) (Object) new bha();
+        return (tv) ((Object) new bha());
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 18;
         field_b = 0;
     }

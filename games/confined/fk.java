@@ -8,7 +8,7 @@ final class fk {
 
     final bi a() {
         byte[] var1 = this.b();
-        return new bi(22050, var1, 22050 * ((fk) this).field_a / 1000, 22050 * ((fk) this).field_b / 1000);
+        return new bi(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
     }
 
     final static fk a(mi param0, int param1, int param2) {
@@ -41,10 +41,10 @@ final class fk {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((fk) this).field_c[var4] != null) {
-                    var5 = ((fk) this).field_c[var4].field_d * 22050 / 1000;
-                    var6 = ((fk) this).field_c[var4].field_y * 22050 / 1000;
-                    var13 = ((fk) this).field_c[var4].a(var5, ((fk) this).field_c[var4].field_d);
+                  if (this.field_c[var4] != null) {
+                    var5 = this.field_c[var4].field_d * 22050 / 1000;
+                    var6 = this.field_c[var4].field_y * 22050 / 1000;
+                    var13 = this.field_c[var4].a(var5, this.field_c[var4].field_d);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -75,9 +75,9 @@ final class fk {
               return new byte[]{};
             }
           } else {
-            if (((fk) this).field_c[var2] != null) {
-              if (((fk) this).field_c[var2].field_d + ((fk) this).field_c[var2].field_y > var1) {
-                var1 = ((fk) this).field_c[var2].field_d + ((fk) this).field_c[var2].field_y;
+            if (this.field_c[var2] != null) {
+              if (this.field_c[var2].field_d + this.field_c[var2].field_y > var1) {
+                var1 = this.field_c[var2].field_d + this.field_c[var2].field_y;
                 var2++;
                 continue L0;
               } else {
@@ -103,19 +103,19 @@ final class fk {
     private fk(kg param0) {
         int var2 = 0;
         int var3 = 0;
-        ((fk) this).field_c = new lg[10];
+        this.field_c = new lg[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((fk) this).field_a = param0.a((byte) 25);
-            ((fk) this).field_b = param0.a((byte) 25);
+            this.field_a = param0.a((byte) 25);
+            this.field_b = param0.a((byte) 25);
             return;
           } else {
             var3 = param0.c(32);
             if (var3 != 0) {
               param0.field_n = param0.field_n - 1;
-              ((fk) this).field_c[var2] = new lg();
-              ((fk) this).field_c[var2].a(param0);
+              this.field_c[var2] = new lg();
+              this.field_c[var2].a(param0);
               var2++;
               continue L0;
             } else {

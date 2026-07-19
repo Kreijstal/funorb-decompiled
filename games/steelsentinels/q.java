@@ -20,12 +20,24 @@ final class q implements Iterable {
 
     public static void a(byte param0) {
         field_d = null;
-        field_f = null;
-        field_m = null;
-        field_a = null;
-        field_c = null;
-        field_k = null;
-        field_g = null;
+        if (param0 >= -126) {
+          field_f = (ic) null;
+          field_f = null;
+          field_m = null;
+          field_a = null;
+          field_c = null;
+          field_k = null;
+          field_g = null;
+          return;
+        } else {
+          field_f = null;
+          field_m = null;
+          field_a = null;
+          field_c = null;
+          field_k = null;
+          field_g = null;
+          return;
+        }
     }
 
     final static boolean a(byte param0, int param1, int param2, boolean param3) {
@@ -46,7 +58,7 @@ final class q implements Iterable {
                 if (eb.field_u[param1] <= eb.field_u[param2]) {
                   var4 = mb.field_T[param1] + ne.field_G[param1] + jm.field_r[param1];
                   var5 = jm.field_r[param2] + ne.field_G[param2] - -mb.field_T[param2];
-                  var6 = 0;
+                  var6 = -10 % ((-27 - param0) / 47);
                   if (var4 < var5) {
                     return true;
                   } else {
@@ -77,7 +89,7 @@ final class q implements Iterable {
                 if (ok.field_d[param1] <= ok.field_d[param2]) {
                   var4 = mb.field_T[param1] + ne.field_G[param1] + jm.field_r[param1];
                   var5 = jm.field_r[param2] + ne.field_G[param2] - -mb.field_T[param2];
-                  var6 = 0;
+                  var6 = -10 % ((-27 - param0) / 47);
                   if (var4 < var5) {
                     return true;
                   } else {
@@ -112,26 +124,26 @@ final class q implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new l((q) this);
+        return (Iterator) ((Object) new l((q) (this)));
     }
 
     final void a(ck param0, long param1, boolean param2) {
         ck var5 = null;
         try {
             if (param2) {
-                field_a = null;
+                field_a = (String) null;
             }
             if (param0.field_i != null) {
                 param0.b(4);
             }
-            var5 = ((q) this).field_j[(int)((long)(((q) this).field_e - 1) & param1)];
+            var5 = this.field_j[(int)((long)(this.field_e - 1) & param1)];
             param0.field_i = var5.field_i;
             param0.field_k = var5;
             param0.field_i.field_k = param0;
             param0.field_k.field_i = param0;
             param0.field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "q.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "q.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -140,26 +152,26 @@ final class q implements Iterable {
         ck var5 = null;
         int var6 = 0;
         var6 = SteelSentinels.field_G;
-        var4 = ((q) this).field_j[(int)(param0 & (long)(-1 + ((q) this).field_e))];
-        ((q) this).field_b = var4.field_k;
+        var4 = this.field_j[(int)(param0 & (long)(-1 + this.field_e))];
+        this.field_b = var4.field_k;
         if (param1 <= -118) {
           L0: while (true) {
-            if (var4 != ((q) this).field_b) {
-              if (~((q) this).field_b.field_j == ~param0) {
-                var5 = ((q) this).field_b;
-                ((q) this).field_b = ((q) this).field_b.field_k;
+            if (var4 != this.field_b) {
+              if ((this.field_b.field_j ^ -1L) == (param0 ^ -1L)) {
+                var5 = this.field_b;
+                this.field_b = this.field_b.field_k;
                 return var5;
               } else {
-                ((q) this).field_b = ((q) this).field_b.field_k;
+                this.field_b = this.field_b.field_k;
                 continue L0;
               }
             } else {
-              ((q) this).field_b = null;
+              this.field_b = null;
               return null;
             }
           }
         } else {
-          return null;
+          return (ck) null;
         }
     }
 
@@ -167,25 +179,26 @@ final class q implements Iterable {
         try {
             jl.a(false);
             if (param1 >= -60) {
-                field_g = null;
+                field_g = (String) null;
             }
             pb.a(param0.field_E, param0.field_z, param0.field_B);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "q.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "q.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     q(int param0) {
+        ck dupTemp$2 = null;
         int var2 = 0;
         ck var3 = null;
-        ((q) this).field_e = param0;
-        ((q) this).field_j = new ck[param0];
+        this.field_e = param0;
+        this.field_j = new ck[param0];
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            ck dupTemp$2 = new ck();
+            dupTemp$2 = new ck();
             var3 = dupTemp$2;
-            ((q) this).field_j[var2] = dupTemp$2;
+            this.field_j[var2] = dupTemp$2;
             var3.field_k = var3;
             var3.field_i = var3;
             var2++;
@@ -197,19 +210,26 @@ final class q implements Iterable {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
+        pc discarded$7 = null;
+        pc discarded$8 = null;
+        pc discarded$9 = null;
+        pc discarded$10 = null;
+        pc discarded$11 = null;
+        pc discarded$12 = null;
+        pc discarded$13 = null;
         int var4 = 0;
         L0: {
           gh.field_Jb = param3;
-          if (~vb.field_g != param2) {
+          if ((vb.field_g ^ -1) != param2) {
             break L0;
           } else {
             if (qj.field_q[98] != null) {
-              pc discarded$7 = ia.a(6940, qj.field_q[98]);
+              discarded$7 = ia.a(6940, qj.field_q[98]);
               break L0;
             } else {
               vb.field_g = param0;
               pm.field_U = 0;
-              if (d.a(vb.field_g, ~param2)) {
+              if (d.a(vb.field_g, param2 ^ -1)) {
                 L1: {
                   var4 = 0;
                   if (12 != vb.field_g) {
@@ -227,7 +247,7 @@ final class q implements Iterable {
                   } else {
                     L2: {
                       if (null != qj.field_q[96]) {
-                        pc discarded$8 = ia.a(6940, qj.field_q[96]);
+                        discarded$8 = ia.a(6940, qj.field_q[96]);
                         break L2;
                       } else {
                         break L2;
@@ -241,7 +261,7 @@ final class q implements Iterable {
                   } else {
                     L3: {
                       if (null != qj.field_q[96]) {
-                        pc discarded$9 = ia.a(6940, qj.field_q[96]);
+                        discarded$9 = ia.a(6940, qj.field_q[96]);
                         break L3;
                       } else {
                         break L3;
@@ -256,7 +276,7 @@ final class q implements Iterable {
                 } else {
                   L4: {
                     if (null != qj.field_q[96]) {
-                      pc discarded$10 = ia.a(6940, qj.field_q[96]);
+                      discarded$10 = ia.a(6940, qj.field_q[96]);
                       break L4;
                     } else {
                       break L4;
@@ -270,7 +290,7 @@ final class q implements Iterable {
         }
         vb.field_g = param0;
         pm.field_U = 0;
-        if (d.a(vb.field_g, ~param2)) {
+        if (d.a(vb.field_g, param2 ^ -1)) {
           L5: {
             var4 = 0;
             if (12 != vb.field_g) {
@@ -288,7 +308,7 @@ final class q implements Iterable {
             } else {
               L6: {
                 if (null != qj.field_q[96]) {
-                  pc discarded$11 = ia.a(6940, qj.field_q[96]);
+                  discarded$11 = ia.a(6940, qj.field_q[96]);
                   break L6;
                 } else {
                   break L6;
@@ -302,7 +322,7 @@ final class q implements Iterable {
             } else {
               L7: {
                 if (null != qj.field_q[96]) {
-                  pc discarded$12 = ia.a(6940, qj.field_q[96]);
+                  discarded$12 = ia.a(6940, qj.field_q[96]);
                   break L7;
                 } else {
                   break L7;
@@ -317,7 +337,7 @@ final class q implements Iterable {
           } else {
             L8: {
               if (null != qj.field_q[96]) {
-                pc discarded$13 = ia.a(6940, qj.field_q[96]);
+                discarded$13 = ia.a(6940, qj.field_q[96]);
                 break L8;
               } else {
                 break L8;
@@ -329,10 +349,6 @@ final class q implements Iterable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Engineering";
         field_a = "<%0><br><%1> <times> <%2>";
         field_c = "Create unrated game";

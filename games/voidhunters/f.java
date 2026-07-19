@@ -22,14 +22,14 @@ abstract class f extends ksa {
     abstract void a(int param0);
 
     final void b(int[] param0, int param1, int param2) {
-        if (((f) this).field_e) {
-            ((f) this).a(param0, param1, param2);
+        if (this.field_e) {
+            this.a(param0, param1, param2);
         } else {
-            ((f) this).a(param2);
+            this.a(param2);
         }
     }
 
     protected f() {
-        ((f) this).field_e = true;
+        this.field_e = true;
     }
 }

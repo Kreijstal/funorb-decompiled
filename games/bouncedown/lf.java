@@ -10,16 +10,16 @@ final class lf extends gj {
 
     final byte[] d(byte param0) {
         L0: {
-          if (((lf) this).field_n) {
+          if (this.field_n) {
             break L0;
           } else {
-            if (((lf) this).field_p.field_h < ((lf) this).field_p.field_i.length - ((lf) this).field_s) {
+            if (this.field_p.field_h < this.field_p.field_i.length - this.field_s) {
               break L0;
             } else {
               if (param0 < -106) {
-                return ((lf) this).field_p.field_i;
+                return this.field_p.field_i;
               } else {
-                return null;
+                return (byte[]) null;
               }
             }
           }
@@ -28,6 +28,8 @@ final class lf extends gj {
     }
 
     final static jk a(ii param0, byte param1) {
+        jk discarded$2 = null;
+        int discarded$3 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -36,7 +38,7 @@ final class lf extends gj {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
+        ii var9 = null;
         jk stackIn_25_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -63,12 +65,12 @@ final class lf extends gj {
               if (param1 <= -32) {
                 break L1;
               } else {
-                var9 = null;
-                jk discarded$2 = lf.a((ii) null, (byte) -64);
+                var9 = (ii) null;
+                discarded$2 = lf.a((ii) null, (byte) -64);
                 break L1;
               }
             }
-            if (var2_int <= 0) {
+            if ((var2_int ^ -1) >= -1) {
               L2: {
                 var3 = re.a(95, param0) ? 1 : 0;
                 var4 = re.a(38, param0) ? 1 : 0;
@@ -96,7 +98,7 @@ final class lf extends gj {
               }
               L3: {
                 if (var4 != 0) {
-                  int discarded$3 = param0.f(7, 16);
+                  discarded$3 = param0.f(7, 16);
                   var5.field_u = ne.a(0, 16, var5.field_u, param0);
                   var5.field_s = ne.a(0, 16, var5.field_s, param0);
                   var5.field_y = ne.a(0, 16, var5.field_y, param0);
@@ -146,7 +148,7 @@ final class lf extends gj {
                   }
                 }
               }
-              stackOut_24_0 = (jk) var5;
+              stackOut_24_0 = (jk) (var5);
               stackIn_25_0 = stackOut_24_0;
               break L0;
             } else {
@@ -157,23 +159,23 @@ final class lf extends gj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var2;
+            stackOut_26_0 = (RuntimeException) (var2);
             stackOut_26_1 = new StringBuilder().append("lf.D(");
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param0 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L8;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -181,7 +183,7 @@ final class lf extends gj {
               break L8;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param1 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param1 + ')');
         }
         return stackIn_25_0;
     }
@@ -361,21 +363,22 @@ final class lf extends gj {
     }
 
     public static void a(boolean param0) {
+        byte discarded$0 = 0;
         field_q = null;
-        field_r = null;
+        field_r = (int[][]) null;
         if (param0) {
-            byte discarded$0 = lf.a('￙', (byte) -105);
+            discarded$0 = lf.a('￙', (byte) -105);
         }
     }
 
     final int c(byte param0) {
-        if (!(null != ((lf) this).field_p)) {
+        if (!(null != this.field_p)) {
             return 0;
         }
         if (param0 >= -100) {
             return -110;
         }
-        return 100 * ((lf) this).field_p.field_h / (((lf) this).field_p.field_i.length - ((lf) this).field_s);
+        return 100 * this.field_p.field_h / (this.field_p.field_i.length - this.field_s);
     }
 
     lf() {
@@ -394,18 +397,18 @@ final class lf extends gj {
             param1.field_f.field_c = param1;
             param1.field_c.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "lf.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "lf.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static ld a(int param0, int param1) {
         ld var2 = new ld();
         if (param0 >= -59) {
-            Object var3 = null;
+            ai var3 = (ai) null;
             lf.a((ai) null, (ai) null, 33);
         }
-        ne.field_r.a(1, (ai) (Object) var2);
-        ea.a(2, 4);
+        ne.field_r.a(1, var2);
+        ea.a(2, param1);
         return var2;
     }
 

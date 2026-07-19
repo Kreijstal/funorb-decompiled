@@ -10,6 +10,11 @@ final class jm {
     public static void a(int param0) {
         field_d = null;
         field_c = null;
+        if (param0 != -23787) {
+            jm.b(123);
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
@@ -17,25 +22,25 @@ final class jm {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (wk.field_h == null) {
-          return;
-        } else {
-          var1 = (Object) (Object) wk.field_h;
-          synchronized (var1) {
-            L0: {
-              wk.field_h = null;
-              break L0;
+        if (param0 == 28679) {
+          if (wk.field_h == null) {
+            return;
+          } else {
+            var1 = wk.field_h;
+            synchronized (var1) {
+              L0: {
+                wk.field_h = null;
+                break L0;
+              }
             }
+            return;
           }
+        } else {
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "BEST HISCORES";
     }
 }

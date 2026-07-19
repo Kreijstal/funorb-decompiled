@@ -14,6 +14,9 @@ final class tp extends cr {
     private static String field_Qb;
 
     public static void k(int param0) {
+        if (param0 != -10045) {
+            return;
+        }
         field_Nb = null;
     }
 
@@ -22,10 +25,6 @@ final class tp extends cr {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Qb = "tp.C(";
     }
 }

@@ -10,37 +10,42 @@ final class ed {
     static int[] field_e;
 
     final static void a(int param0, int param1) {
-        si.field_k.a(true, dm.field_b, 0, 0, param0);
-        if (!(si.field_k.field_m != 7)) {
+        si.field_k.a(true, dm.field_b, 0, param1, param0);
+        if (!(-8 != (si.field_k.field_m ^ -1))) {
             hq.b(true, true, param0);
         }
     }
 
     final static void a(boolean param0, mf param1, mf param2, byte param3) {
+        int discarded$0 = 0;
         try {
-            ai.a(lp.field_Ab, (dh) (Object) ul.field_m, f.field_a, vo.field_C, im.field_d, wi.field_n, tk.field_t, ad.field_l, (byte) 61, true, ic.field_c, fp.field_u);
+            ai.a(lp.field_Ab, ul.field_m, f.field_a, vo.field_C, im.field_d, wi.field_n, tk.field_t, ad.field_l, (byte) 61, param0, ic.field_c, fp.field_u);
+            if (param3 < 74) {
+                discarded$0 = ed.b(2, -57);
+            }
             ef.field_b = cr.a("lobby", param1, "chatfilter", 2);
             rh.field_e[0] = mc.field_a;
             rh.field_e[2] = sp.field_s;
             rh.field_e[1] = e.field_j;
-            hk.a((dh) (Object) rd.field_e, (byte) 90, param2);
+            hk.a(rd.field_e, (byte) 90, param2);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ed.D(" + true + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + 104 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "ed.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final static int b(int param0, int param1) {
+        int discarded$1 = 0;
         int var2 = 0;
         L0: {
           var2 = 0;
           if (param0 == 9) {
             break L0;
           } else {
-            int discarded$1 = ed.b(-83, -74);
+            discarded$1 = ed.b(-83, -74);
             break L0;
           }
         }
-        if (param1 >= 0) {
+        if (-1 >= (param1 ^ -1)) {
           if (param1 >= 65536) {
             L1: {
               var2 += 16;
@@ -166,16 +171,15 @@ final class ed {
     public static void a(int param0) {
         field_a = null;
         field_f = null;
+        if (param0 > -61) {
+            return;
+        }
         field_c = null;
         field_e = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Asking for or providing contact information";
         field_e = new int[8192];
         field_f = new int[]{0, 1, 2, 10, 25, -1, -1, -1, -1, 3, 4, -1, -1, -1, -1, -1, -1, -1, -1, 5, 6, 7, 8, -1, -1, -1, -1, -1, -1, 9, 10, 11, 12, 13, -1, -1, -1, -1, -1, 14, -1};

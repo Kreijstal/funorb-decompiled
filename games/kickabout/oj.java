@@ -26,6 +26,7 @@ final class oj extends cm {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_1_0 = null;
         Object stackOut_3_0 = null;
@@ -43,7 +44,7 @@ final class oj extends cm {
         try {
           L0: {
             L1: {
-              if (((oj) this).field_W == param3) {
+              if (this.field_W == param3) {
                 break L1;
               } else {
                 L2: {
@@ -64,15 +65,15 @@ final class oj extends cm {
                     break L2;
                   }
                 }
-                ((oj) this).field_W = stackIn_4_1 != 0;
-                if (((oj) this).field_W) {
-                  ((oj) this).field_Y.a((byte) 21, 4210752, 8405024);
-                  ((oj) this).field_Y.field_w = true;
+                ((oj) (this)).field_W = stackIn_4_1 != 0;
+                if (this.field_W) {
+                  this.field_Y.a((byte) 21, 4210752, 8405024);
+                  this.field_Y.field_w = true;
                   break L1;
                 } else {
-                  ((oj) this).field_Y.a((byte) 21, 4210752, 2113632);
-                  if (((oj) this).field_X) {
-                    ((oj) this).field_Y.field_w = false;
+                  this.field_Y.a((byte) 21, 4210752, 2113632);
+                  if (this.field_X) {
+                    this.field_Y.field_w = false;
                     break L1;
                   } else {
                     break L1;
@@ -80,35 +81,37 @@ final class oj extends cm {
                 }
               }
             }
-            ((oj) this).field_U = param0;
+            this.field_U = param0;
             if (param2 == 9255) {
-              ((oj) this).field_Y.field_C = (int)(param1 / 100.0f * 65536.0f);
+              this.field_Y.field_C = (int)(param1 / 100.0f * 65536.0f);
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var5;
+            stackOut_13_0 = (RuntimeException) (var5);
             stackOut_13_1 = new StringBuilder().append("oj.A(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -116,21 +119,26 @@ final class oj extends cm {
               break L3;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final void p(int param0) {
-        ((oj) this).field_Y.field_w = false;
+        this.field_Y.field_w = false;
         if (param0 != -120) {
             return;
         }
-        ((oj) this).field_X = true;
+        this.field_X = true;
     }
 
     public static void j(byte param0) {
-        int var1 = -8;
-        field_Q = null;
+        int var1 = 25 / ((-15 - param0) / 39);
+        field_Q = (String[][]) null;
         field_R = null;
         field_V = null;
         field_T = null;
@@ -138,13 +146,14 @@ final class oj extends cm {
     }
 
     final void a(int param0, byte param1, int param2) {
+        int discarded$2 = 0;
         int var4 = 0;
         super.a(param0, (byte) -128, param2);
-        fj.field_b.d(((oj) this).field_U, (((oj) this).field_n >> 1) + param0, param2 - -103, 16777215, -1);
+        fj.field_b.d(this.field_U, (this.field_n >> 1646799425) + param0, param2 - -103, 16777215, -1);
         var4 = 80 / ((-55 - param1) / 45);
-        if (((oj) this).field_S != null) {
+        if (this.field_S != null) {
           on.f(param0 + 20, -7 + (param2 - -120), 260, 8421504);
-          int discarded$2 = fj.field_b.a(((oj) this).field_S, param0 - -20, 120 + (param2 - -8), 260, 100, 16777215, -1, 1, 0, fj.field_b.field_G);
+          discarded$2 = fj.field_b.a(this.field_S, param0 - -20, 120 + (param2 - -8), 260, 100, 16777215, -1, 1, 0, fj.field_b.field_G);
           return;
         } else {
           return;
@@ -153,10 +162,10 @@ final class oj extends cm {
 
     final static void a(int param0, vc param1) {
         try {
-            np.field_Jb.a((gn) (Object) new hk(param1, 19), 3);
-            int var2_int = -76;
+            np.field_Jb.a(new hk(param1, 19), 3);
+            int var2_int = -76 / ((49 - param0) / 61);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "oj.D(" + -45 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "oj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -164,31 +173,27 @@ final class oj extends cm {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
-            ((oj) this).field_S = param1;
-            if (((oj) this).field_S != null) {
-                var3_int = fj.field_b.c(((oj) this).field_S, 260, fj.field_b.field_G);
-                ((oj) this).a((byte) 110, var3_int + 150, 300);
+            this.field_S = param1;
+            if (this.field_S != null) {
+                var3_int = fj.field_b.c(this.field_S, 260, fj.field_b.field_G);
+                this.a((byte) 110, var3_int + 150, 300);
             }
-            ((oj) this).field_Y = new ou(13, 50, 274, 30, 15, 2113632, 4210752);
-            ((oj) this).field_X = false;
-            ((oj) this).field_W = false;
-            ((oj) this).field_Y.field_w = true;
-            ((oj) this).a(-120, (fd) (Object) ((oj) this).field_Y);
+            this.field_Y = new ou(13, 50, 274, 30, 15, 2113632, 4210752);
+            this.field_X = false;
+            this.field_W = false;
+            this.field_Y.field_w = true;
+            this.a(-120, this.field_Y);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(int param0, int param1) {
-        int var2 = -51;
-        np.field_Jb.a((gn) (Object) new pw(param1), 3);
+        int var2 = 51 / ((param0 - -28) / 58);
+        np.field_Jb.a(new pw(param1), 3);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Z = "initial credits: <%0>";
         field_V = "Try changing the '<%0>' setting.";
         field_T = "Min Price";

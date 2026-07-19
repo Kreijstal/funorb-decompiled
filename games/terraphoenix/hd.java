@@ -19,19 +19,20 @@ final class hd extends uf {
         field_l = null;
         field_k = null;
         field_q = null;
-        field_o = null;
-        field_m = null;
+        if (param0 <= 79) {
+          return;
+        } else {
+          field_o = null;
+          field_m = null;
+          return;
+        }
     }
 
     hd(int param0) {
-        ((hd) this).field_n = param0;
+        this.field_n = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Updates will sent to the email address you've given";
         field_m = "Back to Mission Selection";
         field_k = "Player";

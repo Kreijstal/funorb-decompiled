@@ -7,21 +7,27 @@ final class fpb extends mfb {
     static byte[][] field_d;
 
     final int k(int param0) {
+        int discarded$0 = 0;
         if (param0 != 0) {
-            int discarded$0 = ((fpb) this).f((byte) -51);
+            discarded$0 = this.f((byte) -51);
             return 0;
         }
         return 0;
     }
 
     final int a(int param0) {
+        int discarded$0 = 0;
         if (param0 != 0) {
-            int discarded$0 = ((fpb) this).b(true);
+            discarded$0 = this.b(true);
         }
         return sbb.field_p;
     }
 
     final static void a(pgb param0, int param1) {
+        int dupTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int incrementValue$6 = 0;
+        int dupTemp$7 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -46,20 +52,20 @@ final class fpb extends mfb {
         var5 = VoidHunters.field_G;
         try {
           L0: {
-            var2_int = 0;
+            var2_int = param1;
             L1: while (true) {
-              if (var2_int >= 3) {
+              if (-4 >= (var2_int ^ -1)) {
                 var2_int = 0;
                 L2: while (true) {
                   if (var2_int >= ou.field_q) {
-                    int dupTemp$4 = param0.a(1);
+                    dupTemp$4 = param0.a(1);
                     dca.field_q[dupTemp$4] = dca.field_q[dupTemp$4] + 1;
                     var2_int = 0;
                     var3 = 0;
                     L3: while (true) {
                       if (ou.field_q <= var3) {
                         ou.field_q = var2_int;
-                        int fieldTemp$5 = ou.field_q;
+                        fieldTemp$5 = ou.field_q;
                         ou.field_q = ou.field_q + 1;
                         nrb.field_b[fieldTemp$5] = param0;
                         break L0;
@@ -78,7 +84,7 @@ final class fpb extends mfb {
                               break L5;
                             }
                           }
-                          int incrementValue$6 = var2_int;
+                          incrementValue$6 = var2_int;
                           var2_int++;
                           nrb.field_b[incrementValue$6] = nrb.field_b[var3];
                           break L4;
@@ -90,7 +96,7 @@ final class fpb extends mfb {
                   } else {
                     L6: {
                       if (param0.field_a == nrb.field_b[var2_int].field_a) {
-                        int dupTemp$7 = nrb.field_b[var2_int].a(1);
+                        dupTemp$7 = nrb.field_b[var2_int].a(param1 ^ 1);
                         dca.field_q[dupTemp$7] = dca.field_q[dupTemp$7] + 1;
                         break L6;
                       } else {
@@ -112,23 +118,23 @@ final class fpb extends mfb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var2;
+            stackOut_20_0 = (RuntimeException) (var2);
             stackOut_20_1 = new StringBuilder().append("fpb.P(");
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L7;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -136,14 +142,17 @@ final class fpb extends mfb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + 0 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ')');
         }
     }
 
     public static void l(int param0) {
         field_c = null;
         field_b = null;
-        field_d = null;
+        field_d = (byte[][]) null;
+        if (param0 <= 21) {
+            field_d = (byte[][]) null;
+        }
     }
 
     final int b(int param0) {
@@ -152,6 +161,9 @@ final class fpb extends mfb {
     }
 
     final static String d(boolean param0) {
+        if (!param0) {
+            field_d = (byte[][]) null;
+        }
         if (!(dw.field_c != dn.field_r)) {
             return mqb.field_x;
         }
@@ -159,8 +171,9 @@ final class fpb extends mfb {
     }
 
     final int a(boolean param0) {
+        int discarded$0 = 0;
         if (param0) {
-            int discarded$0 = ((fpb) this).k(-51);
+            discarded$0 = this.k(-51);
         }
         return 35;
     }
@@ -174,14 +187,14 @@ final class fpb extends mfb {
 
     final int d(byte param0) {
         if (param0 >= -52) {
-            field_d = null;
+            field_d = (byte[][]) null;
         }
         return adb.field_a;
     }
 
     final int b(boolean param0) {
         if (param0) {
-            field_d = null;
+            field_d = (byte[][]) null;
         }
         return fd.field_p;
     }
@@ -190,8 +203,9 @@ final class fpb extends mfb {
     }
 
     final int f(byte param0) {
+        int discarded$0 = 0;
         if (param0 < 0) {
-            int discarded$0 = ((fpb) this).d((byte) -39);
+            discarded$0 = this.d((byte) -39);
         }
         return ujb.field_h;
     }
@@ -205,7 +219,7 @@ final class fpb extends mfb {
 
     final int g(int param0) {
         if (param0 != 2769) {
-            field_c = null;
+            field_c = (String) null;
         }
         return ls.field_p;
     }
@@ -216,10 +230,6 @@ final class fpb extends mfb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "<%0> cannot join; the game is full.";
         field_c = "Hold the component to deplete the enemy's score";
         field_d = new byte[1000][];

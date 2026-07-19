@@ -20,10 +20,6 @@ final class qa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "qa.A(";
         field_b = "This meter shows#your current#shield strength.#This one appears#when you fight#a boss.";
         field_d = "Click";

@@ -51,15 +51,16 @@ final class qd extends fa {
 
     private final static void a(byte[] param0, int param1) {
         field_x = param0;
-        field_N = 0;
+        field_N = param1;
         field_P = 0;
     }
 
     final static qd a(fm param0, String param1, String param2) {
         try {
+            boolean discarded$0 = false;
             qd var4_ref = null;
             if (!qd.a(param0)) {
-                boolean discarded$0 = param0.a(0, param1, param2);
+                discarded$0 = param0.a(0, param1, param2);
                 return null;
             }
             byte[] var3 = param0.a((byte) 24, param2, param1);
@@ -67,8 +68,10 @@ final class qd extends fa {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new qd(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -79,14 +82,13 @@ final class qd extends fa {
     }
 
     final sp a(int[] param0) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         float[] var7 = null;
-        float[] var11 = null;
-        float[] var13 = null;
-        byte[] var14 = null;
+        byte[] var12 = null;
         L0: {
           if (param0 == null) {
             break L0;
@@ -99,23 +101,23 @@ final class qd extends fa {
           }
         }
         L1: {
-          if (((qd) this).field_D != null) {
+          if (this.field_D != null) {
             break L1;
           } else {
-            ((qd) this).field_t = 0;
-            ((qd) this).field_J = new float[field_n];
-            ((qd) this).field_D = new byte[((qd) this).field_k];
-            ((qd) this).field_r = 0;
-            ((qd) this).field_C = 0;
+            this.field_t = 0;
+            this.field_J = new float[field_n];
+            this.field_D = new byte[this.field_k];
+            this.field_r = 0;
+            this.field_C = 0;
             break L1;
           }
         }
         L2: while (true) {
-          if (((qd) this).field_C >= ((qd) this).field_Q.length) {
-            ((qd) this).field_J = null;
-            var14 = ((qd) this).field_D;
-            ((qd) this).field_D = null;
-            return new sp(((qd) this).field_m, var14, ((qd) this).field_M, ((qd) this).field_G, ((qd) this).field_K);
+          if (this.field_C >= this.field_Q.length) {
+            this.field_J = null;
+            var12 = this.field_D;
+            this.field_D = null;
+            return new sp(this.field_m, var12, this.field_M, this.field_G, this.field_K);
           } else {
             L3: {
               if (param0 == null) {
@@ -129,19 +131,17 @@ final class qd extends fa {
               }
             }
             L4: {
-              var13 = this.a(((qd) this).field_C);
-              var11 = var13;
-              var7 = var11;
+              var7 = this.a(this.field_C);
               if (var7 == null) {
                 break L4;
               } else {
                 L5: {
-                  var3 = ((qd) this).field_r;
-                  var4 = var13.length;
-                  if (var4 <= ((qd) this).field_k - var3) {
+                  var3 = this.field_r;
+                  var4 = var7.length;
+                  if (var4 <= this.field_k - var3) {
                     break L5;
                   } else {
-                    var4 = ((qd) this).field_k - var3;
+                    var4 = this.field_k - var3;
                     break L5;
                   }
                 }
@@ -152,32 +152,32 @@ final class qd extends fa {
                       if (param0 == null) {
                         break L7;
                       } else {
-                        param0[0] = param0[0] - (var3 - ((qd) this).field_r);
+                        param0[0] = param0[0] - (var3 - this.field_r);
                         break L7;
                       }
                     }
-                    ((qd) this).field_r = var3;
+                    this.field_r = var3;
                     break L4;
                   } else {
                     L8: {
-                      var6 = (int)(128.0f + var13[var5] * 128.0f);
+                      var6 = (int)(128.0f + var7[var5] * 128.0f);
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = ~var6 >> 31;
+                        var6 = (var6 ^ -1) >> 31;
                         break L8;
                       }
                     }
-                    int incrementValue$1 = var3;
+                    incrementValue$1 = var3;
                     var3++;
-                    ((qd) this).field_D[incrementValue$1] = (byte)(var6 - 128);
+                    this.field_D[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
                 }
               }
             }
-            ((qd) this).field_C = ((qd) this).field_C + 1;
+            this.field_C = this.field_C + 1;
             continue L2;
           }
         }
@@ -189,19 +189,19 @@ final class qd extends fa {
         int var6_int = 0;
         byte[] var6 = null;
         we var2 = new we(param0);
-        ((qd) this).field_m = var2.k(0);
-        ((qd) this).field_k = var2.k(0);
-        ((qd) this).field_M = var2.k(0);
-        ((qd) this).field_G = var2.k(0);
-        if (((qd) this).field_G < 0) {
-            ((qd) this).field_G = ~((qd) this).field_G;
-            ((qd) this).field_K = true;
+        this.field_m = var2.k(0);
+        this.field_k = var2.k(0);
+        this.field_M = var2.k(0);
+        this.field_G = var2.k(0);
+        if (this.field_G < 0) {
+            this.field_G = this.field_G ^ -1;
+            this.field_K = true;
         }
         int var3 = var2.k(0);
         if (var3 < 0) {
             throw new IOException();
         }
-        ((qd) this).field_Q = new byte[var3][];
+        this.field_Q = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
             var5 = 0;
             do {
@@ -210,11 +210,12 @@ final class qd extends fa {
             } while (var6_int >= 255);
             var6 = new byte[var5];
             var2.a(var6, 0, -72, var5);
-            ((qd) this).field_Q[var4] = var6;
+            this.field_Q[var4] = var6;
         }
     }
 
     final sp a() {
+        int incrementValue$1 = 0;
         byte[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -222,24 +223,24 @@ final class qd extends fa {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ((qd) this).field_t = 0;
-        ((qd) this).field_J = new float[field_n];
-        var1 = new byte[((qd) this).field_k];
+        this.field_t = 0;
+        this.field_J = new float[field_n];
+        var1 = new byte[this.field_k];
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((qd) this).field_Q.length) {
-            ((qd) this).field_J = null;
-            return new sp(((qd) this).field_m, var1, ((qd) this).field_M, ((qd) this).field_G, ((qd) this).field_K);
+          if (var3 >= this.field_Q.length) {
+            this.field_J = null;
+            return new sp(this.field_m, var1, this.field_M, this.field_G, this.field_K);
           } else {
             var4 = this.a(var3);
             if (var4 != null) {
               L1: {
                 var5 = var4.length;
-                if (var5 <= ((qd) this).field_k - var2) {
+                if (var5 <= this.field_k - var2) {
                   break L1;
                 } else {
-                  var5 = ((qd) this).field_k - var2;
+                  var5 = this.field_k - var2;
                   break L1;
                 }
               }
@@ -251,11 +252,11 @@ final class qd extends fa {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = ~var7 >> 31;
+                      var7 = (var7 ^ -1) >> 31;
                       break L3;
                     }
                   }
-                  int incrementValue$1 = var2;
+                  incrementValue$1 = var2;
                   var2++;
                   var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
@@ -283,9 +284,10 @@ final class qd extends fa {
 
     final static qd a(fm param0, int param1, int param2) {
         try {
+            boolean discarded$0 = false;
             qd var4_ref = null;
             if (!qd.a(param0)) {
-                boolean discarded$0 = param0.a(param1, param2, -2);
+                discarded$0 = param0.a(param1, param2, -2);
                 return null;
             }
             byte[] var3 = param0.a(param1, param2, true);
@@ -293,8 +295,10 @@ final class qd extends fa {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new qd(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -305,6 +309,7 @@ final class qd extends fa {
     }
 
     private final float[] a(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -364,13 +369,7 @@ final class qd extends fa {
         int[] var48 = null;
         float[] var49 = null;
         float[] var50 = null;
-        int[] var52 = null;
-        float[] var53 = null;
-        float[] var54 = null;
-        float[] var55 = null;
-        int[] var56 = null;
-        float[] var57 = null;
-        float[] var58 = null;
+        float[] var52 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -405,8 +404,8 @@ final class qd extends fa {
         Object stackOut_109_0 = null;
         int stackOut_109_1 = 0;
         L0: {
-          qd.a(((qd) this).field_Q[param0], 0);
-          int discarded$1 = qd.c();
+          qd.a(this.field_Q[param0], 0);
+          discarded$1 = qd.c();
           var2 = qd.f(aq.a((byte) 19, field_w.length - 1));
           var3 = field_s[var2] ? 1 : 0;
           if (var3 == 0) {
@@ -528,9 +527,7 @@ final class qd extends fa {
                 var17_int = var4 >> 1;
                 var18_int = var4 >> 2;
                 var19 = var4 >> 3;
-                var57 = field_y;
-                var53 = var57;
-                var49 = var53;
+                var49 = field_y;
                 var45 = var49;
                 var20_ref_float__ = var45;
                 var21_int = 0;
@@ -542,11 +539,11 @@ final class qd extends fa {
                       if (var41 >= var4) {
                         L14: {
                           if (var3 == 0) {
-                            stackOut_39_0 = (float[]) field_F;
+                            stackOut_39_0 = (float[]) (field_F);
                             stackIn_40_0 = stackOut_39_0;
                             break L14;
                           } else {
-                            stackOut_38_0 = (float[]) field_E;
+                            stackOut_38_0 = (float[]) (field_E);
                             stackIn_40_0 = stackOut_38_0;
                             break L14;
                           }
@@ -554,11 +551,11 @@ final class qd extends fa {
                         L15: {
                           var21 = stackIn_40_0;
                           if (var3 == 0) {
-                            stackOut_42_0 = (float[]) field_I;
+                            stackOut_42_0 = (float[]) (field_I);
                             stackIn_43_0 = stackOut_42_0;
                             break L15;
                           } else {
-                            stackOut_41_0 = (float[]) field_p;
+                            stackOut_41_0 = (float[]) (field_p);
                             stackIn_43_0 = stackOut_41_0;
                             break L15;
                           }
@@ -566,11 +563,11 @@ final class qd extends fa {
                         L16: {
                           var22 = stackIn_43_0;
                           if (var3 == 0) {
-                            stackOut_45_0 = (float[]) field_o;
+                            stackOut_45_0 = (float[]) (field_o);
                             stackIn_46_0 = stackOut_45_0;
                             break L16;
                           } else {
-                            stackOut_44_0 = (float[]) field_v;
+                            stackOut_44_0 = (float[]) (field_v);
                             stackIn_46_0 = stackOut_44_0;
                             break L16;
                           }
@@ -578,18 +575,16 @@ final class qd extends fa {
                         L17: {
                           var23 = stackIn_46_0;
                           if (var3 == 0) {
-                            stackOut_48_0 = (int[]) field_B;
+                            stackOut_48_0 = (int[]) (field_B);
                             stackIn_49_0 = stackOut_48_0;
                             break L17;
                           } else {
-                            stackOut_47_0 = (int[]) field_u;
+                            stackOut_47_0 = (int[]) (field_u);
                             stackIn_49_0 = stackOut_47_0;
                             break L17;
                           }
                         }
-                        var56 = stackIn_49_0;
-                        var52 = var56;
-                        var48 = var52;
+                        var48 = stackIn_49_0;
                         var44 = var48;
                         var24 = var44;
                         var25 = 0;
@@ -669,7 +664,7 @@ final class qd extends fa {
                                                               }
                                                             }
                                                           } else {
-                                                            var20_ref_float__[var4 - var18_int + var26] = -var57[var26];
+                                                            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
                                                             var26++;
                                                             continue L26;
                                                           }
@@ -714,7 +709,7 @@ final class qd extends fa {
                                           }
                                         }
                                       } else {
-                                        var27_int = var56[var26];
+                                        var27_int = var48[var26];
                                         if (var26 < var27_int) {
                                           var28_int = 8 * var26;
                                           var29_int = 8 * var27_int;
@@ -827,27 +822,25 @@ final class qd extends fa {
             }
             L35: {
               var17 = null;
-              if (((qd) this).field_t <= 0) {
+              if (this.field_t <= 0) {
                 break L35;
               } else {
                 L36: {
-                  var18_int = ((qd) this).field_t + var4 >> 2;
-                  var58 = new float[var18_int];
-                  var54 = var58;
-                  var50 = var54;
+                  var18_int = this.field_t + var4 >> 2;
+                  var50 = new float[var18_int];
                   var46 = var50;
                   var40 = var46;
-                  var17 = (Object) (Object) var40;
-                  if (((qd) this).field_R) {
+                  var17 = var40;
+                  if (this.field_R) {
                     break L36;
                   } else {
                     var19 = 0;
                     L37: while (true) {
-                      if (var19 >= ((qd) this).field_H) {
+                      if (var19 >= this.field_H) {
                         break L36;
                       } else {
-                        var20 = (((qd) this).field_t >> 1) + var19;
-                        var40[var19] = var40[var19] + ((qd) this).field_J[var20];
+                        var20 = (this.field_t >> 1) + var19;
+                        var40[var19] = var40[var19] + this.field_J[var20];
                         var19++;
                         continue L37;
                       }
@@ -862,7 +855,7 @@ final class qd extends fa {
                     if (var19 >= var4 >> 1) {
                       break L35;
                     } else {
-                      var20 = var58.length - (var4 >> 1) + var19;
+                      var20 = var50.length - (var4 >> 1) + var19;
                       var40[var20] = var40[var20] + field_y[var19];
                       var19++;
                       continue L38;
@@ -872,11 +865,11 @@ final class qd extends fa {
               }
             }
             L39: {
-              var18 = ((qd) this).field_J;
-              ((qd) this).field_J = field_y;
+              var18 = this.field_J;
+              this.field_J = field_y;
               field_y = var18;
-              ((qd) this).field_t = var4;
-              ((qd) this).field_H = var12 - (var4 >> 1);
+              this.field_t = var4;
+              this.field_H = var12 - (var4 >> 1);
               stackOut_108_0 = this;
               stackIn_110_0 = stackOut_108_0;
               stackIn_109_0 = stackOut_108_0;
@@ -894,12 +887,12 @@ final class qd extends fa {
                 break L39;
               }
             }
-            ((qd) this).field_R = stackIn_111_1 != 0;
-            return (float[]) var17;
+            ((qd) (this)).field_R = stackIn_111_1 != 0;
+            return (float[]) (var17);
           } else {
             var42 = field_L[var14.field_b[var17_int]];
-            var55 = field_y;
-            var42.a(var55, var4 >> 1, var16 != 0);
+            var52 = field_y;
+            var42.a(var52, var4 >> 1, var16 != 0);
             var17_int++;
             continue L9;
           }
@@ -919,6 +912,9 @@ final class qd extends fa {
     }
 
     final static void a(byte[] param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -993,14 +989,14 @@ final class qd extends fa {
                                     return;
                                   } else {
                                     L7: {
-                                      stackOut_37_0 = (boolean[]) field_s;
+                                      stackOut_37_0 = (boolean[]) (field_s);
                                       stackOut_37_1 = var6;
                                       stackIn_39_0 = stackOut_37_0;
                                       stackIn_39_1 = stackOut_37_1;
                                       stackIn_38_0 = stackOut_37_0;
                                       stackIn_38_1 = stackOut_37_1;
                                       if (qd.c() == 0) {
-                                        stackOut_39_0 = (boolean[]) (Object) stackIn_39_0;
+                                        stackOut_39_0 = (boolean[]) ((Object) stackIn_39_0);
                                         stackOut_39_1 = stackIn_39_1;
                                         stackOut_39_2 = 0;
                                         stackIn_40_0 = stackOut_39_0;
@@ -1008,7 +1004,7 @@ final class qd extends fa {
                                         stackIn_40_2 = stackOut_39_2;
                                         break L7;
                                       } else {
-                                        stackOut_38_0 = (boolean[]) (Object) stackIn_38_0;
+                                        stackOut_38_0 = (boolean[]) ((Object) stackIn_38_0);
                                         stackOut_38_1 = stackIn_38_1;
                                         stackOut_38_2 = 1;
                                         stackIn_40_0 = stackOut_38_0;
@@ -1018,8 +1014,8 @@ final class qd extends fa {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = qd.f(16);
-                                    int discarded$4 = qd.f(16);
+                                    discarded$3 = qd.f(16);
+                                    discarded$4 = qd.f(16);
                                     field_w[var6] = qd.f(8);
                                     var6++;
                                     continue L6;
@@ -1044,7 +1040,7 @@ final class qd extends fa {
                       }
                     }
                   } else {
-                    int discarded$5 = qd.f(16);
+                    discarded$5 = qd.f(16);
                     var3++;
                     continue L2;
                   }
@@ -1135,8 +1131,8 @@ final class qd extends fa {
     }
 
     final static int f(int param0) {
-        int var3 = 0;
         int var4 = 0;
+        int var3 = 0;
         int var1 = 0;
         int var2 = 0;
         while (param0 >= 8 - field_P) {
@@ -1180,10 +1176,6 @@ final class qd extends fa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = false;
     }
 }

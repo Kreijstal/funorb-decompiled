@@ -5,6 +5,7 @@ final class ti {
     private static String field_z;
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
+        int incrementValue$1 = 0;
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -15,6 +16,7 @@ final class ti {
         int var13 = 0;
         int var14 = 0;
         int stackIn_25_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_24_0 = 0;
         int stackOut_23_0 = 0;
@@ -22,7 +24,8 @@ final class ti {
         try {
           L0: {
             if (param5 <= param6) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param2 > 1 + param6) {
                 L1: {
@@ -31,7 +34,7 @@ final class ti {
                   } else {
                     if (param0 != param1) {
                       if (param4 > 93) {
-                        var7_int = (param1 >> 1) - (-(param0 >> 1) - (1 & (param0 & param1)));
+                        var7_int = (param1 >> -638526559) - (-(param0 >> 502774113) - (1 & (param0 & param1)));
                         var8 = param6;
                         var9 = param0;
                         var10 = param1;
@@ -40,6 +43,7 @@ final class ti {
                           if (param2 <= var11) {
                             ti.a(param0, var9, var8, param3, 125, param5, param6);
                             ti.a(var10, param1, param2, param3, 99, param5, var8);
+                            decompiledRegionSelector0 = 4;
                             break L0;
                           } else {
                             L3: {
@@ -54,37 +58,39 @@ final class ti {
                                 break L3;
                               }
                             }
-                            var13 = stackIn_25_0;
-                            if (var7_int < var13) {
-                              L4: {
-                                fj.field_Pb[var11] = fj.field_Pb[var8];
-                                if (var13 >= var9) {
+                            L4: {
+                              var13 = stackIn_25_0;
+                              if (var7_int < var13) {
+                                L5: {
+                                  fj.field_Pb[var11] = fj.field_Pb[var8];
+                                  if (var13 >= var9) {
+                                    break L5;
+                                  } else {
+                                    var9 = var13;
+                                    break L5;
+                                  }
+                                }
+                                incrementValue$1 = var8;
+                                var8++;
+                                fj.field_Pb[incrementValue$1] = var12;
+                                break L4;
+                              } else {
+                                if (var10 < var13) {
+                                  var10 = var13;
                                   break L4;
                                 } else {
-                                  var9 = var13;
-                                  break L4;
+                                  var11++;
+                                  continue L2;
                                 }
                               }
-                              int incrementValue$1 = var8;
-                              var8++;
-                              fj.field_Pb[incrementValue$1] = var12;
-                              var11++;
-                              continue L2;
-                            } else {
-                              L5: {
-                                if (var10 >= var13) {
-                                  break L5;
-                                } else {
-                                  break L5;
-                                }
-                              }
-                              var11++;
-                              continue L2;
                             }
+                            var11++;
+                            continue L2;
                           }
                         }
                       } else {
-                        return;
+                        decompiledRegionSelector0 = 3;
+                        break L0;
                       }
                     } else {
                       break L1;
@@ -94,7 +100,8 @@ final class ti {
                 var7_int = -1 + param2;
                 L6: while (true) {
                   if (var7_int <= param6) {
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     var8 = param6;
                     L7: while (true) {
@@ -120,22 +127,36 @@ final class ti {
                   }
                 }
               } else {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var7, field_z + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw qb.a((Throwable) ((Object) var7), field_z + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                return;
+              }
+            }
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ti.A(";
     }
 }

@@ -17,7 +17,10 @@ final class ql extends ud {
 
     public static void a(byte param0) {
         field_r = null;
-        field_p = null;
+        field_p = (byte[][]) null;
+        if (param0 >= -11) {
+            field_o = (int[]) null;
+        }
         field_o = null;
     }
 
@@ -54,6 +57,7 @@ final class ql extends ud {
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
         String stackIn_48_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_24_0 = null;
         Object stackOut_26_0 = null;
@@ -78,15 +82,15 @@ final class ql extends ud {
           L0: {
             if (param0) {
               L1: {
-                var5 = mo.field_c[param2] * ((ql) this).field_h;
-                if (-2 == ((ql) this).field_s) {
+                var5 = mo.field_c[param2] * this.field_h;
+                if (-2 == (this.field_s ^ -1)) {
                   L2: {
-                    var9 = ((ql) this).field_k[0];
-                    var8 = ((ql) this).field_l[0] << 12;
-                    var11 = var5 * var8 >> 12;
-                    var13 = var8 * ((ql) this).field_h >> 12;
-                    var12 = var8 * ((ql) this).field_q >> 12;
-                    var15 = var11 >> 12;
+                    var9 = this.field_k[0];
+                    var8 = this.field_l[0] << 1989972972;
+                    var11 = var5 * var8 >> 938898956;
+                    var13 = var8 * this.field_h >> 495279468;
+                    var12 = var8 * this.field_q >> 2117427628;
+                    var15 = var11 >> -1456252372;
                     var16 = var15 + 1;
                     var11 = var11 & 4095;
                     if (var13 > var16) {
@@ -96,18 +100,18 @@ final class ql extends ud {
                       break L2;
                     }
                   }
-                  var18 = 255 & ((ql) this).field_i[var16 & 255];
+                  var18 = 255 & this.field_i[var16 & 255];
                   var14 = ua.field_h[var11];
-                  var17 = ((ql) this).field_i[var15 & 255] & 255;
-                  if (!((ql) this).field_n) {
+                  var17 = this.field_i[var15 & 255] & 255;
+                  if (!this.field_n) {
                     var10 = 0;
                     L3: while (true) {
                       if (ms.field_d <= var10) {
                         break L1;
                       } else {
-                        var4_int = ((ql) this).field_q * ct.field_v[var10];
-                        var6 = this.a(false, var4_int * var8 >> 12, var17, var18, var11, var14, var12);
-                        param1[var10] = var6 * var9 >> 12;
+                        var4_int = this.field_q * ct.field_v[var10];
+                        var6 = this.a(false, var4_int * var8 >> 1252220428, var17, var18, var11, var14, var12);
+                        param1[var10] = var6 * var9 >> -956554868;
                         var10++;
                         continue L3;
                       }
@@ -118,10 +122,10 @@ final class ql extends ud {
                       if (var10 >= ms.field_d) {
                         break L1;
                       } else {
-                        var4_int = ((ql) this).field_q * ct.field_v[var10];
-                        var6 = this.a(false, var4_int * var8 >> 12, var17, var18, var11, var14, var12);
-                        var6 = var6 * var9 >> 12;
-                        param1[var10] = 2048 + (var6 >> 1);
+                        var4_int = this.field_q * ct.field_v[var10];
+                        var6 = this.a(false, var4_int * var8 >> -1549663828, var17, var18, var11, var14, var12);
+                        var6 = var6 * var9 >> -1530447252;
+                        param1[var10] = 2048 + (var6 >> -350934335);
                         var10++;
                         continue L4;
                       }
@@ -130,11 +134,11 @@ final class ql extends ud {
                 } else {
                   L5: {
                     L6: {
-                      var9 = ((ql) this).field_k[0];
+                      var9 = this.field_k[0];
                       if (var9 > 8) {
                         break L6;
                       } else {
-                        if (7 > var9) {
+                        if (7 < (var9 ^ -1)) {
                           break L6;
                         } else {
                           break L5;
@@ -142,11 +146,11 @@ final class ql extends ud {
                       }
                     }
                     L7: {
-                      var8 = ((ql) this).field_l[0] << 12;
-                      var13 = ((ql) this).field_h * var8 >> 12;
-                      var11 = var5 * var8 >> 12;
-                      var12 = var8 * ((ql) this).field_q >> 12;
-                      var15 = var11 >> 12;
+                      var8 = this.field_l[0] << -602973044;
+                      var13 = this.field_h * var8 >> 647077900;
+                      var11 = var5 * var8 >> -997316404;
+                      var12 = var8 * this.field_q >> 1294694444;
+                      var15 = var11 >> -1392880820;
                       var16 = 1 + var15;
                       var11 = var11 & 4095;
                       if (var16 < var13) {
@@ -156,17 +160,17 @@ final class ql extends ud {
                         break L7;
                       }
                     }
-                    var17 = ((ql) this).field_i[var15 & 255] & 255;
-                    var18 = 255 & ((ql) this).field_i[255 & var16];
+                    var17 = this.field_i[var15 & 255] & 255;
+                    var18 = 255 & this.field_i[255 & var16];
                     var14 = ua.field_h[var11];
                     var10 = 0;
                     L8: while (true) {
                       if (var10 >= ms.field_d) {
                         break L5;
                       } else {
-                        var4_int = ((ql) this).field_q * ct.field_v[var10];
-                        var6 = this.a(false, var4_int * var8 >> 12, var17, var18, var11, var14, var12);
-                        param1[var10] = var6 * var9 >> 12;
+                        var4_int = this.field_q * ct.field_v[var10];
+                        var6 = this.a(false, var4_int * var8 >> 1724090284, var17, var18, var11, var14, var12);
+                        param1[var10] = var6 * var9 >> -1739619188;
                         var10++;
                         continue L8;
                       }
@@ -174,16 +178,16 @@ final class ql extends ud {
                   }
                   var7 = 1;
                   L9: while (true) {
-                    if (((ql) this).field_s <= var7) {
+                    if (this.field_s <= var7) {
                       break L1;
                     } else {
                       L10: {
                         L11: {
-                          var9 = ((ql) this).field_k[var7];
+                          var9 = this.field_k[var7];
                           if (8 < var9) {
                             break L11;
                           } else {
-                            if (var9 >= -8) {
+                            if (7 >= (var9 ^ -1)) {
                               break L10;
                             } else {
                               break L11;
@@ -191,11 +195,11 @@ final class ql extends ud {
                           }
                         }
                         L12: {
-                          var8 = ((ql) this).field_l[var7] << 12;
-                          var11 = var5 * var8 >> 12;
-                          var12 = ((ql) this).field_q * var8 >> 12;
-                          var13 = var8 * ((ql) this).field_h >> 12;
-                          var15 = var11 >> 12;
+                          var8 = this.field_l[var7] << -1472753460;
+                          var11 = var5 * var8 >> -1843211060;
+                          var12 = this.field_q * var8 >> 1371548172;
+                          var13 = var8 * this.field_h >> 745380748;
+                          var15 = var11 >> -1052743124;
                           var16 = var15 - -1;
                           if (var13 <= var16) {
                             var16 = 0;
@@ -206,13 +210,13 @@ final class ql extends ud {
                         }
                         L13: {
                           var11 = var11 & 4095;
-                          var17 = ((ql) this).field_i[255 & var15] & 255;
-                          var18 = ((ql) this).field_i[var16 & 255] & 255;
+                          var17 = this.field_i[255 & var15] & 255;
+                          var18 = this.field_i[var16 & 255] & 255;
                           var14 = ua.field_h[var11];
-                          if (!((ql) this).field_n) {
+                          if (!this.field_n) {
                             break L13;
                           } else {
-                            if (var7 != -1 + ((ql) this).field_s) {
+                            if (var7 != -1 + this.field_s) {
                               break L13;
                             } else {
                               var10 = 0;
@@ -221,7 +225,7 @@ final class ql extends ud {
                                   break L10;
                                 } else {
                                   L15: {
-                                    var4_int = ct.field_v[var10] * ((ql) this).field_q;
+                                    var4_int = ct.field_v[var10] * this.field_q;
                                     stackOut_24_0 = this;
                                     stackIn_26_0 = stackOut_24_0;
                                     stackIn_25_0 = stackOut_24_0;
@@ -239,9 +243,9 @@ final class ql extends ud {
                                       break L15;
                                     }
                                   }
-                                  var6 = this.a(stackIn_27_1 != 0, var8 * var4_int >> 12, var17, var18, var11, var14, var12);
-                                  var6 = param1[var10] - -(var6 * var9 >> 12);
-                                  param1[var10] = 2048 - -(var6 >> 1);
+                                  var6 = this.a(stackIn_27_1 != 0, var8 * var4_int >> 1695595052, var17, var18, var11, var14, var12);
+                                  var6 = param1[var10] - -(var6 * var9 >> -204557012);
+                                  param1[var10] = 2048 - -(var6 >> -402420607);
                                   var10++;
                                   continue L14;
                                 }
@@ -255,7 +259,7 @@ final class ql extends ud {
                             break L10;
                           } else {
                             L17: {
-                              var4_int = ((ql) this).field_q * ct.field_v[var10];
+                              var4_int = this.field_q * ct.field_v[var10];
                               stackOut_30_0 = this;
                               stackIn_32_0 = stackOut_30_0;
                               stackIn_31_0 = stackOut_30_0;
@@ -273,8 +277,8 @@ final class ql extends ud {
                                 break L17;
                               }
                             }
-                            var6 = this.a(stackIn_33_1 != 0, var4_int * var8 >> 12, var17, var18, var11, var14, var12);
-                            param1[var10] = param1[var10] + (var9 * var6 >> 12);
+                            var6 = this.a(stackIn_33_1 != 0, var4_int * var8 >> 729791116, var17, var18, var11, var14, var12);
+                            param1[var10] = param1[var10] + (var9 * var6 >> 520514732);
                             var10++;
                             continue L16;
                           }
@@ -286,32 +290,34 @@ final class ql extends ud {
                   }
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var4 = decompiledCaughtException;
-            stackOut_45_0 = (RuntimeException) var4;
+            stackOut_45_0 = (RuntimeException) (var4);
             stackOut_45_1 = new StringBuilder().append("ql.E(").append(param0).append(',');
             stackIn_47_0 = stackOut_45_0;
             stackIn_47_1 = stackOut_45_1;
             stackIn_46_0 = stackOut_45_0;
             stackIn_46_1 = stackOut_45_1;
             if (param1 == null) {
-              stackOut_47_0 = (RuntimeException) (Object) stackIn_47_0;
-              stackOut_47_1 = (StringBuilder) (Object) stackIn_47_1;
+              stackOut_47_0 = (RuntimeException) ((Object) stackIn_47_0);
+              stackOut_47_1 = (StringBuilder) ((Object) stackIn_47_1);
               stackOut_47_2 = "null";
               stackIn_48_0 = stackOut_47_0;
               stackIn_48_1 = stackOut_47_1;
               stackIn_48_2 = stackOut_47_2;
               break L18;
             } else {
-              stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
-              stackOut_46_1 = (StringBuilder) (Object) stackIn_46_1;
+              stackOut_46_0 = (RuntimeException) ((Object) stackIn_46_0);
+              stackOut_46_1 = (StringBuilder) ((Object) stackIn_46_1);
               stackOut_46_2 = "{...}";
               stackIn_48_0 = stackOut_46_0;
               stackIn_48_1 = stackOut_46_1;
@@ -319,7 +325,12 @@ final class ql extends ud {
               break L18;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_48_0), stackIn_48_2 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -329,27 +340,27 @@ final class ql extends ud {
         int var4 = 0;
         L0: {
           var4 = AceOfSkies.field_G ? 1 : 0;
-          ((ql) this).field_i = ro.b(-3992, ((ql) this).field_m);
+          this.field_i = ro.b(-3992, this.field_m);
           this.a(98);
           if (param0 == 1) {
             break L0;
           } else {
-            ((ql) this).field_i = null;
+            this.field_i = (byte[]) null;
             break L0;
           }
         }
-        var2 = ((ql) this).field_s + -1;
+        var2 = this.field_s + -1;
         L1: while (true) {
           L2: {
-            if (var2 < 1) {
+            if (-2 < (var2 ^ -1)) {
               break L2;
             } else {
-              var3 = ((ql) this).field_k[var2];
+              var3 = this.field_k[var2];
               if (var3 > 8) {
                 break L2;
               } else {
                 if (var3 >= -8) {
-                  ((ql) this).field_s = ((ql) this).field_s - 1;
+                  this.field_s = this.field_s - 1;
                   var2--;
                   continue L1;
                 } else {
@@ -370,7 +381,7 @@ final class ql extends ud {
           if (param0 <= -72) {
             break L0;
           } else {
-            field_p = null;
+            field_p = (byte[][]) null;
             break L0;
           }
         }
@@ -395,7 +406,7 @@ final class ql extends ud {
               }
             }
             if (jf.field_a != null) {
-              cd.a((java.awt.Canvas) (Object) jf.field_a, 74);
+              cd.a(jf.field_a, 74);
               var2 = 2;
               break L1;
             } else {
@@ -464,9 +475,9 @@ final class ql extends ud {
           }
         }
         L1: {
-          var13 = param1 >> 12;
+          var13 = param1 >> -1871141620;
           var12 = var13 - -1;
-          if (~var12 <= ~param6) {
+          if (var12 >= param6) {
             var12 = 0;
             break L1;
           } else {
@@ -480,8 +491,8 @@ final class ql extends ud {
           var12 = var12 & 255;
           var10 = -4096 + param4;
           var15 = ua.field_h[param1];
-          var14 = ((ql) this).field_i[var13 - -param2] & 3;
-          if (var14 <= 1) {
+          var14 = this.field_i[var13 - -param2] & 3;
+          if (-2 <= (var14 ^ -1)) {
             L3: {
               if (var14 != 0) {
                 stackOut_12_0 = param4 + -param1;
@@ -512,10 +523,10 @@ final class ql extends ud {
           }
         }
         L5: {
-          var14 = 3 & ((ql) this).field_i[var12 + param2];
-          if (var14 > 1) {
+          var14 = 3 & this.field_i[var12 + param2];
+          if (-2 > (var14 ^ -1)) {
             L6: {
-              if (var14 != 2) {
+              if (-3 != (var14 ^ -1)) {
                 stackOut_21_0 = -param4 + -var11;
                 stackIn_22_0 = stackOut_21_0;
                 break L6;
@@ -529,7 +540,7 @@ final class ql extends ud {
             break L5;
           } else {
             L7: {
-              if (var14 == 0) {
+              if (-1 == (var14 ^ -1)) {
                 stackOut_17_0 = var11 - -param4;
                 stackIn_18_0 = stackOut_17_0;
                 break L7;
@@ -544,11 +555,11 @@ final class ql extends ud {
           }
         }
         L8: {
-          var16 = var8 + (var15 * (-var8 + var9) >> 12);
-          var14 = ((ql) this).field_i[param3 + var13] & 3;
+          var16 = var8 + (var15 * (-var8 + var9) >> 467958540);
+          var14 = this.field_i[param3 + var13] & 3;
           if (1 >= var14) {
             L9: {
-              if (var14 != 0) {
+              if (-1 != (var14 ^ -1)) {
                 stackOut_30_0 = var10 + -param1;
                 stackIn_31_0 = stackOut_30_0;
                 break L9;
@@ -562,7 +573,7 @@ final class ql extends ud {
             break L8;
           } else {
             L10: {
-              if (var14 != 2) {
+              if (-3 != (var14 ^ -1)) {
                 stackOut_26_0 = -var10 + -param1;
                 stackIn_27_0 = stackOut_26_0;
                 break L10;
@@ -577,7 +588,7 @@ final class ql extends ud {
           }
         }
         L11: {
-          var14 = ((ql) this).field_i[param3 + var12] & 3;
+          var14 = this.field_i[param3 + var12] & 3;
           if (var14 > 1) {
             L12: {
               if (2 != var14) {
@@ -608,8 +619,8 @@ final class ql extends ud {
             break L11;
           }
         }
-        var17 = ((-var8 + var9) * var15 >> 12) + var8;
-        return var16 + (param5 * (var17 + -var16) >> 12);
+        var17 = ((-var8 + var9) * var15 >> 1968260332) + var8;
+        return var16 + (param5 * (var17 + -var16) >> 2028499116);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -623,13 +634,13 @@ final class ql extends ud {
 
     ql() {
         super(0, true);
-        ((ql) this).field_m = 0;
-        ((ql) this).field_s = 4;
-        ((ql) this).field_q = 4;
-        ((ql) this).field_j = 1638;
-        ((ql) this).field_h = 4;
-        ((ql) this).field_i = new byte[512];
-        ((ql) this).field_n = true;
+        this.field_m = 0;
+        this.field_s = 4;
+        this.field_q = 4;
+        this.field_j = 1638;
+        this.field_h = 4;
+        this.field_i = new byte[512];
+        this.field_n = true;
     }
 
     private final void a(int param0) {
@@ -637,36 +648,44 @@ final class ql extends ud {
         int var3 = 0;
         L0: {
           var3 = AceOfSkies.field_G ? 1 : 0;
-          if (((ql) this).field_j > 0) {
-            ((ql) this).field_l = new short[((ql) this).field_s];
-            ((ql) this).field_k = new short[((ql) this).field_s];
+          if (param0 >= 23) {
+            break L0;
+          } else {
+            ql.a((byte) 58);
+            break L0;
+          }
+        }
+        L1: {
+          if (-1 > (this.field_j ^ -1)) {
+            this.field_l = new short[this.field_s];
+            this.field_k = new short[this.field_s];
             var2 = 0;
-            L1: while (true) {
-              if (var2 >= ((ql) this).field_s) {
-                break L0;
+            L2: while (true) {
+              if (var2 >= this.field_s) {
+                break L1;
               } else {
-                ((ql) this).field_k[var2] = (short)(int)(4096.0 * Math.pow((double)((float)((ql) this).field_j / 4096.0f), (double)var2));
-                ((ql) this).field_l[var2] = (short)(int)Math.pow(2.0, (double)var2);
+                this.field_k[var2] = (short)(int)(4096.0 * Math.pow((double)((float)this.field_j / 4096.0f), (double)var2));
+                this.field_l[var2] = (short)(int)Math.pow(2.0, (double)var2);
                 var2++;
-                continue L1;
+                continue L2;
               }
             }
           } else {
-            if (((ql) this).field_k == null) {
-              break L0;
+            if (this.field_k == null) {
+              break L1;
             } else {
-              if (((ql) this).field_s != ((ql) this).field_k.length) {
-                break L0;
+              if (this.field_s != this.field_k.length) {
+                break L1;
               } else {
-                ((ql) this).field_l = new short[((ql) this).field_s];
+                this.field_l = new short[this.field_s];
                 var2 = 0;
-                L2: while (true) {
-                  if (((ql) this).field_s <= var2) {
-                    break L0;
+                L3: while (true) {
+                  if (this.field_s <= var2) {
+                    break L1;
                   } else {
-                    ((ql) this).field_l[var2] = (short)(int)Math.pow(2.0, (double)var2);
+                    this.field_l[var2] = (short)(int)Math.pow(2.0, (double)var2);
                     var2++;
-                    continue L2;
+                    continue L3;
                   }
                 }
               }
@@ -676,10 +695,6 @@ final class ql extends ud {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new int[8192];
         field_r = null;
     }

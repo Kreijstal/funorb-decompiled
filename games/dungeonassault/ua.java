@@ -22,6 +22,7 @@ final class ua {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_10_0 = 0;
         int stackOut_7_0 = 0;
@@ -37,13 +38,14 @@ final class ua {
         var5 = DungeonAssault.field_K;
         try {
           L0: {
-            if (mk.a(false, param2, (byte) 64)) {
+            if (mk.a(param1, param2, (byte) 64)) {
               var3_int = 0;
               L1: while (true) {
                 if (param2.length() <= var3_int) {
-                  var4 = 0;
+                  var4 = 108 % ((param0 - 72) / 33);
                   stackOut_10_0 = 1;
                   stackIn_11_0 = stackOut_10_0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   if (rp.a(param2.charAt(var3_int), (byte) -107)) {
@@ -52,37 +54,39 @@ final class ua {
                   } else {
                     stackOut_7_0 = 0;
                     stackIn_8_0 = stackOut_7_0;
-                    return stackIn_8_0 != 0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               }
             } else {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("ua.B(").append(122).append(',').append(false).append(',');
+            stackOut_12_0 = (RuntimeException) (var3);
+            stackOut_12_1 = new StringBuilder().append("ua.B(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -90,33 +94,48 @@ final class ua {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
-        return stackIn_11_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0 != 0;
+          } else {
+            return stackIn_11_0 != 0;
+          }
+        }
     }
 
     final static java.awt.Container a(int param0) {
+        java.awt.Container discarded$0 = null;
         if (null != ad.field_d) {
-            return (java.awt.Container) (Object) ad.field_d;
+            return (java.awt.Container) ((Object) ad.field_d);
         }
         if (param0 != 0) {
-            java.awt.Container discarded$0 = ua.a(-74);
-            return (java.awt.Container) (Object) m.c(true);
+            discarded$0 = ua.a(-74);
+            return (java.awt.Container) ((Object) m.c(true));
         }
-        return (java.awt.Container) (Object) m.c(true);
+        return (java.awt.Container) ((Object) m.c(true));
     }
 
     public static void a(byte param0) {
+        boolean discarded$2 = false;
+        CharSequence var2 = null;
         field_d = null;
         field_c = null;
-        field_b = null;
+        if (param0 != 103) {
+          var2 = (CharSequence) null;
+          discarded$2 = ua.a((byte) 109, true, (CharSequence) null);
+          field_b = null;
+          return;
+        } else {
+          field_b = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
         field_c = new String[]{"Fickle", "Leaves stable if fail any raid."};
         field_d = "Cave Troll";

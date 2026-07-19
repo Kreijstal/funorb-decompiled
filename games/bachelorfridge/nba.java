@@ -14,11 +14,7 @@ final class nba extends ao {
         kv var14 = null;
         int[] var15 = null;
         int[] var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
-        var18 = dg.field_e;
-        var17 = var18;
-        var16 = var17;
+        var16 = dg.field_e;
         var15 = var16;
         var12 = var15;
         var6 = var12;
@@ -26,7 +22,7 @@ final class nba extends ao {
         var8 = dg.field_c;
         var9 = new kv(16, param4);
         if (param2 != 1) {
-          return null;
+          return (kv[]) null;
         } else {
           L0: {
             var9.b();
@@ -37,7 +33,7 @@ final class nba extends ao {
               break L0;
             } else {
               var13 = var9.a();
-              var10 = (Object) (Object) var13;
+              var10 = var13;
               var13.b();
               dg.e(0, 0, 5, 0);
               dg.e(0, 1, 3, 0);
@@ -52,7 +48,7 @@ final class nba extends ao {
               break L1;
             } else {
               var14 = var9.a();
-              var11 = (Object) (Object) var14;
+              var11 = var14;
               var14.b();
               dg.e(11, 0, 5, 0);
               dg.e(13, 1, 3, 0);
@@ -62,14 +58,15 @@ final class nba extends ao {
               break L1;
             }
           }
-          dg.a(var18, var7, var8);
-          return new kv[]{null, null, null, (kv) var10, var9, (kv) var11, null, null, null};
+          dg.a(var16, var7, var8);
+          return new kv[]{null, null, null, (kv) (var10), var9, (kv) (var11), null, null, null};
         }
     }
 
     final static boolean b(byte param0) {
+        gca discarded$0 = null;
         if (param0 >= -98) {
-            gca discarded$0 = nba.a(-97, false);
+            discarded$0 = nba.a(-97, false);
             return nla.field_f;
         }
         return nla.field_f;
@@ -77,15 +74,19 @@ final class nba extends ao {
 
     final static gca a(int param0, boolean param1) {
         int var2 = 0;
-        var2 = param0;
-        if (var2 != 32) {
-          if (var2 != 29) {
-            return null;
+        if (!param1) {
+          var2 = param0;
+          if (-33 != (var2 ^ -1)) {
+            if (var2 != 29) {
+              return null;
+            } else {
+              return (gca) ((Object) new ria());
+            }
           } else {
-            return (gca) (Object) new ria();
+            return (gca) ((Object) new c());
           }
         } else {
-          return (gca) (Object) new c();
+          return (gca) null;
         }
     }
 

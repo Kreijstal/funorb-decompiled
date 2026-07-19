@@ -10,6 +10,11 @@ final class hd {
     static String field_c;
 
     final static String a(long param0, byte param1) {
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
+        int discarded$7 = 0;
+        StringBuilder discarded$8 = null;
+        StringBuilder discarded$9 = null;
         int var3 = 0;
         long var4 = 0L;
         long var7 = 0L;
@@ -20,7 +25,7 @@ final class hd {
         StringBuilder var13 = null;
         var11 = Confined.field_J ? 1 : 0;
         if (param0 > 0L) {
-          if (param0 < 6582952005840035281L) {
+          if (-6582952005840035282L < (param0 ^ -1L)) {
             if (0L != param0 % 37L) {
               var3 = 0;
               var4 = param0;
@@ -30,7 +35,7 @@ final class hd {
                     var12 = new StringBuilder(var3);
                     L1: while (true) {
                       if (0L == param0) {
-                        StringBuilder discarded$5 = var12.reverse();
+                        discarded$5 = var12.reverse();
                         var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
                         return var12.toString();
                       } else {
@@ -47,7 +52,7 @@ final class hd {
                             break L2;
                           }
                         }
-                        StringBuilder discarded$6 = var12.append((char) var9);
+                        discarded$6 = var12.append((char) var9);
                         continue L1;
                       }
                     }
@@ -58,13 +63,13 @@ final class hd {
                   }
                 }
               } else {
-                int discarded$7 = hd.a(98);
+                discarded$7 = hd.a(98);
                 L3: while (true) {
                   if (var4 == 0L) {
                     var13 = new StringBuilder(var3);
                     L4: while (true) {
                       if (0L == param0) {
-                        StringBuilder discarded$8 = var13.reverse();
+                        discarded$8 = var13.reverse();
                         var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
                         return var13.toString();
                       } else {
@@ -81,7 +86,7 @@ final class hd {
                             break L5;
                           }
                         }
-                        StringBuilder discarded$9 = var13.append((char) var9);
+                        discarded$9 = var13.append((char) var9);
                         continue L4;
                       }
                     }
@@ -104,24 +109,26 @@ final class hd {
     }
 
     public static void a(boolean param0) {
+        String discarded$0 = null;
         field_a = null;
         field_c = null;
+        if (!param0) {
+            discarded$0 = hd.a(10L, (byte) 3);
+            field_e = null;
+            return;
+        }
         field_e = null;
     }
 
     final static int a(int param0) {
         if (param0 <= 38) {
-            field_a = null;
+            field_a = (String) null;
             return oj.field_A;
         }
         return oj.field_A;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Login: ";
         field_e = new da();
         field_c = "Fullscreen play is an option available to subscribing members only. For more details see the website.";

@@ -23,6 +23,7 @@ final class qf {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_10_0 = 0;
         int stackOut_5_0 = 0;
@@ -41,14 +42,24 @@ final class qf {
             var3 = 1;
             L1: while (true) {
               if (var3 >= param1.length()) {
+                L2: {
+                  if (param0 == -8503) {
+                    break L2;
+                  } else {
+                    qf.a((byte) 86);
+                    break L2;
+                  }
+                }
                 stackOut_10_0 = 1;
                 stackIn_11_0 = stackOut_10_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (var2_int != param1.charAt(var3)) {
                   stackOut_5_0 = 0;
                   stackIn_6_0 = stackOut_5_0;
-                  return stackIn_6_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   var3++;
                   continue L1;
@@ -58,40 +69,47 @@ final class qf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var2;
-            stackOut_12_1 = new StringBuilder().append("qf.A(").append(-8503).append(',');
+            stackOut_12_0 = (RuntimeException) (var2);
+            stackOut_12_1 = new StringBuilder().append("qf.A(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
-              break L2;
+              break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
               stackIn_15_2 = stackOut_13_2;
-              break L2;
+              break L3;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
-        return stackIn_11_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0 != 0;
+        } else {
+          return stackIn_11_0 != 0;
+        }
     }
 
     public static void a(byte param0) {
         field_d = null;
         field_c = null;
+        if (param0 != 75) {
+            return;
+        }
         field_e = null;
         field_a = null;
         field_b = null;
@@ -106,15 +124,13 @@ final class qf {
         if (param2) {
             var5 += 2;
         }
-        var5++;
+        if (param3) {
+            var5++;
+        }
         return tf.field_z[var5];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "If you do nothing the game will revert to normal view in <%0> second.";
         field_d = "The account name you use to access RuneScape and other Jagex.com games";
         field_e = null;

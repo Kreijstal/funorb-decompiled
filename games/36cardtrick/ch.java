@@ -19,13 +19,14 @@ abstract class ch {
 
     final static void a(int param0, qk param1) {
         ig var2 = null;
+        ib discarded$0 = null;
         try {
             ig.a(param1.a((byte) 7, "", "headers.packvorbis"));
             var2 = ig.a(param1, "jagex logo2.packvorbis", "");
-            int var3 = 108;
-            ib discarded$0 = var2.c();
+            int var3 = -108 / ((param0 - -29) / 58);
+            discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ch.E(" + -114 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "ch.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -33,14 +34,15 @@ abstract class ch {
 
     final int b(int param0) {
         if (param0 != -21040) {
-          ((ch) this).a(85);
-          return ((ch) this).field_a.b(1) + ((ch) this).field_e.b(1);
+          this.a(85);
+          return this.field_a.b(1) + this.field_e.b(1);
         } else {
-          return ((ch) this).field_a.b(1) + ((ch) this).field_e.b(1);
+          return this.field_a.b(1) + this.field_e.b(1);
         }
     }
 
     final boolean a(boolean param0) {
+        na discarded$18 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -49,8 +51,8 @@ abstract class ch {
         int stackOut_2_0 = 0;
         if (param0) {
           L0: {
-            na discarded$18 = ((ch) this).a(true, -13, 58, (byte) 80, 74);
-            if (((ch) this).a((byte) 72) < 20) {
+            discarded$18 = this.a(true, -13, 58, (byte) 80, 74);
+            if ((this.a((byte) 72) ^ -1) > -21) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -63,7 +65,7 @@ abstract class ch {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((ch) this).a((byte) 72) < 20) {
+            if ((this.a((byte) 72) ^ -1) > -21) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -82,22 +84,22 @@ abstract class ch {
     abstract boolean b(byte param0);
 
     final na a(boolean param0, int param1, int param2, byte param3, int param4) {
-        long var6 = ((long)param4 << 32) + (long)param2;
+        long var6 = ((long)param4 << -1640279264) + (long)param2;
         if (param1 != -1640279264) {
-            return null;
+            return (na) null;
         }
         na var8 = new na();
         var8.field_o = param0 ? true : false;
         var8.field_j = var6;
         var8.field_u = param3;
         if (!param0) {
-            if (!(((ch) this).b(param1 ^ 1640300272) < 20)) {
+            if (!((this.b(param1 ^ 1640300272) ^ -1) > -21)) {
                 throw new RuntimeException();
             }
-            ((ch) this).field_a.a((byte) -78, (he) (Object) var8);
+            this.field_a.a((byte) -78, var8);
         } else {
-            if (((ch) this).a((byte) 107) < 20) {
-                ((ch) this).field_g.a((byte) -75, (he) (Object) var8);
+            if (this.a((byte) 107) < 20) {
+                this.field_g.a((byte) -75, var8);
                 return var8;
             }
             throw new RuntimeException();
@@ -107,24 +109,24 @@ abstract class ch {
 
     final int a(byte param0) {
         int var2 = -71 / ((30 - param0) / 40);
-        return ((ch) this).field_g.b(1) + ((ch) this).field_h.b(1);
+        return this.field_g.b(1) + this.field_h.b(1);
     }
 
     final boolean c(int param0) {
         int var2 = 49 % ((param0 - 8) / 43);
-        return 20 <= ((ch) this).b(-21040) ? true : false;
+        return 20 <= this.b(-21040) ? true : false;
     }
 
     ch() {
-        ((ch) this).field_g = new cd();
-        ((ch) this).field_h = new cd();
-        ((ch) this).field_a = new cd();
-        ((ch) this).field_e = new cd();
-        ((ch) this).field_c = new pb(6);
-        ((ch) this).field_b = 0;
-        ((ch) this).field_l = 0;
-        ((ch) this).field_f = (byte) 0;
-        ((ch) this).field_i = new pb(10);
+        this.field_g = new cd();
+        this.field_h = new cd();
+        this.field_a = new cd();
+        this.field_e = new cd();
+        this.field_c = new pb(6);
+        this.field_b = 0;
+        this.field_l = 0;
+        this.field_f = (byte) 0;
+        this.field_i = new pb(10);
     }
 
     static {

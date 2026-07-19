@@ -11,14 +11,30 @@ final class jp extends qr {
     private int field_Ab;
 
     final boolean f(byte param0) {
+        StringBuilder discarded$16 = null;
+        StringBuilder discarded$17 = null;
+        StringBuilder discarded$18 = null;
+        StringBuilder discarded$19 = null;
+        StringBuilder discarded$20 = null;
+        StringBuilder discarded$21 = null;
+        StringBuilder discarded$22 = null;
+        StringBuilder discarded$23 = null;
+        StringBuilder discarded$24 = null;
+        StringBuilder discarded$25 = null;
+        StringBuilder discarded$26 = null;
+        StringBuilder discarded$27 = null;
+        StringBuilder discarded$28 = null;
+        StringBuilder discarded$29 = null;
+        StringBuilder discarded$30 = null;
+        StringBuilder discarded$31 = null;
         int var2 = 0;
-        if (0 != ((jp) this).field_Ab) {
+        if (0 != this.field_Ab) {
           return false;
         } else {
-          if (oq.field_j == 85) {
-            if (((jp) this).field_Db.length() > 0) {
-              StringBuilder discarded$16 = aj.a(((jp) this).field_Db, ((jp) this).field_Db.length() - 1, -121, ' ');
-              if (((jp) this).field_Db.length() < 12) {
+          if ((oq.field_j ^ -1) == -86) {
+            if ((this.field_Db.length() ^ -1) < -1) {
+              discarded$16 = aj.a(this.field_Db, this.field_Db.length() - 1, -121, ' ');
+              if (this.field_Db.length() < 12) {
                 L0: {
                   var2 = Character.toLowerCase(ho.field_h);
                   if (var2 != 32) {
@@ -32,19 +48,19 @@ final class jp extends qr {
                   if (var2 != 95) {
                     break L1;
                   } else {
-                    if (((jp) this).field_Db.length() <= 0) {
+                    if (this.field_Db.length() <= 0) {
                       break L1;
                     } else {
                       L2: {
-                        StringBuilder discarded$17 = ((jp) this).field_Db.append((char) var2);
+                        discarded$17 = this.field_Db.append((char) var2);
                         if (hq.a(-103, (char) var2)) {
-                          StringBuilder discarded$18 = ((jp) this).field_Db.append((char) var2);
+                          discarded$18 = this.field_Db.append((char) var2);
                           break L2;
                         } else {
                           if (!dk.a((byte) 55, (char) var2)) {
                             break L2;
                           } else {
-                            StringBuilder discarded$19 = ((jp) this).field_Db.append((char) var2);
+                            discarded$19 = this.field_Db.append((char) var2);
                             break L2;
                           }
                         }
@@ -53,7 +69,7 @@ final class jp extends qr {
                         if (param0 < -93) {
                           L3: {
                             if (13 == oq.field_j) {
-                              ((jp) this).field_Ab = 1;
+                              this.field_Ab = 1;
                               break L3;
                             } else {
                               break L3;
@@ -64,13 +80,13 @@ final class jp extends qr {
                           return false;
                         }
                       } else {
-                        if (((jp) this).field_Db.length() > 0) {
-                          ((jp) this).field_z = ((jp) this).field_Db.toString();
-                          ((jp) this).field_Ab = 2;
+                        if ((this.field_Db.length() ^ -1) < -1) {
+                          this.field_z = this.field_Db.toString();
+                          this.field_Ab = 2;
                           if (param0 < -93) {
                             L4: {
                               if (13 == oq.field_j) {
-                                ((jp) this).field_Ab = 1;
+                                this.field_Ab = 1;
                                 break L4;
                               } else {
                                 break L4;
@@ -81,11 +97,11 @@ final class jp extends qr {
                             return false;
                           }
                         } else {
-                          ((jp) this).field_Ab = 1;
+                          this.field_Ab = 1;
                           if (param0 < -93) {
                             L5: {
                               if (13 == oq.field_j) {
-                                ((jp) this).field_Ab = 1;
+                                this.field_Ab = 1;
                                 break L5;
                               } else {
                                 break L5;
@@ -101,12 +117,12 @@ final class jp extends qr {
                   }
                 }
                 if (hq.a(-103, (char) var2)) {
-                  StringBuilder discarded$20 = ((jp) this).field_Db.append((char) var2);
+                  discarded$20 = this.field_Db.append((char) var2);
                   if (oq.field_j != 84) {
                     if (param0 < -93) {
                       L6: {
                         if (13 == oq.field_j) {
-                          ((jp) this).field_Ab = 1;
+                          this.field_Ab = 1;
                           break L6;
                         } else {
                           break L6;
@@ -117,13 +133,13 @@ final class jp extends qr {
                       return false;
                     }
                   } else {
-                    if (((jp) this).field_Db.length() > 0) {
-                      ((jp) this).field_z = ((jp) this).field_Db.toString();
-                      ((jp) this).field_Ab = 2;
+                    if ((this.field_Db.length() ^ -1) < -1) {
+                      this.field_z = this.field_Db.toString();
+                      this.field_Ab = 2;
                       if (param0 < -93) {
                         L7: {
                           if (13 == oq.field_j) {
-                            ((jp) this).field_Ab = 1;
+                            this.field_Ab = 1;
                             break L7;
                           } else {
                             break L7;
@@ -134,11 +150,11 @@ final class jp extends qr {
                         return false;
                       }
                     } else {
-                      ((jp) this).field_Ab = 1;
+                      this.field_Ab = 1;
                       if (param0 < -93) {
                         L8: {
                           if (13 == oq.field_j) {
-                            ((jp) this).field_Ab = 1;
+                            this.field_Ab = 1;
                             break L8;
                           } else {
                             break L8;
@@ -156,7 +172,7 @@ final class jp extends qr {
                       if (param0 < -93) {
                         L9: {
                           if (13 == oq.field_j) {
-                            ((jp) this).field_Ab = 1;
+                            this.field_Ab = 1;
                             break L9;
                           } else {
                             break L9;
@@ -167,13 +183,13 @@ final class jp extends qr {
                         return false;
                       }
                     } else {
-                      if (((jp) this).field_Db.length() > 0) {
-                        ((jp) this).field_z = ((jp) this).field_Db.toString();
-                        ((jp) this).field_Ab = 2;
+                      if ((this.field_Db.length() ^ -1) < -1) {
+                        this.field_z = this.field_Db.toString();
+                        this.field_Ab = 2;
                         if (param0 < -93) {
                           L10: {
                             if (13 == oq.field_j) {
-                              ((jp) this).field_Ab = 1;
+                              this.field_Ab = 1;
                               break L10;
                             } else {
                               break L10;
@@ -184,11 +200,11 @@ final class jp extends qr {
                           return false;
                         }
                       } else {
-                        ((jp) this).field_Ab = 1;
+                        this.field_Ab = 1;
                         if (param0 < -93) {
                           L11: {
                             if (13 == oq.field_j) {
-                              ((jp) this).field_Ab = 1;
+                              this.field_Ab = 1;
                               break L11;
                             } else {
                               break L11;
@@ -201,12 +217,12 @@ final class jp extends qr {
                       }
                     }
                   } else {
-                    StringBuilder discarded$21 = ((jp) this).field_Db.append((char) var2);
+                    discarded$21 = this.field_Db.append((char) var2);
                     if (oq.field_j != 84) {
                       if (param0 < -93) {
                         L12: {
                           if (13 == oq.field_j) {
-                            ((jp) this).field_Ab = 1;
+                            this.field_Ab = 1;
                             break L12;
                           } else {
                             break L12;
@@ -217,13 +233,13 @@ final class jp extends qr {
                         return false;
                       }
                     } else {
-                      if (((jp) this).field_Db.length() > 0) {
-                        ((jp) this).field_z = ((jp) this).field_Db.toString();
-                        ((jp) this).field_Ab = 2;
+                      if ((this.field_Db.length() ^ -1) < -1) {
+                        this.field_z = this.field_Db.toString();
+                        this.field_Ab = 2;
                         if (param0 < -93) {
                           L13: {
                             if (13 == oq.field_j) {
-                              ((jp) this).field_Ab = 1;
+                              this.field_Ab = 1;
                               break L13;
                             } else {
                               break L13;
@@ -234,11 +250,11 @@ final class jp extends qr {
                           return false;
                         }
                       } else {
-                        ((jp) this).field_Ab = 1;
+                        this.field_Ab = 1;
                         if (param0 < -93) {
                           L14: {
                             if (13 == oq.field_j) {
-                              ((jp) this).field_Ab = 1;
+                              this.field_Ab = 1;
                               break L14;
                             } else {
                               break L14;
@@ -257,12 +273,12 @@ final class jp extends qr {
                   if (oq.field_j != 84) {
                     break L15;
                   } else {
-                    if (((jp) this).field_Db.length() > 0) {
-                      ((jp) this).field_z = ((jp) this).field_Db.toString();
-                      ((jp) this).field_Ab = 2;
+                    if ((this.field_Db.length() ^ -1) < -1) {
+                      this.field_z = this.field_Db.toString();
+                      this.field_Ab = 2;
                       break L15;
                     } else {
-                      ((jp) this).field_Ab = 1;
+                      this.field_Ab = 1;
                       break L15;
                     }
                   }
@@ -270,7 +286,7 @@ final class jp extends qr {
                 if (param0 < -93) {
                   L16: {
                     if (13 == oq.field_j) {
-                      ((jp) this).field_Ab = 1;
+                      this.field_Ab = 1;
                       break L16;
                     } else {
                       break L16;
@@ -282,7 +298,7 @@ final class jp extends qr {
                 }
               }
             } else {
-              if (((jp) this).field_Db.length() < 12) {
+              if (this.field_Db.length() < 12) {
                 L17: {
                   var2 = Character.toLowerCase(ho.field_h);
                   if (var2 != 32) {
@@ -296,19 +312,19 @@ final class jp extends qr {
                   if (var2 != 95) {
                     break L18;
                   } else {
-                    if (((jp) this).field_Db.length() <= 0) {
+                    if (this.field_Db.length() <= 0) {
                       break L18;
                     } else {
                       L19: {
-                        StringBuilder discarded$22 = ((jp) this).field_Db.append((char) var2);
+                        discarded$22 = this.field_Db.append((char) var2);
                         if (hq.a(-103, (char) var2)) {
-                          StringBuilder discarded$23 = ((jp) this).field_Db.append((char) var2);
+                          discarded$23 = this.field_Db.append((char) var2);
                           break L19;
                         } else {
                           if (!dk.a((byte) 55, (char) var2)) {
                             break L19;
                           } else {
-                            StringBuilder discarded$24 = ((jp) this).field_Db.append((char) var2);
+                            discarded$24 = this.field_Db.append((char) var2);
                             break L19;
                           }
                         }
@@ -317,12 +333,12 @@ final class jp extends qr {
                         if (oq.field_j != 84) {
                           break L20;
                         } else {
-                          if (((jp) this).field_Db.length() > 0) {
-                            ((jp) this).field_z = ((jp) this).field_Db.toString();
-                            ((jp) this).field_Ab = 2;
+                          if ((this.field_Db.length() ^ -1) < -1) {
+                            this.field_z = this.field_Db.toString();
+                            this.field_Ab = 2;
                             break L20;
                           } else {
-                            ((jp) this).field_Ab = 1;
+                            this.field_Ab = 1;
                             break L20;
                           }
                         }
@@ -330,7 +346,7 @@ final class jp extends qr {
                       if (param0 < -93) {
                         L21: {
                           if (13 == oq.field_j) {
-                            ((jp) this).field_Ab = 1;
+                            this.field_Ab = 1;
                             break L21;
                           } else {
                             break L21;
@@ -345,16 +361,16 @@ final class jp extends qr {
                 }
                 if (hq.a(-103, (char) var2)) {
                   L22: {
-                    StringBuilder discarded$25 = ((jp) this).field_Db.append((char) var2);
+                    discarded$25 = this.field_Db.append((char) var2);
                     if (oq.field_j != 84) {
                       break L22;
                     } else {
-                      if (((jp) this).field_Db.length() > 0) {
-                        ((jp) this).field_z = ((jp) this).field_Db.toString();
-                        ((jp) this).field_Ab = 2;
+                      if ((this.field_Db.length() ^ -1) < -1) {
+                        this.field_z = this.field_Db.toString();
+                        this.field_Ab = 2;
                         break L22;
                       } else {
-                        ((jp) this).field_Ab = 1;
+                        this.field_Ab = 1;
                         break L22;
                       }
                     }
@@ -362,7 +378,7 @@ final class jp extends qr {
                   if (param0 < -93) {
                     L23: {
                       if (13 == oq.field_j) {
-                        ((jp) this).field_Ab = 1;
+                        this.field_Ab = 1;
                         break L23;
                       } else {
                         break L23;
@@ -378,7 +394,7 @@ final class jp extends qr {
                       if (param0 < -93) {
                         L24: {
                           if (13 == oq.field_j) {
-                            ((jp) this).field_Ab = 1;
+                            this.field_Ab = 1;
                             break L24;
                           } else {
                             break L24;
@@ -389,13 +405,13 @@ final class jp extends qr {
                         return false;
                       }
                     } else {
-                      if (((jp) this).field_Db.length() > 0) {
-                        ((jp) this).field_z = ((jp) this).field_Db.toString();
-                        ((jp) this).field_Ab = 2;
+                      if ((this.field_Db.length() ^ -1) < -1) {
+                        this.field_z = this.field_Db.toString();
+                        this.field_Ab = 2;
                         if (param0 < -93) {
                           L25: {
                             if (13 == oq.field_j) {
-                              ((jp) this).field_Ab = 1;
+                              this.field_Ab = 1;
                               break L25;
                             } else {
                               break L25;
@@ -406,11 +422,11 @@ final class jp extends qr {
                           return false;
                         }
                       } else {
-                        ((jp) this).field_Ab = 1;
+                        this.field_Ab = 1;
                         if (param0 < -93) {
                           L26: {
                             if (13 == oq.field_j) {
-                              ((jp) this).field_Ab = 1;
+                              this.field_Ab = 1;
                               break L26;
                             } else {
                               break L26;
@@ -424,16 +440,16 @@ final class jp extends qr {
                     }
                   } else {
                     L27: {
-                      StringBuilder discarded$26 = ((jp) this).field_Db.append((char) var2);
+                      discarded$26 = this.field_Db.append((char) var2);
                       if (oq.field_j != 84) {
                         break L27;
                       } else {
-                        if (((jp) this).field_Db.length() > 0) {
-                          ((jp) this).field_z = ((jp) this).field_Db.toString();
-                          ((jp) this).field_Ab = 2;
+                        if ((this.field_Db.length() ^ -1) < -1) {
+                          this.field_z = this.field_Db.toString();
+                          this.field_Ab = 2;
                           break L27;
                         } else {
-                          ((jp) this).field_Ab = 1;
+                          this.field_Ab = 1;
                           break L27;
                         }
                       }
@@ -441,7 +457,7 @@ final class jp extends qr {
                     if (param0 < -93) {
                       L28: {
                         if (13 == oq.field_j) {
-                          ((jp) this).field_Ab = 1;
+                          this.field_Ab = 1;
                           break L28;
                         } else {
                           break L28;
@@ -458,12 +474,12 @@ final class jp extends qr {
                   if (oq.field_j != 84) {
                     break L29;
                   } else {
-                    if (((jp) this).field_Db.length() > 0) {
-                      ((jp) this).field_z = ((jp) this).field_Db.toString();
-                      ((jp) this).field_Ab = 2;
+                    if ((this.field_Db.length() ^ -1) < -1) {
+                      this.field_z = this.field_Db.toString();
+                      this.field_Ab = 2;
                       break L29;
                     } else {
-                      ((jp) this).field_Ab = 1;
+                      this.field_Ab = 1;
                       break L29;
                     }
                   }
@@ -473,7 +489,7 @@ final class jp extends qr {
                 } else {
                   L30: {
                     if (13 == oq.field_j) {
-                      ((jp) this).field_Ab = 1;
+                      this.field_Ab = 1;
                       break L30;
                     } else {
                       break L30;
@@ -484,7 +500,7 @@ final class jp extends qr {
               }
             }
           } else {
-            if (((jp) this).field_Db.length() < 12) {
+            if (this.field_Db.length() < 12) {
               L31: {
                 var2 = Character.toLowerCase(ho.field_h);
                 if (var2 != 32) {
@@ -498,19 +514,19 @@ final class jp extends qr {
                 if (var2 != 95) {
                   break L32;
                 } else {
-                  if (((jp) this).field_Db.length() <= 0) {
+                  if (this.field_Db.length() <= 0) {
                     break L32;
                   } else {
                     L33: {
-                      StringBuilder discarded$27 = ((jp) this).field_Db.append((char) var2);
+                      discarded$27 = this.field_Db.append((char) var2);
                       if (hq.a(-103, (char) var2)) {
-                        StringBuilder discarded$28 = ((jp) this).field_Db.append((char) var2);
+                        discarded$28 = this.field_Db.append((char) var2);
                         break L33;
                       } else {
                         if (!dk.a((byte) 55, (char) var2)) {
                           break L33;
                         } else {
-                          StringBuilder discarded$29 = ((jp) this).field_Db.append((char) var2);
+                          discarded$29 = this.field_Db.append((char) var2);
                           break L33;
                         }
                       }
@@ -519,12 +535,12 @@ final class jp extends qr {
                       if (oq.field_j != 84) {
                         break L34;
                       } else {
-                        if (((jp) this).field_Db.length() > 0) {
-                          ((jp) this).field_z = ((jp) this).field_Db.toString();
-                          ((jp) this).field_Ab = 2;
+                        if ((this.field_Db.length() ^ -1) < -1) {
+                          this.field_z = this.field_Db.toString();
+                          this.field_Ab = 2;
                           break L34;
                         } else {
-                          ((jp) this).field_Ab = 1;
+                          this.field_Ab = 1;
                           break L34;
                         }
                       }
@@ -534,7 +550,7 @@ final class jp extends qr {
                     } else {
                       L35: {
                         if (13 == oq.field_j) {
-                          ((jp) this).field_Ab = 1;
+                          this.field_Ab = 1;
                           break L35;
                         } else {
                           break L35;
@@ -547,16 +563,16 @@ final class jp extends qr {
               }
               if (hq.a(-103, (char) var2)) {
                 L36: {
-                  StringBuilder discarded$30 = ((jp) this).field_Db.append((char) var2);
+                  discarded$30 = this.field_Db.append((char) var2);
                   if (oq.field_j != 84) {
                     break L36;
                   } else {
-                    if (((jp) this).field_Db.length() > 0) {
-                      ((jp) this).field_z = ((jp) this).field_Db.toString();
-                      ((jp) this).field_Ab = 2;
+                    if ((this.field_Db.length() ^ -1) < -1) {
+                      this.field_z = this.field_Db.toString();
+                      this.field_Ab = 2;
                       break L36;
                     } else {
-                      ((jp) this).field_Ab = 1;
+                      this.field_Ab = 1;
                       break L36;
                     }
                   }
@@ -566,7 +582,7 @@ final class jp extends qr {
                 } else {
                   L37: {
                     if (13 == oq.field_j) {
-                      ((jp) this).field_Ab = 1;
+                      this.field_Ab = 1;
                       break L37;
                     } else {
                       break L37;
@@ -582,7 +598,7 @@ final class jp extends qr {
                     } else {
                       L38: {
                         if (13 == oq.field_j) {
-                          ((jp) this).field_Ab = 1;
+                          this.field_Ab = 1;
                           break L38;
                         } else {
                           break L38;
@@ -591,15 +607,15 @@ final class jp extends qr {
                       return true;
                     }
                   } else {
-                    if (((jp) this).field_Db.length() > 0) {
-                      ((jp) this).field_z = ((jp) this).field_Db.toString();
-                      ((jp) this).field_Ab = 2;
+                    if ((this.field_Db.length() ^ -1) < -1) {
+                      this.field_z = this.field_Db.toString();
+                      this.field_Ab = 2;
                       if (param0 >= -93) {
                         return false;
                       } else {
                         L39: {
                           if (13 == oq.field_j) {
-                            ((jp) this).field_Ab = 1;
+                            this.field_Ab = 1;
                             break L39;
                           } else {
                             break L39;
@@ -608,13 +624,13 @@ final class jp extends qr {
                         return true;
                       }
                     } else {
-                      ((jp) this).field_Ab = 1;
+                      this.field_Ab = 1;
                       if (param0 >= -93) {
                         return false;
                       } else {
                         L40: {
                           if (13 == oq.field_j) {
-                            ((jp) this).field_Ab = 1;
+                            this.field_Ab = 1;
                             break L40;
                           } else {
                             break L40;
@@ -626,16 +642,16 @@ final class jp extends qr {
                   }
                 } else {
                   L41: {
-                    StringBuilder discarded$31 = ((jp) this).field_Db.append((char) var2);
+                    discarded$31 = this.field_Db.append((char) var2);
                     if (oq.field_j != 84) {
                       break L41;
                     } else {
-                      if (((jp) this).field_Db.length() > 0) {
-                        ((jp) this).field_z = ((jp) this).field_Db.toString();
-                        ((jp) this).field_Ab = 2;
+                      if ((this.field_Db.length() ^ -1) < -1) {
+                        this.field_z = this.field_Db.toString();
+                        this.field_Ab = 2;
                         break L41;
                       } else {
-                        ((jp) this).field_Ab = 1;
+                        this.field_Ab = 1;
                         break L41;
                       }
                     }
@@ -645,7 +661,7 @@ final class jp extends qr {
                   } else {
                     L42: {
                       if (13 == oq.field_j) {
-                        ((jp) this).field_Ab = 1;
+                        this.field_Ab = 1;
                         break L42;
                       } else {
                         break L42;
@@ -660,12 +676,12 @@ final class jp extends qr {
                 if (oq.field_j != 84) {
                   break L43;
                 } else {
-                  if (((jp) this).field_Db.length() > 0) {
-                    ((jp) this).field_z = ((jp) this).field_Db.toString();
-                    ((jp) this).field_Ab = 2;
+                  if ((this.field_Db.length() ^ -1) < -1) {
+                    this.field_z = this.field_Db.toString();
+                    this.field_Ab = 2;
                     break L43;
                   } else {
-                    ((jp) this).field_Ab = 1;
+                    this.field_Ab = 1;
                     break L43;
                   }
                 }
@@ -674,7 +690,7 @@ final class jp extends qr {
                 if (13 != oq.field_j) {
                   return true;
                 } else {
-                  ((jp) this).field_Ab = 1;
+                  this.field_Ab = 1;
                   return true;
                 }
               } else {
@@ -688,62 +704,70 @@ final class jp extends qr {
     final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
-        boolean stackIn_1_0 = false;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_0_0 = false;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        boolean stackOut_2_0 = false;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            var3 = (CharSequence) (Object) param0;
-            stackOut_0_0 = ci.field_d.equals((Object) (Object) ji.a(var3, true));
-            stackIn_1_0 = stackOut_0_0;
+            L1: {
+              if (param1 == -105) {
+                break L1;
+              } else {
+                field_Cb = (v) null;
+                break L1;
+              }
+            }
+            var3 = (CharSequence) ((Object) param0);
+            stackOut_2_0 = ci.field_d.equals(ji.a(var3, true));
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("jp.F(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackOut_4_0 = (RuntimeException) (var2);
+            stackOut_4_1 = new StringBuilder().append("jp.F(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + -105 + ')');
+          throw r.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     jp(int param0, int param1, int param2, int param3, String param4, qr param5, qr param6, qr param7) {
@@ -815,47 +839,47 @@ final class jp extends qr {
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
         String stackOut_13_2 = null;
-        ((jp) this).field_Ab = 0;
+        this.field_Ab = 0;
         try {
           L0: {
-            ((jp) this).field_yb = new qr(0L, param6, param4);
-            ((jp) this).a(4, ((jp) this).field_yb);
-            ((jp) this).field_zb = new qr(0L, param7);
-            ((jp) this).field_zb.field_x = 16764006;
-            ((jp) this).a(4, ((jp) this).field_zb);
-            ((jp) this).field_zb.field_u = "|";
-            ((jp) this).field_Db = new StringBuilder(12);
-            var9_int = ((jp) this).field_yb.e(false);
-            ((jp) this).field_yb.a(var9_int, cr.field_c, (byte) 96, 3, 5);
-            ((jp) this).field_zb.a(var9_int, cr.field_c, (byte) 76, cr.field_c + 3, 5);
+            this.field_yb = new qr(0L, param6, param4);
+            this.a(4, this.field_yb);
+            this.field_zb = new qr(0L, param7);
+            this.field_zb.field_x = 16764006;
+            this.a(4, this.field_zb);
+            this.field_zb.field_u = "|";
+            this.field_Db = new StringBuilder(12);
+            var9_int = this.field_yb.e(false);
+            this.field_yb.a(var9_int, cr.field_c, (byte) 96, 3, 5);
+            this.field_zb.a(var9_int, cr.field_c, (byte) 76, cr.field_c + 3, 5);
             var10 = 5 + var9_int + 5;
             var11 = 3 + cr.field_c * 2 + 3;
             var12 = uh.a(-57, param0, var10, param2);
             var13 = uq.a(param3, 0, var11, param1);
-            ((jp) this).a(var10, var11, (byte) 63, var13, var12);
+            this.a(var10, var11, (byte) 63, var13, var12);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var9 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var9;
+            stackOut_3_0 = (RuntimeException) (var9);
             stackOut_3_1 = new StringBuilder().append("jp.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param4 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -864,23 +888,23 @@ final class jp extends qr {
             }
           }
           L2: {
-            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param5 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -889,23 +913,23 @@ final class jp extends qr {
             }
           }
           L3: {
-            stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+            stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
             stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param6 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -914,23 +938,23 @@ final class jp extends qr {
             }
           }
           L4: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param7 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -938,90 +962,95 @@ final class jp extends qr {
               break L4;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
     }
 
     final int a(byte param0, boolean param1) {
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$7 = null;
+        StringBuilder discarded$8 = null;
+        StringBuilder discarded$9 = null;
         int var4 = 0;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        ((jp) this).a(param1, -20429);
+        this.a(param1, -20429);
         if (!param1) {
           if (param0 >= -42) {
             L0: {
               jp.g((byte) -50);
-              ((jp) this).field_zb.field_z = ((jp) this).field_Db.toString();
+              this.field_zb.field_z = this.field_Db.toString();
               if (!param1) {
                 break L0;
               } else {
                 if (je.field_d == 0) {
                   break L0;
                 } else {
-                  if (0 == ((jp) this).field_rb) {
-                    ((jp) this).field_Ab = 1;
+                  if (0 == this.field_rb) {
+                    this.field_Ab = 1;
                     break L0;
                   } else {
-                    return ((jp) this).field_Ab;
+                    return this.field_Ab;
                   }
                 }
               }
             }
-            return ((jp) this).field_Ab;
+            return this.field_Ab;
           } else {
             L1: {
-              ((jp) this).field_zb.field_z = ((jp) this).field_Db.toString();
+              this.field_zb.field_z = this.field_Db.toString();
               if (!param1) {
                 break L1;
               } else {
                 if (je.field_d == 0) {
                   break L1;
                 } else {
-                  if (0 == ((jp) this).field_rb) {
-                    ((jp) this).field_Ab = 1;
+                  if (0 == this.field_rb) {
+                    this.field_Ab = 1;
                     break L1;
                   } else {
-                    return ((jp) this).field_Ab;
+                    return this.field_Ab;
                   }
                 }
               }
             }
-            return ((jp) this).field_Ab;
+            return this.field_Ab;
           }
         } else {
           L2: while (true) {
             if (!cc.e((byte) 55)) {
               if (param0 < -42) {
-                ((jp) this).field_zb.field_z = ((jp) this).field_Db.toString();
+                this.field_zb.field_z = this.field_Db.toString();
                 if (param1) {
                   if (je.field_d != 0) {
-                    if (0 == ((jp) this).field_rb) {
-                      ((jp) this).field_Ab = 1;
-                      return ((jp) this).field_Ab;
+                    if (0 == this.field_rb) {
+                      this.field_Ab = 1;
+                      return this.field_Ab;
                     } else {
-                      return ((jp) this).field_Ab;
+                      return this.field_Ab;
                     }
                   } else {
-                    return ((jp) this).field_Ab;
+                    return this.field_Ab;
                   }
                 } else {
-                  return ((jp) this).field_Ab;
+                  return this.field_Ab;
                 }
               } else {
                 jp.g((byte) -50);
-                ((jp) this).field_zb.field_z = ((jp) this).field_Db.toString();
+                this.field_zb.field_z = this.field_Db.toString();
                 if (param1) {
                   if (je.field_d != 0) {
-                    if (0 != ((jp) this).field_rb) {
-                      return ((jp) this).field_Ab;
+                    if (0 != this.field_rb) {
+                      return this.field_Ab;
                     } else {
-                      ((jp) this).field_Ab = 1;
-                      return ((jp) this).field_Ab;
+                      this.field_Ab = 1;
+                      return this.field_Ab;
                     }
                   } else {
-                    return ((jp) this).field_Ab;
+                    return this.field_Ab;
                   }
                 } else {
-                  return ((jp) this).field_Ab;
+                  return this.field_Ab;
                 }
               }
             } else {
@@ -1029,8 +1058,8 @@ final class jp extends qr {
                 if (85 != oq.field_j) {
                   break L3;
                 } else {
-                  if (0 < ((jp) this).field_Db.length()) {
-                    StringBuilder discarded$5 = aj.a(((jp) this).field_Db, ((jp) this).field_Db.length() + -1, 29, ' ');
+                  if (0 < this.field_Db.length()) {
+                    discarded$5 = aj.a(this.field_Db, this.field_Db.length() + -1, 29, ' ');
                     break L3;
                   } else {
                     break L3;
@@ -1038,16 +1067,16 @@ final class jp extends qr {
                 }
               }
               L4: {
-                if (vi.a(ho.field_h, (CharSequence) (Object) ((jp) this).field_Db, (byte) 119)) {
-                  StringBuilder discarded$6 = ((jp) this).field_Db.append(ho.field_h);
+                if (vi.a(ho.field_h, (CharSequence) ((Object) this.field_Db), (byte) 119)) {
+                  discarded$6 = this.field_Db.append(ho.field_h);
                   break L4;
                 } else {
                   L5: {
-                    if (((jp) this).field_Db.length() != -1) {
+                    if (this.field_Db.length() != 0) {
                       break L5;
                     } else {
                       if (91 == ho.field_h) {
-                        StringBuilder discarded$7 = ((jp) this).field_Db.append(ho.field_h);
+                        discarded$7 = this.field_Db.append(ho.field_h);
                         break L4;
                       } else {
                         break L5;
@@ -1055,11 +1084,11 @@ final class jp extends qr {
                     }
                   }
                   L6: {
-                    if (-2 != ((jp) this).field_Db.length()) {
+                    if (-2 != (this.field_Db.length() ^ -1)) {
                       break L6;
                     } else {
                       if (ho.field_h == 35) {
-                        StringBuilder discarded$8 = ((jp) this).field_Db.append(ho.field_h);
+                        discarded$8 = this.field_Db.append(ho.field_h);
                         break L4;
                       } else {
                         break L6;
@@ -1069,22 +1098,22 @@ final class jp extends qr {
                   if (ho.field_h != 93) {
                     break L4;
                   } else {
-                    StringBuilder discarded$9 = ((jp) this).field_Db.append(ho.field_h);
+                    discarded$9 = this.field_Db.append(ho.field_h);
                     break L4;
                   }
                 }
               }
-              if (oq.field_j != 84) {
+              if ((oq.field_j ^ -1) != -85) {
                 if (oq.field_j == 13) {
                   return 1;
                 } else {
                   continue L2;
                 }
               } else {
-                if (0 >= ((jp) this).field_Db.length()) {
+                if (0 >= this.field_Db.length()) {
                   return 1;
                 } else {
-                  ((jp) this).field_z = ((jp) this).field_Db.toString();
+                  this.field_z = this.field_Db.toString();
                   return 2;
                 }
               }
@@ -1097,18 +1126,21 @@ final class jp extends qr {
         try {
             if (ed.field_h == null) {
                 ed.field_h = new eo(le.field_e, tl.field_z);
-                le.field_e.a(true, (vg) (Object) ed.field_h);
+                le.field_e.a(true, ed.field_h);
             }
             ed.field_h.a(param3, param0, 65536, param1);
+            if (param2 <= 118) {
+                jp.g(-100);
+            }
             gf.b();
             og.a(0, true);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "jp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + 121 + ',' + param3 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "jp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static void g(byte param0) {
-        Object var2 = null;
+        String[] var2 = null;
         dp.field_t = false;
         if (mr.field_h == null) {
           L0: {
@@ -1123,7 +1155,7 @@ final class jp extends qr {
           if (param0 >= 83) {
             return;
           } else {
-            var2 = null;
+            var2 = (String[]) null;
             jp.a((String[]) null, false);
             return;
           }
@@ -1141,7 +1173,7 @@ final class jp extends qr {
           if (param0 >= 83) {
             return;
           } else {
-            var2 = null;
+            var2 = (String[]) null;
             jp.a((String[]) null, false);
             return;
           }
@@ -1149,23 +1181,24 @@ final class jp extends qr {
     }
 
     final static void a(String[] args, boolean param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -1176,37 +1209,56 @@ final class jp extends qr {
                 break L1;
               }
             }
-            break L0;
+            if (!param1) {
+              L2: {
+                if (sj.field_b == null) {
+                  break L2;
+                } else {
+                  sj.field_b.field_F.a(args, 0);
+                  break L2;
+                }
+              }
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("jp.D(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+          L3: {
+            runtimeException = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) (runtimeException);
+            stackOut_7_1 = new StringBuilder().append("jp.D(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (args == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + false + ')');
+          throw r.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -1221,10 +1273,6 @@ final class jp extends qr {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_xb = "Unpacking sound effects";
     }
 }

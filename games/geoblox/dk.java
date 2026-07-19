@@ -12,7 +12,7 @@ abstract class dk {
         int var4 = 0;
         lk var5 = null;
         int var6 = Geoblox.field_C;
-        lk[] var7 = ((dk) this).field_a;
+        lk[] var7 = this.field_a;
         lk[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
@@ -38,8 +38,8 @@ abstract class dk {
         var2 = -1;
         if (param0 >= 60) {
           L0: {
-            if (null != ((dk) this).field_a) {
-              var3 = ((dk) this).field_a;
+            if (null != this.field_a) {
+              var3 = this.field_a;
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -90,6 +90,7 @@ abstract class dk {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_14_0 = 0;
         int stackOut_12_0 = 0;
@@ -114,11 +115,13 @@ abstract class dk {
                 if (var5_int <= 0) {
                   stackOut_14_0 = 0;
                   stackIn_15_0 = stackOut_14_0;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  stackOut_12_0 = (param2 - param1 << 8) / var5_int;
+                  stackOut_12_0 = (param2 - param1 << -125164472) / var5_int;
                   stackIn_13_0 = stackOut_12_0;
-                  return stackIn_13_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               } else {
                 L2: {
@@ -153,23 +156,23 @@ abstract class dk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var5;
+            stackOut_16_0 = (RuntimeException) (var5);
             stackOut_16_1 = new StringBuilder().append("dk.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param3 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -177,15 +180,21 @@ abstract class dk {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
-        return stackIn_15_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_13_0;
+        } else {
+          return stackIn_15_0;
+        }
     }
 
     final static void a(byte param0) {
         try {
+            IOException iOException = null;
             int var1_int = 0;
             RuntimeException var1 = null;
+            IOException var2 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
             var3 = Geoblox.field_C;
@@ -200,54 +209,78 @@ abstract class dk {
                   }
                 }
                 L2: {
-                  if (cl.field_c == null) {
+                  if (param0 < -65) {
                     break L2;
                   } else {
-                    cl.field_c.a((byte) 51);
+                    field_b = 18;
                     break L2;
                   }
                 }
                 L3: {
-                  if (null == af.field_d) {
+                  if (cl.field_c == null) {
                     break L3;
                   } else {
-                    {
-                      L4: {
-                        af.field_d.b(27034);
-                        break L4;
-                      }
-                    }
+                    cl.field_c.a((byte) 51);
                     break L3;
                   }
                 }
-                L6: {
+                L4: {
+                  if (null == af.field_d) {
+                    break L4;
+                  } else {
+                    try {
+                      L5: {
+                        af.field_d.b(27034);
+                        break L5;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L6: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        break L6;
+                      }
+                    }
+                    break L4;
+                  }
+                }
+                L7: {
                   if (null == je.field_h) {
-                    break L6;
+                    break L7;
                   } else {
                     var1_int = 0;
-                    L7: while (true) {
+                    L8: while (true) {
                       if (je.field_h.length <= var1_int) {
-                        break L6;
+                        break L7;
                       } else {
-                        L8: {
-                          if (null == je.field_h[var1_int]) {
-                            break L8;
-                          } else {
-                            break L8;
+                        if (null != je.field_h[var1_int]) {
+                          try {
+                            L9: {
+                              je.field_h[var1_int].b(27034);
+                              break L9;
+                            }
+                          } catch (java.io.IOException decompiledCaughtParameter1) {
+                            decompiledCaughtException = decompiledCaughtParameter1;
+                            L10: {
+                              var2 = (IOException) (Object) decompiledCaughtException;
+                              break L10;
+                            }
                           }
+                          var1_int++;
+                          continue L8;
+                        } else {
+                          var1_int++;
+                          continue L8;
                         }
-                        var1_int++;
-                        continue L7;
                       }
                     }
                   }
                 }
                 break L0;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+              decompiledCaughtException = decompiledCaughtParameter2;
               var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw t.a((Throwable) (Object) var1, "dk.O(" + -121 + ')');
+              throw t.a((Throwable) ((Object) var1), "dk.O(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -270,11 +303,11 @@ abstract class dk {
         }
         L1: {
           L2: {
-            if (null == ((dk) this).field_a) {
+            if (null == this.field_a) {
               break L2;
             } else {
-              if (((dk) this).field_a.length > 0) {
-                stackOut_6_0 = ((dk) this).field_a[((dk) this).field_a.length - 1].field_a + -((dk) this).field_a[0].field_d;
+              if (-1 > (this.field_a.length ^ -1)) {
+                stackOut_6_0 = this.field_a[this.field_a.length - 1].field_a + -this.field_a[0].field_d;
                 stackIn_7_0 = stackOut_6_0;
                 break L1;
               } else {
@@ -296,14 +329,14 @@ abstract class dk {
         if (param0 != 24) {
             return -10;
         }
-        for (var3 = 0; ((dk) this).field_a.length > var3; var3++) {
-            var4 = ((dk) this).field_a[var3];
+        for (var3 = 0; this.field_a.length > var3; var3++) {
+            var4 = this.field_a[var3];
             if (!(var4.field_c.length <= param1)) {
                 return var3;
             }
             param1 = param1 - (var4.field_c.length - 1);
         }
-        return ((dk) this).field_a.length;
+        return this.field_a.length;
     }
 
     final int a(int param0, int param1, int param2) {
@@ -315,28 +348,28 @@ abstract class dk {
         int var9 = 0;
         L0: {
           var9 = Geoblox.field_C;
-          if (null == ((dk) this).field_a) {
+          if (null == this.field_a) {
             break L0;
           } else {
-            if (((dk) this).field_a.length == 0) {
+            if (this.field_a.length == 0) {
               break L0;
             } else {
-              if (((dk) this).field_a[0].field_d > param2) {
+              if (this.field_a[0].field_d > param2) {
                 break L0;
               } else {
-                if (((dk) this).field_a[-1 + ((dk) this).field_a.length].field_a < param2) {
+                if (this.field_a[-1 + this.field_a.length].field_a < param2) {
                   return -1;
                 } else {
-                  if (((dk) this).field_a.length != 1) {
+                  if (-2 != (this.field_a.length ^ -1)) {
                     var4 = 0;
                     var5 = -2 % ((15 - param1) / 32);
                     var6 = 0;
                     L1: while (true) {
-                      if (var6 >= ((dk) this).field_a.length) {
+                      if (var6 >= this.field_a.length) {
                         return -1;
                       } else {
                         L2: {
-                          var7 = ((dk) this).field_a[var6];
+                          var7 = this.field_a[var6];
                           if (param2 < var7.field_d) {
                             break L2;
                           } else {
@@ -358,7 +391,7 @@ abstract class dk {
                       }
                     }
                   } else {
-                    return ((dk) this).field_a[0].a(71, param0);
+                    return this.field_a[0].a(71, param0);
                   }
                 }
               }
@@ -369,10 +402,6 @@ abstract class dk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0;
     }
 }

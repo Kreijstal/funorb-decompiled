@@ -8,45 +8,97 @@ final class dg {
     private kl field_d;
 
     final static void b(byte param0) {
+        String discarded$1 = null;
         int var1 = 0;
         int var2 = 0;
-        int stackIn_3_0 = 0;
         int stackIn_4_0 = 0;
         int stackIn_5_0 = 0;
-        int stackIn_5_1 = 0;
-        int stackOut_2_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_6_1 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_15_1 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_14_1 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_13_1 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_5_1 = 0;
         int stackOut_4_0 = 0;
         int stackOut_4_1 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_3_1 = 0;
-        if (kd.field_X >= 0) {
-          L0: {
-            var1 = 352;
-            stackOut_2_0 = bc.field_j[kd.field_X].length;
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_3_0 = stackOut_2_0;
-            if (od.field_c[kd.field_X]) {
-              stackOut_4_0 = stackIn_4_0;
-              stackOut_4_1 = 1;
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              break L0;
-            } else {
-              stackOut_3_0 = stackIn_3_0;
-              stackOut_3_1 = 0;
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              break L0;
+        if ((kd.field_X ^ -1) <= -1) {
+          if (param0 == -61) {
+            L0: {
+              var1 = 352;
+              stackOut_12_0 = bc.field_j[kd.field_X].length;
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_13_0 = stackOut_12_0;
+              if (od.field_c[kd.field_X]) {
+                stackOut_14_0 = stackIn_14_0;
+                stackOut_14_1 = 1;
+                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_1 = stackOut_14_1;
+                break L0;
+              } else {
+                stackOut_13_0 = stackIn_13_0;
+                stackOut_13_1 = 0;
+                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_1 = stackOut_13_1;
+                break L0;
+              }
             }
-          }
-          var2 = stackIn_5_0 - -stackIn_5_1;
-          var2 = (var2 / 2 - -(var2 % 2)) * 80;
-          if (-80 + (var1 - -8) >= var2) {
-            uk.field_q = -1;
-            return;
+            var2 = stackIn_15_0 - -stackIn_15_1;
+            var2 = (var2 / 2 - -(var2 % 2)) * 80;
+            if (-80 + (var1 - -8) >= var2) {
+              uk.field_q = -1;
+              if (ArmiesOfGielinor.field_M) {
+                uk.field_q = 8 + (var2 + -var1 - -80);
+                return;
+              } else {
+                return;
+              }
+            } else {
+              uk.field_q = 8 + (var2 + -var1 - -80);
+              return;
+            }
           } else {
-            uk.field_q = 8 + (var2 + -var1 - -80);
-            return;
+            L1: {
+              discarded$1 = dg.a(38);
+              var1 = 352;
+              stackOut_3_0 = bc.field_j[kd.field_X].length;
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_4_0 = stackOut_3_0;
+              if (od.field_c[kd.field_X]) {
+                stackOut_5_0 = stackIn_5_0;
+                stackOut_5_1 = 1;
+                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_1 = stackOut_5_1;
+                break L1;
+              } else {
+                stackOut_4_0 = stackIn_4_0;
+                stackOut_4_1 = 0;
+                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_1 = stackOut_4_1;
+                break L1;
+              }
+            }
+            var2 = stackIn_6_0 - -stackIn_6_1;
+            var2 = (var2 / 2 - -(var2 % 2)) * 80;
+            if (-80 + (var1 - -8) >= var2) {
+              uk.field_q = -1;
+              if (ArmiesOfGielinor.field_M) {
+                uk.field_q = 8 + (var2 + -var1 - -80);
+                return;
+              } else {
+                return;
+              }
+            } else {
+              uk.field_q = 8 + (var2 + -var1 - -80);
+              return;
+            }
           }
         } else {
           uk.field_q = -1;
@@ -55,22 +107,70 @@ final class dg {
     }
 
     final static String a(int param0) {
-        String var1 = "";
-        if (null != np.field_Qb) {
-            var1 = np.field_Qb.m(-15056);
+        String var1 = null;
+        var1 = "";
+        if (param0 > -69) {
+          L0: {
+            field_a = (String) null;
+            if (null == np.field_Qb) {
+              break L0;
+            } else {
+              var1 = np.field_Qb.m(-15056);
+              break L0;
+            }
+          }
+          L1: {
+            if (var1.length() == 0) {
+              var1 = rn.b(true);
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          L2: {
+            if (var1.length() == 0) {
+              var1 = ko.field_a;
+              break L2;
+            } else {
+              break L2;
+            }
+          }
+          return var1;
+        } else {
+          L3: {
+            if (null == np.field_Qb) {
+              break L3;
+            } else {
+              var1 = np.field_Qb.m(-15056);
+              break L3;
+            }
+          }
+          L4: {
+            if (var1.length() == 0) {
+              var1 = rn.b(true);
+              break L4;
+            } else {
+              break L4;
+            }
+          }
+          L5: {
+            if (var1.length() == 0) {
+              var1 = ko.field_a;
+              break L5;
+            } else {
+              break L5;
+            }
+          }
+          return var1;
         }
-        if (!(var1.length() != 0)) {
-            var1 = rn.b(true);
-        }
-        if (!(var1.length() != 0)) {
-            var1 = ko.field_a;
-        }
-        return var1;
     }
 
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
+        if (param0 != -12) {
+            field_a = (String) null;
+        }
     }
 
     final void a(int param0, int param1) {
@@ -106,19 +206,31 @@ final class dg {
 
     final void b(int param0) {
         int var2 = 0;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
-        of.field_Mb = lo.a("cantmove", -28106, "basic", ((dg) this).field_d);
-        bk.field_d = lo.a("attacktargets", -28106, "basic", ((dg) this).field_d);
-        hq.field_a = lo.a("surround_tiles", -28106, "basic", ((dg) this).field_d);
-        vf.field_j = fk.a("smoke", (byte) -124, ((dg) this).field_d, "basic");
-        jq.field_G = fk.a("kalphites", (byte) -124, ((dg) this).field_d, "basic");
-        for (var2 = param0; jq.field_G.length > var2; var2++) {
+        int var3 = 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        of.field_Mb = lo.a("cantmove", -28106, "basic", this.field_d);
+        bk.field_d = lo.a("attacktargets", -28106, "basic", this.field_d);
+        hq.field_a = lo.a("surround_tiles", -28106, "basic", this.field_d);
+        vf.field_j = fk.a("smoke", (byte) -124, this.field_d, "basic");
+        jq.field_G = fk.a("kalphites", (byte) -124, this.field_d, "basic");
+        var2 = param0;
+        L0: while (true) {
+          if (jq.field_G.length > var2) {
             jq.field_G[var2].i();
+            var2++;
+            if (var3 == 0) {
+              continue L0;
+            } else {
+              return;
+            }
+          } else {
+            es.field_d = lo.a("bones", param0 + -28106, "basic", this.field_d);
+            wf.field_B = fk.a("boneshadows", (byte) -124, this.field_d, "basic");
+            go.field_g = nh.a("player_ring", "basic", this.field_d, false);
+            wl.field_N = fk.a("shadows", (byte) -128, this.field_d, "basic")[0];
+            return;
+          }
         }
-        es.field_d = lo.a("bones", param0 + -28106, "basic", ((dg) this).field_d);
-        wf.field_B = fk.a("boneshadows", (byte) -124, ((dg) this).field_d, "basic");
-        go.field_g = nh.a("player_ring", "basic", ((dg) this).field_d, false);
-        wl.field_N = fk.a("shadows", (byte) -128, ((dg) this).field_d, "basic")[0];
     }
 
     dg(kl param0) {
@@ -141,30 +253,30 @@ final class dg {
         String stackOut_4_2 = null;
         try {
           L0: {
-            ((dg) this).field_d = param0;
+            this.field_d = param0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var2;
+            stackOut_3_0 = (RuntimeException) (var2);
             stackOut_3_1 = new StringBuilder().append("dg.<init>(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -172,15 +284,11 @@ final class dg {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Temple";
         field_c = 0;
     }

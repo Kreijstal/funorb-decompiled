@@ -23,10 +23,10 @@ final class qe extends wh {
 
     private final void a(int param0, int param1, nb param2, int param3) {
         try {
-            param2.a(param0, (byte) -116, -1);
+            param2.a(param0, (byte) -116, param1);
             param2.a(0, param3);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "qe.G(" + param0 + ',' + -1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "qe.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -39,10 +39,10 @@ final class qe extends wh {
     }
 
     final synchronized void a(int param0, int param1) {
-        ((qe) this).field_u = param0;
+        this.field_u = param0;
         if (param1 > -45) {
-            Object var4 = null;
-            ((qe) this).a((int[]) null, -45, 18);
+            int[] var4 = (int[]) null;
+            this.a((int[]) null, -45, 18);
         }
     }
 
@@ -66,6 +66,7 @@ final class qe extends wh {
         RuntimeException stackIn_67_0 = null;
         StringBuilder stackIn_67_1 = null;
         String stackIn_67_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_32_0 = 0;
         int stackOut_31_0 = 0;
@@ -84,33 +85,34 @@ final class qe extends wh {
         var11 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
-            if (((qe) this).field_u <= 0) {
-              ((qe) this).d(param2);
-              return;
+            if (this.field_u <= 0) {
+              this.d(param2);
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
-                if (((qe) this).field_q) {
+                if (this.field_q) {
                   L2: {
-                    if (((qe) this).field_v <= 0) {
+                    if (this.field_v <= 0) {
                       break L2;
                     } else {
-                      if (!((qe) this).field_w.c((byte) -96)) {
-                        ((qe) this).field_q = false;
-                        ((qe) this).field_v = -((qe) this).field_v;
-                        ((qe) this).field_x = null;
+                      if (!this.field_w.c((byte) -96)) {
+                        this.field_q = false;
+                        this.field_v = -this.field_v;
+                        this.field_x = null;
                         break L1;
                       } else {
                         break L2;
                       }
                     }
                   }
-                  if (((qe) this).field_v >= 0) {
+                  if (this.field_v >= 0) {
                     break L1;
                   } else {
-                    if (!((qe) this).field_r.c((byte) -58)) {
-                      ((qe) this).field_v = -((qe) this).field_v;
-                      ((qe) this).field_q = false;
-                      ((qe) this).field_y = null;
+                    if (!this.field_r.c((byte) -58)) {
+                      this.field_v = -this.field_v;
+                      this.field_q = false;
+                      this.field_y = null;
                       break L1;
                     } else {
                       break L1;
@@ -121,52 +123,52 @@ final class qe extends wh {
                 }
               }
               L3: {
-                var4_int = ((qe) this).field_u * (((qe) this).field_m >> 12) / 256;
-                var5 = -var4_int + ((qe) this).field_u;
-                if (0 == ((qe) this).field_v) {
+                var4_int = this.field_u * (this.field_m >> -1993086004) / 256;
+                var5 = -var4_int + this.field_u;
+                if (0 == this.field_v) {
                   break L3;
                 } else {
-                  ((qe) this).field_m = ((qe) this).field_m + ((qe) this).field_v * param2;
-                  if (((qe) this).field_m >= 1048576) {
-                    ((qe) this).field_m = 1048576;
-                    if (((qe) this).field_q) {
+                  this.field_m = this.field_m + this.field_v * param2;
+                  if (-1048577 >= (this.field_m ^ -1)) {
+                    this.field_m = 1048576;
+                    if (this.field_q) {
                       break L3;
                     } else {
-                      ((qe) this).field_v = 0;
-                      if (!((qe) this).field_D) {
+                      this.field_v = 0;
+                      if (!this.field_D) {
                         L4: {
-                          if (((qe) this).field_y == null) {
+                          if (this.field_y == null) {
                             break L4;
                           } else {
-                            ((qe) this).field_r.f(11795);
+                            this.field_r.f(11795);
                             break L4;
                           }
                         }
-                        ((qe) this).field_y = null;
+                        this.field_y = null;
                         break L3;
                       } else {
                         break L3;
                       }
                     }
                   } else {
-                    if (((qe) this).field_m > 0) {
+                    if ((this.field_m ^ -1) < -1) {
                       break L3;
                     } else {
-                      ((qe) this).field_m = 0;
-                      if (!((qe) this).field_q) {
-                        ((qe) this).field_v = 0;
-                        if (((qe) this).field_D) {
+                      this.field_m = 0;
+                      if (!this.field_q) {
+                        this.field_v = 0;
+                        if (this.field_D) {
                           break L3;
                         } else {
                           L5: {
-                            if (null == ((qe) this).field_x) {
+                            if (null == this.field_x) {
                               break L5;
                             } else {
-                              ((qe) this).field_w.f(11795);
+                              this.field_w.f(11795);
                               break L5;
                             }
                           }
-                          ((qe) this).field_x = null;
+                          this.field_x = null;
                           break L3;
                         }
                       } else {
@@ -182,56 +184,56 @@ final class qe extends wh {
                   stackIn_33_0 = stackOut_32_0;
                   break L6;
                 } else {
-                  stackOut_31_0 = param2 << 1;
+                  stackOut_31_0 = param2 << 1371599041;
                   stackIn_33_0 = stackOut_31_0;
                   break L6;
                 }
               }
               L7: {
                 var6 = stackIn_33_0;
-                if (((qe) this).field_t >= 256) {
+                if (this.field_t >= 256) {
                   break L7;
                 } else {
                   L8: {
-                    if (null != ((qe) this).field_x) {
+                    if (null != this.field_x) {
                       break L8;
                     } else {
-                      if (((qe) this).field_y == null) {
+                      if (this.field_y == null) {
                         break L7;
                       } else {
                         break L8;
                       }
                     }
                   }
-                  if (var4_int == 256) {
-                    ((qe) this).field_w.a(param0, param1, param2);
+                  if (-257 == (var4_int ^ -1)) {
+                    this.field_w.a(param0, param1, param2);
                     break L7;
                   } else {
                     if (var5 == 256) {
-                      ((qe) this).field_r.a(param0, param1, param2);
+                      this.field_r.a(param0, param1, param2);
                       break L7;
                     } else {
                       L9: {
                         L10: {
-                          if (((qe) this).field_B == null) {
+                          if (this.field_B == null) {
                             break L10;
                           } else {
-                            if (((qe) this).field_B.length < var6) {
+                            if (this.field_B.length < var6) {
                               break L10;
                             } else {
-                              pd.a(((qe) this).field_B, 0, var6);
-                              pd.a(((qe) this).field_s, 0, var6);
+                              pd.a(this.field_B, 0, var6);
+                              pd.a(this.field_s, 0, var6);
                               break L9;
                             }
                           }
                         }
-                        ((qe) this).field_s = new int[var6];
-                        ((qe) this).field_B = new int[var6];
+                        this.field_s = new int[var6];
+                        this.field_B = new int[var6];
                         break L9;
                       }
                       L11: {
-                        ((qe) this).field_w.a(((qe) this).field_B, 0, param2);
-                        ((qe) this).field_r.a(((qe) this).field_s, 0, param2);
+                        this.field_w.a(this.field_B, 0, param2);
+                        this.field_r.a(this.field_s, 0, param2);
                         if (!oa.field_k) {
                           stackOut_45_0 = param1;
                           stackIn_46_0 = stackOut_45_0;
@@ -249,7 +251,7 @@ final class qe extends wh {
                         if (var6 <= var8) {
                           break L7;
                         } else {
-                          param0[var7 - -var8] = param0[var7 - -var8] + (((qe) this).field_B[var8] * var4_int - -(((qe) this).field_s[var8] * var5) >> 8);
+                          param0[var7 - -var8] = param0[var7 - -var8] + (this.field_B[var8] * var4_int - -(this.field_s[var8] * var5) >> 372251144);
                           var8++;
                           continue L12;
                         }
@@ -259,31 +261,31 @@ final class qe extends wh {
                 }
               }
               L13: {
-                if (null == ((qe) this).field_o) {
+                if (null == this.field_o) {
                   break L13;
                 } else {
-                  if (0 == ((qe) this).field_t) {
+                  if (0 == this.field_t) {
                     break L13;
                   } else {
                     L14: {
                       L15: {
-                        if (((qe) this).field_B == null) {
+                        if (this.field_B == null) {
                           break L15;
                         } else {
-                          if (var6 > ((qe) this).field_B.length) {
+                          if (var6 > this.field_B.length) {
                             break L15;
                           } else {
-                            pd.a(((qe) this).field_B, 0, var6);
+                            pd.a(this.field_B, 0, var6);
                             break L14;
                           }
                         }
                       }
-                      ((qe) this).field_s = new int[var6];
-                      ((qe) this).field_B = new int[var6];
+                      this.field_s = new int[var6];
+                      this.field_B = new int[var6];
                       break L14;
                     }
                     L16: {
-                      ((qe) this).field_A.a(((qe) this).field_B, 0, param2);
+                      this.field_A.a(this.field_B, 0, param2);
                       if (!oa.field_k) {
                         stackOut_59_0 = param1;
                         stackIn_60_0 = stackOut_59_0;
@@ -296,14 +298,14 @@ final class qe extends wh {
                       }
                     }
                     var7 = stackIn_60_0;
-                    var8 = ((qe) this).field_t * ((qe) this).field_u / 256;
-                    var9 = ((qe) this).field_u + -var8;
+                    var8 = this.field_t * this.field_u / 256;
+                    var9 = this.field_u + -var8;
                     var10 = 0;
                     L17: while (true) {
                       if (var6 <= var10) {
                         break L13;
                       } else {
-                        param0[var10 + var7] = var9 * param0[var10 + var7] + ((qe) this).field_B[var10] * var8 >> 8;
+                        param0[var10 + var7] = var9 * param0[var10 + var7] + this.field_B[var10] * var8 >> -695410072;
                         var10++;
                         continue L17;
                       }
@@ -311,6 +313,7 @@ final class qe extends wh {
                   }
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -318,23 +321,23 @@ final class qe extends wh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var4 = decompiledCaughtException;
-            stackOut_64_0 = (RuntimeException) var4;
+            stackOut_64_0 = (RuntimeException) (var4);
             stackOut_64_1 = new StringBuilder().append("qe.HA(");
             stackIn_66_0 = stackOut_64_0;
             stackIn_66_1 = stackOut_64_1;
             stackIn_65_0 = stackOut_64_0;
             stackIn_65_1 = stackOut_64_1;
             if (param0 == null) {
-              stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
-              stackOut_66_1 = (StringBuilder) (Object) stackIn_66_1;
+              stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
               stackOut_66_2 = "null";
               stackIn_67_0 = stackOut_66_0;
               stackIn_67_1 = stackOut_66_1;
               stackIn_67_2 = stackOut_66_2;
               break L18;
             } else {
-              stackOut_65_0 = (RuntimeException) (Object) stackIn_65_0;
-              stackOut_65_1 = (StringBuilder) (Object) stackIn_65_1;
+              stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
+              stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
               stackOut_65_2 = "{...}";
               stackIn_67_0 = stackOut_65_0;
               stackIn_67_1 = stackOut_65_1;
@@ -342,7 +345,12 @@ final class qe extends wh {
               break L18;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_67_0, stackIn_67_2 + ',' + param1 + ',' + param2 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_67_0), stackIn_67_2 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -350,11 +358,11 @@ final class qe extends wh {
         int var3 = 0;
         L0: {
           var3 = TrackController.field_F ? 1 : 0;
-          if (-1 <= ((qe) this).field_m) {
+          if (-1 <= (this.field_m ^ -1)) {
             break L0;
           } else {
-            if (((qe) this).field_x != null) {
-              ((qe) this).field_w.d(param0);
+            if (this.field_x != null) {
+              this.field_w.d(param0);
               break L0;
             } else {
               break L0;
@@ -362,42 +370,42 @@ final class qe extends wh {
           }
         }
         L1: {
-          if (-1048577 <= ((qe) this).field_m) {
-            if (0 < ((qe) this).field_t) {
-              if (((qe) this).field_o == null) {
+          if (-1048577 >= (this.field_m ^ -1)) {
+            if (0 < this.field_t) {
+              if (this.field_o == null) {
                 break L1;
               } else {
-                ((qe) this).field_A.d(param0);
+                this.field_A.d(param0);
                 break L1;
               }
             } else {
-              if (0 >= ((qe) this).field_t) {
+              if (0 >= this.field_t) {
                 break L1;
               } else {
-                if (((qe) this).field_o == null) {
+                if (this.field_o == null) {
                   break L1;
                 } else {
-                  ((qe) this).field_A.d(param0);
+                  this.field_A.d(param0);
                   break L1;
                 }
               }
             }
           } else {
-            if (0 < ((qe) this).field_t) {
-              if (((qe) this).field_o == null) {
+            if (0 < this.field_t) {
+              if (this.field_o == null) {
                 break L1;
               } else {
-                ((qe) this).field_A.d(param0);
+                this.field_A.d(param0);
                 break L1;
               }
             } else {
-              if (0 >= ((qe) this).field_t) {
+              if (0 >= this.field_t) {
                 break L1;
               } else {
-                if (((qe) this).field_o == null) {
+                if (this.field_o == null) {
                   break L1;
                 } else {
-                  ((qe) this).field_A.d(param0);
+                  this.field_A.d(param0);
                   break L1;
                 }
               }
@@ -405,28 +413,28 @@ final class qe extends wh {
           }
         }
         L2: {
-          if (((qe) this).field_q) {
+          if (this.field_q) {
             L3: {
-              if (0 >= ((qe) this).field_v) {
+              if (0 >= this.field_v) {
                 break L3;
               } else {
-                if (((qe) this).field_w.c((byte) -116)) {
+                if (this.field_w.c((byte) -116)) {
                   break L3;
                 } else {
-                  ((qe) this).field_q = false;
-                  ((qe) this).field_x = null;
-                  ((qe) this).field_v = -((qe) this).field_v;
+                  this.field_q = false;
+                  this.field_x = null;
+                  this.field_v = -this.field_v;
                   break L2;
                 }
               }
             }
-            if (((qe) this).field_v >= 0) {
+            if (-1 >= (this.field_v ^ -1)) {
               break L2;
             } else {
-              if (!((qe) this).field_r.c((byte) -80)) {
-                ((qe) this).field_v = -((qe) this).field_v;
-                ((qe) this).field_y = null;
-                ((qe) this).field_q = false;
+              if (!this.field_r.c((byte) -80)) {
+                this.field_v = -this.field_v;
+                this.field_y = null;
+                this.field_q = false;
                 break L2;
               } else {
                 break L2;
@@ -437,22 +445,22 @@ final class qe extends wh {
           }
         }
         L4: {
-          if (0 != ((qe) this).field_v) {
-            ((qe) this).field_m = ((qe) this).field_m + param0 * ((qe) this).field_v;
-            if (1048576 <= ((qe) this).field_m) {
-              ((qe) this).field_m = 1048576;
-              if (!((qe) this).field_q) {
-                ((qe) this).field_v = 0;
-                if (!((qe) this).field_D) {
+          if (0 != this.field_v) {
+            this.field_m = this.field_m + param0 * this.field_v;
+            if (1048576 <= this.field_m) {
+              this.field_m = 1048576;
+              if (!this.field_q) {
+                this.field_v = 0;
+                if (!this.field_D) {
                   L5: {
-                    if (null == ((qe) this).field_y) {
+                    if (null == this.field_y) {
                       break L5;
                     } else {
-                      ((qe) this).field_r.f(11795);
+                      this.field_r.f(11795);
                       break L5;
                     }
                   }
-                  ((qe) this).field_y = null;
+                  this.field_y = null;
                   break L4;
                 } else {
                   break L4;
@@ -461,22 +469,22 @@ final class qe extends wh {
                 break L4;
               }
             } else {
-              if (((qe) this).field_m <= 0) {
-                ((qe) this).field_m = 0;
-                if (((qe) this).field_q) {
+              if (-1 <= (this.field_m ^ -1)) {
+                this.field_m = 0;
+                if (this.field_q) {
                   break L4;
                 } else {
-                  ((qe) this).field_v = 0;
-                  if (!((qe) this).field_D) {
+                  this.field_v = 0;
+                  if (!this.field_D) {
                     L6: {
-                      if (null != ((qe) this).field_x) {
-                        ((qe) this).field_w.f(11795);
+                      if (null != this.field_x) {
+                        this.field_w.f(11795);
                         break L6;
                       } else {
                         break L6;
                       }
                     }
-                    ((qe) this).field_x = null;
+                    this.field_x = null;
                     break L4;
                   } else {
                     break L4;
@@ -544,6 +552,7 @@ final class qe extends wh {
         RuntimeException stackIn_61_0 = null;
         StringBuilder stackIn_61_1 = null;
         String stackIn_61_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_18_0 = null;
         Object stackOut_20_0 = null;
@@ -586,48 +595,49 @@ final class qe extends wh {
         try {
           L0: {
             L1: {
-              if (!((qe) this).field_q) {
+              if (!this.field_q) {
                 break L1;
               } else {
                 if (param0) {
                   L2: {
-                    if (0 < ((qe) this).field_v) {
+                    if (0 < this.field_v) {
                       L3: {
-                        if (((qe) this).field_x != null) {
-                          ((qe) this).field_w.f(11795);
+                        if (this.field_x != null) {
+                          this.field_w.f(11795);
                           break L3;
                         } else {
                           break L3;
                         }
                       }
-                      ((qe) this).field_x = param4;
+                      this.field_x = param4;
                       if (param4 != null) {
-                        ((qe) this).field_w.a(param4, 14526, false);
-                        this.a(param5, -1, ((qe) this).field_w, param3);
+                        this.field_w.a(param4, 14526, false);
+                        this.a(param5, -1, this.field_w, param3);
                         break L2;
                       } else {
                         break L2;
                       }
                     } else {
                       L4: {
-                        if (((qe) this).field_y != null) {
-                          ((qe) this).field_r.f(11795);
+                        if (this.field_y != null) {
+                          this.field_r.f(11795);
                           break L4;
                         } else {
                           break L4;
                         }
                       }
-                      ((qe) this).field_y = param4;
+                      this.field_y = param4;
                       if (param4 != null) {
-                        ((qe) this).field_r.a(param4, 14526, false);
-                        this.a(param5, -1, ((qe) this).field_r, param3);
+                        this.field_r.a(param4, 14526, false);
+                        this.a(param5, -1, this.field_r, param3);
                         break L2;
                       } else {
                         break L2;
                       }
                     }
                   }
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   break L1;
                 }
@@ -651,22 +661,24 @@ final class qe extends wh {
                 break L5;
               }
             }
-            ((qe) this).field_q = stackIn_21_1 != 0;
-            if (param4 == ((qe) this).field_x) {
-              ((qe) this).field_v = param1;
-              this.a(param5, -1, ((qe) this).field_w, param3);
-              return;
+            ((qe) (this)).field_q = stackIn_21_1 != 0;
+            if (param4 == this.field_x) {
+              this.field_v = param1;
+              this.a(param5, -1, this.field_w, param3);
+              decompiledRegionSelector0 = 2;
+              break L0;
             } else {
-              if (param4 == ((qe) this).field_y) {
-                ((qe) this).field_v = -param1;
-                this.a(param5, -1, ((qe) this).field_r, param3);
-                return;
+              if (param4 == this.field_y) {
+                this.field_v = -param1;
+                this.a(param5, -1, this.field_r, param3);
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 L6: {
-                  if (((qe) this).field_x != null) {
-                    if (null != ((qe) this).field_y) {
+                  if (this.field_x != null) {
+                    if (null != this.field_y) {
                       L7: {
-                        if (((qe) this).field_m >= 524288) {
+                        if ((this.field_m ^ -1) <= -524289) {
                           stackOut_34_0 = 0;
                           stackIn_35_0 = stackOut_34_0;
                           break L7;
@@ -691,26 +703,26 @@ final class qe extends wh {
                   if (param2) {
                     break L8;
                   } else {
-                    ((qe) this).field_m = -96;
+                    this.field_m = -96;
                     break L8;
                   }
                 }
                 L9: {
                   if (var7_int == 0) {
                     L10: {
-                      if (((qe) this).field_y == null) {
+                      if (this.field_y == null) {
                         break L10;
                       } else {
-                        ((qe) this).field_r.f(11795);
+                        this.field_r.f(11795);
                         break L10;
                       }
                     }
                     L11: {
-                      ((qe) this).field_y = param4;
+                      this.field_y = param4;
                       if (param4 != null) {
                         L12: {
-                          stackOut_52_0 = ((qe) this).field_r;
-                          stackOut_52_1 = (wb) param4;
+                          stackOut_52_0 = this.field_r;
+                          stackOut_52_1 = (wb) (param4);
                           stackOut_52_2 = 14526;
                           stackIn_54_0 = stackOut_52_0;
                           stackIn_54_1 = stackOut_52_1;
@@ -719,8 +731,8 @@ final class qe extends wh {
                           stackIn_53_1 = stackOut_52_1;
                           stackIn_53_2 = stackOut_52_2;
                           if (param0) {
-                            stackOut_54_0 = (nb) (Object) stackIn_54_0;
-                            stackOut_54_1 = (wb) (Object) stackIn_54_1;
+                            stackOut_54_0 = (nb) ((Object) stackIn_54_0);
+                            stackOut_54_1 = (wb) ((Object) stackIn_54_1);
                             stackOut_54_2 = stackIn_54_2;
                             stackOut_54_3 = 0;
                             stackIn_55_0 = stackOut_54_0;
@@ -729,8 +741,8 @@ final class qe extends wh {
                             stackIn_55_3 = stackOut_54_3;
                             break L12;
                           } else {
-                            stackOut_53_0 = (nb) (Object) stackIn_53_0;
-                            stackOut_53_1 = (wb) (Object) stackIn_53_1;
+                            stackOut_53_0 = (nb) ((Object) stackIn_53_0);
+                            stackOut_53_1 = (wb) ((Object) stackIn_53_1);
                             stackOut_53_2 = stackIn_53_2;
                             stackOut_53_3 = 1;
                             stackIn_55_0 = stackOut_53_0;
@@ -741,29 +753,29 @@ final class qe extends wh {
                           }
                         }
                         ((nb) (Object) stackIn_55_0).a(stackIn_55_1, stackIn_55_2, stackIn_55_3 != 0);
-                        this.a(param5, -1, ((qe) this).field_r, param3);
+                        this.a(param5, -1, this.field_r, param3);
                         break L11;
                       } else {
                         break L11;
                       }
                     }
-                    ((qe) this).field_v = -param1;
+                    this.field_v = -param1;
                     break L9;
                   } else {
                     L13: {
-                      if (null == ((qe) this).field_x) {
+                      if (null == this.field_x) {
                         break L13;
                       } else {
-                        ((qe) this).field_w.f(11795);
+                        this.field_w.f(11795);
                         break L13;
                       }
                     }
                     L14: {
-                      ((qe) this).field_x = param4;
+                      this.field_x = param4;
                       if (param4 != null) {
                         L15: {
-                          stackOut_43_0 = ((qe) this).field_w;
-                          stackOut_43_1 = (wb) param4;
+                          stackOut_43_0 = this.field_w;
+                          stackOut_43_1 = (wb) (param4);
                           stackOut_43_2 = 14526;
                           stackIn_45_0 = stackOut_43_0;
                           stackIn_45_1 = stackOut_43_1;
@@ -772,8 +784,8 @@ final class qe extends wh {
                           stackIn_44_1 = stackOut_43_1;
                           stackIn_44_2 = stackOut_43_2;
                           if (param0) {
-                            stackOut_45_0 = (nb) (Object) stackIn_45_0;
-                            stackOut_45_1 = (wb) (Object) stackIn_45_1;
+                            stackOut_45_0 = (nb) ((Object) stackIn_45_0);
+                            stackOut_45_1 = (wb) ((Object) stackIn_45_1);
                             stackOut_45_2 = stackIn_45_2;
                             stackOut_45_3 = 0;
                             stackIn_46_0 = stackOut_45_0;
@@ -782,8 +794,8 @@ final class qe extends wh {
                             stackIn_46_3 = stackOut_45_3;
                             break L15;
                           } else {
-                            stackOut_44_0 = (nb) (Object) stackIn_44_0;
-                            stackOut_44_1 = (wb) (Object) stackIn_44_1;
+                            stackOut_44_0 = (nb) ((Object) stackIn_44_0);
+                            stackOut_44_1 = (wb) ((Object) stackIn_44_1);
                             stackOut_44_2 = stackIn_44_2;
                             stackOut_44_3 = 1;
                             stackIn_46_0 = stackOut_44_0;
@@ -794,16 +806,17 @@ final class qe extends wh {
                           }
                         }
                         ((nb) (Object) stackIn_46_0).a(stackIn_46_1, stackIn_46_2, stackIn_46_3 != 0);
-                        this.a(param5, -1, ((qe) this).field_w, param3);
+                        this.a(param5, -1, this.field_w, param3);
                         break L14;
                       } else {
                         break L14;
                       }
                     }
-                    ((qe) this).field_v = param1;
+                    this.field_v = param1;
                     break L9;
                   }
                 }
+                decompiledRegionSelector0 = 3;
                 break L0;
               }
             }
@@ -812,23 +825,23 @@ final class qe extends wh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var7 = decompiledCaughtException;
-            stackOut_58_0 = (RuntimeException) var7;
+            stackOut_58_0 = (RuntimeException) (var7);
             stackOut_58_1 = new StringBuilder().append("qe.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_60_0 = stackOut_58_0;
             stackIn_60_1 = stackOut_58_1;
             stackIn_59_0 = stackOut_58_0;
             stackIn_59_1 = stackOut_58_1;
             if (param4 == null) {
-              stackOut_60_0 = (RuntimeException) (Object) stackIn_60_0;
-              stackOut_60_1 = (StringBuilder) (Object) stackIn_60_1;
+              stackOut_60_0 = (RuntimeException) ((Object) stackIn_60_0);
+              stackOut_60_1 = (StringBuilder) ((Object) stackIn_60_1);
               stackOut_60_2 = "null";
               stackIn_61_0 = stackOut_60_0;
               stackIn_61_1 = stackOut_60_1;
               stackIn_61_2 = stackOut_60_2;
               break L16;
             } else {
-              stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
-              stackOut_59_1 = (StringBuilder) (Object) stackIn_59_1;
+              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
+              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
               stackOut_59_2 = "{...}";
               stackIn_61_0 = stackOut_59_0;
               stackIn_61_1 = stackOut_59_1;
@@ -836,7 +849,20 @@ final class qe extends wh {
               break L16;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_61_0, stackIn_61_2 + ',' + param5 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_61_0), stackIn_61_2 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -849,10 +875,6 @@ final class qe extends wh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = new ba();
         field_n = new aa(7, 0, 1, 1);
     }

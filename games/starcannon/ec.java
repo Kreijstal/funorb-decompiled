@@ -17,7 +17,7 @@ final class ec {
 
     final static int b(byte param0) {
         int var1 = 0;
-        var1 = 0;
+        var1 = -49 % ((param0 - -82) / 43);
         if (2 > rk.field_d) {
           return 0;
         } else {
@@ -118,18 +118,26 @@ final class ec {
     }
 
     final static void a(byte param0) {
-        if (null != m.field_b) {
-            m.field_b.b((byte) -52);
-            m.field_b = null;
+        if (null == m.field_b) {
+          if (param0 != 27) {
+            ec.a(72);
             return;
+          } else {
+            return;
+          }
+        } else {
+          m.field_b.b((byte) -52);
+          m.field_b = null;
+          if (param0 == 27) {
+            return;
+          } else {
+            ec.a(72);
+            return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
         field_d = "GFX - LOW";
         field_a = 0;

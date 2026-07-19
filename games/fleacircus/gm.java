@@ -15,9 +15,9 @@ final class gm extends hl {
         Object var2 = null;
         Throwable var3 = null;
         Throwable decompiledCaughtException = null;
-        var1 = 1;
+        var1 = 61 % ((7 - param0) / 35);
         if (sg.field_i != null) {
-          var2 = (Object) (Object) sg.field_i;
+          var2 = sg.field_i;
           synchronized (var2) {
             L0: {
               sg.field_i = null;
@@ -32,7 +32,10 @@ final class gm extends hl {
 
     public static void c(boolean param0) {
         field_ib = null;
-        field_kb = null;
+        if (param0) {
+            return;
+        }
+        field_kb = (int[][]) null;
     }
 
     gm() {
@@ -40,10 +43,6 @@ final class gm extends hl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_ib = "<%0>Bridge:<%1> these collapse as the fleas run across so that only one flea gets over, and the others fall down behind.";
     }
 }

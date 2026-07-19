@@ -16,18 +16,22 @@ final class uc {
     static int[] field_b;
 
     public static void a(boolean param0) {
-        field_h = null;
+        field_h = (String[][]) null;
         field_j = null;
         field_d = null;
         field_i = null;
         field_k = null;
         field_b = null;
         field_c = null;
-        field_e = null;
+        if (param0) {
+            return;
+        }
+        field_e = (int[][]) null;
         field_f = null;
     }
 
     final static void a(boolean param0, int param1) {
+        boolean discarded$2 = false;
         RuntimeException var2 = null;
         int var3 = 0;
         tc var4 = null;
@@ -40,26 +44,26 @@ final class uc {
               if (param0) {
                 break L1;
               } else {
-                boolean discarded$2 = uc.a(-115, 79);
+                discarded$2 = uc.a(-115, 79);
                 break L1;
               }
             }
-            var4 = (tc) (Object) ic.field_B.e(13058);
+            var4 = (tc) ((Object) ic.field_B.e(13058));
             L2: while (true) {
               if (var4 == null) {
-                var5 = (kf) (Object) je.field_w.e(13058);
+                var5 = (kf) ((Object) je.field_w.e(13058));
                 L3: while (true) {
                   if (var5 == null) {
                     break L0;
                   } else {
                     ma.a(param1, var5, -2864);
-                    var5 = (kf) (Object) je.field_w.a((byte) -40);
+                    var5 = (kf) ((Object) je.field_w.a((byte) -40));
                     continue L3;
                   }
                 }
               } else {
                 vh.a(param1, var4, (byte) 107);
-                var4 = (tc) (Object) ic.field_B.a((byte) -53);
+                var4 = (tc) ((Object) ic.field_B.a((byte) -53));
                 continue L2;
               }
             }
@@ -67,7 +71,7 @@ final class uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var2, "uc.B(" + param0 + ',' + param1 + ')');
+          throw ci.a((Throwable) ((Object) var2), "uc.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -86,6 +90,7 @@ final class uc {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
@@ -119,6 +124,7 @@ final class uc {
                     L2: while (true) {
                       if (param4 >= var9) {
                         pb.a(aj.field_v);
+                        decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
                         param0[1].a(param4, param2);
@@ -127,34 +133,36 @@ final class uc {
                       }
                     }
                   } else {
-                    return;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) runtimeException;
+            stackOut_11_0 = (RuntimeException) (runtimeException);
             stackOut_11_1 = new StringBuilder().append("uc.D(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -162,7 +170,16 @@ final class uc {
               break L3;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -172,12 +189,13 @@ final class uc {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        Object var6 = null;
+        wk[] var6 = null;
         int[] var7 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_7_0 = 0;
@@ -195,14 +213,16 @@ final class uc {
                 } else {
                   stackOut_3_0 = 0;
                   stackIn_4_0 = stackOut_3_0;
-                  return stackIn_4_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             }
             if (t.a(fe.field_D, param0, -20370)) {
               stackOut_7_0 = 1;
               stackIn_8_0 = stackOut_7_0;
-              return stackIn_8_0 != 0;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
               L2: {
                 var7 = dn.field_bc;
@@ -210,7 +230,7 @@ final class uc {
                 if (param1 == -3958) {
                   break L2;
                 } else {
-                  var6 = null;
+                  var6 = (wk[]) null;
                   uc.a((wk[]) null, 91, -31, (byte) -121, -77);
                   break L2;
                 }
@@ -220,13 +240,15 @@ final class uc {
                 if (var3 >= var7.length) {
                   stackOut_18_0 = 0;
                   stackIn_19_0 = stackOut_18_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
                   var4 = var7[var3];
                   if (var4 == param0) {
                     stackOut_15_0 = 1;
                     stackIn_16_0 = stackOut_15_0;
-                    return stackIn_16_0 != 0;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     var3++;
                     continue L3;
@@ -238,44 +260,52 @@ final class uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var2_ref, "uc.A(" + param0 + ',' + param1 + ')');
+          throw ci.a((Throwable) ((Object) var2_ref), "uc.A(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_19_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_16_0 != 0;
+            } else {
+              return stackIn_19_0 != 0;
+            }
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new int[23][];
         field_c = new int[23];
         field_k = new int[23];
         field_d = new int[23];
         field_f = new int[23];
-        km.a((byte) -44, 460, new int[9], 180, 30, 160, 0);
-        km.a((byte) -44, 460, new int[7], 180, 30, 200, 1);
-        km.a((byte) -44, 460, new int[8], 180, 30, 200, 2);
-        km.a((byte) -44, 460, new int[8], 180, 30, 200, 3);
-        km.a((byte) -44, 460, new int[7], 180, 30, 200, 4);
-        km.a((byte) -44, 460, new int[4], 180, 30, 406, 5);
-        km.a((byte) -44, 460, new int[4], 180, 30, 406, 6);
-        km.a((byte) -44, 0, new int[4], 0, 0, 0, 7);
-        km.a((byte) -44, 460, new int[4], 180, 30, 406, 8);
-        km.a((byte) -44, 460, new int[4], 180, 30, 406, 9);
-        km.a((byte) -44, 460, new int[2], 180, 30, 400, 10);
-        km.a((byte) -44, 460, new int[1], 290, 30, 400, 11);
-        km.a((byte) -44, 460, new int[0], 180, 30, 200, 12);
-        km.a((byte) -44, 0, new int[4], 0, 0, 0, 13);
-        km.a((byte) -44, 0, new int[4], 0, 0, 0, 14);
-        km.a((byte) -44, 460, new int[6], 180, 30, 400, 15);
-        km.a((byte) -44, 460, new int[1], 180, 30, 400, 16);
-        km.a((byte) -44, 460, new int[13], 180, 30, 140, 17);
-        km.a((byte) -44, 0, new int[0], 0, 0, 0, 18);
-        km.a((byte) -44, 0, new int[24], 0, 30, 0, 19);
-        km.a((byte) -44, 0, new int[7], 0, 30, 0, 20);
-        km.a((byte) -44, 460, new int[1], 180, 30, 200, 21);
-        km.a((byte) -44, 460, new int[6], 180, 30, 200, 22);
-        field_h = new String[][]{new String[3], new String[3]};
+        km.a((byte) -44, 460, new int[]{0, 1, 28, 5, 35, 4, 22, 19, 34}, 180, 30, 160, 0);
+        km.a((byte) -44, 460, new int[]{2, 20, 21, 37, 45, 5, 9}, 180, 30, 200, 1);
+        km.a((byte) -44, 460, new int[]{2, 20, 21, 37, 45, 5, 11, 13}, 180, 30, 200, 2);
+        km.a((byte) -44, 460, new int[]{2, 20, 21, 37, 45, 5, 12, 13}, 180, 30, 200, 3);
+        km.a((byte) -44, 460, new int[]{2, 20, 21, 37, 45, 5, 13}, 180, 30, 200, 4);
+        km.a((byte) -44, 460, new int[]{22, 4, 23, 8}, 180, 30, 406, 5);
+        km.a((byte) -44, 460, new int[]{22, -1, 23, 8}, 180, 30, 406, 6);
+        km.a((byte) -44, 0, new int[]{-1, -1, -1, 8}, 0, 0, 0, 7);
+        km.a((byte) -44, 460, new int[]{4, -1, 23, 8}, 180, 30, 406, 8);
+        km.a((byte) -44, 460, new int[]{4, -1, 23, 8}, 180, 30, 406, 9);
+        km.a((byte) -44, 460, new int[]{23, 24}, 180, 30, 400, 10);
+        km.a((byte) -44, 460, new int[]{7}, 290, 30, 400, 11);
+        km.a((byte) -44, 460, new int[]{}, 180, 30, 200, 12);
+        km.a((byte) -44, 0, new int[]{23, 28, -1, 7}, 0, 0, 0, 13);
+        km.a((byte) -44, 0, new int[]{23, 33, 46, 7}, 0, 0, 0, 14);
+        km.a((byte) -44, 460, new int[]{29, 30, 31, 32, 33, 7}, 180, 30, 400, 15);
+        km.a((byte) -44, 460, new int[]{7}, 180, 30, 400, 16);
+        km.a((byte) -44, 460, new int[]{20, 21, 6, 37, 41, 42, 43, 44, 47, -1, -1, -1, 8}, 180, 30, 140, 17);
+        km.a((byte) -44, 0, new int[]{}, 0, 0, 0, 18);
+        km.a((byte) -44, 0, new int[]{38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, -1, -1, 23, 7}, 0, 30, 0, 19);
+        km.a((byte) -44, 0, new int[]{25, 26, 39, -1, -1, 23, 7}, 0, 30, 0, 20);
+        km.a((byte) -44, 460, new int[]{7}, 180, 30, 200, 21);
+        km.a((byte) -44, 460, new int[]{41, 42, 43, 44, 47, 8}, 180, 30, 200, 22);
+        field_h = new String[][]{new String[]{"Your sentinel must be a default Slave, Aquila or Golem to play in basic mode", "You need a default Slave, Aquila or Golem to play in basic mode", "<%0> needs a default Slave, Aquila or Golem to play in basic mode"}, new String[]{"Your sentinel has too high a tech value to compete in standard mode", "Your sentinel has too high a tech value to compete in standard mode", "<%0>'s sentinel has too high a tech value to compete in standard mode"}};
     }
 }

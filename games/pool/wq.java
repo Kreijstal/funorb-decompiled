@@ -7,10 +7,6 @@ final class wq {
     static int field_c;
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = -1;
         field_c = 0;
     }

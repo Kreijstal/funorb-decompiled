@@ -27,10 +27,6 @@ final class e {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "e.A(";
         field_d = new bd();
         field_a = 200;

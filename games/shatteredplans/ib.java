@@ -31,7 +31,7 @@ abstract class ib {
         try {
           L0: {
             L1: {
-              if (param3 < 0) {
+              if ((param3 ^ -1) > -1) {
                 param4 = param4 + param3;
                 param3 = 0;
                 break L1;
@@ -57,41 +57,48 @@ abstract class ib {
               }
             }
             L4: {
-              field_d = null;
-              if (param3 + param4 > gf.field_b) {
-                param4 = -param3 + gf.field_b;
+              if (param5 == 24074) {
                 break L4;
               } else {
+                field_d = (String) null;
                 break L4;
               }
             }
-            var6_int = 256;
+            L5: {
+              if (param3 + param4 > gf.field_b) {
+                param4 = -param3 + gf.field_b;
+                break L5;
+              } else {
+                break L5;
+              }
+            }
+            var6_int = -param1 + 256;
             var7 = param0 - -param2;
             var8 = param0;
-            L5: while (true) {
+            L6: while (true) {
               if (var8 >= var7) {
                 break L0;
               } else {
                 var9 = param3 + var8 * gf.field_b;
                 var10 = param4;
-                L6: while (true) {
-                  if (var10 <= 0) {
+                L7: while (true) {
+                  if (-1 <= (var10 ^ -1)) {
                     var8++;
-                    continue L5;
+                    continue L6;
                   } else {
                     var11 = gf.field_h[var9];
-                    var12 = (var11 & 16711680) >> 16;
-                    var13 = (var11 & 65280) >> 8;
+                    var12 = (var11 & 16711680) >> 1316848656;
+                    var13 = (var11 & 65280) >> -253573112;
                     var14 = var11 & 255;
                     var15 = 5 * var12 - (-(var13 * 6) + -(5 * var14));
-                    var16 = (0 * var12 >> 8) - -(var15 * var6_int >> 12);
-                    var17 = (var6_int * var15 >> 12) + (0 * var13 >> 8);
-                    var18 = (0 * var14 >> 8) - -(var15 * var6_int >> 12);
-                    var19 = var16 << 16 | var17 << 8 | var18;
+                    var16 = (param1 * var12 >> -1920208216) - -(var15 * var6_int >> -1202636692);
+                    var17 = (var6_int * var15 >> -1694004020) + (param1 * var13 >> -1038161432);
+                    var18 = (param1 * var14 >> 1598247144) - -(var15 * var6_int >> -1069223028);
+                    var19 = var16 << -503157520 | var17 << 1165323560 | var18;
                     gf.field_h[var9] = var19;
                     var9++;
                     var10--;
-                    continue L6;
+                    continue L7;
                   }
                 }
               }
@@ -100,7 +107,7 @@ abstract class ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var6, "ib.E(" + param0 + ',' + 0 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + 23962 + ')');
+          throw r.a((Throwable) ((Object) var6), "ib.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -121,10 +128,6 @@ abstract class ib {
     abstract void a(java.awt.Component param0, int param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Projects";
         field_e = "Friends";
         field_d = "Change display name";

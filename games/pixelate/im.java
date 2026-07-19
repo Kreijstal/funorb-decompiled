@@ -35,10 +35,6 @@ final class im extends ak {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Rb = "im.A(";
         field_Mb = "Waiting for graphics";
         field_Jb = false;

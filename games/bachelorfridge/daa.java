@@ -14,19 +14,19 @@ final class daa extends sna {
     private daa(long param0, sna param1, sna param2, String param3) {
         super(param0, (sna) null);
         try {
-            ((daa) this).field_wb = new sna(0L, param1);
-            ((daa) this).field_xb = new sna(0L, param2);
-            ((daa) this).field_xb.field_Z = param3;
-            ((daa) this).a(-1, ((daa) this).field_wb);
-            ((daa) this).a(-1, ((daa) this).field_xb);
-            ((daa) this).d((byte) 116);
+            this.field_wb = new sna(0L, param1);
+            this.field_xb = new sna(0L, param2);
+            this.field_xb.field_Z = param3;
+            this.a(-1, this.field_wb);
+            this.a(-1, this.field_xb);
+            this.d((byte) 116);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "daa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "daa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
-        ((daa) this).a(param1, 31407, param4, param2, param5);
+        this.a(param1, 31407, param4, param2, param5);
         this.a(param3, (byte) -108);
         if (param0 != -42) {
             field_vb = true;
@@ -35,10 +35,10 @@ final class daa extends sna {
 
     final int a(byte param0, int param1) {
         if (param0 >= -101) {
-          ((daa) this).field_wb = null;
-          return param1 + (((daa) this).field_wb.e(-1) + ((daa) this).field_xb.e(-1));
+          this.field_wb = (sna) null;
+          return param1 + (this.field_wb.e(-1) + this.field_xb.e(-1));
         } else {
-          return param1 + (((daa) this).field_wb.e(-1) + ((daa) this).field_xb.e(-1));
+          return param1 + (this.field_wb.e(-1) + this.field_xb.e(-1));
         }
     }
 
@@ -49,25 +49,30 @@ final class daa extends sna {
     daa(long param0, kv param1, kv param2, int param3, sna param4, String param5) {
         this(param0, (sna) null, param4, param5);
         try {
-            ((daa) this).field_wb.field_v = param2;
-            ((daa) this).field_wb.field_Y = param3;
-            ((daa) this).field_wb.field_J = param1;
+            this.field_wb.field_v = param2;
+            this.field_wb.field_Y = param3;
+            this.field_wb.field_J = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "daa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "daa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void a(int param0, byte param1) {
-        ((daa) this).field_wb.a(((daa) this).field_p, 31407, ((daa) this).field_wb.e(-1), 0, 0);
-        int var3 = param0 + ((daa) this).field_wb.field_sb;
-        ((daa) this).field_xb.a(((daa) this).field_p, 31407, -var3 + ((daa) this).field_sb, var3, 0);
+        int var3 = 0;
+        this.field_wb.a(this.field_p, 31407, this.field_wb.e(-1), 0, 0);
+        if (param1 > -9) {
+          this.a((byte) -67, -74, -46, -17, -10, -3);
+          var3 = param0 + this.field_wb.field_sb;
+          this.field_xb.a(this.field_p, 31407, -var3 + this.field_sb, var3, 0);
+          return;
+        } else {
+          var3 = param0 + this.field_wb.field_sb;
+          this.field_xb.a(this.field_p, 31407, -var3 + this.field_sb, var3, 0);
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_vb = false;
     }
 }

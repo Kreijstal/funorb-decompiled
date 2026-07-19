@@ -12,6 +12,9 @@ final class mc extends ok {
         field_J = null;
         field_K = null;
         field_H = null;
+        if (param0) {
+            return;
+        }
         field_E = null;
     }
 
@@ -42,17 +45,17 @@ final class mc extends ok {
               if (var7 == null) {
                 break L1;
               } else {
-                if (((mc) this).a(param5, param3, param4, false, param2)) {
-                  if (!(((mc) this).field_l instanceof n)) {
+                if (this.a(param5, param3, param4, false, param2)) {
+                  if (!(this.field_l instanceof n)) {
                     if (var7.field_l instanceof n) {
-                      ((n) (Object) var7.field_l).a(var7, (mc) this, 21277);
+                      ((n) ((Object) var7.field_l)).a(var7, (mc) (this), 21277);
                       rf.field_e = null;
                       break L1;
                     } else {
                       return;
                     }
                   } else {
-                    ((n) (Object) ((mc) this).field_l).a(var7, (mc) this, 21277);
+                    ((n) ((Object) this.field_l)).a(var7, (mc) (this), 21277);
                     rf.field_e = null;
                     return;
                   }
@@ -67,23 +70,23 @@ final class mc extends ok {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) runtimeException;
+            stackOut_9_0 = (RuntimeException) (runtimeException);
             stackOut_9_1 = new StringBuilder().append("mc.GB(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -91,16 +94,16 @@ final class mc extends ok {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     private mc(int param0, int param1, int param2, int param3, t param4, tg param5, al param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
-            ((mc) this).field_B = param6;
+            this.field_B = param6;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "mc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "mc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -108,22 +111,21 @@ final class mc extends ok {
         la var3 = null;
         try {
             var3 = ra.field_C;
-            var3.c(3, 7);
+            if (param0) {
+                field_E = (qj) null;
+            }
+            var3.c(param1, 7);
             var3.a(5, (byte) -123);
             var3.a(0, (byte) -114);
             var3.b(param2.field_i, (byte) -127);
             var3.a(param2.field_l, (byte) -89);
             var3.a(param2.field_k, (byte) -68);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "mc.A(" + false + ',' + 3 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "mc.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = new int[128];
         field_L = -1;
         field_J = "If you do nothing the game will revert to normal view in <%0> second.";

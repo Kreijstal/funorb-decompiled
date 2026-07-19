@@ -15,58 +15,58 @@ final class g extends hh {
     private boolean field_f;
 
     final void a(boolean param0, boolean param1) {
-        ((g) this).field_i = param1 ? true : false;
-        ((g) this).field_a.a(param0, 1);
-        ((g) this).field_a.a((rt) (Object) ((g) this).field_l, 1);
-        ((g) this).field_a.a(34165, -26625, 7681);
-        ((g) this).field_a.a(34166, 768, 34176, 0);
-        ((g) this).field_a.a(5890, 770, 34176, 2);
-        ((g) this).field_a.a(770, 34168, 0, (byte) 95);
-        ((g) this).field_a.a(false, 0);
+        this.field_i = param1 ? true : false;
+        this.field_a.a(param0, 1);
+        this.field_a.a(this.field_l, 1);
+        this.field_a.a(34165, -26625, 7681);
+        this.field_a.a(34166, 768, 34176, 0);
+        this.field_a.a(5890, 770, 34176, 2);
+        this.field_a.a(770, 34168, 0, (byte) 95);
+        this.field_a.a(false, 0);
         this.c(-120);
     }
 
     final void b(byte param0) {
         L0: {
-          if (((g) this).field_e) {
+          if (this.field_e) {
             jaggl.OpenGL.glBindProgramARB(34336, 0);
             jaggl.OpenGL.glDisable(34820);
             jaggl.OpenGL.glDisable(34336);
-            ((g) this).field_e = false;
+            this.field_e = false;
             break L0;
           } else {
             break L0;
           }
         }
-        ((g) this).field_a.a(false, 1);
-        ((g) this).field_a.a((rt) null, 1);
+        this.field_a.a(false, 1);
+        this.field_a.a((rt) null, 1);
         if (param0 >= 5) {
-          ((g) this).field_a.a(8448, -26625, 8448);
-          ((g) this).field_a.a(5890, 768, 34176, 0);
-          ((g) this).field_a.a(34166, 770, 34176, 2);
-          ((g) this).field_a.a(770, 5890, 0, (byte) 93);
-          ((g) this).field_a.a(false, 0);
-          if (((g) this).field_j) {
-            ((g) this).field_a.a(5890, 768, 34176, 0);
-            ((g) this).field_a.a(770, 5890, 0, (byte) 109);
-            ((g) this).field_j = false;
+          this.field_a.a(8448, -26625, 8448);
+          this.field_a.a(5890, 768, 34176, 0);
+          this.field_a.a(34166, 770, 34176, 2);
+          this.field_a.a(770, 5890, 0, (byte) 93);
+          this.field_a.a(false, 0);
+          if (this.field_j) {
+            this.field_a.a(5890, 768, 34176, 0);
+            this.field_a.a(770, 5890, 0, (byte) 109);
+            this.field_j = false;
             return;
           } else {
             return;
           }
         } else {
           g.b(-66);
-          ((g) this).field_a.a(8448, -26625, 8448);
-          ((g) this).field_a.a(5890, 768, 34176, 0);
-          ((g) this).field_a.a(34166, 770, 34176, 2);
-          ((g) this).field_a.a(770, 5890, 0, (byte) 93);
-          ((g) this).field_a.a(false, 0);
-          if (!((g) this).field_j) {
+          this.field_a.a(8448, -26625, 8448);
+          this.field_a.a(5890, 768, 34176, 0);
+          this.field_a.a(34166, 770, 34176, 2);
+          this.field_a.a(770, 5890, 0, (byte) 93);
+          this.field_a.a(false, 0);
+          if (!this.field_j) {
             return;
           } else {
-            ((g) this).field_a.a(5890, 768, 34176, 0);
-            ((g) this).field_a.a(770, 5890, 0, (byte) 109);
-            ((g) this).field_j = false;
+            this.field_a.a(5890, 768, 34176, 0);
+            this.field_a.a(770, 5890, 0, (byte) 109);
+            this.field_j = false;
             return;
           }
         }
@@ -82,23 +82,23 @@ final class g extends hh {
         int var4 = 0;
         float var5 = 0.0f;
         float var6 = 0.0f;
-        int var2 = -42;
-        if (((g) this).field_e) {
-            var3 = ((g) this).field_a.XA();
-            var4 = ((g) this).field_a.i();
+        int var2 = 42 / ((-30 - param0) / 51);
+        if (this.field_e) {
+            var3 = this.field_a.XA();
+            var4 = this.field_a.i();
             var5 = (float)var3 - (float)(-var4 + var3) * 0.125f;
             var6 = (float)var3 - 0.25f * (float)(-var4 + var3);
-            jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var6, var5, 1.0f / (float)((g) this).field_a.field_U, (float)((g) this).field_a.field_Lb / 255.0f);
-            ((g) this).field_a.a(false, 1);
-            ((g) this).field_a.c(2, ((g) this).field_a.field_Dc);
-            ((g) this).field_a.a(false, 0);
+            jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var6, var5, 1.0f / (float)this.field_a.field_U, (float)this.field_a.field_Lb / 255.0f);
+            this.field_a.a(false, 1);
+            this.field_a.c(2, this.field_a.field_Dc);
+            this.field_a.a(false, 0);
         }
     }
 
     final void a(int param0, boolean param1) {
         if (param0 != 4096) {
-            Object var4 = null;
-            ((g) this).a(-78, -62, (rt) null);
+            rt var4 = (rt) null;
+            this.a(-78, -62, (rt) null);
         }
     }
 
@@ -163,18 +163,18 @@ final class g extends hh {
         RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         String stackOut_20_2 = null;
-        ((g) this).field_j = false;
+        this.field_j = false;
         try {
-          if (!((g) this).field_a.field_x) {
-            ((g) this).field_f = false;
+          if (!this.field_a.field_x) {
+            this.field_f = false;
             return;
           } else {
             L0: {
-              ((g) this).field_m = nk.a((byte) 32, 34336, ((g) this).field_a, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   tMatrix[4]   = { state.matrix.texture[0] };\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nTEMP    viewPos, fogFactor;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nMAD   fogFactor.y, iTexCoord.z, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMUL   fogFactor.x, fogFactor.x, fogFactor.y;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, iTexCoord.z;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nMOV   oColour, iColour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP3   oTexCoord0.x, tMatrix[0], iTexCoord;\nDP3   oTexCoord0.y, tMatrix[1], iTexCoord;\nMOV   oTexCoord0.zw, iTexCoord;\nEND\n");
-              ((g) this).field_g = nk.a((byte) 34, 34336, ((g) this).field_a, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iNormal      = vertex.normal;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   tMatrix[4]   = { state.matrix.texture[0] };\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nTEMP    viewPos, viewNormal, fogFactor, colour, ndotl;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nMAD   fogFactor.y, iTexCoord.z, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMUL   fogFactor.x, fogFactor.x, fogFactor.y;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, iTexCoord.z;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nDP3   viewNormal.x, mvMatrix[0], iNormal;\nDP3   viewNormal.y, mvMatrix[1], iNormal;\nDP3   viewNormal.z, mvMatrix[2], iNormal;\nDP3   ndotl.x, viewNormal, state.light[0].position;\nDP3   ndotl.y, viewNormal, state.light[1].position;\nMAX   ndotl, ndotl, 0;\nMOV   colour, state.lightmodel.ambient;\nMAD   colour, state.light[0].diffuse, ndotl.xxxx, colour;\nMAD   colour, state.light[1].diffuse, ndotl.yyyy, colour;\nMUL   oColour, iColour, colour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP3   oTexCoord0.x, tMatrix[0], iTexCoord;\nDP3   oTexCoord0.y, tMatrix[1], iTexCoord;\nMOV   oTexCoord0.zw, iTexCoord;\nEND\n");
-              ((g) this).field_n = nk.a((byte) 113, 34336, ((g) this).field_a, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   texMatrix[4] = { state.matrix.texture[0] };\nTEMP    viewPos, fogFactor, depth;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nDP4   depth, waterPlane, viewPos;\nMAD   fogFactor.y, -depth, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, -depth;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nMOV   oColour, iColour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP4   oTexCoord0.x, texMatrix[0], iTexCoord;\nDP4   oTexCoord0.y, texMatrix[1], iTexCoord;\nDP4   oTexCoord0.z, texMatrix[2], iTexCoord;\nMOV   oTexCoord0.w, 1;\nEND\n");
-              ((g) this).field_d = nk.a((byte) 107, 34336, ((g) this).field_a, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iNormal      = vertex.normal;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   texMatrix[4] = { state.matrix.texture[0] };\nTEMP    viewPos, viewNormal, fogFactor, depth, colour, ndotl;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nDP4   depth, waterPlane, viewPos;\nMAD   fogFactor.y, -depth, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, -depth;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nDP3   viewNormal.x, mvMatrix[0], iNormal;\nDP3   viewNormal.y, mvMatrix[1], iNormal;\nDP3   viewNormal.z, mvMatrix[2], iNormal;\nDP3   ndotl.x, viewNormal, state.light[0].position;\nDP3   ndotl.y, viewNormal, state.light[1].position;\nMAX   ndotl, ndotl, 0;\nMOV   colour, state.lightmodel.ambient;\nMAD   colour, state.light[0].diffuse, ndotl.xxxx, colour;\nMAD   colour, state.light[1].diffuse, ndotl.yyyy, colour;\nMUL   oColour, iColour, colour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP4   oTexCoord0.x, texMatrix[0], iTexCoord;\nDP4   oTexCoord0.y, texMatrix[1], iTexCoord;\nDP4   oTexCoord0.z, texMatrix[2], iTexCoord;\nMOV   oTexCoord0.w, 1;\nEND\n");
-              if (((g) this).field_d == null) {
+              this.field_m = nk.a((byte) 32, 34336, this.field_a, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   tMatrix[4]   = { state.matrix.texture[0] };\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nTEMP    viewPos, fogFactor;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nMAD   fogFactor.y, iTexCoord.z, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMUL   fogFactor.x, fogFactor.x, fogFactor.y;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, iTexCoord.z;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nMOV   oColour, iColour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP3   oTexCoord0.x, tMatrix[0], iTexCoord;\nDP3   oTexCoord0.y, tMatrix[1], iTexCoord;\nMOV   oTexCoord0.zw, iTexCoord;\nEND\n");
+              this.field_g = nk.a((byte) 34, 34336, this.field_a, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iNormal      = vertex.normal;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   tMatrix[4]   = { state.matrix.texture[0] };\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nTEMP    viewPos, viewNormal, fogFactor, colour, ndotl;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nMAD   fogFactor.y, iTexCoord.z, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMUL   fogFactor.x, fogFactor.x, fogFactor.y;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, iTexCoord.z;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nDP3   viewNormal.x, mvMatrix[0], iNormal;\nDP3   viewNormal.y, mvMatrix[1], iNormal;\nDP3   viewNormal.z, mvMatrix[2], iNormal;\nDP3   ndotl.x, viewNormal, state.light[0].position;\nDP3   ndotl.y, viewNormal, state.light[1].position;\nMAX   ndotl, ndotl, 0;\nMOV   colour, state.lightmodel.ambient;\nMAD   colour, state.light[0].diffuse, ndotl.xxxx, colour;\nMAD   colour, state.light[1].diffuse, ndotl.yyyy, colour;\nMUL   oColour, iColour, colour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP3   oTexCoord0.x, tMatrix[0], iTexCoord;\nDP3   oTexCoord0.y, tMatrix[1], iTexCoord;\nMOV   oTexCoord0.zw, iTexCoord;\nEND\n");
+              this.field_n = nk.a((byte) 113, 34336, this.field_a, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   texMatrix[4] = { state.matrix.texture[0] };\nTEMP    viewPos, fogFactor, depth;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nDP4   depth, waterPlane, viewPos;\nMAD   fogFactor.y, -depth, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, -depth;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nMOV   oColour, iColour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP4   oTexCoord0.x, texMatrix[0], iTexCoord;\nDP4   oTexCoord0.y, texMatrix[1], iTexCoord;\nDP4   oTexCoord0.z, texMatrix[2], iTexCoord;\nMOV   oTexCoord0.w, 1;\nEND\n");
+              this.field_d = nk.a((byte) 107, 34336, this.field_a, "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iNormal      = vertex.normal;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   fogParams    = program.local[0];\nPARAM   waterPlane   = program.local[1];\nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   texMatrix[4] = { state.matrix.texture[0] };\nTEMP    viewPos, viewNormal, fogFactor, depth, colour, ndotl;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nSUB   fogFactor.x, -viewPos.z, fogParams.x;\nMUL   fogFactor.x, fogFactor.x, 0.001953125;\nDP4   depth, waterPlane, viewPos;\nMAD   fogFactor.y, -depth, fogParams.z, fogParams.w;\nSUB   fogFactor.z, -viewPos.z, fogParams.y;\nMUL   fogFactor.z, fogFactor.z, 0.00390625;\nMIN   fogFactor, fogFactor, 1;\nMAX   fogFactor, fogFactor, 0;\nMUL   fogFactor.z, fogFactor.z, -depth;\nMAD   viewPos.xyz, waterPlane.xyzw, fogFactor.zzzz, viewPos.xyzw;\nMAX   oTexCoord1.xyz, fogFactor.xxxx, fogFactor.yyyy;\nMOV   oTexCoord1.w, 1;\nDP3   viewNormal.x, mvMatrix[0], iNormal;\nDP3   viewNormal.y, mvMatrix[1], iNormal;\nDP3   viewNormal.z, mvMatrix[2], iNormal;\nDP3   ndotl.x, viewNormal, state.light[0].position;\nDP3   ndotl.y, viewNormal, state.light[1].position;\nMAX   ndotl, ndotl, 0;\nMOV   colour, state.lightmodel.ambient;\nMAD   colour, state.light[0].diffuse, ndotl.xxxx, colour;\nMAD   colour, state.light[1].diffuse, ndotl.yyyy, colour;\nMUL   oColour, iColour, colour;\nDP4   oPos.x, pMatrix[0], viewPos;\nDP4   oPos.y, pMatrix[1], viewPos;\nDP4   oPos.z, pMatrix[2], viewPos;\nDP4   oPos.w, pMatrix[3], viewPos;\nMOV   oFogCoord.x, viewPos.z;\nDP4   oTexCoord0.x, texMatrix[0], iTexCoord;\nDP4   oTexCoord0.y, texMatrix[1], iTexCoord;\nDP4   oTexCoord0.z, texMatrix[2], iTexCoord;\nMOV   oTexCoord0.w, 1;\nEND\n");
+              if (this.field_d == null) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
@@ -188,7 +188,7 @@ final class g extends hh {
               stackOut_5_0 = stackIn_5_0;
               stackIn_7_0 = stackOut_5_0;
               stackIn_6_0 = stackOut_5_0;
-              if (null == ((g) this).field_m) {
+              if (null == this.field_m) {
                 stackOut_7_0 = stackIn_7_0;
                 stackOut_7_1 = 0;
                 stackIn_8_0 = stackOut_7_0;
@@ -209,7 +209,7 @@ final class g extends hh {
               stackIn_10_1 = stackOut_8_1;
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
-              if (((g) this).field_g == null) {
+              if (this.field_g == null) {
                 stackOut_10_0 = stackIn_10_0;
                 stackOut_10_1 = stackIn_10_1;
                 stackOut_10_2 = 0;
@@ -234,7 +234,7 @@ final class g extends hh {
               stackIn_13_1 = stackOut_11_1;
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
-              if (((g) this).field_n == null) {
+              if (this.field_n == null) {
                 stackOut_13_0 = stackIn_13_0;
                 stackOut_13_1 = stackIn_13_1;
                 stackOut_13_2 = 0;
@@ -253,12 +253,12 @@ final class g extends hh {
               }
             }
             if ((stackIn_14_0 & (stackIn_14_1 & stackIn_14_2)) == 0) {
-              ((g) this).field_f = false;
+              this.field_f = false;
               return;
             } else {
-              ((g) this).field_l = new nr(param0, 3553, 6406, 2, 1, false, new byte[2], 6406, false);
-              ((g) this).field_l.a(false, 11779, false);
-              ((g) this).field_f = true;
+              this.field_l = new nr(param0, 3553, 6406, 2, 1, false, new byte[]{(byte) 0, (byte)-1}, 6406, false);
+              this.field_l.a(false, 11779, false);
+              this.field_f = true;
               return;
             }
           }
@@ -266,23 +266,23 @@ final class g extends hh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var2;
+            stackOut_19_0 = (RuntimeException) (var2);
             stackOut_19_1 = new StringBuilder().append("g.<init>(");
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L4;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -290,7 +290,7 @@ final class g extends hh {
               break L4;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
         }
     }
 
@@ -316,36 +316,36 @@ final class g extends hh {
           L0: {
             L1: {
               if (param2 == null) {
-                if (!((g) this).field_j) {
-                  ((g) this).field_a.a((rt) (Object) ((g) this).field_a.field_Vb, 1);
-                  ((g) this).field_a.a(1, (byte) -39);
-                  ((g) this).field_a.a(34168, 768, 34176, 0);
-                  ((g) this).field_a.a(770, 34168, 0, (byte) 80);
-                  ((g) this).field_j = true;
+                if (!this.field_j) {
+                  this.field_a.a(this.field_a.field_Vb, 1);
+                  this.field_a.a(1, (byte) -39);
+                  this.field_a.a(34168, 768, 34176, 0);
+                  this.field_a.a(770, 34168, 0, (byte) 80);
+                  this.field_j = true;
                   break L1;
                 } else {
                   break L1;
                 }
               } else {
                 L2: {
-                  if (((g) this).field_j) {
-                    ((g) this).field_a.a(5890, 768, 34176, 0);
-                    ((g) this).field_a.a(770, 5890, 0, (byte) 79);
-                    ((g) this).field_j = false;
+                  if (this.field_j) {
+                    this.field_a.a(5890, 768, 34176, 0);
+                    this.field_a.a(770, 5890, 0, (byte) 79);
+                    this.field_j = false;
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                ((g) this).field_a.a(param2, param1 + 1486691001);
-                ((g) this).field_a.a(param0, (byte) -39);
+                this.field_a.a(param2, param1 + 1486691001);
+                this.field_a.a(param0, (byte) -39);
                 break L1;
               }
             }
             if (param1 == -1486691000) {
               break L0;
             } else {
-              ((g) this).a(48, true);
+              this.a(48, true);
               return;
             }
           }
@@ -353,23 +353,23 @@ final class g extends hh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var4;
+            stackOut_11_0 = (RuntimeException) (var4);
             stackOut_11_1 = new StringBuilder().append("g.J(").append(param0).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -377,18 +377,18 @@ final class g extends hh {
               break L3;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
     }
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-            param0.removeMouseListener((java.awt.event.MouseListener) (Object) ho.field_b);
-            param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ho.field_b);
-            param0.removeFocusListener((java.awt.event.FocusListener) (Object) ho.field_b);
-            mp.field_g = 0;
+            param0.removeMouseListener(ho.field_b);
+            param0.removeMouseMotionListener(ho.field_b);
+            param0.removeFocusListener(ho.field_b);
+            mp.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "g.I(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "g.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -400,29 +400,25 @@ final class g extends hh {
 
     final boolean a(byte param0) {
         int var2 = -79 / ((-11 - param0) / 63);
-        return ((g) this).field_f;
+        return this.field_f;
     }
 
     private final void c(int param0) {
-        tj var2 = ((g) this).field_a.field_h;
-        if (((g) this).field_i) {
-            jaggl.OpenGL.glBindProgramARB(34336, 2147483647 == ((g) this).field_a.field_E ? ((g) this).field_g.field_a : ((g) this).field_d.field_a);
+        tj var2 = this.field_a.field_h;
+        if (this.field_i) {
+            jaggl.OpenGL.glBindProgramARB(34336, 2147483647 == this.field_a.field_E ? this.field_g.field_a : this.field_d.field_a);
         } else {
-            jaggl.OpenGL.glBindProgramARB(34336, ((g) this).field_a.field_E == 2147483647 ? ((g) this).field_m.field_a : ((g) this).field_n.field_a);
+            jaggl.OpenGL.glBindProgramARB(34336, this.field_a.field_E == 2147483647 ? this.field_m.field_a : this.field_n.field_a);
         }
-        var2.a((float)((g) this).field_a.field_E, 0.0f, ua.field_c, -1.0f, -99, 0.0f);
+        var2.a((float)this.field_a.field_E, 0.0f, ua.field_c, -1.0f, -99, 0.0f);
         jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, ua.field_c[0], ua.field_c[1], ua.field_c[2], ua.field_c[3]);
-        int var3 = 0;
+        int var3 = 50 % ((-33 - param0) / 55);
         jaggl.OpenGL.glEnable(34336);
-        ((g) this).field_e = true;
+        this.field_e = true;
         this.c((byte) 24);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = new java.awt.Color(10040319);
     }
 }

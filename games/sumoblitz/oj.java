@@ -6,11 +6,50 @@ final class oj implements mh {
     static String field_b;
 
     public static void a(int param0) {
+        if (param0 != -4) {
+            field_a = 101;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
     final static boolean b(int param0, int param1, int param2) {
-        return (34 & param0) != 0;
+        boolean discarded$9 = false;
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        if (param2 > -116) {
+          L0: {
+            discarded$9 = oj.a(true);
+            if (-1 == (34 & param0 ^ -1)) {
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = 1;
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+          return stackIn_8_0 != 0;
+        } else {
+          L1: {
+            if (-1 == (34 & param0 ^ -1)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
+        }
     }
 
     public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
@@ -41,7 +80,7 @@ final class oj implements mh {
               if (param2 == 5592405) {
                 break L1;
               } else {
-                field_b = null;
+                field_b = (String) null;
                 break L1;
               }
             }
@@ -52,10 +91,10 @@ final class oj implements mh {
               if (!(param0 instanceof wp)) {
                 break L2;
               } else {
-                if (!((wp) (Object) param0).field_C) {
+                if (!((wp) ((Object) param0)).field_C) {
                   break L2;
                 } else {
-                  var8.d((-var8.field_z + param0.field_q >> 1) + (var6_int + 1), (-var8.field_w + param0.field_p >> 1) + (var7 + 1), 256);
+                  var8.d((-var8.field_z + param0.field_q >> 1950036993) + (var6_int + 1), (-var8.field_w + param0.field_p >> -1035505855) + (var7 + 1), 256);
                   break L2;
                 }
               }
@@ -71,23 +110,23 @@ final class oj implements mh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var6;
+            stackOut_9_0 = (RuntimeException) (var6);
             stackOut_9_1 = new StringBuilder().append("oj.A(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -95,34 +134,78 @@ final class oj implements mh {
               break L3;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        return 0 != (2048 & param0);
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        if (param1 != 13836) {
+          L0: {
+            oj.a(-32);
+            if (0 == (2048 & param0)) {
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = 1;
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+          return stackIn_8_0 != 0;
+        } else {
+          L1: {
+            if (0 == (2048 & param0)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
+        }
     }
 
     final static boolean b(int param0) {
-        int var1 = -55;
+        int var1 = -55 / ((-62 - param0) / 36);
         return dv.field_b;
     }
 
     final static boolean a(boolean param0) {
-        if (pu.field_e == null) {
+        if (!param0) {
+          if (pu.field_e != null) {
+            if (null == pu.field_e.e((byte) 54)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (null == pu.field_e.e((byte) 54)) {
+          }
+        } else {
+          field_b = (String) null;
+          if (pu.field_e != null) {
+            if (null == pu.field_e.e((byte) 54)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Email address is unavailable";
     }
 }

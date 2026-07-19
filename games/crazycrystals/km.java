@@ -11,9 +11,9 @@ final class km {
 
     final ij a(int param0) {
         ij var2 = null;
-        var2 = ((km) this).field_b;
-        if (var2 != ((km) this).field_a) {
-          ((km) this).field_b = var2.field_j;
+        var2 = this.field_b;
+        if (var2 != this.field_a) {
+          this.field_b = var2.field_j;
           if (param0 <= 82) {
             km.e(44);
             return var2;
@@ -21,7 +21,7 @@ final class km {
             return var2;
           }
         } else {
-          ((km) this).field_b = null;
+          this.field_b = null;
           return null;
         }
     }
@@ -29,8 +29,8 @@ final class km {
     final int c(int param0) {
         int var4 = CrazyCrystals.field_B;
         int var2 = param0;
-        ij var3 = ((km) this).field_a.field_j;
-        while (var3 != ((km) this).field_a) {
+        ij var3 = this.field_a.field_j;
+        while (var3 != this.field_a) {
             var3 = var3.field_j;
             var2++;
         }
@@ -45,8 +45,8 @@ final class km {
         if (param1.field_g != null) {
             param1.a(1);
         }
-        param1.field_g = ((km) this).field_a.field_g;
-        param1.field_j = ((km) this).field_a;
+        param1.field_g = this.field_a.field_g;
+        param1.field_j = this.field_a;
         if (param0 < 69) {
             return;
         }
@@ -54,28 +54,31 @@ final class km {
             param1.field_g.field_j = param1;
             param1.field_j.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "km.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "km.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(byte param0) {
-        return !gk.field_e.b(-45);
+        if (param0 >= -95) {
+            return true;
+        }
+        return !gk.field_e.b(-45) ? true : false;
     }
 
     final ij d(int param0) {
         ij var2 = null;
         if (param0 == -4425) {
-          var2 = ((km) this).field_a.field_j;
-          if (((km) this).field_a == var2) {
+          var2 = this.field_a.field_j;
+          if (this.field_a == var2) {
             return null;
           } else {
             var2.a(1);
             return var2;
           }
         } else {
-          ((km) this).field_a = null;
-          var2 = ((km) this).field_a.field_j;
-          if (((km) this).field_a == var2) {
+          this.field_a = (ij) null;
+          var2 = this.field_a.field_j;
+          if (this.field_a == var2) {
             return null;
           } else {
             var2.a(1);
@@ -86,17 +89,17 @@ final class km {
 
     final ij b(int param0) {
         ij var2 = null;
-        var2 = ((km) this).field_a.field_j;
-        if (((km) this).field_a == var2) {
-          ((km) this).field_b = null;
+        var2 = this.field_a.field_j;
+        if (this.field_a == var2) {
+          this.field_b = null;
           return null;
         } else {
           if (param0 <= 106) {
-            ((km) this).field_b = null;
-            ((km) this).field_b = var2.field_j;
+            this.field_b = (ij) null;
+            this.field_b = var2.field_j;
             return var2;
           } else {
-            ((km) this).field_b = var2.field_j;
+            this.field_b = var2.field_j;
             return var2;
           }
         }
@@ -105,14 +108,14 @@ final class km {
     public static void e(int param0) {
         field_f = null;
         if (param0 != 0) {
-            field_f = null;
+            field_f = (byte[]) null;
         }
     }
 
     public km() {
-        ((km) this).field_a = new ij();
-        ((km) this).field_a.field_j = ((km) this).field_a;
-        ((km) this).field_a.field_g = ((km) this).field_a;
+        this.field_a = new ij();
+        this.field_a.field_j = this.field_a;
+        this.field_a.field_g = this.field_a;
     }
 
     static {

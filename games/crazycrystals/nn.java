@@ -18,10 +18,6 @@ final class nn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "nn.A(";
         field_b = "Skip Ending";
     }

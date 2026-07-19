@@ -33,9 +33,9 @@ final class jh {
           L0: {
             var2 = new jp(param1.field_x / 2, param1.field_z / 2);
             var2.g();
-            param1.a(0, 0, param1.field_x / 2, param1.field_z / 2);
+            param1.a(param0, 0, param1.field_x / 2, param1.field_z / 2);
             kc.field_q.a((byte) 102);
-            stackOut_0_0 = (jp) var2;
+            stackOut_0_0 = (jp) (var2);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -43,23 +43,23 @@ final class jh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2_ref;
-            stackOut_2_1 = new StringBuilder().append("jh.C(").append(0).append(',');
+            stackOut_2_0 = (RuntimeException) (var2_ref);
+            stackOut_2_1 = new StringBuilder().append("jh.C(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -67,13 +67,13 @@ final class jh {
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
 
     public static void a(byte param0) {
-        int var1 = 54;
+        int var1 = 54 / ((-65 - param0) / 48);
         field_d = null;
         field_b = null;
         field_c = null;
@@ -85,30 +85,29 @@ final class jh {
         mh var5 = null;
         int var3 = BrickABrac.field_J ? 1 : 0;
         try {
-            var4 = (mh) (Object) param1.field_bb.d(-104);
+            var4 = (mh) ((Object) param1.field_bb.d(-104));
             mh var2 = var4;
             while (var4 != null) {
                 var4.field_Db = 0;
                 var4.field_cb = 0;
                 var4.field_C = 0;
                 var4.field_zb = 0;
-                var5 = (mh) (Object) param1.field_bb.a((byte) 116);
+                var5 = (mh) ((Object) param1.field_bb.a((byte) 116));
                 var5 = var5;
+            }
+            if (!param0) {
+                jh.a((byte) -19);
             }
             param1.field_zb = 0;
             param1.field_Db = 0;
             param1.field_cb = 0;
             param1.field_C = 0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "jh.A(" + true + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "jh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new String[]{"Showing by rating", "Showing by win percentage"};
         field_c = "Good grief!";
         field_a = 250;

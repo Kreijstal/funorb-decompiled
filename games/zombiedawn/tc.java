@@ -56,7 +56,7 @@ class tc extends vf {
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                var3 = (var3 << 5) - var3 - -tb.a(param0.charAt(var4), -8225);
+                var3 = (var3 << -880092475) - var3 - -tb.a(param0.charAt(var4), -8225);
                 var4++;
                 continue L1;
               }
@@ -66,23 +66,23 @@ class tc extends vf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_0 = (RuntimeException) (var2);
             stackOut_8_1 = new StringBuilder().append("tc.EA(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -90,7 +90,7 @@ class tc extends vf {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
         }
         return stackIn_7_0;
     }
@@ -128,7 +128,7 @@ class tc extends vf {
               }
             }
             L2: {
-              super.a(param0, param1, param2, param3, param4);
+              super.a(param0 + 0, param1, param2, param3, param4);
               if (param0 == 16777215) {
                 break L2;
               } else {
@@ -142,23 +142,23 @@ class tc extends vf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var6;
+            stackOut_6_0 = (RuntimeException) (var6);
             stackOut_6_1 = new StringBuilder().append("tc.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -166,7 +166,7 @@ class tc extends vf {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param4 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param4 + ')');
         }
     }
 
@@ -186,11 +186,11 @@ class tc extends vf {
             var2 = sd.field_b;
             if (0 < var2) {
                 if (1 != var2) {
-                    ed.field_c = s.a(1938762664, kn.field_J, new String[1]);
+                    ed.field_c = s.a(1938762664, kn.field_J, new String[]{Integer.toString(var2)});
                 } else {
                     ed.field_c = pn.field_M;
                 }
-                ed.field_c = gf.a(0, new CharSequence[3]);
+                ed.field_c = gf.a(0, new CharSequence[]{(CharSequence) ((Object) ed.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) le.field_e)});
             }
             kk.field_i.h((byte) 75);
             rl.c(9);
@@ -207,15 +207,11 @@ class tc extends vf {
         field_u = null;
         field_v = null;
         if (param0 != -26642) {
-            field_z = null;
+            field_z = (vn[]) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = new String[155];
         field_w = new int[155];
         field_u = "Bonus level complete!";

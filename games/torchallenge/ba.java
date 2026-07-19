@@ -35,10 +35,10 @@ final class ba {
               var8 = ic.field_B[param0][4];
               var9 = ic.field_B[param0][5];
               var10 = -1 + -var9;
-              if (param2 >= 0) {
+              if ((param2 ^ -1) <= -1) {
                 break L0;
               } else {
-                if (param1 > 0) {
+                if (-1 > (param1 ^ -1)) {
                   break L0;
                 } else {
                   return;
@@ -49,7 +49,7 @@ final class ba {
               if (0 >= param2) {
                 break L1;
               } else {
-                if (~param1 <= ~param4) {
+                if (param1 >= param4) {
                   return;
                 } else {
                   break L1;
@@ -60,29 +60,29 @@ final class ba {
               if (param3 <= -108) {
                 break L2;
               } else {
-                field_h = null;
+                field_h = (int[]) null;
                 break L2;
               }
             }
             L3: {
               L4: {
-                if (param2 < 0) {
+                if ((param2 ^ -1) > -1) {
                   break L4;
                 } else {
-                  if (param2 > 0) {
+                  if ((param2 ^ -1) < -1) {
                     break L4;
                   } else {
                     break L3;
                   }
                 }
               }
-              if (param1 <= 0) {
+              if ((param1 ^ -1) >= -1) {
                 break L3;
               } else {
                 if (param4 <= param1) {
                   break L3;
                 } else {
-                  if (param2 < 0) {
+                  if (-1 < (param2 ^ -1)) {
                     var7 = (var7 + -var10) * param1 / param4 + var10;
                     break L3;
                   } else {
@@ -113,8 +113,8 @@ final class ba {
               if (param1 <= 0) {
                 break L5;
               } else {
-                if (~param4 < ~param1) {
-                  if (param2 >= 0) {
+                if (param4 > param1) {
+                  if ((param2 ^ -1) <= -1) {
                     var7 = var7 + (-var7 + var10) * param1 / param4;
                     break L5;
                   } else {
@@ -149,14 +149,17 @@ final class ba {
 
     public static void a(byte param0) {
         field_g = null;
-        field_e = null;
+        field_e = (boolean[][][]) null;
         field_d = null;
         field_i = null;
-        field_j = null;
+        field_j = (int[][]) null;
+        if (param0 != -5) {
+            field_g = (int[]) null;
+        }
         field_b = null;
         field_h = null;
         field_c = null;
-        field_f = null;
+        field_f = (int[][]) null;
         field_a = null;
     }
 
@@ -165,11 +168,16 @@ final class ba {
     }
 
     final static void b(byte param0) {
+        if (param0 != -44) {
+            field_h = (int[]) null;
+        }
         na.field_e = false;
         int discarded$0 = id.field_b.j(-117);
     }
 
     final static void a(byte[] param0, int param1) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -190,10 +198,6 @@ final class ba {
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        byte[] var22 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        byte[] var25 = null;
         int stackIn_33_0 = 0;
         int stackIn_34_0 = 0;
         int stackIn_35_0 = 0;
@@ -249,7 +253,7 @@ final class ba {
             var4 = 0;
             L1: while (true) {
               if (vl.field_b <= var4) {
-                var4 = 0;
+                var4 = param1;
                 L2: while (true) {
                   if (var4 >= vl.field_b) {
                     var4 = 0;
@@ -273,18 +277,14 @@ final class ba {
                                       var5 = pg.field_r[var4];
                                       var6 = lg.field_e[var4];
                                       var7 = var6 * var5;
-                                      var24 = new byte[var7];
-                                      var22 = var24;
-                                      var20 = var22;
+                                      var20 = new byte[var7];
                                       var18 = var20;
                                       var8 = var18;
-                                      h.field_a[var4] = var24;
-                                      var25 = new byte[var7];
-                                      var23 = var25;
-                                      var21 = var23;
+                                      h.field_a[var4] = var20;
+                                      var21 = new byte[var7];
                                       var19 = var21;
                                       var9 = var19;
-                                      gf.field_t[var4] = var25;
+                                      gf.field_t[var4] = var21;
                                       var10 = 0;
                                       var11 = var17.j(-91);
                                       if (0 == (var11 & 1)) {
@@ -300,13 +300,13 @@ final class ba {
                                                   break L7;
                                                 } else {
                                                   L10: {
-                                                    byte dupTemp$2 = var17.d((byte) 102);
+                                                    dupTemp$2 = var17.d((byte) 102);
                                                     var9[var12] = dupTemp$2;
                                                     var13 = dupTemp$2;
                                                     stackOut_43_0 = var10;
                                                     stackIn_45_0 = stackOut_43_0;
                                                     stackIn_44_0 = stackOut_43_0;
-                                                    if (var13 == -1) {
+                                                    if (0 == (var13 ^ -1)) {
                                                       stackOut_45_0 = stackIn_45_0;
                                                       stackOut_45_1 = 0;
                                                       stackIn_46_0 = stackOut_45_0;
@@ -351,13 +351,13 @@ final class ba {
                                                       continue L12;
                                                     } else {
                                                       L14: {
-                                                        byte dupTemp$3 = var17.d((byte) 98);
+                                                        dupTemp$3 = var17.d((byte) 98);
                                                         var9[var12 + var13 * var5] = dupTemp$3;
                                                         var14 = dupTemp$3;
                                                         stackOut_32_0 = var10;
                                                         stackIn_34_0 = stackOut_32_0;
                                                         stackIn_33_0 = stackOut_32_0;
-                                                        if (var14 == -1) {
+                                                        if ((var14 ^ -1) == 0) {
                                                           stackOut_34_0 = stackIn_34_0;
                                                           stackOut_34_1 = 0;
                                                           stackIn_35_0 = stackOut_34_0;
@@ -443,23 +443,23 @@ final class ba {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var2 = decompiledCaughtException;
-            stackOut_49_0 = (RuntimeException) var2;
+            stackOut_49_0 = (RuntimeException) (var2);
             stackOut_49_1 = new StringBuilder().append("ba.E(");
             stackIn_51_0 = stackOut_49_0;
             stackIn_51_1 = stackOut_49_1;
             stackIn_50_0 = stackOut_49_0;
             stackIn_50_1 = stackOut_49_1;
             if (param0 == null) {
-              stackOut_51_0 = (RuntimeException) (Object) stackIn_51_0;
-              stackOut_51_1 = (StringBuilder) (Object) stackIn_51_1;
+              stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
+              stackOut_51_1 = (StringBuilder) ((Object) stackIn_51_1);
               stackOut_51_2 = "null";
               stackIn_52_0 = stackOut_51_0;
               stackIn_52_1 = stackOut_51_1;
               stackIn_52_2 = stackOut_51_2;
               break L17;
             } else {
-              stackOut_50_0 = (RuntimeException) (Object) stackIn_50_0;
-              stackOut_50_1 = (StringBuilder) (Object) stackIn_50_1;
+              stackOut_50_0 = (RuntimeException) ((Object) stackIn_50_0);
+              stackOut_50_1 = (StringBuilder) ((Object) stackIn_50_1);
               stackOut_50_2 = "{...}";
               stackIn_52_0 = stackOut_50_0;
               stackIn_52_1 = stackOut_50_1;
@@ -467,25 +467,24 @@ final class ba {
               break L17;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + ',' + 0 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_52_0), stackIn_52_2 + ',' + param1 + ')');
         }
     }
 
     final static void c(byte param0) {
-        t.field_b.i(8389905);
+        t.field_b.i(param0 + 8389890);
         if (oa.field_k == null) {
             oa.field_k = new pe(t.field_b, jh.field_a);
         }
-        t.field_b.a((byte) 53, (ee) (Object) oa.field_k);
+        t.field_b.a((byte) 53, (ee) (oa.field_k));
+        if (param0 != 15) {
+            ba.a(-4, 102, 101, -116, -9);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
-        field_e = new boolean[][][]{new boolean[7][], new boolean[7][], new boolean[7][]};
+        field_e = new boolean[][][]{new boolean[][]{new boolean[]{false, true, false}, new boolean[]{true, false}, new boolean[]{true, false}, new boolean[]{true, true, true, true, true, true}, new boolean[]{true, false}, new boolean[]{false}, new boolean[]{true, true, true, true, true, true}}, new boolean[][]{new boolean[]{true, false}, new boolean[]{true, false, true, false}, new boolean[]{false, true, true, true, false, false}, new boolean[]{false, true, true, false, true, false}, new boolean[]{false, true, true, false, false}, new boolean[]{true, true, false, true, false}, new boolean[]{false}}, new boolean[][]{new boolean[]{false, true, false}, new boolean[]{false, true}, new boolean[]{false, true, true, false}, new boolean[]{false, true, true, true, true, true}, new boolean[]{false, true, true}, new boolean[]{false}, new boolean[]{true, true, true, true, true, true}}};
         field_g = new int[]{1, 2, 3, 4, 5, 6, 7, 22, 23, 24};
         field_h = new int[8192];
         field_f = new int[2][2];

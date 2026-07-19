@@ -9,6 +9,11 @@ final class d {
     public static void a(int param0) {
         field_b = null;
         field_a = null;
+        if (param0 != 0) {
+            field_a = (ut) null;
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
@@ -31,22 +36,41 @@ final class d {
     }
 
     final static int a(boolean param0, int param1) {
-        if (param1 < 0) {
-            param1 = Math.min(param1 + 91750, 0);
-        } else {
+        int discarded$6 = 0;
+        L0: {
+          if (-1 >= (param1 ^ -1)) {
             param1 = Math.max(param1 - 91750, 0);
+            break L0;
+          } else {
+            param1 = Math.min(param1 + 91750, 0);
+            break L0;
+          }
         }
-        if (Math.abs(param1) < 58982) {
-            param1 = 0;
+        if (!param0) {
+          L1: {
+            discarded$6 = d.a(true, -93);
+            if (Math.abs(param1) >= 58982) {
+              break L1;
+            } else {
+              param1 = 0;
+              break L1;
+            }
+          }
+          return param1;
+        } else {
+          L2: {
+            if (Math.abs(param1) >= 58982) {
+              break L2;
+            } else {
+              param1 = 0;
+              break L2;
+            }
+          }
+          return param1;
         }
-        return param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new String[]{"total kicks", "total passes", "total shots", "total headers"};
     }
 }

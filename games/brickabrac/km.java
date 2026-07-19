@@ -18,7 +18,7 @@ abstract class km extends gf {
         int var3 = 0;
         L0: {
           var3 = BrickABrac.field_J ? 1 : 0;
-          if (im.field_e <= 0) {
+          if (-1 <= (im.field_e ^ -1)) {
             pa.a(true);
             break L0;
           } else {
@@ -46,42 +46,47 @@ abstract class km extends gf {
         int var3_int = 0;
         int var4 = BrickABrac.field_J ? 1 : 0;
         try {
-            ((km) this).field_m = new q[param0.length];
-            ((km) this).field_h = new re(((km) this).field_m.length);
+            this.field_m = new q[param0.length];
+            this.field_h = new re(this.field_m.length);
             for (var3_int = param1; param0.length > var3_int; var3_int++) {
-                ((km) this).field_m[var3_int] = new q(param0[var3_int], (km) this);
-                ((km) this).field_m[var3_int].a(-97);
+                this.field_m[var3_int] = new q(param0[var3_int], (km) (this));
+                this.field_m[var3_int].a(-97);
             }
-            ((km) this).b(true);
+            this.b(true);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "km.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "km.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     String e(byte param0) {
+        int discarded$0 = 0;
         if (param0 <= 53) {
-            int discarded$0 = this.a(18, (byte) 84, -33);
+            discarded$0 = this.a(18, (byte) 84, -33);
         }
         return ag.field_D[7];
     }
 
     int a(boolean param0) {
         if (!param0) {
-            field_n = null;
+            field_n = (String) null;
             return 0;
         }
         return 0;
     }
 
     private final void c(boolean param0, int param1) {
-        if (((km) this).field_h.field_j != -1) {
-            if (param1 != ((km) this).field_h.field_j) {
+        if (this.field_h.field_j != -1) {
+            if (param1 != this.field_h.field_j) {
                 j.a(ta.field_e[0], -106, lh.g((byte) -44) / 4);
             }
+        }
+        if (!param0) {
+            this.field_j = -36;
         }
     }
 
     final void e(int param0) {
+        int dupTemp$7 = 0;
         int var2 = 0;
         int var3 = 0;
         q var4_ref_q = null;
@@ -97,17 +102,17 @@ abstract class km extends gf {
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (((km) this).field_m.length <= var3) {
+          if (this.field_m.length <= var3) {
             var3 = (640 - var2) / param0;
             var4 = 0;
             L1: while (true) {
-              if (var4 >= ((km) this).field_m.length) {
+              if (var4 >= this.field_m.length) {
                 return;
               } else {
-                var8 = ((km) this).field_m[var4];
+                var8 = this.field_m[var4];
                 var8.field_c = var3;
-                var8.field_a = ((km) this).b(var4, param0 ^ 3);
-                var8.field_d = ((km) this).b((byte) 125, var4);
+                var8.field_a = this.b(var4, param0 ^ 3);
+                var8.field_d = this.b((byte) 125, var4);
                 var3 = var3 + (var8.field_j + 10);
                 var4++;
                 continue L1;
@@ -115,9 +120,9 @@ abstract class km extends gf {
             }
           } else {
             L2: {
-              var4_ref_q = ((km) this).field_m[var3];
-              if (var4_ref_q.field_f == 8) {
-                stackOut_4_0 = ((km) this).e((byte) 108);
+              var4_ref_q = this.field_m[var3];
+              if ((var4_ref_q.field_f ^ -1) == -9) {
+                stackOut_4_0 = this.e((byte) 108);
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
               } else {
@@ -128,10 +133,10 @@ abstract class km extends gf {
             }
             var7 = stackIn_5_0;
             var5 = var7;
-            int dupTemp$7 = nn.field_g.c(var7) + 30;
+            dupTemp$7 = nn.field_g.c(var7) + 30;
             var4_ref_q.field_j = dupTemp$7;
             var2 = var2 + dupTemp$7;
-            if (var3 > 0) {
+            if (-1 > (var3 ^ -1)) {
               var2 += 10;
               var3++;
               continue L0;
@@ -145,45 +150,45 @@ abstract class km extends gf {
 
     int a(int param0, int param1) {
         if (param0 >= -71) {
-            ((km) this).b(true, 87);
+            this.b(true, 87);
         }
-        return ((km) this).field_l;
+        return this.field_l;
     }
 
     km(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0);
         try {
-            ((km) this).field_p = param3;
-            ((km) this).field_l = param2;
-            ((km) this).field_q = param4;
+            this.field_p = param3;
+            this.field_l = param2;
+            this.field_q = param4;
             if (param5 == null) {
                 param5 = new int[]{};
             }
-            ((km) this).field_j = param1;
-            ((km) this).a(param5, 0);
+            this.field_j = param1;
+            this.a(param5, 0);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "km.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "km.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     void d(int param0) {
         if (param0 > -60) {
-            ((km) this).a(true, -25, 10);
+            this.a(true, -25, 10);
         }
     }
 
     boolean a(char param0, int param1, int param2) {
         int var4 = 0;
         if (13 != param2) {
-            var4 = ((km) this).field_h.field_j;
-            ((km) this).a(-120, param2, param0);
-            ((km) this).field_h.d((byte) -124);
+            var4 = this.field_h.field_j;
+            this.a(-120, param2, param0);
+            this.field_h.d((byte) -124);
             if (this.a(false, (byte) 126)) {
                 wp.a(8, ta.field_e[0]);
             }
             this.c(true, var4);
         } else {
-            ((km) this).c(-1);
+            this.c(-1);
         }
         if (param1 <= 98) {
             return true;
@@ -193,19 +198,21 @@ abstract class km extends gf {
 
     int b(int param0, int param1) {
         if (param1 != 1) {
-            ((km) this).a(true, true, -57);
+            this.a(true, true, -57);
         }
-        return ((km) this).field_q * param0 + ((km) this).field_p;
+        return this.field_q * param0 + this.field_p;
     }
 
     void a(int param0, int param1, char param2) {
-        ((km) this).field_h.d(param0 + 119);
+        this.field_h.d(param0 + 119);
         if (param0 != -120) {
             this.c(true, 117);
         }
     }
 
     void a(boolean param0, boolean param1, int param2) {
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
         q[] var4_ref_q__ = null;
         int var4 = 0;
         int var5 = 0;
@@ -214,7 +221,7 @@ abstract class km extends gf {
         q[] var8 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         si.field_k.e(1);
-        var8 = ((km) this).field_m;
+        var8 = this.field_m;
         var4_ref_q__ = var8;
         var5 = 0;
         L0: while (true) {
@@ -223,22 +230,22 @@ abstract class km extends gf {
               if (param2 <= -52) {
                 break L1;
               } else {
-                ((km) this).a(true, -79, -10);
+                this.a(true, -79, -10);
                 break L1;
               }
             }
             L2: {
-              var4 = ((km) this).field_h.field_j;
+              var4 = this.field_h.field_j;
               dm.field_b = sa.a(de.field_x * 20, -4097);
               if (!param1) {
                 this.c(true, var4);
-                if ((Object) (Object) lp.field_rb != this) {
+                if (lp.field_rb != this) {
                   break L2;
                 } else {
-                  if (im.field_e <= 0) {
+                  if (-1 <= (im.field_e ^ -1)) {
                     break L2;
                   } else {
-                    int fieldTemp$4 = im.field_e - 1;
+                    fieldTemp$4 = im.field_e - 1;
                     im.field_e = im.field_e - 1;
                     if (fieldTemp$4 != 0) {
                       break L2;
@@ -251,13 +258,13 @@ abstract class km extends gf {
                 }
               } else {
                 this.c(true, var4);
-                if ((Object) (Object) lp.field_rb != this) {
+                if (lp.field_rb != this) {
                   break L2;
                 } else {
-                  if (im.field_e <= 0) {
+                  if (-1 <= (im.field_e ^ -1)) {
                     break L2;
                   } else {
-                    int fieldTemp$5 = im.field_e - 1;
+                    fieldTemp$5 = im.field_e - 1;
                     im.field_e = im.field_e - 1;
                     if (fieldTemp$5 != 0) {
                       break L2;
@@ -301,19 +308,19 @@ abstract class km extends gf {
         var3 = BrickABrac.field_J ? 1 : 0;
         var2 = param0;
         L0: while (true) {
-          if (var2 >= ((km) this).field_h.field_r) {
+          if (var2 >= this.field_h.field_r) {
             return;
           } else {
-            if (((km) this).a((byte) 99, var2)) {
+            if (this.a((byte) 99, var2)) {
               L1: {
-                stackOut_4_0 = ((km) this).field_m[var2];
+                stackOut_4_0 = this.field_m[var2];
                 stackOut_4_1 = 4;
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
                 stackIn_5_0 = stackOut_4_0;
                 stackIn_5_1 = stackOut_4_1;
-                if (((km) this).field_h.field_j != var2) {
-                  stackOut_6_0 = (q) (Object) stackIn_6_0;
+                if (this.field_h.field_j != var2) {
+                  stackOut_6_0 = (q) ((Object) stackIn_6_0);
                   stackOut_6_1 = stackIn_6_1;
                   stackOut_6_2 = 0;
                   stackIn_7_0 = stackOut_6_0;
@@ -321,7 +328,7 @@ abstract class km extends gf {
                   stackIn_7_2 = stackOut_6_2;
                   break L1;
                 } else {
-                  stackOut_5_0 = (q) (Object) stackIn_5_0;
+                  stackOut_5_0 = (q) ((Object) stackIn_5_0);
                   stackOut_5_1 = stackIn_5_1;
                   stackOut_5_2 = 1;
                   stackIn_7_0 = stackOut_5_0;
@@ -343,9 +350,9 @@ abstract class km extends gf {
 
     private final boolean a(boolean param0, byte param1) {
         int var3 = 5 % ((param1 - 69) / 51);
-        if (((km) this).field_m.length != 0) {
-            if (0 <= ((km) this).field_h.field_j) {
-                return ((km) this).a(((km) this).field_h.field_j, param0, (byte) 123);
+        if (this.field_m.length != 0) {
+            if (0 <= this.field_h.field_j) {
+                return this.a(this.field_h.field_j, param0, (byte) 123);
             }
         }
         return false;
@@ -375,43 +382,48 @@ abstract class km extends gf {
         try {
           L0: {
             var2 = param0.getParameter("username");
-            L1: {
-              if (var2 == null) {
-                break L1;
-              } else {
-                var3 = (CharSequence) (Object) var2;
-                if (0L == ah.a(false, var3)) {
+            if (param1 <= -66) {
+              L1: {
+                if (var2 == null) {
                   break L1;
                 } else {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
+                  var3 = (CharSequence) ((Object) var2);
+                  if (0L == ah.a(false, var3)) {
+                    break L1;
+                  } else {
+                    decompiledRegionSelector0 = 2;
+                    break L0;
+                  }
                 }
               }
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-            decompiledRegionSelector0 = 0;
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2_ref;
+            stackOut_6_0 = (RuntimeException) (var2_ref);
             stackOut_6_1 = new StringBuilder().append("km.HA(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -419,19 +431,23 @@ abstract class km extends gf {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + -90 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
         } else {
-          return;
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     void c(int param0) {
-        ng.a(false, 97, ((km) this).a(true));
+        ng.a(false, 97, this.a(true));
         if (param0 != -1) {
-            field_n = null;
+            field_n = (String) null;
         }
     }
 
@@ -444,7 +460,7 @@ abstract class km extends gf {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        Object var12 = null;
+        String var12 = null;
         boolean stackIn_46_0 = false;
         int stackIn_46_1 = 0;
         boolean stackIn_47_0 = false;
@@ -456,7 +472,6 @@ abstract class km extends gf {
         int stackIn_165_0 = 0;
         int stackOut_142_0 = 0;
         int stackOut_141_0 = 0;
-        int stackOut_139_0 = 0;
         int stackOut_164_0 = 0;
         int stackOut_163_0 = 0;
         boolean stackOut_45_0 = false;
@@ -471,19 +486,19 @@ abstract class km extends gf {
         if (param2 == 123) {
           L0: {
             var4 = 0;
-            var5 = ((km) this).field_m[param0];
+            var5 = this.field_m[param0];
             var6 = var5.field_f;
             var8 = var6;
             if (0 != var8) {
               L1: {
-                if (var8 == 38) {
+                if (-39 == (var8 ^ -1)) {
                   break L1;
                 } else {
                   if (var8 == 27) {
                     break L1;
                   } else {
                     if (var8 == 37) {
-                      if (!((km) this).field_h.a((byte) 113)) {
+                      if (!this.field_h.a((byte) 113)) {
                         break L0;
                       } else {
                         be.field_a = true;
@@ -491,8 +506,8 @@ abstract class km extends gf {
                         break L0;
                       }
                     } else {
-                      if (var8 == 1) {
-                        if (((km) this).field_h.a((byte) 113)) {
+                      if ((var8 ^ -1) == -2) {
+                        if (this.field_h.a((byte) 113)) {
                           if (og.h(-26090)) {
                             sl.field_z = -2;
                             dk.a(sb.field_b, true, 0, param1, 46);
@@ -506,9 +521,9 @@ abstract class km extends gf {
                         }
                       } else {
                         if (var8 != 2) {
-                          if (var8 != 7) {
-                            if (var8 == 24) {
-                              if (!((km) this).field_h.a((byte) 113)) {
+                          if (-8 != (var8 ^ -1)) {
+                            if ((var8 ^ -1) == -25) {
+                              if (!this.field_h.a((byte) 113)) {
                                 break L0;
                               } else {
                                 eb.field_l = true;
@@ -516,32 +531,32 @@ abstract class km extends gf {
                                 break L0;
                               }
                             } else {
-                              if (var8 == 22) {
-                                if (!((km) this).field_h.a((byte) 113)) {
+                              if ((var8 ^ -1) == -23) {
+                                if (!this.field_h.a((byte) 113)) {
                                   break L0;
                                 } else {
                                   ng.a(param1, 67, 8);
                                   break L0;
                                 }
                               } else {
-                                if (var8 != 5) {
-                                  if (var8 != 8) {
-                                    if (var8 != 4) {
-                                      if (var8 == 3) {
-                                        if (((km) this).field_h.a((byte) 113)) {
+                                if (-6 != (var8 ^ -1)) {
+                                  if (-9 != (var8 ^ -1)) {
+                                    if (-5 != (var8 ^ -1)) {
+                                      if (-4 == (var8 ^ -1)) {
+                                        if (this.field_h.a((byte) 113)) {
                                           ng.a(param1, 86, 5);
                                           break L0;
                                         } else {
                                           break L0;
                                         }
                                       } else {
-                                        if (var8 == 20) {
+                                        if (-21 == (var8 ^ -1)) {
                                           L2: {
                                             var7 = 0;
-                                            if (!((km) this).field_h.b(-103)) {
+                                            if (!this.field_h.b(-103)) {
                                               break L2;
                                             } else {
-                                              if (lh.g((byte) -44) > 0) {
+                                              if (-1 > (lh.g((byte) -44) ^ -1)) {
                                                 ma.a((byte) -113, 0);
                                                 var7 = 1;
                                                 break L2;
@@ -551,10 +566,10 @@ abstract class km extends gf {
                                             }
                                           }
                                           L3: {
-                                            if (!((km) this).field_h.a(-1)) {
+                                            if (!this.field_h.a(-1)) {
                                               break L3;
                                             } else {
-                                              if (~lh.g((byte) -44) <= ~re.e((byte) 44)) {
+                                              if (lh.g((byte) -44) >= re.e((byte) 44)) {
                                                 break L3;
                                               } else {
                                                 ma.a((byte) 47, re.e((byte) 31));
@@ -564,10 +579,10 @@ abstract class km extends gf {
                                             }
                                           }
                                           L4: {
-                                            if (!((km) this).field_h.g((byte) -57)) {
+                                            if (!this.field_h.g((byte) -57)) {
                                               break L4;
                                             } else {
-                                              if (lh.g((byte) -44) > 0) {
+                                              if (-1 > (lh.g((byte) -44) ^ -1)) {
                                                 k.d((byte) 116);
                                                 var7 = 1;
                                                 break L4;
@@ -577,7 +592,7 @@ abstract class km extends gf {
                                             }
                                           }
                                           L5: {
-                                            if (!((km) this).field_h.c(-98)) {
+                                            if (!this.field_h.c(-98)) {
                                               break L5;
                                             } else {
                                               if (lh.g((byte) -44) >= re.e((byte) 90)) {
@@ -590,18 +605,18 @@ abstract class km extends gf {
                                             }
                                           }
                                           L6: {
-                                            if (!((km) this).field_h.a(false)) {
+                                            if (!this.field_h.a(false)) {
                                               break L6;
                                             } else {
                                               L7: {
-                                                var8 = -120 + var5.field_j - -var5.field_c + var5.field_c + dg.field_d >> 1;
+                                                var8 = -120 + var5.field_j - -var5.field_c + var5.field_c + dg.field_d >> -106141215;
                                                 var9 = pq.field_k - var8;
                                                 var10 = var9 * re.e((byte) 51) / 120;
-                                                if (var10 <= 0) {
+                                                if ((var10 ^ -1) >= -1) {
                                                   ma.a((byte) -114, 0);
                                                   break L7;
                                                 } else {
-                                                  if (~var10 > ~re.e((byte) 81)) {
+                                                  if (var10 < re.e((byte) 81)) {
                                                     ma.a((byte) -127, var10);
                                                     break L7;
                                                   } else {
@@ -618,7 +633,7 @@ abstract class km extends gf {
                                             break L0;
                                           } else {
                                             L8: {
-                                              if (!((km) this).field_h.a(false)) {
+                                              if (!this.field_h.a(false)) {
                                                 break L8;
                                               } else {
                                                 if (de.field_x > ea.field_d) {
@@ -634,8 +649,8 @@ abstract class km extends gf {
                                           }
                                         } else {
                                           if (var8 != 21) {
-                                            if (var8 == 6) {
-                                              if (((km) this).field_h.a((byte) 113)) {
+                                            if ((var8 ^ -1) == -7) {
+                                              if (this.field_h.a((byte) 113)) {
                                                 var4 = 1;
                                                 if (null == ua.field_d) {
                                                   cp.a(param1, 21543);
@@ -648,9 +663,9 @@ abstract class km extends gf {
                                                 break L0;
                                               }
                                             } else {
-                                              if (var8 != 9) {
-                                                if (var8 == 11) {
-                                                  if (!((km) this).field_h.a((byte) 113)) {
+                                              if (-10 != (var8 ^ -1)) {
+                                                if ((var8 ^ -1) == -12) {
+                                                  if (!this.field_h.a((byte) 113)) {
                                                     break L0;
                                                   } else {
                                                     pe.field_o.b(29);
@@ -658,24 +673,24 @@ abstract class km extends gf {
                                                     break L0;
                                                   }
                                                 } else {
-                                                  if (var8 != 12) {
+                                                  if ((var8 ^ -1) != -13) {
                                                     if (13 == var8) {
-                                                      if (!((km) this).field_h.a((byte) 113)) {
+                                                      if (!this.field_h.a((byte) 113)) {
                                                         break L0;
                                                       } else {
                                                         da.f((byte) 122);
                                                         break L0;
                                                       }
                                                     } else {
-                                                      if (var8 == 23) {
-                                                        if (!((km) this).field_h.a((byte) 113)) {
+                                                      if (-24 == (var8 ^ -1)) {
+                                                        if (!this.field_h.a((byte) 113)) {
                                                           break L0;
                                                         } else {
-                                                          if (((km) this).field_a == 10) {
-                                                            L9: {
-                                                              var12 = null;
-                                                              he.a((String) null, true, (byte) 123);
-                                                              if (!ib.a(pl.field_b, -1)) {
+                                                          if (this.field_a == 10) {
+                                                            var12 = (String) null;
+                                                            he.a((String) null, true, (byte) 123);
+                                                            if (!ib.a(pl.field_b, -1)) {
+                                                              L9: {
                                                                 if (null != fj.field_Ub) {
                                                                   stackOut_142_0 = 5;
                                                                   stackIn_143_0 = stackOut_142_0;
@@ -685,14 +700,13 @@ abstract class km extends gf {
                                                                   stackIn_143_0 = stackOut_141_0;
                                                                   break L9;
                                                                 }
-                                                              } else {
-                                                                stackOut_139_0 = 9;
-                                                                stackIn_143_0 = stackOut_139_0;
-                                                                break L9;
                                                               }
+                                                              sl.field_z = stackIn_143_0;
+                                                              break L0;
+                                                            } else {
+                                                              sl.field_z = 9;
+                                                              break L0;
                                                             }
-                                                            sl.field_z = stackIn_143_0;
-                                                            break L0;
                                                           } else {
                                                             he.a(mq.field_a, true, (byte) 126);
                                                             sl.field_z = 2147483647;
@@ -701,8 +715,8 @@ abstract class km extends gf {
                                                         }
                                                       } else {
                                                         if (19 != var8) {
-                                                          if (var8 == 32) {
-                                                            if (((km) this).field_h.a((byte) 113)) {
+                                                          if (-33 == (var8 ^ -1)) {
+                                                            if (this.field_h.a((byte) 113)) {
                                                               ng.a(param1, 62, 14);
                                                               break L0;
                                                             } else {
@@ -710,18 +724,18 @@ abstract class km extends gf {
                                                             }
                                                           } else {
                                                             if (var8 == 33) {
-                                                              if (((km) this).field_h.a((byte) 113)) {
+                                                              if (this.field_h.a((byte) 113)) {
                                                                 cq.a(16727, param1, pe.field_o.field_r, pe.field_o.field_w.field_b);
                                                                 break L0;
                                                               } else {
                                                                 break L0;
                                                               }
                                                             } else {
-                                                              if (var8 != 34) {
-                                                                if (var8 != 35) {
+                                                              if ((var8 ^ -1) != -35) {
+                                                                if (-36 != (var8 ^ -1)) {
                                                                   if (36 != var8) {
                                                                     if (42 == var8) {
-                                                                      if (!((km) this).field_h.a((byte) 113)) {
+                                                                      if (!this.field_h.a((byte) 113)) {
                                                                         break L0;
                                                                       } else {
                                                                         var4 = 1;
@@ -732,7 +746,7 @@ abstract class km extends gf {
                                                                       break L0;
                                                                     }
                                                                   } else {
-                                                                    if (!((km) this).field_h.a((byte) 113)) {
+                                                                    if (!this.field_h.a((byte) 113)) {
                                                                       break L0;
                                                                     } else {
                                                                       L10: {
@@ -765,7 +779,7 @@ abstract class km extends gf {
                                                                     }
                                                                   }
                                                                 } else {
-                                                                  if (((km) this).field_h.a((byte) 113)) {
+                                                                  if (this.field_h.a((byte) 113)) {
                                                                     pe.field_o.a(param1, (byte) 69);
                                                                     cc.field_G = true;
                                                                     break L0;
@@ -774,7 +788,7 @@ abstract class km extends gf {
                                                                   }
                                                                 }
                                                               } else {
-                                                                if (((km) this).field_h.a((byte) 113)) {
+                                                                if (this.field_h.a((byte) 113)) {
                                                                   L12: {
                                                                     var8 = 13;
                                                                     if (gq.field_Yb != 1) {
@@ -794,7 +808,7 @@ abstract class km extends gf {
                                                             }
                                                           }
                                                         } else {
-                                                          if (((km) this).field_h.a((byte) 113)) {
+                                                          if (this.field_h.a((byte) 113)) {
                                                             var4 = 1;
                                                             nk.a(2048, uc.e((byte) -66));
                                                             break L0;
@@ -805,7 +819,7 @@ abstract class km extends gf {
                                                       }
                                                     }
                                                   } else {
-                                                    if (((km) this).field_h.a((byte) 113)) {
+                                                    if (this.field_h.a((byte) 113)) {
                                                       pe.field_o.f(69);
                                                       break L0;
                                                     } else {
@@ -814,7 +828,7 @@ abstract class km extends gf {
                                                   }
                                                 }
                                               } else {
-                                                if (!((km) this).field_h.a((byte) 113)) {
+                                                if (!this.field_h.a((byte) 113)) {
                                                   break L0;
                                                 } else {
                                                   pe.field_o.a((byte) 40, param1);
@@ -825,7 +839,7 @@ abstract class km extends gf {
                                             }
                                           } else {
                                             L13: {
-                                              if (!((km) this).field_h.b(param2 ^ -30)) {
+                                              if (!this.field_h.b(param2 ^ -30)) {
                                                 break L13;
                                               } else {
                                                 il.a((byte) 86, 0);
@@ -833,7 +847,7 @@ abstract class km extends gf {
                                               }
                                             }
                                             L14: {
-                                              if (((km) this).field_h.a(-1)) {
+                                              if (this.field_h.a(-1)) {
                                                 il.a((byte) 86, 256);
                                                 break L14;
                                               } else {
@@ -841,7 +855,7 @@ abstract class km extends gf {
                                               }
                                             }
                                             L15: {
-                                              if (!((km) this).field_h.g((byte) -57)) {
+                                              if (!this.field_h.g((byte) -57)) {
                                                 break L15;
                                               } else {
                                                 lf.f(-1);
@@ -849,20 +863,20 @@ abstract class km extends gf {
                                               }
                                             }
                                             L16: {
-                                              if (!((km) this).field_h.c(param2 ^ -27)) {
+                                              if (!this.field_h.c(param2 ^ -27)) {
                                                 break L16;
                                               } else {
                                                 nf.a((byte) 109);
                                                 break L16;
                                               }
                                             }
-                                            if (!((km) this).field_h.a(false)) {
+                                            if (!this.field_h.a(false)) {
                                               break L0;
                                             } else {
-                                              var8 = -120 + (dg.field_d + (var5.field_c + var5.field_j) + var5.field_c) >> 1;
+                                              var8 = -120 + (dg.field_d + (var5.field_c + var5.field_j) + var5.field_c) >> -1472647007;
                                               var9 = -var8 + pq.field_k;
                                               var10 = 256 * var9 / 120;
-                                              if (var10 <= 0) {
+                                              if ((var10 ^ -1) >= -1) {
                                                 il.a((byte) 86, 0);
                                                 break L0;
                                               } else {
@@ -879,7 +893,7 @@ abstract class km extends gf {
                                         }
                                       }
                                     } else {
-                                      if (((km) this).field_h.a((byte) 113)) {
+                                      if (this.field_h.a((byte) 113)) {
                                         ng.a(param1, 71, 6);
                                         break L0;
                                       } else {
@@ -887,15 +901,15 @@ abstract class km extends gf {
                                       }
                                     }
                                   } else {
-                                    if (((km) this).field_h.a((byte) 113)) {
-                                      ng.a(param1, param2 ^ 28, ((km) this).a(true));
+                                    if (this.field_h.a((byte) 113)) {
+                                      ng.a(param1, param2 ^ 28, this.a(true));
                                       break L0;
                                     } else {
                                       break L0;
                                     }
                                   }
                                 } else {
-                                  if (!((km) this).field_h.a((byte) 113)) {
+                                  if (!this.field_h.a((byte) 113)) {
                                     break L0;
                                   } else {
                                     ng.a(param1, 126, 7);
@@ -905,7 +919,7 @@ abstract class km extends gf {
                               }
                             }
                           } else {
-                            if (((km) this).field_h.a((byte) 113)) {
+                            if (this.field_h.a((byte) 113)) {
                               ng.a(param1, 74, 0);
                               break L0;
                             } else {
@@ -913,7 +927,7 @@ abstract class km extends gf {
                             }
                           }
                         } else {
-                          if (((km) this).field_h.a((byte) 113)) {
+                          if (this.field_h.a((byte) 113)) {
                             ng.a(param1, 69, -1);
                             break L0;
                           } else {
@@ -925,14 +939,14 @@ abstract class km extends gf {
                   }
                 }
               }
-              if (((km) this).field_h.a((byte) 113)) {
+              if (this.field_h.a((byte) 113)) {
                 qj.b((byte) -126, param1);
                 break L0;
               } else {
                 break L0;
               }
             } else {
-              if (!((km) this).field_h.a((byte) 113)) {
+              if (!this.field_h.a((byte) 113)) {
                 break L0;
               } else {
                 L17: {
@@ -979,130 +993,148 @@ abstract class km extends gf {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        String stackIn_20_2 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
         String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
         String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
             var7_int = param3;
             var8 = param2;
-            var9 = 0;
-            var10 = 0;
-            var11 = 0;
-            L1: while (true) {
-              if (var11 >= 29) {
-                break L0;
-              } else {
-                L2: {
-                  if ((1 << var11 & param1.field_S) != 0) {
-                    oc.a(var8, var11, var7_int, param1, param0, (byte) 115);
-                    var7_int += 25;
-                    var9++;
-                    if (var9 != param5) {
-                      break L2;
-                    } else {
-                      var10++;
-                      if (var10 == param6) {
-                        return;
+            if (param4) {
+              var9 = 0;
+              var10 = 0;
+              var11 = 0;
+              L1: while (true) {
+                if ((var11 ^ -1) <= -30) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  L2: {
+                    if (-1 != (1 << var11 & param1.field_S ^ -1)) {
+                      oc.a(var8, var11, var7_int, param1, param0, (byte) 115);
+                      var7_int += 25;
+                      var9++;
+                      if (var9 == param5) {
+                        var10++;
+                        if (var10 == param6) {
+                          decompiledRegionSelector0 = 2;
+                          break L0;
+                        } else {
+                          var9 = 0;
+                          var8 += 25;
+                          var7_int = param3;
+                          break L2;
+                        }
                       } else {
-                        var9 = 0;
-                        var8 += 25;
-                        var7_int = param3;
-                        break L2;
+                        var11++;
+                        continue L1;
                       }
+                    } else {
+                      break L2;
                     }
-                  } else {
-                    break L2;
                   }
+                  var11++;
+                  continue L1;
                 }
-                var11++;
-                continue L1;
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var7 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var7;
-            stackOut_14_1 = new StringBuilder().append("km.EA(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_15_0 = (RuntimeException) (var7);
+            stackOut_15_1 = new StringBuilder().append("km.EA(");
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
               break L3;
             }
           }
           L4: {
-            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
               break L4;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
               break L4;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param2 + ',' + param3 + ',' + true + ',' + param5 + ',' + param6 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -1114,103 +1146,118 @@ abstract class km extends gf {
     }
 
     void b(boolean param0) {
+        String discarded$0 = null;
         int var2 = 0;
         q var3 = null;
         int var4 = BrickABrac.field_J ? 1 : 0;
         if (!param0) {
-            String discarded$0 = ((km) this).e((byte) -7);
+            discarded$0 = this.e((byte) -7);
         }
-        for (var2 = 0; var2 < ((km) this).field_m.length; var2++) {
-            var3 = ((km) this).field_m[var2];
-            var3.field_c = ((km) this).a(true, var2);
-            var3.field_a = ((km) this).b(var2, 1);
-            var3.field_j = ((km) this).a(-109, var2) - ((km) this).a(param0, var2);
-            ((km) this).field_m[var2].field_d = ((km) this).b((byte) -78, var2);
+        for (var2 = 0; var2 < this.field_m.length; var2++) {
+            var3 = this.field_m[var2];
+            var3.field_c = this.a(true, var2);
+            var3.field_a = this.b(var2, 1);
+            var3.field_j = this.a(-109, var2) - this.a(param0, var2);
+            this.field_m[var2].field_d = this.b((byte) -78, var2);
         }
     }
 
     int a(boolean param0, int param1) {
         if (!param0) {
-            ((km) this).a(109, -54, 'ￃ');
+            this.a(109, -54, 'ￃ');
         }
-        return ((km) this).field_j;
+        return this.field_j;
     }
 
     final static void a(int param0, int param1, long param2, String param3, int param4) {
-        RuntimeException var6 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
+        RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
           L0: {
-            ep.field_k = param0;
-            bo.field_l = true;
-            wd.field_z = param4;
-            gn.field_E = param2;
-            ba.field_z = param3;
+            L1: {
+              ep.field_k = param0;
+              bo.field_l = true;
+              wd.field_z = param4;
+              gn.field_E = param2;
+              ba.field_z = param3;
+              if (param1 == 29295) {
+                break L1;
+              } else {
+                km.b(48);
+                break L1;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var6 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var6;
-            stackOut_2_1 = new StringBuilder().append("km.P(").append(param0).append(',').append(29295).append(',').append(param2).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
+            stackOut_3_1 = new StringBuilder().append("km.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
             if (param3 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param4 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param4 + ')');
         }
     }
 
     public static void b(int param0) {
         field_o = null;
         field_n = null;
+        if (param0 >= -57) {
+            j var2 = (j) null;
+            km.a((ak) null, (j) null, 113, 61, false, -53, 18);
+        }
         field_k = null;
     }
 
     void a(boolean param0, int param1, int param2) {
+        boolean discarded$0 = false;
         if (param2 <= 96) {
-            boolean discarded$0 = ((km) this).a('F', -76, -96);
+            discarded$0 = this.a('F', -76, -96);
         }
-        ((km) this).field_h.a(this.a(po.field_a, (byte) -106, pq.field_k), param1, param0, (byte) -127);
+        this.field_h.a(this.a(po.field_a, (byte) -106, pq.field_k), param1, param0, (byte) -127);
     }
 
     void d(byte param0) {
+        int discarded$0 = 0;
         if (param0 != 79) {
-            int discarded$0 = ((km) this).b(-57, -105);
+            discarded$0 = this.b(-57, -105);
         }
     }
 
@@ -1223,13 +1270,13 @@ abstract class km extends gf {
         int var4 = 0;
         q var5 = null;
         int var6 = BrickABrac.field_J ? 1 : 0;
-        q[] var7 = ((km) this).field_m;
+        q[] var7 = this.field_m;
         q[] var3 = var7;
         for (var4 = 0; var4 < var7.length; var4++) {
             var5 = var7[var4];
             var5.field_h = false;
         }
-        ((km) this).field_m[param1].field_h = param0 ? true : false;
+        this.field_m[param1].field_h = param0 ? true : false;
     }
 
     private final int a(int param0, byte param1, int param2) {
@@ -1242,16 +1289,16 @@ abstract class km extends gf {
           if (param1 < -77) {
             break L0;
           } else {
-            ((km) this).field_h = null;
+            this.field_h = (re) null;
             break L0;
           }
         }
         L1: while (true) {
-          if (var4 >= ((km) this).field_m.length) {
+          if (var4 >= this.field_m.length) {
             return -1;
           } else {
-            var5 = ((km) this).field_m[var4];
-            if (((km) this).a((byte) 122, var4)) {
+            var5 = this.field_m[var4];
+            if (this.a((byte) 122, var4)) {
               if (var5.a(param2, param0, -79)) {
                 return var4;
               } else {
@@ -1267,10 +1314,6 @@ abstract class km extends gf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new n();
         field_o = "Names should contain a maximum of 12 characters";
         field_n = "Your request to join has been declined.";

@@ -15,17 +15,32 @@ final class dq {
     static vb field_h;
 
     public static void a(byte param0) {
+        int[] discarded$2 = null;
+        int[] var2 = null;
         field_k = null;
         field_f = null;
         field_b = null;
         field_g = null;
         field_h = null;
-        field_d = null;
-        field_c = null;
-        field_j = null;
-        field_a = null;
-        field_i = null;
-        field_e = null;
+        if (param0 != 80) {
+          var2 = (int[]) null;
+          discarded$2 = dq.a((byte) 23, (int[]) null);
+          field_d = null;
+          field_c = null;
+          field_j = null;
+          field_a = null;
+          field_i = null;
+          field_e = null;
+          return;
+        } else {
+          field_d = null;
+          field_c = null;
+          field_j = null;
+          field_a = null;
+          field_i = null;
+          field_e = null;
+          return;
+        }
     }
 
     final static int[] a(byte param0, int[] param1) {
@@ -60,7 +75,7 @@ final class dq {
             param1[6] = -param1[6];
             var2_int = 24 % ((param0 - -61) / 54);
             param1[3] = -param1[3];
-            stackOut_0_0 = (int[]) param1;
+            stackOut_0_0 = (int[]) (param1);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -68,23 +83,23 @@ final class dq {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_0 = (RuntimeException) (var2);
             stackOut_2_1 = new StringBuilder().append("dq.C(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -92,7 +107,7 @@ final class dq {
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -142,7 +157,7 @@ final class dq {
             var8 = var3;
             var3.field_B = 0;
             var8.field_G = param1;
-            stackOut_0_0 = (dd) var3;
+            stackOut_0_0 = (dd) (var3);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -150,23 +165,23 @@ final class dq {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3_ref;
+            stackOut_2_0 = (RuntimeException) (var3_ref);
             stackOut_2_1 = new StringBuilder().append("dq.A(").append(param0).append(',').append(param1).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -174,16 +189,12 @@ final class dq {
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new long[1000];
         field_b = "To report a player, click on the most suitable option from the Rules of Conduct. Please do not abuse this form.";
         field_c = "<%0> is not a member, and cannot play with the current options.";

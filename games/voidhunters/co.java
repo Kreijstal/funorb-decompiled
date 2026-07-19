@@ -12,18 +12,18 @@ final class co {
     final void a(Runnable param0, int param1) {
         try {
             if (param1 != 0) {
-                ((co) this).field_b = null;
+                this.field_b = (int[]) null;
             }
-            ((co) this).field_c = param0;
+            this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "co.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "co.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(byte param0) {
-        ((co) this).field_e = new daa(((co) this).field_d, (co) this);
+        this.field_e = new daa(this.field_d, (co) (this));
         if (param0 != 3) {
-            ((co) this).field_f = false;
+            this.field_f = false;
         }
     }
 
@@ -54,6 +54,7 @@ final class co {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
@@ -69,7 +70,7 @@ final class co {
         try {
           L0: {
             L1: {
-              if (param2 <= 0) {
+              if (-1 <= (param2 ^ -1)) {
                 break L1;
               } else {
                 if (!bd.a(param2, (byte) -95)) {
@@ -104,59 +105,62 @@ final class co {
               }
             }
             var9 = stackIn_12_0;
-            var10 = param2 >> 1;
-            var11 = param4 >> 1;
-            var12 = param5;
-            var13 = new float[var7_int * var10 * var11];
-            L4: while (true) {
-              jaggl.OpenGL.glTexImage2Df(param3, var8, param1, param2, param4, 0, param0, 5126, var12, 0);
-              if (var9 <= 1) {
-                break L0;
-              } else {
-                var16 = param2 * var7_int;
-                var17 = 0;
-                L5: while (true) {
-                  if (var7_int <= var17) {
-                    var14 = var13;
-                    var13 = var12;
-                    var12 = var14;
-                    param4 = var11;
-                    param2 = var10;
-                    var11 = var11 >> 1;
-                    var8++;
-                    var10 = var10 >> 1;
-                    var9 = var9 >> 1;
-                    continue L4;
-                  } else {
-                    var18 = var17;
-                    var19 = var17;
-                    var20 = var19 - -var16;
-                    var21 = 0;
-                    L6: while (true) {
-                      if (var11 <= var21) {
-                        var17++;
-                        continue L5;
-                      } else {
-                        var22 = 0;
-                        L7: while (true) {
-                          if (var10 <= var22) {
-                            var19 = var19 + var16;
-                            var20 = var20 + var16;
-                            var21++;
-                            continue L6;
-                          } else {
-                            var15 = param5[var19];
-                            var19 = var19 + var7_int;
-                            var15 = var15 + param5[var19];
-                            var15 = var15 + param5[var20];
-                            var19 = var19 + var7_int;
-                            var20 = var20 + var7_int;
-                            var15 = var15 + param5[var20];
-                            var13[var18] = 0.25f * var15;
-                            var20 = var20 + var7_int;
-                            var18 = var18 + var7_int;
-                            var22++;
-                            continue L7;
+            var10 = param2 >> -302567871;
+            var11 = param4 >> -122656863;
+            if (param6 == -29702) {
+              var12 = param5;
+              var13 = new float[var7_int * var10 * var11];
+              L4: while (true) {
+                jaggl.OpenGL.glTexImage2Df(param3, var8, param1, param2, param4, 0, param0, 5126, var12, 0);
+                if ((var9 ^ -1) >= -2) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  var16 = param2 * var7_int;
+                  var17 = 0;
+                  L5: while (true) {
+                    if (var7_int <= var17) {
+                      var14 = var13;
+                      var13 = var12;
+                      var12 = var14;
+                      param4 = var11;
+                      param2 = var10;
+                      var11 = var11 >> 1;
+                      var8++;
+                      var10 = var10 >> 1;
+                      var9 = var9 >> 1;
+                      continue L4;
+                    } else {
+                      var18 = var17;
+                      var19 = var17;
+                      var20 = var19 - -var16;
+                      var21 = 0;
+                      L6: while (true) {
+                        if (var11 <= var21) {
+                          var17++;
+                          continue L5;
+                        } else {
+                          var22 = 0;
+                          L7: while (true) {
+                            if (var10 <= var22) {
+                              var19 = var19 + var16;
+                              var20 = var20 + var16;
+                              var21++;
+                              continue L6;
+                            } else {
+                              var15 = param5[var19];
+                              var19 = var19 + var7_int;
+                              var15 = var15 + param5[var19];
+                              var15 = var15 + param5[var20];
+                              var19 = var19 + var7_int;
+                              var20 = var20 + var7_int;
+                              var15 = var15 + param5[var20];
+                              var13[var18] = 0.25f * var15;
+                              var20 = var20 + var7_int;
+                              var18 = var18 + var7_int;
+                              var22++;
+                              continue L7;
+                            }
                           }
                         }
                       }
@@ -164,29 +168,32 @@ final class co {
                   }
                 }
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var7 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var7;
+            stackOut_27_0 = (RuntimeException) (var7);
             stackOut_27_1 = new StringBuilder().append("co.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
             stackIn_28_1 = stackOut_27_1;
             if (param5 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "null";
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
               break L8;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "{...}";
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
@@ -194,11 +201,26 @@ final class co {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + -29702 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     co(sob param0) {
+        b discarded$23 = null;
+        b discarded$24 = null;
+        b discarded$25 = null;
+        b discarded$26 = null;
+        b discarded$27 = null;
+        b discarded$28 = null;
+        b discarded$29 = null;
+        b discarded$30 = null;
+        b discarded$31 = null;
+        b discarded$32 = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
@@ -217,30 +239,30 @@ final class co {
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
-        ((co) this).field_f = true;
+        this.field_f = true;
         lia discarded$22 = new lia();
-        ((co) this).field_a = new float[2];
+        this.field_a = new float[2];
         try {
           L0: {
-            ((co) this).field_d = param0;
-            ((co) this).field_e = new daa(param0, (co) this);
-            b discarded$23 = new b(((co) this).field_d);
-            b discarded$24 = new b(((co) this).field_d);
-            b discarded$25 = new b(((co) this).field_d);
-            b discarded$26 = new b(((co) this).field_d);
-            b discarded$27 = new b(((co) this).field_d);
-            b discarded$28 = new b(((co) this).field_d);
-            b discarded$29 = new b(((co) this).field_d);
-            b discarded$30 = new b(((co) this).field_d);
-            b discarded$31 = new b(((co) this).field_d);
-            b discarded$32 = new b(((co) this).field_d);
-            ((co) this).field_b = new int[b.field_v];
+            this.field_d = param0;
+            this.field_e = new daa(param0, (co) (this));
+            discarded$23 = new b(this.field_d);
+            discarded$24 = new b(this.field_d);
+            discarded$25 = new b(this.field_d);
+            discarded$26 = new b(this.field_d);
+            discarded$27 = new b(this.field_d);
+            discarded$28 = new b(this.field_d);
+            discarded$29 = new b(this.field_d);
+            discarded$30 = new b(this.field_d);
+            discarded$31 = new b(this.field_d);
+            discarded$32 = new b(this.field_d);
+            this.field_b = new int[b.field_v];
             var2_int = 0;
             L1: while (true) {
               if (var2_int >= b.field_v) {
                 break L0;
               } else {
-                ((co) this).field_b[var2_int] = -1;
+                this.field_b[var2_int] = -1;
                 var2_int++;
                 continue L1;
               }
@@ -250,23 +272,23 @@ final class co {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_0 = (RuntimeException) (var2);
             stackOut_5_1 = new StringBuilder().append("co.<init>(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -274,15 +296,11 @@ final class co {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         pv discarded$0 = new pv();
     }
 }

@@ -12,10 +12,10 @@ final class vl extends hl {
             return;
         }
         try {
-            param0.a(2, ((vl) this).field_o);
-            param0.a(((vl) this).field_n, (byte) 101);
+            param0.a(2, this.field_o);
+            param0.a(this.field_n, (byte) 101);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "vl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "vl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -24,10 +24,19 @@ final class vl extends hl {
           if (ql.field_f == wd.field_d) {
             return bf.field_o;
           } else {
-            if (!im.field_b.b(36)) {
-              return bf.field_o;
+            if (param0 == -29455) {
+              if (!im.field_b.b(36)) {
+                return bf.field_o;
+              } else {
+                return co.field_C;
+              }
             } else {
-              return co.field_C;
+              vl.a(32, (byte) 15);
+              if (!im.field_b.b(36)) {
+                return bf.field_o;
+              } else {
+                return co.field_C;
+              }
             }
           }
         } else {
@@ -37,17 +46,35 @@ final class vl extends hl {
 
     public static void a(byte param0) {
         field_l = null;
+        if (param0 > -51) {
+            vl.a(-115, (byte) 61);
+        }
     }
 
     final static q[] d(int param0) {
+        String discarded$2 = null;
+        q[] var1 = null;
         int var2 = 0;
-        int var3 = DungeonAssault.field_K;
-        q[] var1 = new q[dk.field_d];
-        for (var2 = 0; dk.field_d > var2; var2++) {
+        int var3 = 0;
+        var3 = DungeonAssault.field_K;
+        var1 = new q[dk.field_d];
+        var2 = 0;
+        L0: while (true) {
+          if (dk.field_d <= var2) {
+            if (param0 > -62) {
+              discarded$2 = vl.c(-93);
+              sb.a(500);
+              return var1;
+            } else {
+              sb.a(500);
+              return var1;
+            }
+          } else {
             var1[var2] = new q(ce.field_x, tb.field_i, hg.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], ub.field_q[var2], uo.field_b);
+            var2++;
+            continue L0;
+          }
         }
-        sb.a(500);
-        return var1;
     }
 
     final fd b(int param0) {
@@ -56,13 +83,28 @@ final class vl extends hl {
     }
 
     final static void a(int param0, byte param1) {
-        if (!(ed.c(true))) {
-            if (!(1 > gm.field_d.field_K)) {
-                return;
+        boolean discarded$2 = false;
+        int[] var3 = null;
+        L0: {
+          if (!ed.c(true)) {
+            if (param0 <= gm.field_d.field_K) {
+              return;
+            } else {
+              gm.field_d.field_K = param0;
+              ac.field_B.d((byte) -78, 72);
+              ac.field_B.a(6, gm.field_d.field_K);
+              break L0;
             }
-            gm.field_d.field_K = 1;
-            ac.field_B.d((byte) -78, 72);
-            ac.field_B.a(6, gm.field_d.field_K);
+          } else {
+            break L0;
+          }
+        }
+        if (param1 != -49) {
+          var3 = (int[]) null;
+          discarded$2 = vl.a(105, 115, (int[]) null);
+          return;
+        } else {
+          return;
         }
     }
 
@@ -93,12 +135,12 @@ final class vl extends hl {
               if (param1 <= -58) {
                 break L1;
               } else {
-                field_l = null;
+                field_l = (String) null;
                 break L1;
               }
             }
             L2: {
-              if ((param2[param0 >> 5] & 1 << (param0 & 31)) == 0) {
+              if (-1 == (param2[param0 >> 15042597] & 1 << (param0 & 31) ^ -1)) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
@@ -114,23 +156,23 @@ final class vl extends hl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_0 = (RuntimeException) (var3);
             stackOut_6_1 = new StringBuilder().append("vl.G(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -138,25 +180,21 @@ final class vl extends hl {
               break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
 
     vl(String param0, String param1) {
         try {
-            ((vl) this).field_o = param0;
-            ((vl) this).field_n = param1;
+            this.field_o = param0;
+            this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = -1;
         field_l = "This target is much less powerful than you, and is <%0>% more likely to wake.<br>(Renown gambled: <%1>)";
     }

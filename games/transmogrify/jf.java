@@ -50,10 +50,10 @@ final class jf extends ti {
         int stackOut_19_1 = 0;
         int stackOut_19_2 = 0;
         L0: {
-          var3 = ((jf) this).field_n >> 1;
-          var4 = ((jf) this).field_m >> 1;
-          param0 = param0 + ((jf) this).field_u / 2;
-          param1 = param1 + ((jf) this).field_l / 2;
+          var3 = this.field_n >> 1;
+          var4 = this.field_m >> 1;
+          param0 = param0 + this.field_u / 2;
+          param1 = param1 + this.field_l / 2;
           if (param0 >= sb.field_d) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -67,7 +67,7 @@ final class jf extends ti {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= sb.field_b) {
-            stackOut_5_0 = ((jf) this).field_n - 2;
+            stackOut_5_0 = this.field_n - 2;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -91,7 +91,7 @@ final class jf extends ti {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= sb.field_f) {
-            stackOut_11_0 = ((jf) this).field_m - 2;
+            stackOut_11_0 = this.field_m - 2;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -106,7 +106,7 @@ final class jf extends ti {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((jf) this).field_n + var5;
+            var10 = var9 * this.field_n + var5;
             var11 = (param1 + (var9 >> 1)) * sb.field_c + (param0 + (var5 >> 1));
             var12 = var5;
             L5: while (true) {
@@ -142,14 +142,14 @@ final class jf extends ti {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = ((jf) this).field_w;
+                      stackOut_18_0 = this.field_w;
                       stackOut_18_1 = var10 + (var19 & 1);
                       stackIn_20_0 = stackOut_18_0;
                       stackIn_20_1 = stackOut_18_1;
                       stackIn_19_0 = stackOut_18_0;
                       stackIn_19_1 = stackOut_18_1;
                       if ((var19 & 2) != 0) {
-                        stackOut_20_0 = (int[]) (Object) stackIn_20_0;
+                        stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
                         stackOut_20_1 = stackIn_20_1;
                         stackOut_20_2 = 0;
                         stackIn_21_0 = stackOut_20_0;
@@ -157,9 +157,9 @@ final class jf extends ti {
                         stackIn_21_2 = stackOut_20_2;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) (Object) stackIn_19_0;
+                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
                         stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = ((jf) this).field_n;
+                        stackOut_19_2 = this.field_n;
                         stackIn_21_0 = stackOut_19_0;
                         stackIn_21_1 = stackOut_19_1;
                         stackIn_21_2 = stackOut_19_2;
@@ -191,12 +191,12 @@ final class jf extends ti {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((jf) this).field_u;
-          param1 = param1 + ((jf) this).field_l;
+          param0 = param0 + this.field_u;
+          param1 = param1 + this.field_l;
           var4 = param0 + param1 * sb.field_c;
           var5 = 0;
-          var6 = ((jf) this).field_m;
-          var7 = ((jf) this).field_n;
+          var6 = this.field_m;
+          var7 = this.field_n;
           var8 = sb.field_c - var7;
           var9 = 0;
           if (param1 >= sb.field_e) {
@@ -248,7 +248,7 @@ final class jf extends ti {
             break L4;
           } else {
             if (var6 > 0) {
-              jf.d(sb.field_h, ((jf) this).field_w, 0, var5, var4, var7, var6, var8, var9, param2);
+              jf.d(sb.field_h, this.field_w, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -283,8 +283,6 @@ final class jf extends ti {
         int var21 = 0;
         int[] var22 = null;
         int[] var23 = null;
-        int[] var24 = null;
-        int[] var25 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -298,10 +296,10 @@ final class jf extends ti {
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
         L0: {
-          var3 = ((jf) this).field_n >> 2;
-          var4 = ((jf) this).field_m >> 2;
-          param0 = param0 + ((jf) this).field_u / 4;
-          param1 = param1 + ((jf) this).field_l / 4;
+          var3 = this.field_n >> 2;
+          var4 = this.field_m >> 2;
+          param0 = param0 + this.field_u / 4;
+          param1 = param1 + this.field_l / 4;
           if (param0 >= sb.field_d) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -315,7 +313,7 @@ final class jf extends ti {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= sb.field_b) {
-            stackOut_5_0 = ((jf) this).field_n - 4;
+            stackOut_5_0 = this.field_n - 4;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -339,7 +337,7 @@ final class jf extends ti {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= sb.field_f) {
-            stackOut_11_0 = ((jf) this).field_m - 4;
+            stackOut_11_0 = this.field_m - 4;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -349,9 +347,7 @@ final class jf extends ti {
           }
         }
         var8 = stackIn_12_0;
-        var25 = new int[16];
-        var24 = var25;
-        var23 = var24;
+        var23 = new int[16];
         var22 = var23;
         var9 = var22;
         var10 = var7;
@@ -365,12 +361,12 @@ final class jf extends ti {
                 var10 += 4;
                 continue L4;
               } else {
-                var12 = var10 * ((jf) this).field_n + var11;
+                var12 = var10 * this.field_n + var11;
                 var13 = (param1 + (var10 >> 2)) * sb.field_c + (param0 + (var11 >> 2));
                 var14 = 0;
                 L6: while (true) {
                   if (var14 >= 4) {
-                    var25 = var24;
+                    var23 = var22;
                     var14 = 0;
                     var15 = 0;
                     var16 = 0;
@@ -393,11 +389,11 @@ final class jf extends ti {
                           continue L5;
                         }
                       } else {
-                        var14 = var25[var19] >>> 24;
+                        var14 = var23[var19] >>> 24;
                         var15 = var15 + var14;
-                        var16 = var16 + var14 * (var25[var19] >> 16 & 255);
-                        var17 = var17 + var14 * (var25[var19] >> 8 & 255);
-                        var18 = var18 + var14 * (var25[var19] & 255);
+                        var16 = var16 + var14 * (var23[var19] >> 16 & 255);
+                        var17 = var17 + var14 * (var23[var19] >> 8 & 255);
+                        var18 = var18 + var14 * (var23[var19] & 255);
                         var19++;
                         continue L7;
                       }
@@ -409,7 +405,7 @@ final class jf extends ti {
                         var14++;
                         continue L6;
                       } else {
-                        var9[(var14 << 2) + var15] = ((jf) this).field_w[var12 + var14 * ((jf) this).field_n + var15];
+                        var9[(var14 << 2) + var15] = this.field_w[var12 + var14 * this.field_n + var15];
                         var15++;
                         continue L8;
                       }
@@ -423,6 +419,8 @@ final class jf extends ti {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -443,7 +441,7 @@ final class jf extends ti {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -454,7 +452,7 @@ final class jf extends ti {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
@@ -467,6 +465,8 @@ final class jf extends ti {
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var14 = 0;
         param8 = -param10;
         L0: while (true) {
@@ -481,7 +481,7 @@ final class jf extends ti {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -496,7 +496,7 @@ final class jf extends ti {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -526,30 +526,30 @@ final class jf extends ti {
           } else {
             if (param3 > 0) {
               L1: {
-                var5 = ((jf) this).field_n;
-                var6 = ((jf) this).field_m;
+                var5 = this.field_n;
+                var6 = this.field_m;
                 var7 = 0;
                 var8 = 0;
-                var9 = ((jf) this).field_r;
-                var10 = ((jf) this).field_s;
+                var9 = this.field_r;
+                var10 = this.field_s;
                 var11 = (var9 << 16) / param2;
                 var12 = (var10 << 16) / param3;
-                if (((jf) this).field_u <= 0) {
+                if (this.field_u <= 0) {
                   break L1;
                 } else {
-                  var13 = ((((jf) this).field_u << 16) + var11 - 1) / var11;
+                  var13 = ((this.field_u << 16) + var11 - 1) / var11;
                   param0 = param0 + var13;
-                  var7 = var7 + (var13 * var11 - (((jf) this).field_u << 16));
+                  var7 = var7 + (var13 * var11 - (this.field_u << 16));
                   break L1;
                 }
               }
               L2: {
-                if (((jf) this).field_l <= 0) {
+                if (this.field_l <= 0) {
                   break L2;
                 } else {
-                  var13 = ((((jf) this).field_l << 16) + var12 - 1) / var12;
+                  var13 = ((this.field_l << 16) + var12 - 1) / var12;
                   param1 = param1 + var13;
-                  var8 = var8 + (var13 * var12 - (((jf) this).field_l << 16));
+                  var8 = var8 + (var13 * var12 - (this.field_l << 16));
                   break L2;
                 }
               }
@@ -612,7 +612,7 @@ final class jf extends ti {
                   break L8;
                 }
               }
-              jf.d(sb.field_h, ((jf) this).field_w, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+              jf.d(sb.field_h, this.field_w, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
               return;
             } else {
               break L0;
@@ -622,6 +622,8 @@ final class jf extends ti {
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -655,7 +657,7 @@ final class jf extends ti {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
                 param2 = param1[incrementValue$2];
                 var17 = param2 >>> 24;
@@ -690,7 +692,7 @@ final class jf extends ti {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
-                  int incrementValue$3 = param4;
+                  incrementValue$3 = param4;
                   param4++;
                   param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
@@ -711,12 +713,12 @@ final class jf extends ti {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((jf) this).field_u;
-          param1 = param1 + ((jf) this).field_l;
+          param0 = param0 + this.field_u;
+          param1 = param1 + this.field_l;
           var3 = param0 + param1 * sb.field_c;
           var4 = 0;
-          var5 = ((jf) this).field_m;
-          var6 = ((jf) this).field_n;
+          var5 = this.field_m;
+          var6 = this.field_n;
           var7 = sb.field_c - var6;
           var8 = 0;
           if (param1 >= sb.field_e) {
@@ -768,7 +770,7 @@ final class jf extends ti {
             break L4;
           } else {
             if (var5 > 0) {
-              jf.c(sb.field_h, ((jf) this).field_w, 0, var4, var3, var6, var5, var7, var8);
+              jf.c(sb.field_h, this.field_w, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -786,12 +788,12 @@ final class jf extends ti {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((jf) this).field_u;
-          param1 = param1 + ((jf) this).field_l;
+          param0 = param0 + this.field_u;
+          param1 = param1 + this.field_l;
           var4 = param0 + param1 * sb.field_c;
           var5 = 0;
-          var6 = ((jf) this).field_m;
-          var7 = ((jf) this).field_n;
+          var6 = this.field_m;
+          var7 = this.field_n;
           var8 = sb.field_c - var7;
           var9 = 0;
           if (param1 >= sb.field_e) {
@@ -843,7 +845,7 @@ final class jf extends ti {
             break L4;
           } else {
             if (var6 > 0) {
-              jf.b(0, 0, 0, sb.field_h, ((jf) this).field_w, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+              jf.b(0, 0, 0, sb.field_h, this.field_w, var5, 0, var4, 0, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -861,12 +863,12 @@ final class jf extends ti {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((jf) this).field_u;
-          param1 = param1 + ((jf) this).field_l;
+          param0 = param0 + this.field_u;
+          param1 = param1 + this.field_l;
           var4 = param0 + param1 * sb.field_c;
           var5 = 0;
-          var6 = ((jf) this).field_m;
-          var7 = ((jf) this).field_n;
+          var6 = this.field_m;
+          var7 = this.field_n;
           var8 = sb.field_c - var7;
           var9 = 0;
           if (param1 >= sb.field_e) {
@@ -918,7 +920,7 @@ final class jf extends ti {
             break L4;
           } else {
             if (var6 > 0) {
-              jf.c(sb.field_h, ((jf) this).field_w, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+              jf.c(sb.field_h, this.field_w, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -932,17 +934,19 @@ final class jf extends ti {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int incrementValue$0 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = -param5; var11 < 0; var11++) {
                 var12 = (param1[param3] >>> 24) * param9 >> 8;
                 var13 = 256 - var12;
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
                 var14 = param1[incrementValue$0];
                 var15 = param0[param4];
-                int incrementValue$1 = param4;
+                incrementValue$1 = param4;
                 param4++;
                 param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
             }
@@ -957,6 +961,7 @@ final class jf extends ti {
         int var15 = 0;
         int var16 = 0;
         int var18 = 0;
+        int incrementValue$0 = 0;
         int var17 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
@@ -967,7 +972,7 @@ final class jf extends ti {
                 if (var16 != 0) {
                     var17 = 256 - var16;
                     var18 = param0[param5];
-                    int incrementValue$0 = param5;
+                    incrementValue$0 = param5;
                     param5++;
                     param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
                 } else {
@@ -982,6 +987,8 @@ final class jf extends ti {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -1003,7 +1010,7 @@ final class jf extends ti {
                 param6++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var14 = param2 >>> 24;
@@ -1026,7 +1033,7 @@ final class jf extends ti {
                   }
                   var16 = 256 - var14;
                   var17 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
                   param5++;
@@ -1047,12 +1054,12 @@ final class jf extends ti {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((jf) this).field_u;
-          param1 = param1 + ((jf) this).field_l;
+          param0 = param0 + this.field_u;
+          param1 = param1 + this.field_l;
           var3 = param0 + param1 * sb.field_c;
           var4 = 0;
-          var5 = ((jf) this).field_m;
-          var6 = ((jf) this).field_n;
+          var5 = this.field_m;
+          var6 = this.field_n;
           var7 = sb.field_c - var6;
           var8 = 0;
           if (param1 >= sb.field_e) {
@@ -1104,7 +1111,7 @@ final class jf extends ti {
             break L4;
           } else {
             if (var5 > 0) {
-              jf.c(sb.field_h, ((jf) this).field_w, 0, var4, var3, var6, var5, var7, var8);
+              jf.c(sb.field_h, this.field_w, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -1122,12 +1129,12 @@ final class jf extends ti {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((jf) this).field_u;
-          param1 = param1 + ((jf) this).field_l;
+          param0 = param0 + this.field_u;
+          param1 = param1 + this.field_l;
           var4 = param0 + param1 * sb.field_c;
           var5 = 0;
-          var6 = ((jf) this).field_m;
-          var7 = ((jf) this).field_n;
+          var6 = this.field_m;
+          var7 = this.field_n;
           var8 = sb.field_c - var7;
           var9 = 0;
           if (param1 >= sb.field_e) {
@@ -1179,7 +1186,7 @@ final class jf extends ti {
             break L4;
           } else {
             if (var6 > 0) {
-              jf.c(sb.field_h, ((jf) this).field_w, 0, var5, var4, var7, var6, var8, var9, param2);
+              jf.c(sb.field_h, this.field_w, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;

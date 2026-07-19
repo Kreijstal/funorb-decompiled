@@ -37,6 +37,7 @@ final class fg extends ig {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_18_0 = 0;
         int stackOut_16_0 = 0;
@@ -55,47 +56,49 @@ final class fg extends ig {
               if (param5 >= 24) {
                 break L1;
               } else {
-                ((fg) this).field_J = -18;
+                this.field_J = -18;
                 break L1;
               }
             }
             if (!super.a(param0, param1, param2, param3, param4, (byte) 67, param6)) {
               stackOut_18_0 = 0;
               stackIn_19_0 = stackOut_18_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              var8_int = param1 - (((fg) this).field_L + ((fg) this).field_w + param4);
-              var9 = param3 + (-((fg) this).field_k + (-param6 + -((fg) this).field_F));
-              if (((fg) this).field_I * ((fg) this).field_I > var8_int * var8_int - -(var9 * var9)) {
+              var8_int = param1 - (this.field_L + this.field_w + param4);
+              var9 = param3 + (-this.field_k + (-param6 + -this.field_F));
+              if (this.field_I * this.field_I > var8_int * var8_int - -(var9 * var9)) {
                 L2: {
                   var10 = Math.atan2((double)var9, (double)var8_int) - sj.field_I;
                   if (var10 < 0.0) {
-                    var10 = var10 - 3.141592653589793 / (double)((fg) this).field_N;
+                    var10 = var10 - 3.141592653589793 / (double)this.field_N;
                     break L2;
                   } else {
                     if (0.0 < var10) {
-                      var10 = var10 + 3.141592653589793 / (double)((fg) this).field_N;
+                      var10 = var10 + 3.141592653589793 / (double)this.field_N;
                       break L2;
                     } else {
                       break L2;
                     }
                   }
                 }
-                ((fg) this).field_J = (int)(var10 * (double)((fg) this).field_N / 6.283185307179586);
+                this.field_J = (int)(var10 * (double)this.field_N / 6.283185307179586);
                 L3: while (true) {
-                  if (((fg) this).field_N > ((fg) this).field_J) {
+                  if (this.field_N > this.field_J) {
                     L4: while (true) {
-                      if (((fg) this).field_J >= 0) {
+                      if ((this.field_J ^ -1) <= -1) {
                         stackOut_16_0 = 1;
                         stackIn_17_0 = stackOut_16_0;
-                        return stackIn_17_0 != 0;
+                        decompiledRegionSelector0 = 0;
+                        break L0;
                       } else {
-                        ((fg) this).field_J = ((fg) this).field_J + ((fg) this).field_N;
+                        this.field_J = this.field_J + this.field_N;
                         continue L4;
                       }
                     }
                   } else {
-                    ((fg) this).field_J = ((fg) this).field_J - ((fg) this).field_N;
+                    this.field_J = this.field_J - this.field_N;
                     continue L3;
                   }
                 }
@@ -108,23 +111,23 @@ final class fg extends ig {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var8;
+            stackOut_20_0 = (RuntimeException) (var8);
             stackOut_20_1 = new StringBuilder().append("fg.P(");
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L5;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -132,9 +135,13 @@ final class fg extends ig {
               break L5;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
-        return stackIn_19_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_17_0 != 0;
+        } else {
+          return stackIn_19_0 != 0;
+        }
     }
 
     private fg() throws Throwable {
@@ -142,10 +149,6 @@ final class fg extends ig {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_G = new oj();
     }
 }

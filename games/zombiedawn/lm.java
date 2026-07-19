@@ -9,19 +9,21 @@ final class lm extends fb {
     int field_H;
 
     final void g(int param0) {
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
         if (param0 > 95) {
-          if (((lm) this).field_H <= 0) {
+          if (-1 <= (this.field_H ^ -1)) {
             return;
           } else {
-            ((lm) this).field_H = ((lm) this).field_H - 3;
-            int fieldTemp$4 = ((lm) this).field_F + 1;
-            ((lm) this).field_F = ((lm) this).field_F + 1;
-            if (fieldTemp$4 > ((lm) this).field_G) {
-              ((lm) this).field_F = 0;
-              int fieldTemp$5 = ((lm) this).field_E + 1;
-              ((lm) this).field_E = ((lm) this).field_E + 1;
+            this.field_H = this.field_H - 3;
+            fieldTemp$4 = this.field_F + 1;
+            this.field_F = this.field_F + 1;
+            if (fieldTemp$4 > this.field_G) {
+              this.field_F = 0;
+              fieldTemp$5 = this.field_E + 1;
+              this.field_E = this.field_E + 1;
               if (fieldTemp$5 >= ob.field_c.length) {
-                ((lm) this).field_E = 0;
+                this.field_E = 0;
                 return;
               } else {
                 return;
@@ -36,10 +38,17 @@ final class lm extends fb {
     }
 
     public static void i(int param0) {
+        boolean discarded$0 = false;
+        if (param0 != 3) {
+            discarded$0 = lm.f((byte) -9);
+            field_D = null;
+            return;
+        }
         field_D = null;
     }
 
     final static boolean f(byte param0) {
+        boolean discarded$5 = false;
         if (param0 > 124) {
           if (rn.field_b != null) {
             if (!rn.field_b.c(119)) {
@@ -51,7 +60,7 @@ final class lm extends fb {
             return false;
           }
         } else {
-          boolean discarded$5 = lm.f((byte) 23);
+          discarded$5 = lm.f((byte) 23);
           if (rn.field_b != null) {
             if (!rn.field_b.c(119)) {
               return false;
@@ -66,34 +75,31 @@ final class lm extends fb {
 
     final void a(byte param0, wk param1) {
         int var3_int = 0;
+        boolean discarded$0 = false;
         int var4 = 0;
         try {
-            var3_int = param1.a(((lm) this).field_y >> 16, (byte) -96);
+            var3_int = param1.a(this.field_y >> 106404400, (byte) -96);
             if (param0 >= -76) {
-                boolean discarded$0 = lm.f((byte) -99);
+                discarded$0 = lm.f((byte) -99);
             }
-            var4 = param1.a(((lm) this).field_x >> 16, 0) + -((lm) this).field_H;
-            ob.field_c[((lm) this).field_E].b(var3_int, var4);
+            var4 = param1.a(this.field_x >> 22567472, 0) + -this.field_H;
+            ob.field_c[this.field_E].b(var3_int, var4);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "lm.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "lm.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     lm(int param0, int param1, int param2) {
         super(param0, param1, 0);
-        ((lm) this).field_G = 20;
-        ((lm) this).field_H = param2 + 150;
-        ((lm) this).field_G = so.c(3) - -3;
-        ((lm) this).field_F = so.c(((lm) this).field_G);
-        ((lm) this).field_E = so.c(5);
+        this.field_G = 20;
+        this.field_H = param2 + 150;
+        this.field_G = so.c(3) - -3;
+        this.field_F = so.c(this.field_G);
+        this.field_E = so.c(5);
         int discarded$0 = so.a(pi.field_k);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_D = "Type your age in years";
     }
 }

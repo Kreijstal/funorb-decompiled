@@ -111,6 +111,7 @@ final class ii extends wm {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
@@ -142,16 +143,19 @@ final class ii extends wm {
             if (var3_int == 0) {
               stackOut_5_0 = vm.field_u;
               stackIn_6_0 = stackOut_5_0;
-              return stackIn_6_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param1 == -40) {
                 stackOut_10_0 = dc.field_b;
                 stackIn_11_0 = stackOut_10_0;
+                decompiledRegionSelector0 = 2;
                 break L0;
               } else {
                 stackOut_8_0 = (tb) null;
                 stackIn_9_0 = stackOut_8_0;
-                return stackIn_9_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -185,7 +189,15 @@ final class ii extends wm {
           }
           throw dh.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');
         }
-        return stackIn_11_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0;
+          } else {
+            return stackIn_11_0;
+          }
+        }
     }
 
     ii(rk param0) {

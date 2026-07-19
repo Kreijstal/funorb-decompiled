@@ -26,6 +26,7 @@ abstract class bb {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
@@ -44,51 +45,55 @@ abstract class bb {
               param2 = param2 - param1[0];
               param0 = param0 - param1[1];
               param6 = param6 - param1[1];
-              var9_int = param7 * param1[11] + (param1[9] * param2 + param1[10] * param6) >> 16;
+              var9_int = param7 * param1[11] + (param1[9] * param2 + param1[10] * param6) >> 1239012016;
               if (var9_int <= 0) {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
-                var10 = param1[10] * param0 + param5 * param1[9] + param1[11] * param8 >> 16;
-                if (var10 > 0) {
-                  var11 = param1[3] * param2 - (-(param6 * param1[4]) + -(param1[5] * param7)) >> 7;
-                  var12 = param7 * param1[8] + param6 * param1[7] + param1[6] * param2 >> 7;
-                  var13 = param0 * param1[4] + param1[3] * param5 - -(param8 * param1[5]) >> 7;
+                var10 = param1[10] * param0 + param5 * param1[9] + param1[11] * param8 >> 1606936624;
+                if (-1 > (var10 ^ -1)) {
+                  var11 = param1[3] * param2 - (-(param6 * param1[4]) + -(param1[5] * param7)) >> 457666119;
+                  var12 = param7 * param1[8] + param6 * param1[7] + param1[6] * param2 >> -767190489;
+                  var13 = param0 * param1[4] + param1[3] * param5 - -(param8 * param1[5]) >> -595812473;
                   var13 = qh.field_b - (-fb.field_q - var13 / var10);
                   var12 = var12 / var9_int + (qh.field_c + fb.field_d);
                   var11 = var11 / var9_int + qh.field_b + fb.field_q;
-                  var14 = param8 * param1[8] + param1[6] * param5 + param0 * param1[7] >> 7;
+                  var14 = param8 * param1[8] + param1[6] * param5 + param0 * param1[7] >> 1753129159;
                   var14 = qh.field_c - (-fb.field_d + -(var14 / var10));
                   qh.d(var11, var12, var13, var14, param4);
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var9 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var9;
+            stackOut_9_0 = (RuntimeException) (var9);
             stackOut_9_1 = new StringBuilder().append("bb.G(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L1;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -96,11 +101,25 @@ abstract class bb {
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, boolean param6) {
+        int incrementValue$1 = 0;
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -111,6 +130,7 @@ abstract class bb {
         int var13 = 0;
         int var14 = 0;
         int stackIn_27_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_26_0 = 0;
         int stackOut_25_0 = 0;
@@ -118,17 +138,19 @@ abstract class bb {
         try {
           L0: {
             if (param4 <= param2) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param1 <= param2 + 1) {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 L1: {
                   if (param2 + 5 >= param1) {
                     break L1;
                   } else {
                     if (param3 != param0) {
-                      var7_int = (param3 & param0 & 1) + ((param0 >> 1) - -(param3 >> 1));
+                      var7_int = (param3 & param0 & 1) + ((param0 >> 1909151201) - -(param3 >> 1079278113));
                       var8 = param2;
                       var9 = param3;
                       var10 = param0;
@@ -138,6 +160,7 @@ abstract class bb {
                           if (var11 >= param1) {
                             bb.a(var9, var8, param2, param3, param4, (byte) -95, param6);
                             bb.a(param0, param1, var8, var10, param4, (byte) -99, param6);
+                            decompiledRegionSelector0 = 4;
                             break L0;
                           } else {
                             L3: {
@@ -152,37 +175,36 @@ abstract class bb {
                                 break L3;
                               }
                             }
-                            var13 = stackIn_27_0;
-                            if (var13 <= var7_int) {
-                              L4: {
-                                if (var13 <= var10) {
+                            L4: {
+                              var13 = stackIn_27_0;
+                              if (var13 <= var7_int) {
+                                if (var13 > var10) {
+                                  var10 = var13;
                                   break L4;
                                 } else {
-                                  break L4;
+                                  var11++;
+                                  continue L2;
                                 }
-                              }
-                              var11++;
-                              continue L2;
-                            } else {
-                              L5: {
+                              } else {
                                 ep.field_H[var11] = ep.field_H[var8];
-                                int incrementValue$1 = var8;
+                                incrementValue$1 = var8;
                                 var8++;
                                 ep.field_H[incrementValue$1] = var12;
                                 if (var9 > var13) {
                                   var9 = var13;
-                                  break L5;
+                                  break L4;
                                 } else {
-                                  break L5;
+                                  break L4;
                                 }
                               }
-                              var11++;
-                              continue L2;
                             }
+                            var11++;
+                            continue L2;
                           }
                         }
                       } else {
-                        return;
+                        decompiledRegionSelector0 = 3;
+                        break L0;
                       }
                     } else {
                       break L1;
@@ -190,29 +212,30 @@ abstract class bb {
                   }
                 }
                 var7_int = param1 - 1;
-                L6: while (true) {
+                L5: while (true) {
                   if (var7_int <= param2) {
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     var8 = param2;
-                    L7: while (true) {
+                    L6: while (true) {
                       if (var8 >= var7_int) {
                         var7_int--;
-                        continue L6;
+                        continue L5;
                       } else {
-                        L8: {
+                        L7: {
                           var9 = ep.field_H[var8];
                           var10 = ep.field_H[var8 - -1];
                           if (he.a(var9, param6, var10, 0)) {
                             ep.field_H[var8] = var10;
                             ep.field_H[var8 + 1] = var9;
-                            break L8;
+                            break L7;
                           } else {
-                            break L8;
+                            break L7;
                           }
                         }
                         var8++;
-                        continue L7;
+                        continue L6;
                       }
                     }
                   }
@@ -223,13 +246,30 @@ abstract class bb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var7, "bb.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw wm.a((Throwable) ((Object) var7), "bb.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                return;
+              }
+            }
+          }
         }
     }
 
     final static double a(byte param0, int param1, long param2) {
-        int var4 = 0;
-        return (double)param2 / (double)65536;
+        int var4 = -8 % ((param0 - -43) / 55);
+        return (double)param2 / (double)(1 << param1);
     }
 
     abstract void a(int param0, int param1, int param2);
@@ -245,14 +285,12 @@ abstract class bb {
     }
 
     final static int a(int param0, int param1, byte param2) {
-        return (qh.field_b - -fb.field_q << 2) + (param1 << 11) / param0;
+        if (param2 != 99) {
+        }
+        return (qh.field_b - -fb.field_q << -985335230) + (param1 << 776491) / param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Year";
     }
 }

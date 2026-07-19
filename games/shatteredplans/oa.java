@@ -21,7 +21,7 @@ final class oa {
         try {
           L0: {
             L1: {
-              if (param1 >= 0) {
+              if (-1 >= (param1 ^ -1)) {
                 break L1;
               } else {
                 param2 = param2 + param1;
@@ -30,7 +30,7 @@ final class oa {
               }
             }
             L2: {
-              if (param4 < 0) {
+              if ((param4 ^ -1) > -1) {
                 param0 = param0 + param4;
                 param4 = 0;
                 break L2;
@@ -65,13 +65,13 @@ final class oa {
                 var8 = param1 + gf.field_b * var6;
                 var9 = param2;
                 L6: while (true) {
-                  if (var9 <= 0) {
+                  if ((var9 ^ -1) >= -1) {
                     var6++;
                     continue L5;
                   } else {
                     var8++;
                     var10 = gf.field_h[var8];
-                    var10 = (var10 >> 2 & 4144959) + (8355711 & var10 >> 1);
+                    var10 = (var10 >> -1233052606 & 4144959) + (8355711 & var10 >> -80429087);
                     gf.field_h[var8] = var10;
                     var9--;
                     continue L6;
@@ -83,12 +83,14 @@ final class oa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var5, "oa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw r.a((Throwable) ((Object) var5), "oa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void a(int param0) {
         try {
+            IOException iOException = null;
+            IOException var2_ref = null;
             int var1_int = 0;
             RuntimeException var1 = null;
             int var3 = 0;
@@ -97,58 +99,78 @@ final class oa {
             try {
               L0: {
                 L1: {
-                  if (vp.field_o == null) {
+                  if (param0 == 0) {
                     break L1;
                   } else {
-                    vp.field_o.e(-16363);
+                    oa.b(-14);
                     break L1;
                   }
                 }
                 L2: {
-                  if (vn.field_w == null) {
+                  if (vp.field_o == null) {
                     break L2;
                   } else {
-                    vn.field_w.a((byte) -122);
+                    vp.field_o.e(param0 + -16363);
                     break L2;
                   }
                 }
                 L3: {
-                  if (null == oq.field_g) {
+                  if (vn.field_w == null) {
                     break L3;
                   } else {
-                    {
-                      L4: {
-                        oq.field_g.b((byte) 127);
-                        break L4;
-                      }
-                    }
+                    vn.field_w.a((byte) -122);
                     break L3;
                   }
                 }
-                L6: {
+                L4: {
+                  if (null == oq.field_g) {
+                    break L4;
+                  } else {
+                    try {
+                      L5: {
+                        oq.field_g.b((byte) 127);
+                        break L5;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L6: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        break L6;
+                      }
+                    }
+                    break L4;
+                  }
+                }
+                L7: {
                   if (null == tr.field_Eb) {
-                    break L6;
+                    break L7;
                   } else {
                     var1_int = 0;
-                    L7: while (true) {
+                    L8: while (true) {
                       if (var1_int >= tr.field_Eb.length) {
-                        break L6;
+                        break L7;
                       } else {
-                        L8: {
+                        L9: {
                           if (tr.field_Eb[var1_int] != null) {
-                            {
-                              L9: {
+                            try {
+                              L10: {
                                 tr.field_Eb[var1_int].b((byte) -65);
-                                break L9;
+                                break L10;
+                              }
+                            } catch (java.io.IOException decompiledCaughtParameter1) {
+                              decompiledCaughtException = decompiledCaughtParameter1;
+                              L11: {
+                                var2_ref = (IOException) (Object) decompiledCaughtException;
+                                break L11;
                               }
                             }
-                            break L8;
+                            break L9;
                           } else {
-                            break L8;
+                            break L9;
                           }
                         }
                         var1_int++;
-                        continue L7;
+                        continue L8;
                       }
                     }
                   }
@@ -158,7 +180,7 @@ final class oa {
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw r.a((Throwable) (Object) var1, "oa.C(" + 0 + ')');
+              throw r.a((Throwable) ((Object) var1), "oa.C(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -177,14 +199,17 @@ final class oa {
         if (var2 == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
-        if (var2 >= 128) {
-            if (!(var2 >= 160)) {
+        if ((var2 ^ -1) <= -129) {
+            if (!((var2 ^ -1) <= -161)) {
                 var3 = tl.field_p[-128 + var2];
                 if (var3 == 0) {
                     var3 = 63;
                 }
                 var2 = var3;
             }
+        }
+        if (param0 != -12541) {
+            return 'ﾷ';
         }
         return (char)var2;
     }
@@ -198,14 +223,13 @@ final class oa {
 
     public static void b(int param0) {
         field_b = null;
+        if (param0 <= 7) {
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new fg();
     }
 }

@@ -11,95 +11,128 @@ final class km {
 
     final static int b(int param0, int param1) {
         int var2 = 0;
-        L0: {
-          var2 = 0;
-          if (param1 < 0) {
+        var2 = 0;
+        if ((param1 ^ -1) <= -1) {
+          if (65536 <= param1) {
+            L0: {
+              var2 += 16;
+              param1 = param1 >>> 16;
+              if (-257 < (param1 ^ -1)) {
+                break L0;
+              } else {
+                param1 = param1 >>> 8;
+                var2 += 8;
+                break L0;
+              }
+            }
+            L1: {
+              if (param1 >= 16) {
+                param1 = param1 >>> 4;
+                var2 += 4;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              if (param0 <= param1) {
+                param1 = param1 >>> 2;
+                var2 += 2;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              if (-2 < (param1 ^ -1)) {
+                break L3;
+              } else {
+                param1 = param1 >>> 1;
+                var2++;
+                break L3;
+              }
+            }
+            return param1 + var2;
+          } else {
+            L4: {
+              if (-257 < (param1 ^ -1)) {
+                break L4;
+              } else {
+                param1 = param1 >>> 8;
+                var2 += 8;
+                break L4;
+              }
+            }
+            L5: {
+              if (param1 >= 16) {
+                param1 = param1 >>> 4;
+                var2 += 4;
+                break L5;
+              } else {
+                break L5;
+              }
+            }
+            L6: {
+              if (param0 <= param1) {
+                param1 = param1 >>> 2;
+                var2 += 2;
+                break L6;
+              } else {
+                break L6;
+              }
+            }
+            L7: {
+              if (-2 < (param1 ^ -1)) {
+                break L7;
+              } else {
+                param1 = param1 >>> 1;
+                var2++;
+                break L7;
+              }
+            }
+            return param1 + var2;
+          }
+        } else {
+          L8: {
             var2 += 16;
             param1 = param1 >>> 16;
-            break L0;
-          } else {
-            if (65536 > param1) {
-              break L0;
+            if (-257 < (param1 ^ -1)) {
+              break L8;
             } else {
-              L1: {
-                var2 += 16;
-                param1 = param1 >>> 16;
-                if (param1 < 256) {
-                  break L1;
-                } else {
-                  param1 = param1 >>> 8;
-                  var2 += 8;
-                  break L1;
-                }
-              }
-              L2: {
-                if (param1 >= 16) {
-                  param1 = param1 >>> 4;
-                  var2 += 4;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if (4 <= param1) {
-                  param1 = param1 >>> 2;
-                  var2 += 2;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                if (param1 < 1) {
-                  break L4;
-                } else {
-                  param1 = param1 >>> 1;
-                  var2++;
-                  break L4;
-                }
-              }
-              return param1 + var2;
+              param1 = param1 >>> 8;
+              var2 += 8;
+              break L8;
             }
           }
-        }
-        L5: {
-          if (param1 < 256) {
-            break L5;
-          } else {
-            param1 = param1 >>> 8;
-            var2 += 8;
-            break L5;
+          L9: {
+            if (param1 >= 16) {
+              param1 = param1 >>> 4;
+              var2 += 4;
+              break L9;
+            } else {
+              break L9;
+            }
           }
-        }
-        L6: {
-          if (param1 >= 16) {
-            param1 = param1 >>> 4;
-            var2 += 4;
-            break L6;
-          } else {
-            break L6;
+          L10: {
+            if (param0 <= param1) {
+              param1 = param1 >>> 2;
+              var2 += 2;
+              break L10;
+            } else {
+              break L10;
+            }
           }
-        }
-        L7: {
-          if (4 <= param1) {
-            param1 = param1 >>> 2;
-            var2 += 2;
-            break L7;
-          } else {
-            break L7;
+          L11: {
+            if (-2 < (param1 ^ -1)) {
+              break L11;
+            } else {
+              param1 = param1 >>> 1;
+              var2++;
+              break L11;
+            }
           }
+          return param1 + var2;
         }
-        L8: {
-          if (param1 < 1) {
-            break L8;
-          } else {
-            param1 = param1 >>> 1;
-            var2++;
-            break L8;
-          }
-        }
-        return param1 + var2;
     }
 
     public static void a(int param0) {
@@ -111,10 +144,6 @@ final class km {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "No highscores";
         field_a = "Invincibility";
     }

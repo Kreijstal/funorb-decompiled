@@ -16,6 +16,9 @@ final class f implements Iterator {
     static String field_h;
 
     final static String a(int param0) {
+        if (param0 != 8) {
+            f.a((byte) -24);
+        }
         if (!(pa.field_l != ao.field_Kb)) {
             return ea.field_e;
         }
@@ -44,6 +47,7 @@ final class f implements Iterator {
         RuntimeException stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
         String stackIn_77_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_69_0 = 0;
         int stackOut_2_0 = 0;
@@ -66,19 +70,20 @@ final class f implements Iterator {
         var9 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            var6_int = param0;
+            var6_int = param0 - param3;
             if (param2 <= -120) {
               var7 = 0;
               L1: while (true) {
                 if (var6_int <= var7) {
                   stackOut_69_0 = var6_int;
                   stackIn_70_0 = stackOut_69_0;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   L2: {
                     L3: {
                       L4: {
-                        var8 = param5.charAt(var7);
+                        var8 = param5.charAt(var7 + param3);
                         if (var8 <= 0) {
                           break L4;
                         } else {
@@ -101,19 +106,19 @@ final class f implements Iterator {
                         }
                       }
                       if (var8 == 8364) {
-                        param4[param1 + var7] = (byte) -128;
+                        param4[param1 + var7] = (byte)-128;
                         break L2;
                       } else {
                         if (8218 == var8) {
-                          param4[param1 + var7] = (byte) -126;
+                          param4[param1 + var7] = (byte)-126;
                           break L2;
                         } else {
                           if (var8 == 402) {
-                            param4[param1 + var7] = (byte) -125;
+                            param4[param1 + var7] = (byte)-125;
                             break L2;
                           } else {
                             if (var8 == 8222) {
-                              param4[param1 + var7] = (byte) -124;
+                              param4[param1 + var7] = (byte)-124;
                               break L2;
                             } else {
                               if (var8 != 8230) {
@@ -121,18 +126,18 @@ final class f implements Iterator {
                                   if (var8 != 8225) {
                                     if (var8 != 710) {
                                       if (var8 == 8240) {
-                                        param4[param1 - -var7] = (byte) -119;
+                                        param4[param1 - -var7] = (byte)-119;
                                         break L2;
                                       } else {
                                         if (var8 != 352) {
                                           if (var8 != 8249) {
                                             if (338 == var8) {
-                                              param4[param1 + var7] = (byte) -116;
+                                              param4[param1 + var7] = (byte)-116;
                                               break L2;
                                             } else {
                                               if (var8 != 381) {
                                                 if (var8 == 8216) {
-                                                  param4[param1 - -var7] = (byte) -111;
+                                                  param4[param1 - -var7] = (byte)-111;
                                                   break L2;
                                                 } else {
                                                   if (var8 != 8217) {
@@ -142,95 +147,95 @@ final class f implements Iterator {
                                                           if (var8 != 8211) {
                                                             if (var8 != 8212) {
                                                               if (732 == var8) {
-                                                                param4[var7 + param1] = (byte) -104;
+                                                                param4[var7 + param1] = (byte)-104;
                                                                 break L2;
                                                               } else {
                                                                 if (var8 != 8482) {
                                                                   if (var8 != 353) {
                                                                     if (8250 == var8) {
-                                                                      param4[var7 + param1] = (byte) -101;
+                                                                      param4[var7 + param1] = (byte)-101;
                                                                       break L2;
                                                                     } else {
                                                                       if (var8 == 339) {
-                                                                        param4[param1 - -var7] = (byte) -100;
+                                                                        param4[param1 - -var7] = (byte)-100;
                                                                         break L2;
                                                                       } else {
                                                                         if (var8 == 382) {
-                                                                          param4[param1 - -var7] = (byte) -98;
+                                                                          param4[param1 - -var7] = (byte)-98;
                                                                           break L2;
                                                                         } else {
                                                                           if (376 == var8) {
-                                                                            param4[param1 - -var7] = (byte) -97;
+                                                                            param4[param1 - -var7] = (byte)-97;
                                                                             break L2;
                                                                           } else {
-                                                                            param4[param1 - -var7] = (byte) 63;
+                                                                            param4[param1 - -var7] = (byte)63;
                                                                             break L2;
                                                                           }
                                                                         }
                                                                       }
                                                                     }
                                                                   } else {
-                                                                    param4[param1 - -var7] = (byte) -102;
+                                                                    param4[param1 - -var7] = (byte)-102;
                                                                     break L2;
                                                                   }
                                                                 } else {
-                                                                  param4[param1 - -var7] = (byte) -103;
+                                                                  param4[param1 - -var7] = (byte)-103;
                                                                   break L2;
                                                                 }
                                                               }
                                                             } else {
-                                                              param4[param1 - -var7] = (byte) -105;
+                                                              param4[param1 - -var7] = (byte)-105;
                                                               break L2;
                                                             }
                                                           } else {
-                                                            param4[param1 + var7] = (byte) -106;
+                                                            param4[param1 + var7] = (byte)-106;
                                                             break L2;
                                                           }
                                                         } else {
-                                                          param4[param1 - -var7] = (byte) -107;
+                                                          param4[param1 - -var7] = (byte)-107;
                                                           break L2;
                                                         }
                                                       } else {
-                                                        param4[param1 - -var7] = (byte) -108;
+                                                        param4[param1 - -var7] = (byte)-108;
                                                         break L2;
                                                       }
                                                     } else {
-                                                      param4[param1 + var7] = (byte) -109;
+                                                      param4[param1 + var7] = (byte)-109;
                                                       break L2;
                                                     }
                                                   } else {
-                                                    param4[param1 + var7] = (byte) -110;
+                                                    param4[param1 + var7] = (byte)-110;
                                                     break L2;
                                                   }
                                                 }
                                               } else {
-                                                param4[var7 + param1] = (byte) -114;
+                                                param4[var7 + param1] = (byte)-114;
                                                 break L2;
                                               }
                                             }
                                           } else {
-                                            param4[var7 + param1] = (byte) -117;
+                                            param4[var7 + param1] = (byte)-117;
                                             break L2;
                                           }
                                         } else {
-                                          param4[param1 - -var7] = (byte) -118;
+                                          param4[param1 - -var7] = (byte)-118;
                                           break L2;
                                         }
                                       }
                                     } else {
-                                      param4[var7 + param1] = (byte) -120;
+                                      param4[var7 + param1] = (byte)-120;
                                       break L2;
                                     }
                                   } else {
-                                    param4[param1 - -var7] = (byte) -121;
+                                    param4[param1 - -var7] = (byte)-121;
                                     break L2;
                                   }
                                 } else {
-                                  param4[param1 + var7] = (byte) -122;
+                                  param4[param1 + var7] = (byte)-122;
                                   break L2;
                                 }
                               } else {
-                                param4[param1 - -var7] = (byte) -123;
+                                param4[param1 - -var7] = (byte)-123;
                                 break L2;
                               }
                             }
@@ -248,30 +253,31 @@ final class f implements Iterator {
             } else {
               stackOut_2_0 = 107;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_71_0 = (RuntimeException) var6;
-            stackOut_71_1 = new StringBuilder().append("f.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(0).append(',');
+            stackOut_71_0 = (RuntimeException) (var6);
+            stackOut_71_1 = new StringBuilder().append("f.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;
             stackIn_72_1 = stackOut_71_1;
             if (param4 == null) {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackOut_73_2 = "null";
               stackIn_74_0 = stackOut_73_0;
               stackIn_74_1 = stackOut_73_1;
               stackIn_74_2 = stackOut_73_2;
               break L6;
             } else {
-              stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
-              stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
+              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
               stackOut_72_2 = "{...}";
               stackIn_74_0 = stackOut_72_0;
               stackIn_74_1 = stackOut_72_1;
@@ -280,23 +286,23 @@ final class f implements Iterator {
             }
           }
           L7: {
-            stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
+            stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
             stackOut_74_1 = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_74_2).append(',');
             stackIn_76_0 = stackOut_74_0;
             stackIn_76_1 = stackOut_74_1;
             stackIn_75_0 = stackOut_74_0;
             stackIn_75_1 = stackOut_74_1;
             if (param5 == null) {
-              stackOut_76_0 = (RuntimeException) (Object) stackIn_76_0;
-              stackOut_76_1 = (StringBuilder) (Object) stackIn_76_1;
+              stackOut_76_0 = (RuntimeException) ((Object) stackIn_76_0);
+              stackOut_76_1 = (StringBuilder) ((Object) stackIn_76_1);
               stackOut_76_2 = "null";
               stackIn_77_0 = stackOut_76_0;
               stackIn_77_1 = stackOut_76_1;
               stackIn_77_2 = stackOut_76_2;
               break L7;
             } else {
-              stackOut_75_0 = (RuntimeException) (Object) stackIn_75_0;
-              stackOut_75_1 = (StringBuilder) (Object) stackIn_75_1;
+              stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
+              stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
               stackOut_75_2 = "{...}";
               stackIn_77_0 = stackOut_75_0;
               stackIn_77_1 = stackOut_75_1;
@@ -304,9 +310,13 @@ final class f implements Iterator {
               break L7;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_77_0), stackIn_77_2 + ')');
         }
-        return stackIn_70_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_70_0;
+        }
     }
 
     final static void a(byte param0) {
@@ -324,15 +334,15 @@ final class f implements Iterator {
     }
 
     public final Object next() {
-        wb var1 = ((f) this).field_a;
-        if (((f) this).field_e.field_e != var1) {
-            ((f) this).field_a = var1.field_h;
+        wb var1 = this.field_a;
+        if (this.field_e.field_e != var1) {
+            this.field_a = var1.field_h;
         } else {
-            ((f) this).field_a = null;
+            this.field_a = null;
             var1 = null;
         }
-        ((f) this).field_i = var1;
-        return (Object) (Object) var1;
+        this.field_i = var1;
+        return var1;
     }
 
     final static boolean b(int param0) {
@@ -343,7 +353,7 @@ final class f implements Iterator {
           if (param0 == -844) {
             break L0;
           } else {
-            field_d = null;
+            field_d = (String) null;
             break L0;
           }
         }
@@ -352,7 +362,7 @@ final class f implements Iterator {
             if (!mi.a((byte) -119)) {
               break L2;
             } else {
-              if ((8 & id.field_r) != 0) {
+              if (-1 != (8 & id.field_r ^ -1)) {
                 break L2;
               } else {
                 stackOut_4_0 = 1;
@@ -369,7 +379,7 @@ final class f implements Iterator {
     }
 
     public final boolean hasNext() {
-        return ((f) this).field_a != ((f) this).field_e.field_e;
+        return this.field_a != this.field_e.field_e;
     }
 
     public static void b(byte param0) {
@@ -383,40 +393,39 @@ final class f implements Iterator {
     }
 
     f(eb param0) {
-        ((f) this).field_i = null;
+        this.field_i = null;
         try {
-            ((f) this).field_e = param0;
-            ((f) this).field_a = ((f) this).field_e.field_e.field_h;
-            ((f) this).field_i = null;
+            this.field_e = param0;
+            this.field_a = this.field_e.field_e.field_h;
+            this.field_i = null;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "f.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String a(char param0, int param1, byte param2) {
         int var4 = 0;
         int var5 = Virogrid.field_F ? 1 : 0;
+        if (param2 >= -3) {
+            field_c = (km) null;
+        }
         char[] var6 = new char[param1];
         char[] var3 = var6;
         for (var4 = 0; var4 < param1; var4++) {
-            var6[var4] = '*';
+            var6[var4] = param0;
         }
         return new String(var6);
     }
 
     public final void remove() {
-        if (((f) this).field_i == null) {
+        if (this.field_i == null) {
             throw new IllegalStateException();
         }
-        ((f) this).field_i.c(25);
-        ((f) this).field_i = null;
+        this.field_i.c(25);
+        this.field_i = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "RuneScape clan";
         field_d = "Set up new game";
         field_h = "Hide lobby chat";

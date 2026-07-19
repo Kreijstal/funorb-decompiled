@@ -12,14 +12,14 @@ class wb extends l {
     wb field_k;
 
     final void c(int param0) {
-        if (((wb) this).field_k != null) {
+        if (this.field_k != null) {
           if (param0 < 10) {
             return;
           } else {
-            ((wb) this).field_k.field_h = ((wb) this).field_h;
-            ((wb) this).field_h.field_k = ((wb) this).field_k;
-            ((wb) this).field_k = null;
-            ((wb) this).field_h = null;
+            this.field_k.field_h = this.field_h;
+            this.field_h.field_k = this.field_k;
+            this.field_k = null;
+            this.field_h = null;
             return;
           }
         } else {
@@ -32,15 +32,15 @@ class wb extends l {
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
         if (param0 != 1) {
-          field_n = null;
-          if (((wb) this).field_k != null) {
+          field_n = (String) null;
+          if (this.field_k != null) {
             return true;
           } else {
             return false;
           }
         } else {
           L0: {
-            if (((wb) this).field_k == null) {
+            if (this.field_k == null) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -55,20 +55,20 @@ class wb extends l {
     }
 
     final void a(int param0, long param1) {
-        if (((wb) this).field_k != null) {
+        if (this.field_k != null) {
             throw new RuntimeException();
         }
         if (param0 != 0) {
             return;
         }
-        ((wb) this).field_j = param1;
+        this.field_j = param1;
     }
 
     final static void a(int param0, int param1) {
         hg var2 = gk.field_g;
-        var2.g(6, 8);
-        var2.a(1, 62);
-        var2.a(0, 80);
+        var2.g(param0, 8);
+        var2.a(1, param1 + 62);
+        var2.a(param1, 80);
     }
 
     final static void a(boolean param0, byte param1, boolean param2) {
@@ -90,26 +90,30 @@ class wb extends l {
         field_n = null;
         field_g = null;
         field_m = null;
-        field_i = null;
-        field_l = null;
+        if (!param0) {
+          field_i = (String) null;
+          field_i = null;
+          field_l = null;
+          return;
+        } else {
+          field_i = null;
+          field_l = null;
+          return;
+        }
     }
 
     final long a(byte param0) {
         if (param0 <= 12) {
-            ((wb) this).field_j = 6L;
-            return ((wb) this).field_j;
+            this.field_j = 6L;
+            return this.field_j;
         }
-        return ((wb) this).field_j;
+        return this.field_j;
     }
 
     protected wb() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "Show chat";
         field_l = "New Game";
         field_i = "Orb coins: ";

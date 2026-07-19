@@ -10,7 +10,7 @@ final class e {
 
     final static boolean a(int param0) {
         if (param0 >= -71) {
-            Object var2 = null;
+            o[] var2 = (o[]) null;
             e.a((o[]) null, 123, 6, (byte) 67, 68, 39);
             return qb.field_p;
         }
@@ -20,10 +20,16 @@ final class e {
     public static void a(byte param0) {
         field_c = null;
         field_e = null;
+        if (param0 != -2) {
+            field_c = (String) null;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
     final static void a(o[] param0, int param1, int param2, byte param3, int param4, int param5) {
+        boolean discarded$1 = false;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -38,6 +44,7 @@ final class e {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
@@ -59,7 +66,7 @@ final class e {
                     if (param3 > 27) {
                       break L2;
                     } else {
-                      boolean discarded$1 = e.a(59);
+                      discarded$1 = e.a(59);
                       break L2;
                     }
                   }
@@ -76,6 +83,7 @@ final class e {
                   L3: while (true) {
                     if (param4 >= var10) {
                       ed.a(ac.field_q);
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       param0[1].d(param4, param1, param2);
@@ -88,29 +96,30 @@ final class e {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var6;
+            stackOut_11_0 = (RuntimeException) (var6);
             stackOut_11_1 = new StringBuilder().append("e.B(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -118,15 +127,16 @@ final class e {
               break L4;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Continue";
         field_c = "Unfortunately your configuration doesn't support fullscreen mode.";
     }

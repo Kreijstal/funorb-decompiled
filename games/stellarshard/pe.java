@@ -9,21 +9,25 @@ final class pe {
     final static void b(int param0) {
         n.field_i = nk.a(-20);
         na.field_d = new ei();
-        th.a(true, true, 4);
+        th.a(true, true, param0);
     }
 
     final static void c(int param0) {
+        int discarded$48 = 0;
+        int discarded$49 = 0;
+        int discarded$50 = 0;
+        int discarded$51 = 0;
         u var1 = null;
         ha var2 = null;
-        var1 = (u) (Object) i.field_c.b(-103);
+        var1 = (u) ((Object) i.field_c.b(-103));
         if (var1 != null) {
           var2 = ae.field_N;
-          int discarded$48 = var2.b(false);
-          int discarded$49 = var2.b(false);
-          int discarded$50 = var2.b(false);
-          int discarded$51 = var2.b(false);
+          discarded$48 = var2.b(false);
+          discarded$49 = var2.b(false);
+          discarded$50 = var2.b(false);
+          discarded$51 = var2.b(false);
           if (param0 != 25214) {
-            field_c = null;
+            field_c = (bd) null;
             var1.c(param0 + -25194);
             return;
           } else {
@@ -88,10 +92,6 @@ final class pe {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Ship shield";
         field_b = "This password contains repeated characters, and would be easy to guess";
     }

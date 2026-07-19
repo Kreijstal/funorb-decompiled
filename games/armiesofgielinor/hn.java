@@ -14,10 +14,10 @@ abstract class hn extends tc {
     abstract int c();
 
     final void a(int[] param0, int param1, int param2) {
-        if (((hn) this).field_l) {
-            ((hn) this).b(param0, param1, param2);
+        if (this.field_l) {
+            this.b(param0, param1, param2);
         } else {
-            ((hn) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -26,7 +26,7 @@ abstract class hn extends tc {
     abstract void a(int param0);
 
     protected hn() {
-        ((hn) this).field_l = true;
+        this.field_l = true;
     }
 
     int d() {

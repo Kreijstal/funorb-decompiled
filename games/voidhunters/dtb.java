@@ -5,12 +5,15 @@ final class dtb implements dja {
     static String field_a;
 
     public static void b(byte param0) {
+        if (param0 != 124) {
+            return;
+        }
         field_a = null;
     }
 
     public final tv a(byte param0) {
         int var2 = 49 % ((-64 - param0) / 50);
-        return (tv) (Object) new bea();
+        return (tv) ((Object) new bea());
     }
 
     final static fm[] a(eab param0, int param1) {
@@ -23,69 +26,77 @@ final class dtb implements dja {
         mob var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
         fm[] stackIn_4_0 = null;
         fm[] stackIn_10_0 = null;
-        fm[] stackIn_15_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
+        fm[] stackIn_17_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         fm[] stackOut_3_0 = null;
-        fm[] stackOut_14_0 = null;
+        fm[] stackOut_16_0 = null;
         fm[] stackOut_9_0 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
         RuntimeException stackOut_18_0 = null;
         StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var7 = VoidHunters.field_G;
         try {
           L0: {
             if (!param0.a(0)) {
               stackOut_3_0 = new fm[]{};
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               var8 = param0.d(85);
               L1: while (true) {
                 if (var8.field_f != 0) {
                   if (2 != var8.field_f) {
-                    var12 = (int[]) var8.field_d;
-                    var11 = var12;
-                    var10 = var11;
+                    L2: {
+                      if (param1 == -30334) {
+                        break L2;
+                      } else {
+                        field_a = (String) null;
+                        break L2;
+                      }
+                    }
+                    var10 = (int[]) (var8.field_d);
                     var9 = var10;
                     var3 = var9;
-                    var4 = new fm[var12.length >> 2];
+                    var4 = new fm[var10.length >> -154401150];
                     var5 = 0;
-                    L2: while (true) {
+                    L3: while (true) {
                       if (var5 >= var4.length) {
-                        stackOut_14_0 = (fm[]) var4;
-                        stackIn_15_0 = stackOut_14_0;
+                        stackOut_16_0 = (fm[]) (var4);
+                        stackIn_17_0 = stackOut_16_0;
+                        decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
                         var6 = new fm();
                         var4[var5] = var6;
-                        var6.field_c = var3[var5 << 2];
-                        var6.field_a = var3[1 + (var5 << 2)];
-                        var6.field_e = var3[2 + (var5 << 2)];
-                        var6.field_d = var3[(var5 << 2) - -3];
+                        var6.field_c = var3[var5 << -985098878];
+                        var6.field_a = var3[1 + (var5 << 569835714)];
+                        var6.field_e = var3[2 + (var5 << -845278878)];
+                        var6.field_d = var3[(var5 << 242657410) - -3];
                         var5++;
-                        continue L2;
+                        continue L3;
                       }
                     }
                   } else {
                     stackOut_9_0 = new fm[]{};
                     stackIn_10_0 = stackOut_9_0;
-                    return stackIn_10_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 } else {
                   gdb.b(127, 10L);
@@ -96,43 +107,52 @@ final class dtb implements dja {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var2 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var2;
-            stackOut_16_1 = new StringBuilder().append("dtb.D(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackOut_18_0 = (RuntimeException) (var2);
+            stackOut_18_1 = new StringBuilder().append("dtb.D(");
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
-              break L3;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
-              break L3;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + -30334 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ')');
         }
-        return stackIn_15_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_10_0;
+          } else {
+            return stackIn_17_0;
+          }
+        }
     }
 
     public final tv[] a(int param0, int param1) {
+        boolean discarded$0 = false;
         if (param0 != 11995) {
-            Object var4 = null;
-            boolean discarded$0 = dtb.a('￸', 101, (CharSequence) null);
+            CharSequence var4 = (CharSequence) null;
+            discarded$0 = dtb.a('￸', 101, (CharSequence) null);
         }
-        return (tv[]) (Object) new bea[param1];
+        return (tv[]) ((Object) new bea[param1]);
     }
 
     final static boolean a(char param0, int param1, CharSequence param2) {
@@ -151,6 +171,7 @@ final class dtb implements dja {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_14_0 = 0;
         int stackOut_16_0 = 0;
@@ -182,55 +203,61 @@ final class dtb implements dja {
                         } else {
                           stackOut_14_0 = 0;
                           stackIn_15_0 = stackOut_14_0;
-                          return stackIn_15_0 != 0;
+                          decompiledRegionSelector0 = 4;
+                          break L0;
                         }
                       }
                     }
                     stackOut_16_0 = 1;
                     stackIn_17_0 = stackOut_16_0;
+                    decompiledRegionSelector0 = 5;
                     break L0;
                   } else {
                     stackOut_10_0 = 0;
                     stackIn_11_0 = stackOut_10_0;
-                    return stackIn_11_0 != 0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   }
                 } else {
                   stackOut_7_0 = 0;
                   stackIn_8_0 = stackOut_7_0;
-                  return stackIn_8_0 != 0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               } else {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
-                return stackIn_5_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var3;
+            stackOut_18_0 = (RuntimeException) (var3);
             stackOut_18_1 = new StringBuilder().append("dtb.C(").append(param0).append(',').append(param1).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param2 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L2;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -238,16 +265,32 @@ final class dtb implements dja {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
         }
-        return stackIn_17_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_5_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_8_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_11_0 != 0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_15_0 != 0;
+                } else {
+                  return stackIn_17_0 != 0;
+                }
+              }
+            }
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Keep the tech in your spawn to deplete the enemy's score";
     }
 }

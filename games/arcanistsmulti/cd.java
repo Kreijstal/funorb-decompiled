@@ -9,16 +9,19 @@ final class cd extends jm {
 
     final static void d(int param0) {
         mn.e(98);
+        if (param0 != 16777215) {
+            field_q = (String) null;
+        }
     }
 
     final static java.applet.Applet e(int param0) {
         if (param0 <= 102) {
-            return null;
+            return (java.applet.Applet) null;
         }
         if (bd.field_c != null) {
             return bd.field_c;
         }
-        return (java.applet.Applet) (Object) ug.field_k;
+        return (java.applet.Applet) ((Object) ug.field_k);
     }
 
     public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
@@ -31,7 +34,7 @@ final class cd extends jm {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        Object var14 = null;
+        qm var14 = null;
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -64,7 +67,7 @@ final class cd extends jm {
             L1: {
               de.a(param0.field_n + param2, param0.field_j + param3, param0.field_v, param0.field_k, 10197915);
               if (param4) {
-                if (((ag) (Object) param0).field_z) {
+                if (((ag) ((Object) param0)).field_z) {
                   stackOut_4_0 = 1;
                   stackIn_6_0 = stackOut_4_0;
                   break L1;
@@ -127,17 +130,17 @@ final class cd extends jm {
                 break L5;
               }
             }
-            var10 = ((cd) this).field_r[var8];
+            var10 = this.field_r[var8];
             var11 = (param0.field_v + -var10.field_h) / 2 + (param2 - -param0.field_n);
             var12 = param0.field_j + param3 - -((-var10.field_c + param0.field_k) / 2);
             var13 = param0.field_v / 2 + param0.field_n + param2;
             var10.a(var11, var12);
-            ((cd) this).field_g.b(((cd) this).a(false, param0), var13, param3, var9, -1);
+            this.field_g.b(this.a(false, param0), var13, param3, var9, -1);
             if (param1 == 5592405) {
               break L0;
             } else {
-              var14 = null;
-              ((cd) this).a((qm) null, 3, -30, -126, true);
+              var14 = (qm) null;
+              this.a((qm) null, 3, -30, -126, true);
               return;
             }
           }
@@ -145,23 +148,23 @@ final class cd extends jm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var6;
+            stackOut_23_0 = (RuntimeException) (var6);
             stackOut_23_1 = new StringBuilder().append("cd.A(");
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L6;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -169,30 +172,35 @@ final class cd extends jm {
               break L6;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(byte param0) {
-        field_q = null;
-        field_p = null;
-        field_s = null;
+        if (param0 < 51) {
+          cd.d(-30);
+          field_q = null;
+          field_p = null;
+          field_s = null;
+          return;
+        } else {
+          field_q = null;
+          field_p = null;
+          field_s = null;
+          return;
+        }
     }
 
     cd(ll[] param0) {
         try {
-            ((cd) this).field_g = ia.field_c;
-            ((cd) this).field_r = param0;
+            this.field_g = ia.field_c;
+            this.field_r = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "cd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "cd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = new int[]{61, 62, 63};
         field_q = "You appear to be telling someone your password - please don't!";
         field_s = "Please try changing the following settings:  ";

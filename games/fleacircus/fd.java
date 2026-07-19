@@ -17,7 +17,7 @@ final class fd {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        var1 = ((fd) this).field_d.length;
+        var1 = this.field_d.length;
         var2 = -1;
         var3 = 2147483647;
         var4 = 0;
@@ -25,10 +25,10 @@ final class fd {
           if (var4 >= var1) {
             return var2;
           } else {
-            if (((fd) this).field_d[var4] >= 0) {
-              if (((fd) this).field_g[var4] < var3) {
+            if (this.field_d[var4] >= 0) {
+              if (this.field_g[var4] < var3) {
                 var2 = var4;
-                var3 = ((fd) this).field_g[var4];
+                var3 = this.field_g[var4];
                 var4++;
                 continue L0;
               } else {
@@ -44,12 +44,12 @@ final class fd {
     }
 
     final int a() {
-        return ((fd) this).field_d.length;
+        return this.field_d.length;
     }
 
     final void e(int param0) {
-        int var2 = ((fd) this).field_c.b(true);
-        ((fd) this).field_g[param0] = ((fd) this).field_g[param0] + var2;
+        int var2 = this.field_c.b(true);
+        this.field_g[param0] = this.field_g[param0] + var2;
     }
 
     private final int d(int param0) {
@@ -57,14 +57,14 @@ final class fd {
         int var3 = 0;
         int var4 = 0;
         L0: {
-          var2 = ((fd) this).field_c.field_k[((fd) this).field_c.field_i];
+          var2 = this.field_c.field_k[this.field_c.field_i];
           if (var2 >= 0) {
-            var2 = ((fd) this).field_h[param0];
+            var2 = this.field_h[param0];
             break L0;
           } else {
             var2 = var2 & 255;
-            ((fd) this).field_h[param0] = var2;
-            ((fd) this).field_c.field_i = ((fd) this).field_c.field_i + 1;
+            this.field_h[param0] = var2;
+            this.field_c.field_i = this.field_c.field_i + 1;
             break L0;
           }
         }
@@ -80,7 +80,7 @@ final class fd {
           }
         }
         L2: {
-          var3 = ((fd) this).field_c.b(true);
+          var3 = this.field_c.b(true);
           if (var2 != 247) {
             break L2;
           } else {
@@ -89,7 +89,7 @@ final class fd {
             } else {
               L3: {
                 L4: {
-                  var4 = ((fd) this).field_c.field_k[((fd) this).field_c.field_i] & 255;
+                  var4 = this.field_c.field_k[this.field_c.field_i] & 255;
                   if (var4 < 241) {
                     break L4;
                   } else {
@@ -125,21 +125,21 @@ final class fd {
                   }
                 }
               }
-              ((fd) this).field_c.field_i = ((fd) this).field_c.field_i + 1;
-              ((fd) this).field_h[param0] = var4;
+              this.field_c.field_i = this.field_c.field_i + 1;
+              this.field_h[param0] = var4;
               return this.a(param0, var4);
             }
           }
         }
-        ((fd) this).field_c.field_i = ((fd) this).field_c.field_i + var3;
+        this.field_c.field_i = this.field_c.field_i + var3;
         return 0;
     }
 
     final boolean g() {
         int var2 = 0;
-        int var1 = ((fd) this).field_d.length;
+        int var1 = this.field_d.length;
         for (var2 = 0; var2 < var1; var2++) {
-            if (((fd) this).field_d[var2] >= 0) {
+            if (this.field_d[var2] >= 0) {
                 return false;
             }
         }
@@ -147,11 +147,11 @@ final class fd {
     }
 
     final void f() {
-        ((fd) this).field_c.field_k = null;
-        ((fd) this).field_b = null;
-        ((fd) this).field_d = null;
-        ((fd) this).field_g = null;
-        ((fd) this).field_h = null;
+        this.field_c.field_k = null;
+        this.field_b = null;
+        this.field_d = null;
+        this.field_g = null;
+        this.field_h = null;
     }
 
     public static void e() {
@@ -159,11 +159,11 @@ final class fd {
     }
 
     final long a(int param0) {
-        return ((fd) this).field_i + (long)param0 * (long)((fd) this).field_e;
+        return this.field_i + (long)param0 * (long)this.field_e;
     }
 
     final void c(int param0) {
-        ((fd) this).field_d[param0] = ((fd) this).field_c.field_i;
+        this.field_d[param0] = this.field_c.field_i;
     }
 
     final int b(int param0) {
@@ -172,110 +172,106 @@ final class fd {
     }
 
     final void d() {
-        ((fd) this).field_c.field_i = -1;
+        this.field_c.field_i = -1;
     }
 
     final void f(int param0) {
-        ((fd) this).field_c.field_i = ((fd) this).field_d[param0];
+        this.field_c.field_i = this.field_d[param0];
     }
 
     private final int a(int param0, int param1) {
-        int var3 = 0;
-        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        int var3 = 0;
+        int var4 = 0;
         if (param1 == 255) {
-            var3 = ((fd) this).field_c.e(false);
-            var4 = ((fd) this).field_c.b(true);
+            var3 = this.field_c.e(false);
+            var4 = this.field_c.b(true);
             if (var3 == 47) {
-                ((fd) this).field_c.field_i = ((fd) this).field_c.field_i + var4;
+                this.field_c.field_i = this.field_c.field_i + var4;
                 return 1;
             }
             if (var3 == 81) {
-                var5 = ((fd) this).field_c.c(true);
+                var5 = this.field_c.c(true);
                 var4 -= 3;
-                var6 = ((fd) this).field_g[param0];
-                ((fd) this).field_i = ((fd) this).field_i + (long)var6 * (long)(((fd) this).field_e - var5);
-                ((fd) this).field_e = var5;
-                ((fd) this).field_c.field_i = ((fd) this).field_c.field_i + var4;
+                var6 = this.field_g[param0];
+                this.field_i = this.field_i + (long)var6 * (long)(this.field_e - var5);
+                this.field_e = var5;
+                this.field_c.field_i = this.field_c.field_i + var4;
                 return 2;
             }
-            ((fd) this).field_c.field_i = ((fd) this).field_c.field_i + var4;
+            this.field_c.field_i = this.field_c.field_i + var4;
             return 3;
         }
         var3 = field_f[param1 - 128];
         var4 = param1;
         if (var3 >= 1) {
-            var4 = var4 | ((fd) this).field_c.e(false) << 8;
+            var4 = var4 | this.field_c.e(false) << 8;
         }
         if (var3 >= 2) {
-            var4 = var4 | ((fd) this).field_c.e(false) << 16;
+            var4 = var4 | this.field_c.e(false) << 16;
         }
         return var4;
     }
 
     final void a(long param0) {
         int var4 = 0;
-        ((fd) this).field_i = param0;
-        int var3 = ((fd) this).field_d.length;
+        this.field_i = param0;
+        int var3 = this.field_d.length;
         for (var4 = 0; var4 < var3; var4++) {
-            ((fd) this).field_g[var4] = 0;
-            ((fd) this).field_h[var4] = 0;
-            ((fd) this).field_c.field_i = ((fd) this).field_b[var4];
-            ((fd) this).e(var4);
-            ((fd) this).field_d[var4] = ((fd) this).field_c.field_i;
+            this.field_g[var4] = 0;
+            this.field_h[var4] = 0;
+            this.field_c.field_i = this.field_b[var4];
+            this.e(var4);
+            this.field_d[var4] = this.field_c.field_i;
         }
     }
 
     final void a(byte[] param0) {
         int var4 = 0;
         int var5 = 0;
-        ((fd) this).field_c.field_k = param0;
-        ((fd) this).field_c.field_i = 10;
-        int var2 = ((fd) this).field_c.d((byte) -82);
-        ((fd) this).field_a = ((fd) this).field_c.d((byte) 112);
-        ((fd) this).field_e = 500000;
-        ((fd) this).field_b = new int[var2];
+        this.field_c.field_k = param0;
+        this.field_c.field_i = 10;
+        int var2 = this.field_c.d((byte) -82);
+        this.field_a = this.field_c.d((byte) 112);
+        this.field_e = 500000;
+        this.field_b = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-            var4 = ((fd) this).field_c.c((byte) 127);
-            var5 = ((fd) this).field_c.c((byte) 127);
+            var4 = this.field_c.c((byte) 127);
+            var5 = this.field_c.c((byte) 127);
             if (var4 == 1297379947) {
-                ((fd) this).field_b[var3] = ((fd) this).field_c.field_i;
+                this.field_b[var3] = this.field_c.field_i;
                 var3++;
             }
-            ((fd) this).field_c.field_i = ((fd) this).field_c.field_i + var5;
+            this.field_c.field_i = this.field_c.field_i + var5;
         }
-        ((fd) this).field_i = 0L;
-        ((fd) this).field_d = new int[var2];
+        this.field_i = 0L;
+        this.field_d = new int[var2];
         int var6 = 0;
         var3 = var6;
         while (var6 < var2) {
-            ((fd) this).field_d[var6] = ((fd) this).field_b[var6];
+            this.field_d[var6] = this.field_b[var6];
             var6++;
         }
-        ((fd) this).field_g = new int[var2];
-        ((fd) this).field_h = new int[var2];
+        this.field_g = new int[var2];
+        this.field_h = new int[var2];
     }
 
     final boolean c() {
-        return ((fd) this).field_c.field_k != null;
+        return this.field_c.field_k != null;
     }
 
     fd() {
-        ((fd) this).field_c = new ni((byte[]) null);
+        this.field_c = new ni((byte[]) null);
     }
 
     fd(byte[] param0) {
-        ((fd) this).field_c = new ni((byte[]) null);
-        ((fd) this).a(param0);
+        this.field_c = new ni((byte[]) null);
+        this.a(param0);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_f = new byte[]{(byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 0, (byte) 1, (byte) 2, (byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+        field_f = new byte[]{(byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 0, (byte) 1, (byte) 2, (byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
     }
 }

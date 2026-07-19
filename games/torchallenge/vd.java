@@ -13,10 +13,11 @@ final class vd {
         field_c = null;
         field_d = null;
         field_e = null;
-        int var1 = 0;
+        int var1 = 35 % ((param0 - 46) / 56);
     }
 
     final static void b(int param0) {
+        int discarded$2 = 0;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -40,7 +41,14 @@ final class vd {
                 }
               }
             }
-            int discarded$2 = vd.c(-60);
+            L3: {
+              if (param0 == 0) {
+                break L3;
+              } else {
+                discarded$2 = vd.c(-60);
+                break L3;
+              }
+            }
             vj.field_d = null;
             cg.field_g = null;
             break L0;
@@ -48,19 +56,19 @@ final class vd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "vd.A(" + 0 + ')');
+          throw oj.a((Throwable) ((Object) var1), "vd.A(" + param0 + ')');
         }
     }
 
     final static int c(int param0) {
+        if (param0 != 0) {
+            field_e = (int[]) null;
+            return cf.field_f;
+        }
         return cf.field_f;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new int[4];
         field_d = new ka[3];
         field_b = false;

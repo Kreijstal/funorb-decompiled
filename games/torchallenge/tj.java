@@ -78,17 +78,23 @@ final class tj {
     }
 
     public static void a(int param0) {
-        field_a = null;
-        field_e = null;
-        field_c = null;
-        field_d = null;
+        if (param0 < 113) {
+          field_e = (sl) null;
+          field_a = null;
+          field_e = null;
+          field_c = null;
+          field_d = null;
+          return;
+        } else {
+          field_a = null;
+          field_e = null;
+          field_c = null;
+          field_d = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[]{13, 11};
         field_e = new sl();
         field_d = new ll();

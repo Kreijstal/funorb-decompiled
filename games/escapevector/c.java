@@ -12,6 +12,7 @@ final class c extends n {
     private df field_s;
 
     final void a(byte[] param0, int param1, int param2, int param3) {
+        int fieldTemp$5 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -22,6 +23,7 @@ final class c extends n {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
@@ -38,40 +40,42 @@ final class c extends n {
               var5_int = 0;
               L1: while (true) {
                 if (param2 <= var5_int) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  int fieldTemp$5 = ((c) this).field_m;
-                  ((c) this).field_m = ((c) this).field_m + 1;
-                  param0[param3 + var5_int] = (byte)(((c) this).field_g[fieldTemp$5] + -((c) this).field_s.a(1736563940));
+                  fieldTemp$5 = this.field_m;
+                  this.field_m = this.field_m + 1;
+                  param0[param3 + var5_int] = (byte)(this.field_g[fieldTemp$5] + -this.field_s.a(1736563940));
                   var5_int++;
                   continue L1;
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_0 = (RuntimeException) (var5);
             stackOut_7_1 = new StringBuilder().append("c.QA(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -79,7 +83,12 @@ final class c extends n {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -91,19 +100,20 @@ final class c extends n {
     }
 
     final void l(int param0) {
-        ((c) this).field_r = 8 * ((c) this).field_m;
+        this.field_r = 8 * this.field_m;
         if (param0 != -17928) {
             c.n(-97);
         }
     }
 
     final void o(int param0) {
+        int discarded$2 = 0;
         if (param0 != -3879) {
-          int discarded$2 = ((c) this).j(-61, -116);
-          ((c) this).field_m = (((c) this).field_r + 7) / 8;
+          discarded$2 = this.j(-61, -116);
+          this.field_m = (this.field_r + 7) / 8;
           return;
         } else {
-          ((c) this).field_m = (((c) this).field_r + 7) / 8;
+          this.field_m = (this.field_r + 7) / 8;
           return;
         }
     }
@@ -124,17 +134,19 @@ final class c extends n {
     }
 
     final void a(int param0, boolean param1) {
+        int fieldTemp$2 = 0;
         if (!param1) {
           return;
         } else {
-          int fieldTemp$2 = ((c) this).field_m;
-          ((c) this).field_m = ((c) this).field_m + 1;
-          ((c) this).field_g[fieldTemp$2] = (byte)(((c) this).field_s.a(1736563940) + param0);
+          fieldTemp$2 = this.field_m;
+          this.field_m = this.field_m + 1;
+          this.field_g[fieldTemp$2] = (byte)(this.field_s.a(1736563940) + param0);
           return;
         }
     }
 
     final static void p(int param0) {
+        int fieldTemp$2 = 0;
         c var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -154,7 +166,7 @@ final class c extends n {
                 }
               } else {
                 var1.a(8, true);
-                int fieldTemp$2 = var1.field_m + 1;
+                fieldTemp$2 = var1.field_m + 1;
                 var1.field_m = var1.field_m + 1;
                 var2 = fieldTemp$2;
                 mf.a(param0 ^ -25858, var1);
@@ -166,7 +178,7 @@ final class c extends n {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1_ref, "c.DB(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var1_ref), "c.DB(" + param0 + ')');
         }
     }
 
@@ -175,9 +187,9 @@ final class c extends n {
             return;
         }
         try {
-            ((c) this).field_s = new df(param0);
+            this.field_s = new df(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "c.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "c.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -186,35 +198,38 @@ final class c extends n {
     }
 
     final int k(int param0) {
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
         if (param0 != 8) {
           field_u = false;
-          int fieldTemp$4 = ((c) this).field_m;
-          ((c) this).field_m = ((c) this).field_m + 1;
-          return 255 & ((c) this).field_g[fieldTemp$4] + -((c) this).field_s.a(1736563940);
+          fieldTemp$4 = this.field_m;
+          this.field_m = this.field_m + 1;
+          return 255 & this.field_g[fieldTemp$4] + -this.field_s.a(1736563940);
         } else {
-          int fieldTemp$5 = ((c) this).field_m;
-          ((c) this).field_m = ((c) this).field_m + 1;
-          return 255 & ((c) this).field_g[fieldTemp$5] + -((c) this).field_s.a(1736563940);
+          fieldTemp$5 = this.field_m;
+          this.field_m = this.field_m + 1;
+          return 255 & this.field_g[fieldTemp$5] + -this.field_s.a(1736563940);
         }
     }
 
     final int j(int param0, int param1) {
+        int incrementValue$0 = 0;
         int var6 = EscapeVector.field_A;
-        int var3 = ((c) this).field_r >> 3;
-        int var4 = -(7 & ((c) this).field_r) + param1;
-        ((c) this).field_r = ((c) this).field_r + param0;
+        int var3 = this.field_r >> -1442743357;
+        int var4 = -(7 & this.field_r) + param1;
+        this.field_r = this.field_r + param0;
         int var5 = 0;
         while (var4 < param0) {
-            int incrementValue$0 = var3;
+            incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((((c) this).field_g[incrementValue$0] & ol.field_ab[var4]) << -var4 + param0);
+            var5 = var5 + ((this.field_g[incrementValue$0] & ol.field_ab[var4]) << -var4 + param0);
             param0 = param0 - var4;
             var4 = 8;
         }
         if (var4 != param0) {
-            var5 = var5 + (((c) this).field_g[var3] >> var4 + -param0 & ol.field_ab[param0]);
+            var5 = var5 + (this.field_g[var3] >> var4 + -param0 & ol.field_ab[param0]);
         } else {
-            var5 = var5 + (ol.field_ab[var4] & ((c) this).field_g[var3]);
+            var5 = var5 + (ol.field_ab[var4] & this.field_g[var3]);
         }
         return var5;
     }
@@ -224,10 +239,6 @@ final class c extends n {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = new String[]{"virtual", "virtual", "virtual", "virtual"};
         field_t = new long[32];
         field_o = "Waiting for fonts";

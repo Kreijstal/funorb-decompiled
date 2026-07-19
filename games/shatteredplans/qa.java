@@ -14,27 +14,34 @@ final class qa extends df {
 
     public static void e(int param0) {
         field_o = null;
-        field_q = null;
-        field_w = null;
-        field_r = null;
-        field_p = null;
-        field_s = null;
+        if (param0 != 21758) {
+          field_q = (bi) null;
+          field_q = null;
+          field_w = null;
+          field_r = null;
+          field_p = null;
+          field_s = (String[][]) null;
+          return;
+        } else {
+          field_q = null;
+          field_w = null;
+          field_r = null;
+          field_p = null;
+          field_s = (String[][]) null;
+          return;
+        }
     }
 
     qa(ln param0, int param1) {
         try {
-            ((qa) this).field_u = param0;
-            ((qa) this).field_v = param1;
+            this.field_u = param0;
+            this.field_v = param1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = new pf();
         field_o = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
     }

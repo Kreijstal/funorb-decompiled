@@ -10,40 +10,41 @@ final class tn extends rl {
     static String field_C;
 
     final int f(byte param0) {
+        byte[] discarded$7 = null;
         if (param0 == 100) {
-          if (null == ((tn) this).field_A) {
+          if (null == this.field_A) {
             return 0;
           } else {
-            return ((tn) this).field_A.field_n * 100 / (-((tn) this).field_z + ((tn) this).field_A.field_m.length);
+            return this.field_A.field_n * 100 / (-this.field_z + this.field_A.field_m.length);
           }
         } else {
-          byte[] discarded$7 = ((tn) this).e((byte) -16);
-          if (null == ((tn) this).field_A) {
+          discarded$7 = this.e((byte) -16);
+          if (null == this.field_A) {
             return 0;
           } else {
-            return ((tn) this).field_A.field_n * 100 / (-((tn) this).field_z + ((tn) this).field_A.field_m.length);
+            return this.field_A.field_n * 100 / (-this.field_z + this.field_A.field_m.length);
           }
         }
     }
 
     final byte[] e(byte param0) {
         if (param0 >= 82) {
-          if (!((tn) this).field_v) {
-            if (((tn) this).field_A.field_m.length - ((tn) this).field_z > ((tn) this).field_A.field_n) {
+          if (!this.field_v) {
+            if (this.field_A.field_m.length - this.field_z > this.field_A.field_n) {
               throw new RuntimeException();
             } else {
-              return ((tn) this).field_A.field_m;
+              return this.field_A.field_m;
             }
           } else {
             throw new RuntimeException();
           }
         } else {
-          ((tn) this).field_A = null;
-          if (!((tn) this).field_v) {
-            if (((tn) this).field_A.field_m.length - ((tn) this).field_z > ((tn) this).field_A.field_n) {
+          this.field_A = (kg) null;
+          if (!this.field_v) {
+            if (this.field_A.field_m.length - this.field_z > this.field_A.field_n) {
               throw new RuntimeException();
             } else {
-              return ((tn) this).field_A.field_m;
+              return this.field_A.field_m;
             }
           } else {
             throw new RuntimeException();
@@ -55,16 +56,15 @@ final class tn extends rl {
         field_C = null;
         field_D = null;
         field_y = null;
+        if (param0) {
+            field_D = (String) null;
+        }
     }
 
     tn() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = "To Customer Support";
         field_C = "Return to game";
         field_D = "Hold <%0> to fire your lasers";

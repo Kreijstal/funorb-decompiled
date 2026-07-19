@@ -15,6 +15,7 @@ final class tg extends td {
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_22_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_21_0 = 0;
         int stackOut_13_0 = 0;
@@ -24,7 +25,7 @@ final class tg extends td {
         var3 = BachelorFridge.field_y;
         try {
           L0: {
-            var4 = (fka) (Object) fd.field_z.b((byte) 90);
+            var4 = (fka) ((Object) fd.field_z.b((byte) 90));
             var1 = var4;
             if (var1 != null) {
               if (param0 <= -38) {
@@ -33,6 +34,7 @@ final class tg extends td {
                   if (var1.field_k <= var2) {
                     stackOut_21_0 = 1;
                     stackIn_22_0 = stackOut_21_0;
+                    decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
                     L2: {
@@ -40,7 +42,8 @@ final class tg extends td {
                         if (var4.field_i[var2].field_f == 0) {
                           stackOut_13_0 = 0;
                           stackIn_14_0 = stackOut_13_0;
-                          return stackIn_14_0 != 0;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         } else {
                           break L2;
                         }
@@ -55,7 +58,8 @@ final class tg extends td {
                         } else {
                           stackOut_18_0 = 0;
                           stackIn_19_0 = stackOut_18_0;
-                          return stackIn_19_0 != 0;
+                          decompiledRegionSelector0 = 3;
+                          break L0;
                         }
                       } else {
                         break L3;
@@ -68,23 +72,42 @@ final class tg extends td {
               } else {
                 stackOut_5_0 = 1;
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1_ref, "tg.B(" + param0 + ')');
+          throw pe.a((Throwable) ((Object) var1_ref), "tg.B(" + param0 + ')');
         }
-        return stackIn_22_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_14_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_19_0 != 0;
+              } else {
+                return stackIn_22_0 != 0;
+              }
+            }
+          }
+        }
     }
 
     final ii a(op param0, int param1) {
+        boolean discarded$2 = false;
         aga var3 = null;
         RuntimeException var3_ref = null;
         jl var4 = null;
@@ -109,17 +132,17 @@ final class tg extends td {
         try {
           L0: {
             L1: {
-              var3 = ((tg) this).field_h.a(param1 ^ 104, param0);
-              var4 = new jl(((tg) this).field_g, new nq(var3));
+              var3 = this.field_h.a(param1 ^ 104, param0);
+              var4 = new jl(this.field_g, new nq(var3));
               if (param1 == 3) {
                 break L1;
               } else {
-                boolean discarded$2 = tg.c(-1);
+                discarded$2 = tg.c(-1);
                 break L1;
               }
             }
-            var4.field_o.a((bw) (Object) new iv(new nq(var3), false, 1, 0, 28), true);
-            stackOut_2_0 = (jl) var4;
+            var4.field_o.a(new iv(new nq(var3), false, 1, 0, 28), true);
+            stackOut_2_0 = (jl) (var4);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -127,23 +150,23 @@ final class tg extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_0 = (RuntimeException) (var3_ref);
             stackOut_4_1 = new StringBuilder().append("tg.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -151,13 +174,17 @@ final class tg extends td {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return (ii) (Object) stackIn_3_0;
+        return (ii) ((Object) stackIn_3_0);
     }
 
     public static void b(int param0) {
+        boolean discarded$0 = false;
         field_p = null;
+        if (param0 != 1) {
+            discarded$0 = tg.c(-2);
+        }
     }
 
     tg(int param0, aga param1) {
@@ -165,10 +192,6 @@ final class tg extends td {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
     }
 }

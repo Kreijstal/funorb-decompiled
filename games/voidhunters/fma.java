@@ -26,7 +26,7 @@ final class fma extends mfb {
 
     final int a(boolean param0) {
         if (param0) {
-            field_c = null;
+            field_c = (String) null;
             return 31;
         }
         return 31;
@@ -34,15 +34,16 @@ final class fma extends mfb {
 
     final int g(byte param0) {
         if (param0 > -12) {
-            field_b = null;
+            field_b = (String) null;
             return qca.field_yb;
         }
         return qca.field_yb;
     }
 
     final int g(int param0) {
+        int discarded$0 = 0;
         if (param0 != 2769) {
-            int discarded$0 = ((fma) this).b(-10);
+            discarded$0 = this.b(-10);
             return hrb.field_a;
         }
         return hrb.field_a;
@@ -50,7 +51,7 @@ final class fma extends mfb {
 
     final int d(byte param0) {
         if (param0 >= -52) {
-            field_b = null;
+            field_b = (String) null;
             return wja.field_b;
         }
         return wja.field_b;
@@ -58,7 +59,7 @@ final class fma extends mfb {
 
     final boolean h(byte param0) {
         if (param0 < 18) {
-            field_c = null;
+            field_c = (String) null;
             return false;
         }
         return false;
@@ -66,7 +67,7 @@ final class fma extends mfb {
 
     final int k(int param0) {
         if (param0 != 0) {
-            field_b = null;
+            field_b = (String) null;
             return 3;
         }
         return 3;
@@ -74,29 +75,40 @@ final class fma extends mfb {
 
     final static void l(int param0) {
         lw.field_i = new llb(0L, (llb) null);
-        if (ll.field_o) {
-          lw.field_i.b(-561, nna.field_v);
-          lw.field_i.b(-561, fh.field_f);
+        if (!ll.field_o) {
+          lw.field_i.b(param0 ^ -9108, fh.field_f);
           lc.field_b = new bs(bib.field_e, lw.field_i);
           tb.field_a = new llb(0L, (llb) null);
-          tb.field_a.b(-561, (llb) (Object) lc.field_b.field_a);
+          tb.field_a.b(param0 ^ -9108, lc.field_b.field_a);
           tb.field_a.b(-561, gmb.field_c);
           bp.a(5);
-          return;
+          if (param0 != 8611) {
+            fma.i((byte) -29);
+            return;
+          } else {
+            return;
+          }
         } else {
-          lw.field_i.b(-561, fh.field_f);
+          lw.field_i.b(-561, nna.field_v);
+          lw.field_i.b(param0 ^ -9108, fh.field_f);
           lc.field_b = new bs(bib.field_e, lw.field_i);
           tb.field_a = new llb(0L, (llb) null);
-          tb.field_a.b(-561, (llb) (Object) lc.field_b.field_a);
+          tb.field_a.b(param0 ^ -9108, lc.field_b.field_a);
           tb.field_a.b(-561, gmb.field_c);
           bp.a(5);
-          return;
+          if (param0 == 8611) {
+            return;
+          } else {
+            fma.i((byte) -29);
+            return;
+          }
         }
     }
 
     final int a(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 0) {
-            boolean discarded$0 = ((fma) this).h((byte) 11);
+            discarded$0 = this.h((byte) 11);
             return bv.field_e;
         }
         return bv.field_e;
@@ -111,13 +123,16 @@ final class fma extends mfb {
     }
 
     public static void i(byte param0) {
+        if (param0 != -22) {
+            return;
+        }
         field_c = null;
         field_b = null;
     }
 
     final int b(boolean param0) {
         if (param0) {
-            field_c = null;
+            field_c = (String) null;
             return uab.field_b;
         }
         return uab.field_b;
@@ -143,10 +158,6 @@ final class fma extends mfb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Resign";
         field_c = "Reload game";
     }

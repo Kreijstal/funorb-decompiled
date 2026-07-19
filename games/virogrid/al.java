@@ -13,7 +13,7 @@ final class al extends mi implements bo, wi {
         if (!param0) {
             return false;
         }
-        return ((al) this).field_h.h(54);
+        return this.field_h.h(54);
     }
 
     final static boolean a(String param0, int param1) {
@@ -21,7 +21,7 @@ final class al extends mi implements bo, wi {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        Object var5 = null;
+        String[] var5 = null;
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -31,6 +31,7 @@ final class al extends mi implements bo, wi {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_4_0 = 0;
@@ -53,13 +54,14 @@ final class al extends mi implements bo, wi {
                   if (param1 >= 123) {
                     break L2;
                   } else {
-                    var5 = null;
+                    var5 = (String[]) null;
                     al.a((String) null, -75, (String[]) null, -81);
                     break L2;
                   }
                 }
                 stackOut_9_0 = 1;
                 stackIn_10_0 = stackOut_9_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (param0.charAt(var3) == var2_int) {
@@ -68,7 +70,8 @@ final class al extends mi implements bo, wi {
                 } else {
                   stackOut_4_0 = 0;
                   stackIn_5_0 = stackOut_4_0;
-                  return stackIn_5_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             }
@@ -77,23 +80,23 @@ final class al extends mi implements bo, wi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var2;
+            stackOut_11_0 = (RuntimeException) (var2);
             stackOut_11_1 = new StringBuilder().append("al.I(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -101,17 +104,21 @@ final class al extends mi implements bo, wi {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
         }
-        return stackIn_10_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0 != 0;
+        } else {
+          return stackIn_10_0 != 0;
+        }
     }
 
     final static void a(String param0, int param1, String[] param2, int param3) {
         String[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        Object var6 = null;
-        Object var7 = null;
+        String var6 = null;
+        String[] var7 = null;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_7_0 = 0;
@@ -160,13 +167,13 @@ final class al extends mi implements bo, wi {
               if (param3 == 100) {
                 break L1;
               } else {
-                var6 = null;
+                var6 = (String) null;
                 al.a((String) null, -66, 0.017817853018641472f);
                 break L1;
               }
             }
             L2: {
-              if (param1 != 255) {
+              if (-256 != (param1 ^ -1)) {
                 L3: {
                   if (param1 < 100) {
                     break L3;
@@ -203,7 +210,7 @@ final class al extends mi implements bo, wi {
                   }
                 }
                 de.field_ob = Virogrid.b((byte) stackIn_7_0, stackIn_7_1 != 0);
-                var7 = null;
+                var7 = (String[]) null;
                 nl.a(-22063, (String[]) null);
                 break L2;
               }
@@ -214,23 +221,23 @@ final class al extends mi implements bo, wi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var4_ref;
+            stackOut_13_0 = (RuntimeException) (var4_ref);
             stackOut_13_1 = new StringBuilder().append("al.K(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -239,23 +246,23 @@ final class al extends mi implements bo, wi {
             }
           }
           L6: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -263,7 +270,7 @@ final class al extends mi implements bo, wi {
               break L6;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param3 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param3 + ')');
         }
     }
 
@@ -276,53 +283,72 @@ final class al extends mi implements bo, wi {
         wl stackIn_2_0 = null;
         wl stackIn_5_0 = null;
         wl stackIn_9_0 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         wl stackOut_8_0 = null;
         wl stackOut_4_0 = null;
         wl stackOut_1_0 = null;
         try {
           L0: {
-            var2_int = ((al) this).field_h.f(-2);
-            var3 = ((al) this).field_h.g(param0 ^ 843083348);
-            var4 = ((al) this).field_h.g(true);
+            var2_int = this.field_h.f(-2);
+            var3 = this.field_h.g(param0 ^ 843083348);
+            var4 = this.field_h.g(true);
             var5 = hn.c(false);
             if (var4 >= 1890) {
               if (-3 + var5 >= var4) {
                 if (!th.a((byte) 127, var4, var2_int, var3)) {
                   stackOut_8_0 = ee.field_c;
                   stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   L1: {
                     if (param0 == -843083384) {
                       break L1;
                     } else {
-                      field_i = null;
+                      field_i = (String) null;
                       break L1;
                     }
                   }
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 }
               } else {
                 stackOut_4_0 = ee.field_c;
                 stackIn_5_0 = stackOut_4_0;
-                return stackIn_5_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
               stackOut_1_0 = ee.field_c;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return ee.field_c;
         }
-        return bm.field_i;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_5_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_9_0;
+            } else {
+              return bm.field_i;
+            }
+          }
+        }
     }
 
     final static void a(byte[] param0, int[] param1, int param2, int param3, int param4) {
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -362,22 +388,22 @@ final class al extends mi implements bo, wi {
         var8 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            var6 = 0;
+            var6 = 22 % ((54 - param4) / 42);
             var5_int = 0;
             L1: while (true) {
               if (var5_int >= da.field_g.length) {
                 break L0;
               } else {
                 param2 = da.field_g[var5_int];
-                var7 = var5_int << 4;
+                var7 = var5_int << -70172348;
                 L2: while (true) {
-                  int incrementValue$12 = param2;
+                  incrementValue$12 = param2;
                   param2--;
                   if (incrementValue$12 == 0) {
                     var5_int++;
                     continue L1;
                   } else {
-                    int incrementValue$13 = var7;
+                    incrementValue$13 = var7;
                     var7++;
                     param3 = bf.field_m[incrementValue$13];
                     param1[param0[param3]] = param1[param0[param3]] + 1;
@@ -392,23 +418,23 @@ final class al extends mi implements bo, wi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var5;
+            stackOut_8_0 = (RuntimeException) (var5);
             stackOut_8_1 = new StringBuilder().append("al.J(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -417,23 +443,23 @@ final class al extends mi implements bo, wi {
             }
           }
           L4: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -441,12 +467,13 @@ final class al extends mi implements bo, wi {
               break L4;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ',' + param3 + ',' + 125 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void b(int param0, int param1) {
         try {
+            IOException iOException = null;
             Throwable decompiledCaughtException = null;
             L0: {
               if (null == oj.field_Ub) {
@@ -467,7 +494,7 @@ final class al extends mi implements bo, wi {
                   if (gk.field_g.field_l != 0) {
                     break L2;
                   } else {
-                    if (~(ud.field_a + 10000L) > ~hc.a(-9986)) {
+                    if ((ud.field_a + 10000L ^ -1L) > (hc.a(-9986) ^ -1L)) {
                       gk.field_g.g(param1, 8);
                       break L2;
                     } else {
@@ -479,17 +506,24 @@ final class al extends mi implements bo, wi {
                   if (param0 == -1) {
                     break L3;
                   } else {
-                    field_i = null;
+                    field_i = (String) null;
                     break L3;
                   }
                 }
                 L4: {
                   if (0 < gk.field_g.field_l) {
-                    {
+                    try {
                       L5: {
                         oj.field_Ub.a(gk.field_g.field_g, param0 + 1, 0, gk.field_g.field_l);
                         ud.field_a = hc.a(-9986);
                         break L5;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L6: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        tn.a(false);
+                        break L6;
                       }
                     }
                     gk.field_g.field_l = 0;
@@ -537,7 +571,7 @@ final class al extends mi implements bo, wi {
         if (!(qc.field_h)) {
             return false;
         }
-        if (sd.field_e == 0) {
+        if (-1 == (sd.field_e ^ -1)) {
             return true;
         }
         return false;
@@ -567,7 +601,7 @@ final class al extends mi implements bo, wi {
               if (!param0) {
                 break L1;
               } else {
-                ((al) this).field_h = null;
+                this.field_h = (rd) null;
                 break L1;
               }
             }
@@ -577,23 +611,23 @@ final class al extends mi implements bo, wi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("al.T(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -601,7 +635,7 @@ final class al extends mi implements bo, wi {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -612,20 +646,22 @@ final class al extends mi implements bo, wi {
         int var4 = 0;
         int var5 = 0;
         String stackIn_4_0 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         String stackOut_3_0 = null;
         try {
           L0: {
             L1: {
-              var2_int = ((al) this).field_h.f(-2);
-              var3 = ((al) this).field_h.g(-39);
-              var4 = ((al) this).field_h.g(true);
+              var2_int = this.field_h.f(-2);
+              var3 = this.field_h.g(-39);
+              var4 = this.field_h.g(true);
               var5 = hn.c(false);
-              if (var4 < 1890) {
+              if ((var4 ^ -1) > -1891) {
                 break L1;
               } else {
                 if (var4 <= -3 + var5) {
                   if (!th.a((byte) -41, var4, var2_int, var3)) {
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     return null;
@@ -635,26 +671,32 @@ final class al extends mi implements bo, wi {
                 }
               }
             }
-            stackOut_3_0 = oi.a(new String[2], re.field_p, 2);
+            stackOut_3_0 = oi.a(new String[]{"1890", Integer.toString(var5 + -3)}, re.field_p, 2);
             stackIn_4_0 = stackOut_3_0;
-            return stackIn_4_0;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            decompiledRegionSelector0 = 1;
             break L2;
           }
         }
-        L3: {
-          if (param0 < -86) {
-            break L3;
-          } else {
-            field_g = null;
-            break L3;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          L3: {
+            if (param0 < -86) {
+              break L3;
+            } else {
+              field_g = (String) null;
+              break L3;
+            }
           }
+          return gf.field_C;
         }
-        return gf.field_C;
     }
 
     final static void a(String param0, int param1, float param2) {
@@ -693,23 +735,23 @@ final class al extends mi implements bo, wi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("al.G(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -717,7 +759,7 @@ final class al extends mi implements bo, wi {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -742,11 +784,11 @@ final class al extends mi implements bo, wi {
         try {
           L0: {
             L1: {
-              ((al) this).b(false);
+              this.b(false);
               if (param1 == 13) {
                 break L1;
               } else {
-                ((al) this).field_h = null;
+                this.field_h = (rd) null;
                 break L1;
               }
             }
@@ -756,23 +798,23 @@ final class al extends mi implements bo, wi {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("al.V(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -780,7 +822,7 @@ final class al extends mi implements bo, wi {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -788,10 +830,6 @@ final class al extends mi implements bo, wi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new oi[12];
         field_i = "Private";
         field_g = "Open in popup window";

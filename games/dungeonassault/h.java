@@ -60,19 +60,19 @@ final class h {
             }
             jh.b();
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "h.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "h.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final boolean a(int param0, int param1) {
         int var5 = DungeonAssault.field_K;
-        if (!(param0 != ((h) this).field_s)) {
+        if (!(param0 != this.field_s)) {
             return true;
         }
         int var3 = 0;
         int var4 = 70 / ((-8 - param1) / 57);
-        while (((h) this).field_A.length > var3) {
-            if (!(((h) this).field_A[var3] != param0)) {
+        while (this.field_A.length > var3) {
+            if (!(this.field_A[var3] != param0)) {
                 return true;
             }
             var3++;
@@ -81,7 +81,7 @@ final class h {
     }
 
     final static int a(int param0) {
-        if (dk.field_c >= 2) {
+        if ((dk.field_c ^ -1) <= param0) {
           L0: {
             if (hc.field_d != 0) {
               L1: {
@@ -89,7 +89,7 @@ final class h {
                   break L1;
                 } else {
                   if (ia.field_U.a(-14354)) {
-                    if (!ia.field_U.c("", 0)) {
+                    if (!ia.field_U.c("", param0 + 3)) {
                       return 29;
                     } else {
                       if (!ia.field_U.a(false, "")) {
@@ -186,11 +186,12 @@ final class h {
             wd.field_d = sp.field_e;
             ol.field_i = sp.field_e;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "h.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "h.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     h(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9) {
+        int incrementValue$1 = 0;
         RuntimeException var11 = null;
         int var11_int = 0;
         int var12 = 0;
@@ -213,21 +214,21 @@ final class h {
         String stackOut_16_2 = null;
         try {
           L0: {
-            ((h) this).field_B = param2;
-            ((h) this).field_m = param5;
-            ((h) this).field_b = param7;
-            ((h) this).field_w = param0;
-            ((h) this).field_z = param1;
-            ((h) this).field_x = param4;
-            ((h) this).field_o = param8;
-            ((h) this).field_c = param3;
-            ((h) this).field_r = param6;
-            ((h) this).field_s = -1;
+            this.field_B = param2;
+            this.field_m = param5;
+            this.field_b = param7;
+            this.field_w = param0;
+            this.field_z = param1;
+            this.field_x = param4;
+            this.field_o = param8;
+            this.field_c = param3;
+            this.field_r = param6;
+            this.field_s = -1;
             var11_int = 0;
             var12 = 0;
             L1: while (true) {
               if (var12 >= param9.length) {
-                ((h) this).field_A = new int[var11_int];
+                this.field_A = new int[var11_int];
                 var11_int = 0;
                 var12 = 0;
                 L2: while (true) {
@@ -239,9 +240,9 @@ final class h {
                       if (0 != ob.field_cc[var13]) {
                         break L3;
                       } else {
-                        int incrementValue$1 = var11_int;
+                        incrementValue$1 = var11_int;
                         var11_int++;
-                        ((h) this).field_A[incrementValue$1] = var13;
+                        this.field_A[incrementValue$1] = var13;
                         break L3;
                       }
                     }
@@ -252,12 +253,12 @@ final class h {
               } else {
                 L4: {
                   var13 = param9[var12];
-                  if (-1 != ob.field_cc[var13]) {
-                    if (0 == ((h) this).field_s) {
-                      ((h) this).field_s = var13;
+                  if (-1 != (ob.field_cc[var13] ^ -1)) {
+                    if (0 == (this.field_s ^ -1)) {
+                      this.field_s = var13;
                       break L4;
                     } else {
-                      throw new RuntimeException("Multiple active abilities declared for: " + ((h) this).field_w);
+                      throw new RuntimeException("Multiple active abilities declared for: " + this.field_w);
                     }
                   } else {
                     var11_int++;
@@ -273,23 +274,23 @@ final class h {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var11 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var11;
+            stackOut_15_0 = (RuntimeException) (var11);
             stackOut_15_1 = new StringBuilder().append("h.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param9 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -297,15 +298,11 @@ final class h {
               break L5;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = new String[]{"Moving", "To move through the dungeon, simply <col=FF0000>left-click on an unexplored room</col>. Rooms are connected by doors. Rooms that are accessible from the party's current location are <%highlight>outlined with an orange glow</col>.<br><br><%command>Enter a new room now.</col>"};
         field_i = "Monster wins!";
         field_n = "Trolls are found throughout the swamps, making their homes in dank caves. Slow and lumbering, they are nevertheless devastating in combat and nearly impossible to kill.";

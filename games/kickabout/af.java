@@ -32,7 +32,7 @@ final class af {
           L0: {
             L1: {
               var2_int = 5 * gp.a(param0, -576054046) / 3;
-              if (var2_int < 30) {
+              if (param1 < (var2_int ^ -1)) {
                 var2_int = 30;
                 break L1;
               } else {
@@ -47,23 +47,23 @@ final class af {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_0 = (RuntimeException) (var2);
             stackOut_5_1 = new StringBuilder().append("af.B(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -71,7 +71,7 @@ final class af {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + -31 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
@@ -81,14 +81,10 @@ final class af {
         field_c = null;
         field_b = null;
         field_a = null;
-        int var1 = -10;
+        int var1 = -21 / ((param0 - 9) / 34);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[]{156, 154};
         field_c = "<%0> is not on your friend list.";
     }

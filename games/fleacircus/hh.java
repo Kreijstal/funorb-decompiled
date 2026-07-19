@@ -9,9 +9,18 @@ final class hh {
     static bi[] field_a;
 
     public static void a(boolean param0) {
-        field_b = null;
-        field_c = null;
-        field_a = null;
+        if (!param0) {
+          hh.a(72);
+          field_b = null;
+          field_c = null;
+          field_a = null;
+          return;
+        } else {
+          field_b = null;
+          field_c = null;
+          field_a = null;
+          return;
+        }
     }
 
     final static void a(int param0) {
@@ -38,7 +47,7 @@ final class hh {
             return;
           }
         } else {
-          field_c = null;
+          field_c = (Calendar) null;
           fm.a(0);
           gm.e((byte) -82);
           pj.d((byte) 60);
@@ -55,10 +64,6 @@ final class hh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
     }
 }

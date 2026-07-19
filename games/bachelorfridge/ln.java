@@ -10,7 +10,10 @@ final class ln extends ana {
     private boolean field_y;
 
     private final void h(int param0) {
-        ((ln) this).field_n.field_p = 0;
+        if (param0 != -11007) {
+            return;
+        }
+        this.field_n.field_p = 0;
     }
 
     final static byte[] a(int param0, byte[] param1, int param2, int param3) {
@@ -63,10 +66,10 @@ final class ln extends ana {
             }
             var5 = new ur();
             var5.b(true);
-            var5.a(var4, (long)(param0 * 8), 0);
+            var5.a(var4, (long)(param0 * param3), 0);
             var6 = new byte[64];
             var5.a(65, 0, var6);
-            stackOut_6_0 = (byte[]) var6;
+            stackOut_6_0 = (byte[]) (var6);
             stackIn_7_0 = stackOut_6_0;
             break L0;
           }
@@ -74,23 +77,23 @@ final class ln extends ana {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var4_ref;
+            stackOut_8_0 = (RuntimeException) (var4_ref);
             stackOut_8_1 = new StringBuilder().append("ln.E(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -98,7 +101,7 @@ final class ln extends ana {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param2 + ',' + 8 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_7_0;
     }
@@ -111,30 +114,33 @@ final class ln extends ana {
         if (param0 != 0) {
             this.g(2);
         }
-        aga var8 = ((ln) this).field_n.field_s;
+        aga var8 = this.field_n.field_s;
         if (!(!var8.i(-118))) {
             return;
         }
-        pp var3 = (pp) (Object) ((ln) this).field_A.field_o.b((byte) 90);
-        oha discarded$6 = al.a(-99, ((ln) this).field_A.field_k);
+        pp var3 = (pp) ((Object) this.field_A.field_o.b((byte) 90));
+        oha discarded$6 = al.a(-99, this.field_A.field_k);
         while (var3 != null) {
-            var4 = var3.field_h.a(-27449, ((ln) this).field_q);
+            var4 = var3.field_h.a(-27449, this.field_q);
             var4.b(-1, 7);
             if (var3 instanceof bj) {
-                var5 = (bj) (Object) var3;
-                var6 = var5.field_h.a(-27449, ((ln) this).field_q);
-                ((ln) this).field_q.a(var5.field_i, var6, (byte) -106, var5.field_l);
+                var5 = (bj) ((Object) var3);
+                var6 = var5.field_h.a(-27449, this.field_q);
+                this.field_q.a(var5.field_i, var6, (byte) -106, var5.field_l);
             } else {
-                var3.a(var8, ((ln) this).field_q.field_h, 12);
+                var3.a(var8, this.field_q.field_h, 12);
             }
-            var3 = (pp) (Object) ((ln) this).field_A.field_o.c(0);
+            var3 = (pp) ((Object) this.field_A.field_o.c(0));
         }
-        ((ln) this).field_y = true;
+        this.field_y = true;
     }
 
     public static void d(int param0) {
         field_v = null;
         field_x = null;
+        if (param0 != 4) {
+            ln.f(41);
+        }
     }
 
     final static void e(int param0) {
@@ -149,34 +155,34 @@ final class ln extends ana {
 
     final boolean c(byte param0) {
         int var2 = 32 % ((71 - param0) / 47);
-        if (!(!((ln) this).field_m.a((byte) -106))) {
+        if (!(!this.field_m.a((byte) -106))) {
             return false;
         }
-        if (!((ln) this).field_y) {
-            if (!((ln) this).field_z) {
-                if (!(((ln) this).field_n.field_p <= -192)) {
-                    ((ln) this).field_z = true;
+        if (!this.field_y) {
+            if (!this.field_z) {
+                if (!(this.field_n.field_p <= -192)) {
+                    this.field_z = true;
                     aba.a((byte) 62, 60);
                 }
             }
-            ((ln) this).field_n.field_p = ((ln) this).field_n.field_p + 2;
-            if (((ln) this).field_n.field_p < 0) {
+            this.field_n.field_p = this.field_n.field_p + 2;
+            if (this.field_n.field_p < 0) {
                 return false;
             }
             this.g(0);
-            ((ln) this).field_m = new taa(((ln) this).field_q, ((ln) this).field_n);
-            ((ln) this).a(27799, (at) (Object) ((ln) this).field_m);
-            ((ln) this).field_n.field_p = 1;
+            this.field_m = new taa(this.field_q, this.field_n);
+            this.a(27799, this.field_m);
+            this.field_n.field_p = 1;
             return false;
         }
-        if (!((ln) this).field_w) {
-            if (((ln) this).field_n.field_p > 48) {
-                ((ln) this).field_w = true;
+        if (!this.field_w) {
+            if (-49 > (this.field_n.field_p ^ -1)) {
+                this.field_w = true;
                 aba.a((byte) 18, 60);
             }
         }
-        ((ln) this).field_n.field_p = ((ln) this).field_n.field_p + 2;
-        if (!(((ln) this).field_n.field_p >= 256)) {
+        this.field_n.field_p = this.field_n.field_p + 2;
+        if (!(this.field_n.field_p >= 256)) {
             return false;
         }
         this.h(-11007);
@@ -184,12 +190,12 @@ final class ln extends ana {
     }
 
     ln(gj param0, ima param1) {
-        super(param0, (bca) (Object) param1);
+        super(param0, param1);
         try {
-            ((ln) this).field_n.field_p = -256;
-            ((ln) this).field_A = param1;
+            this.field_n.field_p = -256;
+            this.field_A = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ln.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ln.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -199,11 +205,11 @@ final class ln extends ana {
         try {
             fi.field_m = new js(4);
             for (var1_int = 0; jl.field_q.length > var1_int; var1_int++) {
-                fi.field_m.a((long)jl.field_q[var1_int].hashCode(), (byte) 86, (bw) (Object) new ji(var1_int - -1));
+                fi.field_m.a((long)jl.field_q[var1_int].hashCode(), (byte) 86, new ji(var1_int - -1));
             }
-            int var2 = 0;
+            int var2 = -38 % ((param0 - 43) / 46);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ln.B(" + -93 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ln.B(" + param0 + ')');
         }
     }
 

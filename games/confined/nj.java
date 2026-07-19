@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class nj extends rg {
     private wl field_P;
     int field_Q;
@@ -11,6 +9,7 @@ final class nj extends rg {
     private int field_R;
 
     final static jb a(boolean param0, boolean param1, byte param2) {
+        jb discarded$1 = null;
         bd var4 = null;
         bd var5 = null;
         bd var6 = null;
@@ -52,8 +51,8 @@ final class nj extends rg {
         L0: {
           var7 = new jb(3);
           var8 = var7;
-          var8.a((byte) -128, new bd(20, lh.field_a, (ok) (Object) pn.field_a));
-          stackOut_0_0 = (jb) var8;
+          var8.a((byte) -128, new bd(20, lh.field_a, pn.field_a));
+          stackOut_0_0 = (jb) (var8);
           stackOut_0_1 = -125;
           stackOut_0_2 = null;
           stackOut_0_3 = null;
@@ -69,7 +68,7 @@ final class nj extends rg {
           stackIn_1_3 = stackOut_0_3;
           stackIn_1_4 = stackOut_0_4;
           if (param1) {
-            stackOut_2_0 = (jb) (Object) stackIn_2_0;
+            stackOut_2_0 = (jb) ((Object) stackIn_2_0);
             stackOut_2_1 = stackIn_2_1;
             stackOut_2_2 = null;
             stackOut_2_3 = null;
@@ -83,7 +82,7 @@ final class nj extends rg {
             stackIn_3_5 = stackOut_2_5;
             break L0;
           } else {
-            stackOut_1_0 = (jb) (Object) stackIn_1_0;
+            stackOut_1_0 = (jb) ((Object) stackIn_1_0);
             stackOut_1_1 = stackIn_1_1;
             stackOut_1_2 = null;
             stackOut_1_3 = null;
@@ -99,8 +98,8 @@ final class nj extends rg {
           }
         }
         L1: {
-          ((jb) (Object) stackIn_3_0).a((byte) stackIn_3_1, new bd(stackIn_3_4, stackIn_3_5, (ok) (Object) pn.field_a));
-          var8.a((byte) -118, new bd(21, na.field_U, (ok) (Object) pn.field_a));
+          ((jb) (Object) stackIn_3_0).a((byte) stackIn_3_1, new bd(stackIn_3_4, stackIn_3_5, pn.field_a));
+          var8.a((byte) -118, new bd(21, na.field_U, pn.field_a));
           var7.field_h[1].field_f = pn.field_a.c(var7.field_h[1].field_a) - -100;
           var4 = var7.field_h[0];
           var7.field_h[2].field_f = 150;
@@ -110,7 +109,7 @@ final class nj extends rg {
           if (param2 == -119) {
             break L1;
           } else {
-            jb discarded$1 = nj.a(false, false, (byte) 58);
+            discarded$1 = nj.a(false, false, (byte) 58);
             break L1;
           }
         }
@@ -160,8 +159,8 @@ final class nj extends rg {
           L0: {
             if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
               L1: {
-                var8_int = -param0 + (param1 - ((nj) this).field_S);
-                var9 = ((nj) this).field_F + -(2 * ((nj) this).field_S);
+                var8_int = -param0 + (param1 - this.field_S);
+                var9 = this.field_F + -(2 * this.field_S);
                 if (var8_int > var9) {
                   var8_int = var9;
                   break L1;
@@ -170,7 +169,7 @@ final class nj extends rg {
                 }
               }
               L2: {
-                if (var8_int < 0) {
+                if ((var8_int ^ -1) > -1) {
                   var8_int = 0;
                   break L2;
                 } else {
@@ -178,39 +177,39 @@ final class nj extends rg {
                 }
               }
               L3: {
-                var8_int = ((nj) this).field_R * var8_int / var9;
-                if (param6 != 1) {
+                var8_int = this.field_R * var8_int / var9;
+                if ((param6 ^ -1) != -2) {
                   if (2 == param6) {
                     var10 = 2147483647;
                     var11 = -1;
                     var12 = 0;
                     L4: while (true) {
-                      if (var12 >= ((nj) this).field_P.a((byte) 127)) {
+                      if (var12 >= this.field_P.a((byte) 127)) {
                         if (0 > var11) {
                           break L3;
                         } else {
-                          ((nj) this).field_P.a(var11, (byte) -111);
+                          this.field_P.a(var11, (byte) -111);
                           break L3;
                         }
                       } else {
-                        L5: {
-                          var13 = -var8_int + ((nj) this).field_P.a(var12, 27656);
-                          var13 = var13 * var13;
-                          if (var13 >= var10) {
-                            break L5;
-                          } else {
-                            break L5;
-                          }
+                        var13 = -var8_int + this.field_P.a(var12, 27656);
+                        var13 = var13 * var13;
+                        if (var13 < var10) {
+                          var10 = var13;
+                          var11 = var12;
+                          var12++;
+                          continue L4;
+                        } else {
+                          var12++;
+                          continue L4;
                         }
-                        var12++;
-                        continue L4;
                       }
                     }
                   } else {
                     return true;
                   }
                 } else {
-                  ((nj) this).field_P.a((byte) -116, var8_int);
+                  this.field_P.a((byte) -116, var8_int);
                   break L3;
                 }
               }
@@ -223,50 +222,50 @@ final class nj extends rg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var8 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var8;
+            stackOut_22_0 = (RuntimeException) (var8);
             stackOut_22_1 = new StringBuilder().append("nj.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param4 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
-              break L6;
+              break L5;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
               stackIn_25_2 = stackOut_23_2;
-              break L6;
+              break L5;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param5 + ',' + param6 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_21_0 != 0;
     }
 
     final int h(byte param0) {
         if (param0 <= 97) {
-            field_T = null;
+            field_T = (ji) null;
         }
-        return ((nj) this).field_P.a((byte) 111);
+        return this.field_P.a((byte) 111);
     }
 
     final int a(byte param0, int param1) {
         L0: {
-          if (param1 < 0) {
+          if (-1 < (param1 ^ -1)) {
             break L0;
           } else {
-            if (param1 < ((nj) this).field_P.a((byte) 111)) {
+            if (param1 < this.field_P.a((byte) 111)) {
               L1: {
                 if (param0 >= 14) {
                   break L1;
@@ -275,7 +274,7 @@ final class nj extends rg {
                   break L1;
                 }
               }
-              return ((nj) this).field_P.a(param1, 27656);
+              return this.field_P.a(param1, 27656);
             } else {
               break L0;
             }
@@ -299,7 +298,7 @@ final class nj extends rg {
         if (param0 != -96) {
             nj.a((byte) -113);
         }
-        return ((nj) this).field_R;
+        return this.field_R;
     }
 
     static {

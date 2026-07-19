@@ -19,6 +19,9 @@ abstract class jc {
         int var2 = 0;
         int var3 = TorChallenge.field_F ? 1 : 0;
         ge[] var1 = new ge[vl.field_b];
+        if (param0 >= -33) {
+            field_j = (String[]) null;
+        }
         for (var2 = 0; var2 < vl.field_b; var2++) {
             var1[var2] = new ge(ij.field_B, le.field_g, ug.field_e[var2], dd.field_t[var2], pg.field_r[var2], lg.field_e[var2], h.field_a[var2], td.field_m);
         }
@@ -107,7 +110,7 @@ abstract class jc {
               if (param0 < -114) {
                 break L5;
               } else {
-                field_i = null;
+                field_i = (ka) null;
                 break L5;
               }
             }
@@ -119,7 +122,7 @@ abstract class jc {
                   break L6;
                 } else {
                   var11 = param1 + var8 * qg.field_g;
-                  var12 = 1 - (-var10 - -var8) >> 1;
+                  var12 = 1 - (-var10 - -var8) >> 1519077729;
                   L7: while (true) {
                     var12--;
                     if (var12 < 0) {
@@ -139,10 +142,10 @@ abstract class jc {
               } else {
                 if (qg.field_l > var6) {
                   var11 = qg.field_g * param4 - -var7;
-                  var12 = -var7 + (1 + var9) >> 1;
+                  var12 = -var7 + (1 + var9) >> -1733202367;
                   L9: while (true) {
                     var12--;
-                    if (var12 < 0) {
+                    if (-1 < (var12 ^ -1)) {
                       break L8;
                     } else {
                       qg.field_i[var11] = 16777215;
@@ -163,10 +166,10 @@ abstract class jc {
                   break L10;
                 } else {
                   var11 = qg.field_g * ((var5_int + -param1 & 1) + var8) + var5_int;
-                  var12 = -var8 + (var10 + 1) >> 1;
+                  var12 = -var8 + (var10 + 1) >> 271911649;
                   L11: while (true) {
                     var12--;
-                    if (var12 < 0) {
+                    if ((var12 ^ -1) > -1) {
                       break L10;
                     } else {
                       qg.field_i[var11] = 16777215;
@@ -183,7 +186,7 @@ abstract class jc {
               } else {
                 if (qg.field_l > var6) {
                   var11 = var7 + (var6 * qg.field_g + (1 & -param4 + var6));
-                  var12 = -var7 + (1 + var9) >> 1;
+                  var12 = -var7 + (1 + var9) >> 1935860129;
                   L13: while (true) {
                     var12--;
                     if (0 > var12) {
@@ -204,11 +207,14 @@ abstract class jc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var5, "jc.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.a((Throwable) ((Object) var5), "jc.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(int param0) {
+        if (param0 > -88) {
+            field_j = (String[]) null;
+        }
         field_i = null;
         field_j = null;
     }
@@ -217,39 +223,47 @@ abstract class jc {
         int var3 = 0;
         int var4 = 0;
         L0: {
-          if (0 > param2) {
+          if (param1 == 1) {
             break L0;
           } else {
+            field_i = (ka) null;
+            break L0;
+          }
+        }
+        L1: {
+          if (0 > param2) {
+            break L1;
+          } else {
             if (param2 >= 9) {
-              break L0;
+              break L1;
             } else {
-              L1: {
+              L2: {
                 var3 = rf.field_hb[param2];
                 if (0 > var3) {
-                  break L1;
+                  break L2;
                 } else {
-                  if (var3 < 5) {
-                    L2: {
+                  if ((var3 ^ -1) > -6) {
+                    L3: {
                       var4 = cl.field_u[var3];
                       if (kd.field_k[var3] <= var4) {
-                        break L2;
+                        break L3;
                       } else {
                         kd.field_k[var3] = var4;
-                        break L2;
+                        break L3;
                       }
                     }
-                    L3: {
-                      if (kd.field_k[var3] < 0) {
+                    L4: {
+                      if ((kd.field_k[var3] ^ -1) > -1) {
                         mg.a(true, param2, param0);
                         kd.field_k[var3] = var4;
-                        break L3;
+                        break L4;
                       } else {
-                        break L3;
+                        break L4;
                       }
                     }
                     return;
                   } else {
-                    break L1;
+                    break L2;
                   }
                 }
               }
@@ -262,71 +276,75 @@ abstract class jc {
     final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
-        boolean stackIn_1_0 = false;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_0_0 = false;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        boolean stackOut_2_0 = false;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            var3 = (CharSequence) (Object) param0;
-            stackOut_0_0 = td.field_i.equals((Object) (Object) il.a(var3, (byte) 21));
-            stackIn_1_0 = stackOut_0_0;
+            L1: {
+              if (param1 == 26691) {
+                break L1;
+              } else {
+                field_h = -48;
+                break L1;
+              }
+            }
+            var3 = (CharSequence) ((Object) param0);
+            stackOut_2_0 = td.field_i.equals(il.a(var3, (byte) 21));
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("jc.L(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackOut_4_0 = (RuntimeException) (var2);
+            stackOut_4_1 = new StringBuilder().append("jc.L(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 26691 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     abstract void a(int param0, int param1, int param2);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new String[]{"Collect every coin on a tower, including those dropped by defeated enemies", "Kill every enemy on any tower but the first", "Collect a jade coin", "Collect all 3 jade coins with one character", "Collect all 3 jade coins with all three characters", "Get a x2 score multiplier", "Get a x4 score multiplier", "Get a x6 score multiplier", "Defeat the first master monk", "Defeat 2 master monks with one character", "Defeat all 3 master monks with one character", "Defeat all 3 master monks with all three characters", "Collect 20 seals with one character", "Collect all 30 seals with one character", "Collect all 30 seals with all three characters", "Collect a seal without taking damage since the last seal, on any tower but the first", "Defeat 150 skull heads during Hallowe'en"};
         field_i = new ka(96, 96);
         field_h = 0;

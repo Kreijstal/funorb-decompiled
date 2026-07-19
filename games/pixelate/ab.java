@@ -27,10 +27,6 @@ final class ab {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ab.A(";
         field_e = "Lost";
         field_d = "OVER <%0>";

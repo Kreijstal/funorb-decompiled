@@ -20,76 +20,77 @@ abstract class pc {
     abstract void a(int param0, int param1);
 
     int a(boolean param0, int param1, int param2) {
-        if (((pc) this).field_m > param2) {
+        if (this.field_m > param2) {
             return -1;
         }
-        if (((pc) this).field_f <= param2) {
+        if (this.field_f <= param2) {
             return -1;
         }
-        if (((pc) this).field_j > param1) {
+        if (this.field_j > param1) {
             return -1;
         }
         if (param0) {
             return 66;
         }
-        int var4 = (param1 + -((pc) this).field_j) / ((pc) this).field_d;
-        if (!(var4 < ((pc) this).field_a)) {
+        int var4 = (param1 + -this.field_j) / this.field_d;
+        if (!(var4 < this.field_a)) {
             return -1;
         }
         return var4;
     }
 
     final void b(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         var3 = HoldTheLine.field_D;
         if (param0 != 12515) {
-          int discarded$1 = ((pc) this).a(true, 122, -88);
+          discarded$1 = this.a(true, 122, -88);
           if (gg.field_J == 0) {
             if (rd.field_f == 0) {
-              ((pc) this).field_k = false;
+              this.field_k = false;
               if (na.field_k) {
-                var2 = ((pc) this).a(false, rf.field_X, nc.field_g);
-                if (var2 == -1) {
-                  if (!((pc) this).field_g) {
-                    ((pc) this).field_g = false;
-                    ((pc) this).field_c = var2;
+                var2 = this.a(false, rf.field_X, nc.field_g);
+                if ((var2 ^ -1) == 0) {
+                  if (!this.field_g) {
+                    this.field_g = false;
+                    this.field_c = var2;
                     return;
                   } else {
                     return;
                   }
                 } else {
-                  ((pc) this).field_g = false;
-                  ((pc) this).field_c = var2;
+                  this.field_g = false;
+                  this.field_c = var2;
                   return;
                 }
               } else {
                 return;
               }
             } else {
-              if (((pc) this).field_k) {
-                var2 = ((pc) this).field_c;
+              if (this.field_k) {
+                var2 = this.field_c;
                 if (var2 != -1) {
-                  ((pc) this).a(-(((pc) this).field_d * var2) + rf.field_X + -((pc) this).field_j, var2, rd.field_f, param0 + -12639, nc.field_g, true);
+                  this.a(-(this.field_d * var2) + rf.field_X + -this.field_j, var2, rd.field_f, param0 + -12639, nc.field_g, true);
                   return;
                 } else {
                   return;
                 }
               } else {
-                ((pc) this).field_k = false;
+                this.field_k = false;
                 if (na.field_k) {
-                  var2 = ((pc) this).a(false, rf.field_X, nc.field_g);
-                  if (var2 == -1) {
-                    if (!((pc) this).field_g) {
-                      ((pc) this).field_g = false;
-                      ((pc) this).field_c = var2;
+                  var2 = this.a(false, rf.field_X, nc.field_g);
+                  if ((var2 ^ -1) == 0) {
+                    if (!this.field_g) {
+                      this.field_g = false;
+                      this.field_c = var2;
                       return;
                     } else {
                       return;
                     }
                   } else {
-                    ((pc) this).field_g = false;
-                    ((pc) this).field_c = var2;
+                    this.field_g = false;
+                    this.field_c = var2;
                     return;
                   }
                 } else {
@@ -98,63 +99,63 @@ abstract class pc {
               }
             }
           } else {
-            var2 = ((pc) this).a(false, jb.field_U, lb.field_x);
-            ((pc) this).field_c = var2;
-            if (var2 == -1) {
-              ((pc) this).field_k = false;
+            var2 = this.a(false, jb.field_U, lb.field_x);
+            this.field_c = var2;
+            if ((var2 ^ -1) == 0) {
+              this.field_k = false;
               return;
             } else {
-              ((pc) this).field_k = true;
-              ((pc) this).a(-(((pc) this).field_d * var2) + (jb.field_U + -((pc) this).field_j), var2, gg.field_J, param0 ^ -12428, lb.field_x, false);
+              this.field_k = true;
+              this.a(-(this.field_d * var2) + (jb.field_U + -this.field_j), var2, gg.field_J, param0 ^ -12428, lb.field_x, false);
               return;
             }
           }
         } else {
           if (gg.field_J == 0) {
             if (rd.field_f == 0) {
-              ((pc) this).field_k = false;
+              this.field_k = false;
               if (na.field_k) {
-                var2 = ((pc) this).a(false, rf.field_X, nc.field_g);
-                if (var2 == -1) {
-                  if (((pc) this).field_g) {
+                var2 = this.a(false, rf.field_X, nc.field_g);
+                if ((var2 ^ -1) == 0) {
+                  if (this.field_g) {
                     return;
                   } else {
-                    ((pc) this).field_g = false;
-                    ((pc) this).field_c = var2;
+                    this.field_g = false;
+                    this.field_c = var2;
                     return;
                   }
                 } else {
-                  ((pc) this).field_g = false;
-                  ((pc) this).field_c = var2;
+                  this.field_g = false;
+                  this.field_c = var2;
                   return;
                 }
               } else {
                 return;
               }
             } else {
-              if (((pc) this).field_k) {
-                var2 = ((pc) this).field_c;
+              if (this.field_k) {
+                var2 = this.field_c;
                 if (var2 == -1) {
                   return;
                 } else {
-                  ((pc) this).a(-(((pc) this).field_d * var2) + rf.field_X + -((pc) this).field_j, var2, rd.field_f, param0 + -12639, nc.field_g, true);
+                  this.a(-(this.field_d * var2) + rf.field_X + -this.field_j, var2, rd.field_f, param0 + -12639, nc.field_g, true);
                   return;
                 }
               } else {
-                ((pc) this).field_k = false;
+                this.field_k = false;
                 if (na.field_k) {
-                  var2 = ((pc) this).a(false, rf.field_X, nc.field_g);
-                  if (var2 == -1) {
-                    if (((pc) this).field_g) {
+                  var2 = this.a(false, rf.field_X, nc.field_g);
+                  if ((var2 ^ -1) == 0) {
+                    if (this.field_g) {
                       return;
                     } else {
-                      ((pc) this).field_g = false;
-                      ((pc) this).field_c = var2;
+                      this.field_g = false;
+                      this.field_c = var2;
                       return;
                     }
                   } else {
-                    ((pc) this).field_g = false;
-                    ((pc) this).field_c = var2;
+                    this.field_g = false;
+                    this.field_c = var2;
                     return;
                   }
                 } else {
@@ -163,14 +164,14 @@ abstract class pc {
               }
             }
           } else {
-            var2 = ((pc) this).a(false, jb.field_U, lb.field_x);
-            ((pc) this).field_c = var2;
-            if (var2 != -1) {
-              ((pc) this).field_k = true;
-              ((pc) this).a(-(((pc) this).field_d * var2) + (jb.field_U + -((pc) this).field_j), var2, gg.field_J, param0 ^ -12428, lb.field_x, false);
+            var2 = this.a(false, jb.field_U, lb.field_x);
+            this.field_c = var2;
+            if ((var2 ^ -1) != 0) {
+              this.field_k = true;
+              this.a(-(this.field_d * var2) + (jb.field_U + -this.field_j), var2, gg.field_J, param0 ^ -12428, lb.field_x, false);
               return;
             } else {
-              ((pc) this).field_k = false;
+              this.field_k = false;
               return;
             }
           }
@@ -202,48 +203,48 @@ abstract class pc {
         int var4 = 0;
         var4 = HoldTheLine.field_D;
         if (param1 == -24489) {
-          if (aa.field_n != 96) {
-            if (aa.field_n != -98) {
+          if (-97 != (aa.field_n ^ -1)) {
+            if ((aa.field_n ^ -1) != -98) {
               if (aa.field_n != 84) {
-                if (-84 == aa.field_n) {
-                  ((pc) this).c(param0, -3565);
+                if (-84 == (aa.field_n ^ -1)) {
+                  this.c(param0, -3565);
                   return;
                 } else {
                   return;
                 }
               } else {
-                ((pc) this).c(param0, -3565);
+                this.c(param0, -3565);
                 return;
               }
             } else {
-              ((pc) this).d(108, param0);
+              this.d(108, param0);
               return;
             }
           } else {
-            ((pc) this).a(1, param0);
+            this.a(1, param0);
             return;
           }
         } else {
-          ((pc) this).field_m = -80;
-          if (aa.field_n != 96) {
-            if (aa.field_n != -98) {
+          this.field_m = -80;
+          if (-97 != (aa.field_n ^ -1)) {
+            if ((aa.field_n ^ -1) != -98) {
               if (aa.field_n != 84) {
-                if (-84 == aa.field_n) {
-                  ((pc) this).c(param0, -3565);
+                if (-84 == (aa.field_n ^ -1)) {
+                  this.c(param0, -3565);
                   return;
                 } else {
                   return;
                 }
               } else {
-                ((pc) this).c(param0, -3565);
+                this.c(param0, -3565);
                 return;
               }
             } else {
-              ((pc) this).d(108, param0);
+              this.d(108, param0);
               return;
             }
           } else {
-            ((pc) this).a(1, param0);
+            this.a(1, param0);
             return;
           }
         }
@@ -257,12 +258,12 @@ abstract class pc {
           r.field_b = r.field_b - 1;
           if (0 >= r.field_b) {
             if (1 != param2) {
-              ((pc) this).a(1, param1);
+              this.a(1, param1);
               r.field_b = ki.field_o;
               var7 = 14 % ((param3 - -51) / 46);
               return;
             } else {
-              ((pc) this).c(param1, -3565);
+              this.c(param1, -3565);
               r.field_b = ki.field_o;
               var7 = 14 % ((param3 - -51) / 46);
               return;
@@ -273,12 +274,12 @@ abstract class pc {
           }
         } else {
           if (1 == param2) {
-            ((pc) this).c(param1, -3565);
+            this.c(param1, -3565);
             r.field_b = cg.field_i;
             var7 = 14 % ((param3 - -51) / 46);
             return;
           } else {
-            ((pc) this).a(1, param1);
+            this.a(1, param1);
             r.field_b = cg.field_i;
             var7 = 14 % ((param3 - -51) / 46);
             return;
@@ -290,23 +291,23 @@ abstract class pc {
         int var3 = 0;
         var3 = HoldTheLine.field_D;
         if (param0) {
-          if (((pc) this).field_k) {
+          if (this.field_k) {
             return;
           } else {
             if (aa.field_n != 98) {
               if (99 == aa.field_n) {
-                ((pc) this).field_c = ((pc) this).field_c + 1;
-                if (((pc) this).field_c < ((pc) this).field_a) {
-                  ((pc) this).field_g = true;
+                this.field_c = this.field_c + 1;
+                if (this.field_c < this.field_a) {
+                  this.field_g = true;
                   return;
                 } else {
-                  ((pc) this).field_c = 0;
-                  ((pc) this).field_g = true;
+                  this.field_c = 0;
+                  this.field_g = true;
                   return;
                 }
               } else {
-                if (((pc) this).field_c >= 0) {
-                  ((pc) this).b(((pc) this).field_c, -24489);
+                if ((this.field_c ^ -1) <= -1) {
+                  this.b(this.field_c, -24489);
                   return;
                 } else {
                   return;
@@ -314,15 +315,15 @@ abstract class pc {
               }
             } else {
               L0: {
-                if (((pc) this).field_c <= 0) {
-                  ((pc) this).field_c = ((pc) this).field_a;
+                if ((this.field_c ^ -1) >= -1) {
+                  this.field_c = this.field_a;
                   break L0;
                 } else {
                   break L0;
                 }
               }
-              ((pc) this).field_c = ((pc) this).field_c - 1;
-              ((pc) this).field_g = true;
+              this.field_c = this.field_c - 1;
+              this.field_g = true;
               return;
             }
           }
@@ -335,14 +336,14 @@ abstract class pc {
 
     final void a(byte param0) {
         int var2 = 0;
-        if (!((pc) this).field_g) {
-          ((pc) this).field_c = -1;
+        if (!this.field_g) {
+          this.field_c = -1;
           var2 = -85 / ((param0 - 13) / 45);
-          ((pc) this).field_k = false;
+          this.field_k = false;
           return;
         } else {
           var2 = -85 / ((param0 - 13) / 45);
-          ((pc) this).field_k = false;
+          this.field_k = false;
           return;
         }
     }
@@ -395,11 +396,11 @@ abstract class pc {
         int stackOut_4_3 = 0;
         var4 = HoldTheLine.field_D;
         if (param0 != -55) {
-          ((pc) this).field_a = 124;
+          this.field_a = 124;
           var2 = 0;
-          var3 = ((pc) this).field_j;
+          var3 = this.field_j;
           L0: while (true) {
-            if (var2 < ((pc) this).field_a) {
+            if (var2 < this.field_a) {
               L1: {
                 stackOut_12_0 = this;
                 stackOut_12_1 = var3;
@@ -410,7 +411,7 @@ abstract class pc {
                 stackIn_13_0 = stackOut_12_0;
                 stackIn_13_1 = stackOut_12_1;
                 stackIn_13_2 = stackOut_12_2;
-                if (var2 != ((pc) this).field_c) {
+                if (var2 != this.field_c) {
                   stackOut_14_0 = this;
                   stackOut_14_1 = stackIn_14_1;
                   stackOut_14_2 = stackIn_14_2;
@@ -432,9 +433,9 @@ abstract class pc {
                   break L1;
                 }
               }
-              ((pc) this).a(stackIn_15_1, stackIn_15_2, stackIn_15_3 != 0, (byte) -124);
+              this.a(stackIn_15_1, stackIn_15_2, stackIn_15_3 != 0, (byte) -124);
               var2++;
-              var3 = var3 + ((pc) this).field_d;
+              var3 = var3 + this.field_d;
               continue L0;
             } else {
               return;
@@ -442,9 +443,9 @@ abstract class pc {
           }
         } else {
           var2 = 0;
-          var3 = ((pc) this).field_j;
+          var3 = this.field_j;
           L2: while (true) {
-            if (var2 >= ((pc) this).field_a) {
+            if (var2 >= this.field_a) {
               return;
             } else {
               L3: {
@@ -457,7 +458,7 @@ abstract class pc {
                 stackIn_4_0 = stackOut_3_0;
                 stackIn_4_1 = stackOut_3_1;
                 stackIn_4_2 = stackOut_3_2;
-                if (var2 != ((pc) this).field_c) {
+                if (var2 != this.field_c) {
                   stackOut_5_0 = this;
                   stackOut_5_1 = stackIn_5_1;
                   stackOut_5_2 = stackIn_5_2;
@@ -479,9 +480,9 @@ abstract class pc {
                   break L3;
                 }
               }
-              ((pc) this).a(stackIn_6_1, stackIn_6_2, stackIn_6_3 != 0, (byte) -124);
+              this.a(stackIn_6_1, stackIn_6_2, stackIn_6_3 != 0, (byte) -124);
               var2++;
-              var3 = var3 + ((pc) this).field_d;
+              var3 = var3 + this.field_d;
               continue L2;
             }
           }
@@ -491,25 +492,21 @@ abstract class pc {
     abstract void a(int param0, int param1, boolean param2, byte param3);
 
     protected pc() {
-        ((pc) this).field_g = true;
-        ((pc) this).field_c = 0;
+        this.field_g = true;
+        this.field_c = 0;
     }
 
     pc(int param0, int param1, int param2, int param3, int param4) {
-        ((pc) this).field_g = true;
-        ((pc) this).field_c = 0;
-        ((pc) this).field_j = param3;
-        ((pc) this).field_d = param4;
-        ((pc) this).field_a = param0;
-        ((pc) this).field_m = param1;
-        ((pc) this).field_f = param2;
+        this.field_g = true;
+        this.field_c = 0;
+        this.field_j = param3;
+        this.field_d = param4;
+        this.field_a = param0;
+        this.field_m = param1;
+        this.field_f = param2;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "This password contains your email address, and would be easy to guess";
         field_n = new an();
         field_e = new ah();

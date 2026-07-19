@@ -14,9 +14,9 @@ final class me {
     final boolean a(byte param0) {
         if (param0 <= 36) {
             me.a(-118);
-            return ((me) this).field_b;
+            return this.field_b;
         }
-        return ((me) this).field_b;
+        return this.field_b;
     }
 
     public static void a(int param0) {
@@ -42,11 +42,11 @@ final class me {
             jb.field_Sb[param1] = param0;
             al.field_o.a(param1, -128);
             if (param2 <= 65) {
-              field_a = null;
-              hf.field_ob.a((ne) (Object) new a(param1), false);
+              field_a = (String) null;
+              hf.field_ob.a(new a(param1), false);
               return;
             } else {
-              hf.field_ob.a((ne) (Object) new a(param1), false);
+              hf.field_ob.a(new a(param1), false);
               return;
             }
           } else {
@@ -61,24 +61,24 @@ final class me {
         if (param0 != 36) {
             return false;
         }
-        return ((me) this).field_h;
+        return this.field_h;
     }
 
     final void a(boolean param0, boolean param1) {
-        ((me) this).field_h = true;
-        ((me) this).field_b = param0 ? true : false;
+        this.field_h = true;
+        this.field_b = param0 ? true : false;
         if (param1) {
             me.a(118, -45, (byte) -83, -85);
         }
     }
 
     me(String param0) {
-        ((me) this).field_h = false;
-        ((me) this).field_b = false;
+        this.field_h = false;
+        this.field_b = false;
         try {
-            ((me) this).field_d = param0;
+            this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "me.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class me {
         }
         var5 = stackIn_3_0;
         if (param0 != 32) {
-          return null;
+          return (cn) null;
         } else {
           var6 = new cn(var5, var5);
           jh.a(var6);
@@ -113,16 +113,12 @@ final class me {
 
     final String c(int param0) {
         if (param0 != -2085) {
-            return null;
+            return (String) null;
         }
-        return ((me) this).field_d;
+        return this.field_d;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Email: ";
         field_c = "Return to game";
         field_a = "Names can only contain letters, numbers, spaces and underscores";

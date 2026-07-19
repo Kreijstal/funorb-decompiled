@@ -15,52 +15,58 @@ final class pb {
             if (null != param1.field_q) {
                 param1.b(true);
             }
-            var5 = ((pb) this).field_b[(int)(param0 & (long)(-1 + ((pb) this).field_f))];
+            var5 = this.field_b[(int)(param0 & (long)(-1 + this.field_f))];
             param1.field_o = var5;
             param1.field_q = var5.field_q;
             if (param2 < 115) {
-                ((pb) this).field_f = -72;
+                this.field_f = -72;
             }
             param1.field_q.field_o = param1;
             param1.field_o.field_q = param1;
             param1.field_r = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "pb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "pb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final jl a(long param0, int param1) {
         jl var5 = null;
         int var6 = Confined.field_J ? 1 : 0;
-        ((pb) this).field_c = param0;
-        jl var4 = ((pb) this).field_b[(int)(param0 & (long)(param1 + ((pb) this).field_f))];
-        ((pb) this).field_d = var4.field_o;
-        while (var4 != ((pb) this).field_d) {
-            if (param0 == ((pb) this).field_d.field_r) {
-                var5 = ((pb) this).field_d;
-                ((pb) this).field_d = ((pb) this).field_d.field_o;
+        this.field_c = param0;
+        jl var4 = this.field_b[(int)(param0 & (long)(param1 + this.field_f))];
+        this.field_d = var4.field_o;
+        while (var4 != this.field_d) {
+            if (param0 == this.field_d.field_r) {
+                var5 = this.field_d;
+                this.field_d = this.field_d.field_o;
                 return var5;
             }
-            ((pb) this).field_d = ((pb) this).field_d.field_o;
+            this.field_d = this.field_d.field_o;
         }
-        ((pb) this).field_d = null;
+        this.field_d = null;
         return null;
     }
 
     public static void a(byte param0) {
         field_e = null;
+        if (param0 <= 14) {
+            field_e = (mi) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     pb(int param0) {
         int var2 = 0;
+        jl dupTemp$0 = null;
         jl var3 = null;
-        ((pb) this).field_f = param0;
-        ((pb) this).field_b = new jl[param0];
+        this.field_f = param0;
+        this.field_b = new jl[param0];
         for (var2 = 0; var2 < param0; var2++) {
-            jl dupTemp$0 = new jl();
+            dupTemp$0 = new jl();
             var3 = dupTemp$0;
-            ((pb) this).field_b[var2] = dupTemp$0;
+            this.field_b[var2] = dupTemp$0;
             var3.field_q = var3;
             var3.field_o = var3;
         }
@@ -70,7 +76,7 @@ final class pb {
         try {
             n.field_d = param3;
             if (param1 >= -63) {
-                Object var7 = null;
+                ji var7 = (ji) null;
                 pb.a((ji) null, (byte) -101, (ji) null, 96, -46, -6);
             }
             db.field_v = param0;
@@ -78,27 +84,27 @@ final class pb {
             kb.field_b = param5;
             jd.field_g = param4;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "pb.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "pb.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final jl a(int param0) {
         jl var4 = null;
         int var5 = Confined.field_J ? 1 : 0;
-        if (((pb) this).field_d == null) {
+        if (this.field_d == null) {
             return null;
         }
         int var2 = 86 / ((49 - param0) / 55);
-        jl var3 = ((pb) this).field_b[(int)((long)(-1 + ((pb) this).field_f) & ((pb) this).field_c)];
-        while (var3 != ((pb) this).field_d) {
-            if (!(~((pb) this).field_d.field_r != ~((pb) this).field_c)) {
-                var4 = ((pb) this).field_d;
-                ((pb) this).field_d = ((pb) this).field_d.field_o;
+        jl var3 = this.field_b[(int)((long)(-1 + this.field_f) & this.field_c)];
+        while (var3 != this.field_d) {
+            if (!((this.field_d.field_r ^ -1L) != (this.field_c ^ -1L))) {
+                var4 = this.field_d;
+                this.field_d = this.field_d.field_o;
                 return var4;
             }
-            ((pb) this).field_d = ((pb) this).field_d.field_o;
+            this.field_d = this.field_d.field_o;
         }
-        ((pb) this).field_d = null;
+        this.field_d = null;
         return null;
     }
 
@@ -118,15 +124,23 @@ final class pb {
             var1_int = 0;
             L1: while (true) {
               if (256 <= var1_int) {
+                L2: {
+                  if (param0 >= 122) {
+                    break L2;
+                  } else {
+                    field_a = (String) null;
+                    break L2;
+                  }
+                }
                 var5 = 256;
                 var1_int = var5;
-                L2: while (true) {
+                L3: while (true) {
                   if (oj.field_D.length <= var5) {
                     break L0;
                   } else {
                     oj.field_D[var5] = 255;
                     var5++;
-                    continue L2;
+                    continue L3;
                   }
                 }
               } else {
@@ -140,15 +154,11 @@ final class pb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "pb.B(" + 126 + ')');
+          throw sd.a((Throwable) ((Object) var1), "pb.B(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Waiting for fonts";
     }
 }

@@ -21,7 +21,7 @@ final class ck extends d {
           stackOut_0_0 = this;
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
-          if (((ck) this).field_G) {
+          if (this.field_G) {
             stackOut_2_0 = this;
             stackOut_2_1 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -35,7 +35,7 @@ final class ck extends d {
             break L0;
           }
         }
-        ((ck) this).field_G = stackIn_3_1 != 0;
+        ((ck) (this)).field_G = stackIn_3_1 != 0;
         if (param2 <= 111) {
           ck.b(false);
           super.a(param0, param1, (byte) 126, param3);
@@ -49,18 +49,18 @@ final class ck extends d {
     private ck(String param0, ur param1, uf param2) {
         super(param0, param1, param2);
         try {
-            ((ck) this).field_B = eb.field_c.field_g;
+            this.field_B = eb.field_c.field_g;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     ck(String param0, uf param1, boolean param2) {
         this(param0, param1);
         try {
-            ((ck) this).field_G = param2 ? true : false;
+            this.field_G = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -69,24 +69,20 @@ final class ck extends d {
         if (!param0) {
             return;
         }
-        field_H = null;
+        field_H = (String[][]) null;
         field_I = null;
     }
 
     private ck(String param0, uf param1) {
         this(param0, eb.field_c.field_p, param1);
         try {
-            ((ck) this).field_B = eb.field_c.field_g;
+            this.field_B = eb.field_c.field_g;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = "Message lobby";
     }
 }

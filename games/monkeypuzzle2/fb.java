@@ -22,14 +22,10 @@ abstract class fb extends bf {
     }
 
     fb() {
-        ((fb) this).field_j = true;
+        this.field_j = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fb.F(";
         field_i = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     }

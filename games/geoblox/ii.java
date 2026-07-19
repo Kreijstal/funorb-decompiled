@@ -17,11 +17,22 @@ final class ii {
     static String field_j;
 
     public static void a(int param0) {
-        field_h = null;
-        field_k = null;
-        field_j = null;
-        field_d = null;
-        field_b = null;
+        if (param0 < 121) {
+          field_b = (String) null;
+          field_h = null;
+          field_k = null;
+          field_j = null;
+          field_d = null;
+          field_b = null;
+          return;
+        } else {
+          field_h = null;
+          field_k = null;
+          field_j = null;
+          field_d = null;
+          field_b = null;
+          return;
+        }
     }
 
     private ii() throws Throwable {
@@ -29,10 +40,6 @@ final class ii {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 0;
         field_d = new int[8192];
         field_b = "Highscores";

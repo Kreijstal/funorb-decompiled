@@ -10,44 +10,32 @@ final class kk implements Runnable {
     int field_f;
 
     public static void b(int param0) {
+        if (param0 != -4) {
+            return;
+        }
         field_a = null;
         field_d = null;
     }
 
     final void a(int param0) {
-        InterruptedException interruptedException = null;
-        Object var2 = null;
-        Throwable var3 = null;
-        Throwable decompiledCaughtException = null;
-        ((kk) this).field_e = true;
-        var2 = (Object) (Object) ((kk) this).field_c;
-        synchronized (var2) {
-          L0: {
-            L1: {
-              ((Object) (Object) ((kk) this).field_c).notifyAll();
-              if (param0 == -24580) {
-                break L1;
-              } else {
-                field_a = null;
-                break L1;
-              }
-            }
-            break L0;
-          }
-        }
         try {
-          L2: {
-            ((kk) this).field_b.join();
-            break L2;
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            interruptedException = (InterruptedException) (Object) decompiledCaughtException;
-            break L3;
-          }
+            this.field_e = true;
+            synchronized (this.field_c) {
+                this.field_c.notifyAll();
+                if (param0 != -24580) {
+                    field_a = (String) null;
+                }
+            }
+            try {
+                this.field_b.join();
+            } catch (InterruptedException interruptedException) {
+            }
+            this.field_b = null;
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
-        ((kk) this).field_b = null;
     }
 
     final cm a(jg param0, int param1, int param2) {
@@ -84,16 +72,16 @@ final class kk implements Runnable {
               if (param1 > 33) {
                 break L1;
               } else {
-                ((kk) this).field_f = 88;
+                this.field_f = 88;
                 break L1;
               }
             }
             var4 = new cm();
             var4.field_z = 1;
-            var5 = (Object) (Object) ((kk) this).field_c;
+            var5 = this.field_c;
             synchronized (var5) {
               L2: {
-                var6 = (cm) (Object) ((kk) this).field_c.a(0);
+                var6 = (cm) ((Object) this.field_c.a(0));
                 L3: while (true) {
                   if (var6 == null) {
                     break L2;
@@ -105,10 +93,10 @@ final class kk implements Runnable {
                         if (param0 != var6.field_x) {
                           break L4;
                         } else {
-                          if (var6.field_z == 2) {
+                          if ((var6.field_z ^ -1) == -3) {
                             var4.field_u = false;
                             var4.field_y = var6.field_y;
-                            stackOut_10_0 = (cm) var4;
+                            stackOut_10_0 = (cm) (var4);
                             stackIn_11_0 = stackOut_10_0;
                             return stackIn_11_0;
                           } else {
@@ -117,7 +105,7 @@ final class kk implements Runnable {
                         }
                       }
                     }
-                    var6 = (cm) (Object) ((kk) this).field_c.a((byte) 116);
+                    var6 = (cm) ((Object) this.field_c.a((byte) 116));
                     continue L3;
                   }
                 }
@@ -126,7 +114,7 @@ final class kk implements Runnable {
             var4.field_y = param0.a(param2, 26296);
             var4.field_r = true;
             var4.field_u = false;
-            stackOut_17_0 = (cm) var4;
+            stackOut_17_0 = (cm) (var4);
             stackIn_18_0 = stackOut_17_0;
             break L0;
           }
@@ -134,23 +122,23 @@ final class kk implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var4_ref;
+            stackOut_19_0 = (RuntimeException) (var4_ref);
             stackOut_19_1 = new StringBuilder().append("kk.B(");
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L5;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -158,42 +146,50 @@ final class kk implements Runnable {
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_18_0;
     }
 
     public final void run() {
         try {
+            boolean discarded$1 = false;
+            InterruptedException interruptedException = null;
             Object var2 = null;
             Exception var2_ref = null;
             Throwable var4 = null;
             int var5 = 0;
-            Object var6 = null;
+            String var6 = null;
             cm var7 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
             var5 = EscapeVector.field_A;
             L0: while (true) {
-              if (((kk) this).field_e) {
+              if (this.field_e) {
                 return;
               } else {
-                var2 = (Object) (Object) ((kk) this).field_c;
+                var2 = this.field_c;
                 synchronized (var2) {
                   L1: {
-                    var7 = (cm) (Object) ((kk) this).field_c.b((byte) -75);
+                    var7 = (cm) ((Object) this.field_c.b((byte) -75));
                     if (var7 == null) {
-                      {
+                      try {
                         L2: {
-                          ((Object) (Object) ((kk) this).field_c).wait();
+                          this.field_c.wait();
                           break L2;
+                        }
+                      } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L3: {
+                          interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+                          break L3;
                         }
                       }
                       decompiledRegionSelector0 = 0;
                       break L1;
                     } else {
-                      ((kk) this).field_f = ((kk) this).field_f - 1;
+                      this.field_f = this.field_f - 1;
                       decompiledRegionSelector0 = 1;
                       break L1;
                     }
@@ -206,11 +202,11 @@ final class kk implements Runnable {
                     L4: {
                       L5: {
                         if (var7.field_z == 2) {
-                          boolean discarded$1 = var7.field_x.a((byte) 18, (int)var7.field_p, var7.field_y.length, var7.field_y);
+                          discarded$1 = var7.field_x.a((byte) 18, (int)var7.field_p, var7.field_y.length, var7.field_y);
                           var7.field_u = false;
                           break L5;
                         } else {
-                          if (var7.field_z != 3) {
+                          if ((var7.field_z ^ -1) != -4) {
                             decompiledRegionSelector1 = 0;
                             break L4;
                           } else {
@@ -227,8 +223,8 @@ final class kk implements Runnable {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     L6: {
                       var2_ref = (Exception) (Object) decompiledCaughtException;
-                      var6 = null;
-                      pf.a(false, (String) null, (Throwable) (Object) var2_ref);
+                      var6 = (String) null;
+                      pf.a(false, (String) null, (Throwable) ((Object) var2_ref));
                       decompiledRegionSelector1 = 0;
                       break L6;
                     }
@@ -294,7 +290,7 @@ final class kk implements Runnable {
             var5.field_r = false;
             var5.field_z = param2;
             this.a(-3, var5);
-            stackOut_0_0 = (cm) var5;
+            stackOut_0_0 = (cm) (var5);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -302,23 +298,23 @@ final class kk implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var5_ref;
+            stackOut_2_0 = (RuntimeException) (var5_ref);
             stackOut_2_1 = new StringBuilder().append("kk.A(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -327,23 +323,23 @@ final class kk implements Runnable {
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
             stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param3 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -351,16 +347,19 @@ final class kk implements Runnable {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
         return stackIn_1_0;
     }
 
     private final void a(int param0, cm param1) {
-        synchronized (((kk) this).field_c) {
-            ((kk) this).field_c.a(-1, (fl) (Object) param1);
-            ((kk) this).field_f = ((kk) this).field_f + 1;
-            ((Object) (Object) ((kk) this).field_c).notifyAll();
+        synchronized (this.field_c) {
+            this.field_c.a(-1, param1);
+            this.field_f = this.field_f + 1;
+            if (param0 != -3) {
+                field_a = (String) null;
+            }
+            this.field_c.notifyAll();
         }
     }
 
@@ -397,11 +396,11 @@ final class kk implements Runnable {
               if (param0 <= -42) {
                 break L1;
               } else {
-                ((kk) this).field_e = true;
+                this.field_e = true;
                 break L1;
               }
             }
-            stackOut_2_0 = (cm) var4;
+            stackOut_2_0 = (cm) (var4);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -409,23 +408,23 @@ final class kk implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4_ref;
+            stackOut_4_0 = (RuntimeException) (var4_ref);
             stackOut_4_1 = new StringBuilder().append("kk.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -433,35 +432,31 @@ final class kk implements Runnable {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
 
     kk(lk param0) {
         la var2 = null;
-        ((kk) this).field_c = new va();
-        ((kk) this).field_e = false;
-        ((kk) this).field_f = 0;
+        this.field_c = new va();
+        this.field_e = false;
+        this.field_f = 0;
         try {
-            var2 = param0.a(true, 5, (Runnable) this);
+            var2 = param0.a(true, 5, (Runnable) (this));
             while (var2.field_f == 0) {
                 en.a((byte) 121, 10L);
             }
-            if (var2.field_f == 2) {
+            if (-3 == (var2.field_f ^ -1)) {
                 throw new RuntimeException();
             }
-            ((kk) this).field_b = (Thread) var2.field_b;
+            this.field_b = (Thread) (var2.field_b);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "kk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "kk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
         field_a = "This password is part of your Player Name, and would be easy to guess";
     }

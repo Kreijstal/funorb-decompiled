@@ -10,16 +10,21 @@ final class o extends l {
     final static void b(int param0) {
         rg.field_a[93] = 43;
         rg.field_a[192] = 28;
-        rg.field_a[520] = 59;
-        rg.field_a[222] = 58;
-        rg.field_a[44] = 71;
-        rg.field_a[46] = 72;
-        rg.field_a[92] = 74;
-        rg.field_a[47] = 73;
-        rg.field_a[59] = 57;
-        rg.field_a[45] = 26;
-        rg.field_a[91] = 42;
-        rg.field_a[61] = 27;
+        if (param0 != -25281) {
+          return;
+        } else {
+          rg.field_a[520] = 59;
+          rg.field_a[222] = 58;
+          rg.field_a[44] = 71;
+          rg.field_a[46] = 72;
+          rg.field_a[92] = 74;
+          rg.field_a[47] = 73;
+          rg.field_a[59] = 57;
+          rg.field_a[45] = 26;
+          rg.field_a[91] = 42;
+          rg.field_a[61] = 27;
+          return;
+        }
     }
 
     final l a(int param0) {
@@ -29,16 +34,16 @@ final class o extends l {
         l stackOut_6_0 = null;
         Object stackOut_3_0 = null;
         l stackOut_2_0 = null;
-        ((o) this).field_e = ((o) this).field_e - 1;
+        this.field_e = this.field_e - 1;
         if (param0 != -2) {
           L0: {
-            ((o) this).field_e = 15;
-            if (0 != ((o) this).field_e) {
+            this.field_e = 15;
+            if (0 != this.field_e) {
               stackOut_7_0 = this;
-              stackIn_8_0 = (l) (Object) stackOut_7_0;
+              stackIn_8_0 = (l) ((Object) stackOut_7_0);
               break L0;
             } else {
-              stackOut_6_0 = ((o) this).field_g;
+              stackOut_6_0 = this.field_g;
               stackIn_8_0 = stackOut_6_0;
               break L0;
             }
@@ -46,12 +51,12 @@ final class o extends l {
           return this;
         } else {
           L1: {
-            if (0 != ((o) this).field_e) {
+            if (0 != this.field_e) {
               stackOut_3_0 = this;
-              stackIn_4_0 = (l) (Object) stackOut_3_0;
+              stackIn_4_0 = (l) ((Object) stackOut_3_0);
               break L1;
             } else {
-              stackOut_2_0 = ((o) this).field_g;
+              stackOut_2_0 = this.field_g;
               stackIn_4_0 = stackOut_2_0;
               break L1;
             }
@@ -63,9 +68,9 @@ final class o extends l {
     final l b(byte param0) {
         if (param0 != -90) {
             o.c(-31);
-            return ((o) this).field_g;
+            return this.field_g;
         }
-        return ((o) this).field_g;
+        return this.field_g;
     }
 
     public static void c(int param0) {
@@ -77,18 +82,14 @@ final class o extends l {
 
     o(int param0, l param1) {
         try {
-            ((o) this).field_g = param1;
-            ((o) this).field_e = param0;
+            this.field_g = param1;
+            this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "o.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "o.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = null;
     }
 }

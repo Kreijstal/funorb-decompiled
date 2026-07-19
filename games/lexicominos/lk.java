@@ -8,10 +8,10 @@ abstract class lk extends kd {
     int field_h;
 
     final void a(int[] param0, int param1, int param2) {
-        if (((lk) this).field_j) {
-            ((lk) this).b(param0, param1, param2);
+        if (this.field_j) {
+            this.b(param0, param1, param2);
         } else {
-            ((lk) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class lk extends kd {
     }
 
     protected lk() {
-        ((lk) this).field_j = true;
+        this.field_j = true;
     }
 }

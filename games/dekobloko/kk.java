@@ -24,16 +24,62 @@ final class kk implements gl {
 
     final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
-        if (!(!param2)) {
-            var4 += 4;
+        if (!param3) {
+          L0: {
+            field_p = (um) null;
+            var4 = 0;
+            if (param2) {
+              var4 += 4;
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          L1: {
+            if (param0) {
+              var4 += 2;
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          L2: {
+            if (param1) {
+              var4++;
+              break L2;
+            } else {
+              break L2;
+            }
+          }
+          return qk.field_e[var4];
+        } else {
+          L3: {
+            var4 = 0;
+            if (param2) {
+              var4 += 4;
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          L4: {
+            if (param0) {
+              var4 += 2;
+              break L4;
+            } else {
+              break L4;
+            }
+          }
+          L5: {
+            if (param1) {
+              var4++;
+              break L5;
+            } else {
+              break L5;
+            }
+          }
+          return qk.field_e[var4];
         }
-        if (!(!param0)) {
-            var4 += 2;
-        }
-        if (!(!param1)) {
-            var4++;
-        }
-        return qk.field_e[var4];
     }
 
     final static void a(int param0, int param1, ki param2) {
@@ -44,6 +90,9 @@ final class kk implements gl {
         int var4 = var5.field_n;
         var5.a(true, 1);
         var5.a(true, param2.field_v);
+        if (param1 != -15016) {
+            return;
+        }
         try {
             var5.a(true, param2.field_p);
             var5.a(param2.field_s, false);
@@ -53,7 +102,7 @@ final class kk implements gl {
             discarded$0 = var5.a((byte) -15, var4);
             var5.b(var5.field_n - var4, true);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "kk.C(" + param0 + ',' + -15016 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw dh.a((Throwable) ((Object) runtimeException), "kk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -156,7 +205,7 @@ final class kk implements gl {
             }
             if (this.field_h != null) {
               var10 = this.field_m - -this.field_s + this.field_g;
-              discarded$1 = this.field_h.a(param4.field_E, param1 + param4.field_u - -var10, this.field_r + param2 + param4.field_D, param4.field_t - (this.field_g + var10), -(this.field_g << 1) + param4.field_y, this.field_d, this.field_b, this.field_c, this.field_a, 0);
+              discarded$1 = this.field_h.a(param4.field_E, param1 + param4.field_u - -var10, this.field_r + param2 + param4.field_D, param4.field_t - (this.field_g + var10), -(this.field_g << 254703425) + param4.field_y, this.field_d, this.field_b, this.field_c, this.field_a, 0);
               break L0;
             } else {
               return;

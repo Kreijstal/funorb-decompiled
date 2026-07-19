@@ -18,14 +18,13 @@ final class s {
     }
 
     final static void a(int param0, int param1, int param2) {
+        if (param0 != 72) {
+            return;
+        }
         ob.field_cc[param1] = param2;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "The contents of this room are shrouded in mystery.";
         field_b = new int[]{72, 115, 350, 420, 551};
     }

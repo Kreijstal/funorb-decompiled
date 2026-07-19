@@ -20,60 +20,60 @@ final class qh {
         int var2 = 0;
         Object var3 = null;
         byte[] var3_array = null;
-        if (((qh) this).field_c == null) {
-          if (((qh) this).field_b) {
-            if (((qh) this).field_d.a(0, ((qh) this).field_a)) {
+        if (this.field_c == null) {
+          if (this.field_b) {
+            if (this.field_d.a(0, this.field_a)) {
               var2 = 5 % ((-30 - param0) / 48);
-              if (((qh) this).field_f != 0) {
-                if (((qh) this).field_f == 1) {
+              if (this.field_f != 0) {
+                if ((this.field_f ^ -1) == -2) {
                   L0: {
                     var3_array = null;
-                    if (((qh) this).field_g == null) {
-                      var3_array = ((qh) this).field_d.a(-4, ((qh) this).field_h, ((qh) this).field_a);
+                    if (this.field_g == null) {
+                      var3_array = this.field_d.a(-4, this.field_h, this.field_a);
                       break L0;
                     } else {
-                      var3_array = ((qh) this).field_d.a((byte) 78, ((qh) this).field_a, ((qh) this).field_h, ((qh) this).field_g);
+                      var3_array = this.field_d.a((byte) 78, this.field_a, this.field_h, this.field_g);
                       break L0;
                     }
                   }
-                  ((qh) this).field_c = new ed(var3_array, (java.awt.Component) (Object) of.field_d);
-                  return ((qh) this).field_c;
+                  this.field_c = new ed(var3_array, (java.awt.Component) ((Object) of.field_d));
+                  return this.field_c;
                 } else {
-                  return ((qh) this).field_c;
+                  return this.field_c;
                 }
               } else {
-                ((qh) this).field_c = fe.a(((qh) this).field_a, ((qh) this).field_d, ((qh) this).field_h, true);
-                return ((qh) this).field_c;
+                this.field_c = fe.a(this.field_a, this.field_d, this.field_h, true);
+                return this.field_c;
               }
             } else {
               return null;
             }
           } else {
             var2 = 5 % ((-30 - param0) / 48);
-            if (((qh) this).field_f != 0) {
-              if (((qh) this).field_f != 1) {
-                return ((qh) this).field_c;
+            if (this.field_f != 0) {
+              if ((this.field_f ^ -1) != -2) {
+                return this.field_c;
               } else {
                 L1: {
                   var3_array = null;
-                  if (((qh) this).field_g == null) {
-                    var3_array = ((qh) this).field_d.a(-4, ((qh) this).field_h, ((qh) this).field_a);
+                  if (this.field_g == null) {
+                    var3_array = this.field_d.a(-4, this.field_h, this.field_a);
                     break L1;
                   } else {
-                    var3_array = ((qh) this).field_d.a((byte) 78, ((qh) this).field_a, ((qh) this).field_h, ((qh) this).field_g);
+                    var3_array = this.field_d.a((byte) 78, this.field_a, this.field_h, this.field_g);
                     break L1;
                   }
                 }
-                ((qh) this).field_c = new ed(var3_array, (java.awt.Component) (Object) of.field_d);
-                return ((qh) this).field_c;
+                this.field_c = new ed(var3_array, (java.awt.Component) ((Object) of.field_d));
+                return this.field_c;
               }
             } else {
-              ((qh) this).field_c = fe.a(((qh) this).field_a, ((qh) this).field_d, ((qh) this).field_h, true);
-              return ((qh) this).field_c;
+              this.field_c = fe.a(this.field_a, this.field_d, this.field_h, true);
+              return this.field_c;
             }
           }
         } else {
-          return ((qh) this).field_c;
+          return this.field_c;
         }
     }
 
@@ -84,93 +84,98 @@ final class qh {
         String var4 = null;
         String var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
         String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var6 = EscapeVector.field_A;
         try {
           L0: {
-            hb.field_b = new ed[7][3];
-            qi.field_M = new ed[7][3];
+            L1: {
+              hb.field_b = new ed[7][3];
+              qi.field_M = new ed[7][3];
+              if (param1 == -23) {
+                break L1;
+              } else {
+                qh.a(-112);
+                break L1;
+              }
+            }
             var2_int = 0;
-            L1: while (true) {
+            L2: while (true) {
               if (on.field_f.length <= var2_int) {
                 break L0;
               } else {
-                L2: {
+                L3: {
                   var3 = on.field_f[var2_int];
                   if (var3 == null) {
-                    var2_int++;
-                    break L2;
+                    break L3;
                   } else {
-                    if (var3.length() == 0) {
-                      var2_int++;
-                      break L2;
+                    if (-1 == (var3.length() ^ -1)) {
+                      break L3;
                     } else {
                       var4 = "";
                       hb.field_b[var2_int] = kh.a(param0, (byte) -112, var4, var3);
                       var5 = lm.field_b[var2_int];
                       if (var5 == null) {
-                        var2_int++;
-                        break L2;
+                        break L3;
                       } else {
                         if (var5.length() == 0) {
-                          break L2;
+                          break L3;
                         } else {
                           qi.field_M[var2_int] = kh.a(param0, (byte) -10, var4, var5);
-                          break L2;
+                          break L3;
                         }
                       }
                     }
                   }
                 }
                 var2_int++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var2;
-            stackOut_14_1 = new StringBuilder().append("qh.B(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_13_0 = (RuntimeException) (var2);
+            stackOut_13_1 = new StringBuilder().append("qh.B(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L3;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L3;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L4;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + -23 + ')');
+          throw t.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ')');
         }
     }
 
@@ -178,15 +183,18 @@ final class qh {
         c var3 = null;
         try {
             var3 = om.field_c;
-            var3.a(param2, true);
+            var3.a(param2, param1);
             var3.f(param0.field_i, -123);
             var3.f(param0.field_g, -123);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "qh.D(" + (param0 != null ? "{...}" : "null") + ',' + true + ',' + param2 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "qh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void a(int param0) {
+        if (param0 != 7) {
+            return;
+        }
         field_j = null;
         field_i = null;
         field_k = null;
@@ -196,22 +204,18 @@ final class qh {
 
     qh(mf param0, String param1, String param2, int param3, boolean param4, int[] param5) {
         try {
-            ((qh) this).field_b = param4 ? true : false;
-            ((qh) this).field_d = param0;
-            ((qh) this).field_f = param3;
-            ((qh) this).field_a = param2;
-            ((qh) this).field_h = param1;
-            ((qh) this).field_g = param5;
+            this.field_b = param4 ? true : false;
+            this.field_d = param0;
+            this.field_f = param3;
+            this.field_a = param2;
+            this.field_h = param1;
+            this.field_g = param5;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "qh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new String[]{"Sit down, commander. Prepare for mission briefing.", "As you know, aliens broke into Earth's most advanced <photo>weapons and technology installation.<br>They used <photo>cloaking devices and would have made good their escape...", "...had our most powerful items not had tracking devices fitted,<br>allowing us to <photo>track the aliens to their home system.", "Your mission is to take your ship, the OSS Katsuro, into the caves where our equipment is being stored.<br><photo>You must overcome the aliens' defences and recover the equipment.", "Our emergency rescue teleporter has enough power for two transmissions.<br>The aliens will attempt to stop you and we can only save your life twice...", "...so we are relying on your skills as a pilot to win the <title>day for Earth."};
         field_e = "Shield recharged";
     }

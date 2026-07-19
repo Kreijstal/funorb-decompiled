@@ -7,10 +7,30 @@ final class od {
     static String[] field_b;
 
     final static boolean a(byte param0) {
+        int fieldTemp$20 = 0;
+        int fieldTemp$21 = 0;
+        int fieldTemp$22 = 0;
+        int fieldTemp$23 = 0;
+        int fieldTemp$24 = 0;
+        int fieldTemp$25 = 0;
+        int fieldTemp$26 = 0;
+        int fieldTemp$27 = 0;
+        int fieldTemp$28 = 0;
+        int fieldTemp$29 = 0;
+        int fieldTemp$30 = 0;
+        int fieldTemp$31 = 0;
+        int fieldTemp$32 = 0;
+        int fieldTemp$33 = 0;
+        int fieldTemp$34 = 0;
+        int fieldTemp$35 = 0;
+        int fieldTemp$36 = 0;
+        int fieldTemp$37 = 0;
+        int fieldTemp$38 = 0;
+        int fieldTemp$39 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
-        Object var4 = null;
+        gn var4 = null;
         var3 = DungeonAssault.field_K;
         if (null == gk.field_L) {
           if (null == jn.field_l) {
@@ -35,7 +55,7 @@ final class od {
                       }
                     }
                     L2: {
-                      if (hh.field_p > 640) {
+                      if (-641 > (hh.field_p ^ -1)) {
                         hh.field_p = 640;
                         break L2;
                       } else {
@@ -43,7 +63,7 @@ final class od {
                       }
                     }
                     L3: {
-                      if (ed.field_P < 0) {
+                      if ((ed.field_P ^ -1) > -1) {
                         ed.field_P = 0;
                         break L3;
                       } else {
@@ -82,18 +102,18 @@ final class od {
                       a.field_i = hm.field_k;
                       if (param0 <= -50) {
                         eg.a(pp.field_K, true);
-                        if ((Object) (Object) ec.field_n != (Object) (Object) hh.field_s) {
-                          if ((Object) (Object) tk.field_k != (Object) (Object) hh.field_s) {
-                            if ((Object) (Object) ti.field_A != (Object) (Object) hh.field_s) {
+                        if (ec.field_n != hh.field_s) {
+                          if (tk.field_k != hh.field_s) {
+                            if (ti.field_A != hh.field_s) {
                               return true;
                             } else {
-                              var4 = null;
+                              var4 = (gn) null;
                               og.a(false, 0, (gn) null);
                               return true;
                             }
                           } else {
                             L6: {
-                              int fieldTemp$20 = fc.field_d - 1;
+                              fieldTemp$20 = fc.field_d - 1;
                               fc.field_d = fc.field_d - 1;
                               if (0 > fieldTemp$20) {
                                 fc.field_d = -1 + uo.field_f.length;
@@ -106,7 +126,7 @@ final class od {
                             return true;
                           }
                         } else {
-                          int fieldTemp$21 = fc.field_d + 1;
+                          fieldTemp$21 = fc.field_d + 1;
                           fc.field_d = fc.field_d + 1;
                           if (fieldTemp$21 >= uo.field_f.length) {
                             fc.field_d = 0;
@@ -119,12 +139,12 @@ final class od {
                         }
                       } else {
                         L7: {
-                          field_b = null;
+                          field_b = (String[]) null;
                           eg.a(pp.field_K, true);
-                          if ((Object) (Object) ec.field_n != (Object) (Object) hh.field_s) {
-                            if ((Object) (Object) tk.field_k != (Object) (Object) hh.field_s) {
-                              if ((Object) (Object) ti.field_A == (Object) (Object) hh.field_s) {
-                                var4 = null;
+                          if (ec.field_n != hh.field_s) {
+                            if (tk.field_k != hh.field_s) {
+                              if (ti.field_A == hh.field_s) {
+                                var4 = (gn) null;
                                 og.a(false, 0, (gn) null);
                                 break L7;
                               } else {
@@ -132,7 +152,7 @@ final class od {
                               }
                             } else {
                               L8: {
-                                int fieldTemp$22 = fc.field_d - 1;
+                                fieldTemp$22 = fc.field_d - 1;
                                 fc.field_d = fc.field_d - 1;
                                 if (0 > fieldTemp$22) {
                                   fc.field_d = -1 + uo.field_f.length;
@@ -146,7 +166,7 @@ final class od {
                             }
                           } else {
                             L9: {
-                              int fieldTemp$23 = fc.field_d + 1;
+                              fieldTemp$23 = fc.field_d + 1;
                               fc.field_d = fc.field_d + 1;
                               if (fieldTemp$23 < uo.field_f.length) {
                                 break L9;
@@ -166,10 +186,10 @@ final class od {
                 }
                 if (param0 <= -50) {
                   eg.a(pp.field_K, true);
-                  if ((Object) (Object) ec.field_n != (Object) (Object) hh.field_s) {
-                    if ((Object) (Object) tk.field_k != (Object) (Object) hh.field_s) {
-                      if ((Object) (Object) ti.field_A == (Object) (Object) hh.field_s) {
-                        var4 = null;
+                  if (ec.field_n != hh.field_s) {
+                    if (tk.field_k != hh.field_s) {
+                      if (ti.field_A == hh.field_s) {
+                        var4 = (gn) null;
                         og.a(false, 0, (gn) null);
                         return true;
                       } else {
@@ -177,7 +197,7 @@ final class od {
                       }
                     } else {
                       L10: {
-                        int fieldTemp$24 = fc.field_d - 1;
+                        fieldTemp$24 = fc.field_d - 1;
                         fc.field_d = fc.field_d - 1;
                         if (0 > fieldTemp$24) {
                           fc.field_d = -1 + uo.field_f.length;
@@ -190,7 +210,7 @@ final class od {
                       return true;
                     }
                   } else {
-                    int fieldTemp$25 = fc.field_d + 1;
+                    fieldTemp$25 = fc.field_d + 1;
                     fc.field_d = fc.field_d + 1;
                     if (fieldTemp$25 < uo.field_f.length) {
                       og.a(false, 0, uo.field_f[fc.field_d]);
@@ -202,12 +222,12 @@ final class od {
                     }
                   }
                 } else {
-                  field_b = null;
+                  field_b = (String[]) null;
                   eg.a(pp.field_K, true);
-                  if ((Object) (Object) ec.field_n != (Object) (Object) hh.field_s) {
-                    if ((Object) (Object) tk.field_k != (Object) (Object) hh.field_s) {
-                      if ((Object) (Object) ti.field_A == (Object) (Object) hh.field_s) {
-                        var4 = null;
+                  if (ec.field_n != hh.field_s) {
+                    if (tk.field_k != hh.field_s) {
+                      if (ti.field_A == hh.field_s) {
+                        var4 = (gn) null;
                         og.a(false, 0, (gn) null);
                         return true;
                       } else {
@@ -215,7 +235,7 @@ final class od {
                       }
                     } else {
                       L11: {
-                        int fieldTemp$26 = fc.field_d - 1;
+                        fieldTemp$26 = fc.field_d - 1;
                         fc.field_d = fc.field_d - 1;
                         if (0 > fieldTemp$26) {
                           fc.field_d = -1 + uo.field_f.length;
@@ -228,7 +248,7 @@ final class od {
                       return true;
                     }
                   } else {
-                    int fieldTemp$27 = fc.field_d + 1;
+                    fieldTemp$27 = fc.field_d + 1;
                     fc.field_d = fc.field_d + 1;
                     if (fieldTemp$27 >= uo.field_f.length) {
                       fc.field_d = 0;
@@ -270,7 +290,7 @@ final class od {
                     }
                   }
                   L14: {
-                    if (hh.field_p > 640) {
+                    if (-641 > (hh.field_p ^ -1)) {
                       hh.field_p = 640;
                       break L14;
                     } else {
@@ -278,7 +298,7 @@ final class od {
                     }
                   }
                   L15: {
-                    if (ed.field_P < 0) {
+                    if ((ed.field_P ^ -1) > -1) {
                       ed.field_P = 0;
                       break L15;
                     } else {
@@ -319,16 +339,16 @@ final class od {
                       if (param0 <= -50) {
                         break L18;
                       } else {
-                        field_b = null;
+                        field_b = (String[]) null;
                         break L18;
                       }
                     }
                     L19: {
                       eg.a(pp.field_K, true);
-                      if ((Object) (Object) ec.field_n != (Object) (Object) hh.field_s) {
-                        if ((Object) (Object) tk.field_k != (Object) (Object) hh.field_s) {
-                          if ((Object) (Object) ti.field_A == (Object) (Object) hh.field_s) {
-                            var4 = null;
+                      if (ec.field_n != hh.field_s) {
+                        if (tk.field_k != hh.field_s) {
+                          if (ti.field_A == hh.field_s) {
+                            var4 = (gn) null;
                             og.a(false, 0, (gn) null);
                             break L19;
                           } else {
@@ -336,7 +356,7 @@ final class od {
                           }
                         } else {
                           L20: {
-                            int fieldTemp$28 = fc.field_d - 1;
+                            fieldTemp$28 = fc.field_d - 1;
                             fc.field_d = fc.field_d - 1;
                             if (0 > fieldTemp$28) {
                               fc.field_d = -1 + uo.field_f.length;
@@ -350,7 +370,7 @@ final class od {
                         }
                       } else {
                         L21: {
-                          int fieldTemp$29 = fc.field_d + 1;
+                          fieldTemp$29 = fc.field_d + 1;
                           fc.field_d = fc.field_d + 1;
                           if (fieldTemp$29 < uo.field_f.length) {
                             break L21;
@@ -369,18 +389,18 @@ final class od {
               }
               if (param0 <= -50) {
                 eg.a(pp.field_K, true);
-                if ((Object) (Object) ec.field_n != (Object) (Object) hh.field_s) {
-                  if ((Object) (Object) tk.field_k != (Object) (Object) hh.field_s) {
-                    if ((Object) (Object) ti.field_A != (Object) (Object) hh.field_s) {
+                if (ec.field_n != hh.field_s) {
+                  if (tk.field_k != hh.field_s) {
+                    if (ti.field_A != hh.field_s) {
                       return true;
                     } else {
-                      var4 = null;
+                      var4 = (gn) null;
                       og.a(false, 0, (gn) null);
                       return true;
                     }
                   } else {
                     L22: {
-                      int fieldTemp$30 = fc.field_d - 1;
+                      fieldTemp$30 = fc.field_d - 1;
                       fc.field_d = fc.field_d - 1;
                       if (0 > fieldTemp$30) {
                         fc.field_d = -1 + uo.field_f.length;
@@ -393,7 +413,7 @@ final class od {
                     return true;
                   }
                 } else {
-                  int fieldTemp$31 = fc.field_d + 1;
+                  fieldTemp$31 = fc.field_d + 1;
                   fc.field_d = fc.field_d + 1;
                   if (fieldTemp$31 >= uo.field_f.length) {
                     fc.field_d = 0;
@@ -406,12 +426,12 @@ final class od {
                 }
               } else {
                 L23: {
-                  field_b = null;
+                  field_b = (String[]) null;
                   eg.a(pp.field_K, true);
-                  if ((Object) (Object) ec.field_n != (Object) (Object) hh.field_s) {
-                    if ((Object) (Object) tk.field_k != (Object) (Object) hh.field_s) {
-                      if ((Object) (Object) ti.field_A == (Object) (Object) hh.field_s) {
-                        var4 = null;
+                  if (ec.field_n != hh.field_s) {
+                    if (tk.field_k != hh.field_s) {
+                      if (ti.field_A == hh.field_s) {
+                        var4 = (gn) null;
                         og.a(false, 0, (gn) null);
                         break L23;
                       } else {
@@ -419,7 +439,7 @@ final class od {
                       }
                     } else {
                       L24: {
-                        int fieldTemp$32 = fc.field_d - 1;
+                        fieldTemp$32 = fc.field_d - 1;
                         fc.field_d = fc.field_d - 1;
                         if (0 > fieldTemp$32) {
                           fc.field_d = -1 + uo.field_f.length;
@@ -433,7 +453,7 @@ final class od {
                     }
                   } else {
                     L25: {
-                      int fieldTemp$33 = fc.field_d + 1;
+                      fieldTemp$33 = fc.field_d + 1;
                       fc.field_d = fc.field_d + 1;
                       if (fieldTemp$33 < uo.field_f.length) {
                         break L25;
@@ -471,7 +491,7 @@ final class od {
                   }
                 }
                 L28: {
-                  if (hh.field_p > 640) {
+                  if (-641 > (hh.field_p ^ -1)) {
                     hh.field_p = 640;
                     break L28;
                   } else {
@@ -479,7 +499,7 @@ final class od {
                   }
                 }
                 L29: {
-                  if (ed.field_P < 0) {
+                  if ((ed.field_P ^ -1) > -1) {
                     ed.field_P = 0;
                     break L29;
                   } else {
@@ -520,24 +540,24 @@ final class od {
                     if (param0 <= -50) {
                       break L32;
                     } else {
-                      field_b = null;
+                      field_b = (String[]) null;
                       break L32;
                     }
                   }
                   L33: {
                     eg.a(pp.field_K, true);
-                    if ((Object) (Object) ec.field_n != (Object) (Object) hh.field_s) {
-                      if ((Object) (Object) tk.field_k != (Object) (Object) hh.field_s) {
-                        if ((Object) (Object) ti.field_A != (Object) (Object) hh.field_s) {
+                    if (ec.field_n != hh.field_s) {
+                      if (tk.field_k != hh.field_s) {
+                        if (ti.field_A != hh.field_s) {
                           return true;
                         } else {
-                          var4 = null;
+                          var4 = (gn) null;
                           og.a(false, 0, (gn) null);
                           return true;
                         }
                       } else {
                         L34: {
-                          int fieldTemp$34 = fc.field_d - 1;
+                          fieldTemp$34 = fc.field_d - 1;
                           fc.field_d = fc.field_d - 1;
                           if (0 > fieldTemp$34) {
                             fc.field_d = -1 + uo.field_f.length;
@@ -551,7 +571,7 @@ final class od {
                       }
                     } else {
                       L35: {
-                        int fieldTemp$35 = fc.field_d + 1;
+                        fieldTemp$35 = fc.field_d + 1;
                         fc.field_d = fc.field_d + 1;
                         if (fieldTemp$35 < uo.field_f.length) {
                           break L35;
@@ -570,18 +590,18 @@ final class od {
             }
             if (param0 <= -50) {
               eg.a(pp.field_K, true);
-              if ((Object) (Object) ec.field_n != (Object) (Object) hh.field_s) {
-                if ((Object) (Object) tk.field_k != (Object) (Object) hh.field_s) {
-                  if ((Object) (Object) ti.field_A != (Object) (Object) hh.field_s) {
+              if (ec.field_n != hh.field_s) {
+                if (tk.field_k != hh.field_s) {
+                  if (ti.field_A != hh.field_s) {
                     return true;
                   } else {
-                    var4 = null;
+                    var4 = (gn) null;
                     og.a(false, 0, (gn) null);
                     return true;
                   }
                 } else {
                   L36: {
-                    int fieldTemp$36 = fc.field_d - 1;
+                    fieldTemp$36 = fc.field_d - 1;
                     fc.field_d = fc.field_d - 1;
                     if (0 > fieldTemp$36) {
                       fc.field_d = -1 + uo.field_f.length;
@@ -594,7 +614,7 @@ final class od {
                   return true;
                 }
               } else {
-                int fieldTemp$37 = fc.field_d + 1;
+                fieldTemp$37 = fc.field_d + 1;
                 fc.field_d = fc.field_d + 1;
                 if (fieldTemp$37 >= uo.field_f.length) {
                   fc.field_d = 0;
@@ -607,12 +627,12 @@ final class od {
               }
             } else {
               L37: {
-                field_b = null;
+                field_b = (String[]) null;
                 eg.a(pp.field_K, true);
-                if ((Object) (Object) ec.field_n != (Object) (Object) hh.field_s) {
-                  if ((Object) (Object) tk.field_k != (Object) (Object) hh.field_s) {
-                    if ((Object) (Object) ti.field_A == (Object) (Object) hh.field_s) {
-                      var4 = null;
+                if (ec.field_n != hh.field_s) {
+                  if (tk.field_k != hh.field_s) {
+                    if (ti.field_A == hh.field_s) {
+                      var4 = (gn) null;
                       og.a(false, 0, (gn) null);
                       break L37;
                     } else {
@@ -620,7 +640,7 @@ final class od {
                     }
                   } else {
                     L38: {
-                      int fieldTemp$38 = fc.field_d - 1;
+                      fieldTemp$38 = fc.field_d - 1;
                       fc.field_d = fc.field_d - 1;
                       if (0 > fieldTemp$38) {
                         fc.field_d = -1 + uo.field_f.length;
@@ -634,7 +654,7 @@ final class od {
                   }
                 } else {
                   L39: {
-                    int fieldTemp$39 = fc.field_d + 1;
+                    fieldTemp$39 = fc.field_d + 1;
                     fc.field_d = fc.field_d + 1;
                     if (fieldTemp$39 < uo.field_f.length) {
                       break L39;
@@ -656,6 +676,9 @@ final class od {
     public static void b(byte param0) {
         field_c = null;
         field_b = null;
+        if (param0 < 81) {
+            return;
+        }
         field_a = null;
     }
 
@@ -664,10 +687,6 @@ final class od {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "This is the active raider.";
         field_c = "<col=FF8000><%0></col> of your raiders were caught and eaten.";
         field_b = new String[]{"<%0> the Warrior", "<%0> the Veteran", "<%0> the Elder", "<%0> the Venerated", "<%0> the Ancient", "<%0> the Immortal"};

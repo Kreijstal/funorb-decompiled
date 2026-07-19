@@ -9,8 +9,11 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     public static void c(int param0) {
         field_d = null;
-        field_b = null;
+        field_b = (byte[][]) null;
         field_c = null;
+        if (param0 < 9) {
+            field_a = 6;
+        }
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
@@ -44,23 +47,23 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("qh.focusLost(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -68,7 +71,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
     }
 
@@ -106,18 +109,22 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         break L3;
                       } else {
                         var2_int = nd.field_a[var2_int] & -129;
-                        break L2;
+                        if (!OrbDefence.field_D) {
+                          break L2;
+                        } else {
+                          break L3;
+                        }
                       }
                     }
                   }
                   var2_int = -1;
                   break L2;
                 }
-                if (wg.field_p < 0) {
+                if ((wg.field_p ^ -1) > -1) {
                   break L1;
                 } else {
                   if (var2_int >= 0) {
-                    gl.field_i[wg.field_p] = ~var2_int;
+                    gl.field_i[wg.field_p] = var2_int ^ -1;
                     wg.field_p = 1 + wg.field_p & 127;
                     if (al.field_b != wg.field_p) {
                       break L1;
@@ -140,23 +147,23 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             runtimeException = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) runtimeException;
+            stackOut_13_0 = (RuntimeException) (runtimeException);
             stackOut_13_1 = new StringBuilder().append("qh.keyReleased(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -164,12 +171,12 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L4;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
     }
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
-        RuntimeException var2 = null;
+        RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -201,13 +208,17 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     if (0 > var2_int) {
                       break L3;
                     } else {
-                      if (~nd.field_a.length >= ~var2_int) {
+                      if (nd.field_a.length <= var2_int) {
                         break L3;
                       } else {
                         var2_int = nd.field_a[var2_int];
-                        if ((var2_int & 128) != 0) {
+                        if (-1 != (var2_int & 128 ^ -1)) {
                           var2_int = -1;
-                          break L2;
+                          if (!OrbDefence.field_D) {
+                            break L2;
+                          } else {
+                            break L3;
+                          }
                         } else {
                           break L2;
                         }
@@ -218,15 +229,15 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   break L2;
                 }
                 L4: {
-                  if (wg.field_p < 0) {
+                  if (-1 < (wg.field_p ^ -1)) {
                     break L4;
                   } else {
-                    if (var2_int < 0) {
+                    if (-1 < (var2_int ^ -1)) {
                       break L4;
                     } else {
                       gl.field_i[wg.field_p] = var2_int;
                       wg.field_p = wg.field_p - -1 & 127;
-                      if (~al.field_b == ~wg.field_p) {
+                      if (al.field_b == wg.field_p) {
                         wg.field_p = -1;
                         break L4;
                       } else {
@@ -236,13 +247,13 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   }
                 }
                 L5: {
-                  if (var2_int < 0) {
+                  if ((var2_int ^ -1) > -1) {
                     break L5;
                   } else {
                     var3 = 127 & 1 + uf.field_a;
-                    if (~var3 != ~md.field_g) {
+                    if (var3 != md.field_g) {
                       g.field_g[uf.field_a] = var2_int;
-                      ll.field_b[uf.field_a] = ' ';
+                      ll.field_b[uf.field_a] = (char)0;
                       uf.field_a = var3;
                       break L5;
                     } else {
@@ -255,10 +266,10 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   if ((10 & var3) != 0) {
                     break L6;
                   } else {
-                    if (var2_int == 85) {
+                    if (-86 == (var2_int ^ -1)) {
                       break L6;
                     } else {
-                      if (var2_int == 10) {
+                      if (-11 == (var2_int ^ -1)) {
                         break L6;
                       } else {
                         return;
@@ -275,24 +286,24 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
-            var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var2;
+            runtimeException = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) (runtimeException);
             stackOut_22_1 = new StringBuilder().append("qh.keyPressed(");
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -300,7 +311,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L7;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
     }
 
@@ -343,7 +354,7 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             param0.consume();
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "qh.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+            throw dd.a((Throwable) ((Object) runtimeException), "qh.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -351,14 +362,15 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     final static int[] b(int param0) {
+        String discarded$0 = null;
+        if (param0 != 8) {
+            discarded$0 = qh.a(122);
+            return new int[8];
+        }
         return new int[8];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[12];
         field_b = new byte[1000][];
         field_c[9] = 1;

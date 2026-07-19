@@ -31,10 +31,6 @@ abstract class kc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "kc.L(";
         field_g = "Password: ";
         field_a = new fh(14, 0, 4, 1);

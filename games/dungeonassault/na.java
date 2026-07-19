@@ -28,7 +28,7 @@ final class na extends hh {
     final static void a(boolean param0, int param1, boolean param2) {
         hd.a(param1 ^ 2599413, param2, (String) null, param0);
         if (param1 != 2591221) {
-            field_A = null;
+            field_A = (cn) null;
         }
     }
 
@@ -37,14 +37,15 @@ final class na extends hh {
     }
 
     private na(int param0, int param1, int param2) {
-        ((na) this).field_x = field_C;
-        ((na) this).field_E = param2;
-        ((na) this).field_F = param1;
-        ((na) this).field_z = param0;
-        ((na) this).field_u = hc.field_f;
+        this.field_x = field_C;
+        this.field_E = param2;
+        this.field_F = param1;
+        this.field_z = param0;
+        this.field_u = hc.field_f;
     }
 
     public final void a(byte param0, lm param1, int param2, int param3, boolean param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -98,7 +99,7 @@ final class na extends hh {
             L2: {
               var6_int = stackIn_6_0;
               if (param1 instanceof ck) {
-                param4 = param4 & ((ck) (Object) param1).field_B;
+                param4 = param4 & ((ck) ((Object) param1)).field_B;
                 break L2;
               } else {
                 break L2;
@@ -107,23 +108,23 @@ final class na extends hh {
             L3: {
               if (param4) {
                 if (var6_int != 0) {
-                  stackOut_13_0 = ((na) this).field_F;
+                  stackOut_13_0 = this.field_F;
                   stackIn_14_0 = stackOut_13_0;
                   break L3;
                 } else {
-                  stackOut_12_0 = ((na) this).field_z;
+                  stackOut_12_0 = this.field_z;
                   stackIn_14_0 = stackOut_12_0;
                   break L3;
                 }
               } else {
-                stackOut_10_0 = ((na) this).field_E;
+                stackOut_10_0 = this.field_E;
                 stackIn_14_0 = stackOut_10_0;
                 break L3;
               }
             }
             L4: {
               var7 = stackIn_14_0;
-              ad.a(param1.field_x, param3 + param1.field_v - -(-((na) this).field_x[0].field_G + param1.field_s >> 1), param2 - -param1.field_q, (byte) -2, var7, ((na) this).field_x);
+              ad.a(param1.field_x, param3 + param1.field_v - -(-this.field_x[0].field_G + param1.field_s >> -689401247), param2 - -param1.field_q, (byte) -2, var7, this.field_x);
               if (!param4) {
                 stackOut_16_0 = 7105644;
                 stackIn_17_0 = stackOut_16_0;
@@ -143,30 +144,30 @@ final class na extends hh {
                 break L5;
               }
             }
-            int discarded$1 = ((na) this).field_u.a(param1.field_w, param2 + param1.field_q, param3 - (-param1.field_v + 2), param1.field_x, param1.field_s, var8, -1, 1, 1, ((na) this).field_u.field_H);
+            discarded$1 = this.field_u.a(param1.field_w, param2 + param1.field_q, param3 - (-param1.field_v + 2), param1.field_x, param1.field_s, var8, -1, 1, 1, this.field_u.field_H);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var6;
+            stackOut_21_0 = (RuntimeException) (var6);
             stackOut_21_1 = new StringBuilder().append("na.B(").append(param0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -174,15 +175,11 @@ final class na extends hh {
               break L6;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_G = new int[]{28, 234, 513, 709, 950, 1046, 1325, 1430, 1693};
     }
 }

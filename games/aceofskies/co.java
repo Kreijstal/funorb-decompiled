@@ -16,6 +16,9 @@ final class co {
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != -13392) {
+            co.a(24, -31, -7, 40, 82);
+        }
         field_j = null;
         field_g = null;
         field_i = null;
@@ -26,24 +29,24 @@ final class co {
         int var3 = 0;
         int var4 = 0;
         var4 = AceOfSkies.field_G ? 1 : 0;
-        if (((co) this).field_h == null) {
+        if (this.field_h == null) {
           return 0;
         } else {
-          if (((co) this).field_h.length != 0) {
+          if (this.field_h.length != 0) {
             var3 = 1;
             L0: while (true) {
-              if (var3 >= ((co) this).field_h.length) {
+              if (var3 >= this.field_h.length) {
                 L1: {
                   if (param0) {
                     break L1;
                   } else {
-                    ((co) this).field_d = -22;
+                    this.field_d = -22;
                     break L1;
                   }
                 }
-                return -1 + ((co) this).field_h.length;
+                return -1 + this.field_h.length;
               } else {
-                if (param1 < ((co) this).field_h[var3] + ((co) this).field_h[var3 - 1] >> 1) {
+                if (param1 < this.field_h[var3] + this.field_h[var3 - 1] >> 2141798689) {
                   return -1 + var3;
                 } else {
                   var3++;
@@ -64,11 +67,11 @@ final class co {
         if (param0) {
           L0: {
             L1: {
-              if (((co) this).field_h == null) {
+              if (this.field_h == null) {
                 break L1;
               } else {
-                if (0 != ((co) this).field_h.length) {
-                  stackOut_6_0 = ((co) this).field_h[-1 + ((co) this).field_h.length];
+                if (0 != this.field_h.length) {
+                  stackOut_6_0 = this.field_h[-1 + this.field_h.length];
                   stackIn_7_0 = stackOut_6_0;
                   break L0;
                 } else {
@@ -179,7 +182,7 @@ final class co {
                   break L6;
                 } else {
                   var11 = param3 + vp.field_i * var8;
-                  var12 = -var8 + var10 + 1 >> 1;
+                  var12 = -var8 + var10 + 1 >> -1840296959;
                   L7: while (true) {
                     var12--;
                     if (0 > var12) {
@@ -199,7 +202,7 @@ final class co {
               } else {
                 if (var6 < vp.field_d) {
                   var11 = vp.field_i * param0 + var7;
-                  var12 = -var7 + (var9 + 1) >> 1;
+                  var12 = -var7 + (var9 + 1) >> -949223167;
                   L9: while (true) {
                     var12--;
                     if (0 > var12) {
@@ -223,10 +226,10 @@ final class co {
                   break L10;
                 } else {
                   var11 = ((1 & -param3 + var5_int) + var8) * vp.field_i + var5_int;
-                  var12 = -var8 + (var10 + 1) >> 1;
+                  var12 = -var8 + (var10 + 1) >> -1343321983;
                   L11: while (true) {
                     var12--;
-                    if (var12 < 0) {
+                    if (-1 < (var12 ^ -1)) {
                       break L10;
                     } else {
                       vp.field_j[var11] = 16777215;
@@ -243,7 +246,7 @@ final class co {
               } else {
                 if (vp.field_d > var6) {
                   var11 = var7 + (var6 * vp.field_i - -(-param0 + var6 & 1));
-                  var12 = -var7 + 1 - -var9 >> 1;
+                  var12 = -var7 + 1 - -var9 >> -594024799;
                   L13: while (true) {
                     var12--;
                     if (0 > var12) {
@@ -264,21 +267,17 @@ final class co {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var5, "co.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pn.a((Throwable) ((Object) var5), "co.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     co(int param0, int param1, int param2) {
-        ((co) this).field_d = param1;
-        ((co) this).field_f = param0;
-        ((co) this).field_h = new int[param2 + 1];
+        this.field_d = param1;
+        this.field_f = param0;
+        this.field_h = new int[param2 + 1];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Waiting for graphics";
         field_k = new lh();
         field_a = "Passwords must be between 5 and 20 characters long";

@@ -19,10 +19,6 @@ final class dfa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Recall grapples";
         field_a = 128;
         field_b = "<%0> is already on your friend list.";

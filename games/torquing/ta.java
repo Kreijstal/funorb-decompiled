@@ -11,18 +11,18 @@ class ta extends q {
     ta field_j;
 
     final void h(int param0) {
-        if (null == ((ta) this).field_j) {
+        if (null == this.field_j) {
           return;
         } else {
-          ((ta) this).field_j.field_p = ((ta) this).field_p;
-          ((ta) this).field_p.field_j = ((ta) this).field_j;
-          ((ta) this).field_p = null;
+          this.field_j.field_p = this.field_p;
+          this.field_p.field_j = this.field_j;
+          this.field_p = null;
           if (param0 != 0) {
-            ((ta) this).h(3);
-            ((ta) this).field_j = null;
+            this.h(3);
+            this.field_j = null;
             return;
           } else {
-            ((ta) this).field_j = null;
+            this.field_j = null;
             return;
           }
         }
@@ -30,14 +30,14 @@ class ta extends q {
 
     final boolean a(byte param0) {
         if (param0 > 71) {
-          if (((ta) this).field_j == null) {
+          if (this.field_j == null) {
             return false;
           } else {
             return true;
           }
         } else {
           field_n = 110;
-          if (((ta) this).field_j == null) {
+          if (this.field_j == null) {
             return false;
           } else {
             return true;
@@ -47,7 +47,7 @@ class ta extends q {
 
     public static void g(int param0) {
         field_m = null;
-        int var1 = 0;
+        int var1 = -7 % ((13 - param0) / 62);
     }
 
     protected ta() {
@@ -61,29 +61,33 @@ class ta extends q {
         var7 = Torquing.field_u;
         try {
           L0: {
-            var6_int = param2;
-            L1: while (true) {
+            L1: {
+              var6_int = param2;
+              if (param0 == 0) {
+                break L1;
+              } else {
+                ta.g(-46);
+                break L1;
+              }
+            }
+            L2: while (true) {
               if (param1 < var6_int) {
                 break L0;
               } else {
                 di.a(param4, (byte) -97, param3, qd.field_a[var6_int], param5);
                 var6_int++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var6, "ta.Q(" + 0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rb.a((Throwable) ((Object) var6), "ta.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Age:";
         field_o = 0;
         field_n = 0;

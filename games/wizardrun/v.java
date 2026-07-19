@@ -11,16 +11,15 @@ final class v {
 
     public static void a(int param0) {
         field_c = null;
+        if (param0 < 100) {
+            return;
+        }
         field_d = null;
         field_b = null;
         field_e = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "v.A(";
         field_a = false;
         field_c = "Go Back";

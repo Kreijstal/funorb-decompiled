@@ -26,7 +26,7 @@ final class gea extends bw {
               if (param0 == 4231) {
                 break L1;
               } else {
-                field_f = null;
+                field_f = (String) null;
                 break L1;
               }
             }
@@ -62,15 +62,24 @@ final class gea extends bw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "gea.B(" + param0 + ')');
+          throw pe.a((Throwable) ((Object) var1), "gea.B(" + param0 + ')');
         }
     }
 
     public static void b(int param0) {
         field_l = null;
-        field_n = null;
-        field_f = null;
-        field_g = null;
+        if (param0 != 4096) {
+          field_g = (String) null;
+          field_n = null;
+          field_f = null;
+          field_g = null;
+          return;
+        } else {
+          field_n = null;
+          field_f = null;
+          field_g = null;
+          return;
+        }
     }
 
     private gea() throws Throwable {
@@ -78,10 +87,6 @@ final class gea extends bw {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Quick Chat lobby";
         field_g = "No players";
         field_l = "Blocks impede your progress, the creature will have to go around instead.";

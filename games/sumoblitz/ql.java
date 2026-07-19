@@ -11,18 +11,19 @@ final class ql extends rw {
     static int field_v;
 
     final byte[] d(boolean param0) {
+        byte[] discarded$6 = null;
         if (!param0) {
-          if (((ql) this).field_u) {
+          if (this.field_u) {
             throw new RuntimeException();
           } else {
-            return ((ql) this).field_x;
+            return this.field_x;
           }
         } else {
-          byte[] discarded$6 = ((ql) this).d(false);
-          if (((ql) this).field_u) {
+          discarded$6 = this.d(false);
+          if (this.field_u) {
             throw new RuntimeException();
           } else {
-            return ((ql) this).field_x;
+            return this.field_x;
           }
         }
     }
@@ -31,13 +32,19 @@ final class ql extends rw {
         if (param0 != -1) {
             return -28;
         }
-        if (((ql) this).field_u) {
+        if (this.field_u) {
             return 0;
         }
         return 100;
     }
 
     public static void d(byte param0) {
+        if (param0 < 32) {
+            field_B = 49;
+            field_z = null;
+            field_A = null;
+            return;
+        }
         field_z = null;
         field_A = null;
     }
@@ -46,10 +53,6 @@ final class ql extends rw {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = new int[25];
         field_z = new int[25];
         la.a(field_z, 0, 25, 2147483647);

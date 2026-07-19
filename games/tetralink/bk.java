@@ -19,35 +19,35 @@ final class bk {
         int var3 = 0;
         int var4 = 0;
         var4 = TetraLink.field_J;
-        if (((bk) this).field_j != null) {
-          if (0 != ((bk) this).field_j.length) {
+        if (this.field_j != null) {
+          if (0 != this.field_j.length) {
             if (param0 >= 62) {
               var3 = 1;
               L0: while (true) {
-                if (((bk) this).field_j.length > var3) {
-                  if (param1 < ((bk) this).field_j[-1 + var3] - -((bk) this).field_j[var3] >> 1) {
+                if (this.field_j.length > var3) {
+                  if (param1 < this.field_j[-1 + var3] - -this.field_j[var3] >> -655791103) {
                     return var3 + -1;
                   } else {
                     var3++;
                     continue L0;
                   }
                 } else {
-                  return -1 + ((bk) this).field_j.length;
+                  return -1 + this.field_j.length;
                 }
               }
             } else {
-              ((bk) this).field_h = -98;
+              this.field_h = -98;
               var3 = 1;
               L1: while (true) {
-                if (((bk) this).field_j.length > var3) {
-                  if (param1 < ((bk) this).field_j[-1 + var3] - -((bk) this).field_j[var3] >> 1) {
+                if (this.field_j.length > var3) {
+                  if (param1 < this.field_j[-1 + var3] - -this.field_j[var3] >> -655791103) {
                     return var3 + -1;
                   } else {
                     var3++;
                     continue L1;
                   }
                 } else {
-                  return -1 + ((bk) this).field_j.length;
+                  return -1 + this.field_j.length;
                 }
               }
             }
@@ -83,38 +83,42 @@ final class bk {
         int var2 = 0;
         var2 = TetraLink.field_J;
         s.field_f = false;
-        wg.field_b = null;
-        if (!qa.field_v) {
-          var1 = pg.field_a;
-          if (var1 > 0) {
-            if (var1 == 1) {
-              wg.field_b = pl.field_g;
-              wg.field_b = kj.a((byte) 109, new CharSequence[3]);
-              fl.field_u.r(-125);
-              of.b(true);
-              return;
+        if (param0 == 1) {
+          wg.field_b = null;
+          if (!qa.field_v) {
+            var1 = pg.field_a;
+            if (-1 > (var1 ^ -1)) {
+              if (var1 == 1) {
+                wg.field_b = pl.field_g;
+                wg.field_b = kj.a((byte) 109, new CharSequence[]{(CharSequence) ((Object) wg.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fo.field_eb)});
+                fl.field_u.r(param0 + -126);
+                of.b(true);
+                return;
+              } else {
+                wg.field_b = sk.a(new String[]{Integer.toString(var1)}, ll.field_z, 121);
+                wg.field_b = kj.a((byte) 109, new CharSequence[]{(CharSequence) ((Object) wg.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fo.field_eb)});
+                fl.field_u.r(param0 + -126);
+                of.b(true);
+                return;
+              }
             } else {
-              wg.field_b = sk.a(new String[1], ll.field_z, 121);
-              wg.field_b = kj.a((byte) 109, new CharSequence[3]);
-              fl.field_u.r(-125);
+              fl.field_u.r(param0 + -126);
               of.b(true);
               return;
             }
           } else {
-            fl.field_u.r(-125);
-            of.b(true);
+            fl.field_u.p(param0 ^ 129);
             return;
           }
         } else {
-          fl.field_u.p(128);
           return;
         }
     }
 
     bk(int param0, int param1, int param2) {
-        ((bk) this).field_a = param1;
-        ((bk) this).field_h = param0;
-        ((bk) this).field_j = new int[1 + param2];
+        this.field_a = param1;
+        this.field_h = param0;
+        this.field_j = new int[1 + param2];
     }
 
     final int a(byte param0) {
@@ -124,11 +128,11 @@ final class bk {
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
         if (param0 <= -12) {
-          if (null != ((bk) this).field_j) {
-            if (((bk) this).field_j.length == 0) {
+          if (null != this.field_j) {
+            if (this.field_j.length == 0) {
               return 0;
             } else {
-              return ((bk) this).field_j[-1 + ((bk) this).field_j.length];
+              return this.field_j[-1 + this.field_j.length];
             }
           } else {
             stackOut_9_0 = 0;
@@ -136,13 +140,13 @@ final class bk {
             return stackIn_11_0;
           }
         } else {
-          field_f = null;
-          if (null == ((bk) this).field_j) {
+          field_f = (String) null;
+          if (null == this.field_j) {
             return 0;
           } else {
             L0: {
-              if (((bk) this).field_j.length != 0) {
-                stackOut_4_0 = ((bk) this).field_j[-1 + ((bk) this).field_j.length];
+              if (this.field_j.length != 0) {
+                stackOut_4_0 = this.field_j[-1 + this.field_j.length];
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
@@ -157,10 +161,6 @@ final class bk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "All players have left <%0>'s game.";
         field_f = "This is your RuneScape clan if you have one.";
         field_g = "You are offering to draw.";

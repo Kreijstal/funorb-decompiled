@@ -12,22 +12,25 @@ final class ef implements Iterator {
 
     final static void a(String param0, byte param1, String param2) {
         try {
+            if (param1 != 66) {
+                field_c = (String) null;
+            }
             r.a(param2, (byte) 87, false, param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ef.C(" + (param0 != null ? "{...}" : "null") + ',' + 66 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "ef.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final boolean hasNext() {
-        return ((ef) this).field_a.field_c != ((ef) this).field_d;
+        return this.field_a.field_c != this.field_d;
     }
 
     public final void remove() {
-        if (null == ((ef) this).field_b) {
+        if (null == this.field_b) {
             throw new IllegalStateException();
         }
-        ((ef) this).field_b.a((byte) 92);
-        ((ef) this).field_b = null;
+        this.field_b.a((byte) 92);
+        this.field_b = null;
     }
 
     final static void b(byte param0) {
@@ -39,11 +42,19 @@ final class ef implements Iterator {
         var3 = Geoblox.field_C;
         try {
           L0: {
-            var1_float = el.field_o.field_J;
-            ab.a(-37, var1_float);
-            rh.a((byte) 123);
-            var2 = (ja) (Object) bh.field_c.g(0);
-            L1: while (true) {
+            L1: {
+              var1_float = el.field_o.field_J;
+              ab.a(param0 + -22, var1_float);
+              rh.a((byte) 123);
+              if (param0 == -15) {
+                break L1;
+              } else {
+                ef.a((byte) -11);
+                break L1;
+              }
+            }
+            var2 = (ja) ((Object) bh.field_c.g(0));
+            L2: while (true) {
               if (var2 == null) {
                 if (el.field_o.field_C) {
                   break L0;
@@ -52,41 +63,44 @@ final class ef implements Iterator {
                   return;
                 }
               } else {
-                L2: {
+                L3: {
                   var2.b(true);
-                  if (var2.field_G < 3) {
-                    break L2;
+                  if ((var2.field_G ^ -1) > -4) {
+                    break L3;
                   } else {
                     var2.field_K = ra.field_a;
                     var2.field_G = 0;
-                    break L2;
+                    break L3;
                   }
                 }
-                var2 = (ja) (Object) bh.field_c.d(1);
-                continue L1;
+                var2 = (ja) ((Object) bh.field_c.d(1));
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "ef.A(" + -15 + ')');
+          throw t.a((Throwable) ((Object) var1), "ef.A(" + param0 + ')');
         }
     }
 
     ef(ra param0) {
-        ((ef) this).field_b = null;
+        this.field_b = null;
         try {
-            ((ef) this).field_a = param0;
-            ((ef) this).field_d = ((ef) this).field_a.field_c.field_k;
-            ((ef) this).field_b = null;
+            this.field_a = param0;
+            this.field_d = this.field_a.field_c.field_k;
+            this.field_b = null;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ef.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
         field_c = null;
+        if (param0 != 101) {
+            field_e = false;
+        }
     }
 
     final static dm a(int param0, int param1, int param2) {
@@ -94,29 +108,25 @@ final class ef implements Iterator {
         int var5 = Geoblox.field_C;
         dm var6 = new dm(param2, param2);
         dm var3 = var6;
-        for (var4 = 0; var3.field_v.length > var4; var4++) {
+        for (var4 = param0; var3.field_v.length > var4; var4++) {
             var6.field_v[var4] = param1;
         }
         return var3;
     }
 
     public final Object next() {
-        rc var1 = ((ef) this).field_d;
-        if (var1 != ((ef) this).field_a.field_c) {
-            ((ef) this).field_d = var1.field_k;
+        rc var1 = this.field_d;
+        if (var1 != this.field_a.field_c) {
+            this.field_d = var1.field_k;
         } else {
             var1 = null;
-            ((ef) this).field_d = null;
+            this.field_d = null;
         }
-        ((ef) this).field_b = var1;
-        return (Object) (Object) var1;
+        this.field_b = var1;
+        return var1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Instructions";
         field_e = false;
     }

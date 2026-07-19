@@ -14,8 +14,9 @@ final class sf {
     static int field_d;
 
     final static int a(boolean param0, int param1, String param2) {
+        int discarded$2 = 0;
         RuntimeException var3 = null;
-        Object var4 = null;
+        String var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -25,6 +26,7 @@ final class sf {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_3_0 = 0;
@@ -42,42 +44,44 @@ final class sf {
               if (param1 == 110) {
                 break L1;
               } else {
-                var4 = null;
-                int discarded$2 = sf.a(false, 17, (String) null);
+                var4 = (String) null;
+                discarded$2 = sf.a(false, 17, (String) null);
                 break L1;
               }
             }
             if (!param0) {
               stackOut_5_0 = le.field_j.b(param2);
               stackIn_6_0 = stackOut_5_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_3_0 = uf.field_c.b(param2);
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_0 = (RuntimeException) (var3);
             stackOut_7_1 = new StringBuilder().append("sf.B(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -85,262 +89,545 @@ final class sf {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
-        return stackIn_6_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          return stackIn_6_0;
+        }
     }
 
     final static char a(int param0, char param1) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
+        String var4 = null;
         var3 = wizardrun.field_H;
-        var2 = param1;
-        if (32 != var2) {
-          if (var2 != 160) {
-            if (var2 != 95) {
-              if (var2 != 45) {
-                if (var2 != 91) {
-                  if (var2 != 93) {
-                    if (var2 != 35) {
-                      if (224 != var2) {
-                        if (var2 != 225) {
-                          if (var2 != 226) {
-                            if (var2 != 228) {
-                              if (var2 != 227) {
-                                if (var2 != 192) {
-                                  if (193 != var2) {
-                                    if (var2 != 194) {
-                                      if (var2 != 196) {
-                                        if (195 == var2) {
-                                          return 'a';
-                                        } else {
-                                          if (var2 != 232) {
-                                            if (var2 != 233) {
-                                              if (var2 != 234) {
-                                                if (var2 != 235) {
-                                                  if (var2 != 200) {
-                                                    if (201 != var2) {
-                                                      if (var2 == 202) {
-                                                        return 'e';
+        if (param0 != -1514) {
+          L0: {
+            var4 = (String) null;
+            discarded$1 = sf.a(true, -67, (String) null);
+            var2 = param1;
+            if (32 != var2) {
+              if (-161 != (var2 ^ -1)) {
+                if (-96 == (var2 ^ -1)) {
+                  break L0;
+                } else {
+                  if (-46 != (var2 ^ -1)) {
+                    L1: {
+                      if (-92 == (var2 ^ -1)) {
+                        break L1;
+                      } else {
+                        if (var2 == 93) {
+                          break L1;
+                        } else {
+                          if (var2 != 35) {
+                            L2: {
+                              if (224 == var2) {
+                                break L2;
+                              } else {
+                                if (var2 != 225) {
+                                  if (-227 != (var2 ^ -1)) {
+                                    if (-229 == (var2 ^ -1)) {
+                                      break L2;
+                                    } else {
+                                      if (var2 != 227) {
+                                        if (var2 != 192) {
+                                          if (193 == var2) {
+                                            break L2;
+                                          } else {
+                                            if ((var2 ^ -1) == -195) {
+                                              break L2;
+                                            } else {
+                                              if ((var2 ^ -1) != -197) {
+                                                if (195 == var2) {
+                                                  break L2;
+                                                } else {
+                                                  L3: {
+                                                    if ((var2 ^ -1) != -233) {
+                                                      if (var2 == 233) {
+                                                        break L3;
                                                       } else {
-                                                        if (203 != var2) {
-                                                          if (var2 != 237) {
-                                                            if (var2 != 238) {
-                                                              if (239 != var2) {
-                                                                if (var2 != 205) {
-                                                                  if (var2 != 206) {
-                                                                    if (var2 != 207) {
-                                                                      if (var2 != 242) {
-                                                                        if (var2 != 243) {
-                                                                          if (244 != var2) {
-                                                                            if (var2 != 246) {
-                                                                              if (var2 != 245) {
-                                                                                if (var2 != 210) {
-                                                                                  if (var2 != 211) {
-                                                                                    if (var2 != 212) {
-                                                                                      if (var2 == 214) {
-                                                                                        return 'o';
-                                                                                      } else {
-                                                                                        if (213 != var2) {
-                                                                                          if (249 != var2) {
-                                                                                            if (250 != var2) {
-                                                                                              if (var2 != 251) {
-                                                                                                if (var2 != 252) {
-                                                                                                  if (var2 != 217) {
-                                                                                                    if (218 != var2) {
-                                                                                                      if (219 == var2) {
-                                                                                                        return 'u';
-                                                                                                      } else {
-                                                                                                        if (var2 != 220) {
-                                                                                                          if (var2 != 231) {
-                                                                                                            if (var2 != 199) {
-                                                                                                              if (var2 == 255) {
-                                                                                                                return 'y';
+                                                        if ((var2 ^ -1) == -235) {
+                                                          break L3;
+                                                        } else {
+                                                          if (-236 != (var2 ^ -1)) {
+                                                            if (var2 == 200) {
+                                                              break L3;
+                                                            } else {
+                                                              if (201 == var2) {
+                                                                break L3;
+                                                              } else {
+                                                                if (var2 == 202) {
+                                                                  break L3;
+                                                                } else {
+                                                                  if (203 != var2) {
+                                                                    L4: {
+                                                                      if (-238 == (var2 ^ -1)) {
+                                                                        break L4;
+                                                                      } else {
+                                                                        if ((var2 ^ -1) == -239) {
+                                                                          break L4;
+                                                                        } else {
+                                                                          if (239 == var2) {
+                                                                            break L4;
+                                                                          } else {
+                                                                            if ((var2 ^ -1) != -206) {
+                                                                              if ((var2 ^ -1) != -207) {
+                                                                                if ((var2 ^ -1) == -208) {
+                                                                                  break L4;
+                                                                                } else {
+                                                                                  L5: {
+                                                                                    if ((var2 ^ -1) == -243) {
+                                                                                      break L5;
+                                                                                    } else {
+                                                                                      if (var2 != 243) {
+                                                                                        if (244 != var2) {
+                                                                                          if (var2 != 246) {
+                                                                                            if (var2 != 245) {
+                                                                                              if ((var2 ^ -1) == -211) {
+                                                                                                break L5;
+                                                                                              } else {
+                                                                                                if (var2 != 211) {
+                                                                                                  if (var2 != 212) {
+                                                                                                    if ((var2 ^ -1) == -215) {
+                                                                                                      break L5;
+                                                                                                    } else {
+                                                                                                      if (213 != var2) {
+                                                                                                        L6: {
+                                                                                                          if (249 == var2) {
+                                                                                                            break L6;
+                                                                                                          } else {
+                                                                                                            if (250 != var2) {
+                                                                                                              if ((var2 ^ -1) == -252) {
+                                                                                                                break L6;
                                                                                                               } else {
-                                                                                                                if (var2 != 376) {
-                                                                                                                  if (var2 != 241) {
-                                                                                                                    if (var2 == 209) {
-                                                                                                                      return 'n';
-                                                                                                                    } else {
-                                                                                                                      if (var2 != 223) {
-                                                                                                                        return Character.toLowerCase(param1);
+                                                                                                                if (-253 != (var2 ^ -1)) {
+                                                                                                                  if (-218 != (var2 ^ -1)) {
+                                                                                                                    if (218 != var2) {
+                                                                                                                      if (219 == var2) {
+                                                                                                                        break L6;
                                                                                                                       } else {
-                                                                                                                        return 'b';
+                                                                                                                        if ((var2 ^ -1) != -221) {
+                                                                                                                          L7: {
+                                                                                                                            if (-232 == (var2 ^ -1)) {
+                                                                                                                              break L7;
+                                                                                                                            } else {
+                                                                                                                              if (var2 == 199) {
+                                                                                                                                break L7;
+                                                                                                                              } else {
+                                                                                                                                if (-256 == (var2 ^ -1)) {
+                                                                                                                                  return 'y';
+                                                                                                                                } else {
+                                                                                                                                  if (-377 != (var2 ^ -1)) {
+                                                                                                                                    if (var2 != 241) {
+                                                                                                                                      if ((var2 ^ -1) == -210) {
+                                                                                                                                        return 'n';
+                                                                                                                                      } else {
+                                                                                                                                        if ((var2 ^ -1) != -224) {
+                                                                                                                                          return Character.toLowerCase(param1);
+                                                                                                                                        } else {
+                                                                                                                                          return 'b';
+                                                                                                                                        }
+                                                                                                                                      }
+                                                                                                                                    } else {
+                                                                                                                                      return 'n';
+                                                                                                                                    }
+                                                                                                                                  } else {
+                                                                                                                                    return 'y';
+                                                                                                                                  }
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                          return 'c';
+                                                                                                                        } else {
+                                                                                                                          return 'u';
+                                                                                                                        }
                                                                                                                       }
+                                                                                                                    } else {
+                                                                                                                      return 'u';
                                                                                                                     }
                                                                                                                   } else {
-                                                                                                                    return 'n';
+                                                                                                                    return 'u';
                                                                                                                   }
                                                                                                                 } else {
-                                                                                                                  return 'y';
+                                                                                                                  return 'u';
                                                                                                                 }
                                                                                                               }
                                                                                                             } else {
-                                                                                                              return 'c';
+                                                                                                              return 'u';
                                                                                                             }
-                                                                                                          } else {
-                                                                                                            return 'c';
                                                                                                           }
-                                                                                                        } else {
-                                                                                                          return 'u';
                                                                                                         }
+                                                                                                        return 'u';
+                                                                                                      } else {
+                                                                                                        return 'o';
                                                                                                       }
-                                                                                                    } else {
-                                                                                                      return 'u';
                                                                                                     }
                                                                                                   } else {
-                                                                                                    return 'u';
+                                                                                                    return 'o';
                                                                                                   }
                                                                                                 } else {
-                                                                                                  return 'u';
+                                                                                                  return 'o';
                                                                                                 }
-                                                                                              } else {
-                                                                                                return 'u';
                                                                                               }
                                                                                             } else {
-                                                                                              return 'u';
+                                                                                              return 'o';
                                                                                             }
                                                                                           } else {
-                                                                                            return 'u';
+                                                                                            return 'o';
                                                                                           }
                                                                                         } else {
                                                                                           return 'o';
                                                                                         }
+                                                                                      } else {
+                                                                                        return 'o';
                                                                                       }
-                                                                                    } else {
-                                                                                      return 'o';
                                                                                     }
-                                                                                  } else {
-                                                                                    return 'o';
                                                                                   }
-                                                                                } else {
                                                                                   return 'o';
                                                                                 }
                                                                               } else {
-                                                                                return 'o';
+                                                                                return 'i';
                                                                               }
                                                                             } else {
-                                                                              return 'o';
+                                                                              return 'i';
                                                                             }
-                                                                          } else {
-                                                                            return 'o';
                                                                           }
-                                                                        } else {
-                                                                          return 'o';
                                                                         }
-                                                                      } else {
-                                                                        return 'o';
                                                                       }
-                                                                    } else {
-                                                                      return 'i';
                                                                     }
-                                                                  } else {
                                                                     return 'i';
+                                                                  } else {
+                                                                    return 'e';
                                                                   }
-                                                                } else {
-                                                                  return 'i';
                                                                 }
-                                                              } else {
-                                                                return 'i';
                                                               }
-                                                            } else {
-                                                              return 'i';
                                                             }
                                                           } else {
-                                                            return 'i';
+                                                            return 'e';
                                                           }
-                                                        } else {
-                                                          return 'e';
                                                         }
                                                       }
                                                     } else {
-                                                      return 'e';
+                                                      break L3;
                                                     }
-                                                  } else {
-                                                    return 'e';
                                                   }
-                                                } else {
                                                   return 'e';
                                                 }
                                               } else {
-                                                return 'e';
+                                                break L2;
                                               }
-                                            } else {
-                                              return 'e';
                                             }
-                                          } else {
-                                            return 'e';
                                           }
+                                        } else {
+                                          break L2;
                                         }
                                       } else {
-                                        return 'a';
+                                        break L2;
                                       }
-                                    } else {
-                                      return 'a';
                                     }
                                   } else {
-                                    return 'a';
+                                    break L2;
                                   }
                                 } else {
-                                  return 'a';
+                                  break L2;
                                 }
-                              } else {
-                                return 'a';
                               }
-                            } else {
-                              return 'a';
                             }
-                          } else {
                             return 'a';
+                          } else {
+                            break L1;
                           }
-                        } else {
-                          return 'a';
                         }
-                      } else {
-                        return 'a';
                       }
-                    } else {
-                      return param1;
                     }
-                  } else {
                     return param1;
+                  } else {
+                    break L0;
                   }
-                } else {
-                  return param1;
                 }
               } else {
                 return '_';
               }
             } else {
-              return '_';
+              break L0;
             }
-          } else {
-            return '_';
           }
+          return '_';
         } else {
+          L8: {
+            var2 = param1;
+            if (32 != var2) {
+              if (-161 != (var2 ^ -1)) {
+                if (-96 != (var2 ^ -1)) {
+                  if (-46 != (var2 ^ -1)) {
+                    if (-92 != (var2 ^ -1)) {
+                      if (var2 != 93) {
+                        if (var2 != 35) {
+                          L9: {
+                            if (224 == var2) {
+                              break L9;
+                            } else {
+                              if (var2 != 225) {
+                                if (-227 != (var2 ^ -1)) {
+                                  if (-229 == (var2 ^ -1)) {
+                                    break L9;
+                                  } else {
+                                    if (var2 != 227) {
+                                      if (var2 != 192) {
+                                        if (193 == var2) {
+                                          break L9;
+                                        } else {
+                                          if ((var2 ^ -1) == -195) {
+                                            break L9;
+                                          } else {
+                                            if ((var2 ^ -1) != -197) {
+                                              if (195 == var2) {
+                                                break L9;
+                                              } else {
+                                                L10: {
+                                                  if ((var2 ^ -1) != -233) {
+                                                    if (var2 == 233) {
+                                                      break L10;
+                                                    } else {
+                                                      if ((var2 ^ -1) == -235) {
+                                                        break L10;
+                                                      } else {
+                                                        if (-236 != (var2 ^ -1)) {
+                                                          if (var2 == 200) {
+                                                            break L10;
+                                                          } else {
+                                                            if (201 == var2) {
+                                                              break L10;
+                                                            } else {
+                                                              if (var2 == 202) {
+                                                                break L10;
+                                                              } else {
+                                                                if (203 != var2) {
+                                                                  L11: {
+                                                                    if (-238 == (var2 ^ -1)) {
+                                                                      break L11;
+                                                                    } else {
+                                                                      if ((var2 ^ -1) == -239) {
+                                                                        break L11;
+                                                                      } else {
+                                                                        if (239 == var2) {
+                                                                          break L11;
+                                                                        } else {
+                                                                          if ((var2 ^ -1) != -206) {
+                                                                            if ((var2 ^ -1) != -207) {
+                                                                              if ((var2 ^ -1) == -208) {
+                                                                                break L11;
+                                                                              } else {
+                                                                                L12: {
+                                                                                  if ((var2 ^ -1) == -243) {
+                                                                                    break L12;
+                                                                                  } else {
+                                                                                    if (var2 != 243) {
+                                                                                      if (244 != var2) {
+                                                                                        if (var2 != 246) {
+                                                                                          if (var2 != 245) {
+                                                                                            if ((var2 ^ -1) == -211) {
+                                                                                              break L12;
+                                                                                            } else {
+                                                                                              if (var2 != 211) {
+                                                                                                if (var2 != 212) {
+                                                                                                  if ((var2 ^ -1) == -215) {
+                                                                                                    break L12;
+                                                                                                  } else {
+                                                                                                    if (213 != var2) {
+                                                                                                      L13: {
+                                                                                                        if (249 == var2) {
+                                                                                                          break L13;
+                                                                                                        } else {
+                                                                                                          if (250 != var2) {
+                                                                                                            if ((var2 ^ -1) == -252) {
+                                                                                                              break L13;
+                                                                                                            } else {
+                                                                                                              if (-253 != (var2 ^ -1)) {
+                                                                                                                if (-218 != (var2 ^ -1)) {
+                                                                                                                  if (218 != var2) {
+                                                                                                                    if (219 == var2) {
+                                                                                                                      break L13;
+                                                                                                                    } else {
+                                                                                                                      if ((var2 ^ -1) != -221) {
+                                                                                                                        L14: {
+                                                                                                                          if (-232 == (var2 ^ -1)) {
+                                                                                                                            break L14;
+                                                                                                                          } else {
+                                                                                                                            if (var2 == 199) {
+                                                                                                                              break L14;
+                                                                                                                            } else {
+                                                                                                                              if (-256 == (var2 ^ -1)) {
+                                                                                                                                return 'y';
+                                                                                                                              } else {
+                                                                                                                                if (-377 != (var2 ^ -1)) {
+                                                                                                                                  if (var2 != 241) {
+                                                                                                                                    if ((var2 ^ -1) == -210) {
+                                                                                                                                      return 'n';
+                                                                                                                                    } else {
+                                                                                                                                      if ((var2 ^ -1) != -224) {
+                                                                                                                                        return Character.toLowerCase(param1);
+                                                                                                                                      } else {
+                                                                                                                                        return 'b';
+                                                                                                                                      }
+                                                                                                                                    }
+                                                                                                                                  } else {
+                                                                                                                                    return 'n';
+                                                                                                                                  }
+                                                                                                                                } else {
+                                                                                                                                  return 'y';
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                        return 'c';
+                                                                                                                      } else {
+                                                                                                                        return 'u';
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  } else {
+                                                                                                                    return 'u';
+                                                                                                                  }
+                                                                                                                } else {
+                                                                                                                  return 'u';
+                                                                                                                }
+                                                                                                              } else {
+                                                                                                                return 'u';
+                                                                                                              }
+                                                                                                            }
+                                                                                                          } else {
+                                                                                                            break L13;
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                      return 'u';
+                                                                                                    } else {
+                                                                                                      break L12;
+                                                                                                    }
+                                                                                                  }
+                                                                                                } else {
+                                                                                                  break L12;
+                                                                                                }
+                                                                                              } else {
+                                                                                                break L12;
+                                                                                              }
+                                                                                            }
+                                                                                          } else {
+                                                                                            break L12;
+                                                                                          }
+                                                                                        } else {
+                                                                                          break L12;
+                                                                                        }
+                                                                                      } else {
+                                                                                        break L12;
+                                                                                      }
+                                                                                    } else {
+                                                                                      break L12;
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                                return 'o';
+                                                                              }
+                                                                            } else {
+                                                                              break L11;
+                                                                            }
+                                                                          } else {
+                                                                            break L11;
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                  return 'i';
+                                                                } else {
+                                                                  break L10;
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        } else {
+                                                          break L10;
+                                                        }
+                                                      }
+                                                    }
+                                                  } else {
+                                                    break L10;
+                                                  }
+                                                }
+                                                return 'e';
+                                              }
+                                            } else {
+                                              break L9;
+                                            }
+                                          }
+                                        }
+                                      } else {
+                                        break L9;
+                                      }
+                                    } else {
+                                      break L9;
+                                    }
+                                  }
+                                } else {
+                                  break L9;
+                                }
+                              } else {
+                                break L9;
+                              }
+                            }
+                          }
+                          return 'a';
+                        } else {
+                          return param1;
+                        }
+                      } else {
+                        return param1;
+                      }
+                    } else {
+                      return param1;
+                    }
+                  } else {
+                    break L8;
+                  }
+                } else {
+                  return '_';
+                }
+              } else {
+                return '_';
+              }
+            } else {
+              break L8;
+            }
+          }
           return '_';
         }
     }
 
     final String b(byte param0) {
         if (param0 != 8) {
-            ((sf) this).field_c = null;
-            return ((sf) this).field_c;
+            this.field_c = (String) null;
+            return this.field_c;
         }
-        return ((sf) this).field_c;
+        return this.field_c;
     }
 
     final boolean a(boolean param0) {
+        boolean discarded$0 = false;
         if (!param0) {
-            boolean discarded$0 = ((sf) this).b(-43);
-            return ((sf) this).field_f;
+            discarded$0 = this.b(-43);
+            return this.field_f;
         }
-        return ((sf) this).field_f;
+        return this.field_f;
     }
 
     final void a(boolean param0, int param1) {
-        ((sf) this).field_f = true;
-        ((sf) this).field_e = param0 ? true : false;
+        this.field_f = true;
+        this.field_e = param0 ? true : false;
         if (param1 <= 26) {
             field_h = 79;
         }
@@ -349,37 +636,39 @@ final class sf {
     public static void a(int param0) {
         field_i = null;
         field_j = null;
+        if (param0 <= 122) {
+            return;
+        }
         field_a = null;
         field_b = null;
     }
 
     sf(String param0) {
-        ((sf) this).field_e = false;
-        ((sf) this).field_f = false;
+        this.field_e = false;
+        this.field_f = false;
         try {
-            ((sf) this).field_c = param0;
+            this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "sf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(byte param0) {
         jc.a((byte) 43, 4);
+        if (param0 != -89) {
+            field_j = (oi) null;
+        }
     }
 
     final boolean b(int param0) {
         if (param0 != 25843) {
-            ((sf) this).a(false, -18);
-            return ((sf) this).field_e;
+            this.a(false, -18);
+            return this.field_e;
         }
-        return ((sf) this).field_e;
+        return this.field_e;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new oi();
         field_i = new rc();
     }

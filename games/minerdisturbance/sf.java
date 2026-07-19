@@ -28,10 +28,6 @@ final class sf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new int[8192];
     }
 }

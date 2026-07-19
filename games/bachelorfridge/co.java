@@ -9,19 +9,15 @@ final class co {
     public static void a(boolean param0) {
         if (!param0) {
             co.a(false);
-            field_a = null;
+            field_a = (String[][]) null;
             field_b = null;
             return;
         }
-        field_a = null;
+        field_a = (String[][]) null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "co.A(";
     }
 }

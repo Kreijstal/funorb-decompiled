@@ -15,12 +15,12 @@ final class af extends pi {
     }
 
     public static void a(int param0) {
-        field_n = null;
+        field_n = (String[][]) null;
         field_r = null;
         field_p = null;
         field_o = null;
         if (param0 != -12707) {
-          field_p = null;
+          field_p = (int[]) null;
           field_s = null;
           return;
         } else {
@@ -30,6 +30,9 @@ final class af extends pi {
     }
 
     final static int a(sb param0, ta param1, int param2) {
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -107,7 +110,7 @@ final class af extends pi {
                     }
                   }
                   if (var5 != el.field_d) {
-                    StringBuilder discarded$3 = var8.append((char)var5);
+                    discarded$3 = var8.append((char)var5);
                     continue L1;
                   } else {
                     L5: {
@@ -122,11 +125,11 @@ final class af extends pi {
                                 break L6;
                               } else {
                                 if (var6 == el.field_d) {
-                                  StringBuilder discarded$4 = var8.append((char)var6);
+                                  discarded$4 = var8.append((char)var6);
                                   break L5;
                                 } else {
                                   param0.field_o = param0.field_o - 1;
-                                  StringBuilder discarded$5 = var8.append((char)var5);
+                                  discarded$5 = var8.append((char)var5);
                                   break L5;
                                 }
                               }
@@ -157,7 +160,15 @@ final class af extends pi {
                   }
                 }
               }
-              param1.a((byte) -105, (pi) (Object) new lj(var8.toString()));
+              L8: {
+                if (param2 <= -58) {
+                  break L8;
+                } else {
+                  af.a(127);
+                  break L8;
+                }
+              }
+              param1.a((byte) -105, new lj(var8.toString()));
               stackOut_27_0 = var5;
               stackIn_28_0 = stackOut_27_0;
               break L0;
@@ -165,70 +176,66 @@ final class af extends pi {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L9: {
             var3 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) var3;
+            stackOut_29_0 = (RuntimeException) (var3);
             stackOut_29_1 = new StringBuilder().append("af.A(");
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
             stackIn_30_1 = stackOut_29_1;
             if (param0 == null) {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "null";
               stackIn_32_0 = stackOut_31_0;
               stackIn_32_1 = stackOut_31_1;
               stackIn_32_2 = stackOut_31_2;
-              break L8;
+              break L9;
             } else {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "{...}";
               stackIn_32_0 = stackOut_30_0;
               stackIn_32_1 = stackOut_30_1;
               stackIn_32_2 = stackOut_30_2;
-              break L8;
+              break L9;
             }
           }
-          L9: {
-            stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+          L10: {
+            stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
             stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',');
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
             stackIn_33_1 = stackOut_32_1;
             if (param1 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "null";
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
-              break L9;
+              break L10;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "{...}";
               stackIn_35_0 = stackOut_33_0;
               stackIn_35_1 = stackOut_33_1;
               stackIn_35_2 = stackOut_33_2;
-              break L9;
+              break L10;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ',' + -113 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ',' + param2 + ')');
         }
         return stackIn_28_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
         field_s = "Retry";
-        field_n = new String[][]{null, new String[1]};
+        field_n = new String[][]{null, new String[]{"Freezium: Freezium is worth 1,000 points. It's cold to the touch! It chills any nearby water making it dangerously cold."}};
         field_r = "Cost: <%0>";
     }
 }

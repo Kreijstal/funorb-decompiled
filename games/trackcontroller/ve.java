@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.Class;
-
 final class ve extends ug {
     String field_jb;
     int field_R;
@@ -26,6 +24,7 @@ final class ve extends ug {
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         String stackIn_43_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Class stackOut_3_0 = null;
         Class stackOut_26_0 = null;
@@ -46,14 +45,15 @@ final class ve extends ug {
         String stackOut_40_2 = null;
         try {
           L0: {
-            if (param1.equals((Object) (Object) "B")) {
+            if (param1.equals("B")) {
               stackOut_3_0 = Byte.TYPE;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              if (!param1.equals((Object) (Object) "I")) {
-                if (!param1.equals((Object) (Object) "S")) {
-                  if (!param1.equals((Object) (Object) "J")) {
+              if (!param1.equals("I")) {
+                if (!param1.equals("S")) {
+                  if (!param1.equals("J")) {
                     L1: {
                       if (param0 == 11) {
                         break L1;
@@ -62,47 +62,55 @@ final class ve extends ug {
                         break L1;
                       }
                     }
-                    if (!param1.equals((Object) (Object) "Z")) {
-                      if (param1.equals((Object) (Object) "F")) {
+                    if (!param1.equals("Z")) {
+                      if (param1.equals("F")) {
                         stackOut_26_0 = Float.TYPE;
                         stackIn_27_0 = stackOut_26_0;
-                        return stackIn_27_0;
+                        decompiledRegionSelector0 = 5;
+                        break L0;
                       } else {
-                        if (!param1.equals((Object) (Object) "D")) {
-                          if (param1.equals((Object) (Object) "C")) {
+                        if (!param1.equals("D")) {
+                          if (param1.equals("C")) {
                             stackOut_35_0 = Character.TYPE;
                             stackIn_36_0 = stackOut_35_0;
-                            return stackIn_36_0;
+                            decompiledRegionSelector0 = 7;
+                            break L0;
                           } else {
                             stackOut_37_0 = Class.forName(param1);
                             stackIn_38_0 = stackOut_37_0;
+                            decompiledRegionSelector0 = 8;
                             break L0;
                           }
                         } else {
                           stackOut_29_0 = Double.TYPE;
                           stackIn_30_0 = stackOut_29_0;
-                          return stackIn_30_0;
+                          decompiledRegionSelector0 = 6;
+                          break L0;
                         }
                       }
                     } else {
                       stackOut_21_0 = Boolean.TYPE;
                       stackIn_22_0 = stackOut_21_0;
-                      return stackIn_22_0;
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     }
                   } else {
                     stackOut_14_0 = Long.TYPE;
                     stackIn_15_0 = stackOut_14_0;
-                    return stackIn_15_0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   }
                 } else {
                   stackOut_10_0 = Short.TYPE;
                   stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               } else {
                 stackOut_6_0 = Integer.TYPE;
                 stackIn_7_0 = stackOut_6_0;
-                return stackIn_7_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -110,23 +118,23 @@ final class ve extends ug {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_39_0 = (RuntimeException) var2;
+            stackOut_39_0 = (RuntimeException) (var2);
             stackOut_39_1 = new StringBuilder().append("ve.B(").append(param0).append(',');
             stackIn_42_0 = stackOut_39_0;
             stackIn_42_1 = stackOut_39_1;
             stackIn_40_0 = stackOut_39_0;
             stackIn_40_1 = stackOut_39_1;
             if (param1 == null) {
-              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
-              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
               stackOut_42_2 = "null";
               stackIn_43_0 = stackOut_42_0;
               stackIn_43_1 = stackOut_42_1;
               stackIn_43_2 = stackOut_42_2;
               break L2;
             } else {
-              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
-              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
               stackOut_40_2 = "{...}";
               stackIn_43_0 = stackOut_40_0;
               stackIn_43_1 = stackOut_40_1;
@@ -134,9 +142,41 @@ final class ve extends ug {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_43_0), stackIn_43_2 + ')');
         }
-        return stackIn_38_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_11_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_15_0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_22_0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_27_0;
+                  } else {
+                    if (decompiledRegionSelector0 == 6) {
+                      return stackIn_30_0;
+                    } else {
+                      if (decompiledRegionSelector0 == 7) {
+                        return stackIn_36_0;
+                      } else {
+                        return stackIn_38_0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     final static void a(int param0, int param1, int param2, pf param3, boolean param4) {
@@ -225,7 +265,7 @@ final class ve extends ug {
             L2: while (true) {
               L3: {
                 L4: {
-                  if (~param3.field_E >= ~var9) {
+                  if ((param3.field_E ^ -1) >= (var9 ^ -1)) {
                     break L4;
                   } else {
                     var10 = param3.field_O[var9];
@@ -273,7 +313,7 @@ final class ve extends ug {
                           }
                           L8: {
                             var15 = od.field_c[var12];
-                            if (var15 != -2147483648) {
+                            if ((var15 ^ -1) != 2147483647) {
                               break L8;
                             } else {
                               if (var20 == 0) {
@@ -291,7 +331,7 @@ final class ve extends ug {
                             stackIn_27_1 = stackOut_24_1;
                             stackIn_25_0 = stackOut_24_0;
                             stackIn_25_1 = stackOut_24_1;
-                            if (var8 < 0) {
+                            if (-1 < (var8 ^ -1)) {
                               stackOut_27_0 = stackIn_27_0;
                               stackOut_27_1 = stackIn_27_1;
                               stackOut_27_2 = var16 << -var8;
@@ -314,11 +354,11 @@ final class ve extends ug {
                           L10: while (true) {
                             L11: {
                               L12: {
-                                if (var18 >> 4 == 0) {
+                                if (var18 >> 204119684 == 0) {
                                   break L12;
                                 } else {
                                   var17--;
-                                  stackOut_30_0 = ~var17;
+                                  stackOut_30_0 = var17 ^ -1;
                                   stackOut_30_1 = -1;
                                   stackIn_39_0 = stackOut_30_0;
                                   stackIn_39_1 = stackOut_30_1;
@@ -348,7 +388,7 @@ final class ve extends ug {
                                   }
                                 }
                               }
-                              stackOut_38_0 = var17 << 4;
+                              stackOut_38_0 = var17 << 1529511108;
                               stackOut_38_1 = var18;
                               stackIn_39_0 = stackOut_38_0;
                               stackIn_39_1 = stackOut_38_1;
@@ -358,7 +398,7 @@ final class ve extends ug {
                               var19 = stackIn_39_0 + stackIn_39_1;
                               gk.field_b[var19] = var9;
                               rf.field_a[var17] = 1 + var18;
-                              if (param3.field_a <= 0) {
+                              if (-1 <= (param3.field_a ^ -1)) {
                                 break L14;
                               } else {
                                 if (null == param3.field_x) {
@@ -389,7 +429,7 @@ final class ve extends ug {
               }
               L15: {
                 L16: {
-                  if (stackIn_48_0 <= ~param3.field_a) {
+                  if (stackIn_48_0 <= (param3.field_a ^ -1)) {
                     break L16;
                   } else {
                     if (param3.field_x == null) {
@@ -428,23 +468,23 @@ final class ve extends ug {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var5 = decompiledCaughtException;
-            stackOut_59_0 = (RuntimeException) var5;
+            stackOut_59_0 = (RuntimeException) (var5);
             stackOut_59_1 = new StringBuilder().append("ve.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_62_0 = stackOut_59_0;
             stackIn_62_1 = stackOut_59_1;
             stackIn_60_0 = stackOut_59_0;
             stackIn_60_1 = stackOut_59_1;
             if (param3 == null) {
-              stackOut_62_0 = (RuntimeException) (Object) stackIn_62_0;
-              stackOut_62_1 = (StringBuilder) (Object) stackIn_62_1;
+              stackOut_62_0 = (RuntimeException) ((Object) stackIn_62_0);
+              stackOut_62_1 = (StringBuilder) ((Object) stackIn_62_1);
               stackOut_62_2 = "null";
               stackIn_63_0 = stackOut_62_0;
               stackIn_63_1 = stackOut_62_1;
               stackIn_63_2 = stackOut_62_2;
               break L18;
             } else {
-              stackOut_60_0 = (RuntimeException) (Object) stackIn_60_0;
-              stackOut_60_1 = (StringBuilder) (Object) stackIn_60_1;
+              stackOut_60_0 = (RuntimeException) ((Object) stackIn_60_0);
+              stackOut_60_1 = (StringBuilder) ((Object) stackIn_60_1);
               stackOut_60_2 = "{...}";
               stackIn_63_0 = stackOut_60_0;
               stackIn_63_1 = stackOut_60_1;
@@ -452,11 +492,13 @@ final class ve extends ug {
               break L18;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_63_0, stackIn_63_2 + ',' + param4 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_63_0), stackIn_63_2 + ',' + param4 + ')');
         }
     }
 
     final static void a(byte param0, byte[] param1) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         RuntimeException var2 = null;
         be var2_ref = null;
         int var3 = 0;
@@ -567,7 +609,7 @@ final class ve extends ug {
             L1: while (true) {
               L2: {
                 L3: {
-                  if (~var4 <= ~gi.field_o) {
+                  if ((var4 ^ -1) <= (gi.field_o ^ -1)) {
                     break L3;
                   } else {
                     ka.field_f[var4] = var2_ref.d((byte) -111);
@@ -611,7 +653,7 @@ final class ve extends ug {
                 L7: while (true) {
                   L8: {
                     L9: {
-                      if (~gi.field_o >= ~var4) {
+                      if ((gi.field_o ^ -1) >= (var4 ^ -1)) {
                         break L9;
                       } else {
                         cf.field_p[var4] = var2_ref.d((byte) -66);
@@ -633,7 +675,7 @@ final class ve extends ug {
                   L10: while (true) {
                     L11: {
                       L12: {
-                        if (~var4 <= ~gi.field_o) {
+                        if ((var4 ^ -1) <= (gi.field_o ^ -1)) {
                           break L12;
                         } else {
                           j.field_f[var4] = var2_ref.d((byte) -62);
@@ -657,11 +699,11 @@ final class ve extends ug {
                     L13: while (true) {
                       L14: {
                         L15: {
-                          if (~var3 >= ~var4) {
+                          if ((var3 ^ -1) >= (var4 ^ -1)) {
                             break L15;
                           } else {
                             qe.field_z[var4] = var2_ref.e(8);
-                            stackOut_34_0 = ~qe.field_z[var4];
+                            stackOut_34_0 = qe.field_z[var4] ^ -1;
                             stackOut_34_1 = -1;
                             stackIn_42_0 = stackOut_34_0;
                             stackIn_42_1 = stackOut_34_1;
@@ -762,15 +804,15 @@ final class ve extends ug {
                                                 var12 = 0;
                                                 L28: while (true) {
                                                   L29: {
-                                                    if (~var12 <= ~var7) {
+                                                    if ((var12 ^ -1) <= (var7 ^ -1)) {
                                                       break L29;
                                                     } else {
-                                                      byte dupTemp$2 = var2_ref.f(param0 + -99);
+                                                      dupTemp$2 = var2_ref.f(param0 + -99);
                                                       var9[var12] = dupTemp$2;
                                                       var13 = dupTemp$2;
                                                       stackOut_61_0 = var10;
                                                       stackOut_61_1 = 0;
-                                                      stackOut_61_2 = ~var13;
+                                                      stackOut_61_2 = var13 ^ -1;
                                                       stackIn_51_0 = stackOut_61_0;
                                                       stackIn_51_1 = stackOut_61_1;
                                                       stackIn_51_2 = stackOut_61_2;
@@ -822,7 +864,7 @@ final class ve extends ug {
                                         L31: while (true) {
                                           L32: {
                                             L33: {
-                                              if (~var12 <= ~var5) {
+                                              if ((var12 ^ -1) <= (var5 ^ -1)) {
                                                 break L33;
                                               } else {
                                                 stackOut_70_0 = 0;
@@ -867,10 +909,10 @@ final class ve extends ug {
                                             stackIn_80_0 = stackOut_79_0;
                                             break L32;
                                           }
-                                          if (stackIn_80_0 != ~(2 & var11)) {
+                                          if (stackIn_80_0 != (2 & var11 ^ -1)) {
                                             var12 = 0;
                                             L37: while (true) {
-                                              stackOut_84_0 = ~var5;
+                                              stackOut_84_0 = var5 ^ -1;
                                               stackOut_84_1 = var12;
                                               stackOut_84_2 = -1;
                                               stackIn_85_0 = stackOut_84_0;
@@ -889,10 +931,10 @@ final class ve extends ug {
                                                     var13 = stackIn_87_0;
                                                     L39: while (true) {
                                                       L40: {
-                                                        if (~var13 <= ~var6) {
+                                                        if ((var13 ^ -1) <= (var6 ^ -1)) {
                                                           break L40;
                                                         } else {
-                                                          byte dupTemp$3 = var2_ref.f(-125);
+                                                          dupTemp$3 = var2_ref.f(-125);
                                                           var9[var13 * var5 + var12] = dupTemp$3;
                                                           var14 = dupTemp$3;
                                                           stackOut_89_0 = var10;
@@ -979,23 +1021,23 @@ final class ve extends ug {
           decompiledCaughtException = decompiledCaughtParameter0;
           L42: {
             var2 = decompiledCaughtException;
-            stackOut_99_0 = (RuntimeException) var2;
+            stackOut_99_0 = (RuntimeException) (var2);
             stackOut_99_1 = new StringBuilder().append("ve.A(").append(param0).append(',');
             stackIn_102_0 = stackOut_99_0;
             stackIn_102_1 = stackOut_99_1;
             stackIn_100_0 = stackOut_99_0;
             stackIn_100_1 = stackOut_99_1;
             if (param1 == null) {
-              stackOut_102_0 = (RuntimeException) (Object) stackIn_102_0;
-              stackOut_102_1 = (StringBuilder) (Object) stackIn_102_1;
+              stackOut_102_0 = (RuntimeException) ((Object) stackIn_102_0);
+              stackOut_102_1 = (StringBuilder) ((Object) stackIn_102_1);
               stackOut_102_2 = "null";
               stackIn_103_0 = stackOut_102_0;
               stackIn_103_1 = stackOut_102_1;
               stackIn_103_2 = stackOut_102_2;
               break L42;
             } else {
-              stackOut_100_0 = (RuntimeException) (Object) stackIn_100_0;
-              stackOut_100_1 = (StringBuilder) (Object) stackIn_100_1;
+              stackOut_100_0 = (RuntimeException) ((Object) stackIn_100_0);
+              stackOut_100_1 = (StringBuilder) ((Object) stackIn_100_1);
               stackOut_100_2 = "{...}";
               stackIn_103_0 = stackOut_100_0;
               stackIn_103_1 = stackOut_100_1;
@@ -1003,7 +1045,7 @@ final class ve extends ug {
               break L42;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_103_0, stackIn_103_2 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_103_0), stackIn_103_2 + ')');
         }
     }
 

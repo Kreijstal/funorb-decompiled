@@ -71,12 +71,12 @@ final class rp extends vg {
         if (param3 != 73) {
             return;
         }
-        hp.a(param1, 0, 0, ((rp) this).field_j.b((byte) 74), -1918106173, param2, param0);
+        hp.a(param1, 0, 0, this.field_j.b((byte) 74), -1918106173, param2, param0);
     }
 
     rp(int param0) {
-        ((rp) this).field_j = new bua(0, param0, 1);
-        ((rp) this).field_j.a(param0, false, 0, 0, true);
+        this.field_j = new bua(0, param0, 1);
+        this.field_j.a(param0, false, 0, 0, true);
     }
 
     final static void a(int param0) {
@@ -90,17 +90,13 @@ final class rp extends vg {
     final void b(int param0) {
         if (param0 > -30) {
             field_h = 127;
-            ((rp) this).field_j.a(0);
+            this.field_j.a(0);
             return;
         }
-        ((rp) this).field_j.a(0);
+        this.field_j.a(0);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new ft(1);
     }
 }

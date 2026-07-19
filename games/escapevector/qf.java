@@ -23,75 +23,83 @@ final class qf extends eo {
         try {
             IOException var15 = null;
             RuntimeException var15_ref = null;
-            int stackIn_3_0 = 0;
-            int stackIn_6_0 = 0;
-            RuntimeException stackIn_12_0 = null;
-            StringBuilder stackIn_12_1 = null;
-            RuntimeException stackIn_13_0 = null;
-            StringBuilder stackIn_13_1 = null;
+            int stackIn_5_0 = 0;
+            int stackIn_8_0 = 0;
             RuntimeException stackIn_14_0 = null;
             StringBuilder stackIn_14_1 = null;
-            String stackIn_14_2 = null;
             RuntimeException stackIn_15_0 = null;
             StringBuilder stackIn_15_1 = null;
             RuntimeException stackIn_16_0 = null;
             StringBuilder stackIn_16_1 = null;
+            String stackIn_16_2 = null;
             RuntimeException stackIn_17_0 = null;
             StringBuilder stackIn_17_1 = null;
-            String stackIn_17_2 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            RuntimeException stackIn_19_0 = null;
+            StringBuilder stackIn_19_1 = null;
+            String stackIn_19_2 = null;
             Throwable decompiledCaughtException = null;
-            int stackOut_2_0 = 0;
-            int stackOut_1_0 = 0;
-            int stackOut_5_0 = 0;
             int stackOut_4_0 = 0;
-            RuntimeException stackOut_11_0 = null;
-            StringBuilder stackOut_11_1 = null;
+            int stackOut_3_0 = 0;
+            int stackOut_7_0 = 0;
+            int stackOut_6_0 = 0;
             RuntimeException stackOut_13_0 = null;
             StringBuilder stackOut_13_1 = null;
-            String stackOut_13_2 = null;
-            RuntimeException stackOut_12_0 = null;
-            StringBuilder stackOut_12_1 = null;
-            String stackOut_12_2 = null;
-            RuntimeException stackOut_14_0 = null;
-            StringBuilder stackOut_14_1 = null;
-            RuntimeException stackOut_16_0 = null;
-            StringBuilder stackOut_16_1 = null;
-            String stackOut_16_2 = null;
             RuntimeException stackOut_15_0 = null;
             StringBuilder stackOut_15_1 = null;
             String stackOut_15_2 = null;
+            RuntimeException stackOut_14_0 = null;
+            StringBuilder stackOut_14_1 = null;
+            String stackOut_14_2 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            RuntimeException stackOut_18_0 = null;
+            StringBuilder stackOut_18_1 = null;
+            String stackOut_18_2 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            String stackOut_17_2 = null;
             try {
               L0: {
                 L1: {
-                  om.field_g = new c(5000);
-                  om.field_c = new c(5000);
-                  ca.field_c = param5;
-                  if (!param7) {
-                    stackOut_2_0 = 0;
-                    stackIn_3_0 = stackOut_2_0;
+                  om.field_g = new c(param1);
+                  om.field_c = new c(param0);
+                  if (param8 == 84) {
                     break L1;
                   } else {
-                    stackOut_1_0 = 1;
-                    stackIn_3_0 = stackOut_1_0;
+                    qf.b(-106);
                     break L1;
                   }
                 }
                 L2: {
-                  jc.field_b = stackIn_3_0 != 0;
+                  ca.field_c = param5;
+                  if (!param7) {
+                    stackOut_4_0 = 0;
+                    stackIn_5_0 = stackOut_4_0;
+                    break L2;
+                  } else {
+                    stackOut_3_0 = 1;
+                    stackIn_5_0 = stackOut_3_0;
+                    break L2;
+                  }
+                }
+                L3: {
+                  jc.field_b = stackIn_5_0 != 0;
                   cn.field_h = param11;
                   sj.field_i = param13;
                   jm.field_L = param6;
                   if (!param3) {
-                    stackOut_5_0 = 0;
-                    stackIn_6_0 = stackOut_5_0;
-                    break L2;
+                    stackOut_7_0 = 0;
+                    stackIn_8_0 = stackOut_7_0;
+                    break L3;
                   } else {
-                    stackOut_4_0 = 1;
-                    stackIn_6_0 = stackOut_4_0;
-                    break L2;
+                    stackOut_6_0 = 1;
+                    stackIn_8_0 = stackOut_6_0;
+                    break L3;
                   }
                 }
-                ej.field_d = stackIn_6_0 != 0;
+                ej.field_d = stackIn_8_0 != 0;
                 ck.field_q = param10;
                 ej.field_b = param9;
                 qa.field_D = param4;
@@ -100,69 +108,73 @@ final class qf extends eo {
                 if (ca.field_c.field_j == null) {
                   break L0;
                 } else {
-                  {
-                    L3: {
+                  try {
+                    L4: {
                       bd.field_h = new rg(ca.field_c.field_j, 64, 0);
-                      break L3;
+                      break L4;
                     }
+                  } catch (java.io.IOException decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    var15 = (IOException) (Object) decompiledCaughtException;
+                    throw new RuntimeException(var15.toString());
                   }
                   return;
                 }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
-                var15_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_11_0 = (RuntimeException) var15_ref;
-                stackOut_11_1 = new StringBuilder().append("qf.K(").append(5000).append(',').append(5000).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-                stackIn_13_0 = stackOut_11_0;
-                stackIn_13_1 = stackOut_11_1;
-                stackIn_12_0 = stackOut_11_0;
-                stackIn_12_1 = stackOut_11_1;
-                if (param5 == null) {
-                  stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-                  stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-                  stackOut_13_2 = "null";
-                  stackIn_14_0 = stackOut_13_0;
-                  stackIn_14_1 = stackOut_13_1;
-                  stackIn_14_2 = stackOut_13_2;
-                  break L4;
-                } else {
-                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-                  stackOut_12_2 = "{...}";
-                  stackIn_14_0 = stackOut_12_0;
-                  stackIn_14_1 = stackOut_12_1;
-                  stackIn_14_2 = stackOut_12_2;
-                  break L4;
-                }
-              }
               L5: {
-                stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param6).append(',').append(param7).append(',').append(84).append(',').append(param9).append(',').append(param10).append(',');
-                stackIn_16_0 = stackOut_14_0;
-                stackIn_16_1 = stackOut_14_1;
-                stackIn_15_0 = stackOut_14_0;
-                stackIn_15_1 = stackOut_14_1;
-                if (param11 == null) {
-                  stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                  stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-                  stackOut_16_2 = "null";
-                  stackIn_17_0 = stackOut_16_0;
-                  stackIn_17_1 = stackOut_16_1;
-                  stackIn_17_2 = stackOut_16_2;
+                var15_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_13_0 = (RuntimeException) (var15_ref);
+                stackOut_13_1 = new StringBuilder().append("qf.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_1 = stackOut_13_1;
+                stackIn_14_0 = stackOut_13_0;
+                stackIn_14_1 = stackOut_13_1;
+                if (param5 == null) {
+                  stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+                  stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
+                  stackOut_15_2 = "null";
+                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_16_1 = stackOut_15_1;
+                  stackIn_16_2 = stackOut_15_2;
                   break L5;
                 } else {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-                  stackOut_15_2 = "{...}";
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_17_1 = stackOut_15_1;
-                  stackIn_17_2 = stackOut_15_2;
+                  stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+                  stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
+                  stackOut_14_2 = "{...}";
+                  stackIn_16_0 = stackOut_14_0;
+                  stackIn_16_1 = stackOut_14_1;
+                  stackIn_16_2 = stackOut_14_2;
                   break L5;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param12 + ',' + param13 + ')');
+              L6: {
+                stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',');
+                stackIn_18_0 = stackOut_16_0;
+                stackIn_18_1 = stackOut_16_1;
+                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_1 = stackOut_16_1;
+                if (param11 == null) {
+                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
+                  stackOut_18_2 = "null";
+                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_1 = stackOut_18_1;
+                  stackIn_19_2 = stackOut_18_2;
+                  break L6;
+                } else {
+                  stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+                  stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
+                  stackOut_17_2 = "{...}";
+                  stackIn_19_0 = stackOut_17_0;
+                  stackIn_19_1 = stackOut_17_1;
+                  stackIn_19_2 = stackOut_17_2;
+                  break L6;
+                }
+              }
+              throw t.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param12 + ',' + param13 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -176,7 +188,14 @@ final class qf extends eo {
         field_n = null;
         field_m = null;
         field_o = null;
-        field_h = null;
+        if (param0 <= 89) {
+          field_h = (String) null;
+          field_h = null;
+          return;
+        } else {
+          field_h = null;
+          return;
+        }
     }
 
     final void a(int param0) {
@@ -184,9 +203,9 @@ final class qf extends eo {
           return;
         } else {
           L0: {
-            ((qf) this).field_e = 0L;
-            if (((qf) this).field_c < ((qf) this).field_g) {
-              ((qf) this).field_c = ((qf) this).field_c + (-((qf) this).field_c + ((qf) this).field_g);
+            this.field_e = 0L;
+            if (this.field_c < this.field_g) {
+              this.field_c = this.field_c + (-this.field_c + this.field_g);
               break L0;
             } else {
               break L0;
@@ -204,34 +223,34 @@ final class qf extends eo {
         int var9 = 0;
         var9 = EscapeVector.field_A;
         var2 = System.nanoTime();
-        var4 = -((qf) this).field_e + var2;
-        ((qf) this).field_e = var2;
+        var4 = -this.field_e + var2;
+        this.field_e = var2;
         if (-5000000000L < var4) {
           if (5000000000L > var4) {
-            ((qf) this).field_f[((qf) this).field_i] = var4;
-            if (((qf) this).field_k >= 1) {
-              ((qf) this).field_i = (1 + ((qf) this).field_i) % 10;
+            this.field_f[this.field_i] = var4;
+            if ((this.field_k ^ -1) <= -2) {
+              this.field_i = (1 + this.field_i) % 10;
               var6 = 0L;
-              var8 = 1;
+              var8 = param0;
               L0: while (true) {
-                if (((qf) this).field_k < var8) {
-                  return var6 / (long)((qf) this).field_k;
+                if (this.field_k < var8) {
+                  return var6 / (long)this.field_k;
                 } else {
-                  var6 = var6 + ((qf) this).field_f[(((qf) this).field_i - var8 + 10) % 10];
+                  var6 = var6 + this.field_f[(this.field_i - var8 + 10) % 10];
                   var8++;
                   continue L0;
                 }
               }
             } else {
-              ((qf) this).field_k = ((qf) this).field_k + 1;
-              ((qf) this).field_i = (1 + ((qf) this).field_i) % 10;
+              this.field_k = this.field_k + 1;
+              this.field_i = (1 + this.field_i) % 10;
               var6 = 0L;
-              var8 = 1;
+              var8 = param0;
               L1: while (true) {
-                if (((qf) this).field_k < var8) {
-                  return var6 / (long)((qf) this).field_k;
+                if (this.field_k < var8) {
+                  return var6 / (long)this.field_k;
                 } else {
-                  var6 = var6 + ((qf) this).field_f[(((qf) this).field_i - var8 + 10) % 10];
+                  var6 = var6 + this.field_f[(this.field_i - var8 + 10) % 10];
                   var8++;
                   continue L1;
                 }
@@ -239,12 +258,12 @@ final class qf extends eo {
             }
           } else {
             var6 = 0L;
-            var8 = 1;
+            var8 = param0;
             L2: while (true) {
-              if (((qf) this).field_k < var8) {
-                return var6 / (long)((qf) this).field_k;
+              if (this.field_k < var8) {
+                return var6 / (long)this.field_k;
               } else {
-                var6 = var6 + ((qf) this).field_f[(((qf) this).field_i - var8 + 10) % 10];
+                var6 = var6 + this.field_f[(this.field_i - var8 + 10) % 10];
                 var8++;
                 continue L2;
               }
@@ -252,12 +271,12 @@ final class qf extends eo {
           }
         } else {
           var6 = 0L;
-          var8 = 1;
+          var8 = param0;
           L3: while (true) {
-            if (((qf) this).field_k < var8) {
-              return var6 / (long)((qf) this).field_k;
+            if (this.field_k < var8) {
+              return var6 / (long)this.field_k;
             } else {
-              var6 = var6 + ((qf) this).field_f[(((qf) this).field_i - var8 + 10) % 10];
+              var6 = var6 + this.field_f[(this.field_i - var8 + 10) % 10];
               var8++;
               continue L3;
             }
@@ -269,9 +288,9 @@ final class qf extends eo {
         if (param0 <= 70) {
             return -6L;
         }
-        ((qf) this).field_c = ((qf) this).field_c + this.c(1);
-        if (!(((qf) this).field_g <= ((qf) this).field_c)) {
-            return (-((qf) this).field_c + ((qf) this).field_g) / 1000000L;
+        this.field_c = this.field_c + this.c(1);
+        if (!(this.field_g <= this.field_c)) {
+            return (-this.field_c + this.field_g) / 1000000L;
         }
         return 0L;
     }
@@ -282,21 +301,21 @@ final class qf extends eo {
         int var6 = 0;
         var6 = EscapeVector.field_A;
         var4 = 21 % ((param0 - -29) / 51);
-        if (((qf) this).field_c < ((qf) this).field_g) {
-          ((qf) this).field_e = ((qf) this).field_e + (-((qf) this).field_c + ((qf) this).field_g);
-          ((qf) this).field_c = ((qf) this).field_c + (((qf) this).field_g - ((qf) this).field_c);
-          ((qf) this).field_g = ((qf) this).field_g + param1;
+        if (this.field_c < this.field_g) {
+          this.field_e = this.field_e + (-this.field_c + this.field_g);
+          this.field_c = this.field_c + (this.field_g - this.field_c);
+          this.field_g = this.field_g + param1;
           return 1;
         } else {
           var5 = 0;
           L0: while (true) {
             L1: {
-              ((qf) this).field_g = ((qf) this).field_g + param1;
+              this.field_g = this.field_g + param1;
               var5++;
-              if (var5 >= 10) {
+              if ((var5 ^ -1) <= -11) {
                 break L1;
               } else {
-                if (~((qf) this).field_g > ~((qf) this).field_c) {
+                if ((this.field_g ^ -1L) > (this.field_c ^ -1L)) {
                   continue L0;
                 } else {
                   break L1;
@@ -304,8 +323,8 @@ final class qf extends eo {
               }
             }
             L2: {
-              if (((qf) this).field_c > ((qf) this).field_g) {
-                ((qf) this).field_g = ((qf) this).field_c;
+              if (this.field_c > this.field_g) {
+                this.field_g = this.field_c;
                 break L2;
               } else {
                 break L2;
@@ -317,21 +336,17 @@ final class qf extends eo {
     }
 
     qf() {
-        ((qf) this).field_i = 0;
-        ((qf) this).field_k = 1;
-        ((qf) this).field_g = 0L;
-        ((qf) this).field_e = 0L;
-        ((qf) this).field_f = new long[10];
-        ((qf) this).field_c = 0L;
-        ((qf) this).field_c = System.nanoTime();
-        ((qf) this).field_g = System.nanoTime();
+        this.field_i = 0;
+        this.field_k = 1;
+        this.field_g = 0L;
+        this.field_e = 0L;
+        this.field_f = new long[10];
+        this.field_c = 0L;
+        this.field_c = System.nanoTime();
+        this.field_g = System.nanoTime();
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = new java.util.zip.CRC32();
         field_h = "Loading fonts";
         field_o = "Mode";

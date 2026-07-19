@@ -20,10 +20,6 @@ final class lh extends cia {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "lh.A(";
         field_t = "Misc.";
     }

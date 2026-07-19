@@ -8,8 +8,9 @@ final class deb extends mfb {
     }
 
     final int b(boolean param0) {
+        int discarded$0 = 0;
         if (param0) {
-            int discarded$0 = ((deb) this).b(true);
+            discarded$0 = this.b(true);
             return kg.field_o;
         }
         return kg.field_o;
@@ -17,7 +18,7 @@ final class deb extends mfb {
 
     final int g(byte param0) {
         if (param0 >= -12) {
-            field_b = null;
+            field_b = (String) null;
             return tea.field_b;
         }
         return tea.field_b;
@@ -82,8 +83,9 @@ final class deb extends mfb {
     }
 
     final int d(byte param0) {
+        int discarded$0 = 0;
         if (param0 > -52) {
-            int discarded$0 = ((deb) this).g((byte) 55);
+            discarded$0 = this.g((byte) 55);
             return jga.field_a;
         }
         return jga.field_a;
@@ -99,7 +101,7 @@ final class deb extends mfb {
 
     final int k(int param0) {
         if (param0 != 0) {
-            field_b = null;
+            field_b = (String) null;
             return 0;
         }
         return 0;
@@ -107,15 +109,16 @@ final class deb extends mfb {
 
     final int a(int param0) {
         if (param0 != 0) {
-            field_b = null;
+            field_b = (String) null;
             return ffa.field_b;
         }
         return ffa.field_b;
     }
 
     final int c(int param0) {
+        int discarded$0 = 0;
         if (param0 != 0) {
-            int discarded$0 = ((deb) this).a(true);
+            discarded$0 = this.a(true);
             return uda.field_b;
         }
         return uda.field_b;
@@ -157,10 +160,6 @@ final class deb extends mfb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Ship blueprint stored on server";
     }
 }

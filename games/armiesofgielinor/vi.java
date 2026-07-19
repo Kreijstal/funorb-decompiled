@@ -15,13 +15,13 @@ final class vi {
                 qc.field_a.b(true);
             }
             if (param1 != 640) {
-                Object var4 = null;
+                String var4 = (String) null;
                 vi.a((String) null, -8, (String) null);
             }
             np.field_Qb = new df(param0, param2, false, true, true);
-            lt.field_g.a((kb) (Object) np.field_Qb, (byte) -77);
+            lt.field_g.a(np.field_Qb, (byte) -77);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "vi.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "vi.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -43,6 +43,9 @@ final class vi {
 
     public static void a(boolean param0) {
         field_f = null;
+        if (!param0) {
+            return;
+        }
         field_a = null;
         field_c = null;
         field_b = null;
@@ -59,10 +62,6 @@ final class vi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = null;
         field_c = "Lost";
         field_b = "You need a rating of <%1> to play with the current options.";

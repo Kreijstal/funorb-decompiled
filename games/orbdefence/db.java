@@ -11,15 +11,11 @@ final class db {
     private static String field_z;
 
     public static void a(int param0) {
-        int var1 = 0;
+        int var1 = 3 % ((param0 - 12) / 58);
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "db.A(";
         field_f = 0;
         field_c = "Tutorial OFF";

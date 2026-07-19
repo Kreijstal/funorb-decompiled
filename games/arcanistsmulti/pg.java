@@ -10,7 +10,7 @@ class pg {
     pg field_a;
 
     final boolean b(byte param0) {
-        if (!(null != ((pg) this).field_a)) {
+        if (!(null != this.field_a)) {
             return false;
         }
         if (param0 > -31) {
@@ -20,16 +20,17 @@ class pg {
     }
 
     final void a(boolean param0) {
-        if (((pg) this).field_a == null) {
+        boolean discarded$0 = false;
+        if (this.field_a == null) {
             return;
         }
-        ((pg) this).field_a.field_b = ((pg) this).field_b;
-        ((pg) this).field_b.field_a = ((pg) this).field_a;
+        this.field_a.field_b = this.field_b;
+        this.field_b.field_a = this.field_a;
         if (!param0) {
-            boolean discarded$0 = ((pg) this).b((byte) 71);
+            discarded$0 = this.b((byte) 71);
         }
-        ((pg) this).field_a = null;
-        ((pg) this).field_b = null;
+        this.field_a = null;
+        this.field_b = null;
     }
 
     public static void c(byte param0) {
@@ -41,6 +42,8 @@ class pg {
     }
 
     final static void b(int param0) {
+        String[][] dupTemp$2 = null;
+        int[][] dupTemp$3 = null;
         RuntimeException var1 = null;
         int var2 = 0;
         nk var3 = null;
@@ -58,6 +61,7 @@ class pg {
         int var14 = 0;
         int var15 = 0;
         ab var16 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var12 = ArcanistsMulti.field_G ? 1 : 0;
         try {
@@ -73,7 +77,7 @@ class pg {
               }
             }
             var2 = var16.e((byte) -118);
-            var3 = (nk) (Object) pe.field_Lb.b(12623);
+            var3 = (nk) ((Object) pe.field_Lb.b(12623));
             L2: while (true) {
               L3: {
                 if (var3 == null) {
@@ -82,7 +86,7 @@ class pg {
                   if (var2 == var3.field_p) {
                     break L3;
                   } else {
-                    var3 = (nk) (Object) pe.field_Lb.a(0);
+                    var3 = (nk) ((Object) pe.field_Lb.a(0));
                     continue L2;
                   }
                 }
@@ -101,10 +105,10 @@ class pg {
                         L6: while (true) {
                           if (var4 <= var6_int) {
                             bi.a((byte) -113, var5);
-                            String[][] dupTemp$2 = new String[2][var5];
+                            dupTemp$2 = new String[2][var5];
                             var3.field_r = dupTemp$2;
                             var6 = dupTemp$2;
-                            int[][] dupTemp$3 = new int[2][4 * var5];
+                            dupTemp$3 = new int[2][4 * var5];
                             var3.field_l = dupTemp$3;
                             var7 = dupTemp$3;
                             var8 = je.field_b;
@@ -153,7 +157,7 @@ class pg {
                                   var7[0][4 * var10 + 2] = tj.field_u[var11];
                                   var7[0][3 + var10 * 4] = ba.field_o[var11];
                                   if (je.a(16, bb.field_i[var11])) {
-                                    if (tj.field_u[var11] + hc.field_e[var11] - -ba.field_o[var11] == 0) {
+                                    if (-1 == (tj.field_u[var11] + hc.field_e[var11] - -ba.field_o[var11] ^ -1)) {
                                       var6[0][var10] = null;
                                       var10--;
                                       break L10;
@@ -171,7 +175,7 @@ class pg {
                             }
                           } else {
                             L11: {
-                              je.a(123, (wk) (Object) var16);
+                              je.a(123, var16);
                               if (0 == var6_int) {
                                 var3.field_h = fo.field_a;
                                 var3.field_k = kj.field_c;
@@ -200,17 +204,24 @@ class pg {
                 }
                 var3.field_g = true;
                 var3.a(true);
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 ka.b(false);
-                return;
+                decompiledRegionSelector0 = 0;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "pg.OC(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) var1), "pg.OC(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 

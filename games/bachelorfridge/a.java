@@ -10,12 +10,13 @@ final class a extends oha {
     static kv[] field_n;
 
     public static void c(int param0) {
+        int[] discarded$0 = null;
         field_p = null;
-        field_m = null;
+        field_m = (int[][]) null;
         field_n = null;
         field_o = null;
         if (param0 != 16763049) {
-            int[] discarded$0 = a.a(-43, -100, -66, 126);
+            discarded$0 = a.a(-43, -100, -66, 126);
         }
     }
 
@@ -35,21 +36,17 @@ final class a extends oha {
         int[] var22 = null;
         int[] var23 = null;
         int[] var24 = null;
-        int[] var25 = null;
-        int[] var26 = null;
         var21 = BachelorFridge.field_y;
-        var26 = new int[param1];
-        var25 = var26;
-        var24 = var25;
+        var24 = new int[param1];
         var23 = var24;
         var22 = var23;
         var4 = var22;
-        var5 = 255 & param0 >> 16;
-        var6 = (param0 & 65280) >> 8;
+        var5 = 255 & param0 >> 164319120;
+        var6 = (param0 & 65280) >> -743667928;
         var7 = param0 & 255;
-        var8 = (double)(((param3 & 16711680) >> 16) - var5) / (double)param1;
-        var10 = (double)((255 & param3 >> 8) + -var6) / (double)param1;
-        var26[0] = param0;
+        var8 = (double)(((param3 & 16711680) >> -442285616) - var5) / (double)param1;
+        var10 = (double)((255 & param3 >> -468222488) + -var6) / (double)param1;
+        var24[0] = param0;
         var12 = (double)((255 & param3) - var7) / (double)param1;
         var22[param1 - 1] = param3;
         var14 = (double)var5;
@@ -68,7 +65,7 @@ final class a extends oha {
             var14 = var14 + var8;
             var18 = var18 + var12;
             var16 = var16 + var10;
-            var22[var20] = mp.a(mp.a(dda.a((int)Math.round(var14) << 16, 16763049), dda.a((int)Math.round(var16), -1526726401) << 8), dda.a(255, (int)Math.round(var18)));
+            var22[var20] = mp.a(mp.a(dda.a((int)Math.round(var14) << 328671120, 16763049), dda.a((int)Math.round(var16), -1526726401) << -1579708536), dda.a(255, (int)Math.round(var18)));
             var20++;
             continue L0;
           }
@@ -78,20 +75,16 @@ final class a extends oha {
     a(int param0, int param1, int param2, String param3, String param4, int param5, int param6, int param7) {
         super(3, param0, param1, param2, param5, 0);
         try {
-            ((a) this).field_q = param7;
-            ((a) this).field_k = param4;
-            ((a) this).field_r = param6;
-            ((a) this).field_f = param3;
+            this.field_q = param7;
+            this.field_k = param4;
+            this.field_r = param6;
+            this.field_f = param3;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "a.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "a.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "Use this alternative as your account name";
     }
 }

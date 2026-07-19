@@ -12,64 +12,20 @@ final class bq extends ma {
     static boolean field_o;
 
     final static void a(int param0, dd param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        RuntimeException var9 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
-          L0: {
-            pq.field_m = 15;
-            jc.field_h = 80;
-            ad.field_r = 2;
-            ej.field_g = -2400;
-            se.field_h = 40;
-            rf.field_c = 40;
-            li.field_e = 80;
+            pq.field_m = param4;
+            jc.field_h = param3;
+            ad.field_r = param6;
+            ej.field_g = param5;
+            se.field_h = param0;
+            rf.field_c = param8;
+            li.field_e = param2;
             vn.field_j = param1;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var9 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var9;
-            stackOut_2_1 = new StringBuilder().append("bq.A(").append(40).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
-            } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+            if (param7 != -1) {
+                field_n = (dd) null;
             }
-          }
-          throw wm.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 80 + ',' + 80 + ',' + 15 + ',' + -2400 + ',' + 2 + ',' + -1 + ',' + 40 + ')');
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) ((Object) runtimeException), "bq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -89,6 +45,7 @@ final class bq extends ma {
         sa var15 = null;
         int stackIn_25_0 = 0;
         int stackIn_30_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_24_0 = 0;
         int stackOut_29_0 = 0;
@@ -104,14 +61,14 @@ final class bq extends ma {
             }
             L2: {
               L3: {
-                if (param1 == 0) {
+                if ((param1 ^ -1) == -1) {
                   break L3;
                 } else {
                   L4: {
-                    if (param1 <= 0) {
+                    if (-1 <= (param1 ^ -1)) {
                       break L4;
                     } else {
-                      if (~kj.field_g[0].field_u < ~param6) {
+                      if ((kj.field_g[0].field_u ^ -1) < (param6 ^ -1)) {
                         break L3;
                       } else {
                         break L4;
@@ -123,7 +80,7 @@ final class bq extends ma {
                   } else {
                     var7_int = 0;
                     L5: while (true) {
-                      if (~var7_int <= ~param1) {
+                      if ((var7_int ^ -1) <= (param1 ^ -1)) {
                         var7_int = param1;
                         var8 = param6;
                         var9 = param5;
@@ -141,10 +98,10 @@ final class bq extends ma {
                       } else {
                         L6: {
                           var8_ref_sa = kj.field_g[var7_int];
-                          if (~var8_ref_sa.field_n == ~param5) {
+                          if ((var8_ref_sa.field_n ^ -1) == (param5 ^ -1)) {
                             break L6;
                           } else {
-                            if (~var8_ref_sa.field_i == ~param5) {
+                            if ((var8_ref_sa.field_i ^ -1) == (param5 ^ -1)) {
                               break L6;
                             } else {
                               L7: {
@@ -154,7 +111,7 @@ final class bq extends ma {
                                   if (param3 == var8_ref_sa.field_n) {
                                     break L6;
                                   } else {
-                                    if (~param3 == ~var8_ref_sa.field_i) {
+                                    if ((param3 ^ -1) == (var8_ref_sa.field_i ^ -1)) {
                                       break L6;
                                     } else {
                                       break L7;
@@ -168,14 +125,14 @@ final class bq extends ma {
                           }
                         }
                         L8: {
-                          if (param3 == -1) {
+                          if ((param3 ^ -1) == 0) {
                             break L8;
                           } else {
                             L9: {
-                              if (var8_ref_sa.field_a != -1) {
+                              if ((var8_ref_sa.field_a ^ -1) != 0) {
                                 break L9;
                               } else {
-                                if (var8_ref_sa.field_x == -1) {
+                                if ((var8_ref_sa.field_x ^ -1) == 0) {
                                   break L8;
                                 } else {
                                   break L9;
@@ -201,7 +158,7 @@ final class bq extends ma {
                           if (-1 == param2) {
                             break L10;
                           } else {
-                            if (var8_ref_sa.field_x != -1) {
+                            if ((var8_ref_sa.field_x ^ -1) != 0) {
                               var9 = var7_int;
                               var10 = param6;
                               var11 = param5;
@@ -222,7 +179,8 @@ final class bq extends ma {
                         }
                         stackOut_24_0 = param1;
                         stackIn_25_0 = stackOut_24_0;
-                        return stackIn_25_0;
+                        decompiledRegionSelector0 = 0;
+                        break L0;
                       }
                     }
                   }
@@ -244,32 +202,37 @@ final class bq extends ma {
             }
             stackOut_29_0 = param1;
             stackIn_30_0 = stackOut_29_0;
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var7, "bq.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw wm.a((Throwable) ((Object) var7), "bq.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
-        return stackIn_30_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_25_0;
+        } else {
+          return stackIn_30_0;
+        }
     }
 
     bq(int param0) {
-        ((bq) this).field_l = param0;
+        this.field_l = param0;
     }
 
     public static void c(byte param0) {
+        int discarded$0 = 0;
         field_n = null;
         field_s = null;
         field_q = null;
         field_r = null;
+        if (param0 > -16) {
+            discarded$0 = bq.a((byte) -80, 69, -63, -22, -2, -27, -72);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = -1;
         field_r = new hj(14, 0, 4, 1);
         field_s = "Foul!";

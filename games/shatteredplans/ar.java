@@ -26,11 +26,12 @@ abstract class ar {
     abstract void e(int param0);
 
     final int a(byte param0) {
+        boolean discarded$2 = false;
         if (param0 != 0) {
-          boolean discarded$2 = ((ar) this).c(-35);
-          return ((ar) this).field_h.c((byte) 123) - -((ar) this).field_j.c((byte) 83);
+          discarded$2 = this.c(-35);
+          return this.field_h.c((byte) 123) - -this.field_j.c((byte) 83);
         } else {
-          return ((ar) this).field_h.c((byte) 123) - -((ar) this).field_j.c((byte) 83);
+          return this.field_h.c((byte) 123) - -this.field_j.c((byte) 83);
         }
     }
 
@@ -40,19 +41,19 @@ abstract class ar {
         if (param0 != -5205) {
             return -48;
         }
-        return ((ar) this).field_m.c((byte) -111) + ((ar) this).field_f.c((byte) -109);
+        return this.field_m.c((byte) -111) + this.field_f.c((byte) -109);
     }
 
     abstract boolean d(int param0);
 
     final boolean c(byte param0) {
         int var2 = -70 % ((47 - param0) / 56);
-        return ((ar) this).b(-5205) >= 20 ? true : false;
+        return -21 >= (this.b(-5205) ^ -1) ? true : false;
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
         int var6 = 0;
-        if ((Math.abs(param1) | Math.abs(param4) | Math.abs(param0) | Math.abs(param2)) >>> 19 == 0) {
+        if ((Math.abs(param1) | Math.abs(param4) | Math.abs(param0) | Math.abs(param2)) >>> -1998687981 == 0) {
           var6 = -104 % ((-50 - param3) / 36);
           if (Math.abs(param0 - param1) < Math.abs(param2 + -param4)) {
             in.a(param5, param4, 80, param2, param1, param0);
@@ -67,36 +68,37 @@ abstract class ar {
     }
 
     final tk a(boolean param0, int param1, byte param2, int param3, int param4) {
-        long var6 = ((long)param1 << 32) - -(long)param4;
+        boolean discarded$9 = false;
+        long var6 = ((long)param1 << -2057056416) - -(long)param4;
         tk var8 = new tk();
         var8.field_w = param2;
         var8.field_q = param0 ? true : false;
         var8.field_l = var6;
         if (param3 != -2057056416) {
-            boolean discarded$9 = ((ar) this).c(-16);
+            discarded$9 = this.c(-16);
             if (param0) {
-                if (!(((ar) this).a((byte) 0) < 20)) {
+                if (!(this.a((byte) 0) < 20)) {
                     throw new RuntimeException();
                 }
-                ((ar) this).field_h.a((df) (Object) var8, 32);
+                this.field_h.a(var8, 32);
             } else {
-                if (!(((ar) this).b(-5205) < 20)) {
+                if (!(-21 < (this.b(-5205) ^ -1))) {
                     throw new RuntimeException();
                 }
-                ((ar) this).field_m.a((df) (Object) var8, 32);
+                this.field_m.a(var8, 32);
             }
             return var8;
         }
         if (param0) {
-            if (!(((ar) this).a((byte) 0) < 20)) {
+            if (!(this.a((byte) 0) < 20)) {
                 throw new RuntimeException();
             }
-            ((ar) this).field_h.a((df) (Object) var8, 32);
+            this.field_h.a(var8, 32);
         } else {
-            if (!(((ar) this).b(-5205) < 20)) {
+            if (!(-21 < (this.b(-5205) ^ -1))) {
                 throw new RuntimeException();
             }
-            ((ar) this).field_m.a((df) (Object) var8, 32);
+            this.field_m.a(var8, 32);
         }
         return var8;
     }
@@ -105,7 +107,7 @@ abstract class ar {
         if (param0 != 27356) {
             return false;
         }
-        return ((ar) this).a((byte) 0) >= 20 ? true : false;
+        return (this.a((byte) 0) ^ -1) <= -21 ? true : false;
     }
 
     public static void a(int param0) {
@@ -125,22 +127,18 @@ abstract class ar {
     }
 
     ar() {
-        ((ar) this).field_h = new db();
-        ((ar) this).field_j = new db();
-        ((ar) this).field_m = new db();
-        ((ar) this).field_f = new db();
-        ((ar) this).field_c = new ob(6);
-        ((ar) this).field_a = 0;
-        ((ar) this).field_d = (byte) 0;
-        ((ar) this).field_p = 0;
-        ((ar) this).field_q = new ob(10);
+        this.field_h = new db();
+        this.field_j = new db();
+        this.field_m = new db();
+        this.field_f = new db();
+        this.field_c = new ob(6);
+        this.field_a = 0;
+        this.field_d = (byte) 0;
+        this.field_p = 0;
+        this.field_q = new ob(10);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "<%PROJECT_EXOTICS> - (<%Resource3>) The <%Project_Exotics> creates a <%highlight>temporary wormhole between two systems</col>. This behaves as a normal <%glossary>wormhole</col> for a three-turn duration. One end must be anchored in a friendly <%glossary>system</col>, but the other end can be placed anywhere else on the map.";
         field_r = "Data server full or too many connections from your address. Please try again in a few minutes.";
         field_g = "Resign";

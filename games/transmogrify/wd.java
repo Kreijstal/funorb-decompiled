@@ -13,6 +13,9 @@ final class wd extends wf {
         field_i = null;
         field_k = null;
         field_l = null;
+        if (param0 < 117) {
+            field_j = -94;
+        }
     }
 
     final static void a(int param0, boolean param1, pl param2) {
@@ -22,7 +25,7 @@ final class wd extends wf {
             }
             am.a(param1, 256, param2, (byte) 125);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "wd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "wd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,7 +33,7 @@ final class wd extends wf {
         ql.field_b = null;
         gj.field_j = null;
         re.field_a = null;
-        re.field_K = null;
+        re.field_K = (byte[][]) null;
         int var1 = -77 % ((param0 - 71) / 46);
         rg.field_D = null;
         wk.field_b = null;
@@ -38,17 +41,13 @@ final class wd extends wf {
 
     wd(byte[] param0) {
         try {
-            ((wd) this).field_h = param0;
+            this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "wd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Unfortunately you are not eligible to create an account.";
         field_k = new int[]{2, 3, 3, 5, 3, 5, 2, 5, 5, 10, 3, 3, 2, 3, 3, 3};
         field_i = "Accept";

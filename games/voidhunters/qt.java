@@ -10,7 +10,7 @@ final class qt extends rqa {
 
     final static boolean a(int param0, int param1, int param2) {
         int var3 = 0;
-        Object var4 = null;
+        String var4 = null;
         int stackIn_3_0 = 0;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
@@ -41,7 +41,7 @@ final class qt extends rqa {
             }
             return fia.a(wrb.field_p, abb.field_a, (byte) 123, itb.field_p, rea.field_d);
           } else {
-            if (pma.field_o == 10) {
+            if (-11 == (pma.field_o ^ -1)) {
               if (var3 != 0) {
                 return false;
               } else {
@@ -61,11 +61,11 @@ final class qt extends rqa {
                     if (!ira.a(hb.field_b, cwa.field_b, 41)) {
                       return false;
                     } else {
-                      if (gi.field_a == 2) {
+                      if ((gi.field_a ^ -1) == -3) {
                         if (!jpa.b(param1 + 5)) {
                           return true;
                         } else {
-                          var4 = null;
+                          var4 = (String) null;
                           va.a((String) null, -25719, kkb.field_p, param2, gi.field_a, cwa.field_b);
                           return true;
                         }
@@ -76,7 +76,7 @@ final class qt extends rqa {
                           if (!jpa.b(param1 + 5)) {
                             return true;
                           } else {
-                            var4 = null;
+                            var4 = (String) null;
                             va.a((String) null, -25719, kkb.field_p, param2, gi.field_a, cwa.field_b);
                             return true;
                           }
@@ -84,11 +84,11 @@ final class qt extends rqa {
                       }
                     }
                   } else {
-                    if (gi.field_a == 2) {
+                    if ((gi.field_a ^ -1) == -3) {
                       if (!jpa.b(param1 + 5)) {
                         return true;
                       } else {
-                        var4 = null;
+                        var4 = (String) null;
                         va.a((String) null, -25719, kkb.field_p, param2, gi.field_a, cwa.field_b);
                         return true;
                       }
@@ -99,7 +99,7 @@ final class qt extends rqa {
                         if (!jpa.b(param1 + 5)) {
                           return true;
                         } else {
-                          var4 = null;
+                          var4 = (String) null;
                           va.a((String) null, -25719, kkb.field_p, param2, gi.field_a, cwa.field_b);
                           return true;
                         }
@@ -117,7 +117,7 @@ final class qt extends rqa {
             }
           }
         } else {
-          if (pma.field_o == 10) {
+          if (-11 == (pma.field_o ^ -1)) {
             if (var3 != 0) {
               return false;
             } else {
@@ -137,11 +137,11 @@ final class qt extends rqa {
                   if (!ira.a(hb.field_b, cwa.field_b, 41)) {
                     return false;
                   } else {
-                    if (gi.field_a == 2) {
+                    if ((gi.field_a ^ -1) == -3) {
                       if (!jpa.b(param1 + 5)) {
                         return true;
                       } else {
-                        var4 = null;
+                        var4 = (String) null;
                         va.a((String) null, -25719, kkb.field_p, param2, gi.field_a, cwa.field_b);
                         return true;
                       }
@@ -152,7 +152,7 @@ final class qt extends rqa {
                         if (!jpa.b(param1 + 5)) {
                           return true;
                         } else {
-                          var4 = null;
+                          var4 = (String) null;
                           va.a((String) null, -25719, kkb.field_p, param2, gi.field_a, cwa.field_b);
                           return true;
                         }
@@ -160,9 +160,9 @@ final class qt extends rqa {
                     }
                   }
                 } else {
-                  if (gi.field_a == 2) {
+                  if ((gi.field_a ^ -1) == -3) {
                     if (jpa.b(param1 + 5)) {
-                      var4 = null;
+                      var4 = (String) null;
                       va.a((String) null, -25719, kkb.field_p, param2, gi.field_a, cwa.field_b);
                       return true;
                     } else {
@@ -171,7 +171,7 @@ final class qt extends rqa {
                   } else {
                     if (var3 == 0) {
                       if (jpa.b(param1 + 5)) {
-                        var4 = null;
+                        var4 = (String) null;
                         va.a((String) null, -25719, kkb.field_p, param2, gi.field_a, cwa.field_b);
                         return true;
                       } else {
@@ -196,7 +196,7 @@ final class qt extends rqa {
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
+        phb[] var4 = null;
         nc stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -221,13 +221,13 @@ final class qt extends rqa {
               if (param1 < -119) {
                 break L1;
               } else {
-                var4 = null;
+                var4 = (phb[]) null;
                 qt.a((phb[]) null, 64, 92, -41, -29, false);
                 break L1;
               }
             }
             si.a(50, 62, param0[0].a(48));
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -235,23 +235,23 @@ final class qt extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("qt.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -259,16 +259,20 @@ final class qt extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     public static void a(int param0) {
         field_o = null;
+        if (param0 <= 119) {
+            field_o = (String) null;
+        }
     }
 
     final static void a(phb[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+        boolean discarded$1 = false;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -283,6 +287,7 @@ final class qt extends rqa {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
@@ -311,7 +316,7 @@ final class qt extends rqa {
                     if (param5) {
                       break L2;
                     } else {
-                      boolean discarded$1 = qt.a(27, -59, -55);
+                      discarded$1 = qt.a(27, -59, -55);
                       break L2;
                     }
                   }
@@ -321,6 +326,7 @@ final class qt extends rqa {
                   L3: while (true) {
                     if (param4 >= var10) {
                       dma.b(ola.field_o);
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       param0[1].e(param4, param2, param1);
@@ -333,29 +339,30 @@ final class qt extends rqa {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var6;
+            stackOut_11_0 = (RuntimeException) (var6);
             stackOut_11_1 = new StringBuilder().append("qt.B(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -363,15 +370,16 @@ final class qt extends rqa {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Grappling hook";
     }
 }

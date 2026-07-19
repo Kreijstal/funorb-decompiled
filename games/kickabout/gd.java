@@ -57,23 +57,23 @@ final class gd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_0 = (RuntimeException) (var5);
             stackOut_7_1 = new StringBuilder().append("gd.C(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -81,7 +81,7 @@ final class gd {
               break L3;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ')');
         }
     }
 
@@ -90,6 +90,9 @@ final class gd {
         field_b = null;
         field_h = null;
         field_g = null;
+        if (param0 != 22897) {
+            return;
+        }
         field_f = null;
         field_c = null;
         field_d = null;
@@ -106,27 +109,50 @@ final class gd {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int var4 = 115 / ((-39 - param0) / 47);
-        if (param2 == 0) {
-            if (!(param1 == ng.field_a)) {
-                wj.field_z = true;
-                ng.field_a = param1;
-                ca.a(3, param3);
-            }
-        }
-        if (param2 == 1) {
-            if (~q.field_b != ~param1) {
+        int var4 = 0;
+        L0: {
+          var4 = 115 / ((-39 - param0) / 47);
+          if (param2 != 0) {
+            if ((param2 ^ -1) != -2) {
+              break L0;
+            } else {
+              if (q.field_b == param1) {
+                break L0;
+              } else {
                 q.field_b = param1;
                 wj.field_z = true;
                 ca.a(3, param3);
+                break L0;
+              }
             }
-        }
-        if (param2 == 2) {
-            if (!(fc.field_a == param1)) {
+          } else {
+            if ((param2 ^ -1) != -2) {
+              break L0;
+            } else {
+              if (q.field_b == param1) {
+                break L0;
+              } else {
+                q.field_b = param1;
                 wj.field_z = true;
-                fc.field_a = param1;
                 ca.a(3, param3);
+                break L0;
+              }
             }
+          }
+        }
+        L1: {
+          if (-3 != (param2 ^ -1)) {
+            break L1;
+          } else {
+            if (fc.field_a != param1) {
+              wj.field_z = true;
+              fc.field_a = param1;
+              ca.a(3, param3);
+              break L1;
+            } else {
+              break L1;
+            }
+          }
         }
     }
 
@@ -143,13 +169,13 @@ final class gd {
               if (param3 == -96) {
                 break L1;
               } else {
-                field_g = null;
+                field_g = (String) null;
                 break L1;
               }
             }
             var5_int = 0;
             L2: while (true) {
-              if (var5_int >= 3) {
+              if ((var5_int ^ -1) <= -4) {
                 L3: {
                   if (param0 == param4) {
                     param4 = -1;
@@ -159,7 +185,7 @@ final class gd {
                   }
                 }
                 L4: {
-                  if (param0 != -1) {
+                  if ((param0 ^ -1) != 0) {
                     vl.a(3, param1, param2, param0, 160);
                     break L4;
                   } else {
@@ -195,25 +221,25 @@ final class gd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var5, "gd.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw nb.a((Throwable) ((Object) var5), "gd.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     private final void a(byte param0, bc param1, long param2) {
         iu var5 = null;
         try {
-            var5 = (iu) (Object) bm.field_L[param1.field_j].a(true, (long)param1.field_g);
+            var5 = (iu) ((Object) bm.field_L[param1.field_j].a(true, (long)param1.field_g));
             if (var5 == null) {
                 var5 = new iu(param1, vs.a(-1090519040, param2));
-                bm.field_L[param1.field_j].a((gn) (Object) var5, -116, (long)param1.field_g);
+                bm.field_L[param1.field_j].a(var5, -116, (long)param1.field_g);
                 mt.field_f[param1.field_j] = mt.field_f[param1.field_j] + 1;
             } else {
                 var5.field_g = param1;
                 var5.field_f = vs.a(-1090519040, param2);
             }
-            int var6 = -2;
+            int var6 = 2 / ((44 - param0) / 51);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "gd.F(" + 98 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "gd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -231,7 +257,7 @@ final class gd {
             if (var5 >= 7) {
               return;
             } else {
-              var6 = (iu) (Object) bm.field_L[var5].b(0);
+              var6 = (iu) ((Object) bm.field_L[var5].b(0));
               L1: while (true) {
                 if (var6 == null) {
                   var5++;
@@ -267,7 +293,7 @@ final class gd {
                       break L4;
                     }
                   }
-                  var6 = (iu) (Object) bm.field_L[var5].a(-1);
+                  var6 = (iu) ((Object) bm.field_L[var5].a(-1));
                   continue L1;
                 }
               }
@@ -285,18 +311,14 @@ final class gd {
         if (param2 < 0) {
             return null;
         }
-        if (param2 >= 7) {
+        if (-8 >= (param2 ^ -1)) {
             return null;
         }
-        iu var4 = (iu) (Object) bm.field_L[param2].a(true, (long)param0);
+        iu var4 = (iu) ((Object) bm.field_L[param2].a(true, (long)param0));
         return var4 == null ? null : var4.field_g;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "No Bids";
         field_g = "The mouse cursor performs different functions when you are in possession.";
         field_f = "Seriously offensive language";

@@ -13,7 +13,7 @@ final class td {
         field_c = null;
         field_f = null;
         if (param0 != 4) {
-          field_c = null;
+          field_c = (int[]) null;
           field_b = null;
           field_e = null;
           field_d = null;
@@ -40,7 +40,7 @@ final class td {
             return;
           }
         } else {
-          var1 = (Object) (Object) ff.field_H;
+          var1 = ff.field_H;
           synchronized (var1) {
             L0: {
               ff.field_H = null;
@@ -60,10 +60,6 @@ final class td {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "OK";
         field_a = new int[4];
     }

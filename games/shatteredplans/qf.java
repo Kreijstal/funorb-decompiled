@@ -12,13 +12,20 @@ final class qf {
     static qr field_e;
 
     public static void a(int param0) {
-        field_d = null;
+        if (param0 != 9952) {
+            return;
+        }
+        field_d = (byte[][]) null;
         field_c = null;
         field_b = null;
         field_e = null;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
+        boolean discarded$4 = false;
+        boolean discarded$5 = false;
+        boolean discarded$6 = false;
+        boolean discarded$7 = false;
         if (hp.field_m != null) {
           if (!hp.field_m.b(true)) {
             if (tc.field_G != null) {
@@ -34,7 +41,7 @@ final class qf {
                     return true;
                   }
                 } else {
-                  boolean discarded$4 = qf.a(-33, 11, -33, 82);
+                  discarded$4 = qf.a(-33, 11, -33, 82);
                   if (!ac.d(97)) {
                     if (!ph.a(4, param1, param3, param2)) {
                       return false;
@@ -62,7 +69,7 @@ final class qf {
                   return true;
                 }
               } else {
-                boolean discarded$5 = qf.a(-33, 11, -33, 82);
+                discarded$5 = qf.a(-33, 11, -33, 82);
                 if (!ac.d(97)) {
                   if (ph.a(4, param1, param3, param2)) {
                     return true;
@@ -92,7 +99,7 @@ final class qf {
                   return true;
                 }
               } else {
-                boolean discarded$6 = qf.a(-33, 11, -33, 82);
+                discarded$6 = qf.a(-33, 11, -33, 82);
                 if (!ac.d(97)) {
                   if (ph.a(4, param1, param3, param2)) {
                     return true;
@@ -120,7 +127,7 @@ final class qf {
                 return true;
               }
             } else {
-              boolean discarded$7 = qf.a(-33, 11, -33, 82);
+              discarded$7 = qf.a(-33, 11, -33, 82);
               if (!ac.d(97)) {
                 if (ph.a(4, param1, param3, param2)) {
                   return true;
@@ -138,19 +145,20 @@ final class qf {
     final static void a(byte param0) {
         int var1 = 125 / ((param0 - -68) / 50);
         u.field_a = vc.a((byte) -39, 50);
-        tk.field_C = (nq) (Object) rs.field_Cb;
+        tk.field_C = (nq) ((Object) rs.field_Cb);
         rp.field_K = new pf();
         ui.field_m = 0;
         kc.field_i = 0;
         di.field_m = 0;
         p.field_n = false;
         bj.field_L = 0;
-        Object var2 = null;
+        gh var2 = (gh) null;
         jo.a(32767, (gh) null, true, 50);
         kg.f((byte) -123);
     }
 
     final static int a(byte param0, int param1, Random param2) {
+        boolean discarded$2 = false;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -176,7 +184,7 @@ final class qf {
               if (param0 > 0) {
                 break L1;
               } else {
-                boolean discarded$2 = qf.a(119, 68, -5, 5);
+                discarded$2 = qf.a(119, 68, -5, 5);
                 break L1;
               }
             }
@@ -188,23 +196,23 @@ final class qf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("qf.B(").append(param0).append(',').append(param1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -212,30 +220,26 @@ final class qf {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     qf(kk param0, int param1) {
         try {
-            ((qf) this).field_a = param1;
-            ((qf) this).field_f = param0;
+            this.field_a = param1;
+            this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void b(byte param0) {
         jh.a(ii.field_u, ho.field_j, un.field_g, me.field_d, 0);
-        int var1 = 57;
+        int var1 = -114 / ((param0 - 34) / 56);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Staff impersonation";
         field_d = new byte[1000][];
         field_c = "The fates of the children of Earth rest in your hands.";

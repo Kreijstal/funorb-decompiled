@@ -15,7 +15,7 @@ final class kt extends kna {
 
     final boolean z(int param0) {
         if (param0 != 0) {
-            field_F = null;
+            field_F = (ta) null;
             return false;
         }
         return false;
@@ -24,18 +24,18 @@ final class kt extends kna {
     final void a(boolean param0, kh param1) {
         try {
             if (param0) {
-                field_F = null;
+                field_F = (ta) null;
             }
             super.a(param0, param1);
-            param1.a((byte) 72, ((kt) this).field_G, 4);
+            param1.a((byte) 72, this.field_G, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "kt.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "kt.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     kt(la param0, int param1) {
         super(param0, param1);
-        ((kt) this).field_G = 4;
+        this.field_G = 4;
     }
 
     final fsa a(boolean param0, int param1, la param2) {
@@ -65,21 +65,21 @@ final class kt extends kna {
         try {
           L0: {
             var8 = new fsa(param2, param0);
-            var8.b((byte) -11, ((kt) this).field_k, ((kt) this).field_l);
+            var8.b((byte) -11, this.field_k, this.field_l);
             var8.h(param1, 0);
             var8.a(1, (byte) -12, true);
             var8.a((byte) -3, 6);
             var8.b((byte) 17, false);
             var8.g(126, 2);
-            var8.a((byte) 83, (nv) (Object) new eq(param2, param0));
+            var8.a((byte) 83, (nv) (new eq(param2, param0)));
             var5 = new pt(param2, param0);
-            var5.a(8 * ((kt) this).field_G, (byte) 127);
-            var8.a((wda) (Object) var5, 0);
+            var5.a(8 * this.field_G, (byte) 127);
+            var8.a(var5, 0);
             var6 = rm.field_a;
-            var7 = (nq) (Object) var6.a(16, param1 ^ 82);
+            var7 = (nq) ((Object) var6.a(16, param1 ^ 82));
             var7.b(8022, 2);
-            var8.a((gr) (Object) var5, (byte) 124, (dg) (Object) var7);
-            stackOut_0_0 = (fsa) var8;
+            var8.a(var5, (byte) 124, var7);
+            stackOut_0_0 = (fsa) (var8);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -87,23 +87,23 @@ final class kt extends kna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_0 = (RuntimeException) (var4);
             stackOut_2_1 = new StringBuilder().append("kt.AC(").append(param0).append(',').append(param1).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -111,21 +111,21 @@ final class kt extends kna {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
 
     final void q(byte param0) {
         super.q(param0);
-        ((kt) this).b(62, 2097152, 2097152);
-        ((kt) this).a((byte) 109, new mka[1]);
+        this.b(62, 2097152, 2097152);
+        this.a((byte) 109, new mka[]{new mka(0, 0, 2097152, 0, 8)});
     }
 
     final int t(int param0) {
         if (param0 != 8) {
-            Object var3 = null;
-            ((kt) this).a(true, (kh) null);
+            kh var3 = (kh) null;
+            this.a(true, (kh) null);
             return 7;
         }
         return 7;
@@ -133,17 +133,20 @@ final class kt extends kna {
 
     kt(la param0, int param1, kh param2, csa param3) {
         super(param0, param1, param2, param3);
-        ((kt) this).field_G = 4;
+        this.field_G = 4;
         try {
-            ((kt) this).field_G = param2.b((byte) 44, 4);
+            this.field_G = param2.b((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "kt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "kt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void A(int param0) {
         field_H = null;
         field_F = null;
+        if (param0 > -74) {
+            field_F = (ta) null;
+        }
     }
 
     final boolean v(int param0) {
@@ -155,18 +158,14 @@ final class kt extends kna {
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-            Object var3 = null;
-            ((kt) this).a(true, (kh) null);
+            kh var3 = (kh) null;
+            this.a(true, (kh) null);
             return true;
         }
         return true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_H = "Service unavailable";
     }
 }

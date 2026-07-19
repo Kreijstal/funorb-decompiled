@@ -10,12 +10,14 @@ final class el extends kh {
     }
 
     final void a(java.awt.Graphics param0, int param1, int param2, byte param3) {
+        boolean discarded$4 = false;
+        boolean discarded$5 = false;
         if (param3 < 110) {
-          ((el) this).field_i = null;
-          boolean discarded$4 = param0.drawImage(((el) this).field_a, param1, param2, (java.awt.image.ImageObserver) (Object) ((el) this).field_i);
+          this.field_i = (java.awt.Component) null;
+          discarded$4 = param0.drawImage(this.field_a, param1, param2, (java.awt.image.ImageObserver) ((Object) this.field_i));
           return;
         } else {
-          boolean discarded$5 = param0.drawImage(((el) this).field_a, param1, param2, (java.awt.image.ImageObserver) (Object) ((el) this).field_i);
+          discarded$5 = param0.drawImage(this.field_a, param1, param2, (java.awt.image.ImageObserver) ((Object) this.field_i));
           return;
         }
     }
@@ -25,27 +27,27 @@ final class el extends kh {
         java.awt.image.DirectColorModel var6 = null;
         java.awt.image.WritableRaster var7 = null;
         if (param2 != 68) {
-          ((el) this).field_i = null;
-          ((el) this).field_b = param3;
-          ((el) this).field_d = param1;
-          ((el) this).field_h = new int[1 + param3 * param1];
-          var5 = new java.awt.image.DataBufferInt(((el) this).field_h, ((el) this).field_h.length);
+          this.field_i = (java.awt.Component) null;
+          this.field_b = param3;
+          this.field_d = param1;
+          this.field_h = new int[1 + param3 * param1];
+          var5 = new java.awt.image.DataBufferInt(this.field_h, this.field_h.length);
           var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-          var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) (Object) var6).createCompatibleSampleModel(((el) this).field_b, ((el) this).field_d), (java.awt.image.DataBuffer) (Object) var5, (java.awt.Point) null);
-          ((el) this).field_a = (java.awt.Image) (Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) (Object) var6, var7, false, new Hashtable());
-          ((el) this).field_i = param0;
-          ((el) this).a(200);
+          var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_b, this.field_d), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
+          this.field_a = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
+          this.field_i = param0;
+          this.a(200);
           return;
         } else {
-          ((el) this).field_b = param3;
-          ((el) this).field_d = param1;
-          ((el) this).field_h = new int[1 + param3 * param1];
-          var5 = new java.awt.image.DataBufferInt(((el) this).field_h, ((el) this).field_h.length);
+          this.field_b = param3;
+          this.field_d = param1;
+          this.field_h = new int[1 + param3 * param1];
+          var5 = new java.awt.image.DataBufferInt(this.field_h, this.field_h.length);
           var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-          var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) (Object) var6).createCompatibleSampleModel(((el) this).field_b, ((el) this).field_d), (java.awt.image.DataBuffer) (Object) var5, (java.awt.Point) null);
-          ((el) this).field_a = (java.awt.Image) (Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) (Object) var6, var7, false, new Hashtable());
-          ((el) this).field_i = param0;
-          ((el) this).a(200);
+          var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_b, this.field_d), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
+          this.field_a = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
+          this.field_i = param0;
+          this.a(200);
           return;
         }
     }

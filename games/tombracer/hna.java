@@ -25,14 +25,14 @@ final class hna {
     }
 
     hna(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, boolean param9, int param10) {
-        ((hna) this).field_d = param9 ? true : false;
-        ((hna) this).field_b = (short)param5;
-        ((hna) this).field_c = (byte)param7;
-        ((hna) this).field_i = (short)param4;
-        ((hna) this).field_g = (byte)param8;
-        ((hna) this).field_f = param10;
-        ((hna) this).field_j = param0;
-        ((hna) this).field_h = (short)param6;
+        this.field_d = param9 ? true : false;
+        this.field_b = (short)param5;
+        this.field_c = (byte)param7;
+        this.field_i = (short)param4;
+        this.field_g = (byte)param8;
+        this.field_f = param10;
+        this.field_j = param0;
+        this.field_h = (short)param6;
     }
 
     static {

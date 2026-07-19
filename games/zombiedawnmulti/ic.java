@@ -82,23 +82,23 @@ abstract class ic {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var3_ref2;
+                stackOut_6_0 = (RuntimeException) (var3_ref2);
                 stackOut_6_1 = new StringBuilder().append("ic.B(");
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param0 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
@@ -107,23 +107,23 @@ abstract class ic {
                 }
               }
               L3: {
-                stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+                stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
                 stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
                 stackIn_11_0 = stackOut_9_0;
                 stackIn_11_1 = stackOut_9_1;
                 stackIn_10_0 = stackOut_9_0;
                 stackIn_10_1 = stackOut_9_1;
                 if (param1 == null) {
-                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+                  stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
                   stackOut_11_2 = "null";
                   stackIn_12_0 = stackOut_11_0;
                   stackIn_12_1 = stackOut_11_1;
                   stackIn_12_2 = stackOut_11_2;
                   break L3;
                 } else {
-                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
                   stackOut_10_2 = "{...}";
                   stackIn_12_0 = stackOut_10_0;
                   stackIn_12_1 = stackOut_10_1;
@@ -131,7 +131,7 @@ abstract class ic {
                   break L3;
                 }
               }
-              throw fa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ')');
+              throw fa.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -141,21 +141,22 @@ abstract class ic {
     }
 
     public static void a(int param0) {
-        field_c = null;
-        field_j = null;
-        field_f = null;
-        field_l = null;
-        field_b = null;
-        field_k = null;
-        field_h = null;
-        field_i = null;
+        if (param0 <= 51) {
+          return;
+        } else {
+          field_c = null;
+          field_j = null;
+          field_f = null;
+          field_l = null;
+          field_b = null;
+          field_k = null;
+          field_h = null;
+          field_i = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new th();
         field_l = "Zombie Colours";
         field_i = "Lethal";

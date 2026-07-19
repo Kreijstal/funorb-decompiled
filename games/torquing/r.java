@@ -9,7 +9,7 @@ final class r {
     public static void b(int param0) {
         field_a = null;
         if (param0 != 33423361) {
-            field_a = null;
+            field_a = (String) null;
             field_b = null;
             return;
         }
@@ -37,7 +37,7 @@ final class r {
         try {
           L0: {
             var5_int = 0;
-            var7 = 0;
+            var7 = -80 % ((param2 - 4) / 43);
             var6 = param1;
             var8 = -param1;
             var9 = -1;
@@ -54,7 +54,7 @@ final class r {
                     break L2;
                   } else {
                     var6--;
-                    var8 = var8 - (var6 << 1);
+                    var8 = var8 - (var6 << -602293023);
                     var10_ref_int__ = qd.field_a[param4 + var6];
                     var11_ref_int__ = qd.field_a[param4 + -var6];
                     var12_int = param0 + var5_int;
@@ -77,21 +77,21 @@ final class r {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var5, "r.B(" + param0 + ',' + param1 + ',' + -121 + ',' + param3 + ',' + param4 + ')');
+          throw rb.a((Throwable) ((Object) var5), "r.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void a(int param0) {
-        bg var1 = (bg) (Object) bf.field_a.b((byte) 42);
+        bg var1 = (bg) ((Object) bf.field_a.b((byte) 42));
         if (param0 <= 120) {
-            field_b = null;
+            field_b = (byte[]) null;
             if (!(var1 != null)) {
                 throw new IllegalStateException();
             }
             ph.a(var1.field_p, var1.field_l, var1.field_q);
             ph.g(var1.field_k, var1.field_m, var1.field_j, var1.field_o);
             var1.field_p = null;
-            rf.field_t.a((byte) 54, (q) (Object) var1);
+            rf.field_t.a((byte) 54, var1);
             return;
         }
         if (!(var1 != null)) {
@@ -100,14 +100,10 @@ final class r {
         ph.a(var1.field_p, var1.field_l, var1.field_q);
         ph.g(var1.field_k, var1.field_m, var1.field_j, var1.field_o);
         var1.field_p = null;
-        rf.field_t.a((byte) 54, (q) (Object) var1);
+        rf.field_t.a((byte) 54, var1);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Log in / Create account";
         field_b = new byte[112];
     }

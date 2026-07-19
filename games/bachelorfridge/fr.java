@@ -32,10 +32,6 @@ final class fr extends pu {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fr.A(";
         field_n = false;
         field_s = "<%0> cannot join; the game is full.";

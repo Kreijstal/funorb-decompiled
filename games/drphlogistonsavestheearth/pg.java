@@ -11,12 +11,12 @@ final class pg extends nh {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((pg) this).field_D;
-          param1 = param1 + ((pg) this).field_v;
+          param0 = param0 + this.field_D;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * wj.field_k;
           var5 = 0;
-          var6 = ((pg) this).field_w;
-          var7 = ((pg) this).field_y;
+          var6 = this.field_w;
+          var7 = this.field_y;
           var8 = wj.field_k - var7;
           var9 = 0;
           if (param1 >= wj.field_e) {
@@ -67,7 +67,7 @@ final class pg extends nh {
           return;
         } else {
           if (var6 > 0) {
-            pg.c(wj.field_l, ((pg) this).field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+            pg.c(wj.field_l, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -123,10 +123,10 @@ final class pg extends nh {
         int stackOut_19_1 = 0;
         int stackOut_19_2 = 0;
         L0: {
-          var3 = ((pg) this).field_y >> 1;
-          var4 = ((pg) this).field_w >> 1;
-          param0 = param0 + ((pg) this).field_D / 2;
-          param1 = param1 + ((pg) this).field_v / 2;
+          var3 = this.field_y >> 1;
+          var4 = this.field_w >> 1;
+          param0 = param0 + this.field_D / 2;
+          param1 = param1 + this.field_v / 2;
           if (param0 >= wj.field_g) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -140,7 +140,7 @@ final class pg extends nh {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= wj.field_b) {
-            stackOut_5_0 = ((pg) this).field_y - 2;
+            stackOut_5_0 = this.field_y - 2;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -164,7 +164,7 @@ final class pg extends nh {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= wj.field_j) {
-            stackOut_11_0 = ((pg) this).field_w - 2;
+            stackOut_11_0 = this.field_w - 2;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -179,7 +179,7 @@ final class pg extends nh {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((pg) this).field_y + var5;
+            var10 = var9 * this.field_y + var5;
             var11 = (param1 + (var9 >> 1)) * wj.field_k + (param0 + (var5 >> 1));
             var12 = var5;
             L5: while (true) {
@@ -215,14 +215,14 @@ final class pg extends nh {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = ((pg) this).field_B;
+                      stackOut_18_0 = this.field_B;
                       stackOut_18_1 = var10 + (var19 & 1);
                       stackIn_20_0 = stackOut_18_0;
                       stackIn_20_1 = stackOut_18_1;
                       stackIn_19_0 = stackOut_18_0;
                       stackIn_19_1 = stackOut_18_1;
                       if ((var19 & 2) != 0) {
-                        stackOut_20_0 = (int[]) (Object) stackIn_20_0;
+                        stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
                         stackOut_20_1 = stackIn_20_1;
                         stackOut_20_2 = 0;
                         stackIn_21_0 = stackOut_20_0;
@@ -230,9 +230,9 @@ final class pg extends nh {
                         stackIn_21_2 = stackOut_20_2;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) (Object) stackIn_19_0;
+                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
                         stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = ((pg) this).field_y;
+                        stackOut_19_2 = this.field_y;
                         stackIn_21_0 = stackOut_19_0;
                         stackIn_21_1 = stackOut_19_1;
                         stackIn_21_2 = stackOut_19_2;
@@ -264,12 +264,12 @@ final class pg extends nh {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((pg) this).field_D;
-          param1 = param1 + ((pg) this).field_v;
+          param0 = param0 + this.field_D;
+          param1 = param1 + this.field_v;
           var3 = param0 + param1 * wj.field_k;
           var4 = 0;
-          var5 = ((pg) this).field_w;
-          var6 = ((pg) this).field_y;
+          var5 = this.field_w;
+          var6 = this.field_y;
           var7 = wj.field_k - var6;
           var8 = 0;
           if (param1 >= wj.field_e) {
@@ -320,7 +320,7 @@ final class pg extends nh {
           return;
         } else {
           if (var5 > 0) {
-            pg.c(wj.field_l, ((pg) this).field_B, 0, var4, var3, var6, var5, var7, var8);
+            pg.c(wj.field_l, this.field_B, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -337,17 +337,19 @@ final class pg extends nh {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int incrementValue$0 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = -param5; var11 < 0; var11++) {
                 var12 = (param1[param3] >>> 24) * param9 >> 8;
                 var13 = 256 - var12;
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
                 var14 = param1[incrementValue$0];
                 var15 = param0[param4];
-                int incrementValue$1 = param4;
+                incrementValue$1 = param4;
                 param4++;
                 param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
             }
@@ -365,12 +367,12 @@ final class pg extends nh {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((pg) this).field_D;
-          param1 = param1 + ((pg) this).field_v;
+          param0 = param0 + this.field_D;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * wj.field_k;
           var5 = 0;
-          var6 = ((pg) this).field_w;
-          var7 = ((pg) this).field_y;
+          var6 = this.field_w;
+          var7 = this.field_y;
           var8 = wj.field_k - var7;
           var9 = 0;
           if (param1 >= wj.field_e) {
@@ -421,7 +423,7 @@ final class pg extends nh {
           return;
         } else {
           if (var6 > 0) {
-            pg.b(wj.field_l, ((pg) this).field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+            pg.b(wj.field_l, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -430,6 +432,15 @@ final class pg extends nh {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         double var7 = 0.0;
         int var9 = 0;
         int var10 = 0;
@@ -465,19 +476,19 @@ final class pg extends nh {
         int var41 = 0;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((pg) this).field_D << 4);
-            param1 = param1 - (((pg) this).field_v << 4);
+            param0 = param0 - (this.field_D << 4);
+            param1 = param1 - (this.field_v << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((pg) this).field_y << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((pg) this).field_y << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((pg) this).field_w << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((pg) this).field_w << 4) - param1) * var10;
-            var17 = ((((pg) this).field_y << 4) - param0) * var10 + ((((pg) this).field_w << 4) - param1) * var9;
-            var18 = -((((pg) this).field_y << 4) - param0) * var9 + ((((pg) this).field_w << 4) - param1) * var10;
+            var13 = ((this.field_y << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_y << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_w << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_w << 4) - param1) * var10;
+            var17 = ((this.field_y << 4) - param0) * var10 + ((this.field_w << 4) - param1) * var9;
+            var18 = -((this.field_y << 4) - param0) * var9 + ((this.field_w << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -646,8 +657,8 @@ final class pg extends nh {
                               }
                             }
                             L17: {
-                              var32 = (1 + var35 - (((pg) this).field_y << 12) - var27) / var27;
-                              if ((1 + var35 - (((pg) this).field_y << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_y << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_y << 12) - var27) / var27 <= var37) {
                                 break L17;
                               } else {
                                 var37 = var32;
@@ -667,8 +678,8 @@ final class pg extends nh {
                               }
                             }
                             L19: {
-                              var32 = (1 + var36 - (((pg) this).field_w << 12) - var26) / var26;
-                              if ((1 + var36 - (((pg) this).field_w << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_w << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_w << 12) - var26) / var26 <= var37) {
                                 break L19;
                               } else {
                                 var37 = var32;
@@ -683,11 +694,11 @@ final class pg extends nh {
                                 var23 = var23 + wj.field_k;
                                 continue L15;
                               } else {
-                                var38 = ((pg) this).field_B[(var36 >> 12) * ((pg) this).field_y + (var35 >> 12)];
+                                var38 = this.field_B[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                 var39 = wj.field_l[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$9 = var34;
+                                incrementValue$9 = var34;
                                 var34++;
                                 wj.field_l[incrementValue$9] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -721,8 +732,8 @@ final class pg extends nh {
                               }
                             }
                             L23: {
-                              var32 = (1 + var35 - (((pg) this).field_y << 12) - var27) / var27;
-                              if ((1 + var35 - (((pg) this).field_y << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_y << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_y << 12) - var27) / var27 <= var37) {
                                 break L23;
                               } else {
                                 var37 = var32;
@@ -730,8 +741,8 @@ final class pg extends nh {
                               }
                             }
                             L24: {
-                              var32 = var36 - (((pg) this).field_w << 12);
-                              if (var36 - (((pg) this).field_w << 12) < 0) {
+                              var32 = var36 - (this.field_w << 12);
+                              if (var36 - (this.field_w << 12) < 0) {
                                 break L24;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -759,11 +770,11 @@ final class pg extends nh {
                                 var23 = var23 + wj.field_k;
                                 continue L21;
                               } else {
-                                var38 = ((pg) this).field_B[(var36 >> 12) * ((pg) this).field_y + (var35 >> 12)];
+                                var38 = this.field_B[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                 var39 = wj.field_l[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$10 = var34;
+                                incrementValue$10 = var34;
                                 var34++;
                                 wj.field_l[incrementValue$10] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -787,7 +798,7 @@ final class pg extends nh {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((pg) this).field_w << 12) < 0) {
+                              if (var36 - (this.field_w << 12) < 0) {
                                 L29: {
                                   if (var35 >= 0) {
                                     break L29;
@@ -800,8 +811,8 @@ final class pg extends nh {
                                   }
                                 }
                                 L30: {
-                                  var32 = (1 + var35 - (((pg) this).field_y << 12) - var27) / var27;
-                                  if ((1 + var35 - (((pg) this).field_y << 12) - var27) / var27 <= var37) {
+                                  var32 = (1 + var35 - (this.field_y << 12) - var27) / var27;
+                                  if ((1 + var35 - (this.field_y << 12) - var27) / var27 <= var37) {
                                     break L30;
                                   } else {
                                     var37 = var32;
@@ -812,11 +823,11 @@ final class pg extends nh {
                                   if (var37 >= 0) {
                                     break L28;
                                   } else {
-                                    var38 = ((pg) this).field_B[(var36 >> 12) * ((pg) this).field_y + (var35 >> 12)];
+                                    var38 = this.field_B[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                     var39 = wj.field_l[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$11 = var34;
+                                    incrementValue$11 = var34;
                                     var34++;
                                     wj.field_l[incrementValue$11] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var35 = var35 + var27;
@@ -851,8 +862,8 @@ final class pg extends nh {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((pg) this).field_y << 12);
-                              if (var35 - (((pg) this).field_y << 12) < 0) {
+                              var32 = var35 - (this.field_y << 12);
+                              if (var35 - (this.field_y << 12) < 0) {
                                 break L33;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -885,8 +896,8 @@ final class pg extends nh {
                               }
                             }
                             L36: {
-                              var32 = (1 + var36 - (((pg) this).field_w << 12) - var26) / var26;
-                              if ((1 + var36 - (((pg) this).field_w << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_w << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_w << 12) - var26) / var26 <= var37) {
                                 break L36;
                               } else {
                                 var37 = var32;
@@ -901,11 +912,11 @@ final class pg extends nh {
                                 var23 = var23 + wj.field_k;
                                 continue L32;
                               } else {
-                                var38 = ((pg) this).field_B[(var36 >> 12) * ((pg) this).field_y + (var35 >> 12)];
+                                var38 = this.field_B[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                 var39 = wj.field_l[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$12 = var34;
+                                incrementValue$12 = var34;
                                 var34++;
                                 wj.field_l[incrementValue$12] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -927,8 +938,8 @@ final class pg extends nh {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((pg) this).field_y << 12);
-                              if (var35 - (((pg) this).field_y << 12) < 0) {
+                              var32 = var35 - (this.field_y << 12);
+                              if (var35 - (this.field_y << 12) < 0) {
                                 break L39;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -949,8 +960,8 @@ final class pg extends nh {
                               }
                             }
                             L41: {
-                              var32 = var36 - (((pg) this).field_w << 12);
-                              if (var36 - (((pg) this).field_w << 12) < 0) {
+                              var32 = var36 - (this.field_w << 12);
+                              if (var36 - (this.field_w << 12) < 0) {
                                 break L41;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -978,11 +989,11 @@ final class pg extends nh {
                                 var23 = var23 + wj.field_k;
                                 continue L38;
                               } else {
-                                var38 = ((pg) this).field_B[(var36 >> 12) * ((pg) this).field_y + (var35 >> 12)];
+                                var38 = this.field_B[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                 var39 = wj.field_l[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$13 = var34;
+                                incrementValue$13 = var34;
                                 var34++;
                                 wj.field_l[incrementValue$13] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -1006,10 +1017,10 @@ final class pg extends nh {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((pg) this).field_w << 12) < 0) {
+                              if (var36 - (this.field_w << 12) < 0) {
                                 L46: {
-                                  var32 = var35 - (((pg) this).field_y << 12);
-                                  if (var35 - (((pg) this).field_y << 12) < 0) {
+                                  var32 = var35 - (this.field_y << 12);
+                                  if (var35 - (this.field_y << 12) < 0) {
                                     break L46;
                                   } else {
                                     var32 = (var27 - var32) / var27;
@@ -1032,11 +1043,11 @@ final class pg extends nh {
                                   if (var37 >= 0) {
                                     break L45;
                                   } else {
-                                    var38 = ((pg) this).field_B[(var36 >> 12) * ((pg) this).field_y + (var35 >> 12)];
+                                    var38 = this.field_B[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                     var39 = wj.field_l[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$14 = var34;
+                                    incrementValue$14 = var34;
                                     var34++;
                                     wj.field_l[incrementValue$14] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var35 = var35 + var27;
@@ -1073,7 +1084,7 @@ final class pg extends nh {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((pg) this).field_y << 12) < 0) {
+                              if (var35 - (this.field_y << 12) < 0) {
                                 L51: {
                                   if (var36 >= 0) {
                                     break L51;
@@ -1086,8 +1097,8 @@ final class pg extends nh {
                                   }
                                 }
                                 L52: {
-                                  var32 = (1 + var36 - (((pg) this).field_w << 12) - var26) / var26;
-                                  if ((1 + var36 - (((pg) this).field_w << 12) - var26) / var26 <= var37) {
+                                  var32 = (1 + var36 - (this.field_w << 12) - var26) / var26;
+                                  if ((1 + var36 - (this.field_w << 12) - var26) / var26 <= var37) {
                                     break L52;
                                   } else {
                                     var37 = var32;
@@ -1098,11 +1109,11 @@ final class pg extends nh {
                                   if (var37 >= 0) {
                                     break L50;
                                   } else {
-                                    var38 = ((pg) this).field_B[(var36 >> 12) * ((pg) this).field_y + (var35 >> 12)];
+                                    var38 = this.field_B[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                     var39 = wj.field_l[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$15 = var34;
+                                    incrementValue$15 = var34;
                                     var34++;
                                     wj.field_l[incrementValue$15] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var36 = var36 + var26;
@@ -1135,10 +1146,10 @@ final class pg extends nh {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((pg) this).field_y << 12) < 0) {
+                              if (var35 - (this.field_y << 12) < 0) {
                                 L56: {
-                                  var32 = var36 - (((pg) this).field_w << 12);
-                                  if (var36 - (((pg) this).field_w << 12) < 0) {
+                                  var32 = var36 - (this.field_w << 12);
+                                  if (var36 - (this.field_w << 12) < 0) {
                                     break L56;
                                   } else {
                                     var32 = (var26 - var32) / var26;
@@ -1161,11 +1172,11 @@ final class pg extends nh {
                                   if (var37 >= 0) {
                                     break L55;
                                   } else {
-                                    var38 = ((pg) this).field_B[(var36 >> 12) * ((pg) this).field_y + (var35 >> 12)];
+                                    var38 = this.field_B[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                     var39 = wj.field_l[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$16 = var34;
+                                    incrementValue$16 = var34;
                                     var34++;
                                     wj.field_l[incrementValue$16] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var36 = var36 + var26;
@@ -1200,17 +1211,17 @@ final class pg extends nh {
                           var37 = var20;
                           if (var35 >= 0) {
                             if (var36 >= 0) {
-                              if (var35 - (((pg) this).field_y << 12) < 0) {
-                                if (var36 - (((pg) this).field_w << 12) < 0) {
+                              if (var35 - (this.field_y << 12) < 0) {
+                                if (var36 - (this.field_w << 12) < 0) {
                                   L61: while (true) {
                                     if (var37 >= 0) {
                                       break L60;
                                     } else {
-                                      var38 = ((pg) this).field_B[(var36 >> 12) * ((pg) this).field_y + (var35 >> 12)];
+                                      var38 = this.field_B[(var36 >> 12) * this.field_y + (var35 >> 12)];
                                       var39 = wj.field_l[var34];
                                       var40 = var38 >>> 24;
                                       var41 = 256 - var40;
-                                      int incrementValue$17 = var34;
+                                      incrementValue$17 = var34;
                                       var34++;
                                       wj.field_l[incrementValue$17] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                       var37++;
@@ -1259,12 +1270,12 @@ final class pg extends nh {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((pg) this).field_D;
-          param1 = param1 + ((pg) this).field_v;
+          param0 = param0 + this.field_D;
+          param1 = param1 + this.field_v;
           var3 = param0 + param1 * wj.field_k;
           var4 = 0;
-          var5 = ((pg) this).field_w;
-          var6 = ((pg) this).field_y;
+          var5 = this.field_w;
+          var6 = this.field_y;
           var7 = wj.field_k - var6;
           var8 = 0;
           if (param1 >= wj.field_e) {
@@ -1315,7 +1326,7 @@ final class pg extends nh {
           return;
         } else {
           if (var5 > 0) {
-            pg.c(wj.field_l, ((pg) this).field_B, 0, var4, var3, var6, var5, var7, var8);
+            pg.c(wj.field_l, this.field_B, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -1324,6 +1335,8 @@ final class pg extends nh {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -1344,7 +1357,7 @@ final class pg extends nh {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -1355,7 +1368,7 @@ final class pg extends nh {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
@@ -1368,6 +1381,8 @@ final class pg extends nh {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1401,7 +1416,7 @@ final class pg extends nh {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
                 param2 = param1[incrementValue$2];
                 var17 = param2 >>> 24;
@@ -1436,7 +1451,7 @@ final class pg extends nh {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
-                  int incrementValue$3 = param4;
+                  incrementValue$3 = param4;
                   param4++;
                   param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
@@ -1461,12 +1476,12 @@ final class pg extends nh {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((pg) this).field_D;
-          param1 = param1 + ((pg) this).field_v;
+          param0 = param0 + this.field_D;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * wj.field_k;
           var5 = 0;
-          var6 = ((pg) this).field_w;
-          var7 = ((pg) this).field_y;
+          var6 = this.field_w;
+          var7 = this.field_y;
           var8 = wj.field_k - var7;
           var9 = 0;
           if (param1 >= wj.field_e) {
@@ -1517,7 +1532,7 @@ final class pg extends nh {
           return;
         } else {
           if (var6 > 0) {
-            pg.d(wj.field_l, ((pg) this).field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+            pg.d(wj.field_l, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -1534,12 +1549,12 @@ final class pg extends nh {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((pg) this).field_D;
-          param1 = param1 + ((pg) this).field_v;
+          param0 = param0 + this.field_D;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * wj.field_k;
           var5 = 0;
-          var6 = ((pg) this).field_w;
-          var7 = ((pg) this).field_y;
+          var6 = this.field_w;
+          var7 = this.field_y;
           var8 = wj.field_k - var7;
           var9 = 0;
           if (param1 >= wj.field_e) {
@@ -1590,7 +1605,7 @@ final class pg extends nh {
           return;
         } else {
           if (var6 > 0) {
-            pg.b(0, 0, 0, wj.field_l, ((pg) this).field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            pg.b(0, 0, 0, wj.field_l, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -1599,6 +1614,8 @@ final class pg extends nh {
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var14 = 0;
         param8 = -param10;
         L0: while (true) {
@@ -1613,7 +1630,7 @@ final class pg extends nh {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -1628,7 +1645,7 @@ final class pg extends nh {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -1641,6 +1658,8 @@ final class pg extends nh {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -1662,7 +1681,7 @@ final class pg extends nh {
                 param6++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var14 = param2 >>> 24;
@@ -1685,7 +1704,7 @@ final class pg extends nh {
                   }
                   var16 = 256 - var14;
                   var17 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
                   param5++;

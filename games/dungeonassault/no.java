@@ -13,13 +13,12 @@ final class no {
         field_c = null;
         field_e = null;
         field_b = null;
+        if (param0 > -83) {
+            field_d = 127;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "no.A(";
         field_d = 0;
         field_e = "You stole from this dragon recently, and they are <%0> more likely to wake if you attempt to do so again!<br>It will be safe to raid here again after: <%1>.<br><br>Do you wish to proceed?";

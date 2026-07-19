@@ -12,19 +12,22 @@ final class wo {
     static int field_b;
 
     final static cn a(int param0, int param1, int param2, int param3, int param4) {
-        int var8 = 0;
         int var9 = 0;
+        int var8 = 0;
         int var10 = DungeonAssault.field_K;
-        int var5 = 9;
-        int var6 = 11;
+        int var5 = -1 + 2 * param3;
+        int var6 = param3 - -param2;
         cn var7 = new cn(var5, var6);
         jh.a(var7);
-        for (var8 = 0; var8 < 5; var8++) {
-            gf.b(-1 + (5 + -var8), var8, 1 + 2 * var8, 16744448);
+        for (var8 = 0; var8 < param3; var8++) {
+            gf.b(-1 + (param3 + -var8), var8, 1 + 2 * var8, param4);
         }
-        var8 = -5 + var5 >> 1;
-        for (var9 = 0; var9 < 6; var9++) {
-            gf.b(var8, 5 + var9, 5, 16744448);
+        var8 = -param0 + var5 >> 1081006369;
+        if (param1 != 1) {
+            return (cn) null;
+        }
+        for (var9 = 0; param2 > var9; var9++) {
+            gf.b(var8, param3 + var9, param0, param4);
         }
         jh.b();
         return var7;
@@ -32,6 +35,9 @@ final class wo {
 
     public static void a(byte param0) {
         field_h = null;
+        if (param0 < 95) {
+            field_e = (dn) null;
+        }
         field_f = null;
         field_d = null;
         field_e = null;
@@ -39,10 +45,6 @@ final class wo {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Waiting for sound effects";
         field_f = "Monsters";
         field_c = true;

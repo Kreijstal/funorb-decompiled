@@ -12,10 +12,11 @@ public class el {
     private static boolean field_a;
 
     public static File a(String param0, byte param1) {
-        Object var3 = null;
+        File discarded$2 = null;
+        String var3 = null;
         if (param1 != -8) {
-          var3 = null;
-          File discarded$2 = el.a((String) null, (byte) 113);
+          var3 = (String) null;
+          discarded$2 = el.a((String) null, (byte) 113);
           return el.a(field_c, field_b, -58, param0);
         } else {
           return el.a(field_c, field_b, -58, param0);
@@ -41,7 +42,7 @@ public class el {
               if (param0 == 0) {
                 break L1;
               } else {
-                field_e = null;
+                field_e = (String) null;
                 break L1;
               }
             }
@@ -80,10 +81,6 @@ public class el {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = false;
         field_d = new Hashtable(16);
     }

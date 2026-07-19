@@ -5,8 +5,9 @@ final class wr extends ela {
     static String[] field_o;
 
     final bfa a(bfa[] param0, int param1) {
+        bfa discarded$2 = null;
         RuntimeException var3 = null;
-        Object var4 = null;
+        bfa[] var4 = null;
         bfa stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -31,12 +32,12 @@ final class wr extends ela {
               if (param1 == 0) {
                 break L1;
               } else {
-                var4 = null;
-                bfa discarded$2 = ((wr) this).a((bfa[]) null, -90);
+                var4 = (bfa[]) null;
+                discarded$2 = this.a((bfa[]) null, -90);
                 break L1;
               }
             }
-            stackOut_2_0 = new bfa((Object) (Object) joa.a(param0[1].a(false), (byte) 77, (String) param0[0].field_d));
+            stackOut_2_0 = new bfa(joa.a(param0[1].a(false), (byte) 77, (String) (param0[0].field_d)));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -44,23 +45,23 @@ final class wr extends ela {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("wr.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -68,7 +69,7 @@ final class wr extends ela {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -78,7 +79,7 @@ final class wr extends ela {
     }
 
     public static void a(byte param0) {
-        int var1 = -38;
+        int var1 = -38 / ((-34 - param0) / 34);
         field_o = null;
     }
 

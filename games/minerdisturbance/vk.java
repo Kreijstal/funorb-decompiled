@@ -12,26 +12,26 @@ final class vk {
     int field_f;
 
     final static void a(boolean param0, java.applet.Applet param1) {
+        RuntimeException runtimeException = null;
         String var2 = null;
-        RuntimeException var2_ref = null;
         CharSequence var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -39,8 +39,16 @@ final class vk {
               if (var2 == null) {
                 break L1;
               } else {
-                var3 = (CharSequence) (Object) var2;
-                if (ah.a(-97, var3) != 0L) {
+                var3 = (CharSequence) ((Object) var2);
+                if (-1L != (ah.a(-97, var3) ^ -1L)) {
+                  L2: {
+                    if (param0) {
+                      break L2;
+                    } else {
+                      field_g = (ed) null;
+                      break L2;
+                    }
+                  }
                   decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
@@ -53,33 +61,33 @@ final class vk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2_ref;
-            stackOut_5_1 = new StringBuilder().append("vk.A(").append(true).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+          L3: {
+            runtimeException = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) (runtimeException);
+            stackOut_7_1 = new StringBuilder().append("vk.A(").append(param0).append(',');
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L2;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
-              break L2;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -94,15 +102,18 @@ final class vk {
         int var12 = MinerDisturbance.field_ab;
         int[] var13 = new int[256];
         int[] var3 = var13;
-        int var4 = (16760123 & param1) >> 16;
-        int var5 = (param1 & 65356) >> 8;
+        int var4 = (16760123 & param1) >> 1969188272;
+        int var5 = (param1 & 65356) >> -1244788696;
         int var6 = param1 & 255;
-        int var7 = (param0 & 16713763) >> 16;
-        int var8 = 255 & param0 >> 8;
+        int var7 = (param0 & 16713763) >> 1598666416;
+        int var8 = 255 & param0 >> -1113870872;
         int var9 = param0 & 255;
+        if (param2 != 105) {
+            vk.a(114);
+        }
         for (var10 = 0; var10 < 256; var10++) {
             var11 = -var10 + 256;
-            var13[var10] = ((var10 * var5 >> 8) + (var8 * var11 >> 8) << 8) + ((var10 * var4 >> 8) + (var11 * var7 >> 8) << 16) - (-(var11 * var9 >> 8) + -(var6 * var10 >> 8));
+            var13[var10] = ((var10 * var5 >> -382591704) + (var8 * var11 >> 269155784) << -2114810712) + ((var10 * var4 >> -739619256) + (var11 * var7 >> -1645797528) << 266930096) - (-(var11 * var9 >> -1585132504) + -(var6 * var10 >> 1024688968));
         }
         return var3;
     }
@@ -117,10 +128,6 @@ final class vk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Played with Science";
     }
 }

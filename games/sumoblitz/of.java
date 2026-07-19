@@ -14,26 +14,56 @@ final class of extends ms {
     int field_s;
 
     final static of a(int param0, int param1, int param2, int param3, int param4) {
+        boolean discarded$2 = false;
+        boolean discarded$3 = false;
         of var5 = null;
         int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         var6 = Sumoblitz.field_L ? 1 : 0;
-        var5 = (of) (Object) oi.field_b.b(-106);
+        var5 = (of) ((Object) oi.field_b.b(param1 + -107));
         L0: while (true) {
-          if (var5 == null) {
-            var5 = new of();
-            var5.field_s = 2;
-            var5.field_l = 10;
-            var5.field_p = param2;
-            oi.field_b.a((ms) (Object) var5, (byte) 39);
-            pd.a((byte) -65, 3, var5);
+          L1: {
+            if (var5 == null) {
+              break L1;
+            } else {
+              var8 = var5.field_p ^ -1;
+              var7 = param2 ^ -1;
+              if (var6 != 0) {
+                if (var7 != var8) {
+                  discarded$2 = of.c((byte) 50);
+                  pd.a((byte) -65, param3, var5);
+                  return var5;
+                } else {
+                  pd.a((byte) -65, param3, var5);
+                  return var5;
+                }
+              } else {
+                if (var7 != var8) {
+                  var5 = (of) ((Object) oi.field_b.d((byte) 18));
+                  if (var6 == 0) {
+                    continue L0;
+                  } else {
+                    break L1;
+                  }
+                } else {
+                  return var5;
+                }
+              }
+            }
+          }
+          var5 = new of();
+          var5.field_s = param0;
+          var5.field_l = param4;
+          var5.field_p = param2;
+          oi.field_b.a((ms) (var5), (byte) 39);
+          if (param1 != 1) {
+            discarded$3 = of.c((byte) 50);
+            pd.a((byte) -65, param3, var5);
             return var5;
           } else {
-            if (param2 == var5.field_p) {
-              return var5;
-            } else {
-              var5 = (of) (Object) oi.field_b.d((byte) 18);
-              continue L0;
-            }
+            pd.a((byte) -65, param3, var5);
+            return var5;
           }
         }
     }
@@ -53,6 +83,7 @@ final class of extends ms {
             RuntimeException stackIn_12_0 = null;
             StringBuilder stackIn_12_1 = null;
             String stackIn_12_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_9_0 = null;
             StringBuilder stackOut_9_1 = null;
@@ -63,60 +94,71 @@ final class of extends ms {
             StringBuilder stackOut_10_1 = null;
             String stackOut_10_2 = null;
             try {
-              try {
-                var2 = param1.getDocumentBase().getFile();
-                var3 = var2.indexOf('?');
-                var4 = "reload.ws";
-                if (param0 == 8192) {
-                  L0: {
-                    if (var3 >= 0) {
-                      var4 = var4 + var2.substring(var3);
-                      break L0;
+              L0: {
+                try {
+                  L1: {
+                    var2 = param1.getDocumentBase().getFile();
+                    var3 = var2.indexOf('?');
+                    var4 = "reload.ws";
+                    if (param0 == 8192) {
+                      L2: {
+                        if (var3 >= 0) {
+                          var4 = var4 + var2.substring(var3);
+                          break L2;
+                        } else {
+                          break L2;
+                        }
+                      }
+                      var5 = new java.net.URL(param1.getCodeBase(), var4);
+                      param1.getAppletContext().showDocument(td.a((byte) 122, param1, var5), "_self");
+                      decompiledRegionSelector0 = 1;
+                      break L1;
                     } else {
-                      break L0;
+                      decompiledRegionSelector0 = 0;
+                      break L1;
                     }
                   }
-                  var5 = new java.net.URL(param1.getCodeBase(), var4);
-                  param1.getAppletContext().showDocument(td.a((byte) 122, param1, var5), "_self");
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2_ref = (Exception) (Object) decompiledCaughtException;
+                  var2_ref.printStackTrace();
                   return;
+                }
+                if (decompiledRegionSelector0 == 0) {
+                  break L0;
                 } else {
                   return;
                 }
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = (Exception) (Object) decompiledCaughtException;
-                var2_ref.printStackTrace();
-                return;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L1: {
+              L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_9_0 = (RuntimeException) var2_ref2;
+                stackOut_9_0 = (RuntimeException) (var2_ref2);
                 stackOut_9_1 = new StringBuilder().append("of.F(").append(param0).append(',');
                 stackIn_11_0 = stackOut_9_0;
                 stackIn_11_1 = stackOut_9_1;
                 stackIn_10_0 = stackOut_9_0;
                 stackIn_10_1 = stackOut_9_1;
                 if (param1 == null) {
-                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+                  stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
                   stackOut_11_2 = "null";
                   stackIn_12_0 = stackOut_11_0;
                   stackIn_12_1 = stackOut_11_1;
                   stackIn_12_2 = stackOut_11_2;
-                  break L1;
+                  break L3;
                 } else {
-                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
                   stackOut_10_2 = "{...}";
                   stackIn_12_0 = stackOut_10_0;
                   stackIn_12_1 = stackOut_10_1;
                   stackIn_12_2 = stackOut_10_2;
-                  break L1;
+                  break L3;
                 }
               }
-              throw qo.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+              throw qo.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -127,6 +169,9 @@ final class of extends ms {
 
     final static void a(byte param0) {
         po.field_a = true;
+        if (param0 > -102) {
+            field_t = (int[]) null;
+        }
     }
 
     final static boolean a(fs param0, int param1) {
@@ -170,7 +215,7 @@ final class of extends ms {
               }
             }
             var3 = stackIn_3_0;
-            var4 = -88;
+            var4 = 88 / ((70 - param1) / 33);
             stackOut_3_0 = var3;
             stackIn_4_0 = stackOut_3_0;
             break L0;
@@ -179,23 +224,23 @@ final class of extends ms {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_0 = (RuntimeException) (var2);
             stackOut_5_1 = new StringBuilder().append("of.E(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -203,7 +248,7 @@ final class of extends ms {
               break L2;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + 115 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0 != 0;
     }
@@ -231,19 +276,25 @@ final class of extends ms {
     }
 
     public static void a(int param0) {
-        field_n = null;
-        field_k = null;
-        field_t = null;
+        String discarded$2 = null;
+        if (param0 != -26437) {
+          discarded$2 = of.c(-86);
+          field_n = null;
+          field_k = null;
+          field_t = null;
+          return;
+        } else {
+          field_n = null;
+          field_k = null;
+          field_t = null;
+          return;
+        }
     }
 
     of() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = new int[8192];
         field_k = "Quit to website";
     }

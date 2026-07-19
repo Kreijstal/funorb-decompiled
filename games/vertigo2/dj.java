@@ -21,10 +21,6 @@ final class dj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "dj.A(";
         field_c = new ba();
     }

@@ -18,7 +18,7 @@ final class nf {
             gk.field_F = param1;
             og.b(param0 ^ -114, param0);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "nf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "nf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -32,6 +32,7 @@ final class nf {
     }
 
     final static la a(int param0, int param1, ec param2, int param3, boolean param4, int param5) {
+        java.awt.Component discarded$2 = null;
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         la var7 = null;
@@ -56,7 +57,7 @@ final class nf {
         String stackOut_8_2 = null;
         try {
           L0: {
-            var8 = me.a((byte) 114, param1, 0, param2, 0, param0);
+            var8 = me.a((byte) 114, param1, param3, param2, param5, param0);
             var6 = var8;
             if (var8 != null) {
               L1: {
@@ -69,11 +70,11 @@ final class nf {
                 }
               }
               var7.field_e = var8;
-              java.awt.Component discarded$2 = var7.field_e.add((java.awt.Component) (Object) var7);
+              discarded$2 = var7.field_e.add((java.awt.Component) ((Object) var7));
               var7.setBounds(0, 0, param1, param0);
-              var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
+              var7.addFocusListener(var7);
               var7.requestFocus();
-              stackOut_5_0 = (la) var7;
+              stackOut_5_0 = (la) (var7);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -84,23 +85,23 @@ final class nf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var6_ref;
+            stackOut_7_0 = (RuntimeException) (var6_ref);
             stackOut_7_1 = new StringBuilder().append("nf.B(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -108,7 +109,7 @@ final class nf {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + 0 + ',' + param4 + ',' + 0 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_6_0;
     }

@@ -41,7 +41,7 @@ final class pma extends k {
               if (param0 == -71) {
                 break L2;
               } else {
-                ((pma) this).field_n = 29;
+                this.field_n = 29;
                 break L2;
               }
             }
@@ -51,23 +51,23 @@ final class pma extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_0 = (RuntimeException) (var4);
             stackOut_6_1 = new StringBuilder().append("pma.E(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -75,14 +75,17 @@ final class pma extends k {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ')');
         }
     }
 
     private final void a(int param0, boolean param1) {
-        ((pma) this).field_n = 4080 & param0 >> 4;
-        ((pma) this).field_l = 4080 & param0 >> 12;
-        ((pma) this).field_m = 4080 & param0 << 4;
+        if (!param1) {
+            pma.b(-29, -88);
+        }
+        this.field_n = 4080 & param0 >> 438700516;
+        this.field_l = 4080 & param0 >> -815458420;
+        this.field_m = 4080 & param0 << 549701156;
     }
 
     private pma(int param0) {
@@ -96,20 +99,20 @@ final class pma extends k {
         int[] var6 = null;
         int var7 = 0;
         int var8 = BachelorFridge.field_y;
-        int[][] var9 = ((pma) this).field_h.a(param1, -858);
+        int[][] var9 = this.field_h.a(param1, -858);
         int[][] var3 = var9;
-        if (!(!((pma) this).field_h.field_b)) {
+        if (!(!this.field_h.field_b)) {
             var4 = var9[0];
             var5 = var9[1];
             var6 = var9[2];
             for (var7 = 0; var7 < hh.field_d; var7++) {
-                var4[var7] = ((pma) this).field_l;
-                var5[var7] = ((pma) this).field_n;
-                var6[var7] = ((pma) this).field_m;
+                var4[var7] = this.field_l;
+                var5[var7] = this.field_n;
+                var6[var7] = this.field_m;
             }
         }
         if (param0) {
-            ((pma) this).field_m = 48;
+            this.field_m = 48;
         }
         return var3;
     }
@@ -226,7 +229,7 @@ final class pma extends k {
           stackIn_14_3 = stackOut_13_3;
           stackIn_14_4 = stackOut_13_4;
           stackIn_14_5 = stackOut_13_5;
-          if (md.field_l <= 50) {
+          if ((md.field_l ^ -1) >= -51) {
             stackOut_15_0 = stackIn_15_0;
             stackOut_15_1 = stackIn_15_1;
             stackOut_15_2 = stackIn_15_2;
@@ -284,17 +287,17 @@ final class pma extends k {
     final static void b(int param0, int param1) {
         L0: {
           bf.field_h = new lw[11];
-          bf.field_h[0] = (lw) (Object) new wa();
-          bf.field_h[1] = (lw) (Object) new wb();
-          bf.field_h[2] = (lw) (Object) new li();
-          bf.field_h[3] = (lw) (Object) new dp();
-          bf.field_h[4] = (lw) (Object) new nia();
-          bf.field_h[5] = (lw) (Object) new cha();
-          bf.field_h[6] = (lw) (Object) new bda();
-          bf.field_h[7] = (lw) (Object) new dea();
-          bf.field_h[8] = (lw) (Object) new iq();
-          bf.field_h[9] = (lw) (Object) new ih();
-          bf.field_h[10] = (lw) (Object) new sc();
+          bf.field_h[0] = (lw) ((Object) new wa());
+          bf.field_h[1] = (lw) ((Object) new wb());
+          bf.field_h[2] = (lw) ((Object) new li());
+          bf.field_h[3] = (lw) ((Object) new dp());
+          bf.field_h[4] = (lw) ((Object) new nia());
+          bf.field_h[5] = (lw) ((Object) new cha());
+          bf.field_h[6] = (lw) ((Object) new bda());
+          bf.field_h[7] = (lw) ((Object) new dea());
+          bf.field_h[8] = (lw) ((Object) new iq());
+          bf.field_h[9] = (lw) ((Object) new ih());
+          bf.field_h[10] = (lw) ((Object) new sc());
           if (param1 == 20208) {
             break L0;
           } else {
@@ -312,7 +315,7 @@ final class pma extends k {
           }
         }
         L2: {
-          if (wca.field_n > 3) {
+          if ((wca.field_n ^ -1) < -4) {
             break L2;
           } else {
             sh.field_I = false;
@@ -352,7 +355,7 @@ final class pma extends k {
           }
         }
         L7: {
-          if (wca.field_n > 2) {
+          if ((wca.field_n ^ -1) < -3) {
             break L7;
           } else {
             hp.field_a = false;
@@ -360,7 +363,7 @@ final class pma extends k {
           }
         }
         L8: {
-          if (wca.field_n > 7) {
+          if ((wca.field_n ^ -1) < -8) {
             break L8;
           } else {
             wf.field_x = false;
@@ -376,7 +379,7 @@ final class pma extends k {
           }
         }
         L10: {
-          if (wca.field_n < 8) {
+          if ((wca.field_n ^ -1) > -9) {
             mka.field_j = false;
             break L10;
           } else {
@@ -384,7 +387,7 @@ final class pma extends k {
           }
         }
         L11: {
-          if (wca.field_n <= 5) {
+          if (-6 <= (wca.field_n ^ -1)) {
             bfa.field_a = false;
             break L11;
           } else {

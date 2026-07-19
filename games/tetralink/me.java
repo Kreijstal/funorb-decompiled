@@ -13,57 +13,68 @@ final class me {
     static int field_b;
 
     final static void a(java.awt.Component param0, int param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
+        boolean discarded$2 = false;
+        RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
-          param0.setFocusTraversalKeysEnabled(false);
-          param0.addKeyListener((java.awt.event.KeyListener) (Object) vi.field_a);
-          param0.addFocusListener((java.awt.event.FocusListener) (Object) vi.field_a);
-          return;
+          L0: {
+            L1: {
+              param0.setFocusTraversalKeysEnabled(false);
+              param0.addKeyListener(vi.field_a);
+              param0.addFocusListener(vi.field_a);
+              if (param1 == 250) {
+                break L1;
+              } else {
+                discarded$2 = me.a((byte) 114);
+                break L1;
+              }
+            }
+            break L0;
+          }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L0: {
-            var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("me.C(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
+            stackOut_3_1 = new StringBuilder().append("me.C(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L0;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L0;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 250 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -75,10 +86,20 @@ final class me {
         ml.field_ib[vc.field_c] = ra.field_g;
         gh.field_a[vc.field_c] = ra.field_f;
         hc.field_s[vc.field_c] = ra.field_e;
-        vc.field_c = vc.field_c + 1;
+        if (param0) {
+          me.b((byte) 92);
+          vc.field_c = vc.field_c + 1;
+          return;
+        } else {
+          vc.field_c = vc.field_c + 1;
+          return;
+        }
     }
 
     public static void b(byte param0) {
+        if (param0 > -91) {
+            return;
+        }
         field_i = null;
         field_h = null;
         field_f = null;
@@ -88,18 +109,19 @@ final class me {
 
     final static void a(int param0) {
         int var1 = 0;
-        if (32 >= jj.field_a) {
-            ve.a(0, 98);
+        if (param0 >= jj.field_a) {
+            ve.a(0, param0 ^ 66);
         } else {
             var1 = jj.field_a % 32;
             if (!(var1 != 0)) {
                 var1 = 32;
             }
-            ve.a(jj.field_a + -var1, 93);
+            ve.a(jj.field_a + -var1, param0 ^ 125);
         }
     }
 
     final static boolean a(byte param0) {
+        boolean discarded$8 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -108,7 +130,7 @@ final class me {
         int stackOut_2_0 = 0;
         if (param0 != -99) {
           L0: {
-            boolean discarded$8 = me.a((byte) -112);
+            discarded$8 = me.a((byte) -112);
             if (250 >= en.field_K) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
@@ -137,10 +159,6 @@ final class me {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Year";
         field_f = "Security";
         field_i = "Username: ";

@@ -13,9 +13,19 @@ final class uk extends IOException {
     static boolean field_e;
 
     final static void a(int param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         RuntimeException var1 = null;
+        Object var2 = null;
+        int var2_int = 0;
+        int var3 = 0;
         int var4 = 0;
+        int var5 = 0;
         hj var6 = null;
+        hj var7 = null;
+        hj var8 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = HoldTheLine.field_D;
         try {
@@ -30,37 +40,121 @@ final class uk extends IOException {
                   break L1;
                 } else {
                   if (an.field_e != null) {
-                    int discarded$2 = an.field_e.a(ug.field_f, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                    discarded$3 = an.field_e.a(ug.field_f, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                     break L1;
                   } else {
                     break L1;
                   }
                 }
               }
-              break L0;
+              if (param0 == 3979) {
+                L2: {
+                  if (hk.field_e >= bg.field_g) {
+                    break L2;
+                  } else {
+                    var7 = qk.field_y[hf.field_i];
+                    if (var7 == null) {
+                      break L2;
+                    } else {
+                      var2_int = hk.field_e * (60 + var7.field_o) / bg.field_g;
+                      var3 = var2_int - 30;
+                      if (rg.field_e) {
+                        jg.a(199, 256 * (-var3 + var7.field_o) / 30, var7, true, 245, var3 * -256 / 30);
+                        break L2;
+                      } else {
+                        jg.a(199, -256 * var3 / 30, var7, true, 245, (var7.field_o - var3) * 256 / 30);
+                        break L2;
+                      }
+                    }
+                  }
+                }
+                L3: {
+                  if (an.field_e != null) {
+                    var2 = null;
+                    var5 = 0;
+                    var3 = var5;
+                    L4: while (true) {
+                      if (var5 >= qk.field_y.length) {
+                        if (var2 == null) {
+                          break L3;
+                        } else {
+                          discarded$4 = an.field_e.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                          break L3;
+                        }
+                      } else {
+                        var8 = qk.field_y[var5];
+                        if (var8 != null) {
+                          L5: {
+                            L6: {
+                              if (var8.field_o != 365) {
+                                break L6;
+                              } else {
+                                if (139 != var8.field_v) {
+                                  break L6;
+                                } else {
+                                  break L5;
+                                }
+                              }
+                            }
+                            if (var2 != null) {
+                              var2 = (String) (var2) + ", " + var5;
+                              break L5;
+                            } else {
+                              var2 = Integer.toString(var5);
+                              break L5;
+                            }
+                          }
+                          var5++;
+                          continue L4;
+                        } else {
+                          var5++;
+                          continue L4;
+                        }
+                      }
+                    }
+                  } else {
+                    break L3;
+                  }
+                }
+                decompiledRegionSelector0 = 2;
+                break L0;
+              } else {
+                decompiledRegionSelector0 = 1;
+                break L0;
+              }
             } else {
-              L2: {
+              L7: {
                 if (null != an.field_e) {
-                  int discarded$3 = an.field_e.a(ug.field_f, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
-                  break L2;
+                  discarded$5 = an.field_e.a(ug.field_f, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                  break L7;
                 } else {
-                  break L2;
+                  break L7;
                 }
               }
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var1, "uk.A(" + 3979 + ')');
+          throw kk.a((Throwable) ((Object) var1), "uk.A(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     final static void b(int param0) {
         ci.field_o = false;
         if (param0 >= -41) {
-            field_g = null;
+            field_g = (e) null;
         }
         aa.field_k = false;
         go.a(0, -1);
@@ -73,7 +167,7 @@ final class uk extends IOException {
     }
 
     public static void a(byte param0) {
-        int var1 = 97;
+        int var1 = 97 / ((-59 - param0) / 57);
         field_c = null;
         field_f = null;
         field_b = null;
@@ -105,8 +199,8 @@ final class uk extends IOException {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var4_int = 0;
-            stackOut_0_0 = new kg(param0, true, false);
+            var4_int = -104 % ((42 - param2) / 54);
+            stackOut_0_0 = new kg(param0, param3, param1);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -114,23 +208,23 @@ final class uk extends IOException {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_0 = (RuntimeException) (var4);
             stackOut_2_1 = new StringBuilder().append("uk.B(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -138,16 +232,12 @@ final class uk extends IOException {
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + false + ',' + 105 + ',' + true + ')');
+          throw kk.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
         return stackIn_1_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Minor thrust";
         field_d = "Fullscreen";
         field_g = new e(0, 2, 2, 1);

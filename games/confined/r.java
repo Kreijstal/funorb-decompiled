@@ -11,18 +11,21 @@ final class r {
             s.field_K = true;
             int var3_int = 4 % ((param0 - 32) / 48);
             ki.field_c = new dh(vg.field_Z, fd.field_k, param2, rk.field_f, pc.field_f);
-            vg.field_Z.c((fj) (Object) ki.field_c, 0);
+            vg.field_Z.c(ki.field_c, 0);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "r.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "r.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(bj param0, int param1, int param2) {
-        lf.field_k.a((rk) (Object) param0, (byte) 67);
+        lf.field_k.a((rk) (param0), (byte) 67);
+        if (param1 != -1) {
+            return;
+        }
         try {
-            lf.a(3, 102, param0);
+            lf.a(param2, 102, param0);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "r.C(" + (param0 != null ? "{...}" : "null") + ',' + -1 + ',' + 3 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "r.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -34,10 +37,6 @@ final class r {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "C";
         field_a = -1;
     }

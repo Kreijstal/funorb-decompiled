@@ -34,31 +34,53 @@ final class ena extends od {
         int[] var30 = null;
         byte[] var31 = null;
         int stackIn_7_0 = 0;
+        int stackIn_38_0 = 0;
+        int stackIn_38_1 = 0;
+        int stackIn_43_0 = 0;
+        int stackIn_43_1 = 0;
         Throwable decompiledCaughtException = null;
         int stackOut_6_0 = 0;
+        int stackOut_37_0 = 0;
+        int stackOut_37_1 = 0;
+        int stackOut_42_0 = 0;
+        int stackOut_42_1 = 0;
         var12 = TombRacer.field_G ? 1 : 0;
-        if (null != ((ena) this).field_o) {
+        if (null != this.field_o) {
           return true;
         } else {
           L0: {
-            if (null != ((ena) this).field_m) {
+            if (null != this.field_m) {
               break L0;
             } else {
-              var2_ref_Object = (Object) (Object) dk.field_c;
+              var2_ref_Object = dk.field_c;
               synchronized (var2_ref_Object) {
                 L1: {
-                  if (dk.field_c.e(((ena) this).field_k, param0 ^ -107)) {
-                    var28 = dk.field_c.d(param0 + -216, ((ena) this).field_k);
-                    ((ena) this).field_m = new byte[var28.length][];
+                  if (dk.field_c.e(this.field_k, param0 ^ -107)) {
+                    var28 = dk.field_c.d(param0 + -216, this.field_k);
+                    this.field_m = new byte[var28.length][];
                     var4 = 0;
                     L2: while (true) {
-                      if (var28.length <= var4) {
-                        break L1;
-                      } else {
-                        ((ena) this).field_m[var4] = dk.field_c.a(false, ((ena) this).field_k, var28[var4]);
-                        var4++;
-                        continue L2;
+                      L3: {
+                        L4: {
+                          if (var28.length <= var4) {
+                            break L4;
+                          } else {
+                            this.field_m[var4] = dk.field_c.a(false, this.field_k, var28[var4]);
+                            var4++;
+                            if (var12 != 0) {
+                              break L3;
+                            } else {
+                              if (var12 == 0) {
+                                continue L2;
+                              } else {
+                                break L4;
+                              }
+                            }
+                          }
+                        }
+                        break L3;
                       }
+                      break L1;
                     }
                   } else {
                     stackOut_6_0 = 0;
@@ -70,94 +92,138 @@ final class ena extends od {
               break L0;
             }
           }
-          L3: {
+          L5: {
             if (param0 == 107) {
-              break L3;
+              break L5;
             } else {
-              ((ena) this).field_k = 87;
-              break L3;
+              this.field_k = 87;
+              break L5;
             }
           }
           var2 = 1;
           var3 = 0;
-          L4: while (true) {
-            if (var3 >= ((ena) this).field_m.length) {
-              if (var2 == 0) {
-                return false;
-              } else {
-                var19 = new vna();
-                var5_ref_Object = (Object) (Object) dk.field_c;
-                synchronized (var5_ref_Object) {
-                  L5: {
-                    var6 = dk.field_c.a((byte) -117, ((ena) this).field_k);
-                    ((ena) this).field_o = new rq[var6];
-                    var30 = dk.field_c.d(-79, ((ena) this).field_k);
-                    var5 = 0;
-                    break L5;
+          L6: while (true) {
+            L7: {
+              L8: {
+                if (var3 >= this.field_m.length) {
+                  break L8;
+                } else {
+                  var29 = this.field_m[var3];
+                  var15 = new uia(var29);
+                  var15.field_h = 1;
+                  var6 = var15.d(124);
+                  var7 = jma.field_j;
+                  synchronized (var7) {
+                    L9: {
+                      var2 = var2 != 0 & jma.field_j.a(param0 ^ -15228, var6) ? 1 : 0;
+                      break L9;
+                    }
                   }
-                }
-                L6: while (true) {
-                  if (var30.length <= var5) {
-                    ((ena) this).field_m = null;
-                    return true;
+                  if (var12 != 0) {
+                    break L7;
                   } else {
-                    var31 = ((ena) this).field_m[var5];
-                    var18 = new uia(var31);
-                    var18.field_h = 1;
-                    var8 = var18.d(param0 + 18);
-                    var9 = null;
-                    var10 = (nk) (Object) var19.f(-80);
-                    L7: while (true) {
-                      L8: {
-                        if (var10 == null) {
-                          break L8;
-                        } else {
-                          if (var10.field_l == var8) {
-                            var9 = (Object) (Object) var10;
-                            break L8;
-                          } else {
-                            var10 = (nk) (Object) var19.e(param0 + 4);
-                            continue L7;
-                          }
-                        }
-                      }
-                      L9: {
-                        if (var9 == null) {
-                          var10_ref = (Object) (Object) jma.field_j;
-                          synchronized (var10_ref) {
-                            L10: {
-                              var9 = (Object) (Object) new nk(var8, jma.field_j.f(var8, -93));
-                              break L10;
-                            }
-                          }
-                          var19.b((byte) -124, (vg) var9);
-                          break L9;
-                        } else {
-                          break L9;
-                        }
-                      }
-                      ((ena) this).field_o[var30[var5]] = new rq(var31, (nk) var9);
-                      var5++;
+                    var3++;
+                    if (var12 == 0) {
                       continue L6;
+                    } else {
+                      break L8;
                     }
                   }
                 }
               }
-            } else {
-              var29 = ((ena) this).field_m[var3];
-              var15 = new uia(var29);
-              var15.field_h = 1;
-              var6 = var15.d(124);
-              var7 = (Object) (Object) jma.field_j;
-              synchronized (var7) {
-                L11: {
-                  var2 = var2 != 0 & jma.field_j.a(param0 ^ -15228, var6) ? 1 : 0;
-                  var3++;
-                  break L11;
+              if (var2 == 0) {
+                break L7;
+              } else {
+                var19 = new vna();
+                var5_ref_Object = dk.field_c;
+                synchronized (var5_ref_Object) {
+                  L10: {
+                    var6 = dk.field_c.a((byte) -117, this.field_k);
+                    this.field_o = new rq[var6];
+                    var30 = dk.field_c.d(-79, this.field_k);
+                    var5 = 0;
+                    break L10;
+                  }
+                }
+                L11: while (true) {
+                  stackOut_37_0 = var30.length;
+                  stackOut_37_1 = var5;
+                  stackIn_38_0 = stackOut_37_0;
+                  stackIn_38_1 = stackOut_37_1;
+                  L12: while (true) {
+                    L13: {
+                      L14: {
+                        if (stackIn_38_0 <= stackIn_38_1) {
+                          break L14;
+                        } else {
+                          var31 = this.field_m[var5];
+                          var18 = new uia(var31);
+                          var18.field_h = 1;
+                          var8 = var18.d(param0 + 18);
+                          var9 = null;
+                          if (var12 != 0) {
+                            break L13;
+                          } else {
+                            var10 = (nk) ((Object) var19.f(-80));
+                            L15: while (true) {
+                              L16: {
+                                if (var10 == null) {
+                                  break L16;
+                                } else {
+                                  stackOut_42_0 = var10.field_l ^ -1;
+                                  stackOut_42_1 = var8 ^ -1;
+                                  stackIn_38_0 = stackOut_42_0;
+                                  stackIn_38_1 = stackOut_42_1;
+                                  stackIn_43_0 = stackOut_42_0;
+                                  stackIn_43_1 = stackOut_42_1;
+                                  if (var12 != 0) {
+                                    continue L12;
+                                  } else {
+                                    if (stackIn_43_0 == stackIn_43_1) {
+                                      var9 = var10;
+                                      break L16;
+                                    } else {
+                                      var10 = (nk) ((Object) var19.e(param0 + 4));
+                                      continue L15;
+                                    }
+                                  }
+                                }
+                              }
+                              L17: {
+                                if (var9 == null) {
+                                  var10_ref = jma.field_j;
+                                  synchronized (var10_ref) {
+                                    L18: {
+                                      var9 = new nk(var8, jma.field_j.f(var8, -93));
+                                      break L18;
+                                    }
+                                  }
+                                  var19.b((byte) -124, (vg) (var9));
+                                  break L17;
+                                } else {
+                                  break L17;
+                                }
+                              }
+                              this.field_o[var30[var5]] = new rq(var31, (nk) (var9));
+                              var5++;
+                              if (var12 == 0) {
+                                continue L11;
+                              } else {
+                                break L14;
+                              }
+                            }
+                          }
+                        }
+                      }
+                      this.field_m = (byte[][]) null;
+                      break L13;
+                    }
+                    return true;
+                  }
                 }
               }
-              continue L4;
             }
+            return false;
           }
         }
     }
@@ -171,14 +237,10 @@ final class ena extends od {
     }
 
     ena(int param0) {
-        ((ena) this).field_k = param0;
+        this.field_k = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = -1;
     }
 }

@@ -14,72 +14,155 @@ final class qd extends w {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        L0: {
-          var4 = -param0;
-          if (null == this.field_Sb) {
-            break L0;
-          } else {
-            var4 = this.field_Sb.a(true);
-            break L0;
+        if (param1 == 9328) {
+          L0: {
+            var4 = -param0;
+            if (null == this.field_Sb) {
+              break L0;
+            } else {
+              var4 = this.field_Sb.a(true);
+              break L0;
+            }
           }
-        }
-        L1: {
-          var5 = -param0;
+          L1: {
+            var5 = -param0;
+            if (null != this.field_Tb) {
+              var5 = this.field_Tb.a((byte) 84, -var4 + -param2 + this.field_mb - (param0 + param2));
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          L2: {
+            var6 = param2 + (var5 + param0) + (param2 - -var4);
+            if (var6 <= this.field_mb) {
+              break L2;
+            } else {
+              var5 = var5 + (this.field_mb + -var6);
+              var6 = this.field_mb;
+              break L2;
+            }
+          }
+          L3: {
+            if (-2 == (this.field_X ^ -1)) {
+              param2 = param2 + (-var6 + this.field_mb) / 2;
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          L4: {
+            if (this.field_X != 2) {
+              break L4;
+            } else {
+              param2 = param2 + (-var6 + this.field_mb);
+              break L4;
+            }
+          }
+          L5: {
+            if (this.field_Sb != null) {
+              this.field_Sb.a(var4, 0, 0, this.field_N, param2);
+              this.field_Sb.field_W = this.field_W;
+              break L5;
+            } else {
+              break L5;
+            }
+          }
           if (null != this.field_Tb) {
-            var5 = this.field_Tb.a((byte) 84, -var4 + -param2 + this.field_mb - (param0 + param2));
-            break L1;
+            this.field_Tb.a(var5, 0, 0, this.field_N, param2 - (-var4 - param0));
+            if (this.field_Sb != null) {
+              this.field_Tb.field_X = 0;
+              this.field_Tb.field_W = this.field_W;
+              return;
+            } else {
+              this.field_Tb.field_X = this.field_X;
+              if (!client.field_A) {
+                this.field_Tb.field_W = this.field_W;
+                return;
+              } else {
+                this.field_Tb.field_X = 0;
+                this.field_Tb.field_W = this.field_W;
+                return;
+              }
+            }
           } else {
-            break L1;
-          }
-        }
-        L2: {
-          var6 = param2 + (var5 + param0) + (param2 - -var4);
-          if (var6 <= this.field_mb) {
-            break L2;
-          } else {
-            var5 = var5 + (this.field_mb + -var6);
-            var6 = this.field_mb;
-            break L2;
-          }
-        }
-        L3: {
-          if (this.field_X == 1) {
-            param2 = param2 + (-var6 + this.field_mb) / 2;
-            break L3;
-          } else {
-            break L3;
-          }
-        }
-        L4: {
-          if (this.field_X != 2) {
-            break L4;
-          } else {
-            param2 = param2 + (-var6 + this.field_mb);
-            break L4;
-          }
-        }
-        L5: {
-          if (this.field_Sb != null) {
-            this.field_Sb.a(var4, 0, 0, this.field_N, param2);
-            this.field_Sb.field_W = this.field_W;
-            break L5;
-          } else {
-            break L5;
-          }
-        }
-        if (null != this.field_Tb) {
-          this.field_Tb.a(var5, 0, 0, this.field_N, param2 - (-var4 - param0));
-          if (this.field_Sb != null) {
-            this.field_Tb.field_X = 0;
-            this.field_Tb.field_W = this.field_W;
-            return;
-          } else {
-            this.field_Tb.field_X = this.field_X;
-            this.field_Tb.field_W = this.field_W;
             return;
           }
         } else {
-          return;
+          L6: {
+            field_Pb = (String[][]) null;
+            var4 = -param0;
+            if (null == this.field_Sb) {
+              break L6;
+            } else {
+              var4 = this.field_Sb.a(true);
+              break L6;
+            }
+          }
+          L7: {
+            var5 = -param0;
+            if (null != this.field_Tb) {
+              var5 = this.field_Tb.a((byte) 84, -var4 + -param2 + this.field_mb - (param0 + param2));
+              break L7;
+            } else {
+              break L7;
+            }
+          }
+          L8: {
+            var6 = param2 + (var5 + param0) + (param2 - -var4);
+            if (var6 <= this.field_mb) {
+              break L8;
+            } else {
+              var5 = var5 + (this.field_mb + -var6);
+              var6 = this.field_mb;
+              break L8;
+            }
+          }
+          L9: {
+            if (-2 == (this.field_X ^ -1)) {
+              param2 = param2 + (-var6 + this.field_mb) / 2;
+              break L9;
+            } else {
+              break L9;
+            }
+          }
+          L10: {
+            if (this.field_X != 2) {
+              break L10;
+            } else {
+              param2 = param2 + (-var6 + this.field_mb);
+              break L10;
+            }
+          }
+          L11: {
+            if (this.field_Sb != null) {
+              this.field_Sb.a(var4, 0, 0, this.field_N, param2);
+              this.field_Sb.field_W = this.field_W;
+              break L11;
+            } else {
+              break L11;
+            }
+          }
+          if (null != this.field_Tb) {
+            this.field_Tb.a(var5, 0, 0, this.field_N, param2 - (-var4 - param0));
+            if (this.field_Sb != null) {
+              this.field_Tb.field_X = 0;
+              this.field_Tb.field_W = this.field_W;
+              return;
+            } else {
+              this.field_Tb.field_X = this.field_X;
+              if (!client.field_A) {
+                this.field_Tb.field_W = this.field_W;
+                return;
+              } else {
+                this.field_Tb.field_X = 0;
+                this.field_Tb.field_W = this.field_W;
+                return;
+              }
+            }
+          } else {
+            return;
+          }
         }
     }
 
@@ -141,7 +224,11 @@ final class qd extends w {
     }
 
     public static void f(int param0) {
+        boolean discarded$0 = false;
         field_Pb = (String[][]) null;
+        if (param0 < 67) {
+            discarded$0 = qd.e(-21);
+        }
     }
 
     final static void a(String param0, int param1) {

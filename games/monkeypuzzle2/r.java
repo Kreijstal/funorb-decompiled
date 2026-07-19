@@ -17,17 +17,17 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
             return;
         }
         try {
-            rk.a(param1, ((r) this).field_c, false);
+            rk.a(param1, this.field_c, false);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "r.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw la.a((Throwable) ((Object) runtimeException), "r.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            ((r) this).field_d = true;
+            this.field_d = true;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "r.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+            throw la.a((Throwable) ((Object) runtimeException), "r.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,6 +35,7 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static int a(byte param0, int param1) {
+        int discarded$1 = 0;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
@@ -49,7 +50,7 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
         int stackOut_3_0 = 0;
         param1 = param1 & 8191;
         if (param0 == 71) {
-          if (param1 >= 4096) {
+          if (-4097 >= (param1 ^ -1)) {
             L0: {
               if (6144 > param1) {
                 stackOut_18_0 = -tj.field_b[6144 + -param1];
@@ -77,8 +78,8 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
             return stackIn_15_0;
           }
         } else {
-          int discarded$1 = r.a((byte) -100, 80);
-          if (param1 >= 4096) {
+          discarded$1 = r.a((byte) -100, 80);
+          if (-4097 >= (param1 ^ -1)) {
             L2: {
               if (6144 > param1) {
                 stackOut_8_0 = -tj.field_b[6144 + -param1];
@@ -111,7 +112,7 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
     public static void a(byte param0) {
         field_a = null;
         field_b = null;
-        int var1 = 44;
+        int var1 = -44 / ((param0 - -23) / 59);
         field_f = null;
     }
 
@@ -122,10 +123,6 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "The account name you use to access RuneScape and other Jagex.com games";
         field_b = "Invalid password.";
     }

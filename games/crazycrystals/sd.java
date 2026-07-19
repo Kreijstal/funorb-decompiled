@@ -8,11 +8,12 @@ final class sd extends ga implements lf {
     private n field_S;
 
     public final n a(int param0) {
+        n discarded$0 = null;
         if (param0 >= -40) {
-            n discarded$0 = ((sd) this).a(-19);
-            return ((sd) this).field_S;
+            discarded$0 = this.a(-19);
+            return this.field_S;
         }
-        return ((sd) this).field_S;
+        return this.field_S;
     }
 
     sd(String param0, bi param1, int param2) {
@@ -22,17 +23,20 @@ final class sd extends ga implements lf {
     public static void h(byte param0) {
         field_R = null;
         field_T = null;
+        if (param0 != 54) {
+            field_T = (String) null;
+        }
     }
 
     final void h(int param0) {
-        Object var3 = null;
+        qm var3 = null;
         if (param0 <= 125) {
           L0: {
-            var3 = null;
-            ((sd) this).a((qm) null, 84, -107, 114);
+            var3 = (qm) null;
+            this.a((qm) null, 84, -107, 114);
             super.h(127);
-            if (null != ((sd) this).field_S) {
-              ((sd) this).field_S.b((byte) 78);
+            if (null != this.field_S) {
+              this.field_S.b((byte) 78);
               break L0;
             } else {
               break L0;
@@ -42,8 +46,8 @@ final class sd extends ga implements lf {
         } else {
           L1: {
             super.h(127);
-            if (null != ((sd) this).field_S) {
-              ((sd) this).field_S.b((byte) 78);
+            if (null != this.field_S) {
+              this.field_S.b((byte) 78);
               break L1;
             } else {
               break L1;
@@ -57,9 +61,9 @@ final class sd extends ga implements lf {
         try {
             int var5_int = -123 / ((param1 - -50) / 59);
             super.a(param0, -115, param2, param3);
-            ((sd) this).field_P = -param3 + -((sd) this).field_r + qh.field_i;
+            this.field_P = -param3 + -this.field_r + qh.field_i;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "sd.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "sd.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -68,32 +72,32 @@ final class sd extends ga implements lf {
             return;
         }
         try {
-            ((sd) this).field_S = param1;
+            this.field_S = param1;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "sd.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "sd.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final String a(byte param0) {
         if (param0 < -23) {
-          if (((sd) this).field_m) {
-            if (null == ((sd) this).field_t) {
+          if (this.field_m) {
+            if (null == this.field_t) {
               return null;
             } else {
-              sc.a(qh.field_i - -((sd) this).field_g + -((sd) this).field_P, 125, bm.field_h);
-              return ((sd) this).field_t;
+              sc.a(qh.field_i - -this.field_g + -this.field_P, 125, bm.field_h);
+              return this.field_t;
             }
           } else {
             return null;
           }
         } else {
-          field_R = null;
-          if (((sd) this).field_m) {
-            if (null == ((sd) this).field_t) {
+          field_R = (dl[]) null;
+          if (this.field_m) {
+            if (null == this.field_t) {
               return null;
             } else {
-              sc.a(qh.field_i - -((sd) this).field_g + -((sd) this).field_P, 125, bm.field_h);
-              return ((sd) this).field_t;
+              sc.a(qh.field_i - -this.field_g + -this.field_P, 125, bm.field_h);
+              return this.field_t;
             }
           } else {
             return null;
@@ -102,10 +106,6 @@ final class sd extends ga implements lf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_T = null;
     }
 }

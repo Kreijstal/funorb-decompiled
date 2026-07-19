@@ -11,23 +11,31 @@ final class be {
     static String field_c;
 
     final static km[] a(int param0, boolean param1, int param2, int param3, int param4) {
-        return jc.a(3, 1, 0, 0, 1, 0, 1, 65793, 0);
+        if (param1) {
+            return (km[]) null;
+        }
+        return jc.a(3, 1, param3, param2, 1, param4, 1, param0, 0);
     }
 
     public static void a(byte param0) {
         field_d = null;
         field_b = null;
         field_c = null;
-        field_a = null;
-        field_g = null;
-        field_e = null;
+        if (param0 < 120) {
+          field_b = (String[]) null;
+          field_a = null;
+          field_g = null;
+          field_e = null;
+          return;
+        } else {
+          field_a = null;
+          field_g = null;
+          field_e = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Message game";
         field_g = "Open";
         field_f = 50;

@@ -26,7 +26,7 @@ final class dj {
                   if (!hf.field_a.a(0, "commonui")) {
                     return ek.field_e + " - " + hf.field_a.a("commonui", (byte) -81) + "%";
                   } else {
-                    var1 = 0;
+                    var1 = 112 % ((param0 - 21) / 62);
                     if (ii.field_m.a(-108)) {
                       if (!ii.field_m.b(0)) {
                         return db.field_b + " - " + ii.field_m.b(true) + "%";
@@ -58,13 +58,12 @@ final class dj {
         field_c = null;
         field_b = null;
         field_a = null;
+        if (param0 != 16384) {
+            field_b = (le) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[16384];
     }
 }

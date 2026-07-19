@@ -20,6 +20,11 @@ final class eo extends vh {
 
     public static void f(byte param0) {
         field_Rb = null;
+        if (param0 != -105) {
+            field_Vb = 60;
+            field_Xb = null;
+            return;
+        }
         field_Xb = null;
     }
 
@@ -31,8 +36,15 @@ final class eo extends vh {
         oq var4 = null;
         kh var6 = null;
         kh var7 = null;
-        if (param1 != ka.field_r) {
-          var6 = (kh) (Object) lf.field_a.a((long)ka.field_r, false);
+        if (param1 == ka.field_r) {
+          if (param2 != 11) {
+            field_Rb = (String) null;
+            return;
+          } else {
+            return;
+          }
+        } else {
+          var6 = (kh) ((Object) lf.field_a.a((long)ka.field_r, false));
           var7 = var6;
           ka.field_r = param1;
           if (var7 == null) {
@@ -41,7 +53,12 @@ final class eo extends vh {
             var4.a(3, false);
             var4.a(11, false);
             var4.a((byte) -81, param1);
-            return;
+            if (param2 == 11) {
+              return;
+            } else {
+              field_Rb = (String) null;
+              return;
+            }
           } else {
             var7.field_bc = null;
             var4 = ej.field_j;
@@ -49,18 +66,17 @@ final class eo extends vh {
             var4.a(3, false);
             var4.a(11, false);
             var4.a((byte) -81, param1);
-            return;
+            if (param2 == 11) {
+              return;
+            } else {
+              field_Rb = (String) null;
+              return;
+            }
           }
-        } else {
-          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Vb = 50;
         field_Xb = new ml("email");
     }

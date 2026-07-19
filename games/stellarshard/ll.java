@@ -10,21 +10,28 @@ final class ll implements uk {
     static int field_d;
 
     final static void c(int param0) {
-        Object var2 = null;
+        String var2 = (String) null;
         mj.a((String) null, "", 99);
+        if (param0 != 32270) {
+            field_b = 127;
+        }
     }
 
     public ll() {
-        ((ll) this).field_f = 1;
-        ((ll) this).field_a = si.field_V;
-        ((ll) this).field_e = 1;
+        this.field_f = 1;
+        this.field_a = si.field_V;
+        this.field_e = 1;
     }
 
     public static void b(int param0) {
         field_c = null;
+        if (param0 != 512) {
+            ll.c(-17);
+        }
     }
 
     public final void a(boolean param0, int param1, int param2, rj param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -40,6 +47,7 @@ final class ll implements uk {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
@@ -74,29 +82,29 @@ final class ll implements uk {
                 break L1;
               }
               var6_int = stackIn_8_0;
-              int discarded$1 = ((ll) this).field_a.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_m + "</u>", param3.field_w + param1, param3.field_k + param2, param3.field_p, param3.field_t, var6_int, -1, ((ll) this).field_e, ((ll) this).field_f, ((ll) this).field_a.field_N + ((ll) this).field_a.field_r);
+              discarded$1 = this.field_a.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_m + "</u>", param3.field_w + param1, param3.field_k + param2, param3.field_p, param3.field_t, var6_int, -1, this.field_e, this.field_f, this.field_a.field_N + this.field_a.field_r);
               if (param3.e(0)) {
                 L3: {
-                  var7 = ((ll) this).field_a.b(param3.field_m);
-                  var8 = ((ll) this).field_a.field_N + ((ll) this).field_a.field_r;
+                  var7 = this.field_a.b(param3.field_m);
+                  var8 = this.field_a.field_N + this.field_a.field_r;
                   var9 = param3.field_w + param1;
                   var10 = param3.field_k + param2;
-                  if (((ll) this).field_e == 2) {
+                  if ((this.field_e ^ -1) == -3) {
                     var9 = var9 + (-var7 + param3.field_p);
                     break L3;
                   } else {
-                    if (1 != ((ll) this).field_e) {
+                    if (1 != this.field_e) {
                       break L3;
                     } else {
-                      var9 = var9 + (param3.field_p + -var7 >> 1);
+                      var9 = var9 + (param3.field_p + -var7 >> -1925757823);
                       break L3;
                     }
                   }
                 }
                 L4: {
-                  if (((ll) this).field_f != 2) {
-                    if (((ll) this).field_f == 1) {
-                      var10 = var10 + (-var8 + param3.field_t >> 1);
+                  if ((this.field_f ^ -1) != -3) {
+                    if (this.field_f == 1) {
+                      var10 = var10 + (-var8 + param3.field_t >> 886009825);
                       break L4;
                     } else {
                       break L4;
@@ -107,35 +115,37 @@ final class ll implements uk {
                   }
                 }
                 og.a(var9 - 2, (byte) 105, 4 + var7, var8, var10 - -2);
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var6;
+            stackOut_21_0 = (RuntimeException) (var6);
             stackOut_21_1 = new StringBuilder().append("ll.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param3 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L5;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -143,17 +153,22 @@ final class ll implements uk {
               break L5;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param4 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     ll(bd param0, int param1, int param2) {
         try {
-            ((ll) this).field_f = param2;
-            ((ll) this).field_a = param0;
-            ((ll) this).field_e = param1;
+            this.field_f = param2;
+            this.field_a = param0;
+            this.field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ll.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "ll.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

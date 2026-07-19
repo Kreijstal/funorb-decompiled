@@ -6,6 +6,16 @@ final class qb extends bb {
     int[] field_i;
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -27,7 +37,7 @@ final class qb extends bb {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4++;
                     param3 = param1[incrementValue$10];
                     if (param3 == 0) {
@@ -35,7 +45,7 @@ final class qb extends bb {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
@@ -45,48 +55,48 @@ final class qb extends bb {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4++;
                   param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4++;
                   param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4++;
                   param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4++;
                 param3 = param1[incrementValue$18];
                 if (param3 == 0) {
@@ -94,7 +104,7 @@ final class qb extends bb {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param0[incrementValue$19] = param2[param3 & 255];
                   var12++;
@@ -109,25 +119,26 @@ final class qb extends bb {
     final void b() {
         int var3 = 0;
         int var4 = 0;
-        if (((qb) this).field_f == ((qb) this).field_h) {
-            if (((qb) this).field_g == ((qb) this).field_b) {
+        int incrementValue$0 = 0;
+        if (this.field_f == this.field_h) {
+            if (this.field_g == this.field_b) {
                 return;
             }
         }
-        byte[] var1 = new byte[((qb) this).field_h * ((qb) this).field_b];
+        byte[] var1 = new byte[this.field_h * this.field_b];
         int var2 = 0;
-        for (var3 = 0; var3 < ((qb) this).field_g; var3++) {
-            for (var4 = 0; var4 < ((qb) this).field_f; var4++) {
-                int incrementValue$0 = var2;
+        for (var3 = 0; var3 < this.field_g; var3++) {
+            for (var4 = 0; var4 < this.field_f; var4++) {
+                incrementValue$0 = var2;
                 var2++;
-                var1[var4 + ((qb) this).field_e + (var3 + ((qb) this).field_d) * ((qb) this).field_h] = ((qb) this).field_j[incrementValue$0];
+                var1[var4 + this.field_e + (var3 + this.field_d) * this.field_h] = this.field_j[incrementValue$0];
             }
         }
-        ((qb) this).field_j = var1;
-        ((qb) this).field_f = ((qb) this).field_h;
-        ((qb) this).field_g = ((qb) this).field_b;
-        ((qb) this).field_e = 0;
-        ((qb) this).field_d = 0;
+        this.field_j = var1;
+        this.field_f = this.field_h;
+        this.field_g = this.field_b;
+        this.field_e = 0;
+        this.field_d = 0;
     }
 
     final void a(int param0, int param1) {
@@ -139,12 +150,12 @@ final class qb extends bb {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((qb) this).field_e;
-          param1 = param1 + ((qb) this).field_d;
+          param0 = param0 + this.field_e;
+          param1 = param1 + this.field_d;
           var3 = param0 + param1 * qh.field_l;
           var4 = 0;
-          var5 = ((qb) this).field_g;
-          var6 = ((qb) this).field_f;
+          var5 = this.field_g;
+          var6 = this.field_f;
           var7 = qh.field_l - var6;
           var8 = 0;
           if (param1 >= qh.field_c) {
@@ -196,7 +207,7 @@ final class qb extends bb {
             break L4;
           } else {
             if (var5 > 0) {
-              qb.b(qh.field_d, ((qb) this).field_j, ((qb) this).field_i, 0, var4, var3, var6, var5, var7, var8);
+              qb.b(qh.field_d, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -214,12 +225,12 @@ final class qb extends bb {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((qb) this).field_e;
-          param1 = param1 + ((qb) this).field_d;
+          param0 = param0 + this.field_e;
+          param1 = param1 + this.field_d;
           var4 = param0 + param1 * qh.field_l;
           var5 = 0;
-          var6 = ((qb) this).field_g;
-          var7 = ((qb) this).field_f;
+          var6 = this.field_g;
+          var7 = this.field_f;
           var8 = qh.field_l - var7;
           var9 = 0;
           if (param1 >= qh.field_c) {
@@ -271,7 +282,7 @@ final class qb extends bb {
             break L4;
           } else {
             if (var6 > 0) {
-              qb.a(qh.field_d, ((qb) this).field_j, ((qb) this).field_i, var5, var4, var7, var6, var8, var9, param2);
+              qb.a(qh.field_d, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -283,31 +294,34 @@ final class qb extends bb {
     final void a() {
         int var3 = 0;
         int var4 = 0;
-        byte[] var1 = new byte[((qb) this).field_f * ((qb) this).field_g];
+        int incrementValue$0 = 0;
+        byte[] var1 = new byte[this.field_f * this.field_g];
         int var2 = 0;
-        for (var3 = 0; var3 < ((qb) this).field_g; var3++) {
-            for (var4 = ((qb) this).field_f - 1; var4 >= 0; var4--) {
-                int incrementValue$0 = var2;
+        for (var3 = 0; var3 < this.field_g; var3++) {
+            for (var4 = this.field_f - 1; var4 >= 0; var4--) {
+                incrementValue$0 = var2;
                 var2++;
-                var1[incrementValue$0] = ((qb) this).field_j[var4 + var3 * ((qb) this).field_f];
+                var1[incrementValue$0] = this.field_j[var4 + var3 * this.field_f];
             }
         }
-        ((qb) this).field_j = var1;
-        ((qb) this).field_e = ((qb) this).field_h - ((qb) this).field_f - ((qb) this).field_e;
+        this.field_j = var1;
+        this.field_e = this.field_h - this.field_f - this.field_e;
     }
 
     qb(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        ((qb) this).field_h = param0;
-        ((qb) this).field_b = param1;
-        ((qb) this).field_e = param2;
-        ((qb) this).field_d = param3;
-        ((qb) this).field_f = param4;
-        ((qb) this).field_g = param5;
-        ((qb) this).field_j = param6;
-        ((qb) this).field_i = param7;
+        this.field_h = param0;
+        this.field_b = param1;
+        this.field_e = param2;
+        this.field_d = param3;
+        this.field_f = param4;
+        this.field_g = param5;
+        this.field_j = param6;
+        this.field_i = param7;
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -327,7 +341,7 @@ final class qb extends bb {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var13 = param1[incrementValue$66];
                 if (var13 == 0) {
@@ -337,7 +351,7 @@ final class qb extends bb {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -350,13 +364,13 @@ final class qb extends bb {
     }
 
     qb(int param0, int param1, int param2) {
-        ((qb) this).field_f = param0;
-        ((qb) this).field_h = param0;
-        ((qb) this).field_g = param1;
-        ((qb) this).field_b = param1;
-        ((qb) this).field_d = 0;
-        ((qb) this).field_e = 0;
-        ((qb) this).field_j = new byte[param0 * param1];
-        ((qb) this).field_i = new int[param2];
+        this.field_f = param0;
+        this.field_h = param0;
+        this.field_g = param1;
+        this.field_b = param1;
+        this.field_d = 0;
+        this.field_e = 0;
+        this.field_j = new byte[param0 * param1];
+        this.field_i = new int[param2];
     }
 }

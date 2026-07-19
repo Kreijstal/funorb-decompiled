@@ -11,7 +11,7 @@ final class pt implements qda {
             field_a = null;
             field_b = null;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "pt.C(" + param0 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "pt.C(" + param0 + ')');
         }
     }
 
@@ -27,6 +27,7 @@ final class pt implements qda {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
@@ -47,8 +48,8 @@ final class pt implements qda {
                 if (!(param1 instanceof hf)) {
                   break L1;
                 } else {
-                  if (((hf) (Object) param1).field_B) {
-                    var8.d((param1.field_p - var8.field_n >> 1) + var6_int + 1, var7 + 1 + (param1.field_q - var8.field_o >> 1), 256);
+                  if (((hf) ((Object) param1)).field_B) {
+                    var8.d((param1.field_p - var8.field_n >> 215904801) + var6_int + 1, var7 + 1 + (param1.field_q - var8.field_o >> -206716639), 256);
                     break L1;
                   } else {
                     break L1;
@@ -63,32 +64,34 @@ final class pt implements qda {
                   break L2;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) runtimeException;
+            stackOut_13_0 = (RuntimeException) (runtimeException);
             stackOut_13_1 = new StringBuilder().append("pt.A(").append(param0).append(',');
             stackIn_16_0 = stackOut_13_0;
             stackIn_16_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_17_0 = stackOut_14_0;
               stackIn_17_1 = stackOut_14_1;
@@ -96,7 +99,12 @@ final class pt implements qda {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -190,24 +198,24 @@ final class pt implements qda {
             L1: {
               var7_int = 2147483647;
               var8 = -2147483648;
-              var21 = param1[3] >> 2;
-              var22 = param1[4] >> 2;
-              var23 = param1[5] >> 2;
-              var24 = param1[6] >> 2;
-              var25 = param1[7] >> 2;
-              var26 = param1[8] >> 2;
-              var27 = param1[9] >> 2;
-              var28 = param1[10] >> 2;
-              var29 = param1[11] >> 2;
-              var12 = var23 * param6[5] + param6[4] * var22 + param6[3] * var21 >> 14;
-              var13 = param6[4] * var25 + var24 * param6[3] + var26 * param6[5] >> 14;
-              var19 = param6[9] * var24 - -(var25 * param6[10]) + var26 * param6[11] >> 14;
-              var15 = var22 * param6[7] + (var21 * param6[6] + param6[8] * var23) >> 14;
-              var17 = var28 * param6[7] + param6[6] * var27 - -(param6[8] * var29) >> 14;
-              var18 = var23 * param6[11] + (var21 * param6[9] - -(var22 * param6[10])) >> 14;
-              var16 = var24 * param6[6] + (param6[7] * var25 - -(param6[8] * var26)) >> 14;
-              var20 = var28 * param6[10] + param6[9] * var27 - -(var29 * param6[11]) >> 14;
-              var14 = param6[5] * var29 + (param6[4] * var28 + var27 * param6[3]) >> 14;
+              var21 = param1[3] >> 1647970530;
+              var22 = param1[4] >> -740894718;
+              var23 = param1[5] >> -420859774;
+              var24 = param1[6] >> -247909662;
+              var25 = param1[7] >> 1836249538;
+              var26 = param1[8] >> -1843261886;
+              var27 = param1[9] >> 2021877250;
+              var28 = param1[10] >> -896049886;
+              var29 = param1[11] >> -953531710;
+              var12 = var23 * param6[5] + param6[4] * var22 + param6[3] * var21 >> -1675212498;
+              var13 = param6[4] * var25 + var24 * param6[3] + var26 * param6[5] >> 1907672878;
+              var19 = param6[9] * var24 - -(var25 * param6[10]) + var26 * param6[11] >> -2031324370;
+              var15 = var22 * param6[7] + (var21 * param6[6] + param6[8] * var23) >> 381956910;
+              var17 = var28 * param6[7] + param6[6] * var27 - -(param6[8] * var29) >> -360331346;
+              var18 = var23 * param6[11] + (var21 * param6[9] - -(var22 * param6[10])) >> -1134199858;
+              var16 = var24 * param6[6] + (param6[7] * var25 - -(param6[8] * var26)) >> 1314786766;
+              var20 = var28 * param6[10] + param6[9] * var27 - -(var29 * param6[11]) >> -1258961938;
+              var14 = param6[5] * var29 + (param6[4] * var28 + var27 * param6[3]) >> 143963150;
               var21 = param6[0] - param1[0];
               var22 = param6[1] - param1[1];
               if (param4 == -121) {
@@ -219,7 +227,7 @@ final class pt implements qda {
             }
             var23 = -param1[2] + param6[2];
             var9 = var23 * param1[5] + (param1[3] * var21 + var22 * param1[4]) >> 16 + -ima.field_s;
-            var11 = param1[9] * var21 - -(param1[10] * var22) + var23 * param1[11] >> 16;
+            var11 = param1[9] * var21 - -(param1[10] * var22) + var23 * param1[11] >> -2020559408;
             var10 = var23 * param1[8] + (var22 * param1[7] + var21 * param1[6]) >> 16 - ima.field_s;
             var21 = jb.field_h;
             var22 = jb.field_j;
@@ -236,8 +244,8 @@ final class pt implements qda {
                       var26 = param2.field_r[var23];
                       var27 = (var26 * var18 + (var24 * var12 + var25 * var15) >> 16 + -ima.field_s) + var9;
                       var28 = (var16 * var25 + (var13 * var24 + var26 * var19) >> -ima.field_s + 16) + var10;
-                      var29 = (var26 * var20 + (var14 * var24 + var25 * var17) >> 16) + var11;
-                      stackOut_6_0 = ~var29;
+                      var29 = (var26 * var20 + (var14 * var24 + var25 * var17) >> 67714640) + var11;
+                      stackOut_6_0 = var29 ^ -1;
                       stackOut_6_1 = -51;
                       stackIn_68_0 = stackOut_6_0;
                       stackIn_68_1 = stackOut_6_1;
@@ -262,7 +270,7 @@ final class pt implements qda {
                           L8: {
                             du.field_e[var23] = var21 + var27 / var29;
                             ew.field_s[var23] = var22 + var28 / var29;
-                            if (~var29 < ~var8) {
+                            if ((var29 ^ -1) < (var8 ^ -1)) {
                               var8 = var29;
                               break L8;
                             } else {
@@ -270,7 +278,7 @@ final class pt implements qda {
                             }
                           }
                           dl.field_i[var23] = var29;
-                          if (~var7_int < ~var29) {
+                          if ((var7_int ^ -1) < (var29 ^ -1)) {
                             var7_int = var29;
                             break L6;
                           } else {
@@ -326,27 +334,27 @@ final class pt implements qda {
                                     } else {
                                       var23 = 0;
                                       L11: while (true) {
-                                        if (~param2.field_K >= ~var23) {
+                                        if ((param2.field_K ^ -1) >= (var23 ^ -1)) {
                                           break L10;
                                         } else {
                                           var24 = param2.field_o[var23];
                                           var25 = param2.field_D[var23];
                                           var26 = param2.field_L[var23];
-                                          fm.field_f[var23] = (var25 * var15 + (var24 * var12 + var18 * var26) >> 16) + var9;
-                                          ha.field_m[var23] = var10 + (var13 * var24 + var16 * var25 + var19 * var26 >> 16);
-                                          eb.field_p[var23] = var11 + (var26 * var20 + var24 * var14 + var17 * var25 >> 16);
+                                          fm.field_f[var23] = (var25 * var15 + (var24 * var12 + var18 * var26) >> -1167090224) + var9;
+                                          ha.field_m[var23] = var10 + (var13 * var24 + var16 * var25 + var19 * var26 >> 1730338384);
+                                          eb.field_p[var23] = var11 + (var26 * var20 + var24 * var14 + var17 * var25 >> 1770013968);
                                           var24 = param2.field_M[var23];
                                           var25 = param2.field_j[var23];
                                           var26 = param2.field_p[var23];
-                                          hha.field_A[var23] = var9 + (var26 * var18 + (var12 * var24 - -(var15 * var25)) >> 16);
-                                          vea.field_x[var23] = (var19 * var26 + (var13 * var24 + var16 * var25) >> 16) + var10;
-                                          kea.field_s[var23] = (var26 * var20 + var17 * var25 + var14 * var24 >> 16) + var11;
+                                          hha.field_A[var23] = var9 + (var26 * var18 + (var12 * var24 - -(var15 * var25)) >> -1087742640);
+                                          vea.field_x[var23] = (var19 * var26 + (var13 * var24 + var16 * var25) >> 1487169392) + var10;
+                                          kea.field_s[var23] = (var26 * var20 + var17 * var25 + var14 * var24 >> 1350790896) + var11;
                                           var24 = param2.field_s[var23];
                                           var25 = param2.field_z[var23];
                                           var26 = param2.field_a[var23];
-                                          tw.field_a[var23] = (var18 * var26 + (var24 * var12 - -(var25 * var15)) >> 16) + var9;
-                                          mt.field_u[var23] = var10 - -(var26 * var19 + var25 * var16 + var13 * var24 >> 16);
-                                          tja.field_a[var23] = (var26 * var20 + var17 * var25 + var14 * var24 >> 16) + var11;
+                                          tw.field_a[var23] = (var18 * var26 + (var24 * var12 - -(var25 * var15)) >> -464376240) + var9;
+                                          mt.field_u[var23] = var10 - -(var26 * var19 + var25 * var16 + var13 * var24 >> -1417719056);
+                                          tja.field_a[var23] = (var26 * var20 + var17 * var25 + var14 * var24 >> 1041430288) + var11;
                                           var23++;
                                           if (var30 != 0) {
                                             break L3;
@@ -384,7 +392,7 @@ final class pt implements qda {
                       var17 = param6[11];
                       var18 = 0;
                       L13: while (true) {
-                        if (~param2.field_i >= ~var18) {
+                        if ((param2.field_i ^ -1) >= (var18 ^ -1)) {
                           break L12;
                         } else {
                           stackOut_62_0 = bv.field_G.length;
@@ -402,9 +410,9 @@ final class pt implements qda {
                               var19 = param2.field_f[var18];
                               var20 = param2.field_N[var18];
                               var21 = param2.field_b[var18];
-                              bv.field_G[var18] = var12 * var20 + var9 * var19 - -(var21 * var15) >> 16;
-                              fv.field_x[var18] = var19 * var10 - (-(var20 * var13) + -(var21 * var16)) >> 16;
-                              ep.field_l[var18] = var21 * var17 + var19 * var11 - -(var14 * var20) >> 16;
+                              bv.field_G[var18] = var12 * var20 + var9 * var19 - -(var21 * var15) >> 1494611216;
+                              fv.field_x[var18] = var19 * var10 - (-(var20 * var13) + -(var21 * var16)) >> -1023432240;
+                              ep.field_l[var18] = var21 * var17 + var19 * var11 - -(var14 * var20) >> 76951280;
                               var18++;
                               if (var30 == 0) {
                                 continue L13;
@@ -433,23 +441,23 @@ final class pt implements qda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L14: {
             var7 = decompiledCaughtException;
-            stackOut_70_0 = (RuntimeException) var7;
+            stackOut_70_0 = (RuntimeException) (var7);
             stackOut_70_1 = new StringBuilder().append("pt.B(").append(param0).append(',');
             stackIn_73_0 = stackOut_70_0;
             stackIn_73_1 = stackOut_70_1;
             stackIn_71_0 = stackOut_70_0;
             stackIn_71_1 = stackOut_70_1;
             if (param1 == null) {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackOut_73_2 = "null";
               stackIn_74_0 = stackOut_73_0;
               stackIn_74_1 = stackOut_73_1;
               stackIn_74_2 = stackOut_73_2;
               break L14;
             } else {
-              stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
-              stackOut_71_1 = (StringBuilder) (Object) stackIn_71_1;
+              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
               stackOut_71_2 = "{...}";
               stackIn_74_0 = stackOut_71_0;
               stackIn_74_1 = stackOut_71_1;
@@ -458,23 +466,23 @@ final class pt implements qda {
             }
           }
           L15: {
-            stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
+            stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
             stackOut_74_1 = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_74_2).append(',');
             stackIn_77_0 = stackOut_74_0;
             stackIn_77_1 = stackOut_74_1;
             stackIn_75_0 = stackOut_74_0;
             stackIn_75_1 = stackOut_74_1;
             if (param2 == null) {
-              stackOut_77_0 = (RuntimeException) (Object) stackIn_77_0;
-              stackOut_77_1 = (StringBuilder) (Object) stackIn_77_1;
+              stackOut_77_0 = (RuntimeException) ((Object) stackIn_77_0);
+              stackOut_77_1 = (StringBuilder) ((Object) stackIn_77_1);
               stackOut_77_2 = "null";
               stackIn_78_0 = stackOut_77_0;
               stackIn_78_1 = stackOut_77_1;
               stackIn_78_2 = stackOut_77_2;
               break L15;
             } else {
-              stackOut_75_0 = (RuntimeException) (Object) stackIn_75_0;
-              stackOut_75_1 = (StringBuilder) (Object) stackIn_75_1;
+              stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
+              stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
               stackOut_75_2 = "{...}";
               stackIn_78_0 = stackOut_75_0;
               stackIn_78_1 = stackOut_75_1;
@@ -483,23 +491,23 @@ final class pt implements qda {
             }
           }
           L16: {
-            stackOut_78_0 = (RuntimeException) (Object) stackIn_78_0;
+            stackOut_78_0 = (RuntimeException) ((Object) stackIn_78_0);
             stackOut_78_1 = ((StringBuilder) (Object) stackIn_78_1).append(stackIn_78_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_81_0 = stackOut_78_0;
             stackIn_81_1 = stackOut_78_1;
             stackIn_79_0 = stackOut_78_0;
             stackIn_79_1 = stackOut_78_1;
             if (param6 == null) {
-              stackOut_81_0 = (RuntimeException) (Object) stackIn_81_0;
-              stackOut_81_1 = (StringBuilder) (Object) stackIn_81_1;
+              stackOut_81_0 = (RuntimeException) ((Object) stackIn_81_0);
+              stackOut_81_1 = (StringBuilder) ((Object) stackIn_81_1);
               stackOut_81_2 = "null";
               stackIn_82_0 = stackOut_81_0;
               stackIn_82_1 = stackOut_81_1;
               stackIn_82_2 = stackOut_81_2;
               break L16;
             } else {
-              stackOut_79_0 = (RuntimeException) (Object) stackIn_79_0;
-              stackOut_79_1 = (StringBuilder) (Object) stackIn_79_1;
+              stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
+              stackOut_79_1 = (StringBuilder) ((Object) stackIn_79_1);
               stackOut_79_2 = "{...}";
               stackIn_82_0 = stackOut_79_0;
               stackIn_82_1 = stackOut_79_1;
@@ -507,7 +515,7 @@ final class pt implements qda {
               break L16;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_82_0, stackIn_82_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_82_0), stackIn_82_2 + ')');
         }
     }
 
@@ -531,7 +539,7 @@ final class pt implements qda {
             L1: {
               L2: {
                 var9_int = param0 + param6;
-                if (param6 <= 0) {
+                if ((param6 ^ -1) >= -1) {
                   break L2;
                 } else {
                   dg.e(param0, param2, param6, param1);
@@ -555,7 +563,7 @@ final class pt implements qda {
                   L5: {
                     L6: {
                       dg.f(var9_int, param2, 1 + (param5 - param2), param1);
-                      if (~param2 < ~param4) {
+                      if ((param2 ^ -1) < (param4 ^ -1)) {
                         break L6;
                       } else {
                         if (param4 < param5) {
@@ -581,10 +589,10 @@ final class pt implements qda {
               }
               L7: {
                 L8: {
-                  if (~param5 < ~param4) {
+                  if ((param5 ^ -1) < (param4 ^ -1)) {
                     break L8;
                   } else {
-                    if (~param4 > ~param2) {
+                    if ((param4 ^ -1) > (param2 ^ -1)) {
                       stackOut_26_0 = 0;
                       stackIn_27_0 = stackOut_26_0;
                       break L7;
@@ -618,8 +626,8 @@ final class pt implements qda {
                     if (var10 != 0) {
                       L13: {
                         L14: {
-                          var11 = param2 - -param5 >> 1;
-                          if (param6 > 0) {
+                          var11 = param2 - -param5 >> 1908022657;
+                          if (-1 > (param6 ^ -1)) {
                             break L14;
                           } else {
                             dg.e(var9_int, var11, -param6, param1);
@@ -672,9 +680,9 @@ final class pt implements qda {
                 } else {
                   L17: {
                     L18: {
-                      var11 = param2 - -param5 >> 1;
+                      var11 = param2 - -param5 >> -120391359;
                       var12 = -var11 + param4;
-                      if (param6 > 0) {
+                      if ((param6 ^ -1) < -1) {
                         break L18;
                       } else {
                         var9_int = var9_int + param6;
@@ -718,15 +726,11 @@ final class pt implements qda {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var9, "pt.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw pe.a((Throwable) ((Object) var9), "pt.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new String[]{"Turn time (seconds)", "Board", "Team size", "Game type", "Turn limit"};
     }
 }

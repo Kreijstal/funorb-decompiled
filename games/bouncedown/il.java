@@ -9,7 +9,9 @@ final class il {
     static q field_b;
 
     final static void a(int param0) {
-        Object var2 = null;
+        String discarded$4 = null;
+        String discarded$5 = null;
+        String var2 = null;
         if (null == q.field_N) {
           L0: {
             if (q.field_A != null) {
@@ -21,8 +23,8 @@ final class il {
           }
           ml.e(8192);
           if (param0 < 4) {
-            var2 = null;
-            String discarded$4 = il.a((String) null, 'a', 12, (String) null);
+            var2 = (String) null;
+            discarded$4 = il.a((String) null, 'a', 12, (String) null);
             return;
           } else {
             return;
@@ -41,14 +43,17 @@ final class il {
           if (param0 >= 4) {
             return;
           } else {
-            var2 = null;
-            String discarded$5 = il.a((String) null, 'a', 12, (String) null);
+            var2 = (String) null;
+            discarded$5 = il.a((String) null, 'a', 12, (String) null);
             return;
           }
         }
     }
 
     final static String a(String param0, char param1, int param2, String param3) {
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -108,7 +113,7 @@ final class il {
               var5 = param3.length();
               var6 = var4_int;
               var7 = -1 + var5;
-              if (var7 == 0) {
+              if (-1 == (var7 ^ -1)) {
                 break L2;
               } else {
                 var8_int = 0;
@@ -129,13 +134,13 @@ final class il {
             L4: while (true) {
               var10 = param0.indexOf((int) param1, var9);
               if (var10 < 0) {
-                StringBuilder discarded$3 = var8.append(param0.substring(var9));
+                discarded$3 = var8.append(param0.substring(var9));
                 stackOut_11_0 = var8.toString();
                 stackIn_12_0 = stackOut_11_0;
                 break L0;
               } else {
-                StringBuilder discarded$4 = var8.append(param0.substring(var9, var10));
-                StringBuilder discarded$5 = var8.append(param3);
+                discarded$4 = var8.append(param0.substring(var9, var10));
+                discarded$5 = var8.append(param3);
                 var9 = 1 + var10;
                 continue L4;
               }
@@ -145,23 +150,23 @@ final class il {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var4;
+            stackOut_13_0 = (RuntimeException) (var4);
             stackOut_13_1 = new StringBuilder().append("il.C(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -170,23 +175,23 @@ final class il {
             }
           }
           L6: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param3 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -194,13 +199,13 @@ final class il {
               break L6;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
         return stackIn_12_0;
     }
 
     public static void a(byte param0) {
-        int var1 = -48;
+        int var1 = -48 / ((param0 - 71) / 46);
         field_a = null;
         field_b = null;
         field_d = null;
@@ -209,10 +214,6 @@ final class il {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[8192];
         field_a = new ue[16];
         field_c = new eh(9, 0, 4, 1);

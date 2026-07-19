@@ -45,34 +45,38 @@ final class ro {
         field_r = null;
         field_x = null;
         field_v = null;
-        field_H = null;
-        field_m = null;
+        if (param0 > -95) {
+          field_v = (String) null;
+          field_H = null;
+          field_m = null;
+          return;
+        } else {
+          field_H = null;
+          field_m = null;
+          return;
+        }
     }
 
     ro() {
-        ((ro) this).field_F = new int[6][258];
-        ((ro) this).field_E = new byte[6][258];
-        ((ro) this).field_o = new byte[4096];
-        ((ro) this).field_y = 0;
-        ((ro) this).field_i = new int[257];
-        ((ro) this).field_n = new int[6][258];
-        ((ro) this).field_c = new int[256];
-        ((ro) this).field_j = 0;
-        ((ro) this).field_l = new byte[18002];
-        ((ro) this).field_I = new byte[256];
-        ((ro) this).field_A = new boolean[256];
-        ((ro) this).field_C = new int[16];
-        ((ro) this).field_a = new boolean[16];
-        ((ro) this).field_w = new int[6][258];
-        ((ro) this).field_f = new byte[18002];
-        ((ro) this).field_d = new int[6];
+        this.field_F = new int[6][258];
+        this.field_E = new byte[6][258];
+        this.field_o = new byte[4096];
+        this.field_y = 0;
+        this.field_i = new int[257];
+        this.field_n = new int[6][258];
+        this.field_c = new int[256];
+        this.field_j = 0;
+        this.field_l = new byte[18002];
+        this.field_I = new byte[256];
+        this.field_A = new boolean[256];
+        this.field_C = new int[16];
+        this.field_a = new boolean[16];
+        this.field_w = new int[6][258];
+        this.field_f = new byte[18002];
+        this.field_d = new int[6];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_J = "ro.A(";
         field_r = new th(2, 4, 4, 0);
         field_x = new int[]{30870, 12658477, 16494651, 26679, 16711935};

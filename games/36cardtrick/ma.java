@@ -17,8 +17,8 @@ final class ma {
         int var14 = 0;
         int var15 = 0;
         var15 = Main.field_T;
-        var9 = 3;
-        var10 = new kc[]{new kc(var9, var9), new kc(3, var9), new kc(var9, var9), new kc(var9, 3), new kc(64, 64), new kc(var9, 3), new kc(var9, var9), new kc(3, var9), new kc(var9, var9)};
+        var9 = param3 + param1 + param6;
+        var10 = new kc[]{new kc(var9, var9), new kc(param4, var9), new kc(var9, var9), new kc(var9, param4), new kc(64, 64), new kc(var9, param4), new kc(var9, var9), new kc(param4, var9), new kc(var9, var9)};
         var11_ref_kc__ = var10;
         var12 = 0;
         L0: while (true) {
@@ -26,54 +26,62 @@ final class ma {
             var10 = var11_ref_kc__;
             var11 = 0;
             L1: while (true) {
-              if (var11 >= 1) {
+              if (param1 <= var11) {
+                L2: {
+                  if (param8 < -12) {
+                    break L2;
+                  } else {
+                    field_d = (String[]) null;
+                    break L2;
+                  }
+                }
                 var11 = 0;
-                L2: while (true) {
-                  if (var11 >= 1) {
+                L3: while (true) {
+                  if (var11 >= param1) {
                     var11 = 0;
-                    L3: while (true) {
-                      if (3 <= var11) {
+                    L4: while (true) {
+                      if (param4 <= var11) {
                         var11 = 0;
-                        L4: while (true) {
-                          if (var11 >= 1) {
+                        L5: while (true) {
+                          if (var11 >= param4 >> 548650273) {
                             return var10;
                           } else {
                             var12 = 0;
-                            L5: while (true) {
-                              if (var12 < 1) {
-                                var10[1].field_r[(var9 + (-var12 - 1)) * 3 - -var11] = param5;
+                            L6: while (true) {
+                              if (param3 > var12) {
+                                var10[1].field_r[(var9 + (-var12 - 1)) * param4 - -var11] = param5;
                                 var10[3].field_r[var9 * var11 - (var12 + (1 + -var9))] = param5;
-                                var10[7].field_r[var12 * 3 - -var11] = param5;
+                                var10[7].field_r[var12 * param4 - -var11] = param5;
                                 var10[5].field_r[var9 * var11 + var12] = param5;
                                 var12++;
-                                continue L5;
+                                continue L6;
                               } else {
                                 var11++;
-                                continue L4;
+                                continue L5;
                               }
                             }
                           }
                         }
                       } else {
                         var12 = 0;
-                        L6: while (true) {
-                          if (var12 >= 1) {
+                        L7: while (true) {
+                          if (param1 <= var12) {
                             var11++;
-                            continue L3;
+                            continue L4;
                           } else {
-                            var10[7].field_r[(-1 + (var9 - var12)) * 3 + var11] = param0;
+                            var10[7].field_r[(-1 + (var9 - var12)) * param4 + var11] = param0;
                             var10[5].field_r[-var12 - -var9 + (-1 + var11 * var9)] = param0;
-                            var10[1].field_r[var11 + var12 * 3] = param7;
+                            var10[1].field_r[var11 + var12 * param4] = param7;
                             var10[3].field_r[var12 + var11 * var9] = param7;
                             var12++;
-                            continue L6;
+                            continue L7;
                           }
                         }
                       }
                     }
                   } else {
                     var12 = 0;
-                    L7: while (true) {
+                    L8: while (true) {
                       if (var12 < var9) {
                         var10[0].field_r[var12 - -(var11 * var9)] = param7;
                         var10[0].field_r[var9 * var12 + var11] = param7;
@@ -81,21 +89,21 @@ final class ma {
                           var10[2].field_r[var12 + var11 * var9] = param7;
                           var10[6].field_r[var12 * var9 - -var11] = param7;
                           var12++;
-                          continue L7;
+                          continue L8;
                         } else {
                           var12++;
-                          continue L7;
+                          continue L8;
                         }
                       } else {
                         var11++;
-                        continue L2;
+                        continue L3;
                       }
                     }
                   }
                 }
               } else {
                 var12 = 0;
-                L8: while (true) {
+                L9: while (true) {
                   if (var9 <= var12) {
                     var11++;
                     continue L1;
@@ -105,7 +113,7 @@ final class ma {
                     var10[2].field_r[-1 - (-var9 - -var11 - var9 * var12)] = param0;
                     var10[8].field_r[var9 * var12 - var11 - (1 + -var9)] = param0;
                     var12++;
-                    continue L8;
+                    continue L9;
                   }
                 }
               }
@@ -113,14 +121,14 @@ final class ma {
           } else {
             var13 = var11_ref_kc__[var12];
             var14 = 0;
-            L9: while (true) {
+            L10: while (true) {
               if (var13.field_r.length <= var14) {
                 var12++;
                 continue L0;
               } else {
                 var13.field_r[var14] = param2;
                 var14++;
-                continue L9;
+                continue L10;
               }
             }
           }
@@ -144,6 +152,7 @@ final class ma {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         qa stackOut_3_0 = null;
         qa stackOut_13_0 = null;
@@ -159,18 +168,28 @@ final class ma {
         var6 = Main.field_T;
         try {
           L0: {
-            var2 = he.a(-24949, param0, "jagex-last-login-method");
+            var2 = he.a(param1 + -21124, param0, "jagex-last-login-method");
             if (var2 == null) {
               stackOut_3_0 = bf.field_c;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              var3 = ff.a(-21739);
+              var3 = ff.a(param1 + -17914);
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
+                  L2: {
+                    if (param1 == -3825) {
+                      break L2;
+                    } else {
+                      field_c = -86;
+                      break L2;
+                    }
+                  }
                   stackOut_13_0 = bf.field_c;
                   stackIn_14_0 = stackOut_13_0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   var5 = var3[var4];
@@ -178,9 +197,10 @@ final class ma {
                     var4++;
                     continue L1;
                   } else {
-                    stackOut_8_0 = (qa) var5;
+                    stackOut_8_0 = (qa) (var5);
                     stackIn_9_0 = stackOut_8_0;
-                    return stackIn_9_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               }
@@ -188,35 +208,43 @@ final class ma {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var2_ref;
+            stackOut_15_0 = (RuntimeException) (var2_ref);
             stackOut_15_1 = new StringBuilder().append("ma.B(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
-              break L2;
+              break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
               stackIn_18_2 = stackOut_16_2;
-              break L2;
+              break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + -3825 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ')');
         }
-        return stackIn_14_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0;
+          } else {
+            return stackIn_14_0;
+          }
+        }
     }
 
     final static ac a(Throwable param0, String param1) {
@@ -224,7 +252,7 @@ final class ma {
         if (!(param0 instanceof ac)) {
             var2 = new ac(param0, param1);
         } else {
-            var2 = (ac) (Object) param0;
+            var2 = (ac) ((Object) param0);
             var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;
@@ -232,6 +260,9 @@ final class ma {
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 >= -27) {
+            return;
+        }
         field_d = null;
         field_b = null;
     }
@@ -250,7 +281,7 @@ final class ma {
             dg.field_H.field_l = 2;
             break L0;
           } else {
-            if (param1 != 50) {
+            if (-51 != (param1 ^ -1)) {
               dg.field_H.field_l = 1;
               break L0;
             } else {
@@ -262,7 +293,7 @@ final class ma {
         L1: {
           ej.field_kb = var2;
           dg.field_H.field_b = dg.field_H.field_b + 1;
-          if (2 > dg.field_H.field_b) {
+          if (param0 > dg.field_H.field_b) {
             break L1;
           } else {
             if (51 == param1) {
@@ -276,14 +307,14 @@ final class ma {
           if (dg.field_H.field_b < 2) {
             break L2;
           } else {
-            if (param1 != 50) {
+            if ((param1 ^ -1) != -51) {
               break L2;
             } else {
               return 5;
             }
           }
         }
-        if (dg.field_H.field_b < 4) {
+        if ((dg.field_H.field_b ^ -1) > -5) {
           return -1;
         } else {
           return 1;
@@ -291,10 +322,6 @@ final class ma {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
         field_c = 0;
     }

@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class wg extends hi {
     static boolean field_o;
     static int field_q;
@@ -15,8 +13,16 @@ final class wg extends hi {
 
     final static void a(int param0, byte param1) {
         nc.field_Z = tb.field_b[param0];
-        de.field_b = jk.field_r[param0];
-        mi.field_e = cc.field_h[param0];
+        if (param1 > -100) {
+          field_p = 109;
+          de.field_b = jk.field_r[param0];
+          mi.field_e = cc.field_h[param0];
+          return;
+        } else {
+          de.field_b = jk.field_r[param0];
+          mi.field_e = cc.field_h[param0];
+          return;
+        }
     }
 
     final String a(int param0, String param1) {
@@ -30,6 +36,7 @@ final class wg extends hi {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_5_0 = null;
         String stackOut_3_0 = null;
@@ -51,37 +58,39 @@ final class wg extends hi {
                 break L1;
               }
             }
-            if (((wg) this).a(param1, (byte) -99) != vh.field_h) {
+            if (this.a(param1, (byte) -99) != vh.field_h) {
               stackOut_5_0 = wb.field_c;
               stackIn_6_0 = stackOut_5_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_3_0 = vg.field_j;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_0 = (RuntimeException) (var3);
             stackOut_7_1 = new StringBuilder().append("wg.B(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -89,9 +98,13 @@ final class wg extends hi {
               break L2;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
-        return stackIn_6_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          return stackIn_6_0;
+        }
     }
 
     final qd a(String param0, byte param1) {
@@ -107,6 +120,7 @@ final class wg extends hi {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
@@ -145,34 +159,36 @@ final class wg extends hi {
               }
               stackOut_8_0 = nc.field_bb;
               stackIn_9_0 = stackOut_8_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_4_0 = vh.field_h;
               stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_0 = (RuntimeException) (var3);
             stackOut_10_1 = new StringBuilder().append("wg.C(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -180,9 +196,13 @@ final class wg extends hi {
               break L3;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }
-        return stackIn_9_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0;
+        } else {
+          return stackIn_9_0;
+        }
     }
 
     final static ba a(int param0, int param1) {
@@ -190,34 +210,52 @@ final class wg extends hi {
         int var3 = 0;
         int var4 = 0;
         ba[] var5 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_4_1 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_5_1 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_3_1 = 0;
         var4 = OrbDefence.field_D ? 1 : 0;
         var5 = jl.a((byte) 60);
         var2 = var5;
         var3 = 0;
         L0: while (true) {
           if (var5.length > var3) {
-            if (var5[var3].field_d != param0) {
-              var3++;
-              continue L0;
+            stackOut_3_0 = var5[var3].field_d;
+            stackOut_3_1 = param0;
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (var4 == 0) {
+              if (stackIn_5_0 != stackIn_5_1) {
+                var3++;
+                continue L0;
+              } else {
+                return var5[var3];
+              }
             } else {
-              return var5[var3];
+              var3 = stackIn_4_0 / stackIn_4_1;
+              return null;
             }
           } else {
-            var3 = -127;
+            var3 = -127 / ((-71 - param1) / 52);
             return null;
           }
         }
     }
 
     public static void j(int param0) {
+        if (param0 != -24392) {
+            field_q = -50;
+            field_n = null;
+            return;
+        }
         field_n = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = 5;
         field_n = "Blocks Norbs";
         field_p = 0;

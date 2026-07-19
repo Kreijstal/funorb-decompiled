@@ -11,11 +11,11 @@ final class q extends rf {
 
     q(long param0, int param1, byte[] param2) {
         try {
-            ((q) this).field_f = param1;
-            ((q) this).field_k = param2;
-            ((q) this).field_g = param0;
+            this.field_f = param1;
+            this.field_k = param2;
+            this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "q.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "q.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -28,10 +28,6 @@ final class q extends rf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = false;
         field_h = "Your email address is used to identify this account";
         field_i = "Waiting for extra data";

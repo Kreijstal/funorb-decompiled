@@ -11,6 +11,6 @@ public class naa {
     public volatile int field_b;
 
     naa() {
-        ((naa) this).field_b = 0;
+        this.field_b = 0;
     }
 }

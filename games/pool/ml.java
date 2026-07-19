@@ -16,6 +16,9 @@ final class ml {
     static int[][] field_h;
 
     final static int b(int param0) {
+        if (param0 < 6) {
+            field_a = (String) null;
+        }
         return -kk.field_z + gp.field_c;
     }
 
@@ -30,6 +33,7 @@ final class ml {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_3_0 = false;
         int stackOut_1_0 = 0;
@@ -44,36 +48,38 @@ final class ml {
         try {
           L0: {
             if (param1 >= 46) {
-              stackOut_3_0 = ((ml) this).field_i.equals((Object) (Object) param0);
+              stackOut_3_0 = this.field_i.equals(param0);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 0;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("ml.D(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -81,42 +87,51 @@ final class ml {
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final void a(java.applet.Applet param0, boolean param1) {
         try {
             if (!param1) {
-                field_a = null;
+                field_a = (String) null;
             }
-            nn.a(31536000L, (byte) -120, param0, ((ml) this).field_i, "jagex-last-login-method");
+            nn.a(31536000L, (byte) -120, param0, this.field_i, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ml.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "ml.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(int param0) {
+        int discarded$0 = 0;
         field_c = null;
         field_a = null;
+        if (param0 != -26458) {
+            discarded$0 = ml.b(65);
+        }
         field_k = null;
         field_g = null;
         field_e = null;
-        field_h = null;
+        field_h = (int[][]) null;
         field_f = null;
         field_l = null;
     }
 
     ml(String param0) {
         try {
-            ((ml) this).field_i = param0;
+            this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ml.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "ml.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, byte param1, int param2, int param3, dd param4, int param5) {
+        int incrementValue$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -133,7 +148,7 @@ final class ml {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        Object var21 = null;
+        dd var21 = null;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         RuntimeException stackIn_36_0 = null;
@@ -141,6 +156,7 @@ final class ml {
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_37_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_34_0 = null;
         StringBuilder stackOut_34_1 = null;
@@ -154,8 +170,8 @@ final class ml {
         try {
           L0: {
             L1: {
-              var6_int = (param5 + -param0 << 8) / param4.field_w;
-              var7 = (param0 << 8) + param4.field_G * var6_int;
+              var6_int = (param5 + -param0 << -631634488) / param4.field_w;
+              var7 = (param0 << -1496650264) + param4.field_G * var6_int;
               param2 = param2 + param4.field_G;
               param3 = param3 + param4.field_B;
               var8 = param2 - -(qh.field_l * param3);
@@ -213,48 +229,49 @@ final class ml {
               if (0 >= var11) {
                 break L5;
               } else {
-                if (var10 > 0) {
+                if (-1 > (var10 ^ -1)) {
                   L6: {
                     if (param1 >= 44) {
                       break L6;
                     } else {
-                      var21 = null;
+                      var21 = (dd) null;
                       ml.a(26, (byte) 106, -29, 66, (dd) null, 59);
                       break L6;
                     }
                   }
                   param3 = -var10;
                   L7: while (true) {
-                    if (param3 >= 0) {
+                    if ((param3 ^ -1) <= -1) {
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       var14 = var7;
                       param2 = -var11;
                       L8: while (true) {
-                        if (param2 >= 0) {
+                        if ((param2 ^ -1) <= -1) {
                           var9 = var9 + var13;
                           var8 = var8 + var12;
                           param3++;
                           continue L7;
                         } else {
                           L9: {
-                            var15 = var14 >> 8;
+                            var15 = var14 >> 1055885800;
                             var14 = var14 + var6_int;
                             var16 = 256 - var15;
-                            if (var15 < 0) {
+                            if ((var15 ^ -1) > -1) {
                               var9++;
                               var8++;
                               break L9;
                             } else {
                               L10: {
-                                int incrementValue$1 = var9;
+                                incrementValue$1 = var9;
                                 var9++;
                                 var17 = param4.field_D[incrementValue$1];
                                 if (0 != var17) {
-                                  if (var15 <= 255) {
+                                  if (-256 <= (var15 ^ -1)) {
                                     var18 = qh.field_d[var8];
-                                    var19 = 16711935 & var16 * (var18 & 16711935) - -((var17 & 16711935) * var15) >> 8;
-                                    qh.field_d[var8] = var19 - -rb.b(65280, rb.b(var17, 65280) * var15 + var16 * rb.b(var18, 65280) >> 8);
+                                    var19 = 16711935 & var16 * (var18 & 16711935) - -((var17 & 16711935) * var15) >> 1867130248;
+                                    qh.field_d[var8] = var19 - -rb.b(65280, rb.b(var17, 65280) * var15 + var16 * rb.b(var18, 65280) >> 170034888);
                                     break L10;
                                   } else {
                                     qh.field_d[var8] = var17;
@@ -279,29 +296,30 @@ final class ml {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var6 = decompiledCaughtException;
-            stackOut_34_0 = (RuntimeException) var6;
+            stackOut_34_0 = (RuntimeException) (var6);
             stackOut_34_1 = new StringBuilder().append("ml.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;
             stackIn_35_1 = stackOut_34_1;
             if (param4 == null) {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
               stackOut_36_2 = "null";
               stackIn_37_0 = stackOut_36_0;
               stackIn_37_1 = stackOut_36_1;
               stackIn_37_2 = stackOut_36_2;
               break L11;
             } else {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackOut_35_2 = "{...}";
               stackIn_37_0 = stackOut_35_0;
               stackIn_37_1 = stackOut_35_1;
@@ -309,16 +327,24 @@ final class ml {
               break L11;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + ',' + param5 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_37_0), stackIn_37_2 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static void a(int param0, oj param1, int param2) {
-        ta.field_i.b((byte) -31, (ma) (Object) param1);
+        ta.field_i.b((byte) -31, param1);
+        if (param0 != 25756) {
+            return;
+        }
         try {
-            ch.a(false, param1, 3);
+            ch.a(false, param1, param2);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ml.C(" + 25756 + ',' + (param1 != null ? "{...}" : "null") + ',' + 3 + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -327,16 +353,12 @@ final class ml {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Elapsed time";
         field_c = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
         field_g = "<%0>, would you like to <u>play</u> the next shot or <u>pass</u> and make your opponent play?";
         field_l = new int[12];
         field_k = new int[]{8};
         field_a = "Show";
-        field_h = new int[][]{new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4], new int[4]};
+        field_h = new int[][]{new int[]{1, 1, 2, 1}, new int[]{1, 1, 2, 2}, new int[]{1, 1, 2, 3}, new int[]{1, 1, 2, 4}, new int[]{1, 1, 2, 5}, new int[]{-1, 3, 1, 0}, new int[]{-1, 5, 1, 0}, new int[]{-1, 6, 1, 0}, new int[]{-1, 7, 1, 0}, new int[]{-1, 8, 1, 0}, new int[]{-1, 3, 1, 1}, new int[]{-1, 4, 1, 1}, new int[]{-1, 5, 1, 1}, new int[]{-1, 6, 1, 1}, new int[]{-1, 7, 1, 1}, new int[]{-1, 8, 1, 1}};
     }
 }

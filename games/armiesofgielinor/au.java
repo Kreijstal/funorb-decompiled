@@ -44,11 +44,15 @@ final class au extends je {
     je field_Ib;
 
     public static void e(byte param0) {
+        if (param0 > -52) {
+            return;
+        }
         field_Jb = null;
         field_Kb = null;
     }
 
     final boolean k(int param0) {
+        int discarded$10 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -57,8 +61,8 @@ final class au extends je {
         int stackOut_2_0 = 0;
         if (param0 != -7) {
           L0: {
-            int discarded$10 = ((au) this).d((byte) -65);
-            if (((au) this).a((byte) 90)) {
+            discarded$10 = this.d((byte) -65);
+            if (this.a((byte) 90)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -71,7 +75,7 @@ final class au extends je {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((au) this).a((byte) 90)) {
+            if (this.a((byte) 90)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -87,12 +91,12 @@ final class au extends je {
 
     final int d(byte param0) {
         int var2 = -52 / ((35 - param0) / 38);
-        return (int)((au) this).a(116);
+        return (int)this.a(116);
     }
 
     au(int param0) {
         super(0L, (je) null);
-        ((au) this).field_pc = new byte[param0];
+        this.field_pc = new byte[param0];
     }
 
     final boolean a(byte param0, au param1) {
@@ -129,6 +133,7 @@ final class au extends je {
         RuntimeException stackIn_75_0 = null;
         StringBuilder stackIn_75_1 = null;
         String stackIn_75_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -181,13 +186,13 @@ final class au extends je {
               if (param0 <= -13) {
                 break L1;
               } else {
-                ((au) this).field_pc = null;
+                this.field_pc = (byte[]) null;
                 break L1;
               }
             }
             L2: {
-              if (!((au) this).field_Nb) {
-                if (-7 == ((au) this).field_mc) {
+              if (!this.field_Nb) {
+                if (-7 == (this.field_mc ^ -1)) {
                   stackOut_6_0 = 1;
                   stackIn_8_0 = stackOut_6_0;
                   break L2;
@@ -205,7 +210,7 @@ final class au extends je {
             L3: {
               var3_int = stackIn_8_0;
               if (!param1.field_Nb) {
-                if (-7 == param1.field_mc) {
+                if (-7 == (param1.field_mc ^ -1)) {
                   stackOut_12_0 = 1;
                   stackIn_14_0 = stackOut_12_0;
                   break L3;
@@ -235,14 +240,15 @@ final class au extends je {
             if (stackIn_17_0 == var4) {
               stackOut_19_0 = var3_int;
               stackIn_20_0 = stackOut_19_0;
-              return stackIn_20_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L5: {
                 if (var3_int != 0) {
                   break L5;
                 } else {
                   L6: {
-                    if (((au) this).field_Sb) {
+                    if (this.field_Sb) {
                       stackOut_24_0 = 0;
                       stackIn_25_0 = stackOut_24_0;
                       break L6;
@@ -271,16 +277,17 @@ final class au extends je {
                     }
                   }
                   if (stackIn_28_0 != stackIn_28_1) {
-                    stackOut_30_0 = ((au) this).field_Sb;
+                    stackOut_30_0 = this.field_Sb;
                     stackIn_31_0 = stackOut_30_0;
-                    return stackIn_31_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
-                    if (!((au) this).field_Sb) {
+                    if (!this.field_Sb) {
                       break L5;
                     } else {
-                      if (param1.field_Tb != ((au) this).field_Tb) {
+                      if (param1.field_Tb != this.field_Tb) {
                         L8: {
-                          if (((au) this).field_Tb >= param1.field_Tb) {
+                          if (this.field_Tb >= param1.field_Tb) {
                             stackOut_37_0 = 0;
                             stackIn_38_0 = stackOut_37_0;
                             break L8;
@@ -290,7 +297,8 @@ final class au extends je {
                             break L8;
                           }
                         }
-                        return stackIn_38_0 != 0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       } else {
                         break L5;
                       }
@@ -302,7 +310,7 @@ final class au extends je {
                 stackOut_39_0 = param1.field_kc;
                 stackIn_41_0 = stackOut_39_0;
                 stackIn_40_0 = stackOut_39_0;
-                if (((au) this).field_kc) {
+                if (this.field_kc) {
                   stackOut_41_0 = stackIn_41_0;
                   stackOut_41_1 = 0;
                   stackIn_42_0 = stackOut_41_0;
@@ -318,7 +326,7 @@ final class au extends je {
               }
               if ((stackIn_42_0 ? 1 : 0) == stackIn_42_1) {
                 L10: {
-                  if (((au) this).field_kc) {
+                  if (this.field_kc) {
                     stackOut_46_0 = 0;
                     stackIn_47_0 = stackOut_46_0;
                     break L10;
@@ -328,11 +336,12 @@ final class au extends je {
                     break L10;
                   }
                 }
-                return stackIn_47_0 != 0;
+                decompiledRegionSelector0 = 3;
+                break L0;
               } else {
-                if (!((au) this).field_kc) {
+                if (!this.field_kc) {
                   L11: {
-                    if (~((au) this).field_Mb <= ~param1.field_Mb) {
+                    if ((this.field_Mb ^ -1L) <= (param1.field_Mb ^ -1L)) {
                       stackOut_70_0 = 0;
                       stackIn_71_0 = stackOut_70_0;
                       break L11;
@@ -342,15 +351,16 @@ final class au extends je {
                       break L11;
                     }
                   }
+                  decompiledRegionSelector0 = 6;
                   break L0;
                 } else {
                   L12: {
-                    if (((au) this).field_tc) {
+                    if (this.field_tc) {
                       stackOut_53_0 = 1;
                       stackIn_55_0 = stackOut_53_0;
                       break L12;
                     } else {
-                      if (((au) this).field_ac == 2) {
+                      if (this.field_ac == 2) {
                         stackOut_52_0 = 1;
                         stackIn_55_0 = stackOut_52_0;
                         break L12;
@@ -382,7 +392,7 @@ final class au extends je {
                   var6 = stackIn_61_0;
                   if (var5 == var6) {
                     L14: {
-                      if (~param1.field_Mb <= ~((au) this).field_Mb) {
+                      if ((param1.field_Mb ^ -1L) <= (this.field_Mb ^ -1L)) {
                         stackOut_66_0 = 0;
                         stackIn_67_0 = stackOut_66_0;
                         break L14;
@@ -392,11 +402,13 @@ final class au extends je {
                         break L14;
                       }
                     }
-                    return stackIn_67_0 != 0;
+                    decompiledRegionSelector0 = 5;
+                    break L0;
                   } else {
                     stackOut_62_0 = var5;
                     stackIn_63_0 = stackOut_62_0;
-                    return stackIn_63_0 != 0;
+                    decompiledRegionSelector0 = 4;
+                    break L0;
                   }
                 }
               }
@@ -406,23 +418,23 @@ final class au extends je {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var3 = decompiledCaughtException;
-            stackOut_72_0 = (RuntimeException) var3;
+            stackOut_72_0 = (RuntimeException) (var3);
             stackOut_72_1 = new StringBuilder().append("au.B(").append(param0).append(',');
             stackIn_74_0 = stackOut_72_0;
             stackIn_74_1 = stackOut_72_1;
             stackIn_73_0 = stackOut_72_0;
             stackIn_73_1 = stackOut_72_1;
             if (param1 == null) {
-              stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
-              stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
+              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
+              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
               stackOut_74_2 = "null";
               stackIn_75_0 = stackOut_74_0;
               stackIn_75_1 = stackOut_74_1;
               stackIn_75_2 = stackOut_74_2;
               break L15;
             } else {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackOut_73_2 = "{...}";
               stackIn_75_0 = stackOut_73_0;
               stackIn_75_1 = stackOut_73_1;
@@ -430,16 +442,36 @@ final class au extends je {
               break L15;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_75_0), stackIn_75_2 + ')');
         }
-        return stackIn_71_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_20_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_31_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_38_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_47_0 != 0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_63_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_67_0 != 0;
+                  } else {
+                    return stackIn_71_0 != 0;
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Jb = "Invite more players, or alternatively try changing the following settings:  ";
         field_Ob = 0;
     }

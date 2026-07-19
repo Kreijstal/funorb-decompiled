@@ -18,7 +18,7 @@ abstract class dna extends kna {
 
     final boolean v(int param0) {
         if (param0 != 555277520) {
-            field_H = null;
+            field_H = (String) null;
             return false;
         }
         return false;
@@ -26,7 +26,7 @@ abstract class dna extends kna {
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-            field_F = null;
+            field_F = (jpa) null;
             return true;
         }
         return true;
@@ -50,6 +50,10 @@ abstract class dna extends kna {
     }
 
     final static int b(int param0, int param1) {
+        if (param1 != 255) {
+            field_H = (String) null;
+            return 255 & param0;
+        }
         return 255 & param0;
     }
 
@@ -59,17 +63,13 @@ abstract class dna extends kna {
 
     final boolean s(int param0) {
         if (param0 != -15254) {
-            field_F = null;
+            field_F = (jpa) null;
             return false;
         }
         return false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_I = "GRAPHICS MODE";
         field_H = "Private";
         field_G = false;

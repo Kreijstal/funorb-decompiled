@@ -1167,14 +1167,6 @@ abstract class mm extends be {
         byte[][] var15 = null;
         byte[][] var16 = null;
         int[] var17 = null;
-        int[] var18 = null;
-        byte[][] var19 = null;
-        byte[][] var20 = null;
-        int[] var21 = null;
-        int[] var22 = null;
-        byte[][] var23 = null;
-        byte[][] var24 = null;
-        int[] var25 = null;
         L0: {
           this.field_L = new int[256];
           if (param0.length != 257) {
@@ -1182,14 +1174,10 @@ abstract class mm extends be {
             var3_int = 0;
             L1: while (true) {
               if (var3_int >= 256) {
-                var22 = new int[256];
-                var18 = var22;
-                var14 = var18;
+                var14 = new int[256];
                 var10 = var14;
                 var3 = var10;
-                var25 = new int[256];
-                var21 = var25;
-                var17 = var21;
+                var17 = new int[256];
                 var13 = var17;
                 var4 = var13;
                 var5_int = 0;
@@ -1198,17 +1186,13 @@ abstract class mm extends be {
                     var5_int = 0;
                     L3: while (true) {
                       if (var5_int >= 256) {
-                        var23 = new byte[256][];
-                        var19 = var23;
-                        var15 = var19;
+                        var15 = new byte[256][];
                         var11 = var15;
                         var5 = var11;
                         var6_int = 0;
                         L4: while (true) {
                           if (var6_int >= 256) {
-                            var24 = new byte[256][];
-                            var20 = var24;
-                            var16 = var20;
+                            var16 = new byte[256][];
                             var12 = var16;
                             var6 = var12;
                             var7 = 0;
@@ -1218,7 +1202,7 @@ abstract class mm extends be {
                                 var7 = 0;
                                 L6: while (true) {
                                   if (var7 >= 256) {
-                                    this.field_S = var25[32] + var22[32];
+                                    this.field_S = var17[32] + var14[32];
                                     break L0;
                                   } else {
                                     if (var7 != 32) {
@@ -1228,7 +1212,7 @@ abstract class mm extends be {
                                           if (var8 < 256) {
                                             if (var8 != 32) {
                                               if (var8 != 160) {
-                                                this.field_y[(var7 << 8) + var8] = (byte)mm.a(var23, var24, var25, this.field_L, var22, var7, var8);
+                                                this.field_y[(var7 << 8) + var8] = (byte)mm.a(var15, var16, var17, this.field_L, var14, var7, var8);
                                                 var8++;
                                                 continue L7;
                                               } else {
@@ -1255,19 +1239,19 @@ abstract class mm extends be {
                                   }
                                 }
                               } else {
-                                array$7 = new byte[var22[var7]];
+                                array$7 = new byte[var14[var7]];
                                 var6[var7] = array$7;
                                 var8 = 0;
                                 var9 = 0;
                                 L8: while (true) {
-                                  if (var9 >= var24[var7].length) {
+                                  if (var9 >= var16[var7].length) {
                                     var7++;
                                     continue L5;
                                   } else {
                                     incrementValue$8 = var2;
                                     var2++;
                                     var8 = (byte)(var8 + param0[incrementValue$8]);
-                                    var24[var7][var9] = (byte)var8;
+                                    var16[var7][var9] = (byte)var8;
                                     var9++;
                                     continue L8;
                                   }
@@ -1275,19 +1259,19 @@ abstract class mm extends be {
                               }
                             }
                           } else {
-                            array$9 = new byte[var22[var6_int]];
+                            array$9 = new byte[var14[var6_int]];
                             var5[var6_int] = array$9;
                             var7 = 0;
                             var8 = 0;
                             L9: while (true) {
-                              if (var8 >= var23[var6_int].length) {
+                              if (var8 >= var15[var6_int].length) {
                                 var6_int++;
                                 continue L4;
                               } else {
                                 incrementValue$10 = var2;
                                 var2++;
                                 var7 = (byte)(var7 + param0[incrementValue$10]);
-                                var23[var6_int][var8] = (byte)var7;
+                                var15[var6_int][var8] = (byte)var7;
                                 var8++;
                                 continue L9;
                               }

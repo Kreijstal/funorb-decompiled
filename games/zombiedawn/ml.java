@@ -28,10 +28,10 @@ final class ml {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((ml) this).field_c[var4] != null) {
-                    var5 = ((ml) this).field_c[var4].field_y * 22050 / 1000;
-                    var6 = ((ml) this).field_c[var4].field_b * 22050 / 1000;
-                    var13 = ((ml) this).field_c[var4].a(var5, ((ml) this).field_c[var4].field_y);
+                  if (this.field_c[var4] != null) {
+                    var5 = this.field_c[var4].field_y * 22050 / 1000;
+                    var6 = this.field_c[var4].field_b * 22050 / 1000;
+                    var13 = this.field_c[var4].a(var5, this.field_c[var4].field_y);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -62,9 +62,9 @@ final class ml {
               return new byte[]{};
             }
           } else {
-            if (((ml) this).field_c[var2] != null) {
-              if (((ml) this).field_c[var2].field_y + ((ml) this).field_c[var2].field_b > var1) {
-                var1 = ((ml) this).field_c[var2].field_y + ((ml) this).field_c[var2].field_b;
+            if (this.field_c[var2] != null) {
+              if (this.field_c[var2].field_y + this.field_c[var2].field_b > var1) {
+                var1 = this.field_c[var2].field_y + this.field_c[var2].field_b;
                 var2++;
                 continue L0;
               } else {
@@ -81,7 +81,7 @@ final class ml {
 
     final gi b() {
         byte[] var1 = this.a();
-        return new gi(22050, var1, 22050 * ((ml) this).field_a / 1000, 22050 * ((ml) this).field_b / 1000);
+        return new gi(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
     }
 
     final static ml a(dj param0, String param1, String param2) {
@@ -95,19 +95,19 @@ final class ml {
     private ml(de param0) {
         int var2 = 0;
         int var3 = 0;
-        ((ml) this).field_c = new ve[10];
+        this.field_c = new ve[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((ml) this).field_a = param0.f(2);
-            ((ml) this).field_b = param0.f(2);
+            this.field_a = param0.f(2);
+            this.field_b = param0.f(2);
             return;
           } else {
             var3 = param0.d((byte) -119);
             if (var3 != 0) {
               param0.field_j = param0.field_j - 1;
-              ((ml) this).field_c[var2] = new ve();
-              ((ml) this).field_c[var2].a(param0);
+              this.field_c[var2] = new ve();
+              this.field_c[var2].a(param0);
               var2++;
               continue L0;
             } else {

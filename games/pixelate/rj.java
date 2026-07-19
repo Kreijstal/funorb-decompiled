@@ -12,17 +12,17 @@ final class rj extends gn {
 
     final int g(int param0) {
         if (param0 < -92) {
-          if (((rj) this).field_D == null) {
+          if (this.field_D == null) {
             return 0;
           } else {
-            return ((rj) this).field_D.field_m * 100 / (-((rj) this).field_B + ((rj) this).field_D.field_k.length);
+            return this.field_D.field_m * 100 / (-this.field_B + this.field_D.field_k.length);
           }
         } else {
           rj.i(15);
-          if (((rj) this).field_D == null) {
+          if (this.field_D == null) {
             return 0;
           } else {
-            return ((rj) this).field_D.field_m * 100 / (-((rj) this).field_B + ((rj) this).field_D.field_k.length);
+            return this.field_D.field_m * 100 / (-this.field_B + this.field_D.field_k.length);
           }
         }
     }
@@ -35,17 +35,21 @@ final class rj extends gn {
     }
 
     final static nc j(int param0) {
-        return (nc) (Object) new k();
+        if (param0 != -30272) {
+            field_G = (uo) null;
+            return (nc) ((Object) new k());
+        }
+        return (nc) ((Object) new k());
     }
 
     final byte[] h(int param0) {
-        if (!((rj) this).field_v) {
-          if (((rj) this).field_D.field_m >= -((rj) this).field_B + ((rj) this).field_D.field_k.length) {
+        if (!this.field_v) {
+          if (this.field_D.field_m >= -this.field_B + this.field_D.field_k.length) {
             if (param0 != 0) {
-              ((rj) this).field_H = 39;
-              return ((rj) this).field_D.field_k;
+              this.field_H = 39;
+              return this.field_D.field_k;
             } else {
-              return ((rj) this).field_D.field_k;
+              return this.field_D.field_k;
             }
           } else {
             throw new RuntimeException();
@@ -73,7 +77,7 @@ final class rj extends gn {
         t.g(4, 0, t.field_d, var2);
         t.g(5, 0, t.field_d, var2);
         if (param0 != 7902) {
-          field_C = null;
+          field_C = (jj[]) null;
           t.g(-5 + t.field_j, 0, t.field_d, var2);
           t.g(-2 + t.field_j + -4, 0, t.field_d, var2);
           t.b(4, 0, -8 + t.field_j, var2);
@@ -116,10 +120,6 @@ final class rj extends gn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_F = new ge();
         field_C = new jj[8];
     }

@@ -24,6 +24,7 @@ final class ca {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
@@ -35,54 +36,60 @@ final class ca {
         String stackOut_8_2 = null;
         try {
           L0: {
-            L1: {
-              hb.field_j.field_S = param6;
-              if (2 == ui.field_g) {
-                oa.field_s.field_S = nj.field_c;
-                break L1;
-              } else {
-                oa.field_s.field_S = ml.field_x;
-                break L1;
+            if (param7 >= 101) {
+              L1: {
+                hb.field_j.field_S = param6;
+                if (2 == ui.field_g) {
+                  oa.field_s.field_S = nj.field_c;
+                  break L1;
+                } else {
+                  oa.field_s.field_S = ml.field_x;
+                  break L1;
+                }
               }
+              var9_int = 495;
+              var10 = 5;
+              gg.field_o.a(88, -10 + var9_int, param3, var10, 5);
+              dj.field_d.a(97, -ui.field_b.field_Fb + gg.field_o.field_Fb, param3, 0, 0);
+              var10 = var10 + (param8 + param3);
+              ui.field_b.a(83, ui.field_b.field_Fb, param3, 0, dj.field_d.field_Fb);
+              kk.field_a.a(94, kk.field_a.j(-21391), param1, var10, 5);
+              var11 = oa.field_s.j(-21391);
+              oa.field_s.a(120, var11, param1, var10, -5 + var9_int + -var11);
+              hb.field_j.a(121, var9_int, param4, 0, 0);
+              var12 = 5 + var10 - -param1;
+              lm.field_F.a(120, var9_int, var12, param4, 0);
+              lm.field_F.field_Bb = vl.a(lm.field_F.field_db, 3, 0, 2105376, 11579568, 8421504);
+              var12 = var12 + param4;
+              gk.field_c.a(72, var9_int, var12, param0 - var12 / 2, -(var9_int / 2) + param5);
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-            var9_int = 495;
-            var10 = 5;
-            gg.field_o.a(88, -10 + var9_int, param3, var10, 5);
-            dj.field_d.a(97, -ui.field_b.field_Fb + gg.field_o.field_Fb, param3, 0, 0);
-            var10 = var10 + (param8 + param3);
-            ui.field_b.a(83, ui.field_b.field_Fb, param3, 0, dj.field_d.field_Fb);
-            kk.field_a.a(94, kk.field_a.j(-21391), param1, var10, 5);
-            var11 = oa.field_s.j(-21391);
-            oa.field_s.a(120, var11, param1, var10, -5 + var9_int + -var11);
-            hb.field_j.a(121, var9_int, 20, 0, 0);
-            var12 = 5 + var10 - -param1;
-            lm.field_F.a(120, var9_int, var12, 20, 0);
-            lm.field_F.field_Bb = vl.a(lm.field_F.field_db, 3, 0, 2105376, 11579568, 8421504);
-            var12 = var12 + 20;
-            gk.field_c.a(72, var9_int, var12, param0 - var12 / 2, -(var9_int / 2) + param5);
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var9 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var9;
-            stackOut_7_1 = new StringBuilder().append("ca.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(20).append(',').append(param5).append(',');
+            stackOut_7_0 = (RuntimeException) (var9);
+            stackOut_7_1 = new StringBuilder().append("ca.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param6 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -90,7 +97,12 @@ final class ca {
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + 126 + ',' + param8 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param7 + ',' + param8 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -99,8 +111,11 @@ final class ca {
         int var6 = Vertigo2.field_L ? 1 : 0;
         er[] var7 = new er[9];
         er[] var4 = var7;
-        var7[0] = ed.a(param3, 1, false);
-        for (var5 = 1; var5 < 9; var5++) {
+        if (param0 > -73) {
+            return (er[]) null;
+        }
+        var7[0] = ed.a(param3, param2, false);
+        for (var5 = 1; -10 < (var5 ^ -1); var5++) {
             var7[var5] = var7[0];
         }
         var4[4] = ed.a(param1, 64, false);
@@ -579,10 +594,6 @@ final class ca {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "<%0> has resigned.";
         field_c = -1;
         field_d = "Accept";

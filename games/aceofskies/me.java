@@ -9,13 +9,12 @@ final class me {
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 < 29) {
+            field_b = 75;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "me.A(";
         field_b = 0;
         field_a = "Instructions";

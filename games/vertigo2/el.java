@@ -14,8 +14,9 @@ final class el implements Iterable {
     static cr field_b;
 
     final static int b(boolean param0) {
+        int discarded$0 = 0;
         if (!param0) {
-            int discarded$0 = el.b(false);
+            discarded$0 = el.b(false);
         }
         return (int)(1000000000L / sl.field_w);
     }
@@ -25,11 +26,14 @@ final class el implements Iterable {
         field_a = null;
         field_h = null;
         field_b = null;
+        if (param0) {
+            field_b = (cr) null;
+        }
         field_d = null;
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new gf((el) this);
+        return (Iterator) ((Object) new gf((el) (this)));
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -49,22 +53,30 @@ final class el implements Iterable {
         var18 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            var12 = pk.a((byte) -14, cj.field_D, param6, ua.field_e);
-            var13 = pk.a((byte) -14, cj.field_D, param5, ua.field_e);
-            var14 = pk.a((byte) -14, ib.field_a, param3, ap.field_e);
-            var15 = pk.a((byte) -14, ib.field_a, param4, ap.field_e);
+            L1: {
+              var12 = pk.a((byte) -14, cj.field_D, param6, ua.field_e);
+              var13 = pk.a((byte) -14, cj.field_D, param5, ua.field_e);
+              var14 = pk.a((byte) -14, ib.field_a, param3, ap.field_e);
+              var15 = pk.a((byte) -14, ib.field_a, param4, ap.field_e);
+              if (param1 < -122) {
+                break L1;
+              } else {
+                field_h = (cr[]) null;
+                break L1;
+              }
+            }
             var8_int = pk.a((byte) -14, cj.field_D, param0 + param6, ua.field_e);
             var9 = pk.a((byte) -14, cj.field_D, -param0 + param5, ua.field_e);
             var16 = var12;
-            L1: while (true) {
+            L2: while (true) {
               if (var16 >= var8_int) {
                 var16 = var13;
-                L2: while (true) {
+                L3: while (true) {
                   if (var9 >= var16) {
                     var10 = pk.a((byte) -14, ib.field_a, param0 + param3, ap.field_e);
                     var11 = pk.a((byte) -14, ib.field_a, -param0 + param4, ap.field_e);
                     var16 = var8_int;
-                    L3: while (true) {
+                    L4: while (true) {
                       if (var9 < var16) {
                         break L0;
                       } else {
@@ -73,93 +85,91 @@ final class el implements Iterable {
                         ki.a(-81, var10, var22, var11, param2);
                         ki.a(-123, var11, var22, var15, param7);
                         var16++;
-                        continue L3;
+                        continue L4;
                       }
                     }
                   } else {
                     ki.a(-75, var14, vl.field_e[var16], var15, param7);
                     var16--;
-                    continue L2;
+                    continue L3;
                   }
                 }
               } else {
                 ki.a(-111, var14, vl.field_e[var16], var15, param7);
                 var16++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var8, "el.F(" + param0 + ',' + -124 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw wn.a((Throwable) ((Object) var8), "el.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     final li a(long param0, byte param1) {
         li var5 = null;
         int var6 = Vertigo2.field_L ? 1 : 0;
-        li var4 = ((el) this).field_f[(int)(param0 & (long)(((el) this).field_c - 1))];
+        li var4 = this.field_f[(int)(param0 & (long)(this.field_c - 1))];
         if (param1 < 22) {
-            return null;
+            return (li) null;
         }
-        ((el) this).field_g = var4.field_c;
-        while (((el) this).field_g != var4) {
-            if (((el) this).field_g.field_k == param0) {
-                var5 = ((el) this).field_g;
-                ((el) this).field_g = ((el) this).field_g.field_c;
+        this.field_g = var4.field_c;
+        while (this.field_g != var4) {
+            if (this.field_g.field_k == param0) {
+                var5 = this.field_g;
+                this.field_g = this.field_g.field_c;
                 return var5;
             }
-            ((el) this).field_g = ((el) this).field_g.field_c;
+            this.field_g = this.field_g.field_c;
         }
-        ((el) this).field_g = null;
+        this.field_g = null;
         return null;
     }
 
     final void a(long param0, li param1, int param2) {
         li var5 = null;
+        int discarded$0 = 0;
         try {
             if (!(param1.field_a == null)) {
                 param1.c(2);
             }
-            var5 = ((el) this).field_f[(int)((long)(((el) this).field_c + -1) & param0)];
+            var5 = this.field_f[(int)((long)(this.field_c + -1) & param0)];
             param1.field_c = var5;
             param1.field_a = var5.field_a;
             param1.field_a.field_c = param1;
             if (param2 <= 74) {
-                int discarded$0 = el.b(false);
+                discarded$0 = el.b(false);
             }
             param1.field_c.field_a = param1;
             param1.field_k = param0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "el.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "el.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static int a(byte param0) {
-        int var1 = -92;
+        int var1 = -92 / ((-8 - param0) / 56);
         return -pk.field_o + qp.field_d;
     }
 
     el(int param0) {
         int var2 = 0;
+        li dupTemp$0 = null;
         li var3 = null;
-        ((el) this).field_f = new li[param0];
-        ((el) this).field_c = param0;
+        this.field_f = new li[param0];
+        this.field_c = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            li dupTemp$0 = new li();
+            dupTemp$0 = new li();
             var3 = dupTemp$0;
-            ((el) this).field_f[var2] = dupTemp$0;
+            this.field_f[var2] = dupTemp$0;
             var3.field_c = var3;
             var3.field_a = var3;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new ll();
     }
 }

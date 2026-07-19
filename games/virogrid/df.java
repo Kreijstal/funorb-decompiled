@@ -64,8 +64,8 @@ final class df {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            df.d(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
-            df.c(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
+            df.d(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+            df.c(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
@@ -154,6 +154,13 @@ final class df {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -271,7 +278,7 @@ final class df {
                               if (var17 <= var14) {
                                 break L11;
                               } else {
-                                int incrementValue$7 = var15;
+                                incrementValue$7 = var15;
                                 var15--;
                                 var18 = var18 - (incrementValue$7 + var15);
                                 var17 = var17 - (var15 + var15);
@@ -303,14 +310,14 @@ final class df {
                             if (var22 > var20) {
                               var13++;
                               var18 = var18 + (var16 + var16);
-                              int incrementValue$8 = var16;
+                              incrementValue$8 = var16;
                               var16++;
                               var17 = var17 + (incrementValue$8 + var16);
                               continue L9;
                             } else {
                               var23 = field_d[var21];
                               var23 = ((var23 & 16711935) * var7 >> 8 & 16711935) + ((var23 & 65280) * var7 >> 8 & 65280);
-                              int incrementValue$9 = var21;
+                              incrementValue$9 = var21;
                               var21++;
                               field_d[incrementValue$9] = param5 + var23;
                               var22++;
@@ -330,7 +337,7 @@ final class df {
                       } else {
                         var25 = field_d[var21];
                         var25 = ((var25 & 16711935) * var7 >> 8 & 16711935) + ((var25 & 65280) * var7 >> 8 & 65280);
-                        int incrementValue$10 = var21;
+                        incrementValue$10 = var21;
                         var21++;
                         field_d[incrementValue$10] = param5 + var25;
                         var24++;
@@ -369,7 +376,7 @@ final class df {
                         L20: while (true) {
                           if (var22 >= var20) {
                             var13++;
-                            int incrementValue$11 = var16;
+                            incrementValue$11 = var16;
                             var16--;
                             var17 = var17 - (incrementValue$11 + var16);
                             var18 = var18 - (var16 + var16);
@@ -377,7 +384,7 @@ final class df {
                           } else {
                             var23 = field_d[var21];
                             var23 = ((var23 & 16711935) * var7 >> 8 & 16711935) + ((var23 & 65280) * var7 >> 8 & 65280);
-                            int incrementValue$12 = var21;
+                            incrementValue$12 = var21;
                             var21++;
                             field_d[incrementValue$12] = param5 + var23;
                             var22++;
@@ -390,7 +397,7 @@ final class df {
                     }
                   }
                   var17 = var17 + (var15 + var15);
-                  int incrementValue$13 = var15;
+                  incrementValue$13 = var15;
                   var15++;
                   var18 = var18 + (incrementValue$13 + var15);
                   continue L16;
@@ -550,6 +557,7 @@ final class df {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int incrementValue$0 = 0;
         if (param0 < field_i) {
             param2 = param2 - (field_i - param0);
             param0 = field_i;
@@ -576,7 +584,7 @@ final class df {
                     var9 = var7 >> 8 & 255;
                     var10 = var7 & 255;
                     var11 = (var10 + var8) / 3 + var9 >> 1;
-                    int incrementValue$0 = var4;
+                    incrementValue$0 = var4;
                     var4++;
                     field_d[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
                 }
@@ -711,9 +719,9 @@ final class df {
                 param2 = field_h - param1;
             }
             var5 = 256 - param4;
-            var6 = 85 * param4;
-            var7 = 85 * param4;
-            var8 = 85 * param4;
+            var6 = (param3 >> 16 & 255) * param4;
+            var7 = (param3 >> 8 & 255) * param4;
+            var8 = (param3 & 255) * param4;
             var12 = param0 + param1 * field_e;
             for (var13 = 0; var13 < param2; var13++) {
                 var9 = (field_d[var12] >> 16 & 255) * var5;
@@ -728,6 +736,12 @@ final class df {
     }
 
     final static void c(int param0, int param1, int param2, int param3) {
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -800,7 +814,7 @@ final class df {
                         if (var10 <= var7) {
                           break L7;
                         } else {
-                          int incrementValue$6 = var8;
+                          incrementValue$6 = var8;
                           var8--;
                           var11 = var11 - (incrementValue$6 + var8);
                           var10 = var10 - (var8 + var8);
@@ -832,12 +846,12 @@ final class df {
                       if (var15 > var13) {
                         var6++;
                         var11 = var11 + (var9 + var9);
-                        int incrementValue$7 = var9;
+                        incrementValue$7 = var9;
                         var9++;
                         var10 = var10 + (incrementValue$7 + var9);
                         continue L5;
                       } else {
-                        int incrementValue$8 = var14;
+                        incrementValue$8 = var14;
                         var14++;
                         field_d[incrementValue$8] = param3;
                         var15++;
@@ -877,13 +891,13 @@ final class df {
                       L15: while (true) {
                         if (var15 >= var13) {
                           var6++;
-                          int incrementValue$9 = var9;
+                          incrementValue$9 = var9;
                           var9--;
                           var10 = var10 - (incrementValue$9 + var9);
                           var11 = var11 - (var9 + var9);
                           continue L4;
                         } else {
-                          int incrementValue$10 = var14;
+                          incrementValue$10 = var14;
                           var14++;
                           field_d[incrementValue$10] = param3;
                           var15++;
@@ -896,7 +910,7 @@ final class df {
                   }
                 }
                 var10 = var10 + (var8 + var8);
-                int incrementValue$11 = var8;
+                incrementValue$11 = var8;
                 var8++;
                 var11 = var11 + (incrementValue$11 + var8);
                 continue L11;
@@ -910,6 +924,15 @@ final class df {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         int[] var9 = null;
         int[] var10 = null;
         int[] var11 = null;
@@ -931,12 +954,6 @@ final class df {
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
-        int[] var30 = null;
-        int[] var31 = null;
-        int[] var32 = null;
-        int[] var33 = null;
-        int[] var34 = null;
-        int[] var35 = null;
         int[] stackIn_37_0 = null;
         int stackIn_37_1 = 0;
         int[] stackIn_38_0 = null;
@@ -987,39 +1004,33 @@ final class df {
             if (field_a == null) {
               break L1;
             } else {
-              if (field_a.length >= 540) {
+              if (field_a.length >= param8) {
                 break L0;
               } else {
                 break L1;
               }
             }
           }
-          field_a = new int[540];
-          field_c = new int[540];
-          field_l = new int[540];
+          field_a = new int[param8];
+          field_c = new int[param8];
+          field_l = new int[param8];
           break L0;
         }
         L2: {
-          var33 = field_a;
-          var30 = var33;
-          var27 = var30;
+          var27 = field_a;
           var24 = var27;
           var9 = var24;
-          var34 = field_c;
-          var31 = var34;
-          var28 = var31;
+          var28 = field_c;
           var25 = var28;
           var10 = var25;
-          var35 = field_l;
-          var32 = var35;
-          var29 = var32;
+          var29 = field_l;
           var26 = var29;
           var11 = var26;
-          ek.a(var33, 0, 540);
-          ek.a(var34, 0, 540);
-          ek.a(var35, 0, 540);
-          var12 = 1820;
-          var13 = -4;
+          ek.a(var27, 0, param8);
+          ek.a(var28, 0, param8);
+          ek.a(var29, 0, param8);
+          var12 = 16384 / (2 * param3 + 1);
+          var13 = param4 - param3;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -1028,8 +1039,8 @@ final class df {
           }
         }
         L3: {
-          var14 = var13 * field_e;
-          var15 = 4;
+          var14 = param7 + var13 * field_e;
+          var15 = param4 + param3;
           var16 = 0;
           if (var15 < field_f) {
             break L3;
@@ -1045,11 +1056,11 @@ final class df {
             var14 = var14 + var16 * field_e;
             var18 = 0;
             L5: while (true) {
-              if (var18 >= 540) {
+              if (var18 >= param8) {
                 L6: {
                   param2 = param2 + param6;
-                  var13 = -139;
-                  var18 = -135;
+                  var13 = 1 - param5;
+                  var18 = 1 + param3 - param5 - param4;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -1058,7 +1069,7 @@ final class df {
                   }
                 }
                 L7: {
-                  var19 = -4 * field_e;
+                  var19 = param7 + (param4 - param3) * field_e;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -1069,7 +1080,7 @@ final class df {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_f - 144;
+                      var18 = field_f - param4 - param5 - param3;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -1085,20 +1096,20 @@ final class df {
                           } else {
                             var20 = 0;
                             L12: while (true) {
-                              if (var20 >= 540) {
+                              if (var20 >= param8) {
                                 var19 = var19 + param6;
                                 var17--;
                                 var20 = 0;
                                 L13: while (true) {
-                                  if (var20 >= 540) {
+                                  if (var20 >= param8) {
                                     param2 = param2 + param6;
                                     var13++;
                                     continue L11;
                                   } else {
                                     L14: {
-                                      var21 = var33[var20] / var17;
-                                      var22 = var34[var20] / var17;
-                                      var23 = var35[var20] / var17;
+                                      var21 = var27[var20] / var17;
+                                      var22 = var28[var20] / var17;
+                                      var23 = var29[var20] / var17;
                                       if (var21 >= 0) {
                                         if (var21 <= 255) {
                                           break L14;
@@ -1137,7 +1148,7 @@ final class df {
                                         break L16;
                                       }
                                     }
-                                    int incrementValue$9 = param2;
+                                    incrementValue$9 = param2;
                                     param2++;
                                     param0[incrementValue$9] = (var21 << 16) + (var22 << 8) + var23;
                                     var20++;
@@ -1145,7 +1156,7 @@ final class df {
                                   }
                                 }
                               } else {
-                                int incrementValue$10 = var19;
+                                incrementValue$10 = var19;
                                 var19++;
                                 param1 = param0[incrementValue$10];
                                 var9[var20] = var9[var20] - (param1 >> 16 & 255);
@@ -1160,23 +1171,23 @@ final class df {
                       } else {
                         var20 = 0;
                         L17: while (true) {
-                          if (var20 >= 540) {
+                          if (var20 >= param8) {
                             var19 = var19 + param6;
                             var20 = 0;
                             L18: while (true) {
-                              if (var20 >= 540) {
+                              if (var20 >= param8) {
                                 var14 = var14 + param6;
                                 var20 = 0;
                                 L19: while (true) {
-                                  if (var20 >= 540) {
+                                  if (var20 >= param8) {
                                     param2 = param2 + param6;
                                     var13++;
                                     continue L10;
                                   } else {
                                     L20: {
-                                      var21 = var33[var20] * var12 >> 14;
-                                      var22 = var34[var20] * var12 >> 14;
-                                      var23 = var35[var20] * var12 >> 14;
+                                      var21 = var27[var20] * var12 >> 14;
+                                      var22 = var28[var20] * var12 >> 14;
+                                      var23 = var29[var20] * var12 >> 14;
                                       if (var21 <= 255) {
                                         break L20;
                                       } else {
@@ -1200,7 +1211,7 @@ final class df {
                                         break L22;
                                       }
                                     }
-                                    int incrementValue$11 = param2;
+                                    incrementValue$11 = param2;
                                     param2++;
                                     param0[incrementValue$11] = (var21 << 16) + (var22 << 8) + var23;
                                     var20++;
@@ -1208,7 +1219,7 @@ final class df {
                                   }
                                 }
                               } else {
-                                int incrementValue$12 = var14;
+                                incrementValue$12 = var14;
                                 var14++;
                                 param1 = param0[incrementValue$12];
                                 var9[var20] = var9[var20] + (param1 >> 16 & 255);
@@ -1220,18 +1231,18 @@ final class df {
                             }
                           } else {
                             L23: {
-                              int incrementValue$13 = var19;
+                              incrementValue$13 = var19;
                               var19++;
                               param1 = param0[incrementValue$13];
-                              var21 = var33[var20] - (param1 >> 16 & 255);
-                              stackOut_36_0 = (int[]) var9;
+                              var21 = var27[var20] - (param1 >> 16 & 255);
+                              stackOut_36_0 = (int[]) (var9);
                               stackOut_36_1 = var20;
                               stackIn_38_0 = stackOut_36_0;
                               stackIn_38_1 = stackOut_36_1;
                               stackIn_37_0 = stackOut_36_0;
                               stackIn_37_1 = stackOut_36_1;
                               if (var21 >= 0) {
-                                stackOut_38_0 = (int[]) (Object) stackIn_38_0;
+                                stackOut_38_0 = (int[]) ((Object) stackIn_38_0);
                                 stackOut_38_1 = stackIn_38_1;
                                 stackOut_38_2 = var21;
                                 stackIn_39_0 = stackOut_38_0;
@@ -1239,7 +1250,7 @@ final class df {
                                 stackIn_39_2 = stackOut_38_2;
                                 break L23;
                               } else {
-                                stackOut_37_0 = (int[]) (Object) stackIn_37_0;
+                                stackOut_37_0 = (int[]) ((Object) stackIn_37_0);
                                 stackOut_37_1 = stackIn_37_1;
                                 stackOut_37_2 = 0;
                                 stackIn_39_0 = stackOut_37_0;
@@ -1250,15 +1261,15 @@ final class df {
                             }
                             L24: {
                               stackIn_39_0[stackIn_39_1] = stackIn_39_2;
-                              var21 = var34[var20] - (param1 >> 8 & 255);
-                              stackOut_39_0 = (int[]) var10;
+                              var21 = var28[var20] - (param1 >> 8 & 255);
+                              stackOut_39_0 = (int[]) (var10);
                               stackOut_39_1 = var20;
                               stackIn_41_0 = stackOut_39_0;
                               stackIn_41_1 = stackOut_39_1;
                               stackIn_40_0 = stackOut_39_0;
                               stackIn_40_1 = stackOut_39_1;
                               if (var21 >= 0) {
-                                stackOut_41_0 = (int[]) (Object) stackIn_41_0;
+                                stackOut_41_0 = (int[]) ((Object) stackIn_41_0);
                                 stackOut_41_1 = stackIn_41_1;
                                 stackOut_41_2 = var21;
                                 stackIn_42_0 = stackOut_41_0;
@@ -1266,7 +1277,7 @@ final class df {
                                 stackIn_42_2 = stackOut_41_2;
                                 break L24;
                               } else {
-                                stackOut_40_0 = (int[]) (Object) stackIn_40_0;
+                                stackOut_40_0 = (int[]) ((Object) stackIn_40_0);
                                 stackOut_40_1 = stackIn_40_1;
                                 stackOut_40_2 = 0;
                                 stackIn_42_0 = stackOut_40_0;
@@ -1277,15 +1288,15 @@ final class df {
                             }
                             L25: {
                               stackIn_42_0[stackIn_42_1] = stackIn_42_2;
-                              var21 = var35[var20] - (param1 & 255);
-                              stackOut_42_0 = (int[]) var11;
+                              var21 = var29[var20] - (param1 & 255);
+                              stackOut_42_0 = (int[]) (var11);
                               stackOut_42_1 = var20;
                               stackIn_44_0 = stackOut_42_0;
                               stackIn_44_1 = stackOut_42_1;
                               stackIn_43_0 = stackOut_42_0;
                               stackIn_43_1 = stackOut_42_1;
                               if (var21 >= 0) {
-                                stackOut_44_0 = (int[]) (Object) stackIn_44_0;
+                                stackOut_44_0 = (int[]) ((Object) stackIn_44_0);
                                 stackOut_44_1 = stackIn_44_1;
                                 stackOut_44_2 = var21;
                                 stackIn_45_0 = stackOut_44_0;
@@ -1293,7 +1304,7 @@ final class df {
                                 stackIn_45_2 = stackOut_44_2;
                                 break L25;
                               } else {
-                                stackOut_43_0 = (int[]) (Object) stackIn_43_0;
+                                stackOut_43_0 = (int[]) ((Object) stackIn_43_0);
                                 stackOut_43_1 = stackIn_43_1;
                                 stackOut_43_2 = 0;
                                 stackIn_45_0 = stackOut_43_0;
@@ -1311,18 +1322,18 @@ final class df {
                     }
                   } else {
                     L26: {
-                      if (var13 + 144 >= field_h) {
+                      if (var13 + param4 + param5 + param3 >= field_h) {
                         var14 = var14 + field_e;
                         break L26;
                       } else {
                         var20 = 0;
                         L27: while (true) {
-                          if (var20 >= 540) {
+                          if (var20 >= param8) {
                             var14 = var14 + param6;
                             var17++;
                             break L26;
                           } else {
-                            int incrementValue$14 = var14;
+                            incrementValue$14 = var14;
                             var14++;
                             param1 = param0[incrementValue$14];
                             var9[var20] = var9[var20] + (param1 >> 16 & 255);
@@ -1336,15 +1347,15 @@ final class df {
                     }
                     var20 = 0;
                     L28: while (true) {
-                      if (var20 >= 540) {
+                      if (var20 >= param8) {
                         param2 = param2 + param6;
                         var13++;
                         continue L8;
                       } else {
-                        var21 = var33[var20] / var17;
-                        var22 = var34[var20] / var17;
-                        var23 = var35[var20] / var17;
-                        int incrementValue$15 = param2;
+                        var21 = var27[var20] / var17;
+                        var22 = var28[var20] / var17;
+                        var23 = var29[var20] / var17;
+                        incrementValue$15 = param2;
                         param2++;
                         param0[incrementValue$15] = (var21 << 16) + (var22 << 8) + var23;
                         var20++;
@@ -1354,9 +1365,9 @@ final class df {
                   }
                 }
               } else {
-                int incrementValue$16 = param2;
+                incrementValue$16 = param2;
                 param2++;
-                param0[incrementValue$16] = (var33[var18] / var17 << 16) + (var34[var18] / var17 << 8) + var35[var18] / var17;
+                param0[incrementValue$16] = (var27[var18] / var17 << 16) + (var28[var18] / var17 << 8) + var29[var18] / var17;
                 var18++;
                 continue L5;
               }
@@ -1364,12 +1375,12 @@ final class df {
           } else {
             var18 = 0;
             L29: while (true) {
-              if (var18 >= 540) {
+              if (var18 >= param8) {
                 var14 = var14 + param6;
                 var13++;
                 continue L4;
               } else {
-                int incrementValue$17 = var14;
+                incrementValue$17 = var14;
                 var14++;
                 param1 = param0[incrementValue$17];
                 var9[var18] = var9[var18] + (param1 >> 16 & 255);
@@ -1384,6 +1395,13 @@ final class df {
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1496,7 +1514,7 @@ final class df {
                             if (var15 <= var12) {
                               break L11;
                             } else {
-                              int incrementValue$7 = var13;
+                              incrementValue$7 = var13;
                               var13--;
                               var16 = var16 - (incrementValue$7 + var13);
                               var15 = var15 - (var13 + var13);
@@ -1528,12 +1546,12 @@ final class df {
                           if (var20 > var18) {
                             var11++;
                             var16 = var16 + (var14 + var14);
-                            int incrementValue$8 = var14;
+                            incrementValue$8 = var14;
                             var14++;
                             var15 = var15 + (incrementValue$8 + var14);
                             continue L9;
                           } else {
-                            int incrementValue$9 = var19;
+                            incrementValue$9 = var19;
                             var19++;
                             field_d[incrementValue$9] = param5;
                             var20++;
@@ -1551,7 +1569,7 @@ final class df {
                       var19 = var19 + var20;
                       continue L8;
                     } else {
-                      int incrementValue$10 = var19;
+                      incrementValue$10 = var19;
                       var19++;
                       field_d[incrementValue$10] = param5;
                       var22++;
@@ -1590,13 +1608,13 @@ final class df {
                       L20: while (true) {
                         if (var20 >= var18) {
                           var11++;
-                          int incrementValue$11 = var14;
+                          incrementValue$11 = var14;
                           var14--;
                           var15 = var15 - (incrementValue$11 + var14);
                           var16 = var16 - (var14 + var14);
                           continue L4;
                         } else {
-                          int incrementValue$12 = var19;
+                          incrementValue$12 = var19;
                           var19++;
                           field_d[incrementValue$12] = param5;
                           var20++;
@@ -1609,7 +1627,7 @@ final class df {
                   }
                 }
                 var15 = var15 + (var13 + var13);
-                int incrementValue$13 = var13;
+                incrementValue$13 = var13;
                 var13++;
                 var16 = var16 + (incrementValue$13 + var13);
                 continue L16;
@@ -1623,6 +1641,8 @@ final class df {
     }
 
     final static void f(int param0, int param1, int param2, int param3) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1675,13 +1695,13 @@ final class df {
                                     break L4;
                                   } else {
                                     if (param1 + var8 < field_h) {
-                                      field_d[var4 - var8] = 16776964;
-                                      field_d[var4 + var8] = 16776964;
-                                      field_d[var6] = 16776964;
-                                      field_d[var7] = 16776964;
+                                      field_d[var4 - var8] = param3;
+                                      field_d[var4 + var8] = param3;
+                                      field_d[var6] = param3;
+                                      field_d[var7] = param3;
                                       L5: while (true) {
                                         L6: {
-                                          int incrementValue$2 = var9;
+                                          incrementValue$2 = var9;
                                           var9++;
                                           var10 = var10 + (incrementValue$2 + var9);
                                           var4 = var4 - field_e;
@@ -1697,14 +1717,14 @@ final class df {
                                           }
                                         }
                                         if (var8 >= var9) {
-                                          field_d[var6 - var9] = 16776964;
-                                          field_d[var6 + var9] = 16776964;
-                                          field_d[var4 - var8] = 16776964;
-                                          field_d[var4 + var8] = 16776964;
-                                          field_d[var5 - var8] = 16776964;
-                                          field_d[var5 + var8] = 16776964;
-                                          field_d[var7 - var9] = 16776964;
-                                          field_d[var7 + var9] = 16776964;
+                                          field_d[var6 - var9] = param3;
+                                          field_d[var6 + var9] = param3;
+                                          field_d[var4 - var8] = param3;
+                                          field_d[var4 + var8] = param3;
+                                          field_d[var5 - var8] = param3;
+                                          field_d[var5 + var8] = param3;
+                                          field_d[var7 - var9] = param3;
+                                          field_d[var7 + var9] = param3;
                                           continue L5;
                                         } else {
                                           break L3;
@@ -1727,7 +1747,7 @@ final class df {
                                   if (param1 >= field_h) {
                                     break L7;
                                   } else {
-                                    field_d[var4 - var8] = 16776964;
+                                    field_d[var4 - var8] = param3;
                                     break L7;
                                   }
                                 }
@@ -1743,7 +1763,7 @@ final class df {
                                   if (param1 >= field_h) {
                                     break L8;
                                   } else {
-                                    field_d[var4 + var8] = 16776964;
+                                    field_d[var4 + var8] = param3;
                                     break L8;
                                   }
                                 }
@@ -1760,7 +1780,7 @@ final class df {
                                     if (param0 >= field_k) {
                                       break L9;
                                     } else {
-                                      field_d[var7] = 16776964;
+                                      field_d[var7] = param3;
                                       break L9;
                                     }
                                   }
@@ -1775,7 +1795,7 @@ final class df {
                                     if (param0 >= field_k) {
                                       break L9;
                                     } else {
-                                      field_d[var7] = 16776964;
+                                      field_d[var7] = param3;
                                       break L9;
                                     }
                                   }
@@ -1784,7 +1804,7 @@ final class df {
                             }
                             L10: while (true) {
                               L11: {
-                                int incrementValue$3 = var9;
+                                incrementValue$3 = var9;
                                 var9++;
                                 var10 = var10 + (incrementValue$3 + var9);
                                 var4 = var4 - field_e;
@@ -1814,7 +1834,7 @@ final class df {
                                           if (param0 - var9 >= field_k) {
                                             break L13;
                                           } else {
-                                            field_d[var6 - var9] = 16776964;
+                                            field_d[var6 - var9] = param3;
                                             break L13;
                                           }
                                         }
@@ -1825,7 +1845,7 @@ final class df {
                                         if (param0 + var9 >= field_k) {
                                           break L12;
                                         } else {
-                                          field_d[var6 + var9] = 16776964;
+                                          field_d[var6 + var9] = param3;
                                           break L12;
                                         }
                                       }
@@ -1846,7 +1866,7 @@ final class df {
                                           if (param0 - var8 >= field_k) {
                                             break L15;
                                           } else {
-                                            field_d[var4 - var8] = 16776964;
+                                            field_d[var4 - var8] = param3;
                                             break L15;
                                           }
                                         }
@@ -1857,7 +1877,7 @@ final class df {
                                         if (param0 + var8 >= field_k) {
                                           break L14;
                                         } else {
-                                          field_d[var4 + var8] = 16776964;
+                                          field_d[var4 + var8] = param3;
                                           break L14;
                                         }
                                       }
@@ -1878,7 +1898,7 @@ final class df {
                                           if (param0 - var8 >= field_k) {
                                             break L17;
                                           } else {
-                                            field_d[var5 - var8] = 16776964;
+                                            field_d[var5 - var8] = param3;
                                             break L17;
                                           }
                                         }
@@ -1889,7 +1909,7 @@ final class df {
                                         if (param0 + var8 >= field_k) {
                                           break L16;
                                         } else {
-                                          field_d[var5 + var8] = 16776964;
+                                          field_d[var5 + var8] = param3;
                                           break L16;
                                         }
                                       }
@@ -1909,7 +1929,7 @@ final class df {
                                         if (param0 - var9 >= field_k) {
                                           break L18;
                                         } else {
-                                          field_d[var7 - var9] = 16776964;
+                                          field_d[var7 - var9] = param3;
                                           break L18;
                                         }
                                       }
@@ -1920,7 +1940,7 @@ final class df {
                                       if (param0 + var9 >= field_k) {
                                         continue L10;
                                       } else {
-                                        field_d[var7 + var9] = 16776964;
+                                        field_d[var7 + var9] = param3;
                                         continue L10;
                                       }
                                     }
@@ -1947,7 +1967,7 @@ final class df {
           }
           return;
         } else {
-          df.a(param0, param1, 16776964);
+          df.a(param0, param1, param3);
           return;
         }
     }
@@ -1962,6 +1982,8 @@ final class df {
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -2046,7 +2068,7 @@ final class df {
                                                     if (var22 > var17) {
                                                       L9: while (true) {
                                                         L10: {
-                                                          int incrementValue$2 = var19;
+                                                          incrementValue$2 = var19;
                                                           var19++;
                                                           var21 = var21 + (incrementValue$2 + var19);
                                                           var12 = var12 - field_e;
@@ -2066,39 +2088,39 @@ final class df {
                                                           }
                                                         }
                                                         if (var18 >= var19) {
-                                                          field_d[var10 - var19] = 1141646;
-                                                          field_d[var11 + var19] = 1141646;
-                                                          field_d[var12 - var18] = 1141646;
-                                                          field_d[var13 + var18] = 1141646;
-                                                          field_d[var14 - var18] = 1141646;
-                                                          field_d[var15 + var18] = 1141646;
-                                                          field_d[var16 - var19] = 1141646;
-                                                          field_d[var17 + var19] = 1141646;
+                                                          field_d[var10 - var19] = param5;
+                                                          field_d[var11 + var19] = param5;
+                                                          field_d[var12 - var18] = param5;
+                                                          field_d[var13 + var18] = param5;
+                                                          field_d[var14 - var18] = param5;
+                                                          field_d[var15 + var18] = param5;
+                                                          field_d[var16 - var19] = param5;
+                                                          field_d[var17 + var19] = param5;
                                                           continue L9;
                                                         } else {
                                                           break L3;
                                                         }
                                                       }
                                                     } else {
-                                                      field_d[var22] = 1141646;
+                                                      field_d[var22] = param5;
                                                       var22++;
                                                       continue L8;
                                                     }
                                                   }
                                                 } else {
-                                                  field_d[var22] = 1141646;
+                                                  field_d[var22] = param5;
                                                   var22++;
                                                   continue L7;
                                                 }
                                               }
                                             } else {
-                                              field_d[var22 + var18] = 1141646;
+                                              field_d[var22 + var18] = param5;
                                               var22 = var22 + field_e;
                                               continue L6;
                                             }
                                           }
                                         } else {
-                                          field_d[var22 - var18] = 1141646;
+                                          field_d[var22 - var18] = param5;
                                           var22 = var22 + field_e;
                                           continue L5;
                                         }
@@ -2110,13 +2132,13 @@ final class df {
                                 }
                               }
                             }
-                            df.d(param0, param1 + var18, param3 - var18 - var18, 1141646);
-                            df.d(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, 1141646);
-                            df.b(param0 + var18, param1, param2 - var18 - var18, 1141646);
-                            df.b(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, 1141646);
+                            df.d(param0, param1 + var18, param3 - var18 - var18, param5);
+                            df.d(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
+                            df.b(param0 + var18, param1, param2 - var18 - var18, param5);
+                            df.b(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
                             L11: while (true) {
                               L12: {
-                                int incrementValue$3 = var19;
+                                incrementValue$3 = var19;
                                 var19++;
                                 var21 = var21 + (incrementValue$3 + var19);
                                 var12 = var12 - field_e;
@@ -2150,7 +2172,7 @@ final class df {
                                           if (var6 - var19 >= field_k) {
                                             break L14;
                                           } else {
-                                            field_d[var10 - var19] = 1141646;
+                                            field_d[var10 - var19] = param5;
                                             break L14;
                                           }
                                         }
@@ -2161,7 +2183,7 @@ final class df {
                                         if (var8 + var19 >= field_k) {
                                           break L13;
                                         } else {
-                                          field_d[var11 + var19] = 1141646;
+                                          field_d[var11 + var19] = param5;
                                           break L13;
                                         }
                                       }
@@ -2182,7 +2204,7 @@ final class df {
                                           if (var6 - var18 >= field_k) {
                                             break L16;
                                           } else {
-                                            field_d[var12 - var18] = 1141646;
+                                            field_d[var12 - var18] = param5;
                                             break L16;
                                           }
                                         }
@@ -2193,7 +2215,7 @@ final class df {
                                         if (var8 + var18 >= field_k) {
                                           break L15;
                                         } else {
-                                          field_d[var13 + var18] = 1141646;
+                                          field_d[var13 + var18] = param5;
                                           break L15;
                                         }
                                       }
@@ -2214,7 +2236,7 @@ final class df {
                                           if (var6 - var18 >= field_k) {
                                             break L18;
                                           } else {
-                                            field_d[var14 - var18] = 1141646;
+                                            field_d[var14 - var18] = param5;
                                             break L18;
                                           }
                                         }
@@ -2225,7 +2247,7 @@ final class df {
                                         if (var8 + var18 >= field_k) {
                                           break L17;
                                         } else {
-                                          field_d[var15 + var18] = 1141646;
+                                          field_d[var15 + var18] = param5;
                                           break L17;
                                         }
                                       }
@@ -2245,7 +2267,7 @@ final class df {
                                         if (var6 - var19 >= field_k) {
                                           break L19;
                                         } else {
-                                          field_d[var16 - var19] = 1141646;
+                                          field_d[var16 - var19] = param5;
                                           break L19;
                                         }
                                       }
@@ -2256,7 +2278,7 @@ final class df {
                                       if (var8 + var19 >= field_k) {
                                         continue L11;
                                       } else {
-                                        field_d[var17 + var19] = 1141646;
+                                        field_d[var17 + var19] = param5;
                                         continue L11;
                                       }
                                     }
@@ -2283,7 +2305,7 @@ final class df {
           }
           return;
         } else {
-          df.e(param0, param1, param2, param3, 1141646);
+          df.e(param0, param1, param2, param3, param5);
           return;
         }
     }
@@ -2324,6 +2346,7 @@ final class df {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int incrementValue$0 = 0;
         if (param0 < field_i) {
             param2 = param2 - (field_i - param0);
             param0 = field_i;
@@ -2346,7 +2369,7 @@ final class df {
             for (var10 = -param2; var10 < 0; var10++) {
                 var11 = field_d[var8];
                 var11 = ((var11 & 16711935) * var6 >> 8 & 16711935) + ((var11 & 65280) * var6 >> 8 & 65280);
-                int incrementValue$0 = var8;
+                incrementValue$0 = var8;
                 var8++;
                 field_d[incrementValue$0] = param4 + var11;
             }
@@ -2372,6 +2395,7 @@ final class df {
         int var10 = 0;
         int var11 = 0;
         int var14 = 0;
+        int incrementValue$0 = 0;
         if (param1 >= field_g) {
             if (param1 >= field_h) {
                 return;
@@ -2384,16 +2408,16 @@ final class df {
                 param2 = field_k - param0;
             }
             var5 = 256 - param4;
-            var6 = 85 * param4;
-            var7 = 85 * param4;
-            var8 = 85 * param4;
+            var6 = (param3 >> 16 & 255) * param4;
+            var7 = (param3 >> 8 & 255) * param4;
+            var8 = (param3 & 255) * param4;
             var12 = param0 + param1 * field_e;
             for (var13 = 0; var13 < param2; var13++) {
                 var9 = (field_d[var12] >> 16 & 255) * var5;
                 var10 = (field_d[var12] >> 8 & 255) * var5;
                 var11 = (field_d[var12] & 255) * var5;
                 var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-                int incrementValue$0 = var12;
+                incrementValue$0 = var12;
                 var12++;
                 field_d[incrementValue$0] = var14;
             }
@@ -2402,6 +2426,7 @@ final class df {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$1 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -2466,7 +2491,7 @@ final class df {
                 var10++;
                 continue L4;
               } else {
-                int incrementValue$1 = var9;
+                incrementValue$1 = var9;
                 var9++;
                 field_d[incrementValue$1] = var13;
                 var14++;
@@ -2485,43 +2510,58 @@ final class df {
     }
 
     final static void c() {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
         int var0 = 0;
         int var1 = field_e * field_f - 7;
         while (var0 < var1) {
-            int incrementValue$0 = var0;
+            incrementValue$0 = var0;
             var0++;
             field_d[incrementValue$0] = 0;
-            int incrementValue$1 = var0;
+            incrementValue$1 = var0;
             var0++;
             field_d[incrementValue$1] = 0;
-            int incrementValue$2 = var0;
+            incrementValue$2 = var0;
             var0++;
             field_d[incrementValue$2] = 0;
-            int incrementValue$3 = var0;
+            incrementValue$3 = var0;
             var0++;
             field_d[incrementValue$3] = 0;
-            int incrementValue$4 = var0;
+            incrementValue$4 = var0;
             var0++;
             field_d[incrementValue$4] = 0;
-            int incrementValue$5 = var0;
+            incrementValue$5 = var0;
             var0++;
             field_d[incrementValue$5] = 0;
-            int incrementValue$6 = var0;
+            incrementValue$6 = var0;
             var0++;
             field_d[incrementValue$6] = 0;
-            int incrementValue$7 = var0;
+            incrementValue$7 = var0;
             var0++;
             field_d[incrementValue$7] = 0;
         }
         var1 += 7;
         while (var0 < var1) {
-            int incrementValue$8 = var0;
+            incrementValue$8 = var0;
             var0++;
             field_d[incrementValue$8] = 0;
         }
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -2539,8 +2579,8 @@ final class df {
         int var22 = 0;
         int var23 = 0;
         L0: {
-          var8 = 1820;
-          var9 = -535;
+          var8 = 16384 / (2 * param3 + 1);
+          var9 = 1 + param3 - param5 - param4;
           if (0 >= var9) {
             break L0;
           } else {
@@ -2549,7 +2589,7 @@ final class df {
           }
         }
         L1: {
-          var10 = field_e - 544;
+          var10 = field_e - param4 - param5 - param3;
           if (0 >= var10) {
             break L1;
           } else {
@@ -2559,7 +2599,7 @@ final class df {
         }
         L2: {
           var11 = 0;
-          var12 = 5;
+          var12 = param4 + param3 + 1;
           if (field_e >= var12) {
             break L2;
           } else {
@@ -2568,7 +2608,7 @@ final class df {
             break L2;
           }
         }
-        var13 = -140;
+        var13 = -param7;
         L3: while (true) {
           if (var13 >= 0) {
             return;
@@ -2577,9 +2617,9 @@ final class df {
               var14 = 0;
               var15 = 0;
               var16 = 0;
-              var17 = param2 - 4;
-              var18 = var17 - 9;
-              var19 = -4;
+              var17 = param2 - param3;
+              var18 = var17 - (param3 << 1) - 1;
+              var19 = param4 - param3;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -2593,10 +2633,10 @@ final class df {
             L5: while (true) {
               if (var19 >= var12) {
                 var18 = var18 + var11;
-                int incrementValue$6 = param2;
+                incrementValue$6 = param2;
                 param2++;
                 param0[incrementValue$6] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
-                var19 = -539;
+                var19 = 1 - param5;
                 L6: while (true) {
                   if (var19 >= var9) {
                     L7: while (true) {
@@ -2608,7 +2648,7 @@ final class df {
                             continue L3;
                           } else {
                             L9: {
-                              int incrementValue$7 = var18;
+                              incrementValue$7 = var18;
                               var18++;
                               param1 = param0[incrementValue$7];
                               var14 = var14 - (param1 >> 16 & 255);
@@ -2656,7 +2696,7 @@ final class df {
                                 break L11;
                               }
                             }
-                            int incrementValue$8 = param2;
+                            incrementValue$8 = param2;
                             param2++;
                             param0[incrementValue$8] = (var21 << 16) + (var22 << 8) + var23;
                             var19++;
@@ -2665,7 +2705,7 @@ final class df {
                         }
                       } else {
                         L12: {
-                          int incrementValue$9 = var18;
+                          incrementValue$9 = var18;
                           var18++;
                           param1 = param0[incrementValue$9];
                           var14 = var14 - (param1 >> 16 & 255);
@@ -2726,7 +2766,7 @@ final class df {
                             break L17;
                           }
                         }
-                        int incrementValue$10 = param2;
+                        incrementValue$10 = param2;
                         param2++;
                         param0[incrementValue$10] = (var21 << 16) + (var22 << 8) + var23;
                         var19++;
@@ -2736,7 +2776,7 @@ final class df {
                   } else {
                     L18: {
                       var18++;
-                      if (540 + var19 + 4 >= field_k) {
+                      if (param4 + param5 + var19 + param3 >= field_k) {
                         break L18;
                       } else {
                         param1 = param0[var17];
@@ -2751,7 +2791,7 @@ final class df {
                     var21 = var14 / var20;
                     var22 = var15 / var20;
                     var23 = var16 / var20;
-                    int incrementValue$11 = param2;
+                    incrementValue$11 = param2;
                     param2++;
                     param0[incrementValue$11] = (var21 << 16) + (var22 << 8) + var23;
                     var19++;
@@ -2779,13 +2819,14 @@ final class df {
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        df.a(field_d, 0, 0 * field_e, 4, 0, 540, field_e - 540, 140);
-        df.a(field_d, 0, 0 * field_e, 4, 0, 140, field_e - 540, 0, 540);
+        df.a(field_d, 0, param2 + param3 * field_e, param0, param2, param4, field_e - param4, param5);
+        df.a(field_d, 0, param2 + param3 * field_e, param1, param3, param5, field_e - param4, param2, param4);
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = 0;
+        int incrementValue$0 = 0;
         if (param0 < field_i) {
             param2 = param2 - (field_i - param0);
             param0 = field_i;
@@ -2804,7 +2845,7 @@ final class df {
         int var6 = param0 + param1 * field_e;
         for (var7 = -param3; var7 < 0; var7++) {
             for (var8 = -param2; var8 < 0; var8++) {
-                int incrementValue$0 = var6;
+                incrementValue$0 = var6;
                 var6++;
                 field_d[incrementValue$0] = param4;
             }
@@ -2829,10 +2870,6 @@ final class df {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = 0;
         field_k = 0;
         field_g = 0;

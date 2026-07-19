@@ -10,13 +10,18 @@ final class pm extends IOException {
     static int field_a;
 
     public static void a(int param0) {
-        int var1 = 1;
+        int var1 = 85 % ((9 - param0) / 37);
         field_b = null;
         field_d = null;
     }
 
     final static bg[] b(int param0) {
-        return new bg[]{gk.field_s, kb.field_e, ff.field_a, ab.field_b, tl.field_l, jk.field_jb, qc.field_a, oc.field_i, sj.field_a, qm.field_h, dl.field_e, hd.field_i, dg.field_a, jg.field_l};
+        if (param0 != -5596) {
+          field_c = -6;
+          return new bg[]{gk.field_s, kb.field_e, ff.field_a, ab.field_b, tl.field_l, jk.field_jb, qc.field_a, oc.field_i, sj.field_a, qm.field_h, dl.field_e, hd.field_i, dg.field_a, jg.field_l};
+        } else {
+          return new bg[]{gk.field_s, kb.field_e, ff.field_a, ab.field_b, tl.field_l, jk.field_jb, qc.field_a, oc.field_i, sj.field_a, qm.field_h, dl.field_e, hd.field_i, dg.field_a, jg.field_l};
+        }
     }
 
     pm(String param0) {
@@ -38,6 +43,7 @@ final class pm extends IOException {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
@@ -54,7 +60,7 @@ final class pm extends IOException {
               if (param4 == null) {
                 break L1;
               } else {
-                if (param3 > 0) {
+                if (-1 > (param3 ^ -1)) {
                   var5_int = param4[0].field_x;
                   var6 = param4[2].field_x;
                   var7 = param4[param1].field_x;
@@ -68,6 +74,7 @@ final class pm extends IOException {
                   L2: while (true) {
                     if (var9 <= param2) {
                       eh.a(en.field_b);
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       param4[1].f(param2, param0);
@@ -80,29 +87,30 @@ final class pm extends IOException {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) runtimeException;
+            stackOut_9_0 = (RuntimeException) (runtimeException);
             stackOut_9_1 = new StringBuilder().append("pm.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param4 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -110,15 +118,16 @@ final class pm extends IOException {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 37;
         field_d = "Members' Expansion";
         field_b = null;

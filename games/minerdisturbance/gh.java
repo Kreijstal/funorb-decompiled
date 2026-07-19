@@ -18,10 +18,10 @@ final class gh {
         var3 = MinerDisturbance.field_ab;
         try {
           L0: {
-            var4 = (il) (Object) mf.field_h.b(67);
+            var4 = (il) ((Object) mf.field_h.b(67));
             L1: while (true) {
               if (var4 == null) {
-                var5 = (jb) (Object) sd.field_a.b(96);
+                var5 = (jb) ((Object) sd.field_a.b(96));
                 L2: while (true) {
                   if (var5 == null) {
                     if (param1 == 21121) {
@@ -32,13 +32,13 @@ final class gh {
                     }
                   } else {
                     ti.a(var5, true, param0);
-                    var5 = (jb) (Object) sd.field_a.b((byte) 56);
+                    var5 = (jb) ((Object) sd.field_a.b((byte) 56));
                     continue L2;
                   }
                 }
               } else {
                 ig.a(param0, 1, var4);
-                var4 = (il) (Object) mf.field_h.b((byte) 56);
+                var4 = (il) ((Object) mf.field_h.b((byte) 56));
                 continue L1;
               }
             }
@@ -46,14 +46,14 @@ final class gh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var2, "gh.A(" + param0 + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) var2), "gh.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     public static void a(int param0) {
         field_b = null;
         field_a = null;
-        int var1 = 0;
+        int var1 = 120 % ((-23 - param0) / 47);
     }
 
     static {

@@ -8,13 +8,16 @@ final class dq extends vg {
     static via field_f;
 
     dq(int param0, int param1) {
-        ((dq) this).field_g = param1;
-        ((dq) this).field_i = param0;
+        this.field_g = param1;
+        this.field_i = param0;
     }
 
     public static void a(int param0) {
         field_h = null;
         field_f = null;
+        if (param0 != 8148) {
+            field_f = (via) null;
+        }
     }
 
     static {

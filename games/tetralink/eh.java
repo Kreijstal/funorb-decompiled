@@ -17,31 +17,56 @@ final class eh extends mc {
 
     final static void b(byte param0) {
         int var1 = 0;
-        if (th.field_g > 0) {
-            th.field_g = th.field_g - 1;
-            if (~te.field_P == ~pk.field_O.field_j) {
-                if (!(th.field_g <= 0)) {
-                    lc.a((byte) -61);
-                }
-                return;
-            }
-            ja.field_f = ja.field_f + (pk.field_O.field_j + -te.field_P);
-            te.field_P = pk.field_O.field_j;
-            if (!(th.field_g <= 0)) {
+        var1 = 6 % ((40 - param0) / 42);
+        if ((th.field_g ^ -1) >= -1) {
+          if (te.field_P != pk.field_O.field_j) {
+            L0: {
+              ja.field_f = ja.field_f + (pk.field_O.field_j + -te.field_P);
+              te.field_P = pk.field_O.field_j;
+              if (-1 > (th.field_g ^ -1)) {
                 lc.a((byte) -61);
+                break L0;
+              } else {
+                break L0;
+              }
             }
             return;
-        }
-        if (~te.field_P != ~pk.field_O.field_j) {
-            ja.field_f = ja.field_f + (pk.field_O.field_j + -te.field_P);
-            te.field_P = pk.field_O.field_j;
-            if (!(th.field_g <= 0)) {
+          } else {
+            L1: {
+              if (-1 > (th.field_g ^ -1)) {
                 lc.a((byte) -61);
+                break L1;
+              } else {
+                break L1;
+              }
             }
             return;
-        }
-        if (!(th.field_g <= 0)) {
-            lc.a((byte) -61);
+          }
+        } else {
+          th.field_g = th.field_g - 1;
+          if (te.field_P == pk.field_O.field_j) {
+            L2: {
+              if (-1 > (th.field_g ^ -1)) {
+                lc.a((byte) -61);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            return;
+          } else {
+            L3: {
+              ja.field_f = ja.field_f + (pk.field_O.field_j + -te.field_P);
+              te.field_P = pk.field_O.field_j;
+              if (-1 > (th.field_g ^ -1)) {
+                lc.a((byte) -61);
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            return;
+          }
         }
     }
 
@@ -61,10 +86,6 @@ final class eh extends mc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = 0;
         field_v = new a();
     }

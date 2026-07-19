@@ -11,14 +11,18 @@ class el extends rh {
     private fi field_N;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+        super.a(param0, param1 + 0, param2, param3, param4);
         if (param1 != -3050) {
-            field_O = null;
+            field_O = (String[]) null;
         }
-        ((el) this).b(true);
+        this.b(true);
     }
 
     public static void c(boolean param0) {
+        Boolean discarded$0 = null;
+        if (param0) {
+            discarded$0 = el.j(40);
+        }
         field_L = null;
         field_O = null;
         field_J = null;
@@ -28,6 +32,9 @@ class el extends rh {
     final static Boolean j(int param0) {
         Boolean var1 = qi.field_c;
         qi.field_c = null;
+        if (param0 != 2) {
+            field_J = (String) null;
+        }
         return var1;
     }
 
@@ -55,18 +62,18 @@ class el extends rh {
         int stackOut_13_0 = 0;
         int stackOut_11_0 = 0;
         var16 = TrackController.field_F ? 1 : 0;
-        ((el) this).field_I = new ja();
+        this.field_I = new ja();
         var2 = 0;
-        var3 = (dl) (Object) ((el) this).field_y;
+        var3 = (dl) ((Object) this.field_y);
         if (param0) {
-          var4 = var3.a((byte) 96, (al) this);
+          var4 = var3.a((byte) 96, (al) (this));
           L0: while (true) {
-            var5 = ((el) this).field_s.indexOf("<hotspot=", var2);
-            if (var5 != -1) {
-              var7 = ((el) this).field_s.indexOf(">", var5);
-              var6 = ((el) this).field_s.substring(var5 + 9, var7);
+            var5 = this.field_s.indexOf("<hotspot=", var2);
+            if (0 != (var5 ^ -1)) {
+              var7 = this.field_s.indexOf(">", var5);
+              var6 = this.field_s.substring(var5 + 9, var7);
               var7 = Integer.parseInt(var6);
-              var2 = ((el) this).field_s.indexOf("</hotspot>", var5);
+              var2 = this.field_s.indexOf("</hotspot>", var5);
               var8 = var4.a(var5, (byte) -36);
               var9 = var4.a(var2, (byte) -36);
               var10 = null;
@@ -109,14 +116,14 @@ class el extends rh {
                     var14 = stackIn_15_0;
                     var15 = new fi(var7, var13, var12.field_c, var14 + -var13, Math.max(var3.a((byte) 46), var12.field_f + -var12.field_c));
                     if (var10 != null) {
-                      ((fi) var10).field_j = var15;
+                      ((fi) (var10)).field_j = var15;
                       break L4;
                     } else {
                       break L4;
                     }
                   }
-                  ((el) this).field_I.a((byte) -121, (fc) (Object) var15);
-                  var10 = (Object) (Object) var15;
+                  this.field_I.a((byte) -121, var15);
+                  var10 = var15;
                   var11++;
                   continue L1;
                 }
@@ -131,40 +138,40 @@ class el extends rh {
     }
 
     String e(int param0) {
-        if (null == ((el) this).field_N) {
+        if (null == this.field_N) {
             return null;
         }
-        if (null == ((el) this).field_M) {
+        if (null == this.field_M) {
             return null;
         }
         if (param0 != 0) {
-            ((el) this).a(-54, (byte) 36, -103, -82);
+            this.a(-54, (byte) 36, -103, -82);
         }
-        if (((el) this).field_N.field_q >= ((el) this).field_M.length) {
+        if (this.field_N.field_q >= this.field_M.length) {
             return null;
         }
-        return ((el) this).field_M[((el) this).field_N.field_q];
+        return this.field_M[this.field_N.field_q];
     }
 
     final void b(int param0, int param1, int param2, int param3) {
         super.b(param0, param1, param2 + param2, param3);
-        int var5 = param1 - ((el) this).field_p;
-        int var6 = param0 + -((el) this).field_m;
+        int var5 = param1 - this.field_p;
+        int var6 = param0 + -this.field_m;
         fi var7 = this.b(var5, var6, 9);
         if (var7 != null) {
-            if (!(((el) this).field_l == null)) {
-                ((jg) (Object) ((el) this).field_l).a((el) this, var7.field_q, param3, 1);
+            if (!(this.field_l == null)) {
+                ((jg) ((Object) this.field_l)).a((el) (this), var7.field_q, param3, 1);
             }
         }
     }
 
     el(String param0, t param1) {
         super(param0, (tg) null);
-        ((el) this).field_N = null;
+        this.field_N = null;
         try {
-            ((el) this).field_y = param1;
+            this.field_y = param1;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -177,17 +184,17 @@ class el extends rh {
           if (param2 == 9) {
             break L0;
           } else {
-            field_O = null;
+            field_O = (String[]) null;
             break L0;
           }
         }
-        var4 = (fi) (Object) ((el) this).field_I.b(param2 ^ 11);
+        var4 = (fi) ((Object) this.field_I.b(param2 ^ 11));
         L1: while (true) {
           if (var4 != null) {
             var5 = var4;
             L2: while (true) {
               if (var5 == null) {
-                var4 = (fi) (Object) ((el) this).field_I.a(10);
+                var4 = (fi) ((Object) this.field_I.a(10));
                 continue L1;
               } else {
                 L3: {
@@ -226,11 +233,11 @@ class el extends rh {
         if (!(param0 == 0)) {
             return;
         }
-        dl var5 = (dl) (Object) ((el) this).field_y;
-        fi var6 = ((el) this).field_N;
+        dl var5 = (dl) ((Object) this.field_y);
+        fi var6 = this.field_N;
         if (var6 != null) {
-            var7 = var5.a(param1, (al) this, 0);
-            var8 = var5.a((al) this, -62, param2);
+            var7 = var5.a(param1, (al) (this), 0);
+            var8 = var5.a((al) (this), -62, param2);
             do {
                 bc.a(var6.field_m - -2, -28846, 2 + var6.field_k, var8 - (-var6.field_r + 2), -2 + (var7 - -var6.field_n));
                 var6 = var6.field_j;
@@ -242,7 +249,7 @@ class el extends rh {
         if (param1 != -44) {
             return;
         }
-        ((el) this).a(((dl) (Object) ((el) this).field_y).a(103, (al) this), -3050, param0, param2, param3);
+        this.a(((dl) ((Object) this.field_y)).a(103, (al) (this)), -3050, param0, param2, param3);
     }
 
     boolean a(byte param0, al param1) {
@@ -272,7 +279,7 @@ class el extends rh {
               stackIn_3_0 = stackOut_2_0;
               break L0;
             } else {
-              ((el) this).field_I = null;
+              this.field_I = (ja) null;
               return false;
             }
           }
@@ -280,23 +287,23 @@ class el extends rh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("el.QA(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -304,7 +311,7 @@ class el extends rh {
               break L1;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -333,13 +340,13 @@ class el extends rh {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              ((el) this).field_N = null;
-              if (!((el) this).field_q) {
+              this.field_N = null;
+              if (!this.field_q) {
                 break L1;
               } else {
-                var5_int = kf.field_b - (param1 - -((el) this).field_p);
-                var6 = -((el) this).field_m + (fg.field_a - param0);
-                ((el) this).field_N = this.b(var5_int, var6, param2 + 133);
+                var5_int = kf.field_b - (param1 - -this.field_p);
+                var6 = -this.field_m + (fg.field_a - param0);
+                this.field_N = this.b(var5_int, var6, param2 + 133);
                 break L1;
               }
             }
@@ -349,23 +356,23 @@ class el extends rh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("el.EA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param3 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -373,7 +380,7 @@ class el extends rh {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -405,10 +412,10 @@ class el extends rh {
             L1: {
               L2: {
                 var4_int = 118 % ((param0 - -2) / 52);
-                if (null == ((el) this).field_M) {
+                if (null == this.field_M) {
                   break L2;
                 } else {
-                  if (((el) this).field_M.length > param2) {
+                  if (this.field_M.length > param2) {
                     break L1;
                   } else {
                     break L2;
@@ -417,48 +424,48 @@ class el extends rh {
               }
               L3: {
                 var5 = new String[1 + param2];
-                if (null == ((el) this).field_M) {
+                if (null == this.field_M) {
                   break L3;
                 } else {
                   var6 = 0;
                   L4: while (true) {
-                    if (var6 >= ((el) this).field_M.length) {
+                    if (var6 >= this.field_M.length) {
                       break L3;
                     } else {
-                      var5[var6] = ((el) this).field_M[var6];
+                      var5[var6] = this.field_M[var6];
                       var6++;
                       continue L4;
                     }
                   }
                 }
               }
-              ((el) this).field_M = var5;
+              this.field_M = var5;
               break L1;
             }
-            ((el) this).field_M[param2] = param1;
+            this.field_M[param2] = param1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             runtimeException = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) runtimeException;
+            stackOut_11_0 = (RuntimeException) (runtimeException);
             stackOut_11_1 = new StringBuilder().append("el.G(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -466,15 +473,11 @@ class el extends rh {
               break L5;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_J = "Unable to connect to the data server. Please check any firewall you are using.";
         field_K = "Suggested names: ";
     }

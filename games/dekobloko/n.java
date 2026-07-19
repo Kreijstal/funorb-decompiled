@@ -8,9 +8,18 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
     static String field_b;
 
     public static void b(int param0) {
-        field_d = null;
-        field_b = null;
-        field_a = null;
+        if (param0 != 128) {
+          field_d = (String) null;
+          field_d = null;
+          field_b = null;
+          field_a = null;
+          return;
+        } else {
+          field_d = null;
+          field_b = null;
+          field_a = null;
+          return;
+        }
     }
 
     final static void a(int param0, cc param1, mm param2, int param3, int param4, cc param5, int param6, mm param7, int param8, int param9, cc param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
@@ -94,13 +103,13 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
         String stackOut_15_2 = null;
         try {
           L0: {
-            lk.a(param7, true, param2, 480);
-            var21_int = 0;
-            s.a(14, 20, (byte) -91, 16, 20);
-            pj.a(31004, 320, 240);
-            ci.a(param10, 32, 5, (byte) -63, 4, param5);
-            gk.a(20, 20, (byte) -75, param1);
-            wf.a(1, 0, 0, true);
+            lk.a(param7, true, param2, param8);
+            var21_int = 80 % ((param12 - -81) / 39);
+            s.a(param6, param20, (byte) -91, param0, param16);
+            pj.a(31004, param15, param14);
+            ci.a(param10, param13, param4, (byte) -63, param11, param5);
+            gk.a(param19, param18, (byte) -75, param1);
+            wf.a(param17, param3, param9, true);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -108,7 +117,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
           L1: {
             var21 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) (var21);
-            stackOut_2_1 = new StringBuilder().append("n.D(").append(16).append(',');
+            stackOut_2_1 = new StringBuilder().append("n.D(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -158,7 +167,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
           }
           L3: {
             stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(0).append(',').append(5).append(',');
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -183,7 +192,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
           }
           L4: {
             stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(14).append(',');
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param6).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -208,7 +217,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
           }
           L5: {
             stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(480).append(',').append(0).append(',');
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param8).append(',').append(param9).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -231,7 +240,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
               break L5;
             }
           }
-          throw dh.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + 4 + ',' + -6 + ',' + 32 + ',' + 240 + ',' + 320 + ',' + 20 + ',' + 1 + ',' + 20 + ',' + 20 + ',' + 20 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ',' + param15 + ',' + param16 + ',' + param17 + ',' + param18 + ',' + param19 + ',' + param20 + ')');
         }
     }
 
@@ -271,7 +280,11 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
                       var2_int = be.field_w[var2_int];
                       if ((128 & var2_int) != 0) {
                         var2_int = -1;
-                        break L1;
+                        if (!client.field_A) {
+                          break L1;
+                        } else {
+                          break L2;
+                        }
                       } else {
                         break L1;
                       }
@@ -285,7 +298,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
                 if (wi.field_b < 0) {
                   break L3;
                 } else {
-                  if (var2_int < 0) {
+                  if ((var2_int ^ -1) > -1) {
                     break L3;
                   } else {
                     la.field_h[wi.field_b] = var2_int;
@@ -304,7 +317,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
                   var3 = jh.field_e + 1 & 127;
                   if (var3 != sf.field_B) {
                     pf.field_i[jh.field_e] = var2_int;
-                    bl.field_Z[jh.field_e] = ' ';
+                    bl.field_Z[jh.field_e] = (char)0;
                     jh.field_e = var3;
                     break L4;
                   } else {
@@ -493,7 +506,11 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
                         break L3;
                       } else {
                         var2_int = be.field_w[var2_int] & -129;
-                        break L2;
+                        if (!client.field_A) {
+                          break L2;
+                        } else {
+                          break L3;
+                        }
                       }
                     }
                   }
@@ -506,7 +523,7 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
                   if (var2_int < 0) {
                     break L1;
                   } else {
-                    la.field_h[wi.field_b] = ~var2_int;
+                    la.field_h[wi.field_b] = var2_int ^ -1;
                     wi.field_b = 127 & wi.field_b - -1;
                     if (rc.field_a == wi.field_b) {
                       wi.field_b = -1;
@@ -567,30 +584,62 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
         int var2 = 0;
         var2 = client.field_A ? 1 : 0;
         ed.field_d = null;
-        mg.field_Nb = false;
-        if (!vb.field_Z) {
-          var1 = bb.field_e;
-          if (0 >= var1) {
-            cl.field_r.n(-127);
-            em.a(-1199770620);
-            return;
-          } else {
-            if (var1 == 1) {
-              ed.field_d = aa.field_d;
-              ed.field_d = db.a(new CharSequence[]{(CharSequence) ((Object) ed.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) hf.field_b)}, -62);
+        if (param0 == 1) {
+          mg.field_Nb = false;
+          if (!vb.field_Z) {
+            var1 = bb.field_e;
+            if (0 >= var1) {
               cl.field_r.n(-127);
               em.a(-1199770620);
-              return;
+              if (var2 != 0) {
+                cl.field_r.o(4210752);
+                return;
+              } else {
+                return;
+              }
             } else {
-              ed.field_d = cm.a((byte) 87, jc.field_e, new String[]{Integer.toString(var1)});
-              ed.field_d = db.a(new CharSequence[]{(CharSequence) ((Object) ed.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) hf.field_b)}, -62);
-              cl.field_r.n(-127);
-              em.a(-1199770620);
-              return;
+              if (var1 == 1) {
+                ed.field_d = aa.field_d;
+                ed.field_d = db.a(new CharSequence[]{(CharSequence) ((Object) ed.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) hf.field_b)}, -62);
+                cl.field_r.n(-127);
+                em.a(-1199770620);
+                if (var2 == 0) {
+                  return;
+                } else {
+                  cl.field_r.o(4210752);
+                  return;
+                }
+              } else {
+                ed.field_d = cm.a((byte) 87, jc.field_e, new String[]{Integer.toString(var1)});
+                if (var2 == 0) {
+                  ed.field_d = db.a(new CharSequence[]{(CharSequence) ((Object) ed.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) hf.field_b)}, -62);
+                  cl.field_r.n(-127);
+                  em.a(-1199770620);
+                  if (var2 == 0) {
+                    return;
+                  } else {
+                    cl.field_r.o(4210752);
+                    return;
+                  }
+                } else {
+                  ed.field_d = aa.field_d;
+                  ed.field_d = db.a(new CharSequence[]{(CharSequence) ((Object) ed.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) hf.field_b)}, -62);
+                  cl.field_r.n(-127);
+                  em.a(-1199770620);
+                  if (var2 == 0) {
+                    return;
+                  } else {
+                    cl.field_r.o(4210752);
+                    return;
+                  }
+                }
+              }
             }
+          } else {
+            cl.field_r.o(4210752);
+            return;
           }
         } else {
-          cl.field_r.o(4210752);
           return;
         }
     }
@@ -599,9 +648,11 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_7_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_9_0 = 0;
         var4 = client.field_A ? 1 : 0;
         try {
           L0: {
@@ -615,25 +666,50 @@ final class n implements java.awt.event.KeyListener, java.awt.event.FocusListene
                 break L1;
               }
             }
-            L2: while (true) {
-              if (param2 == 0) {
-                stackOut_6_0 = param1;
-                stackIn_7_0 = stackOut_6_0;
-                break L0;
+            L2: {
+              if (param0 >= 37) {
+                break L2;
               } else {
-                var3_int = param1 % param2;
-                param1 = param2;
-                param2 = var3_int;
-                continue L2;
+                n.b(77);
+                break L2;
               }
+            }
+            L3: while (true) {
+              L4: {
+                L5: {
+                  if (param2 == 0) {
+                    break L5;
+                  } else {
+                    var3_int = param1 % param2;
+                    param1 = param2;
+                    stackOut_7_0 = var3_int;
+                    stackIn_10_0 = stackOut_7_0;
+                    stackIn_8_0 = stackOut_7_0;
+                    if (var4 != 0) {
+                      break L4;
+                    } else {
+                      param2 = stackIn_8_0;
+                      if (var4 == 0) {
+                        continue L3;
+                      } else {
+                        break L5;
+                      }
+                    }
+                  }
+                }
+                stackOut_9_0 = param1;
+                stackIn_10_0 = stackOut_9_0;
+                break L4;
+              }
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw dh.a((Throwable) ((Object) var3), "n.E(" + 43 + ',' + param1 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) var3), "n.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_7_0;
+        return stackIn_10_0;
     }
 
     static {

@@ -31,15 +31,11 @@ final class om {
     }
 
     om(int param0, int param1, int param2, int param3) {
-        ((om) this).field_f = param0;
-        ((om) this).field_d = param3;
+        this.field_f = param0;
+        this.field_d = param3;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new eg();
     }
 }

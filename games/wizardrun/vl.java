@@ -22,10 +22,14 @@ final class vl implements bf {
     private int field_m;
 
     final static String a(int param0) {
+        if (param0 >= -29) {
+            return (String) null;
+        }
         return nk.field_N.d(0);
     }
 
     public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -55,17 +59,17 @@ final class vl implements bf {
           L0: {
             L1: {
               if (param2 instanceof ef) {
-                stackOut_2_0 = (ub) param2;
+                stackOut_2_0 = (ub) (param2);
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
               } else {
                 stackOut_1_0 = null;
-                stackIn_3_0 = (ub) (Object) stackOut_1_0;
+                stackIn_3_0 = (ub) ((Object) stackOut_1_0);
                 break L1;
               }
             }
             L2: {
-              var11 = (ef) (Object) stackIn_3_0;
+              var11 = (ef) ((Object) stackIn_3_0);
               if (var11 == null) {
                 break L2;
               } else {
@@ -83,30 +87,30 @@ final class vl implements bf {
               }
             }
             L4: {
-              ed.c(param0 - -param2.field_o, param2.field_l + param1, param2.field_r, param2.field_n, ((vl) this).field_c);
-              var8 = param0 - -param2.field_o - -((vl) this).field_m;
-              var9 = param1 + param2.field_l - -((vl) this).field_b;
-              ed.b(var8, var9, ((vl) this).field_l, ((vl) this).field_p, 5592405);
-              ed.c(var8, var9, ((vl) this).field_l, ((vl) this).field_p, var7);
+              ed.c(param0 - -param2.field_o, param2.field_l + param1, param2.field_r, param2.field_n, this.field_c);
+              var8 = param0 - -param2.field_o - -this.field_m;
+              var9 = param1 + param2.field_l - -this.field_b;
+              ed.b(var8, var9, this.field_l, this.field_p, 5592405);
+              ed.c(var8, var9, this.field_l, this.field_p, var7);
               if (param3) {
                 break L4;
               } else {
-                ((vl) this).field_p = 11;
+                this.field_p = 11;
                 break L4;
               }
             }
             L5: {
               if (var11.field_z) {
-                ed.e(var8, var9, var8 + ((vl) this).field_l, var9 + ((vl) this).field_p, 1);
-                ed.e(var8 - -((vl) this).field_l, var9, var8, ((vl) this).field_p + var9, 1);
+                ed.e(var8, var9, var8 + this.field_l, var9 + this.field_p, 1);
+                ed.e(var8 - -this.field_l, var9, var8, this.field_p + var9, 1);
                 break L5;
               } else {
                 break L5;
               }
             }
-            if (null != ((vl) this).field_j) {
-              var10 = ((vl) this).field_i + ((vl) this).field_l + ((vl) this).field_m;
-              int discarded$1 = ((vl) this).field_j.a(param2.field_k, param2.field_o + param0 - -var10, ((vl) this).field_o + param1 + param2.field_l, -((vl) this).field_i - (var10 - param2.field_r), param2.field_n - (((vl) this).field_i << 1), ((vl) this).field_r, ((vl) this).field_e, ((vl) this).field_k, ((vl) this).field_q, 0);
+            if (null != this.field_j) {
+              var10 = this.field_i + this.field_l + this.field_m;
+              discarded$1 = this.field_j.a(param2.field_k, param2.field_o + param0 - -var10, this.field_o + param1 + param2.field_l, -this.field_i - (var10 - param2.field_r), param2.field_n - (this.field_i << -898435263), this.field_r, this.field_e, this.field_k, this.field_q, 0);
               break L0;
             } else {
               return;
@@ -116,23 +120,23 @@ final class vl implements bf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var6;
+            stackOut_17_0 = (RuntimeException) (var6);
             stackOut_17_1 = new StringBuilder().append("vl.B(").append(param0).append(',').append(param1).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param2 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L6;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -140,13 +144,13 @@ final class vl implements bf {
               break L6;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param3 + ',' + param4 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void b(int param0) {
         if (param0 < 42) {
-          field_a = null;
+          field_a = (String) null;
           field_a = null;
           field_n = null;
           field_g = null;
@@ -162,39 +166,51 @@ final class vl implements bf {
     }
 
     final static boolean a(char param0, int param1) {
-        if (param0 < 48) {
+        String discarded$5 = null;
+        if (param1 == -5717) {
+          if (param0 >= 48) {
+            if (param0 > 57) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (param0 > 57) {
+          }
+        } else {
+          discarded$5 = vl.a(-107);
+          if (param0 >= 48) {
+            if (param0 > 57) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     vl(vd param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        ((vl) this).field_k = 1;
-        ((vl) this).field_q = 1;
+        this.field_k = 1;
+        this.field_q = 1;
         try {
-            ((vl) this).field_r = param3;
-            ((vl) this).field_c = param9;
-            ((vl) this).field_o = param2;
-            ((vl) this).field_m = param5;
-            ((vl) this).field_e = param4;
-            ((vl) this).field_b = param6;
-            ((vl) this).field_i = param1;
-            ((vl) this).field_l = param8;
-            ((vl) this).field_p = param7;
-            ((vl) this).field_j = param0;
+            this.field_r = param3;
+            this.field_c = param9;
+            this.field_o = param2;
+            this.field_m = param5;
+            this.field_e = param4;
+            this.field_b = param6;
+            this.field_i = param1;
+            this.field_l = param8;
+            this.field_p = param7;
+            this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "Create a free account to start using this feature";
         field_a = "Any crystals that remain on the level grow";
         field_g = "To server list";

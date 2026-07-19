@@ -18,32 +18,36 @@ abstract class cq implements jj {
 
     private final int c(int param0) {
         if (param0 > -1) {
-            ((cq) this).field_d = 80;
+            this.field_d = 80;
         }
-        int var2 = ((cq) this).field_b * (((cq) this).field_h.field_b * ((cq) this).field_c.field_c);
-        return ((cq) this).field_f ? 4 * var2 / 3 : var2;
+        int var2 = this.field_b * (this.field_h.field_b * this.field_c.field_c);
+        return this.field_f ? 4 * var2 / 3 : var2;
     }
 
     private final void a(int param0, int param1) {
-        ((cq) this).field_g.field_jc = ((cq) this).field_g.field_jc;
-        ((cq) this).field_g.field_jc = ((cq) this).field_g.field_jc + this.c(-19);
+        int discarded$0 = 0;
+        this.field_g.field_jc = this.field_g.field_jc - param0;
+        this.field_g.field_jc = this.field_g.field_jc + this.c(-19);
+        if (param1 != 4) {
+            discarded$0 = this.a(false);
+        }
     }
 
     public void a(byte param0) {
         if (param0 != -50) {
-            ((cq) this).field_c = null;
+            this.field_c = (la) null;
         }
-        int var2 = ((cq) this).field_g.M(7693);
-        int var3 = ((cq) this).field_g.field_Hc[var2];
-        if (!(var3 == ((cq) this).field_e)) {
+        int var2 = this.field_g.M(7693);
+        int var3 = this.field_g.field_Hc[var2];
+        if (!(var3 == this.field_e)) {
             if (!(var3 == 0)) {
                 jaggl.OpenGL.glBindTexture(var3, 0);
                 jaggl.OpenGL.glDisable(var3);
             }
-            jaggl.OpenGL.glEnable(((cq) this).field_e);
-            ((cq) this).field_g.field_Hc[var2] = ((cq) this).field_e;
+            jaggl.OpenGL.glEnable(this.field_e);
+            this.field_g.field_Hc[var2] = this.field_e;
         }
-        jaggl.OpenGL.glBindTexture(((cq) this).field_e, ((cq) this).field_d);
+        jaggl.OpenGL.glBindTexture(this.field_e, this.field_d);
     }
 
     final void a(float[] param0, boolean param1, int param2, int param3, int param4) {
@@ -73,6 +77,7 @@ abstract class cq implements jj {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_12_0 = 0;
         int stackOut_11_0 = 0;
@@ -88,7 +93,7 @@ abstract class cq implements jj {
         try {
           L0: {
             L1: {
-              if (param2 <= 0) {
+              if (-1 <= (param2 ^ -1)) {
                 break L1;
               } else {
                 if (!mg.a(param2, (byte) 0)) {
@@ -111,7 +116,7 @@ abstract class cq implements jj {
             }
             if (param1) {
               L3: {
-                var6_int = ((cq) this).field_h.field_b;
+                var6_int = this.field_h.field_b;
                 var7 = 0;
                 if (param3 <= param2) {
                   stackOut_12_0 = param3;
@@ -124,13 +129,14 @@ abstract class cq implements jj {
                 }
               }
               var8 = stackIn_13_0;
-              var9 = param2 >> 1;
-              var10 = param3 >> 1;
+              var9 = param2 >> 2104898433;
+              var10 = param3 >> -1557392031;
               var11 = param0;
               var12 = new float[var6_int * var9 * var10];
               L4: while (true) {
-                jaggl.OpenGL.glTexImage2Df(param4, var7, ((cq) this).a(false), param2, param3, 0, gq.a(((cq) this).field_h, -29824), 5126, var11, 0);
+                jaggl.OpenGL.glTexImage2Df(param4, var7, this.a(false), param2, param3, 0, gq.a(this.field_h, -29824), 5126, var11, 0);
                 if (1 >= var8) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   var15 = var6_int * param2;
@@ -186,30 +192,31 @@ abstract class cq implements jj {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var6 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var6;
+            stackOut_26_0 = (RuntimeException) (var6);
             stackOut_26_1 = new StringBuilder().append("cq.H(");
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param0 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L8;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -217,26 +224,31 @@ abstract class cq implements jj {
               break L8;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     private final void d(byte param0) {
-        ((cq) this).field_g.a((jj) this, -9135);
-        int var2 = 122;
-        if (fg.field_A == ((cq) this).field_a) {
-            jaggl.OpenGL.glTexParameteri(((cq) this).field_e, 10241, ((cq) this).field_f ? 9987 : 9729);
-            jaggl.OpenGL.glTexParameteri(((cq) this).field_e, 10240, 9729);
+        this.field_g.a((jj) (this), -9135);
+        int var2 = 122 / ((param0 - 86) / 39);
+        if (fg.field_A == this.field_a) {
+            jaggl.OpenGL.glTexParameteri(this.field_e, 10241, this.field_f ? 9987 : 9729);
+            jaggl.OpenGL.glTexParameteri(this.field_e, 10240, 9729);
         } else {
-            jaggl.OpenGL.glTexParameteri(((cq) this).field_e, 10241, ((cq) this).field_f ? 9984 : 9728);
-            jaggl.OpenGL.glTexParameteri(((cq) this).field_e, 10240, 9728);
+            jaggl.OpenGL.glTexParameteri(this.field_e, 10241, this.field_f ? 9984 : 9728);
+            jaggl.OpenGL.glTexParameteri(this.field_e, 10240, 9728);
         }
     }
 
     private final void b(int param0) {
-        if (!(((cq) this).field_d <= 0)) {
-            ((cq) this).field_g.b(3, this.c(-88), ((cq) this).field_d);
-            ((cq) this).field_d = 0;
+        if (!(param0 <= (this.field_d ^ -1))) {
+            this.field_g.b(param0 + 4, this.c(-88), this.field_d);
+            this.field_d = 0;
         }
     }
 
@@ -267,6 +279,7 @@ abstract class cq implements jj {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_12_0 = 0;
         int stackOut_11_0 = 0;
@@ -293,7 +306,7 @@ abstract class cq implements jj {
               }
             }
             L2: {
-              if (param1 <= 0) {
+              if ((param1 ^ -1) >= -1) {
                 break L2;
               } else {
                 if (!mg.a(param1, (byte) -117)) {
@@ -303,7 +316,7 @@ abstract class cq implements jj {
                 }
               }
             }
-            var6_int = ((cq) this).field_h.field_b;
+            var6_int = this.field_h.field_b;
             var7 = 0;
             if (param4 == 107) {
               L3: {
@@ -318,13 +331,13 @@ abstract class cq implements jj {
                 }
               }
               var8 = stackIn_13_0;
-              var9 = param3 >> 1;
-              var10 = param1 >> 1;
+              var9 = param3 >> -1238162815;
+              var10 = param1 >> -86365791;
               var11 = param2;
               var12 = new byte[var10 * (var9 * var6_int)];
               L4: while (true) {
-                jaggl.OpenGL.glTexImage2Dub(param0, var7, ((cq) this).a(false), param3, param1, 0, gq.a(((cq) this).field_h, -29824), 5121, var11, 0);
-                if (var8 > 1) {
+                jaggl.OpenGL.glTexImage2Dub(param0, var7, this.a(false), param3, param1, 0, gq.a(this.field_h, -29824), 5121, var11, 0);
+                if ((var8 ^ -1) < -2) {
                   var15 = param3 * var6_int;
                   var16 = 0;
                   L5: while (true) {
@@ -365,7 +378,7 @@ abstract class cq implements jj {
                               var19 = var19 + var6_int;
                               var14 = var14 + param2[var19];
                               var19 = var19 + var6_int;
-                              var12[var17] = (byte)(var14 >> 2);
+                              var12[var17] = (byte)(var14 >> -2027735838);
                               var17 = var17 + var6_int;
                               var21++;
                               continue L7;
@@ -376,34 +389,36 @@ abstract class cq implements jj {
                     }
                   }
                 } else {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var6 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var6;
+            stackOut_27_0 = (RuntimeException) (var6);
             stackOut_27_1 = new StringBuilder().append("cq.D(").append(param0).append(',').append(param1).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
             stackIn_28_1 = stackOut_27_1;
             if (param2 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "null";
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
               break L8;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "{...}";
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
@@ -411,11 +426,21 @@ abstract class cq implements jj {
               break L8;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param3 + ',' + param4 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final void a(byte param0, int param1, int param2, int[] param3, int param4) {
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -446,6 +471,7 @@ abstract class cq implements jj {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_13_0 = 0;
         int stackOut_12_0 = 0;
@@ -461,7 +487,7 @@ abstract class cq implements jj {
         try {
           L0: {
             L1: {
-              if (param2 <= 0) {
+              if (-1 <= (param2 ^ -1)) {
                 break L1;
               } else {
                 if (!mg.a(param2, (byte) -12)) {
@@ -472,7 +498,7 @@ abstract class cq implements jj {
               }
             }
             L2: {
-              if (param1 <= 0) {
+              if ((param1 ^ -1) >= -1) {
                 break L2;
               } else {
                 if (!mg.a(param1, (byte) 118)) {
@@ -482,7 +508,7 @@ abstract class cq implements jj {
                 }
               }
             }
-            if (lc.field_g == ((cq) this).field_h) {
+            if (lc.field_g == this.field_h) {
               L3: {
                 var6_int = 0;
                 if (param1 > param2) {
@@ -496,14 +522,14 @@ abstract class cq implements jj {
                 }
               }
               var7 = stackIn_14_0;
-              var8 = param2 >> 1;
-              var9 = param1 >> 1;
+              var8 = param2 >> -1296413247;
+              var9 = param1 >> -1433903551;
               var10 = param3;
               var11 = new int[var8 * var9];
               if (param0 == -110) {
                 L4: while (true) {
-                  jaggl.OpenGL.glTexImage2Di(param4, var6_int, ((cq) this).a(false), param2, param1, 0, 32993, ((cq) this).field_g.field_Bc, var10, 0);
-                  if (var7 > 1) {
+                  jaggl.OpenGL.glTexImage2Di(param4, var6_int, this.a(false), param2, param1, 0, 32993, this.field_g.field_Bc, var10, 0);
+                  if (-2 > (var7 ^ -1)) {
                     var13 = 0;
                     var22 = 0;
                     var23 = param2 + var22;
@@ -529,37 +555,37 @@ abstract class cq implements jj {
                             var24++;
                             continue L5;
                           } else {
-                            int incrementValue$5 = var22;
+                            incrementValue$5 = var22;
                             var22++;
                             var14 = var10[incrementValue$5];
-                            int incrementValue$6 = var23;
+                            incrementValue$6 = var23;
                             var23++;
                             var16 = var10[incrementValue$6];
-                            int incrementValue$7 = var22;
+                            incrementValue$7 = var22;
                             var22++;
                             var15 = var10[incrementValue$7];
                             var20 = var14 & 255;
-                            var19 = 255 & var14 >> 8;
-                            var21 = var14 >> 24 & 255;
-                            var18 = 255 & var14 >> 16;
-                            int incrementValue$8 = var23;
+                            var19 = 255 & var14 >> -1008674104;
+                            var21 = var14 >> -825216584 & 255;
+                            var18 = 255 & var14 >> -1205755408;
+                            incrementValue$8 = var23;
                             var23++;
                             var17 = var10[incrementValue$8];
-                            var18 = var18 + (var15 >> 16 & 255);
-                            var19 = var19 + (255 & var15 >> 8);
-                            var21 = var21 + (var15 >> 24 & 255);
+                            var18 = var18 + (var15 >> 263809488 & 255);
+                            var19 = var19 + (255 & var15 >> -1170739256);
+                            var21 = var21 + (var15 >> 1561325624 & 255);
                             var20 = var20 + (var15 & 255);
-                            var18 = var18 + ((16731470 & var16) >> 16);
-                            var19 = var19 + ((65356 & var16) >> 8);
+                            var18 = var18 + ((16731470 & var16) >> -959158672);
+                            var19 = var19 + ((65356 & var16) >> 1467464712);
                             var20 = var20 + (var16 & 255);
-                            var21 = var21 + (var16 >> 24 & 255);
-                            var21 = var21 + (255 & var17 >> 24);
+                            var21 = var21 + (var16 >> -317689480 & 255);
+                            var21 = var21 + (255 & var17 >> -1690508456);
                             var20 = var20 + (255 & var17);
-                            var19 = var19 + (var17 >> 8 & 255);
-                            var18 = var18 + (255 & var17 >> 16);
-                            int incrementValue$9 = var13;
+                            var19 = var19 + (var17 >> 2031080136 & 255);
+                            var18 = var18 + (255 & var17 >> -1944694064);
+                            incrementValue$9 = var13;
                             var13++;
-                            var11[incrementValue$9] = vo.a(pg.a(255, var20 >> 2), vo.a(vo.a(pg.a(1020, var18) << 14, pg.a(var21, 1020) << 22), pg.a(var19 << 6, 65280)));
+                            var11[incrementValue$9] = vo.a(pg.a(255, var20 >> -1923393182), vo.a(vo.a(pg.a(1020, var18) << -51469618, pg.a(var21, 1020) << 2002769718), pg.a(var19 << -841166074, 65280)));
                             var25++;
                             continue L6;
                           }
@@ -567,11 +593,13 @@ abstract class cq implements jj {
                       }
                     }
                   } else {
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   }
                 }
               } else {
-                return;
+                decompiledRegionSelector0 = 0;
+                break L0;
               }
             } else {
               throw new IllegalArgumentException("");
@@ -581,23 +609,23 @@ abstract class cq implements jj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var6;
+            stackOut_26_0 = (RuntimeException) (var6);
             stackOut_26_1 = new StringBuilder().append("cq.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param3 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L7;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -605,36 +633,42 @@ abstract class cq implements jj {
               break L7;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param4 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final int a(boolean param0) {
+        int discarded$1 = 0;
         L0: {
           if (!param0) {
             break L0;
           } else {
-            int discarded$1 = ((cq) this).a(true);
+            discarded$1 = this.a(true);
             break L0;
           }
         }
         L1: {
-          if (((cq) this).field_c != la.field_h) {
-            if (((cq) this).field_c == la.field_d) {
-              if (((cq) this).field_h == wo.field_n) {
+          if (this.field_c != la.field_h) {
+            if (this.field_c == la.field_d) {
+              if (this.field_h == wo.field_n) {
                 return 34843;
               } else {
-                if (((cq) this).field_h == lc.field_g) {
+                if (this.field_h == lc.field_g) {
                   return 34842;
                 } else {
-                  if (((cq) this).field_h != ro.field_o) {
-                    if (((cq) this).field_h == wf.field_d) {
+                  if (this.field_h != ro.field_o) {
+                    if (this.field_h == wf.field_d) {
                       return 34846;
                     } else {
-                      if (hh.field_c == ((cq) this).field_h) {
+                      if (hh.field_c == this.field_h) {
                         return 34847;
                       } else {
-                        if (((cq) this).field_h == aj.field_r) {
+                        if (this.field_h == aj.field_r) {
                           return 6145;
                         } else {
                           break L1;
@@ -647,21 +681,21 @@ abstract class cq implements jj {
                 }
               }
             } else {
-              if (((cq) this).field_c != la.field_i) {
+              if (this.field_c != la.field_i) {
                 break L1;
               } else {
-                if (((cq) this).field_h != wo.field_n) {
-                  if (lc.field_g == ((cq) this).field_h) {
+                if (this.field_h != wo.field_n) {
+                  if (lc.field_g == this.field_h) {
                     return 34836;
                   } else {
-                    if (ro.field_o == ((cq) this).field_h) {
+                    if (ro.field_o == this.field_h) {
                       return 34838;
                     } else {
-                      if (wf.field_d == ((cq) this).field_h) {
+                      if (wf.field_d == this.field_h) {
                         return 34840;
                       } else {
-                        if (hh.field_c != ((cq) this).field_h) {
-                          if (((cq) this).field_h == aj.field_r) {
+                        if (hh.field_c != this.field_h) {
+                          if (this.field_h == aj.field_r) {
                             return 6145;
                           } else {
                             break L1;
@@ -678,14 +712,14 @@ abstract class cq implements jj {
               }
             }
           } else {
-            if (wo.field_n != ((cq) this).field_h) {
-              if (lc.field_g != ((cq) this).field_h) {
-                if (((cq) this).field_h != ro.field_o) {
-                  if (((cq) this).field_h != wf.field_d) {
-                    if (((cq) this).field_h == hh.field_c) {
+            if (wo.field_n != this.field_h) {
+              if (lc.field_g != this.field_h) {
+                if (this.field_h != ro.field_o) {
+                  if (this.field_h != wf.field_d) {
+                    if (this.field_h == hh.field_c) {
                       return 6410;
                     } else {
-                      if (((cq) this).field_h != aj.field_r) {
+                      if (this.field_h != aj.field_r) {
                         break L1;
                       } else {
                         return 6145;
@@ -709,26 +743,26 @@ abstract class cq implements jj {
     }
 
     cq(jc param0, int param1, hd param2, la param3, int param4, boolean param5) {
-        ((cq) this).field_a = fg.field_A;
+        this.field_a = fg.field_A;
         try {
-            ((cq) this).field_e = param1;
-            ((cq) this).field_h = param2;
-            ((cq) this).field_g = param0;
-            ((cq) this).field_f = param5 ? true : false;
-            ((cq) this).field_b = param4;
-            ((cq) this).field_c = param3;
+            this.field_e = param1;
+            this.field_h = param2;
+            this.field_g = param0;
+            this.field_f = param5 ? true : false;
+            this.field_b = param4;
+            this.field_c = param3;
             jaggl.OpenGL.glGenTextures(1, tn.field_w, 0);
-            ((cq) this).field_d = tn.field_w[0];
+            this.field_d = tn.field_w[0];
             this.d((byte) 127);
             this.a(0, 4);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "cq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "cq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     public void a(ke param0, int param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
+        ke var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -748,10 +782,10 @@ abstract class cq implements jj {
         try {
           L0: {
             L1: {
-              if (((cq) this).field_a == param0) {
+              if (this.field_a == param0) {
                 break L1;
               } else {
-                ((cq) this).field_a = param0;
+                this.field_a = param0;
                 this.d((byte) 127);
                 break L1;
               }
@@ -760,8 +794,8 @@ abstract class cq implements jj {
               if (param1 == -31662) {
                 break L2;
               } else {
-                var4 = null;
-                ((cq) this).a((ke) null, 89);
+                var4 = (ke) null;
+                this.a((ke) null, 89);
                 break L2;
               }
             }
@@ -771,23 +805,23 @@ abstract class cq implements jj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("cq.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -795,7 +829,7 @@ abstract class cq implements jj {
               break L3;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
     }
 

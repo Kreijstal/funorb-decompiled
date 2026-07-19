@@ -10,11 +10,14 @@ final class pa {
             throw new IllegalStateException();
         }
         c.field_u = true;
-        ic.a((byte) -126, true);
+        ic.a((byte) -126, param0);
         ff.field_e = 0;
     }
 
     public static void a(byte param0) {
+        if (param0 != 103) {
+            field_a = (hh) null;
+        }
         field_a = null;
         field_b = null;
     }
@@ -34,16 +37,24 @@ final class pa {
             pb.field_c = new int[260];
             var1_int = 0;
             L1: while (true) {
-              if (var1_int >= 256) {
+              if ((var1_int ^ -1) <= -257) {
+                L2: {
+                  if (param0 < -19) {
+                    break L2;
+                  } else {
+                    field_b = (hh) null;
+                    break L2;
+                  }
+                }
                 var5 = 256;
                 var1_int = var5;
-                L2: while (true) {
+                L3: while (true) {
                   if (var5 >= pb.field_c.length) {
                     break L0;
                   } else {
                     pb.field_c[var5] = 255;
                     var5++;
-                    continue L2;
+                    continue L3;
                   }
                 }
               } else {
@@ -57,7 +68,7 @@ final class pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "pa.A(" + -83 + ')');
+          throw t.a((Throwable) ((Object) var1), "pa.A(" + param0 + ')');
         }
     }
 

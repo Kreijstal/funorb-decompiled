@@ -10,26 +10,30 @@ final class tk {
     static boolean field_b;
 
     final static boolean a(byte param0, char param1) {
-        int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        if (param1 != 160) {
-          if (param1 != 32) {
-            if (param1 != 95) {
-              if (param1 == 45) {
-                return true;
+        int stackIn_9_0 = 0;
+        int stackOut_7_0 = 0;
+        if (param0 == 81) {
+          if (param1 != 160) {
+            if (param1 != 32) {
+              if (param1 != 95) {
+                if (param1 == 45) {
+                  return true;
+                } else {
+                  return false;
+                }
               } else {
-                return false;
+                stackOut_7_0 = 1;
+                stackIn_9_0 = stackOut_7_0;
+                return stackIn_9_0 != 0;
               }
             } else {
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              return stackIn_7_0 != 0;
+              return true;
             }
           } else {
             return true;
           }
         } else {
-          return true;
+          return false;
         }
     }
 
@@ -44,10 +48,6 @@ final class tk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "You must play <%1> more rated games before playing with the current options.";
         field_e = "Withdraw request to join <%0>'s game";
         field_c = "Rating";

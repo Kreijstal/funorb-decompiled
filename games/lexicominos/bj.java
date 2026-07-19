@@ -11,17 +11,16 @@ final class bj {
 
     public static void a(boolean param0) {
         field_a = null;
+        if (!param0) {
+            field_a = (String) null;
+        }
     }
 
     bj(int param0) {
-        ((bj) this).field_b = param0;
+        this.field_b = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "EGG";
     }
 }

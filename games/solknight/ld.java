@@ -13,21 +13,21 @@ abstract class ld extends kf {
 
     ld(i param0, int param1, int param2) {
         super(param0, param1, param2);
-        ((ld) this).field_P = 0;
-        ((ld) this).field_L = 0;
+        this.field_P = 0;
+        this.field_L = 0;
     }
 
     final void b(int param0, int param1, int param2, int param3) {
         if (0 >= param2) {
-            ((ld) this).b(param3, -2038584927, param0);
+            this.b(param3, -2038584927, param0);
             return;
         }
-        ((ld) this).field_L = param2;
-        ((ld) this).field_K = ((ld) this).field_x;
-        ((ld) this).field_N = param0;
-        ((ld) this).field_Q = ((ld) this).field_t;
-        ((ld) this).field_R = param3;
-        ((ld) this).field_P = param1;
+        this.field_L = param2;
+        this.field_K = this.field_x;
+        this.field_N = param0;
+        this.field_Q = this.field_t;
+        this.field_R = param3;
+        this.field_P = param1;
     }
 
     final static lf j(int param0) {
@@ -46,7 +46,7 @@ abstract class ld extends kf {
             }
             try {
               L1: {
-                stackOut_2_0 = (lf) Class.forName("sc").newInstance();
+                stackOut_2_0 = (lf) (Class.forName("sc").newInstance());
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
               }
@@ -66,7 +66,7 @@ abstract class ld extends kf {
     public static void k(int param0) {
         field_O = null;
         field_M = null;
-        int var1 = -1;
+        int var1 = -31 % ((-28 - param0) / 50);
     }
 
     void a(int param0, byte param1, int param2) {
@@ -85,27 +85,27 @@ abstract class ld extends kf {
         int var16 = 0;
         int var17 = 0;
         var17 = SolKnight.field_L ? 1 : 0;
-        mi.e(param0 + 6, 35 + param2, -12 + ((ld) this).field_t, ((ld) this).field_x + -40, 2105376, 0);
+        mi.e(param0 + 6, 35 + param2, -12 + this.field_t, this.field_x + -40, 2105376, 0);
         var5 = 211;
-        var6 = -1;
+        var6 = -45 % ((param1 - -55) / 39);
         var4 = 35;
         var7 = 194;
         var8 = 0;
         var9 = param2;
         L0: while (true) {
-          if (~var8 <= ~var4) {
+          if (var8 >= var4) {
             var5 = 194;
             var4 = 22;
             var7 = 169;
             var8 = 0;
             var9 = param2 + 35;
             L1: while (true) {
-              if (~var4 >= ~var8) {
-                fa.field_b.d(param0 - (-((ld) this).field_t - -90), param2 - -10);
-                je.a(fi.field_a, 5 + param0, param2 + 35, ((ld) this).field_t + -10, (byte) 93);
-                je.a(qk.field_l, param0, -22 + (((ld) this).field_x + param2), ((ld) this).field_t, (byte) 114);
+              if (var4 <= var8) {
+                fa.field_b.d(param0 - (-this.field_t - -90), param2 - -10);
+                je.a(fi.field_a, 5 + param0, param2 + 35, this.field_t + -10, (byte) 93);
+                je.a(qk.field_l, param0, -22 + (this.field_x + param2), this.field_t, (byte) 114);
                 var7 = 127;
-                var4 = -79 + ((ld) this).field_x;
+                var4 = -79 + this.field_x;
                 var5 = 169;
                 var8 = 0;
                 var9 = param2 + 57;
@@ -114,9 +114,9 @@ abstract class ld extends kf {
                     return;
                   } else {
                     var10 = var5 + var8 * (-var5 + var7) / var4;
-                    var10 = var10 | (var10 << 8 | var10 << 16);
+                    var10 = var10 | (var10 << 1228593160 | var10 << -823846544);
                     mi.b(param0, var9, 6, var10);
-                    mi.b(-6 + (((ld) this).field_t + param0), var9, 6, var10);
+                    mi.b(-6 + (this.field_t + param0), var9, 6, var10);
                     var8++;
                     var9++;
                     continue L2;
@@ -124,101 +124,99 @@ abstract class ld extends kf {
                 }
               } else {
                 var10 = var5 + (-var5 + var7) * var8 / var4;
-                var10 = var10 | (var10 << 8 | var10 << 16);
+                var10 = var10 | (var10 << -1917465080 | var10 << -1506965200);
                 mi.b(param0, var9, 6, var10);
-                mi.b(-6 + (((ld) this).field_t + param0), var9, 6, var10);
+                mi.b(-6 + (this.field_t + param0), var9, 6, var10);
                 var9++;
                 var8++;
                 continue L1;
               }
             }
           } else {
-            L3: {
-              if (~mi.field_l < ~var9) {
-                break L3;
-              } else {
-                if (var9 < mi.field_e) {
-                  L4: {
-                    var10 = (-var5 + var7) * var8 / var4 + var5;
-                    var11 = 0;
-                    var12 = ((ld) this).field_t;
-                    if (var8 <= 20) {
-                      L5: while (true) {
-                        if (20 < var11) {
-                          break L4;
-                        } else {
-                          L6: {
-                            var13 = (20 - var8) * (-var8 + 20) - -((20 - var11) * (20 - var11));
-                            if (var13 > 462) {
-                              break L6;
-                            } else {
-                              if (var13 < 420) {
-                                break L4;
-                              } else {
-                                var14 = (462 + -var13) * var10 / 42;
-                                var14 = var14 | (var14 << 8 | var14 << 16);
-                                mi.field_f[var11 + (param0 + var9 * mi.field_a)] = var14;
-                                break L6;
-                              }
-                            }
+            if (mi.field_l <= var9) {
+              if (var9 < mi.field_e) {
+                L3: {
+                  var10 = (-var5 + var7) * var8 / var4 + var5;
+                  var11 = 0;
+                  var12 = this.field_t;
+                  if ((var8 ^ -1) >= -21) {
+                    L4: while (true) {
+                      if (20 < var11) {
+                        break L3;
+                      } else {
+                        var13 = (20 - var8) * (-var8 + 20) - -((20 - var11) * (20 - var11));
+                        if ((var13 ^ -1) >= -463) {
+                          if (-421 < (var13 ^ -1)) {
+                            break L3;
+                          } else {
+                            var14 = (462 + -var13) * var10 / 42;
+                            var14 = var14 | (var14 << -295194680 | var14 << 53559472);
+                            mi.field_f[var11 + (param0 + var9 * mi.field_a)] = var14;
+                            var11++;
+                            continue L4;
                           }
+                        } else {
                           var11++;
-                          continue L5;
+                          continue L4;
                         }
                       }
-                    } else {
-                      break L4;
                     }
+                  } else {
+                    break L3;
                   }
-                  L7: {
-                    if (var8 <= 20) {
-                      var13 = var12;
-                      var12 -= 21;
-                      var14 = 0;
-                      L8: while (true) {
-                        L9: {
-                          if (var14 > 20) {
-                            break L9;
+                }
+                L5: {
+                  if (-21 <= (var8 ^ -1)) {
+                    var13 = var12;
+                    var12 -= 21;
+                    var14 = 0;
+                    L6: while (true) {
+                      L7: {
+                        if (-21 > (var14 ^ -1)) {
+                          break L7;
+                        } else {
+                          var15 = var14 * var14 + (-var8 + 20) * (20 + -var8);
+                          if (var15 > 462) {
+                            break L7;
                           } else {
-                            var15 = var14 * var14 + (-var8 + 20) * (20 + -var8);
-                            if (var15 > 462) {
-                              break L9;
-                            } else {
-                              L10: {
-                                if (var15 >= 420) {
-                                  var16 = var10 * (-var15 + 462) / 42;
-                                  var16 = var16 | (var16 << 16 | var16 << 8);
-                                  mi.field_f[var12 + var9 * mi.field_a - -param0] = var16;
-                                  break L10;
-                                } else {
-                                  var13 = 1 + var12;
-                                  break L10;
-                                }
-                              }
+                            if (var15 >= 420) {
+                              var16 = var10 * (-var15 + 462) / 42;
+                              var16 = var16 | (var16 << 1073162736 | var16 << 905512680);
+                              mi.field_f[var12 + var9 * mi.field_a - -param0] = var16;
                               var12++;
                               var14++;
-                              continue L8;
+                              continue L6;
+                            } else {
+                              var13 = 1 + var12;
+                              var12++;
+                              var14++;
+                              continue L6;
                             }
                           }
                         }
-                        var12 = var13;
-                        break L7;
                       }
-                    } else {
-                      break L7;
+                      var12 = var13;
+                      break L5;
                     }
+                  } else {
+                    break L5;
                   }
-                  var10 = var10 | (var10 << 16 | var10 << 8);
-                  mi.b(var11 - -param0, var9, -var11 + var12, var10);
-                  break L3;
-                } else {
-                  break L3;
                 }
+                var10 = var10 | (var10 << 1760559280 | var10 << -1621305656);
+                mi.b(var11 - -param0, var9, -var11 + var12, var10);
+                var9++;
+                var8++;
+                continue L0;
+              } else {
+                var9++;
+                var8++;
+                continue L0;
               }
+            } else {
+              var9++;
+              var8++;
+              continue L0;
             }
-            var9++;
-            var8++;
-            continue L0;
           }
         }
     }
@@ -226,26 +224,30 @@ abstract class ld extends kf {
     boolean h(int param0) {
         int var2 = 0;
         int var3 = 0;
+        int fieldTemp$0 = 0;
         int var4 = 0;
         int var5 = 0;
-        if (((ld) this).field_L <= 0) {
-        } else {
-            var2 = ((ld) this).field_R;
-            var3 = ((ld) this).field_N;
-            int fieldTemp$0 = ((ld) this).field_P + 1;
-            ((ld) this).field_P = ((ld) this).field_P + 1;
-            if (fieldTemp$0 >= ((ld) this).field_L) {
-                ((ld) this).field_L = 0;
-                ((ld) this).l(7107);
-            } else {
-                var4 = ((ld) this).field_P * (-((ld) this).field_P + 2 * ((ld) this).field_L);
-                var5 = ((ld) this).field_L * ((ld) this).field_L;
-                var3 = var4 * (-((ld) this).field_K + ((ld) this).field_N) / var5 + ((ld) this).field_K;
-                var2 = ((ld) this).field_Q + var4 * (-((ld) this).field_Q + ((ld) this).field_R) / var5;
-            }
-            ((ld) this).b(var2, -2038584927, var3);
+        if (param0 != 1784) {
+            this.field_K = 81;
         }
-        return super.h(1784);
+        if (this.field_L <= 0) {
+        } else {
+            var2 = this.field_R;
+            var3 = this.field_N;
+            fieldTemp$0 = this.field_P + 1;
+            this.field_P = this.field_P + 1;
+            if (fieldTemp$0 >= this.field_L) {
+                this.field_L = 0;
+                this.l(7107);
+            } else {
+                var4 = this.field_P * (-this.field_P + 2 * this.field_L);
+                var5 = this.field_L * this.field_L;
+                var3 = var4 * (-this.field_K + this.field_N) / var5 + this.field_K;
+                var2 = this.field_Q + var4 * (-this.field_Q + this.field_R) / var5;
+            }
+            this.b(var2, -2038584927, var3);
+        }
+        return super.h(param0 + 0);
     }
 
     final static void c(int param0, int param1, int param2) {
@@ -382,36 +384,34 @@ abstract class ld extends kf {
     }
 
     void e(boolean param0) {
+        lf discarded$0 = null;
         if (!param0) {
-            lf discarded$0 = ld.j(31);
+            discarded$0 = ld.j(31);
         }
-        if (((ld) this).field_L <= 0) {
+        if (-1 <= (this.field_L ^ -1)) {
             return;
         }
-        ((ld) this).b(((ld) this).field_R, -2038584927, ((ld) this).field_N);
-        ((ld) this).field_L = 0;
-        ((ld) this).l(7107);
+        this.b(this.field_R, -2038584927, this.field_N);
+        this.field_L = 0;
+        this.l(7107);
     }
 
     boolean e(byte param0) {
+        boolean discarded$0 = false;
         if (param0 != 124) {
-            boolean discarded$0 = ((ld) this).e((byte) 24);
+            discarded$0 = this.e((byte) 24);
         }
-        ((ld) this).e(true);
+        this.e(true);
         return super.e((byte) 124);
     }
 
     void l(int param0) {
         if (param0 != 7107) {
-            ((ld) this).field_L = -126;
+            this.field_L = -126;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_O = "Password: ";
     }
 }

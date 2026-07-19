@@ -7,6 +7,7 @@ final class sj {
     private static String field_z;
 
     final static boolean a(int param0, byte param1) {
+        boolean discarded$6 = false;
         if (param1 <= -71) {
           if (param0 != 1) {
             if (param0 == 7) {
@@ -18,7 +19,7 @@ final class sj {
             return false;
           }
         } else {
-          boolean discarded$6 = sj.a(-17, (byte) 116);
+          discarded$6 = sj.a(-17, (byte) 116);
           if (param0 != 1) {
             if (param0 == 7) {
               return false;
@@ -32,10 +33,6 @@ final class sj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "sj.A(";
         field_a = -1;
     }

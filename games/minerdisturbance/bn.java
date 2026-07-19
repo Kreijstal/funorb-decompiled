@@ -13,16 +13,21 @@ final class bn implements uj {
     }
 
     public final void a(boolean param0) {
+        boolean discarded$0 = false;
         tb.field_a = 0;
         if (param0) {
-            boolean discarded$0 = bn.a(126, 'ﾂ');
+            discarded$0 = bn.a(126, 'ﾂ');
         }
     }
 
     public static void a(int param0) {
+        boolean discarded$0 = false;
         field_d = null;
         field_b = null;
         field_a = null;
+        if (param0 != 160) {
+            discarded$0 = bn.a(-15, '￬');
+        }
     }
 
     final static boolean a(int param0, char param1) {
@@ -35,6 +40,7 @@ final class bn implements uj {
         int stackIn_8_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_17_0 = 0;
         int stackOut_14_0 = 0;
@@ -73,6 +79,7 @@ final class bn implements uj {
                   if (var4 >= var3.length) {
                     stackOut_17_0 = 0;
                     stackIn_18_0 = stackOut_17_0;
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
                     var5 = var3[var4];
@@ -82,7 +89,8 @@ final class bn implements uj {
                     } else {
                       stackOut_14_0 = 1;
                       stackIn_15_0 = stackOut_14_0;
-                      return stackIn_15_0 != 0;
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     }
                   }
                 }
@@ -92,21 +100,26 @@ final class bn implements uj {
             }
             stackOut_7_0 = 1;
             stackIn_8_0 = stackOut_7_0;
-            return stackIn_8_0 != 0;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var2, "bn.D(" + param0 + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) var2), "bn.D(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_18_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_8_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_15_0 != 0;
+          } else {
+            return stackIn_18_0 != 0;
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new boolean[21];
         field_a = "Ranking: Mega Miner";
     }

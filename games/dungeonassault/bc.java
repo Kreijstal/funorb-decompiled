@@ -18,10 +18,6 @@ final class bc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bc.A(";
         field_c = "The air in this room is acrid due to the corrosive slime covering its walls. Each time a raider crosses this room, they may be attacked by the slime, or may manage to sneak past without incident.";
         field_a = 0;

@@ -6,7 +6,7 @@ final class qsb extends uj {
 
     final boolean a(boolean param0) {
         if (param0) {
-            field_d = null;
+            field_d = (String) null;
             return false;
         }
         return false;
@@ -41,7 +41,7 @@ final class qsb extends uj {
 
     final int a(int param0) {
         if (param0 != -1) {
-            field_d = null;
+            field_d = (String) null;
             return mlb.field_r;
         }
         return mlb.field_r;

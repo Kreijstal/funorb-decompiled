@@ -44,13 +44,13 @@ final class uha extends sna {
 
     public static void g(byte param0) {
         if (param0 <= 32) {
+            field_Vb = (String) null;
             field_Vb = null;
-            field_Vb = null;
-            field_Xb = null;
+            field_Xb = (kv[][]) null;
             return;
         }
         field_Vb = null;
-        field_Xb = null;
+        field_Xb = (kv[][]) null;
     }
 
     final static pp b(lu param0, int param1) {
@@ -90,7 +90,7 @@ final class uha extends sna {
               }
             }
             L2: {
-              if (param0.b(16711935) == 1) {
+              if (-2 == (param0.b(16711935) ^ -1)) {
                 stackOut_4_0 = 1;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
@@ -109,23 +109,23 @@ final class uha extends sna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2_ref;
+            stackOut_7_0 = (RuntimeException) (var2_ref);
             stackOut_7_1 = new StringBuilder().append("uha.BA(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -133,18 +133,19 @@ final class uha extends sna {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
         }
-        return (pp) (Object) stackIn_6_0;
+        return (pp) ((Object) stackIn_6_0);
     }
 
     final boolean a(int param0, uha param1) {
+        pp discarded$1 = null;
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        Object var7 = null;
+        lu var7 = null;
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_13_0 = 0;
@@ -176,6 +177,7 @@ final class uha extends sna {
         RuntimeException stackIn_74_0 = null;
         StringBuilder stackIn_74_1 = null;
         String stackIn_74_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
@@ -228,8 +230,8 @@ final class uha extends sna {
         try {
           L0: {
             L1: {
-              if (!((uha) this).field_Wb) {
-                if (-7 == ((uha) this).field_ec) {
+              if (!this.field_Wb) {
+                if (-7 == (this.field_ec ^ -1)) {
                   stackOut_4_0 = 1;
                   stackIn_6_0 = stackOut_4_0;
                   break L1;
@@ -247,7 +249,7 @@ final class uha extends sna {
             L2: {
               var3_int = stackIn_6_0;
               if (!param1.field_Wb) {
-                if (-7 == param1.field_ec) {
+                if (-7 == (param1.field_ec ^ -1)) {
                   stackOut_10_0 = 1;
                   stackIn_12_0 = stackOut_10_0;
                   break L2;
@@ -284,19 +286,20 @@ final class uha extends sna {
             if (stackIn_15_0 == stackIn_15_1) {
               stackOut_17_0 = var3_int;
               stackIn_18_0 = stackOut_17_0;
-              return stackIn_18_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L4: {
                 if (var3_int == 0) {
-                  if (param1.field_zb == ((uha) this).field_zb) {
-                    if (!((uha) this).field_zb) {
+                  if (param1.field_zb == this.field_zb) {
+                    if (!this.field_zb) {
                       break L4;
                     } else {
-                      if (((uha) this).field_Kb == param1.field_Kb) {
+                      if (this.field_Kb == param1.field_Kb) {
                         break L4;
                       } else {
                         L5: {
-                          if (((uha) this).field_Kb >= param1.field_Kb) {
+                          if (this.field_Kb >= param1.field_Kb) {
                             stackOut_28_0 = 0;
                             stackIn_29_0 = stackOut_28_0;
                             break L5;
@@ -306,13 +309,15 @@ final class uha extends sna {
                             break L5;
                           }
                         }
-                        return stackIn_29_0 != 0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       }
                     }
                   } else {
-                    stackOut_22_0 = ((uha) this).field_zb;
+                    stackOut_22_0 = this.field_zb;
                     stackIn_23_0 = stackOut_22_0;
-                    return stackIn_23_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 } else {
                   break L4;
@@ -333,7 +338,7 @@ final class uha extends sna {
                 stackOut_33_0 = stackIn_33_0;
                 stackIn_35_0 = stackOut_33_0;
                 stackIn_34_0 = stackOut_33_0;
-                if (((uha) this).field_Zb) {
+                if (this.field_Zb) {
                   stackOut_35_0 = stackIn_35_0;
                   stackOut_35_1 = 0;
                   stackIn_36_0 = stackOut_35_0;
@@ -349,7 +354,7 @@ final class uha extends sna {
               }
               if (stackIn_36_0 != stackIn_36_1) {
                 L8: {
-                  if (((uha) this).field_Zb) {
+                  if (this.field_Zb) {
                     stackOut_40_0 = 0;
                     stackIn_41_0 = stackOut_40_0;
                     break L8;
@@ -359,25 +364,26 @@ final class uha extends sna {
                     break L8;
                   }
                 }
-                return stackIn_41_0 != 0;
+                decompiledRegionSelector0 = 3;
+                break L0;
               } else {
                 L9: {
                   if (param0 == -7) {
                     break L9;
                   } else {
-                    var7 = null;
-                    pp discarded$1 = uha.b((lu) null, -6);
+                    var7 = (lu) null;
+                    discarded$1 = uha.b((lu) null, -6);
                     break L9;
                   }
                 }
-                if (((uha) this).field_Zb) {
+                if (this.field_Zb) {
                   L10: {
-                    if (((uha) this).field_Fb) {
+                    if (this.field_Fb) {
                       stackOut_53_0 = 1;
                       stackIn_55_0 = stackOut_53_0;
                       break L10;
                     } else {
-                      if (2 == ((uha) this).field_Lb) {
+                      if (2 == this.field_Lb) {
                         stackOut_52_0 = 1;
                         stackIn_55_0 = stackOut_52_0;
                         break L10;
@@ -427,7 +433,7 @@ final class uha extends sna {
                   }
                   if (stackIn_64_0 != stackIn_64_1) {
                     L13: {
-                      if (((uha) this).field_Ob <= param1.field_Ob) {
+                      if (this.field_Ob <= param1.field_Ob) {
                         stackOut_69_0 = 0;
                         stackIn_70_0 = stackOut_69_0;
                         break L13;
@@ -437,15 +443,17 @@ final class uha extends sna {
                         break L13;
                       }
                     }
+                    decompiledRegionSelector0 = 6;
                     break L0;
                   } else {
                     stackOut_65_0 = var5;
                     stackIn_66_0 = stackOut_65_0;
-                    return stackIn_66_0 != 0;
+                    decompiledRegionSelector0 = 5;
+                    break L0;
                   }
                 } else {
                   L14: {
-                    if (((uha) this).field_Ob >= param1.field_Ob) {
+                    if (this.field_Ob >= param1.field_Ob) {
                       stackOut_47_0 = 0;
                       stackIn_48_0 = stackOut_47_0;
                       break L14;
@@ -455,7 +463,8 @@ final class uha extends sna {
                       break L14;
                     }
                   }
-                  return stackIn_48_0 != 0;
+                  decompiledRegionSelector0 = 4;
+                  break L0;
                 }
               }
             }
@@ -464,23 +473,23 @@ final class uha extends sna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var3 = decompiledCaughtException;
-            stackOut_71_0 = (RuntimeException) var3;
+            stackOut_71_0 = (RuntimeException) (var3);
             stackOut_71_1 = new StringBuilder().append("uha.AA(").append(param0).append(',');
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;
             stackIn_72_1 = stackOut_71_1;
             if (param1 == null) {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackOut_73_2 = "null";
               stackIn_74_0 = stackOut_73_0;
               stackIn_74_1 = stackOut_73_1;
               stackIn_74_2 = stackOut_73_2;
               break L15;
             } else {
-              stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
-              stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
+              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
               stackOut_72_2 = "{...}";
               stackIn_74_0 = stackOut_72_0;
               stackIn_74_1 = stackOut_72_1;
@@ -488,21 +497,45 @@ final class uha extends sna {
               break L15;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_74_0), stackIn_74_2 + ')');
         }
-        return stackIn_70_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_18_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_23_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_29_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_41_0 != 0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_48_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_66_0 != 0;
+                  } else {
+                    return stackIn_70_0 != 0;
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     final int f(byte param0) {
         if (param0 >= -44) {
             return -126;
         }
-        return (int)((uha) this).d(-115);
+        return (int)this.d(-115);
     }
 
     uha(int param0) {
         super(0L, (sna) null);
-        ((uha) this).field_Eb = new byte[param0];
+        this.field_Eb = new byte[param0];
     }
 
     final boolean f(int param0) {
@@ -514,8 +547,8 @@ final class uha extends sna {
         int stackOut_2_0 = 0;
         if (param0 < 24) {
           L0: {
-            ((uha) this).field_Zb = true;
-            if (((uha) this).a(0)) {
+            this.field_Zb = true;
+            if (this.a(0)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -528,7 +561,7 @@ final class uha extends sna {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((uha) this).a(0)) {
+            if (this.a(0)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -543,10 +576,6 @@ final class uha extends sna {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Vb = "Public";
     }
 }

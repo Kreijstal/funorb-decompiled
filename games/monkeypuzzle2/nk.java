@@ -17,7 +17,7 @@ public class nk {
 
     public static File a(String param0, int param1) {
         if (param1 != -2) {
-            return null;
+            return (File) null;
         }
         return nk.a(-1, param0, field_d, field_c);
     }
@@ -27,8 +27,9 @@ public class nk {
     }
 
     public static void a(int param0, int param1, String param2) {
+        File discarded$2 = null;
         Exception var3 = null;
-        Object var4 = null;
+        String var4 = null;
         Throwable decompiledCaughtException = null;
         L0: {
           field_d = param2;
@@ -36,8 +37,8 @@ public class nk {
           if (param1 == 0) {
             break L0;
           } else {
-            var4 = null;
-            File discarded$2 = nk.a(25, (String) null, (String) null, -32);
+            var4 = (String) null;
+            discarded$2 = nk.a(25, (String) null, (String) null, -32);
             break L0;
           }
         }
@@ -86,10 +87,6 @@ public class nk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_a = new Hashtable(16);
     }

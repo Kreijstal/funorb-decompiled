@@ -20,15 +20,15 @@ public class D3DPRESENT_PARAMETERS {
     public int MultiSampleType;
 
     public D3DPRESENT_PARAMETERS(java.awt.Canvas param0) {
-        ((jagdx.D3DPRESENT_PARAMETERS) this).BackBufferWidth = 0;
-        ((jagdx.D3DPRESENT_PARAMETERS) this).MultiSampleQuality = 0;
-        ((jagdx.D3DPRESENT_PARAMETERS) this).SwapEffect = 1;
-        ((jagdx.D3DPRESENT_PARAMETERS) this).PresentationInterval = 0;
-        ((jagdx.D3DPRESENT_PARAMETERS) this).AutoDepthStencilFormat = 0;
-        ((jagdx.D3DPRESENT_PARAMETERS) this).BackBufferHeight = 0;
-        ((jagdx.D3DPRESENT_PARAMETERS) this).MultiSampleType = 0;
-        ((jagdx.D3DPRESENT_PARAMETERS) this).BackBufferFormat = 0;
-        ((jagdx.D3DPRESENT_PARAMETERS) this).BackBufferCount = 0;
-        ((jagdx.D3DPRESENT_PARAMETERS) this).DeviceWindow = param0;
+        this.BackBufferWidth = 0;
+        this.MultiSampleQuality = 0;
+        this.SwapEffect = 1;
+        this.PresentationInterval = 0;
+        this.AutoDepthStencilFormat = 0;
+        this.BackBufferHeight = 0;
+        this.MultiSampleType = 0;
+        this.BackBufferFormat = 0;
+        this.BackBufferCount = 0;
+        this.DeviceWindow = param0;
     }
 }

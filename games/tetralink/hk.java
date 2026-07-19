@@ -12,10 +12,15 @@ abstract class hk {
             fl.field_u.r(-128);
         }
         ko.field_q = new fn();
-        mm.field_u.e((na) (Object) ko.field_q, -27667);
+        mm.field_u.e(ko.field_q, -27667);
+        if (param0 > -50) {
+            field_d = -89;
+        }
     }
 
     final static void a(byte[] param0, int param1) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -30,17 +35,13 @@ abstract class hk {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        Object var16 = null;
+        byte[] var16 = null;
         bh var17 = null;
         bh var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
         byte[] var22 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        byte[] var25 = null;
-        byte[] var26 = null;
         int stackIn_36_0 = 0;
         int stackIn_37_0 = 0;
         int stackIn_38_0 = 0;
@@ -82,7 +83,7 @@ abstract class hk {
               if (param1 <= -35) {
                 break L1;
               } else {
-                var16 = null;
+                var16 = (byte[]) null;
                 hk.a((byte[]) null, 72);
                 break L1;
               }
@@ -129,21 +130,17 @@ abstract class hk {
                                       var5 = je.field_h[var4];
                                       var6 = sn.field_e[var4];
                                       var7 = var6 * var5;
-                                      var25 = new byte[var7];
-                                      var23 = var25;
-                                      var21 = var23;
+                                      var21 = new byte[var7];
                                       var19 = var21;
                                       var8 = var19;
-                                      ga.field_a[var4] = var25;
-                                      var26 = new byte[var7];
-                                      var24 = var26;
-                                      var22 = var24;
+                                      ga.field_a[var4] = var21;
+                                      var22 = new byte[var7];
                                       var20 = var22;
                                       var9 = var20;
-                                      jg.field_i[var4] = var26;
+                                      jg.field_i[var4] = var22;
                                       var10 = 0;
                                       var11 = var18.d((byte) -99);
-                                      if ((1 & var11) == 0) {
+                                      if (-1 == (1 & var11 ^ -1)) {
                                         var12 = 0;
                                         L9: while (true) {
                                           if (var12 >= var7) {
@@ -156,7 +153,7 @@ abstract class hk {
                                                   break L8;
                                                 } else {
                                                   L11: {
-                                                    byte dupTemp$2 = var18.g(-1772093437);
+                                                    dupTemp$2 = var18.g(-1772093437);
                                                     var9[var12] = dupTemp$2;
                                                     var13 = dupTemp$2;
                                                     stackOut_46_0 = var10;
@@ -205,13 +202,13 @@ abstract class hk {
                                                       continue L13;
                                                     } else {
                                                       L15: {
-                                                        byte dupTemp$3 = var18.g(-1772093437);
+                                                        dupTemp$3 = var18.g(-1772093437);
                                                         var9[var5 * var13 + var12] = dupTemp$3;
                                                         var14 = dupTemp$3;
                                                         stackOut_35_0 = var10;
                                                         stackIn_37_0 = stackOut_35_0;
                                                         stackIn_36_0 = stackOut_35_0;
-                                                        if (var14 == -1) {
+                                                        if (0 == (var14 ^ -1)) {
                                                           stackOut_37_0 = stackIn_37_0;
                                                           stackOut_37_1 = 0;
                                                           stackIn_38_0 = stackOut_37_0;
@@ -299,23 +296,23 @@ abstract class hk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var2 = decompiledCaughtException;
-            stackOut_52_0 = (RuntimeException) var2;
+            stackOut_52_0 = (RuntimeException) (var2);
             stackOut_52_1 = new StringBuilder().append("hk.B(");
             stackIn_54_0 = stackOut_52_0;
             stackIn_54_1 = stackOut_52_1;
             stackIn_53_0 = stackOut_52_0;
             stackIn_53_1 = stackOut_52_1;
             if (param0 == null) {
-              stackOut_54_0 = (RuntimeException) (Object) stackIn_54_0;
-              stackOut_54_1 = (StringBuilder) (Object) stackIn_54_1;
+              stackOut_54_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackOut_54_1 = (StringBuilder) ((Object) stackIn_54_1);
               stackOut_54_2 = "null";
               stackIn_55_0 = stackOut_54_0;
               stackIn_55_1 = stackOut_54_1;
               stackIn_55_2 = stackOut_54_2;
               break L18;
             } else {
-              stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
-              stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
+              stackOut_53_0 = (RuntimeException) ((Object) stackIn_53_0);
+              stackOut_53_1 = (StringBuilder) ((Object) stackIn_53_1);
               stackOut_53_2 = "{...}";
               stackIn_55_0 = stackOut_53_0;
               stackIn_55_1 = stackOut_53_1;
@@ -323,11 +320,14 @@ abstract class hk {
               break L18;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + ',' + param1 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_55_0), stackIn_55_2 + ',' + param1 + ')');
         }
     }
 
     public static void b(int param0) {
+        if (param0 != 8) {
+            return;
+        }
         field_b = null;
     }
 

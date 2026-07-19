@@ -7,21 +7,26 @@ final class el {
     static int field_a;
 
     public static void a(boolean param0) {
-        field_b = null;
+        if (!param0) {
+            field_a = 21;
+            field_b = (int[][]) null;
+            field_c = null;
+            return;
+        }
+        field_b = (int[][]) null;
         field_c = null;
     }
 
     final static void a(boolean param0, int param1) {
         aa.field_a = param1;
+        if (!param0) {
+            el.a(false);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Create a free account to start using this feature";
         field_a = 1;
-        field_b = new int[][]{new int[2], new int[2], new int[2], new int[2]};
+        field_b = new int[][]{new int[]{73, 89}, new int[]{178, 47}, new int[]{493, 145}, new int[]{197, 342}};
     }
 }

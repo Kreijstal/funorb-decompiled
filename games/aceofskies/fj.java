@@ -17,10 +17,6 @@ final class fj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fj.A(";
         field_b = "This password contains your email address, and would be easy to guess";
         field_c = 640;

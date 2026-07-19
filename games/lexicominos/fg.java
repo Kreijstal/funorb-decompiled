@@ -13,7 +13,7 @@ final class fg {
         field_e = null;
         field_a = null;
         if (param0 != 24) {
-          field_a = null;
+          field_a = (String) null;
           field_f = null;
           field_d = null;
           field_c = null;
@@ -33,7 +33,7 @@ final class fg {
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             L0: {
-              var1 = 0;
+              var1 = 4 % ((41 - param0) / 63);
               if (kf.field_y == null) {
                 break L0;
               } else {
@@ -69,10 +69,6 @@ final class fg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Loading languages";
         field_d = "Email: ";
         field_f = new int[256];

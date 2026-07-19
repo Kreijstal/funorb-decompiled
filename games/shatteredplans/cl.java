@@ -35,17 +35,17 @@ final class cl extends oh {
         try {
           L0: {
             L1: {
-              ((cl) this).field_r = param6;
-              ((cl) this).field_i = param2;
-              ((cl) this).field_j = param7;
-              ((cl) this).field_h = param4;
-              ((cl) this).field_k = param3;
-              ((cl) this).field_o = param0;
-              ((cl) this).field_l = param1;
+              this.field_r = param6;
+              this.field_i = param2;
+              this.field_j = param7;
+              this.field_h = param4;
+              this.field_k = param3;
+              this.field_o = param0;
+              this.field_l = param1;
               if (param5 == 5) {
                 break L1;
               } else {
-                field_q = null;
+                field_q = (String[]) null;
                 break L1;
               }
             }
@@ -55,23 +55,23 @@ final class cl extends oh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("cl.A(").append(param0).append(',').append(param1).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param2 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -79,7 +79,7 @@ final class cl extends oh {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw r.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class cl extends oh {
                 L7: {
                   var10 = var9_int + param7;
                   var11 = param8 + -var9_int;
-                  if (var11 < 0) {
+                  if (-1 < (var11 ^ -1)) {
                     var11 = 0;
                     break L7;
                   } else {
@@ -193,7 +193,7 @@ final class cl extends oh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var9, "cl.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw r.a((Throwable) ((Object) var9), "cl.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -210,10 +210,6 @@ final class cl extends oh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
         field_p = new gq(6, 0, 4, 2);
         field_m = "Objective";

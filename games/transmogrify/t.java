@@ -9,6 +9,9 @@ final class t extends com.ms.dll.Callback {
     private boolean field_b;
 
     final synchronized int callback(int param0, int param1, int param2, int param3) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         int var5 = 0;
         int stackIn_8_0 = 0;
         int stackIn_17_0 = 0;
@@ -19,25 +22,25 @@ final class t extends com.ms.dll.Callback {
         int stackOut_15_0 = 0;
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
-        if (((t) this).field_e != param0) {
+        if (this.field_e != param0) {
           var5 = com.ms.win32.User32.GetWindowLong(param0, -4);
           return com.ms.win32.User32.CallWindowProc(var5, param0, param1, param2, param3);
         } else {
-          if (param1 == 32) {
+          if (-33 == (param1 ^ -1)) {
             var5 = 65535 & param3;
-            if (var5 != 1) {
-              if (param1 != 101024) {
-                if (param1 == 1) {
-                  ((t) this).field_e = 0;
-                  ((t) this).field_c = true;
-                  return com.ms.win32.User32.CallWindowProc(((t) this).field_a, param0, param1, param2, param3);
+            if (-2 != (var5 ^ -1)) {
+              if ((param1 ^ -1) != -101025) {
+                if ((param1 ^ -1) == -2) {
+                  this.field_e = 0;
+                  this.field_c = true;
+                  return com.ms.win32.User32.CallWindowProc(this.field_a, param0, param1, param2, param3);
                 } else {
-                  return com.ms.win32.User32.CallWindowProc(((t) this).field_a, param0, param1, param2, param3);
+                  return com.ms.win32.User32.CallWindowProc(this.field_a, param0, param1, param2, param3);
                 }
               } else {
                 L0: {
-                  if (((t) this).field_c) {
-                    stackOut_21_0 = ((t) this).field_d;
+                  if (this.field_c) {
+                    stackOut_21_0 = this.field_d;
                     stackIn_22_0 = stackOut_21_0;
                     break L0;
                   } else {
@@ -46,37 +49,37 @@ final class t extends com.ms.dll.Callback {
                     break L0;
                   }
                 }
-                int discarded$3 = com.ms.win32.User32.SetCursor(stackIn_22_0);
+                discarded$3 = com.ms.win32.User32.SetCursor(stackIn_22_0);
                 return 0;
               }
             } else {
               L1: {
-                if (!((t) this).field_c) {
+                if (!this.field_c) {
                   stackOut_16_0 = 0;
                   stackIn_17_0 = stackOut_16_0;
                   break L1;
                 } else {
-                  stackOut_15_0 = ((t) this).field_d;
+                  stackOut_15_0 = this.field_d;
                   stackIn_17_0 = stackOut_15_0;
                   break L1;
                 }
               }
-              int discarded$4 = com.ms.win32.User32.SetCursor(stackIn_17_0);
+              discarded$4 = com.ms.win32.User32.SetCursor(stackIn_17_0);
               return 0;
             }
           } else {
-            if (param1 != 101024) {
-              if (param1 == 1) {
-                ((t) this).field_e = 0;
-                ((t) this).field_c = true;
-                return com.ms.win32.User32.CallWindowProc(((t) this).field_a, param0, param1, param2, param3);
+            if ((param1 ^ -1) != -101025) {
+              if ((param1 ^ -1) == -2) {
+                this.field_e = 0;
+                this.field_c = true;
+                return com.ms.win32.User32.CallWindowProc(this.field_a, param0, param1, param2, param3);
               } else {
-                return com.ms.win32.User32.CallWindowProc(((t) this).field_a, param0, param1, param2, param3);
+                return com.ms.win32.User32.CallWindowProc(this.field_a, param0, param1, param2, param3);
               }
             } else {
               L2: {
-                if (((t) this).field_c) {
-                  stackOut_7_0 = ((t) this).field_d;
+                if (this.field_c) {
+                  stackOut_7_0 = this.field_d;
                   stackIn_8_0 = stackOut_7_0;
                   break L2;
                 } else {
@@ -85,7 +88,7 @@ final class t extends com.ms.dll.Callback {
                   break L2;
                 }
               }
-              int discarded$5 = com.ms.win32.User32.SetCursor(stackIn_8_0);
+              discarded$5 = com.ms.win32.User32.SetCursor(stackIn_8_0);
               return 0;
             }
           }
@@ -93,6 +96,11 @@ final class t extends com.ms.dll.Callback {
     }
 
     final void a(boolean param0, int param1, java.awt.Component param2) {
+        int discarded$52 = 0;
+        int discarded$53 = 0;
+        int discarded$54 = 0;
+        int discarded$55 = 0;
+        int discarded$56 = 0;
         int var5 = 0;
         Object var6 = null;
         Throwable var7 = null;
@@ -127,16 +135,16 @@ final class t extends com.ms.dll.Callback {
         Object stackOut_10_0 = null;
         int stackOut_10_1 = 0;
         L0: {
-          var9 = null;
+          var9 = (com.ms.awt.WComponentPeer) null;
           var5 = var9.getTopHwnd();
-          if (((t) this).field_e != var5) {
+          if (this.field_e != var5) {
             break L0;
           } else {
             L1: {
               stackOut_1_0 = param0;
               stackIn_3_0 = stackOut_1_0;
               stackIn_2_0 = stackOut_1_0;
-              if (((t) this).field_c) {
+              if (this.field_c) {
                 stackOut_3_0 = stackIn_3_0;
                 stackOut_3_1 = 0;
                 stackIn_4_0 = stackOut_3_0;
@@ -158,24 +166,24 @@ final class t extends com.ms.dll.Callback {
           }
         }
         L2: {
-          if (((t) this).field_b) {
+          if (this.field_b) {
             break L2;
           } else {
-            ((t) this).field_d = com.ms.win32.User32.LoadCursor(0, 32512);
-            int discarded$13 = com.ms.dll.Root.alloc(this);
-            ((t) this).field_b = true;
+            this.field_d = com.ms.win32.User32.LoadCursor(0, 32512);
+            discarded$52 = com.ms.dll.Root.alloc(this);
+            this.field_b = true;
             break L2;
           }
         }
-        if (var5 != ((t) this).field_e) {
+        if (var5 != this.field_e) {
           L3: {
-            if (0 != ((t) this).field_e) {
-              ((t) this).field_c = true;
-              int discarded$14 = com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
+            if (0 != this.field_e) {
+              this.field_c = true;
+              discarded$53 = com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
               var6 = this;
               synchronized (var6) {
                 L4: {
-                  int discarded$15 = com.ms.win32.User32.SetWindowLong(((t) this).field_e, -4, ((t) this).field_a);
+                  discarded$54 = com.ms.win32.User32.SetWindowLong(this.field_e, -4, this.field_a);
                   break L4;
                 }
               }
@@ -187,8 +195,8 @@ final class t extends com.ms.dll.Callback {
           var6 = this;
           synchronized (var6) {
             L5: {
-              ((t) this).field_e = var5;
-              ((t) this).field_a = com.ms.win32.User32.SetWindowLong(((t) this).field_e, -4, this);
+              this.field_e = var5;
+              this.field_a = com.ms.win32.User32.SetWindowLong(this.field_e, -4, this);
               break L5;
             }
           }
@@ -210,8 +218,8 @@ final class t extends com.ms.dll.Callback {
               break L6;
             }
           }
-          ((t) this).field_c = stackIn_25_1 != 0;
-          int discarded$16 = com.ms.win32.User32.SendMessage(var5, 101024, 0, param1);
+          ((t) (this)).field_c = stackIn_25_1 != 0;
+          discarded$55 = com.ms.win32.User32.SendMessage(var5, 101024, 0, param1);
           return;
         } else {
           L7: {
@@ -232,22 +240,23 @@ final class t extends com.ms.dll.Callback {
               break L7;
             }
           }
-          ((t) this).field_c = stackIn_12_1 != 0;
-          int discarded$17 = com.ms.win32.User32.SendMessage(var5, 101024, 0, param1);
+          ((t) (this)).field_c = stackIn_12_1 != 0;
+          discarded$56 = com.ms.win32.User32.SendMessage(var5, 101024, 0, param1);
           return;
         }
     }
 
     final void a(int param0, int param1, int param2) {
+        boolean discarded$0 = false;
         if (param1 != 101024) {
-            ((t) this).field_d = 0;
-            boolean discarded$0 = com.ms.win32.User32.SetCursorPos(param0, param2);
+            this.field_d = 0;
+            discarded$0 = com.ms.win32.User32.SetCursorPos(param0, param2);
             return;
         }
         boolean discarded$1 = com.ms.win32.User32.SetCursorPos(param0, param2);
     }
 
     t() {
-        ((t) this).field_c = true;
+        this.field_c = true;
     }
 }

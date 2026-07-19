@@ -20,10 +20,6 @@ final class ai {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ai.A(";
         field_e = true;
     }

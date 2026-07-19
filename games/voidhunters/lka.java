@@ -5,16 +5,17 @@ final class lka implements dja {
     static int[] field_a;
 
     public final tv[] a(int param0, int param1) {
+        tv discarded$0 = null;
         if (param0 != 11995) {
-            tv discarded$0 = ((lka) this).a((byte) 43);
-            return (tv[]) (Object) new imb[param1];
+            discarded$0 = this.a((byte) 43);
+            return (tv[]) ((Object) new imb[param1]);
         }
-        return (tv[]) (Object) new imb[param1];
+        return (tv[]) ((Object) new imb[param1]);
     }
 
     public final tv a(byte param0) {
         int var2 = -113 % ((-64 - param0) / 50);
-        return (tv) (Object) new imb();
+        return (tv) ((Object) new imb());
     }
 
     public static void a(int param0) {
@@ -27,10 +28,6 @@ final class lka implements dja {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new int[8192];
     }
 }

@@ -14,14 +14,17 @@ final class n extends ta {
     public static void a(int param0) {
         field_s = null;
         field_r = null;
+        if (param0 != 0) {
+            return;
+        }
         field_q = null;
     }
 
     n(byte[] param0) {
         try {
-            ((n) this).field_v = param0;
+            this.field_v = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "n.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "n.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,110 +37,174 @@ final class n extends ta {
               if (we.field_h > param2) {
                 if (param0 >= db.field_j) {
                   if (param0 < db.field_j - -jg.field_t.field_s) {
-                    if (param2 >= nc.field_a) {
-                      if (nc.field_a - -jg.field_t.field_t > param2) {
-                        return 1;
+                    if (param2 < nc.field_a) {
+                      if (!param1) {
+                        return -1;
                       } else {
                         field_x = true;
                         return -1;
                       }
                     } else {
+                      if (nc.field_a - -jg.field_t.field_t > param2) {
+                        return 1;
+                      } else {
+                        if (!param1) {
+                          return -1;
+                        } else {
+                          field_x = true;
+                          return -1;
+                        }
+                      }
+                    }
+                  } else {
+                    if (!param1) {
+                      return -1;
+                    } else {
                       field_x = true;
                       return -1;
                     }
+                  }
+                } else {
+                  if (!param1) {
+                    return -1;
                   } else {
                     field_x = true;
                     return -1;
                   }
-                } else {
-                  field_x = true;
-                  return -1;
                 }
               } else {
-                if (jg.field_t.field_t + we.field_h <= param2) {
+                if (jg.field_t.field_t + we.field_h > param2) {
+                  return 0;
+                } else {
                   if (param0 >= db.field_j) {
                     if (param0 < db.field_j - -jg.field_t.field_s) {
-                      if (param2 >= nc.field_a) {
-                        if (nc.field_a - -jg.field_t.field_t > param2) {
-                          return 1;
+                      if (param2 < nc.field_a) {
+                        if (!param1) {
+                          return -1;
                         } else {
                           field_x = true;
                           return -1;
                         }
                       } else {
+                        if (nc.field_a - -jg.field_t.field_t > param2) {
+                          return 1;
+                        } else {
+                          if (!param1) {
+                            return -1;
+                          } else {
+                            field_x = true;
+                            return -1;
+                          }
+                        }
+                      }
+                    } else {
+                      if (!param1) {
+                        return -1;
+                      } else {
                         field_x = true;
                         return -1;
                       }
+                    }
+                  } else {
+                    if (!param1) {
+                      return -1;
                     } else {
                       field_x = true;
                       return -1;
                     }
-                  } else {
-                    field_x = true;
-                    return -1;
                   }
-                } else {
-                  return 0;
                 }
               }
             } else {
               if (param0 >= db.field_j) {
                 if (param0 < db.field_j - -jg.field_t.field_s) {
-                  if (param2 >= nc.field_a) {
-                    if (nc.field_a - -jg.field_t.field_t <= param2) {
+                  if (param2 < nc.field_a) {
+                    if (!param1) {
+                      return -1;
+                    } else {
                       field_x = true;
                       return -1;
+                    }
+                  } else {
+                    if (nc.field_a - -jg.field_t.field_t <= param2) {
+                      if (!param1) {
+                        return -1;
+                      } else {
+                        field_x = true;
+                        return -1;
+                      }
                     } else {
                       return 1;
                     }
-                  } else {
-                    field_x = true;
-                    return -1;
                   }
                 } else {
-                  field_x = true;
-                  return -1;
+                  if (param1) {
+                    field_x = true;
+                    return -1;
+                  } else {
+                    return -1;
+                  }
                 }
               } else {
-                field_x = true;
-                return -1;
+                if (param1) {
+                  field_x = true;
+                  return -1;
+                } else {
+                  return -1;
+                }
               }
             }
           } else {
             if (param0 >= db.field_j) {
               if (param0 < db.field_j - -jg.field_t.field_s) {
-                if (param2 >= nc.field_a) {
-                  if (nc.field_a - -jg.field_t.field_t <= param2) {
+                if (param2 < nc.field_a) {
+                  if (param1) {
                     field_x = true;
                     return -1;
                   } else {
-                    return 1;
+                    return -1;
                   }
                 } else {
-                  field_x = true;
-                  return -1;
+                  if (nc.field_a - -jg.field_t.field_t <= param2) {
+                    if (param1) {
+                      field_x = true;
+                      return -1;
+                    } else {
+                      return -1;
+                    }
+                  } else {
+                    return 1;
+                  }
                 }
               } else {
-                field_x = true;
-                return -1;
+                if (param1) {
+                  field_x = true;
+                  return -1;
+                } else {
+                  return -1;
+                }
               }
             } else {
-              field_x = true;
-              return -1;
+              if (param1) {
+                field_x = true;
+                return -1;
+              } else {
+                return -1;
+              }
             }
           }
         }
     }
 
     final static int c(byte param0) {
+        if (param0 != 57) {
+            n.a(-55);
+            return (int)(1000000000L / eg.field_u);
+        }
         return (int)(1000000000L / eg.field_u);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = 0;
         field_t = 0;
         field_r = "Friends can be added in multiplayer<nbsp>games";

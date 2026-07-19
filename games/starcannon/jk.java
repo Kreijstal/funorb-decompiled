@@ -16,12 +16,15 @@ final class jk {
     static String field_a;
 
     final static void a(boolean param0, java.awt.Component param1) {
-        param1.removeKeyListener((java.awt.event.KeyListener) (Object) hj.field_c);
+        param1.removeKeyListener(hj.field_c);
+        if (param0) {
+            return;
+        }
         try {
-            param1.removeFocusListener((java.awt.event.FocusListener) (Object) hj.field_c);
+            param1.removeFocusListener(hj.field_c);
             ah.field_c = -1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "jk.B(" + false + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "jk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -32,14 +35,10 @@ final class jk {
         field_k = null;
         field_f = null;
         field_b = null;
-        int var1 = 0;
+        int var1 = -40 % ((param0 - -67) / 47);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = null;
         field_a = "Mouse over an icon for details";
     }

@@ -20,22 +20,23 @@ final class af extends gg {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         var11 = stellarshard.field_B;
         try {
           L0: {
@@ -56,7 +57,16 @@ final class af extends gg {
                   param5 = var9;
                   L2: while (true) {
                     if (var10 <= param5) {
+                      L3: {
+                        if (param0 <= -38) {
+                          break L3;
+                        } else {
+                          field_o = -74;
+                          break L3;
+                        }
+                      }
                       ti.b(og.field_b);
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       param4[1].a(param5, param3, param1);
@@ -69,42 +79,48 @@ final class af extends gg {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var6;
-            stackOut_9_1 = new StringBuilder().append("af.B(").append(-57).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackOut_11_0 = (RuntimeException) (var6);
+            stackOut_11_1 = new StringBuilder().append("af.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
             if (param4 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L3;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L3;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param5 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(int param0) {
-        int var1 = 0;
+        int var1 = 82 % ((param0 - 8) / 41);
         field_r = null;
         field_n = null;
     }
@@ -122,24 +138,66 @@ final class af extends gg {
         if (ui.field_F == null) {
           return -1;
         } else {
-          if (param1 >= wc.field_y) {
-            if (param1 < ui.field_F.field_v + wc.field_y) {
-              L0: {
-                if (vi.field_a > param2) {
+          if (param0 == 1) {
+            L0: {
+              if (param1 < wc.field_y) {
+                break L0;
+              } else {
+                if (param1 >= ui.field_F.field_v + wc.field_y) {
                   break L0;
                 } else {
-                  if (vi.field_a - -ui.field_F.field_y <= param2) {
+                  if (vi.field_a > param2) {
                     break L0;
                   } else {
-                    return 0;
+                    if (vi.field_a - -ui.field_F.field_y <= param2) {
+                      break L0;
+                    } else {
+                      return 0;
+                    }
                   }
                 }
               }
-              if (param1 >= cm.field_a) {
-                if (param1 < ui.field_F.field_v + cm.field_a) {
-                  if (param2 >= field_l) {
-                    if (ui.field_F.field_y + field_l > param2) {
-                      return 1;
+            }
+            if (param1 >= cm.field_a) {
+              if (param1 < ui.field_F.field_v + cm.field_a) {
+                if (param2 >= field_l) {
+                  if (ui.field_F.field_y + field_l > param2) {
+                    return 1;
+                  } else {
+                    return -1;
+                  }
+                } else {
+                  return -1;
+                }
+              } else {
+                return -1;
+              }
+            } else {
+              return -1;
+            }
+          } else {
+            field_l = 68;
+            if (param1 >= wc.field_y) {
+              if (param1 < ui.field_F.field_v + wc.field_y) {
+                L1: {
+                  if (vi.field_a > param2) {
+                    break L1;
+                  } else {
+                    if (vi.field_a - -ui.field_F.field_y <= param2) {
+                      break L1;
+                    } else {
+                      return 0;
+                    }
+                  }
+                }
+                if (param1 >= cm.field_a) {
+                  if (param1 < ui.field_F.field_v + cm.field_a) {
+                    if (param2 >= field_l) {
+                      if (ui.field_F.field_y + field_l > param2) {
+                        return 1;
+                      } else {
+                        return -1;
+                      }
                     } else {
                       return -1;
                     }
@@ -150,7 +208,23 @@ final class af extends gg {
                   return -1;
                 }
               } else {
-                return -1;
+                if (param1 >= cm.field_a) {
+                  if (param1 < ui.field_F.field_v + cm.field_a) {
+                    if (param2 >= field_l) {
+                      if (ui.field_F.field_y + field_l <= param2) {
+                        return -1;
+                      } else {
+                        return 1;
+                      }
+                    } else {
+                      return -1;
+                    }
+                  } else {
+                    return -1;
+                  }
+                } else {
+                  return -1;
+                }
               }
             } else {
               if (param1 >= cm.field_a) {
@@ -170,24 +244,6 @@ final class af extends gg {
               } else {
                 return -1;
               }
-            }
-          } else {
-            if (param1 >= cm.field_a) {
-              if (param1 < ui.field_F.field_v + cm.field_a) {
-                if (param2 >= field_l) {
-                  if (ui.field_F.field_y + field_l <= param2) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  return -1;
-                }
-              } else {
-                return -1;
-              }
-            } else {
-              return -1;
             }
           }
         }

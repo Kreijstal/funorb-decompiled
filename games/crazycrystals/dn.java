@@ -23,17 +23,13 @@ final class dn {
         if (!(param0 instanceof ub)) {
             var2 = new ub(param0, param1);
         } else {
-            var2 = (ub) (Object) param0;
+            var2 = (ub) ((Object) param0);
             var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "dn.A(";
         field_b = "Notice that it is safe to stand diagonally down from a rock that wants to roll.";
         field_a = new int[8192];

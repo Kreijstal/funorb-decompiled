@@ -8,6 +8,7 @@ abstract class bi extends jla {
     static sna field_h;
 
     final static void a(int param0, boolean param1, int param2, oha param3, int param4, int param5, int param6, boolean param7, double param8) {
+        int discarded$1 = 0;
         RuntimeException var10 = null;
         String var11 = null;
         int var12 = 0;
@@ -98,7 +99,7 @@ abstract class bi extends jla {
             L1: {
               var27 = param3.a((byte) 37);
               var11 = param3.field_k;
-              if (-2 != param3.field_a) {
+              if (-2 != (param3.field_a ^ -1)) {
                 stackOut_3_0 = 0;
                 stackIn_4_0 = stackOut_3_0;
                 break L1;
@@ -112,7 +113,7 @@ abstract class bi extends jla {
               var12 = stackIn_4_0;
               var13 = 0;
               if (var12 != 0) {
-                if (-1 < param3.field_g) {
+                if (-1 > (param3.field_g ^ -1)) {
                   stackOut_8_0 = 1;
                   stackIn_10_0 = stackOut_8_0;
                   break L2;
@@ -130,7 +131,7 @@ abstract class bi extends jla {
             L3: {
               var14 = stackIn_10_0;
               if (var12 != 0) {
-                if (((t) (Object) param3).field_u != 0) {
+                if (-1 != (((t) ((Object) param3)).field_u ^ -1)) {
                   stackOut_14_0 = 1;
                   stackIn_16_0 = stackOut_14_0;
                   break L3;
@@ -232,7 +233,7 @@ abstract class bi extends jla {
               break L7;
             }
             L9: {
-              if (param5 < 20 + var16 + param4) {
+              if (param5 < param2 + var16 + param4) {
                 param4 = param4 + (param5 - 20 - (param4 + var16));
                 break L9;
               } else {
@@ -250,13 +251,13 @@ abstract class bi extends jla {
             L11: {
               dg.a(param4 - -13, param6, 6 + var16, var17, 10, 65793, 192);
               ad.field_h.c(var27, 20 + param4, 16 + param6, 0, -1);
-              int discarded$1 = ad.field_h.a(var11, param4 - -20, param6 - -24, 200, 200, 0, -1, 0, 0, var13);
+              discarded$1 = ad.field_h.a(var11, param4 - -20, param6 - -24, 200, 200, 0, -1, 0, 0, var13);
               var18 = ad.field_h.a(var11, 200, 0);
               if (var12 != 0) {
                 L12: {
-                  var19 = ((t) (Object) param3).field_q;
-                  var20 = ((t) (Object) param3).field_u;
-                  if (var19 < 0) {
+                  var19 = ((t) ((Object) param3)).field_q;
+                  var20 = ((t) ((Object) param3)).field_u;
+                  if (-1 < (var19 ^ -1)) {
                     break L12;
                   } else {
                     var19 = (int)((double)var19 * param8);
@@ -266,9 +267,9 @@ abstract class bi extends jla {
                 L13: {
                   var21 = param3.field_g;
                   var22 = 40 + (param6 + var18);
-                  var23 = lga.a(true, new String[1], qea.field_a);
-                  var24 = lga.a(true, new String[1], vf.field_D);
-                  var25 = lga.a(true, new String[1], ona.field_xb);
+                  var23 = lga.a(true, new String[]{String.valueOf(var19)}, qea.field_a);
+                  var24 = lga.a(true, new String[]{kna.field_g[var20]}, vf.field_D);
+                  var25 = lga.a(true, new String[]{Integer.toString(var21 + -1)}, ona.field_xb);
                   ad.field_h.c(var23, param4 - -20, var22, 0, -1);
                   if (var20 != 0) {
                     var22 = var22 + ad.field_h.field_F;
@@ -299,11 +300,11 @@ abstract class bi extends jla {
                 }
               } else {
                 if (param7) {
-                  ad.field_h.c(gea.field_n, 20 + param4, var18 + ad.field_h.field_F + ((ad.field_h.field_F << 1) + (-4 + param6)), 2, -1);
+                  ad.field_h.c(gea.field_n, 20 + param4, var18 + ad.field_h.field_F + ((ad.field_h.field_F << 666517377) + (-4 + param6)), 2, -1);
                   break L11;
                 } else {
                   if (param1) {
-                    ad.field_h.c(wfa.field_r, param4 + 20, var18 + ad.field_h.field_F + param6 + (-4 + (ad.field_h.field_F << 1)), 2, -1);
+                    ad.field_h.c(wfa.field_r, param4 + 20, var18 + ad.field_h.field_F + param6 + (-4 + (ad.field_h.field_F << 286541473)), 2, -1);
                     break L11;
                   } else {
                     break L11;
@@ -317,23 +318,23 @@ abstract class bi extends jla {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var10 = decompiledCaughtException;
-            stackOut_54_0 = (RuntimeException) var10;
-            stackOut_54_1 = new StringBuilder().append("bi.S(").append(param0).append(',').append(param1).append(',').append(20).append(',');
+            stackOut_54_0 = (RuntimeException) (var10);
+            stackOut_54_1 = new StringBuilder().append("bi.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_56_0 = stackOut_54_0;
             stackIn_56_1 = stackOut_54_1;
             stackIn_55_0 = stackOut_54_0;
             stackIn_55_1 = stackOut_54_1;
             if (param3 == null) {
-              stackOut_56_0 = (RuntimeException) (Object) stackIn_56_0;
-              stackOut_56_1 = (StringBuilder) (Object) stackIn_56_1;
+              stackOut_56_0 = (RuntimeException) ((Object) stackIn_56_0);
+              stackOut_56_1 = (StringBuilder) ((Object) stackIn_56_1);
               stackOut_56_2 = "null";
               stackIn_57_0 = stackOut_56_0;
               stackIn_57_1 = stackOut_56_1;
               stackIn_57_2 = stackOut_56_2;
               break L15;
             } else {
-              stackOut_55_0 = (RuntimeException) (Object) stackIn_55_0;
-              stackOut_55_1 = (StringBuilder) (Object) stackIn_55_1;
+              stackOut_55_0 = (RuntimeException) ((Object) stackIn_55_0);
+              stackOut_55_1 = (StringBuilder) ((Object) stackIn_55_1);
               stackOut_55_2 = "{...}";
               stackIn_57_0 = stackOut_55_0;
               stackIn_57_1 = stackOut_55_1;
@@ -341,21 +342,27 @@ abstract class bi extends jla {
               break L15;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_57_0), stackIn_57_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     public static void d(byte param0) {
         field_h = null;
+        if (param0 != -97) {
+            bi.a(8, true, 97, (oha) null, -49, 70, 87, true, 1.3991795379432221);
+        }
         field_i = null;
     }
 
     final static void o(int param0) {
+        if (param0 != 2) {
+            bi.a(49, true, -128, (oha) null, 0, 127, 48, false, -0.8479634019263611);
+        }
         gja.field_m.f((byte) -66);
         if (null == hp.field_d) {
             hp.field_d = new hga(gja.field_m, at.field_i);
         }
-        gja.field_m.a((wj) (Object) hp.field_d, (byte) 111);
+        gja.field_m.a((wj) (hp.field_d), (byte) 111);
     }
 
     void b(boolean param0, int param1, int param2) {
@@ -371,9 +378,9 @@ abstract class bi extends jla {
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
         L0: {
-          var11 = ((bi) this).b(param1, (byte) 74);
-          var5 = ((bi) this).d(param1, param2 + 26891) ? 1 : 0;
-          var6 = ((bi) this).d(false, pj.field_b[((bi) this).field_b][param1]);
+          var11 = this.b(param1, (byte) 74);
+          var5 = this.d(param1, param2 + 26891) ? 1 : 0;
+          var6 = this.d(false, pj.field_b[this.field_b][param1]);
           var7 = fn.field_n;
           if (var5 == 0) {
             stackOut_4_0 = 8;
@@ -392,21 +399,21 @@ abstract class bi extends jla {
           }
         }
         var8 = stackIn_5_0;
-        var9 = ((bi) this).a(param1, true) - -((bi) this).b(param1, 40) >> 1;
+        var9 = this.a(param1, true) - -this.b(param1, 40) >> -1267397919;
         if (param2 != 0) {
           return;
         } else {
           L1: {
-            var10 = ((bi) this).a(param1, (byte) -81) - -(((bi) this).a(-26, param1) >> 1);
+            var10 = this.a(param1, (byte) -81) - -(this.a(-26, param1) >> -8780767);
             if (var5 == 0) {
-              var11.b(-(var11.field_n >> 1) + var9, -22 + var10, 128);
+              var11.b(-(var11.field_n >> -1464321663) + var9, -22 + var10, 128);
               break L1;
             } else {
-              var11.e(-(var11.field_n >> 1) + var9, -22 + var10);
+              var11.e(-(var11.field_n >> -428642303) + var9, -22 + var10);
               break L1;
             }
           }
-          ((po) (Object) var7).a(var6, var9, var10 + 6, var8, -1);
+          ((po) ((Object) var7)).a(var6, var9, var10 + 6, var8, -1);
           return;
         }
     }
@@ -424,10 +431,6 @@ abstract class bi extends jla {
     abstract kv b(int param0, byte param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new be[2];
     }
 }

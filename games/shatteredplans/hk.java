@@ -11,7 +11,7 @@ final class hk extends il {
             int var3_int = 113 / ((51 - param1) / 57);
             super.b(param0, 125);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "hk.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "hk.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -29,14 +29,13 @@ final class hk extends il {
     }
 
     final static void a(int param0, byte param1) {
-        vg.field_i = 20000000L;
+        if (param1 < 33) {
+            return;
+        }
+        vg.field_i = 1000000000L / (long)param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_ob = new int[8192];
         field_pb = "Show all game chat";
     }

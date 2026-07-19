@@ -15,31 +15,38 @@ final class mj extends dm {
     mj(Object param0, int param1) {
         super(param1);
         try {
-            ((mj) this).field_C = param0;
+            this.field_C = param0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "mj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "mj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void f(int param0) {
         sj.a(mb.g((byte) 93), 20298);
+        if (param0 != 0) {
+            field_z = -18;
+        }
     }
 
     final static void a(int param0, boolean param1) {
         w.field_I.a(param1, 11358);
+        if (param0 != 0) {
+            mj.g(37);
+        }
     }
 
     final Object b(byte param0) {
+        boolean discarded$0 = false;
         if (param0 != -109) {
-            boolean discarded$0 = ((mj) this).d(-120);
-            return ((mj) this).field_C;
+            discarded$0 = this.d(-120);
+            return this.field_C;
         }
-        return ((mj) this).field_C;
+        return this.field_C;
     }
 
     final boolean d(int param0) {
         if (param0 < 65) {
-            field_F = null;
+            field_F = (mg) null;
             return false;
         }
         return false;
@@ -65,9 +72,10 @@ final class mj extends dm {
     }
 
     final static boolean a(String param0, String param1, byte param2) {
+        boolean discarded$2 = false;
         String var3 = null;
         RuntimeException var3_ref = null;
-        Object var4 = null;
+        String var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -84,6 +92,7 @@ final class mj extends dm {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_13_0 = 0;
@@ -110,15 +119,16 @@ final class mj extends dm {
             if (param0.indexOf(param1) != -1) {
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (-1 == param0.indexOf(var3)) {
                 L1: {
                   if (param2 > 105) {
                     break L1;
                   } else {
-                    var4 = null;
-                    boolean discarded$2 = mj.a((String) null, (String) null, (byte) -49);
+                    var4 = (String) null;
+                    discarded$2 = mj.a((String) null, (String) null, (byte) -49);
                     break L1;
                   }
                 }
@@ -148,6 +158,7 @@ final class mj extends dm {
                   stackIn_14_0 = stackOut_12_0;
                   break L2;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return true;
@@ -158,23 +169,23 @@ final class mj extends dm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var3_ref;
+            stackOut_15_0 = (RuntimeException) (var3_ref);
             stackOut_15_1 = new StringBuilder().append("mj.H(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L4;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -183,23 +194,23 @@ final class mj extends dm {
             }
           }
           L5: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
             stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L5;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -207,16 +218,16 @@ final class mj extends dm {
               break L5;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param2 + ')');
         }
-        return stackIn_14_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          return stackIn_14_0 != 0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = "Game";
         field_G = "Virogrid";
         field_D = 0;

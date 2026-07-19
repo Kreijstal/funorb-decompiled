@@ -8,6 +8,7 @@ final class di extends ji {
     private int field_z;
 
     final static jp a(mi param0, boolean param1) {
+        int discarded$1 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -16,32 +17,40 @@ final class di extends ji {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        jp stackIn_20_0 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
+        jp stackIn_22_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
-        jp stackOut_19_0 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
+        jp stackOut_21_0 = null;
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
             var2_int = param0.c((byte) -120, 8);
-            if (var2_int > 0) {
+            if ((var2_int ^ -1) < -1) {
               throw new IllegalStateException("" + var2_int);
             } else {
               L1: {
+                if (param1) {
+                  break L1;
+                } else {
+                  field_y = (String) null;
+                  break L1;
+                }
+              }
+              L2: {
                 var3 = id.a(param0, -31980) ? 1 : 0;
                 var4 = id.a(param0, -31980) ? 1 : 0;
                 var5 = new jp();
@@ -54,7 +63,7 @@ final class di extends ji {
                 var5.field_L = ee.a(param0, -95, 16, var5.field_L);
                 var5.field_c = ee.a(param0, -40, 16, var5.field_c);
                 if (var3 == 0) {
-                  break L1;
+                  break L2;
                 } else {
                   var5.field_K = (short)param0.c((byte) -125, 16);
                   var5.field_h = ee.a(param0, -90, 16, var5.field_h);
@@ -63,27 +72,19 @@ final class di extends ji {
                   var5.field_g = ee.a(param0, -105, 16, var5.field_g);
                   var5.field_P = ee.a(param0, -121, 16, var5.field_P);
                   var5.field_C = ee.a(param0, -30, 16, var5.field_C);
-                  break L1;
+                  break L2;
                 }
               }
-              L2: {
+              L3: {
                 if (var4 == 0) {
-                  break L2;
+                  break L3;
                 } else {
-                  int discarded$1 = param0.c((byte) -94, 16);
+                  discarded$1 = param0.c((byte) -94, 16);
                   var5.field_N = ee.a(param0, -65, 16, var5.field_N);
                   var5.field_d = ee.a(param0, -55, 16, var5.field_d);
                   var5.field_Q = ee.a(param0, -117, 16, var5.field_Q);
                   var5.field_q = ee.a(param0, -26, 16, var5.field_q);
                   var5.field_e = ee.a(param0, -122, 16, var5.field_e);
-                  break L2;
-                }
-              }
-              L3: {
-                if (!id.a(param0, -31980)) {
-                  break L3;
-                } else {
-                  var5.field_J = ee.a(param0, -42, 16, var5.field_J);
                   break L3;
                 }
               }
@@ -91,34 +92,41 @@ final class di extends ji {
                 if (!id.a(param0, -31980)) {
                   break L4;
                 } else {
+                  var5.field_J = ee.a(param0, -42, 16, var5.field_J);
+                  break L4;
+                }
+              }
+              L5: {
+                if (!id.a(param0, -31980)) {
+                  break L5;
+                } else {
                   var5.field_x = oe.a(12635, var5.field_x, 16, param0);
                   var6 = 0;
                   var7 = 0;
-                  L5: while (true) {
+                  L6: while (true) {
                     if (var5.field_x.length <= var7) {
                       if (var6 == 0) {
                         var5.field_x = null;
-                        break L4;
+                        break L5;
                       } else {
                         var5.field_G = (byte)(1 + var6);
-                        break L4;
+                        break L5;
                       }
                     } else {
-                      L6: {
-                        if (var6 >= (255 & var5.field_x[var7])) {
-                          break L6;
-                        } else {
-                          break L6;
-                        }
+                      if (var6 < (255 & var5.field_x[var7])) {
+                        var6 = var5.field_x[var7] & 255;
+                        var7++;
+                        continue L6;
+                      } else {
+                        var7++;
+                        continue L6;
                       }
-                      var7++;
-                      continue L5;
                     }
                   }
                 }
               }
-              stackOut_19_0 = (jp) var5;
-              stackIn_20_0 = stackOut_19_0;
+              stackOut_21_0 = (jp) (var5);
+              stackIn_22_0 = stackOut_21_0;
               break L0;
             }
           }
@@ -126,42 +134,43 @@ final class di extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("di.E(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackOut_23_0 = (RuntimeException) (var2);
+            stackOut_23_1 = new StringBuilder().append("di.E(");
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
               break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
               break L7;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + true + ')');
+          throw wn.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
         }
-        return stackIn_20_0;
+        return stackIn_22_0;
     }
 
     public di() {
         super(1, false);
-        ((di) this).field_z = 1;
-        ((di) this).field_A = 1;
+        this.field_z = 1;
+        this.field_A = 1;
     }
 
     final int[][] b(int param0, int param1) {
+        int[] discarded$1 = null;
         int[][] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -189,49 +198,41 @@ final class di extends ji {
         int[][][] var30 = null;
         int[][] var37 = null;
         int[][][] var38 = null;
-        int[][] var45 = null;
-        int[][][] var46 = null;
-        int[][] var48 = null;
+        int[][] var46 = null;
+        int[] var47 = null;
+        int[] var48 = null;
         int[] var49 = null;
-        int[] var50 = null;
-        int[] var51 = null;
-        int[][] var52 = null;
-        int[][] var53 = null;
-        int[][][] var54 = null;
-        int[][] var55 = null;
+        int[][] var50 = null;
+        int[][] var51 = null;
         L0: {
           var23 = Vertigo2.field_L ? 1 : 0;
           if (param0 == -3780) {
             break L0;
           } else {
-            int[] discarded$1 = ((di) this).c(-24, 93);
+            discarded$1 = this.c(-24, 93);
             break L0;
           }
         }
         L1: {
-          var53 = ((di) this).field_v.a(param1, -2);
-          var45 = var53;
-          var37 = var45;
+          var37 = this.field_v.a(param1, -2);
           var29 = var37;
           var3 = var29;
-          if (!((di) this).field_v.field_c) {
+          if (!this.field_v.field_c) {
             break L1;
           } else {
-            var4 = 1 + ((di) this).field_A + ((di) this).field_A;
+            var4 = 1 + this.field_A + this.field_A;
             var5 = 65536 / var4;
-            var6 = 1 + ((di) this).field_z + ((di) this).field_z;
+            var6 = 1 + this.field_z + this.field_z;
             var7 = 65536 / var6;
-            var54 = new int[var4][][];
-            var46 = var54;
-            var38 = var46;
+            var38 = new int[var4][][];
             var30 = var38;
             var8 = var30;
-            var9_int = -((di) this).field_A + param1;
+            var9_int = -this.field_A + param1;
             L2: while (true) {
-              if (var9_int > ((di) this).field_A + param1) {
-                var9 = var53[0];
-                var10 = var53[1];
-                var11 = var53[2];
+              if (var9_int > this.field_A + param1) {
+                var9 = var37[0];
+                var10 = var37[1];
+                var11 = var37[2];
                 var12 = 0;
                 L3: while (true) {
                   if (var12 >= we.field_M) {
@@ -243,16 +244,16 @@ final class di extends ji {
                     var16 = 0;
                     L4: while (true) {
                       if (var16 >= var4) {
-                        var9[var12] = var13 * var5 >> 16;
-                        var10[var12] = var5 * var14 >> 16;
-                        var11[var12] = var15 * var5 >> 16;
+                        var9[var12] = var13 * var5 >> -1618687344;
+                        var10[var12] = var5 * var14 >> -386474128;
+                        var11[var12] = var15 * var5 >> 841155248;
                         var12++;
                         continue L3;
                       } else {
-                        var55 = var54[var16];
-                        var15 = var15 + var55[2][var12];
-                        var13 = var13 + var55[0][var12];
-                        var14 = var14 + var55[1][var12];
+                        var51 = var38[var16];
+                        var15 = var15 + var51[2][var12];
+                        var13 = var13 + var51[0][var12];
+                        var14 = var14 + var51[1][var12];
                         var16++;
                         continue L4;
                       }
@@ -260,47 +261,47 @@ final class di extends ji {
                   }
                 }
               } else {
-                var48 = ((di) this).c(0, 3, fk.field_x & var9_int);
-                var52 = new int[3][we.field_M];
+                var46 = this.c(0, 3, fk.field_x & var9_int);
+                var50 = new int[3][we.field_M];
                 var12 = 0;
                 var13 = 0;
                 var14 = 0;
-                var51 = var48[0];
-                var50 = var48[1];
-                var49 = var48[2];
-                var18_int = -((di) this).field_z;
+                var49 = var46[0];
+                var48 = var46[1];
+                var47 = var46[2];
+                var18_int = -this.field_z;
                 L5: while (true) {
-                  if (var18_int > ((di) this).field_z) {
-                    var18 = var52[0];
-                    var19 = var52[1];
-                    var20 = var52[2];
+                  if (var18_int > this.field_z) {
+                    var18 = var50[0];
+                    var19 = var50[1];
+                    var20 = var50[2];
                     var21 = 0;
                     L6: while (true) {
                       if (we.field_M <= var21) {
-                        var8[-param1 + var9_int + ((di) this).field_A] = var52;
+                        var8[-param1 + var9_int + this.field_A] = var50;
                         var9_int++;
                         continue L2;
                       } else {
-                        var18[var21] = var12 * var7 >> 16;
-                        var19[var21] = var13 * var7 >> 16;
-                        var20[var21] = var14 * var7 >> 16;
-                        var22 = rm.field_z & -((di) this).field_z + var21;
+                        var18[var21] = var12 * var7 >> 300574480;
+                        var19[var21] = var13 * var7 >> -1770570000;
+                        var20[var21] = var14 * var7 >> -1146846704;
+                        var22 = rm.field_z & -this.field_z + var21;
                         var21++;
-                        var12 = var12 - var51[var22];
-                        var14 = var14 - var49[var22];
-                        var13 = var13 - var50[var22];
-                        var22 = var21 + ((di) this).field_z & rm.field_z;
-                        var12 = var12 + var51[var22];
-                        var14 = var14 + var49[var22];
-                        var13 = var13 + var50[var22];
+                        var12 = var12 - var49[var22];
+                        var14 = var14 - var47[var22];
+                        var13 = var13 - var48[var22];
+                        var22 = var21 + this.field_z & rm.field_z;
+                        var12 = var12 + var49[var22];
+                        var14 = var14 + var47[var22];
+                        var13 = var13 + var48[var22];
                         continue L6;
                       }
                     }
                   } else {
                     var19_int = rm.field_z & var18_int;
-                    var14 = var14 + var49[var19_int];
-                    var13 = var13 + var50[var19_int];
-                    var12 = var12 + var51[var19_int];
+                    var14 = var14 + var47[var19_int];
+                    var13 = var13 + var48[var19_int];
+                    var12 = var12 + var49[var19_int];
                     var18_int++;
                     continue L5;
                   }
@@ -313,12 +314,12 @@ final class di extends ji {
     }
 
     final static void b(byte param0) {
-        int var1_int = 0;
         int var2 = 0;
+        int var1_int = 0;
         int var3 = Vertigo2.field_L ? 1 : 0;
         try {
             wa.field_i.b(-1);
-            for (var1_int = 0; var1_int < 32; var1_int++) {
+            for (var1_int = 0; -33 < (var1_int ^ -1); var1_int++) {
                 l.field_b[var1_int] = 0L;
             }
             var1_int = -12 % ((28 - param0) / 55);
@@ -327,7 +328,7 @@ final class di extends ji {
             }
             tf.field_n = 0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "di.A(" + param0 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "di.A(" + param0 + ')');
         }
     }
 
@@ -342,13 +343,16 @@ final class di extends ji {
     final static void a(byte param0, long param1, String param2) {
         ea.field_b = param2;
         ui.field_g = 2;
-        CharSequence var5 = (CharSequence) (Object) param2;
+        CharSequence var5 = (CharSequence) ((Object) param2);
         sm.field_Kb = rc.a(var5, 320);
         il.field_a = true;
+        if (param0 <= 14) {
+            return;
+        }
         try {
             ie.field_Nb = param1;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "di.B(" + 119 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "di.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -372,34 +376,28 @@ final class di extends ji {
         int[][] var17 = null;
         int[] var18 = null;
         int[][] var19 = null;
-        int[] var20 = null;
-        int[][] var21 = null;
-        int[] var22 = null;
-        int[][] var23 = null;
         L0: {
           var14 = Vertigo2.field_L ? 1 : 0;
           if (param1 > 91) {
             break L0;
           } else {
-            field_B = null;
+            field_B = (String) null;
             break L0;
           }
         }
         L1: {
-          var3 = ((di) this).field_x.a(param0, (byte) -91);
-          if (((di) this).field_x.field_i) {
-            var4 = ((di) this).field_A + (((di) this).field_A - -1);
+          var3 = this.field_x.a(param0, (byte) -91);
+          if (this.field_x.field_i) {
+            var4 = this.field_A + (this.field_A - -1);
             var5 = 65536 / var4;
-            var6 = 1 + (((di) this).field_z - -((di) this).field_z);
+            var6 = 1 + (this.field_z - -this.field_z);
             var7 = 65536 / var6;
-            var23 = new int[var4][];
-            var21 = var23;
-            var19 = var21;
+            var19 = new int[var4][];
             var17 = var19;
             var8 = var17;
-            var9 = param0 + -((di) this).field_A;
+            var9 = param0 + -this.field_A;
             L2: while (true) {
-              if (var9 > ((di) this).field_A + param0) {
+              if (var9 > this.field_A + param0) {
                 var9 = 0;
                 L3: while (true) {
                   if (var9 >= we.field_M) {
@@ -409,11 +407,11 @@ final class di extends ji {
                     var11 = 0;
                     L4: while (true) {
                       if (var11 >= var4) {
-                        var3[var9] = var5 * var10 >> 16;
+                        var3[var9] = var5 * var10 >> 47893424;
                         var9++;
                         continue L3;
                       } else {
-                        var10 = var10 + var23[var11][var9];
+                        var10 = var10 + var19[var11][var9];
                         var11++;
                         continue L4;
                       }
@@ -421,28 +419,26 @@ final class di extends ji {
                   }
                 }
               } else {
-                var10_ref_int__ = ((di) this).a(0, -1, var9 & fk.field_x);
-                var22 = new int[we.field_M];
-                var20 = var22;
-                var18 = var20;
+                var10_ref_int__ = this.a(0, -1, var9 & fk.field_x);
+                var18 = new int[we.field_M];
                 var16 = var18;
                 var11_ref_int__ = var16;
                 var12 = 0;
-                var13 = -((di) this).field_z;
+                var13 = -this.field_z;
                 L5: while (true) {
-                  if (((di) this).field_z < var13) {
+                  if (this.field_z < var13) {
                     var15 = 0;
                     var13 = var15;
                     L6: while (true) {
                       if (var15 >= we.field_M) {
-                        var8[-param0 + var9 - -((di) this).field_A] = var22;
+                        var8[-param0 + var9 - -this.field_A] = var18;
                         var9++;
                         continue L2;
                       } else {
-                        var11_ref_int__[var15] = var7 * var12 >> 16;
-                        var12 = var12 - var10_ref_int__[rm.field_z & -((di) this).field_z + var15];
+                        var11_ref_int__[var15] = var7 * var12 >> 1471734896;
+                        var12 = var12 - var10_ref_int__[rm.field_z & -this.field_z + var15];
                         var15++;
-                        var12 = var12 + var10_ref_int__[rm.field_z & ((di) this).field_z + var15];
+                        var12 = var12 + var10_ref_int__[rm.field_z & this.field_z + var15];
                         continue L6;
                       }
                     }
@@ -497,14 +493,14 @@ final class di extends ji {
               if (param0 == 110) {
                 break L1;
               } else {
-                ((di) this).field_z = 86;
+                this.field_z = 86;
                 break L1;
               }
             }
             L2: {
               var4_int = param1;
               if (0 != var4_int) {
-                if (var4_int != 1) {
+                if (-2 != (var4_int ^ -1)) {
                   if (var4_int != 2) {
                     break L2;
                   } else {
@@ -526,15 +522,15 @@ final class di extends ji {
                         break L3;
                       }
                     }
-                    ((di) this).field_o = stackIn_14_1 != 0;
+                    ((di) (this)).field_o = stackIn_14_1 != 0;
                     break L2;
                   }
                 } else {
-                  ((di) this).field_A = param2.h(-11);
+                  this.field_A = param2.h(-11);
                   break L2;
                 }
               } else {
-                ((di) this).field_z = param2.h(-11);
+                this.field_z = param2.h(-11);
                 break L2;
               }
             }
@@ -544,23 +540,23 @@ final class di extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var4;
+            stackOut_16_0 = (RuntimeException) (var4);
             stackOut_16_1 = new StringBuilder().append("di.C(").append(param0).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -568,15 +564,11 @@ final class di extends ji {
               break L4;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = "Some players haven't unlocked the currently selected game options.<br>Please see the player list on the left for details.";
         field_B = "To <%0>: ";
     }

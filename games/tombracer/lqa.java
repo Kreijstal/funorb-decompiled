@@ -14,7 +14,7 @@ final class lqa extends ei {
     public final String toString() {
         String[] var2 = new String[]{"Pure Java", "OpenGL", "SSE", "DirectX", "Pure Java (Z-Buffered)", "OpenGL+"};
         String[] var1 = var2;
-        return var2[((lqa) this).field_b];
+        return var2[this.field_b];
     }
 
     final boolean a(ei param0, int param1) {
@@ -31,6 +31,7 @@ final class lqa extends ei {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -52,7 +53,7 @@ final class lqa extends ei {
             if (param1 == 55) {
               L1: {
                 L2: {
-                  var3 = (lqa) (Object) param0;
+                  var3 = (lqa) ((Object) param0);
                   if (!super.a(param0, 55)) {
                     break L2;
                   } else {
@@ -67,10 +68,10 @@ final class lqa extends ei {
                         break L3;
                       }
                     }
-                    if (stackIn_7_0 == (((lqa) this).field_j ? 1 : 0)) {
+                    if (stackIn_7_0 == (this.field_j ? 1 : 0)) {
                       break L2;
                     } else {
-                      if (((lqa) this).field_a != var3.field_a) {
+                      if (this.field_a != var3.field_a) {
                         break L2;
                       } else {
                         L4: {
@@ -99,34 +100,36 @@ final class lqa extends ei {
                 stackIn_15_0 = stackOut_14_0;
                 break L1;
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var3_ref;
+            stackOut_16_0 = (RuntimeException) (var3_ref);
             stackOut_16_1 = new StringBuilder().append("lqa.B(");
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -134,31 +137,34 @@ final class lqa extends ei {
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
         }
-        return stackIn_15_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_15_0 != 0;
+        }
     }
 
     lqa(int param0, int param1, boolean param2, boolean param3, boolean param4, boolean param5, boolean param6, boolean param7, boolean param8, boolean param9, boolean param10) {
         super(param0, param1);
-        ((lqa) this).field_j = param2 ? true : false;
-        ((lqa) this).field_i = param5 ? true : false;
-        ((lqa) this).field_f = param10 ? true : false;
-        ((lqa) this).field_k = param4 ? true : false;
-        ((lqa) this).field_e = param7 ? true : false;
-        ((lqa) this).field_d = param8 ? true : false;
-        ((lqa) this).field_h = param9 ? true : false;
+        this.field_j = param2 ? true : false;
+        this.field_i = param5 ? true : false;
+        this.field_f = param10 ? true : false;
+        this.field_k = param4 ? true : false;
+        this.field_e = param7 ? true : false;
+        this.field_d = param8 ? true : false;
+        this.field_h = param9 ? true : false;
     }
 
     public static void a(byte param0) {
         field_g = null;
+        if (param0 != 102) {
+            field_g = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "If you do nothing the game will revert to normal view in <%0> seconds.";
     }
 }

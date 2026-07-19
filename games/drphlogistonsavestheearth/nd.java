@@ -17,9 +17,18 @@ final class nd extends hf {
 
     public static void b(boolean param0) {
         field_L = null;
-        field_R = null;
-        field_P = null;
-        field_K = null;
+        if (!param0) {
+          field_Q = true;
+          field_R = null;
+          field_P = null;
+          field_K = null;
+          return;
+        } else {
+          field_R = null;
+          field_P = null;
+          field_K = null;
+          return;
+        }
     }
 
     final boolean a(int param0, vg param1, int param2, byte param3, int param4, int param5, int param6) {
@@ -37,6 +46,7 @@ final class nd extends hf {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_14_0 = 0;
         int stackOut_18_0 = 0;
@@ -53,38 +63,38 @@ final class nd extends hf {
           L0: {
             if (super.a(param0, param1, param2, (byte) 117, param4, param5, param6)) {
               L1: {
-                var8_int = param4 + -param5 + (-((nd) this).field_o + -((nd) this).field_O);
-                var9 = param0 - param6 + -((nd) this).field_m - ((nd) this).field_S;
-                if (((nd) this).field_J * ((nd) this).field_J <= var9 * var9 + var8_int * var8_int) {
+                var8_int = param4 + -param5 + (-this.field_o + -this.field_O);
+                var9 = param0 - param6 + -this.field_m - this.field_S;
+                if (this.field_J * this.field_J <= var9 * var9 + var8_int * var8_int) {
                   break L1;
                 } else {
                   L2: {
                     var10 = Math.atan2((double)var9, (double)var8_int) - pd.field_a;
                     if (var10 < 0.0) {
-                      var10 = var10 - 3.141592653589793 / (double)((nd) this).field_T;
+                      var10 = var10 - 3.141592653589793 / (double)this.field_T;
                       break L2;
                     } else {
                       if (0.0 < var10) {
-                        var10 = var10 + 3.141592653589793 / (double)((nd) this).field_T;
+                        var10 = var10 + 3.141592653589793 / (double)this.field_T;
                         break L2;
                       } else {
                         break L2;
                       }
                     }
                   }
-                  ((nd) this).field_N = (int)(var10 * (double)((nd) this).field_T / 6.283185307179586);
+                  this.field_N = (int)(var10 * (double)this.field_T / 6.283185307179586);
                   L3: while (true) {
-                    if (((nd) this).field_N < ((nd) this).field_T) {
+                    if (this.field_N < this.field_T) {
                       L4: while (true) {
-                        if (((nd) this).field_N >= 0) {
+                        if ((this.field_N ^ -1) <= -1) {
                           break L1;
                         } else {
-                          ((nd) this).field_N = ((nd) this).field_N + ((nd) this).field_T;
+                          this.field_N = this.field_N + this.field_T;
                           continue L4;
                         }
                       }
                     } else {
-                      ((nd) this).field_N = ((nd) this).field_N - ((nd) this).field_T;
+                      this.field_N = this.field_N - this.field_T;
                       continue L3;
                     }
                   }
@@ -92,14 +102,16 @@ final class nd extends hf {
               }
               stackOut_14_0 = 1;
               stackIn_15_0 = stackOut_14_0;
-              return stackIn_15_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param3 >= 113) {
                 stackOut_18_0 = 0;
                 stackIn_19_0 = stackOut_18_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                ((nd) this).field_J = 25;
+                this.field_J = 25;
                 return false;
               }
             }
@@ -108,23 +120,23 @@ final class nd extends hf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var8 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var8;
+            stackOut_20_0 = (RuntimeException) (var8);
             stackOut_20_1 = new StringBuilder().append("nd.JA(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L5;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -132,21 +144,25 @@ final class nd extends hf {
               break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
-        return stackIn_19_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_15_0 != 0;
+        } else {
+          return stackIn_19_0 != 0;
+        }
     }
 
     final static void a(int param0, String param1) {
         try {
             pi.field_J = param1;
             if (param0 != -1) {
-                Object var3 = null;
+                String var3 = (String) null;
                 nd.a(100, (String) null);
             }
             sf.a(12, 11649);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "nd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "nd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -155,10 +171,6 @@ final class nd extends hf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_R = new int[]{0, 0, 0, 0, 100, 1000, 5000, 0};
         field_M = 128;
         field_P = new vh();

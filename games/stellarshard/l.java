@@ -25,10 +25,6 @@ final class l {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "l.A(";
         field_d = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
         field_h = 0;

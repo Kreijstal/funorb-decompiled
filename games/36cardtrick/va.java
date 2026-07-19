@@ -7,18 +7,19 @@ final class va implements Iterable {
     he field_a;
 
     final he a(boolean param0) {
+        Iterator discarded$6 = null;
         he var2 = null;
-        var2 = ((va) this).field_a.field_h;
+        var2 = this.field_a.field_h;
         if (!param0) {
-          if (var2 == ((va) this).field_a) {
+          if (var2 == this.field_a) {
             return null;
           } else {
             var2.d(12);
             return var2;
           }
         } else {
-          Iterator discarded$6 = ((va) this).iterator();
-          if (var2 == ((va) this).field_a) {
+          discarded$6 = this.iterator();
+          if (var2 == this.field_a) {
             return null;
           } else {
             var2.d(12);
@@ -32,23 +33,26 @@ final class va implements Iterable {
             if (null != param1.field_i) {
                 param1.d(12);
             }
-            param1.field_h = ((va) this).field_a;
-            param1.field_i = ((va) this).field_a.field_i;
+            param1.field_h = this.field_a;
+            param1.field_i = this.field_a.field_i;
             param1.field_i.field_h = param1;
             if (param0 > -66) {
-                ((va) this).field_a = null;
+                this.field_a = (he) null;
             }
             param1.field_h.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "va.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "va.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new rg((va) this);
+        return (Iterator) ((Object) new rg((va) (this)));
     }
 
     final static int a(int param0) {
+        if (param0 != 22018) {
+            return 36;
+        }
         return (int)(1000000000L / qb.field_f);
     }
 

@@ -13,17 +13,20 @@ final class ge extends no {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-            param1.removeKeyListener((java.awt.event.KeyListener) (Object) gp.field_c);
-            param1.removeFocusListener((java.awt.event.FocusListener) (Object) gp.field_c);
+            param1.removeKeyListener(gp.field_c);
+            param1.removeFocusListener(gp.field_c);
+            if (param0 != -2846) {
+                ge.c(91);
+            }
             pl.field_d = -1;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ge.F(" + -2846 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "ge.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private ge(int param0, int param1, int param2, int param3) {
         super(param0, param1, 0, 1024, 2048, param2);
-        ((ge) this).field_y = param3;
+        this.field_y = param3;
     }
 
     public static void c(int param0) {
@@ -38,15 +41,20 @@ final class ge extends no {
     }
 
     final static pb a(int param0, int param1, int param2) {
-        return so.a(0, param1, param0, ip.field_s);
+        if (param2 != -20777) {
+            java.awt.Component var4 = (java.awt.Component) null;
+            ge.a(58, (java.awt.Component) null);
+        }
+        return so.a(param2 ^ -20777, param1, param0, ip.field_s);
     }
 
     final boolean b(boolean param0) {
+        int discarded$0 = 0;
         if (param0) {
-            Object var3 = null;
-            int discarded$0 = ((ge) this).a(61, (StringBuilder) null);
+            StringBuilder var3 = (StringBuilder) null;
+            discarded$0 = this.a(61, (StringBuilder) null);
         }
-        return ck.field_m[((ge) this).field_i];
+        return ck.field_m[this.field_i];
     }
 
     final int a(int param0, StringBuilder param1) {
@@ -60,6 +68,7 @@ final class ge extends no {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
@@ -74,36 +83,38 @@ final class ge extends no {
         try {
           L0: {
             if (param0 >= 79) {
-              stackOut_3_0 = 139 * ((ge) this).field_y - -131 << 5 ^ super.a(121, param1);
+              stackOut_3_0 = 139 * this.field_y - -131 << -1763036443 ^ super.a(121, param1);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = -19;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("ge.A(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -111,9 +122,13 @@ final class ge extends no {
               break L1;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final void a(j param0, byte param1) {
@@ -138,6 +153,7 @@ final class ge extends no {
         RuntimeException stackIn_81_0 = null;
         StringBuilder stackIn_81_1 = null;
         String stackIn_81_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_78_0 = null;
         StringBuilder stackOut_78_1 = null;
@@ -153,27 +169,27 @@ final class ge extends no {
           L0: {
             if (param0.field_Z != 3) {
               L1: {
-                if (((ge) this).field_i != 3) {
-                  if (4 != ((ge) this).field_i) {
-                    if (5 != ((ge) this).field_i) {
-                      if (6 != ((ge) this).field_i) {
-                        if (((ge) this).field_i == 7) {
+                if (this.field_i != 3) {
+                  if (4 != this.field_i) {
+                    if (5 != this.field_i) {
+                      if (6 != this.field_i) {
+                        if ((this.field_i ^ -1) == -8) {
                           param0.field_yb.e((byte) 127);
                           break L1;
                         } else {
-                          if (((ge) this).field_i == 8) {
+                          if (-9 == (this.field_i ^ -1)) {
                             param0.field_yb.b(true);
                             break L1;
                           } else {
-                            if (((ge) this).field_i == 9) {
+                            if (-10 == (this.field_i ^ -1)) {
                               L2: {
                                 if (param0.field_gb.a(false)) {
                                   break L2;
                                 } else {
-                                  var12 = (vn) (Object) param0.field_gb.d(-63);
+                                  var12 = (vn) ((Object) param0.field_gb.d(-63));
                                   var3_ref2 = var12;
-                                  var4 = (31457280 + -(var12.field_m << 8)) / var12.field_o;
-                                  var5 = (vn) (Object) param0.field_gb.d(-8);
+                                  var4 = (31457280 + -(var12.field_m << 512207880)) / var12.field_o;
+                                  var5 = (vn) ((Object) param0.field_gb.d(-8));
                                   L3: while (true) {
                                     if (var5 == null) {
                                       break L2;
@@ -181,7 +197,7 @@ final class ge extends no {
                                       L4: {
                                         var5.field_C = 0;
                                         var5.field_v = 0;
-                                        var6 = (31457280 + -(var5.field_m << 8)) / var5.field_o;
+                                        var6 = (31457280 + -(var5.field_m << -1250615224)) / var5.field_o;
                                         if (var4 <= var6) {
                                           if (var6 > var4) {
                                             var3_ref2.b((byte) 111);
@@ -196,7 +212,7 @@ final class ge extends no {
                                           break L4;
                                         }
                                       }
-                                      var5 = (vn) (Object) param0.field_gb.a((byte) 116);
+                                      var5 = (vn) ((Object) param0.field_gb.a((byte) 116));
                                       continue L3;
                                     }
                                   }
@@ -210,11 +226,11 @@ final class ge extends no {
                                     param0.field_K.c((byte) -62);
                                     break L5;
                                   } else {
-                                    var3_ref2 = (vn) (Object) param0.field_K.d(param1 + -108);
+                                    var3_ref2 = (vn) ((Object) param0.field_K.d(param1 + -108));
                                     var3_ref2.field_C = 0;
                                     var3_ref2.field_v = 0;
                                     param0.field_K.c((byte) -63);
-                                    param0.field_K.a((nm) (Object) var3_ref2, (byte) 3);
+                                    param0.field_K.a(var3_ref2, (byte) 3);
                                     break L5;
                                   }
                                 }
@@ -230,73 +246,73 @@ final class ge extends no {
                                 }
                               }
                             } else {
-                              if (10 == ((ge) this).field_i) {
+                              if (10 == this.field_i) {
                                 if (param0.field_gb.e(118) != 1) {
                                   break L1;
                                 } else {
-                                  var11 = (vn) (Object) param0.field_gb.d(param1 + -161);
-                                  var4 = kj.a(var11.field_o * var11.field_o + var11.field_k * var11.field_k, param1 ^ 97) >> 8;
+                                  var11 = (vn) ((Object) param0.field_gb.d(param1 + -161));
+                                  var4 = kj.a(var11.field_o * var11.field_o + var11.field_k * var11.field_k, param1 ^ 97) >> -1867539480;
                                   var5_int = var11.field_k;
                                   var6 = var11.field_o;
                                   var7 = 0;
                                   L7: while (true) {
                                     if (7 <= var7) {
                                       var7 = 0;
-                                      var8 = (vn) (Object) param0.field_gb.d(-39);
+                                      var8 = (vn) ((Object) param0.field_gb.d(-39));
                                       L8: while (true) {
                                         if (var8 == null) {
                                           break L1;
                                         } else {
-                                          var8.field_k = (15 * BrickABrac.c(param1 + 1949, 1024 * var7) >> 8) + var5_int;
-                                          var8.field_o = var6 - -(15 * sa.a(var7 * 1024, -4097) >> 8);
-                                          var9 = kj.a(var8.field_o * var8.field_o + var8.field_k * var8.field_k, 2) >> 8;
+                                          var8.field_k = (15 * BrickABrac.c(param1 + 1949, 1024 * var7) >> -378108984) + var5_int;
+                                          var8.field_o = var6 - -(15 * sa.a(var7 * 1024, -4097) >> 1688167464);
+                                          var9 = kj.a(var8.field_o * var8.field_o + var8.field_k * var8.field_k, 2) >> 437563272;
                                           var8.field_k = var4 * var8.field_k / var9;
                                           var8.field_o = var4 * var8.field_o / var9;
                                           var7++;
-                                          var8 = (vn) (Object) param0.field_gb.a((byte) 116);
+                                          var8 = (vn) ((Object) param0.field_gb.a((byte) 116));
                                           continue L8;
                                         }
                                       }
                                     } else {
-                                      param0.field_gb.a((nm) (Object) new vn(var11.field_j, var11.field_m, 0, 0), (byte) 3);
+                                      param0.field_gb.a(new vn(var11.field_j, var11.field_m, 0, 0), (byte) 3);
                                       var7++;
                                       continue L7;
                                     }
                                   }
                                 }
                               } else {
-                                if (((ge) this).field_i != 11) {
-                                  if (((ge) this).field_i == 12) {
+                                if (this.field_i != 11) {
+                                  if ((this.field_i ^ -1) == -13) {
                                     param0.field_yb.field_H = param0.field_yb.field_H + 300;
                                     break L1;
                                   } else {
-                                    if (((ge) this).field_i == 13) {
-                                      var13 = (vn) (Object) param0.field_gb.d(param1 + -224);
+                                    if (-14 == (this.field_i ^ -1)) {
+                                      var13 = (vn) ((Object) param0.field_gb.d(param1 + -224));
                                       L9: while (true) {
                                         if (var13 == null) {
                                           break L1;
                                         } else {
                                           var13.c(512, -128);
-                                          var13 = (vn) (Object) param0.field_gb.a((byte) 116);
+                                          var13 = (vn) ((Object) param0.field_gb.a((byte) 116));
                                           continue L9;
                                         }
                                       }
                                     } else {
-                                      if (((ge) this).field_i != 14) {
-                                        if (((ge) this).field_i != 15) {
-                                          if (16 == ((ge) this).field_i) {
+                                      if ((this.field_i ^ -1) != -15) {
+                                        if ((this.field_i ^ -1) != -16) {
+                                          if (16 == this.field_i) {
                                             param0.field_n = param0.field_n + 16;
                                             break L1;
                                           } else {
-                                            if (17 != ((ge) this).field_i) {
-                                              if (18 == ((ge) this).field_i) {
-                                                var3_ref2 = (vn) (Object) param0.field_gb.d(-73);
+                                            if (17 != this.field_i) {
+                                              if (18 == this.field_i) {
+                                                var3_ref2 = (vn) ((Object) param0.field_gb.d(-73));
                                                 L10: while (true) {
                                                   if (var3_ref2 == null) {
                                                     break L1;
                                                   } else {
                                                     var3_ref2.field_C = var3_ref2.field_C + 40;
-                                                    var3_ref2 = (vn) (Object) param0.field_gb.a((byte) 116);
+                                                    var3_ref2 = (vn) ((Object) param0.field_gb.a((byte) 116));
                                                     continue L10;
                                                   }
                                                 }
@@ -309,22 +325,22 @@ final class ge extends no {
                                             }
                                           }
                                         } else {
-                                          var3_ref2 = (vn) (Object) param0.field_K.d(-30);
+                                          var3_ref2 = (vn) ((Object) param0.field_K.d(-30));
                                           L11: while (true) {
                                             if (var3_ref2 == null) {
-                                              var3_ref2 = (vn) (Object) param0.field_gb.d(-88);
+                                              var3_ref2 = (vn) ((Object) param0.field_gb.d(-88));
                                               L12: while (true) {
                                                 if (var3_ref2 == null) {
                                                   break L1;
                                                 } else {
                                                   var3_ref2.b(-128, 150);
-                                                  var3_ref2 = (vn) (Object) param0.field_gb.a((byte) 116);
+                                                  var3_ref2 = (vn) ((Object) param0.field_gb.a((byte) 116));
                                                   continue L12;
                                                 }
                                               }
                                             } else {
                                               var3_ref2.b(param1 + -150, 150);
-                                              var3_ref2 = (vn) (Object) param0.field_K.a((byte) 116);
+                                              var3_ref2 = (vn) ((Object) param0.field_K.a((byte) 116));
                                               continue L11;
                                             }
                                           }
@@ -336,13 +352,13 @@ final class ge extends no {
                                     }
                                   }
                                 } else {
-                                  var3_ref2 = (vn) (Object) param0.field_gb.d(-54);
+                                  var3_ref2 = (vn) ((Object) param0.field_gb.d(-54));
                                   L13: while (true) {
                                     if (var3_ref2 == null) {
                                       break L1;
                                     } else {
                                       var3_ref2.c(512, 128);
-                                      var3_ref2 = (vn) (Object) param0.field_gb.a((byte) 116);
+                                      var3_ref2 = (vn) ((Object) param0.field_gb.a((byte) 116));
                                       continue L13;
                                     }
                                   }
@@ -366,22 +382,22 @@ final class ge extends no {
                       break L1;
                     }
                   } else {
-                    var3_ref2 = (vn) (Object) param0.field_K.d(-75);
+                    var3_ref2 = (vn) ((Object) param0.field_K.d(-75));
                     L14: while (true) {
                       if (var3_ref2 == null) {
-                        var3_ref2 = (vn) (Object) param0.field_gb.d(-9);
+                        var3_ref2 = (vn) ((Object) param0.field_gb.d(-9));
                         L15: while (true) {
                           if (var3_ref2 == null) {
                             break L1;
                           } else {
                             var3_ref2.a((byte) 40, 150);
-                            var3_ref2 = (vn) (Object) param0.field_gb.a((byte) 116);
+                            var3_ref2 = (vn) ((Object) param0.field_gb.a((byte) 116));
                             continue L15;
                           }
                         }
                       } else {
                         var3_ref2.a((byte) 40, 150);
-                        var3_ref2 = (vn) (Object) param0.field_K.a((byte) 116);
+                        var3_ref2 = (vn) ((Object) param0.field_K.a((byte) 116));
                         continue L14;
                       }
                     }
@@ -399,32 +415,34 @@ final class ge extends no {
                   break L16;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var3_ref = decompiledCaughtException;
-            stackOut_78_0 = (RuntimeException) var3_ref;
+            stackOut_78_0 = (RuntimeException) (var3_ref);
             stackOut_78_1 = new StringBuilder().append("ge.C(");
             stackIn_80_0 = stackOut_78_0;
             stackIn_80_1 = stackOut_78_1;
             stackIn_79_0 = stackOut_78_0;
             stackIn_79_1 = stackOut_78_1;
             if (param0 == null) {
-              stackOut_80_0 = (RuntimeException) (Object) stackIn_80_0;
-              stackOut_80_1 = (StringBuilder) (Object) stackIn_80_1;
+              stackOut_80_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackOut_80_1 = (StringBuilder) ((Object) stackIn_80_1);
               stackOut_80_2 = "null";
               stackIn_81_0 = stackOut_80_0;
               stackIn_81_1 = stackOut_80_1;
               stackIn_81_2 = stackOut_80_2;
               break L17;
             } else {
-              stackOut_79_0 = (RuntimeException) (Object) stackIn_79_0;
-              stackOut_79_1 = (StringBuilder) (Object) stackIn_79_1;
+              stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
+              stackOut_79_1 = (StringBuilder) ((Object) stackIn_79_1);
               stackOut_79_2 = "{...}";
               stackIn_81_0 = stackOut_79_0;
               stackIn_81_1 = stackOut_79_1;
@@ -432,7 +450,12 @@ final class ge extends no {
               break L17;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_81_0, stackIn_81_2 + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_81_0), stackIn_81_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -441,10 +464,6 @@ final class ge extends no {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = "If you do nothing the game will revert to normal view in <%0> second.";
         field_w = 0;
         field_v = false;

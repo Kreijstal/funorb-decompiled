@@ -19,8 +19,8 @@ final class jh {
         field_l = null;
         field_d = null;
         field_f = null;
-        field_e = null;
-        field_h = null;
+        field_e = (int[][]) null;
+        field_h = (int[][]) null;
         field_j = null;
         field_c = null;
         field_i = null;
@@ -77,10 +77,6 @@ final class jh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = new cn(640, 480);
         field_d = field_l.field_B;
         field_f = field_d;

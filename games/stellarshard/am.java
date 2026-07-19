@@ -18,7 +18,7 @@ final class am {
 
     final String a(byte param0) {
         int var2 = -64 % ((53 - param0) / 50);
-        return ((am) this).field_h;
+        return this.field_h;
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -31,7 +31,7 @@ final class am {
 
     public static void b(int param0) {
         if (param0 > -53) {
-          field_g = null;
+          field_g = (pf) null;
           field_c = null;
           field_b = null;
           field_i = null;
@@ -52,10 +52,10 @@ final class am {
 
     final boolean a(int param0) {
         if (param0 != 5) {
-            field_g = null;
-            return ((am) this).field_a;
+            field_g = (pf) null;
+            return this.field_a;
         }
-        return ((am) this).field_a;
+        return this.field_a;
     }
 
     am(String param0, boolean param1) {
@@ -88,11 +88,11 @@ final class am {
         try {
           L0: {
             L1: {
-              ((am) this).field_h = param0;
-              if (null != ((am) this).field_h) {
+              this.field_h = param0;
+              if (null != this.field_h) {
                 break L1;
               } else {
-                ((am) this).field_h = "";
+                this.field_h = "";
                 break L1;
               }
             }
@@ -114,11 +114,11 @@ final class am {
                 break L2;
               }
             }
-            ((am) this).field_a = stackIn_6_1 != 0;
-            if (((am) this).field_h.length() != 0) {
+            ((am) (this)).field_a = stackIn_6_1 != 0;
+            if (this.field_h.length() != 0) {
               break L0;
             } else {
-              ((am) this).field_a = false;
+              this.field_a = false;
               return;
             }
           }
@@ -126,23 +126,23 @@ final class am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("am.<init>(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -150,15 +150,11 @@ final class am {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Accept";
         field_d = new int[]{2, 2, 2, 2, 2, 5, 3, 5, 2, 5, 10, 2, 3, 1};
         field_f = -1;

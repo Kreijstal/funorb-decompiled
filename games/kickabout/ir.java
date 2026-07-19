@@ -33,7 +33,7 @@ final class ir extends tm {
               if (param0 == 84) {
                 break L1;
               } else {
-                field_B = null;
+                field_B = (String) null;
                 break L1;
               }
             }
@@ -45,23 +45,23 @@ final class ir extends tm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ir.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -69,7 +69,7 @@ final class ir extends tm {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -113,6 +113,9 @@ final class ir extends tm {
         field_A = null;
         field_C = null;
         field_B = null;
+        if (param0) {
+            ir.a(false, -68);
+        }
     }
 
     ir(String param0, Class[] param1, String param2) {
@@ -120,62 +123,90 @@ final class ir extends tm {
     }
 
     final static void a(float param0, int param1, float param2, float param3, float param4, float param5, float param6) {
-        if (rq.field_D != null) {
-          if (null != vg.field_Bb) {
-            if (null != qd.field_c) {
-              rq.field_D.a(param5);
-              rq.field_D.f(param4);
-              rq.field_D.c(param0);
-              rq.field_D.b(param6);
-              rq.field_D.e(param3);
-              rq.field_D.d(param2);
-              return;
-            } else {
-              vg.field_Bb = new gq();
-              rq.field_D = new dp((lq) (Object) vg.field_Bb);
-              pi.field_b.a((lq) (Object) rq.field_D);
-              qd.field_c = new tf();
-              rq.field_D.a(param5);
-              rq.field_D.f(param4);
-              rq.field_D.c(param0);
-              rq.field_D.b(param6);
-              rq.field_D.e(param3);
-              rq.field_D.d(param2);
-              return;
-            }
+        if (rq.field_D == null) {
+          vg.field_Bb = new gq();
+          rq.field_D = new dp(vg.field_Bb);
+          pi.field_b.a(rq.field_D);
+          qd.field_c = new tf();
+          rq.field_D.a(param5);
+          rq.field_D.f(param4);
+          rq.field_D.c(param0);
+          if (param1 <= -10) {
+            rq.field_D.b(param6);
+            rq.field_D.e(param3);
+            rq.field_D.d(param2);
+            return;
           } else {
-            vg.field_Bb = new gq();
-            rq.field_D = new dp((lq) (Object) vg.field_Bb);
-            pi.field_b.a((lq) (Object) rq.field_D);
-            qd.field_c = new tf();
-            rq.field_D.a(param5);
-            rq.field_D.f(param4);
-            rq.field_D.c(param0);
+            field_A = (int[]) null;
             rq.field_D.b(param6);
             rq.field_D.e(param3);
             rq.field_D.d(param2);
             return;
           }
         } else {
-          vg.field_Bb = new gq();
-          rq.field_D = new dp((lq) (Object) vg.field_Bb);
-          pi.field_b.a((lq) (Object) rq.field_D);
-          qd.field_c = new tf();
-          rq.field_D.a(param5);
-          rq.field_D.f(param4);
-          rq.field_D.c(param0);
-          rq.field_D.b(param6);
-          rq.field_D.e(param3);
-          rq.field_D.d(param2);
-          return;
+          if (null == vg.field_Bb) {
+            vg.field_Bb = new gq();
+            rq.field_D = new dp(vg.field_Bb);
+            pi.field_b.a(rq.field_D);
+            qd.field_c = new tf();
+            rq.field_D.a(param5);
+            rq.field_D.f(param4);
+            rq.field_D.c(param0);
+            if (param1 <= -10) {
+              rq.field_D.b(param6);
+              rq.field_D.e(param3);
+              rq.field_D.d(param2);
+              return;
+            } else {
+              field_A = (int[]) null;
+              rq.field_D.b(param6);
+              rq.field_D.e(param3);
+              rq.field_D.d(param2);
+              return;
+            }
+          } else {
+            if (null == qd.field_c) {
+              vg.field_Bb = new gq();
+              rq.field_D = new dp(vg.field_Bb);
+              pi.field_b.a(rq.field_D);
+              qd.field_c = new tf();
+              rq.field_D.a(param5);
+              rq.field_D.f(param4);
+              rq.field_D.c(param0);
+              if (param1 <= -10) {
+                rq.field_D.b(param6);
+                rq.field_D.e(param3);
+                rq.field_D.d(param2);
+                return;
+              } else {
+                field_A = (int[]) null;
+                rq.field_D.b(param6);
+                rq.field_D.e(param3);
+                rq.field_D.d(param2);
+                return;
+              }
+            } else {
+              rq.field_D.a(param5);
+              rq.field_D.f(param4);
+              rq.field_D.c(param0);
+              if (param1 <= -10) {
+                rq.field_D.b(param6);
+                rq.field_D.e(param3);
+                rq.field_D.d(param2);
+                return;
+              } else {
+                field_A = (int[]) null;
+                rq.field_D.b(param6);
+                rq.field_D.e(param3);
+                rq.field_D.d(param2);
+                return;
+              }
+            }
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_B = "create new auction";
         field_C = "Change display name";
         field_A = new int[8192];

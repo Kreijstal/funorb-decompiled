@@ -22,18 +22,18 @@ final class ld extends gj {
 
     final Object e(int param0) {
         if (param0 > -114) {
-            field_z = null;
-            return ((ld) this).field_B;
+            field_z = (String) null;
+            return this.field_B;
         }
-        return ((ld) this).field_B;
+        return this.field_B;
     }
 
     ld(Object param0, int param1) {
         super(param1);
         try {
-            ((ld) this).field_B = param0;
+            this.field_B = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ld.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "ld.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -53,6 +53,9 @@ final class ld extends gj {
     }
 
     final static void e(byte param0) {
+        if (param0 != -111) {
+            return;
+        }
         wk.field_c = false;
         h.field_c = -1;
         am.field_f = -1;
@@ -61,10 +64,6 @@ final class ld extends gj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
         field_A = 0;
         field_E = -1;

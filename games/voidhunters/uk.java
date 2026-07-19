@@ -6,7 +6,7 @@ final class uk implements dja {
 
     public final tv a(byte param0) {
         int var2 = -55 / ((-64 - param0) / 50);
-        return (tv) (Object) new vp();
+        return (tv) ((Object) new vp());
     }
 
     final static boolean a(int param0, fm param1, fm param2) {
@@ -28,6 +28,7 @@ final class uk implements dja {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_7_0 = 0;
@@ -53,7 +54,8 @@ final class uk implements dja {
             if (param2.field_c < param1.field_c) {
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 if (param1.field_c != param2.field_c) {
@@ -62,7 +64,8 @@ final class uk implements dja {
                   if (param2.field_a < param1.field_a) {
                     stackOut_7_0 = 1;
                     stackIn_8_0 = stackOut_7_0;
-                    return stackIn_8_0 != 0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
                     break L1;
                   }
@@ -71,9 +74,10 @@ final class uk implements dja {
               if (param0 == -27544) {
                 stackOut_11_0 = 0;
                 stackIn_12_0 = stackOut_11_0;
+                decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                field_a = null;
+                field_a = (String) null;
                 return false;
               }
             }
@@ -82,23 +86,23 @@ final class uk implements dja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_0 = (RuntimeException) (var3);
             stackOut_13_1 = new StringBuilder().append("uk.E(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -107,23 +111,23 @@ final class uk implements dja {
             }
           }
           L3: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -131,9 +135,17 @@ final class uk implements dja {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
-        return stackIn_12_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0 != 0;
+          } else {
+            return stackIn_12_0 != 0;
+          }
+        }
     }
 
     public static void c(byte param0) {
@@ -144,11 +156,12 @@ final class uk implements dja {
     }
 
     public final tv[] a(int param0, int param1) {
+        tv discarded$0 = null;
         if (param0 != 11995) {
-            tv discarded$0 = ((uk) this).a((byte) 15);
-            return (tv[]) (Object) new vp[param1];
+            discarded$0 = this.a((byte) 15);
+            return (tv[]) ((Object) new vp[param1]);
         }
-        return (tv[]) (Object) new vp[param1];
+        return (tv[]) ((Object) new vp[param1]);
     }
 
     final static void b(byte param0) {
@@ -160,9 +173,9 @@ final class uk implements dja {
         if (!tla.field_c) {
           var1 = jl.field_p;
           if (var1 > 0) {
-            if (var1 == 1) {
+            if ((var1 ^ -1) == -2) {
               hab.field_j = nnb.field_d;
-              hab.field_j = geb.a(0, new CharSequence[3]);
+              hab.field_j = geb.a(0, new CharSequence[]{(CharSequence) ((Object) hab.field_j), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) vo.field_o)});
               hwa.field_o.l((byte) -106);
               gib.a((byte) -89);
               if (param0 <= 30) {
@@ -172,8 +185,8 @@ final class uk implements dja {
                 return;
               }
             } else {
-              hab.field_j = isa.a(bva.field_g, new String[1], 119);
-              hab.field_j = geb.a(0, new CharSequence[3]);
+              hab.field_j = isa.a(bva.field_g, new String[]{Integer.toString(var1)}, 119);
+              hab.field_j = geb.a(0, new CharSequence[]{(CharSequence) ((Object) hab.field_j), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) vo.field_o)});
               hwa.field_o.l((byte) -106);
               gib.a((byte) -89);
               if (param0 > 30) {
@@ -205,10 +218,6 @@ final class uk implements dja {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "<%0> wants to join";
     }
 }

@@ -17,15 +17,19 @@ final class lm {
         field_f = null;
         field_a = null;
         field_h = null;
-        field_d = null;
-        field_b = null;
+        if (param0 != 1638) {
+          field_f = (String) null;
+          field_d = null;
+          field_b = null;
+          return;
+        } else {
+          field_d = null;
+          field_b = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "lm.A(";
         field_d = new wm();
         field_f = "<%0> runes";

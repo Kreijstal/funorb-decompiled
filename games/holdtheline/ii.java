@@ -10,41 +10,70 @@ final class ii extends RuntimeException {
     static String[] field_b;
 
     final static boolean a(byte param0) {
-        if (null == r.field_a) {
+        if (param0 < -112) {
+          if (null != r.field_a) {
+            if (null == r.field_a.i((byte) -127)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (null == r.field_a.i((byte) -127)) {
+          }
+        } else {
+          field_b = (String[]) null;
+          if (null != r.field_a) {
+            if (null == r.field_a.i((byte) -127)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     final static boolean a(int param0, char param1) {
-        if (48 > param1) {
+        if (param0 == 48) {
+          if (48 <= param1) {
+            if (57 < param1) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (57 < param1) {
+          }
+        } else {
+          field_e = (int[]) null;
+          if (48 <= param1) {
+            if (57 < param1) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     ii(Throwable param0, String param1) {
-        ((ii) this).field_a = param1;
-        ((ii) this).field_f = param0;
+        this.field_a = param1;
+        this.field_f = param0;
     }
 
     public static void a(int param0) {
         field_e = null;
         field_b = null;
         field_d = null;
+        if (param0 != 8388479) {
+            field_c = 23;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[]{16744319, 8388479, 16777087, 8421631};
     }
 }

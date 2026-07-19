@@ -8,11 +8,15 @@ abstract class vj {
     static int field_a;
 
     public static void a(int param0) {
+        if (param0 > -99) {
+            return;
+        }
         field_c = null;
         field_d = null;
     }
 
     final static void a(byte param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+        int incrementValue$1 = 0;
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -23,6 +27,7 @@ abstract class vj {
         int var13 = 0;
         int var14 = 0;
         int stackIn_25_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_24_0 = 0;
         int stackOut_23_0 = 0;
@@ -38,7 +43,7 @@ abstract class vj {
                     if (param3 == param5) {
                       break L1;
                     } else {
-                      var7_int = (param3 >> 1) + (param5 >> 1) + (1 & (param5 & param3));
+                      var7_int = (param3 >> 1216373889) + (param5 >> -955460319) + (1 & (param5 & param3));
                       var8 = param6;
                       var9 = param3;
                       var10 = param5;
@@ -48,6 +53,7 @@ abstract class vj {
                           if (var11 >= param1) {
                             vj.a((byte) -109, var8, param2, param3, param4, var9, param6);
                             vj.a((byte) -96, param1, param2, var10, param4, param5, var8);
+                            decompiledRegionSelector0 = 4;
                             break L0;
                           } else {
                             L3: {
@@ -74,7 +80,7 @@ abstract class vj {
                                     break L5;
                                   }
                                 }
-                                int incrementValue$1 = var8;
+                                incrementValue$1 = var8;
                                 var8++;
                                 cd.field_q[incrementValue$1] = var12;
                                 break L4;
@@ -92,7 +98,8 @@ abstract class vj {
                           }
                         }
                       } else {
-                        return;
+                        decompiledRegionSelector0 = 3;
+                        break L0;
                       }
                     }
                   }
@@ -100,7 +107,8 @@ abstract class vj {
                 var7_int = -1 + param1;
                 L6: while (true) {
                   if (param6 >= var7_int) {
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     var8 = param6;
                     L7: while (true) {
@@ -126,16 +134,35 @@ abstract class vj {
                   }
                 }
               } else {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var7, "vj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw t.a((Throwable) ((Object) var7), "vj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                return;
+              }
+            }
+          }
         }
     }
 
@@ -153,10 +180,6 @@ abstract class vj {
     abstract fk a(byte param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new cn();
         field_b = 0;
         field_c = new String[]{"An explosive new campaign, with a compelling storyline", "Destroy the aliens' military infrastructure", "Challenge your piloting skills in Simulator mode"};

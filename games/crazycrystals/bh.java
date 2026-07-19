@@ -10,6 +10,7 @@ final class bh {
     static String field_a;
 
     final int a(int param0, int param1) {
+        int discarded$2 = 0;
         int var3 = 0;
         int var4 = 0;
         L0: {
@@ -17,23 +18,23 @@ final class bh {
           if (param0 <= -32) {
             break L0;
           } else {
-            int discarded$2 = ((bh) this).b(-83);
+            discarded$2 = this.b(-83);
             break L0;
           }
         }
         L1: {
-          if (null == ((bh) this).field_e) {
+          if (null == this.field_e) {
             break L1;
           } else {
-            if (((bh) this).field_e.length == 0) {
+            if (this.field_e.length == 0) {
               break L1;
             } else {
               var3 = 1;
               L2: while (true) {
-                if (var3 >= ((bh) this).field_e.length) {
-                  return ((bh) this).field_e.length - 1;
+                if (var3 >= this.field_e.length) {
+                  return this.field_e.length - 1;
                 } else {
-                  if (((bh) this).field_e[-1 + var3] - -((bh) this).field_e[var3] >> 1 > param1) {
+                  if (this.field_e[-1 + var3] - -this.field_e[var3] >> -2051005375 > param1) {
                     return var3 - 1;
                   } else {
                     var3++;
@@ -48,6 +49,9 @@ final class bh {
     }
 
     final static boolean a(byte param0) {
+        if (param0 != 78) {
+            return false;
+        }
         return qh.field_f;
     }
 
@@ -60,6 +64,7 @@ final class bh {
     }
 
     final int b(int param0) {
+        int discarded$2 = 0;
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -67,17 +72,17 @@ final class bh {
           if (param0 == -2288) {
             break L0;
           } else {
-            int discarded$2 = ((bh) this).a(-44, -4);
+            discarded$2 = this.a(-44, -4);
             break L0;
           }
         }
         L1: {
           L2: {
-            if (null == ((bh) this).field_e) {
+            if (null == this.field_e) {
               break L2;
             } else {
-              if (((bh) this).field_e.length != 0) {
-                stackOut_6_0 = ((bh) this).field_e[((bh) this).field_e.length + -1];
+              if (this.field_e.length != 0) {
+                stackOut_6_0 = this.field_e[this.field_e.length + -1];
                 stackIn_7_0 = stackOut_6_0;
                 break L1;
               } else {
@@ -93,16 +98,12 @@ final class bh {
     }
 
     bh(int param0, int param1, int param2) {
-        ((bh) this).field_b = param1;
-        ((bh) this).field_f = param0;
-        ((bh) this).field_e = new int[1 + param2];
+        this.field_b = param1;
+        this.field_f = param0;
+        this.field_e = new int[1 + param2];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Please enter your age in years";
         field_a = "If you have an account, log in to start at any level you've reached.";
     }

@@ -5,29 +5,32 @@ final class ogb extends rqa {
     static int field_o;
 
     final static void a(int param0, int param1) {
-        si.field_s = 133;
-        si.field_p = 33;
-        int var2 = -98;
-        si.field_r = 21845;
+        si.field_s = param1 * 400 / 150;
+        si.field_p = param1 * 100 / 150;
+        int var2 = 98 / ((1 - param0) / 62);
+        si.field_r = (param1 << 962383728) / 150;
     }
 
     final static void a(boolean param0, int param1, int param2, int param3, dja param4, int param5, dja param6, int param7, int param8, int param9, int param10, int param11, dja param12, int param13, byte param14) {
         try {
-            qha.field_o = 72;
-            ehb.field_g = 70;
-            vi.field_o = 69;
-            pr.field_d = 68;
-            kha.field_v = 65;
-            pra.field_o = 62;
+            qha.field_o = param11;
+            ehb.field_g = param8;
+            if (param14 != 91) {
+                field_o = 34;
+            }
+            vi.field_o = param10;
+            pr.field_d = param13;
+            kha.field_v = param9;
+            pra.field_o = param1;
             wc.field_a = param6;
             uqa.field_q = param4;
-            pka.field_o = 64;
+            pka.field_o = param3;
             nia.field_o = param0 ? true : false;
             gva.field_a = param12;
-            fk.field_e = 66;
-            iva.field_o = 71;
+            fk.field_e = param5;
+            iva.field_o = param2;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ogb.B(" + param0 + ',' + 62 + ',' + 71 + ',' + 64 + ',' + (param4 != null ? "{...}" : "null") + ',' + 66 + ',' + (param6 != null ? "{...}" : "null") + ',' + 2000 + ',' + 70 + ',' + 65 + ',' + 69 + ',' + 72 + ',' + (param12 != null ? "{...}" : "null") + ',' + 68 + ',' + 91 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ogb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');
         }
     }
 
@@ -49,8 +52,7 @@ final class ogb extends rqa {
         faa var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var8 = VoidHunters.field_G;
         try {
@@ -60,20 +62,19 @@ final class ogb extends rqa {
               var2 = var9.e((byte) -117);
               var3 = var9.e((byte) -94);
               if (0 == var2) {
-                var4 = (br) (Object) ca.field_p.d(0);
+                var4 = (br) ((Object) ca.field_p.d(param0 ^ -8999));
                 if (var4 == null) {
                   ifb.l(-128);
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 } else {
                   L2: {
                     var5 = -var9.field_e + vja.field_a;
-                    var13 = var4.field_d;
-                    var12 = var13;
-                    var11 = var12;
+                    var11 = var4.field_d;
                     var10 = var11;
                     var6 = var10;
-                    if (var5 > var13.length << 2) {
-                      var5 = var13.length << 2;
+                    if (var5 > var11.length << 1415274114) {
+                      var5 = var11.length << 773132482;
                       break L2;
                     } else {
                       break L2;
@@ -85,16 +86,16 @@ final class ogb extends rqa {
                       var4.b(-3846);
                       break L1;
                     } else {
-                      var6[var7 >> 2] = var6[var7 >> 2] + (var9.e((byte) -92) << (dla.a(3, var7) << 8));
+                      var6[var7 >> -620522494] = var6[var7 >> -620522494] + (var9.e((byte) -92) << (dla.a(3, var7) << -1878263736));
                       var7++;
                       continue L3;
                     }
                   }
                 }
               } else {
-                if (var2 == 1) {
+                if (-2 == (var2 ^ -1)) {
                   var4_int = var9.d(0);
-                  var5_ref_ik = (ik) (Object) mhb.field_o.d(0);
+                  var5_ref_ik = (ik) ((Object) mhb.field_o.d(0));
                   L4: while (true) {
                     L5: {
                       if (var5_ref_ik == null) {
@@ -111,15 +112,16 @@ final class ogb extends rqa {
                             }
                           }
                         }
-                        var5_ref_ik = (ik) (Object) mhb.field_o.a((byte) 11);
+                        var5_ref_ik = (ik) ((Object) mhb.field_o.a((byte) 11));
                         continue L4;
                       }
                     }
                     if (var5_ref_ik == null) {
                       ifb.l(-121);
-                      return;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     } else {
-                      var5_ref_ik.b(-3846);
+                      var5_ref_ik.b(param0 ^ 11299);
                       break L1;
                     }
                   }
@@ -130,18 +132,33 @@ final class ogb extends rqa {
                 }
               }
             }
-            break L0;
+            if (param0 == -8999) {
+              decompiledRegionSelector0 = 2;
+              break L0;
+            } else {
+              field_o = 127;
+              return;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "ogb.D(" + -8999 + ')');
+          throw rta.a((Throwable) ((Object) var1), "ogb.D(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -150,9 +167,10 @@ final class ogb extends rqa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         nc stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        nc stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -165,36 +183,38 @@ final class ogb extends rqa {
           L0: {
             tr.a(param0[3].a(55), false, param0[2].a(84), param0[1].a(115), param0[0].a(88));
             if (param1 < -119) {
-              stackOut_3_0 = new nc((Object) (Object) "void");
+              stackOut_3_0 = new nc("void");
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (nc) null;
               stackIn_2_0 = stackOut_1_0;
-              return (nc) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("ogb.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -202,16 +222,16 @@ final class ogb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = 0;
     }
 }

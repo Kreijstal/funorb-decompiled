@@ -39,7 +39,7 @@ final class cg {
                   if (var1_int == 0) {
                     break L3;
                   } else {
-                    if (kk.field_m.field_d < 0) {
+                    if ((kk.field_m.field_d ^ -1) > -1) {
                       break L3;
                     } else {
                       var2 = gn.field_a[kk.field_m.field_d];
@@ -69,7 +69,7 @@ final class cg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1, "cg.B(" + param0 + ')');
+          throw sh.a((Throwable) ((Object) var1), "cg.B(" + param0 + ')');
         }
         return stackIn_13_0;
     }
@@ -80,11 +80,14 @@ final class cg {
         field_d = null;
         field_g = null;
         field_c = null;
+        if (!param0) {
+            field_b = (int[]) null;
+        }
     }
 
     cg(int param0, int param1, int param2, int param3) {
-        ((cg) this).field_a = param3;
-        ((cg) this).field_f = param0;
+        this.field_a = param3;
+        this.field_f = param0;
     }
 
     public final String toString() {
@@ -93,19 +96,22 @@ final class cg {
 
     final static int a(int param0, int param1) {
         param1--;
-        param1 = param1 | param1 >>> 1;
-        param1 = param1 | param1 >>> 2;
-        param1 = param1 | param1 >>> 4;
-        param1 = param1 | param1 >>> 8;
-        param1 = param1 | param1 >>> 16;
-        return param1 - -1;
+        param1 = param1 | param1 >>> -1025215327;
+        param1 = param1 | param1 >>> -922314526;
+        param1 = param1 | param1 >>> -66557724;
+        if (param0 != -922314526) {
+          field_c = (byte[]) null;
+          param1 = param1 | param1 >>> 1701553032;
+          param1 = param1 | param1 >>> 1377342992;
+          return param1 - -1;
+        } else {
+          param1 = param1 | param1 >>> 1701553032;
+          param1 = param1 | param1 >>> 1377342992;
+          return param1 - -1;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[24];
         field_d = new int[24];
         field_c = new byte[520];

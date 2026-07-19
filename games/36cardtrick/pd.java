@@ -11,14 +11,10 @@ abstract class pd extends he {
     abstract Object e(int param0);
 
     pd(int param0) {
-        ((pd) this).field_k = param0;
+        this.field_k = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "pd.<init>(";
         field_l = -1;
     }

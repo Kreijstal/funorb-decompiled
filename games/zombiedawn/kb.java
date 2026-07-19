@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class kb extends pm {
     static String field_h;
     static sm field_f;
@@ -36,11 +34,11 @@ final class kb extends pm {
               if (param1 <= -94) {
                 break L1;
               } else {
-                field_i = null;
+                field_i = (vn[]) null;
                 break L1;
               }
             }
-            if (((kb) this).a(param0, 2) == uc.field_b) {
+            if (this.a(param0, 2) == uc.field_b) {
               stackOut_4_0 = sa.field_Z;
               stackIn_5_0 = stackOut_4_0;
               break L0;
@@ -52,23 +50,23 @@ final class kb extends pm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_0 = (RuntimeException) (var3);
             stackOut_7_1 = new StringBuilder().append("kb.B(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -76,7 +74,7 @@ final class kb extends pm {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
         }
         return stackIn_5_0;
     }
@@ -86,9 +84,10 @@ final class kb extends pm {
     }
 
     final rh a(String param0, int param1) {
+        String discarded$2 = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        Object var4 = null;
+        String var4 = null;
         CharSequence var5 = null;
         CharSequence var6 = null;
         rh stackIn_4_0 = null;
@@ -100,6 +99,7 @@ final class kb extends pm {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         rh stackOut_8_0 = null;
         rh stackOut_3_0 = null;
@@ -117,17 +117,17 @@ final class kb extends pm {
               if (param1 == 2) {
                 break L1;
               } else {
-                var4 = null;
-                String discarded$2 = ((kb) this).a((String) null, (byte) 5);
+                var4 = (String) null;
+                discarded$2 = this.a((String) null, (byte) 5);
                 break L1;
               }
             }
-            var5 = (CharSequence) (Object) param0;
+            var5 = (CharSequence) ((Object) param0);
             if (sj.a((byte) -101, var5)) {
               L2: {
-                var6 = (CharSequence) (Object) param0;
+                var6 = (CharSequence) ((Object) param0);
                 var3_int = ra.a(var6, 121);
-                if (var3_int <= 0) {
+                if ((var3_int ^ -1) >= -1) {
                   break L2;
                 } else {
                   if (130 < var3_int) {
@@ -139,34 +139,36 @@ final class kb extends pm {
               }
               stackOut_8_0 = uc.field_b;
               stackIn_9_0 = stackOut_8_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_3_0 = uc.field_b;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_0 = (RuntimeException) (var3);
             stackOut_10_1 = new StringBuilder().append("kb.I(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -174,24 +176,27 @@ final class kb extends pm {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }
-        return stackIn_9_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          return stackIn_9_0;
+        }
     }
 
     public static void d(int param0) {
         field_f = null;
         field_g = null;
         field_i = null;
+        if (param0 <= 60) {
+            return;
+        }
         field_j = null;
         field_h = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "This password contains your Player Name, and would be easy to guess";
         field_g = new String[]{"Catch as many as you can before the time runs out!", "Get across the road!", "Swarm the entrance to the White House!", "", "Catch as many as you can before the time runs out!", "Herd the humans into the barn!", "Get across the laser maze as fast as you can!", ""};
         field_f = new sm();

@@ -19,12 +19,12 @@ final class df extends fa {
         eq var12 = null;
         if (param0 != 3) {
           L0: {
-            field_m = null;
+            field_m = (String) null;
             if (ec.field_r == param1) {
               break L0;
             } else {
               L1: {
-                var6 = (eq) (Object) dg.field_f.a(-11434, (long)ec.field_r);
+                var6 = (eq) ((Object) dg.field_f.a(-11434, (long)ec.field_r));
                 var7 = var6;
                 var6 = var7;
                 ec.field_r = param1;
@@ -50,7 +50,7 @@ final class df extends fa {
               break L2;
             } else {
               L3: {
-                var12 = (eq) (Object) dg.field_f.a(-11434, (long)ec.field_r);
+                var12 = (eq) ((Object) dg.field_f.a(-11434, (long)ec.field_r));
                 var6 = var12;
                 var9 = var12;
                 ec.field_r = param1;
@@ -74,6 +74,12 @@ final class df extends fa {
     }
 
     public static void a(int param0) {
+        if (param0 != 3) {
+            field_m = (String) null;
+            field_r = null;
+            field_m = null;
+            return;
+        }
         field_r = null;
         field_m = null;
     }
@@ -83,10 +89,6 @@ final class df extends fa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Elapsed time";
     }
 }

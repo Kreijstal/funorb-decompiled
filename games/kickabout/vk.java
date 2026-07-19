@@ -14,51 +14,51 @@ final class vk {
         ci.field_a = 0;
         var2 = nb.field_b;
         nb.field_b = nr.field_e;
-        if (param1 != 51) {
+        if (-52 != (param1 ^ -1)) {
           if (50 == param1) {
             gt.field_t.field_l = 5;
             nr.field_e = var2;
             gt.field_t.field_o = gt.field_t.field_o + 1;
             if (param0 < -115) {
               if (gt.field_t.field_o < 2) {
-                if (gt.field_t.field_o < 2) {
+                if (-3 < (gt.field_t.field_o ^ -1)) {
                   if (4 <= gt.field_t.field_o) {
                     return 1;
                   } else {
                     return -1;
                   }
                 } else {
-                  if (param1 == 50) {
-                    return 5;
-                  } else {
+                  if (param1 != 50) {
                     if (4 <= gt.field_t.field_o) {
                       return 1;
                     } else {
                       return -1;
                     }
+                  } else {
+                    return 5;
                   }
                 }
               } else {
-                if (param1 == 51) {
-                  return 2;
-                } else {
-                  if (gt.field_t.field_o < 2) {
+                if (-52 != (param1 ^ -1)) {
+                  if (-3 < (gt.field_t.field_o ^ -1)) {
                     if (4 <= gt.field_t.field_o) {
                       return 1;
                     } else {
                       return -1;
                     }
                   } else {
-                    if (param1 == 50) {
-                      return 5;
-                    } else {
+                    if (param1 != 50) {
                       if (4 <= gt.field_t.field_o) {
                         return 1;
                       } else {
                         return -1;
                       }
+                    } else {
+                      return 5;
                     }
                   }
+                } else {
+                  return 2;
                 }
               }
             } else {
@@ -70,44 +70,44 @@ final class vk {
             gt.field_t.field_o = gt.field_t.field_o + 1;
             if (param0 < -115) {
               if (gt.field_t.field_o < 2) {
-                if (gt.field_t.field_o < 2) {
+                if (-3 < (gt.field_t.field_o ^ -1)) {
                   if (4 <= gt.field_t.field_o) {
                     return 1;
                   } else {
                     return -1;
                   }
                 } else {
-                  if (param1 == 50) {
-                    return 5;
-                  } else {
+                  if (param1 != 50) {
                     if (4 <= gt.field_t.field_o) {
                       return 1;
                     } else {
                       return -1;
                     }
+                  } else {
+                    return 5;
                   }
                 }
               } else {
-                if (param1 == 51) {
-                  return 2;
-                } else {
-                  if (gt.field_t.field_o < 2) {
+                if (-52 != (param1 ^ -1)) {
+                  if (-3 < (gt.field_t.field_o ^ -1)) {
                     if (4 <= gt.field_t.field_o) {
                       return 1;
                     } else {
                       return -1;
                     }
                   } else {
-                    if (param1 == 50) {
-                      return 5;
-                    } else {
+                    if (param1 != 50) {
                       if (4 <= gt.field_t.field_o) {
                         return 1;
                       } else {
                         return -1;
                       }
+                    } else {
+                      return 5;
                     }
                   }
+                } else {
+                  return 2;
                 }
               }
             } else {
@@ -120,10 +120,10 @@ final class vk {
           gt.field_t.field_o = gt.field_t.field_o + 1;
           if (param0 < -115) {
             if (gt.field_t.field_o >= 2) {
-              if (param1 == 51) {
+              if (-52 == (param1 ^ -1)) {
                 return 2;
               } else {
-                if (gt.field_t.field_o >= 2) {
+                if (-3 >= (gt.field_t.field_o ^ -1)) {
                   if (param1 == 50) {
                     return 5;
                   } else {
@@ -142,21 +142,21 @@ final class vk {
                 }
               }
             } else {
-              if (gt.field_t.field_o < 2) {
+              if (-3 < (gt.field_t.field_o ^ -1)) {
                 if (4 <= gt.field_t.field_o) {
                   return 1;
                 } else {
                   return -1;
                 }
               } else {
-                if (param1 == 50) {
-                  return 5;
-                } else {
+                if (param1 != 50) {
                   if (4 <= gt.field_t.field_o) {
                     return 1;
                   } else {
                     return -1;
                   }
+                } else {
+                  return 5;
                 }
               }
             }
@@ -174,10 +174,6 @@ final class vk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Your team earns 10% of normal experience.";
         field_b = false;
     }

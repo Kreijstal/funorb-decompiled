@@ -51,60 +51,66 @@ final class oi {
             StringBuilder stackOut_7_1 = null;
             String stackOut_7_2 = null;
             try {
-              try {
-                L0: {
-                  var4 = Class.forName("c");
-                  if (param1 <= -12) {
-                    break L0;
-                  } else {
-                    field_a = null;
-                    break L0;
+              L0: {
+                try {
+                  L1: {
+                    L2: {
+                      var4 = Class.forName("c");
+                      if (param1 <= -12) {
+                        break L2;
+                      } else {
+                        field_a = (gk) null;
+                        break L2;
+                      }
+                    }
+                    var5 = (oe) (var4.newInstance());
+                    var5.a(-12189, param2, param0, param3);
+                    stackOut_2_0 = (oe) (var5);
+                    stackIn_3_0 = stackOut_2_0;
+                    break L1;
                   }
+                } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var4_ref = decompiledCaughtException;
+                  var5_ref = new br();
+                  ((oe) ((Object) var5_ref)).a(-12189, param2, param0, param3);
+                  stackOut_4_0 = (br) (var5_ref);
+                  stackIn_5_0 = stackOut_4_0;
+                  return (oe) ((Object) stackIn_5_0);
                 }
-                var5 = (oe) var4.newInstance();
-                var5.a(-12189, param2, param0, param3);
-                stackOut_2_0 = (oe) var5;
-                stackIn_3_0 = stackOut_2_0;
-                return stackIn_3_0;
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var4_ref = decompiledCaughtException;
-                var5_ref = new br();
-                ((oe) (Object) var5_ref).a(-12189, param2, param0, param3);
-                stackOut_4_0 = (br) var5_ref;
-                stackIn_5_0 = stackOut_4_0;
-                return (oe) (Object) stackIn_5_0;
+                break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L1: {
+              L3: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var4_ref2;
+                stackOut_6_0 = (RuntimeException) (var4_ref2);
                 stackOut_6_1 = new StringBuilder().append("oi.A(");
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param0 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
-                  break L1;
+                  break L3;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
                   stackIn_9_2 = stackOut_7_2;
-                  break L1;
+                  break L3;
                 }
               }
-              throw pn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+              throw pn.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -113,14 +119,17 @@ final class oi {
     }
 
     final static void a(int param0, int param1) {
+        oe discarded$0 = null;
+        if (param1 != 20665) {
+            java.awt.Canvas var3 = (java.awt.Canvas) null;
+            discarded$0 = oi.a((java.awt.Canvas) null, 77, -52, -1);
+            dh.field_c = param0;
+            return;
+        }
         dh.field_c = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
     }
 }

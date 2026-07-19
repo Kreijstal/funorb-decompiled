@@ -16,7 +16,7 @@ final class ll extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(int param0, go param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        java.awt.event.FocusEvent var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -36,12 +36,12 @@ final class ll extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           L0: {
             L1: {
-              sp.a(param1, param0 ^ 8193, ((ll) this).field_i);
+              sp.a(param1, param0 ^ 8193, this.field_i);
               if (param0 == 8192) {
                 break L1;
               } else {
-                var4 = null;
-                ((ll) this).focusGained((java.awt.event.FocusEvent) null);
+                var4 = (java.awt.event.FocusEvent) null;
+                this.focusGained((java.awt.event.FocusEvent) null);
                 break L1;
               }
             }
@@ -51,23 +51,23 @@ final class ll extends java.awt.Canvas implements java.awt.event.FocusListener {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ll.A(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -75,7 +75,7 @@ final class ll extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class ll extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_f = null;
         field_k = null;
         field_h = null;
-        int var1 = 0;
+        int var1 = 69 % ((45 - param0) / 62);
         field_c = null;
         field_a = null;
         field_g = null;
@@ -99,9 +99,9 @@ final class ll extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            ((ll) this).field_e = true;
+            this.field_e = true;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ll.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "ll.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -112,10 +112,6 @@ final class ll extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new lf();
         field_d = "Show chat";
         field_f = new int[8192];

@@ -12,21 +12,17 @@ final class mb {
           mb.a((byte) 97);
           field_c = null;
           field_a = null;
-          field_b = null;
+          field_b = (byte[][]) null;
           return;
         } else {
           field_c = null;
           field_a = null;
-          field_b = null;
+          field_b = (byte[][]) null;
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mb.A(";
         field_b = new byte[1000][];
         field_a = "If you have an account, log in to start at any level you've reached.";

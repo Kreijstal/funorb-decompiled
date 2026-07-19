@@ -20,19 +20,23 @@ final class h {
         field_b = null;
         field_g = null;
         field_e = null;
-        field_d = null;
-        field_h = null;
+        if (param0 != -25764) {
+          field_h = (String) null;
+          field_d = null;
+          field_h = null;
+          return;
+        } else {
+          field_d = null;
+          field_h = null;
+          return;
+        }
     }
 
     h(int param0) {
-        ((h) this).field_c = param0;
+        this.field_c = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new String[]{"Small", "Medium", "Large", "Epic"};
         field_h = "More suggestions";
         field_f = "<%0> has not yet unlocked this option for use.";

@@ -20,7 +20,7 @@ abstract class og {
         try {
           L0: {
             var1_int = 0;
-            var2 = 0;
+            var2 = param0 ? 1 : 0;
             L1: while (true) {
               if (!kj.e((byte) 118)) {
                 L2: {
@@ -43,7 +43,7 @@ abstract class og {
                       } else {
                         L5: {
                           var3 = pe.field_db[ui.field_c.field_j];
-                          if (var3 == 2) {
+                          if ((var3 ^ -1) == -3) {
                             break L5;
                           } else {
                             if (var3 != 5) {
@@ -73,7 +73,7 @@ abstract class og {
                   if (var3 != 0) {
                     break L6;
                   } else {
-                    if (nd.field_c != 2) {
+                    if (-3 != (nd.field_c ^ -1)) {
                       break L6;
                     } else {
                       var4 = -fd.field_e + ol.a(256);
@@ -113,7 +113,7 @@ abstract class og {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "og.E(" + false + ')');
+          throw oj.a((Throwable) ((Object) var1), "og.E(" + param0 + ')');
         }
         return stackIn_24_0;
     }
@@ -135,13 +135,13 @@ abstract class og {
           L0: {
             var3_int = 0;
             L1: while (true) {
-              if (param2 <= 0) {
-                var4 = 0;
+              if ((param2 ^ -1) >= -1) {
+                var4 = 75 % ((-57 - param1) / 42);
                 stackOut_4_0 = var3_int;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                var3_int = var3_int << 1 | 1 & param0;
+                var3_int = var3_int << 133341953 | 1 & param0;
                 param0 = param0 >>> 1;
                 param2--;
                 continue L1;
@@ -151,77 +151,97 @@ abstract class og {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var3, "og.F(" + param0 + ',' + -126 + ',' + param2 + ')');
+          throw oj.a((Throwable) ((Object) var3), "og.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_5_0;
     }
 
     final static vh a(String param0, boolean param1) {
         RuntimeException var2 = null;
-        vh stackIn_3_0 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
+        vh stackIn_2_0 = null;
+        vh stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        vh stackOut_2_0 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
+        vh stackOut_3_0 = null;
+        vh stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
         try {
           L0: {
-            stackOut_2_0 = new vh(param0);
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
+            if (param1) {
+              stackOut_3_0 = new vh(param0);
+              stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              stackOut_1_0 = (vh) null;
+              stackIn_2_0 = stackOut_1_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("og.D(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_5_0 = (RuntimeException) (var2);
+            stackOut_5_1 = new StringBuilder().append("og.D(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + true + ')');
+          throw oj.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_3_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     abstract int a(byte param0);
 
     public static void a(int param0) {
+        int discarded$0 = 0;
         field_b = null;
+        if (param0 > -102) {
+            discarded$0 = og.a(-26, (byte) 90, -68);
+        }
     }
 
     final static void a(int param0, int param1, int param2) {
+        int discarded$1 = 0;
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -252,31 +272,39 @@ abstract class og {
         var27 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
-            var3_int = 1024;
-            var4 = 512;
-            var5 = param0;
-            var5 = var5 % var3_int;
-            var5 = -var5 + var3_int;
-            var6 = param1;
-            var6 = var6 % var4;
-            var7 = 0;
-            var8 = 0;
-            var9 = 0;
-            var10 = 0;
-            var11 = 0;
-            var12 = 0;
-            var17 = lj.field_h[0].field_q;
-            var18 = lj.field_h[0].field_v;
-            var20 = 0;
-            var21 = 480;
-            var22 = 32;
+            L1: {
+              var3_int = 1024;
+              var4 = 512;
+              var5 = param0;
+              var5 = var5 % var3_int;
+              var5 = -var5 + var3_int;
+              var6 = param1;
+              var6 = var6 % var4;
+              var7 = 0;
+              var8 = 0;
+              var9 = 0;
+              var10 = 0;
+              var11 = 0;
+              var12 = 0;
+              var17 = lj.field_h[0].field_q;
+              var18 = lj.field_h[0].field_v;
+              var20 = 0;
+              var21 = 480;
+              var22 = 32;
+              if (param2 == -15516) {
+                break L1;
+              } else {
+                discarded$1 = og.a(-113, (byte) -23, -27);
+                break L1;
+              }
+            }
             var23 = 608;
             var24 = 0;
-            L1: while (true) {
+            L2: while (true) {
               if (4 <= var24) {
                 break L0;
               } else {
-                L2: {
+                L3: {
                   if (var24 == 0) {
                     var9 = var5;
                     var12 = var4;
@@ -284,20 +312,20 @@ abstract class og {
                     var7 = -var5;
                     var11 = var6;
                     var10 = var3_int;
-                    break L2;
+                    break L3;
                   } else {
                     if (1 != var24) {
-                      if (var24 == 2) {
+                      if (-3 == (var24 ^ -1)) {
                         var8 = var4 + -var6;
                         var9 = 0;
                         var11 = 0;
                         var7 = -var5 + var3_int;
                         var12 = var6;
                         var10 = var5;
-                        break L2;
+                        break L3;
                       } else {
-                        if (var24 != 3) {
-                          break L2;
+                        if (-4 != (var24 ^ -1)) {
+                          break L3;
                         } else {
                           var8 = -var6;
                           var9 = 0;
@@ -305,7 +333,7 @@ abstract class og {
                           var11 = var6;
                           var10 = var5;
                           var7 = -var5 + var3_int;
-                          break L2;
+                          break L3;
                         }
                       }
                     } else {
@@ -315,81 +343,85 @@ abstract class og {
                       var9 = var5;
                       var10 = var3_int;
                       var11 = 0;
-                      break L2;
+                      break L3;
                     }
                   }
                 }
                 var25 = 0;
-                L3: while (true) {
+                L4: while (true) {
                   if (var25 >= da.field_e) {
                     var24++;
-                    continue L1;
+                    continue L2;
                   } else {
-                    L4: {
+                    L5: {
                       if (wc.field_e[var25] == null) {
-                        break L4;
+                        break L5;
                       } else {
                         var26 = 0;
-                        L5: while (true) {
+                        L6: while (true) {
                           if (wc.field_e[var25].length <= var26) {
-                            break L4;
+                            break L5;
                           } else {
-                            L6: {
-                              var15 = wc.field_e[var25][var26][1];
-                              var13 = wc.field_e[var25][var26][0];
-                              var16 = var18 + var15;
-                              var14 = var17 + var13;
-                              if (~var16 > ~var11) {
-                                break L6;
-                              } else {
-                                if (~var15 > ~var12) {
-                                  if (var9 > var14) {
-                                    break L6;
-                                  } else {
-                                    if (var13 >= var10) {
-                                      break L6;
-                                    } else {
+                            var15 = wc.field_e[var25][var26][1];
+                            var13 = wc.field_e[var25][var26][0];
+                            var16 = var18 + var15;
+                            var14 = var17 + var13;
+                            if (var16 >= var11) {
+                              L7: {
+                                if (var15 < var12) {
+                                  if (var9 <= var14) {
+                                    if (var13 < var10) {
                                       var16 = var16 + var8;
                                       var14 = var14 + var7;
                                       var15 = var15 + var8;
                                       var13 = var13 + var7;
-                                      if (~var16 > ~var20) {
-                                        break L6;
-                                      } else {
+                                      if (var16 >= var20) {
                                         if (var21 > var15) {
-                                          L7: {
+                                          L8: {
                                             if (var13 < var22) {
-                                              break L7;
+                                              break L8;
                                             } else {
                                               if (var23 <= var14) {
-                                                break L7;
+                                                break L8;
                                               } else {
-                                                break L6;
+                                                break L7;
                                               }
                                             }
                                           }
                                           var19 = wc.field_e[var25][var26][2];
                                           lj.field_h[var19].g(var13, var15);
-                                          break L6;
+                                          break L7;
                                         } else {
-                                          break L6;
+                                          break L7;
                                         }
+                                      } else {
+                                        var26++;
+                                        continue L6;
                                       }
+                                    } else {
+                                      var26++;
+                                      continue L6;
                                     }
+                                  } else {
+                                    var26++;
+                                    continue L6;
                                   }
                                 } else {
-                                  break L6;
+                                  break L7;
                                 }
                               }
+                              var26++;
+                              continue L6;
+                            } else {
+                              var26++;
+                              continue L6;
                             }
-                            var26++;
-                            continue L5;
                           }
                         }
                       }
                     }
                     var25++;
-                    continue L3;
+                    continue L4;
                   }
                 }
               }
@@ -398,15 +430,11 @@ abstract class og {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var3, "og.G(" + param0 + ',' + param1 + ',' + -15516 + ')');
+          throw oj.a((Throwable) ((Object) var3), "og.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Fullscreen";
     }
 }

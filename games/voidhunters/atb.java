@@ -18,6 +18,13 @@ final class atb {
     }
 
     final eb a(int param0, int param1) {
+        eb discarded$7 = null;
+        eb discarded$8 = null;
+        eb discarded$9 = null;
+        eb discarded$10 = null;
+        eb discarded$11 = null;
+        eb discarded$12 = null;
+        eb discarded$13 = null;
         Object var3 = null;
         eb var4 = null;
         opa var5 = null;
@@ -159,33 +166,33 @@ final class atb {
         int stackOut_19_1 = 0;
         int stackOut_19_2 = 0;
         var8 = VoidHunters.field_G;
-        var3 = ((atb) this).field_c.b(0, (long)param1);
+        var3 = this.field_c.b(0, (long)param1);
         if (var3 != null) {
-          return (eb) var3;
+          return (eb) (var3);
         } else {
-          if (((atb) this).field_e.a(param1, (byte) -49)) {
+          if (this.field_e.a(param1, (byte) -49)) {
             L0: {
-              var5 = ((atb) this).field_e.a(-20292, param1);
+              var5 = this.field_e.a(-20292, param1);
               if (var5.field_h) {
                 stackOut_7_0 = 64;
                 stackIn_8_0 = stackOut_7_0;
                 break L0;
               } else {
-                stackOut_6_0 = ((atb) this).field_a.field_n;
+                stackOut_6_0 = this.field_a.field_n;
                 stackIn_8_0 = stackOut_6_0;
                 break L0;
               }
             }
             var6 = stackIn_8_0;
             if (var5.field_i) {
-              if (((atb) this).field_a.s()) {
+              if (this.field_a.s()) {
                 L1: {
-                  var9 = ((atb) this).field_e.a(0.699999988079071f, var6, param1, var6, 117, false);
+                  var9 = this.field_e.a(0.699999988079071f, var6, param1, var6, 117, false);
                   var7 = var9;
-                  stackOut_54_0 = ((atb) this).field_a;
+                  stackOut_54_0 = this.field_a;
                   stackOut_54_1 = var6;
                   stackOut_54_2 = var6;
-                  stackOut_54_3 = (float[]) var9;
+                  stackOut_54_3 = (float[]) (var9);
                   stackIn_56_0 = stackOut_54_0;
                   stackIn_56_1 = stackOut_54_1;
                   stackIn_56_2 = stackOut_54_2;
@@ -194,11 +201,11 @@ final class atb {
                   stackIn_55_1 = stackOut_54_1;
                   stackIn_55_2 = stackOut_54_2;
                   stackIn_55_3 = stackOut_54_3;
-                  if (var5.field_j == 0) {
-                    stackOut_56_0 = (pf) (Object) stackIn_56_0;
+                  if (-1 == (var5.field_j ^ -1)) {
+                    stackOut_56_0 = (pf) ((Object) stackIn_56_0);
                     stackOut_56_1 = stackIn_56_1;
                     stackOut_56_2 = stackIn_56_2;
-                    stackOut_56_3 = (float[]) (Object) stackIn_56_3;
+                    stackOut_56_3 = (float[]) ((Object) stackIn_56_3);
                     stackOut_56_4 = 0;
                     stackIn_57_0 = stackOut_56_0;
                     stackIn_57_1 = stackOut_56_1;
@@ -207,10 +214,10 @@ final class atb {
                     stackIn_57_4 = stackOut_56_4;
                     break L1;
                   } else {
-                    stackOut_55_0 = (pf) (Object) stackIn_55_0;
+                    stackOut_55_0 = (pf) ((Object) stackIn_55_0);
                     stackOut_55_1 = stackIn_55_1;
                     stackOut_55_2 = stackIn_55_2;
-                    stackOut_55_3 = (float[]) (Object) stackIn_55_3;
+                    stackOut_55_3 = (float[]) ((Object) stackIn_55_3);
                     stackOut_55_4 = 1;
                     stackIn_57_0 = stackOut_55_0;
                     stackIn_57_1 = stackOut_55_1;
@@ -220,29 +227,29 @@ final class atb {
                     break L1;
                   }
                 }
-                var22 = ((pf) (Object) stackIn_57_0).a(stackIn_57_1, stackIn_57_2, stackIn_57_3, stackIn_57_4 != 0, param0, qua.field_d);
+                var22 = ((pf) (Object) stackIn_57_0).a(stackIn_57_1, stackIn_57_2, stackIn_57_3, stackIn_57_4 != 0, param0 + 0, qua.field_d);
                 if (param0 != -1) {
-                  eb discarded$7 = ((atb) this).a(100, 49);
+                  discarded$7 = this.a(100, 49);
                   var22.a(var5.field_k, (byte) -98, var5.field_s);
-                  ((atb) this).field_c.a((Object) (Object) var22, (long)param1, (byte) -117);
+                  this.field_c.a(var22, (long)param1, (byte) -117);
                   return var22;
                 } else {
                   var22.a(var5.field_k, (byte) -98, var5.field_s);
-                  ((atb) this).field_c.a((Object) (Object) var22, (long)param1, (byte) -117);
+                  this.field_c.a(var22, (long)param1, (byte) -117);
                   return var22;
                 }
               } else {
-                if (var5.field_q == 2) {
+                if (-3 == (var5.field_q ^ -1)) {
                   L2: {
-                    var26 = ((atb) this).field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
-                    stackOut_35_0 = ((atb) this).field_a;
+                    var26 = this.field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
+                    stackOut_35_0 = this.field_a;
                     stackOut_35_1 = var6;
                     stackIn_37_0 = stackOut_35_0;
                     stackIn_37_1 = stackOut_35_1;
                     stackIn_36_0 = stackOut_35_0;
                     stackIn_36_1 = stackOut_35_1;
-                    if (var5.field_j == 0) {
-                      stackOut_37_0 = (pf) (Object) stackIn_37_0;
+                    if (-1 == (var5.field_j ^ -1)) {
+                      stackOut_37_0 = (pf) ((Object) stackIn_37_0);
                       stackOut_37_1 = stackIn_37_1;
                       stackOut_37_2 = 0;
                       stackIn_38_0 = stackOut_37_0;
@@ -250,7 +257,7 @@ final class atb {
                       stackIn_38_2 = stackOut_37_2;
                       break L2;
                     } else {
-                      stackOut_36_0 = (pf) (Object) stackIn_36_0;
+                      stackOut_36_0 = (pf) ((Object) stackIn_36_0);
                       stackOut_36_1 = stackIn_36_1;
                       stackOut_36_2 = 1;
                       stackIn_38_0 = stackOut_36_0;
@@ -264,25 +271,25 @@ final class atb {
                     if (param0 == -1) {
                       break L3;
                     } else {
-                      eb discarded$8 = ((atb) this).a(100, 49);
+                      discarded$8 = this.a(100, 49);
                       break L3;
                     }
                   }
                   var17.a(var5.field_k, (byte) -98, var5.field_s);
-                  ((atb) this).field_c.a((Object) (Object) var17, (long)param1, (byte) -117);
+                  this.field_c.a(var17, (long)param1, (byte) -117);
                   return var17;
                 } else {
                   if (tka.a(param0 ^ 2, (int) var5.field_c)) {
                     L4: {
-                      var28 = ((atb) this).field_e.a(var6, 0.699999988079071f, true, param1, var6, true);
-                      stackOut_47_0 = ((atb) this).field_a;
+                      var28 = this.field_e.a(var6, 0.699999988079071f, true, param1, var6, true);
+                      stackOut_47_0 = this.field_a;
                       stackOut_47_1 = var6;
                       stackIn_49_0 = stackOut_47_0;
                       stackIn_49_1 = stackOut_47_1;
                       stackIn_48_0 = stackOut_47_0;
                       stackIn_48_1 = stackOut_47_1;
-                      if (var5.field_j == 0) {
-                        stackOut_49_0 = (pf) (Object) stackIn_49_0;
+                      if (-1 == (var5.field_j ^ -1)) {
+                        stackOut_49_0 = (pf) ((Object) stackIn_49_0);
                         stackOut_49_1 = stackIn_49_1;
                         stackOut_49_2 = 0;
                         stackIn_50_0 = stackOut_49_0;
@@ -290,7 +297,7 @@ final class atb {
                         stackIn_50_2 = stackOut_49_2;
                         break L4;
                       } else {
-                        stackOut_48_0 = (pf) (Object) stackIn_48_0;
+                        stackOut_48_0 = (pf) ((Object) stackIn_48_0);
                         stackOut_48_1 = stackIn_48_1;
                         stackOut_48_2 = 1;
                         stackIn_50_0 = stackOut_48_0;
@@ -301,26 +308,26 @@ final class atb {
                     }
                     var21 = ((pf) (Object) stackIn_50_0).a(stackIn_50_1, stackIn_50_2 != 0, var6, (byte) -84, var28);
                     if (param0 != -1) {
-                      eb discarded$9 = ((atb) this).a(100, 49);
+                      discarded$9 = this.a(100, 49);
                       var21.a(var5.field_k, (byte) -98, var5.field_s);
-                      ((atb) this).field_c.a((Object) (Object) var21, (long)param1, (byte) -117);
+                      this.field_c.a(var21, (long)param1, (byte) -117);
                       return var21;
                     } else {
                       var21.a(var5.field_k, (byte) -98, var5.field_s);
-                      ((atb) this).field_c.a((Object) (Object) var21, (long)param1, (byte) -117);
+                      this.field_c.a(var21, (long)param1, (byte) -117);
                       return var21;
                     }
                   } else {
                     L5: {
-                      var27 = ((atb) this).field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
-                      stackOut_41_0 = ((atb) this).field_a;
+                      var27 = this.field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
+                      stackOut_41_0 = this.field_a;
                       stackOut_41_1 = var6;
                       stackIn_43_0 = stackOut_41_0;
                       stackIn_43_1 = stackOut_41_1;
                       stackIn_42_0 = stackOut_41_0;
                       stackIn_42_1 = stackOut_41_1;
-                      if (var5.field_j == 0) {
-                        stackOut_43_0 = (pf) (Object) stackIn_43_0;
+                      if (-1 == (var5.field_j ^ -1)) {
+                        stackOut_43_0 = (pf) ((Object) stackIn_43_0);
                         stackOut_43_1 = stackIn_43_1;
                         stackOut_43_2 = 0;
                         stackIn_44_0 = stackOut_43_0;
@@ -328,7 +335,7 @@ final class atb {
                         stackIn_44_2 = stackOut_43_2;
                         break L5;
                       } else {
-                        stackOut_42_0 = (pf) (Object) stackIn_42_0;
+                        stackOut_42_0 = (pf) ((Object) stackIn_42_0);
                         stackOut_42_1 = stackIn_42_1;
                         stackOut_42_2 = 1;
                         stackIn_44_0 = stackOut_42_0;
@@ -342,28 +349,28 @@ final class atb {
                       if (param0 == -1) {
                         break L6;
                       } else {
-                        eb discarded$10 = ((atb) this).a(100, 49);
+                        discarded$10 = this.a(100, 49);
                         break L6;
                       }
                     }
                     var19.a(var5.field_k, (byte) -98, var5.field_s);
-                    ((atb) this).field_c.a((Object) (Object) var19, (long)param1, (byte) -117);
+                    this.field_c.a(var19, (long)param1, (byte) -117);
                     return var19;
                   }
                 }
               }
             } else {
-              if (var5.field_q == 2) {
+              if (-3 == (var5.field_q ^ -1)) {
                 L7: {
-                  var23 = ((atb) this).field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
-                  stackOut_12_0 = ((atb) this).field_a;
+                  var23 = this.field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
+                  stackOut_12_0 = this.field_a;
                   stackOut_12_1 = var6;
                   stackIn_14_0 = stackOut_12_0;
                   stackIn_14_1 = stackOut_12_1;
                   stackIn_13_0 = stackOut_12_0;
                   stackIn_13_1 = stackOut_12_1;
-                  if (var5.field_j == 0) {
-                    stackOut_14_0 = (pf) (Object) stackIn_14_0;
+                  if (-1 == (var5.field_j ^ -1)) {
+                    stackOut_14_0 = (pf) ((Object) stackIn_14_0);
                     stackOut_14_1 = stackIn_14_1;
                     stackOut_14_2 = 0;
                     stackIn_15_0 = stackOut_14_0;
@@ -371,7 +378,7 @@ final class atb {
                     stackIn_15_2 = stackOut_14_2;
                     break L7;
                   } else {
-                    stackOut_13_0 = (pf) (Object) stackIn_13_0;
+                    stackOut_13_0 = (pf) ((Object) stackIn_13_0);
                     stackOut_13_1 = stackIn_13_1;
                     stackOut_13_2 = 1;
                     stackIn_15_0 = stackOut_13_0;
@@ -385,25 +392,25 @@ final class atb {
                   if (param0 == -1) {
                     break L8;
                   } else {
-                    eb discarded$11 = ((atb) this).a(100, 49);
+                    discarded$11 = this.a(100, 49);
                     break L8;
                   }
                 }
                 var11.a(var5.field_k, (byte) -98, var5.field_s);
-                ((atb) this).field_c.a((Object) (Object) var11, (long)param1, (byte) -117);
+                this.field_c.a(var11, (long)param1, (byte) -117);
                 return var11;
               } else {
                 if (tka.a(param0 ^ 2, (int) var5.field_c)) {
                   L9: {
-                    var25 = ((atb) this).field_e.a(var6, 0.699999988079071f, true, param1, var6, true);
-                    stackOut_24_0 = ((atb) this).field_a;
+                    var25 = this.field_e.a(var6, 0.699999988079071f, true, param1, var6, true);
+                    stackOut_24_0 = this.field_a;
                     stackOut_24_1 = var6;
                     stackIn_26_0 = stackOut_24_0;
                     stackIn_26_1 = stackOut_24_1;
                     stackIn_25_0 = stackOut_24_0;
                     stackIn_25_1 = stackOut_24_1;
-                    if (var5.field_j == 0) {
-                      stackOut_26_0 = (pf) (Object) stackIn_26_0;
+                    if (-1 == (var5.field_j ^ -1)) {
+                      stackOut_26_0 = (pf) ((Object) stackIn_26_0);
                       stackOut_26_1 = stackIn_26_1;
                       stackOut_26_2 = 0;
                       stackIn_27_0 = stackOut_26_0;
@@ -411,7 +418,7 @@ final class atb {
                       stackIn_27_2 = stackOut_26_2;
                       break L9;
                     } else {
-                      stackOut_25_0 = (pf) (Object) stackIn_25_0;
+                      stackOut_25_0 = (pf) ((Object) stackIn_25_0);
                       stackOut_25_1 = stackIn_25_1;
                       stackOut_25_2 = 1;
                       stackIn_27_0 = stackOut_25_0;
@@ -423,26 +430,26 @@ final class atb {
                   var15 = ((pf) (Object) stackIn_27_0).a(stackIn_27_1, stackIn_27_2 != 0, var6, (byte) -84, var25);
                   var4 = var15;
                   if (param0 != -1) {
-                    eb discarded$12 = ((atb) this).a(100, 49);
+                    discarded$12 = this.a(100, 49);
                     var15.a(var5.field_k, (byte) -98, var5.field_s);
-                    ((atb) this).field_c.a((Object) (Object) var15, (long)param1, (byte) -117);
+                    this.field_c.a(var15, (long)param1, (byte) -117);
                     return var15;
                   } else {
                     var15.a(var5.field_k, (byte) -98, var5.field_s);
-                    ((atb) this).field_c.a((Object) (Object) var15, (long)param1, (byte) -117);
+                    this.field_c.a(var15, (long)param1, (byte) -117);
                     return var15;
                   }
                 } else {
                   L10: {
-                    var24 = ((atb) this).field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
-                    stackOut_18_0 = ((atb) this).field_a;
+                    var24 = this.field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
+                    stackOut_18_0 = this.field_a;
                     stackOut_18_1 = var6;
                     stackIn_20_0 = stackOut_18_0;
                     stackIn_20_1 = stackOut_18_1;
                     stackIn_19_0 = stackOut_18_0;
                     stackIn_19_1 = stackOut_18_1;
-                    if (var5.field_j == 0) {
-                      stackOut_20_0 = (pf) (Object) stackIn_20_0;
+                    if (-1 == (var5.field_j ^ -1)) {
+                      stackOut_20_0 = (pf) ((Object) stackIn_20_0);
                       stackOut_20_1 = stackIn_20_1;
                       stackOut_20_2 = 0;
                       stackIn_21_0 = stackOut_20_0;
@@ -450,7 +457,7 @@ final class atb {
                       stackIn_21_2 = stackOut_20_2;
                       break L10;
                     } else {
-                      stackOut_19_0 = (pf) (Object) stackIn_19_0;
+                      stackOut_19_0 = (pf) ((Object) stackIn_19_0);
                       stackOut_19_1 = stackIn_19_1;
                       stackOut_19_2 = 1;
                       stackIn_21_0 = stackOut_19_0;
@@ -464,12 +471,12 @@ final class atb {
                     if (param0 == -1) {
                       break L11;
                     } else {
-                      eb discarded$13 = ((atb) this).a(100, 49);
+                      discarded$13 = this.a(100, 49);
                       break L11;
                     }
                   }
                   var13.a(var5.field_k, (byte) -98, var5.field_s);
-                  ((atb) this).field_c.a((Object) (Object) var13, (long)param1, (byte) -117);
+                  this.field_c.a(var13, (long)param1, (byte) -117);
                   return var13;
                 }
               }
@@ -482,22 +489,22 @@ final class atb {
 
     final void a(byte param0) {
         if (param0 != -106) {
-          ((atb) this).field_a = null;
-          ((atb) this).field_c.a(true, 5);
+          this.field_a = (pf) null;
+          this.field_c.a(true, 5);
           return;
         } else {
-          ((atb) this).field_c.a(true, 5);
+          this.field_c.a(true, 5);
           return;
         }
     }
 
     atb(pf param0, d param1) {
-        ((atb) this).field_c = new pfb(256);
+        this.field_c = new pfb(256);
         try {
-            ((atb) this).field_e = param1;
-            ((atb) this).field_a = param0;
+            this.field_e = param1;
+            this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "atb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "atb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

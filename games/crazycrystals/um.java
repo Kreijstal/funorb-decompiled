@@ -8,8 +8,9 @@ abstract class um extends oh {
     }
 
     final int a(byte param0, boolean param1) {
+        int discarded$0 = 0;
         if (param0 >= -53) {
-            int discarded$0 = ((um) this).a((byte) -63, true);
+            discarded$0 = this.a((byte) -63, true);
             return 16;
         }
         return 16;
@@ -29,7 +30,7 @@ abstract class um extends oh {
             }
             gh.a(param1, 12, qd.field_r, param0);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "um.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "um.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

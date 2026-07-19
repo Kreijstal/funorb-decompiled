@@ -35,6 +35,7 @@ abstract class oi {
             RuntimeException stackIn_16_0 = null;
             StringBuilder stackIn_16_1 = null;
             String stackIn_16_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_10_0 = null;
             StringBuilder stackOut_10_1 = null;
@@ -57,7 +58,8 @@ abstract class oi {
                 L1: {
                   if (ie.field_l.startsWith("win")) {
                     if (in.a(18, param1)) {
-                      return;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     } else {
                       break L1;
                     }
@@ -81,29 +83,30 @@ abstract class oi {
                   fk.a(-41, (Throwable) null, "MGR1: " + param1);
                   return;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_10_0 = (RuntimeException) var4_ref;
+                stackOut_10_0 = (RuntimeException) (var4_ref);
                 stackOut_10_1 = new StringBuilder().append("oi.E(").append(param0).append(',');
                 stackIn_12_0 = stackOut_10_0;
                 stackIn_12_1 = stackOut_10_1;
                 stackIn_11_0 = stackOut_10_0;
                 stackIn_11_1 = stackOut_10_1;
                 if (param1 == null) {
-                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+                  stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+                  stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
                   stackOut_12_2 = "null";
                   stackIn_13_0 = stackOut_12_0;
                   stackIn_13_1 = stackOut_12_1;
                   stackIn_13_2 = stackOut_12_2;
                   break L3;
                 } else {
-                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+                  stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
                   stackOut_11_2 = "{...}";
                   stackIn_13_0 = stackOut_11_0;
                   stackIn_13_1 = stackOut_11_1;
@@ -112,23 +115,23 @@ abstract class oi {
                 }
               }
               L4: {
-                stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+                stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
                 stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param2).append(',');
                 stackIn_15_0 = stackOut_13_0;
                 stackIn_15_1 = stackOut_13_1;
                 stackIn_14_0 = stackOut_13_0;
                 stackIn_14_1 = stackOut_13_1;
                 if (param3 == null) {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+                  stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
                   stackOut_15_2 = "null";
                   stackIn_16_0 = stackOut_15_0;
                   stackIn_16_1 = stackOut_15_1;
                   stackIn_16_2 = stackOut_15_2;
                   break L4;
                 } else {
-                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+                  stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
                   stackOut_14_2 = "{...}";
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_16_1 = stackOut_14_1;
@@ -136,7 +139,12 @@ abstract class oi {
                   break L4;
                 }
               }
-              throw oi.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+              throw oi.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -148,10 +156,20 @@ abstract class oi {
     abstract void a(int param0, int param1);
 
     final static void a(byte param0, int param1) {
-        bc var2 = nd.field_Lb;
-        var2.f(11, (byte) -92);
-        var2.a(1, false);
-        var2.a(3, false);
+        bc var2 = null;
+        var2 = nd.field_Lb;
+        if (param0 != 126) {
+          field_n = (int[]) null;
+          var2.f(param1, (byte) -92);
+          var2.a(1, false);
+          var2.a(3, false);
+          return;
+        } else {
+          var2.f(param1, (byte) -92);
+          var2.a(1, false);
+          var2.a(3, false);
+          return;
+        }
     }
 
     public static void a(int param0) {
@@ -171,7 +189,7 @@ abstract class oi {
         if (!(param0 instanceof cn)) {
             var2 = new cn(param0, param1);
         } else {
-            var2 = (cn) (Object) param0;
+            var2 = (cn) ((Object) param0);
             var2.field_d = var2.field_d + ' ' + param1;
         }
         return var2;
@@ -180,10 +198,6 @@ abstract class oi {
     abstract void a(int param0, int param1, int param2);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "to keep fullscreen or";
         field_e = new oh(270, 70);
         field_i = "You are offering an unrated rematch.";

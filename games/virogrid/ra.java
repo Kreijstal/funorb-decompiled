@@ -12,22 +12,25 @@ final class ra {
         field_d = null;
         field_e = null;
         field_c = null;
+        if (param0) {
+            return;
+        }
         field_a = null;
         field_b = null;
     }
 
     final static int a(int param0, int param1) {
         param1--;
-        param1 = param1 | param1 >>> 1;
-        param1 = param1 | param1 >>> 2;
-        param1 = param1 | param1 >>> 4;
-        param1 = param1 | param1 >>> 8;
+        param1 = param1 | param1 >>> -712028927;
+        param1 = param1 | param1 >>> 1692747906;
+        param1 = param1 | param1 >>> 1691135556;
+        param1 = param1 | param1 >>> 1222173608;
         if (param0 != 8742) {
-          field_d = null;
-          param1 = param1 | param1 >>> 16;
+          field_d = (String) null;
+          param1 = param1 | param1 >>> 383713200;
           return param1 - -1;
         } else {
-          param1 = param1 | param1 >>> 16;
+          param1 = param1 | param1 >>> 383713200;
           return param1 - -1;
         }
     }
@@ -37,6 +40,7 @@ final class ra {
     }
 
     final static void a(int param0, int param1, hn param2) {
+        int discarded$1 = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -64,10 +68,10 @@ final class ra {
           L0: {
             var7 = gk.field_g;
             var8 = var7;
-            var8.g(3, 8);
+            var8.g(param0, param1 + 7);
             var8.field_l = var8.field_l + 1;
             var4 = var8.field_l;
-            var8.a(1, -113);
+            var8.a(param1, -113);
             var8.a((byte) -111, param2.field_j);
             var8.a((byte) 122, param2.field_g);
             var8.a((byte) -119, param2.field_l);
@@ -79,7 +83,7 @@ final class ra {
             var5 = 0;
             L1: while (true) {
               if (param2.field_o.length <= var5) {
-                int discarded$1 = var8.b((byte) -111, var4);
+                discarded$1 = var8.b((byte) -111, var4);
                 var8.b(var8.field_l - var4, -1);
                 break L0;
               } else {
@@ -93,23 +97,23 @@ final class ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("ra.D(").append(3).append(',').append(1).append(',');
+            stackOut_6_0 = (RuntimeException) (var3);
+            stackOut_6_1 = new StringBuilder().append("ra.D(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -117,24 +121,23 @@ final class ra {
               break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
     final static void a(byte param0, boolean param1) {
+        if (param0 != 3) {
+            return;
+        }
         if (he.field_Xb != null) {
             he.field_Xb.a(param1, 24960);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "<%0>'s game";
         field_d = "Join <%0>'s game";
-        field_e = new byte[]{(byte) 7, (byte) 3};
+        field_e = new byte[]{(byte)7, (byte)3};
         field_a = new int[]{7, 9, 11};
     }
 }

@@ -11,23 +11,25 @@ final class gd {
     public static void a(int param0) {
         field_b = null;
         field_d = null;
+        if (param0 != -27770) {
+            return;
+        }
         field_e = null;
     }
 
     final static void a(vj param0, int param1, vj param2) {
         try {
+            if (param1 != 255) {
+                field_b = (he[]) null;
+            }
             ce.field_a = param2;
             sb.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "gd.B(" + (param0 != null ? "{...}" : "null") + ',' + 255 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "gd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new String[255];
         field_e = "Alternatively, click";
     }

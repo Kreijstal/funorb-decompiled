@@ -9,7 +9,7 @@ final class qp extends cq implements go {
         try {
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "qp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "qp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -20,7 +20,7 @@ final class qp extends cq implements go {
             Throwable var2 = null;
             Runtime var2_ref = null;
             Long var3 = null;
-            Object var4 = null;
+            Object[] var4 = null;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
@@ -31,13 +31,13 @@ final class qp extends cq implements go {
                   break L0;
                 }
               }
-              var1_ref = Runtime.class.getMethod("maxMemory", new Class[0]);
+              var1_ref = Runtime.class.getMethod("maxMemory", new Class[]{});
               if (var1_ref != null) {
                 try {
                   L1: {
                     var2_ref = Runtime.getRuntime();
-                    var4 = null;
-                    var3 = (Long) var1_ref.invoke((Object) (Object) var2_ref, (Object[]) null);
+                    var4 = (Object[]) null;
+                    var3 = (Long) (var1_ref.invoke((Object) (var2_ref), (Object[]) null));
                     ki.field_g = 1 + (int)(var3.longValue() / 1048576L);
                     break L1;
                   }
@@ -63,6 +63,11 @@ final class qp extends cq implements go {
     }
 
     public static void b(boolean param0) {
+        if (!param0) {
+            qp.b(true);
+            field_j = null;
+            return;
+        }
         field_j = null;
     }
 
@@ -109,7 +114,7 @@ final class qp extends cq implements go {
         try {
           L0: {
             L1: {
-              ((qp) this).field_g.a((jj) this, -9135);
+              this.field_g.a((jj) (this), -9135);
               if (!param2) {
                 var7 = 0;
                 var5_int = var7;
@@ -117,7 +122,7 @@ final class qp extends cq implements go {
                   if (6 <= var7) {
                     break L1;
                   } else {
-                    jaggl.OpenGL.glTexImage2Di(var7 + 34069, 0, ((qp) this).a(false), param1, param1, 0, gq.a(((qp) this).field_h, -29824), ((qp) this).field_g.field_Bc, param3[var7], 0);
+                    jaggl.OpenGL.glTexImage2Di(var7 + 34069, 0, this.a(false), param1, param1, 0, gq.a(this.field_h, -29824), this.field_g.field_Bc, param3[var7], 0);
                     var7++;
                     continue L2;
                   }
@@ -128,7 +133,7 @@ final class qp extends cq implements go {
                   if (6 <= var5_int) {
                     break L1;
                   } else {
-                    ((qp) this).a((byte) -110, param1, param1, param3[var5_int], 34069 + var5_int);
+                    this.a((byte) -110, param1, param1, param3[var5_int], 34069 + var5_int);
                     var5_int++;
                     continue L3;
                   }
@@ -141,23 +146,23 @@ final class qp extends cq implements go {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var5;
+            stackOut_9_0 = (RuntimeException) (var5);
             stackOut_9_1 = new StringBuilder().append("qp.<init>(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -166,23 +171,23 @@ final class qp extends cq implements go {
             }
           }
           L5: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param3 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -190,15 +195,11 @@ final class qp extends cq implements go {
               break L5;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = false;
         field_j = new ia();
     }

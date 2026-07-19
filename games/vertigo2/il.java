@@ -26,7 +26,7 @@ abstract class il {
           field_c = null;
           field_g = null;
           field_j = null;
-          field_b = null;
+          field_b = (int[][]) null;
           field_f = null;
           field_k = null;
           return;
@@ -35,7 +35,7 @@ abstract class il {
           field_c = null;
           field_g = null;
           field_j = null;
-          field_b = null;
+          field_b = (int[][]) null;
           field_f = null;
           field_k = null;
           return;
@@ -45,10 +45,6 @@ abstract class il {
     abstract void a(java.awt.Component param0, boolean param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "il.D(";
         field_i = "Full";
         field_a = true;

@@ -13,11 +13,15 @@ final class pta implements fo {
     public static void b(boolean param0) {
         field_d = null;
         field_g = null;
+        if (param0) {
+            return;
+        }
+        field_d = (String) null;
     }
 
     public final int e(byte param0) {
         if (param0 > -86) {
-            ((pta) this).field_e = null;
+            this.field_e = (la) null;
             return 0;
         }
         return 0;
@@ -27,38 +31,56 @@ final class pta implements fo {
         if (param0 == -4366) {
             return;
         }
-        field_g = null;
+        field_g = (String) null;
     }
 
     public final int c(byte param0) {
+        boolean discarded$0 = false;
         if (param0 < 91) {
-            Object var3 = null;
-            boolean discarded$0 = pta.a((CharSequence) null, -61);
+            CharSequence var3 = (CharSequence) null;
+            discarded$0 = pta.a((CharSequence) null, -61);
             return 0;
         }
         return 0;
     }
 
     final int a(int param0, int param1) {
-        int var5 = TombRacer.field_G ? 1 : 0;
-        int var3 = -68 % ((-41 - param1) / 42);
-        c var4 = (c) (Object) ((pta) this).field_b.f(-80);
-        while (var4 != null) {
-            param0 = var4.a(param0, (byte) -39);
-            var4 = (c) (Object) ((pta) this).field_b.e(121);
+        int var3 = 0;
+        c var4 = null;
+        int var5 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackOut_3_0 = 0;
+        var5 = TombRacer.field_G ? 1 : 0;
+        var3 = -68 % ((-41 - param1) / 42);
+        var4 = (c) ((Object) this.field_b.f(-80));
+        L0: while (true) {
+          if (var4 != null) {
+            stackOut_3_0 = var4.a(param0, (byte) -39);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_4_0 = stackOut_3_0;
+            if (var5 == 0) {
+              param0 = stackIn_5_0;
+              var4 = (c) ((Object) this.field_b.e(121));
+              continue L0;
+            } else {
+              return stackIn_4_0;
+            }
+          } else {
+            return param0;
+          }
         }
-        return param0;
     }
 
     final void a(uw param0, byte param1, boolean param2, int param3) {
         try {
-            ((pta) this).field_a = param2 ? true : false;
+            this.field_a = param2 ? true : false;
             if (!param2) {
-                param0.a((byte) 83, param3, (fo) this);
+                param0.a((byte) 83, param3, (fo) (this));
             }
             int var5_int = -45 / ((59 - param1) / 63);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "pta.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "pta.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -67,24 +89,32 @@ final class pta implements fo {
         int var3 = 0;
         var3 = TombRacer.field_G ? 1 : 0;
         if (!param0) {
-          var2 = (c) (Object) ((pta) this).field_b.f(-80);
+          var2 = (c) ((Object) this.field_b.f(-80));
           L0: while (true) {
             if (var2 != null) {
-              System.out.println((Object) (Object) var2);
-              var2 = (c) (Object) ((pta) this).field_b.e(116);
-              continue L0;
+              System.out.println(var2);
+              var2 = (c) ((Object) this.field_b.e(116));
+              if (var3 == 0) {
+                continue L0;
+              } else {
+                return;
+              }
             } else {
               return;
             }
           }
         } else {
-          field_d = null;
-          var2 = (c) (Object) ((pta) this).field_b.f(-80);
+          field_d = (String) null;
+          var2 = (c) ((Object) this.field_b.f(-80));
           L1: while (true) {
             if (var2 != null) {
-              System.out.println((Object) (Object) var2);
-              var2 = (c) (Object) ((pta) this).field_b.e(116);
-              continue L1;
+              System.out.println(var2);
+              var2 = (c) ((Object) this.field_b.e(116));
+              if (var3 == 0) {
+                continue L1;
+              } else {
+                return;
+              }
             } else {
               return;
             }
@@ -95,29 +125,52 @@ final class pta implements fo {
     final void a(boolean param0, byte param1) {
         c var3 = null;
         int var4 = 0;
+        boolean stackIn_3_0 = false;
+        int stackIn_8_0 = 0;
+        boolean stackOut_2_0 = false;
+        byte stackOut_7_0 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
-        var3 = (c) (Object) ((pta) this).field_b.f(-80);
+        var3 = (c) ((Object) this.field_b.f(-80));
         L0: while (true) {
-          if (var3 == null) {
-            if (param1 < -19) {
-              return;
-            } else {
-              field_d = null;
-              return;
-            }
-          } else {
-            L1: {
-              var3.a(-1, param0);
-              if (var3.h(18407)) {
-                var3.p(76);
-                ((pta) this).field_c.b((byte) -88, (vg) (Object) var3);
-                break L1;
+          L1: {
+            L2: {
+              if (var3 == null) {
+                break L2;
               } else {
-                break L1;
+                var3.a(-1, param0);
+                stackOut_2_0 = var3.h(18407);
+                stackIn_8_0 = stackOut_2_0 ? 1 : 0;
+                stackIn_3_0 = stackOut_2_0;
+                if (var4 != 0) {
+                  break L1;
+                } else {
+                  L3: {
+                    if (stackIn_3_0) {
+                      var3.p(76);
+                      this.field_c.b((byte) -88, var3);
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
+                  var3 = (c) ((Object) this.field_b.e(127));
+                  if (var4 == 0) {
+                    continue L0;
+                  } else {
+                    break L2;
+                  }
+                }
               }
             }
-            var3 = (c) (Object) ((pta) this).field_b.e(127);
-            continue L0;
+            stackOut_7_0 = param1;
+            stackIn_8_0 = stackOut_7_0;
+            break L1;
+          }
+          if (stackIn_8_0 < -19) {
+            return;
+          } else {
+            field_d = (String) null;
+            return;
           }
         }
     }
@@ -125,30 +178,34 @@ final class pta implements fo {
     final void a(byte param0) {
         c var2 = null;
         int var3 = 0;
-        Object var4 = null;
+        uw var4 = null;
         var3 = TombRacer.field_G ? 1 : 0;
-        var2 = (c) (Object) ((pta) this).field_b.f(-80);
+        var2 = (c) ((Object) this.field_b.f(-80));
         L0: while (true) {
           if (var2 == null) {
             if (param0 <= 111) {
-              var4 = null;
-              ((pta) this).a((uw) null, (byte) -42, false, 21);
+              var4 = (uw) null;
+              this.a((uw) null, (byte) -42, false, 21);
               return;
             } else {
               return;
             }
           } else {
             var2.p(88);
-            ((pta) this).field_c.b((byte) -60, (vg) (Object) var2);
-            var2 = (c) (Object) ((pta) this).field_b.e(112);
-            continue L0;
+            this.field_c.b((byte) -60, var2);
+            var2 = (c) ((Object) this.field_b.e(112));
+            if (var3 == 0) {
+              continue L0;
+            } else {
+              return;
+            }
           }
         }
     }
 
     public final boolean d(byte param0) {
         if (param0 != 48) {
-            ((pta) this).field_e = null;
+            this.field_e = (la) null;
             return false;
         }
         return false;
@@ -181,67 +238,74 @@ final class pta implements fo {
               if (param0 == -2698) {
                 break L1;
               } else {
-                ((pta) this).a((byte) 28);
+                this.a((byte) 28);
                 break L1;
               }
             }
             L2: {
-              if (!((pta) this).field_c.d((byte) 14)) {
-                var6 = (c) (Object) ((pta) this).field_c.c(param0 ^ 2800);
-                var6.p(param0 + 2821);
-                break L2;
-              } else {
-                var6 = ((pta) this).field_f.d(true);
-                break L2;
-              }
-            }
-            L3: {
-              var6.a(param4, (byte) -78, param1, param2);
-              if (!((pta) this).field_a) {
-                break L3;
-              } else {
-                if (param3 == null) {
+              L3: {
+                if (!this.field_c.d((byte) 14)) {
                   break L3;
                 } else {
+                  var6 = this.field_f.d(true);
+                  if (!TombRacer.field_G) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              var6 = (c) ((Object) this.field_c.c(param0 ^ 2800));
+              var6.p(param0 + 2821);
+              break L2;
+            }
+            L4: {
+              var6.a(param4, (byte) -78, param1, param2);
+              if (!this.field_a) {
+                break L4;
+              } else {
+                if (param3 == null) {
+                  break L4;
+                } else {
                   var6.a(param3, param0 + 8163);
-                  break L3;
+                  break L4;
                 }
               }
             }
-            ((pta) this).field_b.b((byte) -109, (vg) (Object) var6);
-            stackOut_8_0 = (c) var6;
+            this.field_b.b((byte) -109, var6);
+            stackOut_8_0 = (c) (var6);
             stackIn_9_0 = stackOut_8_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var6_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var6_ref;
+            stackOut_10_0 = (RuntimeException) (var6_ref);
             stackOut_10_1 = new StringBuilder().append("pta.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L4;
+              break L5;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
               stackIn_13_2 = stackOut_11_2;
-              break L4;
+              break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param4 + ')');
         }
         return stackIn_9_0;
     }
@@ -250,69 +314,81 @@ final class pta implements fo {
         RuntimeException var3 = null;
         int var4 = 0;
         c var5 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            var5 = (c) (Object) ((pta) this).field_b.f(-80);
+            var5 = (c) ((Object) this.field_b.f(-80));
             if (param0 > 103) {
               L1: while (true) {
                 if (var5 == null) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   var5.a(104, param1);
-                  var5 = (c) (Object) ((pta) this).field_b.e(121);
-                  continue L1;
+                  var5 = (c) ((Object) this.field_b.e(121));
+                  if (var4 == 0) {
+                    continue L1;
+                  } else {
+                    return;
+                  }
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("pta.DB(").append(param0).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_9_0 = (RuntimeException) (var3);
+            stackOut_9_1 = new StringBuilder().append("pta.DB(").append(param0).append(',');
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -322,28 +398,37 @@ final class pta implements fo {
     }
 
     final void a(int param0) {
+        int discarded$8 = 0;
         int var3 = 0;
         c var4 = null;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 > 93) {
-          var4 = (c) (Object) ((pta) this).field_b.f(-80);
+          var4 = (c) ((Object) this.field_b.f(-80));
           L0: while (true) {
             if (var4 != null) {
-              var4.a(((pta) this).field_e, -63);
-              var4 = (c) (Object) ((pta) this).field_b.e(109);
-              continue L0;
+              var4.a(this.field_e, -63);
+              var4 = (c) ((Object) this.field_b.e(109));
+              if (var3 == 0) {
+                continue L0;
+              } else {
+                return;
+              }
             } else {
               return;
             }
           }
         } else {
-          int discarded$8 = ((pta) this).e((byte) 14);
-          var4 = (c) (Object) ((pta) this).field_b.f(-80);
+          discarded$8 = this.e((byte) 14);
+          var4 = (c) ((Object) this.field_b.f(-80));
           L1: while (true) {
             if (var4 != null) {
-              var4.a(((pta) this).field_e, -63);
-              var4 = (c) (Object) ((pta) this).field_b.e(109);
-              continue L1;
+              var4.a(this.field_e, -63);
+              var4 = (c) ((Object) this.field_b.e(109));
+              if (var3 == 0) {
+                continue L1;
+              } else {
+                return;
+              }
             } else {
               return;
             }
@@ -377,7 +462,7 @@ final class pta implements fo {
               if (param1 == 0) {
                 break L1;
               } else {
-                field_g = null;
+                field_g = (String) null;
                 break L1;
               }
             }
@@ -389,23 +474,23 @@ final class pta implements fo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("pta.C(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -413,7 +498,7 @@ final class pta implements fo {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -421,13 +506,7 @@ final class pta implements fo {
     pta(la param0, c param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        int var5 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
@@ -435,15 +514,14 @@ final class pta implements fo {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_10_0 = null;
@@ -452,20 +530,33 @@ final class pta implements fo {
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
-        ((pta) this).field_b = new vna();
-        ((pta) this).field_c = new vna();
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        var5 = TombRacer.field_G ? 1 : 0;
+        this.field_b = new vna();
+        this.field_c = new vna();
         try {
           L0: {
-            ((pta) this).field_e = param0;
-            ((pta) this).field_f = param1;
+            this.field_e = param0;
+            this.field_f = param1;
             var4_int = 0;
             L1: while (true) {
               if (param2 <= var4_int) {
                 break L0;
               } else {
-                ((pta) this).field_c.b((byte) -81, (vg) (Object) param1.d(true));
+                this.field_c.b((byte) -81, param1.d(true));
                 var4_int++;
-                continue L1;
+                if (var5 == 0) {
+                  continue L1;
+                } else {
+                  return;
+                }
               }
             }
           }
@@ -473,64 +564,60 @@ final class pta implements fo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("pta.<init>(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L2;
-            } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
-              break L2;
-            }
-          }
-          L3: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
+            stackOut_8_0 = (RuntimeException) (var4);
+            stackOut_8_1 = new StringBuilder().append("pta.<init>(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
-            if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
-              break L3;
+              break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
               stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Name";
         field_d = "Similar rating";
     }

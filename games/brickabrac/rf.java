@@ -11,29 +11,36 @@ final class rf {
     static n field_b;
 
     final static void a(int param0, long param1, boolean param2) {
-        pi var4 = k.field_h;
+        pi var4 = null;
+        int var5 = 0;
+        var4 = k.field_h;
         var4.e(-13413, param0);
         var4.field_l = var4.field_l + 1;
-        int var5 = var4.field_l;
+        var5 = var4.field_l;
         var4.a(96, 7);
         var4.a(-23054, param1);
         var4.d((byte) 113, -var5 + var4.field_l);
+        if (!param2) {
+          rf.a((byte) 102);
+          return;
+        } else {
+          return;
+        }
     }
 
     public static void a(byte param0) {
         field_c = null;
         field_g = null;
         field_d = null;
+        if (param0 != 98) {
+            return;
+        }
         field_a = null;
         field_e = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Your email address is used to identify this account";
         field_g = null;
         field_e = "to keep fullscreen or";

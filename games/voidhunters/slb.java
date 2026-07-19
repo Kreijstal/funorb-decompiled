@@ -6,6 +6,9 @@ final class slb {
     static String field_b;
 
     public static void a(byte param0) {
+        if (param0 != 13) {
+            return;
+        }
         field_b = null;
     }
 
@@ -14,10 +17,6 @@ final class slb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 4;
         field_b = "Hold shift to expand the special order menu";
     }

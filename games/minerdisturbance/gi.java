@@ -47,15 +47,15 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   var2_int = -1;
                   break L2;
                 }
-                if (cg.field_H < 0) {
+                if ((cg.field_H ^ -1) > -1) {
                   break L1;
                 } else {
-                  if (var2_int < 0) {
+                  if (-1 < (var2_int ^ -1)) {
                     break L1;
                   } else {
-                    ib.field_b[cg.field_H] = ~var2_int;
+                    ib.field_b[cg.field_H] = var2_int ^ -1;
                     cg.field_H = 127 & 1 + cg.field_H;
-                    if (~dm.field_b == ~cg.field_H) {
+                    if (dm.field_b == cg.field_H) {
                       cg.field_H = -1;
                       break L1;
                     } else {
@@ -74,23 +74,23 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_0 = (RuntimeException) (var2);
             stackOut_14_1 = new StringBuilder().append("gi.keyReleased(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -98,7 +98,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L4;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         var3 = MinerDisturbance.field_ab;
         try {
           L0: {
-            var4 = (hf) (Object) kk.field_a.b(96);
+            var4 = (hf) ((Object) kk.field_a.b(96));
             L1: while (true) {
               if (var4 == null) {
                 L2: {
@@ -134,7 +134,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 }
               } else {
                 ag.a(var4, param1, param0 + -195);
-                var4 = (hf) (Object) kk.field_a.b((byte) 56);
+                var4 = (hf) ((Object) kk.field_a.b((byte) 56));
                 continue L1;
               }
             }
@@ -142,12 +142,15 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var2_ref, "gi.B(" + param0 + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) var2_ref), "gi.B(" + param0 + ',' + param1 + ')');
         }
     }
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != 0) {
+            return;
+        }
         field_b = null;
     }
 
@@ -185,23 +188,23 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("gi.focusLost(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -209,7 +212,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -237,7 +240,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             param0.consume();
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "gi.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "gi.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -268,7 +271,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 L2: {
                   hb.field_b = 0;
                   var2_int = param0.getKeyCode();
-                  if (var2_int < 0) {
+                  if ((var2_int ^ -1) > -1) {
                     break L2;
                   } else {
                     if (d.field_d.length <= var2_int) {
@@ -291,7 +294,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 if (0 > cg.field_H) {
                   break L3;
                 } else {
-                  if (var2_int < 0) {
+                  if (-1 < (var2_int ^ -1)) {
                     break L3;
                   } else {
                     ib.field_b[cg.field_H] = var2_int;
@@ -312,7 +315,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     break L4;
                   } else {
                     jk.field_ib[qf.field_n] = var2_int;
-                    hj.field_n[qf.field_n] = ' ';
+                    hj.field_n[qf.field_n] = (char)0;
                     qf.field_n = var3;
                     break L4;
                   }
@@ -328,7 +331,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   if (var2_int == 85) {
                     break L5;
                   } else {
-                    if (var2_int == 10) {
+                    if ((var2_int ^ -1) == -11) {
                       break L5;
                     } else {
                       return;
@@ -346,23 +349,23 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_0 = (RuntimeException) (var2);
             stackOut_22_1 = new StringBuilder().append("gi.keyPressed(");
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -370,15 +373,11 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L6;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "2x multiplier: Doubles all points. Combines with 3x muliplier to make a 6x multiplier!";
     }
 }

@@ -13,10 +13,6 @@ final class ho {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ho.A(";
     }
 }

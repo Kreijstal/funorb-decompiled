@@ -6,22 +6,23 @@ final class ku extends qg {
     static String field_d;
 
     public static void a(byte param0) {
+        boolean discarded$0 = false;
         field_d = null;
         if (param0 <= 105) {
-            Object var2 = null;
-            boolean discarded$0 = ku.a((String) null, 66, (rq) null, true, -92, (String) null, (String) null);
+            String var2 = (String) null;
+            discarded$0 = ku.a((String) null, 66, (rq) null, true, -92, (String) null, (String) null);
         }
     }
 
     final void a(boolean param0, int param1) {
-        Object var4 = null;
+        pib var4 = null;
         if (param1 < 18) {
-          var4 = null;
-          ((ku) this).a(-92, (byte) 78, (pib) null);
-          ((ku) this).field_b.c(32925, true);
+          var4 = (pib) null;
+          this.a(-92, (byte) 78, (pib) null);
+          this.field_b.c(32925, true);
           return;
         } else {
-          ((ku) this).field_b.c(32925, true);
+          this.field_b.c(32925, true);
           return;
         }
     }
@@ -32,20 +33,21 @@ final class ku extends qg {
 
     final void a(int param0, byte param1, pib param2) {
         try {
-            ((ku) this).field_b.a(80, param2);
+            this.field_b.a(80, param2);
             if (param1 != 125) {
                 field_c = -10;
             }
-            ((ku) this).field_b.c(0, param0);
+            this.field_b.c(0, param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ku.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ku.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(String param0, int param1, rq param2, boolean param3, int param4, String param5, String param6) {
+        boolean discarded$2 = false;
         sn var7 = null;
         RuntimeException var7_ref = null;
-        Object var8 = null;
+        String var8 = null;
         sn var9 = null;
         int stackIn_2_0 = 0;
         int stackIn_7_0 = 0;
@@ -78,6 +80,7 @@ final class ku extends qg {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -121,7 +124,7 @@ final class ku extends qg {
               L1: {
                 var9 = new sn(klb.field_r, param2);
                 var7 = var9;
-                klb.field_r.a(false, (shb) (Object) var9);
+                klb.field_r.a(false, var9);
                 if (ws.f(0)) {
                   var9.e(false);
                   break L1;
@@ -150,39 +153,41 @@ final class ku extends qg {
               if (param4 == 1) {
                 stackOut_11_0 = 1;
                 stackIn_12_0 = stackOut_11_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                var8 = null;
-                boolean discarded$2 = ku.a((String) null, 104, (rq) null, true, 77, (String) null, (String) null);
+                var8 = (String) null;
+                discarded$2 = ku.a((String) null, 104, (rq) null, true, 77, (String) null, (String) null);
                 return true;
               }
             } else {
               stackOut_1_0 = 0;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var7_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var7_ref;
+            stackOut_13_0 = (RuntimeException) (var7_ref);
             stackOut_13_1 = new StringBuilder().append("ku.D(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -191,23 +196,23 @@ final class ku extends qg {
             }
           }
           L4: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -216,23 +221,23 @@ final class ku extends qg {
             }
           }
           L5: {
-            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+            stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
             stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param5 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L5;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -241,23 +246,23 @@ final class ku extends qg {
             }
           }
           L6: {
-            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+            stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
             stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param6 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -265,22 +270,27 @@ final class ku extends qg {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
-        return stackIn_12_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_12_0 != 0;
+        }
     }
 
     final void a(int param0) {
-        ((ku) this).field_b.c(32925, false);
+        boolean discarded$0 = false;
+        this.field_b.c(32925, false);
         if (param0 != 5890) {
-            Object var3 = null;
-            boolean discarded$0 = ku.a((String) null, -94, (rq) null, true, -26, (String) null, (String) null);
+            String var3 = (String) null;
+            discarded$0 = ku.a((String) null, -94, (rq) null, true, -26, (String) null, (String) null);
         }
     }
 
     final void a(int param0, int param1, int param2) {
         if (param1 != -25139) {
-            ((ku) this).a(true, true);
+            this.a(true, true);
         }
     }
 
@@ -299,10 +309,6 @@ final class ku extends qg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 1;
     }
 }

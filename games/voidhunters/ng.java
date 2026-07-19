@@ -40,23 +40,23 @@ final class ng implements dja {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_0 = (RuntimeException) (var4);
             stackOut_5_1 = new StringBuilder().append("ng.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param3 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -64,14 +64,14 @@ final class ng implements dja {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }
 
     public final tv a(byte param0) {
         int var2 = 29 / ((-64 - param0) / 50);
-        return (tv) (Object) new tw();
+        return (tv) ((Object) new tw());
     }
 
     final static int a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -109,7 +109,7 @@ final class ng implements dja {
                   }
                 }
                 if (param2 < 45) {
-                  field_a = null;
+                  field_a = (String) null;
                   return joa.a(param8, param5, param1, param4, param0, param9, param3, 0);
                 } else {
                   return joa.a(param8, param5, param1, param4, param0, param9, param3, 0);
@@ -129,26 +129,23 @@ final class ng implements dja {
     }
 
     public static void a(boolean param0) {
+        caa[] discarded$0 = null;
         field_a = null;
         if (param0) {
-            Object var2 = null;
-            caa[] discarded$0 = ng.a(-49, (byte) -68, 33, (asb) null);
+            asb var2 = (asb) null;
+            discarded$0 = ng.a(-49, (byte) -68, 33, (asb) null);
         }
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
             ng.a(true);
-            return (tv[]) (Object) new tw[param1];
+            return (tv[]) ((Object) new tw[param1]);
         }
-        return (tv[]) (Object) new tw[param1];
+        return (tv[]) ((Object) new tw[param1]);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Activate scrambler pulse";
     }
 }

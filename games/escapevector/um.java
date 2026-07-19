@@ -15,7 +15,7 @@ final class um {
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
         if (param0 == 17830) {
-          if (ff.field_e >= 10) {
+          if ((ff.field_e ^ -1) <= -11) {
             if (nf.field_u) {
               return false;
             } else {
@@ -36,8 +36,8 @@ final class um {
             return false;
           }
         } else {
-          field_c = null;
-          if (ff.field_e >= 10) {
+          field_c = (String) null;
+          if ((ff.field_e ^ -1) <= -11) {
             if (nf.field_u) {
               return false;
             } else {
@@ -61,6 +61,9 @@ final class um {
     }
 
     public static void a(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_c = null;
         field_d = null;
         field_a = null;
@@ -68,10 +71,6 @@ final class um {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new byte[65536];
         qg.a(field_b, 0, 65536, (byte) -128);
         field_a = "Loading...";

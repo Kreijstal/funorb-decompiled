@@ -9,6 +9,7 @@ final class en {
     static String field_e;
 
     final static boolean a(int param0, int param1, int param2) {
+        boolean discarded$1 = false;
         int var3 = 0;
         int var4 = 0;
         int stackIn_5_0 = 0;
@@ -46,7 +47,7 @@ final class en {
           var3 = param1;
           if (-1 != var3) {
             if (1 != var3) {
-              if (var3 != 2) {
+              if ((var3 ^ -1) != -3) {
                 if (var3 != 0) {
                   if (var3 == 3) {
                     L0: {
@@ -121,11 +122,11 @@ final class en {
             return stackIn_32_0 != 0;
           }
         } else {
-          boolean discarded$1 = en.a(93, 66, 62);
+          discarded$1 = en.a(93, 66, 62);
           var3 = param1;
           if (-1 != var3) {
             if (1 != var3) {
-              if (var3 != 2) {
+              if ((var3 ^ -1) != -3) {
                 if (var3 != 0) {
                   if (var3 == 3) {
                     L5: {
@@ -208,11 +209,9 @@ final class en {
         }
         if (ne.field_w != sq.field_b) {
             qh.f(0, 0, qh.field_l, qh.field_f, 0);
-        } else {
-            qh.d();
-            qh.d();
-            qh.d();
+            return;
         }
+        qh.d();
     }
 
     private en() throws Throwable {
@@ -227,7 +226,7 @@ final class en {
         } else {
           var4.a(66, 0, 0, 65536, 64);
           var4.b(true);
-          ((en) this).field_b.a(3, var4);
+          this.field_b.a(3, var4);
           return;
         }
     }
@@ -235,7 +234,7 @@ final class en {
     public static void a(int param0) {
         field_d = null;
         if (param0 != 8352) {
-          field_a = null;
+          field_a = (String) null;
           field_c = null;
           field_a = null;
           field_e = null;
@@ -249,10 +248,6 @@ final class en {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "<%0>";
         field_a = "<%0> has not yet unlocked this option for use.";
         field_d = "When in shot mode, the power bar will appear on the right. <u=ffffff>Rotating the cue</u> is the same as rotating around the table: <col=99ff99>Hold</col> the <img=2> <col=99ff99>right mouse button</col> (or <img=9>+<img=0> left mouse button) and <col=99ff99>drag the mouse</col>. Alternatively, you can use <img=6> and <img=5>, or <img=13> and <img=15>.";

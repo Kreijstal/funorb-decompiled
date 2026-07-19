@@ -13,27 +13,28 @@ final class gnb {
     private ksa[] field_c;
 
     final ksa b(int param0) {
+        int fieldTemp$0 = 0;
         ksa var2 = null;
         int var3 = VoidHunters.field_G;
         if (param0 > -42) {
-            ((gnb) this).field_b = null;
+            this.field_b = (ksa) null;
         }
-        if (((gnb) this).field_g > 0) {
-            if (((gnb) this).field_e != ((gnb) this).field_c[((gnb) this).field_g + -1]) {
-                var2 = ((gnb) this).field_e;
-                ((gnb) this).field_e = var2.field_c;
+        if (this.field_g > 0) {
+            if (this.field_e != this.field_c[this.field_g + -1]) {
+                var2 = this.field_e;
+                this.field_e = var2.field_c;
                 return var2;
             }
         }
         do {
-            if (((gnb) this).field_g >= ((gnb) this).field_d) {
+            if (this.field_g >= this.field_d) {
                 return null;
             }
-            int fieldTemp$0 = ((gnb) this).field_g;
-            ((gnb) this).field_g = ((gnb) this).field_g + 1;
-            var2 = ((gnb) this).field_c[fieldTemp$0].field_c;
-        } while (((gnb) this).field_c[-1 + ((gnb) this).field_g] == var2);
-        ((gnb) this).field_e = var2.field_c;
+            fieldTemp$0 = this.field_g;
+            this.field_g = this.field_g + 1;
+            var2 = this.field_c[fieldTemp$0].field_c;
+        } while (this.field_c[-1 + this.field_g] == var2);
+        this.field_e = var2.field_c;
         return var2;
     }
 
@@ -46,14 +47,14 @@ final class gnb {
             return;
         }
         try {
-            var5 = ((gnb) this).field_c[(int)(param0 & (long)(-1 + ((gnb) this).field_d))];
+            var5 = this.field_c[(int)(param0 & (long)(-1 + this.field_d))];
             param1.field_c = var5;
             param1.field_a = var5.field_a;
             param1.field_a.field_c = param1;
             param1.field_c.field_a = param1;
             param1.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "gnb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "gnb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -71,6 +72,7 @@ final class gnb {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_11_0 = 0;
         int stackOut_6_0 = 0;
@@ -84,65 +86,74 @@ final class gnb {
         String stackOut_15_2 = null;
         var4 = VoidHunters.field_G;
         try {
-          var2_int = hob.a(param0, oea.field_o, 120);
-          var3 = 0;
-          L0: while (true) {
-            if (56 <= var3) {
-              if (param1 > 52) {
-                throw new IllegalStateException("No asteroid type found. number_of_asteroids=" + oea.field_o);
-              } else {
-                stackOut_11_0 = 14;
-                stackIn_12_0 = stackOut_11_0;
-                return stackIn_12_0;
-              }
-            } else {
-              L1: {
-                if (tr.a(108, var3)) {
-                  if (0 != var2_int) {
-                    var2_int--;
-                    break L1;
-                  } else {
-                    stackOut_6_0 = var3;
-                    stackIn_7_0 = stackOut_6_0;
-                    return stackIn_7_0;
-                  }
+          L0: {
+            var2_int = hob.a(param0, oea.field_o, 120);
+            var3 = 0;
+            L1: while (true) {
+              if (56 <= var3) {
+                if (param1 > 52) {
+                  throw new IllegalStateException("No asteroid type found. number_of_asteroids=" + oea.field_o);
                 } else {
-                  break L1;
+                  stackOut_11_0 = 14;
+                  stackIn_12_0 = stackOut_11_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
+              } else {
+                L2: {
+                  if (tr.a(108, var3)) {
+                    if (0 != var2_int) {
+                      var2_int--;
+                      break L2;
+                    } else {
+                      stackOut_6_0 = var3;
+                      stackIn_7_0 = stackOut_6_0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
+                    }
+                  } else {
+                    break L2;
+                  }
+                }
+                var3++;
+                continue L1;
               }
-              var3++;
-              continue L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_0 = (RuntimeException) (var2);
             stackOut_14_1 = new StringBuilder().append("gnb.D(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
-              break L2;
+              break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
               stackIn_17_2 = stackOut_15_2;
-              break L2;
+              break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_7_0;
+        } else {
+          return stackIn_12_0;
         }
     }
 
@@ -171,6 +182,7 @@ final class gnb {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_23_0 = null;
         ibb stackOut_25_0 = null;
@@ -204,7 +216,7 @@ final class gnb {
                     L3: {
                       jaggl.OpenGL.glLinkProgramARB(var3_long);
                       jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, hg.field_a, 0);
-                      if (0 == hg.field_a[0]) {
+                      if (0 == hg.field_a[param0]) {
                         L4: {
                           if (0 != hg.field_a[0]) {
                             break L4;
@@ -232,7 +244,8 @@ final class gnb {
                               jaggl.OpenGL.glDeleteObjectARB(var3_long);
                               stackOut_23_0 = null;
                               stackIn_24_0 = stackOut_23_0;
-                              return (ibb) (Object) stackIn_24_0;
+                              decompiledRegionSelector0 = 1;
+                              break L0;
                             } else {
                               jaggl.OpenGL.glDetachObjectARB(var3_long, param1[var7].field_d);
                               var7++;
@@ -248,6 +261,7 @@ final class gnb {
                     }
                     stackOut_25_0 = new ibb(param2, var3_long, param1);
                     stackIn_26_0 = stackOut_25_0;
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
                     jaggl.OpenGL.glAttachObjectARB(var3_long, param1[var5].field_d);
@@ -263,7 +277,8 @@ final class gnb {
                   } else {
                     stackOut_6_0 = null;
                     stackIn_7_0 = stackOut_6_0;
-                    return (ibb) (Object) stackIn_7_0;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   }
                 } else {
                   return null;
@@ -275,23 +290,23 @@ final class gnb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var3;
-            stackOut_27_1 = new StringBuilder().append("gnb.B(").append(0).append(',');
+            stackOut_27_0 = (RuntimeException) (var3);
+            stackOut_27_1 = new StringBuilder().append("gnb.B(").append(param0).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
             stackIn_28_1 = stackOut_27_1;
             if (param1 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "null";
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
               break L7;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "{...}";
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
@@ -300,23 +315,23 @@ final class gnb {
             }
           }
           L8: {
-            stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+            stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
             stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param2 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "null";
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
               break L8;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_33_0 = stackOut_31_0;
               stackIn_33_1 = stackOut_31_1;
@@ -324,28 +339,36 @@ final class gnb {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ')');
         }
-        return stackIn_26_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (ibb) ((Object) stackIn_7_0);
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return (ibb) ((Object) stackIn_24_0);
+          } else {
+            return stackIn_26_0;
+          }
+        }
     }
 
     final ksa a(long param0, int param1) {
         ksa var5 = null;
         int var6 = VoidHunters.field_G;
         if (param1 <= 96) {
-            field_f = null;
+            field_f = (String) null;
         }
-        ksa var4 = ((gnb) this).field_c[(int)(param0 & (long)(((gnb) this).field_d - 1))];
-        ((gnb) this).field_b = var4.field_c;
-        while (var4 != ((gnb) this).field_b) {
-            if (((gnb) this).field_b.field_b == param0) {
-                var5 = ((gnb) this).field_b;
-                ((gnb) this).field_b = ((gnb) this).field_b.field_c;
+        ksa var4 = this.field_c[(int)(param0 & (long)(this.field_d - 1))];
+        this.field_b = var4.field_c;
+        while (var4 != this.field_b) {
+            if (this.field_b.field_b == param0) {
+                var5 = this.field_b;
+                this.field_b = this.field_b.field_c;
                 return var5;
             }
-            ((gnb) this).field_b = ((gnb) this).field_b.field_c;
+            this.field_b = this.field_b.field_c;
         }
-        ((gnb) this).field_b = null;
+        this.field_b = null;
         return null;
     }
 
@@ -355,10 +378,10 @@ final class gnb {
         ksa var4 = null;
         int var5 = VoidHunters.field_G;
         if (param0 != -103) {
-            ((gnb) this).a((byte) -13);
+            this.a((byte) -13);
         }
-        for (var2 = 0; var2 < ((gnb) this).field_d; var2++) {
-            var3 = ((gnb) this).field_c[var2];
+        for (var2 = 0; var2 < this.field_d; var2++) {
+            var3 = this.field_c[var2];
             while (true) {
                 var4 = var3.field_c;
                 if (var3 == var4) {
@@ -367,12 +390,15 @@ final class gnb {
                 var4.b(-3846);
             }
         }
-        ((gnb) this).field_b = null;
-        ((gnb) this).field_e = null;
+        this.field_b = null;
+        this.field_e = null;
     }
 
     public static void b(byte param0) {
         field_f = null;
+        if (param0 < 17) {
+            field_a = -8;
+        }
     }
 
     final static void a(int param0) {
@@ -380,36 +406,33 @@ final class gnb {
             throw new IllegalStateException();
         }
         djb.field_r = true;
-        aka.a(true, -125);
-        qmb.field_q = 0;
+        aka.a(true, param0 ^ -125);
+        qmb.field_q = param0;
     }
 
     gnb(int param0) {
         int var2 = 0;
+        ksa dupTemp$0 = null;
         ksa var3 = null;
-        ((gnb) this).field_g = 0;
-        ((gnb) this).field_d = param0;
-        ((gnb) this).field_c = new ksa[param0];
+        this.field_g = 0;
+        this.field_d = param0;
+        this.field_c = new ksa[param0];
         for (var2 = 0; var2 < param0; var2++) {
-            ksa dupTemp$0 = new ksa();
+            dupTemp$0 = new ksa();
             var3 = dupTemp$0;
-            ((gnb) this).field_c[var2] = dupTemp$0;
+            this.field_c[var2] = dupTemp$0;
             var3.field_c = var3;
             var3.field_a = var3;
         }
     }
 
     final ksa c(byte param0) {
-        ((gnb) this).field_g = 0;
+        this.field_g = 0;
         int var2 = -14 % ((85 - param0) / 35);
-        return ((gnb) this).b(-58);
+        return this.b(-58);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 92;
         field_f = "This password contains your email address, and would be easy to guess";
     }

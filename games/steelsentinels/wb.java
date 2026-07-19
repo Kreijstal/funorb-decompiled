@@ -14,11 +14,12 @@ final class wb {
     static String field_d;
 
     final static int a(int param0, int param1) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         var3 = SteelSentinels.field_G;
         if (param0 == 500) {
-          if (param1 < 0) {
+          if (-1 < (param1 ^ -1)) {
             return 0;
           } else {
             if (dn.field_Sb.length > param1) {
@@ -27,9 +28,9 @@ final class wb {
               var2 = param1;
               if (42 != var2) {
                 if (var2 != 39) {
-                  if (var2 != 40) {
-                    if (var2 != 35) {
-                      if (var2 != 37) {
+                  if (-41 != (var2 ^ -1)) {
+                    if ((var2 ^ -1) != -36) {
+                      if ((var2 ^ -1) != -38) {
                         if (var2 != 41) {
                           return 0;
                         } else {
@@ -53,8 +54,8 @@ final class wb {
             }
           }
         } else {
-          int discarded$1 = wb.a(-117, 80);
-          if (param1 < 0) {
+          discarded$1 = wb.a(-117, 80);
+          if (-1 < (param1 ^ -1)) {
             return 0;
           } else {
             if (dn.field_Sb.length > param1) {
@@ -63,9 +64,9 @@ final class wb {
               var2 = param1;
               if (42 != var2) {
                 if (var2 != 39) {
-                  if (var2 != 40) {
-                    if (var2 != 35) {
-                      if (var2 != 37) {
+                  if (-41 != (var2 ^ -1)) {
+                    if ((var2 ^ -1) != -36) {
+                      if ((var2 ^ -1) != -38) {
                         if (var2 == 41) {
                           return 2000;
                         } else {
@@ -95,19 +96,27 @@ final class wb {
         field_e = null;
         field_b = null;
         field_h = null;
-        field_c = null;
-        field_d = null;
-        field_f = null;
-        field_j = null;
-        field_a = null;
-        field_i = null;
+        if (param0 <= 77) {
+          field_h = (int[]) null;
+          field_c = null;
+          field_d = null;
+          field_f = null;
+          field_j = null;
+          field_a = null;
+          field_i = null;
+          return;
+        } else {
+          field_c = null;
+          field_d = null;
+          field_f = null;
+          field_j = null;
+          field_a = null;
+          field_i = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "You need to play 1 more rated game to unlock this option.";
         field_g = 1;
         field_b = "Type your age in years";

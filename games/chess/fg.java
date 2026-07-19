@@ -2,8 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.io.*;
-import java.net.URL;
-import java.lang.String;
 
 final class fg {
     static String field_a;
@@ -25,6 +23,7 @@ final class fg {
 
     final static void a(Throwable param0, byte param1, String param2) {
         try {
+            int discarded$1 = 0;
             Exception var3 = null;
             String var3_ref = null;
             nl var4 = null;
@@ -53,6 +52,7 @@ final class fg {
             java.net.URL stackIn_15_4 = null;
             StringBuilder stackIn_15_5 = null;
             String stackIn_15_6 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             jk stackOut_12_0 = null;
             int stackOut_12_1 = 0;
@@ -104,11 +104,12 @@ final class fg {
                 }
                 ol.a(var3_ref, 26613);
                 var7 = kb.a(var3_ref, 0, "%3a", ":");
-                var8 = kb.a(var7, 0, "%40", "@");
+                var8 = kb.a(var7, param1 + 77, "%40", "@");
                 var9 = kb.a(var8, 0, "%26", "&");
-                var10 = kb.a(var9, 0, "%23", "#");
+                var10 = kb.a(var9, param1 ^ -77, "%23", "#");
                 if (null == ba.field_L) {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   L4: {
                     stackOut_12_0 = um.field_g;
@@ -130,12 +131,12 @@ final class fg {
                     stackIn_13_4 = stackOut_12_4;
                     stackIn_13_5 = stackOut_12_5;
                     if (null == fj.field_h) {
-                      stackOut_14_0 = (jk) (Object) stackIn_14_0;
+                      stackOut_14_0 = (jk) ((Object) stackIn_14_0);
                       stackOut_14_1 = stackIn_14_1;
                       stackOut_14_2 = null;
                       stackOut_14_3 = null;
-                      stackOut_14_4 = (java.net.URL) (Object) stackIn_14_4;
-                      stackOut_14_5 = (StringBuilder) (Object) stackIn_14_5;
+                      stackOut_14_4 = (java.net.URL) ((Object) stackIn_14_4);
+                      stackOut_14_5 = (StringBuilder) ((Object) stackIn_14_5);
                       stackOut_14_6 = "" + gi.field_e;
                       stackIn_15_0 = stackOut_14_0;
                       stackIn_15_1 = stackOut_14_1;
@@ -146,12 +147,12 @@ final class fg {
                       stackIn_15_6 = stackOut_14_6;
                       break L4;
                     } else {
-                      stackOut_13_0 = (jk) (Object) stackIn_13_0;
+                      stackOut_13_0 = (jk) ((Object) stackIn_13_0);
                       stackOut_13_1 = stackIn_13_1;
                       stackOut_13_2 = null;
                       stackOut_13_3 = null;
-                      stackOut_13_4 = (java.net.URL) (Object) stackIn_13_4;
-                      stackOut_13_5 = (StringBuilder) (Object) stackIn_13_5;
+                      stackOut_13_4 = (java.net.URL) ((Object) stackIn_13_4);
+                      stackOut_13_5 = (StringBuilder) ((Object) stackIn_13_5);
                       stackOut_13_6 = fj.field_h;
                       stackIn_15_0 = stackOut_13_0;
                       stackIn_15_1 = stackOut_13_1;
@@ -163,33 +164,48 @@ final class fg {
                       break L4;
                     }
                   }
-                  var4 = ((jk) (Object) stackIn_15_0).a((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, stackIn_15_6 + "&v1=" + jk.field_o + "&v2=" + jk.field_i + "&e=" + var10));
-                  L5: while (true) {
+                  L5: {
+                    var4 = ((jk) (Object) stackIn_15_0).a((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, stackIn_15_6 + "&v1=" + jk.field_o + "&v2=" + jk.field_i + "&e=" + var10));
+                    if (param1 == -77) {
+                      break L5;
+                    } else {
+                      field_a = (String) null;
+                      break L5;
+                    }
+                  }
+                  L6: while (true) {
                     if (var4.field_f != 0) {
-                      L6: {
-                        if (var4.field_f != 1) {
-                          break L6;
+                      L7: {
+                        if ((var4.field_f ^ -1) != -2) {
+                          break L7;
                         } else {
-                          var5 = (DataInputStream) var4.field_b;
-                          int discarded$1 = var5.read();
+                          var5 = (DataInputStream) (var4.field_b);
+                          discarded$1 = var5.read();
                           var5.close();
-                          break L6;
+                          break L7;
                         }
                       }
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       bc.a(1L, (byte) -92);
-                      continue L5;
+                      continue L6;
                     }
                   }
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L7: {
+              L8: {
                 var3 = (Exception) (Object) decompiledCaughtException;
-                break L7;
+                decompiledRegionSelector0 = 1;
+                break L8;
               }
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -199,10 +215,6 @@ final class fg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Show all private chat";
         field_c = new jc();
     }

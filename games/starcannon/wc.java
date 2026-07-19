@@ -18,8 +18,9 @@ final class wc {
     }
 
     final static int d(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 20) {
-            boolean discarded$0 = wc.a(-3, 'E');
+            discarded$0 = wc.a(-3, 'E');
             return ef.field_b;
         }
         return ef.field_b;
@@ -52,6 +53,9 @@ final class wc {
 
     public static void c(int param0) {
         field_g = null;
+        if (param0 != -1) {
+            return;
+        }
         field_c = null;
         field_b = null;
         field_d = null;
@@ -61,14 +65,23 @@ final class wc {
 
     final static gj b(int param0) {
         try {
+            boolean discarded$2 = false;
             Throwable var1 = null;
-            gj stackIn_1_0 = null;
+            gj stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            gj stackOut_0_0 = null;
+            gj stackOut_2_0 = null;
             try {
               L0: {
-                stackOut_0_0 = (gj) Class.forName("me").newInstance();
-                stackIn_1_0 = stackOut_0_0;
+                L1: {
+                  if (param0 == 5220) {
+                    break L1;
+                  } else {
+                    discarded$2 = wc.a(14, '￉');
+                    break L1;
+                  }
+                }
+                stackOut_2_0 = (gj) (Class.forName("me").newInstance());
+                stackIn_3_0 = stackOut_2_0;
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -76,7 +89,7 @@ final class wc {
               var1 = decompiledCaughtException;
               return null;
             }
-            return stackIn_1_0;
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -85,10 +98,6 @@ final class wc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
         field_i = -1;
         field_c = new boolean[112];

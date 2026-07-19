@@ -8,7 +8,7 @@ final class kj {
 
     final ud a() {
         byte[] var1 = this.b();
-        return new ud(22050, var1, 22050 * ((kj) this).field_c / 1000, 22050 * ((kj) this).field_b / 1000);
+        return new ud(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
     final static kj a(pf param0, String param1, String param2) {
@@ -41,10 +41,10 @@ final class kj {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((kj) this).field_a[var4] != null) {
-                    var5 = ((kj) this).field_a[var4].field_u * 22050 / 1000;
-                    var6 = ((kj) this).field_a[var4].field_y * 22050 / 1000;
-                    var13 = ((kj) this).field_a[var4].a(var5, ((kj) this).field_a[var4].field_u);
+                  if (this.field_a[var4] != null) {
+                    var5 = this.field_a[var4].field_u * 22050 / 1000;
+                    var6 = this.field_a[var4].field_y * 22050 / 1000;
+                    var13 = this.field_a[var4].a(var5, this.field_a[var4].field_u);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -75,9 +75,9 @@ final class kj {
               return new byte[]{};
             }
           } else {
-            if (((kj) this).field_a[var2] != null) {
-              if (((kj) this).field_a[var2].field_u + ((kj) this).field_a[var2].field_y > var1) {
-                var1 = ((kj) this).field_a[var2].field_u + ((kj) this).field_a[var2].field_y;
+            if (this.field_a[var2] != null) {
+              if (this.field_a[var2].field_u + this.field_a[var2].field_y > var1) {
+                var1 = this.field_a[var2].field_u + this.field_a[var2].field_y;
                 var2++;
                 continue L0;
               } else {
@@ -95,19 +95,19 @@ final class kj {
     private kj(ka param0) {
         int var2 = 0;
         int var3 = 0;
-        ((kj) this).field_a = new tj[10];
+        this.field_a = new tj[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((kj) this).field_c = param0.c((byte) 27);
-            ((kj) this).field_b = param0.c((byte) 116);
+            this.field_c = param0.c((byte) 27);
+            this.field_b = param0.c((byte) 116);
             return;
           } else {
             var3 = param0.f(4);
             if (var3 != 0) {
               param0.field_k = param0.field_k - 1;
-              ((kj) this).field_a[var2] = new tj();
-              ((kj) this).field_a[var2].a(param0);
+              this.field_a[var2] = new tj();
+              this.field_a[var2].a(param0);
               var2++;
               continue L0;
             } else {

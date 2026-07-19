@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class te {
     static int field_b;
     static String field_d;
@@ -48,6 +46,7 @@ final class te {
         RuntimeException stackIn_88_0 = null;
         StringBuilder stackIn_88_1 = null;
         String stackIn_88_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_10_0 = 0;
@@ -77,20 +76,21 @@ final class te {
         try {
           L0: {
             L1: {
-              if (fg.field_Ob != 1) {
+              if (-2 != (fg.field_Ob ^ -1)) {
                 if (he.a((byte) 124)) {
                   break L1;
                 } else {
                   stackOut_5_0 = param1;
                   stackIn_6_0 = stackOut_5_0;
-                  return stackIn_6_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               } else {
                 break L1;
               }
             }
             L2: {
-              if (fg.field_Ob == 1) {
+              if ((fg.field_Ob ^ -1) == -2) {
                 stackOut_10_0 = 78;
                 stackIn_11_0 = stackOut_10_0;
                 break L2;
@@ -102,7 +102,7 @@ final class te {
             }
             L3: {
               var4_int = stackIn_11_0;
-              if (~(1008 & fg.field_Ob) == param3) {
+              if ((1008 & fg.field_Ob ^ -1) == param3) {
                 break L3;
               } else {
                 var4_int = 36;
@@ -128,7 +128,7 @@ final class te {
                       L7: {
                         L8: {
                           L9: {
-                            if (stackIn_16_0 != ~(fg.field_Ob & var8)) {
+                            if (stackIn_16_0 != (fg.field_Ob & var8 ^ -1)) {
                               break L9;
                             } else {
                               if (var16 == 0) {
@@ -140,7 +140,7 @@ final class te {
                           }
                           L10: {
                             var10 = 1;
-                            if (var8 == 1) {
+                            if ((var8 ^ -1) == -2) {
                               break L10;
                             } else {
                               var10 = hl.field_v.f(var8, -1) ? 1 : 0;
@@ -149,19 +149,19 @@ final class te {
                           }
                           L11: {
                             var11 = 0;
-                            if (var8 != 1) {
+                            if ((var8 ^ -1) != -2) {
                               break L11;
                             } else {
                               var11 = 1;
                               break L11;
                             }
                           }
-                          var12 = (nk) (Object) ao.field_H.e(13058);
+                          var12 = (nk) ((Object) ao.field_H.e(13058));
                           L12: while (true) {
                             if (var12 == null) {
                               break L8;
                             } else {
-                              stackOut_28_0 = ~(var8 & var12.field_Q);
+                              stackOut_28_0 = var8 & var12.field_Q ^ -1;
                               stackOut_28_1 = -1;
                               stackIn_81_0 = stackOut_28_0;
                               stackIn_81_1 = stackOut_28_1;
@@ -196,7 +196,7 @@ final class te {
                                         }
                                       } else {
                                         L16: {
-                                          if (var6 != 0) {
+                                          if (-1 != (var6 ^ -1)) {
                                             break L16;
                                           } else {
                                             if (var16 == 0) {
@@ -207,7 +207,7 @@ final class te {
                                           }
                                         }
                                         L17: {
-                                          if (var12.field_Q != 1) {
+                                          if (-2 != (var12.field_Q ^ -1)) {
                                             break L17;
                                           } else {
                                             if (bj.a(rn.field_D, var12.field_N, nk.f((byte) -50), (byte) 86)) {
@@ -232,7 +232,7 @@ final class te {
                                       if (var6 != 2) {
                                         break L18;
                                       } else {
-                                        if (~sj.field_v[var12.field_N] < ~li.field_v) {
+                                        if ((sj.field_v[var12.field_N] ^ -1) < (li.field_v ^ -1)) {
                                           break L18;
                                         } else {
                                           var6 = 1;
@@ -264,8 +264,8 @@ final class te {
                                         var14_ref = stackIn_71_0;
                                         var15 = new gh(-1L, kh.field_s, var14_ref);
                                         var15.field_nb = 0;
-                                        var15.field_L = (mi) (Object) pl.field_U;
-                                        var15.a(~param3, param1, 18, 0, var5);
+                                        var15.field_L = (mi) ((Object) pl.field_U);
+                                        var15.a(param3 ^ -1, param1, 18, 0, var5);
                                         var15.field_Fb = 1;
                                         var15.field_sb = 1;
                                         var15.field_Kb = 1;
@@ -318,7 +318,7 @@ final class te {
                                     break L13;
                                   }
                                 }
-                                var12 = (nk) (Object) ao.field_H.a((byte) -48);
+                                var12 = (nk) ((Object) ao.field_H.a((byte) -48));
                                 if (var16 == 0) {
                                   continue L12;
                                 } else {
@@ -329,7 +329,7 @@ final class te {
                           }
                         }
                         stackOut_80_0 = var8;
-                        stackOut_80_1 = 1;
+                        stackOut_80_1 = 1390612993;
                         stackIn_81_0 = stackOut_80_0;
                         stackIn_81_1 = stackOut_80_1;
                         break L7;
@@ -348,6 +348,7 @@ final class te {
                 stackIn_83_0 = stackOut_82_0;
                 break L5;
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -355,23 +356,23 @@ final class te {
           decompiledCaughtException = decompiledCaughtParameter0;
           L23: {
             var4 = decompiledCaughtException;
-            stackOut_84_0 = (RuntimeException) var4;
+            stackOut_84_0 = (RuntimeException) (var4);
             stackOut_84_1 = new StringBuilder().append("te.C(");
             stackIn_87_0 = stackOut_84_0;
             stackIn_87_1 = stackOut_84_1;
             stackIn_85_0 = stackOut_84_0;
             stackIn_85_1 = stackOut_84_1;
             if (param0 == null) {
-              stackOut_87_0 = (RuntimeException) (Object) stackIn_87_0;
-              stackOut_87_1 = (StringBuilder) (Object) stackIn_87_1;
+              stackOut_87_0 = (RuntimeException) ((Object) stackIn_87_0);
+              stackOut_87_1 = (StringBuilder) ((Object) stackIn_87_1);
               stackOut_87_2 = "null";
               stackIn_88_0 = stackOut_87_0;
               stackIn_88_1 = stackOut_87_1;
               stackIn_88_2 = stackOut_87_2;
               break L23;
             } else {
-              stackOut_85_0 = (RuntimeException) (Object) stackIn_85_0;
-              stackOut_85_1 = (StringBuilder) (Object) stackIn_85_1;
+              stackOut_85_0 = (RuntimeException) ((Object) stackIn_85_0);
+              stackOut_85_1 = (StringBuilder) ((Object) stackIn_85_1);
               stackOut_85_2 = "{...}";
               stackIn_88_0 = stackOut_85_0;
               stackIn_88_1 = stackOut_85_1;
@@ -379,12 +380,18 @@ final class te {
               break L23;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_88_0, stackIn_88_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_88_0), stackIn_88_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_83_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0;
+        } else {
+          return stackIn_83_0;
+        }
     }
 
     final static void a(int param0) {
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         RuntimeException var1 = null;
         kj var1_ref = null;
         int var2 = 0;
@@ -405,6 +412,7 @@ final class te {
         ah stackIn_65_0 = null;
         int stackIn_65_1 = 0;
         ah stackIn_65_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_13_0 = 0;
         int stackOut_11_0 = 0;
@@ -469,7 +477,7 @@ final class te {
               L6: {
                 var6 = da.a(var4_ref_String, (byte) -41);
                 var7 = var1_ref.h(1);
-                var8 = ui.a(1, (CharSequence) (Object) var4_ref_String);
+                var8 = ui.a(1, (CharSequence) ((Object) var4_ref_String));
                 if (var8 == null) {
                   var8 = var4_ref_String;
                   break L6;
@@ -485,7 +493,7 @@ final class te {
                   if (null == var6) {
                     break L7;
                   } else {
-                    db.field_h.a((kd) (Object) var6, 1, (long)var8.hashCode());
+                    db.field_h.a(var6, 1, (long)var8.hashCode());
                     break L7;
                   }
                 }
@@ -493,11 +501,11 @@ final class te {
               L8: {
                 if (null == var6) {
                   var6 = new ah();
-                  db.field_h.a((kd) (Object) var6, param0 ^ 3, (long)var8.hashCode());
-                  int fieldTemp$2 = cc.field_gc;
+                  db.field_h.a(var6, param0 ^ 3, (long)var8.hashCode());
+                  fieldTemp$2 = cc.field_gc;
                   cc.field_gc = cc.field_gc + 1;
                   var6.field_bc = fieldTemp$2;
-                  am.field_c.a(3, (ck) (Object) var6);
+                  am.field_c.a(3, var6);
                   break L8;
                 } else {
                   break L8;
@@ -506,7 +514,8 @@ final class te {
               var6.field_Tb = var5;
               var6.field_dc = var4_ref_String;
               var6.field_Vb = var7;
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (1 == var2) {
                 L9: {
@@ -520,7 +529,7 @@ final class te {
                 }
                 L10: {
                   var3 = var1_ref.h(1);
-                  if (!var3.equals((Object) (Object) "")) {
+                  if (!var3.equals("")) {
                     break L10;
                   } else {
                     var3 = null;
@@ -534,7 +543,7 @@ final class te {
                   if (var6 == null) {
                     var6 = wi.a(var5, (byte) 114);
                     if (null != var6) {
-                      pi.field_a.a((kd) (Object) var6, 1, (long)ui.a(param0 ^ 3, (CharSequence) (Object) var4_ref_String).hashCode());
+                      pi.field_a.a(var6, 1, (long)ui.a(param0 ^ 3, (CharSequence) ((Object) var4_ref_String)).hashCode());
                       break L11;
                     } else {
                       break L11;
@@ -548,11 +557,11 @@ final class te {
                     break L12;
                   } else {
                     var6 = new ah();
-                    pi.field_a.a((kd) (Object) var6, 1, (long)ui.a(1, (CharSequence) (Object) var4_ref_String).hashCode());
-                    int fieldTemp$3 = vd.field_h;
+                    pi.field_a.a(var6, 1, (long)ui.a(1, (CharSequence) ((Object) var4_ref_String)).hashCode());
+                    fieldTemp$3 = vd.field_h;
                     vd.field_h = vd.field_h + 1;
                     var6.field_bc = fieldTemp$3;
-                    ea.field_c.a(param0 ^ 1, (ck) (Object) var6);
+                    ea.field_c.a(param0 ^ 1, var6);
                     break L12;
                   }
                 }
@@ -568,7 +577,7 @@ final class te {
                 var6.field_ac = var3;
                 var6.field_Vb = var5;
                 var6.b(param0 ^ 6);
-                var7_ref = (ah) (Object) ea.field_c.e(13058);
+                var7_ref = (ah) ((Object) ea.field_c.e(13058));
                 L14: while (true) {
                   L15: {
                     L16: {
@@ -576,9 +585,9 @@ final class te {
                         if (null == var7_ref) {
                           break L17;
                         } else {
-                          stackOut_54_0 = (ah) var7_ref;
+                          stackOut_54_0 = (ah) (var7_ref);
                           stackOut_54_1 = 22635;
-                          stackOut_54_2 = (ah) var6;
+                          stackOut_54_2 = (ah) (var6);
                           stackIn_65_0 = stackOut_54_0;
                           stackIn_65_1 = stackOut_54_1;
                           stackIn_65_2 = stackOut_54_2;
@@ -591,7 +600,7 @@ final class te {
                             if (!dm.a(stackIn_55_0, stackIn_55_1, stackIn_55_2)) {
                               break L17;
                             } else {
-                              var7_ref = (ah) (Object) ea.field_c.a((byte) -17);
+                              var7_ref = (ah) ((Object) ea.field_c.a((byte) -17));
                               if (var9 == 0) {
                                 continue L14;
                               } else {
@@ -605,7 +614,7 @@ final class te {
                         if (null != var7_ref) {
                           break L18;
                         } else {
-                          ea.field_c.a(3, (ck) (Object) var6);
+                          ea.field_c.a(3, var6);
                           if (var9 == 0) {
                             break L15;
                           } else {
@@ -613,41 +622,44 @@ final class te {
                           }
                         }
                       }
-                      stackOut_63_0 = (ah) var7_ref;
+                      stackOut_63_0 = (ah) (var7_ref);
                       stackOut_63_1 = 30;
-                      stackOut_63_2 = (ah) var6;
+                      stackOut_63_2 = (ah) (var6);
                       stackIn_65_0 = stackOut_63_0;
                       stackIn_65_1 = stackOut_63_1;
                       stackIn_65_2 = stackOut_63_2;
                       break L16;
                     }
-                    ie.a((ck) (Object) stackIn_65_0, stackIn_65_1, (ck) (Object) stackIn_65_2);
+                    ie.a(stackIn_65_0, stackIn_65_1, stackIn_65_2);
                     break L15;
                   }
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               } else {
-                if (var2 == 2) {
+                if (-3 == (var2 ^ -1)) {
                   L19: {
-                    if (qc.field_P != 1) {
+                    if ((qc.field_P ^ -1) != -2) {
                       break L19;
                     } else {
                       qc.field_P = 2;
                       break L19;
                     }
                   }
-                  return;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   if (3 == var2) {
                     L20: {
-                      if (qc.field_P == 2) {
+                      if ((qc.field_P ^ -1) == -3) {
                         qc.field_P = 1;
                         break L20;
                       } else {
                         break L20;
                       }
                     }
-                    return;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   } else {
                     if (4 == var2) {
                       qc.field_P = 1;
@@ -655,10 +667,12 @@ final class te {
                       nn.field_f = var3.intern();
                       var4 = var1_ref.f((byte) -90);
                       in.a((byte) 46, var4);
-                      return;
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     } else {
                       sj.a("F1: " + ci.a((byte) 94), param0 ^ -93, (Throwable) null);
                       pm.m(75);
+                      decompiledRegionSelector0 = 5;
                       break L0;
                     }
                   }
@@ -669,7 +683,28 @@ final class te {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1, "te.B(" + param0 + ')');
+          throw ci.a((Throwable) ((Object) var1), "te.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return;
+                } else {
+                  return;
+                }
+              }
+            }
+          }
         }
     }
 
@@ -677,25 +712,21 @@ final class te {
         field_f = null;
         field_d = null;
         field_e = null;
-        field_c = null;
+        field_c = (String[][]) null;
         if (param0 >= -22) {
             return;
         }
         try {
-            field_a = null;
+            field_a = (int[][]) null;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "te.A(" + param0 + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "te.A(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Your request to join has been declined.";
-        field_c = new String[][]{new String[2], new String[5], new String[6]};
-        field_a = new int[][]{null, null, new int[6]};
+        field_c = new String[][]{new String[]{"Tactical", "Action"}, new String[]{"Basic", "Standard", "Advanced", "High", "Expert"}, new String[]{"Zone", "Lost", "City", "Moon", "Fleet", "Co-op"}};
+        field_a = new int[][]{null, null, new int[]{0, 0, 0, 0, 10, 0}};
         field_e = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
     }
 }

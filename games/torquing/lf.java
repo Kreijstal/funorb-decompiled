@@ -18,10 +18,10 @@ abstract class lf extends q {
     abstract lf c();
 
     final void a(int[] param0, int param1, int param2) {
-        if (((lf) this).field_k) {
-            ((lf) this).b(param0, param1, param2);
+        if (this.field_k) {
+            this.b(param0, param1, param2);
         } else {
-            ((lf) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class lf extends q {
     abstract int a();
 
     protected lf() {
-        ((lf) this).field_k = true;
+        this.field_k = true;
     }
 }

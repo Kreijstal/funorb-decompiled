@@ -5,26 +5,54 @@ final class fc {
     static int field_a;
 
     final static void a(boolean param0) {
-        if (kb.field_d != -hb.field_h) {
-          if (kb.field_d != 250 - hb.field_h) {
+        int discarded$6 = 0;
+        int discarded$7 = 0;
+        int discarded$8 = 0;
+        if (kb.field_d != 0 + -hb.field_h) {
+          if (kb.field_d == 250 - hb.field_h) {
             kb.field_d = kb.field_d + 1;
-            return;
+            if (!param0) {
+              discarded$6 = fc.a(74, -19);
+              return;
+            } else {
+              return;
+            }
           } else {
             kb.field_d = kb.field_d + 1;
-            return;
+            if (!param0) {
+              discarded$7 = fc.a(74, -19);
+              return;
+            } else {
+              return;
+            }
           }
         } else {
           kb.field_d = kb.field_d + 1;
-          return;
+          if (!param0) {
+            discarded$8 = fc.a(74, -19);
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     final static void a(int param0) {
         ei.field_i = false;
-        eb.field_H = false;
-        lj.a(-1, 52);
-        dn.field_q = vn.field_g;
-        ui.field_b = vn.field_g;
+        if (param0 != 3161) {
+          field_a = -26;
+          eb.field_H = false;
+          lj.a(-1, param0 + -3109);
+          dn.field_q = vn.field_g;
+          ui.field_b = vn.field_g;
+          return;
+        } else {
+          eb.field_H = false;
+          lj.a(-1, param0 + -3109);
+          dn.field_q = vn.field_g;
+          ui.field_b = vn.field_g;
+          return;
+        }
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, int param7, int param8, int param9, int param10, boolean param11) {
@@ -38,62 +66,140 @@ final class fc {
           if (param6) {
             param1 = 2 + -(bk.a(6, false, -param1 + 2) * 6);
             param2 = 3 - -(6 * bk.a(6, false, -2 + (param2 - 1)));
-            param10 = -(6 * bk.a(6, false, 0 - param10));
+            param10 = -(6 * bk.a(6, false, 0 - param10)) + 0;
             param3 = 1 - -(bk.a(6, false, param3 - 1) * 6);
             break L0;
           } else {
             break L0;
           }
         }
-        if (param0 < 16) {
-          var12 = 66049 * (16 - param0);
-          var13 = 986895 & 330245 * (-param0 + 16) >> 4;
-          var14 = param1;
-          var15 = param10;
-          var16 = param2;
-          var17 = param3;
-          if (!param11) {
-            L1: {
-              em.c(var14 + 1, var15 - -1, var16 + (-var14 + -2), -2 + (-var15 + var17), var12, var13);
-              qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
-              if (param11) {
-                qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 - -3, param3 + -3, param0);
-                break L1;
+        if (param5 == 29788) {
+          if (param4) {
+            if (param0 < 16) {
+              var12 = 66049 * (16 - param0);
+              var13 = 986895 & 330245 * (-param0 + 16) >> -1363120412;
+              var14 = param1;
+              var15 = param10;
+              var16 = param2;
+              var17 = param3;
+              if (!param11) {
+                L1: {
+                  em.c(var14 + 1, var15 - -1, var16 + (-var14 + -2), -2 + (-var15 + var17), var12, var13);
+                  qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
+                  if (param11) {
+                    qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 - -3, param3 + -3, param0);
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                }
+                return;
               } else {
-                break L1;
+                em.a(param1 - -1, param10 + 1, -2 + param2 - param1, 3, 0);
+                em.a(1 + param1, 4 + param10, 3, param3 + (-param10 + -8), 0);
+                em.a(param2 + -4, param10 + 4, 3, param3 - param10 + -8, 0);
+                var14 += 3;
+                var15 += 3;
+                var17 -= 3;
+                var16 -= 3;
+                em.a(1 + param1, -4 + param3, param2 - param1 - 2, 3, 0);
+                L2: {
+                  em.c(var14 + 1, var15 - -1, var16 + (-var14 + -2), -2 + (-var15 + var17), var12, var13);
+                  qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
+                  if (param11) {
+                    qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 - -3, param3 + -3, param0);
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                return;
               }
+            } else {
+              L3: {
+                em.a(1 + param1, 1 + param10, -2 + (param2 - param1), param3 + -param10 - 2, 0);
+                qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
+                if (param11) {
+                  qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 - -3, param3 + -3, param0);
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
+              return;
             }
-            return;
           } else {
-            em.a(param1 - -1, param10 + 1, -2 + param2 - param1, 3, 0);
-            em.a(1 + param1, 4 + param10, 3, param3 + (-param10 + -8), 0);
-            em.a(param2 + -4, param10 + 4, 3, param3 - param10 + -8, 0);
-            var14 += 3;
-            var15 += 3;
-            var17 -= 3;
-            var16 -= 3;
-            em.a(1 + param1, -4 + param3, param2 - param1 - 2, 3, 0);
-            L2: {
-              em.c(var14 + 1, var15 - -1, var16 + (-var14 + -2), -2 + (-var15 + var17), var12, var13);
+            L4: {
+              em.a(1 + param1, 1 + param10, -2 + (param2 - param1), param3 + -param10 - 2, 0);
               qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
               if (param11) {
                 qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 - -3, param3 + -3, param0);
-                break L2;
+                break L4;
               } else {
-                break L2;
+                break L4;
               }
             }
             return;
           }
         } else {
-          L3: {
+          L5: {
+            field_a = -100;
+            if (!param4) {
+              break L5;
+            } else {
+              if (param0 < 16) {
+                var12 = 66049 * (16 - param0);
+                var13 = 986895 & 330245 * (-param0 + 16) >> -1363120412;
+                var14 = param1;
+                var15 = param10;
+                var16 = param2;
+                var17 = param3;
+                if (!param11) {
+                  L6: {
+                    em.c(var14 + 1, var15 - -1, var16 + (-var14 + -2), -2 + (-var15 + var17), var12, var13);
+                    qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
+                    if (param11) {
+                      qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 - -3, param3 + -3, param0);
+                      break L6;
+                    } else {
+                      break L6;
+                    }
+                  }
+                  return;
+                } else {
+                  em.a(param1 - -1, param10 + 1, -2 + param2 - param1, 3, 0);
+                  em.a(1 + param1, 4 + param10, 3, param3 + (-param10 + -8), 0);
+                  em.a(param2 + -4, param10 + 4, 3, param3 - param10 + -8, 0);
+                  var14 += 3;
+                  var15 += 3;
+                  var17 -= 3;
+                  var16 -= 3;
+                  em.a(1 + param1, -4 + param3, param2 - param1 - 2, 3, 0);
+                  L7: {
+                    em.c(var14 + 1, var15 - -1, var16 + (-var14 + -2), -2 + (-var15 + var17), var12, var13);
+                    qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
+                    if (param11) {
+                      qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 - -3, param3 + -3, param0);
+                      break L7;
+                    } else {
+                      break L7;
+                    }
+                  }
+                  return;
+                }
+              } else {
+                break L5;
+              }
+            }
+          }
+          L8: {
             em.a(1 + param1, 1 + param10, -2 + (param2 - param1), param3 + -param10 - 2, 0);
             qi.a(param8, param2, param7, param9, param10, -29, param1, param3, param0);
             if (param11) {
               qi.a(param8, -3 + param2, param7, -1, 3 + param10, -88, param1 - -3, param3 + -3, param0);
-              break L3;
+              break L8;
             } else {
-              break L3;
+              break L8;
             }
           }
           return;
@@ -117,20 +223,20 @@ final class fc {
         int stackOut_2_1 = 0;
         var2 = new lm(true);
         if (param1 > -39) {
-          return null;
+          return (lm) null;
         } else {
           L0: {
-            stackOut_1_0 = (lm) var2;
+            stackOut_1_0 = (lm) (var2);
             stackIn_3_0 = stackOut_1_0;
             stackIn_2_0 = stackOut_1_0;
             if (!param0) {
-              stackOut_3_0 = (lm) (Object) stackIn_3_0;
+              stackOut_3_0 = (lm) ((Object) stackIn_3_0);
               stackOut_3_1 = 0;
               stackIn_4_0 = stackOut_3_0;
               stackIn_4_1 = stackOut_3_1;
               break L0;
             } else {
-              stackOut_2_0 = (lm) (Object) stackIn_2_0;
+              stackOut_2_0 = (lm) ((Object) stackIn_2_0);
               stackOut_2_1 = 1;
               stackIn_4_0 = stackOut_2_0;
               stackIn_4_1 = stackOut_2_1;
@@ -143,6 +249,7 @@ final class fc {
     }
 
     final static int a(int param0, int param1) {
+        int discarded$1 = 0;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
@@ -159,7 +266,7 @@ final class fc {
           param1 = param1 & 8191;
           if (param1 < 4096) {
             L0: {
-              if (param1 >= 2048) {
+              if (-2049 >= (param1 ^ -1)) {
                 stackOut_18_0 = un.field_t[-param1 + 4096];
                 stackIn_19_0 = stackOut_18_0;
                 break L0;
@@ -185,11 +292,11 @@ final class fc {
             return stackIn_15_0;
           }
         } else {
-          int discarded$1 = fc.a(-66, 52);
+          discarded$1 = fc.a(-66, 52);
           param1 = param1 & 8191;
           if (param1 < 4096) {
             L2: {
-              if (param1 >= 2048) {
+              if (-2049 >= (param1 ^ -1)) {
                 stackOut_8_0 = un.field_t[-param1 + 4096];
                 stackIn_9_0 = stackOut_8_0;
                 break L2;

@@ -28,6 +28,7 @@ final class sa {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -90,9 +91,10 @@ final class sa {
               L5: while (true) {
                 if (var13 >= var12) {
                   gf.d(var8, var6_int, var9, var7);
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  var14 = (param0 + -var13 << 8) / param3;
+                  var14 = (param0 + -var13 << 2029303720) / param3;
                   gf.d(var13 + param1, var6_int, var13 + (param1 + 1), var7);
                   param4.c(param1, param5, var14);
                   var13++;
@@ -100,30 +102,31 @@ final class sa {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var6;
+            stackOut_20_0 = (RuntimeException) (var6);
             stackOut_20_1 = new StringBuilder().append("sa.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param4 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -131,31 +134,41 @@ final class sa {
               break L6;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param5 + ')');
+          throw r.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static int a(int param0) {
+        if (param0 != -27572) {
+            field_a = (sl) null;
+        }
         return ho.field_a + -db.field_f;
     }
 
     public static void b(int param0) {
         field_b = null;
         field_e = null;
+        if (param0 != 2029303720) {
+            field_d = (Boolean) null;
+        }
         field_d = null;
         field_c = null;
         field_a = null;
     }
 
     final static int a(int param0, int param1) {
+        if (param1 >= -102) {
+            field_a = (sl) null;
+        }
         return 1 + (int)(((double)param0 - 50.0 * rh.field_d) / (rh.field_d * 150.0));
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "<%0> has dropped out.";
         field_e = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
         field_b = "To return to the menu, press <%key>'ESC'</col> and select 'End Tutorial' from the menu.";

@@ -16,13 +16,12 @@ final class kc {
         field_b = null;
         field_d = null;
         field_c = null;
+        if (param0) {
+            field_c = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "kc.A(";
         field_c = "Name";
         field_d = new java.util.zip.CRC32();

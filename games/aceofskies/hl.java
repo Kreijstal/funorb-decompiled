@@ -18,10 +18,6 @@ final class hl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "hl.A(";
     }
 }

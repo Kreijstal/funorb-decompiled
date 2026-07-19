@@ -10,17 +10,13 @@ final class vj {
     public static void a(int param0) {
         field_b = null;
         field_c = null;
-        field_a = null;
+        field_a = (dl[][]) null;
         if (param0 != 26988) {
             vj.a(-88);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "vj.A(";
         field_c = "Waiting for levels";
     }

@@ -29,7 +29,7 @@ final class hv {
           return false;
         } else {
           L0: {
-            if ((Object) (Object) pd.field_m != this) {
+            if (pd.field_m != this) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -43,7 +43,7 @@ final class hv {
             stackOut_4_0 = stackIn_4_0;
             stackIn_6_0 = stackOut_4_0;
             stackIn_5_0 = stackOut_4_0;
-            if ((Object) (Object) mo.field_w != this) {
+            if (mo.field_w != this) {
               stackOut_6_0 = stackIn_6_0;
               stackOut_6_1 = 0;
               stackIn_7_0 = stackOut_6_0;
@@ -72,10 +72,6 @@ final class hv {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Unpacking sound effects";
         field_a = "reassign";
         field_c = false;

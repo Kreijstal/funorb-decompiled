@@ -35,7 +35,7 @@ final class qg extends RuntimeException {
         try {
           L0: {
             L1: {
-              if (rl.field_m != -1) {
+              if ((rl.field_m ^ -1) != 0) {
                 break L1;
               } else {
                 if (ln.field_J != -1) {
@@ -51,7 +51,7 @@ final class qg extends RuntimeException {
               L3: {
                 jh.field_f = jh.field_f + 1;
                 if (param1 != null) {
-                  if (!param1.equals((Object) (Object) cb.field_c)) {
+                  if (!param1.equals(cb.field_c)) {
                     break L3;
                   } else {
                     break L2;
@@ -125,7 +125,7 @@ final class qg extends RuntimeException {
               break L2;
             }
             L7: {
-              var2_int = -49;
+              var2_int = -49 / ((param0 - -45) / 60);
               cb.field_c = param1;
               if (oh.field_i) {
                 break L7;
@@ -165,23 +165,23 @@ final class qg extends RuntimeException {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_41_0 = (RuntimeException) var2;
-            stackOut_41_1 = new StringBuilder().append("qg.C(").append(38).append(',');
+            stackOut_41_0 = (RuntimeException) (var2);
+            stackOut_41_1 = new StringBuilder().append("qg.C(").append(param0).append(',');
             stackIn_43_0 = stackOut_41_0;
             stackIn_43_1 = stackOut_41_1;
             stackIn_42_0 = stackOut_41_0;
             stackIn_42_1 = stackOut_41_1;
             if (param1 == null) {
-              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
-              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+              stackOut_43_0 = (RuntimeException) ((Object) stackIn_43_0);
+              stackOut_43_1 = (StringBuilder) ((Object) stackIn_43_1);
               stackOut_43_2 = "null";
               stackIn_44_0 = stackOut_43_0;
               stackIn_44_1 = stackOut_43_1;
               stackIn_44_2 = stackOut_43_2;
               break L9;
             } else {
-              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
-              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
+              stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
               stackOut_42_2 = "{...}";
               stackIn_44_0 = stackOut_42_0;
               stackIn_44_1 = stackOut_42_1;
@@ -189,11 +189,14 @@ final class qg extends RuntimeException {
               break L9;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_44_0), stackIn_44_2 + ')');
         }
     }
 
     public static void b(int param0) {
+        if (param0 <= 49) {
+            return;
+        }
         field_b = null;
         field_a = null;
     }
@@ -205,14 +208,10 @@ final class qg extends RuntimeException {
         if (param0 > -61) {
             return true;
         }
-        return mj.field_p != -1 ? true : false;
+        return (mj.field_p ^ -1) != 0 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = -1;
         field_a = new String[16];
     }

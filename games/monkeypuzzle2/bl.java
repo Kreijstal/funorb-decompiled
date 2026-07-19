@@ -15,32 +15,34 @@ final class bl extends ug {
     int field_h;
 
     public static void a(int param0) {
-        field_k = null;
+        field_k = (byte[][]) null;
+        if (param0 != 0) {
+            return;
+        }
         field_o = null;
         field_g = null;
     }
 
     final static void a(int param0, lg param1) {
         try {
+            if (param0 != 50) {
+                bl.a(87);
+            }
             ve.a(82, 0, 0, param1);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "bl.B(" + 50 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw la.a((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     bl(int param0, int param1, int param2, int param3, int param4) {
-        ((bl) this).field_n = param2;
-        ((bl) this).field_h = param0;
-        ((bl) this).field_j = param4;
-        ((bl) this).field_l = param1;
-        ((bl) this).field_i = param3;
+        this.field_n = param2;
+        this.field_h = param0;
+        this.field_j = param4;
+        this.field_l = param1;
+        this.field_i = param3;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new byte[50][];
     }
 }

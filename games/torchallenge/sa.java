@@ -13,7 +13,7 @@ final class sa {
     }
 
     final static String a(boolean param0) {
-        if (li.field_K < 2) {
+        if ((li.field_K ^ -1) > -3) {
           return ta.field_Ab;
         } else {
           if (null != rj.field_f) {
@@ -32,17 +32,34 @@ final class sa {
                 if (!gf.field_p.b(-7957)) {
                   return wf.field_a;
                 } else {
-                  if (!gf.field_p.b(5, "commonui")) {
-                    return ij.field_x + " - " + gf.field_p.a(125, "commonui") + "%";
-                  } else {
-                    if (jl.field_b.b(-7957)) {
-                      if (!jl.field_b.b((byte) 79)) {
-                        return bk.field_l + " - " + jl.field_b.c(126) + "%";
-                      } else {
-                        return lh.field_y;
-                      }
+                  if (param0) {
+                    if (!gf.field_p.b(5, "commonui")) {
+                      return ij.field_x + " - " + gf.field_p.a(125, "commonui") + "%";
                     } else {
-                      return wa.field_qb;
+                      if (jl.field_b.b(-7957)) {
+                        if (!jl.field_b.b((byte) 79)) {
+                          return bk.field_l + " - " + jl.field_b.c(126) + "%";
+                        } else {
+                          return lh.field_y;
+                        }
+                      } else {
+                        return wa.field_qb;
+                      }
+                    }
+                  } else {
+                    field_b = (String) null;
+                    if (!gf.field_p.b(5, "commonui")) {
+                      return ij.field_x + " - " + gf.field_p.a(125, "commonui") + "%";
+                    } else {
+                      if (jl.field_b.b(-7957)) {
+                        if (!jl.field_b.b((byte) 79)) {
+                          return bk.field_l + " - " + jl.field_b.c(126) + "%";
+                        } else {
+                          return lh.field_y;
+                        }
+                      } else {
+                        return wa.field_qb;
+                      }
                     }
                   }
                 }
@@ -54,14 +71,18 @@ final class sa {
 
     public static void a(byte param0) {
         field_b = null;
+        if (param0 <= 92) {
+            sa.a(40);
+        }
     }
 
     final static void a(byte param0, int param1, eh param2) {
         pa var5 = null;
         int var4 = 0;
+        int discarded$0 = 0;
         try {
             var5 = dk.field_s;
-            var5.d(25, 6);
+            var5.d(25, param1);
             var5.field_q = var5.field_q + 1;
             var4 = var5.field_q;
             if (param0 < 11) {
@@ -74,16 +95,18 @@ final class sa {
                 var5.d(param2.field_i.length, (byte) 122);
                 var5.a(param2.field_i.length, 0, param2.field_i, -16384);
             }
-            int discarded$0 = var5.b(var4, 14430);
+            discarded$0 = var5.b(var4, 14430);
             var5.field_q = var5.field_q - 4;
             param2.field_j = var5.i(67);
             var5.a(var5.field_q - var4, -112);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "sa.A(" + param0 + ',' + 6 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "sa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int a(byte param0, int param1) {
+        String discarded$2 = null;
+        String discarded$3 = null;
         int var2 = 0;
         L0: {
           var2 = 0;
@@ -92,13 +115,13 @@ final class sa {
             var2 += 16;
             break L0;
           } else {
-            if (param1 < 65536) {
+            if ((param1 ^ -1) > -65537) {
               break L0;
             } else {
               L1: {
                 param1 = param1 >>> 16;
                 var2 += 16;
-                if (param1 >= 256) {
+                if ((param1 ^ -1) <= -257) {
                   var2 += 8;
                   param1 = param1 >>> 8;
                   break L1;
@@ -126,7 +149,7 @@ final class sa {
                   }
                 }
                 L4: {
-                  if (param1 >= 1) {
+                  if (-2 >= (param1 ^ -1)) {
                     var2++;
                     param1 = param1 >>> 1;
                     break L4;
@@ -137,7 +160,7 @@ final class sa {
                 return var2 + param1;
               } else {
                 L5: {
-                  String discarded$2 = sa.a(true);
+                  discarded$2 = sa.a(true);
                   if (4 <= param1) {
                     var2 += 2;
                     param1 = param1 >>> 2;
@@ -147,7 +170,7 @@ final class sa {
                   }
                 }
                 L6: {
-                  if (param1 >= 1) {
+                  if (-2 >= (param1 ^ -1)) {
                     var2++;
                     param1 = param1 >>> 1;
                     break L6;
@@ -161,7 +184,7 @@ final class sa {
           }
         }
         L7: {
-          if (param1 >= 256) {
+          if ((param1 ^ -1) <= -257) {
             var2 += 8;
             param1 = param1 >>> 8;
             break L7;
@@ -180,7 +203,7 @@ final class sa {
         }
         if (param0 <= 59) {
           L9: {
-            String discarded$3 = sa.a(true);
+            discarded$3 = sa.a(true);
             if (4 <= param1) {
               var2 += 2;
               param1 = param1 >>> 2;
@@ -190,7 +213,7 @@ final class sa {
             }
           }
           L10: {
-            if (param1 >= 1) {
+            if (-2 >= (param1 ^ -1)) {
               var2++;
               param1 = param1 >>> 1;
               break L10;
@@ -210,7 +233,7 @@ final class sa {
             }
           }
           L12: {
-            if (param1 >= 1) {
+            if (-2 >= (param1 ^ -1)) {
               var2++;
               param1 = param1 >>> 1;
               break L12;
@@ -223,10 +246,6 @@ final class sa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = false;
     }
 }

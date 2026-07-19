@@ -18,10 +18,10 @@ abstract class oe extends ga {
     abstract void b(int param0, byte param1, int param2);
 
     boolean j(int param0) {
-        ((oe) this).field_V = this.b(false);
+        this.field_V = this.b(false);
         if (param0 <= -35) {
-          if (((oe) this).field_V == 0) {
-            if (((oe) this).field_H) {
+          if (this.field_V == 0) {
+            if (this.field_H) {
               return false;
             } else {
               return true;
@@ -30,9 +30,9 @@ abstract class oe extends ga {
             return false;
           }
         } else {
-          ((oe) this).field_V = -126;
-          if (((oe) this).field_V == 0) {
-            if (((oe) this).field_H) {
+          this.field_V = -126;
+          if (this.field_V == 0) {
+            if (this.field_H) {
               return false;
             } else {
               return true;
@@ -64,28 +64,75 @@ abstract class oe extends ga {
     }
 
     private final int b(boolean param0) {
-        return !((oe) this).field_H ? 0 : (Object) (Object) ((oe) this).field_L.h(0) == this ? 256 : 0;
+        int stackIn_6_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_2_0 = 0;
+        if (param0) {
+          L0: {
+            oe.k(-60);
+            if (this.field_H) {
+              if (this.field_L.h(0) != this) {
+                stackOut_11_0 = 0;
+                stackIn_12_0 = stackOut_11_0;
+                break L0;
+              } else {
+                stackOut_10_0 = 256;
+                stackIn_12_0 = stackOut_10_0;
+                break L0;
+              }
+            } else {
+              stackOut_8_0 = 0;
+              stackIn_12_0 = stackOut_8_0;
+              break L0;
+            }
+          }
+          return stackIn_12_0;
+        } else {
+          L1: {
+            if (this.field_H) {
+              if (this.field_L.h(0) != this) {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                break L1;
+              } else {
+                stackOut_4_0 = 256;
+                stackIn_6_0 = stackOut_4_0;
+                break L1;
+              }
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_6_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_6_0;
+        }
     }
 
     final void a(int param0, int param1, int param2) {
         if (param0 > -30) {
           field_P = false;
-          ((oe) this).a(-127, param2, qk.field_c + -param1 >> 1, param1, tg.field_L - param2 >> 1);
+          this.a(-127, param2, qk.field_c + -param1 >> -1480051007, param1, tg.field_L - param2 >> 962101025);
           return;
         } else {
-          ((oe) this).a(-127, param2, qk.field_c + -param1 >> 1, param1, tg.field_L - param2 >> 1);
+          this.a(-127, param2, qk.field_c + -param1 >> -1480051007, param1, tg.field_L - param2 >> 962101025);
           return;
         }
     }
 
     oe(sh param0, int param1, int param2) {
-        super(tg.field_L + -param1 >> 1, qk.field_c - param2 >> 1, param1, param2, (fe) null);
+        super(tg.field_L + -param1 >> -1596943807, qk.field_c - param2 >> 1637793313, param1, param2, (fe) null);
         try {
-            ((oe) this).field_V = 0;
-            ((oe) this).field_H = false;
-            ((oe) this).field_L = param0;
+            this.field_V = 0;
+            this.field_H = false;
+            this.field_L = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "oe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "oe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -106,12 +153,12 @@ abstract class oe extends ga {
         int stackOut_9_0 = 0;
         if (param0 == -6) {
           var2 = this.b(false);
-          var3 = var2 + -((oe) this).field_V;
-          if (var3 > 0) {
+          var3 = var2 + -this.field_V;
+          if (-1 > (var3 ^ -1)) {
             L0: {
-              ((oe) this).field_V = ((oe) this).field_V + (8 + (var3 + -1)) / 8;
+              this.field_V = this.field_V + (8 + (var3 + -1)) / 8;
               if (0 > var3) {
-                ((oe) this).field_V = ((oe) this).field_V + (var3 + -15) / 16;
+                this.field_V = this.field_V + (var3 + -15) / 16;
                 break L0;
               } else {
                 break L0;
@@ -119,13 +166,13 @@ abstract class oe extends ga {
             }
             L1: {
               L2: {
-                if (((oe) this).field_V != 0) {
+                if (-1 != (this.field_V ^ -1)) {
                   break L2;
                 } else {
                   if (0 != var2) {
                     break L2;
                   } else {
-                    if (((oe) this).field_H) {
+                    if (this.field_H) {
                       break L2;
                     } else {
                       stackOut_39_0 = 1;
@@ -143,7 +190,7 @@ abstract class oe extends ga {
           } else {
             L3: {
               if (0 > var3) {
-                ((oe) this).field_V = ((oe) this).field_V + (var3 + -15) / 16;
+                this.field_V = this.field_V + (var3 + -15) / 16;
                 break L3;
               } else {
                 break L3;
@@ -151,13 +198,13 @@ abstract class oe extends ga {
             }
             L4: {
               L5: {
-                if (((oe) this).field_V != 0) {
+                if (-1 != (this.field_V ^ -1)) {
                   break L5;
                 } else {
                   if (0 != var2) {
                     break L5;
                   } else {
-                    if (((oe) this).field_H) {
+                    if (this.field_H) {
                       break L5;
                     } else {
                       stackOut_30_0 = 1;
@@ -174,24 +221,24 @@ abstract class oe extends ga {
             return stackIn_32_0 != 0;
           }
         } else {
-          field_Q = null;
+          field_Q = (ve) null;
           var2 = this.b(false);
-          var3 = var2 + -((oe) this).field_V;
-          if (var3 <= 0) {
+          var3 = var2 + -this.field_V;
+          if (-1 <= (var3 ^ -1)) {
             L6: {
               if (0 > var3) {
-                ((oe) this).field_V = ((oe) this).field_V + (var3 + -15) / 16;
+                this.field_V = this.field_V + (var3 + -15) / 16;
                 break L6;
               } else {
                 break L6;
               }
             }
-            if (((oe) this).field_V == 0) {
+            if (-1 == (this.field_V ^ -1)) {
               if (0 != var2) {
                 return false;
               } else {
                 L7: {
-                  if (((oe) this).field_H) {
+                  if (this.field_H) {
                     stackOut_19_0 = 0;
                     stackIn_20_0 = stackOut_19_0;
                     break L7;
@@ -208,9 +255,9 @@ abstract class oe extends ga {
             }
           } else {
             L8: {
-              ((oe) this).field_V = ((oe) this).field_V + (8 + (var3 + -1)) / 8;
+              this.field_V = this.field_V + (8 + (var3 + -1)) / 8;
               if (0 > var3) {
-                ((oe) this).field_V = ((oe) this).field_V + (var3 + -15) / 16;
+                this.field_V = this.field_V + (var3 + -15) / 16;
                 break L8;
               } else {
                 break L8;
@@ -218,13 +265,13 @@ abstract class oe extends ga {
             }
             L9: {
               L10: {
-                if (((oe) this).field_V != 0) {
+                if (-1 != (this.field_V ^ -1)) {
                   break L10;
                 } else {
                   if (0 != var2) {
                     break L10;
                   } else {
-                    if (((oe) this).field_H) {
+                    if (this.field_H) {
                       break L10;
                     } else {
                       stackOut_8_0 = 1;
@@ -244,89 +291,89 @@ abstract class oe extends ga {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        if (((oe) this).field_V != 0) {
-          if (256 > ((oe) this).field_V) {
+        if (-1 != (this.field_V ^ -1)) {
+          if (256 > this.field_V) {
             if (param2 >= 36) {
               if (ga.field_K != null) {
-                if (((oe) this).field_F <= ga.field_K.field_u) {
-                  if (ga.field_K.field_w < ((oe) this).field_z) {
-                    ga.field_K = new nf(((oe) this).field_F, ((oe) this).field_z);
+                if (this.field_F <= ga.field_K.field_u) {
+                  if (ga.field_K.field_w < this.field_z) {
+                    ga.field_K = new nf(this.field_F, this.field_z);
                     vm.a(ga.field_K, -8409);
                     fn.d();
-                    ((oe) this).b(0, (byte) -90, 0);
-                    super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
+                    this.b(0, (byte) -90, 0);
+                    super.a(-this.field_m + -param0, param1, (byte) 120, -param3 - this.field_q);
                     ib.b(false);
-                    ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
+                    ga.field_K.a(param3 - -this.field_q, this.field_m + param0, this.field_V);
                     return;
                   } else {
                     vm.a(ga.field_K, -8409);
                     fn.d();
-                    ((oe) this).b(0, (byte) -90, 0);
-                    super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
+                    this.b(0, (byte) -90, 0);
+                    super.a(-this.field_m + -param0, param1, (byte) 120, -param3 - this.field_q);
                     ib.b(false);
-                    ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
+                    ga.field_K.a(param3 - -this.field_q, this.field_m + param0, this.field_V);
                     return;
                   }
                 } else {
-                  ga.field_K = new nf(((oe) this).field_F, ((oe) this).field_z);
+                  ga.field_K = new nf(this.field_F, this.field_z);
                   vm.a(ga.field_K, -8409);
                   fn.d();
-                  ((oe) this).b(0, (byte) -90, 0);
-                  super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
+                  this.b(0, (byte) -90, 0);
+                  super.a(-this.field_m + -param0, param1, (byte) 120, -param3 - this.field_q);
                   ib.b(false);
-                  ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
+                  ga.field_K.a(param3 - -this.field_q, this.field_m + param0, this.field_V);
                   return;
                 }
               } else {
-                ga.field_K = new nf(((oe) this).field_F, ((oe) this).field_z);
+                ga.field_K = new nf(this.field_F, this.field_z);
                 vm.a(ga.field_K, -8409);
                 fn.d();
-                ((oe) this).b(0, (byte) -90, 0);
-                super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
+                this.b(0, (byte) -90, 0);
+                super.a(-this.field_m + -param0, param1, (byte) 120, -param3 - this.field_q);
                 ib.b(false);
-                ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
+                ga.field_K.a(param3 - -this.field_q, this.field_m + param0, this.field_V);
                 return;
               }
             } else {
-              field_O = null;
+              field_O = (String) null;
               if (ga.field_K != null) {
-                if (((oe) this).field_F <= ga.field_K.field_u) {
-                  if (ga.field_K.field_w < ((oe) this).field_z) {
-                    ga.field_K = new nf(((oe) this).field_F, ((oe) this).field_z);
+                if (this.field_F <= ga.field_K.field_u) {
+                  if (ga.field_K.field_w < this.field_z) {
+                    ga.field_K = new nf(this.field_F, this.field_z);
                     vm.a(ga.field_K, -8409);
                     fn.d();
-                    ((oe) this).b(0, (byte) -90, 0);
-                    super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
+                    this.b(0, (byte) -90, 0);
+                    super.a(-this.field_m + -param0, param1, (byte) 120, -param3 - this.field_q);
                     ib.b(false);
-                    ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
+                    ga.field_K.a(param3 - -this.field_q, this.field_m + param0, this.field_V);
                     return;
                   } else {
                     vm.a(ga.field_K, -8409);
                     fn.d();
-                    ((oe) this).b(0, (byte) -90, 0);
-                    super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
+                    this.b(0, (byte) -90, 0);
+                    super.a(-this.field_m + -param0, param1, (byte) 120, -param3 - this.field_q);
                     ib.b(false);
-                    ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
+                    ga.field_K.a(param3 - -this.field_q, this.field_m + param0, this.field_V);
                     return;
                   }
                 } else {
-                  ga.field_K = new nf(((oe) this).field_F, ((oe) this).field_z);
+                  ga.field_K = new nf(this.field_F, this.field_z);
                   vm.a(ga.field_K, -8409);
                   fn.d();
-                  ((oe) this).b(0, (byte) -90, 0);
-                  super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
+                  this.b(0, (byte) -90, 0);
+                  super.a(-this.field_m + -param0, param1, (byte) 120, -param3 - this.field_q);
                   ib.b(false);
-                  ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
+                  ga.field_K.a(param3 - -this.field_q, this.field_m + param0, this.field_V);
                   return;
                 }
               } else {
-                ga.field_K = new nf(((oe) this).field_F, ((oe) this).field_z);
+                ga.field_K = new nf(this.field_F, this.field_z);
                 vm.a(ga.field_K, -8409);
                 fn.d();
-                ((oe) this).b(0, (byte) -90, 0);
-                super.a(-((oe) this).field_m + -param0, param1, (byte) 120, -param3 - ((oe) this).field_q);
+                this.b(0, (byte) -90, 0);
+                super.a(-this.field_m + -param0, param1, (byte) 120, -param3 - this.field_q);
                 ib.b(false);
-                ga.field_K.a(param3 - -((oe) this).field_q, ((oe) this).field_m + param0, ((oe) this).field_V);
+                ga.field_K.a(param3 - -this.field_q, this.field_m + param0, this.field_V);
                 return;
               }
             }
@@ -334,7 +381,7 @@ abstract class oe extends ga {
             if (0 != param1) {
               return;
             } else {
-              ((oe) this).b(((oe) this).field_q + param3, (byte) -126, ((oe) this).field_m + param0);
+              this.b(this.field_q + param3, (byte) -126, this.field_m + param0);
               super.a(param0, param1, (byte) 102, param3);
               return;
             }
@@ -346,20 +393,16 @@ abstract class oe extends ga {
 
     final fj f(int param0) {
         if (param0 != -1) {
-            return null;
+            return (fj) null;
         }
-        fj var2 = super.f(param0);
+        fj var2 = super.f(param0 + 0);
         if (var2 != null) {
             return var2;
         }
-        return (fj) this;
+        return (fj) (this);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_O = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
         field_T = "Passwords can only contain letters and numbers";
         field_W = 0;

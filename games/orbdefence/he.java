@@ -44,24 +44,20 @@ final class he extends ca {
     }
 
     final void d(int param0) {
-        ((he) this).field_g = null;
-        ((he) this).field_x = null;
-        ((he) this).field_D = null;
+        this.field_g = null;
+        this.field_x = null;
+        this.field_D = null;
         if (param0 != 5) {
           he.c(48);
-          ((he) this).field_l = null;
+          this.field_l = null;
           return;
         } else {
-          ((he) this).field_l = null;
+          this.field_l = null;
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new int[13];
         field_p = new int[13];
         field_u = new int[13];

@@ -5,6 +5,7 @@ final class rsa extends rqa {
     static llb field_o;
 
     final static int[] a(ml param0, int param1) {
+        int incrementValue$2 = 0;
         ij var2 = null;
         RuntimeException var2_ref = null;
         hua var3 = null;
@@ -36,11 +37,11 @@ final class rsa extends rqa {
             L1: {
               var2 = new ij();
               ct.a(param0, 83, var2);
-              var3 = (hua) (Object) var2.c((byte) -103);
-              if (var3.field_d == -1) {
+              var3 = (hua) ((Object) var2.c((byte) -103));
+              if (0 == (var3.field_d ^ -1)) {
                 break L1;
               } else {
-                var2.b(-10258, (ksa) (Object) var3);
+                var2.b(-10258, var3);
                 break L1;
               }
             }
@@ -50,21 +51,21 @@ final class rsa extends rqa {
               if (param1 < -109) {
                 break L2;
               } else {
-                field_o = null;
+                field_o = (llb) null;
                 break L2;
               }
             }
-            var6 = (hua) (Object) var2.d(0);
+            var6 = (hua) ((Object) var2.d(0));
             L3: while (true) {
               if (var6 == null) {
-                stackOut_8_0 = (int[]) var4;
+                stackOut_8_0 = (int[]) (var4);
                 stackIn_9_0 = stackOut_8_0;
                 break L0;
               } else {
-                int incrementValue$2 = var5;
+                incrementValue$2 = var5;
                 var5++;
                 var4[incrementValue$2] = var6.field_d;
-                var6 = (hua) (Object) var2.a((byte) 55);
+                var6 = (hua) ((Object) var2.a((byte) 55));
                 continue L3;
               }
             }
@@ -73,23 +74,23 @@ final class rsa extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var2_ref;
+            stackOut_10_0 = (RuntimeException) (var2_ref);
             stackOut_10_1 = new StringBuilder().append("rsa.C(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -97,13 +98,16 @@ final class rsa extends rqa {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }
         return stackIn_9_0;
     }
 
     public static void a(int param0) {
         field_o = null;
+        if (param0 != -1) {
+            field_o = (llb) null;
+        }
     }
 
     rsa(String param0, Class[] param1, String param2) {
@@ -137,11 +141,11 @@ final class rsa extends rqa {
               if (param1 <= -119) {
                 break L1;
               } else {
-                field_o = null;
+                field_o = (llb) null;
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -149,23 +153,23 @@ final class rsa extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("rsa.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -173,7 +177,7 @@ final class rsa extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -193,6 +197,7 @@ final class rsa extends rqa {
         int var16 = 0;
         int stackIn_15_0 = 0;
         int stackIn_22_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_14_0 = 0;
         int stackOut_13_0 = 0;
@@ -203,7 +208,7 @@ final class rsa extends rqa {
           L0: {
             var6_int = -param3 + param4;
             var7 = param1 - param5;
-            if (param2 == ~var7) {
+            if (param2 == (var7 ^ -1)) {
               L1: {
                 if (0 == var6_int) {
                   break L1;
@@ -212,9 +217,10 @@ final class rsa extends rqa {
                   break L1;
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
-              if (var6_int != 0) {
+              if (-1 != (var6_int ^ -1)) {
                 L2: {
                   if (0 <= var7) {
                     break L2;
@@ -257,7 +263,7 @@ final class rsa extends rqa {
                   }
                 }
                 L6: {
-                  if (~param1 <= ~param5) {
+                  if (param1 >= param5) {
                     break L6;
                   } else {
                     var9 = param5;
@@ -273,7 +279,7 @@ final class rsa extends rqa {
                   var9 = param3;
                   var10 = -param5 + param1;
                   var11 = -param3 + param4;
-                  var12 = -(var10 >> 1);
+                  var12 = -(var10 >> 1136328801);
                   if (param3 >= param4) {
                     stackOut_21_0 = -1;
                     stackIn_22_0 = stackOut_21_0;
@@ -286,7 +292,7 @@ final class rsa extends rqa {
                 }
                 L8: {
                   var13 = stackIn_22_0;
-                  if (var11 < 0) {
+                  if ((var11 ^ -1) > -1) {
                     var11 = -var11;
                     break L8;
                   } else {
@@ -297,59 +303,70 @@ final class rsa extends rqa {
                   if (var8 == 0) {
                     var16 = param5;
                     var14 = var16;
-                    if (~param1 > ~var16) {
-                      break L9;
-                    } else {
-                      L10: {
-                        var12 = var12 + var11;
-                        rba.field_b[var9][var16] = param0;
-                        if (var12 <= 0) {
-                          var16++;
-                          break L10;
-                        } else {
-                          var12 = var12 - var10;
-                          var9 = var9 + var13;
-                          break L10;
+                    L10: while (true) {
+                      if (param1 < var16) {
+                        break L9;
+                      } else {
+                        L11: {
+                          var12 = var12 + var11;
+                          rba.field_b[var9][var16] = param0;
+                          if ((var12 ^ -1) >= -1) {
+                            break L11;
+                          } else {
+                            var12 = var12 - var10;
+                            var9 = var9 + var13;
+                            break L11;
+                          }
                         }
+                        var16++;
+                        continue L10;
                       }
-                      var16++;
-                      var16++;
-                      break L9;
                     }
                   } else {
                     var14 = param5;
-                    L11: while (true) {
-                      if (~param1 > ~var14) {
+                    L12: while (true) {
+                      if (param1 < var14) {
                         break L9;
                       } else {
-                        rba.field_b[var14][var9] = param0;
-                        var12 = var12 + var11;
-                        if (var12 <= 0) {
-                          var14++;
-                          var14++;
-                          continue L11;
-                        } else {
-                          var9 = var9 + var13;
-                          var12 = var12 - var10;
-                          var14++;
-                          var14++;
-                          continue L11;
+                        L13: {
+                          rba.field_b[var14][var9] = param0;
+                          var12 = var12 + var11;
+                          if ((var12 ^ -1) >= -1) {
+                            break L13;
+                          } else {
+                            var9 = var9 + var13;
+                            var12 = var12 - var10;
+                            break L13;
+                          }
                         }
+                        var14++;
+                        continue L12;
                       }
                     }
                   }
                 }
+                decompiledRegionSelector0 = 2;
                 break L0;
               } else {
                 bpa.a(param0, param3, (byte) -25, param5, param1);
-                return;
+                decompiledRegionSelector0 = 0;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var6, "rsa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) var6), "rsa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 

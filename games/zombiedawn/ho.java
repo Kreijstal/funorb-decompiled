@@ -8,21 +8,25 @@ final class ho {
     final static void a(int param0, byte param1, int param2) {
         param2 = param2 / 24;
         param0 = param0 / 24;
-        if (param2 >= 0) {
+        if ((param2 ^ -1) <= -1) {
           if (vm.field_u[0].length > param2) {
             if (0 <= param0) {
-              if (param0 >= vm.field_u.length) {
-                return;
-              } else {
-                L0: {
-                  vm.field_u[param0][param2] = vm.field_u[param0][param2] - 1;
-                  if (vm.field_u[param0][param2] - 1 < 0) {
-                    vm.field_u[param0][param2] = 0;
-                    break L0;
-                  } else {
-                    break L0;
+              if (param0 < vm.field_u.length) {
+                if (param1 != 54) {
+                  return;
+                } else {
+                  L0: {
+                    vm.field_u[param0][param2] = vm.field_u[param0][param2] - 1;
+                    if (-1 < (vm.field_u[param0][param2] - 1 ^ -1)) {
+                      vm.field_u[param0][param2] = 0;
+                      break L0;
+                    } else {
+                      break L0;
+                    }
                   }
+                  return;
                 }
+              } else {
                 return;
               }
             } else {
@@ -78,7 +82,7 @@ final class ho {
               if (param3 < -102) {
                 break L1;
               } else {
-                field_a = null;
+                field_a = (String[]) null;
                 break L1;
               }
             }
@@ -91,7 +95,7 @@ final class ho {
                 } else {
                   if (var6 != 0) {
                     if (var6 != 1) {
-                      if (var6 != 2) {
+                      if (-3 != (var6 ^ -1)) {
                         if (3 == var6) {
                           L4: {
                             var5 = 2267494;
@@ -108,7 +112,7 @@ final class ho {
                           var4_int = stackIn_28_0;
                           break L2;
                         } else {
-                          if (var6 != 9) {
+                          if ((var6 ^ -1) != -10) {
                             break L2;
                           } else {
                             var4_int = 13542477;
@@ -175,23 +179,23 @@ final class ho {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var4 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) var4;
+            stackOut_32_0 = (RuntimeException) (var4);
             stackOut_32_1 = new StringBuilder().append("ho.B(");
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
             stackIn_33_1 = stackOut_32_1;
             if (param0 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "null";
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
               break L8;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "{...}";
               stackIn_35_0 = stackOut_33_0;
               stackIn_35_1 = stackOut_33_1;
@@ -199,12 +203,16 @@ final class ho {
               break L8;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 != 118) {
+            vn var2 = (vn) null;
+            ho.a((vn) null, false, 18, -108);
+        }
     }
 
     static {

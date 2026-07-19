@@ -16,24 +16,25 @@ final class tg {
             wd.field_Ub.k(-22216);
             vj.field_j = new ui(qo.field_x, (String) null, ro.field_e, param1, param2);
             int var4_int = 113 % ((param0 - -67) / 53);
-            tn.field_n = new ba(wd.field_Ub, (ei) (Object) vj.field_j);
-            wd.field_Ub.b((ei) (Object) tn.field_n, 30000);
+            tn.field_n = new ba(wd.field_Ub, vj.field_j);
+            wd.field_Ub.b(tn.field_n, 30000);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "tg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "tg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         field_e = null;
         field_d = null;
+        if (param0 != -10562) {
+            field_a = (jp) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Hotseat multiplayer game";
     }
 }

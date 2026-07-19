@@ -12,6 +12,9 @@ final class asa extends aa {
 
     public static void a(int param0) {
         field_d = null;
+        if (param0 != 20000000) {
+            return;
+        }
         field_a = null;
     }
 
@@ -24,166 +27,131 @@ final class asa extends aa {
             ObjectInputStream var3 = null;
             Object var4 = null;
             Object stackIn_2_0 = null;
-            Object stackIn_6_0 = null;
-            Object stackIn_10_0 = null;
-            RuntimeException stackIn_12_0 = null;
-            StringBuilder stackIn_12_1 = null;
+            Object stackIn_5_0 = null;
+            Object stackIn_7_0 = null;
+            Object stackIn_11_0 = null;
             RuntimeException stackIn_13_0 = null;
             StringBuilder stackIn_13_1 = null;
             RuntimeException stackIn_14_0 = null;
             StringBuilder stackIn_14_1 = null;
-            String stackIn_14_2 = null;
+            RuntimeException stackIn_15_0 = null;
+            StringBuilder stackIn_15_1 = null;
+            String stackIn_15_2 = null;
+            int decompiledRegionSelector0 = 0;
+            int decompiledRegionSelector1 = 0;
+            Throwable decompiledCaughtException = null;
+            Object stackOut_6_0 = null;
+            Object stackOut_4_0 = null;
+            Object stackOut_10_0 = null;
             Object stackOut_1_0 = null;
-            Object stackOut_5_0 = null;
-            Object stackOut_9_0 = null;
-            RuntimeException stackOut_11_0 = null;
-            StringBuilder stackOut_11_1 = null;
             RuntimeException stackOut_12_0 = null;
             StringBuilder stackOut_12_1 = null;
-            String stackOut_12_2 = null;
+            RuntimeException stackOut_14_0 = null;
+            StringBuilder stackOut_14_1 = null;
+            String stackOut_14_2 = null;
             RuntimeException stackOut_13_0 = null;
             StringBuilder stackOut_13_1 = null;
             String stackOut_13_2 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            if (param0.exists()) {
-                                statePc = 3;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
+            try {
+              L0: {
+                if (param0.exists()) {
+                  try {
+                    L1: {
+                      var2_ref3 = new FileInputStream(param0);
+                      var3 = new ObjectInputStream((InputStream) ((Object) var2_ref3));
+                      var4 = var3.readObject();
+                      if (param1 <= -42) {
+                        var3.close();
+                        var2_ref3.close();
+                        stackOut_6_0 = var4;
+                        stackIn_7_0 = stackOut_6_0;
+                        decompiledRegionSelector0 = 1;
+                        break L1;
+                      } else {
+                        stackOut_4_0 = (Object) null;
+                        stackIn_5_0 = stackOut_4_0;
+                        decompiledRegionSelector0 = 0;
+                        break L1;
+                      }
                     }
-                    case 1: {
-                        try {
-                            stackOut_1_0 = null;
-                            stackIn_2_0 = stackOut_1_0;
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
+                  } catch (java.io.IOException decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L2: {
+                      var2 = (IOException) (Object) decompiledCaughtException;
+                      decompiledRegionSelector0 = 2;
+                      break L2;
                     }
-                    case 2: {
-                        return stackIn_2_0;
+                  } catch (java.lang.ClassNotFoundException decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    L3: {
+                      var2_ref = (ClassNotFoundException) (Object) decompiledCaughtException;
+                      decompiledRegionSelector0 = 2;
+                      break L3;
                     }
-                    case 3: {
-                        try {
-                            var2_ref3 = new FileInputStream(param0);
-                            var3 = new ObjectInputStream((InputStream) (Object) var2_ref3);
-                            var4 = var3.readObject();
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = ((Object) stateCaught_3 instanceof IOException ? 7 : ((Object) stateCaught_3 instanceof ClassNotFoundException ? 8 : 11));
-                            continue stateLoop;
-                        }
+                  }
+                  if (decompiledRegionSelector0 == 0) {
+                    decompiledRegionSelector1 = 2;
+                    break L0;
+                  } else {
+                    if (decompiledRegionSelector0 == 1) {
+                      decompiledRegionSelector1 = 3;
+                      break L0;
+                    } else {
+                      stackOut_10_0 = null;
+                      stackIn_11_0 = stackOut_10_0;
+                      decompiledRegionSelector1 = 1;
+                      break L0;
                     }
-                    case 5: {
-                        try {
-                            var3.close();
-                            var2_ref3.close();
-                            stackOut_5_0 = var4;
-                            stackIn_6_0 = stackOut_5_0;
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = ((Object) stateCaught_5 instanceof IOException ? 7 : ((Object) stateCaught_5 instanceof ClassNotFoundException ? 8 : 11));
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        return stackIn_6_0;
-                    }
-                    case 7: {
-                        try {
-                            var2 = (IOException) (Object) caughtException;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            var2_ref = (ClassNotFoundException) (Object) caughtException;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            stackOut_9_0 = null;
-                            stackIn_10_0 = stackOut_9_0;
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        return stackIn_10_0;
-                    }
-                    case 11: {
-                        var2_ref2 = (RuntimeException) (Object) caughtException;
-                        stackOut_11_0 = (RuntimeException) var2_ref2;
-                        stackOut_11_1 = new StringBuilder().append("asa.B(");
-                        stackIn_13_0 = stackOut_11_0;
-                        stackIn_13_1 = stackOut_11_1;
-                        stackIn_12_0 = stackOut_11_0;
-                        stackIn_12_1 = stackOut_11_1;
-                        if (param0 == null) {
-                            statePc = 13;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                        stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-                        stackOut_12_2 = "{...}";
-                        stackIn_14_0 = stackOut_12_0;
-                        stackIn_14_1 = stackOut_12_1;
-                        stackIn_14_2 = stackOut_12_2;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-                        stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-                        stackOut_13_2 = "null";
-                        stackIn_14_0 = stackOut_13_0;
-                        stackIn_14_1 = stackOut_13_1;
-                        stackIn_14_2 = stackOut_13_2;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + -48 + ')');
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
+                } else {
+                  stackOut_1_0 = null;
+                  stackIn_2_0 = stackOut_1_0;
+                  decompiledRegionSelector1 = 0;
+                  break L0;
                 }
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+              decompiledCaughtException = decompiledCaughtParameter2;
+              L4: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_12_0 = (RuntimeException) (var2_ref2);
+                stackOut_12_1 = new StringBuilder().append("asa.B(");
+                stackIn_14_0 = stackOut_12_0;
+                stackIn_14_1 = stackOut_12_1;
+                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_1 = stackOut_12_1;
+                if (param0 == null) {
+                  stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+                  stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
+                  stackOut_14_2 = "null";
+                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_1 = stackOut_14_1;
+                  stackIn_15_2 = stackOut_14_2;
+                  break L4;
+                } else {
+                  stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+                  stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
+                  stackOut_13_2 = "{...}";
+                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_1 = stackOut_13_1;
+                  stackIn_15_2 = stackOut_13_2;
+                  break L4;
+                }
+              }
+              throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');
+            }
+            if (decompiledRegionSelector1 == 0) {
+              return stackIn_2_0;
+            } else {
+              if (decompiledRegionSelector1 == 1) {
+                return stackIn_11_0;
+              } else {
+                if (decompiledRegionSelector1 == 2) {
+                  return stackIn_5_0;
+                } else {
+                  return stackIn_7_0;
+                }
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -197,10 +165,6 @@ final class asa extends aa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Data array";
         field_c = 20000000L;
         field_a = new aba();

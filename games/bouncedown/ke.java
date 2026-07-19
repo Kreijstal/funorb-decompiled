@@ -24,6 +24,7 @@ final class ke extends ai {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
@@ -36,58 +37,64 @@ final class ke extends ai {
         var4 = Bounce.field_N;
         try {
           L0: {
-            if (10 > sa.field_k) {
-              L1: {
-                var3_int = 0;
-                if (!ae.field_b) {
-                  break L1;
-                } else {
-                  ae.field_b = false;
-                  var3_int = 1;
-                  break L1;
+            if (param2) {
+              if (10 > sa.field_k) {
+                L1: {
+                  var3_int = 0;
+                  if (!ae.field_b) {
+                    break L1;
+                  } else {
+                    ae.field_b = false;
+                    var3_int = 1;
+                    break L1;
+                  }
                 }
-              }
-              ai.a(var3_int != 0, da.field_d, -24, mj.b((byte) -26), jk.a((byte) -105));
-              break L0;
-            } else {
-              if (!tk.c(250)) {
-                na.a();
-                pc.a(240, (byte) -66, 320);
-                qi.a(param0, 0, 0, -25971);
-                return;
+                ai.a(var3_int != 0, da.field_d, -24, mj.b((byte) -26), jk.a((byte) -105));
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
-                if (mh.field_U == 0) {
-                  of.a(false, param1, (byte) -48);
+                if (!tk.c(250)) {
+                  na.a();
+                  pc.a(240, (byte) -66, 320);
                   qi.a(param0, 0, 0, -25971);
                   return;
                 } else {
-                  i.a(param0, 0);
-                  return;
+                  if (mh.field_U == 0) {
+                    of.a(false, param1, (byte) -48);
+                    qi.a(param0, 0, 0, -25971);
+                    return;
+                  } else {
+                    i.a(param0, 0);
+                    return;
+                  }
                 }
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_0 = (RuntimeException) (var3);
             stackOut_13_1 = new StringBuilder().append("ke.C(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -95,40 +102,64 @@ final class ke extends ai {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + true + ')');
+          throw ii.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static int a(int param0, int param1) {
+        java.awt.Canvas var3 = null;
         param0--;
-        param0 = param0 | param0 >>> 1;
-        param0 = param0 | param0 >>> 2;
-        param0 = param0 | param0 >>> 4;
-        param0 = param0 | param0 >>> 8;
-        param0 = param0 | param0 >>> 16;
-        return param0 - -1;
+        if (param1 != 24636) {
+          var3 = (java.awt.Canvas) null;
+          ke.a((java.awt.Canvas) null, false, false);
+          param0 = param0 | param0 >>> -1847409343;
+          param0 = param0 | param0 >>> -179264062;
+          param0 = param0 | param0 >>> -1748058652;
+          param0 = param0 | param0 >>> -265561336;
+          param0 = param0 | param0 >>> -1536370896;
+          return param0 - -1;
+        } else {
+          param0 = param0 | param0 >>> -1847409343;
+          param0 = param0 | param0 >>> -179264062;
+          param0 = param0 | param0 >>> -1748058652;
+          param0 = param0 | param0 >>> -265561336;
+          param0 = param0 | param0 >>> -1536370896;
+          return param0 - -1;
+        }
     }
 
     public static void a(int param0) {
-        field_m = null;
-        field_l = null;
-        field_n = null;
+        java.awt.Canvas var2 = null;
+        if (param0 != -196) {
+          var2 = (java.awt.Canvas) null;
+          ke.a((java.awt.Canvas) null, true, false);
+          field_m = null;
+          field_l = null;
+          field_n = null;
+          return;
+        } else {
+          field_m = null;
+          field_l = null;
+          field_n = null;
+          return;
+        }
     }
 
     ke(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((ke) this).field_k = param3;
-        ((ke) this).field_j = param4;
-        ((ke) this).field_g = param0;
-        ((ke) this).field_i = param1;
-        ((ke) this).field_h = param2;
-        ((ke) this).field_o = param5;
+        this.field_k = param3;
+        this.field_j = param4;
+        this.field_g = param0;
+        this.field_i = param1;
+        this.field_h = param2;
+        this.field_o = param5;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Please check if address is correct";
         field_n = "Waiting for music";
     }

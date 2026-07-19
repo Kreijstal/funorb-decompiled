@@ -42,6 +42,7 @@ final class cbb {
     static int field_h;
 
     final int[][] a(int param0) {
+        int[] array$1 = null;
         int[] var2 = null;
         int var3 = 0;
         int var4_int = 0;
@@ -54,32 +55,24 @@ final class cbb {
         int[][] var10 = null;
         int[] var11 = null;
         int[][] var12 = null;
-        int[] var13 = null;
-        int[][] var14 = null;
-        int[] var15 = null;
-        int[][] var16 = null;
         L0: {
           var7 = VoidHunters.field_G;
-          var15 = new int[256];
-          var13 = var15;
-          var11 = var13;
+          var11 = new int[256];
           var9 = var11;
           var8 = var9;
           var2 = var8;
           if (param0 < -90) {
             break L0;
           } else {
-            ((cbb) this).field_t = null;
+            this.field_t = (short[]) null;
             break L0;
           }
         }
         var3 = 0;
         var4_int = 0;
         L1: while (true) {
-          if (var4_int >= ((cbb) this).field_g.length) {
-            var16 = new int[var3 - -1][];
-            var14 = var16;
-            var12 = var14;
+          if (var4_int >= this.field_g.length) {
+            var12 = new int[var3 - -1][];
             var10 = var12;
             var4 = var10;
             var5 = 0;
@@ -87,14 +80,14 @@ final class cbb {
               if (var5 > var3) {
                 var5 = 0;
                 L3: while (true) {
-                  if (var5 >= ((cbb) this).field_g.length) {
+                  if (var5 >= this.field_g.length) {
                     return var4;
                   } else {
-                    var6 = ((cbb) this).field_g[var5].field_a;
+                    var6 = this.field_g[var5].field_a;
                     if (var6 >= 0) {
-                      var16 = var14;
+                      var12 = var10;
                       var2[var6] = var2[var6] + 1;
-                      var16[var6][var2[var6]] = var5;
+                      var12[var6][var2[var6]] = var5;
                       var5++;
                       continue L3;
                     } else {
@@ -104,14 +97,15 @@ final class cbb {
                   }
                 }
               } else {
-                var4[var5] = new int[var15[var5]];
-                var15[var5] = 0;
+                array$1 = new int[var11[var5]];
+                var4[var5] = array$1;
+                var11[var5] = 0;
                 var5++;
                 continue L2;
               }
             }
           } else {
-            var5 = ((cbb) this).field_g[var4_int].field_a;
+            var5 = this.field_g[var4_int].field_a;
             if (var5 >= 0) {
               L4: {
                 if (var3 >= var5) {
@@ -133,6 +127,8 @@ final class cbb {
     }
 
     final int[][] a(byte param0, boolean param1) {
+        int[][] discarded$3 = null;
+        int[] array$4 = null;
         int[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -146,28 +142,22 @@ final class cbb {
         int[][] var12 = null;
         int[] var13 = null;
         int[][] var14 = null;
-        int[] var15 = null;
-        int[][] var16 = null;
-        int[] var17 = null;
-        int[][] var18 = null;
         int stackIn_3_0 = 0;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
         L0: {
           var9 = VoidHunters.field_G;
-          var17 = new int[256];
-          var15 = var17;
-          var13 = var15;
+          var13 = new int[256];
           var11 = var13;
           var10 = var11;
           var3 = var10;
           var4 = 0;
           if (!param1) {
-            stackOut_2_0 = ((cbb) this).field_D;
+            stackOut_2_0 = this.field_D;
             stackIn_3_0 = stackOut_2_0;
             break L0;
           } else {
-            stackOut_1_0 = ((cbb) this).field_s;
+            stackOut_1_0 = this.field_s;
             stackIn_3_0 = stackOut_1_0;
             break L0;
           }
@@ -177,16 +167,14 @@ final class cbb {
           if (param0 == -37) {
             break L1;
           } else {
-            int[][] discarded$1 = ((cbb) this).a(-13);
+            discarded$3 = this.a(-13);
             break L1;
           }
         }
         var6_int = 0;
         L2: while (true) {
           if (var5 <= var6_int) {
-            var18 = new int[1 + var4][];
-            var16 = var18;
-            var14 = var16;
+            var14 = new int[1 + var4][];
             var12 = var14;
             var6 = var12;
             var7 = 0;
@@ -194,14 +182,14 @@ final class cbb {
               if (var4 < var7) {
                 var7 = 0;
                 L4: while (true) {
-                  var18 = var16;
+                  var14 = var12;
                   if (var7 >= var5) {
                     return var6;
                   } else {
-                    var8 = ((cbb) this).field_p[var7];
-                    if (var8 >= 0) {
+                    var8 = this.field_p[var7];
+                    if (-1 >= (var8 ^ -1)) {
                       var3[var8] = var3[var8] + 1;
-                      var18[var8][var3[var8]] = var7;
+                      var14[var8][var3[var8]] = var7;
                       var7++;
                       continue L4;
                     } else {
@@ -211,14 +199,15 @@ final class cbb {
                   }
                 }
               } else {
-                var6[var7] = new int[var17[var7]];
-                var17[var7] = 0;
+                array$4 = new int[var13[var7]];
+                var6[var7] = array$4;
+                var13[var7] = 0;
                 var7++;
                 continue L3;
               }
             }
           } else {
-            var7 = ((cbb) this).field_p[var6_int];
+            var7 = this.field_p[var6_int];
             if (var7 >= 0) {
               L5: {
                 if (var4 < var7) {
@@ -240,6 +229,7 @@ final class cbb {
     }
 
     final int[][] b(int param0) {
+        int[] array$1 = null;
         int[] var2 = null;
         int var3 = 0;
         int var4_int = 0;
@@ -252,24 +242,16 @@ final class cbb {
         int[][] var10 = null;
         int[] var11 = null;
         int[][] var12 = null;
-        int[] var13 = null;
-        int[][] var14 = null;
-        int[] var15 = null;
-        int[][] var16 = null;
         var7 = VoidHunters.field_G;
-        var15 = new int[256];
-        var13 = var15;
-        var11 = var13;
+        var11 = new int[256];
         var9 = var11;
         var8 = var9;
         var2 = var8;
         var3 = 0;
         var4_int = 0;
         L0: while (true) {
-          if (var4_int >= ((cbb) this).field_j) {
-            var16 = new int[var3 + 1][];
-            var14 = var16;
-            var12 = var14;
+          if (var4_int >= this.field_j) {
+            var12 = new int[var3 + 1][];
             var10 = var12;
             var4 = var10;
             var5 = param0;
@@ -277,14 +259,14 @@ final class cbb {
               if (var3 < var5) {
                 var5 = 0;
                 L2: while (true) {
-                  if (((cbb) this).field_j <= var5) {
+                  if (this.field_j <= var5) {
                     return var4;
                   } else {
-                    var6 = ((cbb) this).field_y[var5];
-                    if (var6 >= 0) {
-                      var16 = var14;
+                    var6 = this.field_y[var5];
+                    if ((var6 ^ -1) <= -1) {
+                      var12 = var10;
                       var2[var6] = var2[var6] + 1;
-                      var16[var6][var2[var6]] = var5;
+                      var12[var6][var2[var6]] = var5;
                       var5++;
                       continue L2;
                     } else {
@@ -294,15 +276,16 @@ final class cbb {
                   }
                 }
               } else {
-                var4[var5] = new int[var15[var5]];
-                var15[var5] = 0;
+                array$1 = new int[var11[var5]];
+                var4[var5] = array$1;
+                var11[var5] = 0;
                 var5++;
                 continue L1;
               }
             }
           } else {
-            var5 = ((cbb) this).field_y[var4_int];
-            if (var5 >= 0) {
+            var5 = this.field_y[var4_int];
+            if ((var5 ^ -1) <= -1) {
               var8[var5] = var8[var5] + 1;
               if (var5 > var3) {
                 var3 = var5;
@@ -363,9 +346,9 @@ final class cbb {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var8 = new jva(param0.a("box_bottom.png", true, ""), (java.awt.Component) (Object) df.e((byte) 75));
+            var8 = new jva(param0.a("box_bottom.png", true, ""), (java.awt.Component) ((Object) df.e((byte) 75)));
             var8.e();
-            oaa.field_j = (phb) (Object) var8;
+            oaa.field_j = (phb) ((Object) var8);
             hwa.field_r = new ima[138];
             hwa.field_r[0] = ima.b(param2, "basic", "objective_icon_attack");
             hwa.field_r[1] = ima.b(param2, "basic", "objective_icon_defend");
@@ -397,7 +380,7 @@ final class cbb {
             hwa.field_r[27] = ima.b(param2, "basic", "chassis9");
             hwa.field_r[28] = ima.b(param2, "basic", "chassis9_glow");
             var9 = ima.a(param2, "basic", "box_pack");
-            ww.a((Object[]) (Object) hwa.field_r, 31, (Object[]) (Object) var9, -25801);
+            ww.a(hwa.field_r, 31, var9, -25801);
             hwa.field_r[40] = ima.b(param2, "basic", "icon_frame_lrg");
             hwa.field_r[41] = ima.b(param2, "basic", "icon_frame_lrg_select");
             hwa.field_r[42] = ima.b(param2, "basic", "icon_frame_sml");
@@ -462,12 +445,12 @@ final class cbb {
             hwa.field_r[100] = ima.b(param2, "basic", "more_weapons_small");
             hwa.field_r[101] = ima.b(param2, "basic", "icon_box");
             var10 = ima.a(param2, "basic", "icons_hud");
-            ww.a((Object[]) (Object) hwa.field_r, 102, (Object[]) (Object) var10, -25801);
+            ww.a(hwa.field_r, 102, var10, -25801);
             var11 = ima.a(param2, "basic", "self_destruct");
-            ww.a((Object[]) (Object) hwa.field_r, 112, (Object[]) (Object) var11, -25801);
+            ww.a(hwa.field_r, 112, var11, -25801);
             hwa.field_r[115] = ima.b(param2, "basic", "chat");
             var12 = ima.a(param2, "basic", "frame_outer");
-            ww.a((Object[]) (Object) hwa.field_r, 116, (Object[]) (Object) var12, -25801);
+            ww.a(hwa.field_r, 116, var12, -25801);
             hwa.field_r[125] = ima.b(param2, "basic", "button_off");
             hwa.field_r[126] = ima.b(param2, "basic", "button_on");
             hwa.field_r[127] = ima.b(param2, "basic", "buttonbig_off");
@@ -491,23 +474,23 @@ final class cbb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_0 = (RuntimeException) (var3);
             stackOut_2_1 = new StringBuilder().append("cbb.D(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -516,23 +499,23 @@ final class cbb {
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
             stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -540,7 +523,7 @@ final class cbb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
     }
 
@@ -549,10 +532,6 @@ final class cbb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = 66;
     }
 }

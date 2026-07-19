@@ -21,32 +21,55 @@ final class lt {
     }
 
     final static boolean a(byte param0) {
-        if (null == dma.field_b) {
+        if (param0 == 99) {
+          if (null != dma.field_b) {
+            if (!eia.field_a.a(23716)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (!eia.field_a.a(23716)) {
+          }
+        } else {
+          field_c = (String) null;
+          if (null != dma.field_b) {
+            if (!eia.field_a.a(23716)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     final static boolean b(int param0, int param1) {
         String var2 = null;
-        var2 = lka.field_E[param1][17];
-        var2 = var2.trim();
-        var2 = var2.toLowerCase();
-        if (var2.equals((Object) (Object) "yes")) {
-          return true;
+        if (param0 == 28427) {
+          var2 = lka.field_E[param1][17];
+          var2 = var2.trim();
+          var2 = var2.toLowerCase();
+          if (var2.equals("yes")) {
+            return true;
+          } else {
+            return false;
+          }
         } else {
-          return false;
+          lt.b((byte) -113);
+          var2 = lka.field_E[param1][17];
+          var2 = var2.trim();
+          var2 = var2.toLowerCase();
+          if (var2.equals("yes")) {
+            return true;
+          } else {
+            return false;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0;
         field_c = "RuneScape clan";
     }

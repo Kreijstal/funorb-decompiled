@@ -9,6 +9,9 @@ final class nh {
 
     public static void a(int param0) {
         field_d = null;
+        if (param0 >= -103) {
+            return;
+        }
         field_c = null;
     }
 
@@ -23,14 +26,10 @@ final class nh {
     }
 
     nh(int param0) {
-        ((nh) this).field_b = param0;
+        this.field_b = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Menu";
     }
 }

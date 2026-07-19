@@ -6,29 +6,32 @@ final class bb extends rqa {
 
     final static void a(ds param0, boolean param1) {
         int var2_int = 0;
+        if (!param1) {
+            return;
+        }
         try {
-            wl.field_q = param0.e(1869) << 5;
+            wl.field_q = param0.e(1869) << 1447412645;
             var2_int = param0.e((byte) -107);
-            wl.field_q = wl.field_q + (var2_int >> 3);
-            vga.field_d = (7 & var2_int) << 18;
-            vga.field_d = vga.field_d + (param0.e(1869) << 2);
+            wl.field_q = wl.field_q + (var2_int >> -12858717);
+            vga.field_d = (7 & var2_int) << 1975267250;
+            vga.field_d = vga.field_d + (param0.e(1869) << -858260190);
             var2_int = param0.e((byte) -118);
-            jv.field_b = var2_int << 15 & 2064384;
-            vga.field_d = vga.field_d + (var2_int >> 6);
-            jv.field_b = jv.field_b + (param0.e((byte) -98) << 7);
+            jv.field_b = var2_int << -1626902833 & 2064384;
+            vga.field_d = vga.field_d + (var2_int >> -1968483482);
+            jv.field_b = jv.field_b + (param0.e((byte) -98) << 539326055);
             var2_int = param0.e((byte) -126);
-            jv.field_b = jv.field_b + (var2_int >> 1);
-            qfb.field_o = 65536 & var2_int << 16;
+            jv.field_b = jv.field_b + (var2_int >> 776536865);
+            qfb.field_o = 65536 & var2_int << 1783948272;
             qfb.field_o = qfb.field_o + param0.e(1869);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bb.C(" + (param0 != null ? "{...}" : "null") + ',' + true + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "bb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void e(byte param0) {
         field_o = null;
         if (param0 < 105) {
-            field_o = null;
+            field_o = (String) null;
         }
     }
 
@@ -66,7 +69,7 @@ final class bb extends rqa {
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) frb.a(209, 82));
+            stackOut_2_0 = new nc(frb.a(209, 82));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -74,23 +77,23 @@ final class bb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("bb.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -98,16 +101,12 @@ final class bb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Make copy of clicked object";
     }
 }

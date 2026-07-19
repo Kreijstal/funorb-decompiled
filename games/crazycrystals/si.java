@@ -30,7 +30,7 @@ final class si {
         var3 = CrazyCrystals.field_B;
         try {
           L0: {
-            var4 = (ca) (Object) gn.field_Q.g(32073);
+            var4 = (ca) ((Object) gn.field_Q.g(32073));
             L1: while (true) {
               if (var4 == null) {
                 var2 = pm.field_c.g(32073);
@@ -50,7 +50,7 @@ final class si {
                 }
               } else {
                 nh.a(param0, (byte) -99, var4);
-                var4 = (ca) (Object) gn.field_Q.a(false);
+                var4 = (ca) ((Object) gn.field_Q.a(false));
                 continue L1;
               }
             }
@@ -58,19 +58,15 @@ final class si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var2_ref, "si.A(" + param0 + ',' + param1 + ')');
+          throw dn.a((Throwable) ((Object) var2_ref), "si.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     si(boolean param0) {
-        ((si) this).field_b = param0 ? true : false;
+        this.field_b = param0 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Confirm Password: ";
         field_a = "Log in / Create account";
     }

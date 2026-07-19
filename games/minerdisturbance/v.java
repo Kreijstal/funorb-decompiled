@@ -11,7 +11,7 @@ final class v implements uj {
     public final void a(boolean param0) {
         om.field_g = 12;
         if (param0) {
-            ((v) this).a(true);
+            this.a(true);
             tb.field_a = 4;
             return;
         }
@@ -26,14 +26,13 @@ final class v implements uj {
     public static void b(byte param0) {
         field_d = null;
         field_b = null;
+        if (param0 > -25) {
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[4];
         field_a = "Ranking: Minor Miner";
     }

@@ -6,31 +6,31 @@ final class mc extends oi implements java.awt.event.MouseWheelListener {
 
     final void a(byte param0, java.awt.Component param1) {
         if (param0 > -46) {
-            Object var4 = null;
-            ((mc) this).a((java.awt.Component) null, (byte) 80);
-            param1.addMouseWheelListener((java.awt.event.MouseWheelListener) this);
+            java.awt.Component var4 = (java.awt.Component) null;
+            this.a((java.awt.Component) null, (byte) 80);
+            param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
             return;
         }
-        param1.addMouseWheelListener((java.awt.event.MouseWheelListener) this);
+        param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
     final void a(java.awt.Component param0, byte param1) {
         int var3 = 109 % ((param1 - 81) / 44);
-        param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) this);
+        param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
     final synchronized int a(int param0) {
-        int var2 = ((mc) this).field_i;
-        ((mc) this).field_i = param0;
+        int var2 = this.field_i;
+        this.field_i = param0;
         return var2;
     }
 
     public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent param0) {
-        ((mc) this).field_i = ((mc) this).field_i + param0.getWheelRotation();
+        this.field_i = this.field_i + param0.getWheelRotation();
         param0.consume();
     }
 
     mc() {
-        ((mc) this).field_i = 0;
+        this.field_i = 0;
     }
 }

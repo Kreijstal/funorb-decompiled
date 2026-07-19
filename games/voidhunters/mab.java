@@ -16,10 +16,10 @@ abstract class mab {
     abstract void a(java.awt.Graphics param0, int param1, byte param2, int param3);
 
     final void a(byte param0) {
-        dma.a(((mab) this).field_c, ((mab) this).field_d, ((mab) this).field_b);
+        dma.a(this.field_c, this.field_d, this.field_b);
         if (param0 != -108) {
-            Object var3 = null;
-            ((mab) this).a(-98, 3, (java.awt.Component) null, (byte) -19);
+            java.awt.Component var3 = (java.awt.Component) null;
+            this.a(-98, 3, (java.awt.Component) null, (byte) -19);
         }
     }
 
@@ -39,10 +39,6 @@ abstract class mab {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "To server list";
         field_e = "Location";
     }

@@ -15,16 +15,15 @@ final class lb extends gg {
 
     public static void a(byte param0) {
         field_o = null;
+        if (param0 < 81) {
+            field_o = (th) null;
+        }
     }
 
     lb() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "lb.A(";
         field_o = new th();
     }

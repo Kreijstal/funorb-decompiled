@@ -13,6 +13,9 @@ final class qo extends el {
 
     final static void c(byte param0) {
         v.field_c = 0;
+        if (param0 != 107) {
+            field_o = (String) null;
+        }
     }
 
     final void a(boolean param0, int param1, int param2, byte param3, boolean param4, int param5, int param6) {
@@ -20,18 +23,18 @@ final class qo extends el {
           param5 = param5 + param1;
           param6 = param6 + param2;
           if (!param4) {
-            param5 = param5 + ((qo) this).field_l * (-((qo) this).field_n + 48) * param1 / 288;
-            param6 = param6 + ((qo) this).field_m * (48 - ((qo) this).field_n) * param2 / 288;
+            param5 = param5 + this.field_l * (-this.field_n + 48) * param1 / 288;
+            param6 = param6 + this.field_m * (48 - this.field_n) * param2 / 288;
             break L0;
           } else {
             break L0;
           }
         }
-        param2 = param2 * ((qo) this).field_n / 48;
+        param2 = param2 * this.field_n / 48;
         if (param3 >= -59) {
           return;
         } else {
-          param1 = param1 * ((qo) this).field_n / 48;
+          param1 = param1 * this.field_n / 48;
           super.a(param0, param1, param2, (byte) -84, param4, param5 + -param1, param6 - param2);
           return;
         }
@@ -41,7 +44,7 @@ final class qo extends el {
         field_i = null;
         field_k = null;
         field_p = null;
-        int var1 = 0;
+        int var1 = -105 % ((16 - param0) / 51);
         field_o = null;
     }
 
@@ -49,18 +52,18 @@ final class qo extends el {
         int var2 = 0;
         fb discarded$2 = super.a(-103);
         var2 = 14 % ((param0 - 36) / 62);
-        if (((qo) this).field_a.field_B >= fg.field_j[((qo) this).field_a.field_w] << uc.field_c[((qo) this).field_a.field_w]) {
-          ((qo) this).field_n = ((qo) this).field_n - 1;
-          if (((qo) this).field_n != 0) {
-            ((qo) this).field_j.field_E = ((qo) this).field_j.field_E + 1;
-            return (fb) this;
+        if (this.field_a.field_B >= fg.field_j[this.field_a.field_w] << uc.field_c[this.field_a.field_w]) {
+          this.field_n = this.field_n - 1;
+          if (this.field_n != 0) {
+            this.field_j.field_E = this.field_j.field_E + 1;
+            return (fb) (this);
           } else {
-            ((qo) this).field_j.field_E = 0;
+            this.field_j.field_E = 0;
             return null;
           }
         } else {
-          ((qo) this).field_j.field_E = ((qo) this).field_j.field_E + 1;
-          return (fb) this;
+          this.field_j.field_E = this.field_j.field_E + 1;
+          return (fb) (this);
         }
     }
 
@@ -101,7 +104,7 @@ final class qo extends el {
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
         String stackOut_13_2 = null;
-        ((qo) this).field_n = 48;
+        this.field_n = 48;
         try {
           L0: {
             L1: {
@@ -135,32 +138,32 @@ final class qo extends el {
             }
             var3_int = (var5 + -6) * var3_int / var5;
             var4 = var4 * (var5 - 6) / var5;
-            ((qo) this).field_m = var4;
-            ((qo) this).field_j = param1;
-            ((qo) this).field_l = var3_int;
+            this.field_m = var4;
+            this.field_j = param1;
+            this.field_l = var3_int;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("qo.<init>(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -169,23 +172,23 @@ final class qo extends el {
             }
           }
           L5: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -193,15 +196,11 @@ final class qo extends el {
               break L5;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "More suggestions";
         field_i = "FULL ACCESS";
         field_o = "Close";

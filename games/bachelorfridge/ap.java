@@ -47,7 +47,7 @@ final class ap {
     }
 
     public static void a(int param0) {
-        int var1 = 110;
+        int var1 = 110 / ((param0 - 3) / 49);
         field_c = null;
     }
 

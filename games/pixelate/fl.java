@@ -14,27 +14,38 @@ final class fl {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         qe var2 = null;
-        qe stackIn_4_0 = null;
+        qe stackIn_6_0 = null;
         Throwable decompiledCaughtException = null;
-        qe stackOut_3_0 = null;
+        qe stackOut_5_0 = null;
         try {
-          var1_int = 0;
-          L0: while (true) {
-            var2 = w.field_y.a(var1_int, false);
-            if (var2.field_y) {
-              stackOut_3_0 = (qe) var2;
-              stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0;
-            } else {
-              var1_int++;
-              continue L0;
+          L0: {
+            L1: {
+              if (param0 == -3060) {
+                break L1;
+              } else {
+                fl.a((byte) 81);
+                break L1;
+              }
+            }
+            var1_int = 0;
+            L2: while (true) {
+              var2 = w.field_y.a(var1_int, false);
+              if (var2.field_y) {
+                stackOut_5_0 = (qe) (var2);
+                stackIn_6_0 = stackOut_5_0;
+                break L0;
+              } else {
+                var1_int++;
+                continue L2;
+              }
             }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.IllegalArgumentException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
           return null;
         }
+        return stackIn_6_0;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
@@ -42,23 +53,24 @@ final class fl {
             return td.field_b.a(nj.field_f, ke.field_a, false);
         }
         if (un.field_l) {
-            return vl.b(102, 15, 13);
+            return vl.b(102, param2, param1);
         }
-        if (hn.a(13, 15, 0)) {
+        if (hn.a(param1, param2, param3)) {
             return true;
         }
         if (!(!lh.field_g)) {
             return false;
         }
-        return go.a(12, -35, 13);
+        return go.a(param0, -35, param1);
     }
 
     final boolean d(int param0) {
+        String discarded$0 = null;
         if (param0 <= 35) {
-            String discarded$0 = ((fl) this).b((byte) 37);
-            return ((fl) this).field_d;
+            discarded$0 = this.b((byte) 37);
+            return this.field_d;
         }
-        return ((fl) this).field_d;
+        return this.field_d;
     }
 
     final static void a(byte param0) {
@@ -67,10 +79,10 @@ final class fl {
         var1 = -119 / ((param0 - -55) / 51);
         if (null == cn.field_b) {
           cn.field_b = new ko(wa.field_c, wp.field_a);
-          wa.field_c.b(-6183, (ng) (Object) cn.field_b);
+          wa.field_c.b(-6183, cn.field_b);
           return;
         } else {
-          wa.field_c.b(-6183, (ng) (Object) cn.field_b);
+          wa.field_c.b(-6183, cn.field_b);
           return;
         }
     }
@@ -78,9 +90,9 @@ final class fl {
     final boolean b(int param0) {
         if (param0 != -20425) {
             fl.a((byte) -122);
-            return ((fl) this).field_a;
+            return this.field_a;
         }
-        return ((fl) this).field_a;
+        return this.field_a;
     }
 
     final void a(int param0, boolean param1) {
@@ -104,8 +116,8 @@ final class fl {
         int stackOut_2_1 = 0;
         if (param0 != 0) {
           L0: {
-            field_g = null;
-            ((fl) this).field_d = true;
+            field_g = (int[]) null;
+            this.field_d = true;
             stackOut_5_0 = this;
             stackIn_7_0 = stackOut_5_0;
             stackIn_6_0 = stackOut_5_0;
@@ -123,11 +135,11 @@ final class fl {
               break L0;
             }
           }
-          ((fl) this).field_a = stackIn_8_1 != 0;
+          ((fl) (this)).field_a = stackIn_8_1 != 0;
           return;
         } else {
           L1: {
-            ((fl) this).field_d = true;
+            this.field_d = true;
             stackOut_1_0 = this;
             stackIn_3_0 = stackOut_1_0;
             stackIn_2_0 = stackOut_1_0;
@@ -145,7 +157,7 @@ final class fl {
               break L1;
             }
           }
-          ((fl) this).field_a = stackIn_4_1 != 0;
+          ((fl) (this)).field_a = stackIn_4_1 != 0;
           return;
         }
     }
@@ -155,28 +167,27 @@ final class fl {
         field_c = null;
         field_f = null;
         field_b = null;
+        if (param0 != 0) {
+            field_g = (int[]) null;
+        }
     }
 
     final String b(byte param0) {
         int var2 = 63 / ((param0 - 28) / 50);
-        return ((fl) this).field_e;
+        return this.field_e;
     }
 
     fl(String param0) {
-        ((fl) this).field_d = false;
-        ((fl) this).field_a = false;
+        this.field_d = false;
+        this.field_a = false;
         try {
-            ((fl) this).field_e = param0;
+            this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "fl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Ignore";
         field_f = "Names cannot contain consecutive spaces";
     }

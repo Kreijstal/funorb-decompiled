@@ -20,6 +20,11 @@ final class ud extends ck {
     static int field_C;
 
     final static void a(boolean param0) {
+        if (!param0) {
+            field_C = -27;
+            bj.a(-128, wl.d((byte) -21));
+            return;
+        }
         bj.a(-128, wl.d((byte) -21));
     }
 
@@ -41,15 +46,18 @@ final class ud extends ck {
     }
 
     public static void d(int param0) {
+        boolean discarded$0 = false;
+        if (param0 != 20000000) {
+            discarded$0 = ud.e(-26);
+            field_A = null;
+            field_w = null;
+            return;
+        }
         field_A = null;
         field_w = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_v = 20000000L;
         field_A = new ef();
     }

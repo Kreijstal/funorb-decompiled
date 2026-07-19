@@ -26,10 +26,10 @@ final class eo {
     }
 
     public static void a(byte param0) {
-        Object var2 = null;
+        String var2 = null;
         field_c = null;
         if (param0 >= -100) {
-          var2 = null;
+          var2 = (String) null;
           eo.a(89, 53, 44, (String) null, 60, (String) null);
           field_d = null;
           field_e = null;
@@ -46,16 +46,17 @@ final class eo {
     }
 
     final static void a(int param0) {
-        ka.field_h = ta.a(ti.field_g, new double[3], new double[3]);
+        ka.field_h = ta.a(ti.field_g, new double[]{0.0, 0.0, 0.0}, new double[]{0.0, 1.0, 0.0});
         bd.field_b = ta.a(ka.field_h);
         if (param0 >= -14) {
-            field_a = null;
+            field_a = (String) null;
         }
     }
 
     final static void a(int param0, int param1, int param2, String param3, int param4, String param5) {
         bc var8 = null;
         int var7 = 0;
+        int discarded$0 = 0;
         try {
             var8 = nd.field_Lb;
             bc var6 = var8;
@@ -63,25 +64,21 @@ final class eo {
             var8.field_t = var8.field_t + 1;
             var7 = var8.field_t;
             var8.a(param4, false);
-            if (!(param0 != ~param4)) {
+            if (!(param0 != (param4 ^ -1))) {
                 var8.a(param3, 0);
             }
             if (param5 == null) {
                 var8.b(param1, false);
             } else {
-                int discarded$0 = hn.a(false, param5, (bh) (Object) var8);
+                discarded$0 = hn.a(false, param5, var8);
             }
             var8.b(var8.field_t + -var7, -2);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "eo.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "eo.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "To play a multiplayer game, please log in or create a free account.";
         field_d = "<%0> cannot join; the game is full.";
     }

@@ -31,6 +31,7 @@ final class pg {
 
     final static void a(int param0, d param1, int param2, qc param3) {
         try {
+            byte[] array$1 = null;
             RuntimeException var4 = null;
             int var5 = 0;
             ClassNotFoundException var6 = null;
@@ -49,16 +50,15 @@ final class pg {
             Class[] var12 = null;
             int var13 = 0;
             int var14 = 0;
-            Object var15 = null;
+            qc var15 = null;
             String var16 = null;
             String var17 = null;
             int var18 = 0;
             Object var19 = null;
+            eg var19_ref = null;
             byte[][] var20 = null;
             String var21 = null;
             byte[][] var22 = null;
-            byte[][] var23 = null;
-            byte[][] var24 = null;
             RuntimeException stackIn_38_0 = null;
             StringBuilder stackIn_38_1 = null;
             RuntimeException stackIn_39_0 = null;
@@ -94,28 +94,28 @@ final class pg {
             var14 = Geoblox.field_C;
             try {
               L0: {
-                var19 = (Object) (Object) new eg();
-                ((eg) var19).field_f = param3.c((byte) 34);
-                ((eg) var19).field_m = param3.a((byte) -127);
-                ((eg) var19).field_j = new int[((eg) var19).field_f];
-                ((eg) var19).field_i = new cb[((eg) var19).field_f];
-                ((eg) var19).field_g = new int[((eg) var19).field_f];
-                ((eg) var19).field_n = new cb[((eg) var19).field_f];
-                ((eg) var19).field_k = new int[((eg) var19).field_f];
-                ((eg) var19).field_o = new byte[((eg) var19).field_f][][];
+                var19_ref = new eg();
+                var19_ref.field_f = param3.c((byte) 34);
+                var19_ref.field_m = param3.a((byte) -127);
+                var19_ref.field_j = new int[var19_ref.field_f];
+                var19_ref.field_i = new cb[var19_ref.field_f];
+                var19_ref.field_g = new int[var19_ref.field_f];
+                var19_ref.field_n = new cb[var19_ref.field_f];
+                var19_ref.field_k = new int[var19_ref.field_f];
+                var19_ref.field_o = new byte[var19_ref.field_f][][];
                 var5 = 0;
                 L1: while (true) {
-                  if (var5 >= ((eg) var19).field_f) {
+                  if (var5 >= var19_ref.field_f) {
                     L2: {
                       if (param0 == -4) {
                         break L2;
                       } else {
-                        var15 = null;
+                        var15 = (qc) null;
                         pg.a(96, (d) null, -109, (qc) null);
                         break L2;
                       }
                     }
-                    sl.field_k.a(-92, (hf) var19);
+                    sl.field_k.a(-92, var19_ref);
                     break L0;
                   } else {
                     try {
@@ -130,69 +130,68 @@ final class pg {
                                 break L5;
                               } else {
                                 if (var6_int != 2) {
-                                  if (var6_int == 3) {
-                                    var21 = param3.e((byte) 103);
-                                    var8 = param3.e((byte) 98);
-                                    var9 = param3.c((byte) 34);
-                                    var10 = new String[var9];
-                                    var11_int = 0;
-                                    L6: while (true) {
-                                      if (var9 <= var11_int) {
-                                        L7: {
-                                          var24 = new byte[var9][];
-                                          var23 = var24;
-                                          var22 = var23;
-                                          var20 = var22;
-                                          var11 = var20;
-                                          if (var6_int == 3) {
-                                            var12_int = 0;
-                                            L8: while (true) {
-                                              if (var12_int >= var9) {
-                                                break L7;
-                                              } else {
-                                                var13 = param3.a((byte) -70);
-                                                var11[var12_int] = new byte[var13];
-                                                param3.b(29915, var13, var24[var12_int], 0);
-                                                var12_int++;
-                                                continue L8;
-                                              }
+                                  L6: {
+                                    if ((var6_int ^ -1) == -4) {
+                                      break L6;
+                                    } else {
+                                      if (var6_int == 4) {
+                                        break L6;
+                                      } else {
+                                        var5++;
+                                        decompiledRegionSelector0 = 1;
+                                        break L3;
+                                      }
+                                    }
+                                  }
+                                  var21 = param3.e((byte) 103);
+                                  var8 = param3.e((byte) 98);
+                                  var9 = param3.c((byte) 34);
+                                  var10 = new String[var9];
+                                  var11_int = 0;
+                                  L7: while (true) {
+                                    if (var9 <= var11_int) {
+                                      L8: {
+                                        var22 = new byte[var9][];
+                                        var20 = var22;
+                                        var11 = var20;
+                                        if ((var6_int ^ -1) == -4) {
+                                          var12_int = 0;
+                                          L9: while (true) {
+                                            if (var12_int >= var9) {
+                                              break L8;
+                                            } else {
+                                              var13 = param3.a((byte) -70);
+                                              array$1 = new byte[var13];
+                                              var11[var12_int] = array$1;
+                                              param3.b(29915, var13, var22[var12_int], 0);
+                                              var12_int++;
+                                              continue L9;
                                             }
-                                          } else {
-                                            break L7;
                                           }
+                                        } else {
+                                          break L8;
                                         }
-                                        ((eg) var19).field_k[var5] = var6_int;
-                                        var12 = new Class[var9];
-                                        var18 = 0;
-                                        var13 = var18;
-                                        L9: while (true) {
-                                          if (var18 >= var9) {
-                                            ((eg) var19).field_i[var5] = param1.a(var8, -126, var12, ag.a(var21, false));
-                                            ((eg) var19).field_o[var5] = var24;
-                                            break L4;
-                                          } else {
-                                            var12[var18] = ag.a(var10[var18], false);
-                                            var18++;
-                                            continue L9;
-                                          }
+                                      }
+                                      var19_ref.field_k[var5] = var6_int;
+                                      var12 = new Class[var9];
+                                      var18 = 0;
+                                      var13 = var18;
+                                      L10: while (true) {
+                                        if (var18 >= var9) {
+                                          var19_ref.field_i[var5] = param1.a(var8, -126, var12, ag.a(var21, false));
+                                          var19_ref.field_o[var5] = var22;
+                                          break L4;
+                                        } else {
+                                          var12[var18] = ag.a(var10[var18], false);
+                                          var18++;
+                                          continue L10;
                                         }
-                                      } else {
-                                        var10[var11_int] = param3.e((byte) 120);
-                                        var11_int++;
-                                        continue L6;
                                       }
+                                    } else {
+                                      var10[var11_int] = param3.e((byte) 120);
+                                      var11_int++;
+                                      continue L7;
                                     }
-                                  } else {
-                                    L10: {
-                                      if (var6_int != 4) {
-                                        break L10;
-                                      } else {
-                                        break L10;
-                                      }
-                                    }
-                                    var5++;
-                                    decompiledRegionSelector0 = 1;
-                                    break L3;
                                   }
                                 } else {
                                   break L5;
@@ -206,16 +205,16 @@ final class pg {
                             var17 = param3.e((byte) 125);
                             var8 = var17;
                             var9 = 0;
-                            if (var6_int != 1) {
+                            if (-2 != (var6_int ^ -1)) {
                               break L11;
                             } else {
                               var9 = param3.a((byte) -123);
                               break L11;
                             }
                           }
-                          ((eg) var19).field_k[var5] = var6_int;
-                          ((eg) var19).field_g[var5] = var9;
-                          ((eg) var19).field_n[var5] = param1.a(ag.a(var16, false), 0, var17);
+                          var19_ref.field_k[var5] = var6_int;
+                          var19_ref.field_g[var5] = var9;
+                          var19_ref.field_n[var5] = param1.a(ag.a(var16, false), 0, var17);
                           break L4;
                         }
                         decompiledRegionSelector0 = 0;
@@ -225,15 +224,31 @@ final class pg {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L12: {
                         var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                        ((eg) var19).field_j[var5] = -1;
+                        var19_ref.field_j[var5] = -1;
                         decompiledRegionSelector0 = 0;
                         break L12;
+                      }
+                    } catch (java.lang.SecurityException decompiledCaughtParameter1) {
+                      decompiledCaughtException = decompiledCaughtParameter1;
+                      L13: {
+                        var6_ref = (SecurityException) (Object) decompiledCaughtException;
+                        var19_ref.field_j[var5] = -2;
+                        decompiledRegionSelector0 = 0;
+                        break L13;
+                      }
+                    } catch (java.lang.NullPointerException decompiledCaughtParameter2) {
+                      decompiledCaughtException = decompiledCaughtParameter2;
+                      L14: {
+                        var6_ref2 = (NullPointerException) (Object) decompiledCaughtException;
+                        var19_ref.field_j[var5] = -3;
+                        decompiledRegionSelector0 = 0;
+                        break L14;
                       }
                     } catch (java.lang.Exception decompiledCaughtParameter3) {
                       decompiledCaughtException = decompiledCaughtParameter3;
                       L15: {
                         var6_ref3 = (Exception) (Object) decompiledCaughtException;
-                        ((eg) var19).field_j[var5] = -4;
+                        var19_ref.field_j[var5] = -4;
                         decompiledRegionSelector0 = 0;
                         break L15;
                       }
@@ -241,7 +256,7 @@ final class pg {
                       decompiledCaughtException = decompiledCaughtParameter4;
                       L16: {
                         var6_ref4 = decompiledCaughtException;
-                        ((eg) var19).field_j[var5] = -5;
+                        var19_ref.field_j[var5] = -5;
                         decompiledRegionSelector0 = 0;
                         break L16;
                       }
@@ -259,23 +274,23 @@ final class pg {
               decompiledCaughtException = decompiledCaughtParameter5;
               L17: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_37_0 = (RuntimeException) var4;
+                stackOut_37_0 = (RuntimeException) (var4);
                 stackOut_37_1 = new StringBuilder().append("pg.C(").append(param0).append(',');
                 stackIn_39_0 = stackOut_37_0;
                 stackIn_39_1 = stackOut_37_1;
                 stackIn_38_0 = stackOut_37_0;
                 stackIn_38_1 = stackOut_37_1;
                 if (param1 == null) {
-                  stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-                  stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+                  stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
+                  stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
                   stackOut_39_2 = "null";
                   stackIn_40_0 = stackOut_39_0;
                   stackIn_40_1 = stackOut_39_1;
                   stackIn_40_2 = stackOut_39_2;
                   break L17;
                 } else {
-                  stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-                  stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+                  stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
+                  stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
                   stackOut_38_2 = "{...}";
                   stackIn_40_0 = stackOut_38_0;
                   stackIn_40_1 = stackOut_38_1;
@@ -284,23 +299,23 @@ final class pg {
                 }
               }
               L18: {
-                stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
+                stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
                 stackOut_40_1 = ((StringBuilder) (Object) stackIn_40_1).append(stackIn_40_2).append(',').append(param2).append(',');
                 stackIn_42_0 = stackOut_40_0;
                 stackIn_42_1 = stackOut_40_1;
                 stackIn_41_0 = stackOut_40_0;
                 stackIn_41_1 = stackOut_40_1;
                 if (param3 == null) {
-                  stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
-                  stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+                  stackOut_42_0 = (RuntimeException) ((Object) stackIn_42_0);
+                  stackOut_42_1 = (StringBuilder) ((Object) stackIn_42_1);
                   stackOut_42_2 = "null";
                   stackIn_43_0 = stackOut_42_0;
                   stackIn_43_1 = stackOut_42_1;
                   stackIn_43_2 = stackOut_42_2;
                   break L18;
                 } else {
-                  stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
-                  stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
+                  stackOut_41_0 = (RuntimeException) ((Object) stackIn_41_0);
+                  stackOut_41_1 = (StringBuilder) ((Object) stackIn_41_1);
                   stackOut_41_2 = "{...}";
                   stackIn_43_0 = stackOut_41_0;
                   stackIn_43_1 = stackOut_41_1;
@@ -308,7 +323,7 @@ final class pg {
                   break L18;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + ')');
+              throw t.a((Throwable) ((Object) stackIn_43_0), stackIn_43_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -321,13 +336,12 @@ final class pg {
         field_d = null;
         field_c = null;
         field_a = null;
+        if (param0 != 22059) {
+            pg.a(52);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[8192];
         field_c = new le();
         field_a = new String[]{"Geoblox Flush", "Ordered Geometry", "Perfect Geometry", "Chain Geometry", "Sequence Geometry", "Succession Geometry", "Dark Geometry", "Lightning Geometrician", "Natural Geometrician", "Sweet Geometrician", "Sparkly Geometrician", "Sick Geometrician", "Stellar Geometrician", "Sporty Geometrician", "Cooking Geometrician", "Parallel Geometrician", "Spooky Geometrician"};

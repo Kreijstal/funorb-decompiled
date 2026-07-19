@@ -16,6 +16,7 @@ abstract class ld {
     static df field_k;
 
     final static boolean a(byte param0, char param1) {
+        boolean discarded$1 = false;
         int stackIn_23_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_40_0 = 0;
@@ -118,7 +119,7 @@ abstract class ld {
             }
           }
         } else {
-          boolean discarded$1 = ld.a((byte) -32, '');
+          discarded$1 = ld.a((byte) -32, '');
           if (48 <= param1) {
             if (param1 > 57) {
               if (param1 < 65) {
@@ -194,6 +195,9 @@ abstract class ld {
     abstract void a(int param0, int param1);
 
     public static void a(int param0) {
+        if (param0 != 0) {
+            return;
+        }
         field_d = null;
         field_j = null;
         field_b = null;
@@ -203,10 +207,6 @@ abstract class ld {
     abstract void a(int param0, int param1, int param2);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Hold <%0> to charge, and release to fire";
         field_l = 0;
         field_j = "If you do nothing the game will revert to normal view in <%0> second.";

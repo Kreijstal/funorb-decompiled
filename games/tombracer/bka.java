@@ -6,11 +6,11 @@ final class bka {
 
     final void a(byte param0, int param1) {
         if (param0 >= -112) {
-          ((bka) this).field_a = null;
-          ((bka) this).field_a.b((byte) -69, (vg) (Object) new al(param1));
+          this.field_a = (vna) null;
+          this.field_a.b((byte) -69, new al(param1));
           return;
         } else {
-          ((bka) this).field_a.b((byte) -69, (vg) (Object) new al(param1));
+          this.field_a.b((byte) -69, new al(param1));
           return;
         }
     }
@@ -19,7 +19,7 @@ final class bka {
         if (param0 != -26) {
             return false;
         }
-        return ((bka) this).field_a.d((byte) 14);
+        return this.field_a.d((byte) 14);
     }
 
     final static void a(byte param0) {
@@ -28,17 +28,17 @@ final class bka {
     }
 
     final int a(int param0) {
-        if (!(!((bka) this).field_a.d((byte) 14))) {
+        if (!(!this.field_a.d((byte) 14))) {
             return 0;
         }
         int var2 = -7 / ((32 - param0) / 55);
-        return ((al) (Object) ((bka) this).field_a.c(72)).field_i;
+        return ((al) ((Object) this.field_a.c(72))).field_i;
     }
 
     final void c(int param0) {
-        ((bka) this).field_a.d(8);
+        this.field_a.d(8);
         if (param0 > -63) {
-            ((bka) this).field_a = null;
+            this.field_a = (vna) null;
         }
     }
 
@@ -46,11 +46,11 @@ final class bka {
         if (param0 != 0) {
             return -61;
         }
-        return ((bka) this).field_a.a((byte) -16);
+        return this.field_a.a((byte) -16);
     }
 
     public bka() {
-        ((bka) this).field_a = new vna();
+        this.field_a = new vna();
     }
 
     static {

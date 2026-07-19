@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 class ph extends qj implements ga {
     static String[] field_nb;
     private fa field_kb;
@@ -15,22 +13,41 @@ class ph extends qj implements ga {
     private boolean field_lb;
 
     final static void a(int param0, boolean param1, int param2) {
+        hb discarded$2 = null;
+        hb discarded$3 = null;
         int var3 = 0;
         var3 = 1 << param2;
         if ((var3 & eb.field_c) == 0) {
           eb.field_c = eb.field_c | var3;
-          jg.field_H = jg.field_H | var3;
-          pk.field_a.b(90, (rf) (Object) new wf(param2));
-          if (!a.field_a) {
-            if (wk.a(112)) {
-              bh.field_e.b(86, (rf) (Object) new hb(param2, param0, ja.field_d, oe.field_a, il.field_i, rj.field_h));
-              return;
+          if (!param1) {
+            jg.field_H = jg.field_H | var3;
+            pk.field_a.b(90, new wf(param2));
+            if (!a.field_a) {
+              if (wk.a(112)) {
+                bh.field_e.b(86, new hb(param2, param0, ja.field_d, oe.field_a, il.field_i, rj.field_h));
+                return;
+              } else {
+                discarded$2 = rh.a(param0, rj.field_h, ja.field_d, il.field_i, oe.field_a, -1893600464, 4, param2);
+                return;
+              }
             } else {
-              hb discarded$2 = rh.a(param0, rj.field_h, ja.field_d, il.field_i, oe.field_a, -1893600464, 4, param2);
               return;
             }
           } else {
-            return;
+            ph.a(-49, false, 94);
+            jg.field_H = jg.field_H | var3;
+            pk.field_a.b(90, new wf(param2));
+            if (!a.field_a) {
+              if (wk.a(112)) {
+                bh.field_e.b(86, new hb(param2, param0, ja.field_d, oe.field_a, il.field_i, rj.field_h));
+                return;
+              } else {
+                discarded$3 = rh.a(param0, rj.field_h, ja.field_d, il.field_i, oe.field_a, -1893600464, 4, param2);
+                return;
+              }
+            } else {
+              return;
+            }
           }
         } else {
           return;
@@ -39,13 +56,13 @@ class ph extends qj implements ga {
 
     final void o(int param0) {
         kj var2 = null;
-        ((ph) this).field_kb.b(2121792, 2, 4210752);
-        var2 = new kj((ph) this, ((ph) this).field_fb, cf.field_p);
+        this.field_kb.b(2121792, 2, 4210752);
+        var2 = new kj((ph) (this), this.field_fb, cf.field_p);
         if (param0 < 121) {
           return;
         } else {
           var2.a(fd.field_b, 13759, 15);
-          ((ph) this).c(20317, (uj) (Object) var2);
+          this.c(20317, var2);
           return;
         }
     }
@@ -54,15 +71,18 @@ class ph extends qj implements ga {
         field_mb = null;
         field_nb = null;
         field_gb = null;
+        if (param0 != -1) {
+            field_gb = (String) null;
+        }
     }
 
     final void n(int param0) {
         int var2 = 0;
-        if (((ph) this).field_G) {
-          ((ph) this).field_G = false;
+        if (this.field_G) {
+          this.field_G = false;
           var2 = -21 / ((param0 - -47) / 42);
-          if (!((ph) this).field_ib) {
-            if (!((ph) this).field_lb) {
+          if (!this.field_ib) {
+            if (!this.field_lb) {
               return;
             } else {
               ng.h((byte) -58);
@@ -98,9 +118,9 @@ class ph extends qj implements ga {
         try {
           L0: {
             L1: {
-              if (((ph) this).field_hb) {
+              if (this.field_hb) {
                 fd.a(3, 0);
-                ((ph) this).n(125);
+                this.n(125);
                 break L1;
               } else {
                 ef.a("tochangedisplayname.ws", ll.b(90), 100);
@@ -118,23 +138,23 @@ class ph extends qj implements ga {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var6;
+            stackOut_6_0 = (RuntimeException) (var6);
             stackOut_6_1 = new StringBuilder().append("ph.E(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -142,7 +162,7 @@ class ph extends qj implements ga {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -157,6 +177,7 @@ class ph extends qj implements ga {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_5_0 = false;
         int stackOut_3_0 = 0;
@@ -174,42 +195,44 @@ class ph extends qj implements ga {
               if (param2 == -90) {
                 break L1;
               } else {
-                ((ph) this).field_jb = false;
+                this.field_jb = false;
                 break L1;
               }
             }
-            if (param3 != 13) {
+            if ((param3 ^ -1) != -14) {
               stackOut_5_0 = super.a(param0, param1, (byte) -90, param3);
               stackIn_6_0 = stackOut_5_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              ((ph) this).n(108);
+              this.n(108);
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_0 = (RuntimeException) (var5);
             stackOut_7_1 = new StringBuilder().append("ph.EA(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -217,12 +240,18 @@ class ph extends qj implements ga {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_6_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          return stackIn_6_0;
+        }
     }
 
     final void a(String param0, int param1, boolean param2) {
+        dk discarded$2 = null;
+        dk discarded$3 = null;
         RuntimeException var4 = null;
         kj var5 = null;
         Object stackIn_4_0 = null;
@@ -244,6 +273,7 @@ class ph extends qj implements ga {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
         Object stackOut_5_0 = null;
@@ -270,8 +300,9 @@ class ph extends qj implements ga {
         String stackOut_28_2 = null;
         try {
           L0: {
-            if (((ph) this).field_jb) {
-              return;
+            if (this.field_jb) {
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 stackOut_3_0 = this;
@@ -292,7 +323,7 @@ class ph extends qj implements ga {
                 }
               }
               L2: {
-                ((ph) this).field_jb = stackIn_6_1 != 0;
+                ((ph) (this)).field_jb = stackIn_6_1 != 0;
                 stackOut_6_0 = this;
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_7_0 = stackOut_6_0;
@@ -311,27 +342,27 @@ class ph extends qj implements ga {
                 }
               }
               L3: {
-                ((ph) this).field_hb = stackIn_9_1 != 0;
-                ((ph) this).field_kb.b(8405024, 2, 4210752);
-                var5 = new kj((ph) this, ((ph) this).field_fb, param0);
-                if (param1 == 5) {
+                ((ph) (this)).field_hb = stackIn_9_1 != 0;
+                this.field_kb.b(8405024, 2, 4210752);
+                var5 = new kj((ph) (this), this.field_fb, param0);
+                if ((param1 ^ -1) == -6) {
                   var5.a(hd.field_i, 13759, 11);
                   var5.a(bg.field_b, 13759, 17);
                   break L3;
                 } else {
                   if (256 != param1) {
                     L4: {
-                      stackOut_12_0 = (kj) var5;
+                      stackOut_12_0 = (kj) (var5);
                       stackIn_14_0 = stackOut_12_0;
                       stackIn_13_0 = stackOut_12_0;
-                      if (((ph) this).field_ib) {
-                        stackOut_14_0 = (kj) (Object) stackIn_14_0;
+                      if (this.field_ib) {
+                        stackOut_14_0 = (kj) ((Object) stackIn_14_0);
                         stackOut_14_1 = ma.field_g;
                         stackIn_15_0 = stackOut_14_0;
                         stackIn_15_1 = stackOut_14_1;
                         break L4;
                       } else {
-                        stackOut_13_0 = (kj) (Object) stackIn_13_0;
+                        stackOut_13_0 = (kj) ((Object) stackIn_13_0);
                         stackOut_13_1 = dk.field_t;
                         stackIn_15_0 = stackOut_13_0;
                         stackIn_15_1 = stackOut_13_1;
@@ -341,7 +372,7 @@ class ph extends qj implements ga {
                     ((kj) (Object) stackIn_15_0).a(stackIn_15_1, 13759, -1);
                     break L3;
                   } else {
-                    dk discarded$2 = var5.a((byte) 88, (qg) this, ma.field_g);
+                    discarded$2 = var5.a((byte) 88, (qg) (this), ma.field_g);
                     break L3;
                   }
                 }
@@ -351,15 +382,15 @@ class ph extends qj implements ga {
                   var5.a(kf.field_u, 13759, 7);
                   break L5;
                 } else {
-                  if (param1 == 4) {
+                  if ((param1 ^ -1) == -5) {
                     var5.a(s.field_d, 13759, 8);
                     break L5;
                   } else {
-                    if (param1 != 6) {
-                      if (param1 != 9) {
+                    if ((param1 ^ -1) != -7) {
+                      if ((param1 ^ -1) != -10) {
                         break L5;
                       } else {
-                        dk discarded$3 = var5.a((byte) 123, (qg) this, db.field_B);
+                        discarded$3 = var5.a((byte) 123, (qg) (this), db.field_B);
                         break L5;
                       }
                     } else {
@@ -369,7 +400,8 @@ class ph extends qj implements ga {
                   }
                 }
               }
-              ((ph) this).c(20317, (uj) (Object) var5);
+              this.c(20317, var5);
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -377,23 +409,23 @@ class ph extends qj implements ga {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var4;
+            stackOut_27_0 = (RuntimeException) (var4);
             stackOut_27_1 = new StringBuilder().append("ph.J(");
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
             stackIn_28_1 = stackOut_27_1;
             if (param0 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "null";
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
               break L6;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "{...}";
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
@@ -401,31 +433,32 @@ class ph extends qj implements ga {
               break L6;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + ',' + param1 + ',' + param2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     ph(tc param0, qe param1, String param2, boolean param3, boolean param4) {
-        super(param0, (uj) (Object) new kj((ph) null, param1, param2), 77, 10, 10);
+        super(param0, new kj((ph) null, param1, param2), 77, 10, 10);
         try {
-            ((ph) this).field_hb = false;
-            ((ph) this).field_jb = false;
-            ((ph) this).field_lb = param4 ? true : false;
-            ((ph) this).field_ib = param3 ? true : false;
-            ((ph) this).field_fb = param1;
-            ((ph) this).field_kb = new fa(13, 50, 274, 30, 15, 2113632, 4210752);
-            ((ph) this).field_kb.field_D = true;
-            ((ph) this).a(true, (uj) (Object) ((ph) this).field_kb);
+            this.field_hb = false;
+            this.field_jb = false;
+            this.field_lb = param4 ? true : false;
+            this.field_ib = param3 ? true : false;
+            this.field_fb = param1;
+            this.field_kb = new fa(13, 50, 274, 30, 15, 2113632, 4210752);
+            this.field_kb.field_D = true;
+            this.a(true, this.field_kb);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_gb = "If you do nothing the game will revert to normal view in <%0> second.";
         field_mb = "Confirm Email:";
     }

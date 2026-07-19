@@ -15,10 +15,6 @@ final class wl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "wl.A(";
         field_a = 0;
     }

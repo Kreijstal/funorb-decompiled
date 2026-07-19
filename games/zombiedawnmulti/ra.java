@@ -24,7 +24,7 @@ final class ra extends br {
             c.a(eb.field_p, (byte) -100, lh.field_i, od.field_Bb);
             t.a(false, 0, param0, 0);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "ra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -36,7 +36,7 @@ final class ra extends br {
             try {
                 un.field_p = param2;
                 if (param1 > -29) {
-                    field_o = null;
+                    field_o = (sk) null;
                 }
                 try {
                     var3 = param0.getParameter("cookieprefix");
@@ -54,7 +54,7 @@ final class ra extends br {
                 }
                 ak.a(14158, param0);
             } catch (RuntimeException runtimeException) {
-                throw fa.a((Throwable) (Object) runtimeException, "ra.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+                throw fa.a((Throwable) ((Object) runtimeException), "ra.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -72,17 +72,17 @@ final class ra extends br {
         field_o = null;
         field_i = null;
         field_j = null;
+        if (!param0) {
+            String var2 = (String) null;
+            ra.a((java.applet.Applet) null, 1, (String) null);
+        }
     }
 
     ra() {
-        ((ra) this).field_k = false;
+        this.field_k = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = new int[]{1, 2, 3, 5, 2, 5, 5, 5, 5, 5, 2, 3, 5, 1, 5, 5, 3};
         field_g = "<%0>/<%1>";
         field_i = "Quit";

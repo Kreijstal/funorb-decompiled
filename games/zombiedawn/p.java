@@ -11,6 +11,7 @@ final class p {
 
     final static void b(int param0, int param1) {
         try {
+            Object discarded$1 = null;
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
             L0: {
@@ -23,7 +24,7 @@ final class p {
             }
             try {
               L1: {
-                Object discarded$1 = qe.a(new Object[1], "resizing", 29674, hc.a(0));
+                discarded$1 = qe.a(new Object[]{new Integer(param0)}, "resizing", 29674, hc.a(0));
                 break L1;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -42,16 +43,16 @@ final class p {
 
     final static void a(int param0, int param1) {
         am var2 = dp.field_e;
-        var2.j(11, 6);
+        var2.j(11, param1);
         var2.i(1, 101);
-        var2.i(0, 45);
+        var2.i(param0, 45);
     }
 
     public static void a(boolean param0) {
         field_c = null;
         field_b = null;
         if (param0) {
-            field_b = null;
+            field_b = (Random) null;
         }
     }
 
@@ -83,10 +84,6 @@ final class p {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new Random();
         field_c = "Highscores";
     }

@@ -9,40 +9,41 @@ final class gg extends id {
     boolean field_i;
 
     final gg a(m param0) {
-        ((gg) this).field_k = param0.a((byte) 109, ((gg) this).field_k);
-        ((gg) this).field_l = param0.a(((gg) this).field_l, true);
-        if (((gg) this).field_j == ((gg) this).field_m) {
-          int dupTemp$2 = param0.a((byte) 46, ((gg) this).field_j);
-          ((gg) this).field_m = dupTemp$2;
-          ((gg) this).field_j = dupTemp$2;
-          return (gg) this;
+        int dupTemp$2 = 0;
+        this.field_k = param0.a((byte) 109, this.field_k);
+        this.field_l = param0.a(this.field_l, true);
+        if (this.field_j == this.field_m) {
+          dupTemp$2 = param0.a((byte) 46, this.field_j);
+          this.field_m = dupTemp$2;
+          this.field_j = dupTemp$2;
+          return (gg) (this);
         } else {
           L0: {
-            ((gg) this).field_j = param0.a((byte) 46, ((gg) this).field_j);
-            ((gg) this).field_m = param0.a((byte) 46, ((gg) this).field_m);
-            if (((gg) this).field_j != ((gg) this).field_m) {
+            this.field_j = param0.a((byte) 46, this.field_j);
+            this.field_m = param0.a((byte) 46, this.field_m);
+            if (this.field_j != this.field_m) {
               break L0;
             } else {
-              ((gg) this).field_j = ((gg) this).field_j - 1;
+              this.field_j = this.field_j - 1;
               break L0;
             }
           }
-          return (gg) this;
+          return (gg) (this);
         }
     }
 
     gg(int param0, byte[] param1, int param2, int param3) {
-        ((gg) this).field_l = param0;
-        ((gg) this).field_k = param1;
-        ((gg) this).field_j = param2;
-        ((gg) this).field_m = param3;
+        this.field_l = param0;
+        this.field_k = param1;
+        this.field_j = param2;
+        this.field_m = param3;
     }
 
     gg(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((gg) this).field_l = param0;
-        ((gg) this).field_k = param1;
-        ((gg) this).field_j = param2;
-        ((gg) this).field_m = param3;
-        ((gg) this).field_i = param4 ? true : false;
+        this.field_l = param0;
+        this.field_k = param1;
+        this.field_j = param2;
+        this.field_m = param3;
+        this.field_i = param4 ? true : false;
     }
 }

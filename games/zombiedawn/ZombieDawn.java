@@ -12,19 +12,19 @@ public final class ZombieDawn extends m {
     public static int field_J;
 
     final void b(byte param0) {
-        ((ZombieDawn) this).a(41, 7, 11, false, 9, 0, 1, 10);
+        this.a(41, 7, 11, false, 9, 0, 1, 10);
         int var2 = 89 / ((35 - param0) / 49);
         oj.field_d = new tl();
-        ((ZombieDawn) this).a((ug) (Object) oj.field_d, (byte) 14);
+        this.a(oj.field_d, (byte) 14);
         rj var3 = new rj();
         var3.a(128, (byte) -128, 9);
-        ac.a(vh.field_a, true, (java.awt.Component) (Object) cj.field_d, var3, 22050, -97);
-        ((ZombieDawn) this).a(false, true, true, false, -6046);
+        ac.a(vh.field_a, true, (java.awt.Component) ((Object) cj.field_d), var3, 22050, -97);
+        this.a(false, true, true, false, -6046);
     }
 
     final boolean n(int param0) {
         if (param0 != 10) {
-            field_E = null;
+            field_E = (long[]) null;
             return false;
         }
         return false;
@@ -97,12 +97,12 @@ public final class ZombieDawn extends m {
             if (16 <= po.field_xb) {
               sg.field_eb.b((byte) 108);
               sg.field_eb.a((byte) -102);
-              var17.a(512 + -(po.field_xb << 4), (byte) -128, true);
+              var17.a(512 + -(po.field_xb << -1880089340), (byte) -128, true);
               break L0;
             } else {
               ke.field_c.b((byte) 120);
               ke.field_c.a((byte) -118);
-              var17.a(po.field_xb << 4, (byte) 46, false);
+              var17.a(po.field_xb << -626509916, (byte) 46, false);
               break L0;
             }
           } else {
@@ -120,7 +120,7 @@ public final class ZombieDawn extends m {
                 if (0.0f < oj.field_d.field_b) {
                   break L5;
                 } else {
-                  if (!((ZombieDawn) this).field_F) {
+                  if (!this.field_F) {
                     break L4;
                   } else {
                     break L5;
@@ -128,11 +128,11 @@ public final class ZombieDawn extends m {
                 }
               }
               L6: {
-                ((ZombieDawn) this).field_F = true;
+                this.field_F = true;
                 var2_ref = sg.field_jb;
                 var3 = 380;
                 var4_ref_String = jh.field_l;
-                var5 = ((rb) (Object) var2_ref).b(var4_ref_String);
+                var5 = ((rb) ((Object) var2_ref)).b(var4_ref_String);
                 if (var3 > var5) {
                   var5 = var3 + 20;
                   break L6;
@@ -179,11 +179,11 @@ public final class ZombieDawn extends m {
                   bi.f(var8, var7, var11, var12);
                   pf.field_f.b(var11 + -pf.field_f.field_w, -pf.field_f.field_t + var12);
                   bi.f(var10, var9, var11, var12);
-                  ((rb) (Object) var2_ref).a(var4_ref_String, bd.field_d, nh.field_G, 2, -1);
+                  ((rb) ((Object) var2_ref)).a(var4_ref_String, bd.field_d, nh.field_G, 2, -1);
                   var13 = (int)(oj.field_d.field_b * (float)var3 / 100.0f);
                   bi.b(var8 + -(var3 / 2), 10 + var7, var3, 12, 0);
                   bi.f(-(var3 / 2) + var8, var7 + 10, var8 + (-(var3 / 2) - -var13), var7 - -22);
-                  if (bd.field_e != 640) {
+                  if (-641 != (bd.field_e ^ -1)) {
                     break L10;
                   } else {
                     if (480 != nh.field_P) {
@@ -206,18 +206,18 @@ public final class ZombieDawn extends m {
               break L3;
             }
           }
-          ((ZombieDawn) this).field_F = false;
+          this.field_F = false;
           break L3;
         }
         L11: {
-          if (lo.field_j < 2) {
+          if ((lo.field_j ^ -1) > -3) {
             break L11;
           } else {
             if (bn.field_f) {
               L12: {
-                if (((ZombieDawn) this).field_G == null) {
-                  ((ZombieDawn) this).field_G = new StringBuilder("Mem: 00000KiB");
-                  ((ZombieDawn) this).field_I = new StringBuilder("FPS: 00");
+                if (this.field_G == null) {
+                  this.field_G = new StringBuilder("Mem: 00000KiB");
+                  this.field_I = new StringBuilder("FPS: 00");
                   break L12;
                 } else {
                   break L12;
@@ -226,7 +226,7 @@ public final class ZombieDawn extends m {
               L13: {
                 if (tp.field_p % 50L == 0L) {
                   var18 = Runtime.getRuntime();
-                  var3 = (int)(var18.totalMemory() - var18.freeMemory()) >> 10;
+                  var3 = (int)(var18.totalMemory() - var18.freeMemory()) >> -1221530038;
                   var4 = mf.field_d;
                   var5 = 9;
                   L14: while (true) {
@@ -236,14 +236,14 @@ public final class ZombieDawn extends m {
                         if (var5 <= 4) {
                           break L13;
                         } else {
-                          ((ZombieDawn) this).field_I.setCharAt(var5, (char)(48 + var4 % 10));
+                          this.field_I.setCharAt(var5, (char)(48 + var4 % 10));
                           var4 = var4 / 10;
                           var5--;
                           continue L15;
                         }
                       }
                     } else {
-                      ((ZombieDawn) this).field_G.setCharAt(var5, (char)(var3 % 10 - -48));
+                      this.field_G.setCharAt(var5, (char)(var3 % 10 - -48));
                       var3 = var3 / 10;
                       var5--;
                       continue L14;
@@ -253,8 +253,8 @@ public final class ZombieDawn extends m {
                   break L13;
                 }
               }
-              pc.field_k.c(((ZombieDawn) this).field_G.toString(), 5, 20, 16777215, 1);
-              pc.field_k.c(((ZombieDawn) this).field_I.toString(), 5, 35, 16777215, 1);
+              pc.field_k.c(this.field_G.toString(), 5, 20, 16777215, 1);
+              pc.field_k.c(this.field_I.toString(), 5, 35, 16777215, 1);
               break L11;
             } else {
               break L11;
@@ -265,14 +265,14 @@ public final class ZombieDawn extends m {
           if (param0 == -14964) {
             break L16;
           } else {
-            ((ZombieDawn) this).field_G = null;
+            this.field_G = (StringBuilder) null;
             break L16;
           }
         }
     }
 
     public ZombieDawn() {
-        sa.field_Y = (ZombieDawn) this;
+        sa.field_Y = (ZombieDawn) (this);
     }
 
     final void o(int param0) {
@@ -290,7 +290,7 @@ public final class ZombieDawn extends m {
               }
             }
           }
-          if (dp.field_h != 2147483647) {
+          if ((dp.field_h ^ -1) != -2147483648) {
             ca.a(true, true, dp.field_h);
             break L0;
           } else {
@@ -301,7 +301,7 @@ public final class ZombieDawn extends m {
           if (param0 == 1235) {
             break L2;
           } else {
-            ((ZombieDawn) this).field_F = true;
+            this.field_F = true;
             break L2;
           }
         }
@@ -317,6 +317,7 @@ public final class ZombieDawn extends m {
     }
 
     final void g(boolean param0) {
+        b discarded$0 = null;
         ag.a(-107, param0);
         fh.i(0);
         mf.a((byte) -67);
@@ -330,7 +331,7 @@ public final class ZombieDawn extends m {
         }
         if (!ng.field_e) {
             if (!(po.w(13296))) {
-                b discarded$0 = l.b(102, 4);
+                discarded$0 = l.b(102, 4);
             }
         }
         ep.c((byte) -50);
@@ -338,11 +339,12 @@ public final class ZombieDawn extends m {
 
     final void a(int param0, int param1) {
         if (param1 < 27) {
-            field_K = null;
+            field_K = (rb) null;
         }
     }
 
     public final void a(boolean param0, boolean param1) {
+        boolean discarded$1 = false;
         int var4 = 0;
         wg var5 = null;
         L0: {
@@ -352,7 +354,7 @@ public final class ZombieDawn extends m {
             if (bd.field_e != te.field_eb) {
               break L1;
             } else {
-              if (~kj.field_c == ~nh.field_P) {
+              if (kj.field_c == nh.field_P) {
                 break L0;
               } else {
                 break L1;
@@ -374,10 +376,10 @@ public final class ZombieDawn extends m {
               break L2;
             } else {
               L3: {
-                if (~lf.field_h.field_w != ~bd.field_e) {
+                if (lf.field_h.field_w != bd.field_e) {
                   break L3;
                 } else {
-                  if (~lf.field_h.field_t == ~nh.field_P) {
+                  if (lf.field_h.field_t == nh.field_P) {
                     break L2;
                   } else {
                     break L3;
@@ -395,7 +397,7 @@ public final class ZombieDawn extends m {
         L4: {
           if (!po.w(13296)) {
             L5: while (true) {
-              var5 = (wg) (Object) dn.field_D.f(123);
+              var5 = (wg) ((Object) dn.field_D.f(123));
               if (var5 != null) {
                 dd.a(5, var5, -62);
                 continue L5;
@@ -412,7 +414,7 @@ public final class ZombieDawn extends m {
           if (!param1) {
             break L6;
           } else {
-            boolean discarded$1 = ((ZombieDawn) this).n(20);
+            discarded$1 = this.n(20);
             break L6;
           }
         }
@@ -439,7 +441,7 @@ public final class ZombieDawn extends m {
                 }
               }
               po.field_xb = po.field_xb + 1;
-              if (po.field_xb == 32) {
+              if (-33 == (po.field_xb ^ -1)) {
                 L10: {
                   if (ke.field_c.field_d == 3) {
                     bd.field_m = null;
@@ -509,23 +511,23 @@ public final class ZombieDawn extends m {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_0 = (RuntimeException) (var4);
             stackOut_4_1 = new StringBuilder().append("ZombieDawn.HA(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -533,7 +535,7 @@ public final class ZombieDawn extends m {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -555,7 +557,7 @@ public final class ZombieDawn extends m {
         if (param0 != -10401) {
             ZombieDawn.k((byte) 6);
         }
-        bm.field_d.b(20, (ga) (Object) new di());
+        bm.field_d.b(20, new di());
     }
 
     final void c(boolean param0) {
@@ -989,13 +991,13 @@ public final class ZombieDawn extends m {
         wl.a((byte) -86);
         eg.c(-26441);
         vk.a((byte) -90);
-        ((ZombieDawn) this).field_u = null;
-        ((ZombieDawn) this).field_I = null;
-        ((ZombieDawn) this).field_G = null;
+        this.field_u = null;
+        this.field_I = null;
+        this.field_G = null;
     }
 
     public final void init() {
-        ((ZombieDawn) this).a(12, 108, "zombiedawn");
+        this.a(12, 108, "zombiedawn");
     }
 
     public static void k(byte param0) {
@@ -1004,15 +1006,11 @@ public final class ZombieDawn extends m {
         field_D = null;
         field_E = null;
         if (param0 <= 109) {
-            field_E = null;
+            field_E = (long[]) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_E = new long[32];
         field_D = "Score";
     }

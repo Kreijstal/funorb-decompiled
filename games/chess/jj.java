@@ -10,6 +10,7 @@ final class jj {
     static hn field_a;
 
     final static void c(int param0) {
+        int fieldTemp$7 = 0;
         nk var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -18,30 +19,41 @@ final class jj {
         var3 = Chess.field_G;
         try {
           L0: {
+            L1: {
+              if (param0 == 8) {
+                break L1;
+              } else {
+                field_e = (um) null;
+                break L1;
+              }
+            }
             var1 = qn.field_U;
-            L1: while (true) {
-              if (!ci.g(2147483647)) {
+            L2: while (true) {
+              if (!ci.g(param0 + 2147483639)) {
                 break L0;
               } else {
                 var1.f(8, -65);
-                int fieldTemp$5 = var1.field_l + 1;
+                fieldTemp$7 = var1.field_l + 1;
                 var1.field_l = var1.field_l + 1;
-                var2 = fieldTemp$5;
+                var2 = fieldTemp$7;
                 de.a(var1, (byte) 67);
                 qn.field_U.a(var1.field_l + -var2, -1);
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var1_ref, "jj.C(" + 8 + ')');
+          throw fk.a((Throwable) ((Object) var1_ref), "jj.C(" + param0 + ')');
         }
     }
 
     public static void a(int param0) {
         field_f = null;
+        if (param0 != 7) {
+            return;
+        }
         field_c = null;
         field_a = null;
         field_e = null;
@@ -50,25 +62,59 @@ final class jj {
     }
 
     final static boolean b(int param0) {
-        return cd.field_x != null || an.field_c;
+        int stackIn_5_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        if (param0 == 7) {
+          if (cd.field_x == null) {
+            if (an.field_c) {
+              return true;
+            } else {
+              return false;
+            }
+          } else {
+            stackOut_9_0 = 1;
+            stackIn_11_0 = stackOut_9_0;
+            return stackIn_11_0 != 0;
+          }
+        } else {
+          field_c = (dd[]) null;
+          if (cd.field_x != null) {
+            return true;
+          } else {
+            L0: {
+              if (!an.field_c) {
+                stackOut_4_0 = 0;
+                stackIn_5_0 = stackOut_4_0;
+                break L0;
+              } else {
+                stackOut_3_0 = 1;
+                stackIn_5_0 = stackOut_3_0;
+                break L0;
+              }
+            }
+            return stackIn_5_0 != 0;
+          }
+        }
     }
 
     final static boolean d(int param0) {
-        int var1 = 103;
-        if (ch.field_gb == null) {
+        int var1 = 0;
+        var1 = -103 / ((75 - param0) / 42);
+        if (ch.field_gb != null) {
+          if (!ch.field_gb.b(-1)) {
             return false;
+          } else {
+            return true;
+          }
+        } else {
+          return false;
         }
-        if (!ch.field_gb.b(-1)) {
-            return false;
-        }
-        return true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new dd[7];
     }
 }

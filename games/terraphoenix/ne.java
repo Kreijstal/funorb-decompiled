@@ -11,50 +11,46 @@ final class ne implements Iterator {
     static int field_e;
 
     public final void remove() {
-        if (!(null != ((ne) this).field_c)) {
+        if (!(null != this.field_c)) {
             throw new IllegalStateException();
         }
-        ((ne) this).field_c.c((byte) 13);
-        ((ne) this).field_c = null;
+        this.field_c.c((byte) 13);
+        this.field_c = null;
     }
 
     public final boolean hasNext() {
-        return ((ne) this).field_a != ((ne) this).field_d.field_a;
+        return this.field_a != this.field_d.field_a;
     }
 
     public final Object next() {
-        vh var1 = ((ne) this).field_a;
-        if (((ne) this).field_d.field_a == var1) {
+        vh var1 = this.field_a;
+        if (this.field_d.field_a == var1) {
             var1 = null;
-            ((ne) this).field_a = null;
+            this.field_a = null;
         } else {
-            ((ne) this).field_a = var1.field_o;
+            this.field_a = var1.field_o;
         }
-        ((ne) this).field_c = var1;
-        return (Object) (Object) var1;
+        this.field_c = var1;
+        return var1;
     }
 
     public static void a(int param0) {
-        int var1 = -32;
+        int var1 = 64 / ((-33 - param0) / 39);
         field_b = null;
     }
 
     ne(tc param0) {
-        ((ne) this).field_c = null;
+        this.field_c = null;
         try {
-            ((ne) this).field_d = param0;
-            ((ne) this).field_c = null;
-            ((ne) this).field_a = ((ne) this).field_d.field_a.field_o;
+            this.field_d = param0;
+            this.field_c = null;
+            this.field_a = this.field_d.field_a.field_o;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         jj discarded$0 = new jj();
         field_b = "Select ";
         field_e = 72;

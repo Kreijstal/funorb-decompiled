@@ -9,6 +9,9 @@ final class b {
     static int[] field_b;
 
     final static int a(int param0) {
+        if (param0 != 14638) {
+            return -31;
+        }
         return ug.field_c;
     }
 
@@ -25,10 +28,6 @@ final class b {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Confirm Email:";
         field_d = new int[2];
     }

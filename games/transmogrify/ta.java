@@ -21,11 +21,12 @@ final class ta {
     }
 
     public static void a(int param0) {
+        int discarded$2 = 0;
         field_b = null;
         field_h = null;
         field_g = null;
         if (param0 != 7) {
-          int discarded$2 = ta.a(120, -46);
+          discarded$2 = ta.a(120, -46);
           field_f = null;
           field_d = null;
           return;
@@ -37,10 +38,6 @@ final class ta {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Quit to website";
         field_g = "This game has been updated! Please reload this page.";
     }

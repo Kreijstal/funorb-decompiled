@@ -7,15 +7,19 @@ final class rm {
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != 80) {
+            return;
+        }
         field_b = null;
     }
 
     final static wf a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        wf discarded$1 = null;
         wf var8 = null;
         if (param6 != 8128) {
           L0: {
-            wf discarded$1 = rm.a(-118, -128, 102, -103, 69, 9, 118, -123);
-            var8 = (wf) (Object) dg.field_K.g(41);
+            discarded$1 = rm.a(-118, -128, 102, -103, 69, 9, 118, -123);
+            var8 = (wf) ((Object) dg.field_K.g(41));
             if (var8 == null) {
               var8 = new wf();
               break L0;
@@ -27,7 +31,7 @@ final class rm {
           return var8;
         } else {
           L1: {
-            var8 = (wf) (Object) dg.field_K.g(41);
+            var8 = (wf) ((Object) dg.field_K.g(41));
             if (var8 == null) {
               var8 = new wf();
               break L1;
@@ -41,10 +45,6 @@ final class rm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new StringBuilder(80);
     }
 }

@@ -11,6 +11,6 @@ public class vl {
     public volatile Object field_f;
 
     vl() {
-        ((vl) this).field_d = 0;
+        this.field_d = 0;
     }
 }

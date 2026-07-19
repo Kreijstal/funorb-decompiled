@@ -16,56 +16,52 @@ final class fe extends vo {
         int var6 = 0;
         int var7 = 0;
         if (param0 > -70) {
-          ((fe) this).a((byte) -76, -16, 37);
-          var4 = ((fe) this).field_g * param2 >> 12;
-          var5 = param2 * ((fe) this).field_l >> 12;
-          var6 = ((fe) this).field_i * param1 >> 12;
-          var7 = param1 * ((fe) this).field_m >> 12;
-          rv.a(((fe) this).field_e, ((fe) this).field_f, var7, -120, var5, var6, ((fe) this).field_a, var4);
+          this.a((byte) -76, -16, 37);
+          var4 = this.field_g * param2 >> 1682790508;
+          var5 = param2 * this.field_l >> 1522059308;
+          var6 = this.field_i * param1 >> -147048468;
+          var7 = param1 * this.field_m >> 635656940;
+          rv.a(this.field_e, this.field_f, var7, -120, var5, var6, this.field_a, var4);
           return;
         } else {
-          var4 = ((fe) this).field_g * param2 >> 12;
-          var5 = param2 * ((fe) this).field_l >> 12;
-          var6 = ((fe) this).field_i * param1 >> 12;
-          var7 = param1 * ((fe) this).field_m >> 12;
-          rv.a(((fe) this).field_e, ((fe) this).field_f, var7, -120, var5, var6, ((fe) this).field_a, var4);
+          var4 = this.field_g * param2 >> 1682790508;
+          var5 = param2 * this.field_l >> 1522059308;
+          var6 = this.field_i * param1 >> -147048468;
+          var7 = param1 * this.field_m >> 635656940;
+          rv.a(this.field_e, this.field_f, var7, -120, var5, var6, this.field_a, var4);
           return;
         }
     }
 
     final void b(int param0, int param1, int param2) {
-        int var4 = param0 * ((fe) this).field_g >> 12;
-        int var5 = param0 * ((fe) this).field_l >> 12;
-        int var6 = ((fe) this).field_i * param2 >> 12;
+        int var4 = param0 * this.field_g >> -759166932;
+        int var5 = param0 * this.field_l >> -533837780;
+        int var6 = this.field_i * param2 >> -35961972;
         int var7 = -30 % ((param1 - 14) / 62);
-        int var8 = ((fe) this).field_m * param2 >> 12;
-        fc.a(var8, var5, (byte) 92, var6, var4, ((fe) this).field_a);
+        int var8 = this.field_m * param2 >> 816144492;
+        fc.a(var8, var5, (byte) 92, var6, var4, this.field_a);
     }
 
     public static void a(int param0) {
         field_j = null;
-        int var1 = 49;
+        int var1 = -49 / ((param0 - -57) / 54);
     }
 
     fe(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         super(param4, param5, param6);
-        ((fe) this).field_l = param2;
-        ((fe) this).field_g = param0;
-        ((fe) this).field_i = param1;
-        ((fe) this).field_m = param3;
+        this.field_l = param2;
+        this.field_g = param0;
+        this.field_i = param1;
+        this.field_m = param3;
     }
 
     final void a(int param0, int param1, int param2) {
         if (param1 != -25222) {
-            ((fe) this).a((byte) -119, 44, -29);
+            this.a((byte) -119, 44, -29);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = 20000000L;
     }
 }

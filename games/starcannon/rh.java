@@ -14,6 +14,9 @@ final class rh extends rf {
 
     public static void a(boolean param0) {
         field_j = null;
+        if (param0) {
+            return;
+        }
         field_f = null;
         field_g = null;
         field_h = null;
@@ -30,7 +33,7 @@ final class rh extends rf {
         int stackOut_5_0 = 0;
         L0: {
           L1: {
-            var7 = 1;
+            var7 = 91 % ((param6 - 41) / 38);
             if (param1 < param3) {
               break L1;
             } else {
@@ -63,7 +66,11 @@ final class rh extends rf {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         int var12 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var12 = StarCannon.field_A;
         try {
@@ -103,62 +110,100 @@ final class rh extends rf {
               }
             }
             L5: {
-              if (0 >= param1) {
+              if (param5) {
                 break L5;
               } else {
-                if (param2 > 0) {
+                field_f = (hl[]) null;
+                break L5;
+              }
+            }
+            L6: {
+              if (0 >= param1) {
+                break L6;
+              } else {
+                if ((param2 ^ -1) < -1) {
                   var6_int = param3 + param0 * ki.field_j;
                   var7 = ki.field_j - param1;
                   param0 = -param2;
-                  L6: while (true) {
-                    if (param0 >= 0) {
+                  L7: while (true) {
+                    if ((param0 ^ -1) <= -1) {
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       param3 = -param1;
-                      L7: while (true) {
+                      L8: while (true) {
                         if (param3 >= 0) {
                           var6_int = var6_int + var7;
                           param0++;
-                          continue L6;
-                        } else {
-                          L8: {
-                            var8 = ki.field_a[var6_int];
-                            if ((var8 & 65280) >> 8 <= 64) {
-                              break L8;
-                            } else {
-                              break L8;
-                            }
-                          }
-                          var6_int++;
-                          param3++;
                           continue L7;
+                        } else {
+                          var8 = ki.field_a[var6_int];
+                          if ((var8 & 65280) >> 1016193576 > param4) {
+                            L9: {
+                              if ((16711680 & var8) >> -1893600464 <= (var8 & 65280) >> 1289987240) {
+                                L10: {
+                                  var9 = ((16711680 & var8) >> 1993606895) - 60;
+                                  if (255 >= var9) {
+                                    break L10;
+                                  } else {
+                                    var9 = 255;
+                                    break L10;
+                                  }
+                                }
+                                var10 = var8 & 65280;
+                                var10 = 65280 & (var10 >> -596805663) + -(var10 >> -1301038811);
+                                var11 = (var8 & 255) >> -75114941;
+                                ki.field_a[var6_int] = cl.a(var11, cl.a(var10, var9 << 1858608080));
+                                break L9;
+                              } else {
+                                break L9;
+                              }
+                            }
+                            var6_int++;
+                            param3++;
+                            continue L8;
+                          } else {
+                            var6_int++;
+                            param3++;
+                            continue L8;
+                          }
                         }
                       }
                     }
                   }
                 } else {
-                  break L5;
+                  break L6;
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var6, "rh.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + 64 + ',' + true + ')');
+          throw sd.a((Throwable) ((Object) var6), "rh.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static hb a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         hb var8 = new hb(param7, param0, param2, param4, param3, param1);
-        hi.field_f.b(101, (rf) (Object) var8);
-        hb.a(-16, 4, var8);
+        hi.field_f.b(101, var8);
+        if (param5 != -1893600464) {
+            rh.a(false);
+        }
+        hb.a(-16, param6, var8);
         return var8;
     }
 
     final static void a(ia param0, byte param1) {
         try {
+            int discarded$1 = 0;
             RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
@@ -203,6 +248,7 @@ final class rh extends rf {
             RuntimeException stackIn_65_0 = null;
             StringBuilder stackIn_65_1 = null;
             String stackIn_65_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_62_0 = null;
             StringBuilder stackOut_62_1 = null;
@@ -220,26 +266,29 @@ final class rh extends rf {
             var12 = StarCannon.field_A;
             try {
               L0: {
-                var13 = (va) (Object) ee.field_a.c(-3905);
+                var13 = (va) ((Object) ee.field_a.c(-3905));
                 var17 = var13;
                 if (var17 == null) {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   var3 = 0;
                   var4 = 0;
                   L1: while (true) {
                     if (var17.field_n <= var4) {
                       if (var3 != 0) {
-                        return;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       } else {
                         var4 = param0.field_g;
                         param0.c((byte) -127, var17.field_k);
                         var5 = 0;
                         L2: while (true) {
                           if (var17.field_n <= var5) {
-                            int discarded$1 = param0.b((byte) -89, var4);
+                            discarded$1 = param0.b((byte) -89, var4);
                             var17.b(4);
-                            var5 = 0;
+                            var5 = -107 % ((param1 - -16) / 37);
+                            decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
                             L3: {
@@ -250,14 +299,14 @@ final class rh extends rf {
                                       var6_int = var17.field_r[var5];
                                       if (var6_int != 0) {
                                         if (var6_int == 1) {
-                                          var16_ref = (java.lang.reflect.Field) var17.field_p[var5].field_f;
+                                          var16_ref = (java.lang.reflect.Field) (var17.field_p[var5].field_f);
                                           var20 = var16_ref;
                                           var20.setInt((Object) null, var17.field_q[var5]);
                                           param0.a(0, -61);
                                           break L5;
                                         } else {
-                                          if (var6_int == 2) {
-                                            var28 = (java.lang.reflect.Field) var17.field_p[var5].field_f;
+                                          if ((var6_int ^ -1) == -3) {
+                                            var28 = (java.lang.reflect.Field) (var17.field_p[var5].field_f);
                                             var8 = var28.getModifiers();
                                             param0.a(0, -112);
                                             param0.c((byte) -86, var8);
@@ -267,7 +316,7 @@ final class rh extends rf {
                                           }
                                         }
                                       } else {
-                                        var27 = (java.lang.reflect.Field) var17.field_p[var5].field_f;
+                                        var27 = (java.lang.reflect.Field) (var17.field_p[var5].field_f);
                                         var8 = var27.getInt((Object) null);
                                         param0.a(0, -122);
                                         param0.c((byte) -118, var8);
@@ -276,7 +325,7 @@ final class rh extends rf {
                                     }
                                     L6: {
                                       if (var6_int == 3) {
-                                        var30 = (java.lang.reflect.Method) var17.field_i[var5].field_f;
+                                        var30 = (java.lang.reflect.Method) (var17.field_i[var5].field_f);
                                         var26 = var17.field_l[var5];
                                         var9 = new Object[var26.length];
                                         var10_int = 0;
@@ -286,7 +335,7 @@ final class rh extends rf {
                                             if (var10 != null) {
                                               if (var10 instanceof Number) {
                                                 param0.a(1, -79);
-                                                param0.a(true, ((Number) var10).longValue());
+                                                param0.a(true, ((Number) (var10)).longValue());
                                                 break L6;
                                               } else {
                                                 if (!(var10 instanceof String)) {
@@ -294,7 +343,7 @@ final class rh extends rf {
                                                   break L6;
                                                 } else {
                                                   param0.a(2, -53);
-                                                  param0.b(false, (String) var10);
+                                                  param0.b(false, (String) (var10));
                                                   break L6;
                                                 }
                                               }
@@ -303,7 +352,7 @@ final class rh extends rf {
                                               break L6;
                                             }
                                           } else {
-                                            var11 = new ObjectInputStream((InputStream) (Object) new ByteArrayInputStream(var26[var10_int]));
+                                            var11 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(var26[var10_int])));
                                             var9[var10_int] = var11.readObject();
                                             var10_int++;
                                             continue L7;
@@ -313,7 +362,7 @@ final class rh extends rf {
                                         if (var6_int != 4) {
                                           break L6;
                                         } else {
-                                          var29 = (java.lang.reflect.Method) var17.field_i[var5].field_f;
+                                          var29 = (java.lang.reflect.Method) (var17.field_i[var5].field_f);
                                           var8 = var29.getModifiers();
                                           param0.a(0, -64);
                                           param0.c((byte) -79, var8);
@@ -322,6 +371,34 @@ final class rh extends rf {
                                       }
                                     }
                                     break L4;
+                                  }
+                                } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
+                                  decompiledCaughtException = decompiledCaughtParameter0;
+                                  L8: {
+                                    var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
+                                    param0.a(-10, -108);
+                                    break L8;
+                                  }
+                                } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
+                                  decompiledCaughtException = decompiledCaughtParameter1;
+                                  L9: {
+                                    var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
+                                    param0.a(-11, -108);
+                                    break L9;
+                                  }
+                                } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
+                                  decompiledCaughtException = decompiledCaughtParameter2;
+                                  L10: {
+                                    var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
+                                    param0.a(-12, -73);
+                                    break L10;
+                                  }
+                                } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
+                                  decompiledCaughtException = decompiledCaughtParameter3;
+                                  L11: {
+                                    var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
+                                    param0.a(-13, -91);
+                                    break L11;
                                   }
                                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                                   decompiledCaughtException = decompiledCaughtParameter4;
@@ -343,6 +420,13 @@ final class rh extends rf {
                                     var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
                                     param0.a(-16, -70);
                                     break L14;
+                                  }
+                                } catch (java.lang.SecurityException decompiledCaughtParameter7) {
+                                  decompiledCaughtException = decompiledCaughtParameter7;
+                                  L15: {
+                                    var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
+                                    param0.a(-17, -94);
+                                    break L15;
                                   }
                                 } catch (java.io.IOException decompiledCaughtParameter8) {
                                   decompiledCaughtException = decompiledCaughtParameter8;
@@ -405,28 +489,29 @@ final class rh extends rf {
                           }
                         }
                       }
-                      if (null != var13.field_i[var4]) {
-                        L22: {
-                          if (var13.field_i[var4].field_b != 2) {
+                      L22: {
+                        if (null != var13.field_i[var4]) {
+                          L23: {
+                            if ((var13.field_i[var4].field_b ^ -1) != -3) {
+                              break L23;
+                            } else {
+                              var13.field_g[var4] = -6;
+                              break L23;
+                            }
+                          }
+                          if (var13.field_i[var4].field_b == 0) {
+                            var3 = 1;
                             break L22;
                           } else {
-                            var13.field_g[var4] = -6;
-                            break L22;
+                            var4++;
+                            continue L1;
                           }
+                        } else {
+                          break L22;
                         }
-                        L23: {
-                          if (var13.field_i[var4].field_b != 0) {
-                            break L23;
-                          } else {
-                            break L23;
-                          }
-                        }
-                        var4++;
-                        continue L1;
-                      } else {
-                        var4++;
-                        continue L1;
                       }
+                      var4++;
+                      continue L1;
                     }
                   }
                 }
@@ -435,23 +520,23 @@ final class rh extends rf {
               decompiledCaughtException = decompiledCaughtParameter12;
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_62_0 = (RuntimeException) var2;
+                stackOut_62_0 = (RuntimeException) (var2);
                 stackOut_62_1 = new StringBuilder().append("rh.A(");
                 stackIn_64_0 = stackOut_62_0;
                 stackIn_64_1 = stackOut_62_1;
                 stackIn_63_0 = stackOut_62_0;
                 stackIn_63_1 = stackOut_62_1;
                 if (param0 == null) {
-                  stackOut_64_0 = (RuntimeException) (Object) stackIn_64_0;
-                  stackOut_64_1 = (StringBuilder) (Object) stackIn_64_1;
+                  stackOut_64_0 = (RuntimeException) ((Object) stackIn_64_0);
+                  stackOut_64_1 = (StringBuilder) ((Object) stackIn_64_1);
                   stackOut_64_2 = "null";
                   stackIn_65_0 = stackOut_64_0;
                   stackIn_65_1 = stackOut_64_1;
                   stackIn_65_2 = stackOut_64_2;
                   break L24;
                 } else {
-                  stackOut_63_0 = (RuntimeException) (Object) stackIn_63_0;
-                  stackOut_63_1 = (StringBuilder) (Object) stackIn_63_1;
+                  stackOut_63_0 = (RuntimeException) ((Object) stackIn_63_0);
+                  stackOut_63_1 = (StringBuilder) ((Object) stackIn_63_1);
                   stackOut_63_2 = "{...}";
                   stackIn_65_0 = stackOut_63_0;
                   stackIn_65_1 = stackOut_63_1;
@@ -459,7 +544,16 @@ final class rh extends rf {
                   break L24;
                 }
               }
-              throw sd.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + ',' + -68 + ')');
+              throw sd.a((Throwable) ((Object) stackIn_65_0), stackIn_65_2 + ',' + param1 + ')');
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 1) {
+                return;
+              } else {
+                return;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -469,12 +563,8 @@ final class rh extends rf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Unable to connect to the data server. Please check any firewall you are using.";
         field_f = new hl[8];
-        field_j = new char[]{'_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+        field_j = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
     }
 }

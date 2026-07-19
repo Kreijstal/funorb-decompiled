@@ -14,22 +14,22 @@ final class ia {
         field_f = null;
         field_a = null;
         field_d = null;
+        if (param0 != 25268) {
+            return;
+        }
         field_b = null;
     }
 
     final static int a(byte param0) {
+        int discarded$0 = 0;
         if (param0 < 58) {
-            int discarded$0 = ia.a((byte) 26);
+            discarded$0 = ia.a((byte) 26);
             return wc.field_Ob;
         }
         return wc.field_Ob;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "The account name you use to access RuneScape and other Jagex.com games";
         field_f = "This game has been updated! Please reload this page.";
     }

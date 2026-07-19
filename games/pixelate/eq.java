@@ -45,15 +45,15 @@ final class eq extends ak {
 
     final int c(byte param0) {
         if (param0 != 8) {
-            ((eq) this).field_Eb = null;
-            return (int)((eq) this).a(true);
+            this.field_Eb = (byte[]) null;
+            return (int)this.a(true);
         }
-        return (int)((eq) this).a(true);
+        return (int)this.a(true);
     }
 
     eq(int param0) {
         super(0L, (ak) null);
-        ((eq) this).field_Eb = new byte[param0];
+        this.field_Eb = new byte[param0];
     }
 
     final boolean j(int param0) {
@@ -65,8 +65,8 @@ final class eq extends ak {
         int stackOut_2_0 = 0;
         if (param0 != 433) {
           L0: {
-            ((eq) this).field_Wb = null;
-            if (((eq) this).f(0)) {
+            this.field_Wb = (ak) null;
+            if (this.f(0)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -79,7 +79,7 @@ final class eq extends ak {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((eq) this).f(0)) {
+            if (this.f(0)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -97,7 +97,7 @@ final class eq extends ak {
         field_Xb = null;
         field_Hb = null;
         field_fc = null;
-        int var1 = 86;
+        int var1 = -86 / ((28 - param0) / 46);
     }
 
     final boolean a(byte param0, eq param1) {
@@ -135,6 +135,7 @@ final class eq extends ak {
         RuntimeException stackIn_79_0 = null;
         StringBuilder stackIn_79_1 = null;
         String stackIn_79_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
@@ -186,8 +187,8 @@ final class eq extends ak {
         try {
           L0: {
             L1: {
-              if (!((eq) this).field_cc) {
-                if (6 == ((eq) this).field_Qb) {
+              if (!this.field_cc) {
+                if (6 == this.field_Qb) {
                   stackOut_4_0 = 1;
                   stackIn_6_0 = stackOut_4_0;
                   break L1;
@@ -235,13 +236,14 @@ final class eq extends ak {
             if (stackIn_15_0 == var3_int) {
               stackOut_17_0 = var3_int;
               stackIn_18_0 = stackOut_17_0;
-              return stackIn_18_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L4: {
                 if (param0 > 23) {
                   break L4;
                 } else {
-                  ((eq) this).field_Qb = 92;
+                  this.field_Qb = 92;
                   break L4;
                 }
               }
@@ -250,7 +252,7 @@ final class eq extends ak {
                   break L5;
                 } else {
                   L6: {
-                    if (((eq) this).field_hc) {
+                    if (this.field_hc) {
                       stackOut_24_0 = 0;
                       stackIn_25_0 = stackOut_24_0;
                       break L6;
@@ -279,16 +281,17 @@ final class eq extends ak {
                     }
                   }
                   if (stackIn_28_0 != stackIn_28_1) {
-                    stackOut_30_0 = ((eq) this).field_hc;
+                    stackOut_30_0 = this.field_hc;
                     stackIn_31_0 = stackOut_30_0;
-                    return stackIn_31_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
-                    if (!((eq) this).field_hc) {
+                    if (!this.field_hc) {
                       break L5;
                     } else {
-                      if (((eq) this).field_Ib != param1.field_Ib) {
+                      if (this.field_Ib != param1.field_Ib) {
                         L8: {
-                          if (param1.field_Ib <= ((eq) this).field_Ib) {
+                          if (param1.field_Ib <= this.field_Ib) {
                             stackOut_37_0 = 0;
                             stackIn_38_0 = stackOut_37_0;
                             break L8;
@@ -298,7 +301,8 @@ final class eq extends ak {
                             break L8;
                           }
                         }
-                        return stackIn_38_0 != 0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       } else {
                         break L5;
                       }
@@ -317,9 +321,9 @@ final class eq extends ak {
                   break L9;
                 }
               }
-              if (stackIn_42_0 == (((eq) this).field_dc ? 1 : 0)) {
+              if (stackIn_42_0 == (this.field_dc ? 1 : 0)) {
                 L10: {
-                  if (((eq) this).field_dc) {
+                  if (this.field_dc) {
                     stackOut_46_0 = 0;
                     stackIn_47_0 = stackOut_46_0;
                     break L10;
@@ -329,11 +333,12 @@ final class eq extends ak {
                     break L10;
                   }
                 }
-                return stackIn_47_0 != 0;
+                decompiledRegionSelector0 = 3;
+                break L0;
               } else {
-                if (!((eq) this).field_dc) {
+                if (!this.field_dc) {
                   L11: {
-                    if (param1.field_Lb <= ((eq) this).field_Lb) {
+                    if (param1.field_Lb <= this.field_Lb) {
                       stackOut_74_0 = 0;
                       stackIn_75_0 = stackOut_74_0;
                       break L11;
@@ -343,15 +348,16 @@ final class eq extends ak {
                       break L11;
                     }
                   }
+                  decompiledRegionSelector0 = 6;
                   break L0;
                 } else {
                   L12: {
-                    if (((eq) this).field_Mb) {
+                    if (this.field_Mb) {
                       stackOut_53_0 = 1;
                       stackIn_55_0 = stackOut_53_0;
                       break L12;
                     } else {
-                      if (2 == ((eq) this).field_Tb) {
+                      if (2 == this.field_Tb) {
                         stackOut_52_0 = 1;
                         stackIn_55_0 = stackOut_52_0;
                         break L12;
@@ -365,7 +371,7 @@ final class eq extends ak {
                   L13: {
                     var5 = stackIn_55_0;
                     if (!param1.field_Mb) {
-                      if (param1.field_Tb == 2) {
+                      if (-3 == (param1.field_Tb ^ -1)) {
                         stackOut_59_0 = 1;
                         stackIn_61_0 = stackOut_59_0;
                         break L13;
@@ -402,10 +408,11 @@ final class eq extends ak {
                   if (stackIn_64_0 == stackIn_64_1) {
                     stackOut_66_0 = var5;
                     stackIn_67_0 = stackOut_66_0;
-                    return stackIn_67_0 != 0;
+                    decompiledRegionSelector0 = 4;
+                    break L0;
                   } else {
                     L15: {
-                      if (param1.field_Lb >= ((eq) this).field_Lb) {
+                      if (param1.field_Lb >= this.field_Lb) {
                         stackOut_70_0 = 0;
                         stackIn_71_0 = stackOut_70_0;
                         break L15;
@@ -415,7 +422,8 @@ final class eq extends ak {
                         break L15;
                       }
                     }
-                    return stackIn_71_0 != 0;
+                    decompiledRegionSelector0 = 5;
+                    break L0;
                   }
                 }
               }
@@ -425,23 +433,23 @@ final class eq extends ak {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var3 = decompiledCaughtException;
-            stackOut_76_0 = (RuntimeException) var3;
+            stackOut_76_0 = (RuntimeException) (var3);
             stackOut_76_1 = new StringBuilder().append("eq.D(").append(param0).append(',');
             stackIn_78_0 = stackOut_76_0;
             stackIn_78_1 = stackOut_76_1;
             stackIn_77_0 = stackOut_76_0;
             stackIn_77_1 = stackOut_76_1;
             if (param1 == null) {
-              stackOut_78_0 = (RuntimeException) (Object) stackIn_78_0;
-              stackOut_78_1 = (StringBuilder) (Object) stackIn_78_1;
+              stackOut_78_0 = (RuntimeException) ((Object) stackIn_78_0);
+              stackOut_78_1 = (StringBuilder) ((Object) stackIn_78_1);
               stackOut_78_2 = "null";
               stackIn_79_0 = stackOut_78_0;
               stackIn_79_1 = stackOut_78_1;
               stackIn_79_2 = stackOut_78_2;
               break L16;
             } else {
-              stackOut_77_0 = (RuntimeException) (Object) stackIn_77_0;
-              stackOut_77_1 = (StringBuilder) (Object) stackIn_77_1;
+              stackOut_77_0 = (RuntimeException) ((Object) stackIn_77_0);
+              stackOut_77_1 = (StringBuilder) ((Object) stackIn_77_1);
               stackOut_77_2 = "{...}";
               stackIn_79_0 = stackOut_77_0;
               stackIn_79_1 = stackOut_77_1;
@@ -449,16 +457,36 @@ final class eq extends ak {
               break L16;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_79_0, stackIn_79_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_79_0), stackIn_79_2 + ')');
         }
-        return stackIn_75_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_18_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_31_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_38_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_47_0 != 0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_67_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_71_0 != 0;
+                  } else {
+                    return stackIn_75_0 != 0;
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Xb = "Allow spectators?";
     }
 }

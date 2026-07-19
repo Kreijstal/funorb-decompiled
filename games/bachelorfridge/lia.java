@@ -7,8 +7,9 @@ final class lia extends pp {
     static boolean field_i;
 
     final void a(aga param0, op param1, int param2) {
+        rga discarded$2 = null;
         RuntimeException var4 = null;
-        Object var5 = null;
+        String var5 = null;
         aga var6 = null;
         aga var7 = null;
         RuntimeException stackIn_13_0 = null;
@@ -25,6 +26,7 @@ final class lia extends pp {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
@@ -44,14 +46,15 @@ final class lia extends pp {
         String stackOut_16_2 = null;
         try {
           L0: {
-            var6 = ((lia) this).field_h.a(29, param1);
+            var6 = this.field_h.a(29, param1);
             var7 = var6;
-            if (var7.g(param2 + 83, ((lia) this).field_f)) {
-              return;
+            if (var7.g(param2 + 83, this.field_f)) {
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
-                if (-1 != ((lia) this).field_k) {
-                  var7.b((byte) 117, ((lia) this).field_k);
+                if (-1 != this.field_k) {
+                  var7.b((byte) 117, this.field_k);
                   break L1;
                 } else {
                   break L1;
@@ -70,11 +73,12 @@ final class lia extends pp {
                 if (param2 == 12) {
                   break L3;
                 } else {
-                  var5 = null;
-                  rga discarded$2 = lia.a(1, (String) null);
+                  var5 = (String) null;
+                  discarded$2 = lia.a(1, (String) null);
                   break L3;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -82,23 +86,23 @@ final class lia extends pp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_0 = (RuntimeException) (var4);
             stackOut_12_1 = new StringBuilder().append("lia.C(");
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -107,23 +111,23 @@ final class lia extends pp {
             }
           }
           L5: {
-            stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+            stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
             stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -131,27 +135,35 @@ final class lia extends pp {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     lia(nq param0, int param1, int param2) {
         try {
-            ((lia) this).field_h = param0;
-            ((lia) this).field_k = param2;
-            ((lia) this).field_f = param1;
+            this.field_h = param0;
+            this.field_k = param2;
+            this.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "lia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "lia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void d(byte param0) {
+        if (param0 <= 22) {
+            return;
+        }
         field_j = null;
     }
 
     final static qh a(int param0) {
         if (param0 != 5) {
-            field_j = null;
+            field_j = (lm) null;
         }
         if (null == go.field_s) {
             go.field_s = new qh();
@@ -170,16 +182,17 @@ final class lia extends pp {
 
     final void a(lu param0, byte param1) {
         try {
-            er.a(((lia) this).field_h, 125, param0);
-            param0.b(((lia) this).field_f, -113);
-            param0.d(((lia) this).field_k, 0);
+            er.a(this.field_h, 125, param0);
+            param0.b(this.field_f, -113);
+            param0.d(this.field_k, 0);
             int var3_int = 126 % ((param1 - 34) / 58);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "lia.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "lia.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static rga a(int param0, String param1) {
+        qh discarded$2 = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -211,7 +224,7 @@ final class lia extends pp {
               if (param0 == -58) {
                 break L1;
               } else {
-                qh discarded$2 = lia.a(114);
+                discarded$2 = lia.a(114);
                 break L1;
               }
             }
@@ -240,23 +253,23 @@ final class lia extends pp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var2;
+            stackOut_13_0 = (RuntimeException) (var2);
             stackOut_13_1 = new StringBuilder().append("lia.B(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -264,7 +277,7 @@ final class lia extends pp {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
         return stackIn_12_0;
     }

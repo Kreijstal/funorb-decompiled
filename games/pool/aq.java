@@ -8,17 +8,27 @@ final class aq {
     static ci[] field_a;
 
     final static String a(int param0, int param1) {
-        return param0 + 1 + "/" + rb.field_n.length;
+        if (param1 < 79) {
+          field_b = (Calendar) null;
+          return param0 + 1 + "/" + rb.field_n.length;
+        } else {
+          return param0 + 1 + "/" + rb.field_n.length;
+        }
     }
 
     public static void a(boolean param0) {
         field_b = null;
+        if (param0) {
+            field_a = (ci[]) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     final static String a(int param0, CharSequence[] param1) {
         RuntimeException var2 = null;
-        Object stackIn_2_0 = null;
+        String stackIn_2_0 = null;
         String stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -27,9 +37,10 @@ final class aq {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        String stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -43,34 +54,36 @@ final class aq {
             if (param0 < -52) {
               stackOut_3_0 = hq.a(0, (byte) -112, param1, param1.length);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (String) null;
               stackIn_2_0 = stackOut_1_0;
-              return (String) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_0 = (RuntimeException) (var2);
             stackOut_5_1 = new StringBuilder().append("aq.C(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -78,41 +91,45 @@ final class aq {
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final static void a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (wp.field_g != null) {
-          var1 = (Object) (Object) wp.field_g;
-          synchronized (var1) {
-            L0: {
-              wp.field_g = null;
-              break L0;
+        if (param0 == 0) {
+          if (wp.field_g != null) {
+            var1 = wp.field_g;
+            synchronized (var1) {
+              L0: {
+                wp.field_g = null;
+                break L0;
+              }
             }
+            return;
+          } else {
+            return;
           }
-          return;
         } else {
           return;
         }
     }
 
     final static void b(int param0) {
-        of.field_Ob = -no.field_q.field_w + qh.field_l >> 1;
+        of.field_Ob = -no.field_q.field_w + qh.field_l >> 618839329;
         fm.field_M = -no.field_q.field_A;
         vk.field_H = of.field_Ob - -224;
-        ac.b(0, (byte) -94);
+        ac.b(param0, (byte) -94);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
         field_a = null;
     }

@@ -13,26 +13,30 @@ final class sd extends pb {
     static String field_z;
 
     public static void e(byte param0) {
+        if (param0 < 88) {
+            return;
+        }
         field_y = null;
         field_z = null;
         field_B = null;
-        field_C = null;
+        field_C = (byte[][]) null;
     }
 
     final byte[] e(int param0) {
-        if (!((sd) this).field_u) {
-          if (((sd) this).field_A.field_f < ((sd) this).field_A.field_j.length - ((sd) this).field_E) {
+        int discarded$2 = 0;
+        if (!this.field_u) {
+          if (this.field_A.field_f < this.field_A.field_j.length - this.field_E) {
             throw new RuntimeException();
           } else {
             L0: {
               if (param0 == 397) {
                 break L0;
               } else {
-                int discarded$2 = ((sd) this).g(-105);
+                discarded$2 = this.g(-105);
                 break L0;
               }
             }
-            return ((sd) this).field_A.field_j;
+            return this.field_A.field_j;
           }
         } else {
           throw new RuntimeException();
@@ -41,58 +45,69 @@ final class sd extends pb {
 
     final static na[] a(boolean param0, rh param1, int param2, int param3) {
         RuntimeException var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
+        na[] stackIn_2_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
+        na[] stackOut_1_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         try {
-          if (mf.a(param2, param3, 104, param1)) {
-            return ji.c(0);
-          } else {
-            return null;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
-            var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("sd.H(").append(true).append(',');
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
-            if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L0;
+            if (param0) {
+              if (mf.a(param2, param3, 104, param1)) {
+                return ji.c(0);
+              } else {
+                return null;
+              }
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackOut_1_0 = (na[]) null;
+              stackIn_2_0 = stackOut_1_0;
               break L0;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ',' + param3 + ')');
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) (var4);
+            stackOut_7_1 = new StringBuilder().append("sd.H(").append(param0).append(',');
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L1;
+            } else {
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L1;
+            }
+          }
+          throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
         }
+        return stackIn_2_0;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8) {
@@ -115,6 +130,7 @@ final class sd extends pb {
         RuntimeException stackIn_75_0 = null;
         StringBuilder stackIn_75_1 = null;
         String stackIn_75_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_72_0 = null;
         StringBuilder stackOut_72_1 = null;
@@ -128,7 +144,7 @@ final class sd extends pb {
         try {
           L0: {
             L1: {
-              if (param5 < 0) {
+              if (-1 < (param5 ^ -1)) {
                 break L1;
               } else {
                 if (param8 < mh.field_h) {
@@ -136,11 +152,12 @@ final class sd extends pb {
                     if (0 <= param1) {
                       break L2;
                     } else {
-                      if (param0 >= 0) {
+                      if ((param0 ^ -1) <= -1) {
                         break L2;
                       } else {
-                        if (param6 < 0) {
-                          return;
+                        if ((param6 ^ -1) > -1) {
+                          decompiledRegionSelector0 = 1;
+                          break L0;
                         } else {
                           break L2;
                         }
@@ -148,14 +165,15 @@ final class sd extends pb {
                     }
                   }
                   L3: {
-                    if (~param1 > ~mh.field_c) {
+                    if (param1 < mh.field_c) {
                       break L3;
                     } else {
-                      if (~param0 > ~mh.field_c) {
+                      if (param0 < mh.field_c) {
                         break L3;
                       } else {
-                        if (~mh.field_c >= ~param6) {
-                          return;
+                        if (mh.field_c <= param6) {
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         } else {
                           break L3;
                         }
@@ -164,33 +182,33 @@ final class sd extends pb {
                   }
                   L4: {
                     var14 = -param8 + param5;
-                    if (~param7 == ~param8) {
+                    if (param7 == param8) {
                       L5: {
                         if (param8 != param5) {
                           var15 = -param7 + param5;
-                          if (~param0 < ~param1) {
-                            var10 = param0 << 16;
-                            var11 = (-param1 + param6 << 16) / var14;
-                            var9_int = param1 << 16;
-                            var12 = (param6 + -param0 << 16) / var15;
+                          if (param0 > param1) {
+                            var10 = param0 << 563576176;
+                            var11 = (-param1 + param6 << -1553445200) / var14;
+                            var9_int = param1 << 2050032944;
+                            var12 = (param6 + -param0 << -270184496) / var15;
                             break L5;
                           } else {
-                            var10 = param1 << 16;
-                            var11 = (param6 + -param0 << 16) / var15;
-                            var9_int = param0 << 16;
-                            var12 = (-param1 + param6 << 16) / var14;
+                            var10 = param1 << -1300931760;
+                            var11 = (param6 + -param0 << 1611829680) / var15;
+                            var9_int = param0 << 1690626512;
+                            var12 = (-param1 + param6 << 432247536) / var14;
                             break L5;
                           }
                         } else {
                           var11 = 0;
-                          var10 = param0 << 16;
-                          var9_int = param1 << 16;
+                          var10 = param0 << 876887888;
+                          var9_int = param1 << 56769648;
                           var12 = 0;
                           break L5;
                         }
                       }
                       var13 = 0;
-                      if (param8 >= 0) {
+                      if ((param8 ^ -1) <= -1) {
                         break L4;
                       } else {
                         param8 = Math.min(-param8, -param8 + param7);
@@ -201,12 +219,12 @@ final class sd extends pb {
                       }
                     } else {
                       L6: {
-                        var10 = param1 << 16;
-                        var9_int = param1 << 16;
+                        var10 = param1 << 1281253328;
+                        var9_int = param1 << 1281253328;
                         var15 = -param8 + param7;
-                        var11 = (-param1 + param0 << 16) / var15;
-                        var12 = (param6 + -param1 << 16) / var14;
-                        if (~var12 < ~var11) {
+                        var11 = (-param1 + param0 << -410776048) / var15;
+                        var12 = (param6 + -param1 << -1794392336) / var14;
+                        if (var12 > var11) {
                           var13 = 0;
                           break L6;
                         } else {
@@ -239,14 +257,14 @@ final class sd extends pb {
                         }
                         var16 = mh.field_b[param8];
                         L9: while (true) {
-                          if (~param8 <= ~param7) {
+                          if (param8 >= param7) {
                             break L7;
                           } else {
                             L10: {
-                              var17 = var9_int >> 16;
+                              var17 = var9_int >> 1475495536;
                               if (mh.field_c > var17) {
-                                var18 = (var10 >> 16) - (var9_int >> 16);
-                                if (var18 != 0) {
+                                var18 = (var10 >> 1486250608) - (var9_int >> -1222284624);
+                                if (-1 != (var18 ^ -1)) {
                                   L11: {
                                     if (var17 - -var18 < mh.field_c) {
                                       break L11;
@@ -263,7 +281,7 @@ final class sd extends pb {
                                     break L10;
                                   }
                                 } else {
-                                  if (var17 < 0) {
+                                  if (-1 < (var17 ^ -1)) {
                                     break L10;
                                   } else {
                                     if (mh.field_c > var17) {
@@ -279,30 +297,31 @@ final class sd extends pb {
                               }
                             }
                             param8++;
-                            if (~param8 > ~mh.field_h) {
+                            if (param8 < mh.field_h) {
                               var16 = var16 + vb.field_f;
                               var9_int = var9_int + var11;
                               var10 = var10 + var12;
                               continue L9;
                             } else {
-                              return;
+                              decompiledRegionSelector0 = 3;
+                              break L0;
                             }
                           }
                         }
                       }
                       var16 = -param7 + param5;
-                      if (var16 == 0) {
+                      if (-1 == (var16 ^ -1)) {
                         var12 = 0;
                         var11 = 0;
                         break L4;
                       } else {
                         L12: {
-                          var17 = param6 << 16;
+                          var17 = param6 << -903778992;
                           if (var13 == 0) {
-                            var9_int = param0 << 16;
+                            var9_int = param0 << 1096001584;
                             break L12;
                           } else {
-                            var10 = param0 << 16;
+                            var10 = param0 << 1370743920;
                             break L12;
                           }
                         }
@@ -326,20 +345,21 @@ final class sd extends pb {
                   var16 = -91 % ((param3 - 74) / 33);
                   var15 = mh.field_b[param8];
                   L14: while (true) {
-                    if (~param5 >= ~param8) {
+                    if (param5 <= param8) {
+                      decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       L15: {
-                        var17 = var9_int >> 16;
+                        var17 = var9_int >> -1016334288;
                         if (mh.field_c <= var17) {
                           break L15;
                         } else {
-                          var18 = (var10 >> 16) + -(var9_int >> 16);
+                          var18 = (var10 >> -963505040) + -(var9_int >> -130429392);
                           if (var18 == 0) {
-                            if (var17 < 0) {
+                            if ((var17 ^ -1) > -1) {
                               break L15;
                             } else {
-                              if (~mh.field_c < ~var17) {
+                              if (mh.field_c > var17) {
                                 ib.a(-67, param4, var17 - -var15, param2, var18);
                                 break L15;
                               } else {
@@ -372,7 +392,8 @@ final class sd extends pb {
                         var15 = var15 + vb.field_f;
                         continue L14;
                       } else {
-                        return;
+                        decompiledRegionSelector0 = 5;
+                        break L0;
                       }
                     }
                   }
@@ -381,29 +402,30 @@ final class sd extends pb {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var9 = decompiledCaughtException;
-            stackOut_72_0 = (RuntimeException) var9;
+            stackOut_72_0 = (RuntimeException) (var9);
             stackOut_72_1 = new StringBuilder().append("sd.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_74_0 = stackOut_72_0;
             stackIn_74_1 = stackOut_72_1;
             stackIn_73_0 = stackOut_72_0;
             stackIn_73_1 = stackOut_72_1;
             if (param4 == null) {
-              stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
-              stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
+              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
+              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
               stackOut_74_2 = "null";
               stackIn_75_0 = stackOut_74_0;
               stackIn_75_1 = stackOut_74_1;
               stackIn_75_2 = stackOut_74_2;
               break L17;
             } else {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackOut_73_2 = "{...}";
               stackIn_75_0 = stackOut_73_0;
               stackIn_75_1 = stackOut_73_1;
@@ -411,16 +433,37 @@ final class sd extends pb {
               break L17;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw t.a((Throwable) ((Object) stackIn_75_0), stackIn_75_2 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return;
+                } else {
+                  return;
+                }
+              }
+            }
+          }
         }
     }
 
     final int g(int param0) {
         if (param0 == 0) {
-          if (null == ((sd) this).field_A) {
+          if (null == this.field_A) {
             return 0;
           } else {
-            return 100 * ((sd) this).field_A.field_f / (-((sd) this).field_E + ((sd) this).field_A.field_j.length);
+            return 100 * this.field_A.field_f / (-this.field_E + this.field_A.field_j.length);
           }
         } else {
           return 76;
@@ -436,10 +479,6 @@ final class sd extends pb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = new byte[50][];
         uf.a(116, 50);
     }

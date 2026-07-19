@@ -14,16 +14,19 @@ final class s extends gf {
     final void c(int param0, rc param1) {
         try {
             if (param0 != -3399) {
-                Object var4 = null;
-                ((s) this).c(-9, (rc) null);
+                rc var4 = (rc) null;
+                this.c(-9, (rc) null);
             }
-            super.c(param0, param1);
+            super.c(param0 + 0, param1);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "s.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw fc.a((Throwable) ((Object) runtimeException), "s.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void m(int param0) {
+        if (param0 != -1) {
+            return;
+        }
         field_ib = null;
         field_hb = null;
         field_jb = null;
@@ -34,31 +37,45 @@ final class s extends gf {
         if (!(ve.field_a == null)) {
             var1 = ve.field_a.j(-19569);
         }
-        int var2 = 0;
+        int var2 = -90 % ((param0 - 58) / 51);
         if (var1.length() == 0) {
             var1 = qe.a((byte) 127);
         }
-        if (!(var1.length() != 0)) {
+        if (!(-1 != (var1.length() ^ -1))) {
             var1 = je.field_a;
         }
         return var1;
     }
 
     final static void n(int param0) {
-        if (!(null == kj.field_P)) {
+        String discarded$6 = null;
+        L0: {
+          if (null != kj.field_P) {
             kj.field_P.a();
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        if (null != ql.field_r) {
+        if (param0 == 0) {
+          if (null != ql.field_r) {
             ql.field_r.a();
             return;
+          } else {
+            return;
+          }
+        } else {
+          discarded$6 = s.o(-8);
+          if (null == ql.field_r) {
+            return;
+          } else {
+            ql.field_r.a();
+            return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_gb = 0;
         field_ib = null;
     }

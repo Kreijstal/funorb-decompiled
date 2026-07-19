@@ -6,11 +6,15 @@ final class cda {
     int field_a;
 
     final static hn a(int param0) {
+        if (param0 != 0) {
+            return (hn) null;
+        }
         return saa.field_a;
     }
 
     final static void a(int param0, lu param1, ht param2, boolean param3) {
         try {
+            byte[] array$1 = null;
             RuntimeException var4 = null;
             int var5 = 0;
             ClassNotFoundException var6 = null;
@@ -31,12 +35,11 @@ final class cda {
             String var16 = null;
             int var17 = 0;
             Object var18 = null;
+            fka var18_ref = null;
             byte[][] var19 = null;
             String var20 = null;
             String var21 = null;
             byte[][] var22 = null;
-            byte[][] var23 = null;
-            byte[][] var24 = null;
             RuntimeException stackIn_36_0 = null;
             StringBuilder stackIn_36_1 = null;
             RuntimeException stackIn_37_0 = null;
@@ -72,19 +75,19 @@ final class cda {
             var14 = BachelorFridge.field_y;
             try {
               L0: {
-                var18 = (Object) (Object) new fka();
-                ((fka) var18).field_k = param1.b(16711935);
-                ((fka) var18).field_n = param1.f(82);
-                ((fka) var18).field_m = new int[((fka) var18).field_k];
-                ((fka) var18).field_j = new eh[((fka) var18).field_k];
-                ((fka) var18).field_l = new int[((fka) var18).field_k];
-                ((fka) var18).field_g = new int[((fka) var18).field_k];
-                ((fka) var18).field_f = new byte[((fka) var18).field_k][][];
-                ((fka) var18).field_i = new eh[((fka) var18).field_k];
+                var18_ref = new fka();
+                var18_ref.field_k = param1.b(16711935);
+                var18_ref.field_n = param1.f(82);
+                var18_ref.field_m = new int[var18_ref.field_k];
+                var18_ref.field_j = new eh[var18_ref.field_k];
+                var18_ref.field_l = new int[var18_ref.field_k];
+                var18_ref.field_g = new int[var18_ref.field_k];
+                var18_ref.field_f = new byte[var18_ref.field_k][][];
+                var18_ref.field_i = new eh[var18_ref.field_k];
                 var5 = 0;
                 L1: while (true) {
-                  if (((fka) var18).field_k <= var5) {
-                    fd.field_z.a((bw) var18, true);
+                  if (var18_ref.field_k <= var5) {
+                    fd.field_z.a(var18_ref, param3);
                     break L0;
                   } else {
                     try {
@@ -101,69 +104,68 @@ final class cda {
                                 if (var6_int == 2) {
                                   break L4;
                                 } else {
-                                  if (var6_int == 3) {
-                                    var20 = param1.g(69);
-                                    var21 = param1.g(40);
-                                    var9 = param1.b(16711935);
-                                    var10 = new String[var9];
-                                    var11_int = 0;
-                                    L5: while (true) {
-                                      if (var11_int >= var9) {
-                                        L6: {
-                                          var24 = new byte[var9][];
-                                          var23 = var24;
-                                          var22 = var23;
-                                          var19 = var22;
-                                          var11 = var19;
-                                          if (var6_int == 3) {
-                                            var12_int = 0;
-                                            L7: while (true) {
-                                              if (var9 <= var12_int) {
-                                                break L6;
-                                              } else {
-                                                var13 = param1.f(-87);
-                                                var11[var12_int] = new byte[var13];
-                                                param1.a(var24[var12_int], var13, 128, 0);
-                                                var12_int++;
-                                                continue L7;
-                                              }
+                                  L5: {
+                                    if ((var6_int ^ -1) == -4) {
+                                      break L5;
+                                    } else {
+                                      if (4 == var6_int) {
+                                        break L5;
+                                      } else {
+                                        var5++;
+                                        decompiledRegionSelector0 = 0;
+                                        break L2;
+                                      }
+                                    }
+                                  }
+                                  var20 = param1.g(69);
+                                  var21 = param1.g(40);
+                                  var9 = param1.b(16711935);
+                                  var10 = new String[var9];
+                                  var11_int = 0;
+                                  L6: while (true) {
+                                    if (var11_int >= var9) {
+                                      L7: {
+                                        var22 = new byte[var9][];
+                                        var19 = var22;
+                                        var11 = var19;
+                                        if (-4 == (var6_int ^ -1)) {
+                                          var12_int = 0;
+                                          L8: while (true) {
+                                            if (var9 <= var12_int) {
+                                              break L7;
+                                            } else {
+                                              var13 = param1.f(-87);
+                                              array$1 = new byte[var13];
+                                              var11[var12_int] = array$1;
+                                              param1.a(var22[var12_int], var13, 128, 0);
+                                              var12_int++;
+                                              continue L8;
                                             }
-                                          } else {
-                                            break L6;
                                           }
+                                        } else {
+                                          break L7;
                                         }
-                                        ((fka) var18).field_g[var5] = var6_int;
-                                        var12 = new Class[var9];
-                                        var17 = 0;
-                                        var13 = var17;
-                                        L8: while (true) {
-                                          if (var17 >= var9) {
-                                            ((fka) var18).field_j[var5] = param2.a(31633, wi.a(var20, -69), var12, var21);
-                                            ((fka) var18).field_f[var5] = var24;
-                                            break L3;
-                                          } else {
-                                            var12[var17] = wi.a(var10[var17], 81);
-                                            var17++;
-                                            continue L8;
-                                          }
+                                      }
+                                      var18_ref.field_g[var5] = var6_int;
+                                      var12 = new Class[var9];
+                                      var17 = 0;
+                                      var13 = var17;
+                                      L9: while (true) {
+                                        if (var17 >= var9) {
+                                          var18_ref.field_j[var5] = param2.a(31633, wi.a(var20, -69), var12, var21);
+                                          var18_ref.field_f[var5] = var22;
+                                          break L3;
+                                        } else {
+                                          var12[var17] = wi.a(var10[var17], 81);
+                                          var17++;
+                                          continue L9;
                                         }
-                                      } else {
-                                        var10[var11_int] = param1.g(-126);
-                                        var11_int++;
-                                        continue L5;
                                       }
+                                    } else {
+                                      var10[var11_int] = param1.g(-126);
+                                      var11_int++;
+                                      continue L6;
                                     }
-                                  } else {
-                                    L9: {
-                                      if (4 != var6_int) {
-                                        break L9;
-                                      } else {
-                                        break L9;
-                                      }
-                                    }
-                                    var5++;
-                                    decompiledRegionSelector0 = 0;
-                                    break L2;
                                   }
                                 }
                               }
@@ -180,9 +182,9 @@ final class cda {
                               break L10;
                             }
                           }
-                          ((fka) var18).field_g[var5] = var6_int;
-                          ((fka) var18).field_m[var5] = var9;
-                          ((fka) var18).field_i[var5] = param2.a(var15, wi.a(var16, 88), -128);
+                          var18_ref.field_g[var5] = var6_int;
+                          var18_ref.field_m[var5] = var9;
+                          var18_ref.field_i[var5] = param2.a(var15, wi.a(var16, 88), -128);
                           break L3;
                         }
                         decompiledRegionSelector0 = 1;
@@ -192,15 +194,31 @@ final class cda {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       L11: {
                         var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                        ((fka) var18).field_l[var5] = -1;
+                        var18_ref.field_l[var5] = -1;
                         decompiledRegionSelector0 = 1;
                         break L11;
+                      }
+                    } catch (java.lang.SecurityException decompiledCaughtParameter1) {
+                      decompiledCaughtException = decompiledCaughtParameter1;
+                      L12: {
+                        var6_ref = (SecurityException) (Object) decompiledCaughtException;
+                        var18_ref.field_l[var5] = -2;
+                        decompiledRegionSelector0 = 1;
+                        break L12;
+                      }
+                    } catch (java.lang.NullPointerException decompiledCaughtParameter2) {
+                      decompiledCaughtException = decompiledCaughtParameter2;
+                      L13: {
+                        var6_ref2 = (NullPointerException) (Object) decompiledCaughtException;
+                        var18_ref.field_l[var5] = -3;
+                        decompiledRegionSelector0 = 1;
+                        break L13;
                       }
                     } catch (java.lang.Exception decompiledCaughtParameter3) {
                       decompiledCaughtException = decompiledCaughtParameter3;
                       L14: {
                         var6_ref3 = (Exception) (Object) decompiledCaughtException;
-                        ((fka) var18).field_l[var5] = -4;
+                        var18_ref.field_l[var5] = -4;
                         decompiledRegionSelector0 = 1;
                         break L14;
                       }
@@ -208,7 +226,7 @@ final class cda {
                       decompiledCaughtException = decompiledCaughtParameter4;
                       L15: {
                         var6_ref4 = decompiledCaughtException;
-                        ((fka) var18).field_l[var5] = -5;
+                        var18_ref.field_l[var5] = -5;
                         decompiledRegionSelector0 = 1;
                         break L15;
                       }
@@ -226,23 +244,23 @@ final class cda {
               decompiledCaughtException = decompiledCaughtParameter5;
               L16: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_35_0 = (RuntimeException) var4;
+                stackOut_35_0 = (RuntimeException) (var4);
                 stackOut_35_1 = new StringBuilder().append("cda.B(").append(param0).append(',');
                 stackIn_37_0 = stackOut_35_0;
                 stackIn_37_1 = stackOut_35_1;
                 stackIn_36_0 = stackOut_35_0;
                 stackIn_36_1 = stackOut_35_1;
                 if (param1 == null) {
-                  stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-                  stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+                  stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
+                  stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
                   stackOut_37_2 = "null";
                   stackIn_38_0 = stackOut_37_0;
                   stackIn_38_1 = stackOut_37_1;
                   stackIn_38_2 = stackOut_37_2;
                   break L16;
                 } else {
-                  stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-                  stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+                  stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
+                  stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
                   stackOut_36_2 = "{...}";
                   stackIn_38_0 = stackOut_36_0;
                   stackIn_38_1 = stackOut_36_1;
@@ -251,23 +269,23 @@ final class cda {
                 }
               }
               L17: {
-                stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
+                stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
                 stackOut_38_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_38_2).append(',');
                 stackIn_40_0 = stackOut_38_0;
                 stackIn_40_1 = stackOut_38_1;
                 stackIn_39_0 = stackOut_38_0;
                 stackIn_39_1 = stackOut_38_1;
                 if (param2 == null) {
-                  stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
-                  stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+                  stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
+                  stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
                   stackOut_40_2 = "null";
                   stackIn_41_0 = stackOut_40_0;
                   stackIn_41_1 = stackOut_40_1;
                   stackIn_41_2 = stackOut_40_2;
                   break L17;
                 } else {
-                  stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-                  stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+                  stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
+                  stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
                   stackOut_39_2 = "{...}";
                   stackIn_41_0 = stackOut_39_0;
                   stackIn_41_1 = stackOut_39_1;
@@ -275,7 +293,7 @@ final class cda {
                   break L17;
                 }
               }
-              throw pe.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ',' + true + ')');
+              throw pe.a((Throwable) ((Object) stackIn_41_0), stackIn_41_2 + ',' + param3 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -286,9 +304,9 @@ final class cda {
 
     cda() {
         int var1 = 0;
-        ((cda) this).field_b = new gfa[11];
-        for (var1 = 0; var1 < ((cda) this).field_b.length; var1++) {
-            ((cda) this).field_b[var1] = new gfa(0, 0);
+        this.field_b = new gfa[11];
+        for (var1 = 0; var1 < this.field_b.length; var1++) {
+            this.field_b[var1] = new gfa(0, 0);
         }
     }
 

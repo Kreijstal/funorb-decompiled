@@ -26,10 +26,6 @@ final class ia {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ia.A(";
         field_c = true;
         field_a = "Reset view";

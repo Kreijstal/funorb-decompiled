@@ -8,13 +8,12 @@ final class dr {
     final static void a(int param0) {
         awa.field_p.setLength(0);
         ow.field_b = 0;
+        if (param0 != 26718) {
+            field_a = 106;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "dr.A(";
         field_a = 128;
         pn discarded$0 = new pn();

@@ -8,8 +8,8 @@ final class si {
     int field_a;
 
     si(int param0, int param1, int param2) {
-        ((si) this).field_a = param1;
-        ((si) this).field_b = param0;
+        this.field_a = param1;
+        this.field_b = param0;
     }
 
     public static void a(int param0) {
@@ -21,10 +21,6 @@ final class si {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Next";
         field_d = "Play rated game";
     }

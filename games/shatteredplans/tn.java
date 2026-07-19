@@ -10,10 +10,10 @@ abstract class tn extends oh {
     abstract void b(int[] param0, int param1, int param2);
 
     final void a(int[] param0, int param1, int param2) {
-        if (((tn) this).field_j) {
-            ((tn) this).b(param0, param1, param2);
+        if (this.field_j) {
+            this.b(param0, param1, param2);
         } else {
-            ((tn) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -26,7 +26,7 @@ abstract class tn extends oh {
     abstract tn d();
 
     protected tn() {
-        ((tn) this).field_j = true;
+        this.field_j = true;
     }
 
     int c() {

@@ -13,7 +13,7 @@ final class rh {
         var3 = 99 / ((param0 - 75) / 33);
         te.field_O = 0;
         kk.field_S = param1;
-        if (kk.field_S >= 0) {
+        if ((kk.field_S ^ -1) <= -1) {
           nc.field_cb[kk.field_S].a(param2, (byte) 53);
           return;
         } else {
@@ -41,10 +41,6 @@ final class rh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Please send me news and updates (I can unsubscribe at any time)";
         field_a = "Cost";
         field_e = new int[4];

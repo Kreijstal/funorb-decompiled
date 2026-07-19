@@ -225,6 +225,9 @@ final class cd {
         ca.field_wb = null;
         kf.field_G = null;
         cl.field_B = null;
+        if (!param0) {
+            field_m = (ve) null;
+        }
     }
 
     public static void a(byte param0) {
@@ -232,6 +235,9 @@ final class cd {
         field_c = null;
         field_m = null;
         field_k = null;
+        if (param0 < 119) {
+            return;
+        }
         field_b = null;
         field_j = null;
     }

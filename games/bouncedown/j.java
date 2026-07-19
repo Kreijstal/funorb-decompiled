@@ -14,9 +14,9 @@ final class j extends ai {
             Object var6 = null;
             Object var7 = null;
             ce var8 = null;
-            gk stackIn_13_0 = null;
+            gk stackIn_16_0 = null;
             Throwable decompiledCaughtException = null;
-            gk stackOut_12_0 = null;
+            gk stackOut_15_0 = null;
             try {
               L0: {
                 L1: {
@@ -24,7 +24,7 @@ final class j extends ai {
                   if (param1 < -94) {
                     break L1;
                   } else {
-                    field_j = null;
+                    field_j = (gk) null;
                     break L1;
                   }
                 }
@@ -33,7 +33,7 @@ final class j extends ai {
                   if (null != vc.field_G.field_j) {
                     jg.field_C = new jf(vc.field_G.field_j, 5200, 0);
                     vc.field_G.field_j = null;
-                    var6 = (Object) (Object) new vh(255, jg.field_C, new jf(vc.field_G.field_m, 12000, 0), 2097152);
+                    var6 = new vh(255, jg.field_C, new jf(vc.field_G.field_m, 12000, 0), 2097152);
                     break L2;
                   } else {
                     break L2;
@@ -60,21 +60,29 @@ final class j extends ai {
                         break L5;
                       }
                     }
-                    var7 = (Object) (Object) new vh(param3, jg.field_C, pd.field_a[param3], 2097152);
+                    var7 = new vh(param3, jg.field_C, pd.field_a[param3], 2097152);
                     break L3;
                   }
                 }
-                var8 = ih.field_Q.a(false, (vh) var7, (vh) var6, param3, -18023);
-                stackOut_12_0 = new gk((td) (Object) var8, true, 1);
-                stackIn_13_0 = stackOut_12_0;
+                L6: {
+                  var8 = ih.field_Q.a(param2, (vh) (var7), (vh) (var6), param3, -18023);
+                  if (param0) {
+                    var8.b((byte) -124);
+                    break L6;
+                  } else {
+                    break L6;
+                  }
+                }
+                stackOut_15_0 = new gk(var8, param4, param5);
+                stackIn_16_0 = stackOut_15_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (Object) (Object) decompiledCaughtException;
-              throw new RuntimeException(((IOException) var6).toString());
+              var6 = (IOException) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) (var6)).toString());
             }
-            return stackIn_13_0;
+            return stackIn_16_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -84,21 +92,14 @@ final class j extends ai {
 
     public static void b(byte param0) {
         field_j = null;
+        if (param0 > -50) {
+            field_j = (gk) null;
+        }
     }
 
     final static boolean a(char param0, byte param1) {
-        if (param0 < 65) {
-          if (param0 >= 97) {
-            if (param0 <= 122) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
-          if (param0 > 90) {
+        if (param1 == 56) {
+          if (param0 < 65) {
             if (param0 >= 97) {
               if (param0 > 122) {
                 return false;
@@ -109,7 +110,46 @@ final class j extends ai {
               return false;
             }
           } else {
-            return true;
+            if (param0 > 90) {
+              if (param0 >= 97) {
+                if (param0 > 122) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
+                return false;
+              }
+            } else {
+              return true;
+            }
+          }
+        } else {
+          j.c((byte) -68);
+          if (param0 >= 65) {
+            if (param0 > 90) {
+              if (param0 >= 97) {
+                if (param0 > 122) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
+                return false;
+              }
+            } else {
+              return true;
+            }
+          } else {
+            if (param0 >= 97) {
+              if (param0 > 122) {
+                return false;
+              } else {
+                return true;
+              }
+            } else {
+              return false;
+            }
           }
         }
     }
@@ -117,7 +157,7 @@ final class j extends ai {
     final static void c(byte param0) {
         ig.a(-102);
         fe.field_g = true;
-        int var1 = 0;
+        int var1 = -119 % ((param0 - -35) / 46);
         ee.field_c = true;
         q.field_N.k(-20281);
         fj.a(false, vb.field_o, -1);
@@ -125,11 +165,11 @@ final class j extends ai {
 
     j(long param0, int param1, byte[] param2) {
         try {
-            ((j) this).field_h = param0;
-            ((j) this).field_g = param1;
-            ((j) this).field_i = param2;
+            this.field_h = param0;
+            this.field_g = param1;
+            this.field_i = param2;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "j.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "j.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

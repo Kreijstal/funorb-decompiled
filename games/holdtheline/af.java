@@ -11,6 +11,6 @@ public class af {
     Object field_c;
 
     af() {
-        ((af) this).field_d = 0;
+        this.field_d = 0;
     }
 }

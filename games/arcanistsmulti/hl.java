@@ -32,8 +32,6 @@ final class hl extends pg {
         int var22 = 0;
         int[] var23 = null;
         int[] var24 = null;
-        int[] var25 = null;
-        int[] var26 = null;
         RuntimeException decompiledCaughtException = null;
         var22 = ArcanistsMulti.field_G ? 1 : 0;
         try {
@@ -75,91 +73,95 @@ final class hl extends pg {
                 break L4;
               }
             }
-            var26 = de.field_l;
-            var25 = var26;
-            var24 = var25;
-            var23 = var24;
-            var10 = var23;
+            L5: {
+              var24 = de.field_l;
+              var23 = var24;
+              var10 = var23;
+              if (param3 == 2232) {
+                break L5;
+              } else {
+                field_l = (int[]) null;
+                break L5;
+              }
+            }
             var15 = var6;
-            L5: while (true) {
+            L6: while (true) {
               if (var7 <= var15) {
                 break L0;
               } else {
                 var16 = var8;
-                L6: while (true) {
+                L7: while (true) {
                   if (var9 <= var16) {
                     var15++;
-                    continue L5;
+                    continue L6;
                   } else {
-                    L7: {
+                    L8: {
                       var12 = var16 - param1;
                       var13 = -param0 + var15;
                       var14 = var13 * var13 + var12 * var12;
                       if (var14 < var5_int) {
-                        L8: {
+                        L9: {
                           if (var14 != 0) {
-                            break L8;
+                            break L9;
                           } else {
                             var14 = 1;
-                            break L8;
+                            break L9;
                           }
                         }
-                        L9: {
+                        L10: {
                           var11 = var16 + var15 * de.field_e;
                           var17 = 256 - -(param2 * var14 / var5_int) - param2;
-                          var18 = var26[var11];
-                          var19 = var18 >> 16 & 255;
-                          var20 = 255 & var18 >> 8;
+                          var18 = var24[var11];
+                          var19 = var18 >> 1768713072 & 255;
+                          var20 = 255 & var18 >> 1771034792;
                           var21 = 255 & var18;
                           if (0 < var17) {
-                            if (var17 != 256) {
-                              L10: {
+                            if (-257 != (var17 ^ -1)) {
+                              L11: {
                                 if (var17 <= var20) {
                                   var20 = -(var17 * (var20 - var17) / (256 - var17)) + var17;
-                                  break L10;
+                                  break L11;
                                 } else {
                                   var20 = var20 + (256 + -var17);
-                                  break L10;
+                                  break L11;
                                 }
                               }
-                              L11: {
+                              L12: {
                                 if (var17 <= var19) {
                                   var19 = var17 - var17 * (var19 - var17) / (256 + -var17);
-                                  break L11;
+                                  break L12;
                                 } else {
                                   var19 = var19 + (256 + -var17);
-                                  break L11;
+                                  break L12;
                                 }
                               }
                               if (var17 > var21) {
                                 var21 = var21 + (256 - var17);
-                                break L9;
+                                break L10;
                               } else {
                                 var21 = var17 + -(var17 * (var21 + -var17) / (-var17 + 256));
-                                break L9;
+                                break L10;
                               }
                             } else {
-                              var10[var11] = fj.b(fj.b(var19 << 16, var20 << 8), var21);
+                              var10[var11] = fj.b(fj.b(var19 << -1513388336, var20 << -480690840), var21);
                               var16++;
-                              continue L6;
+                              continue L7;
                             }
                           } else {
                             var20 = -var20 + 255;
                             var19 = 255 + -var19;
                             var21 = -var21 + 255;
-                            break L9;
+                            break L10;
                           }
                         }
-                        var10[var11] = fj.b(fj.b(var19 << 16, var20 << 8), var21);
-                        var16++;
-                        break L7;
+                        var10[var11] = fj.b(fj.b(var19 << -1513388336, var20 << -480690840), var21);
+                        break L8;
                       } else {
-                        var16++;
-                        break L7;
+                        break L8;
                       }
                     }
                     var16++;
-                    continue L6;
+                    continue L7;
                   }
                 }
               }
@@ -168,25 +170,31 @@ final class hl extends pg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var5, "hl.B(" + param0 + ',' + param1 + ',' + param2 + ',' + 2232 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) var5), "hl.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(int param0) {
-        field_m = null;
-        field_h = null;
-        field_l = null;
-        field_i = null;
+        if (param0 != -1513388336) {
+          field_m = (kc) null;
+          field_m = null;
+          field_h = null;
+          field_l = null;
+          field_i = null;
+          return;
+        } else {
+          field_m = null;
+          field_h = null;
+          field_l = null;
+          field_i = null;
+          return;
+        }
     }
 
     hl() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "  You have the option of selecting Team Games when you select 'Create an Unrated Game' or when you set up the options for a Rated game. When this option is selected, any game with either 4 or 6 players will be divided into two seperate teams, the <u><col=aa0000>Reds</col></u> and the <u><col=0000ff>Blues</col></u>.";
         field_h = "Withdraw request to join <%0>'s game";
     }

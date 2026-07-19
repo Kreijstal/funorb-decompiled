@@ -24,7 +24,7 @@ final class br extends mh {
         om var7 = null;
         pi var4 = null;
         if (re.field_i != param2) {
-            var6 = (om) (Object) pn.field_i.a((long)re.field_i, -1);
+            var6 = (om) ((Object) pn.field_i.a((long)re.field_i, -1));
             var7 = var6;
             if (!(var7 == null)) {
                 var7.field_Qb = null;
@@ -41,38 +41,38 @@ final class br extends mh {
 
     final void a(String param0, int param1, byte param2) {
         try {
-            ((br) this).field_Xb[((br) this).field_Wb] = new rk(0L, (mh) null, (mh) null, ((br) this).field_ec, (jp) null, param0);
-            ((br) this).field_Xb[((br) this).field_Wb].field_Gb = ((br) this).field_Tb;
-            ((br) this).field_Xb[((br) this).field_Wb].field_Lb = true;
-            ((br) this).field_Xb[((br) this).field_Wb].field_Q = 1;
-            ((br) this).a((mh) (Object) ((br) this).field_Xb[((br) this).field_Wb], 0);
+            this.field_Xb[this.field_Wb] = new rk(0L, (mh) null, (mh) null, this.field_ec, (jp) null, param0);
+            this.field_Xb[this.field_Wb].field_Gb = this.field_Tb;
+            this.field_Xb[this.field_Wb].field_Lb = true;
+            this.field_Xb[this.field_Wb].field_Q = 1;
+            this.a(this.field_Xb[this.field_Wb], 0);
             if (param2 < 70) {
-                ((br) this).field_Xb = null;
+                this.field_Xb = (rk[]) null;
             }
-            ((br) this).field_cc[((br) this).field_Wb] = param1;
-            ((br) this).field_Wb = ((br) this).field_Wb + 1;
+            this.field_cc[this.field_Wb] = param1;
+            this.field_Wb = this.field_Wb + 1;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "br.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "br.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final int a(byte param0, boolean param1) {
         int var4 = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
-        ((br) this).a(param1, -15211);
+        this.a(param1, -15211);
         if (!param1) {
             return -2;
         }
         int var3 = -36 / ((param0 - 13) / 63);
-        for (var4 = 0; ((br) this).field_Wb > var4; var4++) {
-            if (((br) this).field_Xb[var4].field_L != 0) {
-                return ((br) this).field_cc[var4];
+        for (var4 = 0; this.field_Wb > var4; var4++) {
+            if (this.field_Xb[var4].field_L != 0) {
+                return this.field_cc[var4];
             }
         }
         if (!(ki.field_e == 0)) {
             return -1;
         }
-        return ((br) this).field_dc;
+        return this.field_dc;
     }
 
     final void a(String param0, int param1, int param2, jp param3) {
@@ -111,17 +111,17 @@ final class br extends mh {
         try {
           L0: {
             L1: {
-              ((br) this).field_Xb[((br) this).field_Wb] = new rk(0L, (mh) null, (mh) null, ((br) this).field_ec, param3, param0);
-              ((br) this).field_Xb[((br) this).field_Wb].field_Gb = ((br) this).field_Tb;
-              ((br) this).field_Xb[((br) this).field_Wb].field_Lb = true;
-              ((br) this).field_Xb[((br) this).field_Wb].field_Q = 1;
-              ((br) this).a((mh) (Object) ((br) this).field_Xb[((br) this).field_Wb], 0);
-              ((br) this).field_cc[((br) this).field_Wb] = param2;
-              ((br) this).field_Wb = ((br) this).field_Wb + 1;
+              this.field_Xb[this.field_Wb] = new rk(0L, (mh) null, (mh) null, this.field_ec, param3, param0);
+              this.field_Xb[this.field_Wb].field_Gb = this.field_Tb;
+              this.field_Xb[this.field_Wb].field_Lb = true;
+              this.field_Xb[this.field_Wb].field_Q = 1;
+              this.a(this.field_Xb[this.field_Wb], 0);
+              this.field_cc[this.field_Wb] = param2;
+              this.field_Wb = this.field_Wb + 1;
               if (param1 >= 62) {
                 break L1;
               } else {
-                ((br) this).field_Vb = -95;
+                this.field_Vb = -95;
                 break L1;
               }
             }
@@ -131,23 +131,23 @@ final class br extends mh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("br.H(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -156,23 +156,23 @@ final class br extends mh {
             }
           }
           L3: {
-            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -180,17 +180,20 @@ final class br extends mh {
               break L3;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
     br(br param0) {
-        this((mh) (Object) param0, param0.field_Tb, param0.field_Pb, param0.field_ec, param0.field_Vb, param0.field_Qb, param0.field_Yb, param0.field_Sb, param0.field_Zb);
+        this(param0, param0.field_Tb, param0.field_Pb, param0.field_ec, param0.field_Vb, param0.field_Qb, param0.field_Yb, param0.field_Sb, param0.field_Zb);
     }
 
     public static void h(int param0) {
         field_Ub = null;
-        field_bc = null;
+        if (param0 < 20) {
+            return;
+        }
+        field_bc = (int[][]) null;
         field_Rb = null;
         field_ac = null;
     }
@@ -208,30 +211,30 @@ final class br extends mh {
 
     br(mh param0, jp[] param1, mh param2, mh param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
-        ((br) this).field_Xb = new rk[256];
-        ((br) this).field_dc = -2;
-        ((br) this).field_cc = new int[256];
+        this.field_Xb = new rk[256];
+        this.field_dc = -2;
+        this.field_cc = new int[256];
         try {
-            ((br) this).field_Pb = param2;
-            ((br) this).field_Qb = param5;
-            ((br) this).field_Zb = param8;
-            ((br) this).field_Sb = param7;
-            ((br) this).field_ec = param3;
-            ((br) this).field_Tb = param1;
-            ((br) this).field_Yb = param6;
-            ((br) this).field_Vb = param4;
+            this.field_Pb = param2;
+            this.field_Qb = param5;
+            this.field_Zb = param8;
+            this.field_Sb = param7;
+            this.field_ec = param3;
+            this.field_Tb = param1;
+            this.field_Yb = param6;
+            this.field_Vb = param4;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "br.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "br.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     final boolean i(int param0) {
         int var2 = 0;
-        if (!(-2 == ((br) this).field_dc)) {
+        if (!(-2 == this.field_dc)) {
             return false;
         }
         if (dc.field_b == 13) {
-            ((br) this).field_dc = -1;
+            this.field_dc = -1;
             var2 = -81 % ((-25 - param0) / 41);
             return true;
         }
@@ -247,29 +250,29 @@ final class br extends mh {
         int var10 = 0;
         int var11 = 0;
         var11 = BrickABrac.field_J ? 1 : 0;
-        if (((br) this).field_Wb != 0) {
+        if (this.field_Wb != 0) {
           var6 = 0;
           if (param1 < -49) {
             var7 = 0;
             L0: while (true) {
-              if (((br) this).field_Wb <= var7) {
-                var6 = var6 + ((br) this).field_Vb * 2;
-                var7 = ((br) this).field_Zb * ((br) this).field_Wb + ((br) this).field_Sb - -((br) this).field_Sb;
+              if (this.field_Wb <= var7) {
+                var6 = var6 + this.field_Vb * 2;
+                var7 = this.field_Zb * this.field_Wb + this.field_Sb - -this.field_Sb;
                 var8 = fp.a(-1, var6, param4, param3);
                 var9 = br.a(var7, param0, param2, 122);
-                ((br) this).a(var7, var9, var8, var6, (byte) 64);
+                this.a(var7, var9, var8, var6, (byte) 64);
                 var10 = 0;
                 L1: while (true) {
-                  if (var10 >= ((br) this).field_Wb) {
+                  if (var10 >= this.field_Wb) {
                     return;
                   } else {
-                    ((br) this).field_Xb[var10].a(-10411, ((br) this).field_Zb * var10 + ((br) this).field_Sb, ((br) this).field_Qb, ((br) this).field_Yb, ((br) this).field_Vb, ((br) this).field_Zb, var6 - 2 * ((br) this).field_Vb);
+                    this.field_Xb[var10].a(-10411, this.field_Zb * var10 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6 - 2 * this.field_Vb);
                     var10++;
                     continue L1;
                   }
                 }
               } else {
-                var8 = ((br) this).field_Xb[var7].a(((br) this).field_Yb, 24, ((br) this).field_Qb);
+                var8 = this.field_Xb[var7].a(this.field_Yb, 24, this.field_Qb);
                 if (var6 < var8) {
                   var6 = var8;
                   var7++;
@@ -281,27 +284,27 @@ final class br extends mh {
               }
             }
           } else {
-            ((br) this).field_Zb = -94;
+            this.field_Zb = -94;
             var7 = 0;
             L2: while (true) {
-              if (((br) this).field_Wb <= var7) {
-                var6 = var6 + ((br) this).field_Vb * 2;
-                var7 = ((br) this).field_Zb * ((br) this).field_Wb + ((br) this).field_Sb - -((br) this).field_Sb;
+              if (this.field_Wb <= var7) {
+                var6 = var6 + this.field_Vb * 2;
+                var7 = this.field_Zb * this.field_Wb + this.field_Sb - -this.field_Sb;
                 var8 = fp.a(-1, var6, param4, param3);
                 var9 = br.a(var7, param0, param2, 122);
-                ((br) this).a(var7, var9, var8, var6, (byte) 64);
+                this.a(var7, var9, var8, var6, (byte) 64);
                 var10 = 0;
                 L3: while (true) {
-                  if (var10 >= ((br) this).field_Wb) {
+                  if (var10 >= this.field_Wb) {
                     return;
                   } else {
-                    ((br) this).field_Xb[var10].a(-10411, ((br) this).field_Zb * var10 + ((br) this).field_Sb, ((br) this).field_Qb, ((br) this).field_Yb, ((br) this).field_Vb, ((br) this).field_Zb, var6 - 2 * ((br) this).field_Vb);
+                    this.field_Xb[var10].a(-10411, this.field_Zb * var10 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6 - 2 * this.field_Vb);
                     var10++;
                     continue L3;
                   }
                 }
               } else {
-                var8 = ((br) this).field_Xb[var7].a(((br) this).field_Yb, 24, ((br) this).field_Qb);
+                var8 = this.field_Xb[var7].a(this.field_Yb, 24, this.field_Qb);
                 if (var6 < var8) {
                   var6 = var8;
                   var7++;
@@ -314,84 +317,73 @@ final class br extends mh {
             }
           }
         } else {
-          ((br) this).field_Xb[((br) this).field_Wb] = new rk(0L, (mh) null, (mh) null, ((br) this).field_Pb, (jp) null, gg.field_m);
-          ((br) this).field_Xb[((br) this).field_Wb].field_Q = 1;
-          ((br) this).a((mh) (Object) ((br) this).field_Xb[((br) this).field_Wb], 0);
-          ((br) this).field_cc[((br) this).field_Wb] = -1;
-          ((br) this).field_Wb = ((br) this).field_Wb + 1;
+          this.field_Xb[this.field_Wb] = new rk(0L, (mh) null, (mh) null, this.field_Pb, (jp) null, gg.field_m);
+          this.field_Xb[this.field_Wb].field_Q = 1;
+          this.a(this.field_Xb[this.field_Wb], 0);
+          this.field_cc[this.field_Wb] = -1;
+          this.field_Wb = this.field_Wb + 1;
           var6 = 0;
           if (param1 >= -49) {
-            L4: {
-              ((br) this).field_Zb = -94;
-              var7 = 0;
-              if (((br) this).field_Wb <= var7) {
-                break L4;
-              } else {
-                L5: {
-                  var8 = ((br) this).field_Xb[var7].a(((br) this).field_Yb, 24, ((br) this).field_Qb);
-                  if (var6 >= var8) {
-                    var7++;
-                    break L5;
+            this.field_Zb = -94;
+            var7 = 0;
+            L4: while (true) {
+              if (this.field_Wb <= var7) {
+                var6 = var6 + this.field_Vb * 2;
+                var7 = this.field_Zb * this.field_Wb + this.field_Sb - -this.field_Sb;
+                var8 = fp.a(-1, var6, param4, param3);
+                var9 = br.a(var7, param0, param2, 122);
+                this.a(var7, var9, var8, var6, (byte) 64);
+                var10 = 0;
+                L5: while (true) {
+                  if (var10 >= this.field_Wb) {
+                    return;
                   } else {
-                    var6 = var8;
-                    break L5;
+                    this.field_Xb[var10].a(-10411, this.field_Zb * var10 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6 - 2 * this.field_Vb);
+                    var10++;
+                    continue L5;
                   }
                 }
-                var7++;
-                var7++;
-                break L4;
-              }
-            }
-            var6 = var6 + ((br) this).field_Vb * 2;
-            var7 = ((br) this).field_Zb * ((br) this).field_Wb + ((br) this).field_Sb - -((br) this).field_Sb;
-            var8 = fp.a(-1, var6, param4, param3);
-            var9 = br.a(var7, param0, param2, 122);
-            ((br) this).a(var7, var9, var8, var6, (byte) 64);
-            var10 = 0;
-            L6: while (true) {
-              if (var10 >= ((br) this).field_Wb) {
-                return;
               } else {
-                ((br) this).field_Xb[var10].a(-10411, ((br) this).field_Zb * var10 + ((br) this).field_Sb, ((br) this).field_Qb, ((br) this).field_Yb, ((br) this).field_Vb, ((br) this).field_Zb, var6 - 2 * ((br) this).field_Vb);
-                var10++;
-                continue L6;
+                var8 = this.field_Xb[var7].a(this.field_Yb, 24, this.field_Qb);
+                if (var6 < var8) {
+                  var6 = var8;
+                  var7++;
+                  continue L4;
+                } else {
+                  var7++;
+                  continue L4;
+                }
               }
             }
           } else {
-            L7: {
-              var7 = 0;
-              if (((br) this).field_Wb <= var7) {
-                break L7;
-              } else {
-                L8: {
-                  var8 = ((br) this).field_Xb[var7].a(((br) this).field_Yb, 24, ((br) this).field_Qb);
-                  if (var6 >= var8) {
-                    var7++;
-                    break L8;
+            var7 = 0;
+            L6: while (true) {
+              if (this.field_Wb <= var7) {
+                var6 = var6 + this.field_Vb * 2;
+                var7 = this.field_Zb * this.field_Wb + this.field_Sb - -this.field_Sb;
+                var8 = fp.a(-1, var6, param4, param3);
+                var9 = br.a(var7, param0, param2, 122);
+                this.a(var7, var9, var8, var6, (byte) 64);
+                var10 = 0;
+                L7: while (true) {
+                  if (var10 >= this.field_Wb) {
+                    return;
                   } else {
-                    var6 = var8;
-                    break L8;
+                    this.field_Xb[var10].a(-10411, this.field_Zb * var10 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6 - 2 * this.field_Vb);
+                    var10++;
+                    continue L7;
                   }
                 }
-                var7++;
-                var7++;
-                var7++;
-                break L7;
-              }
-            }
-            var6 = var6 + ((br) this).field_Vb * 2;
-            var7 = ((br) this).field_Zb * ((br) this).field_Wb + ((br) this).field_Sb - -((br) this).field_Sb;
-            var8 = fp.a(-1, var6, param4, param3);
-            var9 = br.a(var7, param0, param2, 122);
-            ((br) this).a(var7, var9, var8, var6, (byte) 64);
-            var10 = 0;
-            L9: while (true) {
-              if (var10 >= ((br) this).field_Wb) {
-                return;
               } else {
-                ((br) this).field_Xb[var10].a(-10411, ((br) this).field_Zb * var10 + ((br) this).field_Sb, ((br) this).field_Qb, ((br) this).field_Yb, ((br) this).field_Vb, ((br) this).field_Zb, var6 - 2 * ((br) this).field_Vb);
-                var10++;
-                continue L9;
+                var8 = this.field_Xb[var7].a(this.field_Yb, 24, this.field_Qb);
+                if (var6 < var8) {
+                  var6 = var8;
+                  var7++;
+                  continue L6;
+                } else {
+                  var7++;
+                  continue L6;
+                }
               }
             }
           }
@@ -399,10 +391,6 @@ final class br extends mh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_ac = "Invite more players, or alternatively try changing the '<%0>' setting.";
         field_Ub = "To report a player, right-click on their name and select the option to report abuse.";
         field_Rb = "Breaking real-world laws";

@@ -11,18 +11,34 @@ final class eu extends ev {
 
     final void a(int param0, byte param1, int param2) {
         if (param1 != 110) {
-            ((eu) this).field_k = -72;
+            this.field_k = -72;
         }
     }
 
     final static boolean a(boolean param0) {
-        if (qmb.field_q < 10) {
+        boolean discarded$5 = false;
+        if (param0) {
+          if (qmb.field_q >= 10) {
+            if (-14 < (ef.field_z ^ -1)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (ef.field_z < 13) {
+          }
+        } else {
+          discarded$5 = eu.a(true);
+          if (qmb.field_q >= 10) {
+            if (-14 < (ef.field_z ^ -1)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     final static int a(int param0, int param1) {
@@ -67,22 +83,28 @@ final class eu extends ev {
     }
 
     public static void b(int param0) {
+        if (param0 != 30826) {
+            field_h = (lpb) null;
+            field_i = null;
+            field_h = null;
+            return;
+        }
         field_i = null;
         field_h = null;
     }
 
     final void b(byte param0, int param1, int param2) {
         if (param0 != -112) {
-            ((eu) this).field_g = 94;
+            this.field_g = 94;
         }
     }
 
     eu(int param0, int param1, int param2, int param3, int param4, int param5) {
         super(-1, param4, param5);
-        ((eu) this).field_k = param1;
-        ((eu) this).field_f = param3;
-        ((eu) this).field_j = param2;
-        ((eu) this).field_g = param0;
+        this.field_k = param1;
+        this.field_f = param3;
+        this.field_j = param2;
+        this.field_g = param0;
     }
 
     final static void a(eab param0, byte param1, asb param2) {
@@ -143,7 +165,7 @@ final class eu extends ev {
               }
             }
           }
-          var3_int = 0;
+          var3_int = -92 % ((param1 - 67) / 49);
           if (!nwa.field_c.field_j) {
             L1: {
               if (fjb.field_a.startsWith("amd64")) {
@@ -192,23 +214,23 @@ final class eu extends ev {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var3;
+            stackOut_23_0 = (RuntimeException) (var3);
             stackOut_23_1 = new StringBuilder().append("eu.E(");
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L3;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -217,23 +239,23 @@ final class eu extends ev {
             }
           }
           L4: {
-            stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(127).append(',');
+            stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(param1).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param2 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L4;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -241,16 +263,16 @@ final class eu extends ev {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
         }
     }
 
     final void a(byte param0, int param1, int param2) {
-        int var4 = param2 * ((eu) this).field_g >> 12;
-        int var5 = ((eu) this).field_j * param2 >> 12;
-        int var6 = param1 * ((eu) this).field_k >> 12;
-        int var7 = param1 * ((eu) this).field_f >> 12;
-        ew.a(var6, var5, (byte) 84, var4, var7, ((eu) this).field_d);
+        int var4 = param2 * this.field_g >> -253875988;
+        int var5 = this.field_j * param2 >> 1372049132;
+        int var6 = param1 * this.field_k >> -1279175316;
+        int var7 = param1 * this.field_f >> -2049760308;
+        ew.a(var6, var5, (byte) 84, var4, var7, this.field_d);
         int var8 = -73 / ((param0 - -48) / 40);
     }
 

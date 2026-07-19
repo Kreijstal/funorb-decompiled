@@ -12,19 +12,23 @@ class fk extends kb {
     private String field_f;
 
     final void a(wf param0, int param1) {
+        bj discarded$0 = null;
         try {
             if (param1 != 7895) {
-                bj discarded$0 = ((fk) this).a((byte) 17);
+                discarded$0 = this.a((byte) 17);
             }
-            param0.a(((fk) this).field_g, (byte) 37);
-            param0.a(param1 + -7895, ((fk) this).field_f);
+            param0.a(this.field_g, (byte) 37);
+            param0.a(param1 + -7895, this.field_f);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "fk.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "fk.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void b(boolean param0) {
         field_c = null;
+        if (param0) {
+            return;
+        }
         field_d = null;
         field_i = null;
         field_j = null;
@@ -32,7 +36,7 @@ class fk extends kb {
 
     bj a(byte param0) {
         if (param0 != 45) {
-            field_j = null;
+            field_j = (String) null;
             return ej.field_a;
         }
         return ej.field_a;
@@ -43,33 +47,32 @@ class fk extends kb {
             qa.field_c = mb.a((byte) -63, "");
             qa.field_c.a((byte) 121, false);
             ul.a(param1, param4, param3, (byte) 109);
+            if (param2 != 40) {
+                fk.b(false);
+            }
             kf.f(1);
             bk.field_c = c.field_m;
             ee.field_c = c.field_m;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "fk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + 40 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "fk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static gb a(int param0) {
-        int var1 = 0;
+        int var1 = -90 % ((35 - param0) / 37);
         return new gb(ve.b(25594), ja.a(-2116060060));
     }
 
     fk(long param0, String param1) {
         try {
-            ((fk) this).field_f = param1;
-            ((fk) this).field_g = param0;
+            this.field_f = param1;
+            this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "fk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "fk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = -1;
         field_c = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
         field_j = "Invalid password.";

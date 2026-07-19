@@ -12,12 +12,12 @@ final class ue extends da {
         pa var3 = null;
         try {
             var3 = dk.field_s;
-            var3.d(25, 5);
+            var3.d(25, param2);
             var3.d(param1, (byte) 122);
             var3.d(0, (byte) 122);
             var3.d(param0.field_j, (byte) 122);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "ue.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + 5 + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "ue.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class ue extends da {
             var5 = new int[640 * var3];
             var7 = 0;
             L1: while (true) {
-              if (var7 >= 640) {
+              if (-641 >= (var7 ^ -1)) {
                 var6 = ii.field_h[1].field_y;
                 ii.field_h[1].field_p = 0;
                 ii.field_h[1].field_v = var3;
@@ -82,7 +82,7 @@ final class ue extends da {
                 qg.c(1 + var1_int, var2, 1, var4, ih.field_N[2], ih.field_N[3]);
                 var7 = 0;
                 L2: while (true) {
-                  if (var7 >= 640) {
+                  if (-641 >= (var7 ^ -1)) {
                     var8 = 99 % ((-63 - param0) / 49);
                     ii.field_h[6].field_u = 640;
                     ii.field_h[6].field_y = var6;
@@ -128,11 +128,17 @@ final class ue extends da {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "ue.E(" + param0 + ')');
+          throw oj.a((Throwable) ((Object) var1), "ue.E(" + param0 + ')');
         }
     }
 
     final static ti[] a(int param0, pa param1) {
+        int discarded$12 = 0;
+        int discarded$13 = 0;
+        int discarded$14 = 0;
+        int discarded$15 = 0;
+        int discarded$16 = 0;
+        int discarded$17 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -142,120 +148,140 @@ final class ue extends da {
         ti var6 = null;
         int var7 = 0;
         Object stackIn_3_0 = null;
-        ti[] stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
+        ti[] stackIn_13_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ti[] stackOut_10_0 = null;
+        ti[] stackOut_12_0 = null;
         Object stackOut_2_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var7 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
             var2_int = param1.e(8, 118);
             if (var2_int <= 0) {
-              var3 = param1.e(12, -22);
+              L1: {
+                if (param0 == -8191) {
+                  break L1;
+                } else {
+                  ue.c((byte) -109);
+                  break L1;
+                }
+              }
+              var3 = param1.e(12, param0 ^ 8171);
               var4 = new ti[var3];
               var5 = 0;
-              L1: while (true) {
+              L2: while (true) {
                 if (var5 >= var3) {
-                  stackOut_10_0 = (ti[]) var4;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackOut_12_0 = (ti[]) (var4);
+                  stackIn_13_0 = stackOut_12_0;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  L2: {
+                  L3: {
                     if (fl.a(param1, (byte) 124)) {
                       var6 = new ti();
-                      int discarded$12 = param1.e(24, 122);
-                      int discarded$13 = param1.e(24, -77);
+                      discarded$12 = param1.e(24, 122);
+                      discarded$13 = param1.e(24, -77);
                       var6.field_b = param1.e(24, -17);
-                      int discarded$14 = param1.e(9, -29);
-                      int discarded$15 = param1.e(12, 99);
-                      int discarded$16 = param1.e(12, -70);
-                      int discarded$17 = param1.e(12, 120);
+                      discarded$14 = param1.e(9, param0 ^ 8162);
+                      discarded$15 = param1.e(12, 99);
+                      discarded$16 = param1.e(12, -70);
+                      discarded$17 = param1.e(12, param0 + 8311);
                       var4[var5] = var6;
-                      break L2;
+                      break L3;
                     } else {
                       var6_int = param1.e(ta.b(var5 - 1, 0), 95);
                       var4[var5] = var4[var6_int];
-                      break L2;
+                      break L3;
                     }
                   }
                   var5++;
-                  continue L1;
+                  continue L2;
                 }
               }
             } else {
               stackOut_2_0 = null;
               stackIn_3_0 = stackOut_2_0;
-              return (ti[]) (Object) stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var2;
-            stackOut_12_1 = new StringBuilder().append("ue.A(").append(-8191).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_14_0 = (RuntimeException) (var2);
+            stackOut_14_1 = new StringBuilder().append("ue.A(").append(param0).append(',');
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L3;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L3;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L4;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
-        return stackIn_11_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (ti[]) ((Object) stackIn_3_0);
+        } else {
+          return stackIn_13_0;
+        }
     }
 
     public static void c(byte param0) {
-        int var1 = 0;
+        int var1 = -6 % ((90 - param0) / 32);
         field_l = null;
-        field_i = null;
+        field_i = (boolean[][]) null;
         field_j = null;
     }
 
     final static int a(int param0, int param1, int param2, int param3, byte param4) {
+        ti[] discarded$0 = null;
         int var5 = -wb.field_p.field_o + param0;
         int var6 = param2 - wb.field_p.field_H;
         if (!(var5 >= 0)) {
             var5 = -var5;
         }
+        if (param4 != 79) {
+            pa var8 = (pa) null;
+            discarded$0 = ue.a(71, (pa) null);
+        }
         if (32 < var5) {
             var5 = 64 + -var5;
         }
-        if (!(var6 >= 0)) {
+        if (!((var6 ^ -1) <= -1)) {
             var6 = -var6;
         }
-        if (var5 > 16) {
+        if (-17 > (var5 ^ -1)) {
             return -1;
         }
         if (!(var6 * 64 <= 240)) {
@@ -280,9 +306,9 @@ final class ue extends da {
           var6 = TorChallenge.field_F ? 1 : 0;
           var2 = 0;
           var3 = jc.field_c;
-          if (var3 >= 5) {
+          if (-6 >= (var3 ^ -1)) {
             if (var3 >= 105) {
-              if (var3 >= 120) {
+              if ((var3 ^ -1) <= -121) {
                 break L0;
               } else {
                 var3 = -var3 + 120;
@@ -301,7 +327,7 @@ final class ue extends da {
         L1: {
           var4 = 1;
           var5 = 0;
-          if (param0 == 1) {
+          if (-2 == (param0 ^ -1)) {
             var5 = 1;
             break L1;
           } else {
@@ -317,7 +343,7 @@ final class ue extends da {
           }
         }
         L3: {
-          if (param0 != 4) {
+          if ((param0 ^ -1) != -5) {
             break L3;
           } else {
             var5 = 1;
@@ -326,7 +352,7 @@ final class ue extends da {
           }
         }
         L4: {
-          if (param0 == 5) {
+          if (-6 == (param0 ^ -1)) {
             var5 = 1;
             var4 = -1;
             break L4;
@@ -335,83 +361,87 @@ final class ue extends da {
           }
         }
         L5: {
-          if (6 != param0) {
+          if (!param1) {
             break L5;
           } else {
-            var4 = 1;
-            var5 = -1;
+            field_i = (boolean[][]) null;
             break L5;
           }
         }
         L6: {
-          L7: {
-            if (param0 == 7) {
-              break L7;
+          if (6 != param0) {
+            break L6;
+          } else {
+            var4 = 1;
+            var5 = -1;
+            break L6;
+          }
+        }
+        L7: {
+          L8: {
+            if (-8 == (param0 ^ -1)) {
+              break L8;
             } else {
               if (8 != param0) {
-                break L6;
-              } else {
                 break L7;
+              } else {
+                break L8;
               }
             }
           }
           var5 = -1;
           var4 = -1;
-          break L6;
-        }
-        L8: {
-          if (param0 == 11) {
-            var4 = -1;
-            break L8;
-          } else {
-            break L8;
-          }
+          break L7;
         }
         L9: {
-          if (param0 != 12) {
+          if (param0 == 11) {
+            var4 = -1;
             break L9;
           } else {
-            var5 = -1;
-            var4 = -1;
             break L9;
           }
         }
         L10: {
-          if (param0 != 13) {
+          if (-13 != (param0 ^ -1)) {
             break L10;
           } else {
             var5 = -1;
-            var4 = 1;
+            var4 = -1;
             break L10;
           }
         }
         L11: {
-          if (14 == param0) {
-            var5 = 1;
-            var4 = -1;
+          if (param0 != 13) {
             break L11;
           } else {
+            var5 = -1;
+            var4 = 1;
             break L11;
           }
         }
         L12: {
-          if (param0 != 15) {
+          if (14 == param0) {
+            var5 = 1;
+            var4 = -1;
             break L12;
+          } else {
+            break L12;
+          }
+        }
+        L13: {
+          if ((param0 ^ -1) != -16) {
+            break L13;
           } else {
             var5 = 1;
             var4 = 1;
-            break L12;
+            break L13;
           }
         }
         uf.field_n = hh.b(var4 * var2, 7429, var2 * var5);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_i = new boolean[][]{new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3], new boolean[3]};
+        field_i = new boolean[][]{new boolean[]{true, true, true}, new boolean[]{true, true, true}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{true, true, true}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{false, false, false}, new boolean[]{true, true, true}, new boolean[]{false, false, false}};
         field_j = new int[]{54, 17, 238, 376};
         field_l = "Please enter your age in years";
     }

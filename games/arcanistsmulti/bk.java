@@ -23,7 +23,7 @@ final class bk extends ag {
           stackOut_0_0 = this;
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
-          if (((bk) this).field_z) {
+          if (this.field_z) {
             stackOut_2_0 = this;
             stackOut_2_1 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -37,7 +37,7 @@ final class bk extends ag {
             break L0;
           }
         }
-        ((bk) this).field_z = stackIn_3_1 != 0;
+        ((bk) (this)).field_z = stackIn_3_1 != 0;
         super.a(-121, param1, param2, param3);
         if (param0 <= -99) {
           return;
@@ -50,9 +50,9 @@ final class bk extends ag {
     bk(String param0, wc param1, boolean param2) {
         this(param0, param1);
         try {
-            ((bk) this).field_z = param2 ? true : false;
+            this.field_z = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -61,25 +61,45 @@ final class bk extends ag {
         field_J = null;
         field_K = null;
         field_L = null;
+        if (param0 != 0) {
+            bk.a(126);
+            field_M = null;
+            return;
+        }
         field_M = null;
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (2 > param0) {
-            if (param2 >= 5) {
-                return 1;
+        if (param1 == 1021) {
+          if (2 > param0) {
+            if ((param2 ^ -1) <= -6) {
+              return 1;
+            } else {
+              return 0;
             }
-            return 0;
+          } else {
+            return 2;
+          }
+        } else {
+          bk.f(44);
+          if (2 > param0) {
+            if ((param2 ^ -1) <= -6) {
+              return 1;
+            } else {
+              return 0;
+            }
+          } else {
+            return 2;
+          }
         }
-        return 2;
     }
 
     private bk(String param0, wc param1) {
         this(param0, io.field_n.field_u, param1);
         try {
-            ((bk) this).field_r = io.field_n.field_b;
+            this.field_r = io.field_n.field_b;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -101,24 +121,20 @@ final class bk extends ag {
             }
             e.field_Q = 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "bk.C(" + param0 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "bk.C(" + param0 + ')');
         }
     }
 
     private bk(String param0, pf param1, wc param2) {
         super(param0, param1, param2);
         try {
-            ((bk) this).field_r = io.field_n.field_b;
+            this.field_r = io.field_n.field_b;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = "Email (Login):";
         field_H = "Level <%0>";
     }

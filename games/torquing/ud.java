@@ -49,8 +49,8 @@ final class ud extends q {
         try {
           L0: {
             L1: {
-              var3 = new ud(param1, ((ud) this).field_m);
-              var3.field_p = ((ud) this).field_p;
+              var3 = new ud(param1, this.field_m);
+              var3.field_p = this.field_p;
               if (param0) {
                 break L1;
               } else {
@@ -58,8 +58,8 @@ final class ud extends q {
                 break L1;
               }
             }
-            var3.field_o = ((ud) this).field_o;
-            stackOut_2_0 = (ud) var3;
+            var3.field_o = this.field_o;
+            stackOut_2_0 = (ud) (var3);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -67,23 +67,23 @@ final class ud extends q {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_0 = (RuntimeException) (var3_ref);
             stackOut_4_1 = new StringBuilder().append("ud.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -91,7 +91,7 @@ final class ud extends q {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -113,22 +113,22 @@ final class ud extends q {
         int var10 = 0;
         L0: {
           var10 = Torquing.field_u;
-          ((ud) this).field_o = ee.b(-124);
-          ((ud) this).field_p = true;
+          this.field_o = ee.b(-124);
+          this.field_p = true;
           var2 = 57;
-          ((ud) this).field_m.a(((ud) this).field_n.field_b, ((ud) this).field_n.field_h, ((ud) this).field_n.field_a, -6 + var2);
+          this.field_m.a(this.field_n.field_b, this.field_n.field_h, this.field_n.field_a, -6 + var2);
           var3 = -48 % ((22 - param0) / 54);
-          var4 = ((ud) this).field_n.field_c;
-          if (var4 == 2) {
+          var4 = this.field_n.field_c;
+          if ((var4 ^ -1) == -3) {
             var4 = 0;
             L1: while (true) {
               if (var4 >= 64) {
                 break L0;
               } else {
-                var5 = ((ud) this).field_m.a(var2 + -var4, var4);
+                var5 = this.field_m.a(var2 + -var4, var4);
                 if (var5 != 0L) {
-                  ((ud) this).field_p = false;
-                  ((ud) this).field_o[var4] = var5;
+                  this.field_p = false;
+                  this.field_o[var4] = var5;
                   var4++;
                   continue L1;
                 } else {
@@ -147,17 +147,17 @@ final class ud extends q {
                       break L0;
                     } else {
                       var5 = 1L << 63 + -var4;
-                      var7 = ((ud) this).field_m.a(var4 + -6, 63 + -var4);
-                      if (var7 != 0L) {
-                        ((ud) this).field_p = false;
+                      var7 = this.field_m.a(var4 + -6, 63 + -var4);
+                      if ((var7 ^ -1L) != -1L) {
+                        this.field_p = false;
                         var9 = 63;
                         L3: while (true) {
                           if (0 <= var9) {
                             L4: {
-                              if ((1L & var7) == 0L) {
+                              if (-1L == (1L & var7 ^ -1L)) {
                                 break L4;
                               } else {
-                                ((ud) this).field_o[var9] = ((ud) this).field_o[var9] + var5;
+                                this.field_o[var9] = this.field_o[var9] + var5;
                                 break L4;
                               }
                             }
@@ -184,10 +184,10 @@ final class ud extends q {
                   if (var4 >= 64) {
                     break L0;
                   } else {
-                    var5 = ((ud) this).field_m.a(var4 + -6, 63 + -var4);
+                    var5 = this.field_m.a(var4 + -6, 63 + -var4);
                     if (0L != var5) {
-                      ((ud) this).field_p = false;
-                      ((ud) this).field_o[var4] = ag.a(var5, -109);
+                      this.field_p = false;
+                      this.field_o[var4] = ag.a(var5, -109);
                       var4++;
                       continue L5;
                     } else {
@@ -204,14 +204,14 @@ final class ud extends q {
                   break L0;
                 } else {
                   var5 = 1L << 63 - var4;
-                  var7 = ((ud) this).field_m.a(var2 - var4, var4);
-                  if (var7 != 0L) {
-                    ((ud) this).field_p = false;
+                  var7 = this.field_m.a(var2 - var4, var4);
+                  if ((var7 ^ -1L) != -1L) {
+                    this.field_p = false;
                     var9 = 0;
                     L7: while (true) {
                       if (64 > var9) {
-                        if ((var7 & 1L << var9) != 0L) {
-                          ((ud) this).field_o[var9] = ((ud) this).field_o[var9] + var5;
+                        if (-1L != (var7 & 1L << var9 ^ -1L)) {
+                          this.field_o[var9] = this.field_o[var9] + var5;
                           var9++;
                           continue L7;
                         } else {
@@ -236,29 +236,25 @@ final class ud extends q {
 
     ud(ti param0, lm param1) {
         try {
-            ((ud) this).field_m = param1;
-            ((ud) this).field_n = param0;
+            this.field_m = param1;
+            this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     ud(long[] param0) {
         try {
-            ((ud) this).field_m = null;
-            ((ud) this).field_n = null;
-            ((ud) this).field_p = false;
-            ((ud) this).field_o = param0;
+            this.field_m = null;
+            this.field_n = null;
+            this.field_p = false;
+            this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "ud.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new int[8192];
         field_j = "Type your password again to make sure it's correct";
         field_l = "Try again";

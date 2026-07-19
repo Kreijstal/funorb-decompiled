@@ -17,10 +17,6 @@ final class vra {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "vra.A(";
     }
 }

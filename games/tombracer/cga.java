@@ -19,8 +19,14 @@ final class cga extends vg {
     }
 
     public static void a(boolean param0) {
+        boolean discarded$0 = false;
         field_i = null;
         field_l = null;
+        if (!param0) {
+            discarded$0 = cga.a(67, -110, -111);
+            field_g = null;
+            return;
+        }
         field_g = null;
     }
 
@@ -29,10 +35,6 @@ final class cga extends vg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Message lobby";
         field_l = "No Reward (timeout)";
     }

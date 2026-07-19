@@ -21,7 +21,7 @@ final class uh {
               L1: {
                 var2 += 16;
                 param1 = param1 >>> 16;
-                if (param1 >= 256) {
+                if (-257 >= (param1 ^ -1)) {
                   param1 = param1 >>> 8;
                   var2 += 8;
                   break L1;
@@ -30,7 +30,7 @@ final class uh {
                 }
               }
               L2: {
-                if (param1 < 16) {
+                if (-17 < (param1 ^ -1)) {
                   break L2;
                 } else {
                   var2 += 4;
@@ -39,7 +39,7 @@ final class uh {
                 }
               }
               L3: {
-                if (param1 < 4) {
+                if (-5 < (param1 ^ -1)) {
                   break L3;
                 } else {
                   param1 = param1 >>> 2;
@@ -56,16 +56,16 @@ final class uh {
                   break L4;
                 }
               }
-              if (param0 <= -47) {
-                return var2 - -param1;
-              } else {
+              if (param0 > -47) {
                 return 110;
+              } else {
+                return var2 - -param1;
               }
             }
           }
         }
         L5: {
-          if (param1 >= 256) {
+          if (-257 >= (param1 ^ -1)) {
             param1 = param1 >>> 8;
             var2 += 8;
             break L5;
@@ -74,7 +74,7 @@ final class uh {
           }
         }
         L6: {
-          if (param1 < 16) {
+          if (-17 < (param1 ^ -1)) {
             break L6;
           } else {
             var2 += 4;
@@ -83,7 +83,7 @@ final class uh {
           }
         }
         L7: {
-          if (param1 < 4) {
+          if (-5 < (param1 ^ -1)) {
             break L7;
           } else {
             param1 = param1 >>> 2;
@@ -100,10 +100,10 @@ final class uh {
             break L8;
           }
         }
-        if (param0 <= -47) {
-          return var2 - -param1;
-        } else {
+        if (param0 > -47) {
           return 110;
+        } else {
+          return var2 - -param1;
         }
     }
 
@@ -112,7 +112,7 @@ final class uh {
             return of.field_H;
         }
         if (param0 != 4) {
-            return null;
+            return (String) null;
         }
         return wd.field_p;
     }
@@ -122,14 +122,15 @@ final class uh {
     }
 
     public static void a(int param0) {
+        if (param0 != -5) {
+            field_b = -19;
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "IRONO";
     }
 }

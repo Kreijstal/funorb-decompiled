@@ -38,7 +38,7 @@ final class ok implements dja {
         int stackIn_7_2 = 0;
         int stackIn_7_3 = 0;
         int stackIn_7_4 = 0;
-        int stackIn_50_0 = 0;
+        int stackIn_56_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
@@ -56,8 +56,11 @@ final class ok implements dja {
         int stackOut_5_2 = 0;
         int stackOut_5_3 = 0;
         int stackOut_5_4 = 0;
-        int stackOut_48_0 = 0;
+        int stackOut_54_0 = 0;
+        int stackOut_53_0 = 0;
+        int stackOut_51_0 = 0;
         int stackOut_49_0 = 0;
+        int stackOut_47_0 = 0;
         var13 = VoidHunters.field_G;
         try {
           L0: {
@@ -91,7 +94,7 @@ final class ok implements dja {
               stackIn_5_2 = stackOut_4_2;
               stackIn_5_3 = stackOut_4_3;
               if (ll.field_o) {
-                stackOut_6_0 = (llb) (Object) stackIn_6_0;
+                stackOut_6_0 = (llb) ((Object) stackIn_6_0);
                 stackOut_6_1 = stackIn_6_1;
                 stackOut_6_2 = stackIn_6_2;
                 stackOut_6_3 = stackIn_6_3;
@@ -103,7 +106,7 @@ final class ok implements dja {
                 stackIn_7_4 = stackOut_6_4;
                 break L2;
               } else {
-                stackOut_5_0 = (llb) (Object) stackIn_5_0;
+                stackOut_5_0 = (llb) ((Object) stackIn_5_0);
                 stackOut_5_1 = stackIn_5_1;
                 stackOut_5_2 = stackIn_5_2;
                 stackOut_5_3 = stackIn_5_3;
@@ -149,7 +152,7 @@ final class ok implements dja {
             }
             L6: {
               var3 = -2 + ((1 + var2_int) / 2 + -13 + (gt.field_o.field_G + -5)) / (var2_int - -1);
-              if (var3 > 30) {
+              if ((var3 ^ -1) < -31) {
                 var3 = 30;
                 break L6;
               } else {
@@ -170,7 +173,7 @@ final class ok implements dja {
             var6 = 0;
             L8: while (true) {
               if (ocb.field_l - -4 <= var6) {
-                jfb.field_o.a(-360 + dma.field_g >> 1, 117, 360, 10, -130 + (dma.field_j - 14));
+                jfb.field_o.a(-360 + dma.field_g >> -792586847, 117, 360, 10, -130 + (dma.field_j - 14));
                 sfa.field_d.a(0, 124, jfb.field_o.field_hb, 0, 24);
                 neb.field_o.a(0, 124, jfb.field_o.field_hb, 24, -24 + jfb.field_o.field_G);
                 neb.field_o.field_gb = uwa.a(11579568, neb.field_o.field_G, 1, 8421504, 92, 3);
@@ -184,7 +187,7 @@ final class ok implements dja {
                     if (1 != var6) {
                       break L10;
                     } else {
-                      if (ieb.field_o.length >= 2) {
+                      if (-3 >= (ieb.field_o.length ^ -1)) {
                         break L10;
                       } else {
                         break L9;
@@ -192,10 +195,10 @@ final class ok implements dja {
                     }
                   }
                   L11: {
-                    if (var6 != 3) {
+                    if ((var6 ^ -1) != -4) {
                       break L11;
                     } else {
-                      if (nkb.field_r > 1) {
+                      if ((nkb.field_r ^ -1) < -2) {
                         break L11;
                       } else {
                         break L9;
@@ -206,7 +209,7 @@ final class ok implements dja {
                     if (param1) {
                       break L12;
                     } else {
-                      if (var6 != 3) {
+                      if (-4 != (var6 ^ -1)) {
                         break L12;
                       } else {
                         var7_ref_llb = ceb.field_o[var6];
@@ -214,9 +217,7 @@ final class ok implements dja {
                         var7_ref_llb.field_hb = 0;
                         var8 = 0;
                         L13: while (true) {
-                          if (~var8 <= ~inb.field_q[var6].length) {
-                            break L9;
-                          } else {
+                          if (var8 < inb.field_q[var6].length) {
                             L14: {
                               if (inb.field_q[var6][var8] != null) {
                                 var9_ref_cna = inb.field_q[var6][var8];
@@ -229,6 +230,9 @@ final class ok implements dja {
                             }
                             var8++;
                             continue L13;
+                          } else {
+                            var6++;
+                            continue L8;
                           }
                         }
                       }
@@ -247,9 +251,7 @@ final class ok implements dja {
                         var14.field_hb = 0;
                         var8 = 0;
                         L16: while (true) {
-                          if (inb.field_q[var6].length <= var8) {
-                            break L9;
-                          } else {
+                          if (inb.field_q[var6].length > var8) {
                             L17: {
                               if (inb.field_q[var6][var8] != null) {
                                 var9_ref_cna = inb.field_q[var6][var8];
@@ -262,61 +264,67 @@ final class ok implements dja {
                             }
                             var8++;
                             continue L16;
+                          } else {
+                            var6++;
+                            continue L8;
                           }
                         }
                       }
                     }
                   }
                   L18: {
-                    L19: {
-                      if (!param1) {
-                        break L19;
-                      } else {
-                        if (var6 < 4) {
-                          break L19;
-                        } else {
-                          if (jra.field_d == null) {
-                            break L19;
+                    if (param1) {
+                      if ((var6 ^ -1) <= -5) {
+                        if (jra.field_d != null) {
+                          if (jra.field_d[-4 + var6]) {
+                            stackOut_54_0 = 1;
+                            stackIn_56_0 = stackOut_54_0;
+                            break L18;
                           } else {
-                            if (!jra.field_d[-4 + var6]) {
-                              break L19;
-                            } else {
-                              stackOut_48_0 = 1;
-                              stackIn_50_0 = stackOut_48_0;
-                              break L18;
-                            }
+                            stackOut_53_0 = 0;
+                            stackIn_56_0 = stackOut_53_0;
+                            break L18;
                           }
+                        } else {
+                          stackOut_51_0 = 0;
+                          stackIn_56_0 = stackOut_51_0;
+                          break L18;
                         }
+                      } else {
+                        stackOut_49_0 = 0;
+                        stackIn_56_0 = stackOut_49_0;
+                        break L18;
                       }
+                    } else {
+                      stackOut_47_0 = 0;
+                      stackIn_56_0 = stackOut_47_0;
+                      break L18;
                     }
-                    stackOut_49_0 = 0;
-                    stackIn_50_0 = stackOut_49_0;
-                    break L18;
                   }
-                  var7 = stackIn_50_0;
+                  var7 = stackIn_56_0;
                   if (var7 == 0) {
-                    L20: {
+                    L19: {
                       ceb.field_o[var6].a(5, 118, 103, var5, var3);
                       var8 = 110;
                       if (param1) {
                         inb.field_q[var6][0].a(var5, var8, -118, 2, hi.field_a, 38, var3);
                         var8 += 40;
-                        break L20;
+                        break L19;
                       } else {
                         if (inb.field_q[var6][0] == null) {
-                          break L20;
+                          break L19;
                         } else {
                           var9_ref_cna = inb.field_q[var6][0];
                           inb.field_q[var6][0].field_G = 0;
                           var9_ref_cna.field_hb = 0;
-                          break L20;
+                          break L19;
                         }
                       }
                     }
                     var9 = -var8 + (-5 + vva.field_r.field_hb + 2);
                     var10 = -1 + inb.field_q[var6].length;
                     var11 = 0;
-                    L21: while (true) {
+                    L20: while (true) {
                       if (var11 >= var10) {
                         var5 = var5 + (2 + var3);
                         break L9;
@@ -324,7 +332,7 @@ final class ok implements dja {
                         var12 = var9 * var11 / var10;
                         inb.field_q[var6][var11 + 1].a(var5, var8 + var12, -122, 2, hi.field_a, var9 * (var11 + 1) / var10 + -2 - var12, var3);
                         var11++;
-                        continue L21;
+                        continue L20;
                       }
                     }
                   } else {
@@ -332,22 +340,21 @@ final class ok implements dja {
                     ceb.field_o[var6].field_G = 0;
                     var8_ref_llb.field_hb = 0;
                     var9 = 0;
-                    L22: while (true) {
-                      if (~inb.field_q[var6].length >= ~var9) {
-                        break L9;
-                      } else {
-                        L23: {
-                          if (inb.field_q[var6][var9] == null) {
-                            break L23;
-                          } else {
-                            var10_ref_cna = inb.field_q[var6][var9];
-                            inb.field_q[var6][var9].field_G = 0;
-                            var10_ref_cna.field_hb = 0;
-                            break L23;
-                          }
+                    L21: while (true) {
+                      if (inb.field_q[var6].length > var9) {
+                        if (inb.field_q[var6][var9] != null) {
+                          var10_ref_cna = inb.field_q[var6][var9];
+                          inb.field_q[var6][var9].field_G = 0;
+                          var10_ref_cna.field_hb = 0;
+                          var9++;
+                          continue L21;
+                        } else {
+                          var9++;
+                          continue L21;
                         }
-                        var9++;
-                        continue L22;
+                      } else {
+                        var6++;
+                        continue L8;
                       }
                     }
                   }
@@ -360,33 +367,29 @@ final class ok implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, "ok.C(" + param0 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) var2), "ok.C(" + param0 + ',' + param1 + ')');
         }
     }
 
     public final tv a(byte param0) {
         int var2 = 47 % ((param0 - -64) / 50);
-        return (tv) (Object) new anb();
+        return (tv) ((Object) new anb());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
             ok.a((byte) 101, true);
         }
-        return (tv[]) (Object) new anb[param1];
+        return (tv[]) ((Object) new anb[param1]);
     }
 
     public static void b(byte param0) {
         field_a = null;
         field_b = null;
-        int var1 = -1;
+        int var1 = -7 % ((63 - param0) / 50);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Voters: <%0>";
     }
 }

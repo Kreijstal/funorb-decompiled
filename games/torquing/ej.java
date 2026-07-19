@@ -32,13 +32,13 @@ final class ej implements lm {
 
     public final int a(int param0, int param1, int param2) {
         double var4 = 0.0;
-        field_g[0] = (double)param0 - ((ej) this).field_e;
-        field_g[1] = (double)param1 - ((ej) this).field_v;
-        field_g[2] = (double)param2 - ((ej) this).field_f;
+        field_g[0] = (double)param0 - this.field_e;
+        field_g[1] = (double)param1 - this.field_v;
+        field_g[2] = (double)param2 - this.field_f;
         if (ap.a(field_g, 0, field_n, 0) > 0.0) {
             ap.a(field_g, 0, field_n, 0, field_g, 3);
             var4 = ap.a(field_g, 3, field_g, 3);
-            if (var4 < ((ej) this).field_A) {
+            if (var4 < this.field_A) {
                 return 2;
             }
         }
@@ -74,9 +74,9 @@ final class ej implements lm {
           field_g[7] = (double)param10;
           field_g[8] = (double)param11;
           var13 = ap.a(field_g, 6, field_n, 0);
-          field_g[0] = (double)param3 - ((ej) this).field_e;
-          field_g[1] = (double)param4 - ((ej) this).field_v;
-          field_g[2] = (double)param5 - ((ej) this).field_f;
+          field_g[0] = (double)param3 - this.field_e;
+          field_g[1] = (double)param4 - this.field_v;
+          field_g[2] = (double)param5 - this.field_f;
           var15 = ap.a(field_g, 6, field_g, 0) / var13;
           if (Double.isInfinite(var15)) {
             break L0;
@@ -114,29 +114,29 @@ final class ej implements lm {
                   if (var23 != 1) {
                     var24 = (double)(param0 - param3);
                     var26 = (double)(param6 - param3);
-                    var28 = ((ej) this).field_e + var15 * field_n[0] - (double)param3;
+                    var28 = this.field_e + var15 * field_n[0] - (double)param3;
                     var30 = (double)(param1 - param4);
                     var32 = (double)(param7 - param4);
-                    var34 = ((ej) this).field_v + var15 * field_n[1] - (double)param4;
+                    var34 = this.field_v + var15 * field_n[1] - (double)param4;
                     var36 = var21;
                     break L2;
                   } else {
                     var24 = (double)(param2 - param5);
                     var26 = (double)(param8 - param5);
-                    var28 = ((ej) this).field_f + var15 * field_n[2] - (double)param5;
+                    var28 = this.field_f + var15 * field_n[2] - (double)param5;
                     var30 = (double)(param0 - param3);
                     var32 = (double)(param6 - param3);
-                    var34 = ((ej) this).field_e + var15 * field_n[0] - (double)param3;
+                    var34 = this.field_e + var15 * field_n[0] - (double)param3;
                     var36 = var19;
                     break L2;
                   }
                 } else {
                   var24 = (double)(param1 - param4);
                   var26 = (double)(param7 - param4);
-                  var28 = ((ej) this).field_v + var15 * field_n[1] - (double)param4;
+                  var28 = this.field_v + var15 * field_n[1] - (double)param4;
                   var30 = (double)(param2 - param5);
                   var32 = (double)(param8 - param5);
-                  var34 = ((ej) this).field_f + var15 * field_n[2] - (double)param5;
+                  var34 = this.field_f + var15 * field_n[2] - (double)param5;
                   var36 = var17;
                   break L2;
                 }
@@ -160,21 +160,21 @@ final class ej implements lm {
               }
               L4: {
                 this.a(param0, param1, param2, param3, param4, param5, param6, param7, param8);
-                if (((ej) this).field_y < ((ej) this).field_A) {
+                if (this.field_y < this.field_A) {
                   break L4;
                 } else {
-                  if (((ej) this).field_c + ((ej) this).field_l + ((ej) this).field_y < ((ej) this).field_A) {
+                  if (this.field_c + this.field_l + this.field_y < this.field_A) {
                     break L4;
                   } else {
-                    if (((ej) this).field_t + ((ej) this).field_k + ((ej) this).field_y >= ((ej) this).field_A) {
+                    if (this.field_t + this.field_k + this.field_y >= this.field_A) {
                       L5: {
-                        if (((ej) this).field_l >= 0.0) {
+                        if (this.field_l >= 0.0) {
                           break L5;
                         } else {
-                          if (-((ej) this).field_l >= 2.0 * ((ej) this).field_c) {
+                          if (-this.field_l >= 2.0 * this.field_c) {
                             break L5;
                           } else {
-                            if (4.0 * ((ej) this).field_c * ((ej) this).field_y - ((ej) this).field_l * ((ej) this).field_l >= ((ej) this).field_A * 4.0 * ((ej) this).field_c) {
+                            if (4.0 * this.field_c * this.field_y - this.field_l * this.field_l >= this.field_A * 4.0 * this.field_c) {
                               break L5;
                             } else {
                               return true;
@@ -183,13 +183,13 @@ final class ej implements lm {
                         }
                       }
                       L6: {
-                        if (((ej) this).field_k >= 0.0) {
+                        if (this.field_k >= 0.0) {
                           break L6;
                         } else {
-                          if (-((ej) this).field_k >= 2.0 * ((ej) this).field_t) {
+                          if (-this.field_k >= 2.0 * this.field_t) {
                             break L6;
                           } else {
-                            if (4.0 * ((ej) this).field_t * ((ej) this).field_y - ((ej) this).field_k * ((ej) this).field_k >= ((ej) this).field_A * 4.0 * ((ej) this).field_t) {
+                            if (4.0 * this.field_t * this.field_y - this.field_k * this.field_k >= this.field_A * 4.0 * this.field_t) {
                               break L6;
                             } else {
                               return true;
@@ -198,16 +198,16 @@ final class ej implements lm {
                         }
                       }
                       L7: {
-                        var42 = ((ej) this).field_t + ((ej) this).field_c - ((ej) this).field_d;
-                        var44 = ((ej) this).field_d + ((ej) this).field_k - 2.0 * ((ej) this).field_c - ((ej) this).field_l;
-                        var46 = ((ej) this).field_c + ((ej) this).field_l + ((ej) this).field_y;
+                        var42 = this.field_t + this.field_c - this.field_d;
+                        var44 = this.field_d + this.field_k - 2.0 * this.field_c - this.field_l;
+                        var46 = this.field_c + this.field_l + this.field_y;
                         if (var44 >= 0.0) {
                           break L7;
                         } else {
                           if (-var44 >= 2.0 * var42) {
                             break L7;
                           } else {
-                            if (4.0 * var42 * var46 - var44 * var44 >= (double)(((ej) this).field_o * 4) * var42) {
+                            if (4.0 * var42 * var46 - var44 * var44 >= (double)(this.field_o * 4) * var42) {
                               break L7;
                             } else {
                               return true;
@@ -250,17 +250,17 @@ final class ej implements lm {
             if (!(param0 instanceof ej)) {
               break L1;
             } else {
-              var2 = (ej) (Object) param0;
-              if (((ej) this).field_e != var2.field_e) {
+              var2 = (ej) ((Object) param0);
+              if (this.field_e != var2.field_e) {
                 break L1;
               } else {
-                if (((ej) this).field_v != var2.field_v) {
+                if (this.field_v != var2.field_v) {
                   break L1;
                 } else {
-                  if (((ej) this).field_f != var2.field_f) {
+                  if (this.field_f != var2.field_f) {
                     break L1;
                   } else {
-                    if (((ej) this).field_a != var2.field_a) {
+                    if (this.field_a != var2.field_a) {
                       break L1;
                     } else {
                       stackOut_5_0 = 1;
@@ -288,13 +288,13 @@ final class ej implements lm {
         int var5 = 0;
         L0: {
           L1: {
-            ((ej) this).field_r = param0 * ((ej) this).field_p + param1 * ((ej) this).field_h + ((ej) this).field_x;
-            ((ej) this).field_j = param0 * ((param0 * ((ej) this).field_s + param1 * ((ej) this).field_m) / ((ej) this).field_z + ((ej) this).field_b) / ((ej) this).field_z + param1 * (param1 * ((ej) this).field_i / ((ej) this).field_z + ((ej) this).field_q) / ((ej) this).field_z + ((ej) this).field_u;
-            ((ej) this).field_w = param0 * ((ej) this).field_m + ((ej) this).field_i;
-            if (((ej) this).field_r <= 0) {
+            this.field_r = param0 * this.field_p + param1 * this.field_h + this.field_x;
+            this.field_j = param0 * ((param0 * this.field_s + param1 * this.field_m) / this.field_z + this.field_b) / this.field_z + param1 * (param1 * this.field_i / this.field_z + this.field_q) / this.field_z + this.field_u;
+            this.field_w = param0 * this.field_m + this.field_i;
+            if (this.field_r <= 0) {
               break L1;
             } else {
-              if (((ej) this).field_j >= ((ej) this).field_o) {
+              if (this.field_j >= this.field_o) {
                 break L1;
               } else {
                 var3 = 1L;
@@ -312,10 +312,10 @@ final class ej implements lm {
           } else {
             var3 = var3 << 1;
             param1--;
-            ((ej) this).field_r = ((ej) this).field_r - ((ej) this).field_h;
-            ((ej) this).field_j = ((ej) this).field_j - ((2 * param1 * ((ej) this).field_i + ((ej) this).field_w) / ((ej) this).field_z + ((ej) this).field_q) / ((ej) this).field_z;
-            if (((ej) this).field_r > 0) {
-              if (((ej) this).field_j < ((ej) this).field_o) {
+            this.field_r = this.field_r - this.field_h;
+            this.field_j = this.field_j - ((2 * param1 * this.field_i + this.field_w) / this.field_z + this.field_q) / this.field_z;
+            if (this.field_r > 0) {
+              if (this.field_j < this.field_o) {
                 var3 = var3 + 1L;
                 var5++;
                 continue L2;
@@ -340,29 +340,25 @@ final class ej implements lm {
         int var10 = 0;
         int[] var11 = null;
         int[] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
         L0: {
-          var14 = new int[12];
-          var13 = var14;
-          var12 = var13;
+          var12 = new int[12];
           var11 = var12;
           var5 = var11;
           var6 = new int[]{1, 12, -12};
           var5[0] = param0[0] - param0[2];
           var5[1] = param1[0] - param1[2];
           var5[2] = param2[0] - param2[2];
-          ((ej) this).field_p = ap.a(var14, 0, var6, 0);
-          ap.a(var14, 0, var6, 0, var14, 3);
+          this.field_p = ap.a(var12, 0, var6, 0);
+          ap.a(var12, 0, var6, 0, var12, 3);
           var5[0] = param0[1] - param0[2];
           var5[1] = param1[1] - param1[2];
           var5[2] = param2[1] - param2[2];
-          ((ej) this).field_h = ap.a(var14, 0, var6, 0);
-          ap.a(var14, 0, var6, 0, var14, 6);
-          var5[0] = param0[2] - (int)(1.0 + ((ej) this).field_e);
-          var5[1] = param1[2] - (int)(-1.0 + ((ej) this).field_v);
-          var5[2] = param2[2] - (int)(1.0 + ((ej) this).field_f);
-          var7 = ke.a(ap.a(var14, 0, var14, 0), (byte) -97);
+          this.field_h = ap.a(var12, 0, var6, 0);
+          ap.a(var12, 0, var6, 0, var12, 6);
+          var5[0] = param0[2] - (int)(1.0 + this.field_e);
+          var5[1] = param1[2] - (int)(-1.0 + this.field_v);
+          var5[2] = param2[2] - (int)(1.0 + this.field_f);
+          var7 = ke.a(ap.a(var12, 0, var12, 0), (byte) -97);
           if (var7 % 2 != 0) {
             var8 = 1518500249 >> 30 - var7 / 2;
             break L0;
@@ -380,22 +376,22 @@ final class ej implements lm {
             break L1;
           }
         }
-        var5[0] = var9 * param0[2] - (int)(0.5 + (double)var9 * ((ej) this).field_e);
-        var5[1] = var9 * param1[2] - (int)(-0.5 + (double)var9 * ((ej) this).field_v);
-        var5[2] = var9 * param2[2] - (int)(0.5 + (double)var9 * ((ej) this).field_f);
-        ((ej) this).field_x = ap.a(var14, 0, var6, 0) / var9 * param3;
-        ap.a(var14, 0, var6, 0, var14, 9);
+        var5[0] = var9 * param0[2] - (int)(0.5 + (double)var9 * this.field_e);
+        var5[1] = var9 * param1[2] - (int)(-0.5 + (double)var9 * this.field_v);
+        var5[2] = var9 * param2[2] - (int)(0.5 + (double)var9 * this.field_f);
+        this.field_x = ap.a(var12, 0, var6, 0) / var9 * param3;
+        ap.a(var12, 0, var6, 0, var12, 9);
         var5[9] = var5[9] / var9;
         var5[10] = var5[10] / var9;
         var5[11] = var5[11] / var9;
         var10 = 289;
-        ((ej) this).field_s = ap.a(var14, 3, var14, 3) / var10;
-        ((ej) this).field_i = ap.a(var14, 6, var14, 6) / var10;
-        ((ej) this).field_u = ap.a(var14, 9, var14, 9) / var10;
-        ((ej) this).field_m = 2 * ap.a(var14, 3, var14, 6) / var10;
-        ((ej) this).field_b = 2 * ap.a(var14, 3, var14, 9) / var10;
-        ((ej) this).field_q = 2 * ap.a(var14, 6, var14, 9) / var10;
-        ((ej) this).field_z = param3;
+        this.field_s = ap.a(var12, 3, var12, 3) / var10;
+        this.field_i = ap.a(var12, 6, var12, 6) / var10;
+        this.field_u = ap.a(var12, 9, var12, 9) / var10;
+        this.field_m = 2 * ap.a(var12, 3, var12, 6) / var10;
+        this.field_b = 2 * ap.a(var12, 3, var12, 9) / var10;
+        this.field_q = 2 * ap.a(var12, 6, var12, 9) / var10;
+        this.field_z = param3;
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -407,32 +403,28 @@ final class ej implements lm {
         field_g[1] = (double)(param4 - param7);
         field_g[2] = (double)(param5 - param8);
         ap.a(field_g, 0, field_n, 0, field_g, 6);
-        field_g[0] = (double)param6 - ((ej) this).field_e;
-        field_g[1] = (double)param7 - ((ej) this).field_v;
-        field_g[2] = (double)param8 - ((ej) this).field_f;
+        field_g[0] = (double)param6 - this.field_e;
+        field_g[1] = (double)param7 - this.field_v;
+        field_g[2] = (double)param8 - this.field_f;
         ap.a(field_g, 0, field_n, 0, field_g, 9);
-        ((ej) this).field_t = ap.a(field_g, 3, field_g, 3);
-        ((ej) this).field_c = ap.a(field_g, 6, field_g, 6);
-        ((ej) this).field_y = ap.a(field_g, 9, field_g, 9);
-        ((ej) this).field_d = 2.0 * ap.a(field_g, 3, field_g, 6);
-        ((ej) this).field_k = 2.0 * ap.a(field_g, 3, field_g, 9);
-        ((ej) this).field_l = 2.0 * ap.a(field_g, 6, field_g, 9);
+        this.field_t = ap.a(field_g, 3, field_g, 3);
+        this.field_c = ap.a(field_g, 6, field_g, 6);
+        this.field_y = ap.a(field_g, 9, field_g, 9);
+        this.field_d = 2.0 * ap.a(field_g, 3, field_g, 6);
+        this.field_k = 2.0 * ap.a(field_g, 3, field_g, 9);
+        this.field_l = 2.0 * ap.a(field_g, 6, field_g, 9);
     }
 
     ej(double param0, double param1, double param2, double param3) {
-        ((ej) this).field_e = param0;
-        ((ej) this).field_v = param1;
-        ((ej) this).field_f = param2;
-        ((ej) this).field_a = param3;
-        ((ej) this).field_A = param3 * param3;
-        ((ej) this).field_o = (int)(0.5 + ((ej) this).field_A);
+        this.field_e = param0;
+        this.field_v = param1;
+        this.field_f = param2;
+        this.field_a = param3;
+        this.field_A = param3 * param3;
+        this.field_o = (int)(0.5 + this.field_A);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new double[12];
         field_n = new double[]{0.058823529411764705, 0.7058823529411765, -0.7058823529411765};
     }

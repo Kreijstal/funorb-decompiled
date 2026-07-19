@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class eb implements pf {
     static mc[] field_b;
     static qb field_d;
@@ -12,22 +10,47 @@ final class eb implements pf {
     final static nk a(boolean param0, int param1, int param2, int param3) {
         nk var4 = null;
         int var5 = 0;
+        nk var6 = null;
+        nk var7 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
-        var4 = (nk) (Object) pe.field_Lb.b(12623);
-        L0: while (true) {
-          if (var4 == null) {
-            var4 = new nk();
-            var4.field_p = 0;
-            var4.field_t = 10;
-            pe.field_Lb.b((pg) (Object) var4, -1);
-            fj.a(-26971, var4, 7);
-            return var4;
-          } else {
-            if (var4.field_p != 0) {
-              var4 = (nk) (Object) pe.field_Lb.a(0);
-              continue L0;
+        var4 = (nk) ((Object) pe.field_Lb.b(12623));
+        if (!param0) {
+          eb.a((byte) -57);
+          L0: while (true) {
+            if (var4 == null) {
+              var7 = new nk();
+              var4 = var7;
+              var7.field_p = param2;
+              var7.field_t = param1;
+              pe.field_Lb.b(var7, -1);
+              fj.a(-26971, var7, param3);
+              return var7;
             } else {
-              return var4;
+              if (param2 != var4.field_p) {
+                var4 = (nk) ((Object) pe.field_Lb.a(0));
+                continue L0;
+              } else {
+                return var4;
+              }
+            }
+          }
+        } else {
+          L1: while (true) {
+            if (var4 == null) {
+              var6 = new nk();
+              var4 = var6;
+              var6.field_p = param2;
+              var6.field_t = param1;
+              pe.field_Lb.b(var6, -1);
+              fj.a(-26971, var6, param3);
+              return var6;
+            } else {
+              if (param2 != var4.field_p) {
+                var4 = (nk) ((Object) pe.field_Lb.a(0));
+                continue L1;
+              } else {
+                return var4;
+              }
             }
           }
         }
@@ -36,12 +59,15 @@ final class eb implements pf {
     public static void a(byte param0) {
         field_b = null;
         field_c = null;
+        if (param0 != 49) {
+            return;
+        }
         field_d = null;
     }
 
     public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException runtimeException = null;
-        Object var7 = null;
+        jg var7 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -64,7 +90,7 @@ final class eb implements pf {
               if (param1 == 5592405) {
                 break L1;
               } else {
-                var7 = null;
+                var7 = (jg) null;
                 eb.a(-82, (jg) null);
                 break L1;
               }
@@ -75,23 +101,23 @@ final class eb implements pf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("eb.A(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -99,17 +125,43 @@ final class eb implements pf {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void a(int param0, boolean param1) {
-        ul.field_A = param0;
-        if (!(null == jl.field_h)) {
+        jg var3 = null;
+        L0: {
+          ul.field_A = param0;
+          if (null != jl.field_h) {
             jl.field_h.a(param0, (byte) -66);
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        if (!(gg.field_h == null)) {
-            gg.field_h.a(2, param0);
+        if (param1) {
+          L1: {
+            var3 = (jg) null;
+            eb.a(84, (jg) null);
+            if (gg.field_h != null) {
+              gg.field_h.a(2, param0);
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          return;
+        } else {
+          L2: {
+            if (gg.field_h != null) {
+              gg.field_h.a(2, param0);
+              break L2;
+            } else {
+              break L2;
+            }
+          }
+          return;
         }
     }
 
@@ -206,7 +258,7 @@ final class eb implements pf {
                 stackOut_2_0 = stackIn_2_0;
                 stackOut_2_1 = stackIn_2_1;
                 stackOut_2_2 = stackIn_2_2;
-                stackOut_2_3 = (String) (Object) stackIn_2_3;
+                stackOut_2_3 = (String) ((Object) stackIn_2_3);
                 stackOut_2_4 = stackIn_2_4;
                 stackOut_2_5 = stackIn_2_5;
                 stackOut_2_6 = param1.field_q;
@@ -222,7 +274,7 @@ final class eb implements pf {
                 stackOut_1_0 = stackIn_1_0;
                 stackOut_1_1 = stackIn_1_1;
                 stackOut_1_2 = stackIn_1_2;
-                stackOut_1_3 = (String) (Object) stackIn_1_3;
+                stackOut_1_3 = (String) ((Object) stackIn_1_3);
                 stackOut_1_4 = stackIn_1_4;
                 stackOut_1_5 = stackIn_1_5;
                 stackOut_1_6 = 0;
@@ -237,7 +289,7 @@ final class eb implements pf {
               }
             }
             L2: {
-              ArcanistsMulti.a(stackIn_3_0, (int[]) (Object) stackIn_3_1, (dn) (Object) stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_3_6, param1.field_g, param1.field_a);
+              ArcanistsMulti.a(stackIn_3_0, (int[]) ((Object) stackIn_3_1), (dn) ((Object) stackIn_3_2), stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_3_6, param1.field_g, param1.field_a);
               if (param1.field_m != param0) {
                 break L2;
               } else {
@@ -270,7 +322,7 @@ final class eb implements pf {
               }
             }
             L4: {
-              if (param1.field_m != 1) {
+              if ((param1.field_m ^ -1) != -2) {
                 break L4;
               } else {
                 if (lk.f(-1)) {
@@ -316,23 +368,23 @@ final class eb implements pf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var2;
+            stackOut_19_0 = (RuntimeException) (var2);
             stackOut_19_1 = new StringBuilder().append("eb.D(").append(param0).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -340,11 +392,14 @@ final class eb implements pf {
               break L6;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
         }
     }
 
     final static void a(boolean param0, int param1) {
+        if (param1 > -81) {
+            return;
+        }
         mj.a(-6578, param0);
         if (!(null == kh.field_c)) {
             fk.a(0, kh.field_c);
@@ -355,19 +410,15 @@ final class eb implements pf {
         try {
             ol.field_f = new ec(param0);
             mj.field_r = param3;
-            int var4_int = 51;
+            int var4_int = -103 / ((param2 - 31) / 55);
             tg.field_d = param1;
             eg.b(403300833);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "eb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + -117 + ',' + param3 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "eb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = null;
         field_c = "Just one target left!";
     }

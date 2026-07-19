@@ -73,7 +73,7 @@ public class GeometryBuffer extends jaclib.peer.doa implements jaclib.memory.Buf
           stackOut_3_0 = stackIn_3_0;
           stackIn_5_0 = stackOut_3_0;
           stackIn_4_0 = stackOut_3_0;
-          if (param1 >= 0) {
+          if ((param1 ^ -1) <= -1) {
             stackOut_5_0 = stackIn_5_0;
             stackOut_5_1 = 0;
             stackIn_6_0 = stackOut_5_0;
@@ -138,7 +138,7 @@ public class GeometryBuffer extends jaclib.peer.doa implements jaclib.memory.Buf
           }
         }
         if ((stackIn_12_0 | (stackIn_12_1 | stackIn_12_2)) == 0) {
-          if (param2 + param3 > ((jagdx.GeometryBuffer) this).getSize()) {
+          if (param2 + param3 > this.getSize()) {
             throw new jagdx.nba();
           } else {
             this.putub(param0, param1, param2, param3);

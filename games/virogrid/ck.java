@@ -60,14 +60,10 @@ final class ck {
     }
 
     ck(boolean param0) {
-        ((ck) this).field_a = param0 ? true : false;
+        this.field_a = param0 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 0;
     }
 }

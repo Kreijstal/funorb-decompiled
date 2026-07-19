@@ -24,7 +24,7 @@ final class nc implements ad {
                     var5 = var4;
                     var5 = var4;
                     if (param2 < 66) {
-                        field_b = null;
+                        field_b = (String) null;
                     }
                     var7 = var6 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
                     var5 = var7;
@@ -39,7 +39,7 @@ final class nc implements ad {
                 }
                 ie.a(param0, true);
             } catch (RuntimeException runtimeException) {
-                throw lj.a((Throwable) (Object) runtimeException, "nc.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+                throw lj.a((Throwable) ((Object) runtimeException), "nc.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -54,6 +54,7 @@ final class nc implements ad {
     }
 
     public final void a(int param0, int param1, fe param2, int param3, boolean param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -106,20 +107,20 @@ final class nc implements ad {
               if (param0 == 12088) {
                 break L3;
               } else {
-                field_b = null;
+                field_b = (String) null;
                 break L3;
               }
             }
-            int discarded$1 = ((nc) this).field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_s + "</u>", param1 - -param2.field_u, param2.field_t + param3, param2.field_v, param2.field_q, var6_int, -1, ((nc) this).field_a, ((nc) this).field_d, ((nc) this).field_c.field_I + ((nc) this).field_c.field_E);
+            discarded$1 = this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_s + "</u>", param1 - -param2.field_u, param2.field_t + param3, param2.field_v, param2.field_q, var6_int, -1, this.field_a, this.field_d, this.field_c.field_I + this.field_c.field_E);
             if (param2.k(-105)) {
               L4: {
-                var7 = ((nc) this).field_c.a(param2.field_s);
-                var8 = ((nc) this).field_c.field_E + ((nc) this).field_c.field_I;
+                var7 = this.field_c.a(param2.field_s);
+                var8 = this.field_c.field_E + this.field_c.field_I;
                 var9 = param2.field_u + param1;
                 var10 = param3 - -param2.field_t;
-                if (((nc) this).field_a != 2) {
-                  if (1 == ((nc) this).field_a) {
-                    var9 = var9 + (param2.field_v + -var7 >> 1);
+                if (this.field_a != 2) {
+                  if (1 == this.field_a) {
+                    var9 = var9 + (param2.field_v + -var7 >> -1146550079);
                     break L4;
                   } else {
                     break L4;
@@ -130,11 +131,11 @@ final class nc implements ad {
                 }
               }
               L5: {
-                if (-3 != ((nc) this).field_d) {
-                  if (-2 != ((nc) this).field_d) {
+                if (-3 != (this.field_d ^ -1)) {
+                  if (-2 != (this.field_d ^ -1)) {
                     break L5;
                   } else {
-                    var10 = var10 + (-var8 + param2.field_q >> 1);
+                    var10 = var10 + (-var8 + param2.field_q >> 1274345089);
                     break L5;
                   }
                 } else {
@@ -152,23 +153,23 @@ final class nc implements ad {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var6;
+            stackOut_20_0 = (RuntimeException) (var6);
             stackOut_20_1 = new StringBuilder().append("nc.B(").append(param0).append(',').append(param1).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param2 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -176,31 +177,27 @@ final class nc implements ad {
               break L6;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param3 + ',' + param4 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public nc() {
-        ((nc) this).field_a = 1;
-        ((nc) this).field_d = 1;
-        ((nc) this).field_c = bn.field_d;
+        this.field_a = 1;
+        this.field_d = 1;
+        this.field_c = bn.field_d;
     }
 
     nc(we param0, int param1, int param2) {
         try {
-            ((nc) this).field_c = param0;
-            ((nc) this).field_a = param1;
-            ((nc) this).field_d = param2;
+            this.field_c = param0;
+            this.field_a = param1;
+            this.field_d = param2;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "nc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "nc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = false;
         field_b = "Here Lies Crushed";
     }

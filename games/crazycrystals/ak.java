@@ -16,10 +16,14 @@ final class ak extends jb {
 
     public static void a(int param0) {
         field_f = null;
+        if (param0 != 77) {
+            field_f = (db) null;
+        }
     }
 
     final static void a(int param0, byte param1) {
         try {
+            IOException iOException = null;
             Throwable decompiledCaughtException = null;
             L0: {
               if (null == oi.field_c) {
@@ -40,7 +44,7 @@ final class ak extends jb {
                   if (tp.field_f.field_f != 0) {
                     break L2;
                   } else {
-                    if (~(10000L + mp.field_p) > ~lo.a((byte) -118)) {
+                    if ((10000L + mp.field_p ^ -1L) > (lo.a((byte) -118) ^ -1L)) {
                       tp.field_f.d(8, param0);
                       break L2;
                     } else {
@@ -49,21 +53,33 @@ final class ak extends jb {
                   }
                 }
                 L3: {
-                  if (tp.field_f.field_f <= 0) {
+                  if ((tp.field_f.field_f ^ -1) >= -1) {
                     break L3;
                   } else {
-                    {
+                    try {
                       L4: {
-                        oi.field_c.a(0, 92, tp.field_f.field_h, tp.field_f.field_f);
+                        oi.field_c.a(0, param1 ^ -116, tp.field_f.field_h, tp.field_f.field_f);
                         mp.field_p = lo.a((byte) 90);
                         break L4;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L5: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        jj.a(4);
+                        break L5;
                       }
                     }
                     tp.field_f.field_f = 0;
                     break L3;
                   }
                 }
-                return;
+                if (param1 != -48) {
+                  ak.a((byte) -60, 78, 70, 24, -99);
+                  return;
+                } else {
+                  return;
+                }
               }
             }
             tp.field_f.field_f = 0;
@@ -82,6 +98,9 @@ final class ak extends jb {
         kh.f(param1 - -1, param2 + 9, 77, 6, 0);
         kh.f(param1 - -1, 10 + param2, 77, 4, param4);
         oc.a(af.field_c, 26, param2, param3 + param1, 15, -123);
+        if (param0 != 61) {
+            ak.a(-86);
+        }
     }
 
     static {

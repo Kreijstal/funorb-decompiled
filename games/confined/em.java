@@ -10,14 +10,29 @@ abstract class em {
     static String[] field_f;
 
     final static nf[] a(int param0, int param1, int param2, byte param3, int param4) {
-        return fa.a(3, 1, 0, 0, 65793, 1, 0, 1, (byte) -97);
+        if (param3 != 2) {
+          field_b = (int[]) null;
+          return fa.a(3, 1, param0, param1, param2, 1, param4, 1, (byte) -97);
+        } else {
+          return fa.a(3, 1, param0, param1, param2, 1, param4, 1, (byte) -97);
+        }
     }
 
     public static void a(byte param0) {
-        field_d = null;
-        field_c = null;
-        field_b = null;
-        field_f = null;
+        if (param0 != -64) {
+          field_b = (int[]) null;
+          field_d = null;
+          field_c = null;
+          field_b = null;
+          field_f = null;
+          return;
+        } else {
+          field_d = null;
+          field_c = null;
+          field_b = null;
+          field_f = null;
+          return;
+        }
     }
 
     abstract si b(byte param0);
@@ -25,10 +40,6 @@ abstract class em {
     abstract void a(kg param0, byte param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "to return to the normal view.";
         field_a = 20;
         field_f = new String[255];

@@ -13,9 +13,18 @@ abstract class hh {
     public static void b(int param0) {
         field_a = null;
         field_e = null;
-        field_b = null;
-        field_c = null;
-        field_d = null;
+        if (param0 != 1) {
+          field_d = (kc) null;
+          field_b = null;
+          field_c = null;
+          field_d = null;
+          return;
+        } else {
+          field_b = null;
+          field_c = null;
+          field_d = null;
+          return;
+        }
     }
 
     abstract void a(int param0, java.awt.Component param1);
@@ -27,10 +36,6 @@ abstract class hh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[]{0, 0, -1, -1, -1, -1, -1, -1, 4, 4, 0, 0, 0, 4, 0, 4, -1, -1, 0, 4, -1, -1, 1, 1, 0, 4, -1, 2, 4, 2, 0, 1, -1, -1, 1, 1, 0, 0, 1, -1, 4, -1, -1, 4, -1, -1, -1, 1, 0, 2, 4, 2, 0, -1, -1, -1, -1, -1, -1, 1, 1, -1, 0, 4, -1, 1, 0, -1, -1, 1, 1, 1, -1, -1, 0, 1, -1, 1, -1, -1, 0, 1, 1, 1, 0, 4, 0, 4, 0, 4, -1, -1, -1, -1, 0, 1, 0, -1, -1, 2, -1, 1, 0, 4, 0, 1, 1, 1, 4, 1, -1, -1, -1, 0, -1, 4, 4, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 5, 0, 0, 0, 0, 0, -1, 0, 0};
         field_a = "winning, dealing damage, healing, controlling of minions, killing players, critical hits and many others!";
     }

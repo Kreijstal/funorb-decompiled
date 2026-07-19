@@ -948,17 +948,29 @@ final class pn implements uj {
 
     final static void b(int param0) {
         int var1 = 0;
-        if (oc.field_f < 224) {
-          var1 = oc.field_f % 32;
-          ma.a(-121, 32 + oc.field_f - var1);
-          return;
-        } else {
+        if (oc.field_f >= 224) {
           ma.a(-121, 256);
-          return;
+          if (param0 == 60) {
+            return;
+          } else {
+            pn.a(-31, -49, 109);
+            return;
+          }
+        } else {
+          var1 = oc.field_f % 32;
+          ma.a(param0 + -181, 32 + oc.field_f - var1);
+          if (param0 == 60) {
+            return;
+          } else {
+            pn.a(-31, -49, 109);
+            return;
+          }
         }
     }
 
     final static void b(byte param0) {
+        int discarded$2 = 0;
+        int discarded$3 = 0;
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -968,13 +980,23 @@ final class pn implements uj {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var8 = MinerDisturbance.field_ab;
         try {
           L0: {
             if (!fn.field_o) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
+              L1: {
+                if (param0 == -17) {
+                  break L1;
+                } else {
+                  field_d = (String) null;
+                  break L1;
+                }
+              }
               eh.b(40, 40, 560, 400, 1, 164);
               eh.a(40, 40, 560, 400, 16777215);
               var1_int = 16;
@@ -983,51 +1005,52 @@ final class pn implements uj {
               wi.field_A.a("Press 'H' to close this screen", var3, var2, 16777215, -1);
               var2 = var2 + var1_int;
               var4 = var2;
-              var5 = (tc) (Object) ii.field_b.b(80);
-              L1: while (true) {
+              var5 = (tc) ((Object) ii.field_b.b(80));
+              L2: while (true) {
                 if (var5 == null) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  L2: {
+                  L3: {
                     var7 = var5.field_q;
                     if (var7 == 2) {
                       var6 = "F" + var5.field_w + "+ALT";
-                      break L2;
+                      break L3;
                     } else {
                       if (1 == var7) {
                         var6 = "F" + var5.field_w + "+CTRL";
-                        break L2;
+                        break L3;
                       } else {
-                        if (var7 == 3) {
+                        if (-4 == (var7 ^ -1)) {
                           var6 = "F" + var5.field_w + "+CTRL+ALT";
-                          break L2;
+                          break L3;
                         } else {
                           if (0 != var7) {
                             var6 = null;
-                            break L2;
+                            break L3;
                           } else {
                             var6 = "F" + var5.field_w;
-                            break L2;
+                            break L3;
                           }
                         }
                       }
                     }
                   }
-                  L3: {
+                  L4: {
                     eh.b(-10 + var3, -10 + var2, 50, 20 - -var1_int, 65330, 120);
-                    int discarded$2 = wi.field_A.a(var6, -10 + var3, var2 + -10, 50, var1_int + 20, 16777215, 5592405, 1, 1, 0);
-                    int discarded$3 = wi.field_A.a(var5.field_n, var3 + 50, var2 + -10, 140, var1_int + 20, 16777215, -1, 0, 1, 0);
+                    discarded$2 = wi.field_A.a(var6, -10 + var3, var2 + -10, 50, var1_int + 20, 16777215, 5592405, 1, 1, 0);
+                    discarded$3 = wi.field_A.a(var5.field_n, var3 + -10 + 60, var2 + -10, 140, var1_int + 20, 16777215, -1, 0, 1, 0);
                     var2 = var2 + (var1_int + 24);
-                    if (var2 > 420) {
+                    if ((var2 ^ -1) < -421) {
                       var3 += 220;
                       var2 = var4;
-                      break L3;
+                      break L4;
                     } else {
-                      break L3;
+                      break L4;
                     }
                   }
-                  var5 = (tc) (Object) ii.field_b.b((byte) 56);
-                  continue L1;
+                  var5 = (tc) ((Object) ii.field_b.b((byte) 56));
+                  continue L2;
                 }
               }
             }
@@ -1035,7 +1058,12 @@ final class pn implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "pn.E(" + -17 + ')');
+          throw lj.a((Throwable) ((Object) var1), "pn.E(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -1051,7 +1079,7 @@ final class pn implements uj {
 
     public final void a(boolean param0) {
         if (param0) {
-            field_c = null;
+            field_c = (ln) null;
             tb.field_a = 2;
             bc.field_a = 3;
             return;
@@ -1061,10 +1089,6 @@ final class pn implements uj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Connection restored.";
         field_a = new nn(1);
         field_d = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";

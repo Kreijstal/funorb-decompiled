@@ -95,7 +95,7 @@ final class so extends ji {
                   if (param8 > 34) {
                     break L2;
                   } else {
-                    field_z = null;
+                    field_z = (String) null;
                     break L2;
                   }
                 }
@@ -152,23 +152,23 @@ final class so extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var10 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var10;
+            stackOut_15_0 = (RuntimeException) (var10);
             stackOut_15_1 = new StringBuilder().append("so.A(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -177,23 +177,23 @@ final class so extends ji {
             }
           }
           L7: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
             stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param4 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L7;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -202,23 +202,23 @@ final class so extends ji {
             }
           }
           L8: {
-            stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
             stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param5 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -227,23 +227,23 @@ final class so extends ji {
             }
           }
           L9: {
-            stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+            stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
             stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param6 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
               break L9;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
@@ -251,7 +251,7 @@ final class so extends ji {
               break L9;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -262,15 +262,15 @@ final class so extends ji {
         int var6 = 0;
         int[] var7 = null;
         var6 = Vertigo2.field_L ? 1 : 0;
-        var7 = ((so) this).field_x.a(param0, (byte) -113);
+        var7 = this.field_x.a(param0, (byte) -113);
         var3 = var7;
-        if (((so) this).field_x.field_i) {
-          var4 = ((so) this).a(0, -1, param0);
+        if (this.field_x.field_i) {
+          var4 = this.a(0, -1, param0);
           var5 = 0;
           L0: while (true) {
             if (we.field_M <= var5) {
               if (param1 < 91) {
-                return null;
+                return (int[]) null;
               } else {
                 return var3;
               }
@@ -282,7 +282,7 @@ final class so extends ji {
           }
         } else {
           if (param1 < 91) {
-            return null;
+            return (int[]) null;
           } else {
             return var3;
           }
@@ -290,12 +290,17 @@ final class so extends ji {
     }
 
     public static void g(int param0) {
+        if (param0 != -13533) {
+            field_y = 22L;
+            field_z = null;
+            return;
+        }
         field_z = null;
     }
 
     final void a(byte param0, int param1, ed param2) {
         RuntimeException var4 = null;
-        Object var5 = null;
+        cr var5 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
@@ -329,7 +334,7 @@ final class so extends ji {
                   stackOut_2_0 = this;
                   stackIn_4_0 = stackOut_2_0;
                   stackIn_3_0 = stackOut_2_0;
-                  if (param2.h(param0 ^ -101) != 1) {
+                  if ((param2.h(param0 ^ -101) ^ -1) != -2) {
                     stackOut_4_0 = this;
                     stackOut_4_1 = 0;
                     stackIn_5_0 = stackOut_4_0;
@@ -343,7 +348,7 @@ final class so extends ji {
                     break L2;
                   }
                 }
-                ((so) this).field_o = stackIn_5_1 != 0;
+                ((so) (this)).field_o = stackIn_5_1 != 0;
                 break L1;
               } else {
                 break L1;
@@ -352,7 +357,7 @@ final class so extends ji {
             if (param0 == 110) {
               break L0;
             } else {
-              var5 = null;
+              var5 = (cr) null;
               so.a((cr) null, 27, 57, 9, (cr) null, (byte[]) null, (cr) null, 16, -49, -71);
               return;
             }
@@ -361,23 +366,23 @@ final class so extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var4;
+            stackOut_9_0 = (RuntimeException) (var4);
             stackOut_9_1 = new StringBuilder().append("so.C(").append(param0).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -385,7 +390,7 @@ final class so extends ji {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
     }
 
@@ -399,33 +404,29 @@ final class so extends ji {
         int[][] var13 = null;
         int[][] var15 = null;
         int[][] var20 = null;
-        int[][] var25 = null;
-        int[][] var29 = null;
-        int[][] var30 = null;
+        int[][] var28 = null;
+        int[] var29 = null;
+        int[] var30 = null;
         int[] var31 = null;
-        int[] var32 = null;
-        int[] var33 = null;
         var12 = Vertigo2.field_L ? 1 : 0;
-        var30 = ((so) this).field_v.a(param1, -2);
-        var25 = var30;
-        var20 = var25;
+        var20 = this.field_v.a(param1, -2);
         var15 = var20;
         var13 = var15;
         var3 = var13;
-        if (((so) this).field_v.field_c) {
-          var29 = ((so) this).c(0, 3, param1);
-          var31 = var29[0];
-          var32 = var29[1];
-          var33 = var29[2];
-          var8 = var30[0];
-          var9 = var30[1];
-          var10 = var30[2];
+        if (this.field_v.field_c) {
+          var28 = this.c(0, 3, param1);
+          var29 = var28[0];
+          var30 = var28[1];
+          var31 = var28[2];
+          var8 = var20[0];
+          var9 = var20[1];
+          var10 = var20[2];
           var11 = 0;
           L0: while (true) {
             if (we.field_M > var11) {
-              var8[var11] = -var31[var11] + 4096;
-              var9[var11] = -var32[var11] + 4096;
-              var10[var11] = 4096 + -var33[var11];
+              var8[var11] = -var29[var11] + 4096;
+              var9[var11] = -var30[var11] + 4096;
+              var10[var11] = 4096 + -var31[var11];
               var11++;
               continue L0;
             } else {
@@ -448,10 +449,6 @@ final class so extends ji {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "Play free version";
         field_B = 0;
     }

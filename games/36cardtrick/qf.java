@@ -18,30 +18,31 @@ abstract class qf extends g {
     }
 
     qf(j param0, int param1, int param2) {
-        super(-param1 + lb.field_g >> 1, kb.field_d + -param2 >> 1, param1, param2, (ci) null);
+        super(-param1 + lb.field_g >> -1668665087, kb.field_d + -param2 >> 1301484641, param1, param2, (ci) null);
         try {
-            ((qf) this).field_D = param0;
-            ((qf) this).field_E = false;
-            ((qf) this).field_H = 0;
+            this.field_D = param0;
+            this.field_E = false;
+            this.field_H = 0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2) {
-        ((qf) this).a(param0, -param0 + kb.field_d >> 1, param1, -param1 + lb.field_g >> 1, true);
+        this.a(param0, -param0 + kb.field_d >> -711450815, param1, -param1 + lb.field_g >> -1756125151, true);
         if (param2 != -1) {
-            field_J = null;
+            field_J = (ue) null;
         }
     }
 
     abstract void b(int param0, byte param1, int param2);
 
     public static void n(int param0) {
+        int discarded$0 = 0;
         field_J = null;
         field_I = null;
         if (param0 != 8736) {
-            int discarded$0 = qf.m(111);
+            discarded$0 = qf.m(111);
         }
     }
 
@@ -56,9 +57,9 @@ abstract class qf extends g {
         int stackOut_2_0 = 0;
         if (param0 < 66) {
           L0: {
-            ((qf) this).field_D = null;
-            if (((qf) this).field_E) {
-              if (this == (Object) (Object) ((qf) this).field_D.d((byte) 10)) {
+            this.field_D = (j) null;
+            if (this.field_E) {
+              if (this == this.field_D.d((byte) 10)) {
                 stackOut_11_0 = 256;
                 stackIn_12_0 = stackOut_11_0;
                 break L0;
@@ -76,8 +77,8 @@ abstract class qf extends g {
           return stackIn_12_0;
         } else {
           L1: {
-            if (((qf) this).field_E) {
-              if (this == (Object) (Object) ((qf) this).field_D.d((byte) 10)) {
+            if (this.field_E) {
+              if (this == this.field_D.d((byte) 10)) {
                 stackOut_5_0 = 256;
                 stackIn_6_0 = stackOut_5_0;
                 break L1;
@@ -97,111 +98,117 @@ abstract class qf extends g {
     }
 
     final lk i(int param0) {
-        lk var2 = super.i(param0);
-        if (!(var2 == null)) {
-            return var2;
-        }
-        if (param0 != -1) {
+        lk var2 = null;
+        var2 = super.i(param0 + 0);
+        if (var2 != null) {
+          return var2;
+        } else {
+          if (param0 != -1) {
             field_F = -107;
-            return (lk) this;
+            return (lk) (this);
+          } else {
+            return (lk) (this);
+          }
         }
-        return (lk) this;
     }
 
     boolean a(boolean param0) {
+        boolean discarded$1 = false;
         int var2 = 0;
         int var3 = 0;
-        int stackIn_12_0 = 0;
+        int stackIn_11_0 = 0;
         int stackIn_20_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_29_0 = 0;
+        int stackIn_32_0 = 0;
+        int stackIn_38_0 = 0;
+        int stackOut_36_0 = 0;
+        int stackOut_37_0 = 0;
+        int stackOut_30_0 = 0;
+        int stackOut_31_0 = 0;
         int stackOut_19_0 = 0;
         int stackOut_18_0 = 0;
-        int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
+        int stackOut_9_0 = 0;
         if (param0) {
           L0: {
             var2 = this.l(70);
-            var3 = var2 - ((qf) this).field_H;
-            if (var3 > 0) {
-              ((qf) this).field_H = ((qf) this).field_H + (var3 - -7) / 8;
+            var3 = var2 - this.field_H;
+            if ((var3 ^ -1) < -1) {
+              this.field_H = this.field_H + (var3 - -7) / 8;
               break L0;
             } else {
               break L0;
             }
           }
-          if (var3 >= 0) {
+          if (-1 < (var3 ^ -1)) {
             L1: {
               L2: {
-                if (0 != ((qf) this).field_H) {
+                this.field_H = this.field_H + (var3 + -16 - -1) / 16;
+                if (0 != this.field_H) {
                   break L2;
                 } else {
                   if (var2 != 0) {
                     break L2;
                   } else {
-                    if (((qf) this).field_E) {
+                    if (this.field_E) {
                       break L2;
                     } else {
-                      stackOut_34_0 = 1;
-                      stackIn_36_0 = stackOut_34_0;
+                      stackOut_36_0 = 1;
+                      stackIn_38_0 = stackOut_36_0;
                       break L1;
                     }
                   }
                 }
               }
-              stackOut_35_0 = 0;
-              stackIn_36_0 = stackOut_35_0;
+              stackOut_37_0 = 0;
+              stackIn_38_0 = stackOut_37_0;
               break L1;
             }
-            return stackIn_36_0 != 0;
+            return stackIn_38_0 != 0;
           } else {
             L3: {
               L4: {
-                ((qf) this).field_H = ((qf) this).field_H + (var3 - 15) / 16;
-                if (0 != ((qf) this).field_H) {
+                if (0 != this.field_H) {
                   break L4;
                 } else {
                   if (var2 != 0) {
                     break L4;
                   } else {
-                    if (((qf) this).field_E) {
+                    if (this.field_E) {
                       break L4;
                     } else {
-                      stackOut_28_0 = 1;
-                      stackIn_30_0 = stackOut_28_0;
+                      stackOut_30_0 = 1;
+                      stackIn_32_0 = stackOut_30_0;
                       break L3;
                     }
                   }
                 }
               }
-              stackOut_29_0 = 0;
-              stackIn_30_0 = stackOut_29_0;
+              stackOut_31_0 = 0;
+              stackIn_32_0 = stackOut_31_0;
               break L3;
             }
-            return stackIn_30_0 != 0;
+            return stackIn_32_0 != 0;
           }
         } else {
           L5: {
-            boolean discarded$1 = ((qf) this).o(-76);
+            discarded$1 = this.o(-76);
             var2 = this.l(70);
-            var3 = var2 - ((qf) this).field_H;
-            if (var3 > 0) {
-              ((qf) this).field_H = ((qf) this).field_H + (var3 - -7) / 8;
+            var3 = var2 - this.field_H;
+            if ((var3 ^ -1) < -1) {
+              this.field_H = this.field_H + (var3 - -7) / 8;
               break L5;
             } else {
               break L5;
             }
           }
-          if (var3 < 0) {
-            ((qf) this).field_H = ((qf) this).field_H + (var3 - 15) / 16;
-            if (0 == ((qf) this).field_H) {
-              if (var2 == 0) {
+          if (-1 < (var3 ^ -1)) {
+            this.field_H = this.field_H + (var3 + -16 - -1) / 16;
+            if (0 == this.field_H) {
+              if (var2 != 0) {
+                return false;
+              } else {
                 L6: {
-                  if (((qf) this).field_E) {
+                  if (this.field_E) {
                     stackOut_19_0 = 0;
                     stackIn_20_0 = stackOut_19_0;
                     break L6;
@@ -212,29 +219,27 @@ abstract class qf extends g {
                   }
                 }
                 return stackIn_20_0 != 0;
-              } else {
-                return false;
               }
             } else {
               return false;
             }
           } else {
-            if (0 == ((qf) this).field_H) {
-              if (var2 == 0) {
+            if (0 == this.field_H) {
+              if (var2 != 0) {
+                return false;
+              } else {
                 L7: {
-                  if (((qf) this).field_E) {
-                    stackOut_11_0 = 0;
-                    stackIn_12_0 = stackOut_11_0;
+                  if (this.field_E) {
+                    stackOut_10_0 = 0;
+                    stackIn_11_0 = stackOut_10_0;
                     break L7;
                   } else {
-                    stackOut_10_0 = 1;
-                    stackIn_12_0 = stackOut_10_0;
+                    stackOut_9_0 = 1;
+                    stackIn_11_0 = stackOut_9_0;
                     break L7;
                   }
                 }
-                return stackIn_12_0 != 0;
-              } else {
-                return false;
+                return stackIn_11_0 != 0;
               }
             } else {
               return false;
@@ -245,9 +250,9 @@ abstract class qf extends g {
 
     boolean o(int param0) {
         if (param0 == 928516712) {
-          ((qf) this).field_H = this.l(param0 ^ 928516616);
-          if (((qf) this).field_H == 0) {
-            if (((qf) this).field_E) {
+          this.field_H = this.l(param0 ^ 928516616);
+          if (this.field_H == 0) {
+            if (this.field_E) {
               return false;
             } else {
               return true;
@@ -256,10 +261,10 @@ abstract class qf extends g {
             return false;
           }
         } else {
-          ((qf) this).b(-79, (byte) -32, 90);
-          ((qf) this).field_H = this.l(param0 ^ 928516616);
-          if (((qf) this).field_H == 0) {
-            if (((qf) this).field_E) {
+          this.b(-79, (byte) -32, 90);
+          this.field_H = this.l(param0 ^ 928516616);
+          if (this.field_H == 0) {
+            if (this.field_E) {
               return false;
             } else {
               return true;
@@ -271,54 +276,54 @@ abstract class qf extends g {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (~((qf) this).field_H != param2) {
-          if (256 <= ((qf) this).field_H) {
+        if ((this.field_H ^ -1) != param2) {
+          if (256 <= this.field_H) {
             if (param3 != 0) {
               return;
             } else {
-              ((qf) this).b(param0 - -((qf) this).field_o, (byte) -77, ((qf) this).field_i + param1);
+              this.b(param0 - -this.field_o, (byte) -77, this.field_i + param1);
               super.a(param0, param1, -1, param3);
               return;
             }
           } else {
             if (null != ad.field_j) {
-              if (((qf) this).field_h <= ad.field_j.field_p) {
-                if (ad.field_j.field_o >= ((qf) this).field_q) {
+              if (this.field_h <= ad.field_j.field_p) {
+                if (ad.field_j.field_o >= this.field_q) {
                   dl.a(param2 ^ -128, ad.field_j);
                   vj.d();
-                  ((qf) this).b(0, (byte) -77, 0);
-                  super.a(-((qf) this).field_o + -param0, -((qf) this).field_i + -param1, -1, param3);
+                  this.b(0, (byte) -77, 0);
+                  super.a(-this.field_o + -param0, -this.field_i + -param1, -1, param3);
                   gg.a(14756);
-                  ad.field_j.e(param0 + ((qf) this).field_o, param1 + ((qf) this).field_i, ((qf) this).field_H);
+                  ad.field_j.e(param0 + this.field_o, param1 + this.field_i, this.field_H);
                   return;
                 } else {
-                  ad.field_j = new kc(((qf) this).field_h, ((qf) this).field_q);
+                  ad.field_j = new kc(this.field_h, this.field_q);
                   dl.a(param2 ^ -128, ad.field_j);
                   vj.d();
-                  ((qf) this).b(0, (byte) -77, 0);
-                  super.a(-((qf) this).field_o + -param0, -((qf) this).field_i + -param1, -1, param3);
+                  this.b(0, (byte) -77, 0);
+                  super.a(-this.field_o + -param0, -this.field_i + -param1, -1, param3);
                   gg.a(14756);
-                  ad.field_j.e(param0 + ((qf) this).field_o, param1 + ((qf) this).field_i, ((qf) this).field_H);
+                  ad.field_j.e(param0 + this.field_o, param1 + this.field_i, this.field_H);
                   return;
                 }
               } else {
-                ad.field_j = new kc(((qf) this).field_h, ((qf) this).field_q);
+                ad.field_j = new kc(this.field_h, this.field_q);
                 dl.a(param2 ^ -128, ad.field_j);
                 vj.d();
-                ((qf) this).b(0, (byte) -77, 0);
-                super.a(-((qf) this).field_o + -param0, -((qf) this).field_i + -param1, -1, param3);
+                this.b(0, (byte) -77, 0);
+                super.a(-this.field_o + -param0, -this.field_i + -param1, -1, param3);
                 gg.a(14756);
-                ad.field_j.e(param0 + ((qf) this).field_o, param1 + ((qf) this).field_i, ((qf) this).field_H);
+                ad.field_j.e(param0 + this.field_o, param1 + this.field_i, this.field_H);
                 return;
               }
             } else {
-              ad.field_j = new kc(((qf) this).field_h, ((qf) this).field_q);
+              ad.field_j = new kc(this.field_h, this.field_q);
               dl.a(param2 ^ -128, ad.field_j);
               vj.d();
-              ((qf) this).b(0, (byte) -77, 0);
-              super.a(-((qf) this).field_o + -param0, -((qf) this).field_i + -param1, -1, param3);
+              this.b(0, (byte) -77, 0);
+              super.a(-this.field_o + -param0, -this.field_i + -param1, -1, param3);
               gg.a(14756);
-              ad.field_j.e(param0 + ((qf) this).field_o, param1 + ((qf) this).field_i, ((qf) this).field_H);
+              ad.field_j.e(param0 + this.field_o, param1 + this.field_i, this.field_H);
               return;
             }
           }
@@ -328,10 +333,6 @@ abstract class qf extends g {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_G = 0;
         field_I = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     }

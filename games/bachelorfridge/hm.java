@@ -99,10 +99,6 @@ final class hm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Confirm Password: ";
     }
 }

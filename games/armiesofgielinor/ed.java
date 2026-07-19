@@ -12,8 +12,16 @@ final class ed {
         field_c = null;
         field_d = null;
         field_e = null;
-        field_a = null;
-        field_b = null;
+        if (param0 != 15000) {
+          field_c = (String) null;
+          field_a = null;
+          field_b = null;
+          return;
+        } else {
+          field_a = null;
+          field_b = null;
+          return;
+        }
     }
 
     final static boolean a(int param0) {
@@ -41,19 +49,25 @@ final class ed {
     }
 
     final static void a(boolean param0) {
-        if (!bl.field_b) {
-            throw new IllegalStateException();
+        boolean discarded$2 = false;
+        if (bl.field_b) {
+          it.field_b = true;
+          if (param0) {
+            discarded$2 = ed.a(-80);
+            wc.a(true, -49);
+            p.field_b = 0;
+            return;
+          } else {
+            wc.a(true, -49);
+            p.field_b = 0;
+            return;
+          }
+        } else {
+          throw new IllegalStateException();
         }
-        it.field_b = true;
-        wc.a(true, -49);
-        p.field_b = 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "No highscores";
         field_a = "Weapons will increase the force with which your units strike. Different attack types require different weapons, and units can only carry one weapon at a time. Equipping a unit with a new weapon will cause their current weapon to be discarded.";
         field_c = "Create";

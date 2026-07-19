@@ -12,6 +12,9 @@ abstract class fe extends kd {
     boolean field_C;
 
     public static void e(byte param0) {
+        if (param0 < 11) {
+            return;
+        }
         field_D = null;
         field_A = null;
     }
@@ -35,102 +38,107 @@ abstract class fe extends kd {
         var2 = SteelSentinels.field_G;
         try {
           L0: {
-            var1_ref = (cc) (Object) q.field_m.e(13058);
+            var1_ref = (cc) ((Object) q.field_m.e(13058));
             L1: while (true) {
               if (var1_ref == null) {
-                var1_ref2 = (hk) (Object) ci.field_e.e(13058);
-                L2: while (true) {
+                L2: {
+                  if (param0 > 102) {
+                    break L2;
+                  } else {
+                    fe.e((byte) 19);
+                    break L2;
+                  }
+                }
+                var1_ref2 = (hk) ((Object) ci.field_e.e(13058));
+                L3: while (true) {
                   if (var1_ref2 == null) {
-                    var1_ref = (cc) (Object) o.field_d.e(13058);
-                    L3: while (true) {
+                    var1_ref = (cc) ((Object) o.field_d.e(13058));
+                    L4: while (true) {
                       if (var1_ref == null) {
                         break L0;
                       } else {
-                        if (var1_ref.field_Ub > 0) {
-                          var1_ref.field_Ub = var1_ref.field_Ub - 1;
-                          if (var1_ref.field_Ub == 0) {
-                            var1_ref.field_Wb = 0;
-                            if (!var1_ref.d((byte) -36)) {
-                              var1_ref = (cc) (Object) o.field_d.a((byte) -34);
-                              continue L3;
+                        L5: {
+                          if ((var1_ref.field_Ub ^ -1) < -1) {
+                            var1_ref.field_Ub = var1_ref.field_Ub - 1;
+                            if (-1 == (var1_ref.field_Ub ^ -1)) {
+                              var1_ref.field_Wb = 0;
+                              if (!var1_ref.d((byte) -36)) {
+                                break L5;
+                              } else {
+                                var1_ref.b(4);
+                                break L5;
+                              }
                             } else {
-                              var1_ref.b(4);
-                              var1_ref = (cc) (Object) o.field_d.a((byte) -34);
-                              continue L3;
+                              var1_ref = (cc) ((Object) o.field_d.a((byte) -34));
+                              continue L4;
                             }
                           } else {
-                            var1_ref = (cc) (Object) o.field_d.a((byte) -34);
-                            continue L3;
+                            break L5;
                           }
-                        } else {
-                          var1_ref = (cc) (Object) o.field_d.a((byte) -34);
-                          continue L3;
                         }
+                        var1_ref = (cc) ((Object) o.field_d.a((byte) -34));
+                        continue L4;
                       }
                     }
                   } else {
-                    if (var1_ref2.field_mc > 0) {
-                      var1_ref2.field_mc = var1_ref2.field_mc - 1;
-                      if (var1_ref2.field_mc == 0) {
-                        var1_ref2.field_Ac = 0;
-                        if (var1_ref2.k(4219)) {
-                          var1_ref2.b(4);
-                          var1_ref2 = (hk) (Object) ci.field_e.a((byte) -33);
-                          continue L2;
+                    L6: {
+                      if ((var1_ref2.field_mc ^ -1) < -1) {
+                        var1_ref2.field_mc = var1_ref2.field_mc - 1;
+                        if (-1 == (var1_ref2.field_mc ^ -1)) {
+                          var1_ref2.field_Ac = 0;
+                          if (var1_ref2.k(4219)) {
+                            var1_ref2.b(4);
+                            break L6;
+                          } else {
+                            break L6;
+                          }
                         } else {
-                          var1_ref2 = (hk) (Object) ci.field_e.a((byte) -33);
-                          continue L2;
+                          break L6;
                         }
                       } else {
-                        var1_ref2 = (hk) (Object) ci.field_e.a((byte) -33);
-                        continue L2;
+                        break L6;
                       }
-                    } else {
-                      var1_ref2 = (hk) (Object) ci.field_e.a((byte) -33);
-                      continue L2;
                     }
+                    var1_ref2 = (hk) ((Object) ci.field_e.a((byte) -33));
+                    continue L3;
                   }
                 }
               } else {
-                if (var1_ref.field_Ub > 0) {
-                  var1_ref.field_Ub = var1_ref.field_Ub - 1;
-                  if (var1_ref.field_Ub == 0) {
-                    var1_ref.field_Wb = 0;
-                    if (var1_ref.d((byte) -36)) {
-                      var1_ref.b(4);
-                      var1_ref = (cc) (Object) q.field_m.a((byte) -36);
-                      continue L1;
+                L7: {
+                  if (-1 > (var1_ref.field_Ub ^ -1)) {
+                    var1_ref.field_Ub = var1_ref.field_Ub - 1;
+                    if (var1_ref.field_Ub == 0) {
+                      var1_ref.field_Wb = 0;
+                      if (var1_ref.d((byte) -36)) {
+                        var1_ref.b(4);
+                        break L7;
+                      } else {
+                        break L7;
+                      }
                     } else {
-                      var1_ref = (cc) (Object) q.field_m.a((byte) -36);
-                      continue L1;
+                      break L7;
                     }
                   } else {
-                    var1_ref = (cc) (Object) q.field_m.a((byte) -36);
-                    continue L1;
+                    break L7;
                   }
-                } else {
-                  var1_ref = (cc) (Object) q.field_m.a((byte) -36);
-                  continue L1;
                 }
+                var1_ref = (cc) ((Object) q.field_m.a((byte) -36));
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1, "fe.J(" + 123 + ')');
+          throw ci.a((Throwable) ((Object) var1), "fe.J(" + param0 + ')');
         }
     }
 
     fe() {
-        ((fe) this).field_z = true;
+        this.field_z = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_D = new int[2];
         field_y = 65;
         field_A = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};

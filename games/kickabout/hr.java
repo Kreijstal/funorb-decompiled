@@ -14,11 +14,11 @@ final class hr extends gn {
     int field_n;
 
     final static void b(int param0) {
-        du.field_n = 22 + Math.max(q.field_d.a(ag.field_l), q.field_d.a(h.field_a));
+        du.field_n = param0 + Math.max(q.field_d.a(ag.field_l), q.field_d.a(h.field_a));
     }
 
     public static void a(int param0) {
-        field_m = null;
+        field_m = (int[][][][]) null;
         if (param0 != 2) {
             hr.a(-112);
         }
@@ -119,12 +119,12 @@ final class hr extends gn {
                           var8++;
                           continue L2;
                         } else {
-                          var10 = ug.a(0, var8 * var2_int);
+                          var10 = ug.a(param0 ^ -48, var8 * var2_int);
                           var11 = lf.a((byte) -85, var9 * var3);
-                          var12 = ug.a(0, var8 * var2_int + var2_int);
+                          var12 = ug.a(param0 + 48, var8 * var2_int + var2_int);
                           var13 = lf.a((byte) -97, var3 * var9 - -var3);
                           on.e(var10, var11, var12 + -var10, var13 + -var11, 65793);
-                          pb.field_C.d('(' + Integer.toString(var8) + ',' + Integer.toString(var9) + ')', var10 + (-var10 + var12 >> 1), (-var11 + var13 >> 1) + var11, 16777215, 65793);
+                          pb.field_C.d('(' + Integer.toString(var8) + ',' + Integer.toString(var9) + ')', var10 + (-var10 + var12 >> 1351241377), (-var11 + var13 >> 361923681) + var11, 16777215, 65793);
                           var9++;
                           continue L3;
                         }
@@ -149,9 +149,9 @@ final class hr extends gn {
                 L6: {
                   if (hw.field_i != ou.field_B) {
                     ou.field_B = hw.field_i;
-                    var2_int = var15.field_o * hw.field_i >> 8;
-                    var3 = hw.field_i * var15.field_v >> 8;
-                    iw.a(-38, ja.field_S);
+                    var2_int = var15.field_o * hw.field_i >> 280048616;
+                    var3 = hw.field_i * var15.field_v >> -1097311480;
+                    iw.a(param0 ^ 10, ja.field_S);
                     var15.a(0, 0, var2_int, var3);
                     ta.e(118);
                     break L6;
@@ -184,7 +184,7 @@ final class hr extends gn {
                 }
                 L9: {
                   var3 = stackIn_23_0;
-                  if (ig.a(0, 4620) <= -1) {
+                  if ((ig.a(0, param0 + 4668) ^ -1) <= -1) {
                     stackOut_25_0 = 0;
                     stackIn_26_0 = stackOut_25_0;
                     break L9;
@@ -196,7 +196,7 @@ final class hr extends gn {
                 }
                 L10: {
                   var4_int = stackIn_26_0;
-                  if (-1345 >= ig.a(480, 4620)) {
+                  if (-1345 <= (ig.a(480, 4620) ^ -1)) {
                     stackOut_28_0 = 0;
                     stackIn_29_0 = stackOut_28_0;
                     break L10;
@@ -210,7 +210,7 @@ final class hr extends gn {
                   var5 = stackIn_29_0;
                   if (var2_int != 0) {
                     L12: {
-                      var6 = b.c(-74, -15 + -var15.field_o);
+                      var6 = b.c(param0 + -26, -15 + -var15.field_o);
                       stackOut_31_0 = -15;
                       stackIn_33_0 = stackOut_31_0;
                       stackIn_32_0 = stackOut_31_0;
@@ -287,7 +287,7 @@ final class hr extends gn {
                       if (var6 + var15.field_v >= 1344) {
                         var7 = 0;
                         L19: while (true) {
-                          if (var7 >= 2) {
+                          if ((var7 ^ -1) <= -3) {
                             break L17;
                           } else {
                             var8 = go.a(var6, (byte) -56);
@@ -317,7 +317,7 @@ final class hr extends gn {
                 } else {
                   var6 = -15;
                   L21: while (true) {
-                    if (var15.field_o + var6 >= 896) {
+                    if (-897 >= (var15.field_o + var6 ^ -1)) {
                       var7 = 0;
                       L22: while (true) {
                         if (var7 >= 2) {
@@ -383,11 +383,11 @@ final class hr extends gn {
               if (lg.field_a != null) {
                 var2_int = b.c(-29, -15);
                 var3 = go.a(-15, (byte) -56);
-                if (hw.field_i == 256) {
+                if (-257 == (hw.field_i ^ -1)) {
                   lg.field_a.d(var2_int, var3);
                   break L26;
                 } else {
-                  lg.field_a.a(var2_int, var3, lg.field_a.field_o * hw.field_i >> 8, hw.field_i * lg.field_a.field_v >> 8);
+                  lg.field_a.a(var2_int, var3, lg.field_a.field_o * hw.field_i >> -684994552, hw.field_i * lg.field_a.field_v >> -1846022936);
                   break L26;
                 }
               } else {
@@ -419,7 +419,7 @@ final class hr extends gn {
                     break L30;
                   } else {
                     L31: {
-                      var2_int = fp.field_f * 6 >> 8;
+                      var2_int = fp.field_f * 6 >> 2141360360;
                       if (3 >= var2_int) {
                         stackOut_84_0 = var2_int;
                         stackIn_85_0 = stackOut_84_0;
@@ -468,12 +468,20 @@ final class hr extends gn {
                 }
               }
             }
+            L35: {
+              if (param0 == -48) {
+                break L35;
+              } else {
+                hr.a(-68);
+                break L35;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "hr.B(" + -48 + ')');
+          throw nb.a((Throwable) ((Object) var1), "hr.B(" + param0 + ')');
         }
     }
 
@@ -482,10 +490,6 @@ final class hr extends gn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = new boolean[64];
         field_m = new int[4][5][][];
         field_m[3][0] = new int[3][1];

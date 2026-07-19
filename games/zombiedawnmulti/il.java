@@ -15,25 +15,30 @@ final class il extends br {
     static String field_l;
 
     final void a(int param0, int param1, int param2, byte param3, int[] param4, int param5, int param6, int param7) {
-        ((il) this).field_i = param6;
-        ((il) this).field_g = param1;
-        ((il) this).field_f = param7;
-        ((il) this).field_o = param4;
-        ((il) this).field_h = param0;
+        this.field_i = param6;
+        this.field_g = param1;
+        this.field_f = param7;
+        this.field_o = param4;
+        this.field_h = param0;
         if (param3 != -120) {
             return;
         }
         try {
-            ((il) this).field_p = param2;
-            ((il) this).field_m = param5;
+            this.field_p = param2;
+            this.field_m = param5;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "il.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "il.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     public static void a(int param0) {
         field_j = null;
         field_n = null;
+        if (param0 != 27467) {
+            field_k = 4;
+            field_l = null;
+            return;
+        }
         field_l = null;
     }
 
@@ -41,10 +46,6 @@ final class il extends br {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Change display name";
     }
 }

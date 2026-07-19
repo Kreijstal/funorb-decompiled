@@ -11,7 +11,7 @@ final class jra {
         int var3 = 0;
         String var4 = null;
         String var5 = null;
-        Object var6 = null;
+        String var6 = null;
         CharSequence var11 = null;
         if (ola.field_p == null) {
           if (param2 == 19717) {
@@ -34,7 +34,7 @@ final class jra {
                   return;
                 }
               } else {
-                if (ola.field_p.field_R.equals((Object) (Object) "")) {
+                if (ola.field_p.field_R.equals("")) {
                   rc.field_b = -1;
                   ola.field_p = null;
                   if (param2 == 19717) {
@@ -51,7 +51,7 @@ final class jra {
                       var5 = var4;
                       break L0;
                     } else {
-                      var11 = (CharSequence) (Object) ola.field_p.field_R;
+                      var11 = (CharSequence) ((Object) ola.field_p.field_R);
                       var4 = jwa.a(false, var11);
                       break L0;
                     }
@@ -66,7 +66,7 @@ final class jra {
                     }
                   }
                   L2: {
-                    if (rc.field_b != 1) {
+                    if ((rc.field_b ^ -1) != -2) {
                       break L2;
                     } else {
                       var5 = npa.a((byte) 90, var4, param0);
@@ -99,7 +99,7 @@ final class jra {
                       return;
                     }
                   } else {
-                    var6 = null;
+                    var6 = (String) null;
                     lh.a((byte) -86, 0, (String) null, var4, var5, 2);
                     rc.field_b = -1;
                     ola.field_p = null;
@@ -141,14 +141,10 @@ final class jra {
         field_b = null;
         field_d = null;
         field_a = null;
-        int var1 = 89;
+        int var1 = 89 / ((-64 - param0) / 54);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Invite more players, or alternatively try changing the '<%0>' setting.";
         field_c = 100;
     }

@@ -12,7 +12,7 @@ final class faa implements fo {
 
     public final void f(int param0) {
         if (param0 != -4366) {
-            ((faa) this).field_a = 43;
+            this.field_a = 43;
         }
     }
 
@@ -39,6 +39,7 @@ final class faa implements fo {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_10_0 = 0;
@@ -70,9 +71,9 @@ final class faa implements fo {
               }
             }
             L2: {
-              var5 = (CharSequence) (Object) param0;
+              var5 = (CharSequence) ((Object) param0);
               var3 = jd.a(1, var5);
-              var6 = (CharSequence) (Object) param2;
+              var6 = (CharSequence) ((Object) param2);
               var4 = jd.a(1, var6);
               if (var3 != null) {
                 break L2;
@@ -80,7 +81,8 @@ final class faa implements fo {
                 if (var4 == null) {
                   stackOut_5_0 = 1;
                   stackIn_6_0 = stackOut_5_0;
-                  return stackIn_6_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   break L2;
                 }
@@ -89,11 +91,13 @@ final class faa implements fo {
             if (var3 == null) {
               stackOut_10_0 = 0;
               stackIn_11_0 = stackOut_10_0;
-              return stackIn_11_0 != 0;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
               if (var4 != null) {
-                stackOut_12_0 = var3.equals((Object) (Object) var4);
+                stackOut_12_0 = var3.equals(var4);
                 stackIn_13_0 = stackOut_12_0;
+                decompiledRegionSelector0 = 2;
                 break L0;
               } else {
                 return false;
@@ -104,23 +108,23 @@ final class faa implements fo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3_ref;
+            stackOut_14_0 = (RuntimeException) (var3_ref);
             stackOut_14_1 = new StringBuilder().append("faa.B(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -129,23 +133,23 @@ final class faa implements fo {
             }
           }
           L4: {
-            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+            stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
             stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param1).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param2 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L4;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -153,26 +157,47 @@ final class faa implements fo {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
         }
-        return stackIn_13_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_11_0 != 0;
+          } else {
+            return stackIn_13_0;
+          }
+        }
     }
 
     public final int b(byte param0) {
+        int var2 = 0;
         int var3 = 0;
-        int var2 = 3 % ((param0 - -23) / 53);
-        if (((faa) this).field_b == 0) {
-            var3 = 0;
-        } else {
-            var3 = ((faa) this).field_c.o((byte) 122);
+        L0: {
+          L1: {
+            var2 = 3 % ((param0 - -23) / 53);
+            if (this.field_b != 0) {
+              break L1;
+            } else {
+              var3 = 0;
+              if (!TombRacer.field_G) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          var3 = this.field_c.o((byte) 122);
+          break L0;
         }
-        return var3 + (((faa) this).field_c.b((byte) -86) - -((faa) this).field_d);
+        return var3 + (this.field_c.b((byte) -86) - -this.field_d);
     }
 
     public static void a(boolean param0) {
+        boolean discarded$0 = false;
         if (param0) {
-            Object var2 = null;
-            boolean discarded$0 = faa.a((String) null, -123, (String) null);
+            String var2 = (String) null;
+            discarded$0 = faa.a((String) null, -123, (String) null);
             field_g = null;
             return;
         }
@@ -182,63 +207,70 @@ final class faa implements fo {
     public final int c(byte param0) {
         int var2 = 0;
         L0: {
-          if (((faa) this).field_b != 0) {
-            var2 = ((faa) this).field_c.p((byte) 68);
-            break L0;
-          } else {
-            var2 = 0;
-            break L0;
+          L1: {
+            if (this.field_b != 0) {
+              break L1;
+            } else {
+              var2 = 0;
+              if (!TombRacer.field_G) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
           }
+          var2 = this.field_c.p((byte) 68);
+          break L0;
         }
         if (param0 < 91) {
           return 78;
         } else {
-          return ((faa) this).field_c.c((byte) 124) - -((faa) this).field_a - -var2;
+          return this.field_c.c((byte) 124) - -this.field_a - -var2;
         }
     }
 
     public final boolean d(byte param0) {
         if (param0 != 48) {
-            field_g = null;
-            return ((faa) this).field_c.d((byte) 48);
+            field_g = (String) null;
+            return this.field_c.d((byte) 48);
         }
-        return ((faa) this).field_c.d((byte) 48);
+        return this.field_c.d((byte) 48);
     }
 
     public final int e(byte param0) {
         if (param0 <= -86) {
-          if (-1 == ((faa) this).field_b) {
+          if (-1 == (this.field_b ^ -1)) {
             return 0;
           } else {
-            return ((faa) this).field_c.e((byte) -104);
+            return this.field_c.e((byte) -104);
           }
         } else {
           faa.a(true);
-          if (-1 == ((faa) this).field_b) {
+          if (-1 == (this.field_b ^ -1)) {
             return 0;
           } else {
-            return ((faa) this).field_c.e((byte) -104);
+            return this.field_c.e((byte) -104);
           }
         }
     }
 
     public final void a(int param0, iq param1) {
         if (param0 <= 103) {
-            ((faa) this).field_f = null;
+            this.field_f = (bua) null;
         }
-        gr var3 = ((faa) this).field_c.c(-98);
+        gr var3 = this.field_c.c(-98);
         if (var3 != null) {
             if (!var3.a(-127)) {
                 return;
             }
         }
-        if (!(null != ((faa) this).field_f)) {
+        if (!(null != this.field_f)) {
             return;
         }
         try {
-            gqa.a(((faa) this).field_e, -83584144, ((faa) this).c((byte) 105), ((faa) this).b((byte) -102), ((faa) this).field_f.b((byte) 74), ((faa) this).e((byte) -98));
+            gqa.a(this.field_e, -83584144, this.c((byte) 105), this.b((byte) -102), this.field_f.b((byte) 74), this.e((byte) -98));
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "faa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "faa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

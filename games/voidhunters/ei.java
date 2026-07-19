@@ -17,6 +17,9 @@ final class ei implements wwa {
     static int field_a;
 
     public static void a(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_c = null;
         field_e = null;
         field_i = null;
@@ -24,6 +27,7 @@ final class ei implements wwa {
     }
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -56,18 +60,18 @@ final class ei implements wwa {
           L0: {
             L1: {
               if (param1 instanceof ata) {
-                stackOut_2_0 = (shb) param1;
+                stackOut_2_0 = (shb) (param1);
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
               } else {
                 stackOut_1_0 = null;
-                stackIn_3_0 = (shb) (Object) stackOut_1_0;
+                stackIn_3_0 = (shb) ((Object) stackOut_1_0);
                 break L1;
               }
             }
             L2: {
-              var15 = (ata) (Object) stackIn_3_0;
-              dma.d(param1.field_g + param2, param1.field_r + param3, param1.field_h, param1.field_f, ((ei) this).field_h);
+              var15 = (ata) ((Object) stackIn_3_0);
+              dma.d(param1.field_g + param2, param1.field_r + param3, param1.field_h, param1.field_f, this.field_h);
               if (var15 == null) {
                 break L2;
               } else {
@@ -78,12 +82,12 @@ final class ei implements wwa {
               var7 = var15.field_J + param2 - -param1.field_g;
               var9 = 127 / ((-27 - param0) / 35);
               var8 = var15.field_B + (param1.field_r + param3);
-              dma.f(var7, var8, var15.field_F, ((ei) this).field_m);
-              if (var15.field_E != -1) {
+              dma.f(var7, var8, var15.field_F, this.field_m);
+              if ((var15.field_E ^ -1) != 0) {
                 var10 = 3.141592653589793 * (double)var15.field_E * 2.0 / (double)var15.field_I;
                 var12 = (int)(-Math.sin(var10) * (double)var15.field_F);
                 var13 = (int)(Math.cos(var10) * (double)var15.field_F);
-                dma.f(var12 + var7, var8 - -var13, 1, ((ei) this).field_d);
+                dma.f(var12 + var7, var8 - -var13, 1, this.field_d);
                 break L3;
               } else {
                 break L3;
@@ -95,11 +99,11 @@ final class ei implements wwa {
               var12 = (int)(-Math.sin(var10) * (double)var15.field_F);
               var13 = (int)(Math.cos(var10) * (double)var15.field_F);
               dma.a(var7, var8, var7 - -var12, var8 + var13, 1);
-              if (null == ((ei) this).field_j) {
+              if (null == this.field_j) {
                 break L4;
               } else {
-                var14 = var15.field_J + var15.field_F + ((ei) this).field_k;
-                int discarded$1 = ((ei) this).field_j.a(param1.field_j, var14 + param1.field_g + param2, param1.field_r + (param3 - -((ei) this).field_g), param1.field_h - var14 - ((ei) this).field_k, -(((ei) this).field_k << 1) + param1.field_f, ((ei) this).field_l, ((ei) this).field_b, 1, 1, 0);
+                var14 = var15.field_J + var15.field_F + this.field_k;
+                discarded$1 = this.field_j.a(param1.field_j, var14 + param1.field_g + param2, param1.field_r + (param3 - -this.field_g), param1.field_h - var14 - this.field_k, -(this.field_k << -1386778239) + param1.field_f, this.field_l, this.field_b, 1, 1, 0);
                 break L4;
               }
             }
@@ -109,23 +113,23 @@ final class ei implements wwa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var6;
+            stackOut_10_0 = (RuntimeException) (var6);
             stackOut_10_1 = new StringBuilder().append("ei.A(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L5;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -133,30 +137,26 @@ final class ei implements wwa {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     ei(no param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
-            ((ei) this).field_m = param5;
-            ((ei) this).field_g = param2;
-            ((ei) this).field_b = param4;
-            ((ei) this).field_k = param1;
-            ((ei) this).field_h = param7;
-            ((ei) this).field_d = param6;
-            ((ei) this).field_l = param3;
-            ((ei) this).field_j = param0;
+            this.field_m = param5;
+            this.field_g = param2;
+            this.field_b = param4;
+            this.field_k = param1;
+            this.field_h = param7;
+            this.field_d = param6;
+            this.field_l = param3;
+            this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ei.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ei.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new ae(1);
         field_f = "Rotate the mouse wheel or press plus & minus to zoom the camera";
         field_e = "Unable to delete friend - system busy";

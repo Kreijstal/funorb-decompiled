@@ -17,8 +17,8 @@ final class sf extends vb implements je {
           L0: {
             sf.o(8);
             super.n(90);
-            if (((sf) this).field_W != null) {
-              ((sf) this).field_W.a(false);
+            if (this.field_W != null) {
+              this.field_W.a(false);
               break L0;
             } else {
               break L0;
@@ -28,8 +28,8 @@ final class sf extends vb implements je {
         } else {
           L1: {
             super.n(90);
-            if (((sf) this).field_W != null) {
-              ((sf) this).field_W.a(false);
+            if (this.field_W != null) {
+              this.field_W.a(false);
               break L1;
             } else {
               break L1;
@@ -42,11 +42,11 @@ final class sf extends vb implements je {
     final void a(ia param0, byte param1) {
         try {
             if (param1 != -68) {
-                ((sf) this).n(48);
+                this.n(48);
             }
-            ((sf) this).field_W = param0;
+            this.field_W = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "sf.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "sf.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -56,30 +56,30 @@ final class sf extends vb implements je {
 
     public final ia a(int param0) {
         if (param0 != -11011) {
-            return null;
+            return (ia) null;
         }
-        return ((sf) this).field_W;
+        return this.field_W;
     }
 
     final void a(oc param0, byte param1, int param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            ((sf) this).field_ab = -param2 + -((sf) this).field_o + pq.field_k;
+            this.field_ab = -param2 + -this.field_o + pq.field_k;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "sf.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "sf.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final String d(int param0) {
-        if (((sf) this).field_q) {
-          if (((sf) this).field_z != null) {
+        if (this.field_q) {
+          if (this.field_z != null) {
             if (param0 < 6) {
-              ((sf) this).field_ab = -5;
-              ap.a(-((sf) this).field_ab - (-((sf) this).field_t - pq.field_k), po.field_a, (byte) 79);
-              return ((sf) this).field_z;
+              this.field_ab = -5;
+              ap.a(-this.field_ab - (-this.field_t - pq.field_k), po.field_a, (byte) 79);
+              return this.field_z;
             } else {
-              ap.a(-((sf) this).field_ab - (-((sf) this).field_t - pq.field_k), po.field_a, (byte) 79);
-              return ((sf) this).field_z;
+              ap.a(-this.field_ab - (-this.field_t - pq.field_k), po.field_a, (byte) 79);
+              return this.field_z;
             }
           } else {
             return null;
@@ -106,10 +106,6 @@ final class sf extends vb implements je {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_X = "The account name you use to access RuneScape and other Jagex.com games";
         field_bb = "Unpacking music";
     }

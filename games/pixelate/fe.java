@@ -6,6 +6,9 @@ final class fe {
     static tf field_b;
 
     final static void a(boolean param0) {
+        if (param0) {
+            field_a = true;
+        }
     }
 
     public static void a(int param0) {
@@ -14,10 +17,6 @@ final class fe {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = true;
     }
 }

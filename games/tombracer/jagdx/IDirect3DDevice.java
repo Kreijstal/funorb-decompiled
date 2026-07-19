@@ -20,7 +20,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final jagdx.IDirect3DSurface a(int param0) {
         jagdx.IDirect3DSurface var2 = null;
         int var3 = 0;
-        var2 = new jagdx.IDirect3DSurface(((jagdx.IDirect3DDevice) this).b);
+        var2 = new jagdx.IDirect3DSurface(this.b);
         var3 = this._GetRenderTarget(param0, var2);
         if (jagdx.ah.a(var3, 10643)) {
           throw new jagdx.eva(String.valueOf(var3));
@@ -32,7 +32,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final native int SetSamplerState(int param0, int param1, int param2);
 
     public final int a(int param0, float[] param1) {
-        return ((jagdx.IDirect3DDevice) this).SetVertexShaderConstantF(param0, param1, param1.length / 4);
+        return this.SetVertexShaderConstantF(param0, param1, param1.length / 4);
     }
 
     private final native int _GetSwapChain(int param0, jagdx.IDirect3DSwapChain param1);
@@ -44,7 +44,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final jagdx.IDirect3DSurface b() {
         jagdx.IDirect3DSurface var1 = null;
         int var2 = 0;
-        var1 = new jagdx.IDirect3DSurface(((jagdx.IDirect3DDevice) this).b);
+        var1 = new jagdx.IDirect3DSurface(this.b);
         var2 = this._GetDepthStencilSurface(var1);
         if (jagdx.ah.a(var2, 10643)) {
           throw new jagdx.eva(String.valueOf(var2));
@@ -54,7 +54,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     }
 
     public final jagdx.IDirect3DSwapChain b(int param0) {
-        jagdx.IDirect3DSwapChain var2 = new jagdx.IDirect3DSwapChain(((jagdx.IDirect3DDevice) this).b);
+        jagdx.IDirect3DSwapChain var2 = new jagdx.IDirect3DSwapChain(this.b);
         int var3 = this._GetSwapChain(param0, var2);
         if (!(!jagdx.ah.a(var3, 10643))) {
             throw new jagdx.eva(String.valueOf(var3));
@@ -68,8 +68,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         jagdx.IDirect3DVertexShader var2 = null;
         int var3 = 0;
         if (param0 != null) {
-          var2 = new jagdx.IDirect3DVertexShader(((jagdx.IDirect3DDevice) this).b);
-          var3 = ((jagdx.IDirect3DDevice) this)._CreateVertexShader(param0, var2);
+          var2 = new jagdx.IDirect3DVertexShader(this.b);
+          var3 = this._CreateVertexShader(param0, var2);
           if (jagdx.ah.a(var3, 10643)) {
             throw new jagdx.eva(String.valueOf(var3));
           } else {
@@ -96,7 +96,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     public final jagdx.IDirect3DVertexBuffer a(int param0, int param1, int param2, int param3, jagdx.IDirect3DVertexBuffer param4) {
         if (!(param4 != null)) {
-            param4 = new jagdx.IDirect3DVertexBuffer(((jagdx.IDirect3DDevice) this).b);
+            param4 = new jagdx.IDirect3DVertexBuffer(this.b);
         }
         int var6 = this._CreateVertexBuffer(param0, param1, param2, param3, param4);
         if (!(!jagdx.ah.a(var6, 10643))) {
@@ -112,7 +112,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         a[0] = param1;
         a[2] = param3;
         a[3] = param4;
-        return ((jagdx.IDirect3DDevice) this).SetPixelShaderConstantF(param0, a, 1);
+        return this.SetPixelShaderConstantF(param0, a, 1);
     }
 
     public final native int SetScissorRect(int param0, int param1, int param2, int param3);
@@ -129,8 +129,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         jagdx.IDirect3DPixelShader var2 = null;
         int var3 = 0;
         if (param0 != null) {
-          var2 = new jagdx.IDirect3DPixelShader(((jagdx.IDirect3DDevice) this).b);
-          var3 = ((jagdx.IDirect3DDevice) this)._CreatePixelShader(param0, var2);
+          var2 = new jagdx.IDirect3DPixelShader(this.b);
+          var3 = this._CreatePixelShader(param0, var2);
           if (jagdx.ah.a(var3, 10643)) {
             throw new jagdx.eva(String.valueOf(var3));
           } else {
@@ -152,7 +152,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     private final native int SetRenderStateb(int param0, boolean param1);
 
     public final jagdx.IDirect3DSurface a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        jagdx.IDirect3DSurface var7 = new jagdx.IDirect3DSurface(((jagdx.IDirect3DDevice) this).b);
+        jagdx.IDirect3DSurface var7 = new jagdx.IDirect3DSurface(this.b);
         int var8 = this._CreateRenderTarget(param0, param1, param2, param3, param4, param5, var7);
         if (!(!jagdx.ah.a(var8, 10643))) {
             throw new jagdx.eva(String.valueOf(var8));
@@ -165,8 +165,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final jagdx.IDirect3DVolumeTexture a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         jagdx.IDirect3DVolumeTexture var8 = null;
         int var9 = 0;
-        var8 = new jagdx.IDirect3DVolumeTexture(((jagdx.IDirect3DDevice) this).b);
-        var9 = ((jagdx.IDirect3DDevice) this)._CreateVolumeTexture(param0, param1, param2, param3, param4, param5, param6, var8);
+        var8 = new jagdx.IDirect3DVolumeTexture(this.b);
+        var9 = this._CreateVolumeTexture(param0, param1, param2, param3, param4, param5, param6, var8);
         if (jagdx.ah.a(var9, 10643)) {
           throw new jagdx.eva(String.valueOf(var9));
         } else {
@@ -187,7 +187,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         a[2] = param3;
         a[1] = param2;
         a[3] = param4;
-        return ((jagdx.IDirect3DDevice) this).SetVertexShaderConstantF(param0, a, 1);
+        return this.SetVertexShaderConstantF(param0, a, 1);
     }
 
     public final native int EndScene();
@@ -198,7 +198,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
           if (param1 != null) {
             break L0;
           } else {
-            param1 = new jagdx.IDirect3DVertexDeclaration(((jagdx.IDirect3DDevice) this).b);
+            param1 = new jagdx.IDirect3DVertexDeclaration(this.b);
             break L0;
           }
         }
@@ -212,12 +212,12 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     IDirect3DDevice(jaclib.peer.sha param0) {
         super(param0);
-        ((jagdx.IDirect3DDevice) this).b = param0;
+        this.b = param0;
     }
 
     public final jagdx.IDirect3DIndexBuffer a(int param0, int param1, int param2, int param3, jagdx.IDirect3DIndexBuffer param4) {
         if (!(param4 != null)) {
-            param4 = new jagdx.IDirect3DIndexBuffer(((jagdx.IDirect3DDevice) this).b);
+            param4 = new jagdx.IDirect3DIndexBuffer(this.b);
         }
         int var6 = this._CreateIndexBuffer(param0, param1, param2, param3, param4);
         if (!(!jagdx.ah.a(var6, 10643))) {
@@ -229,8 +229,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final jagdx.IDirect3DTexture a(int param0, int param1, int param2, int param3, int param4, int param5) {
         jagdx.IDirect3DTexture var7 = null;
         int var8 = 0;
-        var7 = new jagdx.IDirect3DTexture(((jagdx.IDirect3DDevice) this).b);
-        var8 = ((jagdx.IDirect3DDevice) this)._CreateTexture(param0, param1, param2, param3, param4, param5, var7);
+        var7 = new jagdx.IDirect3DTexture(this.b);
+        var8 = this._CreateTexture(param0, param1, param2, param3, param4, param5, var7);
         if (jagdx.ah.a(var8, 10643)) {
           throw new jagdx.eva(String.valueOf(var8));
         } else {
@@ -241,8 +241,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     public final jagdx.IDirect3DCubeTexture a(int param0, int param1, int param2, int param3, int param4) {
         jagdx.IDirect3DCubeTexture var6 = null;
         int var7 = 0;
-        var6 = new jagdx.IDirect3DCubeTexture(((jagdx.IDirect3DDevice) this).b);
-        var7 = ((jagdx.IDirect3DDevice) this)._CreateCubeTexture(param0, param1, param2, param3, param4, var6);
+        var6 = new jagdx.IDirect3DCubeTexture(this.b);
+        var7 = this._CreateCubeTexture(param0, param1, param2, param3, param4, var6);
         if (jagdx.ah.a(var7, 10643)) {
           throw new jagdx.eva(String.valueOf(var7));
         } else {
@@ -275,10 +275,6 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         a = new float[4];
     }
 }

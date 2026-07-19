@@ -22,15 +22,11 @@ final class ga extends RuntimeException {
     }
 
     ga(Throwable param0, String param1) {
-        ((ga) this).field_a = param1;
-        ((ga) this).field_e = param0;
+        this.field_a = param1;
+        this.field_e = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new uf();
         field_g = new String[16];
         field_f = new lj();

@@ -41,9 +41,10 @@ final class fca extends ksa {
 
     final static fca a(asb param0, int param1, int param2) {
         try {
+            boolean discarded$0 = false;
             fca var4_ref = null;
             if (!fca.a(param0)) {
-                boolean discarded$0 = param0.a((byte) 87, param2, param1);
+                discarded$0 = param0.a((byte) 87, param2, param1);
                 return null;
             }
             byte[] var3 = param0.a(param1, param2, (byte) 13);
@@ -51,8 +52,10 @@ final class fca extends ksa {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new fca(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -63,6 +66,9 @@ final class fca extends ksa {
     }
 
     final static void b(byte[] param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -137,14 +143,14 @@ final class fca extends ksa {
                                     return;
                                   } else {
                                     L7: {
-                                      stackOut_37_0 = (boolean[]) field_p;
+                                      stackOut_37_0 = (boolean[]) (field_p);
                                       stackOut_37_1 = var6;
                                       stackIn_39_0 = stackOut_37_0;
                                       stackIn_39_1 = stackOut_37_1;
                                       stackIn_38_0 = stackOut_37_0;
                                       stackIn_38_1 = stackOut_37_1;
                                       if (fca.c() == 0) {
-                                        stackOut_39_0 = (boolean[]) (Object) stackIn_39_0;
+                                        stackOut_39_0 = (boolean[]) ((Object) stackIn_39_0);
                                         stackOut_39_1 = stackIn_39_1;
                                         stackOut_39_2 = 0;
                                         stackIn_40_0 = stackOut_39_0;
@@ -152,7 +158,7 @@ final class fca extends ksa {
                                         stackIn_40_2 = stackOut_39_2;
                                         break L7;
                                       } else {
-                                        stackOut_38_0 = (boolean[]) (Object) stackIn_38_0;
+                                        stackOut_38_0 = (boolean[]) ((Object) stackIn_38_0);
                                         stackOut_38_1 = stackIn_38_1;
                                         stackOut_38_2 = 1;
                                         stackIn_40_0 = stackOut_38_0;
@@ -162,8 +168,8 @@ final class fca extends ksa {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = fca.c(16);
-                                    int discarded$4 = fca.c(16);
+                                    discarded$3 = fca.c(16);
+                                    discarded$4 = fca.c(16);
                                     field_o[var6] = fca.c(8);
                                     var6++;
                                     continue L6;
@@ -188,7 +194,7 @@ final class fca extends ksa {
                       }
                     }
                   } else {
-                    int discarded$5 = fca.c(16);
+                    discarded$5 = fca.c(16);
                     var3++;
                     continue L2;
                   }
@@ -292,7 +298,7 @@ final class fca extends ksa {
 
     private final static void a(byte[] param0, int param1) {
         field_y = param0;
-        field_m = 0;
+        field_m = param1;
         field_u = 0;
     }
 
@@ -312,19 +318,19 @@ final class fca extends ksa {
         int var6_int = 0;
         byte[] var6 = null;
         ds var2 = new ds(param0);
-        ((fca) this).field_J = var2.h(124);
-        ((fca) this).field_B = var2.h(70);
-        ((fca) this).field_w = var2.h(29);
-        ((fca) this).field_g = var2.h(87);
-        if (((fca) this).field_g < 0) {
-            ((fca) this).field_g = ~((fca) this).field_g;
-            ((fca) this).field_j = true;
+        this.field_J = var2.h(124);
+        this.field_B = var2.h(70);
+        this.field_w = var2.h(29);
+        this.field_g = var2.h(87);
+        if (this.field_g < 0) {
+            this.field_g = this.field_g ^ -1;
+            this.field_j = true;
         }
         int var3 = var2.h(103);
         if (var3 < 0) {
             throw new IOException();
         }
-        ((fca) this).field_G = new byte[var3][];
+        this.field_G = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
             var5 = 0;
             do {
@@ -333,19 +339,18 @@ final class fca extends ksa {
             } while (var6_int >= 255);
             var6 = new byte[var5];
             var2.a(0, var6, (byte) -59, var5);
-            ((fca) this).field_G[var4] = var6;
+            this.field_G[var4] = var6;
         }
     }
 
     final gd a(int[] param0) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         float[] var7 = null;
-        float[] var11 = null;
-        float[] var13 = null;
-        byte[] var14 = null;
+        byte[] var12 = null;
         L0: {
           if (param0 == null) {
             break L0;
@@ -358,23 +363,23 @@ final class fca extends ksa {
           }
         }
         L1: {
-          if (((fca) this).field_C != null) {
+          if (this.field_C != null) {
             break L1;
           } else {
-            ((fca) this).field_x = 0;
-            ((fca) this).field_h = new float[field_l];
-            ((fca) this).field_C = new byte[((fca) this).field_B];
-            ((fca) this).field_t = 0;
-            ((fca) this).field_E = 0;
+            this.field_x = 0;
+            this.field_h = new float[field_l];
+            this.field_C = new byte[this.field_B];
+            this.field_t = 0;
+            this.field_E = 0;
             break L1;
           }
         }
         L2: while (true) {
-          if (((fca) this).field_E >= ((fca) this).field_G.length) {
-            ((fca) this).field_h = null;
-            var14 = ((fca) this).field_C;
-            ((fca) this).field_C = null;
-            return new gd(((fca) this).field_J, var14, ((fca) this).field_w, ((fca) this).field_g, ((fca) this).field_j);
+          if (this.field_E >= this.field_G.length) {
+            this.field_h = null;
+            var12 = this.field_C;
+            this.field_C = null;
+            return new gd(this.field_J, var12, this.field_w, this.field_g, this.field_j);
           } else {
             L3: {
               if (param0 == null) {
@@ -388,19 +393,17 @@ final class fca extends ksa {
               }
             }
             L4: {
-              var13 = this.d(((fca) this).field_E);
-              var11 = var13;
-              var7 = var11;
+              var7 = this.d(this.field_E);
               if (var7 == null) {
                 break L4;
               } else {
                 L5: {
-                  var3 = ((fca) this).field_t;
-                  var4 = var13.length;
-                  if (var4 <= ((fca) this).field_B - var3) {
+                  var3 = this.field_t;
+                  var4 = var7.length;
+                  if (var4 <= this.field_B - var3) {
                     break L5;
                   } else {
-                    var4 = ((fca) this).field_B - var3;
+                    var4 = this.field_B - var3;
                     break L5;
                   }
                 }
@@ -411,38 +414,39 @@ final class fca extends ksa {
                       if (param0 == null) {
                         break L7;
                       } else {
-                        param0[0] = param0[0] - (var3 - ((fca) this).field_t);
+                        param0[0] = param0[0] - (var3 - this.field_t);
                         break L7;
                       }
                     }
-                    ((fca) this).field_t = var3;
+                    this.field_t = var3;
                     break L4;
                   } else {
                     L8: {
-                      var6 = (int)(128.0f + var13[var5] * 128.0f);
+                      var6 = (int)(128.0f + var7[var5] * 128.0f);
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = ~var6 >> 31;
+                        var6 = (var6 ^ -1) >> 31;
                         break L8;
                       }
                     }
-                    int incrementValue$1 = var3;
+                    incrementValue$1 = var3;
                     var3++;
-                    ((fca) this).field_C[incrementValue$1] = (byte)(var6 - 128);
+                    this.field_C[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
                 }
               }
             }
-            ((fca) this).field_E = ((fca) this).field_E + 1;
+            this.field_E = this.field_E + 1;
             continue L2;
           }
         }
     }
 
     final gd b() {
+        int incrementValue$1 = 0;
         byte[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -450,24 +454,24 @@ final class fca extends ksa {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ((fca) this).field_x = 0;
-        ((fca) this).field_h = new float[field_l];
-        var1 = new byte[((fca) this).field_B];
+        this.field_x = 0;
+        this.field_h = new float[field_l];
+        var1 = new byte[this.field_B];
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((fca) this).field_G.length) {
-            ((fca) this).field_h = null;
-            return new gd(((fca) this).field_J, var1, ((fca) this).field_w, ((fca) this).field_g, ((fca) this).field_j);
+          if (var3 >= this.field_G.length) {
+            this.field_h = null;
+            return new gd(this.field_J, var1, this.field_w, this.field_g, this.field_j);
           } else {
             var4 = this.d(var3);
             if (var4 != null) {
               L1: {
                 var5 = var4.length;
-                if (var5 <= ((fca) this).field_B - var2) {
+                if (var5 <= this.field_B - var2) {
                   break L1;
                 } else {
-                  var5 = ((fca) this).field_B - var2;
+                  var5 = this.field_B - var2;
                   break L1;
                 }
               }
@@ -479,11 +483,11 @@ final class fca extends ksa {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = ~var7 >> 31;
+                      var7 = (var7 ^ -1) >> 31;
                       break L3;
                     }
                   }
-                  int incrementValue$1 = var2;
+                  incrementValue$1 = var2;
                   var2++;
                   var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
@@ -503,9 +507,10 @@ final class fca extends ksa {
 
     final static fca a(asb param0, String param1, String param2) {
         try {
+            boolean discarded$0 = false;
             fca var4_ref = null;
             if (!fca.a(param0)) {
-                boolean discarded$0 = param0.a(false, param2, param1);
+                discarded$0 = param0.a(false, param2, param1);
                 return null;
             }
             byte[] var3 = param0.a(param2, true, param1);
@@ -513,8 +518,10 @@ final class fca extends ksa {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new fca(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -533,8 +540,8 @@ final class fca extends ksa {
     }
 
     final static int c(int param0) {
-        int var3 = 0;
         int var4 = 0;
+        int var3 = 0;
         int var1 = 0;
         int var2 = 0;
         while (param0 >= 8 - field_u) {
@@ -555,6 +562,7 @@ final class fca extends ksa {
     }
 
     private final float[] d(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -614,13 +622,7 @@ final class fca extends ksa {
         int[] var48 = null;
         float[] var49 = null;
         float[] var50 = null;
-        int[] var52 = null;
-        float[] var53 = null;
-        float[] var54 = null;
-        float[] var55 = null;
-        int[] var56 = null;
-        float[] var57 = null;
-        float[] var58 = null;
+        float[] var52 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -655,8 +657,8 @@ final class fca extends ksa {
         Object stackOut_109_0 = null;
         int stackOut_109_1 = 0;
         L0: {
-          fca.a(((fca) this).field_G[param0], 0);
-          int discarded$1 = fca.c();
+          fca.a(this.field_G[param0], 0);
+          discarded$1 = fca.c();
           var2 = fca.c(ieb.a(field_o.length - 1, -99));
           var3 = field_p[var2] ? 1 : 0;
           if (var3 == 0) {
@@ -778,9 +780,7 @@ final class fca extends ksa {
                 var17_int = var4 >> 1;
                 var18_int = var4 >> 2;
                 var19 = var4 >> 3;
-                var57 = field_r;
-                var53 = var57;
-                var49 = var53;
+                var49 = field_r;
                 var45 = var49;
                 var20_ref_float__ = var45;
                 var21_int = 0;
@@ -792,11 +792,11 @@ final class fca extends ksa {
                       if (var41 >= var4) {
                         L14: {
                           if (var3 == 0) {
-                            stackOut_39_0 = (float[]) field_D;
+                            stackOut_39_0 = (float[]) (field_D);
                             stackIn_40_0 = stackOut_39_0;
                             break L14;
                           } else {
-                            stackOut_38_0 = (float[]) field_K;
+                            stackOut_38_0 = (float[]) (field_K);
                             stackIn_40_0 = stackOut_38_0;
                             break L14;
                           }
@@ -804,11 +804,11 @@ final class fca extends ksa {
                         L15: {
                           var21 = stackIn_40_0;
                           if (var3 == 0) {
-                            stackOut_42_0 = (float[]) field_n;
+                            stackOut_42_0 = (float[]) (field_n);
                             stackIn_43_0 = stackOut_42_0;
                             break L15;
                           } else {
-                            stackOut_41_0 = (float[]) field_I;
+                            stackOut_41_0 = (float[]) (field_I);
                             stackIn_43_0 = stackOut_41_0;
                             break L15;
                           }
@@ -816,11 +816,11 @@ final class fca extends ksa {
                         L16: {
                           var22 = stackIn_43_0;
                           if (var3 == 0) {
-                            stackOut_45_0 = (float[]) field_k;
+                            stackOut_45_0 = (float[]) (field_k);
                             stackIn_46_0 = stackOut_45_0;
                             break L16;
                           } else {
-                            stackOut_44_0 = (float[]) field_A;
+                            stackOut_44_0 = (float[]) (field_A);
                             stackIn_46_0 = stackOut_44_0;
                             break L16;
                           }
@@ -828,18 +828,16 @@ final class fca extends ksa {
                         L17: {
                           var23 = stackIn_46_0;
                           if (var3 == 0) {
-                            stackOut_48_0 = (int[]) field_q;
+                            stackOut_48_0 = (int[]) (field_q);
                             stackIn_49_0 = stackOut_48_0;
                             break L17;
                           } else {
-                            stackOut_47_0 = (int[]) field_H;
+                            stackOut_47_0 = (int[]) (field_H);
                             stackIn_49_0 = stackOut_47_0;
                             break L17;
                           }
                         }
-                        var56 = stackIn_49_0;
-                        var52 = var56;
-                        var48 = var52;
+                        var48 = stackIn_49_0;
                         var44 = var48;
                         var24 = var44;
                         var25 = 0;
@@ -919,7 +917,7 @@ final class fca extends ksa {
                                                               }
                                                             }
                                                           } else {
-                                                            var20_ref_float__[var4 - var18_int + var26] = -var57[var26];
+                                                            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
                                                             var26++;
                                                             continue L26;
                                                           }
@@ -964,7 +962,7 @@ final class fca extends ksa {
                                           }
                                         }
                                       } else {
-                                        var27_int = var56[var26];
+                                        var27_int = var48[var26];
                                         if (var26 < var27_int) {
                                           var28_int = 8 * var26;
                                           var29_int = 8 * var27_int;
@@ -1077,27 +1075,25 @@ final class fca extends ksa {
             }
             L35: {
               var17 = null;
-              if (((fca) this).field_x <= 0) {
+              if (this.field_x <= 0) {
                 break L35;
               } else {
                 L36: {
-                  var18_int = ((fca) this).field_x + var4 >> 2;
-                  var58 = new float[var18_int];
-                  var54 = var58;
-                  var50 = var54;
+                  var18_int = this.field_x + var4 >> 2;
+                  var50 = new float[var18_int];
                   var46 = var50;
                   var40 = var46;
-                  var17 = (Object) (Object) var40;
-                  if (((fca) this).field_F) {
+                  var17 = var40;
+                  if (this.field_F) {
                     break L36;
                   } else {
                     var19 = 0;
                     L37: while (true) {
-                      if (var19 >= ((fca) this).field_f) {
+                      if (var19 >= this.field_f) {
                         break L36;
                       } else {
-                        var20 = (((fca) this).field_x >> 1) + var19;
-                        var40[var19] = var40[var19] + ((fca) this).field_h[var20];
+                        var20 = (this.field_x >> 1) + var19;
+                        var40[var19] = var40[var19] + this.field_h[var20];
                         var19++;
                         continue L37;
                       }
@@ -1112,7 +1108,7 @@ final class fca extends ksa {
                     if (var19 >= var4 >> 1) {
                       break L35;
                     } else {
-                      var20 = var58.length - (var4 >> 1) + var19;
+                      var20 = var50.length - (var4 >> 1) + var19;
                       var40[var20] = var40[var20] + field_r[var19];
                       var19++;
                       continue L38;
@@ -1122,11 +1118,11 @@ final class fca extends ksa {
               }
             }
             L39: {
-              var18 = ((fca) this).field_h;
-              ((fca) this).field_h = field_r;
+              var18 = this.field_h;
+              this.field_h = field_r;
               field_r = var18;
-              ((fca) this).field_x = var4;
-              ((fca) this).field_f = var12 - (var4 >> 1);
+              this.field_x = var4;
+              this.field_f = var12 - (var4 >> 1);
               stackOut_108_0 = this;
               stackIn_110_0 = stackOut_108_0;
               stackIn_109_0 = stackOut_108_0;
@@ -1144,12 +1140,12 @@ final class fca extends ksa {
                 break L39;
               }
             }
-            ((fca) this).field_F = stackIn_111_1 != 0;
-            return (float[]) var17;
+            ((fca) (this)).field_F = stackIn_111_1 != 0;
+            return (float[]) (var17);
           } else {
             var42 = field_d[var14.field_d[var17_int]];
-            var55 = field_r;
-            var42.a(var55, var4 >> 1, var16 != 0);
+            var52 = field_r;
+            var42.a(var52, var4 >> 1, var16 != 0);
             var17_int++;
             continue L9;
           }
@@ -1180,10 +1176,6 @@ final class fca extends ksa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = false;
     }
 }

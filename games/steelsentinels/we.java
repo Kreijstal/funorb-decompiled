@@ -12,10 +12,10 @@ abstract class we extends ck {
     abstract void a(int[] param0, int param1, int param2);
 
     final void b(int[] param0, int param1, int param2) {
-        if (((we) this).field_p) {
-            ((we) this).a(param0, param1, param2);
+        if (this.field_p) {
+            this.a(param0, param1, param2);
         } else {
-            ((we) this).d(param2);
+            this.d(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class we extends ck {
     abstract void d(int param0);
 
     protected we() {
-        ((we) this).field_p = true;
+        this.field_p = true;
     }
 }

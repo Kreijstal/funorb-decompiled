@@ -11,6 +11,9 @@ abstract class ih {
     public static void a(byte param0) {
         field_c = null;
         field_a = null;
+        if (param0 != -46) {
+            field_c = (String) null;
+        }
     }
 
     abstract el a(int param0);
@@ -20,10 +23,6 @@ abstract class ih {
     abstract int b(int param0, int param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ih.C(";
         field_a = "Invalid password.";
         field_d = Math.atan2(1.0, 0.0);

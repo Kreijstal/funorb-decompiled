@@ -5,8 +5,9 @@ abstract class lea extends kna {
     static String field_F;
 
     final boolean s(int param0) {
+        boolean discarded$0 = false;
         if (param0 != -15254) {
-            boolean discarded$0 = ((lea) this).n((byte) 87);
+            discarded$0 = this.n((byte) 87);
             return false;
         }
         return false;
@@ -37,7 +38,7 @@ abstract class lea extends kna {
           L0: {
             L1: {
               var4 = new fsa(param2, param0);
-              var4.b((byte) -11, ((lea) this).field_k, ((lea) this).field_l);
+              var4.b((byte) -11, this.field_k, this.field_l);
               var4.h(0, 0);
               var4.a(0, (byte) -12, true);
               var4.a((byte) -3, 0);
@@ -46,12 +47,12 @@ abstract class lea extends kna {
               if (param1 == 3) {
                 break L1;
               } else {
-                field_F = null;
+                field_F = (String) null;
                 break L1;
               }
             }
             var4.a(98, true);
-            stackOut_2_0 = (fsa) var4;
+            stackOut_2_0 = (fsa) (var4);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -59,23 +60,23 @@ abstract class lea extends kna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4_ref;
+            stackOut_4_0 = (RuntimeException) (var4_ref);
             stackOut_4_1 = new StringBuilder().append("lea.AC(").append(param0).append(',').append(param1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -83,7 +84,7 @@ abstract class lea extends kna {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -99,13 +100,13 @@ abstract class lea extends kna {
         try {
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "lea.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "lea.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void r(byte param0) {
         field_F = null;
-        int var1 = 92;
+        int var1 = 92 / ((-13 - param0) / 58);
     }
 
     final boolean n(byte param0) {
@@ -128,12 +129,12 @@ abstract class lea extends kna {
 
     final void q(byte param0) {
         super.q(param0);
-        ((lea) this).b(param0 ^ 14, 2097152, 2097152);
+        this.b(param0 ^ 14, 2097152, 2097152);
     }
 
     final boolean z(int param0) {
         if (param0 != 0) {
-            field_F = null;
+            field_F = (String) null;
             return false;
         }
         return false;
@@ -144,10 +145,6 @@ abstract class lea extends kna {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_F = "My Best: <%0>";
     }
 }

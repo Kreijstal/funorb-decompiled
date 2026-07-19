@@ -28,42 +28,68 @@ class df {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        field_n = 22050;
-        field_l = false;
-        field_d = 10;
+        int stackIn_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_5_0 = 0;
+        L0: {
+          if (param0 < 8000) {
+            break L0;
+          } else {
+            if (param0 <= 48000) {
+              L1: {
+                field_n = param0;
+                if (!param1) {
+                  stackOut_6_0 = 0;
+                  stackIn_7_0 = stackOut_6_0;
+                  break L1;
+                } else {
+                  stackOut_5_0 = 1;
+                  stackIn_7_0 = stackOut_5_0;
+                  break L1;
+                }
+              }
+              field_l = stackIn_7_0 != 0;
+              field_d = param2;
+              return;
+            } else {
+              break L0;
+            }
+          }
+        }
+        throw new IllegalArgumentException();
     }
 
     void a(int param0) throws Exception {
     }
 
     final synchronized void a(c param0) {
-        ((df) this).field_i = param0;
+        this.field_i = param0;
     }
 
     int c() throws Exception {
-        return ((df) this).field_m;
+        return this.field_m;
     }
 
     private final void b(int param0) {
-        ((df) this).field_e = ((df) this).field_e - param0;
-        if (((df) this).field_e < 0) {
-            ((df) this).field_e = 0;
+        this.field_e = this.field_e - param0;
+        if (this.field_e < 0) {
+            this.field_e = 0;
         }
-        if (((df) this).field_i != null) {
-            ((df) this).field_i.a(param0);
+        if (this.field_i != null) {
+            this.field_i.a(param0);
             return;
         }
     }
 
     private final void a(c param0, int param1) {
         int var3 = param1 >> 5;
-        c var4 = ((df) this).field_a[var3];
+        c var4 = this.field_a[var3];
         if (var4 == null) {
-            ((df) this).field_p[var3] = param0;
+            this.field_p[var3] = param0;
         } else {
             var4.field_h = param0;
         }
-        ((df) this).field_a[var3] = param0;
+        this.field_a[var3] = param0;
         param0.field_g = param1;
     }
 
@@ -94,7 +120,7 @@ class df {
                 }
               } else {
                 L3: {
-                  if ((Object) (Object) field_q.field_e[var2] != this) {
+                  if (field_q.field_e[var2] != this) {
                     break L3;
                   } else {
                     field_q.field_e[var2] = null;
@@ -113,9 +139,9 @@ class df {
             }
           }
         }
-        ((df) this).f();
-        ((df) this).field_o = null;
-        ((df) this).field_s = true;
+        this.f();
+        this.field_o = null;
+        this.field_s = true;
     }
 
     void e() throws Exception {
@@ -149,16 +175,16 @@ class df {
         }
         L1: {
           ug.a(param0, 0, var3);
-          ((df) this).field_e = ((df) this).field_e - param1;
-          if (((df) this).field_i == null) {
+          this.field_e = this.field_e - param1;
+          if (this.field_i == null) {
             break L1;
           } else {
-            if (((df) this).field_e > 0) {
+            if (this.field_e > 0) {
               break L1;
             } else {
-              ((df) this).field_e = ((df) this).field_e + (field_n >> 4);
-              df.b(((df) this).field_i);
-              this.a(((df) this).field_i, ((df) this).field_i.d());
+              this.field_e = this.field_e + (field_n >> 4);
+              df.b(this.field_i);
+              this.a(this.field_i, this.field_i.d());
               var4 = 0;
               var5 = 255;
               var6 = 7;
@@ -183,9 +209,9 @@ class df {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & ~(1 << var7_int);
+                            var5 = var5 & (1 << var7_int ^ -1);
                             var10 = null;
-                            var11 = ((df) this).field_p[var7_int];
+                            var11 = this.field_p[var7_int];
                             var14 = var11;
                             var14 = var11;
                             L7: while (true) {
@@ -201,7 +227,7 @@ class df {
                                       break L8;
                                     } else {
                                       var5 = var5 | 1 << var7_int;
-                                      var10 = (Object) (Object) var11;
+                                      var10 = var11;
                                       var11 = var11.field_h;
                                       continue L7;
                                     }
@@ -218,7 +244,7 @@ class df {
                                     break L9;
                                   }
                                 }
-                                if (var4 < ((df) this).field_b) {
+                                if (var4 < this.field_b) {
                                   L10: {
                                     var14 = var11.c();
                                     if (var14 == null) {
@@ -240,10 +266,10 @@ class df {
                                     var15 = var11.field_h;
                                     var11.field_h = null;
                                     if (var10 != null) {
-                                      ((c) var10).field_h = var15;
+                                      ((c) (var10)).field_h = var15;
                                       break L12;
                                     } else {
-                                      ((df) this).field_p[var7_int] = var15;
+                                      this.field_p[var7_int] = var15;
                                       break L12;
                                     }
                                   }
@@ -251,7 +277,7 @@ class df {
                                     if (var15 != null) {
                                       break L13;
                                     } else {
-                                      ((df) this).field_a[var7_int] = (c) var10;
+                                      this.field_a[var7_int] = (c) (var10);
                                       break L13;
                                     }
                                   }
@@ -282,19 +308,19 @@ class df {
                   if (var6 >= 8) {
                     break L1;
                   } else {
-                    var7 = ((df) this).field_p[var6];
-                    var8 = ((df) this).field_p;
+                    var7 = this.field_p[var6];
+                    var8 = this.field_p;
                     var9 = var6;
-                    ((df) this).field_a[var6] = null;
+                    this.field_a[var6] = null;
                     var8[var9] = null;
                     L15: while (true) {
                       if (var7 == null) {
                         var6++;
                         continue L14;
                       } else {
-                        var10 = (Object) (Object) var7.field_h;
+                        var10 = var7.field_h;
                         var7.field_h = null;
-                        var7 = (c) var10;
+                        var7 = (c) (var10);
                         continue L15;
                       }
                     }
@@ -305,22 +331,22 @@ class df {
           }
         }
         L16: {
-          if (((df) this).field_e >= 0) {
+          if (this.field_e >= 0) {
             break L16;
           } else {
-            ((df) this).field_e = 0;
+            this.field_e = 0;
             break L16;
           }
         }
         L17: {
-          if (((df) this).field_i == null) {
+          if (this.field_i == null) {
             break L17;
           } else {
-            ((df) this).field_i.a(param0, 0, param1);
+            this.field_i.a(param0, 0, param1);
             break L17;
           }
         }
-        ((df) this).field_h = dd.b(101);
+        this.field_h = dd.b(101);
     }
 
     public static void a() {
@@ -333,25 +359,26 @@ class df {
             Exception var3 = null;
             int var3_int = 0;
             int var4 = 0;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            if (!((df) this).field_s) {
+            if (!this.field_s) {
               var1 = dd.b(127);
               try {
                 L0: {
                   L1: {
-                    if (var1 <= ((df) this).field_h + 6000L) {
+                    if (var1 <= this.field_h + 6000L) {
                       break L1;
                     } else {
-                      ((df) this).field_h = var1 - 6000L;
+                      this.field_h = var1 - 6000L;
                       break L1;
                     }
                   }
                   L2: while (true) {
-                    if (var1 <= ((df) this).field_h + 5000L) {
+                    if (var1 <= this.field_h + 5000L) {
                       break L0;
                     } else {
                       this.b(256);
-                      ((df) this).field_h = ((df) this).field_h + (long)(256000 / field_n);
+                      this.field_h = this.field_h + (long)(256000 / field_n);
                       var1 = dd.b(122);
                       continue L2;
                     }
@@ -361,38 +388,39 @@ class df {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 L3: {
                   var3 = (Exception) (Object) decompiledCaughtException;
-                  ((df) this).field_h = var1;
+                  this.field_h = var1;
                   break L3;
                 }
               }
-              if (((df) this).field_o != null) {
+              if (this.field_o != null) {
                 try {
                   L4: {
                     L5: {
-                      if (((df) this).field_u == 0L) {
+                      if (this.field_u == 0L) {
                         break L5;
                       } else {
-                        if (var1 >= ((df) this).field_u) {
-                          ((df) this).a(((df) this).field_m);
-                          ((df) this).field_u = 0L;
-                          ((df) this).field_t = true;
+                        if (var1 >= this.field_u) {
+                          this.a(this.field_m);
+                          this.field_u = 0L;
+                          this.field_t = true;
                           break L5;
                         } else {
-                          return;
+                          decompiledRegionSelector0 = 0;
+                          break L4;
                         }
                       }
                     }
                     L6: {
-                      var3_int = ((df) this).c();
-                      if (((df) this).field_c - var3_int <= ((df) this).field_f) {
+                      var3_int = this.c();
+                      if (this.field_c - var3_int <= this.field_f) {
                         break L6;
                       } else {
-                        ((df) this).field_f = ((df) this).field_c - var3_int;
+                        this.field_f = this.field_c - var3_int;
                         break L6;
                       }
                     }
                     L7: {
-                      var4 = ((df) this).field_r + ((df) this).field_g;
+                      var4 = this.field_r + this.field_g;
                       if (var4 + 256 <= 16384) {
                         break L7;
                       } else {
@@ -401,27 +429,27 @@ class df {
                       }
                     }
                     L8: {
-                      if (var4 + 256 <= ((df) this).field_m) {
+                      if (var4 + 256 <= this.field_m) {
                         break L8;
                       } else {
                         L9: {
-                          ((df) this).field_m = ((df) this).field_m + 1024;
-                          if (((df) this).field_m <= 16384) {
+                          this.field_m = this.field_m + 1024;
+                          if (this.field_m <= 16384) {
                             break L9;
                           } else {
-                            ((df) this).field_m = 16384;
+                            this.field_m = 16384;
                             break L9;
                           }
                         }
-                        ((df) this).f();
-                        ((df) this).a(((df) this).field_m);
+                        this.f();
+                        this.a(this.field_m);
                         var3_int = 0;
-                        ((df) this).field_t = true;
-                        if (var4 + 256 <= ((df) this).field_m) {
+                        this.field_t = true;
+                        if (var4 + 256 <= this.field_m) {
                           break L8;
                         } else {
-                          var4 = ((df) this).field_m - 256;
-                          ((df) this).field_g = var4 - ((df) this).field_r;
+                          var4 = this.field_m - 256;
+                          this.field_g = var4 - this.field_r;
                           break L8;
                         }
                       }
@@ -429,42 +457,44 @@ class df {
                     L10: while (true) {
                       if (var3_int >= var4) {
                         L11: {
-                          if (var1 <= ((df) this).field_k) {
+                          if (var1 <= this.field_k) {
                             break L11;
                           } else {
                             L12: {
-                              if (((df) this).field_t) {
-                                ((df) this).field_t = false;
+                              if (this.field_t) {
+                                this.field_t = false;
                                 break L12;
                               } else {
                                 L13: {
-                                  if (((df) this).field_f != 0) {
+                                  if (this.field_f != 0) {
                                     break L13;
                                   } else {
-                                    if (((df) this).field_j != 0) {
+                                    if (this.field_j != 0) {
                                       break L13;
                                     } else {
-                                      ((df) this).f();
-                                      ((df) this).field_u = var1 + 2000L;
-                                      return;
+                                      this.f();
+                                      this.field_u = var1 + 2000L;
+                                      decompiledRegionSelector0 = 1;
+                                      break L4;
                                     }
                                   }
                                 }
-                                ((df) this).field_g = Math.min(((df) this).field_j, ((df) this).field_f);
-                                ((df) this).field_j = ((df) this).field_f;
+                                this.field_g = Math.min(this.field_j, this.field_f);
+                                this.field_j = this.field_f;
                                 break L12;
                               }
                             }
-                            ((df) this).field_f = 0;
-                            ((df) this).field_k = var1 + 2000L;
+                            this.field_f = 0;
+                            this.field_k = var1 + 2000L;
                             break L11;
                           }
                         }
-                        ((df) this).field_c = var3_int;
+                        this.field_c = var3_int;
+                        decompiledRegionSelector0 = 2;
                         break L4;
                       } else {
-                        this.a(((df) this).field_o, 256);
-                        ((df) this).e();
+                        this.a(this.field_o, 256);
+                        this.e();
                         var3_int += 256;
                         continue L10;
                       }
@@ -474,12 +504,21 @@ class df {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   L14: {
                     var3 = (Exception) (Object) decompiledCaughtException;
-                    ((df) this).f();
-                    ((df) this).field_u = var1 + 2000L;
+                    this.f();
+                    this.field_u = var1 + 2000L;
+                    decompiledRegionSelector0 = 2;
                     break L14;
                   }
                 }
-                return;
+                if (decompiledRegionSelector0 == 0) {
+                  return;
+                } else {
+                  if (decompiledRegionSelector0 == 1) {
+                    return;
+                  } else {
+                    return;
+                  }
+                }
               } else {
                 return;
               }
@@ -495,6 +534,7 @@ class df {
 
     final static df a(ka param0, java.awt.Component param1, int param2, int param3) {
         try {
+            bk discarded$2 = null;
             al var4 = null;
             Throwable var4_ref = null;
             al var5 = null;
@@ -535,14 +575,14 @@ class df {
                         L3: {
                           var5 = new al();
                           var4 = var5;
-                          stackOut_8_0 = (al) var4;
+                          stackOut_8_0 = (al) (var4);
                           stackOut_8_1 = 256;
                           stackIn_10_0 = stackOut_8_0;
                           stackIn_10_1 = stackOut_8_1;
                           stackIn_9_0 = stackOut_8_0;
                           stackIn_9_1 = stackOut_8_1;
                           if (!field_l) {
-                            stackOut_10_0 = (al) (Object) stackIn_10_0;
+                            stackOut_10_0 = (al) ((Object) stackIn_10_0);
                             stackOut_10_1 = stackIn_10_1;
                             stackOut_10_2 = 1;
                             stackIn_11_0 = stackOut_10_0;
@@ -550,7 +590,7 @@ class df {
                             stackIn_11_2 = stackOut_10_2;
                             break L3;
                           } else {
-                            stackOut_9_0 = (al) (Object) stackIn_9_0;
+                            stackOut_9_0 = (al) ((Object) stackIn_9_0);
                             stackOut_9_1 = stackIn_9_1;
                             stackOut_9_2 = 2;
                             stackIn_11_0 = stackOut_9_0;
@@ -560,19 +600,19 @@ class df {
                           }
                         }
                         L4: {
-                          ((df) (Object) stackIn_11_0).field_o = new int[stackIn_11_1 * stackIn_11_2];
-                          ((df) (Object) var4).field_r = param3;
-                          ((df) (Object) var4).a(param1);
-                          ((df) (Object) var4).field_m = (param3 & -1024) + 1024;
-                          if (((df) (Object) var4).field_m <= 16384) {
+                          ((df) ((Object) stackIn_11_0)).field_o = new int[stackIn_11_1 * stackIn_11_2];
+                          ((df) ((Object) var4)).field_r = param3;
+                          ((df) ((Object) var4)).a(param1);
+                          ((df) ((Object) var4)).field_m = (param3 & -1024) + 1024;
+                          if (((df) ((Object) var4)).field_m <= 16384) {
                             break L4;
                           } else {
-                            ((df) (Object) var4).field_m = 16384;
+                            ((df) ((Object) var4)).field_m = 16384;
                             break L4;
                           }
                         }
                         L5: {
-                          ((df) (Object) var4).a(((df) (Object) var4).field_m);
+                          ((df) ((Object) var4)).a(((df) ((Object) var4)).field_m);
                           if (field_d <= 0) {
                             break L5;
                           } else {
@@ -581,7 +621,7 @@ class df {
                             } else {
                               field_q = new ck();
                               field_q.field_d = param0;
-                              bk discarded$2 = param0.a(field_d, 39, (Runnable) (Object) field_q);
+                              discarded$2 = param0.a(field_d, 39, (Runnable) ((Object) field_q));
                               break L5;
                             }
                           }
@@ -591,14 +631,14 @@ class df {
                             break L6;
                           } else {
                             if (field_q.field_e[param2] == null) {
-                              field_q.field_e[param2] = (df) (Object) var5;
+                              field_q.field_e[param2] = (df) ((Object) var5);
                               break L6;
                             } else {
                               throw new IllegalArgumentException();
                             }
                           }
                         }
-                        stackOut_20_0 = (al) var4;
+                        stackOut_20_0 = (al) (var4);
                         stackIn_21_0 = stackOut_20_0;
                         break L2;
                       }
@@ -607,7 +647,7 @@ class df {
                       var4_ref = decompiledCaughtException;
                       return new df();
                     }
-                    return (df) (Object) stackIn_21_0;
+                    return (df) ((Object) stackIn_21_0);
                   } else {
                     break L0;
                   }
@@ -640,17 +680,17 @@ class df {
     }
 
     df() {
-        ((df) this).field_b = 32;
-        ((df) this).field_s = false;
-        ((df) this).field_h = dd.b(97);
-        ((df) this).field_c = 0;
-        ((df) this).field_k = 0L;
-        ((df) this).field_j = 0;
-        ((df) this).field_a = new c[8];
-        ((df) this).field_u = 0L;
-        ((df) this).field_e = 0;
-        ((df) this).field_f = 0;
-        ((df) this).field_t = true;
-        ((df) this).field_p = new c[8];
+        this.field_b = 32;
+        this.field_s = false;
+        this.field_h = dd.b(97);
+        this.field_c = 0;
+        this.field_k = 0L;
+        this.field_j = 0;
+        this.field_a = new c[8];
+        this.field_u = 0L;
+        this.field_e = 0;
+        this.field_f = 0;
+        this.field_t = true;
+        this.field_p = new c[8];
     }
 }

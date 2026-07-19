@@ -42,10 +42,16 @@ abstract class bl extends al {
                   if (null == fe.field_z) {
                     break L3;
                   } else {
-                    {
+                    try {
                       L4: {
                         fe.field_z.b(-30821);
                         break L4;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L5: {
+                        var1 = (IOException) (Object) decompiledCaughtException;
+                        break L5;
                       }
                     }
                     break L3;
@@ -60,10 +66,16 @@ abstract class bl extends al {
                       } else {
                         L8: {
                           if (aa.field_h[var1_int] != null) {
-                            {
+                            try {
                               L9: {
                                 aa.field_h[var1_int].b(-30821);
                                 break L9;
+                              }
+                            } catch (java.io.IOException decompiledCaughtParameter1) {
+                              decompiledCaughtException = decompiledCaughtParameter1;
+                              L10: {
+                                var2 = (IOException) (Object) decompiledCaughtException;
+                                break L10;
                               }
                             }
                             break L8;
@@ -79,12 +91,20 @@ abstract class bl extends al {
                     break L6;
                   }
                 }
+                L11: {
+                  if (param0) {
+                    break L11;
+                  } else {
+                    bl.b((byte) 56);
+                    break L11;
+                  }
+                }
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw lj.a((Throwable) (Object) var1_ref, "bl.J(" + true + ')');
+              throw lj.a((Throwable) ((Object) var1_ref), "bl.J(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -98,14 +118,14 @@ abstract class bl extends al {
     abstract Object f(int param0);
 
     final static boolean g(int param0) {
-        if (mf.field_i >= 0) {
-          if (bd.field_k >= 0) {
+        if (mf.field_i >= param0) {
+          if (-1 >= (bd.field_k ^ -1)) {
             if (mh.field_e[ca.field_k][hf.field_t + 1].g()) {
               return true;
             } else {
               if (-80 <= sk.field_d) {
                 L0: {
-                  if (sk.field_d <= 80) {
+                  if ((sk.field_d ^ -1) >= -81) {
                     break L0;
                   } else {
                     if (!mh.field_e[1 + ca.field_k][1 + hf.field_t].g()) {
@@ -116,7 +136,7 @@ abstract class bl extends al {
                   }
                 }
                 L1: {
-                  if (bd.field_k < 0) {
+                  if (-1 < (bd.field_k ^ -1)) {
                     break L1;
                   } else {
                     if (qd.field_O[99]) {
@@ -129,23 +149,23 @@ abstract class bl extends al {
                           break L1;
                         } else {
                           L2: {
-                            if (sk.field_d >= -30) {
+                            if (29 >= (sk.field_d ^ -1)) {
                               break L2;
                             } else {
                               if (!mh.field_e[ca.field_k - 1][hf.field_t].g()) {
                                 break L2;
                               } else {
-                                if (di.field_K == -1) {
+                                if (0 == (di.field_K ^ -1)) {
                                   return true;
                                 } else {
                                   L3: {
-                                    if (sk.field_d <= 30) {
+                                    if (-31 <= (sk.field_d ^ -1)) {
                                       break L3;
                                     } else {
                                       if (!mh.field_e[ca.field_k - -1][hf.field_t].g()) {
                                         break L3;
                                       } else {
-                                        if (di.field_K != 1) {
+                                        if (-2 != (di.field_K ^ -1)) {
                                           break L3;
                                         } else {
                                           return true;
@@ -158,13 +178,13 @@ abstract class bl extends al {
                               }
                             }
                           }
-                          if (sk.field_d <= 30) {
+                          if (-31 <= (sk.field_d ^ -1)) {
                             break L1;
                           } else {
                             if (!mh.field_e[ca.field_k - -1][hf.field_t].g()) {
                               break L1;
                             } else {
-                              if (di.field_K != 1) {
+                              if (-2 != (di.field_K ^ -1)) {
                                 break L1;
                               } else {
                                 return true;
@@ -182,7 +202,7 @@ abstract class bl extends al {
                   return true;
                 } else {
                   L4: {
-                    if (sk.field_d <= 80) {
+                    if ((sk.field_d ^ -1) >= -81) {
                       break L4;
                     } else {
                       if (!mh.field_e[1 + ca.field_k][1 + hf.field_t].g()) {
@@ -193,7 +213,7 @@ abstract class bl extends al {
                     }
                   }
                   L5: {
-                    if (bd.field_k < 0) {
+                    if (-1 < (bd.field_k ^ -1)) {
                       break L5;
                     } else {
                       if (qd.field_O[99]) {
@@ -206,23 +226,23 @@ abstract class bl extends al {
                             break L5;
                           } else {
                             L6: {
-                              if (sk.field_d >= -30) {
+                              if (29 >= (sk.field_d ^ -1)) {
                                 break L6;
                               } else {
                                 if (!mh.field_e[ca.field_k - 1][hf.field_t].g()) {
                                   break L6;
                                 } else {
-                                  if (di.field_K == -1) {
+                                  if (0 == (di.field_K ^ -1)) {
                                     return true;
                                   } else {
                                     L7: {
-                                      if (sk.field_d <= 30) {
+                                      if (-31 <= (sk.field_d ^ -1)) {
                                         break L7;
                                       } else {
                                         if (!mh.field_e[ca.field_k - -1][hf.field_t].g()) {
                                           break L7;
                                         } else {
-                                          if (di.field_K != 1) {
+                                          if (-2 != (di.field_K ^ -1)) {
                                             break L7;
                                           } else {
                                             return true;
@@ -235,13 +255,13 @@ abstract class bl extends al {
                                 }
                               }
                             }
-                            if (sk.field_d <= 30) {
+                            if (-31 <= (sk.field_d ^ -1)) {
                               break L5;
                             } else {
                               if (!mh.field_e[ca.field_k - -1][hf.field_t].g()) {
                                 break L5;
                               } else {
-                                if (di.field_K != 1) {
+                                if (-2 != (di.field_K ^ -1)) {
                                   break L5;
                                 } else {
                                   return true;
@@ -258,67 +278,58 @@ abstract class bl extends al {
               }
             }
           } else {
-            if (bd.field_k >= 0) {
+            if (-1 >= (bd.field_k ^ -1)) {
               if (!qd.field_O[99]) {
                 if (2 != rj.field_f) {
                   if (qe.field_b[4]) {
-                    if (sk.field_d < -30) {
+                    if (29 < (sk.field_d ^ -1)) {
                       if (!mh.field_e[ca.field_k - 1][hf.field_t].g()) {
-                        L8: {
-                          if (sk.field_d <= 30) {
-                            break L8;
-                          } else {
-                            if (!mh.field_e[ca.field_k - -1][hf.field_t].g()) {
-                              break L8;
-                            } else {
-                              if (di.field_K != 1) {
-                                break L8;
-                              } else {
-                                return true;
-                              }
-                            }
-                          }
-                        }
-                        return false;
-                      } else {
-                        if (di.field_K == -1) {
-                          return true;
-                        } else {
-                          L9: {
-                            if (sk.field_d <= 30) {
-                              break L9;
-                            } else {
-                              if (!mh.field_e[ca.field_k - -1][hf.field_t].g()) {
-                                break L9;
-                              } else {
-                                if (di.field_K != 1) {
-                                  break L9;
-                                } else {
-                                  return true;
-                                }
-                              }
-                            }
-                          }
-                          return false;
-                        }
-                      }
-                    } else {
-                      L10: {
-                        if (sk.field_d <= 30) {
-                          break L10;
-                        } else {
-                          if (!mh.field_e[ca.field_k - -1][hf.field_t].g()) {
-                            break L10;
-                          } else {
-                            if (di.field_K != 1) {
-                              break L10;
+                        if (-31 > (sk.field_d ^ -1)) {
+                          if (mh.field_e[ca.field_k - -1][hf.field_t].g()) {
+                            if (-2 != (di.field_K ^ -1)) {
+                              return false;
                             } else {
                               return true;
                             }
+                          } else {
+                            return false;
                           }
+                        } else {
+                          return false;
+                        }
+                      } else {
+                        if (0 != (di.field_K ^ -1)) {
+                          if (-31 > (sk.field_d ^ -1)) {
+                            if (mh.field_e[ca.field_k - -1][hf.field_t].g()) {
+                              if (-2 == (di.field_K ^ -1)) {
+                                return true;
+                              } else {
+                                return false;
+                              }
+                            } else {
+                              return false;
+                            }
+                          } else {
+                            return false;
+                          }
+                        } else {
+                          return true;
                         }
                       }
-                      return false;
+                    } else {
+                      if (-31 > (sk.field_d ^ -1)) {
+                        if (mh.field_e[ca.field_k - -1][hf.field_t].g()) {
+                          if (-2 != (di.field_K ^ -1)) {
+                            return false;
+                          } else {
+                            return true;
+                          }
+                        } else {
+                          return false;
+                        }
+                      } else {
+                        return false;
+                      }
                     }
                   } else {
                     return false;
@@ -334,68 +345,62 @@ abstract class bl extends al {
             }
           }
         } else {
-          L11: {
-            if (bd.field_k < 0) {
-              break L11;
-            } else {
-              if (qd.field_O[99]) {
-                break L11;
-              } else {
-                if (2 == rj.field_f) {
-                  break L11;
-                } else {
-                  if (!qe.field_b[4]) {
-                    break L11;
-                  } else {
-                    L12: {
-                      if (sk.field_d >= -30) {
-                        break L12;
+          if (-1 >= (bd.field_k ^ -1)) {
+            if (!qd.field_O[99]) {
+              if (2 != rj.field_f) {
+                if (qe.field_b[4]) {
+                  L8: {
+                    if (29 >= (sk.field_d ^ -1)) {
+                      break L8;
+                    } else {
+                      if (!mh.field_e[ca.field_k - 1][hf.field_t].g()) {
+                        break L8;
                       } else {
-                        if (!mh.field_e[ca.field_k - 1][hf.field_t].g()) {
-                          break L12;
-                        } else {
-                          if (di.field_K == -1) {
-                            return true;
-                          } else {
-                            L13: {
-                              if (sk.field_d <= 30) {
-                                break L13;
+                        if (0 != (di.field_K ^ -1)) {
+                          if (-31 > (sk.field_d ^ -1)) {
+                            if (mh.field_e[ca.field_k - -1][hf.field_t].g()) {
+                              if (-2 == (di.field_K ^ -1)) {
+                                return true;
                               } else {
-                                if (!mh.field_e[ca.field_k - -1][hf.field_t].g()) {
-                                  break L13;
-                                } else {
-                                  if (di.field_K != 1) {
-                                    break L13;
-                                  } else {
-                                    return true;
-                                  }
-                                }
+                                return false;
                               }
+                            } else {
+                              return false;
                             }
+                          } else {
                             return false;
                           }
-                        }
-                      }
-                    }
-                    if (sk.field_d <= 30) {
-                      break L11;
-                    } else {
-                      if (!mh.field_e[ca.field_k - -1][hf.field_t].g()) {
-                        break L11;
-                      } else {
-                        if (di.field_K != 1) {
-                          break L11;
                         } else {
                           return true;
                         }
                       }
                     }
                   }
+                  if (-31 > (sk.field_d ^ -1)) {
+                    if (mh.field_e[ca.field_k - -1][hf.field_t].g()) {
+                      if (-2 != (di.field_K ^ -1)) {
+                        return false;
+                      } else {
+                        return true;
+                      }
+                    } else {
+                      return false;
+                    }
+                  } else {
+                    return false;
+                  }
+                } else {
+                  return false;
                 }
+              } else {
+                return false;
               }
+            } else {
+              return false;
             }
+          } else {
+            return false;
           }
-          return false;
         }
     }
 
@@ -411,6 +416,7 @@ abstract class bl extends al {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ea stackOut_3_0 = null;
         Object stackOut_1_0 = null;
@@ -424,38 +430,40 @@ abstract class bl extends al {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var4_int = -121;
+            var4_int = -121 / ((-15 - param2) / 55);
             if (cn.a(param0, 258, param3, param1)) {
               stackOut_3_0 = qc.c(255);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
-              return (ea) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_0 = (RuntimeException) (var4);
             stackOut_5_1 = new StringBuilder().append("bl.H(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -463,13 +471,17 @@ abstract class bl extends al {
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + -79 + ',' + param3 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (ea) ((Object) stackIn_2_0);
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     public static void b(byte param0) {
-        int var1 = 0;
+        int var1 = 35 % ((24 - param0) / 34);
         field_w = null;
         field_z = null;
         field_u = null;
@@ -478,14 +490,10 @@ abstract class bl extends al {
     }
 
     bl(int param0) {
-        ((bl) this).field_y = param0;
+        this.field_y = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = "<%0> <times> 2,500 = <%1>";
         field_z = new int[8192];
     }

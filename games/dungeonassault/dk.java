@@ -10,6 +10,12 @@ final class dk implements ca {
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 > -41) {
+            field_b = (cn) null;
+            field_e = null;
+            field_b = null;
+            return;
+        }
         field_e = null;
         field_b = null;
     }
@@ -41,7 +47,7 @@ final class dk implements ca {
               if (param0 == 34) {
                 break L1;
               } else {
-                field_b = null;
+                field_b = (cn) null;
                 break L1;
               }
             }
@@ -53,8 +59,8 @@ final class dk implements ca {
               if (!(param1 instanceof ck)) {
                 break L2;
               } else {
-                if (((ck) (Object) param1).field_E) {
-                  var8.b(var6_int + (1 - -(-var8.field_E + param1.field_x >> 1)), 1 + var7 + (-var8.field_G + param1.field_s >> 1), 256);
+                if (((ck) ((Object) param1)).field_E) {
+                  var8.b(var6_int + (1 - -(-var8.field_E + param1.field_x >> -703459871)), 1 + var7 + (-var8.field_G + param1.field_s >> 855024673), 256);
                   break L2;
                 } else {
                   break L2;
@@ -72,23 +78,23 @@ final class dk implements ca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var6;
+            stackOut_10_0 = (RuntimeException) (var6);
             stackOut_10_1 = new StringBuilder().append("dk.B(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -96,7 +102,7 @@ final class dk implements ca {
               break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -124,7 +130,7 @@ final class dk implements ca {
         try {
           L0: {
             var3 = vh.a(bl.field_t, "", param2);
-            ai.a(0, var3);
+            ai.a(param1 ^ param1, var3);
             stackOut_0_0 = new wh(var3, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -133,23 +139,23 @@ final class dk implements ca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("dk.C(").append(param0).append(',').append(1).append(',');
+            stackOut_2_0 = (RuntimeException) (var3_ref);
+            stackOut_2_1 = new StringBuilder().append("dk.C(").append(param0).append(',').append(param1).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -157,16 +163,12 @@ final class dk implements ca {
               break L1;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "You do not meet the requirements for the title of <%0>.";
         field_a = "Large, hairy humanoid with a jutting lower jaw, ramshackle plate armour and a two-handed hammer. Ogres are forever hungry, but luckily for them, they can eat almost anything.";
     }

@@ -11,7 +11,7 @@ final class wha extends kna {
 
     final boolean v(int param0) {
         if (param0 != 555277520) {
-            field_I = null;
+            field_I = (String) null;
             return false;
         }
         return false;
@@ -64,15 +64,15 @@ final class wha extends kna {
           L0: {
             L1: {
               var9 = new fsa(param2, param0);
-              var9.b((byte) -11, ((wha) this).field_k, ((wha) this).field_l);
+              var9.b((byte) -11, this.field_k, this.field_l);
               var9.h(3, 0);
               var9.a(1, (byte) -12, true);
               var9.a((byte) -3, 6);
               var9.b((byte) 17, false);
               var9.g(119, 2);
-              var9.a((byte) 83, (nv) (Object) new eq(param2, param0));
+              var9.a((byte) 83, (nv) (new eq(param2, param0)));
               var5 = new hia(param2, param0);
-              if (34 != ((wha) this).r(12)) {
+              if (34 != this.r(12)) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -85,14 +85,14 @@ final class wha extends kna {
             L2: {
               var6 = stackIn_3_0;
               var5.b(11050, var6 != 0);
-              stackOut_3_0 = (hia) var5;
+              stackOut_3_0 = (hia) (var5);
               stackOut_3_1 = param1 + -3;
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
               stackIn_4_0 = stackOut_3_0;
               stackIn_4_1 = stackOut_3_1;
               if (var6 != 0) {
-                stackOut_5_0 = (hia) (Object) stackIn_5_0;
+                stackOut_5_0 = (hia) ((Object) stackIn_5_0);
                 stackOut_5_1 = stackIn_5_1;
                 stackOut_5_2 = 0;
                 stackIn_6_0 = stackOut_5_0;
@@ -100,7 +100,7 @@ final class wha extends kna {
                 stackIn_6_2 = stackOut_5_2;
                 break L2;
               } else {
-                stackOut_4_0 = (hia) (Object) stackIn_4_0;
+                stackOut_4_0 = (hia) ((Object) stackIn_4_0);
                 stackOut_4_1 = stackIn_4_1;
                 stackOut_4_2 = 1;
                 stackIn_6_0 = stackOut_4_0;
@@ -110,13 +110,13 @@ final class wha extends kna {
               }
             }
             ((hia) (Object) stackIn_6_0).c(stackIn_6_1, stackIn_6_2 != 0);
-            var5.a(false, ((wha) this).field_F);
-            var9.a((wda) (Object) var5, param1 ^ param1);
+            var5.a(false, this.field_F);
+            var9.a(var5, param1 ^ param1);
             var7 = rm.field_a;
-            var8 = (nq) (Object) var7.a(16, param1 + 119);
+            var8 = (nq) ((Object) var7.a(16, param1 + 119));
             var8.b(param1 ^ 8021, 0);
-            var9.a((gr) (Object) var5, (byte) 124, (dg) (Object) var8);
-            stackOut_6_0 = (fsa) var9;
+            var9.a(var5, (byte) 124, var8);
+            stackOut_6_0 = (fsa) (var9);
             stackIn_7_0 = stackOut_6_0;
             break L0;
           }
@@ -124,23 +124,23 @@ final class wha extends kna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_0 = (RuntimeException) (var4);
             stackOut_8_1 = new StringBuilder().append("wha.AC(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -148,7 +148,7 @@ final class wha extends kna {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
@@ -156,38 +156,39 @@ final class wha extends kna {
     final void a(boolean param0, kh param1) {
         try {
             super.a(param0, param1);
-            param1.a((byte) 28, wma.a((byte) 8, 4, ((wha) this).field_F), 8);
+            param1.a((byte) 28, wma.a((byte) 8, 4, this.field_F), 8);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wha.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "wha.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     wha(la param0, int param1, kh param2, csa param3) {
         super(param0, param1, param2, param3);
-        ((wha) this).field_F = 131072;
+        this.field_F = 131072;
         try {
-            ((wha) this).field_F = ji.a(param2.b((byte) 44, 8), 104, 4);
+            this.field_F = ji.a(param2.b((byte) 44, 8), 104, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "wha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     wha(la param0, int param1) {
         super(param0, param1);
-        ((wha) this).field_F = 131072;
+        this.field_F = 131072;
     }
 
     final boolean s(int param0) {
         if (param0 != -15254) {
-            field_J = null;
+            field_J = (dd) null;
             return true;
         }
         return true;
     }
 
     final boolean z(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 0) {
-            boolean discarded$0 = ((wha) this).v(-48);
+            discarded$0 = this.v(-48);
             return false;
         }
         return false;
@@ -202,8 +203,8 @@ final class wha extends kna {
 
     final void q(byte param0) {
         super.q(param0);
-        ((wha) this).b(param0 + 250, 2097152, 2097152);
-        ((wha) this).a((byte) 112, new mka[1]);
+        this.b(param0 + 250, 2097152, 2097152);
+        this.a((byte) 112, new mka[]{new mka(0, 0, 2097152, 0, 40)});
     }
 
     public static void r(byte param0) {
@@ -212,22 +213,18 @@ final class wha extends kna {
         field_I = null;
         field_K = null;
         field_G = null;
-        int var1 = -80;
+        int var1 = -80 / ((param0 - -32) / 57);
     }
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-            field_H = null;
+            field_H = (String) null;
             return true;
         }
         return true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_H = "<%0> cannot join; the game has started.";
         field_J = new dd(64);
         field_I = "<%0> has not yet unlocked this option for use.";

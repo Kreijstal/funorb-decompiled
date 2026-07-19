@@ -11,19 +11,19 @@ abstract class m implements dp {
     static cn field_c;
 
     public final String a(boolean param0) {
-        if (!((m) this).a(96)) {
+        if (!this.a(96)) {
           if (param0) {
-            if (~(350L + ((m) this).field_b) < ~kd.c(-2456)) {
+            if ((350L + this.field_b ^ -1L) < (kd.c(-2456) ^ -1L)) {
               return null;
             } else {
-              return ((m) this).c(63);
+              return this.c(63);
             }
           } else {
-            ((m) this).field_b = 122L;
-            if (~(350L + ((m) this).field_b) < ~kd.c(-2456)) {
+            this.field_b = 122L;
+            if ((350L + this.field_b ^ -1L) < (kd.c(-2456) ^ -1L)) {
               return null;
             } else {
-              return ((m) this).c(63);
+              return this.c(63);
             }
           }
         } else {
@@ -34,7 +34,7 @@ abstract class m implements dp {
     final static void a(int param0, boolean param1) {
         bl.field_c = 0;
         if (param0 < 82) {
-          field_d = null;
+          field_d = (ad) null;
           me.field_f = 0;
           wf.field_x = am.field_g;
           jc.field_e = 0;
@@ -52,15 +52,16 @@ abstract class m implements dp {
     }
 
     public final od a(byte param0) {
-        if (!((m) this).a(-51)) {
-          if (~(350L + ((m) this).field_b) < ~kd.c(-2456)) {
+        java.applet.Applet discarded$2 = null;
+        if (!this.a(-51)) {
+          if ((350L + this.field_b ^ -1L) < (kd.c(-2456) ^ -1L)) {
             return ub.field_s;
           } else {
             if (param0 > -91) {
-              java.applet.Applet discarded$2 = m.c(false);
-              return ((m) this).b(false);
+              discarded$2 = m.c(false);
+              return this.b(false);
             } else {
-              return ((m) this).b(false);
+              return this.b(false);
             }
           }
         } else {
@@ -71,7 +72,7 @@ abstract class m implements dp {
     public static void d(int param0) {
         field_a = null;
         if (param0 != -1) {
-          field_a = null;
+          field_a = (md) null;
           field_g = null;
           field_d = null;
           field_f = null;
@@ -89,7 +90,7 @@ abstract class m implements dp {
     }
 
     public final void b(int param0) {
-        ((m) this).field_b = kd.c(-2456);
+        this.field_b = kd.c(-2456);
         if (param0 != 2899) {
             m.d(6);
         }
@@ -97,13 +98,25 @@ abstract class m implements dp {
 
     final static void b(byte param0) {
         int var1 = 0;
-        if (oo.field_d < 224) {
-          var1 = oo.field_d % 32;
-          sf.d(-105, -var1 + (32 + oo.field_d));
-          return;
+        if (param0 >= 34) {
+          if (-225 < (oo.field_d ^ -1)) {
+            var1 = oo.field_d % 32;
+            sf.d(-105, -var1 + (32 + oo.field_d));
+            return;
+          } else {
+            sf.d(-93, 256);
+            return;
+          }
         } else {
-          sf.d(-93, 256);
-          return;
+          field_c = (cn) null;
+          if (-225 < (oo.field_d ^ -1)) {
+            var1 = oo.field_d % 32;
+            sf.d(-105, -var1 + (32 + oo.field_d));
+            return;
+          } else {
+            sf.d(-93, 256);
+            return;
+          }
         }
     }
 
@@ -111,21 +124,17 @@ abstract class m implements dp {
 
     final static java.applet.Applet c(boolean param0) {
         if (!param0) {
-            return null;
+            return (java.applet.Applet) null;
         }
         if (null != rc.field_b) {
             return rc.field_b;
         }
-        return (java.applet.Applet) (Object) ba.field_c;
+        return (java.applet.Applet) ((Object) ba.field_c);
     }
 
     abstract od b(boolean param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new md();
         field_f = "Unfortunately we are unable to create an account for you at this time.";
         field_g = "OK";

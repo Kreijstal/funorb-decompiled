@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 public final class EscapeVector extends g {
     static String field_z;
     public static int field_A;
@@ -14,11 +12,12 @@ public final class EscapeVector extends g {
             this.m(-27273);
             jd.a((byte) -54);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "EscapeVector.O(" + param0 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.O(" + param0 + ')');
         }
     }
 
     final void c(int param0) {
+        int discarded$1 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -109,7 +108,7 @@ public final class EscapeVector extends g {
               }
             }
             L5: {
-              ((EscapeVector) this).a(stackIn_17_1, stackIn_17_2 != 0);
+              this.a(stackIn_17_1, stackIn_17_2 != 0);
               if (!of.field_b) {
                 break L5;
               } else {
@@ -170,7 +169,7 @@ public final class EscapeVector extends g {
                                       }
                                     }
                                     L15: {
-                                      var3 = ((EscapeVector) this).a(stackIn_42_1 != 0, -556);
+                                      var3 = this.a(stackIn_42_1 != 0, -556);
                                       if (var3 != 1) {
                                         break L15;
                                       } else {
@@ -249,7 +248,7 @@ public final class EscapeVector extends g {
                             }
                             L22: {
                               var3 = fn.b(-14);
-                              if (var3 != 2) {
+                              if ((var3 ^ -1) != -3) {
                                 break L22;
                               } else {
                                 ri.a(-25123);
@@ -265,7 +264,7 @@ public final class EscapeVector extends g {
                               }
                             }
                             L24: {
-                              if (var3 != 4) {
+                              if (-5 != (var3 ^ -1)) {
                                 break L24;
                               } else {
                                 da.a((byte) -112);
@@ -322,7 +321,7 @@ public final class EscapeVector extends g {
                         if (!rg.a(wd.field_u, 109)) {
                           break L30;
                         } else {
-                          ((EscapeVector) this).f(127);
+                          this.f(127);
                           if (var4 != 0) {
                             break L29;
                           } else {
@@ -340,7 +339,7 @@ public final class EscapeVector extends g {
                     if (!um.a(17830)) {
                       break L6;
                     } else {
-                      int discarded$1 = ((EscapeVector) this).k((byte) -67);
+                      discarded$1 = this.k((byte) -67);
                       if (var4 == 0) {
                         break L6;
                       } else {
@@ -350,7 +349,7 @@ public final class EscapeVector extends g {
                   }
                 }
               }
-              ((EscapeVector) this).j(-9926);
+              this.j(-9926);
               if (!ii.b(16836)) {
                 if (!mj.a((byte) 125)) {
                   break L6;
@@ -428,7 +427,7 @@ public final class EscapeVector extends g {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.H(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2), "EscapeVector.H(" + param0 + ')');
         }
     }
 
@@ -439,7 +438,7 @@ public final class EscapeVector extends g {
                 EscapeVector.a((String) null, 38, -112, (byte) -73);
             }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "EscapeVector.CB(" + param0 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.CB(" + param0 + ')');
         }
     }
 
@@ -737,22 +736,24 @@ public final class EscapeVector extends g {
             bl.d(255);
             sm.b(true);
             tk.b(31167);
-            ((EscapeVector) this).field_s = null;
+            this.field_s = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.E(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2), "EscapeVector.E(" + param0 + ')');
         }
     }
 
     private final void n(byte param0) {
+        boolean discarded$1 = false;
         RuntimeException var2 = null;
         int var2_int = 0;
         dd var2_ref = null;
         ec var2_ref2 = null;
         int var3 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = field_A;
         try {
@@ -771,29 +772,31 @@ public final class EscapeVector extends g {
                       if (param0 == -96) {
                         break L1;
                       } else {
-                        field_z = null;
+                        field_z = (String) null;
                         break L1;
                       }
                     }
                     da.field_b = new ta();
                     qk.field_e = new dn(true);
                     oe.c((byte) 115);
-                    boolean discarded$1 = fg.c(0);
+                    discarded$1 = fg.c(0);
                     this.l(param0 + 95);
                     uk.field_h = true;
                     vl.b(1, 0);
+                    decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
                     dn.a(qa.field_H, param0 ^ -17595, 100.0f);
-                    ((EscapeVector) this).e((byte) -127);
+                    this.e((byte) -127);
                     ld.field_h = bg.a(bj.field_B, ld.field_h, he.field_u, 0);
                     bj.field_B = null;
                     fn.a((byte) 51);
-                    return;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   }
                 } else {
                   dn.a(q.field_H, param0 + 17733, 90.0f);
-                  ((EscapeVector) this).e((byte) 48);
+                  this.e((byte) 48);
                   var2_ref2 = new ec(hn.field_h, jm.field_I);
                   jm.field_I = null;
                   hn.field_h = null;
@@ -808,11 +811,12 @@ public final class EscapeVector extends g {
                   rk.field_d[4] = nm.a(n.a((int) param0, -94), "", var2_ref2, oc.field_D, "music/simulator");
                   oc.field_D = null;
                   fn.a((byte) 93);
-                  return;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               } else {
                 dn.a(qf.field_n, 17637, 80.0f);
-                ((EscapeVector) this).e((byte) 7);
+                this.e((byte) 7);
                 var2_ref = new dd(22050, ie.field_q);
                 ff.field_i = kj.a(hn.field_h, "", "write-text").a().a(var2_ref);
                 en.field_d = kj.a(hn.field_h, "", "cursor").a().a(var2_ref);
@@ -861,12 +865,13 @@ public final class EscapeVector extends g {
                 jh.field_k = kj.a(hn.field_h, "", "level_complete").a().a(var2_ref);
                 pl.field_o = kj.a(hn.field_h, "", "level_complete_score").a().a(var2_ref);
                 fn.a((byte) 106);
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
               gn.a(-122);
               dn.a(pg.field_f, param0 ^ -17595, 70.0f);
-              ((EscapeVector) this).e((byte) -128);
+              this.e((byte) -128);
               fh.field_g = oi.a(param0 ^ -92, sn.field_c, "", "fonts_squarish16", fi.field_j);
               sn.field_c = null;
               ea.field_f = fe.a("", fi.field_j, "titles_escape", true);
@@ -898,7 +903,7 @@ public final class EscapeVector extends g {
               L2: while (true) {
                 L3: {
                   L4: {
-                    if (~mc.field_d.length >= ~var2_int) {
+                    if ((mc.field_d.length ^ -1) >= (var2_int ^ -1)) {
                       break L4;
                     } else {
                       mi.field_m[var2_int] = new ed(32, 32);
@@ -930,14 +935,32 @@ public final class EscapeVector extends g {
                   fn.a((byte) 92);
                   break L3;
                 }
-                return;
+                decompiledRegionSelector0 = 0;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.FB(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2), "EscapeVector.FB(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                return;
+              }
+            }
+          }
         }
     }
 
@@ -950,19 +973,19 @@ public final class EscapeVector extends g {
               if (param0 == -1) {
                 break L1;
               } else {
-                field_z = null;
+                field_z = (String) null;
                 break L1;
               }
             }
-            nb.a((java.applet.Applet) this, 1585176, (byte) -125, 6340704, vj.field_c, 192);
-            aj.field_a = new fe((java.applet.Applet) this, sh.field_r, af.field_a, vj.field_c);
+            nb.a((java.applet.Applet) (this), 1585176, (byte) -125, 6340704, vj.field_c, 192);
+            aj.field_a = new fe((java.applet.Applet) (this), sh.field_r, af.field_a, vj.field_c);
             af.field_a = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.AB(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2), "EscapeVector.AB(" + param0 + ')');
         }
     }
 
@@ -982,6 +1005,7 @@ public final class EscapeVector extends g {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
@@ -1014,32 +1038,34 @@ public final class EscapeVector extends g {
               param0.field_b = param1;
               param0.field_d.field_b = param0;
               param0.field_b.field_d = param0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) runtimeException;
+            stackOut_8_0 = (RuntimeException) (runtimeException);
             stackOut_8_1 = new StringBuilder().append("EscapeVector.WA(");
             stackIn_11_0 = stackOut_8_0;
             stackIn_11_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_12_0 = stackOut_9_0;
               stackIn_12_1 = stackOut_9_1;
@@ -1048,23 +1074,23 @@ public final class EscapeVector extends g {
             }
           }
           L3: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_15_0 = stackOut_12_0;
             stackIn_15_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_16_0 = stackOut_13_0;
               stackIn_16_1 = stackOut_13_1;
@@ -1072,7 +1098,12 @@ public final class EscapeVector extends g {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -1083,7 +1114,7 @@ public final class EscapeVector extends g {
             jm.field_K[3] = fe.a("", fi.field_j, "sprites_magnet_glow", true);
             jm.field_K[4] = fe.a("", fi.field_j, "sprites_repeller_glow", true);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "EscapeVector.DB(" + param0 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.DB(" + param0 + ')');
         }
     }
 
@@ -1091,35 +1122,48 @@ public final class EscapeVector extends g {
         try {
             Throwable var1 = null;
             RuntimeException var1_ref = null;
-            Object stackIn_2_0 = null;
+            ca stackIn_2_0 = null;
             ca stackIn_4_0 = null;
             Object stackIn_6_0 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             ca stackOut_3_0 = null;
-            Object stackOut_1_0 = null;
             Object stackOut_5_0 = null;
+            ca stackOut_1_0 = null;
             try {
-              try {
+              L0: {
                 if (param0 == 13) {
-                  stackOut_3_0 = (ca) Class.forName("a").newInstance();
-                  stackIn_4_0 = stackOut_3_0;
-                  return stackIn_4_0;
+                  try {
+                    L1: {
+                      stackOut_3_0 = (ca) (Class.forName("a").newInstance());
+                      stackIn_4_0 = stackOut_3_0;
+                      break L1;
+                    }
+                  } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    var1 = decompiledCaughtException;
+                    stackOut_5_0 = null;
+                    stackIn_6_0 = stackOut_5_0;
+                    return (ca) ((Object) stackIn_6_0);
+                  }
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 } else {
-                  stackOut_1_0 = null;
+                  stackOut_1_0 = (ca) null;
                   stackIn_2_0 = stackOut_1_0;
-                  return (ca) (Object) stackIn_2_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var1 = decompiledCaughtException;
-                stackOut_5_0 = null;
-                stackIn_6_0 = stackOut_5_0;
-                return (ca) (Object) stackIn_6_0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw t.a((Throwable) (Object) var1_ref, "EscapeVector.GB(" + param0 + ')');
+              throw t.a((Throwable) ((Object) var1_ref), "EscapeVector.GB(" + param0 + ')');
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return stackIn_2_0;
+            } else {
+              return stackIn_4_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1145,7 +1189,7 @@ public final class EscapeVector extends g {
               if (param0) {
                 break L2;
               } else {
-                field_z = null;
+                field_z = (String) null;
                 break L2;
               }
             }
@@ -1171,7 +1215,7 @@ public final class EscapeVector extends g {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.B(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2), "EscapeVector.B(" + param0 + ')');
         }
     }
 
@@ -1213,7 +1257,7 @@ public final class EscapeVector extends g {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.HB(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2), "EscapeVector.HB(" + param0 + ')');
         }
     }
 
@@ -1262,7 +1306,7 @@ public final class EscapeVector extends g {
               if (param2 == -7457) {
                 break L1;
               } else {
-                field_z = null;
+                field_z = (String) null;
                 break L1;
               }
             }
@@ -1308,7 +1352,7 @@ public final class EscapeVector extends g {
               break L4;
             }
             L6: {
-              if (var3_int <= 0) {
+              if ((var3_int ^ -1) >= -1) {
                 stackOut_25_0 = 0;
                 stackIn_26_0 = stackOut_25_0;
                 break L6;
@@ -1324,23 +1368,23 @@ public final class EscapeVector extends g {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var3;
+            stackOut_27_0 = (RuntimeException) (var3);
             stackOut_27_1 = new StringBuilder().append("EscapeVector.TA(");
             stackIn_30_0 = stackOut_27_0;
             stackIn_30_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
             stackIn_28_1 = stackOut_27_1;
             if (param0 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "null";
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
               break L7;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "{...}";
               stackIn_31_0 = stackOut_28_0;
               stackIn_31_1 = stackOut_28_1;
@@ -1349,23 +1393,23 @@ public final class EscapeVector extends g {
             }
           }
           L8: {
-            stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+            stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
             stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
             stackIn_34_0 = stackOut_31_0;
             stackIn_34_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param1 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "null";
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
               break L8;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_35_0 = stackOut_32_0;
               stackIn_35_1 = stackOut_32_1;
@@ -1373,12 +1417,16 @@ public final class EscapeVector extends g {
               break L8;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ',' + param2 + ')');
         }
         return stackIn_26_0 != 0;
     }
 
     private final void a(int param0, dd param1) {
+        hh dupTemp$4 = null;
+        hh dupTemp$5 = null;
+        hh dupTemp$6 = null;
+        hh dupTemp$7 = null;
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -1400,17 +1448,17 @@ public final class EscapeVector extends g {
           L0: {
             sf.field_e[0] = kj.a(hn.field_h, "", "explosion-fuel-tank").a().a(param1);
             sf.field_e[param0] = kj.a(hn.field_h, "", "explosion-crate").a().a(param1);
-            hh dupTemp$4 = kj.a(hn.field_h, "", "explosion-magnet-repeller").a().a(param1);
+            dupTemp$4 = kj.a(hn.field_h, "", "explosion-magnet-repeller").a().a(param1);
             sf.field_e[4] = dupTemp$4;
             sf.field_e[3] = dupTemp$4;
             sf.field_e[2] = kj.a(hn.field_h, "", "explosion-turret").a().a(param1);
-            hh dupTemp$5 = kj.a(hn.field_h, "", "explosion-tnt").a().a(param1);
+            dupTemp$5 = kj.a(hn.field_h, "", "explosion-tnt").a().a(param1);
             sf.field_e[8] = dupTemp$5;
             sf.field_e[5] = dupTemp$5;
-            hh dupTemp$6 = kj.a(hn.field_h, "", "explosion-laser").a().a(param1);
+            dupTemp$6 = kj.a(hn.field_h, "", "explosion-laser").a().a(param1);
             sf.field_e[7] = dupTemp$6;
             sf.field_e[6] = dupTemp$6;
-            hh dupTemp$7 = kj.a(hn.field_h, "", "explosion-powerup").a().a(param1);
+            dupTemp$7 = kj.a(hn.field_h, "", "explosion-powerup").a().a(param1);
             sf.field_e[13] = dupTemp$7;
             sf.field_e[12] = dupTemp$7;
             sf.field_e[11] = dupTemp$7;
@@ -1423,23 +1471,23 @@ public final class EscapeVector extends g {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_0 = (RuntimeException) (var3);
             stackOut_2_1 = new StringBuilder().append("EscapeVector.LB(").append(param0).append(',');
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
@@ -1447,7 +1495,7 @@ public final class EscapeVector extends g {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -1459,6 +1507,7 @@ public final class EscapeVector extends g {
         long var5 = 0L;
         long var7 = 0L;
         int var9 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var9 = field_A;
         try {
@@ -1469,7 +1518,7 @@ public final class EscapeVector extends g {
               if (param0 == -27273) {
                 break L1;
               } else {
-                field_z = null;
+                field_z = (String) null;
                 break L1;
               }
             }
@@ -1479,7 +1528,8 @@ public final class EscapeVector extends g {
                 if (!mb.b((byte) -64)) {
                   dn.a(ff.field_a, 17637, 100.0f);
                   ah.a(var3, 0);
-                  return;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   L2: {
                     L3: {
@@ -1520,7 +1570,7 @@ public final class EscapeVector extends g {
                         break L6;
                       } else {
                         L7: {
-                          if (od.field_q < 0) {
+                          if (-1 < (od.field_q ^ -1)) {
                             break L7;
                           } else {
                             hn.field_l.e(3);
@@ -1667,21 +1717,37 @@ public final class EscapeVector extends g {
                     }
                   }
                   nn.a(var3, 0, -1, 0);
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 }
               } else {
                 ah.a(var3, 0);
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
               gb.a(var4 != 0, (byte) 92, var3);
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.BB(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2), "EscapeVector.BB(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -2129,7 +2195,7 @@ public final class EscapeVector extends g {
               stackIn_31_4 = stackOut_30_4;
               stackIn_31_5 = stackOut_30_5;
               stackIn_31_6 = stackOut_30_6;
-              if (di.field_d.field_h == 0) {
+              if (-1 == (di.field_d.field_h ^ -1)) {
                 stackOut_33_0 = stackIn_33_0;
                 stackOut_33_1 = stackIn_33_1;
                 stackOut_33_2 = stackIn_33_2;
@@ -2268,7 +2334,7 @@ public final class EscapeVector extends g {
               stackIn_43_4 = stackOut_42_4;
               stackIn_43_5 = stackOut_42_5;
               stackIn_43_6 = stackOut_42_6;
-              if (di.field_d.field_h == 1) {
+              if (-2 == (di.field_d.field_h ^ -1)) {
                 stackOut_45_0 = stackIn_45_0;
                 stackOut_45_1 = stackIn_45_1;
                 stackOut_45_2 = stackIn_45_2;
@@ -2384,9 +2450,9 @@ public final class EscapeVector extends g {
               stackIn_53_1 = stackOut_50_1;
               stackIn_51_0 = stackOut_50_0;
               stackIn_51_1 = stackOut_50_1;
-              if (di.field_d.field_h != 0) {
+              if ((di.field_d.field_h ^ -1) != -1) {
                 stackOut_53_0 = stackIn_53_0;
-                stackOut_53_1 = (String) (Object) stackIn_53_1;
+                stackOut_53_1 = (String) ((Object) stackIn_53_1);
                 stackOut_53_2 = 6340704;
                 stackIn_54_0 = stackOut_53_0;
                 stackIn_54_1 = stackOut_53_1;
@@ -2394,7 +2460,7 @@ public final class EscapeVector extends g {
                 break L14;
               } else {
                 stackOut_51_0 = stackIn_51_0;
-                stackOut_51_1 = (String) (Object) stackIn_51_1;
+                stackOut_51_1 = (String) ((Object) stackIn_51_1);
                 stackOut_51_2 = 16777215;
                 stackIn_54_0 = stackOut_51_0;
                 stackIn_54_1 = stackOut_51_1;
@@ -2413,7 +2479,7 @@ public final class EscapeVector extends g {
               stackIn_55_1 = stackOut_54_1;
               if (di.field_d.field_h == 1) {
                 stackOut_57_0 = stackIn_57_0;
-                stackOut_57_1 = (String) (Object) stackIn_57_1;
+                stackOut_57_1 = (String) ((Object) stackIn_57_1);
                 stackOut_57_2 = 16777215;
                 stackIn_58_0 = stackOut_57_0;
                 stackIn_58_1 = stackOut_57_1;
@@ -2421,7 +2487,7 @@ public final class EscapeVector extends g {
                 break L15;
               } else {
                 stackOut_55_0 = stackIn_55_0;
-                stackOut_55_1 = (String) (Object) stackIn_55_1;
+                stackOut_55_1 = (String) ((Object) stackIn_55_1);
                 stackOut_55_2 = 6340704;
                 stackIn_58_0 = stackOut_55_0;
                 stackIn_58_1 = stackOut_55_1;
@@ -2436,15 +2502,15 @@ public final class EscapeVector extends g {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2_ref, "EscapeVector.UA(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2_ref), "EscapeVector.UA(" + param0 + ')');
         }
     }
 
     public final void init() {
         try {
-            ((EscapeVector) this).a("escapevector", 640, 12);
+            this.a("escapevector", 640, 12);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "EscapeVector.init()");
+            throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.init()");
         }
     }
 
@@ -2454,19 +2520,19 @@ public final class EscapeVector extends g {
         try {
           L0: {
             L1: {
-              ((EscapeVector) this).a(0, 11, 8, 7, 21, (byte) -99, false, 9);
+              this.a(0, 11, 8, 7, 21, (byte) -99, false, 9);
               ie.a(22050, true, 10);
-              bj.field_C = ie.a(g.field_r, (java.awt.Component) (Object) of.field_d, 0, 1024);
-              ig.field_l = ie.a(g.field_r, (java.awt.Component) (Object) of.field_d, 1, 22050);
+              bj.field_C = ie.a(g.field_r, (java.awt.Component) ((Object) of.field_d), 0, 1024);
+              ig.field_l = ie.a(g.field_r, (java.awt.Component) ((Object) of.field_d), 1, 22050);
               rk.field_e = new hj();
-              bj.field_C.b((wg) (Object) rk.field_e);
+              bj.field_C.b(rk.field_e);
               pl.field_n = new hj();
-              ec.field_a = new wb((wg) (Object) pl.field_n);
+              ec.field_a = new wb(pl.field_n);
               ec.field_a.d(0.9399999976158142f);
               ec.field_a.b(14.826103210449219f);
-              rk.field_e.a((wg) (Object) ec.field_a);
+              rk.field_e.a(ec.field_a);
               nb.field_c = new hj();
-              ma.field_b = new wb((wg) (Object) nb.field_c);
+              ma.field_b = new wb(nb.field_c);
               if (param0 == -97) {
                 break L1;
               } else {
@@ -2476,15 +2542,15 @@ public final class EscapeVector extends g {
             }
             ma.field_b.d(0.9399999976158142f);
             ma.field_b.b(14.826103210449219f);
-            ig.field_l.b((wg) (Object) ma.field_b);
-            ((EscapeVector) this).a(true, (byte) -35, true, true, true);
+            ig.field_l.b(ma.field_b);
+            this.a(true, (byte) -35, true, true, true);
             ua.field_c = new kg();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.P(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2), "EscapeVector.P(" + param0 + ')');
         }
     }
 
@@ -2517,7 +2583,7 @@ public final class EscapeVector extends g {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.MB(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2), "EscapeVector.MB(" + param0 + ')');
         }
     }
 
@@ -2527,6 +2593,7 @@ public final class EscapeVector extends g {
         int var3 = 0;
         int var4 = 0;
         int stackIn_37_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_36_0 = 0;
         int stackOut_34_0 = 0;
@@ -2544,7 +2611,7 @@ public final class EscapeVector extends g {
                       break L2;
                     } else {
                       L3: {
-                        if (lf.field_H == 1) {
+                        if ((lf.field_H ^ -1) == -2) {
                           break L3;
                         } else {
                           vc.a(40, ul.field_O, true, (byte) -101);
@@ -2594,7 +2661,7 @@ public final class EscapeVector extends g {
                   }
                 }
                 L6: {
-                  if (lf.field_H == 2) {
+                  if ((lf.field_H ^ -1) == -3) {
                     stackOut_36_0 = 0;
                     stackIn_37_0 = stackOut_36_0;
                     break L6;
@@ -2616,15 +2683,22 @@ public final class EscapeVector extends g {
                 lf.field_H = 2;
                 break L1;
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2_ref, "EscapeVector.EB(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2_ref), "EscapeVector.EB(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -2661,23 +2735,23 @@ public final class EscapeVector extends g {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) runtimeException;
+            stackOut_2_0 = (RuntimeException) (runtimeException);
             stackOut_2_1 = new StringBuilder().append("EscapeVector.JB(");
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
@@ -2685,7 +2759,7 @@ public final class EscapeVector extends g {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2709,7 +2783,7 @@ public final class EscapeVector extends g {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "EscapeVector.VA(" + param0 + ')');
+          throw t.a((Throwable) ((Object) var2), "EscapeVector.VA(" + param0 + ')');
         }
     }
 
@@ -2742,7 +2816,7 @@ public final class EscapeVector extends g {
               if (param0 < -17) {
                 break L1;
               } else {
-                ((EscapeVector) this).a((byte) -2);
+                this.a((byte) -2);
                 break L1;
               }
             }
@@ -2775,23 +2849,23 @@ public final class EscapeVector extends g {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             runtimeException = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) runtimeException;
+            stackOut_10_0 = (RuntimeException) (runtimeException);
             stackOut_10_1 = new StringBuilder().append("EscapeVector.KB(").append(param0).append(',');
             stackIn_13_0 = stackOut_10_0;
             stackIn_13_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L5;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_14_0 = stackOut_11_0;
               stackIn_14_1 = stackOut_11_1;
@@ -2799,7 +2873,7 @@ public final class EscapeVector extends g {
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
     }
 
@@ -2810,15 +2884,11 @@ public final class EscapeVector extends g {
             this.o(0);
             qh.a(fi.field_j, (byte) -23);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "EscapeVector.IB(" + param0 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "EscapeVector.IB(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "Members' Expansion";
     }
 }

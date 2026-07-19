@@ -20,27 +20,28 @@ final class pm {
     public static void a(byte param0) {
         field_a = null;
         field_h = null;
+        if (param0 != 79) {
+            field_n = 63L;
+            field_d = null;
+            return;
+        }
         field_d = null;
     }
 
     pm(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, boolean param9, boolean param10, int param11) {
-        ((pm) this).field_b = param3;
-        ((pm) this).field_k = param2;
-        ((pm) this).field_m = param1;
-        ((pm) this).field_j = param11;
-        ((pm) this).field_f = (short)param6;
-        ((pm) this).field_l = param0;
-        ((pm) this).field_c = (byte)param8;
-        ((pm) this).field_e = (short)param5;
-        ((pm) this).field_i = (short)param4;
-        ((pm) this).field_g = param10 ? true : false;
+        this.field_b = param3;
+        this.field_k = param2;
+        this.field_m = param1;
+        this.field_j = param11;
+        this.field_f = (short)param6;
+        this.field_l = param0;
+        this.field_c = (byte)param8;
+        this.field_e = (short)param5;
+        this.field_i = (short)param4;
+        this.field_g = param10 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = new int[13];
         field_h[8] = 40;
         field_h[7] = 30;

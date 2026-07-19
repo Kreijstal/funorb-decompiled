@@ -8,13 +8,12 @@ final class ei {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 > -74) {
+            field_b = (ri[]) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ei.A(";
         field_a = 0;
     }

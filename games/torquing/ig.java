@@ -11,7 +11,7 @@ class ig extends pc {
 
     public static void b(int param0) {
         field_q = null;
-        int var1 = 0;
+        int var1 = 69 % ((param0 - -28) / 63);
         field_r = null;
     }
 
@@ -21,12 +21,12 @@ class ig extends pc {
                 tk.a(param4.field_k + param1, param4.field_w + param2, param4.field_o, param4.field_p, false);
             }
             if (param0 < 89) {
-                Object var7 = null;
-                ((ig) this).a(-112, 5, -61, true, (gm) null);
+                gm var7 = (gm) null;
+                this.a(-112, 5, -61, true, (gm) null);
             }
             super.a(117, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "ig.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,10 +35,6 @@ class ig extends pc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = new nj[29];
     }
 }

@@ -31,10 +31,6 @@ abstract class rd extends ll {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_B = "rd.VB(";
         field_C = -1;
         field_F = null;

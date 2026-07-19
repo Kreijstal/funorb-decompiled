@@ -13,12 +13,24 @@ abstract class ee implements pd {
     abstract String a(boolean param0);
 
     public static void c(boolean param0) {
+        boolean discarded$2 = false;
+        ll var2 = null;
         field_c = null;
         field_a = null;
         field_g = null;
-        field_d = null;
-        field_b = null;
-        field_f = null;
+        if (!param0) {
+          var2 = (ll) null;
+          discarded$2 = ee.a((ll) null, -106, -125, 14);
+          field_d = null;
+          field_b = null;
+          field_f = null;
+          return;
+        } else {
+          field_d = null;
+          field_b = null;
+          field_f = null;
+          return;
+        }
     }
 
     final static boolean a(ll param0, int param1, int param2, int param3) {
@@ -50,6 +62,7 @@ abstract class ee implements pd {
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         String stackIn_36_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_13_0 = 0;
         int stackOut_12_0 = 0;
@@ -77,7 +90,7 @@ abstract class ee implements pd {
             if (param0.field_h > var4_int) {
               var7 = var4_int;
               var6 = 1;
-              if (var7 > -1) {
+              if ((var7 ^ -1) < 0) {
                 L1: {
                   param1 += 0;
                   var7 = param1;
@@ -139,9 +152,9 @@ abstract class ee implements pd {
                         var17 = var11;
                         if (0 != var21[var14]) {
                           L6: {
-                            di.field_m = di.field_m + (var10 - (-var11 - -var17) << 1);
-                            ce.field_k = ce.field_k + (-var16 + var12 + var13 << 1);
-                            if (var21[var14] == -1) {
+                            di.field_m = di.field_m + (var10 - (-var11 - -var17) << 497052513);
+                            ce.field_k = ce.field_k + (-var16 + var12 + var13 << 1048514305);
+                            if (0 == (var21[var14] ^ -1)) {
                               jo.field_b = true;
                               break L6;
                             } else {
@@ -150,6 +163,7 @@ abstract class ee implements pd {
                           }
                           stackOut_31_0 = 1;
                           stackIn_32_0 = stackOut_31_0;
+                          decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
                           return false;
@@ -157,7 +171,8 @@ abstract class ee implements pd {
                       } else {
                         stackOut_24_0 = 1;
                         stackIn_25_0 = stackOut_24_0;
-                        return stackIn_25_0 != 0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       }
                     }
                   } else {
@@ -166,11 +181,13 @@ abstract class ee implements pd {
                 }
                 stackOut_9_0 = 0;
                 stackIn_10_0 = stackOut_9_0;
-                return stackIn_10_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 stackOut_3_0 = 0;
                 stackIn_4_0 = stackOut_3_0;
-                return stackIn_4_0 != 0;
+                decompiledRegionSelector0 = 0;
+                break L0;
               }
             } else {
               return false;
@@ -180,23 +197,23 @@ abstract class ee implements pd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var4 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) var4;
+            stackOut_33_0 = (RuntimeException) (var4);
             stackOut_33_1 = new StringBuilder().append("ee.N(");
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
             stackIn_34_1 = stackOut_33_1;
             if (param0 == null) {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackOut_35_2 = "null";
               stackIn_36_0 = stackOut_35_0;
               stackIn_36_1 = stackOut_35_1;
               stackIn_36_2 = stackOut_35_2;
               break L7;
             } else {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "{...}";
               stackIn_36_0 = stackOut_34_0;
               stackIn_36_1 = stackOut_34_1;
@@ -204,59 +221,73 @@ abstract class ee implements pd {
               break L7;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_32_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_10_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_25_0 != 0;
+            } else {
+              return stackIn_32_0 != 0;
+            }
+          }
+        }
     }
 
     public final String c(int param0) {
         if (param0 == 26146) {
-          if (!((ee) this).a((byte) -90)) {
-            if (qj.b(-26572) < 350L + ((ee) this).field_e) {
+          if (!this.a((byte) -90)) {
+            if (qj.b(-26572) < 350L + this.field_e) {
               return null;
             } else {
-              return ((ee) this).a(true);
+              return this.a(true);
             }
           } else {
             return null;
           }
         } else {
-          return null;
+          return (String) null;
         }
     }
 
     public final void b(int param0) {
         if (param0 != -17444) {
             ee.b(false);
-            ((ee) this).field_e = qj.b(-26572);
+            this.field_e = qj.b(-26572);
             return;
         }
-        ((ee) this).field_e = qj.b(-26572);
+        this.field_e = qj.b(-26572);
     }
 
     final static void b(boolean param0) {
         try {
+            boolean discarded$2 = false;
+            boolean discarded$3 = false;
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
             Throwable var2 = null;
             Runtime var2_ref = null;
             Long var3 = null;
-            Object var4 = null;
-            Object var5 = null;
+            Object[] var4 = null;
+            ll var5 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
                 L1: {
-                  var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
+                  var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
                   if (var1 == null) {
                     break L1;
                   } else {
                     try {
                       L2: {
                         var2_ref = Runtime.getRuntime();
-                        var4 = null;
-                        var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
+                        var4 = (Object[]) null;
+                        var3 = (Long) (var1.invoke((Object) (var2_ref), (Object[]) null));
                         wl.field_K = (int)(var3.longValue() / 1048576L) - -1;
                         decompiledRegionSelector0 = 0;
                         break L2;
@@ -273,8 +304,8 @@ abstract class ee implements pd {
                       if (param0) {
                         return;
                       } else {
-                        var5 = null;
-                        boolean discarded$2 = ee.a((ll) null, 125, 14, -99);
+                        var5 = (ll) null;
+                        discarded$2 = ee.a((ll) null, 125, 14, -99);
                         return;
                       }
                     } else {
@@ -292,8 +323,8 @@ abstract class ee implements pd {
               }
             }
             if (!param0) {
-              var5 = null;
-              boolean discarded$3 = ee.a((ll) null, 125, 14, -99);
+              var5 = (ll) null;
+              discarded$3 = ee.a((ll) null, 125, 14, -99);
               return;
             } else {
               return;
@@ -328,7 +359,7 @@ abstract class ee implements pd {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2_int = -29;
+            var2_int = 88 / ((-13 - param0) / 38);
             stackOut_0_0 = hd.a(param1, (byte) 59, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -337,23 +368,23 @@ abstract class ee implements pd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("ee.J(").append(127).append(',');
+            stackOut_2_0 = (RuntimeException) (var2);
+            stackOut_2_1 = new StringBuilder().append("ee.J(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -361,7 +392,7 @@ abstract class ee implements pd {
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -378,27 +409,23 @@ abstract class ee implements pd {
     }
 
     public final eh a(int param0) {
-        if (((ee) this).a((byte) -82)) {
+        if (this.a((byte) -82)) {
             return cg.field_Wb;
         }
         if (param0 > -65) {
-            ((ee) this).b(-88);
-            if (!(((ee) this).field_e + 350L <= qj.b(-26572))) {
+            this.b(-88);
+            if (!(this.field_e + 350L <= qj.b(-26572))) {
                 return da.field_f;
             }
-            return ((ee) this).b((byte) -66);
+            return this.b((byte) -66);
         }
-        if (!(((ee) this).field_e + 350L <= qj.b(-26572))) {
+        if (!(this.field_e + 350L <= qj.b(-26572))) {
             return da.field_f;
         }
-        return ((ee) this).b((byte) -66);
+        return this.b((byte) -66);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Arcane Book";
         field_d = new int[4];
         field_a = "Unpacking explosives";

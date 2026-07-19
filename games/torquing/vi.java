@@ -189,6 +189,16 @@ final class vi {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var11 = 0;
         int var12 = 0;
         var11 = -param8;
@@ -216,9 +226,9 @@ final class vi {
                         param6++;
                         continue L2;
                       } else {
-                        int incrementValue$10 = param3;
+                        incrementValue$10 = param3;
                         param3++;
-                        int incrementValue$11 = param2;
+                        incrementValue$11 = param2;
                         param2++;
                         param0[incrementValue$10] = param1[incrementValue$11];
                         param6++;
@@ -233,9 +243,9 @@ final class vi {
                       param2++;
                       break L3;
                     } else {
-                      int incrementValue$12 = param3;
+                      incrementValue$12 = param3;
                       param3++;
-                      int incrementValue$13 = param2;
+                      incrementValue$13 = param2;
                       param2++;
                       param0[incrementValue$12] = param1[incrementValue$13];
                       break L3;
@@ -248,9 +258,9 @@ final class vi {
                       param2++;
                       break L4;
                     } else {
-                      int incrementValue$14 = param3;
+                      incrementValue$14 = param3;
                       param3++;
-                      int incrementValue$15 = param2;
+                      incrementValue$15 = param2;
                       param2++;
                       param0[incrementValue$14] = param1[incrementValue$15];
                       break L4;
@@ -263,9 +273,9 @@ final class vi {
                       param2++;
                       break L5;
                     } else {
-                      int incrementValue$16 = param3;
+                      incrementValue$16 = param3;
                       param3++;
-                      int incrementValue$17 = param2;
+                      incrementValue$17 = param2;
                       param2++;
                       param0[incrementValue$16] = param1[incrementValue$17];
                       break L5;
@@ -278,9 +288,9 @@ final class vi {
                     param6++;
                     continue L1;
                   } else {
-                    int incrementValue$18 = param3;
+                    incrementValue$18 = param3;
                     param3++;
-                    int incrementValue$19 = param2;
+                    incrementValue$19 = param2;
                     param2++;
                     param0[incrementValue$18] = param1[incrementValue$19];
                     param6++;
@@ -299,6 +309,16 @@ final class vi {
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -330,9 +350,9 @@ final class vi {
                         var15++;
                         continue L2;
                       } else {
-                        int incrementValue$10 = param5;
+                        incrementValue$10 = param5;
                         param5++;
-                        int incrementValue$11 = param4;
+                        incrementValue$11 = param4;
                         param4++;
                         param0[incrementValue$10] = param2[param1[incrementValue$11] & 255];
                         param8++;
@@ -348,9 +368,9 @@ final class vi {
                       param4++;
                       break L3;
                     } else {
-                      int incrementValue$12 = param5;
+                      incrementValue$12 = param5;
                       param5++;
-                      int incrementValue$13 = param4;
+                      incrementValue$13 = param4;
                       param4++;
                       param0[incrementValue$12] = param2[param1[incrementValue$13] & 255];
                       break L3;
@@ -363,9 +383,9 @@ final class vi {
                       param4++;
                       break L4;
                     } else {
-                      int incrementValue$14 = param5;
+                      incrementValue$14 = param5;
                       param5++;
-                      int incrementValue$15 = param4;
+                      incrementValue$15 = param4;
                       param4++;
                       param0[incrementValue$14] = param2[param1[incrementValue$15] & 255];
                       break L4;
@@ -378,9 +398,9 @@ final class vi {
                       param4++;
                       break L5;
                     } else {
-                      int incrementValue$16 = param5;
+                      incrementValue$16 = param5;
                       param5++;
-                      int incrementValue$17 = param4;
+                      incrementValue$17 = param4;
                       param4++;
                       param0[incrementValue$16] = param2[param1[incrementValue$17] & 255];
                       break L5;
@@ -394,9 +414,9 @@ final class vi {
                     var15++;
                     continue L1;
                   } else {
-                    int incrementValue$18 = param5;
+                    incrementValue$18 = param5;
                     param5++;
-                    int incrementValue$19 = param4;
+                    incrementValue$19 = param4;
                     param4++;
                     param0[incrementValue$18] = param2[param1[incrementValue$19] & 255];
                     param8++;
@@ -416,10 +436,6 @@ final class vi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new int[]{0, 32800, 41120, 41380, 42405, 46565, 62965, 65015};
     }
 }

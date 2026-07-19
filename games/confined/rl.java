@@ -25,14 +25,10 @@ abstract class rl extends jl {
     }
 
     rl() {
-        ((rl) this).field_v = true;
+        this.field_v = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "rl.C(";
         field_s = null;
         field_u = new int[]{0, 0, 0, -65536, 0, 0, 0, 65536, 0, 0, 0, -65536};

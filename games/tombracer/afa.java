@@ -19,10 +19,6 @@ final class afa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "afa.A(";
         field_b = "Real-life threats";
     }

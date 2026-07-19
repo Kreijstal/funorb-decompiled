@@ -15,14 +15,14 @@ final class fua implements isa {
         if (param0 <= 88) {
             return true;
         }
-        return (param1 & 32768) != 0 ? true : false;
+        return (param1 & 32768 ^ -1) != -1 ? true : false;
     }
 
     public static void a(int param0) {
         field_f = null;
         field_a = null;
         if (param0 >= -118) {
-          field_h = null;
+          field_h = (int[]) null;
           field_b = null;
           field_h = null;
           field_e = null;
@@ -51,6 +51,7 @@ final class fua implements isa {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
@@ -76,17 +77,17 @@ final class fua implements isa {
               }
               L2: {
                 bea.b(var6_int, var7, var6_int + (param0.field_m + -2), var7 - -param0.field_p);
-                var8 = ((fua) this).field_d.field_z.d(124);
+                var8 = this.field_d.field_z.d(124);
                 if (var8 != null) {
                   var9 = var8.toString();
-                  ((fua) this).field_d.field_H.c(var9, var6_int + 2, -1 + (param0.field_p + ((fua) this).field_d.field_H.field_w >> 1) + var7, 10000536, -1);
-                  if (!((fua) this).field_d.b((byte) -34)) {
+                  this.field_d.field_H.c(var9, var6_int + 2, -1 + (param0.field_p + this.field_d.field_H.field_w >> 198752417) + var7, 10000536, -1);
+                  if (!this.field_d.b((byte) -34)) {
                     break L2;
                   } else {
-                    if (!var9.startsWith(((fua) this).field_d.field_w)) {
+                    if (!var9.startsWith(this.field_d.field_w)) {
                       break L2;
                     } else {
-                      var10 = ((fua) this).field_d.field_H.b(((fua) this).field_d.field_w);
+                      var10 = this.field_d.field_H.b(this.field_d.field_w);
                       bea.c(2 + var6_int, var7 - -2, var10, -4 + param0.field_p, 2188450, 100);
                       break L2;
                     }
@@ -96,32 +97,34 @@ final class fua implements isa {
                 }
               }
               bea.b();
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var6;
+            stackOut_12_0 = (RuntimeException) (var6);
             stackOut_12_1 = new StringBuilder().append("fua.B(");
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -129,23 +132,24 @@ final class fua implements isa {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     fua(rla param0) {
         try {
-            ((fua) this).field_d = param0;
+            this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "fua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "fua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new String[33];
         field_c[27] = "Vortex";
         field_c[11] = "Random Maze";

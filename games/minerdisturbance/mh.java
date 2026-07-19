@@ -10,10 +10,11 @@ final class mh implements uj {
     static je[][] field_e;
 
     final static boolean a(int[] param0, int param1) {
+        boolean discarded$2 = false;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        Object var4 = null;
+        int[] var4 = null;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -23,6 +24,7 @@ final class mh implements uj {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_8_0 = 0;
         int stackOut_5_0 = 0;
@@ -42,8 +44,8 @@ final class mh implements uj {
               if (param1 == -1) {
                 break L1;
               } else {
-                var4 = null;
-                boolean discarded$2 = mh.a((int[]) null, -37);
+                var4 = (int[]) null;
+                discarded$2 = mh.a((int[]) null, -37);
                 break L1;
               }
             }
@@ -51,15 +53,17 @@ final class mh implements uj {
               if (var2_int >= 8) {
                 stackOut_8_0 = 0;
                 stackIn_9_0 = stackOut_8_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                if (param0[var2_int] == 0) {
+                if (-1 == (param0[var2_int] ^ -1)) {
                   var2_int++;
                   continue L2;
                 } else {
                   stackOut_5_0 = 1;
                   stackIn_6_0 = stackOut_5_0;
-                  return stackIn_6_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             }
@@ -68,23 +72,23 @@ final class mh implements uj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_0 = (RuntimeException) (var2);
             stackOut_10_1 = new StringBuilder().append("mh.D(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -92,9 +96,13 @@ final class mh implements uj {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }
-        return stackIn_9_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0 != 0;
+        } else {
+          return stackIn_9_0 != 0;
+        }
     }
 
     public final void a(boolean param0) {
@@ -115,7 +123,7 @@ final class mh implements uj {
         var4 = MinerDisturbance.field_ab;
         try {
           L0: {
-            var1 = (Object) (Object) di.field_O;
+            var1 = di.field_O;
             synchronized (var1) {
               L1: {
                 L2: {
@@ -129,7 +137,7 @@ final class mh implements uj {
                         var2 = ib.field_b[dm.field_b];
                         dm.field_b = dm.field_b - -1 & 127;
                         if (var2 < 0) {
-                          qd.field_O[~var2] = false;
+                          qd.field_O[var2 ^ -1] = false;
                           continue L3;
                         } else {
                           qd.field_O[var2] = true;
@@ -140,7 +148,7 @@ final class mh implements uj {
                   } else {
                     var2 = 0;
                     L4: while (true) {
-                      if (var2 >= 112) {
+                      if ((var2 ^ -1) <= -113) {
                         cg.field_H = dm.field_b;
                         break L2;
                       } else {
@@ -151,7 +159,7 @@ final class mh implements uj {
                     }
                   }
                 }
-                var2 = 0;
+                var2 = -126 % ((param0 - -3) / 32);
                 ll.field_d = qf.field_n;
                 break L1;
               }
@@ -161,7 +169,7 @@ final class mh implements uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1_ref, "mh.C(" + 114 + ')');
+          throw lj.a((Throwable) ((Object) var1_ref), "mh.C(" + param0 + ')');
         }
     }
 
@@ -172,16 +180,12 @@ final class mh implements uj {
 
     public static void a(int param0) {
         field_b = null;
-        field_e = null;
+        field_e = (je[][]) null;
         field_d = null;
-        int var1 = 1;
+        int var1 = 103 % ((5 - param0) / 39);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new rc[5];
         field_a = Math.atan2(1.0, 0.0);
     }

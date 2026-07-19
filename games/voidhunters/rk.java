@@ -7,14 +7,14 @@ final class rk {
 
     public final int[] listmodes() {
         int var3 = 0;
-        java.awt.DisplayMode[] var4 = ((rk) this).field_a.getDisplayModes();
+        java.awt.DisplayMode[] var4 = this.field_a.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << 2];
+        int[] var2 = new int[var4.length << -1723248286];
         for (var3 = 0; var3 < var4.length; var3++) {
-            var2[var3 << 2] = var4[var3].getWidth();
-            var2[(var3 << 2) - -1] = var4[var3].getHeight();
-            var2[2 + (var3 << 2)] = var4[var3].getBitDepth();
-            var2[(var3 << 2) - -3] = var4[var3].getRefreshRate();
+            var2[var3 << -211861630] = var4[var3].getWidth();
+            var2[(var3 << -899692670) - -1] = var4[var3].getHeight();
+            var2[2 + (var3 << -1449058942)] = var4[var3].getBitDepth();
+            var2[(var3 << 1392035842) - -3] = var4[var3].getRefreshRate();
         }
         return var2;
     }
@@ -25,15 +25,15 @@ final class rk {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ((rk) this).field_b = ((rk) this).field_a.getDisplayMode();
-        if (null != ((rk) this).field_b) {
+        this.field_b = this.field_a.getDisplayMode();
+        if (null != this.field_b) {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
             this.a(83, param0);
             if (0 == param4) {
-              var6 = ((rk) this).field_b.getRefreshRate();
-              var7 = ((rk) this).field_a.getDisplayModes();
+              var6 = this.field_b.getRefreshRate();
+              var7 = this.field_a.getDisplayModes();
               var8 = 0;
               var9 = 0;
               L1: while (true) {
@@ -83,7 +83,7 @@ final class rk {
               break L0;
             }
           }
-          ((rk) this).field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+          this.field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
           return;
         } else {
           throw new NullPointerException();
@@ -91,12 +91,12 @@ final class rk {
     }
 
     public final void exit() {
-        if (!(((rk) this).field_b == null)) {
-            ((rk) this).field_a.setDisplayMode(((rk) this).field_b);
-            if (!((rk) this).field_a.getDisplayMode().equals(((rk) this).field_b)) {
+        if (!(this.field_b == null)) {
+            this.field_a.setDisplayMode(this.field_b);
+            if (!this.field_a.getDisplayMode().equals(this.field_b)) {
                 throw new RuntimeException("");
             }
-            ((rk) this).field_b = null;
+            this.field_b = null;
         }
         this.a(-127, (java.awt.Frame) null);
     }
@@ -124,7 +124,7 @@ final class rk {
                         try {
                             var5_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
                             var5_ref.setAccessible(true);
-                            if (!((Boolean) var5_ref.get((Object) (Object) ((rk) this).field_a)).booleanValue()) {
+                            if (!((Boolean) (var5_ref.get(this.field_a))).booleanValue()) {
                                 statePc = 5;
                             } else {
                                 statePc = 2;
@@ -138,7 +138,7 @@ final class rk {
                     }
                     case 2: {
                         try {
-                            var5_ref.set((Object) (Object) ((rk) this).field_a, (Object) (Object) Boolean.FALSE);
+                            var5_ref.set(this.field_a, Boolean.FALSE);
                             var4 = 1;
                             statePc = 5;
                             continue stateLoop;
@@ -155,7 +155,7 @@ final class rk {
                     }
                     case 5: {
                         try {
-                            ((rk) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
+                            this.field_a.setFullScreenWindow((java.awt.Window) ((Object) param1));
                             statePc = 6;
                             continue stateLoop;
                         } catch (Throwable stateCaught_5) {
@@ -175,7 +175,7 @@ final class rk {
                     case 7: {
                         try {
                             var5_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                            var5_ref.set((Object) (Object) ((rk) this).field_a, (Object) (Object) Boolean.TRUE);
+                            var5_ref.set(this.field_a, Boolean.TRUE);
                             statePc = 16;
                             continue stateLoop;
                         } catch (Throwable stateCaught_7) {
@@ -203,7 +203,7 @@ final class rk {
                     case 12: {
                         try {
                             var8_ref = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                            var8_ref.set((Object) (Object) ((rk) this).field_a, (Object) (Object) Boolean.TRUE);
+                            var8_ref.set(this.field_a, Boolean.TRUE);
                             statePc = 15;
                             continue stateLoop;
                         } catch (Throwable stateCaught_12) {
@@ -240,8 +240,8 @@ final class rk {
         int var4 = 0;
         java.awt.GraphicsDevice var5 = null;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
-        ((rk) this).field_a = var1.getDefaultScreenDevice();
-        if (((rk) this).field_a.isFullScreenSupported()) {
+        this.field_a = var1.getDefaultScreenDevice();
+        if (this.field_a.isFullScreenSupported()) {
           return;
         } else {
           var2 = var1.getScreenDevices();
@@ -254,7 +254,7 @@ final class rk {
               var5 = var3[var4];
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
-                  ((rk) this).field_a = var5;
+                  this.field_a = var5;
                   return;
                 } else {
                   var4++;

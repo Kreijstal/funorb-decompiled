@@ -44,6 +44,7 @@ final class bf {
     }
 
     final static void a(byte param0, int param1) {
+        boolean discarded$2 = false;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -60,7 +61,7 @@ final class bf {
                   if (param0 == -35) {
                     break L2;
                   } else {
-                    boolean discarded$2 = bf.a(112, 74, 60, -121, 40, -69, -113);
+                    discarded$2 = bf.a(112, 74, 60, -121, 40, -69, -113);
                     break L2;
                   }
                 }
@@ -83,7 +84,7 @@ final class bf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2, "bf.A(" + param0 + ',' + param1 + ')');
+          throw sh.a((Throwable) ((Object) var2), "bf.A(" + param0 + ',' + param1 + ')');
         }
     }
 

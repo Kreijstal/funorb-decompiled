@@ -7,11 +7,17 @@ final class kc {
     static String field_c;
 
     public static void a(boolean param0) {
+        if (!param0) {
+            return;
+        }
         field_c = null;
         field_a = null;
     }
 
     final static void a(int param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         RuntimeException var1 = null;
         Object var2 = null;
         int var2_int = 0;
@@ -21,6 +27,7 @@ final class kc {
         pb var6 = null;
         pb var7 = null;
         pb var8 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = stellarshard.field_B;
         try {
@@ -34,7 +41,7 @@ final class kc {
                 var7 = var6;
                 if (var6 == null) {
                   if (fj.field_f != null) {
-                    int discarded$3 = fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                    discarded$3 = fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                     break L1;
                   } else {
                     break L1;
@@ -44,81 +51,112 @@ final class kc {
                   break L1;
                 }
               }
-              L2: {
-                if (cj.field_c <= ha.field_w) {
-                  break L2;
-                } else {
-                  var7 = ed.field_a[tc.field_w];
-                  if (var7 == null) {
+              if (param0 >= 18) {
+                L2: {
+                  if (cj.field_c <= ha.field_w) {
                     break L2;
                   } else {
-                    var2_int = (var7.field_w - -60) * ha.field_w / cj.field_c;
-                    var3 = -30 + var2_int;
-                    if (!nj.field_g) {
-                      ua.a((-var3 + var7.field_w) * 256 / 30, -256 * var3 / 30, var7, 0, 245, 199);
+                    var7 = ed.field_a[tc.field_w];
+                    if (var7 == null) {
                       break L2;
                     } else {
-                      ua.a(var3 * -256 / 30, 256 * (-var3 + var7.field_w) / 30, var7, 0, 245, 199);
-                      break L2;
+                      var2_int = (var7.field_w - -60) * ha.field_w / cj.field_c;
+                      var3 = -30 + var2_int;
+                      if (!nj.field_g) {
+                        ua.a((-var3 + var7.field_w) * 256 / 30, -256 * var3 / 30, var7, 0, 245, 199);
+                        break L2;
+                      } else {
+                        ua.a(var3 * -256 / 30, 256 * (-var3 + var7.field_w) / 30, var7, 0, 245, 199);
+                        break L2;
+                      }
                     }
                   }
                 }
-              }
-              L3: {
-                if (fj.field_f != null) {
-                  var2 = null;
-                  var5 = 0;
-                  var3 = var5;
-                  L4: while (true) {
-                    if (var5 >= ed.field_a.length) {
-                      if (var2 == null) {
-                        break L3;
-                      } else {
-                        int discarded$4 = fj.field_f.a("Screenshot(s) " + (String) var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
-                        break L3;
-                      }
-                    } else {
-                      L5: {
-                        var8 = ed.field_a[var5];
-                        if (var8 == null) {
-                          break L5;
+                L3: {
+                  if (fj.field_f != null) {
+                    var2 = null;
+                    var5 = 0;
+                    var3 = var5;
+                    L4: while (true) {
+                      if (var5 >= ed.field_a.length) {
+                        if (var2 == null) {
+                          break L3;
                         } else {
-                          break L5;
+                          discarded$4 = fj.field_f.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                          break L3;
+                        }
+                      } else {
+                        var8 = ed.field_a[var5];
+                        if (var8 != null) {
+                          L5: {
+                            if (-366 != (var8.field_w ^ -1)) {
+                              break L5;
+                            } else {
+                              if ((var8.field_x ^ -1) != -140) {
+                                break L5;
+                              } else {
+                                var5++;
+                                continue L4;
+                              }
+                            }
+                          }
+                          L6: {
+                            if (var2 == null) {
+                              var2 = Integer.toString(var5);
+                              break L6;
+                            } else {
+                              var2 = (String) (var2) + ", " + var5;
+                              break L6;
+                            }
+                          }
+                          var5++;
+                          continue L4;
+                        } else {
+                          var5++;
+                          continue L4;
                         }
                       }
-                      var5++;
-                      continue L4;
                     }
+                  } else {
+                    break L3;
                   }
-                } else {
-                  break L3;
                 }
+                decompiledRegionSelector0 = 2;
+                break L0;
+              } else {
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
-              break L0;
             } else {
-              L6: {
+              L7: {
                 if (fj.field_f != null) {
-                  int discarded$5 = fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
-                  break L6;
+                  discarded$5 = fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                  break L7;
                 } else {
-                  break L6;
+                  break L7;
                 }
               }
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "kc.A(" + 36 + ')');
+          throw ma.a((Throwable) ((Object) var1), "kc.A(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
     }
 }

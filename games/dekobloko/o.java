@@ -12,12 +12,24 @@ final class o {
     static String field_c;
 
     public static void a(boolean param0) {
-        field_h = null;
-        field_g = null;
-        field_e = null;
-        field_c = null;
-        field_a = null;
-        field_f = null;
+        if (param0) {
+          field_d = 7;
+          field_h = null;
+          field_g = null;
+          field_e = null;
+          field_c = null;
+          field_a = null;
+          field_f = null;
+          return;
+        } else {
+          field_h = null;
+          field_g = null;
+          field_e = null;
+          field_c = null;
+          field_a = null;
+          field_f = null;
+          return;
+        }
     }
 
     final static int a(int param0, int param1, int param2, int param3) {

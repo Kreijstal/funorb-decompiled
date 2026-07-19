@@ -11,7 +11,7 @@ final class df extends fj {
 
     final void a(byte param0, int[] param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        byte[] var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -31,12 +31,12 @@ final class df extends fj {
         try {
           L0: {
             L1: {
-              ((df) this).field_t = new gn(param1);
+              this.field_t = new gn(param1);
               if (param0 < -110) {
                 break L1;
               } else {
-                var4 = null;
-                ((df) this).b(42, -84, (byte[]) null, 89);
+                var4 = (byte[]) null;
+                this.b(42, -84, (byte[]) null, 89);
                 break L1;
               }
             }
@@ -46,23 +46,23 @@ final class df extends fj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("df.A(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -70,30 +70,34 @@ final class df extends fj {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     public static void k(int param0) {
+        if (param0 != 3) {
+            return;
+        }
         field_r = null;
         field_p = null;
         field_q = null;
     }
 
     final void f(int param0, int param1) {
-        int fieldTemp$0 = ((df) this).field_n;
-        ((df) this).field_n = ((df) this).field_n + 1;
-        ((df) this).field_j[fieldTemp$0] = (byte)(((df) this).field_t.b((byte) -103) + param1);
+        int fieldTemp$0 = this.field_n;
+        this.field_n = this.field_n + 1;
+        this.field_j[fieldTemp$0] = (byte)(this.field_t.b((byte) -103) + param1);
         int var3 = -58 / ((param0 - 23) / 48);
     }
 
     final int a(boolean param0) {
+        int fieldTemp$2 = 0;
         if (!param0) {
           return -70;
         } else {
-          int fieldTemp$2 = ((df) this).field_n;
-          ((df) this).field_n = ((df) this).field_n + 1;
-          return 255 & ((df) this).field_j[fieldTemp$2] - ((df) this).field_t.b((byte) -103);
+          fieldTemp$2 = this.field_n;
+          this.field_n = this.field_n + 1;
+          return 255 & this.field_j[fieldTemp$2] - this.field_t.b((byte) -103);
         }
     }
 
@@ -107,35 +111,36 @@ final class df extends fj {
             ob.field_b = param2;
             int var3_int = -112 % ((-29 - param1) / 32);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "df.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "df.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void j(byte param0) {
-        ((df) this).field_s = ((df) this).field_n * 8;
+        this.field_s = this.field_n * 8;
         if (param0 > -1) {
-            field_p = null;
+            field_p = (String) null;
         }
     }
 
     final int e(int param0, int param1) {
+        int incrementValue$0 = 0;
         int var7 = Torquing.field_u;
-        int var3 = ((df) this).field_s >> 3;
-        int var4 = -(7 & ((df) this).field_s) + 8;
+        int var3 = this.field_s >> 1185944515;
+        int var4 = -(7 & this.field_s) + 8;
         int var5 = 0;
-        ((df) this).field_s = ((df) this).field_s + param0;
+        this.field_s = this.field_s + param0;
         while (var4 < param0) {
-            int incrementValue$0 = var3;
+            incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((la.field_h[var4] & ((df) this).field_j[incrementValue$0]) << param0 + -var4);
+            var5 = var5 + ((la.field_h[var4] & this.field_j[incrementValue$0]) << param0 + -var4);
             param0 = param0 - var4;
             var4 = 8;
         }
         int var6 = -111 % ((param1 - -4) / 53);
         if (param0 != var4) {
-            var5 = var5 + (((df) this).field_j[var3] >> -param0 + var4 & la.field_h[param0]);
+            var5 = var5 + (this.field_j[var3] >> -param0 + var4 & la.field_h[param0]);
         } else {
-            var5 = var5 + (((df) this).field_j[var3] & la.field_h[var4]);
+            var5 = var5 + (this.field_j[var3] & la.field_h[var4]);
         }
         return var5;
     }
@@ -192,23 +197,23 @@ final class df extends fj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_0 = (RuntimeException) (var2);
             stackOut_6_1 = new StringBuilder().append("df.E(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -216,12 +221,13 @@ final class df extends fj {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_5_0 != 0;
     }
 
     final void b(int param0, int param1, byte[] param2, int param3) {
+        int fieldTemp$5 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -248,7 +254,7 @@ final class df extends fj {
               if (param1 == 8) {
                 break L1;
               } else {
-                ((df) this).field_t = null;
+                this.field_t = (gn) null;
                 break L1;
               }
             }
@@ -257,9 +263,9 @@ final class df extends fj {
               if (param3 <= var5_int) {
                 break L0;
               } else {
-                int fieldTemp$5 = ((df) this).field_n;
-                ((df) this).field_n = ((df) this).field_n + 1;
-                param2[var5_int - -param0] = (byte)(((df) this).field_j[fieldTemp$5] + -((df) this).field_t.b((byte) -103));
+                fieldTemp$5 = this.field_n;
+                this.field_n = this.field_n + 1;
+                param2[var5_int - -param0] = (byte)(this.field_j[fieldTemp$5] + -this.field_t.b((byte) -103));
                 var5_int++;
                 continue L2;
               }
@@ -269,23 +275,23 @@ final class df extends fj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_0 = (RuntimeException) (var5);
             stackOut_7_1 = new StringBuilder().append("df.C(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -293,7 +299,7 @@ final class df extends fj {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param3 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ')');
         }
     }
 
@@ -376,16 +382,16 @@ final class df extends fj {
               if (4096 < var24) {
                 break L0;
               } else {
-                var25 = var24 * var24 >> 12;
-                var26 = var24 * var25 >> 12;
+                var25 = var24 * var24 >> 1273181388;
+                var26 = var24 * var25 >> 2007909612;
                 var27 = var18 * var26;
                 var28 = var19 * var26;
                 var29 = var20 * var25;
                 var30 = var21 * var25;
                 var31 = var22 * var24;
                 var32 = var24 * var23;
-                var33 = param3 - -(var27 + (var29 + var31) >> 12);
-                var34 = (var30 + var28 - -var32 >> 12) + param5;
+                var33 = param3 - -(var27 + (var29 + var31) >> -749075572);
+                var34 = (var30 + var28 - -var32 >> 299422732) + param5;
                 oh.a(var10_int, var11, var34, (byte) -128, var33, param7);
                 var11 = var34;
                 var10_int = var33;
@@ -397,17 +403,17 @@ final class df extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var10, "df.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw rb.a((Throwable) ((Object) var10), "df.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
     final void j(int param0) {
         if (param0 > -126) {
-          field_r = null;
-          ((df) this).field_n = (7 + ((df) this).field_s) / 8;
+          field_r = (cd) null;
+          this.field_n = (7 + this.field_s) / 8;
           return;
         } else {
-          ((df) this).field_n = (7 + ((df) this).field_s) / 8;
+          this.field_n = (7 + this.field_s) / 8;
           return;
         }
     }
@@ -423,6 +429,7 @@ final class df extends fj {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
@@ -447,32 +454,34 @@ final class df extends fj {
                   break L1;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) runtimeException;
+            stackOut_5_0 = (RuntimeException) (runtimeException);
             stackOut_5_1 = new StringBuilder().append("df.G(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -480,15 +489,16 @@ final class df extends fj {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = 64;
         field_r = new cd();
         field_p = "Type your age in years";

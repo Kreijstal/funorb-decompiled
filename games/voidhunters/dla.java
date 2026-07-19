@@ -12,7 +12,7 @@ final class dla {
     private pe field_f;
 
     final static int a(int param0) {
-        int var1 = -1;
+        int var1 = -61 % ((47 - param0) / 45);
         return cd.field_c;
     }
 
@@ -29,6 +29,7 @@ final class dla {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
@@ -46,10 +47,10 @@ final class dla {
                 break L1;
               } else {
                 L2: {
-                  if (var5_int == 2) {
+                  if ((var5_int ^ -1) == -3) {
                     break L2;
                   } else {
-                    if (var5_int == 1) {
+                    if (-2 == (var5_int ^ -1)) {
                       break L2;
                     } else {
                       break L1;
@@ -64,37 +65,39 @@ final class dla {
             var6.a(new aoa(), 4);
             var6.h(17704, param3);
             if (param2 <= -26) {
-              var7 = -((dla) this).field_f.g((byte) -122) / 2 + hob.a(param1, ((dla) this).field_f.g((byte) -122), 119);
-              var8 = -((dla) this).field_f.m(1) / 2 - -hob.a(param1, ((dla) this).field_f.m(1), 120);
+              var7 = -this.field_f.g((byte) -122) / 2 + hob.a(param1, this.field_f.g((byte) -122), 119);
+              var8 = -this.field_f.m(1) / 2 - -hob.a(param1, this.field_f.m(1), 120);
               var6.a(var7, var8, (byte) -72);
               var6.a(hob.a(param1, 8192, 126), -85);
-              ((dla) this).field_f.a(var6, (byte) 125);
+              this.field_f.a(var6, (byte) 125);
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) runtimeException;
+            stackOut_9_0 = (RuntimeException) (runtimeException);
             stackOut_9_1 = new StringBuilder().append("dla.B(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -102,13 +105,21 @@ final class dla {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ',' + param3 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static String c(int param0) {
         if (null == kca.field_a) {
             return "";
+        }
+        if (param0 <= 106) {
+            field_d = 106;
         }
         return kca.field_a;
     }
@@ -136,54 +147,54 @@ final class dla {
         nbb var18 = null;
         L0: {
           var16 = VoidHunters.field_G;
-          var3 = ((dla) this).field_b.a(true, ip.field_p.width) + -((dla) this).field_b.a(true, 0);
-          var4 = ((dla) this).field_b.a(0, ip.field_p.height) + -((dla) this).field_b.a(0, 0);
-          if (var3 != ((dla) this).field_f.g((byte) -122)) {
-            ((dla) this).field_f.a(var3, (byte) 113);
-            ((dla) this).field_f.e(var4, 0);
+          var3 = this.field_b.a(true, ip.field_p.width) + -this.field_b.a(true, 0);
+          var4 = this.field_b.a(0, ip.field_p.height) + -this.field_b.a(0, 0);
+          if (var3 != this.field_f.g((byte) -122)) {
+            this.field_f.a(var3, (byte) 113);
+            this.field_f.e(var4, 0);
             break L0;
           } else {
-            if (((dla) this).field_f.m(1) == var4) {
+            if (this.field_f.m(1) == var4) {
               break L0;
             } else {
-              ((dla) this).field_f.a(var3, (byte) 113);
-              ((dla) this).field_f.e(var4, 0);
+              this.field_f.a(var3, (byte) 113);
+              this.field_f.e(var4, 0);
               break L0;
             }
           }
         }
         L1: {
-          ((dla) this).field_b.field_e = ip.field_p.height / 2;
-          ((dla) this).field_b.field_d = ip.field_p.width / 2;
-          ((dla) this).field_b.a(ip.field_p.height, 0, -72, ip.field_p.width, 0);
-          hna.a(((dla) this).field_f, ((dla) this).field_b, false, (byte) -59);
-          ((dla) this).field_f.a(((dla) this).field_b, (byte) 85, ((dla) this).field_a, (sg) null);
-          var5 = ((dla) this).field_b.a(true, pk.field_o);
-          var6 = ((dla) this).field_b.a(0, noa.field_q);
+          this.field_b.field_e = ip.field_p.height / 2;
+          this.field_b.field_d = ip.field_p.width / 2;
+          this.field_b.a(ip.field_p.height, 0, -72, ip.field_p.width, 0);
+          hna.a(this.field_f, this.field_b, false, (byte) -59);
+          this.field_f.a(this.field_b, (byte) 85, this.field_a, (sg) null);
+          var5 = this.field_b.a(true, pk.field_o);
+          var6 = this.field_b.a(0, noa.field_q);
           if (!param0) {
             break L1;
           } else {
             L2: {
-              if (pk.field_o != -1) {
+              if (0 != (pk.field_o ^ -1)) {
                 break L2;
               } else {
-                if (noa.field_q == -1) {
+                if ((noa.field_q ^ -1) == 0) {
                   break L1;
                 } else {
                   break L2;
                 }
               }
             }
-            var17 = ((dla) this).field_f.h((byte) -33);
+            var17 = this.field_f.h((byte) -33);
             var7 = var17;
             var8 = -66 % ((param1 - -62) / 63);
             var9_int = 0;
             L3: while (true) {
               if (var9_int >= var17.length) {
                 L4: {
-                  var18 = ((dla) this).field_f.a(true, var6, var5, var5, var6);
+                  var18 = this.field_f.a(true, var6, var5, var5, var6);
                   if (var18 != null) {
-                    var8 = var18.g(-71) << 2;
+                    var8 = var18.g(-71) << 92877506;
                     var9 = me.a(var18.field_k, (byte) 106);
                     var10 = var18.field_k.b(true);
                     var11 = -var5 + var10;
@@ -191,9 +202,9 @@ final class dla {
                     var13 = -var6 + var12;
                     var14 = ar.a(var11, (byte) 106, var13);
                     if (var14 <= var8) {
-                      var15 = ((dla) this).field_b.a(var10, (byte) 116);
-                      cka.a(1, var9, 16777215, ((dla) this).field_b.b(true, -10000 + var12), -(kga.a(-51, var9) >> 1) + var15, 4266);
-                      c.a(((dla) this).field_b.b(true, var12), var15, -(kga.a(-100, var9) >> 2) + var15, ((dla) this).field_b.b(true, -10000 + var12), -16777216, 16777215);
+                      var15 = this.field_b.a(var10, (byte) 116);
+                      cka.a(1, var9, 16777215, this.field_b.b(true, -10000 + var12), -(kga.a(-51, var9) >> 1515080225) + var15, 4266);
+                      c.a(this.field_b.b(true, var12), var15, -(kga.a(-100, var9) >> -1525052286) + var15, this.field_b.b(true, -10000 + var12), -16777216, 16777215);
                       break L4;
                     } else {
                       break L4;
@@ -213,9 +224,9 @@ final class dla {
                     var12_ref_String = me.a(var11_ref_ml, (byte) 72);
                     var13 = var11_ref_ml.b(true);
                     var14 = var11_ref_ml.a((byte) 111);
-                    var15 = ((dla) this).field_b.a(var13, (byte) 115);
-                    cka.a(1, var12_ref_String, 16777215, ((dla) this).field_b.b(true, -10000 + var14), -(kga.a(112, var12_ref_String) >> 1) + var15, 4266);
-                    c.a(((dla) this).field_b.b(true, var14), var15, -(kga.a(-77, var12_ref_String) >> 2) + var15, ((dla) this).field_b.b(true, -10000 + var14), -16777216, 16777215);
+                    var15 = this.field_b.a(var13, (byte) 115);
+                    cka.a(1, var12_ref_String, 16777215, this.field_b.b(true, -10000 + var14), -(kga.a(112, var12_ref_String) >> -921736255) + var15, 4266);
+                    c.a(this.field_b.b(true, var14), var15, -(kga.a(-77, var12_ref_String) >> 632747554) + var15, this.field_b.b(true, -10000 + var14), -16777216, 16777215);
                     return;
                   } else {
                     var9_int++;
@@ -245,7 +256,7 @@ final class dla {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Object var13 = null;
+        lta var13 = null;
         sg[] var14 = null;
         nbb[] var15 = null;
         tfa[] var16 = null;
@@ -256,25 +267,25 @@ final class dla {
         L0: {
           L1: {
             var12 = VoidHunters.field_G;
-            var13 = null;
+            var13 = (lta) null;
             hra.a((lta) null, -8077);
-            ka.a(((dla) this).field_a, -19266);
+            ka.a(this.field_a, -19266);
             var16 = new tfa[]{};
             var3 = new lbb();
             var4 = new nwa();
-            ((dla) this).field_f.a(1799937864, true, var4, var16, var3, ((dla) this).field_a, var16);
-            ((dla) this).field_a = ((dla) this).field_a + 1;
-            if (((dla) this).field_f.f(0, param0 + -13766) == -1) {
+            this.field_f.a(1799937864, true, var4, var16, var3, this.field_a, var16);
+            this.field_a = this.field_a + 1;
+            if (this.field_f.f(0, param0 + -13766) == 0) {
               break L1;
             } else {
-              if (-1 != ((dla) this).field_f.f(1, -13766)) {
+              if (-1 != (this.field_f.f(1, -13766) ^ -1)) {
                 break L0;
               } else {
                 break L1;
               }
             }
           }
-          var5 = ((dla) this).field_f.d(1000);
+          var5 = this.field_f.d(1000);
           var6 = 0;
           var7_int = 1;
           var14 = var5;
@@ -290,7 +301,7 @@ final class dla {
                   if (var10_ref_sg.q((byte) 78) < unb.field_p) {
                     var6 = mjb.b(param0 ^ 21957, var10_ref_sg.q((byte) 102));
                     if (1 != var10_ref_sg.field_k.k(0)) {
-                      if (var10_ref_sg.field_k.k(0) != 2) {
+                      if ((var10_ref_sg.field_k.k(0) ^ -1) != -3) {
                         stackOut_13_0 = 1;
                         stackIn_15_0 = stackOut_13_0;
                         var7_int = stackIn_15_0;
@@ -318,7 +329,7 @@ final class dla {
             break L0;
           }
         }
-        nbb[] dupTemp$1 = ((dla) this).field_f.h((byte) -33);
+        nbb[] dupTemp$1 = this.field_f.h((byte) -33);
         var15 = dupTemp$1;
         var5_array = dupTemp$1;
         var6 = param0;
@@ -326,7 +337,7 @@ final class dla {
         L4: while (true) {
           if (var7_int >= var15.length) {
             L5: {
-              if (var6 <= 100) {
+              if (-101 <= (var6 ^ -1)) {
                 break L5;
               } else {
                 var7 = null;
@@ -345,7 +356,7 @@ final class dla {
                           var11++;
                           continue L6;
                         } else {
-                          var7 = (Object) (Object) var15[var11];
+                          var7 = var15[var11];
                           break L7;
                         }
                       } else {
@@ -357,7 +368,7 @@ final class dla {
                   if (var7 == null) {
                     break L5;
                   } else {
-                    ((dla) this).field_f.a(-118, 1, (anb) var7);
+                    this.field_f.a(-118, 1, (anb) (var7));
                     break L5;
                   }
                 }
@@ -382,6 +393,9 @@ final class dla {
     }
 
     public static void a(byte param0) {
+        if (param0 != 101) {
+            return;
+        }
         field_e = null;
     }
 
@@ -470,12 +484,12 @@ final class dla {
         Throwable decompiledCaughtException = null;
         L0: {
           L1: {
-            ((dla) this).field_f = new pe(0);
-            ((dla) this).field_b = new lta();
-            var1 = ((dla) this).field_b.a(true, ip.field_p.width) - ((dla) this).field_b.a(true, 0);
-            var2 = ((dla) this).field_b.a(0, ip.field_p.height) + -((dla) this).field_b.a(0, 0);
-            ((dla) this).field_f.a(var1, (byte) -93);
-            ((dla) this).field_f.e(var2, 0);
+            this.field_f = new pe(0);
+            this.field_b = new lta();
+            var1 = this.field_b.a(true, ip.field_p.width) - this.field_b.a(true, 0);
+            var2 = this.field_b.a(0, ip.field_p.height) + -this.field_b.a(0, 0);
+            this.field_f.a(var1, (byte) -93);
+            this.field_f.e(var2, 0);
             var3 = new Random();
             if (null == es.field_b) {
               break L1;
@@ -490,7 +504,7 @@ final class dla {
                     var5_ref_sg.h(17704, 3);
                     var5_ref_sg.a(new aoa(), 4);
                     var5_ref_sg.a(hob.a(var3, 8192, 122), -67);
-                    ((dla) this).field_f.a(var5_ref_sg, (byte) 107);
+                    this.field_f.a(var5_ref_sg, (byte) 107);
                     break L2;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -499,7 +513,7 @@ final class dla {
                     var4_ref_Exception = (Exception) (Object) decompiledCaughtException;
                     es.field_b.field_f = null;
                     eg.e((byte) -111);
-                    gna.a((Throwable) (Object) var4_ref_Exception, "player_gamedata version " + es.field_b.field_d + " blueprint is corrupted", 0);
+                    gna.a((Throwable) ((Object) var4_ref_Exception), "player_gamedata version " + es.field_b.field_d + " blueprint is corrupted", 0);
                     break L3;
                   }
                 }
@@ -509,7 +523,7 @@ final class dla {
           }
           var4 = 0;
           L4: while (true) {
-            if (var4 >= 2) {
+            if ((var4 ^ -1) <= -3) {
               break L0;
             } else {
               var5 = var4 % 2;
@@ -520,17 +534,13 @@ final class dla {
           }
         }
         var9 = new crb(new ml(49));
-        var5 = -((dla) this).field_f.g((byte) -122) / 2 - -hob.a(var3, ((dla) this).field_f.g((byte) -122), 120);
-        var6 = -((dla) this).field_f.m(1) / 2 + hob.a(var3, ((dla) this).field_f.m(1), 123);
+        var5 = -this.field_f.g((byte) -122) / 2 - -hob.a(var3, this.field_f.g((byte) -122), 120);
+        var6 = -this.field_f.m(1) / 2 + hob.a(var3, this.field_f.m(1), 123);
         var9.a(var5, var6, (byte) 43);
-        ((dla) this).field_f.a((byte) 126, var9);
+        this.field_f.a((byte) 126, var9);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 1024;
         field_d = 4;
     }

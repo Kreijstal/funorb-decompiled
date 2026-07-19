@@ -23,10 +23,6 @@ final class be {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "be.A(";
         field_a = "EXCLUSIVE";
         field_b = "PULSE POWER:";

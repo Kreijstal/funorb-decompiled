@@ -36,7 +36,7 @@ public class PixelBuffer extends jaclib.peer.nca implements jaclib.memory.Buffer
         int stackOut_10_0 = 0;
         int stackOut_10_1 = 0;
         L0: {
-          if (param1 >= 0) {
+          if ((param1 ^ -1) <= -1) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -101,7 +101,7 @@ public class PixelBuffer extends jaclib.peer.nca implements jaclib.memory.Buffer
           }
         }
         if ((stackIn_12_0 | stackIn_12_1) == 0) {
-          if (((jagdx.PixelBuffer) this).getSize() < param2 - -(4 * param3)) {
+          if (this.getSize() < param2 - -(4 * param3)) {
             throw new jagdx.eva();
           } else {
             this.puti(param0, param1, param2, param3);
@@ -160,7 +160,7 @@ public class PixelBuffer extends jaclib.peer.nca implements jaclib.memory.Buffer
         int stackOut_10_1 = 0;
         int stackOut_10_2 = 0;
         L0: {
-          if (param2 >= 0) {
+          if (-1 >= (param2 ^ -1)) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -239,7 +239,7 @@ public class PixelBuffer extends jaclib.peer.nca implements jaclib.memory.Buffer
           }
         }
         if ((stackIn_12_0 | (stackIn_12_1 | stackIn_12_2)) == 0) {
-          if (((jagdx.PixelBuffer) this).getSize() < param2 - -param3) {
+          if (this.getSize() < param2 - -param3) {
             throw new jagdx.eva();
           } else {
             this.putub(param0, param1, param2, param3);

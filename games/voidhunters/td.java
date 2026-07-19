@@ -5,11 +5,11 @@ import java.io.*;
 
 final class td extends rqa {
     final static String a(int param0, int param1) {
-        if (param0 != 0) {
-          if (param0 != 1) {
+        if (-1 != (param0 ^ -1)) {
+          if ((param0 ^ -1) != -2) {
             if (param1 > 88) {
               if (param0 != 2) {
-                if (param0 != 3) {
+                if ((param0 ^ -1) != -4) {
                   if (param0 != 4) {
                     if (param0 != 5) {
                       if (6 == param0) {
@@ -30,7 +30,7 @@ final class td extends rqa {
                 return null;
               }
             } else {
-              return null;
+              return (String) null;
             }
           } else {
             return eia.field_r;
@@ -42,7 +42,7 @@ final class td extends rqa {
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
+        File var4 = null;
         nc stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -67,12 +67,12 @@ final class td extends rqa {
               if (param1 <= -119) {
                 break L1;
               } else {
-                var4 = null;
+                var4 = (File) null;
                 td.a((byte) -64, (String) null, (File) null);
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) frb.a(224, 118));
+            stackOut_2_0 = new nc(frb.a(224, 118));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -80,23 +80,23 @@ final class td extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("td.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -104,7 +104,7 @@ final class td extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -114,11 +114,12 @@ final class td extends rqa {
     }
 
     final static void a(byte param0, String param1, File param2) {
+        Object discarded$0 = null;
         try {
-            Object discarded$0 = jma.field_q.put((Object) (Object) param1, (Object) (Object) param2);
+            discarded$0 = jma.field_q.put(param1, param2);
             int var3_int = 97 / ((63 - param0) / 59);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "td.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "td.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

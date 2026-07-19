@@ -20,7 +20,7 @@ final class kj extends nv implements ut {
     }
 
     final int a(int param0, int param1) {
-        param0 = ((kj) this).field_n.a(121, param0);
+        param0 = this.field_n.a(121, param0);
         if (param1 > -48) {
             return 47;
         }
@@ -28,44 +28,46 @@ final class kj extends nv implements ut {
     }
 
     private final boolean r(int param0) {
-        int var2 = ((kj) this).m((byte) 19).g(-25787);
-        int var3 = ua.a(var2 - (4096 + ((kj) this).field_v), -120);
-        var3 = dfa.a(var3, 8192, 109);
+        int var2 = this.m((byte) 19).g(-25787);
+        int var3 = ua.a(var2 - (4096 + this.field_v), -120);
+        var3 = dfa.a(var3, param0, 109);
         if (!(4096 >= var3)) {
             var3 = 8192 - var3;
         }
-        return ((kj) this).field_u / 2 >= var3 ? true : false;
+        return this.field_u / 2 >= var3 ? true : false;
     }
 
     final void a(boolean param0, fsa param1) {
         try {
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "kj.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "kj.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final boolean l(int param0) {
-        int var2 = ((kj) this).field_g.g(-25787);
-        int var3 = ua.a(var2 + -((kj) this).field_v, -113);
-        var3 = dfa.a(var3, 8192, -108);
-        if (var3 > 4096) {
+        int var2 = this.field_g.g(-25787);
+        int var3 = ua.a(var2 + -this.field_v, -113);
+        var3 = dfa.a(var3, param0, param0 ^ -8300);
+        if (-4097 > (var3 ^ -1)) {
             var3 = -var3 + 8192;
         }
-        return ((kj) this).field_o / 2 >= var3 ? true : false;
+        return this.field_o / 2 >= var3 ? true : false;
     }
 
     public final int g(byte param0) {
+        int discarded$0 = 0;
         if (param0 != -108) {
-            int discarded$0 = ((kj) this).g((byte) -25);
+            discarded$0 = this.g((byte) -25);
             return 7798954;
         }
         return 7798954;
     }
 
     final int a(boolean param0) {
+        int discarded$0 = 0;
         if (param0) {
-            int discarded$0 = ((kj) this).a(-15, 107);
+            discarded$0 = this.a(-15, 107);
             return 22;
         }
         return 22;
@@ -80,20 +82,61 @@ final class kj extends nv implements ut {
 
     public final jma k(byte param0) {
         if (param0 >= -67) {
-            ((kj) this).field_v = 68;
-            return ((kj) this).field_n;
+            this.field_v = 68;
+            return this.field_n;
         }
-        return ((kj) this).field_n;
+        return this.field_n;
     }
 
     private final boolean e(boolean param0) {
-        int var2 = ((kj) this).field_p >> 16;
+        int var2 = 0;
+        hca var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        var2 = this.field_p >> 1957873616;
         var2 = var2 * var2;
-        hca var3 = ((kj) this).m((byte) 19);
-        int var4 = ((kj) this).field_g.d(3) - var3.d(3) >> 16;
-        int var5 = ((kj) this).field_g.e(9648) + -var3.e(9648) >> 16;
-        int var6 = var4 * var4 - -(var5 * var5);
-        return var6 < var2 ? true : false;
+        var3 = this.m((byte) 19);
+        if (param0) {
+          L0: {
+            this.field_s = false;
+            var4 = this.field_g.d(3) - var3.d(3) >> -893881776;
+            var5 = this.field_g.e(9648) + -var3.e(9648) >> -1477182736;
+            var6 = var4 * var4 - -(var5 * var5);
+            if (var6 >= var2) {
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = 1;
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+          return stackIn_8_0 != 0;
+        } else {
+          L1: {
+            var4 = this.field_g.d(3) - var3.d(3) >> -893881776;
+            var5 = this.field_g.e(9648) + -var3.e(9648) >> -1477182736;
+            var6 = var4 * var4 - -(var5 * var5);
+            if (var6 >= var2) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
+        }
     }
 
     kj(la param0, kh param1, boolean param2) {
@@ -172,7 +215,7 @@ final class kj extends nv implements ut {
               stackOut_1_0 = this;
               stackIn_3_0 = stackOut_1_0;
               stackIn_2_0 = stackOut_1_0;
-              if (param1.b((byte) 44, 1) == 1) {
+              if ((param1.b((byte) 44, 1) ^ -1) == -2) {
                 stackOut_3_0 = this;
                 stackOut_3_1 = 1;
                 stackIn_4_0 = stackOut_3_0;
@@ -187,11 +230,11 @@ final class kj extends nv implements ut {
               }
             }
             L2: {
-              ((kj) this).field_s = stackIn_4_1 != 0;
-              if (!((kj) this).field_s) {
+              ((kj) (this)).field_s = stackIn_4_1 != 0;
+              if (!this.field_s) {
                 break L2;
               } else {
-                ((kj) this).field_u = oo.a(8, 8192, 0, param1.b((byte) 44, 8));
+                this.field_u = oo.a(8, 8192, 0, param1.b((byte) 44, 8));
                 break L2;
               }
             }
@@ -199,7 +242,7 @@ final class kj extends nv implements ut {
               stackOut_6_0 = this;
               stackIn_8_0 = stackOut_6_0;
               stackIn_7_0 = stackOut_6_0;
-              if (param1.b((byte) 44, 1) == 1) {
+              if (-2 == (param1.b((byte) 44, 1) ^ -1)) {
                 stackOut_8_0 = this;
                 stackOut_8_1 = 1;
                 stackIn_9_0 = stackOut_8_0;
@@ -214,11 +257,11 @@ final class kj extends nv implements ut {
               }
             }
             L4: {
-              ((kj) this).field_r = stackIn_9_1 != 0;
-              if (!((kj) this).field_r) {
+              ((kj) (this)).field_r = stackIn_9_1 != 0;
+              if (!this.field_r) {
                 break L4;
               } else {
-                ((kj) this).field_o = oo.a(8, 8192, 0, param1.b((byte) 44, 8));
+                this.field_o = oo.a(8, 8192, 0, param1.b((byte) 44, 8));
                 break L4;
               }
             }
@@ -241,11 +284,11 @@ final class kj extends nv implements ut {
               }
             }
             L6: {
-              ((kj) this).field_q = stackIn_14_1 != 0;
-              if (!((kj) this).field_q) {
+              ((kj) (this)).field_q = stackIn_14_1 != 0;
+              if (!this.field_q) {
                 break L6;
               } else {
-                ((kj) this).field_p = param1.b((byte) 44, 10) << 16;
+                this.field_p = param1.b((byte) 44, 10) << -997912112;
                 break L6;
               }
             }
@@ -253,7 +296,7 @@ final class kj extends nv implements ut {
               stackOut_16_0 = this;
               stackIn_18_0 = stackOut_16_0;
               stackIn_17_0 = stackOut_16_0;
-              if (param1.b((byte) 44, 1) == 1) {
+              if (-2 == (param1.b((byte) 44, 1) ^ -1)) {
                 stackOut_18_0 = this;
                 stackOut_18_1 = 1;
                 stackIn_19_0 = stackOut_18_0;
@@ -267,31 +310,31 @@ final class kj extends nv implements ut {
                 break L7;
               }
             }
-            ((kj) this).field_t = stackIn_19_1 != 0;
-            ((kj) this).field_n = new jma(15, param0, param1);
+            ((kj) (this)).field_t = stackIn_19_1 != 0;
+            this.field_n = new jma(15, param0, param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var4 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var4;
+            stackOut_21_0 = (RuntimeException) (var4);
             stackOut_21_1 = new StringBuilder().append("kj.<init>(");
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L8;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -300,23 +343,23 @@ final class kj extends nv implements ut {
             }
           }
           L9: {
-            stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+            stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
             stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
               break L9;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
@@ -324,13 +367,13 @@ final class kj extends nv implements ut {
               break L9;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param2 + ')');
         }
     }
 
     final void g(int param0) {
         super.g(param0);
-        ((kj) this).field_n.a((byte) 48, ((kj) this).h((byte) 127));
+        this.field_n.a((byte) 48, this.h((byte) 127));
     }
 
     final void k(int param0) {
@@ -438,11 +481,11 @@ final class kj extends nv implements ut {
         var2 = 1;
         if (param0 != 5418) {
           L0: {
-            ((kj) this).field_q = false;
+            this.field_q = false;
             if (var2 == 0) {
               break L0;
             } else {
-              if (((kj) this).field_t) {
+              if (this.field_t) {
                 L1: {
                   if (!this.d(false)) {
                     stackOut_125_0 = 0;
@@ -458,20 +501,20 @@ final class kj extends nv implements ut {
                 break L0;
               } else {
                 L2: {
-                  if (((kj) this).field_s) {
-                    var10 = ((kj) this).m((byte) 19);
-                    var4 = var10.d(3) + -((kj) this).field_g.d(3);
-                    var5 = var10.e(9648) - ((kj) this).field_g.e(9648);
-                    ((kj) this).field_v = qva.a((byte) -94, var5, var4);
+                  if (this.field_s) {
+                    var10 = this.m((byte) 19);
+                    var4 = var10.d(3) + -this.field_g.d(3);
+                    var5 = var10.e(9648) - this.field_g.e(9648);
+                    this.field_v = qva.a((byte) -94, var5, var4);
                     break L2;
                   } else {
-                    if (!((kj) this).field_r) {
+                    if (!this.field_r) {
                       break L2;
                     } else {
-                      var11 = ((kj) this).m((byte) 19);
-                      var4 = var11.d(3) + -((kj) this).field_g.d(3);
-                      var5 = var11.e(9648) - ((kj) this).field_g.e(9648);
-                      ((kj) this).field_v = qva.a((byte) -94, var5, var4);
+                      var11 = this.m((byte) 19);
+                      var4 = var11.d(3) + -this.field_g.d(3);
+                      var5 = var11.e(9648) - this.field_g.e(9648);
+                      this.field_v = qva.a((byte) -94, var5, var4);
                       break L2;
                     }
                   }
@@ -480,7 +523,7 @@ final class kj extends nv implements ut {
                   if (var2 == 0) {
                     break L3;
                   } else {
-                    if (!((kj) this).field_s) {
+                    if (!this.field_s) {
                       break L3;
                     } else {
                       L4: {
@@ -503,7 +546,7 @@ final class kj extends nv implements ut {
                   if (var2 == 0) {
                     break L5;
                   } else {
-                    if (((kj) this).field_r) {
+                    if (this.field_r) {
                       L6: {
                         if (!this.l(8192)) {
                           stackOut_110_0 = 0;
@@ -524,11 +567,11 @@ final class kj extends nv implements ut {
                 }
                 L7: {
                   if (var2 == 0) {
-                    ((kj) this).field_n.a((byte) -14, var2 != 0);
+                    this.field_n.a((byte) -14, var2 != 0);
                     break L7;
                   } else {
-                    if (!((kj) this).field_q) {
-                      ((kj) this).field_n.a((byte) -14, var2 != 0);
+                    if (!this.field_q) {
+                      this.field_n.a((byte) -14, var2 != 0);
                       break L7;
                     } else {
                       L8: {
@@ -543,7 +586,7 @@ final class kj extends nv implements ut {
                         }
                       }
                       var2 = stackIn_117_0;
-                      ((kj) this).field_n.a((byte) -14, var2 != 0);
+                      this.field_n.a((byte) -14, var2 != 0);
                       break L7;
                     }
                   }
@@ -553,16 +596,16 @@ final class kj extends nv implements ut {
             }
           }
           if (var2 != 0) {
-            if (((kj) this).field_s) {
+            if (this.field_s) {
               L9: {
-                var13 = ((kj) this).m((byte) 19);
-                var4 = var13.d(3) + -((kj) this).field_g.d(3);
-                var5 = var13.e(9648) - ((kj) this).field_g.e(9648);
-                ((kj) this).field_v = qva.a((byte) -94, var5, var4);
+                var13 = this.m((byte) 19);
+                var4 = var13.d(3) + -this.field_g.d(3);
+                var5 = var13.e(9648) - this.field_g.e(9648);
+                this.field_v = qva.a((byte) -94, var5, var4);
                 if (var2 == 0) {
                   break L9;
                 } else {
-                  if (!((kj) this).field_s) {
+                  if (!this.field_s) {
                     break L9;
                   } else {
                     L10: {
@@ -585,7 +628,7 @@ final class kj extends nv implements ut {
                 if (var2 == 0) {
                   break L11;
                 } else {
-                  if (((kj) this).field_r) {
+                  if (this.field_r) {
                     L12: {
                       if (!this.l(8192)) {
                         stackOut_231_0 = 0;
@@ -600,7 +643,7 @@ final class kj extends nv implements ut {
                     var2 = stackIn_232_0;
                     break L11;
                   } else {
-                    if (((kj) this).field_q) {
+                    if (this.field_q) {
                       L13: {
                         if (!this.e(false)) {
                           stackOut_225_0 = 0;
@@ -613,17 +656,17 @@ final class kj extends nv implements ut {
                         }
                       }
                       var2 = stackIn_226_0;
-                      ((kj) this).field_n.a((byte) -14, var2 != 0);
+                      this.field_n.a((byte) -14, var2 != 0);
                       return;
                     } else {
-                      ((kj) this).field_n.a((byte) -14, var2 != 0);
+                      this.field_n.a((byte) -14, var2 != 0);
                       return;
                     }
                   }
                 }
               }
               if (var2 != 0) {
-                if (((kj) this).field_q) {
+                if (this.field_q) {
                   L14: {
                     if (!this.e(false)) {
                       stackOut_239_0 = 0;
@@ -636,27 +679,27 @@ final class kj extends nv implements ut {
                     }
                   }
                   var2 = stackIn_240_0;
-                  ((kj) this).field_n.a((byte) -14, var2 != 0);
+                  this.field_n.a((byte) -14, var2 != 0);
                   return;
                 } else {
-                  ((kj) this).field_n.a((byte) -14, var2 != 0);
+                  this.field_n.a((byte) -14, var2 != 0);
                   return;
                 }
               } else {
-                ((kj) this).field_n.a((byte) -14, var2 != 0);
+                this.field_n.a((byte) -14, var2 != 0);
                 return;
               }
             } else {
-              if (((kj) this).field_r) {
+              if (this.field_r) {
                 L15: {
-                  var12 = ((kj) this).m((byte) 19);
-                  var4 = var12.d(3) + -((kj) this).field_g.d(3);
-                  var5 = var12.e(9648) - ((kj) this).field_g.e(9648);
-                  ((kj) this).field_v = qva.a((byte) -94, var5, var4);
+                  var12 = this.m((byte) 19);
+                  var4 = var12.d(3) + -this.field_g.d(3);
+                  var5 = var12.e(9648) - this.field_g.e(9648);
+                  this.field_v = qva.a((byte) -94, var5, var4);
                   if (var2 == 0) {
                     break L15;
                   } else {
-                    if (!((kj) this).field_s) {
+                    if (!this.field_s) {
                       break L15;
                     } else {
                       L16: {
@@ -679,7 +722,7 @@ final class kj extends nv implements ut {
                   if (var2 == 0) {
                     break L17;
                   } else {
-                    if (((kj) this).field_r) {
+                    if (this.field_r) {
                       L18: {
                         if (!this.l(8192)) {
                           stackOut_201_0 = 0;
@@ -699,7 +742,7 @@ final class kj extends nv implements ut {
                   }
                 }
                 if (var2 != 0) {
-                  if (((kj) this).field_q) {
+                  if (this.field_q) {
                     L19: {
                       if (!this.e(false)) {
                         stackOut_209_0 = 0;
@@ -712,14 +755,14 @@ final class kj extends nv implements ut {
                       }
                     }
                     var2 = stackIn_210_0;
-                    ((kj) this).field_n.a((byte) -14, var2 != 0);
+                    this.field_n.a((byte) -14, var2 != 0);
                     return;
                   } else {
-                    ((kj) this).field_n.a((byte) -14, var2 != 0);
+                    this.field_n.a((byte) -14, var2 != 0);
                     return;
                   }
                 } else {
-                  ((kj) this).field_n.a((byte) -14, var2 != 0);
+                  this.field_n.a((byte) -14, var2 != 0);
                   return;
                 }
               } else {
@@ -727,7 +770,7 @@ final class kj extends nv implements ut {
                   if (var2 == 0) {
                     break L20;
                   } else {
-                    if (!((kj) this).field_s) {
+                    if (!this.field_s) {
                       break L20;
                     } else {
                       L21: {
@@ -750,7 +793,7 @@ final class kj extends nv implements ut {
                   if (var2 == 0) {
                     break L22;
                   } else {
-                    if (((kj) this).field_r) {
+                    if (this.field_r) {
                       L23: {
                         if (!this.l(8192)) {
                           stackOut_178_0 = 0;
@@ -765,7 +808,7 @@ final class kj extends nv implements ut {
                       var2 = stackIn_179_0;
                       break L22;
                     } else {
-                      if (((kj) this).field_q) {
+                      if (this.field_q) {
                         L24: {
                           if (!this.e(false)) {
                             stackOut_172_0 = 0;
@@ -778,17 +821,17 @@ final class kj extends nv implements ut {
                           }
                         }
                         var2 = stackIn_173_0;
-                        ((kj) this).field_n.a((byte) -14, var2 != 0);
+                        this.field_n.a((byte) -14, var2 != 0);
                         return;
                       } else {
-                        ((kj) this).field_n.a((byte) -14, var2 != 0);
+                        this.field_n.a((byte) -14, var2 != 0);
                         return;
                       }
                     }
                   }
                 }
                 if (var2 != 0) {
-                  if (((kj) this).field_q) {
+                  if (this.field_q) {
                     L25: {
                       if (!this.e(false)) {
                         stackOut_186_0 = 0;
@@ -801,14 +844,14 @@ final class kj extends nv implements ut {
                       }
                     }
                     var2 = stackIn_187_0;
-                    ((kj) this).field_n.a((byte) -14, var2 != 0);
+                    this.field_n.a((byte) -14, var2 != 0);
                     return;
                   } else {
-                    ((kj) this).field_n.a((byte) -14, var2 != 0);
+                    this.field_n.a((byte) -14, var2 != 0);
                     return;
                   }
                 } else {
-                  ((kj) this).field_n.a((byte) -14, var2 != 0);
+                  this.field_n.a((byte) -14, var2 != 0);
                   return;
                 }
               }
@@ -818,7 +861,7 @@ final class kj extends nv implements ut {
               if (var2 == 0) {
                 break L26;
               } else {
-                if (!((kj) this).field_s) {
+                if (!this.field_s) {
                   break L26;
                 } else {
                   L27: {
@@ -841,7 +884,7 @@ final class kj extends nv implements ut {
               if (var2 == 0) {
                 break L28;
               } else {
-                if (((kj) this).field_r) {
+                if (this.field_r) {
                   L29: {
                     if (!this.l(8192)) {
                       stackOut_146_0 = 0;
@@ -856,7 +899,7 @@ final class kj extends nv implements ut {
                   var2 = stackIn_147_0;
                   break L28;
                 } else {
-                  if (((kj) this).field_q) {
+                  if (this.field_q) {
                     L30: {
                       if (!this.e(false)) {
                         stackOut_140_0 = 0;
@@ -869,17 +912,17 @@ final class kj extends nv implements ut {
                       }
                     }
                     var2 = stackIn_141_0;
-                    ((kj) this).field_n.a((byte) -14, var2 != 0);
+                    this.field_n.a((byte) -14, var2 != 0);
                     return;
                   } else {
-                    ((kj) this).field_n.a((byte) -14, var2 != 0);
+                    this.field_n.a((byte) -14, var2 != 0);
                     return;
                   }
                 }
               }
             }
             if (var2 != 0) {
-              if (((kj) this).field_q) {
+              if (this.field_q) {
                 L31: {
                   if (!this.e(false)) {
                     stackOut_154_0 = 0;
@@ -892,14 +935,14 @@ final class kj extends nv implements ut {
                   }
                 }
                 var2 = stackIn_155_0;
-                ((kj) this).field_n.a((byte) -14, var2 != 0);
+                this.field_n.a((byte) -14, var2 != 0);
                 return;
               } else {
-                ((kj) this).field_n.a((byte) -14, var2 != 0);
+                this.field_n.a((byte) -14, var2 != 0);
                 return;
               }
             } else {
-              ((kj) this).field_n.a((byte) -14, var2 != 0);
+              this.field_n.a((byte) -14, var2 != 0);
               return;
             }
           }
@@ -908,7 +951,7 @@ final class kj extends nv implements ut {
             if (var2 == 0) {
               break L32;
             } else {
-              if (((kj) this).field_t) {
+              if (this.field_t) {
                 L33: {
                   if (!this.d(false)) {
                     stackOut_33_0 = 0;
@@ -924,20 +967,20 @@ final class kj extends nv implements ut {
                 break L32;
               } else {
                 L34: {
-                  if (((kj) this).field_s) {
-                    var6 = ((kj) this).m((byte) 19);
-                    var4 = var6.d(3) + -((kj) this).field_g.d(3);
-                    var5 = var6.e(9648) - ((kj) this).field_g.e(9648);
-                    ((kj) this).field_v = qva.a((byte) -94, var5, var4);
+                  if (this.field_s) {
+                    var6 = this.m((byte) 19);
+                    var4 = var6.d(3) + -this.field_g.d(3);
+                    var5 = var6.e(9648) - this.field_g.e(9648);
+                    this.field_v = qva.a((byte) -94, var5, var4);
                     break L34;
                   } else {
-                    if (!((kj) this).field_r) {
+                    if (!this.field_r) {
                       break L34;
                     } else {
-                      var7 = ((kj) this).m((byte) 19);
-                      var4 = var7.d(3) + -((kj) this).field_g.d(3);
-                      var5 = var7.e(9648) - ((kj) this).field_g.e(9648);
-                      ((kj) this).field_v = qva.a((byte) -94, var5, var4);
+                      var7 = this.m((byte) 19);
+                      var4 = var7.d(3) + -this.field_g.d(3);
+                      var5 = var7.e(9648) - this.field_g.e(9648);
+                      this.field_v = qva.a((byte) -94, var5, var4);
                       break L34;
                     }
                   }
@@ -946,7 +989,7 @@ final class kj extends nv implements ut {
                   if (var2 == 0) {
                     break L35;
                   } else {
-                    if (!((kj) this).field_s) {
+                    if (!this.field_s) {
                       break L35;
                     } else {
                       L36: {
@@ -969,7 +1012,7 @@ final class kj extends nv implements ut {
                   if (var2 == 0) {
                     break L37;
                   } else {
-                    if (((kj) this).field_r) {
+                    if (this.field_r) {
                       L38: {
                         if (!this.l(8192)) {
                           stackOut_19_0 = 0;
@@ -990,11 +1033,11 @@ final class kj extends nv implements ut {
                 }
                 L39: {
                   if (var2 == 0) {
-                    ((kj) this).field_n.a((byte) -14, var2 != 0);
+                    this.field_n.a((byte) -14, var2 != 0);
                     break L39;
                   } else {
-                    if (!((kj) this).field_q) {
-                      ((kj) this).field_n.a((byte) -14, var2 != 0);
+                    if (!this.field_q) {
+                      this.field_n.a((byte) -14, var2 != 0);
                       break L39;
                     } else {
                       L40: {
@@ -1009,7 +1052,7 @@ final class kj extends nv implements ut {
                         }
                       }
                       var2 = stackIn_26_0;
-                      ((kj) this).field_n.a((byte) -14, var2 != 0);
+                      this.field_n.a((byte) -14, var2 != 0);
                       break L39;
                     }
                   }
@@ -1022,22 +1065,22 @@ final class kj extends nv implements ut {
             if (var2 == 0) {
               break L41;
             } else {
-              if (((kj) this).field_s) {
-                var9 = ((kj) this).m((byte) 19);
-                var4 = var9.d(3) + -((kj) this).field_g.d(3);
-                var5 = var9.e(9648) - ((kj) this).field_g.e(9648);
-                ((kj) this).field_v = qva.a((byte) -94, var5, var4);
+              if (this.field_s) {
+                var9 = this.m((byte) 19);
+                var4 = var9.d(3) + -this.field_g.d(3);
+                var5 = var9.e(9648) - this.field_g.e(9648);
+                this.field_v = qva.a((byte) -94, var5, var4);
                 break L41;
               } else {
-                if (!((kj) this).field_r) {
+                if (!this.field_r) {
                   break L41;
                 } else {
                   L42: {
-                    var8 = ((kj) this).m((byte) 19);
-                    var4 = var8.d(3) + -((kj) this).field_g.d(3);
-                    var5 = var8.e(9648) - ((kj) this).field_g.e(9648);
-                    ((kj) this).field_v = qva.a((byte) -94, var5, var4);
-                    if (!((kj) this).field_s) {
+                    var8 = this.m((byte) 19);
+                    var4 = var8.d(3) + -this.field_g.d(3);
+                    var5 = var8.e(9648) - this.field_g.e(9648);
+                    this.field_v = qva.a((byte) -94, var5, var4);
+                    if (!this.field_s) {
                       break L42;
                     } else {
                       L43: {
@@ -1059,7 +1102,7 @@ final class kj extends nv implements ut {
                     if (var2 == 0) {
                       break L44;
                     } else {
-                      if (((kj) this).field_r) {
+                      if (this.field_r) {
                         L45: {
                           if (!this.l(8192)) {
                             stackOut_48_0 = 0;
@@ -1080,11 +1123,11 @@ final class kj extends nv implements ut {
                   }
                   L46: {
                     if (var2 == 0) {
-                      ((kj) this).field_n.a((byte) -14, var2 != 0);
+                      this.field_n.a((byte) -14, var2 != 0);
                       break L46;
                     } else {
-                      if (!((kj) this).field_q) {
-                        ((kj) this).field_n.a((byte) -14, var2 != 0);
+                      if (!this.field_q) {
+                        this.field_n.a((byte) -14, var2 != 0);
                         break L46;
                       } else {
                         L47: {
@@ -1099,7 +1142,7 @@ final class kj extends nv implements ut {
                           }
                         }
                         var2 = stackIn_55_0;
-                        ((kj) this).field_n.a((byte) -14, var2 != 0);
+                        this.field_n.a((byte) -14, var2 != 0);
                         break L46;
                       }
                     }
@@ -1113,7 +1156,7 @@ final class kj extends nv implements ut {
             if (var2 == 0) {
               break L48;
             } else {
-              if (!((kj) this).field_s) {
+              if (!this.field_s) {
                 break L48;
               } else {
                 L49: {
@@ -1136,7 +1179,7 @@ final class kj extends nv implements ut {
             if (var2 == 0) {
               break L50;
             } else {
-              if (((kj) this).field_r) {
+              if (this.field_r) {
                 L51: {
                   if (!this.l(8192)) {
                     stackOut_80_0 = 0;
@@ -1152,8 +1195,8 @@ final class kj extends nv implements ut {
                 break L50;
               } else {
                 L52: {
-                  if (!((kj) this).field_q) {
-                    ((kj) this).field_n.a((byte) -14, var2 != 0);
+                  if (!this.field_q) {
+                    this.field_n.a((byte) -14, var2 != 0);
                     break L52;
                   } else {
                     L53: {
@@ -1168,7 +1211,7 @@ final class kj extends nv implements ut {
                       }
                     }
                     var2 = stackIn_73_0;
-                    ((kj) this).field_n.a((byte) -14, var2 != 0);
+                    this.field_n.a((byte) -14, var2 != 0);
                     break L52;
                   }
                 }
@@ -1177,7 +1220,7 @@ final class kj extends nv implements ut {
             }
           }
           if (var2 != 0) {
-            if (((kj) this).field_q) {
+            if (this.field_q) {
               L54: {
                 if (!this.e(false)) {
                   stackOut_88_0 = 0;
@@ -1190,14 +1233,14 @@ final class kj extends nv implements ut {
                 }
               }
               var2 = stackIn_89_0;
-              ((kj) this).field_n.a((byte) -14, var2 != 0);
+              this.field_n.a((byte) -14, var2 != 0);
               return;
             } else {
-              ((kj) this).field_n.a((byte) -14, var2 != 0);
+              this.field_n.a((byte) -14, var2 != 0);
               return;
             }
           } else {
-            ((kj) this).field_n.a((byte) -14, var2 != 0);
+            this.field_n.a((byte) -14, var2 != 0);
             return;
           }
         }
@@ -1211,27 +1254,30 @@ final class kj extends nv implements ut {
     final void a(boolean param0, kh param1) {
         try {
             super.a(param0, param1);
-            param1.a((byte) -126, ((kj) this).field_s ? 1 : 0, 1);
-            if (((kj) this).field_s) {
-                param1.a((byte) -126, cn.a((byte) -120, ((kj) this).field_u, 8192, 8), 8);
+            param1.a((byte) -126, this.field_s ? 1 : 0, 1);
+            if (this.field_s) {
+                param1.a((byte) -126, cn.a((byte) -120, this.field_u, 8192, 8), 8);
             }
-            param1.a((byte) 5, !((kj) this).field_r ? 0 : 1, 1);
-            if (((kj) this).field_r) {
-                param1.a((byte) -125, cn.a((byte) 111, ((kj) this).field_o, 8192, 8), 8);
+            param1.a((byte) 5, !this.field_r ? 0 : 1, 1);
+            if (this.field_r) {
+                param1.a((byte) -125, cn.a((byte) 111, this.field_o, 8192, 8), 8);
             }
-            param1.a((byte) -127, !((kj) this).field_q ? 0 : 1, 1);
-            if (!(!((kj) this).field_q)) {
-                param1.a((byte) -125, ((kj) this).field_p >> 16, 10);
+            param1.a((byte) -127, !this.field_q ? 0 : 1, 1);
+            if (!(!this.field_q)) {
+                param1.a((byte) -125, this.field_p >> 473274736, 10);
             }
-            param1.a((byte) -127, ((kj) this).field_t ? 1 : 0, 1);
-            ((kj) this).field_n.a(((kj) this).h((byte) 111), (byte) 85, param1);
+            param1.a((byte) -127, this.field_t ? 1 : 0, 1);
+            this.field_n.a(this.h((byte) 111), (byte) 85, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "kj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "kj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final boolean d(boolean param0) {
-        return ((kj) this).m((byte) 19).p((byte) -110);
+        if (param0) {
+            return false;
+        }
+        return this.m((byte) 19).p((byte) -110);
     }
 
     static {

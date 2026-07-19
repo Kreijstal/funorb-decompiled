@@ -37,9 +37,9 @@ final class wh {
           L0: {
             L1: {
               var2_int = uh.field_l;
-              if (param1.field_k != 2) {
+              if ((param1.field_k ^ -1) != -3) {
                 if (4 != param1.field_k) {
-                  if (~gb.field_t == ~param1.field_m) {
+                  if ((gb.field_t ^ -1L) == (param1.field_m ^ -1L)) {
                     var2_int = vm.field_i[param1.field_k];
                     break L1;
                   } else {
@@ -53,7 +53,7 @@ final class wh {
               } else {
                 if (!param1.field_d) {
                   L2: {
-                    if (param1.field_e != 0) {
+                    if (-1 != (param1.field_e ^ -1)) {
                       break L2;
                     } else {
                       if (param1.field_q == 0) {
@@ -76,7 +76,7 @@ final class wh {
               if (param0 == -1) {
                 break L3;
               } else {
-                field_c = null;
+                field_c = (rk) null;
                 break L3;
               }
             }
@@ -88,23 +88,23 @@ final class wh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var2;
+            stackOut_18_0 = (RuntimeException) (var2);
             stackOut_18_1 = new StringBuilder().append("wh.A(").append(param0).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -112,7 +112,7 @@ final class wh {
               break L4;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
         }
         return stackIn_17_0;
     }
@@ -132,12 +132,8 @@ final class wh {
         km var17 = null;
         int[] var18 = null;
         int[] var19 = null;
-        int[] var20 = null;
-        int[] var21 = null;
         L0: {
-          var21 = wb.field_d;
-          var20 = var21;
-          var19 = var20;
+          var19 = wb.field_d;
           var18 = var19;
           var16 = var18;
           var6 = var16;
@@ -160,37 +156,44 @@ final class wh {
           var14.e();
           wb.f(0, 0, 16, param2, param4);
           var15 = null;
-          if (param5 <= 0) {
+          if ((param5 ^ -1) >= -1) {
             break L0;
           } else {
             var17 = new km(16, 16);
-            var15 = (Object) (Object) var17;
+            var15 = var17;
             var17.e();
             wb.f(0, 0, 16, 16, param5);
             break L0;
           }
         }
-        wb.a(var21, var7, var9);
-        return new km[]{var11, var12, var11, var10, (km) var15, var10, var13, var14, var13};
+        wb.a(var19, var7, var9);
+        return new km[]{var11, var12, var11, var10, (km) (var15), var10, var13, var14, var13};
     }
 
     public static void a(byte param0) {
         field_e = null;
-        field_a = null;
-        field_b = null;
-        field_g = null;
-        field_d = null;
-        field_c = null;
+        if (param0 != -46) {
+          field_b = (sa) null;
+          field_a = null;
+          field_b = null;
+          field_g = (String[][]) null;
+          field_d = null;
+          field_c = null;
+          return;
+        } else {
+          field_a = null;
+          field_b = null;
+          field_g = (String[][]) null;
+          field_d = null;
+          field_c = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
         field_e = "Email (Login):";
-        field_g = new String[][]{new String[7]};
+        field_g = new String[][]{new String[]{"60", "50", "40", "30", "20", "10", "5"}};
         field_d = "Unable to connect to the data server. Please check any firewall you are using.";
         field_f = 0;
         field_b = new sa();

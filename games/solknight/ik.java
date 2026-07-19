@@ -16,7 +16,7 @@ final class ik implements Iterable {
         field_b = null;
         field_e = null;
         if (param0 != -61) {
-          field_a = null;
+          field_a = (String) null;
           field_a = null;
           field_c = null;
           return;
@@ -99,23 +99,23 @@ final class ik implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_0 = (RuntimeException) (var4);
             stackOut_4_1 = new StringBuilder().append("ik.C(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -124,23 +124,23 @@ final class ik implements Iterable {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -149,23 +149,23 @@ final class ik implements Iterable {
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -173,7 +173,7 @@ final class ik implements Iterable {
               break L4;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -187,30 +187,53 @@ final class ik implements Iterable {
         var3 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
-            var4 = (lc) (Object) hc.field_a.a((byte) 51);
+            var4 = (lc) ((Object) hc.field_a.a((byte) 51));
             L1: while (true) {
-              if (var4 == null) {
-                var5 = (fj) (Object) ti.field_b.a((byte) 51);
-                L2: while (true) {
-                  if (var5 == null) {
-                    break L0;
+              L2: {
+                L3: {
+                  if (var4 == null) {
+                    break L3;
                   } else {
-                    h.a(5, var5, (byte) 78);
-                    var5 = (fj) (Object) ti.field_b.b(-118);
-                    continue L2;
+                    ud.a((byte) -109, var4, param0);
+                    var4 = (lc) ((Object) hc.field_a.b(param1 + -18934));
+                    if (var3 != 0) {
+                      break L2;
+                    } else {
+                      if (var3 == 0) {
+                        continue L1;
+                      } else {
+                        break L3;
+                      }
+                    }
                   }
                 }
-              } else {
-                ud.a((byte) -109, var4, 5);
-                var4 = (lc) (Object) hc.field_a.b(-37);
-                continue L1;
+                if (param1 == 18897) {
+                  break L2;
+                } else {
+                  field_c = (java.applet.Applet) null;
+                  break L2;
+                }
+              }
+              var5 = (fj) ((Object) ti.field_b.a((byte) 51));
+              L4: while (true) {
+                if (var5 == null) {
+                  break L0;
+                } else {
+                  h.a(param0, var5, (byte) 78);
+                  var5 = (fj) ((Object) ti.field_b.b(param1 ^ -18853));
+                  if (var3 == 0) {
+                    continue L4;
+                  } else {
+                    return;
+                  }
+                }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var2, "ik.F(" + 5 + ',' + 18897 + ')');
+          throw fc.a((Throwable) ((Object) var2), "ik.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -225,6 +248,7 @@ final class ik implements Iterable {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         o[] stackOut_5_0 = null;
         Object stackOut_3_0 = null;
@@ -249,34 +273,36 @@ final class ik implements Iterable {
             if (l.a(param1 ^ -24921, param2, param3, param0)) {
               stackOut_5_0 = fi.b(255);
               stackIn_6_0 = stackOut_5_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_3_0 = null;
               stackIn_4_0 = stackOut_3_0;
-              return (o[]) (Object) stackIn_4_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
+            stackOut_7_0 = (RuntimeException) (var4);
             stackOut_7_1 = new StringBuilder().append("ik.B(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -284,9 +310,13 @@ final class ik implements Iterable {
               break L2;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_6_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (o[]) ((Object) stackIn_4_0);
+        } else {
+          return stackIn_6_0;
+        }
     }
 
     final void a(int param0, ec param1) {
@@ -294,24 +324,24 @@ final class ik implements Iterable {
             if (null != param1.field_k) {
                 param1.a(97);
             }
-            param1.field_i = ((ik) this).field_f;
+            param1.field_i = this.field_f;
             int var3_int = -27 / ((-58 - param0) / 51);
-            param1.field_k = ((ik) this).field_f.field_k;
+            param1.field_k = this.field_f.field_k;
             param1.field_k.field_i = param1;
             param1.field_i.field_k = param1;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ik.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw fc.a((Throwable) ((Object) runtimeException), "ik.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final ec a(byte param0) {
         ec var2 = null;
-        Object var3 = null;
-        var2 = ((ik) this).field_f.field_i;
-        if (((ik) this).field_f != var2) {
+        ec var3 = null;
+        var2 = this.field_f.field_i;
+        if (this.field_f != var2) {
           if (param0 > -105) {
-            var3 = null;
-            ((ik) this).a(-40, (ec) null);
+            var3 = (ec) null;
+            this.a(-40, (ec) null);
             var2.a(97);
             return var2;
           } else {
@@ -324,7 +354,7 @@ final class ik implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new jl((ik) this);
+        return (Iterator) ((Object) new jl((ik) (this)));
     }
 
     private ik() throws Throwable {
@@ -332,10 +362,6 @@ final class ik implements Iterable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new kb();
         field_d = "To Customer Support";
         field_a = "Password is valid";

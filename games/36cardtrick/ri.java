@@ -49,31 +49,30 @@ final class ri {
             h.field_F = 0;
             de.b(30);
             var2 = var1.b();
-            for (var3 = 0; var3 < 15; var3++) {
+            for (var3 = 0; (var3 ^ -1) > -16; var3++) {
                 var2.d(-2, -2, 16777215);
                 vj.c(4, 4, 0, 0, 540, 140);
             }
             rc.field_i.c();
-            var3 = 14;
+            var3 = -29 / ((param0 - 1) / 58);
             var1.c(0, 0);
             gg.a(14756);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ri.B(" + -124 + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ')');
         }
     }
 
     public static void a(int param0) {
         field_b = null;
         field_d = null;
+        if (param0 != -2) {
+            field_b = (String) null;
+        }
         field_c = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
     }
 }

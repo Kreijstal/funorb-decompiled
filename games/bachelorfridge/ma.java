@@ -45,16 +45,19 @@ final class ma {
     byte field_n;
 
     public static void a(int param0) {
+        if (param0 != 0) {
+            return;
+        }
         field_k = null;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = BachelorFridge.field_y;
-        for (var5 = param1; var5 < ((ma) this).field_g; var5++) {
-            ((ma) this).field_x[var5] = (short)(((ma) this).field_x[var5] + param3);
-            ((ma) this).field_O[var5] = (short)(((ma) this).field_O[var5] + param2);
-            ((ma) this).field_r[var5] = (short)(((ma) this).field_r[var5] + param0);
+        for (var5 = param1; var5 < this.field_g; var5++) {
+            this.field_x[var5] = (short)(this.field_x[var5] + param3);
+            this.field_O[var5] = (short)(this.field_O[var5] + param2);
+            this.field_r[var5] = (short)(this.field_r[var5] + param0);
         }
         this.c(-119);
     }
@@ -72,8 +75,8 @@ final class ma {
         int var11 = 0;
         int var12 = 0;
         var12 = BachelorFridge.field_y;
-        if (!((ma) this).field_J) {
-          ((ma) this).field_J = true;
+        if (!this.field_J) {
+          this.field_J = true;
           var2 = 32767;
           var3 = 32767;
           var4 = 32767;
@@ -82,26 +85,26 @@ final class ma {
           var7 = -32768;
           var8 = 0;
           L0: while (true) {
-            if (var8 >= ((ma) this).field_g) {
+            if (var8 >= this.field_g) {
               L1: {
-                ((ma) this).field_A = var5;
+                this.field_A = var5;
                 if (param0 >= 100) {
                   break L1;
                 } else {
-                  ((ma) this).field_u = -119;
+                  this.field_u = -119;
                   break L1;
                 }
               }
-              ((ma) this).field_I = var7;
-              ((ma) this).field_G = var3;
-              ((ma) this).field_q = var4;
-              ((ma) this).field_u = var2;
-              ((ma) this).field_B = var6;
+              this.field_I = var7;
+              this.field_G = var3;
+              this.field_q = var4;
+              this.field_u = var2;
+              this.field_B = var6;
               return;
             } else {
               L2: {
-                var9 = ((ma) this).field_x[var8];
-                var10 = ((ma) this).field_O[var8];
+                var9 = this.field_x[var8];
+                var10 = this.field_O[var8];
                 if (var9 < var2) {
                   var2 = var9;
                   break L2;
@@ -118,7 +121,7 @@ final class ma {
                 }
               }
               L4: {
-                var11 = ((ma) this).field_r[var8];
+                var11 = this.field_r[var8];
                 if (var5 < var9) {
                   var5 = var9;
                   break L4;
@@ -160,31 +163,27 @@ final class ma {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = BachelorFridge.field_y;
-        for (var6 = param0; ((ma) this).field_g > var6; var6++) {
-            ((ma) this).field_x[var6] = (short)(param2 * ((ma) this).field_x[var6] / param4);
-            ((ma) this).field_O[var6] = (short)(((ma) this).field_O[var6] * param1 / param4);
-            ((ma) this).field_r[var6] = (short)(((ma) this).field_r[var6] * param3 / param4);
+        for (var6 = param0; this.field_g > var6; var6++) {
+            this.field_x[var6] = (short)(param2 * this.field_x[var6] / param4);
+            this.field_O[var6] = (short)(this.field_O[var6] * param1 / param4);
+            this.field_r[var6] = (short)(this.field_r[var6] * param3 / param4);
         }
         this.c(-69);
     }
 
     private final void c(int param0) {
-        ((ma) this).field_J = false;
+        this.field_J = false;
         if (param0 >= -16) {
             this.c(83);
         }
     }
 
     ma() {
-        ((ma) this).field_J = false;
-        ((ma) this).field_n = (byte) 0;
+        this.field_J = false;
+        this.field_n = (byte) 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "Quick Chat game";
     }
 }

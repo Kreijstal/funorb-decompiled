@@ -27,6 +27,7 @@ final class cf extends sk {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
@@ -65,6 +66,7 @@ final class cf extends sk {
                   L3: while (true) {
                     if (var9 <= param1) {
                       vp.a(rl.field_a);
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       param0[1].b(param1, param3);
@@ -77,29 +79,30 @@ final class cf extends sk {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var5;
+            stackOut_10_0 = (RuntimeException) (var5);
             stackOut_10_1 = new StringBuilder().append("cf.B(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -107,7 +110,12 @@ final class cf extends sk {
               break L4;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -120,14 +128,14 @@ final class cf extends sk {
 
     final void a(int param0, int param1, jj param2) {
         try {
-            ((cf) this).field_b.a(param2, -9135);
+            this.field_b.a(param2, -9135);
             if (param1 <= 66) {
-                Object var5 = null;
+                ll[] var5 = (ll[]) null;
                 cf.a((ll[]) null, -3, (byte) -124, 39, -48);
             }
-            ((cf) this).field_b.b(param0, false);
+            this.field_b.b(param0, false);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "cf.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "cf.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -135,15 +143,15 @@ final class cf extends sk {
         if (param0 == 1786747298) {
             return;
         }
-        field_h = null;
+        field_h = (String) null;
     }
 
     final void a(boolean param0, byte param1) {
-        ((cf) this).field_b.a(true, -26973);
+        this.field_b.a(true, -26973);
         if (param1 >= 2) {
             return;
         }
-        ((cf) this).a(-1, 10, -110);
+        this.a(-1, 10, -110);
     }
 
     cf(bf param0) {
@@ -154,26 +162,22 @@ final class cf extends sk {
         if (!param0) {
             return;
         }
-        ((cf) this).a(false, (byte) 24);
+        this.a(false, (byte) 24);
     }
 
     final void a(boolean param0) {
-        Object var3 = null;
-        ((cf) this).field_b.a(false, -26973);
+        ll[] var3 = null;
+        this.field_b.a(false, -26973);
         if (param0) {
           return;
         } else {
-          var3 = null;
+          var3 = (ll[]) null;
           cf.a((ll[]) null, 33, (byte) -18, -72, -45);
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = 0;
     }
 }

@@ -6,6 +6,16 @@ final class kg extends qd {
     byte[] field_m;
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -27,7 +37,7 @@ final class kg extends qd {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4++;
                     param3 = param1[incrementValue$10];
                     if (param3 == 0) {
@@ -35,7 +45,7 @@ final class kg extends qd {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
@@ -45,48 +55,48 @@ final class kg extends qd {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4++;
                   param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4++;
                   param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4++;
                   param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4++;
                 param3 = param1[incrementValue$18];
                 if (param3 == 0) {
@@ -94,7 +104,7 @@ final class kg extends qd {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param0[incrementValue$19] = param2[param3 & 255];
                   var12++;
@@ -115,12 +125,12 @@ final class kg extends qd {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((kg) this).field_h;
-          param1 = param1 + ((kg) this).field_d;
+          param0 = param0 + this.field_h;
+          param1 = param1 + this.field_d;
           var3 = param0 + param1 * on.field_g;
           var4 = 0;
-          var5 = ((kg) this).field_k;
-          var6 = ((kg) this).field_b;
+          var5 = this.field_k;
+          var6 = this.field_b;
           var7 = on.field_g - var6;
           var8 = 0;
           if (param1 >= on.field_e) {
@@ -172,7 +182,7 @@ final class kg extends qd {
             break L4;
           } else {
             if (var5 > 0) {
-              kg.a(on.field_a, ((kg) this).field_m, ((kg) this).field_l, 0, var4, var3, var6, var5, var7, var8);
+              kg.a(on.field_a, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -190,12 +200,12 @@ final class kg extends qd {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((kg) this).field_h;
-          param1 = param1 + ((kg) this).field_d;
+          param0 = param0 + this.field_h;
+          param1 = param1 + this.field_d;
           var4 = param0 + param1 * on.field_g;
           var5 = 0;
-          var6 = ((kg) this).field_k;
-          var7 = ((kg) this).field_b;
+          var6 = this.field_k;
+          var7 = this.field_b;
           var8 = on.field_g - var7;
           var9 = 0;
           if (param1 >= on.field_e) {
@@ -247,7 +257,7 @@ final class kg extends qd {
             break L4;
           } else {
             if (var6 > 0) {
-              kg.b(on.field_a, ((kg) this).field_m, ((kg) this).field_l, var5, var4, var7, var6, var8, var9, param2);
+              kg.b(on.field_a, this.field_m, this.field_l, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -269,30 +279,30 @@ final class kg extends qd {
         int var14 = 0;
         int var15 = 0;
         L0: {
-          var5 = ((kg) this).field_b;
-          var6 = ((kg) this).field_k;
+          var5 = this.field_b;
+          var6 = this.field_k;
           var7 = 0;
           var8 = 0;
-          var9 = ((kg) this).field_i;
-          var10 = ((kg) this).field_a;
+          var9 = this.field_i;
+          var10 = this.field_a;
           var11 = (var9 << 16) / param2;
           var12 = (var10 << 16) / param3;
-          if (((kg) this).field_h <= 0) {
+          if (this.field_h <= 0) {
             break L0;
           } else {
-            var13 = ((((kg) this).field_h << 16) + var11 - 1) / var11;
+            var13 = ((this.field_h << 16) + var11 - 1) / var11;
             param0 = param0 + var13;
-            var7 = var7 + (var13 * var11 - (((kg) this).field_h << 16));
+            var7 = var7 + (var13 * var11 - (this.field_h << 16));
             break L0;
           }
         }
         L1: {
-          if (((kg) this).field_d <= 0) {
+          if (this.field_d <= 0) {
             break L1;
           } else {
-            var13 = ((((kg) this).field_d << 16) + var12 - 1) / var12;
+            var13 = ((this.field_d << 16) + var12 - 1) / var12;
             param1 = param1 + var13;
-            var8 = var8 + (var13 * var12 - (((kg) this).field_d << 16));
+            var8 = var8 + (var13 * var12 - (this.field_d << 16));
             break L1;
           }
         }
@@ -355,31 +365,33 @@ final class kg extends qd {
             break L7;
           }
         }
-        kg.a(on.field_a, ((kg) this).field_m, ((kg) this).field_l, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+        kg.a(on.field_a, this.field_m, this.field_l, var7, var8, var13, var14, param2, param3, var11, var12, var5);
     }
 
     final ut a() {
         int var3 = 0;
-        int var1 = ((kg) this).field_b * ((kg) this).field_k;
+        int var1 = this.field_b * this.field_k;
         int[] var2 = new int[var1];
         for (var3 = 0; var3 < var1; var3++) {
-            var2[var3] = ((kg) this).field_l[((kg) this).field_m[var3] & 255];
+            var2[var3] = this.field_l[this.field_m[var3] & 255];
         }
-        return new ut(((kg) this).field_i, ((kg) this).field_a, ((kg) this).field_h, ((kg) this).field_d, ((kg) this).field_b, ((kg) this).field_k, var2);
+        return new ut(this.field_i, this.field_a, this.field_h, this.field_d, this.field_b, this.field_k, var2);
     }
 
     kg(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        ((kg) this).field_i = param0;
-        ((kg) this).field_a = param1;
-        ((kg) this).field_h = param2;
-        ((kg) this).field_d = param3;
-        ((kg) this).field_b = param4;
-        ((kg) this).field_k = param5;
-        ((kg) this).field_m = param6;
-        ((kg) this).field_l = param7;
+        this.field_i = param0;
+        this.field_a = param1;
+        this.field_h = param2;
+        this.field_d = param3;
+        this.field_b = param4;
+        this.field_k = param5;
+        this.field_m = param6;
+        this.field_l = param7;
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -399,7 +411,7 @@ final class kg extends qd {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var13 = param1[incrementValue$66];
                 if (var13 == 0) {
@@ -409,7 +421,7 @@ final class kg extends qd {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -426,13 +438,14 @@ final class kg extends qd {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
+        int incrementValue$1 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
             var14 = (param4 >> 16) * param11;
             for (var15 = -param7; var15 < 0; var15++) {
                 var16 = param1[(param3 >> 16) + var14];
                 if (var16 != 0) {
-                    int incrementValue$1 = param5;
+                    incrementValue$1 = param5;
                     param5++;
                     param0[incrementValue$1] = param2[var16 & 255];
                 } else {
@@ -447,13 +460,13 @@ final class kg extends qd {
     }
 
     kg(int param0, int param1, int param2) {
-        ((kg) this).field_b = param0;
-        ((kg) this).field_i = param0;
-        ((kg) this).field_k = param1;
-        ((kg) this).field_a = param1;
-        ((kg) this).field_d = 0;
-        ((kg) this).field_h = 0;
-        ((kg) this).field_m = new byte[param0 * param1];
-        ((kg) this).field_l = new int[param2];
+        this.field_b = param0;
+        this.field_i = param0;
+        this.field_k = param1;
+        this.field_a = param1;
+        this.field_d = 0;
+        this.field_h = 0;
+        this.field_m = new byte[param0 * param1];
+        this.field_l = new int[param2];
     }
 }

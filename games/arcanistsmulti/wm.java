@@ -12,56 +12,27 @@ final class wm extends wn {
         field_H = null;
         field_F = null;
         field_G = null;
+        if (param0 != -5903) {
+            field_G = (String) null;
+        }
         field_J = null;
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        if (param0 < -52) {
-          if (0 == param2) {
-            if (((wm) this).field_r != null) {
-              ((wm) this).field_r.a((qm) this, 5592405, param1, param3, true);
-              if (((wm) this).field_v != 0) {
-                if (0 == ((wm) this).field_k) {
-                  return;
-                } else {
-                  io.field_n.a(param3 - (-((wm) this).field_j - ((wm) this).field_k), ((wm) this).field_v + ((wm) this).field_n + param1, 3, param3 + ((wm) this).field_j, ((wm) this).field_n + param1);
-                  ((wm) this).field_B.a((byte) -99, param1 - -((wm) this).field_n, param2, param3 + ((wm) this).field_j);
-                  io.field_n.a(114);
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              if (((wm) this).field_v != 0) {
-                if (0 == ((wm) this).field_k) {
-                  return;
-                } else {
-                  io.field_n.a(param3 - (-((wm) this).field_j - ((wm) this).field_k), ((wm) this).field_v + ((wm) this).field_n + param1, 3, param3 + ((wm) this).field_j, ((wm) this).field_n + param1);
-                  ((wm) this).field_B.a((byte) -99, param1 - -((wm) this).field_n, param2, param3 + ((wm) this).field_j);
-                  io.field_n.a(114);
-                  return;
-                }
-              } else {
-                return;
-              }
+        if (param0 >= -52) {
+            return;
+        }
+        if (0 == param2) {
+            if (this.field_r != null) {
+                this.field_r.a((qm) (this), 5592405, param1, param3, true);
             }
-          } else {
-            if (((wm) this).field_v != 0) {
-              if (0 == ((wm) this).field_k) {
-                return;
-              } else {
-                io.field_n.a(param3 - (-((wm) this).field_j - ((wm) this).field_k), ((wm) this).field_v + ((wm) this).field_n + param1, 3, param3 + ((wm) this).field_j, ((wm) this).field_n + param1);
-                ((wm) this).field_B.a((byte) -99, param1 - -((wm) this).field_n, param2, param3 + ((wm) this).field_j);
+        }
+        if (-1 != (this.field_v ^ -1)) {
+            if (0 != this.field_k) {
+                io.field_n.a(param3 - (-this.field_j - this.field_k), this.field_v + this.field_n + param1, 3, param3 + this.field_j, this.field_n + param1);
+                this.field_B.a((byte) -99, param1 - -this.field_n, param2, param3 + this.field_j);
                 io.field_n.a(114);
-                return;
-              }
-            } else {
-              return;
             }
-          }
-        } else {
-          return;
         }
     }
 
@@ -69,19 +40,23 @@ final class wm extends wn {
         if (param0 != -75) {
             return;
         }
-        ((wm) this).field_B.e((byte) 87);
+        this.field_B.e((byte) 87);
     }
 
     final static boolean c(boolean param0) {
+        int discarded$0 = 0;
+        if (param0) {
+            discarded$0 = wm.a(-119, (byte) 118);
+        }
         return kg.a(gg.field_e, true, ua.field_S);
     }
 
     wm(int param0, int param1, int param2, int param3, pf param4, qm param5) {
         super(param0, param1, param2, param3, param4, (wc) null);
         try {
-            ((wm) this).field_B = param5;
+            this.field_B = param5;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "wm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "wm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -98,10 +73,10 @@ final class wm extends wn {
         if (param1 > -107) {
             return -8;
         }
-        if (!(param0 != 4)) {
+        if (!((param0 ^ -1) != -5)) {
             return 5132354;
         }
-        if (param0 == 5) {
+        if (-6 == (param0 ^ -1)) {
             return 2174241;
         }
         if (!(param0 != 6)) {
@@ -110,7 +85,7 @@ final class wm extends wn {
         if (param0 == 7) {
             return 15663103;
         }
-        if (param0 == 8) {
+        if ((param0 ^ -1) == -9) {
             return 8978431;
         }
         return 3153936;
@@ -118,15 +93,20 @@ final class wm extends wn {
 
     final static void g(int param0) {
         ba.d(-123);
+        if (param0 != 0) {
+            field_I = -56;
+        }
     }
 
     final static void g(byte param0) {
-        if (-sn.field_G == gi.field_a) {
+        if (0 + -sn.field_G != gi.field_a) {
+            if (-sn.field_G + 250 == gi.field_a) {
+            }
+        }
+        if (param0 != 27) {
             return;
         }
-        if (-sn.field_G + 250 != gi.field_a) {
-            return;
-        }
+        gi.field_a = gi.field_a + 1;
     }
 
     final boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
@@ -156,7 +136,7 @@ final class wm extends wn {
             L1: {
               L2: {
                 var8_int = -43 / ((-42 - param4) / 35);
-                if (!((wm) this).a((byte) -47, param3, param0, param6, param5)) {
+                if (!this.a((byte) -47, param3, param0, param6, param5)) {
                   break L2;
                 } else {
                   if (!super.a(param0, param1, param2, param3, -111, param5, param6)) {
@@ -178,23 +158,23 @@ final class wm extends wn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var8 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var8;
+            stackOut_5_0 = (RuntimeException) (var8);
             stackOut_5_1 = new StringBuilder().append("wm.DA(").append(param0).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -202,16 +182,12 @@ final class wm extends wn {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_4_0 != 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_F = "Invite only";
         field_G = "Create";
         field_J = "Overview:";

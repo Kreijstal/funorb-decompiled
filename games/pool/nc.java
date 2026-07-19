@@ -56,10 +56,10 @@ final class nc extends fa {
     private static boolean field_k;
 
     final int b() {
-        if (!((nc) this).field_U) {
+        if (!this.field_U) {
             this.c();
         }
-        return ((nc) this).field_N;
+        return this.field_N;
     }
 
     private final static int b(int param0, int param1) {
@@ -84,13 +84,13 @@ final class nc extends fa {
         field_db = null;
         field_f = null;
         field_Y = null;
-        field_o = null;
+        field_o = (int[][]) null;
         field_g = null;
-        field_E = null;
+        field_E = (int[][]) null;
         field_C = null;
         field_m = null;
         field_A = null;
-        field_l = null;
+        field_l = (int[][]) null;
         field_K = null;
         field_z = null;
         field_F = null;
@@ -100,10 +100,10 @@ final class nc extends fa {
     }
 
     final int i() {
-        if (!((nc) this).field_U) {
+        if (!this.field_U) {
             this.c();
         }
-        return ((nc) this).field_r;
+        return this.field_r;
     }
 
     final void b(int[] param0, int[] param1) {
@@ -142,7 +142,7 @@ final class nc extends fa {
         int stackOut_18_0 = 0;
         int stackOut_16_0 = 0;
         L0: {
-          if (((nc) this).field_U) {
+          if (this.field_U) {
             break L0;
           } else {
             this.c();
@@ -173,14 +173,14 @@ final class nc extends fa {
         var3 = var15 * param0[3] + var16 * param0[4] + var17 * param0[5] >> 16;
         var4 = var15 * param0[6] + var16 * param0[7] + var17 * param0[8] >> 16;
         var5 = var15 * param0[9] + var16 * param0[10] + var17 * param0[11] >> 16;
-        if (var5 >= 50 - ((nc) this).field_w) {
-          var15 = ((nc) this).field_w * 92682 >> 16;
+        if (var5 >= 50 - this.field_w) {
+          var15 = this.field_w * 92682 >> 16;
           if (var3 >= -var5 - var15) {
             if (var3 <= var5 + var15) {
               if (var4 >= -var5 - var15) {
                 if (var4 <= var5 + var15) {
                   L1: {
-                    if (var5 > 50 + ((nc) this).field_w) {
+                    if (var5 > 50 + this.field_w) {
                       stackOut_14_0 = 0;
                       stackIn_15_0 = stackOut_14_0;
                       break L1;
@@ -193,7 +193,7 @@ final class nc extends fa {
                   L2: {
                     var16 = stackIn_15_0;
                     if (var16 == 0) {
-                      if (((nc) this).field_eb > 0) {
+                      if (this.field_eb > 0) {
                         stackOut_19_0 = 1;
                         stackIn_21_0 = stackOut_19_0;
                         break L2;
@@ -215,10 +215,10 @@ final class nc extends fa {
                   var27 = 0;
                   var21_int = var27;
                   L3: while (true) {
-                    if (var27 >= ((nc) this).field_s) {
+                    if (var27 >= this.field_s) {
                       try {
                         L4: {
-                          this.a((var20 & var16) != 0, false, 0L, (int) ((nc) this).field_w, ((nc) this).field_w << 1);
+                          this.a((var20 & var16) != 0, false, 0L, (int) this.field_w, this.field_w << 1);
                           break L4;
                         }
                       } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -231,9 +231,9 @@ final class nc extends fa {
                       return;
                     } else {
                       L6: {
-                        var22 = ((nc) this).field_t[var27];
-                        var23 = ((nc) this).field_Q[var27];
-                        var24 = ((nc) this).field_D[var27];
+                        var22 = this.field_t[var27];
+                        var23 = this.field_Q[var27];
+                        var24 = this.field_D[var27];
                         var25 = var22 * var6 + var23 * var9 + var24 * var12 >> 16;
                         var26 = var22 * var7 + var23 * var10 + var24 * var13 >> 16;
                         var24 = var22 * var8 + var23 * var11 + var24 * var14 >> 16;
@@ -306,21 +306,21 @@ final class nc extends fa {
         var8 = 0;
         var9 = 0;
         L0: while (true) {
-          if (var9 >= ((nc) this).field_u) {
-            ((nc) this).field_N = (short)var1;
-            ((nc) this).field_V = (short)var4;
-            ((nc) this).field_B = (short)var2;
-            ((nc) this).field_G = (short)var5;
-            ((nc) this).field_O = (short)var3;
-            ((nc) this).field_r = (short)var6;
-            ((nc) this).field_w = (short)(int)(Math.sqrt((double)var8) + 0.99);
-            ((nc) this).field_U = true;
+          if (var9 >= this.field_u) {
+            this.field_N = (short)var1;
+            this.field_V = (short)var4;
+            this.field_B = (short)var2;
+            this.field_G = (short)var5;
+            this.field_O = (short)var3;
+            this.field_r = (short)var6;
+            this.field_w = (short)(int)(Math.sqrt((double)var8) + 0.99);
+            this.field_U = true;
             return;
           } else {
             L1: {
-              var10 = ((nc) this).field_t[var9];
-              var11 = ((nc) this).field_Q[var9];
-              var12 = ((nc) this).field_D[var9];
+              var10 = this.field_t[var9];
+              var11 = this.field_Q[var9];
+              var12 = this.field_D[var9];
               if (var10 >= var1) {
                 break L1;
               } else {
@@ -391,6 +391,15 @@ final class nc extends fa {
     }
 
     private final void c(int param0) {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -414,14 +423,14 @@ final class nc extends fa {
           var2 = fb.field_q;
           var3 = fb.field_d;
           var4 = 0;
-          var5 = ((nc) this).field_j[param0];
-          var6 = ((nc) this).field_T[param0];
-          var7 = ((nc) this).field_R[param0];
+          var5 = this.field_j[param0];
+          var6 = this.field_T[param0];
+          var7 = this.field_R[param0];
           var8 = field_f[var5];
           var9 = field_f[var6];
           var10 = field_f[var7];
-          if (((nc) this).field_bb != null) {
-            fb.field_c = ((nc) this).field_bb[param0] & 255;
+          if (this.field_bb != null) {
+            fb.field_c = this.field_bb[param0] & 255;
             break L0;
           } else {
             fb.field_c = 0;
@@ -433,16 +442,16 @@ final class nc extends fa {
             L2: {
               var11 = field_L[var5];
               var12 = field_db[var5];
-              var13 = ((nc) this).field_W[param0] & 65535;
+              var13 = this.field_W[param0] & 65535;
               if (var10 < 50) {
                 break L2;
               } else {
                 var14 = (50 - var8) * fb.field_f[var10 - var8];
                 field_H[var4] = var2 + (var11 + ((field_L[var7] - var11) * var14 >> 16) << 9) / 50;
                 field_cb[var4] = var3 + (var12 + ((field_db[var7] - var12) * var14 >> 16) << 9) / 50;
-                int incrementValue$9 = var4;
+                incrementValue$9 = var4;
                 var4++;
-                field_p[incrementValue$9] = var13 + (((((nc) this).field_J[param0] & 65535) - var13) * var14 >> 16);
+                field_p[incrementValue$9] = var13 + (((this.field_J[param0] & 65535) - var13) * var14 >> 16);
                 break L2;
               }
             }
@@ -452,17 +461,17 @@ final class nc extends fa {
               var14 = (50 - var8) * fb.field_f[var9 - var8];
               field_H[var4] = var2 + (var11 + ((field_L[var6] - var11) * var14 >> 16) << 9) / 50;
               field_cb[var4] = var3 + (var12 + ((field_db[var6] - var12) * var14 >> 16) << 9) / 50;
-              int incrementValue$10 = var4;
+              incrementValue$10 = var4;
               var4++;
-              field_p[incrementValue$10] = var13 + (((((nc) this).field_y[param0] & 65535) - var13) * var14 >> 16);
+              field_p[incrementValue$10] = var13 + (((this.field_y[param0] & 65535) - var13) * var14 >> 16);
               break L1;
             }
           } else {
             field_H[var4] = field_X[var5];
             field_cb[var4] = field_v[var5];
-            int incrementValue$11 = var4;
+            incrementValue$11 = var4;
             var4++;
-            field_p[incrementValue$11] = ((nc) this).field_W[param0] & 65535;
+            field_p[incrementValue$11] = this.field_W[param0] & 65535;
             break L1;
           }
         }
@@ -471,16 +480,16 @@ final class nc extends fa {
             L4: {
               var11 = field_L[var6];
               var12 = field_db[var6];
-              var13 = ((nc) this).field_y[param0] & 65535;
+              var13 = this.field_y[param0] & 65535;
               if (var8 < 50) {
                 break L4;
               } else {
                 var14 = (50 - var9) * fb.field_f[var8 - var9];
                 field_H[var4] = var2 + (var11 + ((field_L[var5] - var11) * var14 >> 16) << 9) / 50;
                 field_cb[var4] = var3 + (var12 + ((field_db[var5] - var12) * var14 >> 16) << 9) / 50;
-                int incrementValue$12 = var4;
+                incrementValue$12 = var4;
                 var4++;
-                field_p[incrementValue$12] = var13 + (((((nc) this).field_W[param0] & 65535) - var13) * var14 >> 16);
+                field_p[incrementValue$12] = var13 + (((this.field_W[param0] & 65535) - var13) * var14 >> 16);
                 break L4;
               }
             }
@@ -490,17 +499,17 @@ final class nc extends fa {
               var14 = (50 - var9) * fb.field_f[var10 - var9];
               field_H[var4] = var2 + (var11 + ((field_L[var7] - var11) * var14 >> 16) << 9) / 50;
               field_cb[var4] = var3 + (var12 + ((field_db[var7] - var12) * var14 >> 16) << 9) / 50;
-              int incrementValue$13 = var4;
+              incrementValue$13 = var4;
               var4++;
-              field_p[incrementValue$13] = var13 + (((((nc) this).field_J[param0] & 65535) - var13) * var14 >> 16);
+              field_p[incrementValue$13] = var13 + (((this.field_J[param0] & 65535) - var13) * var14 >> 16);
               break L3;
             }
           } else {
             field_H[var4] = field_X[var6];
             field_cb[var4] = field_v[var6];
-            int incrementValue$14 = var4;
+            incrementValue$14 = var4;
             var4++;
-            field_p[incrementValue$14] = ((nc) this).field_y[param0] & 65535;
+            field_p[incrementValue$14] = this.field_y[param0] & 65535;
             break L3;
           }
         }
@@ -509,16 +518,16 @@ final class nc extends fa {
             L6: {
               var11 = field_L[var7];
               var12 = field_db[var7];
-              var13 = ((nc) this).field_J[param0] & 65535;
+              var13 = this.field_J[param0] & 65535;
               if (var9 < 50) {
                 break L6;
               } else {
                 var14 = (50 - var10) * fb.field_f[var9 - var10];
                 field_H[var4] = var2 + (var11 + ((field_L[var6] - var11) * var14 >> 16) << 9) / 50;
                 field_cb[var4] = var3 + (var12 + ((field_db[var6] - var12) * var14 >> 16) << 9) / 50;
-                int incrementValue$15 = var4;
+                incrementValue$15 = var4;
                 var4++;
-                field_p[incrementValue$15] = var13 + (((((nc) this).field_y[param0] & 65535) - var13) * var14 >> 16);
+                field_p[incrementValue$15] = var13 + (((this.field_y[param0] & 65535) - var13) * var14 >> 16);
                 break L6;
               }
             }
@@ -528,17 +537,17 @@ final class nc extends fa {
               var14 = (50 - var10) * fb.field_f[var8 - var10];
               field_H[var4] = var2 + (var11 + ((field_L[var5] - var11) * var14 >> 16) << 9) / 50;
               field_cb[var4] = var3 + (var12 + ((field_db[var5] - var12) * var14 >> 16) << 9) / 50;
-              int incrementValue$16 = var4;
+              incrementValue$16 = var4;
               var4++;
-              field_p[incrementValue$16] = var13 + (((((nc) this).field_W[param0] & 65535) - var13) * var14 >> 16);
+              field_p[incrementValue$16] = var13 + (((this.field_W[param0] & 65535) - var13) * var14 >> 16);
               break L5;
             }
           } else {
             field_H[var4] = field_X[var7];
             field_cb[var4] = field_v[var7];
-            int incrementValue$17 = var4;
+            incrementValue$17 = var4;
             var4++;
-            field_p[incrementValue$17] = ((nc) this).field_J[param0] & 65535;
+            field_p[incrementValue$17] = this.field_J[param0] & 65535;
             break L5;
           }
         }
@@ -585,22 +594,22 @@ final class nc extends fa {
               break L8;
             }
             L10: {
-              if (((nc) this).field_Z == null) {
+              if (this.field_Z == null) {
                 break L10;
               } else {
-                if (((nc) this).field_Z[param0] != -1) {
+                if (this.field_Z[param0] != -1) {
                   L11: {
                     L12: {
-                      if (((nc) this).field_h == null) {
+                      if (this.field_h == null) {
                         break L12;
                       } else {
-                        if (((nc) this).field_h[param0] == -1) {
+                        if (this.field_h[param0] == -1) {
                           break L12;
                         } else {
-                          var20 = ((nc) this).field_h[param0] & 255;
-                          var17 = ((nc) this).field_ab[var20];
-                          var18 = ((nc) this).field_n[var20];
-                          var19 = ((nc) this).field_i[var20];
+                          var20 = this.field_h[param0] & 255;
+                          var17 = this.field_ab[var20];
+                          var18 = this.field_n[var20];
+                          var19 = this.field_i[var20];
                           break L11;
                         }
                       }
@@ -610,11 +619,11 @@ final class nc extends fa {
                     var19 = var7;
                     break L11;
                   }
-                  if (((nc) this).field_J[param0] != -1) {
-                    fb.a(var14, var15, var16, var11, var12, var13, field_p[0], field_p[1], field_p[2], field_L[var17], field_L[var18], field_L[var19], field_db[var17], field_db[var18], field_db[var19], field_f[var17], field_f[var18], field_f[var19], (int) ((nc) this).field_Z[param0]);
+                  if (this.field_J[param0] != -1) {
+                    fb.a(var14, var15, var16, var11, var12, var13, field_p[0], field_p[1], field_p[2], field_L[var17], field_L[var18], field_L[var19], field_db[var17], field_db[var18], field_db[var19], field_f[var17], field_f[var18], field_f[var19], (int) this.field_Z[param0]);
                     break L7;
                   } else {
-                    fb.a(var14, var15, var16, var11, var12, var13, ((nc) this).field_W[param0], ((nc) this).field_W[param0], ((nc) this).field_W[param0], field_L[var17], field_L[var18], field_L[var19], field_db[var17], field_db[var18], field_db[var19], field_f[var17], field_f[var18], field_f[var19], (int) ((nc) this).field_Z[param0]);
+                    fb.a(var14, var15, var16, var11, var12, var13, this.field_W[param0], this.field_W[param0], this.field_W[param0], field_L[var17], field_L[var18], field_L[var19], field_db[var17], field_db[var18], field_db[var19], field_f[var17], field_f[var18], field_f[var19], (int) this.field_Z[param0]);
                     break L7;
                   }
                 } else {
@@ -622,11 +631,11 @@ final class nc extends fa {
                 }
               }
             }
-            if (((nc) this).field_J[param0] != -1) {
+            if (this.field_J[param0] != -1) {
               fb.a(var14, var15, var16, var11, var12, var13, field_p[0], field_p[1], field_p[2]);
               break L7;
             } else {
-              fb.a(var14, var15, var16, var11, var12, var13, fb.field_b[((nc) this).field_W[param0] & 65535]);
+              fb.a(var14, var15, var16, var11, var12, var13, fb.field_b[this.field_W[param0] & 65535]);
               break L7;
             }
           }
@@ -675,22 +684,22 @@ final class nc extends fa {
           }
           L15: {
             L16: {
-              if (((nc) this).field_Z == null) {
+              if (this.field_Z == null) {
                 break L16;
               } else {
-                if (((nc) this).field_Z[param0] != -1) {
+                if (this.field_Z[param0] != -1) {
                   L17: {
                     L18: {
-                      if (((nc) this).field_h == null) {
+                      if (this.field_h == null) {
                         break L18;
                       } else {
-                        if (((nc) this).field_h[param0] == -1) {
+                        if (this.field_h[param0] == -1) {
                           break L18;
                         } else {
-                          var20 = ((nc) this).field_h[param0] & 255;
-                          var17 = ((nc) this).field_ab[var20];
-                          var18 = ((nc) this).field_n[var20];
-                          var19 = ((nc) this).field_i[var20];
+                          var20 = this.field_h[param0] & 255;
+                          var17 = this.field_ab[var20];
+                          var18 = this.field_n[var20];
+                          var19 = this.field_i[var20];
                           break L17;
                         }
                       }
@@ -700,14 +709,14 @@ final class nc extends fa {
                     var19 = var7;
                     break L17;
                   }
-                  var20 = ((nc) this).field_Z[param0];
-                  if (((nc) this).field_J[param0] != -1) {
+                  var20 = this.field_Z[param0];
+                  if (this.field_J[param0] != -1) {
                     fb.a(var14, var15, var16, var11, var12, var13, field_p[0], field_p[1], field_p[2], field_L[var17], field_L[var18], field_L[var19], field_db[var17], field_db[var18], field_db[var19], field_f[var17], field_f[var18], field_f[var19], var20);
                     fb.a(var14, var16, field_cb[3], var11, var13, field_H[3], field_p[0], field_p[2], field_p[3], field_L[var17], field_L[var18], field_L[var19], field_db[var17], field_db[var18], field_db[var19], field_f[var17], field_f[var18], field_f[var19], var20);
                     break L15;
                   } else {
-                    fb.a(var14, var15, var16, var11, var12, var13, ((nc) this).field_W[param0], ((nc) this).field_W[param0], ((nc) this).field_W[param0], field_L[var17], field_L[var18], field_L[var19], field_db[var17], field_db[var18], field_db[var19], field_f[var17], field_f[var18], field_f[var19], var20);
-                    fb.a(var14, var16, field_cb[3], var11, var13, field_H[3], ((nc) this).field_W[param0], ((nc) this).field_W[param0], ((nc) this).field_W[param0], field_L[var17], field_L[var18], field_L[var19], field_db[var17], field_db[var18], field_db[var19], field_f[var17], field_f[var18], field_f[var19], var20);
+                    fb.a(var14, var15, var16, var11, var12, var13, this.field_W[param0], this.field_W[param0], this.field_W[param0], field_L[var17], field_L[var18], field_L[var19], field_db[var17], field_db[var18], field_db[var19], field_f[var17], field_f[var18], field_f[var19], var20);
+                    fb.a(var14, var16, field_cb[3], var11, var13, field_H[3], this.field_W[param0], this.field_W[param0], this.field_W[param0], field_L[var17], field_L[var18], field_L[var19], field_db[var17], field_db[var18], field_db[var19], field_f[var17], field_f[var18], field_f[var19], var20);
                     break L15;
                   }
                 } else {
@@ -715,12 +724,12 @@ final class nc extends fa {
                 }
               }
             }
-            if (((nc) this).field_J[param0] != -1) {
+            if (this.field_J[param0] != -1) {
               fb.a(var14, var15, var16, var11, var12, var13, field_p[0], field_p[1], field_p[2]);
               fb.a(var14, var16, field_cb[3], var11, var13, field_H[3], field_p[0], field_p[2], field_p[3]);
               break L15;
             } else {
-              var17 = fb.field_b[((nc) this).field_W[param0] & 65535];
+              var17 = fb.field_b[this.field_W[param0] & 65535];
               fb.a(var14, var15, var16, var11, var12, var13, var17);
               fb.a(var14, var16, field_cb[3], var11, var13, field_H[3], var17);
               break L15;
@@ -731,10 +740,10 @@ final class nc extends fa {
     }
 
     final int a() {
-        if (!((nc) this).field_U) {
+        if (!this.field_U) {
             this.c();
         }
-        return ((nc) this).field_w;
+        return this.field_w;
     }
 
     final void a(int[] param0, int[] param1) {
@@ -784,7 +793,7 @@ final class nc extends fa {
         int stackOut_18_0 = 0;
         int stackOut_16_0 = 0;
         L0: {
-          if (((nc) this).field_U) {
+          if (this.field_U) {
             break L0;
           } else {
             this.c();
@@ -815,14 +824,14 @@ final class nc extends fa {
         var24 = var3 * var6 + var4 * var7 + var5 * var8 >> 16;
         var25 = var3 * var9 + var4 * var10 + var5 * var11 >> 16;
         var26 = var3 * var12 + var4 * var13 + var5 * var14 >> 16;
-        if (var26 >= 50 - ((nc) this).field_w) {
-          var27 = ((nc) this).field_w * 92682 >> 16;
+        if (var26 >= 50 - this.field_w) {
+          var27 = this.field_w * 92682 >> 16;
           if (var24 >= -var26 - var27) {
             if (var24 <= var26 + var27) {
               if (var25 >= -var26 - var27) {
                 if (var25 <= var26 + var27) {
                   L1: {
-                    if (var26 > 50 + ((nc) this).field_w) {
+                    if (var26 > 50 + this.field_w) {
                       stackOut_14_0 = 0;
                       stackIn_15_0 = stackOut_14_0;
                       break L1;
@@ -835,7 +844,7 @@ final class nc extends fa {
                   L2: {
                     var28 = stackIn_15_0;
                     if (var28 == 0) {
-                      if (((nc) this).field_eb > 0) {
+                      if (this.field_eb > 0) {
                         stackOut_19_0 = 1;
                         stackIn_21_0 = stackOut_19_0;
                         break L2;
@@ -856,10 +865,10 @@ final class nc extends fa {
                   var32 = 0;
                   var33_int = 0;
                   L3: while (true) {
-                    if (var33_int >= ((nc) this).field_s) {
+                    if (var33_int >= this.field_s) {
                       try {
                         L4: {
-                          this.a((var32 & var28) != 0, false, 0L, (int) ((nc) this).field_w, ((nc) this).field_w << 1);
+                          this.a((var32 & var28) != 0, false, 0L, (int) this.field_w, this.field_w << 1);
                           break L4;
                         }
                       } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -872,9 +881,9 @@ final class nc extends fa {
                       return;
                     } else {
                       L6: {
-                        var34 = ((nc) this).field_t[var33_int];
-                        var35 = ((nc) this).field_Q[var33_int];
-                        var36 = ((nc) this).field_D[var33_int];
+                        var34 = this.field_t[var33_int];
+                        var35 = this.field_Q[var33_int];
+                        var36 = this.field_D[var33_int];
                         var37 = var34 * var15 + var35 * var18 + var36 * var21 >> 16;
                         var38 = var34 * var16 + var35 * var19 + var36 * var22 >> 16;
                         var36 = var34 * var17 + var35 * var20 + var36 * var23 >> 16;
@@ -940,17 +949,17 @@ final class nc extends fa {
     }
 
     final int f() {
-        if (!((nc) this).field_U) {
+        if (!this.field_U) {
             this.c();
         }
-        return ((nc) this).field_V;
+        return this.field_V;
     }
 
     final int h() {
-        if (!((nc) this).field_U) {
+        if (!this.field_U) {
             this.c();
         }
-        return ((nc) this).field_G;
+        return this.field_G;
     }
 
     private final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -986,20 +995,29 @@ final class nc extends fa {
     }
 
     final int g() {
-        if (!((nc) this).field_U) {
+        if (!this.field_U) {
             this.c();
         }
-        return ((nc) this).field_B;
+        return this.field_B;
     }
 
     final int d() {
-        if (!((nc) this).field_U) {
+        if (!this.field_U) {
             this.c();
         }
-        return ((nc) this).field_O;
+        return this.field_O;
     }
 
     private final void a(boolean param0, boolean param1, long param2, int param3, int param4) {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int fieldTemp$13 = 0;
+        int incrementValue$14 = 0;
+        int fieldTemp$15 = 0;
+        int fieldTemp$16 = 0;
+        int incrementValue$17 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -1063,10 +1081,10 @@ final class nc extends fa {
           }
           var8 = 0;
           L3: while (true) {
-            if (var8 >= ((nc) this).field_P) {
+            if (var8 >= this.field_P) {
               L4: {
                 if (!field_k) {
-                  if (((nc) this).field_M != null) {
+                  if (this.field_M != null) {
                     var8 = 0;
                     L5: while (true) {
                       if (var8 >= 12) {
@@ -1096,7 +1114,7 @@ final class nc extends fa {
                                     break L7;
                                   } else {
                                     var13 = var47[var12];
-                                    var14_int = ((nc) this).field_M[var13];
+                                    var14_int = this.field_M[var13];
                                     field_A[var14_int] = field_A[var14_int] + 1;
                                     var15_int = field_A[var14_int];
                                     field_l[var14_int][var15_int] = var13;
@@ -1120,13 +1138,13 @@ final class nc extends fa {
                               }
                             }
                             if (var9 > 64) {
-                              var10 = field_Y[var8] - 65;
+                              var10 = field_Y[var8] - 64 - 1;
                               var48 = field_E[var10];
                               var12 = 0;
                               L10: while (true) {
                                 if (var12 < field_g[var10]) {
                                   var13 = var48[var12];
-                                  var14_int = ((nc) this).field_M[var13];
+                                  var14_int = this.field_M[var13];
                                   field_A[var14_int] = field_A[var14_int] + 1;
                                   var15_int = field_A[var14_int];
                                   field_l[var14_int][var15_int] = var13;
@@ -1200,7 +1218,7 @@ final class nc extends fa {
                           }
                         }
                         if (var9 > 64) {
-                          var10 = field_Y[var8] - 65;
+                          var10 = field_Y[var8] - 64 - 1;
                           var46 = field_E[var10];
                           var12 = 0;
                           L15: while (true) {
@@ -1222,7 +1240,7 @@ final class nc extends fa {
                   }
                 } else {
                   hq.a(0, field_C, field_m, var7 - 1, (byte) 80);
-                  if (((nc) this).field_M != null) {
+                  if (this.field_M != null) {
                     var8 = 0;
                     L16: while (true) {
                       if (var8 >= 12) {
@@ -1233,7 +1251,7 @@ final class nc extends fa {
                           } else {
                             var9 = field_m[var8];
                             var10 = field_C[var8];
-                            var11 = ((nc) this).field_M[var9];
+                            var11 = this.field_M[var9];
                             field_A[var11] = field_A[var11] + 1;
                             var12 = field_A[var11];
                             field_l[var11][var12] = var9;
@@ -1355,9 +1373,9 @@ final class nc extends fa {
                       return;
                     } else {
                       L29: {
-                        int incrementValue$7 = var12;
+                        incrementValue$9 = var12;
                         var12++;
-                        this.b(var14[incrementValue$7]);
+                        this.b(var14[incrementValue$9]);
                         if (var12 != var13) {
                           break L29;
                         } else {
@@ -1391,9 +1409,9 @@ final class nc extends fa {
                           break L31;
                         } else {
                           L32: {
-                            int incrementValue$8 = var12;
+                            incrementValue$10 = var12;
                             var12++;
-                            this.b(var14[incrementValue$8]);
+                            this.b(var14[incrementValue$10]);
                             if (var12 != var13) {
                               break L32;
                             } else {
@@ -1427,9 +1445,9 @@ final class nc extends fa {
                             break L34;
                           } else {
                             L35: {
-                              int incrementValue$9 = var12;
+                              incrementValue$11 = var12;
                               var12++;
-                              this.b(var14[incrementValue$9]);
+                              this.b(var14[incrementValue$11]);
                               if (var12 != var13) {
                                 break L35;
                               } else {
@@ -1463,9 +1481,9 @@ final class nc extends fa {
                               break L37;
                             } else {
                               L38: {
-                                int incrementValue$10 = var12;
+                                incrementValue$12 = var12;
                                 var12++;
-                                this.b(var14[incrementValue$10]);
+                                this.b(var14[incrementValue$12]);
                                 if (var12 != var13) {
                                   break L38;
                                 } else {
@@ -1510,11 +1528,11 @@ final class nc extends fa {
                 }
               }
             } else {
-              if (((nc) this).field_J[var8] != -2) {
+              if (this.field_J[var8] != -2) {
                 L40: {
-                  var9 = ((nc) this).field_j[var8];
-                  var10 = ((nc) this).field_T[var8];
-                  var11 = ((nc) this).field_R[var8];
+                  var9 = this.field_j[var8];
+                  var10 = this.field_T[var8];
+                  var11 = this.field_R[var8];
                   var12 = field_X[var9];
                   var13 = field_X[var10];
                   var14_int = field_X[var11];
@@ -1565,9 +1583,10 @@ final class nc extends fa {
                               break L42;
                             } else {
                               if (field_S != 512) {
+                                fieldTemp$13 = field_S;
                                 field_S = field_S + 1;
-                                var28 = 65 + field_S;
-                                field_Y[var27] = 65 + field_S;
+                                var28 = 65 + fieldTemp$13;
+                                field_Y[var27] = 65 + fieldTemp$13;
                                 break L42;
                               } else {
                                 var8++;
@@ -1588,9 +1607,9 @@ final class nc extends fa {
                         }
                       } else {
                         field_C[var7] = (field_x[var9] + field_x[var10] + field_x[var11]) / 3;
-                        int incrementValue$11 = var7;
+                        incrementValue$14 = var7;
                         var7++;
-                        field_m[incrementValue$11] = var8;
+                        field_m[incrementValue$14] = var8;
                         var8++;
                         continue L3;
                       }
@@ -1607,9 +1626,9 @@ final class nc extends fa {
                     if (!this.a(tp.field_b + fb.field_q, ao.field_Rb + fb.field_d, field_v[var9], field_v[var10], field_v[var11], var12, var13, var14_int)) {
                       break L43;
                     } else {
-                      int fieldTemp$12 = qd.field_g;
+                      fieldTemp$15 = qd.field_g;
                       qd.field_g = qd.field_g + 1;
-                      dq.field_d[fieldTemp$12] = param2;
+                      dq.field_d[fieldTemp$15] = param2;
                       param1 = false;
                       break L43;
                     }
@@ -1658,9 +1677,10 @@ final class nc extends fa {
                           break L46;
                         } else {
                           if (field_S != 512) {
+                            fieldTemp$16 = field_S;
                             field_S = field_S + 1;
-                            var16 = 65 + field_S;
-                            field_Y[var15_int] = 65 + field_S;
+                            var16 = 65 + fieldTemp$16;
+                            field_Y[var15_int] = 65 + fieldTemp$16;
                             break L46;
                           } else {
                             var8++;
@@ -1681,9 +1701,9 @@ final class nc extends fa {
                     }
                   } else {
                     field_C[var7] = (field_x[var9] + field_x[var10] + field_x[var11]) / 3;
-                    int incrementValue$13 = var7;
+                    incrementValue$17 = var7;
                     var7++;
-                    field_m[incrementValue$13] = var8;
+                    field_m[incrementValue$17] = var8;
                     var8++;
                     continue L3;
                   }
@@ -1712,12 +1732,12 @@ final class nc extends fa {
         int var8 = 0;
         if (!field_I[param0]) {
           L0: {
-            var2 = ((nc) this).field_j[param0];
-            var3 = ((nc) this).field_T[param0];
-            var4 = ((nc) this).field_R[param0];
+            var2 = this.field_j[param0];
+            var3 = this.field_T[param0];
+            var4 = this.field_R[param0];
             fb.field_n = field_q[param0];
-            if (((nc) this).field_bb != null) {
-              fb.field_c = ((nc) this).field_bb[param0] & 255;
+            if (this.field_bb != null) {
+              fb.field_c = this.field_bb[param0] & 255;
               break L0;
             } else {
               fb.field_c = 0;
@@ -1726,22 +1746,22 @@ final class nc extends fa {
           }
           L1: {
             L2: {
-              if (((nc) this).field_Z == null) {
+              if (this.field_Z == null) {
                 break L2;
               } else {
-                if (((nc) this).field_Z[param0] != -1) {
+                if (this.field_Z[param0] != -1) {
                   L3: {
                     L4: {
-                      if (((nc) this).field_h == null) {
+                      if (this.field_h == null) {
                         break L4;
                       } else {
-                        if (((nc) this).field_h[param0] == -1) {
+                        if (this.field_h[param0] == -1) {
                           break L4;
                         } else {
-                          var8 = ((nc) this).field_h[param0] & 255;
-                          var5 = ((nc) this).field_ab[var8];
-                          var6 = ((nc) this).field_n[var8];
-                          var7 = ((nc) this).field_i[var8];
+                          var8 = this.field_h[param0] & 255;
+                          var5 = this.field_ab[var8];
+                          var6 = this.field_n[var8];
+                          var7 = this.field_i[var8];
                           break L3;
                         }
                       }
@@ -1751,11 +1771,11 @@ final class nc extends fa {
                     var7 = var4;
                     break L3;
                   }
-                  if (((nc) this).field_J[param0] != -1) {
-                    fb.a(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], ((nc) this).field_W[param0], ((nc) this).field_y[param0], ((nc) this).field_J[param0], field_L[var5], field_L[var6], field_L[var7], field_db[var5], field_db[var6], field_db[var7], field_f[var5], field_f[var6], field_f[var7], (int) ((nc) this).field_Z[param0]);
+                  if (this.field_J[param0] != -1) {
+                    fb.a(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], this.field_W[param0], this.field_y[param0], this.field_J[param0], field_L[var5], field_L[var6], field_L[var7], field_db[var5], field_db[var6], field_db[var7], field_f[var5], field_f[var6], field_f[var7], (int) this.field_Z[param0]);
                     break L1;
                   } else {
-                    fb.a(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], ((nc) this).field_W[param0], ((nc) this).field_W[param0], ((nc) this).field_W[param0], field_L[var5], field_L[var6], field_L[var7], field_db[var5], field_db[var6], field_db[var7], field_f[var5], field_f[var6], field_f[var7], (int) ((nc) this).field_Z[param0]);
+                    fb.a(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], this.field_W[param0], this.field_W[param0], this.field_W[param0], field_L[var5], field_L[var6], field_L[var7], field_db[var5], field_db[var6], field_db[var7], field_f[var5], field_f[var6], field_f[var7], (int) this.field_Z[param0]);
                     break L1;
                   }
                 } else {
@@ -1763,11 +1783,11 @@ final class nc extends fa {
                 }
               }
             }
-            if (((nc) this).field_J[param0] != -1) {
-              fb.a(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], ((nc) this).field_W[param0] & 65535, ((nc) this).field_y[param0] & 65535, ((nc) this).field_J[param0] & 65535);
+            if (this.field_J[param0] != -1) {
+              fb.a(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], this.field_W[param0] & 65535, this.field_y[param0] & 65535, this.field_J[param0] & 65535);
               break L1;
             } else {
-              fb.a(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], fb.field_b[((nc) this).field_W[param0] & 65535]);
+              fb.a(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], fb.field_b[this.field_W[param0] & 65535]);
               break L1;
             }
           }
@@ -1779,14 +1799,15 @@ final class nc extends fa {
     }
 
     private nc() {
-        ((nc) this).field_U = false;
-        ((nc) this).field_P = 0;
-        ((nc) this).field_u = 0;
-        ((nc) this).field_s = 0;
-        ((nc) this).field_eb = 0;
+        this.field_U = false;
+        this.field_P = 0;
+        this.field_u = 0;
+        this.field_s = 0;
+        this.field_eb = 0;
     }
 
     nc(eg param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$1 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -1802,40 +1823,38 @@ final class nc extends fa {
         ef var18 = null;
         ef var19 = null;
         int[] var20 = null;
-        int[] var21 = null;
-        int[] var22 = null;
         L0: {
-          ((nc) this).field_U = false;
-          ((nc) this).field_P = 0;
-          ((nc) this).field_u = 0;
-          ((nc) this).field_s = 0;
-          ((nc) this).field_eb = 0;
+          this.field_U = false;
+          this.field_P = 0;
+          this.field_u = 0;
+          this.field_s = 0;
+          this.field_eb = 0;
           param0.d();
           param0.b();
-          ((nc) this).field_s = param0.field_B;
-          ((nc) this).field_u = param0.field_M;
-          ((nc) this).field_t = param0.field_g;
-          ((nc) this).field_Q = param0.field_Y;
-          ((nc) this).field_D = param0.field_q;
-          ((nc) this).field_P = param0.field_K;
-          ((nc) this).field_j = param0.field_N;
-          ((nc) this).field_T = param0.field_v;
-          ((nc) this).field_R = param0.field_X;
-          ((nc) this).field_M = param0.field_P;
-          ((nc) this).field_bb = param0.field_f;
+          this.field_s = param0.field_B;
+          this.field_u = param0.field_M;
+          this.field_t = param0.field_g;
+          this.field_Q = param0.field_Y;
+          this.field_D = param0.field_q;
+          this.field_P = param0.field_K;
+          this.field_j = param0.field_N;
+          this.field_T = param0.field_v;
+          this.field_R = param0.field_X;
+          this.field_M = param0.field_P;
+          this.field_bb = param0.field_f;
           var7 = (int)Math.sqrt((double)(param3 * param3 + param4 * param4 + param5 * param5));
           var8 = param2 * var7 >> 8;
-          ((nc) this).field_W = new int[((nc) this).field_P];
-          ((nc) this).field_y = new int[((nc) this).field_P];
-          ((nc) this).field_J = new int[((nc) this).field_P];
+          this.field_W = new int[this.field_P];
+          this.field_y = new int[this.field_P];
+          this.field_J = new int[this.field_P];
           if (param0.field_L == null) {
-            ((nc) this).field_Z = null;
+            this.field_Z = null;
             break L0;
           } else {
-            ((nc) this).field_Z = new short[((nc) this).field_P];
+            this.field_Z = new short[this.field_P];
             var9 = 0;
             L1: while (true) {
-              if (var9 >= ((nc) this).field_P) {
+              if (var9 >= this.field_P) {
                 break L0;
               } else {
                 L2: {
@@ -1846,13 +1865,13 @@ final class nc extends fa {
                     if (!fb.field_i.a((byte) 104, var10)) {
                       break L2;
                     } else {
-                      ((nc) this).field_Z[var9] = (short)var10;
+                      this.field_Z[var9] = (short)var10;
                       var9++;
                       continue L1;
                     }
                   }
                 }
-                ((nc) this).field_Z[var9] = (short) -1;
+                this.field_Z[var9] = (short)-1;
                 var9++;
                 continue L1;
               }
@@ -1866,40 +1885,38 @@ final class nc extends fa {
             if (param0.field_k == null) {
               break L3;
             } else {
-              var22 = new int[param0.field_l];
-              var21 = var22;
-              var20 = var21;
+              var20 = new int[param0.field_l];
               var17 = var20;
               var9_ref_int__ = var17;
               var10 = 0;
               L4: while (true) {
-                if (var10 >= ((nc) this).field_P) {
-                  ((nc) this).field_eb = 0;
+                if (var10 >= this.field_P) {
+                  this.field_eb = 0;
                   var10 = 0;
                   L5: while (true) {
                     if (var10 >= param0.field_l) {
-                      ((nc) this).field_ab = new int[((nc) this).field_eb];
-                      ((nc) this).field_n = new int[((nc) this).field_eb];
-                      ((nc) this).field_i = new int[((nc) this).field_eb];
+                      this.field_ab = new int[this.field_eb];
+                      this.field_n = new int[this.field_eb];
+                      this.field_i = new int[this.field_eb];
                       var10 = 0;
                       var11 = 0;
                       L6: while (true) {
                         if (var11 >= param0.field_l) {
-                          ((nc) this).field_h = new byte[((nc) this).field_P];
+                          this.field_h = new byte[this.field_P];
                           var11 = 0;
                           L7: while (true) {
-                            if (var11 >= ((nc) this).field_P) {
+                            if (var11 >= this.field_P) {
                               break L3;
                             } else {
                               if (param0.field_k[var11] == -1) {
-                                ((nc) this).field_h[var11] = (byte) -1;
+                                this.field_h[var11] = (byte)-1;
                                 var11++;
                                 continue L7;
                               } else {
-                                ((nc) this).field_h[var11] = (byte)var9_ref_int__[param0.field_k[var11] & 255];
-                                if (((nc) this).field_h[var11] == -1) {
-                                  if (((nc) this).field_Z != null) {
-                                    ((nc) this).field_Z[var11] = (short) -1;
+                                this.field_h[var11] = (byte)var9_ref_int__[param0.field_k[var11] & 255];
+                                if (this.field_h[var11] == -1) {
+                                  if (this.field_Z != null) {
+                                    this.field_Z[var11] = (short)-1;
                                     var11++;
                                     continue L7;
                                   } else {
@@ -1915,16 +1932,16 @@ final class nc extends fa {
                           }
                         } else {
                           L8: {
-                            if (var22[var11] <= 0) {
+                            if (var20[var11] <= 0) {
                               break L8;
                             } else {
                               if (param0.field_o[var11] != 0) {
                                 break L8;
                               } else {
-                                ((nc) this).field_ab[var10] = param0.field_p[var11] & 65535;
-                                ((nc) this).field_n[var10] = param0.field_H[var11] & 65535;
-                                ((nc) this).field_i[var10] = param0.field_C[var11] & 65535;
-                                int incrementValue$1 = var10;
+                                this.field_ab[var10] = param0.field_p[var11] & 65535;
+                                this.field_n[var10] = param0.field_H[var11] & 65535;
+                                this.field_i[var10] = param0.field_C[var11] & 65535;
+                                incrementValue$1 = var10;
                                 var10++;
                                 var9_ref_int__[var11] = incrementValue$1;
                                 var11++;
@@ -1932,15 +1949,15 @@ final class nc extends fa {
                               }
                             }
                           }
-                          var22[var11] = -1;
+                          var20[var11] = -1;
                           var11++;
                           continue L6;
                         }
                       }
                     } else {
-                      if (var22[var10] > 0) {
+                      if (var20[var10] > 0) {
                         if (param0.field_o[var10] == 0) {
-                          ((nc) this).field_eb = ((nc) this).field_eb + 1;
+                          this.field_eb = this.field_eb + 1;
                           var10++;
                           continue L5;
                         } else {
@@ -1970,7 +1987,7 @@ final class nc extends fa {
         var16 = 0;
         var9 = var16;
         L9: while (true) {
-          if (var16 >= ((nc) this).field_P) {
+          if (var16 >= this.field_P) {
             return;
           } else {
             L10: {
@@ -1992,8 +2009,8 @@ final class nc extends fa {
               }
             }
             L12: {
-              if (((nc) this).field_Z != null) {
-                var12 = ((nc) this).field_Z[var16];
+              if (this.field_Z != null) {
+                var12 = this.field_Z[var16];
                 break L12;
               } else {
                 var12 = -1;
@@ -2019,14 +2036,14 @@ final class nc extends fa {
             if (var12 != -1) {
               if (var10 != 0) {
                 if (var10 != 1) {
-                  ((nc) this).field_J[var16] = -2;
+                  this.field_J[var16] = -2;
                   var16++;
                   continue L9;
                 } else {
                   var19 = param0.field_J[var16];
                   var14 = param1 + (param3 * var19.field_b + param4 * var19.field_a + param5 * var19.field_d) / (var8 + var8 / 2);
-                  ((nc) this).field_W[var16] = nc.d(var14);
-                  ((nc) this).field_J[var16] = -1;
+                  this.field_W[var16] = nc.d(var14);
+                  this.field_J[var16] = -1;
                   var16++;
                   continue L9;
                 }
@@ -2036,55 +2053,55 @@ final class nc extends fa {
                     if (param0.field_m == null) {
                       break L16;
                     } else {
-                      if (param0.field_m[((nc) this).field_j[var16]] == null) {
+                      if (param0.field_m[this.field_j[var16]] == null) {
                         break L16;
                       } else {
-                        var13 = param0.field_m[((nc) this).field_j[var16]];
+                        var13 = param0.field_m[this.field_j[var16]];
                         break L15;
                       }
                     }
                   }
-                  var13 = param0.field_Z[((nc) this).field_j[var16]];
+                  var13 = param0.field_Z[this.field_j[var16]];
                   break L15;
                 }
                 L17: {
                   L18: {
                     var14 = param1 + (param3 * var13.field_f + param4 * var13.field_j + param5 * var13.field_d) / (var8 * var13.field_a);
-                    ((nc) this).field_W[var16] = nc.d(var14);
+                    this.field_W[var16] = nc.d(var14);
                     if (param0.field_m == null) {
                       break L18;
                     } else {
-                      if (param0.field_m[((nc) this).field_T[var16]] == null) {
+                      if (param0.field_m[this.field_T[var16]] == null) {
                         break L18;
                       } else {
-                        var13 = param0.field_m[((nc) this).field_T[var16]];
+                        var13 = param0.field_m[this.field_T[var16]];
                         break L17;
                       }
                     }
                   }
-                  var13 = param0.field_Z[((nc) this).field_T[var16]];
+                  var13 = param0.field_Z[this.field_T[var16]];
                   break L17;
                 }
                 L19: {
                   L20: {
                     var14 = param1 + (param3 * var13.field_f + param4 * var13.field_j + param5 * var13.field_d) / (var8 * var13.field_a);
-                    ((nc) this).field_y[var16] = nc.d(var14);
+                    this.field_y[var16] = nc.d(var14);
                     if (param0.field_m == null) {
                       break L20;
                     } else {
-                      if (param0.field_m[((nc) this).field_R[var16]] == null) {
+                      if (param0.field_m[this.field_R[var16]] == null) {
                         break L20;
                       } else {
-                        var13 = param0.field_m[((nc) this).field_R[var16]];
+                        var13 = param0.field_m[this.field_R[var16]];
                         break L19;
                       }
                     }
                   }
-                  var13 = param0.field_Z[((nc) this).field_R[var16]];
+                  var13 = param0.field_Z[this.field_R[var16]];
                   break L19;
                 }
                 var14 = param1 + (param3 * var13.field_f + param4 * var13.field_j + param5 * var13.field_d) / (var8 * var13.field_a);
-                ((nc) this).field_J[var16] = nc.d(var14);
+                this.field_J[var16] = nc.d(var14);
                 var16++;
                 continue L9;
               }
@@ -2092,20 +2109,20 @@ final class nc extends fa {
               if (var10 != 0) {
                 if (var10 != 1) {
                   if (var10 != 3) {
-                    ((nc) this).field_J[var16] = -2;
+                    this.field_J[var16] = -2;
                     var16++;
                     continue L9;
                   } else {
-                    ((nc) this).field_W[var16] = 128;
-                    ((nc) this).field_J[var16] = -1;
+                    this.field_W[var16] = 128;
+                    this.field_J[var16] = -1;
                     var16++;
                     continue L9;
                   }
                 } else {
                   var18 = param0.field_J[var16];
                   var14 = param1 + (param3 * var18.field_b + param4 * var18.field_a + param5 * var18.field_d) / (var8 + var8 / 2) << 17;
-                  ((nc) this).field_W[var16] = var14 | nc.b(param0.field_n[var16] & 65535, var14 >> 17);
-                  ((nc) this).field_J[var16] = -1;
+                  this.field_W[var16] = var14 | nc.b(param0.field_n[var16] & 65535, var14 >> 17);
+                  this.field_J[var16] = -1;
                   var16++;
                   continue L9;
                 }
@@ -2116,55 +2133,55 @@ final class nc extends fa {
                     if (param0.field_m == null) {
                       break L22;
                     } else {
-                      if (param0.field_m[((nc) this).field_j[var16]] == null) {
+                      if (param0.field_m[this.field_j[var16]] == null) {
                         break L22;
                       } else {
-                        var13 = param0.field_m[((nc) this).field_j[var16]];
+                        var13 = param0.field_m[this.field_j[var16]];
                         break L21;
                       }
                     }
                   }
-                  var13 = param0.field_Z[((nc) this).field_j[var16]];
+                  var13 = param0.field_Z[this.field_j[var16]];
                   break L21;
                 }
                 L23: {
                   L24: {
                     var14 = param1 + (param3 * var13.field_f + param4 * var13.field_j + param5 * var13.field_d) / (var8 * var13.field_a) << 17;
-                    ((nc) this).field_W[var16] = var14 | nc.b(var15, var14 >> 17);
+                    this.field_W[var16] = var14 | nc.b(var15, var14 >> 17);
                     if (param0.field_m == null) {
                       break L24;
                     } else {
-                      if (param0.field_m[((nc) this).field_T[var16]] == null) {
+                      if (param0.field_m[this.field_T[var16]] == null) {
                         break L24;
                       } else {
-                        var13 = param0.field_m[((nc) this).field_T[var16]];
+                        var13 = param0.field_m[this.field_T[var16]];
                         break L23;
                       }
                     }
                   }
-                  var13 = param0.field_Z[((nc) this).field_T[var16]];
+                  var13 = param0.field_Z[this.field_T[var16]];
                   break L23;
                 }
                 L25: {
                   L26: {
                     var14 = param1 + (param3 * var13.field_f + param4 * var13.field_j + param5 * var13.field_d) / (var8 * var13.field_a) << 17;
-                    ((nc) this).field_y[var16] = var14 | nc.b(var15, var14 >> 17);
+                    this.field_y[var16] = var14 | nc.b(var15, var14 >> 17);
                     if (param0.field_m == null) {
                       break L26;
                     } else {
-                      if (param0.field_m[((nc) this).field_R[var16]] == null) {
+                      if (param0.field_m[this.field_R[var16]] == null) {
                         break L26;
                       } else {
-                        var13 = param0.field_m[((nc) this).field_R[var16]];
+                        var13 = param0.field_m[this.field_R[var16]];
                         break L25;
                       }
                     }
                   }
-                  var13 = param0.field_Z[((nc) this).field_R[var16]];
+                  var13 = param0.field_Z[this.field_R[var16]];
                   break L25;
                 }
                 var14 = param1 + (param3 * var13.field_f + param4 * var13.field_j + param5 * var13.field_d) / (var8 * var13.field_a) << 17;
-                ((nc) this).field_J[var16] = var14 | nc.b(var15, var14 >> 17);
+                this.field_J[var16] = var14 | nc.b(var15, var14 >> 17);
                 var16++;
                 continue L9;
               }
@@ -2174,10 +2191,6 @@ final class nc extends fa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         nc discarded$0 = new nc();
         nc discarded$1 = new nc();
         nc discarded$2 = new nc();

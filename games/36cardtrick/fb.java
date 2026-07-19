@@ -26,14 +26,13 @@ final class fb {
     }
 
     final static kc[] a(int param0, int param1, int param2, int param3) {
-        return h.b(1, param2, 15762, param1, param3);
+        if (param0 != 18457) {
+            return (kc[]) null;
+        }
+        return h.b(1, param2, param0 + -2695, param1, param3);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[]{8, 7};
         field_e = new byte[520];
     }

@@ -8,13 +8,12 @@ final class jb {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != 12472) {
+            field_b = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "jb.A(";
         field_a = false;
         field_b = "Fire boosters";

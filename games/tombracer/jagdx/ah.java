@@ -8,7 +8,7 @@ public final class ah {
         if (param1 != 10643) {
             return true;
         }
-        return param0 < 0 ? true : false;
+        return (param0 ^ -1) > -1 ? true : false;
     }
 
     public final static boolean a(int param0, byte param1) {

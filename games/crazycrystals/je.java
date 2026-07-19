@@ -16,20 +16,27 @@ final class je {
 
     public static void a(int param0) {
         field_i = null;
-        field_d = null;
+        field_d = (int[][]) null;
         field_b = null;
-        field_c = null;
-        field_h = null;
-        field_a = null;
-        field_g = null;
-        field_f = null;
+        if (param0 != 0) {
+          field_h = (String) null;
+          field_c = null;
+          field_h = null;
+          field_a = null;
+          field_g = null;
+          field_f = null;
+          return;
+        } else {
+          field_c = null;
+          field_h = null;
+          field_a = null;
+          field_g = null;
+          field_f = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "je.A(";
         field_e = 0;
         field_h = "Last Ball";

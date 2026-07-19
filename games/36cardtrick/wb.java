@@ -14,12 +14,12 @@ final class wb extends uk {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((wb) this).field_h;
-          param1 = param1 + ((wb) this).field_c;
+          param0 = param0 + this.field_h;
+          param1 = param1 + this.field_c;
           var3 = param0 + param1 * vj.field_l;
           var4 = 0;
-          var5 = ((wb) this).field_b;
-          var6 = ((wb) this).field_g;
+          var5 = this.field_b;
+          var6 = this.field_g;
           var7 = vj.field_l - var6;
           var8 = 0;
           if (param1 >= vj.field_h) {
@@ -71,7 +71,7 @@ final class wb extends uk {
             break L4;
           } else {
             if (var5 > 0) {
-              wb.a(vj.field_j, ((wb) this).field_i, ((wb) this).field_j, 0, var4, var3, var6, var5, var7, var8);
+              wb.a(vj.field_j, this.field_i, this.field_j, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -89,12 +89,12 @@ final class wb extends uk {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((wb) this).field_h;
-          param1 = param1 + ((wb) this).field_c;
+          param0 = param0 + this.field_h;
+          param1 = param1 + this.field_c;
           var4 = param0 + param1 * vj.field_l;
           var5 = 0;
-          var6 = ((wb) this).field_b;
-          var7 = ((wb) this).field_g;
+          var6 = this.field_b;
+          var7 = this.field_g;
           var8 = vj.field_l - var7;
           var9 = 0;
           if (param1 >= vj.field_h) {
@@ -146,7 +146,7 @@ final class wb extends uk {
             break L4;
           } else {
             if (var6 > 0) {
-              wb.b(vj.field_j, ((wb) this).field_i, ((wb) this).field_j, var5, var4, var7, var6, var8, var9, param2);
+              wb.b(vj.field_j, this.field_i, this.field_j, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -156,17 +156,19 @@ final class wb extends uk {
     }
 
     wb(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        ((wb) this).field_e = param0;
-        ((wb) this).field_f = param1;
-        ((wb) this).field_h = param2;
-        ((wb) this).field_c = param3;
-        ((wb) this).field_g = param4;
-        ((wb) this).field_b = param5;
-        ((wb) this).field_i = param6;
-        ((wb) this).field_j = param7;
+        this.field_e = param0;
+        this.field_f = param1;
+        this.field_h = param2;
+        this.field_c = param3;
+        this.field_g = param4;
+        this.field_b = param5;
+        this.field_i = param6;
+        this.field_j = param7;
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -186,7 +188,7 @@ final class wb extends uk {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var13 = param1[incrementValue$66];
                 if (var13 == 0) {
@@ -196,7 +198,7 @@ final class wb extends uk {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -209,17 +211,27 @@ final class wb extends uk {
     }
 
     wb(int param0, int param1, int param2) {
-        ((wb) this).field_g = param0;
-        ((wb) this).field_e = param0;
-        ((wb) this).field_b = param1;
-        ((wb) this).field_f = param1;
-        ((wb) this).field_c = 0;
-        ((wb) this).field_h = 0;
-        ((wb) this).field_i = new byte[param0 * param1];
-        ((wb) this).field_j = new int[param2];
+        this.field_g = param0;
+        this.field_e = param0;
+        this.field_b = param1;
+        this.field_f = param1;
+        this.field_c = 0;
+        this.field_h = 0;
+        this.field_i = new byte[param0 * param1];
+        this.field_j = new int[param2];
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -241,7 +253,7 @@ final class wb extends uk {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4++;
                     param3 = param1[incrementValue$10];
                     if (param3 == 0) {
@@ -249,7 +261,7 @@ final class wb extends uk {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
@@ -259,48 +271,48 @@ final class wb extends uk {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4++;
                   param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4++;
                   param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4++;
                   param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4++;
                 param3 = param1[incrementValue$18];
                 if (param3 == 0) {
@@ -308,7 +320,7 @@ final class wb extends uk {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param0[incrementValue$19] = param2[param3 & 255];
                   var12++;

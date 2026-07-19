@@ -11,6 +11,6 @@ public class nl {
     int field_g;
 
     nl() {
-        ((nl) this).field_f = 0;
+        this.field_f = 0;
     }
 }

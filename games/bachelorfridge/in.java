@@ -10,11 +10,11 @@ final class in {
 
     final eo a(boolean param0) {
         eo var2 = null;
-        var2 = ((in) this).field_a.field_m;
-        if (((in) this).field_a != var2) {
+        var2 = this.field_a.field_m;
+        if (this.field_a != var2) {
           var2.b(0);
           if (!param0) {
-            return null;
+            return (eo) null;
           } else {
             return var2;
           }
@@ -29,9 +29,9 @@ final class in {
         int var4 = 0;
         var4 = BachelorFridge.field_y;
         var2 = 0;
-        var3 = ((in) this).field_a.field_m;
+        var3 = this.field_a.field_m;
         L0: while (true) {
-          if (var3 == ((in) this).field_a) {
+          if (var3 == this.field_a) {
             if (!param0) {
               field_e = 0.13565851329759948;
               return var2;
@@ -48,46 +48,50 @@ final class in {
 
     final eo a(int param0) {
         eo var2 = null;
-        var2 = ((in) this).field_a.field_m;
+        var2 = this.field_a.field_m;
         if (param0 < -73) {
-          if (var2 == ((in) this).field_a) {
-            ((in) this).field_c = null;
+          if (var2 == this.field_a) {
+            this.field_c = null;
             return null;
           } else {
-            ((in) this).field_c = var2.field_m;
+            this.field_c = var2.field_m;
             return var2;
           }
         } else {
-          return null;
+          return (eo) null;
         }
     }
 
     final eo a(byte param0) {
+        eo discarded$2 = null;
         eo var2 = null;
-        var2 = ((in) this).field_c;
-        if (var2 != ((in) this).field_a) {
-          ((in) this).field_c = var2.field_m;
+        var2 = this.field_c;
+        if (var2 != this.field_a) {
+          this.field_c = var2.field_m;
           if (param0 < 80) {
-            eo discarded$2 = ((in) this).a((byte) 52);
+            discarded$2 = this.a((byte) 52);
             return var2;
           } else {
             return var2;
           }
         } else {
-          ((in) this).field_c = null;
+          this.field_c = null;
           return null;
         }
     }
 
     public in() {
-        ((in) this).field_a = new eo();
-        ((in) this).field_a.field_i = ((in) this).field_a;
-        ((in) this).field_a.field_m = ((in) this).field_a;
+        this.field_a = new eo();
+        this.field_a.field_i = this.field_a;
+        this.field_a.field_m = this.field_a;
     }
 
     public static void b(int param0) {
         field_d = null;
         field_b = null;
+        if (param0 != -1) {
+            field_d = (String) null;
+        }
     }
 
     final void a(eo param0, byte param1) {
@@ -95,21 +99,17 @@ final class in {
             if (!(param0.field_i == null)) {
                 param0.b(0);
             }
-            param0.field_i = ((in) this).field_a.field_i;
-            param0.field_m = ((in) this).field_a;
+            param0.field_i = this.field_a.field_i;
+            param0.field_m = this.field_a;
             param0.field_i.field_m = param0;
             int var3_int = -71 / ((param1 - 20) / 55);
             param0.field_m.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "in.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "in.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = -1.0;
         field_d = "<%0> is not a member, and cannot play with the current options.";
     }

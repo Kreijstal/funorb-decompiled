@@ -21,21 +21,17 @@ final class dc {
             }
             ue.field_f[0] = var2;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "dc.B(" + param0 + ',' + param1 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "dc.B(" + param0 + ',' + param1 + ')');
         }
     }
 
     public static void a(int param0) {
-        int var1 = -119;
+        int var1 = 119 / ((param0 - 14) / 60);
         field_a = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new ut(104, 150);
         field_c = -1;
     }

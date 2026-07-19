@@ -11,6 +11,6 @@ public class od {
     public int field_a;
 
     od() {
-        ((od) this).field_b = 0;
+        this.field_b = 0;
     }
 }

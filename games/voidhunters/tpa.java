@@ -20,14 +20,10 @@ final class tpa {
     }
 
     tpa(boolean param0) {
-        ((tpa) this).field_g = param0 ? true : false;
+        this.field_g = param0 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new ri(10, 2, 2, 0);
     }
 }

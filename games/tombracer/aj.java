@@ -14,6 +14,11 @@ final class aj extends vg {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != -11061) {
+            field_l = (iu) null;
+            field_l = null;
+            return;
+        }
         field_l = null;
     }
 
@@ -21,10 +26,6 @@ final class aj extends vg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "aj.A(";
     }
 }

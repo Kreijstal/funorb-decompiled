@@ -25,14 +25,14 @@ class wt extends wf {
     }
 
     final void d(int param0) {
-        if (null != ((wt) this).field_f) {
+        if (null != this.field_f) {
           if (param0 > -113) {
             return;
           } else {
-            ((wt) this).field_f.field_j = ((wt) this).field_j;
-            ((wt) this).field_j.field_f = ((wt) this).field_f;
-            ((wt) this).field_f = null;
-            ((wt) this).field_j = null;
+            this.field_f.field_j = this.field_j;
+            this.field_j.field_f = this.field_f;
+            this.field_f = null;
+            this.field_j = null;
             return;
           }
         } else {
@@ -44,10 +44,6 @@ class wt extends wf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new String[]{"lightning1_1", "lightning2_2", "thunder_short1"};
         field_m = new ia();
         field_k = new String[]{"speed_upgrade", "gun_upgrade", "turn_upgrade", "armour_upgrade1", "extralife_upgrade", "wingman_upgrade", "multiplier_upgrade"};

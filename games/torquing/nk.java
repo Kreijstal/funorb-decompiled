@@ -25,14 +25,10 @@ abstract class nk extends ta {
     }
 
     nk() {
-        ((nk) this).field_r = true;
+        this.field_r = true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "nk.B(";
         field_q = "You have 1 unread message!";
         field_t = false;

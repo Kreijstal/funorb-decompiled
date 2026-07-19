@@ -10,6 +10,9 @@ final class qja extends bf {
         fr.field_n = false;
         wba.field_a = null;
         ta.field_b = null;
+        if (param0 != 0) {
+            return;
+        }
         vka.field_p = null;
         mq.field_a = null;
     }
@@ -43,7 +46,7 @@ final class qja extends bf {
             try {
               L0: {
                 L1: {
-                  var6 = new byte[24];
+                  var6 = new byte[param0];
                   var2 = var6;
                   if (vg.field_n != null) {
                     try {
@@ -52,7 +55,7 @@ final class qja extends bf {
                       var3_int = 0;
                       L2: while (true) {
                         L3: {
-                          if (var3_int >= 24) {
+                          if (-25 >= (var3_int ^ -1)) {
                             break L3;
                           } else {
                             if (0 != var6[var3_int]) {
@@ -66,7 +69,7 @@ final class qja extends bf {
                         if (24 <= var3_int) {
                           throw new IOException();
                         } else {
-                          param1.a(0, -79, 24, var2);
+                          param1.a(0, param0 + -103, 24, var2);
                           return;
                         }
                       }
@@ -79,7 +82,7 @@ final class qja extends bf {
                           if (24 <= var4) {
                             break L4;
                           } else {
-                            var2[var4] = (byte) -1;
+                            var2[var4] = (byte)-1;
                             var4++;
                             continue L5;
                           }
@@ -91,30 +94,30 @@ final class qja extends bf {
                     break L1;
                   }
                 }
-                param1.a(0, -79, 24, var2);
+                param1.a(0, param0 + -103, 24, var2);
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L6: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_16_0 = (RuntimeException) var2_ref;
-                stackOut_16_1 = new StringBuilder().append("qja.D(").append(24).append(',');
+                stackOut_16_0 = (RuntimeException) (var2_ref);
+                stackOut_16_1 = new StringBuilder().append("qja.D(").append(param0).append(',');
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;
                 stackIn_17_1 = stackOut_16_1;
                 if (param1 == null) {
-                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
                   stackOut_18_2 = "null";
                   stackIn_19_0 = stackOut_18_0;
                   stackIn_19_1 = stackOut_18_1;
                   stackIn_19_2 = stackOut_18_2;
                   break L6;
                 } else {
-                  stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-                  stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                  stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+                  stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
                   stackOut_17_2 = "{...}";
                   stackIn_19_0 = stackOut_17_0;
                   stackIn_19_1 = stackOut_17_1;
@@ -122,7 +125,7 @@ final class qja extends bf {
                   break L6;
                 }
               }
-              throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+              throw pe.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -155,7 +158,7 @@ final class qja extends bf {
               if (param1 == -26281) {
                 break L1;
               } else {
-                ((qja) this).field_i = null;
+                this.field_i = (nq) null;
                 break L1;
               }
             }
@@ -165,23 +168,23 @@ final class qja extends bf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("qja.C(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -189,32 +192,32 @@ final class qja extends bf {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     qja(nq param0) {
         try {
-            ((qja) this).field_i = param0;
+            this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "qja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "qja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, lu param1) {
         try {
-            er.a(((qja) this).field_i, 123, param1);
+            er.a(this.field_i, 123, param1);
             int var3_int = -82 / ((param0 - -53) / 50);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "qja.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "qja.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     qja(lu param0) {
         try {
-            ((qja) this).field_i = qi.a(param0, (byte) 19);
+            this.field_i = qi.a(param0, (byte) 19);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "qja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "qja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

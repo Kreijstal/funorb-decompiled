@@ -26,21 +26,22 @@ final class ae extends w {
             ni.a((byte) 81, param0, var3, var4, var2);
             int var6 = 114 % ((param1 - 66) / 33);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "ae.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "ae.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void d(byte param0) {
         field_lb = null;
         field_mb = null;
+        if (param0 != 112) {
+            field_lb = (String) null;
+            field_nb = null;
+            return;
+        }
         field_nb = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_nb = new ei();
         field_lb = "ALL";
     }

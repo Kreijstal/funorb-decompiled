@@ -13,7 +13,7 @@ final class qa extends ki {
 
     final jp c(byte param0) {
         if (param0 >= -74) {
-            ((qa) this).a((byte) 57, -62, 109, 2);
+            this.a((byte) 57, -62, 109, 2);
             return ao.field_q;
         }
         return ao.field_q;
@@ -44,12 +44,12 @@ final class qa extends ki {
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
         pb var6 = null;
         if (param0) {
-          if (((qa) this).b((byte) -110)) {
+          if (this.b((byte) -110)) {
             L0: {
-              var6 = ge.a(((qa) this).field_m, param3, -20777);
-              if (!var6.a((byte) -84, param3, ((qa) this).field_m)) {
+              var6 = ge.a(this.field_m, param3, -20777);
+              if (!var6.a((byte) -84, param3, this.field_m)) {
                 aa.a(0, hn.field_b, true, param3, var6, 1);
-                var6.a(((qa) this).field_m, param3, (byte) 78);
+                var6.a(this.field_m, param3, (byte) 78);
                 break L0;
               } else {
                 break L0;
@@ -74,13 +74,14 @@ final class qa extends ki {
         field_s = null;
         field_v = null;
         field_x = null;
-        int var1 = 0;
+        int var1 = -103 % ((-61 - param0) / 57);
         field_t = null;
         field_w = null;
         field_y = null;
     }
 
     final boolean b(byte param0) {
+        boolean discarded$8 = false;
         int stackIn_11_0 = 0;
         int stackIn_24_0 = 0;
         int stackOut_23_0 = 0;
@@ -117,7 +118,7 @@ final class qa extends ki {
             return false;
           }
         } else {
-          boolean discarded$8 = qa.a(-41, -77, (byte) -108, -18);
+          discarded$8 = qa.a(-41, -77, (byte) -108, -18);
           if (null != mj.field_d) {
             if (ap.field_f != null) {
               if (null != hn.field_b) {
@@ -150,70 +151,88 @@ final class qa extends ki {
     }
 
     final static jp[] a(int param0, int param1, mf param2, boolean param3) {
+        jp[] discarded$2 = null;
         RuntimeException var4 = null;
-        Object stackIn_2_0 = null;
-        jp[] stackIn_4_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
+        mf var5 = null;
+        Object stackIn_4_0 = null;
+        jp[] stackIn_6_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        jp[] stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
+        jp[] stackOut_5_0 = null;
+        Object stackOut_3_0 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
+            L1: {
+              if (param3) {
+                break L1;
+              } else {
+                var5 = (mf) null;
+                discarded$2 = qa.a(-20, -51, (mf) null, true);
+                break L1;
+              }
+            }
             if (ln.a(-97, param0, param2, param1)) {
-              stackOut_3_0 = v.a(-835);
-              stackIn_4_0 = stackOut_3_0;
+              stackOut_5_0 = v.a(-835);
+              stackIn_6_0 = stackOut_5_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (jp[]) (Object) stackIn_2_0;
+              stackOut_3_0 = null;
+              stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("qa.M(").append(param0).append(',').append(param1).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_7_0 = (RuntimeException) (var4);
+            stackOut_7_1 = new StringBuilder().append("qa.M(").append(param0).append(',').append(param1).append(',');
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
-              break L1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + true + ')');
+          throw qb.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (jp[]) ((Object) stackIn_4_0);
+        } else {
+          return stackIn_6_0;
+        }
     }
 
     final static void e(byte param0) {
@@ -222,35 +241,38 @@ final class qa extends ki {
         mf.field_f.a(-125);
         if (null == sj.field_b) {
           sj.field_b = new tb(mf.field_f, ke.field_b);
-          mf.field_f.a(-76, (oc) (Object) sj.field_b);
+          mf.field_f.a(-76, sj.field_b);
           return;
         } else {
-          mf.field_f.a(-76, (oc) (Object) sj.field_b);
+          mf.field_f.a(-76, sj.field_b);
           return;
         }
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        Object var7 = null;
+        jp[] discarded$3 = null;
+        jp[] discarded$4 = null;
+        jp[] discarded$5 = null;
+        mf var7 = null;
         pb var8 = null;
-        if (((qa) this).b((byte) -127)) {
-          var8 = kd.a(((qa) this).field_m, param3, (byte) 120);
-          if (var8.a((byte) -84, param3, ((qa) this).field_m)) {
+        if (this.b((byte) -127)) {
+          var8 = kd.a(this.field_m, param3, (byte) 120);
+          if (var8.a((byte) -84, param3, this.field_m)) {
             tl.a(var8.field_p, (byte) -78, param0, 306, nk.field_h, mp.field_Zb, param4, 0, param3, param2, 2);
             if (param1 <= -84) {
               return;
             } else {
-              var7 = null;
-              jp[] discarded$3 = qa.a(90, 38, (mf) null, true);
+              var7 = (mf) null;
+              discarded$3 = qa.a(90, 38, (mf) null, true);
               return;
             }
           } else {
             aa.a(0, rh.field_c, true, param3, var8, 2);
-            var8.a(((qa) this).field_m, param3, (byte) 78);
+            var8.a(this.field_m, param3, (byte) 78);
             tl.a(var8.field_p, (byte) -78, param0, 306, nk.field_h, mp.field_Zb, param4, 0, param3, param2, 2);
             if (param1 > -84) {
-              var7 = null;
-              jp[] discarded$4 = qa.a(90, 38, (mf) null, true);
+              var7 = (mf) null;
+              discarded$4 = qa.a(90, 38, (mf) null, true);
               return;
             } else {
               return;
@@ -261,8 +283,8 @@ final class qa extends ki {
           if (param1 <= -84) {
             return;
           } else {
-            var7 = null;
-            jp[] discarded$5 = qa.a(90, 38, (mf) null, true);
+            var7 = (mf) null;
+            discarded$5 = qa.a(90, 38, (mf) null, true);
             return;
           }
         }
@@ -274,7 +296,7 @@ final class qa extends ki {
           L0: {
             lb.g(param2, param3, 153, 238, 7829367, 928072);
             var5 = 110 / ((param0 - -28) / 43);
-            if (((qa) this).b((byte) -97)) {
+            if (this.b((byte) -97)) {
               hc.field_g.c(param2, param3);
               break L0;
             } else {
@@ -286,7 +308,7 @@ final class qa extends ki {
           L1: {
             lb.g(param2, param3, 153, 238, fj.field_Sb[param1], 0);
             var5 = 110 / ((param0 - -28) / 43);
-            if (((qa) this).b((byte) -97)) {
+            if (this.b((byte) -97)) {
               hc.field_g.c(param2, param3);
               break L1;
             } else {
@@ -305,7 +327,7 @@ final class qa extends ki {
             if (!ln.a(param1, 11, param0)) {
               if (!qo.field_I) {
                 if (param2 != 108) {
-                  field_y = null;
+                  field_y = (jp) null;
                   return hi.a(false, param3, param1);
                 } else {
                   return hi.a(false, param3, param1);
@@ -323,10 +345,6 @@ final class qa extends ki {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
         field_t = new vl();
         field_v = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";

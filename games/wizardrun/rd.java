@@ -6,12 +6,20 @@ final class rd {
 
     final static int a(int param0, boolean param1) {
         param0--;
-        param0 = param0 | param0 >>> 1;
-        param0 = param0 | param0 >>> 2;
-        param0 = param0 | param0 >>> 4;
-        param0 = param0 | param0 >>> 8;
-        param0 = param0 | param0 >>> 16;
-        return param0 - -1;
+        param0 = param0 | param0 >>> -1537163615;
+        param0 = param0 | param0 >>> 226302402;
+        if (param1) {
+          field_a = (String) null;
+          param0 = param0 | param0 >>> 598206212;
+          param0 = param0 | param0 >>> 1463992424;
+          param0 = param0 | param0 >>> -1777304336;
+          return param0 - -1;
+        } else {
+          param0 = param0 | param0 >>> 598206212;
+          param0 = param0 | param0 >>> 1463992424;
+          param0 = param0 | param0 >>> -1777304336;
+          return param0 - -1;
+        }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -48,7 +56,7 @@ final class rd {
               tf.field_c[lg.field_d] = param2;
               mk.field_c[lg.field_d] = param5;
               var6 = param2 + param1 - -param5;
-              if (var6 == 0) {
+              if (-1 == (var6 ^ -1)) {
                 stackOut_48_0 = 0;
                 stackIn_49_0 = stackOut_48_0;
                 break L1;
@@ -92,7 +100,7 @@ final class rd {
               tf.field_c[lg.field_d] = param2;
               mk.field_c[lg.field_d] = param5;
               var6 = param2 + param1 - -param5;
-              if (var6 == 0) {
+              if (-1 == (var6 ^ -1)) {
                 stackOut_35_0 = 0;
                 stackIn_36_0 = stackOut_35_0;
                 break L5;
@@ -140,7 +148,7 @@ final class rd {
               tf.field_c[lg.field_d] = param2;
               mk.field_c[lg.field_d] = param5;
               var6 = param2 + param1 - -param5;
-              if (var6 == 0) {
+              if (-1 == (var6 ^ -1)) {
                 stackOut_20_0 = 0;
                 stackIn_21_0 = stackOut_20_0;
                 break L9;
@@ -185,7 +193,7 @@ final class rd {
               tf.field_c[lg.field_d] = param2;
               mk.field_c[lg.field_d] = param5;
               var6 = param2 + param1 - -param5;
-              if (var6 == 0) {
+              if (-1 == (var6 ^ -1)) {
                 stackOut_7_0 = 0;
                 stackIn_8_0 = stackOut_7_0;
                 break L13;
@@ -220,14 +228,16 @@ final class rd {
     }
 
     public static void a(byte param0) {
+        int discarded$0 = 0;
+        if (param0 != -63) {
+            discarded$0 = rd.a(-6, false);
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "High score service unavailable";
     }
 }

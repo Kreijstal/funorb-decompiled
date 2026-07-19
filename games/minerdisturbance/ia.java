@@ -11,6 +11,6 @@ public class ia {
     public volatile Object field_a;
 
     ia() {
-        ((ia) this).field_c = 0;
+        this.field_c = 0;
     }
 }

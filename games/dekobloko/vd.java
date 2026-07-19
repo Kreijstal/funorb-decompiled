@@ -17,7 +17,7 @@ final class vd extends bh {
     }
 
     public static void c(byte param0) {
-        int var1 = 0;
+        int var1 = 9 % ((param0 - 10) / 59);
         field_q = null;
         field_r = null;
         field_s = null;

@@ -35,15 +35,11 @@ class db extends vf {
             }
             super.a((byte) -113, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "db.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "db.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = "Wing pod lost";
         field_x = new int[8192];
     }

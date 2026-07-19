@@ -29,8 +29,8 @@ final class mr implements fo {
         int var12 = 0;
         pc var13 = null;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
-        ((mr) this).field_e = ((mr) this).field_e - 1;
-        var13 = new pc(((mr) this).field_b, ((mr) this).field_j, ((mr) this).field_l, ((mr) this).field_e, ((mr) this).field_k);
+        this.field_e = this.field_e - 1;
+        var13 = new pc(this.field_b, this.field_j, this.field_l, this.field_e, this.field_k);
         var3 = var13.a((byte) 77);
         var4 = var3.field_e;
         var5 = -23 % ((-67 - param0) / 44);
@@ -40,23 +40,23 @@ final class mr implements fo {
             return var3;
           } else {
             var7 = var4[var6];
-            var8 = ((mr) this).field_m.j(-110);
+            var8 = this.field_m.j(-110);
             var9 = 0;
             L1: while (true) {
               if (var9 >= var8) {
                 var9 = 0;
                 L2: while (true) {
                   L3: {
-                    if (var9 >= 4) {
+                    if ((var9 ^ -1) <= -5) {
                       break L3;
                     } else {
-                      var10 = ((mr) this).field_m.j(-119);
+                      var10 = this.field_m.j(-119);
                       var7.field_G[var9] = we.a(15, var10);
                       var9++;
-                      if (var9 >= 4) {
+                      if (-5 >= (var9 ^ -1)) {
                         break L3;
                       } else {
-                        var7.field_G[var9] = we.a(var10, 240) >> 4;
+                        var7.field_G[var9] = we.a(var10, 240) >> -815356732;
                         var9++;
                         continue L2;
                       }
@@ -79,7 +79,7 @@ final class mr implements fo {
                     }
                   }
                   L6: {
-                    var7.field_x = ((mr) this).field_m.f(-20976);
+                    var7.field_x = this.field_m.f(-20976);
                     if ((32768 & var7.field_x) == 0) {
                       break L6;
                     } else {
@@ -88,14 +88,14 @@ final class mr implements fo {
                       break L6;
                     }
                   }
-                  var7.field_B = ((mr) this).field_m.j(-128);
-                  var7.field_L = var7.field_B >>> 6;
+                  var7.field_B = this.field_m.j(-128);
+                  var7.field_L = var7.field_B >>> 2033295110;
                   var7.field_B = var7.field_B & 63;
                   var6++;
                   continue L0;
                 }
               } else {
-                var10 = ((mr) this).field_m.j(-75);
+                var10 = this.field_m.j(-75);
                 var11 = var3.field_e[var10];
                 if (!var7.b(var11, (byte) 10)) {
                   var7.a((byte) -76, var11);
@@ -115,16 +115,20 @@ final class mr implements fo {
     public static void a(boolean param0) {
         field_g = null;
         field_d = null;
+        if (param0) {
+            return;
+        }
         field_h = null;
         field_c = null;
         field_i = null;
     }
 
     final static bi a(int param0, int param1) {
+        bi dupTemp$0 = null;
         bi var3 = null;
         bi var2 = tr.field_sb[param0];
         if (var2 == null) {
-            bi dupTemp$0 = new bi(256, 256);
+            dupTemp$0 = new bi(256, 256);
             var3 = dupTemp$0;
             var2 = var3;
             tr.field_sb[param0] = dupTemp$0;
@@ -140,27 +144,26 @@ final class mr implements fo {
     }
 
     final static int a(int param0) {
-        return ul.field_Hb + (sq.field_a << 2) + (vm.field_Bb << 4);
+        if (param0 != 0) {
+            mr.a(false);
+        }
+        return ul.field_Hb + (sq.field_a << 1602041026) + (vm.field_Bb << 1341801956);
     }
 
     mr(ob param0, int param1, int param2, int param3, int param4, int param5) {
         try {
-            ((mr) this).field_j = param3;
-            ((mr) this).field_l = param1;
-            ((mr) this).field_k = param5;
-            ((mr) this).field_e = param4;
-            ((mr) this).field_m = param0;
-            ((mr) this).field_b = param2;
+            this.field_j = param3;
+            this.field_l = param1;
+            this.field_k = param5;
+            this.field_e = param4;
+            this.field_m = param0;
+            this.field_b = param2;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "mr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "mr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Select a friendly system to commence terraforming, or right click to cancel this project.";
     }
 }

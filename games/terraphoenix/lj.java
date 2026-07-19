@@ -18,10 +18,10 @@ abstract class lj extends uf {
     }
 
     final void b(int[] param0, int param1, int param2) {
-        if (((lj) this).field_j) {
-            ((lj) this).a(param0, param1, param2);
+        if (this.field_j) {
+            this.a(param0, param1, param2);
         } else {
-            ((lj) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class lj extends uf {
     abstract lj a();
 
     protected lj() {
-        ((lj) this).field_j = true;
+        this.field_j = true;
     }
 }

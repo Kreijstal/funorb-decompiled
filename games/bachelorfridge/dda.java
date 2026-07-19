@@ -12,7 +12,7 @@ final class dda extends kj {
 
     final void a(int param0) {
         super.a(param0);
-        ((dda) this).field_h = true;
+        this.field_h = true;
     }
 
     static int a(int param0, int param1) {
@@ -21,60 +21,64 @@ final class dda extends kj {
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-            ((dda) this).c((byte) -29);
+            this.c((byte) -29);
         }
     }
 
     dda(gj param0, int param1, int param2) {
         super(param0, param1, param2);
         try {
-            ((dda) this).field_i = 150;
+            this.field_i = 150;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "dda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "dda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final boolean b(int param0) {
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
         if (param0 > 21) {
-          if (!((dda) this).field_g) {
-            int fieldTemp$4 = ((dda) this).field_i - 1;
-            ((dda) this).field_i = ((dda) this).field_i - 1;
-            if (fieldTemp$4 < 0) {
-              ((dda) this).field_h = false;
-              ((dda) this).field_i = 0;
+          if (!this.field_g) {
+            fieldTemp$4 = this.field_i - 1;
+            this.field_i = this.field_i - 1;
+            if ((fieldTemp$4 ^ -1) > -1) {
+              this.field_h = false;
+              this.field_i = 0;
               return false;
             } else {
               return false;
             }
           } else {
-            int fieldTemp$5 = ((dda) this).field_i + 1;
-            ((dda) this).field_i = ((dda) this).field_i + 1;
+            fieldTemp$5 = this.field_i + 1;
+            this.field_i = this.field_i + 1;
             if (150 > fieldTemp$5) {
               return false;
             } else {
-              ((dda) this).field_h = false;
+              this.field_h = false;
               return true;
             }
           }
         } else {
-          field_k = null;
-          if (!((dda) this).field_g) {
-            int fieldTemp$6 = ((dda) this).field_i - 1;
-            ((dda) this).field_i = ((dda) this).field_i - 1;
-            if (fieldTemp$6 >= 0) {
+          field_k = (String) null;
+          if (!this.field_g) {
+            fieldTemp$6 = this.field_i - 1;
+            this.field_i = this.field_i - 1;
+            if ((fieldTemp$6 ^ -1) <= -1) {
               return false;
             } else {
-              ((dda) this).field_h = false;
-              ((dda) this).field_i = 0;
+              this.field_h = false;
+              this.field_i = 0;
               return false;
             }
           } else {
-            int fieldTemp$7 = ((dda) this).field_i + 1;
-            ((dda) this).field_i = ((dda) this).field_i + 1;
+            fieldTemp$7 = this.field_i + 1;
+            this.field_i = this.field_i + 1;
             if (150 > fieldTemp$7) {
               return false;
             } else {
-              ((dda) this).field_h = false;
+              this.field_h = false;
               return true;
             }
           }
@@ -84,6 +88,9 @@ final class dda extends kj {
     public static void a(boolean param0) {
         field_k = null;
         field_l = null;
+        if (param0) {
+            dda.c(52);
+        }
     }
 
     final static void c(int param0) {
@@ -99,36 +106,32 @@ final class dda extends kj {
 
     final void c(byte param0) {
         if (param0 > -4) {
-            ((dda) this).field_h = true;
-            ((dda) this).field_g = true;
+            this.field_h = true;
+            this.field_g = true;
             return;
         }
-        ((dda) this).field_g = true;
+        this.field_g = true;
     }
 
     final void a(int param0, int param1, int param2) {
         int var4 = 0;
         dg.a(dga.field_b);
-        var4 = ((dda) this).field_i * 36 / 150;
+        var4 = this.field_i * 36 / 150;
         if (param1 != 0) {
           field_f = true;
           dg.a(param2, var4 + param0, 128 + param2, -var4 + (param0 + 64));
-          ((dda) this).field_e.field_s.field_k.field_b[109].a(param2, param0);
+          this.field_e.field_s.field_k.field_b[109].a(param2, param0);
           dg.b(dga.field_b);
           return;
         } else {
           dg.a(param2, var4 + param0, 128 + param2, -var4 + (param0 + 64));
-          ((dda) this).field_e.field_s.field_k.field_b[109].a(param2, param0);
+          this.field_e.field_s.field_k.field_b[109].a(param2, param0);
           dg.b(dga.field_b);
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = false;
         field_k = "Set up new game";
     }

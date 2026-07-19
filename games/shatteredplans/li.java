@@ -25,20 +25,16 @@ abstract class li {
 
     final java.net.Socket a(int param0) throws IOException {
         if (param0 <= 108) {
-          field_c = null;
-          return new java.net.Socket(((li) this).field_f, ((li) this).field_a);
+          field_c = (String) null;
+          return new java.net.Socket(this.field_f, this.field_a);
         } else {
-          return new java.net.Socket(((li) this).field_f, ((li) this).field_a);
+          return new java.net.Socket(this.field_f, this.field_a);
         }
     }
 
     abstract java.net.Socket b(int param0) throws IOException;
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Select a system adjacent to a friendly system to cause a destructive stellar flare, or right click to cancel this project.";
         field_c = "The Achievements system is currently unavailable.";
         field_b = new ln(-1, -1, -1, -1);

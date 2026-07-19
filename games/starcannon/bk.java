@@ -11,6 +11,6 @@ public class bk {
     int field_d;
 
     bk() {
-        ((bk) this).field_b = 0;
+        this.field_b = 0;
     }
 }

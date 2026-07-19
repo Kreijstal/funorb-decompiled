@@ -15,13 +15,25 @@ final class mj extends ca {
         field_i = null;
         field_l = null;
         field_k = null;
-        field_j = null;
-        field_m = null;
+        if (param0 <= 73) {
+          mj.c(-85);
+          field_j = null;
+          field_m = null;
+          return;
+        } else {
+          field_j = null;
+          field_m = null;
+          return;
+        }
     }
 
     final static void c(int param0) {
         if (!(vj.a(39))) {
             cc.field_f.b(56);
+        }
+        if (param0 != -21108) {
+            field_i = (pe) null;
+            return;
         }
     }
 
@@ -30,10 +42,6 @@ final class mj extends ca {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "Cancel";
         field_l = new df("email");
         field_m = new im();

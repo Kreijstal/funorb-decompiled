@@ -8,10 +8,11 @@ class aa extends ps {
     static ut field_f;
 
     final static void a(byte param0, int param1, mp param2) {
+        int discarded$2 = 0;
         ml var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        Object var5 = null;
+        mp var5 = null;
         ml var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -47,14 +48,14 @@ class aa extends ps {
                 break L1;
               }
             }
-            int discarded$2 = var6.a(var4, false);
+            discarded$2 = var6.a(var4, false);
             var6.field_n = var6.field_n - 4;
             param2.field_m = var6.k(4);
             var6.c(param0 ^ 42, -var4 + var6.field_n);
             if (param0 == 20) {
               break L0;
             } else {
-              var5 = null;
+              var5 = (mp) null;
               aa.a((byte) -56, 113, (mp) null);
               return;
             }
@@ -63,23 +64,23 @@ class aa extends ps {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3_ref;
+            stackOut_6_0 = (RuntimeException) (var3_ref);
             stackOut_6_1 = new StringBuilder().append("aa.K(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -87,13 +88,13 @@ class aa extends ps {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
     final void a(iw param0, int param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        mp var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -113,12 +114,12 @@ class aa extends ps {
         try {
           L0: {
             L1: {
-              param0.a(((aa) this).field_g, -1781890008);
-              param0.a((byte) -85, ((aa) this).field_i);
+              param0.a(this.field_g, -1781890008);
+              param0.a((byte) -85, this.field_i);
               if (param1 == 17053) {
                 break L1;
               } else {
-                var4 = null;
+                var4 = (mp) null;
                 aa.a((byte) 56, -49, (mp) null);
                 break L1;
               }
@@ -129,23 +130,23 @@ class aa extends ps {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("aa.H(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -153,11 +154,17 @@ class aa extends ps {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     public static void b(byte param0) {
+        if (param0 > -101) {
+            field_f = (ut) null;
+            field_h = null;
+            field_f = null;
+            return;
+        }
         field_h = null;
         field_f = null;
     }
@@ -171,25 +178,21 @@ class aa extends ps {
 
     kj a(byte param0) {
         if (param0 > -77) {
-            return null;
+            return (kj) null;
         }
         return ap.field_w;
     }
 
     aa(long param0, String param1) {
         try {
-            ((aa) this).field_i = param1;
-            ((aa) this).field_g = param0;
+            this.field_i = param1;
+            this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "aa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "aa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "There are no auctions in progress.";
     }
 }

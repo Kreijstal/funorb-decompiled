@@ -11,6 +11,6 @@ public class ei {
     Object field_c;
 
     ei() {
-        ((ei) this).field_b = 0;
+        this.field_b = 0;
     }
 }

@@ -11,6 +11,6 @@ public class pn {
     public volatile int field_c;
 
     pn() {
-        ((pn) this).field_c = 0;
+        this.field_c = 0;
     }
 }

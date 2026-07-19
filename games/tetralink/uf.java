@@ -11,15 +11,34 @@ final class uf {
     static int field_e;
 
     final static void a(boolean param0, int param1) {
-        if (!(null == lf.field_b)) {
-            lf.field_b.a(param0, 256);
+        if (param1 >= -116) {
+          L0: {
+            field_d = (wf) null;
+            if (null != lf.field_b) {
+              lf.field_b.a(param0, 256);
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          return;
+        } else {
+          L1: {
+            if (null != lf.field_b) {
+              lf.field_b.a(param0, 256);
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          return;
         }
     }
 
     final static void a(int param0, byte param1, int param2) {
         bc var3 = null;
         if (param1 <= 94) {
-            Object var4 = null;
+            String var4 = (String) null;
             uf.a((String) null, false, false);
             var3 = nd.field_Lb;
             var3.f(param0, (byte) -92);
@@ -40,12 +59,15 @@ final class uf {
         try {
             sf.field_d = 2;
             ka.field_m = param1;
-            var5 = (CharSequence) (Object) param1;
+            var5 = (CharSequence) ((Object) param1);
             qj.field_a = cc.a(var5, (byte) 101);
             vj.field_o = param2;
+            if (param0 >= -122) {
+                uf.a(32, (byte) 33, -101);
+            }
             hi.a(97);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "uf.A(" + -127 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "uf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -54,9 +76,9 @@ final class uf {
             sn.field_b = param2;
             s.field_f = true;
             fl.field_u = new lk(mf.field_s, ab.field_V, param0, qa.field_v, sn.field_b);
-            mf.field_s.a((na) (Object) fl.field_u, param1);
+            mf.field_s.a(fl.field_u, param1);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "uf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "uf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -64,6 +86,9 @@ final class uf {
         field_c = null;
         field_a = null;
         field_g = null;
+        if (param0 != -11535) {
+            return;
+        }
         field_d = null;
     }
 
@@ -72,10 +97,6 @@ final class uf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Unable to delete name - system busy";
         field_e = 0;
     }

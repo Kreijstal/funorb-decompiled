@@ -8,13 +8,16 @@ final class jj {
     static String[] field_d;
 
     final static void a(int param0, int param1, oh[] param2, byte param3) {
+        if (param3 != -88) {
+            return;
+        }
         try {
             qm.field_b = new ve(param2);
-            nc.field_d = 12;
-            fa.field_d = 14;
+            nc.field_d = param1;
+            fa.field_d = param0;
             em.c(54);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "jj.A(" + 14 + ',' + 12 + ',' + (param2 != null ? "{...}" : "null") + ',' + -88 + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -22,27 +25,23 @@ final class jj {
         field_d = null;
         field_c = null;
         if (param0 != 2) {
-            field_d = null;
+            field_d = (String[]) null;
         }
     }
 
     final static void a(int param0, jb param1, jb param2, int param3) {
         try {
-            uf.field_f = 480;
+            uf.field_f = param0;
             dk.field_d = param1;
             cf.field_o = param2;
-            rk.a(ra.field_e / 2, -33, ra.field_f / 2);
+            rk.a(ra.field_e / param3, -33, ra.field_f / 2);
             gd.a(param2.field_u + param2.field_K, false, param1.field_K + param1.field_u, param1.field_u, param2.field_u);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "jj.B(" + 480 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + 2 + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "jj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 256;
         field_d = new String[16];
         field_c = "Your email address is used to identify this account";

@@ -6,7 +6,7 @@ final class wa implements hf {
     xa field_b;
 
     wa(oa param0, j param1, xa param2) {
-        ((wa) this).field_a = param1;
-        ((wa) this).field_b = param2;
+        this.field_a = param1;
+        this.field_b = param2;
     }
 }

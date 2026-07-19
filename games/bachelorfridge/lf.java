@@ -31,36 +31,27 @@ final class lf {
           iu.d(118);
           ak.field_t = "";
           var1 = baa.field_Q;
-          if (var1 == 0) {
-            ak.field_t = kma.field_m;
-            return;
-          } else {
-            if (var1 == 1) {
-              ak.field_t = oj.field_o;
-              return;
-            } else {
-              if (var1 != 2) {
-                if (3 == var1) {
-                  ak.field_t = md.field_n;
-                  return;
-                } else {
+          if (var1 != 0) {
+            if (-2 != (var1 ^ -1)) {
+              if (-3 != (var1 ^ -1)) {
+                if (3 != var1) {
                   if (4 != var1) {
                     if (var1 != 5) {
-                      if (var1 == 6) {
-                        ak.field_t = oj.field_m;
-                        return;
-                      } else {
-                        if (7 == var1) {
-                          ak.field_t = is.field_a;
-                          return;
-                        } else {
+                      if (var1 != 6) {
+                        if (7 != var1) {
                           if (var1 == 8) {
                             ak.field_t = lh.field_t;
                             return;
                           } else {
                             return;
                           }
+                        } else {
+                          ak.field_t = is.field_a;
+                          return;
                         }
+                      } else {
+                        ak.field_t = oj.field_m;
+                        return;
                       }
                     } else {
                       ak.field_t = cja.field_t;
@@ -70,12 +61,21 @@ final class lf {
                     ak.field_t = sr.field_d;
                     return;
                   }
+                } else {
+                  ak.field_t = md.field_n;
+                  return;
                 }
               } else {
                 ak.field_t = ula.field_j;
                 return;
               }
+            } else {
+              ak.field_t = oj.field_o;
+              return;
             }
+          } else {
+            ak.field_t = kma.field_m;
+            return;
           }
         } else {
           oha.b((byte) -34);
@@ -88,32 +88,26 @@ final class lf {
             ak.field_t = kma.field_m;
             return;
           } else {
-            if (var1 == 1) {
-              ak.field_t = oj.field_o;
-              return;
-            } else {
-              if (var1 != 2) {
-                if (3 == var1) {
-                  ak.field_t = md.field_n;
-                  return;
-                } else {
+            if (-2 != (var1 ^ -1)) {
+              if (-3 != (var1 ^ -1)) {
+                if (3 != var1) {
                   if (4 != var1) {
                     if (var1 != 5) {
-                      if (var1 == 6) {
-                        ak.field_t = oj.field_m;
-                        return;
-                      } else {
-                        if (7 == var1) {
-                          ak.field_t = is.field_a;
-                          return;
-                        } else {
-                          if (var1 != 8) {
-                            return;
-                          } else {
+                      if (var1 != 6) {
+                        if (7 != var1) {
+                          if (var1 == 8) {
                             ak.field_t = lh.field_t;
                             return;
+                          } else {
+                            return;
                           }
+                        } else {
+                          ak.field_t = is.field_a;
+                          return;
                         }
+                      } else {
+                        ak.field_t = oj.field_m;
+                        return;
                       }
                     } else {
                       ak.field_t = cja.field_t;
@@ -123,21 +117,23 @@ final class lf {
                     ak.field_t = sr.field_d;
                     return;
                   }
+                } else {
+                  ak.field_t = md.field_n;
+                  return;
                 }
               } else {
                 ak.field_t = ula.field_j;
                 return;
               }
+            } else {
+              ak.field_t = oj.field_o;
+              return;
             }
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new qia();
         field_c = 0;
     }

@@ -15,7 +15,7 @@ final class pf implements hd {
         if (!(null == kd.field_b)) {
             om.a(-46342, kd.field_b);
         }
-        co.a(false);
+        co.a(param0);
         lg.b(true);
         jk.a(27370);
         if (!(!cm.a(-2043140287))) {
@@ -27,20 +27,22 @@ final class pf implements hd {
 
     final static hj a(byte param0) {
         if (param0 >= -117) {
-            field_c = null;
+            field_c = (int[]) null;
             return ai.field_c;
         }
         return ai.field_c;
     }
 
     final static int a(byte param0, int param1) {
-        if (param1 != 0) {
+        hj discarded$4 = null;
+        hj discarded$5 = null;
+        if (-1 != (param1 ^ -1)) {
           if (of.a(-969)) {
             if (param1 > ao.field_b) {
               return 1;
             } else {
               if (param0 <= 0) {
-                hj discarded$4 = pf.a((byte) -18);
+                discarded$4 = pf.a((byte) -18);
                 return 0;
               } else {
                 return 0;
@@ -54,7 +56,7 @@ final class pf implements hd {
             return 1;
           } else {
             if (param0 <= 0) {
-              hj discarded$5 = pf.a((byte) -18);
+              discarded$5 = pf.a((byte) -18);
               return 0;
             } else {
               return 0;
@@ -64,6 +66,7 @@ final class pf implements hd {
     }
 
     public final int a(byte param0, hd param1) {
+        int discarded$2 = 0;
         pf var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -88,12 +91,12 @@ final class pf implements hd {
         try {
           L0: {
             L1: {
-              var3 = (pf) (Object) param1;
-              var4 = -(var3.field_e * ((pf) this).field_a) + ((pf) this).field_e * var3.field_a;
+              var3 = (pf) ((Object) param1);
+              var4 = -(var3.field_e * this.field_a) + this.field_e * var3.field_a;
               if (param0 == -101) {
                 break L1;
               } else {
-                int discarded$2 = pf.a((byte) 83, 126);
+                discarded$2 = pf.a((byte) 83, 126);
                 break L1;
               }
             }
@@ -101,7 +104,7 @@ final class pf implements hd {
               if (var4 != 0) {
                 break L2;
               } else {
-                var4 = var3.field_a * var3.field_a + (-(((pf) this).field_a * ((pf) this).field_a) + var3.field_e * var3.field_e) - ((pf) this).field_e * ((pf) this).field_e;
+                var4 = var3.field_a * var3.field_a + (-(this.field_a * this.field_a) + var3.field_e * var3.field_e) - this.field_e * this.field_e;
                 break L2;
               }
             }
@@ -113,23 +116,23 @@ final class pf implements hd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3_ref;
+            stackOut_6_0 = (RuntimeException) (var3_ref);
             stackOut_6_1 = new StringBuilder().append("pf.C(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -137,7 +140,7 @@ final class pf implements hd {
               break L3;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
         return stackIn_5_0;
     }
@@ -155,10 +158,6 @@ final class pf implements hd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Orb points: <%0>";
         field_c = new int[]{0, 2, 4, 7};
         field_f = "Enter the name you'd prefer. This is the name displayed to other players.";

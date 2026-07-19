@@ -13,13 +13,13 @@ final class ama extends k {
     }
 
     final int[] a(int param0, int param1) {
-        int[] var4 = ((ama) this).field_j.a(param0, -1);
+        int[] var4 = this.field_j.a(param0, -1);
         int[] var3 = var4;
         if (param1 != 0) {
             ama.e((byte) 27);
         }
-        if (((ama) this).field_j.field_m) {
-            this.a((byte) 126, ((ama) this).field_j.a(false));
+        if (this.field_j.field_m) {
+            this.a((byte) 126, this.field_j.a(false));
         }
         return var4;
     }
@@ -38,15 +38,15 @@ final class ama extends k {
         int var14 = 0;
         int var15 = 0;
         int var16 = BachelorFridge.field_y;
-        int[][] var3 = ((ama) this).field_h.a(param1, -858);
+        int[][] var3 = this.field_h.a(param1, -858);
         if (param0) {
-            return null;
+            return (int[][]) null;
         }
-        if (!(!((ama) this).field_h.field_b)) {
+        if (!(!this.field_h.field_b)) {
             var4 = hh.field_d;
             var5 = bi.field_g;
             var29 = new int[var5][var4];
-            var30 = ((ama) this).field_h.b(-108);
+            var30 = this.field_h.b(-108);
             this.a((byte) 106, var29);
             for (var8 = 0; var8 < bi.field_g; var8++) {
                 var32 = var29[var8];
@@ -56,9 +56,9 @@ final class ama extends k {
                 var13 = var31[2];
                 for (var14 = 0; hh.field_d > var14; var14++) {
                     var15 = var32[var14];
-                    var13[var14] = dda.a(var15, 255) << 4;
-                    var12[var14] = dda.a(65280, var15) >> 4;
-                    var11[var14] = dda.a(var15 >> 12, 4080);
+                    var13[var14] = dda.a(var15, 255) << -892567228;
+                    var12[var14] = dda.a(65280, var15) >> 294872388;
+                    var11[var14] = dda.a(var15 >> 357549900, 4080);
                 }
             }
         }
@@ -100,7 +100,7 @@ final class ama extends k {
         try {
           L0: {
             L1: {
-              if (param2 != 0) {
+              if (-1 != (param2 ^ -1)) {
                 if (1 != param2) {
                   break L1;
                 } else {
@@ -122,38 +122,38 @@ final class ama extends k {
                       break L2;
                     }
                   }
-                  ((ama) this).field_f = stackIn_20_1 != 0;
+                  ((ama) (this)).field_f = stackIn_20_1 != 0;
                   break L1;
                 }
               } else {
-                ((ama) this).field_n = new vo[param1.b(param0 + 16712006)];
+                this.field_n = new vo[param1.b(param0 + 16712006)];
                 var4_int = 0;
                 L3: while (true) {
-                  if (var4_int >= ((ama) this).field_n.length) {
+                  if (var4_int >= this.field_n.length) {
                     break L1;
                   } else {
                     L4: {
                       var5 = param1.b(16711935);
                       var6 = var5;
                       if (0 != var6) {
-                        if (var6 != 1) {
+                        if (-2 != (var6 ^ -1)) {
                           if (var6 == 2) {
-                            ((ama) this).field_n[var4_int] = (vo) (Object) ig.a(0, param1);
+                            this.field_n[var4_int] = (vo) ((Object) ig.a(0, param1));
                             break L4;
                           } else {
-                            if (var6 == 3) {
-                              ((ama) this).field_n[var4_int] = (vo) (Object) afa.a(param1, -128);
+                            if ((var6 ^ -1) == -4) {
+                              this.field_n[var4_int] = (vo) ((Object) afa.a(param1, -128));
                               break L4;
                             } else {
                               break L4;
                             }
                           }
                         } else {
-                          ((ama) this).field_n[var4_int] = (vo) (Object) ch.a(false, param1);
+                          this.field_n[var4_int] = (vo) ((Object) ch.a(false, param1));
                           break L4;
                         }
                       } else {
-                        ((ama) this).field_n[var4_int] = (vo) (Object) pka.a(param1, false);
+                        this.field_n[var4_int] = (vo) ((Object) pka.a(param1, false));
                         break L4;
                       }
                     }
@@ -167,7 +167,7 @@ final class ama extends k {
               if (param0 == -71) {
                 break L5;
               } else {
-                field_k = null;
+                field_k = (String) null;
                 break L5;
               }
             }
@@ -177,23 +177,23 @@ final class ama extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var4;
+            stackOut_24_0 = (RuntimeException) (var4);
             stackOut_24_1 = new StringBuilder().append("ama.E(").append(param0).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
               break L6;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
@@ -201,7 +201,7 @@ final class ama extends k {
               break L6;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param2 + ')');
         }
     }
 
@@ -248,14 +248,14 @@ final class ama extends k {
               var4 = bi.field_g;
               tma.a(param1, -5);
               bm.a(it.field_r, 0, wp.field_r, -14702, 0);
-              if (((ama) this).field_n != null) {
+              if (this.field_n != null) {
                 var5 = 0;
                 L2: while (true) {
-                  if (var5 >= ((ama) this).field_n.length) {
+                  if (var5 >= this.field_n.length) {
                     break L1;
                   } else {
                     L3: {
-                      var6 = ((ama) this).field_n[var5];
+                      var6 = this.field_n[var5];
                       var7 = var6.field_a;
                       var8 = var6.field_f;
                       if (var7 < 0) {
@@ -287,7 +287,7 @@ final class ama extends k {
               if (param0 >= 72) {
                 break L4;
               } else {
-                field_l = null;
+                field_l = (String) null;
                 break L4;
               }
             }
@@ -297,23 +297,23 @@ final class ama extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var3;
+            stackOut_15_0 = (RuntimeException) (var3);
             stackOut_15_1 = new StringBuilder().append("ama.C(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -321,15 +321,11 @@ final class ama extends k {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Set up new unrated game";
         field_l = "Unable to add friend - system busy";
         field_k = "Message game";

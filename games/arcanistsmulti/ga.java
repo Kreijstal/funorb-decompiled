@@ -24,25 +24,26 @@ final class ga extends dk implements java.awt.image.ImageProducer, java.awt.imag
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            ((ga) this).field_p = param0;
-            param0.setDimensions(((ga) this).field_e, ((ga) this).field_m);
+            this.field_p = param0;
+            param0.setDimensions(this.field_e, this.field_m);
             param0.setProperties((Hashtable) null);
-            param0.setColorModel(((ga) this).field_o);
+            param0.setColorModel(this.field_o);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ga.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "ga.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
+        boolean discarded$0 = false;
         try {
             this.b((byte) -118);
             if (param2 != 0) {
-                field_q = null;
+                field_q = (String) null;
             }
-            boolean discarded$0 = param1.drawImage(((ga) this).field_j, param3, param0, (java.awt.image.ImageObserver) this);
+            discarded$0 = param1.drawImage(this.field_j, param3, param0, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ga.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "ga.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -79,23 +80,23 @@ final class ga extends dk implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var7;
+            stackOut_2_0 = (RuntimeException) (var7);
             stackOut_2_1 = new StringBuilder().append("ga.imageUpdate(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -103,39 +104,45 @@ final class ga extends dk implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
 
     final void a(int param0, java.awt.Component param1, int param2, int param3) {
+        boolean discarded$0 = false;
+        boolean discarded$1 = false;
+        boolean discarded$2 = false;
         if (param2 != 0) {
             return;
         }
         try {
-            ((ga) this).field_l = new int[param0 * param3 + 1];
-            ((ga) this).field_e = param3;
-            ((ga) this).field_m = param0;
-            ((ga) this).field_o = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-            ((ga) this).field_j = param1.createImage((java.awt.image.ImageProducer) this);
+            this.field_l = new int[param0 * param3 + 1];
+            this.field_e = param3;
+            this.field_m = param0;
+            this.field_o = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+            this.field_j = param1.createImage((java.awt.image.ImageProducer) (this));
             this.b((byte) 115);
-            boolean discarded$0 = param1.prepareImage(((ga) this).field_j, (java.awt.image.ImageObserver) this);
+            discarded$0 = param1.prepareImage(this.field_j, (java.awt.image.ImageObserver) (this));
             this.b((byte) -93);
-            boolean discarded$1 = param1.prepareImage(((ga) this).field_j, (java.awt.image.ImageObserver) this);
+            discarded$1 = param1.prepareImage(this.field_j, (java.awt.image.ImageObserver) (this));
             this.b((byte) -97);
-            boolean discarded$2 = param1.prepareImage(((ga) this).field_j, (java.awt.image.ImageObserver) this);
-            ((ga) this).a(true);
+            discarded$2 = param1.prepareImage(this.field_j, (java.awt.image.ImageObserver) (this));
+            this.a(true);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ga.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "ga.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
-        return ((ga) this).field_p == param0;
+        return this.field_p == param0;
     }
 
     final static boolean b(int param0) {
-        return !wn.field_z.a((byte) -84);
+        if (param0 != 3236) {
+            return false;
+        }
+        return !wn.field_z.a((byte) -84) ? true : false;
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
@@ -158,8 +165,8 @@ final class ga extends dk implements java.awt.image.ImageProducer, java.awt.imag
         String stackOut_5_2 = null;
         try {
           L0: {
-            if (param0 == ((ga) this).field_p) {
-              ((ga) this).field_p = null;
+            if (param0 == this.field_p) {
+              this.field_p = null;
               break L0;
             } else {
               return;
@@ -169,23 +176,23 @@ final class ga extends dk implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("ga.removeConsumer(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -193,15 +200,15 @@ final class ga extends dk implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
     }
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
         try {
-            ((ga) this).addConsumer(param0);
+            this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ga.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "ga.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -210,18 +217,14 @@ final class ga extends dk implements java.awt.image.ImageProducer, java.awt.imag
 
     private final synchronized void b(byte param0) {
         int var2 = 83 % ((param0 - -44) / 43);
-        if (!(null != ((ga) this).field_p)) {
+        if (!(null != this.field_p)) {
             return;
         }
-        ((ga) this).field_p.setPixels(0, 0, ((ga) this).field_e, ((ga) this).field_m, ((ga) this).field_o, ((ga) this).field_l, 0, ((ga) this).field_e);
-        ((ga) this).field_p.imageComplete(2);
+        this.field_p.setPixels(0, 0, this.field_e, this.field_m, this.field_o, this.field_l, 0, this.field_e);
+        this.field_p.imageComplete(2);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = "Create unrated game";
         field_q = "Please remove <%0> from your friend list first.";
         field_n = "Larry";

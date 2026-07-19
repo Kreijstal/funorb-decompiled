@@ -12,10 +12,10 @@ abstract class qd extends da {
     abstract int a();
 
     final void a(int[] param0, int param1, int param2) {
-        if (((qd) this).field_j) {
-            ((qd) this).b(param0, param1, param2);
+        if (this.field_j) {
+            this.b(param0, param1, param2);
         } else {
-            ((qd) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class qd extends da {
     abstract qd b();
 
     protected qd() {
-        ((qd) this).field_j = true;
+        this.field_j = true;
     }
 }

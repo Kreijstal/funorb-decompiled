@@ -14,17 +14,13 @@ final class cb extends q {
 
     public static void a(int param0) {
         field_m = null;
-        int var1 = 1;
+        int var1 = 7 % ((-37 - param0) / 59);
     }
 
     cb() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_m = new qj[255];
         for (var0 = 0; var0 < field_m.length; var0++) {

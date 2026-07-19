@@ -12,7 +12,7 @@ final class wg {
     private static String field_z;
 
     public static void a(byte param0) {
-        int var1 = -14;
+        int var1 = 29 / ((param0 - -37) / 35);
         field_e = null;
         field_g = null;
         field_c = null;
@@ -22,10 +22,6 @@ final class wg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "wg.A(";
         field_g = "Advertising websites";
         field_c = "Only show lobby chat from my friends";

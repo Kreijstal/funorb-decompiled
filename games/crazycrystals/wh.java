@@ -6,7 +6,7 @@ final class wh {
     static String[] field_a;
 
     wh(int param0) {
-        ((wh) this).field_b = param0;
+        this.field_b = param0;
     }
 
     public final String toString() {
@@ -14,14 +14,13 @@ final class wh {
     }
 
     public static void a(byte param0) {
+        if (param0 != 19) {
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
     }
 }

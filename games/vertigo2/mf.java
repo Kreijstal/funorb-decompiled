@@ -7,6 +7,13 @@ final class mf {
     static String field_a;
 
     public static void a(int param0) {
+        boolean discarded$0 = false;
+        if (param0 != 9000) {
+            discarded$0 = mf.b(-34);
+            field_a = null;
+            field_c = null;
+            return;
+        }
         field_a = null;
         field_c = null;
     }
@@ -15,123 +22,207 @@ final class mf {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         er stackIn_5_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
+        er stackIn_7_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        er stackOut_6_0 = null;
         er stackOut_4_0 = null;
         Object stackOut_1_0 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         try {
           L0: {
             if (hq.a(124, param3, param1, param0)) {
-              stackOut_4_0 = td.a(4205);
-              stackIn_5_0 = stackOut_4_0;
-              break L0;
+              if (param2 <= -72) {
+                stackOut_6_0 = td.a(4205);
+                stackIn_7_0 = stackOut_6_0;
+                decompiledRegionSelector0 = 2;
+                break L0;
+              } else {
+                stackOut_4_0 = (er) null;
+                stackIn_5_0 = stackOut_4_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
+              }
             } else {
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
-              return (er) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("mf.A(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_8_0 = (RuntimeException) (var4);
+            stackOut_8_1 = new StringBuilder().append("mf.A(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
               break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + -94 + ',' + param3 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_5_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (er) ((Object) stackIn_2_0);
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_5_0;
+          } else {
+            return stackIn_7_0;
+          }
+        }
     }
 
     final static boolean b(int param0) {
-        int var6 = Vertigo2.field_L ? 1 : 0;
-        long var1 = gk.a(123);
-        long var3 = -id.field_a + var1;
-        if (var3 > 30000L) {
-            nj.field_d = 0;
-            id.field_a = var1;
-            return true;
-        }
-        int var5 = 3000;
-        if (nj.field_d < 7) {
-            if (nj.field_d < 5) {
-                if (nj.field_d < 3) {
-                    if (~(long)var5 > ~var3) {
-                        id.field_a = var1;
-                        nj.field_d = nj.field_d + 1;
-                        return true;
-                    }
-                    return false;
-                }
-                var5 = 6000;
-                if (~(long)var5 > ~var3) {
-                    id.field_a = var1;
-                    nj.field_d = nj.field_d + 1;
-                    return true;
-                }
-                return false;
-            }
-            var5 = 9000;
-            if (~(long)var5 > ~var3) {
+        long var1 = 0L;
+        long var3 = 0L;
+        int var5 = 0;
+        int var6 = 0;
+        var6 = Vertigo2.field_L ? 1 : 0;
+        if (param0 == -6390) {
+          var1 = gk.a(param0 ^ -6287);
+          var3 = -id.field_a + var1;
+          if (var3 <= 30000L) {
+            var5 = 3000;
+            if (-8 >= (nj.field_d ^ -1)) {
+              var5 = 12000;
+              if (((long)var5 ^ -1L) > (var3 ^ -1L)) {
                 id.field_a = var1;
                 nj.field_d = nj.field_d + 1;
                 return true;
+              } else {
+                return false;
+              }
+            } else {
+              if (-6 >= (nj.field_d ^ -1)) {
+                var5 = 9000;
+                if (((long)var5 ^ -1L) > (var3 ^ -1L)) {
+                  id.field_a = var1;
+                  nj.field_d = nj.field_d + 1;
+                  return true;
+                } else {
+                  return false;
+                }
+              } else {
+                if (nj.field_d >= 3) {
+                  var5 = 6000;
+                  if (((long)var5 ^ -1L) > (var3 ^ -1L)) {
+                    id.field_a = var1;
+                    nj.field_d = nj.field_d + 1;
+                    return true;
+                  } else {
+                    return false;
+                  }
+                } else {
+                  if (((long)var5 ^ -1L) > (var3 ^ -1L)) {
+                    id.field_a = var1;
+                    nj.field_d = nj.field_d + 1;
+                    return true;
+                  } else {
+                    return false;
+                  }
+                }
+              }
             }
-            return false;
-        }
-        var5 = 12000;
-        if (~(long)var5 > ~var3) {
+          } else {
+            nj.field_d = 0;
             id.field_a = var1;
-            nj.field_d = nj.field_d + 1;
             return true;
+          }
+        } else {
+          field_b = -111;
+          var1 = gk.a(param0 ^ -6287);
+          var3 = -id.field_a + var1;
+          if (var3 <= 30000L) {
+            var5 = 3000;
+            if (-8 >= (nj.field_d ^ -1)) {
+              var5 = 12000;
+              if (((long)var5 ^ -1L) > (var3 ^ -1L)) {
+                id.field_a = var1;
+                nj.field_d = nj.field_d + 1;
+                return true;
+              } else {
+                return false;
+              }
+            } else {
+              if (-6 >= (nj.field_d ^ -1)) {
+                var5 = 9000;
+                if (((long)var5 ^ -1L) > (var3 ^ -1L)) {
+                  id.field_a = var1;
+                  nj.field_d = nj.field_d + 1;
+                  return true;
+                } else {
+                  return false;
+                }
+              } else {
+                if (nj.field_d >= 3) {
+                  var5 = 6000;
+                  if (((long)var5 ^ -1L) > (var3 ^ -1L)) {
+                    id.field_a = var1;
+                    nj.field_d = nj.field_d + 1;
+                    return true;
+                  } else {
+                    return false;
+                  }
+                } else {
+                  if (((long)var5 ^ -1L) > (var3 ^ -1L)) {
+                    id.field_a = var1;
+                    nj.field_d = nj.field_d + 1;
+                    return true;
+                  } else {
+                    return false;
+                  }
+                }
+              }
+            }
+          } else {
+            nj.field_d = 0;
+            id.field_a = var1;
+            return true;
+          }
         }
-        return false;
     }
 
     final static boolean a(byte param0, int param1) {
-        return (param1 & mb.field_s) != 0;
+        if (param0 != 126) {
+            return false;
+        }
+        return -1 != (param1 & mb.field_s ^ -1) ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 2;
         field_a = "This option is restricted. Your rating is currently <%0>.<br>Can you achieve the qualifying rating of <%1>?";
     }

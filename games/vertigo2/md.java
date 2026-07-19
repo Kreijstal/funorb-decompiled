@@ -46,28 +46,28 @@ final class md extends ji {
             }
             L2: {
               var4_int = param1;
-              if (var4_int == 0) {
-                ((md) this).field_E = param2.h(-11);
+              if (-1 == (var4_int ^ -1)) {
+                this.field_E = param2.h(-11);
                 break L2;
               } else {
                 if (1 == var4_int) {
-                  ((md) this).field_F = param2.a((byte) -11);
+                  this.field_F = param2.a((byte) -11);
                   break L2;
                 } else {
-                  if (var4_int != 2) {
+                  if ((var4_int ^ -1) != -3) {
                     if (var4_int == 3) {
-                      ((md) this).field_A = param2.a((byte) -11);
+                      this.field_A = param2.a((byte) -11);
                       break L2;
                     } else {
-                      if (var4_int == 4) {
-                        ((md) this).field_z = param2.a((byte) -11);
+                      if ((var4_int ^ -1) == -5) {
+                        this.field_z = param2.a((byte) -11);
                         break L2;
                       } else {
                         break L2;
                       }
                     }
                   } else {
-                    ((md) this).field_B = param2.h(-11);
+                    this.field_B = param2.h(-11);
                     break L2;
                   }
                 }
@@ -79,23 +79,23 @@ final class md extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var4;
+            stackOut_16_0 = (RuntimeException) (var4);
             stackOut_16_1 = new StringBuilder().append("md.C(").append(param0).append(',').append(param1).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L3;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -103,13 +103,13 @@ final class md extends ji {
               break L3;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
         }
     }
 
     final void a(int param0) {
         if (param0 >= -98) {
-            Object var3 = null;
+            int[] var3 = (int[]) null;
             md.a(-83, -41, (int[]) null, 88, -98);
         }
         uk.d((byte) 71);
@@ -187,7 +187,7 @@ final class md extends ji {
               if (param0 == 1308) {
                 break L3;
               } else {
-                field_y = null;
+                field_y = (String) null;
                 break L3;
               }
             }
@@ -208,23 +208,23 @@ final class md extends ji {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var3;
+            stackOut_16_0 = (RuntimeException) (var3);
             stackOut_16_1 = new StringBuilder().append("md.A(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -233,23 +233,23 @@ final class md extends ji {
             }
           }
           L6: {
-            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+            stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
             stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param2 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L6;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -257,7 +257,7 @@ final class md extends ji {
               break L6;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
         }
         return stackIn_15_0 != 0;
     }
@@ -277,22 +277,22 @@ final class md extends ji {
                 int[] var5 = var9;
                 var6 = param1;
                 var7 = param4;
-                var9[var6] = (b.a(16711422, var9[var6]) >> 1) + var7;
+                var9[var6] = (b.a(16711422, var9[var6]) >> 428046817) + var7;
                 param1++;
             }
             int var5_int = 4 / ((param0 - -39) / 53);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "md.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "md.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public md() {
         super(0, true);
-        ((md) this).field_B = 16;
-        ((md) this).field_E = 0;
-        ((md) this).field_A = 0;
-        ((md) this).field_F = 2000;
-        ((md) this).field_z = 4096;
+        this.field_B = 16;
+        this.field_E = 0;
+        this.field_A = 0;
+        this.field_F = 2000;
+        this.field_z = 4096;
     }
 
     public static void g(int param0) {
@@ -302,6 +302,7 @@ final class md extends ji {
     }
 
     final int[] c(int param0, int param1) {
+        boolean discarded$1 = false;
         int[] var3 = null;
         int var4 = 0;
         Random var6 = null;
@@ -326,7 +327,7 @@ final class md extends ji {
         int var25 = 0;
         int var26 = 0;
         int var27 = 0;
-        Object var28 = null;
+        tp var28 = null;
         int[][] var32 = null;
         int stackIn_8_0 = 0;
         int stackIn_19_0 = 0;
@@ -342,42 +343,42 @@ final class md extends ji {
           if (param1 > 91) {
             break L0;
           } else {
-            var28 = null;
-            boolean discarded$1 = md.a(55, (tp) null, (tp) null);
+            var28 = (tp) null;
+            discarded$1 = md.a(55, (tp) null, (tp) null);
             break L0;
           }
         }
         L1: {
-          var3 = ((md) this).field_x.a(param0, (byte) 110);
-          if (!((md) this).field_x.field_i) {
+          var3 = this.field_x.a(param0, (byte) 110);
+          if (!this.field_x.field_i) {
             break L1;
           } else {
-            var4 = ((md) this).field_z >> 1;
-            var32 = ((md) this).field_x.a(100);
-            var6 = new Random((long)((md) this).field_E);
+            var4 = this.field_z >> 846283457;
+            var32 = this.field_x.a(100);
+            var6 = new Random((long)this.field_E);
             var7 = 0;
             L2: while (true) {
-              if (var7 >= ((md) this).field_F) {
+              if (var7 >= this.field_F) {
                 break L1;
               } else {
                 L3: {
-                  if (((md) this).field_z <= 0) {
-                    stackOut_7_0 = ((md) this).field_A;
+                  if ((this.field_z ^ -1) >= -1) {
+                    stackOut_7_0 = this.field_A;
                     stackIn_8_0 = stackOut_7_0;
                     break L3;
                   } else {
-                    stackOut_6_0 = ((md) this).field_A + (mj.a(-110, var6, ((md) this).field_z) + -var4);
+                    stackOut_6_0 = this.field_A + (mj.a(-110, var6, this.field_z) + -var4);
                     stackIn_8_0 = stackOut_6_0;
                     break L3;
                   }
                 }
                 L4: {
                   var8 = stackIn_8_0;
-                  var8 = var8 >> 4 & 255;
+                  var8 = var8 >> 1325167332 & 255;
                   var9 = mj.a(-106, var6, we.field_M);
                   var10 = mj.a(-128, var6, aa.field_Vb);
-                  var11 = (qb.field_b[var8] * ((md) this).field_B >> 12) + var9;
-                  var12 = var10 + (((md) this).field_B * eh.field_b[var8] >> 12);
+                  var11 = (qb.field_b[var8] * this.field_B >> 1040223372) + var9;
+                  var12 = var10 + (this.field_B * eh.field_b[var8] >> -1783165140);
                   var13 = -var10 + var12;
                   var14 = var11 + -var9;
                   if (var14 != 0) {
@@ -451,7 +452,7 @@ final class md extends ji {
                   var18 = var12 - var10;
                   var19 = -var17 / 2;
                   var20 = 2048 / var17;
-                  var21 = -(mj.a(-107, var6, 4096) >> 2) + 1024;
+                  var21 = -(mj.a(-107, var6, 4096) >> 32915650) + 1024;
                   if (var10 >= var12) {
                     stackOut_27_0 = -1;
                     stackIn_28_0 = stackOut_27_0;
@@ -464,7 +465,7 @@ final class md extends ji {
                 }
                 L11: {
                   var22 = stackIn_28_0;
-                  if (var18 < 0) {
+                  if ((var18 ^ -1) > -1) {
                     var18 = -var18;
                     break L11;
                   } else {
@@ -509,10 +510,6 @@ final class md extends ji {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = "Press any key to continue";
     }
 }

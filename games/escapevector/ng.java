@@ -16,7 +16,7 @@ final class ng extends fj {
         try {
             super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ng.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "ng.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -29,10 +29,6 @@ final class ng extends fj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_ob = 0;
         field_lb = "Normal";
     }

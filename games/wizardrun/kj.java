@@ -9,6 +9,9 @@ final class kj {
     static int field_a;
 
     final static void a(int param0, int param1, int param2) {
+        if (param0 != 1048576) {
+            return;
+        }
         id.field_c = param2;
         ii.field_a = param1;
     }
@@ -21,21 +24,21 @@ final class kj {
             Throwable var2 = null;
             Runtime var2_ref = null;
             Long var3 = null;
-            Object var4 = null;
+            Object[] var4 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
                 L1: {
-                  var1_ref_java_lang_reflect_Method = Runtime.class.getMethod("maxMemory", new Class[0]);
+                  var1_ref_java_lang_reflect_Method = Runtime.class.getMethod("maxMemory", new Class[]{});
                   if (var1_ref_java_lang_reflect_Method == null) {
                     break L1;
                   } else {
                     try {
                       L2: {
                         var2_ref = Runtime.getRuntime();
-                        var4 = null;
-                        var3 = (Long) var1_ref_java_lang_reflect_Method.invoke((Object) (Object) var2_ref, (Object[]) null);
+                        var4 = (Object[]) null;
+                        var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2_ref), (Object[]) null));
                         jd.field_b = (int)(var3.longValue() / 1048576L) + 1;
                         decompiledRegionSelector0 = 0;
                         break L2;
@@ -49,7 +52,7 @@ final class kj {
                       }
                     }
                     if (decompiledRegionSelector0 == 0) {
-                      var1 = -100;
+                      var1 = -100 / ((param0 - -31) / 50);
                       return;
                     } else {
                       break L1;
@@ -65,7 +68,7 @@ final class kj {
                 break L4;
               }
             }
-            var1 = -100;
+            var1 = -100 / ((param0 - -31) / 50);
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -74,17 +77,23 @@ final class kj {
     }
 
     public static void a(byte param0) {
-        field_b = null;
-        field_c = null;
-        field_e = null;
-        field_d = null;
+        if (param0 <= 63) {
+          field_b = (wi) null;
+          field_b = null;
+          field_c = null;
+          field_e = null;
+          field_d = null;
+          return;
+        } else {
+          field_b = null;
+          field_c = null;
+          field_e = null;
+          field_d = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new oi();
         field_c = new ae();
         field_e = "Fire stars";

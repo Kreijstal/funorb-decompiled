@@ -10,9 +10,11 @@ final class si {
     static boolean field_a;
 
     final static void a(int param0) {
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         if (null == ci.field_i) {
           if (param0 >= -23) {
-            int discarded$4 = si.a((byte) -22);
+            discarded$4 = si.a((byte) -22);
             return;
           } else {
             return;
@@ -23,7 +25,7 @@ final class si {
           if (param0 < -23) {
             return;
           } else {
-            int discarded$5 = si.a((byte) -22);
+            discarded$5 = si.a((byte) -22);
             return;
           }
         }
@@ -50,6 +52,9 @@ final class si {
         field_c = null;
         field_f = null;
         field_e = null;
+        if (param0 >= -126) {
+            field_f = (long[]) null;
+        }
     }
 
     final static void a(int param0, int param1) {
@@ -60,9 +65,17 @@ final class si {
         var3 = MinerDisturbance.field_ab;
         try {
           L0: {
-            jc.a(0, bd.field_g, fb.field_c, -125, true, he.field_e, param0);
+            L1: {
+              jc.a(0, bd.field_g, fb.field_c, -125, true, he.field_e, param0);
+              if (param1 == -14391) {
+                break L1;
+              } else {
+                si.a(-79);
+                break L1;
+              }
+            }
             var2_int = 0;
-            L1: while (true) {
+            L2: while (true) {
               if (fb.field_c <= var2_int) {
                 jc.a(param0, v.field_c, param0 + fb.field_c, -2, false, bc.field_d, param0 - -param0);
                 if (fb.field_c <= param0) {
@@ -74,22 +87,18 @@ final class si {
               } else {
                 an.field_a[param0 + var2_int] = var2_int;
                 var2_int++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var2, "si.A(" + param0 + ',' + -14391 + ')');
+          throw lj.a((Throwable) ((Object) var2), "si.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Play the game without logging in just yet";
         field_b = new rc[5];
         field_e = "Please log in";

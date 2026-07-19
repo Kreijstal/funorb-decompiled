@@ -9,6 +9,7 @@ final class cr {
     static String field_a;
 
     final static bi[] a(int param0, int param1, int param2, int param3) {
+        bi[] discarded$2 = null;
         bi[] var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -19,9 +20,9 @@ final class cr {
         var7[0] = gr.a((byte) -57, param3, param1);
         var5 = 1;
         L0: while (true) {
-          if (var5 >= 9) {
+          if (-10 >= (var5 ^ -1)) {
             if (param2 != -10) {
-              bi[] discarded$2 = cr.a(-10, 81, 16, 82);
+              discarded$2 = cr.a(-10, 81, 16, 82);
               var4[4] = gr.a((byte) -124, param0, 64);
               return var4;
             } else {
@@ -38,15 +39,14 @@ final class cr {
 
     public static void a(byte param0) {
         field_e = null;
+        if (param0 != 41) {
+            return;
+        }
         field_d = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = -1;
         field_a = "Names cannot start or end with space or underscore";
     }

@@ -30,14 +30,14 @@ final class ac {
         ic var4 = null;
         var3 = HoldTheLine.field_D;
         L0: while (true) {
-          if (((ac) this).field_f >= ((ac) this).field_i) {
+          if (this.field_f >= this.field_i) {
             if (param0 != -1) {
               return false;
             } else {
               return true;
             }
           } else {
-            var4 = ((ac) this).field_h[((ac) this).field_f];
+            var4 = this.field_h[this.field_f];
             if (!var4.field_e.b((byte) -85)) {
               this.a((byte) -52, 0, var4);
               return false;
@@ -67,7 +67,7 @@ final class ac {
                 }
               }
               L3: {
-                if (var4.field_b >= 0) {
+                if ((var4.field_b ^ -1) <= -1) {
                   break L3;
                 } else {
                   if (var4.field_a != null) {
@@ -86,7 +86,7 @@ final class ac {
                   }
                 }
               }
-              ((ac) this).field_f = ((ac) this).field_f + 1;
+              this.field_f = this.field_f + 1;
               continue L0;
             }
           }
@@ -98,12 +98,12 @@ final class ac {
             eg.a(hk.field_c[param2][param1], 14, true, param3);
             eg.a(on.field_v[param2][param1], 13, true, param3);
             if (param0 >= -87) {
-                Object var5 = null;
+                da var5 = (da) null;
                 ac.a(61, 25, -81, (da) null);
             }
             param3.a(91, 2, ha.field_j[param2][param1]);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "ac.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "ac.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -114,15 +114,19 @@ final class ac {
     private final void a(byte param0, int param1, ic param2) {
         float var4_float = 0.0f;
         try {
-            var4_float = (float)param1 / 100.0f + (float)(((ac) this).field_f - -1);
-            if (param1 != 0) {
-                ((ac) this).field_b = param2.field_c + " - " + param1 + "%";
-            } else {
-                ((ac) this).field_b = param2.field_g;
+            if (param0 != -52) {
+                String[] var5 = (String[]) null;
+                ac.a((ji) null, (String[]) null, -128, -113);
             }
-            ((ac) this).field_j = (float)((ac) this).field_d * var4_float / (float)(((ac) this).field_i - -1);
+            var4_float = (float)param1 / 100.0f + (float)(this.field_f - -1);
+            if (param1 != 0) {
+                this.field_b = param2.field_c + " - " + param1 + "%";
+            } else {
+                this.field_b = param2.field_g;
+            }
+            this.field_j = (float)this.field_d * var4_float / (float)(this.field_i - -1);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "ac.B(" + -52 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "ac.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -132,25 +136,21 @@ final class ac {
         int var6 = 0;
         int var7 = 0;
         try {
-            if (!(param1.length == 4)) {
+            if (!(-5 == (param1.length ^ -1))) {
                 throw new IllegalArgumentException();
             }
             var4_int = ka.a((byte) -127, param1[0]);
-            var5 = ka.a((byte) -116, param1[1]);
+            var5 = ka.a((byte) -116, param1[param2]);
             var6 = ka.a((byte) 39, param1[2]);
             var7 = ka.a((byte) -120, param1[3]);
             param0.field_g = param0.field_j;
             param0.field_j = new ul(param3, var4_int, var5, var6, var7);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "ac.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + 1 + ',' + param3 + ')');
+            throw kk.a((Throwable) ((Object) runtimeException), "ac.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "(Player 1)";
         field_e = -1;
         field_a = new String[]{null, "<col=2>You must win the Classic championship to qualify.</col>", "<col=2>You must win the Desert championship to qualify.</col>", "<col=2>You must win the Alpine championship to qualify.</col>"};

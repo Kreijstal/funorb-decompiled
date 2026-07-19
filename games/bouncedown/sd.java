@@ -11,7 +11,7 @@ final class sd extends sh implements rc {
 
     public final void a(byte param0, int param1, int param2, int param3, wd param4) {
         RuntimeException var6 = null;
-        Object var7 = null;
+        rg var7 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -19,6 +19,7 @@ final class sd extends sh implements rc {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
@@ -30,22 +31,24 @@ final class sd extends sh implements rc {
         String stackOut_10_2 = null;
         try {
           L0: {
-            if (((sd) this).field_nb) {
+            if (this.field_nb) {
               l.a(false, true, -100);
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 ck.e((byte) 125);
                 if (param0 < 6) {
-                  var7 = null;
+                  var7 = (rg) null;
                   this.a(-84, true, (rg) null);
-                  ((sd) this).a(true);
+                  this.a(true);
                   break L1;
                 } else {
-                  ((sd) this).a(true);
+                  this.a(true);
                   break L1;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -53,23 +56,23 @@ final class sd extends sh implements rc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var6;
+            stackOut_9_0 = (RuntimeException) (var6);
             stackOut_9_1 = new StringBuilder().append("sd.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param4 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -77,14 +80,19 @@ final class sd extends sh implements rc {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final void j(byte param0) {
         this.a(-1, true, wb.a(248, param0 ^ -51, ih.field_P));
         if (param0 != -52) {
-            Object var3 = null;
+            rg var3 = (rg) null;
             this.a(28, false, (rg) null);
         }
     }
@@ -92,18 +100,25 @@ final class sd extends sh implements rc {
     sd(pf param0, gh param1) {
         super(param0, ne.field_v, ce.field_t, false, false);
         try {
-            ((sd) this).field_kb = param1;
+            this.field_kb = param1;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void b(boolean param0) {
         field_pb = null;
+        if (param0) {
+            sd.b(false);
+            field_mb = null;
+            return;
+        }
         field_mb = null;
     }
 
     private final void a(int param0, boolean param1, rg param2) {
+        wd discarded$2 = null;
+        wd discarded$3 = null;
         RuntimeException var4 = null;
         String var4_ref = null;
         uc var5 = null;
@@ -115,6 +130,7 @@ final class sd extends sh implements rc {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_30_0 = null;
         StringBuilder stackOut_30_1 = null;
@@ -128,7 +144,7 @@ final class sd extends sh implements rc {
         try {
           L0: {
             L1: {
-              ((sd) this).field_ob = true;
+              this.field_ob = true;
               if (param0 == -1) {
                 break L1;
               } else {
@@ -155,37 +171,38 @@ final class sd extends sh implements rc {
                       }
                     }
                     var4_ref = ih.field_P;
-                    ((sd) this).field_nb = true;
+                    this.field_nb = true;
                     break L2;
                   }
                 } else {
                   var4_ref = ma.field_n;
-                  if (((sd) this).field_kb == null) {
+                  if (this.field_kb == null) {
                     break L2;
                   } else {
-                    ((sd) this).field_kb.a(-3814);
+                    this.field_kb.a(-3814);
                     break L2;
                   }
                 }
               }
             }
             L4: {
-              var5 = new uc((sh) this, ne.field_v, var4_ref);
+              var5 = new uc((sh) (this), ne.field_v, var4_ref);
               if (param2.field_f) {
                 if (param2.field_a) {
-                  ((sd) this).a(10768, (lk) (Object) new eb((sd) this));
-                  return;
+                  this.a(10768, new eb((sd) (this)));
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
-                  wd discarded$2 = var5.a(pc.field_i, (sk) this, -4);
+                  discarded$2 = var5.a(pc.field_i, (sk) (this), -4);
                   break L4;
                 }
               } else {
                 L5: {
-                  if (((sd) this).field_nb) {
-                    wd discarded$3 = var5.a(pc.field_i, (sk) this, -4);
+                  if (this.field_nb) {
+                    discarded$3 = var5.a(pc.field_i, (sk) (this), -4);
                     break L5;
                   } else {
-                    if (param2.field_g == 5) {
+                    if ((param2.field_g ^ -1) == -6) {
                       var5.a(ta.field_e, 11, (byte) 114);
                       var5.a(i.field_g, 17, (byte) 85);
                       break L5;
@@ -199,7 +216,7 @@ final class sd extends sh implements rc {
                   var5.a(oc.field_c, 7, (byte) 80);
                   break L4;
                 } else {
-                  if (param2.field_g != 6) {
+                  if ((param2.field_g ^ -1) != -7) {
                     break L4;
                   } else {
                     var5.a(da.field_c, 9, (byte) 93);
@@ -208,30 +225,31 @@ final class sd extends sh implements rc {
                 }
               }
             }
-            ((sd) this).a(10768, (lk) (Object) var5);
+            this.a(10768, var5);
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var4;
+            stackOut_30_0 = (RuntimeException) (var4);
             stackOut_30_1 = new StringBuilder().append("sd.D(").append(param0).append(',').append(param1).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param2 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "null";
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
               break L6;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_33_0 = stackOut_31_0;
               stackIn_33_1 = stackOut_31_1;
@@ -239,15 +257,21 @@ final class sd extends sh implements rc {
               break L6;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final boolean e(byte param0) {
+        boolean discarded$6 = false;
         rg var2 = null;
         if (param0 == 21) {
-          if (((sd) this).field_D) {
-            if (!((sd) this).field_ob) {
+          if (this.field_D) {
+            if (!this.field_ob) {
               var2 = jf.a(true);
               if (var2 == null) {
                 return super.e((byte) 21);
@@ -262,9 +286,9 @@ final class sd extends sh implements rc {
             return super.e((byte) 21);
           }
         } else {
-          boolean discarded$6 = ((sd) this).e((byte) -34);
-          if (((sd) this).field_D) {
-            if (!((sd) this).field_ob) {
+          discarded$6 = this.e((byte) -34);
+          if (this.field_D) {
+            if (!this.field_ob) {
               var2 = jf.a(true);
               if (var2 == null) {
                 return super.e((byte) 21);
@@ -282,10 +306,6 @@ final class sd extends sh implements rc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_lb = 250;
     }
 }

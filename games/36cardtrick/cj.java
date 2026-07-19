@@ -12,6 +12,9 @@ class cj extends he {
     public static void b(byte param0) {
         field_k = null;
         field_l = null;
+        if (param0 != 110) {
+            return;
+        }
         field_m = null;
     }
 
@@ -21,18 +24,17 @@ class cj extends he {
             wh.field_a.a(16511, false);
             ca.a(param2, param3, param0, -25188);
             we.a(0);
+            if (param4 < 125) {
+                cj.b((byte) 57);
+            }
             jc.field_P = tj.field_F;
             ei.field_d = tj.field_F;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "cj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + 126 + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "cj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Cancel";
     }
 }

@@ -16,6 +16,9 @@ final class o extends wf {
     private static String field_z;
 
     public static void d(int param0) {
+        if (param0 != 0) {
+            return;
+        }
         field_o = null;
     }
 
@@ -23,10 +26,6 @@ final class o extends wf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "o.A(";
         field_o = new Random();
         field_i = 0;

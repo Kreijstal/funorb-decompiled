@@ -18,9 +18,18 @@ final class jh {
         field_e = null;
         field_b = null;
         field_f = null;
-        field_a = null;
-        field_c = null;
-        field_h = null;
+        if (param0 < 9) {
+          jh.a(107, false);
+          field_a = null;
+          field_c = (int[][]) null;
+          field_h = null;
+          return;
+        } else {
+          field_a = null;
+          field_c = (int[][]) null;
+          field_h = null;
+          return;
+        }
     }
 
     final static void a(int param0, boolean param1) {
@@ -33,31 +42,33 @@ final class jh {
     }
 
     final void a(int param0, uh param1) {
+        int discarded$0 = 0;
         try {
             if (param0 != 22197) {
-                int discarded$0 = ((jh) this).b((byte) 89);
+                discarded$0 = this.b((byte) 89);
             }
             if (!(null == param1.field_f)) {
                 param1.a(-6242);
             }
-            param1.field_m = ((jh) this).field_i;
-            param1.field_f = ((jh) this).field_i.field_f;
+            param1.field_m = this.field_i;
+            param1.field_f = this.field_i.field_f;
             param1.field_f.field_m = param1;
             param1.field_m.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "jh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "jh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(byte param0, boolean param1) {
         try {
+            long dupTemp$2 = 0L;
             IOException var2 = null;
             ia var4 = null;
             ia var5 = null;
-            int stackIn_9_0 = 0;
+            int stackIn_11_0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_8_0 = 0;
-            int stackOut_7_0 = 0;
+            int stackOut_10_0 = 0;
+            int stackOut_9_0 = 0;
             L0: {
               if (null != ah.field_e) {
                 break L0;
@@ -69,7 +80,15 @@ final class jh {
             if (0 == ah.field_e.field_b) {
               return false;
             } else {
-              long dupTemp$2 = dd.b(71);
+              L1: {
+                if (param0 == -68) {
+                  break L1;
+                } else {
+                  field_e = (String) null;
+                  break L1;
+                }
+              }
+              dupTemp$2 = dd.b(71);
               ca.field_Y = dupTemp$2;
               ik.field_p = dupTemp$2;
               if (ah.field_e.field_b != 1) {
@@ -78,30 +97,30 @@ final class jh {
                 return true;
               } else {
                 try {
-                  L1: {
-                    L2: {
-                      m.field_b = new sb((java.net.Socket) ah.field_e.field_f, og.field_a);
+                  L2: {
+                    L3: {
+                      m.field_b = new sb((java.net.Socket) (ah.field_e.field_f), og.field_a);
                       d.field_b.field_g = 0;
                       var4 = se.field_p;
                       var5 = var4;
                       if (!param1) {
-                        stackOut_8_0 = -1;
-                        stackIn_9_0 = stackOut_8_0;
-                        break L2;
+                        stackOut_10_0 = -1;
+                        stackIn_11_0 = stackOut_10_0;
+                        break L3;
                       } else {
-                        stackOut_7_0 = -2;
-                        stackIn_9_0 = stackOut_7_0;
-                        break L2;
+                        stackOut_9_0 = -2;
+                        stackIn_11_0 = stackOut_9_0;
+                        break L3;
                       }
                     }
-                    wc.field_i = stackIn_9_0;
-                    hh.field_a = stackIn_9_0;
-                    bh.field_d = stackIn_9_0;
+                    wc.field_i = stackIn_11_0;
+                    hh.field_a = stackIn_11_0;
+                    bh.field_d = stackIn_11_0;
                     var5.field_g = 0;
                     r.field_c = ua.field_b;
-                    oe.a(r.field_d, 32, (rb) (Object) d.field_b, bf.field_s, jg.field_A);
+                    oe.a(r.field_d, 32, d.field_b, bf.field_s, jg.field_A);
                     nf.a(-1, (byte) 95);
-                    break L1;
+                    break L2;
                   }
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -125,9 +144,9 @@ final class jh {
         int var2 = 0;
         uh var3 = null;
         var2 = 0;
-        var3 = ((jh) this).field_i.field_m;
+        var3 = this.field_i.field_m;
         L0: while (true) {
-          if (((jh) this).field_i == var3) {
+          if (this.field_i == var3) {
             if (param0 < 109) {
               return -57;
             } else {
@@ -144,64 +163,66 @@ final class jh {
     final uh a(byte param0) {
         uh var2 = null;
         if (param0 >= 119) {
-          var2 = ((jh) this).field_i.field_m;
-          if (((jh) this).field_i == var2) {
-            ((jh) this).field_g = null;
+          var2 = this.field_i.field_m;
+          if (this.field_i == var2) {
+            this.field_g = null;
             return null;
           } else {
-            ((jh) this).field_g = var2.field_m;
+            this.field_g = var2.field_m;
             return var2;
           }
         } else {
-          field_c = null;
-          var2 = ((jh) this).field_i.field_m;
-          if (((jh) this).field_i == var2) {
-            ((jh) this).field_g = null;
+          field_c = (int[][]) null;
+          var2 = this.field_i.field_m;
+          if (this.field_i == var2) {
+            this.field_g = null;
             return null;
           } else {
-            ((jh) this).field_g = var2.field_m;
+            this.field_g = var2.field_m;
             return var2;
           }
         }
     }
 
     final uh a(int param0) {
+        int discarded$2 = 0;
         uh var2 = null;
         if (param0 < -10) {
-          var2 = ((jh) this).field_g;
-          if (((jh) this).field_i == var2) {
-            ((jh) this).field_g = null;
+          var2 = this.field_g;
+          if (this.field_i == var2) {
+            this.field_g = null;
             return null;
           } else {
-            ((jh) this).field_g = var2.field_m;
+            this.field_g = var2.field_m;
             return var2;
           }
         } else {
-          int discarded$2 = ((jh) this).b((byte) -41);
-          var2 = ((jh) this).field_g;
-          if (((jh) this).field_i == var2) {
-            ((jh) this).field_g = null;
+          discarded$2 = this.b((byte) -41);
+          var2 = this.field_g;
+          if (this.field_i == var2) {
+            this.field_g = null;
             return null;
           } else {
-            ((jh) this).field_g = var2.field_m;
+            this.field_g = var2.field_m;
             return var2;
           }
         }
     }
 
     final uh c(int param0) {
+        uh discarded$7 = null;
         uh var2 = null;
-        var2 = ((jh) this).field_i.field_m;
+        var2 = this.field_i.field_m;
         if (param0 == 8) {
-          if (var2 == ((jh) this).field_i) {
+          if (var2 == this.field_i) {
             return null;
           } else {
             var2.a(-6242);
             return var2;
           }
         } else {
-          uh discarded$7 = ((jh) this).c(-118);
-          if (var2 == ((jh) this).field_i) {
+          discarded$7 = this.c(-118);
+          if (var2 == this.field_i) {
             return null;
           } else {
             var2.a(-6242);
@@ -211,16 +232,12 @@ final class jh {
     }
 
     public jh() {
-        ((jh) this).field_i = new uh();
-        ((jh) this).field_i.field_f = ((jh) this).field_i;
-        ((jh) this).field_i.field_m = ((jh) this).field_i;
+        this.field_i = new uh();
+        this.field_i.field_f = this.field_i;
+        this.field_i.field_m = this.field_i;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "(Including <%0>)";
         field_c = new int[8][];
         field_h = null;

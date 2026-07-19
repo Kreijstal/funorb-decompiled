@@ -17,10 +17,6 @@ final class kb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "kb.A(";
         field_c = 0;
         field_b = 20;

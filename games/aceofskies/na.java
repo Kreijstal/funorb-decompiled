@@ -19,10 +19,6 @@ final class na {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "na.A(";
         field_a = true;
     }

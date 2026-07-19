@@ -20,34 +20,34 @@ final class so {
     private int field_b;
 
     final int a(int param0) {
-        if (!(((so) this).field_p != ((so) this).field_i.length)) {
-            ((so) this).field_h = true;
+        if (!(this.field_p != this.field_i.length)) {
+            this.field_h = true;
             return -1;
         }
         if (param0 != 0) {
-            ((so) this).field_n = true;
+            this.field_n = true;
         }
-        if (!(((so) this).field_p <= 0)) {
-            ((so) this).field_l = ((so) this).field_l + 37;
+        if (!(-1 <= (this.field_p ^ -1))) {
+            this.field_l = this.field_l + 37;
         }
-        int fieldTemp$0 = ((so) this).field_p;
-        ((so) this).field_p = ((so) this).field_p + 1;
-        return ((so) this).field_i[fieldTemp$0];
+        int fieldTemp$0 = this.field_p;
+        this.field_p = this.field_p + 1;
+        return this.field_i[fieldTemp$0];
     }
 
     final int a(byte param0) {
         if (param0 >= -88) {
-            ((so) this).field_a = -66;
+            this.field_a = -66;
         }
-        return ((so) this).field_i.length;
+        return this.field_i.length;
     }
 
     final void d(int param0) {
-        if (((so) this).field_l > ((so) this).field_g) {
-            ((so) this).field_g = ((so) this).field_g + 3;
+        if (this.field_l > this.field_g) {
+            this.field_g = this.field_g + 3;
         }
-        if (((so) this).field_g > ((so) this).field_l) {
-            ((so) this).field_g = ((so) this).field_l;
+        if (this.field_g > this.field_l) {
+            this.field_g = this.field_l;
         }
         if (param0 != 27420) {
             so.a(true);
@@ -56,28 +56,31 @@ final class so {
 
     final dd b(int param0) {
         if (param0 != -3060) {
-            ((so) this).field_a = 17;
+            this.field_a = 17;
         }
-        return new dd(((so) this).field_m, ((so) this).field_k, ((so) this).field_j, 60, 30, lp.field_d, 0, 0, new hh[1]);
+        return new dd(this.field_m, this.field_k, this.field_j, 60, 30, lp.field_d, 0, 0, new hh[]{lk.field_o[this.field_e]});
     }
 
     final void b(boolean param0) {
-        ((so) this).field_p = 0;
-        ((so) this).field_n = false;
-        ((so) this).field_h = false;
-        ((so) this).field_f = param0 ? true : false;
-        ((so) this).field_o = 240 + -((37 * ((so) this).field_i.length + -5) / 2);
-        ((so) this).field_g = ((so) this).field_o;
-        ((so) this).field_l = ((so) this).field_g;
+        this.field_p = 0;
+        this.field_n = false;
+        this.field_h = false;
+        this.field_f = param0 ? true : false;
+        this.field_o = 240 + -((37 * this.field_i.length + -5) / 2);
+        this.field_g = this.field_o;
+        this.field_l = this.field_g;
     }
 
     final static void c(int param0) {
+        if (param0 != 4478) {
+            field_d = (tf[]) null;
+        }
         if (!ik.field_a) {
             if (null == pk.field_f) {
                 pk.field_f = wg.b(255, 4);
             }
             if (pk.field_f.field_p) {
-                go.field_k = go.field_k & ~pk.field_f.field_s;
+                go.field_k = go.field_k & (pk.field_f.field_s ^ -1);
                 de.field_n = de.field_n | pk.field_f.field_s;
                 ik.field_a = true;
                 pk.field_f = null;
@@ -100,7 +103,7 @@ final class so {
             if (!(!db.field_U)) {
                 eh.c(5);
                 ni.a(-31470);
-                if (fc.field_e == 9) {
+                if (-10 == (fc.field_e ^ -1)) {
                     if (!(go.field_k != 0)) {
                         fc.field_e = 5;
                         la.a(ti.field_t, 5, false, -25528);
@@ -111,8 +114,8 @@ final class so {
     }
 
     final void e(int param0) {
-        ((so) this).field_n = true;
-        long var2 = 1L << ((so) this).field_e | jo.field_h;
+        this.field_n = true;
+        long var2 = 1L << this.field_e | jo.field_h;
         if (param0 != 20604) {
             return;
         }
@@ -123,8 +126,11 @@ final class so {
     }
 
     public static void a(boolean param0) {
+        if (!param0) {
+            field_d = (tf[]) null;
+        }
         field_d = null;
-        field_c = null;
+        field_c = (int[][]) null;
     }
 
     final void f(int param0) {
@@ -170,36 +176,36 @@ final class so {
         int stackOut_14_1 = 0;
         L0: {
           var5 = Pixelate.field_H ? 1 : 0;
-          t.e(535, -15 + ((so) this).field_o, 62, 15 + ((so) this).field_b + 15, 6, 0);
-          t.a(535, -15 + ((so) this).field_o, 62, 15 + (((so) this).field_b - -15), 6, 0, 128);
-          li.field_d.b(542, ((so) this).field_g + -8, 256);
-          var2 = ((so) this).field_o;
+          t.e(535, -15 + this.field_o, 62, 15 + this.field_b + 15, 6, 0);
+          t.a(535, -15 + this.field_o, 62, 15 + (this.field_b - -15), 6, 0, 128);
+          li.field_d.b(542, this.field_g + -8, 256);
+          var2 = this.field_o;
           if (param0 == 550) {
             break L0;
           } else {
-            ((so) this).field_l = -112;
+            this.field_l = -112;
             break L0;
           }
         }
         var3 = 0;
         L1: while (true) {
-          if (var3 >= ((so) this).field_i.length) {
-            rk.field_e.a("Puzzle " + (((so) this).field_e - -1), 30, 50, 0, -1);
+          if (var3 >= this.field_i.length) {
+            rk.field_e.a("Puzzle " + (this.field_e - -1), 30, 50, 0, -1);
             return;
           } else {
             L2: {
-              var4 = vn.field_e[((so) this).field_i[var3]];
+              var4 = vn.field_e[this.field_i[var3]];
               stackOut_4_0 = rg.field_e.field_a;
               stackIn_6_0 = stackOut_4_0;
               stackIn_5_0 = stackOut_4_0;
               if (!var4[0]) {
-                stackOut_6_0 = (tf[]) (Object) stackIn_6_0;
+                stackOut_6_0 = (tf[]) ((Object) stackIn_6_0);
                 stackOut_6_1 = 0;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 break L2;
               } else {
-                stackOut_5_0 = (tf[]) (Object) stackIn_5_0;
+                stackOut_5_0 = (tf[]) ((Object) stackIn_5_0);
                 stackOut_5_1 = 1;
                 stackIn_7_0 = stackOut_5_0;
                 stackIn_7_1 = stackOut_5_1;
@@ -212,13 +218,13 @@ final class so {
               stackIn_9_0 = stackOut_7_0;
               stackIn_8_0 = stackOut_7_0;
               if (var4[1]) {
-                stackOut_9_0 = (tf[]) (Object) stackIn_9_0;
+                stackOut_9_0 = (tf[]) ((Object) stackIn_9_0);
                 stackOut_9_1 = 1;
                 stackIn_10_0 = stackOut_9_0;
                 stackIn_10_1 = stackOut_9_1;
                 break L3;
               } else {
-                stackOut_8_0 = (tf[]) (Object) stackIn_8_0;
+                stackOut_8_0 = (tf[]) ((Object) stackIn_8_0);
                 stackOut_8_1 = 0;
                 stackIn_10_0 = stackOut_8_0;
                 stackIn_10_1 = stackOut_8_1;
@@ -231,13 +237,13 @@ final class so {
               stackIn_12_0 = stackOut_10_0;
               stackIn_11_0 = stackOut_10_0;
               if (var4[2]) {
-                stackOut_12_0 = (tf[]) (Object) stackIn_12_0;
+                stackOut_12_0 = (tf[]) ((Object) stackIn_12_0);
                 stackOut_12_1 = 1;
                 stackIn_13_0 = stackOut_12_0;
                 stackIn_13_1 = stackOut_12_1;
                 break L4;
               } else {
-                stackOut_11_0 = (tf[]) (Object) stackIn_11_0;
+                stackOut_11_0 = (tf[]) ((Object) stackIn_11_0);
                 stackOut_11_1 = 0;
                 stackIn_13_0 = stackOut_11_0;
                 stackIn_13_1 = stackOut_11_1;
@@ -250,13 +256,13 @@ final class so {
               stackIn_15_0 = stackOut_13_0;
               stackIn_14_0 = stackOut_13_0;
               if (!var4[3]) {
-                stackOut_15_0 = (tf[]) (Object) stackIn_15_0;
+                stackOut_15_0 = (tf[]) ((Object) stackIn_15_0);
                 stackOut_15_1 = 0;
                 stackIn_16_0 = stackOut_15_0;
                 stackIn_16_1 = stackOut_15_1;
                 break L5;
               } else {
-                stackOut_14_0 = (tf[]) (Object) stackIn_14_0;
+                stackOut_14_0 = (tf[]) ((Object) stackIn_14_0);
                 stackOut_14_1 = 1;
                 stackIn_16_0 = stackOut_14_0;
                 stackIn_16_1 = stackOut_14_1;
@@ -264,7 +270,7 @@ final class so {
               }
             }
             ((tf) (Object) stackIn_16_0[stackIn_16_1]).b(566, 16 + var2);
-            if (var3 < -1 + ((so) this).field_p) {
+            if (var3 < -1 + this.field_p) {
               t.a(550, var2, 32, 32, 0, 128);
               var2 += 37;
               var3++;
@@ -279,18 +285,18 @@ final class so {
     }
 
     so(int param0, int param1, int param2, int param3, int param4, int[] param5) {
-        ((so) this).field_f = false;
-        ((so) this).field_p = 0;
+        this.field_f = false;
+        this.field_p = 0;
         try {
-            ((so) this).field_a = param4;
-            ((so) this).field_e = param0;
-            ((so) this).field_i = param5;
-            ((so) this).field_k = param2;
-            ((so) this).field_m = param1;
-            ((so) this).field_j = param3;
-            ((so) this).field_b = ((so) this).field_i.length * 37 - 5;
+            this.field_a = param4;
+            this.field_e = param0;
+            this.field_i = param5;
+            this.field_k = param2;
+            this.field_m = param1;
+            this.field_j = param3;
+            this.field_b = this.field_i.length * 37 - 5;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "so.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "so.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

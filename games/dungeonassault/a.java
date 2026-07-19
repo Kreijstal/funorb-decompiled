@@ -15,28 +15,36 @@ final class a extends ne {
         field_l = null;
         field_n = null;
         field_m = null;
-        field_p = null;
-        field_o = null;
-        field_k = null;
+        if (param0 != 23779) {
+          field_k = (String) null;
+          field_p = null;
+          field_o = null;
+          field_k = null;
+          return;
+        } else {
+          field_p = null;
+          field_o = null;
+          field_k = null;
+          return;
+        }
     }
 
     final static void a(int param0, int param1, se param2, boolean param3, boolean param4, int param5, int param6, int param7, int param8, int param9, cn[] param10, cn[] param11) {
+        if (!param3) {
+            return;
+        }
         try {
-            he.a(240, 0, 8, 2, param1, 8, param9, param11, param1, 320, param10, param2, param2, param9, param4);
+            he.a(param6, 0, param8, param7, param1, param5, param9, param11, param1, param0, param10, param2, param2, param9, param4);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "a.A(" + 320 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + true + ',' + param4 + ',' + 8 + ',' + 240 + ',' + 2 + ',' + 8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "a.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ')');
         }
     }
 
     a(int param0) {
-        ((a) this).field_j = param0;
+        this.field_j = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Select raiders from the panel on the left";
         field_p = "Like all lizardmen of the eastern deserts, the saurus spawn is sly and agile, though his simple rags and battered weapon leave something to be desired.";
         field_k = "Order your raider to enter the room. It will engage the <%0> in combat if detected; otherwise, you may pass through the room.";

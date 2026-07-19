@@ -6,7 +6,7 @@ final class dbb extends rqa {
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -15,9 +15,10 @@ final class dbb extends rqa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         nc stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        nc stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -29,36 +30,38 @@ final class dbb extends rqa {
         try {
           L0: {
             if (param1 < -119) {
-              stackOut_3_0 = new nc((Object) (Object) frb.a(230, 99));
+              stackOut_3_0 = new nc(frb.a(230, 99));
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (nc) null;
               stackIn_2_0 = stackOut_1_0;
-              return (nc) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("dbb.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -66,9 +69,13 @@ final class dbb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     dbb(String param0, Class[] param1, String param2) {
@@ -76,6 +83,7 @@ final class dbb extends rqa {
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int discarded$1 = 0;
         int var10 = 0;
         int var11 = 0;
         if (param7 == 0) {
@@ -144,7 +152,7 @@ final class dbb extends rqa {
             return param2;
           }
         } else {
-          int discarded$1 = dbb.a(-63, -43, 28, 28, -60, -61, 125, 10, -27, 53);
+          discarded$1 = dbb.a(-63, -43, 28, 28, -60, -61, 125, 10, -27, 53);
           var10 = -(param0 * param9 / param1) + param3;
           if (param8 <= var10) {
             if (var10 <= param5) {
@@ -237,9 +245,9 @@ final class dbb extends rqa {
         try {
           L0: {
             var11_int = 57 / ((param2 - 17) / 51);
-            var12 = new byte[262144];
-            toa.a(128, param8, 16, param10, param1, (byte) -61, param4, param9, 0, param0, 8, 128, var12);
-            stackOut_0_0 = (byte[]) var12;
+            var12 = new byte[param5 * (param6 * param7)];
+            toa.a(param6, param8, param5, param10, param1, (byte) -61, param4, param9, 0, param0, param3, param7, var12);
+            stackOut_0_0 = (byte[]) (var12);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -247,23 +255,23 @@ final class dbb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var11 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var11;
-            stackOut_2_1 = new StringBuilder().append("dbb.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(8).append(',');
+            stackOut_2_0 = (RuntimeException) (var11);
+            stackOut_2_1 = new StringBuilder().append("dbb.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param4 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -271,16 +279,12 @@ final class dbb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 16 + ',' + 128 + ',' + 128 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }
         return stackIn_1_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = -1;
     }
 }

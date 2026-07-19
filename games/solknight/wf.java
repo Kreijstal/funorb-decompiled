@@ -9,31 +9,34 @@ abstract class wf implements oe {
     public static void f(int param0) {
         field_a = null;
         field_b = null;
+        if (param0 != 350) {
+            field_a = (String) null;
+        }
     }
 
     public final void a(byte param0) {
-        ((wf) this).field_c = je.a(1);
+        this.field_c = je.a(1);
         if (param0 != -127) {
-            field_a = null;
+            field_a = (String) null;
         }
     }
 
     abstract qf b(byte param0);
 
     public final String c(int param0) {
-        if (!((wf) this).a(109)) {
+        if (!this.a(109)) {
           if (param0 < -66) {
-            if (350L + ((wf) this).field_c > je.a(1)) {
+            if (350L + this.field_c > je.a(1)) {
               return null;
             } else {
-              return ((wf) this).e(8192);
+              return this.e(8192);
             }
           } else {
-            ((wf) this).field_c = -47L;
-            if (350L + ((wf) this).field_c > je.a(1)) {
+            this.field_c = -47L;
+            if (350L + this.field_c > je.a(1)) {
               return null;
             } else {
-              return ((wf) this).e(8192);
+              return this.e(8192);
             }
           }
         } else {
@@ -44,17 +47,25 @@ abstract class wf implements oe {
     abstract String e(int param0);
 
     final static void d(int param0) {
+        boolean discarded$2 = false;
         k.field_d = new rf();
-        gf.field_cb.c(-3399, (rc) (Object) k.field_d);
+        if (param0 != 350) {
+          discarded$2 = wf.c((byte) -49);
+          gf.field_cb.c(-3399, k.field_d);
+          return;
+        } else {
+          gf.field_cb.c(-3399, k.field_d);
+          return;
+        }
     }
 
     public final qf b(int param0) {
-        if (!((wf) this).a(param0 + 9480)) {
-          if (je.a(1) >= ((wf) this).field_c - -350L) {
+        if (!this.a(param0 + 9480)) {
+          if (je.a(1) >= this.field_c - -350L) {
             if (param0 != -9362) {
-              return null;
+              return (qf) null;
             } else {
-              return ((wf) this).b((byte) -103);
+              return this.b((byte) -103);
             }
           } else {
             return hg.field_E;
@@ -78,10 +89,6 @@ abstract class wf implements oe {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "This password is part of your Player Name, and would be easy to guess";
         field_b = "Level complete";
     }

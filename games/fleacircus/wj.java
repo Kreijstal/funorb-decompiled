@@ -10,21 +10,21 @@ abstract class wj {
     final int b(int param0, long param1) {
         long var4 = 0L;
         if (param0 == 0) {
-          var4 = ((wj) this).b(-31887);
-          if (var4 > 0L) {
+          var4 = this.b(-31887);
+          if ((var4 ^ -1L) < -1L) {
             vh.a(var4, param0 + 87);
-            return ((wj) this).a(-23124, param1);
+            return this.a(-23124, param1);
           } else {
-            return ((wj) this).a(-23124, param1);
+            return this.a(-23124, param1);
           }
         } else {
-          field_b = null;
-          var4 = ((wj) this).b(-31887);
-          if (var4 <= 0L) {
-            return ((wj) this).a(-23124, param1);
+          field_b = (sf[]) null;
+          var4 = this.b(-31887);
+          if ((var4 ^ -1L) >= -1L) {
+            return this.a(-23124, param1);
           } else {
             vh.a(var4, param0 + 87);
-            return ((wj) this).a(-23124, param1);
+            return this.a(-23124, param1);
           }
         }
     }
@@ -32,7 +32,7 @@ abstract class wj {
     public static void a(int param0) {
         field_b = null;
         field_a = null;
-        field_c = null;
+        field_c = (String[][]) null;
         if (param0 >= -13) {
             wj.a(52);
         }
@@ -45,11 +45,7 @@ abstract class wj {
     abstract int a(int param0, long param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_c = new String[][]{new String[41], new String[30]};
+        field_c = new String[][]{new String[]{"Tutorial One", "Water Feature", "Bombs Away!", "Transporters 101", "My Biggest Fan", "Gravity?", "Disappearing Trick", "Enlightened Journey", "Recession", "Spider-Flea Lunch", "Raising Expectations", "Sinking Flea-ling", "The Sharp End", "From A to Flea", "It's a Breeze", "Golden Fleas", "Switch-a-Flea", "Maze", "Rickety Bridge", "Bang! Oops...", "Tower", "Theory of Gravity", "Spring to Action", "Out With a Bang", "Flea, Fly, Flow, Flum", "Sole Trader", "Hidden Traps", "Deathtrap", "Fly or Die", "Bombardier Fleas", "Complication", "Sierpinski", "Rise From Above", "The Unexpected", "Fan Trap", "Confusion", "Twisted Path", "No Flea Left Behind", "No Chain Reactions", "Castor and Pollux", "Ratchet"}, new String[]{"BEGINNING", "CANDLE", "EAGLE", "GALAXY", "PENGUIN", "PLATE", "WINTER", "SPLENDID", "ITCH", "YOYO", "RADIO", "WOODEN", "BRAVE", "TELEPORT", "BOUNCE", "SHALLOW", "ELEPHANT", "CHORD", "FRIGHT", "ZIGZAG", "ANYTHING", "CHANGE", "BLANKET", "PAINT", "SHEEP", "WINDMILL", "BRONZE", "TURNIP", "CROWD", "BRUSH"}};
         field_a = "<%0>Spider:<%1> These eat fleas! Keep away from them!";
         field_b = new sf[2];
     }

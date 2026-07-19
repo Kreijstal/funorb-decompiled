@@ -16,10 +16,6 @@ final class ej {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ej.A(";
         field_b = new wm(1, 2, 2, 0);
     }

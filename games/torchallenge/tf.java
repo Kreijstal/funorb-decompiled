@@ -40,9 +40,19 @@ final class tf {
         field_h = null;
         field_l = null;
         field_x = null;
+        if (param0 < 46) {
+            field_x = (eg) null;
+        }
     }
 
     private final void a(byte param0, byte[] param1) {
+        int dupTemp$7 = 0;
+        int dupTemp$8 = 0;
+        int[] array$9 = null;
+        int dupTemp$10 = 0;
+        int[] array$11 = null;
+        int dupTemp$12 = 0;
+        int[] array$13 = null;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -94,16 +104,16 @@ final class tf {
                 if (7 >= var4) {
                   L2: {
                     if (var4 < 6) {
-                      ((tf) this).field_b = 0;
+                      this.field_b = 0;
                       break L2;
                     } else {
-                      ((tf) this).field_b = var18.i(40);
+                      this.field_b = var18.i(40);
                       break L2;
                     }
                   }
                   L3: {
                     var5 = var18.j(-128);
-                    if ((1 & var5) == -1) {
+                    if ((1 & var5) == 0) {
                       stackOut_10_0 = 0;
                       stackIn_11_0 = stackOut_10_0;
                       break L3;
@@ -115,7 +125,7 @@ final class tf {
                   }
                   L4: {
                     var6 = stackIn_11_0;
-                    if (-1 == (2 & var5)) {
+                    if (-1 == (2 & var5 ^ -1)) {
                       stackOut_13_0 = 0;
                       stackIn_14_0 = stackOut_13_0;
                       break L4;
@@ -127,30 +137,30 @@ final class tf {
                   }
                   L5: {
                     var7 = stackIn_14_0;
-                    if (var4 < 7) {
-                      ((tf) this).field_m = var18.c(false);
+                    if (-8 < (var4 ^ -1)) {
+                      this.field_m = var18.c(false);
                       break L5;
                     } else {
-                      ((tf) this).field_m = var18.h(78);
+                      this.field_m = var18.h(78);
                       break L5;
                     }
                   }
                   L6: {
                     var8 = 0;
-                    ((tf) this).field_y = new int[((tf) this).field_m];
+                    this.field_y = new int[this.field_m];
                     var9 = -1;
-                    if (var4 >= 7) {
+                    if (-8 >= (var4 ^ -1)) {
                       var10 = 0;
                       L7: while (true) {
-                        if (var10 >= ((tf) this).field_m) {
+                        if (var10 >= this.field_m) {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$4 = var8 + var18.h(96);
-                            var8 = dupTemp$4;
-                            ((tf) this).field_y[var10] = dupTemp$4;
-                            if (((tf) this).field_y[var10] > var9) {
-                              var9 = ((tf) this).field_y[var10];
+                            dupTemp$7 = var8 + var18.h(96);
+                            var8 = dupTemp$7;
+                            this.field_y[var10] = dupTemp$7;
+                            if (this.field_y[var10] > var9) {
+                              var9 = this.field_y[var10];
                               break L8;
                             } else {
                               break L8;
@@ -163,268 +173,270 @@ final class tf {
                     } else {
                       var10 = 0;
                       L9: while (true) {
-                        if (((tf) this).field_m <= var10) {
+                        if (this.field_m <= var10) {
                           break L6;
                         } else {
-                          L10: {
-                            int dupTemp$5 = var8 + var18.c(false);
-                            var8 = dupTemp$5;
-                            ((tf) this).field_y[var10] = dupTemp$5;
-                            if (((tf) this).field_y[var10] <= var9) {
-                              break L10;
-                            } else {
-                              break L10;
-                            }
+                          dupTemp$8 = var8 + var18.c(false);
+                          var8 = dupTemp$8;
+                          this.field_y[var10] = dupTemp$8;
+                          if (this.field_y[var10] > var9) {
+                            var9 = this.field_y[var10];
+                            var10++;
+                            continue L9;
+                          } else {
+                            var10++;
+                            continue L9;
                           }
-                          var10++;
-                          continue L9;
                         }
                       }
                     }
                   }
-                  L11: {
-                    var10 = 0;
-                    ((tf) this).field_r = var9 - -1;
-                    ((tf) this).field_A = new int[((tf) this).field_r][];
+                  L10: {
+                    var10 = 36 % ((param0 - -33) / 36);
+                    this.field_r = var9 - -1;
+                    this.field_A = new int[this.field_r][];
                     if (var7 != 0) {
-                      ((tf) this).field_n = new byte[((tf) this).field_r][];
-                      break L11;
+                      this.field_n = new byte[this.field_r][];
+                      break L10;
                     } else {
-                      break L11;
+                      break L10;
                     }
                   }
-                  L12: {
-                    ((tf) this).field_d = new int[((tf) this).field_r];
-                    ((tf) this).field_g = new int[((tf) this).field_r];
-                    ((tf) this).field_e = new int[((tf) this).field_r];
-                    ((tf) this).field_t = new int[((tf) this).field_r];
+                  L11: {
+                    this.field_d = new int[this.field_r];
+                    this.field_g = new int[this.field_r];
+                    this.field_e = new int[this.field_r];
+                    this.field_t = new int[this.field_r];
                     if (var6 == 0) {
-                      break L12;
+                      break L11;
                     } else {
-                      ((tf) this).field_c = new int[((tf) this).field_r];
+                      this.field_c = new int[this.field_r];
                       var11 = 0;
-                      L13: while (true) {
-                        if (var11 >= ((tf) this).field_r) {
+                      L12: while (true) {
+                        if (var11 >= this.field_r) {
                           var11 = 0;
-                          L14: while (true) {
-                            if (var11 >= ((tf) this).field_m) {
-                              ((tf) this).field_p = new wi(((tf) this).field_c);
-                              break L12;
+                          L13: while (true) {
+                            if (var11 >= this.field_m) {
+                              this.field_p = new wi(this.field_c);
+                              break L11;
                             } else {
-                              ((tf) this).field_c[((tf) this).field_y[var11]] = var18.i(124);
+                              this.field_c[this.field_y[var11]] = var18.i(124);
                               var11++;
-                              continue L14;
+                              continue L13;
                             }
                           }
                         } else {
-                          ((tf) this).field_c[var11] = -1;
+                          this.field_c[var11] = -1;
                           var11++;
-                          continue L13;
+                          continue L12;
                         }
                       }
                     }
                   }
                   var11 = 0;
-                  L15: while (true) {
-                    if (((tf) this).field_m <= var11) {
-                      L16: {
+                  L14: while (true) {
+                    if (this.field_m <= var11) {
+                      L15: {
                         if (var7 != 0) {
                           var11 = 0;
-                          L17: while (true) {
-                            if (var11 >= ((tf) this).field_m) {
+                          L16: while (true) {
+                            if (var11 >= this.field_m) {
                               var11 = 0;
-                              L18: while (true) {
-                                if (((tf) this).field_m <= var11) {
-                                  break L16;
+                              L17: while (true) {
+                                if (this.field_m <= var11) {
+                                  break L15;
                                 } else {
-                                  ((tf) this).field_d[((tf) this).field_y[var11]] = var18.i(116);
+                                  this.field_d[this.field_y[var11]] = var18.i(116);
                                   var11++;
-                                  continue L18;
+                                  continue L17;
                                 }
                               }
                             } else {
                               var22 = new byte[64];
                               var18.a(93, var22, 64, 0);
-                              ((tf) this).field_n[((tf) this).field_y[var11]] = var22;
+                              this.field_n[this.field_y[var11]] = var22;
                               var11++;
-                              continue L17;
+                              continue L16;
                             }
                           }
                         } else {
                           var11 = 0;
-                          L19: while (true) {
-                            if (((tf) this).field_m <= var11) {
-                              break L16;
+                          L18: while (true) {
+                            if (this.field_m <= var11) {
+                              break L15;
                             } else {
-                              ((tf) this).field_d[((tf) this).field_y[var11]] = var18.i(116);
+                              this.field_d[this.field_y[var11]] = var18.i(116);
                               var11++;
-                              continue L19;
+                              continue L18;
                             }
                           }
                         }
                       }
-                      L20: {
+                      L19: {
                         if (var4 >= 7) {
                           var11 = 0;
-                          L21: while (true) {
-                            if (var11 >= ((tf) this).field_m) {
+                          L20: while (true) {
+                            if (var11 >= this.field_m) {
                               var11 = 0;
-                              L22: while (true) {
-                                if (((tf) this).field_m <= var11) {
-                                  break L20;
+                              L21: while (true) {
+                                if (this.field_m <= var11) {
+                                  break L19;
                                 } else {
-                                  var12 = ((tf) this).field_y[var11];
+                                  var12 = this.field_y[var11];
                                   var8 = 0;
-                                  var13 = ((tf) this).field_e[var12];
-                                  ((tf) this).field_A[var12] = new int[var13];
+                                  var13 = this.field_e[var12];
+                                  array$9 = new int[var13];
+                                  this.field_A[var12] = array$9;
                                   var14 = -1;
                                   var15 = 0;
-                                  L23: while (true) {
+                                  L22: while (true) {
                                     if (var15 >= var13) {
-                                      L24: {
-                                        ((tf) this).field_g[var12] = 1 + var14;
+                                      L23: {
+                                        this.field_g[var12] = 1 + var14;
                                         if (1 + var14 == var13) {
-                                          ((tf) this).field_A[var12] = null;
-                                          break L24;
+                                          this.field_A[var12] = null;
+                                          break L23;
                                         } else {
-                                          break L24;
+                                          break L23;
                                         }
                                       }
                                       var11++;
-                                      continue L22;
+                                      continue L21;
                                     } else {
-                                      L25: {
-                                        int dupTemp$6 = var8 + var18.h(-116);
-                                        var8 = dupTemp$6;
-                                        ((tf) this).field_A[var12][var15] = dupTemp$6;
-                                        var16 = dupTemp$6;
+                                      L24: {
+                                        dupTemp$10 = var8 + var18.h(-116);
+                                        var8 = dupTemp$10;
+                                        this.field_A[var12][var15] = dupTemp$10;
+                                        var16 = dupTemp$10;
                                         if (var16 > var14) {
                                           var14 = var16;
-                                          break L25;
+                                          break L24;
                                         } else {
-                                          break L25;
+                                          break L24;
                                         }
                                       }
                                       var15++;
-                                      continue L23;
+                                      continue L22;
                                     }
                                   }
                                 }
                               }
                             } else {
-                              ((tf) this).field_e[((tf) this).field_y[var11]] = var18.h(-76);
+                              this.field_e[this.field_y[var11]] = var18.h(-76);
                               var11++;
-                              continue L21;
+                              continue L20;
                             }
                           }
                         } else {
                           var11 = 0;
-                          L26: while (true) {
-                            if (var11 >= ((tf) this).field_m) {
+                          L25: while (true) {
+                            if (var11 >= this.field_m) {
                               var11 = 0;
-                              L27: while (true) {
-                                if (((tf) this).field_m <= var11) {
-                                  break L20;
+                              L26: while (true) {
+                                if (this.field_m <= var11) {
+                                  break L19;
                                 } else {
-                                  var12 = ((tf) this).field_y[var11];
-                                  var13 = ((tf) this).field_e[var12];
+                                  var12 = this.field_y[var11];
+                                  var13 = this.field_e[var12];
                                   var8 = 0;
-                                  ((tf) this).field_A[var12] = new int[var13];
+                                  array$11 = new int[var13];
+                                  this.field_A[var12] = array$11;
                                   var14 = -1;
                                   var15 = 0;
-                                  L28: while (true) {
+                                  L27: while (true) {
                                     if (var15 >= var13) {
-                                      L29: {
-                                        ((tf) this).field_g[var12] = var14 + 1;
+                                      L28: {
+                                        this.field_g[var12] = var14 + 1;
                                         if (var13 == 1 + var14) {
-                                          ((tf) this).field_A[var12] = null;
-                                          break L29;
+                                          this.field_A[var12] = null;
+                                          break L28;
                                         } else {
-                                          break L29;
+                                          break L28;
                                         }
                                       }
                                       var11++;
-                                      continue L27;
+                                      continue L26;
                                     } else {
-                                      L30: {
-                                        int dupTemp$7 = var8 + var18.c(false);
-                                        var8 = dupTemp$7;
-                                        ((tf) this).field_A[var12][var15] = dupTemp$7;
-                                        var16 = dupTemp$7;
+                                      L29: {
+                                        dupTemp$12 = var8 + var18.c(false);
+                                        var8 = dupTemp$12;
+                                        this.field_A[var12][var15] = dupTemp$12;
+                                        var16 = dupTemp$12;
                                         if (var16 > var14) {
                                           var14 = var16;
-                                          break L30;
+                                          break L29;
                                         } else {
-                                          break L30;
+                                          break L29;
                                         }
                                       }
                                       var15++;
-                                      continue L28;
+                                      continue L27;
                                     }
                                   }
                                 }
                               }
                             } else {
-                              ((tf) this).field_e[((tf) this).field_y[var11]] = var18.c(false);
+                              this.field_e[this.field_y[var11]] = var18.c(false);
                               var11++;
-                              continue L26;
+                              continue L25;
                             }
                           }
                         }
                       }
-                      L31: {
+                      L30: {
                         if (var6 != 0) {
-                          ((tf) this).field_s = new wi[var9 + 1];
-                          ((tf) this).field_v = new int[var9 + 1][];
+                          this.field_s = new wi[var9 + 1];
+                          this.field_v = new int[var9 + 1][];
                           var11 = 0;
-                          L32: while (true) {
-                            if (var11 >= ((tf) this).field_m) {
-                              break L31;
+                          L31: while (true) {
+                            if (var11 >= this.field_m) {
+                              break L30;
                             } else {
-                              var12 = ((tf) this).field_y[var11];
-                              var13 = ((tf) this).field_e[var12];
-                              ((tf) this).field_v[var12] = new int[((tf) this).field_g[var12]];
+                              var12 = this.field_y[var11];
+                              var13 = this.field_e[var12];
+                              array$13 = new int[this.field_g[var12]];
+                              this.field_v[var12] = array$13;
                               var14 = 0;
-                              L33: while (true) {
-                                if (var14 >= ((tf) this).field_g[var12]) {
+                              L32: while (true) {
+                                if (var14 >= this.field_g[var12]) {
                                   var14 = 0;
-                                  L34: while (true) {
+                                  L33: while (true) {
                                     if (var13 <= var14) {
-                                      ((tf) this).field_s[var12] = new wi(((tf) this).field_v[var12]);
+                                      this.field_s[var12] = new wi(this.field_v[var12]);
                                       var11++;
-                                      continue L32;
+                                      continue L31;
                                     } else {
-                                      L35: {
-                                        if (null == ((tf) this).field_A[var12]) {
+                                      L34: {
+                                        if (null == this.field_A[var12]) {
                                           var15 = var14;
-                                          break L35;
+                                          break L34;
                                         } else {
-                                          var15 = ((tf) this).field_A[var12][var14];
-                                          break L35;
+                                          var15 = this.field_A[var12][var14];
+                                          break L34;
                                         }
                                       }
-                                      ((tf) this).field_v[var12][var15] = var18.i(50);
+                                      this.field_v[var12][var15] = var18.i(50);
                                       var14++;
-                                      continue L34;
+                                      continue L33;
                                     }
                                   }
                                 } else {
-                                  ((tf) this).field_v[var12][var14] = -1;
+                                  this.field_v[var12][var14] = -1;
                                   var14++;
-                                  continue L33;
+                                  continue L32;
                                 }
                               }
                             }
                           }
                         } else {
-                          break L31;
+                          break L30;
                         }
                       }
                       break L0;
                     } else {
-                      ((tf) this).field_t[((tf) this).field_y[var11]] = var18.i(50);
+                      this.field_t[this.field_y[var11]] = var18.i(50);
                       var11++;
-                      continue L15;
+                      continue L14;
                     }
                   }
                 } else {
@@ -436,65 +448,61 @@ final class tf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L36: {
+          L35: {
             var3 = decompiledCaughtException;
-            stackOut_99_0 = (RuntimeException) var3;
-            stackOut_99_1 = new StringBuilder().append("tf.A(").append(-123).append(',');
+            stackOut_99_0 = (RuntimeException) (var3);
+            stackOut_99_1 = new StringBuilder().append("tf.A(").append(param0).append(',');
             stackIn_101_0 = stackOut_99_0;
             stackIn_101_1 = stackOut_99_1;
             stackIn_100_0 = stackOut_99_0;
             stackIn_100_1 = stackOut_99_1;
             if (param1 == null) {
-              stackOut_101_0 = (RuntimeException) (Object) stackIn_101_0;
-              stackOut_101_1 = (StringBuilder) (Object) stackIn_101_1;
+              stackOut_101_0 = (RuntimeException) ((Object) stackIn_101_0);
+              stackOut_101_1 = (StringBuilder) ((Object) stackIn_101_1);
               stackOut_101_2 = "null";
               stackIn_102_0 = stackOut_101_0;
               stackIn_102_1 = stackOut_101_1;
               stackIn_102_2 = stackOut_101_2;
-              break L36;
+              break L35;
             } else {
-              stackOut_100_0 = (RuntimeException) (Object) stackIn_100_0;
-              stackOut_100_1 = (StringBuilder) (Object) stackIn_100_1;
+              stackOut_100_0 = (RuntimeException) ((Object) stackIn_100_0);
+              stackOut_100_1 = (StringBuilder) ((Object) stackIn_100_1);
               stackOut_100_2 = "{...}";
               stackIn_102_0 = stackOut_100_0;
               stackIn_102_1 = stackOut_100_1;
               stackIn_102_2 = stackOut_100_2;
-              break L36;
+              break L35;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_102_0, stackIn_102_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_102_0), stackIn_102_2 + ')');
         }
     }
 
     tf(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-            ((tf) this).field_k = k.a(param0, param0.length, 0);
-            if (((tf) this).field_k != param1) {
+            this.field_k = k.a(param0, param0.length, 0);
+            if (this.field_k != param1) {
                 throw new RuntimeException();
             }
             if (param2 != null) {
-                if (param2.length != 64) {
+                if ((param2.length ^ -1) != -65) {
                     throw new RuntimeException();
                 }
-                ((tf) this).field_q = qc.a(param0, param0.length, (byte) -126, 0);
+                this.field_q = qc.a(param0, param0.length, (byte) -126, 0);
                 for (var4_int = 0; var4_int < 64; var4_int++) {
-                    if (param2[var4_int] != ((tf) this).field_q[var4_int]) {
+                    if (param2[var4_int] != this.field_q[var4_int]) {
                         throw new RuntimeException();
                     }
                 }
             }
             this.a((byte) -123, param0);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "tf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "tf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = 0.0;
         field_l = new int[]{-1, -1, -1, -1, -1, -1, -1, -1, 85, 80, 84, -1, 91, -1, -1, -1, 81, 82, 86, -1, -1, -1, -1, -1, -1, -1, -1, 13, -1, -1, -1, -1, 83, 104, 105, 103, 102, 96, 98, 97, 99, -1, -1, -1, -1, -1, -1, -1, 25, 16, 17, 18, 19, 20, 21, 22, 23, 24, -1, -1, -1, -1, -1, -1, -1, 48, 68, 66, 50, 34, 51, 52, 53, 39, 54, 55, 56, 70, 69, 40, 41, 32, 35, 49, 36, 38, 67, 33, 65, 37, 64, -1, -1, -1, -1, -1, 228, 231, 227, 233, 224, 219, 225, 230, 226, 232, 89, 87, -1, 88, 229, 90, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, -1, -1, -1, 101, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 100, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
         field_h = null;

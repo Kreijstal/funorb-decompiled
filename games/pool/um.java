@@ -17,22 +17,30 @@ abstract class um {
         var3 = Pool.field_O;
         try {
           L0: {
-            var4 = (kg) (Object) we.field_c.c((byte) 65);
+            var4 = (kg) ((Object) we.field_c.c((byte) 65));
             L1: while (true) {
               if (var4 == null) {
+                L2: {
+                  if (param0 == 10) {
+                    break L2;
+                  } else {
+                    field_e = false;
+                    break L2;
+                  }
+                }
                 var2 = ke.field_f.c((byte) -34);
-                L2: while (true) {
+                L3: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    hi.a(1, 6);
+                    hi.a(1, param1);
                     var2 = ke.field_f.f((byte) -5);
-                    continue L2;
+                    continue L3;
                   }
                 }
               } else {
-                fr.a(98, var4, 6);
-                var4 = (kg) (Object) we.field_c.f((byte) -5);
+                fr.a(98, var4, param1);
+                var4 = (kg) ((Object) we.field_c.f((byte) -5));
                 continue L1;
               }
             }
@@ -40,7 +48,7 @@ abstract class um {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var2_ref, "um.T(" + 10 + ',' + 6 + ')');
+          throw wm.a((Throwable) ((Object) var2_ref), "um.T(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -52,10 +60,6 @@ abstract class um {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 10;
         field_c = 1 << field_b;
         field_a = "Drawn";

@@ -9,13 +9,12 @@ final class vh {
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 < 83) {
+            field_a = (bi[]) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "vh.A(";
         field_c = 0;
     }

@@ -14,12 +14,14 @@ final class pd extends hb {
     final oh a(byte param0) {
         if (param0 <= 99) {
             pd.b(11);
-            return (oh) (Object) ((pd) this).field_i.a(true);
+            return (oh) ((Object) this.field_i.a(true));
         }
-        return (oh) (Object) ((pd) this).field_i.a(true);
+        return (oh) ((Object) this.field_i.a(true));
     }
 
     final static String a(byte param0, long param1) {
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;
@@ -41,8 +43,8 @@ final class pd extends hb {
                   var7 = -67 / ((param0 - 32) / 63);
                   var6 = new StringBuilder(var3);
                   L1: while (true) {
-                    if (param1 == 0L) {
-                      StringBuilder discarded$2 = var6.reverse();
+                    if ((param1 ^ -1L) == -1L) {
+                      discarded$2 = var6.reverse();
                       var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                       return var6.toString();
                     } else {
@@ -59,7 +61,7 @@ final class pd extends hb {
                           break L2;
                         }
                       }
-                      StringBuilder discarded$3 = var6.append((char) var10);
+                      discarded$3 = var6.append((char) var10);
                       continue L1;
                     }
                   }
@@ -79,31 +81,32 @@ final class pd extends hb {
     }
 
     final int b(byte param0) {
+        int discarded$0 = 0;
         if (param0 != -61) {
-            int discarded$0 = ((pd) this).b((byte) 6);
-            return ((pd) this).field_i.b(0);
+            discarded$0 = this.b((byte) 6);
+            return this.field_i.b(0);
         }
-        return ((pd) this).field_i.b(0);
+        return this.field_i.b(0);
     }
 
     pd(el param0) {
         try {
-            ((pd) this).field_i = param0;
+            this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "pd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "pd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final oh a(boolean param0) {
         if (param0) {
             field_l = -98L;
-            return (oh) (Object) ((pd) this).field_i.a((byte) -68);
+            return (oh) ((Object) this.field_i.a((byte) -68));
         }
-        return (oh) (Object) ((pd) this).field_i.a((byte) -68);
+        return (oh) ((Object) this.field_i.a((byte) -68));
     }
 
     final static void a(int param0) {
-        hd.field_q = null;
+        hd.field_q = (byte[][]) null;
         cm.field_g = null;
         if (param0 != 0) {
           pd.b(-53);
@@ -128,15 +131,11 @@ final class pd extends hb {
         field_m = null;
         field_h = null;
         if (param0 != 0) {
-            field_m = null;
+            field_m = (qf) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new ed();
         field_h = new u();
         field_k = 0;

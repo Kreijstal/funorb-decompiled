@@ -6,30 +6,39 @@ final class fe {
     private java.awt.GraphicsDevice field_a;
 
     private final void a(java.awt.Frame param0, int param1) {
-        ((fe) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param0);
+        int[] discarded$2 = null;
+        L0: {
+          if (param1 == 0) {
+            break L0;
+          } else {
+            discarded$2 = this.listmodes();
+            break L0;
+          }
+        }
+        this.field_a.setFullScreenWindow((java.awt.Window) ((Object) param0));
     }
 
     public final void exit() {
-        if (!(((fe) this).field_b == null)) {
-            ((fe) this).field_a.setDisplayMode(((fe) this).field_b);
-            if (!(((fe) this).field_a.getDisplayMode().equals(((fe) this).field_b))) {
+        if (!(this.field_b == null)) {
+            this.field_a.setDisplayMode(this.field_b);
+            if (!(this.field_a.getDisplayMode().equals(this.field_b))) {
                 throw new RuntimeException("");
             }
-            ((fe) this).field_b = null;
+            this.field_b = null;
         }
         this.a((java.awt.Frame) null, 0);
     }
 
     public final int[] listmodes() {
         int var3 = 0;
-        java.awt.DisplayMode[] var4 = ((fe) this).field_a.getDisplayModes();
+        java.awt.DisplayMode[] var4 = this.field_a.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << 2];
+        int[] var2 = new int[var4.length << 755799842];
         for (var3 = 0; var3 < var4.length; var3++) {
-            var2[var3 << 2] = var4[var3].getWidth();
-            var2[(var3 << 2) + 1] = var4[var3].getHeight();
-            var2[2 + (var3 << 2)] = var4[var3].getBitDepth();
-            var2[(var3 << 2) + 3] = var4[var3].getRefreshRate();
+            var2[var3 << 288313410] = var4[var3].getWidth();
+            var2[(var3 << -124228510) + 1] = var4[var3].getHeight();
+            var2[2 + (var3 << -831510846)] = var4[var3].getBitDepth();
+            var2[(var3 << -23845150) + 3] = var4[var3].getRefreshRate();
         }
         return var2;
     }
@@ -40,8 +49,8 @@ final class fe {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ((fe) this).field_b = ((fe) this).field_a.getDisplayMode();
-        if (null == ((fe) this).field_b) {
+        this.field_b = this.field_a.getDisplayMode();
+        if (null == this.field_b) {
           throw new NullPointerException();
         } else {
           L0: {
@@ -51,8 +60,8 @@ final class fe {
             if (0 != param4) {
               break L0;
             } else {
-              var6 = ((fe) this).field_b.getRefreshRate();
-              var7 = ((fe) this).field_a.getDisplayModes();
+              var6 = this.field_b.getRefreshRate();
+              var7 = this.field_a.getDisplayModes();
               var8 = 0;
               var9 = 0;
               L1: while (true) {
@@ -100,7 +109,7 @@ final class fe {
               }
             }
           }
-          ((fe) this).field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+          this.field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
           return;
         }
     }
@@ -112,8 +121,8 @@ final class fe {
         int var4 = 0;
         java.awt.GraphicsDevice var5 = null;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
-        ((fe) this).field_a = var1.getDefaultScreenDevice();
-        if (((fe) this).field_a.isFullScreenSupported()) {
+        this.field_a = var1.getDefaultScreenDevice();
+        if (this.field_a.isFullScreenSupported()) {
           return;
         } else {
           var2 = var1.getScreenDevices();
@@ -126,7 +135,7 @@ final class fe {
               var5 = var3[var4];
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
-                  ((fe) this).field_a = var5;
+                  this.field_a = var5;
                   return;
                 } else {
                   var4++;

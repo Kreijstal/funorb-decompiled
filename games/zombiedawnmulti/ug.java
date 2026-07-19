@@ -6,7 +6,7 @@ final class ug extends br {
     f field_f;
 
     final void b() {
-        ((ug) this).field_f = null;
+        this.field_f = null;
     }
 
     final void a() {
@@ -28,27 +28,19 @@ final class ug extends br {
         int[] var18 = null;
         int[] var19 = null;
         int[] var21 = null;
-        int[] var22 = null;
-        int[] var24 = null;
-        int[] var25 = null;
-        int[] var26 = null;
-        int[] var27 = null;
-        if (((ug) this).field_f == null) {
-          ((ug) this).field_f = new f(16);
-          var27 = new int[16];
-          var24 = var27;
-          var21 = var24;
+        int[] var23 = null;
+        if (this.field_f == null) {
+          this.field_f = new f(16);
+          var21 = new int[16];
           var18 = var21;
           var1 = var18;
-          var25 = new int[16];
-          var22 = var25;
-          var19 = var22;
+          var19 = new int[16];
           var16 = var19;
           var2 = var16;
-          var26 = var1;
-          var25[9] = 128;
-          var26[9] = 128;
-          var4 = new mm(((ug) this).field_g);
+          var23 = var1;
+          var19[9] = 128;
+          var23[9] = 128;
+          var4 = new mm(this.field_g);
           var5 = var4.g();
           var6 = 0;
           L0: while (true) {
@@ -75,14 +67,14 @@ final class ug extends br {
                             if (var11 != 0) {
                               break L4;
                             } else {
-                              var1[var10] = (var27[var10] & -2080769) + (var12 << 14);
+                              var1[var10] = (var21[var10] & -2080769) + (var12 << 14);
                               break L4;
                             }
                           }
                           if (var11 != 32) {
                             break L3;
                           } else {
-                            var1[var10] = (var27[var10] & -16257) + (var12 << 7);
+                            var1[var10] = (var21[var10] & -16257) + (var12 << 7);
                             break L3;
                           }
                         }
@@ -93,7 +85,7 @@ final class ug extends br {
                         } else {
                           var10 = var8 & 15;
                           var11 = var8 >> 8 & 127;
-                          var2[var10] = var27[var10] + var11;
+                          var2[var10] = var21[var10] + var11;
                           break L5;
                         }
                       }
@@ -108,14 +100,14 @@ final class ug extends br {
                             break L6;
                           } else {
                             L7: {
-                              var13 = var25[var10];
-                              var14 = (kg) (Object) ((ug) this).field_f.a(0, (long)var13);
+                              var13 = var19[var10];
+                              var14 = (kg) ((Object) this.field_f.a(0, (long)var13));
                               if (var14 != null) {
                                 break L7;
                               } else {
                                 var15 = new kg(new byte[128]);
                                 var14 = var15;
-                                ((ug) this).field_f.a(true, (long)var13, (br) (Object) var15);
+                                this.field_f.a(true, (long)var13, var15);
                                 break L7;
                               }
                             }
@@ -153,6 +145,35 @@ final class ug extends br {
     }
 
     private ug(k param0) {
+        int incrementValue$29 = 0;
+        int incrementValue$30 = 0;
+        int incrementValue$31 = 0;
+        int incrementValue$32 = 0;
+        int incrementValue$33 = 0;
+        int incrementValue$34 = 0;
+        int incrementValue$35 = 0;
+        int incrementValue$36 = 0;
+        int incrementValue$37 = 0;
+        int incrementValue$38 = 0;
+        int incrementValue$39 = 0;
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
+        int incrementValue$48 = 0;
+        int incrementValue$49 = 0;
+        int incrementValue$50 = 0;
+        int incrementValue$51 = 0;
+        int incrementValue$52 = 0;
+        int incrementValue$53 = 0;
+        int incrementValue$54 = 0;
+        int incrementValue$55 = 0;
+        int incrementValue$56 = 0;
+        int discarded$57 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -316,21 +337,21 @@ final class ug extends br {
                       param0.field_j = param0.field_j + var25;
                       var50 = param0.field_j;
                       param0.field_j = param0.field_j + var5 * 3;
-                      ((ug) this).field_g = new byte[var4];
-                      var51 = new k(((ug) this).field_g);
+                      this.field_g = new byte[var4];
+                      var51 = new k(this.field_g);
                       var51.b(-114, 1297377380);
                       var51.b(43, 6);
-                      stackOut_64_0 = (k) var51;
+                      stackOut_64_0 = (k) (var51);
                       stackIn_66_0 = stackOut_64_0;
                       stackIn_65_0 = stackOut_64_0;
                       if (var2 <= 1) {
-                        stackOut_66_0 = (k) (Object) stackIn_66_0;
+                        stackOut_66_0 = (k) ((Object) stackIn_66_0);
                         stackOut_66_1 = 0;
                         stackIn_67_0 = stackOut_66_0;
                         stackIn_67_1 = stackOut_66_1;
                         break L3;
                       } else {
-                        stackOut_65_0 = (k) (Object) stackIn_65_0;
+                        stackOut_65_0 = (k) ((Object) stackIn_65_0);
                         stackOut_65_1 = 1;
                         stackIn_67_0 = stackOut_65_0;
                         stackIn_67_1 = stackOut_65_1;
@@ -363,7 +384,7 @@ final class ug extends br {
                           L6: {
                             var63 = param0.a(0);
                             var51.g(0, var63);
-                            int incrementValue$29 = var29;
+                            incrementValue$29 = var29;
                             var29++;
                             var64 = param0.field_m[incrementValue$29] & 255;
                             if (var64 == var62) {
@@ -398,7 +419,7 @@ final class ug extends br {
                                                 break L7;
                                               }
                                             }
-                                            int incrementValue$30 = var44;
+                                            incrementValue$30 = var44;
                                             var44++;
                                             var51.a(-54, (int) param0.field_m[incrementValue$30]);
                                             continue L5;
@@ -412,10 +433,10 @@ final class ug extends br {
                                               break L8;
                                             }
                                           }
-                                          int incrementValue$31 = var37;
+                                          incrementValue$31 = var37;
                                           var37++;
                                           var53 = var53 + param0.field_m[incrementValue$31];
-                                          int incrementValue$32 = var31;
+                                          incrementValue$32 = var31;
                                           var31++;
                                           var58 = var58 + param0.field_m[incrementValue$32];
                                           var51.a(-118, var53 & 127);
@@ -431,7 +452,7 @@ final class ug extends br {
                                             break L9;
                                           }
                                         }
-                                        int incrementValue$33 = var32;
+                                        incrementValue$33 = var32;
                                         var32++;
                                         var57 = var57 + param0.field_m[incrementValue$33];
                                         var51.a(-111, var57 & 127);
@@ -446,10 +467,10 @@ final class ug extends br {
                                           break L10;
                                         }
                                       }
-                                      int incrementValue$34 = var45;
+                                      incrementValue$34 = var45;
                                       var45++;
                                       var56 = var56 + param0.field_m[incrementValue$34];
-                                      int incrementValue$35 = var33;
+                                      incrementValue$35 = var33;
                                       var33++;
                                       var56 = var56 + (param0.field_m[incrementValue$35] << 7);
                                       var51.a(117, var56 & 127);
@@ -467,7 +488,7 @@ final class ug extends br {
                                     }
                                     L12: {
                                       L13: {
-                                        int incrementValue$36 = var15;
+                                        incrementValue$36 = var15;
                                         var15++;
                                         var28 = var28 + param0.field_m[incrementValue$36] & 127;
                                         var51.a(-80, var28);
@@ -499,7 +520,7 @@ final class ug extends br {
                                                                           break L14;
                                                                         } else {
                                                                           if (var28 != 123) {
-                                                                            int incrementValue$37 = var39;
+                                                                            incrementValue$37 = var39;
                                                                             var39++;
                                                                             var66 = param0.field_m[incrementValue$37];
                                                                             break L12;
@@ -511,66 +532,66 @@ final class ug extends br {
                                                                     }
                                                                   }
                                                                 }
-                                                                int incrementValue$38 = var30;
+                                                                incrementValue$38 = var30;
                                                                 var30++;
                                                                 var66 = param0.field_m[incrementValue$38];
                                                                 break L12;
                                                               } else {
-                                                                int incrementValue$39 = var49;
+                                                                incrementValue$39 = var49;
                                                                 var49++;
                                                                 var66 = param0.field_m[incrementValue$39];
                                                                 break L12;
                                                               }
                                                             } else {
-                                                              int incrementValue$40 = var48;
+                                                              incrementValue$40 = var48;
                                                               var48++;
                                                               var66 = param0.field_m[incrementValue$40];
                                                               break L12;
                                                             }
                                                           } else {
-                                                            int incrementValue$41 = var47;
+                                                            incrementValue$41 = var47;
                                                             var47++;
                                                             var66 = param0.field_m[incrementValue$41];
                                                             break L12;
                                                           }
                                                         } else {
-                                                          int incrementValue$42 = var46;
+                                                          incrementValue$42 = var46;
                                                           var46++;
                                                           var66 = param0.field_m[incrementValue$42];
                                                           break L12;
                                                         }
                                                       } else {
-                                                        int incrementValue$43 = var43;
+                                                        incrementValue$43 = var43;
                                                         var43++;
                                                         var66 = param0.field_m[incrementValue$43];
                                                         break L12;
                                                       }
                                                     } else {
-                                                      int incrementValue$44 = var36;
+                                                      incrementValue$44 = var36;
                                                       var36++;
                                                       var66 = param0.field_m[incrementValue$44];
                                                       break L12;
                                                     }
                                                   } else {
-                                                    int incrementValue$45 = var42;
+                                                    incrementValue$45 = var42;
                                                     var42++;
                                                     var66 = param0.field_m[incrementValue$45];
                                                     break L12;
                                                   }
                                                 } else {
-                                                  int incrementValue$46 = var35;
+                                                  incrementValue$46 = var35;
                                                   var35++;
                                                   var66 = param0.field_m[incrementValue$46];
                                                   break L12;
                                                 }
                                               } else {
-                                                int incrementValue$47 = var41;
+                                                incrementValue$47 = var41;
                                                 var41++;
                                                 var66 = param0.field_m[incrementValue$47];
                                                 break L12;
                                               }
                                             } else {
-                                              int incrementValue$48 = var34;
+                                              incrementValue$48 = var34;
                                               var34++;
                                               var66 = param0.field_m[incrementValue$48];
                                               break L12;
@@ -580,7 +601,7 @@ final class ug extends br {
                                           }
                                         }
                                       }
-                                      int incrementValue$49 = var44;
+                                      incrementValue$49 = var44;
                                       var44++;
                                       var66 = param0.field_m[incrementValue$49];
                                       break L12;
@@ -599,10 +620,10 @@ final class ug extends br {
                                       break L15;
                                     }
                                   }
-                                  int incrementValue$50 = var37;
+                                  incrementValue$50 = var37;
                                   var37++;
                                   var53 = var53 + param0.field_m[incrementValue$50];
-                                  int incrementValue$51 = var40;
+                                  incrementValue$51 = var40;
                                   var40++;
                                   var55 = var55 + param0.field_m[incrementValue$51];
                                   var51.a(-108, var53 & 127);
@@ -618,10 +639,10 @@ final class ug extends br {
                                     break L16;
                                   }
                                 }
-                                int incrementValue$52 = var37;
+                                incrementValue$52 = var37;
                                 var37++;
                                 var53 = var53 + param0.field_m[incrementValue$52];
-                                int incrementValue$53 = var38;
+                                incrementValue$53 = var38;
                                 var38++;
                                 var54 = var54 + param0.field_m[incrementValue$53];
                                 var51.a(116, var53 & 127);
@@ -639,13 +660,13 @@ final class ug extends br {
                               }
                               var51.a(-40, 81);
                               var51.a(-117, 3);
-                              int incrementValue$54 = var50;
+                              incrementValue$54 = var50;
                               var50++;
                               var51.a(-116, (int) param0.field_m[incrementValue$54]);
-                              int incrementValue$55 = var50;
+                              incrementValue$55 = var50;
                               var50++;
                               var51.a(-34, (int) param0.field_m[incrementValue$55]);
-                              int incrementValue$56 = var50;
+                              incrementValue$56 = var50;
                               var50++;
                               var51.a(121, (int) param0.field_m[incrementValue$56]);
                               continue L5;
@@ -778,7 +799,7 @@ final class ug extends br {
                   }
                 }
               } else {
-                int discarded$57 = param0.a(0);
+                discarded$57 = param0.a(0);
                 var15++;
                 continue L1;
               }

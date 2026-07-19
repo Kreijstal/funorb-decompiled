@@ -43,12 +43,12 @@ final class ej extends mc {
               if (param1 == 4) {
                 break L1;
               } else {
-                field_v = null;
+                field_v = (oh) null;
                 break L1;
               }
             }
-            var3 = (CharSequence) (Object) param0;
-            stackOut_2_0 = ik.field_f.equals((Object) (Object) cc.a(var3, (byte) 103));
+            var3 = (CharSequence) ((Object) param0);
+            stackOut_2_0 = ik.field_f.equals(cc.a(var3, (byte) 103));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -56,23 +56,23 @@ final class ej extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("ej.C(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -80,7 +80,7 @@ final class ej extends mc {
               break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -90,31 +90,21 @@ final class ej extends mc {
         int var4 = 0;
         String var5 = null;
         Object var6 = null;
-        Object var7 = null;
+        String var7 = null;
         CharSequence var8 = null;
-        var3 = 11;
-        if (lf.field_b == null) {
-          return;
-        } else {
+        var3 = -22 / ((-38 - param2) / 57);
+        if (lf.field_b != null) {
           var4 = lf.field_b.a(param0, (byte) 58);
-          if (var4 != 0) {
-            if (var4 != 2) {
-              ke.field_c = -1;
-              lf.field_b = null;
-              return;
-            } else {
-              if (null == lf.field_b.field_jb) {
-                ke.field_c = -1;
-                lf.field_b = null;
-                return;
-              } else {
-                if (!lf.field_b.field_jb.equals((Object) (Object) "")) {
+          if (-1 != (var4 ^ -1)) {
+            if ((var4 ^ -1) == -3) {
+              if (null != lf.field_b.field_jb) {
+                if (!lf.field_b.field_jb.equals("")) {
                   L0: {
                     if (lf.field_b.field_jb.charAt(0) == 91) {
                       var5 = lf.field_b.field_jb;
                       break L0;
                     } else {
-                      var8 = (CharSequence) (Object) lf.field_b.field_jb;
+                      var8 = (CharSequence) ((Object) lf.field_b.field_jb);
                       var5 = cc.a(var8, (byte) 124);
                       break L0;
                     }
@@ -124,41 +114,41 @@ final class ej extends mc {
                     if (ke.field_c != 0) {
                       break L1;
                     } else {
-                      var6 = (Object) (Object) qf.a((byte) 122, var5, 13);
+                      var6 = qf.a((byte) 122, var5, param1);
                       break L1;
                     }
                   }
                   L2: {
-                    if (ke.field_c != 1) {
+                    if (-2 != (ke.field_c ^ -1)) {
                       break L2;
                     } else {
-                      var6 = (Object) (Object) ma.a(false, var5, 13);
+                      var6 = ma.a(false, var5, param1);
                       break L2;
                     }
                   }
                   L3: {
-                    if (ke.field_c == 2) {
-                      var6 = (Object) (Object) li.a(13, var5, 2);
+                    if ((ke.field_c ^ -1) == -3) {
+                      var6 = li.a(param1, var5, 2);
                       break L3;
                     } else {
                       break L3;
                     }
                   }
                   L4: {
-                    if (ke.field_c == 3) {
-                      var6 = (Object) (Object) aa.a(var5, 13, 2, var5);
+                    if ((ke.field_c ^ -1) == -4) {
+                      var6 = aa.a(var5, param1, 2, var5);
                       break L4;
                     } else {
                       break L4;
                     }
                   }
-                  if (var6 == null) {
+                  if (var6 != null) {
+                    var7 = (String) null;
+                    fi.a(0, 0, var5, 2, (String) (var6), (String) null);
                     ke.field_c = -1;
                     lf.field_b = null;
                     return;
                   } else {
-                    var7 = null;
-                    fi.a(0, 0, var5, 2, (String) var6, (String) null);
                     ke.field_c = -1;
                     lf.field_b = null;
                     return;
@@ -168,11 +158,21 @@ final class ej extends mc {
                   lf.field_b = null;
                   return;
                 }
+              } else {
+                ke.field_c = -1;
+                lf.field_b = null;
+                return;
               }
+            } else {
+              ke.field_c = -1;
+              lf.field_b = null;
+              return;
             }
           } else {
             return;
           }
+        } else {
+          return;
         }
     }
 
@@ -182,35 +182,38 @@ final class ej extends mc {
         field_o = null;
         field_p = null;
         field_w = null;
-        field_t = null;
+        if (param0 != -1) {
+          field_z = -123;
+          field_t = null;
+          return;
+        } else {
+          field_t = null;
+          return;
+        }
     }
 
     ej(int param0, int param1, boolean param2) {
-        ((ej) this).field_y = 0;
-        ((ej) this).field_q = 0;
-        ((ej) this).field_x = param2 ? true : false;
-        ((ej) this).field_u = param1;
-        ((ej) this).field_n = param0;
+        this.field_y = 0;
+        this.field_q = 0;
+        this.field_x = param2 ? true : false;
+        this.field_u = param1;
+        this.field_n = param0;
     }
 
     ej(bi param0, boolean param1) {
         try {
-            ((ej) this).field_x = param1 ? true : false;
-            ((ej) this).field_s = 0;
-            ((ej) this).field_q = 0;
-            ((ej) this).field_y = 0;
-            ((ej) this).field_u = param0.field_f;
-            ((ej) this).field_n = param0.field_b;
+            this.field_x = param1 ? true : false;
+            this.field_s = 0;
+            this.field_q = 0;
+            this.field_y = 0;
+            this.field_u = param0.field_f;
+            this.field_n = param0.field_b;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = "Offer rematch";
         field_p = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
         field_r = new db(2, 4, 4, 0);

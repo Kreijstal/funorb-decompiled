@@ -6,14 +6,14 @@ final class cba extends za {
     static gdb field_e;
 
     final void a(boolean param0) {
-        ((cba) this).field_f.a();
+        this.field_f.a();
         if (!param0) {
             cba.b(false);
         }
     }
 
     cba(int param0) {
-        ((cba) this).field_f = new jaclib.memory.heap.NativeHeap(param0);
+        this.field_f = new jaclib.memory.heap.NativeHeap(param0);
     }
 
     public static void b(boolean param0) {

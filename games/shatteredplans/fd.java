@@ -40,14 +40,13 @@ final class fd extends oh {
     private static int field_p;
 
     final kk a(int[] param0) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         float[] var7 = null;
-        float[] var11 = null;
-        float[] var13 = null;
-        byte[] var14 = null;
+        byte[] var12 = null;
         L0: {
           if (param0 == null) {
             break L0;
@@ -60,23 +59,23 @@ final class fd extends oh {
           }
         }
         L1: {
-          if (((fd) this).field_N != null) {
+          if (this.field_N != null) {
             break L1;
           } else {
-            ((fd) this).field_M = 0;
-            ((fd) this).field_n = new float[field_r];
-            ((fd) this).field_N = new byte[((fd) this).field_q];
-            ((fd) this).field_s = 0;
-            ((fd) this).field_m = 0;
+            this.field_M = 0;
+            this.field_n = new float[field_r];
+            this.field_N = new byte[this.field_q];
+            this.field_s = 0;
+            this.field_m = 0;
             break L1;
           }
         }
         L2: while (true) {
-          if (((fd) this).field_m >= ((fd) this).field_v.length) {
-            ((fd) this).field_n = null;
-            var14 = ((fd) this).field_N;
-            ((fd) this).field_N = null;
-            return new kk(((fd) this).field_B, var14, ((fd) this).field_H, ((fd) this).field_G, ((fd) this).field_I);
+          if (this.field_m >= this.field_v.length) {
+            this.field_n = null;
+            var12 = this.field_N;
+            this.field_N = null;
+            return new kk(this.field_B, var12, this.field_H, this.field_G, this.field_I);
           } else {
             L3: {
               if (param0 == null) {
@@ -90,19 +89,17 @@ final class fd extends oh {
               }
             }
             L4: {
-              var13 = this.e(((fd) this).field_m);
-              var11 = var13;
-              var7 = var11;
+              var7 = this.e(this.field_m);
               if (var7 == null) {
                 break L4;
               } else {
                 L5: {
-                  var3 = ((fd) this).field_s;
-                  var4 = var13.length;
-                  if (var4 <= ((fd) this).field_q - var3) {
+                  var3 = this.field_s;
+                  var4 = var7.length;
+                  if (var4 <= this.field_q - var3) {
                     break L5;
                   } else {
-                    var4 = ((fd) this).field_q - var3;
+                    var4 = this.field_q - var3;
                     break L5;
                   }
                 }
@@ -113,32 +110,32 @@ final class fd extends oh {
                       if (param0 == null) {
                         break L7;
                       } else {
-                        param0[0] = param0[0] - (var3 - ((fd) this).field_s);
+                        param0[0] = param0[0] - (var3 - this.field_s);
                         break L7;
                       }
                     }
-                    ((fd) this).field_s = var3;
+                    this.field_s = var3;
                     break L4;
                   } else {
                     L8: {
-                      var6 = (int)(128.0f + var13[var5] * 128.0f);
+                      var6 = (int)(128.0f + var7[var5] * 128.0f);
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = ~var6 >> 31;
+                        var6 = (var6 ^ -1) >> 31;
                         break L8;
                       }
                     }
-                    int incrementValue$1 = var3;
+                    incrementValue$1 = var3;
                     var3++;
-                    ((fd) this).field_N[incrementValue$1] = (byte)(var6 - 128);
+                    this.field_N[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
                 }
               }
             }
-            ((fd) this).field_m = ((fd) this).field_m + 1;
+            this.field_m = this.field_m + 1;
             continue L2;
           }
         }
@@ -155,6 +152,7 @@ final class fd extends oh {
     }
 
     private final float[] e(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -214,13 +212,7 @@ final class fd extends oh {
         int[] var48 = null;
         float[] var49 = null;
         float[] var50 = null;
-        int[] var52 = null;
-        float[] var53 = null;
-        float[] var54 = null;
-        float[] var55 = null;
-        int[] var56 = null;
-        float[] var57 = null;
-        float[] var58 = null;
+        float[] var52 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -255,8 +247,8 @@ final class fd extends oh {
         Object stackOut_109_0 = null;
         int stackOut_109_1 = 0;
         L0: {
-          fd.a(((fd) this).field_v[param0], 0);
-          int discarded$1 = fd.c();
+          fd.a(this.field_v[param0], 0);
+          discarded$1 = fd.c();
           var2 = fd.a(rj.c(99, field_J.length - 1));
           var3 = field_t[var2] ? 1 : 0;
           if (var3 == 0) {
@@ -378,9 +370,7 @@ final class fd extends oh {
                 var17_int = var4 >> 1;
                 var18_int = var4 >> 2;
                 var19 = var4 >> 3;
-                var57 = field_k;
-                var53 = var57;
-                var49 = var53;
+                var49 = field_k;
                 var45 = var49;
                 var20_ref_float__ = var45;
                 var21_int = 0;
@@ -392,11 +382,11 @@ final class fd extends oh {
                       if (var41 >= var4) {
                         L14: {
                           if (var3 == 0) {
-                            stackOut_39_0 = (float[]) field_l;
+                            stackOut_39_0 = (float[]) (field_l);
                             stackIn_40_0 = stackOut_39_0;
                             break L14;
                           } else {
-                            stackOut_38_0 = (float[]) field_j;
+                            stackOut_38_0 = (float[]) (field_j);
                             stackIn_40_0 = stackOut_38_0;
                             break L14;
                           }
@@ -404,11 +394,11 @@ final class fd extends oh {
                         L15: {
                           var21 = stackIn_40_0;
                           if (var3 == 0) {
-                            stackOut_42_0 = (float[]) field_z;
+                            stackOut_42_0 = (float[]) (field_z);
                             stackIn_43_0 = stackOut_42_0;
                             break L15;
                           } else {
-                            stackOut_41_0 = (float[]) field_y;
+                            stackOut_41_0 = (float[]) (field_y);
                             stackIn_43_0 = stackOut_41_0;
                             break L15;
                           }
@@ -416,11 +406,11 @@ final class fd extends oh {
                         L16: {
                           var22 = stackIn_43_0;
                           if (var3 == 0) {
-                            stackOut_45_0 = (float[]) field_C;
+                            stackOut_45_0 = (float[]) (field_C);
                             stackIn_46_0 = stackOut_45_0;
                             break L16;
                           } else {
-                            stackOut_44_0 = (float[]) field_u;
+                            stackOut_44_0 = (float[]) (field_u);
                             stackIn_46_0 = stackOut_44_0;
                             break L16;
                           }
@@ -428,18 +418,16 @@ final class fd extends oh {
                         L17: {
                           var23 = stackIn_46_0;
                           if (var3 == 0) {
-                            stackOut_48_0 = (int[]) field_D;
+                            stackOut_48_0 = (int[]) (field_D);
                             stackIn_49_0 = stackOut_48_0;
                             break L17;
                           } else {
-                            stackOut_47_0 = (int[]) field_F;
+                            stackOut_47_0 = (int[]) (field_F);
                             stackIn_49_0 = stackOut_47_0;
                             break L17;
                           }
                         }
-                        var56 = stackIn_49_0;
-                        var52 = var56;
-                        var48 = var52;
+                        var48 = stackIn_49_0;
                         var44 = var48;
                         var24 = var44;
                         var25 = 0;
@@ -519,7 +507,7 @@ final class fd extends oh {
                                                               }
                                                             }
                                                           } else {
-                                                            var20_ref_float__[var4 - var18_int + var26] = -var57[var26];
+                                                            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
                                                             var26++;
                                                             continue L26;
                                                           }
@@ -564,7 +552,7 @@ final class fd extends oh {
                                           }
                                         }
                                       } else {
-                                        var27_int = var56[var26];
+                                        var27_int = var48[var26];
                                         if (var26 < var27_int) {
                                           var28_int = 8 * var26;
                                           var29_int = 8 * var27_int;
@@ -677,27 +665,25 @@ final class fd extends oh {
             }
             L35: {
               var17 = null;
-              if (((fd) this).field_M <= 0) {
+              if (this.field_M <= 0) {
                 break L35;
               } else {
                 L36: {
-                  var18_int = ((fd) this).field_M + var4 >> 2;
-                  var58 = new float[var18_int];
-                  var54 = var58;
-                  var50 = var54;
+                  var18_int = this.field_M + var4 >> 2;
+                  var50 = new float[var18_int];
                   var46 = var50;
                   var40 = var46;
-                  var17 = (Object) (Object) var40;
-                  if (((fd) this).field_A) {
+                  var17 = var40;
+                  if (this.field_A) {
                     break L36;
                   } else {
                     var19 = 0;
                     L37: while (true) {
-                      if (var19 >= ((fd) this).field_i) {
+                      if (var19 >= this.field_i) {
                         break L36;
                       } else {
-                        var20 = (((fd) this).field_M >> 1) + var19;
-                        var40[var19] = var40[var19] + ((fd) this).field_n[var20];
+                        var20 = (this.field_M >> 1) + var19;
+                        var40[var19] = var40[var19] + this.field_n[var20];
                         var19++;
                         continue L37;
                       }
@@ -712,7 +698,7 @@ final class fd extends oh {
                     if (var19 >= var4 >> 1) {
                       break L35;
                     } else {
-                      var20 = var58.length - (var4 >> 1) + var19;
+                      var20 = var50.length - (var4 >> 1) + var19;
                       var40[var20] = var40[var20] + field_k[var19];
                       var19++;
                       continue L38;
@@ -722,11 +708,11 @@ final class fd extends oh {
               }
             }
             L39: {
-              var18 = ((fd) this).field_n;
-              ((fd) this).field_n = field_k;
+              var18 = this.field_n;
+              this.field_n = field_k;
               field_k = var18;
-              ((fd) this).field_M = var4;
-              ((fd) this).field_i = var12 - (var4 >> 1);
+              this.field_M = var4;
+              this.field_i = var12 - (var4 >> 1);
               stackOut_108_0 = this;
               stackIn_110_0 = stackOut_108_0;
               stackIn_109_0 = stackOut_108_0;
@@ -744,12 +730,12 @@ final class fd extends oh {
                 break L39;
               }
             }
-            ((fd) this).field_A = stackIn_111_1 != 0;
-            return (float[]) var17;
+            ((fd) (this)).field_A = stackIn_111_1 != 0;
+            return (float[]) (var17);
           } else {
             var42 = field_o[var14.field_a[var17_int]];
-            var55 = field_k;
-            var42.a(var55, var4 >> 1, var16 != 0);
+            var52 = field_k;
+            var42.a(var52, var4 >> 1, var16 != 0);
             var17_int++;
             continue L9;
           }
@@ -784,6 +770,9 @@ final class fd extends oh {
     }
 
     final static void b(byte[] param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -858,14 +847,14 @@ final class fd extends oh {
                                     return;
                                   } else {
                                     L7: {
-                                      stackOut_37_0 = (boolean[]) field_t;
+                                      stackOut_37_0 = (boolean[]) (field_t);
                                       stackOut_37_1 = var6;
                                       stackIn_39_0 = stackOut_37_0;
                                       stackIn_39_1 = stackOut_37_1;
                                       stackIn_38_0 = stackOut_37_0;
                                       stackIn_38_1 = stackOut_37_1;
                                       if (fd.c() == 0) {
-                                        stackOut_39_0 = (boolean[]) (Object) stackIn_39_0;
+                                        stackOut_39_0 = (boolean[]) ((Object) stackIn_39_0);
                                         stackOut_39_1 = stackIn_39_1;
                                         stackOut_39_2 = 0;
                                         stackIn_40_0 = stackOut_39_0;
@@ -873,7 +862,7 @@ final class fd extends oh {
                                         stackIn_40_2 = stackOut_39_2;
                                         break L7;
                                       } else {
-                                        stackOut_38_0 = (boolean[]) (Object) stackIn_38_0;
+                                        stackOut_38_0 = (boolean[]) ((Object) stackIn_38_0);
                                         stackOut_38_1 = stackIn_38_1;
                                         stackOut_38_2 = 1;
                                         stackIn_40_0 = stackOut_38_0;
@@ -883,8 +872,8 @@ final class fd extends oh {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = fd.a(16);
-                                    int discarded$4 = fd.a(16);
+                                    discarded$3 = fd.a(16);
+                                    discarded$4 = fd.a(16);
                                     field_J[var6] = fd.a(8);
                                     var6++;
                                     continue L6;
@@ -909,7 +898,7 @@ final class fd extends oh {
                       }
                     }
                   } else {
-                    int discarded$5 = fd.a(16);
+                    discarded$5 = fd.a(16);
                     var3++;
                     continue L2;
                   }
@@ -1001,9 +990,10 @@ final class fd extends oh {
 
     final static fd a(bc param0, String param1, String param2) {
         try {
+            boolean discarded$0 = false;
             fd var4_ref = null;
             if (!fd.a(param0)) {
-                boolean discarded$0 = param0.a(param1, (byte) 5, param2);
+                discarded$0 = param0.a(param1, (byte) 5, param2);
                 return null;
             }
             byte[] var3 = param0.a(true, param2, param1);
@@ -1011,8 +1001,10 @@ final class fd extends oh {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new fd(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1028,19 +1020,19 @@ final class fd extends oh {
         int var6_int = 0;
         byte[] var6 = null;
         ob var2 = new ob(param0);
-        ((fd) this).field_B = var2.a(16711680);
-        ((fd) this).field_q = var2.a(16711680);
-        ((fd) this).field_H = var2.a(16711680);
-        ((fd) this).field_G = var2.a(16711680);
-        if (((fd) this).field_G < 0) {
-            ((fd) this).field_G = ~((fd) this).field_G;
-            ((fd) this).field_I = true;
+        this.field_B = var2.a(16711680);
+        this.field_q = var2.a(16711680);
+        this.field_H = var2.a(16711680);
+        this.field_G = var2.a(16711680);
+        if (this.field_G < 0) {
+            this.field_G = this.field_G ^ -1;
+            this.field_I = true;
         }
         int var3 = var2.a(16711680);
         if (var3 < 0) {
             throw new IOException();
         }
-        ((fd) this).field_v = new byte[var3][];
+        this.field_v = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
             var5 = 0;
             do {
@@ -1049,11 +1041,12 @@ final class fd extends oh {
             } while (var6_int >= 255);
             var6 = new byte[var5];
             var2.a(var5, 0, 17469032, var6);
-            ((fd) this).field_v[var4] = var6;
+            this.field_v[var4] = var6;
         }
     }
 
     final kk b() {
+        int incrementValue$1 = 0;
         byte[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -1061,24 +1054,24 @@ final class fd extends oh {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ((fd) this).field_M = 0;
-        ((fd) this).field_n = new float[field_r];
-        var1 = new byte[((fd) this).field_q];
+        this.field_M = 0;
+        this.field_n = new float[field_r];
+        var1 = new byte[this.field_q];
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((fd) this).field_v.length) {
-            ((fd) this).field_n = null;
-            return new kk(((fd) this).field_B, var1, ((fd) this).field_H, ((fd) this).field_G, ((fd) this).field_I);
+          if (var3 >= this.field_v.length) {
+            this.field_n = null;
+            return new kk(this.field_B, var1, this.field_H, this.field_G, this.field_I);
           } else {
             var4 = this.e(var3);
             if (var4 != null) {
               L1: {
                 var5 = var4.length;
-                if (var5 <= ((fd) this).field_q - var2) {
+                if (var5 <= this.field_q - var2) {
                   break L1;
                 } else {
-                  var5 = ((fd) this).field_q - var2;
+                  var5 = this.field_q - var2;
                   break L1;
                 }
               }
@@ -1090,11 +1083,11 @@ final class fd extends oh {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = ~var7 >> 31;
+                      var7 = (var7 ^ -1) >> 31;
                       break L3;
                     }
                   }
-                  int incrementValue$1 = var2;
+                  incrementValue$1 = var2;
                   var2++;
                   var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
@@ -1126,13 +1119,13 @@ final class fd extends oh {
 
     private final static void a(byte[] param0, int param1) {
         field_w = param0;
-        field_p = 0;
+        field_p = param1;
         field_K = 0;
     }
 
     final static int a(int param0) {
-        int var3 = 0;
         int var4 = 0;
+        int var3 = 0;
         int var1 = 0;
         int var2 = 0;
         while (param0 >= 8 - field_K) {
@@ -1154,9 +1147,10 @@ final class fd extends oh {
 
     final static fd a(bc param0, int param1, int param2) {
         try {
+            boolean discarded$0 = false;
             fd var4_ref = null;
             if (!fd.a(param0)) {
-                boolean discarded$0 = param0.a((byte) 125, param2, param1);
+                discarded$0 = param0.a((byte) 125, param2, param1);
                 return null;
             }
             byte[] var3 = param0.a(param1, -1, param2);
@@ -1164,8 +1158,10 @@ final class fd extends oh {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new fd(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1180,10 +1176,6 @@ final class fd extends oh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = false;
     }
 }

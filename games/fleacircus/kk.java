@@ -9,15 +9,17 @@ final class kk {
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != 4) {
+            field_a = (int[]) null;
+            field_b = null;
+            field_c = null;
+            return;
+        }
         field_b = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "kk.A(";
         field_c = "Loading patches";
         field_a = new int[4];

@@ -17,16 +17,28 @@ abstract class em extends al {
     abstract byte[] c(byte param0);
 
     public static void b(byte param0) {
-        field_B = null;
-        field_u = null;
-        field_y = null;
+        if (param0 >= -30) {
+          field_u = (String) null;
+          field_B = null;
+          field_u = null;
+          field_y = null;
+          return;
+        } else {
+          field_B = null;
+          field_u = null;
+          field_y = null;
+          return;
+        }
     }
 
     final static void g(int param0) {
+        if (param0 != -1719110238) {
+            em.d((byte) -113);
+        }
     }
 
     em() {
-        ((em) this).field_C = true;
+        this.field_C = true;
     }
 
     final static void d(byte param0) {
@@ -43,96 +55,111 @@ abstract class em extends al {
         ld var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var8 = MinerDisturbance.field_ab;
         try {
-          var9 = kj.field_a;
-          var2 = var9.d((byte) -54);
-          var3 = var9.d((byte) -54);
-          if (var2 == 0) {
-            var4 = (jb) (Object) sd.field_a.b(127);
-            if (var4 != null) {
-              L0: {
-                var5 = rj.field_d + -var9.field_o;
-                var13 = var4.field_r;
-                var12 = var13;
-                var11 = var12;
-                var10 = var11;
-                var6 = var10;
-                if (var5 <= var13.length << 2) {
-                  break L0;
+          L0: {
+            L1: {
+              var9 = kj.field_a;
+              var2 = var9.d((byte) -54);
+              var3 = var9.d((byte) -54);
+              if (var2 == 0) {
+                var4 = (jb) ((Object) sd.field_a.b(param0 ^ -62));
+                if (var4 != null) {
+                  L2: {
+                    var5 = rj.field_d + -var9.field_o;
+                    var11 = var4.field_r;
+                    var10 = var11;
+                    var6 = var10;
+                    if (var5 <= var11.length << -1719110238) {
+                      break L2;
+                    } else {
+                      var5 = var11.length << 1422874626;
+                      break L2;
+                    }
+                  }
+                  var7 = 0;
+                  L3: while (true) {
+                    if (var5 <= var7) {
+                      var4.b(34);
+                      break L1;
+                    } else {
+                      var6[var7 >> -1619014622] = var6[var7 >> -1619014622] + (var9.d((byte) -54) << c.a(768, var7 << 13586120));
+                      var7++;
+                      continue L3;
+                    }
+                  }
                 } else {
-                  var5 = var13.length << 2;
+                  si.a(-36);
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 }
-              }
-              var7 = 0;
-              L1: while (true) {
-                if (var5 <= var7) {
-                  var4.b(34);
-                  return;
+              } else {
+                if (var2 != 1) {
+                  di.a((Throwable) null, 1, "LR1: " + hj.a((byte) 55));
+                  si.a(param0 ^ 1);
+                  break L1;
                 } else {
-                  var6[var7 >> 2] = var6[var7 >> 2] + (var9.d((byte) -54) << c.a(768, var7 << 8));
-                  var7++;
-                  continue L1;
-                }
-              }
-            } else {
-              si.a(-36);
-              return;
-            }
-          } else {
-            if (var2 != 1) {
-              di.a((Throwable) null, 1, "LR1: " + hj.a((byte) 55));
-              si.a(-68);
-              return;
-            } else {
-              var4_int = var9.c((byte) 127);
-              var5_ref_il = (il) (Object) mf.field_h.b(119);
-              L2: while (true) {
-                L3: {
-                  if (var5_ref_il == null) {
-                    break L3;
-                  } else {
-                    L4: {
-                      if (var3 != var5_ref_il.field_r) {
-                        break L4;
+                  var4_int = var9.c((byte) 127);
+                  var5_ref_il = (il) ((Object) mf.field_h.b(119));
+                  L4: while (true) {
+                    L5: {
+                      if (var5_ref_il == null) {
+                        break L5;
                       } else {
-                        if (var4_int == var5_ref_il.field_p) {
-                          break L3;
-                        } else {
-                          break L4;
+                        L6: {
+                          if (var3 != var5_ref_il.field_r) {
+                            break L6;
+                          } else {
+                            if (var4_int == var5_ref_il.field_p) {
+                              break L5;
+                            } else {
+                              break L6;
+                            }
+                          }
                         }
+                        var5_ref_il = (il) ((Object) mf.field_h.b((byte) 56));
+                        continue L4;
                       }
                     }
-                    var5_ref_il = (il) (Object) mf.field_h.b((byte) 56);
-                    continue L2;
+                    if (var5_ref_il == null) {
+                      si.a(param0 ^ 117);
+                      decompiledRegionSelector0 = 0;
+                      break L0;
+                    } else {
+                      var5_ref_il.b(34);
+                      break L1;
+                    }
                   }
                 }
-                if (var5_ref_il == null) {
-                  si.a(-56);
-                  return;
-                } else {
-                  var5_ref_il.b(34);
-                  return;
-                }
               }
+            }
+            if (param0 == -67) {
+              decompiledRegionSelector0 = 2;
+              break L0;
+            } else {
+              field_u = (String) null;
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "em.G(" + -67 + ')');
+          throw lj.a((Throwable) ((Object) var1), "em.G(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = true;
         field_u = "Achievements";
         field_x = false;

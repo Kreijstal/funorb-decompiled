@@ -25,10 +25,6 @@ class ei extends l {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ei.V(";
         field_r = "Create";
         field_s = "Name";

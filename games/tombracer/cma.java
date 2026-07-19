@@ -10,17 +10,17 @@ final class cma extends ci {
     private int field_n;
 
     final static su[] c(int param0) {
-        int var1 = 2;
+        int var1 = 23 % ((-4 - param0) / 36);
         return new su[]{uk.field_M, ula.field_v, csa.field_y, ll.field_d, sga.field_n, bi.field_d, dp.field_g, wc.field_e, vna.field_a, wsa.field_v, al.field_f, kea.field_c, lfa.field_o, oc.field_H};
     }
 
     public cma() {
         super(1, false);
-        ((cma) this).field_p = 4096;
-        ((cma) this).field_q = 4096;
-        ((cma) this).field_o = new int[3];
-        ((cma) this).field_r = 4096;
-        ((cma) this).field_n = 409;
+        this.field_p = 4096;
+        this.field_q = 4096;
+        this.field_o = new int[3];
+        this.field_r = 4096;
+        this.field_n = 409;
     }
 
     final void a(byte param0, uia param1, int param2) {
@@ -28,23 +28,23 @@ final class cma extends ci {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
-        Object var7 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        uia var7 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -52,74 +52,137 @@ final class cma extends ci {
               if (param0 == 107) {
                 break L1;
               } else {
-                var7 = null;
-                ((cma) this).a((byte) -33, (uia) null, 70);
+                var7 = (uia) null;
+                this.a((byte) -33, (uia) null, 70);
                 break L1;
               }
             }
-            var5 = param2;
-            if (var5 != 0) {
-              if (var5 != 1) {
-                if (2 != var5) {
-                  if (var5 != 3) {
-                    L2: {
-                      if (4 != var5) {
+            L2: {
+              L3: {
+                L4: {
+                  L5: {
+                    L6: {
+                      L7: {
+                        L8: {
+                          var5 = param2;
+                          if (var5 != 0) {
+                            break L8;
+                          } else {
+                            if (var6 == 0) {
+                              break L7;
+                            } else {
+                              break L8;
+                            }
+                          }
+                        }
+                        L9: {
+                          if (var5 != 1) {
+                            break L9;
+                          } else {
+                            if (var6 == 0) {
+                              break L6;
+                            } else {
+                              break L9;
+                            }
+                          }
+                        }
+                        L10: {
+                          if (2 != var5) {
+                            break L10;
+                          } else {
+                            if (var6 == 0) {
+                              break L5;
+                            } else {
+                              break L10;
+                            }
+                          }
+                        }
+                        L11: {
+                          if (-4 != (var5 ^ -1)) {
+                            break L11;
+                          } else {
+                            if (var6 == 0) {
+                              break L4;
+                            } else {
+                              break L11;
+                            }
+                          }
+                        }
+                        if (4 != var5) {
+                          break L2;
+                        } else {
+                          if (var6 == 0) {
+                            break L3;
+                          } else {
+                            break L7;
+                          }
+                        }
+                      }
+                      this.field_n = param1.d(param0 ^ 17);
+                      if (var6 == 0) {
                         break L2;
                       } else {
-                        var4_int = param1.a(-32768);
-                        ((cma) this).field_o[2] = sea.c(var4_int, 255) >> 12;
-                        ((cma) this).field_o[0] = sea.c(267386880, var4_int << 4);
-                        ((cma) this).field_o[1] = sea.c(4080, var4_int >> 4);
-                        break L2;
+                        break L6;
                       }
                     }
-                    break L0;
-                  } else {
-                    ((cma) this).field_q = param1.d(123);
-                    return;
+                    this.field_p = param1.d(124);
+                    if (var6 == 0) {
+                      break L2;
+                    } else {
+                      break L5;
+                    }
                   }
-                } else {
-                  ((cma) this).field_r = param1.d(param0 + 20);
-                  return;
+                  this.field_r = param1.d(param0 + 20);
+                  if (var6 == 0) {
+                    break L2;
+                  } else {
+                    break L4;
+                  }
                 }
-              } else {
-                ((cma) this).field_p = param1.d(124);
-                return;
+                this.field_q = param1.d(123);
+                if (var6 == 0) {
+                  break L2;
+                } else {
+                  break L3;
+                }
               }
-            } else {
-              ((cma) this).field_n = param1.d(param0 ^ 17);
-              return;
+              var4_int = param1.a(-32768);
+              this.field_o[2] = sea.c(var4_int, 255) >> -1933885940;
+              this.field_o[0] = sea.c(267386880, var4_int << -721881788);
+              this.field_o[1] = sea.c(4080, var4_int >> 456341860);
+              break L2;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L12: {
             var4 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var4;
-            stackOut_19_1 = new StringBuilder().append("cma.A(").append(param0).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackOut_28_0 = (RuntimeException) (var4);
+            stackOut_28_1 = new StringBuilder().append("cma.A(").append(param0).append(',');
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
-              break L3;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L12;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
-              break L3;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
+              break L12;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ',' + param2 + ')');
         }
     }
 
@@ -143,126 +206,135 @@ final class cma extends ci {
         int[] var29 = null;
         int[] var32 = null;
         int[] var33 = null;
-        int[][] var35 = null;
-        int[] var37 = null;
+        int[][] var38 = null;
+        int[] var39 = null;
         int[] var40 = null;
         int[] var41 = null;
-        int[][] var42 = null;
-        int[][] var43 = null;
-        int[] var44 = null;
-        int[] var45 = null;
-        int[] var46 = null;
-        int[] var47 = null;
-        int[] var48 = null;
-        int[] var49 = null;
         var16 = TombRacer.field_G ? 1 : 0;
-        var43 = ((cma) this).field_h.a(param0, (byte) 122);
-        var35 = var43;
-        var27 = var35;
+        var27 = this.field_h.a(param0, (byte) 122);
         var19 = var27;
         var17 = var19;
         var3 = var17;
         if (param1 == -1) {
-          if (((cma) this).field_h.field_f) {
-            var42 = ((cma) this).a(param0, 0, -1);
-            var44 = var42[0];
-            var46 = var42[1];
-            var47 = var42[2];
-            var45 = var43[0];
-            var37 = var45;
-            var29 = var37;
+          if (this.field_h.field_f) {
+            var38 = this.a(param0, 0, -1);
+            var39 = var38[0];
+            var40 = var38[1];
+            var41 = var38[2];
+            var29 = var27[0];
             var21 = var29;
             var8 = var21;
-            var48 = var43[1];
-            var40 = var48;
-            var32 = var40;
+            var32 = var27[1];
             var24 = var32;
             var9 = var24;
-            var49 = var43[2];
-            var41 = var49;
-            var33 = var41;
+            var33 = var27[2];
             var25 = var33;
             var10 = var25;
             var11 = 0;
             L0: while (true) {
-              if (ns.field_g <= var11) {
-                return var3;
-              } else {
-                L1: {
-                  var13 = var44[var11];
-                  var12 = var13 - ((cma) this).field_o[0];
-                  if (0 > var12) {
-                    var12 = -var12;
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                if (((cma) this).field_n < var12) {
-                  var45 = var43[0];
-                  var46 = var42[1];
-                  var48 = var43[1];
-                  var45[var11] = var13;
-                  var9[var11] = var46[var11];
-                  var10[var11] = var47[var11];
-                  var11++;
-                  var11++;
-                  continue L0;
+              L1: {
+                if (ns.field_g <= var11) {
+                  break L1;
                 } else {
                   L2: {
-                    var45 = var43[0];
-                    var46 = var42[1];
-                    var48 = var43[1];
-                    var14 = var46[var11];
-                    var12 = -((cma) this).field_o[1] + var14;
-                    if (var12 < 0) {
+                    var13 = var39[var11];
+                    var12 = var13 - this.field_o[0];
+                    if (0 > var12) {
                       var12 = -var12;
                       break L2;
                     } else {
                       break L2;
                     }
                   }
-                  if (((cma) this).field_n >= var12) {
-                    L3: {
-                      var15 = var47[var11];
-                      var12 = -((cma) this).field_o[2] + var15;
-                      if (var12 < 0) {
-                        var12 = -var12;
-                        break L3;
+                  L3: {
+                    L4: {
+                      if (this.field_n < var12) {
+                        var29 = var27[0];
+                        var32 = var27[1];
+                        var40 = var38[1];
+                        var29[var11] = var13;
+                        var9[var11] = var40[var11];
+                        var10[var11] = var41[var11];
+                        if (var16 == 0) {
+                          break L3;
+                        } else {
+                          break L4;
+                        }
                       } else {
-                        break L3;
+                        break L4;
                       }
                     }
-                    if (var12 > ((cma) this).field_n) {
-                      var45[var11] = var13;
-                      var48[var11] = var14;
-                      var49[var11] = var15;
-                      var11++;
-                      var11++;
-                      continue L0;
-                    } else {
-                      var8[var11] = var13 * ((cma) this).field_q >> 12;
-                      var9[var11] = var14 * ((cma) this).field_r >> 12;
-                      var10[var11] = ((cma) this).field_p * var15 >> 12;
-                      var11++;
-                      continue L0;
+                    L5: {
+                      var29 = var27[0];
+                      var32 = var27[1];
+                      var40 = var38[1];
+                      var14 = var40[var11];
+                      var12 = -this.field_o[1] + var14;
+                      if (var12 < 0) {
+                        var12 = -var12;
+                        break L5;
+                      } else {
+                        break L5;
+                      }
                     }
-                  } else {
-                    var45[var11] = var13;
-                    var48[var11] = var14;
-                    var10[var11] = var47[var11];
-                    var11++;
-                    var11++;
+                    L6: {
+                      if (this.field_n >= var12) {
+                        break L6;
+                      } else {
+                        var29[var11] = var13;
+                        var32[var11] = var14;
+                        var10[var11] = var41[var11];
+                        if (var16 == 0) {
+                          break L3;
+                        } else {
+                          break L6;
+                        }
+                      }
+                    }
+                    L7: {
+                      var15 = var41[var11];
+                      var12 = -this.field_o[2] + var15;
+                      if (-1 < (var12 ^ -1)) {
+                        var12 = -var12;
+                        break L7;
+                      } else {
+                        break L7;
+                      }
+                    }
+                    L8: {
+                      if (var12 > this.field_n) {
+                        var29[var11] = var13;
+                        var32[var11] = var14;
+                        var33[var11] = var15;
+                        if (var16 == 0) {
+                          break L3;
+                        } else {
+                          break L8;
+                        }
+                      } else {
+                        break L8;
+                      }
+                    }
+                    var8[var11] = var13 * this.field_q >> -2111631668;
+                    var9[var11] = var14 * this.field_r >> -1020975412;
+                    var10[var11] = this.field_p * var15 >> -1598030036;
+                    break L3;
+                  }
+                  var11++;
+                  if (var16 == 0) {
                     continue L0;
+                  } else {
+                    break L1;
                   }
                 }
               }
+              return var17;
             }
           } else {
-            return var3;
+            return var17;
           }
         } else {
-          return null;
+          return (int[][]) null;
         }
     }
 

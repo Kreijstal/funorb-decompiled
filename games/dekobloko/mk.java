@@ -13,6 +13,9 @@ abstract class mk {
         field_d = null;
         field_a = null;
         field_b = null;
+        if (param0) {
+            field_a = (String) null;
+        }
     }
 
     abstract byte[] a(int param0);

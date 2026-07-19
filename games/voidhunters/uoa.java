@@ -33,14 +33,14 @@ final class uoa extends rna implements ntb {
             L1: {
               L2: {
                 var4 = -126 / ((param0 - 22) / 59);
-                var3 = (uoa) (Object) param1;
+                var3 = (uoa) ((Object) param1);
                 if (super.a((byte) -48, param1)) {
                   break L2;
                 } else {
-                  if (((uoa) this).field_a != var3.field_a) {
+                  if (this.field_a != var3.field_a) {
                     break L2;
                   } else {
-                    if (((uoa) this).field_b == var3.field_b) {
+                    if (this.field_b == var3.field_b) {
                       stackOut_5_0 = 0;
                       stackIn_6_0 = stackOut_5_0;
                       break L1;
@@ -60,23 +60,23 @@ final class uoa extends rna implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3_ref;
+            stackOut_7_0 = (RuntimeException) (var3_ref);
             stackOut_7_1 = new StringBuilder().append("uoa.C(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -84,13 +84,47 @@ final class uoa extends rna implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_6_0 != 0;
     }
 
     final static boolean a(int param0, int param1, byte param2) {
-        return 0 != (256 & param1);
+        boolean discarded$13 = false;
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        if (param2 != 9) {
+          L0: {
+            discarded$13 = uoa.a(14, -116, 46);
+            if (0 == (256 & param1)) {
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = 1;
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+          return stackIn_8_0 != 0;
+        } else {
+          L1: {
+            if (0 == (256 & param1)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
+        }
     }
 
     final static void a(String param0, int param1, float param2) {
@@ -101,13 +135,14 @@ final class uoa extends rna implements ntb {
         try {
             mnb.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "uoa.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "uoa.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final ucb a(pe param0, int param1) {
+        boolean discarded$2 = false;
         RuntimeException var3 = null;
-        Object var4 = null;
+        tv var4 = null;
         Object stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -129,8 +164,8 @@ final class uoa extends rna implements ntb {
         try {
           L0: {
             if (param1 != 26964) {
-              var4 = null;
-              boolean discarded$2 = ((uoa) this).a((byte) -70, (tv) null);
+              var4 = (tv) null;
+              discarded$2 = this.a((byte) -70, (tv) null);
               stackOut_2_0 = null;
               stackIn_3_0 = stackOut_2_0;
               break L0;
@@ -142,23 +177,23 @@ final class uoa extends rna implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("uoa.I(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -166,44 +201,57 @@ final class uoa extends rna implements ntb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return (ucb) (Object) stackIn_3_0;
+        return (ucb) ((Object) stackIn_3_0);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (li.field_i) {
-            mmb.field_d[param0].a(param4, param2, 0, 16777215 | param1 << 24, 1);
+        boolean discarded$8 = false;
+        if (param3 == 0) {
+          if (li.field_i) {
+            mmb.field_d[param0].a(param4, param2, 0, 16777215 | param1 << -1670038792, 1);
             return;
+          } else {
+            return;
+          }
+        } else {
+          discarded$8 = uoa.a(125, 2, 96);
+          if (!li.field_i) {
+            return;
+          } else {
+            mmb.field_d[param0].a(param4, param2, 0, 16777215 | param1 << -1670038792, 1);
+            return;
+          }
         }
     }
 
     final void a(int param0, int[] param1, rsb param2) {
         try {
             if (param0 != 1) {
-                ((uoa) this).field_a = 84;
+                this.field_a = 84;
             }
-            param2.field_e.a((byte) -45, ((uoa) this).field_b, ((uoa) this).field_a);
+            param2.field_e.a((byte) -45, this.field_b, this.field_a);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "uoa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "uoa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final String a(int param0) {
         if (param0 != -1325) {
-          return null;
+          return (String) null;
         } else {
-          return "Increment custom variable " + ((uoa) this).field_a + " by " + ((uoa) this).field_b;
+          return "Increment custom variable " + this.field_a + " by " + this.field_b;
         }
     }
 
     public final void a(faa param0, boolean param1) {
         try {
             super.a(param0, param1);
-            ((uoa) this).field_a = param0.i(0, 32);
-            ((uoa) this).field_b = param0.i(0, 32);
+            this.field_a = param0.i(0, 32);
+            this.field_b = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "uoa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "uoa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -211,20 +259,21 @@ final class uoa extends rna implements ntb {
         uoa var5 = null;
         uoa var6 = null;
         try {
-            var5 = (uoa) (Object) param1;
+            var5 = (uoa) ((Object) param1);
             var6 = var5;
             super.b((byte) 79, param1);
             if (param0 < 54) {
-                ((uoa) this).field_a = 86;
+                this.field_a = 86;
             }
-            var6.field_a = ((uoa) this).field_a;
-            var6.field_b = ((uoa) this).field_b;
+            var6.field_a = this.field_a;
+            var6.field_b = this.field_b;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "uoa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "uoa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(pe param0, boolean param1, int param2, int param3) {
+        String discarded$1 = null;
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -246,12 +295,12 @@ final class uoa extends rna implements ntb {
           L0: {
             L1: {
               if (param2 != 0) {
-                ((uoa) this).field_b = param3;
+                this.field_b = param3;
                 break L1;
               } else {
-                ((uoa) this).field_a = param3;
-                if (((uoa) this).field_a < 0) {
-                  ((uoa) this).field_a = 0;
+                this.field_a = param3;
+                if (-1 < (this.field_a ^ -1)) {
+                  this.field_a = 0;
                   break L1;
                 } else {
                   break L1;
@@ -261,7 +310,7 @@ final class uoa extends rna implements ntb {
             if (!param1) {
               break L0;
             } else {
-              String discarded$1 = ((uoa) this).a(34);
+              discarded$1 = this.a(34);
               return;
             }
           }
@@ -269,23 +318,23 @@ final class uoa extends rna implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var5;
+            stackOut_8_0 = (RuntimeException) (var5);
             stackOut_8_1 = new StringBuilder().append("uoa.K(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -293,7 +342,7 @@ final class uoa extends rna implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -308,6 +357,7 @@ final class uoa extends rna implements ntb {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
@@ -322,56 +372,58 @@ final class uoa extends rna implements ntb {
             super.a(param0, -23);
             if (param1 <= -19) {
               L1: {
-                var5 = (uoa) (Object) param0;
+                var5 = (uoa) ((Object) param0);
                 var4 = 0;
-                if (var5.field_a != ((uoa) this).field_a) {
+                if (var5.field_a != this.field_a) {
                   var4 = 1;
-                  System.out.println("int index has changed. before=" + var5.field_a + ", now=" + ((uoa) this).field_a);
+                  System.out.println("int index has changed. before=" + var5.field_a + ", now=" + this.field_a);
                   break L1;
                 } else {
                   break L1;
                 }
               }
               L2: {
-                if (((uoa) this).field_b != var5.field_b) {
+                if (this.field_b != var5.field_b) {
                   var4 = 1;
-                  System.out.println("int value_added has changed. before=" + var5.field_b + ", now=" + ((uoa) this).field_b);
+                  System.out.println("int value_added has changed. before=" + var5.field_b + ", now=" + this.field_b);
                   break L2;
                 } else {
                   break L2;
                 }
               }
               if (var4 == 0) {
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 System.out.println("This instance of MissionActionAddToCustomVariable has changed");
                 return;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_0 = (RuntimeException) (var3);
             stackOut_11_1 = new StringBuilder().append("uoa.F(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -379,7 +431,12 @@ final class uoa extends rna implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -387,36 +444,40 @@ final class uoa extends rna implements ntb {
         if (param1 >= -100) {
             return -14;
         }
-        if (param0 == 0) {
-            return ((uoa) this).field_a;
+        if (-1 == (param0 ^ -1)) {
+            return this.field_a;
         }
-        return ((uoa) this).field_b;
+        return this.field_b;
     }
 
     public final void b(faa param0, int param1) {
+        boolean discarded$0 = false;
         try {
             super.b(param0, -118);
-            param0.a(-632, ((uoa) this).field_a, 32);
+            param0.a(-632, this.field_a, 32);
             if (param1 > -109) {
-                Object var4 = null;
-                boolean discarded$0 = ((uoa) this).a((byte) 32, (tv) null);
+                tv var4 = (tv) null;
+                discarded$0 = this.a((byte) 32, (tv) null);
             }
-            param0.a(-632, ((uoa) this).field_b, 32);
+            param0.a(-632, this.field_b, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "uoa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "uoa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        return (33 & param1) != 0;
+        if (param0 < 74) {
+            return true;
+        }
+        return (33 & param1 ^ -1) != -1 ? true : false;
     }
 
     uoa() {
     }
 
     uoa(int param0, int param1) {
-        ((uoa) this).field_b = param1;
-        ((uoa) this).field_a = param0;
+        this.field_b = param1;
+        this.field_a = param0;
     }
 
     static {

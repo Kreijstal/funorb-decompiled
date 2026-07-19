@@ -23,10 +23,10 @@ final class hf {
 
     final boolean a(byte param0) {
         if (param0 < 55) {
-            ((hf) this).field_d = null;
-            return ((hf) this).field_c;
+            this.field_d = (String) null;
+            return this.field_c;
         }
-        return ((hf) this).field_c;
+        return this.field_c;
     }
 
     hf(String param0, boolean param1) {
@@ -59,7 +59,7 @@ final class hf {
         try {
           L0: {
             L1: {
-              ((hf) this).field_d = param0;
+              this.field_d = param0;
               stackOut_1_0 = this;
               stackIn_3_0 = stackOut_1_0;
               stackIn_2_0 = stackOut_1_0;
@@ -78,16 +78,16 @@ final class hf {
               }
             }
             L2: {
-              ((hf) this).field_c = stackIn_4_1 != 0;
-              if (((hf) this).field_d != null) {
+              ((hf) (this)).field_c = stackIn_4_1 != 0;
+              if (this.field_d != null) {
                 break L2;
               } else {
-                ((hf) this).field_d = "";
+                this.field_d = "";
                 break L2;
               }
             }
-            if (0 == ((hf) this).field_d.length()) {
-              ((hf) this).field_c = false;
+            if (0 == this.field_d.length()) {
+              this.field_c = false;
               break L0;
             } else {
               return;
@@ -97,23 +97,23 @@ final class hf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_0 = (RuntimeException) (var3);
             stackOut_10_1 = new StringBuilder().append("hf.<init>(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -121,22 +121,18 @@ final class hf {
               break L3;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }
     }
 
     final String c(byte param0) {
         if (param0 != 99) {
-            return null;
+            return (String) null;
         }
-        return ((hf) this).field_d;
+        return this.field_d;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Fireball";
         field_b = "You cannot add yourself!";
     }

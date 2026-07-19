@@ -18,16 +18,12 @@ final class sb {
             Exception var3 = null;
             int var4 = 0;
             int var5 = 0;
-            Object var6 = null;
+            wi var6 = null;
             byte[] var7 = null;
             byte[] var8 = null;
             byte[] var9 = null;
             byte[] var10 = null;
             byte[] var11 = null;
-            byte[] var12 = null;
-            byte[] var13 = null;
-            byte[] var14 = null;
-            byte[] var15 = null;
             RuntimeException stackIn_17_0 = null;
             StringBuilder stackIn_17_1 = null;
             RuntimeException stackIn_18_0 = null;
@@ -48,14 +44,10 @@ final class sb {
             try {
               L0: {
                 L1: {
-                  var14 = new byte[24];
-                  var12 = var14;
-                  var10 = var12;
+                  var10 = new byte[24];
                   var8 = var10;
                   var7 = var8;
-                  var15 = var7;
-                  var13 = var15;
-                  var11 = var13;
+                  var11 = var7;
                   var9 = var11;
                   var2 = var9;
                   if (null == gf.field_g) {
@@ -64,14 +56,14 @@ final class sb {
                     try {
                       L2: {
                         gf.field_g.a((byte) 57, 0L);
-                        gf.field_g.a(0, var14);
+                        gf.field_g.a(0, var10);
                         var3_int = 0;
                         L3: while (true) {
                           L4: {
                             if (var3_int >= 24) {
                               break L4;
                             } else {
-                              if (0 == var15[var3_int]) {
+                              if (0 == var11[var3_int]) {
                                 var3_int++;
                                 continue L3;
                               } else {
@@ -79,7 +71,7 @@ final class sb {
                               }
                             }
                           }
-                          if (var3_int < 24) {
+                          if (-25 < (var3_int ^ -1)) {
                             break L2;
                           } else {
                             throw new IOException();
@@ -92,10 +84,10 @@ final class sb {
                         var3 = (Exception) (Object) decompiledCaughtException;
                         var4 = 0;
                         L6: while (true) {
-                          if (var4 >= 24) {
+                          if ((var4 ^ -1) <= -25) {
                             break L5;
                           } else {
-                            var2[var4] = (byte) -1;
+                            var2[var4] = (byte)-1;
                             var4++;
                             continue L6;
                           }
@@ -106,11 +98,11 @@ final class sb {
                   }
                 }
                 L7: {
-                  param0.a(0, true, 24, var15);
+                  param0.a(0, true, 24, var11);
                   if (param1 == 25) {
                     break L7;
                   } else {
-                    var6 = null;
+                    var6 = (wi) null;
                     sb.a((wi) null, (byte) -47);
                     break L7;
                   }
@@ -121,23 +113,23 @@ final class sb {
               decompiledCaughtException = decompiledCaughtParameter1;
               L8: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_16_0 = (RuntimeException) var2_ref;
+                stackOut_16_0 = (RuntimeException) (var2_ref);
                 stackOut_16_1 = new StringBuilder().append("sb.A(");
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;
                 stackIn_17_1 = stackOut_16_1;
                 if (param0 == null) {
-                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
                   stackOut_18_2 = "null";
                   stackIn_19_0 = stackOut_18_0;
                   stackIn_19_1 = stackOut_18_1;
                   stackIn_19_2 = stackOut_18_2;
                   break L8;
                 } else {
-                  stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-                  stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                  stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+                  stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
                   stackOut_17_2 = "{...}";
                   stackIn_19_0 = stackOut_17_0;
                   stackIn_19_1 = stackOut_17_1;
@@ -145,7 +137,7 @@ final class sb {
                   break L8;
                 }
               }
-              throw ii.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
+              throw ii.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -155,7 +147,7 @@ final class sb {
     }
 
     sb(int param0) {
-        ((sb) this).field_a = param0;
+        this.field_a = param0;
     }
 
     static {

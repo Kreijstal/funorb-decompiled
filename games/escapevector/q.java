@@ -26,31 +26,31 @@ final class q extends hc {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_24_0 = 0;
+        int stackIn_22_0 = 0;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
+        String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_23_0 = 0;
+        int stackOut_21_0 = 0;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
         RuntimeException stackOut_25_0 = null;
         StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
         var14 = EscapeVector.field_A;
         try {
           L0: {
             if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
               L1: {
-                var8_int = -((q) this).field_M + (param1 + -param4);
-                var9 = -(2 * ((q) this).field_M) + ((q) this).field_g;
+                var8_int = -this.field_M + (param1 + -param4);
+                var9 = -(2 * this.field_M) + this.field_g;
                 if (var8_int > var9) {
                   var8_int = var9;
                   break L1;
@@ -67,9 +67,9 @@ final class q extends hc {
                 }
               }
               L3: {
-                var8_int = var8_int * ((q) this).field_D / var9;
-                if (param6 == 1) {
-                  ((q) this).field_K.a(var8_int, (byte) -51);
+                var8_int = var8_int * this.field_D / var9;
+                if ((param6 ^ -1) == -2) {
+                  this.field_K.a(var8_int, (byte) -51);
                   break L3;
                 } else {
                   if (param6 == 2) {
@@ -77,24 +77,22 @@ final class q extends hc {
                     var11 = -1;
                     var12 = 0;
                     L4: while (true) {
-                      if (((q) this).field_K.a(true) <= var12) {
-                        if (var11 < 0) {
+                      if (this.field_K.a(true) <= var12) {
+                        if ((var11 ^ -1) > -1) {
                           break L3;
                         } else {
-                          ((q) this).field_K.c(0, var11);
+                          this.field_K.c(0, var11);
                           break L3;
                         }
                       } else {
                         L5: {
-                          var13 = -var8_int + ((q) this).field_K.a(-49, var12);
+                          var13 = -var8_int + this.field_K.a(-49, var12);
                           var13 = var13 * var13;
                           if (var13 >= var10) {
-                            var12++;
                             break L5;
                           } else {
                             var10 = var13;
                             var11 = var12;
-                            var12++;
                             break L5;
                           }
                         }
@@ -107,8 +105,8 @@ final class q extends hc {
                   }
                 }
               }
-              stackOut_23_0 = 1;
-              stackIn_24_0 = stackOut_23_0;
+              stackOut_21_0 = 1;
+              stackIn_22_0 = stackOut_21_0;
               break L0;
             } else {
               return false;
@@ -118,50 +116,50 @@ final class q extends hc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var8 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var8;
-            stackOut_25_1 = new StringBuilder().append("q.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackOut_23_0 = (RuntimeException) (var8);
+            stackOut_23_1 = new StringBuilder().append("q.V(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
             if (param5 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
               break L6;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
               break L6;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param6 + ')');
+          throw t.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param6 + ')');
         }
-        return stackIn_24_0 != 0;
+        return stackIn_22_0 != 0;
     }
 
     final int e(byte param0) {
         if (param0 != 98) {
             return 116;
         }
-        return ((q) this).field_K.a(true);
+        return this.field_K.a(true);
     }
 
     final int b(int param0, byte param1) {
-        if (param0 >= 0) {
-          if (((q) this).field_K.a(true) > param0) {
+        if (-1 >= (param0 ^ -1)) {
+          if (this.field_K.a(true) > param0) {
             if (param1 != 97) {
-              ((q) this).field_D = 112;
-              return ((q) this).field_K.a(-109, param0);
+              this.field_D = 112;
+              return this.field_K.a(-109, param0);
             } else {
-              return ((q) this).field_K.a(-109, param0);
+              return this.field_K.a(-109, param0);
             }
           } else {
             return -1;
@@ -179,18 +177,27 @@ final class q extends hc {
         field_I = null;
         field_G = null;
         field_N = null;
-        field_F = null;
-        field_E = null;
+        if (param0 <= 6) {
+          field_N = (boolean[]) null;
+          field_F = null;
+          field_E = (boolean[][]) null;
+          return;
+        } else {
+          field_F = null;
+          field_E = (boolean[][]) null;
+          return;
+        }
     }
 
     final int k(int param0) {
-        Object var3 = null;
+        boolean discarded$2 = false;
+        hm var3 = null;
         if (param0 != -1) {
-          var3 = null;
-          boolean discarded$2 = ((q) this).a(-27, -35, (byte) -19, -117, -67, (hm) null, 21);
-          return ((q) this).field_D;
+          var3 = (hm) null;
+          discarded$2 = this.a(-27, -35, (byte) -19, -117, -67, (hm) null, 21);
+          return this.field_D;
         } else {
-          return ((q) this).field_D;
+          return this.field_D;
         }
     }
 
@@ -199,13 +206,13 @@ final class q extends hc {
         if (param1 >= -60) {
           field_P = true;
           var2 = om.field_c;
-          var2.a(6, true);
+          var2.a(param0, true);
           var2.f(1, -123);
           var2.f(0, -123);
           return;
         } else {
           var2 = om.field_c;
-          var2.a(6, true);
+          var2.a(param0, true);
           var2.f(1, -123);
           var2.f(0, -123);
           return;
@@ -217,10 +224,6 @@ final class q extends hc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_O = new java.math.BigInteger("65537");
         field_H = "Unpacking music";
         field_F = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";

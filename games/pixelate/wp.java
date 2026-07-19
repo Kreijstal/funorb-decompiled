@@ -7,6 +7,7 @@ final class wp {
     static String[] field_b;
 
     final static boolean a(int param0) {
+        boolean discarded$8 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -15,7 +16,7 @@ final class wp {
         boolean stackOut_2_0 = false;
         if (param0 != -8798) {
           L0: {
-            boolean discarded$8 = wp.a(108);
+            discarded$8 = wp.a(108);
             if (null != ib.field_f) {
               stackOut_7_0 = 1;
               stackIn_8_0 = stackOut_7_0;
@@ -55,10 +56,6 @@ final class wp {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = null;
         field_b = new String[]{"£3.20", "€4.25", "US$ 5.00", "Can$ 4.95", "Aus$ 6.50", "Krn 29.95", "", "Rp 160", "Rng 17.95", "NZ$ 7.95", "SG$ 6.95", "Krn 44.95", "R$ 7,00"};
     }

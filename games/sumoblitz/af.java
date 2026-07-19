@@ -8,10 +8,6 @@ final class af extends ka {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 4096;
     }
 }

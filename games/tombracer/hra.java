@@ -8,6 +8,9 @@ final class hra {
 
     public static void a(boolean param0) {
         field_a = null;
+        if (param0) {
+            return;
+        }
         field_c = null;
     }
 
@@ -16,10 +19,6 @@ final class hra {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Angelio";
         field_b = 81;
     }

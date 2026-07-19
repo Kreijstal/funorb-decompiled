@@ -9,19 +9,28 @@ final class qd {
     static String field_b;
 
     final static ad a(int param0, int param1) {
+        int discarded$2 = 0;
         ad[] var2 = null;
         int var3 = 0;
         int var4 = 0;
         ad[] var5 = null;
-        var4 = DungeonAssault.field_K;
+        L0: {
+          var4 = DungeonAssault.field_K;
+          if (param0 > 75) {
+            break L0;
+          } else {
+            discarded$2 = qd.a(12, 55, 102);
+            break L0;
+          }
+        }
         var5 = ad.b(65280);
         var2 = var5;
         var3 = 0;
-        L0: while (true) {
+        L1: while (true) {
           if (var3 < var5.length) {
             if (param1 != var5[var3].field_b) {
               var3++;
-              continue L0;
+              continue L1;
             } else {
               return var5[var3];
             }
@@ -32,10 +41,17 @@ final class qd {
     }
 
     final static nh a(boolean param0, boolean param1, int param2, byte param3, int param4) {
-        return uo.a(false, 1, true, param2, 27847, false);
+        if (param3 != -31) {
+            field_e = (String[]) null;
+        }
+        return uo.a(param0, param4, param1, param2, 27847, false);
     }
 
     public static void a(boolean param0) {
+        int discarded$0 = 0;
+        if (!param0) {
+            discarded$0 = qd.a(-11, -87, -69);
+        }
         field_a = null;
         field_e = null;
         field_c = null;
@@ -44,18 +60,18 @@ final class qd {
     }
 
     final static int a(int param0, int param1, int param2) {
+        nh discarded$0 = null;
         int var3 = tg.field_f[param2][param0];
-        if (!(!ke.a(100, var3))) {
+        if (param1 != 380) {
+            discarded$0 = qd.a(false, false, 41, (byte) -8, 52);
+        }
+        if (!(!ke.a(param1 ^ 280, var3))) {
             return 380;
         }
         return tg.field_j[param2];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Creating your account";
         field_b = "This password contains your Player Name, and would be easy to guess";
         field_e = new String[]{null, "This is the <%highlight>Dragons of Renown</col> table. It shows a list of all the players in the realm of Dungaria, sorted by their Renown. You can choose to start a raid against any of these players.<br><br><%command>Scroll through the list and examine your potential targets.</col>"};

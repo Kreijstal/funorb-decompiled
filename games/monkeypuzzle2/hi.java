@@ -13,7 +13,7 @@ final class hi {
         field_a = null;
         field_b = null;
         if (param0 != -32) {
-            field_b = null;
+            field_b = (dk) null;
         }
     }
 
@@ -22,6 +22,7 @@ final class hi {
 
     final void a(int param0, byte[] param1, gk param2) {
         try {
+            int discarded$2 = 0;
             Exception exception = null;
             RuntimeException runtimeException = null;
             RuntimeException stackIn_14_0 = null;
@@ -58,17 +59,17 @@ final class hi {
             try {
               L0: {
                 L1: {
-                  if (param2.field_g[param2.field_h] != 31) {
+                  if ((param2.field_g[param2.field_h] ^ -1) != -32) {
                     break L1;
                   } else {
                     if (param2.field_g[param2.field_h + 1] != -117) {
                       break L1;
                     } else {
                       L2: {
-                        if (null != ((hi) this).field_d) {
+                        if (null != this.field_d) {
                           break L2;
                         } else {
-                          ((hi) this).field_d = new java.util.zip.Inflater(true);
+                          this.field_d = new java.util.zip.Inflater(true);
                           break L2;
                         }
                       }
@@ -82,17 +83,17 @@ final class hi {
                               break L4;
                             }
                           }
-                          ((hi) this).field_d.setInput(param2.field_g, param2.field_h + 10, -param2.field_h - 18 + param2.field_g.length);
-                          int discarded$2 = ((hi) this).field_d.inflate(param1);
+                          this.field_d.setInput(param2.field_g, param2.field_h + 10, -param2.field_h - 10 - 8 + param2.field_g.length);
+                          discarded$2 = this.field_d.inflate(param1);
                           break L3;
                         }
                       } catch (java.lang.Exception decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
                         exception = (Exception) (Object) decompiledCaughtException;
-                        ((hi) this).field_d.reset();
+                        this.field_d.reset();
                         throw new RuntimeException("");
                       }
-                      ((hi) this).field_d.reset();
+                      this.field_d.reset();
                       break L0;
                     }
                   }
@@ -103,23 +104,23 @@ final class hi {
               decompiledCaughtException = decompiledCaughtParameter1;
               L5: {
                 runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_13_0 = (RuntimeException) runtimeException;
+                stackOut_13_0 = (RuntimeException) (runtimeException);
                 stackOut_13_1 = new StringBuilder().append("hi.B(").append(param0).append(',');
                 stackIn_15_0 = stackOut_13_0;
                 stackIn_15_1 = stackOut_13_1;
                 stackIn_14_0 = stackOut_13_0;
                 stackIn_14_1 = stackOut_13_1;
                 if (param1 == null) {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+                  stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
                   stackOut_15_2 = "null";
                   stackIn_16_0 = stackOut_15_0;
                   stackIn_16_1 = stackOut_15_1;
                   stackIn_16_2 = stackOut_15_2;
                   break L5;
                 } else {
-                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+                  stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
                   stackOut_14_2 = "{...}";
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_16_1 = stackOut_14_1;
@@ -128,23 +129,23 @@ final class hi {
                 }
               }
               L6: {
-                stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+                stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
                 stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;
                 stackIn_17_1 = stackOut_16_1;
                 if (param2 == null) {
-                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
                   stackOut_18_2 = "null";
                   stackIn_19_0 = stackOut_18_0;
                   stackIn_19_1 = stackOut_18_1;
                   stackIn_19_2 = stackOut_18_2;
                   break L6;
                 } else {
-                  stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-                  stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                  stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+                  stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
                   stackOut_17_2 = "{...}";
                   stackIn_19_0 = stackOut_17_0;
                   stackIn_19_1 = stackOut_17_1;
@@ -152,7 +153,7 @@ final class hi {
                   break L6;
                 }
               }
-              throw la.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+              throw la.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

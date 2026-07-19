@@ -46,6 +46,7 @@ final class vd extends um {
         RuntimeException stackIn_57_0 = null;
         StringBuilder stackIn_57_1 = null;
         String stackIn_57_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_16_0 = null;
         Object stackOut_18_0 = null;
@@ -76,48 +77,49 @@ final class vd extends um {
         try {
           L0: {
             L1: {
-              if (!((vd) this).field_I) {
+              if (!this.field_I) {
                 break L1;
               } else {
                 if (param2) {
                   L2: {
-                    if (((vd) this).field_C > 0) {
+                    if ((this.field_C ^ -1) < -1) {
                       L3: {
-                        if (null == ((vd) this).field_F) {
+                        if (null == this.field_F) {
                           break L3;
                         } else {
-                          ((vd) this).field_A.c((byte) 108);
+                          this.field_A.c((byte) 108);
                           break L3;
                         }
                       }
-                      ((vd) this).field_F = param1;
+                      this.field_F = param1;
                       if (param1 != null) {
-                        ((vd) this).field_A.a(false, param1, (byte) 2);
-                        this.a(param5, param3, (byte) -117, ((vd) this).field_A);
+                        this.field_A.a(false, param1, (byte) 2);
+                        this.a(param5, param3, (byte) -117, this.field_A);
                         break L2;
                       } else {
                         break L2;
                       }
                     } else {
                       L4: {
-                        if (((vd) this).field_E == null) {
+                        if (this.field_E == null) {
                           break L4;
                         } else {
-                          ((vd) this).field_J.c((byte) 108);
+                          this.field_J.c((byte) 108);
                           break L4;
                         }
                       }
-                      ((vd) this).field_E = param1;
+                      this.field_E = param1;
                       if (param1 != null) {
-                        ((vd) this).field_J.a(false, param1, (byte) 2);
-                        this.a(param5, param3, (byte) -117, ((vd) this).field_J);
+                        this.field_J.a(false, param1, (byte) 2);
+                        this.a(param5, param3, (byte) -117, this.field_J);
                         break L2;
                       } else {
                         break L2;
                       }
                     }
                   }
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   break L1;
                 }
@@ -141,24 +143,25 @@ final class vd extends um {
                 break L5;
               }
             }
-            ((vd) this).field_I = stackIn_19_1 != 0;
-            if (param1 == ((vd) this).field_F) {
-              ((vd) this).field_C = param4;
-              this.a(param5, param3, (byte) -117, ((vd) this).field_A);
-              return;
+            ((vd) (this)).field_I = stackIn_19_1 != 0;
+            if (param1 == this.field_F) {
+              this.field_C = param4;
+              this.a(param5, param3, (byte) -117, this.field_A);
+              decompiledRegionSelector0 = 2;
+              break L0;
             } else {
-              if (((vd) this).field_E != param1) {
+              if (this.field_E != param1) {
                 L6: {
-                  if (null == ((vd) this).field_F) {
+                  if (null == this.field_F) {
                     var7_int = 1;
                     break L6;
                   } else {
-                    if (((vd) this).field_E == null) {
+                    if (this.field_E == null) {
                       var7_int = 0;
                       break L6;
                     } else {
                       L7: {
-                        if (((vd) this).field_t >= 524288) {
+                        if (this.field_t >= 524288) {
                           stackOut_29_0 = 0;
                           stackIn_30_0 = stackOut_29_0;
                           break L7;
@@ -176,30 +179,30 @@ final class vd extends um {
                 L8: {
                   if (var7_int == 0) {
                     L9: {
-                      if (((vd) this).field_E != null) {
-                        ((vd) this).field_J.c((byte) 108);
+                      if (this.field_E != null) {
+                        this.field_J.c((byte) 108);
                         break L9;
                       } else {
                         break L9;
                       }
                     }
                     L10: {
-                      ((vd) this).field_E = param1;
+                      this.field_E = param1;
                       if (param1 == null) {
                         break L10;
                       } else {
                         L11: {
-                          stackOut_46_0 = ((vd) this).field_J;
+                          stackOut_46_0 = this.field_J;
                           stackIn_48_0 = stackOut_46_0;
                           stackIn_47_0 = stackOut_46_0;
                           if (param2) {
-                            stackOut_48_0 = (di) (Object) stackIn_48_0;
+                            stackOut_48_0 = (di) ((Object) stackIn_48_0);
                             stackOut_48_1 = 0;
                             stackIn_49_0 = stackOut_48_0;
                             stackIn_49_1 = stackOut_48_1;
                             break L11;
                           } else {
-                            stackOut_47_0 = (di) (Object) stackIn_47_0;
+                            stackOut_47_0 = (di) ((Object) stackIn_47_0);
                             stackOut_47_1 = 1;
                             stackIn_49_0 = stackOut_47_0;
                             stackIn_49_1 = stackOut_47_1;
@@ -207,38 +210,38 @@ final class vd extends um {
                           }
                         }
                         ((di) (Object) stackIn_49_0).a(stackIn_49_1 != 0, param1, (byte) 2);
-                        this.a(param5, param3, (byte) -117, ((vd) this).field_J);
+                        this.a(param5, param3, (byte) -117, this.field_J);
                         break L10;
                       }
                     }
-                    ((vd) this).field_C = -param4;
+                    this.field_C = -param4;
                     break L8;
                   } else {
                     L12: {
-                      if (((vd) this).field_F == null) {
+                      if (this.field_F == null) {
                         break L12;
                       } else {
-                        ((vd) this).field_A.c((byte) 108);
+                        this.field_A.c((byte) 108);
                         break L12;
                       }
                     }
                     L13: {
-                      ((vd) this).field_F = param1;
+                      this.field_F = param1;
                       if (param1 == null) {
                         break L13;
                       } else {
                         L14: {
-                          stackOut_37_0 = ((vd) this).field_A;
+                          stackOut_37_0 = this.field_A;
                           stackIn_39_0 = stackOut_37_0;
                           stackIn_38_0 = stackOut_37_0;
                           if (param2) {
-                            stackOut_39_0 = (di) (Object) stackIn_39_0;
+                            stackOut_39_0 = (di) ((Object) stackIn_39_0);
                             stackOut_39_1 = 0;
                             stackIn_40_0 = stackOut_39_0;
                             stackIn_40_1 = stackOut_39_1;
                             break L14;
                           } else {
-                            stackOut_38_0 = (di) (Object) stackIn_38_0;
+                            stackOut_38_0 = (di) ((Object) stackIn_38_0);
                             stackOut_38_1 = 1;
                             stackIn_40_0 = stackOut_38_0;
                             stackIn_40_1 = stackOut_38_1;
@@ -246,11 +249,11 @@ final class vd extends um {
                           }
                         }
                         ((di) (Object) stackIn_40_0).a(stackIn_40_1 != 0, param1, (byte) 2);
-                        this.a(param5, param3, (byte) -117, ((vd) this).field_A);
+                        this.a(param5, param3, (byte) -117, this.field_A);
                         break L13;
                       }
                     }
-                    ((vd) this).field_C = param4;
+                    this.field_C = param4;
                     break L8;
                   }
                 }
@@ -258,15 +261,17 @@ final class vd extends um {
                   if (!param0) {
                     break L15;
                   } else {
-                    ((vd) this).field_G = null;
+                    this.field_G = (int[]) null;
                     break L15;
                   }
                 }
+                decompiledRegionSelector0 = 3;
                 break L0;
               } else {
-                ((vd) this).field_C = -param4;
-                this.a(param5, param3, (byte) -117, ((vd) this).field_J);
-                return;
+                this.field_C = -param4;
+                this.a(param5, param3, (byte) -117, this.field_J);
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -274,23 +279,23 @@ final class vd extends um {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var7 = decompiledCaughtException;
-            stackOut_54_0 = (RuntimeException) var7;
+            stackOut_54_0 = (RuntimeException) (var7);
             stackOut_54_1 = new StringBuilder().append("vd.F(").append(param0).append(',');
             stackIn_56_0 = stackOut_54_0;
             stackIn_56_1 = stackOut_54_1;
             stackIn_55_0 = stackOut_54_0;
             stackIn_55_1 = stackOut_54_1;
             if (param1 == null) {
-              stackOut_56_0 = (RuntimeException) (Object) stackIn_56_0;
-              stackOut_56_1 = (StringBuilder) (Object) stackIn_56_1;
+              stackOut_56_0 = (RuntimeException) ((Object) stackIn_56_0);
+              stackOut_56_1 = (StringBuilder) ((Object) stackIn_56_1);
               stackOut_56_2 = "null";
               stackIn_57_0 = stackOut_56_0;
               stackIn_57_1 = stackOut_56_1;
               stackIn_57_2 = stackOut_56_2;
               break L16;
             } else {
-              stackOut_55_0 = (RuntimeException) (Object) stackIn_55_0;
-              stackOut_55_1 = (StringBuilder) (Object) stackIn_55_1;
+              stackOut_55_0 = (RuntimeException) ((Object) stackIn_55_0);
+              stackOut_55_1 = (StringBuilder) ((Object) stackIn_55_1);
               stackOut_55_2 = "{...}";
               stackIn_57_0 = stackOut_55_0;
               stackIn_57_1 = stackOut_55_1;
@@ -298,81 +303,160 @@ final class vd extends um {
               break L16;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_57_0), stackIn_57_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
     private final void a(int param0, int param1, byte param2, di param3) {
-        try {
-            param3.a(param0, true, -1);
-            param3.c(param1, -102);
-        } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "vd.B(" + param0 + ',' + param1 + ',' + -117 + ',' + (param3 != null ? "{...}" : "null") + ')');
-        }
-    }
-
-    final synchronized void a(int param0, int param1) {
-        ((vd) this).field_B = param1;
-        if (param0 < 43) {
-            ((vd) this).field_G = null;
-        }
-    }
-
-    final static void a(byte param0, java.awt.Component param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException var5 = null;
+        mj var6 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         try {
           L0: {
-            param1.removeMouseListener((java.awt.event.MouseListener) (Object) lb.field_y);
-            param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) lb.field_y);
-            param1.removeFocusListener((java.awt.event.FocusListener) (Object) lb.field_y);
-            qd.field_J = 0;
+            L1: {
+              param3.a(param0, true, -1);
+              if (param2 != -117) {
+                var6 = (mj) null;
+                vd.a(36, 70, (mj) null);
+                param3.c(param1, -102);
+                break L1;
+              } else {
+                param3.c(param1, -102);
+                break L1;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("vd.H(").append(-106).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) (var5);
+            stackOut_5_1 = new StringBuilder().append("vd.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param3 == null) {
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+        }
+    }
+
+    final synchronized void a(int param0, int param1) {
+        this.field_B = param1;
+        if (param0 < 43) {
+            this.field_G = (int[]) null;
+        }
+    }
+
+    final static void a(byte param0, java.awt.Component param1) {
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              param1.removeMouseListener(lb.field_y);
+              param1.removeMouseMotionListener(lb.field_y);
+              param1.removeFocusListener(lb.field_y);
+              qd.field_J = 0;
+              if (param0 == -106) {
+                break L1;
+              } else {
+                field_z = 13;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
+            stackOut_3_1 = new StringBuilder().append("vd.H(").append(param0).append(',');
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw lj.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -380,74 +464,74 @@ final class vd extends um {
         int var3 = 0;
         L0: {
           var3 = MinerDisturbance.field_ab;
-          if (((vd) this).field_t <= 0) {
-            if (1048576 > ((vd) this).field_t) {
-              if (null == ((vd) this).field_E) {
+          if (-1 <= (this.field_t ^ -1)) {
+            if (1048576 > this.field_t) {
+              if (null == this.field_E) {
                 break L0;
               } else {
-                ((vd) this).field_J.a(param0);
+                this.field_J.a(param0);
                 break L0;
               }
             } else {
-              if (1048576 <= ((vd) this).field_t) {
+              if (1048576 <= this.field_t) {
                 break L0;
               } else {
-                if (null == ((vd) this).field_E) {
+                if (null == this.field_E) {
                   break L0;
                 } else {
-                  ((vd) this).field_J.a(param0);
+                  this.field_J.a(param0);
                   break L0;
                 }
               }
             }
           } else {
-            if (1048576 <= ((vd) this).field_t) {
+            if (1048576 <= this.field_t) {
               break L0;
             } else {
-              if (null == ((vd) this).field_E) {
+              if (null == this.field_E) {
                 break L0;
               } else {
-                ((vd) this).field_J.a(param0);
+                this.field_J.a(param0);
                 break L0;
               }
             }
           }
         }
         L1: {
-          if (0 >= ((vd) this).field_D) {
+          if (0 >= this.field_D) {
             break L1;
           } else {
-            if (((vd) this).field_u == null) {
+            if (this.field_u == null) {
               break L1;
             } else {
-              ((vd) this).field_w.a(param0);
+              this.field_w.a(param0);
               break L1;
             }
           }
         }
         L2: {
-          if (((vd) this).field_I) {
+          if (this.field_I) {
             L3: {
-              if (((vd) this).field_C <= 0) {
+              if (-1 <= (this.field_C ^ -1)) {
                 break L3;
               } else {
-                if (((vd) this).field_A.b((byte) -114)) {
+                if (this.field_A.b((byte) -114)) {
                   break L3;
                 } else {
-                  ((vd) this).field_I = false;
-                  ((vd) this).field_F = null;
-                  ((vd) this).field_C = -((vd) this).field_C;
+                  this.field_I = false;
+                  this.field_F = null;
+                  this.field_C = -this.field_C;
                   break L2;
                 }
               }
             }
-            if (((vd) this).field_C >= 0) {
+            if (-1 >= (this.field_C ^ -1)) {
               break L2;
             } else {
-              if (!((vd) this).field_J.b((byte) -114)) {
-                ((vd) this).field_C = -((vd) this).field_C;
-                ((vd) this).field_E = null;
-                ((vd) this).field_I = false;
+              if (!this.field_J.b((byte) -114)) {
+                this.field_C = -this.field_C;
+                this.field_E = null;
+                this.field_I = false;
                 break L2;
               } else {
                 break L2;
@@ -458,51 +542,51 @@ final class vd extends um {
           }
         }
         L4: {
-          if (0 == ((vd) this).field_C) {
+          if (0 == this.field_C) {
             break L4;
           } else {
-            ((vd) this).field_t = ((vd) this).field_t + ((vd) this).field_C * param0;
-            if (((vd) this).field_t < 1048576) {
-              if (((vd) this).field_t > 0) {
+            this.field_t = this.field_t + this.field_C * param0;
+            if (-1048577 < (this.field_t ^ -1)) {
+              if (-1 > (this.field_t ^ -1)) {
                 break L4;
               } else {
-                ((vd) this).field_t = 0;
-                if (((vd) this).field_I) {
+                this.field_t = 0;
+                if (this.field_I) {
                   break L4;
                 } else {
-                  ((vd) this).field_C = 0;
-                  if (((vd) this).field_v) {
+                  this.field_C = 0;
+                  if (this.field_v) {
                     break L4;
                   } else {
                     L5: {
-                      if (null != ((vd) this).field_F) {
-                        ((vd) this).field_A.c((byte) 108);
+                      if (null != this.field_F) {
+                        this.field_A.c((byte) 108);
                         break L5;
                       } else {
                         break L5;
                       }
                     }
-                    ((vd) this).field_F = null;
+                    this.field_F = null;
                     break L4;
                   }
                 }
               }
             } else {
-              ((vd) this).field_t = 1048576;
-              if (!((vd) this).field_I) {
-                ((vd) this).field_C = 0;
-                if (((vd) this).field_v) {
+              this.field_t = 1048576;
+              if (!this.field_I) {
+                this.field_C = 0;
+                if (this.field_v) {
                   break L4;
                 } else {
                   L6: {
-                    if (null == ((vd) this).field_E) {
+                    if (null == this.field_E) {
                       break L6;
                     } else {
-                      ((vd) this).field_J.c((byte) 108);
+                      this.field_J.c((byte) 108);
                       break L6;
                     }
                   }
-                  ((vd) this).field_E = null;
+                  this.field_E = null;
                   break L4;
                 }
               } else {
@@ -523,7 +607,7 @@ final class vd extends um {
 
     public static void e(int param0) {
         field_s = null;
-        int var1 = 7;
+        int var1 = 29 / ((param0 - -82) / 42);
         field_x = null;
         field_r = null;
     }
@@ -552,6 +636,7 @@ final class vd extends um {
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         String stackIn_73_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_37_0 = 0;
         int stackOut_36_0 = 0;
@@ -570,35 +655,36 @@ final class vd extends um {
         var11 = MinerDisturbance.field_ab;
         try {
           L0: {
-            if (((vd) this).field_B <= 0) {
-              ((vd) this).a(param2);
-              return;
+            if (this.field_B <= 0) {
+              this.a(param2);
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
-                if (!((vd) this).field_I) {
+                if (!this.field_I) {
                   break L1;
                 } else {
                   L2: {
-                    if (((vd) this).field_C <= 0) {
+                    if ((this.field_C ^ -1) >= -1) {
                       break L2;
                     } else {
-                      if (!((vd) this).field_A.b((byte) -114)) {
-                        ((vd) this).field_F = null;
-                        ((vd) this).field_I = false;
-                        ((vd) this).field_C = -((vd) this).field_C;
+                      if (!this.field_A.b((byte) -114)) {
+                        this.field_F = null;
+                        this.field_I = false;
+                        this.field_C = -this.field_C;
                         break L1;
                       } else {
                         break L2;
                       }
                     }
                   }
-                  if (((vd) this).field_C >= 0) {
+                  if (-1 >= (this.field_C ^ -1)) {
                     break L1;
                   } else {
-                    if (!((vd) this).field_J.b((byte) -114)) {
-                      ((vd) this).field_E = null;
-                      ((vd) this).field_I = false;
-                      ((vd) this).field_C = -((vd) this).field_C;
+                    if (!this.field_J.b((byte) -114)) {
+                      this.field_E = null;
+                      this.field_I = false;
+                      this.field_C = -this.field_C;
                       break L1;
                     } else {
                       break L1;
@@ -607,24 +693,24 @@ final class vd extends um {
                 }
               }
               L3: {
-                var4_int = ((vd) this).field_B * (((vd) this).field_t >> 12) / 256;
-                var5 = ((vd) this).field_B - var4_int;
-                if (0 != ((vd) this).field_C) {
-                  ((vd) this).field_t = ((vd) this).field_t + param2 * ((vd) this).field_C;
-                  if (((vd) this).field_t >= 1048576) {
-                    ((vd) this).field_t = 1048576;
-                    if (!((vd) this).field_I) {
-                      ((vd) this).field_C = 0;
-                      if (!((vd) this).field_v) {
+                var4_int = this.field_B * (this.field_t >> 556325420) / 256;
+                var5 = this.field_B - var4_int;
+                if (0 != this.field_C) {
+                  this.field_t = this.field_t + param2 * this.field_C;
+                  if ((this.field_t ^ -1) <= -1048577) {
+                    this.field_t = 1048576;
+                    if (!this.field_I) {
+                      this.field_C = 0;
+                      if (!this.field_v) {
                         L4: {
-                          if (((vd) this).field_E != null) {
-                            ((vd) this).field_J.c((byte) 108);
+                          if (this.field_E != null) {
+                            this.field_J.c((byte) 108);
                             break L4;
                           } else {
                             break L4;
                           }
                         }
-                        ((vd) this).field_E = null;
+                        this.field_E = null;
                         break L3;
                       } else {
                         break L3;
@@ -633,20 +719,20 @@ final class vd extends um {
                       break L3;
                     }
                   } else {
-                    if (((vd) this).field_t <= 0) {
-                      ((vd) this).field_t = 0;
-                      if (!((vd) this).field_I) {
-                        ((vd) this).field_C = 0;
-                        if (!((vd) this).field_v) {
+                    if (-1 <= (this.field_t ^ -1)) {
+                      this.field_t = 0;
+                      if (!this.field_I) {
+                        this.field_C = 0;
+                        if (!this.field_v) {
                           L5: {
-                            if (((vd) this).field_F != null) {
-                              ((vd) this).field_A.c((byte) 108);
+                            if (this.field_F != null) {
+                              this.field_A.c((byte) 108);
                               break L5;
                             } else {
                               break L5;
                             }
                           }
-                          ((vd) this).field_F = null;
+                          this.field_F = null;
                           break L3;
                         } else {
                           break L3;
@@ -664,7 +750,7 @@ final class vd extends um {
               }
               L6: {
                 if (fj.field_u) {
-                  stackOut_37_0 = param2 << 1;
+                  stackOut_37_0 = param2 << 1462233249;
                   stackIn_38_0 = stackOut_37_0;
                   break L6;
                 } else {
@@ -675,14 +761,14 @@ final class vd extends um {
               }
               L7: {
                 var6 = stackIn_38_0;
-                if (256 <= ((vd) this).field_D) {
+                if (256 <= this.field_D) {
                   break L7;
                 } else {
                   L8: {
-                    if (((vd) this).field_F != null) {
+                    if (this.field_F != null) {
                       break L8;
                     } else {
-                      if (((vd) this).field_E == null) {
+                      if (this.field_E == null) {
                         break L7;
                       } else {
                         break L8;
@@ -690,28 +776,28 @@ final class vd extends um {
                     }
                   }
                   if (var4_int != 256) {
-                    if (var5 != 256) {
+                    if ((var5 ^ -1) != -257) {
                       L9: {
                         L10: {
-                          if (null == ((vd) this).field_G) {
+                          if (null == this.field_G) {
                             break L10;
                           } else {
-                            if (((vd) this).field_G.length < var6) {
+                            if (this.field_G.length < var6) {
                               break L10;
                             } else {
-                              ai.a(((vd) this).field_G, 0, var6);
-                              ai.a(((vd) this).field_H, 0, var6);
+                              ai.a(this.field_G, 0, var6);
+                              ai.a(this.field_H, 0, var6);
                               break L9;
                             }
                           }
                         }
-                        ((vd) this).field_G = new int[var6];
-                        ((vd) this).field_H = new int[var6];
+                        this.field_G = new int[var6];
+                        this.field_H = new int[var6];
                         break L9;
                       }
                       L11: {
-                        ((vd) this).field_A.a(((vd) this).field_G, 0, param2);
-                        ((vd) this).field_J.a(((vd) this).field_H, 0, param2);
+                        this.field_A.a(this.field_G, 0, param2);
+                        this.field_J.a(this.field_H, 0, param2);
                         if (!fj.field_u) {
                           stackOut_52_0 = param1;
                           stackIn_53_0 = stackOut_52_0;
@@ -726,50 +812,50 @@ final class vd extends um {
                       var7 = stackIn_53_0;
                       var8 = 0;
                       L12: while (true) {
-                        if (~var6 >= ~var8) {
+                        if (var6 <= var8) {
                           break L7;
                         } else {
-                          param0[var7 - -var8] = param0[var7 - -var8] + (((vd) this).field_H[var8] * var5 + var4_int * ((vd) this).field_G[var8] >> 8);
+                          param0[var7 - -var8] = param0[var7 - -var8] + (this.field_H[var8] * var5 + var4_int * this.field_G[var8] >> -1748915320);
                           var8++;
                           continue L12;
                         }
                       }
                     } else {
-                      ((vd) this).field_J.a(param0, param1, param2);
+                      this.field_J.a(param0, param1, param2);
                       break L7;
                     }
                   } else {
-                    ((vd) this).field_A.a(param0, param1, param2);
+                    this.field_A.a(param0, param1, param2);
                     break L7;
                   }
                 }
               }
               L13: {
-                if (null == ((vd) this).field_u) {
+                if (null == this.field_u) {
                   break L13;
                 } else {
-                  if (((vd) this).field_D == 0) {
+                  if (this.field_D == 0) {
                     break L13;
                   } else {
                     L14: {
                       L15: {
-                        if (((vd) this).field_G == null) {
+                        if (this.field_G == null) {
                           break L15;
                         } else {
-                          if (~var6 >= ~((vd) this).field_G.length) {
-                            ai.a(((vd) this).field_G, 0, var6);
+                          if (var6 <= this.field_G.length) {
+                            ai.a(this.field_G, 0, var6);
                             break L14;
                           } else {
                             break L15;
                           }
                         }
                       }
-                      ((vd) this).field_G = new int[var6];
-                      ((vd) this).field_H = new int[var6];
+                      this.field_G = new int[var6];
+                      this.field_H = new int[var6];
                       break L14;
                     }
                     L16: {
-                      ((vd) this).field_w.a(((vd) this).field_G, 0, param2);
+                      this.field_w.a(this.field_G, 0, param2);
                       if (!fj.field_u) {
                         stackOut_65_0 = param1;
                         stackIn_66_0 = stackOut_65_0;
@@ -782,14 +868,14 @@ final class vd extends um {
                       }
                     }
                     var7 = stackIn_66_0;
-                    var8 = ((vd) this).field_B * ((vd) this).field_D / 256;
-                    var9 = -var8 + ((vd) this).field_B;
+                    var8 = this.field_B * this.field_D / 256;
+                    var9 = -var8 + this.field_B;
                     var10 = 0;
                     L17: while (true) {
                       if (var6 <= var10) {
                         break L13;
                       } else {
-                        param0[var10 + var7] = ((vd) this).field_G[var10] * var8 + param0[var10 + var7] * var9 >> 8;
+                        param0[var10 + var7] = this.field_G[var10] * var8 + param0[var10 + var7] * var9 >> 816404968;
                         var10++;
                         continue L17;
                       }
@@ -797,6 +883,7 @@ final class vd extends um {
                   }
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -804,23 +891,23 @@ final class vd extends um {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var4 = decompiledCaughtException;
-            stackOut_70_0 = (RuntimeException) var4;
+            stackOut_70_0 = (RuntimeException) (var4);
             stackOut_70_1 = new StringBuilder().append("vd.R(");
             stackIn_72_0 = stackOut_70_0;
             stackIn_72_1 = stackOut_70_1;
             stackIn_71_0 = stackOut_70_0;
             stackIn_71_1 = stackOut_70_1;
             if (param0 == null) {
-              stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
-              stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
+              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
               stackOut_72_2 = "null";
               stackIn_73_0 = stackOut_72_0;
               stackIn_73_1 = stackOut_72_1;
               stackIn_73_2 = stackOut_72_2;
               break L18;
             } else {
-              stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
-              stackOut_71_1 = (StringBuilder) (Object) stackIn_71_1;
+              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
               stackOut_71_2 = "{...}";
               stackIn_73_0 = stackOut_71_0;
               stackIn_73_1 = stackOut_71_1;
@@ -828,7 +915,12 @@ final class vd extends um {
               break L18;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_73_0, stackIn_73_2 + ',' + param1 + ',' + param2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_73_0), stackIn_73_2 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -836,11 +928,14 @@ final class vd extends um {
         ld var3 = null;
         try {
             var3 = sn.field_c;
-            var3.d((byte) -93, 7);
+            if (param1 != -3450) {
+                field_y = -61;
+            }
+            var3.d((byte) -93, param0);
             var3.c(param2.field_r, 25564);
             var3.c(param2.field_q, 25564);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "vd.A(" + 7 + ',' + -3450 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "vd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -849,10 +944,6 @@ final class vd extends um {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Please enter your age in years";
         field_y = -1;
         field_s = new boolean[35];

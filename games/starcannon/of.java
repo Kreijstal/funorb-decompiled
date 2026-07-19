@@ -11,6 +11,9 @@ final class of extends rf {
     public static void a(boolean param0) {
         field_j = null;
         field_g = null;
+        if (!param0) {
+            field_j = (String) null;
+        }
     }
 
     private of() throws Throwable {
@@ -18,10 +21,6 @@ final class of extends rf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "You have 1 unread message!";
         field_f = 0;
     }

@@ -2,8 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.io.*;
-import java.net.URL;
-import java.lang.String;
 
 abstract class gb {
     static he field_e;
@@ -29,23 +27,27 @@ abstract class gb {
     abstract void a(Object param0, boolean param1, byte param2);
 
     final int c(byte param0) {
+        int discarded$2 = 0;
         if (param0 >= -64) {
-          int discarded$2 = ((gb) this).c((byte) -91);
-          return ((gb) this).field_i.b(1423132065) + ((gb) this).field_m.b(1423132065);
+          discarded$2 = this.c((byte) -91);
+          return this.field_i.b(1423132065) + this.field_m.b(1423132065);
         } else {
-          return ((gb) this).field_i.b(1423132065) + ((gb) this).field_m.b(1423132065);
+          return this.field_i.b(1423132065) + this.field_m.b(1423132065);
         }
     }
 
     public static void b(int param0) {
         field_e = null;
+        if (param0 != 6) {
+            field_e = (he) null;
+        }
     }
 
     final boolean a(boolean param0) {
         if (!param0) {
             return false;
         }
-        return 20 <= ((gb) this).c((byte) -74) ? true : false;
+        return 20 <= this.c((byte) -74) ? true : false;
     }
 
     final boolean c(int param0) {
@@ -57,8 +59,8 @@ abstract class gb {
         int stackOut_2_0 = 0;
         if (param0 != 20) {
           L0: {
-            ((gb) this).field_l = null;
-            if (((gb) this).a(111) < 20) {
+            this.field_l = (od) null;
+            if (this.a(111) < 20) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -71,7 +73,7 @@ abstract class gb {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((gb) this).a(111) < 20) {
+            if (this.a(111) < 20) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -90,30 +92,31 @@ abstract class gb {
     }
 
     final cm a(int param0, int param1, byte param2, int param3, boolean param4) {
-        long var6 = ((long)param0 << 32) - -(long)param3;
+        long var6 = ((long)param0 << 1464713376) - -(long)param3;
         cm var8 = new cm();
         if (param1 != 11259) {
-            return null;
+            return (cm) null;
         }
         var8.field_y = param4 ? true : false;
         var8.field_N = param2;
         var8.field_t = var6;
         if (param4) {
-            if (!(((gb) this).c((byte) -115) < 20)) {
+            if (!(-21 < (this.c((byte) -115) ^ -1))) {
                 throw new RuntimeException();
             }
-            ((gb) this).field_i.a((uh) (Object) var8, 0);
+            this.field_i.a(var8, 0);
         } else {
-            if (!(20 > ((gb) this).a(100))) {
+            if (!(20 > this.a(100))) {
                 throw new RuntimeException();
             }
-            ((gb) this).field_f.a((uh) (Object) var8, 0);
+            this.field_f.a(var8, 0);
         }
         return var8;
     }
 
     final static void a(Throwable param0, String param1, int param2) {
         try {
+            int discarded$1 = 0;
             Exception var3 = null;
             String var3_ref = null;
             il var4 = null;
@@ -142,6 +145,7 @@ abstract class gb {
             java.net.URL stackIn_14_4 = null;
             StringBuilder stackIn_14_5 = null;
             String stackIn_14_6 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             bl stackOut_11_0 = null;
             int stackOut_11_1 = 0;
@@ -218,12 +222,12 @@ abstract class gb {
                       stackIn_12_4 = stackOut_11_4;
                       stackIn_12_5 = stackOut_11_5;
                       if (null == bi.field_J) {
-                        stackOut_13_0 = (bl) (Object) stackIn_13_0;
+                        stackOut_13_0 = (bl) ((Object) stackIn_13_0);
                         stackOut_13_1 = stackIn_13_1;
                         stackOut_13_2 = null;
                         stackOut_13_3 = null;
-                        stackOut_13_4 = (java.net.URL) (Object) stackIn_13_4;
-                        stackOut_13_5 = (StringBuilder) (Object) stackIn_13_5;
+                        stackOut_13_4 = (java.net.URL) ((Object) stackIn_13_4);
+                        stackOut_13_5 = (StringBuilder) ((Object) stackIn_13_5);
                         stackOut_13_6 = "" + sf.field_l;
                         stackIn_14_0 = stackOut_13_0;
                         stackIn_14_1 = stackOut_13_1;
@@ -234,12 +238,12 @@ abstract class gb {
                         stackIn_14_6 = stackOut_13_6;
                         break L4;
                       } else {
-                        stackOut_12_0 = (bl) (Object) stackIn_12_0;
+                        stackOut_12_0 = (bl) ((Object) stackIn_12_0);
                         stackOut_12_1 = stackIn_12_1;
                         stackOut_12_2 = null;
                         stackOut_12_3 = null;
-                        stackOut_12_4 = (java.net.URL) (Object) stackIn_12_4;
-                        stackOut_12_5 = (StringBuilder) (Object) stackIn_12_5;
+                        stackOut_12_4 = (java.net.URL) ((Object) stackIn_12_4);
+                        stackOut_12_5 = (StringBuilder) ((Object) stackIn_12_5);
                         stackOut_12_6 = bi.field_J;
                         stackIn_14_0 = stackOut_12_0;
                         stackIn_14_1 = stackOut_12_1;
@@ -255,9 +259,10 @@ abstract class gb {
                     L5: while (true) {
                       if (var4.field_b != 0) {
                         if (var4.field_b == 1) {
-                          var5 = (DataInputStream) var4.field_g;
-                          int discarded$1 = var5.read();
+                          var5 = (DataInputStream) (var4.field_g);
+                          discarded$1 = var5.read();
                           var5.close();
+                          decompiledRegionSelector0 = 2;
                           break L0;
                         } else {
                           return;
@@ -268,16 +273,27 @@ abstract class gb {
                       }
                     }
                   } else {
-                    return;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (Exception) (Object) decompiledCaughtException;
               return;
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 1) {
+                return;
+              } else {
+                return;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -290,19 +306,19 @@ abstract class gb {
         if (param0 <= 63) {
             return 54;
         }
-        return ((gb) this).field_f.b(1423132065) - -((gb) this).field_b.b(1423132065);
+        return this.field_f.b(1423132065) - -this.field_b.b(1423132065);
     }
 
     gb() {
-        ((gb) this).field_i = new hl();
-        ((gb) this).field_m = new hl();
-        ((gb) this).field_f = new hl();
-        ((gb) this).field_b = new hl();
-        ((gb) this).field_l = new od(6);
-        ((gb) this).field_c = 0;
-        ((gb) this).field_a = (byte) 0;
-        ((gb) this).field_h = 0;
-        ((gb) this).field_g = new od(10);
+        this.field_i = new hl();
+        this.field_m = new hl();
+        this.field_f = new hl();
+        this.field_b = new hl();
+        this.field_l = new od(6);
+        this.field_c = 0;
+        this.field_a = (byte) 0;
+        this.field_h = 0;
+        this.field_g = new od(10);
     }
 
     static {

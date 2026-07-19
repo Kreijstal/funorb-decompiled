@@ -6,6 +6,12 @@ final class mc {
     static String field_a;
 
     public static void a(int param0) {
+        if (param0 != 8192) {
+            mc.a((byte) 46);
+            field_a = null;
+            field_b = null;
+            return;
+        }
         field_a = null;
         field_b = null;
     }
@@ -16,16 +22,12 @@ final class mc {
             cb.field_j = null;
         }
         if (param0 > -124) {
-            field_b = null;
+            field_b = (int[]) null;
             return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Passwords must be between 5 and 20 letters and numbers";
         field_b = new int[8192];
     }

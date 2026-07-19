@@ -29,10 +29,6 @@ final class mmb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mmb.A(";
         field_b = "You were disconnected after <%0> minutes for being idle";
         field_i = 512;

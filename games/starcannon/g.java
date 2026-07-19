@@ -61,15 +61,14 @@ final class g {
     }
 
     public static void b(int param0) {
+        if (param0 != -12837) {
+            return;
+        }
         field_b = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     }
 }

@@ -46,8 +46,8 @@ final class oq implements ntb {
         int stackOut_2_0 = 0;
         if (param0 > -115) {
           L0: {
-            ((oq) this).a(87);
-            if (((oq) this).field_b <= 0) {
+            this.a(87);
+            if ((this.field_b ^ -1) >= -1) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -60,7 +60,7 @@ final class oq implements ntb {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((oq) this).field_b <= 0) {
+            if ((this.field_b ^ -1) >= -1) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -75,12 +75,13 @@ final class oq implements ntb {
     }
 
     final void a(byte param0) {
+        int discarded$0 = 0;
         if (param0 <= 109) {
-            int discarded$0 = ((oq) this).a(false);
-            ((oq) this).field_b = 0;
+            discarded$0 = this.a(false);
+            this.field_b = 0;
             return;
         }
-        ((oq) this).field_b = 0;
+        this.field_b = 0;
     }
 
     public final void a(tv param0, int param1) {
@@ -94,6 +95,7 @@ final class oq implements ntb {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
@@ -106,10 +108,10 @@ final class oq implements ntb {
         try {
           L0: {
             L1: {
-              var5 = (oq) (Object) param0;
+              var5 = (oq) ((Object) param0);
               var4 = 0;
-              if (((oq) this).field_F != var5.field_F) {
-                System.out.println("int x has changed. before=" + var5.field_F + ", now=" + ((oq) this).field_F);
+              if (this.field_F != var5.field_F) {
+                System.out.println("int x has changed. before=" + var5.field_F + ", now=" + this.field_F);
                 var4 = 1;
                 break L1;
               } else {
@@ -118,26 +120,26 @@ final class oq implements ntb {
             }
             if (param1 < -19) {
               L2: {
-                if (var5.field_u != ((oq) this).field_u) {
+                if (var5.field_u != this.field_u) {
                   var4 = 1;
-                  System.out.println("int y has changed. before=" + var5.field_u + ", now=" + ((oq) this).field_u);
+                  System.out.println("int y has changed. before=" + var5.field_u + ", now=" + this.field_u);
                   break L2;
                 } else {
                   break L2;
                 }
               }
               L3: {
-                if (var5.field_r == ((oq) this).field_r) {
+                if (var5.field_r == this.field_r) {
                   break L3;
                 } else {
-                  System.out.println("int dx has changed. before=" + var5.field_r + ", now=" + ((oq) this).field_r);
+                  System.out.println("int dx has changed. before=" + var5.field_r + ", now=" + this.field_r);
                   var4 = 1;
                   break L3;
                 }
               }
               L4: {
-                if (var5.field_D != ((oq) this).field_D) {
-                  System.out.println("int dy has changed. before=" + var5.field_D + ", now=" + ((oq) this).field_D);
+                if (var5.field_D != this.field_D) {
+                  System.out.println("int dy has changed. before=" + var5.field_D + ", now=" + this.field_D);
                   var4 = 1;
                   break L4;
                 } else {
@@ -145,63 +147,65 @@ final class oq implements ntb {
                 }
               }
               L5: {
-                if (var5.field_b == ((oq) this).field_b) {
+                if (var5.field_b == this.field_b) {
                   break L5;
                 } else {
                   var4 = 1;
-                  System.out.println("int life has changed. before=" + var5.field_b + ", now=" + ((oq) this).field_b);
+                  System.out.println("int life has changed. before=" + var5.field_b + ", now=" + this.field_b);
                   break L5;
                 }
               }
               L6: {
-                if (var5.field_i == ((oq) this).field_i) {
+                if (var5.field_i == this.field_i) {
                   break L6;
                 } else {
                   var4 = 1;
-                  System.out.println("int fadestart has changed. before=" + var5.field_i + ", now=" + ((oq) this).field_i);
+                  System.out.println("int fadestart has changed. before=" + var5.field_i + ", now=" + this.field_i);
                   break L6;
                 }
               }
               L7: {
-                if (((oq) this).field_f == var5.field_f) {
+                if (this.field_f == var5.field_f) {
                   break L7;
                 } else {
-                  System.out.println("int type has changed. before=" + var5.field_f + ", now=" + ((oq) this).field_f);
+                  System.out.println("int type has changed. before=" + var5.field_f + ", now=" + this.field_f);
                   var4 = 1;
                   break L7;
                 }
               }
               if (var4 != 0) {
                 System.out.println("This instance of Particle has changed");
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var3;
+            stackOut_23_0 = (RuntimeException) (var3);
             stackOut_23_1 = new StringBuilder().append("oq.F(");
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L8;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -209,7 +213,12 @@ final class oq implements ntb {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -261,8 +270,8 @@ final class oq implements ntb {
         try {
           L0: {
             L1: {
-              var3_int = param1.a(((oq) this).field_F, (byte) 121);
-              var4 = param1.b(true, ((oq) this).field_u);
+              var3_int = param1.a(this.field_F, (byte) 121);
+              var4 = param1.b(true, this.field_u);
               if (param0 >= 108) {
                 break L1;
               } else {
@@ -272,18 +281,18 @@ final class oq implements ntb {
             }
             L2: {
               var5 = 255;
-              if (((oq) this).field_i <= 0) {
+              if (this.field_i <= 0) {
                 break L2;
               } else {
-                if (((oq) this).field_i <= ((oq) this).field_b) {
+                if (this.field_i <= this.field_b) {
                   break L2;
                 } else {
-                  var5 = ((oq) this).field_b * 255 / ((oq) this).field_i;
+                  var5 = this.field_b * 255 / this.field_i;
                   break L2;
                 }
               }
             }
-            if (omb.field_q == ((oq) this).field_f) {
+            if (omb.field_q == this.field_f) {
               L3: {
                 var6 = 16742144;
                 var7 = 400.0f * param1.field_a;
@@ -297,10 +306,10 @@ final class oq implements ntb {
               }
               L4: {
                 var9 = (int)var7;
-                if (((oq) this).field_r != 0) {
+                if (this.field_r != 0) {
                   break L4;
                 } else {
-                  if (((oq) this).field_D != 0) {
+                  if (this.field_D != 0) {
                     break L4;
                   } else {
                     jj.a(var6, (byte) 7, var4, var7, var8, var3_int);
@@ -308,9 +317,9 @@ final class oq implements ntb {
                   }
                 }
               }
-              var10 = param1.a((((oq) this).field_r << 2) + ((oq) this).field_F, (byte) 124);
-              var11 = param1.b(true, (((oq) this).field_D << 2) + ((oq) this).field_u);
-              if (var9 <= 1) {
+              var10 = param1.a((this.field_r << -264222142) + this.field_F, (byte) 124);
+              var11 = param1.b(true, (this.field_D << -1034078974) + this.field_u);
+              if (-2 <= (var9 ^ -1)) {
                 hha.a(var3_int, (byte) 66, var10, var4, var6, var11, var8);
                 return;
               } else {
@@ -318,14 +327,14 @@ final class oq implements ntb {
                 return;
               }
             } else {
-              if (tk.field_o > ((oq) this).field_f) {
+              if (tk.field_o > this.field_f) {
                 break L0;
               } else {
                 L5: {
-                  var6 = 8 * ((oq) this).field_i;
-                  var7_int = ((oq) this).field_i * 4 + 256;
-                  var8 = th.field_o * ((oq) this).field_i + ((oq) this).field_i;
-                  if (((oq) this).field_i <= 135) {
+                  var6 = 8 * this.field_i;
+                  var7_int = this.field_i * 4 + 256;
+                  var8 = th.field_o * this.field_i + this.field_i;
+                  if (-136 <= (this.field_i ^ -1)) {
                     break L5;
                   } else {
                     var8 = -var8;
@@ -340,26 +349,26 @@ final class oq implements ntb {
                 var14 = var7_int;
                 var15 = var6;
                 var16 = 0;
-                var17 = var9 * var11 + -(var10 * var12) >> 16;
-                var18 = var9 * var12 + var11 * var10 >> 16;
-                var19 = var9 * var13 - var14 * var10 >> 16;
-                var20 = var14 * var9 + var13 * var10 >> 16;
-                var21 = -(var16 * var10) + var9 * var15 >> 16;
-                var22 = var9 * var16 + var15 * var10 >> 16;
-                var11 = param1.a(var17 + ((oq) this).field_F, (byte) 125);
-                var12 = param1.b(true, ((oq) this).field_u - -var18);
-                var13 = param1.a(var19 + ((oq) this).field_F, (byte) 117);
-                var14 = param1.b(true, var20 + ((oq) this).field_u);
-                var15 = param1.a(var21 + ((oq) this).field_F, (byte) 117);
-                var16 = param1.b(true, var22 + ((oq) this).field_u);
-                var23 = -tk.field_o + ((oq) this).field_f - 1;
+                var17 = var9 * var11 + -(var10 * var12) >> -852070192;
+                var18 = var9 * var12 + var11 * var10 >> -1204635664;
+                var19 = var9 * var13 - var14 * var10 >> 576114704;
+                var20 = var14 * var9 + var13 * var10 >> -850920752;
+                var21 = -(var16 * var10) + var9 * var15 >> -2116101456;
+                var22 = var9 * var16 + var15 * var10 >> 563613968;
+                var11 = param1.a(var17 + this.field_F, (byte) 125);
+                var12 = param1.b(true, this.field_u - -var18);
+                var13 = param1.a(var19 + this.field_F, (byte) 117);
+                var14 = param1.b(true, var20 + this.field_u);
+                var15 = param1.a(var21 + this.field_F, (byte) 117);
+                var16 = param1.b(true, var22 + this.field_u);
+                var23 = -tk.field_o + this.field_f - 1;
                 var24 = qpb.a(false, var23, 13894143);
-                var5 = var5 * 200 >> 8;
-                var25 = var24 | var5 << 24;
+                var5 = var5 * 200 >> -916434680;
+                var25 = var24 | var5 << -1297329544;
                 hcb.a(8, var16, 1, var25, var11, var15, var14, var12, var25, var13, var25);
-                if (-10 + (((oq) this).field_i << 1) <= ((oq) this).field_b) {
-                  var26 = 11 - -((oq) this).field_b - (((oq) this).field_i << 1);
-                  jj.a(var24, (byte) 7, param1.b(true, ((oq) this).field_u), (float)(int)((float)var26 * (param1.field_a * 4096.0f)), 1, param1.a(((oq) this).field_F, (byte) 113));
+                if (-10 + (this.field_i << 562270177) <= this.field_b) {
+                  var26 = 11 - -this.field_b - (this.field_i << 1768268513);
+                  jj.a(var24, (byte) 7, param1.b(true, this.field_u), (float)(int)((float)var26 * (param1.field_a * 4096.0f)), 1, param1.a(this.field_F, (byte) 113));
                   return;
                 } else {
                   return;
@@ -371,23 +380,23 @@ final class oq implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var3;
+            stackOut_23_0 = (RuntimeException) (var3);
             stackOut_23_1 = new StringBuilder().append("oq.J(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L6;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -395,7 +404,7 @@ final class oq implements ntb {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
     }
 
@@ -421,19 +430,19 @@ final class oq implements ntb {
         String stackOut_4_2 = null;
         try {
           L0: {
-            var5 = (oq) (Object) param1;
+            var5 = (oq) ((Object) param1);
             var6 = var5;
-            var6.field_b = ((oq) this).field_b;
-            var6.field_F = ((oq) this).field_F;
-            var6.field_r = ((oq) this).field_r;
-            var6.field_f = ((oq) this).field_f;
-            var6.field_D = ((oq) this).field_D;
-            var6.field_u = ((oq) this).field_u;
-            var6.field_i = ((oq) this).field_i;
+            var6.field_b = this.field_b;
+            var6.field_F = this.field_F;
+            var6.field_r = this.field_r;
+            var6.field_f = this.field_f;
+            var6.field_D = this.field_D;
+            var6.field_u = this.field_u;
+            var6.field_i = this.field_i;
             if (param0 > 54) {
               break L0;
             } else {
-              ((oq) this).a(5, 70, 45, 42, 86, -73, 112, true);
+              this.a(5, 70, 45, 42, 86, -73, 112, true);
               return;
             }
           }
@@ -441,23 +450,23 @@ final class oq implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var3;
+            stackOut_3_0 = (RuntimeException) (var3);
             stackOut_3_1 = new StringBuilder().append("oq.D(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -465,50 +474,50 @@ final class oq implements ntb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     public final void a(faa param0, boolean param1) {
         try {
             if (param1) {
-                ((oq) this).a(-123);
+                this.a(-123);
             }
-            ((oq) this).field_F = param0.i(0, 32);
-            ((oq) this).field_u = param0.i(0, 32);
-            ((oq) this).field_r = param0.i(0, 32);
-            ((oq) this).field_D = param0.i(0, 32);
-            ((oq) this).field_b = param0.i(0, 32);
-            ((oq) this).field_i = param0.i(0, 32);
-            ((oq) this).field_f = param0.i(0, 4);
+            this.field_F = param0.i(0, 32);
+            this.field_u = param0.i(0, 32);
+            this.field_r = param0.i(0, 32);
+            this.field_D = param0.i(0, 32);
+            this.field_b = param0.i(0, 32);
+            this.field_i = param0.i(0, 32);
+            this.field_f = param0.i(0, 4);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "oq.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "oq.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
-        Object var10 = null;
-        ((oq) this).field_u = param3;
-        ((oq) this).field_f = param1;
-        ((oq) this).field_D = param4;
-        ((oq) this).field_b = param0;
-        ((oq) this).field_F = param6;
-        ((oq) this).field_r = param2;
+        tv var10 = null;
+        this.field_u = param3;
+        this.field_f = param1;
+        this.field_D = param4;
+        this.field_b = param0;
+        this.field_F = param6;
+        this.field_r = param2;
         if (!param7) {
-          var10 = null;
-          ((oq) this).b((byte) -24, (tv) null);
-          ((oq) this).field_i = param5;
+          var10 = (tv) null;
+          this.b((byte) -24, (tv) null);
+          this.field_i = param5;
           return;
         } else {
-          ((oq) this).field_i = param5;
+          this.field_i = param5;
           return;
         }
     }
 
     final void a(int param0) {
-        ((oq) this).field_F = ((oq) this).field_F + ((oq) this).field_r;
-        ((oq) this).field_u = ((oq) this).field_u + ((oq) this).field_D;
-        ((oq) this).field_b = ((oq) this).field_b - 1;
+        this.field_F = this.field_F + this.field_r;
+        this.field_u = this.field_u + this.field_D;
+        this.field_b = this.field_b - 1;
         if (param0 != -8460) {
             field_c = -6;
         }
@@ -516,7 +525,7 @@ final class oq implements ntb {
 
     public final void b(faa param0, int param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        faa var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -536,18 +545,18 @@ final class oq implements ntb {
         try {
           L0: {
             L1: {
-              param0.a(-632, ((oq) this).field_F, 32);
-              param0.a(-632, ((oq) this).field_u, 32);
-              param0.a(-632, ((oq) this).field_r, 32);
-              param0.a(-632, ((oq) this).field_D, 32);
-              param0.a(-632, ((oq) this).field_b, 32);
-              param0.a(-632, ((oq) this).field_i, 32);
-              param0.a(-632, ((oq) this).field_f, 4);
+              param0.a(-632, this.field_F, 32);
+              param0.a(-632, this.field_u, 32);
+              param0.a(-632, this.field_r, 32);
+              param0.a(-632, this.field_D, 32);
+              param0.a(-632, this.field_b, 32);
+              param0.a(-632, this.field_i, 32);
+              param0.a(-632, this.field_f, 4);
               if (param1 <= -109) {
                 break L1;
               } else {
-                var4 = null;
-                ((oq) this).b((faa) null, -1);
+                var4 = (faa) null;
+                this.b((faa) null, -1);
                 break L1;
               }
             }
@@ -557,23 +566,23 @@ final class oq implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("oq.B(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -581,7 +590,7 @@ final class oq implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -613,26 +622,26 @@ final class oq implements ntb {
             L1: {
               L2: {
                 var4 = 27 % ((22 - param0) / 59);
-                var3 = (oq) (Object) param1;
-                if (var3.field_F != ((oq) this).field_F) {
+                var3 = (oq) ((Object) param1);
+                if (var3.field_F != this.field_F) {
                   break L2;
                 } else {
-                  if (((oq) this).field_u != var3.field_u) {
+                  if (this.field_u != var3.field_u) {
                     break L2;
                   } else {
-                    if (((oq) this).field_r != var3.field_r) {
+                    if (this.field_r != var3.field_r) {
                       break L2;
                     } else {
-                      if (var3.field_D != ((oq) this).field_D) {
+                      if (var3.field_D != this.field_D) {
                         break L2;
                       } else {
-                        if (((oq) this).field_b != var3.field_b) {
+                        if (this.field_b != var3.field_b) {
                           break L2;
                         } else {
-                          if (((oq) this).field_i != var3.field_i) {
+                          if (this.field_i != var3.field_i) {
                             break L2;
                           } else {
-                            if (((oq) this).field_f == var3.field_f) {
+                            if (this.field_f == var3.field_f) {
                               stackOut_9_0 = 0;
                               stackIn_10_0 = stackOut_9_0;
                               break L1;
@@ -656,23 +665,23 @@ final class oq implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3_ref;
+            stackOut_11_0 = (RuntimeException) (var3_ref);
             stackOut_11_1 = new StringBuilder().append("oq.C(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -680,7 +689,7 @@ final class oq implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
         return stackIn_10_0 != 0;
     }
@@ -700,23 +709,19 @@ final class oq implements ntb {
     }
 
     final int a(boolean param0) {
-        Object var3 = null;
+        tv var3 = null;
         if (!param0) {
-          var3 = null;
-          ((oq) this).b((byte) -76, (tv) null);
-          return (((oq) this).field_i << 1) + -((oq) this).field_b;
+          var3 = (tv) null;
+          this.b((byte) -76, (tv) null);
+          return (this.field_i << 1152678561) + -this.field_b;
         } else {
-          return (((oq) this).field_i << 1) + -((oq) this).field_b;
+          return (this.field_i << 1152678561) + -this.field_b;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = 50;
-        field_I = field_l;
+        field_I = field_l * 1;
         field_j = field_l * 20;
         field_y = 11 * field_l;
         field_q = field_l * 40;
@@ -739,7 +744,7 @@ final class oq implements ntb {
         field_h = 20 * field_l;
         field_a = field_l * 20;
         field_d = 3 * field_l;
-        field_n = field_l;
+        field_n = field_l * 1;
         field_e = 10 * field_l;
         field_m = field_l * 25;
     }

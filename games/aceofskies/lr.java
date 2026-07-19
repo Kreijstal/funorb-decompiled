@@ -6,8 +6,9 @@ final class lr extends lg {
     static long field_v;
 
     final static byte[] a(int param0, String param1) {
+        byte[] discarded$2 = null;
         RuntimeException var2 = null;
-        Object var3 = null;
+        String var3 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -32,8 +33,8 @@ final class lr extends lg {
               if (param0 == 4688) {
                 break L1;
               } else {
-                var3 = null;
-                byte[] discarded$2 = lr.a(-91, (String) null);
+                var3 = (String) null;
+                discarded$2 = lr.a(-91, (String) null);
                 break L1;
               }
             }
@@ -45,23 +46,23 @@ final class lr extends lg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("lr.B(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -69,7 +70,7 @@ final class lr extends lg {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -84,9 +85,9 @@ final class lr extends lg {
         var4 = 2 * param0;
         int incrementValue$2 = var4;
         var4++;
-        ((lr) this).field_w[incrementValue$2] = (byte) -1;
+        this.field_w[incrementValue$2] = (byte)-1;
         var5 = 255 & param2;
-        ((lr) this).field_w[var4] = (byte)(var5 * 3 >> 5);
+        this.field_w[var4] = (byte)(var5 * 3 >> -750572635);
         if (param1 != -1) {
           field_v = 21L;
           return;
@@ -96,12 +97,12 @@ final class lr extends lg {
     }
 
     final byte[] a(int param0, int param1, byte param2, int param3) {
-        ((lr) this).field_w = new byte[2 * param3 * param0 * param1];
+        this.field_w = new byte[2 * param3 * param0 * param1];
         if (param2 != -120) {
-          return null;
+          return (byte[]) null;
         } else {
-          ((lr) this).a(true, param3, param0, param1);
-          return ((lr) this).field_w;
+          this.a(true, param3, param0, param1);
+          return this.field_w;
         }
     }
 

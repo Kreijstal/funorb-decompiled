@@ -31,7 +31,7 @@ final class fla extends td {
         field_t = null;
         field_p = null;
         field_s = null;
-        int var1 = -110;
+        int var1 = -110 / ((30 - param0) / 51);
     }
 
     final ii a(op param0, int param1) {
@@ -64,7 +64,7 @@ final class fla extends td {
         try {
           L0: {
             L1: {
-              var9 = ((fla) this).field_h.a(32, param0);
+              var9 = this.field_h.a(32, param0);
               if (param1 == 3) {
                 break L1;
               } else {
@@ -72,11 +72,11 @@ final class fla extends td {
                 break L1;
               }
             }
-            var4 = new pba(((fla) this).field_g, new nq(var9));
+            var4 = new pba(this.field_g, new nq(var9));
             var5 = 0;
             L2: while (true) {
               if (var5 >= param0.field_z) {
-                stackOut_12_0 = (pba) var4;
+                stackOut_12_0 = (pba) (var4);
                 stackIn_13_0 = stackOut_12_0;
                 break L0;
               } else {
@@ -89,7 +89,7 @@ final class fla extends td {
                     L4: {
                       if (param0.field_a[var5][var6].field_l != null) {
                         var7 = param0.field_a[var5][var6].field_l;
-                        var4.field_o.a((bw) (Object) new iv(new nq(var7), false, 1, 0, 3), true);
+                        var4.field_o.a(new iv(new nq(var7), false, 1, 0, 3), true);
                         break L4;
                       } else {
                         break L4;
@@ -106,23 +106,23 @@ final class fla extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3;
+            stackOut_14_0 = (RuntimeException) (var3);
             stackOut_14_1 = new StringBuilder().append("fla.A(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -130,16 +130,12 @@ final class fla extends td {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ')');
         }
-        return (ii) (Object) stackIn_13_0;
+        return (ii) ((Object) stackIn_13_0);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "You must be a member to play with the current options.";
         field_t = new String[]{"SOUND_ARIBA", "SOUND_BASH", "SOUND_BLOOD_SUCKER", "SOUND_BOOT_OF_DOOM", "SOUND_BOUNCING_BOMB", "SOUND_BUFF_SPATK", "SOUND_CHUCK", "SOUND_CHUNDER_HOWITZER", "SOUND_CRANE_KICK", "SOUND_CURSE_ATTACK", "SOUND_CURSE_SPATK", "SOUND_CURSE_SPEED", "SOUND_DIVE_BOMB", "SOUND_BUFF1", "SOUND_BUFF2", "SOUND_BUFF3", "SOUND_FREIGHT_TRAIN", "SOUND_GOO_DAGGER", "SOUND_GOO_DART", "SOUND_GOO_SPEAR", "SOUND_GOO_THROW", "SOUND_GRASSHOPPER_KICK", "SOUND_HAYMAKER", "SOUND_HEAL1", "SOUND_HEAL2", "SOUND_HEAL3", "SOUND_HURL", "SOUND_JUMP", "SOUND_JUMP1", "SOUND_JUMP2", "SOUND_JUMP3", "SOUND_JUMPING_BOMB", "SOUND_KNOCKOUT", "SOUND_LEADEN_FIST", "SOUND_LEVITATE", "SOUND_LIFE_DRAINER", "SOUND_LOB", "SOUND_MAD_DASH", "SOUND_MEGA_POO", "SOUND_MEGA_PUKE", "SOUND_PINCH", "SOUND_POKE", "SOUND_POO", "SOUND_POO_CANNON", "SOUND_POO_HOWITZER", "SOUND_POO_MORTAR", "SOUND_PROD", "SOUND_PUKE", "SOUND_PUKE_CANNON", "SOUND_PUNCH", "SOUND_PUSH", "SOUND_REALLY_POO", "SOUND_SHOULDER_BARGE", "SOUND_SHOULDER_CHARGE", "SOUND_SHOULDER_DESTROYER", "SOUND_SHOVE", "SOUND_SPECIAL_ATTACK_BOOSTER", "SOUND_STEAM_ROLLER", "SOUND_SWING", "SOUND_SWIPE", "SOUND_TELEPORT", "SOUND_UPPERCUT", "SOUND_VAMPIRE", "SOUND_VAN_DAM", "SOUND_VAN_DAMAGED", "SOUND_VAN_DAMED", "SOUND_VOMIT", "SOUND_VOMIT_MORTAR", "SOUND_WALK_OVER", "SOUND_WAX_ON", "SOUND_WHACK"};
     }

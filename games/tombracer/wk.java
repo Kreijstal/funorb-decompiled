@@ -19,48 +19,61 @@ final class wk extends vg {
             Throwable var2 = null;
             Runtime var2_ref = null;
             Long var3 = null;
-            Object var4 = null;
+            Object[] var4 = null;
             int decompiledRegionSelector0 = 0;
+            int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                L1: {
-                  var1_ref = Runtime.class.getMethod("maxMemory", new Class[0]);
-                  if (var1_ref == null) {
-                    break L1;
-                  } else {
-                    try {
-                      L2: {
-                        var2_ref = Runtime.getRuntime();
-                        var4 = null;
-                        var3 = (Long) var1_ref.invoke((Object) (Object) var2_ref, (Object[]) null);
-                        cba.field_d = 1 + (int)(var3.longValue() / 1048576L);
-                        decompiledRegionSelector0 = 0;
-                        break L2;
-                      }
-                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L3: {
-                        var2 = decompiledCaughtException;
-                        decompiledRegionSelector0 = 1;
-                        break L3;
-                      }
-                    }
-                    if (decompiledRegionSelector0 == 0) {
-                      return;
-                    } else {
+                if (param0 == -84) {
+                  L1: {
+                    var1_ref = Runtime.class.getMethod("maxMemory", new Class[]{});
+                    if (var1_ref == null) {
                       break L1;
+                    } else {
+                      try {
+                        L2: {
+                          var2_ref = Runtime.getRuntime();
+                          var4 = (Object[]) null;
+                          var3 = (Long) (var1_ref.invoke((Object) (var2_ref), (Object[]) null));
+                          cba.field_d = 1 + (int)(var3.longValue() / 1048576L);
+                          decompiledRegionSelector0 = 0;
+                          break L2;
+                        }
+                      } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L3: {
+                          var2 = decompiledCaughtException;
+                          decompiledRegionSelector0 = 1;
+                          break L3;
+                        }
+                      }
+                      if (decompiledRegionSelector0 == 0) {
+                        return;
+                      } else {
+                        break L1;
+                      }
                     }
                   }
+                  decompiledRegionSelector1 = 1;
+                  break L0;
+                } else {
+                  decompiledRegionSelector1 = 0;
+                  break L0;
                 }
-                break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 var1 = (Exception) (Object) decompiledCaughtException;
+                decompiledRegionSelector1 = 1;
                 break L4;
               }
+            }
+            if (decompiledRegionSelector1 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -76,45 +89,44 @@ final class wk extends vg {
             gja.a(param3, 0);
             jp.a(param3, (byte) 20);
             if (param2 != 11861) {
-                Object var5 = null;
+                cn var5 = (cn) null;
                 wk.a((en) null, 0, -42, (cn) null);
             }
             mf.a(85);
             ica.a(16777215);
-            tl.field_r = -gpa.field_b;
+            tl.field_r = 0 + -gpa.field_b;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "wk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void b(byte param0) {
+        if (param0 > -43) {
+            return;
+        }
         field_i = null;
     }
 
     wk() {
-        ((wk) this).field_j = false;
+        this.field_j = false;
     }
 
     final void a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
-        var4 = -param1 + ((wk) this).field_g;
+        var4 = -param1 + this.field_g;
         if (param0 != 0) {
           return;
         } else {
-          ((wk) this).field_l = var4 / 20;
-          var5 = ((wk) this).field_k + -param2;
-          ((wk) this).field_f = var5 / 20;
-          ((wk) this).field_h = dfa.a(qva.a((byte) -100, var5, -var4) >> 2, 2048, -126);
+          this.field_l = var4 / 20;
+          var5 = this.field_k + -param2;
+          this.field_f = var5 / 20;
+          this.field_h = dfa.a(qva.a((byte) -100, var5, -var4) >> -1607804798, 2048, -126);
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new boolean[]{true, true, false, true, false, false, true, false, false};
         field_m = 0;
     }

@@ -23,22 +23,30 @@ final class ck extends k {
         var3 = EscapeVector.field_A;
         try {
           L0: {
-            var4 = (ik) (Object) vj.field_d.a(false);
+            var4 = (ik) ((Object) vj.field_d.a(false));
             L1: while (true) {
               if (var4 == null) {
-                var5 = (ij) (Object) qd.field_n.a(false);
-                L2: while (true) {
+                L2: {
+                  if (param1 == 105) {
+                    break L2;
+                  } else {
+                    field_q = -25L;
+                    break L2;
+                  }
+                }
+                var5 = (ij) ((Object) qd.field_n.a(false));
+                L3: while (true) {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    aj.a(42, 3, var5);
-                    var5 = (ij) (Object) qd.field_n.b((byte) 70);
-                    continue L2;
+                    aj.a(42, param0, var5);
+                    var5 = (ij) ((Object) qd.field_n.b((byte) 70));
+                    continue L3;
                   }
                 }
               } else {
-                ig.a(-104, 3, var4);
-                var4 = (ik) (Object) vj.field_d.b((byte) 70);
+                ig.a(param1 + -209, param0, var4);
+                var4 = (ik) ((Object) vj.field_d.b((byte) 70));
                 continue L1;
               }
             }
@@ -46,7 +54,7 @@ final class ck extends k {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "ck.K(" + 3 + ',' + 105 + ')');
+          throw t.a((Throwable) ((Object) var2), "ck.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -63,6 +71,7 @@ final class ck extends k {
     }
 
     public final void a(int param0, int param1, int param2, hm param3, boolean param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -118,22 +127,22 @@ final class ck extends k {
               if (!(param3 instanceof hc)) {
                 break L2;
               } else {
-                param4 = param4 & ((hc) (Object) param3).field_y;
+                param4 = param4 & ((hc) ((Object) param3)).field_y;
                 break L2;
               }
             }
             L3: {
               if (!param4) {
-                stackOut_12_0 = ((ck) this).field_z;
+                stackOut_12_0 = this.field_z;
                 stackIn_13_0 = stackOut_12_0;
                 break L3;
               } else {
                 if (var6_int != 0) {
-                  stackOut_11_0 = ((ck) this).field_w;
+                  stackOut_11_0 = this.field_w;
                   stackIn_13_0 = stackOut_11_0;
                   break L3;
                 } else {
-                  stackOut_10_0 = ((ck) this).field_y;
+                  stackOut_10_0 = this.field_y;
                   stackIn_13_0 = stackOut_10_0;
                   break L3;
                 }
@@ -156,35 +165,35 @@ final class ck extends k {
               if (param2 < -14) {
                 break L5;
               } else {
-                ((ck) this).field_w = -93;
+                this.field_w = -93;
                 break L5;
               }
             }
-            qe.a(-100, param3.field_j + (param1 + (-((ck) this).field_s[0].field_z + param3.field_x >> 1)), param3.field_g, ((ck) this).field_s, var7, param0 + param3.field_k);
-            int discarded$1 = ((ck) this).field_l.a(param3.field_l, param0 + param3.field_k, param3.field_j + param1 + -2, param3.field_g, param3.field_x, var8, -1, 1, 1, ((ck) this).field_l.field_r);
+            qe.a(-100, param3.field_j + (param1 + (-this.field_s[0].field_z + param3.field_x >> -1157166431)), param3.field_g, this.field_s, var7, param0 + param3.field_k);
+            discarded$1 = this.field_l.a(param3.field_l, param0 + param3.field_k, param3.field_j + param1 + -2, param3.field_g, param3.field_x, var8, -1, 1, 1, this.field_l.field_r);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var6;
+            stackOut_20_0 = (RuntimeException) (var6);
             stackOut_20_1 = new StringBuilder().append("ck.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param3 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -192,7 +201,7 @@ final class ck extends k {
               break L6;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param4 + ')');
         }
     }
 
@@ -201,11 +210,11 @@ final class ck extends k {
     }
 
     private ck(int param0, int param1, int param2) {
-        ((ck) this).field_z = param2;
-        ((ck) this).field_w = param1;
-        ((ck) this).field_s = fk.field_f;
-        ((ck) this).field_l = dl.field_b;
-        ((ck) this).field_y = param0;
+        this.field_z = param2;
+        this.field_w = param1;
+        this.field_s = fk.field_f;
+        this.field_l = dl.field_b;
+        this.field_y = param0;
     }
 
     final static void a(int param0, int param1) {
@@ -219,10 +228,6 @@ final class ck extends k {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = new fc();
         field_t = new hf();
         field_u = new String[]{"Anti-gravity", "Breach", "Cataclysm", "Dash", "Deep Vertigo", "Divided", "Explosive Exit", "Gravity Chamber", "Mine Field", "Orb", "Pinball", "Pulse", "Slanted Mines", "Upwards and Onwards", "Asteroids Normal", "Asteroids"};

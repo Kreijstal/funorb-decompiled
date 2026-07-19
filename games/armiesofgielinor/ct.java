@@ -13,22 +13,23 @@ final class ct extends tc {
 
     public static void a(int param0) {
         field_m = null;
+        if (param0 != 135) {
+            field_o = (rg[]) null;
+            field_o = null;
+            return;
+        }
         field_o = null;
     }
 
     ct(int param0, int param1, int param2, int param3, int param4) {
-        ((ct) this).field_q = param4;
-        ((ct) this).field_n = param0;
-        ((ct) this).field_l = param2;
-        ((ct) this).field_p = param3;
-        ((ct) this).field_r = param1;
+        this.field_q = param4;
+        this.field_n = param0;
+        this.field_l = param2;
+        this.field_p = param3;
+        this.field_r = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Unable to add name - system busy";
         field_o = new rg[135];
     }

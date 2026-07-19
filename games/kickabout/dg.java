@@ -12,16 +12,16 @@ class dg {
     static String field_c;
 
     void a(int param0, int param1, int param2, int param3, int param4) {
-        ea.a(param2, param1, param0, (byte) 22, ((dg) this).field_d, param3);
+        ea.a(param2, param1, param0, (byte) 22, this.field_d, param3);
         if (param4 != 3) {
-            Object var7 = null;
+            up var7 = (up) null;
             dg.a((byte) -66, -25, -85, (up) null);
         }
     }
 
     final static void a(byte param0, int param1, int param2, up param3) {
         RuntimeException runtimeException = null;
-        Object var5 = null;
+        up var5 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -41,11 +41,11 @@ class dg {
         try {
           L0: {
             L1: {
-              np.field_Jb.a((gn) (Object) new rt(param2, param1, param3), 3);
+              np.field_Jb.a(new rt(param2, param1, param3), 3);
               if (param0 == -120) {
                 break L1;
               } else {
-                var5 = null;
+                var5 = (up) null;
                 dg.a((byte) 119, -53, 107, (up) null);
                 break L1;
               }
@@ -56,23 +56,23 @@ class dg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("dg.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param3 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -80,11 +80,16 @@ class dg {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     final static String a(byte param0, int param1, long param2, boolean param3, int param4) {
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$7 = null;
+        StringBuilder discarded$8 = null;
+        StringBuilder discarded$9 = null;
         String var7 = null;
         String var8 = null;
         String var9 = null;
@@ -100,7 +105,7 @@ class dg {
           if (0L <= param2) {
             break L0;
           } else {
-            StringBuilder discarded$5 = var14.append("-");
+            discarded$5 = var14.append("-");
             param2 = -param2;
             break L0;
           }
@@ -108,7 +113,7 @@ class dg {
         L1: {
           var7 = ".";
           var8 = ",";
-          if (param4 == 1) {
+          if (-2 == (param4 ^ -1)) {
             var8 = ".";
             var7 = ",";
             break L1;
@@ -153,33 +158,37 @@ class dg {
         var10 = new StringBuilder(0);
         var11 = 0;
         L5: while (true) {
-          if (0 <= var11) {
+          if (param1 <= var11) {
             L6: {
-              var12_int = -40;
+              var12_int = 40 / ((param0 - -70) / 34);
               var11 = 0;
-              if (param2 == 0L) {
+              if ((param2 ^ -1L) == -1L) {
                 var9 = "0";
                 break L6;
               } else {
                 var12 = new StringBuilder(0);
                 L7: while (true) {
-                  if (param2 <= 0L) {
+                  if (-1L <= (param2 ^ -1L)) {
                     var9 = var12.toString();
                     break L6;
                   } else {
                     L8: {
-                      if (0 == var11) {
+                      if (!param3) {
                         break L8;
                       } else {
-                        if (var11 % 3 != 0) {
+                        if (0 == var11) {
                           break L8;
                         } else {
-                          StringBuilder discarded$6 = var12.append(var8);
-                          break L8;
+                          if (var11 % 3 != 0) {
+                            break L8;
+                          } else {
+                            discarded$6 = var12.append(var8);
+                            break L8;
+                          }
                         }
                       }
                     }
-                    StringBuilder discarded$7 = var12.append(Integer.toString((int)(param2 % 10L)));
+                    discarded$7 = var12.append(Integer.toString((int)(param2 % 10L)));
                     param2 = param2 / 10L;
                     var11++;
                     continue L7;
@@ -188,13 +197,13 @@ class dg {
               }
             }
             if (0 < var10.length()) {
-              StringBuilder discarded$8 = var10.append(var7);
+              discarded$8 = var10.append(var7);
               return var14.toString() + bo.a(-1, var9) + bo.a(-1, var10.toString());
             } else {
               return var14.toString() + bo.a(-1, var9) + bo.a(-1, var10.toString());
             }
           } else {
-            StringBuilder discarded$9 = var10.append(Integer.toString((int)(param2 % 10L)));
+            discarded$9 = var10.append(Integer.toString((int)(param2 % 10L)));
             param2 = param2 / 10L;
             var11++;
             continue L5;
@@ -205,15 +214,11 @@ class dg {
     public static void a(byte param0) {
         field_b = null;
         field_c = null;
-        int var1 = 0;
+        int var1 = 64 % ((-24 - param0) / 57);
         field_f = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Please log in to access this feature.";
         field_e = true;
         field_a = true;

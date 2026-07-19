@@ -14,20 +14,25 @@ final class dc extends o {
     int field_p;
 
     public static void d(int param0) {
+        if (param0 != 5) {
+            field_s = (ci) null;
+        }
         field_s = null;
         field_q = null;
         field_n = null;
     }
 
     final static void c(byte param0) {
+        boolean discarded$0 = false;
         if (param0 < 124) {
-            boolean discarded$0 = dc.a(-70);
+            discarded$0 = dc.a(-70);
         }
         kb.field_O = new ol();
-        nj.field_w.c((mf) (Object) kb.field_O, 79);
+        nj.field_w.c(kb.field_O, 79);
     }
 
     final static void a(int param0, int param1, boolean param2, byte param3, int param4, int param5, int param6) {
+        int incrementValue$1 = 0;
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -38,6 +43,7 @@ final class dc extends o {
         int var13 = 0;
         int var14 = 0;
         int stackIn_26_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_25_0 = 0;
         int stackOut_24_0 = 0;
@@ -45,7 +51,8 @@ final class dc extends o {
         try {
           L0: {
             if (param1 <= param6) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param6 + 1 < param5) {
                 L1: {
@@ -63,7 +70,7 @@ final class dc extends o {
                           break L2;
                         }
                       }
-                      var7_int = (1 & (param0 & param4)) + (param4 >> 1) + (param0 >> 1);
+                      var7_int = (1 & (param0 & param4)) + (param4 >> 200658273) + (param0 >> -958115615);
                       var8 = param6;
                       var9 = param4;
                       var10 = param0;
@@ -72,6 +79,7 @@ final class dc extends o {
                         if (var11 >= param5) {
                           dc.a(var9, param1, param2, (byte) -124, param4, var8, param6);
                           dc.a(param0, param1, param2, (byte) -122, var10, param5, var8);
+                          decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
                           L4: {
@@ -86,33 +94,34 @@ final class dc extends o {
                               break L4;
                             }
                           }
-                          var13 = stackIn_26_0;
-                          if (var13 > var7_int) {
-                            L5: {
-                              vn.field_Ab[var11] = vn.field_Ab[var8];
-                              if (var13 < var9) {
-                                var9 = var13;
+                          L5: {
+                            var13 = stackIn_26_0;
+                            if (var13 > var7_int) {
+                              L6: {
+                                vn.field_Ab[var11] = vn.field_Ab[var8];
+                                if (var13 < var9) {
+                                  var9 = var13;
+                                  break L6;
+                                } else {
+                                  break L6;
+                                }
+                              }
+                              incrementValue$1 = var8;
+                              var8++;
+                              vn.field_Ab[incrementValue$1] = var12;
+                              break L5;
+                            } else {
+                              if (var13 > var10) {
+                                var10 = var13;
                                 break L5;
                               } else {
-                                break L5;
+                                var11++;
+                                continue L3;
                               }
                             }
-                            int incrementValue$1 = var8;
-                            var8++;
-                            vn.field_Ab[incrementValue$1] = var12;
-                            var11++;
-                            continue L3;
-                          } else {
-                            L6: {
-                              if (var13 <= var10) {
-                                break L6;
-                              } else {
-                                break L6;
-                              }
-                            }
-                            var11++;
-                            continue L3;
                           }
+                          var11++;
+                          continue L3;
                         }
                       }
                     }
@@ -121,7 +130,8 @@ final class dc extends o {
                 var7_int = param5 + -1;
                 L7: while (true) {
                   if (param6 >= var7_int) {
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     var8 = param6;
                     L8: while (true) {
@@ -147,14 +157,28 @@ final class dc extends o {
                   }
                 }
               } else {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var7, "dc.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw fk.a((Throwable) ((Object) var7), "dc.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -168,10 +192,6 @@ final class dc extends o {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = false;
     }
 }

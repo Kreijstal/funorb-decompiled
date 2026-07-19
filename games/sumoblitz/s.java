@@ -15,24 +15,29 @@ final class s extends ms {
     static String field_k;
 
     public static void a(int param0) {
-        field_k = null;
-        field_n = null;
-        field_u = null;
+        if (param0 != 18232) {
+          field_k = (String) null;
+          field_k = null;
+          field_n = null;
+          field_u = null;
+          return;
+        } else {
+          field_k = null;
+          field_n = null;
+          field_u = null;
+          return;
+        }
     }
 
     s(int param0, int param1, int param2, int param3, int param4) {
-        ((s) this).field_l = param2;
-        ((s) this).field_p = param4;
-        ((s) this).field_t = param3;
-        ((s) this).field_q = param0;
-        ((s) this).field_s = param1;
+        this.field_l = param2;
+        this.field_p = param4;
+        this.field_t = param3;
+        this.field_q = param0;
+        this.field_s = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = null;
         field_m = Math.atan2(1.0, 0.0);
         field_k = "This game has been updated! Please reload this page.";

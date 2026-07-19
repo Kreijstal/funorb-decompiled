@@ -16,17 +16,17 @@ final class ie extends cr {
     private int field_Jb;
 
     final void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
-        ((ie) this).field_Fb = param1;
-        ((ie) this).field_db = param0;
-        ((ie) this).field_N = param2;
+        this.field_Fb = param1;
+        this.field_db = param0;
+        this.field_N = param2;
         if (param3 < 99) {
-          ((ie) this).field_Lb = null;
-          ((ie) this).field_wb = param6;
-          ((ie) this).a(param5, param4, (byte) -52, param7);
+          this.field_Lb = (cr) null;
+          this.field_wb = param6;
+          this.a(param5, param4, (byte) -52, param7);
           return;
         } else {
-          ((ie) this).field_wb = param6;
-          ((ie) this).a(param5, param4, (byte) -52, param7);
+          this.field_wb = param6;
+          this.a(param5, param4, (byte) -52, param7);
           return;
         }
     }
@@ -45,37 +45,39 @@ final class ie extends cr {
     }
 
     final boolean p(int param0) {
-        if (((ie) this).field_Lb.field_tb == 0) {
-          if (0 != ((ie) this).field_Lb.field_xb) {
+        boolean discarded$4 = false;
+        boolean discarded$5 = false;
+        if (-1 == (this.field_Lb.field_tb ^ -1)) {
+          if (0 != this.field_Lb.field_xb) {
             L0: {
-              if (0 < ((ie) this).field_Jb) {
-                ((ie) this).field_Jb = ((ie) this).field_Jb - 1;
+              if (0 < this.field_Jb) {
+                this.field_Jb = this.field_Jb - 1;
                 break L0;
               } else {
                 break L0;
               }
             }
-            if (0 != ((ie) this).field_Jb) {
+            if (0 != this.field_Jb) {
               if (param0 >= -42) {
-                boolean discarded$4 = ((ie) this).m(13);
+                discarded$4 = this.m(13);
                 return false;
               } else {
                 return false;
               }
             } else {
-              ((ie) this).field_Jb = 3;
+              this.field_Jb = 3;
               return true;
             }
           } else {
             if (param0 >= -42) {
-              boolean discarded$5 = ((ie) this).m(13);
+              discarded$5 = this.m(13);
               return false;
             } else {
               return false;
             }
           }
         } else {
-          ((ie) this).field_Jb = 20;
+          this.field_Jb = 20;
           return true;
         }
     }
@@ -84,7 +86,7 @@ final class ie extends cr {
         if (param0 != 0) {
             return false;
         }
-        return ((ie) this).field_Pb.field_xb != 0 ? true : false;
+        return (this.field_Pb.field_xb ^ -1) != -1 ? true : false;
     }
 
     final int a(int param0, boolean param1, boolean param2, int param3) {
@@ -94,11 +96,11 @@ final class ie extends cr {
         int var8 = 0;
         L0: {
           var5 = 0;
-          var6 = -((ie) this).field_Pb.field_db + ((ie) this).field_Mb.field_db;
+          var6 = -this.field_Pb.field_db + this.field_Mb.field_db;
           if (var6 <= 0) {
             break L0;
           } else {
-            var7 = ((ie) this).field_Pb.field_N;
+            var7 = this.field_Pb.field_N;
             var8 = -param3 + param0;
             var5 = (var7 * var8 - -(var6 / 2)) / var6;
             break L0;
@@ -106,7 +108,7 @@ final class ie extends cr {
         }
         if (param2) {
           L1: {
-            if (var5 < 0) {
+            if ((var5 ^ -1) > -1) {
               var5 = 0;
               break L1;
             } else {
@@ -122,7 +124,7 @@ final class ie extends cr {
             }
           }
           if (!param1) {
-            field_Sb = null;
+            field_Sb = (String) null;
             return var5;
           } else {
             return var5;
@@ -136,17 +138,17 @@ final class ie extends cr {
               break L3;
             }
           }
-          if (var5 < 0) {
+          if ((var5 ^ -1) > -1) {
             var5 = 0;
             if (param1) {
               return var5;
             } else {
-              field_Sb = null;
+              field_Sb = (String) null;
               return var5;
             }
           } else {
             if (!param1) {
-              field_Sb = null;
+              field_Sb = (String) null;
               return var5;
             } else {
               return var5;
@@ -156,6 +158,7 @@ final class ie extends cr {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
+        boolean discarded$1 = false;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -255,13 +258,13 @@ final class ie extends cr {
         cr stackOut_14_2 = null;
         int stackOut_14_3 = 0;
         L0: {
-          if (((ie) this).field_db >= ((ie) this).field_Fb * 2) {
-            var5 = ((ie) this).field_Fb;
-            var6 = ((ie) this).field_db + -((ie) this).field_Fb;
+          if (this.field_db >= this.field_Fb * 2) {
+            var5 = this.field_Fb;
+            var6 = this.field_db + -this.field_Fb;
             break L0;
           } else {
-            var6 = ((ie) this).field_db / 2;
-            var5 = ((ie) this).field_db / 2;
+            var6 = this.field_db / 2;
+            var5 = this.field_db / 2;
             break L0;
           }
         }
@@ -271,10 +274,10 @@ final class ie extends cr {
           if (0 < param0) {
             L1: {
               var8 = var8 * param3 / param0;
-              if (var8 >= ((ie) this).field_Fb) {
+              if (var8 >= this.field_Fb) {
                 break L1;
               } else {
-                var8 = ((ie) this).field_Fb;
+                var8 = this.field_Fb;
                 break L1;
               }
             }
@@ -284,7 +287,7 @@ final class ie extends cr {
                 var9 = param0 - param3;
                 var10 = -var8 + var7;
                 var11 = 0;
-                if (var9 <= 0) {
+                if ((var9 ^ -1) >= -1) {
                   break L2;
                 } else {
                   var11 = (param1 * var10 + var9 / 2) / var9;
@@ -293,38 +296,38 @@ final class ie extends cr {
               }
               L3: {
                 var12 = var11 + var8 / 2;
-                var14 = ((ie) this).field_Lb;
+                var14 = this.field_Lb;
                 var14.field_N = 0;
                 var14.field_wb = 0;
-                var14.field_Fb = ((ie) this).field_Fb;
+                var14.field_Fb = this.field_Fb;
                 var14.field_db = var5;
-                var15 = ((ie) this).field_Qb;
+                var15 = this.field_Qb;
                 var15.field_wb = 0;
-                var15.field_db = -var6 + ((ie) this).field_db;
-                var15.field_Fb = ((ie) this).field_Fb;
+                var15.field_db = -var6 + this.field_db;
+                var15.field_Fb = this.field_Fb;
                 var15.field_N = var6;
-                var16 = ((ie) this).field_Mb;
+                var16 = this.field_Mb;
                 var16.field_wb = 0;
                 var16.field_N = var5;
-                var16.field_Fb = ((ie) this).field_Fb;
+                var16.field_Fb = this.field_Fb;
                 var16.field_db = var7;
-                var17 = ((ie) this).field_Ib;
-                var17.field_Fb = ((ie) this).field_Fb;
+                var17 = this.field_Ib;
+                var17.field_Fb = this.field_Fb;
                 var17.field_wb = 0;
                 var17.field_db = var12;
                 var17.field_N = 0;
-                var18 = ((ie) this).field_Ob;
+                var18 = this.field_Ob;
                 var18.field_N = var12;
-                var18.field_Fb = ((ie) this).field_Fb;
+                var18.field_Fb = this.field_Fb;
                 var18.field_db = var7 + -var12;
                 var18.field_wb = 0;
-                var19 = ((ie) this).field_Pb;
+                var19 = this.field_Pb;
                 var19.field_db = var8;
-                var19.field_Fb = ((ie) this).field_Fb;
+                var19.field_Fb = this.field_Fb;
                 var19.field_N = var11;
-                stackOut_35_0 = ((ie) this).field_Lb;
-                stackOut_35_1 = ((ie) this).field_Qb;
-                stackOut_35_2 = ((ie) this).field_Mb;
+                stackOut_35_0 = this.field_Lb;
+                stackOut_35_1 = this.field_Qb;
+                stackOut_35_2 = this.field_Mb;
                 stackIn_37_0 = stackOut_35_0;
                 stackIn_37_1 = stackOut_35_1;
                 stackIn_37_2 = stackOut_35_2;
@@ -332,9 +335,9 @@ final class ie extends cr {
                 stackIn_36_1 = stackOut_35_1;
                 stackIn_36_2 = stackOut_35_2;
                 if (param0 <= param3) {
-                  stackOut_37_0 = (cr) (Object) stackIn_37_0;
-                  stackOut_37_1 = (cr) (Object) stackIn_37_1;
-                  stackOut_37_2 = (cr) (Object) stackIn_37_2;
+                  stackOut_37_0 = (cr) ((Object) stackIn_37_0);
+                  stackOut_37_1 = (cr) ((Object) stackIn_37_1);
+                  stackOut_37_2 = (cr) ((Object) stackIn_37_2);
                   stackOut_37_3 = 0;
                   stackIn_38_0 = stackOut_37_0;
                   stackIn_38_1 = stackOut_37_1;
@@ -342,9 +345,9 @@ final class ie extends cr {
                   stackIn_38_3 = stackOut_37_3;
                   break L3;
                 } else {
-                  stackOut_36_0 = (cr) (Object) stackIn_36_0;
-                  stackOut_36_1 = (cr) (Object) stackIn_36_1;
-                  stackOut_36_2 = (cr) (Object) stackIn_36_2;
+                  stackOut_36_0 = (cr) ((Object) stackIn_36_0);
+                  stackOut_36_1 = (cr) ((Object) stackIn_36_1);
+                  stackOut_36_2 = (cr) ((Object) stackIn_36_2);
                   stackOut_36_3 = 1;
                   stackIn_38_0 = stackOut_36_0;
                   stackIn_38_1 = stackOut_36_1;
@@ -363,7 +366,7 @@ final class ie extends cr {
                 var9 = param0 - param3;
                 var10 = -var8 + var7;
                 var11 = 0;
-                if (var9 <= 0) {
+                if ((var9 ^ -1) >= -1) {
                   break L4;
                 } else {
                   var11 = (param1 * var10 + var9 / 2) / var9;
@@ -372,38 +375,38 @@ final class ie extends cr {
               }
               L5: {
                 var12 = var11 + var8 / 2;
-                var14 = ((ie) this).field_Lb;
+                var14 = this.field_Lb;
                 var14.field_N = 0;
                 var14.field_wb = 0;
-                var14.field_Fb = ((ie) this).field_Fb;
+                var14.field_Fb = this.field_Fb;
                 var14.field_db = var5;
-                var15 = ((ie) this).field_Qb;
+                var15 = this.field_Qb;
                 var15.field_wb = 0;
-                var15.field_db = -var6 + ((ie) this).field_db;
-                var15.field_Fb = ((ie) this).field_Fb;
+                var15.field_db = -var6 + this.field_db;
+                var15.field_Fb = this.field_Fb;
                 var15.field_N = var6;
-                var16 = ((ie) this).field_Mb;
+                var16 = this.field_Mb;
                 var16.field_wb = 0;
                 var16.field_N = var5;
-                var16.field_Fb = ((ie) this).field_Fb;
+                var16.field_Fb = this.field_Fb;
                 var16.field_db = var7;
-                var17 = ((ie) this).field_Ib;
-                var17.field_Fb = ((ie) this).field_Fb;
+                var17 = this.field_Ib;
+                var17.field_Fb = this.field_Fb;
                 var17.field_wb = 0;
                 var17.field_db = var12;
                 var17.field_N = 0;
-                var18 = ((ie) this).field_Ob;
+                var18 = this.field_Ob;
                 var18.field_N = var12;
-                var18.field_Fb = ((ie) this).field_Fb;
+                var18.field_Fb = this.field_Fb;
                 var18.field_db = var7 + -var12;
                 var18.field_wb = 0;
-                var19 = ((ie) this).field_Pb;
+                var19 = this.field_Pb;
                 var19.field_db = var8;
-                var19.field_Fb = ((ie) this).field_Fb;
+                var19.field_Fb = this.field_Fb;
                 var19.field_N = var11;
-                stackOut_29_0 = ((ie) this).field_Lb;
-                stackOut_29_1 = ((ie) this).field_Qb;
-                stackOut_29_2 = ((ie) this).field_Mb;
+                stackOut_29_0 = this.field_Lb;
+                stackOut_29_1 = this.field_Qb;
+                stackOut_29_2 = this.field_Mb;
                 stackIn_31_0 = stackOut_29_0;
                 stackIn_31_1 = stackOut_29_1;
                 stackIn_31_2 = stackOut_29_2;
@@ -411,9 +414,9 @@ final class ie extends cr {
                 stackIn_30_1 = stackOut_29_1;
                 stackIn_30_2 = stackOut_29_2;
                 if (param0 <= param3) {
-                  stackOut_31_0 = (cr) (Object) stackIn_31_0;
-                  stackOut_31_1 = (cr) (Object) stackIn_31_1;
-                  stackOut_31_2 = (cr) (Object) stackIn_31_2;
+                  stackOut_31_0 = (cr) ((Object) stackIn_31_0);
+                  stackOut_31_1 = (cr) ((Object) stackIn_31_1);
+                  stackOut_31_2 = (cr) ((Object) stackIn_31_2);
                   stackOut_31_3 = 0;
                   stackIn_32_0 = stackOut_31_0;
                   stackIn_32_1 = stackOut_31_1;
@@ -421,9 +424,9 @@ final class ie extends cr {
                   stackIn_32_3 = stackOut_31_3;
                   break L5;
                 } else {
-                  stackOut_30_0 = (cr) (Object) stackIn_30_0;
-                  stackOut_30_1 = (cr) (Object) stackIn_30_1;
-                  stackOut_30_2 = (cr) (Object) stackIn_30_2;
+                  stackOut_30_0 = (cr) ((Object) stackIn_30_0);
+                  stackOut_30_1 = (cr) ((Object) stackIn_30_1);
+                  stackOut_30_2 = (cr) ((Object) stackIn_30_2);
                   stackOut_30_3 = 1;
                   stackIn_32_0 = stackOut_30_0;
                   stackIn_32_1 = stackOut_30_1;
@@ -443,7 +446,7 @@ final class ie extends cr {
               var9 = param0 - param3;
               var10 = -var8 + var7;
               var11 = 0;
-              if (var9 <= 0) {
+              if ((var9 ^ -1) >= -1) {
                 break L6;
               } else {
                 var11 = (param1 * var10 + var9 / 2) / var9;
@@ -452,38 +455,38 @@ final class ie extends cr {
             }
             L7: {
               var12 = var11 + var8 / 2;
-              var14 = ((ie) this).field_Lb;
+              var14 = this.field_Lb;
               var14.field_N = 0;
               var14.field_wb = 0;
-              var14.field_Fb = ((ie) this).field_Fb;
+              var14.field_Fb = this.field_Fb;
               var14.field_db = var5;
-              var15 = ((ie) this).field_Qb;
+              var15 = this.field_Qb;
               var15.field_wb = 0;
-              var15.field_db = -var6 + ((ie) this).field_db;
-              var15.field_Fb = ((ie) this).field_Fb;
+              var15.field_db = -var6 + this.field_db;
+              var15.field_Fb = this.field_Fb;
               var15.field_N = var6;
-              var16 = ((ie) this).field_Mb;
+              var16 = this.field_Mb;
               var16.field_wb = 0;
               var16.field_N = var5;
-              var16.field_Fb = ((ie) this).field_Fb;
+              var16.field_Fb = this.field_Fb;
               var16.field_db = var7;
-              var17 = ((ie) this).field_Ib;
-              var17.field_Fb = ((ie) this).field_Fb;
+              var17 = this.field_Ib;
+              var17.field_Fb = this.field_Fb;
               var17.field_wb = 0;
               var17.field_db = var12;
               var17.field_N = 0;
-              var18 = ((ie) this).field_Ob;
+              var18 = this.field_Ob;
               var18.field_N = var12;
-              var18.field_Fb = ((ie) this).field_Fb;
+              var18.field_Fb = this.field_Fb;
               var18.field_db = var7 + -var12;
               var18.field_wb = 0;
-              var19 = ((ie) this).field_Pb;
+              var19 = this.field_Pb;
               var19.field_db = var8;
-              var19.field_Fb = ((ie) this).field_Fb;
+              var19.field_Fb = this.field_Fb;
               var19.field_N = var11;
-              stackOut_20_0 = ((ie) this).field_Lb;
-              stackOut_20_1 = ((ie) this).field_Qb;
-              stackOut_20_2 = ((ie) this).field_Mb;
+              stackOut_20_0 = this.field_Lb;
+              stackOut_20_1 = this.field_Qb;
+              stackOut_20_2 = this.field_Mb;
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
               stackIn_22_2 = stackOut_20_2;
@@ -491,9 +494,9 @@ final class ie extends cr {
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               if (param0 <= param3) {
-                stackOut_22_0 = (cr) (Object) stackIn_22_0;
-                stackOut_22_1 = (cr) (Object) stackIn_22_1;
-                stackOut_22_2 = (cr) (Object) stackIn_22_2;
+                stackOut_22_0 = (cr) ((Object) stackIn_22_0);
+                stackOut_22_1 = (cr) ((Object) stackIn_22_1);
+                stackOut_22_2 = (cr) ((Object) stackIn_22_2);
                 stackOut_22_3 = 0;
                 stackIn_23_0 = stackOut_22_0;
                 stackIn_23_1 = stackOut_22_1;
@@ -501,9 +504,9 @@ final class ie extends cr {
                 stackIn_23_3 = stackOut_22_3;
                 break L7;
               } else {
-                stackOut_21_0 = (cr) (Object) stackIn_21_0;
-                stackOut_21_1 = (cr) (Object) stackIn_21_1;
-                stackOut_21_2 = (cr) (Object) stackIn_21_2;
+                stackOut_21_0 = (cr) ((Object) stackIn_21_0);
+                stackOut_21_1 = (cr) ((Object) stackIn_21_1);
+                stackOut_21_2 = (cr) ((Object) stackIn_21_2);
                 stackOut_21_3 = 1;
                 stackIn_23_0 = stackOut_21_0;
                 stackIn_23_1 = stackOut_21_1;
@@ -520,15 +523,15 @@ final class ie extends cr {
           }
         } else {
           L8: {
-            boolean discarded$1 = ((ie) this).l(109);
+            discarded$1 = this.l(109);
             var8 = var7;
             if (0 < param0) {
               L9: {
                 var8 = var8 * param3 / param0;
-                if (var8 >= ((ie) this).field_Fb) {
+                if (var8 >= this.field_Fb) {
                   break L9;
                 } else {
-                  var8 = ((ie) this).field_Fb;
+                  var8 = this.field_Fb;
                   break L9;
                 }
               }
@@ -546,7 +549,7 @@ final class ie extends cr {
             var9 = param0 - param3;
             var10 = -var8 + var7;
             var11 = 0;
-            if (var9 <= 0) {
+            if ((var9 ^ -1) >= -1) {
               break L10;
             } else {
               var11 = (param1 * var10 + var9 / 2) / var9;
@@ -555,38 +558,38 @@ final class ie extends cr {
           }
           L11: {
             var12 = var11 + var8 / 2;
-            var14 = ((ie) this).field_Lb;
+            var14 = this.field_Lb;
             var14.field_N = 0;
             var14.field_wb = 0;
-            var14.field_Fb = ((ie) this).field_Fb;
+            var14.field_Fb = this.field_Fb;
             var14.field_db = var5;
-            var15 = ((ie) this).field_Qb;
+            var15 = this.field_Qb;
             var15.field_wb = 0;
-            var15.field_db = -var6 + ((ie) this).field_db;
-            var15.field_Fb = ((ie) this).field_Fb;
+            var15.field_db = -var6 + this.field_db;
+            var15.field_Fb = this.field_Fb;
             var15.field_N = var6;
-            var16 = ((ie) this).field_Mb;
+            var16 = this.field_Mb;
             var16.field_wb = 0;
             var16.field_N = var5;
-            var16.field_Fb = ((ie) this).field_Fb;
+            var16.field_Fb = this.field_Fb;
             var16.field_db = var7;
-            var17 = ((ie) this).field_Ib;
-            var17.field_Fb = ((ie) this).field_Fb;
+            var17 = this.field_Ib;
+            var17.field_Fb = this.field_Fb;
             var17.field_wb = 0;
             var17.field_db = var12;
             var17.field_N = 0;
-            var18 = ((ie) this).field_Ob;
+            var18 = this.field_Ob;
             var18.field_N = var12;
-            var18.field_Fb = ((ie) this).field_Fb;
+            var18.field_Fb = this.field_Fb;
             var18.field_db = var7 + -var12;
             var18.field_wb = 0;
-            var19 = ((ie) this).field_Pb;
+            var19 = this.field_Pb;
             var19.field_db = var8;
-            var19.field_Fb = ((ie) this).field_Fb;
+            var19.field_Fb = this.field_Fb;
             var19.field_N = var11;
-            stackOut_13_0 = ((ie) this).field_Lb;
-            stackOut_13_1 = ((ie) this).field_Qb;
-            stackOut_13_2 = ((ie) this).field_Mb;
+            stackOut_13_0 = this.field_Lb;
+            stackOut_13_1 = this.field_Qb;
+            stackOut_13_2 = this.field_Mb;
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_15_2 = stackOut_13_2;
@@ -594,9 +597,9 @@ final class ie extends cr {
             stackIn_14_1 = stackOut_13_1;
             stackIn_14_2 = stackOut_13_2;
             if (param0 <= param3) {
-              stackOut_15_0 = (cr) (Object) stackIn_15_0;
-              stackOut_15_1 = (cr) (Object) stackIn_15_1;
-              stackOut_15_2 = (cr) (Object) stackIn_15_2;
+              stackOut_15_0 = (cr) ((Object) stackIn_15_0);
+              stackOut_15_1 = (cr) ((Object) stackIn_15_1);
+              stackOut_15_2 = (cr) ((Object) stackIn_15_2);
               stackOut_15_3 = 0;
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
@@ -604,9 +607,9 @@ final class ie extends cr {
               stackIn_16_3 = stackOut_15_3;
               break L11;
             } else {
-              stackOut_14_0 = (cr) (Object) stackIn_14_0;
-              stackOut_14_1 = (cr) (Object) stackIn_14_1;
-              stackOut_14_2 = (cr) (Object) stackIn_14_2;
+              stackOut_14_0 = (cr) ((Object) stackIn_14_0);
+              stackOut_14_1 = (cr) ((Object) stackIn_14_1);
+              stackOut_14_2 = (cr) ((Object) stackIn_14_2);
               stackOut_14_3 = 1;
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -633,6 +636,9 @@ final class ie extends cr {
     }
 
     final static void b(int param0, boolean param1) {
+        if (param0 != 20983) {
+            return;
+        }
         e.a(param1, (byte) -128);
         if (!(null == ko.field_S)) {
             oh.a(ko.field_S, false);
@@ -640,38 +646,49 @@ final class ie extends cr {
     }
 
     final boolean m(int param0) {
-        if (!(0 == ((ie) this).field_Qb.field_tb)) {
-            ((ie) this).field_Jb = 20;
-            return true;
-        }
-        if (((ie) this).field_Qb.field_xb != 0) {
-            if (((ie) this).field_Jb > 0) {
-                ((ie) this).field_Jb = ((ie) this).field_Jb - 1;
-                if (!(((ie) this).field_Jb != 0)) {
-                    ((ie) this).field_Jb = 3;
-                    return true;
-                }
-                if (param0 >= 20) {
-                    return false;
-                }
-                boolean discarded$0 = ((ie) this).l(30);
-                return false;
+        boolean discarded$6 = false;
+        boolean discarded$7 = false;
+        boolean discarded$8 = false;
+        if (0 != this.field_Qb.field_tb) {
+          this.field_Jb = 20;
+          return true;
+        } else {
+          if (this.field_Qb.field_xb == 0) {
+            if (param0 < 20) {
+              discarded$6 = this.l(30);
+              return false;
+            } else {
+              return false;
             }
-            if (((ie) this).field_Jb != 0) {
+          } else {
+            if (this.field_Jb <= 0) {
+              if (-1 != (this.field_Jb ^ -1)) {
                 if (param0 >= 20) {
-                    return false;
+                  return false;
+                } else {
+                  discarded$7 = this.l(30);
+                  return false;
                 }
-                boolean discarded$1 = ((ie) this).l(30);
-                return false;
+              } else {
+                this.field_Jb = 3;
+                return true;
+              }
+            } else {
+              this.field_Jb = this.field_Jb - 1;
+              if (-1 == (this.field_Jb ^ -1)) {
+                this.field_Jb = 3;
+                return true;
+              } else {
+                if (param0 >= 20) {
+                  return false;
+                } else {
+                  discarded$8 = this.l(30);
+                  return false;
+                }
+              }
             }
-            ((ie) this).field_Jb = 3;
-            return true;
+          }
         }
-        if (param0 < 20) {
-            boolean discarded$2 = ((ie) this).l(30);
-            return false;
-        }
-        return false;
     }
 
     ie(long param0, cr param1, cr param2, cr param3, cr param4) {
@@ -742,46 +759,46 @@ final class ie extends cr {
         String stackOut_13_2 = null;
         try {
           L0: {
-            ((ie) this).field_Lb = new cr(0L, param1);
-            ((ie) this).field_Qb = new cr(0L, param2);
-            ((ie) this).b(((ie) this).field_Lb, 126);
-            ((ie) this).b(((ie) this).field_Qb, 125);
-            ((ie) this).field_Mb = new cr(0L, (cr) null);
-            ((ie) this).b(((ie) this).field_Mb, 125);
-            ((ie) this).field_Ib = new cr(0L, param3);
-            ((ie) this).field_Ob = new cr(0L, param3);
-            var9 = ((ie) this).field_Ib;
+            this.field_Lb = new cr(0L, param1);
+            this.field_Qb = new cr(0L, param2);
+            this.b(this.field_Lb, 126);
+            this.b(this.field_Qb, 125);
+            this.field_Mb = new cr(0L, (cr) null);
+            this.b(this.field_Mb, 125);
+            this.field_Ib = new cr(0L, param3);
+            this.field_Ob = new cr(0L, param3);
+            var9 = this.field_Ib;
             var10 = var9;
-            ((ie) this).field_Ob.field_jb = true;
+            this.field_Ob.field_jb = true;
             var10.field_jb = true;
-            ((ie) this).field_Mb.b(((ie) this).field_Ib, 123);
-            ((ie) this).field_Mb.b(((ie) this).field_Ob, 118);
-            ((ie) this).field_Pb = new cr(0L, param4);
-            ((ie) this).field_Pb.field_X = true;
-            ((ie) this).field_Mb.b(((ie) this).field_Pb, 122);
+            this.field_Mb.b(this.field_Ib, 123);
+            this.field_Mb.b(this.field_Ob, 118);
+            this.field_Pb = new cr(0L, param4);
+            this.field_Pb.field_X = true;
+            this.field_Mb.b(this.field_Pb, 122);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var7;
+            stackOut_3_0 = (RuntimeException) (var7);
             stackOut_3_1 = new StringBuilder().append("ie.<init>(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -790,23 +807,23 @@ final class ie extends cr {
             }
           }
           L2: {
-            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -815,23 +832,23 @@ final class ie extends cr {
             }
           }
           L3: {
-            stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+            stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
             stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param3 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -840,23 +857,23 @@ final class ie extends cr {
             }
           }
           L4: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param4 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -864,35 +881,36 @@ final class ie extends cr {
               break L4;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
     }
 
     final boolean n(int param0) {
+        qj discarded$1 = null;
         if (param0 == -22155) {
-          if (((ie) this).field_Ob.field_tb != 0) {
-            ((ie) this).field_Jb = 20;
+          if (-1 != (this.field_Ob.field_tb ^ -1)) {
+            this.field_Jb = 20;
             return true;
           } else {
-            if (((ie) this).field_Ob.field_xb != 0) {
-              if (((ie) this).field_Jb <= 0) {
-                if (0 == ((ie) this).field_Jb) {
-                  if (gb.field_d < ((ie) this).field_Pb.field_kb + (((ie) this).field_Pb.field_db + ((ie) this).field_Pb.field_L + ((ie) this).field_Pb.field_C)) {
+            if (this.field_Ob.field_xb != 0) {
+              if (this.field_Jb <= 0) {
+                if (0 == this.field_Jb) {
+                  if (gb.field_d < this.field_Pb.field_kb + (this.field_Pb.field_db + this.field_Pb.field_L + this.field_Pb.field_C)) {
                     return false;
                   } else {
-                    ((ie) this).field_Jb = 3;
+                    this.field_Jb = 3;
                     return true;
                   }
                 } else {
                   return false;
                 }
               } else {
-                ((ie) this).field_Jb = ((ie) this).field_Jb - 1;
-                if (0 == ((ie) this).field_Jb) {
-                  if (gb.field_d < ((ie) this).field_Pb.field_kb + (((ie) this).field_Pb.field_db + ((ie) this).field_Pb.field_L + ((ie) this).field_Pb.field_C)) {
+                this.field_Jb = this.field_Jb - 1;
+                if (0 == this.field_Jb) {
+                  if (gb.field_d < this.field_Pb.field_kb + (this.field_Pb.field_db + this.field_Pb.field_L + this.field_Pb.field_C)) {
                     return false;
                   } else {
-                    ((ie) this).field_Jb = 3;
+                    this.field_Jb = 3;
                     return true;
                   }
                 } else {
@@ -904,30 +922,30 @@ final class ie extends cr {
             }
           }
         } else {
-          qj discarded$1 = ie.q(-71);
-          if (((ie) this).field_Ob.field_tb != 0) {
-            ((ie) this).field_Jb = 20;
+          discarded$1 = ie.q(-71);
+          if (-1 != (this.field_Ob.field_tb ^ -1)) {
+            this.field_Jb = 20;
             return true;
           } else {
-            if (((ie) this).field_Ob.field_xb != 0) {
-              if (((ie) this).field_Jb > 0) {
-                ((ie) this).field_Jb = ((ie) this).field_Jb - 1;
-                if (0 == ((ie) this).field_Jb) {
-                  if (gb.field_d < ((ie) this).field_Pb.field_kb + (((ie) this).field_Pb.field_db + ((ie) this).field_Pb.field_L + ((ie) this).field_Pb.field_C)) {
+            if (this.field_Ob.field_xb != 0) {
+              if (this.field_Jb > 0) {
+                this.field_Jb = this.field_Jb - 1;
+                if (0 == this.field_Jb) {
+                  if (gb.field_d < this.field_Pb.field_kb + (this.field_Pb.field_db + this.field_Pb.field_L + this.field_Pb.field_C)) {
                     return false;
                   } else {
-                    ((ie) this).field_Jb = 3;
+                    this.field_Jb = 3;
                     return true;
                   }
                 } else {
                   return false;
                 }
               } else {
-                if (0 == ((ie) this).field_Jb) {
-                  if (gb.field_d < ((ie) this).field_Pb.field_kb + (((ie) this).field_Pb.field_db + ((ie) this).field_Pb.field_L + ((ie) this).field_Pb.field_C)) {
+                if (0 == this.field_Jb) {
+                  if (gb.field_d < this.field_Pb.field_kb + (this.field_Pb.field_db + this.field_Pb.field_L + this.field_Pb.field_C)) {
                     return false;
                   } else {
-                    ((ie) this).field_Jb = 3;
+                    this.field_Jb = 3;
                     return true;
                   }
                 } else {
@@ -942,27 +960,27 @@ final class ie extends cr {
     }
 
     final boolean l(int param0) {
-        if (((ie) this).field_Ib.field_tb == 0) {
+        if (this.field_Ib.field_tb == 0) {
           if (param0 < -59) {
-            if (((ie) this).field_Ib.field_xb != 0) {
-              if (((ie) this).field_Jb <= 0) {
-                if (((ie) this).field_Jb == 0) {
-                  if (((ie) this).field_Pb.field_L + ((ie) this).field_Pb.field_C <= gb.field_d) {
+            if (this.field_Ib.field_xb != 0) {
+              if (this.field_Jb <= 0) {
+                if (this.field_Jb == 0) {
+                  if (this.field_Pb.field_L + this.field_Pb.field_C <= gb.field_d) {
                     return false;
                   } else {
-                    ((ie) this).field_Jb = 3;
+                    this.field_Jb = 3;
                     return true;
                   }
                 } else {
                   return false;
                 }
               } else {
-                ((ie) this).field_Jb = ((ie) this).field_Jb - 1;
-                if (((ie) this).field_Jb == 0) {
-                  if (((ie) this).field_Pb.field_L + ((ie) this).field_Pb.field_C <= gb.field_d) {
+                this.field_Jb = this.field_Jb - 1;
+                if (this.field_Jb == 0) {
+                  if (this.field_Pb.field_L + this.field_Pb.field_C <= gb.field_d) {
                     return false;
                   } else {
-                    ((ie) this).field_Jb = 3;
+                    this.field_Jb = 3;
                     return true;
                   }
                 } else {
@@ -976,16 +994,12 @@ final class ie extends cr {
             return false;
           }
         } else {
-          ((ie) this).field_Jb = 20;
+          this.field_Jb = 20;
           return true;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Rb = "<%0>'s game";
         field_Sb = "Advertising websites";
         field_Kb = 0;

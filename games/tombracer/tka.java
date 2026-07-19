@@ -9,14 +9,20 @@ final class tka extends vpa {
 
     tka(hja[] param0) {
         try {
-            ((tka) this).field_e = mj.field_J;
-            ((tka) this).field_o = param0;
+            this.field_e = mj.field_J;
+            this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "tka.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "tka.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void c(byte param0) {
+        if (param0 > -52) {
+            field_q = (jea) null;
+            field_p = null;
+            field_q = null;
+            return;
+        }
         field_p = null;
         field_q = null;
     }
@@ -34,7 +40,7 @@ final class tka extends vpa {
               if (param0 > 46) {
                 break L1;
               } else {
-                field_p = null;
+                field_p = (nh) null;
                 break L1;
               }
             }
@@ -60,14 +66,18 @@ final class tka extends vpa {
                 ou.field_e[var1_int] = (int)(Math.sin(var2) * 4096.0);
                 lm.field_r[var1_int] = (int)(4096.0 * Math.cos(var2));
                 var1_int++;
-                continue L3;
+                if (var4 == 0) {
+                  continue L3;
+                } else {
+                  return;
+                }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "tka.A(" + param0 + ')');
+          throw tba.a((Throwable) ((Object) var1), "tka.A(" + param0 + ')');
         }
     }
 
@@ -113,7 +123,7 @@ final class tka extends vpa {
             L1: {
               bea.f(param1 - -param0.field_i, param3 - -param0.field_n, param0.field_m, param0.field_p, 10197915);
               if (param4) {
-                if (((rj) (Object) param0).field_w) {
+                if (((rj) ((Object) param0)).field_w) {
                   stackOut_4_0 = 1;
                   stackIn_6_0 = stackOut_4_0;
                   break L1;
@@ -176,12 +186,12 @@ final class tka extends vpa {
                 break L5;
               }
             }
-            var10 = ((tka) this).field_o[var8];
+            var10 = this.field_o[var8];
             var11 = param0.field_i + param1 - -((-var10.field_a + param0.field_m) / 2);
             var12 = (param0.field_p + -var10.field_b) / 2 + (param0.field_n + param3);
             var13 = param1 + (param0.field_i + param0.field_m / 2);
             var10.b(var11, var12);
-            ((tka) this).field_e.a(((tka) this).d(-4, param0), var13, param3, var9, -1);
+            this.field_e.a(this.d(-4, param0), var13, param3, var9, -1);
             if (param2 == 16777215) {
               break L0;
             } else {
@@ -193,23 +203,23 @@ final class tka extends vpa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var6;
+            stackOut_22_0 = (RuntimeException) (var6);
             stackOut_22_1 = new StringBuilder().append("tka.B(");
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -217,15 +227,11 @@ final class tka extends vpa {
               break L6;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = 0;
     }
 }

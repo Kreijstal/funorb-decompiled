@@ -7,8 +7,9 @@ final class uf {
     static jp field_c;
 
     final static boolean a(int param0) {
+        boolean discarded$0 = false;
         if (param0 <= 89) {
-            boolean discarded$0 = uf.a(-98);
+            discarded$0 = uf.a(-98);
             return ga.field_c.a((byte) 11);
         }
         return ga.field_c.a((byte) 11);
@@ -18,13 +19,12 @@ final class uf {
         field_c = null;
         field_a = null;
         field_b = null;
+        if (param0 != 24) {
+            field_a = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Unrated game";
     }
 }

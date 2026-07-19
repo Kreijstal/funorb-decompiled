@@ -9,11 +9,25 @@ final class ef {
 
     public static void a(byte param0) {
         field_c = null;
+        if (param0 < 101) {
+            ef.a(-123);
+            field_b = null;
+            field_d = null;
+            return;
+        }
         field_b = null;
         field_d = null;
     }
 
     final static void a(int param0) {
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -24,54 +38,58 @@ final class ef {
         var4 = MinerDisturbance.field_ab;
         try {
           L0: {
-            var5 = di.field_V;
-            var1 = var5;
+            L1: {
+              var5 = di.field_V;
+              var1 = var5;
+              if (param0 == -24322) {
+                break L1;
+              } else {
+                field_a = 8;
+                break L1;
+              }
+            }
             var2 = 0;
             var3 = var5.length;
-            L1: while (true) {
+            L2: while (true) {
               if (var2 >= var3) {
                 break L0;
               } else {
-                int incrementValue$40 = var2;
+                incrementValue$40 = var2;
                 var2++;
                 var5[incrementValue$40] = 0;
-                int incrementValue$41 = var2;
+                incrementValue$41 = var2;
                 var2++;
                 var5[incrementValue$41] = 0;
-                int incrementValue$42 = var2;
+                incrementValue$42 = var2;
                 var2++;
                 var5[incrementValue$42] = 0;
-                int incrementValue$43 = var2;
+                incrementValue$43 = var2;
                 var2++;
                 var5[incrementValue$43] = 0;
-                int incrementValue$44 = var2;
+                incrementValue$44 = var2;
                 var2++;
                 var5[incrementValue$44] = 0;
-                int incrementValue$45 = var2;
+                incrementValue$45 = var2;
                 var2++;
                 var5[incrementValue$45] = 0;
-                int incrementValue$46 = var2;
+                incrementValue$46 = var2;
                 var2++;
                 var5[incrementValue$46] = 0;
-                int incrementValue$47 = var2;
+                incrementValue$47 = var2;
                 var2++;
                 var5[incrementValue$47] = 0;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1_ref, "ef.A(" + -24322 + ')');
+          throw lj.a((Throwable) ((Object) var1_ref), "ef.A(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "The rock blaster: the last word in portable, projectile demolition at an affordable price. Press <img=21> to fire high velocity explosives at your target. It's like dynamite without the waiting. Do not fire at close range.";
         field_a = 0;
     }

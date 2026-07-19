@@ -9,6 +9,7 @@ final class ff {
     }
 
     final static void a(int param0, int param1, int[] param2) {
+        int incrementValue$81 = 0;
         int var3 = 0;
         int[] var4 = null;
         int var5 = 0;
@@ -53,9 +54,9 @@ final class ff {
                       var14++;
                       continue L1;
                     } else {
-                      int incrementValue$81 = var10;
+                      incrementValue$81 = var10;
                       var10++;
-                      var4[incrementValue$81] = 0;
+                      var4[incrementValue$81] = param1;
                       var14++;
                       continue L1;
                     }
@@ -67,16 +68,12 @@ final class ff {
             return;
           }
         } else {
-          df.b(0, 0, df.field_e, df.field_f, 0);
+          df.b(0, 0, df.field_e, df.field_f, param1);
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new int[]{0, 32800, 41120, 41380, 42405, 46565, 62965, 65015};
     }
 }

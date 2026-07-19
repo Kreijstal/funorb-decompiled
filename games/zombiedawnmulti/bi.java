@@ -26,10 +26,6 @@ final class bi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bi.A(";
         field_d = "Enter the name you'd prefer. This is the name displayed to other players.";
         field_b = "<%0> points ";

@@ -7,13 +7,13 @@ final class ip {
     final static void a(byte param0, String param1, int param2) {
         try {
             if (param0 > -64) {
-                Object var4 = null;
+                String var4 = (String) null;
                 ip.a((byte) 87, (String) null, -2);
             }
             t.field_f = no.field_c;
             lp.field_C = param2;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ip.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "ip.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -59,36 +59,44 @@ final class ip {
         int var45 = 0;
         int var46 = 0;
         int var47 = 0;
-        int stackIn_6_0 = 0;
+        int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
         var47 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            var8_int = 0;
-            var9 = param7;
-            var10 = 0;
-            var11 = -param2 + param5;
-            var12 = param7 + -param2;
-            var13 = param5 * param5;
-            var14 = param7 * param7;
-            var15 = var11 * var11;
-            var16 = var12 * var12;
-            var17 = var14 << 1;
-            var18 = var13 << 1;
-            var19 = var16 << 1;
-            var20 = var15 << 1;
-            var21 = param7 << 1;
-            var22 = var12 << 1;
-            var23 = var17 + (-var21 + 1) * var13;
-            var24 = -((var21 + -1) * var18) + var14;
-            var25 = var19 + var15 * (-var22 + 1);
-            var26 = var16 - var20 * (-1 + var22);
-            var27 = var13 << 2;
-            var28 = var14 << 2;
-            var29 = var15 << 2;
-            var30 = var16 << 2;
+            L1: {
+              var8_int = 0;
+              var9 = param7;
+              var10 = 0;
+              var11 = -param2 + param5;
+              var12 = param7 + -param2;
+              var13 = param5 * param5;
+              var14 = param7 * param7;
+              var15 = var11 * var11;
+              var16 = var12 * var12;
+              var17 = var14 << 147562049;
+              var18 = var13 << -1423419167;
+              var19 = var16 << 1114816961;
+              var20 = var15 << -1802343487;
+              var21 = param7 << 2077945729;
+              var22 = var12 << -405059487;
+              var23 = var17 + (-var21 + 1) * var13;
+              var24 = -((var21 + -1) * var18) + var14;
+              var25 = var19 + var15 * (-var22 + 1);
+              var26 = var16 - var20 * (-1 + var22);
+              var27 = var13 << -1074955454;
+              if (param3 == -45) {
+                break L1;
+              } else {
+                field_a = (cr) null;
+                break L1;
+              }
+            }
+            var28 = var14 << 1218266338;
+            var29 = var15 << 1644484354;
+            var30 = var16 << -435138142;
             var31 = 3 * var17;
             var32 = var18 * (-3 + var21);
             var33 = 3 * var19;
@@ -98,94 +106,94 @@ final class ip {
             var37 = var30;
             var38 = var29 * (var12 + -1);
             var39 = vl.field_e[param6];
-            ki.a(-86, -param5 + param1, var39, param1 + -var11, param0);
+            ki.a(param3 + -41, -param5 + param1, var39, param1 + -var11, param0);
             ki.a(-103, -var11 + param1, var39, param1 - -var11, param4);
             ki.a(-103, param1 + var11, var39, param1 - -param5, param0);
-            L1: while (true) {
-              if (var9 <= 0) {
+            L2: while (true) {
+              if ((var9 ^ -1) >= -1) {
                 break L0;
               } else {
-                L2: {
+                L3: {
                   if (var9 > var12) {
-                    stackOut_5_0 = 0;
-                    stackIn_6_0 = stackOut_5_0;
-                    break L2;
+                    stackOut_7_0 = 0;
+                    stackIn_8_0 = stackOut_7_0;
+                    break L3;
                   } else {
-                    stackOut_4_0 = 1;
-                    stackIn_6_0 = stackOut_4_0;
-                    break L2;
+                    stackOut_6_0 = 1;
+                    stackIn_8_0 = stackOut_6_0;
+                    break L3;
                   }
                 }
-                L3: {
-                  var40 = stackIn_6_0;
-                  if (var23 < 0) {
-                    L4: while (true) {
+                L4: {
+                  var40 = stackIn_8_0;
+                  if ((var23 ^ -1) > -1) {
+                    L5: while (true) {
                       if (var23 >= 0) {
-                        break L3;
+                        break L4;
                       } else {
                         var24 = var24 + var35;
                         var23 = var23 + var31;
                         var8_int++;
                         var31 = var31 + var28;
                         var35 = var35 + var28;
-                        continue L4;
+                        continue L5;
                       }
                     }
                   } else {
-                    break L3;
+                    break L4;
                   }
                 }
-                L5: {
+                L6: {
                   if (var40 != 0) {
-                    L6: {
+                    L7: {
                       if (var25 < 0) {
-                        L7: while (true) {
+                        L8: while (true) {
                           if (var25 >= 0) {
-                            break L6;
+                            break L7;
                           } else {
                             var26 = var26 + var37;
                             var25 = var25 + var33;
                             var33 = var33 + var30;
                             var10++;
                             var37 = var37 + var30;
-                            continue L7;
+                            continue L8;
                           }
                         }
                       } else {
-                        break L6;
+                        break L7;
                       }
                     }
-                    L8: {
-                      if (var26 < 0) {
+                    L9: {
+                      if ((var26 ^ -1) > -1) {
                         var25 = var25 + var33;
                         var26 = var26 + var37;
                         var33 = var33 + var30;
                         var37 = var37 + var30;
                         var10++;
-                        break L8;
+                        break L9;
                       } else {
-                        break L8;
+                        break L9;
                       }
                     }
                     var25 = var25 + -var38;
                     var26 = var26 + -var34;
                     var34 = var34 - var29;
                     var38 = var38 - var29;
-                    break L5;
+                    break L6;
                   } else {
-                    break L5;
+                    break L6;
                   }
                 }
-                L9: {
-                  if (var24 >= 0) {
-                    break L9;
+                L10: {
+                  if (-1 >= (var24 ^ -1)) {
+                    break L10;
                   } else {
                     var23 = var23 + var31;
                     var24 = var24 + var35;
                     var35 = var35 + var28;
                     var8_int++;
                     var31 = var31 + var28;
-                    break L9;
+                    break L10;
                   }
                 }
                 var23 = var23 + -var36;
@@ -202,15 +210,15 @@ final class ip {
                   var46 = -var10 + param1;
                   ki.a(-95, var44, vl.field_e[var41], var46, param0);
                   ki.a(-118, var46, vl.field_e[var41], var45, param4);
-                  ki.a(-105, var45, vl.field_e[var41], var43, param0);
+                  ki.a(param3 + -60, var45, vl.field_e[var41], var43, param0);
                   ki.a(-103, var44, vl.field_e[var42], var46, param0);
                   ki.a(-77, var46, vl.field_e[var42], var45, param4);
                   ki.a(-79, var45, vl.field_e[var42], var43, param0);
-                  continue L1;
+                  continue L2;
                 } else {
-                  ki.a(-117, var44, vl.field_e[var41], var43, param0);
+                  ki.a(param3 ^ 88, var44, vl.field_e[var41], var43, param0);
                   ki.a(-103, var44, vl.field_e[var42], var43, param0);
-                  continue L1;
+                  continue L2;
                 }
               }
             }
@@ -218,7 +226,7 @@ final class ip {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var8, "ip.C(" + param0 + ',' + param1 + ',' + param2 + ',' + -45 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw wn.a((Throwable) ((Object) var8), "ip.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

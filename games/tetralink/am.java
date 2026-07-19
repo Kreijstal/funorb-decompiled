@@ -30,10 +30,6 @@ final class am {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "am.A(";
         field_e = "<%0> is not on your ignore list.";
         field_a = "Friends";

@@ -9,10 +9,14 @@ final class ks {
 
     public static void a(byte param0) {
         field_d = null;
+        if (param0 != 109) {
+            return;
+        }
         field_c = null;
     }
 
     final static ej a(int param0, int param1) {
+        ej discarded$2 = null;
         ej[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -26,7 +30,7 @@ final class ks {
             if (param1 == -28228) {
               return null;
             } else {
-              ej discarded$2 = ks.a(-73, -126);
+              discarded$2 = ks.a(-73, -126);
               return null;
             }
           } else {
@@ -41,10 +45,6 @@ final class ks {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new kp();
         field_c = "Loading fonts";
         field_b = true;

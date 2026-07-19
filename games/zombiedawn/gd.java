@@ -48,8 +48,16 @@ final class gd {
         kj.field_c = param2;
         id.field_D = param2;
         rl.field_f = true;
-        te.field_eb = param0;
-        ul.field_d = param0;
+        if (param1 != 32767) {
+          gd.a((byte) -51);
+          te.field_eb = param0;
+          ul.field_d = param0;
+          return;
+        } else {
+          te.field_eb = param0;
+          ul.field_d = param0;
+          return;
+        }
     }
 
     final static long a(int param0) {
@@ -61,7 +69,10 @@ final class gd {
     }
 
     private final void a(boolean param0) {
-        ((gd) this).field_J = false;
+        this.field_J = false;
+        if (!param0) {
+            this.a(58, 89, 34, 48);
+        }
     }
 
     public static void a(byte param0) {
@@ -76,10 +87,10 @@ final class gd {
         int var6 = 0;
         int var7 = ZombieDawn.field_J;
         int var5 = 79 / ((-43 - param1) / 41);
-        for (var6 = 0; ((gd) this).field_k > var6; var6++) {
-            ((gd) this).field_G[var6] = (short)(((gd) this).field_G[var6] + param3);
-            ((gd) this).field_B[var6] = (short)(((gd) this).field_B[var6] + param2);
-            ((gd) this).field_m[var6] = (short)(((gd) this).field_m[var6] + param0);
+        for (var6 = 0; this.field_k > var6; var6++) {
+            this.field_G[var6] = (short)(this.field_G[var6] + param3);
+            this.field_B[var6] = (short)(this.field_B[var6] + param2);
+            this.field_m[var6] = (short)(this.field_m[var6] + param0);
         }
         this.a(true);
     }
@@ -97,10 +108,10 @@ final class gd {
         int var11 = 0;
         int var12 = 0;
         var12 = ZombieDawn.field_J;
-        if (((gd) this).field_J) {
+        if (this.field_J) {
           return;
         } else {
-          ((gd) this).field_J = true;
+          this.field_J = true;
           var2 = 32767;
           var3 = param0;
           var4 = 32767;
@@ -109,18 +120,18 @@ final class gd {
           var7 = -32768;
           var8 = 0;
           L0: while (true) {
-            if (((gd) this).field_k <= var8) {
-              ((gd) this).field_s = var5;
-              ((gd) this).field_a = var4;
-              ((gd) this).field_E = var3;
-              ((gd) this).field_o = var2;
-              ((gd) this).field_b = var7;
-              ((gd) this).field_L = var6;
+            if (this.field_k <= var8) {
+              this.field_s = var5;
+              this.field_a = var4;
+              this.field_E = var3;
+              this.field_o = var2;
+              this.field_b = var7;
+              this.field_L = var6;
               return;
             } else {
               L1: {
-                var9 = ((gd) this).field_G[var8];
-                var10 = ((gd) this).field_B[var8];
+                var9 = this.field_G[var8];
+                var10 = this.field_B[var8];
                 if (var9 < var2) {
                   var2 = var9;
                   break L1;
@@ -137,7 +148,7 @@ final class gd {
                 }
               }
               L3: {
-                var11 = ((gd) this).field_m[var8];
+                var11 = this.field_m[var8];
                 if (var5 >= var9) {
                   break L3;
                 } else {
@@ -164,10 +175,8 @@ final class gd {
               if (var7 < var11) {
                 var7 = var11;
                 var8++;
-                var8++;
                 continue L0;
               } else {
-                var8++;
                 var8++;
                 continue L0;
               }
@@ -182,7 +191,7 @@ final class gd {
         var7 = ZombieDawn.field_J;
         var6 = 0;
         L0: while (true) {
-          if (((gd) this).field_k <= var6) {
+          if (this.field_k <= var6) {
             if (param0 != 0) {
               return;
             } else {
@@ -190,9 +199,9 @@ final class gd {
               return;
             }
           } else {
-            ((gd) this).field_G[var6] = (short)(((gd) this).field_G[var6] * param1 / param3);
-            ((gd) this).field_B[var6] = (short)(param4 * ((gd) this).field_B[var6] / param3);
-            ((gd) this).field_m[var6] = (short)(((gd) this).field_m[var6] * param2 / param3);
+            this.field_G[var6] = (short)(this.field_G[var6] * param1 / param3);
+            this.field_B[var6] = (short)(param4 * this.field_B[var6] / param3);
+            this.field_m[var6] = (short)(this.field_m[var6] * param2 / param3);
             var6++;
             continue L0;
           }
@@ -200,15 +209,11 @@ final class gd {
     }
 
     gd() {
-        ((gd) this).field_p = (byte) 0;
-        ((gd) this).field_J = false;
+        this.field_p = (byte) 0;
+        this.field_J = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = new String[]{"Get a score of at least 2,000", "Get a score of at least 5,000", "Get a score of at least 10,000", "Assimilate all 250 humans on the Mall bonus level", "Get 50 zombies across the road on the Power Plant bonus level", "Assimilate all the humans on the Precinct bonus level", "Assimilate an army soldier ", "Complete the basic game", "Complete the Mall", "Complete the Power Plant on Hard", "Complete the Precinct on Hard", "Complete the White House on Hard", "Consume 100 pumpkin-heads in a single game during Halloween", "Get a score of at least 16,661", "Stealthily retrieve the Quake and Speed powerups in Touchdown, in that order, using the same zombie", "No pain, no gain. Keep a zombie healthy through exercise", "Finish the Terminal 5 bonus level with more than 400 zombies", "Zombify all the hunters in Hunting Grounds", "Herd at least 120 humans into the barn in the Countryside bonus level", "Open all doors in the Labs Entrance within 2 minutes", "Feed 20 victims (not including enemy zombies) to aliens in a single level", "Feed a man in black to an alien", "Get out of the Labs bonus level in less than one minute", "Open the doors to the Palace", "Take over the Palace", "Complete Terminal 5 on Hard", "Complete Countryside on Hard", "Complete the Labs on Hard", "Complete the Palace on Hard", "I hope Mr. Harris got to say his goodbyes.", "Doris should really stop placing powerups in the oven.", "Miss Potter thought she would be safe in there."};
     }
 }

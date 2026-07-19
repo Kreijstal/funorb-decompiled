@@ -57,10 +57,10 @@ final class vi extends bk {
 
     vi(String param0, String param1) {
         try {
-            ((vi) this).field_i = param1;
-            ((vi) this).field_e = param0;
+            this.field_i = param1;
+            this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -69,18 +69,14 @@ final class vi extends bk {
             return;
         }
         try {
-            param1.b(((vi) this).field_e, (byte) 112);
-            param1.c(((vi) this).field_i, (byte) 82);
+            param1.b(this.field_e, (byte) 112);
+            param1.c(this.field_i, (byte) 82);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "vi.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "vi.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Members";
         field_j = "Invite only";
         field_h = new p();

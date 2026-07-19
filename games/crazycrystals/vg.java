@@ -7,17 +7,36 @@ final class vg {
     static String field_c;
 
     final static void a(byte param0) {
-        if (0 - lc.field_a == sn.field_c) {
+        if (0 - lc.field_a != sn.field_c) {
+          if (250 + -lc.field_a == sn.field_c) {
+            if (param0 != -82) {
+              return;
+            } else {
+              sn.field_c = sn.field_c + 1;
+              return;
+            }
+          } else {
+            if (param0 != -82) {
+              return;
+            } else {
+              sn.field_c = sn.field_c + 1;
+              return;
+            }
+          }
+        } else {
+          if (param0 != -82) {
             return;
-        }
-        if (~(250 + -lc.field_a) != ~sn.field_c) {
+          } else {
+            sn.field_c = sn.field_c + 1;
             return;
+          }
         }
     }
 
     final static String b(byte param0) {
+        String discarded$3 = null;
         if (param0 != -29) {
-            String discarded$3 = vg.b((byte) 15);
+            discarded$3 = vg.b((byte) 15);
             if (lc.field_c == l.field_b) {
                 return ji.field_x;
             }
@@ -42,7 +61,7 @@ final class vg {
     }
 
     final static String c(byte param0) {
-        int var2 = -3;
+        int var2 = -3 / ((param0 - 52) / 52);
         String var1 = "";
         if (!(null == mk.field_b)) {
             var1 = mk.field_b.i(-1);
@@ -58,15 +77,17 @@ final class vg {
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != 8877) {
+            field_a = (sj) null;
+            field_b = null;
+            field_c = null;
+            return;
+        }
         field_b = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[8192];
         field_a = new sj(12, 0, 1, 0);
         field_c = "Names can only contain letters, numbers, spaces and underscores";

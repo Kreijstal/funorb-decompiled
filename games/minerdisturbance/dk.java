@@ -35,7 +35,7 @@ final class dk {
             try {
               try {
                 L0: {
-                  var3 = 0;
+                  var3 = 18 % ((37 - param1) / 58);
                   var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
                   param0.getAppletContext().showDocument(nn.a(110, param0, var2), "_top");
                   break L0;
@@ -51,23 +51,23 @@ final class dk {
               decompiledCaughtException = decompiledCaughtParameter1;
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_4_0 = (RuntimeException) var2_ref2;
+                stackOut_4_0 = (RuntimeException) (var2_ref2);
                 stackOut_4_1 = new StringBuilder().append("dk.A(");
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
                 stackIn_5_0 = stackOut_4_0;
                 stackIn_5_1 = stackOut_4_1;
                 if (param0 == null) {
-                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+                  stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
                   stackOut_6_2 = "null";
                   stackIn_7_0 = stackOut_6_0;
                   stackIn_7_1 = stackOut_6_1;
                   stackIn_7_2 = stackOut_6_2;
                   break L1;
                 } else {
-                  stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-                  stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+                  stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+                  stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
                   stackOut_5_2 = "{...}";
                   stackIn_7_0 = stackOut_5_0;
                   stackIn_7_1 = stackOut_5_1;
@@ -75,7 +75,7 @@ final class dk {
                   break L1;
                 }
               }
-              throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -27 + ')');
+              throw lj.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -85,33 +85,43 @@ final class dk {
     }
 
     final static void a(int param0) {
+        int discarded$48 = 0;
+        int discarded$49 = 0;
+        int discarded$50 = 0;
+        int discarded$51 = 0;
         bi var1 = null;
         ld var2 = null;
-        var1 = (bi) (Object) bb.field_a.b(77);
-        if (var1 == null) {
-          si.a(-51);
-          return;
-        } else {
+        var1 = (bi) ((Object) bb.field_a.b(param0 + -22211));
+        if (var1 != null) {
           var2 = kj.field_a;
-          int discarded$8 = var2.b((byte) 46);
-          int discarded$9 = var2.b((byte) 19);
-          int discarded$10 = var2.b((byte) 117);
-          int discarded$11 = var2.b((byte) 49);
-          var1.b(34);
+          discarded$48 = var2.b((byte) 46);
+          discarded$49 = var2.b((byte) 19);
+          discarded$50 = var2.b((byte) 117);
+          discarded$51 = var2.b((byte) 49);
+          if (param0 != 22288) {
+            dk.b(-78);
+            var1.b(param0 ^ 22322);
+            return;
+          } else {
+            var1.b(param0 ^ 22322);
+            return;
+          }
+        } else {
+          si.a(param0 ^ -22307);
           return;
         }
     }
 
     public static void b(int param0) {
         if (param0 <= 69) {
-          field_b = null;
-          field_d = null;
+          field_b = (ia) null;
+          field_d = (byte[][][]) null;
           field_c = null;
           field_b = null;
           field_a = null;
           return;
         } else {
-          field_d = null;
+          field_d = (byte[][][]) null;
           field_c = null;
           field_b = null;
           field_a = null;
@@ -120,10 +130,6 @@ final class dk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new ae();
         field_e = 0;
         field_a = new Random();

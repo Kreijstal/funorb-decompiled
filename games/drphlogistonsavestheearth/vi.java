@@ -14,7 +14,7 @@ final class vi {
     public static void a(int param0) {
         field_d = null;
         field_b = null;
-        field_h = null;
+        field_h = (ck[][]) null;
         field_f = null;
         if (param0 != 2823) {
           vi.a(-117);
@@ -35,10 +35,6 @@ final class vi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = new ck[2][20];
         field_a = new int[256];
         field_f = "Cancel";

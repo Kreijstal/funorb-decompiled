@@ -27,9 +27,7 @@ final class b extends le {
         byte[] var11 = null;
         bg var13 = null;
         byte[] var14 = null;
-        byte[] var16 = null;
-        byte[] var18 = null;
-        byte[] var19 = null;
+        byte[] var17 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = ZombieDawn.field_J;
         try {
@@ -55,17 +53,15 @@ final class b extends le {
                 }
                 L3: {
                   if (dp.field_e.field_j > 0) {
-                    var18 = new byte[dp.field_e.field_j];
-                    var16 = var18;
-                    var14 = var16;
+                    var14 = new byte[dp.field_e.field_j];
                     var11 = var14;
                     var8 = var11;
-                    var19 = var8;
+                    var17 = var8;
                     var6 = 0;
                     L4: while (true) {
-                      if (var18.length <= var6) {
-                        var6_ref_bg = new bg((long)var4 + var2_long, dp.field_e.field_j, var19);
-                        dj.field_m.a(0, (le) (Object) var6_ref_bg);
+                      if (var14.length <= var6) {
+                        var6_ref_bg = new bg((long)var4 + var2_long, dp.field_e.field_j, var17);
+                        dj.field_m.a(0, var6_ref_bg);
                         dp.field_e.field_j = 0;
                         break L3;
                       } else {
@@ -78,12 +74,12 @@ final class b extends le {
                     break L3;
                   }
                 }
-                var9 = (bg) (Object) dj.field_m.b((byte) 26);
+                var9 = (bg) ((Object) dj.field_m.b((byte) 26));
                 var13 = var9;
                 if (var13 == null) {
                   break L1;
                 } else {
-                  if (~var2_long >= ~var13.field_h) {
+                  if ((var2_long ^ -1L) >= (var13.field_h ^ -1L)) {
                     break L1;
                   } else {
                     var13.b(-27598);
@@ -103,14 +99,14 @@ final class b extends le {
                 }
               }
             }
-            vl.a((byte) -46, 0);
+            vl.a((byte) -46, param0);
             var2_int = -68 % ((param1 - 1) / 43);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2, "b.B(" + 0 + ',' + param1 + ')');
+          throw sh.a((Throwable) ((Object) var2), "b.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -120,17 +116,16 @@ final class b extends le {
         field_j = null;
         field_m = null;
         field_p = null;
+        if (param0 != -47) {
+            b.a(-22, -89);
+        }
     }
 
     b() {
-        ((b) this).field_o = false;
+        this.field_o = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = 480;
         field_q = -1;
         field_n = new af();

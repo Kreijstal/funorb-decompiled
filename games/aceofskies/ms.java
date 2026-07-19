@@ -8,19 +8,19 @@ final class ms {
     static int field_d;
 
     final void b(byte param0) {
-        if (((ms) this).field_b == null) {
+        if (this.field_b == null) {
           if (param0 != 29) {
-            ((ms) this).field_b = null;
+            this.field_b = (ti) null;
             return;
           } else {
             return;
           }
         } else {
-          ((ms) this).field_b.a(4665);
+          this.field_b.a(4665);
           if (param0 == 29) {
             return;
           } else {
-            ((ms) this).field_b = null;
+            this.field_b = (ti) null;
             return;
           }
         }
@@ -28,7 +28,7 @@ final class ms {
 
     public static void a(byte param0) {
         field_c = null;
-        int var1 = -34;
+        int var1 = -69 / ((71 - param0) / 39);
         field_a = null;
     }
 
@@ -36,10 +36,6 @@ final class ms {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Log in";
     }
 }

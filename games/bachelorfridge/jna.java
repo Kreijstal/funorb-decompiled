@@ -49,7 +49,7 @@ final class jna extends bw {
                   break L2;
                 } else {
                   L3: {
-                    if (ub.field_k.field_R == 0) {
+                    if (-1 == (ub.field_k.field_R ^ -1)) {
                       break L3;
                     } else {
                       lna.field_q = false;
@@ -79,23 +79,23 @@ final class jna extends bw {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var8 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var8;
+            stackOut_18_0 = (RuntimeException) (var8);
             stackOut_18_1 = new StringBuilder().append("jna.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param4 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L4;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -103,19 +103,20 @@ final class jna extends bw {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     final void a(int param0, lu param1) {
+        int discarded$0 = 0;
         try {
-            ((jna) this).field_c = param1.c(-99);
+            this.field_c = param1.c(-99);
             if (param0 > -43) {
-                field_f = null;
+                field_f = (int[]) null;
             }
-            int discarded$0 = param1.f(-55);
+            discarded$0 = param1.f(-55);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "jna.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "jna.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -127,17 +128,21 @@ final class jna extends bw {
         var6 = BachelorFridge.field_y;
         var7 = new kv[9];
         var4 = var7;
-        var7[0] = ik.b(1, param3, 2);
+        var7[0] = ik.b(param1, param3, 2);
         var5 = 1;
-        L0: while (true) {
-          if (9 <= var5) {
-            var4[4] = ik.b(64, param0, 2);
-            return var4;
-          } else {
-            var7[var5] = var7[0];
-            var5++;
-            continue L0;
+        if (param2 == 106) {
+          L0: while (true) {
+            if (9 <= var5) {
+              var4[4] = ik.b(64, param0, 2);
+              return var4;
+            } else {
+              var7[var5] = var7[0];
+              var5++;
+              continue L0;
+            }
           }
+        } else {
+          return (kv[]) null;
         }
     }
 
@@ -145,9 +150,9 @@ final class jna extends bw {
     }
 
     public static void a(int param0) {
-        Object var2 = null;
+        String var2 = null;
         if (param0 != 30862) {
-          var2 = null;
+          var2 = (String) null;
           jna.a(-29, 74, 14, false, (String) null, -5, 108, 69);
           field_f = null;
           return;
@@ -160,13 +165,13 @@ final class jna extends bw {
     final static void a(boolean param0, boolean param1) {
         wia.a(param1, (byte) 31);
         kh.a((byte) -74, param1);
+        if (param0) {
+            return;
+        }
+        field_f = (int[]) null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new int[256];
     }
 }

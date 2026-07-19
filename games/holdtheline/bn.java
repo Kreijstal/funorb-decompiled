@@ -35,10 +35,6 @@ final class bn extends pd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_l = (vd) (Object) new wh(16777087, 16777087, 128);
+        field_l = (vd) ((Object) new wh(16777087, 16777087, 128));
     }
 }

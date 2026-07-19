@@ -9,8 +9,8 @@ final class hf {
     static int field_a;
 
     final static void a(String[][] param0, String[] param1, byte param2) {
+        RuntimeException runtimeException = null;
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -52,24 +52,32 @@ final class hf {
             var3_int = 0;
             L1: while (true) {
               if (var3_int >= lb.field_P.length) {
+                L2: {
+                  if (param2 == -96) {
+                    break L2;
+                  } else {
+                    field_b = (String) null;
+                    break L2;
+                  }
+                }
                 break L0;
               } else {
                 var4 = 0;
-                L2: while (true) {
+                L3: while (true) {
                   if (var4 >= lb.field_P[var3_int].length) {
                     var3_int++;
                     continue L1;
                   } else {
-                    L3: {
+                    L4: {
                       if (lb.field_P[var3_int][var4] != null) {
                         lb.field_P[var3_int][var4] = lb.field_P[var3_int][var4].toLowerCase();
-                        break L3;
+                        break L4;
                       } else {
-                        break L3;
+                        break L4;
                       }
                     }
                     var4++;
-                    continue L2;
+                    continue L3;
                   }
                 }
               }
@@ -77,65 +85,65 @@ final class hf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
+          L5: {
+            runtimeException = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) (runtimeException);
             stackOut_13_1 = new StringBuilder().append("hf.A(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L4;
+              break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
               stackIn_16_2 = stackOut_14_2;
-              break L4;
+              break L5;
             }
           }
-          L5: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+          L6: {
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
-              break L5;
+              break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
               stackIn_19_2 = stackOut_17_2;
-              break L5;
+              break L6;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + -96 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param2 + ')');
         }
     }
 
     final static int[] a(int param0, byte param1) {
         int var2 = 0;
         var2 = param0;
-        if (var2 == -1) {
+        if ((var2 ^ -1) == 0) {
           return jc.field_i;
         } else {
           if (var2 != 0) {
@@ -156,15 +164,14 @@ final class hf {
     }
 
     public static void a(int param0) {
+        if (param0 != 0) {
+            field_d = (int[]) null;
+        }
         field_d = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Similar rating";
         field_a = 4800;
     }

@@ -21,7 +21,7 @@ final class mg {
         if (param0 != -652) {
             return;
         }
-        we.a(param2, param1, param4, false, param3, ((mg) this).field_c);
+        we.a(param2, param1, param4, false, param3, this.field_c);
     }
 
     final static boolean a(int param0, byte param1) {
@@ -40,30 +40,26 @@ final class mg {
         }
         try {
             var4 = 40 + un.e(-107);
-            var5 = sh.field_u - var3 >> 1;
-            var6 = gp.field_w + -var4 >> 1;
+            var5 = sh.field_u - var3 >> 290135073;
+            var6 = gp.field_w + -var4 >> 1150039905;
             param0.d(var4, var3, var6, param1 ^ -1150034421, -65281, var5);
             var2.a(var3 + var5, var5, var4 + var6, var6, param1 ^ 1150039868);
             param0.SA(0, var6, vp.field_i, var4, vp.field_j, vp.field_i * var6, vp.field_i);
             var2.a(true);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "mg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "mg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     mg(ll[] param0) {
         try {
-            ((mg) this).field_c = param0;
+            this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "mg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0L;
         field_a = "Create";
     }

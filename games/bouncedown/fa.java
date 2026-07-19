@@ -23,20 +23,27 @@ final class fa {
     }
 
     final static Boolean b(int param0) {
-        Boolean var1 = lk.field_p;
+        Boolean var1 = null;
+        if (param0 != 1) {
+            var1 = lk.field_p;
+            lk.field_p = null;
+            return var1;
+        }
+        var1 = lk.field_p;
         lk.field_p = null;
         return var1;
     }
 
     final static gk a(byte param0, int param1) {
-        return j.a(false, (byte) -95, false, param1, true, 1);
+        if (param0 != -76) {
+          field_b = 107;
+          return j.a(false, (byte) -95, false, param1, true, 1);
+        } else {
+          return j.a(false, (byte) -95, false, param1, true, 1);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 0;
     }
 }

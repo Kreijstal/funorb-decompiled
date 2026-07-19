@@ -18,15 +18,14 @@ final class ba {
         field_c = null;
         field_f = null;
         field_e = null;
+        if (param0 != 3) {
+            return;
+        }
         field_b = null;
         field_g = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Error connecting to server. Please try using a different server.";
         field_f = new String[3];
     }

@@ -31,7 +31,7 @@ abstract class loa {
               if (param1 == -42) {
                 break L1;
               } else {
-                ((loa) this).field_a = null;
+                this.field_a = (qea) null;
                 break L1;
               }
             }
@@ -41,23 +41,23 @@ abstract class loa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("loa.G(").append(param0).append(',').append(param1).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param2 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -65,7 +65,7 @@ abstract class loa {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ abstract class loa {
               wga.a(true, param1);
               break L0;
             } else {
-              if (param0 == 1) {
+              if ((param0 ^ -1) == -2) {
                 L1: {
                   if (param3 != nba.field_b) {
                     ce.field_B = true;
@@ -92,36 +92,60 @@ abstract class loa {
                   }
                 }
                 if (param0 == 2) {
+                  if (caa.field_i == param3) {
+                    if (param2 != 108) {
+                      return;
+                    } else {
+                      return;
+                    }
+                  } else {
+                    ce.field_B = true;
+                    caa.field_i = param3;
+                    wga.a(true, param1);
+                    if (param2 != 108) {
+                      return;
+                    } else {
+                      return;
+                    }
+                  }
+                } else {
+                  if (param2 != 108) {
+                    return;
+                  } else {
+                    return;
+                  }
+                }
+              } else {
+                if (param0 == 2) {
                   if (caa.field_i != param3) {
                     ce.field_B = true;
                     caa.field_i = param3;
                     wga.a(true, param1);
+                    if (param2 != 108) {
+                      return;
+                    } else {
+                      return;
+                    }
+                  } else {
+                    if (param2 != 108) {
+                      return;
+                    } else {
+                      return;
+                    }
+                  }
+                } else {
+                  if (param2 != 108) {
                     return;
                   } else {
                     return;
                   }
-                } else {
-                  return;
-                }
-              } else {
-                if (param0 == 2) {
-                  if (caa.field_i == param3) {
-                    return;
-                  } else {
-                    ce.field_B = true;
-                    caa.field_i = param3;
-                    wga.a(true, param1);
-                    return;
-                  }
-                } else {
-                  return;
                 }
               }
             }
           }
         }
         L2: {
-          if (param0 != 1) {
+          if ((param0 ^ -1) != -2) {
             break L2;
           } else {
             if (param3 != nba.field_b) {
@@ -131,31 +155,55 @@ abstract class loa {
               break L2;
             } else {
               if (param0 == 2) {
-                if (caa.field_i == param3) {
-                  return;
-                } else {
+                if (caa.field_i != param3) {
                   ce.field_B = true;
                   caa.field_i = param3;
                   wga.a(true, param1);
-                  return;
+                  if (param2 == 108) {
+                    return;
+                  } else {
+                    return;
+                  }
+                } else {
+                  if (param2 != 108) {
+                    return;
+                  } else {
+                    return;
+                  }
                 }
               } else {
-                return;
+                if (param2 != 108) {
+                  return;
+                } else {
+                  return;
+                }
               }
             }
           }
         }
         if (param0 == 2) {
-          if (caa.field_i == param3) {
-            return;
-          } else {
+          if (caa.field_i != param3) {
             ce.field_B = true;
             caa.field_i = param3;
             wga.a(true, param1);
-            return;
+            if (param2 == 108) {
+              return;
+            } else {
+              return;
+            }
+          } else {
+            if (param2 == 108) {
+              return;
+            } else {
+              return;
+            }
           }
         } else {
-          return;
+          if (param2 == 108) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -220,28 +268,42 @@ abstract class loa {
               }
             }
             L2: {
-              var17 = var13 + 0.5f + param7;
-              if (param0 == 1) {
-                var18 = var15;
-                var15 = -var17;
-                var17 = var18;
-                break L2;
-              } else {
-                if (param0 != 2) {
-                  if (param0 != 3) {
+              L3: {
+                var17 = var13 + 0.5f + param7;
+                if (param0 == 1) {
+                  break L3;
+                } else {
+                  L4: {
+                    if ((param0 ^ -1) != -3) {
+                      break L4;
+                    } else {
+                      var17 = -var17;
+                      var15 = -var15;
+                      if (var19 == 0) {
+                        break L2;
+                      } else {
+                        break L4;
+                      }
+                    }
+                  }
+                  if ((param0 ^ -1) != -4) {
                     break L2;
                   } else {
                     var18 = var15;
                     var15 = var17;
                     var17 = -var18;
-                    break L2;
+                    if (var19 == 0) {
+                      break L2;
+                    } else {
+                      break L3;
+                    }
                   }
-                } else {
-                  var17 = -var17;
-                  var15 = -var15;
-                  break L2;
                 }
               }
+              var18 = var15;
+              var15 = -var17;
+              var17 = var18;
+              break L2;
             }
             param1[0] = var15;
             param1[1] = var17;
@@ -249,58 +311,58 @@ abstract class loa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L5: {
             var12 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var12;
+            stackOut_11_0 = (RuntimeException) (var12);
             stackOut_11_1 = new StringBuilder().append("loa.E(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
-              break L3;
+              break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
               stackIn_14_2 = stackOut_12_2;
-              break L3;
+              break L5;
             }
           }
-          L4: {
-            stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+          L6: {
+            stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
             stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param6 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
-              break L4;
+              break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
               stackIn_17_2 = stackOut_15_2;
-              break L4;
+              break L6;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ')');
         }
     }
 
@@ -311,60 +373,80 @@ abstract class loa {
         int var6 = 0;
         int var7 = 0;
         int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
         var7 = TombRacer.field_G ? 1 : 0;
-        var11 = new int[param0];
-        var9 = var11;
-        var8 = var9;
-        var12 = var8;
-        var10 = var12;
-        var3 = var10;
-        var11[0] = 0;
+        var8 = new int[param0];
+        var3 = var8;
+        var8[0] = 0;
         if (param1 != -2352) {
-          ((loa) this).field_a = null;
+          this.field_a = (qea) null;
           var4 = 1;
           L0: while (true) {
-            if (param0 <= var4) {
-              return var3;
-            } else {
-              var5 = ((loa) this).field_a.a(var4 + 1, param1 + 2352);
-              var6 = var4;
-              L1: while (true) {
-                if (var5 >= var6) {
-                  var12[var5] = var4;
-                  var4++;
-                  continue L0;
-                } else {
-                  var3[var6] = var3[var6 - 1];
-                  var6--;
-                  continue L1;
+            L1: {
+              if (param0 <= var4) {
+                break L1;
+              } else {
+                var5 = this.field_a.a(var4 + 1, param1 + 2352);
+                var6 = var4;
+                L2: while (true) {
+                  L3: {
+                    if (var5 >= var6) {
+                      var8[var5] = var4;
+                      var4++;
+                      break L3;
+                    } else {
+                      var8[var6] = var8[var6 - 1];
+                      var6--;
+                      if (var7 != 0) {
+                        break L3;
+                      } else {
+                        continue L2;
+                      }
+                    }
+                  }
+                  if (var7 == 0) {
+                    continue L0;
+                  } else {
+                    break L1;
+                  }
                 }
               }
             }
+            return var8;
           }
         } else {
           var4 = 1;
-          L2: while (true) {
-            if (param0 <= var4) {
-              return var3;
-            } else {
-              var5 = ((loa) this).field_a.a(var4 + 1, param1 + 2352);
-              var6 = var4;
-              L3: while (true) {
-                if (var5 >= var6) {
-                  var12[var5] = var4;
-                  var4++;
-                  continue L2;
-                } else {
-                  var3[var6] = var3[var6 - 1];
-                  var6--;
-                  continue L3;
+          L4: while (true) {
+            L5: {
+              if (param0 <= var4) {
+                break L5;
+              } else {
+                var5 = this.field_a.a(var4 + 1, param1 + 2352);
+                var6 = var4;
+                L6: while (true) {
+                  L7: {
+                    if (var5 >= var6) {
+                      var8[var5] = var4;
+                      var4++;
+                      break L7;
+                    } else {
+                      var8[var6] = var8[var6 - 1];
+                      var6--;
+                      if (var7 != 0) {
+                        break L7;
+                      } else {
+                        continue L6;
+                      }
+                    }
+                  }
+                  if (var7 == 0) {
+                    continue L4;
+                  } else {
+                    break L5;
+                  }
                 }
               }
             }
+            return var8;
           }
         }
     }
@@ -377,22 +459,25 @@ abstract class loa {
         ak.field_p = null;
         iga.field_m = null;
         int var1 = 85 % ((57 - param0) / 49);
-        ck.field_c = null;
+        ck.field_c = (byte[][]) null;
         pg.field_C = null;
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
         ss.field_c = param0;
         hc.field_h = param4;
-        gca.field_d = 0;
-        pka.field_b = 0;
+        if (param1) {
+            return;
+        }
+        gca.field_d = param2;
+        pka.field_b = param3;
     }
 
     loa(qea param0) {
         try {
-            ((loa) this).field_a = param0;
+            this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "loa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "loa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -403,7 +488,7 @@ abstract class loa {
         int var7 = 108 % ((-62 - param3) / 34);
         param4 = -1 + (1 + param4) / 2 * 2;
         param1 = -1 + (1 + param1) / 2 * 2;
-        ((loa) this).a(param4, 86, var6, param1);
+        this.a(param4, 86, var6, param1);
         return var6;
     }
 

@@ -21,7 +21,7 @@ final class qd {
     }
 
     final static void a(byte param0) {
-        kg.field_j.a(false, (pj) (Object) new hm());
+        kg.field_j.a(false, new hm());
         if (param0 < 116) {
             qd.a((byte) -27);
         }
@@ -30,16 +30,12 @@ final class qd {
     public static void a(int param0) {
         field_a = null;
         field_c = null;
-        field_d = null;
+        field_d = (int[][]) null;
         field_b = null;
-        int var1 = 0;
+        int var1 = 57 % ((param0 - 21) / 39);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Waiting for music";
         field_b = new li();
         field_c = new String[255];

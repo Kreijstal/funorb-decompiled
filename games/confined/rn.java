@@ -14,16 +14,12 @@ final class rn {
         field_e = null;
         field_d = null;
         field_a = null;
-        int var1 = 0;
+        int var1 = -55 % ((param0 - 49) / 56);
         field_f = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "rn.A(";
         field_b = "You already have 20 concussion missiles";
         field_d = "To Highscores";

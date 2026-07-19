@@ -53,35 +53,40 @@ final class ba {
     }
 
     public static void a(boolean param0) {
-        field_w = null;
-        field_g = null;
-        field_e = null;
+        if (param0) {
+          field_w = (int[]) null;
+          field_w = null;
+          field_g = null;
+          field_e = null;
+          return;
+        } else {
+          field_w = null;
+          field_g = null;
+          field_e = null;
+          return;
+        }
     }
 
     ba() {
-        ((ba) this).field_m = 0;
-        ((ba) this).field_H = new int[6][258];
-        ((ba) this).field_i = new byte[4096];
-        ((ba) this).field_f = new byte[18002];
-        ((ba) this).field_a = new int[6];
-        ((ba) this).field_z = new int[257];
-        ((ba) this).field_k = 0;
-        ((ba) this).field_u = new int[16];
-        ((ba) this).field_v = new int[256];
-        ((ba) this).field_x = new boolean[256];
-        ((ba) this).field_o = new byte[18002];
-        ((ba) this).field_C = new int[6][258];
-        ((ba) this).field_r = new boolean[16];
-        ((ba) this).field_t = new int[6][258];
-        ((ba) this).field_F = new byte[256];
-        ((ba) this).field_q = new byte[6][258];
+        this.field_m = 0;
+        this.field_H = new int[6][258];
+        this.field_i = new byte[4096];
+        this.field_f = new byte[18002];
+        this.field_a = new int[6];
+        this.field_z = new int[257];
+        this.field_k = 0;
+        this.field_u = new int[16];
+        this.field_v = new int[256];
+        this.field_x = new boolean[256];
+        this.field_o = new byte[18002];
+        this.field_C = new int[6][258];
+        this.field_r = new boolean[16];
+        this.field_t = new int[6][258];
+        this.field_F = new byte[256];
+        this.field_q = new byte[6][258];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = -1;
         field_e = "Loading fonts";
     }

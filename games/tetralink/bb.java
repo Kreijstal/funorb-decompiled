@@ -11,30 +11,33 @@ final class bb {
     static String field_g;
 
     final static int a(int param0) {
+        if (param0 != 32032) {
+            return 79;
+        }
         return 1;
     }
 
     final static void a(int param0, boolean param1) {
         int var2 = 0;
         int var3 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_28_0 = 0;
-        int stackIn_40_0 = 0;
-        int stackIn_44_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_38_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_29_0 = 0;
+        int stackIn_42_0 = 0;
+        int stackIn_48_0 = 0;
+        int stackOut_47_0 = 0;
+        int stackOut_46_0 = 0;
+        int stackOut_41_0 = 0;
+        int stackOut_40_0 = 0;
+        int stackOut_28_0 = 0;
         int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_23_0 = 0;
         int stackOut_22_0 = 0;
-        int stackOut_12_0 = 0;
+        int stackOut_21_0 = 0;
         int stackOut_11_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_5_0 = 0;
         bo.field_y = 50.0f;
         jl.field_e = 262144;
         s.field_c = 52.5f;
@@ -44,13 +47,13 @@ final class bb {
         var2 = param1 ? 1 : 0;
         var3 = pf.field_d;
         if (ed.field_O != 0) {
-          if (kb.field_t != 2) {
+          if ((kb.field_t ^ -1) != -3) {
             L0: {
               L1: {
-                if (kb.field_t == 3) {
+                if (-4 == (kb.field_t ^ -1)) {
                   break L1;
                 } else {
-                  if (ed.field_O == 4) {
+                  if ((ed.field_O ^ -1) == -5) {
                     break L1;
                   } else {
                     if (5 == ed.field_O) {
@@ -64,91 +67,88 @@ final class bb {
               var3 = ed.field_O;
               break L0;
             }
-            L2: {
-              ac.a(param0, param0 + -120, var2 != 0, var3);
-              if (tc.field_v == 0) {
-                break L2;
-              } else {
-                if (10 > tc.field_v) {
-                  L3: {
-                    if (tc.field_v < 15) {
-                      stackOut_43_0 = 2;
-                      stackIn_44_0 = stackOut_43_0;
-                      break L3;
+            ac.a(param0, param0 + -120, var2 != 0, var3);
+            if (tc.field_v != 0) {
+              if (10 <= tc.field_v) {
+                if (20 <= tc.field_v) {
+                  L2: {
+                    if ((tc.field_v ^ -1) > -16) {
+                      stackOut_47_0 = 2;
+                      stackIn_48_0 = stackOut_47_0;
+                      break L2;
                     } else {
-                      stackOut_42_0 = 4;
-                      stackIn_44_0 = stackOut_42_0;
-                      break L3;
+                      stackOut_46_0 = 4;
+                      stackIn_48_0 = stackOut_46_0;
+                      break L2;
                     }
                   }
-                  qe.field_g = stackIn_44_0;
-                  oi.field_c = stackIn_44_0;
+                  qe.field_g = stackIn_48_0;
+                  oi.field_c = stackIn_48_0;
                   wb.a(true, -7869);
-                  break L2;
+                  return;
                 } else {
-                  if (20 > tc.field_v) {
-                    break L2;
+                  return;
+                }
+              } else {
+                L3: {
+                  if ((tc.field_v ^ -1) > -16) {
+                    stackOut_41_0 = 2;
+                    stackIn_42_0 = stackOut_41_0;
+                    break L3;
                   } else {
-                    L4: {
-                      if (tc.field_v < 15) {
-                        stackOut_39_0 = 2;
-                        stackIn_40_0 = stackOut_39_0;
-                        break L4;
-                      } else {
-                        stackOut_38_0 = 4;
-                        stackIn_40_0 = stackOut_38_0;
-                        break L4;
-                      }
-                    }
-                    qe.field_g = stackIn_40_0;
-                    oi.field_c = stackIn_40_0;
-                    wb.a(true, -7869);
-                    return;
+                    stackOut_40_0 = 4;
+                    stackIn_42_0 = stackOut_40_0;
+                    break L3;
                   }
                 }
+                qe.field_g = stackIn_42_0;
+                oi.field_c = stackIn_42_0;
+                wb.a(true, -7869);
+                return;
               }
+            } else {
+              return;
             }
-            return;
           } else {
             var3 = ed.field_O;
             ac.a(param0, param0 + -120, var2 != 0, var3);
             if (tc.field_v != 0) {
-              if (10 > tc.field_v) {
-                L5: {
-                  if (tc.field_v < 15) {
-                    stackOut_27_0 = 2;
-                    stackIn_28_0 = stackOut_27_0;
-                    break L5;
-                  } else {
-                    stackOut_26_0 = 4;
-                    stackIn_28_0 = stackOut_26_0;
-                    break L5;
-                  }
-                }
-                qe.field_g = stackIn_28_0;
-                oi.field_c = stackIn_28_0;
-                wb.a(true, -7869);
-                return;
-              } else {
+              if (10 <= tc.field_v) {
                 if (20 <= tc.field_v) {
-                  L6: {
-                    if (tc.field_v < 15) {
-                      stackOut_23_0 = 2;
-                      stackIn_24_0 = stackOut_23_0;
-                      break L6;
+                  L4: {
+                    if ((tc.field_v ^ -1) > -16) {
+                      stackOut_28_0 = 2;
+                      stackIn_29_0 = stackOut_28_0;
+                      break L4;
                     } else {
-                      stackOut_22_0 = 4;
-                      stackIn_24_0 = stackOut_22_0;
-                      break L6;
+                      stackOut_27_0 = 4;
+                      stackIn_29_0 = stackOut_27_0;
+                      break L4;
                     }
                   }
-                  qe.field_g = stackIn_24_0;
-                  oi.field_c = stackIn_24_0;
+                  qe.field_g = stackIn_29_0;
+                  oi.field_c = stackIn_29_0;
                   wb.a(true, -7869);
                   return;
                 } else {
                   return;
                 }
+              } else {
+                L5: {
+                  if ((tc.field_v ^ -1) > -16) {
+                    stackOut_22_0 = 2;
+                    stackIn_23_0 = stackOut_22_0;
+                    break L5;
+                  } else {
+                    stackOut_21_0 = 4;
+                    stackIn_23_0 = stackOut_21_0;
+                    break L5;
+                  }
+                }
+                qe.field_g = stackIn_23_0;
+                oi.field_c = stackIn_23_0;
+                wb.a(true, -7869);
+                return;
               }
             } else {
               return;
@@ -158,42 +158,42 @@ final class bb {
           var3 = ed.field_O;
           ac.a(param0, param0 + -120, var2 != 0, var3);
           if (tc.field_v != 0) {
-            if (10 > tc.field_v) {
-              L7: {
-                if (tc.field_v < 15) {
-                  stackOut_12_0 = 2;
-                  stackIn_13_0 = stackOut_12_0;
-                  break L7;
-                } else {
-                  stackOut_11_0 = 4;
-                  stackIn_13_0 = stackOut_11_0;
-                  break L7;
-                }
-              }
-              qe.field_g = stackIn_13_0;
-              oi.field_c = stackIn_13_0;
-              wb.a(true, -7869);
-              return;
-            } else {
-              if (20 <= tc.field_v) {
-                L8: {
-                  if (tc.field_v < 15) {
-                    stackOut_8_0 = 2;
-                    stackIn_9_0 = stackOut_8_0;
-                    break L8;
-                  } else {
-                    stackOut_7_0 = 4;
-                    stackIn_9_0 = stackOut_7_0;
-                    break L8;
-                  }
-                }
-                qe.field_g = stackIn_9_0;
-                oi.field_c = stackIn_9_0;
-                wb.a(true, -7869);
+            if (10 <= tc.field_v) {
+              if (20 > tc.field_v) {
                 return;
               } else {
+                L6: {
+                  if ((tc.field_v ^ -1) > -16) {
+                    stackOut_11_0 = 2;
+                    stackIn_12_0 = stackOut_11_0;
+                    break L6;
+                  } else {
+                    stackOut_10_0 = 4;
+                    stackIn_12_0 = stackOut_10_0;
+                    break L6;
+                  }
+                }
+                qe.field_g = stackIn_12_0;
+                oi.field_c = stackIn_12_0;
+                wb.a(true, -7869);
                 return;
               }
+            } else {
+              L7: {
+                if ((tc.field_v ^ -1) > -16) {
+                  stackOut_6_0 = 2;
+                  stackIn_7_0 = stackOut_6_0;
+                  break L7;
+                } else {
+                  stackOut_5_0 = 4;
+                  stackIn_7_0 = stackOut_5_0;
+                  break L7;
+                }
+              }
+              qe.field_g = stackIn_7_0;
+              oi.field_c = stackIn_7_0;
+              wb.a(true, -7869);
+              return;
             }
           } else {
             return;
@@ -202,23 +202,28 @@ final class bb {
     }
 
     public static void b(int param0) {
+        int discarded$0 = 0;
         field_a = null;
         field_g = null;
         field_b = null;
         field_c = null;
         field_d = null;
         field_f = null;
+        if (param0 != -578) {
+            discarded$0 = bb.a(1);
+        }
     }
 
     final static void a(byte param0) {
+        if (param0 != -63) {
+            field_g = (String) null;
+            t.a(17, 0);
+            return;
+        }
         t.a(17, 0);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "All games";
         field_b = "to return to the normal view.";
         field_a = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};

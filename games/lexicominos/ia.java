@@ -45,32 +45,32 @@ final class ia extends mg {
     ia(w param0) {
         super(param0.field_t, param0.field_o, param0.field_j, param0.field_v, (rd) null, (vd) null);
         try {
-            param0.a(((ia) this).field_v, ((ia) this).field_j, true, 0, 0);
-            ((ia) this).field_A = param0;
-            ((ia) this).field_E = 256;
+            param0.a(this.field_v, this.field_j, true, 0, 0);
+            this.field_A = param0;
+            this.field_E = 256;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "ia.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
         db var6 = null;
         if (param3 == 0) {
-          if (((ia) this).field_A == null) {
+          if (this.field_A == null) {
             return;
           } else {
-            if (((ia) this).field_E == 0) {
+            if (this.field_E == 0) {
               return;
             } else {
-              if (((ia) this).field_E == 256) {
-                ((ia) this).field_A.a((byte) -115, ((ia) this).field_o + param1, param2 + ((ia) this).field_t, param3);
+              if ((this.field_E ^ -1) == -257) {
+                this.field_A.a((byte) -115, this.field_o + param1, param2 + this.field_t, param3);
                 return;
               } else {
-                var6 = new db(((ia) this).field_A.field_j, ((ia) this).field_A.field_v);
+                var6 = new db(this.field_A.field_j, this.field_A.field_v);
                 de.a(var6, 6);
-                ((ia) this).field_A.a(param0, 0, 0, param3);
+                this.field_A.a(param0, 0, 0, param3);
                 pd.a(-22949);
-                var6.b(((ia) this).field_t + param2, param1 + ((ia) this).field_o, ((ia) this).field_E);
+                var6.b(this.field_t + param2, param1 + this.field_o, this.field_E);
                 return;
               }
             }
@@ -91,14 +91,10 @@ final class ia extends mg {
 
     public ia() {
         super(0, 0, 0, 0, (rd) null, (vd) null);
-        ((ia) this).field_E = 256;
+        this.field_E = 256;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = 64;
         field_F = "Loading animations";
     }

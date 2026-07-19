@@ -8,12 +8,13 @@ final class wj {
     final static void a(cga param0, int param1, int param2) {
         kh var5 = null;
         int var4 = 0;
+        int discarded$0 = 0;
         try {
             if (param2 > -116) {
                 wj.a((byte) 1);
             }
             var5 = ql.field_k;
-            var5.k(4, -2988);
+            var5.k(param1, -2988);
             var5.field_h = var5.field_h + 1;
             var4 = var5.field_h;
             var5.i(1, 0);
@@ -23,19 +24,30 @@ final class wj {
             var5.a(param0.field_h, (byte) -20);
             var5.a(param0.field_m, (byte) -123);
             var5.a(param0.field_n, (byte) 92);
-            int discarded$0 = var5.g(var4, 64);
+            discarded$0 = var5.g(var4, 64);
             var5.d(var5.field_h - var4, (byte) 16);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wj.C(" + (param0 != null ? "{...}" : "null") + ',' + 4 + ',' + param2 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "wj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         String var7 = null;
-        if (bta.field_q != 2) {
-            var7 = lw.field_i;
-        } else {
-            var7 = jaa.field_a;
+        L0: {
+          L1: {
+            if (bta.field_q == param3) {
+              break L1;
+            } else {
+              var7 = lw.field_i;
+              if (!TombRacer.field_G) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          var7 = jaa.field_a;
+          break L0;
         }
         lba.a(param6, param5, param1, (byte) 53, param0, param2, var7, param4);
     }
@@ -44,15 +56,11 @@ final class wj {
         field_b = null;
         field_a = null;
         if (param0 <= 35) {
-            field_a = null;
+            field_a = (jpa) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Treasure Values";
     }
 }

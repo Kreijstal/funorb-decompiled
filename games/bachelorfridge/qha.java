@@ -12,6 +12,9 @@ final class qha {
     static String field_h;
 
     public static void a(int param0) {
+        if (param0 < 123) {
+            return;
+        }
         field_c = null;
         field_h = null;
     }
@@ -36,36 +39,36 @@ final class qha {
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          var4_float = (float)(((qha) this).field_a - -1) + (float)param2 / 100.0f;
-          ((qha) this).field_b = (float)((qha) this).field_e * var4_float / (float)(((qha) this).field_g + 1);
+          var4_float = (float)(this.field_a - param1) + (float)param2 / 100.0f;
+          this.field_b = (float)this.field_e * var4_float / (float)(this.field_g + 1);
           if (param2 == 0) {
-            ((qha) this).field_d = param0.field_a;
+            this.field_d = param0.field_a;
             return;
           } else {
-            ((qha) this).field_d = param0.field_b + " - " + param2 + "%";
+            this.field_d = param0.field_b + " - " + param2 + "%";
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_0 = (RuntimeException) (var4);
             stackOut_4_1 = new StringBuilder().append("qha.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L0;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -73,7 +76,7 @@ final class qha {
               break L0;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + -1 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -82,14 +85,14 @@ final class qha {
             wha.field_a = param1;
             vj.field_p = wfa.a("logo", param1, "minimal", (byte) -86);
             if (param0 < 114) {
-                Object var3 = null;
+                vr var3 = (vr) null;
                 qha.a(-41, (vr) null);
             }
             em.field_S = wfa.a("loading", param1, "minimal", (byte) -74);
             ml.field_a = ch.a(param1, -1, "minimal", "fridgedoor2d");
             ada.field_p = ch.a(param1, -1, "minimal", "fridge_left");
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "qha.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "qha.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -103,19 +106,19 @@ final class qha {
         ap var4 = null;
         var3 = BachelorFridge.field_y;
         L0: while (true) {
-          if (((qha) this).field_g <= ((qha) this).field_a) {
+          if (this.field_g <= this.field_a) {
             if (param0 != 49) {
-              field_h = null;
+              field_h = (String) null;
               return true;
             } else {
               return true;
             }
           } else {
-            var4 = ((qha) this).field_f[((qha) this).field_a];
+            var4 = this.field_f[this.field_a];
             var2 = var4;
             if (var4.field_e.a(0)) {
               L1: {
-                if (var4.field_d < 0) {
+                if (-1 < (var4.field_d ^ -1)) {
                   break L1;
                 } else {
                   if (var4.field_e.c(var4.field_d, -734)) {
@@ -139,7 +142,7 @@ final class qha {
                 }
               }
               L3: {
-                if (var4.field_d >= 0) {
+                if (-1 >= (var4.field_d ^ -1)) {
                   break L3;
                 } else {
                   if (var4.field_f != null) {
@@ -158,7 +161,7 @@ final class qha {
                   }
                 }
               }
-              ((qha) this).field_a = ((qha) this).field_a + 1;
+              this.field_a = this.field_a + 1;
               continue L0;
             } else {
               this.a(var4, -1, 0);
@@ -169,10 +172,6 @@ final class qha {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Create your own free Jagex account";
     }
 }

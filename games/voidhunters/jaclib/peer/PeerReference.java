@@ -12,10 +12,10 @@ abstract class PeerReference extends java.lang.ref.WeakReference {
         long var2 = 0L;
         if (param0 != 0) {
           L0: {
-            ((jaclib.peer.PeerReference) this).peer = -1L;
-            if (((jaclib.peer.PeerReference) this).peer != 0L) {
-              var2 = ((jaclib.peer.PeerReference) this).releasePeer(((jaclib.peer.PeerReference) this).peer);
-              ((jaclib.peer.PeerReference) this).peer = 0L;
+            this.peer = -1L;
+            if ((this.peer ^ -1L) != -1L) {
+              var2 = this.releasePeer(this.peer);
+              this.peer = 0L;
               break L0;
             } else {
               var2 = 0L;
@@ -25,9 +25,9 @@ abstract class PeerReference extends java.lang.ref.WeakReference {
           return var2;
         } else {
           L1: {
-            if (((jaclib.peer.PeerReference) this).peer != 0L) {
-              var2 = ((jaclib.peer.PeerReference) this).releasePeer(((jaclib.peer.PeerReference) this).peer);
-              ((jaclib.peer.PeerReference) this).peer = 0L;
+            if ((this.peer ^ -1L) != -1L) {
+              var2 = this.releasePeer(this.peer);
+              this.peer = 0L;
               break L1;
             } else {
               var2 = 0L;
@@ -41,11 +41,11 @@ abstract class PeerReference extends java.lang.ref.WeakReference {
     protected abstract long releasePeer(long param0);
 
     final void setPeer(long param0) {
-        ((jaclib.peer.PeerReference) this).peer = param0;
+        this.peer = param0;
     }
 
     PeerReference(jaclib.peer.Peer param0, jaclib.peer.tqb param1) {
-        super((Object) (Object) param0, param1.b);
-        param1.a((jaclib.peer.PeerReference) this, 25362);
+        super(param0, param1.b);
+        param1.a((jaclib.peer.PeerReference) (this), 25362);
     }
 }

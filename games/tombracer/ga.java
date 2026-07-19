@@ -15,10 +15,10 @@ final class ga extends kna {
 
     final lj u(int param0) {
         if (param0 > -60) {
-            ((ga) this).field_M = -115;
-            return (lj) (Object) ((ga) this).field_G;
+            this.field_M = -115;
+            return (lj) ((Object) this.field_G);
         }
-        return (lj) (Object) ((ga) this).field_G;
+        return (lj) ((Object) this.field_G);
     }
 
     final void q(byte param0) {
@@ -27,10 +27,10 @@ final class ga extends kna {
 
     ga(la param0, int param1) {
         super(param0, param1);
-        ((ga) this).field_M = 131072;
-        ((ga) this).field_J = 524288;
-        ((ga) this).field_I = 262144;
-        ((ga) this).field_O = 65536;
+        this.field_M = 131072;
+        this.field_J = 524288;
+        this.field_I = 262144;
+        this.field_O = 65536;
     }
 
     final fsa a(boolean param0, int param1, la param2) {
@@ -66,86 +66,93 @@ final class ga extends kna {
         try {
           L0: {
             L1: {
-              var14 = new fsa(param2, param0);
-              var14.b((byte) -11, ((ga) this).field_k, ((ga) this).field_l);
-              var14.h(3, 0);
-              var14.a(1, (byte) -12, true);
-              var14.g(param1 + 122, 2);
-              var14.a((byte) -3, 20);
-              var14.b((byte) 17, true);
-              var5 = new eq(param2, param0);
-              var14.a((byte) 83, (nv) (Object) var5);
-              var6 = new wi(param2, param0);
-              var6.c(((ga) this).field_J, 26621);
-              var14.a((wda) (Object) var6, 0);
-              var7 = new wi(param2, param0);
-              var7.c(((ga) this).field_I, 26621);
-              var7.d(4, 4096);
-              var7.m(112);
-              var14.a((wda) (Object) var7, param1 ^ param1);
-              ((ga) this).field_G = new tl(param2, param0);
-              var8 = new int[]{((ga) this).field_O * 50 >> 16, ((ga) this).field_M * 50 >> 16};
-              var9 = new mg(var8);
-              if (!((ga) this).field_N) {
-                var10 = ((ga) this).field_L;
-                break L1;
-              } else {
-                var10 = param2.q(-86).a(16, 0);
-                break L1;
+              L2: {
+                var14 = new fsa(param2, param0);
+                var14.b((byte) -11, this.field_k, this.field_l);
+                var14.h(3, 0);
+                var14.a(1, (byte) -12, true);
+                var14.g(param1 + 122, 2);
+                var14.a((byte) -3, 20);
+                var14.b((byte) 17, true);
+                var5 = new eq(param2, param0);
+                var14.a((byte) 83, (nv) (var5));
+                var6 = new wi(param2, param0);
+                var6.c(this.field_J, 26621);
+                var14.a(var6, 0);
+                var7 = new wi(param2, param0);
+                var7.c(this.field_I, 26621);
+                var7.d(4, 4096);
+                var7.m(112);
+                var14.a(var7, param1 ^ param1);
+                this.field_G = new tl(param2, param0);
+                var8 = new int[]{this.field_O * 50 >> 937036240, this.field_M * 50 >> -496487984};
+                var9 = new mg(var8);
+                if (!this.field_N) {
+                  break L2;
+                } else {
+                  var10 = param2.q(-86).a(16, 0);
+                  if (!TombRacer.field_G) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
+                }
               }
+              var10 = this.field_L;
+              break L1;
             }
-            L2: {
+            L3: {
               var10 = var10 * var9.a((byte) -94) / 16;
               var9.a(false, var10);
-              if (var10 > 50 * ((ga) this).field_O) {
+              if (var10 > 50 * this.field_O) {
                 var6.m(-24);
                 var7.m(-70);
-                break L2;
+                break L3;
               } else {
-                break L2;
+                break L3;
               }
             }
-            ((ga) this).field_G.a(var9, (byte) -120);
-            var11 = ((ga) this).field_G.k((byte) -91);
+            this.field_G.a(var9, (byte) -120);
+            var11 = this.field_G.k((byte) -91);
             var11.b(0, 55);
-            var11.h(param1 + -2).a(9, new lj[2]);
-            var14.a((byte) 83, (nv) (Object) ((ga) this).field_G);
+            var11.h(param1 + -2).a(9, new lj[]{(lj) ((Object) var6), (lj) ((Object) var7)});
+            var14.a((byte) 83, (nv) (this.field_G));
             var12 = rm.field_a;
-            var13 = (lma) (Object) var12.a(15, 93);
-            var14.a((gr) null, (byte) 124, (dg) (Object) var13);
-            stackOut_6_0 = (fsa) var14;
+            var13 = (lma) ((Object) var12.a(15, 93));
+            var14.a((gr) null, (byte) 124, var13);
+            stackOut_6_0 = (fsa) (var14);
             stackIn_7_0 = stackOut_6_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_0 = (RuntimeException) (var4);
             stackOut_8_1 = new StringBuilder().append("ga.AC(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
-              break L3;
+              break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
               stackIn_11_2 = stackOut_9_2;
-              break L3;
+              break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
@@ -208,17 +215,17 @@ final class ga extends kna {
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
         String stackOut_14_2 = null;
-        ((ga) this).field_M = 131072;
-        ((ga) this).field_J = 524288;
-        ((ga) this).field_I = 262144;
-        ((ga) this).field_O = 65536;
+        this.field_M = 131072;
+        this.field_J = 524288;
+        this.field_I = 262144;
+        this.field_O = 65536;
         try {
           L0: {
             L1: {
-              ((ga) this).field_O = ji.a(param2.b((byte) 44, 4), 116, 2);
-              ((ga) this).field_J = ji.a(param2.b((byte) 44, 8), 100, 4);
-              ((ga) this).field_M = ji.a(param2.b((byte) 44, 4), 88, 2);
-              ((ga) this).field_I = ji.a(param2.b((byte) 44, 8), 107, 4);
+              this.field_O = ji.a(param2.b((byte) 44, 4), 116, 2);
+              this.field_J = ji.a(param2.b((byte) 44, 8), 100, 4);
+              this.field_M = ji.a(param2.b((byte) 44, 4), 88, 2);
+              this.field_I = ji.a(param2.b((byte) 44, 8), 107, 4);
               stackOut_1_0 = this;
               stackIn_3_0 = stackOut_1_0;
               stackIn_2_0 = stackOut_1_0;
@@ -236,11 +243,11 @@ final class ga extends kna {
                 break L1;
               }
             }
-            ((ga) this).field_N = stackIn_4_1 != 0;
-            if (((ga) this).field_N) {
+            ((ga) (this)).field_N = stackIn_4_1 != 0;
+            if (this.field_N) {
               break L0;
             } else {
-              ((ga) this).field_L = param2.b((byte) 44, 4);
+              this.field_L = param2.b((byte) 44, 4);
               return;
             }
           }
@@ -248,23 +255,23 @@ final class ga extends kna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_0 = (RuntimeException) (var5);
             stackOut_7_1 = new StringBuilder().append("ga.<init>(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -273,23 +280,23 @@ final class ga extends kna {
             }
           }
           L3: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param1).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -298,23 +305,23 @@ final class ga extends kna {
             }
           }
           L4: {
-            stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+            stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
             stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param3 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -322,11 +329,15 @@ final class ga extends kna {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
     }
 
     final static boolean r(byte param0) {
+        if (param0 > -14) {
+            ga.A(-59);
+            return hb.field_t instanceof qh;
+        }
         return hb.field_t instanceof qh;
     }
 
@@ -367,18 +378,18 @@ final class ga extends kna {
           L0: {
             L1: {
               super.a(param0, param1);
-              param1.a((byte) -128, wma.a((byte) 8, 2, ((ga) this).field_O), 4);
-              param1.a((byte) -127, wma.a((byte) 8, 4, ((ga) this).field_J), 8);
-              param1.a((byte) -4, wma.a((byte) 8, 2, ((ga) this).field_M), 4);
-              param1.a((byte) -17, wma.a((byte) 8, 4, ((ga) this).field_I), 8);
-              stackOut_0_0 = (kh) param1;
+              param1.a((byte) -128, wma.a((byte) 8, 2, this.field_O), 4);
+              param1.a((byte) -127, wma.a((byte) 8, 4, this.field_J), 8);
+              param1.a((byte) -4, wma.a((byte) 8, 2, this.field_M), 4);
+              param1.a((byte) -17, wma.a((byte) 8, 4, this.field_I), 8);
+              stackOut_0_0 = (kh) (param1);
               stackOut_0_1 = -127;
               stackIn_2_0 = stackOut_0_0;
               stackIn_2_1 = stackOut_0_1;
               stackIn_1_0 = stackOut_0_0;
               stackIn_1_1 = stackOut_0_1;
-              if (((ga) this).field_N) {
-                stackOut_2_0 = (kh) (Object) stackIn_2_0;
+              if (this.field_N) {
+                stackOut_2_0 = (kh) ((Object) stackIn_2_0);
                 stackOut_2_1 = stackIn_2_1;
                 stackOut_2_2 = 1;
                 stackIn_3_0 = stackOut_2_0;
@@ -386,7 +397,7 @@ final class ga extends kna {
                 stackIn_3_2 = stackOut_2_2;
                 break L1;
               } else {
-                stackOut_1_0 = (kh) (Object) stackIn_1_0;
+                stackOut_1_0 = (kh) ((Object) stackIn_1_0);
                 stackOut_1_1 = stackIn_1_1;
                 stackOut_1_2 = 0;
                 stackIn_3_0 = stackOut_1_0;
@@ -397,17 +408,17 @@ final class ga extends kna {
             }
             L2: {
               ((kh) (Object) stackIn_3_0).a((byte) stackIn_3_1, stackIn_3_2, 1);
-              if (((ga) this).field_N) {
+              if (this.field_N) {
                 break L2;
               } else {
-                param1.a((byte) -33, ((ga) this).field_L, 4);
+                param1.a((byte) -33, this.field_L, 4);
                 break L2;
               }
             }
             if (!param0) {
               break L0;
             } else {
-              ((ga) this).field_J = -119;
+              this.field_J = -119;
               return;
             }
           }
@@ -415,23 +426,23 @@ final class ga extends kna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_0 = (RuntimeException) (var3);
             stackOut_8_1 = new StringBuilder().append("ga.V(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -439,27 +450,32 @@ final class ga extends kna {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
     }
 
     public static void A(int param0) {
         field_K = null;
         field_F = null;
+        if (param0 != 4096) {
+            field_F = (jpa[]) null;
+        }
     }
 
     final boolean n(byte param0) {
+        fsa discarded$0 = null;
         if (param0 != -122) {
-            Object var3 = null;
-            fsa discarded$0 = ((ga) this).a(false, -124, (la) null);
+            la var3 = (la) null;
+            discarded$0 = this.a(false, -124, (la) null);
             return true;
         }
         return true;
     }
 
     final boolean s(int param0) {
+        boolean discarded$0 = false;
         if (param0 != -15254) {
-            boolean discarded$0 = ((ga) this).z(41);
+            discarded$0 = this.z(41);
             return true;
         }
         return true;
@@ -473,26 +489,24 @@ final class ga extends kna {
     }
 
     final boolean z(int param0) {
+        int discarded$0 = 0;
         if (param0 != 0) {
-            int discarded$0 = ((ga) this).t(108);
+            discarded$0 = this.t(108);
             return false;
         }
         return false;
     }
 
     final int t(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 8) {
-            boolean discarded$0 = ((ga) this).v(-115);
+            discarded$0 = this.v(-115);
             return 7;
         }
         return 7;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = "Won <%0> round(s)";
         field_H = 0;
     }

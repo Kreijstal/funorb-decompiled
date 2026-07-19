@@ -47,38 +47,38 @@ final class jh extends rg {
         try {
           L0: {
             if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
-              var8_int = param1 + -((jh) this).field_q + (-param0 + -((jh) this).field_P);
-              var9 = param5 + (-((jh) this).field_S + (-((jh) this).field_m + -param3));
-              if (((jh) this).field_W * ((jh) this).field_W > var9 * var9 + var8_int * var8_int) {
+              var8_int = param1 + -this.field_q + (-param0 + -this.field_P);
+              var9 = param5 + (-this.field_S + (-this.field_m + -param3));
+              if (this.field_W * this.field_W > var9 * var9 + var8_int * var8_int) {
                 L1: {
                   var10 = Math.atan2((double)var9, (double)var8_int) - ne.field_c;
                   if (0.0 > var10) {
-                    var10 = var10 - 3.141592653589793 / (double)((jh) this).field_Q;
+                    var10 = var10 - 3.141592653589793 / (double)this.field_Q;
                     break L1;
                   } else {
                     if (var10 <= 0.0) {
                       break L1;
                     } else {
-                      var10 = var10 + 3.141592653589793 / (double)((jh) this).field_Q;
+                      var10 = var10 + 3.141592653589793 / (double)this.field_Q;
                       break L1;
                     }
                   }
                 }
-                ((jh) this).field_V = (int)((double)((jh) this).field_Q * var10 / 6.283185307179586);
+                this.field_V = (int)((double)this.field_Q * var10 / 6.283185307179586);
                 L2: while (true) {
-                  if (((jh) this).field_Q > ((jh) this).field_V) {
+                  if (this.field_Q > this.field_V) {
                     L3: while (true) {
-                      if (((jh) this).field_V >= 0) {
+                      if (-1 >= (this.field_V ^ -1)) {
                         stackOut_14_0 = 1;
                         stackIn_15_0 = stackOut_14_0;
                         break L0;
                       } else {
-                        ((jh) this).field_V = ((jh) this).field_V + ((jh) this).field_Q;
+                        this.field_V = this.field_V + this.field_Q;
                         continue L3;
                       }
                     }
                   } else {
-                    ((jh) this).field_V = ((jh) this).field_V - ((jh) this).field_Q;
+                    this.field_V = this.field_V - this.field_Q;
                     continue L2;
                   }
                 }
@@ -93,23 +93,23 @@ final class jh extends rg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var8 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var8;
+            stackOut_16_0 = (RuntimeException) (var8);
             stackOut_16_1 = new StringBuilder().append("jh.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param4 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -117,7 +117,7 @@ final class jh extends rg {
               break L4;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param5 + ',' + param6 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_15_0 != 0;
     }
@@ -127,10 +127,6 @@ final class jh extends rg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_R = 0;
         field_U = "Press <%0> to fire cluster missiles";
     }

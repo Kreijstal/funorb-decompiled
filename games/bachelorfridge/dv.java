@@ -48,6 +48,7 @@ final class dv extends bw {
     }
 
     final be b() {
+        int incrementValue$1 = 0;
         byte[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -55,24 +56,24 @@ final class dv extends bw {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ((dv) this).field_t = 0;
-        ((dv) this).field_m = new float[field_f];
-        var1 = new byte[((dv) this).field_u];
+        this.field_t = 0;
+        this.field_m = new float[field_f];
+        var1 = new byte[this.field_u];
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((dv) this).field_J.length) {
-            ((dv) this).field_m = null;
-            return new be(((dv) this).field_h, var1, ((dv) this).field_g, ((dv) this).field_k, ((dv) this).field_H);
+          if (var3 >= this.field_J.length) {
+            this.field_m = null;
+            return new be(this.field_h, var1, this.field_g, this.field_k, this.field_H);
           } else {
             var4 = this.b(var3);
             if (var4 != null) {
               L1: {
                 var5 = var4.length;
-                if (var5 <= ((dv) this).field_u - var2) {
+                if (var5 <= this.field_u - var2) {
                   break L1;
                 } else {
-                  var5 = ((dv) this).field_u - var2;
+                  var5 = this.field_u - var2;
                   break L1;
                 }
               }
@@ -84,11 +85,11 @@ final class dv extends bw {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = ~var7 >> 31;
+                      var7 = (var7 ^ -1) >> 31;
                       break L3;
                     }
                   }
-                  int incrementValue$1 = var2;
+                  incrementValue$1 = var2;
                   var2++;
                   var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
@@ -107,14 +108,13 @@ final class dv extends bw {
     }
 
     final be a(int[] param0) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         float[] var7 = null;
-        float[] var11 = null;
-        float[] var13 = null;
-        byte[] var14 = null;
+        byte[] var12 = null;
         L0: {
           if (param0 == null) {
             break L0;
@@ -127,23 +127,23 @@ final class dv extends bw {
           }
         }
         L1: {
-          if (((dv) this).field_C != null) {
+          if (this.field_C != null) {
             break L1;
           } else {
-            ((dv) this).field_t = 0;
-            ((dv) this).field_m = new float[field_f];
-            ((dv) this).field_C = new byte[((dv) this).field_u];
-            ((dv) this).field_M = 0;
-            ((dv) this).field_A = 0;
+            this.field_t = 0;
+            this.field_m = new float[field_f];
+            this.field_C = new byte[this.field_u];
+            this.field_M = 0;
+            this.field_A = 0;
             break L1;
           }
         }
         L2: while (true) {
-          if (((dv) this).field_A >= ((dv) this).field_J.length) {
-            ((dv) this).field_m = null;
-            var14 = ((dv) this).field_C;
-            ((dv) this).field_C = null;
-            return new be(((dv) this).field_h, var14, ((dv) this).field_g, ((dv) this).field_k, ((dv) this).field_H);
+          if (this.field_A >= this.field_J.length) {
+            this.field_m = null;
+            var12 = this.field_C;
+            this.field_C = null;
+            return new be(this.field_h, var12, this.field_g, this.field_k, this.field_H);
           } else {
             L3: {
               if (param0 == null) {
@@ -157,19 +157,17 @@ final class dv extends bw {
               }
             }
             L4: {
-              var13 = this.b(((dv) this).field_A);
-              var11 = var13;
-              var7 = var11;
+              var7 = this.b(this.field_A);
               if (var7 == null) {
                 break L4;
               } else {
                 L5: {
-                  var3 = ((dv) this).field_M;
-                  var4 = var13.length;
-                  if (var4 <= ((dv) this).field_u - var3) {
+                  var3 = this.field_M;
+                  var4 = var7.length;
+                  if (var4 <= this.field_u - var3) {
                     break L5;
                   } else {
-                    var4 = ((dv) this).field_u - var3;
+                    var4 = this.field_u - var3;
                     break L5;
                   }
                 }
@@ -180,32 +178,32 @@ final class dv extends bw {
                       if (param0 == null) {
                         break L7;
                       } else {
-                        param0[0] = param0[0] - (var3 - ((dv) this).field_M);
+                        param0[0] = param0[0] - (var3 - this.field_M);
                         break L7;
                       }
                     }
-                    ((dv) this).field_M = var3;
+                    this.field_M = var3;
                     break L4;
                   } else {
                     L8: {
-                      var6 = (int)(128.0f + var13[var5] * 128.0f);
+                      var6 = (int)(128.0f + var7[var5] * 128.0f);
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = ~var6 >> 31;
+                        var6 = (var6 ^ -1) >> 31;
                         break L8;
                       }
                     }
-                    int incrementValue$1 = var3;
+                    incrementValue$1 = var3;
                     var3++;
-                    ((dv) this).field_C[incrementValue$1] = (byte)(var6 - 128);
+                    this.field_C[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
                 }
               }
             }
-            ((dv) this).field_A = ((dv) this).field_A + 1;
+            this.field_A = this.field_A + 1;
             continue L2;
           }
         }
@@ -222,6 +220,9 @@ final class dv extends bw {
     }
 
     final static void b(byte[] param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -296,14 +297,14 @@ final class dv extends bw {
                                     return;
                                   } else {
                                     L7: {
-                                      stackOut_37_0 = (boolean[]) field_D;
+                                      stackOut_37_0 = (boolean[]) (field_D);
                                       stackOut_37_1 = var6;
                                       stackIn_39_0 = stackOut_37_0;
                                       stackIn_39_1 = stackOut_37_1;
                                       stackIn_38_0 = stackOut_37_0;
                                       stackIn_38_1 = stackOut_37_1;
                                       if (dv.a() == 0) {
-                                        stackOut_39_0 = (boolean[]) (Object) stackIn_39_0;
+                                        stackOut_39_0 = (boolean[]) ((Object) stackIn_39_0);
                                         stackOut_39_1 = stackIn_39_1;
                                         stackOut_39_2 = 0;
                                         stackIn_40_0 = stackOut_39_0;
@@ -311,7 +312,7 @@ final class dv extends bw {
                                         stackIn_40_2 = stackOut_39_2;
                                         break L7;
                                       } else {
-                                        stackOut_38_0 = (boolean[]) (Object) stackIn_38_0;
+                                        stackOut_38_0 = (boolean[]) ((Object) stackIn_38_0);
                                         stackOut_38_1 = stackIn_38_1;
                                         stackOut_38_2 = 1;
                                         stackIn_40_0 = stackOut_38_0;
@@ -321,8 +322,8 @@ final class dv extends bw {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = dv.a(16);
-                                    int discarded$4 = dv.a(16);
+                                    discarded$3 = dv.a(16);
+                                    discarded$4 = dv.a(16);
                                     field_v[var6] = dv.a(8);
                                     var6++;
                                     continue L6;
@@ -347,7 +348,7 @@ final class dv extends bw {
                       }
                     }
                   } else {
-                    int discarded$5 = dv.a(16);
+                    discarded$5 = dv.a(16);
                     var3++;
                     continue L2;
                   }
@@ -439,9 +440,10 @@ final class dv extends bw {
 
     final static dv a(vr param0, String param1, String param2) {
         try {
+            boolean discarded$0 = false;
             dv var4_ref = null;
             if (!dv.a(param0)) {
-                boolean discarded$0 = param0.a(param2, false, param1);
+                discarded$0 = param0.a(param2, false, param1);
                 return null;
             }
             byte[] var3 = param0.a((byte) 123, param2, param1);
@@ -449,8 +451,10 @@ final class dv extends bw {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new dv(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -462,11 +466,12 @@ final class dv extends bw {
 
     private final static void a(byte[] param0, int param1) {
         field_F = param0;
-        field_o = 0;
+        field_o = param1;
         field_w = 0;
     }
 
     private final float[] b(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -526,13 +531,7 @@ final class dv extends bw {
         int[] var48 = null;
         float[] var49 = null;
         float[] var50 = null;
-        int[] var52 = null;
-        float[] var53 = null;
-        float[] var54 = null;
-        float[] var55 = null;
-        int[] var56 = null;
-        float[] var57 = null;
-        float[] var58 = null;
+        float[] var52 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -567,8 +566,8 @@ final class dv extends bw {
         Object stackOut_109_0 = null;
         int stackOut_109_1 = 0;
         L0: {
-          dv.a(((dv) this).field_J[param0], 0);
-          int discarded$1 = dv.a();
+          dv.a(this.field_J[param0], 0);
+          discarded$1 = dv.a();
           var2 = dv.a(mda.a(field_v.length - 1, 16));
           var3 = field_D[var2] ? 1 : 0;
           if (var3 == 0) {
@@ -690,9 +689,7 @@ final class dv extends bw {
                 var17_int = var4 >> 1;
                 var18_int = var4 >> 2;
                 var19 = var4 >> 3;
-                var57 = field_q;
-                var53 = var57;
-                var49 = var53;
+                var49 = field_q;
                 var45 = var49;
                 var20_ref_float__ = var45;
                 var21_int = 0;
@@ -704,11 +701,11 @@ final class dv extends bw {
                       if (var41 >= var4) {
                         L14: {
                           if (var3 == 0) {
-                            stackOut_39_0 = (float[]) field_n;
+                            stackOut_39_0 = (float[]) (field_n);
                             stackIn_40_0 = stackOut_39_0;
                             break L14;
                           } else {
-                            stackOut_38_0 = (float[]) field_L;
+                            stackOut_38_0 = (float[]) (field_L);
                             stackIn_40_0 = stackOut_38_0;
                             break L14;
                           }
@@ -716,11 +713,11 @@ final class dv extends bw {
                         L15: {
                           var21 = stackIn_40_0;
                           if (var3 == 0) {
-                            stackOut_42_0 = (float[]) field_y;
+                            stackOut_42_0 = (float[]) (field_y);
                             stackIn_43_0 = stackOut_42_0;
                             break L15;
                           } else {
-                            stackOut_41_0 = (float[]) field_B;
+                            stackOut_41_0 = (float[]) (field_B);
                             stackIn_43_0 = stackOut_41_0;
                             break L15;
                           }
@@ -728,11 +725,11 @@ final class dv extends bw {
                         L16: {
                           var22 = stackIn_43_0;
                           if (var3 == 0) {
-                            stackOut_45_0 = (float[]) field_j;
+                            stackOut_45_0 = (float[]) (field_j);
                             stackIn_46_0 = stackOut_45_0;
                             break L16;
                           } else {
-                            stackOut_44_0 = (float[]) field_r;
+                            stackOut_44_0 = (float[]) (field_r);
                             stackIn_46_0 = stackOut_44_0;
                             break L16;
                           }
@@ -740,18 +737,16 @@ final class dv extends bw {
                         L17: {
                           var23 = stackIn_46_0;
                           if (var3 == 0) {
-                            stackOut_48_0 = (int[]) field_G;
+                            stackOut_48_0 = (int[]) (field_G);
                             stackIn_49_0 = stackOut_48_0;
                             break L17;
                           } else {
-                            stackOut_47_0 = (int[]) field_i;
+                            stackOut_47_0 = (int[]) (field_i);
                             stackIn_49_0 = stackOut_47_0;
                             break L17;
                           }
                         }
-                        var56 = stackIn_49_0;
-                        var52 = var56;
-                        var48 = var52;
+                        var48 = stackIn_49_0;
                         var44 = var48;
                         var24 = var44;
                         var25 = 0;
@@ -831,7 +826,7 @@ final class dv extends bw {
                                                               }
                                                             }
                                                           } else {
-                                                            var20_ref_float__[var4 - var18_int + var26] = -var57[var26];
+                                                            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
                                                             var26++;
                                                             continue L26;
                                                           }
@@ -876,7 +871,7 @@ final class dv extends bw {
                                           }
                                         }
                                       } else {
-                                        var27_int = var56[var26];
+                                        var27_int = var48[var26];
                                         if (var26 < var27_int) {
                                           var28_int = 8 * var26;
                                           var29_int = 8 * var27_int;
@@ -989,27 +984,25 @@ final class dv extends bw {
             }
             L35: {
               var17 = null;
-              if (((dv) this).field_t <= 0) {
+              if (this.field_t <= 0) {
                 break L35;
               } else {
                 L36: {
-                  var18_int = ((dv) this).field_t + var4 >> 2;
-                  var58 = new float[var18_int];
-                  var54 = var58;
-                  var50 = var54;
+                  var18_int = this.field_t + var4 >> 2;
+                  var50 = new float[var18_int];
                   var46 = var50;
                   var40 = var46;
-                  var17 = (Object) (Object) var40;
-                  if (((dv) this).field_p) {
+                  var17 = var40;
+                  if (this.field_p) {
                     break L36;
                   } else {
                     var19 = 0;
                     L37: while (true) {
-                      if (var19 >= ((dv) this).field_I) {
+                      if (var19 >= this.field_I) {
                         break L36;
                       } else {
-                        var20 = (((dv) this).field_t >> 1) + var19;
-                        var40[var19] = var40[var19] + ((dv) this).field_m[var20];
+                        var20 = (this.field_t >> 1) + var19;
+                        var40[var19] = var40[var19] + this.field_m[var20];
                         var19++;
                         continue L37;
                       }
@@ -1024,7 +1017,7 @@ final class dv extends bw {
                     if (var19 >= var4 >> 1) {
                       break L35;
                     } else {
-                      var20 = var58.length - (var4 >> 1) + var19;
+                      var20 = var50.length - (var4 >> 1) + var19;
                       var40[var20] = var40[var20] + field_q[var19];
                       var19++;
                       continue L38;
@@ -1034,11 +1027,11 @@ final class dv extends bw {
               }
             }
             L39: {
-              var18 = ((dv) this).field_m;
-              ((dv) this).field_m = field_q;
+              var18 = this.field_m;
+              this.field_m = field_q;
               field_q = var18;
-              ((dv) this).field_t = var4;
-              ((dv) this).field_I = var12 - (var4 >> 1);
+              this.field_t = var4;
+              this.field_I = var12 - (var4 >> 1);
               stackOut_108_0 = this;
               stackIn_110_0 = stackOut_108_0;
               stackIn_109_0 = stackOut_108_0;
@@ -1056,12 +1049,12 @@ final class dv extends bw {
                 break L39;
               }
             }
-            ((dv) this).field_p = stackIn_111_1 != 0;
-            return (float[]) var17;
+            ((dv) (this)).field_p = stackIn_111_1 != 0;
+            return (float[]) (var17);
           } else {
             var42 = field_l[var14.field_b[var17_int]];
-            var55 = field_q;
-            var42.a(var55, var4 >> 1, var16 != 0);
+            var52 = field_q;
+            var42.a(var52, var4 >> 1, var16 != 0);
             var17_int++;
             continue L9;
           }
@@ -1069,8 +1062,8 @@ final class dv extends bw {
     }
 
     final static int a(int param0) {
-        int var3 = 0;
         int var4 = 0;
+        int var3 = 0;
         int var1 = 0;
         int var2 = 0;
         while (param0 >= 8 - field_w) {
@@ -1096,19 +1089,19 @@ final class dv extends bw {
         int var6_int = 0;
         byte[] var6 = null;
         lu var2 = new lu(param0);
-        ((dv) this).field_h = var2.f(78);
-        ((dv) this).field_u = var2.f(-73);
-        ((dv) this).field_g = var2.f(77);
-        ((dv) this).field_k = var2.f(93);
-        if (((dv) this).field_k < 0) {
-            ((dv) this).field_k = ~((dv) this).field_k;
-            ((dv) this).field_H = true;
+        this.field_h = var2.f(78);
+        this.field_u = var2.f(-73);
+        this.field_g = var2.f(77);
+        this.field_k = var2.f(93);
+        if (this.field_k < 0) {
+            this.field_k = this.field_k ^ -1;
+            this.field_H = true;
         }
         int var3 = var2.f(-91);
         if (var3 < 0) {
             throw new IOException();
         }
-        ((dv) this).field_J = new byte[var3][];
+        this.field_J = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
             var5 = 0;
             do {
@@ -1117,15 +1110,16 @@ final class dv extends bw {
             } while (var6_int >= 255);
             var6 = new byte[var5];
             var2.a(var6, var5, 128, 0);
-            ((dv) this).field_J[var4] = var6;
+            this.field_J[var4] = var6;
         }
     }
 
     final static dv a(vr param0, int param1, int param2) {
         try {
+            boolean discarded$0 = false;
             dv var4_ref = null;
             if (!dv.a(param0)) {
-                boolean discarded$0 = param0.a(-105, param2, param1);
+                discarded$0 = param0.a(-105, param2, param1);
                 return null;
             }
             byte[] var3 = param0.b(93, param1, param2);
@@ -1133,8 +1127,10 @@ final class dv extends bw {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new dv(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1180,10 +1176,6 @@ final class dv extends bw {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_E = false;
     }
 }

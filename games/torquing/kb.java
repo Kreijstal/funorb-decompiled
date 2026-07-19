@@ -14,10 +14,10 @@ final class kb implements el {
     public static void a(int param0) {
         field_c = null;
         field_g = null;
-        field_e = null;
+        field_e = (int[][]) null;
         field_a = null;
         if (param0 != 2) {
-          field_c = null;
+          field_c = (String) null;
           field_d = null;
           field_f = null;
           return;
@@ -29,6 +29,7 @@ final class kb implements el {
     }
 
     public final void a(int param0, int param1, int param2, boolean param3, gm param4) {
+        int[] discarded$1 = null;
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -57,7 +58,7 @@ final class kb implements el {
               if (param0 >= 89) {
                 break L1;
               } else {
-                int[] discarded$1 = kb.a((byte) -45);
+                discarded$1 = kb.a((byte) -45);
                 break L1;
               }
             }
@@ -67,10 +68,10 @@ final class kb implements el {
               if (!(param4 instanceof lg)) {
                 break L2;
               } else {
-                if (!((lg) (Object) param4).field_A) {
+                if (!((lg) ((Object) param4)).field_A) {
                   break L2;
                 } else {
-                  var8.a((-var8.field_w + param4.field_p >> 1) + 1 + var6_int, (-var8.field_u + param4.field_o >> 1) + var7 - -1, 256);
+                  var8.a((-var8.field_w + param4.field_p >> -1961921247) + 1 + var6_int, (-var8.field_u + param4.field_o >> -871371327) + var7 - -1, 256);
                   break L2;
                 }
               }
@@ -86,23 +87,23 @@ final class kb implements el {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var6;
+            stackOut_9_0 = (RuntimeException) (var6);
             stackOut_9_1 = new StringBuilder().append("kb.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param4 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -110,23 +111,19 @@ final class kb implements el {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
     }
 
     final static int[] a(byte param0) {
         if (param0 > -65) {
-            field_a = null;
+            field_a = (la) null;
             return new int[8];
         }
         return new int[8];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = true;
         field_f = null;
         field_c = "Loading models";

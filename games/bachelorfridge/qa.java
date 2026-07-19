@@ -10,14 +10,24 @@ final class qa extends k {
         } else {
           ln.e(-116);
           hp.field_c = -3;
-          if (!af.field_a) {
+          if (af.field_a) {
+            uq.h(-28716);
+            if (param0 < 115) {
+              return;
+            } else {
+              uca.a(18, (byte) 117);
+              return;
+            }
+          } else {
             rs.a(true);
             sia.field_h = false;
             lg.a(true, -4, true);
-            return;
-          } else {
-            uq.h(-28716);
-            return;
+            if (param0 < 115) {
+              return;
+            } else {
+              uca.a(18, (byte) 117);
+              return;
+            }
           }
         }
     }
@@ -30,9 +40,9 @@ final class qa extends k {
         int[] var7 = null;
         var6 = BachelorFridge.field_y;
         if (param1 == 0) {
-          var7 = ((qa) this).field_j.a(param0, -1);
+          var7 = this.field_j.a(param0, -1);
           var3 = var7;
-          if (!((qa) this).field_j.field_m) {
+          if (!this.field_j.field_m) {
             return var3;
           } else {
             var4 = tj.field_f[param0];
@@ -48,18 +58,28 @@ final class qa extends k {
             }
           }
         } else {
-          return null;
+          return (int[]) null;
         }
     }
 
     public static void b(boolean param0) {
+        if (param0) {
+            qa.d(42);
+            field_k = null;
+            return;
+        }
         field_k = null;
     }
 
     private final int a(boolean param0, int param1, int param2) {
-        int var4 = param1 + 57 * param2;
-        var4 = var4 ^ var4 << 1;
-        return -((var4 * (789221 + var4 * (var4 * 15731)) - -1376312589 & 2147483647) / 262144) + 4096;
+        int var4 = 0;
+        var4 = param1 + 57 * param2;
+        if (param0) {
+          return -81;
+        } else {
+          var4 = var4 ^ var4 << -1873430751;
+          return -((var4 * (789221 + var4 * (var4 * 15731)) - -1376312589 & 2147483647) / 262144) + 4096;
+        }
     }
 
     public qa() {

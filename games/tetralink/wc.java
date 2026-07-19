@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.Object;
-
 final class wc extends mb {
     private Object field_F;
     static je field_E;
@@ -24,7 +22,7 @@ final class wc extends mb {
               if (param0 == -103) {
                 break L1;
               } else {
-                field_G = null;
+                field_G = (String) null;
                 break L1;
               }
             }
@@ -36,11 +34,13 @@ final class wc extends mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1, "wc.H(" + param0 + ')');
+          throw oi.a((Throwable) ((Object) var1), "wc.H(" + param0 + ')');
         }
     }
 
     final static void h(int param0) {
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         RuntimeException var1 = null;
         bc var1_ref = null;
         int var2 = 0;
@@ -61,6 +61,7 @@ final class wc extends mb {
         ud stackIn_59_0 = null;
         int stackIn_59_1 = 0;
         ud stackIn_59_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_10_0 = 0;
         int stackOut_8_0 = 0;
@@ -86,7 +87,7 @@ final class wc extends mb {
                 }
               }
               L2: {
-                if (var1_ref.d((byte) -99) != 1) {
+                if (-2 != (var1_ref.d((byte) -99) ^ -1)) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
                   break L2;
@@ -117,7 +118,7 @@ final class wc extends mb {
               L5: {
                 var6 = fh.a(-32055, var4_ref_String);
                 var7 = var1_ref.g((byte) 81);
-                var8 = cc.a((CharSequence) (Object) var4_ref_String, (byte) 98);
+                var8 = cc.a((CharSequence) ((Object) var4_ref_String), (byte) 98);
                 if (var8 == null) {
                   var8 = var4_ref_String;
                   break L5;
@@ -131,7 +132,7 @@ final class wc extends mb {
                 } else {
                   var6 = fh.a(-32055, var7);
                   if (null != var6) {
-                    sd.field_nb.a((long)var8.hashCode(), (gb) (Object) var6, param0 + 104);
+                    sd.field_nb.a((long)var8.hashCode(), var6, param0 + 104);
                     break L6;
                   } else {
                     break L6;
@@ -141,11 +142,11 @@ final class wc extends mb {
               L7: {
                 if (var6 == null) {
                   var6 = new ud();
-                  sd.field_nb.a((long)var8.hashCode(), (gb) (Object) var6, 113);
-                  int fieldTemp$2 = ca.field_c;
+                  sd.field_nb.a((long)var8.hashCode(), var6, 113);
+                  fieldTemp$2 = ca.field_c;
                   ca.field_c = ca.field_c + 1;
                   var6.field_Rb = fieldTemp$2;
-                  mm.field_s.a((mc) (Object) var6, false);
+                  mm.field_s.a(var6, false);
                   break L7;
                 } else {
                   break L7;
@@ -154,7 +155,8 @@ final class wc extends mb {
               var6.field_Lb = var5;
               var6.field_Vb = var7;
               var6.field_Mb = var4_ref_String;
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param0 == var2) {
                 L8: {
@@ -168,7 +170,7 @@ final class wc extends mb {
                 }
                 L9: {
                   var3 = var1_ref.g((byte) 81);
-                  if (!var3.equals((Object) (Object) "")) {
+                  if (!var3.equals("")) {
                     break L9;
                   } else {
                     var3 = null;
@@ -186,7 +188,7 @@ final class wc extends mb {
                     if (null == var6) {
                       break L10;
                     } else {
-                      wb.field_f.a((long)cc.a((CharSequence) (Object) var4_ref_String, (byte) 124).hashCode(), (gb) (Object) var6, 106);
+                      wb.field_f.a((long)cc.a((CharSequence) ((Object) var4_ref_String), (byte) 124).hashCode(), var6, 106);
                       break L10;
                     }
                   }
@@ -196,11 +198,11 @@ final class wc extends mb {
                     break L11;
                   } else {
                     var6 = new ud();
-                    wb.field_f.a((long)cc.a((CharSequence) (Object) var4_ref_String, (byte) 95).hashCode(), (gb) (Object) var6, 96);
-                    int fieldTemp$3 = qi.field_q;
+                    wb.field_f.a((long)cc.a((CharSequence) ((Object) var4_ref_String), (byte) 95).hashCode(), var6, 96);
+                    fieldTemp$3 = qi.field_q;
                     qi.field_q = qi.field_q + 1;
                     var6.field_Rb = fieldTemp$3;
-                    og.field_j.a((mc) (Object) var6, false);
+                    og.field_j.a(var6, false);
                     break L11;
                   }
                 }
@@ -216,7 +218,7 @@ final class wc extends mb {
                 var6.field_Ub = var3;
                 var6.field_Vb = var5;
                 var6.b(false);
-                var7_ref = (ud) (Object) og.field_j.c(false);
+                var7_ref = (ud) ((Object) og.field_j.c(false));
                 L13: while (true) {
                   L14: {
                     L15: {
@@ -224,9 +226,9 @@ final class wc extends mb {
                         if (null == var7_ref) {
                           break L16;
                         } else {
-                          stackOut_48_0 = (ud) var6;
+                          stackOut_48_0 = (ud) (var6);
                           stackOut_48_1 = 126;
-                          stackOut_48_2 = (ud) var7_ref;
+                          stackOut_48_2 = (ud) (var7_ref);
                           stackIn_59_0 = stackOut_48_0;
                           stackIn_59_1 = stackOut_48_1;
                           stackIn_59_2 = stackOut_48_2;
@@ -239,7 +241,7 @@ final class wc extends mb {
                             if (!om.a(stackIn_49_0, (byte) stackIn_49_1, stackIn_49_2)) {
                               break L16;
                             } else {
-                              var7_ref = (ud) (Object) og.field_j.a((byte) -70);
+                              var7_ref = (ud) ((Object) og.field_j.a((byte) -70));
                               if (var9 == 0) {
                                 continue L13;
                               } else {
@@ -253,7 +255,7 @@ final class wc extends mb {
                         if (var7_ref != null) {
                           break L17;
                         } else {
-                          og.field_j.a((mc) (Object) var6, false);
+                          og.field_j.a(var6, false);
                           if (var9 == 0) {
                             break L14;
                           } else {
@@ -261,21 +263,22 @@ final class wc extends mb {
                           }
                         }
                       }
-                      stackOut_57_0 = (ud) var7_ref;
+                      stackOut_57_0 = (ud) (var7_ref);
                       stackOut_57_1 = 10;
-                      stackOut_57_2 = (ud) var6;
+                      stackOut_57_2 = (ud) (var6);
                       stackIn_59_0 = stackOut_57_0;
                       stackIn_59_1 = stackOut_57_1;
                       stackIn_59_2 = stackOut_57_2;
                       break L15;
                     }
-                    cl.a((mc) (Object) stackIn_59_0, stackIn_59_1, (mc) (Object) stackIn_59_2);
+                    cl.a(stackIn_59_0, stackIn_59_1, stackIn_59_2);
                     break L14;
                   }
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               } else {
-                if (var2 == 2) {
+                if (-3 == (var2 ^ -1)) {
                   L18: {
                     if (1 != ji.field_Tb) {
                       break L18;
@@ -284,7 +287,8 @@ final class wc extends mb {
                       break L18;
                     }
                   }
-                  return;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   if (3 != var2) {
                     if (4 == var2) {
@@ -293,10 +297,12 @@ final class wc extends mb {
                       ul.field_e = var3.intern();
                       var4 = var1_ref.d((byte) -99);
                       gd.d(var4, 3);
-                      return;
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     } else {
                       fk.a(-97, (Throwable) null, "F1: " + hc.a(false));
                       mk.a(false);
+                      decompiledRegionSelector0 = 5;
                       break L0;
                     }
                   } else {
@@ -308,7 +314,8 @@ final class wc extends mb {
                         break L19;
                       }
                     }
-                    return;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   }
                 }
               }
@@ -317,7 +324,28 @@ final class wc extends mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1, "wc.F(" + param0 + ')');
+          throw oi.a((Throwable) ((Object) var1), "wc.F(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return;
+                } else {
+                  return;
+                }
+              }
+            }
+          }
         }
     }
 
@@ -325,27 +353,34 @@ final class wc extends mb {
         RuntimeException var2 = null;
         Object stackIn_2_0 = null;
         Object stackIn_4_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
         Object stackOut_1_0 = null;
         try {
           L0: {
             if (param0 == 22850) {
-              stackOut_3_0 = ((wc) this).field_F;
+              stackOut_3_0 = this.field_F;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (Object) null;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var2, "wc.B(" + param0 + ')');
+          throw oi.a((Throwable) ((Object) var2), "wc.B(" + param0 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     wc(Object param0, int param1) {
@@ -369,30 +404,30 @@ final class wc extends mb {
         String stackOut_4_2 = null;
         try {
           L0: {
-            ((wc) this).field_F = param0;
+            this.field_F = param0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("wc.<init>(");
             stackIn_6_0 = stackOut_3_0;
             stackIn_6_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_7_0 = stackOut_4_0;
               stackIn_7_1 = stackOut_4_1;
@@ -400,11 +435,19 @@ final class wc extends mb {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
     }
 
     final static void i(int param0) {
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         RuntimeException runtimeException = null;
         int[] var1 = null;
         int var2 = 0;
@@ -420,31 +463,31 @@ final class wc extends mb {
             L1: while (true) {
               L2: {
                 L3: {
-                  if (~var3 >= ~var2) {
+                  if ((var3 ^ -1) >= (var2 ^ -1)) {
                     break L3;
                   } else {
-                    int incrementValue$16 = var2;
+                    incrementValue$16 = var2;
                     var2++;
                     var1[incrementValue$16] = 0;
-                    int incrementValue$17 = var2;
+                    incrementValue$17 = var2;
                     var2++;
                     var1[incrementValue$17] = 0;
-                    int incrementValue$18 = var2;
+                    incrementValue$18 = var2;
                     var2++;
                     var1[incrementValue$18] = 0;
-                    int incrementValue$19 = var2;
+                    incrementValue$19 = var2;
                     var2++;
                     var1[incrementValue$19] = 0;
-                    int incrementValue$20 = var2;
+                    incrementValue$20 = var2;
                     var2++;
                     var1[incrementValue$20] = 0;
-                    int incrementValue$21 = var2;
+                    incrementValue$21 = var2;
                     var2++;
                     var1[incrementValue$21] = 0;
-                    int incrementValue$22 = var2;
+                    incrementValue$22 = var2;
                     var2++;
                     var1[incrementValue$22] = 0;
-                    int incrementValue$23 = var2;
+                    incrementValue$23 = var2;
                     var2++;
                     var1[incrementValue$23] = 0;
                     if (var4 != 0) {
@@ -471,7 +514,7 @@ final class wc extends mb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) runtimeException, "wc.G(" + param0 + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "wc.G(" + param0 + ')');
         }
     }
 
@@ -479,6 +522,7 @@ final class wc extends mb {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
@@ -487,26 +531,28 @@ final class wc extends mb {
             if (param0 > 37) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var2, "wc.A(" + param0 + ')');
+          throw oi.a((Throwable) ((Object) var2), "wc.A(" + param0 + ')');
         }
-        return stackIn_4_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_4_0 != 0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_E = new je();
         field_K = "Unfortunately you are not eligible to create an account.";
         field_H = "You have resigned and are offering a rematch.";

@@ -20,22 +20,30 @@ final class mf {
             L1: while (true) {
               if (var1_int >= wf.field_P.length) {
                 L2: {
-                  if (fj.a(0, 121)) {
+                  if (param0 == -67) {
                     break L2;
                   } else {
-                    wf.field_P[12] = false;
+                    field_d = -62;
                     break L2;
+                  }
+                }
+                L3: {
+                  if (fj.a(0, 121)) {
+                    break L3;
+                  } else {
+                    wf.field_P[12] = false;
+                    break L3;
                   }
                 }
                 var3 = 14;
                 var1_int = var3;
-                L3: while (true) {
+                L4: while (true) {
                   if (var3 >= uc.field_a.length) {
                     break L0;
                   } else {
                     uc.field_a[var3] = true;
                     var3++;
-                    continue L3;
+                    continue L4;
                   }
                 }
               } else {
@@ -48,7 +56,7 @@ final class mf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1, "mf.D(" + -67 + ')');
+          throw sh.a((Throwable) ((Object) var1), "mf.D(" + param0 + ')');
         }
     }
 
@@ -62,16 +70,16 @@ final class mf {
           if (0 > param1) {
             break L0;
           } else {
-            if (param0 < 0) {
+            if (-1 < (param0 ^ -1)) {
               break L0;
             } else {
-              if (vm.field_u[0].length <= param1) {
+              if (vm.field_u[param2].length <= param1) {
                 return false;
               } else {
                 if (param0 < vm.field_u.length) {
                   L1: {
                     L2: {
-                      if (vm.field_u[param0][param1] == -1) {
+                      if (0 == (vm.field_u[param0][param1] ^ -1)) {
                         break L2;
                       } else {
                         if (vm.field_u[param0][param1] >= 1) {
@@ -100,28 +108,27 @@ final class mf {
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
         if (param3 > -39) {
-            ((mf) this).a(-21, 11, -116, (byte) 91, 87);
+            this.a(-21, 11, -116, (byte) 91, 87);
         }
-        vf.a(param1, ((mf) this).field_b, param2, 3, param0, param4);
+        vf.a(param1, this.field_b, param2, 3, param0, param4);
     }
 
     public static void a(int param0) {
+        if (param0 <= 122) {
+            return;
+        }
         field_a = null;
     }
 
     mf(vn[] param0) {
         try {
-            ((mf) this).field_b = param0;
+            this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "mf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 10;
         field_d = 0;
         field_a = "Fullscreen play is an option available to subscribing members only. For more details see the website.";

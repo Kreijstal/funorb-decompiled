@@ -7,19 +7,19 @@ final class wba extends ob {
     static jea[] field_p;
 
     final void a(int param0, int param1) {
-        ((wba) this).field_g = param1;
+        this.field_g = param1;
         if (param0 != 255) {
-            ((wba) this).a((byte) 66, -128);
+            this.a((byte) 66, -128);
         }
     }
 
     final void a(byte param0, int param1) {
         if (param0 != 62) {
-            ((wba) this).a((byte) 7, -0.12800447642803192f);
-            ((wba) this).field_h = param1;
+            this.a((byte) 7, -0.12800447642803192f);
+            this.field_h = param1;
             return;
         }
-        ((wba) this).field_h = param1;
+        this.field_h = param1;
     }
 
     wba(int param0, int param1, int param2, int param3, int param4, float param5) {
@@ -39,24 +39,20 @@ final class wba extends ob {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        ((wba) this).field_m = param0;
-        ((wba) this).field_l = param3;
-        ((wba) this).field_k = param1;
+        this.field_m = param0;
+        this.field_l = param3;
+        this.field_k = param1;
         int var5 = -86 % ((-55 - param2) / 58);
     }
 
     final void a(byte param0, float param1) {
-        ((wba) this).field_j = param1;
+        this.field_j = param1;
         if (param0 <= 77) {
-            field_q = null;
+            field_q = (String[]) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = null;
         field_q = new String[42];
     }

@@ -30,9 +30,9 @@ abstract class hu extends am {
     final void a(char param0, int param1, int param2, int param3) {
         int var5 = 0;
         if (param0 != 32) {
-            param2 = param2 - ((hu) this).field_x;
+            param2 = param2 - this.field_x;
             var5 = mf.a(param0, (byte) -104) & 255;
-            ((hu) this).a(var5, param1 + ((hu) this).field_n[var5] - (((hu) this).field_I[var5] >> 1), param2 + ((hu) this).field_o[var5], ((hu) this).field_D[var5], ((hu) this).field_J[var5], param3, false);
+            this.a(var5, param1 + this.field_n[var5] - (this.field_I[var5] >> 1), param2 + this.field_o[var5], this.field_D[var5], this.field_J[var5], param3, false);
         }
     }
 
@@ -41,14 +41,14 @@ abstract class hu extends am {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        var3 = ((hu) this).a(param0, new int[1], field_s);
+        var3 = this.a(param0, new int[]{param1}, field_s);
         var4 = 0;
         var5 = 0;
         L0: while (true) {
           if (var5 >= var3) {
             return var4;
           } else {
-            var6 = ((hu) this).a(field_s[var5]);
+            var6 = this.a(field_s[var5]);
             if (var6 > var4) {
               var4 = var6;
               var5++;
@@ -66,7 +66,7 @@ abstract class hu extends am {
             return;
         }
         this.a(param3, param4);
-        this.a(param0, param1 - ((hu) this).a(param0) / 2, param2);
+        this.a(param0, param1 - this.a(param0) / 2, param2);
     }
 
     private final void a(int param0, int param1) {
@@ -129,7 +129,7 @@ abstract class hu extends am {
     }
 
     final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        return ((hu) this).a(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
+        return this.a(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
     }
 
     private final void b(String param0, int param1, int param2) {
@@ -142,7 +142,7 @@ abstract class hu extends am {
         String var9_ref_String = null;
         int var10 = 0;
         int var11 = 0;
-        param1 = param1 - ((hu) this).field_x;
+        param1 = param1 - this.field_x;
         var4 = -1;
         var5 = 0;
         var6 = param0.length();
@@ -162,14 +162,14 @@ abstract class hu extends am {
                   } else {
                     var9_ref_String = param0.substring(var4 + 1, var7).toLowerCase();
                     var4 = -1;
-                    if (!var9_ref_String.equals((Object) (Object) "lt")) {
-                      if (!var9_ref_String.equals((Object) (Object) "gt")) {
-                        if (!var9_ref_String.equals((Object) (Object) "nbsp")) {
-                          if (!var9_ref_String.equals((Object) (Object) "shy")) {
-                            if (!var9_ref_String.equals((Object) (Object) "times")) {
-                              if (!var9_ref_String.equals((Object) (Object) "euro")) {
-                                if (!var9_ref_String.equals((Object) (Object) "copy")) {
-                                  if (!var9_ref_String.equals((Object) (Object) "reg")) {
+                    if (!var9_ref_String.equals("lt")) {
+                      if (!var9_ref_String.equals("gt")) {
+                        if (!var9_ref_String.equals("nbsp")) {
+                          if (!var9_ref_String.equals("shy")) {
+                            if (!var9_ref_String.equals("times")) {
+                              if (!var9_ref_String.equals("euro")) {
+                                if (!var9_ref_String.equals("copy")) {
+                                  if (!var9_ref_String.equals("reg")) {
                                     this.b(var9_ref_String);
                                     var7++;
                                     continue L0;
@@ -211,16 +211,16 @@ abstract class hu extends am {
               if (var4 == -1) {
                 L2: {
                   var8 = (char)(mf.a((char) var8, (byte) -104) & 255);
-                  var9 = ((hu) this).field_D[var8];
-                  var10 = ((hu) this).field_I[var8];
-                  var11 = ((hu) this).field_J[var8];
-                  if (((hu) this).field_K == null) {
+                  var9 = this.field_D[var8];
+                  var10 = this.field_I[var8];
+                  var11 = this.field_J[var8];
+                  if (this.field_K == null) {
                     break L2;
                   } else {
                     if (var5 == 0) {
                       break L2;
                     } else {
-                      param2 = param2 - ((hu) this).field_K[(var5 << 8) + var8];
+                      param2 = param2 - this.field_K[(var5 << 8) + var8];
                       break L2;
                     }
                   }
@@ -242,22 +242,22 @@ abstract class hu extends am {
                         if (field_u == -1) {
                           break L4;
                         } else {
-                          ((hu) this).a(var8, param1 + ((hu) this).field_o[var8] + 1, param2 - ((hu) this).field_n[var8] + 1, var11, var9, field_u, field_t, true);
+                          this.a(var8, param1 + this.field_o[var8] + 1, param2 - this.field_n[var8] + 1, var11, var9, field_u, field_t, true);
                           break L4;
                         }
                       }
-                      ((hu) this).a(var8, param1 + ((hu) this).field_o[var8], param2 - ((hu) this).field_n[var8], var11, var9, field_v, field_t, false);
+                      this.a(var8, param1 + this.field_o[var8], param2 - this.field_n[var8], var11, var9, field_v, field_t, false);
                       break L3;
                     } else {
                       L5: {
                         if (field_u == -1) {
                           break L5;
                         } else {
-                          ((hu) this).b(var8, param1 + ((hu) this).field_o[var8] + 1, param2 - ((hu) this).field_n[var8] + 1, var11, var9, field_u, true);
+                          this.b(var8, param1 + this.field_o[var8] + 1, param2 - this.field_n[var8] + 1, var11, var9, field_u, true);
                           break L5;
                         }
                       }
-                      ((hu) this).b(var8, param1 + ((hu) this).field_o[var8], param2 - ((hu) this).field_n[var8], var11, var9, field_v, false);
+                      this.b(var8, param1 + this.field_o[var8], param2 - this.field_n[var8], var11, var9, field_v, false);
                       break L3;
                     }
                   }
@@ -266,7 +266,7 @@ abstract class hu extends am {
                   if (field_z == -1) {
                     break L6;
                   } else {
-                    on.a(param1 + (int)((double)((hu) this).field_x * 0.7), param2, var10, field_z);
+                    on.a(param1 + (int)((double)this.field_x * 0.7), param2, var10, field_z);
                     break L6;
                   }
                 }
@@ -274,7 +274,7 @@ abstract class hu extends am {
                   if (field_w == -1) {
                     break L7;
                   } else {
-                    on.a(param1 + ((hu) this).field_x + 1, param2, var10, field_w);
+                    on.a(param1 + this.field_x + 1, param2, var10, field_w);
                     break L7;
                   }
                 }
@@ -299,7 +299,7 @@ abstract class hu extends am {
             return;
         }
         this.a(param3, param4, param5);
-        this.a(param0, param1 - ((hu) this).a(param0), param2);
+        this.a(param0, param1 - this.a(param0), param2);
     }
 
     final void c(String param0, int param1, int param2, int param3, int param4) {
@@ -307,7 +307,7 @@ abstract class hu extends am {
             return;
         }
         this.a(param3, param4);
-        this.a(param0, param1 - ((hu) this).a(param0), param2);
+        this.a(param0, param1 - this.a(param0), param2);
     }
 
     final void a(String param0, int param1, int param2, int param3, int param4) {
@@ -319,6 +319,8 @@ abstract class hu extends am {
     }
 
     private final static int a(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -372,9 +374,9 @@ abstract class hu extends am {
           if (var18 >= var12) {
             return -var13;
           } else {
-            int incrementValue$12 = var16;
+            incrementValue$12 = var16;
             var16++;
-            int incrementValue$13 = var17;
+            incrementValue$13 = var17;
             var17++;
             var19 = var14[incrementValue$12] + var15[incrementValue$13];
             if (var19 < var13) {
@@ -394,6 +396,13 @@ abstract class hu extends am {
     abstract void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
     private final void a(byte[] param0) {
+        byte[] array$7 = null;
+        int incrementValue$8 = 0;
+        byte[] array$9 = null;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
         int var2 = 0;
         int var3_int = 0;
         int[] var3 = null;
@@ -413,29 +422,17 @@ abstract class hu extends am {
         byte[][] var15 = null;
         byte[][] var16 = null;
         int[] var17 = null;
-        int[] var18 = null;
-        byte[][] var19 = null;
-        byte[][] var20 = null;
-        int[] var21 = null;
-        int[] var22 = null;
-        byte[][] var23 = null;
-        byte[][] var24 = null;
-        int[] var25 = null;
         L0: {
-          ((hu) this).field_I = new int[256];
+          this.field_I = new int[256];
           if (param0.length != 257) {
             var2 = 0;
             var3_int = 0;
             L1: while (true) {
               if (var3_int >= 256) {
-                var22 = new int[256];
-                var18 = var22;
-                var14 = var18;
+                var14 = new int[256];
                 var10 = var14;
                 var3 = var10;
-                var25 = new int[256];
-                var21 = var25;
-                var17 = var21;
+                var17 = new int[256];
                 var13 = var17;
                 var4 = var13;
                 var5_int = 0;
@@ -444,27 +441,23 @@ abstract class hu extends am {
                     var5_int = 0;
                     L3: while (true) {
                       if (var5_int >= 256) {
-                        var23 = new byte[256][];
-                        var19 = var23;
-                        var15 = var19;
+                        var15 = new byte[256][];
                         var11 = var15;
                         var5 = var11;
                         var6_int = 0;
                         L4: while (true) {
                           if (var6_int >= 256) {
-                            var24 = new byte[256][];
-                            var20 = var24;
-                            var16 = var20;
+                            var16 = new byte[256][];
                             var12 = var16;
                             var6 = var12;
                             var7 = 0;
                             L5: while (true) {
                               if (var7 >= 256) {
-                                ((hu) this).field_K = new byte[65536];
+                                this.field_K = new byte[65536];
                                 var7 = 0;
                                 L6: while (true) {
                                   if (var7 >= 256) {
-                                    ((hu) this).field_x = var25[32] + var22[32];
+                                    this.field_x = var17[32] + var14[32];
                                     break L0;
                                   } else {
                                     if (var7 != 32) {
@@ -474,7 +467,7 @@ abstract class hu extends am {
                                           if (var8 < 256) {
                                             if (var8 != 32) {
                                               if (var8 != 160) {
-                                                ((hu) this).field_K[(var7 << 8) + var8] = (byte)hu.a(var23, var24, var25, ((hu) this).field_I, var22, var7, var8);
+                                                this.field_K[(var7 << 8) + var8] = (byte)hu.a(var15, var16, var17, this.field_I, var14, var7, var8);
                                                 var8++;
                                                 continue L7;
                                               } else {
@@ -501,18 +494,19 @@ abstract class hu extends am {
                                   }
                                 }
                               } else {
-                                var6[var7] = new byte[var22[var7]];
+                                array$7 = new byte[var14[var7]];
+                                var6[var7] = array$7;
                                 var8 = 0;
                                 var9 = 0;
                                 L8: while (true) {
-                                  if (var9 >= var24[var7].length) {
+                                  if (var9 >= var16[var7].length) {
                                     var7++;
                                     continue L5;
                                   } else {
-                                    int incrementValue$5 = var2;
+                                    incrementValue$8 = var2;
                                     var2++;
-                                    var8 = (byte)(var8 + param0[incrementValue$5]);
-                                    var24[var7][var9] = (byte)var8;
+                                    var8 = (byte)(var8 + param0[incrementValue$8]);
+                                    var16[var7][var9] = (byte)var8;
                                     var9++;
                                     continue L8;
                                   }
@@ -520,18 +514,19 @@ abstract class hu extends am {
                               }
                             }
                           } else {
-                            var5[var6_int] = new byte[var22[var6_int]];
+                            array$9 = new byte[var14[var6_int]];
+                            var5[var6_int] = array$9;
                             var7 = 0;
                             var8 = 0;
                             L9: while (true) {
-                              if (var8 >= var23[var6_int].length) {
+                              if (var8 >= var15[var6_int].length) {
                                 var6_int++;
                                 continue L4;
                               } else {
-                                int incrementValue$6 = var2;
+                                incrementValue$10 = var2;
                                 var2++;
-                                var7 = (byte)(var7 + param0[incrementValue$6]);
-                                var23[var6_int][var8] = (byte)var7;
+                                var7 = (byte)(var7 + param0[incrementValue$10]);
+                                var15[var6_int][var8] = (byte)var7;
                                 var8++;
                                 continue L9;
                               }
@@ -539,25 +534,25 @@ abstract class hu extends am {
                           }
                         }
                       } else {
-                        int incrementValue$7 = var2;
+                        incrementValue$11 = var2;
                         var2++;
-                        var4[var5_int] = param0[incrementValue$7] & 255;
+                        var4[var5_int] = param0[incrementValue$11] & 255;
                         var5_int++;
                         continue L3;
                       }
                     }
                   } else {
-                    int incrementValue$8 = var2;
+                    incrementValue$12 = var2;
                     var2++;
-                    var3[var5_int] = param0[incrementValue$8] & 255;
+                    var3[var5_int] = param0[incrementValue$12] & 255;
                     var5_int++;
                     continue L2;
                   }
                 }
               } else {
-                int incrementValue$9 = var2;
+                incrementValue$13 = var2;
                 var2++;
-                ((hu) this).field_I[var3_int] = param0[incrementValue$9] & 255;
+                this.field_I[var3_int] = param0[incrementValue$13] & 255;
                 var3_int++;
                 continue L1;
               }
@@ -565,11 +560,11 @@ abstract class hu extends am {
           } else {
             var2 = 0;
             L10: while (true) {
-              if (var2 >= ((hu) this).field_I.length) {
-                ((hu) this).field_x = param0[256] & 255;
+              if (var2 >= this.field_I.length) {
+                this.field_x = param0[256] & 255;
                 break L0;
               } else {
-                ((hu) this).field_I[var2] = param0[var2] & 255;
+                this.field_I[var2] = param0[var2] & 255;
                 var2++;
                 continue L10;
               }
@@ -596,7 +591,7 @@ abstract class hu extends am {
         Throwable decompiledCaughtException = null;
         int stackOut_25_0 = 0;
         int stackOut_24_0 = 0;
-        param2 = param2 - ((hu) this).field_x;
+        param2 = param2 - this.field_x;
         var4 = -1;
         var5 = 0;
         var6 = param0.length();
@@ -616,14 +611,14 @@ abstract class hu extends am {
                   } else {
                     var9_ref_String = param0.substring(var4 + 1, var7).toLowerCase();
                     var4 = -1;
-                    if (!var9_ref_String.equals((Object) (Object) "lt")) {
-                      if (!var9_ref_String.equals((Object) (Object) "gt")) {
-                        if (!var9_ref_String.equals((Object) (Object) "nbsp")) {
-                          if (!var9_ref_String.equals((Object) (Object) "shy")) {
-                            if (!var9_ref_String.equals((Object) (Object) "times")) {
-                              if (!var9_ref_String.equals((Object) (Object) "euro")) {
-                                if (!var9_ref_String.equals((Object) (Object) "copy")) {
-                                  if (!var9_ref_String.equals((Object) (Object) "reg")) {
+                    if (!var9_ref_String.equals("lt")) {
+                      if (!var9_ref_String.equals("gt")) {
+                        if (!var9_ref_String.equals("nbsp")) {
+                          if (!var9_ref_String.equals("shy")) {
+                            if (!var9_ref_String.equals("times")) {
+                              if (!var9_ref_String.equals("euro")) {
+                                if (!var9_ref_String.equals("copy")) {
+                                  if (!var9_ref_String.equals("reg")) {
                                     if (!var9_ref_String.startsWith("img=")) {
                                       this.b(var9_ref_String);
                                       var7++;
@@ -632,15 +627,15 @@ abstract class hu extends am {
                                       try {
                                         L2: {
                                           L3: {
-                                            var13 = (CharSequence) (Object) var9_ref_String.substring(4);
+                                            var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
                                             var10 = rr.a(10, var13);
-                                            var11_ref_qd = ((hu) this).field_F[var10];
-                                            if (((hu) this).field_H == null) {
+                                            var11_ref_qd = this.field_F[var10];
+                                            if (this.field_H == null) {
                                               stackOut_25_0 = var11_ref_qd.field_a;
                                               stackIn_26_0 = stackOut_25_0;
                                               break L3;
                                             } else {
-                                              stackOut_24_0 = ((hu) this).field_H[var10];
+                                              stackOut_24_0 = this.field_H[var10];
                                               stackIn_26_0 = stackOut_24_0;
                                               break L3;
                                             }
@@ -648,10 +643,10 @@ abstract class hu extends am {
                                           L4: {
                                             var12 = stackIn_26_0;
                                             if (field_t != 256) {
-                                              var11_ref_qd.a(param1, param2 + ((hu) this).field_x - var12, field_t);
+                                              var11_ref_qd.a(param1, param2 + this.field_x - var12, field_t);
                                               break L4;
                                             } else {
-                                              var11_ref_qd.a(param1, param2 + ((hu) this).field_x - var12);
+                                              var11_ref_qd.a(param1, param2 + this.field_x - var12);
                                               break L4;
                                             }
                                           }
@@ -708,20 +703,20 @@ abstract class hu extends am {
               if (var4 == -1) {
                 L6: {
                   var8 = (char)(mf.a((char) var8, (byte) -104) & 255);
-                  if (((hu) this).field_K == null) {
+                  if (this.field_K == null) {
                     break L6;
                   } else {
                     if (var5 == 0) {
                       break L6;
                     } else {
-                      param1 = param1 + ((hu) this).field_K[(var5 << 8) + var8];
+                      param1 = param1 + this.field_K[(var5 << 8) + var8];
                       break L6;
                     }
                   }
                 }
                 L7: {
-                  var9 = ((hu) this).field_D[var8];
-                  var10 = ((hu) this).field_J[var8];
+                  var9 = this.field_D[var8];
+                  var10 = this.field_J[var8];
                   var11 = param1;
                   if (var8 == 32) {
                     if (field_A <= 0) {
@@ -738,32 +733,32 @@ abstract class hu extends am {
                         if (field_u == -1) {
                           break L8;
                         } else {
-                          ((hu) this).b(var8, param1 + ((hu) this).field_n[var8] + 1, param2 + ((hu) this).field_o[var8] + 1, var9, var10, field_u, field_t, true);
+                          this.b(var8, param1 + this.field_n[var8] + 1, param2 + this.field_o[var8] + 1, var9, var10, field_u, field_t, true);
                           break L8;
                         }
                       }
-                      ((hu) this).b(var8, param1 + ((hu) this).field_n[var8], param2 + ((hu) this).field_o[var8], var9, var10, field_v, field_t, false);
+                      this.b(var8, param1 + this.field_n[var8], param2 + this.field_o[var8], var9, var10, field_v, field_t, false);
                       break L7;
                     } else {
                       L9: {
                         if (field_u == -1) {
                           break L9;
                         } else {
-                          ((hu) this).a(var8, param1 + ((hu) this).field_n[var8] + 1, param2 + ((hu) this).field_o[var8] + 1, var9, var10, field_u, true);
+                          this.a(var8, param1 + this.field_n[var8] + 1, param2 + this.field_o[var8] + 1, var9, var10, field_u, true);
                           break L9;
                         }
                       }
-                      ((hu) this).a(var8, param1 + ((hu) this).field_n[var8], param2 + ((hu) this).field_o[var8], var9, var10, field_v, false);
+                      this.a(var8, param1 + this.field_n[var8], param2 + this.field_o[var8], var9, var10, field_v, false);
                       break L7;
                     }
                   }
                 }
                 L10: {
-                  param1 = param1 + ((hu) this).field_I[var8];
+                  param1 = param1 + this.field_I[var8];
                   if (field_z == -1) {
                     break L10;
                   } else {
-                    on.f(var11, param2 + (int)((double)((hu) this).field_x * 0.7), param1 - var11, field_z);
+                    on.f(var11, param2 + (int)((double)this.field_x * 0.7), param1 - var11, field_z);
                     break L10;
                   }
                 }
@@ -771,7 +766,7 @@ abstract class hu extends am {
                   if (field_w == -1) {
                     break L11;
                   } else {
-                    on.f(var11, param2 + ((hu) this).field_x + 1, param1 - var11, field_w);
+                    on.f(var11, param2 + this.field_x + 1, param1 - var11, field_w);
                     break L11;
                   }
                 }
@@ -793,15 +788,15 @@ abstract class hu extends am {
 
     final int c(String param0, int param1, int param2) {
         if (param2 == 0) {
-            param2 = ((hu) this).field_x;
+            param2 = this.field_x;
         }
-        int var4 = ((hu) this).a(param0, new int[1], field_s);
+        int var4 = this.a(param0, new int[]{param1}, field_s);
         int var5 = (var4 - 1) * param2;
-        return ((hu) this).field_G + var5 + ((hu) this).field_p;
+        return this.field_G + var5 + this.field_p;
     }
 
     final int b(String param0, int param1) {
-        return ((hu) this).a(param0, new int[1], field_s);
+        return this.a(param0, new int[]{param1}, field_s);
     }
 
     private final void b(String param0) {
@@ -816,19 +811,19 @@ abstract class hu extends am {
           L0: {
             L1: {
               if (!param0.startsWith("col=")) {
-                if (!param0.equals((Object) (Object) "/col")) {
+                if (!param0.equals("/col")) {
                   if (!param0.startsWith("trans=")) {
-                    if (!param0.equals((Object) (Object) "/trans")) {
+                    if (!param0.equals("/trans")) {
                       if (!param0.startsWith("str=")) {
-                        if (!param0.equals((Object) (Object) "str")) {
-                          if (!param0.equals((Object) (Object) "/str")) {
+                        if (!param0.equals("str")) {
+                          if (!param0.equals("/str")) {
                             if (!param0.startsWith("u=")) {
-                              if (!param0.equals((Object) (Object) "u")) {
-                                if (!param0.equals((Object) (Object) "/u")) {
+                              if (!param0.equals("u")) {
+                                if (!param0.equals("/u")) {
                                   if (!param0.startsWith("shad=")) {
-                                    if (!param0.equals((Object) (Object) "shad")) {
-                                      if (!param0.equals((Object) (Object) "/shad")) {
-                                        if (!param0.equals((Object) (Object) "br")) {
+                                    if (!param0.equals("shad")) {
+                                      if (!param0.equals("/shad")) {
+                                        if (!param0.equals("br")) {
                                           break L1;
                                         } else {
                                           this.a(field_y, field_E, field_r);
@@ -843,7 +838,7 @@ abstract class hu extends am {
                                       break L1;
                                     }
                                   } else {
-                                    var7 = (CharSequence) (Object) param0.substring(5);
+                                    var7 = (CharSequence) ((Object) param0.substring(5));
                                     field_u = im.a((byte) 120, var7, 16);
                                     break L1;
                                   }
@@ -856,7 +851,7 @@ abstract class hu extends am {
                                 break L1;
                               }
                             } else {
-                              var6 = (CharSequence) (Object) param0.substring(2);
+                              var6 = (CharSequence) ((Object) param0.substring(2));
                               field_w = im.a((byte) 116, var6, 16);
                               break L1;
                             }
@@ -869,7 +864,7 @@ abstract class hu extends am {
                           break L1;
                         }
                       } else {
-                        var5 = (CharSequence) (Object) param0.substring(4);
+                        var5 = (CharSequence) ((Object) param0.substring(4));
                         field_z = im.a((byte) 123, var5, 16);
                         break L1;
                       }
@@ -878,7 +873,7 @@ abstract class hu extends am {
                       break L1;
                     }
                   } else {
-                    var4 = (CharSequence) (Object) param0.substring(6);
+                    var4 = (CharSequence) ((Object) param0.substring(6));
                     field_t = rr.a(10, var4);
                     break L1;
                   }
@@ -887,7 +882,7 @@ abstract class hu extends am {
                   break L1;
                 }
               } else {
-                var3 = (CharSequence) (Object) param0.substring(4);
+                var3 = (CharSequence) ((Object) param0.substring(4));
                 field_v = im.a((byte) 121, var3, 16);
                 break L1;
               }
@@ -904,7 +899,7 @@ abstract class hu extends am {
     }
 
     final int a(char param0) {
-        return ((hu) this).field_I[mf.a(param0, (byte) -104) & 255];
+        return this.field_I[mf.a(param0, (byte) -104) & 255];
     }
 
     final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
@@ -918,13 +913,13 @@ abstract class hu extends am {
             if (param10 != 0) {
               break L0;
             } else {
-              param10 = ((hu) this).field_x;
+              param10 = this.field_x;
               break L0;
             }
           }
           L1: {
             var12 = new int[]{param3};
-            if (param4 >= ((hu) this).field_G + ((hu) this).field_p + param10) {
+            if (param4 >= this.field_G + this.field_p + param10) {
               break L1;
             } else {
               if (param4 >= param10 + param10) {
@@ -936,7 +931,7 @@ abstract class hu extends am {
             }
           }
           L2: {
-            var13 = ((hu) this).a(param0, var12, field_s);
+            var13 = this.a(param0, var12, field_s);
             if (param9 != 3) {
               break L2;
             } else {
@@ -953,7 +948,7 @@ abstract class hu extends am {
               if (param9 != 1) {
                 if (param9 != 2) {
                   L4: {
-                    var15 = (param4 - ((hu) this).field_G - ((hu) this).field_p - (var13 - 1) * param10) / (var13 + 1);
+                    var15 = (param4 - this.field_G - this.field_p - (var13 - 1) * param10) / (var13 + 1);
                     if (var15 >= 0) {
                       break L4;
                     } else {
@@ -961,19 +956,19 @@ abstract class hu extends am {
                       break L4;
                     }
                   }
-                  var14 = param2 + ((hu) this).field_G + var15;
+                  var14 = param2 + this.field_G + var15;
                   param10 = param10 + var15;
                   break L3;
                 } else {
-                  var14 = param2 + param4 - ((hu) this).field_p - (var13 - 1) * param10;
+                  var14 = param2 + param4 - this.field_p - (var13 - 1) * param10;
                   break L3;
                 }
               } else {
-                var14 = param2 + ((hu) this).field_G + (param4 - ((hu) this).field_G - ((hu) this).field_p - (var13 - 1) * param10) / 2;
+                var14 = param2 + this.field_G + (param4 - this.field_G - this.field_p - (var13 - 1) * param10) / 2;
                 break L3;
               }
             } else {
-              var14 = param2 + ((hu) this).field_G;
+              var14 = param2 + this.field_G;
               break L3;
             }
           }
@@ -1000,13 +995,13 @@ abstract class hu extends am {
                     var15++;
                     continue L5;
                   } else {
-                    this.a(field_s[var15], param1 + param3 - ((hu) this).a(field_s[var15]), var14);
+                    this.a(field_s[var15], param1 + param3 - this.a(field_s[var15]), var14);
                     var14 = var14 + param10;
                     var15++;
                     continue L5;
                   }
                 } else {
-                  this.a(field_s[var15], param1 + (param3 - ((hu) this).a(field_s[var15])) / 2, var14);
+                  this.a(field_s[var15], param1 + (param3 - this.a(field_s[var15])) / 2, var14);
                   var14 = var14 + param10;
                   var15++;
                   continue L5;
@@ -1025,6 +1020,9 @@ abstract class hu extends am {
     }
 
     final static String c(String param0) {
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
         int var1 = 0;
         int var2 = 0;
         int var3_int = 0;
@@ -1045,16 +1043,16 @@ abstract class hu extends am {
                 var5 = param0.charAt(var4);
                 if (var5 != 60) {
                   if (var5 != 62) {
-                    StringBuilder discarded$3 = var3.append((char) var5);
+                    discarded$3 = var3.append((char) var5);
                     var4++;
                     continue L1;
                   } else {
-                    StringBuilder discarded$4 = var3.append("<gt>");
+                    discarded$4 = var3.append("<gt>");
                     var4++;
                     continue L1;
                   }
                 } else {
-                  StringBuilder discarded$5 = var3.append("<lt>");
+                  discarded$5 = var3.append("<lt>");
                   var4++;
                   continue L1;
                 }
@@ -1115,20 +1113,20 @@ abstract class hu extends am {
                     } else {
                       var8 = param0.substring(var2 + 1, var6).toLowerCase();
                       var2 = -1;
-                      if (!var8.equals((Object) (Object) "lt")) {
-                        if (!var8.equals((Object) (Object) "gt")) {
-                          if (!var8.equals((Object) (Object) "nbsp")) {
-                            if (!var8.equals((Object) (Object) "shy")) {
-                              if (!var8.equals((Object) (Object) "times")) {
-                                if (!var8.equals((Object) (Object) "euro")) {
-                                  if (!var8.equals((Object) (Object) "copy")) {
-                                    if (!var8.equals((Object) (Object) "reg")) {
+                      if (!var8.equals("lt")) {
+                        if (!var8.equals("gt")) {
+                          if (!var8.equals("nbsp")) {
+                            if (!var8.equals("shy")) {
+                              if (!var8.equals("times")) {
+                                if (!var8.equals("euro")) {
+                                  if (!var8.equals("copy")) {
+                                    if (!var8.equals("reg")) {
                                       if (var8.startsWith("img=")) {
                                         try {
                                           L2: {
-                                            var10 = (CharSequence) (Object) var8.substring(4);
+                                            var10 = (CharSequence) ((Object) var8.substring(4));
                                             var9_int = rr.a(10, var10);
-                                            var4 = var4 + ((hu) this).field_F[var9_int].field_i;
+                                            var4 = var4 + this.field_F[var9_int].field_i;
                                             var3 = 0;
                                             var6++;
                                             break L2;
@@ -1184,14 +1182,14 @@ abstract class hu extends am {
                 if (var2 == -1) {
                   L4: {
                     var7 = (char)(mf.a((char) var7, (byte) -104) & 255);
-                    var4 = var4 + ((hu) this).field_I[var7];
-                    if (((hu) this).field_K == null) {
+                    var4 = var4 + this.field_I[var7];
+                    if (this.field_K == null) {
                       break L4;
                     } else {
                       if (var3 == 0) {
                         break L4;
                       } else {
-                        var4 = var4 + ((hu) this).field_K[(var3 << 8) + var7];
+                        var4 = var4 + this.field_K[(var3 << 8) + var7];
                         break L4;
                       }
                     }
@@ -1216,6 +1214,11 @@ abstract class hu extends am {
     }
 
     final int a(String param0, int[] param1, String[] param2) {
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$7 = null;
+        StringBuilder discarded$8 = null;
+        StringBuilder discarded$9 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1250,7 +1253,7 @@ abstract class hu extends am {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = dj.a(0, ' ', -11407, field_C);
+          discarded$5 = dj.a(0, ' ', -11407, field_C);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -1286,26 +1289,26 @@ abstract class hu extends am {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_C.append('<');
-                        StringBuilder discarded$7 = field_C.append(var15);
-                        StringBuilder discarded$8 = field_C.append('>');
-                        if (!var15.equals((Object) (Object) "br")) {
-                          if (!var15.equals((Object) (Object) "lt")) {
-                            if (!var15.equals((Object) (Object) "gt")) {
-                              if (!var15.equals((Object) (Object) "nbsp")) {
-                                if (!var15.equals((Object) (Object) "shy")) {
-                                  if (!var15.equals((Object) (Object) "times")) {
-                                    if (!var15.equals((Object) (Object) "euro")) {
-                                      if (!var15.equals((Object) (Object) "copy")) {
-                                        if (!var15.equals((Object) (Object) "reg")) {
+                        discarded$6 = field_C.append('<');
+                        discarded$7 = field_C.append(var15);
+                        discarded$8 = field_C.append('>');
+                        if (!var15.equals("br")) {
+                          if (!var15.equals("lt")) {
+                            if (!var15.equals("gt")) {
+                              if (!var15.equals("nbsp")) {
+                                if (!var15.equals("shy")) {
+                                  if (!var15.equals("times")) {
+                                    if (!var15.equals("euro")) {
+                                      if (!var15.equals("copy")) {
+                                        if (!var15.equals("reg")) {
                                           if (!var15.startsWith("img=")) {
                                             break L3;
                                           } else {
                                             try {
                                               L4: {
-                                                var18 = (CharSequence) (Object) var15.substring(4);
+                                                var18 = (CharSequence) ((Object) var15.substring(4));
                                                 var16_int = rr.a(10, var18);
-                                                var4 = var4 + ((hu) this).field_F[var16_int].field_i;
+                                                var4 = var4 + this.field_F[var16_int].field_i;
                                                 var10 = 0;
                                                 break L4;
                                               }
@@ -1320,14 +1323,14 @@ abstract class hu extends am {
                                           }
                                         } else {
                                           L6: {
-                                            var4 = var4 + ((hu) this).a('®');
-                                            if (((hu) this).field_K == null) {
+                                            var4 = var4 + this.a('®');
+                                            if (this.field_K == null) {
                                               break L6;
                                             } else {
                                               if (var10 == 0) {
                                                 break L6;
                                               } else {
-                                                var4 = var4 + ((hu) this).field_K[(var10 << 8) + 174];
+                                                var4 = var4 + this.field_K[(var10 << 8) + 174];
                                                 break L6;
                                               }
                                             }
@@ -1337,14 +1340,14 @@ abstract class hu extends am {
                                         }
                                       } else {
                                         L7: {
-                                          var4 = var4 + ((hu) this).a('©');
-                                          if (((hu) this).field_K == null) {
+                                          var4 = var4 + this.a('©');
+                                          if (this.field_K == null) {
                                             break L7;
                                           } else {
                                             if (var10 == 0) {
                                               break L7;
                                             } else {
-                                              var4 = var4 + ((hu) this).field_K[(var10 << 8) + 169];
+                                              var4 = var4 + this.field_K[(var10 << 8) + 169];
                                               break L7;
                                             }
                                           }
@@ -1354,14 +1357,14 @@ abstract class hu extends am {
                                       }
                                     } else {
                                       L8: {
-                                        var4 = var4 + ((hu) this).a('€');
-                                        if (((hu) this).field_K == null) {
+                                        var4 = var4 + this.a('€');
+                                        if (this.field_K == null) {
                                           break L8;
                                         } else {
                                           if (var10 == 0) {
                                             break L8;
                                           } else {
-                                            var4 = var4 + ((hu) this).field_K[(var10 << 8) + 128];
+                                            var4 = var4 + this.field_K[(var10 << 8) + 128];
                                             break L8;
                                           }
                                         }
@@ -1371,14 +1374,14 @@ abstract class hu extends am {
                                     }
                                   } else {
                                     L9: {
-                                      var4 = var4 + ((hu) this).a('×');
-                                      if (((hu) this).field_K == null) {
+                                      var4 = var4 + this.a('×');
+                                      if (this.field_K == null) {
                                         break L9;
                                       } else {
                                         if (var10 == 0) {
                                           break L9;
                                         } else {
-                                          var4 = var4 + ((hu) this).field_K[(var10 << 8) + 215];
+                                          var4 = var4 + this.field_K[(var10 << 8) + 215];
                                           break L9;
                                         }
                                       }
@@ -1388,14 +1391,14 @@ abstract class hu extends am {
                                   }
                                 } else {
                                   L10: {
-                                    var4 = var4 + ((hu) this).a('­');
-                                    if (((hu) this).field_K == null) {
+                                    var4 = var4 + this.a('­');
+                                    if (this.field_K == null) {
                                       break L10;
                                     } else {
                                       if (var10 == 0) {
                                         break L10;
                                       } else {
-                                        var4 = var4 + ((hu) this).field_K[(var10 << 8) + 173];
+                                        var4 = var4 + this.field_K[(var10 << 8) + 173];
                                         break L10;
                                       }
                                     }
@@ -1405,14 +1408,14 @@ abstract class hu extends am {
                                 }
                               } else {
                                 L11: {
-                                  var4 = var4 + ((hu) this).a(' ');
-                                  if (((hu) this).field_K == null) {
+                                  var4 = var4 + this.a(' ');
+                                  if (this.field_K == null) {
                                     break L11;
                                   } else {
                                     if (var10 == 0) {
                                       break L11;
                                     } else {
-                                      var4 = var4 + ((hu) this).field_K[(var10 << 8) + 160];
+                                      var4 = var4 + this.field_K[(var10 << 8) + 160];
                                       break L11;
                                     }
                                   }
@@ -1422,14 +1425,14 @@ abstract class hu extends am {
                               }
                             } else {
                               L12: {
-                                var4 = var4 + ((hu) this).a('>');
-                                if (((hu) this).field_K == null) {
+                                var4 = var4 + this.a('>');
+                                if (this.field_K == null) {
                                   break L12;
                                 } else {
                                   if (var10 == 0) {
                                     break L12;
                                   } else {
-                                    var4 = var4 + ((hu) this).field_K[(var10 << 8) + 62];
+                                    var4 = var4 + this.field_K[(var10 << 8) + 62];
                                     break L12;
                                   }
                                 }
@@ -1439,14 +1442,14 @@ abstract class hu extends am {
                             }
                           } else {
                             L13: {
-                              var4 = var4 + ((hu) this).a('<');
-                              if (((hu) this).field_K == null) {
+                              var4 = var4 + this.a('<');
+                              if (this.field_K == null) {
                                 break L13;
                               } else {
                                 if (var10 == 0) {
                                   break L13;
                                 } else {
-                                  var4 = var4 + ((hu) this).field_K[(var10 << 8) + 60];
+                                  var4 = var4 + this.field_K[(var10 << 8) + 60];
                                   break L13;
                                 }
                               }
@@ -1475,16 +1478,16 @@ abstract class hu extends am {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_C.append((char) var14);
+                        discarded$9 = field_C.append((char) var14);
                         var14 = (char)(mf.a((char) var14, (byte) -104) & 255);
-                        var4 = var4 + ((hu) this).field_I[var14];
-                        if (((hu) this).field_K == null) {
+                        var4 = var4 + this.field_I[var14];
+                        if (this.field_K == null) {
                           break L15;
                         } else {
                           if (var10 == 0) {
                             break L15;
                           } else {
-                            var4 = var4 + ((hu) this).field_K[(var10 << 8) + var14];
+                            var4 = var4 + this.field_K[(var10 << 8) + var14];
                             break L15;
                           }
                         }
@@ -1509,14 +1512,14 @@ abstract class hu extends am {
                     } else {
                       L18: {
                         stackOut_65_0 = var4;
-                        stackOut_65_1 = (int[]) param1;
+                        stackOut_65_1 = (int[]) (param1);
                         stackIn_67_0 = stackOut_65_0;
                         stackIn_67_1 = stackOut_65_1;
                         stackIn_66_0 = stackOut_65_0;
                         stackIn_66_1 = stackOut_65_1;
                         if (var11 >= param1.length) {
                           stackOut_67_0 = stackIn_67_0;
-                          stackOut_67_1 = (int[]) (Object) stackIn_67_1;
+                          stackOut_67_1 = (int[]) ((Object) stackIn_67_1);
                           stackOut_67_2 = param1.length - 1;
                           stackIn_68_0 = stackOut_67_0;
                           stackIn_68_1 = stackOut_67_1;
@@ -1524,7 +1527,7 @@ abstract class hu extends am {
                           break L18;
                         } else {
                           stackOut_66_0 = stackIn_66_0;
-                          stackOut_66_1 = (int[]) (Object) stackIn_66_1;
+                          stackOut_66_1 = (int[]) ((Object) stackIn_66_1);
                           stackOut_66_2 = var11;
                           stackIn_68_0 = stackOut_66_0;
                           stackIn_68_1 = stackOut_66_1;
@@ -1581,44 +1584,44 @@ abstract class hu extends am {
                 throw new IllegalArgumentException();
             }
         }
-        ((hu) this).field_F = param0;
-        ((hu) this).field_H = param1;
+        this.field_F = param0;
+        this.field_H = param1;
     }
 
     hu(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ((hu) this).field_x = 0;
-        ((hu) this).field_n = param1;
-        ((hu) this).field_o = param2;
-        ((hu) this).field_D = param3;
-        ((hu) this).field_J = param4;
+        this.field_x = 0;
+        this.field_n = param1;
+        this.field_o = param2;
+        this.field_D = param3;
+        this.field_J = param4;
         this.a(param0);
         var6 = 2147483647;
         var7 = -2147483648;
         var8 = 0;
         L0: while (true) {
           if (var8 >= 256) {
-            ((hu) this).field_G = ((hu) this).field_x - var6;
-            ((hu) this).field_p = var7 - ((hu) this).field_x;
-            ((hu) this).field_L = ((hu) this).field_x - ((hu) this).field_o[88];
+            this.field_G = this.field_x - var6;
+            this.field_p = var7 - this.field_x;
+            this.field_L = this.field_x - this.field_o[88];
             return;
           } else {
             L1: {
-              if (((hu) this).field_o[var8] >= var6) {
+              if (this.field_o[var8] >= var6) {
                 break L1;
               } else {
-                if (((hu) this).field_J[var8] == 0) {
+                if (this.field_J[var8] == 0) {
                   break L1;
                 } else {
-                  var6 = ((hu) this).field_o[var8];
+                  var6 = this.field_o[var8];
                   break L1;
                 }
               }
             }
-            if (((hu) this).field_o[var8] + ((hu) this).field_J[var8] > var7) {
-              var7 = ((hu) this).field_o[var8] + ((hu) this).field_J[var8];
+            if (this.field_o[var8] + this.field_J[var8] > var7) {
+              var7 = this.field_o[var8] + this.field_J[var8];
               var8++;
               continue L0;
             } else {
@@ -1645,7 +1648,7 @@ abstract class hu extends am {
               if (var3 <= 0) {
                 break L1;
               } else {
-                field_A = (param1 - ((hu) this).a(param0) << 8) / var3;
+                field_A = (param1 - this.a(param0) << 8) / var3;
                 break L1;
               }
             }
@@ -1706,14 +1709,10 @@ abstract class hu extends am {
             return;
         }
         this.a(param3, param4, param5);
-        this.a(param0, param1 - ((hu) this).a(param0) / 2, param2);
+        this.a(param0, param1 - this.a(param0) / 2, param2);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = new StringBuilder(100);
         field_u = -1;
         field_s = new String[100];

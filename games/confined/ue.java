@@ -18,15 +18,14 @@ class ue extends jl {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         nm.field_z = param2;
         af.field_Z = param1;
+        if (param4 != 243) {
+            return;
+        }
         dh.field_Ab = param3;
         wm.field_bb = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = "You can steer in all four directions using the <col=FFFFFF>arrow keys</col>.";
     }
 }

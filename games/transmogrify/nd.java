@@ -25,6 +25,7 @@ final class nd extends ag {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
@@ -36,21 +37,23 @@ final class nd extends ag {
         String stackOut_9_2 = null;
         try {
           L0: {
-            if (((nd) this).field_k > param2) {
-              ((nd) this).field_k = ((nd) this).field_k - param2;
-              return;
+            if (this.field_k > param2) {
+              this.field_k = this.field_k - param2;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              param1 = param1 + ((nd) this).field_k;
-              param2 = param2 - ((nd) this).field_k;
-              ((nd) this).field_o.field_b = ((nd) this).field_b;
-              ((nd) this).field_o.field_f = ((nd) this).field_f;
-              ((nd) this).field_k = 0;
-              ((nd) this).field_f.field_b = (wf) (Object) ((nd) this).field_o;
-              ((nd) this).field_b.field_f = (wf) (Object) ((nd) this).field_o;
-              ((nd) this).field_f = null;
-              ((nd) this).field_b = null;
+              param1 = param1 + this.field_k;
+              param2 = param2 - this.field_k;
+              this.field_o.field_b = this.field_b;
+              this.field_o.field_f = this.field_f;
+              this.field_k = 0;
+              this.field_f.field_b = (wf) ((Object) this.field_o);
+              this.field_b.field_f = (wf) ((Object) this.field_o);
+              this.field_f = null;
+              this.field_b = null;
               if (0 < param2) {
-                ((nd) this).field_o.b(param0, param1, param2);
+                this.field_o.b(param0, param1, param2);
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return;
@@ -61,23 +64,23 @@ final class nd extends ag {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_0 = (RuntimeException) (var4);
             stackOut_8_1 = new StringBuilder().append("nd.K(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -85,12 +88,17 @@ final class nd extends ag {
               break L1;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final int c() {
-        return ((nd) this).field_o.c();
+        return this.field_o.c();
     }
 
     final int b() {
@@ -102,21 +110,21 @@ final class nd extends ag {
     }
 
     final void d(int param0) {
-        if (((nd) this).field_k > param0) {
-          ((nd) this).field_k = ((nd) this).field_k - param0;
+        if (this.field_k > param0) {
+          this.field_k = this.field_k - param0;
           return;
         } else {
           L0: {
-            param0 = param0 - ((nd) this).field_k;
-            ((nd) this).field_k = 0;
-            ((nd) this).field_o.field_f = ((nd) this).field_f;
-            ((nd) this).field_o.field_b = ((nd) this).field_b;
-            ((nd) this).field_f.field_b = (wf) (Object) ((nd) this).field_o;
-            ((nd) this).field_b.field_f = (wf) (Object) ((nd) this).field_o;
-            ((nd) this).field_b = null;
-            ((nd) this).field_f = null;
+            param0 = param0 - this.field_k;
+            this.field_k = 0;
+            this.field_o.field_f = this.field_f;
+            this.field_o.field_b = this.field_b;
+            this.field_f.field_b = (wf) ((Object) this.field_o);
+            this.field_b.field_f = (wf) ((Object) this.field_o);
+            this.field_b = null;
+            this.field_f = null;
             if (param0 > 0) {
-              ((nd) this).field_o.d(param0);
+              this.field_o.d(param0);
               break L0;
             } else {
               break L0;
@@ -127,7 +135,10 @@ final class nd extends ag {
     }
 
     final static boolean a(byte param0, int param1) {
-        return param1 == (-param1 & param1);
+        if (param0 != -106) {
+            return true;
+        }
+        return param1 == (-param1 & param1) ? true : false;
     }
 
     final ag a() {
@@ -136,19 +147,15 @@ final class nd extends ag {
 
     nd(ag param0, int param1) {
         try {
-            ((nd) this).field_o = param0;
-            ((nd) this).field_g = ((nd) this).field_o.field_g;
-            ((nd) this).field_k = param1;
+            this.field_o = param0;
+            this.field_g = this.field_o.field_g;
+            this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "nd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "nd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = 9;
         field_l = new int[8192];
     }

@@ -8,20 +8,26 @@ final class dh {
     static int[] field_b;
 
     final static void a(boolean param0, byte param1) {
-        dh.a(true, (byte) 62);
-        pd.a(true, true, 0);
+        if (param1 < 65) {
+            dh.a(true, (byte) 62);
+            pd.a(param0, true, 0);
+            return;
+        }
+        pd.a(param0, true, 0);
     }
 
     public static void a(int param0) {
+        if (param0 < 116) {
+            field_a = -109L;
+            field_c = null;
+            field_b = null;
+            return;
+        }
         field_c = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[40];
         field_a = 0L;
         field_d = 4852768;

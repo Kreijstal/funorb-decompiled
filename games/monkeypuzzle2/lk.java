@@ -6,10 +6,11 @@ final class lk {
     static int field_a;
 
     final static String a(int param0, boolean param1, boolean param2, boolean param3) {
+        String discarded$2 = null;
         int var4 = 0;
         if (param0 >= -35) {
           L0: {
-            String discarded$2 = lk.a(-28, false, true, true);
+            discarded$2 = lk.a(-28, false, true, true);
             var4 = 0;
             if (param1) {
               var4 += 4;
@@ -67,6 +68,9 @@ final class lk {
 
     public static void a(boolean param0) {
         field_b = null;
+        if (!param0) {
+            field_b = (String) null;
+        }
     }
 
     public final String toString() {
@@ -74,10 +78,6 @@ final class lk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Highscores";
     }
 }

@@ -19,10 +19,6 @@ final class cd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "cd.A(";
         field_b = new int[8192];
         field_a = new p();

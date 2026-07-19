@@ -44,6 +44,9 @@ final class fm {
     public static void a(int param0) {
         field_c = null;
         field_e = null;
+        if (param0 != 0) {
+            return;
+        }
         field_a = null;
     }
 
@@ -52,10 +55,6 @@ final class fm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Match by...";
         field_a = "You have entered another game.";
     }

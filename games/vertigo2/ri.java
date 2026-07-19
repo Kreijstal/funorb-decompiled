@@ -19,16 +19,36 @@ final class ri extends li {
     public static void a(int param0) {
         field_r = null;
         field_z = null;
+        if (param0 != 7139) {
+            return;
+        }
         field_o = null;
         field_x = null;
     }
 
     final static void b(boolean param0, int param1) {
-        if (null != nj.field_b) {
-            if (!nj.field_b.a((byte) -51, param0)) {
+        L0: {
+          if (null == nj.field_b) {
+            break L0;
+          } else {
+            if (nj.field_b.a((byte) -51, param0)) {
+              nj.field_b = null;
+              break L0;
+            } else {
+              if (param1 == 30834) {
                 return;
+              } else {
+                field_z = (String) null;
+                return;
+              }
             }
-            nj.field_b = null;
+          }
+        }
+        if (param1 != 30834) {
+          field_z = (String) null;
+          return;
+        } else {
+          return;
         }
     }
 
@@ -36,10 +56,6 @@ final class ri extends li {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "Draw!";
         field_x = "Quick Chat lobby";
         field_o = "Connection lost. <%0>";

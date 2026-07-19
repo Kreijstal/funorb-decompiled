@@ -19,14 +19,10 @@ final class hd {
     }
 
     hd(int param0) {
-        ((hd) this).field_b = param0;
+        this.field_b = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Names cannot start or end with space or underscore";
         field_c = new int[1];
     }

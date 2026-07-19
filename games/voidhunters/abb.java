@@ -35,6 +35,7 @@ abstract class abb {
         RuntimeException stackIn_75_0 = null;
         StringBuilder stackIn_75_1 = null;
         String stackIn_75_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_10_0 = 0;
         int stackOut_9_0 = 0;
@@ -56,7 +57,8 @@ abstract class abb {
         try {
           L0: {
             if (param4 == null) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 if (0 >= param2) {
@@ -66,7 +68,7 @@ abstract class abb {
                     break L1;
                   } else {
                     L2: {
-                      if (param4[3] == null) {
+                      if (param4[param0] == null) {
                         stackOut_10_0 = 0;
                         stackIn_11_0 = stackOut_10_0;
                         break L2;
@@ -252,7 +254,7 @@ abstract class abb {
                       if (null == param4[5]) {
                         break L18;
                       } else {
-                        if (param4[5].field_n == 0) {
+                        if (-1 == (param4[5].field_n ^ -1)) {
                           break L18;
                         } else {
                           dma.g(var17, var18, var10, var19);
@@ -304,34 +306,36 @@ abstract class abb {
                         }
                       }
                     }
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L23: {
             var6 = decompiledCaughtException;
-            stackOut_72_0 = (RuntimeException) var6;
-            stackOut_72_1 = new StringBuilder().append("abb.C(").append(3).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+            stackOut_72_0 = (RuntimeException) (var6);
+            stackOut_72_1 = new StringBuilder().append("abb.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_74_0 = stackOut_72_0;
             stackIn_74_1 = stackOut_72_1;
             stackIn_73_0 = stackOut_72_0;
             stackIn_73_1 = stackOut_72_1;
             if (param4 == null) {
-              stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
-              stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
+              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
+              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
               stackOut_74_2 = "null";
               stackIn_75_0 = stackOut_74_0;
               stackIn_75_1 = stackOut_74_1;
               stackIn_75_2 = stackOut_74_2;
               break L23;
             } else {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackOut_73_2 = "{...}";
               stackIn_75_0 = stackOut_73_0;
               stackIn_75_1 = stackOut_73_1;
@@ -339,21 +343,29 @@ abstract class abb {
               break L23;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_75_0, stackIn_75_2 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_75_0), stackIn_75_2 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != 4) {
+            field_b = (String) null;
+        }
     }
 
     abstract long a(byte param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Scrambler";
     }
 }

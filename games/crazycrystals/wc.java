@@ -9,6 +9,11 @@ class wc extends lb {
     }
 
     public static void b(byte param0) {
+        if (param0 > -51) {
+            field_q = (ko) null;
+            field_q = null;
+            return;
+        }
         field_q = null;
     }
 
@@ -19,7 +24,7 @@ class wc extends lb {
             }
             super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "wc.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "wc.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

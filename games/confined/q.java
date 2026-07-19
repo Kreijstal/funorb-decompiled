@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class q extends jg {
     private long[] field_i;
     private long field_m;
@@ -17,24 +15,24 @@ final class q extends jg {
     private final long c(byte param0) {
         int var9 = 0;
         int var10 = Confined.field_J ? 1 : 0;
-        int var6 = 0;
+        int var6 = -30 % ((-28 - param0) / 63);
         long var2 = System.nanoTime();
-        long var4 = -((q) this).field_h + var2;
-        ((q) this).field_h = var2;
-        if (var4 > -5000000000L) {
+        long var4 = -this.field_h + var2;
+        this.field_h = var2;
+        if (4999999999L > (var4 ^ -1L)) {
             if (!(5000000000L <= var4)) {
-                ((q) this).field_i[((q) this).field_o] = var4;
-                ((q) this).field_o = (1 + ((q) this).field_o) % 10;
-                if (!(((q) this).field_l >= 1)) {
-                    ((q) this).field_l = ((q) this).field_l + 1;
+                this.field_i[this.field_o] = var4;
+                this.field_o = (1 + this.field_o) % 10;
+                if (!((this.field_l ^ -1) <= -2)) {
+                    this.field_l = this.field_l + 1;
                 }
             }
         }
         long var7 = 0L;
-        for (var9 = 1; var9 <= ((q) this).field_l; var9++) {
-            var7 = var7 + ((q) this).field_i[(10 + (((q) this).field_o - var9)) % 10];
+        for (var9 = 1; var9 <= this.field_l; var9++) {
+            var7 = var7 + this.field_i[(10 + (this.field_o - var9)) % 10];
         }
-        return var7 / (long)((q) this).field_l;
+        return var7 / (long)this.field_l;
     }
 
     final int a(int param0, long param1) {
@@ -42,16 +40,16 @@ final class q extends jg {
         int var5 = 0;
         var5 = Confined.field_J ? 1 : 0;
         if (param0 == -25) {
-          if (((q) this).field_m >= ((q) this).field_p) {
+          if (this.field_m >= this.field_p) {
             var4 = 0;
             L0: while (true) {
               L1: {
-                ((q) this).field_p = ((q) this).field_p + param1;
+                this.field_p = this.field_p + param1;
                 var4++;
-                if (var4 >= 10) {
+                if (-11 >= (var4 ^ -1)) {
                   break L1;
                 } else {
-                  if (~((q) this).field_p > ~((q) this).field_m) {
+                  if ((this.field_p ^ -1L) > (this.field_m ^ -1L)) {
                     continue L0;
                   } else {
                     break L1;
@@ -59,8 +57,8 @@ final class q extends jg {
                 }
               }
               L2: {
-                if (((q) this).field_p < ((q) this).field_m) {
-                  ((q) this).field_p = ((q) this).field_m;
+                if (this.field_p < this.field_m) {
+                  this.field_p = this.field_m;
                   break L2;
                 } else {
                   break L2;
@@ -69,9 +67,9 @@ final class q extends jg {
               return var4;
             }
           } else {
-            ((q) this).field_h = ((q) this).field_h + (-((q) this).field_m + ((q) this).field_p);
-            ((q) this).field_m = ((q) this).field_m + (((q) this).field_p + -((q) this).field_m);
-            ((q) this).field_p = ((q) this).field_p + param1;
+            this.field_h = this.field_h + (-this.field_m + this.field_p);
+            this.field_m = this.field_m + (this.field_p + -this.field_m);
+            this.field_p = this.field_p + param1;
             return 1;
           }
         } else {
@@ -81,11 +79,11 @@ final class q extends jg {
 
     final long a(int param0) {
         if (param0 != 10) {
-            field_n = null;
+            field_n = (String) null;
         }
-        ((q) this).field_m = ((q) this).field_m + this.c((byte) 105);
-        if (((q) this).field_m < ((q) this).field_p) {
-            return (((q) this).field_p + -((q) this).field_m) / 1000000L;
+        this.field_m = this.field_m + this.c((byte) 105);
+        if (this.field_m < this.field_p) {
+            return (this.field_p + -this.field_m) / 1000000L;
         }
         return 0L;
     }
@@ -93,7 +91,7 @@ final class q extends jg {
     public static void c(int param0) {
         field_j = null;
         field_n = null;
-        int var1 = 1;
+        int var1 = 23 % ((param0 - 49) / 55);
         field_k = null;
     }
 
@@ -137,6 +135,7 @@ final class q extends jg {
         int stackIn_111_0 = 0;
         int stackIn_112_0 = 0;
         int stackIn_112_1 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_57_0 = 0;
         int stackOut_56_0 = 0;
@@ -177,7 +176,7 @@ final class q extends jg {
             L1: {
               ea.field_a = param0;
               in.field_h = true;
-              if (ea.field_a != 0) {
+              if (-1 != (ea.field_a ^ -1)) {
                 if (ea.field_a == 1) {
                   var3_int = ri.a(cf.field_cb, 21, hd.field_c, rn.field_e, wg.field_a);
                   var4 = var3_int + 2;
@@ -208,8 +207,8 @@ final class q extends jg {
                     }
                   }
                 } else {
-                  if (ea.field_a == 2) {
-                    var3_int = ri.a(cf.field_cb, 58, b.a(new String[1], ld.field_j, 1177), rn.field_e, wg.field_a);
+                  if ((ea.field_a ^ -1) == -3) {
+                    var3_int = ri.a(cf.field_cb, 58, b.a(new String[]{"<br><%0><br>"}, ld.field_j, 1177), rn.field_e, wg.field_a);
                     var4 = -1;
                     var5 = 0;
                     L4: while (true) {
@@ -217,7 +216,7 @@ final class q extends jg {
                         if (var3_int <= var5) {
                           break L5;
                         } else {
-                          if (!"<%0>".equals((Object) (Object) cf.field_cb[var5])) {
+                          if (!"<%0>".equals(cf.field_cb[var5])) {
                             var5++;
                             continue L4;
                           } else {
@@ -230,10 +229,10 @@ final class q extends jg {
                         throw new IllegalStateException();
                       } else {
                         jc.field_d = new String[var4];
-                        lj.a((Object[]) (Object) cf.field_cb, 0, (Object[]) (Object) jc.field_d, 0, var4);
+                        lj.a(cf.field_cb, 0, jc.field_d, 0, var4);
                         tf.field_d = new String[-var4 + var3_int - 1];
-                        lj.a((Object[]) (Object) cf.field_cb, 1 + var4, (Object[]) (Object) tf.field_d, 0, -1 + -var4 + var3_int);
-                        var3_int = ri.a(cf.field_cb, 112, b.a(new String[1], kj.field_d, 1177), rn.field_e, wg.field_a);
+                        lj.a(cf.field_cb, 1 + var4, tf.field_d, 0, -1 + -var4 + var3_int);
+                        var3_int = ri.a(cf.field_cb, 112, b.a(new String[]{"<br><%0><br>"}, kj.field_d, 1177), rn.field_e, wg.field_a);
                         var4 = -1;
                         var5 = 0;
                         L6: while (true) {
@@ -241,7 +240,7 @@ final class q extends jg {
                             if (var5 >= var3_int) {
                               break L7;
                             } else {
-                              if ("<%0>".equals((Object) (Object) cf.field_cb[var5])) {
+                              if ("<%0>".equals(cf.field_cb[var5])) {
                                 var4 = var5;
                                 break L7;
                               } else {
@@ -250,12 +249,12 @@ final class q extends jg {
                               }
                             }
                           }
-                          if (var4 != -1) {
+                          if (0 != (var4 ^ -1)) {
                             L8: {
                               fj.field_s = new String[var4];
-                              lj.a((Object[]) (Object) cf.field_cb, 0, (Object[]) (Object) fj.field_s, 0, var4);
+                              lj.a(cf.field_cb, 0, fj.field_s, 0, var4);
                               tk.field_e = new String[-var4 + (var3_int - 1)];
-                              lj.a((Object[]) (Object) cf.field_cb, var4 - -1, (Object[]) (Object) tk.field_e, 0, -var4 + var3_int + -1);
+                              lj.a(cf.field_cb, var4 - -1, tk.field_e, 0, -var4 + var3_int + -1);
                               if (fj.field_s.length > jc.field_d.length) {
                                 stackOut_57_0 = fj.field_s.length;
                                 stackIn_58_0 = stackOut_57_0;
@@ -315,7 +314,7 @@ final class q extends jg {
                                           stackIn_73_0 = stackOut_72_0;
                                           stackIn_73_1 = stackOut_72_1;
                                           if (tk.field_e.length <= var8) {
-                                            stackOut_74_0 = (String[]) (Object) stackIn_74_0;
+                                            stackOut_74_0 = (String[]) ((Object) stackIn_74_0);
                                             stackOut_74_1 = stackIn_74_1;
                                             stackOut_74_2 = "";
                                             stackIn_75_0 = stackOut_74_0;
@@ -323,7 +322,7 @@ final class q extends jg {
                                             stackIn_75_2 = stackOut_74_2;
                                             break L13;
                                           } else {
-                                            stackOut_73_0 = (String[]) (Object) stackIn_73_0;
+                                            stackOut_73_0 = (String[]) ((Object) stackIn_73_0);
                                             stackOut_73_1 = stackIn_73_1;
                                             stackOut_73_2 = tk.field_e[var8];
                                             stackIn_75_0 = stackOut_73_0;
@@ -346,7 +345,7 @@ final class q extends jg {
                                       stackIn_67_0 = stackOut_66_0;
                                       stackIn_67_1 = stackOut_66_1;
                                       if (var8 + (fj.field_s.length - var5) < 0) {
-                                        stackOut_68_0 = (String[]) (Object) stackIn_68_0;
+                                        stackOut_68_0 = (String[]) ((Object) stackIn_68_0);
                                         stackOut_68_1 = stackIn_68_1;
                                         stackOut_68_2 = "";
                                         stackIn_69_0 = stackOut_68_0;
@@ -354,7 +353,7 @@ final class q extends jg {
                                         stackIn_69_2 = stackOut_68_2;
                                         break L14;
                                       } else {
-                                        stackOut_67_0 = (String[]) (Object) stackIn_67_0;
+                                        stackOut_67_0 = (String[]) ((Object) stackIn_67_0);
                                         stackOut_67_1 = stackIn_67_1;
                                         stackOut_67_2 = fj.field_s[-var5 + var8 - -fj.field_s.length];
                                         stackIn_69_0 = stackOut_67_0;
@@ -420,7 +419,7 @@ final class q extends jg {
                       }
                     } else {
                       if (ea.field_a != 4) {
-                        if (ea.field_a != 5) {
+                        if ((ea.field_a ^ -1) != -6) {
                           throw new IllegalArgumentException();
                         } else {
                           var3_int = ri.a(cf.field_cb, -120, ql.field_A, rn.field_e, wg.field_a);
@@ -572,14 +571,14 @@ final class q extends jg {
                     }
                   }
                 }
-                v.field_Eb = -(var3_int >> 1) + (var3_int + ef.field_vb);
+                v.field_Eb = -(var3_int >> -1026400703) + (var3_int + ef.field_vb);
                 if (param2 < -94) {
-                  nh.field_b = ij.field_q.field_k * (n.field_d + kb.field_b << 1);
-                  ef.field_sb = -(var3_int >> 1) + ef.field_vb;
+                  nh.field_b = ij.field_q.field_k * (n.field_d + kb.field_b << -528128927);
+                  ef.field_sb = -(var3_int >> -655990015) + ef.field_vb;
                   var4 = 0;
                   L30: while (true) {
                     if (var4 >= dl.field_c.length) {
-                      uh.field_c = pe.field_q + -(nh.field_b >> 1);
+                      uh.field_c = pe.field_q + -(nh.field_b >> 1488067553);
                       tj.field_l = new int[dl.field_c.length][];
                       var4 = 0;
                       var5 = uh.field_c;
@@ -594,23 +593,24 @@ final class q extends jg {
                               break L32;
                             }
                           }
+                          decompiledRegionSelector0 = 1;
                           break L0;
                         } else {
                           L33: {
                             var6 = la.field_T[var4];
-                            if (var6 < 0) {
+                            if ((var6 ^ -1) > -1) {
                               var5 = var5 + wm.field_bb;
                               break L33;
                             } else {
                               var7 = cl.a(-3, dl.field_c[var4], true);
                               var5 = var5 + kb.field_b;
-                              var8 = ef.field_vb - (var7 >> 1);
+                              var8 = ef.field_vb - (var7 >> -1062341311);
                               tj.field_l[var4] = new int[4];
                               tj.field_l[var4][0] = var8 - jd.field_g;
                               tj.field_l[var4][1] = var5;
-                              tj.field_l[var4][2] = (jd.field_g << 1) + var7;
-                              var5 = var5 + (af.field_Z + kb.field_b + (n.field_d << 1));
-                              tj.field_l[var4][3] = (n.field_d << 1) + af.field_Z;
+                              tj.field_l[var4][2] = (jd.field_g << -479650815) + var7;
+                              var5 = var5 + (af.field_Z + kb.field_b + (n.field_d << -1514389279));
+                              tj.field_l[var4][3] = (n.field_d << -1763034143) + af.field_Z;
                               break L33;
                             }
                           }
@@ -643,7 +643,8 @@ final class q extends jg {
                     }
                   }
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               } else {
                 L35: {
@@ -655,7 +656,7 @@ final class q extends jg {
                   stackIn_87_1 = stackOut_86_1;
                   if (0 > la.field_T[var4]) {
                     stackOut_88_0 = stackIn_88_0;
-                    stackOut_88_1 = (String) (Object) stackIn_88_1;
+                    stackOut_88_1 = (String) ((Object) stackIn_88_1);
                     stackOut_88_2 = 0;
                     stackIn_89_0 = stackOut_88_0;
                     stackIn_89_1 = stackOut_88_1;
@@ -663,7 +664,7 @@ final class q extends jg {
                     break L35;
                   } else {
                     stackOut_87_0 = stackIn_87_0;
-                    stackOut_87_1 = (String) (Object) stackIn_87_1;
+                    stackOut_87_1 = (String) ((Object) stackIn_87_1);
                     stackOut_87_2 = 1;
                     stackIn_89_0 = stackOut_87_0;
                     stackIn_89_1 = stackOut_87_1;
@@ -671,52 +672,52 @@ final class q extends jg {
                     break L35;
                   }
                 }
-                L36: {
-                  var5 = cl.a(stackIn_89_0, stackIn_89_1, stackIn_89_2 != 0);
-                  if (var3_int >= var5) {
-                    break L36;
-                  } else {
-                    break L36;
-                  }
+                var5 = cl.a(stackIn_89_0, stackIn_89_1, stackIn_89_2 != 0);
+                if (var3_int < var5) {
+                  var3_int = var5;
+                  var4++;
+                  continue L24;
+                } else {
+                  var4++;
+                  continue L24;
                 }
-                var4++;
-                continue L24;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var3, "q.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw sd.a((Throwable) ((Object) var3), "q.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     q() {
-        ((q) this).field_i = new long[10];
-        ((q) this).field_h = 0L;
-        ((q) this).field_m = 0L;
-        ((q) this).field_p = 0L;
-        ((q) this).field_o = 0;
-        ((q) this).field_l = 1;
-        ((q) this).field_m = System.nanoTime();
-        ((q) this).field_p = System.nanoTime();
+        this.field_i = new long[10];
+        this.field_h = 0L;
+        this.field_m = 0L;
+        this.field_p = 0L;
+        this.field_o = 0;
+        this.field_l = 1;
+        this.field_m = System.nanoTime();
+        this.field_p = System.nanoTime();
     }
 
     final void a(byte param0) {
-        ((q) this).field_h = 0L;
-        if (((q) this).field_p > ((q) this).field_m) {
-            ((q) this).field_m = ((q) this).field_m + (-((q) this).field_m + ((q) this).field_p);
+        this.field_h = 0L;
+        if (this.field_p > this.field_m) {
+            this.field_m = this.field_m + (-this.field_m + this.field_p);
         }
         if (param0 != 31) {
-            ((q) this).a((byte) -34);
+            this.a((byte) -34);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "Extra life";
         field_k = "Or <col=FFFFFF>click on the game</col> for mouse control (see next page).";
     }

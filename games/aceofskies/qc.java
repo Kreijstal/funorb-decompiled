@@ -12,10 +12,11 @@ public class qc {
     private static boolean field_e;
 
     public static File a(boolean param0, String param1) {
-        Object var3 = null;
+        File discarded$2 = null;
+        String var3 = null;
         if (!param0) {
-          var3 = null;
-          File discarded$2 = qc.a(false, (String) null);
+          var3 = (String) null;
+          discarded$2 = qc.a(false, (String) null);
           return qc.a(param1, 1, field_a, field_d);
         } else {
           return qc.a(param1, 1, field_a, field_d);
@@ -80,10 +81,6 @@ public class qc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = false;
         field_b = new Hashtable(16);
     }

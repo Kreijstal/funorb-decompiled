@@ -25,11 +25,11 @@ final class vl {
         L0: {
           L1: {
             var2 = -117 % ((param0 - 60) / 52);
-            if (((vl) this).field_b == null) {
+            if (this.field_b == null) {
               break L1;
             } else {
-              if (((vl) this).field_b.length != 0) {
-                stackOut_4_0 = ((vl) this).field_b[-1 + ((vl) this).field_b.length];
+              if (this.field_b.length != 0) {
+                stackOut_4_0 = this.field_b[-1 + this.field_b.length];
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
@@ -45,11 +45,14 @@ final class vl {
     }
 
     final static int a(int param0, int param1) {
+        if (param1 >= -113) {
+            return -7;
+        }
         return bi.field_d[param0 & 2047];
     }
 
     final static void b(int param0, int param1) {
-        RuntimeException runtimeException = null;
+        RuntimeException var2 = null;
         int var2_int = 0;
         ed[] var3 = null;
         ed[] var4 = null;
@@ -60,6 +63,7 @@ final class vl {
         ed var9 = null;
         int var10 = 0;
         int stackIn_4_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
@@ -79,17 +83,19 @@ final class vl {
             }
             var2_int = stackIn_4_0;
             if (hb.field_b == null) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (null == qi.field_M) {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 L2: {
                   L3: {
                     if (param1 < 0) {
                       break L3;
                     } else {
-                      if (param1 >= 7) {
+                      if (-8 >= (param1 ^ -1)) {
                         break L3;
                       } else {
                         break L2;
@@ -101,10 +107,10 @@ final class vl {
                 }
                 L4: {
                   L5: {
-                    if (param1 == 5) {
+                    if (-6 == (param1 ^ -1)) {
                       break L5;
                     } else {
-                      if (param1 != 6) {
+                      if ((param1 ^ -1) != -7) {
                         break L4;
                       } else {
                         break L5;
@@ -123,39 +129,48 @@ final class vl {
                     break L6;
                   }
                 }
+                L7: {
+                  if (param0 == 1) {
+                    break L7;
+                  } else {
+                    vl.a(98);
+                    break L7;
+                  }
+                }
                 var4 = qi.field_M[param1];
                 var5 = 0;
-                L7: while (true) {
+                L8: while (true) {
                   if (3 <= var5) {
                     fl.a(-1, param1);
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   } else {
-                    L8: {
+                    L9: {
                       if (var3 == null) {
                         param1 = 0;
                         var3 = hb.field_b[param1];
                         var4 = qi.field_M[param1];
-                        break L8;
+                        break L9;
                       } else {
-                        break L8;
+                        break L9;
                       }
                     }
-                    L9: {
+                    L10: {
                       var6 = var3[var5];
                       var7 = var5 + 14;
                       var8 = mb.field_f;
                       if (var2_int == 0) {
-                        break L9;
+                        break L10;
                       } else {
                         var8 = ob.field_b;
-                        break L9;
+                        break L10;
                       }
                     }
                     var8[var7] = var6;
                     var9 = var4[var5];
                     jm.field_K[var7] = var9;
                     var5++;
-                    continue L7;
+                    continue L8;
                   }
                 }
               }
@@ -163,33 +178,43 @@ final class vl {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw t.a((Throwable) (Object) runtimeException, "vl.B(" + 1 + ',' + param1 + ')');
+          var2 = decompiledCaughtException;
+          throw t.a((Throwable) ((Object) var2), "vl.B(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     final int a(byte param0, int param1) {
+        int discarded$2 = 0;
         int var3 = 0;
         int var4 = 0;
         var4 = EscapeVector.field_A;
-        if (((vl) this).field_b == null) {
+        if (this.field_b == null) {
           return 0;
         } else {
-          if (0 != ((vl) this).field_b.length) {
+          if (0 != this.field_b.length) {
             L0: {
               var3 = 1;
               if (param0 == 52) {
                 break L0;
               } else {
-                int discarded$2 = ((vl) this).a((byte) -102, -12);
+                discarded$2 = this.a((byte) -102, -12);
                 break L0;
               }
             }
             L1: while (true) {
-              if (((vl) this).field_b.length <= var3) {
-                return ((vl) this).field_b.length - 1;
+              if (this.field_b.length <= var3) {
+                return this.field_b.length - 1;
               } else {
-                if (((vl) this).field_b[var3] + ((vl) this).field_b[-1 + var3] >> 1 <= param1) {
+                if (this.field_b[var3] + this.field_b[-1 + var3] >> 1601182817 <= param1) {
                   var3++;
                   continue L1;
                 } else {
@@ -204,9 +229,9 @@ final class vl {
     }
 
     vl(int param0, int param1, int param2) {
-        ((vl) this).field_a = param1;
-        ((vl) this).field_d = param0;
-        ((vl) this).field_b = new int[1 + param2];
+        this.field_a = param1;
+        this.field_d = param0;
+        this.field_b = new int[1 + param2];
     }
 
     final static int[] a(int param0, int param1, int param2, byte param3) {
@@ -215,16 +240,15 @@ final class vl {
         int[] var7 = new int[param2];
         int[] var4 = var7;
         for (var5 = 0; var5 < param2; var5++) {
-            var7[var5] = (var5 + (param1 - -1)) * 10;
+            var7[var5] = (var5 + (param1 - -1)) * param0;
+        }
+        if (param3 != -17) {
+            field_f = (boolean[]) null;
         }
         return var4;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new boolean[]{false, false, false, false};
         field_c = new int[]{19, 20};
     }

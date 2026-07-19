@@ -15,10 +15,6 @@ final class bq {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bq.A(";
         field_b = "Straight and Narrow";
         field_a = "Create";

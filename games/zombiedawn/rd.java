@@ -5,6 +5,7 @@ final class rd extends pa {
     static int field_D;
 
     final static int a(boolean param0, int param1) {
+        int discarded$1 = 0;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
@@ -34,7 +35,7 @@ final class rd extends pa {
             return stackIn_19_0;
           } else {
             L1: {
-              if (param1 < 2048) {
+              if ((param1 ^ -1) > -2049) {
                 stackOut_14_0 = lo.field_q[param1];
                 stackIn_15_0 = stackOut_14_0;
                 break L1;
@@ -47,7 +48,7 @@ final class rd extends pa {
             return stackIn_15_0;
           }
         } else {
-          int discarded$1 = rd.a(false, 94);
+          discarded$1 = rd.a(false, 94);
           param1 = param1 & 8191;
           if (4096 <= param1) {
             L2: {
@@ -64,7 +65,7 @@ final class rd extends pa {
             return stackIn_9_0;
           } else {
             L3: {
-              if (param1 < 2048) {
+              if ((param1 ^ -1) > -2049) {
                 stackOut_4_0 = lo.field_q[param1];
                 stackIn_5_0 = stackOut_4_0;
                 break L3;
@@ -114,19 +115,19 @@ final class rd extends pa {
               if (var7 == null) {
                 break L2;
               } else {
-                if (!((rd) this).b(param3, 21224, param4, param0, param2)) {
+                if (!this.b(param3, 21224, param4, param0, param2)) {
                   break L2;
                 } else {
-                  if (!(((rd) this).field_v instanceof in)) {
+                  if (!(this.field_v instanceof in)) {
                     if (!(var7.field_v instanceof in)) {
                       break L2;
                     } else {
-                      ((in) (Object) var7.field_v).a(-12156, (rd) this, var7);
+                      ((in) ((Object) var7.field_v)).a(-12156, (rd) (this), var7);
                       np.field_H = null;
                       return;
                     }
                   } else {
-                    ((in) (Object) ((rd) this).field_v).a(-12156, (rd) this, var7);
+                    ((in) ((Object) this.field_v)).a(-12156, (rd) (this), var7);
                     np.field_H = null;
                     return;
                   }
@@ -139,23 +140,23 @@ final class rd extends pa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var7_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var7_ref;
+            stackOut_9_0 = (RuntimeException) (var7_ref);
             stackOut_9_1 = new StringBuilder().append("rd.MA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param5 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -163,61 +164,69 @@ final class rd extends pa {
               break L3;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
     }
 
     private rd(int param0, int param1, int param2, int param3, io param4, sk param5, ga param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
-            ((rd) this).field_z = param6;
+            this.field_z = param6;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "rd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "rd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1) {
-        f.field_b = (58 & param1) >> 4;
-        c.field_c = (param1 & 13) >> 2;
-        if (2 < f.field_b) {
+        f.field_b = (58 & param1) >> -1876486332;
+        c.field_c = (param1 & 13) >> -2138271422;
+        if (2 >= f.field_b) {
           L0: {
+            if (2 < c.field_c) {
+              c.field_c = 2;
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          gf.field_c = param1 & 3;
+          if (param0 != 20348) {
+            return;
+          } else {
+            L1: {
+              if ((gf.field_c ^ -1) >= -3) {
+                break L1;
+              } else {
+                gf.field_c = 2;
+                break L1;
+              }
+            }
+            return;
+          }
+        } else {
+          L2: {
             f.field_b = 2;
             if (2 < c.field_c) {
               c.field_c = 2;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          L1: {
-            gf.field_c = param1 & 3;
-            if (gf.field_c <= 2) {
-              break L1;
-            } else {
-              gf.field_c = 2;
-              break L1;
-            }
-          }
-          return;
-        } else {
-          L2: {
-            if (2 < c.field_c) {
-              c.field_c = 2;
               break L2;
             } else {
               break L2;
             }
           }
-          L3: {
-            gf.field_c = param1 & 3;
-            if (gf.field_c <= 2) {
-              break L3;
-            } else {
-              gf.field_c = 2;
-              break L3;
+          gf.field_c = param1 & 3;
+          if (param0 != 20348) {
+            return;
+          } else {
+            L3: {
+              if ((gf.field_c ^ -1) >= -3) {
+                break L3;
+              } else {
+                gf.field_c = 2;
+                break L3;
+              }
             }
+            return;
           }
-          return;
         }
     }
 
@@ -226,10 +235,6 @@ final class rd extends pa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_D = 68;
     }
 }

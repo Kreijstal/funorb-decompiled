@@ -8,16 +8,21 @@ final class fb {
     private static String field_z;
 
     public static void a(boolean param0) {
-        field_a = null;
-        field_b = null;
-        field_c = null;
+        if (!param0) {
+          fb.a(true);
+          field_a = (byte[][]) null;
+          field_b = null;
+          field_c = null;
+          return;
+        } else {
+          field_a = (byte[][]) null;
+          field_b = null;
+          field_c = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fb.A(";
         field_c = new hra();
         field_a = new byte[50][];

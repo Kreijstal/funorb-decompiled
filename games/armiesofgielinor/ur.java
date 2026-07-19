@@ -15,9 +15,16 @@ final class ur extends bd {
     private int field_s;
 
     final static co[] e(int param0) {
-        co[] var4 = new co[5];
-        co[] var1 = var4;
-        co var3 = new co();
+        co[] var1 = null;
+        co var3 = null;
+        co[] var4 = null;
+        co var5 = null;
+        co var6 = null;
+        co var7 = null;
+        co var8 = null;
+        var4 = new co[5];
+        var1 = var4;
+        var3 = new co();
         var3.field_v = "foliage_green";
         var3.field_a = "terrain_plains";
         var3.field_q = "structures_green";
@@ -28,8 +35,8 @@ final class ur extends bd {
         var3.field_o = new String[]{"runewars_atmospheric_countryside_river", "runewars_atmospheric_countryside_bird", "runewars_atmospheric_countryside_breeze"};
         var3.field_e = var3.field_v + "_shadows";
         var3.field_c = var3.field_q + "_shadows";
-        aw.a(var3, var4, -5841);
-        co var5 = new co();
+        aw.a(var3, var4, param0 + 4287);
+        var5 = new co();
         var5.field_d = 1;
         var5.field_a = "terrain_desert";
         var5.field_q = "structures_desert";
@@ -39,45 +46,49 @@ final class ur extends bd {
         var5.field_e = var5.field_v + "_shadows";
         var5.field_o = new String[]{"runewars_atmospheric_desert_wind", "runewars_atmospheric_desert_vulture", "runewars_atmospheric_desert_vulture_2"};
         var5.field_l = "Tzhaar";
-        var5.field_i = new int[]{13408580, 8943462, 7820612, 5609779, 7829503, 5596740, 5592541, 6710886, 6710886, 6710886, 8943462, 6710886, 11184810, 11184810, 6710886, 11184810};
-        aw.a(var5, var4, -5841);
-        co var6 = new co();
-        var6.field_d = 2;
-        var6.field_a = "terrain_ice";
-        var6.field_v = "foliage_ice";
-        var6.field_q = "structures_ice";
-        var6.field_x = "winter_openground.jpg";
-        var6.field_e = var6.field_v + "_shadows";
-        var6.field_o = new String[]{"runewars_atmospheric_ice_wind", "runewars_atmospheric_ice_wind_2", "runewars_atmospheric_ice_wind_3"};
-        var6.field_i = new int[]{14540287, 7833753, 5592422, 4495735, 7829503, 4482645, 5592541, 6710886, 6710886, 6710886, 7833753, 6710886, 11184810, 11184810, 6710886, 11184810};
-        var6.field_l = "poles apart";
-        var6.field_c = var6.field_q + "_shadows";
-        aw.a(var6, var4, -5841);
-        co var7 = new co();
-        var7.field_a = "terrain_swamp";
-        var7.field_v = "foliage_swamp";
-        var7.field_x = "swamp_openground.jpg";
-        var7.field_q = "structures_swamp";
-        var7.field_d = 3;
-        var7.field_i = new int[]{4741426, 4340530, 6381908, 5602610, 2703412, 3702888, 1844000, 6710886, 6710886, 6710886, 8943462, 6710886, 11184810, 11184810, 6710886, 11184810};
-        var7.field_l = "dead quiet";
-        var7.field_c = var7.field_q + "_shadows";
-        var7.field_e = var7.field_v + "_shadows";
-        var7.field_o = new String[]{"runewars_atmospheric_swamp_wind1", "runewars_atmospheric_swamp_wind2", "runewars_atmospheric_swamp_creature2", "runewars_atmospheric_swamp_creature3"};
-        aw.a(var7, var4, -5841);
-        co var8 = new co();
-        var8.field_v = "foliage_burnt";
-        var8.field_q = "structures_burnt";
-        var8.field_a = "terrain_burnt";
-        var8.field_x = "burnt_openground.jpg";
-        var8.field_d = 4;
-        var8.field_c = var8.field_q + "_shadows";
-        var8.field_l = "dead quiet";
-        var8.field_i = new int[]{4541241, 6965824, 2693658, 3026214, 4864561, 3422244, 15432192, 6710886, 6710886, 6710886, 8943462, 6710886, 11184810, 11184810, 6710886, 11184810};
-        var8.field_o = new String[]{"runewars_atmospheric_burnt_wind1", "runewars_atmospheric_burnt_wind2", "runewars_atmospheric_burnt_lava_rumble_1", "runewars_atmospheric_burnt_lava_rumble_2"};
-        var8.field_e = var8.field_v + "_shadows";
-        aw.a(var8, var4, -5841);
-        return var1;
+        if (param0 == -10128) {
+          var5.field_i = new int[]{13408580, 8943462, 7820612, 5609779, 7829503, 5596740, 5592541, 6710886, 6710886, 6710886, 8943462, 6710886, 11184810, 11184810, 6710886, 11184810};
+          aw.a(var5, var4, -5841);
+          var6 = new co();
+          var6.field_d = 2;
+          var6.field_a = "terrain_ice";
+          var6.field_v = "foliage_ice";
+          var6.field_q = "structures_ice";
+          var6.field_x = "winter_openground.jpg";
+          var6.field_e = var6.field_v + "_shadows";
+          var6.field_o = new String[]{"runewars_atmospheric_ice_wind", "runewars_atmospheric_ice_wind_2", "runewars_atmospheric_ice_wind_3"};
+          var6.field_i = new int[]{14540287, 7833753, 5592422, 4495735, 7829503, 4482645, 5592541, 6710886, 6710886, 6710886, 7833753, 6710886, 11184810, 11184810, 6710886, 11184810};
+          var6.field_l = "poles apart";
+          var6.field_c = var6.field_q + "_shadows";
+          aw.a(var6, var4, param0 ^ 12639);
+          var7 = new co();
+          var7.field_a = "terrain_swamp";
+          var7.field_v = "foliage_swamp";
+          var7.field_x = "swamp_openground.jpg";
+          var7.field_q = "structures_swamp";
+          var7.field_d = 3;
+          var7.field_i = new int[]{4741426, 4340530, 6381908, 5602610, 2703412, 3702888, 1844000, 6710886, 6710886, 6710886, 8943462, 6710886, 11184810, 11184810, 6710886, 11184810};
+          var7.field_l = "dead quiet";
+          var7.field_c = var7.field_q + "_shadows";
+          var7.field_e = var7.field_v + "_shadows";
+          var7.field_o = new String[]{"runewars_atmospheric_swamp_wind1", "runewars_atmospheric_swamp_wind2", "runewars_atmospheric_swamp_creature2", "runewars_atmospheric_swamp_creature3"};
+          aw.a(var7, var4, -5841);
+          var8 = new co();
+          var8.field_v = "foliage_burnt";
+          var8.field_q = "structures_burnt";
+          var8.field_a = "terrain_burnt";
+          var8.field_x = "burnt_openground.jpg";
+          var8.field_d = 4;
+          var8.field_c = var8.field_q + "_shadows";
+          var8.field_l = "dead quiet";
+          var8.field_i = new int[]{4541241, 6965824, 2693658, 3026214, 4864561, 3422244, 15432192, 6710886, 6710886, 6710886, 8943462, 6710886, 11184810, 11184810, 6710886, 11184810};
+          var8.field_o = new String[]{"runewars_atmospheric_burnt_wind1", "runewars_atmospheric_burnt_wind2", "runewars_atmospheric_burnt_lava_rumble_1", "runewars_atmospheric_burnt_lava_rumble_2"};
+          var8.field_e = var8.field_v + "_shadows";
+          aw.a(var8, var4, -5841);
+          return var1;
+        } else {
+          return (co[]) null;
+        }
     }
 
     final void a(int param0, ha param1) {
@@ -101,7 +112,7 @@ final class ur extends bd {
         try {
           L0: {
             L1: {
-              param1.field_l.a((byte) -119, (tc) (Object) new ec(((ur) this).field_y.field_J, ((ur) this).field_y.field_w, ((ur) this).field_s, ((ur) this).field_t, ((ur) this).field_A));
+              param1.field_l.a((byte) -119, (tc) (new ec(this.field_y.field_J, this.field_y.field_w, this.field_s, this.field_t, this.field_A)));
               if (param0 == 64) {
                 break L1;
               } else {
@@ -115,23 +126,23 @@ final class ur extends bd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ur.C(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -139,7 +150,7 @@ final class ur extends bd {
               break L2;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -148,27 +159,26 @@ final class ur extends bd {
         field_x = null;
         field_u = null;
         field_B = null;
+        if (param0) {
+            return;
+        }
         field_v = null;
         field_w = null;
     }
 
     ur(int param0, int param1, int param2, int param3, int param4, jd param5, boolean param6) {
         try {
-            ((ur) this).field_A = param6 ? true : false;
-            ((ur) this).field_t = param3;
-            ((ur) this).field_y = param5;
-            ((ur) this).field_m = param4;
-            ((ur) this).field_s = param2;
+            this.field_A = param6 ? true : false;
+            this.field_t = param3;
+            this.field_y = param5;
+            this.field_m = param4;
+            this.field_s = param2;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ur.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "ur.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = "Tips";
         field_u = "Connecting to<br>friend server...";
         field_v = new tv();

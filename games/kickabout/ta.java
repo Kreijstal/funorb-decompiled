@@ -20,8 +20,6 @@ abstract class ta extends qt {
         int var11 = 0;
         int[] var12 = null;
         int[] var13 = null;
-        int[] var14 = null;
-        int[] var15 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
@@ -95,9 +93,7 @@ abstract class ta extends qt {
                 break L1;
               }
             }
-            var15 = new int[4];
-            var14 = var15;
-            var13 = var14;
+            var13 = new int[4];
             var12 = var13;
             var8 = var12;
             var9 = 0;
@@ -123,11 +119,11 @@ abstract class ta extends qt {
                     df.field_I.field_n = 0;
                     df.field_I.a(param3, param2, 1991220144, param4);
                     df.field_I.a((byte) 114, var7_int);
-                    df.field_I.a(var15, (byte) 53);
+                    df.field_I.a(var13, (byte) 53);
                     if (uf.field_c == null) {
                       break L6;
                     } else {
-                      if (uf.field_c.field_f.length < 100) {
+                      if (-101 < (uf.field_c.field_f.length ^ -1)) {
                         break L6;
                       } else {
                         break L5;
@@ -149,7 +145,7 @@ abstract class ta extends qt {
                     param0.a(0, df.field_I.field_n, 1991220144, df.field_I.field_f);
                     break L0;
                   } else {
-                    uf.field_c.b(param5 ^ -103, var15[var11]);
+                    uf.field_c.b(param5 ^ -103, var13[var11]);
                     var11++;
                     continue L7;
                   }
@@ -165,23 +161,23 @@ abstract class ta extends qt {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var7 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var7;
+            stackOut_19_0 = (RuntimeException) (var7);
             stackOut_19_1 = new StringBuilder().append("ta.GA(");
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L8;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -190,23 +186,23 @@ abstract class ta extends qt {
             }
           }
           L9: {
-            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+            stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
             stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L9;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -215,23 +211,23 @@ abstract class ta extends qt {
             }
           }
           L10: {
-            stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+            stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
             stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param4 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L10;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -240,23 +236,23 @@ abstract class ta extends qt {
             }
           }
           L11: {
-            stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+            stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
             stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',').append(param5).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
             stackIn_29_1 = stackOut_28_1;
             if (param6 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "null";
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
               break L11;
             } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "{...}";
               stackIn_31_0 = stackOut_29_0;
               stackIn_31_1 = stackOut_29_1;
@@ -264,7 +260,7 @@ abstract class ta extends qt {
               break L11;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ')');
         }
     }
 
@@ -276,18 +272,18 @@ abstract class ta extends qt {
     }
 
     final static void e(int param0) {
-        qg var1 = (qg) (Object) ik.field_C.h(-126);
+        qg var1 = (qg) ((Object) ik.field_C.h(-126));
         if (!(var1 != null)) {
             throw new IllegalStateException();
         }
         if (param0 < 116) {
-            Object var2 = null;
+            java.math.BigInteger var2 = (java.math.BigInteger) null;
             ta.a((iw) null, (java.math.BigInteger) null, -77, 44, (byte[]) null, -52, (java.math.BigInteger) null);
         }
         on.a(var1.field_h, var1.field_g, var1.field_j);
         on.e(var1.field_e, var1.field_l, var1.field_i, var1.field_f);
         var1.field_h = null;
-        tk.field_Ab.a((gn) (Object) var1, 3);
+        tk.field_Ab.a(var1, 3);
     }
 
     void a(byte param0, boolean param1) {
@@ -301,14 +297,10 @@ abstract class ta extends qt {
         field_C = null;
         field_B = null;
         field_E = null;
-        int var1 = 19;
+        int var1 = 38 / ((param0 - -18) / 47);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = new String[16];
         field_E = "Return to game";
         field_D = "Drawn";

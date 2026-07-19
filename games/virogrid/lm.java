@@ -16,6 +16,9 @@ final class lm implements Runnable {
 
     public static void a(byte param0) {
         field_c = null;
+        if (param0 != -94) {
+            lm.a(85, 97, false, 87, -111);
+        }
         field_g = null;
         field_k = null;
         field_e = null;
@@ -23,7 +26,7 @@ final class lm implements Runnable {
     }
 
     final static void a(int param0) {
-        qg var1 = (qg) (Object) sg.field_m.b(-109);
+        qg var1 = (qg) ((Object) sg.field_m.b(-109));
         if (var1 == null) {
             var1 = new qg();
         }
@@ -31,7 +34,7 @@ final class lm implements Runnable {
         if (param0 != 0) {
             return;
         }
-        jk.field_a.a((l) (Object) var1, (byte) -37);
+        jk.field_a.a(var1, (byte) -37);
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {
@@ -98,11 +101,11 @@ final class lm implements Runnable {
           L0: {
             L1: {
               if (param0 != -1) {
-                if (param0 == -2) {
+                if (1 == (param0 ^ -1)) {
                   throw new RuntimeException();
                 } else {
                   L2: {
-                    pj.a(c.field_d, 256);
+                    pj.a(c.field_d, param4 + 256);
                     stackOut_23_0 = al.field_j[param0];
                     stackOut_23_1 = param3;
                     stackIn_25_0 = stackOut_23_0;
@@ -110,7 +113,7 @@ final class lm implements Runnable {
                     stackIn_24_0 = stackOut_23_0;
                     stackIn_24_1 = stackOut_23_1;
                     if (!ke.field_p.field_d) {
-                      stackOut_25_0 = (oi) (Object) stackIn_25_0;
+                      stackOut_25_0 = (oi) ((Object) stackIn_25_0);
                       stackOut_25_1 = stackIn_25_1;
                       stackOut_25_2 = 2;
                       stackIn_26_0 = stackOut_25_0;
@@ -118,7 +121,7 @@ final class lm implements Runnable {
                       stackIn_26_2 = stackOut_25_2;
                       break L2;
                     } else {
-                      stackOut_24_0 = (oi) (Object) stackIn_24_0;
+                      stackOut_24_0 = (oi) ((Object) stackIn_24_0);
                       stackOut_24_1 = stackIn_24_1;
                       stackOut_24_2 = 0;
                       stackIn_26_0 = stackOut_24_0;
@@ -129,7 +132,7 @@ final class lm implements Runnable {
                   }
                   L3: {
                     ((oi) (Object) stackIn_26_0).b(stackIn_26_1, stackIn_26_2, -62);
-                    if (param1 == -1) {
+                    if ((param1 ^ -1) == 0) {
                       break L3;
                     } else {
                       ff.a(param1, 0, ff.field_a);
@@ -147,13 +150,13 @@ final class lm implements Runnable {
                       stackIn_20_0 = stackOut_18_0;
                       stackIn_19_0 = stackOut_18_0;
                       if (0.0 <= nk.field_K[11]) {
-                        stackOut_20_0 = (ic) (Object) stackIn_20_0;
+                        stackOut_20_0 = (ic) ((Object) stackIn_20_0);
                         stackOut_20_1 = 0;
                         stackIn_21_0 = stackOut_20_0;
                         stackIn_21_1 = stackOut_20_1;
                         break L4;
                       } else {
-                        stackOut_19_0 = (ic) (Object) stackIn_19_0;
+                        stackOut_19_0 = (ic) ((Object) stackIn_19_0);
                         stackOut_19_1 = 1;
                         stackIn_21_0 = stackOut_19_0;
                         stackIn_21_1 = stackOut_19_1;
@@ -168,13 +171,13 @@ final class lm implements Runnable {
                       stackIn_16_0 = stackOut_14_0;
                       stackIn_15_0 = stackOut_14_0;
                       if (0.0 <= nk.field_K[11]) {
-                        stackOut_16_0 = (ic) (Object) stackIn_16_0;
+                        stackOut_16_0 = (ic) ((Object) stackIn_16_0);
                         stackOut_16_1 = 0;
                         stackIn_17_0 = stackOut_16_0;
                         stackIn_17_1 = stackOut_16_1;
                         break L5;
                       } else {
-                        stackOut_15_0 = (ic) (Object) stackIn_15_0;
+                        stackOut_15_0 = (ic) ((Object) stackIn_15_0);
                         stackOut_15_1 = 1;
                         stackIn_17_0 = stackOut_15_0;
                         stackIn_17_1 = stackOut_15_1;
@@ -194,13 +197,13 @@ final class lm implements Runnable {
                         stackIn_11_0 = stackOut_9_0;
                         stackIn_10_0 = stackOut_9_0;
                         if (nk.field_K[11] >= 0.0) {
-                          stackOut_11_0 = (ic) (Object) stackIn_11_0;
+                          stackOut_11_0 = (ic) ((Object) stackIn_11_0);
                           stackOut_11_1 = 0;
                           stackIn_12_0 = stackOut_11_0;
                           stackIn_12_1 = stackOut_11_1;
                           break L6;
                         } else {
-                          stackOut_10_0 = (ic) (Object) stackIn_10_0;
+                          stackOut_10_0 = (ic) ((Object) stackIn_10_0);
                           stackOut_10_1 = 1;
                           stackIn_12_0 = stackOut_10_0;
                           stackIn_12_1 = stackOut_10_1;
@@ -215,13 +218,13 @@ final class lm implements Runnable {
                         stackIn_7_0 = stackOut_5_0;
                         stackIn_6_0 = stackOut_5_0;
                         if (0.0 <= nk.field_K[11]) {
-                          stackOut_7_0 = (ic) (Object) stackIn_7_0;
+                          stackOut_7_0 = (ic) ((Object) stackIn_7_0);
                           stackOut_7_1 = 0;
                           stackIn_8_0 = stackOut_7_0;
                           stackIn_8_1 = stackOut_7_1;
                           break L7;
                         } else {
-                          stackOut_6_0 = (ic) (Object) stackIn_6_0;
+                          stackOut_6_0 = (ic) ((Object) stackIn_6_0);
                           stackOut_6_1 = 1;
                           stackIn_8_0 = stackOut_6_0;
                           stackIn_8_1 = stackOut_6_1;
@@ -236,12 +239,12 @@ final class lm implements Runnable {
               }
             }
             L8: {
-              if (!db.b((byte) 13, 0)) {
+              if (!db.b((byte) 13, param4)) {
                 break L8;
               } else {
-                if (hj.field_h > 0) {
+                if (-1 > (hj.field_h ^ -1)) {
                   L9: {
-                    pj.a(c.field_d, 256);
+                    pj.a(c.field_d, param4 + 256);
                     var5_int = 1024 * Math.min(-hj.field_h + id.field_c, hj.field_h) / id.field_c;
                     if (var5_int > 0) {
                       var6 = 0;
@@ -286,7 +289,7 @@ final class lm implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var5, "lm.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + 0 + ')');
+          throw kg.a((Throwable) ((Object) var5), "lm.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -294,25 +297,25 @@ final class lm implements Runnable {
         int var1_int = 0;
         ua var2 = null;
         int var4 = Virogrid.field_F ? 1 : 0;
-        ((lm) this).field_f = true;
+        this.field_f = true;
         try {
-            while (!((lm) this).field_d) {
+            while (!this.field_d) {
                 for (var1_int = 0; var1_int < 2; var1_int++) {
-                    var2 = ((lm) this).field_h[var1_int];
+                    var2 = this.field_h[var1_int];
                     if (var2 == null) {
                     } else {
                         var2.c();
                     }
                 }
                 mm.a(-92, 10L);
-                Object var5 = null;
-                od.a(((lm) this).field_b, (Object) null, (byte) -100);
+                Object var5 = (Object) null;
+                od.a(this.field_b, (Object) null, (byte) -100);
             }
         } catch (Exception exception) {
-            Object var6 = null;
-            en.a((String) null, (Throwable) (Object) exception, 1);
+            String var6 = (String) null;
+            en.a((String) null, (Throwable) ((Object) exception), 1);
         } finally {
-            ((lm) this).field_f = false;
+            this.field_f = false;
         }
     }
 
@@ -339,7 +342,7 @@ final class lm implements Runnable {
             break L0;
           } else {
             var13 = var10.d();
-            var11 = (Object) (Object) var13;
+            var11 = var13;
             var13.b();
             df.b(0, 0, 5, 0);
             df.b(0, 1, 3, 0);
@@ -355,7 +358,7 @@ final class lm implements Runnable {
             break L1;
           } else {
             var14 = var10.d();
-            var12 = (Object) (Object) var14;
+            var12 = var14;
             var14.b();
             df.b(11, 0, 5, 0);
             df.b(13, 1, 3, 0);
@@ -366,7 +369,7 @@ final class lm implements Runnable {
           }
         }
         df.a(var18, var8, var9);
-        return new mg[]{null, null, null, (mg) var11, var10, (mg) var12, null, null, null};
+        return new mg[]{null, null, null, (mg) (var11), var10, (mg) (var12), null, null, null};
     }
 
     static long a(long param0, long param1) {
@@ -374,16 +377,12 @@ final class lm implements Runnable {
     }
 
     lm() {
-        ((lm) this).field_h = new ua[2];
-        ((lm) this).field_d = false;
-        ((lm) this).field_f = false;
+        this.field_h = new ua[2];
+        this.field_d = false;
+        this.field_f = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Player Name: ";
         field_a = 500;
         field_i = new lc(10, 2, 2, 0);

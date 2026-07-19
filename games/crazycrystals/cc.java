@@ -8,6 +8,9 @@ final class cc {
     static String field_b;
 
     public static void a(int param0) {
+        if (param0 != -18277) {
+            field_c = (sj) null;
+        }
         field_c = null;
         field_d = null;
         field_b = null;
@@ -77,8 +80,8 @@ final class cc {
                 if (var6 == null) {
                   break L4;
                 } else {
-                  if (cd.a((CharSequence) (Object) var6, (byte) -98)) {
-                    v.field_d = ti.a(100, (CharSequence) (Object) var6);
+                  if (cd.a((CharSequence) ((Object) var6), (byte) -98)) {
+                    v.field_d = ti.a(100, (CharSequence) ((Object) var6));
                     break L3;
                   } else {
                     break L4;
@@ -88,14 +91,14 @@ final class cc {
               v.field_d = 2;
               break L3;
             }
-            pb.field_a = 2121856;
-            qm.field_n = 8438015;
-            mg.field_e = 192;
+            pb.field_a = param3;
+            qm.field_n = param0;
+            mg.field_e = param5;
             ld.field_v = new dl[param4.length];
             var7 = 0;
             L5: while (true) {
               if (var7 >= param4.length) {
-                var7 = 0;
+                var7 = 16 % ((param2 - 5) / 62);
                 hf.field_c = param4;
                 break L0;
               } else {
@@ -109,23 +112,23 @@ final class cc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var6_ref;
-            stackOut_16_1 = new StringBuilder().append("cc.B(").append(8438015).append(',');
+            stackOut_16_0 = (RuntimeException) (var6_ref);
+            stackOut_16_1 = new StringBuilder().append("cc.B(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -134,23 +137,23 @@ final class cc {
             }
           }
           L7: {
-            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(-121).append(',').append(2121856).append(',');
+            stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param4 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -158,15 +161,11 @@ final class cc {
               break L7;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + 192 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param5 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_c = new sj(2, 4, 4, 0);
         field_b = "Music: ";

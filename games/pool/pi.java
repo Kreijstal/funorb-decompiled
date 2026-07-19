@@ -48,7 +48,7 @@ final class pi {
     }
 
     final static int a(int param0, int param1, int param2, int[] param3, int param4, int param5) {
-        int var6 = 128 + ((pi.a(param0, param1, param2) >> 2) + (pi.a(param0 >> 1, param1 >> 1, param2 >> 1) >> 1) + pi.a(param0 >> 2, param1 >> 2, param2 >> 2) >> 10);
+        int var6 = param4 + ((pi.a(param0, param1, param2) >> 2) + (pi.a(param0 >> 1, param1 >> 1, param2 >> 1) >> 1) + pi.a(param0 >> 2, param1 >> 2, param2 >> 2) >> 16 - param5);
         if (var6 < 0) {
             return param3[0];
         }
@@ -64,10 +64,6 @@ final class pi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_a = new int[256];
         for (var0 = 0; var0 < field_a.length; var0++) {

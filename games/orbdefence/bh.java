@@ -13,6 +13,7 @@ final class bh {
 
     final static void a(int param0, int param1) {
         try {
+            IOException iOException = null;
             Throwable decompiledCaughtException = null;
             L0: {
               if (p.field_d == null) {
@@ -33,7 +34,7 @@ final class bh {
                   if (uk.field_b.field_i != 0) {
                     break L2;
                   } else {
-                    if (~(10000L + p.field_a) > ~ji.b(122)) {
+                    if ((10000L + p.field_a ^ -1L) > (ji.b(param1 ^ -123) ^ -1L)) {
                       uk.field_b.i(param0, 120);
                       break L2;
                     } else {
@@ -42,12 +43,19 @@ final class bh {
                   }
                 }
                 L3: {
-                  if (uk.field_b.field_i > 0) {
-                    {
+                  if (param1 > (uk.field_b.field_i ^ -1)) {
+                    try {
                       L4: {
                         p.field_d.a((byte) 30, uk.field_b.field_j, 0, uk.field_b.field_i);
                         p.field_a = ji.b(-61);
                         break L4;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L5: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        th.a(114);
+                        break L5;
                       }
                     }
                     uk.field_b.field_i = 0;
@@ -68,26 +76,27 @@ final class bh {
     }
 
     final static int a(byte param0) {
+        int var1 = 0;
         ed.field_b.b(0);
-        int var1 = -118;
+        var1 = -118 / ((param0 - 30) / 59);
         if (kg.field_h.e(255)) {
-            return 0;
+          return 0;
+        } else {
+          return d.d((byte) -123);
         }
-        return d.d((byte) -123);
     }
 
     public static void a(int param0) {
         field_f = null;
+        if (param0 != -21000) {
+            return;
+        }
         field_a = null;
         field_e = null;
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = true;
         field_a = "Player Name: ";
         field_f = "Creating your account";

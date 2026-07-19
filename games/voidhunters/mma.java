@@ -32,7 +32,7 @@ final class mma {
         if (param0 != -12178) {
           L0: {
             field_a = 3;
-            if (this != (Object) (Object) tib.field_h) {
+            if (this != tib.field_h) {
               stackOut_10_0 = 0;
               stackIn_11_0 = stackOut_10_0;
               break L0;
@@ -46,7 +46,7 @@ final class mma {
             stackOut_11_0 = stackIn_11_0;
             stackIn_13_0 = stackOut_11_0;
             stackIn_12_0 = stackOut_11_0;
-            if ((Object) (Object) pia.field_x != this) {
+            if (pia.field_x != this) {
               stackOut_13_0 = stackIn_13_0;
               stackOut_13_1 = 0;
               stackIn_14_0 = stackOut_13_0;
@@ -63,7 +63,7 @@ final class mma {
           return (stackIn_14_0 | stackIn_14_1) != 0;
         } else {
           L2: {
-            if (this != (Object) (Object) tib.field_h) {
+            if (this != tib.field_h) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L2;
@@ -77,7 +77,7 @@ final class mma {
             stackOut_4_0 = stackIn_4_0;
             stackIn_6_0 = stackOut_4_0;
             stackIn_5_0 = stackOut_4_0;
-            if ((Object) (Object) pia.field_x != this) {
+            if (pia.field_x != this) {
               stackOut_6_0 = stackIn_6_0;
               stackOut_6_1 = 0;
               stackIn_7_0 = stackOut_6_0;

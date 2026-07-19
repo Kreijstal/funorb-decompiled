@@ -10,6 +10,9 @@ final class ud extends gea {
 
     public static void e(boolean param0) {
         field_R = null;
+        if (param0) {
+            field_R = (String) null;
+        }
     }
 
     final void b(shb param0, int param1) {
@@ -17,7 +20,7 @@ final class ud extends gea {
             super.b(param0, -57);
             int var3_int = 47 % ((6 - param1) / 46);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ud.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ud.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

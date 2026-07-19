@@ -21,16 +21,18 @@ final class pg extends fb {
     }
 
     final dj a(byte param0) {
+        dj discarded$0 = null;
         if (param0 <= 47) {
-            dj discarded$0 = ((pg) this).a((byte) 26);
+            discarded$0 = this.a((byte) 26);
             return qd.field_h;
         }
         return qd.field_h;
     }
 
     final static void d(int param0) {
+        boolean discarded$2 = false;
         if (param0 <= 40) {
-          boolean discarded$2 = pg.a(-52, 18, 84, 62, 58, -55, -37);
+          discarded$2 = pg.a(-52, 18, 84, 62, 58, -55, -37);
           tf.field_g.setLength(0);
           ib.field_b = 0;
           return;
@@ -42,37 +44,65 @@ final class pg extends fb {
     }
 
     public static void c(int param0) {
+        boolean discarded$2 = false;
         field_v = null;
-        field_t = null;
-        field_s = null;
-        field_x = null;
-        field_z = null;
-        field_u = null;
-        field_w = null;
-        field_y = null;
+        if (param0 != 28873) {
+          discarded$2 = pg.a(-89, 67, 9, -70, 59, 127, 12);
+          field_t = null;
+          field_s = null;
+          field_x = null;
+          field_z = null;
+          field_u = null;
+          field_w = null;
+          field_y = null;
+          return;
+        } else {
+          field_t = null;
+          field_s = null;
+          field_x = null;
+          field_z = null;
+          field_u = null;
+          field_w = null;
+          field_y = null;
+          return;
+        }
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        boolean discarded$11 = false;
+        int stackIn_18_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_17_0 = 0;
         if (param4 == 0) {
           if (param3 <= param6) {
-            if (param6 < param1 + param3) {
-              if (param2 >= param5) {
-                if (param2 >= param5 - -param0) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
+            if (param6 >= param1 + param3) {
               return false;
+            } else {
+              L0: {
+                L1: {
+                  if (param2 < param5) {
+                    break L1;
+                  } else {
+                    if (param2 >= param5 - -param0) {
+                      break L1;
+                    } else {
+                      stackOut_16_0 = 1;
+                      stackIn_18_0 = stackOut_16_0;
+                      break L0;
+                    }
+                  }
+                }
+                stackOut_17_0 = 0;
+                stackIn_18_0 = stackOut_17_0;
+                break L0;
+              }
+              return stackIn_18_0 != 0;
             }
           } else {
             return false;
           }
         } else {
-          boolean discarded$11 = pg.a(-66, 110, -27, 62, 105, 97, 42);
+          discarded$11 = pg.a(-66, 110, -27, 62, 105, 97, 42);
           if (param3 <= param6) {
             if (param6 < param1 + param3) {
               if (param2 >= param5) {
@@ -96,10 +126,8 @@ final class pg extends fb {
     final static String a(byte param0, Throwable param1) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
-        String var5 = null;
         BufferedReader var6 = null;
         String var7 = null;
-        String var8 = null;
         int var9 = 0;
         int var10 = 0;
         String var11 = null;
@@ -107,14 +135,27 @@ final class pg extends fb {
         int var13 = 0;
         od var14 = null;
         StringWriter var15 = null;
-        String var16 = null;
-        String var17 = null;
-        String var18 = null;
-        String var19 = null;
+        String var20 = null;
+        BufferedReader var21 = null;
+        String var22 = null;
+        String var23 = null;
+        String var24 = null;
+        String var25 = null;
+        String var26 = null;
+        String var27 = null;
+        String var28 = null;
+        BufferedReader var29 = null;
+        String var30 = null;
+        String var31 = null;
+        String var32 = null;
+        String var33 = null;
+        String var34 = null;
+        String var35 = null;
+        String var39 = null;
         L0: {
           var13 = SteelSentinels.field_G;
           if (param1 instanceof od) {
-            var14 = (od) (Object) param1;
+            var14 = (od) ((Object) param1);
             param1 = var14.field_l;
             var2 = var14.field_a + " | ";
             var11 = var2;
@@ -125,81 +166,156 @@ final class pg extends fb {
           }
         }
         var15 = new StringWriter();
-        var4 = new PrintWriter((Writer) (Object) var15);
+        var4 = new PrintWriter((Writer) ((Object) var15));
         param1.printStackTrace(var4);
-        var4.close();
-        var5 = var15.toString();
-        var2 = var5;
-        var11 = var5;
-        var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
-        var7 = var6.readLine();
-        var2 = var7;
-        var11 = var7;
-        L1: while (true) {
-          var8 = var6.readLine();
-          var2 = var8;
-          var11 = var8;
-          var2 = var11;
-          if (var8 != null) {
-            L2: {
-              var9 = var8.indexOf('(');
-              var10 = var8.indexOf(')', 1 + var9);
-              if (var9 != -1) {
-                var11 = var8.substring(0, var9);
-                var2 = var11;
-                var2 = var11;
-                break L2;
-              } else {
-                var11 = var8;
-                break L2;
+        if (param0 < -83) {
+          var4.close();
+          var20 = var15.toString();
+          var2 = var20;
+          var11 = var20;
+          var21 = new BufferedReader((Reader) ((Object) new StringReader(var20)));
+          var27 = var21.readLine();
+          var2 = var27;
+          var11 = var27;
+          L1: while (true) {
+            var22 = var21.readLine();
+            var2 = var22;
+            var11 = var22;
+            var2 = var11;
+            if (var22 != null) {
+              L2: {
+                var9 = var22.indexOf('(');
+                var10 = var22.indexOf(')', 1 + var9);
+                if (var9 != -1) {
+                  var11 = var22.substring(0, var9);
+                  var2 = var11;
+                  var2 = var11;
+                  break L2;
+                } else {
+                  var11 = var22;
+                  break L2;
+                }
               }
-            }
-            L3: {
-              var16 = var11.trim();
-              var2 = var16;
-              var2 = var16;
-              var17 = var16.substring(var16.lastIndexOf(' ') - -1);
-              var2 = var17;
-              var2 = var17;
-              var18 = var17.substring(var17.lastIndexOf('\t') + 1);
-              var2 = var18;
-              var2 = var18;
-              var19 = var2 + var18;
-              var2 = var19;
-              var2 = var19;
-              if (var9 == -1) {
-                break L3;
-              } else {
-                if (-1 == var10) {
+              L3: {
+                var23 = var11.trim();
+                var2 = var23;
+                var2 = var23;
+                var24 = var23.substring(var23.lastIndexOf(' ') - -1);
+                var2 = var24;
+                var2 = var24;
+                var25 = var24.substring(var24.lastIndexOf('\t') + 1);
+                var2 = var25;
+                var2 = var25;
+                var26 = var2 + var25;
+                var2 = var26;
+                var2 = var26;
+                var2 = var26;
+                if (var9 == -1) {
                   break L3;
                 } else {
-                  var12 = var8.indexOf(".java:", var9);
-                  if (var12 < 0) {
+                  if (-1 == var10) {
                     break L3;
                   } else {
-                    var2 = var19 + var8.substring(var12 - -5, var10);
-                    break L3;
+                    var12 = var22.indexOf(".java:", var9);
+                    if (var12 < 0) {
+                      break L3;
+                    } else {
+                      var2 = var26 + var22.substring(var12 - -5, var10);
+                      break L3;
+                    }
                   }
                 }
               }
+              var2 = var2 + ' ';
+              continue L1;
+            } else {
+              var2 = var11;
+              var11 = var2;
+              var2 = var11;
+              var2 = var2 + "| " + var27;
+              var11 = var2;
+              return var2;
             }
-            var2 = var2 + ' ';
-            continue L1;
-          } else {
+          }
+        } else {
+          field_s = (String) null;
+          var4.close();
+          var28 = var15.toString();
+          var2 = var28;
+          var11 = var28;
+          var29 = new BufferedReader((Reader) ((Object) new StringReader(var28)));
+          var6 = var29;
+          var35 = var29.readLine();
+          var2 = var35;
+          var11 = var35;
+          var7 = var35;
+          var2 = var7;
+          var11 = var7;
+          L4: while (true) {
+            var30 = var29.readLine();
+            var2 = var30;
+            var11 = var30;
             var2 = var11;
-            var11 = var2;
-            var2 = var11;
-            var2 = var2 + "| " + var7;
-            return var2;
+            if (var30 != null) {
+              L5: {
+                var9 = var30.indexOf('(');
+                var10 = var30.indexOf(')', 1 + var9);
+                if (var9 != -1) {
+                  var11 = var30.substring(0, var9);
+                  var2 = var11;
+                  var2 = var11;
+                  break L5;
+                } else {
+                  var11 = var30;
+                  break L5;
+                }
+              }
+              L6: {
+                var31 = var11.trim();
+                var2 = var31;
+                var2 = var31;
+                var32 = var31.substring(var31.lastIndexOf(' ') - -1);
+                var2 = var32;
+                var2 = var32;
+                var33 = var32.substring(var32.lastIndexOf('\t') + 1);
+                var2 = var33;
+                var2 = var33;
+                var34 = var2 + var33;
+                var2 = var34;
+                var2 = var34;
+                var2 = var34;
+                if (var9 == -1) {
+                  break L6;
+                } else {
+                  if (-1 == var10) {
+                    break L6;
+                  } else {
+                    var12 = var30.indexOf(".java:", var9);
+                    if (var12 < 0) {
+                      break L6;
+                    } else {
+                      var2 = var34 + var30.substring(var12 - -5, var10);
+                      break L6;
+                    }
+                  }
+                }
+              }
+              var2 = var2 + ' ';
+              continue L4;
+            } else {
+              var2 = var11;
+              var11 = var2;
+              var2 = var11;
+              var2 = var2 + "| " + var35;
+              var39 = var2;
+              var11 = var2;
+              return var2;
+            }
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = false;
         field_B = 4;
         field_s = "Unable to connect to the data server. Please check any firewall you are using.";

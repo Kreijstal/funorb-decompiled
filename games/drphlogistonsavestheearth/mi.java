@@ -14,19 +14,20 @@ final class mi {
     static he[] field_i;
 
     final int a(int param0, int param1) {
+        int discarded$7 = 0;
         int var3 = 0;
         int var4 = 0;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (null != ((mi) this).field_a) {
-          if (((mi) this).field_a.length != 0) {
+        if (null != this.field_a) {
+          if (-1 != (this.field_a.length ^ -1)) {
             var3 = 1;
             if (param0 != -21878) {
-              int discarded$7 = ((mi) this).a(84, -16);
+              discarded$7 = this.a(84, -16);
               L0: while (true) {
-                if (((mi) this).field_a.length <= var3) {
-                  return -1 + ((mi) this).field_a.length;
+                if (this.field_a.length <= var3) {
+                  return -1 + this.field_a.length;
                 } else {
-                  if (((mi) this).field_a[var3] + ((mi) this).field_a[-1 + var3] >> 1 > param1) {
+                  if (this.field_a[var3] + this.field_a[-1 + var3] >> -1235001183 > param1) {
                     return var3 - 1;
                   } else {
                     var3++;
@@ -36,10 +37,10 @@ final class mi {
               }
             } else {
               L1: while (true) {
-                if (((mi) this).field_a.length <= var3) {
-                  return -1 + ((mi) this).field_a.length;
+                if (this.field_a.length <= var3) {
+                  return -1 + this.field_a.length;
                 } else {
-                  if (((mi) this).field_a[var3] + ((mi) this).field_a[-1 + var3] >> 1 > param1) {
+                  if (this.field_a[var3] + this.field_a[-1 + var3] >> -1235001183 > param1) {
                     return var3 - 1;
                   } else {
                     var3++;
@@ -94,11 +95,11 @@ final class mi {
 
     final int a(byte param0) {
         if (param0 > 92) {
-          if (null != ((mi) this).field_a) {
-            if (((mi) this).field_a.length == 0) {
+          if (null != this.field_a) {
+            if (this.field_a.length == 0) {
               return 0;
             } else {
-              return ((mi) this).field_a[((mi) this).field_a.length + -1];
+              return this.field_a[this.field_a.length + -1];
             }
           } else {
             return 0;
@@ -118,22 +119,18 @@ final class mi {
         if (param0 > 61) {
           return;
         } else {
-          field_f = null;
+          field_f = (ge) null;
           return;
         }
     }
 
     mi(int param0, int param1, int param2) {
-        ((mi) this).field_e = param0;
-        ((mi) this).field_b = param1;
-        ((mi) this).field_a = new int[1 + param2];
+        this.field_e = param0;
+        this.field_b = param1;
+        this.field_a = new int[1 + param2];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Friends can be added in multiplayer<nbsp>games";
     }
 }

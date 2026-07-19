@@ -13,6 +13,7 @@ final class ih {
     final static void a(String param0, int param1, int param2, int param3, String param4, int param5) {
         sl var8 = null;
         int var7 = 0;
+        int discarded$0 = 0;
         try {
             var8 = js.field_f;
             sl var6 = var8;
@@ -26,11 +27,11 @@ final class ih {
             if (param4 == null) {
                 var8.d(param2, 255);
             } else {
-                int discarded$0 = ee.a((ob) (Object) var8, (byte) -87, param4);
+                discarded$0 = ee.a(var8, (byte) -87, param4);
             }
             var8.b(-var7 + var8.field_j, (byte) 122);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ih.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "ih.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -68,7 +69,7 @@ final class ih {
               }
             }
             var3 = 114 / ((-15 - param1) / 49);
-            stackOut_3_0 = (String) var2;
+            stackOut_3_0 = (String) (var2);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
@@ -76,23 +77,23 @@ final class ih {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2_ref;
+            stackOut_5_0 = (RuntimeException) (var2_ref);
             stackOut_5_1 = new StringBuilder().append("ih.C(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -100,13 +101,16 @@ final class ih {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
         return stackIn_4_0;
     }
 
     public static void a(int param0) {
         field_f = null;
+        if (param0 != -1) {
+            return;
+        }
         field_a = null;
         field_g = null;
         field_c = null;
@@ -118,15 +122,11 @@ final class ih {
     }
 
     final static boolean b(int param0) {
-        int var1 = 0;
+        int var1 = 1 % ((-61 - param0) / 56);
         return lg.field_e != null ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = -1;
         field_a = "Victory";
         field_f = new fg();

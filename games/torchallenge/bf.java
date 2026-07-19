@@ -22,39 +22,45 @@ final class bf {
         field_f = null;
         field_g = null;
         field_l = null;
-        field_o = null;
-        field_d = null;
-        field_c = null;
+        if (param0 != -14471) {
+            bf.a(-119, 98, (byte) 12);
+        }
+        field_o = (int[][]) null;
+        field_d = (int[][]) null;
+        field_c = (fe[][]) null;
     }
 
     final static ka[] a(int param0, byte param1, int param2, int param3, int param4) {
-        return e.a(3, 0, 1, 1065, 1, 0, 0, 65793, 1);
+        if (param1 <= 30) {
+            return (ka[]) null;
+        }
+        return e.a(3, param2, 1, 1065, 1, param4, param3, param0, 1);
     }
 
     final int a(byte param0) {
         L0: {
-          if (((bf) this).field_i) {
+          if (this.field_i) {
             break L0;
           } else {
             L1: {
-              if (((bf) this).field_b != 2) {
+              if ((this.field_b ^ -1) != -3) {
                 break L1;
               } else {
-                if (0 < ((bf) this).field_h) {
+                if (0 < this.field_h) {
                   break L0;
                 } else {
                   break L1;
                 }
               }
             }
-            if (jl.field_h == ((bf) this).field_e) {
+            if (jl.field_h == this.field_e) {
               return 1;
             } else {
               if (param0 == -116) {
                 if (2 != oj.field_f) {
                   return 0;
                 } else {
-                  if (ta.a(-93, ((bf) this).field_a)) {
+                  if (ta.a(-93, this.field_a)) {
                     return 1;
                   } else {
                     return 0;
@@ -92,21 +98,21 @@ final class bf {
           }
         }
         L1: {
-          if (var3 > param0 >> 3) {
+          if (var3 > param0 >> -159820605) {
             L2: {
-              var5 = var3 % (param0 >> 3);
+              var5 = var3 % (param0 >> -1008216381);
               if (0 != var5) {
                 break L2;
               } else {
-                var5 = param0 >> 3;
+                var5 = param0 >> 2039392611;
                 break L2;
               }
             }
             L3: {
               var6 = var3 - var5;
-              var7 = param0 + -(param0 >> 3 << 3);
+              var7 = param0 + -(param0 >> -272691421 << -366370717);
               if (var7 >= param0 + -var6) {
-                var6 = (7 * param0 >> 3) + -var5;
+                var6 = (7 * param0 >> -540830685) + -var5;
                 break L3;
               } else {
                 break L3;
@@ -116,7 +122,7 @@ final class bf {
               vk.a(var6, (byte) 74);
               break L1;
             } else {
-              if (param1 == 1) {
+              if (-2 == (param1 ^ -1)) {
                 nb.b(var6, -1);
                 break L1;
               } else {
@@ -125,7 +131,7 @@ final class bf {
             }
           } else {
             if (param1 != 0) {
-              if (param1 == 1) {
+              if ((param1 ^ -1) == -2) {
                 nb.b(0, -1);
                 break L1;
               } else {
@@ -140,30 +146,26 @@ final class bf {
     }
 
     bf(boolean param0) {
-        ((bf) this).field_e = ik.field_b;
-        ((bf) this).field_k = hc.field_O;
-        ((bf) this).field_b = uk.field_L;
-        ((bf) this).field_a = lk.field_b;
+        this.field_e = ik.field_b;
+        this.field_k = hc.field_O;
+        this.field_b = uk.field_L;
+        this.field_a = lk.field_b;
         if (!param0) {
-            ((bf) this).field_j = null;
+            this.field_j = null;
         } else {
-            ((bf) this).field_j = eb.field_k;
+            this.field_j = eb.field_k;
         }
-        ((bf) this).field_h = ih.field_K;
-        ((bf) this).field_n = td.field_q;
-        ((bf) this).field_i = o.field_m;
-        ((bf) this).field_m = hf.field_e;
+        this.field_h = ih.field_K;
+        this.field_n = td.field_q;
+        this.field_i = o.field_m;
+        this.field_m = hf.field_e;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_o = new int[][]{new int[2], new int[2]};
+        field_o = new int[][]{new int[]{15, 16}, new int[]{46, 47}};
         field_c = new fe[3][9];
         field_f = new int[]{40, 60, 35};
-        field_d = new int[][]{new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3], new int[3]};
+        field_d = new int[][]{new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 224, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}, new int[]{256, 256, 256}};
         field_l = new int[4];
         field_g = new k(9, 0, 4, 1);
     }

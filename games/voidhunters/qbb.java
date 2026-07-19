@@ -6,14 +6,14 @@ final class qbb implements dja {
 
     public final tv a(byte param0) {
         int var2 = 41 / ((-64 - param0) / 50);
-        return (tv) (Object) new aoa();
+        return (tv) ((Object) new aoa());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            return null;
+            return (tv[]) null;
         }
-        return (tv[]) (Object) new aoa[param1];
+        return (tv[]) ((Object) new aoa[param1]);
     }
 
     static {

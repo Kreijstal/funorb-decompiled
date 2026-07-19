@@ -11,14 +11,13 @@ final class he {
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 < 75) {
+            return;
+        }
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "he.A(";
         field_c = 0;
         field_e = 0;

@@ -24,10 +24,6 @@ final class tgb extends abb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[1000];
         field_d = "Add condition (Body in map zone)";
     }

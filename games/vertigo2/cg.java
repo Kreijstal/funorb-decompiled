@@ -46,23 +46,23 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("cg.focusLost(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -70,7 +70,7 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -118,8 +118,8 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 if (fh.field_w < 0) {
                   break L1;
                 } else {
-                  if (var2_int >= 0) {
-                    bq.field_D[fh.field_w] = ~var2_int;
+                  if ((var2_int ^ -1) <= -1) {
+                    bq.field_D[fh.field_w] = var2_int ^ -1;
                     fh.field_w = 127 & fh.field_w + 1;
                     if (bd.field_f == fh.field_w) {
                       fh.field_w = -1;
@@ -142,23 +142,23 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var2;
+            stackOut_15_0 = (RuntimeException) (var2);
             stackOut_15_1 = new StringBuilder().append("cg.keyReleased(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L4;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -166,7 +166,7 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L4;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
     }
 
@@ -175,6 +175,9 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         field_a = null;
         field_b = null;
         field_f = null;
+        if (param0 != 92) {
+            return;
+        }
         field_e = null;
     }
 
@@ -199,7 +202,7 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             param0.consume();
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "cg.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "cg.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -250,7 +253,7 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 break L1;
               }
               L3: {
-                if (fh.field_w < 0) {
+                if ((fh.field_w ^ -1) > -1) {
                   break L3;
                 } else {
                   if (var2_int >= 0) {
@@ -268,7 +271,7 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 }
               }
               L4: {
-                if (var2_int < 0) {
+                if ((var2_int ^ -1) > -1) {
                   break L4;
                 } else {
                   var3 = 1 + ro.field_e & 127;
@@ -276,7 +279,7 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     break L4;
                   } else {
                     wm.field_j[ro.field_e] = var2_int;
-                    af.field_F[ro.field_e] = ' ';
+                    af.field_F[ro.field_e] = (char)0;
                     ro.field_e = var3;
                     break L4;
                   }
@@ -307,23 +310,23 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var2;
+            stackOut_25_0 = (RuntimeException) (var2);
             stackOut_25_1 = new StringBuilder().append("cg.keyPressed(");
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L5;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -331,15 +334,11 @@ final class cg implements java.awt.event.KeyListener, java.awt.event.FocusListen
               break L5;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Tips";
         field_a = new wp();
         field_d = -1;

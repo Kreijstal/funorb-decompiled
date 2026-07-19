@@ -14,14 +14,13 @@ final class jca {
     }
 
     final static void a(int param0, int param1) {
-        fe.field_h = 20000000L;
+        fe.field_h = 1000000000L / (long)param0;
+        if (param1 != -14350) {
+            field_a = (po) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Concluded";
     }
 }

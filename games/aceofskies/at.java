@@ -13,10 +13,6 @@ final class at {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "at.A(";
         field_a = new int[1];
     }

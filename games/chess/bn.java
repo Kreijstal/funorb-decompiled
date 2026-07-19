@@ -42,52 +42,49 @@ final class bn extends gf {
     fh[] field_p;
 
     final void d() {
+        int[] array$2 = null;
+        int[] array$3 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
         L0: {
-          if (((bn) this).field_I == null) {
+          if (this.field_I == null) {
             break L0;
           } else {
-            var9 = new int[256];
-            var7 = var9;
-            var5 = var7;
+            var5 = new int[256];
             var2 = 0;
             var3 = 0;
             L1: while (true) {
-              if (var3 >= ((bn) this).field_h) {
-                ((bn) this).field_M = new int[var2 + 1][];
+              if (var3 >= this.field_h) {
+                this.field_M = new int[var2 + 1][];
                 var3 = 0;
                 L2: while (true) {
                   if (var3 > var2) {
                     var3 = 0;
                     L3: while (true) {
-                      if (var3 >= ((bn) this).field_h) {
-                        ((bn) this).field_I = null;
+                      if (var3 >= this.field_h) {
+                        this.field_I = null;
                         break L0;
                       } else {
-                        var4 = ((bn) this).field_I[var3];
+                        var4 = this.field_I[var3];
                         var5[var4] = var5[var4] + 1;
-                        ((bn) this).field_M[var4][var5[var4]] = var3;
+                        this.field_M[var4][var5[var4]] = var3;
                         var3++;
                         continue L3;
                       }
                     }
                   } else {
-                    ((bn) this).field_M[var3] = new int[var9[var3]];
-                    var9[var3] = 0;
+                    array$2 = new int[var5[var3]];
+                    this.field_M[var3] = array$2;
+                    var5[var3] = 0;
                     var3++;
                     continue L2;
                   }
                 }
               } else {
-                var4 = ((bn) this).field_I[var3];
+                var4 = this.field_I[var3];
                 var5[var4] = var5[var4] + 1;
                 if (var4 > var2) {
                   var2 = var4;
@@ -102,42 +99,41 @@ final class bn extends gf {
           }
         }
         L4: {
-          if (((bn) this).field_r == null) {
+          if (this.field_r == null) {
             break L4;
           } else {
-            var10 = new int[256];
-            var8 = var10;
-            var6 = var8;
+            var6 = new int[256];
             var2 = 0;
             var3 = 0;
             L5: while (true) {
-              if (var3 >= ((bn) this).field_y) {
-                ((bn) this).field_m = new int[var2 + 1][];
+              if (var3 >= this.field_y) {
+                this.field_m = new int[var2 + 1][];
                 var3 = 0;
                 L6: while (true) {
                   if (var3 > var2) {
                     var3 = 0;
                     L7: while (true) {
-                      if (var3 >= ((bn) this).field_y) {
-                        ((bn) this).field_r = null;
+                      if (var3 >= this.field_y) {
+                        this.field_r = null;
                         break L4;
                       } else {
-                        var4 = ((bn) this).field_r[var3];
+                        var4 = this.field_r[var3];
                         var6[var4] = var6[var4] + 1;
-                        ((bn) this).field_m[var4][var6[var4]] = var3;
+                        this.field_m[var4][var6[var4]] = var3;
                         var3++;
                         continue L7;
                       }
                     }
                   } else {
-                    ((bn) this).field_m[var3] = new int[var10[var3]];
-                    var10[var3] = 0;
+                    array$3 = new int[var6[var3]];
+                    this.field_m[var3] = array$3;
+                    var6[var3] = 0;
                     var3++;
                     continue L6;
                   }
                 }
               } else {
-                var4 = ((bn) this).field_r[var3];
+                var4 = this.field_r[var3];
                 var6[var4] = var6[var4] + 1;
                 if (var4 > var2) {
                   var2 = var4;
@@ -155,25 +151,25 @@ final class bn extends gf {
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        for (var5 = 0; var5 < ((bn) this).field_h; var5++) {
-            ((bn) this).field_K[var5] = ((bn) this).field_K[var5] * param0 / param3;
-            ((bn) this).field_C[var5] = ((bn) this).field_C[var5] * param1 / param3;
-            ((bn) this).field_v[var5] = ((bn) this).field_v[var5] * param2 / param3;
+        for (var5 = 0; var5 < this.field_h; var5++) {
+            this.field_K[var5] = this.field_K[var5] * param0 / param3;
+            this.field_C[var5] = this.field_C[var5] * param1 / param3;
+            this.field_v[var5] = this.field_v[var5] * param2 / param3;
         }
         this.a();
     }
 
     private final void a() {
-        ((bn) this).field_o = null;
-        ((bn) this).field_A = null;
-        ((bn) this).field_p = null;
+        this.field_o = null;
+        this.field_A = null;
+        this.field_p = null;
     }
 
     final void c() {
         int var1 = 0;
-        for (var1 = 0; var1 < ((bn) this).field_h; var1++) {
-            ((bn) this).field_K[var1] = -((bn) this).field_K[var1];
-            ((bn) this).field_v[var1] = -((bn) this).field_v[var1];
+        for (var1 = 0; var1 < this.field_h; var1++) {
+            this.field_K[var1] = -this.field_K[var1];
+            this.field_v[var1] = -this.field_v[var1];
         }
         this.a();
     }
@@ -306,22 +302,22 @@ final class bn extends gf {
           var21 = var21 + var18;
           var34 = var21;
           var21 = var21 + var19;
-          ((bn) this).field_h = var9;
-          ((bn) this).field_y = var10;
-          ((bn) this).field_R = var11;
-          ((bn) this).field_K = new int[var9];
-          ((bn) this).field_C = new int[var9];
-          ((bn) this).field_v = new int[var9];
-          ((bn) this).field_P = new int[var10];
-          ((bn) this).field_O = new int[var10];
-          ((bn) this).field_N = new int[var10];
+          this.field_h = var9;
+          this.field_y = var10;
+          this.field_R = var11;
+          this.field_K = new int[var9];
+          this.field_C = new int[var9];
+          this.field_v = new int[var9];
+          this.field_P = new int[var10];
+          this.field_O = new int[var10];
+          this.field_N = new int[var10];
           if (var11 <= 0) {
             break L5;
           } else {
-            ((bn) this).field_l = new byte[var11];
-            ((bn) this).field_J = new short[var11];
-            ((bn) this).field_n = new short[var11];
-            ((bn) this).field_x = new short[var11];
+            this.field_l = new byte[var11];
+            this.field_J = new short[var11];
+            this.field_n = new short[var11];
+            this.field_x = new short[var11];
             break L5;
           }
         }
@@ -329,7 +325,7 @@ final class bn extends gf {
           if (var16 != 1) {
             break L6;
           } else {
-            ((bn) this).field_I = new int[var9];
+            this.field_I = new int[var9];
             break L6;
           }
         }
@@ -337,18 +333,18 @@ final class bn extends gf {
           if (var12 != 1) {
             break L7;
           } else {
-            ((bn) this).field_G = new byte[var10];
-            ((bn) this).field_Q = new byte[var10];
-            ((bn) this).field_B = new short[var10];
+            this.field_G = new byte[var10];
+            this.field_Q = new byte[var10];
+            this.field_B = new short[var10];
             break L7;
           }
         }
         L8: {
           if (var13 != 255) {
-            ((bn) this).field_t = (byte)var13;
+            this.field_t = (byte)var13;
             break L8;
           } else {
-            ((bn) this).field_w = new byte[var10];
+            this.field_w = new byte[var10];
             break L8;
           }
         }
@@ -356,7 +352,7 @@ final class bn extends gf {
           if (var14 != 1) {
             break L9;
           } else {
-            ((bn) this).field_D = new byte[var10];
+            this.field_D = new byte[var10];
             break L9;
           }
         }
@@ -364,11 +360,11 @@ final class bn extends gf {
           if (var15 != 1) {
             break L10;
           } else {
-            ((bn) this).field_r = new int[var10];
+            this.field_r = new int[var10];
             break L10;
           }
         }
-        ((bn) this).field_j = new short[var10];
+        this.field_j = new short[var10];
         var4.field_l = var22;
         var5.field_l = var32;
         var6.field_l = var33;
@@ -388,7 +384,7 @@ final class bn extends gf {
             var38 = 0;
             L12: while (true) {
               if (var38 >= var10) {
-                ((bn) this).field_q = -1;
+                this.field_q = -1;
                 var4.field_l = var29;
                 var5.field_l = var23;
                 var38 = 0;
@@ -398,13 +394,13 @@ final class bn extends gf {
                 var42 = 0;
                 L13: while (true) {
                   if (var42 >= var10) {
-                    ((bn) this).field_q = ((bn) this).field_q + 1;
+                    this.field_q = this.field_q + 1;
                     var4.field_l = var31;
                     var42 = 0;
                     L14: while (true) {
                       if (var42 >= var11) {
                         L15: {
-                          if (((bn) this).field_Q == null) {
+                          if (this.field_Q == null) {
                             break L15;
                           } else {
                             var42 = 0;
@@ -415,23 +411,23 @@ final class bn extends gf {
                                 if (var42 != 0) {
                                   break L15;
                                 } else {
-                                  ((bn) this).field_Q = null;
+                                  this.field_Q = null;
                                   break L15;
                                 }
                               } else {
-                                var44 = ((bn) this).field_Q[var45] & 255;
+                                var44 = this.field_Q[var45] & 255;
                                 if (var44 != 255) {
                                   L17: {
-                                    if ((((bn) this).field_J[var44] & 65535) != ((bn) this).field_P[var45]) {
+                                    if ((this.field_J[var44] & 65535) != this.field_P[var45]) {
                                       break L17;
                                     } else {
-                                      if ((((bn) this).field_n[var44] & 65535) != ((bn) this).field_O[var45]) {
+                                      if ((this.field_n[var44] & 65535) != this.field_O[var45]) {
                                         break L17;
                                       } else {
-                                        if ((((bn) this).field_x[var44] & 65535) != ((bn) this).field_N[var45]) {
+                                        if ((this.field_x[var44] & 65535) != this.field_N[var45]) {
                                           break L17;
                                         } else {
-                                          ((bn) this).field_Q[var45] = (byte) -1;
+                                          this.field_Q[var45] = (byte)-1;
                                           var45++;
                                           continue L16;
                                         }
@@ -453,7 +449,7 @@ final class bn extends gf {
                           if (var3 != 0) {
                             break L18;
                           } else {
-                            ((bn) this).field_B = null;
+                            this.field_B = null;
                             break L18;
                           }
                         }
@@ -461,16 +457,16 @@ final class bn extends gf {
                           if (var2 != 0) {
                             break L19;
                           } else {
-                            ((bn) this).field_G = null;
+                            this.field_G = null;
                             break L19;
                           }
                         }
                         return;
                       } else {
-                        ((bn) this).field_l[var42] = (byte) 0;
-                        ((bn) this).field_J[var42] = (short)var4.f(674914976);
-                        ((bn) this).field_n[var42] = (short)var4.f(674914976);
-                        ((bn) this).field_x[var42] = (short)var4.f(674914976);
+                        this.field_l[var42] = (byte) 0;
+                        this.field_J[var42] = (short)var4.f(674914976);
+                        this.field_n[var42] = (short)var4.f(674914976);
+                        this.field_x[var42] = (short)var4.f(674914976);
                         var42++;
                         continue L14;
                       }
@@ -488,28 +484,28 @@ final class bn extends gf {
                           var41 = var39;
                           var40 = var4.a(false) + var41;
                           var41 = var40;
-                          ((bn) this).field_P[var42] = var38;
-                          ((bn) this).field_O[var42] = var39;
-                          ((bn) this).field_N[var42] = var40;
-                          if (var38 <= ((bn) this).field_q) {
+                          this.field_P[var42] = var38;
+                          this.field_O[var42] = var39;
+                          this.field_N[var42] = var40;
+                          if (var38 <= this.field_q) {
                             break L21;
                           } else {
-                            ((bn) this).field_q = var38;
+                            this.field_q = var38;
                             break L21;
                           }
                         }
                         L22: {
-                          if (var39 <= ((bn) this).field_q) {
+                          if (var39 <= this.field_q) {
                             break L22;
                           } else {
-                            ((bn) this).field_q = var39;
+                            this.field_q = var39;
                             break L22;
                           }
                         }
-                        if (var40 <= ((bn) this).field_q) {
+                        if (var40 <= this.field_q) {
                           break L20;
                         } else {
-                          ((bn) this).field_q = var40;
+                          this.field_q = var40;
                           break L20;
                         }
                       }
@@ -521,13 +517,13 @@ final class bn extends gf {
                         var39 = var40;
                         var40 = var4.a(false) + var41;
                         var41 = var40;
-                        ((bn) this).field_P[var42] = var38;
-                        ((bn) this).field_O[var42] = var39;
-                        ((bn) this).field_N[var42] = var40;
-                        if (var40 <= ((bn) this).field_q) {
+                        this.field_P[var42] = var38;
+                        this.field_O[var42] = var39;
+                        this.field_N[var42] = var40;
+                        if (var40 <= this.field_q) {
                           break L23;
                         } else {
-                          ((bn) this).field_q = var40;
+                          this.field_q = var40;
                           break L23;
                         }
                       }
@@ -539,13 +535,13 @@ final class bn extends gf {
                         var38 = var40;
                         var40 = var4.a(false) + var41;
                         var41 = var40;
-                        ((bn) this).field_P[var42] = var38;
-                        ((bn) this).field_O[var42] = var39;
-                        ((bn) this).field_N[var42] = var40;
-                        if (var40 <= ((bn) this).field_q) {
+                        this.field_P[var42] = var38;
+                        this.field_O[var42] = var39;
+                        this.field_N[var42] = var40;
+                        if (var40 <= this.field_q) {
                           break L24;
                         } else {
-                          ((bn) this).field_q = var40;
+                          this.field_q = var40;
                           break L24;
                         }
                       }
@@ -556,11 +552,11 @@ final class bn extends gf {
                       var39 = var44;
                       var40 = var4.a(false) + var41;
                       var41 = var40;
-                      ((bn) this).field_P[var42] = var38;
-                      ((bn) this).field_O[var42] = var39;
-                      ((bn) this).field_N[var42] = var40;
-                      if (var40 > ((bn) this).field_q) {
-                        ((bn) this).field_q = var40;
+                      this.field_P[var42] = var38;
+                      this.field_O[var42] = var39;
+                      this.field_N[var42] = var40;
+                      if (var40 > this.field_q) {
+                        this.field_q = var40;
                         var42++;
                         continue L13;
                       } else {
@@ -575,30 +571,30 @@ final class bn extends gf {
                 }
               } else {
                 L25: {
-                  ((bn) this).field_j[var38] = (short)var4.f(674914976);
+                  this.field_j[var38] = (short)var4.f(674914976);
                   if (var12 != 1) {
                     break L25;
                   } else {
                     L26: {
                       var39 = var5.i(-119);
                       if ((var39 & 1) != 1) {
-                        ((bn) this).field_G[var38] = (byte) 0;
+                        this.field_G[var38] = (byte) 0;
                         break L26;
                       } else {
-                        ((bn) this).field_G[var38] = (byte) 1;
+                        this.field_G[var38] = (byte) 1;
                         var2 = 1;
                         break L26;
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((bn) this).field_Q[var38] = (byte) -1;
-                      ((bn) this).field_B[var38] = (short) -1;
+                      this.field_Q[var38] = (byte)-1;
+                      this.field_B[var38] = (short)-1;
                       break L25;
                     } else {
-                      ((bn) this).field_Q[var38] = (byte)(var39 >> 2);
-                      ((bn) this).field_B[var38] = ((bn) this).field_j[var38];
-                      ((bn) this).field_j[var38] = (short) 127;
-                      if (((bn) this).field_B[var38] == -1) {
+                      this.field_Q[var38] = (byte)(var39 >> 2);
+                      this.field_B[var38] = this.field_j[var38];
+                      this.field_j[var38] = (short)127;
+                      if (this.field_B[var38] == -1) {
                         break L25;
                       } else {
                         var3 = 1;
@@ -611,7 +607,7 @@ final class bn extends gf {
                   if (var13 != 255) {
                     break L27;
                   } else {
-                    ((bn) this).field_w[var38] = var6.g(0);
+                    this.field_w[var38] = var6.g(0);
                     break L27;
                   }
                 }
@@ -619,12 +615,12 @@ final class bn extends gf {
                   if (var14 != 1) {
                     break L28;
                   } else {
-                    ((bn) this).field_D[var38] = var7.g(0);
+                    this.field_D[var38] = var7.g(0);
                     break L28;
                   }
                 }
                 if (var15 == 1) {
-                  ((bn) this).field_r[var38] = var8.i(-110);
+                  this.field_r[var38] = var8.i(-110);
                   var38++;
                   continue L12;
                 } else {
@@ -662,14 +658,14 @@ final class bn extends gf {
                 break L31;
               }
             }
-            ((bn) this).field_K[var38] = var35 + var40;
-            ((bn) this).field_C[var38] = var36 + var41;
-            ((bn) this).field_v[var38] = var37 + var42;
-            var35 = ((bn) this).field_K[var38];
-            var36 = ((bn) this).field_C[var38];
-            var37 = ((bn) this).field_v[var38];
+            this.field_K[var38] = var35 + var40;
+            this.field_C[var38] = var36 + var41;
+            this.field_v[var38] = var37 + var42;
+            var35 = this.field_K[var38];
+            var36 = this.field_C[var38];
+            var37 = this.field_v[var38];
             if (var16 == 1) {
-              ((bn) this).field_I[var38] = var8.i(-104);
+              this.field_I[var38] = var8.i(-104);
               var38++;
               continue L11;
             } else {
@@ -681,6 +677,7 @@ final class bn extends gf {
     }
 
     private final int a(bn param0, int param1, short param2) {
+        int fieldTemp$1 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -690,27 +687,27 @@ final class bn extends gf {
         var6 = param0.field_v[param1];
         var7 = 0;
         L0: while (true) {
-          if (var7 >= ((bn) this).field_h) {
+          if (var7 >= this.field_h) {
             L1: {
-              ((bn) this).field_K[((bn) this).field_h] = var4;
-              ((bn) this).field_C[((bn) this).field_h] = var5;
-              ((bn) this).field_v[((bn) this).field_h] = var6;
-              ((bn) this).field_L[((bn) this).field_h] = (short)param2;
+              this.field_K[this.field_h] = var4;
+              this.field_C[this.field_h] = var5;
+              this.field_v[this.field_h] = var6;
+              this.field_L[this.field_h] = (short)param2;
               if (param0.field_I == null) {
                 break L1;
               } else {
-                ((bn) this).field_I[((bn) this).field_h] = param0.field_I[param1];
+                this.field_I[this.field_h] = param0.field_I[param1];
                 break L1;
               }
             }
-            int fieldTemp$1 = ((bn) this).field_h;
-            ((bn) this).field_h = ((bn) this).field_h + 1;
+            fieldTemp$1 = this.field_h;
+            this.field_h = this.field_h + 1;
             return fieldTemp$1;
           } else {
-            if (var4 == ((bn) this).field_K[var7]) {
-              if (var5 == ((bn) this).field_C[var7]) {
-                if (var6 == ((bn) this).field_v[var7]) {
-                  ((bn) this).field_L[var7] = (short)(((bn) this).field_L[var7] | param2);
+            if (var4 == this.field_K[var7]) {
+              if (var5 == this.field_C[var7]) {
+                if (var6 == this.field_v[var7]) {
+                  this.field_L[var7] = (short)(this.field_L[var7] | param2);
                   return var7;
                 } else {
                   var7++;
@@ -733,13 +730,13 @@ final class bn extends gf {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        for (var2 = 0; var2 < ((bn) this).field_h; var2++) {
-            var3 = ((bn) this).field_K[var2];
-            var4 = ((bn) this).field_C[var2];
-            var5 = ((bn) this).field_v[var2];
-            ((bn) this).field_K[var2] = param0[0] + (var3 * param0[3] + var4 * param0[6] + var5 * param0[9] >> 16);
-            ((bn) this).field_C[var2] = param0[1] + (var3 * param0[4] + var4 * param0[7] + var5 * param0[10] >> 16);
-            ((bn) this).field_v[var2] = param0[2] + (var3 * param0[5] + var4 * param0[8] + var5 * param0[11] >> 16);
+        for (var2 = 0; var2 < this.field_h; var2++) {
+            var3 = this.field_K[var2];
+            var4 = this.field_C[var2];
+            var5 = this.field_v[var2];
+            this.field_K[var2] = param0[0] + (var3 * param0[3] + var4 * param0[6] + var5 * param0[9] >> 16);
+            this.field_C[var2] = param0[1] + (var3 * param0[4] + var4 * param0[7] + var5 * param0[10] >> 16);
+            this.field_v[var2] = param0[2] + (var3 * param0[5] + var4 * param0[8] + var5 * param0[11] >> 16);
         }
         this.a();
     }
@@ -753,10 +750,11 @@ final class bn extends gf {
     }
 
     final kk a(int param0, int param1, int param2, int param3, int param4) {
-        return (kk) (Object) new dd((bn) this, param0, param1, param2, param3, param4);
+        return (kk) ((Object) new dd((bn) (this), param0, param1, param2, param3, param4));
     }
 
     final void b() {
+        fh dupTemp$1 = null;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -776,25 +774,25 @@ final class bn extends gf {
         cb var17 = null;
         cb var18 = null;
         cb var19 = null;
-        if (((bn) this).field_o == null) {
-          ((bn) this).field_o = new cb[((bn) this).field_q];
+        if (this.field_o == null) {
+          this.field_o = new cb[this.field_q];
           var1 = 0;
           L0: while (true) {
-            if (var1 >= ((bn) this).field_q) {
+            if (var1 >= this.field_q) {
               var1 = 0;
               L1: while (true) {
-                if (var1 >= ((bn) this).field_y) {
+                if (var1 >= this.field_y) {
                   return;
                 } else {
-                  var2 = ((bn) this).field_P[var1];
-                  var3 = ((bn) this).field_O[var1];
-                  var4 = ((bn) this).field_N[var1];
-                  var5 = ((bn) this).field_K[var3] - ((bn) this).field_K[var2];
-                  var6 = ((bn) this).field_C[var3] - ((bn) this).field_C[var2];
-                  var7 = ((bn) this).field_v[var3] - ((bn) this).field_v[var2];
-                  var8 = ((bn) this).field_K[var4] - ((bn) this).field_K[var2];
-                  var9 = ((bn) this).field_C[var4] - ((bn) this).field_C[var2];
-                  var10 = ((bn) this).field_v[var4] - ((bn) this).field_v[var2];
+                  var2 = this.field_P[var1];
+                  var3 = this.field_O[var1];
+                  var4 = this.field_N[var1];
+                  var5 = this.field_K[var3] - this.field_K[var2];
+                  var6 = this.field_C[var3] - this.field_C[var2];
+                  var7 = this.field_v[var3] - this.field_v[var2];
+                  var8 = this.field_K[var4] - this.field_K[var2];
+                  var9 = this.field_C[var4] - this.field_C[var2];
+                  var10 = this.field_v[var4] - this.field_v[var2];
                   var11 = var6 * var10 - var9 * var7;
                   var12 = var7 * var8 - var10 * var5;
                   var13 = var5 * var9 - var8 * var6;
@@ -829,8 +827,8 @@ final class bn extends gf {
                                     var11 = var11 * 256 / var14;
                                     var12 = var12 * 256 / var14;
                                     var13 = var13 * 256 / var14;
-                                    if (((bn) this).field_G != null) {
-                                      var15 = ((bn) this).field_G[var1];
+                                    if (this.field_G != null) {
+                                      var15 = this.field_G[var1];
                                       break L5;
                                     } else {
                                       var15 = 0;
@@ -840,15 +838,15 @@ final class bn extends gf {
                                   if (var15 != 0) {
                                     if (var15 == 1) {
                                       L6: {
-                                        if (((bn) this).field_p != null) {
+                                        if (this.field_p != null) {
                                           break L6;
                                         } else {
-                                          ((bn) this).field_p = new fh[((bn) this).field_y];
+                                          this.field_p = new fh[this.field_y];
                                           break L6;
                                         }
                                       }
-                                      fh dupTemp$1 = new fh();
-                                      ((bn) this).field_p[var1] = dupTemp$1;
+                                      dupTemp$1 = new fh();
+                                      this.field_p[var1] = dupTemp$1;
                                       var16 = dupTemp$1;
                                       var16.field_f = var11;
                                       var16.field_a = var12;
@@ -860,17 +858,17 @@ final class bn extends gf {
                                       continue L1;
                                     }
                                   } else {
-                                    var17 = ((bn) this).field_o[var2];
+                                    var17 = this.field_o[var2];
                                     var17.field_j = var17.field_j + var11;
                                     var17.field_d = var17.field_d + var12;
                                     var17.field_i = var17.field_i + var13;
                                     var17.field_g = var17.field_g + 1;
-                                    var18 = ((bn) this).field_o[var3];
+                                    var18 = this.field_o[var3];
                                     var18.field_j = var18.field_j + var11;
                                     var18.field_d = var18.field_d + var12;
                                     var18.field_i = var18.field_i + var13;
                                     var18.field_g = var18.field_g + 1;
-                                    var19 = ((bn) this).field_o[var4];
+                                    var19 = this.field_o[var4];
                                     var19.field_j = var19.field_j + var11;
                                     var19.field_d = var19.field_d + var12;
                                     var19.field_i = var19.field_i + var13;
@@ -895,7 +893,7 @@ final class bn extends gf {
                 }
               }
             } else {
-              ((bn) this).field_o[var1] = new cb();
+              this.field_o[var1] = new cb();
               var1++;
               continue L0;
             }
@@ -906,34 +904,35 @@ final class bn extends gf {
     }
 
     final int a(int param0, int param1, int param2, byte param3, byte param4, short param5, short param6) {
-        ((bn) this).field_P[((bn) this).field_y] = param0;
-        ((bn) this).field_O[((bn) this).field_y] = param1;
-        ((bn) this).field_N[((bn) this).field_y] = param2;
-        ((bn) this).field_G[((bn) this).field_y] = (byte)param3;
-        ((bn) this).field_Q[((bn) this).field_y] = (byte)param4;
-        ((bn) this).field_j[((bn) this).field_y] = (short)param5;
-        ((bn) this).field_B[((bn) this).field_y] = (short)param6;
-        int fieldTemp$0 = ((bn) this).field_y;
-        ((bn) this).field_y = ((bn) this).field_y + 1;
+        this.field_P[this.field_y] = param0;
+        this.field_O[this.field_y] = param1;
+        this.field_N[this.field_y] = param2;
+        this.field_G[this.field_y] = (byte)param3;
+        this.field_Q[this.field_y] = (byte)param4;
+        this.field_j[this.field_y] = (short)param5;
+        this.field_B[this.field_y] = (short)param6;
+        int fieldTemp$0 = this.field_y;
+        this.field_y = this.field_y + 1;
         return fieldTemp$0;
     }
 
     final int a(int param0, int param1, int param2) {
+        int fieldTemp$1 = 0;
         int var4 = 0;
         var4 = 0;
         L0: while (true) {
-          if (var4 >= ((bn) this).field_h) {
-            ((bn) this).field_K[((bn) this).field_h] = param0;
-            ((bn) this).field_C[((bn) this).field_h] = param1;
-            ((bn) this).field_v[((bn) this).field_h] = param2;
-            int fieldTemp$1 = ((bn) this).field_h + 1;
-            ((bn) this).field_h = ((bn) this).field_h + 1;
-            ((bn) this).field_q = fieldTemp$1;
-            return ((bn) this).field_h - 1;
+          if (var4 >= this.field_h) {
+            this.field_K[this.field_h] = param0;
+            this.field_C[this.field_h] = param1;
+            this.field_v[this.field_h] = param2;
+            fieldTemp$1 = this.field_h + 1;
+            this.field_h = this.field_h + 1;
+            this.field_q = fieldTemp$1;
+            return this.field_h - 1;
           } else {
-            if (((bn) this).field_K[var4] == param0) {
-              if (((bn) this).field_C[var4] == param1) {
-                if (((bn) this).field_v[var4] == param2) {
+            if (this.field_K[var4] == param0) {
+              if (this.field_C[var4] == param1) {
+                if (this.field_v[var4] == param2) {
                   return var4;
                 } else {
                   var4++;
@@ -952,6 +951,7 @@ final class bn extends gf {
     }
 
     private final void b(byte[] param0) {
+        byte dupTemp$1 = 0;
         p var2 = null;
         p var3 = null;
         p var4 = null;
@@ -1069,7 +1069,7 @@ final class bn extends gf {
           if (var11 <= 0) {
             break L2;
           } else {
-            ((bn) this).field_l = new byte[var11];
+            this.field_l = new byte[var11];
             var2.field_l = 0;
             var28 = 0;
             L3: while (true) {
@@ -1077,8 +1077,8 @@ final class bn extends gf {
                 break L2;
               } else {
                 L4: {
-                  byte dupTemp$1 = var2.g(0);
-                  ((bn) this).field_l[var28] = dupTemp$1;
+                  dupTemp$1 = var2.g(0);
+                  this.field_l[var28] = dupTemp$1;
                   var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
@@ -1196,19 +1196,19 @@ final class bn extends gf {
           var48 = var28;
           var28 = var28 + (var26 + var27 * 2);
           var49 = var28;
-          ((bn) this).field_h = var9;
-          ((bn) this).field_y = var10;
-          ((bn) this).field_R = var11;
-          ((bn) this).field_K = new int[var9];
-          ((bn) this).field_C = new int[var9];
-          ((bn) this).field_v = new int[var9];
-          ((bn) this).field_P = new int[var10];
-          ((bn) this).field_O = new int[var10];
-          ((bn) this).field_N = new int[var10];
+          this.field_h = var9;
+          this.field_y = var10;
+          this.field_R = var11;
+          this.field_K = new int[var9];
+          this.field_C = new int[var9];
+          this.field_v = new int[var9];
+          this.field_P = new int[var10];
+          this.field_O = new int[var10];
+          this.field_N = new int[var10];
           if (var19 != 1) {
             break L12;
           } else {
-            ((bn) this).field_I = new int[var9];
+            this.field_I = new int[var9];
             break L12;
           }
         }
@@ -1216,16 +1216,16 @@ final class bn extends gf {
           if (var13 == 0) {
             break L13;
           } else {
-            ((bn) this).field_G = new byte[var10];
+            this.field_G = new byte[var10];
             break L13;
           }
         }
         L14: {
           if (var15 != 255) {
-            ((bn) this).field_t = (byte)var15;
+            this.field_t = (byte)var15;
             break L14;
           } else {
-            ((bn) this).field_w = new byte[var10];
+            this.field_w = new byte[var10];
             break L14;
           }
         }
@@ -1233,7 +1233,7 @@ final class bn extends gf {
           if (var16 != 1) {
             break L15;
           } else {
-            ((bn) this).field_D = new byte[var10];
+            this.field_D = new byte[var10];
             break L15;
           }
         }
@@ -1241,7 +1241,7 @@ final class bn extends gf {
           if (var17 != 1) {
             break L16;
           } else {
-            ((bn) this).field_r = new int[var10];
+            this.field_r = new int[var10];
             break L16;
           }
         }
@@ -1249,7 +1249,7 @@ final class bn extends gf {
           if (var18 != 1) {
             break L17;
           } else {
-            ((bn) this).field_B = new short[var10];
+            this.field_B = new short[var10];
             break L17;
           }
         }
@@ -1260,37 +1260,37 @@ final class bn extends gf {
             if (var11 <= 0) {
               break L18;
             } else {
-              ((bn) this).field_Q = new byte[var10];
+              this.field_Q = new byte[var10];
               break L18;
             }
           }
         }
         L19: {
-          ((bn) this).field_j = new short[var10];
+          this.field_j = new short[var10];
           if (var11 <= 0) {
             break L19;
           } else {
             L20: {
-              ((bn) this).field_J = new short[var11];
-              ((bn) this).field_n = new short[var11];
-              ((bn) this).field_x = new short[var11];
+              this.field_J = new short[var11];
+              this.field_n = new short[var11];
+              this.field_x = new short[var11];
               if (var26 <= 0) {
                 break L20;
               } else {
-                ((bn) this).field_s = new short[var26];
-                ((bn) this).field_S = new short[var26];
-                ((bn) this).field_H = new short[var26];
-                ((bn) this).field_z = new byte[var26];
-                ((bn) this).field_k = new byte[var26];
-                ((bn) this).field_u = new byte[var26];
+                this.field_s = new short[var26];
+                this.field_S = new short[var26];
+                this.field_H = new short[var26];
+                this.field_z = new byte[var26];
+                this.field_k = new byte[var26];
+                this.field_u = new byte[var26];
                 break L20;
               }
             }
             if (var27 <= 0) {
               break L19;
             } else {
-              ((bn) this).field_E = new byte[var27];
-              ((bn) this).field_i = new byte[var27];
+              this.field_E = new byte[var27];
+              this.field_i = new byte[var27];
               break L19;
             }
           }
@@ -1316,7 +1316,7 @@ final class bn extends gf {
             var53 = 0;
             L22: while (true) {
               if (var53 >= var10) {
-                ((bn) this).field_q = -1;
+                this.field_q = -1;
                 var2.field_l = var36;
                 var3.field_l = var31;
                 var53 = 0;
@@ -1326,7 +1326,7 @@ final class bn extends gf {
                 var57 = 0;
                 L23: while (true) {
                   if (var57 >= var10) {
-                    ((bn) this).field_q = ((bn) this).field_q + 1;
+                    this.field_q = this.field_q + 1;
                     var2.field_l = var43;
                     var3.field_l = var44;
                     var4.field_l = var45;
@@ -1362,13 +1362,13 @@ final class bn extends gf {
                         return;
                       } else {
                         L27: {
-                          var58 = ((bn) this).field_l[var57] & 255;
+                          var58 = this.field_l[var57] & 255;
                           if (var58 != 0) {
                             break L27;
                           } else {
-                            ((bn) this).field_J[var57] = (short)var2.f(674914976);
-                            ((bn) this).field_n[var57] = (short)var2.f(674914976);
-                            ((bn) this).field_x[var57] = (short)var2.f(674914976);
+                            this.field_J[var57] = (short)var2.f(674914976);
+                            this.field_n[var57] = (short)var2.f(674914976);
+                            this.field_x[var57] = (short)var2.f(674914976);
                             break L27;
                           }
                         }
@@ -1376,15 +1376,15 @@ final class bn extends gf {
                           if (var58 != 1) {
                             break L28;
                           } else {
-                            ((bn) this).field_J[var57] = (short)var3.f(674914976);
-                            ((bn) this).field_n[var57] = (short)var3.f(674914976);
-                            ((bn) this).field_x[var57] = (short)var3.f(674914976);
-                            ((bn) this).field_s[var57] = (short)var4.f(674914976);
-                            ((bn) this).field_S[var57] = (short)var4.f(674914976);
-                            ((bn) this).field_H[var57] = (short)var4.f(674914976);
-                            ((bn) this).field_z[var57] = var5.g(0);
-                            ((bn) this).field_k[var57] = var6.g(0);
-                            ((bn) this).field_u[var57] = var7.g(0);
+                            this.field_J[var57] = (short)var3.f(674914976);
+                            this.field_n[var57] = (short)var3.f(674914976);
+                            this.field_x[var57] = (short)var3.f(674914976);
+                            this.field_s[var57] = (short)var4.f(674914976);
+                            this.field_S[var57] = (short)var4.f(674914976);
+                            this.field_H[var57] = (short)var4.f(674914976);
+                            this.field_z[var57] = var5.g(0);
+                            this.field_k[var57] = var6.g(0);
+                            this.field_u[var57] = var7.g(0);
                             break L28;
                           }
                         }
@@ -1392,30 +1392,30 @@ final class bn extends gf {
                           if (var58 != 2) {
                             break L29;
                           } else {
-                            ((bn) this).field_J[var57] = (short)var3.f(674914976);
-                            ((bn) this).field_n[var57] = (short)var3.f(674914976);
-                            ((bn) this).field_x[var57] = (short)var3.f(674914976);
-                            ((bn) this).field_s[var57] = (short)var4.f(674914976);
-                            ((bn) this).field_S[var57] = (short)var4.f(674914976);
-                            ((bn) this).field_H[var57] = (short)var4.f(674914976);
-                            ((bn) this).field_z[var57] = var5.g(0);
-                            ((bn) this).field_k[var57] = var6.g(0);
-                            ((bn) this).field_u[var57] = var7.g(0);
-                            ((bn) this).field_E[var57] = var7.g(0);
-                            ((bn) this).field_i[var57] = var7.g(0);
+                            this.field_J[var57] = (short)var3.f(674914976);
+                            this.field_n[var57] = (short)var3.f(674914976);
+                            this.field_x[var57] = (short)var3.f(674914976);
+                            this.field_s[var57] = (short)var4.f(674914976);
+                            this.field_S[var57] = (short)var4.f(674914976);
+                            this.field_H[var57] = (short)var4.f(674914976);
+                            this.field_z[var57] = var5.g(0);
+                            this.field_k[var57] = var6.g(0);
+                            this.field_u[var57] = var7.g(0);
+                            this.field_E[var57] = var7.g(0);
+                            this.field_i[var57] = var7.g(0);
                             break L29;
                           }
                         }
                         if (var58 == 3) {
-                          ((bn) this).field_J[var57] = (short)var3.f(674914976);
-                          ((bn) this).field_n[var57] = (short)var3.f(674914976);
-                          ((bn) this).field_x[var57] = (short)var3.f(674914976);
-                          ((bn) this).field_s[var57] = (short)var4.f(674914976);
-                          ((bn) this).field_S[var57] = (short)var4.f(674914976);
-                          ((bn) this).field_H[var57] = (short)var4.f(674914976);
-                          ((bn) this).field_z[var57] = var5.g(0);
-                          ((bn) this).field_k[var57] = var6.g(0);
-                          ((bn) this).field_u[var57] = var7.g(0);
+                          this.field_J[var57] = (short)var3.f(674914976);
+                          this.field_n[var57] = (short)var3.f(674914976);
+                          this.field_x[var57] = (short)var3.f(674914976);
+                          this.field_s[var57] = (short)var4.f(674914976);
+                          this.field_S[var57] = (short)var4.f(674914976);
+                          this.field_H[var57] = (short)var4.f(674914976);
+                          this.field_z[var57] = var5.g(0);
+                          this.field_k[var57] = var6.g(0);
+                          this.field_u[var57] = var7.g(0);
                           var57++;
                           continue L24;
                         } else {
@@ -1437,28 +1437,28 @@ final class bn extends gf {
                           var56 = var54;
                           var55 = var2.a(false) + var56;
                           var56 = var55;
-                          ((bn) this).field_P[var57] = var53;
-                          ((bn) this).field_O[var57] = var54;
-                          ((bn) this).field_N[var57] = var55;
-                          if (var53 <= ((bn) this).field_q) {
+                          this.field_P[var57] = var53;
+                          this.field_O[var57] = var54;
+                          this.field_N[var57] = var55;
+                          if (var53 <= this.field_q) {
                             break L31;
                           } else {
-                            ((bn) this).field_q = var53;
+                            this.field_q = var53;
                             break L31;
                           }
                         }
                         L32: {
-                          if (var54 <= ((bn) this).field_q) {
+                          if (var54 <= this.field_q) {
                             break L32;
                           } else {
-                            ((bn) this).field_q = var54;
+                            this.field_q = var54;
                             break L32;
                           }
                         }
-                        if (var55 <= ((bn) this).field_q) {
+                        if (var55 <= this.field_q) {
                           break L30;
                         } else {
-                          ((bn) this).field_q = var55;
+                          this.field_q = var55;
                           break L30;
                         }
                       }
@@ -1470,13 +1470,13 @@ final class bn extends gf {
                         var54 = var55;
                         var55 = var2.a(false) + var56;
                         var56 = var55;
-                        ((bn) this).field_P[var57] = var53;
-                        ((bn) this).field_O[var57] = var54;
-                        ((bn) this).field_N[var57] = var55;
-                        if (var55 <= ((bn) this).field_q) {
+                        this.field_P[var57] = var53;
+                        this.field_O[var57] = var54;
+                        this.field_N[var57] = var55;
+                        if (var55 <= this.field_q) {
                           break L33;
                         } else {
-                          ((bn) this).field_q = var55;
+                          this.field_q = var55;
                           break L33;
                         }
                       }
@@ -1488,13 +1488,13 @@ final class bn extends gf {
                         var53 = var55;
                         var55 = var2.a(false) + var56;
                         var56 = var55;
-                        ((bn) this).field_P[var57] = var53;
-                        ((bn) this).field_O[var57] = var54;
-                        ((bn) this).field_N[var57] = var55;
-                        if (var55 <= ((bn) this).field_q) {
+                        this.field_P[var57] = var53;
+                        this.field_O[var57] = var54;
+                        this.field_N[var57] = var55;
+                        if (var55 <= this.field_q) {
                           break L34;
                         } else {
-                          ((bn) this).field_q = var55;
+                          this.field_q = var55;
                           break L34;
                         }
                       }
@@ -1505,11 +1505,11 @@ final class bn extends gf {
                       var54 = var59;
                       var55 = var2.a(false) + var56;
                       var56 = var55;
-                      ((bn) this).field_P[var57] = var53;
-                      ((bn) this).field_O[var57] = var54;
-                      ((bn) this).field_N[var57] = var55;
-                      if (var55 > ((bn) this).field_q) {
-                        ((bn) this).field_q = var55;
+                      this.field_P[var57] = var53;
+                      this.field_O[var57] = var54;
+                      this.field_N[var57] = var55;
+                      if (var55 > this.field_q) {
+                        this.field_q = var55;
                         var57++;
                         continue L23;
                       } else {
@@ -1524,11 +1524,11 @@ final class bn extends gf {
                 }
               } else {
                 L35: {
-                  ((bn) this).field_j[var53] = (short)var2.f(674914976);
+                  this.field_j[var53] = (short)var2.f(674914976);
                   if (var13 == 0) {
                     break L35;
                   } else {
-                    ((bn) this).field_G[var53] = var3.g(0);
+                    this.field_G[var53] = var3.g(0);
                     break L35;
                   }
                 }
@@ -1536,7 +1536,7 @@ final class bn extends gf {
                   if (var15 != 255) {
                     break L36;
                   } else {
-                    ((bn) this).field_w[var53] = var4.g(0);
+                    this.field_w[var53] = var4.g(0);
                     break L36;
                   }
                 }
@@ -1544,7 +1544,7 @@ final class bn extends gf {
                   if (var16 != 1) {
                     break L37;
                   } else {
-                    ((bn) this).field_D[var53] = var5.g(0);
+                    this.field_D[var53] = var5.g(0);
                     break L37;
                   }
                 }
@@ -1552,7 +1552,7 @@ final class bn extends gf {
                   if (var17 != 1) {
                     break L38;
                   } else {
-                    ((bn) this).field_r[var53] = var6.i(-111);
+                    this.field_r[var53] = var6.i(-111);
                     break L38;
                   }
                 }
@@ -1560,17 +1560,17 @@ final class bn extends gf {
                   if (var18 != 1) {
                     break L39;
                   } else {
-                    ((bn) this).field_B[var53] = (short)(var7.f(674914976) - 1);
+                    this.field_B[var53] = (short)(var7.f(674914976) - 1);
                     break L39;
                   }
                 }
-                if (((bn) this).field_Q != null) {
-                  if (((bn) this).field_B[var53] == -1) {
-                    ((bn) this).field_Q[var53] = (byte) -1;
+                if (this.field_Q != null) {
+                  if (this.field_B[var53] == -1) {
+                    this.field_Q[var53] = (byte)-1;
                     var53++;
                     continue L22;
                   } else {
-                    ((bn) this).field_Q[var53] = (byte)(var8.i(-125) - 1);
+                    this.field_Q[var53] = (byte)(var8.i(-125) - 1);
                     var53++;
                     continue L22;
                   }
@@ -1609,14 +1609,14 @@ final class bn extends gf {
                 break L42;
               }
             }
-            ((bn) this).field_K[var53] = var50 + var55;
-            ((bn) this).field_C[var53] = var51 + var56;
-            ((bn) this).field_v[var53] = var52 + var57;
-            var50 = ((bn) this).field_K[var53];
-            var51 = ((bn) this).field_C[var53];
-            var52 = ((bn) this).field_v[var53];
+            this.field_K[var53] = var50 + var55;
+            this.field_C[var53] = var51 + var56;
+            this.field_v[var53] = var52 + var57;
+            var50 = this.field_K[var53];
+            var51 = this.field_C[var53];
+            var52 = this.field_v[var53];
             if (var19 == 1) {
-              ((bn) this).field_I[var53] = var6.i(-115);
+              this.field_I[var53] = var6.i(-115);
               var53++;
               continue L21;
             } else {
@@ -1630,10 +1630,10 @@ final class bn extends gf {
     private bn(byte[] param0) {
         L0: {
           L1: {
-            ((bn) this).field_t = (byte) 0;
-            ((bn) this).field_y = 0;
-            ((bn) this).field_q = 0;
-            ((bn) this).field_h = 0;
+            this.field_t = (byte) 0;
+            this.field_y = 0;
+            this.field_q = 0;
+            this.field_h = 0;
             if (param0[param0.length - 1] != -1) {
               break L1;
             } else {
@@ -1651,41 +1651,42 @@ final class bn extends gf {
     }
 
     bn(int param0, int param1, int param2) {
-        ((bn) this).field_t = (byte) 0;
-        ((bn) this).field_y = 0;
-        ((bn) this).field_q = 0;
-        ((bn) this).field_h = 0;
-        ((bn) this).field_K = new int[param0];
-        ((bn) this).field_C = new int[param0];
-        ((bn) this).field_v = new int[param0];
-        ((bn) this).field_I = new int[param0];
-        ((bn) this).field_P = new int[param1];
-        ((bn) this).field_O = new int[param1];
-        ((bn) this).field_N = new int[param1];
-        ((bn) this).field_G = new byte[param1];
-        ((bn) this).field_w = new byte[param1];
-        ((bn) this).field_D = new byte[param1];
-        ((bn) this).field_j = new short[param1];
-        ((bn) this).field_B = new short[param1];
-        ((bn) this).field_Q = new byte[param1];
-        ((bn) this).field_r = new int[param1];
+        this.field_t = (byte) 0;
+        this.field_y = 0;
+        this.field_q = 0;
+        this.field_h = 0;
+        this.field_K = new int[param0];
+        this.field_C = new int[param0];
+        this.field_v = new int[param0];
+        this.field_I = new int[param0];
+        this.field_P = new int[param1];
+        this.field_O = new int[param1];
+        this.field_N = new int[param1];
+        this.field_G = new byte[param1];
+        this.field_w = new byte[param1];
+        this.field_D = new byte[param1];
+        this.field_j = new short[param1];
+        this.field_B = new short[param1];
+        this.field_Q = new byte[param1];
+        this.field_r = new int[param1];
         if (param2 > 0) {
-            ((bn) this).field_l = new byte[param2];
-            ((bn) this).field_J = new short[param2];
-            ((bn) this).field_n = new short[param2];
-            ((bn) this).field_x = new short[param2];
-            ((bn) this).field_s = new short[param2];
-            ((bn) this).field_S = new short[param2];
-            ((bn) this).field_H = new short[param2];
-            ((bn) this).field_z = new byte[param2];
-            ((bn) this).field_k = new byte[param2];
-            ((bn) this).field_u = new byte[param2];
-            ((bn) this).field_E = new byte[param2];
-            ((bn) this).field_i = new byte[param2];
+            this.field_l = new byte[param2];
+            this.field_J = new short[param2];
+            this.field_n = new short[param2];
+            this.field_x = new short[param2];
+            this.field_s = new short[param2];
+            this.field_S = new short[param2];
+            this.field_H = new short[param2];
+            this.field_z = new byte[param2];
+            this.field_k = new byte[param2];
+            this.field_u = new byte[param2];
+            this.field_E = new byte[param2];
+            this.field_i = new byte[param2];
         }
     }
 
     bn(bn[] param0, int param1) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1768,36 +1769,36 @@ final class bn extends gf {
         int stackOut_24_1 = 0;
         int stackOut_23_0 = 0;
         int stackOut_23_1 = 0;
-        ((bn) this).field_t = (byte) 0;
-        ((bn) this).field_y = 0;
-        ((bn) this).field_q = 0;
-        ((bn) this).field_h = 0;
+        this.field_t = (byte) 0;
+        this.field_y = 0;
+        this.field_q = 0;
+        this.field_h = 0;
         var3 = 0;
         var4 = 0;
         var5 = 0;
         var6 = 0;
         var7 = 0;
         var8 = 0;
-        ((bn) this).field_h = 0;
-        ((bn) this).field_y = 0;
-        ((bn) this).field_R = 0;
-        ((bn) this).field_t = (byte) -1;
+        this.field_h = 0;
+        this.field_y = 0;
+        this.field_R = 0;
+        this.field_t = (byte) -1;
         var9 = 0;
         L0: while (true) {
           if (var9 >= param1) {
             L1: {
-              ((bn) this).field_K = new int[((bn) this).field_h];
-              ((bn) this).field_C = new int[((bn) this).field_h];
-              ((bn) this).field_v = new int[((bn) this).field_h];
-              ((bn) this).field_I = new int[((bn) this).field_h];
-              ((bn) this).field_L = new short[((bn) this).field_h];
-              ((bn) this).field_P = new int[((bn) this).field_y];
-              ((bn) this).field_O = new int[((bn) this).field_y];
-              ((bn) this).field_N = new int[((bn) this).field_y];
+              this.field_K = new int[this.field_h];
+              this.field_C = new int[this.field_h];
+              this.field_v = new int[this.field_h];
+              this.field_I = new int[this.field_h];
+              this.field_L = new short[this.field_h];
+              this.field_P = new int[this.field_y];
+              this.field_O = new int[this.field_y];
+              this.field_N = new int[this.field_y];
               if (var3 == 0) {
                 break L1;
               } else {
-                ((bn) this).field_G = new byte[((bn) this).field_y];
+                this.field_G = new byte[this.field_y];
                 break L1;
               }
             }
@@ -1805,7 +1806,7 @@ final class bn extends gf {
               if (var4 == 0) {
                 break L2;
               } else {
-                ((bn) this).field_w = new byte[((bn) this).field_y];
+                this.field_w = new byte[this.field_y];
                 break L2;
               }
             }
@@ -1813,7 +1814,7 @@ final class bn extends gf {
               if (var5 == 0) {
                 break L3;
               } else {
-                ((bn) this).field_D = new byte[((bn) this).field_y];
+                this.field_D = new byte[this.field_y];
                 break L3;
               }
             }
@@ -1821,7 +1822,7 @@ final class bn extends gf {
               if (var6 == 0) {
                 break L4;
               } else {
-                ((bn) this).field_r = new int[((bn) this).field_y];
+                this.field_r = new int[this.field_y];
                 break L4;
               }
             }
@@ -1829,7 +1830,7 @@ final class bn extends gf {
               if (var7 == 0) {
                 break L5;
               } else {
-                ((bn) this).field_B = new short[((bn) this).field_y];
+                this.field_B = new short[this.field_y];
                 break L5;
               }
             }
@@ -1837,39 +1838,39 @@ final class bn extends gf {
               if (var8 == 0) {
                 break L6;
               } else {
-                ((bn) this).field_Q = new byte[((bn) this).field_y];
+                this.field_Q = new byte[this.field_y];
                 break L6;
               }
             }
             L7: {
-              ((bn) this).field_j = new short[((bn) this).field_y];
-              ((bn) this).field_F = new short[((bn) this).field_y];
-              if (((bn) this).field_R <= 0) {
+              this.field_j = new short[this.field_y];
+              this.field_F = new short[this.field_y];
+              if (this.field_R <= 0) {
                 break L7;
               } else {
-                ((bn) this).field_l = new byte[((bn) this).field_R];
-                ((bn) this).field_J = new short[((bn) this).field_R];
-                ((bn) this).field_n = new short[((bn) this).field_R];
-                ((bn) this).field_x = new short[((bn) this).field_R];
-                ((bn) this).field_s = new short[((bn) this).field_R];
-                ((bn) this).field_S = new short[((bn) this).field_R];
-                ((bn) this).field_H = new short[((bn) this).field_R];
-                ((bn) this).field_z = new byte[((bn) this).field_R];
-                ((bn) this).field_k = new byte[((bn) this).field_R];
-                ((bn) this).field_u = new byte[((bn) this).field_R];
-                ((bn) this).field_E = new byte[((bn) this).field_R];
-                ((bn) this).field_i = new byte[((bn) this).field_R];
+                this.field_l = new byte[this.field_R];
+                this.field_J = new short[this.field_R];
+                this.field_n = new short[this.field_R];
+                this.field_x = new short[this.field_R];
+                this.field_s = new short[this.field_R];
+                this.field_S = new short[this.field_R];
+                this.field_H = new short[this.field_R];
+                this.field_z = new byte[this.field_R];
+                this.field_k = new byte[this.field_R];
+                this.field_u = new byte[this.field_R];
+                this.field_E = new byte[this.field_R];
+                this.field_i = new byte[this.field_R];
                 break L7;
               }
             }
-            ((bn) this).field_h = 0;
-            ((bn) this).field_y = 0;
-            ((bn) this).field_R = 0;
+            this.field_h = 0;
+            this.field_y = 0;
+            this.field_R = 0;
             var9 = 0;
             L8: while (true) {
               if (var9 >= param1) {
                 var9 = 0;
-                ((bn) this).field_q = ((bn) this).field_h;
+                this.field_q = this.field_h;
                 var10 = 0;
                 L9: while (true) {
                   if (var10 >= param1) {
@@ -1888,14 +1889,14 @@ final class bn extends gf {
                           L11: while (true) {
                             if (var17 < var19.field_R) {
                               L12: {
-                                ((bn) this).field_l[((bn) this).field_R] = var16.field_l[var17];
+                                this.field_l[this.field_R] = var16.field_l[var17];
                                 var14 = var16.field_l[var17];
                                 if (var14 != 0) {
                                   break L12;
                                 } else {
-                                  ((bn) this).field_J[((bn) this).field_R] = (short)this.a(var16, (int) var16.field_J[var17], (short) var12);
-                                  ((bn) this).field_n[((bn) this).field_R] = (short)this.a(var16, (int) var16.field_n[var17], (short) var12);
-                                  ((bn) this).field_x[((bn) this).field_R] = (short)this.a(var16, (int) var16.field_x[var17], (short) var12);
+                                  this.field_J[this.field_R] = (short)this.a(var16, (int) var16.field_J[var17], (short) var12);
+                                  this.field_n[this.field_R] = (short)this.a(var16, (int) var16.field_n[var17], (short) var12);
+                                  this.field_x[this.field_R] = (short)this.a(var16, (int) var16.field_x[var17], (short) var12);
                                   break L12;
                                 }
                               }
@@ -1906,15 +1907,15 @@ final class bn extends gf {
                                   if (var14 > 3) {
                                     break L13;
                                   } else {
-                                    ((bn) this).field_J[((bn) this).field_R] = var16.field_J[var17];
-                                    ((bn) this).field_n[((bn) this).field_R] = var16.field_n[var17];
-                                    ((bn) this).field_x[((bn) this).field_R] = var16.field_x[var17];
-                                    ((bn) this).field_s[((bn) this).field_R] = var16.field_s[var17];
-                                    ((bn) this).field_S[((bn) this).field_R] = var16.field_S[var17];
-                                    ((bn) this).field_H[((bn) this).field_R] = var16.field_H[var17];
-                                    ((bn) this).field_z[((bn) this).field_R] = var16.field_z[var17];
-                                    ((bn) this).field_k[((bn) this).field_R] = var16.field_k[var17];
-                                    ((bn) this).field_u[((bn) this).field_R] = var16.field_u[var17];
+                                    this.field_J[this.field_R] = var16.field_J[var17];
+                                    this.field_n[this.field_R] = var16.field_n[var17];
+                                    this.field_x[this.field_R] = var16.field_x[var17];
+                                    this.field_s[this.field_R] = var16.field_s[var17];
+                                    this.field_S[this.field_R] = var16.field_S[var17];
+                                    this.field_H[this.field_R] = var16.field_H[var17];
+                                    this.field_z[this.field_R] = var16.field_z[var17];
+                                    this.field_k[this.field_R] = var16.field_k[var17];
+                                    this.field_u[this.field_R] = var16.field_u[var17];
                                     break L13;
                                   }
                                 }
@@ -1923,12 +1924,12 @@ final class bn extends gf {
                                 if (var14 != 2) {
                                   break L14;
                                 } else {
-                                  ((bn) this).field_E[((bn) this).field_R] = var16.field_E[var17];
-                                  ((bn) this).field_i[((bn) this).field_R] = var16.field_i[var17];
+                                  this.field_E[this.field_R] = var16.field_E[var17];
+                                  this.field_i[this.field_R] = var16.field_i[var17];
                                   break L14;
                                 }
                               }
-                              ((bn) this).field_R = ((bn) this).field_R + 1;
+                              this.field_R = this.field_R + 1;
                               var17++;
                               continue L11;
                             } else {
@@ -1940,9 +1941,9 @@ final class bn extends gf {
                           if (var8 != 0) {
                             L15: {
                               L16: {
-                                int incrementValue$1 = var9;
+                                incrementValue$1 = var9;
                                 var9++;
-                                stackOut_74_0 = ((bn) this).field_Q;
+                                stackOut_74_0 = this.field_Q;
                                 stackOut_74_1 = incrementValue$1;
                                 stackIn_77_0 = stackOut_74_0;
                                 stackIn_77_1 = stackOut_74_1;
@@ -1951,7 +1952,7 @@ final class bn extends gf {
                                 if (var19.field_Q == null) {
                                   break L16;
                                 } else {
-                                  stackOut_75_0 = (byte[]) (Object) stackIn_75_0;
+                                  stackOut_75_0 = (byte[]) ((Object) stackIn_75_0);
                                   stackOut_75_1 = stackIn_75_1;
                                   stackIn_77_0 = stackOut_75_0;
                                   stackIn_77_1 = stackOut_75_1;
@@ -1960,9 +1961,9 @@ final class bn extends gf {
                                   if (var16.field_Q[var13] == -1) {
                                     break L16;
                                   } else {
-                                    stackOut_76_0 = (byte[]) (Object) stackIn_76_0;
+                                    stackOut_76_0 = (byte[]) ((Object) stackIn_76_0);
                                     stackOut_76_1 = stackIn_76_1;
-                                    stackOut_76_2 = var16.field_Q[var13] + ((bn) this).field_R;
+                                    stackOut_76_2 = var16.field_Q[var13] + this.field_R;
                                     stackIn_78_0 = stackOut_76_0;
                                     stackIn_78_1 = stackOut_76_1;
                                     stackIn_78_2 = stackOut_76_2;
@@ -1970,7 +1971,7 @@ final class bn extends gf {
                                   }
                                 }
                               }
-                              stackOut_77_0 = (byte[]) (Object) stackIn_77_0;
+                              stackOut_77_0 = (byte[]) ((Object) stackIn_77_0);
                               stackOut_77_1 = stackIn_77_1;
                               stackOut_77_2 = -1;
                               stackIn_78_0 = stackOut_77_0;
@@ -2009,7 +2010,7 @@ final class bn extends gf {
                           if (var18.field_G == null) {
                             break L18;
                           } else {
-                            ((bn) this).field_G[((bn) this).field_y] = var15.field_G[var12];
+                            this.field_G[this.field_y] = var15.field_G[var12];
                             break L18;
                           }
                         }
@@ -2019,10 +2020,10 @@ final class bn extends gf {
                           break L19;
                         } else {
                           if (var18.field_w == null) {
-                            ((bn) this).field_w[((bn) this).field_y] = var15.field_t;
+                            this.field_w[this.field_y] = var15.field_t;
                             break L19;
                           } else {
-                            ((bn) this).field_w[((bn) this).field_y] = var15.field_w[var12];
+                            this.field_w[this.field_y] = var15.field_w[var12];
                             break L19;
                           }
                         }
@@ -2034,7 +2035,7 @@ final class bn extends gf {
                           if (var18.field_D == null) {
                             break L20;
                           } else {
-                            ((bn) this).field_D[((bn) this).field_y] = var15.field_D[var12];
+                            this.field_D[this.field_y] = var15.field_D[var12];
                             break L20;
                           }
                         }
@@ -2046,7 +2047,7 @@ final class bn extends gf {
                           if (var18.field_r == null) {
                             break L21;
                           } else {
-                            ((bn) this).field_r[((bn) this).field_y] = var15.field_r[var12];
+                            this.field_r[this.field_y] = var15.field_r[var12];
                             break L21;
                           }
                         }
@@ -2056,20 +2057,20 @@ final class bn extends gf {
                           break L22;
                         } else {
                           if (var18.field_B == null) {
-                            ((bn) this).field_B[((bn) this).field_y] = (short) -1;
+                            this.field_B[this.field_y] = (short)-1;
                             break L22;
                           } else {
-                            ((bn) this).field_B[((bn) this).field_y] = var15.field_B[var12];
+                            this.field_B[this.field_y] = var15.field_B[var12];
                             break L22;
                           }
                         }
                       }
-                      ((bn) this).field_j[((bn) this).field_y] = var15.field_j[var12];
-                      ((bn) this).field_F[((bn) this).field_y] = (short)var10;
-                      ((bn) this).field_P[((bn) this).field_y] = this.a(var15, var15.field_P[var12], (short) var10);
-                      ((bn) this).field_O[((bn) this).field_y] = this.a(var15, var15.field_O[var12], (short) var10);
-                      ((bn) this).field_N[((bn) this).field_y] = this.a(var15, var15.field_N[var12], (short) var10);
-                      ((bn) this).field_y = ((bn) this).field_y + 1;
+                      this.field_j[this.field_y] = var15.field_j[var12];
+                      this.field_F[this.field_y] = (short)var10;
+                      this.field_P[this.field_y] = this.a(var15, var15.field_P[var12], (short) var10);
+                      this.field_O[this.field_y] = this.a(var15, var15.field_O[var12], (short) var10);
+                      this.field_N[this.field_y] = this.a(var15, var15.field_N[var12], (short) var10);
+                      this.field_y = this.field_y + 1;
                       var12++;
                       continue L17;
                     } else {
@@ -2087,19 +2088,19 @@ final class bn extends gf {
             var10_ref_bn = param0[var9];
             if (var10_ref_bn != null) {
               L23: {
-                ((bn) this).field_h = ((bn) this).field_h + var10_ref_bn.field_h;
-                ((bn) this).field_y = ((bn) this).field_y + var10_ref_bn.field_y;
-                ((bn) this).field_R = ((bn) this).field_R + var10_ref_bn.field_R;
+                this.field_h = this.field_h + var10_ref_bn.field_h;
+                this.field_y = this.field_y + var10_ref_bn.field_y;
+                this.field_R = this.field_R + var10_ref_bn.field_R;
                 if (var10_ref_bn.field_w == null) {
                   L24: {
-                    if (((bn) this).field_t != -1) {
+                    if (this.field_t != -1) {
                       break L24;
                     } else {
-                      ((bn) this).field_t = var10_ref_bn.field_t;
+                      this.field_t = var10_ref_bn.field_t;
                       break L24;
                     }
                   }
-                  if (((bn) this).field_t == var10_ref_bn.field_t) {
+                  if (this.field_t == var10_ref_bn.field_t) {
                     break L23;
                   } else {
                     var4 = 1;

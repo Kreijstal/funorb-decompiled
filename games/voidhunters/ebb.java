@@ -7,6 +7,9 @@ final class ebb {
 
     final static void a(byte param0) {
         ola.field_p = null;
+        if (param0 != -74) {
+            field_a = (dja) null;
+        }
     }
 
     public static void a(int param0) {
@@ -19,11 +22,7 @@ final class ebb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_a = (dja) (Object) new ok();
+        field_a = (dja) ((Object) new ok());
         field_b = true;
     }
 }

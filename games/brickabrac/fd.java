@@ -10,17 +10,23 @@ final class fd {
     private static String field_z;
 
     public static void a(int param0) {
-        field_e = null;
-        field_a = null;
-        field_d = null;
-        field_b = null;
+        if (param0 != 0) {
+          field_e = (java.awt.Frame) null;
+          field_e = null;
+          field_a = null;
+          field_d = null;
+          field_b = null;
+          return;
+        } else {
+          field_e = null;
+          field_a = null;
+          field_d = null;
+          field_b = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fd.A(";
         field_b = "This password contains your Player Name, and would be easy to guess";
         field_d = new ki[12];

@@ -10,7 +10,10 @@ abstract class hr extends or {
     }
 
     public static void a(boolean param0) {
-        field_d = null;
+        field_d = (pa[][]) null;
+        if (!param0) {
+            return;
+        }
         field_e = null;
     }
 
@@ -21,10 +24,14 @@ abstract class hr extends or {
             gg.b((byte) -98);
             vn.field_f.e((byte) 74);
             vr.field_b = new ce(se.field_a, (String) null, nf.field_a, param2, param0);
-            ak.field_d = new ad(vn.field_f, (ea) (Object) vr.field_b);
-            vn.field_f.a((ea) (Object) ak.field_d, 0);
+            ak.field_d = new ad(vn.field_f, vr.field_b);
+            if (param3 != -61) {
+                String var5 = (String) null;
+                hr.a(0.47493258118629456f, 21, false, (String) null);
+            }
+            vn.field_f.a(ak.field_d, 0);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "hr.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + -61 + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "hr.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -85,7 +92,7 @@ abstract class hr extends or {
         try {
           L0: {
             L1: {
-              var6_int = 1;
+              var6_int = 123 % ((param2 - 23) / 53);
               var7 = 0;
               var8 = 0;
               if (param4 == null) {
@@ -105,23 +112,23 @@ abstract class hr extends or {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var6;
+            stackOut_4_0 = (RuntimeException) (var6);
             stackOut_4_1 = new StringBuilder().append("hr.E(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -130,23 +137,23 @@ abstract class hr extends or {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -155,23 +162,23 @@ abstract class hr extends or {
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(-106).append(',').append(param3).append(',');
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param4 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -179,22 +186,27 @@ abstract class hr extends or {
               break L4;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param5 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param5 + ')');
         }
         return stackIn_3_0;
     }
 
     final static void a(float param0, int param1, boolean param2, String param3) {
+        ha discarded$0 = null;
         try {
+            if (param1 != 0) {
+                java.awt.Canvas var5 = (java.awt.Canvas) null;
+                discarded$0 = hr.a((gk) null, (d) null, -124, -29, (java.awt.Canvas) null, -9);
+            }
             if (null == fu.field_d) {
                 fu.field_d = new ng(vn.field_f, uf.field_e);
-                vn.field_f.a((ea) (Object) fu.field_d, 0);
+                vn.field_f.a(fu.field_d, 0);
             }
             fu.field_d.a(param2, -111, param3, param0);
             vp.a();
             si.a(true, -32106);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "hr.B(" + param0 + ',' + 0 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "hr.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

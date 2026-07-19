@@ -34,23 +34,19 @@ final class rta extends vg {
     }
 
     final void a(int param0) {
-        ((rta) this).field_x = null;
-        ((rta) this).field_n = null;
-        ((rta) this).field_y = null;
+        this.field_x = null;
+        this.field_n = null;
+        this.field_y = null;
         if (param0 != 5806) {
             return;
         }
-        ((rta) this).field_v = null;
+        this.field_v = null;
     }
 
     rta() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Password: ";
         field_g = 64;
     }

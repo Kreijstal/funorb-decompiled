@@ -13,8 +13,8 @@ final class hl implements Iterable {
     final pj b(byte param0) {
         pj var2 = null;
         if (param0 == -61) {
-          var2 = ((hl) this).field_c.field_m;
-          if (var2 == ((hl) this).field_c) {
+          var2 = this.field_c.field_m;
+          if (var2 == this.field_c) {
             return null;
           } else {
             var2.c(param0 + -5045);
@@ -22,8 +22,8 @@ final class hl implements Iterable {
           }
         } else {
           hl.a(102);
-          var2 = ((hl) this).field_c.field_m;
-          if (var2 == ((hl) this).field_c) {
+          var2 = this.field_c.field_m;
+          if (var2 == this.field_c) {
             return null;
           } else {
             var2.c(param0 + -5045);
@@ -44,6 +44,7 @@ final class hl implements Iterable {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_7_0 = null;
         pj stackOut_9_0 = null;
@@ -66,61 +67,74 @@ final class hl implements Iterable {
               }
             }
             L2: {
-              if (param0 == null) {
-                var3 = ((hl) this).field_c.field_m;
-                break L2;
-              } else {
-                var3 = param0;
-                break L2;
+              L3: {
+                if (param0 == null) {
+                  break L3;
+                } else {
+                  var3 = param0;
+                  if (!Sumoblitz.field_L) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
+                }
               }
+              var3 = this.field_c.field_m;
+              break L2;
             }
-            if (var3 == ((hl) this).field_c) {
-              ((hl) this).field_a = null;
+            if (var3 == this.field_c) {
+              this.field_a = null;
               stackOut_7_0 = null;
               stackIn_8_0 = stackOut_7_0;
-              return (pj) (Object) stackIn_8_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              ((hl) this).field_a = var3.field_m;
-              stackOut_9_0 = (pj) var3;
+              this.field_a = var3.field_m;
+              stackOut_9_0 = (pj) (var3);
               stackIn_10_0 = stackOut_9_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3_ref;
+            stackOut_11_0 = (RuntimeException) (var3_ref);
             stackOut_11_1 = new StringBuilder().append("hl.A(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
-              break L3;
+              break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
               stackIn_14_2 = stackOut_12_2;
-              break L3;
+              break L4;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
         }
-        return stackIn_10_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (pj) ((Object) stackIn_8_0);
+        } else {
+          return stackIn_10_0;
+        }
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new vv((hl) this);
+        return (Iterator) ((Object) new vv((hl) (this)));
     }
 
     public static void a(int param0) {
@@ -132,39 +146,39 @@ final class hl implements Iterable {
 
     final pj b(int param0) {
         if (param0 != -1) {
-            return null;
+            return (pj) null;
         }
-        return this.a((pj) null, param0);
+        return this.a((pj) null, param0 + 0);
     }
 
     final pj a(byte param0) {
         pj var2 = null;
-        var2 = ((hl) this).field_a;
-        if (((hl) this).field_c == var2) {
-          ((hl) this).field_a = null;
+        var2 = this.field_a;
+        if (this.field_c == var2) {
+          this.field_a = null;
           return null;
         } else {
           if (param0 != -122) {
-            return null;
+            return (pj) null;
           } else {
-            ((hl) this).field_a = var2.field_m;
+            this.field_a = var2.field_m;
             return var2;
           }
         }
     }
 
     hl() {
-        ((hl) this).field_c = new pj();
-        ((hl) this).field_c.field_o = ((hl) this).field_c;
-        ((hl) this).field_c.field_m = ((hl) this).field_c;
+        this.field_c = new pj();
+        this.field_c.field_o = this.field_c;
+        this.field_c.field_m = this.field_c;
     }
 
     final void a(pj param0, byte param1) {
         if (!(param0.field_o == null)) {
             param0.c(-5106);
         }
-        param0.field_m = ((hl) this).field_c;
-        param0.field_o = ((hl) this).field_c.field_o;
+        param0.field_m = this.field_c;
+        param0.field_o = this.field_c.field_o;
         if (param1 >= -103) {
             return;
         }
@@ -172,15 +186,11 @@ final class hl implements Iterable {
             param0.field_o.field_m = param0;
             param0.field_m.field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "hl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "hl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = -1;
     }
 }

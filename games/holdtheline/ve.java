@@ -15,56 +15,57 @@ final class ve {
     private int field_e;
 
     final int a(int param0) {
-        if (((ve) this).field_a >= ((ve) this).field_i) {
-            int fieldTemp$0 = ((ve) this).field_e;
-            ((ve) this).field_e = ((ve) this).field_e + 1;
-            ((ve) this).field_j = ((ve) this).field_c[fieldTemp$0] << 15;
-            if (((ve) this).field_e >= ((ve) this).field_k) {
-                ((ve) this).field_e = ((ve) this).field_k - 1;
+        int fieldTemp$0 = 0;
+        if (this.field_a >= this.field_i) {
+            fieldTemp$0 = this.field_e;
+            this.field_e = this.field_e + 1;
+            this.field_j = this.field_c[fieldTemp$0] << 15;
+            if (this.field_e >= this.field_k) {
+                this.field_e = this.field_k - 1;
             }
-            ((ve) this).field_i = (int)((double)((ve) this).field_d[((ve) this).field_e] / 65536.0 * (double)param0);
-            if (((ve) this).field_i > ((ve) this).field_a) {
-                ((ve) this).field_b = ((((ve) this).field_c[((ve) this).field_e] << 15) - ((ve) this).field_j) / (((ve) this).field_i - ((ve) this).field_a);
+            this.field_i = (int)((double)this.field_d[this.field_e] / 65536.0 * (double)param0);
+            if (this.field_i > this.field_a) {
+                this.field_b = ((this.field_c[this.field_e] << 15) - this.field_j) / (this.field_i - this.field_a);
             }
         }
-        ((ve) this).field_j = ((ve) this).field_j + ((ve) this).field_b;
-        ((ve) this).field_a = ((ve) this).field_a + 1;
-        return ((ve) this).field_j - ((ve) this).field_b >> 15;
+        this.field_j = this.field_j + this.field_b;
+        this.field_a = this.field_a + 1;
+        return this.field_j - this.field_b >> 15;
     }
 
     final void a(th param0) {
         int var2 = 0;
-        ((ve) this).field_k = param0.f((byte) -106);
-        ((ve) this).field_d = new int[((ve) this).field_k];
-        ((ve) this).field_c = new int[((ve) this).field_k];
-        for (var2 = 0; var2 < ((ve) this).field_k; var2++) {
-            ((ve) this).field_d[var2] = param0.k(-76);
-            ((ve) this).field_c[var2] = param0.k(91);
+        this.field_k = param0.f((byte) -106);
+        this.field_d = new int[this.field_k];
+        this.field_c = new int[this.field_k];
+        for (var2 = 0; var2 < this.field_k; var2++) {
+            this.field_d[var2] = param0.k(-76);
+            this.field_c[var2] = param0.k(91);
         }
     }
 
     final void a() {
-        ((ve) this).field_i = 0;
-        ((ve) this).field_e = 0;
-        ((ve) this).field_b = 0;
-        ((ve) this).field_j = 0;
-        ((ve) this).field_a = 0;
+        this.field_i = 0;
+        this.field_e = 0;
+        this.field_b = 0;
+        this.field_j = 0;
+        this.field_a = 0;
     }
 
     final void b(th param0) {
-        ((ve) this).field_g = param0.f((byte) -77);
-        ((ve) this).field_h = param0.a(107);
-        ((ve) this).field_f = param0.a(-118);
-        ((ve) this).a(param0);
+        this.field_g = param0.f((byte) -77);
+        this.field_h = param0.a(107);
+        this.field_f = param0.a(-118);
+        this.a(param0);
     }
 
     ve() {
-        ((ve) this).field_k = 2;
-        ((ve) this).field_d = new int[2];
-        ((ve) this).field_c = new int[2];
-        ((ve) this).field_d[0] = 0;
-        ((ve) this).field_d[1] = 65535;
-        ((ve) this).field_c[0] = 0;
-        ((ve) this).field_c[1] = 65535;
+        this.field_k = 2;
+        this.field_d = new int[2];
+        this.field_c = new int[2];
+        this.field_d[0] = 0;
+        this.field_d[1] = 65535;
+        this.field_c[0] = 0;
+        this.field_c[1] = 65535;
     }
 }

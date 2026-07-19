@@ -15,10 +15,13 @@ final class ep extends pu {
         sja.field_fb.c(88, (byte) 114);
         sja.field_fb.field_g = sja.field_fb.field_g + 2;
         int var5_int = sja.field_fb.field_g;
-        rha.a(param1.field_g, (lu) (Object) sja.field_fb, (byte) -119);
+        rha.a(param1.field_g, sja.field_fb, (byte) -119);
         sja.field_fb.d(param2 ? 1 : 0, 0);
         sja.field_fb.d(param3, 0);
         int[] var6 = param4;
+        if (param0 != 42) {
+            return;
+        }
         try {
             for (var7 = 0; var6.length > var7; var7++) {
                 var8 = var6[var7];
@@ -26,7 +29,7 @@ final class ep extends pu {
             }
             sja.field_fb.a((byte) -88, sja.field_fb.field_g + -var5_int);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ep.D(" + 42 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ep.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,6 +41,9 @@ final class ep extends pu {
     }
 
     public static void b(int param0) {
+        if (param0 != 1) {
+            return;
+        }
         field_l = null;
     }
 
@@ -56,10 +62,6 @@ final class ep extends pu {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = new int[8192];
         field_m = 0;
     }

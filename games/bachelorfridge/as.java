@@ -8,6 +8,9 @@ final class as {
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
+        if (param0 < 117) {
+            field_b = (String) null;
+        }
     }
 
     final static short[] a(short[] param0, int param1, pf param2, int param3) {
@@ -53,7 +56,7 @@ final class as {
         var8 = BachelorFridge.field_y;
         try {
           L0: {
-            var4_int = param2.d(16, (byte) -125);
+            var4_int = param2.d(param3, (byte) -125);
             if (0 != var4_int) {
               L1: {
                 L2: {
@@ -76,7 +79,7 @@ final class as {
                 if (param1 > 58) {
                   break L3;
                 } else {
-                  field_b = null;
+                  field_b = (String) null;
                   break L3;
                 }
               }
@@ -105,7 +108,7 @@ final class as {
                   }
                 }
               }
-              stackOut_17_0 = (short[]) param0;
+              stackOut_17_0 = (short[]) (param0);
               stackIn_18_0 = stackOut_17_0;
               break L0;
             } else {
@@ -116,23 +119,23 @@ final class as {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var4 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var4;
+            stackOut_19_0 = (RuntimeException) (var4);
             stackOut_19_1 = new StringBuilder().append("as.A(");
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -141,23 +144,23 @@ final class as {
             }
           }
           L8: {
-            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+            stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
             stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param1).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param2 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L8;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -165,16 +168,12 @@ final class as {
               break L8;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + 16 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param3 + ')');
         }
         return stackIn_18_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Cancel unrated rematch";
     }
 }

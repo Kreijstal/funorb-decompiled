@@ -16,25 +16,25 @@ final class gb {
 
     final al a(byte param0) {
         int var2 = 0;
-        if ((Object) (Object) gh.field_j != this) {
-          if (this == (Object) (Object) kk.field_N) {
+        if (gh.field_j != this) {
+          if (this == kk.field_N) {
             return lj.field_c[1];
           } else {
-            if ((Object) (Object) sl.field_p == this) {
+            if (sl.field_p == this) {
               return lj.field_c[2];
             } else {
-              if (this != (Object) (Object) gm.field_y) {
-                if ((Object) (Object) qq.field_g == this) {
+              if (this != gm.field_y) {
+                if (qq.field_g == this) {
                   return lj.field_c[4];
                 } else {
                   var2 = -41 % ((param0 - -5) / 58);
-                  if ((Object) (Object) id.field_f == this) {
+                  if (id.field_f == this) {
                     return lj.field_c[4];
                   } else {
-                    if ((Object) (Object) ju.field_k == this) {
+                    if (ju.field_k == this) {
                       return lj.field_c[5];
                     } else {
-                      if (this == (Object) (Object) ro.field_u) {
+                      if (this == ro.field_u) {
                         return lj.field_c[6];
                       } else {
                         throw new RuntimeException();
@@ -60,47 +60,48 @@ final class gb {
     }
 
     final pa[] b(int param0) {
-        if (!((Object) (Object) gh.field_j != this)) {
+        String discarded$3 = null;
+        if (!(gh.field_j != this)) {
             return hr.field_d[0];
         }
-        if (this == (Object) (Object) kk.field_N) {
+        if (this == kk.field_N) {
             return hr.field_d[1];
         }
-        if (this == (Object) (Object) sl.field_p) {
+        if (this == sl.field_p) {
             return hr.field_d[2];
         }
         if (param0 != -32275) {
-            String discarded$3 = ((gb) this).toString();
-            if ((Object) (Object) gm.field_y == this) {
+            discarded$3 = this.toString();
+            if (gm.field_y == this) {
                 return hr.field_d[3];
             }
-            if (!(this != (Object) (Object) qq.field_g)) {
+            if (!(this != qq.field_g)) {
                 return hr.field_d[4];
             }
-            if ((Object) (Object) id.field_f == this) {
+            if (id.field_f == this) {
                 return hr.field_d[7];
             }
-            if (!((Object) (Object) ju.field_k != this)) {
+            if (!(ju.field_k != this)) {
                 return hr.field_d[5];
             }
-            if (!(this != (Object) (Object) ro.field_u)) {
+            if (!(this != ro.field_u)) {
                 return hr.field_d[6];
             }
             throw new RuntimeException();
         }
-        if ((Object) (Object) gm.field_y == this) {
+        if (gm.field_y == this) {
             return hr.field_d[3];
         }
-        if (!(this != (Object) (Object) qq.field_g)) {
+        if (!(this != qq.field_g)) {
             return hr.field_d[4];
         }
-        if ((Object) (Object) id.field_f == this) {
+        if (id.field_f == this) {
             return hr.field_d[7];
         }
-        if (!((Object) (Object) ju.field_k != this)) {
+        if (!(ju.field_k != this)) {
             return hr.field_d[5];
         }
-        if (!(this != (Object) (Object) ro.field_u)) {
+        if (!(this != ro.field_u)) {
             return hr.field_d[6];
         }
         throw new RuntimeException();
@@ -111,22 +112,18 @@ final class gb {
     }
 
     gb(double param0, int param1, int param2, int param3, int param4, double param5, double param6, int param7, int param8) {
-        ((gb) this).field_a = param7;
-        ((gb) this).field_h = param5 / 2.0;
-        ((gb) this).field_f = param2;
-        ((gb) this).field_i = param6 / 2.0;
-        ((gb) this).field_c = param3;
-        ((gb) this).field_g = param0;
-        ((gb) this).field_b = param8;
-        ((gb) this).field_e = param4;
-        ((gb) this).field_d = param1;
+        this.field_a = param7;
+        this.field_h = param5 / 2.0;
+        this.field_f = param2;
+        this.field_i = param6 / 2.0;
+        this.field_c = param3;
+        this.field_g = param0;
+        this.field_b = param8;
+        this.field_e = param4;
+        this.field_d = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = 0;
     }
 }

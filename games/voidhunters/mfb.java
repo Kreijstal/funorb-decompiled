@@ -6,7 +6,7 @@ class mfb {
 
     final int j(int param0) {
         int var2 = 86 % ((param0 - 55) / 58);
-        return ((mfb) this).d((byte) -56) * ((mfb) this).a((byte) 118);
+        return this.d((byte) -56) * this.a((byte) 118);
     }
 
     int g(byte param0) {
@@ -25,8 +25,9 @@ class mfb {
     }
 
     boolean h(int param0) {
+        int discarded$0 = 0;
         if (param0 != -2291) {
-            int discarded$0 = ((mfb) this).d(62);
+            discarded$0 = this.d(62);
             return false;
         }
         return false;
@@ -46,8 +47,9 @@ class mfb {
     }
 
     int f(int param0) {
+        int discarded$0 = 0;
         if (param0 != 1024) {
-            int discarded$0 = ((mfb) this).f((byte) 1);
+            discarded$0 = this.f((byte) 1);
             return 0;
         }
         return 0;
@@ -81,8 +83,9 @@ class mfb {
     }
 
     int k(int param0) {
+        int discarded$0 = 0;
         if (param0 != 0) {
-            int discarded$0 = ((mfb) this).f(-94);
+            discarded$0 = this.f(-94);
             return 0;
         }
         return 0;
@@ -135,23 +138,23 @@ class mfb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_0 = (RuntimeException) (var2);
             stackOut_8_1 = new StringBuilder().append("mfb.U(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (args == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -159,13 +162,14 @@ class mfb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
         }
     }
 
     final int d(int param0) {
+        int discarded$0 = 0;
         if (param0 != 27918) {
-            int discarded$0 = ((mfb) this).c(84);
+            discarded$0 = this.c(84);
             return lob.field_b;
         }
         return lob.field_b;
@@ -181,7 +185,7 @@ class mfb {
 
     int b(boolean param0) {
         if (param0) {
-            Object var3 = null;
+            String[] var3 = (String[]) null;
             mfb.a((String[]) null, 41);
             return 1;
         }
@@ -216,8 +220,9 @@ class mfb {
     }
 
     int d(byte param0) {
+        int discarded$0 = 0;
         if (param0 >= -52) {
-            int discarded$0 = ((mfb) this).c((byte) 118);
+            discarded$0 = this.c((byte) 118);
             return 256;
         }
         return 256;
@@ -237,10 +242,6 @@ class mfb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = false;
     }
 }

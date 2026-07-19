@@ -19,6 +19,9 @@ final class lq extends oh {
         field_k = null;
         field_r = null;
         field_o = null;
+        if (param0 != 67) {
+            field_q = true;
+        }
     }
 
     private lq() throws Throwable {
@@ -26,10 +29,6 @@ final class lq extends oh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = true;
         field_r = "Full";
         field_p = "Log in / Create account";

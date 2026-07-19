@@ -15,22 +15,25 @@ abstract class qo {
         if (param0 < 43) {
             qo.a(55);
         }
-        while (((qo) this).field_d.length > var3) {
-            var4 = ((qo) this).field_d[var3];
+        while (this.field_d.length > var3) {
+            var4 = this.field_d[var3];
             if (var4.field_b.length > param1) {
                 return var3;
             }
             param1 = param1 - (var4.field_b.length - 1);
             var3++;
         }
-        return ((qo) this).field_d.length;
+        return this.field_d.length;
     }
 
     final static void a(int param0, int param1) {
         int var2 = (kh.field_Mb - 640) / 2;
         int var3 = ed.field_f * ed.field_f;
         int var4 = var3 - param1 * param1;
-        am.field_xb.a(199, gf.field_k - 214, (byte) 109, 90, var2 - 199 * var4 / var3);
+        if (param0 != 22353) {
+            field_b = 102;
+        }
+        am.field_xb.a(199, gf.field_k + -120 - 94, (byte) 109, 90, var2 - 199 * var4 / var3);
         pf.field_g.a(438, -124 + gf.field_k, (byte) 77, 0, 438 * var4 / var3 + var2 + 202);
     }
 
@@ -47,13 +50,13 @@ abstract class qo {
         if (param0 == 438) {
           L0: {
             L1: {
-              if (null == ((qo) this).field_d) {
+              if (null == this.field_d) {
                 break L1;
               } else {
-                if (((qo) this).field_d.length <= 0) {
+                if (-1 <= (this.field_d.length ^ -1)) {
                   break L1;
                 } else {
-                  stackOut_4_0 = ((qo) this).field_d[((qo) this).field_d.length + -1].field_c - ((qo) this).field_d[0].field_e;
+                  stackOut_4_0 = this.field_d[this.field_d.length + -1].field_c - this.field_d[0].field_e;
                   stackIn_6_0 = stackOut_4_0;
                   break L0;
                 }
@@ -80,10 +83,10 @@ abstract class qo {
         L0: {
           var7 = ShatteredPlansClient.field_F ? 1 : 0;
           var2 = -1;
-          if (null == ((qo) this).field_d) {
+          if (null == this.field_d) {
             break L0;
           } else {
-            var3_ref_ha__ = ((qo) this).field_d;
+            var3_ref_ha__ = this.field_d;
             var4 = 0;
             L1: while (true) {
               if (var3_ref_ha__.length <= var4) {
@@ -121,25 +124,26 @@ abstract class qo {
         int var9 = 0;
         int var10 = 0;
         int stackIn_3_0 = 0;
-        int stackIn_17_0 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
+        int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
+        int stackOut_18_0 = 0;
         int stackOut_2_0 = 0;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
         RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -150,9 +154,10 @@ abstract class qo {
               var8 = 0;
               L1: while (true) {
                 if (var7 <= var8) {
-                  if (var5_int > 0) {
-                    stackOut_16_0 = (param1 + -param2 << 8) / var5_int;
-                    stackIn_17_0 = stackOut_16_0;
+                  if ((var5_int ^ -1) < -1) {
+                    stackOut_18_0 = (param1 + -param2 << 1998035880) / var5_int;
+                    stackIn_19_0 = stackOut_18_0;
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     return 0;
@@ -165,15 +170,18 @@ abstract class qo {
                       break L2;
                     } else {
                       if (var9 != 62) {
-                        L3: {
-                          if (var6 != 0) {
-                            break L3;
+                        if (var6 == 0) {
+                          if (var9 == 32) {
+                            var5_int++;
+                            break L2;
                           } else {
-                            break L3;
+                            var8++;
+                            continue L1;
                           }
+                        } else {
+                          var8++;
+                          continue L1;
                         }
-                        var8++;
-                        continue L1;
                       } else {
                         var6 = 0;
                         break L2;
@@ -187,43 +195,49 @@ abstract class qo {
             } else {
               stackOut_2_0 = 43;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var5;
-            stackOut_19_1 = new StringBuilder().append("qo.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackOut_21_0 = (RuntimeException) (var5);
+            stackOut_21_1 = new StringBuilder().append("qo.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
             if (param3 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
-              break L4;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L3;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
-              break L4;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
         }
-        return stackIn_17_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_19_0;
+        }
     }
 
     final int a(int param0, int param1, int param2) {
+        int discarded$2 = 0;
         int var4 = 0;
         int var5 = 0;
         ha var6 = null;
@@ -231,37 +245,37 @@ abstract class qo {
         int var8 = 0;
         L0: {
           var8 = ShatteredPlansClient.field_F ? 1 : 0;
-          if (((qo) this).field_d == null) {
+          if (this.field_d == null) {
             break L0;
           } else {
-            if (((qo) this).field_d.length == 0) {
+            if (this.field_d.length == 0) {
               break L0;
             } else {
-              if (((qo) this).field_d[0].field_e > param2) {
+              if (this.field_d[0].field_e > param2) {
                 break L0;
               } else {
-                if (((qo) this).field_d[((qo) this).field_d.length + -1].field_c < param2) {
+                if (this.field_d[this.field_d.length + -1].field_c < param2) {
                   return -1;
                 } else {
-                  if (((qo) this).field_d.length == 1) {
-                    return ((qo) this).field_d[0].a(false, param0);
+                  if ((this.field_d.length ^ -1) == -2) {
+                    return this.field_d[0].a(false, param0);
                   } else {
                     L1: {
                       var4 = 0;
                       if (param1 == 3357) {
                         break L1;
                       } else {
-                        int discarded$2 = ((qo) this).b(-63);
+                        discarded$2 = this.b(-63);
                         break L1;
                       }
                     }
                     var5 = 0;
                     L2: while (true) {
-                      if (var5 >= ((qo) this).field_d.length) {
+                      if (var5 >= this.field_d.length) {
                         return -1;
                       } else {
                         L3: {
-                          var6 = ((qo) this).field_d[var5];
+                          var6 = this.field_d[var5];
                           if (param2 < var6.field_e) {
                             break L3;
                           } else {
@@ -269,7 +283,7 @@ abstract class qo {
                               break L3;
                             } else {
                               var7 = var6.a(false, param0);
-                              if (var7 == -1) {
+                              if ((var7 ^ -1) == 0) {
                                 return -1;
                               } else {
                                 return var4 - -var7;
@@ -294,10 +308,10 @@ abstract class qo {
     final int a(boolean param0, int param1) {
         ha var5 = null;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        ha[] var3 = ((qo) this).field_d;
+        ha[] var3 = this.field_d;
         int var4 = 0;
         if (!param0) {
-            field_c = null;
+            field_c = (int[]) null;
         }
         while (var3.length > var4) {
             var5 = var3[var4];
@@ -311,10 +325,6 @@ abstract class qo {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[8192];
     }
 }

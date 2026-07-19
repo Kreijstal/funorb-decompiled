@@ -14,6 +14,9 @@ final class f extends gb {
     public static void c(byte param0) {
         field_A = null;
         field_w = null;
+        if (param0 != 87) {
+            field_w = (String) null;
+        }
         field_x = null;
         field_t = null;
     }
@@ -36,20 +39,20 @@ final class f extends gb {
         int[] var29 = null;
         byte[] var30 = null;
         var12 = TetraLink.field_J;
-        if (null != ((f) this).field_u) {
+        if (null != this.field_u) {
           return true;
         } else {
           L0: {
-            if (null == ((f) this).field_v) {
-              if (lj.field_c.d(((f) this).field_y, 0)) {
-                var27 = lj.field_c.c(((f) this).field_y, param0 ^ -106);
-                ((f) this).field_v = new byte[var27.length][];
+            if (null == this.field_v) {
+              if (lj.field_c.d(this.field_y, 0)) {
+                var27 = lj.field_c.c(this.field_y, param0 ^ -106);
+                this.field_v = new byte[var27.length][];
                 var3_int = 0;
                 L1: while (true) {
                   if (var3_int >= var27.length) {
                     break L0;
                   } else {
-                    ((f) this).field_v[var3_int] = lj.field_c.a(-107, var27[var3_int], ((f) this).field_y);
+                    this.field_v[var3_int] = lj.field_c.a(-107, var27[var3_int], this.field_y);
                     var3_int++;
                     continue L1;
                   }
@@ -65,12 +68,12 @@ final class f extends gb {
           var13 = 0;
           var3_int = var13;
           L2: while (true) {
-            if (((f) this).field_v.length <= var13) {
+            if (this.field_v.length <= var13) {
               if (var2 != 0) {
                 L3: {
                   var3 = new je();
-                  var4 = lj.field_c.b(-23126, ((f) this).field_y);
-                  ((f) this).field_u = new pc[var4];
+                  var4 = lj.field_c.b(-23126, this.field_y);
+                  this.field_u = new pc[var4];
                   if (param0 == -106) {
                     break L3;
                   } else {
@@ -78,43 +81,43 @@ final class f extends gb {
                     break L3;
                   }
                 }
-                var29 = lj.field_c.c(((f) this).field_y, param0 ^ -106);
+                var29 = lj.field_c.c(this.field_y, param0 ^ -106);
                 var6 = 0;
                 L4: while (true) {
                   if (var6 >= var29.length) {
-                    ((f) this).field_v = null;
+                    this.field_v = (byte[][]) null;
                     return true;
                   } else {
-                    var30 = ((f) this).field_v[var6];
+                    var30 = this.field_v[var6];
                     var8 = new bh(var30);
                     var8.field_t = 1;
                     var9 = var8.e(127);
                     var10 = null;
-                    var11 = (oe) (Object) var3.c(false);
+                    var11 = (oe) ((Object) var3.c(false));
                     L5: while (true) {
                       L6: {
                         if (var11 == null) {
                           break L6;
                         } else {
                           if (var9 == var11.field_o) {
-                            var10 = (Object) (Object) var11;
+                            var10 = var11;
                             break L6;
                           } else {
-                            var11 = (oe) (Object) var3.a((byte) -70);
+                            var11 = (oe) ((Object) var3.a((byte) -70));
                             continue L5;
                           }
                         }
                       }
                       L7: {
                         if (var10 == null) {
-                          var10 = (Object) (Object) new oe(var9, nn.field_T.a(0, var9));
-                          var3.a((mc) var10, false);
+                          var10 = new oe(var9, nn.field_T.a(0, var9));
+                          var3.a((mc) (var10), false);
                           break L7;
                         } else {
                           break L7;
                         }
                       }
-                      ((f) this).field_u[var29[var6]] = new pc(var30, (oe) var10);
+                      this.field_u[var29[var6]] = new pc(var30, (oe) (var10));
                       var6++;
                       continue L4;
                     }
@@ -124,7 +127,7 @@ final class f extends gb {
                 return false;
               }
             } else {
-              var28 = ((f) this).field_v[var13];
+              var28 = this.field_v[var13];
               var16 = new bh(var28);
               var16.field_t = 1;
               var6 = var16.e(param0 ^ -23);
@@ -137,14 +140,10 @@ final class f extends gb {
     }
 
     f(int param0) {
-        ((f) this).field_y = param0;
+        this.field_y = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
         field_t = "Type your email address again to make sure it's correct";
         field_w = "Unable to add name - system busy";

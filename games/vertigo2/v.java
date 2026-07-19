@@ -14,14 +14,10 @@ abstract class v {
     public static void a(int param0) {
         field_a = null;
         field_b = null;
-        int var1 = 0;
+        int var1 = 38 % ((param0 - 42) / 54);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "v.K(";
         field_c = '/';
     }

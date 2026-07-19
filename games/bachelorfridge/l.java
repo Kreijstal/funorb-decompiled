@@ -8,13 +8,14 @@ final class l extends bca {
 
     final void a(op param0, int param1) {
         aga var3 = null;
+        bw discarded$10 = null;
         try {
-            var3 = ((l) this).field_l.a(63, param0);
+            var3 = this.field_l.a(63, param0);
             int var4 = 99 % ((param1 - 12) / 35);
-            bw discarded$10 = ((l) this).field_o.b((byte) 90);
-            ((l) this).field_p = null == param0.a(var3, (byte) -92) ? true : false;
+            discarded$10 = this.field_o.b((byte) 90);
+            this.field_p = null == param0.a(var3, (byte) -92) ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "l.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "l.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -24,7 +25,7 @@ final class l extends bca {
 
     final at a(int param0, gj param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
+        lu var4 = null;
         tma stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -49,12 +50,12 @@ final class l extends bca {
               if (param0 == 5) {
                 break L1;
               } else {
-                var4 = null;
-                ((l) this).a((byte) 112, (lu) null);
+                var4 = (lu) null;
+                this.a((byte) 112, (lu) null);
                 break L1;
               }
             }
-            stackOut_2_0 = new tma(param1, (l) this);
+            stackOut_2_0 = new tma(param1, (l) (this));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -62,23 +63,23 @@ final class l extends bca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("l.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -86,9 +87,9 @@ final class l extends bca {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
-        return (at) (Object) stackIn_3_0;
+        return (at) ((Object) stackIn_3_0);
     }
 
     public static void d(byte param0) {
@@ -104,19 +105,19 @@ final class l extends bca {
         super(param0);
         int var2_int = 0;
         try {
-            ((l) this).field_k = param0.e((byte) 124);
-            ((l) this).field_o = new eaa();
+            this.field_k = param0.e((byte) 124);
+            this.field_o = new eaa();
             var2_int = param0.b(16711935);
             while (true) {
                 var2_int--;
-                if (var2_int < 0) {
+                if (-1 < (var2_int ^ -1)) {
                     break;
                 }
-                ((l) this).field_o.a((bw) (Object) dca.a((byte) 102, param0), true);
+                this.field_o.a(dca.a((byte) 102, param0), true);
             }
-            ((l) this).field_p = 1 == param0.b(16711935) ? true : false;
+            this.field_p = 1 == param0.b(16711935) ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "l.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -127,24 +128,20 @@ final class l extends bca {
             if (param0 > -12) {
                 l.d((byte) -18);
             }
-            param1.b(((l) this).field_k, -125);
-            param1.d(((l) this).field_o.g(0), 0);
-            var5 = (pp) (Object) ((l) this).field_o.b((byte) 90);
+            param1.b(this.field_k, -125);
+            param1.d(this.field_o.g(0), 0);
+            var5 = (pp) ((Object) this.field_o.b((byte) 90));
             while (var5 != null) {
                 var5.a(param1, (byte) -54);
-                var5 = (pp) (Object) ((l) this).field_o.c(0);
+                var5 = (pp) ((Object) this.field_o.c(0));
             }
-            param1.d(((l) this).field_p ? 1 : 0, 0);
+            param1.d(this.field_p ? 1 : 0, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "l.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "l.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = "This option cannot be combined with the current '<%0>' setting.";
         field_q = "Start Game";
     }

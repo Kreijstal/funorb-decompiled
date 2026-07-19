@@ -101,23 +101,23 @@ final class kh extends q {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var2;
+            stackOut_16_0 = (RuntimeException) (var2);
             stackOut_16_1 = new StringBuilder().append("kh.A(");
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -125,14 +125,14 @@ final class kh extends q {
               break L5;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
         }
     }
 
     public static void a(int param0) {
-        Object var2 = null;
+        kh var2 = null;
         if (param0 != 24997) {
-          var2 = null;
+          var2 = (kh) null;
           kh.a((kh) null, (byte) -125);
           field_n = null;
           field_j = null;
@@ -153,36 +153,32 @@ final class kh extends q {
     }
 
     public kh() {
-        ((kh) this).field_k = null;
-        ((kh) this).field_l = null;
-        ((kh) this).field_q = null;
+        this.field_k = null;
+        this.field_l = null;
+        this.field_q = null;
     }
 
     kh(rm param0) {
         try {
-            ((kh) this).field_k = null;
-            ((kh) this).field_l = param0;
-            ((kh) this).field_q = new mp();
+            this.field_k = null;
+            this.field_l = param0;
+            this.field_q = new mp();
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "kh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "kh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     kh(kh param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         try {
-            ((kh) this).field_l = new rm(param0.field_l, param1, param2, param3, param4);
-            ((kh) this).field_k = null;
-            ((kh) this).field_q = new mp();
+            this.field_l = new rm(param0.field_l, param1, param2, param3, param4);
+            this.field_k = null;
+            this.field_q = new mp();
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "kh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "kh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = new int[8192];
         field_p = new int[25];
         dk.a(field_p, 0, 25, -1);

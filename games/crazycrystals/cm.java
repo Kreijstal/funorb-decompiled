@@ -22,13 +22,12 @@ final class cm {
             return;
         }
         a.a(112, 4, false);
+        if (param0 != -15544) {
+            cm.b(44);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new sj(9, 0, 4, 1);
         field_b = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
         field_c = "Once you have collected all the crystals, the level will be complete.";

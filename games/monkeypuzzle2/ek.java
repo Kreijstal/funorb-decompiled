@@ -9,7 +9,7 @@ final class ek {
     static String field_e;
 
     final static boolean a(byte param0) {
-        int var1 = -32;
+        int var1 = -32 / ((-77 - param0) / 44);
         return kg.a((byte) 104);
     }
 
@@ -17,14 +17,10 @@ final class ek {
         field_c = null;
         field_e = null;
         field_d = null;
-        int var1 = 57;
+        int var1 = 114 / ((0 - param0) / 44);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
         field_c = "Connection lost. <%0>";
         field_e = "Loading fonts";

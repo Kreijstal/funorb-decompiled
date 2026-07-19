@@ -34,13 +34,16 @@ final class ta {
                 kj.field_a.field_o = 0;
                 return true;
             }
-            {
+            try {
+                if (false) throw (IOException) null;
                 if (var2_int >= param0) {
-                    if (qa.a(param0 + -125) <= 30000L) {
+                    if (-30001L <= (qa.a(param0 + -125) ^ -1L)) {
                         return false;
                     }
                 }
                 si.a(-124);
+            } catch (IOException iOException) {
+                si.a(param0 + -80);
             }
             return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -51,24 +54,25 @@ final class ta {
     }
 
     final pi b(byte param0) {
+        boolean discarded$2 = false;
         pi var2 = null;
         if (param0 == 56) {
-          var2 = ((ta) this).field_e;
-          if (var2 == ((ta) this).field_c) {
-            ((ta) this).field_e = null;
+          var2 = this.field_e;
+          if (var2 == this.field_c) {
+            this.field_e = null;
             return null;
           } else {
-            ((ta) this).field_e = var2.field_f;
+            this.field_e = var2.field_f;
             return var2;
           }
         } else {
-          boolean discarded$2 = ta.a(115, -34);
-          var2 = ((ta) this).field_e;
-          if (var2 == ((ta) this).field_c) {
-            ((ta) this).field_e = null;
+          discarded$2 = ta.a(115, -34);
+          var2 = this.field_e;
+          if (var2 == this.field_c) {
+            this.field_e = null;
             return null;
           } else {
-            ((ta) this).field_e = var2.field_f;
+            this.field_e = var2.field_f;
             return var2;
           }
         }
@@ -78,8 +82,8 @@ final class ta {
         int var5 = MinerDisturbance.field_ab;
         int var2 = -19 / ((-40 - param0) / 62);
         int var3 = 0;
-        pi var4 = ((ta) this).field_c.field_f;
-        while (((ta) this).field_c != var4) {
+        pi var4 = this.field_c.field_f;
+        while (this.field_c != var4) {
             var3++;
             var4 = var4.field_f;
         }
@@ -87,32 +91,33 @@ final class ta {
     }
 
     final void a(pi param0, int param1) {
+        boolean discarded$0 = false;
         try {
             if (!(param0.field_c == null)) {
                 param0.b(34);
             }
-            param0.field_f = ((ta) this).field_c.field_f;
-            param0.field_c = ((ta) this).field_c;
+            param0.field_f = this.field_c.field_f;
+            param0.field_c = this.field_c;
             param0.field_c.field_f = param0;
             if (param1 != 27862) {
-                boolean discarded$0 = ta.a(-86, 37);
+                discarded$0 = ta.a(-86, 37);
             }
             param0.field_f.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "ta.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "ta.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final pi a(int param0) {
         pi var2 = null;
-        var2 = ((ta) this).field_e;
-        if (var2 == ((ta) this).field_c) {
-          ((ta) this).field_e = null;
+        var2 = this.field_e;
+        if (var2 == this.field_c) {
+          this.field_e = null;
           return null;
         } else {
-          ((ta) this).field_e = var2.field_c;
+          this.field_e = var2.field_c;
           if (param0 != 21510) {
-            ((ta) this).field_c = null;
+            this.field_c = (pi) null;
             return var2;
           } else {
             return var2;
@@ -121,36 +126,38 @@ final class ta {
     }
 
     final pi b(int param0) {
+        boolean discarded$0 = false;
         pi var2 = null;
         if (param0 < 60) {
-            boolean discarded$0 = ta.a(73, -87);
-            var2 = ((ta) this).field_c.field_f;
-            if (!(((ta) this).field_c != var2)) {
-                ((ta) this).field_e = null;
+            discarded$0 = ta.a(73, -87);
+            var2 = this.field_c.field_f;
+            if (!(this.field_c != var2)) {
+                this.field_e = null;
                 return null;
             }
-            ((ta) this).field_e = var2.field_f;
+            this.field_e = var2.field_f;
             return var2;
         }
-        var2 = ((ta) this).field_c.field_f;
-        if (!(((ta) this).field_c != var2)) {
-            ((ta) this).field_e = null;
+        var2 = this.field_c.field_f;
+        if (!(this.field_c != var2)) {
+            this.field_e = null;
             return null;
         }
-        ((ta) this).field_e = var2.field_f;
+        this.field_e = var2.field_f;
         return var2;
     }
 
     final void a(byte param0) {
+        pi discarded$2 = null;
         pi var2 = null;
         int var3 = 0;
         var3 = MinerDisturbance.field_ab;
         L0: while (true) {
-          var2 = ((ta) this).field_c.field_f;
-          if (var2 == ((ta) this).field_c) {
-            ((ta) this).field_e = null;
+          var2 = this.field_c.field_f;
+          if (var2 == this.field_c) {
+            this.field_e = null;
             if (param0 != 55) {
-              pi discarded$2 = ((ta) this).b((byte) 87);
+              discarded$2 = this.b((byte) 87);
               return;
             } else {
               return;
@@ -164,17 +171,17 @@ final class ta {
 
     final pi d(int param0) {
         pi var2 = null;
-        var2 = ((ta) this).field_c.field_c;
-        if (var2 == ((ta) this).field_c) {
-          ((ta) this).field_e = null;
+        var2 = this.field_c.field_c;
+        if (var2 == this.field_c) {
+          this.field_e = null;
           return null;
         } else {
           if (param0 != 59287) {
-            ((ta) this).field_c = null;
-            ((ta) this).field_e = var2.field_c;
+            this.field_c = (pi) null;
+            this.field_e = var2.field_c;
             return var2;
           } else {
-            ((ta) this).field_e = var2.field_c;
+            this.field_e = var2.field_c;
             return var2;
           }
         }
@@ -185,22 +192,22 @@ final class ta {
             if (param1.field_c != null) {
                 param1.b(34);
             }
-            param1.field_c = ((ta) this).field_c.field_c;
+            param1.field_c = this.field_c.field_c;
             int var3_int = 7 / ((-29 - param0) / 56);
-            param1.field_f = ((ta) this).field_c;
+            param1.field_f = this.field_c;
             param1.field_c.field_f = param1;
             param1.field_f.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "ta.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "ta.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final pi c(int param0) {
         pi var2 = null;
-        var2 = ((ta) this).field_c.field_c;
-        if (var2 != ((ta) this).field_c) {
+        var2 = this.field_c.field_c;
+        if (var2 != this.field_c) {
           if (param0 != 51510) {
-            ((ta) this).field_e = null;
+            this.field_e = (pi) null;
             var2.b(34);
             return var2;
           } else {
@@ -228,8 +235,8 @@ final class ta {
         int stackOut_2_0 = 0;
         if (param0 <= 98) {
           L0: {
-            ((ta) this).field_e = null;
-            if (((ta) this).field_c != ((ta) this).field_c.field_f) {
+            this.field_e = (pi) null;
+            if (this.field_c != this.field_c.field_f) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -242,7 +249,7 @@ final class ta {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((ta) this).field_c != ((ta) this).field_c.field_f) {
+            if (this.field_c != this.field_c.field_f) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -258,10 +265,10 @@ final class ta {
 
     final pi e(int param0) {
         pi var2 = null;
-        var2 = ((ta) this).field_c.field_f;
-        if (((ta) this).field_c != var2) {
+        var2 = this.field_c.field_f;
+        if (this.field_c != var2) {
           if (param0 != 63854) {
-            return null;
+            return (pi) null;
           } else {
             var2.b(34);
             return var2;
@@ -272,9 +279,9 @@ final class ta {
     }
 
     public ta() {
-        ((ta) this).field_c = new pi();
-        ((ta) this).field_c.field_f = ((ta) this).field_c;
-        ((ta) this).field_c.field_c = ((ta) this).field_c;
+        this.field_c = new pi();
+        this.field_c.field_f = this.field_c;
+        this.field_c.field_c = this.field_c;
     }
 
     public static void d(byte param0) {
@@ -293,10 +300,6 @@ final class ta {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[16384];
         field_f = "Buy<br>Basic Kit";
         field_a = "Fullscreen play is an option available to subscribing members only. For more details see the website.";

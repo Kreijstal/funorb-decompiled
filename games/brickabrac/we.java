@@ -24,10 +24,6 @@ final class we {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = -1;
         field_c = "Player One";
     }

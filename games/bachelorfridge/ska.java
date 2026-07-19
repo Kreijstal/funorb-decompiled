@@ -6,10 +6,14 @@ final class ska extends k {
     static kv field_k;
 
     public static void e(byte param0) {
+        if (param0 < 1) {
+            return;
+        }
         field_k = null;
     }
 
     final void a(byte param0, lu param1, int param2) {
+        int[] discarded$1 = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -43,7 +47,7 @@ final class ska extends k {
           L0: {
             L1: {
               var4_int = param2;
-              if (var4_int != 0) {
+              if (-1 != (var4_int ^ -1)) {
                 if (var4_int != 1) {
                   break L1;
                 } else {
@@ -51,7 +55,7 @@ final class ska extends k {
                     stackOut_6_0 = this;
                     stackIn_8_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
-                    if (param1.b(param0 ^ -16711866) != 1) {
+                    if (-2 != (param1.b(param0 ^ -16711866) ^ -1)) {
                       stackOut_8_0 = this;
                       stackOut_8_1 = 0;
                       stackIn_9_0 = stackOut_8_0;
@@ -65,11 +69,11 @@ final class ska extends k {
                       break L2;
                     }
                   }
-                  ((ska) this).field_f = stackIn_9_1 != 0;
+                  ((ska) (this)).field_f = stackIn_9_1 != 0;
                   break L1;
                 }
               } else {
-                ((ska) this).field_l = param1.b(16711935);
+                this.field_l = param1.b(16711935);
                 break L1;
               }
             }
@@ -77,7 +81,7 @@ final class ska extends k {
               if (param0 == -71) {
                 break L3;
               } else {
-                int[] discarded$1 = ((ska) this).a(-58, -67);
+                discarded$1 = this.a(-58, -67);
                 break L3;
               }
             }
@@ -87,23 +91,23 @@ final class ska extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var4 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var4;
+            stackOut_13_0 = (RuntimeException) (var4);
             stackOut_13_1 = new StringBuilder().append("ska.E(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -111,7 +115,7 @@ final class ska extends k {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ')');
         }
     }
 
@@ -131,16 +135,14 @@ final class ska extends k {
         int[][] var23 = null;
         int[][] var24 = null;
         int[][] var33 = null;
-        int[][] var42 = null;
+        int[][] var50 = null;
         int[][] var51 = null;
-        int[][] var52 = null;
-        int[][] var53 = null;
+        int[] var52 = null;
+        int[] var53 = null;
         int[] var54 = null;
         int[] var55 = null;
         int[] var56 = null;
         int[] var57 = null;
-        int[] var58 = null;
-        int[] var59 = null;
         int[] stackIn_31_0 = null;
         int stackIn_31_1 = 0;
         int[] stackIn_32_0 = null;
@@ -459,135 +461,133 @@ final class ska extends k {
         var22 = BachelorFridge.field_y;
         if (!param0) {
           L0: {
-            var51 = ((ska) this).field_h.a(param1, -858);
-            var42 = var51;
-            var33 = var42;
+            var33 = this.field_h.a(param1, -858);
             var24 = var33;
             var23 = var24;
             var3 = var23;
-            if (!((ska) this).field_h.field_b) {
+            if (!this.field_h.field_b) {
               break L0;
             } else {
-              var52 = ((ska) this).a((byte) -94, 0, param1);
-              var53 = ((ska) this).a((byte) -126, 1, param1);
-              var12 = var51[0];
-              var13 = var51[1];
-              var14 = var51[2];
-              var55 = var52[0];
-              var56 = var52[1];
-              var58 = var52[2];
-              var54 = var53[0];
-              var57 = var53[1];
-              var59 = var53[2];
-              var21 = ((ska) this).field_l;
+              var50 = this.a((byte) -94, 0, param1);
+              var51 = this.a((byte) -126, 1, param1);
+              var12 = var33[0];
+              var13 = var33[1];
+              var14 = var33[2];
+              var53 = var50[0];
+              var54 = var50[1];
+              var56 = var50[2];
+              var52 = var51[0];
+              var55 = var51[1];
+              var57 = var51[2];
+              var21 = this.field_l;
               if (var21 == 1) {
-                var12 = var51[0];
-                var13 = var51[1];
-                var14 = var51[2];
-                var54 = var53[0];
-                var55 = var52[0];
-                var56 = var52[1];
-                var57 = var53[1];
-                var58 = var52[2];
-                var59 = var53[2];
+                var12 = var33[0];
+                var13 = var33[1];
+                var14 = var33[2];
+                var52 = var51[0];
+                var53 = var50[0];
+                var54 = var50[1];
+                var55 = var51[1];
+                var56 = var50[2];
+                var57 = var51[2];
                 var21 = 0;
                 L1: while (true) {
                   if (var21 >= hh.field_d) {
                     break L0;
                   } else {
-                    var12[var21] = var54[var21] + var55[var21];
-                    var13[var21] = var56[var21] + var57[var21];
-                    var14[var21] = var58[var21] + var59[var21];
+                    var12[var21] = var52[var21] + var53[var21];
+                    var13[var21] = var54[var21] + var55[var21];
+                    var14[var21] = var56[var21] + var57[var21];
                     var21++;
                     continue L1;
                   }
                 }
               } else {
-                if (var21 == 2) {
-                  var12 = var51[0];
-                  var13 = var51[1];
-                  var14 = var51[2];
-                  var54 = var53[0];
-                  var55 = var52[0];
-                  var56 = var52[1];
-                  var57 = var53[1];
-                  var58 = var52[2];
-                  var59 = var53[2];
+                if (-3 == (var21 ^ -1)) {
+                  var12 = var33[0];
+                  var13 = var33[1];
+                  var14 = var33[2];
+                  var52 = var51[0];
+                  var53 = var50[0];
+                  var54 = var50[1];
+                  var55 = var51[1];
+                  var56 = var50[2];
+                  var57 = var51[2];
                   var21 = 0;
                   L2: while (true) {
-                    if (~var21 <= ~hh.field_d) {
+                    if (var21 >= hh.field_d) {
                       break L0;
                     } else {
-                      var12[var21] = -var54[var21] + var55[var21];
-                      var13[var21] = -var57[var21] + var56[var21];
-                      var14[var21] = -var59[var21] + var58[var21];
+                      var12[var21] = -var52[var21] + var53[var21];
+                      var13[var21] = -var55[var21] + var54[var21];
+                      var14[var21] = -var57[var21] + var56[var21];
                       var21++;
                       continue L2;
                     }
                   }
                 } else {
-                  if (var21 != 3) {
-                    if (var21 != 4) {
-                      if (var21 == 5) {
-                        var12 = var51[0];
-                        var13 = var51[1];
-                        var14 = var51[2];
-                        var54 = var53[0];
-                        var55 = var52[0];
-                        var56 = var52[1];
-                        var57 = var53[1];
-                        var58 = var52[2];
-                        var59 = var53[2];
+                  if (-4 != (var21 ^ -1)) {
+                    if ((var21 ^ -1) != -5) {
+                      if ((var21 ^ -1) == -6) {
+                        var12 = var33[0];
+                        var13 = var33[1];
+                        var14 = var33[2];
+                        var52 = var51[0];
+                        var53 = var50[0];
+                        var54 = var50[1];
+                        var55 = var51[1];
+                        var56 = var50[2];
+                        var57 = var51[2];
                         var21 = 0;
                         L3: while (true) {
                           if (hh.field_d <= var21) {
                             break L0;
                           } else {
-                            var12[var21] = 4096 + -((4096 - var55[var21]) * (-var54[var21] + 4096) >> 12);
-                            var13[var21] = 4096 - ((-var57[var21] + 4096) * (4096 + -var56[var21]) >> 12);
-                            var14[var21] = 4096 + -((-var59[var21] + 4096) * (-var58[var21] + 4096) >> 12);
+                            var12[var21] = 4096 + -((4096 - var53[var21]) * (-var52[var21] + 4096) >> -2133966580);
+                            var13[var21] = 4096 - ((-var55[var21] + 4096) * (4096 + -var54[var21]) >> 286664972);
+                            var14[var21] = 4096 + -((-var57[var21] + 4096) * (-var56[var21] + 4096) >> -226865364);
                             var21++;
                             continue L3;
                           }
                         }
                       } else {
                         if (6 == var21) {
-                          var12 = var51[0];
-                          var13 = var51[1];
-                          var14 = var51[2];
-                          var54 = var53[0];
-                          var55 = var52[0];
-                          var56 = var52[1];
-                          var57 = var53[1];
-                          var58 = var52[2];
-                          var59 = var53[2];
+                          var12 = var33[0];
+                          var13 = var33[1];
+                          var14 = var33[2];
+                          var52 = var51[0];
+                          var53 = var50[0];
+                          var54 = var50[1];
+                          var55 = var51[1];
+                          var56 = var50[2];
+                          var57 = var51[2];
                           var21 = 0;
                           L4: while (true) {
                             if (hh.field_d <= var21) {
                               break L0;
                             } else {
                               L5: {
-                                var9 = var59[var21];
-                                var8 = var57[var21];
-                                var7 = var54[var21];
-                                stackOut_45_0 = (int[]) var12;
+                                var9 = var57[var21];
+                                var8 = var55[var21];
+                                var7 = var52[var21];
+                                stackOut_45_0 = (int[]) (var12);
                                 stackOut_45_1 = var21;
                                 stackIn_47_0 = stackOut_45_0;
                                 stackIn_47_1 = stackOut_45_1;
                                 stackIn_46_0 = stackOut_45_0;
                                 stackIn_46_1 = stackOut_45_1;
-                                if (var7 >= 2048) {
-                                  stackOut_47_0 = (int[]) (Object) stackIn_47_0;
+                                if ((var7 ^ -1) <= -2049) {
+                                  stackOut_47_0 = (int[]) ((Object) stackIn_47_0);
                                   stackOut_47_1 = stackIn_47_1;
-                                  stackOut_47_2 = 4096 + -((4096 - var7) * (4096 - var55[var21]) >> 11);
+                                  stackOut_47_2 = 4096 + -((4096 - var7) * (4096 - var53[var21]) >> -1692023573);
                                   stackIn_48_0 = stackOut_47_0;
                                   stackIn_48_1 = stackOut_47_1;
                                   stackIn_48_2 = stackOut_47_2;
                                   break L5;
                                 } else {
-                                  stackOut_46_0 = (int[]) (Object) stackIn_46_0;
+                                  stackOut_46_0 = (int[]) ((Object) stackIn_46_0);
                                   stackOut_46_1 = stackIn_46_1;
-                                  stackOut_46_2 = var7 * var55[var21] >> 11;
+                                  stackOut_46_2 = var7 * var53[var21] >> -1837783029;
                                   stackIn_48_0 = stackOut_46_0;
                                   stackIn_48_1 = stackOut_46_1;
                                   stackIn_48_2 = stackOut_46_2;
@@ -596,24 +596,24 @@ final class ska extends k {
                               }
                               L6: {
                                 stackIn_48_0[stackIn_48_1] = stackIn_48_2;
-                                stackOut_48_0 = (int[]) var13;
+                                stackOut_48_0 = (int[]) (var13);
                                 stackOut_48_1 = var21;
                                 stackIn_50_0 = stackOut_48_0;
                                 stackIn_50_1 = stackOut_48_1;
                                 stackIn_49_0 = stackOut_48_0;
                                 stackIn_49_1 = stackOut_48_1;
-                                if (var8 < 2048) {
-                                  stackOut_50_0 = (int[]) (Object) stackIn_50_0;
+                                if ((var8 ^ -1) > -2049) {
+                                  stackOut_50_0 = (int[]) ((Object) stackIn_50_0);
                                   stackOut_50_1 = stackIn_50_1;
-                                  stackOut_50_2 = var8 * var56[var21] >> 11;
+                                  stackOut_50_2 = var8 * var54[var21] >> -802430517;
                                   stackIn_51_0 = stackOut_50_0;
                                   stackIn_51_1 = stackOut_50_1;
                                   stackIn_51_2 = stackOut_50_2;
                                   break L6;
                                 } else {
-                                  stackOut_49_0 = (int[]) (Object) stackIn_49_0;
+                                  stackOut_49_0 = (int[]) ((Object) stackIn_49_0);
                                   stackOut_49_1 = stackIn_49_1;
-                                  stackOut_49_2 = 4096 - ((4096 - var56[var21]) * (4096 + -var8) >> 11);
+                                  stackOut_49_2 = 4096 - ((4096 - var54[var21]) * (4096 + -var8) >> 179423211);
                                   stackIn_51_0 = stackOut_49_0;
                                   stackIn_51_1 = stackOut_49_1;
                                   stackIn_51_2 = stackOut_49_2;
@@ -622,24 +622,24 @@ final class ska extends k {
                               }
                               L7: {
                                 stackIn_51_0[stackIn_51_1] = stackIn_51_2;
-                                stackOut_51_0 = (int[]) var14;
+                                stackOut_51_0 = (int[]) (var14);
                                 stackOut_51_1 = var21;
                                 stackIn_53_0 = stackOut_51_0;
                                 stackIn_53_1 = stackOut_51_1;
                                 stackIn_52_0 = stackOut_51_0;
                                 stackIn_52_1 = stackOut_51_1;
                                 if (var9 >= 2048) {
-                                  stackOut_53_0 = (int[]) (Object) stackIn_53_0;
+                                  stackOut_53_0 = (int[]) ((Object) stackIn_53_0);
                                   stackOut_53_1 = stackIn_53_1;
-                                  stackOut_53_2 = 4096 + -((4096 - var58[var21]) * (4096 + -var9) >> 11);
+                                  stackOut_53_2 = 4096 + -((4096 - var56[var21]) * (4096 + -var9) >> 865155851);
                                   stackIn_54_0 = stackOut_53_0;
                                   stackIn_54_1 = stackOut_53_1;
                                   stackIn_54_2 = stackOut_53_2;
                                   break L7;
                                 } else {
-                                  stackOut_52_0 = (int[]) (Object) stackIn_52_0;
+                                  stackOut_52_0 = (int[]) ((Object) stackIn_52_0);
                                   stackOut_52_1 = stackIn_52_1;
-                                  stackOut_52_2 = var9 * var58[var21] >> 11;
+                                  stackOut_52_2 = var9 * var56[var21] >> 581240427;
                                   stackIn_54_0 = stackOut_52_0;
                                   stackIn_54_1 = stackOut_52_1;
                                   stackIn_54_2 = stackOut_52_2;
@@ -652,33 +652,33 @@ final class ska extends k {
                             }
                           }
                         } else {
-                          if (var21 == 7) {
-                            var12 = var51[0];
-                            var13 = var51[1];
-                            var14 = var51[2];
-                            var54 = var53[0];
-                            var55 = var52[0];
-                            var56 = var52[1];
-                            var57 = var53[1];
-                            var58 = var52[2];
-                            var59 = var53[2];
+                          if (-8 == (var21 ^ -1)) {
+                            var12 = var33[0];
+                            var13 = var33[1];
+                            var14 = var33[2];
+                            var52 = var51[0];
+                            var53 = var50[0];
+                            var54 = var50[1];
+                            var55 = var51[1];
+                            var56 = var50[2];
+                            var57 = var51[2];
                             var21 = 0;
                             L8: while (true) {
-                              if (~var21 <= ~hh.field_d) {
+                              if (var21 >= hh.field_d) {
                                 break L0;
                               } else {
                                 L9: {
-                                  var5 = var56[var21];
-                                  var4 = var55[var21];
-                                  var6 = var58[var21];
-                                  stackOut_57_0 = (int[]) var12;
+                                  var5 = var54[var21];
+                                  var4 = var53[var21];
+                                  var6 = var56[var21];
+                                  stackOut_57_0 = (int[]) (var12);
                                   stackOut_57_1 = var21;
                                   stackIn_59_0 = stackOut_57_0;
                                   stackIn_59_1 = stackOut_57_1;
                                   stackIn_58_0 = stackOut_57_0;
                                   stackIn_58_1 = stackOut_57_1;
                                   if (var4 == 4096) {
-                                    stackOut_59_0 = (int[]) (Object) stackIn_59_0;
+                                    stackOut_59_0 = (int[]) ((Object) stackIn_59_0);
                                     stackOut_59_1 = stackIn_59_1;
                                     stackOut_59_2 = 4096;
                                     stackIn_60_0 = stackOut_59_0;
@@ -686,9 +686,9 @@ final class ska extends k {
                                     stackIn_60_2 = stackOut_59_2;
                                     break L9;
                                   } else {
-                                    stackOut_58_0 = (int[]) (Object) stackIn_58_0;
+                                    stackOut_58_0 = (int[]) ((Object) stackIn_58_0);
                                     stackOut_58_1 = stackIn_58_1;
-                                    stackOut_58_2 = (var54[var21] << 12) / (4096 - var4);
+                                    stackOut_58_2 = (var52[var21] << 1656654156) / (4096 - var4);
                                     stackIn_60_0 = stackOut_58_0;
                                     stackIn_60_1 = stackOut_58_1;
                                     stackIn_60_2 = stackOut_58_2;
@@ -697,22 +697,22 @@ final class ska extends k {
                                 }
                                 L10: {
                                   stackIn_60_0[stackIn_60_1] = stackIn_60_2;
-                                  stackOut_60_0 = (int[]) var13;
+                                  stackOut_60_0 = (int[]) (var13);
                                   stackOut_60_1 = var21;
                                   stackIn_62_0 = stackOut_60_0;
                                   stackIn_62_1 = stackOut_60_1;
                                   stackIn_61_0 = stackOut_60_0;
                                   stackIn_61_1 = stackOut_60_1;
-                                  if (var5 != 4096) {
-                                    stackOut_62_0 = (int[]) (Object) stackIn_62_0;
+                                  if ((var5 ^ -1) != -4097) {
+                                    stackOut_62_0 = (int[]) ((Object) stackIn_62_0);
                                     stackOut_62_1 = stackIn_62_1;
-                                    stackOut_62_2 = (var57[var21] << 12) / (4096 - var5);
+                                    stackOut_62_2 = (var55[var21] << 1372897452) / (4096 - var5);
                                     stackIn_63_0 = stackOut_62_0;
                                     stackIn_63_1 = stackOut_62_1;
                                     stackIn_63_2 = stackOut_62_2;
                                     break L10;
                                   } else {
-                                    stackOut_61_0 = (int[]) (Object) stackIn_61_0;
+                                    stackOut_61_0 = (int[]) ((Object) stackIn_61_0);
                                     stackOut_61_1 = stackIn_61_1;
                                     stackOut_61_2 = 4096;
                                     stackIn_63_0 = stackOut_61_0;
@@ -723,14 +723,14 @@ final class ska extends k {
                                 }
                                 L11: {
                                   stackIn_63_0[stackIn_63_1] = stackIn_63_2;
-                                  stackOut_63_0 = (int[]) var14;
+                                  stackOut_63_0 = (int[]) (var14);
                                   stackOut_63_1 = var21;
                                   stackIn_65_0 = stackOut_63_0;
                                   stackIn_65_1 = stackOut_63_1;
                                   stackIn_64_0 = stackOut_63_0;
                                   stackIn_64_1 = stackOut_63_1;
-                                  if (var6 == 4096) {
-                                    stackOut_65_0 = (int[]) (Object) stackIn_65_0;
+                                  if (-4097 == (var6 ^ -1)) {
+                                    stackOut_65_0 = (int[]) ((Object) stackIn_65_0);
                                     stackOut_65_1 = stackIn_65_1;
                                     stackOut_65_2 = 4096;
                                     stackIn_66_0 = stackOut_65_0;
@@ -738,9 +738,9 @@ final class ska extends k {
                                     stackIn_66_2 = stackOut_65_2;
                                     break L11;
                                   } else {
-                                    stackOut_64_0 = (int[]) (Object) stackIn_64_0;
+                                    stackOut_64_0 = (int[]) ((Object) stackIn_64_0);
                                     stackOut_64_1 = stackIn_64_1;
-                                    stackOut_64_2 = (var59[var21] << 12) / (-var6 + 4096);
+                                    stackOut_64_2 = (var57[var21] << 1936451052) / (-var6 + 4096);
                                     stackIn_66_0 = stackOut_64_0;
                                     stackIn_66_1 = stackOut_64_1;
                                     stackIn_66_2 = stackOut_64_2;
@@ -753,33 +753,33 @@ final class ska extends k {
                               }
                             }
                           } else {
-                            if (var21 == 8) {
-                              var12 = var51[0];
-                              var13 = var51[1];
-                              var14 = var51[2];
-                              var54 = var53[0];
-                              var55 = var52[0];
-                              var56 = var52[1];
-                              var57 = var53[1];
-                              var58 = var52[2];
-                              var59 = var53[2];
+                            if (-9 == (var21 ^ -1)) {
+                              var12 = var33[0];
+                              var13 = var33[1];
+                              var14 = var33[2];
+                              var52 = var51[0];
+                              var53 = var50[0];
+                              var54 = var50[1];
+                              var55 = var51[1];
+                              var56 = var50[2];
+                              var57 = var51[2];
                               var21 = 0;
                               L12: while (true) {
                                 if (hh.field_d <= var21) {
                                   break L0;
                                 } else {
                                   L13: {
-                                    var4 = var55[var21];
-                                    var6 = var58[var21];
-                                    var5 = var56[var21];
-                                    stackOut_69_0 = (int[]) var12;
+                                    var4 = var53[var21];
+                                    var6 = var56[var21];
+                                    var5 = var54[var21];
+                                    stackOut_69_0 = (int[]) (var12);
                                     stackOut_69_1 = var21;
                                     stackIn_71_0 = stackOut_69_0;
                                     stackIn_71_1 = stackOut_69_1;
                                     stackIn_70_0 = stackOut_69_0;
                                     stackIn_70_1 = stackOut_69_1;
                                     if (0 == var4) {
-                                      stackOut_71_0 = (int[]) (Object) stackIn_71_0;
+                                      stackOut_71_0 = (int[]) ((Object) stackIn_71_0);
                                       stackOut_71_1 = stackIn_71_1;
                                       stackOut_71_2 = 0;
                                       stackIn_72_0 = stackOut_71_0;
@@ -787,9 +787,9 @@ final class ska extends k {
                                       stackIn_72_2 = stackOut_71_2;
                                       break L13;
                                     } else {
-                                      stackOut_70_0 = (int[]) (Object) stackIn_70_0;
+                                      stackOut_70_0 = (int[]) ((Object) stackIn_70_0);
                                       stackOut_70_1 = stackIn_70_1;
-                                      stackOut_70_2 = -((-var54[var21] + 4096 << 12) / var4) + 4096;
+                                      stackOut_70_2 = -((-var52[var21] + 4096 << -1797577652) / var4) + 4096;
                                       stackIn_72_0 = stackOut_70_0;
                                       stackIn_72_1 = stackOut_70_1;
                                       stackIn_72_2 = stackOut_70_2;
@@ -798,14 +798,14 @@ final class ska extends k {
                                   }
                                   L14: {
                                     stackIn_72_0[stackIn_72_1] = stackIn_72_2;
-                                    stackOut_72_0 = (int[]) var13;
+                                    stackOut_72_0 = (int[]) (var13);
                                     stackOut_72_1 = var21;
                                     stackIn_74_0 = stackOut_72_0;
                                     stackIn_74_1 = stackOut_72_1;
                                     stackIn_73_0 = stackOut_72_0;
                                     stackIn_73_1 = stackOut_72_1;
                                     if (var5 == 0) {
-                                      stackOut_74_0 = (int[]) (Object) stackIn_74_0;
+                                      stackOut_74_0 = (int[]) ((Object) stackIn_74_0);
                                       stackOut_74_1 = stackIn_74_1;
                                       stackOut_74_2 = 0;
                                       stackIn_75_0 = stackOut_74_0;
@@ -813,9 +813,9 @@ final class ska extends k {
                                       stackIn_75_2 = stackOut_74_2;
                                       break L14;
                                     } else {
-                                      stackOut_73_0 = (int[]) (Object) stackIn_73_0;
+                                      stackOut_73_0 = (int[]) ((Object) stackIn_73_0);
                                       stackOut_73_1 = stackIn_73_1;
-                                      stackOut_73_2 = -((4096 + -var57[var21] << 12) / var5) + 4096;
+                                      stackOut_73_2 = -((4096 + -var55[var21] << -850269620) / var5) + 4096;
                                       stackIn_75_0 = stackOut_73_0;
                                       stackIn_75_1 = stackOut_73_1;
                                       stackIn_75_2 = stackOut_73_2;
@@ -824,22 +824,22 @@ final class ska extends k {
                                   }
                                   L15: {
                                     stackIn_75_0[stackIn_75_1] = stackIn_75_2;
-                                    stackOut_75_0 = (int[]) var14;
+                                    stackOut_75_0 = (int[]) (var14);
                                     stackOut_75_1 = var21;
                                     stackIn_77_0 = stackOut_75_0;
                                     stackIn_77_1 = stackOut_75_1;
                                     stackIn_76_0 = stackOut_75_0;
                                     stackIn_76_1 = stackOut_75_1;
                                     if (var6 != 0) {
-                                      stackOut_77_0 = (int[]) (Object) stackIn_77_0;
+                                      stackOut_77_0 = (int[]) ((Object) stackIn_77_0);
                                       stackOut_77_1 = stackIn_77_1;
-                                      stackOut_77_2 = -((4096 + -var59[var21] << 12) / var6) + 4096;
+                                      stackOut_77_2 = -((4096 + -var57[var21] << -715036980) / var6) + 4096;
                                       stackIn_78_0 = stackOut_77_0;
                                       stackIn_78_1 = stackOut_77_1;
                                       stackIn_78_2 = stackOut_77_2;
                                       break L15;
                                     } else {
-                                      stackOut_76_0 = (int[]) (Object) stackIn_76_0;
+                                      stackOut_76_0 = (int[]) ((Object) stackIn_76_0);
                                       stackOut_76_1 = stackIn_76_1;
                                       stackOut_76_2 = 0;
                                       stackIn_78_0 = stackOut_76_0;
@@ -854,36 +854,36 @@ final class ska extends k {
                                 }
                               }
                             } else {
-                              if (var21 == 9) {
-                                var12 = var51[0];
-                                var13 = var51[1];
-                                var14 = var51[2];
-                                var54 = var53[0];
-                                var55 = var52[0];
-                                var56 = var52[1];
-                                var57 = var53[1];
-                                var58 = var52[2];
-                                var59 = var53[2];
+                              if ((var21 ^ -1) == -10) {
+                                var12 = var33[0];
+                                var13 = var33[1];
+                                var14 = var33[2];
+                                var52 = var51[0];
+                                var53 = var50[0];
+                                var54 = var50[1];
+                                var55 = var51[1];
+                                var56 = var50[2];
+                                var57 = var51[2];
                                 var21 = 0;
                                 L16: while (true) {
-                                  if (~var21 <= ~hh.field_d) {
+                                  if (var21 >= hh.field_d) {
                                     break L0;
                                   } else {
                                     L17: {
-                                      var6 = var58[var21];
-                                      var8 = var57[var21];
-                                      var9 = var59[var21];
-                                      var4 = var55[var21];
-                                      var5 = var56[var21];
-                                      var7 = var54[var21];
-                                      stackOut_81_0 = (int[]) var12;
+                                      var6 = var56[var21];
+                                      var8 = var55[var21];
+                                      var9 = var57[var21];
+                                      var4 = var53[var21];
+                                      var5 = var54[var21];
+                                      var7 = var52[var21];
+                                      stackOut_81_0 = (int[]) (var12);
                                       stackOut_81_1 = var21;
                                       stackIn_83_0 = stackOut_81_0;
                                       stackIn_83_1 = stackOut_81_1;
                                       stackIn_82_0 = stackOut_81_0;
                                       stackIn_82_1 = stackOut_81_1;
-                                      if (~var7 < ~var4) {
-                                        stackOut_83_0 = (int[]) (Object) stackIn_83_0;
+                                      if (var7 > var4) {
+                                        stackOut_83_0 = (int[]) ((Object) stackIn_83_0);
                                         stackOut_83_1 = stackIn_83_1;
                                         stackOut_83_2 = var4;
                                         stackIn_84_0 = stackOut_83_0;
@@ -891,7 +891,7 @@ final class ska extends k {
                                         stackIn_84_2 = stackOut_83_2;
                                         break L17;
                                       } else {
-                                        stackOut_82_0 = (int[]) (Object) stackIn_82_0;
+                                        stackOut_82_0 = (int[]) ((Object) stackIn_82_0);
                                         stackOut_82_1 = stackIn_82_1;
                                         stackOut_82_2 = var7;
                                         stackIn_84_0 = stackOut_82_0;
@@ -902,14 +902,14 @@ final class ska extends k {
                                     }
                                     L18: {
                                       stackIn_84_0[stackIn_84_1] = stackIn_84_2;
-                                      stackOut_84_0 = (int[]) var13;
+                                      stackOut_84_0 = (int[]) (var13);
                                       stackOut_84_1 = var21;
                                       stackIn_86_0 = stackOut_84_0;
                                       stackIn_86_1 = stackOut_84_1;
                                       stackIn_85_0 = stackOut_84_0;
                                       stackIn_85_1 = stackOut_84_1;
                                       if (var8 > var5) {
-                                        stackOut_86_0 = (int[]) (Object) stackIn_86_0;
+                                        stackOut_86_0 = (int[]) ((Object) stackIn_86_0);
                                         stackOut_86_1 = stackIn_86_1;
                                         stackOut_86_2 = var5;
                                         stackIn_87_0 = stackOut_86_0;
@@ -917,7 +917,7 @@ final class ska extends k {
                                         stackIn_87_2 = stackOut_86_2;
                                         break L18;
                                       } else {
-                                        stackOut_85_0 = (int[]) (Object) stackIn_85_0;
+                                        stackOut_85_0 = (int[]) ((Object) stackIn_85_0);
                                         stackOut_85_1 = stackIn_85_1;
                                         stackOut_85_2 = var8;
                                         stackIn_87_0 = stackOut_85_0;
@@ -928,14 +928,14 @@ final class ska extends k {
                                     }
                                     L19: {
                                       stackIn_87_0[stackIn_87_1] = stackIn_87_2;
-                                      stackOut_87_0 = (int[]) var14;
+                                      stackOut_87_0 = (int[]) (var14);
                                       stackOut_87_1 = var21;
                                       stackIn_89_0 = stackOut_87_0;
                                       stackIn_89_1 = stackOut_87_1;
                                       stackIn_88_0 = stackOut_87_0;
                                       stackIn_88_1 = stackOut_87_1;
                                       if (var6 < var9) {
-                                        stackOut_89_0 = (int[]) (Object) stackIn_89_0;
+                                        stackOut_89_0 = (int[]) ((Object) stackIn_89_0);
                                         stackOut_89_1 = stackIn_89_1;
                                         stackOut_89_2 = var6;
                                         stackIn_90_0 = stackOut_89_0;
@@ -943,7 +943,7 @@ final class ska extends k {
                                         stackIn_90_2 = stackOut_89_2;
                                         break L19;
                                       } else {
-                                        stackOut_88_0 = (int[]) (Object) stackIn_88_0;
+                                        stackOut_88_0 = (int[]) ((Object) stackIn_88_0);
                                         stackOut_88_1 = stackIn_88_1;
                                         stackOut_88_2 = var9;
                                         stackIn_90_0 = stackOut_88_0;
@@ -959,35 +959,35 @@ final class ska extends k {
                                 }
                               } else {
                                 if (10 == var21) {
-                                  var12 = var51[0];
-                                  var13 = var51[1];
-                                  var14 = var51[2];
-                                  var54 = var53[0];
-                                  var55 = var52[0];
-                                  var56 = var52[1];
-                                  var57 = var53[1];
-                                  var58 = var52[2];
-                                  var59 = var53[2];
+                                  var12 = var33[0];
+                                  var13 = var33[1];
+                                  var14 = var33[2];
+                                  var52 = var51[0];
+                                  var53 = var50[0];
+                                  var54 = var50[1];
+                                  var55 = var51[1];
+                                  var56 = var50[2];
+                                  var57 = var51[2];
                                   var21 = 0;
                                   L20: while (true) {
-                                    if (~hh.field_d >= ~var21) {
+                                    if (hh.field_d <= var21) {
                                       break L0;
                                     } else {
                                       L21: {
-                                        var4 = var55[var21];
-                                        var5 = var56[var21];
-                                        var6 = var58[var21];
-                                        var8 = var57[var21];
-                                        var7 = var54[var21];
-                                        var9 = var59[var21];
-                                        stackOut_93_0 = (int[]) var12;
+                                        var4 = var53[var21];
+                                        var5 = var54[var21];
+                                        var6 = var56[var21];
+                                        var8 = var55[var21];
+                                        var7 = var52[var21];
+                                        var9 = var57[var21];
+                                        stackOut_93_0 = (int[]) (var12);
                                         stackOut_93_1 = var21;
                                         stackIn_95_0 = stackOut_93_0;
                                         stackIn_95_1 = stackOut_93_1;
                                         stackIn_94_0 = stackOut_93_0;
                                         stackIn_94_1 = stackOut_93_1;
-                                        if (~var7 > ~var4) {
-                                          stackOut_95_0 = (int[]) (Object) stackIn_95_0;
+                                        if (var7 < var4) {
+                                          stackOut_95_0 = (int[]) ((Object) stackIn_95_0);
                                           stackOut_95_1 = stackIn_95_1;
                                           stackOut_95_2 = var4;
                                           stackIn_96_0 = stackOut_95_0;
@@ -995,7 +995,7 @@ final class ska extends k {
                                           stackIn_96_2 = stackOut_95_2;
                                           break L21;
                                         } else {
-                                          stackOut_94_0 = (int[]) (Object) stackIn_94_0;
+                                          stackOut_94_0 = (int[]) ((Object) stackIn_94_0);
                                           stackOut_94_1 = stackIn_94_1;
                                           stackOut_94_2 = var7;
                                           stackIn_96_0 = stackOut_94_0;
@@ -1006,14 +1006,14 @@ final class ska extends k {
                                       }
                                       L22: {
                                         stackIn_96_0[stackIn_96_1] = stackIn_96_2;
-                                        stackOut_96_0 = (int[]) var13;
+                                        stackOut_96_0 = (int[]) (var13);
                                         stackOut_96_1 = var21;
                                         stackIn_98_0 = stackOut_96_0;
                                         stackIn_98_1 = stackOut_96_1;
                                         stackIn_97_0 = stackOut_96_0;
                                         stackIn_97_1 = stackOut_96_1;
-                                        if (~var5 < ~var8) {
-                                          stackOut_98_0 = (int[]) (Object) stackIn_98_0;
+                                        if (var5 > var8) {
+                                          stackOut_98_0 = (int[]) ((Object) stackIn_98_0);
                                           stackOut_98_1 = stackIn_98_1;
                                           stackOut_98_2 = var5;
                                           stackIn_99_0 = stackOut_98_0;
@@ -1021,7 +1021,7 @@ final class ska extends k {
                                           stackIn_99_2 = stackOut_98_2;
                                           break L22;
                                         } else {
-                                          stackOut_97_0 = (int[]) (Object) stackIn_97_0;
+                                          stackOut_97_0 = (int[]) ((Object) stackIn_97_0);
                                           stackOut_97_1 = stackIn_97_1;
                                           stackOut_97_2 = var8;
                                           stackIn_99_0 = stackOut_97_0;
@@ -1032,14 +1032,14 @@ final class ska extends k {
                                       }
                                       L23: {
                                         stackIn_99_0[stackIn_99_1] = stackIn_99_2;
-                                        stackOut_99_0 = (int[]) var14;
+                                        stackOut_99_0 = (int[]) (var14);
                                         stackOut_99_1 = var21;
                                         stackIn_101_0 = stackOut_99_0;
                                         stackIn_101_1 = stackOut_99_1;
                                         stackIn_100_0 = stackOut_99_0;
                                         stackIn_100_1 = stackOut_99_1;
-                                        if (~var9 <= ~var6) {
-                                          stackOut_101_0 = (int[]) (Object) stackIn_101_0;
+                                        if (var9 >= var6) {
+                                          stackOut_101_0 = (int[]) ((Object) stackIn_101_0);
                                           stackOut_101_1 = stackIn_101_1;
                                           stackOut_101_2 = var9;
                                           stackIn_102_0 = stackOut_101_0;
@@ -1047,7 +1047,7 @@ final class ska extends k {
                                           stackIn_102_2 = stackOut_101_2;
                                           break L23;
                                         } else {
-                                          stackOut_100_0 = (int[]) (Object) stackIn_100_0;
+                                          stackOut_100_0 = (int[]) ((Object) stackIn_100_0);
                                           stackOut_100_1 = stackIn_100_1;
                                           stackOut_100_2 = var6;
                                           stackIn_102_0 = stackOut_100_0;
@@ -1066,64 +1066,64 @@ final class ska extends k {
                                     if (12 != var21) {
                                       break L0;
                                     } else {
-                                      var12 = var51[0];
-                                      var13 = var51[1];
-                                      var14 = var51[2];
-                                      var54 = var53[0];
-                                      var55 = var52[0];
-                                      var56 = var52[1];
-                                      var57 = var53[1];
-                                      var58 = var52[2];
-                                      var59 = var53[2];
+                                      var12 = var33[0];
+                                      var13 = var33[1];
+                                      var14 = var33[2];
+                                      var52 = var51[0];
+                                      var53 = var50[0];
+                                      var54 = var50[1];
+                                      var55 = var51[1];
+                                      var56 = var50[2];
+                                      var57 = var51[2];
                                       var21 = 0;
                                       L24: while (true) {
-                                        if (~hh.field_d >= ~var21) {
+                                        if (hh.field_d <= var21) {
                                           break L0;
                                         } else {
-                                          var4 = var55[var21];
-                                          var5 = var56[var21];
-                                          var6 = var58[var21];
-                                          var8 = var57[var21];
-                                          var7 = var54[var21];
-                                          var9 = var59[var21];
-                                          var12[var21] = -(var7 * var4 >> 11) + var4 + var7;
-                                          var13[var21] = var5 - -var8 + -(var5 * var8 >> 11);
-                                          var14[var21] = -(var6 * var9 >> 11) + var9 + var6;
+                                          var4 = var53[var21];
+                                          var5 = var54[var21];
+                                          var6 = var56[var21];
+                                          var8 = var55[var21];
+                                          var7 = var52[var21];
+                                          var9 = var57[var21];
+                                          var12[var21] = -(var7 * var4 >> -777017141) + var4 + var7;
+                                          var13[var21] = var5 - -var8 + -(var5 * var8 >> 1451555979);
+                                          var14[var21] = -(var6 * var9 >> -1207747605) + var9 + var6;
                                           var21++;
                                           continue L24;
                                         }
                                       }
                                     }
                                   } else {
-                                    var12 = var51[0];
-                                    var13 = var51[1];
-                                    var14 = var51[2];
-                                    var54 = var53[0];
-                                    var55 = var52[0];
-                                    var56 = var52[1];
-                                    var57 = var53[1];
-                                    var58 = var52[2];
-                                    var59 = var53[2];
+                                    var12 = var33[0];
+                                    var13 = var33[1];
+                                    var14 = var33[2];
+                                    var52 = var51[0];
+                                    var53 = var50[0];
+                                    var54 = var50[1];
+                                    var55 = var51[1];
+                                    var56 = var50[2];
+                                    var57 = var51[2];
                                     var21 = 0;
                                     L25: while (true) {
                                       if (var21 >= hh.field_d) {
                                         break L0;
                                       } else {
                                         L26: {
-                                          var9 = var59[var21];
-                                          var8 = var57[var21];
-                                          var6 = var58[var21];
-                                          var4 = var55[var21];
-                                          var5 = var56[var21];
-                                          var7 = var54[var21];
-                                          stackOut_105_0 = (int[]) var12;
+                                          var9 = var57[var21];
+                                          var8 = var55[var21];
+                                          var6 = var56[var21];
+                                          var4 = var53[var21];
+                                          var5 = var54[var21];
+                                          var7 = var52[var21];
+                                          stackOut_105_0 = (int[]) (var12);
                                           stackOut_105_1 = var21;
                                           stackIn_107_0 = stackOut_105_0;
                                           stackIn_107_1 = stackOut_105_1;
                                           stackIn_106_0 = stackOut_105_0;
                                           stackIn_106_1 = stackOut_105_1;
                                           if (var7 >= var4) {
-                                            stackOut_107_0 = (int[]) (Object) stackIn_107_0;
+                                            stackOut_107_0 = (int[]) ((Object) stackIn_107_0);
                                             stackOut_107_1 = stackIn_107_1;
                                             stackOut_107_2 = -var4 + var7;
                                             stackIn_108_0 = stackOut_107_0;
@@ -1131,7 +1131,7 @@ final class ska extends k {
                                             stackIn_108_2 = stackOut_107_2;
                                             break L26;
                                           } else {
-                                            stackOut_106_0 = (int[]) (Object) stackIn_106_0;
+                                            stackOut_106_0 = (int[]) ((Object) stackIn_106_0);
                                             stackOut_106_1 = stackIn_106_1;
                                             stackOut_106_2 = var4 - var7;
                                             stackIn_108_0 = stackOut_106_0;
@@ -1142,14 +1142,14 @@ final class ska extends k {
                                         }
                                         L27: {
                                           stackIn_108_0[stackIn_108_1] = stackIn_108_2;
-                                          stackOut_108_0 = (int[]) var13;
+                                          stackOut_108_0 = (int[]) (var13);
                                           stackOut_108_1 = var21;
                                           stackIn_110_0 = stackOut_108_0;
                                           stackIn_110_1 = stackOut_108_1;
                                           stackIn_109_0 = stackOut_108_0;
                                           stackIn_109_1 = stackOut_108_1;
-                                          if (~var8 > ~var5) {
-                                            stackOut_110_0 = (int[]) (Object) stackIn_110_0;
+                                          if (var8 < var5) {
+                                            stackOut_110_0 = (int[]) ((Object) stackIn_110_0);
                                             stackOut_110_1 = stackIn_110_1;
                                             stackOut_110_2 = var5 + -var8;
                                             stackIn_111_0 = stackOut_110_0;
@@ -1157,7 +1157,7 @@ final class ska extends k {
                                             stackIn_111_2 = stackOut_110_2;
                                             break L27;
                                           } else {
-                                            stackOut_109_0 = (int[]) (Object) stackIn_109_0;
+                                            stackOut_109_0 = (int[]) ((Object) stackIn_109_0);
                                             stackOut_109_1 = stackIn_109_1;
                                             stackOut_109_2 = var8 - var5;
                                             stackIn_111_0 = stackOut_109_0;
@@ -1168,14 +1168,14 @@ final class ska extends k {
                                         }
                                         L28: {
                                           stackIn_111_0[stackIn_111_1] = stackIn_111_2;
-                                          stackOut_111_0 = (int[]) var14;
+                                          stackOut_111_0 = (int[]) (var14);
                                           stackOut_111_1 = var21;
                                           stackIn_113_0 = stackOut_111_0;
                                           stackIn_113_1 = stackOut_111_1;
                                           stackIn_112_0 = stackOut_111_0;
                                           stackIn_112_1 = stackOut_111_1;
-                                          if (~var6 < ~var9) {
-                                            stackOut_113_0 = (int[]) (Object) stackIn_113_0;
+                                          if (var6 > var9) {
+                                            stackOut_113_0 = (int[]) ((Object) stackIn_113_0);
                                             stackOut_113_1 = stackIn_113_1;
                                             stackOut_113_2 = -var9 + var6;
                                             stackIn_114_0 = stackOut_113_0;
@@ -1183,7 +1183,7 @@ final class ska extends k {
                                             stackIn_114_2 = stackOut_113_2;
                                             break L28;
                                           } else {
-                                            stackOut_112_0 = (int[]) (Object) stackIn_112_0;
+                                            stackOut_112_0 = (int[]) ((Object) stackIn_112_0);
                                             stackOut_112_1 = stackIn_112_1;
                                             stackOut_112_2 = -var6 + var9;
                                             stackIn_114_0 = stackOut_112_0;
@@ -1205,32 +1205,32 @@ final class ska extends k {
                         }
                       }
                     } else {
-                      var12 = var51[0];
-                      var13 = var51[1];
-                      var14 = var51[2];
-                      var54 = var53[0];
-                      var55 = var52[0];
-                      var56 = var52[1];
-                      var57 = var53[1];
-                      var58 = var52[2];
-                      var59 = var53[2];
+                      var12 = var33[0];
+                      var13 = var33[1];
+                      var14 = var33[2];
+                      var52 = var51[0];
+                      var53 = var50[0];
+                      var54 = var50[1];
+                      var55 = var51[1];
+                      var56 = var50[2];
+                      var57 = var51[2];
                       var21 = 0;
                       L29: while (true) {
                         if (hh.field_d <= var21) {
                           break L0;
                         } else {
                           L30: {
-                            var7 = var54[var21];
-                            var9 = var59[var21];
-                            var8 = var57[var21];
-                            stackOut_30_0 = (int[]) var12;
+                            var7 = var52[var21];
+                            var9 = var57[var21];
+                            var8 = var55[var21];
+                            stackOut_30_0 = (int[]) (var12);
                             stackOut_30_1 = var21;
                             stackIn_32_0 = stackOut_30_0;
                             stackIn_32_1 = stackOut_30_1;
                             stackIn_31_0 = stackOut_30_0;
                             stackIn_31_1 = stackOut_30_1;
-                            if (var7 == 0) {
-                              stackOut_32_0 = (int[]) (Object) stackIn_32_0;
+                            if (-1 == (var7 ^ -1)) {
+                              stackOut_32_0 = (int[]) ((Object) stackIn_32_0);
                               stackOut_32_1 = stackIn_32_1;
                               stackOut_32_2 = 4096;
                               stackIn_33_0 = stackOut_32_0;
@@ -1238,9 +1238,9 @@ final class ska extends k {
                               stackIn_33_2 = stackOut_32_2;
                               break L30;
                             } else {
-                              stackOut_31_0 = (int[]) (Object) stackIn_31_0;
+                              stackOut_31_0 = (int[]) ((Object) stackIn_31_0);
                               stackOut_31_1 = stackIn_31_1;
-                              stackOut_31_2 = (var55[var21] << 12) / var7;
+                              stackOut_31_2 = (var53[var21] << 192758508) / var7;
                               stackIn_33_0 = stackOut_31_0;
                               stackIn_33_1 = stackOut_31_1;
                               stackIn_33_2 = stackOut_31_2;
@@ -1249,22 +1249,22 @@ final class ska extends k {
                           }
                           L31: {
                             stackIn_33_0[stackIn_33_1] = stackIn_33_2;
-                            stackOut_33_0 = (int[]) var13;
+                            stackOut_33_0 = (int[]) (var13);
                             stackOut_33_1 = var21;
                             stackIn_35_0 = stackOut_33_0;
                             stackIn_35_1 = stackOut_33_1;
                             stackIn_34_0 = stackOut_33_0;
                             stackIn_34_1 = stackOut_33_1;
                             if (0 != var8) {
-                              stackOut_35_0 = (int[]) (Object) stackIn_35_0;
+                              stackOut_35_0 = (int[]) ((Object) stackIn_35_0);
                               stackOut_35_1 = stackIn_35_1;
-                              stackOut_35_2 = (var56[var21] << 12) / var8;
+                              stackOut_35_2 = (var54[var21] << 18274604) / var8;
                               stackIn_36_0 = stackOut_35_0;
                               stackIn_36_1 = stackOut_35_1;
                               stackIn_36_2 = stackOut_35_2;
                               break L31;
                             } else {
-                              stackOut_34_0 = (int[]) (Object) stackIn_34_0;
+                              stackOut_34_0 = (int[]) ((Object) stackIn_34_0);
                               stackOut_34_1 = stackIn_34_1;
                               stackOut_34_2 = 4096;
                               stackIn_36_0 = stackOut_34_0;
@@ -1275,22 +1275,22 @@ final class ska extends k {
                           }
                           L32: {
                             stackIn_36_0[stackIn_36_1] = stackIn_36_2;
-                            stackOut_36_0 = (int[]) var14;
+                            stackOut_36_0 = (int[]) (var14);
                             stackOut_36_1 = var21;
                             stackIn_38_0 = stackOut_36_0;
                             stackIn_38_1 = stackOut_36_1;
                             stackIn_37_0 = stackOut_36_0;
                             stackIn_37_1 = stackOut_36_1;
-                            if (var9 != 0) {
-                              stackOut_38_0 = (int[]) (Object) stackIn_38_0;
+                            if (-1 != (var9 ^ -1)) {
+                              stackOut_38_0 = (int[]) ((Object) stackIn_38_0);
                               stackOut_38_1 = stackIn_38_1;
-                              stackOut_38_2 = (var58[var21] << 12) / var9;
+                              stackOut_38_2 = (var56[var21] << 191485708) / var9;
                               stackIn_39_0 = stackOut_38_0;
                               stackIn_39_1 = stackOut_38_1;
                               stackIn_39_2 = stackOut_38_2;
                               break L32;
                             } else {
-                              stackOut_37_0 = (int[]) (Object) stackIn_37_0;
+                              stackOut_37_0 = (int[]) ((Object) stackIn_37_0);
                               stackOut_37_1 = stackIn_37_1;
                               stackOut_37_2 = 4096;
                               stackIn_39_0 = stackOut_37_0;
@@ -1306,23 +1306,23 @@ final class ska extends k {
                       }
                     }
                   } else {
-                    var12 = var51[0];
-                    var13 = var51[1];
-                    var14 = var51[2];
-                    var54 = var53[0];
-                    var55 = var52[0];
-                    var56 = var52[1];
-                    var57 = var53[1];
-                    var58 = var52[2];
-                    var59 = var53[2];
+                    var12 = var33[0];
+                    var13 = var33[1];
+                    var14 = var33[2];
+                    var52 = var51[0];
+                    var53 = var50[0];
+                    var54 = var50[1];
+                    var55 = var51[1];
+                    var56 = var50[2];
+                    var57 = var51[2];
                     var21 = 0;
                     L33: while (true) {
-                      if (~hh.field_d >= ~var21) {
+                      if (hh.field_d <= var21) {
                         break L0;
                       } else {
-                        var12[var21] = var55[var21] * var54[var21] >> 12;
-                        var13[var21] = var56[var21] * var57[var21] >> 12;
-                        var14[var21] = var58[var21] * var59[var21] >> 12;
+                        var12[var21] = var53[var21] * var52[var21] >> 705008972;
+                        var13[var21] = var54[var21] * var55[var21] >> -76271476;
+                        var14[var21] = var56[var21] * var57[var21] >> 389459340;
                         var21++;
                         continue L33;
                       }
@@ -1334,7 +1334,7 @@ final class ska extends k {
           }
           return var3;
         } else {
-          return null;
+          return (int[][]) null;
         }
     }
 
@@ -1344,7 +1344,7 @@ final class ska extends k {
         int var5 = 0;
         int var8 = 0;
         int var9 = 0;
-        Object var10 = null;
+        lu var10 = null;
         int[] var11 = null;
         int[] var18 = null;
         int[] var19 = null;
@@ -1458,56 +1458,56 @@ final class ska extends k {
           if (param1 == 0) {
             break L0;
           } else {
-            var10 = null;
-            ((ska) this).a((byte) -21, (lu) null, -72);
+            var10 = (lu) null;
+            this.a((byte) -21, (lu) null, -72);
             break L0;
           }
         }
         L1: {
-          var11 = ((ska) this).field_j.a(param0, ~param1);
+          var11 = this.field_j.a(param0, param1 ^ -1);
           var3 = var11;
-          if (!((ska) this).field_j.field_m) {
+          if (!this.field_j.field_m) {
             break L1;
           } else {
-            var19 = ((ska) this).a(0, param0, (byte) 110);
-            var18 = ((ska) this).a(1, param0, (byte) 126);
-            var8 = ((ska) this).field_l;
+            var19 = this.a(0, param0, (byte) 110);
+            var18 = this.a(1, param0, (byte) 126);
+            var8 = this.field_l;
             if (var8 != 1) {
-              if (var8 != 2) {
+              if (-3 != (var8 ^ -1)) {
                 if (3 == var8) {
                   var8 = 0;
                   L2: while (true) {
                     if (hh.field_d <= var8) {
                       break L1;
                     } else {
-                      var3[var8] = var18[var8] * var19[var8] >> 12;
+                      var3[var8] = var18[var8] * var19[var8] >> -237371380;
                       var8++;
                       continue L2;
                     }
                   }
                 } else {
-                  if (var8 != 4) {
+                  if (-5 != (var8 ^ -1)) {
                     if (var8 != 5) {
-                      if (var8 != 6) {
-                        if (var8 != 7) {
+                      if (-7 != (var8 ^ -1)) {
+                        if ((var8 ^ -1) != -8) {
                           if (var8 != 8) {
                             if (var8 == 9) {
                               var8 = 0;
                               L3: while (true) {
-                                if (~var8 <= ~hh.field_d) {
+                                if (var8 >= hh.field_d) {
                                   break L1;
                                 } else {
                                   L4: {
                                     var5 = var18[var8];
                                     var4 = var19[var8];
-                                    stackOut_62_0 = (int[]) var3;
+                                    stackOut_62_0 = (int[]) (var3);
                                     stackOut_62_1 = var8;
                                     stackIn_64_0 = stackOut_62_0;
                                     stackIn_64_1 = stackOut_62_1;
                                     stackIn_63_0 = stackOut_62_0;
                                     stackIn_63_1 = stackOut_62_1;
-                                    if (~var5 >= ~var4) {
-                                      stackOut_64_0 = (int[]) (Object) stackIn_64_0;
+                                    if (var5 <= var4) {
+                                      stackOut_64_0 = (int[]) ((Object) stackIn_64_0);
                                       stackOut_64_1 = stackIn_64_1;
                                       stackOut_64_2 = var5;
                                       stackIn_65_0 = stackOut_64_0;
@@ -1515,7 +1515,7 @@ final class ska extends k {
                                       stackIn_65_2 = stackOut_64_2;
                                       break L4;
                                     } else {
-                                      stackOut_63_0 = (int[]) (Object) stackIn_63_0;
+                                      stackOut_63_0 = (int[]) ((Object) stackIn_63_0);
                                       stackOut_63_1 = stackIn_63_1;
                                       stackOut_63_2 = var4;
                                       stackIn_65_0 = stackOut_63_0;
@@ -1533,20 +1533,20 @@ final class ska extends k {
                               if (10 == var8) {
                                 var8 = 0;
                                 L5: while (true) {
-                                  if (~hh.field_d >= ~var8) {
+                                  if (hh.field_d <= var8) {
                                     break L1;
                                   } else {
                                     L6: {
                                       var5 = var18[var8];
                                       var4 = var19[var8];
-                                      stackOut_68_0 = (int[]) var3;
+                                      stackOut_68_0 = (int[]) (var3);
                                       stackOut_68_1 = var8;
                                       stackIn_70_0 = stackOut_68_0;
                                       stackIn_70_1 = stackOut_68_1;
                                       stackIn_69_0 = stackOut_68_0;
                                       stackIn_69_1 = stackOut_68_1;
                                       if (var4 > var5) {
-                                        stackOut_70_0 = (int[]) (Object) stackIn_70_0;
+                                        stackOut_70_0 = (int[]) ((Object) stackIn_70_0);
                                         stackOut_70_1 = stackIn_70_1;
                                         stackOut_70_2 = var4;
                                         stackIn_71_0 = stackOut_70_0;
@@ -1554,7 +1554,7 @@ final class ska extends k {
                                         stackIn_71_2 = stackOut_70_2;
                                         break L6;
                                       } else {
-                                        stackOut_69_0 = (int[]) (Object) stackIn_69_0;
+                                        stackOut_69_0 = (int[]) ((Object) stackIn_69_0);
                                         stackOut_69_1 = stackIn_69_1;
                                         stackOut_69_2 = var5;
                                         stackIn_71_0 = stackOut_69_0;
@@ -1570,7 +1570,7 @@ final class ska extends k {
                                 }
                               } else {
                                 if (var8 != 11) {
-                                  if (var8 == 12) {
+                                  if (-13 == (var8 ^ -1)) {
                                     var8 = 0;
                                     L7: while (true) {
                                       if (var8 >= hh.field_d) {
@@ -1578,7 +1578,7 @@ final class ska extends k {
                                       } else {
                                         var5 = var18[var8];
                                         var4 = var19[var8];
-                                        var3[var8] = -(var4 * var5 >> 11) + var5 + var4;
+                                        var3[var8] = -(var4 * var5 >> -2124802389) + var5 + var4;
                                         var8++;
                                         continue L7;
                                       }
@@ -1595,14 +1595,14 @@ final class ska extends k {
                                       L9: {
                                         var4 = var19[var8];
                                         var5 = var18[var8];
-                                        stackOut_74_0 = (int[]) var3;
+                                        stackOut_74_0 = (int[]) (var3);
                                         stackOut_74_1 = var8;
                                         stackIn_76_0 = stackOut_74_0;
                                         stackIn_76_1 = stackOut_74_1;
                                         stackIn_75_0 = stackOut_74_0;
                                         stackIn_75_1 = stackOut_74_1;
-                                        if (~var5 > ~var4) {
-                                          stackOut_76_0 = (int[]) (Object) stackIn_76_0;
+                                        if (var5 < var4) {
+                                          stackOut_76_0 = (int[]) ((Object) stackIn_76_0);
                                           stackOut_76_1 = stackIn_76_1;
                                           stackOut_76_2 = var4 - var5;
                                           stackIn_77_0 = stackOut_76_0;
@@ -1610,7 +1610,7 @@ final class ska extends k {
                                           stackIn_77_2 = stackOut_76_2;
                                           break L9;
                                         } else {
-                                          stackOut_75_0 = (int[]) (Object) stackIn_75_0;
+                                          stackOut_75_0 = (int[]) ((Object) stackIn_75_0);
                                           stackOut_75_1 = stackIn_75_1;
                                           stackOut_75_2 = -var4 + var5;
                                           stackIn_77_0 = stackOut_75_0;
@@ -1630,19 +1630,19 @@ final class ska extends k {
                           } else {
                             var8 = 0;
                             L10: while (true) {
-                              if (~var8 <= ~hh.field_d) {
+                              if (var8 >= hh.field_d) {
                                 break L1;
                               } else {
                                 L11: {
                                   var4 = var19[var8];
-                                  stackOut_56_0 = (int[]) var3;
+                                  stackOut_56_0 = (int[]) (var3);
                                   stackOut_56_1 = var8;
                                   stackIn_58_0 = stackOut_56_0;
                                   stackIn_58_1 = stackOut_56_1;
                                   stackIn_57_0 = stackOut_56_0;
                                   stackIn_57_1 = stackOut_56_1;
                                   if (var4 == 0) {
-                                    stackOut_58_0 = (int[]) (Object) stackIn_58_0;
+                                    stackOut_58_0 = (int[]) ((Object) stackIn_58_0);
                                     stackOut_58_1 = stackIn_58_1;
                                     stackOut_58_2 = 0;
                                     stackIn_59_0 = stackOut_58_0;
@@ -1650,9 +1650,9 @@ final class ska extends k {
                                     stackIn_59_2 = stackOut_58_2;
                                     break L11;
                                   } else {
-                                    stackOut_57_0 = (int[]) (Object) stackIn_57_0;
+                                    stackOut_57_0 = (int[]) ((Object) stackIn_57_0);
                                     stackOut_57_1 = stackIn_57_1;
-                                    stackOut_57_2 = 4096 - (4096 + -var18[var8] << 12) / var4;
+                                    stackOut_57_2 = 4096 - (4096 + -var18[var8] << 1333615404) / var4;
                                     stackIn_59_0 = stackOut_57_0;
                                     stackIn_59_1 = stackOut_57_1;
                                     stackIn_59_2 = stackOut_57_2;
@@ -1673,14 +1673,14 @@ final class ska extends k {
                             } else {
                               L13: {
                                 var4 = var19[var8];
-                                stackOut_50_0 = (int[]) var3;
+                                stackOut_50_0 = (int[]) (var3);
                                 stackOut_50_1 = var8;
                                 stackIn_52_0 = stackOut_50_0;
                                 stackIn_52_1 = stackOut_50_1;
                                 stackIn_51_0 = stackOut_50_0;
                                 stackIn_51_1 = stackOut_50_1;
                                 if (var4 == 4096) {
-                                  stackOut_52_0 = (int[]) (Object) stackIn_52_0;
+                                  stackOut_52_0 = (int[]) ((Object) stackIn_52_0);
                                   stackOut_52_1 = stackIn_52_1;
                                   stackOut_52_2 = 4096;
                                   stackIn_53_0 = stackOut_52_0;
@@ -1688,9 +1688,9 @@ final class ska extends k {
                                   stackIn_53_2 = stackOut_52_2;
                                   break L13;
                                 } else {
-                                  stackOut_51_0 = (int[]) (Object) stackIn_51_0;
+                                  stackOut_51_0 = (int[]) ((Object) stackIn_51_0);
                                   stackOut_51_1 = stackIn_51_1;
-                                  stackOut_51_2 = (var18[var8] << 12) / (-var4 + 4096);
+                                  stackOut_51_2 = (var18[var8] << -2131246420) / (-var4 + 4096);
                                   stackIn_53_0 = stackOut_51_0;
                                   stackIn_53_1 = stackOut_51_1;
                                   stackIn_53_2 = stackOut_51_2;
@@ -1706,29 +1706,29 @@ final class ska extends k {
                       } else {
                         var8 = 0;
                         L14: while (true) {
-                          if (~hh.field_d >= ~var8) {
+                          if (hh.field_d <= var8) {
                             break L1;
                           } else {
                             L15: {
                               var5 = var18[var8];
-                              stackOut_44_0 = (int[]) var3;
+                              stackOut_44_0 = (int[]) (var3);
                               stackOut_44_1 = var8;
                               stackIn_46_0 = stackOut_44_0;
                               stackIn_46_1 = stackOut_44_1;
                               stackIn_45_0 = stackOut_44_0;
                               stackIn_45_1 = stackOut_44_1;
                               if (var5 < 2048) {
-                                stackOut_46_0 = (int[]) (Object) stackIn_46_0;
+                                stackOut_46_0 = (int[]) ((Object) stackIn_46_0);
                                 stackOut_46_1 = stackIn_46_1;
-                                stackOut_46_2 = var19[var8] * var5 >> 11;
+                                stackOut_46_2 = var19[var8] * var5 >> 663826603;
                                 stackIn_47_0 = stackOut_46_0;
                                 stackIn_47_1 = stackOut_46_1;
                                 stackIn_47_2 = stackOut_46_2;
                                 break L15;
                               } else {
-                                stackOut_45_0 = (int[]) (Object) stackIn_45_0;
+                                stackOut_45_0 = (int[]) ((Object) stackIn_45_0);
                                 stackOut_45_1 = stackIn_45_1;
-                                stackOut_45_2 = 4096 - ((4096 - var19[var8]) * (4096 + -var5) >> 11);
+                                stackOut_45_2 = 4096 - ((4096 - var19[var8]) * (4096 + -var5) >> 1243464075);
                                 stackIn_47_0 = stackOut_45_0;
                                 stackIn_47_1 = stackOut_45_1;
                                 stackIn_47_2 = stackOut_45_2;
@@ -1744,10 +1744,10 @@ final class ska extends k {
                     } else {
                       var8 = 0;
                       L16: while (true) {
-                        if (~hh.field_d >= ~var8) {
+                        if (hh.field_d <= var8) {
                           break L1;
                         } else {
-                          var3[var8] = -((4096 + -var18[var8]) * (-var19[var8] + 4096) >> 12) + 4096;
+                          var3[var8] = -((4096 + -var18[var8]) * (-var19[var8] + 4096) >> -1355694900) + 4096;
                           var8++;
                           continue L16;
                         }
@@ -1756,27 +1756,27 @@ final class ska extends k {
                   } else {
                     var8 = 0;
                     L17: while (true) {
-                      if (~hh.field_d >= ~var8) {
+                      if (hh.field_d <= var8) {
                         break L1;
                       } else {
                         L18: {
                           var5 = var18[var8];
-                          stackOut_35_0 = (int[]) var3;
+                          stackOut_35_0 = (int[]) (var3);
                           stackOut_35_1 = var8;
                           stackIn_37_0 = stackOut_35_0;
                           stackIn_37_1 = stackOut_35_1;
                           stackIn_36_0 = stackOut_35_0;
                           stackIn_36_1 = stackOut_35_1;
-                          if (var5 != 0) {
-                            stackOut_37_0 = (int[]) (Object) stackIn_37_0;
+                          if (-1 != (var5 ^ -1)) {
+                            stackOut_37_0 = (int[]) ((Object) stackIn_37_0);
                             stackOut_37_1 = stackIn_37_1;
-                            stackOut_37_2 = (var19[var8] << 12) / var5;
+                            stackOut_37_2 = (var19[var8] << 889244364) / var5;
                             stackIn_38_0 = stackOut_37_0;
                             stackIn_38_1 = stackOut_37_1;
                             stackIn_38_2 = stackOut_37_2;
                             break L18;
                           } else {
-                            stackOut_36_0 = (int[]) (Object) stackIn_36_0;
+                            stackOut_36_0 = (int[]) ((Object) stackIn_36_0);
                             stackOut_36_1 = stackIn_36_1;
                             stackOut_36_2 = 4096;
                             stackIn_38_0 = stackOut_36_0;
@@ -1795,7 +1795,7 @@ final class ska extends k {
               } else {
                 var8 = 0;
                 L19: while (true) {
-                  if (~var8 <= ~hh.field_d) {
+                  if (var8 >= hh.field_d) {
                     break L1;
                   } else {
                     var3[var8] = var19[var8] - var18[var8];
@@ -1808,7 +1808,7 @@ final class ska extends k {
               var11 = var3;
               var8 = 0;
               L20: while (true) {
-                if (~var8 <= ~hh.field_d) {
+                if (var8 >= hh.field_d) {
                   break L1;
                 } else {
                   var11[var8] = var18[var8] + var19[var8];
@@ -1824,7 +1824,7 @@ final class ska extends k {
 
     public ska() {
         super(2, false);
-        ((ska) this).field_l = 6;
+        this.field_l = 6;
     }
 
     static {

@@ -17,7 +17,7 @@ final class pd {
         field_f = null;
         field_i = null;
         field_g = null;
-        int var1 = -36;
+        int var1 = -73 / ((42 - param0) / 62);
         field_h = null;
         field_b = null;
         field_d = null;
@@ -35,25 +35,47 @@ final class pd {
             j.a((byte) -33, true, og.field_eb, bg.field_d, param0, ge.field_b, 0);
             var2_int = 0;
             L1: while (true) {
-              if (og.field_eb <= var2_int) {
-                j.a((byte) -33, false, param0 + og.field_eb, rf.field_g, param0 - -param0, mf.field_Q, param0);
-                if (og.field_eb > param0) {
-                  og.field_eb = param0;
-                  break L0;
-                } else {
-                  return;
+              L2: {
+                L3: {
+                  if (og.field_eb <= var2_int) {
+                    break L3;
+                  } else {
+                    ch.field_a[var2_int + param0] = var2_int;
+                    var2_int++;
+                    if (var3 != 0) {
+                      break L2;
+                    } else {
+                      if (var3 == 0) {
+                        continue L1;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
                 }
+                L4: {
+                  if (param1 == 6) {
+                    break L4;
+                  } else {
+                    field_e = (byte[][]) null;
+                    break L4;
+                  }
+                }
+                j.a((byte) -33, false, param0 + og.field_eb, rf.field_g, param0 - -param0, mf.field_Q, param0);
+                break L2;
+              }
+              if (og.field_eb > param0) {
+                og.field_eb = param0;
+                break L0;
               } else {
-                ch.field_a[var2_int + param0] = var2_int;
-                var2_int++;
-                continue L1;
+                return;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dh.a((Throwable) ((Object) var2), "pd.A(" + param0 + ',' + 6 + ')');
+          throw dh.a((Throwable) ((Object) var2), "pd.A(" + param0 + ',' + param1 + ')');
         }
     }
 

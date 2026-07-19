@@ -8,13 +8,13 @@ final class cca extends ana {
 
     final boolean c(byte param0) {
         uea var2_ref_uea = null;
-        int fieldTemp$0 = ((cca) this).field_l - 1;
-        ((cca) this).field_l = ((cca) this).field_l - 1;
-        if (!(fieldTemp$0 <= 0)) {
-            if (25 == ((cca) this).field_l) {
+        int fieldTemp$0 = this.field_l - 1;
+        this.field_l = this.field_l - 1;
+        if (!((fieldTemp$0 ^ -1) >= -1)) {
+            if (25 == this.field_l) {
                 jja.a(256, -1, 26);
-                var2_ref_uea = new uea(((cca) this).field_q, ((cca) this).field_x.field_t, ((cca) this).field_x.field_r, 16777215);
-                ((kj) (Object) var2_ref_uea).a(0);
+                var2_ref_uea = new uea(this.field_q, this.field_x.field_t, this.field_x.field_r, 16777215);
+                ((kj) ((Object) var2_ref_uea)).a(0);
                 return false;
             }
             return false;
@@ -25,12 +25,20 @@ final class cca extends ana {
     }
 
     private final void e(byte param0) {
-        ((cca) this).field_x.a(((cca) this).field_q.field_h, false);
+        if (param0 != -64) {
+          field_v = (eaa) null;
+          this.field_x.a(this.field_q.field_h, false);
+          return;
+        } else {
+          this.field_x.a(this.field_q.field_h, false);
+          return;
+        }
     }
 
     final static n b(int param0, String param1) {
+        n discarded$2 = null;
         RuntimeException var2 = null;
-        Object var3 = null;
+        String var3 = null;
         n stackIn_6_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -55,8 +63,8 @@ final class cca extends ana {
               if (param0 == -26869) {
                 break L1;
               } else {
-                var3 = null;
-                n discarded$2 = cca.b(84, (String) null);
+                var3 = (String) null;
+                discarded$2 = cca.b(84, (String) null);
                 break L1;
               }
             }
@@ -64,7 +72,7 @@ final class cca extends ana {
               if (!ut.field_m.a(false)) {
                 break L2;
               } else {
-                if (param1.equals((Object) (Object) ut.field_m.b(param0 ^ -2930))) {
+                if (param1.equals(ut.field_m.b(param0 ^ -2930))) {
                   break L2;
                 } else {
                   ut.field_m = ida.a(param1, param0 ^ 26686);
@@ -80,23 +88,23 @@ final class cca extends ana {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_0 = (RuntimeException) (var2);
             stackOut_7_1 = new StringBuilder().append("cca.E(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -104,7 +112,7 @@ final class cca extends ana {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
@@ -118,29 +126,28 @@ final class cca extends ana {
             param0.b(param1, -117);
             param0.d(param3, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "cca.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "cca.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     cca(gj param0, jaa param1) {
-        super(param0, (bca) (Object) param1);
+        super(param0, param1);
         try {
-            ((cca) this).field_x = param1;
+            this.field_x = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "cca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "cca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void d(int param0) {
+        if (param0 < 71) {
+            return;
+        }
         field_v = null;
         field_w = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = "Stamina</col>";
     }
 }

@@ -241,6 +241,9 @@ final class dh {
     public static void a(byte param0) {
         field_c = null;
         field_b = null;
+        if (param0 != -68) {
+            dh.a((mm) null, -53, 78, (cc) null, (cc) null, (cc) null, -74, -100, (mm) null, 108, -57, 96, -30, true, 2, 34, -16, -53, -123, 32);
+        }
     }
 
     final static jb a(Throwable param0, String param1) {

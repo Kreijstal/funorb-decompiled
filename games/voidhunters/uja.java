@@ -18,6 +18,7 @@ final class uja {
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
+        phb[] discarded$0 = null;
         int var7 = VoidHunters.field_G;
         phb[] var1 = new phb[mma.field_a];
         for (var2 = 0; var2 < mma.field_a; var2++) {
@@ -30,6 +31,9 @@ final class uja {
             var1[var2] = new phb(fbb.field_i, sg.field_H, iib.field_e[var2], so.field_f[var2], nhb.field_o[var2], hla.field_a[var2], var5);
         }
         qqb.a(84);
+        if (param0) {
+            discarded$0 = uja.a(false);
+        }
         return var1;
     }
 
@@ -38,10 +42,6 @@ final class uja {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 20;
     }
 }

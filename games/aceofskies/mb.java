@@ -9,9 +9,18 @@ final class mb extends he {
     private java.lang.ref.SoftReference field_r;
 
     public static void g(int param0) {
-        field_t = null;
-        field_s = null;
-        field_u = null;
+        if (param0 != 255) {
+          field_u = (pa[]) null;
+          field_t = null;
+          field_s = null;
+          field_u = null;
+          return;
+        } else {
+          field_t = null;
+          field_s = null;
+          field_u = null;
+          return;
+        }
     }
 
     final static void a(int param0, int param1, byte param2) {
@@ -27,18 +36,18 @@ final class mb extends he {
     final Object a(byte param0) {
         if (param0 != 74) {
             mb.a(69, -77, (byte) 76);
-            return ((mb) this).field_r.get();
+            return this.field_r.get();
         }
-        return ((mb) this).field_r.get();
+        return this.field_r.get();
     }
 
     mb(Object param0, int param1) {
         super(param1);
         try {
             try {
-                ((mb) this).field_r = new java.lang.ref.SoftReference(param0);
+                this.field_r = new java.lang.ref.SoftReference(param0);
             } catch (RuntimeException runtimeException) {
-                throw pn.a((Throwable) (Object) runtimeException, "mb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+                throw pn.a((Throwable) ((Object) runtimeException), "mb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -48,8 +57,11 @@ final class mb extends he {
     }
 
     final static void c(byte param0) {
+        boolean discarded$14 = false;
+        boolean discarded$15 = false;
         RuntimeException var1 = null;
         int var2 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = AceOfSkies.field_G ? 1 : 0;
         try {
@@ -63,29 +75,45 @@ final class mb extends he {
                     break L1;
                   } else {
                     tt.b(-32546);
-                    hr.field_e.a((ea) (Object) new oq(hr.field_e, ro.field_r), 0);
+                    hr.field_e.a(new oq(hr.field_e, ro.field_r), 0);
                     break L1;
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              boolean discarded$7 = hr.field_e.a(ik.field_l, true, qo.field_d, true);
+              discarded$14 = hr.field_e.a(ik.field_l, true, qo.field_d, true);
               hr.field_e.f((byte) 33);
-              L2: while (true) {
-                if (!ek.a((byte) -127)) {
-                  break L0;
-                } else {
-                  boolean discarded$8 = hr.field_e.a(108, fr.field_e, bk.field_f);
-                  continue L2;
+              if (param0 >= 120) {
+                L2: while (true) {
+                  if (!ek.a((byte) -127)) {
+                    decompiledRegionSelector0 = 2;
+                    break L0;
+                  } else {
+                    discarded$15 = hr.field_e.a(108, fr.field_e, bk.field_f);
+                    continue L2;
+                  }
                 }
+              } else {
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var1, "mb.F(" + 125 + ')');
+          throw pn.a((Throwable) ((Object) var1), "mb.F(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -97,10 +125,6 @@ final class mb extends he {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = new String[255];
         field_s = "Quit to website";
     }

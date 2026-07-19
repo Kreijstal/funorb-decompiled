@@ -6,14 +6,15 @@ final class rjb extends kt {
     static int field_u;
 
     final byte[] b(int param0, byte param1, int param2, int param3) {
-        ((rjb) this).field_t = new byte[param2 * param0 * (param3 * 2)];
+        byte[] discarded$2 = null;
+        this.field_t = new byte[param2 * param0 * (param3 * 2)];
         if (param1 > -36) {
-          byte[] discarded$2 = ((rjb) this).b(-114, (byte) -82, -98, -124);
-          ((rjb) this).a(param2, (byte) -10, param0, param3);
-          return ((rjb) this).field_t;
+          discarded$2 = this.b(-114, (byte) -82, -98, -124);
+          this.a(param2, (byte) -10, param0, param3);
+          return this.field_t;
         } else {
-          ((rjb) this).a(param2, (byte) -10, param0, param3);
-          return ((rjb) this).field_t;
+          this.a(param2, (byte) -10, param0, param3);
+          return this.field_t;
         }
     }
 
@@ -24,13 +25,13 @@ final class rjb extends kt {
         var5 = 255 & param1;
         int incrementValue$2 = var4;
         var4++;
-        ((rjb) this).field_t[incrementValue$2] = (byte)(3 * var5 >> 5);
+        this.field_t[incrementValue$2] = (byte)(3 * var5 >> -1386410427);
         if (param0 != 0) {
           field_u = 17;
-          ((rjb) this).field_t[var4] = (byte)(var5 * 3 >> 5);
+          this.field_t[var4] = (byte)(var5 * 3 >> 1315515045);
           return;
         } else {
-          ((rjb) this).field_t[var4] = (byte)(var5 * 3 >> 5);
+          this.field_t[var4] = (byte)(var5 * 3 >> 1315515045);
           return;
         }
     }
@@ -40,10 +41,6 @@ final class rjb extends kt {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = 32768;
     }
 }

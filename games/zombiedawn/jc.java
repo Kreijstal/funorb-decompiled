@@ -31,7 +31,7 @@ final class jc extends le {
             var4 = -1L;
             pg.a(true, param1, var4, var2, var3);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -49,17 +49,13 @@ final class jc extends le {
 
     final static void a(int param0, byte param1) {
         ch.field_b = param0;
-        int var2 = 0;
+        int var2 = -32 % ((25 - param1) / 34);
     }
 
     jc() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = 0;
         field_q = new int[]{90, 450, 830, 1230, 1550, 1970, 2020};
         field_p = new String[16];

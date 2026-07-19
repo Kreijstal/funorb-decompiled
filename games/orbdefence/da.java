@@ -43,40 +43,40 @@ final class da {
     public static void b(int param0) {
         field_m = null;
         field_r = null;
+        if (param0 != 16) {
+            field_r = (tl) null;
+        }
     }
 
     final static String a(int param0) {
+        String discarded$0 = null;
         if (param0 > -79) {
-            String discarded$0 = da.a(-50);
+            discarded$0 = da.a(-50);
             return tj.field_a;
         }
         return tj.field_a;
     }
 
     da() {
-        ((da) this).field_j = new byte[4096];
-        ((da) this).field_n = 0;
-        ((da) this).field_e = new boolean[16];
-        ((da) this).field_u = new int[257];
-        ((da) this).field_G = new int[6][258];
-        ((da) this).field_s = 0;
-        ((da) this).field_v = new boolean[256];
-        ((da) this).field_o = new byte[6][258];
-        ((da) this).field_z = new byte[18002];
-        ((da) this).field_D = new byte[18002];
-        ((da) this).field_f = new int[6][258];
-        ((da) this).field_J = new byte[256];
-        ((da) this).field_k = new int[6][258];
-        ((da) this).field_d = new int[6];
-        ((da) this).field_I = new int[256];
-        ((da) this).field_i = new int[16];
+        this.field_j = new byte[4096];
+        this.field_n = 0;
+        this.field_e = new boolean[16];
+        this.field_u = new int[257];
+        this.field_G = new int[6][258];
+        this.field_s = 0;
+        this.field_v = new boolean[256];
+        this.field_o = new byte[6][258];
+        this.field_z = new byte[18002];
+        this.field_D = new byte[18002];
+        this.field_f = new int[6][258];
+        this.field_J = new byte[256];
+        this.field_k = new int[6][258];
+        this.field_d = new int[6];
+        this.field_I = new int[256];
+        this.field_i = new int[16];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = new tl();
         field_m = new tl();
     }

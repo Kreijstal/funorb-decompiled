@@ -7,37 +7,55 @@ final class in {
     static long field_b;
 
     public static void a(int param0) {
-        field_c = null;
+        field_c = (int[][][][][]) null;
         field_a = null;
         if (param0 != 31349) {
-            field_a = null;
+            field_a = (String) null;
         }
     }
 
     final static boolean a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
-        if (eq.a(false)) {
-            jd.a(13, param3, 14686, 15);
-            if (wi.field_v != null) {
-                if (wi.field_v.a(param3, -2, 0, 11, 13)) {
-                    param3 = false;
-                    da.b(98);
+        L0: {
+          if (!eq.a(false)) {
+            break L0;
+          } else {
+            L1: {
+              jd.a(param5, param3, 14686, param0);
+              if (wi.field_v == null) {
+                break L1;
+              } else {
+                if (!wi.field_v.a(param3, param1 + -52, param4, param2, param5)) {
+                  break L1;
+                } else {
+                  param3 = false;
+                  da.b(98);
+                  break L1;
                 }
+              }
             }
-            lc.a(44, 13, param3);
-            dn.a(param3, 14, true);
+            lc.a(param1 + -6, param5, param3);
+            dn.a(param3, param6, true);
             param3 = false;
+            break L0;
+          }
         }
-        return param3;
+        if (param1 != 50) {
+          field_b = -69L;
+          return param3;
+        } else {
+          return param3;
+        }
     }
 
     final static void a(boolean param0, int param1) {
-        hl.field_e = kd.a(25, 0, true, false, 11, 128);
-        am.field_h = kd.a(50, 25, true, false, 11, 128);
-        hq.field_e = kd.a(75, 50, false, false, 11, 128);
-        ub.field_G = kd.a(100, 75, false, false, 11, 128);
+        hl.field_e = kd.a(25, 0, true, !param0 ? true : false, 11, param1);
+        am.field_h = kd.a(50, 25, param0, !param0 ? true : false, 11, param1);
+        hq.field_e = kd.a(75, 50, false, false, 11, param1);
+        ub.field_G = kd.a(100, 75, false, false, 11, param1);
     }
 
     final static boolean a(byte param0) {
+        boolean discarded$5 = false;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         int stackOut_9_0 = 0;
@@ -56,7 +74,7 @@ final class in {
             return stackIn_11_0 != 0;
           }
         } else {
-          boolean discarded$5 = in.a((byte) 24);
+          discarded$5 = in.a((byte) 24);
           if (null != fb.field_J) {
             return true;
           } else {
@@ -77,10 +95,6 @@ final class in {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "No";
     }
 }

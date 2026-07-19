@@ -19,15 +19,15 @@ final class sl extends vw {
     }
 
     final void a(boolean param0, int param1) {
-        ((sl) this).field_c.a(ln.field_F, (byte) -110, iw.field_c);
+        this.field_c.a(ln.field_F, (byte) -110, iw.field_c);
         if (param1 != 5744) {
-            field_g = null;
+            field_g = (String) null;
         }
     }
 
     final boolean c(int param0) {
         if (param0 != 1185) {
-            ((sl) this).a(false, 60);
+            this.a(false, 60);
             return true;
         }
         return true;
@@ -35,22 +35,28 @@ final class sl extends vw {
 
     final void a(int param0) {
         if (param0 < -4) {
-          if (!((sl) this).field_f) {
-            ((sl) this).field_c.a(0, false, ej.field_c);
-            ((sl) this).field_c.a(iw.field_c, (byte) -110, iw.field_c);
+          if (!this.field_f) {
+            this.field_c.a(0, false, ej.field_c);
+            this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
             return;
           } else {
-            ((sl) this).field_c.e(1, false);
-            ((sl) this).field_c.a(kga.field_o, (byte) 0);
-            ((sl) this).field_c.a(iw.field_c, (byte) -110, iw.field_c);
-            ((sl) this).field_c.a(pea.field_c, 2, -21);
-            ((sl) this).field_c.a(0, false, ej.field_c);
-            ((sl) this).field_c.p((byte) -87);
-            ((sl) this).field_c.a(true, (iva) null);
-            ((sl) this).field_c.e(0, false);
-            ((sl) this).field_f = false;
-            ((sl) this).field_c.a(iw.field_c, (byte) -110, iw.field_c);
-            return;
+            this.field_c.e(1, false);
+            this.field_c.a(kga.field_o, (byte) 0);
+            this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+            this.field_c.a(pea.field_c, 2, -21);
+            this.field_c.a(0, false, ej.field_c);
+            this.field_c.p((byte) -87);
+            this.field_c.a(true, (iva) null);
+            this.field_c.e(0, false);
+            this.field_f = false;
+            if (!TombRacer.field_G) {
+              this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+              return;
+            } else {
+              this.field_c.a(0, false, ej.field_c);
+              this.field_c.a(iw.field_c, (byte) -110, iw.field_c);
+              return;
+            }
           }
         } else {
           return;
@@ -59,37 +65,43 @@ final class sl extends vw {
 
     sl(eo param0) {
         super(param0);
-        ((sl) this).field_f = false;
+        this.field_f = false;
     }
 
     final void a(int param0, boolean param1) {
         na var3 = null;
         int var4 = 0;
         asa var4_ref_asa = null;
-        var3 = ((sl) this).field_c.n(-79);
+        var3 = this.field_c.n(-79);
         if (var3 != null) {
           if (param1) {
-            ((sl) this).field_c.e(1, false);
-            ((sl) this).field_c.a(true, (iva) (Object) var3);
-            ((sl) this).field_c.a(gq.field_u, (byte) 0);
-            ((sl) this).field_c.e(1, false);
-            ((sl) this).field_c.a(ln.field_F, (byte) -110, r.field_m);
-            ((sl) this).field_c.a(lja.field_j, 2, -6219, true, false);
-            ((sl) this).field_c.a(0, false, tla.field_c);
-            var4_ref_asa = ((sl) this).field_c.C(0);
-            var4_ref_asa.a(1217, (gda) (Object) ((sl) this).field_c.c(true));
-            ((sl) this).field_c.a(cva.field_b, false);
-            ((sl) this).field_c.e(0, false);
-            ((sl) this).field_f = true;
-            var4 = 19 % ((param0 - 41) / 62);
-            return;
+            this.field_c.e(1, false);
+            this.field_c.a(true, var3);
+            this.field_c.a(gq.field_u, (byte) 0);
+            this.field_c.e(1, false);
+            this.field_c.a(ln.field_F, (byte) -110, r.field_m);
+            this.field_c.a(lja.field_j, 2, -6219, true, false);
+            this.field_c.a(0, false, tla.field_c);
+            var4_ref_asa = this.field_c.C(0);
+            var4_ref_asa.a(1217, this.field_c.c(true));
+            this.field_c.a(cva.field_b, false);
+            this.field_c.e(0, false);
+            this.field_f = true;
+            if (TombRacer.field_G) {
+              this.field_c.a(0, false, tla.field_c);
+              var4 = 19 % ((param0 - 41) / 62);
+              return;
+            } else {
+              var4 = 19 % ((param0 - 41) / 62);
+              return;
+            }
           } else {
-            ((sl) this).field_c.a(0, false, tla.field_c);
+            this.field_c.a(0, false, tla.field_c);
             var4 = 19 % ((param0 - 41) / 62);
             return;
           }
         } else {
-          ((sl) this).field_c.a(0, false, tla.field_c);
+          this.field_c.a(0, false, tla.field_c);
           var4 = 19 % ((param0 - 41) / 62);
           return;
         }
@@ -103,21 +115,17 @@ final class sl extends vw {
 
     final void a(int param0, iva param1, int param2) {
         try {
-            ((sl) this).field_c.a(true, param1);
+            this.field_c.a(true, param1);
             if (param2 != 24595) {
-                ((sl) this).a(false, -34);
+                this.a(false, -34);
             }
-            ((sl) this).field_c.a((byte) -48, param0);
+            this.field_c.a((byte) -48, param0);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "sl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "sl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_h = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
         field_e = new int[64];

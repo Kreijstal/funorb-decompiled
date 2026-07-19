@@ -8,7 +8,7 @@ final class tt extends rna implements ntb {
     private int field_b;
 
     public static void a(byte param0) {
-        int var1 = 0;
+        int var1 = -98 % ((param0 - 42) / 51);
         field_c = null;
         field_a = null;
     }
@@ -20,12 +20,12 @@ final class tt extends rna implements ntb {
         L0: {
           var4 = VoidHunters.field_G;
           var2 = "Unknown mode";
-          var3 = ((tt) this).field_b;
-          if (var3 == 0) {
+          var3 = this.field_b;
+          if (-1 == (var3 ^ -1)) {
             var2 = "Add body components to";
             break L0;
           } else {
-            if (var3 == 1) {
+            if ((var3 ^ -1) == -2) {
               var2 = "Subtract body components from";
               break L0;
             } else {
@@ -47,11 +47,11 @@ final class tt extends rna implements ntb {
           if (param0 == -1325) {
             break L1;
           } else {
-            ((tt) this).field_b = -107;
+            this.field_b = -107;
             break L1;
           }
         }
-        return var2 + " custom variable " + ((tt) this).field_d;
+        return var2 + " custom variable " + this.field_d;
     }
 
     public final boolean a(byte param0, tv param1) {
@@ -81,15 +81,15 @@ final class tt extends rna implements ntb {
           L0: {
             L1: {
               L2: {
-                var3 = (tt) (Object) param1;
+                var3 = (tt) ((Object) param1);
                 var4 = 78 / ((22 - param0) / 59);
                 if (super.a((byte) -64, param1)) {
                   break L2;
                 } else {
-                  if (((tt) this).field_d != var3.field_d) {
+                  if (this.field_d != var3.field_d) {
                     break L2;
                   } else {
-                    if (var3.field_b == ((tt) this).field_b) {
+                    if (var3.field_b == this.field_b) {
                       stackOut_5_0 = 0;
                       stackIn_6_0 = stackOut_5_0;
                       break L1;
@@ -109,23 +109,23 @@ final class tt extends rna implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3_ref;
+            stackOut_7_0 = (RuntimeException) (var3_ref);
             stackOut_7_1 = new StringBuilder().append("tt.C(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -133,7 +133,7 @@ final class tt extends rna implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_6_0 != 0;
     }
@@ -143,21 +143,21 @@ final class tt extends rna implements ntb {
             return 117;
         }
         if (param0 != 0) {
-            return ((tt) this).field_b;
+            return this.field_b;
         }
-        return ((tt) this).field_d;
+        return this.field_d;
     }
 
     public final void b(faa param0, int param1) {
         try {
             if (param1 >= -109) {
-                field_a = null;
+                field_a = (String) null;
             }
             super.b(param0, -124);
-            param0.a(-632, ((tt) this).field_d, 32);
-            param0.a(-632, ((tt) this).field_b, 2);
+            param0.a(-632, this.field_d, 32);
+            param0.a(-632, this.field_b, 2);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "tt.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "tt.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -183,6 +183,7 @@ final class tt extends rna implements ntb {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
@@ -211,10 +212,11 @@ final class tt extends rna implements ntb {
                     if (param0 == 1) {
                       break L2;
                     } else {
-                      field_c = null;
+                      field_c = (dja) null;
                       break L2;
                     }
                   }
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   L3: {
@@ -223,9 +225,9 @@ final class tt extends rna implements ntb {
                     if (var6 != null) {
                       L4: {
                         var7 = 1;
-                        var8 = ((tt) this).field_b;
+                        var8 = this.field_b;
                         if (var8 != 0) {
-                          if (var8 != 1) {
+                          if ((var8 ^ -1) != -2) {
                             if (2 == var8) {
                               var7 = 1;
                               break L4;
@@ -242,11 +244,11 @@ final class tt extends rna implements ntb {
                             break L4;
                           }
                         } else {
-                          var7 = var6.field_k.j(param0);
+                          var7 = var6.field_k.j(param0 + 0);
                           break L4;
                         }
                       }
-                      param2.field_e.a((byte) -11, var7, ((tt) this).field_d);
+                      param2.field_e.a((byte) -11, var7, this.field_d);
                       break L3;
                     } else {
                       break L3;
@@ -257,30 +259,31 @@ final class tt extends rna implements ntb {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var4;
+            stackOut_23_0 = (RuntimeException) (var4);
             stackOut_23_1 = new StringBuilder().append("tt.E(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L5;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -289,23 +292,23 @@ final class tt extends rna implements ntb {
             }
           }
           L6: {
-            stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+            stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
             stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param2 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L6;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -313,7 +316,12 @@ final class tt extends rna implements ntb {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -340,15 +348,15 @@ final class tt extends rna implements ntb {
         try {
           L0: {
             L1: {
-              var5 = (tt) (Object) param1;
+              var5 = (tt) ((Object) param1);
               var6 = var5;
               super.b((byte) 55, param1);
-              var6.field_b = ((tt) this).field_b;
-              var6.field_d = ((tt) this).field_d;
+              var6.field_b = this.field_b;
+              var6.field_d = this.field_d;
               if (param0 > 54) {
                 break L1;
               } else {
-                field_a = null;
+                field_a = (String) null;
                 break L1;
               }
             }
@@ -358,23 +366,23 @@ final class tt extends rna implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var3;
+            stackOut_3_0 = (RuntimeException) (var3);
             stackOut_3_1 = new StringBuilder().append("tt.D(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -382,7 +390,7 @@ final class tt extends rna implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -416,14 +424,14 @@ final class tt extends rna implements ntb {
             }
             L2: {
               if (param2 != 0) {
-                ((tt) this).field_b = (param3 + 4) % 4;
+                this.field_b = (param3 + 4) % 4;
                 break L2;
               } else {
-                ((tt) this).field_d = param3;
-                if (0 <= ((tt) this).field_d) {
+                this.field_d = param3;
+                if (0 <= this.field_d) {
                   break L2;
                 } else {
-                  ((tt) this).field_d = 0;
+                  this.field_d = 0;
                   break L2;
                 }
               }
@@ -434,23 +442,23 @@ final class tt extends rna implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_0 = (RuntimeException) (var5);
             stackOut_7_1 = new StringBuilder().append("tt.K(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -458,17 +466,17 @@ final class tt extends rna implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public final void a(faa param0, boolean param1) {
         try {
             super.a(param0, param1);
-            ((tt) this).field_d = param0.i(0, 32);
-            ((tt) this).field_b = param0.i(0, 2);
+            this.field_d = param0.i(0, 32);
+            this.field_b = param0.i(0, 2);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "tt.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "tt.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -497,7 +505,7 @@ final class tt extends rna implements ntb {
               if (param1 <= -88) {
                 break L1;
               } else {
-                field_a = null;
+                field_a = (String) null;
                 break L1;
               }
             }
@@ -507,23 +515,23 @@ final class tt extends rna implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("tt.A(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -531,13 +539,13 @@ final class tt extends rna implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     final ucb a(pe param0, int param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
+        tv var4 = null;
         Object stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -559,8 +567,8 @@ final class tt extends rna implements ntb {
         try {
           L0: {
             if (param1 != 26964) {
-              var4 = null;
-              ((tt) this).b((byte) 88, (tv) null);
+              var4 = (tv) null;
+              this.b((byte) 88, (tv) null);
               stackOut_2_0 = null;
               stackIn_3_0 = stackOut_2_0;
               break L0;
@@ -572,23 +580,23 @@ final class tt extends rna implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("tt.I(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -596,17 +604,17 @@ final class tt extends rna implements ntb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return (ucb) (Object) stackIn_3_0;
+        return (ucb) ((Object) stackIn_3_0);
     }
 
     tt() {
     }
 
     tt(int param0, int param1) {
-        ((tt) this).field_b = param1;
-        ((tt) this).field_d = param0;
+        this.field_b = param1;
+        this.field_d = param0;
     }
 
     public final void a(tv param0, int param1) {
@@ -636,15 +644,15 @@ final class tt extends rna implements ntb {
               if (param1 < -19) {
                 break L1;
               } else {
-                field_c = null;
+                field_c = (dja) null;
                 break L1;
               }
             }
             L2: {
-              var5 = (tt) (Object) param0;
+              var5 = (tt) ((Object) param0);
               var4 = 0;
-              if (var5.field_d != ((tt) this).field_d) {
-                System.out.println("int index has changed. before=" + var5.field_d + ", now=" + ((tt) this).field_d);
+              if (var5.field_d != this.field_d) {
+                System.out.println("int index has changed. before=" + var5.field_d + ", now=" + this.field_d);
                 var4 = 1;
                 break L2;
               } else {
@@ -652,8 +660,8 @@ final class tt extends rna implements ntb {
               }
             }
             L3: {
-              if (((tt) this).field_b != var5.field_b) {
-                System.out.println("int mode has changed. before=" + var5.field_b + ", now=" + ((tt) this).field_b);
+              if (this.field_b != var5.field_b) {
+                System.out.println("int mode has changed. before=" + var5.field_b + ", now=" + this.field_b);
                 var4 = 1;
                 break L3;
               } else {
@@ -674,23 +682,23 @@ final class tt extends rna implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_0 = (RuntimeException) (var3);
             stackOut_11_1 = new StringBuilder().append("tt.F(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -698,16 +706,12 @@ final class tt extends rna implements ntb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Create your own free Jagex account";
-        field_c = (dja) (Object) new pu();
+        field_c = (dja) ((Object) new pu());
     }
 }

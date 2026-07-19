@@ -6,10 +6,6 @@ final class pd {
     static int field_b;
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0.0;
     }
 }

@@ -36,6 +36,7 @@ final class tl {
             RuntimeException stackIn_19_0 = null;
             StringBuilder stackIn_19_1 = null;
             String stackIn_19_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             int stackOut_4_0 = 0;
             int stackOut_3_0 = 0;
@@ -61,8 +62,8 @@ final class tl {
               L0: {
                 if (param4 == 9737) {
                   L1: {
-                    e.field_c = new hb(5000);
-                    vh.field_a = new hb(5000);
+                    e.field_c = new hb(param2);
+                    vh.field_a = new hb(param13);
                     kk.field_b = param7;
                     if (!param8) {
                       stackOut_4_0 = 0;
@@ -99,41 +100,47 @@ final class tl {
                     if (null == ld.field_k.field_n) {
                       break L3;
                     } else {
-                      {
+                      try {
                         L4: {
                           bg.field_b = new pf(ld.field_k.field_n, 64, 0);
                           break L4;
                         }
+                      } catch (java.io.IOException decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        var15 = (IOException) (Object) decompiledCaughtException;
+                        throw new RuntimeException(var15.toString());
                       }
                       break L3;
                     }
                   }
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L5: {
                 var15_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_13_0 = (RuntimeException) var15_ref;
+                stackOut_13_0 = (RuntimeException) (var15_ref);
                 stackOut_13_1 = new StringBuilder().append("tl.A(").append(param0).append(',');
                 stackIn_15_0 = stackOut_13_0;
                 stackIn_15_1 = stackOut_13_1;
                 stackIn_14_0 = stackOut_13_0;
                 stackIn_14_1 = stackOut_13_1;
                 if (param1 == null) {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+                  stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
                   stackOut_15_2 = "null";
                   stackIn_16_0 = stackOut_15_0;
                   stackIn_16_1 = stackOut_15_1;
                   stackIn_16_2 = stackOut_15_2;
                   break L5;
                 } else {
-                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+                  stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
                   stackOut_14_2 = "{...}";
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_16_1 = stackOut_14_1;
@@ -142,23 +149,23 @@ final class tl {
                 }
               }
               L6: {
-                stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(5000).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+                stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;
                 stackIn_17_1 = stackOut_16_1;
                 if (param6 == null) {
-                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
                   stackOut_18_2 = "null";
                   stackIn_19_0 = stackOut_18_0;
                   stackIn_19_1 = stackOut_18_1;
                   stackIn_19_2 = stackOut_18_2;
                   break L6;
                 } else {
-                  stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-                  stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                  stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+                  stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
                   stackOut_17_2 = "{...}";
                   stackIn_19_0 = stackOut_17_0;
                   stackIn_19_1 = stackOut_17_1;
@@ -166,7 +173,12 @@ final class tl {
                   break L6;
                 }
               }
-              throw sd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + 5000 + ')');
+              throw sd.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ')');
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -188,36 +200,40 @@ final class tl {
             ci.field_b.field_s = 5;
             ci.field_b.field_g = 7697781;
         }
+        if (param0 != 4314) {
+            field_i = (int[]) null;
+        }
         return ci.field_b;
     }
 
     public static void a(byte param0) {
-        field_a = null;
+        field_a = (double[][]) null;
         field_e = null;
         field_d = null;
+        if (param0 < 102) {
+            field_e = (e) null;
+        }
         field_b = null;
         field_i = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        int var0 = 0;
-        field_d = new int[256];
-        var0 = 0;
-        L0: while (true) {
-          if (var0 >= 256) {
-            field_i = new int[16384];
-            field_e = new e(2, 4, 4, 0);
-            field_a = new double[][]{null, null, null, null, new double[6], new double[3], new double[6], new double[6], null, new double[3], new double[3], new double[3], new double[3]};
-            return;
-          } else {
-            field_d[var0] = 65793 * var0;
-            var0++;
-            continue L0;
-          }
+        $cfr$clinit: {
+            int var0 = 0;
+            field_d = new int[256];
+            var0 = 0;
+            L0: while (true) {
+              if (var0 >= 256) {
+                field_i = new int[16384];
+                field_e = new e(2, 4, 4, 0);
+                field_a = new double[][]{null, null, null, null, new double[]{-472.0, -288.0, 576.0, 472.0, -288.0, 576.0}, new double[]{0.0, 628.0, -392.0}, new double[]{-160.0, -32.0, -372.0, 160.0, -32.0, -372.0}, new double[]{-400.0, 0.0, 64.0, 400.0, 0.0, 64.0}, null, new double[]{0.0, 0.0, 140.0}, new double[]{0.0, -34.0, 214.0}, new double[]{0.0, 0.0, 140.0}, new double[]{0.0, 0.0, -120.0}};
+                break $cfr$clinit;
+              } else {
+                field_d[var0] = 65793 * var0;
+                var0++;
+                continue L0;
+              }
+            }
         }
     }
 }

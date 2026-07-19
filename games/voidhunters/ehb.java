@@ -35,20 +35,20 @@ final class ehb {
               if (param1 <= -9) {
                 break L1;
               } else {
-                ((ehb) this).field_a = 91;
+                this.field_a = 91;
                 break L1;
               }
             }
             L2: {
-              if (0 != ((ehb) this).field_a) {
-                ((ehb) this).field_a = ((ehb) this).field_a - 1;
+              if (0 != this.field_a) {
+                this.field_a = this.field_a - 1;
                 break L2;
               } else {
-                var5 = ((ehb) this).field_c.b((byte) 77);
+                var5 = this.field_c.b((byte) 77);
                 var5.b(-3846);
                 var5.d((byte) -35);
-                if (var5 == ((ehb) this).field_b) {
-                  var5 = ((ehb) this).field_c.b((byte) -128);
+                if (var5 == this.field_b) {
+                  var5 = this.field_c.b((byte) -128);
                   var5.b(-3846);
                   var5.d((byte) -35);
                   break L2;
@@ -57,31 +57,31 @@ final class ehb {
                 }
               }
             }
-            ((ehb) this).field_d.a(param0, (ksa) (Object) param2, (byte) -126);
-            ((ehb) this).field_c.a(param2, -94);
+            this.field_d.a(param0, param2, (byte) -126);
+            this.field_c.a(param2, -94);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var5_ref;
+            stackOut_9_0 = (RuntimeException) (var5_ref);
             stackOut_9_1 = new StringBuilder().append("ehb.A(").append(param0).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -89,16 +89,16 @@ final class ehb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
     }
 
     final fh a(long param0, int param1) {
         fh var4 = null;
         int var5 = 0;
-        var4 = (fh) (Object) ((ehb) this).field_d.a(param0, 117);
+        var4 = (fh) ((Object) this.field_d.a(param0, 117));
         if (var4 != null) {
-          ((ehb) this).field_c.a(var4, -74);
+          this.field_c.a(var4, -74);
           var5 = -104 % ((-26 - param1) / 38);
           return var4;
         } else {
@@ -109,24 +109,23 @@ final class ehb {
 
     public static void a(boolean param0) {
         field_f = null;
+        if (param0) {
+            ehb.a(false);
+        }
     }
 
     ehb(int param0) {
-        ((ehb) this).field_b = new fh();
-        ((ehb) this).field_c = new vga();
-        ((ehb) this).field_a = param0;
+        this.field_b = new fh();
+        this.field_c = new vga();
+        this.field_a = param0;
         int var2 = 1;
         while (param0 > var2 + var2) {
             var2 = var2 + var2;
         }
-        ((ehb) this).field_d = new gnb(var2);
+        this.field_d = new gnb(var2);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = 5;
     }
 }

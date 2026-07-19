@@ -58,7 +58,7 @@ public class va {
 
     public static File a(String param0, byte param1) {
         if (param1 != -61) {
-            field_b = null;
+            field_b = (String) null;
             return va.a(field_b, field_a, true, param0);
         }
         return va.a(field_b, field_a, true, param0);
@@ -69,10 +69,6 @@ public class va {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = false;
         field_d = new Hashtable(16);
     }

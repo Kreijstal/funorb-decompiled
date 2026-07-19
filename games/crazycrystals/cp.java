@@ -17,16 +17,21 @@ final class cp {
     private static String field_z;
 
     public static void a(int param0) {
-        field_h = null;
-        field_d = null;
-        field_k = null;
+        if (param0 != 112) {
+          field_d = (dl[]) null;
+          field_h = null;
+          field_d = null;
+          field_k = null;
+          return;
+        } else {
+          field_h = null;
+          field_d = null;
+          field_k = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "cp.A(";
         field_h = "Puzzle Highscores";
         field_k = new boolean[112];

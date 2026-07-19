@@ -20,17 +20,29 @@ final class i extends ug {
 
     final static int a(int param0, boolean param1) {
         param0--;
-        param0 = param0 | param0 >>> 1;
-        param0 = param0 | param0 >>> 2;
-        param0 = param0 | param0 >>> 4;
-        param0 = param0 | param0 >>> 8;
-        param0 = param0 | param0 >>> 16;
-        return 1 + param0;
+        param0 = param0 | param0 >>> 2057585217;
+        if (!param1) {
+          field_i = false;
+          param0 = param0 | param0 >>> -1685109982;
+          param0 = param0 | param0 >>> -1857878044;
+          param0 = param0 | param0 >>> -144818200;
+          param0 = param0 | param0 >>> -1962002192;
+          return 1 + param0;
+        } else {
+          param0 = param0 | param0 >>> -1685109982;
+          param0 = param0 | param0 >>> -1857878044;
+          param0 = param0 | param0 >>> -144818200;
+          param0 = param0 | param0 >>> -1962002192;
+          return 1 + param0;
+        }
     }
 
     public static void a(boolean param0) {
         field_h = null;
         field_r = null;
+        if (!param0) {
+            return;
+        }
         field_j = null;
         field_p = null;
         field_m = null;
@@ -40,10 +52,6 @@ final class i extends ug {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
         field_j = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
         field_n = 0;

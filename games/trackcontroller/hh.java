@@ -10,7 +10,7 @@ final class hh implements Iterator {
     private rj field_a;
 
     public final boolean hasNext() {
-        return ((hh) this).field_a.field_e != ((hh) this).field_d;
+        return this.field_a.field_e != this.field_d;
     }
 
     public final void remove() {
@@ -18,9 +18,9 @@ final class hh implements Iterator {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            if (((hh) this).field_c != null) {
-              ((hh) this).field_c.e(0);
-              ((hh) this).field_c = null;
+            if (this.field_c != null) {
+              this.field_c.e(0);
+              this.field_c = null;
               break L0;
             } else {
               throw new IllegalStateException();
@@ -29,7 +29,7 @@ final class hh implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1, "hh.remove()");
+          throw sl.a((Throwable) ((Object) var1), "hh.remove()");
         }
     }
 
@@ -37,14 +37,17 @@ final class hh implements Iterator {
         try {
             field_b = null;
             if (param0 <= 41) {
-                field_b = null;
+                field_b = (String) null;
             }
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "hh.D(" + param0 + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "hh.D(" + param0 + ')');
         }
     }
 
     final static void b(int param0) {
+        int fieldTemp$3 = 0;
+        String discarded$4 = null;
+        int fieldTemp$5 = 0;
         RuntimeException var1 = null;
         la var1_ref = null;
         int var2 = 0;
@@ -60,6 +63,7 @@ final class hh implements Iterator {
         ve var7_ref = null;
         int var8 = 0;
         int stackIn_15_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_14_0 = 0;
         int stackOut_12_0 = 0;
@@ -70,29 +74,31 @@ final class hh implements Iterator {
               if (param0 == 128) {
                 break L1;
               } else {
-                field_b = null;
+                field_b = (String) null;
                 break L1;
               }
             }
             var1_ref = ne.field_a;
             var2 = var1_ref.h(param0 ^ 16255);
             if (0 != var2) {
-              if (var2 != 1) {
-                if (var2 == 2) {
+              if ((var2 ^ -1) != -2) {
+                if (-3 == (var2 ^ -1)) {
                   L2: {
-                    if (q.field_a == 1) {
+                    if (-2 == (q.field_a ^ -1)) {
                       q.field_a = 2;
                       break L2;
                     } else {
                       break L2;
                     }
                   }
-                  return;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   if (3 != var2) {
-                    if (var2 != 4) {
+                    if (-5 != (var2 ^ -1)) {
                       hb.a((Throwable) null, 0, "F1: " + jc.b(77));
                       lj.a((byte) 118);
+                      decompiledRegionSelector0 = 5;
                       break L0;
                     } else {
                       q.field_a = 1;
@@ -100,18 +106,20 @@ final class hh implements Iterator {
                       la.field_q = var3.intern();
                       var4 = var1_ref.h(16383);
                       hj.a((byte) 100, var4);
-                      return;
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     }
                   } else {
                     L3: {
-                      if (q.field_a == 2) {
+                      if (-3 == (q.field_a ^ -1)) {
                         q.field_a = 1;
                         break L3;
                       } else {
                         break L3;
                       }
                     }
-                    return;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   }
                 }
               } else {
@@ -126,7 +134,7 @@ final class hh implements Iterator {
                 }
                 L5: {
                   var3 = var1_ref.g(0);
-                  if (var3.equals((Object) (Object) "")) {
+                  if (var3.equals("")) {
                     var3 = null;
                     break L5;
                   } else {
@@ -142,7 +150,7 @@ final class hh implements Iterator {
                     if (var6 == null) {
                       break L6;
                     } else {
-                      ag.field_d.a((gb) (Object) var6, (long)r.a((CharSequence) (Object) var4_ref_String, -11133).hashCode(), param0 + -189);
+                      ag.field_d.a(var6, (long)r.a((CharSequence) ((Object) var4_ref_String), -11133).hashCode(), param0 + -189);
                       break L6;
                     }
                   } else {
@@ -152,11 +160,11 @@ final class hh implements Iterator {
                 L7: {
                   if (var6 == null) {
                     var6 = new ve();
-                    ag.field_d.a((gb) (Object) var6, (long)r.a((CharSequence) (Object) var4_ref_String, -11133).hashCode(), -105);
-                    int fieldTemp$3 = ei.field_o;
+                    ag.field_d.a(var6, (long)r.a((CharSequence) ((Object) var4_ref_String), -11133).hashCode(), -105);
+                    fieldTemp$3 = ei.field_o;
                     ei.field_o = ei.field_o + 1;
                     var6.field_R = fieldTemp$3;
-                    oj.field_d.a((byte) -97, (fc) (Object) var6);
+                    oj.field_d.a((byte) -97, var6);
                     break L7;
                   } else {
                     break L7;
@@ -173,7 +181,7 @@ final class hh implements Iterator {
                 var6.field_ib = var3;
                 var6.field_jb = var4_ref_String;
                 var6.a(-104);
-                var7_ref = (ve) (Object) oj.field_d.b(2);
+                var7_ref = (ve) ((Object) oj.field_d.b(2));
                 L9: while (true) {
                   L10: {
                     if (var7_ref == null) {
@@ -182,7 +190,7 @@ final class hh implements Iterator {
                       if (!aj.a(true, var7_ref, var6)) {
                         break L10;
                       } else {
-                        var7_ref = (ve) (Object) oj.field_d.a(10);
+                        var7_ref = (ve) ((Object) oj.field_d.a(10));
                         if (var8 == 0) {
                           continue L9;
                         } else {
@@ -196,7 +204,7 @@ final class hh implements Iterator {
                       if (var7_ref != null) {
                         break L12;
                       } else {
-                        oj.field_d.a((byte) -106, (fc) (Object) var6);
+                        oj.field_d.a((byte) -106, var6);
                         if (var8 == 0) {
                           break L11;
                         } else {
@@ -204,10 +212,11 @@ final class hh implements Iterator {
                         }
                       }
                     }
-                    lj.a((fc) (Object) var7_ref, (fc) (Object) var6, -126);
+                    lj.a(var7_ref, var6, -126);
                     break L11;
                   }
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
             } else {
@@ -237,14 +246,14 @@ final class hh implements Iterator {
                 if (var3_int == 0) {
                   break L15;
                 } else {
-                  String discarded$4 = var1_ref.g(0);
+                  discarded$4 = var1_ref.g(0);
                   break L15;
                 }
               }
               L16: {
                 var5_ref = nj.a((byte) 125, var4_ref_String);
                 var6_ref = var1_ref.g(0);
-                var7 = r.a((CharSequence) (Object) var4_ref_String, -11133);
+                var7 = r.a((CharSequence) ((Object) var4_ref_String), -11133);
                 if (var7 == null) {
                   var7 = var4_ref_String;
                   break L16;
@@ -260,7 +269,7 @@ final class hh implements Iterator {
                   if (var5_ref == null) {
                     break L17;
                   } else {
-                    ug.field_cb.a((gb) (Object) var5_ref, (long)var7.hashCode(), param0 ^ -182);
+                    ug.field_cb.a(var5_ref, (long)var7.hashCode(), param0 ^ -182);
                     break L17;
                   }
                 }
@@ -268,24 +277,46 @@ final class hh implements Iterator {
               L18: {
                 if (var5_ref == null) {
                   var5_ref = new ve();
-                  ug.field_cb.a((gb) (Object) var5_ref, (long)var7.hashCode(), param0 ^ 240);
-                  int fieldTemp$5 = jc.field_c;
+                  ug.field_cb.a(var5_ref, (long)var7.hashCode(), param0 ^ 240);
+                  fieldTemp$5 = jc.field_c;
                   jc.field_c = jc.field_c + 1;
                   var5_ref.field_R = fieldTemp$5;
-                  pb.field_d.a((byte) -111, (fc) (Object) var5_ref);
+                  pb.field_d.a((byte) -111, var5_ref);
                   break L18;
                 } else {
                   break L18;
                 }
               }
               var5_ref.field_jb = var4_ref_String;
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1, "hh.B(" + param0 + ')');
+          throw sl.a((Throwable) ((Object) var1), "hh.B(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return;
+                } else {
+                  return;
+                }
+              }
+            }
+          }
         }
     }
 
@@ -299,11 +330,11 @@ final class hh implements Iterator {
           L0: {
             L1: {
               L2: {
-                var1 = ((hh) this).field_d;
-                if (var1 == ((hh) this).field_a.field_e) {
+                var1 = this.field_d;
+                if (var1 == this.field_a.field_e) {
                   break L2;
                 } else {
-                  ((hh) this).field_d = var1.field_k;
+                  this.field_d = var1.field_k;
                   if (!TrackController.field_F) {
                     break L1;
                   } else {
@@ -312,25 +343,26 @@ final class hh implements Iterator {
                 }
               }
               var1 = null;
-              ((hh) this).field_d = null;
+              this.field_d = null;
               break L1;
             }
-            ((hh) this).field_c = var1;
-            stackOut_5_0 = (gb) var1;
-            stackIn_6_0 = (RuntimeException) (Object) stackOut_5_0;
+            this.field_c = var1;
+            stackOut_5_0 = (gb) (var1);
+            stackIn_6_0 = (RuntimeException) ((Object) stackOut_5_0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1_ref, "hh.next()");
+          throw sl.a((Throwable) ((Object) var1_ref), "hh.next()");
         }
-        return (Object) (Object) stackIn_6_0;
+        return stackIn_6_0;
     }
 
     final static void a(byte param0) {
         RuntimeException runtimeException = null;
         String var1 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
@@ -348,19 +380,26 @@ final class hh implements Iterator {
               if (param0 > 45) {
                 var1 = uj.a(-119);
                 ra.field_y = new rl(var1, (String) null, true, false, false);
-                gl.field_E.d((byte) -120, (al) (Object) re.field_g);
-                re.field_g.b((al) (Object) ra.field_y, -82);
+                gl.field_E.d((byte) -120, re.field_g);
+                re.field_g.b(ra.field_y, -82);
                 re.field_g.o(0);
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                return;
+                decompiledRegionSelector0 = 0;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) runtimeException, "hh.C(" + param0 + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "hh.C(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -382,35 +421,35 @@ final class hh implements Iterator {
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
-        ((hh) this).field_c = null;
+        this.field_c = null;
         try {
           L0: {
-            ((hh) this).field_a = param0;
-            ((hh) this).field_d = ((hh) this).field_a.field_e.field_k;
-            ((hh) this).field_c = null;
+            this.field_a = param0;
+            this.field_d = this.field_a.field_e.field_k;
+            this.field_c = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("hh.<init>(");
             stackIn_6_0 = stackOut_3_0;
             stackIn_6_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_7_0 = stackOut_4_0;
               stackIn_7_1 = stackOut_4_1;
@@ -418,7 +457,7 @@ final class hh implements Iterator {
               break L1;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
     }
 
@@ -457,15 +496,11 @@ final class hh implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1, "hh.A(" + param0 + ')');
+          throw sl.a((Throwable) ((Object) var1), "hh.A(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Create a free account to start using this feature";
     }
 }

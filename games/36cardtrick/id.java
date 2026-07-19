@@ -11,14 +11,23 @@ final class id {
 
     public static void a(boolean param0) {
         field_c = null;
-        field_e = null;
-        field_a = null;
-        field_f = null;
-        field_d = null;
+        if (!param0) {
+          field_e = null;
+          field_a = null;
+          field_f = null;
+          field_d = null;
+          return;
+        } else {
+          field_e = null;
+          field_a = null;
+          field_f = null;
+          field_d = null;
+          return;
+        }
     }
 
     final static void a(byte param0) {
-        if (mf.field_i > 10) {
+        if ((mf.field_i ^ -1) < -11) {
           wf.a(-10 + mf.field_i, -22);
           if (param0 > 96) {
             return;
@@ -66,10 +75,6 @@ final class id {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Mouse over an icon for details";
         field_f = "Resume Game";
         field_c = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");

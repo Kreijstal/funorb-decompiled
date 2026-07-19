@@ -11,30 +11,31 @@ final class ph {
 
     final wf a(boolean param0) {
         if (param0) {
-            return null;
+            return (wf) null;
         }
-        ((ph) this).field_e = 0;
-        return ((ph) this).a(0);
+        this.field_e = 0;
+        return this.a(0);
     }
 
     final wf a(byte param0, long param1) {
         wf var5 = null;
+        String discarded$0 = null;
         int var6 = AceOfSkies.field_G ? 1 : 0;
-        wf var4 = ((ph) this).field_d[(int)((long)(((ph) this).field_b + -1) & param1)];
-        ((ph) this).field_a = var4.field_a;
-        while (var4 != ((ph) this).field_a) {
-            if (!(~param1 != ~((ph) this).field_a.field_b)) {
-                var5 = ((ph) this).field_a;
-                ((ph) this).field_a = ((ph) this).field_a.field_a;
+        wf var4 = this.field_d[(int)((long)(this.field_b + -1) & param1)];
+        this.field_a = var4.field_a;
+        while (var4 != this.field_a) {
+            if (!((param1 ^ -1L) != (this.field_a.field_b ^ -1L))) {
+                var5 = this.field_a;
+                this.field_a = this.field_a.field_a;
                 return var5;
             }
-            ((ph) this).field_a = ((ph) this).field_a.field_a;
+            this.field_a = this.field_a.field_a;
         }
         if (param0 != 106) {
-            Object var7 = null;
-            String discarded$0 = ph.a((String) null, 95);
+            String var7 = (String) null;
+            discarded$0 = ph.a((String) null, 95);
         }
-        ((ph) this).field_a = null;
+        this.field_a = null;
         return null;
     }
 
@@ -84,23 +85,23 @@ final class ph {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_0 = (RuntimeException) (var2);
             stackOut_6_1 = new StringBuilder().append("ph.E(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -108,7 +109,7 @@ final class ph {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_5_0;
     }
@@ -118,8 +119,8 @@ final class ph {
         wf var3 = null;
         wf var4 = null;
         int var5 = AceOfSkies.field_G ? 1 : 0;
-        for (var2 = param0; var2 < ((ph) this).field_b; var2++) {
-            var3 = ((ph) this).field_d[var2];
+        for (var2 = param0; var2 < this.field_b; var2++) {
+            var3 = this.field_d[var2];
             while (true) {
                 var4 = var3.field_a;
                 if (var3 == var4) {
@@ -128,8 +129,8 @@ final class ph {
                 var4.c(-123);
             }
         }
-        ((ph) this).field_c = null;
-        ((ph) this).field_a = null;
+        this.field_c = null;
+        this.field_a = null;
     }
 
     final void a(int param0, long param1, wf param2) {
@@ -138,7 +139,7 @@ final class ph {
             if (!(null == param2.field_c)) {
                 param2.c(-123);
             }
-            var5 = ((ph) this).field_d[(int)(param1 & (long)(-1 + ((ph) this).field_b))];
+            var5 = this.field_d[(int)(param1 & (long)(-1 + this.field_b))];
             param2.field_a = var5;
             int var6 = -19 / ((param0 - 43) / 54);
             param2.field_c = var5.field_c;
@@ -146,56 +147,57 @@ final class ph {
             param2.field_a.field_c = param2;
             param2.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "ph.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "ph.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final wf a(int param0) {
+        int fieldTemp$0 = 0;
         wf var2 = null;
         int var3 = AceOfSkies.field_G ? 1 : 0;
-        if (((ph) this).field_e > param0) {
-            if (((ph) this).field_c != ((ph) this).field_d[((ph) this).field_e - 1]) {
-                var2 = ((ph) this).field_c;
-                ((ph) this).field_c = var2.field_a;
+        if (this.field_e > param0) {
+            if (this.field_c != this.field_d[this.field_e - 1]) {
+                var2 = this.field_c;
+                this.field_c = var2.field_a;
                 return var2;
             }
         }
         do {
-            if (((ph) this).field_e >= ((ph) this).field_b) {
+            if (this.field_e >= this.field_b) {
                 return null;
             }
-            int fieldTemp$0 = ((ph) this).field_e;
-            ((ph) this).field_e = ((ph) this).field_e + 1;
-            var2 = ((ph) this).field_d[fieldTemp$0].field_a;
-        } while (((ph) this).field_d[((ph) this).field_e - 1] == var2);
-        ((ph) this).field_c = var2.field_a;
+            fieldTemp$0 = this.field_e;
+            this.field_e = this.field_e + 1;
+            var2 = this.field_d[fieldTemp$0].field_a;
+        } while (this.field_d[this.field_e - 1] == var2);
+        this.field_c = var2.field_a;
         return var2;
     }
 
     public static void c(int param0) {
         field_f = null;
+        if (param0 <= 67) {
+            field_f = (String) null;
+        }
     }
 
     ph(int param0) {
         int var2 = 0;
+        wf dupTemp$0 = null;
         wf var3 = null;
-        ((ph) this).field_e = 0;
-        ((ph) this).field_b = param0;
-        ((ph) this).field_d = new wf[param0];
+        this.field_e = 0;
+        this.field_b = param0;
+        this.field_d = new wf[param0];
         for (var2 = 0; param0 > var2; var2++) {
-            wf dupTemp$0 = new wf();
+            dupTemp$0 = new wf();
             var3 = dupTemp$0;
-            ((ph) this).field_d[var2] = dupTemp$0;
+            this.field_d[var2] = dupTemp$0;
             var3.field_a = var3;
             var3.field_c = var3;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
     }
 }

@@ -11,14 +11,15 @@ final class lmb {
     }
 
     public static void a(byte param0) {
+        if (param0 != -53) {
+            field_a = (String) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "This entry doesn't match";
     }
 }

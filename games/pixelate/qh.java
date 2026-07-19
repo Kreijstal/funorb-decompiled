@@ -14,9 +14,9 @@ final class qh {
             return;
         }
         try {
-            ri.field_a.a(1000000, false, param1, (byte) 124, param2, 256);
+            ri.field_a.a(1000000, !param3 ? true : false, param1, (byte) 124, param2, 256);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "qh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + true + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "qh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -38,10 +38,6 @@ final class qh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Waiting for <%0> to start the game...";
         field_c = 20;
         field_f = "Next";

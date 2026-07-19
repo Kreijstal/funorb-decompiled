@@ -12,12 +12,13 @@ final class hc extends ca {
     static String field_k;
 
     final static void a(byte param0, boolean param1, String param2, int param3, java.awt.Color param4) {
+        boolean discarded$1 = false;
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
+        java.awt.Color var9 = null;
         Object var10 = null;
         java.awt.Graphics var10_ref = null;
         java.awt.Graphics var11 = null;
@@ -58,7 +59,7 @@ final class hc extends ca {
               if (param0 < -33) {
                 break L1;
               } else {
-                var9 = null;
+                var9 = (java.awt.Color) null;
                 hc.a((byte) -33, true, (String) null, -40, (java.awt.Color) null);
                 break L1;
               }
@@ -111,7 +112,7 @@ final class hc extends ca {
                     var11.setFont(e.field_a);
                     var11.setColor(java.awt.Color.white);
                     var11.drawString(param2, (-(6 * param2.length()) + 304) / 2, 22);
-                    boolean discarded$1 = var10_ref.drawImage(gj.field_f, bd.field_k / 2 + -152, -18 + th.field_e / 2, (java.awt.image.ImageObserver) null);
+                    discarded$1 = var10_ref.drawImage(gj.field_f, bd.field_k / 2 + -152, -18 + th.field_e / 2, (java.awt.image.ImageObserver) null);
                     break L6;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -153,23 +154,23 @@ final class hc extends ca {
           decompiledCaughtException = decompiledCaughtParameter2;
           L9: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var5_ref;
+            stackOut_20_0 = (RuntimeException) (var5_ref);
             stackOut_20_1 = new StringBuilder().append("hc.A(").append(param0).append(',').append(param1).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param2 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L9;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -178,23 +179,23 @@ final class hc extends ca {
             }
           }
           L10: {
-            stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+            stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
             stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',').append(param3).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param4 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L10;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -202,7 +203,7 @@ final class hc extends ca {
               break L10;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
     }
 
@@ -210,23 +211,23 @@ final class hc extends ca {
         field_k = null;
         field_l = null;
         field_i = null;
+        if (param0 != 31) {
+            java.awt.Color var2 = (java.awt.Color) null;
+            hc.a((byte) -112, true, (String) null, 45, (java.awt.Color) null);
+        }
     }
 
     hc(long param0, int param1, byte[] param2) {
         try {
-            ((hc) this).field_m = param2;
-            ((hc) this).field_h = param0;
-            ((hc) this).field_g = param1;
+            this.field_m = param2;
+            this.field_h = param0;
+            this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "hc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw dd.a((Throwable) ((Object) runtimeException), "hc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "Not yet achieved";
     }
 }

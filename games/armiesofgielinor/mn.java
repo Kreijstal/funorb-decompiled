@@ -15,6 +15,9 @@ abstract class mn extends tc {
     static String field_q;
 
     final static void a(boolean param0, int param1, int param2, byte param3, int param4, int param5) {
+        if (param3 <= 64) {
+            return;
+        }
         if (param0) {
             return;
         }
@@ -83,14 +86,14 @@ abstract class mn extends tc {
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
               } else {
-                stackOut_1_0 = pj.a(593277313, (CharSequence[]) (Object) param1);
+                stackOut_1_0 = pj.a(593277313, (CharSequence[]) ((Object) param1));
                 stackIn_3_0 = stackOut_1_0;
                 break L1;
               }
             }
             var4 = stackIn_3_0;
-            var4 = "Illegal move (" + param2 + "); player " + ((mn) this).field_p + ": " + var4 + ".";
-            stackOut_3_0 = (String) var4;
+            var4 = "Illegal move (" + param2 + "); player " + this.field_p + ": " + var4 + ".";
+            stackOut_3_0 = (String) (var4);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
@@ -98,23 +101,23 @@ abstract class mn extends tc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4_ref;
+            stackOut_5_0 = (RuntimeException) (var4_ref);
             stackOut_5_1 = new StringBuilder().append("mn.B(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -123,23 +126,23 @@ abstract class mn extends tc {
             }
           }
           L3: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
             stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -147,7 +150,7 @@ abstract class mn extends tc {
               break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_4_0;
     }
@@ -156,23 +159,28 @@ abstract class mn extends tc {
 
     public static void a(int param0) {
         field_q = null;
-        field_k = null;
+        field_k = (kk[][]) null;
         field_l = null;
-        field_r = null;
-        field_t = null;
-        field_m = null;
+        if (param0 < 9) {
+          field_s = -121L;
+          field_r = null;
+          field_t = null;
+          field_m = (String[][]) null;
+          return;
+        } else {
+          field_r = null;
+          field_t = null;
+          field_m = (String[][]) null;
+          return;
+        }
     }
 
     protected mn() {
-        ((mn) this).field_o = -1;
+        this.field_o = -1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_m = new String[][]{new String[3], new String[3], new String[3], new String[1], new String[1], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[1], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[1], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[1], new String[3], new String[3], new String[3], new String[3], new String[3], new String[1], new String[3], new String[3], new String[3], new String[3], new String[1], new String[1], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[3], new String[1], new String[1], new String[1], new String[1], new String[8], new String[3], new String[3], new String[3], new String[3], new String[1], new String[1], new String[1], new String[1], new String[1], new String[1], new String[1], new String[1], new String[1]};
+        field_m = new String[][]{new String[]{"humans/barbarian/barbarian", "humans/barbarian/barbarian2", "humans/barbarian/barbarian3"}, new String[]{"godwars_stuff/aviansie/avianse", "godwars_stuff/aviansie/avianse2", "godwars_stuff/aviansie/avianse3"}, new String[]{"attack_monkey/gorilla", "attack_monkey/gorilla2", "attack_monkey/gorilla3"}, new String[]{"barbarian_female/barbarian_female"}, new String[]{"dragons/red_dragon/red_dragon"}, new String[]{"tzhaar-ket_warrior/tzhaarket_warrior", "tzhaar-ket_warrior/tzhaarket_warrior2", "tzhaar-ket_warrior/tzhaarket_warrior3"}, new String[]{"dagannoth/lore_dagganoth", "dagannoth/lore_dagganoth2", "dagannoth/lore_dagganoth3"}, new String[]{"humans/portal_mage/portal_mage", "humans/portal_mage/portal_mage2", "humans/portal_mage/portal_mage3"}, new String[]{"humans/paladin/paladin", "humans/paladin/paladin2", "humans/paladin/paladin3"}, new String[]{"birds/lore_sarodomin", "birds/lore_sarodomin2", "birds/lore_sarodomin3"}, new String[]{"humans/monk/monk", "humans/monk/monk2", "humans/monk/monk3"}, new String[]{"humans/saradomin_mage/saradomin_mage", "humans/saradomin_mage/saradomin_mage2", "humans/saradomin_mage/saradomin_mage3"}, new String[]{"humans/white_knight/white_knight", "humans/white_knight/white_knight2", "humans/white_knight/white_knight3"}, new String[]{"unicorn/unicorn_rework", "unicorn/unicorn_rework2", "unicorn/unicorn_rework3"}, new String[]{"centaur/centaur", "centaur/centaur2", "centaur/centaur3"}, new String[]{"lion/godwars_lion", "lion/godwars_lion2", "lion/godwars_lion3"}, new String[]{"humans/saradomin_ranger/saradomin_ranger", "humans/saradomin_ranger/saradomin_ranger2", "humans/saradomin_ranger/saradomin_ranger3"}, new String[]{"humans/priest/priest", "humans/priest/priest2", "humans/priest/priest3"}, new String[]{"godwars_stuff/commander_zilyana/icyene", "godwars_stuff/commander_zilyana/icyene2", "godwars_stuff/commander_zilyana/icyene3"}, new String[]{"werewolf/werewolf", "werewolf/werewolf2", "werewolf/werewolf3"}, new String[]{"skeleton_warrior/skeleton_warrior", "skeleton_warrior/skeleton_warrior2", "skeleton_warrior/skeleton_warrior3"}, new String[]{"humans/necromancer/necromancer", "humans/necromancer/necromancer2", "humans/necromancer/necromancer3"}, new String[]{"humans/zamorak_mage/zamorak_mage", "humans/zamorak_mage/zamorak_mage2", "humans/zamorak_mage/zamorak_mage3"}, new String[]{"humans/black_knight/black_knight", "humans/black_knight/black_knight2", "humans/black_knight/black_knight3"}, new String[]{"black_demon/black_demon", "black_demon/black_demon2", "black_demon/black_demon3"}, new String[]{"humans/zamorak_ranger/zamorak_ranger", "humans/zamorak_ranger/zamorak_ranger2", "humans/zamorak_ranger/zamorak_ranger3"}, new String[]{"dogs/hellhound/dog_update_hellhound_godwars", "dogs/hellhound/dog_update_hellhound_godwars2", "dogs/hellhound/dog_update_hellhound_godwars3"}, new String[]{"sea_slug/slug2_slug_prince", "sea_slug/slug2_slug_prince2", "sea_slug/slug2_slug_prince3"}, new String[]{"gargoyle/npc_update_gargoyle", "gargoyle/npc_update_gargoyle2", "gargoyle/npc_update_gargoyle3"}, new String[]{"pyrelord/update_lore_pyrefiend"}, new String[]{"gnome_rider/terror_bird_update_mounted_spear", "gnome_rider/terror_bird_update_mounted_spear2", "gnome_rider/terror_bird_update_mounted_spear3"}, new String[]{"dogs/wolf/dog_update_wolf_alpha", "dogs/wolf/dog_update_wolf_alpha2", "dogs/wolf/dog_update_wolf_alpha3"}, new String[]{"humans/druid/druid", "humans/druid/druid2", "humans/druid/druid3"}, new String[]{"dwarfs/dwarf_black_guard/dwarf_black_guard", "dwarfs/dwarf_black_guard/dwarf_black_guard2", "dwarfs/dwarf_black_guard/dwarf_black_guard3"}, new String[]{"dwarfs/dwarf_engineer/dwarf_engineer", "dwarfs/dwarf_engineer/dwarf_engineer2", "dwarfs/dwarf_engineer/dwarf_engineer3"}, new String[]{"giants/moss_giant/moss_giant", "giants/moss_giant/moss_giant2", "giants/moss_giant/moss_giant3"}, new String[]{"humans/void_knight/void_knight", "humans/void_knight/void_knight2", "humans/void_knight/void_knight3"}, new String[]{"dwarf_mounted_battle_tortoise/battle_tortoise"}, new String[]{"gnome_copter/copter", "gnome_copter/copter2", "gnome_copter/copter3"}, new String[]{"jade_vine/roots_giant_vine", "jade_vine/roots_giant_vine2", "jade_vine/roots_giant_vine3"}, new String[]{"ent/lore_ent", "ent/lore_ent2", "ent/lore_ent3"}, new String[]{"birds/npc_pets_birds_gyr_falcon", "birds/npc_pets_birds_gyr_falcon2", "birds/npc_pets_birds_gyr_falcon3"}, new String[]{"black_bear/bear_new_black", "black_bear/bear_new_black2", "black_bear/bear_new_black3"}, new String[]{"humans/elf_songstress/elf_songstress_map", "humans/elf_songstress/elf_songstress_map2", "humans/elf_songstress/elf_songstress_map3"}, new String[]{"humans/elf_shieldmaiden/elf_shieldmaiden", "humans/elf_shieldmaiden/elf_shieldmaiden2", "humans/elf_shieldmaiden/elf_shieldmaiden3"}, new String[]{"grenwall/gren_grenwall_npc", "grenwall/gren_grenwall_npc2", "grenwall/gren_grenwall_npc3"}, new String[]{"dogs/dire_wolf/dog_update_wolf_alpha", "dogs/dire_wolf/dog_update_wolf_alpha2", "dogs/dire_wolf/dog_update_wolf_alpha3"}, new String[]{"humans/elf_pikeman/elf_pikeman", "humans/elf_pikeman/elf_pikeman2", "humans/elf_pikeman/elf_pikeman3"}, new String[]{"humans/elf_archer/elf_archer", "humans/elf_archer/elf_archer2", "humans/elf_archer/elf_archer3"}, new String[]{"humans/elf_lord/elf_lord", "humans/elf_lord/elf_lord2", "humans/elf_lord/elf_lord3"}, new String[]{"humans/elf_lady/elf_lady", "humans/elf_lady/elf_lady2", "humans/elf_lady/elf_lady3"}, new String[]{"shapeshifter/crystal_shape_shifter"}, new String[]{"goblins/goblin/goblin", "goblins/goblin/goblin2", "goblins/goblin/goblin3"}, new String[]{"goblins/goblin_high_priest/goblin_highpriest", "goblins/goblin_high_priest/goblin_highpriest2", "goblins/goblin_high_priest/goblin_highpriest3"}, new String[]{"ogres/ogre/ogre", "ogres/ogre/ogre2", "ogres/ogre/ogre3"}, new String[]{"ogres/jogre/jogre", "ogres/jogre/jogre2", "ogres/jogre/jogre3"}, new String[]{"ogres/mogre/npc_update_ogre_male_mogre", "ogres/mogre/npc_update_ogre_male_mogre2", "ogres/mogre/npc_update_ogre_male_mogre3"}, new String[]{"ancient_hobgoblin/hobgoblin"}, new String[]{"ogres/ogre_shaman/ogre_shaman", "ogres/ogre_shaman/ogre_shaman2", "ogres/ogre_shaman/ogre_shaman3"}, new String[]{"giants/cyclops/cyclops", "giants/cyclops/cyclops2", "giants/cyclops/cyclops3"}, new String[]{"orks/ork/ork", "orks/ork/ork2", "orks/ork/ork3"}, new String[]{"ogres/ogress/afr_ogress_warrior1", "ogres/ogress/afr_ogress_warrior2", "ogres/ogress/afr_ogress_warrior3"}, new String[]{"orks/ourg/ourg"}, new String[]{"kalphite_queen/kalphite_queen"}, new String[]{"dogs/jackal/dog_update_jackal", "dogs/jackal/dog_update_jackal2", "dogs/jackal/dog_update_jackal3"}, new String[]{"mummy/smki_mummy_boss", "mummy/smki_mummy_boss2", "mummy/smki_mummy_boss3"}, new String[]{"locust/scab_npc_locust", "locust/scab_npc_locust2", "locust/scab_npc_locust3"}, new String[]{"humans/bedabin_nomad/bedabin_nomad", "humans/bedabin_nomad/bedabin_nomad2", "humans/bedabin_nomad/bedabin_nomad3"}, new String[]{"humans/menaphite_thug/menaphite_thug", "humans/menaphite_thug/menaphite_thug2", "humans/menaphite_thug/menaphite_thug3"}, new String[]{"humans/warrior_of_icthlarin/icthlarin_warrior", "humans/warrior_of_icthlarin/icthlarin_warrior2", "humans/warrior_of_icthlarin/icthlarin_warrior3"}, new String[]{"crocodile/scab_npc_crocodile", "crocodile/scab_npc_crocodile2", "crocodile/scab_npc_crocodile3"}, new String[]{"scabarite_mage/scabarite_mage", "scabarite_mage/scabarite_mage2", "scabarite_mage/scabarite_mage3"}, new String[]{"sphinx/quest_icthalarins_npc_sphinx_update"}, new String[]{"humans/spirit_of_elid/spirit_of_elid"}, new String[]{"dragons/king_black_dragon/king_black_dragon"}, new String[]{"dwarf_multicannon/di2_quest_multicannon_dwarf_full"}, new String[]{"portal/blank_portal_1", "portal/blank_portal_2", "portal/blank_portal_3", "portal/blank_portal_4", "portal/blank_portal_5", "portal/blank_portal_6", "portal/blank_portal_7", "portal/blank_portal_8"}, new String[]{"humans/elf_songstress/elf_songstress_cs", "humans/elf_songstress/elf_songstress_cs2", "humans/elf_songstress/elf_songstress_cs3"}, new String[]{"humans/saradomin_ranger/saradomin_ranger_melee", "humans/saradomin_ranger/saradomin_ranger_melee2", "humans/saradomin_ranger/saradomin_ranger_melee3"}, new String[]{"humans/zamorak_ranger/zamorak_ranger_melee", "humans/zamorak_ranger/zamorak_ranger_melee2", "humans/zamorak_ranger/zamorak_ranger_melee3"}, new String[]{"humans/elf_archer/elf_archer_melee", "humans/elf_archer/elf_archer_melee2", "humans/elf_archer/elf_archer_melee3"}, new String[]{"dragons/blue_dragon/blue_dragon"}, new String[]{"humans/barrows_brothers/barrows_ahrim"}, new String[]{"humans/barrows_brothers/barrows_dharok"}, new String[]{"humans/barrows_brothers/barrows_guthan"}, new String[]{"humans/barrows_brothers/barrows_karil"}, new String[]{"humans/barrows_brothers/barrows_torag"}, new String[]{"humans/barrows_brothers/barrows_verac"}, new String[]{"zemouregal/zemo_zemouregal"}, new String[]{"humans/barrows_brothers/barrows_karil_melee"}};
         field_s = 0L;
         field_r = "Battle Viewer";
         field_t = new int[12];

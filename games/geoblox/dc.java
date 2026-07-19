@@ -8,6 +8,9 @@ final class dc {
 
     public static void b(int param0) {
         field_c = null;
+        if (param0 < 121) {
+            field_b = 78;
+        }
     }
 
     final static void a(int param0) {
@@ -18,13 +21,18 @@ final class dc {
         var2 = Geoblox.field_C;
         try {
           L0: {
-            var3 = (ja) (Object) a.field_d.g(0);
+            var3 = (ja) ((Object) a.field_d.g(0));
             L1: while (true) {
               if (var3 == null) {
-                break L0;
+                if (param0 == 7838) {
+                  break L0;
+                } else {
+                  dc.b(-80);
+                  return;
+                }
               } else {
                 var3.e(1643839728);
-                var3 = (ja) (Object) a.field_d.d(1);
+                var3 = (ja) ((Object) a.field_d.d(1));
                 continue L1;
               }
             }
@@ -32,15 +40,11 @@ final class dc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "dc.A(" + 7838 + ')');
+          throw t.a((Throwable) ((Object) var1), "dc.A(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = -1;
     }
 }

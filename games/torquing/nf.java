@@ -125,6 +125,15 @@ final class nf {
     }
 
     private final static void b() {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         int var0 = 0;
         int var1 = 0;
         int var2 = 0;
@@ -163,7 +172,7 @@ final class nf {
                 var9 = (50 - var3) * be.field_e[var5 - var3];
                 field_g[var2] = var0 + (var6 + ((field_p[2] - var6) * var9 >> 16) << 9) / 50;
                 field_o[var2] = var1 + (var7 + ((field_b[2] - var7) * var9 >> 16) << 9) / 50;
-                int incrementValue$9 = var2;
+                incrementValue$9 = var2;
                 var2++;
                 field_a[incrementValue$9] = var8 + ((field_d - var8) * var9 >> 16);
                 break L1;
@@ -175,7 +184,7 @@ final class nf {
               var9 = (50 - var3) * be.field_e[var4 - var3];
               field_g[var2] = var0 + (var6 + ((field_p[1] - var6) * var9 >> 16) << 9) / 50;
               field_o[var2] = var1 + (var7 + ((field_b[1] - var7) * var9 >> 16) << 9) / 50;
-              int incrementValue$10 = var2;
+              incrementValue$10 = var2;
               var2++;
               field_a[incrementValue$10] = var8 + ((field_i - var8) * var9 >> 16);
               break L0;
@@ -183,7 +192,7 @@ final class nf {
           } else {
             field_g[var2] = field_q[0];
             field_o[var2] = field_j[0];
-            int incrementValue$11 = var2;
+            incrementValue$11 = var2;
             var2++;
             field_a[incrementValue$11] = field_f;
             break L0;
@@ -201,7 +210,7 @@ final class nf {
                 var9 = (50 - var4) * be.field_e[var3 - var4];
                 field_g[var2] = var0 + (var6 + ((field_p[0] - var6) * var9 >> 16) << 9) / 50;
                 field_o[var2] = var1 + (var7 + ((field_b[0] - var7) * var9 >> 16) << 9) / 50;
-                int incrementValue$12 = var2;
+                incrementValue$12 = var2;
                 var2++;
                 field_a[incrementValue$12] = var8 + ((field_f - var8) * var9 >> 16);
                 break L3;
@@ -213,7 +222,7 @@ final class nf {
               var9 = (50 - var4) * be.field_e[var5 - var4];
               field_g[var2] = var0 + (var6 + ((field_p[2] - var6) * var9 >> 16) << 9) / 50;
               field_o[var2] = var1 + (var7 + ((field_b[2] - var7) * var9 >> 16) << 9) / 50;
-              int incrementValue$13 = var2;
+              incrementValue$13 = var2;
               var2++;
               field_a[incrementValue$13] = var8 + ((field_d - var8) * var9 >> 16);
               break L2;
@@ -221,7 +230,7 @@ final class nf {
           } else {
             field_g[var2] = field_q[1];
             field_o[var2] = field_j[1];
-            int incrementValue$14 = var2;
+            incrementValue$14 = var2;
             var2++;
             field_a[incrementValue$14] = field_i;
             break L2;
@@ -239,7 +248,7 @@ final class nf {
                 var9 = (50 - var5) * be.field_e[var4 - var5];
                 field_g[var2] = var0 + (var6 + ((field_p[1] - var6) * var9 >> 16) << 9) / 50;
                 field_o[var2] = var1 + (var7 + ((field_b[1] - var7) * var9 >> 16) << 9) / 50;
-                int incrementValue$15 = var2;
+                incrementValue$15 = var2;
                 var2++;
                 field_a[incrementValue$15] = var8 + ((field_i - var8) * var9 >> 16);
                 break L5;
@@ -251,7 +260,7 @@ final class nf {
               var9 = (50 - var5) * be.field_e[var3 - var5];
               field_g[var2] = var0 + (var6 + ((field_p[0] - var6) * var9 >> 16) << 9) / 50;
               field_o[var2] = var1 + (var7 + ((field_b[0] - var7) * var9 >> 16) << 9) / 50;
-              int incrementValue$16 = var2;
+              incrementValue$16 = var2;
               var2++;
               field_a[incrementValue$16] = var8 + ((field_f - var8) * var9 >> 16);
               break L4;
@@ -259,7 +268,7 @@ final class nf {
           } else {
             field_g[var2] = field_q[2];
             field_o[var2] = field_j[2];
-            int incrementValue$17 = var2;
+            incrementValue$17 = var2;
             var2++;
             field_a[incrementValue$17] = field_d;
             break L4;
@@ -670,10 +679,6 @@ final class nf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[3];
         field_n = g.field_c;
         field_o = new int[10];

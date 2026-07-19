@@ -17,16 +17,16 @@ final class fj {
         int var4 = 0;
         var4 = Chess.field_G;
         if (param1 == -1) {
-          if (((fj) this).field_i == null) {
+          if (this.field_i == null) {
             return 0;
           } else {
-            if (((fj) this).field_i.length != 0) {
+            if (-1 != (this.field_i.length ^ -1)) {
               var3 = 1;
               L0: while (true) {
-                if (var3 >= ((fj) this).field_i.length) {
-                  return ((fj) this).field_i.length + -1;
+                if (var3 >= this.field_i.length) {
+                  return this.field_i.length + -1;
                 } else {
-                  if (((fj) this).field_i[var3] + ((fj) this).field_i[-1 + var3] >> 1 > param0) {
+                  if (this.field_i[var3] + this.field_i[-1 + var3] >> -144935775 > param0) {
                     return var3 - 1;
                   } else {
                     var3++;
@@ -44,7 +44,7 @@ final class fj {
     }
 
     public static void a(byte param0) {
-        int var1 = 0;
+        int var1 = -27 % ((69 - param0) / 39);
         field_f = null;
         field_h = null;
         field_b = null;
@@ -62,25 +62,29 @@ final class fj {
         try {
             eg.field_f.field_S = param3;
             eg.field_f.field_ib = param4;
+            if (param2 != -1) {
+                field_h = (String) null;
+            }
             eg.field_f.field_M = eg.field_f.field_M + uc.field_c.field_M;
             eg.field_f.field_db = param0;
             uc.field_c.field_mb = uc.field_c.field_mb + uc.field_c.field_M;
-            uc.field_c.field_M = 0;
+            uc.field_c.field_M = param1;
             eg.field_f.field_M = eg.field_f.field_M - uc.field_c.field_M;
             uc.field_c.field_mb = uc.field_c.field_mb - uc.field_c.field_M;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "fj.F(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ',' + -1 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "fj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     final static void a(int param0) {
-        fi.a(-393711775);
-        bk.a(16777215);
+        fi.a(param0 + -393711775);
+        bk.a(param0 ^ 16777215);
         pj.field_h = null;
-        rc.b(0);
+        rc.b(param0);
     }
 
     final int a(boolean param0) {
+        ld discarded$2 = null;
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -88,17 +92,17 @@ final class fj {
           if (!param0) {
             break L0;
           } else {
-            ld discarded$2 = fj.a(117, 25, -75, -73);
+            discarded$2 = fj.a(117, 25, -75, -73);
             break L0;
           }
         }
         L1: {
           L2: {
-            if (null == ((fj) this).field_i) {
+            if (null == this.field_i) {
               break L2;
             } else {
-              if (0 != ((fj) this).field_i.length) {
-                stackOut_6_0 = ((fj) this).field_i[((fj) this).field_i.length + -1];
+              if (0 != this.field_i.length) {
+                stackOut_6_0 = this.field_i[this.field_i.length + -1];
                 stackIn_7_0 = stackOut_6_0;
                 break L1;
               } else {
@@ -114,9 +118,9 @@ final class fj {
     }
 
     fj(int param0, int param1, int param2) {
-        ((fj) this).field_d = param0;
-        ((fj) this).field_i = new int[1 + param2];
-        ((fj) this).field_e = param1;
+        this.field_d = param0;
+        this.field_i = new int[1 + param2];
+        this.field_e = param1;
     }
 
     final static ld a(int param0, int param1, int param2, int param3) {
@@ -213,7 +217,7 @@ final class fj {
                   }
                 }
                 fl.field_j = stackIn_44_0 != 0;
-                return (ld) var4;
+                return (ld) (var4);
               } else {
                 var9_ref_ld = ik.field_i[var8];
                 if (var9_ref_ld.field_f != null) {
@@ -221,7 +225,7 @@ final class fj {
                   var9_ref_ld.field_f.a(param0, var9_ref_ld.field_f.e((byte) 89), param3 + 2147483640, param2, var7);
                   var7 = var7 + param2;
                   if (var9_ref_ld.field_f.field_L != 0) {
-                    var4 = (Object) (Object) var9_ref_ld;
+                    var4 = var9_ref_ld;
                     var8++;
                     continue L2;
                   } else {
@@ -294,8 +298,8 @@ final class fj {
               var8_ref_ld.field_f.field_ib = var12;
               var8_ref_ld.field_f.field_xb = sc.field_a;
               var6 = var6 + param2;
-              var8_ref_ld.field_f.field_P = -(8355711 & var12 >> 1) + var12 - -((eh.field_M.field_P & 16711423) >> 1);
-              var8_ref_ld.field_f.field_O = var12 + -((16711423 & var12) >> 1) - -((16711422 & eh.field_M.field_O) >> 1);
+              var8_ref_ld.field_f.field_P = -(8355711 & var12 >> 141297409) + var12 - -((eh.field_M.field_P & 16711423) >> -736126367);
+              var8_ref_ld.field_f.field_O = var12 + -((16711423 & var12) >> 1220492545) - -((16711422 & eh.field_M.field_O) >> -1039645599);
               var7--;
               continue L1;
             } else {
@@ -308,10 +312,6 @@ final class fj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         field_b = "This option cannot be combined with the current '<%0>' setting.";
         field_c = 0;

@@ -11,17 +11,23 @@ final class mb {
 
     public static void a(byte param0) {
         field_d = null;
-        field_b = null;
-        field_a = null;
-        field_e = null;
-        field_c = null;
+        if (param0 > -93) {
+          field_a = (java.math.BigInteger) null;
+          field_b = null;
+          field_a = null;
+          field_e = null;
+          field_c = null;
+          return;
+        } else {
+          field_b = null;
+          field_a = null;
+          field_e = null;
+          field_c = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mb.A(";
         field_e = new ka(96, 96);
         field_c = new ka(0, 0);

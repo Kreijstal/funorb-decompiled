@@ -20,6 +20,9 @@ final class de extends ug {
         field_o = null;
         field_f = null;
         field_j = null;
+        if (param0 != -6742) {
+            return;
+        }
         field_n = null;
     }
 
@@ -27,10 +30,6 @@ final class de extends ug {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "de.A(";
         field_n = new pj();
     }

@@ -21,16 +21,16 @@ class mc {
     }
 
     final void b(boolean param0) {
-        if (((mc) this).field_e != null) {
-          ((mc) this).field_e.field_j = ((mc) this).field_j;
-          ((mc) this).field_j.field_e = ((mc) this).field_e;
-          ((mc) this).field_j = null;
+        if (this.field_e != null) {
+          this.field_e.field_j = this.field_j;
+          this.field_j.field_e = this.field_e;
+          this.field_j = null;
           if (param0) {
-            ((mc) this).b(false);
-            ((mc) this).field_e = null;
+            this.b(false);
+            this.field_e = null;
             return;
           } else {
-            ((mc) this).field_e = null;
+            this.field_e = null;
             return;
           }
         } else {
@@ -42,7 +42,7 @@ class mc {
         if (param0 != 95) {
             return true;
         }
-        if (null == ((mc) this).field_e) {
+        if (null == this.field_e) {
             return false;
         }
         return true;
@@ -67,10 +67,6 @@ class mc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 2;
         field_d = "Invite more players, or alternatively try changing the '<%0>' setting.";
         field_g = "You have won!";

@@ -5,6 +5,10 @@ public class dxVertexLayout extends mna {
     jagdx.IDirect3DVertexDeclaration field_e;
 
     dxVertexLayout(cta param0, ne[] param1) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -18,7 +22,7 @@ public class dxVertexLayout extends mna {
         L0: while (true) {
           if (var5 >= param1.length) {
             var10.finish();
-            ((dxVertexLayout) this).field_e = param0.field_jd.a(var10, (jagdx.IDirect3DVertexDeclaration) null);
+            this.field_e = param0.field_jd.a(var10, (jagdx.IDirect3DVertexDeclaration) null);
             return;
           } else {
             var6 = 0;
@@ -44,13 +48,13 @@ public class dxVertexLayout extends mna {
                         break L2;
                       } else {
                         if (gj.field_m == var9) {
-                          int incrementValue$4 = var4;
+                          incrementValue$4 = var4;
                           var4++;
                           var10.addElement(var5, 0, 0, 5, incrementValue$4, var6);
                           break L2;
                         } else {
                           if (var9 == gj.field_n) {
-                            int incrementValue$5 = var4;
+                            incrementValue$5 = var4;
                             var4++;
                             var10.addElement(var5, 1, 0, 5, incrementValue$5, var6);
                             break L2;
@@ -59,13 +63,13 @@ public class dxVertexLayout extends mna {
                               if (var9 != gj.field_j) {
                                 break L2;
                               } else {
-                                int incrementValue$6 = var4;
+                                incrementValue$6 = var4;
                                 var4++;
                                 var10.addElement(var5, 3, 0, 5, incrementValue$6, var6);
                                 break L2;
                               }
                             } else {
-                              int incrementValue$7 = var4;
+                              incrementValue$7 = var4;
                               var4++;
                               var10.addElement(var5, 2, 0, 5, incrementValue$7, var6);
                               break L2;

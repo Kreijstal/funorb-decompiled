@@ -34,10 +34,6 @@ final class raa extends pf {
         int[] var35 = null;
         float[] var36 = null;
         int[] var37 = null;
-        float[] var38 = null;
-        int[] var39 = null;
-        float[] var40 = null;
-        int[] var41 = null;
         L0: {
           if (param3 <= 0) {
             break L0;
@@ -46,81 +42,81 @@ final class raa extends pf {
               L1: {
                 var10 = 0;
                 var11 = 0;
-                var12 = ((raa) this).field_l + ((raa) this).field_a + ((raa) this).field_g;
-                var13 = ((raa) this).field_o + ((raa) this).field_f + ((raa) this).field_v;
+                var12 = this.field_l + this.field_a + this.field_g;
+                var13 = this.field_o + this.field_f + this.field_v;
                 var14 = (var12 << 16) / param3;
                 var15 = (var13 << 16) / param4;
-                if (((raa) this).field_l <= 0) {
+                if (this.field_l <= 0) {
                   break L1;
                 } else {
-                  var16 = ((((raa) this).field_l << 16) + var14 - 1) / var14;
+                  var16 = ((this.field_l << 16) + var14 - 1) / var14;
                   param0 = param0 + var16;
-                  var10 = var10 + (var16 * var14 - (((raa) this).field_l << 16));
+                  var10 = var10 + (var16 * var14 - (this.field_l << 16));
                   break L1;
                 }
               }
               L2: {
-                if (((raa) this).field_o <= 0) {
+                if (this.field_o <= 0) {
                   break L2;
                 } else {
-                  var16 = ((((raa) this).field_o << 16) + var15 - 1) / var15;
+                  var16 = ((this.field_o << 16) + var15 - 1) / var15;
                   param1 = param1 + var16;
-                  var11 = var11 + (var16 * var15 - (((raa) this).field_o << 16));
+                  var11 = var11 + (var16 * var15 - (this.field_o << 16));
                   break L2;
                 }
               }
               L3: {
-                if (((raa) this).field_a >= var12) {
+                if (this.field_a >= var12) {
                   break L3;
                 } else {
-                  param3 = ((((raa) this).field_a << 16) - var10 + var14 - 1) / var14;
+                  param3 = ((this.field_a << 16) - var10 + var14 - 1) / var14;
                   break L3;
                 }
               }
               L4: {
-                if (((raa) this).field_f >= var13) {
+                if (this.field_f >= var13) {
                   break L4;
                 } else {
-                  param4 = ((((raa) this).field_f << 16) - var11 + var15 - 1) / var15;
+                  param4 = ((this.field_f << 16) - var11 + var15 - 1) / var15;
                   break L4;
                 }
               }
               L5: {
-                var16 = param0 + param1 * ((raa) this).field_b.field_K;
-                var17 = ((raa) this).field_b.field_K - param3;
-                if (param1 + param4 <= ((raa) this).field_b.field_P) {
+                var16 = param0 + param1 * this.field_b.field_K;
+                var17 = this.field_b.field_K - param3;
+                if (param1 + param4 <= this.field_b.field_P) {
                   break L5;
                 } else {
-                  param4 = param4 - (param1 + param4 - ((raa) this).field_b.field_P);
+                  param4 = param4 - (param1 + param4 - this.field_b.field_P);
                   break L5;
                 }
               }
               L6: {
-                if (param1 >= ((raa) this).field_b.field_d) {
+                if (param1 >= this.field_b.field_d) {
                   break L6;
                 } else {
-                  var18_int = ((raa) this).field_b.field_d - param1;
+                  var18_int = this.field_b.field_d - param1;
                   param4 = param4 - var18_int;
-                  var16 = var16 + var18_int * ((raa) this).field_b.field_K;
+                  var16 = var16 + var18_int * this.field_b.field_K;
                   var11 = var11 + var15 * var18_int;
                   break L6;
                 }
               }
               L7: {
-                if (param0 + param3 <= ((raa) this).field_b.field_W) {
+                if (param0 + param3 <= this.field_b.field_W) {
                   break L7;
                 } else {
-                  var18_int = param0 + param3 - ((raa) this).field_b.field_W;
+                  var18_int = param0 + param3 - this.field_b.field_W;
                   param3 = param3 - var18_int;
                   var17 = var17 + var18_int;
                   break L7;
                 }
               }
               L8: {
-                if (param0 >= ((raa) this).field_b.field_J) {
+                if (param0 >= this.field_b.field_J) {
                   break L8;
                 } else {
-                  var18_int = ((raa) this).field_b.field_J - param0;
+                  var18_int = this.field_b.field_J - param0;
                   param3 = param3 - var18_int;
                   var16 = var16 + var18_int;
                   var10 = var10 + var14 * var18_int;
@@ -129,14 +125,10 @@ final class raa extends pf {
                 }
               }
               L9: {
-                var40 = ((raa) this).field_b.field_n;
-                var38 = var40;
-                var36 = var38;
+                var36 = this.field_b.field_n;
                 var34 = var36;
                 var18 = var34;
-                var41 = ((raa) this).field_b.field_r;
-                var39 = var41;
-                var37 = var39;
+                var37 = this.field_b.field_r;
                 var35 = var37;
                 var19 = var35;
                 if (param7 != 0) {
@@ -161,7 +153,7 @@ final class raa extends pf {
                                 if (var25 >= 0) {
                                   break L9;
                                 } else {
-                                  var26 = (var11 >> 16) * ((raa) this).field_a;
+                                  var26 = (var11 >> 16) * this.field_a;
                                   var27 = -param3;
                                   L11: while (true) {
                                     if (var27 >= 0) {
@@ -172,17 +164,17 @@ final class raa extends pf {
                                       continue L10;
                                     } else {
                                       L12: {
-                                        if ((float)param2 >= var40[var16]) {
+                                        if ((float)param2 >= var36[var16]) {
                                           break L12;
                                         } else {
-                                          var28 = ((raa) this).field_E[(var10 >> 16) + var26];
+                                          var28 = this.field_E[(var10 >> 16) + var26];
                                           if (var28 == 0) {
                                             break L12;
                                           } else {
                                             var22 = (var28 & 16711935) * var20 & -16711936;
                                             var23 = (var28 & 65280) * var20 & 16711680;
                                             var28 = ((var22 | var23) >>> 8) + param6;
-                                            var29 = var41[var16];
+                                            var29 = var37[var16];
                                             var30 = var28 + var29;
                                             var31 = (var28 & 16711935) + (var29 & 16711935);
                                             var29 = (var31 & 16777472) + (var30 - var31 & 65536);
@@ -208,7 +200,7 @@ final class raa extends pf {
                               if (var21 >= 0) {
                                 break L9;
                               } else {
-                                var22 = (var11 >> 16) * ((raa) this).field_a;
+                                var22 = (var11 >> 16) * this.field_a;
                                 var23 = -param3;
                                 L14: while (true) {
                                   if (var23 >= 0) {
@@ -219,15 +211,15 @@ final class raa extends pf {
                                     continue L13;
                                   } else {
                                     L15: {
-                                      if ((float)param2 >= var40[var16]) {
+                                      if ((float)param2 >= var36[var16]) {
                                         break L15;
                                       } else {
-                                        var24 = ((raa) this).field_E[(var10 >> 16) + var22];
+                                        var24 = this.field_E[(var10 >> 16) + var22];
                                         var25 = var24 + param6;
                                         var26 = (var24 & 16711935) + (param6 & 16711935);
                                         var27 = (var26 & 16777472) + (var25 - var26 & 65536);
                                         var24 = var25 - var27 | var27 - (var27 >>> 8);
-                                        var27 = var41[var16];
+                                        var27 = var37[var16];
                                         var25 = var24 + var27;
                                         var26 = (var24 & 16711935) + (var27 & 16711935);
                                         var27 = (var26 & 16777472) + (var25 - var26 & 65536);
@@ -255,7 +247,7 @@ final class raa extends pf {
                             if (var24 >= 0) {
                               break L9;
                             } else {
-                              var25 = (var11 >> 16) * ((raa) this).field_a;
+                              var25 = (var11 >> 16) * this.field_a;
                               var26 = -param3;
                               L17: while (true) {
                                 if (var26 >= 0) {
@@ -266,10 +258,10 @@ final class raa extends pf {
                                   continue L16;
                                 } else {
                                   L18: {
-                                    if ((float)param2 >= var40[var16]) {
+                                    if ((float)param2 >= var36[var16]) {
                                       break L18;
                                     } else {
-                                      var27 = ((raa) this).field_E[(var10 >> 16) + var25];
+                                      var27 = this.field_E[(var10 >> 16) + var25];
                                       if (var27 == 0) {
                                         break L18;
                                       } else {
@@ -277,7 +269,7 @@ final class raa extends pf {
                                         var29 = (var27 & 65280) * var22 & 16711680;
                                         var30 = (var27 & 255) * var23 & 65280;
                                         var27 = (var28 | var29 | var30) >>> 8;
-                                        var31 = var41[var16];
+                                        var31 = var37[var16];
                                         var32 = var27 + var31;
                                         var33 = (var27 & 16711935) + (var31 & 16711935);
                                         var31 = (var33 & 16777472) + (var32 - var33 & 65536);
@@ -303,7 +295,7 @@ final class raa extends pf {
                           if (var21 >= 0) {
                             break L9;
                           } else {
-                            var22 = (var11 >> 16) * ((raa) this).field_a;
+                            var22 = (var11 >> 16) * this.field_a;
                             var23 = -param3;
                             L20: while (true) {
                               if (var23 >= 0) {
@@ -314,14 +306,14 @@ final class raa extends pf {
                                 continue L19;
                               } else {
                                 L21: {
-                                  if ((float)param2 >= var40[var16]) {
+                                  if ((float)param2 >= var36[var16]) {
                                     break L21;
                                   } else {
-                                    var24 = ((raa) this).field_E[(var10 >> 16) + var22];
+                                    var24 = this.field_E[(var10 >> 16) + var22];
                                     if (var24 == 0) {
                                       break L21;
                                     } else {
-                                      var25 = var41[var16];
+                                      var25 = var37[var16];
                                       var26 = var24 + var25;
                                       var27 = (var24 & 16711935) + (var25 & 16711935);
                                       var25 = (var27 & 16777472) + (var26 - var27 & 65536);
@@ -359,7 +351,7 @@ final class raa extends pf {
                               if (var25 >= 0) {
                                 break L9;
                               } else {
-                                var26 = (var11 >> 16) * ((raa) this).field_a;
+                                var26 = (var11 >> 16) * this.field_a;
                                 var27 = -param3;
                                 L23: while (true) {
                                   if (var27 >= 0) {
@@ -370,10 +362,10 @@ final class raa extends pf {
                                     continue L22;
                                   } else {
                                     L24: {
-                                      if ((float)param2 >= var40[var16]) {
+                                      if ((float)param2 >= var36[var16]) {
                                         break L24;
                                       } else {
-                                        var28 = ((raa) this).field_E[(var10 >> 16) + var26];
+                                        var28 = this.field_E[(var10 >> 16) + var26];
                                         if (var28 == 0) {
                                           break L24;
                                         } else {
@@ -403,7 +395,7 @@ final class raa extends pf {
                             if (var23 >= 0) {
                               break L9;
                             } else {
-                              var24 = (var11 >> 16) * ((raa) this).field_a;
+                              var24 = (var11 >> 16) * this.field_a;
                               var25 = -param3;
                               L26: while (true) {
                                 if (var25 >= 0) {
@@ -414,11 +406,11 @@ final class raa extends pf {
                                   continue L25;
                                 } else {
                                   L27: {
-                                    if ((float)param2 >= var40[var16]) {
+                                    if ((float)param2 >= var36[var16]) {
                                       break L27;
                                     } else {
                                       L28: {
-                                        var26 = ((raa) this).field_E[(var10 >> 16) + var24];
+                                        var26 = this.field_E[(var10 >> 16) + var24];
                                         var27 = var26 + param6;
                                         var28 = (var26 & 16711935) + (param6 & 16711935);
                                         var29 = (var28 & 16777472) + (var27 - var28 & 65536);
@@ -430,13 +422,13 @@ final class raa extends pf {
                                             break L28;
                                           } else {
                                             var26 = var29;
-                                            var29 = var41[var16];
+                                            var29 = var37[var16];
                                             var29 = ((var26 & 16711935) * var21 + (var29 & 16711935) * var22 & -16711936) + ((var26 & 65280) * var21 + (var29 & 65280) * var22 & 16711680) >> 8;
                                             break L28;
                                           }
                                         }
                                       }
-                                      var41[var16] = var29;
+                                      var37[var16] = var29;
                                       var18[var16] = (float)param2;
                                       break L27;
                                     }
@@ -463,7 +455,7 @@ final class raa extends pf {
                             if (var26 >= 0) {
                               break L9;
                             } else {
-                              var27 = (var11 >> 16) * ((raa) this).field_a;
+                              var27 = (var11 >> 16) * this.field_a;
                               var28 = -param3;
                               L30: while (true) {
                                 if (var28 >= 0) {
@@ -474,10 +466,10 @@ final class raa extends pf {
                                   continue L29;
                                 } else {
                                   L31: {
-                                    if ((float)param2 >= var40[var16]) {
+                                    if ((float)param2 >= var36[var16]) {
                                       break L31;
                                     } else {
-                                      var29 = ((raa) this).field_E[(var10 >> 16) + var27];
+                                      var29 = this.field_E[(var10 >> 16) + var27];
                                       if (var29 == 0) {
                                         break L31;
                                       } else {
@@ -493,7 +485,7 @@ final class raa extends pf {
                                           var31 = (var29 & 65280) * var22 & 16711680;
                                           var32 = (var29 & 255) * var23 & 65280;
                                           var29 = (var30 | var31 | var32) >>> 8;
-                                          var33 = var41[var16];
+                                          var33 = var37[var16];
                                           var19[var16] = ((var29 & 16711935) * var24 + (var33 & 16711935) * var25 & -16711936) + ((var29 & 65280) * var24 + (var33 & 65280) * var25 & 16711680) >> 8;
                                           var18[var16] = (float)param2;
                                           break L31;
@@ -517,7 +509,7 @@ final class raa extends pf {
                             if (var23 >= 0) {
                               break L9;
                             } else {
-                              var24 = (var11 >> 16) * ((raa) this).field_a;
+                              var24 = (var11 >> 16) * this.field_a;
                               var25 = -param3;
                               L33: while (true) {
                                 if (var25 >= 0) {
@@ -528,14 +520,14 @@ final class raa extends pf {
                                   continue L32;
                                 } else {
                                   L34: {
-                                    if ((float)param2 >= var40[var16]) {
+                                    if ((float)param2 >= var36[var16]) {
                                       break L34;
                                     } else {
-                                      var26 = ((raa) this).field_E[(var10 >> 16) + var24];
+                                      var26 = this.field_E[(var10 >> 16) + var24];
                                       if (var26 == 0) {
                                         break L34;
                                       } else {
-                                        var27 = var41[var16];
+                                        var27 = var37[var16];
                                         var19[var16] = ((var26 & 16711935) * var21 + (var27 & 16711935) * var22 & -16711936) + ((var26 & 65280) * var21 + (var27 & 65280) * var22 & 16711680) >> 8;
                                         var18[var16] = (float)param2;
                                         break L34;
@@ -559,7 +551,7 @@ final class raa extends pf {
                         if (var21 >= 0) {
                           break L9;
                         } else {
-                          var22 = (var11 >> 16) * ((raa) this).field_a;
+                          var22 = (var11 >> 16) * this.field_a;
                           var23 = -param3;
                           L36: while (true) {
                             if (var23 >= 0) {
@@ -570,14 +562,14 @@ final class raa extends pf {
                               continue L35;
                             } else {
                               L37: {
-                                if ((float)param2 >= var40[var16]) {
+                                if ((float)param2 >= var36[var16]) {
                                   break L37;
                                 } else {
-                                  var24 = ((raa) this).field_E[(var10 >> 16) + var22];
+                                  var24 = this.field_E[(var10 >> 16) + var22];
                                   if (var24 == 0) {
                                     break L37;
                                   } else {
-                                    var41[var16] = var24;
+                                    var37[var16] = var24;
                                     var18[var16] = (float)param2;
                                     break L37;
                                   }
@@ -611,7 +603,7 @@ final class raa extends pf {
                             if (var25 >= 0) {
                               break L9;
                             } else {
-                              var26 = (var11 >> 16) * ((raa) this).field_a;
+                              var26 = (var11 >> 16) * this.field_a;
                               var27 = -param3;
                               L39: while (true) {
                                 if (var27 >= 0) {
@@ -622,10 +614,10 @@ final class raa extends pf {
                                   continue L38;
                                 } else {
                                   L40: {
-                                    if ((float)param2 >= var40[var16]) {
+                                    if ((float)param2 >= var36[var16]) {
                                       break L40;
                                     } else {
-                                      var28 = ((raa) this).field_E[(var10 >> 16) + var26];
+                                      var28 = this.field_E[(var10 >> 16) + var26];
                                       var22 = (var28 & 16711935) * var20 & -16711936;
                                       var23 = (var28 & 65280) * var20 & 16711680;
                                       var19[var16] = ((var22 | var23) >>> 8) + param6;
@@ -649,7 +641,7 @@ final class raa extends pf {
                           if (var21 >= 0) {
                             break L9;
                           } else {
-                            var22 = (var11 >> 16) * ((raa) this).field_a;
+                            var22 = (var11 >> 16) * this.field_a;
                             var23 = -param3;
                             L42: while (true) {
                               if (var23 >= 0) {
@@ -660,10 +652,10 @@ final class raa extends pf {
                                 continue L41;
                               } else {
                                 L43: {
-                                  if ((float)param2 >= var40[var16]) {
+                                  if ((float)param2 >= var36[var16]) {
                                     break L43;
                                   } else {
-                                    var24 = ((raa) this).field_E[(var10 >> 16) + var22];
+                                    var24 = this.field_E[(var10 >> 16) + var22];
                                     var25 = var24 + param6;
                                     var26 = (var24 & 16711935) + (param6 & 16711935);
                                     var27 = (var26 & 16777472) + (var25 - var26 & 65536);
@@ -691,7 +683,7 @@ final class raa extends pf {
                         if (var24 >= 0) {
                           break L9;
                         } else {
-                          var25 = (var11 >> 16) * ((raa) this).field_a;
+                          var25 = (var11 >> 16) * this.field_a;
                           var26 = -param3;
                           L45: while (true) {
                             if (var26 >= 0) {
@@ -702,10 +694,10 @@ final class raa extends pf {
                               continue L44;
                             } else {
                               L46: {
-                                if ((float)param2 >= var40[var16]) {
+                                if ((float)param2 >= var36[var16]) {
                                   break L46;
                                 } else {
-                                  var27 = ((raa) this).field_E[(var10 >> 16) + var25];
+                                  var27 = this.field_E[(var10 >> 16) + var25];
                                   var28 = (var27 & 16711680) * var20 & -16777216;
                                   var29 = (var27 & 65280) * var21 & 16711680;
                                   var30 = (var27 & 255) * var22 & 65280;
@@ -730,7 +722,7 @@ final class raa extends pf {
                       if (var21 >= 0) {
                         break L0;
                       } else {
-                        var22 = (var11 >> 16) * ((raa) this).field_a;
+                        var22 = (var11 >> 16) * this.field_a;
                         var23 = -param3;
                         L48: while (true) {
                           if (var23 >= 0) {
@@ -741,10 +733,10 @@ final class raa extends pf {
                             continue L47;
                           } else {
                             L49: {
-                              if ((float)param2 >= var40[var16]) {
+                              if ((float)param2 >= var36[var16]) {
                                 break L49;
                               } else {
-                                var19[var16] = ((raa) this).field_E[(var10 >> 16) + var22];
+                                var19[var16] = this.field_E[(var10 >> 16) + var22];
                                 var18[var16] = (float)param2;
                                 break L49;
                               }
@@ -769,6 +761,20 @@ final class raa extends pf {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -796,9 +802,7 @@ final class raa extends pf {
         int var32 = 0;
         int[] var33 = null;
         int[] var34 = null;
-        int[] var35 = null;
-        int[] var36 = null;
-        if (!((raa) this).field_b.n()) {
+        if (!this.field_b.n()) {
           L0: {
             if (param2 <= 0) {
               break L0;
@@ -807,61 +811,61 @@ final class raa extends pf {
                 L1: {
                   var9 = 0;
                   var10 = 0;
-                  var11 = ((raa) this).field_b.field_K;
-                  var12 = ((raa) this).field_l + ((raa) this).field_a + ((raa) this).field_g;
-                  var13 = ((raa) this).field_o + ((raa) this).field_f + ((raa) this).field_v;
+                  var11 = this.field_b.field_K;
+                  var12 = this.field_l + this.field_a + this.field_g;
+                  var13 = this.field_o + this.field_f + this.field_v;
                   var14 = (var12 << 16) / param2;
                   var15 = (var13 << 16) / param3;
-                  if (((raa) this).field_l <= 0) {
+                  if (this.field_l <= 0) {
                     break L1;
                   } else {
-                    var16 = ((((raa) this).field_l << 16) + var14 - 1) / var14;
+                    var16 = ((this.field_l << 16) + var14 - 1) / var14;
                     param0 = param0 + var16;
-                    var9 = var9 + (var16 * var14 - (((raa) this).field_l << 16));
+                    var9 = var9 + (var16 * var14 - (this.field_l << 16));
                     break L1;
                   }
                 }
                 L2: {
-                  if (((raa) this).field_o <= 0) {
+                  if (this.field_o <= 0) {
                     break L2;
                   } else {
-                    var16 = ((((raa) this).field_o << 16) + var15 - 1) / var15;
+                    var16 = ((this.field_o << 16) + var15 - 1) / var15;
                     param1 = param1 + var16;
-                    var10 = var10 + (var16 * var15 - (((raa) this).field_o << 16));
+                    var10 = var10 + (var16 * var15 - (this.field_o << 16));
                     break L2;
                   }
                 }
                 L3: {
-                  if (((raa) this).field_a >= var12) {
+                  if (this.field_a >= var12) {
                     break L3;
                   } else {
-                    param2 = ((((raa) this).field_a << 16) - var9 + var14 - 1) / var14;
+                    param2 = ((this.field_a << 16) - var9 + var14 - 1) / var14;
                     break L3;
                   }
                 }
                 L4: {
-                  if (((raa) this).field_f >= var13) {
+                  if (this.field_f >= var13) {
                     break L4;
                   } else {
-                    param3 = ((((raa) this).field_f << 16) - var10 + var15 - 1) / var15;
+                    param3 = ((this.field_f << 16) - var10 + var15 - 1) / var15;
                     break L4;
                   }
                 }
                 L5: {
                   var16 = param0 + param1 * var11;
                   var17 = var11 - param2;
-                  if (param1 + param3 <= ((raa) this).field_b.field_P) {
+                  if (param1 + param3 <= this.field_b.field_P) {
                     break L5;
                   } else {
-                    param3 = param3 - (param1 + param3 - ((raa) this).field_b.field_P);
+                    param3 = param3 - (param1 + param3 - this.field_b.field_P);
                     break L5;
                   }
                 }
                 L6: {
-                  if (param1 >= ((raa) this).field_b.field_d) {
+                  if (param1 >= this.field_b.field_d) {
                     break L6;
                   } else {
-                    var18_int = ((raa) this).field_b.field_d - param1;
+                    var18_int = this.field_b.field_d - param1;
                     param3 = param3 - var18_int;
                     var16 = var16 + var18_int * var11;
                     var10 = var10 + var15 * var18_int;
@@ -869,20 +873,20 @@ final class raa extends pf {
                   }
                 }
                 L7: {
-                  if (param0 + param2 <= ((raa) this).field_b.field_W) {
+                  if (param0 + param2 <= this.field_b.field_W) {
                     break L7;
                   } else {
-                    var18_int = param0 + param2 - ((raa) this).field_b.field_W;
+                    var18_int = param0 + param2 - this.field_b.field_W;
                     param2 = param2 - var18_int;
                     var17 = var17 + var18_int;
                     break L7;
                   }
                 }
                 L8: {
-                  if (param0 >= ((raa) this).field_b.field_J) {
+                  if (param0 >= this.field_b.field_J) {
                     break L8;
                   } else {
-                    var18_int = ((raa) this).field_b.field_J - param0;
+                    var18_int = this.field_b.field_J - param0;
                     param2 = param2 - var18_int;
                     var16 = var16 + var18_int;
                     var9 = var9 + var14 * var18_int;
@@ -891,9 +895,7 @@ final class raa extends pf {
                   }
                 }
                 L9: {
-                  var36 = ((raa) this).field_b.field_r;
-                  var35 = var36;
-                  var34 = var35;
+                  var34 = this.field_b.field_r;
                   var33 = var34;
                   var18 = var33;
                   if (param6 != 0) {
@@ -918,7 +920,7 @@ final class raa extends pf {
                                   if (var24 >= 0) {
                                     break L9;
                                   } else {
-                                    var25 = (var10 >> 16) * ((raa) this).field_a;
+                                    var25 = (var10 >> 16) * this.field_a;
                                     var26 = -param2;
                                     L11: while (true) {
                                       if (var26 >= 0) {
@@ -929,7 +931,7 @@ final class raa extends pf {
                                         continue L10;
                                       } else {
                                         L12: {
-                                          var27 = ((raa) this).field_E[(var9 >> 16) + var25];
+                                          var27 = this.field_E[(var9 >> 16) + var25];
                                           if (var27 == 0) {
                                             var16++;
                                             break L12;
@@ -937,11 +939,11 @@ final class raa extends pf {
                                             var21 = (var27 & 16711935) * var19 & -16711936;
                                             var22 = (var27 & 65280) * var19 & 16711680;
                                             var27 = ((var21 | var22) >>> 8) + param5;
-                                            var28 = var36[var16];
+                                            var28 = var34[var16];
                                             var29 = var27 + var28;
                                             var30 = (var27 & 16711935) + (var28 & 16711935);
                                             var28 = (var30 & 16777472) + (var29 - var30 & 65536);
-                                            int incrementValue$14 = var16;
+                                            incrementValue$14 = var16;
                                             var16++;
                                             var18[incrementValue$14] = var29 - var28 | var28 - (var28 >>> 8);
                                             break L12;
@@ -962,7 +964,7 @@ final class raa extends pf {
                                 if (var20 >= 0) {
                                   break L9;
                                 } else {
-                                  var21 = (var10 >> 16) * ((raa) this).field_a;
+                                  var21 = (var10 >> 16) * this.field_a;
                                   var22 = -param2;
                                   L14: while (true) {
                                     if (var22 >= 0) {
@@ -972,16 +974,16 @@ final class raa extends pf {
                                       var20++;
                                       continue L13;
                                     } else {
-                                      var23 = ((raa) this).field_E[(var9 >> 16) + var21];
+                                      var23 = this.field_E[(var9 >> 16) + var21];
                                       var24 = var23 + param5;
                                       var25 = (var23 & 16711935) + (param5 & 16711935);
                                       var26 = (var25 & 16777472) + (var24 - var25 & 65536);
                                       var23 = var24 - var26 | var26 - (var26 >>> 8);
-                                      var26 = var36[var16];
+                                      var26 = var34[var16];
                                       var24 = var23 + var26;
                                       var25 = (var23 & 16711935) + (var26 & 16711935);
                                       var26 = (var25 & 16777472) + (var24 - var25 & 65536);
-                                      int incrementValue$15 = var16;
+                                      incrementValue$15 = var16;
                                       var16++;
                                       var18[incrementValue$15] = var24 - var26 | var26 - (var26 >>> 8);
                                       var9 = var9 + var14;
@@ -1002,7 +1004,7 @@ final class raa extends pf {
                               if (var23 >= 0) {
                                 break L9;
                               } else {
-                                var24 = (var10 >> 16) * ((raa) this).field_a;
+                                var24 = (var10 >> 16) * this.field_a;
                                 var25 = -param2;
                                 L16: while (true) {
                                   if (var25 >= 0) {
@@ -1013,7 +1015,7 @@ final class raa extends pf {
                                     continue L15;
                                   } else {
                                     L17: {
-                                      var26 = ((raa) this).field_E[(var9 >> 16) + var24];
+                                      var26 = this.field_E[(var9 >> 16) + var24];
                                       if (var26 == 0) {
                                         var16++;
                                         break L17;
@@ -1022,11 +1024,11 @@ final class raa extends pf {
                                         var28 = (var26 & 65280) * var21 & 16711680;
                                         var29 = (var26 & 255) * var22 & 65280;
                                         var26 = (var27 | var28 | var29) >>> 8;
-                                        var30 = var36[var16];
+                                        var30 = var34[var16];
                                         var31 = var26 + var30;
                                         var32 = (var26 & 16711935) + (var30 & 16711935);
                                         var30 = (var32 & 16777472) + (var31 - var32 & 65536);
-                                        int incrementValue$16 = var16;
+                                        incrementValue$16 = var16;
                                         var16++;
                                         var18[incrementValue$16] = var31 - var30 | var30 - (var30 >>> 8);
                                         break L17;
@@ -1047,7 +1049,7 @@ final class raa extends pf {
                             if (var20 >= 0) {
                               break L9;
                             } else {
-                              var21 = (var10 >> 16) * ((raa) this).field_a;
+                              var21 = (var10 >> 16) * this.field_a;
                               var22 = -param2;
                               L19: while (true) {
                                 if (var22 >= 0) {
@@ -1058,16 +1060,16 @@ final class raa extends pf {
                                   continue L18;
                                 } else {
                                   L20: {
-                                    var23 = ((raa) this).field_E[(var9 >> 16) + var21];
+                                    var23 = this.field_E[(var9 >> 16) + var21];
                                     if (var23 == 0) {
                                       var16++;
                                       break L20;
                                     } else {
-                                      var24 = var36[var16];
+                                      var24 = var34[var16];
                                       var25 = var23 + var24;
                                       var26 = (var23 & 16711935) + (var24 & 16711935);
                                       var24 = (var26 & 16777472) + (var25 - var26 & 65536);
-                                      int incrementValue$17 = var16;
+                                      incrementValue$17 = var16;
                                       var16++;
                                       var18[incrementValue$17] = var25 - var24 | var24 - (var24 >>> 8);
                                       break L20;
@@ -1100,7 +1102,7 @@ final class raa extends pf {
                                 if (var24 >= 0) {
                                   break L9;
                                 } else {
-                                  var25 = (var10 >> 16) * ((raa) this).field_a;
+                                  var25 = (var10 >> 16) * this.field_a;
                                   var26 = -param2;
                                   L22: while (true) {
                                     if (var26 >= 0) {
@@ -1111,14 +1113,14 @@ final class raa extends pf {
                                       continue L21;
                                     } else {
                                       L23: {
-                                        var27 = ((raa) this).field_E[(var9 >> 16) + var25];
+                                        var27 = this.field_E[(var9 >> 16) + var25];
                                         if (var27 == 0) {
                                           var16++;
                                           break L23;
                                         } else {
                                           var21 = (var27 & 16711935) * var19 & -16711936;
                                           var22 = (var27 & 65280) * var19 & 16711680;
-                                          int incrementValue$18 = var16;
+                                          incrementValue$18 = var16;
                                           var16++;
                                           var18[incrementValue$18] = ((var21 | var22) >>> 8) + param5;
                                           break L23;
@@ -1141,7 +1143,7 @@ final class raa extends pf {
                               if (var22 >= 0) {
                                 break L9;
                               } else {
-                                var23 = (var10 >> 16) * ((raa) this).field_a;
+                                var23 = (var10 >> 16) * this.field_a;
                                 var24 = -param2;
                                 L25: while (true) {
                                   if (var24 >= 0) {
@@ -1152,7 +1154,7 @@ final class raa extends pf {
                                     continue L24;
                                   } else {
                                     L26: {
-                                      var25 = ((raa) this).field_E[(var9 >> 16) + var23];
+                                      var25 = this.field_E[(var9 >> 16) + var23];
                                       var26 = var25 + param5;
                                       var27 = (var25 & 16711935) + (param5 & 16711935);
                                       var28 = (var27 & 16777472) + (var26 - var27 & 65536);
@@ -1164,13 +1166,13 @@ final class raa extends pf {
                                           break L26;
                                         } else {
                                           var25 = var28;
-                                          var28 = var36[var16];
+                                          var28 = var34[var16];
                                           var28 = ((var25 & 16711935) * var20 + (var28 & 16711935) * var21 & -16711936) + ((var25 & 65280) * var20 + (var28 & 65280) * var21 & 16711680) >> 8;
                                           break L26;
                                         }
                                       }
                                     }
-                                    int incrementValue$19 = var16;
+                                    incrementValue$19 = var16;
                                     var16++;
                                     var18[incrementValue$19] = var28;
                                     var9 = var9 + var14;
@@ -1194,7 +1196,7 @@ final class raa extends pf {
                               if (var25 >= 0) {
                                 break L9;
                               } else {
-                                var26 = (var10 >> 16) * ((raa) this).field_a;
+                                var26 = (var10 >> 16) * this.field_a;
                                 var27 = -param2;
                                 L28: while (true) {
                                   if (var27 >= 0) {
@@ -1205,7 +1207,7 @@ final class raa extends pf {
                                     continue L27;
                                   } else {
                                     L29: {
-                                      var28 = ((raa) this).field_E[(var9 >> 16) + var26];
+                                      var28 = this.field_E[(var9 >> 16) + var26];
                                       if (var28 == 0) {
                                         var16++;
                                         break L29;
@@ -1214,7 +1216,7 @@ final class raa extends pf {
                                           var29 = (var28 & 16711680) * var20 & -16777216;
                                           var30 = (var28 & 65280) * var21 & 16711680;
                                           var31 = (var28 & 255) * var22 & 65280;
-                                          int incrementValue$20 = var16;
+                                          incrementValue$20 = var16;
                                           var16++;
                                           var18[incrementValue$20] = (var29 | var30 | var31) >>> 8;
                                           break L29;
@@ -1223,8 +1225,8 @@ final class raa extends pf {
                                           var30 = (var28 & 65280) * var21 & 16711680;
                                           var31 = (var28 & 255) * var22 & 65280;
                                           var28 = (var29 | var30 | var31) >>> 8;
-                                          var32 = var36[var16];
-                                          int incrementValue$21 = var16;
+                                          var32 = var34[var16];
+                                          incrementValue$21 = var16;
                                           var16++;
                                           var18[incrementValue$21] = ((var28 & 16711935) * var23 + (var32 & 16711935) * var24 & -16711936) + ((var28 & 65280) * var23 + (var32 & 65280) * var24 & 16711680) >> 8;
                                           var9 = var9 + var14;
@@ -1248,7 +1250,7 @@ final class raa extends pf {
                               if (var22 >= 0) {
                                 break L9;
                               } else {
-                                var23 = (var10 >> 16) * ((raa) this).field_a;
+                                var23 = (var10 >> 16) * this.field_a;
                                 var24 = -param2;
                                 L31: while (true) {
                                   if (var24 >= 0) {
@@ -1259,13 +1261,13 @@ final class raa extends pf {
                                     continue L30;
                                   } else {
                                     L32: {
-                                      var25 = ((raa) this).field_E[(var9 >> 16) + var23];
+                                      var25 = this.field_E[(var9 >> 16) + var23];
                                       if (var25 == 0) {
                                         var16++;
                                         break L32;
                                       } else {
-                                        var26 = var36[var16];
-                                        int incrementValue$22 = var16;
+                                        var26 = var34[var16];
+                                        incrementValue$22 = var16;
                                         var16++;
                                         var18[incrementValue$22] = ((var25 & 16711935) * var20 + (var26 & 16711935) * var21 & -16711936) + ((var25 & 65280) * var20 + (var26 & 65280) * var21 & 16711680) >> 8;
                                         break L32;
@@ -1287,7 +1289,7 @@ final class raa extends pf {
                           if (var20 >= 0) {
                             break L9;
                           } else {
-                            var21 = (var10 >> 16) * ((raa) this).field_a;
+                            var21 = (var10 >> 16) * this.field_a;
                             var22 = -param2;
                             L34: while (true) {
                               if (var22 >= 0) {
@@ -1298,12 +1300,12 @@ final class raa extends pf {
                                 continue L33;
                               } else {
                                 L35: {
-                                  var23 = ((raa) this).field_E[(var9 >> 16) + var21];
+                                  var23 = this.field_E[(var9 >> 16) + var21];
                                   if (var23 == 0) {
                                     var16++;
                                     break L35;
                                   } else {
-                                    int incrementValue$23 = var16;
+                                    incrementValue$23 = var16;
                                     var16++;
                                     var18[incrementValue$23] = var23;
                                     break L35;
@@ -1336,7 +1338,7 @@ final class raa extends pf {
                               if (var24 >= 0) {
                                 break L9;
                               } else {
-                                var25 = (var10 >> 16) * ((raa) this).field_a;
+                                var25 = (var10 >> 16) * this.field_a;
                                 var26 = -param2;
                                 L37: while (true) {
                                   if (var26 >= 0) {
@@ -1346,10 +1348,10 @@ final class raa extends pf {
                                     var24++;
                                     continue L36;
                                   } else {
-                                    var27 = ((raa) this).field_E[(var9 >> 16) + var25];
+                                    var27 = this.field_E[(var9 >> 16) + var25];
                                     var21 = (var27 & 16711935) * var19 & -16711936;
                                     var22 = (var27 & 65280) * var19 & 16711680;
-                                    int incrementValue$24 = var16;
+                                    incrementValue$24 = var16;
                                     var16++;
                                     var18[incrementValue$24] = ((var21 | var22) >>> 8) + param5;
                                     var9 = var9 + var14;
@@ -1367,7 +1369,7 @@ final class raa extends pf {
                             if (var20 >= 0) {
                               break L9;
                             } else {
-                              var21 = (var10 >> 16) * ((raa) this).field_a;
+                              var21 = (var10 >> 16) * this.field_a;
                               var22 = -param2;
                               L39: while (true) {
                                 if (var22 >= 0) {
@@ -1377,11 +1379,11 @@ final class raa extends pf {
                                   var20++;
                                   continue L38;
                                 } else {
-                                  var23 = ((raa) this).field_E[(var9 >> 16) + var21];
+                                  var23 = this.field_E[(var9 >> 16) + var21];
                                   var24 = var23 + param5;
                                   var25 = (var23 & 16711935) + (param5 & 16711935);
                                   var26 = (var25 & 16777472) + (var24 - var25 & 65536);
-                                  int incrementValue$25 = var16;
+                                  incrementValue$25 = var16;
                                   var16++;
                                   var18[incrementValue$25] = var24 - var26 | var26 - (var26 >>> 8);
                                   var9 = var9 + var14;
@@ -1402,7 +1404,7 @@ final class raa extends pf {
                           if (var23 >= 0) {
                             break L9;
                           } else {
-                            var24 = (var10 >> 16) * ((raa) this).field_a;
+                            var24 = (var10 >> 16) * this.field_a;
                             var25 = -param2;
                             L41: while (true) {
                               if (var25 >= 0) {
@@ -1412,11 +1414,11 @@ final class raa extends pf {
                                 var23++;
                                 continue L40;
                               } else {
-                                var26 = ((raa) this).field_E[(var9 >> 16) + var24];
+                                var26 = this.field_E[(var9 >> 16) + var24];
                                 var27 = (var26 & 16711680) * var19 & -16777216;
                                 var28 = (var26 & 65280) * var20 & 16711680;
                                 var29 = (var26 & 255) * var21 & 65280;
-                                int incrementValue$26 = var16;
+                                incrementValue$26 = var16;
                                 var16++;
                                 var18[incrementValue$26] = (var27 | var28 | var29) >>> 8;
                                 var9 = var9 + var14;
@@ -1434,7 +1436,7 @@ final class raa extends pf {
                         if (var20 >= 0) {
                           break L0;
                         } else {
-                          var21 = (var10 >> 16) * ((raa) this).field_a;
+                          var21 = (var10 >> 16) * this.field_a;
                           var22 = -param2;
                           L43: while (true) {
                             if (var22 >= 0) {
@@ -1444,9 +1446,9 @@ final class raa extends pf {
                               var20++;
                               continue L42;
                             } else {
-                              int incrementValue$27 = var16;
+                              incrementValue$27 = var16;
                               var16++;
-                              var18[incrementValue$27] = ((raa) this).field_E[(var9 >> 16) + var21];
+                              var18[incrementValue$27] = this.field_E[(var9 >> 16) + var21];
                               var9 = var9 + var14;
                               var22++;
                               continue L43;
@@ -1471,6 +1473,9 @@ final class raa extends pf {
 
     raa(sfa param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
         super(param0, param4, param5);
+        int incrementValue$178 = 0;
+        int incrementValue$179 = 0;
+        int incrementValue$180 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -1492,14 +1497,14 @@ final class raa extends pf {
         int stackOut_9_2 = 0;
         L0: {
           if (!param6) {
-            ((raa) this).field_E = param1;
+            this.field_E = param1;
             break L0;
           } else {
-            ((raa) this).field_E = new int[param4 * param5];
+            this.field_E = new int[param4 * param5];
             break L0;
           }
         }
-        param3 = param3 - ((raa) this).field_a;
+        param3 = param3 - this.field_a;
         var8 = 0;
         var9 = 0;
         L1: while (true) {
@@ -1513,27 +1518,27 @@ final class raa extends pf {
                 var9++;
                 continue L1;
               } else {
-                int incrementValue$178 = param2;
+                incrementValue$178 = param2;
                 param2++;
                 var11 = param1[incrementValue$178];
                 if (var11 >>> 24 != 255) {
-                  int incrementValue$179 = var8;
+                  incrementValue$179 = var8;
                   var8++;
-                  ((raa) this).field_E[incrementValue$179] = 0;
+                  this.field_E[incrementValue$179] = 0;
                   var10++;
                   continue L2;
                 } else {
                   L3: {
-                    int incrementValue$180 = var8;
+                    incrementValue$180 = var8;
                     var8++;
-                    stackOut_8_0 = ((raa) this).field_E;
+                    stackOut_8_0 = this.field_E;
                     stackOut_8_1 = incrementValue$180;
                     stackIn_10_0 = stackOut_8_0;
                     stackIn_10_1 = stackOut_8_1;
                     stackIn_9_0 = stackOut_8_0;
                     stackIn_9_1 = stackOut_8_1;
                     if ((var11 & 16777215) != 0) {
-                      stackOut_10_0 = (int[]) (Object) stackIn_10_0;
+                      stackOut_10_0 = (int[]) ((Object) stackIn_10_0);
                       stackOut_10_1 = stackIn_10_1;
                       stackOut_10_2 = var11;
                       stackIn_11_0 = stackOut_10_0;
@@ -1541,7 +1546,7 @@ final class raa extends pf {
                       stackIn_11_2 = stackOut_10_2;
                       break L3;
                     } else {
-                      stackOut_9_0 = (int[]) (Object) stackIn_9_0;
+                      stackOut_9_0 = (int[]) ((Object) stackIn_9_0);
                       stackOut_9_1 = stackIn_9_1;
                       stackOut_9_2 = -16777215;
                       stackIn_11_0 = stackOut_9_0;
@@ -1561,6 +1566,42 @@ final class raa extends pf {
     }
 
     final void b(int param0, int param1) {
+        int incrementValue$36 = 0;
+        int incrementValue$37 = 0;
+        int incrementValue$38 = 0;
+        int incrementValue$39 = 0;
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
+        int incrementValue$48 = 0;
+        int incrementValue$49 = 0;
+        int incrementValue$50 = 0;
+        int incrementValue$51 = 0;
+        int incrementValue$52 = 0;
+        int incrementValue$53 = 0;
+        int incrementValue$54 = 0;
+        int incrementValue$55 = 0;
+        int incrementValue$56 = 0;
+        int incrementValue$57 = 0;
+        int incrementValue$58 = 0;
+        int incrementValue$59 = 0;
+        int incrementValue$60 = 0;
+        int incrementValue$61 = 0;
+        int incrementValue$62 = 0;
+        int incrementValue$63 = 0;
+        int incrementValue$64 = 0;
+        int incrementValue$65 = 0;
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
+        int incrementValue$68 = 0;
+        int incrementValue$69 = 0;
+        int incrementValue$70 = 0;
+        int incrementValue$71 = 0;
         int[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -1598,26 +1639,8 @@ final class raa extends pf {
         int[] var37 = null;
         int[] var38 = null;
         int[] var39 = null;
-        int[] var40 = null;
-        int[] var41 = null;
-        int[] var42 = null;
-        int[] var43 = null;
-        int[] var44 = null;
-        int[] var45 = null;
-        int[] var46 = null;
-        int[] var47 = null;
-        int[] var48 = null;
-        int[] var49 = null;
-        int[] var50 = null;
-        int[] var51 = null;
-        int[] var52 = null;
-        int[] var53 = null;
-        int[] var54 = null;
-        int[] var55 = null;
-        int[] var56 = null;
-        int[] var57 = null;
         L0: {
-          var3 = ((raa) this).field_b.field_r;
+          var3 = this.field_b.field_r;
           if (field_z != 0) {
             if (field_z >= 0) {
               if (field_y != 0) {
@@ -1644,8 +1667,8 @@ final class raa extends pf {
                         }
                       }
                       L3: {
-                        var4 = (1 + var7 - (((raa) this).field_a << 12) - field_z) / field_z;
-                        if ((1 + var7 - (((raa) this).field_a << 12) - field_z) / field_z <= var9) {
+                        var4 = (1 + var7 - (this.field_a << 12) - field_z) / field_z;
+                        if ((1 + var7 - (this.field_a << 12) - field_z) / field_z <= var9) {
                           break L3;
                         } else {
                           var9 = var4;
@@ -1665,8 +1688,8 @@ final class raa extends pf {
                         }
                       }
                       L5: {
-                        var4 = (1 + var8 - (((raa) this).field_f << 12) - field_y) / field_y;
-                        if ((1 + var8 - (((raa) this).field_f << 12) - field_y) / field_y <= var9) {
+                        var4 = (1 + var8 - (this.field_f << 12) - field_y) / field_y;
+                        if ((1 + var8 - (this.field_f << 12) - field_y) / field_y <= var9) {
                           break L5;
                         } else {
                           var9 = var4;
@@ -1682,13 +1705,11 @@ final class raa extends pf {
                           continue L1;
                         } else {
                           L7: {
-                            var10 = (var8 >> 12) * ((raa) this).field_a + (var7 >> 12);
-                            int incrementValue$36 = var6;
+                            var10 = (var8 >> 12) * this.field_a + (var7 >> 12);
+                            incrementValue$36 = var6;
                             var6++;
                             var11 = incrementValue$36;
-                            var57 = var3;
-                            var48 = var57;
-                            var39 = var48;
+                            var39 = var3;
                             var30 = var39;
                             var12 = var30;
                             var13 = param0;
@@ -1704,14 +1725,14 @@ final class raa extends pf {
                                         if (var13 != 2) {
                                           break L7;
                                         } else {
-                                          var15 = ((raa) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L7;
                                           } else {
                                             var16 = (var15 & 16711935) * field_k & -16711936;
                                             var17 = (var15 & 65280) * field_k & 16711680;
                                             var15 = ((var16 | var17) >>> 8) + field_h;
-                                            var18 = var57[var11];
+                                            var18 = var39[var11];
                                             var19 = var15 + var18;
                                             var20 = (var15 & 16711935) + (var18 & 16711935);
                                             var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -1720,13 +1741,13 @@ final class raa extends pf {
                                           }
                                         }
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                         var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                        var19 = var57[var11];
+                                        var19 = var39[var11];
                                         var17 = var15 + var19;
                                         var18 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -1734,7 +1755,7 @@ final class raa extends pf {
                                         break L7;
                                       }
                                     } else {
-                                      var15 = ((raa) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L7;
                                       } else {
@@ -1742,7 +1763,7 @@ final class raa extends pf {
                                         var17 = (var15 & 65280) * field_j & 16711680;
                                         var18 = (var15 & 255) * field_t & 65280;
                                         var15 = (var16 | var17 | var18) >>> 8;
-                                        var19 = var57[var11];
+                                        var19 = var39[var11];
                                         var20 = var15 + var19;
                                         var21 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -1751,11 +1772,11 @@ final class raa extends pf {
                                       }
                                     }
                                   } else {
-                                    var15 = ((raa) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L7;
                                     } else {
-                                      var16 = var57[var11];
+                                      var16 = var39[var11];
                                       var17 = var15 + var16;
                                       var18 = (var15 & 16711935) + (var16 & 16711935);
                                       var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -1771,13 +1792,13 @@ final class raa extends pf {
                                       if (var13 != 2) {
                                         throw new IllegalArgumentException();
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L7;
                                         } else {
                                           var16 = (var15 & 16711935) * field_k & -16711936;
                                           var17 = (var15 & 65280) * field_k & 16711680;
-                                          int incrementValue$37 = var11;
+                                          incrementValue$37 = var11;
                                           var11++;
                                           var12[incrementValue$37] = ((var16 | var17) >>> 8) + field_h;
                                           break L7;
@@ -1785,7 +1806,7 @@ final class raa extends pf {
                                       }
                                     } else {
                                       L8: {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1798,17 +1819,17 @@ final class raa extends pf {
                                             break L8;
                                           } else {
                                             var15 = var19;
-                                            var19 = var57[var11];
+                                            var19 = var39[var11];
                                             var19 = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                             break L8;
                                           }
                                         }
                                       }
-                                      var57[var11] = var19;
+                                      var39[var11] = var19;
                                       break L7;
                                     }
                                   } else {
-                                    var15 = ((raa) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L7;
                                     } else {
@@ -1824,25 +1845,25 @@ final class raa extends pf {
                                           var17 = (var15 & 65280) * field_j & 16711680;
                                           var18 = (var15 & 255) * field_t & 65280;
                                           var15 = (var16 | var17 | var18) >>> 8;
-                                          var19 = var57[var11];
+                                          var19 = var39[var11];
                                           var12[var11] = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                           break L7;
                                         }
                                       } else {
                                         var16 = field_B >>> 24;
                                         var17 = 256 - var16;
-                                        var18 = var57[var11];
+                                        var18 = var39[var11];
                                         var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                         break L7;
                                       }
                                     }
                                   }
                                 } else {
-                                  var15 = ((raa) this).field_E[var10];
+                                  var15 = this.field_E[var10];
                                   if (var15 == 0) {
                                     break L7;
                                   } else {
-                                    var57[var11] = var15;
+                                    var39[var11] = var15;
                                     break L7;
                                   }
                                 }
@@ -1854,16 +1875,16 @@ final class raa extends pf {
                                     if (var13 != 2) {
                                       throw new IllegalArgumentException();
                                     } else {
-                                      var15 = ((raa) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       var16 = (var15 & 16711935) * field_k & -16711936;
                                       var17 = (var15 & 65280) * field_k & 16711680;
                                       var12[var11] = ((var16 | var17) >>> 8) + field_h;
                                       break L7;
                                     }
                                   } else {
-                                    int incrementValue$38 = var10;
+                                    incrementValue$38 = var10;
                                     var10++;
-                                    var15 = ((raa) this).field_E[incrementValue$38];
+                                    var15 = this.field_E[incrementValue$38];
                                     var16 = field_B;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1872,9 +1893,9 @@ final class raa extends pf {
                                     break L7;
                                   }
                                 } else {
-                                  int incrementValue$39 = var10;
+                                  incrementValue$39 = var10;
                                   var10++;
-                                  var15 = ((raa) this).field_E[incrementValue$39];
+                                  var15 = this.field_E[incrementValue$39];
                                   var16 = (var15 & 16711680) * field_d & -16777216;
                                   var17 = (var15 & 65280) * field_j & 16711680;
                                   var18 = (var15 & 255) * field_t & 65280;
@@ -1882,7 +1903,7 @@ final class raa extends pf {
                                   break L7;
                                 }
                               } else {
-                                var12[var11] = ((raa) this).field_E[var10];
+                                var12[var11] = this.field_E[var10];
                                 break L7;
                               }
                             }
@@ -1918,8 +1939,8 @@ final class raa extends pf {
                         }
                       }
                       L11: {
-                        var4 = (1 + var7 - (((raa) this).field_a << 12) - field_z) / field_z;
-                        if ((1 + var7 - (((raa) this).field_a << 12) - field_z) / field_z <= var9) {
+                        var4 = (1 + var7 - (this.field_a << 12) - field_z) / field_z;
+                        if ((1 + var7 - (this.field_a << 12) - field_z) / field_z <= var9) {
                           break L11;
                         } else {
                           var9 = var4;
@@ -1927,8 +1948,8 @@ final class raa extends pf {
                         }
                       }
                       L12: {
-                        var4 = var8 - (((raa) this).field_f << 12);
-                        if (var8 - (((raa) this).field_f << 12) < 0) {
+                        var4 = var8 - (this.field_f << 12);
+                        if (var8 - (this.field_f << 12) < 0) {
                           break L12;
                         } else {
                           var4 = (field_y - var4) / field_y;
@@ -1957,13 +1978,11 @@ final class raa extends pf {
                           continue L9;
                         } else {
                           L15: {
-                            var10 = (var8 >> 12) * ((raa) this).field_a + (var7 >> 12);
-                            int incrementValue$40 = var6;
+                            var10 = (var8 >> 12) * this.field_a + (var7 >> 12);
+                            incrementValue$40 = var6;
                             var6++;
                             var11 = incrementValue$40;
-                            var56 = var3;
-                            var47 = var56;
-                            var38 = var47;
+                            var38 = var3;
                             var29 = var38;
                             var12 = var29;
                             var13 = param0;
@@ -1979,14 +1998,14 @@ final class raa extends pf {
                                         if (var13 != 2) {
                                           break L15;
                                         } else {
-                                          var15 = ((raa) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L15;
                                           } else {
                                             var16 = (var15 & 16711935) * field_k & -16711936;
                                             var17 = (var15 & 65280) * field_k & 16711680;
                                             var15 = ((var16 | var17) >>> 8) + field_h;
-                                            var18 = var56[var11];
+                                            var18 = var38[var11];
                                             var19 = var15 + var18;
                                             var20 = (var15 & 16711935) + (var18 & 16711935);
                                             var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -1995,13 +2014,13 @@ final class raa extends pf {
                                           }
                                         }
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                         var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                        var19 = var56[var11];
+                                        var19 = var38[var11];
                                         var17 = var15 + var19;
                                         var18 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -2009,7 +2028,7 @@ final class raa extends pf {
                                         break L15;
                                       }
                                     } else {
-                                      var15 = ((raa) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L15;
                                       } else {
@@ -2017,7 +2036,7 @@ final class raa extends pf {
                                         var17 = (var15 & 65280) * field_j & 16711680;
                                         var18 = (var15 & 255) * field_t & 65280;
                                         var15 = (var16 | var17 | var18) >>> 8;
-                                        var19 = var56[var11];
+                                        var19 = var38[var11];
                                         var20 = var15 + var19;
                                         var21 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -2026,11 +2045,11 @@ final class raa extends pf {
                                       }
                                     }
                                   } else {
-                                    var15 = ((raa) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L15;
                                     } else {
-                                      var16 = var56[var11];
+                                      var16 = var38[var11];
                                       var17 = var15 + var16;
                                       var18 = (var15 & 16711935) + (var16 & 16711935);
                                       var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -2046,13 +2065,13 @@ final class raa extends pf {
                                       if (var13 != 2) {
                                         throw new IllegalArgumentException();
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L15;
                                         } else {
                                           var16 = (var15 & 16711935) * field_k & -16711936;
                                           var17 = (var15 & 65280) * field_k & 16711680;
-                                          int incrementValue$41 = var11;
+                                          incrementValue$41 = var11;
                                           var11++;
                                           var12[incrementValue$41] = ((var16 | var17) >>> 8) + field_h;
                                           break L15;
@@ -2060,7 +2079,7 @@ final class raa extends pf {
                                       }
                                     } else {
                                       L16: {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2073,17 +2092,17 @@ final class raa extends pf {
                                             break L16;
                                           } else {
                                             var15 = var19;
-                                            var19 = var56[var11];
+                                            var19 = var38[var11];
                                             var19 = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                             break L16;
                                           }
                                         }
                                       }
-                                      var56[var11] = var19;
+                                      var38[var11] = var19;
                                       break L15;
                                     }
                                   } else {
-                                    var15 = ((raa) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L15;
                                     } else {
@@ -2099,25 +2118,25 @@ final class raa extends pf {
                                           var17 = (var15 & 65280) * field_j & 16711680;
                                           var18 = (var15 & 255) * field_t & 65280;
                                           var15 = (var16 | var17 | var18) >>> 8;
-                                          var19 = var56[var11];
+                                          var19 = var38[var11];
                                           var12[var11] = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                           break L15;
                                         }
                                       } else {
                                         var16 = field_B >>> 24;
                                         var17 = 256 - var16;
-                                        var18 = var56[var11];
+                                        var18 = var38[var11];
                                         var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                         break L15;
                                       }
                                     }
                                   }
                                 } else {
-                                  var15 = ((raa) this).field_E[var10];
+                                  var15 = this.field_E[var10];
                                   if (var15 == 0) {
                                     break L15;
                                   } else {
-                                    var56[var11] = var15;
+                                    var38[var11] = var15;
                                     break L15;
                                   }
                                 }
@@ -2129,16 +2148,16 @@ final class raa extends pf {
                                     if (var13 != 2) {
                                       throw new IllegalArgumentException();
                                     } else {
-                                      var15 = ((raa) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       var16 = (var15 & 16711935) * field_k & -16711936;
                                       var17 = (var15 & 65280) * field_k & 16711680;
                                       var12[var11] = ((var16 | var17) >>> 8) + field_h;
                                       break L15;
                                     }
                                   } else {
-                                    int incrementValue$42 = var10;
+                                    incrementValue$42 = var10;
                                     var10++;
-                                    var15 = ((raa) this).field_E[incrementValue$42];
+                                    var15 = this.field_E[incrementValue$42];
                                     var16 = field_B;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2147,9 +2166,9 @@ final class raa extends pf {
                                     break L15;
                                   }
                                 } else {
-                                  int incrementValue$43 = var10;
+                                  incrementValue$43 = var10;
                                   var10++;
-                                  var15 = ((raa) this).field_E[incrementValue$43];
+                                  var15 = this.field_E[incrementValue$43];
                                   var16 = (var15 & 16711680) * field_d & -16777216;
                                   var17 = (var15 & 65280) * field_j & 16711680;
                                   var18 = (var15 & 255) * field_t & 65280;
@@ -2157,7 +2176,7 @@ final class raa extends pf {
                                   break L15;
                                 }
                               } else {
-                                var12[var11] = ((raa) this).field_E[var10];
+                                var12[var11] = this.field_E[var10];
                                 break L15;
                               }
                             }
@@ -2183,7 +2202,7 @@ final class raa extends pf {
                       var8 = field_w;
                       var9 = field_i;
                       if (var8 >= 0) {
-                        if (var8 - (((raa) this).field_f << 12) < 0) {
+                        if (var8 - (this.field_f << 12) < 0) {
                           L19: {
                             if (var7 >= 0) {
                               break L19;
@@ -2196,8 +2215,8 @@ final class raa extends pf {
                             }
                           }
                           L20: {
-                            var4 = (1 + var7 - (((raa) this).field_a << 12) - field_z) / field_z;
-                            if ((1 + var7 - (((raa) this).field_a << 12) - field_z) / field_z <= var9) {
+                            var4 = (1 + var7 - (this.field_a << 12) - field_z) / field_z;
+                            if ((1 + var7 - (this.field_a << 12) - field_z) / field_z <= var9) {
                               break L20;
                             } else {
                               var9 = var4;
@@ -2209,13 +2228,11 @@ final class raa extends pf {
                               break L18;
                             } else {
                               L22: {
-                                var10 = (var8 >> 12) * ((raa) this).field_a + (var7 >> 12);
-                                int incrementValue$44 = var6;
+                                var10 = (var8 >> 12) * this.field_a + (var7 >> 12);
+                                incrementValue$44 = var6;
                                 var6++;
                                 var11 = incrementValue$44;
-                                var55 = var3;
-                                var46 = var55;
-                                var37 = var46;
+                                var37 = var3;
                                 var28 = var37;
                                 var12 = var28;
                                 var13 = param0;
@@ -2231,14 +2248,14 @@ final class raa extends pf {
                                             if (var13 != 2) {
                                               break L22;
                                             } else {
-                                              var15 = ((raa) this).field_E[var10];
+                                              var15 = this.field_E[var10];
                                               if (var15 == 0) {
                                                 break L22;
                                               } else {
                                                 var16 = (var15 & 16711935) * field_k & -16711936;
                                                 var17 = (var15 & 65280) * field_k & 16711680;
                                                 var15 = ((var16 | var17) >>> 8) + field_h;
-                                                var18 = var55[var11];
+                                                var18 = var37[var11];
                                                 var19 = var15 + var18;
                                                 var20 = (var15 & 16711935) + (var18 & 16711935);
                                                 var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -2247,13 +2264,13 @@ final class raa extends pf {
                                               }
                                             }
                                           } else {
-                                            var15 = ((raa) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_B;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                             var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                            var19 = var55[var11];
+                                            var19 = var37[var11];
                                             var17 = var15 + var19;
                                             var18 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -2261,7 +2278,7 @@ final class raa extends pf {
                                             break L22;
                                           }
                                         } else {
-                                          var15 = ((raa) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L22;
                                           } else {
@@ -2269,7 +2286,7 @@ final class raa extends pf {
                                             var17 = (var15 & 65280) * field_j & 16711680;
                                             var18 = (var15 & 255) * field_t & 65280;
                                             var15 = (var16 | var17 | var18) >>> 8;
-                                            var19 = var55[var11];
+                                            var19 = var37[var11];
                                             var20 = var15 + var19;
                                             var21 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -2278,11 +2295,11 @@ final class raa extends pf {
                                           }
                                         }
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L22;
                                         } else {
-                                          var16 = var55[var11];
+                                          var16 = var37[var11];
                                           var17 = var15 + var16;
                                           var18 = (var15 & 16711935) + (var16 & 16711935);
                                           var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -2298,13 +2315,13 @@ final class raa extends pf {
                                           if (var13 != 2) {
                                             throw new IllegalArgumentException();
                                           } else {
-                                            var15 = ((raa) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             if (var15 == 0) {
                                               break L22;
                                             } else {
                                               var16 = (var15 & 16711935) * field_k & -16711936;
                                               var17 = (var15 & 65280) * field_k & 16711680;
-                                              int incrementValue$45 = var11;
+                                              incrementValue$45 = var11;
                                               var11++;
                                               var12[incrementValue$45] = ((var16 | var17) >>> 8) + field_h;
                                               break L22;
@@ -2312,7 +2329,7 @@ final class raa extends pf {
                                           }
                                         } else {
                                           L23: {
-                                            var15 = ((raa) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_B;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2325,17 +2342,17 @@ final class raa extends pf {
                                                 break L23;
                                               } else {
                                                 var15 = var19;
-                                                var19 = var55[var11];
+                                                var19 = var37[var11];
                                                 var19 = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                                 break L23;
                                               }
                                             }
                                           }
-                                          var55[var11] = var19;
+                                          var37[var11] = var19;
                                           break L22;
                                         }
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L22;
                                         } else {
@@ -2351,25 +2368,25 @@ final class raa extends pf {
                                               var17 = (var15 & 65280) * field_j & 16711680;
                                               var18 = (var15 & 255) * field_t & 65280;
                                               var15 = (var16 | var17 | var18) >>> 8;
-                                              var19 = var55[var11];
+                                              var19 = var37[var11];
                                               var12[var11] = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                               break L22;
                                             }
                                           } else {
                                             var16 = field_B >>> 24;
                                             var17 = 256 - var16;
-                                            var18 = var55[var11];
+                                            var18 = var37[var11];
                                             var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                             break L22;
                                           }
                                         }
                                       }
                                     } else {
-                                      var15 = ((raa) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L22;
                                       } else {
-                                        var55[var11] = var15;
+                                        var37[var11] = var15;
                                         break L22;
                                       }
                                     }
@@ -2381,16 +2398,16 @@ final class raa extends pf {
                                         if (var13 != 2) {
                                           throw new IllegalArgumentException();
                                         } else {
-                                          var15 = ((raa) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           var16 = (var15 & 16711935) * field_k & -16711936;
                                           var17 = (var15 & 65280) * field_k & 16711680;
                                           var12[var11] = ((var16 | var17) >>> 8) + field_h;
                                           break L22;
                                         }
                                       } else {
-                                        int incrementValue$46 = var10;
+                                        incrementValue$46 = var10;
                                         var10++;
-                                        var15 = ((raa) this).field_E[incrementValue$46];
+                                        var15 = this.field_E[incrementValue$46];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2399,9 +2416,9 @@ final class raa extends pf {
                                         break L22;
                                       }
                                     } else {
-                                      int incrementValue$47 = var10;
+                                      incrementValue$47 = var10;
                                       var10++;
-                                      var15 = ((raa) this).field_E[incrementValue$47];
+                                      var15 = this.field_E[incrementValue$47];
                                       var16 = (var15 & 16711680) * field_d & -16777216;
                                       var17 = (var15 & 65280) * field_j & 16711680;
                                       var18 = (var15 & 255) * field_t & 65280;
@@ -2409,7 +2426,7 @@ final class raa extends pf {
                                       break L22;
                                     }
                                   } else {
-                                    var12[var11] = ((raa) this).field_E[var10];
+                                    var12[var11] = this.field_E[var10];
                                     break L22;
                                   }
                                 }
@@ -2447,8 +2464,8 @@ final class raa extends pf {
                         var7 = field_n + field_C;
                         var8 = field_w + field_r;
                         var9 = field_i;
-                        var4 = var7 - (((raa) this).field_a << 12);
-                        if (var7 - (((raa) this).field_a << 12) < 0) {
+                        var4 = var7 - (this.field_a << 12);
+                        if (var7 - (this.field_a << 12) < 0) {
                           break L25;
                         } else {
                           var4 = (field_z - var4) / field_z;
@@ -2481,8 +2498,8 @@ final class raa extends pf {
                         }
                       }
                       L28: {
-                        var4 = (1 + var8 - (((raa) this).field_f << 12) - field_y) / field_y;
-                        if ((1 + var8 - (((raa) this).field_f << 12) - field_y) / field_y <= var9) {
+                        var4 = (1 + var8 - (this.field_f << 12) - field_y) / field_y;
+                        if ((1 + var8 - (this.field_f << 12) - field_y) / field_y <= var9) {
                           break L28;
                         } else {
                           var9 = var4;
@@ -2498,13 +2515,11 @@ final class raa extends pf {
                           continue L24;
                         } else {
                           L30: {
-                            var10 = (var8 >> 12) * ((raa) this).field_a + (var7 >> 12);
-                            int incrementValue$48 = var6;
+                            var10 = (var8 >> 12) * this.field_a + (var7 >> 12);
+                            incrementValue$48 = var6;
                             var6++;
                             var11 = incrementValue$48;
-                            var54 = var3;
-                            var45 = var54;
-                            var36 = var45;
+                            var36 = var3;
                             var27 = var36;
                             var12 = var27;
                             var13 = param0;
@@ -2520,14 +2535,14 @@ final class raa extends pf {
                                         if (var13 != 2) {
                                           break L30;
                                         } else {
-                                          var15 = ((raa) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L30;
                                           } else {
                                             var16 = (var15 & 16711935) * field_k & -16711936;
                                             var17 = (var15 & 65280) * field_k & 16711680;
                                             var15 = ((var16 | var17) >>> 8) + field_h;
-                                            var18 = var54[var11];
+                                            var18 = var36[var11];
                                             var19 = var15 + var18;
                                             var20 = (var15 & 16711935) + (var18 & 16711935);
                                             var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -2536,13 +2551,13 @@ final class raa extends pf {
                                           }
                                         }
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                         var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                        var19 = var54[var11];
+                                        var19 = var36[var11];
                                         var17 = var15 + var19;
                                         var18 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -2550,7 +2565,7 @@ final class raa extends pf {
                                         break L30;
                                       }
                                     } else {
-                                      var15 = ((raa) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L30;
                                       } else {
@@ -2558,7 +2573,7 @@ final class raa extends pf {
                                         var17 = (var15 & 65280) * field_j & 16711680;
                                         var18 = (var15 & 255) * field_t & 65280;
                                         var15 = (var16 | var17 | var18) >>> 8;
-                                        var19 = var54[var11];
+                                        var19 = var36[var11];
                                         var20 = var15 + var19;
                                         var21 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -2567,11 +2582,11 @@ final class raa extends pf {
                                       }
                                     }
                                   } else {
-                                    var15 = ((raa) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L30;
                                     } else {
-                                      var16 = var54[var11];
+                                      var16 = var36[var11];
                                       var17 = var15 + var16;
                                       var18 = (var15 & 16711935) + (var16 & 16711935);
                                       var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -2587,13 +2602,13 @@ final class raa extends pf {
                                       if (var13 != 2) {
                                         throw new IllegalArgumentException();
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L30;
                                         } else {
                                           var16 = (var15 & 16711935) * field_k & -16711936;
                                           var17 = (var15 & 65280) * field_k & 16711680;
-                                          int incrementValue$49 = var11;
+                                          incrementValue$49 = var11;
                                           var11++;
                                           var12[incrementValue$49] = ((var16 | var17) >>> 8) + field_h;
                                           break L30;
@@ -2601,7 +2616,7 @@ final class raa extends pf {
                                       }
                                     } else {
                                       L31: {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2614,17 +2629,17 @@ final class raa extends pf {
                                             break L31;
                                           } else {
                                             var15 = var19;
-                                            var19 = var54[var11];
+                                            var19 = var36[var11];
                                             var19 = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                             break L31;
                                           }
                                         }
                                       }
-                                      var54[var11] = var19;
+                                      var36[var11] = var19;
                                       break L30;
                                     }
                                   } else {
-                                    var15 = ((raa) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L30;
                                     } else {
@@ -2640,25 +2655,25 @@ final class raa extends pf {
                                           var17 = (var15 & 65280) * field_j & 16711680;
                                           var18 = (var15 & 255) * field_t & 65280;
                                           var15 = (var16 | var17 | var18) >>> 8;
-                                          var19 = var54[var11];
+                                          var19 = var36[var11];
                                           var12[var11] = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                           break L30;
                                         }
                                       } else {
                                         var16 = field_B >>> 24;
                                         var17 = 256 - var16;
-                                        var18 = var54[var11];
+                                        var18 = var36[var11];
                                         var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                         break L30;
                                       }
                                     }
                                   }
                                 } else {
-                                  var15 = ((raa) this).field_E[var10];
+                                  var15 = this.field_E[var10];
                                   if (var15 == 0) {
                                     break L30;
                                   } else {
-                                    var54[var11] = var15;
+                                    var36[var11] = var15;
                                     break L30;
                                   }
                                 }
@@ -2670,16 +2685,16 @@ final class raa extends pf {
                                     if (var13 != 2) {
                                       throw new IllegalArgumentException();
                                     } else {
-                                      var15 = ((raa) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       var16 = (var15 & 16711935) * field_k & -16711936;
                                       var17 = (var15 & 65280) * field_k & 16711680;
                                       var12[var11] = ((var16 | var17) >>> 8) + field_h;
                                       break L30;
                                     }
                                   } else {
-                                    int incrementValue$50 = var10;
+                                    incrementValue$50 = var10;
                                     var10++;
-                                    var15 = ((raa) this).field_E[incrementValue$50];
+                                    var15 = this.field_E[incrementValue$50];
                                     var16 = field_B;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2688,9 +2703,9 @@ final class raa extends pf {
                                     break L30;
                                   }
                                 } else {
-                                  int incrementValue$51 = var10;
+                                  incrementValue$51 = var10;
                                   var10++;
-                                  var15 = ((raa) this).field_E[incrementValue$51];
+                                  var15 = this.field_E[incrementValue$51];
                                   var16 = (var15 & 16711680) * field_d & -16777216;
                                   var17 = (var15 & 65280) * field_j & 16711680;
                                   var18 = (var15 & 255) * field_t & 65280;
@@ -2698,7 +2713,7 @@ final class raa extends pf {
                                   break L30;
                                 }
                               } else {
-                                var12[var11] = ((raa) this).field_E[var10];
+                                var12[var11] = this.field_E[var10];
                                 break L30;
                               }
                             }
@@ -2722,8 +2737,8 @@ final class raa extends pf {
                         var7 = field_n + field_C;
                         var8 = field_w + field_r;
                         var9 = field_i;
-                        var4 = var7 - (((raa) this).field_a << 12);
-                        if (var7 - (((raa) this).field_a << 12) < 0) {
+                        var4 = var7 - (this.field_a << 12);
+                        if (var7 - (this.field_a << 12) < 0) {
                           break L33;
                         } else {
                           var4 = (field_z - var4) / field_z;
@@ -2744,8 +2759,8 @@ final class raa extends pf {
                         }
                       }
                       L35: {
-                        var4 = var8 - (((raa) this).field_f << 12);
-                        if (var8 - (((raa) this).field_f << 12) < 0) {
+                        var4 = var8 - (this.field_f << 12);
+                        if (var8 - (this.field_f << 12) < 0) {
                           break L35;
                         } else {
                           var4 = (field_y - var4) / field_y;
@@ -2774,13 +2789,11 @@ final class raa extends pf {
                           continue L32;
                         } else {
                           L38: {
-                            var10 = (var8 >> 12) * ((raa) this).field_a + (var7 >> 12);
-                            int incrementValue$52 = var6;
+                            var10 = (var8 >> 12) * this.field_a + (var7 >> 12);
+                            incrementValue$52 = var6;
                             var6++;
                             var11 = incrementValue$52;
-                            var53 = var3;
-                            var44 = var53;
-                            var35 = var44;
+                            var35 = var3;
                             var26 = var35;
                             var12 = var26;
                             var13 = param0;
@@ -2796,14 +2809,14 @@ final class raa extends pf {
                                         if (var13 != 2) {
                                           break L38;
                                         } else {
-                                          var15 = ((raa) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L38;
                                           } else {
                                             var16 = (var15 & 16711935) * field_k & -16711936;
                                             var17 = (var15 & 65280) * field_k & 16711680;
                                             var15 = ((var16 | var17) >>> 8) + field_h;
-                                            var18 = var53[var11];
+                                            var18 = var35[var11];
                                             var19 = var15 + var18;
                                             var20 = (var15 & 16711935) + (var18 & 16711935);
                                             var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -2812,13 +2825,13 @@ final class raa extends pf {
                                           }
                                         }
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                         var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                        var19 = var53[var11];
+                                        var19 = var35[var11];
                                         var17 = var15 + var19;
                                         var18 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -2826,7 +2839,7 @@ final class raa extends pf {
                                         break L38;
                                       }
                                     } else {
-                                      var15 = ((raa) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L38;
                                       } else {
@@ -2834,7 +2847,7 @@ final class raa extends pf {
                                         var17 = (var15 & 65280) * field_j & 16711680;
                                         var18 = (var15 & 255) * field_t & 65280;
                                         var15 = (var16 | var17 | var18) >>> 8;
-                                        var19 = var53[var11];
+                                        var19 = var35[var11];
                                         var20 = var15 + var19;
                                         var21 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -2843,11 +2856,11 @@ final class raa extends pf {
                                       }
                                     }
                                   } else {
-                                    var15 = ((raa) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L38;
                                     } else {
-                                      var16 = var53[var11];
+                                      var16 = var35[var11];
                                       var17 = var15 + var16;
                                       var18 = (var15 & 16711935) + (var16 & 16711935);
                                       var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -2863,13 +2876,13 @@ final class raa extends pf {
                                       if (var13 != 2) {
                                         throw new IllegalArgumentException();
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L38;
                                         } else {
                                           var16 = (var15 & 16711935) * field_k & -16711936;
                                           var17 = (var15 & 65280) * field_k & 16711680;
-                                          int incrementValue$53 = var11;
+                                          incrementValue$53 = var11;
                                           var11++;
                                           var12[incrementValue$53] = ((var16 | var17) >>> 8) + field_h;
                                           break L38;
@@ -2877,7 +2890,7 @@ final class raa extends pf {
                                       }
                                     } else {
                                       L39: {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2890,17 +2903,17 @@ final class raa extends pf {
                                             break L39;
                                           } else {
                                             var15 = var19;
-                                            var19 = var53[var11];
+                                            var19 = var35[var11];
                                             var19 = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                             break L39;
                                           }
                                         }
                                       }
-                                      var53[var11] = var19;
+                                      var35[var11] = var19;
                                       break L38;
                                     }
                                   } else {
-                                    var15 = ((raa) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L38;
                                     } else {
@@ -2916,25 +2929,25 @@ final class raa extends pf {
                                           var17 = (var15 & 65280) * field_j & 16711680;
                                           var18 = (var15 & 255) * field_t & 65280;
                                           var15 = (var16 | var17 | var18) >>> 8;
-                                          var19 = var53[var11];
+                                          var19 = var35[var11];
                                           var12[var11] = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                           break L38;
                                         }
                                       } else {
                                         var16 = field_B >>> 24;
                                         var17 = 256 - var16;
-                                        var18 = var53[var11];
+                                        var18 = var35[var11];
                                         var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                         break L38;
                                       }
                                     }
                                   }
                                 } else {
-                                  var15 = ((raa) this).field_E[var10];
+                                  var15 = this.field_E[var10];
                                   if (var15 == 0) {
                                     break L38;
                                   } else {
-                                    var53[var11] = var15;
+                                    var35[var11] = var15;
                                     break L38;
                                   }
                                 }
@@ -2946,16 +2959,16 @@ final class raa extends pf {
                                     if (var13 != 2) {
                                       throw new IllegalArgumentException();
                                     } else {
-                                      var15 = ((raa) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       var16 = (var15 & 16711935) * field_k & -16711936;
                                       var17 = (var15 & 65280) * field_k & 16711680;
                                       var12[var11] = ((var16 | var17) >>> 8) + field_h;
                                       break L38;
                                     }
                                   } else {
-                                    int incrementValue$54 = var10;
+                                    incrementValue$54 = var10;
                                     var10++;
-                                    var15 = ((raa) this).field_E[incrementValue$54];
+                                    var15 = this.field_E[incrementValue$54];
                                     var16 = field_B;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2964,9 +2977,9 @@ final class raa extends pf {
                                     break L38;
                                   }
                                 } else {
-                                  int incrementValue$55 = var10;
+                                  incrementValue$55 = var10;
                                   var10++;
-                                  var15 = ((raa) this).field_E[incrementValue$55];
+                                  var15 = this.field_E[incrementValue$55];
                                   var16 = (var15 & 16711680) * field_d & -16777216;
                                   var17 = (var15 & 65280) * field_j & 16711680;
                                   var18 = (var15 & 255) * field_t & 65280;
@@ -2974,7 +2987,7 @@ final class raa extends pf {
                                   break L38;
                                 }
                               } else {
-                                var12[var11] = ((raa) this).field_E[var10];
+                                var12[var11] = this.field_E[var10];
                                 break L38;
                               }
                             }
@@ -3000,10 +3013,10 @@ final class raa extends pf {
                       var8 = field_w;
                       var9 = field_i;
                       if (var8 >= 0) {
-                        if (var8 - (((raa) this).field_f << 12) < 0) {
+                        if (var8 - (this.field_f << 12) < 0) {
                           L42: {
-                            var4 = var7 - (((raa) this).field_a << 12);
-                            if (var7 - (((raa) this).field_a << 12) < 0) {
+                            var4 = var7 - (this.field_a << 12);
+                            if (var7 - (this.field_a << 12) < 0) {
                               break L42;
                             } else {
                               var4 = (field_z - var4) / field_z;
@@ -3027,13 +3040,11 @@ final class raa extends pf {
                               break L41;
                             } else {
                               L45: {
-                                var10 = (var8 >> 12) * ((raa) this).field_a + (var7 >> 12);
-                                int incrementValue$56 = var6;
+                                var10 = (var8 >> 12) * this.field_a + (var7 >> 12);
+                                incrementValue$56 = var6;
                                 var6++;
                                 var11 = incrementValue$56;
-                                var52 = var3;
-                                var43 = var52;
-                                var34 = var43;
+                                var34 = var3;
                                 var25 = var34;
                                 var12 = var25;
                                 var13 = param0;
@@ -3049,14 +3060,14 @@ final class raa extends pf {
                                             if (var13 != 2) {
                                               break L45;
                                             } else {
-                                              var15 = ((raa) this).field_E[var10];
+                                              var15 = this.field_E[var10];
                                               if (var15 == 0) {
                                                 break L45;
                                               } else {
                                                 var16 = (var15 & 16711935) * field_k & -16711936;
                                                 var17 = (var15 & 65280) * field_k & 16711680;
                                                 var15 = ((var16 | var17) >>> 8) + field_h;
-                                                var18 = var52[var11];
+                                                var18 = var34[var11];
                                                 var19 = var15 + var18;
                                                 var20 = (var15 & 16711935) + (var18 & 16711935);
                                                 var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -3065,13 +3076,13 @@ final class raa extends pf {
                                               }
                                             }
                                           } else {
-                                            var15 = ((raa) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_B;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                             var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                            var19 = var52[var11];
+                                            var19 = var34[var11];
                                             var17 = var15 + var19;
                                             var18 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3079,7 +3090,7 @@ final class raa extends pf {
                                             break L45;
                                           }
                                         } else {
-                                          var15 = ((raa) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L45;
                                           } else {
@@ -3087,7 +3098,7 @@ final class raa extends pf {
                                             var17 = (var15 & 65280) * field_j & 16711680;
                                             var18 = (var15 & 255) * field_t & 65280;
                                             var15 = (var16 | var17 | var18) >>> 8;
-                                            var19 = var52[var11];
+                                            var19 = var34[var11];
                                             var20 = var15 + var19;
                                             var21 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -3096,11 +3107,11 @@ final class raa extends pf {
                                           }
                                         }
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L45;
                                         } else {
-                                          var16 = var52[var11];
+                                          var16 = var34[var11];
                                           var17 = var15 + var16;
                                           var18 = (var15 & 16711935) + (var16 & 16711935);
                                           var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3116,13 +3127,13 @@ final class raa extends pf {
                                           if (var13 != 2) {
                                             throw new IllegalArgumentException();
                                           } else {
-                                            var15 = ((raa) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             if (var15 == 0) {
                                               break L45;
                                             } else {
                                               var16 = (var15 & 16711935) * field_k & -16711936;
                                               var17 = (var15 & 65280) * field_k & 16711680;
-                                              int incrementValue$57 = var11;
+                                              incrementValue$57 = var11;
                                               var11++;
                                               var12[incrementValue$57] = ((var16 | var17) >>> 8) + field_h;
                                               break L45;
@@ -3130,7 +3141,7 @@ final class raa extends pf {
                                           }
                                         } else {
                                           L46: {
-                                            var15 = ((raa) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_B;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3143,17 +3154,17 @@ final class raa extends pf {
                                                 break L46;
                                               } else {
                                                 var15 = var19;
-                                                var19 = var52[var11];
+                                                var19 = var34[var11];
                                                 var19 = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                                 break L46;
                                               }
                                             }
                                           }
-                                          var52[var11] = var19;
+                                          var34[var11] = var19;
                                           break L45;
                                         }
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L45;
                                         } else {
@@ -3169,25 +3180,25 @@ final class raa extends pf {
                                               var17 = (var15 & 65280) * field_j & 16711680;
                                               var18 = (var15 & 255) * field_t & 65280;
                                               var15 = (var16 | var17 | var18) >>> 8;
-                                              var19 = var52[var11];
+                                              var19 = var34[var11];
                                               var12[var11] = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                               break L45;
                                             }
                                           } else {
                                             var16 = field_B >>> 24;
                                             var17 = 256 - var16;
-                                            var18 = var52[var11];
+                                            var18 = var34[var11];
                                             var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                             break L45;
                                           }
                                         }
                                       }
                                     } else {
-                                      var15 = ((raa) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L45;
                                       } else {
-                                        var52[var11] = var15;
+                                        var34[var11] = var15;
                                         break L45;
                                       }
                                     }
@@ -3199,16 +3210,16 @@ final class raa extends pf {
                                         if (var13 != 2) {
                                           throw new IllegalArgumentException();
                                         } else {
-                                          var15 = ((raa) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           var16 = (var15 & 16711935) * field_k & -16711936;
                                           var17 = (var15 & 65280) * field_k & 16711680;
                                           var12[var11] = ((var16 | var17) >>> 8) + field_h;
                                           break L45;
                                         }
                                       } else {
-                                        int incrementValue$58 = var10;
+                                        incrementValue$58 = var10;
                                         var10++;
-                                        var15 = ((raa) this).field_E[incrementValue$58];
+                                        var15 = this.field_E[incrementValue$58];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3217,9 +3228,9 @@ final class raa extends pf {
                                         break L45;
                                       }
                                     } else {
-                                      int incrementValue$59 = var10;
+                                      incrementValue$59 = var10;
                                       var10++;
-                                      var15 = ((raa) this).field_E[incrementValue$59];
+                                      var15 = this.field_E[incrementValue$59];
                                       var16 = (var15 & 16711680) * field_d & -16777216;
                                       var17 = (var15 & 65280) * field_j & 16711680;
                                       var18 = (var15 & 255) * field_t & 65280;
@@ -3227,7 +3238,7 @@ final class raa extends pf {
                                       break L45;
                                     }
                                   } else {
-                                    var12[var11] = ((raa) this).field_E[var10];
+                                    var12[var11] = this.field_E[var10];
                                     break L45;
                                   }
                                 }
@@ -3266,7 +3277,7 @@ final class raa extends pf {
                       var8 = field_w + field_r;
                       var9 = field_i;
                       if (var7 >= 0) {
-                        if (var7 - (((raa) this).field_a << 12) < 0) {
+                        if (var7 - (this.field_a << 12) < 0) {
                           L49: {
                             if (var8 >= 0) {
                               break L49;
@@ -3279,8 +3290,8 @@ final class raa extends pf {
                             }
                           }
                           L50: {
-                            var4 = (1 + var8 - (((raa) this).field_f << 12) - field_y) / field_y;
-                            if ((1 + var8 - (((raa) this).field_f << 12) - field_y) / field_y <= var9) {
+                            var4 = (1 + var8 - (this.field_f << 12) - field_y) / field_y;
+                            if ((1 + var8 - (this.field_f << 12) - field_y) / field_y <= var9) {
                               break L50;
                             } else {
                               var9 = var4;
@@ -3292,13 +3303,11 @@ final class raa extends pf {
                               break L48;
                             } else {
                               L52: {
-                                var10 = (var8 >> 12) * ((raa) this).field_a + (var7 >> 12);
-                                int incrementValue$60 = var6;
+                                var10 = (var8 >> 12) * this.field_a + (var7 >> 12);
+                                incrementValue$60 = var6;
                                 var6++;
                                 var11 = incrementValue$60;
-                                var51 = var3;
-                                var42 = var51;
-                                var33 = var42;
+                                var33 = var3;
                                 var24 = var33;
                                 var12 = var24;
                                 var13 = param0;
@@ -3314,14 +3323,14 @@ final class raa extends pf {
                                             if (var13 != 2) {
                                               break L52;
                                             } else {
-                                              var15 = ((raa) this).field_E[var10];
+                                              var15 = this.field_E[var10];
                                               if (var15 == 0) {
                                                 break L52;
                                               } else {
                                                 var16 = (var15 & 16711935) * field_k & -16711936;
                                                 var17 = (var15 & 65280) * field_k & 16711680;
                                                 var15 = ((var16 | var17) >>> 8) + field_h;
-                                                var18 = var51[var11];
+                                                var18 = var33[var11];
                                                 var19 = var15 + var18;
                                                 var20 = (var15 & 16711935) + (var18 & 16711935);
                                                 var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -3330,13 +3339,13 @@ final class raa extends pf {
                                               }
                                             }
                                           } else {
-                                            var15 = ((raa) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_B;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                             var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                            var19 = var51[var11];
+                                            var19 = var33[var11];
                                             var17 = var15 + var19;
                                             var18 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3344,7 +3353,7 @@ final class raa extends pf {
                                             break L52;
                                           }
                                         } else {
-                                          var15 = ((raa) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L52;
                                           } else {
@@ -3352,7 +3361,7 @@ final class raa extends pf {
                                             var17 = (var15 & 65280) * field_j & 16711680;
                                             var18 = (var15 & 255) * field_t & 65280;
                                             var15 = (var16 | var17 | var18) >>> 8;
-                                            var19 = var51[var11];
+                                            var19 = var33[var11];
                                             var20 = var15 + var19;
                                             var21 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -3361,11 +3370,11 @@ final class raa extends pf {
                                           }
                                         }
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L52;
                                         } else {
-                                          var16 = var51[var11];
+                                          var16 = var33[var11];
                                           var17 = var15 + var16;
                                           var18 = (var15 & 16711935) + (var16 & 16711935);
                                           var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3381,13 +3390,13 @@ final class raa extends pf {
                                           if (var13 != 2) {
                                             throw new IllegalArgumentException();
                                           } else {
-                                            var15 = ((raa) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             if (var15 == 0) {
                                               break L52;
                                             } else {
                                               var16 = (var15 & 16711935) * field_k & -16711936;
                                               var17 = (var15 & 65280) * field_k & 16711680;
-                                              int incrementValue$61 = var11;
+                                              incrementValue$61 = var11;
                                               var11++;
                                               var12[incrementValue$61] = ((var16 | var17) >>> 8) + field_h;
                                               break L52;
@@ -3395,7 +3404,7 @@ final class raa extends pf {
                                           }
                                         } else {
                                           L53: {
-                                            var15 = ((raa) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_B;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3408,17 +3417,17 @@ final class raa extends pf {
                                                 break L53;
                                               } else {
                                                 var15 = var19;
-                                                var19 = var51[var11];
+                                                var19 = var33[var11];
                                                 var19 = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                                 break L53;
                                               }
                                             }
                                           }
-                                          var51[var11] = var19;
+                                          var33[var11] = var19;
                                           break L52;
                                         }
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L52;
                                         } else {
@@ -3434,25 +3443,25 @@ final class raa extends pf {
                                               var17 = (var15 & 65280) * field_j & 16711680;
                                               var18 = (var15 & 255) * field_t & 65280;
                                               var15 = (var16 | var17 | var18) >>> 8;
-                                              var19 = var51[var11];
+                                              var19 = var33[var11];
                                               var12[var11] = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                               break L52;
                                             }
                                           } else {
                                             var16 = field_B >>> 24;
                                             var17 = 256 - var16;
-                                            var18 = var51[var11];
+                                            var18 = var33[var11];
                                             var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                             break L52;
                                           }
                                         }
                                       }
                                     } else {
-                                      var15 = ((raa) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L52;
                                       } else {
-                                        var51[var11] = var15;
+                                        var33[var11] = var15;
                                         break L52;
                                       }
                                     }
@@ -3464,16 +3473,16 @@ final class raa extends pf {
                                         if (var13 != 2) {
                                           throw new IllegalArgumentException();
                                         } else {
-                                          var15 = ((raa) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           var16 = (var15 & 16711935) * field_k & -16711936;
                                           var17 = (var15 & 65280) * field_k & 16711680;
                                           var12[var11] = ((var16 | var17) >>> 8) + field_h;
                                           break L52;
                                         }
                                       } else {
-                                        int incrementValue$62 = var10;
+                                        incrementValue$62 = var10;
                                         var10++;
-                                        var15 = ((raa) this).field_E[incrementValue$62];
+                                        var15 = this.field_E[incrementValue$62];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3482,9 +3491,9 @@ final class raa extends pf {
                                         break L52;
                                       }
                                     } else {
-                                      int incrementValue$63 = var10;
+                                      incrementValue$63 = var10;
                                       var10++;
-                                      var15 = ((raa) this).field_E[incrementValue$63];
+                                      var15 = this.field_E[incrementValue$63];
                                       var16 = (var15 & 16711680) * field_d & -16777216;
                                       var17 = (var15 & 65280) * field_j & 16711680;
                                       var18 = (var15 & 255) * field_t & 65280;
@@ -3492,7 +3501,7 @@ final class raa extends pf {
                                       break L52;
                                     }
                                   } else {
-                                    var12[var11] = ((raa) this).field_E[var10];
+                                    var12[var11] = this.field_E[var10];
                                     break L52;
                                   }
                                 }
@@ -3527,10 +3536,10 @@ final class raa extends pf {
                       var8 = field_w + field_r;
                       var9 = field_i;
                       if (var7 >= 0) {
-                        if (var7 - (((raa) this).field_a << 12) < 0) {
+                        if (var7 - (this.field_a << 12) < 0) {
                           L56: {
-                            var4 = var8 - (((raa) this).field_f << 12);
-                            if (var8 - (((raa) this).field_f << 12) < 0) {
+                            var4 = var8 - (this.field_f << 12);
+                            if (var8 - (this.field_f << 12) < 0) {
                               break L56;
                             } else {
                               var4 = (field_y - var4) / field_y;
@@ -3554,13 +3563,11 @@ final class raa extends pf {
                               break L55;
                             } else {
                               L59: {
-                                var10 = (var8 >> 12) * ((raa) this).field_a + (var7 >> 12);
-                                int incrementValue$64 = var6;
+                                var10 = (var8 >> 12) * this.field_a + (var7 >> 12);
+                                incrementValue$64 = var6;
                                 var6++;
                                 var11 = incrementValue$64;
-                                var50 = var3;
-                                var41 = var50;
-                                var32 = var41;
+                                var32 = var3;
                                 var23 = var32;
                                 var12 = var23;
                                 var13 = param0;
@@ -3576,14 +3583,14 @@ final class raa extends pf {
                                             if (var13 != 2) {
                                               break L59;
                                             } else {
-                                              var15 = ((raa) this).field_E[var10];
+                                              var15 = this.field_E[var10];
                                               if (var15 == 0) {
                                                 break L59;
                                               } else {
                                                 var16 = (var15 & 16711935) * field_k & -16711936;
                                                 var17 = (var15 & 65280) * field_k & 16711680;
                                                 var15 = ((var16 | var17) >>> 8) + field_h;
-                                                var18 = var50[var11];
+                                                var18 = var32[var11];
                                                 var19 = var15 + var18;
                                                 var20 = (var15 & 16711935) + (var18 & 16711935);
                                                 var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -3592,13 +3599,13 @@ final class raa extends pf {
                                               }
                                             }
                                           } else {
-                                            var15 = ((raa) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_B;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                             var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                            var19 = var50[var11];
+                                            var19 = var32[var11];
                                             var17 = var15 + var19;
                                             var18 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3606,7 +3613,7 @@ final class raa extends pf {
                                             break L59;
                                           }
                                         } else {
-                                          var15 = ((raa) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L59;
                                           } else {
@@ -3614,7 +3621,7 @@ final class raa extends pf {
                                             var17 = (var15 & 65280) * field_j & 16711680;
                                             var18 = (var15 & 255) * field_t & 65280;
                                             var15 = (var16 | var17 | var18) >>> 8;
-                                            var19 = var50[var11];
+                                            var19 = var32[var11];
                                             var20 = var15 + var19;
                                             var21 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -3623,11 +3630,11 @@ final class raa extends pf {
                                           }
                                         }
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L59;
                                         } else {
-                                          var16 = var50[var11];
+                                          var16 = var32[var11];
                                           var17 = var15 + var16;
                                           var18 = (var15 & 16711935) + (var16 & 16711935);
                                           var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3643,13 +3650,13 @@ final class raa extends pf {
                                           if (var13 != 2) {
                                             throw new IllegalArgumentException();
                                           } else {
-                                            var15 = ((raa) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             if (var15 == 0) {
                                               break L59;
                                             } else {
                                               var16 = (var15 & 16711935) * field_k & -16711936;
                                               var17 = (var15 & 65280) * field_k & 16711680;
-                                              int incrementValue$65 = var11;
+                                              incrementValue$65 = var11;
                                               var11++;
                                               var12[incrementValue$65] = ((var16 | var17) >>> 8) + field_h;
                                               break L59;
@@ -3657,7 +3664,7 @@ final class raa extends pf {
                                           }
                                         } else {
                                           L60: {
-                                            var15 = ((raa) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_B;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3670,17 +3677,17 @@ final class raa extends pf {
                                                 break L60;
                                               } else {
                                                 var15 = var19;
-                                                var19 = var50[var11];
+                                                var19 = var32[var11];
                                                 var19 = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                                 break L60;
                                               }
                                             }
                                           }
-                                          var50[var11] = var19;
+                                          var32[var11] = var19;
                                           break L59;
                                         }
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L59;
                                         } else {
@@ -3696,25 +3703,25 @@ final class raa extends pf {
                                               var17 = (var15 & 65280) * field_j & 16711680;
                                               var18 = (var15 & 255) * field_t & 65280;
                                               var15 = (var16 | var17 | var18) >>> 8;
-                                              var19 = var50[var11];
+                                              var19 = var32[var11];
                                               var12[var11] = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                               break L59;
                                             }
                                           } else {
                                             var16 = field_B >>> 24;
                                             var17 = 256 - var16;
-                                            var18 = var50[var11];
+                                            var18 = var32[var11];
                                             var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                             break L59;
                                           }
                                         }
                                       }
                                     } else {
-                                      var15 = ((raa) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L59;
                                       } else {
-                                        var50[var11] = var15;
+                                        var32[var11] = var15;
                                         break L59;
                                       }
                                     }
@@ -3726,16 +3733,16 @@ final class raa extends pf {
                                         if (var13 != 2) {
                                           throw new IllegalArgumentException();
                                         } else {
-                                          var15 = ((raa) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           var16 = (var15 & 16711935) * field_k & -16711936;
                                           var17 = (var15 & 65280) * field_k & 16711680;
                                           var12[var11] = ((var16 | var17) >>> 8) + field_h;
                                           break L59;
                                         }
                                       } else {
-                                        int incrementValue$66 = var10;
+                                        incrementValue$66 = var10;
                                         var10++;
-                                        var15 = ((raa) this).field_E[incrementValue$66];
+                                        var15 = this.field_E[incrementValue$66];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3744,9 +3751,9 @@ final class raa extends pf {
                                         break L59;
                                       }
                                     } else {
-                                      int incrementValue$67 = var10;
+                                      incrementValue$67 = var10;
                                       var10++;
-                                      var15 = ((raa) this).field_E[incrementValue$67];
+                                      var15 = this.field_E[incrementValue$67];
                                       var16 = (var15 & 16711680) * field_d & -16777216;
                                       var17 = (var15 & 65280) * field_j & 16711680;
                                       var18 = (var15 & 255) * field_t & 65280;
@@ -3754,7 +3761,7 @@ final class raa extends pf {
                                       break L59;
                                     }
                                   } else {
-                                    var12[var11] = ((raa) this).field_E[var10];
+                                    var12[var11] = this.field_E[var10];
                                     break L59;
                                   }
                                 }
@@ -3791,20 +3798,18 @@ final class raa extends pf {
                     var9 = field_i;
                     if (var7 >= 0) {
                       if (var8 >= 0) {
-                        if (var7 - (((raa) this).field_a << 12) < 0) {
-                          if (var8 - (((raa) this).field_f << 12) < 0) {
+                        if (var7 - (this.field_a << 12) < 0) {
+                          if (var8 - (this.field_f << 12) < 0) {
                             L63: while (true) {
                               if (var9 >= 0) {
                                 break L62;
                               } else {
                                 L64: {
-                                  var10 = (var8 >> 12) * ((raa) this).field_a + (var7 >> 12);
-                                  int incrementValue$68 = var6;
+                                  var10 = (var8 >> 12) * this.field_a + (var7 >> 12);
+                                  incrementValue$68 = var6;
                                   var6++;
                                   var11 = incrementValue$68;
-                                  var49 = var3;
-                                  var40 = var49;
-                                  var31 = var40;
+                                  var31 = var3;
                                   var22 = var31;
                                   var12 = var22;
                                   var13 = param0;
@@ -3820,14 +3825,14 @@ final class raa extends pf {
                                               if (var13 != 2) {
                                                 break L64;
                                               } else {
-                                                var15 = ((raa) this).field_E[var10];
+                                                var15 = this.field_E[var10];
                                                 if (var15 == 0) {
                                                   break L64;
                                                 } else {
                                                   var16 = (var15 & 16711935) * field_k & -16711936;
                                                   var17 = (var15 & 65280) * field_k & 16711680;
                                                   var15 = ((var16 | var17) >>> 8) + field_h;
-                                                  var18 = var49[var11];
+                                                  var18 = var31[var11];
                                                   var19 = var15 + var18;
                                                   var20 = (var15 & 16711935) + (var18 & 16711935);
                                                   var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -3836,13 +3841,13 @@ final class raa extends pf {
                                                 }
                                               }
                                             } else {
-                                              var15 = ((raa) this).field_E[var10];
+                                              var15 = this.field_E[var10];
                                               var16 = field_B;
                                               var17 = var15 + var16;
                                               var18 = (var15 & 16711935) + (var16 & 16711935);
                                               var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                               var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                              var19 = var49[var11];
+                                              var19 = var31[var11];
                                               var17 = var15 + var19;
                                               var18 = (var15 & 16711935) + (var19 & 16711935);
                                               var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3850,7 +3855,7 @@ final class raa extends pf {
                                               break L64;
                                             }
                                           } else {
-                                            var15 = ((raa) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             if (var15 == 0) {
                                               break L64;
                                             } else {
@@ -3858,7 +3863,7 @@ final class raa extends pf {
                                               var17 = (var15 & 65280) * field_j & 16711680;
                                               var18 = (var15 & 255) * field_t & 65280;
                                               var15 = (var16 | var17 | var18) >>> 8;
-                                              var19 = var49[var11];
+                                              var19 = var31[var11];
                                               var20 = var15 + var19;
                                               var21 = (var15 & 16711935) + (var19 & 16711935);
                                               var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -3867,11 +3872,11 @@ final class raa extends pf {
                                             }
                                           }
                                         } else {
-                                          var15 = ((raa) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L64;
                                           } else {
-                                            var16 = var49[var11];
+                                            var16 = var31[var11];
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
                                             var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3887,13 +3892,13 @@ final class raa extends pf {
                                             if (var13 != 2) {
                                               throw new IllegalArgumentException();
                                             } else {
-                                              var15 = ((raa) this).field_E[var10];
+                                              var15 = this.field_E[var10];
                                               if (var15 == 0) {
                                                 break L64;
                                               } else {
                                                 var16 = (var15 & 16711935) * field_k & -16711936;
                                                 var17 = (var15 & 65280) * field_k & 16711680;
-                                                int incrementValue$69 = var11;
+                                                incrementValue$69 = var11;
                                                 var11++;
                                                 var12[incrementValue$69] = ((var16 | var17) >>> 8) + field_h;
                                                 break L64;
@@ -3901,7 +3906,7 @@ final class raa extends pf {
                                             }
                                           } else {
                                             L65: {
-                                              var15 = ((raa) this).field_E[var10];
+                                              var15 = this.field_E[var10];
                                               var16 = field_B;
                                               var17 = var15 + var16;
                                               var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3914,17 +3919,17 @@ final class raa extends pf {
                                                   break L65;
                                                 } else {
                                                   var15 = var19;
-                                                  var19 = var49[var11];
+                                                  var19 = var31[var11];
                                                   var19 = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                                   break L65;
                                                 }
                                               }
                                             }
-                                            var49[var11] = var19;
+                                            var31[var11] = var19;
                                             break L64;
                                           }
                                         } else {
-                                          var15 = ((raa) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L64;
                                           } else {
@@ -3940,25 +3945,25 @@ final class raa extends pf {
                                                 var17 = (var15 & 65280) * field_j & 16711680;
                                                 var18 = (var15 & 255) * field_t & 65280;
                                                 var15 = (var16 | var17 | var18) >>> 8;
-                                                var19 = var49[var11];
+                                                var19 = var31[var11];
                                                 var12[var11] = ((var15 & 16711935) * field_k + (var19 & 16711935) * field_D & -16711936) + ((var15 & 65280) * field_k + (var19 & 65280) * field_D & 16711680) >> 8;
                                                 break L64;
                                               }
                                             } else {
                                               var16 = field_B >>> 24;
                                               var17 = 256 - var16;
-                                              var18 = var49[var11];
+                                              var18 = var31[var11];
                                               var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                               break L64;
                                             }
                                           }
                                         }
                                       } else {
-                                        var15 = ((raa) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L64;
                                         } else {
-                                          var49[var11] = var15;
+                                          var31[var11] = var15;
                                           break L64;
                                         }
                                       }
@@ -3970,16 +3975,16 @@ final class raa extends pf {
                                           if (var13 != 2) {
                                             throw new IllegalArgumentException();
                                           } else {
-                                            var15 = ((raa) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = (var15 & 16711935) * field_k & -16711936;
                                             var17 = (var15 & 65280) * field_k & 16711680;
                                             var12[var11] = ((var16 | var17) >>> 8) + field_h;
                                             break L64;
                                           }
                                         } else {
-                                          int incrementValue$70 = var10;
+                                          incrementValue$70 = var10;
                                           var10++;
-                                          var15 = ((raa) this).field_E[incrementValue$70];
+                                          var15 = this.field_E[incrementValue$70];
                                           var16 = field_B;
                                           var17 = var15 + var16;
                                           var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3988,9 +3993,9 @@ final class raa extends pf {
                                           break L64;
                                         }
                                       } else {
-                                        int incrementValue$71 = var10;
+                                        incrementValue$71 = var10;
                                         var10++;
-                                        var15 = ((raa) this).field_E[incrementValue$71];
+                                        var15 = this.field_E[incrementValue$71];
                                         var16 = (var15 & 16711680) * field_d & -16777216;
                                         var17 = (var15 & 65280) * field_j & 16711680;
                                         var18 = (var15 & 255) * field_t & 65280;
@@ -3998,7 +4003,7 @@ final class raa extends pf {
                                         break L64;
                                       }
                                     } else {
-                                      var12[var11] = ((raa) this).field_E[var10];
+                                      var12[var11] = this.field_E[var10];
                                       break L64;
                                     }
                                   }
@@ -4031,6 +4036,49 @@ final class raa extends pf {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
+        int incrementValue$48 = 0;
+        int incrementValue$49 = 0;
+        int incrementValue$50 = 0;
+        int incrementValue$51 = 0;
+        int incrementValue$52 = 0;
+        int incrementValue$53 = 0;
+        int incrementValue$54 = 0;
+        int incrementValue$55 = 0;
+        int incrementValue$56 = 0;
+        int incrementValue$57 = 0;
+        int incrementValue$58 = 0;
+        int incrementValue$59 = 0;
+        int incrementValue$60 = 0;
+        int incrementValue$61 = 0;
+        int incrementValue$62 = 0;
+        int incrementValue$63 = 0;
+        int incrementValue$64 = 0;
+        int incrementValue$65 = 0;
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
+        int incrementValue$68 = 0;
+        int incrementValue$69 = 0;
+        int incrementValue$70 = 0;
+        int incrementValue$71 = 0;
+        int incrementValue$72 = 0;
+        int incrementValue$73 = 0;
+        int incrementValue$74 = 0;
+        int incrementValue$75 = 0;
+        int incrementValue$76 = 0;
+        int incrementValue$77 = 0;
+        int incrementValue$78 = 0;
+        int incrementValue$79 = 0;
+        int incrementValue$80 = 0;
+        int incrementValue$81 = 0;
+        int incrementValue$82 = 0;
+        int incrementValue$83 = 0;
+        int incrementValue$84 = 0;
+        int incrementValue$85 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -4054,45 +4102,43 @@ final class raa extends pf {
         int var25 = 0;
         int[] var26 = null;
         int[] var27 = null;
-        int[] var28 = null;
-        int[] var29 = null;
-        if (!((raa) this).field_b.n()) {
+        if (!this.field_b.n()) {
           L0: {
-            var6 = ((raa) this).field_b.field_K;
-            param0 = param0 + ((raa) this).field_l;
-            param1 = param1 + ((raa) this).field_o;
+            var6 = this.field_b.field_K;
+            param0 = param0 + this.field_l;
+            param1 = param1 + this.field_o;
             var7 = param1 * var6 + param0;
             var8 = 0;
-            var9 = ((raa) this).field_f;
-            var10 = ((raa) this).field_a;
+            var9 = this.field_f;
+            var10 = this.field_a;
             var11 = var6 - var10;
             var12 = 0;
-            if (param1 >= ((raa) this).field_b.field_d) {
+            if (param1 >= this.field_b.field_d) {
               break L0;
             } else {
-              var13_int = ((raa) this).field_b.field_d - param1;
+              var13_int = this.field_b.field_d - param1;
               var9 = var9 - var13_int;
-              param1 = ((raa) this).field_b.field_d;
+              param1 = this.field_b.field_d;
               var8 = var8 + var13_int * var10;
               var7 = var7 + var13_int * var6;
               break L0;
             }
           }
           L1: {
-            if (param1 + var9 <= ((raa) this).field_b.field_P) {
+            if (param1 + var9 <= this.field_b.field_P) {
               break L1;
             } else {
-              var9 = var9 - (param1 + var9 - ((raa) this).field_b.field_P);
+              var9 = var9 - (param1 + var9 - this.field_b.field_P);
               break L1;
             }
           }
           L2: {
-            if (param0 >= ((raa) this).field_b.field_J) {
+            if (param0 >= this.field_b.field_J) {
               break L2;
             } else {
-              var13_int = ((raa) this).field_b.field_J - param0;
+              var13_int = this.field_b.field_J - param0;
               var10 = var10 - var13_int;
-              param0 = ((raa) this).field_b.field_J;
+              param0 = this.field_b.field_J;
               var8 = var8 + var13_int;
               var7 = var7 + var13_int;
               var12 = var12 + var13_int;
@@ -4101,10 +4147,10 @@ final class raa extends pf {
             }
           }
           L3: {
-            if (param0 + var10 <= ((raa) this).field_b.field_W) {
+            if (param0 + var10 <= this.field_b.field_W) {
               break L3;
             } else {
-              var13_int = param0 + var10 - ((raa) this).field_b.field_W;
+              var13_int = param0 + var10 - this.field_b.field_W;
               var10 = var10 - var13_int;
               var12 = var12 + var13_int;
               var11 = var11 + var13_int;
@@ -4117,9 +4163,7 @@ final class raa extends pf {
             } else {
               if (var9 > 0) {
                 L5: {
-                  var29 = ((raa) this).field_b.field_r;
-                  var28 = var29;
-                  var27 = var28;
+                  var27 = this.field_b.field_r;
                   var26 = var27;
                   var13 = var26;
                   if (param4 != 0) {
@@ -4151,9 +4195,9 @@ final class raa extends pf {
                                         var18++;
                                         continue L6;
                                       } else {
-                                        int incrementValue$43 = var8;
+                                        incrementValue$43 = var8;
                                         var8++;
-                                        var20 = ((raa) this).field_E[incrementValue$43];
+                                        var20 = this.field_E[incrementValue$43];
                                         if (var20 == 0) {
                                           var7++;
                                           var19++;
@@ -4162,11 +4206,11 @@ final class raa extends pf {
                                           var16 = (var20 & 16711935) * var14 & -16711936;
                                           var17 = (var20 & 65280) * var14 & 16711680;
                                           var20 = ((var16 | var17) >>> 8) + param3;
-                                          var21 = var29[var7];
+                                          var21 = var27[var7];
                                           var22 = var20 + var21;
                                           var23 = (var20 & 16711935) + (var21 & 16711935);
                                           var21 = (var23 & 16777472) + (var22 - var23 & 65536);
-                                          int incrementValue$44 = var7;
+                                          incrementValue$44 = var7;
                                           var7++;
                                           var13[incrementValue$44] = var22 - var21 | var21 - (var21 >>> 8);
                                           var19++;
@@ -4191,18 +4235,18 @@ final class raa extends pf {
                                       var14++;
                                       continue L8;
                                     } else {
-                                      int incrementValue$45 = var8;
+                                      incrementValue$45 = var8;
                                       var8++;
-                                      var16 = ((raa) this).field_E[incrementValue$45];
+                                      var16 = this.field_E[incrementValue$45];
                                       var17 = var16 + param3;
                                       var18 = (var16 & 16711935) + (param3 & 16711935);
                                       var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                       var16 = var17 - var19 | var19 - (var19 >>> 8);
-                                      var19 = var29[var7];
+                                      var19 = var27[var7];
                                       var17 = var16 + var19;
                                       var18 = (var16 & 16711935) + (var19 & 16711935);
                                       var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                      int incrementValue$46 = var7;
+                                      incrementValue$46 = var7;
                                       var7++;
                                       var13[incrementValue$46] = var17 - var19 | var19 - (var19 >>> 8);
                                       var15++;
@@ -4229,9 +4273,9 @@ final class raa extends pf {
                                     var17++;
                                     continue L10;
                                   } else {
-                                    int incrementValue$47 = var8;
+                                    incrementValue$47 = var8;
                                     var8++;
-                                    var19 = ((raa) this).field_E[incrementValue$47];
+                                    var19 = this.field_E[incrementValue$47];
                                     if (var19 == 0) {
                                       var7++;
                                       var18++;
@@ -4241,11 +4285,11 @@ final class raa extends pf {
                                       var21 = (var19 & 65280) * var15 & 16711680;
                                       var22 = (var19 & 255) * var16 & 65280;
                                       var19 = (var20 | var21 | var22) >>> 8;
-                                      var23 = var29[var7];
+                                      var23 = var27[var7];
                                       var24 = var19 + var23;
                                       var25 = (var19 & 16711935) + (var23 & 16711935);
                                       var23 = (var25 & 16777472) + (var24 - var25 & 65536);
-                                      int incrementValue$48 = var7;
+                                      incrementValue$48 = var7;
                                       var7++;
                                       var13[incrementValue$48] = var24 - var23 | var23 - (var23 >>> 8);
                                       var18++;
@@ -4270,19 +4314,19 @@ final class raa extends pf {
                                   var14++;
                                   continue L12;
                                 } else {
-                                  int incrementValue$49 = var8;
+                                  incrementValue$49 = var8;
                                   var8++;
-                                  var16 = ((raa) this).field_E[incrementValue$49];
+                                  var16 = this.field_E[incrementValue$49];
                                   if (var16 == 0) {
                                     var7++;
                                     var15++;
                                     continue L13;
                                   } else {
-                                    var17 = var29[var7];
+                                    var17 = var27[var7];
                                     var18 = var16 + var17;
                                     var19 = (var16 & 16711935) + (var17 & 16711935);
                                     var17 = (var19 & 16777472) + (var18 - var19 & 65536);
-                                    int incrementValue$50 = var7;
+                                    incrementValue$50 = var7;
                                     var7++;
                                     var13[incrementValue$50] = var18 - var17 | var17 - (var17 >>> 8);
                                     var15++;
@@ -4319,9 +4363,9 @@ final class raa extends pf {
                                       var18++;
                                       continue L14;
                                     } else {
-                                      int incrementValue$51 = var8;
+                                      incrementValue$51 = var8;
                                       var8++;
-                                      var20 = ((raa) this).field_E[incrementValue$51];
+                                      var20 = this.field_E[incrementValue$51];
                                       if (var20 == 0) {
                                         var7++;
                                         var19++;
@@ -4329,7 +4373,7 @@ final class raa extends pf {
                                       } else {
                                         var16 = (var20 & 16711935) * var14 & -16711936;
                                         var17 = (var20 & 65280) * var14 & 16711680;
-                                        int incrementValue$52 = var7;
+                                        incrementValue$52 = var7;
                                         var7++;
                                         var13[incrementValue$52] = ((var16 | var17) >>> 8) + param3;
                                         var19++;
@@ -4357,9 +4401,9 @@ final class raa extends pf {
                                     continue L16;
                                   } else {
                                     L18: {
-                                      int incrementValue$53 = var8;
+                                      incrementValue$53 = var8;
                                       var8++;
-                                      var18 = ((raa) this).field_E[incrementValue$53];
+                                      var18 = this.field_E[incrementValue$53];
                                       var19 = var18 + param3;
                                       var20 = (var18 & 16711935) + (param3 & 16711935);
                                       var21 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -4371,13 +4415,13 @@ final class raa extends pf {
                                           break L18;
                                         } else {
                                           var18 = var21;
-                                          var21 = var29[var7];
+                                          var21 = var27[var7];
                                           var21 = ((var18 & 16711935) * var14 + (var21 & 16711935) * var15 & -16711936) + ((var18 & 65280) * var14 + (var21 & 65280) * var15 & 16711680) >> 8;
                                           break L18;
                                         }
                                       }
                                     }
-                                    int incrementValue$54 = var7;
+                                    incrementValue$54 = var7;
                                     var7++;
                                     var13[incrementValue$54] = var21;
                                     var17++;
@@ -4407,9 +4451,9 @@ final class raa extends pf {
                                     var19++;
                                     continue L19;
                                   } else {
-                                    int incrementValue$55 = var8;
+                                    incrementValue$55 = var8;
                                     var8++;
-                                    var21 = ((raa) this).field_E[incrementValue$55];
+                                    var21 = this.field_E[incrementValue$55];
                                     if (var21 == 0) {
                                       var7++;
                                       var20++;
@@ -4419,7 +4463,7 @@ final class raa extends pf {
                                         var22 = (var21 & 16711680) * var14 & -16777216;
                                         var23 = (var21 & 65280) * var15 & 16711680;
                                         var24 = (var21 & 255) * var16 & 65280;
-                                        int incrementValue$56 = var7;
+                                        incrementValue$56 = var7;
                                         var7++;
                                         var13[incrementValue$56] = (var22 | var23 | var24) >>> 8;
                                         var20++;
@@ -4429,8 +4473,8 @@ final class raa extends pf {
                                         var23 = (var21 & 65280) * var15 & 16711680;
                                         var24 = (var21 & 255) * var16 & 65280;
                                         var21 = (var22 | var23 | var24) >>> 8;
-                                        var25 = var29[var7];
-                                        int incrementValue$57 = var7;
+                                        var25 = var27[var7];
+                                        incrementValue$57 = var7;
                                         var7++;
                                         var13[incrementValue$57] = ((var21 & 16711935) * var17 + (var25 & 16711935) * var18 & -16711936) + ((var21 & 65280) * var17 + (var25 & 65280) * var18 & 16711680) >> 8;
                                         var20++;
@@ -4457,16 +4501,16 @@ final class raa extends pf {
                                     var16++;
                                     continue L21;
                                   } else {
-                                    int incrementValue$58 = var8;
+                                    incrementValue$58 = var8;
                                     var8++;
-                                    var18 = ((raa) this).field_E[incrementValue$58];
+                                    var18 = this.field_E[incrementValue$58];
                                     if (var18 == 0) {
                                       var7++;
                                       var17++;
                                       continue L22;
                                     } else {
-                                      var19 = var29[var7];
-                                      int incrementValue$59 = var7;
+                                      var19 = var27[var7];
+                                      incrementValue$59 = var7;
                                       var7++;
                                       var13[incrementValue$59] = ((var18 & 16711935) * var14 + (var19 & 16711935) * var15 & -16711936) + ((var18 & 65280) * var14 + (var19 & 65280) * var15 & 16711680) >> 8;
                                       var17++;
@@ -4495,14 +4539,14 @@ final class raa extends pf {
                                     var14++;
                                     continue L23;
                                   } else {
-                                    int incrementValue$60 = var8;
+                                    incrementValue$60 = var8;
                                     var8++;
-                                    var16 = ((raa) this).field_E[incrementValue$60];
+                                    var16 = this.field_E[incrementValue$60];
                                     if (var16 == 0) {
                                       var7++;
                                       continue L25;
                                     } else {
-                                      int incrementValue$61 = var7;
+                                      incrementValue$61 = var7;
                                       var7++;
                                       var13[incrementValue$61] = var16;
                                       continue L25;
@@ -4511,55 +4555,55 @@ final class raa extends pf {
                                 }
                               } else {
                                 L26: {
-                                  int incrementValue$62 = var8;
+                                  incrementValue$62 = var8;
                                   var8++;
-                                  var16 = ((raa) this).field_E[incrementValue$62];
+                                  var16 = this.field_E[incrementValue$62];
                                   if (var16 == 0) {
                                     var7++;
                                     break L26;
                                   } else {
-                                    int incrementValue$63 = var7;
+                                    incrementValue$63 = var7;
                                     var7++;
                                     var13[incrementValue$63] = var16;
                                     break L26;
                                   }
                                 }
                                 L27: {
-                                  int incrementValue$64 = var8;
+                                  incrementValue$64 = var8;
                                   var8++;
-                                  var16 = ((raa) this).field_E[incrementValue$64];
+                                  var16 = this.field_E[incrementValue$64];
                                   if (var16 == 0) {
                                     var7++;
                                     break L27;
                                   } else {
-                                    int incrementValue$65 = var7;
+                                    incrementValue$65 = var7;
                                     var7++;
                                     var13[incrementValue$65] = var16;
                                     break L27;
                                   }
                                 }
                                 L28: {
-                                  int incrementValue$66 = var8;
+                                  incrementValue$66 = var8;
                                   var8++;
-                                  var16 = ((raa) this).field_E[incrementValue$66];
+                                  var16 = this.field_E[incrementValue$66];
                                   if (var16 == 0) {
                                     var7++;
                                     break L28;
                                   } else {
-                                    int incrementValue$67 = var7;
+                                    incrementValue$67 = var7;
                                     var7++;
                                     var13[incrementValue$67] = var16;
                                     break L28;
                                   }
                                 }
-                                int incrementValue$68 = var8;
+                                incrementValue$68 = var8;
                                 var8++;
-                                var16 = ((raa) this).field_E[incrementValue$68];
+                                var16 = this.field_E[incrementValue$68];
                                 if (var16 == 0) {
                                   var7++;
                                   continue L24;
                                 } else {
-                                  int incrementValue$69 = var7;
+                                  incrementValue$69 = var7;
                                   var7++;
                                   var13[incrementValue$69] = var16;
                                   continue L24;
@@ -4595,12 +4639,12 @@ final class raa extends pf {
                                     var18++;
                                     continue L29;
                                   } else {
-                                    int incrementValue$70 = var8;
+                                    incrementValue$70 = var8;
                                     var8++;
-                                    var20 = ((raa) this).field_E[incrementValue$70];
+                                    var20 = this.field_E[incrementValue$70];
                                     var16 = (var20 & 16711935) * var14 & -16711936;
                                     var17 = (var20 & 65280) * var14 & 16711680;
-                                    int incrementValue$71 = var7;
+                                    incrementValue$71 = var7;
                                     var7++;
                                     var13[incrementValue$71] = ((var16 | var17) >>> 8) + param3;
                                     var19++;
@@ -4624,13 +4668,13 @@ final class raa extends pf {
                                   var14++;
                                   continue L31;
                                 } else {
-                                  int incrementValue$72 = var8;
+                                  incrementValue$72 = var8;
                                   var8++;
-                                  var16 = ((raa) this).field_E[incrementValue$72];
+                                  var16 = this.field_E[incrementValue$72];
                                   var17 = var16 + param3;
                                   var18 = (var16 & 16711935) + (param3 & 16711935);
                                   var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                  int incrementValue$73 = var7;
+                                  incrementValue$73 = var7;
                                   var7++;
                                   var13[incrementValue$73] = var17 - var19 | var19 - (var19 >>> 8);
                                   var15++;
@@ -4657,13 +4701,13 @@ final class raa extends pf {
                                 var17++;
                                 continue L33;
                               } else {
-                                int incrementValue$74 = var8;
+                                incrementValue$74 = var8;
                                 var8++;
-                                var19 = ((raa) this).field_E[incrementValue$74];
+                                var19 = this.field_E[incrementValue$74];
                                 var20 = (var19 & 16711680) * var14 & -16777216;
                                 var21 = (var19 & 65280) * var15 & 16711680;
                                 var22 = (var19 & 255) * var16 & 65280;
-                                int incrementValue$75 = var7;
+                                incrementValue$75 = var7;
                                 var7++;
                                 var13[incrementValue$75] = (var20 | var21 | var22) >>> 8;
                                 var18++;
@@ -4690,35 +4734,35 @@ final class raa extends pf {
                                   var14++;
                                   continue L35;
                                 } else {
-                                  int incrementValue$76 = var7;
+                                  incrementValue$76 = var7;
                                   var7++;
-                                  int incrementValue$77 = var8;
+                                  incrementValue$77 = var8;
                                   var8++;
-                                  var13[incrementValue$76] = ((raa) this).field_E[incrementValue$77];
+                                  var13[incrementValue$76] = this.field_E[incrementValue$77];
                                   continue L37;
                                 }
                               }
                             } else {
-                              int incrementValue$78 = var7;
+                              incrementValue$78 = var7;
                               var7++;
-                              int incrementValue$79 = var8;
+                              incrementValue$79 = var8;
                               var8++;
-                              var13[incrementValue$78] = ((raa) this).field_E[incrementValue$79];
-                              int incrementValue$80 = var7;
+                              var13[incrementValue$78] = this.field_E[incrementValue$79];
+                              incrementValue$80 = var7;
                               var7++;
-                              int incrementValue$81 = var8;
+                              incrementValue$81 = var8;
                               var8++;
-                              var13[incrementValue$80] = ((raa) this).field_E[incrementValue$81];
-                              int incrementValue$82 = var7;
+                              var13[incrementValue$80] = this.field_E[incrementValue$81];
+                              incrementValue$82 = var7;
                               var7++;
-                              int incrementValue$83 = var8;
+                              incrementValue$83 = var8;
                               var8++;
-                              var13[incrementValue$82] = ((raa) this).field_E[incrementValue$83];
-                              int incrementValue$84 = var7;
+                              var13[incrementValue$82] = this.field_E[incrementValue$83];
+                              incrementValue$84 = var7;
                               var7++;
-                              int incrementValue$85 = var8;
+                              incrementValue$85 = var8;
                               var8++;
-                              var13[incrementValue$84] = ((raa) this).field_E[incrementValue$85];
+                              var13[incrementValue$84] = this.field_E[incrementValue$85];
                               continue L36;
                             }
                           }
@@ -4741,7 +4785,7 @@ final class raa extends pf {
 
     raa(sfa param0, int[] param1, int param2, int param3) {
         super(param0, param2, param3);
-        ((raa) this).field_E = param1;
+        this.field_E = param1;
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -4774,10 +4818,6 @@ final class raa extends pf {
         int[] var35 = null;
         float[] var36 = null;
         int[] var37 = null;
-        float[] var38 = null;
-        int[] var39 = null;
-        float[] var40 = null;
-        int[] var41 = null;
         L0: {
           if (param3 <= 0) {
             break L0;
@@ -4786,81 +4826,81 @@ final class raa extends pf {
               L1: {
                 var10 = 0;
                 var11 = 0;
-                var12 = ((raa) this).field_l + ((raa) this).field_a + ((raa) this).field_g;
-                var13 = ((raa) this).field_o + ((raa) this).field_f + ((raa) this).field_v;
+                var12 = this.field_l + this.field_a + this.field_g;
+                var13 = this.field_o + this.field_f + this.field_v;
                 var14 = (var12 << 16) / param3;
                 var15 = (var13 << 16) / param4;
-                if (((raa) this).field_l <= 0) {
+                if (this.field_l <= 0) {
                   break L1;
                 } else {
-                  var16 = ((((raa) this).field_l << 16) + var14 - 1) / var14;
+                  var16 = ((this.field_l << 16) + var14 - 1) / var14;
                   param0 = param0 + var16;
-                  var10 = var10 + (var16 * var14 - (((raa) this).field_l << 16));
+                  var10 = var10 + (var16 * var14 - (this.field_l << 16));
                   break L1;
                 }
               }
               L2: {
-                if (((raa) this).field_o <= 0) {
+                if (this.field_o <= 0) {
                   break L2;
                 } else {
-                  var16 = ((((raa) this).field_o << 16) + var15 - 1) / var15;
+                  var16 = ((this.field_o << 16) + var15 - 1) / var15;
                   param1 = param1 + var16;
-                  var11 = var11 + (var16 * var15 - (((raa) this).field_o << 16));
+                  var11 = var11 + (var16 * var15 - (this.field_o << 16));
                   break L2;
                 }
               }
               L3: {
-                if (((raa) this).field_a >= var12) {
+                if (this.field_a >= var12) {
                   break L3;
                 } else {
-                  param3 = ((((raa) this).field_a << 16) - var10 + var14 - 1) / var14;
+                  param3 = ((this.field_a << 16) - var10 + var14 - 1) / var14;
                   break L3;
                 }
               }
               L4: {
-                if (((raa) this).field_f >= var13) {
+                if (this.field_f >= var13) {
                   break L4;
                 } else {
-                  param4 = ((((raa) this).field_f << 16) - var11 + var15 - 1) / var15;
+                  param4 = ((this.field_f << 16) - var11 + var15 - 1) / var15;
                   break L4;
                 }
               }
               L5: {
-                var16 = param0 + param1 * ((raa) this).field_b.field_K;
-                var17 = ((raa) this).field_b.field_K - param3;
-                if (param1 + param4 <= ((raa) this).field_b.field_P) {
+                var16 = param0 + param1 * this.field_b.field_K;
+                var17 = this.field_b.field_K - param3;
+                if (param1 + param4 <= this.field_b.field_P) {
                   break L5;
                 } else {
-                  param4 = param4 - (param1 + param4 - ((raa) this).field_b.field_P);
+                  param4 = param4 - (param1 + param4 - this.field_b.field_P);
                   break L5;
                 }
               }
               L6: {
-                if (param1 >= ((raa) this).field_b.field_d) {
+                if (param1 >= this.field_b.field_d) {
                   break L6;
                 } else {
-                  var18_int = ((raa) this).field_b.field_d - param1;
+                  var18_int = this.field_b.field_d - param1;
                   param4 = param4 - var18_int;
-                  var16 = var16 + var18_int * ((raa) this).field_b.field_K;
+                  var16 = var16 + var18_int * this.field_b.field_K;
                   var11 = var11 + var15 * var18_int;
                   break L6;
                 }
               }
               L7: {
-                if (param0 + param3 <= ((raa) this).field_b.field_W) {
+                if (param0 + param3 <= this.field_b.field_W) {
                   break L7;
                 } else {
-                  var18_int = param0 + param3 - ((raa) this).field_b.field_W;
+                  var18_int = param0 + param3 - this.field_b.field_W;
                   param3 = param3 - var18_int;
                   var17 = var17 + var18_int;
                   break L7;
                 }
               }
               L8: {
-                if (param0 >= ((raa) this).field_b.field_J) {
+                if (param0 >= this.field_b.field_J) {
                   break L8;
                 } else {
-                  var18_int = ((raa) this).field_b.field_J - param0;
+                  var18_int = this.field_b.field_J - param0;
                   param3 = param3 - var18_int;
                   var16 = var16 + var18_int;
                   var10 = var10 + var14 * var18_int;
@@ -4869,14 +4909,10 @@ final class raa extends pf {
                 }
               }
               L9: {
-                var40 = ((raa) this).field_b.field_n;
-                var38 = var40;
-                var36 = var38;
+                var36 = this.field_b.field_n;
                 var34 = var36;
                 var18 = var34;
-                var41 = ((raa) this).field_b.field_r;
-                var39 = var41;
-                var37 = var39;
+                var37 = this.field_b.field_r;
                 var35 = var37;
                 var19 = var35;
                 if (param7 != 0) {
@@ -4901,7 +4937,7 @@ final class raa extends pf {
                                 if (var25 >= 0) {
                                   break L9;
                                 } else {
-                                  var26 = (var11 >> 16) * ((raa) this).field_a;
+                                  var26 = (var11 >> 16) * this.field_a;
                                   var27 = -param3;
                                   L11: while (true) {
                                     if (var27 >= 0) {
@@ -4912,17 +4948,17 @@ final class raa extends pf {
                                       continue L10;
                                     } else {
                                       L12: {
-                                        if ((float)param2 >= var40[var16]) {
+                                        if ((float)param2 >= var36[var16]) {
                                           break L12;
                                         } else {
-                                          var28 = ((raa) this).field_E[(var10 >> 16) + var26];
+                                          var28 = this.field_E[(var10 >> 16) + var26];
                                           if (var28 == 0) {
                                             break L12;
                                           } else {
                                             var22 = (var28 & 16711935) * var20 & -16711936;
                                             var23 = (var28 & 65280) * var20 & 16711680;
                                             var28 = ((var22 | var23) >>> 8) + param6;
-                                            var29 = var41[var16];
+                                            var29 = var37[var16];
                                             var30 = var28 + var29;
                                             var31 = (var28 & 16711935) + (var29 & 16711935);
                                             var29 = (var31 & 16777472) + (var30 - var31 & 65536);
@@ -4948,7 +4984,7 @@ final class raa extends pf {
                               if (var21 >= 0) {
                                 break L9;
                               } else {
-                                var22 = (var11 >> 16) * ((raa) this).field_a;
+                                var22 = (var11 >> 16) * this.field_a;
                                 var23 = -param3;
                                 L14: while (true) {
                                   if (var23 >= 0) {
@@ -4959,15 +4995,15 @@ final class raa extends pf {
                                     continue L13;
                                   } else {
                                     L15: {
-                                      if ((float)param2 >= var40[var16]) {
+                                      if ((float)param2 >= var36[var16]) {
                                         break L15;
                                       } else {
-                                        var24 = ((raa) this).field_E[(var10 >> 16) + var22];
+                                        var24 = this.field_E[(var10 >> 16) + var22];
                                         var25 = var24 + param6;
                                         var26 = (var24 & 16711935) + (param6 & 16711935);
                                         var27 = (var26 & 16777472) + (var25 - var26 & 65536);
                                         var24 = var25 - var27 | var27 - (var27 >>> 8);
-                                        var27 = var41[var16];
+                                        var27 = var37[var16];
                                         var25 = var24 + var27;
                                         var26 = (var24 & 16711935) + (var27 & 16711935);
                                         var27 = (var26 & 16777472) + (var25 - var26 & 65536);
@@ -4995,7 +5031,7 @@ final class raa extends pf {
                             if (var24 >= 0) {
                               break L9;
                             } else {
-                              var25 = (var11 >> 16) * ((raa) this).field_a;
+                              var25 = (var11 >> 16) * this.field_a;
                               var26 = -param3;
                               L17: while (true) {
                                 if (var26 >= 0) {
@@ -5006,10 +5042,10 @@ final class raa extends pf {
                                   continue L16;
                                 } else {
                                   L18: {
-                                    if ((float)param2 >= var40[var16]) {
+                                    if ((float)param2 >= var36[var16]) {
                                       break L18;
                                     } else {
-                                      var27 = ((raa) this).field_E[(var10 >> 16) + var25];
+                                      var27 = this.field_E[(var10 >> 16) + var25];
                                       if (var27 == 0) {
                                         break L18;
                                       } else {
@@ -5017,7 +5053,7 @@ final class raa extends pf {
                                         var29 = (var27 & 65280) * var22 & 16711680;
                                         var30 = (var27 & 255) * var23 & 65280;
                                         var27 = (var28 | var29 | var30) >>> 8;
-                                        var31 = var41[var16];
+                                        var31 = var37[var16];
                                         var32 = var27 + var31;
                                         var33 = (var27 & 16711935) + (var31 & 16711935);
                                         var31 = (var33 & 16777472) + (var32 - var33 & 65536);
@@ -5043,7 +5079,7 @@ final class raa extends pf {
                           if (var21 >= 0) {
                             break L9;
                           } else {
-                            var22 = (var11 >> 16) * ((raa) this).field_a;
+                            var22 = (var11 >> 16) * this.field_a;
                             var23 = -param3;
                             L20: while (true) {
                               if (var23 >= 0) {
@@ -5054,14 +5090,14 @@ final class raa extends pf {
                                 continue L19;
                               } else {
                                 L21: {
-                                  if ((float)param2 >= var40[var16]) {
+                                  if ((float)param2 >= var36[var16]) {
                                     break L21;
                                   } else {
-                                    var24 = ((raa) this).field_E[(var10 >> 16) + var22];
+                                    var24 = this.field_E[(var10 >> 16) + var22];
                                     if (var24 == 0) {
                                       break L21;
                                     } else {
-                                      var25 = var41[var16];
+                                      var25 = var37[var16];
                                       var26 = var24 + var25;
                                       var27 = (var24 & 16711935) + (var25 & 16711935);
                                       var25 = (var27 & 16777472) + (var26 - var27 & 65536);
@@ -5099,7 +5135,7 @@ final class raa extends pf {
                               if (var25 >= 0) {
                                 break L9;
                               } else {
-                                var26 = (var11 >> 16) * ((raa) this).field_a;
+                                var26 = (var11 >> 16) * this.field_a;
                                 var27 = -param3;
                                 L23: while (true) {
                                   if (var27 >= 0) {
@@ -5110,10 +5146,10 @@ final class raa extends pf {
                                     continue L22;
                                   } else {
                                     L24: {
-                                      if ((float)param2 >= var40[var16]) {
+                                      if ((float)param2 >= var36[var16]) {
                                         break L24;
                                       } else {
-                                        var28 = ((raa) this).field_E[(var10 >> 16) + var26];
+                                        var28 = this.field_E[(var10 >> 16) + var26];
                                         if (var28 == 0) {
                                           break L24;
                                         } else {
@@ -5143,7 +5179,7 @@ final class raa extends pf {
                             if (var23 >= 0) {
                               break L9;
                             } else {
-                              var24 = (var11 >> 16) * ((raa) this).field_a;
+                              var24 = (var11 >> 16) * this.field_a;
                               var25 = -param3;
                               L26: while (true) {
                                 if (var25 >= 0) {
@@ -5154,11 +5190,11 @@ final class raa extends pf {
                                   continue L25;
                                 } else {
                                   L27: {
-                                    if ((float)param2 >= var40[var16]) {
+                                    if ((float)param2 >= var36[var16]) {
                                       break L27;
                                     } else {
                                       L28: {
-                                        var26 = ((raa) this).field_E[(var10 >> 16) + var24];
+                                        var26 = this.field_E[(var10 >> 16) + var24];
                                         var27 = var26 + param6;
                                         var28 = (var26 & 16711935) + (param6 & 16711935);
                                         var29 = (var28 & 16777472) + (var27 - var28 & 65536);
@@ -5170,13 +5206,13 @@ final class raa extends pf {
                                             break L28;
                                           } else {
                                             var26 = var29;
-                                            var29 = var41[var16];
+                                            var29 = var37[var16];
                                             var29 = ((var26 & 16711935) * var21 + (var29 & 16711935) * var22 & -16711936) + ((var26 & 65280) * var21 + (var29 & 65280) * var22 & 16711680) >> 8;
                                             break L28;
                                           }
                                         }
                                       }
-                                      var41[var16] = var29;
+                                      var37[var16] = var29;
                                       var18[var16] = (float)param2;
                                       break L27;
                                     }
@@ -5203,7 +5239,7 @@ final class raa extends pf {
                             if (var26 >= 0) {
                               break L9;
                             } else {
-                              var27 = (var11 >> 16) * ((raa) this).field_a;
+                              var27 = (var11 >> 16) * this.field_a;
                               var28 = -param3;
                               L30: while (true) {
                                 if (var28 >= 0) {
@@ -5214,10 +5250,10 @@ final class raa extends pf {
                                   continue L29;
                                 } else {
                                   L31: {
-                                    if ((float)param2 >= var40[var16]) {
+                                    if ((float)param2 >= var36[var16]) {
                                       break L31;
                                     } else {
-                                      var29 = ((raa) this).field_E[(var10 >> 16) + var27];
+                                      var29 = this.field_E[(var10 >> 16) + var27];
                                       if (var29 == 0) {
                                         break L31;
                                       } else {
@@ -5233,7 +5269,7 @@ final class raa extends pf {
                                           var31 = (var29 & 65280) * var22 & 16711680;
                                           var32 = (var29 & 255) * var23 & 65280;
                                           var29 = (var30 | var31 | var32) >>> 8;
-                                          var33 = var41[var16];
+                                          var33 = var37[var16];
                                           var19[var16] = ((var29 & 16711935) * var24 + (var33 & 16711935) * var25 & -16711936) + ((var29 & 65280) * var24 + (var33 & 65280) * var25 & 16711680) >> 8;
                                           var18[var16] = (float)param2;
                                           break L31;
@@ -5257,7 +5293,7 @@ final class raa extends pf {
                             if (var23 >= 0) {
                               break L9;
                             } else {
-                              var24 = (var11 >> 16) * ((raa) this).field_a;
+                              var24 = (var11 >> 16) * this.field_a;
                               var25 = -param3;
                               L33: while (true) {
                                 if (var25 >= 0) {
@@ -5268,14 +5304,14 @@ final class raa extends pf {
                                   continue L32;
                                 } else {
                                   L34: {
-                                    if ((float)param2 >= var40[var16]) {
+                                    if ((float)param2 >= var36[var16]) {
                                       break L34;
                                     } else {
-                                      var26 = ((raa) this).field_E[(var10 >> 16) + var24];
+                                      var26 = this.field_E[(var10 >> 16) + var24];
                                       if (var26 == 0) {
                                         break L34;
                                       } else {
-                                        var27 = var41[var16];
+                                        var27 = var37[var16];
                                         var19[var16] = ((var26 & 16711935) * var21 + (var27 & 16711935) * var22 & -16711936) + ((var26 & 65280) * var21 + (var27 & 65280) * var22 & 16711680) >> 8;
                                         var18[var16] = (float)param2;
                                         break L34;
@@ -5299,7 +5335,7 @@ final class raa extends pf {
                         if (var21 >= 0) {
                           break L9;
                         } else {
-                          var22 = (var11 >> 16) * ((raa) this).field_a;
+                          var22 = (var11 >> 16) * this.field_a;
                           var23 = -param3;
                           L36: while (true) {
                             if (var23 >= 0) {
@@ -5310,14 +5346,14 @@ final class raa extends pf {
                               continue L35;
                             } else {
                               L37: {
-                                if ((float)param2 >= var40[var16]) {
+                                if ((float)param2 >= var36[var16]) {
                                   break L37;
                                 } else {
-                                  var24 = ((raa) this).field_E[(var10 >> 16) + var22];
+                                  var24 = this.field_E[(var10 >> 16) + var22];
                                   if (var24 == 0) {
                                     break L37;
                                   } else {
-                                    var41[var16] = var24;
+                                    var37[var16] = var24;
                                     var18[var16] = (float)param2;
                                     break L37;
                                   }
@@ -5351,7 +5387,7 @@ final class raa extends pf {
                             if (var25 >= 0) {
                               break L9;
                             } else {
-                              var26 = (var11 >> 16) * ((raa) this).field_a;
+                              var26 = (var11 >> 16) * this.field_a;
                               var27 = -param3;
                               L39: while (true) {
                                 if (var27 >= 0) {
@@ -5362,10 +5398,10 @@ final class raa extends pf {
                                   continue L38;
                                 } else {
                                   L40: {
-                                    if ((float)param2 >= var40[var16]) {
+                                    if ((float)param2 >= var36[var16]) {
                                       break L40;
                                     } else {
-                                      var28 = ((raa) this).field_E[(var10 >> 16) + var26];
+                                      var28 = this.field_E[(var10 >> 16) + var26];
                                       var22 = (var28 & 16711935) * var20 & -16711936;
                                       var23 = (var28 & 65280) * var20 & 16711680;
                                       var19[var16] = ((var22 | var23) >>> 8) + param6;
@@ -5389,7 +5425,7 @@ final class raa extends pf {
                           if (var21 >= 0) {
                             break L9;
                           } else {
-                            var22 = (var11 >> 16) * ((raa) this).field_a;
+                            var22 = (var11 >> 16) * this.field_a;
                             var23 = -param3;
                             L42: while (true) {
                               if (var23 >= 0) {
@@ -5400,10 +5436,10 @@ final class raa extends pf {
                                 continue L41;
                               } else {
                                 L43: {
-                                  if ((float)param2 >= var40[var16]) {
+                                  if ((float)param2 >= var36[var16]) {
                                     break L43;
                                   } else {
-                                    var24 = ((raa) this).field_E[(var10 >> 16) + var22];
+                                    var24 = this.field_E[(var10 >> 16) + var22];
                                     var25 = var24 + param6;
                                     var26 = (var24 & 16711935) + (param6 & 16711935);
                                     var27 = (var26 & 16777472) + (var25 - var26 & 65536);
@@ -5431,7 +5467,7 @@ final class raa extends pf {
                         if (var24 >= 0) {
                           break L9;
                         } else {
-                          var25 = (var11 >> 16) * ((raa) this).field_a;
+                          var25 = (var11 >> 16) * this.field_a;
                           var26 = -param3;
                           L45: while (true) {
                             if (var26 >= 0) {
@@ -5442,10 +5478,10 @@ final class raa extends pf {
                               continue L44;
                             } else {
                               L46: {
-                                if ((float)param2 >= var40[var16]) {
+                                if ((float)param2 >= var36[var16]) {
                                   break L46;
                                 } else {
-                                  var27 = ((raa) this).field_E[(var10 >> 16) + var25];
+                                  var27 = this.field_E[(var10 >> 16) + var25];
                                   var28 = (var27 & 16711680) * var20 & -16777216;
                                   var29 = (var27 & 65280) * var21 & 16711680;
                                   var30 = (var27 & 255) * var22 & 65280;
@@ -5470,7 +5506,7 @@ final class raa extends pf {
                       if (var21 >= 0) {
                         break L0;
                       } else {
-                        var22 = (var11 >> 16) * ((raa) this).field_a;
+                        var22 = (var11 >> 16) * this.field_a;
                         var23 = -param3;
                         L48: while (true) {
                           if (var23 >= 0) {
@@ -5481,10 +5517,10 @@ final class raa extends pf {
                             continue L47;
                           } else {
                             L49: {
-                              if ((float)param2 >= var40[var16]) {
+                              if ((float)param2 >= var36[var16]) {
                                 break L49;
                               } else {
-                                var19[var16] = ((raa) this).field_E[(var10 >> 16) + var22];
+                                var19[var16] = this.field_E[(var10 >> 16) + var22];
                                 var18[var16] = (float)param2;
                                 break L49;
                               }

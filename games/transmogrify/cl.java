@@ -15,7 +15,7 @@ final class cl extends rh {
     }
 
     final int f(int param0) {
-        if (((cl) this).field_m) {
+        if (this.field_m) {
             return 0;
         }
         if (param0 != 0) {
@@ -25,18 +25,19 @@ final class cl extends rh {
     }
 
     final byte[] e(int param0) {
+        int discarded$6 = 0;
         if (param0 == 256) {
-          if (((cl) this).field_m) {
+          if (this.field_m) {
             throw new RuntimeException();
           } else {
-            return ((cl) this).field_B;
+            return this.field_B;
           }
         } else {
-          int discarded$6 = ((cl) this).f(95);
-          if (((cl) this).field_m) {
+          discarded$6 = this.f(95);
+          if (this.field_m) {
             throw new RuntimeException();
           } else {
-            return ((cl) this).field_B;
+            return this.field_B;
           }
         }
     }

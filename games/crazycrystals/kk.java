@@ -22,13 +22,13 @@ final class kk {
         int stackOut_6_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
-        ((kk) this).field_i = ((kk) this).field_i - ((kk) this).field_f;
-        ((kk) this).field_c = ((kk) this).field_c - 1;
-        ((kk) this).field_f = ((kk) this).field_f - (((kk) this).field_f - -3 >> 2);
+        this.field_i = this.field_i - this.field_f;
+        this.field_c = this.field_c - 1;
+        this.field_f = this.field_f - (this.field_f - -3 >> -1701764574);
         if (param0 >= -35) {
           L0: {
-            ((kk) this).field_c = -69;
-            if (-1 <= ((kk) this).field_c) {
+            this.field_c = -69;
+            if (-1 <= (this.field_c ^ -1)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -41,7 +41,7 @@ final class kk {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (-1 >= ((kk) this).field_c) {
+            if (-1 <= (this.field_c ^ -1)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -56,39 +56,36 @@ final class kk {
     }
 
     public static void a(int param0) {
-        field_a = null;
+        field_a = (f[][]) null;
         field_k = null;
         field_e = null;
         field_j = null;
         if (param0 > -56) {
-            field_k = null;
+            field_k = (String[]) null;
         }
     }
 
     kk(int param0, int param1, String param2) {
-        ((kk) this).field_f = 64;
-        ((kk) this).field_c = 16;
+        this.field_f = 64;
+        this.field_c = 16;
         try {
-            ((kk) this).field_h = param2;
-            ((kk) this).field_i = param1 << 4;
-            ((kk) this).field_d = param0;
+            this.field_h = param2;
+            this.field_i = param1 << 2048818916;
+            this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "kk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "kk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0) {
-        an.field_q.c(((kk) this).field_h, ((kk) this).field_d, ((kk) this).field_i >> 4, 16760896, -1);
+        boolean discarded$0 = false;
+        an.field_q.c(this.field_h, this.field_d, this.field_i >> 2062697124, 16760896, -1);
         if (param0 != 35) {
-            boolean discarded$0 = ((kk) this).b(-48);
+            discarded$0 = this.b(-48);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = 0;
         field_j = new int[]{192, 128, 160, 128, 112, 96, 192, 144, 128, 176};
         field_l = (int)Math.ceil(307.5);

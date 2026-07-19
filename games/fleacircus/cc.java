@@ -52,18 +52,18 @@ final class cc {
         if (param1 >= 10) {
           L0: {
             var3 = (double)param0 / ((double)param1 + 0.0);
-            ((cc) this).field_a.a();
-            ((cc) this).field_i.a();
+            this.field_a.a();
+            this.field_i.a();
             var5 = 0;
             var6 = 0;
             var7 = 0;
-            if (((cc) this).field_d == null) {
+            if (this.field_d == null) {
               break L0;
             } else {
-              ((cc) this).field_d.a();
-              ((cc) this).field_j.a();
-              var5 = (int)((double)(((cc) this).field_d.field_b - ((cc) this).field_d.field_i) * 32.768 / var3);
-              var6 = (int)((double)((cc) this).field_d.field_i * 32.768 / var3);
+              this.field_d.a();
+              this.field_j.a();
+              var5 = (int)((double)(this.field_d.field_b - this.field_d.field_i) * 32.768 / var3);
+              var6 = (int)((double)this.field_d.field_i * 32.768 / var3);
               break L0;
             }
           }
@@ -71,13 +71,13 @@ final class cc {
             var8 = 0;
             var9 = 0;
             var10 = 0;
-            if (((cc) this).field_m == null) {
+            if (this.field_m == null) {
               break L1;
             } else {
-              ((cc) this).field_m.a();
-              ((cc) this).field_v.a();
-              var8 = (int)((double)(((cc) this).field_m.field_b - ((cc) this).field_m.field_i) * 32.768 / var3);
-              var9 = (int)((double)((cc) this).field_m.field_i * 32.768 / var3);
+              this.field_m.a();
+              this.field_v.a();
+              var8 = (int)((double)(this.field_m.field_b - this.field_m.field_i) * 32.768 / var3);
+              var9 = (int)((double)this.field_m.field_i * 32.768 / var3);
               break L1;
             }
           }
@@ -88,11 +88,11 @@ final class cc {
               L3: while (true) {
                 if (var11 >= param0) {
                   L4: {
-                    if (((cc) this).field_o == null) {
+                    if (this.field_o == null) {
                       break L4;
                     } else {
-                      ((cc) this).field_o.a();
-                      ((cc) this).field_p.a();
+                      this.field_o.a();
+                      this.field_p.a();
                       var11 = 0;
                       var12 = 0;
                       var13 = 1;
@@ -102,13 +102,13 @@ final class cc {
                           break L4;
                         } else {
                           L6: {
-                            var15 = ((cc) this).field_o.a(param0);
-                            var16 = ((cc) this).field_p.a(param0);
+                            var15 = this.field_o.a(param0);
+                            var16 = this.field_p.a(param0);
                             if (var13 == 0) {
-                              var12 = ((cc) this).field_o.field_i + ((((cc) this).field_o.field_b - ((cc) this).field_o.field_i) * var16 >> 8);
+                              var12 = this.field_o.field_i + ((this.field_o.field_b - this.field_o.field_i) * var16 >> 8);
                               break L6;
                             } else {
-                              var12 = ((cc) this).field_o.field_i + ((((cc) this).field_o.field_b - ((cc) this).field_o.field_i) * var15 >> 8);
+                              var12 = this.field_o.field_i + ((this.field_o.field_b - this.field_o.field_i) * var15 >> 8);
                               break L6;
                             }
                           }
@@ -146,19 +146,19 @@ final class cc {
                     }
                   }
                   L9: {
-                    if (((cc) this).field_s <= 0) {
+                    if (this.field_s <= 0) {
                       break L9;
                     } else {
-                      if (((cc) this).field_t <= 0) {
+                      if (this.field_t <= 0) {
                         break L9;
                       } else {
-                        var11 = (int)((double)((cc) this).field_s * var3);
+                        var11 = (int)((double)this.field_s * var3);
                         var12 = var11;
                         L10: while (true) {
                           if (var12 >= param0) {
                             break L9;
                           } else {
-                            field_q[var12] = field_q[var12] + field_q[var12 - var11] * ((cc) this).field_t / 100;
+                            field_q[var12] = field_q[var12] + field_q[var12 - var11] * this.field_t / 100;
                             var12++;
                             continue L10;
                           }
@@ -168,20 +168,20 @@ final class cc {
                   }
                   L11: {
                     L12: {
-                      if (((cc) this).field_n.field_h[0] > 0) {
+                      if (this.field_n.field_h[0] > 0) {
                         break L12;
                       } else {
-                        if (((cc) this).field_n.field_h[1] <= 0) {
+                        if (this.field_n.field_h[1] <= 0) {
                           break L11;
                         } else {
                           break L12;
                         }
                       }
                     }
-                    ((cc) this).field_r.a();
-                    var11 = ((cc) this).field_r.a(param0 + 1);
-                    var12 = ((cc) this).field_n.a(0, (float)var11 / 65536.0f);
-                    var13 = ((cc) this).field_n.a(1, (float)var11 / 65536.0f);
+                    this.field_r.a();
+                    var11 = this.field_r.a(param0 + 1);
+                    var12 = this.field_n.a(0, (float)var11 / 65536.0f);
+                    var13 = this.field_n.a(1, (float)var11 / 65536.0f);
                     if (param0 < var12 + var13) {
                       break L11;
                     } else {
@@ -210,8 +210,8 @@ final class cc {
                             L17: while (true) {
                               if (var14 >= var15) {
                                 if (var14 < param0 - var12) {
-                                  var12 = ((cc) this).field_n.a(0, (float)var11 / 65536.0f);
-                                  var13 = ((cc) this).field_n.a(1, (float)var11 / 65536.0f);
+                                  var12 = this.field_n.a(0, (float)var11 / 65536.0f);
+                                  var13 = this.field_n.a(1, (float)var11 / 65536.0f);
                                   var15 += 128;
                                   continue L15;
                                 } else {
@@ -227,7 +227,7 @@ final class cc {
                                           L20: while (true) {
                                             if (var17 >= var13) {
                                               field_q[var14] = var16;
-                                              var11 = ((cc) this).field_r.a(param0 + 1);
+                                              var11 = this.field_r.a(param0 + 1);
                                               var14++;
                                               continue L18;
                                             } else {
@@ -254,7 +254,7 @@ final class cc {
                                     L22: while (true) {
                                       if (var17 >= var13) {
                                         field_q[var14] = var16;
-                                        var11 = ((cc) this).field_r.a(param0 + 1);
+                                        var11 = this.field_r.a(param0 + 1);
                                         var14++;
                                         continue L17;
                                       } else {
@@ -281,7 +281,7 @@ final class cc {
                               L24: while (true) {
                                 if (var17 >= var14) {
                                   field_q[var14] = var16;
-                                  var11 = ((cc) this).field_r.a(param0 + 1);
+                                  var11 = this.field_r.a(param0 + 1);
                                   var14++;
                                   continue L14;
                                 } else {
@@ -325,25 +325,25 @@ final class cc {
                   }
                 } else {
                   L27: {
-                    var12 = ((cc) this).field_a.a(param0);
-                    var13 = ((cc) this).field_i.a(param0);
-                    if (((cc) this).field_d == null) {
+                    var12 = this.field_a.a(param0);
+                    var13 = this.field_i.a(param0);
+                    if (this.field_d == null) {
                       break L27;
                     } else {
-                      var14 = ((cc) this).field_d.a(param0);
-                      var15 = ((cc) this).field_j.a(param0);
-                      var12 = var12 + (this.a(var7, var15, ((cc) this).field_d.field_d) >> 1);
+                      var14 = this.field_d.a(param0);
+                      var15 = this.field_j.a(param0);
+                      var12 = var12 + (this.a(var7, var15, this.field_d.field_d) >> 1);
                       var7 = var7 + ((var14 * var5 >> 16) + var6);
                       break L27;
                     }
                   }
                   L28: {
-                    if (((cc) this).field_m == null) {
+                    if (this.field_m == null) {
                       break L28;
                     } else {
-                      var14 = ((cc) this).field_m.a(param0);
-                      var15 = ((cc) this).field_v.a(param0);
-                      var13 = var13 * ((this.a(var10, var15, ((cc) this).field_m.field_d) >> 1) + 32768) >> 15;
+                      var14 = this.field_m.a(param0);
+                      var15 = this.field_v.a(param0);
+                      var13 = var13 * ((this.a(var10, var15, this.field_m.field_d) >> 1) + 32768) >> 15;
                       var10 = var10 + ((var14 * var8 >> 16) + var9);
                       break L28;
                     }
@@ -351,10 +351,10 @@ final class cc {
                   var14 = 0;
                   L29: while (true) {
                     if (var14 < 5) {
-                      if (((cc) this).field_y[var14] != 0) {
+                      if (this.field_y[var14] != 0) {
                         var15 = var11 + field_x[var14];
                         if (var15 < param0) {
-                          field_q[var15] = field_q[var15] + this.a(field_u[var14], var13 * field_b[var14] >> 15, ((cc) this).field_a.field_d);
+                          field_q[var15] = field_q[var15] + this.a(field_u[var14], var13 * field_b[var14] >> 15, this.field_a.field_d);
                           field_u[var14] = field_u[var14] + ((var12 * field_k[var14] >> 16) + field_f[var14]);
                           var14++;
                           continue L29;
@@ -374,12 +374,12 @@ final class cc {
                 }
               }
             } else {
-              if (((cc) this).field_y[var11] != 0) {
+              if (this.field_y[var11] != 0) {
                 field_u[var11] = 0;
-                field_x[var11] = (int)((double)((cc) this).field_l[var11] * var3);
-                field_b[var11] = (((cc) this).field_y[var11] << 14) / 100;
-                field_k[var11] = (int)((double)(((cc) this).field_a.field_b - ((cc) this).field_a.field_i) * 32.768 * Math.pow(1.0057929410678534, (double)((cc) this).field_c[var11]) / var3);
-                field_f[var11] = (int)((double)((cc) this).field_a.field_i * 32.768 / var3);
+                field_x[var11] = (int)((double)this.field_l[var11] * var3);
+                field_b[var11] = (this.field_y[var11] << 14) / 100;
+                field_k[var11] = (int)((double)(this.field_a.field_b - this.field_a.field_i) * 32.768 * Math.pow(1.0057929410678534, (double)this.field_c[var11]) / var3);
+                field_f[var11] = (int)((double)this.field_a.field_i * 32.768 / var3);
                 var11++;
                 continue L2;
               } else {
@@ -428,19 +428,19 @@ final class cc {
         int var3 = 0;
         int var4 = 0;
         L0: {
-          ((cc) this).field_a = new i();
-          ((cc) this).field_a.b(param0);
-          ((cc) this).field_i = new i();
-          ((cc) this).field_i.b(param0);
+          this.field_a = new i();
+          this.field_a.b(param0);
+          this.field_i = new i();
+          this.field_i.b(param0);
           var2 = param0.e(false);
           if (var2 == 0) {
             break L0;
           } else {
             param0.field_i = param0.field_i - 1;
-            ((cc) this).field_d = new i();
-            ((cc) this).field_d.b(param0);
-            ((cc) this).field_j = new i();
-            ((cc) this).field_j.b(param0);
+            this.field_d = new i();
+            this.field_d.b(param0);
+            this.field_j = new i();
+            this.field_j.b(param0);
             break L0;
           }
         }
@@ -450,10 +450,10 @@ final class cc {
             break L1;
           } else {
             param0.field_i = param0.field_i - 1;
-            ((cc) this).field_m = new i();
-            ((cc) this).field_m.b(param0);
-            ((cc) this).field_v = new i();
-            ((cc) this).field_v.b(param0);
+            this.field_m = new i();
+            this.field_m.b(param0);
+            this.field_v = new i();
+            this.field_v.b(param0);
             break L1;
           }
         }
@@ -463,10 +463,10 @@ final class cc {
             break L2;
           } else {
             param0.field_i = param0.field_i - 1;
-            ((cc) this).field_o = new i();
-            ((cc) this).field_o.b(param0);
-            ((cc) this).field_p = new i();
-            ((cc) this).field_p.b(param0);
+            this.field_o = new i();
+            this.field_o.b(param0);
+            this.field_p = new i();
+            this.field_p.b(param0);
             break L2;
           }
         }
@@ -478,9 +478,9 @@ final class cc {
             } else {
               var4 = param0.d(-13583);
               if (var4 != 0) {
-                ((cc) this).field_y[var3] = var4;
-                ((cc) this).field_c[var3] = param0.a(255);
-                ((cc) this).field_l[var3] = param0.d(-13583);
+                this.field_y[var3] = var4;
+                this.field_c[var3] = param0.a(255);
+                this.field_l[var3] = param0.d(-13583);
                 var3++;
                 continue L3;
               } else {
@@ -488,32 +488,28 @@ final class cc {
               }
             }
           }
-          ((cc) this).field_s = param0.d(-13583);
-          ((cc) this).field_t = param0.d(-13583);
-          ((cc) this).field_g = param0.d((byte) 95);
-          ((cc) this).field_h = param0.d((byte) 58);
-          ((cc) this).field_n = new am();
-          ((cc) this).field_r = new i();
-          ((cc) this).field_n.a(param0, ((cc) this).field_r);
+          this.field_s = param0.d(-13583);
+          this.field_t = param0.d(-13583);
+          this.field_g = param0.d((byte) 95);
+          this.field_h = param0.d((byte) 58);
+          this.field_n = new am();
+          this.field_r = new i();
+          this.field_n.a(param0, this.field_r);
           return;
         }
     }
 
     cc() {
-        ((cc) this).field_t = 100;
-        ((cc) this).field_l = new int[]{0, 0, 0, 0, 0};
-        ((cc) this).field_g = 500;
-        ((cc) this).field_h = 0;
-        ((cc) this).field_s = 0;
-        ((cc) this).field_c = new int[]{0, 0, 0, 0, 0};
-        ((cc) this).field_y = new int[]{0, 0, 0, 0, 0};
+        this.field_t = 100;
+        this.field_l = new int[]{0, 0, 0, 0, 0};
+        this.field_g = 500;
+        this.field_h = 0;
+        this.field_s = 0;
+        this.field_c = new int[]{0, 0, 0, 0, 0};
+        this.field_y = new int[]{0, 0, 0, 0, 0};
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var1 = 0;
         field_e = new int[32768];
         Random var0 = new Random(0L);

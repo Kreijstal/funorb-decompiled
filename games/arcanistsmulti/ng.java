@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class ng extends df implements pj, vb {
     static aj field_I;
     static int field_G;
@@ -21,7 +19,7 @@ final class ng extends df implements pj, vb {
           if (null == ob.field_hb) {
             break L0;
           } else {
-            var1 = (Object) (Object) ob.field_hb;
+            var1 = ob.field_hb;
             synchronized (var1) {
               L1: {
                 ob.field_hb = null;
@@ -35,21 +33,25 @@ final class ng extends df implements pj, vb {
           if (param0 == -23) {
             break L2;
           } else {
-            field_D = null;
+            field_D = (byte[]) null;
             break L2;
           }
         }
     }
 
     private final String g(int param0) {
+        boolean discarded$0 = false;
         if (param0 != -7) {
-            Object var3 = null;
-            boolean discarded$0 = ((ng) this).a((qm) null, (byte) 70, 'ﾘ', 107);
+            qm var3 = (qm) null;
+            discarded$0 = this.a((qm) null, (byte) 70, 'ﾘ', 107);
         }
         return "<u=2164A2><col=2164A2>";
     }
 
     private final String g(byte param0) {
+        if (param0 != 94) {
+            field_H = (String) null;
+        }
         return "</col></u>";
     }
 
@@ -173,7 +175,7 @@ final class ng extends df implements pj, vb {
                     if (ao.field_h.length != 1) {
                       break L3;
                     } else {
-                      if (ao.field_h[0] != 2) {
+                      if (-3 != (ao.field_h[0] ^ -1)) {
                         break L3;
                       } else {
                         var8 = 0;
@@ -240,13 +242,13 @@ final class ng extends df implements pj, vb {
                     stackIn_33_0 = stackOut_31_0;
                     stackIn_32_0 = stackOut_31_0;
                     if (var8 == 0) {
-                      stackOut_33_0 = (kc) (Object) stackIn_33_0;
+                      stackOut_33_0 = (kc) ((Object) stackIn_33_0);
                       stackOut_33_1 = ah.field_d;
                       stackIn_34_0 = stackOut_33_0;
                       stackIn_34_1 = stackOut_33_1;
                       break L9;
                     } else {
-                      stackOut_32_0 = (kc) (Object) stackIn_32_0;
+                      stackOut_32_0 = (kc) ((Object) stackIn_32_0);
                       stackOut_32_1 = fi.field_b;
                       stackIn_34_0 = stackOut_32_0;
                       stackIn_34_1 = stackOut_32_1;
@@ -265,9 +267,9 @@ final class ng extends df implements pj, vb {
                     stackIn_35_1 = stackOut_34_1;
                     stackIn_35_2 = stackOut_34_2;
                     if (var8 == 0) {
-                      stackOut_36_0 = (kc) (Object) stackIn_36_0;
+                      stackOut_36_0 = (kc) ((Object) stackIn_36_0);
                       stackOut_36_1 = stackIn_36_1;
-                      stackOut_36_2 = (String[]) (Object) stackIn_36_2;
+                      stackOut_36_2 = (String[]) ((Object) stackIn_36_2);
                       stackOut_36_3 = bi.field_W;
                       stackIn_37_0 = stackOut_36_0;
                       stackIn_37_1 = stackOut_36_1;
@@ -275,9 +277,9 @@ final class ng extends df implements pj, vb {
                       stackIn_37_3 = stackOut_36_3;
                       break L10;
                     } else {
-                      stackOut_35_0 = (kc) (Object) stackIn_35_0;
+                      stackOut_35_0 = (kc) ((Object) stackIn_35_0);
                       stackOut_35_1 = stackIn_35_1;
-                      stackOut_35_2 = (String[]) (Object) stackIn_35_2;
+                      stackOut_35_2 = (String[]) ((Object) stackIn_35_2);
                       stackOut_35_3 = km.field_g;
                       stackIn_37_0 = stackOut_35_0;
                       stackIn_37_1 = stackOut_35_1;
@@ -310,7 +312,7 @@ final class ng extends df implements pj, vb {
                       L13: while (true) {
                         if (vf.field_l <= var13) {
                           jm.a(-1, (byte) -25, true, om.field_x, -1, vf.field_l, -1, 0);
-                          if (qf.field_d < 2) {
+                          if ((qf.field_d ^ -1) > -3) {
                             break L11;
                           } else {
                             if (!ri.field_b[12]) {
@@ -338,7 +340,7 @@ final class ng extends df implements pj, vb {
                         if (!nb.field_d) {
                           break L14;
                         } else {
-                          var9 = (Object) (Object) ("<col=A00000>" + w.field_Bb + "</col>");
+                          var9 = "<col=A00000>" + w.field_Bb + "</col>";
                           var11 = var9;
                           var9 = var11;
                           var11 = var9;
@@ -349,19 +351,19 @@ final class ng extends df implements pj, vb {
                       var10 = 0;
                       L15: while (true) {
                         if (var10 >= vf.field_l) {
-                          kh.field_c = "<col=A00000>" + nm.field_f + "<br>" + cd.field_s + (String) var9;
+                          kh.field_c = "<col=A00000>" + nm.field_f + "<br>" + cd.field_s + (String) (var9);
                           break L1;
                         } else {
                           L16: {
                             if (tk.field_q[var10]) {
                               var11_ref = "<col=A00000>" + ob.field_bb[var10] + "</col>";
-                              var9 = (Object) (Object) var11_ref;
-                              var9 = (Object) (Object) var11_ref;
+                              var9 = var11_ref;
+                              var9 = var11_ref;
                               if (var9 != null) {
-                                var9 = (Object) (Object) ((String) var9 + ", " + var11_ref);
+                                var9 = (String) (var9) + ", " + var11_ref;
                                 break L16;
                               } else {
-                                var9 = (Object) (Object) var11_ref;
+                                var9 = var11_ref;
                                 break L16;
                               }
                             } else {
@@ -392,36 +394,36 @@ final class ng extends df implements pj, vb {
                   }
                   L18: {
                     var16 = stackIn_24_0;
-                    var9 = (Object) (Object) var16;
-                    var9 = (Object) (Object) var16;
-                    var9 = (Object) (Object) var16;
+                    var9 = var16;
+                    var9 = var16;
+                    var9 = var16;
                     var10 = jf.field_d.field_Z.b(var16) + 3 * jf.field_d.field_Z.a('.');
                     jf.field_d.field_X = 0;
                     if (16 != (sb.field_e & 48)) {
                       break L18;
                     } else {
-                      var9 = (Object) (Object) (var16 + ".");
+                      var9 = var16 + ".";
                       break L18;
                     }
                   }
                   L19: {
                     jf.field_d.field_t = (jf.field_d.field_x - var10) / 2;
-                    if ((sb.field_e & 48) != 32) {
+                    if (-33 != (sb.field_e & 48 ^ -1)) {
                       break L19;
                     } else {
-                      var9 = (Object) (Object) ((String) var9 + "..");
+                      var9 = (String) (var9) + "..";
                       break L19;
                     }
                   }
                   L20: {
-                    if ((sb.field_e & 48) != 48) {
+                    if ((sb.field_e & 48 ^ -1) != -49) {
                       break L20;
                     } else {
-                      var9 = (Object) (Object) ((String) var9 + "...");
+                      var9 = (String) (var9) + "...";
                       break L20;
                     }
                   }
-                  jf.field_d.field_rb = (String) var9;
+                  jf.field_d.field_rb = (String) (var9);
                   dk.field_k.field_rb = sa.field_Eb.toUpperCase();
                   break L1;
                 }
@@ -435,19 +437,19 @@ final class ng extends df implements pj, vb {
                 if (!param2) {
                   break L22;
                 } else {
-                  stackOut_61_0 = (kc) (Object) stackIn_61_0;
+                  stackOut_61_0 = (kc) ((Object) stackIn_61_0);
                   stackIn_64_0 = stackOut_61_0;
                   stackIn_62_0 = stackOut_61_0;
                   if (param0) {
                     break L22;
                   } else {
-                    stackOut_62_0 = (kc) (Object) stackIn_62_0;
+                    stackOut_62_0 = (kc) ((Object) stackIn_62_0);
                     stackIn_64_0 = stackOut_62_0;
                     stackIn_63_0 = stackOut_62_0;
                     if (so.field_j) {
                       break L22;
                     } else {
-                      stackOut_63_0 = (kc) (Object) stackIn_63_0;
+                      stackOut_63_0 = (kc) ((Object) stackIn_63_0);
                       stackOut_63_1 = 1;
                       stackIn_65_0 = stackOut_63_0;
                       stackIn_65_1 = stackOut_63_1;
@@ -456,7 +458,7 @@ final class ng extends df implements pj, vb {
                   }
                 }
               }
-              stackOut_64_0 = (kc) (Object) stackIn_64_0;
+              stackOut_64_0 = (kc) ((Object) stackIn_64_0);
               stackOut_64_1 = 0;
               stackIn_65_0 = stackOut_64_0;
               stackIn_65_1 = stackOut_64_1;
@@ -471,19 +473,19 @@ final class ng extends df implements pj, vb {
                 if (!param2) {
                   break L24;
                 } else {
-                  stackOut_66_0 = (kc) (Object) stackIn_66_0;
+                  stackOut_66_0 = (kc) ((Object) stackIn_66_0);
                   stackIn_69_0 = stackOut_66_0;
                   stackIn_67_0 = stackOut_66_0;
                   if (param0) {
                     break L24;
                   } else {
-                    stackOut_67_0 = (kc) (Object) stackIn_67_0;
+                    stackOut_67_0 = (kc) ((Object) stackIn_67_0);
                     stackIn_69_0 = stackOut_67_0;
                     stackIn_68_0 = stackOut_67_0;
                     if (so.field_j) {
                       break L24;
                     } else {
-                      stackOut_68_0 = (kc) (Object) stackIn_68_0;
+                      stackOut_68_0 = (kc) ((Object) stackIn_68_0);
                       stackOut_68_1 = 1;
                       stackIn_70_0 = stackOut_68_0;
                       stackIn_70_1 = stackOut_68_1;
@@ -492,7 +494,7 @@ final class ng extends df implements pj, vb {
                   }
                 }
               }
-              stackOut_69_0 = (kc) (Object) stackIn_69_0;
+              stackOut_69_0 = (kc) ((Object) stackIn_69_0);
               stackOut_69_1 = 0;
               stackIn_70_0 = stackOut_69_0;
               stackIn_70_1 = stackOut_69_1;
@@ -507,19 +509,19 @@ final class ng extends df implements pj, vb {
                 if (!param2) {
                   break L26;
                 } else {
-                  stackOut_71_0 = (kc) (Object) stackIn_71_0;
+                  stackOut_71_0 = (kc) ((Object) stackIn_71_0);
                   stackIn_74_0 = stackOut_71_0;
                   stackIn_72_0 = stackOut_71_0;
                   if (param0) {
                     break L26;
                   } else {
-                    stackOut_72_0 = (kc) (Object) stackIn_72_0;
+                    stackOut_72_0 = (kc) ((Object) stackIn_72_0);
                     stackIn_74_0 = stackOut_72_0;
                     stackIn_73_0 = stackOut_72_0;
                     if (!so.field_j) {
                       break L26;
                     } else {
-                      stackOut_73_0 = (kc) (Object) stackIn_73_0;
+                      stackOut_73_0 = (kc) ((Object) stackIn_73_0);
                       stackOut_73_1 = 1;
                       stackIn_75_0 = stackOut_73_0;
                       stackIn_75_1 = stackOut_73_1;
@@ -528,7 +530,7 @@ final class ng extends df implements pj, vb {
                   }
                 }
               }
-              stackOut_74_0 = (kc) (Object) stackIn_74_0;
+              stackOut_74_0 = (kc) ((Object) stackIn_74_0);
               stackOut_74_1 = 0;
               stackIn_75_0 = stackOut_74_0;
               stackIn_75_1 = stackOut_74_1;
@@ -541,7 +543,7 @@ final class ng extends df implements pj, vb {
                 break L27;
               } else {
                 L28: {
-                  if (-1 == mo.field_o.field_U) {
+                  if (-1 == (mo.field_o.field_U ^ -1)) {
                     break L28;
                   } else {
                     bc.a(param1, -14431);
@@ -549,7 +551,7 @@ final class ng extends df implements pj, vb {
                   }
                 }
                 L29: {
-                  if (-1 == dk.field_k.field_U) {
+                  if (-1 == (dk.field_k.field_U ^ -1)) {
                     break L29;
                   } else {
                     if (!dn.field_Db) {
@@ -565,16 +567,25 @@ final class ng extends df implements pj, vb {
                 break L27;
               }
             }
+            L30: {
+              if (param3 > 105) {
+                break L30;
+              } else {
+                ng.a(false, -75L);
+                break L30;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var4, "ng.G(" + param0 + ',' + param1 + ',' + param2 + ',' + 118 + ')');
+          throw aa.a((Throwable) ((Object) var4), "ng.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+        String discarded$3 = null;
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -598,14 +609,14 @@ final class ng extends df implements pj, vb {
               if (param0) {
                 break L1;
               } else {
-                String discarded$3 = this.g(-67);
+                discarded$3 = this.g(-67);
                 break L1;
               }
             }
             L2: {
-              if (((ng) this).field_F == param4) {
+              if (this.field_F == param4) {
                 mo.g(-1);
-                ((ng) this).field_E.h(77);
+                this.field_E.h(77);
                 break L2;
               } else {
                 break L2;
@@ -617,23 +628,23 @@ final class ng extends df implements pj, vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var6;
+            stackOut_6_0 = (RuntimeException) (var6);
             stackOut_6_1 = new StringBuilder().append("ng.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param4 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -641,7 +652,7 @@ final class ng extends df implements pj, vb {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
@@ -657,6 +668,7 @@ final class ng extends df implements pj, vb {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_4_0 = 0;
         boolean stackOut_11_0 = false;
@@ -682,20 +694,23 @@ final class ng extends df implements pj, vb {
             if (super.a(param0, (byte) -122, param2, param3)) {
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (98 != param3) {
                 if (99 == param3) {
-                  stackOut_11_0 = ((ng) this).b(2, param0);
+                  stackOut_11_0 = this.b(2, param0);
                   stackIn_12_0 = stackOut_11_0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   return false;
                 }
               } else {
-                stackOut_7_0 = ((ng) this).a(param0, 9555);
+                stackOut_7_0 = this.a(param0, 9555);
                 stackIn_8_0 = stackOut_7_0;
-                return stackIn_8_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -703,23 +718,23 @@ final class ng extends df implements pj, vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var5;
+            stackOut_13_0 = (RuntimeException) (var5);
             stackOut_13_1 = new StringBuilder().append("ng.N(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -727,9 +742,17 @@ final class ng extends df implements pj, vb {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_12_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0;
+          } else {
+            return stackIn_12_0;
+          }
+        }
     }
 
     public final void a(int param0, ej param1, int param2, int param3) {
@@ -760,7 +783,7 @@ final class ng extends df implements pj, vb {
                 break L1;
               } else {
                 if (param3 != 1) {
-                  if (param3 == 2) {
+                  if ((param3 ^ -1) == -3) {
                     uh.a(127, "conduct.ws");
                     break L1;
                   } else {
@@ -776,7 +799,7 @@ final class ng extends df implements pj, vb {
               if (param2 == -1607) {
                 break L2;
               } else {
-                ((ng) this).field_J = null;
+                this.field_J = (ej) null;
                 break L2;
               }
             }
@@ -786,23 +809,23 @@ final class ng extends df implements pj, vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var5;
+            stackOut_11_0 = (RuntimeException) (var5);
             stackOut_11_1 = new StringBuilder().append("ng.C(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -810,12 +833,12 @@ final class ng extends df implements pj, vb {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void a(int param0) {
-        int var1 = 0;
+        int var1 = 96 % ((param0 - -43) / 49);
         field_I = null;
         field_H = null;
         field_D = null;
@@ -825,10 +848,24 @@ final class ng extends df implements pj, vb {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
-            {
+            try {
               L0: {
-                Thread.sleep(param1);
+                L1: {
+                  Thread.sleep(param1);
+                  if (param0) {
+                    break L1;
+                  } else {
+                    field_I = (aj) null;
+                    break L1;
+                  }
+                }
                 break L0;
+              }
+            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var3 = (InterruptedException) (Object) decompiledCaughtException;
+                break L2;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -864,50 +901,50 @@ final class ng extends df implements pj, vb {
         String stackOut_4_2 = null;
         try {
           L0: {
-            ((ng) this).field_E = param0;
-            ((ng) this).field_F = new ag(qn.field_lb, (wc) null);
-            ((ng) this).field_F.field_r = (pf) (Object) new mm();
-            var7 = tj.a(125, new String[2], ud.field_r);
+            this.field_E = param0;
+            this.field_F = new ag(qn.field_lb, (wc) null);
+            this.field_F.field_r = (pf) ((Object) new mm());
+            var7 = tj.a(125, new String[]{this.g(-7), this.g((byte) 94)}, ud.field_r);
             var3 = 20;
             var4 = new jm(ia.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_c.field_C, -1, 2147483647, true);
-            ((ng) this).field_J = new ej(var7, (pf) (Object) var4);
-            ((ng) this).field_J.field_q = "";
-            ((ng) this).field_J.a(0, 0, mm.field_s);
-            ((ng) this).field_J.a(1, 0, mm.field_s);
-            ((ng) this).field_J.field_o = (wc) this;
-            ((ng) this).field_J.field_v = -40 + ((ng) this).field_v;
-            ((ng) this).field_J.a(26, (byte) -4, ((ng) this).field_v - 40, var3);
-            var3 = var3 + (((ng) this).field_J.field_k - -15);
-            ((ng) this).c(-111, (qm) (Object) ((ng) this).field_J);
+            this.field_J = new ej(var7, var4);
+            this.field_J.field_q = "";
+            this.field_J.a(0, 0, mm.field_s);
+            this.field_J.a(1, 0, mm.field_s);
+            this.field_J.field_o = (wc) (this);
+            this.field_J.field_v = -40 + this.field_v;
+            this.field_J.a(26, (byte) -4, this.field_v - 40, var3);
+            var3 = var3 + (this.field_J.field_k - -15);
+            this.c(-111, this.field_J);
             var5 = 4;
             var6 = 200;
-            ((ng) this).field_F.a(40, var3, var6, 300 - var6 >> 1, -69);
-            ((ng) this).field_F.field_o = (wc) this;
-            ((ng) this).c(-109, (qm) (Object) ((ng) this).field_F);
-            ((ng) this).a(var5 + (var3 + 55), 0, 300, 0, -67);
+            this.field_F.a(40, var3, var6, 300 - var6 >> 1210249057, -69);
+            this.field_F.field_o = (wc) (this);
+            this.c(-109, this.field_F);
+            this.a(var5 + (var3 + 55), 0, 300, 0, -67);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var2;
+            stackOut_3_0 = (RuntimeException) (var2);
             stackOut_3_1 = new StringBuilder().append("ng.<init>(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -915,7 +952,7 @@ final class ng extends df implements pj, vb {
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -923,23 +960,23 @@ final class ng extends df implements pj, vb {
         if (!(0 != param1)) {
             return 12176339;
         }
-        if (param1 == 1) {
+        if (-2 == (param1 ^ -1)) {
             return 11731378;
         }
         int var2 = 18 / ((param0 - 8) / 44);
-        if (!(param1 != 3)) {
+        if (!((param1 ^ -1) != -4)) {
             return 12246236;
         }
         if (4 == param1) {
             return 14869724;
         }
-        if (!(param1 != 5)) {
+        if (!((param1 ^ -1) != -6)) {
             return 6716006;
         }
-        if (param1 == 6) {
+        if ((param1 ^ -1) == -7) {
             return 17408;
         }
-        if (param1 == 7) {
+        if (-8 == (param1 ^ -1)) {
             return 9938607;
         }
         if (8 == param1) {
@@ -949,10 +986,6 @@ final class ng extends df implements pj, vb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_H = "Accept unrated rematch";
         field_I = new aj(14, 0, 4, 1);
         field_K = 0;

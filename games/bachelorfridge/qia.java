@@ -7,9 +7,9 @@ final class qia {
 
     final boolean a(int param0) {
         if (param0 == 23716) {
-          if ((Object) (Object) lba.field_c != this) {
-            if (this != (Object) (Object) gca.field_f) {
-              if (this == (Object) (Object) uca.field_a) {
+          if (lba.field_c != this) {
+            if (this != gca.field_f) {
+              if (this == uca.field_a) {
                 return true;
               } else {
                 return false;
@@ -32,7 +32,7 @@ final class qia {
     public static void b(int param0) {
         field_a = null;
         field_b = null;
-        int var1 = 23;
+        int var1 = -94 / ((param0 - 69) / 47);
     }
 
     static {

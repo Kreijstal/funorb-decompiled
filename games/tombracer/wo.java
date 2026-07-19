@@ -16,38 +16,39 @@ final class wo extends vo implements va {
 
     public final int a(boolean param0) {
         if (!param0) {
-            field_k = null;
-            return ((wo) this).field_e;
+            field_k = (jea) null;
+            return this.field_e;
         }
-        return ((wo) this).field_e;
+        return this.field_e;
     }
 
     wo(cka param0, int param1, byte[] param2, int param3, boolean param4) {
         super(param0, 34962, param2, param3, param4);
         try {
-            ((wo) this).field_j = param1;
+            this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "wo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void d(int param0) {
-        ((wo) this).field_h.a(101, (va) this);
+        this.field_h.a(101, (va) (this));
         if (param0 != 34963) {
-            Object var3 = null;
-            ((wo) this).a(-36, 18, (byte) 18, (byte[]) null);
+            byte[] var3 = (byte[]) null;
+            this.a(-36, 18, (byte) 18, (byte[]) null);
         }
     }
 
     public final void a(int param0, int param1, byte param2, byte[] param3) {
+        int discarded$0 = 0;
         try {
-            ((wo) this).a(-114, param3, param1);
+            this.a(-114, param3, param1);
             if (param2 > -109) {
-                int discarded$0 = ((wo) this).a(-43);
+                discarded$0 = this.a(-43);
             }
-            ((wo) this).field_j = param0;
+            this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wo.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "wo.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,17 +59,13 @@ final class wo extends vo implements va {
 
     public final int a(int param0) {
         if (param0 != 26653) {
-            ((wo) this).field_j = 66;
-            return ((wo) this).field_j;
+            this.field_j = 66;
+            return this.field_j;
         }
-        return ((wo) this).field_j;
+        return this.field_j;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new ft(2);
     }
 }

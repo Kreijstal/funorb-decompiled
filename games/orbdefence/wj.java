@@ -12,6 +12,7 @@ abstract class wj extends o {
     abstract int e(int param0);
 
     final static String g(int param0) {
+        String discarded$6 = null;
         if (param0 == -16470) {
           if (!bm.field_e) {
             if (sd.field_g >= gk.field_b) {
@@ -27,7 +28,7 @@ abstract class wj extends o {
             return null;
           }
         } else {
-          String discarded$6 = wj.g(114);
+          discarded$6 = wj.g(114);
           if (!bm.field_e) {
             if (sd.field_g >= gk.field_b) {
               if (gk.field_b + df.field_i <= sd.field_g) {
@@ -45,14 +46,26 @@ abstract class wj extends o {
     }
 
     final static void b(byte param0) {
-        if (!vj.a(97)) {
+        if (param0 >= 112) {
+          if (!vj.a(97)) {
             cc.field_f.a(true);
             return;
+          } else {
+            return;
+          }
+        } else {
+          field_k = (ml) null;
+          if (vj.a(97)) {
+            return;
+          } else {
+            cc.field_f.a(true);
+            return;
+          }
         }
     }
 
     public static void c(byte param0) {
-        int var1 = 0;
+        int var1 = 121 % ((-48 - param0) / 35);
         field_k = null;
         field_o = null;
     }
@@ -60,15 +73,15 @@ abstract class wj extends o {
     abstract byte[] f(int param0);
 
     final static void a(int param0, boolean param1, boolean param2) {
-        Object var4 = null;
+        String var4 = (String) null;
         hm.a((String) null, (byte) 33, param2, param1);
         if (param0 > -65) {
-            field_k = null;
+            field_k = (ml) null;
         }
     }
 
     wj() {
-        ((wj) this).field_l = true;
+        this.field_l = true;
     }
 
     static {

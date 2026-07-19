@@ -11,15 +11,16 @@ final class nk extends df {
     static volatile int field_e;
 
     final void a(int param0, qc param1) {
+        byte[] discarded$0 = null;
         try {
             if (param0 <= 107) {
-                Object var4 = null;
-                byte[] discarded$0 = nk.a((byte[]) null, -72);
+                byte[] var4 = (byte[]) null;
+                discarded$0 = nk.a((byte[]) null, -72);
             }
-            param1.a(((nk) this).field_d, (byte) -126);
-            param1.a(((nk) this).field_h, false);
+            param1.a(this.field_d, (byte) -126);
+            param1.a(this.field_h, false);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "nk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "nk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,7 +51,7 @@ final class nk extends df {
             var2_int = param0.length;
             var3 = new byte[var2_int];
             sf.a(param0, 0, var3, param1, var2_int);
-            stackOut_0_0 = (byte[]) var3;
+            stackOut_0_0 = (byte[]) (var3);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -58,23 +59,23 @@ final class nk extends df {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_0 = (RuntimeException) (var2);
             stackOut_2_1 = new StringBuilder().append("nk.A(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -82,7 +83,7 @@ final class nk extends df {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
@@ -92,11 +93,14 @@ final class nk extends df {
         field_f = null;
         field_g = null;
         field_c = null;
+        if (param0 != -17226) {
+            field_g = (String) null;
+        }
     }
 
     final qg a(byte param0) {
         if (param0 != -32) {
-            field_c = null;
+            field_c = (int[]) null;
             return ej.field_b;
         }
         return ej.field_b;
@@ -104,18 +108,14 @@ final class nk extends df {
 
     nk(String param0, String param1) {
         try {
-            ((nk) this).field_h = param1;
-            ((nk) this).field_d = param0;
+            this.field_h = param1;
+            this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Start Game";
         field_i = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_f = new int[1000];

@@ -30,7 +30,7 @@ final class th {
           L0: {
             L1: {
               var2_int = fb.a(wo.field_h, (byte) 119, rj.field_I);
-              if (var2_int == 1) {
+              if (-2 == (var2_int ^ -1)) {
                 param1 = "<img=0>" + param1;
                 break L1;
               } else {
@@ -38,14 +38,14 @@ final class th {
               }
             }
             L2: {
-              if (2 == var2_int) {
+              if (param0 == var2_int) {
                 param1 = "<img=1>" + param1;
                 break L2;
               } else {
                 break L2;
               }
             }
-            stackOut_6_0 = (String) param1;
+            stackOut_6_0 = (String) (param1);
             stackIn_7_0 = stackOut_6_0;
             break L0;
           }
@@ -53,23 +53,23 @@ final class th {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2;
-            stackOut_8_1 = new StringBuilder().append("th.B(").append(2).append(',');
+            stackOut_8_0 = (RuntimeException) (var2);
+            stackOut_8_1 = new StringBuilder().append("th.B(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -77,13 +77,18 @@ final class th {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_7_0;
     }
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 > -94) {
+            field_b = (tf) null;
+            field_b = null;
+            return;
+        }
         field_b = null;
     }
 
@@ -94,10 +99,10 @@ final class th {
         int stackOut_6_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
-        param0 = param0 & 8191;
-        if (-4097 < param0) {
+        param0 = param0 & param1;
+        if (-4097 < (param0 ^ -1)) {
           L0: {
-            if (-2049 <= param0) {
+            if (-2049 >= (param0 ^ -1)) {
               stackOut_7_0 = -k.field_i[-2048 + param0];
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -110,7 +115,7 @@ final class th {
           return stackIn_8_0;
         } else {
           L1: {
-            if (param0 < 6144) {
+            if (-6145 < (param0 ^ -1)) {
               stackOut_3_0 = -k.field_i[-param0 + 6144];
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -138,10 +143,6 @@ final class th {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Mouse over an icon for details";
     }
 }

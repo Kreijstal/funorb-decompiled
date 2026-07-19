@@ -29,15 +29,11 @@ final class vg extends IOException {
     }
 
     final static void a(int param0, byte param1) {
-        ud.field_v = 20000000L;
-        int var2 = -15;
+        ud.field_v = 1000000000L / (long)param0;
+        int var2 = -47 / ((58 - param1) / 61);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "ENERGY";
         field_d = "To server list";
         field_a = true;

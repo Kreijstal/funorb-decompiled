@@ -16,75 +16,79 @@ final class n {
     db[] field_f;
 
     final void a(n param0, int param1) {
-        param0.field_f = ((n) this).field_f;
-        param0.field_j = ((n) this).field_j;
+        param0.field_f = this.field_f;
+        param0.field_j = this.field_j;
         if (param1 != -25682) {
             return;
         }
         try {
-            param0.field_e = ((n) this).field_e;
-            param0.field_g = ((n) this).field_g;
-            param0.field_i = ((n) this).field_i;
-            param0.field_d = ((n) this).field_d;
-            param0.field_b = ((n) this).field_b;
-            param0.field_a = ((n) this).field_a;
+            param0.field_e = this.field_e;
+            param0.field_g = this.field_g;
+            param0.field_i = this.field_i;
+            param0.field_d = this.field_d;
+            param0.field_b = this.field_b;
+            param0.field_a = this.field_a;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "n.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "n.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final n a(byte param0, int param1) {
-        ((n) this).field_b = param1;
+        this.field_b = param1;
         if (param0 != 101) {
-            return null;
+            return (n) null;
         }
-        return (n) this;
+        return (n) (this);
     }
 
     public static void b(int param0) {
         field_k = null;
         field_h = null;
         field_c = null;
+        if (param0 != 23887) {
+            return;
+        }
         field_l = null;
     }
 
     final n b(byte param0, int param1) {
         int var3 = -27 / ((param0 - -70) / 50);
-        ((n) this).field_g = param1;
-        return (n) this;
+        this.field_g = param1;
+        return (n) (this);
     }
 
     final n a(boolean param0, int param1) {
-        ((n) this).field_e = param0 ? true : false;
+        this.field_e = param0 ? true : false;
         if (param1 <= 101) {
-            field_h = null;
-            return (n) this;
+            field_h = (String) null;
+            return (n) (this);
         }
-        return (n) this;
+        return (n) (this);
     }
 
     final void a(int param0) {
-        ((n) this).field_d = 0;
-        ((n) this).field_g = 0;
-        ((n) this).field_b = -1;
-        ((n) this).field_a = 256;
-        ((n) this).field_f = null;
+        this.field_d = 0;
+        this.field_g = 0;
+        this.field_b = -1;
+        this.field_a = 256;
+        this.field_f = null;
         if (param0 < 69) {
           return;
         } else {
-          ((n) this).field_i = 0;
-          ((n) this).field_j = null;
+          this.field_i = 0;
+          this.field_j = null;
           return;
         }
     }
 
     final n a(int param0, int param1) {
-        ((n) this).field_i = param0;
+        this.field_i = param0;
         int var3 = 72 / ((param1 - 9) / 52);
-        return (n) this;
+        return (n) (this);
     }
 
     final void a(lh param0, w param1, int param2, int param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         String var6_ref = null;
@@ -231,18 +235,18 @@ final class n {
               if (param3 < -94) {
                 break L1;
               } else {
-                field_k = null;
+                field_k = (mb) null;
                 break L1;
               }
             }
             L2: {
-              gf.a(param1.field_t + param2, param1.field_v, ((n) this).field_f, param1.field_j, param1.field_o + param4, (byte) 91);
-              if (null != ((n) this).field_j) {
+              gf.a(param1.field_t + param2, param1.field_v, this.field_f, param1.field_j, param1.field_o + param4, (byte) 91);
+              if (null != this.field_j) {
                 L3: {
-                  var6_int = ((n) this).field_i + (param1.field_t + param2);
-                  var7 = ((n) this).field_g + param1.field_o + param4;
-                  if (param0.field_p == 1) {
-                    var6_int = var6_int + (-((n) this).field_j.field_r + param1.field_j) / 2;
+                  var6_int = this.field_i + (param1.field_t + param2);
+                  var7 = this.field_g + param1.field_o + param4;
+                  if ((param0.field_p ^ -1) == -2) {
+                    var6_int = var6_int + (-this.field_j.field_r + param1.field_j) / 2;
                     break L3;
                   } else {
                     break L3;
@@ -252,27 +256,27 @@ final class n {
                   if (2 != param0.field_p) {
                     break L4;
                   } else {
-                    var6_int = var6_int + (-((n) this).field_j.field_r + param1.field_j);
+                    var6_int = var6_int + (-this.field_j.field_r + param1.field_j);
                     break L4;
                   }
                 }
                 L5: {
-                  if (param0.field_m != 1) {
+                  if ((param0.field_m ^ -1) != -2) {
                     break L5;
                   } else {
-                    var7 = var7 + (param1.field_v - ((n) this).field_j.field_x) / 2;
+                    var7 = var7 + (param1.field_v - this.field_j.field_x) / 2;
                     break L5;
                   }
                 }
                 L6: {
-                  if (param0.field_m != 2) {
+                  if ((param0.field_m ^ -1) != -3) {
                     break L6;
                   } else {
-                    var7 = var7 + (-((n) this).field_j.field_x + param1.field_v);
+                    var7 = var7 + (-this.field_j.field_x + param1.field_v);
                     break L6;
                   }
                 }
-                ((n) this).field_j.d(var6_int, var7);
+                this.field_j.d(var6_int, var7);
                 break L2;
               } else {
                 break L2;
@@ -286,26 +290,26 @@ final class n {
                 if (null == param0.field_f) {
                   break L7;
                 } else {
-                  if (((n) this).field_d >= 0) {
+                  if ((this.field_d ^ -1) <= -1) {
                     L8: {
                       stackOut_18_0 = param0.field_f;
-                      stackOut_18_1 = (String) var6_ref;
+                      stackOut_18_1 = (String) (var6_ref);
                       stackIn_20_0 = stackOut_18_0;
                       stackIn_20_1 = stackOut_18_1;
                       stackIn_19_0 = stackOut_18_0;
                       stackIn_19_1 = stackOut_18_1;
-                      if (((n) this).field_i == -2147483648) {
-                        stackOut_20_0 = (le) (Object) stackIn_20_0;
-                        stackOut_20_1 = (String) (Object) stackIn_20_1;
+                      if (this.field_i == -2147483648) {
+                        stackOut_20_0 = (le) ((Object) stackIn_20_0);
+                        stackOut_20_1 = (String) ((Object) stackIn_20_1);
                         stackOut_20_2 = 0;
                         stackIn_21_0 = stackOut_20_0;
                         stackIn_21_1 = stackOut_20_1;
                         stackIn_21_2 = stackOut_20_2;
                         break L8;
                       } else {
-                        stackOut_19_0 = (le) (Object) stackIn_19_0;
-                        stackOut_19_1 = (String) (Object) stackIn_19_1;
-                        stackOut_19_2 = ((n) this).field_i;
+                        stackOut_19_0 = (le) ((Object) stackIn_19_0);
+                        stackOut_19_1 = (String) ((Object) stackIn_19_1);
+                        stackOut_19_2 = this.field_i;
                         stackIn_21_0 = stackOut_19_0;
                         stackIn_21_1 = stackOut_19_1;
                         stackIn_21_2 = stackOut_19_2;
@@ -313,8 +317,8 @@ final class n {
                       }
                     }
                     L9: {
-                      stackOut_21_0 = (le) (Object) stackIn_21_0;
-                      stackOut_21_1 = (String) (Object) stackIn_21_1;
+                      stackOut_21_0 = (le) ((Object) stackIn_21_0);
+                      stackOut_21_1 = (String) ((Object) stackIn_21_1);
                       stackOut_21_2 = stackIn_21_2 + (param0.field_a + param2) + param1.field_t;
                       stackOut_21_3 = param0.field_d;
                       stackOut_21_4 = param4;
@@ -331,9 +335,9 @@ final class n {
                       stackIn_22_3 = stackOut_21_3;
                       stackIn_22_4 = stackOut_21_4;
                       stackIn_22_5 = stackOut_21_5;
-                      if (((n) this).field_g == -2147483648) {
-                        stackOut_23_0 = (le) (Object) stackIn_23_0;
-                        stackOut_23_1 = (String) (Object) stackIn_23_1;
+                      if ((this.field_g ^ -1) == 2147483647) {
+                        stackOut_23_0 = (le) ((Object) stackIn_23_0);
+                        stackOut_23_1 = (String) ((Object) stackIn_23_1);
                         stackOut_23_2 = stackIn_23_2;
                         stackOut_23_3 = stackIn_23_3;
                         stackOut_23_4 = stackIn_23_4;
@@ -348,13 +352,13 @@ final class n {
                         stackIn_24_6 = stackOut_23_6;
                         break L9;
                       } else {
-                        stackOut_22_0 = (le) (Object) stackIn_22_0;
-                        stackOut_22_1 = (String) (Object) stackIn_22_1;
+                        stackOut_22_0 = (le) ((Object) stackIn_22_0);
+                        stackOut_22_1 = (String) ((Object) stackIn_22_1);
                         stackOut_22_2 = stackIn_22_2;
                         stackOut_22_3 = stackIn_22_3;
                         stackOut_22_4 = stackIn_22_4;
                         stackOut_22_5 = stackIn_22_5;
-                        stackOut_22_6 = ((n) this).field_g;
+                        stackOut_22_6 = this.field_g;
                         stackIn_24_0 = stackOut_22_0;
                         stackIn_24_1 = stackOut_22_1;
                         stackIn_24_2 = stackOut_22_2;
@@ -366,14 +370,14 @@ final class n {
                       }
                     }
                     L10: {
-                      stackOut_24_0 = (le) (Object) stackIn_24_0;
-                      stackOut_24_1 = (String) (Object) stackIn_24_1;
+                      stackOut_24_0 = (le) ((Object) stackIn_24_0);
+                      stackOut_24_1 = (String) ((Object) stackIn_24_1);
                       stackOut_24_2 = stackIn_24_2;
                       stackOut_24_3 = stackIn_24_3 + (stackIn_24_4 + (stackIn_24_5 + stackIn_24_6));
                       stackOut_24_4 = -param0.field_r + -param0.field_a + param1.field_j;
                       stackOut_24_5 = -param0.field_d + param1.field_v + -param0.field_o;
-                      stackOut_24_6 = ((n) this).field_d;
-                      stackOut_24_7 = ((n) this).field_b;
+                      stackOut_24_6 = this.field_d;
+                      stackOut_24_7 = this.field_b;
                       stackIn_26_0 = stackOut_24_0;
                       stackIn_26_1 = stackOut_24_1;
                       stackIn_26_2 = stackOut_24_2;
@@ -390,16 +394,16 @@ final class n {
                       stackIn_25_5 = stackOut_24_5;
                       stackIn_25_6 = stackOut_24_6;
                       stackIn_25_7 = stackOut_24_7;
-                      if (((n) this).field_a != -2147483648) {
-                        stackOut_26_0 = (le) (Object) stackIn_26_0;
-                        stackOut_26_1 = (String) (Object) stackIn_26_1;
+                      if (this.field_a != -2147483648) {
+                        stackOut_26_0 = (le) ((Object) stackIn_26_0);
+                        stackOut_26_1 = (String) ((Object) stackIn_26_1);
                         stackOut_26_2 = stackIn_26_2;
                         stackOut_26_3 = stackIn_26_3;
                         stackOut_26_4 = stackIn_26_4;
                         stackOut_26_5 = stackIn_26_5;
                         stackOut_26_6 = stackIn_26_6;
                         stackOut_26_7 = stackIn_26_7;
-                        stackOut_26_8 = ((n) this).field_a;
+                        stackOut_26_8 = this.field_a;
                         stackIn_27_0 = stackOut_26_0;
                         stackIn_27_1 = stackOut_26_1;
                         stackIn_27_2 = stackOut_26_2;
@@ -411,8 +415,8 @@ final class n {
                         stackIn_27_8 = stackOut_26_8;
                         break L10;
                       } else {
-                        stackOut_25_0 = (le) (Object) stackIn_25_0;
-                        stackOut_25_1 = (String) (Object) stackIn_25_1;
+                        stackOut_25_0 = (le) ((Object) stackIn_25_0);
+                        stackOut_25_1 = (String) ((Object) stackIn_25_1);
                         stackOut_25_2 = stackIn_25_2;
                         stackOut_25_3 = stackIn_25_3;
                         stackOut_25_4 = stackIn_25_4;
@@ -432,7 +436,7 @@ final class n {
                         break L10;
                       }
                     }
-                    int discarded$1 = ((le) (Object) stackIn_27_0).a(stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_27_8, param0.field_p, param0.field_m, param0.field_n);
+                    discarded$1 = ((le) (Object) stackIn_27_0).a(stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_27_8, param0.field_p, param0.field_m, param0.field_n);
                     break L7;
                   } else {
                     return;
@@ -446,23 +450,23 @@ final class n {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var6 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) var6;
+            stackOut_29_0 = (RuntimeException) (var6);
             stackOut_29_1 = new StringBuilder().append("n.L(");
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
             stackIn_30_1 = stackOut_29_1;
             if (param0 == null) {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "null";
               stackIn_32_0 = stackOut_31_0;
               stackIn_32_1 = stackOut_31_1;
               stackIn_32_2 = stackOut_31_2;
               break L11;
             } else {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "{...}";
               stackIn_32_0 = stackOut_30_0;
               stackIn_32_1 = stackOut_30_1;
@@ -471,23 +475,23 @@ final class n {
             }
           }
           L12: {
-            stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+            stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
             stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',');
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
             stackIn_33_1 = stackOut_32_1;
             if (param1 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "null";
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
               break L12;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "{...}";
               stackIn_35_0 = stackOut_33_0;
               stackIn_35_1 = stackOut_33_1;
@@ -495,22 +499,22 @@ final class n {
               break L12;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final n a(int param0, byte param1) {
-        ((n) this).field_d = param0;
+        this.field_d = param0;
         if (param1 > -72) {
-            field_k = null;
-            return (n) this;
+            field_k = (mb) null;
+            return (n) (this);
         }
-        return (n) this;
+        return (n) (this);
     }
 
     final n a(byte param0, db[] param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        n stackIn_2_0 = null;
         Object stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -519,9 +523,10 @@ final class n {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        n stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -533,37 +538,39 @@ final class n {
         try {
           L0: {
             if (param0 <= -101) {
-              ((n) this).field_f = param1;
+              this.field_f = param1;
               stackOut_3_0 = this;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (n) null;
               stackIn_2_0 = stackOut_1_0;
-              return (n) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("n.F(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -571,48 +578,79 @@ final class n {
               break L1;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
-        return (n) this;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return (n) (this);
+        }
     }
 
     final static boolean c(int param0) {
-        if (null == da.field_a) {
+        if (param0 == -2147483648) {
+          if (null != da.field_a) {
+            if (!da.field_a.a(0)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (!da.field_a.a(0)) {
+          }
+        } else {
+          n.b(29);
+          if (null != da.field_a) {
+            if (!da.field_a.a(0)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     final static void b(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         f var4 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
             if (param1 == -1) {
-              var4 = (f) (Object) dj.field_c.a(true);
+              var4 = (f) ((Object) dj.field_c.a(true));
               L1: while (true) {
                 if (var4 == null) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  ch.a(18391, 7, var4);
-                  var4 = (f) (Object) dj.field_c.f(2);
-                  continue L1;
+                  ch.a(18391, param0, var4);
+                  var4 = (f) ((Object) dj.field_c.f(2));
+                  if (var3 == 0) {
+                    continue L1;
+                  } else {
+                    return;
+                  }
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2, "n.M(" + 7 + ',' + param1 + ')');
+          throw ld.a((Throwable) ((Object) var2), "n.M(" + param0 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -639,6 +677,7 @@ final class n {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_31_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
@@ -667,7 +706,7 @@ final class n {
         try {
           L0: {
             L1: {
-              if (((n) this).field_e) {
+              if (this.field_e) {
                 param1.a(param4, param5, param0, param2 + -191, param3);
                 param1.a(101);
                 break L1;
@@ -676,85 +715,87 @@ final class n {
               }
             }
             L2: {
-              if (-1 > ((n) this).field_d) {
+              if (-1 > this.field_d) {
                 break L2;
               } else {
-                param1.field_d = ((n) this).field_d;
+                param1.field_d = this.field_d;
                 break L2;
               }
             }
             L3: {
-              if (((n) this).field_j == null) {
+              if (this.field_j == null) {
                 break L3;
               } else {
-                param1.field_j = ((n) this).field_j;
+                param1.field_j = this.field_j;
                 break L3;
               }
             }
             L4: {
-              if (((n) this).field_g == -2147483648) {
+              if (this.field_g == -2147483648) {
                 break L4;
               } else {
-                param1.field_g = ((n) this).field_g;
+                param1.field_g = this.field_g;
                 break L4;
               }
             }
             L5: {
-              if (((n) this).field_a == -2147483648) {
+              if ((this.field_a ^ -1) == 2147483647) {
                 break L5;
               } else {
-                param1.field_a = ((n) this).field_a;
+                param1.field_a = this.field_a;
                 break L5;
               }
             }
             L6: {
-              if (-2147483648 != ((n) this).field_i) {
-                param1.field_i = ((n) this).field_i;
+              if (-2147483648 != this.field_i) {
+                param1.field_i = this.field_i;
                 break L6;
               } else {
                 break L6;
               }
             }
             L7: {
-              if (-1 > ((n) this).field_b) {
+              if (-1 > this.field_b) {
                 break L7;
               } else {
-                param1.field_b = ((n) this).field_b;
+                param1.field_b = this.field_b;
                 break L7;
               }
             }
             if (param2 == 76) {
-              if (((n) this).field_f != null) {
-                param1.field_f = ((n) this).field_f;
+              if (this.field_f != null) {
+                param1.field_f = this.field_f;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var7 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var7;
+            stackOut_22_0 = (RuntimeException) (var7);
             stackOut_22_1 = new StringBuilder().append("n.C(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L8;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -763,23 +804,23 @@ final class n {
             }
           }
           L9: {
-            stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+            stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
             stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param4 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L9;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -788,23 +829,23 @@ final class n {
             }
           }
           L10: {
-            stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+            stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
             stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
             stackIn_29_1 = stackOut_28_1;
             if (param5 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "null";
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
               break L10;
             } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "{...}";
               stackIn_31_0 = stackOut_29_0;
               stackIn_31_1 = stackOut_29_1;
@@ -812,28 +853,29 @@ final class n {
               break L10;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     n() {
-        ((n) this).field_j = null;
-        ((n) this).field_g = -2147483648;
-        ((n) this).field_e = false;
-        ((n) this).field_d = -2;
-        ((n) this).field_i = -2147483648;
-        ((n) this).field_a = -2147483648;
-        ((n) this).field_b = -2;
-        ((n) this).field_f = null;
+        this.field_j = null;
+        this.field_g = -2147483648;
+        this.field_e = false;
+        this.field_d = -2;
+        this.field_i = -2147483648;
+        this.field_a = -2147483648;
+        this.field_b = -2;
+        this.field_f = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Click";
-        field_l = new char[]{'[', ']', '#'};
+        field_l = new char[]{(char)91, (char)93, (char)35};
         field_h = "Continue";
     }
 }

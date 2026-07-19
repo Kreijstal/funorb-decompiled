@@ -28,6 +28,7 @@ final class oh extends hg {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
@@ -43,7 +44,7 @@ final class oh extends hg {
               rh.field_O[0] = gk.field_a.nextInt();
               rh.field_O[1] = gk.field_a.nextInt();
               qj.field_a.field_m = 0;
-              rh.field_O[2] = (int)(va.field_b >> 32);
+              rh.field_O[2] = (int)(va.field_b >> -714347936);
               rh.field_O[3] = (int)va.field_b;
               qj.field_a.a((byte) 126, rh.field_O[0]);
               qj.field_a.a((byte) 123, rh.field_O[1]);
@@ -99,8 +100,8 @@ final class oh extends hg {
               }
             }
             L6: {
-              om.field_c.f(var6, -123);
-              var7 = tf.a(-1, oc.d((byte) -120));
+              om.field_c.f(var6, param4 + -24);
+              var7 = tf.a(param4 ^ 98, oc.d((byte) -120));
               if (var7 == null) {
                 var7 = "";
                 break L6;
@@ -109,40 +110,46 @@ final class oh extends hg {
               }
             }
             om.field_c.a(var7, 101);
-            L7: {
-              if (p.field_i != null) {
-                om.field_c.a((byte) 100, p.field_i);
-                break L7;
-              } else {
-                break L7;
+            if (param4 == -99) {
+              L7: {
+                if (p.field_i != null) {
+                  om.field_c.a((byte) 100, p.field_i);
+                  break L7;
+                } else {
+                  break L7;
+                }
               }
+              bn.a(param4 ^ -99, om.field_c, qj.field_a, q.field_O, cf.field_c);
+              om.field_c.i(-var5_int + om.field_c.field_m, 32614);
+              rn.a(-1, param4 + 30884);
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-            bn.a(0, (n) (Object) om.field_c, qj.field_a, q.field_O, cf.field_c);
-            om.field_c.i(-var5_int + om.field_c.field_m, 32614);
-            rn.a(-1, 30785);
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var5;
+            stackOut_22_0 = (RuntimeException) (var5);
             stackOut_22_1 = new StringBuilder().append("oh.B(");
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L8;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -150,25 +157,38 @@ final class oh extends hg {
               break L8;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + -99 + ')');
+          throw t.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(byte param0) {
-        field_p = null;
-        field_k = null;
-        field_n = null;
-        field_g = null;
+        vj var2 = null;
+        if (param0 != -20) {
+          var2 = (vj) null;
+          oh.a((vj) null, true, 101, true, (byte) -46);
+          field_p = null;
+          field_k = null;
+          field_n = null;
+          field_g = null;
+          return;
+        } else {
+          field_p = null;
+          field_k = null;
+          field_n = null;
+          field_g = null;
+          return;
+        }
     }
 
     oh() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Extra thrust";
         field_n = new ee("usename");
         field_k = " - activate shield";

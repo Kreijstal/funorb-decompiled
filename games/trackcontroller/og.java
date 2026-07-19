@@ -13,17 +13,17 @@ final class og extends jj implements m {
     og(vl param0, vd param1) {
         super(param0, p.field_a, sa.field_J, false, false);
         try {
-            ((og) this).field_mb = param1;
+            this.field_mb = param1;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean j(int param0) {
         nj var2 = null;
         if (param0 < -18) {
-          if (((og) this).field_E) {
-            if (!((og) this).field_ob) {
+          if (this.field_E) {
+            if (!this.field_ob) {
               var2 = dd.d((byte) 91);
               if (var2 == null) {
                 return super.j(-56);
@@ -44,6 +44,9 @@ final class og extends jj implements m {
 
     final static void f(byte param0) {
         fi.field_o = false;
+        if (param0 != -83) {
+            return;
+        }
         int discarded$0 = ne.field_a.h(16383);
     }
 
@@ -53,31 +56,34 @@ final class og extends jj implements m {
     }
 
     private final void a(boolean param0, nj param1, int param2) {
+        rh discarded$2 = null;
+        rh discarded$3 = null;
         RuntimeException var4 = null;
         String var4_ref = null;
         lc var5 = null;
         int var6 = 0;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
-        String stackIn_34_2 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        String stackIn_35_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        RuntimeException stackOut_34_0 = null;
+        StringBuilder stackOut_34_1 = null;
+        String stackOut_34_2 = null;
         RuntimeException stackOut_33_0 = null;
         StringBuilder stackOut_33_1 = null;
         String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
         var6 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
             L1: {
-              ((og) this).field_ob = true;
+              this.field_ob = true;
               if (param1.field_e) {
                 var4_ref = tk.field_s;
                 break L1;
@@ -96,13 +102,13 @@ final class og extends jj implements m {
                       }
                     }
                     var4_ref = pi.field_h;
-                    ((og) this).field_lb = true;
+                    this.field_lb = true;
                     break L1;
                   }
                 } else {
                   var4_ref = ga.field_f;
-                  if (((og) this).field_mb != null) {
-                    ((og) this).field_mb.a((byte) 121);
+                  if (this.field_mb != null) {
+                    this.field_mb.a((byte) 121);
                     break L1;
                   } else {
                     break L1;
@@ -111,19 +117,20 @@ final class og extends jj implements m {
               }
             }
             L3: {
-              var5 = new lc((jj) this, p.field_a, var4_ref);
+              var5 = new lc((jj) (this), p.field_a, var4_ref);
               if (param1.field_e) {
                 if (param1.field_f) {
-                  ((og) this).b((al) (Object) new ge((og) this), -115);
-                  return;
+                  this.b(new ge((og) (this)), param2 ^ -118);
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
-                  rh discarded$2 = var5.a(-14, (tg) this, hd.field_m);
+                  discarded$2 = var5.a(param2 + -21, (tg) (this), hd.field_m);
                   break L3;
                 }
               } else {
                 L4: {
-                  if (((og) this).field_lb) {
-                    rh discarded$3 = var5.a(-14, (tg) this, hd.field_m);
+                  if (this.field_lb) {
+                    discarded$3 = var5.a(-14, (tg) (this), hd.field_m);
                     break L4;
                   } else {
                     if (param1.field_b == 5) {
@@ -131,13 +138,13 @@ final class og extends jj implements m {
                       var5.a(-17040, cg.field_b, 17);
                       break L4;
                     } else {
-                      var5.a(-17040, ea.field_p, -1);
+                      var5.a(param2 ^ -17033, ea.field_p, -1);
                       break L4;
                     }
                   }
                 }
-                if (-4 != param1.field_b) {
-                  if (-7 == param1.field_b) {
+                if (-4 != (param1.field_b ^ -1)) {
+                  if (-7 == (param1.field_b ^ -1)) {
                     var5.a(-17040, md.field_c, 9);
                     break L3;
                   } else {
@@ -149,38 +156,53 @@ final class og extends jj implements m {
                 }
               }
             }
-            ((og) this).b((al) (Object) var5, -102);
-            break L0;
+            if (param2 == 7) {
+              this.b(var5, param2 + -109);
+              decompiledRegionSelector0 = 2;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 1;
+              break L0;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var4;
-            stackOut_31_1 = new StringBuilder().append("og.T(").append(param0).append(',');
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackOut_32_0 = (RuntimeException) (var4);
+            stackOut_32_1 = new StringBuilder().append("og.T(").append(param0).append(',');
+            stackIn_34_0 = stackOut_32_0;
+            stackIn_34_1 = stackOut_32_1;
+            stackIn_33_0 = stackOut_32_0;
+            stackIn_33_1 = stackOut_32_1;
             if (param1 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackOut_34_2 = "null";
+              stackIn_35_0 = stackOut_34_0;
+              stackIn_35_1 = stackOut_34_1;
+              stackIn_35_2 = stackOut_34_2;
               break L5;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
+              stackOut_33_2 = "{...}";
+              stackIn_35_0 = stackOut_33_0;
+              stackIn_35_1 = stackOut_33_1;
+              stackIn_35_2 = stackOut_33_2;
               break L5;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + 7 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -193,6 +215,7 @@ final class og extends jj implements m {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
@@ -204,20 +227,22 @@ final class og extends jj implements m {
         String stackOut_8_2 = null;
         try {
           L0: {
-            if (((og) this).field_lb) {
+            if (this.field_lb) {
               nk.a(true, -126, false);
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 nh.a((byte) 122);
-                ((og) this).t(20252);
+                this.t(20252);
                 if (param4 == -27322) {
                   break L1;
                 } else {
-                  ((og) this).field_ob = true;
+                  this.field_ob = true;
                   break L1;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -225,23 +250,23 @@ final class og extends jj implements m {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) runtimeException;
+            stackOut_7_0 = (RuntimeException) (runtimeException);
             stackOut_7_1 = new StringBuilder().append("og.A(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -249,22 +274,23 @@ final class og extends jj implements m {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void v(int param0) {
-        int var1 = -33;
+        int var1 = -66 / ((21 - param0) / 62);
         field_rb = null;
         field_nb = null;
         field_qb = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_qb = "Mine";
         field_nb = "Your email address is used to identify this account";
     }

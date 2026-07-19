@@ -10,10 +10,15 @@ final class vs {
     static String field_a;
 
     final static gb a(byte param0, int param1) {
-        gb var2 = new gb();
-        vl.field_o.a((byte) -113, (oh) (Object) var2);
-        bo.a(4, 2);
-        return var2;
+        gb var2 = null;
+        var2 = new gb();
+        vl.field_o.a((byte) -113, var2);
+        bo.a(param1, 2);
+        if (param0 != 88) {
+          return (gb) null;
+        } else {
+          return var2;
+        }
     }
 
     public static void a(int param0) {
@@ -34,22 +39,30 @@ final class vs {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            var4 = (lq) (Object) rs.field_Bb.d(0);
+            var4 = (lq) ((Object) rs.field_Bb.d(0));
             L1: while (true) {
               if (var4 == null) {
+                L2: {
+                  if (param1 <= -18) {
+                    break L2;
+                  } else {
+                    field_b = (String) null;
+                    break L2;
+                  }
+                }
                 var2 = vl.field_o.d(0);
-                L2: while (true) {
+                L3: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    bo.a(4, 2);
+                    bo.a(param0, 2);
                     var2 = vl.field_o.a((byte) -71);
-                    continue L2;
+                    continue L3;
                   }
                 }
               } else {
-                wj.a(320, 4, var4);
-                var4 = (lq) (Object) rs.field_Bb.a((byte) -71);
+                wj.a(320, param0, var4);
+                var4 = (lq) ((Object) rs.field_Bb.a((byte) -71));
                 continue L1;
               }
             }
@@ -57,15 +70,11 @@ final class vs {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var2_ref, "vs.A(" + 4 + ',' + -103 + ')');
+          throw r.a((Throwable) ((Object) var2_ref), "vs.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "The invitation has been withdrawn.";
         field_c = "Most fleets constructed in one turn.";
         field_b = "Resources used to construct vs total resources collected (average for game).";

@@ -52,16 +52,16 @@ final class aq {
     final void a(boolean param0) {
         int var2 = 0;
         int var3 = Vertigo2.field_L ? 1 : 0;
-        for (var2 = 0; var2 < ((aq) this).field_h; var2++) {
-            ((aq) this).field_k[var2] = null;
+        for (var2 = 0; var2 < this.field_h; var2++) {
+            this.field_k[var2] = null;
         }
-        ((aq) this).field_c = null;
+        this.field_c = null;
         if (param0) {
-            ((aq) this).field_g = 40;
+            this.field_g = 40;
         }
-        ((aq) this).field_k = null;
-        ((aq) this).field_j.c(0);
-        ((aq) this).field_j = null;
+        this.field_k = (int[][]) null;
+        this.field_j.c(0);
+        this.field_j = null;
     }
 
     final int[] a(int param0, byte param1) {
@@ -89,13 +89,13 @@ final class aq {
         int stackOut_2_1 = 0;
         var6 = Vertigo2.field_L ? 1 : 0;
         var3 = 28 % ((param1 - 6) / 48);
-        if (((aq) this).field_h != ((aq) this).field_g) {
-          if (((aq) this).field_h == 1) {
+        if (this.field_h != this.field_g) {
+          if (-2 == (this.field_h ^ -1)) {
             L0: {
               stackOut_13_0 = this;
               stackIn_15_0 = stackOut_13_0;
               stackIn_14_0 = stackOut_13_0;
-              if (((aq) this).field_a == param0) {
+              if (this.field_a == param0) {
                 stackOut_15_0 = this;
                 stackOut_15_1 = 0;
                 stackIn_16_0 = stackOut_15_0;
@@ -109,45 +109,45 @@ final class aq {
                 break L0;
               }
             }
-            ((aq) this).field_i = stackIn_16_1 != 0;
-            ((aq) this).field_a = param0;
-            return ((aq) this).field_k[0];
+            ((aq) (this)).field_i = stackIn_16_1 != 0;
+            this.field_a = param0;
+            return this.field_k[0];
           } else {
             L1: {
-              var4 = ((aq) this).field_c[param0];
+              var4 = this.field_c[param0];
               var5 = var4;
               var5 = var4;
               if (var4 != null) {
-                ((aq) this).field_i = false;
+                this.field_i = false;
                 break L1;
               } else {
                 L2: {
-                  ((aq) this).field_i = true;
-                  if (((aq) this).field_h <= ((aq) this).field_e) {
-                    var5 = (fd) (Object) ((aq) this).field_j.c((byte) -127);
+                  this.field_i = true;
+                  if (this.field_h <= this.field_e) {
+                    var5 = (fd) ((Object) this.field_j.c((byte) -127));
                     var4 = new fd(param0, var5.field_n);
-                    ((aq) this).field_c[var5.field_r] = null;
+                    this.field_c[var5.field_r] = null;
                     var5.c(2);
                     break L2;
                   } else {
-                    var4 = new fd(param0, ((aq) this).field_e);
-                    ((aq) this).field_e = ((aq) this).field_e + 1;
+                    var4 = new fd(param0, this.field_e);
+                    this.field_e = this.field_e + 1;
                     break L2;
                   }
                 }
-                ((aq) this).field_c[param0] = var4;
+                this.field_c[param0] = var4;
                 break L1;
               }
             }
-            ((aq) this).field_j.a((li) (Object) var4, (byte) 27);
-            return ((aq) this).field_k[var4.field_n];
+            this.field_j.a(var4, (byte) 27);
+            return this.field_k[var4.field_n];
           }
         } else {
           L3: {
             stackOut_1_0 = this;
             stackIn_3_0 = stackOut_1_0;
             stackIn_2_0 = stackOut_1_0;
-            if (null != ((aq) this).field_c[param0]) {
+            if (null != this.field_c[param0]) {
               stackOut_3_0 = this;
               stackOut_3_1 = 0;
               stackIn_4_0 = stackOut_3_0;
@@ -161,9 +161,9 @@ final class aq {
               break L3;
             }
           }
-          ((aq) this).field_i = stackIn_4_1 != 0;
-          ((aq) this).field_c[param0] = nb.field_F;
-          return ((aq) this).field_k[param0];
+          ((aq) (this)).field_i = stackIn_4_1 != 0;
+          this.field_c[param0] = nb.field_F;
+          return this.field_k[param0];
         }
     }
 
@@ -178,9 +178,9 @@ final class aq {
 
     final static void a(mp param0, byte param1, int param2, int param3) {
         try {
-            int var4_int = -57;
+            int var4_int = 57 / ((param1 - -27) / 53);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "aq.A(" + (param0 != null ? "{...}" : "null") + ',' + -122 + ',' + 8 + ',' + 8 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "aq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -188,33 +188,29 @@ final class aq {
         int var2 = 0;
         int var3 = Vertigo2.field_L ? 1 : 0;
         if (param0 != 100) {
-            ((aq) this).field_j = null;
+            this.field_j = (nj) null;
         }
-        if (((aq) this).field_h != ((aq) this).field_g) {
+        if (this.field_h != this.field_g) {
             throw new RuntimeException("Can only retrieve a full image cache");
         }
-        for (var2 = 0; var2 < ((aq) this).field_h; var2++) {
-            ((aq) this).field_c[var2] = nb.field_F;
+        for (var2 = 0; var2 < this.field_h; var2++) {
+            this.field_c[var2] = nb.field_F;
         }
-        return ((aq) this).field_k;
+        return this.field_k;
     }
 
     aq(int param0, int param1, int param2) {
-        ((aq) this).field_e = 0;
-        ((aq) this).field_a = -1;
-        ((aq) this).field_j = new nj();
-        ((aq) this).field_i = false;
-        ((aq) this).field_h = param0;
-        ((aq) this).field_g = param1;
-        ((aq) this).field_c = new fd[((aq) this).field_g];
-        ((aq) this).field_k = new int[((aq) this).field_h][param2];
+        this.field_e = 0;
+        this.field_a = -1;
+        this.field_j = new nj();
+        this.field_i = false;
+        this.field_h = param0;
+        this.field_g = param1;
+        this.field_c = new fd[this.field_g];
+        this.field_k = new int[this.field_h][param2];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new int[]{100, 100, 200, 300, 200, 300, 300, 500, 300, 1000, 300, 300, 200};
         field_b = "Decline invitation to <%0>'s game";
         field_f = "Offline";

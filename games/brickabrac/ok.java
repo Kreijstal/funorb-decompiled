@@ -16,32 +16,48 @@ final class ok {
         }
         ci.field_t = true;
         lf.a((byte) -78, false);
-        i.field_j = 0;
+        i.field_j = param0;
     }
 
     public static void b(int param0) {
+        boolean discarded$0 = false;
         field_d = null;
         field_g = null;
         field_a = null;
         field_e = null;
         field_b = null;
+        if (param0 > -2) {
+            discarded$0 = ok.a(false);
+        }
     }
 
     final static boolean a(boolean param0) {
-        if (null == jj.field_a) {
+        boolean discarded$5 = false;
+        if (param0) {
+          if (null != jj.field_a) {
+            if (!jj.field_a.a((byte) -32)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (!jj.field_a.a((byte) -32)) {
+          }
+        } else {
+          discarded$5 = ok.a(true);
+          if (null != jj.field_a) {
+            if (!jj.field_a.a((byte) -32)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Log in";
         field_b = new String[24];
         field_e = "Updates will sent to the email address you've given";

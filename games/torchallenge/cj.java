@@ -29,7 +29,7 @@ final class cj {
             var4 = -1L;
             oh.a(var4, var3, param1, var2, 0);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "cj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "cj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,9 +39,10 @@ final class cj {
         int var2 = 0;
         int var3 = 0;
         int stackIn_3_0 = 0;
-        int stackIn_17_0 = 0;
+        int stackIn_15_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
+        int stackOut_14_0 = 0;
         int stackOut_2_0 = 0;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
@@ -65,17 +66,16 @@ final class cj {
                       }
                     }
                   }
-                  stackOut_16_0 = var1_int;
-                  stackIn_17_0 = stackOut_16_0;
+                  stackOut_14_0 = var1_int;
+                  stackIn_15_0 = stackOut_14_0;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   L3: {
                     if (pa.field_s[ok.field_b][var2]) {
                       var1_int = var2;
-                      var2++;
                       break L3;
                     } else {
-                      var2++;
                       break L3;
                     }
                   }
@@ -86,15 +86,20 @@ final class cj {
             } else {
               stackOut_2_0 = -73;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "cj.B(" + param0 + ')');
+          throw oj.a((Throwable) ((Object) var1), "cj.B(" + param0 + ')');
         }
-        return stackIn_17_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_15_0;
+        }
     }
 
     public static void b(int param0) {
@@ -104,13 +109,12 @@ final class cj {
         field_c = null;
         field_h = null;
         field_f = null;
+        if (param0 != 0) {
+            field_j = -32;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = new long[32];
         field_b = false;
         field_j = 0;

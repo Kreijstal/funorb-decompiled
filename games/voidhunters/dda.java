@@ -13,6 +13,12 @@ final class dda extends dg implements uq {
     }
 
     public static void a(int param0) {
+        if (param0 != 0) {
+            field_d = (mka[]) null;
+            field_d = null;
+            field_c = null;
+            return;
+        }
         field_d = null;
         field_c = null;
     }
@@ -23,14 +29,14 @@ final class dda extends dg implements uq {
           if (param1 > 52) {
             return;
           } else {
-            field_d = null;
+            field_d = (mka[]) null;
             return;
           }
         } else {
           if (dw.field_a.length < param0) {
             dw.field_a = new int[param0];
             if (param1 <= 52) {
-              field_d = null;
+              field_d = (mka[]) null;
               return;
             } else {
               return;
@@ -39,7 +45,7 @@ final class dda extends dg implements uq {
             if (param1 > 52) {
               return;
             } else {
-              field_d = null;
+              field_d = (mka[]) null;
               return;
             }
           }
@@ -47,7 +53,12 @@ final class dda extends dg implements uq {
     }
 
     final static void a(int param0, boolean param1) {
-        ll.field_o = false;
+        if (param0 != 18090) {
+            field_d = (mka[]) null;
+            ll.field_o = param1;
+            return;
+        }
+        ll.field_o = param1;
     }
 
     dda(qfa param0, int param1, byte[] param2, int param3) {
@@ -55,10 +66,6 @@ final class dda extends dg implements uq {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_d = new mka[255];
         for (var0 = 0; field_d.length > var0; var0++) {

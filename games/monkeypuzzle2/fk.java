@@ -9,7 +9,7 @@ final class fk {
 
     public static void a(byte param0) {
         field_c = null;
-        int var1 = 0;
+        int var1 = 74 % ((param0 - -51) / 55);
         field_d = null;
     }
 
@@ -18,7 +18,7 @@ final class fk {
     }
 
     fk(int param0) {
-        ((fk) this).field_b = param0;
+        this.field_b = param0;
     }
 
     static {

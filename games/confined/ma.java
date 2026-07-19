@@ -25,6 +25,8 @@ final class ma extends rk {
     }
 
     final boolean a(float param0, int param1, mi param2) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var4 = 0;
         int var5 = 0;
         bm var6 = null;
@@ -39,35 +41,27 @@ final class ma extends rk {
         byte[] var15 = null;
         int[] var16 = null;
         byte[] var17 = null;
-        int[] var18 = null;
-        byte[] var19 = null;
-        int[] var20 = null;
-        byte[] var21 = null;
         var4 = 0;
         L0: while (true) {
-          if (var4 >= ((ma) this).field_p.length) {
+          if (var4 >= this.field_p.length) {
             var4 = param1 * param1;
-            ((ma) this).field_t = new int[var4];
+            this.field_t = new int[var4];
             var5 = 0;
             L1: while (true) {
-              if (var5 >= ((ma) this).field_p.length) {
-                ((ma) this).field_o = param0;
+              if (var5 >= this.field_p.length) {
+                this.field_o = param0;
                 return true;
               } else {
                 L2: {
-                  var6 = kb.a(param2, (byte) 69, ((ma) this).field_p[var5]);
+                  var6 = kb.a(param2, (byte) 69, this.field_p[var5]);
                   var6.a();
-                  var21 = var6.field_n;
-                  var19 = var21;
-                  var17 = var19;
+                  var17 = var6.field_n;
                   var15 = var17;
                   var7 = var15;
-                  var20 = var6.field_m;
-                  var18 = var20;
-                  var16 = var18;
+                  var16 = var6.field_m;
                   var14 = var16;
                   var8 = var14;
-                  var9 = ((ma) this).field_n[var5];
+                  var9 = this.field_n[var5];
                   if ((var9 & -16777216) != 50331648) {
                     break L2;
                   } else {
@@ -75,10 +69,10 @@ final class ma extends rk {
                     var11 = var9 >> 8 & 255;
                     var12 = 0;
                     L3: while (true) {
-                      if (var12 >= var20.length) {
+                      if (var12 >= var16.length) {
                         break L2;
                       } else {
-                        var13 = var20[var12];
+                        var13 = var16[var12];
                         if ((var13 & 65535) == var13 >> 8) {
                           var13 = var13 & 255;
                           var8[var12] = var10 * var13 >> 8 & 16711935 | var11 * var13 & 65280;
@@ -94,10 +88,10 @@ final class ma extends rk {
                 }
                 var10 = 0;
                 L4: while (true) {
-                  if (var10 >= var20.length) {
+                  if (var10 >= var16.length) {
                     L5: {
                       if (var5 != 0) {
-                        var10 = ((ma) this).field_q[var5 - 1];
+                        var10 = this.field_q[var5 - 1];
                         break L5;
                       } else {
                         var10 = 0;
@@ -130,9 +124,9 @@ final class ma extends rk {
                                       var12++;
                                       continue L8;
                                     } else {
-                                      int incrementValue$2 = var11;
+                                      incrementValue$2 = var11;
                                       var11++;
-                                      ((ma) this).field_t[incrementValue$2] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
+                                      this.field_t[incrementValue$2] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
                                       var13++;
                                       continue L9;
                                     }
@@ -162,9 +156,9 @@ final class ma extends rk {
                                       var12++;
                                       continue L11;
                                     } else {
-                                      int incrementValue$3 = var11;
+                                      incrementValue$3 = var11;
                                       var11++;
-                                      ((ma) this).field_t[incrementValue$3] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
+                                      this.field_t[incrementValue$3] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
                                       var13++;
                                       continue L12;
                                     }
@@ -182,7 +176,7 @@ final class ma extends rk {
                         var11 = 0;
                         L13: while (true) {
                           if (var11 < var4) {
-                            ((ma) this).field_t[var11] = var8[var21[var11] & 255];
+                            this.field_t[var11] = var8[var17[var11] & 255];
                             var11++;
                             continue L13;
                           } else {
@@ -196,7 +190,7 @@ final class ma extends rk {
                       continue L1;
                     }
                   } else {
-                    var8[var10] = ma.a(var20[var10], (double)param0);
+                    var8[var10] = ma.a(var16[var10], (double)param0);
                     var10++;
                     continue L4;
                   }
@@ -204,7 +198,7 @@ final class ma extends rk {
               }
             }
           } else {
-            if (param2.a(((ma) this).field_p[var4], (byte) -37)) {
+            if (param2.a(this.field_p[var4], (byte) -37)) {
               var4++;
               continue L0;
             } else {
@@ -215,10 +209,12 @@ final class ma extends rk {
     }
 
     final void a() {
-        ((ma) this).field_t = null;
+        this.field_t = null;
     }
 
     ma(kg param0) {
+        int discarded$2 = 0;
+        int discarded$3 = 0;
         int var2 = 0;
         int var3 = 0;
         Object stackIn_1_0 = null;
@@ -231,7 +227,7 @@ final class ma extends rk {
         Object stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          ((ma) this).field_s = param0.a((byte) 25);
+          this.field_s = param0.a((byte) 25);
           stackOut_0_0 = this;
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
@@ -250,13 +246,13 @@ final class ma extends rk {
           }
         }
         L1: {
-          ((ma) this).field_r = stackIn_3_1 != 0;
+          ((ma) (this)).field_r = stackIn_3_1 != 0;
           var2 = param0.c(32);
           if (var2 < 1) {
             break L1;
           } else {
             if (var2 <= 4) {
-              ((ma) this).field_p = new int[var2];
+              this.field_p = new int[var2];
               var3 = 0;
               L2: while (true) {
                 if (var3 >= var2) {
@@ -264,13 +260,13 @@ final class ma extends rk {
                     if (var2 <= 1) {
                       break L3;
                     } else {
-                      ((ma) this).field_q = new int[var2 - 1];
+                      this.field_q = new int[var2 - 1];
                       var3 = 0;
                       L4: while (true) {
                         if (var3 >= var2 - 1) {
                           break L3;
                         } else {
-                          ((ma) this).field_q[var3] = param0.c(32);
+                          this.field_q[var3] = param0.c(32);
                           var3++;
                           continue L4;
                         }
@@ -281,35 +277,35 @@ final class ma extends rk {
                     if (var2 <= 1) {
                       break L5;
                     } else {
-                      ((ma) this).field_m = new int[var2 - 1];
+                      this.field_m = new int[var2 - 1];
                       var3 = 0;
                       L6: while (true) {
                         if (var3 >= var2 - 1) {
                           break L5;
                         } else {
-                          ((ma) this).field_m[var3] = param0.c(32);
+                          this.field_m[var3] = param0.c(32);
                           var3++;
                           continue L6;
                         }
                       }
                     }
                   }
-                  ((ma) this).field_n = new int[var2];
+                  this.field_n = new int[var2];
                   var3 = 0;
                   L7: while (true) {
                     if (var3 >= var2) {
-                      int discarded$2 = param0.c(32);
-                      int discarded$3 = param0.c(32);
-                      ((ma) this).field_t = null;
+                      discarded$2 = param0.c(32);
+                      discarded$3 = param0.c(32);
+                      this.field_t = null;
                       return;
                     } else {
-                      ((ma) this).field_n[var3] = param0.f((byte) 126);
+                      this.field_n[var3] = param0.f((byte) 126);
                       var3++;
                       continue L7;
                     }
                   }
                 } else {
-                  ((ma) this).field_p[var3] = param0.a((byte) 25);
+                  this.field_p[var3] = param0.a((byte) 25);
                   var3++;
                   continue L2;
                 }

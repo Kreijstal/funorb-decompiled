@@ -14,13 +14,26 @@ final class me extends ug {
     static int[] field_j;
 
     public static void a(boolean param0) {
-        field_i = null;
-        field_l = null;
-        field_j = null;
-        field_f = null;
-        field_h = null;
-        field_n = null;
-        field_g = null;
+        if (!param0) {
+          me.a(true);
+          field_i = null;
+          field_l = null;
+          field_j = null;
+          field_f = null;
+          field_h = null;
+          field_n = null;
+          field_g = (byte[][][]) null;
+          return;
+        } else {
+          field_i = null;
+          field_l = null;
+          field_j = null;
+          field_f = null;
+          field_h = null;
+          field_n = null;
+          field_g = (byte[][][]) null;
+          return;
+        }
     }
 
     private me() throws Throwable {
@@ -28,10 +41,6 @@ final class me extends ug {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Unable to connect to the data server. Please check any firewall you are using.";
         field_n = "End Game";
         field_l = "That name is not available";

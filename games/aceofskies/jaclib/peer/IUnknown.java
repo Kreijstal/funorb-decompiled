@@ -6,7 +6,7 @@ package jaclib.peer;
 public class IUnknown extends jaclib.peer.Peer {
     protected IUnknown(jaclib.peer.qt param0) {
         try {
-            ((jaclib.peer.IUnknown) this).reference = (jaclib.peer.PeerReference) (Object) new jaclib.peer.IUnknownReference((jaclib.peer.IUnknown) this, param0);
+            this.reference = (jaclib.peer.PeerReference) ((Object) new jaclib.peer.IUnknownReference((jaclib.peer.IUnknown) (this), param0));
         } catch (RuntimeException runtimeException) {
             throw runtimeException;
         }

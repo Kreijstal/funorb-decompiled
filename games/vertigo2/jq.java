@@ -12,36 +12,67 @@ abstract class jq {
 
     public static void a(int param0) {
         field_d = null;
-        field_c = null;
+        if (param0 > -87) {
+            return;
+        }
+        field_c = (er[][]) null;
     }
 
     final static boolean a(char param0, int param1) {
-        int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        if (param0 != 160) {
-          if (32 != param0) {
-            if (param0 != 95) {
-              if (param0 == 45) {
-                return true;
+        int stackIn_8_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_6_0 = 0;
+        if (param1 == -96) {
+          if (param0 != 160) {
+            if (32 != param0) {
+              if (param0 != 95) {
+                if (param0 == 45) {
+                  return true;
+                } else {
+                  return false;
+                }
               } else {
-                return false;
+                stackOut_18_0 = 1;
+                stackIn_20_0 = stackOut_18_0;
+                return stackIn_20_0 != 0;
               }
             } else {
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              return stackIn_7_0 != 0;
+              return true;
             }
           } else {
             return true;
           }
         } else {
-          return true;
+          field_e = -12;
+          if (param0 != 160) {
+            if (32 != param0) {
+              if (param0 != 95) {
+                if (param0 == 45) {
+                  return true;
+                } else {
+                  return false;
+                }
+              } else {
+                stackOut_6_0 = 1;
+                stackIn_8_0 = stackOut_6_0;
+                return stackIn_8_0 != 0;
+              }
+            } else {
+              return true;
+            }
+          } else {
+            return true;
+          }
         }
     }
 
     abstract void a(int param0, int param1, int param2);
 
     final static int a(byte param0) {
+        if (param0 != 29) {
+            return -36;
+        }
         return mm.field_a;
     }
 
@@ -77,18 +108,14 @@ abstract class jq {
     }
 
     jq(int param0, int param1, int param2) {
-        ((jq) this).field_g = param0;
-        ((jq) this).field_f = param2;
-        ((jq) this).field_a = param1;
+        this.field_g = param0;
+        this.field_f = param2;
+        this.field_a = param1;
     }
 
     abstract void a(int param0, byte param1, int param2);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Please enter your date of birth to enable chat:";
         field_b = 0;
     }

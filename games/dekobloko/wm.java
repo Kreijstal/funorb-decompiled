@@ -155,13 +155,24 @@ abstract class wm extends ba implements qh {
     }
 
     public static void c(int param0) {
+        java.awt.Container discarded$2 = null;
         field_k = null;
         field_h = null;
         field_i = null;
-        field_n = null;
-        field_o = null;
-        field_m = null;
-        field_g = null;
+        if (param0 != 18966) {
+          discarded$2 = wm.f((byte) 42);
+          field_n = null;
+          field_o = null;
+          field_m = null;
+          field_g = null;
+          return;
+        } else {
+          field_n = null;
+          field_o = null;
+          field_m = null;
+          field_g = null;
+          return;
+        }
     }
 
     static {

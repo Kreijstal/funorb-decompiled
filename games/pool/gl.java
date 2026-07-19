@@ -19,7 +19,7 @@ final class gl extends kd {
     private go[] field_F;
 
     final synchronized void a(float param0) {
-        ((gl) this).field_v = param0;
+        this.field_v = param0;
     }
 
     final int d() {
@@ -27,26 +27,40 @@ final class gl extends kd {
     }
 
     final synchronized void c(float param0) {
-        ((gl) this).field_C = param0;
-        ((gl) this).field_r = (float)((double)((gl) this).field_w * Math.sqrt((double)(1.0f + ((gl) this).field_C) * 0.5));
-        ((gl) this).field_q = (float)((double)((gl) this).field_w * Math.sqrt((double)(1.0f - ((gl) this).field_C) * 0.5));
+        this.field_C = param0;
+        this.field_r = (float)((double)this.field_w * Math.sqrt((double)(1.0f + this.field_C) * 0.5));
+        this.field_q = (float)((double)this.field_w * Math.sqrt((double)(1.0f - this.field_C) * 0.5));
     }
 
     final synchronized void a(int param0) {
-        if (((gl) this).field_A != null) {
-            ((gl) this).field_A.a(param0);
+        if (this.field_A != null) {
+            this.field_A.a(param0);
         }
     }
 
     final synchronized void f(float param0) {
-        ((gl) this).field_z = param0;
+        this.field_z = param0;
     }
 
     final kd a() {
-        return ((gl) this).field_A;
+        return this.field_A;
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int fieldTemp$16 = 0;
+        int fieldTemp$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int fieldTemp$24 = 0;
+        int fieldTemp$25 = 0;
+        int fieldTemp$26 = 0;
+        int fieldTemp$27 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -88,10 +102,10 @@ final class gl extends kd {
               }
             }
             L2: {
-              if (((gl) this).field_A == null) {
+              if (this.field_A == null) {
                 break L2;
               } else {
-                ((gl) this).field_A.a(((gl) this).field_u, 0, var4);
+                this.field_A.a(this.field_u, 0, var4);
                 break L2;
               }
             }
@@ -116,13 +130,13 @@ final class gl extends kd {
                                 param1 = param1 << 1;
                                 break L5;
                               } else {
-                                var5 = gl.a(var5, ((gl) this).field_F[var6].field_a, ((gl) this).field_F[var6].field_b, var4);
+                                var5 = gl.a(var5, this.field_F[var6].field_a, this.field_F[var6].field_b, var4);
                                 var6++;
                                 continue L7;
                               }
                             }
                           } else {
-                            var5 = gl.a(var5, ((gl) this).field_t[var6].field_c, ((gl) this).field_t[var6].field_a, var4);
+                            var5 = gl.a(var5, this.field_t[var6].field_c, this.field_t[var6].field_a, var4);
                             var6++;
                             continue L6;
                           }
@@ -136,18 +150,18 @@ final class gl extends kd {
                         L9: while (true) {
                           if (var5 > -4096) {
                             L10: {
-                              var7 = (int)(((gl) this).field_z * 4096.0f);
-                              var8 = (int)(((gl) this).field_s * 4096.0f);
-                              var9 = (int)(((gl) this).field_p * 4096.0f);
-                              var10 = (int)(((gl) this).field_v * 65536.0f);
+                              var7 = (int)(this.field_z * 4096.0f);
+                              var8 = (int)(this.field_s * 4096.0f);
+                              var9 = (int)(this.field_p * 4096.0f);
+                              var10 = (int)(this.field_v * 65536.0f);
                               if (!bp.field_r) {
-                                var11 = (int)(((gl) this).field_w * 4096.0f);
+                                var11 = (int)(this.field_w * 4096.0f);
                                 var12 = 0;
                                 L11: while (true) {
                                   if (var12 >= var4) {
                                     break L10;
                                   } else {
-                                    var13 = ((gl) this).field_u[var12] >> var6;
+                                    var13 = this.field_u[var12] >> var6;
                                     var14 = var13 * var10 >> 16;
                                     var15 = 0;
                                     var16 = 0;
@@ -157,24 +171,24 @@ final class gl extends kd {
                                         L13: while (true) {
                                           if (var16 >= 4) {
                                             if (var6 <= 12) {
-                                              int incrementValue$14 = param1;
+                                              incrementValue$14 = param1;
                                               param1++;
                                               param0[incrementValue$14] = param0[incrementValue$14] + (var15 * var11 + var13 * var9 >> 12 - var6);
                                               var12++;
                                               continue L11;
                                             } else {
-                                              int incrementValue$15 = param1;
+                                              incrementValue$15 = param1;
                                               param1++;
                                               param0[incrementValue$15] = param0[incrementValue$15] + (var15 * var11 + var13 * var9 << var6 - 12);
                                               var12++;
                                               continue L11;
                                             }
                                           } else {
-                                            var28 = ((gl) this).field_E[var16];
+                                            var28 = this.field_E[var16];
                                             var18 = var28.field_a[var28.field_b] >> var6;
                                             var15 = var18 - var15;
                                             var28.field_a[var28.field_b] = var14 + (var18 * 2048 + 2048 >> 12) << var6;
-                                            int fieldTemp$16 = var28.field_b + 1;
+                                            fieldTemp$16 = var28.field_b + 1;
                                             var28.field_b = var28.field_b + 1;
                                             if (fieldTemp$16 >= var28.field_a.length) {
                                               var28.field_b = 0;
@@ -188,13 +202,13 @@ final class gl extends kd {
                                         }
                                       } else {
                                         L14: {
-                                          var27 = ((gl) this).field_x[var16];
+                                          var27 = this.field_x[var16];
                                           var18 = var27.field_c[var27.field_a] >> var6;
                                           var19 = var27.field_b >> var6;
                                           var19 = var19 + ((var18 - var19) * var8 + 2048 >> 12);
                                           var27.field_b = var19 << var6;
                                           var27.field_c[var27.field_a] = var14 + (var19 * var7 + 2048 >> 12) << var6;
-                                          int fieldTemp$17 = var27.field_a + 1;
+                                          fieldTemp$17 = var27.field_a + 1;
                                           var27.field_a = var27.field_a + 1;
                                           if (fieldTemp$17 < var27.field_c.length) {
                                             break L14;
@@ -211,20 +225,20 @@ final class gl extends kd {
                                   }
                                 }
                               } else {
-                                var11 = (int)(((gl) this).field_r * 4096.0f);
-                                var12 = (int)(((gl) this).field_q * 4096.0f);
+                                var11 = (int)(this.field_r * 4096.0f);
+                                var12 = (int)(this.field_q * 4096.0f);
                                 var13 = 0;
                                 L15: while (true) {
                                   if (var13 >= var4) {
                                     param1 = param1 >> 1;
                                     break L10;
                                   } else {
-                                    int incrementValue$18 = var13;
+                                    incrementValue$18 = var13;
                                     var13++;
-                                    var14 = ((gl) this).field_u[incrementValue$18] >> var6;
-                                    int incrementValue$19 = var13;
+                                    var14 = this.field_u[incrementValue$18] >> var6;
+                                    incrementValue$19 = var13;
                                     var13++;
-                                    var15 = ((gl) this).field_u[incrementValue$19] >> var6;
+                                    var15 = this.field_u[incrementValue$19] >> var6;
                                     var16 = (var14 + var15) * var10 >> 17;
                                     var17 = 0;
                                     var18 = 0;
@@ -241,28 +255,28 @@ final class gl extends kd {
                                                 L19: while (true) {
                                                   if (var19 >= 4) {
                                                     if (var6 <= 12) {
-                                                      int incrementValue$20 = param1;
+                                                      incrementValue$20 = param1;
                                                       param1++;
                                                       param0[incrementValue$20] = param0[incrementValue$20] + (var17 * var11 + var18 * var12 + var14 * var9 >> 12 - var6);
-                                                      int incrementValue$21 = param1;
+                                                      incrementValue$21 = param1;
                                                       param1++;
                                                       param0[incrementValue$21] = param0[incrementValue$21] + (var18 * var11 + var17 * var12 + var15 * var9 >> 12 - var6);
                                                       continue L15;
                                                     } else {
-                                                      int incrementValue$22 = param1;
+                                                      incrementValue$22 = param1;
                                                       param1++;
                                                       param0[incrementValue$22] = param0[incrementValue$22] + (var17 * var11 + var18 * var12 + var14 * var9 << var6 - 12);
-                                                      int incrementValue$23 = param1;
+                                                      incrementValue$23 = param1;
                                                       param1++;
                                                       param0[incrementValue$23] = param0[incrementValue$23] + (var18 * var11 + var17 * var12 + var15 * var9 << var6 - 12);
                                                       continue L15;
                                                     }
                                                   } else {
-                                                    var26 = ((gl) this).field_F[var19];
+                                                    var26 = this.field_F[var19];
                                                     var21 = var26.field_a[var26.field_b] >> var6;
                                                     var18 = var21 - var18;
                                                     var26.field_a[var26.field_b] = var16 + (var21 * 2048 + 2048 >> 12) << var6;
-                                                    int fieldTemp$24 = var26.field_b + 1;
+                                                    fieldTemp$24 = var26.field_b + 1;
                                                     var26.field_b = var26.field_b + 1;
                                                     if (fieldTemp$24 >= var26.field_a.length) {
                                                       var26.field_b = 0;
@@ -276,13 +290,13 @@ final class gl extends kd {
                                                 }
                                               } else {
                                                 L20: {
-                                                  var25 = ((gl) this).field_t[var19];
+                                                  var25 = this.field_t[var19];
                                                   var21 = var25.field_c[var25.field_a] >> var6;
                                                   var22 = var25.field_b >> var6;
                                                   var22 = var22 + ((var21 - var22) * var8 + 2048 >> 12);
                                                   var25.field_b = var22 << var6;
                                                   var25.field_c[var25.field_a] = var16 + (var22 * var7 + 2048 >> 12) << var6;
-                                                  int fieldTemp$25 = var25.field_a + 1;
+                                                  fieldTemp$25 = var25.field_a + 1;
                                                   var25.field_a = var25.field_a + 1;
                                                   if (fieldTemp$25 < var25.field_c.length) {
                                                     break L20;
@@ -297,11 +311,11 @@ final class gl extends kd {
                                               }
                                             }
                                           } else {
-                                            var24 = ((gl) this).field_E[var18];
+                                            var24 = this.field_E[var18];
                                             var20 = var24.field_a[var24.field_b] >> var6;
                                             var17 = var20 - var17;
                                             var24.field_a[var24.field_b] = var16 + (var20 * 2048 + 2048 >> 12) << var6;
-                                            int fieldTemp$26 = var24.field_b + 1;
+                                            fieldTemp$26 = var24.field_b + 1;
                                             var24.field_b = var24.field_b + 1;
                                             if (fieldTemp$26 >= var24.field_a.length) {
                                               var24.field_b = 0;
@@ -315,13 +329,13 @@ final class gl extends kd {
                                         }
                                       } else {
                                         L21: {
-                                          var23 = ((gl) this).field_x[var18];
+                                          var23 = this.field_x[var18];
                                           var20 = var23.field_c[var23.field_a] >> var6;
                                           var21 = var23.field_b >> var6;
                                           var21 = var21 + ((var20 - var21) * var8 + 2048 >> 12);
                                           var23.field_b = var21 << var6;
                                           var23.field_c[var23.field_a] = var16 + (var21 * var7 + 2048 >> 12) << var6;
-                                          int fieldTemp$27 = var23.field_a + 1;
+                                          fieldTemp$27 = var23.field_a + 1;
                                           var23.field_a = var23.field_a + 1;
                                           if (fieldTemp$27 < var23.field_c.length) {
                                             break L21;
@@ -339,10 +353,10 @@ final class gl extends kd {
                                 }
                               }
                             }
-                            if (((gl) this).field_A == null) {
+                            if (this.field_A == null) {
                               continue L0;
                             } else {
-                              qn.a(((gl) this).field_u, 0, var4);
+                              qn.a(this.field_u, 0, var4);
                               continue L0;
                             }
                           } else {
@@ -353,7 +367,7 @@ final class gl extends kd {
                         }
                       } else {
                         L22: {
-                          var7 = ((gl) this).field_u[var6];
+                          var7 = this.field_u[var6];
                           if (var7 <= 0) {
                             break L22;
                           } else {
@@ -372,13 +386,13 @@ final class gl extends kd {
                       }
                     }
                   } else {
-                    var5 = gl.a(var5, ((gl) this).field_E[var6].field_a, ((gl) this).field_E[var6].field_b, var4);
+                    var5 = gl.a(var5, this.field_E[var6].field_a, this.field_E[var6].field_b, var4);
                     var6++;
                     continue L4;
                   }
                 }
               } else {
-                var5 = gl.a(var5, ((gl) this).field_x[var6].field_c, ((gl) this).field_x[var6].field_a, var4);
+                var5 = gl.a(var5, this.field_x[var6].field_c, this.field_x[var6].field_a, var4);
                 var6++;
                 continue L3;
               }
@@ -391,7 +405,7 @@ final class gl extends kd {
         int var1 = 0;
         L0: {
           if (!bp.field_r) {
-            if (((gl) this).field_t == null) {
+            if (this.field_t == null) {
               break L0;
             } else {
               var1 = 0;
@@ -400,25 +414,25 @@ final class gl extends kd {
                   var1 = 0;
                   L2: while (true) {
                     if (var1 >= 4) {
-                      ((gl) this).field_t = null;
-                      ((gl) this).field_F = null;
-                      ((gl) this).field_u = new int[256];
+                      this.field_t = null;
+                      this.field_F = null;
+                      this.field_u = new int[256];
                       break L0;
                     } else {
-                      ((gl) this).field_E[var1].a();
+                      this.field_E[var1].a();
                       var1++;
                       continue L2;
                     }
                   }
                 } else {
-                  ((gl) this).field_x[var1].a();
+                  this.field_x[var1].a();
                   var1++;
                   continue L1;
                 }
               }
             }
           } else {
-            if (((gl) this).field_t != null) {
+            if (this.field_t != null) {
               break L0;
             } else {
               var1 = 0;
@@ -427,30 +441,30 @@ final class gl extends kd {
                   var1 = 0;
                   L4: while (true) {
                     if (var1 >= 4) {
-                      ((gl) this).field_t = new qc[8];
-                      ((gl) this).field_t[0] = new qc(1139 * bp.field_h / 44100);
-                      ((gl) this).field_t[1] = new qc(1211 * bp.field_h / 44100);
-                      ((gl) this).field_t[2] = new qc(1300 * bp.field_h / 44100);
-                      ((gl) this).field_t[3] = new qc(1379 * bp.field_h / 44100);
-                      ((gl) this).field_t[4] = new qc(1445 * bp.field_h / 44100);
-                      ((gl) this).field_t[5] = new qc(1514 * bp.field_h / 44100);
-                      ((gl) this).field_t[6] = new qc(1580 * bp.field_h / 44100);
-                      ((gl) this).field_t[7] = new qc(1640 * bp.field_h / 44100);
-                      ((gl) this).field_F = new go[4];
-                      ((gl) this).field_F[0] = new go(579 * bp.field_h / 44100);
-                      ((gl) this).field_F[1] = new go(464 * bp.field_h / 44100);
-                      ((gl) this).field_F[2] = new go(364 * bp.field_h / 44100);
-                      ((gl) this).field_F[3] = new go(248 * bp.field_h / 44100);
-                      ((gl) this).field_u = new int[512];
+                      this.field_t = new qc[8];
+                      this.field_t[0] = new qc(1139 * bp.field_h / 44100);
+                      this.field_t[1] = new qc(1211 * bp.field_h / 44100);
+                      this.field_t[2] = new qc(1300 * bp.field_h / 44100);
+                      this.field_t[3] = new qc(1379 * bp.field_h / 44100);
+                      this.field_t[4] = new qc(1445 * bp.field_h / 44100);
+                      this.field_t[5] = new qc(1514 * bp.field_h / 44100);
+                      this.field_t[6] = new qc(1580 * bp.field_h / 44100);
+                      this.field_t[7] = new qc(1640 * bp.field_h / 44100);
+                      this.field_F = new go[4];
+                      this.field_F[0] = new go(579 * bp.field_h / 44100);
+                      this.field_F[1] = new go(464 * bp.field_h / 44100);
+                      this.field_F[2] = new go(364 * bp.field_h / 44100);
+                      this.field_F[3] = new go(248 * bp.field_h / 44100);
+                      this.field_u = new int[512];
                       break L0;
                     } else {
-                      ((gl) this).field_E[var1].a();
+                      this.field_E[var1].a();
                       var1++;
                       continue L4;
                     }
                   }
                 } else {
-                  ((gl) this).field_x[var1].a();
+                  this.field_x[var1].a();
                   var1++;
                   continue L3;
                 }
@@ -461,9 +475,9 @@ final class gl extends kd {
     }
 
     final synchronized void e(float param0) {
-        ((gl) this).field_w = param0;
-        ((gl) this).field_r = (float)((double)((gl) this).field_w * Math.sqrt((double)(1.0f + ((gl) this).field_C) * 0.5));
-        ((gl) this).field_q = (float)((double)((gl) this).field_w * Math.sqrt((double)(1.0f - ((gl) this).field_C) * 0.5));
+        this.field_w = param0;
+        this.field_r = (float)((double)this.field_w * Math.sqrt((double)(1.0f + this.field_C) * 0.5));
+        this.field_q = (float)((double)this.field_w * Math.sqrt((double)(1.0f - this.field_C) * 0.5));
     }
 
     final kd b() {
@@ -471,8 +485,8 @@ final class gl extends kd {
     }
 
     final synchronized void b(float param0) {
-        ((gl) this).field_y = param0;
-        ((gl) this).field_s = 1.0f - (float)Math.pow(0.5, 1000000.0 / (double)(((gl) this).field_y * (float)bp.field_h));
+        this.field_y = param0;
+        this.field_s = 1.0f - (float)Math.pow(0.5, 1000000.0 / (double)(this.field_y * (float)bp.field_h));
     }
 
     private final static int a(int param0, int[] param1, int param2, int param3) {
@@ -522,39 +536,39 @@ final class gl extends kd {
     }
 
     final synchronized void d(float param0) {
-        ((gl) this).field_p = param0;
+        this.field_p = param0;
     }
 
     gl(kd param0) {
         L0: {
-          ((gl) this).field_x = new qc[8];
-          ((gl) this).field_x[0] = new qc(1116 * bp.field_h / 44100);
-          ((gl) this).field_x[1] = new qc(1188 * bp.field_h / 44100);
-          ((gl) this).field_x[2] = new qc(1277 * bp.field_h / 44100);
-          ((gl) this).field_x[3] = new qc(1356 * bp.field_h / 44100);
-          ((gl) this).field_x[4] = new qc(1422 * bp.field_h / 44100);
-          ((gl) this).field_x[5] = new qc(1491 * bp.field_h / 44100);
-          ((gl) this).field_x[6] = new qc(1557 * bp.field_h / 44100);
-          ((gl) this).field_x[7] = new qc(1617 * bp.field_h / 44100);
-          ((gl) this).field_E = new go[4];
-          ((gl) this).field_E[0] = new go(556 * bp.field_h / 44100);
-          ((gl) this).field_E[1] = new go(441 * bp.field_h / 44100);
-          ((gl) this).field_E[2] = new go(341 * bp.field_h / 44100);
-          ((gl) this).field_E[3] = new go(225 * bp.field_h / 44100);
+          this.field_x = new qc[8];
+          this.field_x[0] = new qc(1116 * bp.field_h / 44100);
+          this.field_x[1] = new qc(1188 * bp.field_h / 44100);
+          this.field_x[2] = new qc(1277 * bp.field_h / 44100);
+          this.field_x[3] = new qc(1356 * bp.field_h / 44100);
+          this.field_x[4] = new qc(1422 * bp.field_h / 44100);
+          this.field_x[5] = new qc(1491 * bp.field_h / 44100);
+          this.field_x[6] = new qc(1557 * bp.field_h / 44100);
+          this.field_x[7] = new qc(1617 * bp.field_h / 44100);
+          this.field_E = new go[4];
+          this.field_E[0] = new go(556 * bp.field_h / 44100);
+          this.field_E[1] = new go(441 * bp.field_h / 44100);
+          this.field_E[2] = new go(341 * bp.field_h / 44100);
+          this.field_E[3] = new go(225 * bp.field_h / 44100);
           if (bp.field_r) {
             break L0;
           } else {
-            ((gl) this).field_u = new int[256];
+            this.field_u = new int[256];
             break L0;
           }
         }
         this.e();
-        ((gl) this).a(0.04500000178813934f);
-        ((gl) this).e(1.0f);
-        ((gl) this).f(0.8399999737739563f);
-        ((gl) this).d(1.0f);
-        ((gl) this).b(7000.0f);
-        ((gl) this).c(1.0f);
-        ((gl) this).field_A = param0;
+        this.a(0.04500000178813934f);
+        this.e(1.0f);
+        this.f(0.8399999737739563f);
+        this.d(1.0f);
+        this.b(7000.0f);
+        this.c(1.0f);
+        this.field_A = param0;
     }
 }

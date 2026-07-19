@@ -19,7 +19,7 @@ final class we {
 
     public static void a(byte param0) {
         field_k = null;
-        field_m = null;
+        field_m = (int[][]) null;
         field_g = null;
         field_c = null;
         field_f = null;
@@ -34,10 +34,6 @@ final class we {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = '/';
         field_l = -1;
         field_j = "Offline";

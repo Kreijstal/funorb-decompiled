@@ -15,6 +15,12 @@ final class ib {
 
     final static void a(java.applet.Applet param0, boolean param1) {
         try {
+            Object discarded$6 = null;
+            Object discarded$7 = null;
+            Object discarded$8 = null;
+            Object discarded$9 = null;
+            Object discarded$10 = null;
+            Object discarded$11 = null;
             Throwable var2 = null;
             RuntimeException var2_ref = null;
             String var3 = null;
@@ -39,13 +45,13 @@ final class ib {
               try {
                 L0: {
                   var4 = param0.getCodeBase();
-                  var3 = lg.a(false, param0, var4).getFile();
-                  Object discarded$6 = cq.a(param0, (byte) -62, new Object[2], "updatelinks");
-                  Object discarded$7 = cq.a(param0, (byte) -115, new Object[2], "updatelinks");
-                  Object discarded$8 = cq.a(param0, (byte) 108, new Object[2], "updatelinks");
-                  Object discarded$9 = cq.a(param0, (byte) -44, new Object[2], "updatelinks");
-                  Object discarded$10 = cq.a(param0, (byte) 78, new Object[2], "updatelinks");
-                  Object discarded$11 = cq.a(param0, (byte) 66, new Object[2], "updatelinks");
+                  var3 = lg.a(param1, param0, var4).getFile();
+                  discarded$6 = cq.a(param0, (byte) -62, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
+                  discarded$7 = cq.a(param0, (byte) -115, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
+                  discarded$8 = cq.a(param0, (byte) 108, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
+                  discarded$9 = cq.a(param0, (byte) -44, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
+                  discarded$10 = cq.a(param0, (byte) 78, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks");
+                  discarded$11 = cq.a(param0, (byte) 66, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks");
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -58,23 +64,23 @@ final class ib {
               decompiledCaughtException = decompiledCaughtParameter1;
               L1: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_4_0 = (RuntimeException) var2_ref;
+                stackOut_4_0 = (RuntimeException) (var2_ref);
                 stackOut_4_1 = new StringBuilder().append("ib.C(");
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
                 stackIn_5_0 = stackOut_4_0;
                 stackIn_5_1 = stackOut_4_1;
                 if (param0 == null) {
-                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+                  stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
                   stackOut_6_2 = "null";
                   stackIn_7_0 = stackOut_6_0;
                   stackIn_7_1 = stackOut_6_1;
                   stackIn_7_2 = stackOut_6_2;
                   break L1;
                 } else {
-                  stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-                  stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+                  stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+                  stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
                   stackOut_5_2 = "{...}";
                   stackIn_7_0 = stackOut_5_0;
                   stackIn_7_1 = stackOut_5_1;
@@ -82,7 +88,7 @@ final class ib {
                   break L1;
                 }
               }
-              throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + false + ')');
+              throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -93,6 +99,9 @@ final class ib {
 
     final static void b(int param0) {
         mh.a(pi.field_Rb, (byte) 95);
+        if (param0 != 20558) {
+            ib.a(-8);
+        }
     }
 
     public static void a(int param0) {
@@ -100,18 +109,17 @@ final class ib {
         field_f = null;
         field_h = null;
         field_i = null;
+        if (param0 != 2) {
+            field_i = (int[]) null;
+        }
     }
 
     ib(int param0, int param1) {
-        ((ib) this).field_d = param1;
-        ((ib) this).field_j = param0;
+        this.field_d = param1;
+        this.field_j = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_e = 2;
         field_i = new int[5];

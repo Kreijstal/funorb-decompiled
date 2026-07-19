@@ -9,9 +9,10 @@ final class ioa extends rqa {
     static int field_p;
 
     final static short[] a(short[] param0, int param1, int param2) {
+        short[] discarded$2 = null;
         short[] var3 = null;
         RuntimeException var3_ref = null;
-        Object var4 = null;
+        short[] var4 = null;
         short[] var5 = null;
         short[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -37,15 +38,15 @@ final class ioa extends rqa {
               if (param1 > 70) {
                 break L1;
               } else {
-                var4 = null;
-                short[] discarded$2 = ioa.a((short[]) null, -85, 57);
+                var4 = (short[]) null;
+                discarded$2 = ioa.a((short[]) null, -85, 57);
                 break L1;
               }
             }
             var5 = new short[param2];
             var3 = var5;
             cua.a(param0, 0, var5, 0, param2);
-            stackOut_2_0 = (short[]) var5;
+            stackOut_2_0 = (short[]) (var5);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -53,23 +54,23 @@ final class ioa extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_0 = (RuntimeException) (var3_ref);
             stackOut_4_1 = new StringBuilder().append("ioa.B(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -77,7 +78,7 @@ final class ioa extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
@@ -94,13 +95,13 @@ final class ioa extends rqa {
         if (kba.field_a == null) {
           return;
         } else {
-          var8 = ohb.a(param0, -26, 0);
+          var8 = ohb.a(param0, -26, param1);
           var9 = var8;
           if (param2 < -31) {
             if (var9 == null) {
               L0: {
                 var4 = param0;
-                if (fbb.field_j[param0] <= 1) {
+                if ((fbb.field_j[param0] ^ -1) >= -2) {
                   break L0;
                 } else {
                   var4 = hob.a(jp.field_Jc, fbb.field_j[param0], 123) + param0;
@@ -113,21 +114,21 @@ final class ioa extends rqa {
               var3 = new nl();
               var3.field_h = true;
               var3.field_d = var13;
-              var3.field_l = 0;
+              var3.field_l = param1;
               var3.field_g = false;
               var3.field_k = param0;
-              gtb.field_d.b(-10258, (ksa) (Object) var3);
+              gtb.field_d.b(-10258, var3);
               return;
             } else {
               var9.field_h = true;
               return;
             }
           } else {
-            field_q = null;
+            field_q = (dja) null;
             if (var9 == null) {
               L1: {
                 var4 = param0;
-                if (fbb.field_j[param0] <= 1) {
+                if ((fbb.field_j[param0] ^ -1) >= -2) {
                   break L1;
                 } else {
                   var4 = hob.a(jp.field_Jc, fbb.field_j[param0], 123) + param0;
@@ -142,10 +143,10 @@ final class ioa extends rqa {
               var3 = new nl();
               var3.field_h = true;
               var3.field_d = var11;
-              var3.field_l = 0;
+              var3.field_l = param1;
               var3.field_g = false;
               var3.field_k = param0;
-              gtb.field_d.b(-10258, (ksa) (Object) var3);
+              gtb.field_d.b(-10258, var3);
               return;
             } else {
               var9.field_h = true;
@@ -168,7 +169,7 @@ final class ioa extends rqa {
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -177,9 +178,10 @@ final class ioa extends rqa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         nc stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        nc stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -191,36 +193,38 @@ final class ioa extends rqa {
         try {
           L0: {
             if (param1 < -119) {
-              stackOut_3_0 = new nc((Object) (Object) frb.a(148, 90));
+              stackOut_3_0 = new nc(frb.a(148, 90));
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (nc) null;
               stackIn_2_0 = stackOut_1_0;
-              return (nc) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("ioa.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -228,18 +232,18 @@ final class ioa extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = 0;
         field_o = 10;
-        field_q = (dja) (Object) new fr();
+        field_q = (dja) ((Object) new fr());
     }
 }

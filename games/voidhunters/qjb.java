@@ -15,17 +15,17 @@ final class qjb implements ntb {
         if (1 == fra.field_a) {
             return 2048;
         }
-        return ((qjb) this).a((byte) 24).c(0);
+        return this.a((byte) 24).c(0);
     }
 
     final int a(int param0) {
-        if (!(((qjb) this).a((byte) 24).h((byte) 38))) {
+        if (!(this.a((byte) 24).h((byte) 38))) {
             return 0;
         }
         if (param0 < 67) {
             return 87;
         }
-        return 256 * ((qjb) this).field_b / Math.max(1, ((qjb) this).a((byte) 24).f((byte) 118));
+        return 256 * this.field_b / Math.max(1, this.a((byte) 24).f((byte) 118));
     }
 
     final boolean b(byte param0) {
@@ -36,13 +36,13 @@ final class qjb implements ntb {
         L0: {
           L1: {
             var2 = -28 % ((74 - param0) / 38);
-            if (((qjb) this).field_b > 0) {
+            if ((this.field_b ^ -1) < -1) {
               break L1;
             } else {
-              if (((qjb) this).field_c == 9) {
+              if ((this.field_c ^ -1) == -10) {
                 break L1;
               } else {
-                if (((qjb) this).field_c == 5) {
+                if (-6 == (this.field_c ^ -1)) {
                   break L1;
                 } else {
                   stackOut_3_0 = 1;
@@ -80,21 +80,21 @@ final class qjb implements ntb {
         try {
           L0: {
             L1: {
-              ((qjb) this).field_b = param0.i(0, 16);
-              ((qjb) this).field_c = param0.i(0, 4);
+              this.field_b = param0.i(0, 16);
+              this.field_c = param0.i(0, 4);
               if (kv.a(param1, param0)) {
                 L2: {
-                  if (((qjb) this).field_e == null) {
-                    ((qjb) this).field_e = new odb();
+                  if (this.field_e == null) {
+                    this.field_e = new odb();
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                ((qjb) this).field_e.a(param0, param1);
+                this.field_e.a(param0, param1);
                 break L1;
               } else {
-                ((qjb) this).field_e = null;
+                this.field_e = null;
                 break L1;
               }
             }
@@ -104,23 +104,23 @@ final class qjb implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_0 = (RuntimeException) (var3);
             stackOut_7_1 = new StringBuilder().append("qjb.H(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -128,7 +128,7 @@ final class qjb implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
         }
     }
 
@@ -167,12 +167,12 @@ final class qjb implements ntb {
         try {
           L0: {
             L1: {
-              var5 = (qjb) (Object) param0;
-              if (((qjb) this).field_e == null) {
+              var5 = (qjb) ((Object) param0);
+              if (this.field_e == null) {
                 break L1;
               } else {
                 if (var5.field_e != null) {
-                  ((qjb) this).field_e.a((tv) (Object) var5.field_e, -104);
+                  this.field_e.a(var5.field_e, -104);
                   break L1;
                 } else {
                   break L1;
@@ -181,25 +181,25 @@ final class qjb implements ntb {
             }
             L2: {
               var4 = 0;
-              if (var5.field_b == ((qjb) this).field_b) {
+              if (var5.field_b == this.field_b) {
                 break L2;
               } else {
                 var4 = 1;
-                System.out.println("int reload has changed. before=" + var5.field_b + ", now=" + ((qjb) this).field_b);
+                System.out.println("int reload has changed. before=" + var5.field_b + ", now=" + this.field_b);
                 break L2;
               }
             }
             L3: {
-              if (((qjb) this).field_c != var5.field_c) {
+              if (this.field_c != var5.field_c) {
                 var4 = 1;
-                System.out.println("int weapontype has changed. before=" + var5.field_c + ", now=" + ((qjb) this).field_c);
+                System.out.println("int weapontype has changed. before=" + var5.field_c + ", now=" + this.field_c);
                 break L3;
               } else {
                 break L3;
               }
             }
             L4: {
-              if (null != ((qjb) this).field_e) {
+              if (null != this.field_e) {
                 stackOut_11_0 = 0;
                 stackIn_12_0 = stackOut_11_0;
                 break L4;
@@ -232,10 +232,10 @@ final class qjb implements ntb {
                 if ((stackIn_15_0 ^ stackIn_15_1) != 0) {
                   break L7;
                 } else {
-                  if (null == ((qjb) this).field_e) {
+                  if (null == this.field_e) {
                     break L6;
                   } else {
-                    if (((qjb) this).field_e.a((byte) -43, (tv) (Object) var5.field_e)) {
+                    if (this.field_e.a((byte) -43, var5.field_e)) {
                       break L7;
                     } else {
                       break L6;
@@ -243,7 +243,7 @@ final class qjb implements ntb {
                   }
                 }
               }
-              System.out.println("TargetLock target_lock has changed. before=" + (Object) (Object) var5.field_e + ", now=" + (Object) (Object) ((qjb) this).field_e);
+              System.out.println("TargetLock target_lock has changed. before=" + var5.field_e + ", now=" + this.field_e);
               var4 = 1;
               break L6;
             }
@@ -251,7 +251,7 @@ final class qjb implements ntb {
               if (param1 < -19) {
                 break L8;
               } else {
-                ((qjb) this).field_e = null;
+                this.field_e = (odb) null;
                 break L8;
               }
             }
@@ -269,23 +269,23 @@ final class qjb implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var3 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var3;
+            stackOut_25_0 = (RuntimeException) (var3);
             stackOut_25_1 = new StringBuilder().append("qjb.F(");
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L10;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -293,18 +293,19 @@ final class qjb implements ntb {
               break L10;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ')');
         }
     }
 
     final odb c(int param0) {
         if (param0 != 2) {
-            ((qjb) this).field_b = 37;
+            this.field_b = 37;
         }
-        return ((qjb) this).field_e;
+        return this.field_e;
     }
 
     final boolean b(boolean param0) {
+        int discarded$2 = 0;
         mfb var2 = null;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -313,21 +314,21 @@ final class qjb implements ntb {
           if (param0) {
             break L0;
           } else {
-            int discarded$2 = ((qjb) this).e((byte) 111);
+            discarded$2 = this.e((byte) 111);
             break L0;
           }
         }
         L1: {
           L2: {
-            var2 = ((qjb) this).a((byte) 24);
-            if (((qjb) this).field_b == var2.f((byte) 127)) {
+            var2 = this.a((byte) 24);
+            if (this.field_b == var2.f((byte) 127)) {
               break L2;
             } else {
               L3: {
                 if (!var2.i(1024)) {
                   break L3;
                 } else {
-                  if (((qjb) this).field_b <= var2.f((byte) 32) + -var2.c((byte) -50)) {
+                  if (this.field_b <= var2.f((byte) 32) + -var2.c((byte) -50)) {
                     break L3;
                   } else {
                     break L2;
@@ -350,29 +351,31 @@ final class qjb implements ntb {
         if (param0 != 24) {
             field_d = -84;
         }
-        return ema.field_o[((qjb) this).field_c];
+        return ema.field_o[this.field_c];
     }
 
     final void a(boolean param0, boolean param1) {
+        int discarded$0 = 0;
         if (!param1) {
-            int discarded$0 = ((qjb) this).a(73);
+            discarded$0 = this.a(73);
         }
     }
 
     final boolean d(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 6) {
-            Object var3 = null;
-            boolean discarded$0 = ((qjb) this).a(-39, -35, 81, (wfb) null, (ml) null);
+            ml var3 = (ml) null;
+            discarded$0 = this.a(-39, -35, 81, (wfb) null, (ml) null);
         }
-        return !((qjb) this).a((byte) 24).e(118) ? true : false;
+        return !this.a((byte) 24).e(118) ? true : false;
     }
 
     final int d(byte param0) {
         if (param0 <= 106) {
-            Object var3 = null;
+            mfb var3 = (mfb) null;
             this.a(107, -16, 116, -66, 72, -61, -84, 43, -112, 41, (anb) null, 15, 117, -19, -92, (pe) null, (mfb) null);
         }
-        return ((qjb) this).a((byte) 24).b(-105);
+        return this.a((byte) 24).b(-105);
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, anb param10, int param11, int param12, int param13, int param14, pe param15, mfb param16) {
@@ -453,9 +456,9 @@ final class qjb implements ntb {
               var21 = param16.d((byte) -106);
               var22 = param16.a((byte) 9);
               var23 = param16.k(0);
-              ((qjb) this).field_b = param1;
-              var24 = var21 * (param14 >> 4) >> 12;
-              var25 = var21 * (param6 >> 4) >> 12;
+              this.field_b = param1;
+              var24 = var21 * (param14 >> -1708888604) >> 660822924;
+              var25 = var21 * (param6 >> -1044281532) >> -1382527636;
               if (var20 != 0) {
                 param10.a(var18_int * -var25, param5, param8, (byte) -125, var18_int * -var24);
                 break L1;
@@ -477,13 +480,13 @@ final class qjb implements ntb {
             }
             L3: {
               var29 = new Random((long)param13);
-              var30 = param13 + (param14 >> 8);
-              var31 = param7 + (param6 >> 8);
+              var30 = param13 + (param14 >> -1626536536);
+              var31 = param7 + (param6 >> 1111097800);
               var32 = param16.g(2769);
-              if (param16.e((byte) -63) <= 0) {
+              if (-1 <= (param16.e((byte) -63) ^ -1)) {
                 break L3;
               } else {
-                var33 = param16.f((byte) 30) + -((qjb) this).field_b;
+                var33 = param16.f((byte) 30) + -this.field_b;
                 var34 = param16.c((byte) -111);
                 var35 = -var33 + var34;
                 if (var35 >= param16.e((byte) -63)) {
@@ -497,13 +500,13 @@ final class qjb implements ntb {
             L4: {
               if (!param16.c(true)) {
                 L5: {
-                  if (6 == ((qjb) this).field_c) {
+                  if (6 == this.field_c) {
                     break L5;
                   } else {
-                    if (11 == ((qjb) this).field_c) {
+                    if (11 == this.field_c) {
                       break L5;
                     } else {
-                      if (((qjb) this).field_c == 9) {
+                      if ((this.field_c ^ -1) == -10) {
                         break L5;
                       } else {
                         break L4;
@@ -514,21 +517,21 @@ final class qjb implements ntb {
                 param12 = 0;
                 break L4;
               } else {
-                param12 = sqb.a(-param7 + param11 >> 6, 77, param0 + -param13 >> 6);
+                param12 = sqb.a(-param7 + param11 >> 1094892294, 77, param0 + -param13 >> 1712254054);
                 break L4;
               }
             }
             var33 = 0;
             L6: while (true) {
-              if (~var33 <= ~var18_int) {
+              if (var33 >= var18_int) {
                 L7: {
-                  if (((qjb) this).field_c == 6) {
+                  if ((this.field_c ^ -1) == -7) {
                     break L7;
                   } else {
-                    if (((qjb) this).field_c == 9) {
+                    if (this.field_c == 9) {
                       break L7;
                     } else {
-                      if (((qjb) this).field_c == 11) {
+                      if (-12 == (this.field_c ^ -1)) {
                         break L7;
                       } else {
                         param15.a(5, param10.c((byte) -121) + (var24 >> eta.field_b), 20, 20, 30273, param13, 500, param7, param10.f(0) + (var25 >> eta.field_b));
@@ -539,10 +542,10 @@ final class qjb implements ntb {
                 }
                 L8: {
                   L9: {
-                    if (((qjb) this).field_c != 9) {
+                    if (this.field_c != 9) {
                       break L9;
                     } else {
-                      if (param4 < 0) {
+                      if ((param4 ^ -1) > -1) {
                         break L9;
                       } else {
                         rmb.a(param7, param10.field_l, param4, -39, param13);
@@ -550,7 +553,7 @@ final class qjb implements ntb {
                       }
                     }
                   }
-                  if (param4 < 0) {
+                  if (-1 < (param4 ^ -1)) {
                     break L8;
                   } else {
                     qba.a(20382, param13, param4, param7, 5);
@@ -563,8 +566,8 @@ final class qjb implements ntb {
                   var34 = 0;
                   var35 = 0;
                   if (0 < var19) {
-                    var34 = hob.a(var29, var19 << 1, 124) - var19;
-                    var35 = -var19 + hob.a(var29, var19 << 1, 121);
+                    var34 = hob.a(var29, var19 << -1739237119, 124) - var19;
+                    var35 = -var19 + hob.a(var29, var19 << -1020228223, 121);
                     break L10;
                   } else {
                     break L10;
@@ -581,23 +584,23 @@ final class qjb implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var18 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) var18;
+            stackOut_32_0 = (RuntimeException) (var18);
             stackOut_32_1 = new StringBuilder().append("qjb.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',');
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
             stackIn_33_1 = stackOut_32_1;
             if (param10 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "null";
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
               break L11;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "{...}";
               stackIn_35_0 = stackOut_33_0;
               stackIn_35_1 = stackOut_33_1;
@@ -606,23 +609,23 @@ final class qjb implements ntb {
             }
           }
           L12: {
-            stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
+            stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
             stackOut_35_1 = ((StringBuilder) (Object) stackIn_35_1).append(stackIn_35_2).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',');
             stackIn_37_0 = stackOut_35_0;
             stackIn_37_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;
             stackIn_36_1 = stackOut_35_1;
             if (param15 == null) {
-              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
               stackOut_37_2 = "null";
               stackIn_38_0 = stackOut_37_0;
               stackIn_38_1 = stackOut_37_1;
               stackIn_38_2 = stackOut_37_2;
               break L12;
             } else {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
               stackOut_36_2 = "{...}";
               stackIn_38_0 = stackOut_36_0;
               stackIn_38_1 = stackOut_36_1;
@@ -631,23 +634,23 @@ final class qjb implements ntb {
             }
           }
           L13: {
-            stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
+            stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
             stackOut_38_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_38_2).append(',');
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
             stackIn_39_1 = stackOut_38_1;
             if (param16 == null) {
-              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
-              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
               stackOut_40_2 = "null";
               stackIn_41_0 = stackOut_40_0;
               stackIn_41_1 = stackOut_40_1;
               stackIn_41_2 = stackOut_40_2;
               break L13;
             } else {
-              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
               stackOut_39_2 = "{...}";
               stackIn_41_0 = stackOut_39_0;
               stackIn_41_1 = stackOut_39_1;
@@ -655,15 +658,16 @@ final class qjb implements ntb {
               break L13;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_41_0), stackIn_41_2 + ')');
         }
     }
 
     final boolean c(byte param0) {
+        int discarded$0 = 0;
         if (param0 <= 71) {
-            int discarded$0 = ((qjb) this).a(126);
+            discarded$0 = this.a(126);
         }
-        return ((qjb) this).field_c == 6 ? true : false;
+        return -7 == (this.field_c ^ -1) ? true : false;
     }
 
     final void a(pe param0, boolean param1, int param2, int param3, int param4, anb param5, int param6, int param7, int param8, int param9, int param10, int[] param11) {
@@ -714,6 +718,7 @@ final class qjb implements ntb {
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         String stackIn_73_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_64_0 = null;
         StringBuilder stackOut_64_1 = null;
@@ -743,21 +748,21 @@ final class qjb implements ntb {
         var33 = VoidHunters.field_G;
         try {
           L0: {
-            var34 = ((qjb) this).a((byte) 24);
-            if (var34.b((byte) 34) <= 0) {
+            var34 = this.a((byte) 24);
+            if (-1 <= (var34.b((byte) 34) ^ -1)) {
               L1: {
                 L2: {
                   var14 = -90 / ((param4 - 6) / 33);
-                  if (((qjb) this).field_b <= 0) {
+                  if (-1 <= (this.field_b ^ -1)) {
                     break L2;
                   } else {
                     if (param1) {
                       break L2;
                     } else {
-                      if (((qjb) this).field_c != 9) {
+                      if (this.field_c != 9) {
                         break L1;
                       } else {
-                        if (((qjb) this).field_b > -upb.field_a + fja.field_o) {
+                        if (this.field_b > -upb.field_a + fja.field_o) {
                           break L2;
                         } else {
                           break L1;
@@ -768,21 +773,21 @@ final class qjb implements ntb {
                 }
                 var15 = fc.a(param8, (byte) 123);
                 var16 = eu.a(param8, 96);
-                var17 = (-(param10 * var16) + var15 * param2 >> 16) + param9;
-                var18 = (var15 * param10 + var16 * param2 >> 16) + param7;
+                var17 = (-(param10 * var16) + var15 * param2 >> 702127568) + param9;
+                var18 = (var15 * param10 + var16 * param2 >> 59829360) + param7;
                 var19 = 0;
                 var20 = 0;
                 L3: while (true) {
                   if (var20 >= param11.length) {
                     L4: {
-                      var20 = param9 - -(var15 * (256 + var19) >> 16);
-                      var21 = (var16 * (256 + var19) >> 16) + param7;
+                      var20 = param9 - -(var15 * (256 + var19) >> 1696313712);
+                      var21 = (var16 * (256 + var19) >> -1454790640) + param7;
                       var22 = -1;
                       var23 = -1;
                       var24 = null;
                       if (param5 instanceof sg) {
-                        var35_ref = (sg) (Object) param5;
-                        var24 = (Object) (Object) var35_ref;
+                        var35_ref = (sg) ((Object) param5);
+                        var24 = var35_ref;
                         var22 = var35_ref.q((byte) 86);
                         var23 = var35_ref.o((byte) -117);
                         if (null == var35_ref.k((byte) -108)) {
@@ -795,9 +800,9 @@ final class qjb implements ntb {
                         break L4;
                       }
                     }
-                    if (2 == ((qjb) this).field_c) {
+                    if (2 == this.field_c) {
                       L5: {
-                        if (var23 < 0) {
+                        if (-1 < (var23 ^ -1)) {
                           break L5;
                         } else {
                           if (param0.e(var23, (byte) -99) >= wk.field_a) {
@@ -817,11 +822,11 @@ final class qjb implements ntb {
                       var25.a(var26, 4);
                       var25.a(var21, param8, var20, 500, 1948934248);
                       param0.a(var25, (byte) 72);
-                      ((qjb) this).field_b = var34.f((byte) 77);
-                      eib.a(6811, var34.a(false), 1 + ((qjb) this).field_b / 2);
+                      this.field_b = var34.f((byte) 77);
+                      eib.a(6811, var34.a(false), 1 + this.field_b / 2);
                       break L1;
                     } else {
-                      if (((qjb) this).field_c != 10) {
+                      if ((this.field_c ^ -1) != -11) {
                         L6: {
                           if (var34.c(true)) {
                             break L6;
@@ -837,7 +842,8 @@ final class qjb implements ntb {
                                 if (Math.abs(var28) <= var34.d(27918)) {
                                   break L6;
                                 } else {
-                                  return;
+                                  decompiledRegionSelector0 = 2;
+                                  break L0;
                                 }
                               } else {
                                 break L6;
@@ -852,10 +858,11 @@ final class qjb implements ntb {
                             if (!var34.i(1024)) {
                               break L7;
                             } else {
-                              if (((qjb) this).field_b <= 0) {
+                              if (-1 <= (this.field_b ^ -1)) {
                                 break L7;
                               } else {
-                                return;
+                                decompiledRegionSelector0 = 3;
+                                break L0;
                               }
                             }
                           }
@@ -868,12 +875,12 @@ final class qjb implements ntb {
                             var25_int = var34.a(false);
                             break L8;
                           } else {
-                            if (((qjb) this).field_b == 0) {
+                            if (this.field_b == 0) {
                               var27 = 1;
                               var25_int = var34.a(false);
                               break L8;
                             } else {
-                              var26_int = ((qjb) this).field_b;
+                              var26_int = this.field_b;
                               break L8;
                             }
                           }
@@ -883,10 +890,10 @@ final class qjb implements ntb {
                           if (var24 == null) {
                             break L9;
                           } else {
-                            if (((sg) var24).a((byte) 11, var28)) {
+                            if (((sg) (var24)).a((byte) 11, var28)) {
                               break L9;
                             } else {
-                              if (fra.field_a != 1) {
+                              if ((fra.field_a ^ -1) != -2) {
                                 break L1;
                               } else {
                                 if (!param1) {
@@ -902,29 +909,29 @@ final class qjb implements ntb {
                             }
                           }
                         }
-                        if (((qjb) this).c((byte) 101)) {
+                        if (this.c((byte) 101)) {
                           L10: {
                             if (param1) {
                               break L10;
                             } else {
                               L11: {
-                                if (((qjb) this).field_e == null) {
-                                  ((qjb) this).field_e = new odb();
+                                if (this.field_e == null) {
+                                  this.field_e = new odb();
                                   break L11;
                                 } else {
                                   break L11;
                                 }
                               }
                               L12: {
-                                var29 = param0.a(true, param6, param3, ((sg) var24).q((byte) 83));
+                                var29 = param0.a(true, param6, param3, ((sg) (var24)).q((byte) 83));
                                 var30 = 0;
                                 if (var29 != null) {
                                   var31 = -param3 + var29.field_d;
                                   var32 = var29.field_e - param6;
                                   if (ar.a(var31, (byte) 112, var32) <= var29.b(true) - -32768) {
-                                    ((qjb) this).field_e.field_a = var29.c(false);
-                                    ((qjb) this).field_e.field_d = param3 - var29.d(false);
-                                    ((qjb) this).field_e.field_c = -var29.g((byte) -122) + param6;
+                                    this.field_e.field_a = var29.c(false);
+                                    this.field_e.field_d = param3 - var29.d(false);
+                                    this.field_e.field_c = -var29.g((byte) -122) + param6;
                                     var30 = 1;
                                     break L12;
                                   } else {
@@ -937,9 +944,9 @@ final class qjb implements ntb {
                               if (var30 != 0) {
                                 break L10;
                               } else {
-                                ((qjb) this).field_e.field_a = -1;
-                                ((qjb) this).field_e.field_d = -param5.d(false) + param3;
-                                ((qjb) this).field_e.field_c = -param5.g((byte) 123) + param6;
+                                this.field_e.field_a = -1;
+                                this.field_e.field_d = -param5.d(false) + param3;
+                                this.field_e.field_c = -param5.g((byte) 123) + param6;
                                 break L10;
                               }
                             }
@@ -951,119 +958,133 @@ final class qjb implements ntb {
                           break L1;
                         }
                       } else {
-                        ((qjb) this).field_b = oq.field_a;
-                        qba.a(20382, var20, var34.a(false), var21, ((qjb) this).field_b / 2 + 1);
+                        this.field_b = oq.field_a;
+                        qba.a(20382, var20, var34.a(false), var21, this.field_b / 2 + 1);
                         break L1;
                       }
                     }
                   } else {
-                    L13: {
-                      var21 = param11[var20];
-                      if (var19 >= var21) {
-                        break L13;
-                      } else {
-                        break L13;
-                      }
+                    var21 = param11[var20];
+                    if (var19 < var21) {
+                      var19 = var21;
+                      var20 += 2;
+                      continue L3;
+                    } else {
+                      var20 += 2;
+                      continue L3;
                     }
-                    var20 += 2;
-                    continue L3;
                   }
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              L14: {
-                ((qjb) this).field_b = ((qjb) this).field_b + var34.f(1024);
+              L13: {
+                this.field_b = this.field_b + var34.f(1024);
                 var14 = var34.b((byte) 82);
-                if (((qjb) this).field_b > var14) {
-                  ((qjb) this).field_b = var14;
-                  break L14;
+                if (this.field_b > var14) {
+                  this.field_b = var14;
+                  break L13;
                 } else {
-                  break L14;
+                  break L13;
                 }
               }
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L15: {
+          L14: {
             var13 = decompiledCaughtException;
-            stackOut_64_0 = (RuntimeException) var13;
+            stackOut_64_0 = (RuntimeException) (var13);
             stackOut_64_1 = new StringBuilder().append("qjb.P(");
             stackIn_66_0 = stackOut_64_0;
             stackIn_66_1 = stackOut_64_1;
             stackIn_65_0 = stackOut_64_0;
             stackIn_65_1 = stackOut_64_1;
             if (param0 == null) {
-              stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
-              stackOut_66_1 = (StringBuilder) (Object) stackIn_66_1;
+              stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
               stackOut_66_2 = "null";
               stackIn_67_0 = stackOut_66_0;
               stackIn_67_1 = stackOut_66_1;
               stackIn_67_2 = stackOut_66_2;
-              break L15;
+              break L14;
             } else {
-              stackOut_65_0 = (RuntimeException) (Object) stackIn_65_0;
-              stackOut_65_1 = (StringBuilder) (Object) stackIn_65_1;
+              stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
+              stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
               stackOut_65_2 = "{...}";
               stackIn_67_0 = stackOut_65_0;
               stackIn_67_1 = stackOut_65_1;
               stackIn_67_2 = stackOut_65_2;
-              break L15;
+              break L14;
             }
           }
-          L16: {
-            stackOut_67_0 = (RuntimeException) (Object) stackIn_67_0;
+          L15: {
+            stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
             stackOut_67_1 = ((StringBuilder) (Object) stackIn_67_1).append(stackIn_67_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_69_0 = stackOut_67_0;
             stackIn_69_1 = stackOut_67_1;
             stackIn_68_0 = stackOut_67_0;
             stackIn_68_1 = stackOut_67_1;
             if (param5 == null) {
-              stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
-              stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
+              stackOut_69_0 = (RuntimeException) ((Object) stackIn_69_0);
+              stackOut_69_1 = (StringBuilder) ((Object) stackIn_69_1);
               stackOut_69_2 = "null";
               stackIn_70_0 = stackOut_69_0;
               stackIn_70_1 = stackOut_69_1;
               stackIn_70_2 = stackOut_69_2;
-              break L16;
+              break L15;
             } else {
-              stackOut_68_0 = (RuntimeException) (Object) stackIn_68_0;
-              stackOut_68_1 = (StringBuilder) (Object) stackIn_68_1;
+              stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
+              stackOut_68_1 = (StringBuilder) ((Object) stackIn_68_1);
               stackOut_68_2 = "{...}";
               stackIn_70_0 = stackOut_68_0;
               stackIn_70_1 = stackOut_68_1;
               stackIn_70_2 = stackOut_68_2;
-              break L16;
+              break L15;
             }
           }
-          L17: {
-            stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
+          L16: {
+            stackOut_70_0 = (RuntimeException) ((Object) stackIn_70_0);
             stackOut_70_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_70_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',');
             stackIn_72_0 = stackOut_70_0;
             stackIn_72_1 = stackOut_70_1;
             stackIn_71_0 = stackOut_70_0;
             stackIn_71_1 = stackOut_70_1;
             if (param11 == null) {
-              stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
-              stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
+              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
               stackOut_72_2 = "null";
               stackIn_73_0 = stackOut_72_0;
               stackIn_73_1 = stackOut_72_1;
               stackIn_73_2 = stackOut_72_2;
-              break L17;
+              break L16;
             } else {
-              stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
-              stackOut_71_1 = (StringBuilder) (Object) stackIn_71_1;
+              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
               stackOut_71_2 = "{...}";
               stackIn_73_0 = stackOut_71_0;
               stackIn_73_1 = stackOut_71_1;
               stackIn_73_2 = stackOut_71_2;
-              break L17;
+              break L16;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_73_0, stackIn_73_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_73_0), stackIn_73_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -1090,11 +1111,11 @@ final class qjb implements ntb {
         try {
           L0: {
             L1: {
-              var4 = (qjb) (Object) param1;
+              var4 = (qjb) ((Object) param1);
               var3 = var4;
-              var4.field_c = ((qjb) this).field_c;
-              var4.field_b = ((qjb) this).field_b;
-              if (((qjb) this).field_e != null) {
+              var4.field_c = this.field_c;
+              var4.field_b = this.field_b;
+              if (this.field_e != null) {
                 L2: {
                   if (null != var3.field_e) {
                     break L2;
@@ -1103,7 +1124,7 @@ final class qjb implements ntb {
                     break L2;
                   }
                 }
-                ((qjb) this).field_e.b((byte) 79, (tv) (Object) var3.field_e);
+                this.field_e.b((byte) 79, var3.field_e);
                 break L1;
               } else {
                 var4.field_e = null;
@@ -1124,23 +1145,23 @@ final class qjb implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_0 = (RuntimeException) (var3_ref);
             stackOut_8_1 = new StringBuilder().append("qjb.D(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -1148,7 +1169,7 @@ final class qjb implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
     }
 
@@ -1192,15 +1213,15 @@ final class qjb implements ntb {
             L1: {
               L2: {
                 var4 = -72 / ((22 - param0) / 59);
-                var3 = (qjb) (Object) param1;
-                if (var3.field_b != ((qjb) this).field_b) {
+                var3 = (qjb) ((Object) param1);
+                if (var3.field_b != this.field_b) {
                   break L2;
                 } else {
-                  if (var3.field_c != ((qjb) this).field_c) {
+                  if (var3.field_c != this.field_c) {
                     break L2;
                   } else {
                     L3: {
-                      if (null != ((qjb) this).field_e) {
+                      if (null != this.field_e) {
                         stackOut_4_0 = 0;
                         stackIn_5_0 = stackOut_4_0;
                         break L3;
@@ -1232,10 +1253,10 @@ final class qjb implements ntb {
                       break L2;
                     } else {
                       L5: {
-                        if (((qjb) this).field_e == null) {
+                        if (this.field_e == null) {
                           break L5;
                         } else {
-                          if (!((qjb) this).field_e.a((byte) 91, (tv) (Object) var3.field_e)) {
+                          if (!this.field_e.a((byte) 91, var3.field_e)) {
                             break L5;
                           } else {
                             break L2;
@@ -1259,23 +1280,23 @@ final class qjb implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var3_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var3_ref;
+            stackOut_15_0 = (RuntimeException) (var3_ref);
             stackOut_15_1 = new StringBuilder().append("qjb.C(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -1283,12 +1304,13 @@ final class qjb implements ntb {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
         return stackIn_14_0 != 0;
     }
 
     public final void b(faa param0, int param1) {
+        int discarded$3 = 0;
         RuntimeException var3 = null;
         faa stackIn_3_0 = null;
         int stackIn_3_1 = 0;
@@ -1324,24 +1346,24 @@ final class qjb implements ntb {
         try {
           L0: {
             L1: {
-              param0.a(-632, ((qjb) this).field_b, 16);
+              param0.a(-632, this.field_b, 16);
               if (param1 <= -109) {
                 break L1;
               } else {
-                int discarded$3 = ((qjb) this).e((byte) -18);
+                discarded$3 = this.e((byte) -18);
                 break L1;
               }
             }
             L2: {
-              param0.a(-632, ((qjb) this).field_c, 4);
-              stackOut_2_0 = (faa) param0;
+              param0.a(-632, this.field_c, 4);
+              stackOut_2_0 = (faa) (param0);
               stackOut_2_1 = -103;
               stackIn_4_0 = stackOut_2_0;
               stackIn_4_1 = stackOut_2_1;
               stackIn_3_0 = stackOut_2_0;
               stackIn_3_1 = stackOut_2_1;
-              if (null == ((qjb) this).field_e) {
-                stackOut_4_0 = (faa) (Object) stackIn_4_0;
+              if (null == this.field_e) {
+                stackOut_4_0 = (faa) ((Object) stackIn_4_0);
                 stackOut_4_1 = stackIn_4_1;
                 stackOut_4_2 = 0;
                 stackIn_5_0 = stackOut_4_0;
@@ -1349,7 +1371,7 @@ final class qjb implements ntb {
                 stackIn_5_2 = stackOut_4_2;
                 break L2;
               } else {
-                stackOut_3_0 = (faa) (Object) stackIn_3_0;
+                stackOut_3_0 = (faa) ((Object) stackIn_3_0);
                 stackOut_3_1 = stackIn_3_1;
                 stackOut_3_2 = 1;
                 stackIn_5_0 = stackOut_3_0;
@@ -1360,7 +1382,7 @@ final class qjb implements ntb {
             }
             L3: {
               if (vq.a(stackIn_5_0, stackIn_5_1, stackIn_5_2 != 0)) {
-                ((qjb) this).field_e.b(param0, -126);
+                this.field_e.b(param0, -126);
                 break L3;
               } else {
                 break L3;
@@ -1372,23 +1394,23 @@ final class qjb implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("qjb.B(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -1396,7 +1418,7 @@ final class qjb implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
@@ -1464,8 +1486,8 @@ final class qjb implements ntb {
         try {
           L0: {
             L1: {
-              if (0 < ((qjb) this).field_b) {
-                ((qjb) this).field_b = ((qjb) this).field_b - 1;
+              if (0 < this.field_b) {
+                this.field_b = this.field_b - 1;
                 param1.d((byte) 87);
                 break L1;
               } else {
@@ -1473,13 +1495,13 @@ final class qjb implements ntb {
               }
             }
             L2: {
-              if (((qjb) this).field_c != 10) {
+              if (this.field_c != 10) {
                 break L2;
               } else {
-                if (oq.field_a + -oq.field_n >= ((qjb) this).field_b) {
+                if (oq.field_a + -oq.field_n >= this.field_b) {
                   break L2;
                 } else {
-                  var10_int = oq.field_a + -((qjb) this).field_b;
+                  var10_int = oq.field_a + -this.field_b;
                   var11 = ccb.field_a.a(0);
                   var11.a(-1, param4, param0, bpa.field_a / oq.field_n * var10_int, 1, 0, (byte) 69, param1, param7, 0);
                   break L2;
@@ -1487,12 +1509,12 @@ final class qjb implements ntb {
               }
             }
             L3: {
-              var12 = ((qjb) this).a((byte) 24);
+              var12 = this.a((byte) 24);
               if (var12.i(1024)) {
-                if (((qjb) this).field_b <= var12.f((byte) 113) + -var12.c((byte) 124)) {
+                if (this.field_b <= var12.f((byte) 113) + -var12.c((byte) 124)) {
                   break L3;
                 } else {
-                  ((qjb) this).a(param8, true, param6, 0, -127, param1, 0, param4, param7, param0, param3, param2);
+                  this.a(param8, true, param6, 0, -127, param1, 0, param4, param7, param0, param3, param2);
                   break L3;
                 }
               } else {
@@ -1503,7 +1525,7 @@ final class qjb implements ntb {
               if (param5) {
                 break L4;
               } else {
-                ((qjb) this).b(-89);
+                this.b(-89);
                 break L4;
               }
             }
@@ -1513,23 +1535,23 @@ final class qjb implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var10 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var10;
+            stackOut_13_0 = (RuntimeException) (var10);
             stackOut_13_1 = new StringBuilder().append("qjb.M(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -1538,23 +1560,23 @@ final class qjb implements ntb {
             }
           }
           L6: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param2 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -1563,23 +1585,23 @@ final class qjb implements ntb {
             }
           }
           L7: {
-            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+            stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
             stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param8 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -1587,19 +1609,19 @@ final class qjb implements ntb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
         }
     }
 
     final void b(int param0) {
-        ((qjb) this).field_e = null;
+        this.field_e = null;
         if (param0 != 2048) {
             field_d = 124;
         }
     }
 
     qjb(int param0) {
-        ((qjb) this).field_c = param0;
+        this.field_c = param0;
     }
 
     final boolean a(int param0, int param1, int param2, wfb param3, ml param4) {
@@ -1628,6 +1650,7 @@ final class qjb implements ntb {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_8_0 = 0;
@@ -1651,16 +1674,17 @@ final class qjb implements ntb {
         try {
           L0: {
             var6_int = param4.c(param0 + 26894);
-            if (var6_int == 0) {
+            if (-1 == (var6_int ^ -1)) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 if (param0 == -26772) {
                   break L1;
                 } else {
-                  ((qjb) this).field_b = 95;
+                  this.field_b = 95;
                   break L1;
                 }
               }
@@ -1682,6 +1706,7 @@ final class qjb implements ntb {
                   break L2;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -1689,23 +1714,23 @@ final class qjb implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var6;
+            stackOut_10_0 = (RuntimeException) (var6);
             stackOut_10_1 = new StringBuilder().append("qjb.T(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -1714,23 +1739,23 @@ final class qjb implements ntb {
             }
           }
           L4: {
-            stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+            stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
             stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param4 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -1738,24 +1763,24 @@ final class qjb implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
-        return stackIn_9_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          return stackIn_9_0 != 0;
+        }
     }
 
     final boolean a(boolean param0) {
         if (!param0) {
-            ((qjb) this).field_c = -50;
+            this.field_c = -50;
             return false;
         }
         return false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = 1;
         field_a = "Choose the mutators";
     }

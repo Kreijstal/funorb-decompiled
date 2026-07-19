@@ -17,23 +17,23 @@ final class nb extends ig {
         try {
             if (!(qf.field_d != null)) {
                 qf.field_d = new ql(na.field_d, ii.field_F);
-                na.field_d.a((byte) -104, (rj) (Object) qf.field_d);
+                na.field_d.a((byte) -104, (rj) (qf.field_d));
             }
             if (param3 > -117) {
-                Object var5 = null;
+                String var5 = (String) null;
                 nb.a(true, 0.3101823627948761f, (String) null, (byte) 81);
             }
             qf.field_d.a(param0, param1, true, param2);
             ti.d();
             af.a(true, (byte) -79);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "nb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "nb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final int g(int param0) {
         int var2 = 32 / ((param0 - -51) / 48);
-        return ((nb) this).field_J;
+        return this.field_J;
     }
 
     final boolean a(rj param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
@@ -54,6 +54,7 @@ final class nb extends ig {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_23_0 = 0;
         int stackOut_19_0 = 0;
@@ -79,11 +80,12 @@ final class nb extends ig {
               }
               stackOut_23_0 = 0;
               stackIn_24_0 = stackOut_23_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               L2: {
-                var8_int = -((nb) this).field_G + -param4 + param1;
-                var9 = ((nb) this).field_p + -(((nb) this).field_G * 2);
+                var8_int = -this.field_G + -param4 + param1;
+                var9 = this.field_p + -(this.field_G * 2);
                 if (var8_int <= var9) {
                   break L2;
                 } else {
@@ -100,9 +102,9 @@ final class nb extends ig {
                 }
               }
               L4: {
-                var8_int = var8_int * ((nb) this).field_J / var9;
+                var8_int = var8_int * this.field_J / var9;
                 if (1 == param2) {
-                  ((nb) this).field_L.a(var8_int, false);
+                  this.field_L.a(var8_int, false);
                   break L4;
                 } else {
                   if (2 != param2) {
@@ -112,16 +114,16 @@ final class nb extends ig {
                     var11 = -1;
                     var12 = 0;
                     L5: while (true) {
-                      if (((nb) this).field_L.a(19692) <= var12) {
-                        if (var11 >= 0) {
-                          ((nb) this).field_L.a(var11, (byte) 111);
+                      if (this.field_L.a(19692) <= var12) {
+                        if (-1 >= (var11 ^ -1)) {
+                          this.field_L.a(var11, (byte) 111);
                           break L4;
                         } else {
                           return true;
                         }
                       } else {
                         L6: {
-                          var13 = ((nb) this).field_L.a((byte) -117, var12) - var8_int;
+                          var13 = this.field_L.a((byte) -117, var12) - var8_int;
                           var13 = var13 * var13;
                           if (var10 > var13) {
                             var10 = var13;
@@ -140,30 +142,31 @@ final class nb extends ig {
               }
               stackOut_19_0 = 1;
               stackIn_20_0 = stackOut_19_0;
-              return stackIn_20_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var8 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var8;
+            stackOut_25_0 = (RuntimeException) (var8);
             stackOut_25_1 = new StringBuilder().append("nb.P(");
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -171,9 +174,13 @@ final class nb extends ig {
               break L7;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
-        return stackIn_24_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_20_0 != 0;
+        } else {
+          return stackIn_24_0 != 0;
+        }
     }
 
     final int b(byte param0, int param1) {
@@ -181,11 +188,11 @@ final class nb extends ig {
           if (param1 < 0) {
             break L0;
           } else {
-            if (((nb) this).field_L.a(19692) <= param1) {
+            if (this.field_L.a(19692) <= param1) {
               break L0;
             } else {
               if (param0 == 95) {
-                return ((nb) this).field_L.a((byte) -117, param1);
+                return this.field_L.a((byte) -117, param1);
               } else {
                 return -11;
               }
@@ -196,16 +203,17 @@ final class nb extends ig {
     }
 
     final int d(boolean param0) {
+        boolean discarded$0 = false;
         if (!param0) {
-            Object var3 = null;
-            boolean discarded$0 = ((nb) this).a((rj) null, -89, -58, -17, 18, (byte) 87, -5);
+            rj var3 = (rj) null;
+            discarded$0 = this.a((rj) null, -89, -58, -17, 18, (byte) 87, -5);
         }
-        return ((nb) this).field_L.a(19692);
+        return this.field_L.a(19692);
     }
 
     public static void a(byte param0) {
         if (param0 != 105) {
-            field_K = null;
+            field_K = (di) null;
         }
         field_O = null;
         field_M = null;
@@ -219,43 +227,41 @@ final class nb extends ig {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        int var0 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        field_K = new di();
-        field_H = 0;
-        field_F = new int[256];
-        field_N = "Turn ship - <img=4>+<img=5>     Thrust - <img=0>";
-        var1 = 0;
-        L0: while (true) {
-          if (var1 >= 256) {
-            field_O = "Flame cannon";
-            return;
-          } else {
-            var0 = var1;
-            var2 = 0;
-            L1: while (true) {
-              if (var2 >= 8) {
-                field_F[var1] = var0;
-                var1++;
-                continue L0;
+        $cfr$clinit: {
+            int var0 = 0;
+            int var1 = 0;
+            int var2 = 0;
+            field_K = new di();
+            field_H = 0;
+            field_F = new int[256];
+            field_N = "Turn ship - <img=4>+<img=5>     Thrust - <img=0>";
+            var1 = 0;
+            L0: while (true) {
+              if (-257 >= (var1 ^ -1)) {
+                field_O = "Flame cannon";
+                break $cfr$clinit;
               } else {
-                if (1 != (var0 & 1)) {
-                  var0 = var0 >>> 1;
-                  var2++;
-                  continue L1;
-                } else {
-                  var0 = -306674912 ^ var0 >>> 1;
-                  var2++;
-                  continue L1;
+                var0 = var1;
+                var2 = 0;
+                L1: while (true) {
+                  if (var2 >= 8) {
+                    field_F[var1] = var0;
+                    var1++;
+                    continue L0;
+                  } else {
+                    if (1 != (var0 & 1)) {
+                      var0 = var0 >>> 1;
+                      var2++;
+                      continue L1;
+                    } else {
+                      var0 = -306674912 ^ var0 >>> 193173601;
+                      var2++;
+                      continue L1;
+                    }
+                  }
                 }
               }
             }
-          }
         }
     }
 }

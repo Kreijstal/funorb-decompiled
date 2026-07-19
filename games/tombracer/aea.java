@@ -11,9 +11,9 @@ final class aea extends hn {
     final void a(boolean param0, kh param1) {
         try {
             super.a(param0, param1);
-            param1.a((byte) -125, ((aea) this).field_K, 4);
+            param1.a((byte) -125, this.field_K, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "aea.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "aea.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,74 +51,96 @@ final class aea extends hn {
         try {
           L0: {
             L1: {
-              var10_int = 0;
-              if (param0 != param2) {
-                break L1;
-              } else {
-                if (param9 != param5) {
-                  break L1;
+              L2: {
+                var10_int = 12 % ((param8 - 52) / 40);
+                if (param0 != param2) {
+                  break L2;
                 } else {
-                  if (param3 != param1) {
-                    break L1;
+                  if (param9 != param5) {
+                    break L2;
                   } else {
-                    if (param6 == param4) {
-                      ik.a(param3, param2, 111, param7, param4, param5);
-                      return;
+                    if (param3 != param1) {
+                      break L2;
                     } else {
-                      break L1;
+                      if (param6 == param4) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
                     }
                   }
                 }
               }
-            }
-            var11 = param2;
-            var12 = param5;
-            var13 = param2 * 3;
-            var14 = param5 * 3;
-            var15 = param0 * 3;
-            var16 = param9 * 3;
-            var17 = param1 * 3;
-            var18 = 3 * param6;
-            var19 = var15 + (-var17 + (param3 - param2));
-            var20 = -param5 + (var16 + (-var18 + param4));
-            var21 = -var15 + (var17 - var15) + var13;
-            var22 = var14 + (-var16 + -var16 + var18);
-            var23 = var15 + -var13;
-            var24 = var16 + -var14;
-            var25 = 128;
-            L2: while (true) {
-              if (var25 > 4096) {
+              var11 = param2;
+              var12 = param5;
+              var13 = param2 * 3;
+              var14 = param5 * 3;
+              var15 = param0 * 3;
+              var16 = param9 * 3;
+              var17 = param1 * 3;
+              var18 = 3 * param6;
+              var19 = var15 + (-var17 + (param3 - param2));
+              var20 = -param5 + (var16 + (-var18 + param4));
+              var21 = -var15 + (var17 - var15) + var13;
+              var22 = var14 + (-var16 + -var16 + var18);
+              var23 = var15 + -var13;
+              var24 = var16 + -var14;
+              var25 = 128;
+              L3: while (true) {
+                L4: {
+                  L5: {
+                    if ((var25 ^ -1) < -4097) {
+                      break L5;
+                    } else {
+                      var26 = var25 * var25 >> 982197516;
+                      var27 = var26 * var25 >> 977032172;
+                      var28 = var19 * var27;
+                      var29 = var27 * var20;
+                      var30 = var26 * var21;
+                      var31 = var22 * var26;
+                      var32 = var23 * var25;
+                      var33 = var24 * var25;
+                      var34 = (var30 + (var28 - -var32) >> -2034570004) + param2;
+                      var35 = (var29 + var31 + var33 >> -1516823732) + param5;
+                      ik.a(var34, var11, -21, param7, var35, var12);
+                      var12 = var35;
+                      var11 = var34;
+                      var25 += 128;
+                      if (var36 != 0) {
+                        break L4;
+                      } else {
+                        if (var36 == 0) {
+                          continue L3;
+                        } else {
+                          break L5;
+                        }
+                      }
+                    }
+                  }
+                  if (var36 == 0) {
+                    break L4;
+                  } else {
+                    break L1;
+                  }
+                }
                 break L0;
-              } else {
-                var26 = var25 * var25 >> 12;
-                var27 = var26 * var25 >> 12;
-                var28 = var19 * var27;
-                var29 = var27 * var20;
-                var30 = var26 * var21;
-                var31 = var22 * var26;
-                var32 = var23 * var25;
-                var33 = var24 * var25;
-                var34 = (var30 + (var28 - -var32) >> 12) + param2;
-                var35 = (var29 + var31 + var33 >> 12) + param5;
-                ik.a(var34, var11, -21, param7, var35, var12);
-                var12 = var35;
-                var11 = var34;
-                var25 += 128;
-                continue L2;
               }
             }
+            ik.a(param3, param2, 111, param7, param4, param5);
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var10, "aea.WB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + -73 + ',' + param9 + ')');
+          throw tba.a((Throwable) ((Object) var10), "aea.WB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
     final boolean D(int param0) {
+        fsa discarded$0 = null;
         if (param0 != 0) {
-            Object var3 = null;
-            fsa discarded$0 = ((aea) this).a((la) null, false, false);
+            la var3 = (la) null;
+            discarded$0 = this.a((la) null, false, false);
             return true;
         }
         return true;
@@ -126,7 +148,7 @@ final class aea extends hn {
 
     final boolean C(int param0) {
         if (param0 != 1) {
-            ((aea) this).field_K = -86;
+            this.field_K = -86;
             return true;
         }
         return true;
@@ -135,9 +157,9 @@ final class aea extends hn {
     aea(la param0, int param1, kh param2, csa param3) {
         super(param0, param1, param2, param3);
         try {
-            ((aea) this).field_K = param2.b((byte) 44, 4);
+            this.field_K = param2.b((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "aea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "aea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -170,13 +192,13 @@ final class aea extends hn {
             var4 = new fsa(param0, param2);
             var4.b((byte) -11, 2097152, 2097152);
             var5 = new lpa(param0, param1);
-            var5.b(-5, ((aea) this).field_K);
-            var4.a((byte) 83, (nv) (Object) var5);
+            var5.b(-5, this.field_K);
+            var4.a((byte) 83, (nv) (var5));
             var6 = rm.field_a;
-            var7 = (ce) (Object) var6.a(17, 102);
+            var7 = (ce) ((Object) var6.a(17, 102));
             var7.b(0, (byte) 23);
-            var4.a((gr) (Object) var5, (byte) 124, (dg) (Object) var7);
-            stackOut_0_0 = (fsa) var4;
+            var4.a(var5, (byte) 124, var7);
+            stackOut_0_0 = (fsa) (var4);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -184,23 +206,23 @@ final class aea extends hn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4_ref;
+            stackOut_2_0 = (RuntimeException) (var4_ref);
             stackOut_2_1 = new StringBuilder().append("aea.VB(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -208,14 +230,14 @@ final class aea extends hn {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }
 
     final fsa a(int param0, boolean param1, la param2) {
         RuntimeException var4 = null;
-        Object stackIn_3_0 = null;
+        fsa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -224,7 +246,7 @@ final class aea extends hn {
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
+        fsa stackOut_2_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -236,7 +258,7 @@ final class aea extends hn {
         try {
           L0: {
             if (param0 != 5) {
-              stackOut_2_0 = null;
+              stackOut_2_0 = (fsa) null;
               stackIn_3_0 = stackOut_2_0;
               break L0;
             } else {
@@ -247,23 +269,23 @@ final class aea extends hn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_0 = (RuntimeException) (var4);
             stackOut_5_1 = new StringBuilder().append("aea.SB(").append(param0).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -271,9 +293,9 @@ final class aea extends hn {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
-        return (fsa) (Object) stackIn_3_0;
+        return stackIn_3_0;
     }
 
     static {

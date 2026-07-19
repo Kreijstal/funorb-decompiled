@@ -30,39 +30,41 @@ final class vh implements Runnable {
     static String field_u;
 
     final rc a(boolean param0, int param1, int param2, int param3, int param4) {
+        rc discarded$0 = null;
         if (!param0) {
-            Object var7 = null;
-            rc discarded$0 = ((vh) this).a((Class) null, false, (String) null);
+            String var7 = (String) null;
+            discarded$0 = this.a((Class) null, false, (String) null);
         }
-        return this.a((param1 << 16) + param2, 6, (Object) null, param3 + (param4 << 16), (byte) -116);
+        return this.a((param1 << 1664881104) + param2, 6, (Object) null, param3 + (param4 << -252885616), (byte) -116);
     }
 
     final rc a(int param0, java.net.URL param1) {
         if (param0 != 0) {
-            field_i = null;
+            field_i = (String) null;
         }
-        return this.a(0, 4, (Object) (Object) param1, 0, (byte) -101);
+        return this.a(0, 4, param1, 0, (byte) -101);
     }
 
     final boolean a(byte param0) {
         if (param0 != 13) {
-            ((vh) this).field_l = false;
+            this.field_l = false;
         }
-        if (!((vh) this).field_d) {
+        if (!this.field_d) {
             return false;
         }
-        if (((vh) this).field_o) {
-            return null != ((vh) this).field_a ? true : false;
+        if (this.field_o) {
+            return null != this.field_a ? true : false;
         }
-        return ((vh) this).field_x != null ? true : false;
+        return this.field_x != null ? true : false;
     }
 
     final rc a(Class[] param0, int param1, String param2, Class param3) {
+        rc discarded$0 = null;
         if (param1 != -30475) {
-            Object var6 = null;
-            rc discarded$0 = ((vh) this).a((String) null, -80, 20);
+            String var6 = (String) null;
+            discarded$0 = this.a((String) null, -80, 20);
         }
-        return this.a(0, 8, (Object) (Object) new Object[3], 0, (byte) -119);
+        return this.a(0, 8, new Object[]{param3, param2, param0}, 0, (byte) -119);
     }
 
     final void b(int param0) {
@@ -78,7 +80,7 @@ final class vh implements Runnable {
             var2 = this;
             synchronized (var2) {
               L0: {
-                ((vh) this).field_l = true;
+                this.field_l = true;
                 this.notifyAll();
                 var3_int = -46 % ((param0 - -47) / 50);
                 break L0;
@@ -86,10 +88,10 @@ final class vh implements Runnable {
             }
             try {
               L1: {
-                ((vh) this).field_k.join();
+                this.field_k.join();
                 break L1;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
+            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L2: {
                 var2_ref = (InterruptedException) (Object) decompiledCaughtException;
@@ -97,24 +99,36 @@ final class vh implements Runnable {
               }
             }
             L3: {
-              if (((vh) this).field_t == null) {
+              if (this.field_t == null) {
                 break L3;
               } else {
-                {
+                try {
                   L4: {
-                    ((vh) this).field_t.a((byte) 92);
+                    this.field_t.a((byte) 92);
                     break L4;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter1) {
+                  decompiledCaughtException = decompiledCaughtParameter1;
+                  L5: {
+                    var2_ref2 = (IOException) (Object) decompiledCaughtException;
+                    break L5;
                   }
                 }
                 break L3;
               }
             }
             L6: {
-              if (null != ((vh) this).field_n) {
-                {
+              if (null != this.field_n) {
+                try {
                   L7: {
-                    ((vh) this).field_n.a((byte) 126);
+                    this.field_n.a((byte) 126);
                     break L7;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter2) {
+                  decompiledCaughtException = decompiledCaughtParameter2;
+                  L8: {
+                    var2_ref2 = (IOException) (Object) decompiledCaughtException;
+                    break L8;
                   }
                 }
                 break L6;
@@ -123,18 +137,25 @@ final class vh implements Runnable {
               }
             }
             L9: {
-              if (((vh) this).field_w != null) {
+              if (this.field_w != null) {
                 var2_int = 0;
                 L10: while (true) {
-                  if (((vh) this).field_w.length <= var2_int) {
+                  if (this.field_w.length <= var2_int) {
                     break L9;
                   } else {
-                    if (((vh) this).field_w[var2_int] != null) {
-                      {
+                    if (this.field_w[var2_int] != null) {
+                      try {
                         L11: {
-                          ((vh) this).field_w[var2_int].a((byte) 127);
+                          this.field_w[var2_int].a((byte) 127);
                           var2_int++;
                           break L11;
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter3) {
+                        decompiledCaughtException = decompiledCaughtParameter3;
+                        L12: {
+                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var2_int++;
+                          break L12;
                         }
                       }
                       continue L10;
@@ -149,13 +170,19 @@ final class vh implements Runnable {
               }
             }
             L13: {
-              if (((vh) this).field_c == null) {
+              if (this.field_c == null) {
                 break L13;
               } else {
-                {
+                try {
                   L14: {
-                    ((vh) this).field_c.a((byte) 94);
+                    this.field_c.a((byte) 94);
                     break L14;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter4) {
+                  decompiledCaughtException = decompiledCaughtParameter4;
+                  L15: {
+                    var2_ref2 = (IOException) (Object) decompiledCaughtException;
+                    break L15;
                   }
                 }
                 break L13;
@@ -170,19 +197,29 @@ final class vh implements Runnable {
 
     final rc a(byte param0, int param1, Runnable param2) {
         if (param0 > -51) {
-            return null;
+            return (rc) null;
         }
-        return this.a(param1, 2, (Object) (Object) param2, 0, (byte) -123);
+        return this.a(param1, 2, param2, 0, (byte) -123);
     }
 
     private final rc a(boolean param0, String param1, int param2, byte param3) {
-        return this.a(param2, 1, (Object) (Object) param1, 0, (byte) -128);
+        if (param3 != -96) {
+            return (rc) null;
+        }
+        return this.a(param2, param0 ? 22 : 1, param1, 0, (byte) -128);
     }
 
     public final void run() {
         try {
+            Object discarded$6 = null;
+            Object discarded$7 = null;
+            Object discarded$8 = null;
+            Object discarded$9 = null;
+            Process discarded$10 = null;
+            Object discarded$11 = null;
             Object var2 = null;
-            Throwable var2_ref = null;
+            ThreadDeath var2_ref = null;
+            Throwable var2_ref2 = null;
             int var2_int = 0;
             InterruptedException var3 = null;
             Exception var3_ref = null;
@@ -214,7 +251,7 @@ final class vh implements Runnable {
             L0: while (true) {
               synchronized (var2) {
                 L1: {
-                  ((Object) (Object) var8_ref).notify();
+                  var8_ref.notify();
                   var2 = this;
                   break L1;
                 }
@@ -222,24 +259,30 @@ final class vh implements Runnable {
               synchronized (var2) {
                 L2: {
                   L3: while (true) {
-                    if (!((vh) this).field_l) {
-                      if (((vh) this).field_m != null) {
+                    if (!this.field_l) {
+                      if (this.field_m != null) {
                         L4: {
-                          var8_ref = ((vh) this).field_m;
-                          ((vh) this).field_m = ((vh) this).field_m.field_f;
-                          if (((vh) this).field_m != null) {
+                          var8_ref = this.field_m;
+                          this.field_m = this.field_m.field_f;
+                          if (this.field_m != null) {
                             break L4;
                           } else {
-                            ((vh) this).field_g = null;
+                            this.field_g = null;
                             break L4;
                           }
                         }
                         break L2;
                       } else {
-                        {
+                        try {
                           L5: {
                             this.wait();
                             break L5;
+                          }
+                        } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                          decompiledCaughtException = decompiledCaughtParameter0;
+                          L6: {
+                            var3 = (InterruptedException) (Object) decompiledCaughtException;
+                            break L6;
                           }
                         }
                         continue L3;
@@ -254,18 +297,19 @@ final class vh implements Runnable {
                 L7: {
                   L8: {
                     var2_int = var8_ref.field_g;
-                    if (var2_int != 1) {
-                      if (var2_int == 22) {
+                    if ((var2_int ^ -1) != -2) {
+                      if (-23 == (var2_int ^ -1)) {
                         if (field_s <= km.b(-1)) {
                           try {
+                              if (false) throw (ko) null;
                             L9: {
-                              var8_ref.field_d = (Object) (Object) gm.a(true, var8_ref.field_b, (String) var8_ref.field_e).a(-2049);
+                              var8_ref.field_d = gm.a(true, var8_ref.field_b, (String) (var8_ref.field_e)).a(-2049);
                               break L9;
                             }
-                          } catch (java.lang.Exception decompiledCaughtParameter1) {
+                          } catch (ko decompiledCaughtParameter1) {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref2 = (ko) (Object) decompiledCaughtException;
-                            var8_ref.field_d = (Object) (Object) var3_ref2.getMessage();
+                            var8_ref.field_d = var3_ref2.getMessage();
                             throw var3_ref2;
                           }
                           break L8;
@@ -278,39 +322,39 @@ final class vh implements Runnable {
                             if (km.b(-1) < field_s) {
                               throw new IOException();
                             } else {
-                              var8_ref.field_d = (Object) (Object) new DataInputStream(((java.net.URL) var8_ref.field_e).openStream());
+                              var8_ref.field_d = new DataInputStream(((java.net.URL) (var8_ref.field_e)).openStream());
                               break L8;
                             }
                           } else {
-                            if (var2_int != 8) {
-                              if (var2_int == 9) {
+                            if (-9 != (var2_int ^ -1)) {
+                              if ((var2_int ^ -1) == -10) {
                                 L10: {
-                                  var18 = (Object[]) var8_ref.field_e;
-                                  if (!((vh) this).field_d) {
+                                  var18 = (Object[]) (var8_ref.field_e);
+                                  if (!this.field_d) {
                                     break L10;
                                   } else {
-                                    if (null != ((Class) var18[0]).getClassLoader()) {
+                                    if (null != ((Class) (var18[0])).getClassLoader()) {
                                       break L10;
                                     } else {
                                       throw new SecurityException();
                                     }
                                   }
                                 }
-                                var8_ref.field_d = (Object) (Object) ((Class) var18[0]).getDeclaredField((String) var18[1]);
+                                var8_ref.field_d = ((Class) (var18[0])).getDeclaredField((String) (var18[1]));
                                 break L8;
                               } else {
                                 if (var2_int != 18) {
                                   if (var2_int == 19) {
-                                    var7 = (java.awt.datatransfer.Transferable) var8_ref.field_e;
+                                    var7 = (java.awt.datatransfer.Transferable) (var8_ref.field_e);
                                     var17 = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
                                     var17.setContents(var7, (java.awt.datatransfer.ClipboardOwner) null);
                                     break L8;
                                   } else {
-                                    if (((vh) this).field_d) {
-                                      if (var2_int == 3) {
+                                    if (this.field_d) {
+                                      if ((var2_int ^ -1) == -4) {
                                         if (km.b(-1) >= field_s) {
-                                          var16 = (255 & var8_ref.field_b >> 24) + "." + (var8_ref.field_b >> 16 & 255) + "." + ((65334 & var8_ref.field_b) >> 8) + "." + (255 & var8_ref.field_b);
-                                          var8_ref.field_d = (Object) (Object) java.net.InetAddress.getByName(var16).getHostName();
+                                          var16 = (255 & var8_ref.field_b >> -1808325064) + "." + (var8_ref.field_b >> -79988912 & 255) + "." + ((65334 & var8_ref.field_b) >> -661318296) + "." + (255 & var8_ref.field_b);
+                                          var8_ref.field_d = java.net.InetAddress.getByName(var16).getHostName();
                                           break L8;
                                         } else {
                                           throw new IOException();
@@ -320,39 +364,39 @@ final class vh implements Runnable {
                                           if (km.b(-1) < field_s) {
                                             throw new IOException();
                                           } else {
-                                            var8_ref.field_d = (Object) (Object) java.net.InetAddress.getByName((String) var8_ref.field_e).getAddress();
+                                            var8_ref.field_d = java.net.InetAddress.getByName((String) (var8_ref.field_e)).getAddress();
                                             break L8;
                                           }
                                         } else {
-                                          if (var2_int != 5) {
-                                            if (var2_int != 6) {
+                                          if (-6 != (var2_int ^ -1)) {
+                                            if ((var2_int ^ -1) != -7) {
                                               if (var2_int == 7) {
-                                                if (((vh) this).field_o) {
-                                                  ((vh) this).field_a.a((byte) -102, (java.awt.Frame) var8_ref.field_e);
+                                                if (this.field_o) {
+                                                  this.field_a.a((byte) -102, (java.awt.Frame) (var8_ref.field_e));
                                                   break L8;
                                                 } else {
-                                                  Object discarded$6 = Class.forName("fl").getMethod("exit", new Class[0]).invoke(((vh) this).field_x, new Object[0]);
+                                                  discarded$6 = Class.forName("fl").getMethod("exit", new Class[]{}).invoke(this.field_x, new Object[]{});
                                                   break L8;
                                                 }
                                               } else {
                                                 if (var2_int == 12) {
-                                                  var3_ref3 = vh.a(field_r, (String) var8_ref.field_e, field_f, (byte) 95);
-                                                  var8_ref.field_d = (Object) (Object) var3_ref3;
+                                                  var3_ref3 = vh.a(field_r, (String) (var8_ref.field_e), field_f, (byte) 95);
+                                                  var8_ref.field_d = var3_ref3;
                                                   break L8;
                                                 } else {
-                                                  if (var2_int != 13) {
+                                                  if ((var2_int ^ -1) != -14) {
                                                     L11: {
-                                                      if (!((vh) this).field_d) {
+                                                      if (!this.field_d) {
                                                         break L11;
                                                       } else {
-                                                        if (var2_int == 14) {
+                                                        if ((var2_int ^ -1) == -15) {
                                                           var3_int = var8_ref.field_b;
                                                           var4 = var8_ref.field_c;
-                                                          if (!((vh) this).field_o) {
-                                                            Object discarded$7 = Class.forName("ve").getDeclaredMethod("movemouse", new Class[2]).invoke(((vh) this).field_e, new Object[2]);
+                                                          if (!this.field_o) {
+                                                            discarded$7 = Class.forName("ve").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_e, new Object[]{new Integer(var3_int), new Integer(var4)});
                                                             break L8;
                                                           } else {
-                                                            ((vh) this).field_b.a(var4, var3_int, -85);
+                                                            this.field_b.a(var4, var3_int, -85);
                                                             break L8;
                                                           }
                                                         } else {
@@ -361,10 +405,10 @@ final class vh implements Runnable {
                                                       }
                                                     }
                                                     L12: {
-                                                      if (!((vh) this).field_d) {
+                                                      if (!this.field_d) {
                                                         break L12;
                                                       } else {
-                                                        if (var2_int == 15) {
+                                                        if (-16 == (var2_int ^ -1)) {
                                                           L13: {
                                                             if (0 == var8_ref.field_b) {
                                                               stackOut_78_0 = 0;
@@ -377,12 +421,12 @@ final class vh implements Runnable {
                                                             }
                                                           }
                                                           var3_int = stackIn_79_0;
-                                                          var15 = (java.awt.Component) var8_ref.field_e;
-                                                          if (((vh) this).field_o) {
-                                                            ((vh) this).field_b.a(var3_int != 0, (byte) 84, var15);
+                                                          var15 = (java.awt.Component) (var8_ref.field_e);
+                                                          if (this.field_o) {
+                                                            this.field_b.a(var3_int != 0, (byte) 84, var15);
                                                             break L8;
                                                           } else {
-                                                            Object discarded$8 = Class.forName("ve").getDeclaredMethod("showcursor", new Class[2]).invoke(((vh) this).field_e, new Object[2]);
+                                                            discarded$8 = Class.forName("ve").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_e, new Object[]{var15, new Boolean(var3_int != 0)});
                                                             break L8;
                                                           }
                                                         } else {
@@ -391,26 +435,26 @@ final class vh implements Runnable {
                                                       }
                                                     }
                                                     L14: {
-                                                      if (((vh) this).field_o) {
+                                                      if (this.field_o) {
                                                         break L14;
                                                       } else {
-                                                        if (var2_int != 17) {
+                                                        if ((var2_int ^ -1) != -18) {
                                                           break L14;
                                                         } else {
-                                                          var13 = (Object[]) var8_ref.field_e;
-                                                          Object discarded$9 = Class.forName("ve").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((vh) this).field_e, new Object[5]);
+                                                          var13 = (Object[]) (var8_ref.field_e);
+                                                          discarded$9 = Class.forName("ve").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_e, new Object[]{var13[0], var13[1], new Integer(var8_ref.field_b), new Integer(var8_ref.field_c), var13[2]});
                                                           break L8;
                                                         }
                                                       }
                                                     }
-                                                    if (var2_int != 16) {
+                                                    if ((var2_int ^ -1) != -17) {
                                                       throw vh.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                                                     } else {
                                                       try {
                                                         L15: {
                                                           if (field_i.startsWith("win")) {
                                                             L16: {
-                                                              var14 = (String) var8_ref.field_e;
+                                                              var14 = (String) (var8_ref.field_e);
                                                               if (var14.startsWith("http://")) {
                                                                 break L16;
                                                               } else {
@@ -424,8 +468,8 @@ final class vh implements Runnable {
                                                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                                                             var5 = 0;
                                                             L17: while (true) {
-                                                              if (~var14.length() >= ~var5) {
-                                                                Process discarded$10 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var14 + "\"");
+                                                              if (var14.length() <= var5) {
+                                                                discarded$10 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var14 + "\"");
                                                                 var8_ref.field_d = null;
                                                                 break L15;
                                                               } else {
@@ -444,36 +488,36 @@ final class vh implements Runnable {
                                                       } catch (java.lang.Exception decompiledCaughtParameter2) {
                                                         decompiledCaughtException = decompiledCaughtParameter2;
                                                         var3_ref = (Exception) (Object) decompiledCaughtException;
-                                                        var8_ref.field_d = (Object) (Object) var3_ref;
+                                                        var8_ref.field_d = var3_ref;
                                                         throw vh.<RuntimeException>$cfr$sneakyThrow(var3_ref);
                                                       }
                                                       break L8;
                                                     }
                                                   } else {
-                                                    var3_ref3 = vh.a("", (String) var8_ref.field_e, field_f, (byte) 101);
-                                                    var8_ref.field_d = (Object) (Object) var3_ref3;
+                                                    var3_ref3 = vh.a("", (String) (var8_ref.field_e), field_f, (byte) 101);
+                                                    var8_ref.field_d = var3_ref3;
                                                     break L8;
                                                   }
                                                 }
                                               }
                                             } else {
                                               var12 = new java.awt.Frame("Jagex Full Screen");
-                                              var8_ref.field_d = (Object) (Object) var12;
+                                              var8_ref.field_d = var12;
                                               var12.setResizable(false);
-                                              if (((vh) this).field_o) {
-                                                ((vh) this).field_a.a(var8_ref.field_c & 65535, var8_ref.field_b >>> 16, var12, var8_ref.field_b & 65535, -4013, var8_ref.field_c >> 16);
+                                              if (this.field_o) {
+                                                this.field_a.a(var8_ref.field_c & 65535, var8_ref.field_b >>> -808508688, var12, var8_ref.field_b & 65535, -4013, var8_ref.field_c >> -1141046288);
                                                 break L8;
                                               } else {
-                                                Object discarded$11 = Class.forName("fl").getMethod("enter", new Class[5]).invoke(((vh) this).field_x, new Object[5]);
+                                                discarded$11 = Class.forName("fl").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_x, new Object[]{var12, new Integer(var8_ref.field_b >>> -1976680432), new Integer(var8_ref.field_b & 65535), new Integer(var8_ref.field_c >> -921645424), new Integer(65535 & var8_ref.field_c)});
                                                 break L8;
                                               }
                                             }
                                           } else {
-                                            if (!((vh) this).field_o) {
-                                              var8_ref.field_d = Class.forName("fl").getMethod("listmodes", new Class[0]).invoke(((vh) this).field_x, new Object[0]);
+                                            if (!this.field_o) {
+                                              var8_ref.field_d = Class.forName("fl").getMethod("listmodes", new Class[]{}).invoke(this.field_x, new Object[]{});
                                               break L8;
                                             } else {
-                                              var8_ref.field_d = (Object) (Object) ((vh) this).field_a.a(3152);
+                                              var8_ref.field_d = this.field_a.a(3152);
                                               break L8;
                                             }
                                           }
@@ -485,15 +529,15 @@ final class vh implements Runnable {
                                   }
                                 } else {
                                   var11 = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
-                                  var8_ref.field_d = (Object) (Object) var11.getContents((Object) null);
+                                  var8_ref.field_d = var11.getContents((Object) null);
                                   break L8;
                                 }
                               }
                             } else {
                               L18: {
-                                var10 = (Object[]) var8_ref.field_e;
-                                if (((vh) this).field_d) {
-                                  if (((Class) var10[0]).getClassLoader() == null) {
+                                var10 = (Object[]) (var8_ref.field_e);
+                                if (this.field_d) {
+                                  if (((Class) (var10[0])).getClassLoader() == null) {
                                     throw new SecurityException();
                                   } else {
                                     break L18;
@@ -502,22 +546,22 @@ final class vh implements Runnable {
                                   break L18;
                                 }
                               }
-                              var8_ref.field_d = (Object) (Object) ((Class) var10[0]).getDeclaredMethod((String) var10[1], (Class[]) var10[2]);
+                              var8_ref.field_d = ((Class) (var10[0])).getDeclaredMethod((String) (var10[1]), (Class[]) (var10[2]));
                               break L8;
                             }
                           }
                         } else {
-                          var9 = new Thread((Runnable) var8_ref.field_e);
+                          var9 = new Thread((Runnable) (var8_ref.field_e));
                           var9.setDaemon(true);
                           var9.start();
                           var9.setPriority(var8_ref.field_b);
-                          var8_ref.field_d = (Object) (Object) var9;
+                          var8_ref.field_d = var9;
                           break L8;
                         }
                       }
                     } else {
                       if (field_s <= km.b(-1)) {
-                        var8_ref.field_d = (Object) (Object) new java.net.Socket(java.net.InetAddress.getByName((String) var8_ref.field_e), var8_ref.field_b);
+                        var8_ref.field_d = new java.net.Socket(java.net.InetAddress.getByName((String) (var8_ref.field_e)), var8_ref.field_b);
                         break L8;
                       } else {
                         throw new IOException();
@@ -527,15 +571,19 @@ final class vh implements Runnable {
                   var8_ref.field_a = 1;
                   break L7;
                 }
-              } catch (java.lang.Throwable decompiledCaughtParameter3) {
+              } catch (java.lang.ThreadDeath decompiledCaughtParameter3) {
                 decompiledCaughtException = decompiledCaughtParameter3;
+                var2_ref = (ThreadDeath) (Object) decompiledCaughtException;
+                throw var2_ref;
+              } catch (java.lang.Throwable decompiledCaughtParameter4) {
+                decompiledCaughtException = decompiledCaughtParameter4;
                 L19: {
-                  var2_ref = decompiledCaughtException;
+                  var2_ref2 = decompiledCaughtException;
                   var8_ref.field_a = 2;
                   break L19;
                 }
               }
-              var2 = (Object) (Object) var8_ref;
+              var2 = var8_ref;
               continue L0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -548,26 +596,27 @@ final class vh implements Runnable {
     private final rc a(int param0, int param1, Object param2, int param3, byte param4) {
         rc var6 = null;
         Object var7 = null;
+        Object var7_ref = null;
         Throwable var8 = null;
-        Object stackIn_6_0 = null;
+        rc stackIn_6_0 = null;
         Throwable decompiledCaughtException = null;
-        Object stackOut_5_0 = null;
+        rc stackOut_5_0 = null;
         var6 = new rc();
         var6.field_c = param3;
         var6.field_b = param0;
         var6.field_g = param1;
         var6.field_e = param2;
-        var7 = this;
-        synchronized (var7) {
+        var7_ref = this;
+        synchronized (var7_ref) {
           L0: {
             L1: {
-              if (null != ((vh) this).field_g) {
-                ((vh) this).field_g.field_f = var6;
-                ((vh) this).field_g = var6;
+              if (null != this.field_g) {
+                this.field_g.field_f = var6;
+                this.field_g = var6;
                 break L1;
               } else {
-                ((vh) this).field_m = var6;
-                ((vh) this).field_g = var6;
+                this.field_m = var6;
+                this.field_g = var6;
                 break L1;
               }
             }
@@ -575,9 +624,9 @@ final class vh implements Runnable {
               this.notify();
               break L0;
             } else {
-              stackOut_5_0 = null;
+              stackOut_5_0 = (rc) null;
               stackIn_6_0 = stackOut_5_0;
-              return (rc) (Object) stackIn_6_0;
+              return stackIn_6_0;
             }
           }
         }
@@ -586,7 +635,6 @@ final class vh implements Runnable {
 
     private final static ue a(String param0, String param1, int param2, byte param3) {
         try {
-            String var7_ref = null;
             String var4 = null;
             Object[] var5 = null;
             String[] var5_array = null;
@@ -598,11 +646,11 @@ final class vh implements Runnable {
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             ue stackOut_13_0 = null;
-            var7_ref = null;
+            String var7_ref = null;
             if (param3 >= 77) {
               L0: {
-                if (param2 != 33) {
-                  if (param2 != 34) {
+                if ((param2 ^ -1) != -34) {
+                  if ((param2 ^ -1) != -35) {
                     var4 = "jagex_" + param0 + "_preferences" + param1 + ".dat";
                     break L0;
                   } else {
@@ -620,7 +668,7 @@ final class vh implements Runnable {
                 if (var6 < var5_array.length) {
                   L2: {
                     var7_ref = var5_array[var6];
-                    if (var7_ref.length() <= 0) {
+                    if (-1 <= (var7_ref.length() ^ -1)) {
                       break L2;
                     } else {
                       if (new File(var7_ref).exists()) {
@@ -634,7 +682,7 @@ final class vh implements Runnable {
                   try {
                     L3: {
                       var8_ref = new ue(new File(var7_ref, var4), "rw", 10000L);
-                      stackOut_13_0 = (ue) var8_ref;
+                      stackOut_13_0 = (ue) (var8_ref);
                       stackIn_14_0 = stackOut_13_0;
                       decompiledRegionSelector0 = 0;
                       break L3;
@@ -658,7 +706,7 @@ final class vh implements Runnable {
                 }
               }
             } else {
-              return null;
+              return (ue) null;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -669,24 +717,25 @@ final class vh implements Runnable {
 
     final rc a(Class param0, boolean param1, String param2) {
         if (!param1) {
-            ((vh) this).run();
+            this.run();
         }
-        return this.a(0, 9, (Object) (Object) new Object[2], 0, (byte) -108);
+        return this.a(0, 9, new Object[]{param0, param2}, 0, (byte) -108);
     }
 
     final rc a(String param0, int param1, int param2) {
         if (param2 >= -58) {
-            field_q = null;
+            field_q = (String) null;
         }
         return this.a(false, param0, param1, (byte) -96);
     }
 
     final rc a(boolean param0, java.awt.Frame param1) {
+        rc discarded$0 = null;
         if (param0) {
-            Object var4 = null;
-            rc discarded$0 = ((vh) this).a(3, (java.net.URL) null);
+            java.net.URL var4 = (java.net.URL) null;
+            discarded$0 = this.a(3, (java.net.URL) null);
         }
-        return this.a(0, 7, (Object) (Object) param1, 0, (byte) -110);
+        return this.a(0, 7, param1, 0, (byte) -110);
     }
 
     final rc a(int param0) {
@@ -695,8 +744,12 @@ final class vh implements Runnable {
     }
 
     vh(int param0, String param1, int param2, boolean param3) throws Exception {
-        Exception var5 = null;
-        Throwable var5_ref = null;
+        String discarded$6 = null;
+        String discarded$7 = null;
+        java.lang.reflect.Method discarded$8 = null;
+        Object discarded$9 = null;
+        Exception exception = null;
+        Throwable throwable = null;
         int var5_int = 0;
         an var7 = null;
         Object stackIn_1_0 = null;
@@ -710,14 +763,14 @@ final class vh implements Runnable {
         Object stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          ((vh) this).field_n = null;
-          ((vh) this).field_o = false;
-          ((vh) this).field_g = null;
-          ((vh) this).field_m = null;
-          ((vh) this).field_c = null;
-          ((vh) this).field_t = null;
-          ((vh) this).field_l = false;
-          ((vh) this).field_d = false;
+          this.field_n = null;
+          this.field_o = false;
+          this.field_g = null;
+          this.field_m = null;
+          this.field_c = null;
+          this.field_t = null;
+          this.field_l = false;
+          this.field_d = false;
           field_f = param0;
           stackOut_0_0 = this;
           stackIn_2_0 = stackOut_0_0;
@@ -736,7 +789,7 @@ final class vh implements Runnable {
             break L0;
           }
         }
-        ((vh) this).field_d = stackIn_3_1 != 0;
+        ((vh) (this)).field_d = stackIn_3_1 != 0;
         field_r = param1;
         field_v = "1.1";
         field_u = "Unknown";
@@ -749,13 +802,13 @@ final class vh implements Runnable {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
-            var5 = (Exception) (Object) decompiledCaughtException;
+            exception = (Exception) (Object) decompiledCaughtException;
             break L2;
           }
         }
         L3: {
           if (-1 != field_u.toLowerCase().indexOf("microsoft")) {
-            ((vh) this).field_o = true;
+            this.field_o = true;
             break L3;
           } else {
             break L3;
@@ -769,7 +822,7 @@ final class vh implements Runnable {
         } catch (java.lang.Exception decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           L5: {
-            var5 = (Exception) (Object) decompiledCaughtException;
+            exception = (Exception) (Object) decompiledCaughtException;
             field_h = "Unknown";
             break L5;
           }
@@ -777,25 +830,25 @@ final class vh implements Runnable {
         field_i = field_h.toLowerCase();
         try {
           L6: {
-            String discarded$4 = System.getProperty("os.arch").toLowerCase();
+            discarded$6 = System.getProperty("os.arch").toLowerCase();
             break L6;
           }
         } catch (java.lang.Exception decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           L7: {
-            var5 = (Exception) (Object) decompiledCaughtException;
+            exception = (Exception) (Object) decompiledCaughtException;
             break L7;
           }
         }
         try {
           L8: {
-            String discarded$5 = System.getProperty("os.version").toLowerCase();
+            discarded$7 = System.getProperty("os.version").toLowerCase();
             break L8;
           }
         } catch (java.lang.Exception decompiledCaughtParameter3) {
           decompiledCaughtException = decompiledCaughtParameter3;
           L9: {
-            var5 = (Exception) (Object) decompiledCaughtException;
+            exception = (Exception) (Object) decompiledCaughtException;
             break L9;
           }
         }
@@ -815,7 +868,7 @@ final class vh implements Runnable {
         } catch (java.lang.Exception decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           L12: {
-            var5 = (Exception) (Object) decompiledCaughtException;
+            exception = (Exception) (Object) decompiledCaughtException;
             break L12;
           }
         }
@@ -829,39 +882,39 @@ final class vh implements Runnable {
         }
         try {
           L14: {
-            ((vh) this).field_p = java.awt.Toolkit.getDefaultToolkit().getSystemEventQueue();
+            this.field_p = java.awt.Toolkit.getDefaultToolkit().getSystemEventQueue();
             break L14;
           }
         } catch (java.lang.Throwable decompiledCaughtParameter5) {
           decompiledCaughtException = decompiledCaughtParameter5;
           L15: {
-            var5_ref = decompiledCaughtException;
+            throwable = decompiledCaughtException;
             break L15;
           }
         }
         L16: {
-          if (!((vh) this).field_o) {
+          if (!this.field_o) {
             try {
               L17: {
-                java.lang.reflect.Method discarded$6 = Class.forName("java.awt.Component").getDeclaredMethod("setFocusTraversalKeysEnabled", new Class[1]);
+                discarded$8 = Class.forName("java.awt.Component").getDeclaredMethod("setFocusTraversalKeysEnabled", new Class[]{Boolean.TYPE});
                 break L17;
               }
             } catch (java.lang.Exception decompiledCaughtParameter6) {
               decompiledCaughtException = decompiledCaughtParameter6;
               L18: {
-                var5 = (Exception) (Object) decompiledCaughtException;
+                exception = (Exception) (Object) decompiledCaughtException;
                 break L18;
               }
             }
             try {
               L19: {
-                field_j = Class.forName("java.awt.Container").getDeclaredMethod("setFocusCycleRoot", new Class[1]);
+                field_j = Class.forName("java.awt.Container").getDeclaredMethod("setFocusCycleRoot", new Class[]{Boolean.TYPE});
                 break L19;
               }
             } catch (java.lang.Exception decompiledCaughtParameter7) {
               decompiledCaughtException = decompiledCaughtParameter7;
               L20: {
-                var5 = (Exception) (Object) decompiledCaughtException;
+                exception = (Exception) (Object) decompiledCaughtException;
                 break L20;
               }
             }
@@ -872,29 +925,29 @@ final class vh implements Runnable {
         }
         L21: {
           f.a((byte) 32, field_r, field_f);
-          if (!((vh) this).field_d) {
+          if (!this.field_d) {
             break L21;
           } else {
-            ((vh) this).field_c = new ue(f.a(-31192, "random.dat", (String) null, field_f), "rw", 25L);
-            ((vh) this).field_t = new ue(f.a(-3455, "main_file_cache.dat2"), "rw", 314572800L);
-            ((vh) this).field_n = new ue(f.a(-3455, "main_file_cache.idx255"), "rw", 1048576L);
-            ((vh) this).field_w = new ue[param2];
+            this.field_c = new ue(f.a(-31192, "random.dat", (String) null, field_f), "rw", 25L);
+            this.field_t = new ue(f.a(-3455, "main_file_cache.dat2"), "rw", 314572800L);
+            this.field_n = new ue(f.a(-3455, "main_file_cache.idx255"), "rw", 1048576L);
+            this.field_w = new ue[param2];
             var5_int = 0;
             L22: while (true) {
               if (param2 <= var5_int) {
                 L23: {
-                  if (!((vh) this).field_o) {
+                  if (!this.field_o) {
                     break L23;
                   } else {
                     try {
                       L24: {
-                        Object discarded$7 = Class.forName("ic").newInstance();
+                        discarded$9 = Class.forName("ic").newInstance();
                         break L24;
                       }
                     } catch (java.lang.Throwable decompiledCaughtParameter8) {
                       decompiledCaughtException = decompiledCaughtParameter8;
                       L25: {
-                        var5_ref = decompiledCaughtException;
+                        throwable = decompiledCaughtException;
                         break L25;
                       }
                     }
@@ -904,12 +957,12 @@ final class vh implements Runnable {
                 try {
                   L26: {
                     L27: {
-                      if (((vh) this).field_o) {
+                      if (this.field_o) {
                         var7 = new an();
-                        ((vh) this).field_a = var7;
+                        this.field_a = var7;
                         break L27;
                       } else {
-                        ((vh) this).field_x = Class.forName("fl").newInstance();
+                        this.field_x = Class.forName("fl").newInstance();
                         break L27;
                       }
                     }
@@ -918,18 +971,18 @@ final class vh implements Runnable {
                 } catch (java.lang.Throwable decompiledCaughtParameter9) {
                   decompiledCaughtException = decompiledCaughtParameter9;
                   L28: {
-                    var5_ref = decompiledCaughtException;
+                    throwable = decompiledCaughtException;
                     break L28;
                   }
                 }
                 try {
                   L29: {
                     L30: {
-                      if (((vh) this).field_o) {
-                        ((vh) this).field_b = new kd();
+                      if (this.field_o) {
+                        this.field_b = new kd();
                         break L30;
                       } else {
-                        ((vh) this).field_e = Class.forName("ve").newInstance();
+                        this.field_e = Class.forName("ve").newInstance();
                         break L30;
                       }
                     }
@@ -938,31 +991,27 @@ final class vh implements Runnable {
                 } catch (java.lang.Throwable decompiledCaughtParameter10) {
                   decompiledCaughtException = decompiledCaughtParameter10;
                   L31: {
-                    var5_ref = decompiledCaughtException;
+                    throwable = decompiledCaughtException;
                     break L31;
                   }
                 }
                 break L21;
               } else {
-                ((vh) this).field_w[var5_int] = new ue(f.a(-3455, "main_file_cache.idx" + var5_int), "rw", 1048576L);
+                this.field_w[var5_int] = new ue(f.a(-3455, "main_file_cache.idx" + var5_int), "rw", 1048576L);
                 var5_int++;
                 continue L22;
               }
             }
           }
         }
-        ((vh) this).field_l = false;
-        ((vh) this).field_k = new Thread((Runnable) this);
-        ((vh) this).field_k.setPriority(10);
-        ((vh) this).field_k.setDaemon(true);
-        ((vh) this).field_k.start();
+        this.field_l = false;
+        this.field_k = new Thread((Runnable) (this));
+        this.field_k.setPriority(10);
+        this.field_k.setDaemon(true);
+        this.field_k.start();
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = 0L;
     }
 

@@ -9,6 +9,9 @@ final class u {
     static String field_e;
 
     public static void b(int param0) {
+        if (param0 != 2) {
+            return;
+        }
         field_c = null;
         field_a = null;
         field_b = null;
@@ -24,10 +27,6 @@ final class u {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = 0;
         field_a = new ff(0, 2, 2, 1);
         field_e = "Back";

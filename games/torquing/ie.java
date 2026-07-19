@@ -6,7 +6,10 @@ final class ie {
     static bi field_b;
 
     public static void b(int param0) {
-        field_a = null;
+        field_a = (double[][]) null;
+        if (param0 != -1674) {
+            return;
+        }
         field_b = null;
     }
 
@@ -15,43 +18,55 @@ final class ie {
         RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Torquing.field_u;
         try {
           L0: {
-            L1: {
-              L2: {
-                if (null == jh.field_x) {
-                  break L2;
-                } else {
-                  if (null != de.field_d) {
+            if (param0 == 14837) {
+              L1: {
+                L2: {
+                  if (null == jh.field_x) {
+                    break L2;
+                  } else {
+                    if (null != de.field_d) {
+                      break L1;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                jh.field_x = new int[256];
+                de.field_d = new int[256];
+                var1_int = 0;
+                L3: while (true) {
+                  if (256 <= var1_int) {
                     break L1;
                   } else {
-                    break L2;
+                    var2 = 6.283185307179586 * ((double)var1_int / 255.0);
+                    jh.field_x[var1_int] = (int)(4096.0 * Math.sin(var2));
+                    de.field_d[var1_int] = (int)(Math.cos(var2) * 4096.0);
+                    var1_int++;
+                    continue L3;
                   }
                 }
               }
-              jh.field_x = new int[256];
-              de.field_d = new int[256];
-              var1_int = 0;
-              L3: while (true) {
-                if (256 <= var1_int) {
-                  break L1;
-                } else {
-                  var2 = 6.283185307179586 * ((double)var1_int / 255.0);
-                  jh.field_x[var1_int] = (int)(4096.0 * Math.sin(var2));
-                  de.field_d[var1_int] = (int)(Math.cos(var2) * 4096.0);
-                  var1_int++;
-                  continue L3;
-                }
-              }
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1, "ie.D(" + 14837 + ')');
+          throw rb.a((Throwable) ((Object) var1), "ie.D(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -87,23 +102,23 @@ final class ie {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var11 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var11;
+            stackOut_2_0 = (RuntimeException) (var11);
             stackOut_2_1 = new StringBuilder().append("ie.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param3 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -111,7 +126,7 @@ final class ie {
               break L1;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }
         return stackIn_1_0;
     }
@@ -121,10 +136,6 @@ final class ie {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new double[8][3];
     }
 }

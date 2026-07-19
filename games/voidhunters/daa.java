@@ -30,7 +30,7 @@ final class daa {
         float var20 = 0.0f;
         float var21 = 0.0f;
         float var22 = 0.0f;
-        if (!((daa) this).field_l) {
+        if (!this.field_l) {
           L0: {
             var11 = param4 - param3;
             var12 = param1 - param0;
@@ -75,20 +75,20 @@ final class daa {
                 if (param0 > param2) {
                   break L3;
                 } else {
-                  if (param0 < (float)((daa) this).field_g) {
+                  if (param0 < (float)this.field_g) {
                     L4: {
-                      if (param1 <= (float)((daa) this).field_g) {
+                      if (param1 <= (float)this.field_g) {
                         break L4;
                       } else {
-                        param1 = (float)((daa) this).field_g;
+                        param1 = (float)this.field_g;
                         break L4;
                       }
                     }
                     L5: {
-                      if (param2 <= (float)((daa) this).field_g) {
+                      if (param2 <= (float)this.field_g) {
                         break L5;
                       } else {
-                        param2 = (float)((daa) this).field_g;
+                        param2 = (float)this.field_g;
                         break L5;
                       }
                     }
@@ -124,7 +124,7 @@ final class daa {
                           } else {
                             param1 = param1 - param2;
                             param2 = param2 - param0;
-                            param0 = (float)((daa) this).field_k[(int)param0];
+                            param0 = (float)this.field_k[(int)param0];
                             L9: while (true) {
                               param2 = param2 - 1.0f;
                               if (param2 < 0.0f) {
@@ -133,20 +133,20 @@ final class daa {
                                   if (param1 < 0.0f) {
                                     return;
                                   } else {
-                                    this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                                    this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                                     param5 = param5 + var18;
                                     param3 = param3 + var17;
                                     param6 = param6 + var22;
-                                    param0 = param0 + (float)((daa) this).field_m;
+                                    param0 = param0 + (float)this.field_m;
                                     continue L10;
                                   }
                                 }
                               } else {
-                                this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
+                                this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
                                 param4 = param4 + var19;
                                 param3 = param3 + var17;
                                 param6 = param6 + var22;
-                                param0 = param0 + (float)((daa) this).field_m;
+                                param0 = param0 + (float)this.field_m;
                                 continue L9;
                               }
                             }
@@ -157,7 +157,7 @@ final class daa {
                         if (var18 > var17) {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((daa) this).field_k[(int)param0];
+                          param0 = (float)this.field_k[(int)param0];
                           L11: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -166,27 +166,27 @@ final class daa {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                                  this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                                   param5 = param5 + var18;
                                   param3 = param3 + var17;
                                   param6 = param6 + var22;
-                                  param0 = param0 + (float)((daa) this).field_m;
+                                  param0 = param0 + (float)this.field_m;
                                   continue L12;
                                 }
                               }
                             } else {
-                              this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
+                              this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
                               param4 = param4 + var19;
                               param3 = param3 + var17;
                               param6 = param6 + var22;
-                              param0 = param0 + (float)((daa) this).field_m;
+                              param0 = param0 + (float)this.field_m;
                               continue L11;
                             }
                           }
                         } else {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((daa) this).field_k[(int)param0];
+                          param0 = (float)this.field_k[(int)param0];
                           L13: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -195,20 +195,20 @@ final class daa {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                                  this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                                   param5 = param5 + var18;
                                   param3 = param3 + var17;
                                   param6 = param6 + var22;
-                                  param0 = param0 + (float)((daa) this).field_m;
+                                  param0 = param0 + (float)this.field_m;
                                   continue L14;
                                 }
                               }
                             } else {
-                              this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
+                              this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
                               param4 = param4 + var19;
                               param3 = param3 + var17;
                               param6 = param6 + var22;
-                              param0 = param0 + (float)((daa) this).field_m;
+                              param0 = param0 + (float)this.field_m;
                               continue L13;
                             }
                           }
@@ -216,7 +216,7 @@ final class daa {
                       } else {
                         param1 = param1 - param2;
                         param2 = param2 - param0;
-                        param0 = (float)((daa) this).field_k[(int)param0];
+                        param0 = (float)this.field_k[(int)param0];
                         L15: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -225,20 +225,20 @@ final class daa {
                               if (param1 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                                this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                                 param5 = param5 + var18;
                                 param3 = param3 + var17;
                                 param6 = param6 + var22;
-                                param0 = param0 + (float)((daa) this).field_m;
+                                param0 = param0 + (float)this.field_m;
                                 continue L16;
                               }
                             }
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
+                            this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
                             param4 = param4 + var19;
                             param3 = param3 + var17;
                             param6 = param6 + var22;
-                            param0 = param0 + (float)((daa) this).field_m;
+                            param0 = param0 + (float)this.field_m;
                             continue L15;
                           }
                         }
@@ -274,7 +274,7 @@ final class daa {
                           } else {
                             param2 = param2 - param1;
                             param1 = param1 - param0;
-                            param0 = (float)((daa) this).field_k[(int)param0];
+                            param0 = (float)this.field_k[(int)param0];
                             L20: while (true) {
                               param1 = param1 - 1.0f;
                               if (param1 < 0.0f) {
@@ -283,20 +283,20 @@ final class daa {
                                   if (param2 < 0.0f) {
                                     return;
                                   } else {
-                                    this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
+                                    this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
                                     param5 = param5 + var19;
                                     param4 = param4 + var18;
                                     param6 = param6 + var22;
-                                    param0 = param0 + (float)((daa) this).field_m;
+                                    param0 = param0 + (float)this.field_m;
                                     continue L21;
                                   }
                                 }
                               } else {
-                                this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                                this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                                 param5 = param5 + var19;
                                 param3 = param3 + var17;
                                 param6 = param6 + var22;
-                                param0 = param0 + (float)((daa) this).field_m;
+                                param0 = param0 + (float)this.field_m;
                                 continue L20;
                               }
                             }
@@ -307,7 +307,7 @@ final class daa {
                         if (var19 > var18) {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((daa) this).field_k[(int)param0];
+                          param0 = (float)this.field_k[(int)param0];
                           L22: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -316,27 +316,27 @@ final class daa {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
+                                  this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
                                   param5 = param5 + var19;
                                   param4 = param4 + var18;
                                   param6 = param6 + var22;
-                                  param0 = param0 + (float)((daa) this).field_m;
+                                  param0 = param0 + (float)this.field_m;
                                   continue L23;
                                 }
                               }
                             } else {
-                              this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                              this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                               param5 = param5 + var19;
                               param3 = param3 + var17;
                               param6 = param6 + var22;
-                              param0 = param0 + (float)((daa) this).field_m;
+                              param0 = param0 + (float)this.field_m;
                               continue L22;
                             }
                           }
                         } else {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((daa) this).field_k[(int)param0];
+                          param0 = (float)this.field_k[(int)param0];
                           L24: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -345,20 +345,20 @@ final class daa {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
+                                  this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
                                   param5 = param5 + var19;
                                   param4 = param4 + var18;
                                   param6 = param6 + var22;
-                                  param0 = param0 + (float)((daa) this).field_m;
+                                  param0 = param0 + (float)this.field_m;
                                   continue L25;
                                 }
                               }
                             } else {
-                              this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                              this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                               param5 = param5 + var19;
                               param3 = param3 + var17;
                               param6 = param6 + var22;
-                              param0 = param0 + (float)((daa) this).field_m;
+                              param0 = param0 + (float)this.field_m;
                               continue L24;
                             }
                           }
@@ -366,7 +366,7 @@ final class daa {
                       } else {
                         param2 = param2 - param1;
                         param1 = param1 - param0;
-                        param0 = (float)((daa) this).field_k[(int)param0];
+                        param0 = (float)this.field_k[(int)param0];
                         L26: while (true) {
                           param1 = param1 - 1.0f;
                           if (param1 < 0.0f) {
@@ -375,20 +375,20 @@ final class daa {
                               if (param2 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
+                                this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
                                 param5 = param5 + var19;
                                 param4 = param4 + var18;
                                 param6 = param6 + var22;
-                                param0 = param0 + (float)((daa) this).field_m;
+                                param0 = param0 + (float)this.field_m;
                                 continue L27;
                               }
                             }
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                            this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                             param5 = param5 + var19;
                             param3 = param3 + var17;
                             param6 = param6 + var22;
-                            param0 = param0 + (float)((daa) this).field_m;
+                            param0 = param0 + (float)this.field_m;
                             continue L26;
                           }
                         }
@@ -401,20 +401,20 @@ final class daa {
               }
             }
             if (param1 > param2) {
-              if (param2 < (float)((daa) this).field_g) {
+              if (param2 < (float)this.field_g) {
                 L28: {
-                  if (param0 <= (float)((daa) this).field_g) {
+                  if (param0 <= (float)this.field_g) {
                     break L28;
                   } else {
-                    param0 = (float)((daa) this).field_g;
+                    param0 = (float)this.field_g;
                     break L28;
                   }
                 }
                 L29: {
-                  if (param1 <= (float)((daa) this).field_g) {
+                  if (param1 <= (float)this.field_g) {
                     break L29;
                   } else {
-                    param1 = (float)((daa) this).field_g;
+                    param1 = (float)this.field_g;
                     break L29;
                   }
                 }
@@ -444,7 +444,7 @@ final class daa {
                   if (var18 < var19) {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((daa) this).field_k[(int)param2];
+                    param2 = (float)this.field_k[(int)param2];
                     L32: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -453,27 +453,27 @@ final class daa {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
+                            this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
                             param4 = param4 + var17;
                             param5 = param5 + var19;
                             param8 = param8 + var22;
-                            param2 = param2 + (float)((daa) this).field_m;
+                            param2 = param2 + (float)this.field_m;
                             continue L33;
                           }
                         }
                       } else {
-                        this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, param9, 0, (int)param3, (int)param5, param8, var21);
+                        this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param3, (int)param5, param8, var21);
                         param3 = param3 + var18;
                         param5 = param5 + var19;
                         param8 = param8 + var22;
-                        param2 = param2 + (float)((daa) this).field_m;
+                        param2 = param2 + (float)this.field_m;
                         continue L32;
                       }
                     }
                   } else {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((daa) this).field_k[(int)param2];
+                    param2 = (float)this.field_k[(int)param2];
                     L34: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -482,20 +482,20 @@ final class daa {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
+                            this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
                             param4 = param4 + var17;
                             param5 = param5 + var19;
                             param8 = param8 + var22;
-                            param2 = param2 + (float)((daa) this).field_m;
+                            param2 = param2 + (float)this.field_m;
                             continue L35;
                           }
                         }
                       } else {
-                        this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, param9, 0, (int)param5, (int)param3, param8, var21);
+                        this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param5, (int)param3, param8, var21);
                         param3 = param3 + var18;
                         param5 = param5 + var19;
                         param8 = param8 + var22;
-                        param2 = param2 + (float)((daa) this).field_m;
+                        param2 = param2 + (float)this.field_m;
                         continue L34;
                       }
                     }
@@ -525,7 +525,7 @@ final class daa {
                   if (var18 < var19) {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((daa) this).field_k[(int)param2];
+                    param2 = (float)this.field_k[(int)param2];
                     L38: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -534,27 +534,27 @@ final class daa {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, param9, 0, (int)param4, (int)param3, param8, var21);
+                            this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param4, (int)param3, param8, var21);
                             param4 = param4 + var18;
                             param3 = param3 + var17;
                             param8 = param8 + var22;
-                            param2 = param2 + (float)((daa) this).field_m;
+                            param2 = param2 + (float)this.field_m;
                             continue L39;
                           }
                         }
                       } else {
-                        this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
+                        this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
                         param4 = param4 + var18;
                         param5 = param5 + var19;
                         param8 = param8 + var22;
-                        param2 = param2 + (float)((daa) this).field_m;
+                        param2 = param2 + (float)this.field_m;
                         continue L38;
                       }
                     }
                   } else {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((daa) this).field_k[(int)param2];
+                    param2 = (float)this.field_k[(int)param2];
                     L40: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -563,20 +563,20 @@ final class daa {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, param9, 0, (int)param3, (int)param4, param8, var21);
+                            this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param3, (int)param4, param8, var21);
                             param4 = param4 + var18;
                             param3 = param3 + var17;
                             param8 = param8 + var22;
-                            param2 = param2 + (float)((daa) this).field_m;
+                            param2 = param2 + (float)this.field_m;
                             continue L41;
                           }
                         }
                       } else {
-                        this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
+                        this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
                         param4 = param4 + var18;
                         param5 = param5 + var19;
                         param8 = param8 + var22;
-                        param2 = param2 + (float)((daa) this).field_m;
+                        param2 = param2 + (float)this.field_m;
                         continue L40;
                       }
                     }
@@ -586,20 +586,20 @@ final class daa {
                 return;
               }
             } else {
-              if (param1 < (float)((daa) this).field_g) {
+              if (param1 < (float)this.field_g) {
                 L42: {
-                  if (param2 <= (float)((daa) this).field_g) {
+                  if (param2 <= (float)this.field_g) {
                     break L42;
                   } else {
-                    param2 = (float)((daa) this).field_g;
+                    param2 = (float)this.field_g;
                     break L42;
                   }
                 }
                 L43: {
-                  if (param0 <= (float)((daa) this).field_g) {
+                  if (param0 <= (float)this.field_g) {
                     break L43;
                   } else {
-                    param0 = (float)((daa) this).field_g;
+                    param0 = (float)this.field_g;
                     break L43;
                   }
                 }
@@ -629,7 +629,7 @@ final class daa {
                   if (var17 < var18) {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((daa) this).field_k[(int)param1];
+                    param1 = (float)this.field_k[(int)param1];
                     L46: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -638,27 +638,27 @@ final class daa {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+                            this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
                             param3 = param3 + var19;
                             param4 = param4 + var18;
                             param7 = param7 + var22;
-                            param1 = param1 + (float)((daa) this).field_m;
+                            param1 = param1 + (float)this.field_m;
                             continue L47;
                           }
                         }
                       } else {
-                        this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, param9, 0, (int)param5, (int)param4, param7, var21);
+                        this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param5, (int)param4, param7, var21);
                         param5 = param5 + var17;
                         param4 = param4 + var18;
                         param7 = param7 + var22;
-                        param1 = param1 + (float)((daa) this).field_m;
+                        param1 = param1 + (float)this.field_m;
                         continue L46;
                       }
                     }
                   } else {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((daa) this).field_k[(int)param1];
+                    param1 = (float)this.field_k[(int)param1];
                     L48: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -667,20 +667,20 @@ final class daa {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                            this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                             param3 = param3 + var19;
                             param4 = param4 + var18;
                             param7 = param7 + var22;
-                            param1 = param1 + (float)((daa) this).field_m;
+                            param1 = param1 + (float)this.field_m;
                             continue L49;
                           }
                         }
                       } else {
-                        this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, param9, 0, (int)param4, (int)param5, param7, var21);
+                        this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param4, (int)param5, param7, var21);
                         param5 = param5 + var17;
                         param4 = param4 + var18;
                         param7 = param7 + var22;
-                        param1 = param1 + (float)((daa) this).field_m;
+                        param1 = param1 + (float)this.field_m;
                         continue L48;
                       }
                     }
@@ -716,7 +716,7 @@ final class daa {
                       } else {
                         param0 = param0 - param2;
                         param2 = param2 - param1;
-                        param1 = (float)((daa) this).field_k[(int)param1];
+                        param1 = (float)this.field_k[(int)param1];
                         L53: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -725,20 +725,20 @@ final class daa {
                               if (param0 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
+                                this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
                                 param3 = param3 + var17;
                                 param5 = param5 + var19;
                                 param7 = param7 + var22;
-                                param1 = param1 + (float)((daa) this).field_m;
+                                param1 = param1 + (float)this.field_m;
                                 continue L54;
                               }
                             }
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+                            this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
                             param3 = param3 + var17;
                             param4 = param4 + var18;
                             param7 = param7 + var22;
-                            param1 = param1 + (float)((daa) this).field_m;
+                            param1 = param1 + (float)this.field_m;
                             continue L53;
                           }
                         }
@@ -749,7 +749,7 @@ final class daa {
                     if (var17 > var19) {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((daa) this).field_k[(int)param1];
+                      param1 = (float)this.field_k[(int)param1];
                       L55: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -758,27 +758,27 @@ final class daa {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
+                              this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
                               param3 = param3 + var17;
                               param5 = param5 + var19;
                               param7 = param7 + var22;
-                              param1 = param1 + (float)((daa) this).field_m;
+                              param1 = param1 + (float)this.field_m;
                               continue L56;
                             }
                           }
                         } else {
-                          this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+                          this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
                           param3 = param3 + var17;
                           param4 = param4 + var18;
                           param7 = param7 + var22;
-                          param1 = param1 + (float)((daa) this).field_m;
+                          param1 = param1 + (float)this.field_m;
                           continue L55;
                         }
                       }
                     } else {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((daa) this).field_k[(int)param1];
+                      param1 = (float)this.field_k[(int)param1];
                       L57: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -787,20 +787,20 @@ final class daa {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
+                              this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
                               param3 = param3 + var17;
                               param5 = param5 + var19;
                               param7 = param7 + var22;
-                              param1 = param1 + (float)((daa) this).field_m;
+                              param1 = param1 + (float)this.field_m;
                               continue L58;
                             }
                           }
                         } else {
-                          this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                          this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                           param3 = param3 + var17;
                           param4 = param4 + var18;
                           param7 = param7 + var22;
-                          param1 = param1 + (float)((daa) this).field_m;
+                          param1 = param1 + (float)this.field_m;
                           continue L57;
                         }
                       }
@@ -808,7 +808,7 @@ final class daa {
                   } else {
                     param0 = param0 - param2;
                     param2 = param2 - param1;
-                    param1 = (float)((daa) this).field_k[(int)param1];
+                    param1 = (float)this.field_k[(int)param1];
                     L59: while (true) {
                       param2 = param2 - 1.0f;
                       if (param2 < 0.0f) {
@@ -817,20 +817,20 @@ final class daa {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
+                            this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
                             param3 = param3 + var17;
                             param5 = param5 + var19;
                             param7 = param7 + var22;
-                            param1 = param1 + (float)((daa) this).field_m;
+                            param1 = param1 + (float)this.field_m;
                             continue L60;
                           }
                         }
                       } else {
-                        this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                        this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                         param3 = param3 + var17;
                         param4 = param4 + var18;
                         param7 = param7 + var22;
-                        param1 = param1 + (float)((daa) this).field_m;
+                        param1 = param1 + (float)this.field_m;
                         continue L59;
                       }
                     }
@@ -844,9 +844,9 @@ final class daa {
             return;
           }
         } else {
-          ((daa) this).field_f.c((int)param4, 1, param9, (int)param1, (int)param3, (int)param0);
-          ((daa) this).field_f.c((int)param5, 1, param9, (int)param2, (int)param4, (int)param1);
-          ((daa) this).field_f.c((int)param3, 1, param9, (int)param0, (int)param5, (int)param2);
+          this.field_f.c((int)param4, 1, param9, (int)param1, (int)param3, (int)param0);
+          this.field_f.c((int)param5, 1, param9, (int)param2, (int)param4, (int)param1);
+          this.field_f.c((int)param3, 1, param9, (int)param0, (int)param5, (int)param2);
           return;
         }
     }
@@ -856,14 +856,14 @@ final class daa {
         int var11 = 0;
         int var12 = 0;
         L0: {
-          if (!((daa) this).field_n) {
+          if (!this.field_n) {
             break L0;
           } else {
             L1: {
-              if (param6 <= ((daa) this).field_b) {
+              if (param6 <= this.field_b) {
                 break L1;
               } else {
-                param6 = ((daa) this).field_b;
+                param6 = this.field_b;
                 break L1;
               }
             }
@@ -879,12 +879,12 @@ final class daa {
           param2 = param2 + (param5 - 1);
           param4 = param6 - param5 >> 2;
           param7 = param7 + param8 * (float)param5;
-          if (!((daa) this).field_c.field_f) {
-            if (((daa) this).field_a != 0) {
+          if (!this.field_c.field_f) {
+            if (this.field_a != 0) {
               L2: {
-                if (((daa) this).field_a != 254) {
-                  var10 = ((daa) this).field_a;
-                  var11 = 256 - ((daa) this).field_a;
+                if (this.field_a != 254) {
+                  var10 = this.field_a;
+                  var11 = 256 - this.field_a;
                   param3 = ((param3 & 16711935) * var11 >> 8 & 16711935) + ((param3 & 65280) * var11 >> 8 & 65280);
                   L3: while (true) {
                     param4--;
@@ -959,7 +959,7 @@ final class daa {
                   }
                 } else {
                   if (param5 != 0) {
-                    if (param6 <= ((daa) this).field_b - 1) {
+                    if (param6 <= this.field_b - 1) {
                       param4--;
                       L10: while (true) {
                         if (param4 < 0) {
@@ -1105,10 +1105,10 @@ final class daa {
               }
             }
           } else {
-            if (((daa) this).field_a != 0) {
-              if (((daa) this).field_a != 254) {
-                var10 = ((daa) this).field_a;
-                var11 = 256 - ((daa) this).field_a;
+            if (this.field_a != 0) {
+              if (this.field_a != 254) {
+                var10 = this.field_a;
+                var11 = 256 - this.field_a;
                 param3 = ((param3 & 16711935) * var11 >> 8 & 16711935) + ((param3 & 65280) * var11 >> 8 & 65280);
                 L24: while (true) {
                   param4--;
@@ -1188,7 +1188,7 @@ final class daa {
                 }
               } else {
                 if (param5 != 0) {
-                  if (param6 <= ((daa) this).field_b - 1) {
+                  if (param6 <= this.field_b - 1) {
                     param4--;
                     L31: while (true) {
                       if (param4 < 0) {
@@ -1343,7 +1343,7 @@ final class daa {
     }
 
     final int a() {
-        return ((daa) this).field_k[0] % ((daa) this).field_m;
+        return this.field_k[0] % this.field_m;
     }
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9, int param10, int param11) {
@@ -1374,7 +1374,7 @@ final class daa {
         float var37 = 0.0f;
         float var38 = 0.0f;
         float var39 = 0.0f;
-        if (!((daa) this).field_l) {
+        if (!this.field_l) {
           L0: {
             var13 = param4 - param3;
             var14 = param1 - param0;
@@ -1431,20 +1431,20 @@ final class daa {
                 if (param0 > param2) {
                   break L3;
                 } else {
-                  if (param0 < (float)((daa) this).field_g) {
+                  if (param0 < (float)this.field_g) {
                     L4: {
-                      if (param1 <= (float)((daa) this).field_g) {
+                      if (param1 <= (float)this.field_g) {
                         break L4;
                       } else {
-                        param1 = (float)((daa) this).field_g;
+                        param1 = (float)this.field_g;
                         break L4;
                       }
                     }
                     L5: {
-                      if (param2 <= (float)((daa) this).field_g) {
+                      if (param2 <= (float)this.field_g) {
                         break L5;
                       } else {
-                        param2 = (float)((daa) this).field_g;
+                        param2 = (float)this.field_g;
                         break L5;
                       }
                     }
@@ -1486,7 +1486,7 @@ final class daa {
                           } else {
                             param1 = param1 - param2;
                             param2 = param2 - param0;
-                            param0 = (float)((daa) this).field_k[(int)param0];
+                            param0 = (float)this.field_k[(int)param0];
                             L9: while (true) {
                               param2 = param2 - 1.0f;
                               if (param2 < 0.0f) {
@@ -1495,26 +1495,26 @@ final class daa {
                                   if (param1 < 0.0f) {
                                     return;
                                   } else {
-                                    this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                                    this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                                     param5 = param5 + var25;
                                     param3 = param3 + var26;
                                     param6 = param6 + var30;
                                     var37 = var37 + var32;
                                     var38 = var38 + var34;
                                     var39 = var39 + var36;
-                                    param0 = param0 + (float)((daa) this).field_m;
+                                    param0 = param0 + (float)this.field_m;
                                     continue L10;
                                   }
                                 }
                               } else {
-                                this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                                this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                                 param4 = param4 + var27;
                                 param3 = param3 + var26;
                                 param6 = param6 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param0 = param0 + (float)((daa) this).field_m;
+                                param0 = param0 + (float)this.field_m;
                                 continue L9;
                               }
                             }
@@ -1525,7 +1525,7 @@ final class daa {
                         if (var25 > var26) {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((daa) this).field_k[(int)param0];
+                          param0 = (float)this.field_k[(int)param0];
                           L11: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -1534,33 +1534,33 @@ final class daa {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                                  this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                                   param5 = param5 + var25;
                                   param3 = param3 + var26;
                                   param6 = param6 + var30;
                                   var37 = var37 + var32;
                                   var38 = var38 + var34;
                                   var39 = var39 + var36;
-                                  param0 = param0 + (float)((daa) this).field_m;
+                                  param0 = param0 + (float)this.field_m;
                                   continue L12;
                                 }
                               }
                             } else {
-                              this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                              this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                               param4 = param4 + var27;
                               param3 = param3 + var26;
                               param6 = param6 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param0 = param0 + (float)((daa) this).field_m;
+                              param0 = param0 + (float)this.field_m;
                               continue L11;
                             }
                           }
                         } else {
                           param1 = param1 - param2;
                           param2 = param2 - param0;
-                          param0 = (float)((daa) this).field_k[(int)param0];
+                          param0 = (float)this.field_k[(int)param0];
                           L13: while (true) {
                             param2 = param2 - 1.0f;
                             if (param2 < 0.0f) {
@@ -1569,26 +1569,26 @@ final class daa {
                                 if (param1 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                                  this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                                   param5 = param5 + var25;
                                   param3 = param3 + var26;
                                   param6 = param6 + var30;
                                   var37 = var37 + var32;
                                   var38 = var38 + var34;
                                   var39 = var39 + var36;
-                                  param0 = param0 + (float)((daa) this).field_m;
+                                  param0 = param0 + (float)this.field_m;
                                   continue L14;
                                 }
                               }
                             } else {
-                              this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                              this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                               param4 = param4 + var27;
                               param3 = param3 + var26;
                               param6 = param6 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param0 = param0 + (float)((daa) this).field_m;
+                              param0 = param0 + (float)this.field_m;
                               continue L13;
                             }
                           }
@@ -1596,7 +1596,7 @@ final class daa {
                       } else {
                         param1 = param1 - param2;
                         param2 = param2 - param0;
-                        param0 = (float)((daa) this).field_k[(int)param0];
+                        param0 = (float)this.field_k[(int)param0];
                         L15: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -1605,26 +1605,26 @@ final class daa {
                               if (param1 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                                this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                                 param5 = param5 + var25;
                                 param3 = param3 + var26;
                                 param6 = param6 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param0 = param0 + (float)((daa) this).field_m;
+                                param0 = param0 + (float)this.field_m;
                                 continue L16;
                               }
                             }
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var27;
                             param3 = param3 + var26;
                             param6 = param6 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param0 = param0 + (float)((daa) this).field_m;
+                            param0 = param0 + (float)this.field_m;
                             continue L15;
                           }
                         }
@@ -1663,7 +1663,7 @@ final class daa {
                           } else {
                             param2 = param2 - param1;
                             param1 = param1 - param0;
-                            param0 = (float)((daa) this).field_k[(int)param0];
+                            param0 = (float)this.field_k[(int)param0];
                             L20: while (true) {
                               param1 = param1 - 1.0f;
                               if (param1 < 0.0f) {
@@ -1672,26 +1672,26 @@ final class daa {
                                   if (param2 < 0.0f) {
                                     return;
                                   } else {
-                                    this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                                    this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                                     param5 = param5 + var27;
                                     param4 = param4 + var25;
                                     param6 = param6 + var30;
                                     var37 = var37 + var32;
                                     var38 = var38 + var34;
                                     var39 = var39 + var36;
-                                    param0 = param0 + (float)((daa) this).field_m;
+                                    param0 = param0 + (float)this.field_m;
                                     continue L21;
                                   }
                                 }
                               } else {
-                                this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                                this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                                 param5 = param5 + var27;
                                 param3 = param3 + var26;
                                 param6 = param6 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param0 = param0 + (float)((daa) this).field_m;
+                                param0 = param0 + (float)this.field_m;
                                 continue L20;
                               }
                             }
@@ -1702,7 +1702,7 @@ final class daa {
                         if (var27 > var25) {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((daa) this).field_k[(int)param0];
+                          param0 = (float)this.field_k[(int)param0];
                           L22: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -1711,33 +1711,33 @@ final class daa {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                                  this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                                   param5 = param5 + var27;
                                   param4 = param4 + var25;
                                   param6 = param6 + var30;
                                   var37 = var37 + var32;
                                   var38 = var38 + var34;
                                   var39 = var39 + var36;
-                                  param0 = param0 + (float)((daa) this).field_m;
+                                  param0 = param0 + (float)this.field_m;
                                   continue L23;
                                 }
                               }
                             } else {
-                              this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                              this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                               param5 = param5 + var27;
                               param3 = param3 + var26;
                               param6 = param6 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param0 = param0 + (float)((daa) this).field_m;
+                              param0 = param0 + (float)this.field_m;
                               continue L22;
                             }
                           }
                         } else {
                           param2 = param2 - param1;
                           param1 = param1 - param0;
-                          param0 = (float)((daa) this).field_k[(int)param0];
+                          param0 = (float)this.field_k[(int)param0];
                           L24: while (true) {
                             param1 = param1 - 1.0f;
                             if (param1 < 0.0f) {
@@ -1746,26 +1746,26 @@ final class daa {
                                 if (param2 < 0.0f) {
                                   return;
                                 } else {
-                                  this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                                  this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                                   param5 = param5 + var27;
                                   param4 = param4 + var25;
                                   param6 = param6 + var30;
                                   var37 = var37 + var32;
                                   var38 = var38 + var34;
                                   var39 = var39 + var36;
-                                  param0 = param0 + (float)((daa) this).field_m;
+                                  param0 = param0 + (float)this.field_m;
                                   continue L25;
                                 }
                               }
                             } else {
-                              this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                              this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                               param5 = param5 + var27;
                               param3 = param3 + var26;
                               param6 = param6 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param0 = param0 + (float)((daa) this).field_m;
+                              param0 = param0 + (float)this.field_m;
                               continue L24;
                             }
                           }
@@ -1773,7 +1773,7 @@ final class daa {
                       } else {
                         param2 = param2 - param1;
                         param1 = param1 - param0;
-                        param0 = (float)((daa) this).field_k[(int)param0];
+                        param0 = (float)this.field_k[(int)param0];
                         L26: while (true) {
                           param1 = param1 - 1.0f;
                           if (param1 < 0.0f) {
@@ -1782,26 +1782,26 @@ final class daa {
                               if (param2 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                                this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                                 param5 = param5 + var27;
                                 param4 = param4 + var25;
                                 param6 = param6 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param0 = param0 + (float)((daa) this).field_m;
+                                param0 = param0 + (float)this.field_m;
                                 continue L27;
                               }
                             }
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                             param5 = param5 + var27;
                             param3 = param3 + var26;
                             param6 = param6 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param0 = param0 + (float)((daa) this).field_m;
+                            param0 = param0 + (float)this.field_m;
                             continue L26;
                           }
                         }
@@ -1814,20 +1814,20 @@ final class daa {
               }
             }
             if (param1 > param2) {
-              if (param2 < (float)((daa) this).field_g) {
+              if (param2 < (float)this.field_g) {
                 L28: {
-                  if (param0 <= (float)((daa) this).field_g) {
+                  if (param0 <= (float)this.field_g) {
                     break L28;
                   } else {
-                    param0 = (float)((daa) this).field_g;
+                    param0 = (float)this.field_g;
                     break L28;
                   }
                 }
                 L29: {
-                  if (param1 <= (float)((daa) this).field_g) {
+                  if (param1 <= (float)this.field_g) {
                     break L29;
                   } else {
-                    param1 = (float)((daa) this).field_g;
+                    param1 = (float)this.field_g;
                     break L29;
                   }
                 }
@@ -1863,7 +1863,7 @@ final class daa {
                   if (var25 < var27) {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((daa) this).field_k[(int)param2];
+                    param2 = (float)this.field_k[(int)param2];
                     L32: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -1872,33 +1872,33 @@ final class daa {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var26;
                             param5 = param5 + var27;
                             param8 = param8 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param2 = param2 + (float)((daa) this).field_m;
+                            param2 = param2 + (float)this.field_m;
                             continue L33;
                           }
                         }
                       } else {
-                        this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, 0, 0, (int)param3, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
+                        this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param3, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
                         param3 = param3 + var25;
                         param5 = param5 + var27;
                         param8 = param8 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param2 = param2 + (float)((daa) this).field_m;
+                        param2 = param2 + (float)this.field_m;
                         continue L32;
                       }
                     }
                   } else {
                     param0 = param0 - param1;
                     param1 = param1 - param2;
-                    param2 = (float)((daa) this).field_k[(int)param2];
+                    param2 = (float)this.field_k[(int)param2];
                     L34: while (true) {
                       param1 = param1 - 1.0f;
                       if (param1 < 0.0f) {
@@ -1907,26 +1907,26 @@ final class daa {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var26;
                             param5 = param5 + var27;
                             param8 = param8 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param2 = param2 + (float)((daa) this).field_m;
+                            param2 = param2 + (float)this.field_m;
                             continue L35;
                           }
                         }
                       } else {
-                        this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, 0, 0, (int)param5, (int)param3, param8, var29, var37, var31, var38, var33, var39, var35);
+                        this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param5, (int)param3, param8, var29, var37, var31, var38, var33, var39, var35);
                         param3 = param3 + var25;
                         param5 = param5 + var27;
                         param8 = param8 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param2 = param2 + (float)((daa) this).field_m;
+                        param2 = param2 + (float)this.field_m;
                         continue L34;
                       }
                     }
@@ -1959,7 +1959,7 @@ final class daa {
                   if (var25 < var27) {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((daa) this).field_k[(int)param2];
+                    param2 = (float)this.field_k[(int)param2];
                     L38: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -1968,33 +1968,33 @@ final class daa {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, 0, 0, (int)param4, (int)param3, param8, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param4, (int)param3, param8, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var25;
                             param3 = param3 + var26;
                             param8 = param8 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param2 = param2 + (float)((daa) this).field_m;
+                            param2 = param2 + (float)this.field_m;
                             continue L39;
                           }
                         }
                       } else {
-                        this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
+                        this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37, var31, var38, var33, var39, var35);
                         param4 = param4 + var25;
                         param5 = param5 + var27;
                         param8 = param8 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param2 = param2 + (float)((daa) this).field_m;
+                        param2 = param2 + (float)this.field_m;
                         continue L38;
                       }
                     }
                   } else {
                     param1 = param1 - param0;
                     param0 = param0 - param2;
-                    param2 = (float)((daa) this).field_k[(int)param2];
+                    param2 = (float)this.field_k[(int)param2];
                     L40: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -2003,26 +2003,26 @@ final class daa {
                           if (param1 < 0.0f) {
                             return;
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, 0, 0, (int)param3, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param3, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
                             param4 = param4 + var25;
                             param3 = param3 + var26;
                             param8 = param8 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param2 = param2 + (float)((daa) this).field_m;
+                            param2 = param2 + (float)this.field_m;
                             continue L41;
                           }
                         }
                       } else {
-                        this.a(((daa) this).field_e, ((daa) this).field_h, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
+                        this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37, var31, var38, var33, var39, var35);
                         param4 = param4 + var25;
                         param5 = param5 + var27;
                         param8 = param8 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param2 = param2 + (float)((daa) this).field_m;
+                        param2 = param2 + (float)this.field_m;
                         continue L40;
                       }
                     }
@@ -2032,20 +2032,20 @@ final class daa {
                 return;
               }
             } else {
-              if (param1 < (float)((daa) this).field_g) {
+              if (param1 < (float)this.field_g) {
                 L42: {
-                  if (param2 <= (float)((daa) this).field_g) {
+                  if (param2 <= (float)this.field_g) {
                     break L42;
                   } else {
-                    param2 = (float)((daa) this).field_g;
+                    param2 = (float)this.field_g;
                     break L42;
                   }
                 }
                 L43: {
-                  if (param0 <= (float)((daa) this).field_g) {
+                  if (param0 <= (float)this.field_g) {
                     break L43;
                   } else {
-                    param0 = (float)((daa) this).field_g;
+                    param0 = (float)this.field_g;
                     break L43;
                   }
                 }
@@ -2081,7 +2081,7 @@ final class daa {
                   if (var26 < var25) {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((daa) this).field_k[(int)param1];
+                    param1 = (float)this.field_k[(int)param1];
                     L46: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -2090,33 +2090,33 @@ final class daa {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
                             param3 = param3 + var27;
                             param4 = param4 + var25;
                             param7 = param7 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param1 = param1 + (float)((daa) this).field_m;
+                            param1 = param1 + (float)this.field_m;
                             continue L47;
                           }
                         }
                       } else {
-                        this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, 0, 0, (int)param5, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
+                        this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param5, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
                         param5 = param5 + var26;
                         param4 = param4 + var25;
                         param7 = param7 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param1 = param1 + (float)((daa) this).field_m;
+                        param1 = param1 + (float)this.field_m;
                         continue L46;
                       }
                     }
                   } else {
                     param2 = param2 - param0;
                     param0 = param0 - param1;
-                    param1 = (float)((daa) this).field_k[(int)param1];
+                    param1 = (float)this.field_k[(int)param1];
                     L48: while (true) {
                       param0 = param0 - 1.0f;
                       if (param0 < 0.0f) {
@@ -2125,26 +2125,26 @@ final class daa {
                           if (param2 < 0.0f) {
                             return;
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                             param3 = param3 + var27;
                             param4 = param4 + var25;
                             param7 = param7 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param1 = param1 + (float)((daa) this).field_m;
+                            param1 = param1 + (float)this.field_m;
                             continue L49;
                           }
                         }
                       } else {
-                        this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, 0, 0, (int)param4, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
+                        this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param4, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
                         param5 = param5 + var26;
                         param4 = param4 + var25;
                         param7 = param7 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param1 = param1 + (float)((daa) this).field_m;
+                        param1 = param1 + (float)this.field_m;
                         continue L48;
                       }
                     }
@@ -2183,7 +2183,7 @@ final class daa {
                       } else {
                         param0 = param0 - param2;
                         param2 = param2 - param1;
-                        param1 = (float)((daa) this).field_k[(int)param1];
+                        param1 = (float)this.field_k[(int)param1];
                         L53: while (true) {
                           param2 = param2 - 1.0f;
                           if (param2 < 0.0f) {
@@ -2192,26 +2192,26 @@ final class daa {
                               if (param0 < 0.0f) {
                                 return;
                               } else {
-                                this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
+                                this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
                                 param3 = param3 + var26;
                                 param5 = param5 + var27;
                                 param7 = param7 + var30;
                                 var37 = var37 + var32;
                                 var38 = var38 + var34;
                                 var39 = var39 + var36;
-                                param1 = param1 + (float)((daa) this).field_m;
+                                param1 = param1 + (float)this.field_m;
                                 continue L54;
                               }
                             }
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
                             param3 = param3 + var26;
                             param4 = param4 + var25;
                             param7 = param7 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param1 = param1 + (float)((daa) this).field_m;
+                            param1 = param1 + (float)this.field_m;
                             continue L53;
                           }
                         }
@@ -2222,7 +2222,7 @@ final class daa {
                     if (var26 > var27) {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((daa) this).field_k[(int)param1];
+                      param1 = (float)this.field_k[(int)param1];
                       L55: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -2231,33 +2231,33 @@ final class daa {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
+                              this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37, var31, var38, var33, var39, var35);
                               param3 = param3 + var26;
                               param5 = param5 + var27;
                               param7 = param7 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param1 = param1 + (float)((daa) this).field_m;
+                              param1 = param1 + (float)this.field_m;
                               continue L56;
                             }
                           }
                         } else {
-                          this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
+                          this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37, var31, var38, var33, var39, var35);
                           param3 = param3 + var26;
                           param4 = param4 + var25;
                           param7 = param7 + var30;
                           var37 = var37 + var32;
                           var38 = var38 + var34;
                           var39 = var39 + var36;
-                          param1 = param1 + (float)((daa) this).field_m;
+                          param1 = param1 + (float)this.field_m;
                           continue L55;
                         }
                       }
                     } else {
                       param0 = param0 - param2;
                       param2 = param2 - param1;
-                      param1 = (float)((daa) this).field_k[(int)param1];
+                      param1 = (float)this.field_k[(int)param1];
                       L57: while (true) {
                         param2 = param2 - 1.0f;
                         if (param2 < 0.0f) {
@@ -2266,26 +2266,26 @@ final class daa {
                             if (param0 < 0.0f) {
                               return;
                             } else {
-                              this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                              this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                               param3 = param3 + var26;
                               param5 = param5 + var27;
                               param7 = param7 + var30;
                               var37 = var37 + var32;
                               var38 = var38 + var34;
                               var39 = var39 + var36;
-                              param1 = param1 + (float)((daa) this).field_m;
+                              param1 = param1 + (float)this.field_m;
                               continue L58;
                             }
                           }
                         } else {
-                          this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                          this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                           param3 = param3 + var26;
                           param4 = param4 + var25;
                           param7 = param7 + var30;
                           var37 = var37 + var32;
                           var38 = var38 + var34;
                           var39 = var39 + var36;
-                          param1 = param1 + (float)((daa) this).field_m;
+                          param1 = param1 + (float)this.field_m;
                           continue L57;
                         }
                       }
@@ -2293,7 +2293,7 @@ final class daa {
                   } else {
                     param0 = param0 - param2;
                     param2 = param2 - param1;
-                    param1 = (float)((daa) this).field_k[(int)param1];
+                    param1 = (float)this.field_k[(int)param1];
                     L59: while (true) {
                       param2 = param2 - 1.0f;
                       if (param2 < 0.0f) {
@@ -2302,26 +2302,26 @@ final class daa {
                           if (param0 < 0.0f) {
                             return;
                           } else {
-                            this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                            this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                             param3 = param3 + var26;
                             param5 = param5 + var27;
                             param7 = param7 + var30;
                             var37 = var37 + var32;
                             var38 = var38 + var34;
                             var39 = var39 + var36;
-                            param1 = param1 + (float)((daa) this).field_m;
+                            param1 = param1 + (float)this.field_m;
                             continue L60;
                           }
                         }
                       } else {
-                        this.a(((daa) this).field_e, ((daa) this).field_h, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
+                        this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37, var31, var38, var33, var39, var35);
                         param3 = param3 + var26;
                         param4 = param4 + var25;
                         param7 = param7 + var30;
                         var37 = var37 + var32;
                         var38 = var38 + var34;
                         var39 = var39 + var36;
-                        param1 = param1 + (float)((daa) this).field_m;
+                        param1 = param1 + (float)this.field_m;
                         continue L59;
                       }
                     }
@@ -2335,14 +2335,32 @@ final class daa {
             return;
           }
         } else {
-          ((daa) this).field_f.c((int)param4, 1, -16777216 | param9, (int)param1, (int)param3, (int)param0);
-          ((daa) this).field_f.c((int)param5, 1, -16777216 | param9, (int)param2, (int)param4, (int)param1);
-          ((daa) this).field_f.c((int)param3, 1, -16777216 | param9, (int)param0, (int)param5, (int)param2);
+          this.field_f.c((int)param4, 1, -16777216 | param9, (int)param1, (int)param3, (int)param0);
+          this.field_f.c((int)param5, 1, -16777216 | param9, (int)param2, (int)param4, (int)param1);
+          this.field_f.c((int)param3, 1, -16777216 | param9, (int)param0, (int)param5, (int)param2);
           return;
         }
     }
 
     private final void a(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14) {
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
+        int incrementValue$30 = 0;
+        int incrementValue$31 = 0;
+        int incrementValue$32 = 0;
+        int incrementValue$33 = 0;
+        int incrementValue$34 = 0;
+        int incrementValue$35 = 0;
         int var16_int = 0;
         int[] var16 = null;
         int var17 = 0;
@@ -2369,14 +2387,14 @@ final class daa {
         int[] var38 = null;
         int[] var39 = null;
         L0: {
-          if (!((daa) this).field_n) {
+          if (!this.field_n) {
             break L0;
           } else {
             L1: {
-              if (param6 <= ((daa) this).field_b) {
+              if (param6 <= this.field_b) {
                 break L1;
               } else {
-                param6 = ((daa) this).field_b;
+                param6 = this.field_b;
                 break L1;
               }
             }
@@ -2389,18 +2407,18 @@ final class daa {
           }
         }
         if (param5 < param6) {
-          if (!((daa) this).field_i) {
+          if (!this.field_i) {
             param2 = param2 + (param5 - 1);
             param7 = param7 + param8 * (float)param5;
             param9 = param9 + param10 * (float)param5;
             param11 = param11 + param12 * (float)param5;
             param13 = param13 + param14 * (float)param5;
-            if (!((daa) this).field_c.field_f) {
-              if (!((daa) this).field_j) {
+            if (!this.field_c.field_f) {
+              if (!this.field_j) {
                 L2: {
                   param4 = param6 - param5;
-                  if (((daa) this).field_a != 0) {
-                    if (((daa) this).field_d) {
+                  if (this.field_a != 0) {
+                    if (this.field_d) {
                       L3: while (true) {
                         L4: {
                           param2++;
@@ -2431,8 +2449,8 @@ final class daa {
                         }
                       }
                     } else {
-                      var16_int = ((daa) this).field_a;
-                      var17 = 256 - ((daa) this).field_a;
+                      var16_int = this.field_a;
+                      var17 = 256 - this.field_a;
                       L5: while (true) {
                         L6: {
                           param2++;
@@ -2489,8 +2507,8 @@ final class daa {
                   param10 = param10 * 4.0f;
                   param12 = param12 * 4.0f;
                   param14 = param14 * 4.0f;
-                  if (((daa) this).field_a != 0) {
-                    if (((daa) this).field_d) {
+                  if (this.field_a != 0) {
+                    if (this.field_d) {
                       L10: {
                         if (param4 <= 0) {
                           break L10;
@@ -2615,8 +2633,8 @@ final class daa {
                       }
                     } else {
                       L18: {
-                        var16_int = ((daa) this).field_a;
-                        var17 = 256 - ((daa) this).field_a;
+                        var16_int = this.field_a;
+                        var17 = 256 - this.field_a;
                         if (param4 <= 0) {
                           break L18;
                         } else {
@@ -2794,11 +2812,11 @@ final class daa {
                 return;
               }
             } else {
-              if (!((daa) this).field_j) {
+              if (!this.field_j) {
                 L34: {
                   param4 = param6 - param5;
-                  if (((daa) this).field_a != 0) {
-                    if (((daa) this).field_d) {
+                  if (this.field_a != 0) {
+                    if (this.field_d) {
                       L35: while (true) {
                         L36: {
                           param2++;
@@ -2830,8 +2848,8 @@ final class daa {
                         }
                       }
                     } else {
-                      var16_int = ((daa) this).field_a;
-                      var17 = 256 - ((daa) this).field_a;
+                      var16_int = this.field_a;
+                      var17 = 256 - this.field_a;
                       L37: while (true) {
                         L38: {
                           param2++;
@@ -2890,8 +2908,8 @@ final class daa {
                   param10 = param10 * 4.0f;
                   param12 = param12 * 4.0f;
                   param14 = param14 * 4.0f;
-                  if (((daa) this).field_a != 0) {
-                    if (((daa) this).field_d) {
+                  if (this.field_a != 0) {
+                    if (this.field_d) {
                       L42: {
                         if (param4 <= 0) {
                           break L42;
@@ -3021,8 +3039,8 @@ final class daa {
                       }
                     } else {
                       L50: {
-                        var16_int = ((daa) this).field_a;
-                        var17 = 256 - ((daa) this).field_a;
+                        var16_int = this.field_a;
+                        var17 = 256 - this.field_a;
                         if (param4 <= 0) {
                           break L50;
                         } else {
@@ -3215,14 +3233,14 @@ final class daa {
             param9 = param9 + param10 * (float)param5;
             param11 = param11 + param12 * (float)param5;
             param13 = param13 + param14 * (float)param5;
-            if (((daa) this).field_j) {
+            if (this.field_j) {
               L66: {
                 param4 = param6 - param5 >> 2;
                 param10 = param10 * 4.0f;
                 param12 = param12 * 4.0f;
                 param14 = param14 * 4.0f;
-                if (((daa) this).field_a != 0) {
-                  if (((daa) this).field_d) {
+                if (this.field_a != 0) {
+                  if (this.field_d) {
                     L67: {
                       if (param4 <= 0) {
                         break L67;
@@ -3234,7 +3252,7 @@ final class daa {
                           param13 = param13 + param14;
                           var22 = param0;
                           var16 = var22;
-                          int incrementValue$18 = param2;
+                          incrementValue$18 = param2;
                           param2++;
                           var17 = incrementValue$18;
                           var18 = param3;
@@ -3245,7 +3263,7 @@ final class daa {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var23 = param0;
                           var16 = var23;
-                          int incrementValue$19 = param2;
+                          incrementValue$19 = param2;
                           param2++;
                           var17 = incrementValue$19;
                           var18 = param3;
@@ -3256,7 +3274,7 @@ final class daa {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var24 = param0;
                           var16 = var24;
-                          int incrementValue$20 = param2;
+                          incrementValue$20 = param2;
                           param2++;
                           var17 = incrementValue$20;
                           var18 = param3;
@@ -3267,7 +3285,7 @@ final class daa {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var25 = param0;
                           var16 = var25;
-                          int incrementValue$21 = param2;
+                          incrementValue$21 = param2;
                           param2++;
                           var17 = incrementValue$21;
                           var18 = param3;
@@ -3293,7 +3311,7 @@ final class daa {
                       L69: while (true) {
                         var26 = param0;
                         var16 = var26;
-                        int incrementValue$22 = param2;
+                        incrementValue$22 = param2;
                         param2++;
                         var17 = incrementValue$22;
                         var18 = param3;
@@ -3312,8 +3330,8 @@ final class daa {
                     }
                   } else {
                     L70: {
-                      var16_int = ((daa) this).field_a;
-                      var17 = 256 - ((daa) this).field_a;
+                      var16_int = this.field_a;
+                      var17 = 256 - this.field_a;
                       if (param4 <= 0) {
                         break L70;
                       } else {
@@ -3324,19 +3342,19 @@ final class daa {
                           param13 = param13 + param14;
                           param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                           var18 = param0[param2];
-                          int incrementValue$23 = param2;
+                          incrementValue$23 = param2;
                           param2++;
                           param0[incrementValue$23] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
-                          int incrementValue$24 = param2;
+                          incrementValue$24 = param2;
                           param2++;
                           param0[incrementValue$24] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
-                          int incrementValue$25 = param2;
+                          incrementValue$25 = param2;
                           param2++;
                           param0[incrementValue$25] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
-                          int incrementValue$26 = param2;
+                          incrementValue$26 = param2;
                           param2++;
                           param0[incrementValue$26] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           param4--;
@@ -3356,7 +3374,7 @@ final class daa {
                       param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                       L72: while (true) {
                         var18 = param0[param2];
-                        int incrementValue$27 = param2;
+                        incrementValue$27 = param2;
                         param2++;
                         param0[incrementValue$27] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                         param4--;
@@ -3378,16 +3396,16 @@ final class daa {
                         param9 = param9 + param10;
                         param11 = param11 + param12;
                         param13 = param13 + param14;
-                        int incrementValue$28 = param2;
+                        incrementValue$28 = param2;
                         param2++;
                         param0[incrementValue$28] = param3;
-                        int incrementValue$29 = param2;
+                        incrementValue$29 = param2;
                         param2++;
                         param0[incrementValue$29] = param3;
-                        int incrementValue$30 = param2;
+                        incrementValue$30 = param2;
                         param2++;
                         param0[incrementValue$30] = param3;
-                        int incrementValue$31 = param2;
+                        incrementValue$31 = param2;
                         param2++;
                         param0[incrementValue$31] = param3;
                         param4--;
@@ -3403,7 +3421,7 @@ final class daa {
                   if (param4 > 0) {
                     param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
                     L75: while (true) {
-                      int incrementValue$32 = param2;
+                      incrementValue$32 = param2;
                       param2++;
                       param0[incrementValue$32] = param3;
                       param4--;
@@ -3422,12 +3440,12 @@ final class daa {
             } else {
               L76: {
                 param4 = param6 - param5;
-                if (((daa) this).field_a != 0) {
-                  if (((daa) this).field_d) {
+                if (this.field_a != 0) {
+                  if (this.field_d) {
                     L77: while (true) {
                       var27 = param0;
                       var16 = var27;
-                      int incrementValue$33 = param2;
+                      incrementValue$33 = param2;
                       param2++;
                       var17 = incrementValue$33;
                       var18 = (int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255;
@@ -3447,8 +3465,8 @@ final class daa {
                       }
                     }
                   } else {
-                    var16_int = ((daa) this).field_a;
-                    var17 = 256 - ((daa) this).field_a;
+                    var16_int = this.field_a;
+                    var17 = 256 - this.field_a;
                     L78: while (true) {
                       param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
                       param9 = param9 + param10;
@@ -3456,7 +3474,7 @@ final class daa {
                       param13 = param13 + param14;
                       param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                       var18 = param0[param2];
-                      int incrementValue$34 = param2;
+                      incrementValue$34 = param2;
                       param2++;
                       param0[incrementValue$34] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                       param4--;
@@ -3469,7 +3487,7 @@ final class daa {
                   }
                 } else {
                   L79: while (true) {
-                    int incrementValue$35 = param2;
+                    incrementValue$35 = param2;
                     param2++;
                     param0[incrementValue$35] = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
                     param9 = param9 + param10;
@@ -3493,21 +3511,21 @@ final class daa {
     }
 
     final int b() {
-        return ((daa) this).field_k[0] / ((daa) this).field_m;
+        return this.field_k[0] / this.field_m;
     }
 
     daa(sob param0, co param1) {
-        ((daa) this).field_k = new int[4096];
-        ((daa) this).field_i = false;
-        ((daa) this).field_l = false;
-        ((daa) this).field_n = false;
-        ((daa) this).field_d = false;
-        ((daa) this).field_j = true;
-        ((daa) this).field_a = 0;
-        ((daa) this).field_f = param0;
-        ((daa) this).field_c = param1;
-        ((daa) this).field_m = ((daa) this).field_f.field_i;
-        ((daa) this).field_e = ((daa) this).field_f.field_k;
-        ((daa) this).field_h = ((daa) this).field_f.field_r;
+        this.field_k = new int[4096];
+        this.field_i = false;
+        this.field_l = false;
+        this.field_n = false;
+        this.field_d = false;
+        this.field_j = true;
+        this.field_a = 0;
+        this.field_f = param0;
+        this.field_c = param1;
+        this.field_m = this.field_f.field_i;
+        this.field_e = this.field_f.field_k;
+        this.field_h = this.field_f.field_r;
     }
 }

@@ -108,6 +108,14 @@ final class c {
     }
 
     final static void a(int[] param0, int param1, int param2) {
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
+        int fieldTemp$15 = 0;
         int var3 = 0;
         int[] var4_ref_int__ = null;
         int var4 = 0;
@@ -141,9 +149,9 @@ final class c {
             }
           }
         }
-        param2 = param2;
+        param2 = param2 + param1;
         var4 = param2 - 2;
-        var8 = 0;
+        var8 = param1;
         var5 = var8;
         L3: while (true) {
           if (var8 >= param2) {
@@ -156,14 +164,18 @@ final class c {
                 if (var7 >= var6) {
                   break L4;
                 } else {
+                  fieldTemp$8 = field_g;
                   field_g = field_g + 1;
-                  field_f[field_g] = param0[var8];
+                  field_f[fieldTemp$8] = param0[var8];
+                  fieldTemp$9 = field_g;
                   field_g = field_g + 1;
-                  field_f[field_g] = var7;
+                  field_f[fieldTemp$9] = var7;
+                  fieldTemp$10 = field_g;
                   field_g = field_g + 1;
-                  field_f[field_g] = param0[var4];
+                  field_f[fieldTemp$10] = param0[var4];
+                  fieldTemp$11 = field_g;
                   field_g = field_g + 1;
-                  field_f[field_g] = var6;
+                  field_f[fieldTemp$11] = var6;
                   break L4;
                 }
               }
@@ -171,14 +183,18 @@ final class c {
               var8 += 2;
               continue L3;
             } else {
+              fieldTemp$12 = field_g;
               field_g = field_g + 1;
-              field_f[field_g] = param0[var4];
+              field_f[fieldTemp$12] = param0[var4];
+              fieldTemp$13 = field_g;
               field_g = field_g + 1;
-              field_f[field_g] = var6;
+              field_f[fieldTemp$13] = var6;
+              fieldTemp$14 = field_g;
               field_g = field_g + 1;
-              field_f[field_g] = param0[var8];
+              field_f[fieldTemp$14] = param0[var8];
+              fieldTemp$15 = field_g;
               field_g = field_g + 1;
-              field_f[field_g] = var7;
+              field_f[fieldTemp$15] = var7;
               var4 = var8;
               var8 += 2;
               continue L3;
@@ -196,13 +212,13 @@ final class c {
     }
 
     final static void d() {
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        int var2 = 0;
         if (field_g < 0) {
             field_b = 0;
             field_d = 0;

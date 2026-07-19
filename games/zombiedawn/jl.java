@@ -9,23 +9,24 @@ final class jl extends bj {
 
     final Object d(byte param0) {
         if (param0 < 49) {
-            field_s = null;
-            return ((jl) this).field_t;
+            field_s = (int[]) null;
+            return this.field_t;
         }
-        return ((jl) this).field_t;
+        return this.field_t;
     }
 
     public static void e(byte param0) {
-        int var1 = -65;
+        int var1 = -65 / ((-62 - param0) / 44);
         field_u = null;
         field_v = null;
         field_s = null;
     }
 
     final boolean b(boolean param0) {
+        byte[] discarded$0 = null;
         if (!param0) {
-            Object var3 = null;
-            byte[] discarded$0 = jl.a((byte[]) null, (byte) 35);
+            byte[] var3 = (byte[]) null;
+            discarded$0 = jl.a((byte[]) null, (byte) 35);
             return false;
         }
         return false;
@@ -34,9 +35,9 @@ final class jl extends bj {
     jl(Object param0, int param1) {
         super(param1);
         try {
-            ((jl) this).field_t = param0;
+            this.field_t = param0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "jl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "jl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -70,12 +71,12 @@ final class jl extends bj {
               if (param1 == 45) {
                 break L1;
               } else {
-                field_u = null;
+                field_u = (uc) null;
                 break L1;
               }
             }
             gp.a(param0, 0, var3, 0, var2_int);
-            stackOut_2_0 = (byte[]) var3;
+            stackOut_2_0 = (byte[]) (var3);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -83,23 +84,23 @@ final class jl extends bj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("jl.J(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -107,16 +108,12 @@ final class jl extends bj {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = new int[8192];
         field_v = new cg(13, 0, 1, 0);
     }

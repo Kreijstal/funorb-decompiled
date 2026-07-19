@@ -8,11 +8,18 @@ final class sn {
 
     final static void a(int param0, String param1) {
         System.out.println("Error: " + eg.a(param1, "%0a", "\n", true));
+        if (param0 != 11580) {
+            field_c = (cn[]) null;
+        }
     }
 
     public static void a(int param0) {
         field_b = null;
         field_c = null;
+        if (param0 != 5) {
+            cn[] var2 = (cn[]) null;
+            sn.a(99, -43, (cn[]) null, -117, -42, 22);
+        }
         field_a = null;
     }
 
@@ -47,6 +54,7 @@ final class sn {
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
         String stackIn_76_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_10_0 = 0;
         int stackOut_9_0 = 0;
@@ -68,13 +76,14 @@ final class sn {
         try {
           L0: {
             if (param2 == null) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 if (0 >= param5) {
                   break L1;
                 } else {
-                  if (param1 <= 0) {
+                  if ((param1 ^ -1) >= -1) {
                     break L1;
                   } else {
                     L2: {
@@ -221,7 +230,7 @@ final class sn {
                       if (null == param2[7]) {
                         break L14;
                       } else {
-                        if (param2[7].field_E != 0) {
+                        if (-1 != (param2[7].field_E ^ -1)) {
                           gf.a(var17, var20, var18, var12);
                           var21 = var13;
                           L15: while (true) {
@@ -317,34 +326,36 @@ final class sn {
                         }
                       }
                     }
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L23: {
             var6 = decompiledCaughtException;
-            stackOut_73_0 = (RuntimeException) var6;
+            stackOut_73_0 = (RuntimeException) (var6);
             stackOut_73_1 = new StringBuilder().append("sn.B(").append(param0).append(',').append(param1).append(',');
             stackIn_75_0 = stackOut_73_0;
             stackIn_75_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;
             stackIn_74_1 = stackOut_73_1;
             if (param2 == null) {
-              stackOut_75_0 = (RuntimeException) (Object) stackIn_75_0;
-              stackOut_75_1 = (StringBuilder) (Object) stackIn_75_1;
+              stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
+              stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
               stackOut_75_2 = "null";
               stackIn_76_0 = stackOut_75_0;
               stackIn_76_1 = stackOut_75_1;
               stackIn_76_2 = stackOut_75_2;
               break L23;
             } else {
-              stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
-              stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
+              stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
+              stackOut_74_1 = (StringBuilder) ((Object) stackIn_74_1);
               stackOut_74_2 = "{...}";
               stackIn_76_0 = stackOut_74_0;
               stackIn_76_1 = stackOut_74_1;
@@ -352,7 +363,16 @@ final class sn {
               break L23;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_76_0), stackIn_76_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 

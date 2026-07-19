@@ -12,11 +12,15 @@ final class lb {
         ai.field_T.field_q = 0;
         ai.field_T.field_p = 0;
         if (param0 != -8) {
-            field_b = null;
+            field_b = (String) null;
         }
     }
 
     final static boolean b(int param0) {
+        if (param0 != 0) {
+            field_e = (ru[]) null;
+            return ub.field_e;
+        }
         return ub.field_e;
     }
 
@@ -37,10 +41,6 @@ final class lb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Zamorak Returns Highscores";
         field_b = "This unit is already about to clone itself.";
         field_c = "Back";

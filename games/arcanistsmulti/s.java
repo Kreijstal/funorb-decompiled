@@ -16,11 +16,31 @@ abstract class s {
 
     final static void a(boolean param0) {
         int var1 = 0;
-        if (224 <= si.field_l) {
-            mf.a(256, 21298);
+        if (param0) {
+          L0: {
+            field_b = (String) null;
+            if (224 > si.field_l) {
+              var1 = si.field_l % 32;
+              mf.a(si.field_l - -32 - var1, 21298);
+              break L0;
+            } else {
+              mf.a(256, 21298);
+              break L0;
+            }
+          }
+          return;
         } else {
-            var1 = si.field_l % 32;
-            mf.a(si.field_l - -32 - var1, 21298);
+          L1: {
+            if (224 > si.field_l) {
+              var1 = si.field_l % 32;
+              mf.a(si.field_l - -32 - var1, 21298);
+              break L1;
+            } else {
+              mf.a(256, 21298);
+              break L1;
+            }
+          }
+          return;
         }
     }
 
@@ -30,18 +50,14 @@ abstract class s {
         field_a = null;
         field_b = null;
         field_d = null;
-        int var1 = 0;
+        int var1 = -45 % ((param0 - -49) / 37);
         field_i = null;
-        field_e = null;
+        field_e = (nl[][]) null;
     }
 
     abstract void a(int param0, int param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Arcane Zero Shield blocks this spell in the first round.";
         field_d = "This game has been updated! Please reload this page.";
         field_i = new int[]{42, 43, 44};

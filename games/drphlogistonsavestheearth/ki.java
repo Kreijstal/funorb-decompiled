@@ -10,9 +10,13 @@ final class ki {
         field_b = null;
         field_a = null;
         field_c = null;
+        if (!param0) {
+            field_a = (he[]) null;
+        }
     }
 
     final static String[] a(byte param0, char param1, String param2) {
+        int incrementValue$2 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;
@@ -44,12 +48,12 @@ final class ki {
         try {
           L0: {
             L1: {
-              var10 = (CharSequence) (Object) param2;
+              var10 = (CharSequence) ((Object) param2);
               var3_int = tf.a(var10, param1, 16752);
               if (param0 <= -79) {
                 break L1;
               } else {
-                field_b = null;
+                field_b = (he) null;
                 break L1;
               }
             }
@@ -60,14 +64,14 @@ final class ki {
             L2: while (true) {
               if (var7 >= var3_int) {
                 var4[var3_int] = param2.substring(var6);
-                stackOut_9_0 = (String[]) var4;
+                stackOut_9_0 = (String[]) (var4);
                 stackIn_10_0 = stackOut_9_0;
                 break L0;
               } else {
                 var8 = var6;
                 L3: while (true) {
                   if (param2.charAt(var8) == param1) {
-                    int incrementValue$2 = var5;
+                    incrementValue$2 = var5;
                     var5++;
                     var4[incrementValue$2] = param2.substring(var6, var8);
                     var6 = 1 + var8;
@@ -85,23 +89,23 @@ final class ki {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_0 = (RuntimeException) (var3);
             stackOut_11_1 = new StringBuilder().append("ki.A(").append(param0).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -109,7 +113,7 @@ final class ki {
               break L4;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
         return stackIn_10_0;
     }

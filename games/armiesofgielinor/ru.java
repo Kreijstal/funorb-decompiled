@@ -6,6 +6,8 @@ final class ru extends si {
     byte[] field_k;
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -28,7 +30,7 @@ final class ru extends si {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$66 = param4;
+                incrementValue$66 = param4;
                 param4++;
                 param3 = param2[param1[incrementValue$66] & 255];
                 if (param3 == 0) {
@@ -38,7 +40,7 @@ final class ru extends si {
                 } else {
                   var13 = (param3 & 16711935) * param10 & -16711936;
                   var14 = (param3 & 65280) * param10 & 16711680;
-                  int incrementValue$67 = param5;
+                  incrementValue$67 = param5;
                   param5++;
                   param0[incrementValue$67] = ((var13 | var14) >>> 8) + param11;
                   var16++;
@@ -59,12 +61,12 @@ final class ru extends si {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ru) this).field_i;
-          param1 = param1 + ((ru) this).field_d;
+          param0 = param0 + this.field_i;
+          param1 = param1 + this.field_d;
           var3 = param0 + param1 * qn.field_l;
           var4 = 0;
-          var5 = ((ru) this).field_h;
-          var6 = ((ru) this).field_e;
+          var5 = this.field_h;
+          var6 = this.field_e;
           var7 = qn.field_l - var6;
           var8 = 0;
           if (param1 >= qn.field_a) {
@@ -116,7 +118,7 @@ final class ru extends si {
             break L4;
           } else {
             if (var5 > 0) {
-              ru.a(qn.field_d, ((ru) this).field_k, ((ru) this).field_j, var4, var3, var6, var5, var7, var8);
+              ru.a(qn.field_d, this.field_k, this.field_j, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -127,12 +129,12 @@ final class ru extends si {
 
     final wk a() {
         int var3 = 0;
-        int var1 = ((ru) this).field_e * ((ru) this).field_h;
+        int var1 = this.field_e * this.field_h;
         int[] var2 = new int[var1];
         for (var3 = 0; var3 < var1; var3++) {
-            var2[var3] = ((ru) this).field_j[((ru) this).field_k[var3] & 255];
+            var2[var3] = this.field_j[this.field_k[var3] & 255];
         }
-        return new wk(((ru) this).field_g, ((ru) this).field_f, ((ru) this).field_i, ((ru) this).field_d, ((ru) this).field_e, ((ru) this).field_h, var2);
+        return new wk(this.field_g, this.field_f, this.field_i, this.field_d, this.field_e, this.field_h, var2);
     }
 
     final void d(int param0, int param1) {
@@ -153,8 +155,6 @@ final class ru extends si {
         int var17 = 0;
         int[] var18 = null;
         int[] var19 = null;
-        int[] var20 = null;
-        int[] var21 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -168,10 +168,10 @@ final class ru extends si {
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
         L0: {
-          var3 = ((ru) this).field_e >> 1;
-          var4 = ((ru) this).field_h >> 1;
-          param0 = param0 + ((ru) this).field_i / 2;
-          param1 = param1 + ((ru) this).field_d / 2;
+          var3 = this.field_e >> 1;
+          var4 = this.field_h >> 1;
+          param0 = param0 + this.field_i / 2;
+          param1 = param1 + this.field_d / 2;
           if (param0 >= qn.field_j) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -185,7 +185,7 @@ final class ru extends si {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= qn.field_e) {
-            stackOut_5_0 = ((ru) this).field_e - 2;
+            stackOut_5_0 = this.field_e - 2;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -209,7 +209,7 @@ final class ru extends si {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= qn.field_f) {
-            stackOut_11_0 = ((ru) this).field_h - 2;
+            stackOut_11_0 = this.field_h - 2;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -219,9 +219,7 @@ final class ru extends si {
           }
         }
         var8 = stackIn_12_0;
-        var21 = new int[4];
-        var20 = var21;
-        var19 = var20;
+        var19 = new int[4];
         var18 = var19;
         var9 = var18;
         var10 = var7;
@@ -235,12 +233,12 @@ final class ru extends si {
                 var10 += 2;
                 continue L4;
               } else {
-                var12 = var10 * ((ru) this).field_e + var11;
+                var12 = var10 * this.field_e + var11;
                 var13 = (param1 + (var10 >> 1)) * qn.field_l + (param0 + (var11 >> 1));
-                var9[0] = ((ru) this).field_j[((ru) this).field_k[var12] & 255];
-                var9[1] = ((ru) this).field_j[((ru) this).field_k[var12 + 1] & 255];
-                var9[2] = ((ru) this).field_j[((ru) this).field_k[var12 + ((ru) this).field_e] & 255];
-                var9[3] = ((ru) this).field_j[((ru) this).field_k[var12 + 1] & 255];
+                var9[0] = this.field_j[this.field_k[var12] & 255];
+                var9[1] = this.field_j[this.field_k[var12 + 1] & 255];
+                var9[2] = this.field_j[this.field_k[var12 + this.field_e] & 255];
+                var9[3] = this.field_j[this.field_k[var12 + 1] & 255];
                 var14 = 0;
                 var15 = 0;
                 var16 = 0;
@@ -252,16 +250,16 @@ final class ru extends si {
                     continue L5;
                   } else {
                     L7: {
-                      if (var21[var17] != 0) {
+                      if (var19[var17] != 0) {
                         break L7;
                       } else {
                         var9[var17] = qn.field_d[var13];
                         break L7;
                       }
                     }
-                    var14 = var14 + (var21[var17] >> 16 & 255);
-                    var15 = var15 + (var21[var17] >> 8 & 255);
-                    var16 = var16 + (var21[var17] & 255);
+                    var14 = var14 + (var19[var17] >> 16 & 255);
+                    var15 = var15 + (var19[var17] >> 8 & 255);
+                    var16 = var16 + (var19[var17] & 255);
                     var17++;
                     continue L6;
                   }
@@ -282,12 +280,12 @@ final class ru extends si {
         int var11 = 0;
         if (param2 != 256) {
           L0: {
-            param0 = param0 + ((ru) this).field_i;
-            param1 = param1 + ((ru) this).field_d;
+            param0 = param0 + this.field_i;
+            param1 = param1 + this.field_d;
             var5 = param0 + param1 * qn.field_l;
             var6 = 0;
-            var7 = ((ru) this).field_h;
-            var8 = ((ru) this).field_e;
+            var7 = this.field_h;
+            var8 = this.field_e;
             var9 = qn.field_l - var8;
             var10 = 0;
             if (param1 >= qn.field_a) {
@@ -339,7 +337,7 @@ final class ru extends si {
               break L4;
             } else {
               if (var7 > 0) {
-                ru.b(qn.field_d, ((ru) this).field_k, ((ru) this).field_j, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+                ru.b(qn.field_d, this.field_k, this.field_j, 0, var6, var5, var8, var7, var9, var10, param2, param3);
                 return;
               } else {
                 break L4;
@@ -348,43 +346,53 @@ final class ru extends si {
           }
           return;
         } else {
-          ((ru) this).a(param0, param1);
+          this.a(param0, param1);
           return;
         }
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         int var11 = 0;
         int var9 = -(param5 >> 2);
         param5 = -(param5 & 3);
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = var9; var11 < 0; var11++) {
-                int incrementValue$0 = param4;
+                incrementValue$0 = param4;
                 param4++;
-                int incrementValue$1 = param3;
+                incrementValue$1 = param3;
                 param3++;
                 param0[incrementValue$0] = param2[param1[incrementValue$1] & 255];
-                int incrementValue$2 = param4;
+                incrementValue$2 = param4;
                 param4++;
-                int incrementValue$3 = param3;
+                incrementValue$3 = param3;
                 param3++;
                 param0[incrementValue$2] = param2[param1[incrementValue$3] & 255];
-                int incrementValue$4 = param4;
+                incrementValue$4 = param4;
                 param4++;
-                int incrementValue$5 = param3;
+                incrementValue$5 = param3;
                 param3++;
                 param0[incrementValue$4] = param2[param1[incrementValue$5] & 255];
-                int incrementValue$6 = param4;
+                incrementValue$6 = param4;
                 param4++;
-                int incrementValue$7 = param3;
+                incrementValue$7 = param3;
                 param3++;
                 param0[incrementValue$6] = param2[param1[incrementValue$7] & 255];
             }
             for (var11 = param5; var11 < 0; var11++) {
-                int incrementValue$8 = param4;
+                incrementValue$8 = param4;
                 param4++;
-                int incrementValue$9 = param3;
+                incrementValue$9 = param3;
                 param3++;
                 param0[incrementValue$8] = param2[param1[incrementValue$9] & 255];
             }
@@ -402,12 +410,12 @@ final class ru extends si {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ru) this).field_i;
-          param1 = param1 + ((ru) this).field_d;
+          param0 = param0 + this.field_i;
+          param1 = param1 + this.field_d;
           var3 = param0 + param1 * qn.field_l;
           var4 = 0;
-          var5 = ((ru) this).field_h;
-          var6 = ((ru) this).field_e;
+          var5 = this.field_h;
+          var6 = this.field_e;
           var7 = qn.field_l - var6;
           var8 = 0;
           if (param1 >= qn.field_a) {
@@ -459,7 +467,7 @@ final class ru extends si {
             break L4;
           } else {
             if (var5 > 0) {
-              ru.b(qn.field_d, ((ru) this).field_k, ((ru) this).field_j, 0, var4, var3, var6, var5, var7, var8);
+              ru.b(qn.field_d, this.field_k, this.field_j, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -473,13 +481,14 @@ final class ru extends si {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
+        int incrementValue$1 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
             var14 = (param4 >> 16) * param11;
             for (var15 = -param7; var15 < 0; var15++) {
                 var16 = param1[(param3 >> 16) + var14];
                 if (var16 != 0) {
-                    int incrementValue$1 = param5;
+                    incrementValue$1 = param5;
                     param5++;
                     param0[incrementValue$1] = param2[var16 & 255];
                 } else {
@@ -502,12 +511,12 @@ final class ru extends si {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ru) this).field_i;
-          param1 = param1 + ((ru) this).field_d;
+          param0 = param0 + this.field_i;
+          param1 = param1 + this.field_d;
           var4 = param0 + param1 * qn.field_l;
           var5 = 0;
-          var6 = ((ru) this).field_h;
-          var7 = ((ru) this).field_e;
+          var6 = this.field_h;
+          var7 = this.field_e;
           var8 = qn.field_l - var7;
           var9 = 0;
           if (param1 >= qn.field_a) {
@@ -559,7 +568,7 @@ final class ru extends si {
             break L4;
           } else {
             if (var6 > 0) {
-              ru.a(qn.field_d, ((ru) this).field_k, ((ru) this).field_j, var5, var4, var7, var6, var8, var9, param2);
+              ru.a(qn.field_d, this.field_k, this.field_j, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -597,10 +606,10 @@ final class ru extends si {
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
         L0: {
-          var3 = ((ru) this).field_e >> 2;
-          var4 = ((ru) this).field_h >> 2;
-          param0 = param0 + ((ru) this).field_i / 4;
-          param1 = param1 + ((ru) this).field_d / 4;
+          var3 = this.field_e >> 2;
+          var4 = this.field_h >> 2;
+          param0 = param0 + this.field_i / 4;
+          param1 = param1 + this.field_d / 4;
           if (param0 >= qn.field_j) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -614,7 +623,7 @@ final class ru extends si {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= qn.field_e) {
-            stackOut_5_0 = ((ru) this).field_e - 4;
+            stackOut_5_0 = this.field_e - 4;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -638,7 +647,7 @@ final class ru extends si {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= qn.field_f) {
-            stackOut_11_0 = ((ru) this).field_h - 4;
+            stackOut_11_0 = this.field_h - 4;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -659,7 +668,7 @@ final class ru extends si {
                 var9 += 4;
                 continue L4;
               } else {
-                var11 = var9 * ((ru) this).field_e + var10;
+                var11 = var9 * this.field_e + var10;
                 var12 = (param1 + (var9 >> 2)) * qn.field_l + (param0 + (var10 >> 2));
                 var13 = 0;
                 var14 = 0;
@@ -678,7 +687,7 @@ final class ru extends si {
                         continue L6;
                       } else {
                         L8: {
-                          var13 = ((ru) this).field_j[((ru) this).field_k[var11 + var16 * ((ru) this).field_e + var17] & 255];
+                          var13 = this.field_j[this.field_k[var11 + var16 * this.field_e + var17] & 255];
                           if (var13 != 0) {
                             break L8;
                           } else {
@@ -701,14 +710,14 @@ final class ru extends si {
     }
 
     ru(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        ((ru) this).field_g = param0;
-        ((ru) this).field_f = param1;
-        ((ru) this).field_i = param2;
-        ((ru) this).field_d = param3;
-        ((ru) this).field_e = param4;
-        ((ru) this).field_h = param5;
-        ((ru) this).field_k = param6;
-        ((ru) this).field_j = param7;
+        this.field_g = param0;
+        this.field_f = param1;
+        this.field_i = param2;
+        this.field_d = param3;
+        this.field_e = param4;
+        this.field_h = param5;
+        this.field_k = param6;
+        this.field_j = param7;
     }
 
     final boolean a(int param0, int param1, int param2, int param3) {
@@ -716,19 +725,19 @@ final class ru extends si {
         int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
         L0: {
-          param2 = param2 - (param0 + ((ru) this).field_i);
+          param2 = param2 - (param0 + this.field_i);
           if (param2 < 0) {
             break L0;
           } else {
-            if (param2 < ((ru) this).field_e) {
+            if (param2 < this.field_e) {
               L1: {
-                param3 = param3 - (param1 + ((ru) this).field_d);
+                param3 = param3 - (param1 + this.field_d);
                 if (param3 < 0) {
                   break L1;
                 } else {
-                  if (param3 < ((ru) this).field_h) {
+                  if (param3 < this.field_h) {
                     L2: {
-                      if (((ru) this).field_k[param3 * ((ru) this).field_e + param2] == 0) {
+                      if (this.field_k[param3 * this.field_e + param2] == 0) {
                         stackOut_8_0 = 0;
                         stackIn_9_0 = stackOut_8_0;
                         break L2;
@@ -754,6 +763,8 @@ final class ru extends si {
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -773,7 +784,7 @@ final class ru extends si {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var13 = param1[incrementValue$66];
                 if (var13 == 0) {
@@ -783,7 +794,7 @@ final class ru extends si {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -796,6 +807,16 @@ final class ru extends si {
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -817,7 +838,7 @@ final class ru extends si {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4++;
                     param3 = param1[incrementValue$10];
                     if (param3 == 0) {
@@ -825,7 +846,7 @@ final class ru extends si {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
@@ -835,48 +856,48 @@ final class ru extends si {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4++;
                   param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4++;
                   param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4++;
                   param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4++;
                 param3 = param1[incrementValue$18];
                 if (param3 == 0) {
@@ -884,7 +905,7 @@ final class ru extends si {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param0[incrementValue$19] = param2[param3 & 255];
                   var12++;
@@ -909,30 +930,30 @@ final class ru extends si {
         int var14 = 0;
         int var15 = 0;
         L0: {
-          var5 = ((ru) this).field_e;
-          var6 = ((ru) this).field_h;
+          var5 = this.field_e;
+          var6 = this.field_h;
           var7 = 0;
           var8 = 0;
-          var9 = ((ru) this).field_g;
-          var10 = ((ru) this).field_f;
+          var9 = this.field_g;
+          var10 = this.field_f;
           var11 = (var9 << 16) / param2;
           var12 = (var10 << 16) / param3;
-          if (((ru) this).field_i <= 0) {
+          if (this.field_i <= 0) {
             break L0;
           } else {
-            var13 = ((((ru) this).field_i << 16) + var11 - 1) / var11;
+            var13 = ((this.field_i << 16) + var11 - 1) / var11;
             param0 = param0 + var13;
-            var7 = var7 + (var13 * var11 - (((ru) this).field_i << 16));
+            var7 = var7 + (var13 * var11 - (this.field_i << 16));
             break L0;
           }
         }
         L1: {
-          if (((ru) this).field_d <= 0) {
+          if (this.field_d <= 0) {
             break L1;
           } else {
-            var13 = ((((ru) this).field_d << 16) + var12 - 1) / var12;
+            var13 = ((this.field_d << 16) + var12 - 1) / var12;
             param1 = param1 + var13;
-            var8 = var8 + (var13 * var12 - (((ru) this).field_d << 16));
+            var8 = var8 + (var13 * var12 - (this.field_d << 16));
             break L1;
           }
         }
@@ -995,17 +1016,17 @@ final class ru extends si {
             break L7;
           }
         }
-        ru.a(qn.field_d, ((ru) this).field_k, ((ru) this).field_j, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+        ru.a(qn.field_d, this.field_k, this.field_j, var7, var8, var13, var14, param2, param3, var11, var12, var5);
     }
 
     ru(int param0, int param1, int param2) {
-        ((ru) this).field_e = param0;
-        ((ru) this).field_g = param0;
-        ((ru) this).field_h = param1;
-        ((ru) this).field_f = param1;
-        ((ru) this).field_d = 0;
-        ((ru) this).field_i = 0;
-        ((ru) this).field_k = new byte[param0 * param1];
-        ((ru) this).field_j = new int[param2];
+        this.field_e = param0;
+        this.field_g = param0;
+        this.field_h = param1;
+        this.field_f = param1;
+        this.field_d = 0;
+        this.field_i = 0;
+        this.field_k = new byte[param0 * param1];
+        this.field_j = new int[param2];
     }
 }

@@ -29,14 +29,14 @@ final class tc extends ab {
 
     final int f(int param0) {
         if (param0 >= 51) {
-          if (((tc) this).field_s) {
+          if (this.field_s) {
             return 0;
           } else {
             return 100;
           }
         } else {
-          field_A = null;
-          if (((tc) this).field_s) {
+          field_A = (String) null;
+          if (this.field_s) {
             return 0;
           } else {
             return 100;
@@ -45,23 +45,19 @@ final class tc extends ab {
     }
 
     final byte[] a(boolean param0) {
-        if (!(!((tc) this).field_s)) {
+        if (!(!this.field_s)) {
             throw new RuntimeException();
         }
         if (param0) {
-            return null;
+            return (byte[]) null;
         }
-        return ((tc) this).field_v;
+        return this.field_v;
     }
 
     tc() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
         field_y = "Return to game";
         field_w = new int[8192];

@@ -21,29 +21,42 @@ final class ii extends gn {
         var3 = Kickabout.field_G;
         try {
           L0: {
-            ad.field_c = new ut[je.field_g.length];
+            L1: {
+              ad.field_c = new ut[je.field_g.length];
+              if (param0 == 65280) {
+                break L1;
+              } else {
+                field_l = -68;
+                break L1;
+              }
+            }
             var1_int = 0;
-            L1: while (true) {
+            L2: while (true) {
               if (var1_int >= je.field_g.length) {
                 break L0;
               } else {
                 ad.field_c[var1_int] = new ut(94, 84);
-                var2 = df.a(var1_int, (int) wk.a(255, 63), true, (int) wk.a(65280, 63)).b(100, 728, 20, -56, -20);
+                var2 = df.a(var1_int, (int) wk.a(255, 63), true, (int) wk.a(65280, param0 + -65217)).b(100, 728, 20, -56, -20);
                 pe.a(var2, ad.field_c[var1_int], var1_int, 40);
                 var1_int++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "ii.C(" + 65280 + ')');
+          throw nb.a((Throwable) ((Object) var1), "ii.C(" + param0 + ')');
         }
     }
 
     public static void a(int param0) {
         field_h = null;
+        if (param0 != 84) {
+            field_m = (String) null;
+            field_m = null;
+            return;
+        }
         field_m = null;
     }
 
@@ -69,11 +82,11 @@ final class ii extends gn {
           L0: {
             L1: {
               ic.field_h.a(param0, cq.e(15137), 0);
-              da.field_h.a((gn) (Object) param0, 3);
+              da.field_h.a(param0, 3);
               if (param1 >= 47) {
                 break L1;
               } else {
-                field_h = null;
+                field_h = (String) null;
                 break L1;
               }
             }
@@ -83,23 +96,23 @@ final class ii extends gn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ii.B(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -107,14 +120,14 @@ final class ii extends gn {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     final static void a(byte param0) {
         wh discarded$4 = sp.c(48, 36);
         if (param0 >= -116) {
-            field_h = null;
+            field_h = (String) null;
         }
     }
 
@@ -123,10 +136,6 @@ final class ii extends gn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "MY KIT";
         field_m = "Connection restored.";
         field_l = 0;

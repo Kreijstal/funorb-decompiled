@@ -9,8 +9,8 @@ final class ya extends za implements e {
     final native void ga();
 
     protected final void finalize() {
-        if (((ya) this).field_nativeid != 0L) {
-            pq.a(0, (e) this);
+        if (this.field_nativeid != 0L) {
+            pq.a(0, (e) (this));
         }
     }
 

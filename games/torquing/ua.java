@@ -6,9 +6,10 @@ abstract class ua {
     static java.math.BigInteger field_a;
 
     public static void a(int param0) {
+        int discarded$0 = 0;
         field_a = null;
         if (param0 != -6) {
-            int discarded$0 = ua.a(false);
+            discarded$0 = ua.a(false);
             field_b = null;
             return;
         }
@@ -29,7 +30,7 @@ abstract class ua {
         var7 = Torquing.field_u;
         try {
           L0: {
-            var1_int = 0;
+            var1_int = param0 ? 1 : 0;
             var2 = 0;
             L1: while (true) {
               if (!np.a((byte) -13)) {
@@ -56,7 +57,7 @@ abstract class ua {
                           qo.g((byte) -68);
                           break L3;
                         } else {
-                          if (var3 == 5) {
+                          if (-6 == (var3 ^ -1)) {
                             qo.g((byte) -68);
                             break L3;
                           } else {
@@ -69,7 +70,7 @@ abstract class ua {
                   if (var2 == 0) {
                     break L3;
                   } else {
-                    if (go.field_x == 2) {
+                    if (-3 == (go.field_x ^ -1)) {
                       break L3;
                     } else {
                       qo.g((byte) -68);
@@ -81,12 +82,12 @@ abstract class ua {
                   if (0 != var3) {
                     break L5;
                   } else {
-                    if (go.field_x != 2) {
+                    if (-3 != (go.field_x ^ -1)) {
                       break L5;
                     } else {
                       var4 = km.b(-1) + -dc.field_c;
                       var6 = (int)((10999L - var4) / 1000L);
-                      if (var6 <= 0) {
+                      if ((var6 ^ -1) >= -1) {
                         ka.a(5, true, (byte) -115);
                         var3 = 2;
                         break L5;
@@ -109,7 +110,7 @@ abstract class ua {
                     break L6;
                   }
                 }
-                if (e.field_f != 13) {
+                if (-14 != (e.field_f ^ -1)) {
                   continue L1;
                 } else {
                   var2 = 1;
@@ -121,16 +122,12 @@ abstract class ua {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1, "ua.B(" + false + ')');
+          throw rb.a((Throwable) ((Object) var1), "ua.B(" + param0 + ')');
         }
         return stackIn_25_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
     }
 }

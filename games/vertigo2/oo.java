@@ -21,6 +21,7 @@ final class oo {
     private static boolean field_f;
 
     private final static void c(int param0, int param1) {
+        int incrementValue$1 = 0;
         int var2 = 0;
         int var3 = 0;
         double var4 = 0.0;
@@ -39,10 +40,10 @@ final class oo {
         double var21 = 0.0;
         double var23 = 0.0;
         double var25 = 0.0;
-        var2 = 0;
-        var3 = 0;
+        var2 = param0 * 128;
+        var3 = param0;
         L0: while (true) {
-          if (var3 >= 512) {
+          if (var3 >= param1) {
             return;
           } else {
             var4 = (double)(var3 >> 3) / 64.0 + 0.0078125;
@@ -162,7 +163,7 @@ final class oo {
                     break L8;
                   }
                 }
-                int incrementValue$1 = var2;
+                incrementValue$1 = var2;
                 var2++;
                 field_c[incrementValue$1] = var20;
                 var8++;
@@ -944,15 +945,11 @@ final class oo {
         int var41 = 0;
         int[] var42 = null;
         int[] var43 = null;
-        int[] var44 = null;
-        int[] var45 = null;
         int stackIn_6_0 = 0;
         int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
         L0: {
-          var45 = field_o.a(field_d, param18, 233);
-          var44 = var45;
-          var43 = var44;
+          var43 = field_o.a(field_d, param18, 233);
           var42 = var43;
           var19 = var42;
           if (var19 == null) {
@@ -1111,7 +1108,7 @@ final class oo {
                                   if (param1 < 0) {
                                     return;
                                   } else {
-                                    oo.a(bi.field_l, var45, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                                    oo.a(bi.field_l, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                                     param5 = param5 + var27;
                                     param3 = param3 + var26;
                                     param6 = param6 + var31;
@@ -1124,7 +1121,7 @@ final class oo {
                                   }
                                 }
                               } else {
-                                oo.a(bi.field_l, var45, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                                oo.a(bi.field_l, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                                 param4 = param4 + var28;
                                 param3 = param3 + var26;
                                 param6 = param6 + var31;
@@ -1147,7 +1144,7 @@ final class oo {
                                 if (param1 < 0) {
                                   return;
                                 } else {
-                                  oo.a(bi.field_l, var45, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                                  oo.a(bi.field_l, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                                   param5 = param5 + var27;
                                   param3 = param3 + var26;
                                   param6 = param6 + var31;
@@ -1160,7 +1157,7 @@ final class oo {
                                 }
                               }
                             } else {
-                              oo.a(bi.field_l, var45, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                              oo.a(bi.field_l, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                               param4 = param4 + var28;
                               param3 = param3 + var26;
                               param6 = param6 + var31;
@@ -1233,7 +1230,7 @@ final class oo {
                                   if (param2 < 0) {
                                     return;
                                   } else {
-                                    oo.a(bi.field_l, var45, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                                    oo.a(bi.field_l, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                                     param5 = param5 + var28;
                                     param4 = param4 + var27;
                                     param6 = param6 + var31;
@@ -1246,7 +1243,7 @@ final class oo {
                                   }
                                 }
                               } else {
-                                oo.a(bi.field_l, var45, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                                oo.a(bi.field_l, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                                 param5 = param5 + var28;
                                 param3 = param3 + var26;
                                 param6 = param6 + var31;
@@ -1269,7 +1266,7 @@ final class oo {
                                 if (param2 < 0) {
                                   return;
                                 } else {
-                                  oo.a(bi.field_l, var45, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                                  oo.a(bi.field_l, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                                   param5 = param5 + var28;
                                   param4 = param4 + var27;
                                   param6 = param6 + var31;
@@ -1282,7 +1279,7 @@ final class oo {
                                 }
                               }
                             } else {
-                              oo.a(bi.field_l, var45, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                              oo.a(bi.field_l, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                               param5 = param5 + var28;
                               param3 = param3 + var26;
                               param6 = param6 + var31;
@@ -1359,7 +1356,7 @@ final class oo {
                               if (param0 < 0) {
                                 return;
                               } else {
-                                oo.a(bi.field_l, var45, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                                oo.a(bi.field_l, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                                 param4 = param4 + var26;
                                 param5 = param5 + var28;
                                 param8 = param8 + var31;
@@ -1372,7 +1369,7 @@ final class oo {
                               }
                             }
                           } else {
-                            oo.a(bi.field_l, var45, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                            oo.a(bi.field_l, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                             param3 = param3 + var27;
                             param5 = param5 + var28;
                             param8 = param8 + var31;
@@ -1395,7 +1392,7 @@ final class oo {
                               if (param0 < 0) {
                                 return;
                               } else {
-                                oo.a(bi.field_l, var45, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                                oo.a(bi.field_l, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                                 param4 = param4 + var26;
                                 param5 = param5 + var28;
                                 param8 = param8 + var31;
@@ -1408,7 +1405,7 @@ final class oo {
                               }
                             }
                           } else {
-                            oo.a(bi.field_l, var45, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                            oo.a(bi.field_l, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                             param3 = param3 + var27;
                             param5 = param5 + var28;
                             param8 = param8 + var31;
@@ -1460,7 +1457,7 @@ final class oo {
                               if (param1 < 0) {
                                 return;
                               } else {
-                                oo.a(bi.field_l, var45, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                                oo.a(bi.field_l, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                                 param4 = param4 + var27;
                                 param3 = param3 + var26;
                                 param8 = param8 + var31;
@@ -1473,7 +1470,7 @@ final class oo {
                               }
                             }
                           } else {
-                            oo.a(bi.field_l, var45, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                            oo.a(bi.field_l, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                             param4 = param4 + var27;
                             param5 = param5 + var28;
                             param8 = param8 + var31;
@@ -1496,7 +1493,7 @@ final class oo {
                               if (param1 < 0) {
                                 return;
                               } else {
-                                oo.a(bi.field_l, var45, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                                oo.a(bi.field_l, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                                 param4 = param4 + var27;
                                 param3 = param3 + var26;
                                 param8 = param8 + var31;
@@ -1509,7 +1506,7 @@ final class oo {
                               }
                             }
                           } else {
-                            oo.a(bi.field_l, var45, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                            oo.a(bi.field_l, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                             param4 = param4 + var27;
                             param5 = param5 + var28;
                             param8 = param8 + var31;
@@ -1584,7 +1581,7 @@ final class oo {
                               if (param2 < 0) {
                                 return;
                               } else {
-                                oo.a(bi.field_l, var45, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                                oo.a(bi.field_l, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                                 param3 = param3 + var28;
                                 param4 = param4 + var27;
                                 param7 = param7 + var31;
@@ -1597,7 +1594,7 @@ final class oo {
                               }
                             }
                           } else {
-                            oo.a(bi.field_l, var45, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                            oo.a(bi.field_l, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                             param5 = param5 + var26;
                             param4 = param4 + var27;
                             param7 = param7 + var31;
@@ -1620,7 +1617,7 @@ final class oo {
                               if (param2 < 0) {
                                 return;
                               } else {
-                                oo.a(bi.field_l, var45, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                                oo.a(bi.field_l, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                                 param3 = param3 + var28;
                                 param4 = param4 + var27;
                                 param7 = param7 + var31;
@@ -1633,7 +1630,7 @@ final class oo {
                               }
                             }
                           } else {
-                            oo.a(bi.field_l, var45, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                            oo.a(bi.field_l, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                             param5 = param5 + var26;
                             param4 = param4 + var27;
                             param7 = param7 + var31;
@@ -1707,7 +1704,7 @@ final class oo {
                               if (param0 < 0) {
                                 return;
                               } else {
-                                oo.a(bi.field_l, var45, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                                oo.a(bi.field_l, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                                 param3 = param3 + var26;
                                 param5 = param5 + var28;
                                 param7 = param7 + var31;
@@ -1720,7 +1717,7 @@ final class oo {
                               }
                             }
                           } else {
-                            oo.a(bi.field_l, var45, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                            oo.a(bi.field_l, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                             param3 = param3 + var26;
                             param4 = param4 + var27;
                             param7 = param7 + var31;
@@ -1743,7 +1740,7 @@ final class oo {
                             if (param0 < 0) {
                               return;
                             } else {
-                              oo.a(bi.field_l, var45, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                              oo.a(bi.field_l, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                               param3 = param3 + var26;
                               param5 = param5 + var28;
                               param7 = param7 + var31;
@@ -1756,7 +1753,7 @@ final class oo {
                             }
                           }
                         } else {
-                          oo.a(bi.field_l, var45, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                          oo.a(bi.field_l, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                           param3 = param3 + var26;
                           param4 = param4 + var27;
                           param7 = param7 + var31;
@@ -2457,6 +2454,21 @@ final class oo {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -2499,7 +2511,7 @@ final class oo {
                         break L2;
                       } else {
                         var8 = param0[param1];
-                        int incrementValue$15 = param1;
+                        incrementValue$15 = param1;
                         param1++;
                         param0[incrementValue$15] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                         continue L4;
@@ -2507,19 +2519,19 @@ final class oo {
                     }
                   } else {
                     var8 = param0[param1];
-                    int incrementValue$16 = param1;
+                    incrementValue$16 = param1;
                     param1++;
                     param0[incrementValue$16] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                     var8 = param0[param1];
-                    int incrementValue$17 = param1;
+                    incrementValue$17 = param1;
                     param1++;
                     param0[incrementValue$17] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                     var8 = param0[param1];
-                    int incrementValue$18 = param1;
+                    incrementValue$18 = param1;
                     param1++;
                     param0[incrementValue$18] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                     var8 = param0[param1];
-                    int incrementValue$19 = param1;
+                    incrementValue$19 = param1;
                     param1++;
                     param0[incrementValue$19] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                     continue L3;
@@ -2535,23 +2547,23 @@ final class oo {
                       if (param3 < 0) {
                         break L2;
                       } else {
-                        int incrementValue$20 = param1;
+                        incrementValue$20 = param1;
                         param1++;
                         param0[incrementValue$20] = param0[param1];
                         continue L6;
                       }
                     }
                   } else {
-                    int incrementValue$21 = param1;
+                    incrementValue$21 = param1;
                     param1++;
                     param0[incrementValue$21] = param0[param1];
-                    int incrementValue$22 = param1;
+                    incrementValue$22 = param1;
                     param1++;
                     param0[incrementValue$22] = param0[param1];
-                    int incrementValue$23 = param1;
+                    incrementValue$23 = param1;
                     param1++;
                     param0[incrementValue$23] = param0[param1];
-                    int incrementValue$24 = param1;
+                    incrementValue$24 = param1;
                     param1++;
                     param0[incrementValue$24] = param0[param1];
                     continue L5;
@@ -2570,23 +2582,23 @@ final class oo {
                   if (param3 < 0) {
                     return;
                   } else {
-                    int incrementValue$25 = param1;
+                    incrementValue$25 = param1;
                     param1++;
                     param0[incrementValue$25] = param2;
                     continue L8;
                   }
                 }
               } else {
-                int incrementValue$26 = param1;
+                incrementValue$26 = param1;
                 param1++;
                 param0[incrementValue$26] = param2;
-                int incrementValue$27 = param1;
+                incrementValue$27 = param1;
                 param1++;
                 param0[incrementValue$27] = param2;
-                int incrementValue$28 = param1;
+                incrementValue$28 = param1;
                 param1++;
                 param0[incrementValue$28] = param2;
-                int incrementValue$29 = param1;
+                incrementValue$29 = param1;
                 param1++;
                 param0[incrementValue$29] = param2;
                 continue L7;
@@ -2599,6 +2611,18 @@ final class oo {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -2636,7 +2660,7 @@ final class oo {
                   param6 = param6 + param7;
                   param2 = ((param2 & 16711935) * var9 >> 8 & 16711935) + ((param2 & 65280) * var9 >> 8 & 65280);
                   var10 = param0[param1];
-                  int incrementValue$12 = param1;
+                  incrementValue$12 = param1;
                   param1++;
                   param0[incrementValue$12] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
                   param3--;
@@ -2648,7 +2672,7 @@ final class oo {
                 }
               } else {
                 L4: while (true) {
-                  int incrementValue$13 = param1;
+                  incrementValue$13 = param1;
                   param1++;
                   param0[incrementValue$13] = field_c[param6 >> 8];
                   param6 = param6 + param7;
@@ -2678,19 +2702,19 @@ final class oo {
                       param6 = param6 + param7;
                       param2 = ((param2 & 16711935) * var9 >> 8 & 16711935) + ((param2 & 65280) * var9 >> 8 & 65280);
                       var10 = param0[param1];
-                      int incrementValue$14 = param1;
+                      incrementValue$14 = param1;
                       param1++;
                       param0[incrementValue$14] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
                       var10 = param0[param1];
-                      int incrementValue$15 = param1;
+                      incrementValue$15 = param1;
                       param1++;
                       param0[incrementValue$15] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
                       var10 = param0[param1];
-                      int incrementValue$16 = param1;
+                      incrementValue$16 = param1;
                       param1++;
                       param0[incrementValue$16] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
                       var10 = param0[param1];
-                      int incrementValue$17 = param1;
+                      incrementValue$17 = param1;
                       param1++;
                       param0[incrementValue$17] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
                       param3--;
@@ -2710,7 +2734,7 @@ final class oo {
                   param2 = ((param2 & 16711935) * var9 >> 8 & 16711935) + ((param2 & 65280) * var9 >> 8 & 65280);
                   L8: while (true) {
                     var10 = param0[param1];
-                    int incrementValue$18 = param1;
+                    incrementValue$18 = param1;
                     param1++;
                     param0[incrementValue$18] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
                     param3--;
@@ -2729,16 +2753,16 @@ final class oo {
                     L10: while (true) {
                       param2 = field_c[param6 >> 8];
                       param6 = param6 + param7;
-                      int incrementValue$19 = param1;
+                      incrementValue$19 = param1;
                       param1++;
                       param0[incrementValue$19] = param2;
-                      int incrementValue$20 = param1;
+                      incrementValue$20 = param1;
                       param1++;
                       param0[incrementValue$20] = param2;
-                      int incrementValue$21 = param1;
+                      incrementValue$21 = param1;
                       param1++;
                       param0[incrementValue$21] = param2;
-                      int incrementValue$22 = param1;
+                      incrementValue$22 = param1;
                       param1++;
                       param0[incrementValue$22] = param2;
                       param3--;
@@ -2756,7 +2780,7 @@ final class oo {
                 } else {
                   param2 = field_c[param6 >> 8];
                   L11: while (true) {
-                    int incrementValue$23 = param1;
+                    incrementValue$23 = param1;
                     param1++;
                     param0[incrementValue$23] = param2;
                     param3--;
@@ -2787,6 +2811,24 @@ final class oo {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
+        int incrementValue$30 = 0;
+        int incrementValue$31 = 0;
+        int incrementValue$32 = 0;
+        int incrementValue$33 = 0;
+        int incrementValue$34 = 0;
+        int incrementValue$35 = 0;
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
@@ -3014,42 +3056,42 @@ final class oo {
                     L19: while (true) {
                       L20: {
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
-                        int incrementValue$18 = param4;
+                        incrementValue$18 = param4;
                         param4++;
                         param0[incrementValue$18] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
-                        int incrementValue$19 = param4;
+                        incrementValue$19 = param4;
                         param4++;
                         param0[incrementValue$19] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
-                        int incrementValue$20 = param4;
+                        incrementValue$20 = param4;
                         param4++;
                         param0[incrementValue$20] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
-                        int incrementValue$21 = param4;
+                        incrementValue$21 = param4;
                         param4++;
                         param0[incrementValue$21] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
-                        int incrementValue$22 = param4;
+                        incrementValue$22 = param4;
                         param4++;
                         param0[incrementValue$22] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
-                        int incrementValue$23 = param4;
+                        incrementValue$23 = param4;
                         param4++;
                         param0[incrementValue$23] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
-                        int incrementValue$24 = param4;
+                        incrementValue$24 = param4;
                         param4++;
                         param0[incrementValue$24] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
-                        int incrementValue$25 = param4;
+                        incrementValue$25 = param4;
                         param4++;
                         param0[incrementValue$25] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
@@ -3088,7 +3130,7 @@ final class oo {
                 } else {
                   L21: while (true) {
                     param3 = param1[(param2 & 16256) + (param2 >>> 25)];
-                    int incrementValue$26 = param4;
+                    incrementValue$26 = param4;
                     param4++;
                     param0[incrementValue$26] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                     param2 = param2 + var16;
@@ -3294,42 +3336,42 @@ final class oo {
                     L38: while (true) {
                       L39: {
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
-                        int incrementValue$27 = param4;
+                        incrementValue$27 = param4;
                         param4++;
                         param0[incrementValue$27] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
-                        int incrementValue$28 = param4;
+                        incrementValue$28 = param4;
                         param4++;
                         param0[incrementValue$28] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
-                        int incrementValue$29 = param4;
+                        incrementValue$29 = param4;
                         param4++;
                         param0[incrementValue$29] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
-                        int incrementValue$30 = param4;
+                        incrementValue$30 = param4;
                         param4++;
                         param0[incrementValue$30] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
-                        int incrementValue$31 = param4;
+                        incrementValue$31 = param4;
                         param4++;
                         param0[incrementValue$31] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
-                        int incrementValue$32 = param4;
+                        incrementValue$32 = param4;
                         param4++;
                         param0[incrementValue$32] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
-                        int incrementValue$33 = param4;
+                        incrementValue$33 = param4;
                         param4++;
                         param0[incrementValue$33] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
-                        int incrementValue$34 = param4;
+                        incrementValue$34 = param4;
                         param4++;
                         param0[incrementValue$34] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
@@ -3368,7 +3410,7 @@ final class oo {
                 } else {
                   L40: while (true) {
                     param3 = param1[(param2 & 4032) + (param2 >>> 26)];
-                    int incrementValue$35 = param4;
+                    incrementValue$35 = param4;
                     param4++;
                     param0[incrementValue$35] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                     param2 = param2 + var16;
@@ -3390,10 +3432,6 @@ final class oo {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_g = false;
         field_m = false;

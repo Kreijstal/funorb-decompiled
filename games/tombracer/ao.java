@@ -15,16 +15,16 @@ final class ao extends dg {
     final void a(iq param0, int param1, int param2, int param3, byte param4) {
         int var6_int = 0;
         int var7 = 0;
-        if (((ao) this).field_h == null) {
+        if (this.field_h == null) {
             return;
         }
         try {
-            var6_int = ((ao) this).field_h.c(-53) / 2;
+            var6_int = this.field_h.c(-53) / 2;
             int var8 = -77 / ((param4 - -38) / 47);
-            var7 = ((ao) this).field_h.a((byte) 55) / 2;
+            var7 = this.field_h.a((byte) 55) / 2;
             oq.a(-var6_int + param2, -var7 + param1, param3, 160, var6_int + param2, 16777215, var7 + param1, true);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ao.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "ao.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class ao extends dg {
         try {
             super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ao.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "ao.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -46,10 +46,6 @@ final class ao extends dg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Add <%0> to friend list";
     }
 }

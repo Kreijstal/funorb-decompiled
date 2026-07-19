@@ -18,13 +18,13 @@ final class al {
             if (var1 > 0) {
               if (var1 == 1) {
                 rk.field_ab = dh.field_g;
-                rk.field_ab = bg.a((byte) 92, new CharSequence[3]);
+                rk.field_ab = bg.a((byte) 92, new CharSequence[]{(CharSequence) ((Object) rk.field_ab), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fk.field_l)});
                 pc.field_a.s(-93);
                 e.a((byte) 112);
                 return;
               } else {
-                rk.field_ab = re.a(nc.field_a, new String[1], (byte) -50);
-                rk.field_ab = bg.a((byte) 92, new CharSequence[3]);
+                rk.field_ab = re.a(nc.field_a, new String[]{Integer.toString(var1)}, (byte) -50);
+                rk.field_ab = bg.a((byte) 92, new CharSequence[]{(CharSequence) ((Object) rk.field_ab), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fk.field_l)});
                 pc.field_a.s(-93);
                 e.a((byte) 112);
                 return;
@@ -39,20 +39,20 @@ final class al {
             return;
           }
         } else {
-          field_b = null;
+          field_b = (byte[][]) null;
           rk.field_ab = null;
           if (!ei.field_e) {
             var1 = qb.field_b;
             if (var1 > 0) {
               if (var1 == 1) {
                 rk.field_ab = dh.field_g;
-                rk.field_ab = bg.a((byte) 92, new CharSequence[3]);
+                rk.field_ab = bg.a((byte) 92, new CharSequence[]{(CharSequence) ((Object) rk.field_ab), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fk.field_l)});
                 pc.field_a.s(-93);
                 e.a((byte) 112);
                 return;
               } else {
-                rk.field_ab = re.a(nc.field_a, new String[1], (byte) -50);
-                rk.field_ab = bg.a((byte) 92, new CharSequence[3]);
+                rk.field_ab = re.a(nc.field_a, new String[]{Integer.toString(var1)}, (byte) -50);
+                rk.field_ab = bg.a((byte) 92, new CharSequence[]{(CharSequence) ((Object) rk.field_ab), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fk.field_l)});
                 pc.field_a.s(-93);
                 e.a((byte) 112);
                 return;
@@ -70,15 +70,17 @@ final class al {
     }
 
     public static void a(byte param0) {
+        if (param0 > -22) {
+            field_c = (String) null;
+            field_c = null;
+            field_b = (byte[][]) null;
+            return;
+        }
         field_c = null;
-        field_b = null;
+        field_b = (byte[][]) null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new byte[1000][];
     }
 }

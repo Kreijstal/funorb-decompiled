@@ -10,6 +10,7 @@ final class jk {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
+        String var4 = null;
         mh var5 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = Torquing.field_u;
@@ -18,7 +19,7 @@ final class jk {
             L1: {
               hj.field_c.a(0, 0);
               if (fh.field_r >= 35) {
-                if (fh.field_r < 70) {
+                if ((fh.field_r ^ -1) > -71) {
                   fq.field_F.a(false, hb.field_s, ra.field_e);
                   of.field_l.d(hb.field_s, ra.field_e);
                   var1_int = la.field_j.field_s * vc.field_d / 100;
@@ -58,24 +59,36 @@ final class jk {
                 break L1;
               }
             }
-            ph.c(0, 0, 640, 480, 16777215);
+            L4: {
+              ph.c(0, 0, 640, 480, 16777215);
+              if (param0 < -32) {
+                break L4;
+              } else {
+                var4 = (String) null;
+                jk.a((String) null, (byte) -13, true);
+                break L4;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1, "jk.B(" + -118 + ')');
+          throw rb.a((Throwable) ((Object) var1), "jk.B(" + param0 + ')');
         }
     }
 
     final static void a(String param0, byte param1, boolean param2) {
         try {
+            if (param1 != -79) {
+                jk.a(81);
+            }
             nk.field_t = param2;
             aq.field_c = true;
             gn.field_m = new mn(dc.field_a, pe.field_E, param0, ff.field_a, nk.field_t);
-            dc.field_a.a((gm) (Object) gn.field_m, (byte) 112);
+            dc.field_a.a(gn.field_m, (byte) 112);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "jk.A(" + (param0 != null ? "{...}" : "null") + ',' + -79 + ',' + param2 + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "jk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -87,10 +100,6 @@ final class jk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 500;
         field_b = "Unable to connect to the data server. Please check any firewall you are using.";
     }

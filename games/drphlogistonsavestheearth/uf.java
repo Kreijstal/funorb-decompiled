@@ -20,7 +20,14 @@ final class uf {
         field_j = null;
         field_c = null;
         field_d = null;
-        field_a = null;
+        if (param0 != -60) {
+          field_a = (ia) null;
+          field_a = null;
+          return;
+        } else {
+          field_a = null;
+          return;
+        }
     }
 
     private uf() throws Throwable {
@@ -28,10 +35,6 @@ final class uf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Level ";
         field_k = 0;
         field_f = new boolean[]{true, false, false, false, false, true, true, false, false, false, true, false, false, false, false, false, true, false, false, false, false, false, false, true, false, false, true, true, true, true};

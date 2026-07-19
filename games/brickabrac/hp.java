@@ -11,21 +11,21 @@ final class hp extends nm {
     static int field_m;
 
     final int b(int param0, int param1) {
-        if (!(param0 <= ((hp) this).field_j)) {
-            throw new RuntimeException("State in future " + ((hp) this).field_j + " " + param0);
+        if (!(param0 <= this.field_j)) {
+            throw new RuntimeException("State in future " + this.field_j + " " + param0);
         }
-        if (!(param0 >= -((hp) this).field_n + ((hp) this).field_j + param1)) {
-            throw new RuntimeException("State erased " + param0 + ". Lastest entry: " + ((hp) this).field_j);
+        if (!(param0 >= -this.field_n + this.field_j + param1)) {
+            throw new RuntimeException("State erased " + param0 + ". Lastest entry: " + this.field_j);
         }
-        return ((hp) this).field_o[param0 % ((hp) this).field_n];
+        return this.field_o[param0 % this.field_n];
     }
 
     final void a(int param0, int param1) {
-        int fieldTemp$0 = ((hp) this).field_j + 1;
-        ((hp) this).field_j = ((hp) this).field_j + 1;
-        ((hp) this).field_o[fieldTemp$0 % ((hp) this).field_n] = param1;
+        int fieldTemp$0 = this.field_j + 1;
+        this.field_j = this.field_j + 1;
+        this.field_o[fieldTemp$0 % this.field_n] = param1;
         if (param0 != -7255) {
-            ((hp) this).a(-25, 104);
+            this.a(-25, 104);
         }
     }
 
@@ -33,19 +33,18 @@ final class hp extends nm {
         field_i = null;
         field_l = null;
         field_k = null;
+        if (param0 != 67108864) {
+            field_l = (jp[]) null;
+        }
     }
 
     hp(int param0) {
-        ((hp) this).field_j = -1;
-        ((hp) this).field_n = param0;
-        ((hp) this).field_o = new int[((hp) this).field_n];
+        this.field_j = -1;
+        this.field_n = param0;
+        this.field_o = new int[this.field_n];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "Waiting for extra data";
         field_m = field_m | 4;
         field_m = field_m | 8;

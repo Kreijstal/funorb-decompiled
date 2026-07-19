@@ -10,15 +10,18 @@ final class mr extends kj {
     mr(gj param0, ns param1, int param2, int param3) {
         super(param0, param2, param3);
         try {
-            ((mr) this).field_i = param1;
-            ((mr) this).field_g = -25;
+            this.field_i = param1;
+            this.field_g = -25;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "mr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "mr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void c(int param0) {
         field_f = null;
+        if (param0 != 0) {
+            return;
+        }
         field_h = null;
     }
 
@@ -38,17 +41,17 @@ final class mr extends kj {
         int stackOut_7_0 = 0;
         L0: {
           var8 = BachelorFridge.field_y;
-          if (((mr) this).field_g < 0) {
-            stackOut_4_0 = ((mr) this).field_g * -20;
+          if ((this.field_g ^ -1) > -1) {
+            stackOut_4_0 = this.field_g * -20;
             stackIn_5_0 = stackOut_4_0;
             break L0;
           } else {
-            if (((mr) this).field_g <= 30) {
+            if (this.field_g <= 30) {
               stackOut_3_0 = 0;
               stackIn_5_0 = stackOut_3_0;
               break L0;
             } else {
-              stackOut_2_0 = 16 * ((mr) this).field_g + -480;
+              stackOut_2_0 = 16 * this.field_g + -480;
               stackIn_5_0 = stackOut_2_0;
               break L0;
             }
@@ -56,12 +59,12 @@ final class mr extends kj {
         }
         L1: {
           var4 = stackIn_5_0;
-          if (((mr) this).field_g < 0) {
+          if (-1 < (this.field_g ^ -1)) {
             stackOut_9_0 = 0;
             stackIn_10_0 = stackOut_9_0;
             break L1;
           } else {
-            if (((mr) this).field_g >= 15) {
+            if ((this.field_g ^ -1) <= -16) {
               stackOut_8_0 = 2;
               stackIn_10_0 = stackOut_8_0;
               break L1;
@@ -77,9 +80,9 @@ final class mr extends kj {
         var7 = 64 + (param0 - var4) + -var6.field_b;
         var6.a(param2, var7);
         if (!param1) {
-          field_f = null;
+          field_f = (kv) null;
           L2: while (true) {
-            if (var7 > 0) {
+            if ((var7 ^ -1) < -1) {
               var7 -= 64;
               vi.field_f.a(param2, var7);
               continue L2;
@@ -89,7 +92,7 @@ final class mr extends kj {
           }
         } else {
           L3: while (true) {
-            if (var7 > 0) {
+            if ((var7 ^ -1) < -1) {
               var7 -= 64;
               vi.field_f.a(param2, var7);
               continue L3;
@@ -101,14 +104,14 @@ final class mr extends kj {
     }
 
     final boolean b(int param0) {
-        int fieldTemp$2 = ((mr) this).field_g + 1;
-        ((mr) this).field_g = ((mr) this).field_g + 1;
+        int fieldTemp$2 = this.field_g + 1;
+        this.field_g = this.field_g + 1;
         if (fieldTemp$2 < 65) {
           L0: {
-            if (((mr) this).field_g == 35) {
+            if (-36 == (this.field_g ^ -1)) {
               wf.a(44, (byte) 20);
-              ((mr) this).field_e.a(((mr) this).field_c, false, ((mr) this).field_d).field_j = 0;
-              ((mr) this).field_i.a(false, ((mr) this).field_e.field_h);
+              this.field_e.a(this.field_c, false, this.field_d).field_j = 0;
+              this.field_i.a(false, this.field_e.field_h);
               break L0;
             } else {
               break L0;
@@ -125,10 +128,6 @@ final class mr extends kj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Checking";
     }
 }

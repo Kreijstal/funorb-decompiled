@@ -12,12 +12,22 @@ final class hb extends wl {
     int field_j;
 
     public static void a(int param0) {
-        field_k = null;
-        field_i = null;
-        field_o = null;
+        if (param0 != 24944) {
+          field_n = -61;
+          field_k = null;
+          field_i = null;
+          field_o = null;
+          return;
+        } else {
+          field_k = null;
+          field_i = null;
+          field_o = null;
+          return;
+        }
     }
 
     final static ui a(int param0, int param1, int param2, int param3, int param4, vh param5) {
+        java.awt.Component discarded$2 = null;
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         ui var7 = null;
@@ -42,16 +52,16 @@ final class hb extends wl {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var8 = da.a(param3, param1, 0, param5, param2, 0);
+            var8 = da.a(param3, param1, param0, param5, param2, param4);
             var6 = var8;
             if (var8 != null) {
               var7 = new ui();
               var7.field_c = var8;
-              java.awt.Component discarded$2 = var7.field_c.add((java.awt.Component) (Object) var7);
+              discarded$2 = var7.field_c.add((java.awt.Component) ((Object) var7));
               var7.setBounds(0, 0, param1, param3);
-              var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
+              var7.addFocusListener(var7);
               var7.requestFocus();
-              stackOut_3_0 = (ui) var7;
+              stackOut_3_0 = (ui) (var7);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -62,23 +72,23 @@ final class hb extends wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var6_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var6_ref;
-            stackOut_5_1 = new StringBuilder().append("hb.A(").append(0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(0).append(',');
+            stackOut_5_0 = (RuntimeException) (var6_ref);
+            stackOut_5_1 = new StringBuilder().append("hb.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param5 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -86,26 +96,22 @@ final class hb extends wl {
               break L1;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
         return stackIn_4_0;
     }
 
     hb(long param0, int param1, byte[] param2) {
         try {
-            ((hb) this).field_p = param0;
-            ((hb) this).field_l = param2;
-            ((hb) this).field_j = param1;
+            this.field_p = param0;
+            this.field_l = param2;
+            this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "hb.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "hb.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = 0;
         field_m = 20;
         field_i = "Create your own free Jagex account";

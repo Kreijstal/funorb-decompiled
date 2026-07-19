@@ -20,8 +20,8 @@ abstract class al extends ck implements gl {
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
         if (param0 <= -8) {
-          if (((al) this).field_i.field_h != null) {
-            if (((al) this).field_i.field_h.length() == 0) {
+          if (this.field_i.field_h != null) {
+            if (this.field_i.field_h.length() == 0) {
               return true;
             } else {
               return false;
@@ -33,11 +33,11 @@ abstract class al extends ck implements gl {
           }
         } else {
           field_h = 36L;
-          if (((al) this).field_i.field_h == null) {
+          if (this.field_i.field_h == null) {
             return true;
           } else {
             L0: {
-              if (((al) this).field_i.field_h.length() != 0) {
+              if (this.field_i.field_h.length() != 0) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
@@ -54,13 +54,14 @@ abstract class al extends ck implements gl {
 
     public final void a(byte param0, ba param1) {
         try {
-            int var3_int = 79 % (param0 / 33);
+            int var3_int = 79 % ((param0 - 0) / 33);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "al.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "al.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void a(ba param0, byte param1) {
+        vf discarded$2 = null;
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -82,11 +83,11 @@ abstract class al extends ck implements gl {
           L0: {
             L1: {
               if (param1 <= 81) {
-                vf discarded$2 = ((al) this).b(-77);
-                ((al) this).d((byte) 92);
+                discarded$2 = this.b(-77);
+                this.d((byte) 92);
                 break L1;
               } else {
-                ((al) this).d((byte) 92);
+                this.d((byte) 92);
                 break L1;
               }
             }
@@ -96,23 +97,23 @@ abstract class al extends ck implements gl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("al.D(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -120,7 +121,7 @@ abstract class al extends ck implements gl {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
     }
 
@@ -129,9 +130,9 @@ abstract class al extends ck implements gl {
     final vf b(int param0) {
         if (param0 != -1) {
           field_h = 47L;
-          return ((al) this).b(((al) this).field_i.field_h, (byte) 54);
+          return this.b(this.field_i.field_h, (byte) 54);
         } else {
-          return ((al) this).b(((al) this).field_i.field_h, (byte) 54);
+          return this.b(this.field_i.field_h, (byte) 54);
         }
     }
 
@@ -139,26 +140,23 @@ abstract class al extends ck implements gl {
 
     al(ba param0) {
         try {
-            ((al) this).field_i = param0;
+            this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "al.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "al.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final String a(int param0) {
+        vf discarded$2 = null;
         if (param0 != 8335) {
-          vf discarded$2 = ((al) this).b(103);
-          return ((al) this).a(((al) this).field_i.field_h, (byte) -114);
+          discarded$2 = this.b(103);
+          return this.a(this.field_i.field_h, (byte) -114);
         } else {
-          return ((al) this).a(((al) this).field_i.field_h, (byte) -114);
+          return this.a(this.field_i.field_h, (byte) -114);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "If you do nothing the game will revert to normal view in <%0> second.";
     }
 }

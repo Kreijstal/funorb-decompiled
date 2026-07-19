@@ -16,15 +16,21 @@ final class dl {
     }
 
     final static void a(int param0) {
-        fb.field_l = false;
-        int discarded$0 = eh.field_d.c((byte) 34);
+        int discarded$4 = 0;
+        int discarded$5 = 0;
+        if (param0 != 11560) {
+          field_b = false;
+          fb.field_l = false;
+          discarded$4 = eh.field_d.c((byte) 34);
+          return;
+        } else {
+          fb.field_l = false;
+          discarded$5 = eh.field_d.c((byte) 34);
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = true;
         field_c = true;
     }

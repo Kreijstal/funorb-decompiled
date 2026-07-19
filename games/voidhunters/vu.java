@@ -22,10 +22,9 @@ final class vu extends llb {
         int var9 = 0;
         int stackIn_26_0 = 0;
         int stackOut_24_0 = 0;
-        int stackOut_25_0 = 0;
         L0: {
-          var5 = -14 + vkb.a(35, param4 ^ param4 >> 31 | param2 >> 31 ^ param2 | param0 ^ param0 >> 31);
-          if (var5 > 0) {
+          var5 = -14 + vkb.a(param1 + 35, param4 ^ param4 >> 968220511 | param2 >> -58486145 ^ param2 | param0 ^ param0 >> 721639711);
+          if (-1 > (var5 ^ -1)) {
             param2 = param2 >> var5;
             param4 = param4 >> var5;
             param0 = param0 >> var5;
@@ -42,43 +41,38 @@ final class vu extends llb {
             return -1;
           } else {
             var7 = lw.a((byte) -73, var6);
-            var8 = (-param2 + var7 << 8) / param4;
-            var9 = (-param2 + -var7 << 8) / param4;
-            if (var8 >= 0) {
-              if (var8 <= 256) {
-                L1: {
-                  if (0 > var9) {
-                    stackOut_24_0 = var8;
-                    stackIn_26_0 = stackOut_24_0;
-                    break L1;
+            var8 = (-param2 + var7 << param3) / param4;
+            var9 = (-param2 + -var7 << param3) / param4;
+            if (var8 >= param1) {
+              if (1 << param3 >= var8) {
+                if (0 <= var9) {
+                  if (var8 <= var9) {
+                    return var8;
                   } else {
-                    if (~var8 < ~var9) {
-                      stackOut_25_0 = var9;
-                      stackIn_26_0 = stackOut_25_0;
-                      break L1;
-                    } else {
-                      return var8;
-                    }
-                  }
-                }
-                return stackIn_26_0;
-              } else {
-                if (var9 >= 0) {
-                  if (var9 <= 256) {
                     return var9;
-                  } else {
+                  }
+                } else {
+                  stackOut_24_0 = var8;
+                  stackIn_26_0 = stackOut_24_0;
+                  return stackIn_26_0;
+                }
+              } else {
+                if (-1 >= (var9 ^ -1)) {
+                  if (1 << param3 < var9) {
                     return -1;
+                  } else {
+                    return var9;
                   }
                 } else {
                   return -1;
                 }
               }
             } else {
-              if (var9 >= 0) {
-                if (var9 <= 256) {
-                  return var9;
-                } else {
+              if (-1 >= (var9 ^ -1)) {
+                if (1 << param3 < var9) {
                   return -1;
+                } else {
+                  return var9;
                 }
               } else {
                 return -1;
@@ -89,7 +83,11 @@ final class vu extends llb {
     }
 
     public static void e(byte param0) {
+        int discarded$0 = 0;
         field_zb = null;
+        if (param0 != 113) {
+            discarded$0 = vu.b(30, 61, 5, 19, 62);
+        }
     }
 
     vu() {
@@ -97,10 +95,6 @@ final class vu extends llb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Db = 36;
     }
 }

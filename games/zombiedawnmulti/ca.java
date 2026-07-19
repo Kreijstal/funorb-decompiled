@@ -7,19 +7,21 @@ final class ca extends fm {
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9 = 0;
         int var10 = 0;
+        int incrementValue$0 = 0;
         int var11 = 0;
         int var13 = 0;
+        int incrementValue$1 = 0;
         int var12 = 0;
         for (var9 = -param6; var9 < 0; var9++) {
             for (var10 = -param5; var10 < 0; var10++) {
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
                 var11 = 255 & param1[incrementValue$0];
                 if (var11 != 0) {
                     var12 = ((param2 & 16711935) * var11 & -16711936) + ((param2 & 65280) * var11 & 16711680) >> 8;
                     var11 = 256 - var11;
                     var13 = param0[param4];
-                    int incrementValue$1 = param4;
+                    incrementValue$1 = param4;
                     param4++;
                     param0[incrementValue$1] = (((var13 & 16711935) * var11 & -16711936) + ((var13 & 65280) * var11 & 16711680) >> 8) + var12;
                 } else {
@@ -34,19 +36,21 @@ final class ca extends fm {
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
+        int incrementValue$0 = 0;
         int var12 = 0;
         int var14 = 0;
+        int incrementValue$1 = 0;
         int var13 = 0;
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = -param5; var11 < 0; var11++) {
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
                 var12 = (255 & param1[incrementValue$0]) * param9 >> 8;
                 if (var12 != 0) {
                     var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
                     var12 = 256 - var12;
                     var14 = param0[param4];
-                    int incrementValue$1 = param4;
+                    incrementValue$1 = param4;
                     param4++;
                     param0[incrementValue$1] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
                 } else {
@@ -120,10 +124,10 @@ final class ca extends fm {
             if (param4 > 0) {
               L5: {
                 if (!param7) {
-                  ca.a(oo.field_i, ((ca) this).field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+                  ca.a(oo.field_i, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
                   break L5;
                 } else {
-                  ef.a(oo.field_i, ((ca) this).field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+                  ef.a(oo.field_i, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
                   break L5;
                 }
               }
@@ -197,10 +201,10 @@ final class ca extends fm {
             if (param4 > 0) {
               L5: {
                 if (!param6) {
-                  ca.a(oo.field_i, ((ca) this).field_O[param0], param5, var11, var8, param3, param4, var9, var10);
+                  ca.a(oo.field_i, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
                   break L5;
                 } else {
-                  ef.a(oo.field_i, ((ca) this).field_O[param0], param5, var11, var8, param3, param4, var9, var10);
+                  ef.a(oo.field_i, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
                   break L5;
                 }
               }
@@ -214,11 +218,11 @@ final class ca extends fm {
 
     private final static byte[][] a(int[] param0, byte[][] param1) {
         int var2_int = 0;
-        int var3 = 0;
         int var4_int = 0;
         byte[] var4 = null;
         int var5 = 0;
         int var6 = 0;
+        int var3 = 0;
         for (var2_int = 0; var2_int < param0.length; var2_int++) {
             var3 = param0[var2_int];
             var4_int = (var3 >> 15 & 510) + (var3 & 255);
@@ -239,7 +243,7 @@ final class ca extends fm {
 
     ca(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
         super(param0, param1, param2, param3, param4);
-        ((ca) this).field_O = new byte[256][];
-        ((ca) this).field_O = ca.a(param5, param6);
+        this.field_O = new byte[256][];
+        this.field_O = ca.a(param5, param6);
     }
 }

@@ -6,7 +6,7 @@ final class vma extends pv {
 
     public static void b(int param0) {
         field_j = null;
-        int var1 = 0;
+        int var1 = 11 % ((param0 - 15) / 60);
     }
 
     final static void a(byte param0, int param1) {
@@ -15,7 +15,7 @@ final class vma extends pv {
         L0: {
           var3 = BachelorFridge.field_y;
           jfa.field_q[param1] = new qc(param1);
-          var2 = 0;
+          var2 = 27 % ((-30 - param0) / 46);
           if (param1 == 0) {
             jfa.field_q[param1].a((byte) -128, fw.field_h[0]);
             jfa.field_q[param1].a((byte) -124, fw.field_h[1]);
@@ -79,7 +79,7 @@ final class vma extends pv {
               jfa.field_q[param1].a((byte) -114, fw.field_h[47]);
               break L0;
             } else {
-              if (param1 == 4) {
+              if (-5 == (param1 ^ -1)) {
                 jfa.field_q[param1].a((byte) -101, fw.field_h[4]);
                 jfa.field_q[param1].a((byte) -126, fw.field_h[6]);
                 jfa.field_q[param1].a((byte) -114, fw.field_h[7]);
@@ -88,9 +88,9 @@ final class vma extends pv {
                 jfa.field_q[param1].a((byte) -124, fw.field_h[48]);
                 break L0;
               } else {
-                if (param1 != 6) {
+                if ((param1 ^ -1) != -7) {
                   if (param1 != 3) {
-                    if (param1 != 5) {
+                    if (-6 != (param1 ^ -1)) {
                       if (2 == param1) {
                         jfa.field_q[param1].a((byte) -95, fw.field_h[0]);
                         jfa.field_q[param1].a((byte) -96, fw.field_h[1]);
@@ -158,10 +158,10 @@ final class vma extends pv {
 
     final static kv[] c(int param0) {
         int var2 = 0;
-        int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
+        int var3 = 0;
         int var7 = BachelorFridge.field_y;
         kv[] var1 = new kv[ok.field_vb];
         for (var2 = 0; var2 < ok.field_vb; var2++) {
@@ -173,7 +173,7 @@ final class vma extends pv {
             }
             var1[var2] = new kv(ok.field_Bb, kh.field_r, fl.field_j[var2], fd.field_D[var2], lq.field_A[var2], eha.field_s[var2], var5);
         }
-        var3 = -60;
+        var3 = 60 / ((-56 - param0) / 46);
         al.b(-18073);
         return var1;
     }
@@ -182,39 +182,42 @@ final class vma extends pv {
         if (!param0) {
             return true;
         }
-        int fieldTemp$0 = ((vma) this).field_g + 1;
-        ((vma) this).field_g = ((vma) this).field_g + 1;
+        int fieldTemp$0 = this.field_g + 1;
+        this.field_g = this.field_g + 1;
         if (!(fieldTemp$0 <= this.d(2))) {
             return true;
         }
-        if (((vma) this).field_g == 1) {
-            ((vma) this).field_f.field_v.a((byte) 23, ((vma) this).field_f.field_g.field_o.field_b, 17);
+        if (this.field_g == 1) {
+            this.field_f.field_v.a((byte) 23, this.field_f.field_g.field_o.field_b, 17);
         }
         return false;
     }
 
     private final int d(int param0) {
-        int var2 = 11;
+        int var2 = -23 / ((param0 - 86) / 32);
         return 50;
     }
 
     final static void a(byte param0, boolean param1, boolean param2, String param3) {
         try {
+            if (param0 != -6) {
+                field_j = (kv[]) null;
+            }
             eha.c(false);
             gja.field_m.f((byte) -66);
             ola.field_e = new ph(dk.field_p, (String) null, gfa.field_i, param2, param1);
-            kka.field_l = new sja(gja.field_m, (wj) (Object) ola.field_e);
-            gja.field_m.a((wj) (Object) kka.field_l, (byte) 63);
+            kka.field_l = new sja(gja.field_m, ola.field_e);
+            gja.field_m.a((wj) (kka.field_l), (byte) 63);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vma.F(" + -6 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "vma.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     vma(jfa param0, it param1) {
         try {
-            ((vma) this).field_f = param0;
+            this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "vma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

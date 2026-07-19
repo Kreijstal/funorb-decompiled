@@ -10,12 +10,17 @@ final class hh extends sh {
 
     public static void b(int param0) {
         field_d = null;
+        if (param0 >= -24) {
+            field_c = true;
+            field_e = null;
+            return;
+        }
         field_e = null;
     }
 
     final fk a(int param0) {
         if (param0 != 10277) {
-            ((hh) this).field_a = null;
+            this.field_a = (String) null;
             return ci.field_b;
         }
         return ci.field_b;
@@ -23,10 +28,10 @@ final class hh extends sh {
 
     hh(String param0, String param1) {
         try {
-            ((hh) this).field_a = param1;
-            ((hh) this).field_b = param0;
+            this.field_a = param1;
+            this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "hh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw dd.a((Throwable) ((Object) runtimeException), "hh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -42,22 +47,18 @@ final class hh extends sh {
 
     final void a(mg param0, int param1) {
         try {
-            param0.a(false, ((hh) this).field_b);
+            param0.a(false, this.field_b);
             if (param1 != 27557) {
-                Object var4 = null;
-                ((hh) this).a((mg) null, 15);
+                mg var4 = (mg) null;
+                this.a((mg) null, 15);
             }
-            param0.a((byte) -127, ((hh) this).field_a);
+            param0.a((byte) -127, this.field_a);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "hh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw dd.a((Throwable) ((Object) runtimeException), "hh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = true;
         field_d = new i();
         field_e = "MY HISCORES";

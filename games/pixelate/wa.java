@@ -25,51 +25,51 @@ final class wa {
         int[] var9 = null;
         int[] var13 = null;
         int[] var16 = null;
-        int[] var20 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
-        byte[] var23 = null;
-        int[] var24 = null;
+        byte[] var20 = null;
+        int[] var21 = null;
+        byte[] var22 = null;
         var8 = Pixelate.field_H ? 1 : 0;
         var1 = new tf[im.field_Qb];
         var2 = 0;
         L0: while (true) {
           if (im.field_Qb <= var2) {
-            re.b(140);
-            return var1;
+            if (param0 < -116) {
+              re.b(140);
+              return var1;
+            } else {
+              return (tf[]) null;
+            }
           } else {
             var3 = ge.field_c[var2] * gf.field_g[var2];
-            var21 = wo.field_f[var2];
+            var20 = wo.field_f[var2];
             if (rl.field_m[var2]) {
-              var23 = gd.field_k[var2];
-              var24 = new int[var3];
-              var20 = var24;
-              var16 = var20;
+              var22 = gd.field_k[var2];
+              var16 = new int[var3];
               var13 = var16;
               var6 = var13;
               var7 = 0;
               L1: while (true) {
                 if (var7 >= var3) {
-                  var1[var2] = (tf) (Object) new sa(tj.field_y, jb.field_a, fa.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var24);
+                  var1[var2] = (tf) ((Object) new sa(tj.field_y, jb.field_a, fa.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var16));
                   var2++;
                   continue L0;
                 } else {
-                  var6[var7] = bq.a(fl.field_g[cm.a(255, (int) var21[var7])], cm.a(var23[var7] << 24, -16777216));
+                  var6[var7] = bq.a(fl.field_g[cm.a(255, (int) var20[var7])], cm.a(var22[var7] << -2052479752, -16777216));
                   var7++;
                   continue L1;
                 }
               }
             } else {
               var9 = new int[var3];
-              var22 = var9;
+              var21 = var9;
               var6_int = 0;
               L2: while (true) {
                 if (var6_int >= var3) {
-                  var1[var2] = new tf(tj.field_y, jb.field_a, fa.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var22);
+                  var1[var2] = new tf(tj.field_y, jb.field_a, fa.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var21);
                   var2++;
                   continue L0;
                 } else {
-                  var9[var6_int] = fl.field_g[cm.a(255, (int) var21[var6_int])];
+                  var9[var6_int] = fl.field_g[cm.a(255, (int) var20[var6_int])];
                   var6_int++;
                   continue L2;
                 }
@@ -84,7 +84,7 @@ final class wa {
         int var17 = 0;
         L0: {
           var17 = Pixelate.field_H ? 1 : 0;
-          var16 = 29;
+          var16 = -29 / ((param11 - -19) / 57);
           if (param5 >= param1) {
             if (param0 <= param5) {
               if (param0 <= param1) {
@@ -116,10 +116,14 @@ final class wa {
     }
 
     public static void a(int param0) {
+        int discarded$0 = 0;
         field_e = null;
         field_g = null;
         field_f = null;
         field_a = null;
+        if (param0 != 0) {
+            discarded$0 = wa.b(46);
+        }
         field_c = null;
         field_d = null;
     }
@@ -132,10 +136,6 @@ final class wa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = 360;
         field_e = "Bouncedown!";
         field_d = "Won";

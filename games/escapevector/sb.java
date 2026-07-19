@@ -28,8 +28,8 @@ abstract class sb {
         int stackOut_2_0 = 0;
         if (param0 != 20) {
           L0: {
-            ((sb) this).field_n = null;
-            if (20 > ((sb) this).a(true)) {
+            this.field_n = (va) null;
+            if (20 > this.a(true)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -42,7 +42,7 @@ abstract class sb {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (20 > ((sb) this).a(true)) {
+            if (20 > this.a(true)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -58,10 +58,10 @@ abstract class sb {
 
     final int a(boolean param0) {
         if (!param0) {
-          ((sb) this).a(-59);
-          return ((sb) this).field_p.c(0) - -((sb) this).field_l.c(0);
+          this.a(-59);
+          return this.field_p.c(0) - -this.field_l.c(0);
         } else {
-          return ((sb) this).field_p.c(0) - -((sb) this).field_l.c(0);
+          return this.field_p.c(0) - -this.field_l.c(0);
         }
     }
 
@@ -69,15 +69,20 @@ abstract class sb {
 
     final int a(byte param0) {
         if (param0 != 88) {
-          ((sb) this).field_e = null;
-          return ((sb) this).field_j.c(0) + ((sb) this).field_n.c(0);
+          this.field_e = (n) null;
+          return this.field_j.c(0) + this.field_n.c(0);
         } else {
-          return ((sb) this).field_j.c(0) + ((sb) this).field_n.c(0);
+          return this.field_j.c(0) + this.field_n.c(0);
         }
     }
 
     public static void e(int param0) {
         field_i = null;
+        if (param0 != -4470) {
+            field_b = 100;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
@@ -90,8 +95,8 @@ abstract class sb {
         int stackOut_2_0 = 0;
         if (param0 != 20) {
           L0: {
-            ((sb) this).field_n = null;
-            if (20 > ((sb) this).a((byte) 88)) {
+            this.field_n = (va) null;
+            if (20 > this.a((byte) 88)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -104,7 +109,7 @@ abstract class sb {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (20 > ((sb) this).a((byte) 88)) {
+            if (20 > this.a((byte) 88)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -125,62 +130,126 @@ abstract class sb {
     abstract boolean d(int param0);
 
     final s a(int param0, boolean param1, byte param2, int param3, byte param4) {
+        long var6 = 0L;
         s var8 = null;
-        long var6 = (long)param3 + ((long)param0 << 32);
-        if (param2 != 0) {
-            ((sb) this).field_f = -16;
+        s stackIn_2_0 = null;
+        s stackIn_3_0 = null;
+        s stackIn_4_0 = null;
+        int stackIn_4_1 = 0;
+        s stackIn_15_0 = null;
+        s stackIn_16_0 = null;
+        s stackIn_17_0 = null;
+        int stackIn_17_1 = 0;
+        s stackOut_14_0 = null;
+        s stackOut_16_0 = null;
+        int stackOut_16_1 = 0;
+        s stackOut_15_0 = null;
+        int stackOut_15_1 = 0;
+        s stackOut_1_0 = null;
+        s stackOut_3_0 = null;
+        int stackOut_3_1 = 0;
+        s stackOut_2_0 = null;
+        int stackOut_2_1 = 0;
+        var6 = (long)param3 + ((long)param0 << -1318677728);
+        if (param2 == 0) {
+          L0: {
             var8 = new s();
             var8.field_y = param4;
-            var8.field_r = param1 ? true : false;
-            var8.field_p = var6;
+            stackOut_14_0 = (s) (var8);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_15_0 = stackOut_14_0;
             if (!param1) {
-                if (!(((sb) this).a((byte) 88) < 20)) {
-                    throw new RuntimeException();
-                }
-                ((sb) this).field_j.a((int) param2, (fl) (Object) var8);
+              stackOut_16_0 = (s) ((Object) stackIn_16_0);
+              stackOut_16_1 = 0;
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              break L0;
             } else {
-                if (!(-21 > ((sb) this).a(true))) {
-                    throw new RuntimeException();
-                }
-                ((sb) this).field_p.a(-1, (fl) (Object) var8);
+              stackOut_15_0 = (s) ((Object) stackIn_15_0);
+              stackOut_15_1 = 1;
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              break L0;
             }
-            return var8;
-        }
-        var8 = new s();
-        var8.field_y = param4;
-        var8.field_r = param1 ? true : false;
-        var8.field_p = var6;
-        if (!param1) {
-            if (!(((sb) this).a((byte) 88) < 20)) {
+          }
+          L1: {
+            stackIn_17_0.field_r = stackIn_17_1 != 0;
+            var8.field_p = var6;
+            if (param1) {
+              if (-21 >= (this.a(true) ^ -1)) {
                 throw new RuntimeException();
+              } else {
+                this.field_p.a(-1, var8);
+                break L1;
+              }
+            } else {
+              if ((this.a((byte) 88) ^ -1) <= -21) {
+                throw new RuntimeException();
+              } else {
+                this.field_j.a(param2 ^ -1, var8);
+                break L1;
+              }
             }
-            ((sb) this).field_j.a((int) param2, (fl) (Object) var8);
+          }
+          return var8;
         } else {
-            if (!(-21 > ((sb) this).a(true))) {
-                throw new RuntimeException();
+          L2: {
+            this.field_f = -16;
+            var8 = new s();
+            var8.field_y = param4;
+            stackOut_1_0 = (s) (var8);
+            stackIn_3_0 = stackOut_1_0;
+            stackIn_2_0 = stackOut_1_0;
+            if (!param1) {
+              stackOut_3_0 = (s) ((Object) stackIn_3_0);
+              stackOut_3_1 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_1 = stackOut_3_1;
+              break L2;
+            } else {
+              stackOut_2_0 = (s) ((Object) stackIn_2_0);
+              stackOut_2_1 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_1 = stackOut_2_1;
+              break L2;
             }
-            ((sb) this).field_p.a(-1, (fl) (Object) var8);
+          }
+          L3: {
+            stackIn_4_0.field_r = stackIn_4_1 != 0;
+            var8.field_p = var6;
+            if (param1) {
+              if (-21 >= (this.a(true) ^ -1)) {
+                throw new RuntimeException();
+              } else {
+                this.field_p.a(-1, var8);
+                break L3;
+              }
+            } else {
+              if ((this.a((byte) 88) ^ -1) <= -21) {
+                throw new RuntimeException();
+              } else {
+                this.field_j.a(param2 ^ -1, var8);
+                break L3;
+              }
+            }
+          }
+          return var8;
         }
-        return var8;
     }
 
     sb() {
-        ((sb) this).field_p = new va();
-        ((sb) this).field_l = new va();
-        ((sb) this).field_j = new va();
-        ((sb) this).field_n = new va();
-        ((sb) this).field_e = new n(6);
-        ((sb) this).field_g = 0;
-        ((sb) this).field_m = (byte) 0;
-        ((sb) this).field_d = 0;
-        ((sb) this).field_o = new n(10);
+        this.field_p = new va();
+        this.field_l = new va();
+        this.field_j = new va();
+        this.field_n = new va();
+        this.field_e = new n(6);
+        this.field_g = 0;
+        this.field_m = (byte) 0;
+        this.field_d = 0;
+        this.field_o = new n(10);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0;
         field_i = "";
     }

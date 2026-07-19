@@ -5,10 +5,6 @@ final class nsb {
     static int field_a;
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
     }
 }

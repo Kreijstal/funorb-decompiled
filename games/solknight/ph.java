@@ -20,21 +20,32 @@ abstract class ph {
     abstract void a(int param0, int param1, int param2);
 
     public static void a(int param0) {
-        field_e = null;
-        field_g = null;
-        field_h = null;
-        field_f = null;
+        if (param0 != -20542) {
+          ph.a(94, true);
+          field_e = null;
+          field_g = null;
+          field_h = null;
+          field_f = null;
+          return;
+        } else {
+          field_e = null;
+          field_g = null;
+          field_h = null;
+          field_f = null;
+          return;
+        }
     }
 
     final static void a(int param0, boolean param1) {
+        if (param0 != 25899) {
+            field_h = (int[]) null;
+            nh.a((byte) -72, true, param1);
+            return;
+        }
         nh.a((byte) -72, true, param1);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new qf();
         field_e = "Quit to website";
     }

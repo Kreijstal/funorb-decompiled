@@ -16,7 +16,7 @@ final class cl {
     public static void a(int param0) {
         field_a = null;
         field_e = null;
-        int var1 = 0;
+        int var1 = -66 % ((-46 - param0) / 55);
         field_f = null;
         field_g = null;
         field_c = null;
@@ -24,10 +24,6 @@ final class cl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "cl.A(";
         field_b = "You scored: <%0>";
         field_g = new int[128];

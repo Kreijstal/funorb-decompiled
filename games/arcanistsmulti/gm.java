@@ -24,7 +24,14 @@ final class gm implements pf {
         field_l = null;
         field_g = null;
         field_h = null;
-        field_b = null;
+        if (param0 != -9922) {
+          field_b = (String) null;
+          field_b = null;
+          return;
+        } else {
+          field_b = null;
+          return;
+        }
     }
 
     final static int b(int param0) {
@@ -35,15 +42,20 @@ final class gm implements pf {
     }
 
     final static void a(byte param0) {
+        int var1 = 0;
         if (ob.field_Y == null) {
-            throw new IllegalStateException("NGR");
+          throw new IllegalStateException("NGR");
+        } else {
+          ob.field_Y.field_l = true;
+          li.a(1, 0);
+          var1 = 10 / ((-80 - param0) / 44);
+          return;
         }
-        ob.field_Y.field_l = true;
-        li.a(1, 0);
-        int var1 = 10;
     }
 
     public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
+        int discarded$2 = 0;
+        int discarded$3 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -93,18 +105,18 @@ final class gm implements pf {
             }
             L3: {
               var6_int = stackIn_5_0;
-              int discarded$2 = ((gm) this).field_m.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_g + "</u>", param2 - -param0.field_n, param3 - -param0.field_j, param0.field_v, param0.field_k, var6_int, -1, ((gm) this).field_k, ((gm) this).field_e, ((gm) this).field_m.field_C - -((gm) this).field_m.field_m);
+              discarded$2 = this.field_m.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_g + "</u>", param2 - -param0.field_n, param3 - -param0.field_j, param0.field_v, param0.field_k, var6_int, -1, this.field_k, this.field_e, this.field_m.field_C - -this.field_m.field_m);
               if (param0.d(-2116)) {
                 L4: {
-                  var7 = ((gm) this).field_m.b(param0.field_g);
-                  var8 = ((gm) this).field_m.field_C - -((gm) this).field_m.field_m;
+                  var7 = this.field_m.b(param0.field_g);
+                  var8 = this.field_m.field_C - -this.field_m.field_m;
                   var9 = param0.field_n + param2;
-                  if (((gm) this).field_k == 2) {
+                  if ((this.field_k ^ -1) == -3) {
                     var9 = var9 + (param0.field_v - var7);
                     break L4;
                   } else {
-                    if (((gm) this).field_k == 1) {
-                      var9 = var9 + (-var7 + param0.field_v >> 1);
+                    if ((this.field_k ^ -1) == -2) {
+                      var9 = var9 + (-var7 + param0.field_v >> 428038785);
                       break L4;
                     } else {
                       break L4;
@@ -113,9 +125,9 @@ final class gm implements pf {
                 }
                 L5: {
                   var10 = param3 - -param0.field_j;
-                  if (2 != ((gm) this).field_e) {
-                    if (((gm) this).field_e == 1) {
-                      var10 = var10 + (param0.field_k - var8 >> 1);
+                  if (2 != this.field_e) {
+                    if (this.field_e == 1) {
+                      var10 = var10 + (param0.field_k - var8 >> 2056413889);
                       break L5;
                     } else {
                       break L5;
@@ -134,7 +146,7 @@ final class gm implements pf {
             if (param1 == 5592405) {
               break L0;
             } else {
-              int discarded$3 = gm.b(-20);
+              discarded$3 = gm.b(-20);
               return;
             }
           }
@@ -142,23 +154,23 @@ final class gm implements pf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var6;
+            stackOut_21_0 = (RuntimeException) (var6);
             stackOut_21_1 = new StringBuilder().append("gm.A(");
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -166,31 +178,27 @@ final class gm implements pf {
               break L6;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public gm() {
-        ((gm) this).field_e = 1;
-        ((gm) this).field_k = 1;
-        ((gm) this).field_m = ia.field_c;
+        this.field_e = 1;
+        this.field_k = 1;
+        this.field_m = ia.field_c;
     }
 
     gm(dj param0, int param1, int param2) {
         try {
-            ((gm) this).field_m = param0;
-            ((gm) this).field_k = param1;
-            ((gm) this).field_e = param2;
+            this.field_m = param0;
+            this.field_k = param1;
+            this.field_e = param2;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new int[8192];
         field_n = "<%0> has lost connection.";
         field_i = "Spectate <%0>'s game";

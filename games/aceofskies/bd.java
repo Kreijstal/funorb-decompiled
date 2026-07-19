@@ -41,32 +41,31 @@ final class bd {
     public static void a(int param0) {
         field_I = null;
         field_C = null;
+        if (param0 != 16) {
+            field_I = (String) null;
+        }
     }
 
     bd() {
-        ((bd) this).field_B = new int[6][258];
-        ((bd) this).field_n = new boolean[16];
-        ((bd) this).field_t = new int[6][258];
-        ((bd) this).field_m = new byte[256];
-        ((bd) this).field_u = new int[6];
-        ((bd) this).field_l = new int[6][258];
-        ((bd) this).field_v = new byte[18002];
-        ((bd) this).field_i = 0;
-        ((bd) this).field_E = new byte[18002];
-        ((bd) this).field_x = new byte[4096];
-        ((bd) this).field_H = new byte[6][258];
-        ((bd) this).field_o = new int[257];
-        ((bd) this).field_j = 0;
-        ((bd) this).field_r = new boolean[256];
-        ((bd) this).field_F = new int[256];
-        ((bd) this).field_g = new int[16];
+        this.field_B = new int[6][258];
+        this.field_n = new boolean[16];
+        this.field_t = new int[6][258];
+        this.field_m = new byte[256];
+        this.field_u = new int[6];
+        this.field_l = new int[6][258];
+        this.field_v = new byte[18002];
+        this.field_i = 0;
+        this.field_E = new byte[18002];
+        this.field_x = new byte[4096];
+        this.field_H = new byte[6][258];
+        this.field_o = new int[257];
+        this.field_j = 0;
+        this.field_r = new boolean[256];
+        this.field_F = new int[256];
+        this.field_g = new int[16];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_D = "bd.A(";
         field_C = new as();
         field_I = "Waiting for extra data";

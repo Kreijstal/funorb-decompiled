@@ -8,13 +8,13 @@ final class rg implements dja {
 
     public final tv a(byte param0) {
         int var2 = -61 / ((param0 - -64) / 50);
-        return (tv) (Object) new oca();
+        return (tv) ((Object) new oca());
     }
 
     final static int b(byte param0) {
         int var1 = 0;
         L0: {
-          var1 = 0;
+          var1 = 8 % ((param0 - 63) / 33);
           if (!vba.f((byte) -89)) {
             break L0;
           } else {
@@ -30,9 +30,9 @@ final class rg implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            field_c = null;
+            field_c = (String) null;
         }
-        return (tv[]) (Object) new oca[param1];
+        return (tv[]) ((Object) new oca[param1]);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -44,6 +44,7 @@ final class rg implements dja {
         int var11 = 0;
         int var13 = 0;
         int[] var17 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var13 = VoidHunters.field_G;
         try {
@@ -59,16 +60,22 @@ final class rg implements dja {
                 L2: while (true) {
                   if (var8 >= var11) {
                     var11 = var7_int;
-                    L3: while (true) {
-                      if (var8 < var11) {
-                        break L0;
-                      } else {
-                        var17 = rba.field_b[var11];
-                        ww.a(param3, var9, var17, (byte) 75, param2);
-                        ww.a(param3, param0, var17, (byte) 75, var10);
-                        var11++;
-                        continue L3;
+                    if (param6 > 56) {
+                      L3: while (true) {
+                        if (var8 < var11) {
+                          decompiledRegionSelector0 = 1;
+                          break L0;
+                        } else {
+                          var17 = rba.field_b[var11];
+                          ww.a(param3, var9, var17, (byte) 75, param2);
+                          ww.a(param3, param0, var17, (byte) 75, var10);
+                          var11++;
+                          continue L3;
+                        }
                       }
+                    } else {
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   } else {
                     ww.a(param3, param0, rba.field_b[var11], (byte) 75, param2);
@@ -86,20 +93,24 @@ final class rg implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var7, "rg.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + 120 + ')');
+          throw rta.a((Throwable) ((Object) var7), "rg.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(int param0) {
         field_a = null;
         field_c = null;
+        if (param0 > -111) {
+            field_c = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_a = "Login: ";
         field_c = "Very long range";

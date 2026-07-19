@@ -18,14 +18,13 @@ final class ab extends br {
     }
 
     public static void a(int param0) {
+        if (param0 != 0) {
+            return;
+        }
         field_h = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = 0;
     }
 }

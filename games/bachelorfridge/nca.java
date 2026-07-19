@@ -6,6 +6,12 @@ final class nca {
     static ee[] field_a;
 
     public static void a(byte param0) {
+        if (param0 != 87) {
+            field_b = (String) null;
+            field_a = null;
+            field_b = null;
+            return;
+        }
         field_a = null;
         field_b = null;
     }
@@ -17,21 +23,17 @@ final class nca {
         }
         try {
             if (param0 < 82) {
-                Object var4 = null;
+                cj var4 = (cj) null;
                 nca.a(-125, (lu) null, (cj) null);
             }
             param1.d(param2.field_h, 0);
             param2.a(param1, -9);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nca.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "nca.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Connection timed out. Please try using a different server.";
     }
 }

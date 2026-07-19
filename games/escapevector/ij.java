@@ -26,10 +26,6 @@ final class ij extends hg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ij.A(";
         field_i = 9;
     }

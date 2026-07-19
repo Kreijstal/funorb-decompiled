@@ -8,14 +8,15 @@ final class wja {
     private static String field_z;
 
     public static void a(boolean param0) {
+        if (param0) {
+            wja.a(false);
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "wja.A(";
         field_b = 32768;
     }

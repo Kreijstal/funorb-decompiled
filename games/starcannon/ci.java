@@ -47,23 +47,23 @@ final class ci implements de {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ci.C(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -71,7 +71,7 @@ final class ci implements de {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -109,17 +109,17 @@ final class ci implements de {
             L1: {
               if (!(param4 instanceof sj)) {
                 stackOut_3_0 = null;
-                stackIn_4_0 = (uj) (Object) stackOut_3_0;
+                stackIn_4_0 = (uj) ((Object) stackOut_3_0);
                 break L1;
               } else {
-                stackOut_2_0 = (uj) param4;
+                stackOut_2_0 = (uj) (param4);
                 stackIn_4_0 = stackOut_2_0;
                 break L1;
               }
             }
             L2: {
-              var13 = (sj) (Object) stackIn_4_0;
-              ki.d(param4.field_s + param0, param4.field_j + param3, param4.field_i, param4.field_f, ((ci) this).field_a);
+              var13 = (sj) ((Object) stackIn_4_0);
+              ki.d(param4.field_s + param0, param4.field_j + param3, param4.field_i, param4.field_f, this.field_a);
               var7 = 14 / ((2 - param2) / 54);
               if (var13 == null) {
                 break L2;
@@ -130,18 +130,18 @@ final class ci implements de {
             var8 = param4.field_i - 2 * var13.field_G;
             var9 = param4.field_s + (param0 + var13.field_G);
             var10 = param3 - (-param4.field_j + -var13.field_A);
-            ki.a(var9, var10, var8 + var9, var10, ((ci) this).field_f);
+            ki.a(var9, var10, var8 + var9, var10, this.field_f);
             var11 = -1 + var13.e((byte) 114);
             L3: while (true) {
-              if (var11 < 0) {
-                if (null != ((ci) this).field_h) {
-                  ((ci) this).field_h.b(var13.field_k, var8 / 2 + var9, ((ci) this).field_h.field_x + var10 - -var13.field_A, ((ci) this).field_j, ((ci) this).field_e);
+              if (-1 < (var11 ^ -1)) {
+                if (null != this.field_h) {
+                  this.field_h.b(var13.field_k, var8 / 2 + var9, this.field_h.field_x + var10 - -var13.field_A, this.field_j, this.field_e);
                   break L0;
                 } else {
                   return;
                 }
               } else {
-                ki.e(var13.a(2, var11) * var8 / var13.e(-32242) + var9, var10, ((ci) this).field_i, ((ci) this).field_c);
+                ki.e(var13.a(2, var11) * var8 / var13.e(-32242) + var9, var10, this.field_i, this.field_c);
                 var11--;
                 continue L3;
               }
@@ -151,23 +151,23 @@ final class ci implements de {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var6;
+            stackOut_12_0 = (RuntimeException) (var6);
             stackOut_12_1 = new StringBuilder().append("ci.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param4 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -175,17 +175,18 @@ final class ci implements de {
               break L4;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
     }
 
     final static void a(int param0, java.awt.Color param1, String param2, boolean param3, int param4) {
+        boolean discarded$1 = false;
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
+        String var9 = null;
         java.awt.Graphics var10 = null;
         java.awt.Graphics var11 = null;
         RuntimeException stackIn_22_0 = null;
@@ -236,7 +237,7 @@ final class ci implements de {
                   if (param4 == -27746) {
                     break L3;
                   } else {
-                    var9 = null;
+                    var9 = (String) null;
                     ci.a(9, (java.awt.Color) null, (String) null, true, -93);
                     break L3;
                   }
@@ -278,7 +279,7 @@ final class ci implements de {
                     var11.setFont(jb.field_c);
                     var11.setColor(java.awt.Color.white);
                     var11.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);
-                    boolean discarded$1 = var10.drawImage(nh.field_h, -152 + eh.field_n / 2, -18 + ef.field_d / 2, (java.awt.image.ImageObserver) null);
+                    discarded$1 = var10.drawImage(nh.field_h, -152 + eh.field_n / 2, -18 + ef.field_d / 2, (java.awt.image.ImageObserver) null);
                     break L6;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -320,23 +321,23 @@ final class ci implements de {
           decompiledCaughtException = decompiledCaughtParameter2;
           L9: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var5_ref;
+            stackOut_21_0 = (RuntimeException) (var5_ref);
             stackOut_21_1 = new StringBuilder().append("ci.B(").append(param0).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L9;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -345,23 +346,23 @@ final class ci implements de {
             }
           }
           L10: {
-            stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+            stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
             stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param2 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
               break L10;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
@@ -369,7 +370,7 @@ final class ci implements de {
               break L10;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param3 + ',' + param4 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -385,23 +386,19 @@ final class ci implements de {
 
     ci(qe param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            ((ci) this).field_i = param5;
-            ((ci) this).field_h = param0;
-            ((ci) this).field_a = param4;
-            ((ci) this).field_c = param6;
-            ((ci) this).field_j = param1;
-            ((ci) this).field_f = param3;
-            ((ci) this).field_e = param2;
+            this.field_i = param5;
+            this.field_h = param0;
+            this.field_a = param4;
+            this.field_c = param6;
+            this.field_j = param1;
+            this.field_f = param3;
+            this.field_e = param2;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0L;
         field_d = "More suggestions";
     }

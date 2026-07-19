@@ -19,7 +19,7 @@ final class qd extends hg {
           if (0 <= param0) {
             if (var2 > param0) {
               var3 = dh.field_e[param0];
-              if (var3 == 2) {
+              if ((var3 ^ -1) == -3) {
                 if (bj.e((byte) -56)) {
                   return true;
                 } else {
@@ -35,12 +35,12 @@ final class qd extends hg {
             return false;
           }
         } else {
-          field_n = null;
+          field_n = (cn) null;
           var2 = dh.field_e.length;
           if (0 <= param0) {
             if (var2 > param0) {
               var3 = dh.field_e[param0];
-              if (var3 == 2) {
+              if ((var3 ^ -1) == -3) {
                 if (!bj.e((byte) -56)) {
                   return false;
                 } else {
@@ -63,39 +63,70 @@ final class qd extends hg {
             ca.field_d = param1;
             lj.a(param0, 39);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "qd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "qd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void b(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_n = null;
     }
 
     final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
         int var4 = 0;
-        L0: {
-          var4 = 0;
-          if (param0) {
-            var4 += 4;
-            break L0;
-          } else {
-            break L0;
+        var4 = 0;
+        if (param2 == -8) {
+          L0: {
+            if (param0) {
+              var4 += 4;
+              break L0;
+            } else {
+              break L0;
+            }
           }
-        }
-        if (!param3) {
-          if (param1) {
-            var4++;
-            return fd.field_f[var4];
+          if (!param3) {
+            if (param1) {
+              var4++;
+              return fd.field_f[var4];
+            } else {
+              return fd.field_f[var4];
+            }
           } else {
-            return fd.field_f[var4];
+            var4 += 2;
+            if (param1) {
+              var4++;
+              return fd.field_f[var4];
+            } else {
+              return fd.field_f[var4];
+            }
           }
         } else {
-          var4 += 2;
-          if (!param1) {
-            return fd.field_f[var4];
+          L1: {
+            field_l = false;
+            if (param0) {
+              var4 += 4;
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          if (param3) {
+            var4 += 2;
+            if (!param1) {
+              return fd.field_f[var4];
+            } else {
+              var4++;
+              return fd.field_f[var4];
+            }
           } else {
-            var4++;
-            return fd.field_f[var4];
+            if (param1) {
+              var4++;
+              return fd.field_f[var4];
+            } else {
+              return fd.field_f[var4];
+            }
           }
         }
     }
@@ -105,48 +136,74 @@ final class qd extends hg {
         int var2 = 0;
         var2 = EscapeVector.field_A;
         dj.field_b = null;
-        ei.field_i = false;
-        if (!eb.field_H) {
-          var1 = am.field_g;
-          if (var1 > 0) {
-            if (var1 == 1) {
-              dj.field_b = cf.field_a;
-              dj.field_b = s.a((byte) -31, new CharSequence[3]);
-              be.field_b.o(-18861);
-              cg.d(32);
-              return;
+        if (param0) {
+          ei.field_i = false;
+          if (!eb.field_H) {
+            var1 = am.field_g;
+            if (-1 > (var1 ^ -1)) {
+              if ((var1 ^ -1) == -2) {
+                dj.field_b = cf.field_a;
+                dj.field_b = s.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
+                be.field_b.o(-18861);
+                cg.d(32);
+                return;
+              } else {
+                dj.field_b = r.a(mi.field_j, -63, new String[]{Integer.toString(var1)});
+                dj.field_b = s.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
+                be.field_b.o(-18861);
+                cg.d(32);
+                return;
+              }
             } else {
-              dj.field_b = r.a(mi.field_j, -63, new String[1]);
-              dj.field_b = s.a((byte) -31, new CharSequence[3]);
               be.field_b.o(-18861);
               cg.d(32);
               return;
             }
           } else {
-            be.field_b.o(-18861);
-            cg.d(32);
+            be.field_b.r(94);
             return;
           }
         } else {
-          be.field_b.r(94);
-          return;
+          field_n = (cn) null;
+          ei.field_i = false;
+          if (!eb.field_H) {
+            var1 = am.field_g;
+            if (-1 > (var1 ^ -1)) {
+              if ((var1 ^ -1) == -2) {
+                dj.field_b = cf.field_a;
+                dj.field_b = s.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
+                be.field_b.o(-18861);
+                cg.d(32);
+                return;
+              } else {
+                dj.field_b = r.a(mi.field_j, -63, new String[]{Integer.toString(var1)});
+                dj.field_b = s.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
+                be.field_b.o(-18861);
+                cg.d(32);
+                return;
+              }
+            } else {
+              be.field_b.o(-18861);
+              cg.d(32);
+              return;
+            }
+          } else {
+            be.field_b.r(94);
+            return;
+          }
         }
     }
 
     qd(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((qd) this).field_j = param4;
-        ((qd) this).field_i = param3;
-        ((qd) this).field_g = param5;
-        ((qd) this).field_k = param2;
-        ((qd) this).field_h = param1;
-        ((qd) this).field_m = param0;
+        this.field_j = param4;
+        this.field_i = param3;
+        this.field_g = param5;
+        this.field_k = param2;
+        this.field_h = param1;
+        this.field_m = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = new cn();
         field_l = true;
     }

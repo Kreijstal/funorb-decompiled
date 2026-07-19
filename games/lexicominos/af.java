@@ -15,7 +15,7 @@ final class af {
     final static void a(int param0) {
         if (null != ff.field_b) {
           if (param0 < -50) {
-            jd.a((java.awt.Canvas) (Object) ff.field_b, 160);
+            jd.a(ff.field_b, 160);
             ff.field_b.a(false, jh.field_a);
             ff.field_b = null;
             if (null != da.field_a) {
@@ -28,7 +28,7 @@ final class af {
             }
           } else {
             field_b = false;
-            jd.a((java.awt.Canvas) (Object) ff.field_b, 160);
+            jd.a(ff.field_b, 160);
             ff.field_b.a(false, jh.field_a);
             ff.field_b = null;
             if (null == da.field_a) {
@@ -46,10 +46,6 @@ final class af {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
     }
 }

@@ -26,8 +26,9 @@ final class nnb extends uj {
     }
 
     final int b(byte param0) {
+        int discarded$0 = 0;
         if (param0 < 79) {
-            int discarded$0 = ((nnb) this).d((byte) 75);
+            discarded$0 = this.d((byte) 75);
             return 112;
         }
         return 112;
@@ -52,18 +53,15 @@ final class nnb extends uj {
     }
 
     final boolean a(boolean param0) {
+        boolean discarded$0 = false;
         if (param0) {
-            boolean discarded$0 = ((nnb) this).a(true);
+            discarded$0 = this.a(true);
             return false;
         }
         return false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = 4;
         field_f = "Spawn enemy uber-ship at mouse";
         field_d = "You have 1 unread message!";

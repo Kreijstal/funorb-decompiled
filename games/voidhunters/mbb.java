@@ -19,23 +19,20 @@ final class mbb implements dja {
     }
 
     public final tv[] a(int param0, int param1) {
+        tv discarded$0 = null;
         if (param0 != 11995) {
-            tv discarded$0 = ((mbb) this).a((byte) -26);
-            return (tv[]) (Object) new lrb[param1];
+            discarded$0 = this.a((byte) -26);
+            return (tv[]) ((Object) new lrb[param1]);
         }
-        return (tv[]) (Object) new lrb[param1];
+        return (tv[]) ((Object) new lrb[param1]);
     }
 
     public final tv a(byte param0) {
         int var2 = -72 / ((-64 - param0) / 50);
-        return (tv) (Object) new lrb();
+        return (tv) ((Object) new lrb());
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = true;
         field_c = 50;
         field_a = "Remove selected condition/action";

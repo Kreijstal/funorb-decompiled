@@ -17,7 +17,7 @@ public class qi {
 
     public static File a(boolean param0, String param1) {
         if (!param0) {
-            field_b = null;
+            field_b = (String) null;
             return qi.a(param1, field_a, 42, field_d);
         }
         return qi.a(param1, field_a, 42, field_d);
@@ -32,7 +32,7 @@ public class qi {
           if (param2 == 1) {
             break L0;
           } else {
-            field_c = null;
+            field_c = (Hashtable) null;
             break L0;
           }
         }
@@ -85,10 +85,6 @@ public class qi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = false;
         field_c = new Hashtable(16);
     }

@@ -19,7 +19,7 @@ final class cf {
         for (var1_int = 0; 32 > var1_int; var1_int++) {
             ui.field_l[var1_int] = 0L;
         }
-        for (var1_int = 0; var1_int < 32; var1_int++) {
+        for (var1_int = 0; (var1_int ^ -1) > -33; var1_int++) {
             jl.field_V[var1_int] = 0L;
         }
         if (param0 != 6639) {
@@ -28,7 +28,7 @@ final class cf {
         try {
             oi.field_b = 0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "cf.C(" + param0 + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "cf.C(" + param0 + ')');
         }
     }
 
@@ -61,48 +61,48 @@ final class cf {
         try {
           L0: {
             L1: {
-              if (((cf) this).field_i != param2) {
-                ((cf) this).field_i = ((cf) this).field_i - 1;
+              if (this.field_i != param2) {
+                this.field_i = this.field_i - 1;
                 break L1;
               } else {
-                var5 = ((cf) this).field_d.a(param2 ^ 7);
-                var5.f(param2);
+                var5 = this.field_d.a(param2 ^ 7);
+                var5.f(param2 + 0);
                 var5.h(0);
-                if (((cf) this).field_b != var5) {
+                if (this.field_b != var5) {
                   break L1;
                 } else {
-                  var5 = ((cf) this).field_d.a(-45);
+                  var5 = this.field_d.a(-45);
                   var5.f(0);
-                  var5.h(param2);
+                  var5.h(param2 ^ 0);
                   break L1;
                 }
               }
             }
-            ((cf) this).field_h.a(false, param0, (q) (Object) param1);
-            ((cf) this).field_d.a((byte) 122, param1);
+            this.field_h.a(false, param0, param1);
+            this.field_d.a((byte) 122, param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) runtimeException;
+            stackOut_6_0 = (RuntimeException) (runtimeException);
             stackOut_6_1 = new StringBuilder().append("cf.D(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -110,37 +110,33 @@ final class cf {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ')');
         }
     }
 
     final ta a(long param0, int param1) {
         if (param1 != 4604) {
-            ((cf) this).field_h = null;
+            this.field_h = (eb) null;
         }
-        ta var4 = (ta) (Object) ((cf) this).field_h.a(param0, (byte) 89);
+        ta var4 = (ta) ((Object) this.field_h.a(param0, (byte) 89));
         if (var4 != null) {
-            ((cf) this).field_d.a((byte) 118, var4);
+            this.field_d.a((byte) 118, var4);
         }
         return var4;
     }
 
     cf(int param0) {
-        ((cf) this).field_b = new ta();
-        ((cf) this).field_d = new gb();
-        ((cf) this).field_i = param0;
+        this.field_b = new ta();
+        this.field_d = new gb();
+        this.field_i = param0;
         int var2 = 1;
         while (var2 - -var2 < param0) {
             var2 = var2 + var2;
         }
-        ((cf) this).field_h = new eb(var2);
+        this.field_h = new eb(var2);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_a = new int[4096];
         for (var0 = 0; 4096 > var0; var0++) {

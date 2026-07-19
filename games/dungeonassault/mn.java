@@ -11,14 +11,17 @@ final class mn {
 
     final static void a(int param0, qk param1, int param2, int param3) {
         try {
-            int var4_int = 0;
+            int var4_int = 6 % ((36 - param3) / 44);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "mn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + -8 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "mn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void b(byte param0) {
         field_a = null;
+        if (param0 < 13) {
+            field_a = (String) null;
+        }
     }
 
     final static int a(byte param0) {
@@ -27,10 +30,6 @@ final class mn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Members";
     }
 }

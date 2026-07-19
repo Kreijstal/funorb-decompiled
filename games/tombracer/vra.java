@@ -36,8 +36,8 @@ final class vra implements bo {
           L0: {
             L1: {
               param1.i(8);
-              param1.a((byte) -128, ((vra) this).field_b, 3);
-              param1.a((byte) -126, ((vra) this).field_d, 4);
+              param1.a((byte) -128, this.field_b, 3);
+              param1.a((byte) -126, this.field_d, 4);
               param1.k(param0 ^ -1826190742);
               if (param0 == 200) {
                 break L1;
@@ -52,23 +52,23 @@ final class vra implements bo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("vra.B(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -76,7 +76,7 @@ final class vra implements bo {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -85,9 +85,9 @@ final class vra implements bo {
             if (param1 >= -81) {
                 vra.a(-117);
             }
-            param0.c(((vra) this).field_d, 112, ((vra) this).field_b);
+            param0.c(this.field_d, 112, this.field_b);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "vra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "vra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,19 +97,15 @@ final class vra implements bo {
             return;
         }
         try {
-            ((vra) this).field_b = param0.b((byte) 44, 3);
-            ((vra) this).field_d = param0.b((byte) 44, 4);
+            this.field_b = param0.b((byte) 44, 3);
+            this.field_d = param0.b((byte) 44, 4);
             param0.i((byte) 98);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "vra.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "vra.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Please remove <%0> from your ignore list first.";
     }
 }

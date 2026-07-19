@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class aka extends rqa {
     static boolean field_p;
     static int[] field_o;
@@ -45,13 +43,13 @@ final class aka extends rqa {
         String stackIn_3_6 = null;
         int stackIn_3_7 = 0;
         int stackIn_3_8 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         long stackOut_0_0 = 0L;
         llb stackOut_0_1 = null;
@@ -79,14 +77,14 @@ final class aka extends rqa {
         String stackOut_1_6 = null;
         int stackOut_1_7 = 0;
         int stackOut_1_8 = 0;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
         try {
           L0: {
             L1: {
@@ -116,12 +114,12 @@ final class aka extends rqa {
               stackIn_1_7 = stackOut_0_7;
               if (1 != param0.field_a) {
                 stackOut_2_0 = stackIn_2_0;
-                stackOut_2_1 = (llb) (Object) stackIn_2_1;
+                stackOut_2_1 = (llb) ((Object) stackIn_2_1);
                 stackOut_2_2 = stackIn_2_2;
                 stackOut_2_3 = stackIn_2_3;
-                stackOut_2_4 = (String) (Object) stackIn_2_4;
+                stackOut_2_4 = (String) ((Object) stackIn_2_4);
                 stackOut_2_5 = stackIn_2_5;
-                stackOut_2_6 = (String) (Object) stackIn_2_6;
+                stackOut_2_6 = (String) ((Object) stackIn_2_6);
                 stackOut_2_7 = stackIn_2_7;
                 stackOut_2_8 = 0;
                 stackIn_3_0 = stackOut_2_0;
@@ -136,12 +134,12 @@ final class aka extends rqa {
                 break L1;
               } else {
                 stackOut_1_0 = stackIn_1_0;
-                stackOut_1_1 = (llb) (Object) stackIn_1_1;
+                stackOut_1_1 = (llb) ((Object) stackIn_1_1);
                 stackOut_1_2 = stackIn_1_2;
                 stackOut_1_3 = stackIn_1_3;
-                stackOut_1_4 = (String) (Object) stackIn_1_4;
+                stackOut_1_4 = (String) ((Object) stackIn_1_4);
                 stackOut_1_5 = stackIn_1_5;
-                stackOut_1_6 = (String) (Object) stackIn_1_6;
+                stackOut_1_6 = (String) ((Object) stackIn_1_6);
                 stackOut_1_7 = stackIn_1_7;
                 stackOut_1_8 = param0.field_q;
                 stackIn_3_0 = stackOut_1_0;
@@ -157,7 +155,7 @@ final class aka extends rqa {
               }
             }
             L2: {
-              pea.a(stackIn_3_0, stackIn_3_1, stackIn_3_2, (int[]) (Object) stackIn_3_3, stackIn_3_4, (soa) (Object) stackIn_3_5, stackIn_3_6, (byte) stackIn_3_7, stackIn_3_8);
+              pea.a(stackIn_3_0, stackIn_3_1, stackIn_3_2, (int[]) ((Object) stackIn_3_3), stackIn_3_4, (soa) ((Object) stackIn_3_5), stackIn_3_6, (byte) stackIn_3_7, stackIn_3_8);
               if (0 != param0.field_a) {
                 break L2;
               } else {
@@ -221,11 +219,19 @@ final class aka extends rqa {
                 }
               }
             }
+            L6: {
+              if (param1 == 22859) {
+                break L6;
+              } else {
+                field_o = (int[]) null;
+                break L6;
+              }
+            }
             cka.field_o.a(true);
-            cka.field_o.a(false, 70);
+            cka.field_o.a(false, param1 ^ 22797);
             cka.field_o.a(-63, param0.field_a, param0.field_m);
             cka.field_o.b(-9923);
-            cka.field_o.a(param0, 94);
+            cka.field_o.a(param0, param1 ^ 22805);
             var13 = cka.field_o;
             var3 = oq.field_H;
             var4 = qs.field_a;
@@ -234,33 +240,33 @@ final class aka extends rqa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("aka.C(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackOut_23_0 = (RuntimeException) (var2);
+            stackOut_23_1 = new StringBuilder().append("aka.C(");
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
-              break L6;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
-              break L6;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
+              break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + 22859 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
         }
     }
 
@@ -277,11 +283,14 @@ final class aka extends rqa {
 
     public static void e(byte param0) {
         field_o = null;
+        if (param0 >= -109) {
+            aka.a(false, -67);
+        }
     }
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -290,9 +299,10 @@ final class aka extends rqa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         nc stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        nc stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -304,36 +314,38 @@ final class aka extends rqa {
         try {
           L0: {
             if (param1 < -119) {
-              stackOut_3_0 = new nc((Object) (Object) frb.a(86, 87));
+              stackOut_3_0 = new nc(frb.a(86, 87));
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (nc) null;
               stackIn_2_0 = stackOut_1_0;
-              return (nc) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("aka.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -341,16 +353,16 @@ final class aka extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = true;
     }
 }

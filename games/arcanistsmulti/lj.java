@@ -20,6 +20,7 @@ final class lj extends hg {
     static String field_p;
 
     final static void a(int param0, ec param1, int param2, int param3) {
+        boolean discarded$2 = false;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -43,7 +44,7 @@ final class lj extends hg {
               if (param3 >= 60) {
                 break L1;
               } else {
-                boolean discarded$2 = lj.b(false);
+                discarded$2 = lj.b(false);
                 break L1;
               }
             }
@@ -53,23 +54,23 @@ final class lj extends hg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("lj.Q(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -77,14 +78,14 @@ final class lj extends hg {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final long a(byte param0) {
-        ((lj) this).field_f = ((lj) this).field_f + this.c((byte) 10);
-        if (!(~((lj) this).field_i >= ~((lj) this).field_f)) {
-            return (-((lj) this).field_f + ((lj) this).field_i) / 1000000L;
+        this.field_f = this.field_f + this.c((byte) 10);
+        if (!((this.field_i ^ -1L) >= (this.field_f ^ -1L))) {
+            return (-this.field_f + this.field_i) / 1000000L;
         }
         int var2 = -7 / ((-43 - param0) / 58);
         return 0L;
@@ -92,11 +93,11 @@ final class lj extends hg {
 
     final void a(int param0) {
         if (param0 != -12619) {
-            field_u = null;
+            field_u = (int[]) null;
         }
-        ((lj) this).field_s = 0L;
-        if (!(((lj) this).field_i <= ((lj) this).field_f)) {
-            ((lj) this).field_f = ((lj) this).field_f + (-((lj) this).field_f + ((lj) this).field_i);
+        this.field_s = 0L;
+        if (!(this.field_i <= this.field_f)) {
+            this.field_f = this.field_f + (-this.field_f + this.field_i);
         }
     }
 
@@ -112,21 +113,21 @@ final class lj extends hg {
         int var5 = 0;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param1 < -15) {
-          if (((lj) this).field_f < ((lj) this).field_i) {
-            ((lj) this).field_s = ((lj) this).field_s + (-((lj) this).field_f + ((lj) this).field_i);
-            ((lj) this).field_f = ((lj) this).field_f + (((lj) this).field_i + -((lj) this).field_f);
-            ((lj) this).field_i = ((lj) this).field_i + param0;
+          if (this.field_f < this.field_i) {
+            this.field_s = this.field_s + (-this.field_f + this.field_i);
+            this.field_f = this.field_f + (this.field_i + -this.field_f);
+            this.field_i = this.field_i + param0;
             return 1;
           } else {
             var4 = 0;
             L0: while (true) {
               L1: {
-                ((lj) this).field_i = ((lj) this).field_i + param0;
+                this.field_i = this.field_i + param0;
                 var4++;
-                if (var4 >= 10) {
+                if (-11 >= (var4 ^ -1)) {
                   break L1;
                 } else {
-                  if (~((lj) this).field_i > ~((lj) this).field_f) {
+                  if ((this.field_i ^ -1L) > (this.field_f ^ -1L)) {
                     continue L0;
                   } else {
                     break L1;
@@ -134,8 +135,8 @@ final class lj extends hg {
                 }
               }
               L2: {
-                if (~((lj) this).field_f < ~((lj) this).field_i) {
-                  ((lj) this).field_i = ((lj) this).field_f;
+                if ((this.field_f ^ -1L) < (this.field_i ^ -1L)) {
+                  this.field_i = this.field_f;
                   break L2;
                 } else {
                   break L2;
@@ -175,16 +176,16 @@ final class lj extends hg {
           if (5 == param1) {
             break L0;
           } else {
-            if (param1 == 3) {
+            if ((param1 ^ -1) == -4) {
               break L0;
             } else {
-              if (param1 == 2) {
+              if (-3 == (param1 ^ -1)) {
                 break L0;
               } else {
                 if (4 == param1) {
                   break L0;
                 } else {
-                  if (param1 == 1) {
+                  if (-2 == (param1 ^ -1)) {
                     break L0;
                   } else {
                     L1: {
@@ -211,7 +212,7 @@ final class lj extends hg {
           }
         }
         L2: {
-          if (param1 == 0) {
+          if (-1 == (param1 ^ -1)) {
             var8 = new qb(640, 480);
             var9 = var8;
             var9.a();
@@ -236,11 +237,11 @@ final class lj extends hg {
               pe.field_Ib.c(lm.field_e[param1] + -39, tg.field_f[param1] - 66);
               rg.field_a.c(-150 + eo.field_b[param1], -80 + tg.field_f[param1]);
               var5 = fj.a(ec.field_c, -22612, ue.field_d, "");
-              if (ec.field_c.equals((Object) (Object) "underdark")) {
+              if (ec.field_c.equals("underdark")) {
                 var5.a(0, -8 + (-var5.field_y + 480), 16777215);
                 break L4;
               } else {
-                if (!ec.field_c.equals((Object) (Object) "clockwork")) {
+                if (!ec.field_c.equals("clockwork")) {
                   var5.a(0, -var5.field_y + 480, 16777215);
                   break L4;
                 } else {
@@ -256,8 +257,8 @@ final class lj extends hg {
             j.field_a.c(eo.field_b[param1] - 110, -70 + var3);
             pe.field_Ib.c(lm.field_e[param1] - 39, -66 + tg.field_f[param1]);
             rg.field_a.c(-150 + eo.field_b[param1], tg.field_f[param1] + -80);
-            if (!ec.field_c.equals((Object) (Object) "underdark")) {
-              if (ec.field_c.equals((Object) (Object) "clockwork")) {
+            if (!ec.field_c.equals("underdark")) {
+              if (ec.field_c.equals("clockwork")) {
                 var5.c(0, 480 - var5.field_y - 46);
                 break L3;
               } else {
@@ -323,7 +324,7 @@ final class lj extends hg {
           }
         }
         L9: {
-          if (param1 != 9) {
+          if ((param1 ^ -1) != -10) {
             break L9;
           } else {
             var12 = new qb(640, 480);
@@ -342,8 +343,16 @@ final class lj extends hg {
           }
         }
         L10: {
-          if (param1 != 8) {
+          if (param0) {
             break L10;
+          } else {
+            lj.a(true, -39);
+            break L10;
+          }
+        }
+        L11: {
+          if ((param1 ^ -1) != -9) {
+            break L11;
           } else {
             var14 = new qb(640, 480);
             var14.a();
@@ -361,11 +370,11 @@ final class lj extends hg {
             var15.b(0, 0, 255);
             o.field_F.c(343, -2);
             j.field_a.c(108, 6);
-            break L10;
+            break L11;
           }
         }
-        L11: {
-          if (param1 == 11) {
+        L12: {
+          if ((param1 ^ -1) == -12) {
             var16 = new qb(640, 480);
             var16.a();
             gd.field_mb.c(320 - gd.field_mb.field_n / 2 + -72, 10);
@@ -375,12 +384,12 @@ final class lj extends hg {
             var16.b(0, 0, 255);
             gd.field_mb.c(248 + -(gd.field_mb.field_n / 2), 10);
             gd.field_mb.c(72 + -(gd.field_mb.field_n / 2) + 320, 10);
-            break L11;
+            break L12;
           } else {
-            break L11;
+            break L12;
           }
         }
-        L12: {
+        L13: {
           if (param1 == 12) {
             var17 = new qb(640, 480);
             var17.a();
@@ -391,9 +400,9 @@ final class lj extends hg {
             var17.b(0, 0, 255);
             gd.field_mb.c(320 - (gd.field_mb.field_n / 2 - -72), 0);
             gd.field_mb.c(72 + (320 - gd.field_mb.field_n / 2), 0);
-            break L12;
+            break L13;
           } else {
-            break L12;
+            break L13;
           }
         }
         rk.g(491697968);
@@ -405,12 +414,12 @@ final class lj extends hg {
         field_n = null;
         field_g = null;
         field_u = null;
-        field_o = null;
+        field_o = (String[][]) null;
         field_t = null;
         field_p = null;
         field_q = null;
         if (param0 != -80) {
-            Object var2 = null;
+            ec var2 = (ec) null;
             lj.a(-21, (ec) null, -125, -127);
         }
     }
@@ -419,41 +428,37 @@ final class lj extends hg {
         int var9 = 0;
         int var10 = ArcanistsMulti.field_G ? 1 : 0;
         long var2 = System.nanoTime();
-        long var4 = -((lj) this).field_s + var2;
-        ((lj) this).field_s = var2;
+        long var4 = -this.field_s + var2;
+        this.field_s = var2;
         if (-5000000000L < var4) {
             if (!(var4 >= 5000000000L)) {
-                ((lj) this).field_h[((lj) this).field_r] = var4;
-                ((lj) this).field_r = (((lj) this).field_r + 1) % 10;
-                if (!(((lj) this).field_l >= 1)) {
-                    ((lj) this).field_l = ((lj) this).field_l + 1;
+                this.field_h[this.field_r] = var4;
+                this.field_r = (this.field_r + 1) % 10;
+                if (!((this.field_l ^ -1) <= -2)) {
+                    this.field_l = this.field_l + 1;
                 }
             }
         }
         long var6 = 0L;
-        int var8 = 0;
-        for (var9 = 1; ((lj) this).field_l >= var9; var9++) {
-            var6 = var6 + ((lj) this).field_h[(-var9 + ((lj) this).field_r - -10) % 10];
+        int var8 = 82 % ((51 - param0) / 35);
+        for (var9 = 1; this.field_l >= var9; var9++) {
+            var6 = var6 + this.field_h[(-var9 + this.field_r - -10) % 10];
         }
-        return var6 / (long)((lj) this).field_l;
+        return var6 / (long)this.field_l;
     }
 
     lj() {
-        ((lj) this).field_r = 0;
-        ((lj) this).field_h = new long[10];
-        ((lj) this).field_i = 0L;
-        ((lj) this).field_f = 0L;
-        ((lj) this).field_s = 0L;
-        ((lj) this).field_l = 1;
-        ((lj) this).field_f = System.nanoTime();
-        ((lj) this).field_i = System.nanoTime();
+        this.field_r = 0;
+        this.field_h = new long[10];
+        this.field_i = 0L;
+        this.field_f = 0L;
+        this.field_s = 0L;
+        this.field_l = 1;
+        this.field_f = System.nanoTime();
+        this.field_i = System.nanoTime();
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Similar rating";
         field_u = new int[]{62};
         field_q = "ZOMBIE MONKEY KILLER - ";

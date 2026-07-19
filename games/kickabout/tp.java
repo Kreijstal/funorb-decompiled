@@ -8,13 +8,13 @@ final class tp {
 
     final void a() {
         int var1 = 0;
-        ((tp) this).field_b = 0;
-        for (var1 = 0; var1 < ((tp) this).field_c.length; var1++) {
-            ((tp) this).field_c[var1] = 0;
+        this.field_b = 0;
+        for (var1 = 0; var1 < this.field_c.length; var1++) {
+            this.field_c[var1] = 0;
         }
     }
 
     tp(int param0) {
-        ((tp) this).field_c = new int[param0];
+        this.field_c = new int[param0];
     }
 }

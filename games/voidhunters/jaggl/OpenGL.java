@@ -27,7 +27,7 @@ public class OpenGL {
         var1 = Thread.currentThread();
         if (this.attachPeer()) {
           L0: {
-            var3 = (jaggl.OpenGL) c.put((Object) (Object) var1, this);
+            var3 = (jaggl.OpenGL) (c.put(var1, this));
             if (var3 != null) {
               var3.a = null;
               break L0;
@@ -35,7 +35,7 @@ public class OpenGL {
               break L0;
             }
           }
-          ((jaggl.OpenGL) this).a = var1;
+          this.a = var1;
           return true;
         } else {
           return false;
@@ -165,12 +165,12 @@ public class OpenGL {
     public final native static void glFrustum(double param0, double param1, double param2, double param3, double param4, double param5);
 
     public final synchronized boolean b() {
-        if (((jaggl.OpenGL) this).a != Thread.currentThread()) {
+        if (this.a != Thread.currentThread()) {
             return false;
         }
         this.detachPeer();
-        Object discarded$0 = c.remove((Object) (Object) ((jaggl.OpenGL) this).a);
-        ((jaggl.OpenGL) this).a = null;
+        Object discarded$0 = c.remove(this.a);
+        this.a = null;
         return true;
     }
 
@@ -359,39 +359,41 @@ public class OpenGL {
     public final native static void glAlphaFunc(int param0, float param1);
 
     public final boolean a(String param0) {
+        Object discarded$7 = null;
+        Object discarded$8 = null;
         String var2 = null;
         int var3 = 0;
         int var4_int = 0;
         String var4 = null;
         Object var5 = null;
         String var5_ref = null;
-        if (((jaggl.OpenGL) this).b == null) {
-          ((jaggl.OpenGL) this).b = new Hashtable();
-          var2 = OpenGL.glGetString(7939);
+        if (this.b == null) {
+          this.b = new Hashtable();
+          var2 = jaggl.OpenGL.glGetString(7939);
           var3 = 0;
           L0: while (true) {
             var4_int = var2.indexOf(' ', var3);
-            if (var4_int != -1) {
+            if (0 != (var4_int ^ -1)) {
               var5_ref = var2.substring(var3, var4_int).trim();
               var3 = var4_int - -1;
               if (var5_ref.length() == 0) {
                 continue L0;
               } else {
-                Object discarded$7 = ((jaggl.OpenGL) this).b.put((Object) (Object) var5_ref, (Object) (Object) var5_ref);
+                discarded$7 = this.b.put(var5_ref, var5_ref);
                 continue L0;
               }
             } else {
               var4 = var2.substring(var3).trim();
               if (0 == var4.length()) {
-                return ((jaggl.OpenGL) this).b.containsKey((Object) (Object) param0);
+                return this.b.containsKey(param0);
               } else {
-                Object discarded$8 = ((jaggl.OpenGL) this).b.put((Object) (Object) var4, (Object) (Object) var4);
-                return ((jaggl.OpenGL) this).b.containsKey((Object) (Object) param0);
+                discarded$8 = this.b.put(var4, var4);
+                return this.b.containsKey(param0);
               }
             }
           }
         } else {
-          return ((jaggl.OpenGL) this).b.containsKey((Object) (Object) param0);
+          return this.b.containsKey(param0);
         }
     }
 
@@ -440,10 +442,6 @@ public class OpenGL {
     public final native static void glColorPointer(int param0, int param1, int param2, long param3);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         c = new Hashtable();
     }
 }

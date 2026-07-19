@@ -20,22 +20,21 @@ final class mc {
             od.field_i = param0;
             q.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "mc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "mc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void a(int param0) {
         field_b = null;
         field_e = null;
+        if (param0 != 23225) {
+            return;
+        }
         field_d = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "COMPONENTS";
         field_e = "Respawns - ";
         field_c = new rf();

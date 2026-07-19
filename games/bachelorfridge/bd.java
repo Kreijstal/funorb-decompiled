@@ -10,8 +10,9 @@ final class bd extends ot {
     static String field_k;
 
     final wba a(byte param0) {
+        wba discarded$0 = null;
         if (param0 != -106) {
-            wba discarded$0 = ((bd) this).a((byte) 64);
+            discarded$0 = this.a((byte) 64);
             return jda.field_g;
         }
         return jda.field_g;
@@ -22,7 +23,7 @@ final class bd extends ot {
     }
 
     public static void c(byte param0) {
-        field_l = null;
+        field_l = (int[][]) null;
         field_i = null;
         field_k = null;
         if (param0 >= -119) {
@@ -34,10 +35,6 @@ final class bd extends ot {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = -1;
         field_h = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
     }

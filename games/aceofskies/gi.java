@@ -16,22 +16,23 @@ final class gi extends za {
     }
 
     gi(int param0) {
-        ((gi) this).field_h = new jaclib.memory.heap.NativeHeap(param0);
+        this.field_h = new jaclib.memory.heap.NativeHeap(param0);
     }
 
     final void d(int param0) {
-        ((gi) this).field_h.a();
+        this.field_h.a();
         if (param0 <= 124) {
             gi.a(-62);
         }
     }
 
     public static void a(int param0) {
+        boolean discarded$0 = false;
         field_g = null;
         field_i = null;
         field_f = null;
         if (param0 != -12085) {
-            boolean discarded$0 = gi.a(false);
+            discarded$0 = gi.a(false);
             field_e = null;
             return;
         }
@@ -39,10 +40,6 @@ final class gi extends za {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new int[1024];
         field_f = new String[]{"By rating", "By win percentage"};
         field_e = new int[]{-1, -1, -1, -1, -1, -1, 70, -1, -1, -1, 70, 150, -1, -1, -1, -1, -1, -1, -1, -1, 30, 30};

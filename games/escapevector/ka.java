@@ -11,7 +11,14 @@ final class ka {
     static int[] field_d;
 
     final static void a(int param0) {
+        int var1_int = 0;
         RuntimeException var1 = null;
+        int var2 = 0;
+        fn var3 = null;
+        ed var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        fn var7 = null;
         int var8 = 0;
         int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -22,19 +29,44 @@ final class ka {
               decompiledRegionSelector0 = 0;
               break L0;
             } else {
-              decompiledRegionSelector0 = 1;
-              break L0;
+              if (param0 > 48) {
+                dj.field_d = new fn[sc.field_h.length];
+                var1_int = 0;
+                L1: while (true) {
+                  if (var1_int >= sc.field_h.length) {
+                    decompiledRegionSelector0 = 2;
+                    break L0;
+                  } else {
+                    var2 = sc.field_h[var1_int];
+                    var3 = ph.field_b;
+                    var4 = k.a(var2, (byte) -39, 2);
+                    var5 = var4.field_A - var3.field_c;
+                    var6 = -var3.field_b + var4.field_z;
+                    var7 = new fn(var5, var6);
+                    dj.field_d[var1_int] = rc.a(var2, (byte) 121, var7, var3);
+                    var1_int++;
+                    continue L1;
+                  }
+                }
+              } else {
+                decompiledRegionSelector0 = 1;
+                break L0;
+              }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1, "ka.A(" + 105 + ')');
+          throw t.a((Throwable) ((Object) var1), "ka.A(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
         } else {
-          return;
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -57,26 +89,25 @@ final class ka {
             return;
         }
         try {
+            if (param6 != -74) {
+                ka.a(1);
+            }
             bf.a(param7, param2, param4, param0, param3, param5, 2147483647);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ka.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + -74 + ',' + param7 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "ka.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     public static void a(byte param0) {
         field_c = null;
         field_d = null;
-        int var1 = 0;
+        int var1 = 23 % ((param0 - 60) / 46);
         field_b = null;
         field_a = null;
         field_e = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[17];
         field_d = new int[17];
         field_b[2] = 500;

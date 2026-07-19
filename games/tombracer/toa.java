@@ -12,10 +12,19 @@ final class toa extends vg {
     int field_m;
 
     final static int a(boolean param0) {
+        if (param0) {
+            return -128;
+        }
         return wua.field_n;
     }
 
     public static void a(int param0) {
+        int discarded$0 = 0;
+        if (param0 != 3402) {
+            discarded$0 = toa.a(false);
+            field_f = null;
+            return;
+        }
         field_f = null;
     }
 

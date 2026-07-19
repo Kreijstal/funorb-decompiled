@@ -11,32 +11,33 @@ final class lra extends ora implements va {
 
     public final void a(int param0, int param1, byte param2, byte[] param3) {
         try {
-            ((lra) this).a(param3, param1);
+            this.a(param3, param1);
             if (param2 > -109) {
             }
-            ((lra) this).field_h = param0;
+            this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "lra.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "lra.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     lra(cka param0, int param1, byte[] param2, int param3) {
         super(param0, param2, param3);
         try {
-            ((lra) this).field_h = param1;
+            this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "lra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "lra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     public final long b(int param0) {
         int var2 = 54 % ((30 - param0) / 32);
-        return ((lra) this).field_b.getAddress();
+        return this.field_b.getAddress();
     }
 
     public final int a(boolean param0) {
+        int discarded$0 = 0;
         if (!param0) {
-            int discarded$0 = ((lra) this).a(-89);
+            discarded$0 = this.a(-89);
             return 0;
         }
         return 0;
@@ -54,16 +55,12 @@ final class lra extends ora implements va {
     public final int a(int param0) {
         if (param0 != 26653) {
             field_g = 30;
-            return ((lra) this).field_h;
+            return this.field_h;
         }
-        return ((lra) this).field_h;
+        return this.field_h;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 2023746978L;
         field_c = new String[16];
         field_g = 0;

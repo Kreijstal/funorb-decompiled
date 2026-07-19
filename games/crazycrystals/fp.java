@@ -10,11 +10,12 @@ final class fp {
     static am field_c;
 
     public static void a(byte param0) {
+        String discarded$2 = null;
         field_d = null;
         field_f = null;
         field_c = null;
         if (param0 < 80) {
-          String discarded$2 = fp.a(true, false, false, (byte) 3);
+          discarded$2 = fp.a(true, false, false, (byte) 3);
           field_b = null;
           field_e = null;
           return;
@@ -91,10 +92,6 @@ final class fp {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Members' Benefits";
         field_f = "Do the same thing here to open the way through. You only need one key, but in the game, extra keys give you extra points!";
     }

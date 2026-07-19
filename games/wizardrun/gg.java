@@ -20,16 +20,16 @@ final class gg {
         int[] var11 = null;
         L0: {
           var3 = param0.f(255);
-          ((gg) this).field_a[0] = var3 >> 4;
-          ((gg) this).field_a[1] = var3 & 15;
+          this.field_a[0] = var3 >> 4;
+          this.field_a[1] = var3 & 15;
           if (var3 == 0) {
-            var11 = ((gg) this).field_g;
-            ((gg) this).field_g[1] = 0;
+            var11 = this.field_g;
+            this.field_g[1] = 0;
             var11[0] = 0;
             break L0;
           } else {
-            ((gg) this).field_g[0] = param0.j(-14477);
-            ((gg) this).field_g[1] = param0.j(-14477);
+            this.field_g[0] = param0.j(-14477);
+            this.field_g[1] = param0.j(-14477);
             var4 = param0.f(255);
             var5 = 0;
             L1: while (true) {
@@ -41,7 +41,7 @@ final class gg {
                       if (var4 != 0) {
                         break L3;
                       } else {
-                        if (((gg) this).field_g[1] == ((gg) this).field_g[0]) {
+                        if (this.field_g[1] == this.field_g[0]) {
                           break L0;
                         } else {
                           break L3;
@@ -54,18 +54,18 @@ final class gg {
                     var7 = 0;
                     var6 = var7;
                     L4: while (true) {
-                      if (var7 >= ((gg) this).field_a[var5]) {
+                      if (var7 >= this.field_a[var5]) {
                         var5++;
                         continue L2;
                       } else {
                         if ((var4 & 1 << var5 * 4 << var7) == 0) {
-                          ((gg) this).field_e[var5][1][var7] = ((gg) this).field_e[var5][0][var7];
-                          ((gg) this).field_h[var5][1][var7] = ((gg) this).field_h[var5][0][var7];
+                          this.field_e[var5][1][var7] = this.field_e[var5][0][var7];
+                          this.field_h[var5][1][var7] = this.field_h[var5][0][var7];
                           var7++;
                           continue L4;
                         } else {
-                          ((gg) this).field_e[var5][1][var7] = param0.j(-14477);
-                          ((gg) this).field_h[var5][1][var7] = param0.j(-14477);
+                          this.field_e[var5][1][var7] = param0.j(-14477);
+                          this.field_h[var5][1][var7] = param0.j(-14477);
                           var7++;
                           continue L4;
                         }
@@ -76,12 +76,12 @@ final class gg {
               } else {
                 var6 = 0;
                 L5: while (true) {
-                  if (var6 >= ((gg) this).field_a[var5]) {
+                  if (var6 >= this.field_a[var5]) {
                     var5++;
                     continue L1;
                   } else {
-                    ((gg) this).field_e[var5][0][var6] = param0.j(-14477);
-                    ((gg) this).field_h[var5][0][var6] = param0.j(-14477);
+                    this.field_e[var5][0][var6] = param0.j(-14477);
+                    this.field_h[var5][0][var6] = param0.j(-14477);
                     var6++;
                     continue L5;
                   }
@@ -107,27 +107,27 @@ final class gg {
           if (param0 != 0) {
             break L0;
           } else {
-            var3 = (float)((gg) this).field_g[0] + (float)(((gg) this).field_g[1] - ((gg) this).field_g[0]) * param1;
+            var3 = (float)this.field_g[0] + (float)(this.field_g[1] - this.field_g[0]) * param1;
             var3 = var3 * 0.0030517578125f;
             field_f = (float)Math.pow(0.1, (double)(var3 / 20.0f));
             field_d = (int)(field_f * 65536.0f);
             break L0;
           }
         }
-        if (((gg) this).field_a[param0] != 0) {
+        if (this.field_a[param0] != 0) {
           var3 = this.a(param0, 0, param1);
           field_b[param0][0] = -2.0f * var3 * (float)Math.cos((double)this.b(param0, 0, param1));
           field_b[param0][1] = var3 * var3;
           var4 = 1;
           L1: while (true) {
-            if (var4 >= ((gg) this).field_a[param0]) {
+            if (var4 >= this.field_a[param0]) {
               L2: {
                 if (param0 != 0) {
                   break L2;
                 } else {
                   var4 = 0;
                   L3: while (true) {
-                    if (var4 >= ((gg) this).field_a[0] * 2) {
+                    if (var4 >= this.field_a[0] * 2) {
                       break L2;
                     } else {
                       field_b[0][var4] = field_b[0][var4] * field_f;
@@ -139,8 +139,8 @@ final class gg {
               }
               var4 = 0;
               L4: while (true) {
-                if (var4 >= ((gg) this).field_a[param0] * 2) {
-                  return ((gg) this).field_a[param0] * 2;
+                if (var4 >= this.field_a[param0] * 2) {
+                  return this.field_a[param0] * 2;
                 } else {
                   field_c[param0][var4] = (int)(field_b[param0][var4] * 65536.0f);
                   var4++;
@@ -174,34 +174,30 @@ final class gg {
     }
 
     private final float a(int param0, int param1, float param2) {
-        float var4 = (float)((gg) this).field_h[param0][0][param1] + param2 * (float)(((gg) this).field_h[param0][1][param1] - ((gg) this).field_h[param0][0][param1]);
+        float var4 = (float)this.field_h[param0][0][param1] + param2 * (float)(this.field_h[param0][1][param1] - this.field_h[param0][0][param1]);
         var4 = var4 * 0.00152587890625f;
         return 1.0f - (float)Math.pow(10.0, (double)(-var4 / 20.0f));
     }
 
     public static void a() {
-        field_b = null;
-        field_c = null;
+        field_b = (float[][]) null;
+        field_c = (int[][]) null;
     }
 
     private final float b(int param0, int param1, float param2) {
-        float var4 = (float)((gg) this).field_e[param0][0][param1] + param2 * (float)(((gg) this).field_e[param0][1][param1] - ((gg) this).field_e[param0][0][param1]);
+        float var4 = (float)this.field_e[param0][0][param1] + param2 * (float)(this.field_e[param0][1][param1] - this.field_e[param0][0][param1]);
         var4 = var4 * 0.0001220703125f;
         return gg.a(var4);
     }
 
     gg() {
-        ((gg) this).field_e = new int[2][2][4];
-        ((gg) this).field_h = new int[2][2][4];
-        ((gg) this).field_a = new int[2];
-        ((gg) this).field_g = new int[2];
+        this.field_e = new int[2][2][4];
+        this.field_h = new int[2][2][4];
+        this.field_a = new int[2];
+        this.field_g = new int[2];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[2][8];
         field_b = new float[2][8];
     }

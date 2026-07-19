@@ -19,11 +19,11 @@ final class af {
     static String field_b;
 
     final void a(int param0, int param1, int param2) {
-        ((af) this).field_n = param0;
-        ((af) this).field_l = param2;
+        this.field_n = param0;
+        this.field_l = param2;
         if (param1 != 255) {
-            Object var5 = null;
-            ((af) this).a(82, 103, (uk) null, 11, 35);
+            uk var5 = (uk) null;
+            this.a(82, 103, (uk) null, 11, 35);
         }
     }
 
@@ -31,6 +31,9 @@ final class af {
         field_b = null;
         field_a = null;
         field_o = null;
+        if (param0 >= -103) {
+            field_a = (String) null;
+        }
     }
 
     final static km[] a(byte param0) {
@@ -41,7 +44,7 @@ final class af {
         int var6 = 0;
         int var7 = Chess.field_G;
         if (param0 > -86) {
-            field_o = null;
+            field_o = (ci) null;
         }
         km[] var1 = new km[h.field_n];
         for (var2 = 0; h.field_n > var2; var2++) {
@@ -58,39 +61,65 @@ final class af {
     }
 
     final static boolean b(byte param0) {
-        return me.field_a != null && me.field_a.k(-1);
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
+        if (param0 > 14) {
+          L0: {
+            L1: {
+              if (me.field_a == null) {
+                break L1;
+              } else {
+                if (!me.field_a.k(-1)) {
+                  break L1;
+                } else {
+                  stackOut_4_0 = 1;
+                  stackIn_6_0 = stackOut_4_0;
+                  break L0;
+                }
+              }
+            }
+            stackOut_5_0 = 0;
+            stackIn_6_0 = stackOut_5_0;
+            break L0;
+          }
+          return stackIn_6_0 != 0;
+        } else {
+          return false;
+        }
     }
 
     final void a(byte param0, int param1) {
-        ((af) this).field_l = param1;
-        ((af) this).field_d = true;
+        km[] discarded$0 = null;
+        this.field_l = param1;
+        this.field_d = true;
         if (param0 != 93) {
-            km[] discarded$0 = af.a((byte) 21);
+            discarded$0 = af.a((byte) 21);
         }
     }
 
     final void a(int param0, p param1, uk param2, un param3) {
         try {
             if (param0 != 0) {
-                Object var6 = null;
-                ((af) this).a(68, -28, (uk) null, 40, 39);
+                uk var6 = (uk) null;
+                this.a(68, -28, (uk) null, 40, 39);
             }
             param2.a(param3, param1, true);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "af.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "af.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     af(int param0, String[] param1, int param2) {
-        ((af) this).field_f = -2;
+        this.field_f = -2;
         try {
-            ((af) this).field_j = param0;
-            ((af) this).field_h = (byte)param1.length;
-            ((af) this).field_l = param2;
-            ((af) this).field_k = param2;
-            ((af) this).field_i = param1;
+            this.field_j = param0;
+            this.field_h = (byte)param1.length;
+            this.field_l = param2;
+            this.field_k = param2;
+            this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "af.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "af.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -114,7 +143,7 @@ final class af {
         String stackOut_14_2 = null;
         try {
           L0: {
-            if (((af) this).field_d) {
+            if (this.field_d) {
               throw new IllegalStateException();
             } else {
               L1: {
@@ -127,14 +156,14 @@ final class af {
                     if (0 > param4) {
                       break L1;
                     } else {
-                      if (param4 >= 64) {
+                      if (-65 >= (param4 ^ -1)) {
                         break L1;
                       } else {
                         L2: {
                           if (param3 == -65) {
                             break L2;
                           } else {
-                            ((af) this).field_l = -106;
+                            this.field_l = -106;
                             break L2;
                           }
                         }
@@ -152,23 +181,23 @@ final class af {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) runtimeException;
+            stackOut_13_0 = (RuntimeException) (runtimeException);
             stackOut_13_1 = new StringBuilder().append("af.E(").append(param0).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -176,15 +205,11 @@ final class af {
               break L3;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param3 + ',' + param4 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "To report a player, click on the most suitable option from the Rules of Conduct. Please do not abuse this form.";
         field_b = "You appear to be telling someone your password - please don't!";
     }

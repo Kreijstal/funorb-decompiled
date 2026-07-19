@@ -8,14 +8,13 @@ final class fo {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != -15135) {
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fo.A(";
         field_b = "Please wait...";
     }

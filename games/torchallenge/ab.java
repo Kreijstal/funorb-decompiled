@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.awt.Canvas;
-
 final class ab {
     byte[] field_k;
     int field_l;
@@ -20,6 +18,7 @@ final class ab {
     static int[] field_e;
 
     final static java.awt.Canvas a(int param0) {
+        java.awt.Canvas discarded$9 = null;
         Object stackIn_4_0 = null;
         Object stackIn_8_0 = null;
         java.awt.Canvas stackOut_7_0 = null;
@@ -28,46 +27,46 @@ final class ab {
         ad stackOut_2_0 = null;
         if (param0 <= 26) {
           L0: {
-            java.awt.Canvas discarded$9 = ab.a(81);
+            discarded$9 = ab.a(81);
             if (null == gi.field_d) {
               stackOut_7_0 = bg.field_P;
-              stackIn_8_0 = (Object) (Object) stackOut_7_0;
+              stackIn_8_0 = stackOut_7_0;
               break L0;
             } else {
               stackOut_6_0 = gi.field_d;
-              stackIn_8_0 = (Object) (Object) stackOut_6_0;
+              stackIn_8_0 = stackOut_6_0;
               break L0;
             }
           }
-          return (java.awt.Canvas) (Object) stackIn_8_0;
+          return (java.awt.Canvas) ((Object) stackIn_8_0);
         } else {
           L1: {
             if (null == gi.field_d) {
               stackOut_3_0 = bg.field_P;
-              stackIn_4_0 = (Object) (Object) stackOut_3_0;
+              stackIn_4_0 = stackOut_3_0;
               break L1;
             } else {
               stackOut_2_0 = gi.field_d;
-              stackIn_4_0 = (Object) (Object) stackOut_2_0;
+              stackIn_4_0 = stackOut_2_0;
               break L1;
             }
           }
-          return (java.awt.Canvas) (Object) stackIn_4_0;
+          return (java.awt.Canvas) ((Object) stackIn_4_0);
         }
     }
 
     public static void a(boolean param0) {
+        java.awt.Canvas discarded$0 = null;
         field_n = null;
         field_e = null;
         field_m = null;
         field_g = null;
+        if (!param0) {
+            discarded$0 = ab.a(-3);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Age:";
         field_n = "Close";
         field_d = 1;

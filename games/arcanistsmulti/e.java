@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class e extends df implements bn, vb {
     static int field_Q;
     private boolean field_R;
@@ -53,23 +51,23 @@ final class e extends df implements bn, vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("e.G(");
             stackIn_6_0 = stackOut_3_0;
             stackIn_6_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_7_0 = stackOut_4_0;
               stackIn_7_1 = stackOut_4_1;
@@ -77,19 +75,20 @@ final class e extends df implements bn, vb {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
     }
 
     final static void g(byte param0) {
         RuntimeException runtimeException = null;
         rb var1 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
             if (param0 == -49) {
               L1: {
-                var1 = (rb) (Object) pb.field_m.b(12623);
+                var1 = (rb) ((Object) pb.field_m.b(12623));
                 if (null != var1) {
                   var1.field_h = var1.field_h - 1;
                   if (var1.field_h >= 0) {
@@ -102,19 +101,27 @@ final class e extends df implements bn, vb {
                   break L1;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) runtimeException, "e.C(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "e.C(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public final void b(rn param0, int param1) {
+        boolean discarded$2 = false;
         RuntimeException var3 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -135,15 +142,15 @@ final class e extends df implements bn, vb {
         try {
           L0: {
             L1: {
-              if (((e) this).field_O != param0) {
+              if (this.field_O != param0) {
                 break L1;
               } else {
-                boolean discarded$2 = ((e) this).field_G.a(0, (qm) this);
+                discarded$2 = this.field_G.a(0, (qm) (this));
                 break L1;
               }
             }
             L2: {
-              if (((e) this).field_G == param0) {
+              if (this.field_G == param0) {
                 this.a((byte) -83);
                 break L2;
               } else {
@@ -154,7 +161,7 @@ final class e extends df implements bn, vb {
               if (param1 >= 73) {
                 break L3;
               } else {
-                ((e) this).a((rn) null, 105);
+                this.a((rn) null, 105);
                 break L3;
               }
             }
@@ -164,23 +171,23 @@ final class e extends df implements bn, vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_0 = (RuntimeException) (var3);
             stackOut_11_1 = new StringBuilder().append("e.H(");
             stackIn_14_0 = stackOut_11_0;
             stackIn_14_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_15_0 = stackOut_12_0;
               stackIn_15_1 = stackOut_12_1;
@@ -188,7 +195,7 @@ final class e extends df implements bn, vb {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');
         }
     }
 
@@ -205,6 +212,7 @@ final class e extends df implements bn, vb {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         boolean stackOut_14_0 = false;
@@ -223,30 +231,34 @@ final class e extends df implements bn, vb {
             if (super.a(param0, (byte) -123, param2, param3)) {
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 if (param1 <= -120) {
                   break L1;
                 } else {
-                  ((e) this).field_P = null;
+                  this.field_P = (ag) null;
                   break L1;
                 }
               }
-              if (param3 != 98) {
-                if (param3 == 99) {
-                  stackOut_14_0 = ((e) this).b(2, param0);
+              if (-99 != (param3 ^ -1)) {
+                if (-100 == (param3 ^ -1)) {
+                  stackOut_14_0 = this.b(2, param0);
                   stackIn_15_0 = stackOut_14_0;
-                  return stackIn_15_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   stackOut_16_0 = 0;
                   stackIn_17_0 = stackOut_16_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 }
               } else {
-                stackOut_9_0 = ((e) this).a(param0, 9555);
+                stackOut_9_0 = this.a(param0, 9555);
                 stackIn_10_0 = stackOut_9_0;
-                return stackIn_10_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -254,23 +266,23 @@ final class e extends df implements bn, vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var5;
+            stackOut_18_0 = (RuntimeException) (var5);
             stackOut_18_1 = new StringBuilder().append("e.N(");
             stackIn_21_0 = stackOut_18_0;
             stackIn_21_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L2;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_22_0 = stackOut_19_0;
               stackIn_22_1 = stackOut_19_1;
@@ -278,9 +290,21 @@ final class e extends df implements bn, vb {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_17_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_10_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_15_0;
+            } else {
+              return stackIn_17_0 != 0;
+            }
+          }
+        }
     }
 
     final void a(int param0, String param1) {
@@ -306,40 +330,40 @@ final class e extends df implements bn, vb {
         try {
           L0: {
             L1: {
-              var3 = ((e) this).field_O;
+              var3 = this.field_O;
               var4 = param1;
               var3.a(false, var4, false);
               if (param0 == 26152) {
                 break L1;
               } else {
-                ((e) this).field_G = null;
+                this.field_G = (rn) null;
                 break L1;
               }
             }
-            ((e) this).field_G.g(3545);
+            this.field_G.g(3545);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) runtimeException;
+            stackOut_5_0 = (RuntimeException) (runtimeException);
             stackOut_5_1 = new StringBuilder().append("e.J(").append(param0).append(',');
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
@@ -347,7 +371,7 @@ final class e extends df implements bn, vb {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
@@ -371,7 +395,7 @@ final class e extends df implements bn, vb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var5, "e.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) var5), "e.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -385,11 +409,14 @@ final class e extends df implements bn, vb {
             field_M = null;
             field_D = null;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "e.I(" + param0 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "e.I(" + param0 + ')');
         }
     }
 
     final static void a(byte[] param0, boolean param1) {
+        int discarded$3 = 0;
+        byte dupTemp$4 = 0;
+        byte dupTemp$5 = 0;
         RuntimeException var2 = null;
         wk var2_ref = null;
         int var3 = 0;
@@ -496,7 +523,7 @@ final class e extends df implements bn, vb {
             L1: while (true) {
               L2: {
                 L3: {
-                  if (~var4 <= ~h.field_J) {
+                  if ((var4 ^ -1) <= (h.field_J ^ -1)) {
                     break L3;
                   } else {
                     hl.field_l[var4] = var2_ref.n(-98);
@@ -562,7 +589,7 @@ final class e extends df implements bn, vb {
                   L10: while (true) {
                     L11: {
                       L12: {
-                        if (~h.field_J >= ~var4) {
+                        if ((h.field_J ^ -1) >= (var4 ^ -1)) {
                           break L12;
                         } else {
                           ho.field_i[var4] = var2_ref.n(-98);
@@ -591,7 +618,7 @@ final class e extends df implements bn, vb {
                           } else {
                             ph.field_c[var4] = var2_ref.h(11609);
                             stackOut_34_0 = -1;
-                            stackOut_34_1 = ~ph.field_c[var4];
+                            stackOut_34_1 = ph.field_c[var4] ^ -1;
                             stackIn_42_0 = stackOut_34_0;
                             stackIn_42_1 = stackOut_34_1;
                             stackIn_35_0 = stackOut_34_0;
@@ -627,13 +654,13 @@ final class e extends df implements bn, vb {
                         if (stackIn_42_0 == stackIn_42_1) {
                           break L17;
                         } else {
-                          int discarded$3 = e.a((hc) null, -42, (hc) null);
+                          discarded$3 = e.a((hc) null, -42, (hc) null);
                           break L17;
                         }
                       }
                       var4 = 0;
                       L18: while (true) {
-                        stackOut_46_0 = ~h.field_J;
+                        stackOut_46_0 = h.field_J ^ -1;
                         stackIn_47_0 = stackOut_46_0;
                         L19: while (true) {
                           stackOut_47_0 = stackIn_47_0;
@@ -663,7 +690,7 @@ final class e extends df implements bn, vb {
                                     L23: {
                                       L24: {
                                         L25: {
-                                          if ((var11 & 1) != 0) {
+                                          if ((var11 & 1 ^ -1) != -1) {
                                             break L25;
                                           } else {
                                             var12 = 0;
@@ -691,15 +718,15 @@ final class e extends df implements bn, vb {
                                                 var12 = 0;
                                                 L28: while (true) {
                                                   L29: {
-                                                    if (~var12 <= ~var7) {
+                                                    if ((var12 ^ -1) <= (var7 ^ -1)) {
                                                       break L29;
                                                     } else {
-                                                      byte dupTemp$4 = var2_ref.o(6);
+                                                      dupTemp$4 = var2_ref.o(6);
                                                       var9[var12] = dupTemp$4;
                                                       var13 = dupTemp$4;
                                                       stackOut_62_0 = var10;
                                                       stackOut_62_1 = 0;
-                                                      stackOut_62_2 = ~var13;
+                                                      stackOut_62_2 = var13 ^ -1;
                                                       stackIn_48_0 = stackOut_62_0;
                                                       stackIn_48_1 = stackOut_62_1;
                                                       stackIn_48_2 = stackOut_62_2;
@@ -764,7 +791,7 @@ final class e extends df implements bn, vb {
                                                   L34: while (true) {
                                                     L35: {
                                                       L36: {
-                                                        if (~var6 >= ~var13) {
+                                                        if ((var6 ^ -1) >= (var13 ^ -1)) {
                                                           break L36;
                                                         } else {
                                                           var8[var13 * var5 + var12] = var2_ref.o(6);
@@ -816,14 +843,14 @@ final class e extends df implements bn, vb {
                                                     var13 = stackIn_88_0;
                                                     L39: while (true) {
                                                       L40: {
-                                                        if (~var13 <= ~var6) {
+                                                        if ((var13 ^ -1) <= (var6 ^ -1)) {
                                                           break L40;
                                                         } else {
-                                                          byte dupTemp$5 = var2_ref.o(6);
+                                                          dupTemp$5 = var2_ref.o(6);
                                                           var9[var5 * var13 + var12] = dupTemp$5;
                                                           var14 = dupTemp$5;
                                                           stackOut_90_0 = var10;
-                                                          stackOut_90_1 = ~var14;
+                                                          stackOut_90_1 = var14 ^ -1;
                                                           stackIn_86_0 = stackOut_90_0;
                                                           stackIn_86_1 = stackOut_90_1;
                                                           stackIn_91_0 = stackOut_90_0;
@@ -903,23 +930,23 @@ final class e extends df implements bn, vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L42: {
             var2 = decompiledCaughtException;
-            stackOut_100_0 = (RuntimeException) var2;
+            stackOut_100_0 = (RuntimeException) (var2);
             stackOut_100_1 = new StringBuilder().append("e.Q(");
             stackIn_103_0 = stackOut_100_0;
             stackIn_103_1 = stackOut_100_1;
             stackIn_101_0 = stackOut_100_0;
             stackIn_101_1 = stackOut_100_1;
             if (param0 == null) {
-              stackOut_103_0 = (RuntimeException) (Object) stackIn_103_0;
-              stackOut_103_1 = (StringBuilder) (Object) stackIn_103_1;
+              stackOut_103_0 = (RuntimeException) ((Object) stackIn_103_0);
+              stackOut_103_1 = (StringBuilder) ((Object) stackIn_103_1);
               stackOut_103_2 = "null";
               stackIn_104_0 = stackOut_103_0;
               stackIn_104_1 = stackOut_103_1;
               stackIn_104_2 = stackOut_103_2;
               break L42;
             } else {
-              stackOut_101_0 = (RuntimeException) (Object) stackIn_101_0;
-              stackOut_101_1 = (StringBuilder) (Object) stackIn_101_1;
+              stackOut_101_0 = (RuntimeException) ((Object) stackIn_101_0);
+              stackOut_101_1 = (StringBuilder) ((Object) stackIn_101_1);
               stackOut_101_2 = "{...}";
               stackIn_104_0 = stackOut_101_0;
               stackIn_104_1 = stackOut_101_1;
@@ -927,40 +954,41 @@ final class e extends df implements bn, vb {
               break L42;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_104_0, stackIn_104_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_104_0), stackIn_104_2 + ',' + param1 + ')');
         }
     }
 
     final void f(boolean param0) {
         try {
-            ((e) this).field_O.g(3545);
-            ((e) this).field_G.g(3545);
+            this.field_O.g(3545);
+            this.field_G.g(3545);
             if (!param0) {
-                ((e) this).field_G = null;
+                this.field_G = (rn) null;
             }
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "e.M(" + param0 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "e.M(" + param0 + ')');
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
+        int discarded$1 = 0;
         RuntimeException var5 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
             L1: {
-              if (null != ((e) this).field_E) {
-                int discarded$1 = ia.field_c.a(((e) this).field_E, 20 + ((e) this).field_n + param1, 15 + (((e) this).field_j + param3), ((e) this).field_v + -40, ((e) this).field_k, 16777215, -1, 1, 0, ia.field_c.field_C);
+              if (null != this.field_E) {
+                discarded$1 = ia.field_c.a(this.field_E, 20 + this.field_n + param1, 15 + (this.field_j + param3), this.field_v + -40, this.field_k, 16777215, -1, 1, 0, ia.field_c.field_C);
                 break L1;
               } else {
                 break L1;
               }
             }
             L2: {
-              if (((e) this).field_J == null) {
+              if (this.field_J == null) {
                 break L2;
               } else {
-                de.f(param1 + 10, param3 + 134, ((e) this).field_v - 20, 4210752);
+                de.f(param1 + 10, param3 + 134, this.field_v - 20, 4210752);
                 break L2;
               }
             }
@@ -978,12 +1006,14 @@ final class e extends df implements bn, vb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var5, "e.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) var5), "e.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     e(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (pf) null);
+        ke dupTemp$2 = null;
+        ke dupTemp$3 = null;
         RuntimeException var6 = null;
         mm var6_ref = null;
         dj var7 = null;
@@ -1053,18 +1083,18 @@ final class e extends df implements bn, vb {
         try {
           L0: {
             L1: {
-              ((e) this).field_F = param2;
-              ((e) this).field_N = param4;
-              ((e) this).field_E = param1;
-              ((e) this).field_R = param3;
-              if (!((e) this).field_F) {
+              this.field_F = param2;
+              this.field_N = param4;
+              this.field_E = param1;
+              this.field_R = param3;
+              if (!this.field_F) {
                 break L1;
               } else {
                 L2: {
-                  if (((e) this).field_R) {
+                  if (this.field_R) {
                     break L2;
                   } else {
-                    if (!((e) this).field_N) {
+                    if (!this.field_N) {
                       break L1;
                     } else {
                       break L2;
@@ -1076,14 +1106,14 @@ final class e extends df implements bn, vb {
             }
             L3: {
               L4: {
-                ((e) this).field_O = (rn) (Object) new bi(param0, (wc) this, 100);
-                ((e) this).field_G = (rn) (Object) new bi("", (wc) this, 20);
-                if (!((e) this).field_F) {
+                this.field_O = (rn) ((Object) new bi(param0, (wc) (this), 100));
+                this.field_G = (rn) ((Object) new bi("", (wc) (this), 20));
+                if (!this.field_F) {
                   break L4;
                 } else {
-                  ((e) this).field_P = new ag(sk.field_b, (wc) null);
-                  ((e) this).field_L = new ag(ki.field_u, (wc) null);
-                  ((e) this).field_O.field_B = false;
+                  this.field_P = new ag(sk.field_b, (wc) null);
+                  this.field_L = new ag(ki.field_u, (wc) null);
+                  this.field_O.field_B = false;
                   if (var11 == 0) {
                     break L3;
                   } else {
@@ -1092,7 +1122,7 @@ final class e extends df implements bn, vb {
                 }
               }
               L5: {
-                ((e) this).field_P = new ag(w.field_Qb, (wc) null);
+                this.field_P = new ag(w.field_Qb, (wc) null);
                 stackOut_12_0 = this;
                 stackOut_12_1 = null;
                 stackOut_12_2 = null;
@@ -1102,7 +1132,7 @@ final class e extends df implements bn, vb {
                 stackIn_13_0 = stackOut_12_0;
                 stackIn_13_1 = stackOut_12_1;
                 stackIn_13_2 = stackOut_12_2;
-                if (((e) this).field_N) {
+                if (this.field_N) {
                   stackOut_17_0 = this;
                   stackOut_17_1 = null;
                   stackOut_17_2 = null;
@@ -1130,49 +1160,49 @@ final class e extends df implements bn, vb {
                   break L5;
                 }
               }
-              ((e) this).field_L = new ag(stackIn_18_3, (wc) null);
-              if (((e) this).field_R) {
-                ((e) this).field_J = new ag(ib.field_t, (wc) this);
+              ((e) (this)).field_L = new ag(stackIn_18_3, (wc) null);
+              if (this.field_R) {
+                this.field_J = new ag(ib.field_t, (wc) (this));
                 break L3;
               } else {
                 break L3;
               }
             }
             L6: {
-              ((e) this).field_O.field_r = (pf) (Object) new ib(10000536);
-              ((e) this).field_G.field_r = (pf) (Object) new tc(10000536);
+              this.field_O.field_r = (pf) ((Object) new ib(10000536));
+              this.field_G.field_r = (pf) ((Object) new tc(10000536));
               var6_ref = new mm();
-              ((e) this).field_P.field_r = (pf) (Object) var6_ref;
-              if (null == ((e) this).field_L) {
+              this.field_P.field_r = (pf) ((Object) var6_ref);
+              if (null == this.field_L) {
                 break L6;
               } else {
-                ((e) this).field_L.field_r = (pf) (Object) var6_ref;
+                this.field_L.field_r = (pf) ((Object) var6_ref);
                 break L6;
               }
             }
             L7: {
-              if (((e) this).field_J != null) {
-                ((e) this).field_J.field_r = (pf) (Object) var6_ref;
+              if (this.field_J != null) {
+                this.field_J.field_r = (pf) ((Object) var6_ref);
                 break L7;
               } else {
                 break L7;
               }
             }
             L8: {
-              ((e) this).field_O.field_q = ln.field_L;
-              if (((e) this).field_J == null) {
+              this.field_O.field_q = ln.field_L;
+              if (this.field_J == null) {
                 break L8;
               } else {
-                ((e) this).field_J.field_q = dh.field_Bb;
+                this.field_J.field_q = dh.field_Bb;
                 break L8;
               }
             }
             L9: {
               L10: {
-                if (!((e) this).field_F) {
+                if (!this.field_F) {
                   break L10;
                 } else {
-                  ((e) this).field_L.field_q = fo.field_e;
+                  this.field_L.field_q = fo.field_e;
                   if (var11 == 0) {
                     break L9;
                   } else {
@@ -1181,10 +1211,10 @@ final class e extends df implements bn, vb {
                 }
               }
               L11: {
-                if (((e) this).field_N) {
+                if (this.field_N) {
                   break L11;
                 } else {
-                  ((e) this).field_L.field_r = (pf) (Object) new gm();
+                  this.field_L.field_r = (pf) ((Object) new gm());
                   if (var11 == 0) {
                     break L9;
                   } else {
@@ -1192,17 +1222,17 @@ final class e extends df implements bn, vb {
                   }
                 }
               }
-              ((e) this).field_L.field_q = hj.field_c;
-              ((e) this).field_L.field_r = (pf) (Object) new gm();
+              this.field_L.field_q = hj.field_c;
+              this.field_L.field_r = (pf) ((Object) new gm());
               break L9;
             }
             L12: {
-              ((e) this).field_j = 15;
+              this.field_j = 15;
               var7 = ia.field_c;
-              if (((e) this).field_E == null) {
+              if (this.field_E == null) {
                 break L12;
               } else {
-                ((e) this).field_j = ((e) this).field_j + (5 + var7.a(((e) this).field_E, -40 + ((e) this).field_v, var7.field_C));
+                this.field_j = this.field_j + (5 + var7.a(this.field_E, -40 + this.field_v, var7.field_C));
                 break L12;
               }
             }
@@ -1229,37 +1259,37 @@ final class e extends df implements bn, vb {
               }
             }
             L15: {
-              ke dupTemp$2 = new ke(10, ((e) this).field_j, ((e) this).field_v + -20, 25, (qm) (Object) ((e) this).field_O, false, 80, 3, var7, 16777215, var8);
+              dupTemp$2 = new ke(10, this.field_j, this.field_v + -20, 25, this.field_O, false, 80, 3, var7, 16777215, var8);
               var10 = dupTemp$2;
-              ((e) this).c(-108, (qm) (Object) dupTemp$2);
-              ((e) this).field_j = ((e) this).field_j + (((qm) (Object) var10).field_k + 5);
-              ke dupTemp$3 = new ke(10, ((e) this).field_j, ((e) this).field_v + -20, 25, (qm) (Object) ((e) this).field_G, false, 80, 3, var7, 16777215, eh.field_a);
+              this.c(-108, dupTemp$2);
+              this.field_j = this.field_j + (((qm) ((Object) var10)).field_k + 5);
+              dupTemp$3 = new ke(10, this.field_j, this.field_v + -20, 25, this.field_G, false, 80, 3, var7, 16777215, eh.field_a);
               var10 = dupTemp$3;
-              ((e) this).c(-108, (qm) (Object) dupTemp$3);
-              ((e) this).field_P.field_o = (wc) this;
-              ((e) this).field_j = ((e) this).field_j + (((qm) (Object) var10).field_k - -5);
-              if (((e) this).field_J == null) {
+              this.c(-108, dupTemp$3);
+              this.field_P.field_o = (wc) (this);
+              this.field_j = this.field_j + (((qm) ((Object) var10)).field_k - -5);
+              if (this.field_J == null) {
                 break L15;
               } else {
-                ((e) this).field_J.field_o = (wc) this;
+                this.field_J.field_o = (wc) (this);
                 break L15;
               }
             }
             L16: {
-              if (null == ((e) this).field_L) {
+              if (null == this.field_L) {
                 break L16;
               } else {
-                ((e) this).field_L.field_o = (wc) this;
+                this.field_L.field_o = (wc) (this);
                 break L16;
               }
             }
             L17: {
               L18: {
-                if (((e) this).field_J != null) {
+                if (this.field_J != null) {
                   break L18;
                 } else {
-                  ((e) this).field_P.a(30, ((e) this).field_j, -10 + (((e) this).field_v + -6), 8, -80);
-                  ((e) this).field_j = ((e) this).field_j + 35;
+                  this.field_P.a(30, this.field_j, -10 + (this.field_v + -6), 8, -80);
+                  this.field_j = this.field_j + 35;
                   if (var11 == 0) {
                     break L17;
                   } else {
@@ -1267,63 +1297,63 @@ final class e extends df implements bn, vb {
                   }
                 }
               }
-              ((e) this).field_P.a(30, ((e) this).field_j, -95 + ((e) this).field_v, 85, -126);
-              ((e) this).field_j = ((e) this).field_j + 60;
+              this.field_P.a(30, this.field_j, -95 + this.field_v, 85, -126);
+              this.field_j = this.field_j + 60;
               break L17;
             }
             L19: {
-              if (null == ((e) this).field_J) {
+              if (null == this.field_J) {
                 break L19;
               } else {
-                ((e) this).field_J.a(30, ((e) this).field_j, -10 + (-6 + ((e) this).field_v), 8, -78);
-                ((e) this).field_j = ((e) this).field_j + 35;
+                this.field_J.a(30, this.field_j, -10 + (-6 + this.field_v), 8, -78);
+                this.field_j = this.field_j + 35;
                 break L19;
               }
             }
             L20: {
-              if (((e) this).field_L == null) {
+              if (this.field_L == null) {
                 break L20;
               } else {
                 L21: {
                   L22: {
-                    if (((e) this).field_F) {
+                    if (this.field_F) {
                       break L22;
                     } else {
-                      if (!((e) this).field_N) {
+                      if (!this.field_N) {
                         break L21;
                       } else {
                         break L22;
                       }
                     }
                   }
-                  ((e) this).field_L.a(30, ((e) this).field_j, ((e) this).field_v - 16, 8, -51);
-                  ((e) this).field_j = ((e) this).field_j + 35;
+                  this.field_L.a(30, this.field_j, this.field_v - 16, 8, -51);
+                  this.field_j = this.field_j + 35;
                   if (var11 == 0) {
                     break L20;
                   } else {
                     break L21;
                   }
                 }
-                ((e) this).field_L.a(20, ((e) this).field_j, 40, 8, -100);
-                ((e) this).field_j = ((e) this).field_j + 25;
+                this.field_L.a(20, this.field_j, 40, 8, -100);
+                this.field_j = this.field_j + 25;
                 break L20;
               }
             }
             L23: {
-              ((e) this).a(3 + ((e) this).field_j, 0, ((e) this).field_v, 0, -111);
-              ((e) this).c(-105, (qm) (Object) ((e) this).field_P);
-              if (null == ((e) this).field_J) {
+              this.a(3 + this.field_j, 0, this.field_v, 0, -111);
+              this.c(-105, this.field_P);
+              if (null == this.field_J) {
                 break L23;
               } else {
-                ((e) this).c(-93, (qm) (Object) ((e) this).field_J);
+                this.c(-93, this.field_J);
                 break L23;
               }
             }
             L24: {
-              if (null == ((e) this).field_L) {
+              if (null == this.field_L) {
                 break L24;
               } else {
-                ((e) this).c(-100, (qm) (Object) ((e) this).field_L);
+                this.c(-100, this.field_L);
                 break L24;
               }
             }
@@ -1333,23 +1363,23 @@ final class e extends df implements bn, vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L25: {
             var6 = decompiledCaughtException;
-            stackOut_88_0 = (RuntimeException) var6;
+            stackOut_88_0 = (RuntimeException) (var6);
             stackOut_88_1 = new StringBuilder().append("e.<init>(");
             stackIn_91_0 = stackOut_88_0;
             stackIn_91_1 = stackOut_88_1;
             stackIn_89_0 = stackOut_88_0;
             stackIn_89_1 = stackOut_88_1;
             if (param0 == null) {
-              stackOut_91_0 = (RuntimeException) (Object) stackIn_91_0;
-              stackOut_91_1 = (StringBuilder) (Object) stackIn_91_1;
+              stackOut_91_0 = (RuntimeException) ((Object) stackIn_91_0);
+              stackOut_91_1 = (StringBuilder) ((Object) stackIn_91_1);
               stackOut_91_2 = "null";
               stackIn_92_0 = stackOut_91_0;
               stackIn_92_1 = stackOut_91_1;
               stackIn_92_2 = stackOut_91_2;
               break L25;
             } else {
-              stackOut_89_0 = (RuntimeException) (Object) stackIn_89_0;
-              stackOut_89_1 = (StringBuilder) (Object) stackIn_89_1;
+              stackOut_89_0 = (RuntimeException) ((Object) stackIn_89_0);
+              stackOut_89_1 = (StringBuilder) ((Object) stackIn_89_1);
               stackOut_89_2 = "{...}";
               stackIn_92_0 = stackOut_89_0;
               stackIn_92_1 = stackOut_89_1;
@@ -1358,23 +1388,23 @@ final class e extends df implements bn, vb {
             }
           }
           L26: {
-            stackOut_92_0 = (RuntimeException) (Object) stackIn_92_0;
+            stackOut_92_0 = (RuntimeException) ((Object) stackIn_92_0);
             stackOut_92_1 = ((StringBuilder) (Object) stackIn_92_1).append(stackIn_92_2).append(',');
             stackIn_95_0 = stackOut_92_0;
             stackIn_95_1 = stackOut_92_1;
             stackIn_93_0 = stackOut_92_0;
             stackIn_93_1 = stackOut_92_1;
             if (param1 == null) {
-              stackOut_95_0 = (RuntimeException) (Object) stackIn_95_0;
-              stackOut_95_1 = (StringBuilder) (Object) stackIn_95_1;
+              stackOut_95_0 = (RuntimeException) ((Object) stackIn_95_0);
+              stackOut_95_1 = (StringBuilder) ((Object) stackIn_95_1);
               stackOut_95_2 = "null";
               stackIn_96_0 = stackOut_95_0;
               stackIn_96_1 = stackOut_95_1;
               stackIn_96_2 = stackOut_95_2;
               break L26;
             } else {
-              stackOut_93_0 = (RuntimeException) (Object) stackIn_93_0;
-              stackOut_93_1 = (StringBuilder) (Object) stackIn_93_1;
+              stackOut_93_0 = (RuntimeException) ((Object) stackIn_93_0);
+              stackOut_93_1 = (StringBuilder) ((Object) stackIn_93_1);
               stackOut_93_2 = "{...}";
               stackIn_96_0 = stackOut_93_0;
               stackIn_96_1 = stackOut_93_1;
@@ -1382,7 +1412,7 @@ final class e extends df implements bn, vb {
               break L26;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_96_0, stackIn_96_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_96_0), stackIn_96_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1397,10 +1427,10 @@ final class e extends df implements bn, vb {
                 if (lj.b(true)) {
                   break L2;
                 } else {
-                  if (((e) this).field_O.field_g.length() <= 0) {
+                  if (this.field_O.field_g.length() <= 0) {
                     break L1;
                   } else {
-                    if (((e) this).field_G.field_g.length() > 0) {
+                    if (-1 > (this.field_G.field_g.length() ^ -1)) {
                       break L2;
                     } else {
                       break L1;
@@ -1408,7 +1438,7 @@ final class e extends df implements bn, vb {
                   }
                 }
               }
-              im.a(((e) this).field_O.field_g, 0, ((e) this).field_G.field_g);
+              im.a(this.field_O.field_g, 0, this.field_G.field_g);
               break L1;
             }
             var2_int = -118 % ((param0 - -17) / 46);
@@ -1417,11 +1447,12 @@ final class e extends df implements bn, vb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2, "e.O(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) var2), "e.O(" + param0 + ')');
         }
     }
 
     public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+        boolean discarded$2 = false;
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_33_0 = null;
@@ -1447,28 +1478,28 @@ final class e extends df implements bn, vb {
               if (param0) {
                 break L1;
               } else {
-                boolean discarded$2 = e.b(-36, (String) null);
+                discarded$2 = e.b(-36, (String) null);
                 break L1;
               }
             }
             L2: {
               L3: {
-                if (((e) this).field_P == param4) {
+                if (this.field_P == param4) {
                   break L3;
                 } else {
                   L4: {
-                    if (param4 == ((e) this).field_J) {
+                    if (param4 == this.field_J) {
                       break L4;
                     } else {
-                      if (param4 != ((e) this).field_L) {
+                      if (param4 != this.field_L) {
                         break L2;
                       } else {
                         L5: {
-                          if (((e) this).field_F) {
+                          if (this.field_F) {
                             break L5;
                           } else {
                             L6: {
-                              if (!((e) this).field_N) {
+                              if (!this.field_N) {
                                 break L6;
                               } else {
                                 ba.a(123);
@@ -1513,23 +1544,23 @@ final class e extends df implements bn, vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) var6;
+            stackOut_32_0 = (RuntimeException) (var6);
             stackOut_32_1 = new StringBuilder().append("e.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_35_0 = stackOut_32_0;
             stackIn_35_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
             stackIn_33_1 = stackOut_32_1;
             if (param4 == null) {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackOut_35_2 = "null";
               stackIn_36_0 = stackOut_35_0;
               stackIn_36_1 = stackOut_35_1;
               stackIn_36_2 = stackOut_35_2;
               break L7;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "{...}";
               stackIn_36_0 = stackOut_33_0;
               stackIn_36_1 = stackOut_33_1;
@@ -1537,7 +1568,7 @@ final class e extends df implements bn, vb {
               break L7;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ')');
         }
     }
 
@@ -1553,13 +1584,13 @@ final class e extends df implements bn, vb {
               if (param0 == 30) {
                 break L1;
               } else {
-                field_C = null;
+                field_C = (String) null;
                 break L1;
               }
             }
             L2: {
               L3: {
-                if (param1 < 48) {
+                if ((param1 ^ -1) > -49) {
                   break L3;
                 } else {
                   if (57 < param1) {
@@ -1580,7 +1611,7 @@ final class e extends df implements bn, vb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2, "e.K(" + param0 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) var2), "e.K(" + param0 + ',' + param1 + ')');
         }
         return stackIn_10_0 != 0;
     }
@@ -1589,6 +1620,7 @@ final class e extends df implements bn, vb {
         RuntimeException var2 = null;
         String stackIn_7_0 = null;
         String stackIn_9_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_6_0 = null;
         String stackOut_8_0 = null;
@@ -1598,26 +1630,32 @@ final class e extends df implements bn, vb {
               if (param0) {
                 break L1;
               } else {
-                ((e) this).field_G = null;
+                this.field_G = (rn) null;
                 break L1;
               }
             }
-            if (((e) this).field_O.field_g == null) {
+            if (this.field_O.field_g == null) {
               stackOut_6_0 = "";
               stackIn_7_0 = stackOut_6_0;
-              return stackIn_7_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              stackOut_8_0 = ((e) this).field_O.field_g;
+              stackOut_8_0 = this.field_O.field_g;
               stackIn_9_0 = stackOut_8_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2, "e.L(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) var2), "e.L(" + param0 + ')');
         }
-        return stackIn_9_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_7_0;
+        } else {
+          return stackIn_9_0;
+        }
     }
 
     final static boolean b(int param0, String param1) {
@@ -1636,6 +1674,7 @@ final class e extends df implements bn, vb {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_11_0 = 0;
@@ -1661,16 +1700,17 @@ final class e extends df implements bn, vb {
                     if (param1.length() <= var3) {
                       break L3;
                     } else {
-                      stackOut_5_0 = ~var2_int;
+                      stackOut_5_0 = var2_int ^ -1;
                       stackIn_15_0 = stackOut_5_0;
                       stackIn_6_0 = stackOut_5_0;
                       if (var4 != 0) {
                         break L2;
                       } else {
-                        if (stackIn_6_0 != ~param1.charAt(var3)) {
+                        if (stackIn_6_0 != (param1.charAt(var3) ^ -1)) {
                           stackOut_11_0 = 0;
                           stackIn_12_0 = stackOut_11_0;
-                          return stackIn_12_0 != 0;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         } else {
                           var3++;
                           if (var4 == 0) {
@@ -1686,35 +1726,37 @@ final class e extends df implements bn, vb {
                   stackIn_15_0 = stackOut_14_0;
                   break L2;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } else {
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var2;
+            stackOut_16_0 = (RuntimeException) (var2);
             stackOut_16_1 = new StringBuilder().append("e.P(").append(param0).append(',');
             stackIn_19_0 = stackOut_16_0;
             stackIn_19_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_20_0 = stackOut_17_0;
               stackIn_20_1 = stackOut_17_1;
@@ -1722,9 +1764,17 @@ final class e extends df implements bn, vb {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
         }
-        return stackIn_15_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_15_0 != 0;
+          } else {
+            return stackIn_12_0 != 0;
+          }
+        }
     }
 
     final static int a(hc param0, int param1, hc param2) {
@@ -1774,23 +1824,23 @@ final class e extends df implements bn, vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_0 = (RuntimeException) (var3);
             stackOut_2_1 = new StringBuilder().append("e.F(");
             stackIn_5_0 = stackOut_2_0;
             stackIn_5_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
@@ -1799,23 +1849,23 @@ final class e extends df implements bn, vb {
             }
           }
           L2: {
-            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_6_0;
             stackIn_9_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_10_0 = stackOut_7_0;
               stackIn_10_1 = stackOut_7_1;
@@ -1823,16 +1873,12 @@ final class e extends df implements bn, vb {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_1_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = "You are on <%0>";
         field_D = "The spell you have in this arena is Arcane Flash. This spell is for close range only and doesn't deal much damage. It will, however, throw anything it hits into the distance<br>(Hopefully into the water!)<br>Select Arcane Flash from your spellbook.";
     }

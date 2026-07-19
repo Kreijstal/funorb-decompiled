@@ -40,27 +40,27 @@ final class wa {
                 break L1;
               }
             }
-            ((wa) this).field_h = param5;
-            ((wa) this).field_g = param1;
-            ((wa) this).field_c = param4;
-            ((wa) this).field_f = param3;
-            ((wa) this).field_e = param0;
-            ((wa) this).field_a = param2;
-            if (-1 < ((wa) this).field_h) {
+            this.field_h = param5;
+            this.field_g = param1;
+            this.field_c = param4;
+            this.field_f = param3;
+            this.field_e = param0;
+            this.field_a = param2;
+            if (-1 < (this.field_h ^ -1)) {
               throw new RuntimeException();
             } else {
               L2: {
-                if (-1 != ((wa) this).field_f) {
+                if (-1 != (this.field_f ^ -1)) {
                   break L2;
                 } else {
-                  if (0 != ((wa) this).field_a) {
+                  if (0 != this.field_a) {
                     break L2;
                   } else {
                     L3: {
-                      if (((wa) this).field_e == 0) {
+                      if (this.field_e == 0) {
                         break L3;
                       } else {
-                        if (((wa) this).field_h == 1) {
+                        if (this.field_h == 1) {
                           break L2;
                         } else {
                           break L3;
@@ -78,23 +78,23 @@ final class wa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var8 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var8;
+            stackOut_12_0 = (RuntimeException) (var8);
             stackOut_12_1 = new StringBuilder().append("wa.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param4 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -102,46 +102,42 @@ final class wa {
               break L4;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param5 + ',' + param6 + ')');
+          throw r.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     final static void a(byte param0, boolean param1, boolean param2) {
         int var3 = 123 / ((param0 - 33) / 54);
-        Object var4 = null;
+        String var4 = (String) null;
         jm.a((String) null, param2, (byte) -110, param1);
     }
 
     public static void a(int param0) {
         if (param0 != 27094) {
-          field_i = null;
+          field_i = (String) null;
           field_b = null;
           field_i = null;
-          field_d = null;
+          field_d = (String[][]) null;
           return;
         } else {
           field_b = null;
           field_i = null;
-          field_d = null;
+          field_d = (String[][]) null;
           return;
         }
     }
 
     final void b(int param0) {
-        ((wa) this).field_c = qq.field_D;
-        qq.field_D = (wa) this;
+        this.field_c = qq.field_D;
+        qq.field_D = (wa) (this);
         int var2 = 111 % ((param0 - -71) / 45);
     }
 
     wa() {
-        ((wa) this).field_c = null;
+        this.field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Average number of fleets committed to each operation.";
     }
 }

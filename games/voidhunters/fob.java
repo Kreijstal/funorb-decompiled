@@ -10,9 +10,9 @@ final class fob implements dja {
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
             field_c = -32;
-            return (tv[]) (Object) new eka[param1];
+            return (tv[]) ((Object) new eka[param1]);
         }
-        return (tv[]) (Object) new eka[param1];
+        return (tv[]) ((Object) new eka[param1]);
     }
 
     public static void a(int param0) {
@@ -29,10 +29,6 @@ final class fob implements dja {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 20;
         field_d = "Please enter a year between <%0> and <%1>";
         field_b = "Toggle shields";

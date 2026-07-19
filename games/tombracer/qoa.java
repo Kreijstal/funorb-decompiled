@@ -8,13 +8,12 @@ final class qoa {
 
     public static void a(byte param0) {
         field_b = null;
+        if (param0 <= 16) {
+            field_b = (cn) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "qoa.A(";
         field_a = false;
     }

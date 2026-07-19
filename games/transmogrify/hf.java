@@ -12,23 +12,36 @@ final class hf extends dj {
     static ti[] field_d;
 
     public static void a(byte param0) {
-        field_h = null;
-        field_g = null;
-        field_d = null;
-        field_k = null;
-        field_f = null;
+        if (param0 != 118) {
+          field_f = (int[][]) null;
+          field_h = null;
+          field_g = null;
+          field_d = null;
+          field_k = null;
+          field_f = (int[][]) null;
+          return;
+        } else {
+          field_h = null;
+          field_g = null;
+          field_d = null;
+          field_k = null;
+          field_f = (int[][]) null;
+          return;
+        }
     }
 
     final byte[] a(boolean param0) {
+        java.nio.Buffer discarded$4 = null;
+        java.nio.ByteBuffer discarded$5 = null;
         byte[] var2 = null;
         byte[] var3 = null;
         if (param0) {
-          return null;
+          return (byte[]) null;
         } else {
-          var3 = new byte[((hf) this).field_e.capacity()];
+          var3 = new byte[this.field_e.capacity()];
           var2 = var3;
-          java.nio.Buffer discarded$4 = ((hf) this).field_e.position(0);
-          java.nio.ByteBuffer discarded$5 = ((hf) this).field_e.get(var3);
+          discarded$4 = this.field_e.position(0);
+          discarded$5 = this.field_e.get(var3);
           return var3;
         }
     }
@@ -37,23 +50,21 @@ final class hf extends dj {
     }
 
     final void a(byte[] param0, byte param1) {
+        java.nio.Buffer discarded$0 = null;
+        java.nio.ByteBuffer discarded$1 = null;
         try {
             int var3_int = -63 % ((-59 - param1) / 55);
-            ((hf) this).field_e = java.nio.ByteBuffer.allocateDirect(param0.length);
-            java.nio.Buffer discarded$0 = ((hf) this).field_e.position(0);
-            java.nio.ByteBuffer discarded$1 = ((hf) this).field_e.put(param0);
+            this.field_e = java.nio.ByteBuffer.allocateDirect(param0.length);
+            discarded$0 = this.field_e.position(0);
+            discarded$1 = this.field_e.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "hf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "hf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = 0;
-        field_k = new char[]{'[', ']', '#'};
+        field_k = new char[]{(char)91, (char)93, (char)35};
         field_h = new char[128];
     }
 }

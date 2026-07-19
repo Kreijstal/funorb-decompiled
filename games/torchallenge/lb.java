@@ -20,7 +20,7 @@ abstract class lb extends w {
         int var7 = TorChallenge.field_F ? 1 : 0;
         ka[] var1 = new ka[vl.field_b];
         if (param0 != 204) {
-            field_u = null;
+            field_u = (String[]) null;
         }
         for (var2 = 0; var2 < vl.field_b; var2++) {
             var3 = lg.field_e[var2] * pg.field_r[var2];
@@ -50,6 +50,7 @@ abstract class lb extends w {
     }
 
     final static void a(int param0, int param1, int param2) {
+        ka[] discarded$1 = null;
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -75,12 +76,12 @@ abstract class lb extends w {
             var13 = 4;
             var15 = 0;
             L1: while (true) {
-              if (var15 >= 8) {
+              if ((var15 ^ -1) <= -9) {
                 L2: {
                   if (param2 > 35) {
                     break L2;
                   } else {
-                    ka[] discarded$1 = lb.f(-115);
+                    discarded$1 = lb.f(-115);
                     break L2;
                   }
                 }
@@ -88,31 +89,25 @@ abstract class lb extends w {
               } else {
                 var16 = 0;
                 L3: while (true) {
-                  if (var16 >= 3) {
+                  if (-4 >= (var16 ^ -1)) {
                     var15++;
                     continue L1;
                   } else {
-                    L4: {
-                      var11 = ol.field_c[var15][var16][4];
-                      if (var11 <= 0) {
-                        break L4;
-                      } else {
+                    var11 = ol.field_c[var15][var16][4];
+                    if ((var11 ^ -1) < -1) {
+                      L4: {
                         if (24 > var11) {
                           var12 = (24 + -var11) / var13;
-                          if (var12 < 0) {
-                            break L4;
-                          } else {
-                            if (var12 >= 6) {
-                              break L4;
-                            } else {
+                          if (var12 >= 0) {
+                            if ((var12 ^ -1) > -7) {
                               var4 = ol.field_c[var15][var16][2];
                               var6 = ol.field_c[var15][var16][3];
                               var5 = ol.field_c[var15][var16][1];
                               var3_int = ol.field_c[var15][var16][0];
-                              var4 = -(256 * (var9 >> 1) / 32) + var4;
+                              var4 = -(256 * (var9 >> 1090809537) / 32) + var4;
                               var3_int = var3_int + var4 / 256;
                               var4 = var4 % 256;
-                              var6 = var6 - (var10 >> 1) * 256 / 64;
+                              var6 = var6 - (var10 >> -1889079263) * 256 / 64;
                               var5 = var5 + var6 / 256;
                               var6 = var6 % 256;
                               qb.a(var4, var5, param1, param0, var3_int, var6, -2140919664);
@@ -121,15 +116,24 @@ abstract class lb extends w {
                               var8 = dl.field_n[2];
                               var14.d(var7, var8, 160);
                               break L4;
+                            } else {
+                              var16++;
+                              continue L3;
                             }
+                          } else {
+                            var16++;
+                            continue L3;
                           }
                         } else {
                           break L4;
                         }
                       }
+                      var16++;
+                      continue L3;
+                    } else {
+                      var16++;
+                      continue L3;
                     }
-                    var16++;
-                    continue L3;
                   }
                 }
               }
@@ -138,7 +142,7 @@ abstract class lb extends w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var3, "lb.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oj.a((Throwable) ((Object) var3), "lb.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -168,11 +172,11 @@ abstract class lb extends w {
             }
             var9 = 0;
             L2: while (true) {
-              if (var9 >= 2048) {
+              if (-2049 >= (var9 ^ -1)) {
                 break L0;
               } else {
                 L3: {
-                  var3 = (double)var9;
+                  var3 = (double)(var9 + 0);
                   var1_double = var3 / var7;
                   var5 = Math.sin(3.141592653589793 * var1_double);
                   if (var5 < 0.0) {
@@ -192,19 +196,15 @@ abstract class lb extends w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "lb.C(" + param0 + ')');
+          throw oj.a((Throwable) ((Object) var1), "lb.C(" + param0 + ')');
         }
     }
 
     lb(int param0) {
-        ((lb) this).field_r = param0;
+        this.field_r = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = new boolean[]{true, true, true, true, false, false, false, true, true, true};
         field_s = 0;
         field_u = new String[]{"Life+", "Health+", "Speed+", "Jump+"};

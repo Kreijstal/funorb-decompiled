@@ -8,16 +8,12 @@ final class dp {
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = 0;
+        int var1 = 47 % ((-65 - param0) / 45);
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "dp.A(";
-        field_b = (dja) (Object) new onb();
+        field_b = (dja) ((Object) new onb());
     }
 }

@@ -24,88 +24,128 @@ final class qg extends l {
         int var3 = 0;
         String var4 = null;
         Object var5 = null;
-        Object var6 = null;
-        CharSequence var7 = null;
+        String var6 = null;
+        Object var16 = null;
+        Object var17 = null;
+        Object var18 = null;
+        Object var19 = null;
+        Object var20 = null;
+        Object var21 = null;
+        Object var22 = null;
+        Object var23 = null;
+        CharSequence var31 = null;
+        var16 = null;
+        var17 = null;
+        var18 = null;
+        var19 = null;
+        var20 = null;
+        var21 = null;
+        var22 = null;
+        var23 = null;
         if (he.field_Xb != null) {
-          var3 = he.field_Xb.b(param1, -28624);
+          var3 = he.field_Xb.b(param1, param0 ^ -29471);
           if (0 != var3) {
-            if (var3 != 2) {
-              he.field_Xb = null;
-              ge.field_d = -1;
-              return;
-            } else {
-              if (he.field_Xb.field_V == null) {
-                he.field_Xb = null;
-                ge.field_d = -1;
-                return;
+            L0: {
+              if (-3 != (var3 ^ -1)) {
+                break L0;
               } else {
-                if (!he.field_Xb.field_V.equals((Object) (Object) "")) {
-                  L0: {
-                    if (he.field_Xb.field_V.charAt(0) != 91) {
-                      var7 = (CharSequence) (Object) he.field_Xb.field_V;
-                      var4 = c.a(var7, true);
-                      break L0;
-                    } else {
-                      var4 = he.field_Xb.field_V;
-                      break L0;
-                    }
-                  }
-                  L1: {
-                    var5 = null;
-                    if (0 == ge.field_d) {
-                      var5 = (Object) (Object) ab.a((byte) 73, var4, 13);
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  }
-                  L2: {
-                    if (ge.field_d == 1) {
-                      var5 = (Object) (Object) og.a(var4, true, 13);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    if (ge.field_d == 2) {
-                      var5 = (Object) (Object) g.a(var4, -128, 13);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    if (ge.field_d != 3) {
-                      break L4;
-                    } else {
-                      var5 = (Object) (Object) og.a(var4, 13, (byte) 60, var4);
-                      break L4;
-                    }
-                  }
-                  if (var5 == null) {
-                    he.field_Xb = null;
-                    ge.field_d = -1;
-                    return;
-                  } else {
-                    var6 = null;
-                    gf.a(var4, 0, false, (String) var5, 2, (String) null);
-                    he.field_Xb = null;
-                    ge.field_d = -1;
-                    return;
-                  }
+                if (he.field_Xb.field_V == null) {
+                  break L0;
                 } else {
-                  he.field_Xb = null;
-                  ge.field_d = -1;
-                  return;
+                  if (!he.field_Xb.field_V.equals("")) {
+                    L1: {
+                      if (he.field_Xb.field_V.charAt(0) != 91) {
+                        var31 = (CharSequence) ((Object) he.field_Xb.field_V);
+                        var4 = c.a(var31, true);
+                        break L1;
+                      } else {
+                        var4 = he.field_Xb.field_V;
+                        break L1;
+                      }
+                    }
+                    L2: {
+                      var5 = null;
+                      if (0 == ge.field_d) {
+                        var5 = ab.a((byte) 73, var4, param2);
+                        break L2;
+                      } else {
+                        break L2;
+                      }
+                    }
+                    L3: {
+                      if ((ge.field_d ^ -1) == -2) {
+                        var5 = og.a(var4, true, param2);
+                        break L3;
+                      } else {
+                        break L3;
+                      }
+                    }
+                    L4: {
+                      if (-3 == (ge.field_d ^ -1)) {
+                        var5 = g.a(var4, -128, param2);
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
+                    L5: {
+                      if (-4 != (ge.field_d ^ -1)) {
+                        break L5;
+                      } else {
+                        var5 = og.a(var4, param2, (byte) 60, var4);
+                        break L5;
+                      }
+                    }
+                    if (var5 == null) {
+                      break L0;
+                    } else {
+                      var6 = (String) null;
+                      gf.a(var4, 0, false, (String) (var5), 2, (String) null);
+                      he.field_Xb = null;
+                      ge.field_d = -1;
+                      if (param0 == 7377) {
+                        return;
+                      } else {
+                        qg.a(119);
+                        return;
+                      }
+                    }
+                  } else {
+                    he.field_Xb = null;
+                    ge.field_d = -1;
+                    if (param0 == 7377) {
+                      return;
+                    } else {
+                      qg.a(119);
+                      return;
+                    }
+                  }
                 }
               }
             }
+            he.field_Xb = null;
+            ge.field_d = -1;
+            if (param0 == 7377) {
+              return;
+            } else {
+              qg.a(119);
+              return;
+            }
           } else {
-            return;
+            if (param0 != 7377) {
+              qg.a(119);
+              return;
+            } else {
+              return;
+            }
           }
         } else {
-          return;
+          if (param0 == 7377) {
+            return;
+          } else {
+            qg.a(119);
+            return;
+          }
         }
     }
 
@@ -116,7 +156,14 @@ final class qg extends l {
         field_l = null;
         field_j = null;
         field_m = null;
-        field_r = null;
+        if (param0 < 104) {
+          field_j = (mg[]) null;
+          field_r = null;
+          return;
+        } else {
+          field_r = null;
+          return;
+        }
     }
 
     qg() {
@@ -124,26 +171,22 @@ final class qg extends l {
 
     final void a(int[] param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
         try {
-            ((qg) this).field_q = param4;
-            ((qg) this).field_p = param0;
-            ((qg) this).field_v = param5;
-            ((qg) this).field_o = param1;
-            ((qg) this).field_i = param2;
-            ((qg) this).field_t = param7;
+            this.field_q = param4;
+            this.field_p = param0;
+            this.field_v = param5;
+            this.field_o = param1;
+            this.field_i = param2;
+            this.field_t = param7;
             if (param3 != -45) {
-                ((qg) this).field_k = 79;
+                this.field_k = 79;
             }
-            ((qg) this).field_k = param6;
+            this.field_k = param6;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "qg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "qg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Orb points: ";
         field_s = "No players";
         field_r = new ul(3);

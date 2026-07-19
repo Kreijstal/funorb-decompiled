@@ -19,8 +19,16 @@ abstract class td {
         field_b = null;
         field_a = null;
         field_e = null;
-        field_h = null;
-        field_j = null;
+        if (param0 != -21697) {
+          field_a = (String) null;
+          field_h = null;
+          field_j = null;
+          return;
+        } else {
+          field_h = null;
+          field_j = null;
+          return;
+        }
     }
 
     abstract void a(int param0, int param1, int param2);
@@ -28,10 +36,6 @@ abstract class td {
     abstract void a(int param0, int param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "td.C(";
         field_h = "Enter research screen";
         field_j = "Create a free Account";

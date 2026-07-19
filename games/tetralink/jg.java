@@ -16,18 +16,19 @@ final class jg {
     public static void a(boolean param0) {
         field_h = null;
         field_d = null;
-        field_c = null;
-        field_b = null;
-        field_e = null;
-        field_g = null;
-        field_i = null;
+        if (!param0) {
+          return;
+        } else {
+          field_c = null;
+          field_b = null;
+          field_e = null;
+          field_g = null;
+          field_i = (byte[][]) null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "jg.A(";
         field_f = 0.0;
         field_g = "If you do nothing the game will revert to normal view in <%0> second.";

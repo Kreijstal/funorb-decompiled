@@ -13,7 +13,7 @@ final class qe extends hd {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
-        Object var12 = null;
+        dd var12 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
@@ -36,14 +36,14 @@ final class qe extends hd {
               if (param7 == 5120) {
                 break L1;
               } else {
-                var12 = null;
+                var12 = (dd) null;
                 qe.a(-46, 27, (dd) null, -27, -105, -46, -75, -59, 119);
                 break L1;
               }
             }
             var9_int = param4 + param8 + (param2.field_q - param3);
             var10 = param1 + (param8 + (param2.field_q + param4));
-            var11 = param5 + param2.field_v - -(param2.field_t >> 1);
+            var11 = param5 + param2.field_v - -(param2.field_t >> 1721481697);
             gb.g(var9_int, 0, var10, var11 - -param0);
             param2.a(-1 + param8, param5 - 1, param6);
             param2.a(param8 - 1, param5 - -1, param6);
@@ -68,23 +68,23 @@ final class qe extends hd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var9 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var9;
+            stackOut_4_0 = (RuntimeException) (var9);
             stackOut_4_1 = new StringBuilder().append("qe.A(").append(param0).append(',').append(param1).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -92,39 +92,52 @@ final class qe extends hd {
               break L2;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw pf.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     final byte[] b(int param0) {
+        java.nio.Buffer discarded$4 = null;
+        java.nio.ByteBuffer discarded$5 = null;
         byte[] var2 = null;
         byte[] var3 = null;
         if (param0 != 256) {
-          return null;
+          return (byte[]) null;
         } else {
-          var3 = new byte[((qe) this).field_i.capacity()];
+          var3 = new byte[this.field_i.capacity()];
           var2 = var3;
-          java.nio.Buffer discarded$4 = ((qe) this).field_i.position(0);
-          java.nio.ByteBuffer discarded$5 = ((qe) this).field_i.get(var3);
+          discarded$4 = this.field_i.position(0);
+          discarded$5 = this.field_i.get(var3);
           return var3;
         }
     }
 
     public static void c(int param0) {
-        field_j = null;
+        dd var2 = null;
+        if (param0 != -1) {
+          var2 = (dd) null;
+          qe.a(112, -6, (dd) null, 97, -24, -108, -83, 92, -73);
+          field_j = null;
+          return;
+        } else {
+          field_j = null;
+          return;
+        }
     }
 
     final void a(int param0, byte[] param1) {
+        java.nio.Buffer discarded$0 = null;
+        java.nio.ByteBuffer discarded$1 = null;
         try {
-            ((qe) this).field_i = java.nio.ByteBuffer.allocateDirect(param1.length);
+            this.field_i = java.nio.ByteBuffer.allocateDirect(param1.length);
             if (param0 >= -97) {
-                Object var4 = null;
+                dd var4 = (dd) null;
                 qe.a(-71, 115, (dd) null, -77, 80, 37, 76, 99, 49);
             }
-            java.nio.Buffer discarded$0 = ((qe) this).field_i.position(0);
-            java.nio.ByteBuffer discarded$1 = ((qe) this).field_i.put(param1);
+            discarded$0 = this.field_i.position(0);
+            discarded$1 = this.field_i.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "qe.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pf.a((Throwable) ((Object) runtimeException), "qe.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -132,10 +145,6 @@ final class qe extends hd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new Random();
     }
 }

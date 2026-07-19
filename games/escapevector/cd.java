@@ -16,6 +16,11 @@ class cd extends fl {
         field_r = null;
         field_s = null;
         field_q = null;
+        if (param0 != -1) {
+            field_q = (int[]) null;
+            field_u = null;
+            return;
+        }
         field_u = null;
     }
 
@@ -36,6 +41,7 @@ class cd extends fl {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         tk stackOut_7_0 = null;
         tk stackOut_11_0 = null;
@@ -60,18 +66,21 @@ class cd extends fl {
                   if (param0 == var2_int) {
                     stackOut_7_0 = mf.field_d;
                     stackIn_8_0 = stackOut_7_0;
-                    return stackIn_8_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
                     var3 = param1.substring(0, var2_int);
                     var4 = param1.substring(1 + var2_int);
                     var5 = sf.a(var3, (byte) 119);
                     if (var5 != null) {
-                      stackOut_11_0 = (tk) var5;
+                      stackOut_11_0 = (tk) (var5);
                       stackIn_12_0 = stackOut_11_0;
-                      return stackIn_12_0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     } else {
-                      stackOut_13_0 = rn.a(var4, ~param0);
+                      stackOut_13_0 = rn.a(var4, param0 ^ -1);
                       stackIn_14_0 = stackOut_13_0;
+                      decompiledRegionSelector0 = 3;
                       break L0;
                     }
                   }
@@ -82,29 +91,30 @@ class cd extends fl {
             }
             stackOut_3_0 = ig.field_g;
             stackIn_4_0 = stackOut_3_0;
-            return stackIn_4_0;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var2;
+            stackOut_15_0 = (RuntimeException) (var2);
             stackOut_15_1 = new StringBuilder().append("cd.A(").append(param0).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L2;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -112,16 +122,24 @@ class cd extends fl {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
-        return stackIn_14_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_8_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_12_0;
+            } else {
+              return stackIn_14_0;
+            }
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Waiting for levels";
         field_u = "The account name you use to access RuneScape and other Jagex.com games";
         field_s = new cn();

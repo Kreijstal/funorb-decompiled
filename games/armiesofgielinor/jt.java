@@ -13,21 +13,20 @@ final class jt {
     }
 
     final static boolean a(byte param0) {
-        int var1 = 72;
-        if (tb.field_e == null) {
+        int var1 = 0;
+        var1 = 72 / ((7 - param0) / 51);
+        if (tb.field_e != null) {
+          if (!tb.field_e.d((byte) -101)) {
             return false;
+          } else {
+            return true;
+          }
+        } else {
+          return false;
         }
-        if (!tb.field_e.d((byte) -101)) {
-            return false;
-        }
-        return true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 16;
     }
 }

@@ -86,8 +86,6 @@ final class te {
         int var26 = 0;
         double[][] var27 = null;
         double[][] var28 = null;
-        double[][] var29 = null;
-        double[][] var30 = null;
         double stackIn_7_0 = 0.0;
         double stackIn_10_0 = 0.0;
         double stackIn_16_0 = 0.0;
@@ -102,9 +100,7 @@ final class te {
         double stackOut_17_0 = 0.0;
         var4 = new int[param0 * param1];
         var7 = 0;
-        var30 = te.a(param0, param1, param2);
-        var29 = var30;
-        var28 = var29;
+        var28 = te.a(param0, param1, param2);
         var27 = var28;
         var8 = var27;
         var6 = 0;
@@ -124,7 +120,7 @@ final class te {
                     stackIn_7_0 = stackOut_6_0;
                     break L2;
                   } else {
-                    stackOut_5_0 = var30[0][var6];
+                    stackOut_5_0 = var28[0][var6];
                     stackIn_7_0 = stackOut_5_0;
                     break L2;
                   }
@@ -160,11 +156,11 @@ final class te {
                 }
                 L6: {
                   if (var6 != 0) {
-                    stackOut_15_0 = var30[var5][var6 - 1];
+                    stackOut_15_0 = var28[var5][var6 - 1];
                     stackIn_16_0 = stackOut_15_0;
                     break L6;
                   } else {
-                    stackOut_14_0 = var30[var5][0];
+                    stackOut_14_0 = var28[var5][0];
                     stackIn_16_0 = stackOut_14_0;
                     break L6;
                   }
@@ -172,11 +168,11 @@ final class te {
                 L7: {
                   var15 = stackIn_16_0;
                   if (var6 != param1 - 1) {
-                    stackOut_18_0 = var30[var5][var6 + 1];
+                    stackOut_18_0 = var28[var5][var6 + 1];
                     stackIn_19_0 = stackOut_18_0;
                     break L7;
                   } else {
-                    stackOut_17_0 = var30[var5][param1 - 1];
+                    stackOut_17_0 = var28[var5][param1 - 1];
                     stackIn_19_0 = stackOut_17_0;
                     break L7;
                   }
@@ -306,25 +302,26 @@ final class te {
     }
 
     final static cn a(int param0, int param1, int param2, int[] param3, int param4, int param5, double param6) {
+        int incrementValue$1 = 0;
         cn var8 = null;
         int[] var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        var8 = new cn(224, 224);
+        var8 = new cn(param0, param1);
         var9 = var8.field_B;
         var10 = 0;
         var11 = 0;
         L0: while (true) {
-          if (var11 >= 224) {
+          if (var11 >= param1) {
             return var8;
           } else {
             var12 = 0;
             L1: while (true) {
-              if (var12 < 224) {
+              if (var12 < param0) {
                 L2: {
-                  var13 = 32 + (int)((double)24 * te.a(var12, var11, param2, param6));
+                  var13 = param4 + (int)((double)param5 * te.a(var12, var11, param2, param6));
                   if (var13 >= 0) {
                     break L2;
                   } else {
@@ -340,7 +337,7 @@ final class te {
                     break L3;
                   }
                 }
-                int incrementValue$1 = var10;
+                incrementValue$1 = var10;
                 var10++;
                 var9[incrementValue$1] = param3[var13];
                 var12++;
@@ -449,6 +446,7 @@ final class te {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
+        int incrementValue$0 = 0;
         cn var7 = new cn(param0, param1);
         int[] var8 = var7.field_B;
         int var9 = 0;
@@ -464,7 +462,7 @@ final class te {
                 if (var12 >= param2.length) {
                     var12 = param2.length - 1;
                 }
-                int incrementValue$0 = var9;
+                incrementValue$0 = var9;
                 var9++;
                 var8[incrementValue$0] = param2[var12];
             }

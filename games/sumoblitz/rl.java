@@ -26,19 +26,19 @@ final class rl extends ms {
     }
 
     final void a(int param0, int param1, int[] param2, int param3, byte param4, int param5, int param6, int param7) {
-        ((rl) this).field_v = param2;
-        ((rl) this).field_r = param5;
-        ((rl) this).field_s = param6;
+        this.field_v = param2;
+        this.field_r = param5;
+        this.field_s = param6;
         if (param4 >= -53) {
             return;
         }
         try {
-            ((rl) this).field_p = param7;
-            ((rl) this).field_u = param3;
-            ((rl) this).field_m = param1;
-            ((rl) this).field_t = param0;
+            this.field_p = param7;
+            this.field_u = param3;
+            this.field_m = param1;
+            this.field_t = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "rl.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "rl.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -46,10 +46,6 @@ final class rl extends ms {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = 480;
     }
 }

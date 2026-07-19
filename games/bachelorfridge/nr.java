@@ -9,10 +9,10 @@ final class nr extends ana {
 
     final boolean c(byte param0) {
         int var2 = 0;
-        int fieldTemp$2 = ((nr) this).field_l - 1;
-        ((nr) this).field_l = ((nr) this).field_l - 1;
+        int fieldTemp$2 = this.field_l - 1;
+        this.field_l = this.field_l - 1;
         if (0 <= fieldTemp$2) {
-          if (((nr) this).field_l != 25) {
+          if ((this.field_l ^ -1) != -26) {
             return false;
           } else {
             this.f(121);
@@ -28,9 +28,10 @@ final class nr extends ana {
     final static void a(int param0, cfa param1, byte param2) {
         pf var6 = null;
         int var4 = 0;
+        int discarded$0 = 0;
         try {
             var6 = sja.field_fb;
-            var6.c(4, (byte) 116);
+            var6.c(param0, (byte) 116);
             var6.field_g = var6.field_g + 1;
             var4 = var6.field_g;
             var6.d(1, 0);
@@ -40,11 +41,11 @@ final class nr extends ana {
             var6.e(param1.field_h, -1615464796);
             var6.e(param1.field_k, -1615464796);
             var6.e(param1.field_f, -1615464796);
-            int discarded$0 = var6.a(var4, 19);
+            discarded$0 = var6.a(var4, 19);
             var6.b((byte) 85, -var4 + var6.field_g);
             int var5 = 47 % ((1 - param2) / 47);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nr.E(" + 4 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "nr.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -59,35 +60,50 @@ final class nr extends ana {
             param2.field_b.field_e = param2;
             int var3_int = 33 / ((42 - param0) / 63);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "nr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void d(int param0) {
+        if (param0 != -26) {
+            this.field_x = (pg) null;
+        }
     }
 
     private final void f(int param0) {
-        pp var3 = null;
-        ad var4 = null;
+        oha discarded$2 = null;
+        rq discarded$3 = null;
+        Object var3 = null;
+        pp var3_ref = null;
         int var5 = 0;
         aga var6 = null;
-        var5 = BachelorFridge.field_y;
-        var6 = ((nr) this).field_x.field_l.a(49, ((nr) this).field_q.field_h);
-        ((nr) this).a(27799, (at) (Object) new taa(((nr) this).field_q, ((nr) this).field_x.field_r.a(-27449, ((nr) this).field_q)));
+        ad var7 = null;
+        L0: {
+          var3 = null;
+          var5 = BachelorFridge.field_y;
+          var6 = this.field_x.field_l.a(49, this.field_q.field_h);
+          if (param0 >= 12) {
+            break L0;
+          } else {
+            this.d(-101);
+            break L0;
+          }
+        }
+        this.a(27799, new taa(this.field_q, this.field_x.field_r.a(-27449, this.field_q)));
         if (var6.i(78)) {
           return;
         } else {
-          var3 = (pp) (Object) ((nr) this).field_x.field_o.b((byte) 90);
-          oha discarded$2 = al.a(-52, ((nr) this).field_x.field_k);
-          L0: while (true) {
-            if (var3 == null) {
+          var3_ref = (pp) ((Object) this.field_x.field_o.b((byte) 90));
+          discarded$2 = al.a(-52, this.field_x.field_k);
+          L1: while (true) {
+            if (var3_ref == null) {
               return;
             } else {
-              var4 = var3.field_h.a(-27449, ((nr) this).field_q);
-              rq discarded$3 = new rq(((nr) this).field_q, var4.field_s.field_x, var4.field_s.field_J);
-              var3.a(var6, ((nr) this).field_q.field_h, 12);
-              var3 = (pp) (Object) ((nr) this).field_x.field_o.c(0);
-              continue L0;
+              var7 = var3_ref.field_h.a(-27449, this.field_q);
+              discarded$3 = new rq(this.field_q, var7.field_s.field_x, var7.field_s.field_J);
+              var3_ref.a(var6, this.field_q.field_h, 12);
+              var3_ref = (pp) ((Object) this.field_x.field_o.c(0));
+              continue L1;
             }
           }
         }
@@ -97,22 +113,22 @@ final class nr extends ana {
         field_w = null;
         field_v = null;
         field_y = null;
+        if (param0 != 1) {
+            bw var2 = (bw) null;
+            nr.a((byte) 91, (bw) null, (bw) null);
+        }
     }
 
     nr(gj param0, pg param1) {
-        super(param0, (bca) (Object) param1);
+        super(param0, param1);
         try {
-            ((nr) this).field_x = param1;
+            this.field_x = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "nr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = "Respect";
     }
 }

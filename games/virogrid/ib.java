@@ -48,7 +48,7 @@ final class ib {
 
     public static void a(int param0) {
         if (param0 >= -30) {
-            field_a = null;
+            field_a = (String) null;
             field_b = null;
             field_a = null;
             return;
@@ -58,10 +58,6 @@ final class ib {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "This password contains your email address, and would be easy to guess";
     }
 }

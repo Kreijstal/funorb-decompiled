@@ -25,7 +25,7 @@ final class ue extends ne {
         L0: {
           L1: {
             var2 = 0;
-            if (param0 < 0) {
+            if (-1 < (param0 ^ -1)) {
               break L1;
             } else {
               if (65536 <= param0) {
@@ -58,21 +58,29 @@ final class ue extends ne {
           }
         }
         L4: {
-          if (param0 >= 4) {
-            var2 += 2;
-            param0 = param0 >>> 2;
+          if (param1 == -715) {
             break L4;
           } else {
+            field_i = (cn[]) null;
             break L4;
           }
         }
         L5: {
-          if (param0 >= 1) {
-            var2++;
-            param0 = param0 >>> 1;
+          if (-5 >= (param0 ^ -1)) {
+            var2 += 2;
+            param0 = param0 >>> 2;
             break L5;
           } else {
             break L5;
+          }
+        }
+        L6: {
+          if (param0 >= 1) {
+            var2++;
+            param0 = param0 >>> 1;
+            break L6;
+          } else {
+            break L6;
           }
         }
         return var2 + param0;
@@ -102,49 +110,51 @@ final class ue extends ne {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        RuntimeException stackIn_94_0 = null;
-        StringBuilder stackIn_94_1 = null;
         RuntimeException stackIn_95_0 = null;
         StringBuilder stackIn_95_1 = null;
         RuntimeException stackIn_96_0 = null;
         StringBuilder stackIn_96_1 = null;
-        String stackIn_96_2 = null;
+        RuntimeException stackIn_97_0 = null;
+        StringBuilder stackIn_97_1 = null;
+        String stackIn_97_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_93_0 = null;
-        StringBuilder stackOut_93_1 = null;
+        RuntimeException stackOut_94_0 = null;
+        StringBuilder stackOut_94_1 = null;
+        RuntimeException stackOut_96_0 = null;
+        StringBuilder stackOut_96_1 = null;
+        String stackOut_96_2 = null;
         RuntimeException stackOut_95_0 = null;
         StringBuilder stackOut_95_1 = null;
         String stackOut_95_2 = null;
-        RuntimeException stackOut_94_0 = null;
-        StringBuilder stackOut_94_1 = null;
-        String stackOut_94_2 = null;
         var19 = DungeonAssault.field_K;
         try {
           L0: {
             L1: {
-              if (param3 < 0) {
+              if ((param3 ^ -1) > -1) {
                 break L1;
               } else {
-                if (~re.field_i >= ~param0) {
+                if (re.field_i <= param0) {
                   break L1;
                 } else {
                   L2: {
-                    if (param6 >= 0) {
+                    if ((param6 ^ -1) <= -1) {
                       break L2;
                     } else {
-                      if (param4 >= 0) {
+                      if (-1 >= (param4 ^ -1)) {
                         break L2;
                       } else {
                         if (param7 >= 0) {
                           break L2;
                         } else {
-                          return;
+                          decompiledRegionSelector0 = 1;
+                          break L0;
                         }
                       }
                     }
                   }
                   L3: {
-                    if (~re.field_b < ~param6) {
+                    if (re.field_b > param6) {
                       break L3;
                     } else {
                       if (re.field_b > param4) {
@@ -153,7 +163,8 @@ final class ue extends ne {
                         if (re.field_b > param7) {
                           break L3;
                         } else {
-                          return;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         }
                       }
                     }
@@ -164,29 +175,29 @@ final class ue extends ne {
                       L5: {
                         if (param0 != param3) {
                           var15 = param3 + -param5;
-                          if (~param4 < ~param6) {
-                            var11 = (param7 + -param6 << 16) / var14;
-                            var12 = (-param4 + param7 << 16) / var15;
-                            var10 = param4 << 16;
-                            var9_int = param6 << 16;
+                          if (param4 > param6) {
+                            var11 = (param7 + -param6 << 582730736) / var14;
+                            var12 = (-param4 + param7 << 843758096) / var15;
+                            var10 = param4 << 1586209168;
+                            var9_int = param6 << 1500479984;
                             break L5;
                           } else {
-                            var9_int = param4 << 16;
-                            var12 = (param7 + -param6 << 16) / var14;
-                            var10 = param6 << 16;
-                            var11 = (param7 - param4 << 16) / var15;
+                            var9_int = param4 << 1376169680;
+                            var12 = (param7 + -param6 << 1763399248) / var14;
+                            var10 = param6 << 492874576;
+                            var11 = (param7 - param4 << -782677008) / var15;
                             break L5;
                           }
                         } else {
-                          var10 = param4 << 16;
+                          var10 = param4 << 1559027120;
                           var11 = 0;
                           var12 = 0;
-                          var9_int = param6 << 16;
+                          var9_int = param6 << 791966000;
                           break L5;
                         }
                       }
                       var13 = 0;
-                      if (param0 < 0) {
+                      if ((param0 ^ -1) > -1) {
                         param0 = Math.min(-param0, -param0 + param5);
                         var9_int = var9_int + var11 * param0;
                         var10 = var10 + param0 * var12;
@@ -197,11 +208,11 @@ final class ue extends ne {
                       }
                     } else {
                       L6: {
-                        var10 = param6 << 16;
-                        var9_int = param6 << 16;
+                        var10 = param6 << -1247334896;
+                        var9_int = param6 << -1247334896;
                         var15 = param5 + -param0;
-                        var12 = (param7 - param6 << 16) / var14;
-                        var11 = (-param6 + param4 << 16) / var15;
+                        var12 = (param7 - param6 << -535145136) / var14;
+                        var11 = (-param6 + param4 << -325219920) / var15;
                         if (var11 >= var12) {
                           var16 = var11;
                           var11 = var12;
@@ -228,18 +239,18 @@ final class ue extends ne {
                             param0 = 0;
                             var16 = re.field_e[param0];
                             L8: while (true) {
-                              if (~param0 <= ~param5) {
+                              if (param0 >= param5) {
                                 break L7;
                               } else {
                                 L9: {
-                                  var17 = var9_int >> 16;
-                                  if (~var17 > ~re.field_b) {
-                                    var18 = -(var9_int >> 16) + (var10 >> 16);
+                                  var17 = var9_int >> -106614000;
+                                  if (var17 < re.field_b) {
+                                    var18 = -(var9_int >> -7081648) + (var10 >> 599858320);
                                     if (var18 == 0) {
                                       if (0 > var17) {
                                         break L9;
                                       } else {
-                                        if (~var17 > ~re.field_b) {
+                                        if (var17 < re.field_b) {
                                           sa.a((byte) 45, var18, var16 + var17, param2, param1);
                                           break L9;
                                         } else {
@@ -268,8 +279,9 @@ final class ue extends ne {
                                   }
                                 }
                                 param0++;
-                                if (~re.field_i >= ~param0) {
-                                  return;
+                                if (re.field_i <= param0) {
+                                  decompiledRegionSelector0 = 3;
+                                  break L0;
                                 } else {
                                   var16 = var16 + gf.field_i;
                                   var9_int = var9_int + var11;
@@ -282,18 +294,18 @@ final class ue extends ne {
                         } else {
                           var16 = re.field_e[param0];
                           L11: while (true) {
-                            if (~param0 <= ~param5) {
+                            if (param0 >= param5) {
                               break L7;
                             } else {
                               L12: {
-                                var17 = var9_int >> 16;
-                                if (~var17 > ~re.field_b) {
-                                  var18 = -(var9_int >> 16) + (var10 >> 16);
+                                var17 = var9_int >> -106614000;
+                                if (var17 < re.field_b) {
+                                  var18 = -(var9_int >> -7081648) + (var10 >> 599858320);
                                   if (var18 == 0) {
                                     if (0 > var17) {
                                       break L12;
                                     } else {
-                                      if (~var17 > ~re.field_b) {
+                                      if (var17 < re.field_b) {
                                         sa.a((byte) 45, var18, var16 + var17, param2, param1);
                                         break L12;
                                       } else {
@@ -322,7 +334,7 @@ final class ue extends ne {
                                 }
                               }
                               param0++;
-                              if (~re.field_i >= ~param0) {
+                              if (re.field_i <= param0) {
                                 return;
                               } else {
                                 var16 = var16 + gf.field_i;
@@ -342,14 +354,14 @@ final class ue extends ne {
                       } else {
                         L14: {
                           if (var13 != 0) {
-                            var10 = param4 << 16;
+                            var10 = param4 << 324359792;
                             break L14;
                           } else {
-                            var9_int = param4 << 16;
+                            var9_int = param4 << 1118996848;
                             break L14;
                           }
                         }
-                        var17 = param7 << 16;
+                        var17 = param7 << 421638576;
                         var11 = (-var9_int + var17) / var16;
                         var12 = (-var10 + var17) / var16;
                         break L4;
@@ -357,7 +369,7 @@ final class ue extends ne {
                     }
                   }
                   L15: {
-                    if (param0 >= 0) {
+                    if (-1 >= (param0 ^ -1)) {
                       break L15;
                     } else {
                       param0 = -param0;
@@ -367,45 +379,54 @@ final class ue extends ne {
                       break L15;
                     }
                   }
-                  var15 = re.field_e[param0];
-                  L16: while (true) {
-                    if (~param3 >= ~param0) {
+                  L16: {
+                    var15 = re.field_e[param0];
+                    if (param8 == 16) {
+                      break L16;
+                    } else {
+                      field_j = (int[]) null;
+                      break L16;
+                    }
+                  }
+                  L17: while (true) {
+                    if (param3 <= param0) {
+                      decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
-                      L17: {
-                        var16 = var9_int >> 16;
+                      L18: {
+                        var16 = var9_int >> 99437520;
                         if (re.field_b > var16) {
-                          var17 = (var10 >> 16) + -(var9_int >> 16);
+                          var17 = (var10 >> 1069840272) + -(var9_int >> 1088343856);
                           if (var17 == 0) {
-                            if (var16 < 0) {
-                              break L17;
+                            if (-1 < (var16 ^ -1)) {
+                              break L18;
                             } else {
-                              if (~var16 <= ~re.field_b) {
-                                break L17;
+                              if (var16 >= re.field_b) {
+                                break L18;
                               } else {
                                 sa.a((byte) 45, var17, var16 - -var15, param2, param1);
-                                break L17;
+                                break L18;
                               }
                             }
                           } else {
-                            L18: {
+                            L19: {
                               if (var17 + var16 >= re.field_b) {
                                 var17 = re.field_b + -var16 + -1;
-                                break L18;
+                                break L19;
                               } else {
-                                break L18;
+                                break L19;
                               }
                             }
-                            if (var16 >= 0) {
+                            if (-1 >= (var16 ^ -1)) {
                               sa.a((byte) 45, var17, var16 - -var15, param2, param1);
-                              break L17;
+                              break L18;
                             } else {
                               sa.a((byte) 45, var16 + var17, var15, param2, param1);
-                              break L17;
+                              break L18;
                             }
                           }
                         } else {
-                          break L17;
+                          break L18;
                         }
                       }
                       param0++;
@@ -413,54 +434,73 @@ final class ue extends ne {
                         var9_int = var9_int + var11;
                         var15 = var15 + gf.field_i;
                         var10 = var10 + var12;
-                        continue L16;
+                        continue L17;
                       } else {
-                        return;
+                        decompiledRegionSelector0 = 5;
+                        break L0;
                       }
                     }
                   }
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L19: {
+          L20: {
             var9 = decompiledCaughtException;
-            stackOut_93_0 = (RuntimeException) var9;
-            stackOut_93_1 = new StringBuilder().append("ue.E(").append(param0).append(',');
-            stackIn_95_0 = stackOut_93_0;
-            stackIn_95_1 = stackOut_93_1;
-            stackIn_94_0 = stackOut_93_0;
-            stackIn_94_1 = stackOut_93_1;
+            stackOut_94_0 = (RuntimeException) (var9);
+            stackOut_94_1 = new StringBuilder().append("ue.E(").append(param0).append(',');
+            stackIn_96_0 = stackOut_94_0;
+            stackIn_96_1 = stackOut_94_1;
+            stackIn_95_0 = stackOut_94_0;
+            stackIn_95_1 = stackOut_94_1;
             if (param1 == null) {
-              stackOut_95_0 = (RuntimeException) (Object) stackIn_95_0;
-              stackOut_95_1 = (StringBuilder) (Object) stackIn_95_1;
-              stackOut_95_2 = "null";
-              stackIn_96_0 = stackOut_95_0;
-              stackIn_96_1 = stackOut_95_1;
-              stackIn_96_2 = stackOut_95_2;
-              break L19;
+              stackOut_96_0 = (RuntimeException) ((Object) stackIn_96_0);
+              stackOut_96_1 = (StringBuilder) ((Object) stackIn_96_1);
+              stackOut_96_2 = "null";
+              stackIn_97_0 = stackOut_96_0;
+              stackIn_97_1 = stackOut_96_1;
+              stackIn_97_2 = stackOut_96_2;
+              break L20;
             } else {
-              stackOut_94_0 = (RuntimeException) (Object) stackIn_94_0;
-              stackOut_94_1 = (StringBuilder) (Object) stackIn_94_1;
-              stackOut_94_2 = "{...}";
-              stackIn_96_0 = stackOut_94_0;
-              stackIn_96_1 = stackOut_94_1;
-              stackIn_96_2 = stackOut_94_2;
-              break L19;
+              stackOut_95_0 = (RuntimeException) ((Object) stackIn_95_0);
+              stackOut_95_1 = (StringBuilder) ((Object) stackIn_95_1);
+              stackOut_95_2 = "{...}";
+              stackIn_97_0 = stackOut_95_0;
+              stackIn_97_1 = stackOut_95_1;
+              stackIn_97_2 = stackOut_95_2;
+              break L20;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_96_0, stackIn_96_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + 16 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_97_0), stackIn_97_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return;
+                } else {
+                  return;
+                }
+              }
+            }
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Instructions";
     }
 }

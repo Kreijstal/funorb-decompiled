@@ -23,10 +23,14 @@ final class vb implements fc {
         field_o = null;
         field_k = null;
         field_g = null;
+        if (param0 <= 65) {
+            field_o = (String) null;
+        }
         field_m = null;
     }
 
     final static int a(boolean param0, String param1, int param2, int param3, ve param4, int param5, ve param6) {
+        boolean discarded$1 = false;
         RuntimeException var7 = null;
         String var8 = null;
         int var9 = 0;
@@ -75,6 +79,7 @@ final class vb implements fc {
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         String stackIn_73_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         wi stackOut_12_0 = null;
@@ -135,7 +140,8 @@ final class vb implements fc {
                 } else {
                   stackOut_3_0 = -1;
                   stackIn_4_0 = stackOut_3_0;
-                  return stackIn_4_0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             }
@@ -155,14 +161,14 @@ final class vb implements fc {
                       stackIn_14_0 = stackOut_12_0;
                       stackIn_13_0 = stackOut_12_0;
                       if (!param4.a((byte) 56)) {
-                        stackOut_14_0 = (wi) (Object) stackIn_14_0;
+                        stackOut_14_0 = (wi) ((Object) stackIn_14_0);
                         stackOut_14_1 = "";
                         stackIn_15_0 = stackOut_14_0;
                         stackIn_15_1 = stackOut_14_1;
                         break L4;
                       } else {
-                        stackOut_13_0 = (wi) (Object) stackIn_13_0;
-                        stackOut_13_1 = (String) var15;
+                        stackOut_13_0 = (wi) ((Object) stackIn_13_0);
+                        stackOut_13_1 = (String) (var15);
                         stackIn_15_0 = stackOut_13_0;
                         stackIn_15_1 = stackOut_13_1;
                         break L4;
@@ -174,14 +180,14 @@ final class vb implements fc {
                       stackIn_17_0 = stackOut_15_0;
                       stackIn_16_0 = stackOut_15_0;
                       if (!param6.a((byte) 56)) {
-                        stackOut_17_0 = (wi) (Object) stackIn_17_0;
+                        stackOut_17_0 = (wi) ((Object) stackIn_17_0);
                         stackOut_17_1 = "";
                         stackIn_18_0 = stackOut_17_0;
                         stackIn_18_1 = stackOut_17_1;
                         break L5;
                       } else {
-                        stackOut_16_0 = (wi) (Object) stackIn_16_0;
-                        stackOut_16_1 = (String) var8;
+                        stackOut_16_0 = (wi) ((Object) stackIn_16_0);
+                        stackOut_16_1 = (String) (var8);
                         stackIn_18_0 = stackOut_16_0;
                         stackIn_18_1 = stackOut_16_1;
                         break L5;
@@ -191,7 +197,7 @@ final class vb implements fc {
                     hh.field_p.a(16, (byte) 94);
                     hh.field_p.field_h = hh.field_p.field_h + 1;
                     var9 = hh.field_p.field_h;
-                    f.a(dh.field_b, false, (wi) (Object) hh.field_p, lb.field_g, ja.field_a);
+                    f.a(dh.field_b, false, hh.field_p, lb.field_g, ja.field_a);
                     hh.field_p.b(-var9 + hh.field_p.field_h, true);
                     break L3;
                   } else {
@@ -210,7 +216,7 @@ final class vb implements fc {
                       lb.field_g.b(la.field_C.nextInt(), (byte) -64);
                       lb.field_g.a(var15, (byte) -67);
                       lb.field_g.a(var8, (byte) -67);
-                      var17 = (CharSequence) (Object) param1;
+                      var17 = (CharSequence) ((Object) param1);
                       lb.field_g.a(ck.a(-109, var17), (byte) -67);
                       lb.field_g.e(-750655096, param3);
                       lb.field_g.a(param5, (byte) 106);
@@ -227,7 +233,7 @@ final class vb implements fc {
                       }
                     }
                     hh.field_p.a(-256, var11_ref_String);
-                    f.a(dh.field_b, false, (wi) (Object) hh.field_p, lb.field_g, ja.field_a);
+                    f.a(dh.field_b, false, hh.field_p, lb.field_g, ja.field_a);
                     hh.field_p.c(-124, hh.field_p.field_h + -var10);
                     break L3;
                   }
@@ -248,7 +254,7 @@ final class vb implements fc {
                     if (var9 < 100) {
                       break L9;
                     } else {
-                      if (var9 <= 105) {
+                      if ((var9 ^ -1) >= -106) {
                         bi.field_l = new String[-100 + var9];
                         pj.field_a = kb.field_b;
                         break L8;
@@ -257,15 +263,15 @@ final class vb implements fc {
                       }
                     }
                   }
-                  if (var9 != 248) {
-                    if (var9 != 99) {
+                  if ((var9 ^ -1) != -249) {
+                    if (-100 != (var9 ^ -1)) {
                       pj.field_a = id.field_i;
                       pe.field_d = -1;
                       wa.field_d = var9;
                       break L8;
                     } else {
-                      boolean discarded$1 = qb.a(jf.b(false), 3);
-                      lk.field_p = new Boolean(pb.a((wi) (Object) jc.field_g, (byte) 87));
+                      discarded$1 = qb.a(jf.b(false), 3);
+                      lk.field_p = new Boolean(pb.a(jc.field_g, (byte) 87));
                       jc.field_g.field_h = 0;
                       break L8;
                     }
@@ -276,7 +282,8 @@ final class vb implements fc {
                     fa.field_a = false;
                     stackOut_27_0 = var9;
                     stackIn_28_0 = stackOut_27_0;
-                    return stackIn_28_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               } else {
@@ -299,7 +306,8 @@ final class vb implements fc {
                         fa.field_a = false;
                         stackOut_42_0 = 100 + var12;
                         stackIn_43_0 = stackOut_42_0;
-                        return stackIn_43_0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       } else {
                         bi.field_l[var13] = jc.field_g.a(true);
                         var13++;
@@ -339,7 +347,8 @@ final class vb implements fc {
                   fa.field_a = false;
                   stackOut_51_0 = wa.field_d;
                   stackIn_52_0 = stackOut_51_0;
-                  return stackIn_52_0;
+                  decompiledRegionSelector0 = 3;
+                  break L0;
                 } else {
                   break L12;
                 }
@@ -355,7 +364,7 @@ final class vb implements fc {
                   break L14;
                 } else {
                   L15: {
-                    if (ph.a((byte) 76) > 30000L) {
+                    if (-30001L > (ph.a((byte) 76) ^ -1L)) {
                       ib.field_o = jh.field_t;
                       break L15;
                     } else {
@@ -366,7 +375,8 @@ final class vb implements fc {
                   fa.field_a = false;
                   stackOut_59_0 = 249;
                   stackIn_60_0 = stackOut_59_0;
-                  return stackIn_60_0;
+                  decompiledRegionSelector0 = 4;
+                  break L0;
                 }
               } else {
                 break L14;
@@ -374,29 +384,30 @@ final class vb implements fc {
             }
             stackOut_62_0 = -1;
             stackIn_63_0 = stackOut_62_0;
+            decompiledRegionSelector0 = 5;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L16: {
             var7 = decompiledCaughtException;
-            stackOut_64_0 = (RuntimeException) var7;
+            stackOut_64_0 = (RuntimeException) (var7);
             stackOut_64_1 = new StringBuilder().append("vb.D(").append(param0).append(',');
             stackIn_66_0 = stackOut_64_0;
             stackIn_66_1 = stackOut_64_1;
             stackIn_65_0 = stackOut_64_0;
             stackIn_65_1 = stackOut_64_1;
             if (param1 == null) {
-              stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
-              stackOut_66_1 = (StringBuilder) (Object) stackIn_66_1;
+              stackOut_66_0 = (RuntimeException) ((Object) stackIn_66_0);
+              stackOut_66_1 = (StringBuilder) ((Object) stackIn_66_1);
               stackOut_66_2 = "null";
               stackIn_67_0 = stackOut_66_0;
               stackIn_67_1 = stackOut_66_1;
               stackIn_67_2 = stackOut_66_2;
               break L16;
             } else {
-              stackOut_65_0 = (RuntimeException) (Object) stackIn_65_0;
-              stackOut_65_1 = (StringBuilder) (Object) stackIn_65_1;
+              stackOut_65_0 = (RuntimeException) ((Object) stackIn_65_0);
+              stackOut_65_1 = (StringBuilder) ((Object) stackIn_65_1);
               stackOut_65_2 = "{...}";
               stackIn_67_0 = stackOut_65_0;
               stackIn_67_1 = stackOut_65_1;
@@ -405,23 +416,23 @@ final class vb implements fc {
             }
           }
           L17: {
-            stackOut_67_0 = (RuntimeException) (Object) stackIn_67_0;
+            stackOut_67_0 = (RuntimeException) ((Object) stackIn_67_0);
             stackOut_67_1 = ((StringBuilder) (Object) stackIn_67_1).append(stackIn_67_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_69_0 = stackOut_67_0;
             stackIn_69_1 = stackOut_67_1;
             stackIn_68_0 = stackOut_67_0;
             stackIn_68_1 = stackOut_67_1;
             if (param4 == null) {
-              stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
-              stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
+              stackOut_69_0 = (RuntimeException) ((Object) stackIn_69_0);
+              stackOut_69_1 = (StringBuilder) ((Object) stackIn_69_1);
               stackOut_69_2 = "null";
               stackIn_70_0 = stackOut_69_0;
               stackIn_70_1 = stackOut_69_1;
               stackIn_70_2 = stackOut_69_2;
               break L17;
             } else {
-              stackOut_68_0 = (RuntimeException) (Object) stackIn_68_0;
-              stackOut_68_1 = (StringBuilder) (Object) stackIn_68_1;
+              stackOut_68_0 = (RuntimeException) ((Object) stackIn_68_0);
+              stackOut_68_1 = (StringBuilder) ((Object) stackIn_68_1);
               stackOut_68_2 = "{...}";
               stackIn_70_0 = stackOut_68_0;
               stackIn_70_1 = stackOut_68_1;
@@ -430,23 +441,23 @@ final class vb implements fc {
             }
           }
           L18: {
-            stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
+            stackOut_70_0 = (RuntimeException) ((Object) stackIn_70_0);
             stackOut_70_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_70_2).append(',').append(param5).append(',');
             stackIn_72_0 = stackOut_70_0;
             stackIn_72_1 = stackOut_70_1;
             stackIn_71_0 = stackOut_70_0;
             stackIn_71_1 = stackOut_70_1;
             if (param6 == null) {
-              stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
-              stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
+              stackOut_72_0 = (RuntimeException) ((Object) stackIn_72_0);
+              stackOut_72_1 = (StringBuilder) ((Object) stackIn_72_1);
               stackOut_72_2 = "null";
               stackIn_73_0 = stackOut_72_0;
               stackIn_73_1 = stackOut_72_1;
               stackIn_73_2 = stackOut_72_2;
               break L18;
             } else {
-              stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
-              stackOut_71_1 = (StringBuilder) (Object) stackIn_71_1;
+              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
               stackOut_71_2 = "{...}";
               stackIn_73_0 = stackOut_71_0;
               stackIn_73_1 = stackOut_71_1;
@@ -454,12 +465,33 @@ final class vb implements fc {
               break L18;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_73_0, stackIn_73_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_73_0), stackIn_73_2 + ')');
         }
-        return stackIn_63_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_28_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_43_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_52_0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_60_0;
+                } else {
+                  return stackIn_63_0;
+                }
+              }
+            }
+          }
+        }
     }
 
     public final void a(int param0, lk param1, byte param2, boolean param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -491,16 +523,16 @@ final class vb implements fc {
             L1: {
               if (!(param1 instanceof ff)) {
                 stackOut_2_0 = null;
-                stackIn_3_0 = (lk) (Object) stackOut_2_0;
+                stackIn_3_0 = (lk) ((Object) stackOut_2_0);
                 break L1;
               } else {
-                stackOut_1_0 = (lk) param1;
+                stackOut_1_0 = (lk) (param1);
                 stackIn_3_0 = stackOut_1_0;
                 break L1;
               }
             }
             L2: {
-              var12 = (ff) (Object) stackIn_3_0;
+              var12 = (ff) ((Object) stackIn_3_0);
               var8 = -100 / ((-60 - param2) / 56);
               if (var12 == null) {
                 break L2;
@@ -511,7 +543,7 @@ final class vb implements fc {
             }
             L3: {
               var7 = 5592405;
-              na.e(param1.field_r + param4, param1.field_i + param0, param1.field_k, param1.field_m, ((vb) this).field_h);
+              na.e(param1.field_r + param4, param1.field_i + param0, param1.field_k, param1.field_m, this.field_h);
               if (!param3) {
                 break L3;
               } else {
@@ -520,22 +552,22 @@ final class vb implements fc {
               }
             }
             L4: {
-              var9 = ((vb) this).field_a + param4 - -param1.field_r;
-              var10 = param0 + param1.field_i + ((vb) this).field_p;
-              na.d(var9, var10, ((vb) this).field_d, ((vb) this).field_l, 5592405);
-              na.e(var9, var10, ((vb) this).field_d, ((vb) this).field_l, var7);
+              var9 = this.field_a + param4 - -param1.field_r;
+              var10 = param0 + param1.field_i + this.field_p;
+              na.d(var9, var10, this.field_d, this.field_l, 5592405);
+              na.e(var9, var10, this.field_d, this.field_l, var7);
               if (var12.field_z) {
-                na.a(var9, var10, ((vb) this).field_d + var9, var10 - -((vb) this).field_l, 1);
-                na.a(((vb) this).field_d + var9, var10, var9, var10 + ((vb) this).field_l, 1);
+                na.a(var9, var10, this.field_d + var9, var10 - -this.field_l, 1);
+                na.a(this.field_d + var9, var10, var9, var10 + this.field_l, 1);
                 break L4;
               } else {
                 break L4;
               }
             }
             L5: {
-              if (null != ((vb) this).field_n) {
-                var11 = ((vb) this).field_i + ((vb) this).field_a + ((vb) this).field_d;
-                int discarded$1 = ((vb) this).field_n.a(param1.field_h, var11 + (param4 - -param1.field_r), ((vb) this).field_f + param1.field_i + param0, param1.field_k - (var11 - -((vb) this).field_i), param1.field_m - (((vb) this).field_i << 1), ((vb) this).field_c, ((vb) this).field_b, ((vb) this).field_e, ((vb) this).field_j, 0);
+              if (null != this.field_n) {
+                var11 = this.field_i + this.field_a + this.field_d;
+                discarded$1 = this.field_n.a(param1.field_h, var11 + (param4 - -param1.field_r), this.field_f + param1.field_i + param0, param1.field_k - (var11 - -this.field_i), param1.field_m - (this.field_i << 1959255201), this.field_c, this.field_b, this.field_e, this.field_j, 0);
                 break L5;
               } else {
                 break L5;
@@ -547,23 +579,23 @@ final class vb implements fc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var6;
+            stackOut_14_0 = (RuntimeException) (var6);
             stackOut_14_1 = new StringBuilder().append("vb.B(").append(param0).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param1 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L6;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -571,43 +603,42 @@ final class vb implements fc {
               break L6;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void a(byte param0) {
         ih.field_V = null;
-        ph.field_c = null;
+        ph.field_c = (byte[][]) null;
         cl.field_n = null;
+        if (param0 != 122) {
+            vb.a(75);
+        }
         he.field_k = null;
         ae.field_c = null;
         qh.field_i = null;
     }
 
     vb(tj param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        ((vb) this).field_j = 1;
-        ((vb) this).field_e = 1;
+        this.field_j = 1;
+        this.field_e = 1;
         try {
-            ((vb) this).field_n = param0;
-            ((vb) this).field_p = param6;
-            ((vb) this).field_d = param8;
-            ((vb) this).field_a = param5;
-            ((vb) this).field_c = param3;
-            ((vb) this).field_b = param4;
-            ((vb) this).field_l = param7;
-            ((vb) this).field_f = param2;
-            ((vb) this).field_i = param1;
-            ((vb) this).field_h = param9;
+            this.field_n = param0;
+            this.field_p = param6;
+            this.field_d = param8;
+            this.field_a = param5;
+            this.field_c = param3;
+            this.field_b = param4;
+            this.field_l = param7;
+            this.field_f = param2;
+            this.field_i = param1;
+            this.field_h = param9;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Connection lost - attempting to reconnect";
         field_g = new qc();
     }

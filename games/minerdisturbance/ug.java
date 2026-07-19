@@ -25,15 +25,11 @@ final class ug implements uj {
         tb.field_a = 1;
         gd.field_x = 5;
         if (param0) {
-            field_b = null;
+            field_b = (String) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Ranking: King of the Snowmen";
     }
 }

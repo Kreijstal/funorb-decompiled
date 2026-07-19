@@ -13,11 +13,14 @@ abstract class sh extends vd implements mca {
     abstract int d(byte param0);
 
     void a(gl param0, byte param1) {
+        if (param1 <= 111) {
+            return;
+        }
         try {
-            ((sh) this).field_F = param0;
-            ((sh) this).field_F.field_e = (sh) this;
+            this.field_F = param0;
+            this.field_F.field_e = (sh) (this);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "sh.A(" + (param0 != null ? "{...}" : "null") + ',' + 114 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "sh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -37,24 +40,27 @@ abstract class sh extends vd implements mca {
         cfa var13 = null;
         kka var14 = null;
         kka var15 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var9 = BachelorFridge.field_y;
         try {
           L0: {
-            var1_int = -96;
+            var1_int = -96 / ((19 - param0) / 53);
             var2 = ig.field_m;
             var3 = var2.b(16711935);
             if (var3 != 0) {
-              if (var3 != 1) {
+              if ((var3 ^ -1) != -2) {
                 if (var3 == 2) {
-                  var15 = (kka) (Object) gs.field_l.b((byte) 90);
+                  var15 = (kka) ((Object) gs.field_l.b((byte) 90));
                   if (var15 == null) {
                     vc.a((byte) -100);
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     var15.field_m = vv.a((byte) 113);
                     var15.field_j = true;
                     var15.a(false);
+                    decompiledRegionSelector0 = 3;
                     break L0;
                   }
                 } else {
@@ -63,13 +69,14 @@ abstract class sh extends vd implements mca {
                   return;
                 }
               } else {
-                var13 = (cfa) (Object) eaa.field_d.b((byte) 90);
+                var13 = (cfa) ((Object) eaa.field_d.b((byte) 90));
                 if (var13 != null) {
                   var13.a(false);
                   return;
                 } else {
                   vc.a((byte) -99);
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
             } else {
@@ -78,14 +85,15 @@ abstract class sh extends vd implements mca {
               var11 = var12;
               var5 = var11;
               var6 = var2;
-              var7 = ((lu) (Object) var6).b(16711935);
+              var7 = ((lu) ((Object) var6)).b(16711935);
               var8 = 0;
               L1: while (true) {
                 if (var7 <= var8) {
-                  var14 = (kka) (Object) gs.field_l.b((byte) 90);
+                  var14 = (kka) ((Object) gs.field_l.b((byte) 90));
                   if (var14 == null) {
                     vc.a((byte) -70);
-                    return;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   } else {
                     var14.field_m = var4;
                     var14.field_j = true;
@@ -93,7 +101,7 @@ abstract class sh extends vd implements mca {
                     return;
                   }
                 } else {
-                  var11[var8] = ((lu) (Object) var6).f(-61);
+                  var11[var8] = ((lu) ((Object) var6)).f(-61);
                   var8++;
                   continue L1;
                 }
@@ -103,7 +111,20 @@ abstract class sh extends vd implements mca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "sh.T(" + -71 + ')');
+          throw pe.a((Throwable) ((Object) var1), "sh.T(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -117,9 +138,9 @@ abstract class sh extends vd implements mca {
 
     public final qu a(int param0) {
         if (param0 != 16728128) {
-            return null;
+            return (qu) null;
         }
-        return (qu) (Object) ((sh) this).field_F;
+        return (qu) ((Object) this.field_F);
     }
 
     public static void e(byte param0) {
@@ -127,16 +148,15 @@ abstract class sh extends vd implements mca {
         field_E = null;
         field_H = null;
         field_C = null;
+        if (param0 != -92) {
+            return;
+        }
         field_D = null;
     }
 
     abstract int j(int param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_E = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_H = "Show all private chat";
         field_I = true;

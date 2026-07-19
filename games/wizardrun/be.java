@@ -11,12 +11,12 @@ final class be extends o {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((be) this).field_u;
-          param1 = param1 + ((be) this).field_v;
+          param0 = param0 + this.field_u;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * ed.field_h;
           var5 = 0;
-          var6 = ((be) this).field_p;
-          var7 = ((be) this).field_z;
+          var6 = this.field_p;
+          var7 = this.field_z;
           var8 = ed.field_h - var7;
           var9 = 0;
           if (param1 >= ed.field_i) {
@@ -67,7 +67,7 @@ final class be extends o {
           return;
         } else {
           if (var6 > 0) {
-            be.c(ed.field_k, ((be) this).field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+            be.c(ed.field_k, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -83,6 +83,7 @@ final class be extends o {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
+        int incrementValue$0 = 0;
         int var13 = param3;
         for (var14 = -param8; var14 < 0; var14++) {
             var15 = (param4 >> 16) * param11;
@@ -91,7 +92,7 @@ final class be extends o {
                 var18 = param0[param5];
                 var19 = (var17 >>> 24) * param12 >> 8;
                 var20 = 256 - var19;
-                int incrementValue$0 = param5;
+                incrementValue$0 = param5;
                 param5++;
                 param0[incrementValue$0] = ((var17 & 16711935) * var19 + (var18 & 16711935) * var20 & -16711936) + ((var17 & 65280) * var19 + (var18 & 65280) * var20 & 16711680) >>> 8;
                 param3 = param3 + param9;
@@ -115,12 +116,12 @@ final class be extends o {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((be) this).field_u;
-          param1 = param1 + ((be) this).field_v;
+          param0 = param0 + this.field_u;
+          param1 = param1 + this.field_v;
           var3 = param0 + param1 * ed.field_h;
           var4 = 0;
-          var5 = ((be) this).field_p;
-          var6 = ((be) this).field_z;
+          var5 = this.field_p;
+          var6 = this.field_z;
           var7 = ed.field_h - var6;
           var8 = 0;
           if (param1 >= ed.field_i) {
@@ -171,7 +172,7 @@ final class be extends o {
           return;
         } else {
           if (var5 > 0) {
-            be.d(ed.field_k, ((be) this).field_B, 0, var4, var3, var6, var5, var7, var8);
+            be.d(ed.field_k, this.field_B, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -180,6 +181,15 @@ final class be extends o {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         double var7 = 0.0;
         int var9 = 0;
         int var10 = 0;
@@ -215,19 +225,19 @@ final class be extends o {
         int var41 = 0;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((be) this).field_u << 4);
-            param1 = param1 - (((be) this).field_v << 4);
+            param0 = param0 - (this.field_u << 4);
+            param1 = param1 - (this.field_v << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((be) this).field_z << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((be) this).field_z << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((be) this).field_p << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((be) this).field_p << 4) - param1) * var10;
-            var17 = ((((be) this).field_z << 4) - param0) * var10 + ((((be) this).field_p << 4) - param1) * var9;
-            var18 = -((((be) this).field_z << 4) - param0) * var9 + ((((be) this).field_p << 4) - param1) * var10;
+            var13 = ((this.field_z << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_z << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_p << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_p << 4) - param1) * var10;
+            var17 = ((this.field_z << 4) - param0) * var10 + ((this.field_p << 4) - param1) * var9;
+            var18 = -((this.field_z << 4) - param0) * var9 + ((this.field_p << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -396,8 +406,8 @@ final class be extends o {
                               }
                             }
                             L17: {
-                              var32 = (1 + var35 - (((be) this).field_z << 12) - var27) / var27;
-                              if ((1 + var35 - (((be) this).field_z << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_z << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_z << 12) - var27) / var27 <= var37) {
                                 break L17;
                               } else {
                                 var37 = var32;
@@ -417,8 +427,8 @@ final class be extends o {
                               }
                             }
                             L19: {
-                              var32 = (1 + var36 - (((be) this).field_p << 12) - var26) / var26;
-                              if ((1 + var36 - (((be) this).field_p << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_p << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_p << 12) - var26) / var26 <= var37) {
                                 break L19;
                               } else {
                                 var37 = var32;
@@ -433,11 +443,11 @@ final class be extends o {
                                 var23 = var23 + ed.field_h;
                                 continue L15;
                               } else {
-                                var38 = ((be) this).field_B[(var36 >> 12) * ((be) this).field_z + (var35 >> 12)];
+                                var38 = this.field_B[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                 var39 = ed.field_k[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$9 = var34;
+                                incrementValue$9 = var34;
                                 var34++;
                                 ed.field_k[incrementValue$9] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -471,8 +481,8 @@ final class be extends o {
                               }
                             }
                             L23: {
-                              var32 = (1 + var35 - (((be) this).field_z << 12) - var27) / var27;
-                              if ((1 + var35 - (((be) this).field_z << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_z << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_z << 12) - var27) / var27 <= var37) {
                                 break L23;
                               } else {
                                 var37 = var32;
@@ -480,8 +490,8 @@ final class be extends o {
                               }
                             }
                             L24: {
-                              var32 = var36 - (((be) this).field_p << 12);
-                              if (var36 - (((be) this).field_p << 12) < 0) {
+                              var32 = var36 - (this.field_p << 12);
+                              if (var36 - (this.field_p << 12) < 0) {
                                 break L24;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -509,11 +519,11 @@ final class be extends o {
                                 var23 = var23 + ed.field_h;
                                 continue L21;
                               } else {
-                                var38 = ((be) this).field_B[(var36 >> 12) * ((be) this).field_z + (var35 >> 12)];
+                                var38 = this.field_B[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                 var39 = ed.field_k[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$10 = var34;
+                                incrementValue$10 = var34;
                                 var34++;
                                 ed.field_k[incrementValue$10] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -537,7 +547,7 @@ final class be extends o {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((be) this).field_p << 12) < 0) {
+                              if (var36 - (this.field_p << 12) < 0) {
                                 L29: {
                                   if (var35 >= 0) {
                                     break L29;
@@ -550,8 +560,8 @@ final class be extends o {
                                   }
                                 }
                                 L30: {
-                                  var32 = (1 + var35 - (((be) this).field_z << 12) - var27) / var27;
-                                  if ((1 + var35 - (((be) this).field_z << 12) - var27) / var27 <= var37) {
+                                  var32 = (1 + var35 - (this.field_z << 12) - var27) / var27;
+                                  if ((1 + var35 - (this.field_z << 12) - var27) / var27 <= var37) {
                                     break L30;
                                   } else {
                                     var37 = var32;
@@ -562,11 +572,11 @@ final class be extends o {
                                   if (var37 >= 0) {
                                     break L28;
                                   } else {
-                                    var38 = ((be) this).field_B[(var36 >> 12) * ((be) this).field_z + (var35 >> 12)];
+                                    var38 = this.field_B[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                     var39 = ed.field_k[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$11 = var34;
+                                    incrementValue$11 = var34;
                                     var34++;
                                     ed.field_k[incrementValue$11] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var35 = var35 + var27;
@@ -601,8 +611,8 @@ final class be extends o {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((be) this).field_z << 12);
-                              if (var35 - (((be) this).field_z << 12) < 0) {
+                              var32 = var35 - (this.field_z << 12);
+                              if (var35 - (this.field_z << 12) < 0) {
                                 break L33;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -635,8 +645,8 @@ final class be extends o {
                               }
                             }
                             L36: {
-                              var32 = (1 + var36 - (((be) this).field_p << 12) - var26) / var26;
-                              if ((1 + var36 - (((be) this).field_p << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_p << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_p << 12) - var26) / var26 <= var37) {
                                 break L36;
                               } else {
                                 var37 = var32;
@@ -651,11 +661,11 @@ final class be extends o {
                                 var23 = var23 + ed.field_h;
                                 continue L32;
                               } else {
-                                var38 = ((be) this).field_B[(var36 >> 12) * ((be) this).field_z + (var35 >> 12)];
+                                var38 = this.field_B[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                 var39 = ed.field_k[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$12 = var34;
+                                incrementValue$12 = var34;
                                 var34++;
                                 ed.field_k[incrementValue$12] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -677,8 +687,8 @@ final class be extends o {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((be) this).field_z << 12);
-                              if (var35 - (((be) this).field_z << 12) < 0) {
+                              var32 = var35 - (this.field_z << 12);
+                              if (var35 - (this.field_z << 12) < 0) {
                                 break L39;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -699,8 +709,8 @@ final class be extends o {
                               }
                             }
                             L41: {
-                              var32 = var36 - (((be) this).field_p << 12);
-                              if (var36 - (((be) this).field_p << 12) < 0) {
+                              var32 = var36 - (this.field_p << 12);
+                              if (var36 - (this.field_p << 12) < 0) {
                                 break L41;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -728,11 +738,11 @@ final class be extends o {
                                 var23 = var23 + ed.field_h;
                                 continue L38;
                               } else {
-                                var38 = ((be) this).field_B[(var36 >> 12) * ((be) this).field_z + (var35 >> 12)];
+                                var38 = this.field_B[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                 var39 = ed.field_k[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$13 = var34;
+                                incrementValue$13 = var34;
                                 var34++;
                                 ed.field_k[incrementValue$13] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -756,10 +766,10 @@ final class be extends o {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((be) this).field_p << 12) < 0) {
+                              if (var36 - (this.field_p << 12) < 0) {
                                 L46: {
-                                  var32 = var35 - (((be) this).field_z << 12);
-                                  if (var35 - (((be) this).field_z << 12) < 0) {
+                                  var32 = var35 - (this.field_z << 12);
+                                  if (var35 - (this.field_z << 12) < 0) {
                                     break L46;
                                   } else {
                                     var32 = (var27 - var32) / var27;
@@ -782,11 +792,11 @@ final class be extends o {
                                   if (var37 >= 0) {
                                     break L45;
                                   } else {
-                                    var38 = ((be) this).field_B[(var36 >> 12) * ((be) this).field_z + (var35 >> 12)];
+                                    var38 = this.field_B[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                     var39 = ed.field_k[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$14 = var34;
+                                    incrementValue$14 = var34;
                                     var34++;
                                     ed.field_k[incrementValue$14] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var35 = var35 + var27;
@@ -823,7 +833,7 @@ final class be extends o {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((be) this).field_z << 12) < 0) {
+                              if (var35 - (this.field_z << 12) < 0) {
                                 L51: {
                                   if (var36 >= 0) {
                                     break L51;
@@ -836,8 +846,8 @@ final class be extends o {
                                   }
                                 }
                                 L52: {
-                                  var32 = (1 + var36 - (((be) this).field_p << 12) - var26) / var26;
-                                  if ((1 + var36 - (((be) this).field_p << 12) - var26) / var26 <= var37) {
+                                  var32 = (1 + var36 - (this.field_p << 12) - var26) / var26;
+                                  if ((1 + var36 - (this.field_p << 12) - var26) / var26 <= var37) {
                                     break L52;
                                   } else {
                                     var37 = var32;
@@ -848,11 +858,11 @@ final class be extends o {
                                   if (var37 >= 0) {
                                     break L50;
                                   } else {
-                                    var38 = ((be) this).field_B[(var36 >> 12) * ((be) this).field_z + (var35 >> 12)];
+                                    var38 = this.field_B[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                     var39 = ed.field_k[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$15 = var34;
+                                    incrementValue$15 = var34;
                                     var34++;
                                     ed.field_k[incrementValue$15] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var36 = var36 + var26;
@@ -885,10 +895,10 @@ final class be extends o {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((be) this).field_z << 12) < 0) {
+                              if (var35 - (this.field_z << 12) < 0) {
                                 L56: {
-                                  var32 = var36 - (((be) this).field_p << 12);
-                                  if (var36 - (((be) this).field_p << 12) < 0) {
+                                  var32 = var36 - (this.field_p << 12);
+                                  if (var36 - (this.field_p << 12) < 0) {
                                     break L56;
                                   } else {
                                     var32 = (var26 - var32) / var26;
@@ -911,11 +921,11 @@ final class be extends o {
                                   if (var37 >= 0) {
                                     break L55;
                                   } else {
-                                    var38 = ((be) this).field_B[(var36 >> 12) * ((be) this).field_z + (var35 >> 12)];
+                                    var38 = this.field_B[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                     var39 = ed.field_k[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$16 = var34;
+                                    incrementValue$16 = var34;
                                     var34++;
                                     ed.field_k[incrementValue$16] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var36 = var36 + var26;
@@ -950,17 +960,17 @@ final class be extends o {
                           var37 = var20;
                           if (var35 >= 0) {
                             if (var36 >= 0) {
-                              if (var35 - (((be) this).field_z << 12) < 0) {
-                                if (var36 - (((be) this).field_p << 12) < 0) {
+                              if (var35 - (this.field_z << 12) < 0) {
+                                if (var36 - (this.field_p << 12) < 0) {
                                   L61: while (true) {
                                     if (var37 >= 0) {
                                       break L60;
                                     } else {
-                                      var38 = ((be) this).field_B[(var36 >> 12) * ((be) this).field_z + (var35 >> 12)];
+                                      var38 = this.field_B[(var36 >> 12) * this.field_z + (var35 >> 12)];
                                       var39 = ed.field_k[var34];
                                       var40 = var38 >>> 24;
                                       var41 = 256 - var40;
-                                      int incrementValue$17 = var34;
+                                      incrementValue$17 = var34;
                                       var34++;
                                       ed.field_k[incrementValue$17] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                       var37++;
@@ -1017,30 +1027,30 @@ final class be extends o {
         } else {
           if (param3 > 0) {
             L0: {
-              var5 = ((be) this).field_z;
-              var6 = ((be) this).field_p;
+              var5 = this.field_z;
+              var6 = this.field_p;
               var7 = 0;
               var8 = 0;
-              var9 = ((be) this).field_x;
-              var10 = ((be) this).field_s;
+              var9 = this.field_x;
+              var10 = this.field_s;
               var11 = (var9 << 16) / param2;
               var12 = (var10 << 16) / param3;
-              if (((be) this).field_u <= 0) {
+              if (this.field_u <= 0) {
                 break L0;
               } else {
-                var13 = ((((be) this).field_u << 16) + var11 - 1) / var11;
+                var13 = ((this.field_u << 16) + var11 - 1) / var11;
                 param0 = param0 + var13;
-                var7 = var7 + (var13 * var11 - (((be) this).field_u << 16));
+                var7 = var7 + (var13 * var11 - (this.field_u << 16));
                 break L0;
               }
             }
             L1: {
-              if (((be) this).field_v <= 0) {
+              if (this.field_v <= 0) {
                 break L1;
               } else {
-                var13 = ((((be) this).field_v << 16) + var12 - 1) / var12;
+                var13 = ((this.field_v << 16) + var12 - 1) / var12;
                 param1 = param1 + var13;
-                var8 = var8 + (var13 * var12 - (((be) this).field_v << 16));
+                var8 = var8 + (var13 * var12 - (this.field_v << 16));
                 break L1;
               }
             }
@@ -1103,7 +1113,7 @@ final class be extends o {
                 break L7;
               }
             }
-            be.d(ed.field_k, ((be) this).field_B, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+            be.d(ed.field_k, this.field_B, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
             return;
           } else {
             return;
@@ -1120,12 +1130,12 @@ final class be extends o {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + (((be) this).field_x - ((be) this).field_z - ((be) this).field_u);
-          param1 = param1 + ((be) this).field_v;
+          param0 = param0 + (this.field_x - this.field_z - this.field_u);
+          param1 = param1 + this.field_v;
           var3 = param0 + param1 * ed.field_h;
-          var4 = ((be) this).field_z - 1;
-          var5 = ((be) this).field_p;
-          var6 = ((be) this).field_z;
+          var4 = this.field_z - 1;
+          var5 = this.field_p;
+          var6 = this.field_z;
           var7 = ed.field_h - var6;
           var8 = var6 + var6;
           if (param1 >= ed.field_i) {
@@ -1176,7 +1186,7 @@ final class be extends o {
           return;
         } else {
           if (var5 > 0) {
-            be.e(ed.field_k, ((be) this).field_B, 0, var4, var3, var6, var5, var7, var8);
+            be.e(ed.field_k, this.field_B, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -1189,17 +1199,19 @@ final class be extends o {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int incrementValue$0 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = -param5; var11 < 0; var11++) {
                 var12 = (param1[param3] >>> 24) * param9 >> 8;
                 var13 = 256 - var12;
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
                 var14 = param1[incrementValue$0];
                 var15 = param0[param4];
-                int incrementValue$1 = param4;
+                incrementValue$1 = param4;
                 param4++;
                 param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
             }
@@ -1217,12 +1229,12 @@ final class be extends o {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((be) this).field_u;
-          param1 = param1 + ((be) this).field_v;
+          param0 = param0 + this.field_u;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * ed.field_h;
           var5 = 0;
-          var6 = ((be) this).field_p;
-          var7 = ((be) this).field_z;
+          var6 = this.field_p;
+          var7 = this.field_z;
           var8 = ed.field_h - var7;
           var9 = 0;
           if (param1 >= ed.field_i) {
@@ -1273,7 +1285,7 @@ final class be extends o {
           return;
         } else {
           if (var6 > 0) {
-            be.d(ed.field_k, ((be) this).field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+            be.d(ed.field_k, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -1282,6 +1294,8 @@ final class be extends o {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1315,7 +1329,7 @@ final class be extends o {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
                 param2 = param1[incrementValue$2];
                 var17 = param2 >>> 24;
@@ -1350,7 +1364,7 @@ final class be extends o {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
-                  int incrementValue$3 = param4;
+                  incrementValue$3 = param4;
                   param4++;
                   param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
@@ -1380,30 +1394,30 @@ final class be extends o {
           } else {
             if (param3 > 0) {
               L0: {
-                var6 = ((be) this).field_z;
-                var7 = ((be) this).field_p;
+                var6 = this.field_z;
+                var7 = this.field_p;
                 var8 = 0;
                 var9 = 0;
-                var10 = ((be) this).field_x;
-                var11 = ((be) this).field_s;
+                var10 = this.field_x;
+                var11 = this.field_s;
                 var12 = (var10 << 16) / param2;
                 var13 = (var11 << 16) / param3;
-                if (((be) this).field_u <= 0) {
+                if (this.field_u <= 0) {
                   break L0;
                 } else {
-                  var14 = ((((be) this).field_u << 16) + var12 - 1) / var12;
+                  var14 = ((this.field_u << 16) + var12 - 1) / var12;
                   param0 = param0 + var14;
-                  var8 = var8 + (var14 * var12 - (((be) this).field_u << 16));
+                  var8 = var8 + (var14 * var12 - (this.field_u << 16));
                   break L0;
                 }
               }
               L1: {
-                if (((be) this).field_v <= 0) {
+                if (this.field_v <= 0) {
                   break L1;
                 } else {
-                  var14 = ((((be) this).field_v << 16) + var13 - 1) / var13;
+                  var14 = ((this.field_v << 16) + var13 - 1) / var13;
                   param1 = param1 + var14;
-                  var9 = var9 + (var14 * var13 - (((be) this).field_v << 16));
+                  var9 = var9 + (var14 * var13 - (this.field_v << 16));
                   break L1;
                 }
               }
@@ -1466,19 +1480,21 @@ final class be extends o {
                   break L7;
                 }
               }
-              be.c(ed.field_k, ((be) this).field_B, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
+              be.c(ed.field_k, this.field_B, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
               return;
             } else {
               return;
             }
           }
         } else {
-          ((be) this).a(param0, param1, param2, param3);
+          this.a(param0, param1, param2, param3);
           return;
         }
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var14 = 0;
         param8 = -param10;
         L0: while (true) {
@@ -1493,7 +1509,7 @@ final class be extends o {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -1508,7 +1524,7 @@ final class be extends o {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -1537,30 +1553,30 @@ final class be extends o {
         } else {
           if (param3 > 0) {
             L0: {
-              var6 = ((be) this).field_z;
-              var7 = ((be) this).field_p;
+              var6 = this.field_z;
+              var7 = this.field_p;
               var8 = 0;
               var9 = 0;
-              var10 = ((be) this).field_x;
-              var11 = ((be) this).field_s;
+              var10 = this.field_x;
+              var11 = this.field_s;
               var12 = (var10 << 16) / param2;
               var13 = (var11 << 16) / param3;
-              if (((be) this).field_u <= 0) {
+              if (this.field_u <= 0) {
                 break L0;
               } else {
-                var14 = ((((be) this).field_u << 16) + var12 - 1) / var12;
+                var14 = ((this.field_u << 16) + var12 - 1) / var12;
                 param0 = param0 + var14;
-                var8 = var8 + (var14 * var12 - (((be) this).field_u << 16));
+                var8 = var8 + (var14 * var12 - (this.field_u << 16));
                 break L0;
               }
             }
             L1: {
-              if (((be) this).field_v <= 0) {
+              if (this.field_v <= 0) {
                 break L1;
               } else {
-                var14 = ((((be) this).field_v << 16) + var13 - 1) / var13;
+                var14 = ((this.field_v << 16) + var13 - 1) / var13;
                 param1 = param1 + var14;
-                var9 = var9 + (var14 * var13 - (((be) this).field_v << 16));
+                var9 = var9 + (var14 * var13 - (this.field_v << 16));
                 break L1;
               }
             }
@@ -1623,7 +1639,7 @@ final class be extends o {
                 break L7;
               }
             }
-            be.d(ed.field_k, ((be) this).field_B, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
+            be.d(ed.field_k, this.field_B, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
             return;
           } else {
             return;
@@ -1679,10 +1695,10 @@ final class be extends o {
         int stackOut_19_1 = 0;
         int stackOut_19_2 = 0;
         L0: {
-          var3 = ((be) this).field_z >> 1;
-          var4 = ((be) this).field_p >> 1;
-          param0 = param0 + ((be) this).field_u / 2;
-          param1 = param1 + ((be) this).field_v / 2;
+          var3 = this.field_z >> 1;
+          var4 = this.field_p >> 1;
+          param0 = param0 + this.field_u / 2;
+          param1 = param1 + this.field_v / 2;
           if (param0 >= ed.field_c) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -1696,7 +1712,7 @@ final class be extends o {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= ed.field_l) {
-            stackOut_5_0 = ((be) this).field_z - 2;
+            stackOut_5_0 = this.field_z - 2;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -1720,7 +1736,7 @@ final class be extends o {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= ed.field_b) {
-            stackOut_11_0 = ((be) this).field_p - 2;
+            stackOut_11_0 = this.field_p - 2;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -1735,7 +1751,7 @@ final class be extends o {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((be) this).field_z + var5;
+            var10 = var9 * this.field_z + var5;
             var11 = (param1 + (var9 >> 1)) * ed.field_h + (param0 + (var5 >> 1));
             var12 = var5;
             L5: while (true) {
@@ -1771,14 +1787,14 @@ final class be extends o {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = ((be) this).field_B;
+                      stackOut_18_0 = this.field_B;
                       stackOut_18_1 = var10 + (var19 & 1);
                       stackIn_20_0 = stackOut_18_0;
                       stackIn_20_1 = stackOut_18_1;
                       stackIn_19_0 = stackOut_18_0;
                       stackIn_19_1 = stackOut_18_1;
                       if ((var19 & 2) != 0) {
-                        stackOut_20_0 = (int[]) (Object) stackIn_20_0;
+                        stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
                         stackOut_20_1 = stackIn_20_1;
                         stackOut_20_2 = 0;
                         stackIn_21_0 = stackOut_20_0;
@@ -1786,9 +1802,9 @@ final class be extends o {
                         stackIn_21_2 = stackOut_20_2;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) (Object) stackIn_19_0;
+                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
                         stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = ((be) this).field_z;
+                        stackOut_19_2 = this.field_z;
                         stackIn_21_0 = stackOut_19_0;
                         stackIn_21_1 = stackOut_19_1;
                         stackIn_21_2 = stackOut_19_2;
@@ -1820,12 +1836,12 @@ final class be extends o {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((be) this).field_u;
-          param1 = param1 + ((be) this).field_v;
+          param0 = param0 + this.field_u;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * ed.field_h;
           var5 = 0;
-          var6 = ((be) this).field_p;
-          var7 = ((be) this).field_z;
+          var6 = this.field_p;
+          var7 = this.field_z;
           var8 = ed.field_h - var7;
           var9 = 0;
           if (param1 >= ed.field_i) {
@@ -1876,7 +1892,7 @@ final class be extends o {
           return;
         } else {
           if (var6 > 0) {
-            be.c(ed.field_k, ((be) this).field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+            be.c(ed.field_k, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -1893,12 +1909,12 @@ final class be extends o {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((be) this).field_u;
-          param1 = param1 + ((be) this).field_v;
+          param0 = param0 + this.field_u;
+          param1 = param1 + this.field_v;
           var3 = param0 + param1 * ed.field_h;
           var4 = 0;
-          var5 = ((be) this).field_p;
-          var6 = ((be) this).field_z;
+          var5 = this.field_p;
+          var6 = this.field_z;
           var7 = ed.field_h - var6;
           var8 = 0;
           if (param1 >= ed.field_i) {
@@ -1949,7 +1965,7 @@ final class be extends o {
           return;
         } else {
           if (var5 > 0) {
-            be.d(ed.field_k, ((be) this).field_B, 0, var4, var3, var6, var5, var7, var8);
+            be.d(ed.field_k, this.field_B, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -1958,6 +1974,8 @@ final class be extends o {
     }
 
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -1978,7 +1996,7 @@ final class be extends o {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3--;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -1989,7 +2007,7 @@ final class be extends o {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
@@ -2011,6 +2029,7 @@ final class be extends o {
         int var15 = 0;
         int var16 = 0;
         int var18 = 0;
+        int incrementValue$0 = 0;
         int var17 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
@@ -2021,7 +2040,7 @@ final class be extends o {
                 if (var16 != 0) {
                     var17 = 256 - var16;
                     var18 = param0[param5];
-                    int incrementValue$0 = param5;
+                    incrementValue$0 = param5;
                     param5++;
                     param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
                 } else {
@@ -2036,6 +2055,8 @@ final class be extends o {
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -2056,7 +2077,7 @@ final class be extends o {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -2067,7 +2088,7 @@ final class be extends o {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
@@ -2088,12 +2109,12 @@ final class be extends o {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((be) this).field_u;
-          param1 = param1 + ((be) this).field_v;
+          param0 = param0 + this.field_u;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * ed.field_h;
           var5 = 0;
-          var6 = ((be) this).field_p;
-          var7 = ((be) this).field_z;
+          var6 = this.field_p;
+          var7 = this.field_z;
           var8 = ed.field_h - var7;
           var9 = 0;
           if (param1 >= ed.field_i) {
@@ -2144,7 +2165,7 @@ final class be extends o {
           return;
         } else {
           if (var6 > 0) {
-            be.b(0, 0, 0, ed.field_k, ((be) this).field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            be.b(0, 0, 0, ed.field_k, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -2153,6 +2174,8 @@ final class be extends o {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -2174,7 +2197,7 @@ final class be extends o {
                 param6++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var14 = param2 >>> 24;
@@ -2197,7 +2220,7 @@ final class be extends o {
                   }
                   var16 = 256 - var14;
                   var17 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
                   param5++;
@@ -2231,8 +2254,6 @@ final class be extends o {
         int var21 = 0;
         int[] var22 = null;
         int[] var23 = null;
-        int[] var24 = null;
-        int[] var25 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -2246,10 +2267,10 @@ final class be extends o {
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
         L0: {
-          var3 = ((be) this).field_z >> 2;
-          var4 = ((be) this).field_p >> 2;
-          param0 = param0 + ((be) this).field_u / 4;
-          param1 = param1 + ((be) this).field_v / 4;
+          var3 = this.field_z >> 2;
+          var4 = this.field_p >> 2;
+          param0 = param0 + this.field_u / 4;
+          param1 = param1 + this.field_v / 4;
           if (param0 >= ed.field_c) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -2263,7 +2284,7 @@ final class be extends o {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= ed.field_l) {
-            stackOut_5_0 = ((be) this).field_z - 4;
+            stackOut_5_0 = this.field_z - 4;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -2287,7 +2308,7 @@ final class be extends o {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= ed.field_b) {
-            stackOut_11_0 = ((be) this).field_p - 4;
+            stackOut_11_0 = this.field_p - 4;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -2297,9 +2318,7 @@ final class be extends o {
           }
         }
         var8 = stackIn_12_0;
-        var25 = new int[16];
-        var24 = var25;
-        var23 = var24;
+        var23 = new int[16];
         var22 = var23;
         var9 = var22;
         var10 = var7;
@@ -2313,12 +2332,12 @@ final class be extends o {
                 var10 += 4;
                 continue L4;
               } else {
-                var12 = var10 * ((be) this).field_z + var11;
+                var12 = var10 * this.field_z + var11;
                 var13 = (param1 + (var10 >> 2)) * ed.field_h + (param0 + (var11 >> 2));
                 var14 = 0;
                 L6: while (true) {
                   if (var14 >= 4) {
-                    var25 = var24;
+                    var23 = var22;
                     var14 = 0;
                     var15 = 0;
                     var16 = 0;
@@ -2341,11 +2360,11 @@ final class be extends o {
                           continue L5;
                         }
                       } else {
-                        var14 = var25[var19] >>> 24;
+                        var14 = var23[var19] >>> 24;
                         var15 = var15 + var14;
-                        var16 = var16 + var14 * (var25[var19] >> 16 & 255);
-                        var17 = var17 + var14 * (var25[var19] >> 8 & 255);
-                        var18 = var18 + var14 * (var25[var19] & 255);
+                        var16 = var16 + var14 * (var23[var19] >> 16 & 255);
+                        var17 = var17 + var14 * (var23[var19] >> 8 & 255);
+                        var18 = var18 + var14 * (var23[var19] & 255);
                         var19++;
                         continue L7;
                       }
@@ -2357,7 +2376,7 @@ final class be extends o {
                         var14++;
                         continue L6;
                       } else {
-                        var9[(var14 << 2) + var15] = ((be) this).field_B[var12 + var14 * ((be) this).field_z + var15];
+                        var9[(var14 << 2) + var15] = this.field_B[var12 + var14 * this.field_z + var15];
                         var15++;
                         continue L8;
                       }
@@ -2378,6 +2397,7 @@ final class be extends o {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
+        int incrementValue$0 = 0;
         int var18 = 0;
         int var13 = param3;
         for (var14 = -param8; var14 < 0; var14++) {
@@ -2391,7 +2411,7 @@ final class be extends o {
                     var20 = (param2 & 16711935) * param12 & -16711936;
                     var21 = (param2 & 65280) * param12 & 16711680;
                     param2 = (var20 | var21) >>> 8;
-                    int incrementValue$0 = param5;
+                    incrementValue$0 = param5;
                     param5++;
                     param0[incrementValue$0] = ((param2 & 16711935) * var17 + (var18 & 16711935) * var19 & -16711936) + ((param2 & 65280) * var17 + (var18 & 65280) * var19 & 16711680) >>> 8;
                 } else {

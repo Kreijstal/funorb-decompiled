@@ -10,27 +10,34 @@ final class jl extends rm {
     static double[][] field_O;
 
     final static void b(byte param0) {
+        if (param0 != 106) {
+            return;
+        }
         nn.field_c.field_g = 0;
         nn.field_c.field_k = 0;
     }
 
     public static void b(int param0) {
-        field_O = null;
+        field_O = (double[][]) null;
         field_T = null;
         field_U = null;
         field_V = null;
         field_W = null;
+        if (param0 != 2) {
+            field_O = (double[][]) null;
+        }
     }
 
     private final int a(double param0, double param1, double param2, byte param3) {
         if (param3 >= -12) {
             return 109;
         }
-        return ((jl) this).a(al.a(param0, (byte) -126), al.a(param2, (byte) 120), al.a(param1, (byte) 62));
+        return this.a(al.a(param0, (byte) -126), al.a(param2, (byte) 120), al.a(param1, (byte) 62));
     }
 
     jl(int param0, boolean param1) {
         super(92, 180, 0);
+        int discarded$2 = 0;
         double var3 = 0.0;
         double[] var5 = null;
         double var6 = 0.0;
@@ -70,15 +77,15 @@ final class jl extends rm {
         var6 = (double)param0 / Math.sqrt(var5[1] * var5[1] + var5[0] * var5[0] + var5[2] * var5[2]);
         var8_int = 0;
         L0: while (true) {
-          if (var8_int >= 60) {
+          if (-61 >= (var8_int ^ -1)) {
             var8 = Double.POSITIVE_INFINITY;
             var10 = 1;
             L1: while (true) {
-              if (var10 >= 60) {
+              if (-61 >= (var10 ^ -1)) {
                 var59 = new int[60][3];
                 var11 = 0;
                 L2: while (true) {
-                  if (var11 >= 60) {
+                  if (-61 >= (var11 ^ -1)) {
                     var11 = 0;
                     L3: while (true) {
                       stackOut_19_0 = 60;
@@ -87,7 +94,7 @@ final class jl extends rm {
                         if (stackIn_20_0 <= var11) {
                           var11 = 0;
                           L5: while (true) {
-                            stackOut_26_0 = ((jl) this).field_f;
+                            stackOut_26_0 = this.field_f;
                             stackOut_26_1 = var11;
                             stackIn_27_0 = stackOut_26_0;
                             stackIn_27_1 = stackOut_26_1;
@@ -98,16 +105,16 @@ final class jl extends rm {
                                 var12 = 0;
                                 var13 = 0;
                                 L7: while (true) {
-                                  if (var13 >= ((jl) this).field_g) {
+                                  if (var13 >= this.field_g) {
                                     L8: {
-                                      if (var12 != 5) {
+                                      if ((var12 ^ -1) != -6) {
                                         break L8;
                                       } else {
                                         var13 = 0;
-                                        if (((jl) this).field_g <= var13) {
+                                        if (this.field_g <= var13) {
                                           break L8;
                                         } else {
-                                          stackOut_37_0 = ((jl) this).field_o[var13];
+                                          stackOut_37_0 = this.field_o[var13];
                                           stackOut_37_1 = var11;
                                           stackIn_27_0 = stackOut_37_0;
                                           stackIn_27_1 = stackOut_37_1;
@@ -120,13 +127,13 @@ final class jl extends rm {
                                   } else {
                                     L9: {
                                       L10: {
-                                        if (~((jl) this).field_o[var13] == ~var11) {
+                                        if ((this.field_o[var13] ^ -1) == (var11 ^ -1)) {
                                           break L10;
                                         } else {
-                                          if (((jl) this).field_y[var13] == var11) {
+                                          if (this.field_y[var13] == var11) {
                                             break L10;
                                           } else {
-                                            if (var11 != ((jl) this).field_q[var13]) {
+                                            if (var11 != this.field_q[var13]) {
                                               break L9;
                                             } else {
                                               break L10;
@@ -215,7 +222,7 @@ final class jl extends rm {
             var9 = var5[var8_int * 3];
             var11_double = var5[1 + var8_int * 3];
             var13_double = var5[var8_int * 3 + 2];
-            int discarded$2 = this.a(var6 * var9, var13_double * var6, var11_double * var6, (byte) -100);
+            discarded$2 = this.a(var6 * var9, var13_double * var6, var11_double * var6, (byte) -100);
             var8_int++;
             continue L0;
           }
@@ -223,60 +230,69 @@ final class jl extends rm {
     }
 
     private final int a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
+        int discarded$2 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = Torquing.field_u;
-        var7 = 0;
-        L0: while (true) {
-          if (var7 >= ((jl) this).field_g) {
-            return super.a(param3, param0, param1, (byte) 0, (byte) -1, (short) 127, (short) -1);
+        L0: {
+          var8 = Torquing.field_u;
+          var7 = 0;
+          if (!param4) {
+            break L0;
           } else {
-            L1: {
-              L2: {
-                if (param3 != ((jl) this).field_o[var7]) {
-                  break L2;
-                } else {
-                  if (param0 != ((jl) this).field_y[var7]) {
-                    break L2;
-                  } else {
-                    if (param1 == ((jl) this).field_q[var7]) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-              }
+            discarded$2 = this.a(-98, 102, 31, -9, false, 113);
+            break L0;
+          }
+        }
+        L1: while (true) {
+          if (var7 >= this.field_g) {
+            return super.a(param3, param0, param1, (byte)param2, (byte) -1, (short)param5, (short) -1);
+          } else {
+            L2: {
               L3: {
-                if (param3 != ((jl) this).field_y[var7]) {
+                if (param3 != this.field_o[var7]) {
                   break L3;
                 } else {
-                  if (param0 != ((jl) this).field_q[var7]) {
+                  if (param0 != this.field_y[var7]) {
                     break L3;
                   } else {
-                    if (((jl) this).field_o[var7] == param1) {
-                      break L1;
+                    if (param1 == this.field_q[var7]) {
+                      break L2;
                     } else {
                       break L3;
                     }
                   }
                 }
               }
-              if (param3 == ((jl) this).field_q[var7]) {
-                if (((jl) this).field_o[var7] == param0) {
-                  if (((jl) this).field_y[var7] == param1) {
-                    break L1;
+              L4: {
+                if (param3 != this.field_y[var7]) {
+                  break L4;
+                } else {
+                  if (param0 != this.field_q[var7]) {
+                    break L4;
+                  } else {
+                    if (this.field_o[var7] == param1) {
+                      break L2;
+                    } else {
+                      break L4;
+                    }
+                  }
+                }
+              }
+              if (param3 == this.field_q[var7]) {
+                if (this.field_o[var7] == param0) {
+                  if (this.field_y[var7] == param1) {
+                    break L2;
                   } else {
                     var7++;
-                    continue L0;
+                    continue L1;
                   }
                 } else {
                   var7++;
-                  continue L0;
+                  continue L1;
                 }
               } else {
                 var7++;
-                continue L0;
+                continue L1;
               }
             }
             return var7;
@@ -285,10 +301,6 @@ final class jl extends rm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_S = 0;
         field_U = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
         field_V = new long[32];

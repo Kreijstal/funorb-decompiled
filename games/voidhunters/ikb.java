@@ -30,11 +30,11 @@ final class ikb extends rqa {
               if (param1 <= -119) {
                 break L1;
               } else {
-                field_o = null;
+                field_o = (String) null;
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) frb.a(221, 113));
+            stackOut_2_0 = new nc(frb.a(221, 113));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -42,23 +42,23 @@ final class ikb extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ikb.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -66,13 +66,18 @@ final class ikb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     final static boolean a(int[] param0, int[] param1, boolean param2) {
         try {
+            StringBuilder discarded$5 = null;
+            StringBuilder discarded$6 = null;
+            StringBuilder discarded$7 = null;
+            StringBuilder discarded$8 = null;
+            StringBuilder discarded$9 = null;
             RuntimeException var3 = null;
             int var3_int = 0;
             StringBuilder var4 = null;
@@ -98,6 +103,7 @@ final class ikb extends rqa {
             RuntimeException stackIn_40_0 = null;
             StringBuilder stackIn_40_1 = null;
             String stackIn_40_2 = null;
+            int decompiledRegionSelector0 = 0;
             RuntimeException decompiledCaughtException = null;
             int stackOut_5_0 = 0;
             int stackOut_4_0 = 0;
@@ -140,7 +146,7 @@ final class ikb extends rqa {
                   L2: {
                     var3_int = stackIn_6_0;
                     if (var3_int != 0) {
-                      System.out.println("Before=" + (Object) (Object) param1 + ", after=" + (Object) (Object) param0);
+                      System.out.println("Before=" + param1 + ", after=" + param0);
                       break L2;
                     } else {
                       break L2;
@@ -148,55 +154,59 @@ final class ikb extends rqa {
                   }
                   stackOut_9_0 = var3_int;
                   stackIn_10_0 = stackOut_9_0;
-                  return stackIn_10_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   if (param0 == param1) {
                     System.out.println("Using duplicate array reference in debug diffs!");
                     new Throwable().printStackTrace();
                     stackOut_13_0 = 0;
                     stackIn_14_0 = stackOut_13_0;
-                    return stackIn_14_0 != 0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
                     if (param1 == null) {
-                      System.out.println("Before=" + (Object) (Object) param1 + ", after=" + (Object) (Object) param0);
+                      System.out.println("Before=" + param1 + ", after=" + param0);
                       stackOut_17_0 = 1;
                       stackIn_18_0 = stackOut_17_0;
-                      return stackIn_18_0 != 0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     } else {
                       if (param1.length == param0.length) {
-                        var3_int = 0;
+                        var3_int = param2 ? 1 : 0;
                         var4 = new StringBuilder();
-                        StringBuilder discarded$5 = var4.append("{");
+                        discarded$5 = var4.append("{");
                         var5 = 0;
                         L3: while (true) {
                           if (var5 >= param0.length) {
                             L4: {
-                              StringBuilder discarded$6 = var4.append("}");
+                              discarded$6 = var4.append("}");
                               if (var3_int == 0) {
                                 break L4;
                               } else {
-                                System.out.println((Object) (Object) var4);
+                                System.out.println(var4);
                                 break L4;
                               }
                             }
                             stackOut_32_0 = var3_int;
                             stackIn_33_0 = stackOut_32_0;
+                            decompiledRegionSelector0 = 4;
                             break L0;
                           } else {
                             L5: {
                               if (var5 <= 0) {
                                 break L5;
                               } else {
-                                StringBuilder discarded$7 = var4.append(",");
+                                discarded$7 = var4.append(",");
                                 break L5;
                               }
                             }
                             L6: {
                               if (param1[var5] == param0[var5]) {
-                                StringBuilder discarded$8 = var4.append("_");
+                                discarded$8 = var4.append("_");
                                 break L6;
                               } else {
-                                StringBuilder discarded$9 = var4.append(param1[var5] + "->" + param0[var5]);
+                                discarded$9 = var4.append(param1[var5] + "->" + param0[var5]);
                                 var3_int = 1;
                                 break L6;
                               }
@@ -209,7 +219,8 @@ final class ikb extends rqa {
                         System.out.println("Before length=" + param1.length + ", after length=" + param0.length);
                         stackOut_20_0 = 1;
                         stackIn_21_0 = stackOut_20_0;
-                        return stackIn_21_0 != 0;
+                        decompiledRegionSelector0 = 3;
+                        break L0;
                       }
                     }
                   }
@@ -219,23 +230,23 @@ final class ikb extends rqa {
               decompiledCaughtException = decompiledCaughtParameter0;
               L7: {
                 var3 = decompiledCaughtException;
-                stackOut_34_0 = (RuntimeException) var3;
+                stackOut_34_0 = (RuntimeException) (var3);
                 stackOut_34_1 = new StringBuilder().append("ikb.C(");
                 stackIn_36_0 = stackOut_34_0;
                 stackIn_36_1 = stackOut_34_1;
                 stackIn_35_0 = stackOut_34_0;
                 stackIn_35_1 = stackOut_34_1;
                 if (param0 == null) {
-                  stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-                  stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+                  stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
+                  stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
                   stackOut_36_2 = "null";
                   stackIn_37_0 = stackOut_36_0;
                   stackIn_37_1 = stackOut_36_1;
                   stackIn_37_2 = stackOut_36_2;
                   break L7;
                 } else {
-                  stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-                  stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+                  stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
+                  stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
                   stackOut_35_2 = "{...}";
                   stackIn_37_0 = stackOut_35_0;
                   stackIn_37_1 = stackOut_35_1;
@@ -244,23 +255,23 @@ final class ikb extends rqa {
                 }
               }
               L8: {
-                stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
+                stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
                 stackOut_37_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_37_2).append(',');
                 stackIn_39_0 = stackOut_37_0;
                 stackIn_39_1 = stackOut_37_1;
                 stackIn_38_0 = stackOut_37_0;
                 stackIn_38_1 = stackOut_37_1;
                 if (param1 == null) {
-                  stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-                  stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+                  stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
+                  stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
                   stackOut_39_2 = "null";
                   stackIn_40_0 = stackOut_39_0;
                   stackIn_40_1 = stackOut_39_1;
                   stackIn_40_2 = stackOut_39_2;
                   break L8;
                 } else {
-                  stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-                  stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+                  stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
+                  stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
                   stackOut_38_2 = "{...}";
                   stackIn_40_0 = stackOut_38_0;
                   stackIn_40_1 = stackOut_38_1;
@@ -268,9 +279,25 @@ final class ikb extends rqa {
                   break L8;
                 }
               }
-              throw rta.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ',' + false + ')');
+              throw rta.a((Throwable) ((Object) stackIn_40_0), stackIn_40_2 + ',' + param2 + ')');
             }
-            return stackIn_33_0 != 0;
+            if (decompiledRegionSelector0 == 0) {
+              return stackIn_10_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 1) {
+                return stackIn_14_0 != 0;
+              } else {
+                if (decompiledRegionSelector0 == 2) {
+                  return stackIn_18_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 3) {
+                    return stackIn_21_0 != 0;
+                  } else {
+                    return stackIn_33_0 != 0;
+                  }
+                }
+              }
+            }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -283,20 +310,24 @@ final class ikb extends rqa {
     }
 
     public static void a(int param0) {
+        boolean discarded$0 = false;
         field_o = null;
+        if (param0 != 221) {
+            int[] var2 = (int[]) null;
+            discarded$0 = ikb.a((int[]) null, (int[]) null, false);
+        }
     }
 
     final static void e(byte param0) {
+        if (param0 > -116) {
+            return;
+        }
         if (null != hg.field_b) {
             hg.field_b.b(-85);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Open";
     }
 }

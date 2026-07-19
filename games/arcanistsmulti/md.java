@@ -14,43 +14,50 @@ final class md {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int stackIn_7_0 = 0;
+        int stackIn_9_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
+        int stackOut_8_0 = 0;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            var3_int = 0;
+            L1: {
+              var3_int = 0;
+              if (!param0) {
+                break L1;
+              } else {
+                md.a((byte) 28);
+                break L1;
+              }
+            }
             var4 = 0;
-            L1: while (true) {
-              if (var4 >= 58) {
-                stackOut_6_0 = var3_int;
-                stackIn_7_0 = stackOut_6_0;
+            L2: while (true) {
+              if ((var4 ^ -1) <= -59) {
+                stackOut_8_0 = var3_int;
+                stackIn_9_0 = stackOut_8_0;
                 break L0;
               } else {
-                L2: {
-                  if ((param1 & 1L << var4) == 0L) {
-                    break L2;
-                  } else {
-                    break L2;
-                  }
+                if ((param1 & 1L << var4) != 0L) {
+                  var3_int = var3_int + ta.a(true, var4);
+                  var4++;
+                  continue L2;
+                } else {
+                  var4++;
+                  continue L2;
                 }
-                var4++;
-                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var3, "md.A(" + false + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) var3), "md.A(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_7_0;
+        return stackIn_9_0;
     }
 
     public static void a(byte param0) {
         field_b = null;
-        int var1 = 0;
+        int var1 = 17 % ((param0 - 37) / 56);
         field_f = null;
         field_e = null;
         field_a = null;
@@ -58,10 +65,6 @@ final class md {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Polishing menus";
         field_e = "Press '<col=ffffff>Z</col>' and '<col=ffffff>X</col>' to move your selected unit over the landscape. Remember that you cannot walk up steep cliffs.  You can also use '<col=ffffff><lt></col>' and '<col=ffffff><gt></col>'.";
         field_a = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};

@@ -14,10 +14,41 @@ final class ga extends wf {
     int field_n;
 
     final static boolean a(int param0, int param1, int param2) {
-        return 0 != (param2 & 2048) && (param1 & 55) != 0;
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
+        L0: {
+          if (param0 == 0) {
+            break L0;
+          } else {
+            ga.a(-70);
+            break L0;
+          }
+        }
+        L1: {
+          L2: {
+            if (0 == (param2 & 2048)) {
+              break L2;
+            } else {
+              if ((param1 & 55) == 0) {
+                break L2;
+              } else {
+                stackOut_4_0 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                break L1;
+              }
+            }
+          }
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L1;
+        }
+        return stackIn_6_0 != 0;
     }
 
     final static void a(int param0) {
+        pa[] array$2 = null;
+        pa[] array$3 = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -59,7 +90,8 @@ final class ga extends wf {
                   if (ii.field_k.length <= var2) {
                     break L1;
                   } else {
-                    ii.field_k[var2] = new pa[ps.field_f[var2].length];
+                    array$2 = new pa[ps.field_f[var2].length];
+                    ii.field_k[var2] = array$2;
                     var2++;
                     continue L2;
                   }
@@ -279,7 +311,8 @@ final class ga extends wf {
               } else {
                 L26: {
                   if (hr.field_d[var2] == null) {
-                    hr.field_d[var2] = new pa[jd.field_d[var2].length];
+                    array$3 = new pa[jd.field_d[var2].length];
+                    hr.field_d[var2] = array$3;
                     break L26;
                   } else {
                     break L26;
@@ -302,32 +335,29 @@ final class ga extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var1, "ga.A(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) var1), "ga.A(" + param0 + ')');
         }
     }
 
     ga(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+        int fieldTemp$0 = 0;
         try {
-            ((ga) this).field_k = param1;
-            ((ga) this).field_g = param3;
-            ((ga) this).field_n = param4;
-            ((ga) this).field_e = param0;
-            ((ga) this).field_h = param6;
-            int fieldTemp$0 = am.field_a;
+            this.field_k = param1;
+            this.field_g = param3;
+            this.field_n = param4;
+            this.field_e = param0;
+            this.field_h = param6;
+            fieldTemp$0 = am.field_a;
             am.field_a = am.field_a + 1;
-            ((ga) this).field_m = 65535 & fieldTemp$0;
-            ((ga) this).field_i = param2;
-            ((ga) this).field_f = param5;
+            this.field_m = 65535 & fieldTemp$0;
+            this.field_i = param2;
+            this.field_f = param5;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "ga.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "ga.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = -1;
     }
 }

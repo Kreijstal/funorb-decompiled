@@ -13,7 +13,13 @@ final class je extends gi {
     int field_o;
 
     public static void a(byte param0) {
+        boolean discarded$0 = false;
         field_k = null;
+        if (param0 <= 9) {
+            discarded$0 = je.a('3', 12);
+            field_i = null;
+            return;
+        }
         field_i = null;
     }
 
@@ -46,19 +52,15 @@ final class je extends gi {
     }
 
     je(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((je) this).field_p = param3;
-        ((je) this).field_m = param0;
-        ((je) this).field_o = param2;
-        ((je) this).field_l = param1;
-        ((je) this).field_n = param4;
-        ((je) this).field_h = param5;
+        this.field_p = param3;
+        this.field_m = param0;
+        this.field_o = param2;
+        this.field_l = param1;
+        this.field_n = param4;
+        this.field_h = param5;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new int[8192];
         field_i = new vd();
         field_j = 250;

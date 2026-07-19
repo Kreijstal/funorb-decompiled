@@ -70,10 +70,6 @@ final class dw {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = new String[]{"1st", "2nd", "3rd", "4th"};
         field_j = "Game End Imminent";
     }

@@ -8,13 +8,12 @@ final class wia {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != 9911) {
+            field_a = false;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "wia.A(";
         field_b = "You need to play 1 more rated game to unlock this option.";
         field_a = false;

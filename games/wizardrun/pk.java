@@ -18,12 +18,12 @@ final class pk extends wl {
     final static void a(o param0, boolean param1) {
         try {
             if (param1) {
-                Object var3 = null;
+                o var3 = (o) null;
                 pk.a((o) null, true);
             }
             ag.field_v = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "pk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "pk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -53,10 +53,11 @@ final class pk extends wl {
     }
 
     public static void a(int param0) {
+        boolean discarded$0 = false;
         field_n = null;
         field_q = null;
         if (param0 != -15563) {
-            boolean discarded$0 = pk.a((byte) 103);
+            discarded$0 = pk.a((byte) 103);
         }
     }
 
@@ -64,10 +65,6 @@ final class pk extends wl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = true;
         field_q = "Quit to website";
         field_o = true;

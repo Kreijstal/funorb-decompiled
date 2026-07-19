@@ -31,12 +31,12 @@ final class og {
 
     final int b(byte param0) {
         int var2 = 0;
-        if (!((og) this).field_l) {
-          if (((og) this).field_d != 2) {
+        if (!this.field_l) {
+          if (-3 != (this.field_d ^ -1)) {
             var2 = -57 / ((53 - param0) / 43);
-            if (~ea.field_h != ~((og) this).field_m) {
-              if (ob.field_H == 2) {
-                if (ll.a(((og) this).field_h, -153798488)) {
+            if ((ea.field_h ^ -1L) != (this.field_m ^ -1L)) {
+              if (-3 == (ob.field_H ^ -1)) {
+                if (ll.a(this.field_h, -153798488)) {
                   return 1;
                 } else {
                   return 0;
@@ -48,11 +48,11 @@ final class og {
               return 1;
             }
           } else {
-            if (0 >= ((og) this).field_e) {
+            if (0 >= this.field_e) {
               var2 = -57 / ((53 - param0) / 43);
-              if (~ea.field_h != ~((og) this).field_m) {
-                if (ob.field_H == 2) {
-                  if (ll.a(((og) this).field_h, -153798488)) {
+              if ((ea.field_h ^ -1L) != (this.field_m ^ -1L)) {
+                if (-3 == (ob.field_H ^ -1)) {
+                  if (ll.a(this.field_h, -153798488)) {
                     return 1;
                   } else {
                     return 0;
@@ -73,26 +73,33 @@ final class og {
     }
 
     og(boolean param0) {
-        ((og) this).field_l = ja.field_e;
-        ((og) this).field_k = vj.field_a;
-        ((og) this).field_e = bh.field_c;
-        ((og) this).field_d = wb.field_d;
-        ((og) this).field_c = pc.field_X;
-        ((og) this).field_h = vk.field_v;
-        ((og) this).field_m = tf.field_l;
-        if (!param0) {
-            ((og) this).field_i = null;
-        } else {
-            ((og) this).field_i = n.field_c;
+        L0: {
+          L1: {
+            this.field_l = ja.field_e;
+            this.field_k = vj.field_a;
+            this.field_e = bh.field_c;
+            this.field_d = wb.field_d;
+            this.field_c = pc.field_X;
+            this.field_h = vk.field_v;
+            this.field_m = tf.field_l;
+            if (param0) {
+              break L1;
+            } else {
+              this.field_i = null;
+              if (!OrbDefence.field_D) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          this.field_i = n.field_c;
+          break L0;
         }
-        ((og) this).field_f = gb.field_b;
+        this.field_f = gb.field_b;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = new int[4];
         km.a((byte) -84, 50);
         field_j = "Play the game without logging in just yet";

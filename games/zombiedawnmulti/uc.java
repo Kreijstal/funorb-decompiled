@@ -11,11 +11,12 @@ final class uc {
     private boolean field_a;
 
     final boolean d(int param0) {
+        boolean discarded$0 = false;
         if (param0 >= -75) {
-            boolean discarded$0 = ((uc) this).b(-57);
-            return ((uc) this).field_a;
+            discarded$0 = this.b(-57);
+            return this.field_a;
         }
-        return ((uc) this).field_a;
+        return this.field_a;
     }
 
     public static void c(int param0) {
@@ -37,10 +38,10 @@ final class uc {
 
     final String a(int param0) {
         if (param0 != 31027) {
-            field_d = null;
-            return ((uc) this).field_f;
+            field_d = (String) null;
+            return this.field_f;
         }
-        return ((uc) this).field_f;
+        return this.field_f;
     }
 
     final void a(int param0, boolean param1) {
@@ -71,13 +72,13 @@ final class uc {
             break L0;
           }
         }
-        ((uc) this).field_e = stackIn_3_1 != 0;
+        ((uc) (this)).field_e = stackIn_3_1 != 0;
         if (param0 != -17853) {
-          ((uc) this).a(-102, true);
-          ((uc) this).field_a = true;
+          this.a(-102, true);
+          this.field_a = true;
           return;
         } else {
-          ((uc) this).field_a = true;
+          this.field_a = true;
           return;
         }
     }
@@ -86,28 +87,27 @@ final class uc {
         if (param0 != 18307) {
             return true;
         }
-        return ((uc) this).field_e;
+        return this.field_e;
     }
 
     final static void b(int param0, boolean param1) {
-        tg.field_g.a(-17853, param1);
+        tg.field_g.a(param0 ^ -1081, param1);
+        if (param0 != 16772) {
+            uc.c(69);
+        }
     }
 
     uc(String param0) {
-        ((uc) this).field_e = false;
-        ((uc) this).field_a = false;
+        this.field_e = false;
+        this.field_a = false;
         try {
-            ((uc) this).field_f = param0;
+            this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "uc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "uc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Human-lover";
         field_d = "Make the map shake with your power. You won't be as affected as your enemies will be.";
         field_g = "Research trees: You can research many different abilities in Zombie Dawn Multiplayer. This tree shows you what is currently available for use, and gives you a hint as to what will be available next. There are three trees: Zombie, Overlord, and Planetary - you can switch between them using the tabs above.";

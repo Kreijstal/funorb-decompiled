@@ -13,17 +13,17 @@ final class ja extends pw implements e {
     }
 
     public final void w(boolean param0) {
-        this.AA(((ja) this).field_nativeid, param0);
+        this.AA(this.field_nativeid, param0);
     }
 
     protected final void finalize() {
-        if (((ja) this).field_nativeid != 0L) {
-            pq.a(0, (e) this);
+        if (this.field_nativeid != 0L) {
+            pq.a(0, (e) (this));
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.P(((ja) this).field_nativeid, param0, param1, param2, param3, param4, param5);
+        this.P(this.field_nativeid, param0, param1, param2, param3, param4, param5);
     }
 
     private final native void AA(long param0, boolean param1);

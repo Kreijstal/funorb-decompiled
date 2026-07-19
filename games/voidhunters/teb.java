@@ -6,7 +6,7 @@ final class teb extends mfb {
 
     final boolean h(byte param0) {
         if (param0 <= 18) {
-            field_b = null;
+            field_b = (int[]) null;
             return false;
         }
         return false;
@@ -23,6 +23,9 @@ final class teb extends mfb {
     }
 
     public static void l(int param0) {
+        if (param0 != 8192) {
+            return;
+        }
         field_b = null;
     }
 
@@ -31,15 +34,16 @@ final class teb extends mfb {
 
     final int f(int param0) {
         if (param0 != 1024) {
-            field_b = null;
+            field_b = (int[]) null;
             return vha.field_p;
         }
         return vha.field_p;
     }
 
     final int b(byte param0) {
+        int discarded$0 = 0;
         if (param0 < 27) {
-            int discarded$0 = ((teb) this).f(-17);
+            discarded$0 = this.f(-17);
             return op.field_p;
         }
         return op.field_p;
@@ -47,17 +51,13 @@ final class teb extends mfb {
 
     final int c(int param0) {
         if (param0 != 0) {
-            field_b = null;
+            field_b = (int[]) null;
             return mp.field_o;
         }
         return mp.field_o;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[8192];
     }
 }

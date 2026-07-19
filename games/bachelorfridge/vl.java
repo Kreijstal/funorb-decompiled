@@ -14,15 +14,11 @@ final class vl {
         field_c = null;
         field_e = null;
         field_a = null;
-        int var1 = -3;
+        int var1 = -6 / ((param0 - 2) / 36);
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "vl.A(";
         field_a = "Orb points: ";
         field_b = "All games";

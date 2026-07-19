@@ -14,7 +14,7 @@ final class cj {
 
     final static int[] a(byte param0) {
         if (param0 <= 107) {
-            return null;
+            return (int[]) null;
         }
         return new int[8];
     }
@@ -35,19 +35,15 @@ final class cj {
             na.a((byte) 46, li.a(param1, 100, 96));
             int var2_int = -91 % ((param0 - 43) / 57);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "cj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw la.a((Throwable) ((Object) runtimeException), "cj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     cj(boolean param0) {
-        ((cj) this).field_b = param0 ? true : false;
+        this.field_b = param0 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = 0;
         field_e = 50;
         field_a = new pj();

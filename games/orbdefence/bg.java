@@ -14,7 +14,7 @@ final class bg {
                 bg.a((byte) -85);
             }
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "bg.B(" + param0 + ')');
+            throw dd.a((Throwable) ((Object) runtimeException), "bg.B(" + param0 + ')');
         }
     }
 
@@ -30,14 +30,14 @@ final class bg {
             var3 = -9 / ((-1 - param0) / 56);
             var2 = new hj[9];
             var2[4] = af.a(64, (byte) -51, param1);
-            stackOut_0_0 = (hj[]) var2;
+            stackOut_0_0 = (hj[]) (var2);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var2_ref, "bg.E(" + param0 + ',' + param1 + ')');
+          throw dd.a((Throwable) ((Object) var2_ref), "bg.E(" + param0 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
@@ -50,7 +50,7 @@ final class bg {
             qc.field_g = tl.field_h;
             tg.field_c = tl.field_h;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "bg.A(" + param0 + ')');
+            throw dd.a((Throwable) ((Object) runtimeException), "bg.A(" + param0 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class bg {
               if (param0 == -107) {
                 break L1;
               } else {
-                field_d = null;
+                field_d = (String) null;
                 break L1;
               }
             }
@@ -75,7 +75,7 @@ final class bg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var1, "bg.D(" + param0 + ')');
+          throw dd.a((Throwable) ((Object) var1), "bg.D(" + param0 + ')');
         }
     }
 
@@ -176,30 +176,30 @@ final class bg {
                 break L1;
               }
             }
-            var21 = param6[3] >> 2;
-            var22 = param6[4] >> 2;
-            var23 = param6[5] >> 2;
-            var24 = param6[6] >> 2;
-            var25 = param6[7] >> 2;
-            var26 = param6[8] >> 2;
-            var27 = param6[9] >> 2;
-            var28 = param6[10] >> 2;
-            var13 = param0[5] * var26 + (var24 * param0[3] - -(param0[4] * var25)) >> 14;
-            var29 = param6[11] >> 2;
-            var12 = param0[4] * var22 + param0[3] * var21 + var23 * param0[5] >> 14;
-            var19 = param0[11] * var26 + (param0[9] * var24 - -(param0[10] * var25)) >> 14;
-            var17 = param0[7] * var28 + (var27 * param0[6] - -(param0[8] * var29)) >> 14;
-            var18 = var21 * param0[9] - -(param0[10] * var22) + param0[11] * var23 >> 14;
-            var15 = param0[6] * var21 + (var22 * param0[7] - -(var23 * param0[8])) >> 14;
-            var20 = param0[9] * var27 + (var28 * param0[10] + param0[11] * var29) >> 14;
-            var16 = param0[7] * var25 + param0[6] * var24 + param0[8] * var26 >> 14;
-            var14 = var27 * param0[3] + var28 * param0[4] - -(var29 * param0[5]) >> 14;
+            var21 = param6[3] >> -1906404542;
+            var22 = param6[4] >> -1982532062;
+            var23 = param6[5] >> -1873153118;
+            var24 = param6[6] >> 787065634;
+            var25 = param6[7] >> -952737182;
+            var26 = param6[8] >> 1724684066;
+            var27 = param6[9] >> -752585566;
+            var28 = param6[10] >> -1165269854;
+            var13 = param0[5] * var26 + (var24 * param0[3] - -(param0[4] * var25)) >> -2027485778;
+            var29 = param6[11] >> 928857442;
+            var12 = param0[4] * var22 + param0[3] * var21 + var23 * param0[5] >> -538694546;
+            var19 = param0[11] * var26 + (param0[9] * var24 - -(param0[10] * var25)) >> -926186674;
+            var17 = param0[7] * var28 + (var27 * param0[6] - -(param0[8] * var29)) >> -1087375122;
+            var18 = var21 * param0[9] - -(param0[10] * var22) + param0[11] * var23 >> -331465266;
+            var15 = param0[6] * var21 + (var22 * param0[7] - -(var23 * param0[8])) >> -1640742162;
+            var20 = param0[9] * var27 + (var28 * param0[10] + param0[11] * var29) >> -1134999730;
+            var16 = param0[7] * var25 + param0[6] * var24 + param0[8] * var26 >> -1835029490;
+            var14 = var27 * param0[3] + var28 * param0[4] - -(var29 * param0[5]) >> 125200110;
             var21 = -param6[0] + param0[0];
             var22 = -param6[1] + param0[1];
             var23 = -param6[2] + param0[2];
             var9 = param6[5] * var23 + var22 * param6[4] + var21 * param6[3] >> -sf.field_O + 16;
             var10 = var23 * param6[8] + (var21 * param6[6] - -(var22 * param6[7])) >> 16 + -sf.field_O;
-            var11 = param6[10] * var22 + param6[9] * var21 - -(var23 * param6[11]) >> 16;
+            var11 = param6[10] * var22 + param6[9] * var21 - -(var23 * param6[11]) >> -1434483760;
             var21 = wi.field_h;
             var22 = wi.field_d;
             var23 = 0;
@@ -215,7 +215,7 @@ final class bg {
                       var26 = param1.field_Q[var23];
                       var27 = var9 + (var12 * var24 - (-(var15 * var25) - var18 * var26) >> -sf.field_O + 16);
                       var28 = (var16 * var25 + var24 * var13 + var26 * var19 >> -sf.field_O + 16) + var10;
-                      var29 = var11 + (var20 * var26 + (var17 * var25 + var24 * var14) >> 16);
+                      var29 = var11 + (var20 * var26 + (var17 * var25 + var24 * var14) >> -518943856);
                       stackOut_6_0 = var29;
                       stackOut_6_1 = 50;
                       stackIn_68_0 = stackOut_6_0;
@@ -249,7 +249,7 @@ final class bg {
                             }
                           }
                           L9: {
-                            if (~var8 > ~var29) {
+                            if ((var8 ^ -1) > (var29 ^ -1)) {
                               var8 = var29;
                               break L9;
                             } else {
@@ -314,21 +314,21 @@ final class bg {
                                           var24 = param1.field_r[var23];
                                           var25 = param1.field_j[var23];
                                           var26 = param1.field_g[var23];
-                                          a.field_s[var23] = var9 + (var24 * var12 - (-(var15 * var25) - var26 * var18) >> 16);
-                                          cd.field_q[var23] = var10 + (var25 * var16 + var24 * var13 - -(var19 * var26) >> 16);
-                                          ia.field_j[var23] = (var17 * var25 + (var14 * var24 + var20 * var26) >> 16) + var11;
+                                          a.field_s[var23] = var9 + (var24 * var12 - (-(var15 * var25) - var26 * var18) >> 1661087248);
+                                          cd.field_q[var23] = var10 + (var25 * var16 + var24 * var13 - -(var19 * var26) >> -421083280);
+                                          ia.field_j[var23] = (var17 * var25 + (var14 * var24 + var20 * var26) >> -1508563856) + var11;
                                           var24 = param1.field_A[var23];
                                           var25 = param1.field_L[var23];
                                           var26 = param1.field_b[var23];
-                                          cc.field_j[var23] = var9 - -(var24 * var12 - (-(var25 * var15) + -(var18 * var26)) >> 16);
-                                          jk.field_t[var23] = var10 + (var19 * var26 + var24 * var13 + var25 * var16 >> 16);
-                                          ve.field_N[var23] = (var14 * var24 - -(var25 * var17) - -(var26 * var20) >> 16) + var11;
+                                          cc.field_j[var23] = var9 - -(var24 * var12 - (-(var25 * var15) + -(var18 * var26)) >> 1805461232);
+                                          jk.field_t[var23] = var10 + (var19 * var26 + var24 * var13 + var25 * var16 >> 364751632);
+                                          ve.field_N[var23] = (var14 * var24 - -(var25 * var17) - -(var26 * var20) >> 150029968) + var11;
                                           var24 = param1.field_E[var23];
                                           var25 = param1.field_I[var23];
                                           var26 = param1.field_f[var23];
-                                          cf.field_b[var23] = (var25 * var15 + (var24 * var12 + var18 * var26) >> 16) + var9;
-                                          sd.field_e[var23] = (var13 * var24 - (-(var25 * var16) - var19 * var26) >> 16) + var10;
-                                          fm.field_d[var23] = var11 - -(var26 * var20 + var25 * var17 + var24 * var14 >> 16);
+                                          cf.field_b[var23] = (var25 * var15 + (var24 * var12 + var18 * var26) >> -562137488) + var9;
+                                          sd.field_e[var23] = (var13 * var24 - (-(var25 * var16) - var19 * var26) >> 1397542256) + var10;
+                                          fm.field_d[var23] = var11 - -(var26 * var20 + var25 * var17 + var24 * var14 >> 231077936);
                                           var23++;
                                           if (var30 != 0) {
                                             break L3;
@@ -366,7 +366,7 @@ final class bg {
                       var17 = param0[11];
                       var18 = 0;
                       L14: while (true) {
-                        if (~var18 <= ~param1.field_w) {
+                        if ((var18 ^ -1) <= (param1.field_w ^ -1)) {
                           break L13;
                         } else {
                           stackOut_62_0 = var18;
@@ -384,9 +384,9 @@ final class bg {
                               var19 = param1.field_K[var18];
                               var20 = param1.field_H[var18];
                               var21 = param1.field_G[var18];
-                              ee.field_g[var18] = var12 * var20 + (var9 * var19 + var21 * var15) >> 16;
-                              cf.field_e[var18] = var16 * var21 + (var13 * var20 + var19 * var10) >> 16;
-                              ue.field_H[var18] = var19 * var11 - -(var14 * var20) + var21 * var17 >> 16;
+                              ee.field_g[var18] = var12 * var20 + (var9 * var19 + var21 * var15) >> 753864784;
+                              cf.field_e[var18] = var16 * var21 + (var13 * var20 + var19 * var10) >> 2048199440;
+                              ue.field_H[var18] = var19 * var11 - -(var14 * var20) + var21 * var17 >> 480337936;
                               var18++;
                               if (var30 == 0) {
                                 continue L14;
@@ -415,23 +415,23 @@ final class bg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var7 = decompiledCaughtException;
-            stackOut_70_0 = (RuntimeException) var7;
+            stackOut_70_0 = (RuntimeException) (var7);
             stackOut_70_1 = new StringBuilder().append("bg.C(");
             stackIn_73_0 = stackOut_70_0;
             stackIn_73_1 = stackOut_70_1;
             stackIn_71_0 = stackOut_70_0;
             stackIn_71_1 = stackOut_70_1;
             if (param0 == null) {
-              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_0 = (RuntimeException) ((Object) stackIn_73_0);
+              stackOut_73_1 = (StringBuilder) ((Object) stackIn_73_1);
               stackOut_73_2 = "null";
               stackIn_74_0 = stackOut_73_0;
               stackIn_74_1 = stackOut_73_1;
               stackIn_74_2 = stackOut_73_2;
               break L15;
             } else {
-              stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
-              stackOut_71_1 = (StringBuilder) (Object) stackIn_71_1;
+              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
               stackOut_71_2 = "{...}";
               stackIn_74_0 = stackOut_71_0;
               stackIn_74_1 = stackOut_71_1;
@@ -440,23 +440,23 @@ final class bg {
             }
           }
           L16: {
-            stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
+            stackOut_74_0 = (RuntimeException) ((Object) stackIn_74_0);
             stackOut_74_1 = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_74_2).append(',');
             stackIn_77_0 = stackOut_74_0;
             stackIn_77_1 = stackOut_74_1;
             stackIn_75_0 = stackOut_74_0;
             stackIn_75_1 = stackOut_74_1;
             if (param1 == null) {
-              stackOut_77_0 = (RuntimeException) (Object) stackIn_77_0;
-              stackOut_77_1 = (StringBuilder) (Object) stackIn_77_1;
+              stackOut_77_0 = (RuntimeException) ((Object) stackIn_77_0);
+              stackOut_77_1 = (StringBuilder) ((Object) stackIn_77_1);
               stackOut_77_2 = "null";
               stackIn_78_0 = stackOut_77_0;
               stackIn_78_1 = stackOut_77_1;
               stackIn_78_2 = stackOut_77_2;
               break L16;
             } else {
-              stackOut_75_0 = (RuntimeException) (Object) stackIn_75_0;
-              stackOut_75_1 = (StringBuilder) (Object) stackIn_75_1;
+              stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
+              stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
               stackOut_75_2 = "{...}";
               stackIn_78_0 = stackOut_75_0;
               stackIn_78_1 = stackOut_75_1;
@@ -465,23 +465,23 @@ final class bg {
             }
           }
           L17: {
-            stackOut_78_0 = (RuntimeException) (Object) stackIn_78_0;
+            stackOut_78_0 = (RuntimeException) ((Object) stackIn_78_0);
             stackOut_78_1 = ((StringBuilder) (Object) stackIn_78_1).append(stackIn_78_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_81_0 = stackOut_78_0;
             stackIn_81_1 = stackOut_78_1;
             stackIn_79_0 = stackOut_78_0;
             stackIn_79_1 = stackOut_78_1;
             if (param6 == null) {
-              stackOut_81_0 = (RuntimeException) (Object) stackIn_81_0;
-              stackOut_81_1 = (StringBuilder) (Object) stackIn_81_1;
+              stackOut_81_0 = (RuntimeException) ((Object) stackIn_81_0);
+              stackOut_81_1 = (StringBuilder) ((Object) stackIn_81_1);
               stackOut_81_2 = "null";
               stackIn_82_0 = stackOut_81_0;
               stackIn_82_1 = stackOut_81_1;
               stackIn_82_2 = stackOut_81_2;
               break L17;
             } else {
-              stackOut_79_0 = (RuntimeException) (Object) stackIn_79_0;
-              stackOut_79_1 = (StringBuilder) (Object) stackIn_79_1;
+              stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
+              stackOut_79_1 = (StringBuilder) ((Object) stackIn_79_1);
               stackOut_79_2 = "{...}";
               stackIn_82_0 = stackOut_79_0;
               stackIn_82_1 = stackOut_79_1;
@@ -489,15 +489,11 @@ final class bg {
               break L17;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_82_0, stackIn_82_2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_82_0), stackIn_82_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Enter the name you'd prefer. This is the name displayed to other players.";
         field_c = 0;
         field_d = "Name";

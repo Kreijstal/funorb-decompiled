@@ -20,10 +20,6 @@ final class ec {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ec.A(";
         field_e = false;
         field_d = -1;

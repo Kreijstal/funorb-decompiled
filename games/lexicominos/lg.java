@@ -10,9 +10,9 @@ abstract class lg {
 
     final java.net.Socket a(int param0) throws IOException {
         if (param0 > -83) {
-            return null;
+            return (java.net.Socket) null;
         }
-        return new java.net.Socket(((lg) this).field_a, ((lg) this).field_b);
+        return new java.net.Socket(this.field_a, this.field_b);
     }
 
     abstract java.net.Socket b(int param0) throws IOException;

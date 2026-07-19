@@ -19,14 +19,14 @@ final class sfb extends f {
     private oka[] field_r;
 
     final f c() {
-        return ((sfb) this).field_k;
+        return this.field_k;
     }
 
     private final void e() {
         int var1 = 0;
         L0: {
           if (!vka.field_r) {
-            if (((sfb) this).field_o == null) {
+            if (this.field_o == null) {
               break L0;
             } else {
               var1 = 0;
@@ -35,25 +35,25 @@ final class sfb extends f {
                   var1 = 0;
                   L2: while (true) {
                     if (var1 >= 4) {
-                      ((sfb) this).field_o = null;
-                      ((sfb) this).field_p = null;
-                      ((sfb) this).field_j = new int[256];
+                      this.field_o = null;
+                      this.field_p = null;
+                      this.field_j = new int[256];
                       break L0;
                     } else {
-                      ((sfb) this).field_r[var1].a();
+                      this.field_r[var1].a();
                       var1++;
                       continue L2;
                     }
                   }
                 } else {
-                  ((sfb) this).field_i[var1].a();
+                  this.field_i[var1].a();
                   var1++;
                   continue L1;
                 }
               }
             }
           } else {
-            if (((sfb) this).field_o != null) {
+            if (this.field_o != null) {
               break L0;
             } else {
               var1 = 0;
@@ -62,30 +62,30 @@ final class sfb extends f {
                   var1 = 0;
                   L4: while (true) {
                     if (var1 >= 4) {
-                      ((sfb) this).field_o = new in[8];
-                      ((sfb) this).field_o[0] = new in(1139 * vka.field_s / 44100);
-                      ((sfb) this).field_o[1] = new in(1211 * vka.field_s / 44100);
-                      ((sfb) this).field_o[2] = new in(1300 * vka.field_s / 44100);
-                      ((sfb) this).field_o[3] = new in(1379 * vka.field_s / 44100);
-                      ((sfb) this).field_o[4] = new in(1445 * vka.field_s / 44100);
-                      ((sfb) this).field_o[5] = new in(1514 * vka.field_s / 44100);
-                      ((sfb) this).field_o[6] = new in(1580 * vka.field_s / 44100);
-                      ((sfb) this).field_o[7] = new in(1640 * vka.field_s / 44100);
-                      ((sfb) this).field_p = new oka[4];
-                      ((sfb) this).field_p[0] = new oka(579 * vka.field_s / 44100);
-                      ((sfb) this).field_p[1] = new oka(464 * vka.field_s / 44100);
-                      ((sfb) this).field_p[2] = new oka(364 * vka.field_s / 44100);
-                      ((sfb) this).field_p[3] = new oka(248 * vka.field_s / 44100);
-                      ((sfb) this).field_j = new int[512];
+                      this.field_o = new in[8];
+                      this.field_o[0] = new in(1139 * vka.field_s / 44100);
+                      this.field_o[1] = new in(1211 * vka.field_s / 44100);
+                      this.field_o[2] = new in(1300 * vka.field_s / 44100);
+                      this.field_o[3] = new in(1379 * vka.field_s / 44100);
+                      this.field_o[4] = new in(1445 * vka.field_s / 44100);
+                      this.field_o[5] = new in(1514 * vka.field_s / 44100);
+                      this.field_o[6] = new in(1580 * vka.field_s / 44100);
+                      this.field_o[7] = new in(1640 * vka.field_s / 44100);
+                      this.field_p = new oka[4];
+                      this.field_p[0] = new oka(579 * vka.field_s / 44100);
+                      this.field_p[1] = new oka(464 * vka.field_s / 44100);
+                      this.field_p[2] = new oka(364 * vka.field_s / 44100);
+                      this.field_p[3] = new oka(248 * vka.field_s / 44100);
+                      this.field_j = new int[512];
                       break L0;
                     } else {
-                      ((sfb) this).field_r[var1].a();
+                      this.field_r[var1].a();
                       var1++;
                       continue L4;
                     }
                   }
                 } else {
-                  ((sfb) this).field_i[var1].a();
+                  this.field_i[var1].a();
                   var1++;
                   continue L3;
                 }
@@ -96,9 +96,9 @@ final class sfb extends f {
     }
 
     final synchronized void f(float param0) {
-        ((sfb) this).field_t = param0;
-        ((sfb) this).field_q = (float)((double)((sfb) this).field_u * Math.sqrt((double)(1.0f + ((sfb) this).field_t) * 0.5));
-        ((sfb) this).field_s = (float)((double)((sfb) this).field_u * Math.sqrt((double)(1.0f - ((sfb) this).field_t) * 0.5));
+        this.field_t = param0;
+        this.field_q = (float)((double)this.field_u * Math.sqrt((double)(1.0f + this.field_t) * 0.5));
+        this.field_s = (float)((double)this.field_u * Math.sqrt((double)(1.0f - this.field_t) * 0.5));
     }
 
     private final static int a(int param0, int[] param1, int param2, int param3) {
@@ -152,16 +152,30 @@ final class sfb extends f {
     }
 
     final synchronized void c(float param0) {
-        ((sfb) this).field_h = param0;
+        this.field_h = param0;
     }
 
     final synchronized void a(int param0) {
-        if (((sfb) this).field_k != null) {
-            ((sfb) this).field_k.a(param0);
+        if (this.field_k != null) {
+            this.field_k.a(param0);
         }
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int fieldTemp$16 = 0;
+        int fieldTemp$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int fieldTemp$24 = 0;
+        int fieldTemp$25 = 0;
+        int fieldTemp$26 = 0;
+        int fieldTemp$27 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -203,10 +217,10 @@ final class sfb extends f {
               }
             }
             L2: {
-              if (((sfb) this).field_k == null) {
+              if (this.field_k == null) {
                 break L2;
               } else {
-                ((sfb) this).field_k.a(((sfb) this).field_j, 0, var4);
+                this.field_k.a(this.field_j, 0, var4);
                 break L2;
               }
             }
@@ -231,13 +245,13 @@ final class sfb extends f {
                                 param1 = param1 << 1;
                                 break L5;
                               } else {
-                                var5 = sfb.a(var5, ((sfb) this).field_p[var6].field_a, ((sfb) this).field_p[var6].field_b, var4);
+                                var5 = sfb.a(var5, this.field_p[var6].field_a, this.field_p[var6].field_b, var4);
                                 var6++;
                                 continue L7;
                               }
                             }
                           } else {
-                            var5 = sfb.a(var5, ((sfb) this).field_o[var6].field_a, ((sfb) this).field_o[var6].field_b, var4);
+                            var5 = sfb.a(var5, this.field_o[var6].field_a, this.field_o[var6].field_b, var4);
                             var6++;
                             continue L6;
                           }
@@ -251,18 +265,18 @@ final class sfb extends f {
                         L9: while (true) {
                           if (var5 > -4096) {
                             L10: {
-                              var7 = (int)(((sfb) this).field_h * 4096.0f);
-                              var8 = (int)(((sfb) this).field_v * 4096.0f);
-                              var9 = (int)(((sfb) this).field_n * 4096.0f);
-                              var10 = (int)(((sfb) this).field_m * 65536.0f);
+                              var7 = (int)(this.field_h * 4096.0f);
+                              var8 = (int)(this.field_v * 4096.0f);
+                              var9 = (int)(this.field_n * 4096.0f);
+                              var10 = (int)(this.field_m * 65536.0f);
                               if (!vka.field_r) {
-                                var11 = (int)(((sfb) this).field_u * 4096.0f);
+                                var11 = (int)(this.field_u * 4096.0f);
                                 var12 = 0;
                                 L11: while (true) {
                                   if (var12 >= var4) {
                                     break L10;
                                   } else {
-                                    var13 = ((sfb) this).field_j[var12] >> var6;
+                                    var13 = this.field_j[var12] >> var6;
                                     var14 = var13 * var10 >> 16;
                                     var15 = 0;
                                     var16 = 0;
@@ -272,24 +286,24 @@ final class sfb extends f {
                                         L13: while (true) {
                                           if (var16 >= 4) {
                                             if (var6 <= 12) {
-                                              int incrementValue$14 = param1;
+                                              incrementValue$14 = param1;
                                               param1++;
                                               param0[incrementValue$14] = param0[incrementValue$14] + (var15 * var11 + var13 * var9 >> 12 - var6);
                                               var12++;
                                               continue L11;
                                             } else {
-                                              int incrementValue$15 = param1;
+                                              incrementValue$15 = param1;
                                               param1++;
                                               param0[incrementValue$15] = param0[incrementValue$15] + (var15 * var11 + var13 * var9 << var6 - 12);
                                               var12++;
                                               continue L11;
                                             }
                                           } else {
-                                            var28 = ((sfb) this).field_r[var16];
+                                            var28 = this.field_r[var16];
                                             var18 = var28.field_a[var28.field_b] >> var6;
                                             var15 = var18 - var15;
                                             var28.field_a[var28.field_b] = var14 + (var18 * 2048 + 2048 >> 12) << var6;
-                                            int fieldTemp$16 = var28.field_b + 1;
+                                            fieldTemp$16 = var28.field_b + 1;
                                             var28.field_b = var28.field_b + 1;
                                             if (fieldTemp$16 >= var28.field_a.length) {
                                               var28.field_b = 0;
@@ -303,13 +317,13 @@ final class sfb extends f {
                                         }
                                       } else {
                                         L14: {
-                                          var27 = ((sfb) this).field_i[var16];
+                                          var27 = this.field_i[var16];
                                           var18 = var27.field_a[var27.field_b] >> var6;
                                           var19 = var27.field_c >> var6;
                                           var19 = var19 + ((var18 - var19) * var8 + 2048 >> 12);
                                           var27.field_c = var19 << var6;
                                           var27.field_a[var27.field_b] = var14 + (var19 * var7 + 2048 >> 12) << var6;
-                                          int fieldTemp$17 = var27.field_b + 1;
+                                          fieldTemp$17 = var27.field_b + 1;
                                           var27.field_b = var27.field_b + 1;
                                           if (fieldTemp$17 < var27.field_a.length) {
                                             break L14;
@@ -326,20 +340,20 @@ final class sfb extends f {
                                   }
                                 }
                               } else {
-                                var11 = (int)(((sfb) this).field_q * 4096.0f);
-                                var12 = (int)(((sfb) this).field_s * 4096.0f);
+                                var11 = (int)(this.field_q * 4096.0f);
+                                var12 = (int)(this.field_s * 4096.0f);
                                 var13 = 0;
                                 L15: while (true) {
                                   if (var13 >= var4) {
                                     param1 = param1 >> 1;
                                     break L10;
                                   } else {
-                                    int incrementValue$18 = var13;
+                                    incrementValue$18 = var13;
                                     var13++;
-                                    var14 = ((sfb) this).field_j[incrementValue$18] >> var6;
-                                    int incrementValue$19 = var13;
+                                    var14 = this.field_j[incrementValue$18] >> var6;
+                                    incrementValue$19 = var13;
                                     var13++;
-                                    var15 = ((sfb) this).field_j[incrementValue$19] >> var6;
+                                    var15 = this.field_j[incrementValue$19] >> var6;
                                     var16 = (var14 + var15) * var10 >> 17;
                                     var17 = 0;
                                     var18 = 0;
@@ -356,28 +370,28 @@ final class sfb extends f {
                                                 L19: while (true) {
                                                   if (var19 >= 4) {
                                                     if (var6 <= 12) {
-                                                      int incrementValue$20 = param1;
+                                                      incrementValue$20 = param1;
                                                       param1++;
                                                       param0[incrementValue$20] = param0[incrementValue$20] + (var17 * var11 + var18 * var12 + var14 * var9 >> 12 - var6);
-                                                      int incrementValue$21 = param1;
+                                                      incrementValue$21 = param1;
                                                       param1++;
                                                       param0[incrementValue$21] = param0[incrementValue$21] + (var18 * var11 + var17 * var12 + var15 * var9 >> 12 - var6);
                                                       continue L15;
                                                     } else {
-                                                      int incrementValue$22 = param1;
+                                                      incrementValue$22 = param1;
                                                       param1++;
                                                       param0[incrementValue$22] = param0[incrementValue$22] + (var17 * var11 + var18 * var12 + var14 * var9 << var6 - 12);
-                                                      int incrementValue$23 = param1;
+                                                      incrementValue$23 = param1;
                                                       param1++;
                                                       param0[incrementValue$23] = param0[incrementValue$23] + (var18 * var11 + var17 * var12 + var15 * var9 << var6 - 12);
                                                       continue L15;
                                                     }
                                                   } else {
-                                                    var26 = ((sfb) this).field_p[var19];
+                                                    var26 = this.field_p[var19];
                                                     var21 = var26.field_a[var26.field_b] >> var6;
                                                     var18 = var21 - var18;
                                                     var26.field_a[var26.field_b] = var16 + (var21 * 2048 + 2048 >> 12) << var6;
-                                                    int fieldTemp$24 = var26.field_b + 1;
+                                                    fieldTemp$24 = var26.field_b + 1;
                                                     var26.field_b = var26.field_b + 1;
                                                     if (fieldTemp$24 >= var26.field_a.length) {
                                                       var26.field_b = 0;
@@ -391,13 +405,13 @@ final class sfb extends f {
                                                 }
                                               } else {
                                                 L20: {
-                                                  var25 = ((sfb) this).field_o[var19];
+                                                  var25 = this.field_o[var19];
                                                   var21 = var25.field_a[var25.field_b] >> var6;
                                                   var22 = var25.field_c >> var6;
                                                   var22 = var22 + ((var21 - var22) * var8 + 2048 >> 12);
                                                   var25.field_c = var22 << var6;
                                                   var25.field_a[var25.field_b] = var16 + (var22 * var7 + 2048 >> 12) << var6;
-                                                  int fieldTemp$25 = var25.field_b + 1;
+                                                  fieldTemp$25 = var25.field_b + 1;
                                                   var25.field_b = var25.field_b + 1;
                                                   if (fieldTemp$25 < var25.field_a.length) {
                                                     break L20;
@@ -412,11 +426,11 @@ final class sfb extends f {
                                               }
                                             }
                                           } else {
-                                            var24 = ((sfb) this).field_r[var18];
+                                            var24 = this.field_r[var18];
                                             var20 = var24.field_a[var24.field_b] >> var6;
                                             var17 = var20 - var17;
                                             var24.field_a[var24.field_b] = var16 + (var20 * 2048 + 2048 >> 12) << var6;
-                                            int fieldTemp$26 = var24.field_b + 1;
+                                            fieldTemp$26 = var24.field_b + 1;
                                             var24.field_b = var24.field_b + 1;
                                             if (fieldTemp$26 >= var24.field_a.length) {
                                               var24.field_b = 0;
@@ -430,13 +444,13 @@ final class sfb extends f {
                                         }
                                       } else {
                                         L21: {
-                                          var23 = ((sfb) this).field_i[var18];
+                                          var23 = this.field_i[var18];
                                           var20 = var23.field_a[var23.field_b] >> var6;
                                           var21 = var23.field_c >> var6;
                                           var21 = var21 + ((var20 - var21) * var8 + 2048 >> 12);
                                           var23.field_c = var21 << var6;
                                           var23.field_a[var23.field_b] = var16 + (var21 * var7 + 2048 >> 12) << var6;
-                                          int fieldTemp$27 = var23.field_b + 1;
+                                          fieldTemp$27 = var23.field_b + 1;
                                           var23.field_b = var23.field_b + 1;
                                           if (fieldTemp$27 < var23.field_a.length) {
                                             break L21;
@@ -454,10 +468,10 @@ final class sfb extends f {
                                 }
                               }
                             }
-                            if (((sfb) this).field_k == null) {
+                            if (this.field_k == null) {
                               continue L0;
                             } else {
-                              cua.a(((sfb) this).field_j, 0, var4);
+                              cua.a(this.field_j, 0, var4);
                               continue L0;
                             }
                           } else {
@@ -468,7 +482,7 @@ final class sfb extends f {
                         }
                       } else {
                         L22: {
-                          var7 = ((sfb) this).field_j[var6];
+                          var7 = this.field_j[var6];
                           if (var7 <= 0) {
                             break L22;
                           } else {
@@ -487,13 +501,13 @@ final class sfb extends f {
                       }
                     }
                   } else {
-                    var5 = sfb.a(var5, ((sfb) this).field_r[var6].field_a, ((sfb) this).field_r[var6].field_b, var4);
+                    var5 = sfb.a(var5, this.field_r[var6].field_a, this.field_r[var6].field_b, var4);
                     var6++;
                     continue L4;
                   }
                 }
               } else {
-                var5 = sfb.a(var5, ((sfb) this).field_i[var6].field_a, ((sfb) this).field_i[var6].field_b, var4);
+                var5 = sfb.a(var5, this.field_i[var6].field_a, this.field_i[var6].field_b, var4);
                 var6++;
                 continue L3;
               }
@@ -503,22 +517,22 @@ final class sfb extends f {
     }
 
     final synchronized void d(float param0) {
-        ((sfb) this).field_m = param0;
+        this.field_m = param0;
     }
 
     final synchronized void a(float param0) {
-        ((sfb) this).field_u = param0;
-        ((sfb) this).field_q = (float)((double)((sfb) this).field_u * Math.sqrt((double)(1.0f + ((sfb) this).field_t) * 0.5));
-        ((sfb) this).field_s = (float)((double)((sfb) this).field_u * Math.sqrt((double)(1.0f - ((sfb) this).field_t) * 0.5));
+        this.field_u = param0;
+        this.field_q = (float)((double)this.field_u * Math.sqrt((double)(1.0f + this.field_t) * 0.5));
+        this.field_s = (float)((double)this.field_u * Math.sqrt((double)(1.0f - this.field_t) * 0.5));
     }
 
     final synchronized void b(float param0) {
-        ((sfb) this).field_l = param0;
-        ((sfb) this).field_v = 1.0f - (float)Math.pow(0.5, 1000000.0 / (double)(((sfb) this).field_l * (float)vka.field_s));
+        this.field_l = param0;
+        this.field_v = 1.0f - (float)Math.pow(0.5, 1000000.0 / (double)(this.field_l * (float)vka.field_s));
     }
 
     final synchronized void e(float param0) {
-        ((sfb) this).field_n = param0;
+        this.field_n = param0;
     }
 
     final f a() {
@@ -527,34 +541,34 @@ final class sfb extends f {
 
     sfb(f param0) {
         L0: {
-          ((sfb) this).field_i = new in[8];
-          ((sfb) this).field_i[0] = new in(1116 * vka.field_s / 44100);
-          ((sfb) this).field_i[1] = new in(1188 * vka.field_s / 44100);
-          ((sfb) this).field_i[2] = new in(1277 * vka.field_s / 44100);
-          ((sfb) this).field_i[3] = new in(1356 * vka.field_s / 44100);
-          ((sfb) this).field_i[4] = new in(1422 * vka.field_s / 44100);
-          ((sfb) this).field_i[5] = new in(1491 * vka.field_s / 44100);
-          ((sfb) this).field_i[6] = new in(1557 * vka.field_s / 44100);
-          ((sfb) this).field_i[7] = new in(1617 * vka.field_s / 44100);
-          ((sfb) this).field_r = new oka[4];
-          ((sfb) this).field_r[0] = new oka(556 * vka.field_s / 44100);
-          ((sfb) this).field_r[1] = new oka(441 * vka.field_s / 44100);
-          ((sfb) this).field_r[2] = new oka(341 * vka.field_s / 44100);
-          ((sfb) this).field_r[3] = new oka(225 * vka.field_s / 44100);
+          this.field_i = new in[8];
+          this.field_i[0] = new in(1116 * vka.field_s / 44100);
+          this.field_i[1] = new in(1188 * vka.field_s / 44100);
+          this.field_i[2] = new in(1277 * vka.field_s / 44100);
+          this.field_i[3] = new in(1356 * vka.field_s / 44100);
+          this.field_i[4] = new in(1422 * vka.field_s / 44100);
+          this.field_i[5] = new in(1491 * vka.field_s / 44100);
+          this.field_i[6] = new in(1557 * vka.field_s / 44100);
+          this.field_i[7] = new in(1617 * vka.field_s / 44100);
+          this.field_r = new oka[4];
+          this.field_r[0] = new oka(556 * vka.field_s / 44100);
+          this.field_r[1] = new oka(441 * vka.field_s / 44100);
+          this.field_r[2] = new oka(341 * vka.field_s / 44100);
+          this.field_r[3] = new oka(225 * vka.field_s / 44100);
           if (vka.field_r) {
             break L0;
           } else {
-            ((sfb) this).field_j = new int[256];
+            this.field_j = new int[256];
             break L0;
           }
         }
         this.e();
-        ((sfb) this).d(0.04500000178813934f);
-        ((sfb) this).a(1.0f);
-        ((sfb) this).c(0.8399999737739563f);
-        ((sfb) this).e(1.0f);
-        ((sfb) this).b(7000.0f);
-        ((sfb) this).f(1.0f);
-        ((sfb) this).field_k = param0;
+        this.d(0.04500000178813934f);
+        this.a(1.0f);
+        this.c(0.8399999737739563f);
+        this.e(1.0f);
+        this.b(7000.0f);
+        this.f(1.0f);
+        this.field_k = param0;
     }
 }

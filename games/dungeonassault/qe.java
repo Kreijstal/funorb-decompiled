@@ -22,17 +22,18 @@ abstract class qe {
 
     final void b() {
         rj var1 = null;
-        if (((qe) this).field_p != null) {
-            var1 = (rj) (Object) ((qe) this).field_p.e(-24172);
+        if (this.field_p != null) {
+            var1 = (rj) ((Object) this.field_p.e(-24172));
             while (var1 != null) {
                 var1.b((byte) 30);
-                var1 = (rj) (Object) ((qe) this).field_p.a(4);
+                var1 = (rj) ((Object) this.field_p.a(4));
             }
         }
-        ((qe) this).field_p = new md();
+        this.field_p = new md();
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
+        int incrementValue$1 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -66,9 +67,9 @@ abstract class qe {
                 }
               }
               var5 = 256 - param4;
-              var6 = 0 * param4;
-              var7 = 0 * param4;
-              var8 = 0 * param4;
+              var6 = (param3 >> 16 & 255) * param4;
+              var7 = (param3 >> 8 & 255) * param4;
+              var8 = (param3 & 255) * param4;
               var12 = param0 + param1 * gf.field_i;
               var13 = 0;
               L3: while (true) {
@@ -79,9 +80,9 @@ abstract class qe {
                   var10 = (gf.field_b[var12] >> 8 & 255) * var5;
                   var11 = (gf.field_b[var12] & 255) * var5;
                   var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-                  int incrementValue$2 = var12;
+                  incrementValue$1 = var12;
                   var12++;
-                  gf.field_b[incrementValue$2] = gf.field_b[var12] & -16777216 | var14;
+                  gf.field_b[incrementValue$1] = gf.field_b[var12] & -16777216 | var14;
                   var13++;
                   continue L3;
                 }
@@ -123,13 +124,14 @@ abstract class qe {
 
     final static void a(int param0, int param1, h param2) {
         if (param2 != null) {
-            qe.b(339, 289, field_i, field_h, new int[4]);
+            qe.b(param0, param1, field_i, field_h, new int[]{param2.field_m, param2.field_r, param2.field_b, param2.field_o});
         } else {
-            qe.b(339, 289, field_i, field_h, new int[4]);
+            qe.b(param0, param1, field_i, field_h, new int[]{0, 0, 0, 0});
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$1 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -177,7 +179,7 @@ abstract class qe {
                   var11 = (gf.field_b[var13] >> 8 & 255) * var6;
                   var12 = (gf.field_b[var13] & 255) * var6;
                   var15 = (var7 + var10 >> 8 << 16) + (var8 + var11 >> 8 << 8) + (var9 + var12 >> 8);
-                  int incrementValue$1 = var13;
+                  incrementValue$1 = var13;
                   var13++;
                   gf.field_b[incrementValue$1] = param5 | var15;
                   var14++;
@@ -197,7 +199,7 @@ abstract class qe {
             return null;
         }
         wb[] var3 = new wb[var2];
-        cj.a((Object[]) (Object) field_k, 0, (Object[]) (Object) var3, 0, var2);
+        cj.a(field_k, 0, var3, 0, var2);
         return var3;
     }
 
@@ -234,8 +236,8 @@ abstract class qe {
         int var7 = 0;
         int var8 = 0;
         for (var6 = param2; var6 < param4; var6++) {
-            var5 = var6 * 640 + 188;
-            for (var7 = 188; var7 < 605; var7++) {
+            var5 = var6 * 640 + param1;
+            for (var7 = param1; var7 < param3; var7++) {
                 var8 = 64 + (param0.field_a.field_B[var5] & 255);
                 param0.field_a.field_B[var5] = -16777216 | 6 * var8 >> 2 << 16 | var8 << 8 | var8 >> 1;
                 var5++;
@@ -306,29 +308,29 @@ abstract class qe {
 
     private final static wb a(int param0, int param1, String param2, cn param3) {
         if (param0 < param1) {
-            return new wb(jk.a(new String[2], vc.field_b, 30496), param3, 16711680);
+            return new wb(jk.a(new String[]{param2, Integer.toString(param1 - param0)}, vc.field_b, 30496), param3, 16711680);
         }
         if (param0 <= param1) {
             return null;
         }
-        return new wb(jk.a(new String[2], so.field_a, 30496), param3, 65280);
+        return new wb(jk.a(new String[]{param2, Integer.toString(param0 - param1)}, so.field_a, 30496), param3, 65280);
     }
 
     void c() {
         rj var1 = null;
-        ((qe) this).field_e = null;
-        if (((qe) this).field_b != null) {
-            ((qe) this).field_b.c(-121);
+        this.field_e = null;
+        if (this.field_b != null) {
+            this.field_b.c(-121);
         }
-        if (((qe) this).field_p != null) {
-            var1 = (rj) (Object) ((qe) this).field_p.e(-24172);
+        if (this.field_p != null) {
+            var1 = (rj) ((Object) this.field_p.e(-24172));
             while (var1 != null) {
                 var1.b((byte) 30);
-                var1 = (rj) (Object) ((qe) this).field_p.a(4);
+                var1 = (rj) ((Object) this.field_p.a(4));
             }
         }
-        ((qe) this).field_b = null;
-        ((qe) this).field_p = null;
+        this.field_b = null;
+        this.field_p = null;
     }
 
     final static void a(int param0, int param1, int param2, hb param3, int param4) {
@@ -337,6 +339,14 @@ abstract class qe {
     }
 
     private final static int a(hb param0, int param1, wb[] param2) {
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -378,7 +388,7 @@ abstract class qe {
           if (var8 == null) {
             break L3;
           } else {
-            int incrementValue$8 = var3;
+            incrementValue$8 = var3;
             var3++;
             param2[incrementValue$8] = var8;
             break L3;
@@ -389,7 +399,7 @@ abstract class qe {
           if (var8 == null) {
             break L4;
           } else {
-            int incrementValue$9 = var3;
+            incrementValue$9 = var3;
             var3++;
             param2[incrementValue$9] = var8;
             break L4;
@@ -400,7 +410,7 @@ abstract class qe {
           if (var8 == null) {
             break L5;
           } else {
-            int incrementValue$10 = var3;
+            incrementValue$10 = var3;
             var3++;
             param2[incrementValue$10] = var8;
             break L5;
@@ -411,7 +421,7 @@ abstract class qe {
           if (var8 == null) {
             break L6;
           } else {
-            int incrementValue$11 = var3;
+            incrementValue$11 = var3;
             var3++;
             param2[incrementValue$11] = var8;
             break L6;
@@ -421,7 +431,7 @@ abstract class qe {
           if ((param0.field_d & 4) == 0) {
             break L7;
           } else {
-            int incrementValue$12 = var3;
+            incrementValue$12 = var3;
             var3++;
             param2[incrementValue$12] = new wb(kl.field_b, ue.field_i[6], 16744703);
             break L7;
@@ -431,7 +441,7 @@ abstract class qe {
           if ((param0.field_o & 4) == 0) {
             break L8;
           } else {
-            int incrementValue$13 = var3;
+            incrementValue$13 = var3;
             var3++;
             param2[incrementValue$13] = new wb(kg.field_m, ue.field_i[5], 16711680);
             break L8;
@@ -441,7 +451,7 @@ abstract class qe {
           if ((param0.field_o & 2) == 0) {
             break L9;
           } else {
-            int incrementValue$14 = var3;
+            incrementValue$14 = var3;
             var3++;
             param2[incrementValue$14] = new wb(gl.field_Hb, ue.field_i[4], 16776960);
             break L9;
@@ -451,7 +461,7 @@ abstract class qe {
           if ((param0.field_o & 1) == 0) {
             break L10;
           } else {
-            int incrementValue$15 = var3;
+            incrementValue$15 = var3;
             var3++;
             param2[incrementValue$15] = new wb(wi.field_nb, ue.field_i[6], 8438015);
             break L10;
@@ -522,11 +532,11 @@ abstract class qe {
     }
 
     final boolean d() {
-        if (((qe) this).field_b != null) {
-            ((qe) this).field_b.a(false);
+        if (this.field_b != null) {
+            this.field_b.a(false);
             return true;
         }
-        eg.a(((qe) this).field_p, true);
+        eg.a(this.field_p, true);
         return false;
     }
 
@@ -648,9 +658,9 @@ abstract class qe {
 
     final static void a(int param0, int param1, ac param2) {
         if (param2 != null) {
-            qe.b(200, 65, field_o, field_g, new int[4]);
+            qe.b(param0, param1, field_o, field_g, new int[]{param2.field_A, param2.field_k, param2.field_y, param2.field_r});
         } else {
-            qe.b(200, 65, field_o, field_g, new int[4]);
+            qe.b(param0, param1, field_o, field_g, new int[]{0, 0, 0, 0});
         }
     }
 
@@ -660,16 +670,16 @@ abstract class qe {
                 ld.field_b = !ld.field_b ? true : false;
             }
         }
-        if (((qe) this).field_b != null) {
-            ((qe) this).field_b.b(false);
+        if (this.field_b != null) {
+            this.field_b.b(false);
             return;
         }
     }
 
     public static void a() {
         field_m = null;
-        field_g = null;
-        field_h = null;
+        field_g = (int[][]) null;
+        field_h = (int[][]) null;
         field_k = null;
         field_o = null;
         field_i = null;
@@ -705,7 +715,7 @@ abstract class qe {
         }
         jh.b();
         int[] var11 = te.b(640, 480, 0.125);
-        ((qe) this).field_e = new ph(var3, var11);
+        this.field_e = new ph(var3, var11);
         field_m = new int[307200];
         int var7 = 0;
         var6 = var7;
@@ -731,7 +741,7 @@ abstract class qe {
     final static wb[] a(ai param0, boolean param1, boolean param2, int param3) {
         int var4 = qe.a(param0, param1, param2, param3, field_k);
         wb[] var5 = new wb[var4];
-        cj.a((Object[]) (Object) field_k, 0, (Object[]) (Object) var5, 0, var4);
+        cj.a(field_k, 0, var5, 0, var4);
         return var5;
     }
 
@@ -739,7 +749,7 @@ abstract class qe {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        Object var5 = null;
+        sa var5 = null;
         L0: {
           if (hj.field_S == -1) {
             break L0;
@@ -771,21 +781,21 @@ abstract class qe {
             field_c = field_c + (int)(1048576.0 * te.a(mo.field_a ^ 773223));
             field_n = field_n + field_a;
             field_c = field_c + field_j;
-            if (((qe) this).field_b == null) {
+            if (this.field_b == null) {
               break L2;
             } else {
-              ((qe) this).field_b.c((byte) 72);
+              this.field_b.c((byte) 72);
               break L2;
             }
           }
           L3: {
-            if (((qe) this).field_q == null) {
-              var5 = null;
+            if (this.field_q == null) {
+              var5 = (sa) null;
               hm.a((sa) null, -21);
               break L3;
             } else {
-              hm.a(((qe) this).field_q, -21);
-              ((qe) this).field_q.a(false);
+              hm.a(this.field_q, -21);
+              this.field_q.a(false);
               break L3;
             }
           }
@@ -829,9 +839,9 @@ abstract class qe {
                 }
               }
               var5 = 256 - param4;
-              var6 = 0 * param4;
-              var7 = 0 * param4;
-              var8 = 0 * param4;
+              var6 = (param3 >> 16 & 255) * param4;
+              var7 = (param3 >> 8 & 255) * param4;
+              var8 = (param3 & 255) * param4;
               var12 = param0 + param1 * gf.field_i;
               var13 = 0;
               L3: while (true) {
@@ -872,12 +882,14 @@ abstract class qe {
 
     final static void a(int param0, int param1, ai param2, boolean param3, int param4) {
         int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         int var5 = 0;
         if (param2 != null) {
             var5 = param2.field_p;
             var6 = param2.field_g;
-            int var7 = param2.field_r;
-            int var8 = param2.field_q;
+            var7 = param2.field_r;
+            var8 = param2.field_q;
             if (param3) {
                 var5 = var5 + 1 >> 1;
                 var6 = var6 + 1 >> 1;
@@ -886,9 +898,9 @@ abstract class qe {
             if (var5 < 0) {
                 var5 = 0;
             }
-            qe.a(590, 320, field_o, field_g, new int[4]);
+            qe.a(param0, param1, field_o, field_g, new int[]{var5, var6, var7, var8});
         } else {
-            qe.a(590, 320, field_o, field_g, new int[4]);
+            qe.a(param0, param1, field_o, field_g, new int[]{0, 0, 0, 0});
         }
     }
 
@@ -910,6 +922,13 @@ abstract class qe {
     }
 
     private final static int a(ai param0, boolean param1, boolean param2, int param3, wb[] param4) {
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -945,7 +964,7 @@ abstract class qe {
           if (var10 == null) {
             break L2;
           } else {
-            int incrementValue$7 = var5;
+            incrementValue$7 = var5;
             var5++;
             param4[incrementValue$7] = var10;
             break L2;
@@ -956,7 +975,7 @@ abstract class qe {
           if (var10 == null) {
             break L3;
           } else {
-            int incrementValue$8 = var5;
+            incrementValue$8 = var5;
             var5++;
             param4[incrementValue$8] = var10;
             break L3;
@@ -967,7 +986,7 @@ abstract class qe {
           if (var10 == null) {
             break L4;
           } else {
-            int incrementValue$9 = var5;
+            incrementValue$9 = var5;
             var5++;
             param4[incrementValue$9] = var10;
             break L4;
@@ -978,7 +997,7 @@ abstract class qe {
           if (var10 == null) {
             break L5;
           } else {
-            int incrementValue$10 = var5;
+            incrementValue$10 = var5;
             var5++;
             param4[incrementValue$10] = var10;
             break L5;
@@ -988,7 +1007,7 @@ abstract class qe {
           if (!param2) {
             break L6;
           } else {
-            int incrementValue$11 = var5;
+            incrementValue$11 = var5;
             var5++;
             param4[incrementValue$11] = new wb(dm.field_c, ue.field_i[6], 16744703);
             break L6;
@@ -1011,12 +1030,12 @@ abstract class qe {
                   }
                 }
               }
-              int incrementValue$12 = var5;
+              incrementValue$12 = var5;
               var5++;
               param4[incrementValue$12] = new wb(fi.field_t, ue.field_i[4], 16777215);
               break L7;
             } else {
-              int incrementValue$13 = var5;
+              incrementValue$13 = var5;
               var5++;
               param4[incrementValue$13] = new wb(ii.field_C, ue.field_i[4], 16777215);
               break L7;
@@ -1051,17 +1070,17 @@ abstract class qe {
         int var15 = 0;
         qe.b(param0, param1, 16, 16, 128, 64, 2, 192);
         param5.c(param0, param1);
-        if (param3 > 10) {
-            param3 = 10;
+        if (param3 > param4) {
+            param3 = param4;
         }
-        int var8 = 1 + param3 * 95 / 10;
-        jm.a(4, param0 + 26, 96, -104, param1 + 6);
+        int var8 = 1 + param3 * (param2 - 1) / param4;
+        jm.a(4, param0 + 26, param2, -104, param1 + 6);
         int var9 = param6 & 16711935;
         int var10 = param6 & 65280;
         int var11 = param7 & 16711935;
         int var12 = param7 & 65280;
         for (var13 = 0; var13 < var8; var13++) {
-            var14 = (var13 << 8) / 96;
+            var14 = (var13 << 8) / param2;
             var15 = 256 - var14;
             param6 = var9 * var15 + var11 * var14 & -16711936;
             param7 = var10 * var15 + var12 * var14 & 16711680;
@@ -1072,7 +1091,7 @@ abstract class qe {
     private final static void a(int param0, int param1, cn[] param2, int[][] param3, int[] param4) {
         int var5 = 0;
         for (var5 = 0; var5 < param4.length; var5++) {
-            qe.a(590, 320 + 16 * var5, 96, param4[var5], 10, param2[var5], param3[var5][0], param3[var5][1]);
+            qe.a(param0, param1 + 16 * var5, 96, param4[var5], 10, param2[var5], param3[var5][0], param3[var5][1]);
         }
     }
 
@@ -1080,27 +1099,28 @@ abstract class qe {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        qe.b(574, param1, 16, 16, 128, 64, 2, 192);
-        param5.c(574, param1);
-        if (param3 > 10) {
-            param3 = 10;
+        qe.b(param0 - 16, param1, 16, 16, 128, 64, 2, 192);
+        param5.c(param0 - 16, param1);
+        if (param3 > param4) {
+            param3 = param4;
         }
-        int var8 = 1 + param3 * 95 / 10;
-        jm.a(4, 468, 96, -75, param1 + 6);
+        int var8 = 1 + param3 * (param2 - 1) / param4;
+        jm.a(4, param0 - 26 - param2, param2, -75, param1 + 6);
         int var9 = param6 & 16711935;
         int var10 = param6 & 65280;
         int var11 = param7 & 16711935;
         int var12 = param7 & 65280;
         for (var13 = 0; var13 < var8; var13++) {
-            var14 = (var13 << 8) / 96;
+            var14 = (var13 << 8) / param2;
             var15 = 256 - var14;
             param6 = var9 * var15 + var11 * var14 & -16711936;
             param7 = var10 * var15 + var12 * var14 & 16711680;
-            gf.c(563 - var13, param1 + 6, 4, (param6 | param7) >>> 8);
+            gf.c(param0 - 27 - var13, param1 + 6, 4, (param6 | param7) >>> 8);
         }
     }
 
     final static void e() {
+        int fieldTemp$1 = 0;
         int var0 = 0;
         int var1 = 0;
         int var2 = 0;
@@ -1127,8 +1147,9 @@ abstract class qe {
             var2 = -(field_n >> 16);
             var10 = -240;
             var11 = -320;
+            fieldTemp$1 = field_d + 1;
             field_d = field_d + 1;
-            var12 = field_d + 1 & 3;
+            var12 = fieldTemp$1 & 3;
             if (var12 == 1) {
               break L1;
             } else {
@@ -1221,12 +1242,13 @@ abstract class qe {
 
     final static void a(int param0, int param1, hb param2, int param3) {
         int var5 = 0;
+        int var6 = 0;
         int var7 = 0;
         int var4 = 0;
         if (param2 != null) {
             var4 = param2.field_e;
             var5 = param2.field_g;
-            int var6 = param2.field_f;
+            var6 = param2.field_f;
             var7 = param2.field_k;
             if ((param2.field_d & 1) != 0) {
                 var5 = var5 << 1;
@@ -1238,13 +1260,14 @@ abstract class qe {
             if (var7 < 0) {
                 var7 = 0;
             }
-            qe.b(param0, param1, field_i, field_h, new int[4]);
+            qe.b(param0, param1, field_i, field_h, new int[]{var4, var5, var6, var7});
         } else {
-            qe.b(param0, param1, field_i, field_h, new int[4]);
+            qe.b(param0, param1, field_i, field_h, new int[]{0, 0, 0, 0});
         }
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        int incrementValue$1 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -1304,7 +1327,7 @@ abstract class qe {
               } else {
                 var12 = gf.field_b[var9];
                 var12 = ((var12 & 16711935) * var7 >> 8 & 16711935) + ((var12 & 65280) * var7 >> 8 & 65280);
-                int incrementValue$1 = var9;
+                incrementValue$1 = var9;
                 var9++;
                 gf.field_b[incrementValue$1] = param6 | param4 + var12;
                 var11++;
@@ -1318,17 +1341,13 @@ abstract class qe {
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         for (var8 = 0; var8 < param6; var8++) {
-            qe.a(param0 - 1 - var8, param1 - 1 - var8, param2 + 2 + 2 * var8, param3 + 2 + 2 * var8, 0, param4 - 64 * var8, 192);
+            qe.a(param0 - 1 - var8, param1 - 1 - var8, param2 + 2 + 2 * var8, param3 + 2 + 2 * var8, 0, param4 - param5 * var8, param7);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new wb[32];
-        field_g = new int[][]{new int[2], new int[2], new int[2], new int[2]};
-        field_h = new int[][]{new int[2], new int[2], new int[2], new int[2]};
+        field_g = new int[][]{new int[]{16716800, 16756480}, new int[]{685312, 5826816}, new int[]{10449103, 12690143}, new int[]{8086330, 12428684}};
+        field_h = new int[][]{new int[]{16716800, 16756480}, new int[]{685312, 5826816}, new int[]{2188106, 7054732}, new int[]{42962, 62200}};
     }
 }

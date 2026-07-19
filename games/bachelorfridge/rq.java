@@ -13,11 +13,11 @@ final class rq extends kj {
     final void a(int param0, int param1, int param2) {
         int var5 = 0;
         var5 = BachelorFridge.field_y;
-        if (15 <= ((rq) this).field_h) {
-          if (((rq) this).field_h >= 30) {
+        if (15 <= this.field_h) {
+          if (this.field_h >= 30) {
             ena.field_l.a(param2, param0 + -32);
             if (param1 != 0) {
-              ((rq) this).a(120, 124, -85);
+              this.a(120, 124, -85);
               return;
             } else {
               return;
@@ -27,7 +27,7 @@ final class rq extends kj {
             if (param1 == 0) {
               return;
             } else {
-              ((rq) this).a(120, 124, -85);
+              this.a(120, 124, -85);
               return;
             }
           }
@@ -36,7 +36,7 @@ final class rq extends kj {
           if (param1 == 0) {
             return;
           } else {
-            ((rq) this).a(120, 124, -85);
+            this.a(120, 124, -85);
             return;
           }
         }
@@ -46,8 +46,8 @@ final class rq extends kj {
         if (param0 <= 21) {
             return true;
         }
-        int fieldTemp$0 = ((rq) this).field_h + 1;
-        ((rq) this).field_h = ((rq) this).field_h + 1;
+        int fieldTemp$0 = this.field_h + 1;
+        this.field_h = this.field_h + 1;
         if (fieldTemp$0 >= 75) {
             return true;
         }
@@ -61,10 +61,6 @@ final class rq extends kj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 200;
         field_g = 49;
     }

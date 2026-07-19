@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 abstract class ct extends vb {
     private int field_F;
     static gu field_t;
@@ -30,8 +28,8 @@ abstract class ct extends vb {
             int var5_int = 0;
             String var7 = null;
             int var8 = 0;
-            Object var9 = null;
-            Object var10 = null;
+            String var9 = null;
+            String var10 = null;
             Boolean var11 = null;
             rb var12 = null;
             Throwable decompiledCaughtException = null;
@@ -39,11 +37,11 @@ abstract class ct extends vb {
             var4 = b.a(nh.field_e, (byte) 72, param1, fb.field_e);
             if (var4 != 0) {
               L0: {
-                if (var4 == 1) {
+                if ((var4 ^ -1) == -2) {
                   L1: {
                     var5_int = bb.a(gt.a((byte) -46), (byte) 127, ju.e(123));
                     if (-1 != var5_int) {
-                      gt.a(123, rp.field_m, var5_int, sd.field_j);
+                      gt.a(param0 + 115, rp.field_m, var5_int, sd.field_j);
                       rp.field_m = null;
                       sd.field_j = null;
                       break L1;
@@ -63,14 +61,14 @@ abstract class ct extends vb {
                 }
               }
               L2: {
-                if (var4 != 2) {
+                if ((var4 ^ -1) != -3) {
                   break L2;
                 } else {
-                  var5_int = mj.a(la.a(4), 3, ((ct) this).field_E, ve.a(true), ce.g(-3), sa.b(-25752), of.a(false));
+                  var5_int = mj.a(la.a(4), param0 ^ 11, this.field_E, ve.a(true), ce.g(-3), sa.b(-25752), of.a(false));
                   if (-1 == var5_int) {
                     break L2;
                   } else {
-                    pp.a(sd.field_j, var5_int, rp.field_m, 26326);
+                    pp.a(sd.field_j, var5_int, rp.field_m, param0 + 26318);
                     sd.field_j = null;
                     rp.field_m = null;
                     break L2;
@@ -78,7 +76,7 @@ abstract class ct extends vb {
                 }
               }
               L3: {
-                if (var4 == 3) {
+                if (-4 == (var4 ^ -1)) {
                   L4: {
                     if (-1 == sk.field_a) {
                       break L4;
@@ -96,17 +94,17 @@ abstract class ct extends vb {
                     vs.field_f = false;
                     break L3;
                   } else {
-                    var5_int = pi.a(((ct) this).field_E, la.a(4), 0, ((ct) this).field_r, sa.b(-25752), false);
+                    var5_int = pi.a(this.field_E, la.a(4), 0, this.field_r, sa.b(-25752), false);
                     if (var5_int == -1) {
                       break L3;
                     } else {
                       if (0 != var5_int) {
-                        li.a(126, var5_int, rp.field_m);
+                        li.a(param0 ^ 118, var5_int, rp.field_m);
                         rp.field_m = null;
                         break L3;
                       } else {
                         dl.field_o = as.field_b;
-                        um.d(1);
+                        um.d(param0 ^ 9);
                         ob.field_d = 10;
                         ks.field_b = false;
                         break L3;
@@ -132,7 +130,7 @@ abstract class ct extends vb {
                 }
               }
               L6: {
-                if (var4 == 5) {
+                if ((var4 ^ -1) == -6) {
                   rr.a((byte) -96, bm.m(119));
                   break L6;
                 } else {
@@ -153,23 +151,23 @@ abstract class ct extends vb {
               }
               L8: {
                 if (var4 == 7) {
-                  po.a(bm.m(125), (byte) -104);
+                  po.a(bm.m(param0 + 117), (byte) -104);
                   break L8;
                 } else {
                   break L8;
                 }
               }
               L9: {
-                if (var4 == 8) {
-                  la.a(true, bm.m(122));
+                if (var4 == param0) {
+                  la.a(true, bm.m(param0 ^ 114));
                   break L9;
                 } else {
                   break L9;
                 }
               }
               L10: {
-                if (var4 == 9) {
-                  lb.a(61, bm.m(127));
+                if ((var4 ^ -1) == -10) {
+                  lb.a(61, bm.m(param0 + 119));
                   break L10;
                 } else {
                   break L10;
@@ -184,7 +182,7 @@ abstract class ct extends vb {
                 }
               }
               L12: {
-                if (var4 == 11) {
+                if ((var4 ^ -1) == -12) {
                   jn.a((byte) 124, bm.m(107));
                   break L12;
                 } else {
@@ -192,7 +190,7 @@ abstract class ct extends vb {
                 }
               }
               L13: {
-                if (var4 == 12) {
+                if (-13 == (var4 ^ -1)) {
                   vi.a((byte) 103, kb.a(-1903710079), bm.m(107));
                   break L13;
                 } else {
@@ -200,14 +198,14 @@ abstract class ct extends vb {
                 }
               }
               L14: {
-                if (var4 != 13) {
+                if (-14 != (var4 ^ -1)) {
                   break L14;
                 } else {
                   try {
                     L15: {
                       L16: {
                         if (null == hb.field_a) {
-                          hb.field_a = new cc(pt.field_b, new java.net.URL(((ct) this).getCodeBase(), "countrylist.ws"), 5000);
+                          hb.field_a = new cc(pt.field_b, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
                           break L16;
                         } else {
                           break L16;
@@ -224,7 +222,7 @@ abstract class ct extends vb {
                               hp.a((byte) -121, var7);
                               break L18;
                             } else {
-                              var9 = null;
+                              var9 = (String) null;
                               hp.a((byte) -117, (String) null);
                               break L18;
                             }
@@ -239,8 +237,8 @@ abstract class ct extends vb {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     L19: {
                       var5 = (Exception) (Object) decompiledCaughtException;
-                      v.a("S1", (byte) -52, (Throwable) (Object) var5);
-                      var10 = null;
+                      v.a("S1", (byte) -52, (Throwable) ((Object) var5));
+                      var10 = (String) null;
                       hp.a((byte) -112, (String) null);
                       hb.field_a = null;
                       break L19;
@@ -257,11 +255,11 @@ abstract class ct extends vb {
                   break L20;
                 }
               }
-              if (var4 != 16) {
-                if (var4 == 17) {
-                  return 2;
-                } else {
+              if ((var4 ^ -1) != -17) {
+                if (var4 != 17) {
                   return 0;
+                } else {
+                  return 2;
                 }
               } else {
                 return 1;
@@ -301,7 +299,7 @@ abstract class ct extends vb {
               if (param0 == -60) {
                 break L1;
               } else {
-                ((ct) this).field_z = -63L;
+                this.field_z = -63L;
                 break L1;
               }
             }
@@ -311,23 +309,23 @@ abstract class ct extends vb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ct.JA(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -335,7 +333,7 @@ abstract class ct extends vb {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ')');
         }
     }
 
@@ -346,6 +344,8 @@ abstract class ct extends vb {
     }
 
     final void i(int param0) {
+        int discarded$2 = 0;
+        int discarded$3 = 0;
         int var3 = 0;
         Object stackIn_3_0 = null;
         int stackIn_3_1 = 0;
@@ -368,10 +368,10 @@ abstract class ct extends vb {
         } else {
           L0: {
             if (!jr.a((byte) 32)) {
-              if (bl.field_c >= 10) {
+              if ((bl.field_c ^ -1) <= -11) {
                 if (uk.a((byte) -5)) {
                   if (ob.field_d == 0) {
-                    int discarded$2 = this.a(8, false, false);
+                    discarded$2 = this.a(8, false, false);
                     break L0;
                   } else {
                     ic.a(nh.field_e, false);
@@ -410,7 +410,7 @@ abstract class ct extends vb {
                   break L1;
                 }
               }
-              int discarded$3 = this.a(stackIn_5_1, stackIn_5_2 != 0, false);
+              discarded$3 = this.a(stackIn_5_1, stackIn_5_2 != 0, false);
               break L0;
             }
           }
@@ -425,7 +425,7 @@ abstract class ct extends vb {
         String var7 = null;
         String var8 = null;
         String var9 = null;
-        Object var10 = null;
+        String var10 = null;
         Object stackIn_3_0 = null;
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
@@ -439,6 +439,8 @@ abstract class ct extends vb {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
+        int decompiledRegionSelector0 = 0;
+        int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
         Object stackOut_2_0 = null;
         Object stackOut_3_0 = null;
@@ -456,128 +458,145 @@ abstract class ct extends vb {
         StringBuilder stackOut_22_1 = null;
         String stackOut_22_2 = null;
         try {
-          try {
-            L0: {
-              if (((ct) this).b(true)) {
-                L1: {
+          L0: {
+            try {
+              L1: {
+                if (this.b(param1)) {
                   L2: {
-                    ((ct) this).field_w = ((ct) this).getCodeBase().getHost();
-                    var6_ref2 = ((ct) this).field_w.toLowerCase();
-                    stackOut_2_0 = this;
-                    stackIn_5_0 = stackOut_2_0;
-                    stackIn_3_0 = stackOut_2_0;
-                    if (var6_ref2.equals((Object) (Object) "jagex.com")) {
-                      break L2;
-                    } else {
-                      stackOut_3_0 = this;
-                      stackIn_6_0 = stackOut_3_0;
-                      stackIn_4_0 = stackOut_3_0;
-                      if (!var6_ref2.endsWith(".jagex.com")) {
-                        stackOut_6_0 = this;
-                        stackOut_6_1 = 0;
-                        stackIn_7_0 = stackOut_6_0;
-                        stackIn_7_1 = stackOut_6_1;
-                        break L1;
+                    L3: {
+                      this.field_w = this.getCodeBase().getHost();
+                      var6_ref2 = this.field_w.toLowerCase();
+                      stackOut_2_0 = this;
+                      stackIn_5_0 = stackOut_2_0;
+                      stackIn_3_0 = stackOut_2_0;
+                      if (var6_ref2.equals("jagex.com")) {
+                        break L3;
                       } else {
-                        stackOut_4_0 = this;
-                        stackIn_5_0 = stackOut_4_0;
-                        break L2;
+                        stackOut_3_0 = this;
+                        stackIn_6_0 = stackOut_3_0;
+                        stackIn_4_0 = stackOut_3_0;
+                        if (!var6_ref2.endsWith(".jagex.com")) {
+                          stackOut_6_0 = this;
+                          stackOut_6_1 = 0;
+                          stackIn_7_0 = stackOut_6_0;
+                          stackIn_7_1 = stackOut_6_1;
+                          break L2;
+                        } else {
+                          stackOut_4_0 = this;
+                          stackIn_5_0 = stackOut_4_0;
+                          break L3;
+                        }
                       }
                     }
+                    stackOut_5_0 = this;
+                    stackOut_5_1 = 1;
+                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_1 = stackOut_5_1;
+                    break L2;
                   }
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
+                  L4: {
+                    ((ct) (this)).field_r = stackIn_7_1 != 0;
+                    this.field_y = Integer.parseInt(this.getParameter("gameport1"));
+                    this.field_F = Integer.parseInt(this.getParameter("gameport2"));
+                    var7 = this.getParameter("servernum");
+                    if (var7 == null) {
+                      break L4;
+                    } else {
+                      this.field_s = Integer.parseInt(var7);
+                      break L4;
+                    }
+                  }
+                  L5: {
+                    this.field_u = Integer.parseInt(this.getParameter("gamecrc"));
+                    this.field_z = Long.parseLong(this.getParameter("instanceid"));
+                    this.field_A = this.getParameter("member").equals("yes");
+                    var8 = this.getParameter("lang");
+                    if (var8 == null) {
+                      break L5;
+                    } else {
+                      this.field_D = Integer.parseInt(var8);
+                      break L5;
+                    }
+                  }
+                  L6: {
+                    if ((this.field_D ^ -1) <= -6) {
+                      this.field_D = 0;
+                      break L6;
+                    } else {
+                      break L6;
+                    }
+                  }
+                  L7: {
+                    var9 = this.getParameter("affid");
+                    if (var9 != null) {
+                      this.field_E = Integer.parseInt(var9);
+                      break L7;
+                    } else {
+                      break L7;
+                    }
+                  }
+                  qr.field_b = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+                  this.a(param0, 0, param3, param2, this.field_u, param4, 32);
+                  decompiledRegionSelector0 = 1;
+                  break L1;
+                } else {
+                  decompiledRegionSelector0 = 0;
                   break L1;
                 }
-                L3: {
-                  ((ct) this).field_r = stackIn_7_1 != 0;
-                  ((ct) this).field_y = Integer.parseInt(((ct) this).getParameter("gameport1"));
-                  ((ct) this).field_F = Integer.parseInt(((ct) this).getParameter("gameport2"));
-                  var7 = ((ct) this).getParameter("servernum");
-                  if (var7 == null) {
-                    break L3;
-                  } else {
-                    ((ct) this).field_s = Integer.parseInt(var7);
-                    break L3;
-                  }
-                }
-                L4: {
-                  ((ct) this).field_u = Integer.parseInt(((ct) this).getParameter("gamecrc"));
-                  ((ct) this).field_z = Long.parseLong(((ct) this).getParameter("instanceid"));
-                  ((ct) this).field_A = ((ct) this).getParameter("member").equals((Object) (Object) "yes");
-                  var8 = ((ct) this).getParameter("lang");
-                  if (var8 == null) {
-                    break L4;
-                  } else {
-                    ((ct) this).field_D = Integer.parseInt(var8);
-                    break L4;
-                  }
-                }
-                L5: {
-                  if (((ct) this).field_D >= 5) {
-                    ((ct) this).field_D = 0;
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                L6: {
-                  var9 = ((ct) this).getParameter("affid");
-                  if (var9 != null) {
-                    ((ct) this).field_E = Integer.parseInt(var9);
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                qr.field_b = Boolean.valueOf(((ct) this).getParameter("simplemode")).booleanValue();
-                ((ct) this).a(640, 0, param3, param2, ((ct) this).field_u, 480, 32);
-                break L0;
-              } else {
-                return;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L8: {
+                var6 = (Exception) (Object) decompiledCaughtException;
+                var10 = (String) null;
+                v.a((String) null, (byte) -52, (Throwable) ((Object) var6));
+                this.a(-107, "crash");
+                decompiledRegionSelector0 = 1;
+                break L8;
               }
             }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            L7: {
-              var6 = (Exception) (Object) decompiledCaughtException;
-              var10 = null;
-              v.a((String) null, (byte) -52, (Throwable) (Object) var6);
-              ((ct) this).a(-107, "crash");
-              break L7;
+            if (decompiledRegionSelector0 == 0) {
+              decompiledRegionSelector1 = 0;
+              break L0;
+            } else {
+              decompiledRegionSelector1 = 1;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L8: {
+          L9: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var6_ref;
-            stackOut_21_1 = new StringBuilder().append("ct.K(").append(640).append(',').append(true).append(',');
+            stackOut_21_0 = (RuntimeException) (var6_ref);
+            stackOut_21_1 = new StringBuilder().append("ct.K(").append(param0).append(',').append(param1).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param2 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
-              break L8;
+              break L9;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
               stackIn_24_2 = stackOut_22_2;
-              break L8;
+              break L9;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param3 + ',' + 480 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector1 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -597,7 +616,7 @@ abstract class ct extends vb {
         ho.field_d[6] = -2;
         ho.field_d[2] = -2;
         ho.field_d[1] = 16;
-        ho.field_d[9] = -1;
+        ho.field_d[9] = param0;
     }
 
     final int a(boolean param0, int param1) {
@@ -615,7 +634,7 @@ abstract class ct extends vb {
         } else {
           L0: {
             L1: {
-              if (var2 == 0) {
+              if (-1 == (var2 ^ -1)) {
                 break L1;
               } else {
                 if (1 != var2) {
@@ -690,12 +709,15 @@ abstract class ct extends vb {
     }
 
     private final void g(int param0) {
-        int var2 = 0;
+        int var2 = 39 % ((-37 - param0) / 63);
         fh.field_e[4] = true;
     }
 
     private final void k(int param0) {
         int var2 = nm.field_c.g(-53);
+        if (param0 > -75) {
+            this.m(-11);
+        }
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = -1 + ag.field_s;
         byte[] var5 = new byte[var4];
@@ -705,7 +727,15 @@ abstract class ct extends vb {
 
     private final int j(int param0) {
         int var2 = 0;
-        if (((ct) this).field_e) {
+        L0: {
+          if (param0 < -35) {
+            break L0;
+          } else {
+            this.e((byte) 71);
+            break L0;
+          }
+        }
+        if (this.field_e) {
           return -1;
         } else {
           if (!dg.j(27711)) {
@@ -714,21 +744,21 @@ abstract class ct extends vb {
             if (vs.field_f) {
               return -1;
             } else {
-              var2 = pi.a(((ct) this).field_E, la.a(4), 0, ((ct) this).field_r, sa.b(-25752), true);
+              var2 = pi.a(this.field_E, la.a(4), 0, this.field_r, sa.b(-25752), true);
               if (var2 != -1) {
-                L0: {
-                  if (var2 == 0) {
-                    break L0;
+                L1: {
+                  if (-1 == (var2 ^ -1)) {
+                    break L1;
                   } else {
-                    if (var2 == 1) {
-                      break L0;
+                    if ((var2 ^ -1) == -2) {
+                      break L1;
                     } else {
-                      L1: {
+                      L2: {
                         if (!v.field_a) {
-                          ((ct) this).a(-103, "reconnect");
-                          break L1;
+                          this.a(-103, "reconnect");
+                          break L2;
                         } else {
-                          break L1;
+                          break L2;
                         }
                       }
                       rc.c((byte) 124);
@@ -739,15 +769,15 @@ abstract class ct extends vb {
                     }
                   }
                 }
-                L2: {
+                L3: {
                   if (ob.field_d != 11) {
-                    break L2;
+                    break L3;
                   } else {
-                    if (sk.field_a == 0) {
+                    if (-1 == (sk.field_a ^ -1)) {
                       um.d(1);
-                      break L2;
+                      break L3;
                     } else {
-                      break L2;
+                      break L3;
                     }
                   }
                 }
@@ -776,17 +806,18 @@ abstract class ct extends vb {
     }
 
     private final void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int discarded$0 = 0;
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         var10.dispose();
-        ((ct) this).setBackground(java.awt.Color.black);
+        this.setBackground(java.awt.Color.black);
         if (param6 != 12) {
-            int discarded$0 = ((ct) this).a(false, -10);
+            discarded$0 = this.a(false, -10);
         }
-        fb.field_e = ((ct) this).field_D;
+        fb.field_e = this.field_D;
         qm.a(fb.field_e, (byte) -44);
-        ka.a(-31808, ((ct) this).field_z, ((ct) this).field_w, 5000, ((ct) this).field_F, false, ((ct) this).field_A, 5000, fb.field_e, ((ct) this).field_s, ((ct) this).field_y, ((ct) this).field_u, pt.field_b, param2);
-        hh.a(((ct) this).field_F, ((ct) this).field_w, ((ct) this).field_y, param2, (byte) -36, pt.field_b, fb.field_e, ((ct) this).field_u, ((ct) this).field_s);
+        ka.a(-31808, this.field_z, this.field_w, 5000, this.field_F, param1, this.field_A, 5000, fb.field_e, this.field_s, this.field_y, this.field_u, pt.field_b, param2);
+        hh.a(this.field_F, this.field_w, this.field_y, param2, (byte) -36, pt.field_b, fb.field_e, this.field_u, this.field_s);
         du.k(-128);
         jd.field_c = qj.g(param6 + 8180);
         cd.a(ci.field_f, 42);
@@ -800,9 +831,10 @@ abstract class ct extends vb {
     }
 
     private final static Boolean h(int param0) {
+        Boolean discarded$0 = null;
         Boolean var1 = qj.field_r;
         if (param0 < 109) {
-            Boolean discarded$0 = ct.h(-116);
+            discarded$0 = ct.h(-116);
         }
         qj.field_r = null;
         return var1;
@@ -882,13 +914,13 @@ abstract class ct extends vb {
           if (tg.a(-128)) {
             L5: {
               var3 = bl.a(101) * 1200;
-              if (((ct) this).field_q) {
+              if (this.field_q) {
                 break L5;
               } else {
-                if (~var3 <= ~fb.b(0)) {
+                if ((var3 ^ -1) <= (fb.b(0) ^ -1)) {
                   break L4;
                 } else {
-                  if (~ro.c((byte) -37) >= ~var3) {
+                  if ((ro.c((byte) -37) ^ -1) >= (var3 ^ -1)) {
                     break L4;
                   } else {
                     break L5;
@@ -896,7 +928,7 @@ abstract class ct extends vb {
                 }
               }
             }
-            ((ct) this).field_q = false;
+            this.field_q = false;
             te.b(true);
             rc.c((byte) -110);
             li.a(11, 2, oi.field_b);
@@ -910,10 +942,10 @@ abstract class ct extends vb {
         }
         L6: {
           L7: {
-            if (sk.field_a == -1) {
+            if (0 == (sk.field_a ^ -1)) {
               break L7;
             } else {
-              if (sk.field_a != 0) {
+              if ((sk.field_a ^ -1) != -1) {
                 break L6;
               } else {
                 break L7;
@@ -921,7 +953,7 @@ abstract class ct extends vb {
             }
           }
           L8: {
-            if (sk.field_a != -1) {
+            if (0 != (sk.field_a ^ -1)) {
               stackOut_23_0 = 0;
               stackIn_24_0 = stackOut_23_0;
               break L8;
@@ -940,7 +972,7 @@ abstract class ct extends vb {
               if (0 != sk.field_a) {
                 break L9;
               } else {
-                if (ob.field_d != 11) {
+                if ((ob.field_d ^ -1) != -12) {
                   break L9;
                 } else {
                   if (dg.j(27711)) {
@@ -953,10 +985,10 @@ abstract class ct extends vb {
               }
             }
           }
-          if (sk.field_a == -1) {
+          if ((sk.field_a ^ -1) == 0) {
             break L6;
           } else {
-            if (sk.field_a == 0) {
+            if ((sk.field_a ^ -1) == -1) {
               break L6;
             } else {
               wg.field_b = 15000L + kh.a(-100);
@@ -965,23 +997,23 @@ abstract class ct extends vb {
           }
         }
         L10: {
-          if (sk.field_a == -1) {
+          if (0 == (sk.field_a ^ -1)) {
             break L10;
           } else {
-            if (sk.field_a == 0) {
+            if ((sk.field_a ^ -1) == -1) {
               break L10;
             } else {
               if (bl.field_c >= 10) {
-                if (ob.field_d >= 10) {
+                if (-11 >= (ob.field_d ^ -1)) {
                   L11: {
                     rc.c((byte) 122);
-                    if (sk.field_a != 3) {
-                      if (sk.field_a != 4) {
-                        if (sk.field_a == 2) {
+                    if ((sk.field_a ^ -1) != -4) {
+                      if (-5 != (sk.field_a ^ -1)) {
+                        if ((sk.field_a ^ -1) == -3) {
                           li.a(116, 256, eu.field_k);
                           break L11;
                         } else {
-                          if (sk.field_a == 5) {
+                          if (-6 == (sk.field_a ^ -1)) {
                             li.a(-102, 5, ut.field_b);
                             break L11;
                           } else {
@@ -1004,26 +1036,26 @@ abstract class ct extends vb {
                   break L10;
                 }
               } else {
-                if (sk.field_a != 3) {
+                if (-4 != (sk.field_a ^ -1)) {
                   if (sk.field_a == 4) {
-                    ((ct) this).a(-109, "js5io");
+                    this.a(-109, "js5io");
                     break L10;
                   } else {
-                    if (sk.field_a != 2) {
-                      if (sk.field_a != 5) {
-                        ((ct) this).a(-109, "js5connect");
+                    if ((sk.field_a ^ -1) != -3) {
+                      if (-6 != (sk.field_a ^ -1)) {
+                        this.a(-109, "js5connect");
                         break L10;
                       } else {
-                        ((ct) this).a(-109, "outofdate");
+                        this.a(-109, "outofdate");
                         break L10;
                       }
                     } else {
-                      ((ct) this).a(-109, "js5connect_full");
+                      this.a(-109, "js5connect_full");
                       break L10;
                     }
                   }
                 } else {
-                  ((ct) this).a(-116, "js5crc");
+                  this.a(-116, "js5crc");
                   break L10;
                 }
               }
@@ -1033,7 +1065,7 @@ abstract class ct extends vb {
         L12: {
           L13: {
             L14: {
-              if (sk.field_a == -1) {
+              if (0 == (sk.field_a ^ -1)) {
                 break L14;
               } else {
                 if (0 != sk.field_a) {
@@ -1051,7 +1083,7 @@ abstract class ct extends vb {
           }
           if (wg.field_b <= kh.a(-119)) {
             vs.field_f = false;
-            if (sk.field_a == -1) {
+            if ((sk.field_a ^ -1) == 0) {
               break L12;
             } else {
               if (0 == sk.field_a) {
@@ -1113,7 +1145,7 @@ abstract class ct extends vb {
             }
           }
           L19: {
-            if (bl.field_c != 2) {
+            if ((bl.field_c ^ -1) != -3) {
               break L19;
             } else {
               L20: {
@@ -1192,7 +1224,7 @@ abstract class ct extends vb {
                       stackIn_101_1 = stackOut_100_1;
                       if (qp.field_i) {
                         stackOut_102_0 = stackIn_102_0;
-                        stackOut_102_1 = (String) (Object) stackIn_102_1;
+                        stackOut_102_1 = (String) ((Object) stackIn_102_1);
                         stackOut_102_2 = 0;
                         stackIn_103_0 = stackOut_102_0;
                         stackIn_103_1 = stackOut_102_1;
@@ -1200,7 +1232,7 @@ abstract class ct extends vb {
                         break L25;
                       } else {
                         stackOut_101_0 = stackIn_101_0;
-                        stackOut_101_1 = (String) (Object) stackIn_101_1;
+                        stackOut_101_1 = (String) ((Object) stackIn_101_1);
                         stackOut_101_2 = 1;
                         stackIn_103_0 = stackOut_101_0;
                         stackIn_103_1 = stackOut_101_1;
@@ -1232,7 +1264,7 @@ abstract class ct extends vb {
                   oi.field_a = null;
                   uj.field_b = null;
                   cf.field_f = null;
-                  wb.a((java.applet.Applet) this, 17337);
+                  wb.a((java.applet.Applet) (this), 17337);
                   te.a(67);
                   bl.field_c = 10;
                   break L21;
@@ -1243,11 +1275,11 @@ abstract class ct extends vb {
             }
           }
           L28: {
-            if (bl.field_c != 10) {
+            if (-11 != (bl.field_c ^ -1)) {
               break L28;
             } else {
               L29: {
-                if (fb.field_e != 0) {
+                if (-1 != (fb.field_e ^ -1)) {
                   fn.field_a = ot.a(-92, hf.field_r);
                   break L29;
                 } else {
@@ -1259,7 +1291,7 @@ abstract class ct extends vb {
             }
           }
           L30: {
-            if (bl.field_c == 11) {
+            if (-12 == (bl.field_c ^ -1)) {
               L31: {
                 if (null == fn.field_a) {
                   break L31;
@@ -1287,7 +1319,7 @@ abstract class ct extends vb {
             }
           }
           L33: {
-            if (bl.field_c == 12) {
+            if (-13 == (bl.field_c ^ -1)) {
               if (!jn.field_t) {
                 bl.field_c = 13;
                 break L33;
@@ -1299,7 +1331,7 @@ abstract class ct extends vb {
             }
           }
           L34: {
-            if (bl.field_c != 13) {
+            if ((bl.field_c ^ -1) != -14) {
               break L34;
             } else {
               L35: {
@@ -1337,7 +1369,7 @@ abstract class ct extends vb {
             } else {
               if (or.field_c) {
                 pg.a(ci.field_f, -69);
-                ((ct) this).b(-14829);
+                this.b(-14829);
                 cd.a(ci.field_f, 37);
                 break L37;
               } else {
@@ -1371,6 +1403,9 @@ abstract class ct extends vb {
     }
 
     private final void d(byte param0) {
+        if (param0 != 56) {
+            this.field_D = -65;
+        }
         fh.field_e[2] = true;
     }
 
@@ -1389,7 +1424,7 @@ abstract class ct extends vb {
             this.l(-11);
         }
         if (param0 != 62) {
-            ((ct) this).field_z = -91L;
+            this.field_z = -91L;
         }
     }
 
@@ -1415,7 +1450,7 @@ abstract class ct extends vb {
                 return;
               } else {
                 L1: {
-                  if (var2 == 1) {
+                  if ((var2 ^ -1) == -2) {
                     br.f(113);
                     break L1;
                   } else {
@@ -1425,14 +1460,14 @@ abstract class ct extends vb {
                     } else {
                       if (var2 != 3) {
                         if (var2 != 4) {
-                          if (var2 != 5) {
-                            if (var2 != 6) {
+                          if ((var2 ^ -1) != -6) {
+                            if (-7 != (var2 ^ -1)) {
                               if (7 != var2) {
-                                if (var2 == 8) {
-                                  ae.a(ag.field_s, (rb) (Object) nm.field_c, false, pt.field_b);
+                                if (-9 == (var2 ^ -1)) {
+                                  ae.a(ag.field_s, nm.field_c, false, pt.field_b);
                                   break L1;
                                 } else {
-                                  if (var2 == 16) {
+                                  if (-17 == (var2 ^ -1)) {
                                     vb.a(true);
                                     break L1;
                                   } else {
@@ -1515,7 +1550,7 @@ abstract class ct extends vb {
     public static void o(int param0) {
         field_H = null;
         if (param0 != -12516) {
-            field_t = null;
+            field_t = (gu) null;
         }
         field_v = null;
         field_C = null;
@@ -1523,6 +1558,10 @@ abstract class ct extends vb {
     }
 
     private final void l(int param0) {
+        int discarded$0 = 0;
+        if (param0 != -11) {
+            discarded$0 = this.j(-15);
+        }
         fh.field_e[5] = true;
     }
 
@@ -1530,10 +1569,6 @@ abstract class ct extends vb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = new gu("");
         field_H = new ej(13, 0, 1, 0);
         field_B = 250;

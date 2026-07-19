@@ -14,10 +14,6 @@ final class pd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "pd.A(";
         field_a = new jd();
     }

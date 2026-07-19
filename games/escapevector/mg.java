@@ -12,22 +12,31 @@ final class mg {
     static mf field_c;
 
     final static int a(byte param0) {
+        if (param0 != -12) {
+            return 95;
+        }
         return ui.field_e;
     }
 
     public static void a(boolean param0) {
         field_e = null;
-        field_h = null;
-        field_c = null;
-        field_a = null;
-        field_g = null;
+        if (!param0) {
+          field_e = (cn) null;
+          field_h = null;
+          field_c = null;
+          field_a = null;
+          field_g = null;
+          return;
+        } else {
+          field_h = null;
+          field_c = null;
+          field_a = null;
+          field_g = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = new String[]{"Retrieval", "Retribution", "Simulator"};
         field_a = new int[8192];
         field_e = new cn();

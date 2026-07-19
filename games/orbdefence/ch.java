@@ -10,20 +10,20 @@ final class ch extends fh {
         if (!param3) {
             return;
         }
-        boolean discarded$0 = param2.drawImage(((ch) this).field_a, param0, param1, (java.awt.image.ImageObserver) (Object) ((ch) this).field_g);
+        boolean discarded$0 = param2.drawImage(this.field_a, param0, param1, (java.awt.image.ImageObserver) ((Object) this.field_g));
     }
 
     final void a(int param0, int param1, int param2, java.awt.Component param3) {
-        ((ch) this).field_d = new int[1 + param2 * param1];
-        ((ch) this).field_f = param1;
-        ((ch) this).field_e = param2;
-        java.awt.image.DataBufferInt var5 = new java.awt.image.DataBufferInt(((ch) this).field_d, ((ch) this).field_d.length);
+        this.field_d = new int[1 + param2 * param1];
+        this.field_f = param1;
+        this.field_e = param2;
+        java.awt.image.DataBufferInt var5 = new java.awt.image.DataBufferInt(this.field_d, this.field_d.length);
         java.awt.image.DirectColorModel var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-        java.awt.image.WritableRaster var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) (Object) var6).createCompatibleSampleModel(((ch) this).field_e, ((ch) this).field_f), (java.awt.image.DataBuffer) (Object) var5, (java.awt.Point) null);
-        ((ch) this).field_a = (java.awt.Image) (Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) (Object) var6, var7, false, new Hashtable());
-        int var8 = -36 % (param0 / 52);
-        ((ch) this).field_g = param3;
-        ((ch) this).a(-40);
+        java.awt.image.WritableRaster var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_e, this.field_f), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
+        this.field_a = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
+        int var8 = -36 % ((param0 - 0) / 52);
+        this.field_g = param3;
+        this.a(-40);
     }
 
     public ch() {

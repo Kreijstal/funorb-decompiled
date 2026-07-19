@@ -27,6 +27,7 @@ final class rq {
     }
 
     rq(byte[] param0, nk param1) {
+        int discarded$1 = 0;
         Exception var3 = null;
         uia var4 = null;
         int var5 = 0;
@@ -40,14 +41,14 @@ final class rq {
         int var13 = 0;
         uia var14 = null;
         Throwable decompiledCaughtException = null;
-        ((rq) this).field_f = null;
-        ((rq) this).field_i = 0;
-        ((rq) this).field_f = param1;
+        this.field_f = null;
+        this.field_i = 0;
+        this.field_f = param1;
         try {
           L0: {
             var14 = new uia(param0);
             var4 = new uia(param0);
-            int discarded$1 = var14.h(255);
+            discarded$1 = var14.h(255);
             var14.field_h = var14.field_h + 2;
             var5 = var14.h(255);
             var6 = 0;
@@ -58,25 +59,25 @@ final class rq {
             L1: while (true) {
               if (var9 >= var5) {
                 if (var4.field_h == param0.length) {
-                  ((rq) this).field_i = var6;
-                  ((rq) this).field_m = new short[var6];
-                  ((rq) this).field_l = new short[var6];
-                  ((rq) this).field_k = new short[var6];
-                  ((rq) this).field_d = new short[var6];
-                  ((rq) this).field_j = new short[var6];
-                  ((rq) this).field_a = new byte[var6];
+                  this.field_i = var6;
+                  this.field_m = new short[var6];
+                  this.field_l = new short[var6];
+                  this.field_k = new short[var6];
+                  this.field_d = new short[var6];
+                  this.field_j = new short[var6];
+                  this.field_a = new byte[var6];
                   var13 = 0;
                   var9 = var13;
                   L2: while (true) {
                     if (var13 >= var6) {
                       break L0;
                     } else {
-                      ((rq) this).field_m[var13] = field_c[var13];
-                      ((rq) this).field_l[var13] = field_h[var13];
-                      ((rq) this).field_k[var13] = field_n[var13];
-                      ((rq) this).field_d[var13] = field_b[var13];
-                      ((rq) this).field_j[var13] = field_g[var13];
-                      ((rq) this).field_a[var13] = field_e[var13];
+                      this.field_m[var13] = field_c[var13];
+                      this.field_l[var13] = field_h[var13];
+                      this.field_k[var13] = field_n[var13];
+                      this.field_d[var13] = field_b[var13];
+                      this.field_j[var13] = field_g[var13];
+                      this.field_a[var13] = field_e[var13];
                       var13++;
                       continue L2;
                     }
@@ -86,7 +87,7 @@ final class rq {
                 }
               } else {
                 L3: {
-                  var10 = ((rq) this).field_f.field_h[var9];
+                  var10 = this.field_f.field_h[var9];
                   if (var10 != 0) {
                     break L3;
                   } else {
@@ -171,7 +172,7 @@ final class rq {
                     }
                     L13: {
                       L14: {
-                        field_g[var6] = (short) -1;
+                        field_g[var6] = (short)-1;
                         if (var10 == 1) {
                           break L14;
                         } else {
@@ -227,17 +228,13 @@ final class rq {
           decompiledCaughtException = decompiledCaughtParameter0;
           L15: {
             var3 = (Exception) (Object) decompiledCaughtException;
-            ((rq) this).field_i = 0;
+            this.field_i = 0;
             break L15;
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new short[500];
         field_e = new byte[500];
         field_n = new short[500];

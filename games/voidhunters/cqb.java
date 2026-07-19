@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class cqb extends wm implements ntb {
     static boolean field_e;
     private int field_d;
@@ -12,9 +10,9 @@ final class cqb extends wm implements ntb {
     final String a(int param0) {
         if (param0 != -1) {
           cqb.a(104, -21, -70, -33, (byte) -17);
-          return "Variable " + ((cqb) this).field_c + " at least " + ((cqb) this).field_d;
+          return "Variable " + this.field_c + " at least " + this.field_d;
         } else {
-          return "Variable " + ((cqb) this).field_c + " at least " + ((cqb) this).field_d;
+          return "Variable " + this.field_c + " at least " + this.field_d;
         }
     }
 
@@ -45,15 +43,15 @@ final class cqb extends wm implements ntb {
           L0: {
             L1: {
               L2: {
-                var3 = (cqb) (Object) param1;
+                var3 = (cqb) ((Object) param1);
                 var4 = 7 % ((22 - param0) / 59);
                 if (super.a((byte) 116, param1)) {
                   break L2;
                 } else {
-                  if (var3.field_c != ((cqb) this).field_c) {
+                  if (var3.field_c != this.field_c) {
                     break L2;
                   } else {
-                    if (var3.field_d == ((cqb) this).field_d) {
+                    if (var3.field_d == this.field_d) {
                       stackOut_5_0 = 0;
                       stackIn_6_0 = stackOut_5_0;
                       break L1;
@@ -73,23 +71,23 @@ final class cqb extends wm implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3_ref;
+            stackOut_7_0 = (RuntimeException) (var3_ref);
             stackOut_7_1 = new StringBuilder().append("cqb.C(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -97,7 +95,7 @@ final class cqb extends wm implements ntb {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_6_0 != 0;
     }
@@ -149,12 +147,12 @@ final class cqb extends wm implements ntb {
               if (param0 == 0) {
                 break L1;
               } else {
-                ((cqb) this).field_d = 113;
+                this.field_d = 113;
                 break L1;
               }
             }
             L2: {
-              if (param1.b(7061, ((cqb) this).field_c) < ((cqb) this).field_d) {
+              if (param1.b(7061, this.field_c) < this.field_d) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
@@ -170,23 +168,23 @@ final class cqb extends wm implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_0 = (RuntimeException) (var4);
             stackOut_6_1 = new StringBuilder().append("cqb.G(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -195,23 +193,23 @@ final class cqb extends wm implements ntb {
             }
           }
           L4: {
-            stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+            stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
             stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -219,7 +217,7 @@ final class cqb extends wm implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -228,43 +226,51 @@ final class cqb extends wm implements ntb {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         rn var2 = null;
-        rn stackIn_5_0 = null;
+        rn stackIn_6_0 = null;
         Throwable decompiledCaughtException = null;
-        rn stackOut_4_0 = null;
-        try {
-          var1_int = 0;
-          L0: while (true) {
-            var2 = lnb.field_i.a((byte) -72, var1_int);
-            if (var2.field_k) {
-              stackOut_4_0 = (rn) var2;
-              stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0;
-            } else {
-              var1_int++;
-              continue L0;
+        rn stackOut_5_0 = null;
+        if (param0 == 10) {
+          try {
+            L0: {
+              var1_int = 0;
+              L1: while (true) {
+                var2 = lnb.field_i.a((byte) -72, var1_int);
+                if (var2.field_k) {
+                  stackOut_5_0 = (rn) (var2);
+                  stackIn_6_0 = stackOut_5_0;
+                  break L0;
+                } else {
+                  var1_int++;
+                  continue L1;
+                }
+              }
             }
+          } catch (java.lang.IllegalArgumentException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
+            return null;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
-          return null;
+          return stackIn_6_0;
+        } else {
+          return (rn) null;
         }
     }
 
     public final void b(byte param0, tv param1) {
+        int discarded$0 = 0;
         cqb var5 = null;
         cqb var6 = null;
         try {
             if (param0 <= 54) {
-                int discarded$0 = ((cqb) this).a((byte) -47, -43);
+                discarded$0 = this.a((byte) -47, -43);
             }
             super.b((byte) 82, param1);
-            var5 = (cqb) (Object) param1;
+            var5 = (cqb) ((Object) param1);
             var6 = var5;
-            var6.field_d = ((cqb) this).field_d;
-            var6.field_c = ((cqb) this).field_c;
+            var6.field_d = this.field_d;
+            var6.field_c = this.field_c;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "cqb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "cqb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -275,7 +281,7 @@ final class cqb extends wm implements ntb {
 
     final ucb[] a(pe param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_3_0 = null;
+        ucb[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -284,7 +290,7 @@ final class cqb extends wm implements ntb {
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_2_0 = null;
+        ucb[] stackOut_2_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -296,7 +302,7 @@ final class cqb extends wm implements ntb {
         try {
           L0: {
             if (param1 != -20605) {
-              stackOut_2_0 = null;
+              stackOut_2_0 = (ucb[]) null;
               stackIn_3_0 = stackOut_2_0;
               break L0;
             } else {
@@ -307,23 +313,23 @@ final class cqb extends wm implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("cqb.I(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -331,9 +337,9 @@ final class cqb extends wm implements ntb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return (ucb[]) (Object) stackIn_3_0;
+        return stackIn_3_0;
     }
 
     cqb() {
@@ -361,15 +367,15 @@ final class cqb extends wm implements ntb {
           L0: {
             L1: {
               if (param2 == 0) {
-                ((cqb) this).field_c = param3;
-                if (0 > ((cqb) this).field_c) {
-                  ((cqb) this).field_c = 0;
+                this.field_c = param3;
+                if (0 > this.field_c) {
+                  this.field_c = 0;
                   break L1;
                 } else {
                   break L1;
                 }
               } else {
-                ((cqb) this).field_d = param3;
+                this.field_d = param3;
                 break L1;
               }
             }
@@ -384,23 +390,23 @@ final class cqb extends wm implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var5;
+            stackOut_8_0 = (RuntimeException) (var5);
             stackOut_8_1 = new StringBuilder().append("cqb.E(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -408,35 +414,35 @@ final class cqb extends wm implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public final void b(faa param0, int param1) {
         super.b(param0, -120);
-        param0.a(-632, ((cqb) this).field_c, 32);
+        param0.a(-632, this.field_c, 32);
         if (param1 > -109) {
             return;
         }
         try {
-            param0.a(-632, ((cqb) this).field_d, 32);
+            param0.a(-632, this.field_d, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "cqb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "cqb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     cqb(int param0, int param1) {
-        ((cqb) this).field_c = param0;
-        ((cqb) this).field_d = param1;
+        this.field_c = param0;
+        this.field_d = param1;
     }
 
     public final void a(faa param0, boolean param1) {
         try {
             super.a(param0, param1);
-            ((cqb) this).field_c = param0.i(0, 32);
-            ((cqb) this).field_d = param0.i(0, 32);
+            this.field_c = param0.i(0, 32);
+            this.field_d = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "cqb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "cqb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -513,7 +519,7 @@ final class cqb extends wm implements ntb {
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               if (vqa.field_g.field_h) {
-                stackOut_26_0 = (String[]) (Object) stackIn_26_0;
+                stackOut_26_0 = (String[]) ((Object) stackIn_26_0);
                 stackOut_26_1 = stackIn_26_1;
                 stackOut_26_2 = gdb.field_d;
                 stackIn_27_0 = stackOut_26_0;
@@ -521,7 +527,7 @@ final class cqb extends wm implements ntb {
                 stackIn_27_2 = stackOut_26_2;
                 break L0;
               } else {
-                stackOut_25_0 = (String[]) (Object) stackIn_25_0;
+                stackOut_25_0 = (String[]) ((Object) stackIn_25_0);
                 stackOut_25_1 = stackIn_25_1;
                 stackOut_25_2 = wpb.field_o;
                 stackIn_27_0 = stackOut_25_0;
@@ -547,7 +553,7 @@ final class cqb extends wm implements ntb {
                 stackIn_18_0 = stackOut_17_0;
                 stackIn_18_1 = stackOut_17_1;
                 if (!vqa.field_g.field_h) {
-                  stackOut_19_0 = (String[]) (Object) stackIn_19_0;
+                  stackOut_19_0 = (String[]) ((Object) stackIn_19_0);
                   stackOut_19_1 = stackIn_19_1;
                   stackOut_19_2 = gs.field_d;
                   stackIn_20_0 = stackOut_19_0;
@@ -555,7 +561,7 @@ final class cqb extends wm implements ntb {
                   stackIn_20_2 = stackOut_19_2;
                   break L1;
                 } else {
-                  stackOut_18_0 = (String[]) (Object) stackIn_18_0;
+                  stackOut_18_0 = (String[]) ((Object) stackIn_18_0);
                   stackOut_18_1 = stackIn_18_1;
                   stackOut_18_2 = pva.field_e;
                   stackIn_20_0 = stackOut_18_0;
@@ -580,7 +586,7 @@ final class cqb extends wm implements ntb {
                 stackIn_11_0 = stackOut_10_0;
                 stackIn_11_1 = stackOut_10_1;
                 if (vqa.field_g.field_h) {
-                  stackOut_12_0 = (String[]) (Object) stackIn_12_0;
+                  stackOut_12_0 = (String[]) ((Object) stackIn_12_0);
                   stackOut_12_1 = stackIn_12_1;
                   stackOut_12_2 = eua.field_a;
                   stackIn_13_0 = stackOut_12_0;
@@ -588,7 +594,7 @@ final class cqb extends wm implements ntb {
                   stackIn_13_2 = stackOut_12_2;
                   break L2;
                 } else {
-                  stackOut_11_0 = (String[]) (Object) stackIn_11_0;
+                  stackOut_11_0 = (String[]) ((Object) stackIn_11_0);
                   stackOut_11_1 = stackIn_11_1;
                   stackOut_11_2 = ffb.field_d;
                   stackIn_13_0 = stackOut_11_0;
@@ -615,7 +621,7 @@ final class cqb extends wm implements ntb {
             stackIn_2_0 = stackOut_1_0;
             stackIn_2_1 = stackOut_1_1;
             if (vqa.field_g.field_h) {
-              stackOut_3_0 = (String[]) (Object) stackIn_3_0;
+              stackOut_3_0 = (String[]) ((Object) stackIn_3_0);
               stackOut_3_1 = stackIn_3_1;
               stackOut_3_2 = csa.field_b;
               stackIn_4_0 = stackOut_3_0;
@@ -623,7 +629,7 @@ final class cqb extends wm implements ntb {
               stackIn_4_2 = stackOut_3_2;
               break L3;
             } else {
-              stackOut_2_0 = (String[]) (Object) stackIn_2_0;
+              stackOut_2_0 = (String[]) ((Object) stackIn_2_0);
               stackOut_2_1 = stackIn_2_1;
               stackOut_2_2 = fhb.field_o;
               stackIn_4_0 = stackOut_2_0;
@@ -647,9 +653,9 @@ final class cqb extends wm implements ntb {
             return -56;
         }
         if (param1 != 0) {
-            return ((cqb) this).field_d;
+            return this.field_d;
         }
-        return ((cqb) this).field_c;
+        return this.field_c;
     }
 
     public final void a(tv param0, int param1) {
@@ -676,10 +682,10 @@ final class cqb extends wm implements ntb {
           L0: {
             L1: {
               super.a(param0, -64);
-              var5 = (cqb) (Object) param0;
+              var5 = (cqb) ((Object) param0);
               var4 = 0;
-              if (var5.field_c != ((cqb) this).field_c) {
-                System.out.println("int index has changed. before=" + var5.field_c + ", now=" + ((cqb) this).field_c);
+              if (var5.field_c != this.field_c) {
+                System.out.println("int index has changed. before=" + var5.field_c + ", now=" + this.field_c);
                 var4 = 1;
                 break L1;
               } else {
@@ -687,11 +693,11 @@ final class cqb extends wm implements ntb {
               }
             }
             L2: {
-              if (var5.field_d == ((cqb) this).field_d) {
+              if (var5.field_d == this.field_d) {
                 break L2;
               } else {
                 var4 = 1;
-                System.out.println("int value has changed. before=" + var5.field_d + ", now=" + ((cqb) this).field_d);
+                System.out.println("int value has changed. before=" + var5.field_d + ", now=" + this.field_d);
                 break L2;
               }
             }
@@ -699,7 +705,7 @@ final class cqb extends wm implements ntb {
               if (param1 <= -19) {
                 break L3;
               } else {
-                field_f = null;
+                field_f = (String) null;
                 break L3;
               }
             }
@@ -714,23 +720,23 @@ final class cqb extends wm implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_0 = (RuntimeException) (var3);
             stackOut_10_1 = new StringBuilder().append("cqb.F(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -738,7 +744,7 @@ final class cqb extends wm implements ntb {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
         }
     }
 
@@ -749,14 +755,10 @@ final class cqb extends wm implements ntb {
         if (!(rb.field_c != null)) {
             return;
         }
-        rb.field_c.b(-10258, (ksa) (Object) new pd(param3, param2, param0, param1));
+        rb.field_c.b(-10258, new pd(param3, param2, param0, param1));
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "You must play 1 more rated game before playing with the current options.";
     }
 }

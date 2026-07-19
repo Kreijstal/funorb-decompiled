@@ -34,24 +34,24 @@ final class smb extends le {
               if (param1 <= -60) {
                 break L1;
               } else {
-                ((smb) this).field_k = -104;
+                this.field_k = -104;
                 break L1;
               }
             }
             L2: {
               var4_int = param0;
               if (0 == var4_int) {
-                ((smb) this).field_k = param2.e(1869);
+                this.field_k = param2.e(1869);
                 break L2;
               } else {
                 if (var4_int == 1) {
-                  ((smb) this).field_i = param2.e(1869);
+                  this.field_i = param2.e(1869);
                   break L2;
                 } else {
                   if (2 != var4_int) {
                     break L2;
                   } else {
-                    ((smb) this).field_j = param2.e(1869);
+                    this.field_j = param2.e(1869);
                     break L2;
                   }
                 }
@@ -63,23 +63,23 @@ final class smb extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var4;
+            stackOut_11_0 = (RuntimeException) (var4);
             stackOut_11_1 = new StringBuilder().append("smb.F(").append(param0).append(',').append(param1).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -87,14 +87,14 @@ final class smb extends le {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
     }
 
     final void c(byte param0) {
         this.d(-32307);
         if (param0 >= -35) {
-            Object var3 = null;
+            int[] var3 = (int[]) null;
             smb.a((int[]) null, 127, -20, (byte) 126, (int[]) null);
         }
     }
@@ -106,21 +106,29 @@ final class smb extends le {
         int var6 = 0;
         int var7 = 0;
         L0: {
-          var2 = Math.cos((double)((float)((smb) this).field_j / 4096.0f));
-          ((smb) this).field_l[0] = (int)(4096.0 * (Math.sin((double)((float)((smb) this).field_i / 4096.0f)) * var2));
-          ((smb) this).field_l[1] = (int)(var2 * Math.cos((double)((float)((smb) this).field_i / 4096.0f)) * 4096.0);
-          ((smb) this).field_l[2] = (int)(Math.sin((double)((float)((smb) this).field_j / 4096.0f)) * 4096.0);
-          var4 = ((smb) this).field_l[0] * ((smb) this).field_l[0] >> 12;
-          var5 = ((smb) this).field_l[1] * ((smb) this).field_l[1] >> 12;
-          var6 = ((smb) this).field_l[2] * ((smb) this).field_l[2] >> 12;
-          var7 = (int)(Math.sqrt((double)(var4 - -var5 - -var6 >> 12)) * 4096.0);
-          if (var7 == 0) {
+          var2 = Math.cos((double)((float)this.field_j / 4096.0f));
+          this.field_l[0] = (int)(4096.0 * (Math.sin((double)((float)this.field_i / 4096.0f)) * var2));
+          this.field_l[1] = (int)(var2 * Math.cos((double)((float)this.field_i / 4096.0f)) * 4096.0);
+          this.field_l[2] = (int)(Math.sin((double)((float)this.field_j / 4096.0f)) * 4096.0);
+          var4 = this.field_l[0] * this.field_l[0] >> -397584052;
+          var5 = this.field_l[1] * this.field_l[1] >> -1050948436;
+          if (param0 == -32307) {
             break L0;
           } else {
-            ((smb) this).field_l[0] = (((smb) this).field_l[0] << 12) / var7;
-            ((smb) this).field_l[2] = (((smb) this).field_l[2] << 12) / var7;
-            ((smb) this).field_l[1] = (((smb) this).field_l[1] << 12) / var7;
+            this.field_k = 57;
             break L0;
+          }
+        }
+        L1: {
+          var6 = this.field_l[2] * this.field_l[2] >> -809277972;
+          var7 = (int)(Math.sqrt((double)(var4 - -var5 - -var6 >> 985094092)) * 4096.0);
+          if (var7 == 0) {
+            break L1;
+          } else {
+            this.field_l[0] = (this.field_l[0] << -55565684) / var7;
+            this.field_l[2] = (this.field_l[2] << -674709076) / var7;
+            this.field_l[1] = (this.field_l[1] << -328780276) / var7;
+            break L1;
           }
         }
     }
@@ -145,26 +153,26 @@ final class smb extends le {
         var17 = VoidHunters.field_G;
         if (param1) {
           L0: {
-            var18 = ((smb) this).field_f.a((byte) 127, param0);
+            var18 = this.field_f.a((byte) 127, param0);
             var3 = var18;
-            if (!((smb) this).field_f.field_e) {
+            if (!this.field_f.field_e) {
               break L0;
             } else {
-              var7 = ((smb) this).field_k * tpa.field_b >> 12;
-              var25 = ((smb) this).a(0, -1 + param0 & wf.field_d, 255);
-              var9 = ((smb) this).a(0, param0, 255);
-              var26 = ((smb) this).a(0, 1 + param0 & wf.field_d, 255);
+              var7 = this.field_k * tpa.field_b >> -494587508;
+              var25 = this.a(0, -1 + param0 & wf.field_d, 255);
+              var9 = this.a(0, param0, 255);
+              var26 = this.a(0, 1 + param0 & wf.field_d, 255);
               var11 = 0;
               L1: while (true) {
                 if (var11 >= hob.field_d) {
                   break L0;
                 } else {
                   L2: {
-                    var12 = var7 * (-var25[var11] + var26[var11]) >> 12;
-                    var13 = (var9[-1 + var11 & gbb.field_q] - var9[var11 + 1 & gbb.field_q]) * var7 >> 12;
-                    var14 = var13 >> 4;
-                    var15 = var12 >> 4;
-                    if (var14 >= 0) {
+                    var12 = var7 * (-var25[var11] + var26[var11]) >> 1811174220;
+                    var13 = (var9[-1 + var11 & gbb.field_q] - var9[var11 + 1 & gbb.field_q]) * var7 >> 2043761548;
+                    var14 = var13 >> -211420572;
+                    var15 = var12 >> 381119300;
+                    if (-1 >= (var14 ^ -1)) {
                       break L2;
                     } else {
                       var14 = -var14;
@@ -188,20 +196,20 @@ final class smb extends le {
                     }
                   }
                   L5: {
-                    if (var15 <= 255) {
+                    if (-256 <= (var15 ^ -1)) {
                       break L5;
                     } else {
                       var15 = 255;
                       break L5;
                     }
                   }
-                  var16 = rob.field_o[(var15 * (var15 - -1) >> 1) + var14] & 255;
-                  var5 = var16 * var12 >> 8;
-                  var6 = var16 * 4096 >> 8;
-                  var4 = var16 * var13 >> 8;
-                  var6 = var6 * ((smb) this).field_l[2] >> 12;
-                  var4 = var4 * ((smb) this).field_l[0] >> 12;
-                  var5 = ((smb) this).field_l[1] * var5 >> 12;
+                  var16 = rob.field_o[(var15 * (var15 - -1) >> -315103327) + var14] & 255;
+                  var5 = var16 * var12 >> -402082520;
+                  var6 = var16 * 4096 >> -40133848;
+                  var4 = var16 * var13 >> -257801400;
+                  var6 = var6 * this.field_l[2] >> -715242836;
+                  var4 = var4 * this.field_l[0] >> 409347596;
+                  var5 = this.field_l[1] * var5 >> 1339196620;
                   var18[var11] = var6 + (var5 + var4);
                   var11++;
                   continue L1;
@@ -211,11 +219,12 @@ final class smb extends le {
           }
           return var18;
         } else {
-          return null;
+          return (int[]) null;
         }
     }
 
     final static void a(int[] param0, int param1, int param2, byte param3, int[] param4) {
+        int incrementValue$1 = 0;
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -223,6 +232,8 @@ final class smb extends le {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
         int var13 = 0;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -296,15 +307,21 @@ final class smb extends le {
                     smb.a(param0, var6 - -1, param2, (byte) -119, param4);
                     break L1;
                   } else {
-                    L4: {
-                      if ((var9 & var10) + var7 <= param4[var10]) {
-                        break L4;
-                      } else {
-                        break L4;
-                      }
+                    if ((var9 & var10) + var7 > param4[var10]) {
+                      var11 = param4[var10];
+                      param4[var10] = param4[var6];
+                      param4[var6] = var11;
+                      var12 = param0[var10];
+                      param0[var10] = param0[var6];
+                      incrementValue$1 = var6;
+                      var6++;
+                      param0[incrementValue$1] = var12;
+                      var10++;
+                      continue L3;
+                    } else {
+                      var10++;
+                      continue L3;
                     }
-                    var10++;
-                    continue L3;
                   }
                 }
               }
@@ -317,70 +334,74 @@ final class smb extends le {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var5;
+            stackOut_14_0 = (RuntimeException) (var5);
             stackOut_14_1 = new StringBuilder().append("smb.D(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
-              break L5;
+              break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
               stackIn_17_2 = stackOut_15_2;
-              break L5;
+              break L4;
             }
           }
-          L6: {
-            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+          L5: {
+            stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
             stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param4 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
-              break L6;
+              break L5;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
               stackIn_20_2 = stackOut_18_2;
-              break L6;
+              break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
         }
     }
 
     public smb() {
         super(1, true);
-        ((smb) this).field_l = new int[3];
-        ((smb) this).field_i = 3216;
-        ((smb) this).field_k = 4096;
-        ((smb) this).field_j = 3216;
+        this.field_l = new int[3];
+        this.field_i = 3216;
+        this.field_k = 4096;
+        this.field_j = 3216;
     }
 
     final static boolean a(byte param0, int param1) {
+        if (param0 != -26) {
+            int[] var3 = (int[]) null;
+            smb.a((int[]) null, -116, 50, (byte) -85, (int[]) null);
+        }
         return true;
     }
 

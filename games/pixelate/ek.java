@@ -20,22 +20,18 @@ final class ek {
             }
             sd.field_L = 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ek.B(" + param0 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "ek.B(" + param0 + ')');
         }
     }
 
     public static void a(int param0) {
         field_d = null;
-        int var1 = -83;
+        int var1 = -83 / ((param0 - -65) / 59);
         field_b = null;
         field_e = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
         field_e = "That name is not available";
         field_c = false;

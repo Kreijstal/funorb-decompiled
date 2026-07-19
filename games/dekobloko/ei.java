@@ -1321,7 +1321,7 @@ final class ei extends ol {
     }
 
     private final synchronized void c(int param0) {
-        this.b(0, this.h());
+        this.b(param0, this.h());
     }
 
     final synchronized void b(int param0, int param1, int param2) {

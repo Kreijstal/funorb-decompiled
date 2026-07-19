@@ -9,6 +9,7 @@ final class qb extends qm {
     private int field_n;
 
     public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -46,7 +47,7 @@ final class qb extends qm {
               if (param1 == -7592) {
                 break L1;
               } else {
-                field_o = null;
+                field_o = (char[]) null;
                 break L1;
               }
             }
@@ -70,7 +71,7 @@ final class qb extends qm {
             L3: {
               var6_int = stackIn_8_0;
               if (param3 instanceof mi) {
-                param0 = param0 & ((mi) (Object) param3).field_u;
+                param0 = param0 & ((mi) ((Object) param3)).field_u;
                 break L3;
               } else {
                 break L3;
@@ -78,16 +79,16 @@ final class qb extends qm {
             }
             L4: {
               if (!param0) {
-                stackOut_15_0 = ((qb) this).field_n;
+                stackOut_15_0 = this.field_n;
                 stackIn_16_0 = stackOut_15_0;
                 break L4;
               } else {
                 if (var6_int != 0) {
-                  stackOut_14_0 = ((qb) this).field_p;
+                  stackOut_14_0 = this.field_p;
                   stackIn_16_0 = stackOut_14_0;
                   break L4;
                 } else {
-                  stackOut_13_0 = ((qb) this).field_q;
+                  stackOut_13_0 = this.field_q;
                   stackIn_16_0 = stackOut_13_0;
                   break L4;
                 }
@@ -95,7 +96,7 @@ final class qb extends qm {
             }
             L5: {
               var7 = stackIn_16_0;
-              kg.a(107, param2 + param3.field_p, var7, (-((qb) this).field_r[0].field_q + param3.field_n >> 1) + param3.field_h + param4, param3.field_q, ((qb) this).field_r);
+              kg.a(107, param2 + param3.field_p, var7, (-this.field_r[0].field_q + param3.field_n >> 2046785601) + param3.field_h + param4, param3.field_q, this.field_r);
               if (param0) {
                 stackOut_18_0 = 16777215;
                 stackIn_19_0 = stackOut_18_0;
@@ -107,30 +108,30 @@ final class qb extends qm {
               }
             }
             var8 = stackIn_19_0;
-            int discarded$1 = ((qb) this).field_i.a(param3.field_f, param2 + param3.field_p, -2 + (param3.field_h + param4), param3.field_q, param3.field_n, var8, -1, 1, 1, ((qb) this).field_i.field_I);
+            discarded$1 = this.field_i.a(param3.field_f, param2 + param3.field_p, -2 + (param3.field_h + param4), param3.field_q, param3.field_n, var8, -1, 1, 1, this.field_i.field_I);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var6;
+            stackOut_21_0 = (RuntimeException) (var6);
             stackOut_21_1 = new StringBuilder().append("qb.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param3 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -138,7 +139,7 @@ final class qb extends qm {
               break L6;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param4 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param4 + ')');
         }
     }
 
@@ -147,22 +148,23 @@ final class qb extends qm {
     }
 
     private qb(int param0, int param1, int param2) {
-        ((qb) this).field_q = param0;
-        ((qb) this).field_n = param2;
-        ((qb) this).field_r = u.field_i;
-        ((qb) this).field_p = param1;
-        ((qb) this).field_i = b.field_c;
+        this.field_q = param0;
+        this.field_n = param2;
+        this.field_r = u.field_i;
+        this.field_p = param1;
+        this.field_i = b.field_c;
     }
 
     public static void a(boolean param0) {
+        if (!param0) {
+            field_o = (char[]) null;
+            field_o = null;
+            return;
+        }
         field_o = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new char[128];
     }
 }

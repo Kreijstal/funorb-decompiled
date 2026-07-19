@@ -13,7 +13,7 @@ final class ue {
     final static void a(int param0, int param1, int param2, boolean param3) {
         ne.field_y.field_p = 0;
         ne.field_y.a((byte) 122, 12);
-        ne.field_y.b(true, rb.field_g.nextInt());
+        ne.field_y.b(param3, rb.field_g.nextInt());
         ne.field_y.b(true, rb.field_g.nextInt());
         ne.field_y.a((byte) 121, param0);
         ne.field_y.a((byte) 109, param2);
@@ -28,14 +28,19 @@ final class ue {
     }
 
     final static int a(byte param0) {
+        if (param0 <= 21) {
+            field_b = true;
+            return ej.field_B;
+        }
         return ej.field_B;
     }
 
     final static void a(byte param0, boolean param1, int param2, int param3) {
+        String discarded$0 = null;
         nn.a(-1604006872, param1, param3, param2);
         if (param0 != 38) {
-            Object var5 = null;
-            String discarded$0 = ue.a((CharSequence[]) null, -124);
+            CharSequence[] var5 = (CharSequence[]) null;
+            discarded$0 = ue.a((CharSequence[]) null, -124);
         }
     }
 
@@ -44,28 +49,28 @@ final class ue {
         gh var5 = null;
         int var3 = SteelSentinels.field_G;
         try {
-            var4 = (gh) (Object) param1.field_M.e(13058);
+            var4 = (gh) ((Object) param1.field_M.e(13058));
             gh var2 = var4;
             while (var4 != null) {
                 var4.field_Lb = 0;
                 var4.field_lb = 0;
                 var4.field_eb = 0;
                 var4.field_gb = 0;
-                var5 = (gh) (Object) param1.field_M.a((byte) -34);
+                var5 = (gh) ((Object) param1.field_M.a((byte) -34));
                 var5 = var5;
             }
             param1.field_Lb = 0;
             param1.field_eb = 0;
             param1.field_lb = 0;
-            param1.field_gb = 0;
+            param1.field_gb = param0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "ue.C(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "ue.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String a(CharSequence[] param0, int param1) {
         RuntimeException var2 = null;
-        Object stackIn_2_0 = null;
+        String stackIn_2_0 = null;
         String stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -74,9 +79,10 @@ final class ue {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        String stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -90,34 +96,36 @@ final class ue {
             if (param1 == 0) {
               stackOut_3_0 = bf.a(param0.length, 0, (byte) 50, param0);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (String) null;
               stackIn_2_0 = stackOut_1_0;
-              return (String) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_0 = (RuntimeException) (var2);
             stackOut_5_1 = new StringBuilder().append("ue.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -125,26 +133,26 @@ final class ue {
               break L1;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     public static void b(byte param0) {
         field_d = null;
         field_f = null;
-        field_c = null;
+        field_c = (int[][]) null;
         field_g = null;
         field_e = null;
-        int var1 = 0;
+        int var1 = 69 % ((param0 - -34) / 55);
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Waiting for sound effects";
         field_c = new int[][]{null, null, null};
         field_g = new wk[field_c.length];

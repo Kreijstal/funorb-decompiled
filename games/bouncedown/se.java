@@ -13,9 +13,9 @@ final class se extends ak {
     private se(int param0, int param1, int param2, int param3, fc param4, sk param5, lk param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
-            ((se) this).field_x = param6;
+            this.field_x = param6;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "se.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "se.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -46,17 +46,17 @@ final class se extends ak {
               if (var7 == null) {
                 break L1;
               } else {
-                if (((se) this).c(param5, param4 ^ 34, param3, param1, param0)) {
-                  if (!(((se) this).field_n instanceof df)) {
+                if (this.c(param5, param4 ^ 34, param3, param1, param0)) {
+                  if (!(this.field_n instanceof df)) {
                     if (var7.field_n instanceof df) {
-                      ((df) (Object) var7.field_n).a(var7, (byte) 90, (se) this);
+                      ((df) ((Object) var7.field_n)).a(var7, (byte) 90, (se) (this));
                       nd.field_A = null;
                       break L1;
                     } else {
                       return;
                     }
                   } else {
-                    ((df) (Object) ((se) this).field_n).a(var7, (byte) -56, (se) this);
+                    ((df) ((Object) this.field_n)).a(var7, (byte) -56, (se) (this));
                     nd.field_A = null;
                     return;
                   }
@@ -71,23 +71,23 @@ final class se extends ak {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) runtimeException;
+            stackOut_9_0 = (RuntimeException) (runtimeException);
             stackOut_9_1 = new StringBuilder().append("se.MA(").append(param0).append(',').append(param1).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L2;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -95,15 +95,19 @@ final class se extends ak {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     public static void a(boolean param0) {
+        String discarded$0 = null;
         field_B = null;
         field_F = null;
         field_E = null;
         field_A = null;
+        if (!param0) {
+            discarded$0 = se.a(-39, 118L);
+        }
     }
 
     final static String a(int param0, long param1) {
@@ -118,7 +122,7 @@ final class se extends ak {
         var3 = lj.field_c.get(7);
         var4 = lj.field_c.get(5);
         if (param0 > -79) {
-          field_F = null;
+          field_F = (String) null;
           var5 = lj.field_c.get(2);
           var6 = lj.field_c.get(1);
           var7 = lj.field_c.get(11);
@@ -136,10 +140,6 @@ final class se extends ak {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_F = "Waiting for extra data";
         field_B = "If you do nothing the game will revert to normal view in <%0> seconds.";
     }

@@ -9,13 +9,13 @@ final class ih {
         try {
             if (na.field_c == null) {
                 na.field_c = new ve(bm.field_d, bm.field_a);
-                bm.field_d.b((byte) 74, (pj) (Object) na.field_c);
+                bm.field_d.b((byte) 74, (pj) (na.field_c));
             }
             na.field_c.a(param3, param0, param2, 2113632);
             ul.d();
-            m.a(true, 0);
+            m.a(true, param1);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "ih.A(" + (param0 != null ? "{...}" : "null") + ',' + 0 + ',' + param2 + ',' + param3 + ')');
+            throw dd.a((Throwable) ((Object) runtimeException), "ih.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -29,10 +29,6 @@ final class ih {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "You cannot afford this turret";
         field_a = 0;
     }

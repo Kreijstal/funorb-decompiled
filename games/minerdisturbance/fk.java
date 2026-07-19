@@ -16,10 +16,11 @@ public class fk {
     }
 
     public static File a(int param0, String param1) {
-        Object var3 = null;
+        File discarded$2 = null;
+        String var3 = null;
         if (param0 != 0) {
-          var3 = null;
-          File discarded$2 = fk.a(-100, (String) null);
+          var3 = (String) null;
+          discarded$2 = fk.a(-100, (String) null);
           return fk.a(field_e, param1, false, field_b);
         } else {
           return fk.a(field_e, param1, false, field_b);
@@ -72,10 +73,6 @@ public class fk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = false;
         field_c = new Hashtable(16);
     }

@@ -10,14 +10,14 @@ final class ffa {
     }
 
     final static boolean a(boolean param0) {
+        if (param0) {
+            field_a = -2;
+            return wia.field_a;
+        }
         return wia.field_a;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ffa.A(";
         field_b = 50;
         field_a = 0;

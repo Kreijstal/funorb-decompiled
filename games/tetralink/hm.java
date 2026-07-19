@@ -13,7 +13,7 @@ abstract class hm {
     abstract df a(byte param0);
 
     public static void a(int param0) {
-        int var1 = 0;
+        int var1 = -47 % ((58 - param0) / 45);
         field_f = null;
         field_d = null;
         field_e = null;
@@ -23,10 +23,6 @@ abstract class hm {
     abstract void a(int param0, bh param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "hm.E(";
         field_c = "<%0> cannot join; the game has started.";
         field_f = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};

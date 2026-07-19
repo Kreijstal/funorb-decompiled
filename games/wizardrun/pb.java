@@ -8,21 +8,20 @@ final class pb extends wl {
 
     public static void b(boolean param0) {
         field_i = null;
+        if (param0) {
+            pb.b(false);
+        }
     }
 
     pb(byte[] param0) {
         try {
-            ((pb) this).field_j = param0;
+            this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "pb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "pb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Press UP or <%1> to jump.";
     }
 }

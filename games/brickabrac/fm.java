@@ -21,10 +21,6 @@ final class fm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fm.A(";
         field_d = 0;
         field_c = "All players have left <%0>'s game.";

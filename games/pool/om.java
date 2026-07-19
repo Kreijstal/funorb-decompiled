@@ -52,7 +52,7 @@ class om extends am {
               }
             }
             param1[5] = param1[5] - 8.0;
-            stackOut_2_0 = (double[]) param1;
+            stackOut_2_0 = (double[]) (param1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -60,23 +60,23 @@ class om extends am {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("om.DA(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -84,7 +84,7 @@ class om extends am {
               break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -101,17 +101,17 @@ class om extends am {
             int var6_int = 5 / ((2 - param2) / 41);
             super.a(param0, param1, (byte) -73, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "om.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "om.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, byte param3) {
         int var4 = 0;
         L0: {
-          if (param1 != 0) {
+          if ((param1 ^ -1) != -1) {
             break L0;
           } else {
-            if (~param0 != ~ec.field_i) {
+            if ((param0 ^ -1) != (ec.field_i ^ -1)) {
               lf.field_c = true;
               ec.field_i = param0;
               mj.a(param2, 27712);
@@ -131,7 +131,7 @@ class om extends am {
                 }
                 if (2 == param1) {
                   L2: {
-                    if (~di.field_e != ~param0) {
+                    if ((di.field_e ^ -1) != (param0 ^ -1)) {
                       lf.field_c = true;
                       di.field_e = param0;
                       mj.a(param2, 27712);
@@ -149,7 +149,7 @@ class om extends am {
                   if (2 != param1) {
                     break L3;
                   } else {
-                    if (~di.field_e != ~param0) {
+                    if ((di.field_e ^ -1) != (param0 ^ -1)) {
                       lf.field_c = true;
                       di.field_e = param0;
                       mj.a(param2, 27712);
@@ -179,7 +179,7 @@ class om extends am {
                 if (2 != param1) {
                   break L5;
                 } else {
-                  if (~di.field_e != ~param0) {
+                  if ((di.field_e ^ -1) != (param0 ^ -1)) {
                     lf.field_c = true;
                     di.field_e = param0;
                     mj.a(param2, 27712);
@@ -197,7 +197,7 @@ class om extends am {
           if (2 != param1) {
             break L6;
           } else {
-            if (~di.field_e != ~param0) {
+            if ((di.field_e ^ -1) != (param0 ^ -1)) {
               lf.field_c = true;
               di.field_e = param0;
               mj.a(param2, 27712);
@@ -211,7 +211,7 @@ class om extends am {
 
     public static void c(byte param0) {
         field_t = null;
-        int var1 = -111;
+        int var1 = 111 / ((param0 - 40) / 61);
         field_y = null;
         field_u = null;
         field_s = null;
@@ -749,10 +749,6 @@ class om extends am {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = "To <u=ffffff>leave shot mode</u>, press <img=4> <col=99ff99>'SPACE'</col>, or <img=0> click away from the cue ball.";
     }
 }

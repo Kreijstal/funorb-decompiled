@@ -6,9 +6,10 @@ final class fh {
     static String field_a;
 
     public static void a(byte param0) {
+        di discarded$0 = null;
         field_b = null;
         if (param0 != 62) {
-            di discarded$0 = fh.a(-19, (byte) -76);
+            discarded$0 = fh.a(-19, (byte) -76);
             field_a = null;
             return;
         }
@@ -25,10 +26,6 @@ final class fh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Service unavailable";
     }
 }

@@ -13,7 +13,7 @@ final class ra extends wl {
 
     public static void c(int param0) {
         field_j = null;
-        int var1 = 7;
+        int var1 = 7 / ((param0 - 64) / 46);
         field_i = null;
         field_p = null;
         field_m = null;
@@ -31,52 +31,53 @@ final class ra extends wl {
         try {
           L0: {
             il.field_e = true;
-            var1_int = 0;
-            L1: while (true) {
-              if (var1_int >= 300) {
-                var1_int = od.field_k;
-                var2 = 0;
-                if (var1_int <= var2) {
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  L2: {
-                    if (ii.field_e[var2].field_B != 21) {
-                      var2++;
-                      break L2;
+            if (param0 == 2) {
+              var1_int = 0;
+              L1: while (true) {
+                if (-301 >= (var1_int ^ -1)) {
+                  var1_int = od.field_k;
+                  var2 = 0;
+                  L2: while (true) {
+                    if (var1_int <= var2) {
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     } else {
-                      ii.field_e[var2].field_e = 20;
-                      ii.field_e[var2].field_h = -ii.field_e[var2].field_h;
-                      ii.field_e[var2].field_o = ii.field_e[var2].field_o + 2;
+                      L3: {
+                        if (ii.field_e[var2].field_B != 21) {
+                          break L3;
+                        } else {
+                          ii.field_e[var2].field_e = 20;
+                          ii.field_e[var2].field_h = -ii.field_e[var2].field_h;
+                          ii.field_e[var2].field_o = ii.field_e[var2].field_o + 2;
+                          break L3;
+                        }
+                      }
                       var2++;
-                      break L2;
+                      continue L2;
                     }
                   }
-                  var2++;
-                  var2++;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
-              } else {
-                L3: {
-                  if (tc.field_l.field_d[var1_int]) {
-                    tc.field_l.field_d[var1_int] = false;
-                    var1_int++;
-                    break L3;
-                  } else {
-                    var1_int++;
-                    break L3;
+                } else {
+                  L4: {
+                    if (tc.field_l.field_d[var1_int]) {
+                      tc.field_l.field_d[var1_int] = false;
+                      break L4;
+                    } else {
+                      break L4;
+                    }
                   }
+                  var1_int++;
+                  continue L1;
                 }
-                var1_int++;
-                continue L1;
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var1, "ra.C(" + 2 + ')');
+          throw bd.a((Throwable) ((Object) var1), "ra.C(" + param0 + ')');
         }
         if (decompiledRegionSelector0 == 0) {
           return;
@@ -86,7 +87,7 @@ final class ra extends wl {
     }
 
     ra(int param0) {
-        ((ra) this).field_n = param0;
+        this.field_n = param0;
     }
 
     final static byte[] a(String param0, byte param1) {
@@ -127,23 +128,23 @@ final class ra extends wl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("ra.B(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -151,16 +152,12 @@ final class ra extends wl {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new uf("");
         field_k = -1;
         field_l = "The Pirate Ship";

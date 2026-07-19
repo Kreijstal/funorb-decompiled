@@ -34,6 +34,7 @@ final class em {
         RuntimeException var1 = null;
         int stackIn_2_0 = 0;
         int stackIn_7_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_6_0 = 0;
         int stackOut_4_0 = 0;
@@ -52,11 +53,13 @@ final class em {
                   break L1;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -64,7 +67,11 @@ final class em {
           var1 = decompiledCaughtException;
           throw dh.a((Throwable) ((Object) var1), "em.B(" + param0 + ')');
         }
-        return stackIn_7_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_7_0 != 0;
+        }
     }
 
     final static void a(int param0) {
@@ -106,6 +113,7 @@ final class em {
         int var5 = 0;
         ac stackIn_2_0 = null;
         ac stackIn_13_0 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ac stackOut_12_0 = null;
         ac stackOut_1_0 = null;
@@ -116,7 +124,7 @@ final class em {
               L1: {
                 L2: {
                   var5 = 57 / ((param0 - -79) / 38);
-                  if (param1 >= 32768) {
+                  if ((param1 ^ -1) <= -32769) {
                     break L2;
                   } else {
                     var4 = this.field_d.a(param1, 63, 0);
@@ -140,7 +148,7 @@ final class em {
                 }
               }
               L4: {
-                if (param1 < 32768) {
+                if (-32769 < (param1 ^ -1)) {
                   break L4;
                 } else {
                   var3.c(-1);
@@ -150,11 +158,13 @@ final class em {
               this.field_c.a(var3, (long)param1, 69);
               stackOut_12_0 = (ac) (var3);
               stackIn_13_0 = stackOut_12_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = (ac) (var3);
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -162,7 +172,11 @@ final class em {
           var3_ref = decompiledCaughtException;
           throw dh.a((Throwable) ((Object) var3_ref), "em.C(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_13_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_13_0;
+        }
     }
 
     final static void a(vg param0, boolean param1, int param2, byte param3, int param4) {
@@ -237,7 +251,7 @@ final class em {
             L2: while (true) {
               L3: {
                 L4: {
-                  if (~param0.field_L >= ~var8) {
+                  if ((param0.field_L ^ -1) >= (var8 ^ -1)) {
                     break L4;
                   } else {
                     var9 = param0.field_M[var8];
@@ -273,7 +287,7 @@ final class em {
                         }
                         L7: {
                           var12 = vg.field_G[var9];
-                          if (var12 != -2147483648) {
+                          if (2147483647 != (var12 ^ -1)) {
                             break L7;
                           } else {
                             if (var19 == 0) {
@@ -296,7 +310,7 @@ final class em {
                           }
                         }
                         var14 = vg.field_G[var11];
-                        if (var14 == -2147483648) {
+                        if ((var14 ^ -1) == 2147483647) {
                           break L5;
                         } else {
                           L9: {
@@ -316,11 +330,11 @@ final class em {
                           L10: while (true) {
                             L11: {
                               L12: {
-                                if (var17 >> 4 == 0) {
+                                if (-1 == (var17 >> -1153113212 ^ -1)) {
                                   break L12;
                                 } else {
                                   var16--;
-                                  stackOut_32_0 = ~var16;
+                                  stackOut_32_0 = var16 ^ -1;
                                   stackOut_32_1 = -1;
                                   stackIn_40_0 = stackOut_32_0;
                                   stackIn_40_1 = stackOut_32_1;
@@ -351,7 +365,7 @@ final class em {
                                 }
                               }
                               stackOut_39_0 = var17;
-                              stackOut_39_1 = var16 << 4;
+                              stackOut_39_1 = var16 << -1199770620;
                               stackIn_40_0 = stackOut_39_0;
                               stackIn_40_1 = stackOut_39_1;
                               break L11;
@@ -360,7 +374,7 @@ final class em {
                               var18 = stackIn_40_0 + stackIn_40_1;
                               hb.field_Vb[var18] = var8;
                               a.field_r[var16] = var17 + 1;
-                              if (param0.field_B <= 0) {
+                              if (-1 <= (param0.field_B ^ -1)) {
                                 break L14;
                               } else {
                                 if (param0.field_Q == null) {
@@ -391,14 +405,14 @@ final class em {
               }
               L15: {
                 L16: {
-                  if (stackIn_49_0 <= ~param0.field_B) {
+                  if (stackIn_49_0 <= (param0.field_B ^ -1)) {
                     break L16;
                   } else {
                     if (null != param0.field_Q) {
                       var8 = 0;
                       var9 = 0;
                       L17: while (true) {
-                        if (~nm.field_Nb.length >= ~var9) {
+                        if ((nm.field_Nb.length ^ -1) >= (var9 ^ -1)) {
                           break L16;
                         } else {
                           var10 = nm.field_Nb[var9];
@@ -491,10 +505,10 @@ final class em {
             var4 = ue.a(param1, 92);
             var5 = sk.a(param0, -122);
             var6 = ue.a(param0, -63);
-            var7 = (int)((long)var5 * (long)var3_int >> 16);
-            var8 = (int)((long)var6 * (long)var3_int >> 16);
-            var9 = (int)((long)var5 * (long)var4 >> 16);
-            var10 = (int)((long)var6 * (long)var4 >> 16);
+            var7 = (int)((long)var5 * (long)var3_int >> -70246256);
+            var8 = (int)((long)var6 * (long)var3_int >> 1547803216);
+            var9 = (int)((long)var5 * (long)var4 >> 1673413456);
+            var10 = (int)((long)var6 * (long)var4 >> 1909378640);
             stackOut_3_0 = new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3_int, var10};
             stackIn_4_0 = stackOut_3_0;
             break L0;

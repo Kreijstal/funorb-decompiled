@@ -29,15 +29,15 @@ abstract class po extends eo {
 
     final int a(String param0, int param1, int param2) {
         if (param2 == 0) {
-            param2 = ((po) this).field_F;
+            param2 = this.field_F;
         }
-        int var4 = ((po) this).a(param0, new int[1], field_p);
+        int var4 = this.a(param0, new int[]{param1}, field_p);
         int var5 = (var4 - 1) * param2;
-        return ((po) this).field_u + var5 + ((po) this).field_B;
+        return this.field_u + var5 + this.field_B;
     }
 
     final int b(String param0, int param1) {
-        return ((po) this).a(param0, new int[1], field_p);
+        return this.a(param0, new int[]{param1}, field_p);
     }
 
     private final void b(String param0) {
@@ -52,19 +52,19 @@ abstract class po extends eo {
           L0: {
             L1: {
               if (!param0.startsWith("col=")) {
-                if (!param0.equals((Object) (Object) "/col")) {
+                if (!param0.equals("/col")) {
                   if (!param0.startsWith("trans=")) {
-                    if (!param0.equals((Object) (Object) "/trans")) {
+                    if (!param0.equals("/trans")) {
                       if (!param0.startsWith("str=")) {
-                        if (!param0.equals((Object) (Object) "str")) {
-                          if (!param0.equals((Object) (Object) "/str")) {
+                        if (!param0.equals("str")) {
+                          if (!param0.equals("/str")) {
                             if (!param0.startsWith("u=")) {
-                              if (!param0.equals((Object) (Object) "u")) {
-                                if (!param0.equals((Object) (Object) "/u")) {
+                              if (!param0.equals("u")) {
+                                if (!param0.equals("/u")) {
                                   if (!param0.startsWith("shad=")) {
-                                    if (!param0.equals((Object) (Object) "shad")) {
-                                      if (!param0.equals((Object) (Object) "/shad")) {
-                                        if (!param0.equals((Object) (Object) "br")) {
+                                    if (!param0.equals("shad")) {
+                                      if (!param0.equals("/shad")) {
+                                        if (!param0.equals("br")) {
                                           break L1;
                                         } else {
                                           this.a(field_t, field_z, field_w);
@@ -79,7 +79,7 @@ abstract class po extends eo {
                                       break L1;
                                     }
                                   } else {
-                                    var7 = (CharSequence) (Object) param0.substring(5);
+                                    var7 = (CharSequence) ((Object) param0.substring(5));
                                     field_D = en.a(16, var7, -63);
                                     break L1;
                                   }
@@ -92,7 +92,7 @@ abstract class po extends eo {
                                 break L1;
                               }
                             } else {
-                              var6 = (CharSequence) (Object) param0.substring(2);
+                              var6 = (CharSequence) ((Object) param0.substring(2));
                               field_H = en.a(16, var6, 98);
                               break L1;
                             }
@@ -105,7 +105,7 @@ abstract class po extends eo {
                           break L1;
                         }
                       } else {
-                        var5 = (CharSequence) (Object) param0.substring(4);
+                        var5 = (CharSequence) ((Object) param0.substring(4));
                         field_J = en.a(16, var5, 121);
                         break L1;
                       }
@@ -114,7 +114,7 @@ abstract class po extends eo {
                       break L1;
                     }
                   } else {
-                    var4 = (CharSequence) (Object) param0.substring(6);
+                    var4 = (CharSequence) ((Object) param0.substring(6));
                     field_G = pd.a((byte) 47, var4);
                     break L1;
                   }
@@ -123,7 +123,7 @@ abstract class po extends eo {
                   break L1;
                 }
               } else {
-                var3 = (CharSequence) (Object) param0.substring(4);
+                var3 = (CharSequence) ((Object) param0.substring(4));
                 field_I = en.a(16, var3, -8);
                 break L1;
               }
@@ -142,7 +142,7 @@ abstract class po extends eo {
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
     final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        return ((po) this).a(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
+        return this.a(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
     }
 
     final void a(String param0, int param1, int param2, int param3, int param4, int param5) {
@@ -150,7 +150,7 @@ abstract class po extends eo {
             return;
         }
         this.a(param3, param4, param5);
-        this.b(param0, param1 - ((po) this).a(param0) / 2, param2);
+        this.b(param0, param1 - this.a(param0) / 2, param2);
     }
 
     public static void a() {
@@ -176,7 +176,7 @@ abstract class po extends eo {
         Throwable decompiledCaughtException = null;
         int stackOut_25_0 = 0;
         int stackOut_24_0 = 0;
-        param2 = param2 - ((po) this).field_F;
+        param2 = param2 - this.field_F;
         var4 = -1;
         var5 = 0;
         var6 = param0.length();
@@ -196,14 +196,14 @@ abstract class po extends eo {
                   } else {
                     var9_ref_String = param0.substring(var4 + 1, var7).toLowerCase();
                     var4 = -1;
-                    if (!var9_ref_String.equals((Object) (Object) "lt")) {
-                      if (!var9_ref_String.equals((Object) (Object) "gt")) {
-                        if (!var9_ref_String.equals((Object) (Object) "nbsp")) {
-                          if (!var9_ref_String.equals((Object) (Object) "shy")) {
-                            if (!var9_ref_String.equals((Object) (Object) "times")) {
-                              if (!var9_ref_String.equals((Object) (Object) "euro")) {
-                                if (!var9_ref_String.equals((Object) (Object) "copy")) {
-                                  if (!var9_ref_String.equals((Object) (Object) "reg")) {
+                    if (!var9_ref_String.equals("lt")) {
+                      if (!var9_ref_String.equals("gt")) {
+                        if (!var9_ref_String.equals("nbsp")) {
+                          if (!var9_ref_String.equals("shy")) {
+                            if (!var9_ref_String.equals("times")) {
+                              if (!var9_ref_String.equals("euro")) {
+                                if (!var9_ref_String.equals("copy")) {
+                                  if (!var9_ref_String.equals("reg")) {
                                     if (!var9_ref_String.startsWith("img=")) {
                                       this.b(var9_ref_String);
                                       var7++;
@@ -212,15 +212,15 @@ abstract class po extends eo {
                                       try {
                                         L2: {
                                           L3: {
-                                            var13 = (CharSequence) (Object) var9_ref_String.substring(4);
+                                            var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
                                             var10 = pd.a((byte) 47, var13);
-                                            var11_ref_th = ((po) this).field_K[var10];
-                                            if (((po) this).field_n == null) {
+                                            var11_ref_th = this.field_K[var10];
+                                            if (this.field_n == null) {
                                               stackOut_25_0 = var11_ref_th.field_b;
                                               stackIn_26_0 = stackOut_25_0;
                                               break L3;
                                             } else {
-                                              stackOut_24_0 = ((po) this).field_n[var10];
+                                              stackOut_24_0 = this.field_n[var10];
                                               stackIn_26_0 = stackOut_24_0;
                                               break L3;
                                             }
@@ -228,10 +228,10 @@ abstract class po extends eo {
                                           L4: {
                                             var12 = stackIn_26_0;
                                             if (field_G != 256) {
-                                              var11_ref_th.a(param1, param2 + ((po) this).field_F - var12, field_G);
+                                              var11_ref_th.a(param1, param2 + this.field_F - var12, field_G);
                                               break L4;
                                             } else {
-                                              var11_ref_th.a(param1, param2 + ((po) this).field_F - var12);
+                                              var11_ref_th.a(param1, param2 + this.field_F - var12);
                                               break L4;
                                             }
                                           }
@@ -288,20 +288,20 @@ abstract class po extends eo {
               if (var4 == -1) {
                 L6: {
                   var8 = (char)(aca.a((char) var8, 8220) & 255);
-                  if (((po) this).field_s == null) {
+                  if (this.field_s == null) {
                     break L6;
                   } else {
                     if (var5 == 0) {
                       break L6;
                     } else {
-                      param1 = param1 + ((po) this).field_s[(var5 << 8) + var8];
+                      param1 = param1 + this.field_s[(var5 << 8) + var8];
                       break L6;
                     }
                   }
                 }
                 L7: {
-                  var9 = ((po) this).field_E[var8];
-                  var10 = ((po) this).field_C[var8];
+                  var9 = this.field_E[var8];
+                  var10 = this.field_C[var8];
                   var11 = param1;
                   if (var8 == 32) {
                     if (field_x <= 0) {
@@ -318,32 +318,32 @@ abstract class po extends eo {
                         if (field_D == -1) {
                           break L8;
                         } else {
-                          ((po) this).a(var8, param1 + ((po) this).field_r[var8] + 1, param2 + ((po) this).field_y[var8] + 1, var9, var10, field_D, field_G, true);
+                          this.a(var8, param1 + this.field_r[var8] + 1, param2 + this.field_y[var8] + 1, var9, var10, field_D, field_G, true);
                           break L8;
                         }
                       }
-                      ((po) this).a(var8, param1 + ((po) this).field_r[var8], param2 + ((po) this).field_y[var8], var9, var10, field_I, field_G, false);
+                      this.a(var8, param1 + this.field_r[var8], param2 + this.field_y[var8], var9, var10, field_I, field_G, false);
                       break L7;
                     } else {
                       L9: {
                         if (field_D == -1) {
                           break L9;
                         } else {
-                          ((po) this).a(var8, param1 + ((po) this).field_r[var8] + 1, param2 + ((po) this).field_y[var8] + 1, var9, var10, field_D, true);
+                          this.a(var8, param1 + this.field_r[var8] + 1, param2 + this.field_y[var8] + 1, var9, var10, field_D, true);
                           break L9;
                         }
                       }
-                      ((po) this).a(var8, param1 + ((po) this).field_r[var8], param2 + ((po) this).field_y[var8], var9, var10, field_I, false);
+                      this.a(var8, param1 + this.field_r[var8], param2 + this.field_y[var8], var9, var10, field_I, false);
                       break L7;
                     }
                   }
                 }
                 L10: {
-                  param1 = param1 + ((po) this).field_o[var8];
+                  param1 = param1 + this.field_o[var8];
                   if (field_J == -1) {
                     break L10;
                   } else {
-                    dg.e(var11, param2 + (int)((double)((po) this).field_F * 0.7), param1 - var11, field_J);
+                    dg.e(var11, param2 + (int)((double)this.field_F * 0.7), param1 - var11, field_J);
                     break L10;
                   }
                 }
@@ -351,7 +351,7 @@ abstract class po extends eo {
                   if (field_H == -1) {
                     break L11;
                   } else {
-                    dg.e(var11, param2 + ((po) this).field_F + 1, param1 - var11, field_H);
+                    dg.e(var11, param2 + this.field_F + 1, param1 - var11, field_H);
                     break L11;
                   }
                 }
@@ -410,6 +410,13 @@ abstract class po extends eo {
     }
 
     private final void a(byte[] param0) {
+        byte[] array$7 = null;
+        int incrementValue$8 = 0;
+        byte[] array$9 = null;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
         int var2 = 0;
         int var3_int = 0;
         int[] var3 = null;
@@ -429,29 +436,17 @@ abstract class po extends eo {
         byte[][] var15 = null;
         byte[][] var16 = null;
         int[] var17 = null;
-        int[] var18 = null;
-        byte[][] var19 = null;
-        byte[][] var20 = null;
-        int[] var21 = null;
-        int[] var22 = null;
-        byte[][] var23 = null;
-        byte[][] var24 = null;
-        int[] var25 = null;
         L0: {
-          ((po) this).field_o = new int[256];
+          this.field_o = new int[256];
           if (param0.length != 257) {
             var2 = 0;
             var3_int = 0;
             L1: while (true) {
               if (var3_int >= 256) {
-                var22 = new int[256];
-                var18 = var22;
-                var14 = var18;
+                var14 = new int[256];
                 var10 = var14;
                 var3 = var10;
-                var25 = new int[256];
-                var21 = var25;
-                var17 = var21;
+                var17 = new int[256];
                 var13 = var17;
                 var4 = var13;
                 var5_int = 0;
@@ -460,27 +455,23 @@ abstract class po extends eo {
                     var5_int = 0;
                     L3: while (true) {
                       if (var5_int >= 256) {
-                        var23 = new byte[256][];
-                        var19 = var23;
-                        var15 = var19;
+                        var15 = new byte[256][];
                         var11 = var15;
                         var5 = var11;
                         var6_int = 0;
                         L4: while (true) {
                           if (var6_int >= 256) {
-                            var24 = new byte[256][];
-                            var20 = var24;
-                            var16 = var20;
+                            var16 = new byte[256][];
                             var12 = var16;
                             var6 = var12;
                             var7 = 0;
                             L5: while (true) {
                               if (var7 >= 256) {
-                                ((po) this).field_s = new byte[65536];
+                                this.field_s = new byte[65536];
                                 var7 = 0;
                                 L6: while (true) {
                                   if (var7 >= 256) {
-                                    ((po) this).field_F = var25[32] + var22[32];
+                                    this.field_F = var17[32] + var14[32];
                                     break L0;
                                   } else {
                                     if (var7 != 32) {
@@ -490,7 +481,7 @@ abstract class po extends eo {
                                           if (var8 < 256) {
                                             if (var8 != 32) {
                                               if (var8 != 160) {
-                                                ((po) this).field_s[(var7 << 8) + var8] = (byte)po.a(var23, var24, var25, ((po) this).field_o, var22, var7, var8);
+                                                this.field_s[(var7 << 8) + var8] = (byte)po.a(var15, var16, var17, this.field_o, var14, var7, var8);
                                                 var8++;
                                                 continue L7;
                                               } else {
@@ -517,18 +508,19 @@ abstract class po extends eo {
                                   }
                                 }
                               } else {
-                                var6[var7] = new byte[var22[var7]];
+                                array$7 = new byte[var14[var7]];
+                                var6[var7] = array$7;
                                 var8 = 0;
                                 var9 = 0;
                                 L8: while (true) {
-                                  if (var9 >= var24[var7].length) {
+                                  if (var9 >= var16[var7].length) {
                                     var7++;
                                     continue L5;
                                   } else {
-                                    int incrementValue$5 = var2;
+                                    incrementValue$8 = var2;
                                     var2++;
-                                    var8 = (byte)(var8 + param0[incrementValue$5]);
-                                    var24[var7][var9] = (byte)var8;
+                                    var8 = (byte)(var8 + param0[incrementValue$8]);
+                                    var16[var7][var9] = (byte)var8;
                                     var9++;
                                     continue L8;
                                   }
@@ -536,18 +528,19 @@ abstract class po extends eo {
                               }
                             }
                           } else {
-                            var5[var6_int] = new byte[var22[var6_int]];
+                            array$9 = new byte[var14[var6_int]];
+                            var5[var6_int] = array$9;
                             var7 = 0;
                             var8 = 0;
                             L9: while (true) {
-                              if (var8 >= var23[var6_int].length) {
+                              if (var8 >= var15[var6_int].length) {
                                 var6_int++;
                                 continue L4;
                               } else {
-                                int incrementValue$6 = var2;
+                                incrementValue$10 = var2;
                                 var2++;
-                                var7 = (byte)(var7 + param0[incrementValue$6]);
-                                var23[var6_int][var8] = (byte)var7;
+                                var7 = (byte)(var7 + param0[incrementValue$10]);
+                                var15[var6_int][var8] = (byte)var7;
                                 var8++;
                                 continue L9;
                               }
@@ -555,25 +548,25 @@ abstract class po extends eo {
                           }
                         }
                       } else {
-                        int incrementValue$7 = var2;
+                        incrementValue$11 = var2;
                         var2++;
-                        var4[var5_int] = param0[incrementValue$7] & 255;
+                        var4[var5_int] = param0[incrementValue$11] & 255;
                         var5_int++;
                         continue L3;
                       }
                     }
                   } else {
-                    int incrementValue$8 = var2;
+                    incrementValue$12 = var2;
                     var2++;
-                    var3[var5_int] = param0[incrementValue$8] & 255;
+                    var3[var5_int] = param0[incrementValue$12] & 255;
                     var5_int++;
                     continue L2;
                   }
                 }
               } else {
-                int incrementValue$9 = var2;
+                incrementValue$13 = var2;
                 var2++;
-                ((po) this).field_o[var3_int] = param0[incrementValue$9] & 255;
+                this.field_o[var3_int] = param0[incrementValue$13] & 255;
                 var3_int++;
                 continue L1;
               }
@@ -581,11 +574,11 @@ abstract class po extends eo {
           } else {
             var2 = 0;
             L10: while (true) {
-              if (var2 >= ((po) this).field_o.length) {
-                ((po) this).field_F = param0[256] & 255;
+              if (var2 >= this.field_o.length) {
+                this.field_F = param0[256] & 255;
                 break L0;
               } else {
-                ((po) this).field_o[var2] = param0[var2] & 255;
+                this.field_o[var2] = param0[var2] & 255;
                 var2++;
                 continue L10;
               }
@@ -610,7 +603,7 @@ abstract class po extends eo {
               if (var3 <= 0) {
                 break L1;
               } else {
-                field_x = (param1 - ((po) this).a(param0) << 8) / var3;
+                field_x = (param1 - this.a(param0) << 8) / var3;
                 break L1;
               }
             }
@@ -651,7 +644,7 @@ abstract class po extends eo {
             return;
         }
         this.a(param3, param4);
-        this.b(param0, param1 - ((po) this).a(param0) / 2, param2);
+        this.b(param0, param1 - this.a(param0) / 2, param2);
     }
 
     final void b(String param0, int param1, int param2, int param3, int param4, int param5) {
@@ -682,7 +675,7 @@ abstract class po extends eo {
             return;
         }
         this.a(param3, param4);
-        this.b(param0, param1 - ((po) this).a(param0), param2);
+        this.b(param0, param1 - this.a(param0), param2);
     }
 
     final int c(String param0, int param1) {
@@ -690,14 +683,14 @@ abstract class po extends eo {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        var3 = ((po) this).a(param0, new int[1], field_p);
+        var3 = this.a(param0, new int[]{param1}, field_p);
         var4 = 0;
         var5 = 0;
         L0: while (true) {
           if (var5 >= var3) {
             return var4;
           } else {
-            var6 = ((po) this).a(field_p[var5]);
+            var6 = this.a(field_p[var5]);
             if (var6 > var4) {
               var4 = var6;
               var5++;
@@ -724,6 +717,9 @@ abstract class po extends eo {
     }
 
     final static String c(String param0) {
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
         int var1 = 0;
         int var2 = 0;
         int var3_int = 0;
@@ -744,16 +740,16 @@ abstract class po extends eo {
                 var5 = param0.charAt(var4);
                 if (var5 != 60) {
                   if (var5 != 62) {
-                    StringBuilder discarded$3 = var3.append((char) var5);
+                    discarded$3 = var3.append((char) var5);
                     var4++;
                     continue L1;
                   } else {
-                    StringBuilder discarded$4 = var3.append("<gt>");
+                    discarded$4 = var3.append("<gt>");
                     var4++;
                     continue L1;
                   }
                 } else {
-                  StringBuilder discarded$5 = var3.append("<lt>");
+                  discarded$5 = var3.append("<lt>");
                   var4++;
                   continue L1;
                 }
@@ -780,6 +776,11 @@ abstract class po extends eo {
     }
 
     final int a(String param0, int[] param1, String[] param2) {
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
+        StringBuilder discarded$7 = null;
+        StringBuilder discarded$8 = null;
+        StringBuilder discarded$9 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -814,7 +815,7 @@ abstract class po extends eo {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = sw.a(field_A, 4, 0, ' ');
+          discarded$5 = sw.a(field_A, 4, 0, ' ');
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -850,26 +851,26 @@ abstract class po extends eo {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_A.append('<');
-                        StringBuilder discarded$7 = field_A.append(var15);
-                        StringBuilder discarded$8 = field_A.append('>');
-                        if (!var15.equals((Object) (Object) "br")) {
-                          if (!var15.equals((Object) (Object) "lt")) {
-                            if (!var15.equals((Object) (Object) "gt")) {
-                              if (!var15.equals((Object) (Object) "nbsp")) {
-                                if (!var15.equals((Object) (Object) "shy")) {
-                                  if (!var15.equals((Object) (Object) "times")) {
-                                    if (!var15.equals((Object) (Object) "euro")) {
-                                      if (!var15.equals((Object) (Object) "copy")) {
-                                        if (!var15.equals((Object) (Object) "reg")) {
+                        discarded$6 = field_A.append('<');
+                        discarded$7 = field_A.append(var15);
+                        discarded$8 = field_A.append('>');
+                        if (!var15.equals("br")) {
+                          if (!var15.equals("lt")) {
+                            if (!var15.equals("gt")) {
+                              if (!var15.equals("nbsp")) {
+                                if (!var15.equals("shy")) {
+                                  if (!var15.equals("times")) {
+                                    if (!var15.equals("euro")) {
+                                      if (!var15.equals("copy")) {
+                                        if (!var15.equals("reg")) {
                                           if (!var15.startsWith("img=")) {
                                             break L3;
                                           } else {
                                             try {
                                               L4: {
-                                                var18 = (CharSequence) (Object) var15.substring(4);
+                                                var18 = (CharSequence) ((Object) var15.substring(4));
                                                 var16_int = pd.a((byte) 47, var18);
-                                                var4 = var4 + ((po) this).field_K[var16_int].field_a;
+                                                var4 = var4 + this.field_K[var16_int].field_a;
                                                 var10 = 0;
                                                 break L4;
                                               }
@@ -884,14 +885,14 @@ abstract class po extends eo {
                                           }
                                         } else {
                                           L6: {
-                                            var4 = var4 + ((po) this).a('®');
-                                            if (((po) this).field_s == null) {
+                                            var4 = var4 + this.a('®');
+                                            if (this.field_s == null) {
                                               break L6;
                                             } else {
                                               if (var10 == 0) {
                                                 break L6;
                                               } else {
-                                                var4 = var4 + ((po) this).field_s[(var10 << 8) + 174];
+                                                var4 = var4 + this.field_s[(var10 << 8) + 174];
                                                 break L6;
                                               }
                                             }
@@ -901,14 +902,14 @@ abstract class po extends eo {
                                         }
                                       } else {
                                         L7: {
-                                          var4 = var4 + ((po) this).a('©');
-                                          if (((po) this).field_s == null) {
+                                          var4 = var4 + this.a('©');
+                                          if (this.field_s == null) {
                                             break L7;
                                           } else {
                                             if (var10 == 0) {
                                               break L7;
                                             } else {
-                                              var4 = var4 + ((po) this).field_s[(var10 << 8) + 169];
+                                              var4 = var4 + this.field_s[(var10 << 8) + 169];
                                               break L7;
                                             }
                                           }
@@ -918,14 +919,14 @@ abstract class po extends eo {
                                       }
                                     } else {
                                       L8: {
-                                        var4 = var4 + ((po) this).a('€');
-                                        if (((po) this).field_s == null) {
+                                        var4 = var4 + this.a('€');
+                                        if (this.field_s == null) {
                                           break L8;
                                         } else {
                                           if (var10 == 0) {
                                             break L8;
                                           } else {
-                                            var4 = var4 + ((po) this).field_s[(var10 << 8) + 128];
+                                            var4 = var4 + this.field_s[(var10 << 8) + 128];
                                             break L8;
                                           }
                                         }
@@ -935,14 +936,14 @@ abstract class po extends eo {
                                     }
                                   } else {
                                     L9: {
-                                      var4 = var4 + ((po) this).a('×');
-                                      if (((po) this).field_s == null) {
+                                      var4 = var4 + this.a('×');
+                                      if (this.field_s == null) {
                                         break L9;
                                       } else {
                                         if (var10 == 0) {
                                           break L9;
                                         } else {
-                                          var4 = var4 + ((po) this).field_s[(var10 << 8) + 215];
+                                          var4 = var4 + this.field_s[(var10 << 8) + 215];
                                           break L9;
                                         }
                                       }
@@ -952,14 +953,14 @@ abstract class po extends eo {
                                   }
                                 } else {
                                   L10: {
-                                    var4 = var4 + ((po) this).a('­');
-                                    if (((po) this).field_s == null) {
+                                    var4 = var4 + this.a('­');
+                                    if (this.field_s == null) {
                                       break L10;
                                     } else {
                                       if (var10 == 0) {
                                         break L10;
                                       } else {
-                                        var4 = var4 + ((po) this).field_s[(var10 << 8) + 173];
+                                        var4 = var4 + this.field_s[(var10 << 8) + 173];
                                         break L10;
                                       }
                                     }
@@ -969,14 +970,14 @@ abstract class po extends eo {
                                 }
                               } else {
                                 L11: {
-                                  var4 = var4 + ((po) this).a(' ');
-                                  if (((po) this).field_s == null) {
+                                  var4 = var4 + this.a(' ');
+                                  if (this.field_s == null) {
                                     break L11;
                                   } else {
                                     if (var10 == 0) {
                                       break L11;
                                     } else {
-                                      var4 = var4 + ((po) this).field_s[(var10 << 8) + 160];
+                                      var4 = var4 + this.field_s[(var10 << 8) + 160];
                                       break L11;
                                     }
                                   }
@@ -986,14 +987,14 @@ abstract class po extends eo {
                               }
                             } else {
                               L12: {
-                                var4 = var4 + ((po) this).a('>');
-                                if (((po) this).field_s == null) {
+                                var4 = var4 + this.a('>');
+                                if (this.field_s == null) {
                                   break L12;
                                 } else {
                                   if (var10 == 0) {
                                     break L12;
                                   } else {
-                                    var4 = var4 + ((po) this).field_s[(var10 << 8) + 62];
+                                    var4 = var4 + this.field_s[(var10 << 8) + 62];
                                     break L12;
                                   }
                                 }
@@ -1003,14 +1004,14 @@ abstract class po extends eo {
                             }
                           } else {
                             L13: {
-                              var4 = var4 + ((po) this).a('<');
-                              if (((po) this).field_s == null) {
+                              var4 = var4 + this.a('<');
+                              if (this.field_s == null) {
                                 break L13;
                               } else {
                                 if (var10 == 0) {
                                   break L13;
                                 } else {
-                                  var4 = var4 + ((po) this).field_s[(var10 << 8) + 60];
+                                  var4 = var4 + this.field_s[(var10 << 8) + 60];
                                   break L13;
                                 }
                               }
@@ -1039,16 +1040,16 @@ abstract class po extends eo {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_A.append((char) var14);
+                        discarded$9 = field_A.append((char) var14);
                         var14 = (char)(aca.a((char) var14, 8220) & 255);
-                        var4 = var4 + ((po) this).field_o[var14];
-                        if (((po) this).field_s == null) {
+                        var4 = var4 + this.field_o[var14];
+                        if (this.field_s == null) {
                           break L15;
                         } else {
                           if (var10 == 0) {
                             break L15;
                           } else {
-                            var4 = var4 + ((po) this).field_s[(var10 << 8) + var14];
+                            var4 = var4 + this.field_s[(var10 << 8) + var14];
                             break L15;
                           }
                         }
@@ -1073,14 +1074,14 @@ abstract class po extends eo {
                     } else {
                       L18: {
                         stackOut_65_0 = var4;
-                        stackOut_65_1 = (int[]) param1;
+                        stackOut_65_1 = (int[]) (param1);
                         stackIn_67_0 = stackOut_65_0;
                         stackIn_67_1 = stackOut_65_1;
                         stackIn_66_0 = stackOut_65_0;
                         stackIn_66_1 = stackOut_65_1;
                         if (var11 >= param1.length) {
                           stackOut_67_0 = stackIn_67_0;
-                          stackOut_67_1 = (int[]) (Object) stackIn_67_1;
+                          stackOut_67_1 = (int[]) ((Object) stackIn_67_1);
                           stackOut_67_2 = param1.length - 1;
                           stackIn_68_0 = stackOut_67_0;
                           stackIn_68_1 = stackOut_67_1;
@@ -1088,7 +1089,7 @@ abstract class po extends eo {
                           break L18;
                         } else {
                           stackOut_66_0 = stackIn_66_0;
-                          stackOut_66_1 = (int[]) (Object) stackIn_66_1;
+                          stackOut_66_1 = (int[]) ((Object) stackIn_66_1);
                           stackOut_66_2 = var11;
                           stackIn_68_0 = stackOut_66_0;
                           stackIn_68_1 = stackOut_66_1;
@@ -1144,7 +1145,7 @@ abstract class po extends eo {
             return;
         }
         this.a(param3, param4, param5);
-        this.b(param0, param1 - ((po) this).a(param0), param2);
+        this.b(param0, param1 - this.a(param0), param2);
     }
 
     final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
@@ -1158,13 +1159,13 @@ abstract class po extends eo {
             if (param10 != 0) {
               break L0;
             } else {
-              param10 = ((po) this).field_F;
+              param10 = this.field_F;
               break L0;
             }
           }
           L1: {
             var12 = new int[]{param3};
-            if (param4 >= ((po) this).field_u + ((po) this).field_B + param10) {
+            if (param4 >= this.field_u + this.field_B + param10) {
               break L1;
             } else {
               if (param4 >= param10 + param10) {
@@ -1176,7 +1177,7 @@ abstract class po extends eo {
             }
           }
           L2: {
-            var13 = ((po) this).a(param0, var12, field_p);
+            var13 = this.a(param0, var12, field_p);
             if (param9 != 3) {
               break L2;
             } else {
@@ -1193,7 +1194,7 @@ abstract class po extends eo {
               if (param9 != 1) {
                 if (param9 != 2) {
                   L4: {
-                    var15 = (param4 - ((po) this).field_u - ((po) this).field_B - (var13 - 1) * param10) / (var13 + 1);
+                    var15 = (param4 - this.field_u - this.field_B - (var13 - 1) * param10) / (var13 + 1);
                     if (var15 >= 0) {
                       break L4;
                     } else {
@@ -1201,19 +1202,19 @@ abstract class po extends eo {
                       break L4;
                     }
                   }
-                  var14 = param2 + ((po) this).field_u + var15;
+                  var14 = param2 + this.field_u + var15;
                   param10 = param10 + var15;
                   break L3;
                 } else {
-                  var14 = param2 + param4 - ((po) this).field_B - (var13 - 1) * param10;
+                  var14 = param2 + param4 - this.field_B - (var13 - 1) * param10;
                   break L3;
                 }
               } else {
-                var14 = param2 + ((po) this).field_u + (param4 - ((po) this).field_u - ((po) this).field_B - (var13 - 1) * param10) / 2;
+                var14 = param2 + this.field_u + (param4 - this.field_u - this.field_B - (var13 - 1) * param10) / 2;
                 break L3;
               }
             } else {
-              var14 = param2 + ((po) this).field_u;
+              var14 = param2 + this.field_u;
               break L3;
             }
           }
@@ -1240,13 +1241,13 @@ abstract class po extends eo {
                     var15++;
                     continue L5;
                   } else {
-                    this.b(field_p[var15], param1 + param3 - ((po) this).a(field_p[var15]), var14);
+                    this.b(field_p[var15], param1 + param3 - this.a(field_p[var15]), var14);
                     var14 = var14 + param10;
                     var15++;
                     continue L5;
                   }
                 } else {
-                  this.b(field_p[var15], param1 + (param3 - ((po) this).a(field_p[var15])) / 2, var14);
+                  this.b(field_p[var15], param1 + (param3 - this.a(field_p[var15])) / 2, var14);
                   var14 = var14 + param10;
                   var15++;
                   continue L5;
@@ -1297,20 +1298,20 @@ abstract class po extends eo {
                     } else {
                       var8 = param0.substring(var2 + 1, var6).toLowerCase();
                       var2 = -1;
-                      if (!var8.equals((Object) (Object) "lt")) {
-                        if (!var8.equals((Object) (Object) "gt")) {
-                          if (!var8.equals((Object) (Object) "nbsp")) {
-                            if (!var8.equals((Object) (Object) "shy")) {
-                              if (!var8.equals((Object) (Object) "times")) {
-                                if (!var8.equals((Object) (Object) "euro")) {
-                                  if (!var8.equals((Object) (Object) "copy")) {
-                                    if (!var8.equals((Object) (Object) "reg")) {
+                      if (!var8.equals("lt")) {
+                        if (!var8.equals("gt")) {
+                          if (!var8.equals("nbsp")) {
+                            if (!var8.equals("shy")) {
+                              if (!var8.equals("times")) {
+                                if (!var8.equals("euro")) {
+                                  if (!var8.equals("copy")) {
+                                    if (!var8.equals("reg")) {
                                       if (var8.startsWith("img=")) {
                                         try {
                                           L2: {
-                                            var10 = (CharSequence) (Object) var8.substring(4);
+                                            var10 = (CharSequence) ((Object) var8.substring(4));
                                             var9_int = pd.a((byte) 47, var10);
-                                            var4 = var4 + ((po) this).field_K[var9_int].field_a;
+                                            var4 = var4 + this.field_K[var9_int].field_a;
                                             var3 = 0;
                                             var6++;
                                             break L2;
@@ -1366,14 +1367,14 @@ abstract class po extends eo {
                 if (var2 == -1) {
                   L4: {
                     var7 = (char)(aca.a((char) var7, 8220) & 255);
-                    var4 = var4 + ((po) this).field_o[var7];
-                    if (((po) this).field_s == null) {
+                    var4 = var4 + this.field_o[var7];
+                    if (this.field_s == null) {
                       break L4;
                     } else {
                       if (var3 == 0) {
                         break L4;
                       } else {
-                        var4 = var4 + ((po) this).field_s[(var3 << 8) + var7];
+                        var4 = var4 + this.field_s[(var3 << 8) + var7];
                         break L4;
                       }
                     }
@@ -1398,6 +1399,8 @@ abstract class po extends eo {
     }
 
     private final static int a(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -1451,9 +1454,9 @@ abstract class po extends eo {
           if (var18 >= var12) {
             return -var13;
           } else {
-            int incrementValue$12 = var16;
+            incrementValue$12 = var16;
             var16++;
-            int incrementValue$13 = var17;
+            incrementValue$13 = var17;
             var17++;
             var19 = var14[incrementValue$12] + var15[incrementValue$13];
             if (var19 < var13) {
@@ -1474,44 +1477,44 @@ abstract class po extends eo {
                 throw new IllegalArgumentException();
             }
         }
-        ((po) this).field_K = param0;
-        ((po) this).field_n = param1;
+        this.field_K = param0;
+        this.field_n = param1;
     }
 
     po(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ((po) this).field_F = 0;
-        ((po) this).field_r = param1;
-        ((po) this).field_y = param2;
-        ((po) this).field_E = param3;
-        ((po) this).field_C = param4;
+        this.field_F = 0;
+        this.field_r = param1;
+        this.field_y = param2;
+        this.field_E = param3;
+        this.field_C = param4;
         this.a(param0);
         var6 = 2147483647;
         var7 = -2147483648;
         var8 = 0;
         L0: while (true) {
           if (var8 >= 256) {
-            ((po) this).field_u = ((po) this).field_F - var6;
-            ((po) this).field_B = var7 - ((po) this).field_F;
-            ((po) this).field_v = ((po) this).field_F - ((po) this).field_y[88];
+            this.field_u = this.field_F - var6;
+            this.field_B = var7 - this.field_F;
+            this.field_v = this.field_F - this.field_y[88];
             return;
           } else {
             L1: {
-              if (((po) this).field_y[var8] >= var6) {
+              if (this.field_y[var8] >= var6) {
                 break L1;
               } else {
-                if (((po) this).field_C[var8] == 0) {
+                if (this.field_C[var8] == 0) {
                   break L1;
                 } else {
-                  var6 = ((po) this).field_y[var8];
+                  var6 = this.field_y[var8];
                   break L1;
                 }
               }
             }
-            if (((po) this).field_y[var8] + ((po) this).field_C[var8] > var7) {
-              var7 = ((po) this).field_y[var8] + ((po) this).field_C[var8];
+            if (this.field_y[var8] + this.field_C[var8] > var7) {
+              var7 = this.field_y[var8] + this.field_C[var8];
               var8++;
               continue L0;
             } else {
@@ -1523,14 +1526,10 @@ abstract class po extends eo {
     }
 
     final int a(char param0) {
-        return ((po) this).field_o[aca.a(param0, 8220) & 255];
+        return this.field_o[aca.a(param0, 8220) & 255];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = new StringBuilder(100);
         field_I = 0;
         field_H = -1;

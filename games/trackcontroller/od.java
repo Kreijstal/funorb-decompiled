@@ -10,7 +10,7 @@ final class od {
     final static void a(byte param0, int param1) {
         int discarded$3 = ia.b(false);
         if (param0 > -56) {
-            field_a = null;
+            field_a = (ki) null;
         }
     }
 
@@ -19,13 +19,12 @@ final class od {
         field_b = null;
         field_c = null;
         field_a = null;
+        if (param0 != 8192) {
+            field_a = (ki) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Connection lost. <%0>";
         field_c = new int[8192];
     }

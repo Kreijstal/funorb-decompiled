@@ -17,11 +17,11 @@ abstract class c {
 
     final void a(boolean param0) {
         if (!param0) {
-          field_h = null;
-          gf.a(((c) this).field_g, ((c) this).field_b, ((c) this).field_f);
+          field_h = (java.awt.Canvas) null;
+          gf.a(this.field_g, this.field_b, this.field_f);
           return;
         } else {
-          gf.a(((c) this).field_g, ((c) this).field_b, ((c) this).field_f);
+          gf.a(this.field_g, this.field_b, this.field_f);
           return;
         }
     }
@@ -30,10 +30,13 @@ abstract class c {
         if (param3 < 26) {
             return;
         }
-        vd.a(640, 0, -14561, 0, 0, param2);
+        vd.a(param1, 0, -14561, 0, param0, param2);
     }
 
     public static void a(int param0) {
+        if (param0 != -9431) {
+            return;
+        }
         field_h = null;
         field_c = null;
         field_d = null;
@@ -41,10 +44,6 @@ abstract class c {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Dragons of Renown";
         field_c = "Raider snuck past guardian and disarmed it.";
         field_d = new od();

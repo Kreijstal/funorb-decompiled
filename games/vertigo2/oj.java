@@ -28,6 +28,7 @@ final class oj extends cj implements ij {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_5_0 = false;
         boolean stackOut_9_0 = false;
@@ -43,20 +44,23 @@ final class oj extends cj implements ij {
         String stackOut_16_2 = null;
         try {
           L0: {
-            if (!super.a(param0, param1, param2, param3)) {
+            if (!super.a(param0, param1 ^ 0, param2, param3)) {
               if (param2 == 98) {
-                stackOut_5_0 = ((oj) this).a(32345, param3);
+                stackOut_5_0 = this.a(32345, param3);
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (99 == param2) {
-                  stackOut_9_0 = ((oj) this).b((byte) -122, param3);
+                  stackOut_9_0 = this.b((byte) -122, param3);
                   stackIn_10_0 = stackOut_9_0;
-                  return stackIn_10_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   if (param1 == 13) {
                     stackOut_13_0 = 0;
                     stackIn_14_0 = stackOut_13_0;
+                    decompiledRegionSelector0 = 3;
                     break L0;
                   } else {
                     field_P = true;
@@ -67,30 +71,31 @@ final class oj extends cj implements ij {
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var5;
+            stackOut_15_0 = (RuntimeException) (var5);
             stackOut_15_1 = new StringBuilder().append("oj.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param3 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L1;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -98,9 +103,21 @@ final class oj extends cj implements ij {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
-        return stackIn_14_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_10_0;
+            } else {
+              return stackIn_14_0 != 0;
+            }
+          }
+        }
     }
 
     public final void a(int param0, d param1, byte param2, int param3, int param4) {
@@ -128,11 +145,11 @@ final class oj extends cj implements ij {
           L0: {
             var6_int = 0;
             L1: while (true) {
-              if (((oj) this).field_E.length <= var6_int) {
+              if (this.field_E.length <= var6_int) {
                 L2: {
                   var6_int = 84 % ((-63 - param2) / 51);
-                  if (param1 == ((oj) this).field_G[((oj) this).field_E.length]) {
-                    ((oj) this).field_J.a(-4384);
+                  if (param1 == this.field_G[this.field_E.length]) {
+                    this.field_J.a(-4384);
                     break L2;
                   } else {
                     break L2;
@@ -141,8 +158,8 @@ final class oj extends cj implements ij {
                 break L0;
               } else {
                 L3: {
-                  if (param1 == ((oj) this).field_G[var6_int]) {
-                    ((oj) this).field_J.a(((oj) this).field_E[var6_int], 4944);
+                  if (param1 == this.field_G[var6_int]) {
+                    this.field_J.a(this.field_E[var6_int], 4944);
                     break L3;
                   } else {
                     break L3;
@@ -157,23 +174,23 @@ final class oj extends cj implements ij {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var6;
+            stackOut_11_0 = (RuntimeException) (var6);
             stackOut_11_1 = new StringBuilder().append("oj.C(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -181,7 +198,7 @@ final class oj extends cj implements ij {
               break L4;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -217,14 +234,22 @@ final class oj extends cj implements ij {
             }
           }
         }
+        L1: {
+          if (param4 >= 80) {
+            break L1;
+          } else {
+            oj.a(-117, 112, 11, -72, (byte) 107, -108, 19, -31);
+            break L1;
+          }
+        }
     }
 
     oj(nc param0) {
         super(0, 0, 0, 0, (ur) null);
         try {
-            ((oj) this).field_J = param0;
+            this.field_J = param0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -242,6 +267,7 @@ final class oj extends cj implements ij {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
@@ -255,7 +281,7 @@ final class oj extends cj implements ij {
         try {
           L0: {
             L1: {
-              ((oj) this).field_C.c(0);
+              this.field_C.c(0);
               if (param0 == null) {
                 break L1;
               } else {
@@ -263,36 +289,38 @@ final class oj extends cj implements ij {
                   break L1;
                 } else {
                   var3_int = param0.length;
-                  ((oj) this).field_E = new String[var3_int];
+                  this.field_E = new String[var3_int];
                   var4_int = 0;
                   L2: while (true) {
                     if (var3_int <= var4_int) {
                       var4 = new jc(qc.field_x, 0, 1);
                       if (param1 == -1546) {
-                        ((oj) this).field_G = new d[1 + var3_int];
+                        this.field_G = new d[1 + var3_int];
                         var5 = 0;
                         L3: while (true) {
                           if (var5 >= var3_int) {
-                            ((oj) this).field_G[var3_int] = new d(pl.field_p, (uf) this);
-                            ((oj) this).field_G[var3_int].field_B = (ur) (Object) var4;
-                            ((oj) this).field_G[var3_int].a(false, 0, 20 + (16 * var3_int - -16), 15, 100);
-                            ((oj) this).c((byte) -39, (iq) (Object) ((oj) this).field_G[var3_int]);
+                            this.field_G[var3_int] = new d(pl.field_p, (uf) (this));
+                            this.field_G[var3_int].field_B = (ur) ((Object) var4);
+                            this.field_G[var3_int].a(false, 0, 20 + (16 * var3_int - -16), 15, 100);
+                            this.c((byte) -39, this.field_G[var3_int]);
+                            decompiledRegionSelector0 = 2;
                             break L0;
                           } else {
-                            ((oj) this).field_G[var5] = new d(((oj) this).field_E[var5], (uf) this);
-                            ((oj) this).field_G[var5].field_B = (ur) (Object) var4;
-                            ((oj) this).field_G[var5].field_q = og.field_k;
-                            ((oj) this).field_G[var5].a(false, 0, 20 - -(var5 * 16), 15, 80);
-                            ((oj) this).c((byte) -29, (iq) (Object) ((oj) this).field_G[var5]);
+                            this.field_G[var5] = new d(this.field_E[var5], (uf) (this));
+                            this.field_G[var5].field_B = (ur) ((Object) var4);
+                            this.field_G[var5].field_q = og.field_k;
+                            this.field_G[var5].a(false, 0, 20 - -(var5 * 16), 15, 80);
+                            this.c((byte) -29, this.field_G[var5]);
                             var5++;
                             continue L3;
                           }
                         }
                       } else {
-                        return;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       }
                     } else {
-                      ((oj) this).field_E[var4_int] = vj.a((CharSequence) (Object) param0[var4_int], (byte) 8).replace(' ', ' ');
+                      this.field_E[var4_int] = vj.a((CharSequence) ((Object) param0[var4_int]), (byte) 8).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }
@@ -300,30 +328,31 @@ final class oj extends cj implements ij {
                 }
               }
             }
-            ((oj) this).field_E = null;
-            return;
+            this.field_E = null;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var3;
+            stackOut_16_0 = (RuntimeException) (var3);
             stackOut_16_1 = new StringBuilder().append("oj.A(");
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -331,14 +360,26 @@ final class oj extends cj implements ij {
               break L4;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     public static void a(byte param0) {
         field_I = null;
-        field_O = null;
+        field_O = (int[][]) null;
         field_H = null;
+        if (param0 != -110) {
+            return;
+        }
         field_F = null;
         field_Q = null;
         field_L = null;
@@ -346,49 +387,46 @@ final class oj extends cj implements ij {
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
+        int discarded$0 = 0;
         super.a(param0, param1, param2, param3);
         if (param1 != 0) {
             return;
         }
         cc var5 = qc.field_x;
-        if (!(null == ((oj) this).field_E)) {
-            int discarded$0 = var5.a(jd.field_a, ((oj) this).field_o + param2, param3 + ((oj) this).field_t, ((oj) this).field_n, 20, 16777215, -1, 0, 0, var5.field_M + var5.field_z);
+        if (!(null == this.field_E)) {
+            discarded$0 = var5.a(jd.field_a, this.field_o + param2, param3 + this.field_t, this.field_n, 20, 16777215, -1, 0, 0, var5.field_M + var5.field_z);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_F = new int[23];
         field_O = new int[23][];
         field_M = new int[23];
         field_H = new int[23];
         field_I = new int[23];
         field_Q = new boolean[23];
-        tj.a(new int[8], 600, 36, 360, (byte) -116, 0, 175);
-        tj.a(new int[6], 440, 36, 200, (byte) -118, 12, 175);
-        tj.a(new int[5], 460, 36, 180, (byte) -96, 1, 180);
-        tj.a(new int[6], 460, 36, 180, (byte) -95, 2, 180);
-        tj.a(new int[4], 460, 36, 180, (byte) -105, 22, 180);
-        tj.a(new int[5], 460, 36, 180, (byte) -65, 3, 180);
-        tj.a(new int[4], 460, 36, 180, (byte) -69, 4, 180);
-        tj.a(new int[2], 632, 36, 392, (byte) -120, 5, 115);
-        cl.a(430, 192, (byte) 83, 220, new int[2], 620, 6);
-        cl.a(430, 150, (byte) 124, 320, new int[3], 620, 7);
-        tj.a(new int[2], 440, 30, 200, (byte) -110, 8, 320);
-        cl.a(430, 150, (byte) 84, 245, new int[2], 620, 9);
-        tj.a(new int[2], 440, 100, 200, (byte) -86, 10, 240);
-        tj.a(new int[1], 460, 30, 180, (byte) -119, 11, 400);
-        cl.a(430, 300, (byte) 126, 20, new int[3], 620, 13);
-        tj.a(new int[1], 440, 30, 200, (byte) -80, 14, 400);
-        tj.a(new int[1], 440, 30, 200, (byte) -110, 15, 400);
-        tj.a(new int[1], 440, 30, 200, (byte) -91, 20, 400);
-        tj.a(new int[1], 440, 30, 200, (byte) -117, 16, 400);
-        tj.a(new int[5], 440, 36, 200, (byte) -84, 17, 175);
-        tj.a(new int[4], 440, 36, 200, (byte) -116, 18, 175);
-        cl.a(430, 300, (byte) 81, 20, new int[2], 620, 19);
-        tj.a(new int[3], 440, 36, 200, (byte) -127, 21, 210);
+        tj.a(new int[]{34, 1, 5, 29, 4, 3, 22, 19}, 600, 36, 360, (byte) -116, 0, 175);
+        tj.a(new int[]{2, 20, 21, 30, 5, 9}, 440, 36, 200, (byte) -118, 12, 175);
+        tj.a(new int[]{2, 35, 31, 5, 9}, 460, 36, 180, (byte) -96, 1, 180);
+        tj.a(new int[]{2, 31, 5, 10, 11, 13}, 460, 36, 180, (byte) -95, 2, 180);
+        tj.a(new int[]{2, 31, 5, 13}, 460, 36, 180, (byte) -105, 22, 180);
+        tj.a(new int[]{2, 31, 5, 12, 13}, 460, 36, 180, (byte) -65, 3, 180);
+        tj.a(new int[]{2, 31, 5, 13}, 460, 36, 180, (byte) -69, 4, 180);
+        tj.a(new int[]{23, 7}, 632, 36, 392, (byte) -120, 5, 115);
+        cl.a(430, 192, (byte) 83, 220, new int[]{23, 8}, 620, 6);
+        cl.a(430, 150, (byte) 124, 320, new int[]{25, 26, 8}, 620, 7);
+        tj.a(new int[]{23, 7}, 440, 30, 200, (byte) -110, 8, 320);
+        cl.a(430, 150, (byte) 84, 245, new int[]{3, 7}, 620, 9);
+        tj.a(new int[]{23, 24}, 440, 100, 200, (byte) -86, 10, 240);
+        tj.a(new int[]{7}, 460, 30, 180, (byte) -119, 11, 400);
+        cl.a(430, 300, (byte) 126, 20, new int[]{7, 28, 23}, 620, 13);
+        tj.a(new int[]{27}, 440, 30, 200, (byte) -80, 14, 400);
+        tj.a(new int[]{27}, 440, 30, 200, (byte) -110, 15, 400);
+        tj.a(new int[]{27}, 440, 30, 200, (byte) -91, 20, 400);
+        tj.a(new int[]{27}, 440, 30, 200, (byte) -117, 16, 400);
+        tj.a(new int[]{20, 21, 6, 30, 8}, 440, 36, 200, (byte) -84, 17, 175);
+        tj.a(new int[]{20, 21, 30, 8}, 440, 36, 200, (byte) -116, 18, 175);
+        cl.a(430, 300, (byte) 81, 20, new int[]{7, 33}, 620, 19);
+        tj.a(new int[]{0, 32, 7}, 440, 36, 200, (byte) -127, 21, 210);
     }
 }

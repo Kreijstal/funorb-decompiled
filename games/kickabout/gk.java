@@ -15,11 +15,14 @@ final class gk {
         vb.field_h = param1;
         oc.field_f = param0;
         nu.field_j = true;
+        if (param4 > -49) {
+            return;
+        }
         try {
             qh.field_c = param2;
             qs.field_K = param3;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "gk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + -51 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "gk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -28,15 +31,19 @@ final class gk {
         field_h = null;
         field_c = null;
         field_b = null;
-        field_f = null;
-        field_a = null;
+        if (param0 != -127) {
+          gk.a((String) null, 72, 78L, 101, (byte) 105);
+          field_f = null;
+          field_a = null;
+          return;
+        } else {
+          field_f = null;
+          field_a = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = false;
         field_d = "This option cannot be combined with the current '<%0>' setting.";
         field_c = "You cannot chat to <%0> because <%0> is offline in your friend list.";

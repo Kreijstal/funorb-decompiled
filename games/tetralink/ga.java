@@ -9,17 +9,23 @@ final class ga {
     private static String field_z;
 
     public static void a(int param0) {
-        field_b = null;
-        field_a = null;
-        field_c = null;
-        field_d = null;
+        if (param0 != 7151) {
+          field_a = (byte[][]) null;
+          field_b = null;
+          field_a = (byte[][]) null;
+          field_c = null;
+          field_d = null;
+          return;
+        } else {
+          field_b = null;
+          field_a = (byte[][]) null;
+          field_c = null;
+          field_d = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ga.A(";
         field_d = "You can ask to join this game";
     }

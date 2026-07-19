@@ -26,8 +26,8 @@ final class ob extends pib {
         if (param5 != 115) {
           return;
         } else {
-          ((ob) this).field_g.a(114, (pib) this);
-          jaggl.OpenGL.glCopyTexSubImage3D(((ob) this).field_b, 0, param0, param7, param3, param1, param2, param6, param4);
+          this.field_g.a(114, (pib) (this));
+          jaggl.OpenGL.glCopyTexSubImage3D(this.field_b, 0, param0, param7, param3, param1, param2, param6, param4);
           jaggl.OpenGL.glFlush();
           return;
         }
@@ -35,48 +35,49 @@ final class ob extends pib {
 
     ob(qfa param0, int param1, int param2, int param3, int param4) {
         super(param0, 32879, param1, param2 * param3 * param4, false);
-        ((ob) this).field_n = -1;
-        ((ob) this).field_o = -1;
+        this.field_n = -1;
+        this.field_o = -1;
         try {
-            ((ob) this).field_h = param4;
-            ((ob) this).field_i = param2;
-            ((ob) this).field_k = param3;
-            ((ob) this).field_g.a(62, (pib) this);
-            jaggl.OpenGL.glTexImage3Dub(((ob) this).field_b, 0, ((ob) this).field_d, ((ob) this).field_i, ((ob) this).field_k, ((ob) this).field_h, 0, fsb.a(((ob) this).field_d, false), 5121, (byte[]) null, 0);
-            ((ob) this).a(-95, true);
+            this.field_h = param4;
+            this.field_i = param2;
+            this.field_k = param3;
+            this.field_g.a(62, (pib) (this));
+            jaggl.OpenGL.glTexImage3Dub(this.field_b, 0, this.field_d, this.field_i, this.field_k, this.field_h, 0, fsb.a(this.field_d, false), 5121, (byte[]) null, 0);
+            this.a(-95, true);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public final void a(int param0) {
-        jaggl.OpenGL.glFramebufferTexture3DEXT(((ob) this).field_o, ((ob) this).field_n, ((ob) this).field_b, 0, 0, 0);
-        ((ob) this).field_o = -1;
-        ((ob) this).field_n = -1;
+        jaggl.OpenGL.glFramebufferTexture3DEXT(this.field_o, this.field_n, this.field_b, 0, 0, 0);
+        this.field_o = -1;
+        this.field_n = -1;
         if (param0 != 31294) {
-            ((ob) this).field_h = 45;
+            this.field_h = 45;
         }
     }
 
     ob(qfa param0, int param1, int param2, int param3, int param4, byte[] param5, int param6) {
         super(param0, 32879, param1, param3 * (param2 * param4), false);
-        ((ob) this).field_n = -1;
-        ((ob) this).field_o = -1;
+        this.field_n = -1;
+        this.field_o = -1;
         try {
-            ((ob) this).field_h = param4;
-            ((ob) this).field_i = param2;
-            ((ob) this).field_k = param3;
-            ((ob) this).field_g.a(41, (pib) this);
+            this.field_h = param4;
+            this.field_i = param2;
+            this.field_k = param3;
+            this.field_g.a(41, (pib) (this));
             jaggl.OpenGL.glPixelStorei(3317, 1);
-            jaggl.OpenGL.glTexImage3Dub(((ob) this).field_b, 0, ((ob) this).field_d, ((ob) this).field_i, ((ob) this).field_k, ((ob) this).field_h, 0, param6, 5121, param5, 0);
+            jaggl.OpenGL.glTexImage3Dub(this.field_b, 0, this.field_d, this.field_i, this.field_k, this.field_h, 0, param6, 5121, param5, 0);
             jaggl.OpenGL.glPixelStorei(3317, 4);
-            ((ob) this).a(99, true);
+            this.a(99, true);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
     final static ufb a(int param0, eab param1, int param2, int param3, int param4, int param5) {
+        java.awt.Component discarded$2 = null;
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         ufb var7 = null;
@@ -90,6 +91,7 @@ final class ob extends pib {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ufb stackOut_3_0 = null;
         Object stackOut_1_0 = null;
@@ -103,45 +105,47 @@ final class ob extends pib {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var8 = jqb.a(11168, 0, param1, param3, 0, param2);
+            var8 = jqb.a(11168, param4, param1, param3, param0, param2);
             var6 = var8;
             if (var8 != null) {
               var7 = new ufb();
               var7.field_b = var8;
-              java.awt.Component discarded$2 = var7.field_b.add((java.awt.Component) (Object) var7);
-              var7.setBounds(0, 0, param2, param3);
-              var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
+              discarded$2 = var7.field_b.add((java.awt.Component) ((Object) var7));
+              var7.setBounds(param5, 0, param2, param3);
+              var7.addFocusListener(var7);
               var7.requestFocus();
-              stackOut_3_0 = (ufb) var7;
+              stackOut_3_0 = (ufb) (var7);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
-              return (ufb) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var6_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var6_ref;
-            stackOut_5_1 = new StringBuilder().append("ob.N(").append(0).append(',');
+            stackOut_5_0 = (RuntimeException) (var6_ref);
+            stackOut_5_1 = new StringBuilder().append("ob.N(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -149,16 +153,16 @@ final class ob extends pib {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ',' + param3 + ',' + 0 + ',' + 0 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (ufb) ((Object) stackIn_2_0);
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "More neutrals";
         field_j = 0;
         field_l = new String[16];

@@ -10,7 +10,14 @@ final class lo extends IOException {
     static boolean field_a;
 
     final static nq b(int param0) {
-        if (null == ae.field_c) {
+        if (null != ae.field_c) {
+          if (param0 != 14) {
+            field_c = (String[]) null;
+            return ae.field_c;
+          } else {
+            return ae.field_c;
+          }
+        } else {
           ae.field_c = new nq();
           ae.field_c.a(lc.field_O, -76);
           ae.field_c.field_m = 6;
@@ -21,9 +28,12 @@ final class lo extends IOException {
           ae.field_c.field_h = 0;
           ae.field_c.field_g = 14;
           ae.field_c.field_d = 5;
-          return ae.field_c;
-        } else {
-          return ae.field_c;
+          if (param0 == 14) {
+            return ae.field_c;
+          } else {
+            field_c = (String[]) null;
+            return ae.field_c;
+          }
         }
     }
 
@@ -31,7 +41,7 @@ final class lo extends IOException {
         field_c = null;
         field_b = null;
         if (param0 < 110) {
-            field_d = null;
+            field_d = (String) null;
             field_d = null;
             return;
         }
@@ -39,7 +49,12 @@ final class lo extends IOException {
     }
 
     final static String a(long param0, int param1) {
-        return di.a(param0, 16, false, -112, 6, 10);
+        if (param1 != 7697781) {
+          field_c = (String[]) null;
+          return di.a(param0, 16, false, -112, 6, 10);
+        } else {
+          return di.a(param0, 16, false, -112, 6, 10);
+        }
     }
 
     lo(String param0) {
@@ -49,9 +64,9 @@ final class lo extends IOException {
     final static int a(int param0, int param1, byte param2) {
         if (param2 < 53) {
             lo.a(85);
-            return (param0 << 12) / param1;
+            return (param0 << -1339353652) / param1;
         }
-        return (param0 << 12) / param1;
+        return (param0 << -1339353652) / param1;
     }
 
     final static void a(int param0) {
@@ -61,15 +76,15 @@ final class lo extends IOException {
             Throwable var2 = null;
             Runtime var2_ref = null;
             Long var3 = null;
-            Object var4 = null;
+            Object[] var4 = null;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
+                var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
                 if (param0 < -7) {
                   break L0;
                 } else {
-                  field_c = null;
+                  field_c = (String[]) null;
                   break L0;
                 }
               }
@@ -77,8 +92,8 @@ final class lo extends IOException {
                 try {
                   L1: {
                     var2_ref = Runtime.getRuntime();
-                    var4 = null;
-                    var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
+                    var4 = (Object[]) null;
+                    var3 = (Long) (var1.invoke((Object) (var2_ref), (Object[]) null));
                     rf.field_d = 1 + (int)(var3.longValue() / 1048576L);
                     break L1;
                   }
@@ -104,10 +119,6 @@ final class lo extends IOException {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "(1 player wants to join)";
         field_d = "Confirm Email:";
     }

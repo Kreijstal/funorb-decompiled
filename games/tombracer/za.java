@@ -11,7 +11,7 @@ abstract class za extends vg {
         } else {
           if (param2 >= param3) {
             if (param1 <= 35) {
-              field_g = null;
+              field_g = (nh) null;
               return param3;
             } else {
               return param3;
@@ -23,11 +23,17 @@ abstract class za extends vg {
     }
 
     public static void a(byte param0) {
+        if (param0 <= 79) {
+            return;
+        }
         field_g = null;
         field_f = null;
     }
 
     final static int a(int param0) {
+        if (param0 != 18998) {
+            return 12;
+        }
         return aa.field_c;
     }
 
@@ -66,16 +72,16 @@ abstract class za extends vg {
               var7 = param1;
               var8 = param2 * param2;
               var9 = param1 * param1;
-              var10 = var9 << 1;
-              var11 = var8 << 1;
-              var12 = param1 << 1;
+              var10 = var9 << 490551489;
+              var11 = var8 << 1858798593;
+              var12 = param1 << 25055169;
               var13 = var10 + (-var12 + 1) * var8;
               var14 = var9 + -(var11 * (-1 + var12));
-              var15 = var8 << 2;
-              var16 = var9 << 2;
-              var17 = 0;
-              var18 = (3 + (var6_int << 1)) * var10;
-              var19 = ((var7 << 1) + -3) * var11;
+              var15 = var8 << -1390571934;
+              var16 = var9 << -732530014;
+              var17 = 71 % ((39 - param4) / 61);
+              var18 = (3 + (var6_int << -504119039)) * var10;
+              var19 = ((var7 << -343032287) + -3) * var11;
               var20 = (1 + var6_int) * var16;
               var21 = var15 * (var7 - 1);
               if (gca.field_d > param5) {
@@ -92,85 +98,102 @@ abstract class za extends vg {
               }
             }
             L2: while (true) {
-              if (var7 <= 0) {
-                break L0;
-              } else {
-                L3: {
-                  if (0 <= var13) {
-                    break L3;
-                  } else {
-                    L4: while (true) {
-                      if (var13 >= 0) {
-                        break L3;
-                      } else {
-                        var14 = var14 + var20;
-                        var13 = var13 + var18;
-                        var6_int++;
-                        var20 = var20 + var16;
-                        var18 = var18 + var16;
-                        continue L4;
-                      }
-                    }
-                  }
-                }
-                L5: {
-                  if (var14 < 0) {
-                    var14 = var14 + var20;
-                    var13 = var13 + var18;
-                    var6_int++;
-                    var18 = var18 + var16;
-                    var20 = var20 + var16;
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                var14 = var14 + -var19;
-                var13 = var13 + -var21;
-                var19 = var19 - var15;
-                var7--;
-                var21 = var21 - var15;
-                var22 = param5 + -var7;
-                var23 = var7 + param5;
-                if (var23 < gca.field_d) {
-                  continue L2;
+              L3: {
+                if (-1 <= (var7 ^ -1)) {
+                  break L3;
                 } else {
-                  if (hc.field_h >= var22) {
-                    L6: {
-                      var24 = rp.a(ss.field_c, -16226, pka.field_b, param0 + var6_int);
-                      var25 = rp.a(ss.field_c, -16226, pka.field_b, -var6_int + param0);
-                      if (var22 < gca.field_d) {
-                        break L6;
+                  if (var26 == 0) {
+                    L4: {
+                      L5: {
+                        L6: {
+                          if (0 <= var13) {
+                            break L6;
+                          } else {
+                            L7: while (true) {
+                              if ((var13 ^ -1) <= -1) {
+                                break L6;
+                              } else {
+                                var14 = var14 + var20;
+                                var13 = var13 + var18;
+                                var6_int++;
+                                var20 = var20 + var16;
+                                var18 = var18 + var16;
+                                if (var26 != 0) {
+                                  break L5;
+                                } else {
+                                  continue L7;
+                                }
+                              }
+                            }
+                          }
+                        }
+                        if (-1 < (var14 ^ -1)) {
+                          var14 = var14 + var20;
+                          var13 = var13 + var18;
+                          var6_int++;
+                          var18 = var18 + var16;
+                          break L5;
+                        } else {
+                          break L4;
+                        }
+                      }
+                      var20 = var20 + var16;
+                      break L4;
+                    }
+                    L8: {
+                      var14 = var14 + -var19;
+                      var13 = var13 + -var21;
+                      var19 = var19 - var15;
+                      var7--;
+                      var21 = var21 - var15;
+                      var22 = param5 + -var7;
+                      var23 = var7 + param5;
+                      if (var23 < gca.field_d) {
+                        break L8;
                       } else {
-                        nra.a((byte) -55, param3, var24, vaa.field_a[var22], var25);
-                        break L6;
+                        if (hc.field_h >= var22) {
+                          L9: {
+                            var24 = rp.a(ss.field_c, -16226, pka.field_b, param0 + var6_int);
+                            var25 = rp.a(ss.field_c, -16226, pka.field_b, -var6_int + param0);
+                            if (var22 < gca.field_d) {
+                              break L9;
+                            } else {
+                              nra.a((byte) -55, param3, var24, vaa.field_a[var22], var25);
+                              break L9;
+                            }
+                          }
+                          if (var23 <= hc.field_h) {
+                            nra.a((byte) -55, param3, var24, vaa.field_a[var23], var25);
+                            break L8;
+                          } else {
+                            break L8;
+                          }
+                        } else {
+                          break L8;
+                        }
                       }
                     }
-                    if (var23 <= hc.field_h) {
-                      nra.a((byte) -55, param3, var24, vaa.field_a[var23], var25);
+                    if (var26 == 0) {
                       continue L2;
                     } else {
-                      continue L2;
+                      break L3;
                     }
                   } else {
-                    continue L2;
+                    return;
                   }
                 }
               }
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var6, "za.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + 115 + ',' + param5 + ')');
+          throw tba.a((Throwable) ((Object) var6), "za.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Player names can be up to 12 letters, numbers and underscores";
     }
 }

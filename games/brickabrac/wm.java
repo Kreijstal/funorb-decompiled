@@ -8,15 +8,11 @@ final class wm {
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = 5;
+        int var1 = -11 / ((-26 - param0) / 61);
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "wm.A(";
     }
 }

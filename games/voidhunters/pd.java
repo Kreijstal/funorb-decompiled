@@ -10,23 +10,19 @@ final class pd extends ksa {
     int field_h;
 
     public static void c(byte param0) {
-        int var1 = 0;
-        field_g = null;
+        int var1 = 2 % ((param0 - 73) / 41);
+        field_g = (int[][]) null;
     }
 
     pd(int param0, int param1, int param2, int param3) {
-        ((pd) this).field_h = param0;
-        ((pd) this).field_i = param1;
-        ((pd) this).field_f = param2;
-        ((pd) this).field_d = nua.field_o;
-        ((pd) this).field_e = param3;
+        this.field_h = param0;
+        this.field_i = param1;
+        this.field_f = param2;
+        this.field_d = nua.field_o;
+        this.field_e = param3;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         bca discarded$0 = new bca();
     }
 }

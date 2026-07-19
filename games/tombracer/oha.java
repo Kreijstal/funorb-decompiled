@@ -11,9 +11,9 @@ final class oha {
     }
 
     oha(oha param0) {
-        ((oha) this).field_a = param0.field_a;
-        ((oha) this).field_c = param0.field_c;
-        ((oha) this).field_b = param0.field_b;
-        ((oha) this).field_d = param0.field_d;
+        this.field_a = param0.field_a;
+        this.field_c = param0.field_c;
+        this.field_b = param0.field_b;
+        this.field_d = param0.field_d;
     }
 }

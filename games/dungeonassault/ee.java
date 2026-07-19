@@ -3,10 +3,16 @@
  */
 final class ee {
     final static Object a(byte param0, java.applet.Applet param1, String param2) throws Throwable {
+        if (param0 != -21) {
+            return (Object) null;
+        }
         return netscape.javascript.JSObject.getWindow(param1).call(param2, (Object[]) null);
     }
 
     final static void a(String param0, byte param1, java.applet.Applet param2) throws Throwable {
+        if (param1 != -46) {
+            return;
+        }
         Object discarded$0 = netscape.javascript.JSObject.getWindow(param2).eval(param0);
     }
 

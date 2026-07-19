@@ -10,6 +10,9 @@ final class ria extends gca {
     static sna field_k;
 
     final boolean a(boolean param0, boolean param1) {
+        boolean discarded$3 = false;
+        boolean discarded$4 = false;
+        boolean discarded$5 = false;
         cia var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -48,12 +51,12 @@ final class ria extends gca {
         int stackOut_4_1 = 0;
         var5 = BachelorFridge.field_y;
         if (!param0) {
-          var3 = (cia) (Object) ((ria) this).field_j.b((byte) 90);
+          var3 = (cia) ((Object) this.field_j.b((byte) 90));
           L0: while (true) {
             if (var3 == null) {
               L1: {
                 var4 = vr.field_b & 127;
-                if (var4 > 32) {
+                if ((var4 ^ -1) < -33) {
                   break L1;
                 } else {
                   if (0 != (var4 & 15)) {
@@ -61,7 +64,7 @@ final class ria extends gca {
                   } else {
                     L2: {
                       this.e((byte) -104);
-                      if (((ria) this).field_j.e(12917)) {
+                      if (this.field_j.e(12917)) {
                         stackOut_33_0 = 0;
                         stackIn_34_0 = stackOut_33_0;
                         break L2;
@@ -76,7 +79,7 @@ final class ria extends gca {
                 }
               }
               L3: {
-                if (((ria) this).field_j.e(12917)) {
+                if (this.field_j.e(12917)) {
                   stackOut_37_0 = 0;
                   stackIn_38_0 = stackOut_37_0;
                   break L3;
@@ -89,39 +92,39 @@ final class ria extends gca {
               return stackIn_38_0 != 0;
             } else {
               L4: {
-                stackOut_25_0 = (cia) var3;
+                stackOut_25_0 = (cia) (var3);
                 stackIn_27_0 = stackOut_25_0;
                 stackIn_26_0 = stackOut_25_0;
                 if (param0) {
-                  stackOut_27_0 = (cia) (Object) stackIn_27_0;
+                  stackOut_27_0 = (cia) ((Object) stackIn_27_0);
                   stackOut_27_1 = 0;
                   stackIn_28_0 = stackOut_27_0;
                   stackIn_28_1 = stackOut_27_1;
                   break L4;
                 } else {
-                  stackOut_26_0 = (cia) (Object) stackIn_26_0;
+                  stackOut_26_0 = (cia) ((Object) stackIn_26_0);
                   stackOut_26_1 = 1;
                   stackIn_28_0 = stackOut_26_0;
                   stackIn_28_1 = stackOut_26_1;
                   break L4;
                 }
               }
-              boolean discarded$3 = ((cia) (Object) stackIn_28_0).b(stackIn_28_1 != 0);
-              var3 = (cia) (Object) ((ria) this).field_j.c(0);
+              discarded$3 = ((cia) (Object) stackIn_28_0).b(stackIn_28_1 != 0);
+              var3 = (cia) ((Object) this.field_j.c(0));
               continue L0;
             }
           }
         } else {
-          boolean discarded$4 = ((ria) this).a(true, false);
-          var3 = (cia) (Object) ((ria) this).field_j.b((byte) 90);
+          discarded$4 = this.a(true, false);
+          var3 = (cia) ((Object) this.field_j.b((byte) 90));
           L5: while (true) {
             if (var3 == null) {
               var4 = vr.field_b & 127;
-              if (var4 <= 32) {
+              if ((var4 ^ -1) >= -33) {
                 if (0 == (var4 & 15)) {
                   L6: {
                     this.e((byte) -104);
-                    if (((ria) this).field_j.e(12917)) {
+                    if (this.field_j.e(12917)) {
                       stackOut_21_0 = 0;
                       stackIn_22_0 = stackOut_21_0;
                       break L6;
@@ -134,7 +137,7 @@ final class ria extends gca {
                   return stackIn_22_0 != 0;
                 } else {
                   L7: {
-                    if (((ria) this).field_j.e(12917)) {
+                    if (this.field_j.e(12917)) {
                       stackOut_16_0 = 0;
                       stackIn_17_0 = stackOut_16_0;
                       break L7;
@@ -148,7 +151,7 @@ final class ria extends gca {
                 }
               } else {
                 L8: {
-                  if (((ria) this).field_j.e(12917)) {
+                  if (this.field_j.e(12917)) {
                     stackOut_10_0 = 0;
                     stackIn_11_0 = stackOut_10_0;
                     break L8;
@@ -162,25 +165,25 @@ final class ria extends gca {
               }
             } else {
               L9: {
-                stackOut_3_0 = (cia) var3;
+                stackOut_3_0 = (cia) (var3);
                 stackIn_5_0 = stackOut_3_0;
                 stackIn_4_0 = stackOut_3_0;
                 if (param0) {
-                  stackOut_5_0 = (cia) (Object) stackIn_5_0;
+                  stackOut_5_0 = (cia) ((Object) stackIn_5_0);
                   stackOut_5_1 = 0;
                   stackIn_6_0 = stackOut_5_0;
                   stackIn_6_1 = stackOut_5_1;
                   break L9;
                 } else {
-                  stackOut_4_0 = (cia) (Object) stackIn_4_0;
+                  stackOut_4_0 = (cia) ((Object) stackIn_4_0);
                   stackOut_4_1 = 1;
                   stackIn_6_0 = stackOut_4_0;
                   stackIn_6_1 = stackOut_4_1;
                   break L9;
                 }
               }
-              boolean discarded$5 = ((cia) (Object) stackIn_6_0).b(stackIn_6_1 != 0);
-              var3 = (cia) (Object) ((ria) this).field_j.c(0);
+              discarded$5 = ((cia) (Object) stackIn_6_0).b(stackIn_6_1 != 0);
+              var3 = (cia) ((Object) this.field_j.c(0));
               continue L5;
             }
           }
@@ -189,12 +192,15 @@ final class ria extends gca {
 
     public ria() {
         super(29);
-        ((ria) this).field_j = new eaa();
-        ((ria) this).field_l = ff.field_u.a();
+        this.field_j = new eaa();
+        this.field_l = ff.field_u.a();
     }
 
     public static void a(int param0) {
         field_i = null;
+        if (param0 != 127) {
+            return;
+        }
         field_k = null;
     }
 
@@ -211,7 +217,7 @@ final class ria extends gca {
           var4.a(119, 128, -2);
           var4.a(0, -15, 0, 0);
           var4.a(-120, 0);
-          ((ria) this).field_j.a((bw) (Object) var4, true);
+          this.field_j.a(var4, true);
           return;
         }
     }
@@ -225,7 +231,7 @@ final class ria extends gca {
         var8 = BachelorFridge.field_y;
         param0 -= 80;
         param2 += 12;
-        var4 = (cia) (Object) ((ria) this).field_j.b((byte) 90);
+        var4 = (cia) ((Object) this.field_j.b((byte) 90));
         L0: while (true) {
           if (var4 == null) {
             if (param1 <= 7) {
@@ -235,11 +241,11 @@ final class ria extends gca {
               return;
             }
           } else {
-            var5 = 256 - (var4.field_o << 1);
-            var6 = ((ria) this).field_l.field_n * var5 >> 8;
-            var7 = var5 * ((ria) this).field_l.field_o >> 8;
-            ((ria) this).field_l.c((var4.field_i >> 4) + param2 + -(var6 >> 1), (var4.field_h >> 9) + param0 - (-(var4.field_q >> 5) - -(var7 >> 1)), var6, var7, var4.field_o);
-            var4 = (cia) (Object) ((ria) this).field_j.c(0);
+            var5 = 256 - (var4.field_o << -874929823);
+            var6 = this.field_l.field_n * var5 >> -98916472;
+            var7 = var5 * this.field_l.field_o >> 426797736;
+            this.field_l.c((var4.field_i >> 1919389572) + param2 + -(var6 >> 1776320513), (var4.field_h >> -2105555191) + param0 - (-(var4.field_q >> 499640261) - -(var7 >> -1618465951)), var6, var7, var4.field_o);
+            var4 = (cia) ((Object) this.field_j.c(0));
             continue L0;
           }
         }

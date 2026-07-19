@@ -39,35 +39,31 @@ final class dha {
     private static String field_I;
 
     public static void a(int param0) {
-        int var1 = 0;
+        int var1 = 44 % ((-35 - param0) / 52);
         field_u = null;
         field_q = null;
     }
 
     dha() {
-        ((dha) this).field_n = 0;
-        ((dha) this).field_d = new int[256];
-        ((dha) this).field_i = new byte[18002];
-        ((dha) this).field_h = new byte[18002];
-        ((dha) this).field_s = new int[257];
-        ((dha) this).field_z = new int[6];
-        ((dha) this).field_l = new boolean[256];
-        ((dha) this).field_G = new byte[6][258];
-        ((dha) this).field_m = new boolean[16];
-        ((dha) this).field_f = new int[6][258];
-        ((dha) this).field_E = new int[6][258];
-        ((dha) this).field_g = new byte[4096];
-        ((dha) this).field_D = new byte[256];
-        ((dha) this).field_C = new int[16];
-        ((dha) this).field_y = 0;
-        ((dha) this).field_B = new int[6][258];
+        this.field_n = 0;
+        this.field_d = new int[256];
+        this.field_i = new byte[18002];
+        this.field_h = new byte[18002];
+        this.field_s = new int[257];
+        this.field_z = new int[6];
+        this.field_l = new boolean[256];
+        this.field_G = new byte[6][258];
+        this.field_m = new boolean[16];
+        this.field_f = new int[6][258];
+        this.field_E = new int[6][258];
+        this.field_g = new byte[4096];
+        this.field_D = new byte[256];
+        this.field_C = new int[16];
+        this.field_y = 0;
+        this.field_B = new int[6][258];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_I = "dha.A(";
     }
 }

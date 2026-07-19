@@ -11,9 +11,15 @@ final class sn {
 
     final static void a(byte param0, String param1) {
         System.out.println("Error: " + n.a(true, "%0a", "\n", param1));
+        if (param0 <= 43) {
+            field_c = (hl) null;
+        }
     }
 
     public static void a(int param0) {
+        if (param0 > -113) {
+            return;
+        }
         field_f = null;
         field_d = null;
         field_c = null;
@@ -22,14 +28,14 @@ final class sn {
     }
 
     final static String b(int param0) {
+        if (param0 != 11137) {
+            field_d = (String) null;
+            return rb.field_Nb;
+        }
         return rb.field_Nb;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "<%0> has lost connection.";
         field_a = new boolean[112];
         field_b = false;

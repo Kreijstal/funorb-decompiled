@@ -7,271 +7,158 @@ final class is {
     private static String field_z;
 
     final static int a(byte param0, int param1) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
-        var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        gb.field_i = 0;
-        oj.field_Gb = null;
-        js.field_a = null;
-        if (param0 == -94) {
-          var2 = hn.field_i;
-          hn.field_i = cf.field_D;
-          if (param1 != 51) {
-            if (50 != param1) {
-              L0: {
-                vp.field_o.field_p = 1;
-                cf.field_D = var2;
-                vp.field_o.field_a = vp.field_o.field_a + 1;
-                if (vp.field_o.field_a < 2) {
-                  break L0;
-                } else {
-                  if (param1 != 51) {
-                    break L0;
-                  } else {
-                    return 2;
-                  }
-                }
-              }
-              if (2 > vp.field_o.field_a) {
-                if (vp.field_o.field_a < 4) {
-                  return -1;
-                } else {
-                  return 1;
-                }
-              } else {
-                if (param1 == 50) {
-                  return 5;
-                } else {
-                  if (vp.field_o.field_a < 4) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                }
-              }
-            } else {
-              L1: {
-                vp.field_o.field_p = 5;
-                cf.field_D = var2;
-                vp.field_o.field_a = vp.field_o.field_a + 1;
-                if (vp.field_o.field_a < 2) {
-                  break L1;
-                } else {
-                  if (param1 != 51) {
-                    break L1;
-                  } else {
-                    return 2;
-                  }
-                }
-              }
-              if (2 > vp.field_o.field_a) {
-                if (vp.field_o.field_a < 4) {
-                  return -1;
-                } else {
-                  return 1;
-                }
-              } else {
-                if (param1 == 50) {
-                  return 5;
-                } else {
-                  if (vp.field_o.field_a < 4) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                }
-              }
-            }
+        L0: {
+          var3 = ShatteredPlansClient.field_F ? 1 : 0;
+          gb.field_i = 0;
+          oj.field_Gb = null;
+          js.field_a = null;
+          if (param0 == -94) {
+            break L0;
           } else {
-            vp.field_o.field_p = 2;
+            discarded$1 = is.a((byte) -54, 83);
+            break L0;
+          }
+        }
+        var2 = hn.field_i;
+        hn.field_i = cf.field_D;
+        if ((param1 ^ -1) != -52) {
+          if (50 != param1) {
+            vp.field_o.field_p = 1;
             cf.field_D = var2;
             vp.field_o.field_a = vp.field_o.field_a + 1;
             if (vp.field_o.field_a >= 2) {
               if (param1 != 51) {
-                if (2 > vp.field_o.field_a) {
-                  if (vp.field_o.field_a < 4) {
-                    return -1;
+                L1: {
+                  if (2 > vp.field_o.field_a) {
+                    break L1;
                   } else {
-                    return 1;
-                  }
-                } else {
-                  if (param1 == 50) {
-                    return 5;
-                  } else {
-                    if (vp.field_o.field_a < 4) {
-                      return -1;
+                    if (-51 == (param1 ^ -1)) {
+                      return 5;
                     } else {
-                      return 1;
+                      break L1;
                     }
                   }
+                }
+                if ((vp.field_o.field_a ^ -1) <= -5) {
+                  return 1;
+                } else {
+                  return -1;
                 }
               } else {
                 return 2;
               }
             } else {
-              if (2 > vp.field_o.field_a) {
-                if (vp.field_o.field_a < 4) {
-                  return -1;
+              L2: {
+                if (2 > vp.field_o.field_a) {
+                  break L2;
                 } else {
-                  return 1;
-                }
-              } else {
-                if (param1 == 50) {
-                  return 5;
-                } else {
-                  if (vp.field_o.field_a < 4) {
-                    return -1;
+                  if (-51 == (param1 ^ -1)) {
+                    return 5;
                   } else {
-                    return 1;
+                    break L2;
                   }
                 }
               }
-            }
-          }
-        } else {
-          int discarded$1 = is.a((byte) -54, 83);
-          var2 = hn.field_i;
-          hn.field_i = cf.field_D;
-          if (param1 != 51) {
-            if (50 != param1) {
-              vp.field_o.field_p = 1;
-              cf.field_D = var2;
-              vp.field_o.field_a = vp.field_o.field_a + 1;
-              if (vp.field_o.field_a >= 2) {
-                if (param1 == 51) {
-                  return 2;
-                } else {
-                  L2: {
-                    if (2 > vp.field_o.field_a) {
-                      break L2;
-                    } else {
-                      if (param1 == 50) {
-                        return 5;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  if (vp.field_o.field_a < 4) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                }
+              if ((vp.field_o.field_a ^ -1) > -5) {
+                return -1;
               } else {
+                return 1;
+              }
+            }
+          } else {
+            vp.field_o.field_p = 5;
+            cf.field_D = var2;
+            vp.field_o.field_a = vp.field_o.field_a + 1;
+            if (vp.field_o.field_a >= 2) {
+              if (param1 != 51) {
                 L3: {
                   if (2 > vp.field_o.field_a) {
                     break L3;
                   } else {
-                    if (param1 == 50) {
+                    if (-51 == (param1 ^ -1)) {
                       return 5;
                     } else {
                       break L3;
                     }
                   }
                 }
-                if (vp.field_o.field_a < 4) {
-                  return -1;
-                } else {
+                if ((vp.field_o.field_a ^ -1) <= -5) {
                   return 1;
-                }
-              }
-            } else {
-              vp.field_o.field_p = 5;
-              cf.field_D = var2;
-              vp.field_o.field_a = vp.field_o.field_a + 1;
-              if (vp.field_o.field_a >= 2) {
-                if (param1 == 51) {
-                  return 2;
                 } else {
-                  L4: {
-                    if (2 > vp.field_o.field_a) {
-                      break L4;
-                    } else {
-                      if (param1 == 50) {
-                        return 5;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
-                  if (vp.field_o.field_a < 4) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
+                  return -1;
                 }
               } else {
-                L5: {
-                  if (2 > vp.field_o.field_a) {
-                    break L5;
+                return 2;
+              }
+            } else {
+              L4: {
+                if (2 > vp.field_o.field_a) {
+                  break L4;
+                } else {
+                  if (-51 == (param1 ^ -1)) {
+                    return 5;
                   } else {
-                    if (param1 == 50) {
-                      return 5;
-                    } else {
-                      break L5;
-                    }
+                    break L4;
                   }
                 }
-                if (vp.field_o.field_a < 4) {
-                  return -1;
+              }
+              if ((vp.field_o.field_a ^ -1) <= -5) {
+                return 1;
+              } else {
+                return -1;
+              }
+            }
+          }
+        } else {
+          vp.field_o.field_p = 2;
+          cf.field_D = var2;
+          vp.field_o.field_a = vp.field_o.field_a + 1;
+          if (vp.field_o.field_a >= 2) {
+            if (param1 != 51) {
+              L5: {
+                if (2 > vp.field_o.field_a) {
+                  break L5;
                 } else {
-                  return 1;
+                  if (-51 == (param1 ^ -1)) {
+                    return 5;
+                  } else {
+                    break L5;
+                  }
+                }
+              }
+              if ((vp.field_o.field_a ^ -1) <= -5) {
+                return 1;
+              } else {
+                return -1;
+              }
+            } else {
+              return 2;
+            }
+          } else {
+            L6: {
+              if (2 > vp.field_o.field_a) {
+                break L6;
+              } else {
+                if (-51 == (param1 ^ -1)) {
+                  return 5;
+                } else {
+                  break L6;
                 }
               }
             }
-          } else {
-            vp.field_o.field_p = 2;
-            cf.field_D = var2;
-            vp.field_o.field_a = vp.field_o.field_a + 1;
-            if (vp.field_o.field_a >= 2) {
-              if (param1 == 51) {
-                return 2;
-              } else {
-                L6: {
-                  if (2 > vp.field_o.field_a) {
-                    break L6;
-                  } else {
-                    if (param1 == 50) {
-                      return 5;
-                    } else {
-                      break L6;
-                    }
-                  }
-                }
-                if (vp.field_o.field_a < 4) {
-                  return -1;
-                } else {
-                  return 1;
-                }
-              }
+            if ((vp.field_o.field_a ^ -1) <= -5) {
+              return 1;
             } else {
-              L7: {
-                if (2 > vp.field_o.field_a) {
-                  break L7;
-                } else {
-                  if (param1 == 50) {
-                    return 5;
-                  } else {
-                    break L7;
-                  }
-                }
-              }
-              if (vp.field_o.field_a < 4) {
-                return -1;
-              } else {
-                return 1;
-              }
+              return -1;
             }
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "is.A(";
     }
 }

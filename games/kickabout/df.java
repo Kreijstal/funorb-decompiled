@@ -9,10 +9,14 @@ final class df extends dj {
     static hd field_G;
 
     final static void d(boolean param0) {
+        int discarded$0 = 0;
         nl var1 = null;
         nl var2 = null;
+        if (!param0) {
+            discarded$0 = df.g(57);
+        }
         if (!(0 == et.field_d.field_R[1].field_g)) {
-            if (!(et.field_d.field_V.field_m != 1)) {
+            if (!((et.field_d.field_V.field_m ^ -1) != -2)) {
                 var1 = et.field_d.a((byte) 104, 0);
                 var2 = et.field_d.a((byte) -71, 1);
                 ej.b(var1.f(-121) + -var2.f(-99), -2, var1.a(true) + -var2.a(true), 10);
@@ -43,11 +47,7 @@ final class df extends dj {
         boolean[][] var24 = null;
         boolean[][] var25 = null;
         boolean[][] var27 = null;
-        boolean[][] var28 = null;
-        boolean[][] var30 = null;
-        boolean[][] var31 = null;
-        short[] var32 = null;
-        boolean[][] var33 = null;
+        short[] var29 = null;
         int stackIn_7_0 = 0;
         int stackIn_22_0 = 0;
         int stackOut_21_0 = 0;
@@ -55,37 +55,33 @@ final class df extends dj {
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
         var19 = Kickabout.field_G;
-        var31 = je.field_g[param0].field_l[0];
-        var28 = var31;
-        var25 = var28;
+        var25 = je.field_g[param0].field_l[0];
         var22 = var25;
         var20 = var22;
         var4 = var20;
-        var33 = je.field_g[param0].field_l[1];
-        var30 = var33;
-        var27 = var30;
+        var27 = je.field_g[param0].field_l[1];
         var24 = var27;
         var5 = var24;
         var6 = (short)param3;
         var7 = (short)param1;
-        var8 = new vn(of.field_f, true, false, true, true);
-        var32 = of.field_f.field_p;
+        var8 = new vn(of.field_f, param2, false, true, true);
+        var29 = of.field_f.field_p;
         var12 = var8.field_p;
         var13 = 0;
         var14 = 0;
         L0: while (true) {
-          if (var14 >= var31.length) {
-            var33 = var30;
+          if (var14 >= var25.length) {
+            var27 = var24;
             var13 = 0;
             var14 = 0;
             L1: while (true) {
-              if (var33.length <= var14) {
+              if (var27.length <= var14) {
                 return var8;
               } else {
                 var15 = 20;
                 var16 = 0;
                 L2: while (true) {
-                  if (var16 >= var33[0].length) {
+                  if (var16 >= var27[0].length) {
                     var13 += 3;
                     var14++;
                     continue L1;
@@ -108,11 +104,11 @@ final class df extends dj {
                     var21 = 0;
                     var18 = var21;
                     L4: while (true) {
-                      if (var32.length <= var21) {
+                      if (var29.length <= var21) {
                         var16++;
                         continue L2;
                       } else {
-                        if (var32[var21] == var9) {
+                        if (var29[var21] == var9) {
                           var12[var21] = (short)var10;
                           var21++;
                           continue L4;
@@ -130,7 +126,7 @@ final class df extends dj {
             var15 = 20;
             var16 = 0;
             L5: while (true) {
-              if (var16 >= var31[0].length) {
+              if (var16 >= var25[0].length) {
                 var13 += 3;
                 var14++;
                 continue L0;
@@ -151,12 +147,12 @@ final class df extends dj {
                 var9 = ks.a(var15, var13, 120, 7);
                 var18 = 0;
                 L7: while (true) {
-                  if (var18 >= var32.length) {
+                  if (var18 >= var29.length) {
                     var15 += 5;
                     var16++;
                     continue L5;
                   } else {
-                    if (var32[var18] == var9) {
+                    if (var29[var18] == var9) {
                       var12[var18] = (short)var10;
                       var18++;
                       continue L7;
@@ -176,6 +172,7 @@ final class df extends dj {
     }
 
     final void a(int param0, boolean param1) {
+        int discarded$1 = 0;
         int var3 = 0;
         int var4_int = 0;
         ot var4 = null;
@@ -196,26 +193,26 @@ final class df extends dj {
         L0: {
           var9 = Kickabout.field_G;
           super.a(param0, param1);
-          if (((df) this).field_C == 0) {
-            on.a(((df) this).field_j + 40, 198, 560, 200, 10, 65793, 128);
-            ms.a(wa.field_b, ((df) this).field_j + 40, 560, false, 0, 126);
-            un.field_d.a(c.field_h.toLowerCase(), 56 + ((df) this).field_j, 222, 16777215, -1);
+          if (this.field_C == 0) {
+            on.a(this.field_j + 40, 198, 560, 200, 10, 65793, 128);
+            ms.a(wa.field_b, this.field_j + 40, 560, false, 0, 126);
+            un.field_d.a(c.field_h.toLowerCase(), 56 + this.field_j, 222, 16777215, -1);
             var3 = 0;
             L1: while (true) {
               if (var3 >= 3) {
                 break L0;
               } else {
-                pb.field_C.c(ml.field_t[var3], 150 + ((df) this).field_j, 256 - -(50 * var3), 16777215, -1);
-                int discarded$1 = pb.field_C.a(jq.field_a[var3], ((df) this).field_j + 170, 243 - -(var3 * 50), 420, 300, 16777215, -1, 0, 0, 16);
+                pb.field_C.c(ml.field_t[var3], 150 + this.field_j, 256 - -(50 * var3), 16777215, -1);
+                discarded$1 = pb.field_C.a(jq.field_a[var3], this.field_j + 170, 243 - -(var3 * 50), 420, 300, 16777215, -1, 0, 0, 16);
                 var3++;
                 continue L1;
               }
             }
           } else {
-            if (((df) this).field_C == 1) {
+            if ((this.field_C ^ -1) == -2) {
               var3 = 0;
               L2: while (true) {
-                if (var3 >= 2) {
+                if ((var3 ^ -1) <= -3) {
                   var3 = 0;
                   L3: while (true) {
                     if (var3 >= 4) {
@@ -233,14 +230,14 @@ final class df extends dj {
                         }
                       }
                       var4 = stackIn_22_0;
-                      ((ut) (Object) var4).c(var3 * 45 + 380 + ((df) this).field_j, 145);
+                      ((ut) ((Object) var4)).c(var3 * 45 + 380 + this.field_j, 145);
                       var3++;
                       continue L3;
                     }
                   }
                 } else {
                   L5: {
-                    if (var3 != 1) {
+                    if ((var3 ^ -1) != -2) {
                       stackOut_7_0 = 0;
                       stackIn_8_0 = stackOut_7_0;
                       break L5;
@@ -264,7 +261,7 @@ final class df extends dj {
                   }
                   L7: {
                     var5 = stackIn_11_0;
-                    var5 = var5 + ((df) this).field_j;
+                    var5 = var5 + this.field_j;
                     var6 = 146;
                     on.a(-10 + var5, 126, 265, 270, 10, 65793, 140);
                     if (var3 != 1) {
@@ -297,6 +294,9 @@ final class df extends dj {
 
     public static void c(boolean param0) {
         field_F = null;
+        if (param0) {
+            field_H = 29;
+        }
         field_I = null;
         field_G = null;
     }
@@ -306,9 +306,9 @@ final class df extends dj {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int stackIn_14_0 = 0;
+        int stackIn_16_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
+        int stackOut_15_0 = 0;
         var3 = Kickabout.field_G;
         try {
           L0: {
@@ -316,34 +316,42 @@ final class df extends dj {
             L1: while (true) {
               if (!nk.b((byte) -59)) {
                 L2: {
-                  re.field_c.a(-21174, ts.b(n.field_m, el.field_A, 16756), ts.b(vc.field_y, sm.field_q, 16756));
-                  if (!re.field_c.c(-1)) {
+                  if (param0 < -35) {
                     break L2;
                   } else {
-                    var1_int = 1;
+                    df.c(true);
                     break L2;
                   }
                 }
                 L3: {
-                  var2 = 0;
-                  if (var1_int == 0) {
+                  re.field_c.a(-21174, ts.b(n.field_m, el.field_A, 16756), ts.b(vc.field_y, sm.field_q, 16756));
+                  if (!re.field_c.c(-1)) {
                     break L3;
                   } else {
-                    if (re.field_c.field_e >= 0) {
+                    var1_int = 1;
+                    break L3;
+                  }
+                }
+                L4: {
+                  var2 = 0;
+                  if (var1_int == 0) {
+                    break L4;
+                  } else {
+                    if ((re.field_c.field_e ^ -1) <= -1) {
                       var2 = gl.field_d[re.field_c.field_e];
                       if (2 == var2) {
                         dh.c((byte) -77);
-                        break L3;
+                        break L4;
                       } else {
-                        break L3;
+                        break L4;
                       }
                     } else {
-                      break L3;
+                      break L4;
                     }
                   }
                 }
-                stackOut_13_0 = var2;
-                stackIn_14_0 = stackOut_13_0;
+                stackOut_15_0 = var2;
+                stackIn_16_0 = stackOut_15_0;
                 break L0;
               } else {
                 re.field_c.d(105);
@@ -359,16 +367,12 @@ final class df extends dj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "df.K(" + -61 + ')');
+          throw nb.a((Throwable) ((Object) var1), "df.K(" + param0 + ')');
         }
-        return stackIn_14_0;
+        return stackIn_16_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_H = 0;
     }
 }

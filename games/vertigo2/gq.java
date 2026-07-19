@@ -17,7 +17,7 @@ public class gq {
 
     public static File a(String param0, int param1) {
         if (param1 >= -118) {
-            field_d = null;
+            field_d = (Hashtable) null;
             return gq.a(0, field_a, param0, field_e);
         }
         return gq.a(0, field_a, param0, field_e);
@@ -69,10 +69,6 @@ public class gq {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = false;
         field_d = new Hashtable(16);
     }

@@ -14,7 +14,7 @@ final class lj {
     public static void a(byte param0) {
         field_a = null;
         if (param0 != 108) {
-            field_a = null;
+            field_a = (int[]) null;
         }
     }
 
@@ -48,7 +48,7 @@ final class lj {
         try {
           L0: {
             L1: {
-              ((lj) this).field_c = param0;
+              this.field_c = param0;
               stackOut_1_0 = this;
               stackIn_3_0 = stackOut_1_0;
               stackIn_2_0 = stackOut_1_0;
@@ -67,18 +67,18 @@ final class lj {
               }
             }
             L2: {
-              ((lj) this).field_d = stackIn_4_1 != 0;
-              if (null != ((lj) this).field_c) {
+              ((lj) (this)).field_d = stackIn_4_1 != 0;
+              if (null != this.field_c) {
                 break L2;
               } else {
-                ((lj) this).field_c = "";
+                this.field_c = "";
                 break L2;
               }
             }
-            if (0 != ((lj) this).field_c.length()) {
+            if (0 != this.field_c.length()) {
               break L0;
             } else {
-              ((lj) this).field_d = false;
+              this.field_d = false;
               return;
             }
           }
@@ -86,23 +86,23 @@ final class lj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("lj.<init>(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -110,31 +110,27 @@ final class lj {
               break L3;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
     final boolean a(int param0) {
         if (param0 <= 86) {
-            ((lj) this).field_c = null;
-            return ((lj) this).field_d;
+            this.field_c = (String) null;
+            return this.field_d;
         }
-        return ((lj) this).field_d;
+        return this.field_d;
     }
 
     final String a(boolean param0) {
         if (!param0) {
             lj.a((byte) 48);
-            return ((lj) this).field_c;
+            return this.field_c;
         }
-        return ((lj) this).field_c;
+        return this.field_c;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 640;
     }
 }

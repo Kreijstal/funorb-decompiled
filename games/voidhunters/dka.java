@@ -5,7 +5,7 @@ final class dka {
     int field_a;
 
     dka(int param0) {
-        ((dka) this).field_a = param0;
+        this.field_a = param0;
     }
 
     public final String toString() {

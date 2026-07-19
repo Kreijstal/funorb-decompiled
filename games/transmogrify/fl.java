@@ -10,24 +10,31 @@ final class fl {
     static boolean field_c;
 
     final wf a(int param0) {
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         int var2 = 0;
         int var3 = 0;
         wf var4 = null;
         wf var5 = null;
         wf var8 = null;
         var3 = Transmogrify.field_A ? 1 : 0;
-        if (((fl) this).field_f > 0) {
-          if (((fl) this).field_a == ((fl) this).field_e[((fl) this).field_f - 1]) {
+        if (-1 > (this.field_f ^ -1)) {
+          if (this.field_a == this.field_e[this.field_f - 1]) {
             L0: while (true) {
-              if (((fl) this).field_d > ((fl) this).field_f) {
-                int fieldTemp$2 = ((fl) this).field_f;
-                ((fl) this).field_f = ((fl) this).field_f + 1;
-                var5 = ((fl) this).field_e[fieldTemp$2].field_b;
-                if (((fl) this).field_e[((fl) this).field_f + -1] != var5) {
-                  ((fl) this).field_a = var5.field_b;
+              if (this.field_d > this.field_f) {
+                fieldTemp$2 = this.field_f;
+                this.field_f = this.field_f + 1;
+                var5 = this.field_e[fieldTemp$2].field_b;
+                if (this.field_e[this.field_f + -1] != var5) {
+                  this.field_a = var5.field_b;
                   return var5;
                 } else {
-                  continue L0;
+                  if (var3 == 0) {
+                    continue L0;
+                  } else {
+                    var2 = 6 % ((-26 - param0) / 58);
+                    return null;
+                  }
                 }
               } else {
                 var2 = 6 % ((-26 - param0) / 58);
@@ -35,21 +42,26 @@ final class fl {
               }
             }
           } else {
-            var8 = ((fl) this).field_a;
-            ((fl) this).field_a = var8.field_b;
+            var8 = this.field_a;
+            this.field_a = var8.field_b;
             return var8;
           }
         } else {
           L1: while (true) {
-            if (((fl) this).field_d > ((fl) this).field_f) {
-              int fieldTemp$3 = ((fl) this).field_f;
-              ((fl) this).field_f = ((fl) this).field_f + 1;
-              var4 = ((fl) this).field_e[fieldTemp$3].field_b;
-              if (((fl) this).field_e[((fl) this).field_f + -1] != var4) {
-                ((fl) this).field_a = var4.field_b;
+            if (this.field_d > this.field_f) {
+              fieldTemp$3 = this.field_f;
+              this.field_f = this.field_f + 1;
+              var4 = this.field_e[fieldTemp$3].field_b;
+              if (this.field_e[this.field_f + -1] != var4) {
+                this.field_a = var4.field_b;
                 return var4;
               } else {
-                continue L1;
+                if (var3 == 0) {
+                  continue L1;
+                } else {
+                  var2 = 6 % ((-26 - param0) / 58);
+                  return null;
+                }
               }
             } else {
               var2 = 6 % ((-26 - param0) / 58);
@@ -63,43 +75,67 @@ final class fl {
         wf var4 = null;
         wf var5 = null;
         int var6 = 0;
-        Object var7 = null;
+        wf var7 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_6_0 = 0;
         var6 = Transmogrify.field_A ? 1 : 0;
-        var4 = ((fl) this).field_e[(int)((long)(-1 + ((fl) this).field_d) & param0)];
-        ((fl) this).field_b = var4.field_b;
+        var4 = this.field_e[(int)((long)(-1 + this.field_d) & param0)];
+        this.field_b = var4.field_b;
         L0: while (true) {
-          if (((fl) this).field_b == var4) {
-            ((fl) this).field_b = null;
-            if (param1 == 0) {
-              return null;
-            } else {
-              var7 = null;
-              ((fl) this).a(28L, (byte) 9, (wf) null);
-              return null;
+          L1: {
+            L2: {
+              if (this.field_b == var4) {
+                break L2;
+              } else {
+                stackOut_2_0 = ((this.field_b.field_c ^ -1L) < (param0 ^ -1L) ? -1 : ((this.field_b.field_c ^ -1L) == (param0 ^ -1L) ? 0 : 1));
+                stackIn_7_0 = stackOut_2_0;
+                stackIn_3_0 = stackOut_2_0;
+                if (var6 != 0) {
+                  break L1;
+                } else {
+                  if (stackIn_3_0 != 0) {
+                    this.field_b = this.field_b.field_b;
+                    if (var6 == 0) {
+                      continue L0;
+                    } else {
+                      break L2;
+                    }
+                  } else {
+                    var5 = this.field_b;
+                    this.field_b = this.field_b.field_b;
+                    return var5;
+                  }
+                }
+              }
             }
+            this.field_b = null;
+            stackOut_6_0 = param1;
+            stackIn_7_0 = stackOut_6_0;
+            break L1;
+          }
+          if (stackIn_7_0 == 0) {
+            return null;
           } else {
-            if (~((fl) this).field_b.field_c != ~param0) {
-              ((fl) this).field_b = ((fl) this).field_b.field_b;
-              continue L0;
-            } else {
-              var5 = ((fl) this).field_b;
-              ((fl) this).field_b = ((fl) this).field_b.field_b;
-              return var5;
-            }
+            var7 = (wf) null;
+            this.a(28L, (byte) 9, (wf) null);
+            return null;
           }
         }
     }
 
     final wf b(int param0) {
-        Object var3 = null;
+        nd discarded$2 = null;
+        ag var3 = null;
         if (param0 != 1000) {
-          var3 = null;
-          nd discarded$2 = fl.a((ag) null, 122, -2);
-          ((fl) this).field_f = 0;
-          return ((fl) this).a(71);
+          var3 = (ag) null;
+          discarded$2 = fl.a((ag) null, 122, -2);
+          this.field_f = 0;
+          return this.a(71);
         } else {
-          ((fl) this).field_f = 0;
-          return ((fl) this).a(71);
+          this.field_f = 0;
+          return this.a(71);
         }
     }
 
@@ -109,7 +145,7 @@ final class fl {
             if (!(null == param2.field_f)) {
                 param2.c(5);
             }
-            var5 = ((fl) this).field_e[(int)(param0 & (long)(-1 + ((fl) this).field_d))];
+            var5 = this.field_e[(int)(param0 & (long)(-1 + this.field_d))];
             param2.field_b = var5;
             int var6 = 70 / ((3 - param1) / 58);
             param2.field_f = var5.field_f;
@@ -117,7 +153,7 @@ final class fl {
             param2.field_b.field_f = param2;
             param2.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "fl.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "fl.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -159,23 +195,23 @@ final class fl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("fl.C(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -183,27 +219,34 @@ final class fl {
               break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
 
     fl(int param0) {
+        wf dupTemp$2 = null;
         int var2 = 0;
         wf var3 = null;
-        ((fl) this).field_f = 0;
-        ((fl) this).field_e = new wf[param0];
-        ((fl) this).field_d = param0;
+        int var4 = 0;
+        var4 = Transmogrify.field_A ? 1 : 0;
+        this.field_f = 0;
+        this.field_e = new wf[param0];
+        this.field_d = param0;
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            wf dupTemp$2 = new wf();
+            dupTemp$2 = new wf();
             var3 = dupTemp$2;
-            ((fl) this).field_e[var2] = dupTemp$2;
+            this.field_e[var2] = dupTemp$2;
             var3.field_b = var3;
             var3.field_f = var3;
             var2++;
-            continue L0;
+            if (var4 == 0) {
+              continue L0;
+            } else {
+              return;
+            }
           } else {
             return;
           }

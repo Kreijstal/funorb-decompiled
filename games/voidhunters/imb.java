@@ -10,28 +10,31 @@ final class imb implements ntb, utb {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 <= 54) {
+            imb.a(64);
+        }
     }
 
     public final void a(faa param0, byte param1) {
-        param0.a(-632, ((imb) this).field_c + 1, 5);
-        param0.a(-632, ((imb) this).field_e, 32);
+        param0.a(-632, this.field_c + 1, 5);
+        param0.a(-632, this.field_e, 32);
         if (param1 > -91) {
             return;
         }
         try {
-            param0.a(-632, ((imb) this).field_d, 32);
+            param0.a(-632, this.field_d, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "imb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "imb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void a(faa param0, int param1) {
         try {
-            ((imb) this).field_c = param0.i(0, 5) + -1;
-            ((imb) this).field_e = param0.i(0, param1);
-            ((imb) this).field_d = param0.i(0, 32);
+            this.field_c = param0.i(0, 5) + -1;
+            this.field_e = param0.i(0, param1);
+            this.field_d = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "imb.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "imb.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -62,8 +65,8 @@ final class imb implements ntb, utb {
           L0: {
             L1: {
               var4 = -41 % ((param0 - 22) / 59);
-              var3 = (imb) (Object) param1;
-              if (var3.field_c == ((imb) this).field_c) {
+              var3 = (imb) ((Object) param1);
+              if (var3.field_c == this.field_c) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -79,23 +82,23 @@ final class imb implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_0 = (RuntimeException) (var3_ref);
             stackOut_4_1 = new StringBuilder().append("imb.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -103,7 +106,7 @@ final class imb implements ntb, utb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0 != 0;
     }
@@ -112,21 +115,21 @@ final class imb implements ntb, utb {
         imb var5 = null;
         imb var6 = null;
         try {
-            var5 = (imb) (Object) param1;
+            var5 = (imb) ((Object) param1);
             var6 = var5;
             if (param0 <= 54) {
-                ((imb) this).field_d = -122;
+                this.field_d = -122;
             }
-            var6.field_e = ((imb) this).field_e;
-            var6.field_d = ((imb) this).field_d;
-            var6.field_c = ((imb) this).field_c;
+            var6.field_e = this.field_e;
+            var6.field_d = this.field_d;
+            var6.field_c = this.field_c;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "imb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "imb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     imb() {
-        ((imb) this).field_c = -1;
+        this.field_c = -1;
     }
 
     public final void b(faa param0, int param1) {
@@ -134,27 +137,27 @@ final class imb implements ntb, utb {
             return;
         }
         try {
-            param0.a(-632, 1 + ((imb) this).field_c, 5);
+            param0.a(-632, 1 + this.field_c, 5);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "imb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "imb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void a(faa param0, boolean param1) {
         try {
             if (param1) {
-                ((imb) this).field_e = -38;
+                this.field_e = -38;
             }
-            ((imb) this).field_c = param0.i(0, 5) - 1;
+            this.field_c = param0.i(0, 5) - 1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "imb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "imb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void a(tv param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        tv var5 = null;
         imb var6 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -175,10 +178,10 @@ final class imb implements ntb, utb {
         try {
           L0: {
             L1: {
-              var6 = (imb) (Object) param0;
+              var6 = (imb) ((Object) param0);
               var4 = 0;
-              if (var6.field_c != ((imb) this).field_c) {
-                System.out.println("int connected_component_idx has changed. before=" + var6.field_c + ", now=" + ((imb) this).field_c);
+              if (var6.field_c != this.field_c) {
+                System.out.println("int connected_component_idx has changed. before=" + var6.field_c + ", now=" + this.field_c);
                 var4 = 1;
                 break L1;
               } else {
@@ -186,20 +189,20 @@ final class imb implements ntb, utb {
               }
             }
             L2: {
-              if (((imb) this).field_e == var6.field_e) {
+              if (this.field_e == var6.field_e) {
                 break L2;
               } else {
                 var4 = 1;
-                System.out.println("int worldx has changed. before=" + var6.field_e + ", now=" + ((imb) this).field_e);
+                System.out.println("int worldx has changed. before=" + var6.field_e + ", now=" + this.field_e);
                 break L2;
               }
             }
             L3: {
-              if (var6.field_d == ((imb) this).field_d) {
+              if (var6.field_d == this.field_d) {
                 break L3;
               } else {
                 var4 = 1;
-                System.out.println("int worldy has changed. before=" + var6.field_d + ", now=" + ((imb) this).field_d);
+                System.out.println("int worldy has changed. before=" + var6.field_d + ", now=" + this.field_d);
                 break L3;
               }
             }
@@ -207,8 +210,8 @@ final class imb implements ntb, utb {
               if (param1 < -19) {
                 break L4;
               } else {
-                var5 = null;
-                ((imb) this).b((byte) 67, (tv) null);
+                var5 = (tv) null;
+                this.b((byte) 67, (tv) null);
                 break L4;
               }
             }
@@ -223,23 +226,23 @@ final class imb implements ntb, utb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var3;
+            stackOut_12_0 = (RuntimeException) (var3);
             stackOut_12_1 = new StringBuilder().append("imb.F(");
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L5;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -247,29 +250,25 @@ final class imb implements ntb, utb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        Object var9 = null;
-        ((imb) this).field_d = (param3 * param6 + param0 * param5 >> 16) + param2;
+        faa var9 = null;
+        this.field_d = (param3 * param6 + param0 * param5 >> 1448795056) + param2;
         if (param4 != -665140432) {
-          var9 = null;
-          ((imb) this).a((faa) null, true);
-          ((imb) this).field_e = param1 - -(-(param6 * param0) + param3 * param5 >> 16);
+          var9 = (faa) null;
+          this.a((faa) null, true);
+          this.field_e = param1 - -(-(param6 * param0) + param3 * param5 >> -665140432);
           return;
         } else {
-          ((imb) this).field_e = param1 - -(-(param6 * param0) + param3 * param5 >> 16);
+          this.field_e = param1 - -(-(param6 * param0) + param3 * param5 >> -665140432);
           return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Accurate and long ranged. High energy consumption";
     }
 }

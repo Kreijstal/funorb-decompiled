@@ -8,11 +8,11 @@ final class hva extends RuntimeException {
 
     public static void a(int param0) {
         field_c = null;
-        int var1 = 0;
+        int var1 = 23 % ((79 - param0) / 46);
     }
 
     hva(Throwable param0, String param1) {
-        ((hva) this).field_b = param0;
-        ((hva) this).field_a = param1;
+        this.field_b = param0;
+        this.field_a = param1;
     }
 }

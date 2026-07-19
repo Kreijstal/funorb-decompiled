@@ -19,6 +19,11 @@ final class ng {
     public static void a(int param0) {
         field_i = null;
         field_e = null;
+        if (param0 != -1) {
+            ng.a(-11L, -116);
+            field_k = null;
+            return;
+        }
         field_k = null;
     }
 
@@ -26,7 +31,7 @@ final class ng {
         if (!(kf.field_d != null)) {
             return;
         }
-        ci.a((java.awt.Canvas) (Object) kf.field_d, 0);
+        ci.a(kf.field_d, 0);
         kf.field_d.a(false, qa.field_a);
         kf.field_d = null;
         if (!(ij.field_o == null)) {
@@ -76,7 +81,7 @@ final class ng {
                 break L0;
               } else {
                 var9 = 152 + var8 * 48 / param0;
-                var10 = var9 | (var9 << 8 | var9 << 16);
+                var10 = var9 | (var9 << 1855635080 | var9 << 1544973296);
                 eh.field_f[param3 + eh.field_g * (var8 + param4)] = var10;
                 eh.field_f[param1 + param3 + (param4 - -var8) * eh.field_g] = var10;
                 var8++;
@@ -87,7 +92,7 @@ final class ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var5, "ng.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw lj.a((Throwable) ((Object) var5), "ng.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -95,11 +100,22 @@ final class ng {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
-            {
-              L0: {
-                Thread.sleep(param0);
-                break L0;
+            if (param1 == 1855635080) {
+              try {
+                L0: {
+                  Thread.sleep(param0);
+                  break L0;
+                }
+              } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L1: {
+                  var3 = (InterruptedException) (Object) decompiledCaughtException;
+                  break L1;
+                }
               }
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -109,10 +125,6 @@ final class ng {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = -1;
         field_i = "Sound: ";
         field_k = "Data server full or too many connections from your address. Please try again in a few minutes.";

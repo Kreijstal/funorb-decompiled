@@ -50,10 +50,10 @@ final class bg extends tg {
         int stackOut_19_1 = 0;
         int stackOut_19_2 = 0;
         L0: {
-          var3 = ((bg) this).field_s >> 1;
-          var4 = ((bg) this).field_q >> 1;
-          param0 = param0 + ((bg) this).field_r / 2;
-          param1 = param1 + ((bg) this).field_p / 2;
+          var3 = this.field_s >> 1;
+          var4 = this.field_q >> 1;
+          param0 = param0 + this.field_r / 2;
+          param1 = param1 + this.field_p / 2;
           if (param0 >= na.field_g) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -67,7 +67,7 @@ final class bg extends tg {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= na.field_b) {
-            stackOut_5_0 = ((bg) this).field_s - 2;
+            stackOut_5_0 = this.field_s - 2;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -91,7 +91,7 @@ final class bg extends tg {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= na.field_f) {
-            stackOut_11_0 = ((bg) this).field_q - 2;
+            stackOut_11_0 = this.field_q - 2;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -106,7 +106,7 @@ final class bg extends tg {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((bg) this).field_s + var5;
+            var10 = var9 * this.field_s + var5;
             var11 = (param1 + (var9 >> 1)) * na.field_e + (param0 + (var5 >> 1));
             var12 = var5;
             L5: while (true) {
@@ -142,14 +142,14 @@ final class bg extends tg {
                     }
                   } else {
                     L7: {
-                      stackOut_18_0 = ((bg) this).field_v;
+                      stackOut_18_0 = this.field_v;
                       stackOut_18_1 = var10 + (var19 & 1);
                       stackIn_20_0 = stackOut_18_0;
                       stackIn_20_1 = stackOut_18_1;
                       stackIn_19_0 = stackOut_18_0;
                       stackIn_19_1 = stackOut_18_1;
                       if ((var19 & 2) != 0) {
-                        stackOut_20_0 = (int[]) (Object) stackIn_20_0;
+                        stackOut_20_0 = (int[]) ((Object) stackIn_20_0);
                         stackOut_20_1 = stackIn_20_1;
                         stackOut_20_2 = 0;
                         stackIn_21_0 = stackOut_20_0;
@@ -157,9 +157,9 @@ final class bg extends tg {
                         stackIn_21_2 = stackOut_20_2;
                         break L7;
                       } else {
-                        stackOut_19_0 = (int[]) (Object) stackIn_19_0;
+                        stackOut_19_0 = (int[]) ((Object) stackIn_19_0);
                         stackOut_19_1 = stackIn_19_1;
-                        stackOut_19_2 = ((bg) this).field_s;
+                        stackOut_19_2 = this.field_s;
                         stackIn_21_0 = stackOut_19_0;
                         stackIn_21_1 = stackOut_19_1;
                         stackIn_21_2 = stackOut_19_2;
@@ -191,12 +191,12 @@ final class bg extends tg {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((bg) this).field_r;
-          param1 = param1 + ((bg) this).field_p;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_p;
           var3 = param0 + param1 * na.field_e;
           var4 = 0;
-          var5 = ((bg) this).field_q;
-          var6 = ((bg) this).field_s;
+          var5 = this.field_q;
+          var6 = this.field_s;
           var7 = na.field_e - var6;
           var8 = 0;
           if (param1 >= na.field_i) {
@@ -247,7 +247,7 @@ final class bg extends tg {
           return;
         } else {
           if (var5 > 0) {
-            bg.d(na.field_d, ((bg) this).field_v, 0, var4, var3, var6, var5, var7, var8);
+            bg.d(na.field_d, this.field_v, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -264,12 +264,12 @@ final class bg extends tg {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((bg) this).field_r;
-          param1 = param1 + ((bg) this).field_p;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_p;
           var4 = param0 + param1 * na.field_e;
           var5 = 0;
-          var6 = ((bg) this).field_q;
-          var7 = ((bg) this).field_s;
+          var6 = this.field_q;
+          var7 = this.field_s;
           var8 = na.field_e - var7;
           var9 = 0;
           if (param1 >= na.field_i) {
@@ -320,7 +320,7 @@ final class bg extends tg {
           return;
         } else {
           if (var6 > 0) {
-            bg.d(na.field_d, ((bg) this).field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+            bg.d(na.field_d, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -333,17 +333,19 @@ final class bg extends tg {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int incrementValue$0 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = -param5; var11 < 0; var11++) {
                 var12 = (param1[param3] >>> 24) * param9 >> 8;
                 var13 = 256 - var12;
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
                 var14 = param1[incrementValue$0];
                 var15 = param0[param4];
-                int incrementValue$1 = param4;
+                incrementValue$1 = param4;
                 param4++;
                 param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
             }
@@ -361,12 +363,12 @@ final class bg extends tg {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((bg) this).field_r;
-          param1 = param1 + ((bg) this).field_p;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_p;
           var4 = param0 + param1 * na.field_e;
           var5 = 0;
-          var6 = ((bg) this).field_q;
-          var7 = ((bg) this).field_s;
+          var6 = this.field_q;
+          var7 = this.field_s;
           var8 = na.field_e - var7;
           var9 = 0;
           if (param1 >= na.field_i) {
@@ -417,7 +419,7 @@ final class bg extends tg {
           return;
         } else {
           if (var6 > 0) {
-            bg.e(na.field_d, ((bg) this).field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+            bg.e(na.field_d, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -426,6 +428,8 @@ final class bg extends tg {
     }
 
     private final static void f(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -446,7 +450,7 @@ final class bg extends tg {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -460,7 +464,7 @@ final class bg extends tg {
                   var15 = (param2 & 16711935) * param9 & -16711936;
                   var16 = (param2 & 65280) * param9 & 16711680;
                   param2 = (var15 | var16) >>> 8;
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var13 & 16711935) * var14 & -16711936) + ((param2 & 65280) * var12 + (var13 & 65280) * var14 & 16711680) >>> 8;
                   var11++;
@@ -473,6 +477,8 @@ final class bg extends tg {
     }
 
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -493,7 +499,7 @@ final class bg extends tg {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3--;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -504,7 +510,7 @@ final class bg extends tg {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
@@ -521,6 +527,8 @@ final class bg extends tg {
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var14 = 0;
         param8 = -param10;
         L0: while (true) {
@@ -535,7 +543,7 @@ final class bg extends tg {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -550,7 +558,7 @@ final class bg extends tg {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -571,12 +579,12 @@ final class bg extends tg {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((bg) this).field_r;
-          param1 = param1 + ((bg) this).field_p;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_p;
           var4 = param0 + param1 * na.field_e;
           var5 = 0;
-          var6 = ((bg) this).field_q;
-          var7 = ((bg) this).field_s;
+          var6 = this.field_q;
+          var7 = this.field_s;
           var8 = na.field_e - var7;
           var9 = 0;
           if (param1 >= na.field_i) {
@@ -627,7 +635,7 @@ final class bg extends tg {
           return;
         } else {
           if (var6 > 0) {
-            bg.b(0, 0, 0, na.field_d, ((bg) this).field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            bg.b(0, 0, 0, na.field_d, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -652,30 +660,30 @@ final class bg extends tg {
         } else {
           if (param3 > 0) {
             L0: {
-              var5 = ((bg) this).field_s;
-              var6 = ((bg) this).field_q;
+              var5 = this.field_s;
+              var6 = this.field_q;
               var7 = 0;
               var8 = 0;
-              var9 = ((bg) this).field_t;
-              var10 = ((bg) this).field_o;
+              var9 = this.field_t;
+              var10 = this.field_o;
               var11 = (var9 << 16) / param2;
               var12 = (var10 << 16) / param3;
-              if (((bg) this).field_r <= 0) {
+              if (this.field_r <= 0) {
                 break L0;
               } else {
-                var13 = ((((bg) this).field_r << 16) + var11 - 1) / var11;
+                var13 = ((this.field_r << 16) + var11 - 1) / var11;
                 param0 = param0 + var13;
-                var7 = var7 + (var13 * var11 - (((bg) this).field_r << 16));
+                var7 = var7 + (var13 * var11 - (this.field_r << 16));
                 break L0;
               }
             }
             L1: {
-              if (((bg) this).field_p <= 0) {
+              if (this.field_p <= 0) {
                 break L1;
               } else {
-                var13 = ((((bg) this).field_p << 16) + var12 - 1) / var12;
+                var13 = ((this.field_p << 16) + var12 - 1) / var12;
                 param1 = param1 + var13;
-                var8 = var8 + (var13 * var12 - (((bg) this).field_p << 16));
+                var8 = var8 + (var13 * var12 - (this.field_p << 16));
                 break L1;
               }
             }
@@ -738,7 +746,7 @@ final class bg extends tg {
                 break L7;
               }
             }
-            bg.b(na.field_d, ((bg) this).field_v, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+            bg.b(na.field_d, this.field_v, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
             return;
           } else {
             return;
@@ -747,6 +755,8 @@ final class bg extends tg {
     }
 
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -780,7 +790,7 @@ final class bg extends tg {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
                 param2 = param1[incrementValue$2];
                 var17 = param2 >>> 24;
@@ -815,7 +825,7 @@ final class bg extends tg {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
-                  int incrementValue$3 = param4;
+                  incrementValue$3 = param4;
                   param4++;
                   param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
@@ -833,6 +843,7 @@ final class bg extends tg {
         int var15 = 0;
         int var16 = 0;
         int var18 = 0;
+        int incrementValue$0 = 0;
         int var17 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
@@ -843,7 +854,7 @@ final class bg extends tg {
                 if (var16 != 0) {
                     var17 = 256 - var16;
                     var18 = param0[param5];
-                    int incrementValue$0 = param5;
+                    incrementValue$0 = param5;
                     param5++;
                     param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
                 } else {
@@ -866,12 +877,12 @@ final class bg extends tg {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + (((bg) this).field_t - ((bg) this).field_s - ((bg) this).field_r);
-          param1 = param1 + ((bg) this).field_p;
+          param0 = param0 + (this.field_t - this.field_s - this.field_r);
+          param1 = param1 + this.field_p;
           var3 = param0 + param1 * na.field_e;
-          var4 = ((bg) this).field_s - 1;
-          var5 = ((bg) this).field_q;
-          var6 = ((bg) this).field_s;
+          var4 = this.field_s - 1;
+          var5 = this.field_q;
+          var6 = this.field_s;
           var7 = na.field_e - var6;
           var8 = var6 + var6;
           if (param1 >= na.field_i) {
@@ -922,7 +933,7 @@ final class bg extends tg {
           return;
         } else {
           if (var5 > 0) {
-            bg.e(na.field_d, ((bg) this).field_v, 0, var4, var3, var6, var5, var7, var8);
+            bg.e(na.field_d, this.field_v, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -940,12 +951,12 @@ final class bg extends tg {
         int var10 = 0;
         if (param2 != 256) {
           L0: {
-            param0 = param0 + ((bg) this).field_r;
-            param1 = param1 + ((bg) this).field_p;
+            param0 = param0 + this.field_r;
+            param1 = param1 + this.field_p;
             var4 = param0 + param1 * na.field_e;
             var5 = 0;
-            var6 = ((bg) this).field_q;
-            var7 = ((bg) this).field_s;
+            var6 = this.field_q;
+            var7 = this.field_s;
             var8 = na.field_e - var7;
             var9 = 0;
             if (param1 >= na.field_i) {
@@ -996,19 +1007,21 @@ final class bg extends tg {
             return;
           } else {
             if (var6 > 0) {
-              bg.f(na.field_d, ((bg) this).field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+              bg.f(na.field_d, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               return;
             }
           }
         } else {
-          ((bg) this).a(param0, param1);
+          this.a(param0, param1);
           return;
         }
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -1029,7 +1042,7 @@ final class bg extends tg {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
@@ -1040,7 +1053,7 @@ final class bg extends tg {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
@@ -1065,12 +1078,12 @@ final class bg extends tg {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((bg) this).field_r;
-          param1 = param1 + ((bg) this).field_p;
+          param0 = param0 + this.field_r;
+          param1 = param1 + this.field_p;
           var3 = param0 + param1 * na.field_e;
           var4 = 0;
-          var5 = ((bg) this).field_q;
-          var6 = ((bg) this).field_s;
+          var5 = this.field_q;
+          var6 = this.field_s;
           var7 = na.field_e - var6;
           var8 = 0;
           if (param1 >= na.field_i) {
@@ -1121,7 +1134,7 @@ final class bg extends tg {
           return;
         } else {
           if (var5 > 0) {
-            bg.d(na.field_d, ((bg) this).field_v, 0, var4, var3, var6, var5, var7, var8);
+            bg.d(na.field_d, this.field_v, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -1130,6 +1143,15 @@ final class bg extends tg {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         double var7 = 0.0;
         int var9 = 0;
         int var10 = 0;
@@ -1165,19 +1187,19 @@ final class bg extends tg {
         int var41 = 0;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((bg) this).field_r << 4);
-            param1 = param1 - (((bg) this).field_p << 4);
+            param0 = param0 - (this.field_r << 4);
+            param1 = param1 - (this.field_p << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((bg) this).field_s << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((bg) this).field_s << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((bg) this).field_q << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((bg) this).field_q << 4) - param1) * var10;
-            var17 = ((((bg) this).field_s << 4) - param0) * var10 + ((((bg) this).field_q << 4) - param1) * var9;
-            var18 = -((((bg) this).field_s << 4) - param0) * var9 + ((((bg) this).field_q << 4) - param1) * var10;
+            var13 = ((this.field_s << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_s << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_q << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_q << 4) - param1) * var10;
+            var17 = ((this.field_s << 4) - param0) * var10 + ((this.field_q << 4) - param1) * var9;
+            var18 = -((this.field_s << 4) - param0) * var9 + ((this.field_q << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -1346,8 +1368,8 @@ final class bg extends tg {
                               }
                             }
                             L17: {
-                              var32 = (1 + var35 - (((bg) this).field_s << 12) - var27) / var27;
-                              if ((1 + var35 - (((bg) this).field_s << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_s << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_s << 12) - var27) / var27 <= var37) {
                                 break L17;
                               } else {
                                 var37 = var32;
@@ -1367,8 +1389,8 @@ final class bg extends tg {
                               }
                             }
                             L19: {
-                              var32 = (1 + var36 - (((bg) this).field_q << 12) - var26) / var26;
-                              if ((1 + var36 - (((bg) this).field_q << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_q << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_q << 12) - var26) / var26 <= var37) {
                                 break L19;
                               } else {
                                 var37 = var32;
@@ -1383,11 +1405,11 @@ final class bg extends tg {
                                 var23 = var23 + na.field_e;
                                 continue L15;
                               } else {
-                                var38 = ((bg) this).field_v[(var36 >> 12) * ((bg) this).field_s + (var35 >> 12)];
+                                var38 = this.field_v[(var36 >> 12) * this.field_s + (var35 >> 12)];
                                 var39 = na.field_d[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$9 = var34;
+                                incrementValue$9 = var34;
                                 var34++;
                                 na.field_d[incrementValue$9] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -1421,8 +1443,8 @@ final class bg extends tg {
                               }
                             }
                             L23: {
-                              var32 = (1 + var35 - (((bg) this).field_s << 12) - var27) / var27;
-                              if ((1 + var35 - (((bg) this).field_s << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_s << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_s << 12) - var27) / var27 <= var37) {
                                 break L23;
                               } else {
                                 var37 = var32;
@@ -1430,8 +1452,8 @@ final class bg extends tg {
                               }
                             }
                             L24: {
-                              var32 = var36 - (((bg) this).field_q << 12);
-                              if (var36 - (((bg) this).field_q << 12) < 0) {
+                              var32 = var36 - (this.field_q << 12);
+                              if (var36 - (this.field_q << 12) < 0) {
                                 break L24;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -1459,11 +1481,11 @@ final class bg extends tg {
                                 var23 = var23 + na.field_e;
                                 continue L21;
                               } else {
-                                var38 = ((bg) this).field_v[(var36 >> 12) * ((bg) this).field_s + (var35 >> 12)];
+                                var38 = this.field_v[(var36 >> 12) * this.field_s + (var35 >> 12)];
                                 var39 = na.field_d[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$10 = var34;
+                                incrementValue$10 = var34;
                                 var34++;
                                 na.field_d[incrementValue$10] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -1487,7 +1509,7 @@ final class bg extends tg {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((bg) this).field_q << 12) < 0) {
+                              if (var36 - (this.field_q << 12) < 0) {
                                 L29: {
                                   if (var35 >= 0) {
                                     break L29;
@@ -1500,8 +1522,8 @@ final class bg extends tg {
                                   }
                                 }
                                 L30: {
-                                  var32 = (1 + var35 - (((bg) this).field_s << 12) - var27) / var27;
-                                  if ((1 + var35 - (((bg) this).field_s << 12) - var27) / var27 <= var37) {
+                                  var32 = (1 + var35 - (this.field_s << 12) - var27) / var27;
+                                  if ((1 + var35 - (this.field_s << 12) - var27) / var27 <= var37) {
                                     break L30;
                                   } else {
                                     var37 = var32;
@@ -1512,11 +1534,11 @@ final class bg extends tg {
                                   if (var37 >= 0) {
                                     break L28;
                                   } else {
-                                    var38 = ((bg) this).field_v[(var36 >> 12) * ((bg) this).field_s + (var35 >> 12)];
+                                    var38 = this.field_v[(var36 >> 12) * this.field_s + (var35 >> 12)];
                                     var39 = na.field_d[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$11 = var34;
+                                    incrementValue$11 = var34;
                                     var34++;
                                     na.field_d[incrementValue$11] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var35 = var35 + var27;
@@ -1551,8 +1573,8 @@ final class bg extends tg {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((bg) this).field_s << 12);
-                              if (var35 - (((bg) this).field_s << 12) < 0) {
+                              var32 = var35 - (this.field_s << 12);
+                              if (var35 - (this.field_s << 12) < 0) {
                                 break L33;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -1585,8 +1607,8 @@ final class bg extends tg {
                               }
                             }
                             L36: {
-                              var32 = (1 + var36 - (((bg) this).field_q << 12) - var26) / var26;
-                              if ((1 + var36 - (((bg) this).field_q << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_q << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_q << 12) - var26) / var26 <= var37) {
                                 break L36;
                               } else {
                                 var37 = var32;
@@ -1601,11 +1623,11 @@ final class bg extends tg {
                                 var23 = var23 + na.field_e;
                                 continue L32;
                               } else {
-                                var38 = ((bg) this).field_v[(var36 >> 12) * ((bg) this).field_s + (var35 >> 12)];
+                                var38 = this.field_v[(var36 >> 12) * this.field_s + (var35 >> 12)];
                                 var39 = na.field_d[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$12 = var34;
+                                incrementValue$12 = var34;
                                 var34++;
                                 na.field_d[incrementValue$12] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -1627,8 +1649,8 @@ final class bg extends tg {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((bg) this).field_s << 12);
-                              if (var35 - (((bg) this).field_s << 12) < 0) {
+                              var32 = var35 - (this.field_s << 12);
+                              if (var35 - (this.field_s << 12) < 0) {
                                 break L39;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -1649,8 +1671,8 @@ final class bg extends tg {
                               }
                             }
                             L41: {
-                              var32 = var36 - (((bg) this).field_q << 12);
-                              if (var36 - (((bg) this).field_q << 12) < 0) {
+                              var32 = var36 - (this.field_q << 12);
+                              if (var36 - (this.field_q << 12) < 0) {
                                 break L41;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -1678,11 +1700,11 @@ final class bg extends tg {
                                 var23 = var23 + na.field_e;
                                 continue L38;
                               } else {
-                                var38 = ((bg) this).field_v[(var36 >> 12) * ((bg) this).field_s + (var35 >> 12)];
+                                var38 = this.field_v[(var36 >> 12) * this.field_s + (var35 >> 12)];
                                 var39 = na.field_d[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
-                                int incrementValue$13 = var34;
+                                incrementValue$13 = var34;
                                 var34++;
                                 na.field_d[incrementValue$13] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
@@ -1706,10 +1728,10 @@ final class bg extends tg {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((bg) this).field_q << 12) < 0) {
+                              if (var36 - (this.field_q << 12) < 0) {
                                 L46: {
-                                  var32 = var35 - (((bg) this).field_s << 12);
-                                  if (var35 - (((bg) this).field_s << 12) < 0) {
+                                  var32 = var35 - (this.field_s << 12);
+                                  if (var35 - (this.field_s << 12) < 0) {
                                     break L46;
                                   } else {
                                     var32 = (var27 - var32) / var27;
@@ -1732,11 +1754,11 @@ final class bg extends tg {
                                   if (var37 >= 0) {
                                     break L45;
                                   } else {
-                                    var38 = ((bg) this).field_v[(var36 >> 12) * ((bg) this).field_s + (var35 >> 12)];
+                                    var38 = this.field_v[(var36 >> 12) * this.field_s + (var35 >> 12)];
                                     var39 = na.field_d[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$14 = var34;
+                                    incrementValue$14 = var34;
                                     var34++;
                                     na.field_d[incrementValue$14] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var35 = var35 + var27;
@@ -1773,7 +1795,7 @@ final class bg extends tg {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((bg) this).field_s << 12) < 0) {
+                              if (var35 - (this.field_s << 12) < 0) {
                                 L51: {
                                   if (var36 >= 0) {
                                     break L51;
@@ -1786,8 +1808,8 @@ final class bg extends tg {
                                   }
                                 }
                                 L52: {
-                                  var32 = (1 + var36 - (((bg) this).field_q << 12) - var26) / var26;
-                                  if ((1 + var36 - (((bg) this).field_q << 12) - var26) / var26 <= var37) {
+                                  var32 = (1 + var36 - (this.field_q << 12) - var26) / var26;
+                                  if ((1 + var36 - (this.field_q << 12) - var26) / var26 <= var37) {
                                     break L52;
                                   } else {
                                     var37 = var32;
@@ -1798,11 +1820,11 @@ final class bg extends tg {
                                   if (var37 >= 0) {
                                     break L50;
                                   } else {
-                                    var38 = ((bg) this).field_v[(var36 >> 12) * ((bg) this).field_s + (var35 >> 12)];
+                                    var38 = this.field_v[(var36 >> 12) * this.field_s + (var35 >> 12)];
                                     var39 = na.field_d[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$15 = var34;
+                                    incrementValue$15 = var34;
                                     var34++;
                                     na.field_d[incrementValue$15] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var36 = var36 + var26;
@@ -1835,10 +1857,10 @@ final class bg extends tg {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((bg) this).field_s << 12) < 0) {
+                              if (var35 - (this.field_s << 12) < 0) {
                                 L56: {
-                                  var32 = var36 - (((bg) this).field_q << 12);
-                                  if (var36 - (((bg) this).field_q << 12) < 0) {
+                                  var32 = var36 - (this.field_q << 12);
+                                  if (var36 - (this.field_q << 12) < 0) {
                                     break L56;
                                   } else {
                                     var32 = (var26 - var32) / var26;
@@ -1861,11 +1883,11 @@ final class bg extends tg {
                                   if (var37 >= 0) {
                                     break L55;
                                   } else {
-                                    var38 = ((bg) this).field_v[(var36 >> 12) * ((bg) this).field_s + (var35 >> 12)];
+                                    var38 = this.field_v[(var36 >> 12) * this.field_s + (var35 >> 12)];
                                     var39 = na.field_d[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
-                                    int incrementValue$16 = var34;
+                                    incrementValue$16 = var34;
                                     var34++;
                                     na.field_d[incrementValue$16] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var36 = var36 + var26;
@@ -1900,17 +1922,17 @@ final class bg extends tg {
                           var37 = var20;
                           if (var35 >= 0) {
                             if (var36 >= 0) {
-                              if (var35 - (((bg) this).field_s << 12) < 0) {
-                                if (var36 - (((bg) this).field_q << 12) < 0) {
+                              if (var35 - (this.field_s << 12) < 0) {
+                                if (var36 - (this.field_q << 12) < 0) {
                                   L61: while (true) {
                                     if (var37 >= 0) {
                                       break L60;
                                     } else {
-                                      var38 = ((bg) this).field_v[(var36 >> 12) * ((bg) this).field_s + (var35 >> 12)];
+                                      var38 = this.field_v[(var36 >> 12) * this.field_s + (var35 >> 12)];
                                       var39 = na.field_d[var34];
                                       var40 = var38 >>> 24;
                                       var41 = 256 - var40;
-                                      int incrementValue$17 = var34;
+                                      incrementValue$17 = var34;
                                       var34++;
                                       na.field_d[incrementValue$17] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                       var37++;

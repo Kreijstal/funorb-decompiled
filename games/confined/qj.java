@@ -9,14 +9,23 @@ final class qj {
 
     final static void a(int param0, boolean param1) {
         fb.field_a.a(param1, 64187);
-        int var2 = 0;
+        int var2 = 32 % ((param0 - 77) / 33);
     }
 
     public static void b(int param0) {
         field_c = null;
-        field_d = null;
-        field_a = null;
-        field_b = null;
+        if (param0 != 0) {
+          qj.a(106, false);
+          field_d = null;
+          field_a = null;
+          field_b = null;
+          return;
+        } else {
+          field_d = null;
+          field_a = null;
+          field_b = null;
+          return;
+        }
     }
 
     final static void a(nf[] param0, int param1, int param2, int param3, int param4, int param5) {
@@ -27,7 +36,7 @@ final class qj {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        Object var12 = null;
+        nf[] var12 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
@@ -35,6 +44,7 @@ final class qj {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
@@ -51,7 +61,7 @@ final class qj {
               if (param0 == null) {
                 break L1;
               } else {
-                if (param2 > 0) {
+                if (-1 > (param2 ^ -1)) {
                   L2: {
                     var6_int = param0[0].field_t;
                     var7 = param0[2].field_t;
@@ -62,7 +72,7 @@ final class qj {
                     if (param3 > 43) {
                       break L2;
                     } else {
-                      var12 = null;
+                      var12 = (nf[]) null;
                       qj.a((nf[]) null, 54, 102, 49, -15, -58);
                       break L2;
                     }
@@ -74,6 +84,7 @@ final class qj {
                   L3: while (true) {
                     if (var10 <= param4) {
                       fn.a(hj.field_l);
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       param0[1].b(param4, param1, param5);
@@ -86,29 +97,30 @@ final class qj {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var6;
+            stackOut_11_0 = (RuntimeException) (var6);
             stackOut_11_1 = new StringBuilder().append("qj.D(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -116,7 +128,12 @@ final class qj {
               break L4;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -124,8 +141,15 @@ final class qj {
         if (oe.field_Q == wh.field_fb) {
             return rd.field_Jb;
         }
-        if (!fb.field_a.c(17237)) {
+        if (!fb.field_a.c(param0 + 17236)) {
             return fb.field_a.a(108);
+        }
+        if (param0 != 1) {
+            qj.b(-6);
+            if (!(na.field_S != wh.field_fb)) {
+                return fb.field_a.a(81);
+            }
+            return kj.field_c;
         }
         if (!(na.field_S != wh.field_fb)) {
             return fb.field_a.a(81);
@@ -134,10 +158,6 @@ final class qj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Start Game";
         field_c = new int[12];
         field_a = "<col=FFFFFF>Click and hold</col> to fire your basic energy weapon!";

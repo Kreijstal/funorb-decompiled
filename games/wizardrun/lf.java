@@ -13,10 +13,6 @@ final class lf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "lf.A(";
         field_a = "Please wait for high scores";
     }

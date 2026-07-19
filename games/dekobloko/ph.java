@@ -98,14 +98,17 @@ final class ph extends ca {
         field_xb = null;
         field_Fb = null;
         field_Eb = null;
-        int var1 = 39;
+        int var1 = -79 / ((-72 - param0) / 41);
         field_yb = null;
         field_Hb = null;
         field_Cb = null;
     }
 
     final static void a(int param0, int param1, boolean param2, boolean param3) {
-        uc.a(180, true, param3, 320);
+        uc.a(param0, true, param3, param1);
+        if (param2) {
+            field_Gb = (String) null;
+        }
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3, boolean param4, boolean param5, boolean param6, int param7, int param8, int param9) {
@@ -119,11 +122,11 @@ final class ph extends ca {
               if (vk.field_f != hk.field_i) {
                 break L0;
               } else {
-                if (!param5) {
+                if (param5) {
                   L1: {
-                    vh.field_g = (-640 + wj.field_Lb) / 2;
+                    vh.field_g = ea.field_t;
                     hg.a(param5, -1843);
-                    if (param7 <= ~lg.field_W) {
+                    if (param7 <= (lg.field_W ^ -1)) {
                       break L1;
                     } else {
                       qm.a(param4, param9, param5, (byte) -8);
@@ -133,7 +136,7 @@ final class ph extends ca {
                   L2: {
                     tg.field_i.field_X = 1;
                     tg.field_i.field_ub = fc.field_c.field_ub;
-                    if (bf.field_r > 0) {
+                    if (-1 > (bf.field_r ^ -1)) {
                       vg.a(param9, param4, param5, 48);
                       break L2;
                     } else {
@@ -159,7 +162,11 @@ final class ph extends ca {
                           gg.field_y.field_Hb = false;
                           ec.field_k.field_Rb.field_Y = cb.field_k;
                           gk.a(ec.field_k.field_Ob, true);
-                          break L4;
+                          if (var11 == 0) {
+                            break L4;
+                          } else {
+                            break L5;
+                          }
                         }
                       }
                     }
@@ -168,168 +175,377 @@ final class ph extends ca {
                     cl.a(param1, -17339, param9, ec.field_k, param0);
                     break L4;
                   }
-                  client.a(param1, param2, param0, param8, true, param9, (byte) -119);
+                  client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
                   cl.a(param1, -17339, param9, tb.field_b, param0);
                   oe.field_G = oe.field_G + 1;
                   return;
                 } else {
-                  L6: {
-                    vh.field_g = ea.field_t;
+                  vh.field_g = (-640 + wj.field_Lb) / 2;
+                  if (var11 == 0) {
                     hg.a(param5, -1843);
-                    if (param7 <= ~lg.field_W) {
-                      break L6;
-                    } else {
-                      qm.a(param4, param9, param5, (byte) -8);
-                      break L6;
-                    }
-                  }
-                  L7: {
-                    tg.field_i.field_X = 1;
-                    tg.field_i.field_ub = fc.field_c.field_ub;
-                    if (bf.field_r > 0) {
-                      vg.a(param9, param4, param5, 48);
-                      break L7;
-                    } else {
-                      break L7;
-                    }
-                  }
-                  L8: {
-                    if (0 < tg.field_e) {
-                      mn.a(0, param6, param4, param5, param9);
-                      break L8;
-                    } else {
-                      break L8;
-                    }
-                  }
-                  L9: {
-                    L10: {
-                      if (!dn.field_k) {
-                        break L10;
-                      } else {
-                        if (cd.field_m.field_mc > cd.field_m.field_rc) {
-                          break L10;
+                    if (param7 <= (lg.field_W ^ -1)) {
+                      L6: {
+                        tg.field_i.field_X = 1;
+                        tg.field_i.field_ub = fc.field_c.field_ub;
+                        if (-1 > (bf.field_r ^ -1)) {
+                          vg.a(param9, param4, param5, 48);
+                          break L6;
                         } else {
+                          break L6;
+                        }
+                      }
+                      L7: {
+                        if (0 < tg.field_e) {
+                          mn.a(0, param6, param4, param5, param9);
+                          break L7;
+                        } else {
+                          break L7;
+                        }
+                      }
+                      if (dn.field_k) {
+                        if (cd.field_m.field_mc <= cd.field_m.field_rc) {
                           gg.field_y.field_Hb = false;
                           ec.field_k.field_Rb.field_Y = cb.field_k;
                           gk.a(ec.field_k.field_Ob, true);
+                          if (var11 != 0) {
+                            gg.field_y.field_Hb = true;
+                            ec.field_k.field_Rb.field_Y = null;
+                            cl.a(param1, -17339, param9, ec.field_k, param0);
+                            client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                            cl.a(param1, -17339, param9, tb.field_b, param0);
+                            oe.field_G = oe.field_G + 1;
+                            return;
+                          } else {
+                            client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                            cl.a(param1, -17339, param9, tb.field_b, param0);
+                            oe.field_G = oe.field_G + 1;
+                            return;
+                          }
+                        } else {
+                          gg.field_y.field_Hb = true;
+                          ec.field_k.field_Rb.field_Y = null;
+                          cl.a(param1, -17339, param9, ec.field_k, param0);
+                          client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                          cl.a(param1, -17339, param9, tb.field_b, param0);
+                          oe.field_G = oe.field_G + 1;
+                          return;
+                        }
+                      } else {
+                        gg.field_y.field_Hb = true;
+                        ec.field_k.field_Rb.field_Y = null;
+                        cl.a(param1, -17339, param9, ec.field_k, param0);
+                        client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                        cl.a(param1, -17339, param9, tb.field_b, param0);
+                        oe.field_G = oe.field_G + 1;
+                        return;
+                      }
+                    } else {
+                      L8: {
+                        qm.a(param4, param9, param5, (byte) -8);
+                        tg.field_i.field_X = 1;
+                        tg.field_i.field_ub = fc.field_c.field_ub;
+                        if (-1 > (bf.field_r ^ -1)) {
+                          vg.a(param9, param4, param5, 48);
+                          break L8;
+                        } else {
+                          break L8;
+                        }
+                      }
+                      L9: {
+                        if (0 < tg.field_e) {
+                          mn.a(0, param6, param4, param5, param9);
+                          break L9;
+                        } else {
                           break L9;
                         }
                       }
+                      L10: {
+                        L11: {
+                          if (!dn.field_k) {
+                            break L11;
+                          } else {
+                            if (cd.field_m.field_mc > cd.field_m.field_rc) {
+                              break L11;
+                            } else {
+                              gg.field_y.field_Hb = false;
+                              ec.field_k.field_Rb.field_Y = cb.field_k;
+                              gk.a(ec.field_k.field_Ob, true);
+                              if (var11 == 0) {
+                                break L10;
+                              } else {
+                                break L11;
+                              }
+                            }
+                          }
+                        }
+                        gg.field_y.field_Hb = true;
+                        ec.field_k.field_Rb.field_Y = null;
+                        cl.a(param1, -17339, param9, ec.field_k, param0);
+                        break L10;
+                      }
+                      client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                      cl.a(param1, -17339, param9, tb.field_b, param0);
+                      oe.field_G = oe.field_G + 1;
+                      return;
                     }
-                    gg.field_y.field_Hb = true;
-                    ec.field_k.field_Rb.field_Y = null;
-                    cl.a(param1, -17339, param9, ec.field_k, param0);
-                    break L9;
-                  }
-                  client.a(param1, param2, param0, param8, true, param9, (byte) -119);
-                  cl.a(param1, -17339, param9, tb.field_b, param0);
-                  oe.field_G = oe.field_G + 1;
-                  return;
-                }
-              }
-            }
-          }
-          L11: {
-            if (hk.field_i != le.field_m.field_i) {
-              break L11;
-            } else {
-              if (le.field_m.field_g != hk.field_j) {
-                break L11;
-              } else {
-                if (cd.field_m == null) {
-                  if (g.field_N != null) {
+                  } else {
                     L12: {
-                      vb.a(true, -2);
-                      if (param5) {
-                        vh.field_g = ea.field_t;
+                      vh.field_g = ea.field_t;
+                      hg.a(param5, -1843);
+                      if (param7 <= (lg.field_W ^ -1)) {
                         break L12;
                       } else {
-                        vh.field_g = (-640 + wj.field_Lb) / 2;
+                        qm.a(param4, param9, param5, (byte) -8);
                         break L12;
                       }
                     }
                     L13: {
-                      hg.a(param5, -1843);
-                      if (param7 <= ~lg.field_W) {
+                      tg.field_i.field_X = 1;
+                      tg.field_i.field_ub = fc.field_c.field_ub;
+                      if (-1 > (bf.field_r ^ -1)) {
+                        vg.a(param9, param4, param5, 48);
                         break L13;
                       } else {
-                        qm.a(param4, param9, param5, (byte) -8);
                         break L13;
                       }
                     }
                     L14: {
-                      tg.field_i.field_X = 1;
-                      tg.field_i.field_ub = fc.field_c.field_ub;
-                      if (bf.field_r > 0) {
-                        vg.a(param9, param4, param5, 48);
+                      if (0 < tg.field_e) {
+                        mn.a(0, param6, param4, param5, param9);
                         break L14;
                       } else {
                         break L14;
                       }
                     }
                     L15: {
-                      if (0 < tg.field_e) {
-                        mn.a(0, param6, param4, param5, param9);
-                        break L15;
-                      } else {
-                        break L15;
-                      }
-                    }
-                    L16: {
-                      L17: {
+                      L16: {
                         if (!dn.field_k) {
-                          break L17;
+                          break L16;
                         } else {
                           if (cd.field_m.field_mc > cd.field_m.field_rc) {
-                            break L17;
+                            break L16;
                           } else {
                             gg.field_y.field_Hb = false;
                             ec.field_k.field_Rb.field_Y = cb.field_k;
                             gk.a(ec.field_k.field_Ob, true);
-                            break L16;
+                            if (var11 == 0) {
+                              break L15;
+                            } else {
+                              break L16;
+                            }
                           }
                         }
                       }
                       gg.field_y.field_Hb = true;
                       ec.field_k.field_Rb.field_Y = null;
                       cl.a(param1, -17339, param9, ec.field_k, param0);
-                      break L16;
+                      break L15;
                     }
-                    client.a(param1, param2, param0, param8, true, param9, (byte) -119);
+                    client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
                     cl.a(param1, -17339, param9, tb.field_b, param0);
                     oe.field_G = oe.field_G + 1;
                     return;
-                  } else {
-                    mf.h(5);
-                    break L11;
                   }
+                }
+              }
+            }
+          }
+          L17: {
+            if (hk.field_i != le.field_m.field_i) {
+              break L17;
+            } else {
+              if (le.field_m.field_g != hk.field_j) {
+                break L17;
+              } else {
+                L18: {
+                  if (cd.field_m == null) {
+                    break L18;
+                  } else {
+                    vb.a(false, -2);
+                    if (var11 == 0) {
+                      break L17;
+                    } else {
+                      break L18;
+                    }
+                  }
+                }
+                if (g.field_N != null) {
+                  vb.a(true, -2);
+                  break L17;
                 } else {
-                  vb.a(false, -2);
-                  break L11;
+                  mf.h(5);
+                  if (var11 == 0) {
+                    break L17;
+                  } else {
+                    L19: {
+                      vb.a(true, -2);
+                      if (param5) {
+                        vh.field_g = ea.field_t;
+                        break L19;
+                      } else {
+                        vh.field_g = (-640 + wj.field_Lb) / 2;
+                        if (var11 == 0) {
+                          break L19;
+                        } else {
+                          vh.field_g = ea.field_t;
+                          break L19;
+                        }
+                      }
+                    }
+                    L20: {
+                      hg.a(param5, -1843);
+                      if (param7 <= (lg.field_W ^ -1)) {
+                        break L20;
+                      } else {
+                        qm.a(param4, param9, param5, (byte) -8);
+                        break L20;
+                      }
+                    }
+                    L21: {
+                      tg.field_i.field_X = 1;
+                      tg.field_i.field_ub = fc.field_c.field_ub;
+                      if (-1 > (bf.field_r ^ -1)) {
+                        vg.a(param9, param4, param5, 48);
+                        break L21;
+                      } else {
+                        break L21;
+                      }
+                    }
+                    L22: {
+                      if (0 < tg.field_e) {
+                        mn.a(0, param6, param4, param5, param9);
+                        break L22;
+                      } else {
+                        break L22;
+                      }
+                    }
+                    L23: {
+                      L24: {
+                        if (!dn.field_k) {
+                          break L24;
+                        } else {
+                          if (cd.field_m.field_mc > cd.field_m.field_rc) {
+                            break L24;
+                          } else {
+                            gg.field_y.field_Hb = false;
+                            ec.field_k.field_Rb.field_Y = cb.field_k;
+                            gk.a(ec.field_k.field_Ob, true);
+                            if (var11 == 0) {
+                              break L23;
+                            } else {
+                              break L24;
+                            }
+                          }
+                        }
+                      }
+                      gg.field_y.field_Hb = true;
+                      ec.field_k.field_Rb.field_Y = null;
+                      cl.a(param1, -17339, param9, ec.field_k, param0);
+                      break L23;
+                    }
+                    client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                    cl.a(param1, -17339, param9, tb.field_b, param0);
+                    oe.field_G = oe.field_G + 1;
+                    return;
+                  }
                 }
               }
             }
           }
           if (param5) {
-            vh.field_g = ea.field_t;
-            hg.a(param5, -1843);
-            if (param7 <= ~lg.field_W) {
-              L18: {
-                tg.field_i.field_X = 1;
-                tg.field_i.field_ub = fc.field_c.field_ub;
-                if (bf.field_r > 0) {
-                  vg.a(param9, param4, param5, 48);
-                  break L18;
+            L25: {
+              vh.field_g = ea.field_t;
+              hg.a(param5, -1843);
+              if (param7 <= (lg.field_W ^ -1)) {
+                break L25;
+              } else {
+                qm.a(param4, param9, param5, (byte) -8);
+                break L25;
+              }
+            }
+            L26: {
+              tg.field_i.field_X = 1;
+              tg.field_i.field_ub = fc.field_c.field_ub;
+              if (-1 > (bf.field_r ^ -1)) {
+                vg.a(param9, param4, param5, 48);
+                break L26;
+              } else {
+                break L26;
+              }
+            }
+            L27: {
+              if (0 < tg.field_e) {
+                mn.a(0, param6, param4, param5, param9);
+                break L27;
+              } else {
+                break L27;
+              }
+            }
+            if (dn.field_k) {
+              if (cd.field_m.field_mc <= cd.field_m.field_rc) {
+                gg.field_y.field_Hb = false;
+                ec.field_k.field_Rb.field_Y = cb.field_k;
+                gk.a(ec.field_k.field_Ob, true);
+                if (var11 != 0) {
+                  gg.field_y.field_Hb = true;
+                  ec.field_k.field_Rb.field_Y = null;
+                  cl.a(param1, -17339, param9, ec.field_k, param0);
+                  client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                  cl.a(param1, -17339, param9, tb.field_b, param0);
+                  oe.field_G = oe.field_G + 1;
+                  return;
                 } else {
-                  break L18;
+                  client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                  cl.a(param1, -17339, param9, tb.field_b, param0);
+                  oe.field_G = oe.field_G + 1;
+                  return;
+                }
+              } else {
+                gg.field_y.field_Hb = true;
+                ec.field_k.field_Rb.field_Y = null;
+                cl.a(param1, -17339, param9, ec.field_k, param0);
+                client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                cl.a(param1, -17339, param9, tb.field_b, param0);
+                oe.field_G = oe.field_G + 1;
+                return;
+              }
+            } else {
+              gg.field_y.field_Hb = true;
+              ec.field_k.field_Rb.field_Y = null;
+              cl.a(param1, -17339, param9, ec.field_k, param0);
+              client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+              cl.a(param1, -17339, param9, tb.field_b, param0);
+              oe.field_G = oe.field_G + 1;
+              return;
+            }
+          } else {
+            vh.field_g = (-640 + wj.field_Lb) / 2;
+            if (var11 == 0) {
+              L28: {
+                hg.a(param5, -1843);
+                if (param7 <= (lg.field_W ^ -1)) {
+                  break L28;
+                } else {
+                  qm.a(param4, param9, param5, (byte) -8);
+                  break L28;
                 }
               }
-              L19: {
+              L29: {
+                tg.field_i.field_X = 1;
+                tg.field_i.field_ub = fc.field_c.field_ub;
+                if (-1 > (bf.field_r ^ -1)) {
+                  vg.a(param9, param4, param5, 48);
+                  break L29;
+                } else {
+                  break L29;
+                }
+              }
+              L30: {
                 if (0 < tg.field_e) {
                   mn.a(0, param6, param4, param5, param9);
-                  break L19;
+                  break L30;
                 } else {
-                  break L19;
+                  break L30;
                 }
               }
               if (dn.field_k) {
@@ -337,15 +553,25 @@ final class ph extends ca {
                   gg.field_y.field_Hb = false;
                   ec.field_k.field_Rb.field_Y = cb.field_k;
                   gk.a(ec.field_k.field_Ob, true);
-                  client.a(param1, param2, param0, param8, true, param9, (byte) -119);
-                  cl.a(param1, -17339, param9, tb.field_b, param0);
-                  oe.field_G = oe.field_G + 1;
-                  return;
+                  if (var11 != 0) {
+                    gg.field_y.field_Hb = true;
+                    ec.field_k.field_Rb.field_Y = null;
+                    cl.a(param1, -17339, param9, ec.field_k, param0);
+                    client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                    cl.a(param1, -17339, param9, tb.field_b, param0);
+                    oe.field_G = oe.field_G + 1;
+                    return;
+                  } else {
+                    client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                    cl.a(param1, -17339, param9, tb.field_b, param0);
+                    oe.field_G = oe.field_G + 1;
+                    return;
+                  }
                 } else {
                   gg.field_y.field_Hb = true;
                   ec.field_k.field_Rb.field_Y = null;
                   cl.a(param1, -17339, param9, ec.field_k, param0);
-                  client.a(param1, param2, param0, param8, true, param9, (byte) -119);
+                  client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
                   cl.a(param1, -17339, param9, tb.field_b, param0);
                   oe.field_G = oe.field_G + 1;
                   return;
@@ -354,163 +580,347 @@ final class ph extends ca {
                 gg.field_y.field_Hb = true;
                 ec.field_k.field_Rb.field_Y = null;
                 cl.a(param1, -17339, param9, ec.field_k, param0);
-                client.a(param1, param2, param0, param8, true, param9, (byte) -119);
+                client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
                 cl.a(param1, -17339, param9, tb.field_b, param0);
                 oe.field_G = oe.field_G + 1;
                 return;
               }
             } else {
-              L20: {
+              vh.field_g = ea.field_t;
+              hg.a(param5, -1843);
+              if (param7 <= (lg.field_W ^ -1)) {
+                L31: {
+                  tg.field_i.field_X = 1;
+                  tg.field_i.field_ub = fc.field_c.field_ub;
+                  if (-1 > (bf.field_r ^ -1)) {
+                    vg.a(param9, param4, param5, 48);
+                    break L31;
+                  } else {
+                    break L31;
+                  }
+                }
+                L32: {
+                  if (0 < tg.field_e) {
+                    mn.a(0, param6, param4, param5, param9);
+                    break L32;
+                  } else {
+                    break L32;
+                  }
+                }
+                if (dn.field_k) {
+                  if (cd.field_m.field_mc <= cd.field_m.field_rc) {
+                    gg.field_y.field_Hb = false;
+                    ec.field_k.field_Rb.field_Y = cb.field_k;
+                    gk.a(ec.field_k.field_Ob, true);
+                    if (var11 == 0) {
+                      client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                      cl.a(param1, -17339, param9, tb.field_b, param0);
+                      oe.field_G = oe.field_G + 1;
+                      return;
+                    } else {
+                      gg.field_y.field_Hb = true;
+                      ec.field_k.field_Rb.field_Y = null;
+                      cl.a(param1, -17339, param9, ec.field_k, param0);
+                      client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                      cl.a(param1, -17339, param9, tb.field_b, param0);
+                      oe.field_G = oe.field_G + 1;
+                      return;
+                    }
+                  } else {
+                    gg.field_y.field_Hb = true;
+                    ec.field_k.field_Rb.field_Y = null;
+                    cl.a(param1, -17339, param9, ec.field_k, param0);
+                    client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                    cl.a(param1, -17339, param9, tb.field_b, param0);
+                    oe.field_G = oe.field_G + 1;
+                    return;
+                  }
+                } else {
+                  gg.field_y.field_Hb = true;
+                  ec.field_k.field_Rb.field_Y = null;
+                  cl.a(param1, -17339, param9, ec.field_k, param0);
+                  client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                  cl.a(param1, -17339, param9, tb.field_b, param0);
+                  oe.field_G = oe.field_G + 1;
+                  return;
+                }
+              } else {
+                L33: {
+                  qm.a(param4, param9, param5, (byte) -8);
+                  tg.field_i.field_X = 1;
+                  tg.field_i.field_ub = fc.field_c.field_ub;
+                  if (-1 > (bf.field_r ^ -1)) {
+                    vg.a(param9, param4, param5, 48);
+                    break L33;
+                  } else {
+                    break L33;
+                  }
+                }
+                L34: {
+                  if (0 < tg.field_e) {
+                    mn.a(0, param6, param4, param5, param9);
+                    break L34;
+                  } else {
+                    break L34;
+                  }
+                }
+                L35: {
+                  L36: {
+                    if (!dn.field_k) {
+                      break L36;
+                    } else {
+                      if (cd.field_m.field_mc > cd.field_m.field_rc) {
+                        break L36;
+                      } else {
+                        gg.field_y.field_Hb = false;
+                        ec.field_k.field_Rb.field_Y = cb.field_k;
+                        gk.a(ec.field_k.field_Ob, true);
+                        if (var11 == 0) {
+                          break L35;
+                        } else {
+                          break L36;
+                        }
+                      }
+                    }
+                  }
+                  gg.field_y.field_Hb = true;
+                  ec.field_k.field_Rb.field_Y = null;
+                  cl.a(param1, -17339, param9, ec.field_k, param0);
+                  break L35;
+                }
+                client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                cl.a(param1, -17339, param9, tb.field_b, param0);
+                oe.field_G = oe.field_G + 1;
+                return;
+              }
+            }
+          }
+        } else {
+          if (param5) {
+            L37: {
+              vh.field_g = ea.field_t;
+              hg.a(param5, -1843);
+              if (param7 <= (lg.field_W ^ -1)) {
+                break L37;
+              } else {
                 qm.a(param4, param9, param5, (byte) -8);
+                break L37;
+              }
+            }
+            L38: {
+              tg.field_i.field_X = 1;
+              tg.field_i.field_ub = fc.field_c.field_ub;
+              if (-1 > (bf.field_r ^ -1)) {
+                vg.a(param9, param4, param5, 48);
+                break L38;
+              } else {
+                break L38;
+              }
+            }
+            L39: {
+              if (0 < tg.field_e) {
+                mn.a(0, param6, param4, param5, param9);
+                break L39;
+              } else {
+                break L39;
+              }
+            }
+            L40: {
+              L41: {
+                if (!dn.field_k) {
+                  break L41;
+                } else {
+                  if (cd.field_m.field_mc > cd.field_m.field_rc) {
+                    break L41;
+                  } else {
+                    gg.field_y.field_Hb = false;
+                    ec.field_k.field_Rb.field_Y = cb.field_k;
+                    gk.a(ec.field_k.field_Ob, true);
+                    if (var11 == 0) {
+                      break L40;
+                    } else {
+                      break L41;
+                    }
+                  }
+                }
+              }
+              gg.field_y.field_Hb = true;
+              ec.field_k.field_Rb.field_Y = null;
+              cl.a(param1, -17339, param9, ec.field_k, param0);
+              break L40;
+            }
+            client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+            cl.a(param1, -17339, param9, tb.field_b, param0);
+            oe.field_G = oe.field_G + 1;
+            return;
+          } else {
+            vh.field_g = (-640 + wj.field_Lb) / 2;
+            if (var11 == 0) {
+              hg.a(param5, -1843);
+              if (param7 <= (lg.field_W ^ -1)) {
+                L42: {
+                  tg.field_i.field_X = 1;
+                  tg.field_i.field_ub = fc.field_c.field_ub;
+                  if (-1 > (bf.field_r ^ -1)) {
+                    vg.a(param9, param4, param5, 48);
+                    break L42;
+                  } else {
+                    break L42;
+                  }
+                }
+                L43: {
+                  if (0 < tg.field_e) {
+                    mn.a(0, param6, param4, param5, param9);
+                    break L43;
+                  } else {
+                    break L43;
+                  }
+                }
+                if (dn.field_k) {
+                  if (cd.field_m.field_mc <= cd.field_m.field_rc) {
+                    gg.field_y.field_Hb = false;
+                    ec.field_k.field_Rb.field_Y = cb.field_k;
+                    gk.a(ec.field_k.field_Ob, true);
+                    if (var11 != 0) {
+                      gg.field_y.field_Hb = true;
+                      ec.field_k.field_Rb.field_Y = null;
+                      cl.a(param1, -17339, param9, ec.field_k, param0);
+                      client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                      cl.a(param1, -17339, param9, tb.field_b, param0);
+                      oe.field_G = oe.field_G + 1;
+                      return;
+                    } else {
+                      client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                      cl.a(param1, -17339, param9, tb.field_b, param0);
+                      oe.field_G = oe.field_G + 1;
+                      return;
+                    }
+                  } else {
+                    gg.field_y.field_Hb = true;
+                    ec.field_k.field_Rb.field_Y = null;
+                    cl.a(param1, -17339, param9, ec.field_k, param0);
+                    client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                    cl.a(param1, -17339, param9, tb.field_b, param0);
+                    oe.field_G = oe.field_G + 1;
+                    return;
+                  }
+                } else {
+                  gg.field_y.field_Hb = true;
+                  ec.field_k.field_Rb.field_Y = null;
+                  cl.a(param1, -17339, param9, ec.field_k, param0);
+                  client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                  cl.a(param1, -17339, param9, tb.field_b, param0);
+                  oe.field_G = oe.field_G + 1;
+                  return;
+                }
+              } else {
+                L44: {
+                  qm.a(param4, param9, param5, (byte) -8);
+                  tg.field_i.field_X = 1;
+                  tg.field_i.field_ub = fc.field_c.field_ub;
+                  if (-1 > (bf.field_r ^ -1)) {
+                    vg.a(param9, param4, param5, 48);
+                    break L44;
+                  } else {
+                    break L44;
+                  }
+                }
+                L45: {
+                  if (0 < tg.field_e) {
+                    mn.a(0, param6, param4, param5, param9);
+                    break L45;
+                  } else {
+                    break L45;
+                  }
+                }
+                L46: {
+                  L47: {
+                    if (!dn.field_k) {
+                      break L47;
+                    } else {
+                      if (cd.field_m.field_mc > cd.field_m.field_rc) {
+                        break L47;
+                      } else {
+                        gg.field_y.field_Hb = false;
+                        ec.field_k.field_Rb.field_Y = cb.field_k;
+                        gk.a(ec.field_k.field_Ob, true);
+                        if (var11 == 0) {
+                          break L46;
+                        } else {
+                          break L47;
+                        }
+                      }
+                    }
+                  }
+                  gg.field_y.field_Hb = true;
+                  ec.field_k.field_Rb.field_Y = null;
+                  cl.a(param1, -17339, param9, ec.field_k, param0);
+                  break L46;
+                }
+                client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
+                cl.a(param1, -17339, param9, tb.field_b, param0);
+                oe.field_G = oe.field_G + 1;
+                return;
+              }
+            } else {
+              L48: {
+                vh.field_g = ea.field_t;
+                hg.a(param5, -1843);
+                if (param7 <= (lg.field_W ^ -1)) {
+                  break L48;
+                } else {
+                  qm.a(param4, param9, param5, (byte) -8);
+                  break L48;
+                }
+              }
+              L49: {
                 tg.field_i.field_X = 1;
                 tg.field_i.field_ub = fc.field_c.field_ub;
-                if (bf.field_r > 0) {
+                if (-1 > (bf.field_r ^ -1)) {
                   vg.a(param9, param4, param5, 48);
-                  break L20;
+                  break L49;
                 } else {
-                  break L20;
+                  break L49;
                 }
               }
-              L21: {
+              L50: {
                 if (0 < tg.field_e) {
                   mn.a(0, param6, param4, param5, param9);
-                  break L21;
+                  break L50;
                 } else {
-                  break L21;
+                  break L50;
                 }
               }
-              L22: {
-                L23: {
+              L51: {
+                L52: {
                   if (!dn.field_k) {
-                    break L23;
+                    break L52;
                   } else {
                     if (cd.field_m.field_mc > cd.field_m.field_rc) {
-                      break L23;
+                      break L52;
                     } else {
                       gg.field_y.field_Hb = false;
                       ec.field_k.field_Rb.field_Y = cb.field_k;
                       gk.a(ec.field_k.field_Ob, true);
-                      break L22;
+                      if (var11 == 0) {
+                        break L51;
+                      } else {
+                        break L52;
+                      }
                     }
                   }
                 }
                 gg.field_y.field_Hb = true;
                 ec.field_k.field_Rb.field_Y = null;
                 cl.a(param1, -17339, param9, ec.field_k, param0);
-                break L22;
+                break L51;
               }
-              client.a(param1, param2, param0, param8, true, param9, (byte) -119);
+              client.a(param1, param2, param0, param8, param3, param9, (byte) -119);
               cl.a(param1, -17339, param9, tb.field_b, param0);
               oe.field_G = oe.field_G + 1;
               return;
             }
-          } else {
-            L24: {
-              vh.field_g = (-640 + wj.field_Lb) / 2;
-              hg.a(param5, -1843);
-              if (param7 <= ~lg.field_W) {
-                break L24;
-              } else {
-                qm.a(param4, param9, param5, (byte) -8);
-                break L24;
-              }
-            }
-            L25: {
-              tg.field_i.field_X = 1;
-              tg.field_i.field_ub = fc.field_c.field_ub;
-              if (bf.field_r > 0) {
-                vg.a(param9, param4, param5, 48);
-                break L25;
-              } else {
-                break L25;
-              }
-            }
-            L26: {
-              if (0 < tg.field_e) {
-                mn.a(0, param6, param4, param5, param9);
-                break L26;
-              } else {
-                break L26;
-              }
-            }
-            L27: {
-              if (!dn.field_k) {
-                break L27;
-              } else {
-                if (cd.field_m.field_mc > cd.field_m.field_rc) {
-                  break L27;
-                } else {
-                  gg.field_y.field_Hb = false;
-                  ec.field_k.field_Rb.field_Y = cb.field_k;
-                  gk.a(ec.field_k.field_Ob, true);
-                  client.a(param1, param2, param0, param8, true, param9, (byte) -119);
-                  cl.a(param1, -17339, param9, tb.field_b, param0);
-                  oe.field_G = oe.field_G + 1;
-                  return;
-                }
-              }
-            }
-            gg.field_y.field_Hb = true;
-            ec.field_k.field_Rb.field_Y = null;
-            cl.a(param1, -17339, param9, ec.field_k, param0);
-            client.a(param1, param2, param0, param8, true, param9, (byte) -119);
-            cl.a(param1, -17339, param9, tb.field_b, param0);
-            oe.field_G = oe.field_G + 1;
-            return;
           }
-        } else {
-          L28: {
-            vh.field_g = ea.field_t;
-            hg.a(param5, -1843);
-            if (param7 <= ~lg.field_W) {
-              break L28;
-            } else {
-              qm.a(param4, param9, param5, (byte) -8);
-              break L28;
-            }
-          }
-          L29: {
-            tg.field_i.field_X = 1;
-            tg.field_i.field_ub = fc.field_c.field_ub;
-            if (bf.field_r > 0) {
-              vg.a(param9, param4, param5, 48);
-              break L29;
-            } else {
-              break L29;
-            }
-          }
-          L30: {
-            if (0 < tg.field_e) {
-              mn.a(0, param6, param4, param5, param9);
-              break L30;
-            } else {
-              break L30;
-            }
-          }
-          L31: {
-            L32: {
-              if (!dn.field_k) {
-                break L32;
-              } else {
-                if (cd.field_m.field_mc > cd.field_m.field_rc) {
-                  break L32;
-                } else {
-                  gg.field_y.field_Hb = false;
-                  ec.field_k.field_Rb.field_Y = cb.field_k;
-                  gk.a(ec.field_k.field_Ob, true);
-                  break L31;
-                }
-              }
-            }
-            gg.field_y.field_Hb = true;
-            ec.field_k.field_Rb.field_Y = null;
-            cl.a(param1, -17339, param9, ec.field_k, param0);
-            break L31;
-          }
-          client.a(param1, param2, param0, param8, true, param9, (byte) -119);
-          cl.a(param1, -17339, param9, tb.field_b, param0);
-          oe.field_G = oe.field_G + 1;
-          return;
         }
     }
 

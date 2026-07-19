@@ -29,6 +29,7 @@ final class qb {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
@@ -48,34 +49,36 @@ final class qb {
               hi.a(var5, 0);
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 0;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_0 = (RuntimeException) (var4);
             stackOut_5_1 = new StringBuilder().append("qb.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param3 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -83,75 +86,89 @@ final class qb {
               break L1;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
-        return stackIn_4_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_4_0 != 0;
+        }
     }
 
     final void a(boolean param0, boolean param1) {
         if (param1) {
             return;
         }
-        ((qb) this).field_k = true;
-        ((qb) this).field_f = param0 ? true : false;
+        this.field_k = true;
+        this.field_f = param0 ? true : false;
     }
 
     final String a(byte param0) {
         if (param0 != 2) {
-            ((qb) this).field_i = null;
-            return ((qb) this).field_i;
+            this.field_i = (String) null;
+            return this.field_i;
         }
-        return ((qb) this).field_i;
+        return this.field_i;
     }
 
     final static void b(int param0) {
         tc.field_x = false;
         s.field_c = false;
-        fd.a(-1, 0);
+        fd.a(param0, 0);
         ie.field_x = cl.field_k;
         uh.field_k = cl.field_k;
     }
 
     public static void a(int param0) {
         field_g = null;
-        field_b = null;
-        field_m = null;
-        field_c = null;
-        field_l = null;
-        field_d = null;
+        if (param0 >= -49) {
+          field_j = 100;
+          field_b = null;
+          field_m = null;
+          field_c = null;
+          field_l = null;
+          field_d = null;
+          return;
+        } else {
+          field_b = null;
+          field_m = null;
+          field_c = null;
+          field_l = null;
+          field_d = null;
+          return;
+        }
     }
 
     final boolean b(boolean param0) {
         if (param0) {
             return false;
         }
-        return ((qb) this).field_k;
+        return this.field_k;
     }
 
     final boolean b(byte param0) {
         int var2 = 14 % ((param0 - -8) / 44);
-        return ((qb) this).field_f;
+        return this.field_f;
     }
 
     final static fi a(boolean param0) {
-        return (fi) (Object) new hf();
+        if (!param0) {
+            return (fi) null;
+        }
+        return (fi) ((Object) new hf());
     }
 
     qb(String param0) {
-        ((qb) this).field_f = false;
-        ((qb) this).field_k = false;
+        this.field_f = false;
+        this.field_k = false;
         try {
-            ((qb) this).field_i = param0;
+            this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "qb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "qb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = 0;
         field_b = new sk();
         field_c = "Not yet achieved";

@@ -15,17 +15,17 @@ final class lc extends pi {
     final static ea[] a(int param0, int param1, int param2, int param3, byte param4) {
         ea[] var7 = new ea[9];
         ea[] var5 = var7;
-        ea dupTemp$0 = hb.a(1, 32768, param2);
+        ea dupTemp$0 = hb.a(param1, 32768, param2);
         var7[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        ea dupTemp$1 = hb.a(1, 32768, param3);
+        ea dupTemp$1 = hb.a(param1, 32768, param3);
         var7[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
-        int var6 = 0;
+        int var6 = -81 % ((param4 - 40) / 61);
         if (!(param0 == 0)) {
             var7[4] = hb.a(64, 32768, param0);
         }
@@ -48,13 +48,13 @@ final class lc extends pi {
         try {
             var3 = sn.field_c;
             var3.d((byte) -111, param1);
-            var3.c(5, 25564);
+            var3.c(5, param0 + 25438);
             var3.c(0, 25564);
-            var3.b((byte) 126, param2.field_q);
+            var3.b(param0, param2.field_q);
             var3.c(param2.field_r, 25564);
             var3.c(param2.field_v, 25564);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "lc.A(" + 126 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "lc.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,10 +62,6 @@ final class lc extends pi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = new ea(270, 70);
         field_o = "The Super Volcano Expansion";
         field_s = -1;

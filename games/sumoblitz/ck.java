@@ -20,10 +20,6 @@ final class ck {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = ",";
         field_b = "Name is available";
     }

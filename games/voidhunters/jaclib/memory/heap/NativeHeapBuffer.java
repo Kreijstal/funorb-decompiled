@@ -11,22 +11,22 @@ public final class NativeHeapBuffer implements jaclib.memory.Buffer, jaclib.memo
 
     private final synchronized void a() {
         if (this.c()) {
-            ((jaclib.memory.heap.NativeHeapBuffer) this).c.deallocateBuffer(((jaclib.memory.heap.NativeHeapBuffer) this).b);
-            ((jaclib.memory.heap.NativeHeapBuffer) this).a = false;
+            this.c.deallocateBuffer(this.b);
+            this.a = false;
             return;
         }
-        ((jaclib.memory.heap.NativeHeapBuffer) this).a = false;
+        this.a = false;
     }
 
     public final synchronized void a(byte[] param0, int param1, int param2, int param3) {
-        if (!(((param0 == null ? 1 : 0) | (!this.c() ? 1 : 0) | (param1 < 0 ? 1 : 0) | (param0.length < param1 - -param3 ? 1 : 0) | (param2 < 0 ? 1 : 0) | (param2 - -param3 > ((jaclib.memory.heap.NativeHeapBuffer) this).d ? 1 : 0)) == 0)) {
+        if (!(((param0 == null ? 1 : 0) | (!this.c() ? 1 : 0) | ((param1 ^ -1) > -1 ? 1 : 0) | (param0.length < param1 - -param3 ? 1 : 0) | ((param2 ^ -1) > -1 ? 1 : 0) | (param2 - -param3 > this.d ? 1 : 0)) == 0)) {
             throw new RuntimeException();
         }
-        ((jaclib.memory.heap.NativeHeapBuffer) this).c.put(((jaclib.memory.heap.NativeHeapBuffer) this).b, param0, param1, param2, param3);
+        this.c.put(this.b, param0, param1, param2, param3);
     }
 
     public final int getSize() {
-        return ((jaclib.memory.heap.NativeHeapBuffer) this).d;
+        return this.d;
     }
 
     protected final synchronized void finalize() throws Throwable {
@@ -35,23 +35,23 @@ public final class NativeHeapBuffer implements jaclib.memory.Buffer, jaclib.memo
     }
 
     private final synchronized boolean c() {
-        if (!((jaclib.memory.heap.NativeHeapBuffer) this).c.b()) {
+        if (!this.c.b()) {
             return false;
         }
-        if (!((jaclib.memory.heap.NativeHeapBuffer) this).a) {
+        if (!this.a) {
             return false;
         }
         return true;
     }
 
     NativeHeapBuffer(jaclib.memory.heap.NativeHeap param0, int param1, int param2) {
-        ((jaclib.memory.heap.NativeHeapBuffer) this).a = true;
-        ((jaclib.memory.heap.NativeHeapBuffer) this).d = param2;
-        ((jaclib.memory.heap.NativeHeapBuffer) this).c = param0;
-        ((jaclib.memory.heap.NativeHeapBuffer) this).b = param1;
+        this.a = true;
+        this.d = param2;
+        this.c = param0;
+        this.b = param1;
     }
 
     public final long b() {
-        return ((jaclib.memory.heap.NativeHeapBuffer) this).c.getBufferAddress(((jaclib.memory.heap.NativeHeapBuffer) this).b);
+        return this.c.getBufferAddress(this.b);
     }
 }

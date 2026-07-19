@@ -16,11 +16,11 @@ final class an extends bd {
 
     final void a(wk param0, int param1) {
         try {
-            param0.a(((an) this).field_k, (byte) -89);
+            param0.a(this.field_k, (byte) -89);
             int var3_int = 124 / ((-35 - param1) / 36);
-            param0.a((byte) 7, ((an) this).field_i);
+            param0.a((byte) 7, this.field_i);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "an.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "an.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -28,32 +28,28 @@ final class an extends bd {
         field_e = null;
         field_n = null;
         field_o = null;
-        int var1 = -12;
+        int var1 = 25 / ((param0 - 39) / 52);
         field_m = null;
         field_h = null;
     }
 
     final ch a(int param0) {
         if (param0 != 0) {
-            return null;
+            return (ch) null;
         }
         return k.field_q;
     }
 
     an(String param0, String param1) {
         try {
-            ((an) this).field_k = param0;
-            ((an) this).field_i = param1;
+            this.field_k = param0;
+            this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "an.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "an.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Grassy Hills:";
         field_f = 640;
         field_h = new int[5];

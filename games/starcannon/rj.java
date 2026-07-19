@@ -40,7 +40,7 @@ final class rj extends rf {
               if (param2 > 79) {
                 break L1;
               } else {
-                field_l = null;
+                field_l = (String[]) null;
                 break L1;
               }
             }
@@ -48,12 +48,12 @@ final class rj extends rf {
             var5 = param0;
             L2: while (true) {
               if (var5 >= param1) {
-                var4_int = ~var4_int;
+                var4_int = var4_int ^ -1;
                 stackOut_5_0 = var4_int;
                 stackIn_6_0 = stackOut_5_0;
                 break L0;
               } else {
-                var4_int = var4_int >>> 8 ^ fb.field_n[(param3[var5] ^ var4_int) & 255];
+                var4_int = var4_int >>> 212596296 ^ fb.field_n[(param3[var5] ^ var4_int) & 255];
                 var5++;
                 continue L2;
               }
@@ -63,23 +63,23 @@ final class rj extends rf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
+            stackOut_7_0 = (RuntimeException) (var4);
             stackOut_7_1 = new StringBuilder().append("rj.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param3 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -87,7 +87,7 @@ final class rj extends rf {
               break L3;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
@@ -103,14 +103,10 @@ final class rj extends rf {
     }
 
     rj() {
-        ((rj) this).field_n = false;
+        this.field_n = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Achieved";
         field_j = 5;
         field_m = "Cancel";

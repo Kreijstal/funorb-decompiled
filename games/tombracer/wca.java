@@ -11,13 +11,25 @@ abstract class wca extends od {
     int field_m;
 
     public static void f(int param0) {
+        if (param0 != 0) {
+            wca.a(18);
+            field_l = null;
+            return;
+        }
         field_l = null;
     }
 
     final static void a(int param0) {
-        rm.field_a = (mfa) (Object) new wu();
-        vha.field_c = (pma) (Object) new rn();
-        dea.field_a = (mb) (Object) new gva();
+        rm.field_a = (mfa) ((Object) new wu());
+        vha.field_c = (pma) ((Object) new rn());
+        if (param0 != -18035) {
+          field_l = (int[]) null;
+          dea.field_a = (mb) ((Object) new gva());
+          return;
+        } else {
+          dea.field_a = (mb) ((Object) new gva());
+          return;
+        }
     }
 
     final static void a(int param0, iu[] param1, int param2, int param3, int param4, int param5) {
@@ -28,22 +40,23 @@ abstract class wca extends od {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -63,51 +76,73 @@ abstract class wca extends od {
                   var10 = -var7 + param4 + param5;
                   param4 = var9;
                   L2: while (true) {
-                    if (param4 >= var10) {
-                      bea.a(ic.field_d);
-                      break L0;
-                    } else {
-                      param1[1].d(param4, param2, param0);
-                      param4 = param4 + var8;
-                      continue L2;
+                    L3: {
+                      if (param4 >= var10) {
+                        L4: {
+                          if (param3 == 20278) {
+                            break L4;
+                          } else {
+                            field_l = (int[]) null;
+                            break L4;
+                          }
+                        }
+                        bea.a(ic.field_d);
+                        break L3;
+                      } else {
+                        param1[1].d(param4, param2, param0);
+                        param4 = param4 + var8;
+                        if (var11 != 0) {
+                          break L3;
+                        } else {
+                          continue L2;
+                        }
+                      }
                     }
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 } else {
                   break L1;
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L5: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var6;
-            stackOut_9_1 = new StringBuilder().append("wca.M(").append(param0).append(',');
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackOut_13_0 = (RuntimeException) (var6);
+            stackOut_13_1 = new StringBuilder().append("wca.M(").append(param0).append(',');
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L3;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L5;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L3;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param2 + ',' + 20278 + ',' + param4 + ',' + param5 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 

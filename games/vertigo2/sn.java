@@ -16,10 +16,10 @@ abstract class sn extends li {
     }
 
     final void a(int[] param0, int param1, int param2) {
-        if (((sn) this).field_p) {
-            ((sn) this).b(param0, param1, param2);
+        if (this.field_p) {
+            this.b(param0, param1, param2);
         } else {
-            ((sn) this).a(param2);
+            this.a(param2);
         }
     }
 
@@ -30,6 +30,6 @@ abstract class sn extends li {
     abstract sn c();
 
     protected sn() {
-        ((sn) this).field_p = true;
+        this.field_p = true;
     }
 }

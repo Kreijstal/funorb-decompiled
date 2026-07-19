@@ -21,27 +21,32 @@ final class ik implements Iterator {
     }
 
     private final void b(int param0) {
-        ((ik) this).field_d = 1;
-        ((ik) this).field_h = ((ik) this).field_e.field_d[0].field_e;
-        ((ik) this).field_k = null;
+        this.field_d = 1;
+        this.field_h = this.field_e.field_d[0].field_e;
+        if (param0 > -71) {
+            return;
+        }
+        this.field_k = null;
     }
 
     public final boolean hasNext() {
+        nm[] fieldTemp$16 = null;
+        int fieldTemp$17 = 0;
         int var2 = 0;
         var2 = BrickABrac.field_J ? 1 : 0;
-        if (((ik) this).field_h == ((ik) this).field_e.field_d[((ik) this).field_d - 1]) {
+        if (this.field_h == this.field_e.field_d[this.field_d - 1]) {
           L0: while (true) {
-            if (((ik) this).field_e.field_c <= ((ik) this).field_d) {
+            if (this.field_e.field_c <= this.field_d) {
               return false;
             } else {
-              nm[] fieldTemp$16 = ((ik) this).field_e.field_d;
-              int fieldTemp$17 = ((ik) this).field_d;
-              ((ik) this).field_d = ((ik) this).field_d + 1;
-              if (fieldTemp$16[fieldTemp$17].field_e != ((ik) this).field_e.field_d[((ik) this).field_d + -1]) {
-                ((ik) this).field_h = ((ik) this).field_e.field_d[((ik) this).field_d + -1].field_e;
+              fieldTemp$16 = this.field_e.field_d;
+              fieldTemp$17 = this.field_d;
+              this.field_d = this.field_d + 1;
+              if (fieldTemp$16[fieldTemp$17].field_e != this.field_e.field_d[this.field_d + -1]) {
+                this.field_h = this.field_e.field_d[this.field_d + -1].field_e;
                 return true;
               } else {
-                ((ik) this).field_h = ((ik) this).field_e.field_d[((ik) this).field_d - 1];
+                this.field_h = this.field_e.field_d[this.field_d - 1];
                 continue L0;
               }
             }
@@ -52,30 +57,61 @@ final class ik implements Iterator {
     }
 
     public final Object next() {
+        nm[] fieldTemp$0 = null;
+        int fieldTemp$1 = 0;
         nm var1 = null;
         int var2 = BrickABrac.field_J ? 1 : 0;
-        if (((ik) this).field_h != ((ik) this).field_e.field_d[-1 + ((ik) this).field_d]) {
-            var1 = ((ik) this).field_h;
-            ((ik) this).field_h = var1.field_e;
-            ((ik) this).field_k = var1;
-            return (Object) (Object) var1;
+        if (this.field_h != this.field_e.field_d[-1 + this.field_d]) {
+            var1 = this.field_h;
+            this.field_h = var1.field_e;
+            this.field_k = var1;
+            return var1;
         }
         do {
-            if (((ik) this).field_d >= ((ik) this).field_e.field_c) {
+            if (this.field_d >= this.field_e.field_c) {
                 return null;
             }
-            nm[] fieldTemp$0 = ((ik) this).field_e.field_d;
-            int fieldTemp$1 = ((ik) this).field_d;
-            ((ik) this).field_d = ((ik) this).field_d + 1;
+            fieldTemp$0 = this.field_e.field_d;
+            fieldTemp$1 = this.field_d;
+            this.field_d = this.field_d + 1;
             var1 = fieldTemp$0[fieldTemp$1].field_e;
-        } while (((ik) this).field_e.field_d[((ik) this).field_d + -1] == var1);
-        ((ik) this).field_h = var1.field_e;
-        ((ik) this).field_k = var1;
-        return (Object) (Object) var1;
+        } while (this.field_e.field_d[this.field_d + -1] == var1);
+        this.field_h = var1.field_e;
+        this.field_k = var1;
+        return var1;
     }
 
     final static boolean a(boolean param0) {
-        return null != eq.field_g && q.field_i == rf.field_b;
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
+        L0: {
+          if (!param0) {
+            break L0;
+          } else {
+            field_g = (tq) null;
+            break L0;
+          }
+        }
+        L1: {
+          L2: {
+            if (null == eq.field_g) {
+              break L2;
+            } else {
+              if (q.field_i != rf.field_b) {
+                break L2;
+              } else {
+                stackOut_4_0 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                break L1;
+              }
+            }
+          }
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L1;
+        }
+        return stackIn_6_0 != 0;
     }
 
     final static int a(int param0, gb param1) {
@@ -83,31 +119,34 @@ final class ik implements Iterator {
         RuntimeException var2 = null;
         int var3 = 0;
         int stackIn_16_0 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
+        int stackIn_18_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        String stackIn_20_2 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int stackOut_17_0 = 0;
         int stackOut_15_0 = 0;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
         RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
             L1: {
               var2_int = cn.field_d;
-              if (param1.field_c != 2) {
-                if (param1.field_c != 4) {
-                  if (~param1.field_k != ~oc.field_p) {
+              if (-3 != (param1.field_c ^ -1)) {
+                if (-5 != (param1.field_c ^ -1)) {
+                  if ((param1.field_k ^ -1L) != (oc.field_p ^ -1L)) {
                     var2_int = r.field_C[param1.field_c];
                     break L1;
                   } else {
@@ -140,49 +179,61 @@ final class ik implements Iterator {
                 }
               }
             }
-            stackOut_15_0 = var2_int;
-            stackIn_16_0 = stackOut_15_0;
-            break L0;
+            if (param0 == -31126) {
+              stackOut_17_0 = var2_int;
+              stackIn_18_0 = stackOut_17_0;
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              stackOut_15_0 = -27;
+              stackIn_16_0 = stackOut_15_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var2;
-            stackOut_17_1 = new StringBuilder().append("ik.F(").append(-31126).append(',');
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackOut_19_0 = (RuntimeException) (var2);
+            stackOut_19_1 = new StringBuilder().append("ik.F(").append(param0).append(',');
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
               break L3;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
               break L3;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
         }
-        return stackIn_16_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_16_0;
+        } else {
+          return stackIn_18_0;
+        }
     }
 
     public final void remove() {
-        if (((ik) this).field_k == null) {
+        if (this.field_k == null) {
             throw new IllegalStateException();
         }
-        ((ik) this).field_k.b((byte) 111);
-        ((ik) this).field_k = null;
+        this.field_k.b((byte) 111);
+        this.field_k = null;
     }
 
     final static boolean a(int param0) {
@@ -196,6 +247,7 @@ final class ik implements Iterator {
         int stackIn_10_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_16_0 = 0;
@@ -204,19 +256,21 @@ final class ik implements Iterator {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
-            var5 = (bg) (Object) mf.field_i.d(-78);
+            var5 = (bg) ((Object) mf.field_i.d(-78));
             var1 = var5;
             if (var1 == null) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               var2 = 0;
-              var3 = -45;
+              var3 = -90 / ((param0 - -28) / 50);
               L1: while (true) {
                 if (var2 >= var1.field_s) {
                   stackOut_16_0 = 1;
                   stackIn_17_0 = stackOut_16_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
                   L2: {
@@ -228,7 +282,8 @@ final class ik implements Iterator {
                       } else {
                         stackOut_9_0 = 0;
                         stackIn_10_0 = stackOut_9_0;
-                        return stackIn_10_0 != 0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       }
                     }
                   }
@@ -241,7 +296,8 @@ final class ik implements Iterator {
                       } else {
                         stackOut_13_0 = 0;
                         stackIn_14_0 = stackOut_13_0;
-                        return stackIn_14_0 != 0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       }
                     }
                   }
@@ -254,12 +310,27 @@ final class ik implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var1_ref, "ik.C(" + 104 + ')');
+          throw qb.a((Throwable) ((Object) var1_ref), "ik.C(" + param0 + ')');
         }
-        return stackIn_17_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_10_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_14_0 != 0;
+            } else {
+              return stackIn_17_0 != 0;
+            }
+          }
+        }
     }
 
     public static void c(int param0) {
+        if (param0 > -8) {
+            return;
+        }
         field_g = null;
         field_f = null;
         field_i = null;
@@ -269,6 +340,7 @@ final class ik implements Iterator {
     }
 
     final static boolean a(byte param0, char param1) {
+        boolean discarded$2 = false;
         int stackIn_9_0 = 0;
         int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -276,7 +348,7 @@ final class ik implements Iterator {
           if (param0 == -9) {
             break L0;
           } else {
-            boolean discarded$2 = ik.a((byte) -124, 'V');
+            discarded$2 = ik.a((byte) -124, 'V');
             break L0;
           }
         }
@@ -310,20 +382,16 @@ final class ik implements Iterator {
     }
 
     ik(ji param0) {
-        ((ik) this).field_k = null;
+        this.field_k = null;
         try {
-            ((ik) this).field_e = param0;
+            this.field_e = param0;
             this.b(-101);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = false;
     }
 }

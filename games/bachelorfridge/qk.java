@@ -12,6 +12,9 @@ final class qk extends k {
 
     public static void d(int param0) {
         field_q = null;
+        if (param0 < 66) {
+            return;
+        }
         field_m = null;
         field_k = null;
         field_p = null;
@@ -42,28 +45,28 @@ final class qk extends k {
         int stackOut_5_0 = 0;
         var16 = BachelorFridge.field_y;
         if (param1 == 0) {
-          var17 = ((qk) this).field_j.a(param0, -1);
+          var17 = this.field_j.a(param0, -1);
           var3 = var17;
-          if (!((qk) this).field_j.field_m) {
+          if (!this.field_j.field_m) {
             return var17;
           } else {
-            var20 = ((qk) this).a(0, -1 + param0 & it.field_r, (byte) 105);
-            var5 = ((qk) this).a(0, param0, (byte) 116);
-            var21 = ((qk) this).a(0, param0 + 1 & it.field_r, (byte) 109);
+            var20 = this.a(0, -1 + param0 & it.field_r, (byte) 105);
+            var5 = this.a(0, param0, (byte) 116);
+            var21 = this.a(0, param0 + 1 & it.field_r, (byte) 109);
             var7 = 0;
             L0: while (true) {
               if (hh.field_d <= var7) {
                 return var17;
               } else {
                 L1: {
-                  var8 = ((qk) this).field_o * (-var20[var7] + var21[var7]);
-                  var9 = (-var5[-1 + var7 & wp.field_r] + var5[1 + var7 & wp.field_r]) * ((qk) this).field_o;
-                  var10 = var9 >> 12;
-                  var11 = var8 >> 12;
-                  var12 = var10 * var10 >> 12;
-                  var13 = var11 * var11 >> 12;
+                  var8 = this.field_o * (-var20[var7] + var21[var7]);
+                  var9 = (-var5[-1 + var7 & wp.field_r] + var5[1 + var7 & wp.field_r]) * this.field_o;
+                  var10 = var9 >> 2133613836;
+                  var11 = var8 >> 1835324652;
+                  var12 = var10 * var10 >> 345903020;
+                  var13 = var11 * var11 >> -153846100;
                   var14 = (int)(4096.0 * Math.sqrt((double)((float)(4096 + (var12 + var13)) / 4096.0f)));
-                  if (var14 == 0) {
+                  if (-1 == (var14 ^ -1)) {
                     stackOut_16_0 = 0;
                     stackIn_17_0 = stackOut_16_0;
                     break L1;
@@ -81,29 +84,29 @@ final class qk extends k {
             }
           }
         } else {
-          field_n = null;
-          var17 = ((qk) this).field_j.a(param0, -1);
+          field_n = (String) null;
+          var17 = this.field_j.a(param0, -1);
           var3 = var17;
-          if (!((qk) this).field_j.field_m) {
+          if (!this.field_j.field_m) {
             return var17;
           } else {
-            var20 = ((qk) this).a(0, -1 + param0 & it.field_r, (byte) 105);
-            var5 = ((qk) this).a(0, param0, (byte) 116);
-            var21 = ((qk) this).a(0, param0 + 1 & it.field_r, (byte) 109);
+            var20 = this.a(0, -1 + param0 & it.field_r, (byte) 105);
+            var5 = this.a(0, param0, (byte) 116);
+            var21 = this.a(0, param0 + 1 & it.field_r, (byte) 109);
             var7 = 0;
             L2: while (true) {
               if (hh.field_d <= var7) {
                 return var17;
               } else {
                 L3: {
-                  var8 = ((qk) this).field_o * (-var20[var7] + var21[var7]);
-                  var9 = (-var5[-1 + var7 & wp.field_r] + var5[1 + var7 & wp.field_r]) * ((qk) this).field_o;
-                  var10 = var9 >> 12;
-                  var11 = var8 >> 12;
-                  var12 = var10 * var10 >> 12;
-                  var13 = var11 * var11 >> 12;
+                  var8 = this.field_o * (-var20[var7] + var21[var7]);
+                  var9 = (-var5[-1 + var7 & wp.field_r] + var5[1 + var7 & wp.field_r]) * this.field_o;
+                  var10 = var9 >> 2133613836;
+                  var11 = var8 >> 1835324652;
+                  var12 = var10 * var10 >> 345903020;
+                  var13 = var11 * var11 >> -153846100;
                   var14 = (int)(4096.0 * Math.sqrt((double)((float)(4096 + (var12 + var13)) / 4096.0f)));
-                  if (var14 == 0) {
+                  if (-1 == (var14 ^ -1)) {
                     stackOut_6_0 = 0;
                     stackIn_7_0 = stackOut_6_0;
                     break L3;
@@ -125,7 +128,7 @@ final class qk extends k {
 
     public qk() {
         super(1, true);
-        ((qk) this).field_o = 4096;
+        this.field_o = 4096;
     }
 
     final void a(byte param0, lu param1, int param2) {
@@ -152,14 +155,14 @@ final class qk extends k {
               if (param0 == -71) {
                 break L1;
               } else {
-                field_m = null;
+                field_m = (int[]) null;
                 break L1;
               }
             }
             if (param2 != 0) {
               break L0;
             } else {
-              ((qk) this).field_o = param1.e((byte) 47);
+              this.field_o = param1.e((byte) 47);
               return;
             }
           }
@@ -167,23 +170,23 @@ final class qk extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_0 = (RuntimeException) (var4);
             stackOut_5_1 = new StringBuilder().append("qk.E(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -191,15 +194,11 @@ final class qk extends k {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "Please select an option in the '<%0>' row.";
         field_k = "Bachelor Fridge";
     }

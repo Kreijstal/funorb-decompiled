@@ -15,15 +15,14 @@ final class cf {
         field_f = null;
         field_c = null;
         field_g = null;
+        if (param0 != 1) {
+            return;
+        }
         field_b = null;
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "cf.A(";
         field_f = new mi(1);
         field_b = new bc();

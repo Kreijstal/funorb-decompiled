@@ -19,10 +19,6 @@ final class wl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new String[]{"Mode: Normal", "Mode: Hard"};
     }
 }

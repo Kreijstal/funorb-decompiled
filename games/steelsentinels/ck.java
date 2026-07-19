@@ -19,7 +19,7 @@ class ck {
 
     final static ll a(int param0) {
         int var1 = 0;
-        var1 = -105;
+        var1 = -105 / ((param0 - 83) / 42);
         if (kh.field_w == null) {
           kh.field_w = new ll();
           kh.field_w.a(111, tj.field_e);
@@ -39,24 +39,24 @@ class ck {
 
     final void b(int param0) {
         if (param0 == 4) {
-          if (((ck) this).field_i == null) {
+          if (this.field_i == null) {
             return;
           } else {
-            ((ck) this).field_i.field_k = ((ck) this).field_k;
-            ((ck) this).field_k.field_i = ((ck) this).field_i;
-            ((ck) this).field_i = null;
-            ((ck) this).field_k = null;
+            this.field_i.field_k = this.field_k;
+            this.field_k.field_i = this.field_i;
+            this.field_i = null;
+            this.field_k = null;
             return;
           }
         } else {
           field_e = -59;
-          if (((ck) this).field_i == null) {
+          if (this.field_i == null) {
             return;
           } else {
-            ((ck) this).field_i.field_k = ((ck) this).field_k;
-            ((ck) this).field_k.field_i = ((ck) this).field_i;
-            ((ck) this).field_i = null;
-            ((ck) this).field_k = null;
+            this.field_i.field_k = this.field_k;
+            this.field_k.field_i = this.field_i;
+            this.field_i = null;
+            this.field_k = null;
             return;
           }
         }
@@ -87,17 +87,13 @@ class ck {
         if (param0 != -12) {
             return true;
         }
-        if (((ck) this).field_i != null) {
+        if (this.field_i != null) {
             return true;
         }
         return false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = " second";
         field_c = new int[1024];
         field_m = "End Game";

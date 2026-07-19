@@ -12,7 +12,6 @@ abstract class cc {
         RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
-        int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
@@ -22,57 +21,100 @@ abstract class cc {
             uc.field_b = 11;
             var1_int = 0;
             L1: while (true) {
-              if (256 <= var1_int) {
-                var5 = 256;
-                var1_int = var5;
-                L2: while (true) {
-                  if (var5 >= r.field_a.length) {
-                    break L0;
+              L2: {
+                L3: {
+                  if (256 <= var1_int) {
+                    break L3;
                   } else {
-                    r.field_a[var5] = 255;
-                    var5++;
-                    continue L2;
+                    var2 = 15.0;
+                    r.field_a[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+                    var1_int++;
+                    if (var4 != 0) {
+                      break L2;
+                    } else {
+                      if (var4 == 0) {
+                        continue L1;
+                      } else {
+                        break L3;
+                      }
+                    }
                   }
                 }
-              } else {
-                var2 = 15.0;
-                r.field_a[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
-                var1_int++;
-                continue L1;
+                if (param0) {
+                  break L2;
+                } else {
+                  field_a = (le[][]) null;
+                  break L2;
+                }
+              }
+              var1_int = 256;
+              L4: while (true) {
+                if (var1_int >= r.field_a.length) {
+                  break L0;
+                } else {
+                  r.field_a[var1_int] = 255;
+                  var1_int++;
+                  if (var4 == 0) {
+                    continue L4;
+                  } else {
+                    return;
+                  }
+                }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var1, "cc.F(" + true + ')');
+          throw la.a((Throwable) ((Object) var1), "cc.F(" + param0 + ')');
         }
     }
 
     abstract int a(boolean param0);
 
     final static void a(int param0, boolean param1, boolean param2) {
-        if (param1) {
-            ge.c(0, 0, ge.field_h, ge.field_g, 0, 192);
+        if (!param1) {
+          ge.d();
+          vj.a(1, param1);
+          if (param0 == 192) {
+            return;
+          } else {
+            cc.a(-77);
+            return;
+          }
         } else {
+          ge.c(0, 0, ge.field_h, ge.field_g, 0, 192);
+          if (MonkeyPuzzle2.field_F) {
             ge.d();
-            ge.d();
-            ge.d();
+            vj.a(1, param1);
+            if (param0 != 192) {
+              cc.a(-77);
+              return;
+            } else {
+              return;
+            }
+          } else {
+            vj.a(1, param1);
+            if (param0 != 192) {
+              cc.a(-77);
+              return;
+            } else {
+              return;
+            }
+          }
         }
-        vj.a(1, param1);
     }
 
     public static void a(int param0) {
-        field_a = null;
+        if (param0 != 256) {
+            return;
+        }
+        field_a = (le[][]) null;
     }
 
     abstract void a(java.awt.Component param0, int param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new le[3][];
     }
 }

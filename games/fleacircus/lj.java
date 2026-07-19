@@ -52,10 +52,6 @@ final class lj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new int[8192];
         field_h = 0;
         field_i = "achievements to collect";

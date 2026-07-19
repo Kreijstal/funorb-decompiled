@@ -14,7 +14,7 @@ abstract class ah extends sm implements rj {
 
     final String a(byte param0) {
         int var2 = 91 / ((52 - param0) / 53);
-        return ((ah) this).a((byte) -109, ((ah) this).field_f.field_l);
+        return this.a((byte) -109, this.field_f.field_l);
     }
 
     public final void a(boolean param0, ul param1) {
@@ -41,7 +41,7 @@ abstract class ah extends sm implements rj {
               if (param0) {
                 break L1;
               } else {
-                field_l = null;
+                field_l = (String) null;
                 break L1;
               }
             }
@@ -51,23 +51,23 @@ abstract class ah extends sm implements rj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ah.CA(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -75,7 +75,7 @@ abstract class ah extends sm implements rj {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -86,8 +86,8 @@ abstract class ah extends sm implements rj {
         int stackIn_3_0 = 0;
         int stackOut_1_0 = 0;
         var2 = -113 % ((41 - param0) / 50);
-        if (((ah) this).field_f.field_l != null) {
-          if (((ah) this).field_f.field_l.length() == 0) {
+        if (this.field_f.field_l != null) {
+          if (this.field_f.field_l.length() == 0) {
             return true;
           } else {
             return false;
@@ -104,18 +104,18 @@ abstract class ah extends sm implements rj {
             return;
         }
         try {
-            ((ah) this).a(false);
+            this.a(false);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ah.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "ah.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final rf d(int param0) {
         if (param0 >= -60) {
           ah.f(-116);
-          return ((ah) this).a(-1, ((ah) this).field_f.field_l);
+          return this.a(-1, this.field_f.field_l);
         } else {
-          return ((ah) this).a(-1, ((ah) this).field_f.field_l);
+          return this.a(-1, this.field_f.field_l);
         }
     }
 
@@ -129,28 +129,28 @@ abstract class ah extends sm implements rj {
         field_k = null;
         field_i = null;
         if (param0 != -16187) {
-            Object var2 = null;
+            java.awt.Canvas var2 = (java.awt.Canvas) null;
             ah.a((java.awt.Canvas) null, -55);
         }
     }
 
     final static void a(java.awt.Canvas param0, int param1) {
         try {
-            if (!(ff.field_e != 11)) {
+            if (!(-12 != (ff.field_e ^ -1))) {
                 bm.b((byte) 62);
             }
             si.a(pl.field_t, hd.field_e, pb.field_d, (byte) 14);
             nn.a(param0, param1, param1 + -1, 0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ah.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "ah.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     ah(ul param0) {
         try {
-            ((ah) this).field_f = param0;
+            this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -160,13 +160,12 @@ abstract class ah extends sm implements rj {
         nn.field_i = null;
         tb.field_G = null;
         tb.field_D = false;
+        if (param0 != 0) {
+            field_e = -59L;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "OK";
         field_g = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
         field_l = "Waiting for graphics";

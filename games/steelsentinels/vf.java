@@ -12,7 +12,7 @@ final class vf {
     public static void a(int param0) {
         field_f = null;
         field_a = null;
-        int var1 = 1;
+        int var1 = 91 % ((param0 - 56) / 62);
         field_c = null;
         field_b = null;
     }
@@ -34,7 +34,7 @@ final class vf {
             sj.field_z.a(param0 + -320, 16, -24 + (fl.field_b.field_Lb + -20), 24, -24 + (fl.field_b.field_zb - 24));
             pm.field_gb.a(0, -20 + (fl.field_b.field_Lb + -24), 24, 120, 80);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "vf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "vf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -42,13 +42,13 @@ final class vf {
         ck var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        Object var4 = null;
+        String var4 = null;
         rh var5 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = SteelSentinels.field_G;
         try {
           L0: {
-            var5 = (rh) (Object) ol.field_Vb.e(13058);
+            var5 = (rh) ((Object) ol.field_Vb.e(13058));
             L1: while (true) {
               if (var5 == null) {
                 var2 = fg.field_Ub.e(13058);
@@ -57,7 +57,7 @@ final class vf {
                     if (!param0) {
                       break L0;
                     } else {
-                      var4 = null;
+                      var4 = (String) null;
                       vf.a(4, (String) null);
                       return;
                     }
@@ -69,7 +69,7 @@ final class vf {
                 }
               } else {
                 vm.a(param1, -103, var5);
-                var5 = (rh) (Object) ol.field_Vb.a((byte) -92);
+                var5 = (rh) ((Object) ol.field_Vb.a((byte) -92));
                 continue L1;
               }
             }
@@ -77,15 +77,11 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var2_ref, "vf.A(" + param0 + ',' + param1 + ')');
+          throw ci.a((Throwable) ((Object) var2_ref), "vf.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new vd();
         field_c = "MODULES";
         field_f = "Players";

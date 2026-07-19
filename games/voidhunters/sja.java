@@ -17,17 +17,17 @@ final class sja {
 
     final void a(int param0, sja param1, int param2, aja param3, int param4, int param5, int param6) {
         try {
-            ((sja) this).field_e = param1;
-            ((sja) this).field_k = param3;
+            this.field_e = param1;
+            this.field_k = param3;
             if (param4 != 4096) {
                 sja.a((byte) 30);
             }
-            ((sja) this).field_h = param6;
-            ((sja) this).field_f = param5;
-            ((sja) this).field_a = param2;
-            ((sja) this).field_l = param0;
+            this.field_h = param6;
+            this.field_f = param5;
+            this.field_a = param2;
+            this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "sja.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "sja.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -38,10 +38,6 @@ final class sja {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 2;
         field_g = 0;
         field_d = "You have been removed from <%0>'s game.";

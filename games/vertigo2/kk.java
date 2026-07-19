@@ -45,44 +45,44 @@ final class kk {
           if (param1 == -2) {
             break L0;
           } else {
-            ((kk) this).field_g = -121;
+            this.field_g = -121;
             break L0;
           }
         }
-        if (((kk) this).field_k != ((kk) this).field_g) {
-          if (((kk) this).field_g != 1) {
+        if (this.field_k != this.field_g) {
+          if (-2 != (this.field_g ^ -1)) {
             L1: {
-              var3 = ((kk) this).field_m[param0];
+              var3 = this.field_m[param0];
               if (var3 == null) {
                 L2: {
-                  ((kk) this).field_c = true;
-                  if (((kk) this).field_g <= ((kk) this).field_d) {
-                    var4 = (mn) (Object) ((kk) this).field_i.c((byte) -45);
+                  this.field_c = true;
+                  if (this.field_g <= this.field_d) {
+                    var4 = (mn) ((Object) this.field_i.c((byte) -45));
                     var3 = new mn(param0, var4.field_s);
-                    ((kk) this).field_m[var4.field_r] = null;
+                    this.field_m[var4.field_r] = null;
                     var4.c(param1 ^ -4);
                     break L2;
                   } else {
-                    var3 = new mn(param0, ((kk) this).field_d);
-                    ((kk) this).field_d = ((kk) this).field_d + 1;
+                    var3 = new mn(param0, this.field_d);
+                    this.field_d = this.field_d + 1;
                     break L2;
                   }
                 }
-                ((kk) this).field_m[param0] = var3;
+                this.field_m[param0] = var3;
                 break L1;
               } else {
-                ((kk) this).field_c = false;
+                this.field_c = false;
                 break L1;
               }
             }
-            ((kk) this).field_i.a((li) (Object) var3, (byte) 27);
-            return ((kk) this).field_l[var3.field_s];
+            this.field_i.a(var3, (byte) 27);
+            return this.field_l[var3.field_s];
           } else {
             L3: {
               stackOut_8_0 = this;
               stackIn_10_0 = stackOut_8_0;
               stackIn_9_0 = stackOut_8_0;
-              if (((kk) this).field_b == param0) {
+              if (this.field_b == param0) {
                 stackOut_10_0 = this;
                 stackOut_10_1 = 0;
                 stackIn_11_0 = stackOut_10_0;
@@ -96,16 +96,16 @@ final class kk {
                 break L3;
               }
             }
-            ((kk) this).field_c = stackIn_11_1 != 0;
-            ((kk) this).field_b = param0;
-            return ((kk) this).field_l[0];
+            ((kk) (this)).field_c = stackIn_11_1 != 0;
+            this.field_b = param0;
+            return this.field_l[0];
           }
         } else {
           L4: {
             stackOut_3_0 = this;
             stackIn_5_0 = stackOut_3_0;
             stackIn_4_0 = stackOut_3_0;
-            if (null != ((kk) this).field_m[param0]) {
+            if (null != this.field_m[param0]) {
               stackOut_5_0 = this;
               stackOut_5_1 = 0;
               stackIn_6_0 = stackOut_5_0;
@@ -119,9 +119,9 @@ final class kk {
               break L4;
             }
           }
-          ((kk) this).field_c = stackIn_6_1 != 0;
-          ((kk) this).field_m[param0] = mn.field_v;
-          return ((kk) this).field_l[param0];
+          ((kk) (this)).field_c = stackIn_6_1 != 0;
+          this.field_m[param0] = mn.field_v;
+          return this.field_l[param0];
         }
     }
 
@@ -130,12 +130,12 @@ final class kk {
         byte[] var10 = null;
         byte[] var3 = null;
         Random var4 = null;
-        int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        int var5 = 0;
         int var9 = Vertigo2.field_L ? 1 : 0;
-        km var2 = (km) (Object) bj.field_c.a((long)param0, false);
+        km var2 = (km) ((Object) bj.field_c.a((long)param0, false));
         if (var2 == null) {
             var11 = new byte[512];
             var10 = var11;
@@ -153,7 +153,7 @@ final class kk {
                 var3[var6] = (byte) var8;
             }
             var2 = new km(var11);
-            bj.field_c.a(-1, (gp) (Object) var2, (long)param0);
+            bj.field_c.a(-1, var2, (long)param0);
         }
         if (param1 != 38) {
             kk.a((byte) 22);
@@ -162,6 +162,9 @@ final class kk {
     }
 
     public static void a(boolean param0) {
+        if (!param0) {
+            kk.b((byte) -122);
+        }
         field_f = null;
         field_e = null;
         field_h = null;
@@ -169,9 +172,10 @@ final class kk {
     }
 
     final static void a(byte param0) {
+        byte[] discarded$0 = null;
         id.field_a = gk.a(53);
         if (param0 != 43) {
-            byte[] discarded$0 = kk.a(-94, (byte) -26);
+            discarded$0 = kk.a(-94, (byte) -26);
         }
         nj.field_d = 0;
     }
@@ -179,81 +183,93 @@ final class kk {
     final int[][][] a(int param0) {
         int var2 = 0;
         int var3 = Vertigo2.field_L ? 1 : 0;
-        if (!(((kk) this).field_k == ((kk) this).field_g)) {
+        if (!(this.field_k == this.field_g)) {
             throw new RuntimeException("Can only retrieve a full image cache");
         }
-        for (var2 = param0; ((kk) this).field_g > var2; var2++) {
-            ((kk) this).field_m[var2] = mn.field_v;
+        for (var2 = param0; this.field_g > var2; var2++) {
+            this.field_m[var2] = mn.field_v;
         }
-        return ((kk) this).field_l;
+        return this.field_l;
     }
 
     final static byte[] a(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
-        byte[] stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        byte[] stackOut_2_0 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            var2_int = param0.length;
-            var3 = new byte[var2_int];
-            qq.a(param0, 0, var3, 0, var2_int);
-            stackOut_0_0 = (byte[]) var3;
-            stackIn_1_0 = stackOut_0_0;
+            L1: {
+              var2_int = param0.length;
+              var3 = new byte[var2_int];
+              qq.a(param0, 0, var3, 0, var2_int);
+              if (param1 == 103) {
+                break L1;
+              } else {
+                field_h = (String) null;
+                break L1;
+              }
+            }
+            stackOut_2_0 = (byte[]) (var3);
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("kk.H(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackOut_4_0 = (RuntimeException) (var2);
+            stackOut_4_1 = new StringBuilder().append("kk.H(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 103 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     final static void b(byte param0) {
+        byte[] discarded$0 = null;
         il.field_a = true;
+        if (param0 <= 78) {
+            discarded$0 = kk.a(117, (byte) 117);
+        }
         field_a = null;
         gk.field_c = null;
         if (!(null == ha.field_a)) {
@@ -270,39 +286,35 @@ final class kk {
     }
 
     kk(int param0, int param1, int param2) {
-        ((kk) this).field_b = -1;
-        ((kk) this).field_d = 0;
-        ((kk) this).field_i = new nj();
-        ((kk) this).field_c = false;
-        ((kk) this).field_g = param0;
-        ((kk) this).field_k = param1;
-        ((kk) this).field_l = new int[((kk) this).field_g][3][param2];
-        ((kk) this).field_m = new mn[((kk) this).field_k];
+        this.field_b = -1;
+        this.field_d = 0;
+        this.field_i = new nj();
+        this.field_c = false;
+        this.field_g = param0;
+        this.field_k = param1;
+        this.field_l = new int[this.field_g][3][param2];
+        this.field_m = new mn[this.field_k];
     }
 
     final void b(int param0) {
         int var2 = 0;
         int var3 = Vertigo2.field_L ? 1 : 0;
-        for (var2 = 0; ((kk) this).field_g > var2; var2++) {
-            ((kk) this).field_l[var2][0] = null;
-            ((kk) this).field_l[var2][1] = null;
-            ((kk) this).field_l[var2][2] = null;
-            ((kk) this).field_l[var2] = null;
+        for (var2 = 0; this.field_g > var2; var2++) {
+            this.field_l[var2][0] = null;
+            this.field_l[var2][1] = null;
+            this.field_l[var2][2] = null;
+            this.field_l[var2] = (int[][]) null;
         }
-        ((kk) this).field_l = null;
+        this.field_l = (int[][][]) null;
         if (param0 != 32764) {
             return;
         }
-        ((kk) this).field_m = null;
-        ((kk) this).field_i.c(0);
-        ((kk) this).field_i = null;
+        this.field_m = null;
+        this.field_i.c(0);
+        this.field_i = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new ve(7, 0, 1, 1);
         field_h = "You need to play <%0> more rated games to unlock this option.";
     }

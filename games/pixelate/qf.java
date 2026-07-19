@@ -11,9 +11,15 @@ final class qf {
         field_c = null;
         field_a = null;
         field_d = null;
+        if (param0) {
+            qf.a(-39);
+        }
     }
 
     final static void a(int param0, int param1) {
+        if (param0 != 21983) {
+            return;
+        }
         km.a(param1, (byte) 112);
     }
 
@@ -23,20 +29,29 @@ final class qf {
         tn.field_j[61] = 27;
         tn.field_j[520] = 59;
         tn.field_j[192] = 28;
-        tn.field_j[222] = 58;
-        tn.field_j[93] = 43;
-        tn.field_j[47] = 73;
-        tn.field_j[46] = 72;
-        tn.field_j[45] = 26;
-        tn.field_j[44] = 71;
-        tn.field_j[91] = 42;
+        if (param0 != 31171) {
+          field_c = (tf) null;
+          tn.field_j[222] = 58;
+          tn.field_j[93] = 43;
+          tn.field_j[47] = 73;
+          tn.field_j[46] = 72;
+          tn.field_j[45] = 26;
+          tn.field_j[44] = 71;
+          tn.field_j[91] = 42;
+          return;
+        } else {
+          tn.field_j[222] = 58;
+          tn.field_j[93] = 43;
+          tn.field_j[47] = 73;
+          tn.field_j[46] = 72;
+          tn.field_j[45] = 26;
+          tn.field_j[44] = 71;
+          tn.field_j[91] = 42;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Blast from the Past";
     }
 }

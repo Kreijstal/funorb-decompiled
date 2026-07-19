@@ -21,10 +21,6 @@ abstract class fn {
     abstract eo a(int param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fn.C(";
         field_b = "Waiting for instruments";
     }

@@ -9,13 +9,13 @@ final class ob {
         try {
             if (!param1) {
               if (param0 != null) {
-                if (param0 == ((ob) this).field_a) {
+                if (param0 == this.field_a) {
                   return;
                 } else {
                   L0: {
-                    if (((ob) this).field_a != null) {
-                      ((ob) this).field_a.setCursor((java.awt.Cursor) null);
-                      ((ob) this).field_a = null;
+                    if (this.field_a != null) {
+                      this.field_a.setCursor((java.awt.Cursor) null);
+                      this.field_a = null;
                       break L0;
                     } else {
                       break L0;
@@ -23,8 +23,8 @@ final class ob {
                   }
                   L1: {
                     if (param0 != null) {
-                      param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) (Object) new java.awt.image.BufferedImage(1, 1, 2), new java.awt.Point(0, 0), (String) null));
-                      ((ob) this).field_a = param0;
+                      param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
+                      this.field_a = param0;
                       break L1;
                     } else {
                       break L1;
@@ -37,13 +37,13 @@ final class ob {
               }
             } else {
               param0 = null;
-              if (param0 == ((ob) this).field_a) {
+              if (param0 == this.field_a) {
                 return;
               } else {
                 L2: {
-                  if (((ob) this).field_a != null) {
-                    ((ob) this).field_a.setCursor((java.awt.Cursor) null);
-                    ((ob) this).field_a = null;
+                  if (this.field_a != null) {
+                    this.field_a.setCursor((java.awt.Cursor) null);
+                    this.field_a = null;
                     break L2;
                   } else {
                     break L2;
@@ -51,8 +51,8 @@ final class ob {
                 }
                 L3: {
                   if (param0 != null) {
-                    param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) (Object) new java.awt.image.BufferedImage(1, 1, 2), new java.awt.Point(0, 0), (String) null));
-                    ((ob) this).field_a = param0;
+                    param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
+                    this.field_a = param0;
                     break L3;
                   } else {
                     break L3;
@@ -75,16 +75,16 @@ final class ob {
         } else {
             var6 = new java.awt.image.BufferedImage(param2, param3, 2);
             var6.setRGB(0, 0, param2, param3, param1, 0, param2);
-            param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) (Object) var6, param4, (String) null));
+            param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) var6), param4, (String) null));
         }
     }
 
     public ob() throws Exception {
         java.awt.Robot var2 = new java.awt.Robot();
-        ((ob) this).field_b = var2;
+        this.field_b = var2;
     }
 
     public final void movemouse(int param0, int param1) {
-        ((ob) this).field_b.mouseMove(param0, param1);
+        this.field_b.mouseMove(param0, param1);
     }
 }

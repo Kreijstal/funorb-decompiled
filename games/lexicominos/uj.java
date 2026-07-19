@@ -2,8 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.io.*;
-import java.net.URL;
-import java.lang.String;
 
 final class uj implements rd {
     static jb[] field_a;
@@ -14,9 +12,20 @@ final class uj implements rd {
     private int field_e;
 
     public static void a(boolean param0) {
-        field_a = null;
-        field_c = null;
-        field_f = null;
+        java.awt.Canvas var2 = null;
+        if (!param0) {
+          var2 = (java.awt.Canvas) null;
+          uj.a(-66, (java.awt.Canvas) null);
+          field_a = null;
+          field_c = null;
+          field_f = (int[][]) null;
+          return;
+        } else {
+          field_a = null;
+          field_c = null;
+          field_f = (int[][]) null;
+          return;
+        }
     }
 
     final static void a(int param0, java.awt.Canvas param1) {
@@ -28,12 +37,13 @@ final class uj implements rd {
             de.a(fh.field_i, tl.field_g, pb.field_j, true);
             lj.a(0, param1, 0, (byte) -128);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "uj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "uj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(String param0, Throwable param1, int param2) {
         try {
+            int discarded$1 = 0;
             Exception var3 = null;
             String var3_ref = null;
             ei var4 = null;
@@ -62,6 +72,7 @@ final class uj implements rd {
             java.net.URL stackIn_13_4 = null;
             StringBuilder stackIn_13_5 = null;
             String stackIn_13_6 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             ab stackOut_10_0 = null;
             int stackOut_10_1 = 0;
@@ -117,7 +128,8 @@ final class uj implements rd {
                 var9 = tb.a("&", var8, true, "%26");
                 var10 = tb.a("#", var9, true, "%23");
                 if (null == tg.field_i) {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   L4: {
                     stackOut_10_0 = pk.field_n;
@@ -139,12 +151,12 @@ final class uj implements rd {
                     stackIn_11_4 = stackOut_10_4;
                     stackIn_11_5 = stackOut_10_5;
                     if (null != gl.field_b) {
-                      stackOut_12_0 = (ab) (Object) stackIn_12_0;
+                      stackOut_12_0 = (ab) ((Object) stackIn_12_0);
                       stackOut_12_1 = stackIn_12_1;
                       stackOut_12_2 = null;
                       stackOut_12_3 = null;
-                      stackOut_12_4 = (java.net.URL) (Object) stackIn_12_4;
-                      stackOut_12_5 = (StringBuilder) (Object) stackIn_12_5;
+                      stackOut_12_4 = (java.net.URL) ((Object) stackIn_12_4);
+                      stackOut_12_5 = (StringBuilder) ((Object) stackIn_12_5);
                       stackOut_12_6 = gl.field_b;
                       stackIn_13_0 = stackOut_12_0;
                       stackIn_13_1 = stackOut_12_1;
@@ -155,12 +167,12 @@ final class uj implements rd {
                       stackIn_13_6 = stackOut_12_6;
                       break L4;
                     } else {
-                      stackOut_11_0 = (ab) (Object) stackIn_11_0;
+                      stackOut_11_0 = (ab) ((Object) stackIn_11_0);
                       stackOut_11_1 = stackIn_11_1;
                       stackOut_11_2 = null;
                       stackOut_11_3 = null;
-                      stackOut_11_4 = (java.net.URL) (Object) stackIn_11_4;
-                      stackOut_11_5 = (StringBuilder) (Object) stackIn_11_5;
+                      stackOut_11_4 = (java.net.URL) ((Object) stackIn_11_4);
+                      stackOut_11_5 = (StringBuilder) ((Object) stackIn_11_5);
                       stackOut_11_6 = "" + d.field_a;
                       stackIn_13_0 = stackOut_11_0;
                       stackIn_13_1 = stackOut_11_1;
@@ -174,31 +186,49 @@ final class uj implements rd {
                   }
                   var4 = ((ab) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, stackIn_13_6 + "&v1=" + ab.field_j + "&v2=" + ab.field_v + "&e=" + var10));
                   L5: while (true) {
-                    if (var4.field_b != 0) {
-                      L6: {
-                        if (var4.field_b != param2) {
-                          break L6;
+                    L6: {
+                      L7: {
+                        if (-1 != (var4.field_b ^ -1)) {
+                          break L7;
                         } else {
-                          var5 = (DataInputStream) var4.field_g;
-                          int discarded$1 = var5.read();
-                          var5.close();
-                          break L6;
+                          ge.a(param2 + -1, 1L);
+                          if (var6 != 0) {
+                            break L6;
+                          } else {
+                            if (var6 == 0) {
+                              continue L5;
+                            } else {
+                              break L7;
+                            }
+                          }
                         }
                       }
-                      break L0;
-                    } else {
-                      ge.a(param2 + -1, 1L);
-                      continue L5;
+                      if (var4.field_b != param2) {
+                        break L6;
+                      } else {
+                        var5 = (DataInputStream) (var4.field_g);
+                        discarded$1 = var5.read();
+                        var5.close();
+                        break L6;
+                      }
                     }
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L7: {
+              L8: {
                 var3 = (Exception) (Object) decompiledCaughtException;
-                break L7;
+                decompiledRegionSelector0 = 1;
+                break L8;
               }
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -208,6 +238,7 @@ final class uj implements rd {
     }
 
     public final void a(int param0, int param1, boolean param2, w param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -223,6 +254,7 @@ final class uj implements rd {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_4_0 = 0;
@@ -256,101 +288,118 @@ final class uj implements rd {
               break L1;
             }
             var6_int = stackIn_5_0;
-            int discarded$1 = ((uj) this).field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_u + "</u>", param1 + param3.field_t, param3.field_o + param0, param3.field_j, param3.field_v, var6_int, -1, ((uj) this).field_b, ((uj) this).field_e, ((uj) this).field_d.field_E + ((uj) this).field_d.field_G);
+            discarded$1 = this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_u + "</u>", param1 + param3.field_t, param3.field_o + param0, param3.field_j, param3.field_v, var6_int, -1, this.field_b, this.field_e, this.field_d.field_E + this.field_d.field_G);
             if (param4 == -3284) {
               if (param3.a(18337)) {
                 L3: {
-                  var7 = ((uj) this).field_d.b(param3.field_u);
-                  var8 = ((uj) this).field_d.field_G + ((uj) this).field_d.field_E;
-                  var9 = param3.field_t + param1;
-                  var10 = param3.field_o + param0;
-                  if (((uj) this).field_b != 2) {
-                    if (((uj) this).field_b == 1) {
-                      var9 = var9 + (param3.field_j + -var7 >> 1);
-                      break L3;
+                  L4: {
+                    var7 = this.field_d.b(param3.field_u);
+                    var8 = this.field_d.field_G + this.field_d.field_E;
+                    var9 = param3.field_t + param1;
+                    var10 = param3.field_o + param0;
+                    if (this.field_b != 2) {
+                      break L4;
                     } else {
-                      break L3;
+                      var9 = var9 + (-var7 + param3.field_j);
+                      if (var11 == 0) {
+                        break L3;
+                      } else {
+                        break L4;
+                      }
                     }
+                  }
+                  if ((this.field_b ^ -1) == -2) {
+                    var9 = var9 + (param3.field_j + -var7 >> -1830937631);
+                    break L3;
                   } else {
-                    var9 = var9 + (-var7 + param3.field_j);
                     break L3;
                   }
                 }
-                L4: {
-                  if (((uj) this).field_e != 2) {
-                    if (1 == ((uj) this).field_e) {
-                      var10 = var10 + (-var8 + param3.field_v >> 1);
-                      break L4;
+                L5: {
+                  L6: {
+                    if (this.field_e != 2) {
+                      break L6;
                     } else {
-                      break L4;
+                      var10 = var10 + (param3.field_v - var8);
+                      if (var11 == 0) {
+                        break L5;
+                      } else {
+                        break L6;
+                      }
                     }
+                  }
+                  if (1 == this.field_e) {
+                    var10 = var10 + (-var8 + param3.field_v >> 1642385793);
+                    break L5;
                   } else {
-                    var10 = var10 + (param3.field_v - var8);
-                    break L4;
+                    break L5;
                   }
                 }
                 pk.a(var8, 2 + var10, -2 + var9, 1, var7 - -4);
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L7: {
             var6 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var6;
+            stackOut_21_0 = (RuntimeException) (var6);
             stackOut_21_1 = new StringBuilder().append("uj.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param3 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
-              break L5;
+              break L7;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
               stackIn_24_2 = stackOut_22_2;
-              break L5;
+              break L7;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param4 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public uj() {
-        ((uj) this).field_b = 1;
-        ((uj) this).field_d = ql.field_Q;
-        ((uj) this).field_e = 1;
+        this.field_b = 1;
+        this.field_d = ql.field_Q;
+        this.field_e = 1;
     }
 
     uj(le param0, int param1, int param2) {
         try {
-            ((uj) this).field_b = param1;
-            ((uj) this).field_e = param2;
-            ((uj) this).field_d = param0;
+            this.field_b = param1;
+            this.field_e = param2;
+            this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "uj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "uj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new aj(7, 0, 1, 1);
     }
 }

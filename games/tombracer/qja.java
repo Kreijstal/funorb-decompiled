@@ -36,25 +36,31 @@ final class qja extends vg {
           }
         } else {
           bea.a();
-          if (param2 > -121) {
-            return;
+          if (!TombRacer.field_G) {
+            if (param2 > -121) {
+              return;
+            } else {
+              tqa.a(param0, (byte) 106);
+              return;
+            }
           } else {
-            tqa.a(param0, (byte) 106);
-            return;
+            bea.c(0, 0, bea.field_g, bea.field_a, 0, 192);
+            if (param2 > -121) {
+              return;
+            } else {
+              tqa.a(param0, (byte) 106);
+              return;
+            }
           }
         }
     }
 
     qja(int param0, int param1) {
-        ((qja) this).field_g = param1;
-        ((qja) this).field_h = param0;
+        this.field_g = param1;
+        this.field_h = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Achievements";
         field_k = "HOLD <img=8><img=9> TO DRAG OBJECTS";
     }

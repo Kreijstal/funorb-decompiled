@@ -11,13 +11,12 @@ final class ml {
         field_c = null;
         field_a = null;
         field_b = null;
+        if (param0 < 8) {
+            field_a = (cn) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ml.A(";
         field_b = rb.b(16760960, 12615744, 64);
         field_c = "Witch";

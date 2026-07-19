@@ -10,14 +10,15 @@ final class dua extends me {
     }
 
     final void a(byte param0) {
+        boolean discarded$0 = false;
         if (param0 > -107) {
-            boolean discarded$0 = ((dua) this).a(false);
+            discarded$0 = this.a(false);
         }
     }
 
     final boolean a(boolean param0) {
         if (!param0) {
-            field_j = null;
+            field_j = (String) null;
             return false;
         }
         return false;
@@ -28,6 +29,8 @@ final class dua extends me {
     }
 
     final void b(byte param0) {
+        int discarded$2 = 0;
+        int discarded$3 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -44,27 +47,26 @@ final class dua extends me {
         int var16 = 0;
         String var17 = null;
         int var18 = 0;
-        int var19 = 0;
-        dt var20 = null;
+        dt var19 = null;
+        la var20 = null;
         la var21 = null;
-        la var22 = null;
-        dt var23 = null;
+        dt var22 = null;
+        la var23 = null;
         la var24 = null;
-        la var25 = null;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int stackIn_41_0 = 0;
-        int stackIn_44_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
-        int stackOut_43_0 = 0;
+        int stackIn_43_0 = 0;
+        int stackIn_46_0 = 0;
         int stackOut_42_0 = 0;
+        int stackOut_41_0 = 0;
+        int stackOut_45_0 = 0;
+        int stackOut_44_0 = 0;
         int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
         var18 = TombRacer.field_G ? 1 : 0;
-        var2 = ((dua) this).field_i.l(92);
+        var2 = this.field_i.l(92);
         if (param0 < -13) {
           if (var2 == -1) {
             return;
@@ -72,7 +74,7 @@ final class dua extends me {
             L0: {
               var3 = 26;
               var4 = 26;
-              if (((dua) this).field_g.d((byte) 113)) {
+              if (this.field_g.d((byte) 113)) {
                 break L0;
               } else {
                 var4 = var4 * 2;
@@ -80,254 +82,299 @@ final class dua extends me {
               }
             }
             L1: {
-              var23 = ((dua) this).field_g.f(0, 0);
+              var22 = this.field_g.f(0, 0);
               var6 = 0;
-              var7 = var23.l(-7);
-              var8 = koa.b(0) >> 1;
+              var7 = var22.l(-7);
+              var8 = koa.b(0) >> 1707283137;
               if (var7 % 2 == 0) {
-                stackOut_40_0 = var4;
-                stackIn_41_0 = stackOut_40_0;
+                stackOut_42_0 = var4;
+                stackIn_43_0 = stackOut_42_0;
                 break L1;
               } else {
-                stackOut_39_0 = var4 >> 1;
-                stackIn_41_0 = stackOut_39_0;
+                stackOut_41_0 = var4 >> 241727201;
+                stackIn_43_0 = stackOut_41_0;
                 break L1;
               }
             }
             L2: {
-              var9 = -stackIn_41_0 + var8 + var4 * (var7 >> 1);
-              if (var7 % 2 != 0) {
-                stackOut_43_0 = var4 >> 1;
-                stackIn_44_0 = stackOut_43_0;
+              var9 = -stackIn_43_0 + var8 + var4 * (var7 >> 505415649);
+              if (-1 != (var7 % 2 ^ -1)) {
+                stackOut_45_0 = var4 >> 33748577;
+                stackIn_46_0 = stackOut_45_0;
                 break L2;
               } else {
-                stackOut_42_0 = var4;
-                stackIn_44_0 = stackOut_42_0;
+                stackOut_44_0 = var4;
+                stackIn_46_0 = stackOut_44_0;
                 break L2;
               }
             }
-            var10 = -stackIn_44_0 + var8 - var4 * (var7 >> 1);
+            var10 = -stackIn_46_0 + var8 - var4 * (var7 >> 1484710817);
             var11 = var9;
-            tga.field_a.KA(10, -6 + var10, var3 + 22, var10 + var7 * var4 - -4);
+            tga.field_a.KA(10, -6 + var10, var3 + 16 - -6, var10 + var7 * var4 - -4);
             var12 = var6;
             L3: while (true) {
-              if (var7 <= var12) {
-                var9 = var11;
-                var19 = 0;
-                var12 = var19;
-                L4: while (true) {
-                  if (((dua) this).field_g.field_P <= var19) {
-                    tga.field_a.la();
-                    return;
-                  } else {
-                    var13 = ((dua) this).field_g.field_c.field_e[var19];
-                    var25 = ((dua) this).field_g.field_H[var13].f((byte) 113);
-                    if (var25.c(72) >= var6) {
-                      if (var25.c(-87) < var7) {
-                        var15 = 16;
-                        var16 = var9 + -(var4 * ((dua) this).field_g.i(1, var13));
-                        var16 = var16 + var4 * ((dua) this).field_g.field_H[var13].f(false) / var25.s(-113);
-                        var15 = var15 + var3 * ((dua) this).field_g.field_H[var13].w(63) / var25.m((byte) -86);
-                        ((dua) this).field_g.field_H[var13].n((byte) -111).a(var15, 124, var16);
-                        var19++;
-                        continue L4;
-                      } else {
-                        var19++;
-                        continue L4;
-                      }
-                    } else {
-                      var19++;
-                      continue L4;
-                    }
-                  }
-                }
-              } else {
-                var24 = var23.a(true, var12);
-                if (var24 != null) {
-                  if (!var24.j(0)) {
-                    var13 = 16;
-                    var14 = var3;
-                    var16 = var9;
-                    ega.field_e.a(var13 - 4, var16 + -5);
-                    var9 = var9 - (var4 << 1);
-                    if (!var24.j(0)) {
-                      L5: {
-                        if (var23.d(28091)) {
-                          var17 = String.valueOf(1 + var12 / 2);
-                          break L5;
-                        } else {
-                          var17 = String.valueOf(1 + var12);
-                          break L5;
-                        }
-                      }
-                      int discarded$2 = dh.a(kn.field_p, 192, 1, 0, -8 + var13, var3, 16777215, -1 + var16, 0, 29870, 1, 16 + var14, var17);
-                      var12++;
-                      continue L3;
-                    } else {
-                      var12++;
-                      continue L3;
-                    }
-                  } else {
-                    var12++;
-                    continue L3;
-                  }
+              L4: {
+                if (var7 <= var12) {
+                  var9 = var11;
+                  break L4;
                 } else {
-                  var12++;
-                  continue L3;
-                }
-              }
-            }
-          }
-        } else {
-          field_j = null;
-          if (var2 == -1) {
-            return;
-          } else {
-            L6: {
-              var3 = 26;
-              var4 = 26;
-              if (((dua) this).field_g.d((byte) 113)) {
-                break L6;
-              } else {
-                var4 = var4 * 2;
-                break L6;
-              }
-            }
-            L7: {
-              var20 = ((dua) this).field_g.f(0, 0);
-              var6 = 0;
-              var7 = var20.l(-7);
-              var8 = koa.b(0) >> 1;
-              if (var7 % 2 == 0) {
-                stackOut_8_0 = var4;
-                stackIn_9_0 = stackOut_8_0;
-                break L7;
-              } else {
-                stackOut_7_0 = var4 >> 1;
-                stackIn_9_0 = stackOut_7_0;
-                break L7;
-              }
-            }
-            L8: {
-              var9 = -stackIn_9_0 + var8 + var4 * (var7 >> 1);
-              if (var7 % 2 != 0) {
-                stackOut_11_0 = var4 >> 1;
-                stackIn_12_0 = stackOut_11_0;
-                break L8;
-              } else {
-                stackOut_10_0 = var4;
-                stackIn_12_0 = stackOut_10_0;
-                break L8;
-              }
-            }
-            L9: {
-              var10 = -stackIn_12_0 + var8 - var4 * (var7 >> 1);
-              var11 = var9;
-              tga.field_a.KA(10, -6 + var10, var3 + 22, var10 + var7 * var4 - -4);
-              var12 = var6;
-              if (var7 <= var12) {
-                break L9;
-              } else {
-                L10: {
-                  L11: {
-                    L12: {
-                      var21 = var20.a(true, var12);
-                      if (var21 == null) {
-                        var12++;
-                        break L12;
+                  var23 = var22.a(true, var12);
+                  if (var18 != 0) {
+                    break L4;
+                  } else {
+                    L5: {
+                      if (var23 == null) {
+                        break L5;
                       } else {
-                        if (var21.j(0)) {
-                          break L12;
+                        if (var23.j(0)) {
+                          break L5;
                         } else {
                           var13 = 16;
                           var14 = var3;
                           var16 = var9;
                           ega.field_e.a(var13 - 4, var16 + -5);
-                          var9 = var9 - (var4 << 1);
-                          if (var21.j(0)) {
-                            break L11;
+                          var9 = var9 - (var4 << -1266057759);
+                          if (var23.j(0)) {
+                            break L5;
                           } else {
-                            L13: {
-                              if (var20.d(28091)) {
-                                var17 = String.valueOf(1 + var12 / 2);
-                                break L13;
-                              } else {
-                                var17 = String.valueOf(1 + var12);
-                                break L13;
+                            L6: {
+                              L7: {
+                                if (var22.d(28091)) {
+                                  break L7;
+                                } else {
+                                  var17 = String.valueOf(1 + var12);
+                                  if (var18 == 0) {
+                                    break L6;
+                                  } else {
+                                    break L7;
+                                  }
+                                }
                               }
+                              var17 = String.valueOf(1 + var12 / 2);
+                              break L6;
                             }
-                            int discarded$3 = dh.a(kn.field_p, 192, 1, 0, -8 + var13, var3, 16777215, -1 + var16, 0, 29870, 1, 16 + var14, var17);
-                            break L10;
+                            discarded$2 = dh.a(kn.field_p, 192, 1, 0, -8 + var13, var3, 16777215, -1 + var16, 0, 29870, 1, 16 + var14, var17);
+                            break L5;
                           }
                         }
                       }
                     }
                     var12++;
-                    break L11;
+                    continue L3;
                   }
-                  var12++;
-                  break L10;
                 }
-                var12++;
-                var12++;
-                var12++;
-                var12++;
-                var12++;
-                break L9;
               }
-            }
-            L14: {
-              var9 = var11;
-              var19 = 0;
-              var12 = var19;
-              if (((dua) this).field_g.field_P <= var19) {
-                break L14;
-              } else {
-                L15: {
-                  L16: {
-                    var13 = ((dua) this).field_g.field_c.field_e[var19];
-                    var22 = ((dua) this).field_g.field_H[var13].f((byte) 113);
-                    if (var22.c(72) < var6) {
-                      var19++;
-                      break L16;
+              var12 = 0;
+              L8: while (true) {
+                L9: {
+                  L10: {
+                    if (this.field_g.field_P <= var12) {
+                      break L10;
                     } else {
-                      if (var22.c(-87) < var7) {
-                        var15 = 16;
-                        var16 = var9 + -(var4 * ((dua) this).field_g.i(1, var13));
-                        var16 = var16 + var4 * ((dua) this).field_g.field_H[var13].f(false) / var22.s(-113);
-                        var15 = var15 + var3 * ((dua) this).field_g.field_H[var13].w(63) / var22.m((byte) -86);
-                        ((dua) this).field_g.field_H[var13].n((byte) -111).a(var15, 124, var16);
-                        break L15;
+                      var13 = this.field_g.field_c.field_e[var12];
+                      var24 = this.field_g.field_H[var13].f((byte) 113);
+                      if (var18 != 0) {
+                        break L9;
                       } else {
-                        break L16;
+                        L11: {
+                          if (var24.c(72) < var6) {
+                            break L11;
+                          } else {
+                            L12: {
+                              if (var24.c(-87) < var7) {
+                                break L12;
+                              } else {
+                                if (var18 == 0) {
+                                  break L11;
+                                } else {
+                                  break L12;
+                                }
+                              }
+                            }
+                            var15 = 16;
+                            var16 = var9 + -(var4 * this.field_g.i(1, var13));
+                            var16 = var16 + var4 * this.field_g.field_H[var13].f(false) / var24.s(-113);
+                            var15 = var15 + var3 * this.field_g.field_H[var13].w(63) / var24.m((byte) -86);
+                            this.field_g.field_H[var13].n((byte) -111).a(var15, 124, var16);
+                            break L11;
+                          }
+                        }
+                        var12++;
+                        if (var18 == 0) {
+                          continue L8;
+                        } else {
+                          break L10;
+                        }
                       }
                     }
                   }
-                  var19++;
-                  break L15;
+                  tga.field_a.la();
+                  break L9;
                 }
-                var19++;
-                var19++;
-                var19++;
-                var19++;
+                return;
+              }
+            }
+          }
+        } else {
+          field_j = (String) null;
+          if (var2 == -1) {
+            return;
+          } else {
+            L13: {
+              var3 = 26;
+              var4 = 26;
+              if (this.field_g.d((byte) 113)) {
+                break L13;
+              } else {
+                var4 = var4 * 2;
+                break L13;
+              }
+            }
+            L14: {
+              var19 = this.field_g.f(0, 0);
+              var6 = 0;
+              var7 = var19.l(-7);
+              var8 = koa.b(0) >> 1707283137;
+              if (var7 % 2 == 0) {
+                stackOut_8_0 = var4;
+                stackIn_9_0 = stackOut_8_0;
+                break L14;
+              } else {
+                stackOut_7_0 = var4 >> 241727201;
+                stackIn_9_0 = stackOut_7_0;
                 break L14;
               }
             }
-            tga.field_a.la();
-            return;
+            L15: {
+              var9 = -stackIn_9_0 + var8 + var4 * (var7 >> 505415649);
+              if (-1 != (var7 % 2 ^ -1)) {
+                stackOut_11_0 = var4 >> 33748577;
+                stackIn_12_0 = stackOut_11_0;
+                break L15;
+              } else {
+                stackOut_10_0 = var4;
+                stackIn_12_0 = stackOut_10_0;
+                break L15;
+              }
+            }
+            var10 = -stackIn_12_0 + var8 - var4 * (var7 >> 1484710817);
+            var11 = var9;
+            tga.field_a.KA(10, -6 + var10, var3 + 16 - -6, var10 + var7 * var4 - -4);
+            var12 = var6;
+            L16: while (true) {
+              L17: {
+                if (var7 <= var12) {
+                  var9 = var11;
+                  break L17;
+                } else {
+                  var20 = var19.a(true, var12);
+                  if (var18 != 0) {
+                    break L17;
+                  } else {
+                    L18: {
+                      if (var20 == null) {
+                        break L18;
+                      } else {
+                        if (var20.j(0)) {
+                          break L18;
+                        } else {
+                          var13 = 16;
+                          var14 = var3;
+                          var16 = var9;
+                          ega.field_e.a(var13 - 4, var16 + -5);
+                          var9 = var9 - (var4 << -1266057759);
+                          if (var20.j(0)) {
+                            break L18;
+                          } else {
+                            L19: {
+                              L20: {
+                                if (var19.d(28091)) {
+                                  break L20;
+                                } else {
+                                  var17 = String.valueOf(1 + var12);
+                                  if (var18 == 0) {
+                                    break L19;
+                                  } else {
+                                    break L20;
+                                  }
+                                }
+                              }
+                              var17 = String.valueOf(1 + var12 / 2);
+                              break L19;
+                            }
+                            discarded$3 = dh.a(kn.field_p, 192, 1, 0, -8 + var13, var3, 16777215, -1 + var16, 0, 29870, 1, 16 + var14, var17);
+                            break L18;
+                          }
+                        }
+                      }
+                    }
+                    var12++;
+                    continue L16;
+                  }
+                }
+              }
+              var12 = 0;
+              L21: while (true) {
+                L22: {
+                  L23: {
+                    if (this.field_g.field_P <= var12) {
+                      break L23;
+                    } else {
+                      var13 = this.field_g.field_c.field_e[var12];
+                      var21 = this.field_g.field_H[var13].f((byte) 113);
+                      if (var18 != 0) {
+                        break L22;
+                      } else {
+                        L24: {
+                          if (var21.c(72) < var6) {
+                            break L24;
+                          } else {
+                            L25: {
+                              if (var21.c(-87) < var7) {
+                                break L25;
+                              } else {
+                                if (var18 == 0) {
+                                  break L24;
+                                } else {
+                                  break L25;
+                                }
+                              }
+                            }
+                            var15 = 16;
+                            var16 = var9 + -(var4 * this.field_g.i(1, var13));
+                            var16 = var16 + var4 * this.field_g.field_H[var13].f(false) / var21.s(-113);
+                            var15 = var15 + var3 * this.field_g.field_H[var13].w(63) / var21.m((byte) -86);
+                            this.field_g.field_H[var13].n((byte) -111).a(var15, 124, var16);
+                            break L24;
+                          }
+                        }
+                        var12++;
+                        if (var18 == 0) {
+                          continue L21;
+                        } else {
+                          break L23;
+                        }
+                      }
+                    }
+                  }
+                  tga.field_a.la();
+                  break L22;
+                }
+                return;
+              }
+            }
           }
         }
     }
 
     public static void d(byte param0) {
+        if (param0 > -125) {
+            return;
+        }
         field_j = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Email is valid";
     }
 }

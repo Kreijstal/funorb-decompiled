@@ -32,6 +32,7 @@ final class tg implements Serializable {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ae stackOut_11_0 = null;
         ae stackOut_9_0 = null;
@@ -51,7 +52,7 @@ final class tg implements Serializable {
               if (param1 == null) {
                 break L1;
               } else {
-                if (param1.length() == 0) {
+                if (-1 == (param1.length() ^ -1)) {
                   break L1;
                 } else {
                   var2_int = param1.indexOf('@');
@@ -62,45 +63,49 @@ final class tg implements Serializable {
                     if (var5 == null) {
                       stackOut_11_0 = dh.a(-27602, var4);
                       stackIn_12_0 = stackOut_11_0;
+                      decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
-                      stackOut_9_0 = (ae) var5;
+                      stackOut_9_0 = (ae) (var5);
                       stackIn_10_0 = stackOut_9_0;
-                      return stackIn_10_0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     }
                   } else {
                     stackOut_6_0 = ok.field_f;
                     stackIn_7_0 = stackOut_6_0;
-                    return stackIn_7_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               }
             }
             stackOut_3_0 = ga.field_c;
             stackIn_4_0 = stackOut_3_0;
-            return stackIn_4_0;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var2;
+            stackOut_13_0 = (RuntimeException) (var2);
             stackOut_13_1 = new StringBuilder().append("tg.B(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -108,24 +113,44 @@ final class tg implements Serializable {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
-        return stackIn_12_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_7_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_10_0;
+            } else {
+              return stackIn_12_0;
+            }
+          }
+        }
     }
 
     final static void a(long param0, boolean param1) {
-        if (param0 <= 0L) {
+        if (-1L <= (param0 ^ -1L)) {
           return;
         } else {
-          if (param0 % 10L != 0L) {
-            pg.a(param0, 2);
-            tg.a(true);
-            return;
-          } else {
+          if (-1L == (param0 % 10L ^ -1L)) {
             pg.a(-1L + param0, 2);
             pg.a(1L, 2);
-            tg.a(true);
-            return;
+            if (!param1) {
+              return;
+            } else {
+              tg.a(true);
+              return;
+            }
+          } else {
+            pg.a(param0, 2);
+            if (!param1) {
+              return;
+            } else {
+              tg.a(true);
+              return;
+            }
           }
         }
     }
@@ -134,20 +159,19 @@ final class tg implements Serializable {
         field_c = null;
         field_b = null;
         field_h = null;
+        if (!param0) {
+            field_b = (String) null;
+        }
     }
 
     tg() {
-        ((tg) this).field_j = new int[300];
-        ((tg) this).field_d = new boolean[300];
-        ((tg) this).field_f = new int[300];
-        ((tg) this).field_a = new int[300];
+        this.field_j = new int[300];
+        this.field_d = new boolean[300];
+        this.field_f = new int[300];
+        this.field_a = new int[300];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new oi();
         field_i = 0;
     }

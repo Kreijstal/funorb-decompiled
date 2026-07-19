@@ -11,6 +11,9 @@ final class ji {
 
     public static void a(boolean param0) {
         field_e = null;
+        if (!param0) {
+            return;
+        }
         field_b = null;
         field_a = null;
         field_d = null;
@@ -19,7 +22,7 @@ final class ji {
 
     final static double a(int param0, double param1) {
         if (param0 != 65535) {
-          field_c = null;
+          field_c = (fe) null;
           return oj.field_a[(int)(param1 * 32768.0 / 3.141592653589793) & 65535];
         } else {
           return oj.field_a[(int)(param1 * 32768.0 / 3.141592653589793) & 65535];
@@ -41,6 +44,7 @@ final class ji {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         byte[] stackOut_11_0 = null;
         byte[] stackOut_7_0 = null;
@@ -55,77 +59,92 @@ final class ji {
         StringBuilder stackOut_17_1 = null;
         String stackOut_17_2 = null;
         try {
-          if (param1 != null) {
-            if (!(param1 instanceof byte[])) {
-              if (param1 instanceof bh) {
-                var4 = (bh) param1;
-                stackOut_11_0 = var4.c(19707);
-                stackIn_12_0 = stackOut_11_0;
-                return stackIn_12_0;
-              } else {
-                L0: {
-                  if (param0 == 23436) {
-                    break L0;
-                  } else {
-                    break L0;
+          L0: {
+            if (param1 != null) {
+              if (!(param1 instanceof byte[])) {
+                if (param1 instanceof bh) {
+                  var4 = (bh) (param1);
+                  stackOut_11_0 = var4.c(19707);
+                  stackIn_12_0 = stackOut_11_0;
+                  decompiledRegionSelector0 = 3;
+                  break L0;
+                } else {
+                  L1: {
+                    if (param0 == 23436) {
+                      break L1;
+                    } else {
+                      break L1;
+                    }
                   }
+                  throw new IllegalArgumentException();
                 }
-                throw new IllegalArgumentException();
+              } else {
+                var3 = (byte[]) (param1);
+                if (!param2) {
+                  stackOut_7_0 = (byte[]) (var3);
+                  stackIn_8_0 = stackOut_7_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
+                } else {
+                  stackOut_5_0 = qd.a((byte) 111, var3);
+                  stackIn_6_0 = stackOut_5_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                }
               }
             } else {
-              var3 = (byte[]) param1;
-              if (!param2) {
-                stackOut_7_0 = (byte[]) var3;
-                stackIn_8_0 = stackOut_7_0;
-                return stackIn_8_0;
-              } else {
-                stackOut_5_0 = qd.a((byte) 111, var3);
-                stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
-              }
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-          } else {
-            stackOut_1_0 = null;
-            stackIn_2_0 = stackOut_1_0;
-            return (byte[]) (Object) stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var3_ref;
+            stackOut_16_0 = (RuntimeException) (var3_ref);
             stackOut_16_1 = new StringBuilder().append("ji.B(").append(param0).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
-              break L1;
+              break L2;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
               stackIn_19_2 = stackOut_17_2;
-              break L1;
+              break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return (byte[]) ((Object) stackIn_2_0);
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_8_0;
+            } else {
+              return stackIn_12_0;
+            }
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new int[8192];
         field_c = new fe();
         field_a = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};

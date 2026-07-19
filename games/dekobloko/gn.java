@@ -11,6 +11,9 @@ final class gn {
 
     public static void a(int param0) {
         field_e = null;
+        if (param0 != 0) {
+            return;
+        }
         field_c = (String[][]) null;
         field_d = null;
     }
@@ -34,6 +37,7 @@ final class gn {
         Object stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         java.net.URL stackOut_10_0 = null;
         java.net.URL stackOut_1_0 = null;
@@ -86,11 +90,13 @@ final class gn {
               }
               stackOut_10_0 = pl.a((String) (var4), (String) (var3), false, param0, -1);
               stackIn_11_0 = stackOut_10_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = (java.net.URL) null;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -148,10 +154,17 @@ final class gn {
           }
           throw dh.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
-        return stackIn_11_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_11_0;
+        }
     }
 
     final static void b(int param0) {
+        if (param0 != -29550) {
+            return;
+        }
         ef.f((byte) 53);
         uf.k(-4840);
     }

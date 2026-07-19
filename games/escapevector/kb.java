@@ -15,22 +15,21 @@ abstract class kb {
     public static void a(boolean param0) {
         field_g = null;
         field_c = null;
+        if (!param0) {
+            field_e = -18;
+        }
     }
 
     abstract java.net.Socket a(int param0) throws IOException;
 
     final java.net.Socket b(boolean param0) throws IOException {
         if (param0) {
-            return null;
+            return (java.net.Socket) null;
         }
-        return new java.net.Socket(((kb) this).field_a, ((kb) this).field_b);
+        return new java.net.Socket(this.field_a, this.field_b);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 0;
         field_g = "Resume Game";
     }

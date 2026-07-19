@@ -28,6 +28,7 @@ final class gj {
     static String field_m;
 
     final void a(int param0, ga param1, int param2, qo param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         String var6_ref = null;
         int var6_int = 0;
@@ -153,45 +154,45 @@ final class gj {
         try {
           L0: {
             L1: {
-              vf.a(param2 - -param1.field_j, ((gj) this).field_t, param4 - -param1.field_k, 3, param1.field_i, param1.field_n);
-              if (((gj) this).field_x == null) {
+              vf.a(param2 - -param1.field_j, this.field_t, param4 - -param1.field_k, 3, param1.field_i, param1.field_n);
+              if (this.field_x == null) {
                 break L1;
               } else {
                 L2: {
-                  var6_int = param4 - (-param1.field_k - ((gj) this).field_q);
-                  if (param3.field_h == 1) {
-                    var6_int = var6_int + (param1.field_i + -((gj) this).field_x.field_r) / 2;
+                  var6_int = param4 - (-param1.field_k - this.field_q);
+                  if ((param3.field_h ^ -1) == -2) {
+                    var6_int = var6_int + (param1.field_i + -this.field_x.field_r) / 2;
                     break L2;
                   } else {
                     break L2;
                   }
                 }
                 L3: {
-                  var7 = param1.field_j + param2 + ((gj) this).field_h;
+                  var7 = param1.field_j + param2 + this.field_h;
                   if (param3.field_h == 2) {
-                    var6_int = var6_int + (param1.field_i + -((gj) this).field_x.field_r);
+                    var6_int = var6_int + (param1.field_i + -this.field_x.field_r);
                     break L3;
                   } else {
                     break L3;
                   }
                 }
                 L4: {
-                  if (param3.field_i == 1) {
-                    var7 = var7 + (-((gj) this).field_x.field_q + param1.field_n) / 2;
+                  if ((param3.field_i ^ -1) == -2) {
+                    var7 = var7 + (-this.field_x.field_q + param1.field_n) / 2;
                     break L4;
                   } else {
                     break L4;
                   }
                 }
                 L5: {
-                  if (param3.field_i == 2) {
-                    var7 = var7 + (param1.field_n + -((gj) this).field_x.field_q);
+                  if ((param3.field_i ^ -1) == -3) {
+                    var7 = var7 + (param1.field_n + -this.field_x.field_q);
                     break L5;
                   } else {
                     break L5;
                   }
                 }
-                ((gj) this).field_x.b(var6_int, var7);
+                this.field_x.b(var6_int, var7);
                 break L1;
               }
             }
@@ -200,7 +201,7 @@ final class gj {
               if (param0 == 0) {
                 break L6;
               } else {
-                field_m = null;
+                field_m = (String) null;
                 break L6;
               }
             }
@@ -211,27 +212,27 @@ final class gj {
                 if (null == param3.field_m) {
                   break L7;
                 } else {
-                  if (((gj) this).field_l < 0) {
+                  if (this.field_l < 0) {
                     break L7;
                   } else {
                     L8: {
                       stackOut_19_0 = param3.field_m;
-                      stackOut_19_1 = (String) var6_ref;
+                      stackOut_19_1 = (String) (var6_ref);
                       stackIn_21_0 = stackOut_19_0;
                       stackIn_21_1 = stackOut_19_1;
                       stackIn_20_0 = stackOut_19_0;
                       stackIn_20_1 = stackOut_19_1;
-                      if (((gj) this).field_q != -2147483648) {
-                        stackOut_21_0 = (rb) (Object) stackIn_21_0;
-                        stackOut_21_1 = (String) (Object) stackIn_21_1;
-                        stackOut_21_2 = ((gj) this).field_q;
+                      if (2147483647 != (this.field_q ^ -1)) {
+                        stackOut_21_0 = (rb) ((Object) stackIn_21_0);
+                        stackOut_21_1 = (String) ((Object) stackIn_21_1);
+                        stackOut_21_2 = this.field_q;
                         stackIn_22_0 = stackOut_21_0;
                         stackIn_22_1 = stackOut_21_1;
                         stackIn_22_2 = stackOut_21_2;
                         break L8;
                       } else {
-                        stackOut_20_0 = (rb) (Object) stackIn_20_0;
-                        stackOut_20_1 = (String) (Object) stackIn_20_1;
+                        stackOut_20_0 = (rb) ((Object) stackIn_20_0);
+                        stackOut_20_1 = (String) ((Object) stackIn_20_1);
                         stackOut_20_2 = 0;
                         stackIn_22_0 = stackOut_20_0;
                         stackIn_22_1 = stackOut_20_1;
@@ -240,8 +241,8 @@ final class gj {
                       }
                     }
                     L9: {
-                      stackOut_22_0 = (rb) (Object) stackIn_22_0;
-                      stackOut_22_1 = (String) (Object) stackIn_22_1;
+                      stackOut_22_0 = (rb) ((Object) stackIn_22_0);
+                      stackOut_22_1 = (String) ((Object) stackIn_22_1);
                       stackOut_22_2 = stackIn_22_2 + param1.field_k + param4 - -param3.field_g;
                       stackIn_24_0 = stackOut_22_0;
                       stackIn_24_1 = stackOut_22_1;
@@ -249,19 +250,19 @@ final class gj {
                       stackIn_23_0 = stackOut_22_0;
                       stackIn_23_1 = stackOut_22_1;
                       stackIn_23_2 = stackOut_22_2;
-                      if (((gj) this).field_h != -2147483648) {
-                        stackOut_24_0 = (rb) (Object) stackIn_24_0;
-                        stackOut_24_1 = (String) (Object) stackIn_24_1;
+                      if ((this.field_h ^ -1) != 2147483647) {
+                        stackOut_24_0 = (rb) ((Object) stackIn_24_0);
+                        stackOut_24_1 = (String) ((Object) stackIn_24_1);
                         stackOut_24_2 = stackIn_24_2;
-                        stackOut_24_3 = ((gj) this).field_h;
+                        stackOut_24_3 = this.field_h;
                         stackIn_25_0 = stackOut_24_0;
                         stackIn_25_1 = stackOut_24_1;
                         stackIn_25_2 = stackOut_24_2;
                         stackIn_25_3 = stackOut_24_3;
                         break L9;
                       } else {
-                        stackOut_23_0 = (rb) (Object) stackIn_23_0;
-                        stackOut_23_1 = (String) (Object) stackIn_23_1;
+                        stackOut_23_0 = (rb) ((Object) stackIn_23_0);
+                        stackOut_23_1 = (String) ((Object) stackIn_23_1);
                         stackOut_23_2 = stackIn_23_2;
                         stackOut_23_3 = 0;
                         stackIn_25_0 = stackOut_23_0;
@@ -272,14 +273,14 @@ final class gj {
                       }
                     }
                     L10: {
-                      stackOut_25_0 = (rb) (Object) stackIn_25_0;
-                      stackOut_25_1 = (String) (Object) stackIn_25_1;
+                      stackOut_25_0 = (rb) ((Object) stackIn_25_0);
+                      stackOut_25_1 = (String) ((Object) stackIn_25_1);
                       stackOut_25_2 = stackIn_25_2;
                       stackOut_25_3 = stackIn_25_3 + param3.field_b + (param2 - -param1.field_j);
                       stackOut_25_4 = -param3.field_o + param1.field_i + -param3.field_g;
                       stackOut_25_5 = -param3.field_p + (-param3.field_b + param1.field_n);
-                      stackOut_25_6 = ((gj) this).field_l;
-                      stackOut_25_7 = ((gj) this).field_d;
+                      stackOut_25_6 = this.field_l;
+                      stackOut_25_7 = this.field_d;
                       stackIn_27_0 = stackOut_25_0;
                       stackIn_27_1 = stackOut_25_1;
                       stackIn_27_2 = stackOut_25_2;
@@ -296,16 +297,16 @@ final class gj {
                       stackIn_26_5 = stackOut_25_5;
                       stackIn_26_6 = stackOut_25_6;
                       stackIn_26_7 = stackOut_25_7;
-                      if (((gj) this).field_s != -2147483648) {
-                        stackOut_27_0 = (rb) (Object) stackIn_27_0;
-                        stackOut_27_1 = (String) (Object) stackIn_27_1;
+                      if (2147483647 != (this.field_s ^ -1)) {
+                        stackOut_27_0 = (rb) ((Object) stackIn_27_0);
+                        stackOut_27_1 = (String) ((Object) stackIn_27_1);
                         stackOut_27_2 = stackIn_27_2;
                         stackOut_27_3 = stackIn_27_3;
                         stackOut_27_4 = stackIn_27_4;
                         stackOut_27_5 = stackIn_27_5;
                         stackOut_27_6 = stackIn_27_6;
                         stackOut_27_7 = stackIn_27_7;
-                        stackOut_27_8 = ((gj) this).field_s;
+                        stackOut_27_8 = this.field_s;
                         stackIn_28_0 = stackOut_27_0;
                         stackIn_28_1 = stackOut_27_1;
                         stackIn_28_2 = stackOut_27_2;
@@ -317,8 +318,8 @@ final class gj {
                         stackIn_28_8 = stackOut_27_8;
                         break L10;
                       } else {
-                        stackOut_26_0 = (rb) (Object) stackIn_26_0;
-                        stackOut_26_1 = (String) (Object) stackIn_26_1;
+                        stackOut_26_0 = (rb) ((Object) stackIn_26_0);
+                        stackOut_26_1 = (String) ((Object) stackIn_26_1);
                         stackOut_26_2 = stackIn_26_2;
                         stackOut_26_3 = stackIn_26_3;
                         stackOut_26_4 = stackIn_26_4;
@@ -338,7 +339,7 @@ final class gj {
                         break L10;
                       }
                     }
-                    int discarded$1 = ((rb) (Object) stackIn_28_0).a(stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_28_5, stackIn_28_6, stackIn_28_7, stackIn_28_8, param3.field_h, param3.field_i, param3.field_n);
+                    discarded$1 = ((rb) (Object) stackIn_28_0).a(stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_28_5, stackIn_28_6, stackIn_28_7, stackIn_28_8, param3.field_h, param3.field_i, param3.field_n);
                     break L7;
                   }
                 }
@@ -350,23 +351,23 @@ final class gj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var6 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var6;
+            stackOut_30_0 = (RuntimeException) (var6);
             stackOut_30_1 = new StringBuilder().append("gj.D(").append(param0).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param1 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "null";
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
               break L11;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_33_0 = stackOut_31_0;
               stackIn_33_1 = stackOut_31_1;
@@ -375,23 +376,23 @@ final class gj {
             }
           }
           L12: {
-            stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+            stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
             stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',').append(param2).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
             stackIn_34_1 = stackOut_33_1;
             if (param3 == null) {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackOut_35_2 = "null";
               stackIn_36_0 = stackOut_35_0;
               stackIn_36_1 = stackOut_35_1;
               stackIn_36_2 = stackOut_35_2;
               break L12;
             } else {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "{...}";
               stackIn_36_0 = stackOut_34_0;
               stackIn_36_1 = stackOut_34_1;
@@ -399,27 +400,27 @@ final class gj {
               break L12;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + param4 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ',' + param4 + ')');
         }
     }
 
     final gj a(boolean param0, byte param1) {
         int var3 = 5 / ((param1 - -20) / 45);
-        ((gj) this).field_r = param0 ? true : false;
-        return (gj) this;
+        this.field_r = param0 ? true : false;
+        return (gj) (this);
     }
 
     final void a(boolean param0) {
-        ((gj) this).field_d = -1;
-        ((gj) this).field_l = 0;
+        this.field_d = -1;
+        this.field_l = 0;
         if (param0) {
             return;
         }
-        ((gj) this).field_x = null;
-        ((gj) this).field_q = 0;
-        ((gj) this).field_h = 0;
-        ((gj) this).field_s = 256;
-        ((gj) this).field_t = null;
+        this.field_x = null;
+        this.field_q = 0;
+        this.field_h = 0;
+        this.field_s = 256;
+        this.field_t = null;
     }
 
     final gj a(vn[] param0, int param1) {
@@ -448,11 +449,11 @@ final class gj {
               if (param1 == 33) {
                 break L1;
               } else {
-                field_c = null;
+                field_c = (String) null;
                 break L1;
               }
             }
-            ((gj) this).field_t = param0;
+            this.field_t = param0;
             stackOut_2_0 = this;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -461,23 +462,23 @@ final class gj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("gj.E(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -485,23 +486,23 @@ final class gj {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
-        return (gj) this;
+        return (gj) (this);
     }
 
     final gj a(int param0, byte param1) {
-        ((gj) this).field_h = param0;
+        this.field_h = param0;
         int var3 = -107 / ((12 - param1) / 44);
-        return (gj) this;
+        return (gj) (this);
     }
 
     final gj a(int param0, int param1) {
-        ((gj) this).field_d = param0;
+        this.field_d = param0;
         if (param1 >= -107) {
-            ((gj) this).field_x = null;
+            this.field_x = (vn) null;
         }
-        return (gj) this;
+        return (gj) (this);
     }
 
     static long a(long param0, long param1) {
@@ -559,7 +560,7 @@ final class gj {
         try {
           L0: {
             L1: {
-              if (((gj) this).field_r) {
+              if (this.field_r) {
                 param5.a(0, param4, param2, param0, param1);
                 param5.a(false);
                 break L1;
@@ -568,56 +569,56 @@ final class gj {
               }
             }
             L2: {
-              if (((gj) this).field_s != -2147483648) {
-                param5.field_s = ((gj) this).field_s;
+              if (this.field_s != -2147483648) {
+                param5.field_s = this.field_s;
                 break L2;
               } else {
                 break L2;
               }
             }
             L3: {
-              if (((gj) this).field_l >= -1) {
-                param5.field_l = ((gj) this).field_l;
+              if (0 >= (this.field_l ^ -1)) {
+                param5.field_l = this.field_l;
                 break L3;
               } else {
                 break L3;
               }
             }
             L4: {
-              if (-1 <= ((gj) this).field_d) {
-                param5.field_d = ((gj) this).field_d;
+              if (-1 <= this.field_d) {
+                param5.field_d = this.field_d;
                 break L4;
               } else {
                 break L4;
               }
             }
             L5: {
-              if (null != ((gj) this).field_t) {
-                param5.field_t = ((gj) this).field_t;
+              if (null != this.field_t) {
+                param5.field_t = this.field_t;
                 break L5;
               } else {
                 break L5;
               }
             }
             L6: {
-              if (((gj) this).field_h == -2147483648) {
+              if (this.field_h == -2147483648) {
                 break L6;
               } else {
-                param5.field_h = ((gj) this).field_h;
+                param5.field_h = this.field_h;
                 break L6;
               }
             }
             L7: {
-              if (((gj) this).field_q == -2147483648) {
+              if (this.field_q == -2147483648) {
                 break L7;
               } else {
-                param5.field_q = ((gj) this).field_q;
+                param5.field_q = this.field_q;
                 break L7;
               }
             }
             L8: {
-              if (((gj) this).field_x != null) {
-                param5.field_x = ((gj) this).field_x;
+              if (this.field_x != null) {
+                param5.field_x = this.field_x;
                 break L8;
               } else {
                 break L8;
@@ -627,7 +628,7 @@ final class gj {
               if (param3 == 116) {
                 break L9;
               } else {
-                field_k = null;
+                field_k = (String[][]) null;
                 break L9;
               }
             }
@@ -637,23 +638,23 @@ final class gj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var7 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var7;
+            stackOut_25_0 = (RuntimeException) (var7);
             stackOut_25_1 = new StringBuilder().append("gj.C(");
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L10;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -662,23 +663,23 @@ final class gj {
             }
           }
           L11: {
-            stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+            stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
             stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
             stackIn_29_1 = stackOut_28_1;
             if (param4 == null) {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "null";
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
               break L11;
             } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "{...}";
               stackIn_31_0 = stackOut_29_0;
               stackIn_31_1 = stackOut_29_1;
@@ -687,23 +688,23 @@ final class gj {
             }
           }
           L12: {
-            stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+            stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
             stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
             stackIn_32_1 = stackOut_31_1;
             if (param5 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L12;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "{...}";
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
@@ -711,78 +712,77 @@ final class gj {
               break L12;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');
         }
     }
 
     public static void a(int param0) {
         field_u = null;
-        field_w = null;
+        field_w = (String[][]) null;
         field_m = null;
         field_o = null;
         field_e = null;
         field_v = null;
         field_a = null;
         field_j = null;
-        field_b = null;
-        field_g = null;
+        field_b = (int[][]) null;
+        field_g = (String[][]) null;
+        if (param0 != 120) {
+            return;
+        }
         field_i = null;
         field_p = null;
         field_n = null;
-        field_k = null;
+        field_k = (String[][]) null;
         field_c = null;
     }
 
     final gj a(byte param0, int param1) {
-        ((gj) this).field_q = param1;
+        this.field_q = param1;
         if (param0 < 122) {
-            field_k = null;
+            field_k = (String[][]) null;
         }
-        return (gj) this;
+        return (gj) (this);
     }
 
     final gj b(byte param0, int param1) {
-        ((gj) this).field_l = param1;
+        this.field_l = param1;
         if (param0 != -21) {
-            field_u = null;
+            field_u = (int[]) null;
         }
-        return (gj) this;
+        return (gj) (this);
     }
 
     final void a(byte param0, gj param1) {
-        param1.field_h = ((gj) this).field_h;
-        param1.field_t = ((gj) this).field_t;
-        param1.field_r = ((gj) this).field_r;
-        param1.field_s = ((gj) this).field_s;
-        param1.field_q = ((gj) this).field_q;
-        param1.field_l = ((gj) this).field_l;
-        param1.field_x = ((gj) this).field_x;
+        param1.field_h = this.field_h;
+        param1.field_t = this.field_t;
+        param1.field_r = this.field_r;
+        param1.field_s = this.field_s;
+        param1.field_q = this.field_q;
+        param1.field_l = this.field_l;
+        param1.field_x = this.field_x;
         if (param0 <= 19) {
             return;
         }
         try {
-            param1.field_d = ((gj) this).field_d;
+            param1.field_d = this.field_d;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "gj.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "gj.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     gj() {
-        ((gj) this).field_h = -2147483648;
-        ((gj) this).field_r = false;
-        ((gj) this).field_x = null;
-        ((gj) this).field_q = -2147483648;
-        ((gj) this).field_s = -2147483648;
-        ((gj) this).field_d = -2;
-        ((gj) this).field_l = -2;
-        ((gj) this).field_t = null;
+        this.field_h = -2147483648;
+        this.field_r = false;
+        this.field_x = null;
+        this.field_q = -2147483648;
+        this.field_s = -2147483648;
+        this.field_d = -2;
+        this.field_l = -2;
+        this.field_t = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -790,13 +790,13 @@ final class gj {
         int var6 = 0;
         int var7 = 0;
         field_j = new String[]{"...go hyperactive and gain super-<col=FF0000>Speed</col>! Your zombie will move twice as fast to catch those fleshy humans.", "...<col=FF0000>Meltdown</col> into a puddle of sticky goo! Humans run very slowly through it, but your minions will be unaffected.", "...leave a ghostly imprint of a zombie where it stands. Humans will try to avoid the <col=FF0000>Phantom</col> as if it were a normal zombie.", "...don a <col=FF0000>Disguise</col> to blend in seamlessly with the environment. Your zombie won't lunge at survivors from a distance, but, if it gets close, it won't resist the urge to bite.", "...<col=FF0000>Detonate</col>, blowing out windows and doors! Humans will be knocked down, but any zombies in range will be destroyed.", "...let out a terrifying <col=FF0000>Screech</col>! The effect lasts fifteen seconds and goes through walls. Nearby humans will be frozen in terror.", "...temporarily bulletproof! It will take three kill-shots (or explosions) to finish off your <col=FF0000>Tough</col> zombie.", "...<col=FF0000>Curse</col> a human and instantly zombify them! Choose your victim carefully...", null, "Create a barrier of acidic gas! Zombies and humans can't move or see through this cloud of <col=ff0000>Miasma</col>.", "<col=ff0000>Breach</col> walls and objects so you can send your hordes through them.", null, "Create a <col=ff0000>Quake</col>, sending humans tumbling down and shattering all glass windows in the process.", "Cause a localised <col=ff0000>Shockwave</col> strong enough to knock humans down, send zombies flying and break open doors.", "Shroud a zombie in a cloak of <col=ff0000>Fear</col> that will make even the bravest guard run, trembling in panic.", "Slow down humans or zombies in an area with a pair of <col=ff0000>Shackles</col>, so they can't escape your clutches (or steal your prey)."};
-        field_k = new String[][]{new String[2], new String[1], new String[1], new String[1], new String[1], new String[1], new String[1], new String[1], new String[1], new String[1], new String[1], new String[1]};
+        field_k = new String[][]{new String[]{"Welcome to Zombie Dawn.", "How To Win"}, new String[]{"Basic Controls"}, new String[]{"Advanced Controls"}, new String[]{"The Interface"}, new String[]{"Powerups"}, new String[]{"Powerups"}, new String[]{"The Survivors"}, new String[]{"The Survivors"}, new String[]{"UK Powerups"}, new String[]{"UK Powerups"}, new String[]{"New enemies"}, new String[]{"Keycard doors"}};
         field_a = new String[]{"The world watched as America's capital was consumed by the horde...", "...but they never expected the zombie threat to come overseas!"};
         field_p = new String[]{"<col=FF0000>Mallrats</col> are your basic zombie fodder. Make sure they've got nowhere to run, then close in for the kill.", "<col=FF0000>Bat Man</col> and <col=ff0000>Bag Girl</col> can knock back your minions when they're cornered. Unfortunately for them, they can only hit one zombie at a time.", "<col=FF0000>Gangsters</col> carry guns, but they can't shoot straight and they're low on ammo. They'll only open fire when they're cornered.", "<col=FF0000>Scientists</col> are even slower than Mallrats. They should give you no trouble.", "<col=FF0000>Police</col> can handle their guns with much more accuracy and have more ammo than Gangsters. They'll fire a few shots before they're forced to run, so approach them with caution. ", "<col=FF0000>Detective</col> has more ammunition and can run much faster than the Police.", "<col=FF0000>Men in Black</col> feel no fear, fire fast, run even faster and carry more than enough bullets to waste a legion of zombies.", "<col=FF0000>Soldiers</col> spawn on time-limited missions when the timer hits zero. If you see them coming, you've probably lost.", "<col=FF0000>Suit people</col> won't be able to escape your clutches. Nab them and zombify them - business as usual!", "<col=FF0000>Hunters</col> can hear your zombies moving through the woods. They will chase you down and destroy you if they can.", "<col=FF0000>Grenadiers</col> will fire exploding rounds that are powerful enough to blast a handful of zombies. Watch out!", "<col=FF0000>Mutant Strains</col> of zombies have appeared! These will try to steal humans that are rightfully yours. Make sure you're faster than them... or better yet, use their presence to your own sinister purposes."};
         field_w = new String[4][6];
-        field_g = new String[][]{new String[2], new String[5], new String[4], new String[1], new String[1], new String[1], new String[1], new String[1], new String[1], new String[1], new String[1], new String[1]};
+        field_g = new String[][]{new String[]{"The <col=FF0000>undead apocalypse</col> has arrived...and you're the one in charge! Command hordes of zombies through the Mall, Power Plant and Police Precinct to eventually reach the White House and conquer humanity.", "The goal on each level is to <col=FF0000>trap all the humans</col> and turn them into zombies. The undead aren't the most obedient creatures and, once they get close enough to a yummy survivor, they'll uncontrollably start lunging at them. Get them to <col=FF0000>zombify every remaining human</col> on each level to win!"}, new String[]{"<col=FF0000>Left-click</col> on a zombie to select it.<br><col=FF0000>Right-click</col> to unselect.", "<col=FF0000>Left-click and drag a box</col> to select several zombies at once.", "<col=FF0000>Left-click</col> on the map to send your selected minions there.", "<col=FF0000>'ESC'</col>: Open the pause menu", "<col=FF0000>Arrow keys</col>/<col=FF0000>'W', 'A', 'S', and 'D' keys</col>: Move the camera"}, new String[]{"<col=FF0000>Right-click and drag</col> to move the<nbsp>camera.", "<col=FF0000>'SHIFT' + left-click</col> a zombie to add it to the current<nbsp>selection.", "<col=FF0000>'CTRL + 'A'</col> to select every zombie on the<nbsp>map.", "<col=FF0000>'Z', 'X', 'C', 'V' and 'B'</col> to select powerups."}, new String[]{"This tracks your progress as you zombify the humans. <col=FF0000>Fulfil the quota</col> to win the level.<br><br><br>This indicates <col=FF0000>how many zombies</col> you have under your control. You will lose the level if it drops to zero.<br><br><br>Some levels have <col=FF0000>time limits</col>. Once the timer hits zero, soldiers will start to arrive."}, new String[]{"You can hold up to eight powerups in the menu at the bottom of the screen. Use them by clicking the hand that holds it, then on a zombie to make it..."}, new String[]{""}, new String[]{"Here's a quick look at some of the survivors you'll meet in the game:"}, new String[]{"Here's a quick look at some of the survivors you'll meet in the game:"}, new String[]{"The following powerups are available in the Terminal 5 levels of <col=FF0000>Zombie Dawn: UK</col>:"}, new String[]{"These can be found in the rest of the <col=FF0000>UK levels</col>:"}, new String[]{"Enemies"}, new String[]{"You will find <col=FF0000>locked doors</col> ahead. A human with the appropriate <col=FF0000>keycard</col> is the only one who can open it. Herd the humans close to the doors so they can open the way for you.<br><br>Just make sure you don't eat the keycard holder before then. Zombies can't operate complicated electronic equipment, you know."}};
         field_o = new String[]{"A terrifying plague is turning ordinary people into the soulless undead, hungry for the flesh of<nbsp>the<nbsp>living.", "The zombies are under the control of an evil, all-seeing, ruthless<nbsp>overlord.", "Bit by bit, they are assimilating<nbsp>humanity.", "Their numbers are<nbsp>endless.", "There is no stopping<nbsp>them.", "Fortunately for you...", "<br>...you're the<nbsp>overlord!"};
-        field_w = new String[][]{new String[6], new String[6], new String[6], new String[6], new String[6], new String[6], new String[6], new String[6]};
+        field_w = new String[][]{new String[]{"Introduction", "Lower Mall", "Sports Store", "Supermarket", "Upper Mall", "The Cinema"}, new String[]{"Power Plant", "Main Reactor", "Nuclear Waste Zone", "Lower Offices", "Backup Generator", "Laboratory"}, new String[]{"Police Precinct", "Archives", "Holding Cells", "Cafeteria", "Fifth Floor", "Jailbreak"}, new String[]{"The White House", "Press Conference", "Ballroom", "Rose Garden", "Situation Room", "The West Wing"}, new String[]{"Touchdown", "Baggage Claim", "Ground Crew", "Immigration", "Duty Free Mauling", "Arrivals"}, new String[]{"Into the Woods", "Scout Camp", "Riverside", "Hunting Grounds", "Cornfields", "The Farm"}, new String[]{"Lab Entrance", "Lab Offices", "Databanks", "Test Chamber", "Containment Cells", "Security Control"}, new String[]{"Main Gate", "Hallways", "Panic Room", "Royal Ballroom", "Servant Quarters", "Throne Room"}};
         field_f = 320;
         field_v = new rh();
         field_u = new int[120];
@@ -809,9 +809,9 @@ final class gj {
         }
         int[] var2 = new int[]{65535, 16744448, 65408, 2105376, 16744448, 16711680, 16711680, 4210783, 8388863, 65280, 11550816, 32768, 3178544, 16728064, 2105424, 8421504};
         for (var3 = 0; field_b[0].length > var3; var3++) {
-            for (var4 = 0; var4 < 16; var4++) {
-                var5 = (var2[var4] & 16729530) >> 16;
-                var6 = (var2[var4] & 65408) >> 8;
+            for (var4 = 0; (var4 ^ -1) > -17; var4++) {
+                var5 = (var2[var4] & 16729530) >> -174718352;
+                var6 = (var2[var4] & 65408) >> -1244578712;
                 var5 = var3 * var5 / field_b[0].length;
                 var7 = var2[var4] & 255;
                 if (255 < var5) {
@@ -822,10 +822,10 @@ final class gj {
                     var6 = 255;
                 }
                 var7 = var7 * var3 / field_b[0].length;
-                if (!(var7 <= 255)) {
+                if (!((var7 ^ -1) >= -256)) {
                     var7 = 255;
                 }
-                field_b[var4][var3] = hi.a(hi.a(var5 << 16, var6 << 8), var7);
+                field_b[var4][var3] = hi.a(hi.a(var5 << -2036554960, var6 << 524540744), var7);
             }
         }
         field_c = "Zombies remaining: ";

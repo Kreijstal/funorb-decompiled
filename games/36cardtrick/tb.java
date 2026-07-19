@@ -31,6 +31,7 @@ final class tb implements ci {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         lk stackOut_3_0 = null;
         Object stackOut_2_0 = null;
@@ -47,17 +48,17 @@ final class tb implements ci {
           L0: {
             L1: {
               if (param1 instanceof h) {
-                stackOut_3_0 = (lk) param1;
+                stackOut_3_0 = (lk) (param1);
                 stackIn_4_0 = stackOut_3_0;
                 break L1;
               } else {
                 stackOut_2_0 = null;
-                stackIn_4_0 = (lk) (Object) stackOut_2_0;
+                stackIn_4_0 = (lk) ((Object) stackOut_2_0);
                 break L1;
               }
             }
             L2: {
-              var12 = (h) (Object) stackIn_4_0;
+              var12 = (h) ((Object) stackIn_4_0);
               if (var12 != null) {
                 break L2;
               } else {
@@ -65,51 +66,53 @@ final class tb implements ci {
               }
             }
             if (param2 == 11447) {
-              vj.c(param0 + param1.field_o, param1.field_i + param3, param1.field_h, param1.field_q, ((tb) this).field_f);
+              vj.c(param0 + param1.field_o, param1.field_i + param3, param1.field_h, param1.field_q, this.field_f);
               var7 = -(2 * var12.field_K) + param1.field_h;
               var8 = param1.field_o + (param0 - -var12.field_K);
               var9 = var12.field_J + param3 - -param1.field_i;
-              vj.e(var8, var9, var8 + var7, var9, ((tb) this).field_l);
+              vj.e(var8, var9, var8 + var7, var9, this.field_l);
               var10 = var12.a(true) + -1;
               L3: while (true) {
                 if (0 > var10) {
-                  if (((tb) this).field_g == null) {
+                  if (this.field_g == null) {
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
-                    ((tb) this).field_g.a(var12.field_r, var7 / 2 + var8, ((tb) this).field_g.field_E + var9 + var12.field_J, ((tb) this).field_k, ((tb) this).field_i);
+                    this.field_g.a(var12.field_r, var7 / 2 + var8, this.field_g.field_E + var9 + var12.field_J, this.field_k, this.field_i);
                     return;
                   }
                 } else {
-                  vj.b(var8 - -(var12.a((byte) -63, var10) * var7 / var12.f((byte) -40)), var9, ((tb) this).field_j, ((tb) this).field_a);
+                  vj.b(var8 - -(var12.a((byte) -63, var10) * var7 / var12.f((byte) -40)), var9, this.field_j, this.field_a);
                   var10--;
                   continue L3;
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var6;
+            stackOut_13_0 = (RuntimeException) (var6);
             stackOut_13_1 = new StringBuilder().append("tb.C(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -117,7 +120,12 @@ final class tb implements ci {
               break L4;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -131,23 +139,23 @@ final class tb implements ci {
         var4 = Main.field_T;
         try {
           L0: {
-            var5 = (dh) (Object) vb.field_c.a((byte) 74);
+            var5 = (dh) ((Object) vb.field_c.a((byte) 74));
             L1: while (true) {
               if (var5 == null) {
                 var2 = ue.field_b.a((byte) 74);
-                var3 = -27;
+                var3 = -54 / ((param1 - -65) / 51);
                 L2: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    fl.b(1, 4);
+                    fl.b(1, param0);
                     var2 = ue.field_b.b((byte) -104);
                     continue L2;
                   }
                 }
               } else {
-                ke.a(var5, 4, 21719);
-                var5 = (dh) (Object) vb.field_c.b((byte) -104);
+                ke.a(var5, param0, 21719);
+                var5 = (dh) ((Object) vb.field_c.b((byte) -104));
                 continue L1;
               }
             }
@@ -155,7 +163,7 @@ final class tb implements ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2_ref, "tb.A(" + 4 + ',' + 78 + ')');
+          throw ma.a((Throwable) ((Object) var2_ref), "tb.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -164,7 +172,7 @@ final class tb implements ci {
         RuntimeException var4 = null;
         Object var6 = null;
         CharSequence var7 = null;
-        Object stackIn_2_0 = null;
+        ff stackIn_2_0 = null;
         ff stackIn_7_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -180,9 +188,10 @@ final class tb implements ci {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ff stackOut_6_0 = null;
-        Object stackOut_1_0 = null;
+        ff stackOut_1_0 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_10_0 = null;
@@ -205,45 +214,47 @@ final class tb implements ci {
             if (param2 == -18) {
               L1: {
                 var6 = null;
-                if (param1.indexOf('@') == -1) {
-                  var7 = (CharSequence) (Object) param1;
+                if ((param1.indexOf('@') ^ -1) == 0) {
+                  var7 = (CharSequence) ((Object) param1);
                   var4_long = fe.a(var7, 109);
                   break L1;
                 } else {
-                  var6 = (Object) (Object) param1;
+                  var6 = param1;
                   break L1;
                 }
               }
-              stackOut_6_0 = nk.a(-116, false, var4_long, (String) var6, param0);
+              stackOut_6_0 = nk.a(-116, param3, var4_long, (String) (var6), param0);
               stackIn_7_0 = stackOut_6_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (ff) null;
               stackIn_2_0 = stackOut_1_0;
-              return (ff) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_0 = (RuntimeException) (var4);
             stackOut_8_1 = new StringBuilder().append("tb.B(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -252,23 +263,23 @@ final class tb implements ci {
             }
           }
           L3: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -276,16 +287,21 @@ final class tb implements ci {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ',' + false + ')');
+          throw ma.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_7_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_7_0;
+        }
     }
 
     public static void a(int param0) {
-        Object var2 = null;
+        ff discarded$2 = null;
+        String var2 = null;
         if (param0 != 128) {
-          var2 = null;
-          ff discarded$2 = tb.a((String) null, (String) null, (byte) -86, false);
+          var2 = (String) null;
+          discarded$2 = tb.a((String) null, (String) null, (byte) -86, false);
           field_e = null;
           field_b = null;
           field_h = null;
@@ -302,23 +318,19 @@ final class tb implements ci {
 
     tb(ee param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            ((tb) this).field_i = param2;
-            ((tb) this).field_l = param3;
-            ((tb) this).field_a = param6;
-            ((tb) this).field_j = param5;
-            ((tb) this).field_k = param1;
-            ((tb) this).field_f = param4;
-            ((tb) this).field_g = param0;
+            this.field_i = param2;
+            this.field_l = param3;
+            this.field_a = param6;
+            this.field_j = param5;
+            this.field_k = param1;
+            this.field_f = param4;
+            this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "tb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "tb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new sg();
         field_e = "Waiting for extra data";
         field_h = new int[128];

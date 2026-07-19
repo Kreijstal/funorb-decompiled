@@ -13,13 +13,12 @@ final class ck {
         field_b = null;
         field_c = null;
         field_e = null;
+        if (param0) {
+            ck.a(false);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ck.A(";
     }
 }

@@ -8,21 +8,23 @@ final class ola extends gna {
     static String field_q;
 
     final void a(int param0, int param1, byte param2) {
+        int incrementValue$2 = 0;
         int var4 = 0;
         if (param0 != 1111320769) {
           return;
         } else {
           var4 = 2 * param1;
-          param2 = (byte)((127 & param2 >> 1) + 127);
-          int incrementValue$2 = var4;
+          param2 = (byte)((127 & param2 >> -32962879) + 127);
+          incrementValue$2 = var4;
           var4++;
-          ((ola) this).field_n[incrementValue$2] = (byte)param2;
-          ((ola) this).field_n[var4] = (byte)param2;
+          this.field_n[incrementValue$2] = (byte)param2;
+          this.field_n[var4] = (byte)param2;
           return;
         }
     }
 
     final static caa[] d(byte param0) {
+        caa[] discarded$3 = null;
         caa[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -41,7 +43,7 @@ final class ola extends gna {
             }
           }
         } else {
-          caa[] discarded$3 = ola.d((byte) 67);
+          discarded$3 = ola.d((byte) 67);
           var1 = new caa[mma.field_a];
           var2 = 0;
           L1: while (true) {
@@ -58,8 +60,14 @@ final class ola extends gna {
     }
 
     public static void b(int param0) {
+        caa[] discarded$0 = null;
         field_q = null;
         field_o = null;
+        if (param0 != 2) {
+            discarded$0 = ola.d((byte) -116);
+            field_p = null;
+            return;
+        }
         field_p = null;
     }
 
@@ -68,22 +76,18 @@ final class ola extends gna {
     }
 
     final byte[] a(int param0, int param1, int param2, int param3) {
-        ((ola) this).field_n = new byte[param1 * param3 * param0 * 2];
+        this.field_n = new byte[param1 * param3 * param0 * 2];
         if (param2 != -15281) {
-          field_p = null;
-          ((ola) this).a(param3, (byte) -10, param0, param1);
-          return ((ola) this).field_n;
+          field_p = (qka) null;
+          this.a(param3, (byte) -10, param0, param1);
+          return this.field_n;
         } else {
-          ((ola) this).a(param3, (byte) -10, param0, param1);
-          return ((ola) this).field_n;
+          this.a(param3, (byte) -10, param0, param1);
+          return this.field_n;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new int[4];
         field_q = "Both teams win by getting their turret to the escape zone";
     }

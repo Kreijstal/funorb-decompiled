@@ -7,8 +7,9 @@ final class ol extends de {
     static int field_q;
 
     final void c(byte param0) {
+        boolean discarded$0 = false;
         if (param0 >= -13) {
-            boolean discarded$0 = ol.b(false);
+            discarded$0 = ol.b(false);
         }
     }
 
@@ -26,7 +27,7 @@ final class ol extends de {
         if (var2 == 1) {
             la.a(ti.field_t, 0, false, -25528);
         }
-        if (!(var2 != 2)) {
+        if (!(-3 != (var2 ^ -1))) {
             la.a(ti.field_t, 0, true, -25528);
         }
     }
@@ -49,6 +50,7 @@ final class ol extends de {
         int var5 = 0;
         int var6 = 0;
         int stackIn_7_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -60,39 +62,50 @@ final class ol extends de {
             am.field_b[1] = 12542143;
             am.field_b[3] = 11321184;
             am.field_i = new int[512];
-            var1_int = 0;
-            L1: while (true) {
-              if (var1_int >= am.field_i.length) {
-                break L0;
-              } else {
-                L2: {
-                  var2 = var1_int * 4 / am.field_i.length;
-                  if (var2 != 3) {
-                    stackOut_6_0 = var2 - -1;
-                    stackIn_7_0 = stackOut_6_0;
-                    break L2;
-                  } else {
-                    stackOut_5_0 = 0;
-                    stackIn_7_0 = stackOut_5_0;
-                    break L2;
+            if (param0 == 2071) {
+              var1_int = 0;
+              L1: while (true) {
+                if (var1_int >= am.field_i.length) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  L2: {
+                    var2 = var1_int * 4 / am.field_i.length;
+                    if (-4 != (var2 ^ -1)) {
+                      stackOut_6_0 = var2 - -1;
+                      stackIn_7_0 = stackOut_6_0;
+                      break L2;
+                    } else {
+                      stackOut_5_0 = 0;
+                      stackIn_7_0 = stackOut_5_0;
+                      break L2;
+                    }
                   }
+                  var3 = stackIn_7_0;
+                  var3 = am.field_b[var3];
+                  var2 = am.field_b[var2];
+                  var4 = am.field_i.length >> -936953310;
+                  var5 = var1_int % var4;
+                  var6 = var4 + -var5;
+                  am.field_i[var1_int] = cm.a(cm.a(var3, 65280) * var5 / var4, 65280) + (cm.a(16711935, var5 * cm.a(16711935, var3) / var4) + cm.a(var6 * cm.a(var2, 65280) / var4, 65280) + cm.a(16711935, cm.a(var2, 16711935) * var6 / var4));
+                  var1_int++;
+                  continue L1;
                 }
-                var3 = stackIn_7_0;
-                var3 = am.field_b[var3];
-                var2 = am.field_b[var2];
-                var4 = am.field_i.length >> 2;
-                var5 = var1_int % var4;
-                var6 = var4 + -var5;
-                am.field_i[var1_int] = cm.a(cm.a(var3, 65280) * var5 / var4, 65280) + (cm.a(16711935, var5 * cm.a(16711935, var3) / var4) + cm.a(var6 * cm.a(var2, 65280) / var4, 65280) + cm.a(16711935, cm.a(var2, 16711935) * var6 / var4));
-                var1_int++;
-                continue L1;
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "ol.I(" + 2071 + ')');
+          throw aa.a((Throwable) ((Object) var1), "ol.I(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -101,6 +114,9 @@ final class ol extends de {
     }
 
     public static void c(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_p = null;
     }
 
@@ -112,7 +128,7 @@ final class ol extends de {
           if (param0) {
             break L0;
           } else {
-            field_p = null;
+            field_p = (String[]) null;
             break L0;
           }
         }
@@ -138,10 +154,6 @@ final class ol extends de {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = new String[]{"Hold '<col=ffff00>SPACE</col>' to make pieces drop quickly."};
         field_q = 0;
     }

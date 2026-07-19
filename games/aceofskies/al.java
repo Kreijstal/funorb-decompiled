@@ -9,17 +9,17 @@ final class al extends gs {
     boolean field_f;
 
     al(int param0, byte[] param1, int param2, int param3) {
-        ((al) this).field_i = param0;
-        ((al) this).field_g = param1;
-        ((al) this).field_h = param2;
-        ((al) this).field_j = param3;
+        this.field_i = param0;
+        this.field_g = param1;
+        this.field_h = param2;
+        this.field_j = param3;
     }
 
     al(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((al) this).field_i = param0;
-        ((al) this).field_g = param1;
-        ((al) this).field_h = param2;
-        ((al) this).field_j = param3;
-        ((al) this).field_f = param4 ? true : false;
+        this.field_i = param0;
+        this.field_g = param1;
+        this.field_h = param2;
+        this.field_j = param3;
+        this.field_f = param4 ? true : false;
     }
 }

@@ -10,21 +10,29 @@ final class kua {
     int[] field_d;
 
     final static int a(byte param0) {
-        return (kib.field_d << 4) + ((idb.field_p << 2) - -lla.field_h);
+        if (param0 != 75) {
+          kua.a(108);
+          return (kib.field_d << 181765988) + ((idb.field_p << -1734729758) - -lla.field_h);
+        } else {
+          return (kib.field_d << 181765988) + ((idb.field_p << -1734729758) - -lla.field_h);
+        }
     }
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != 181765988) {
+            field_e = false;
+        }
     }
 
     kua(int[] param0, int[] param1, int[] param2, float[][] param3) {
         try {
-            ((kua) this).field_b = param1;
-            ((kua) this).field_f = param2;
-            ((kua) this).field_c = param3;
-            ((kua) this).field_d = param0;
+            this.field_b = param1;
+            this.field_f = param2;
+            this.field_c = param3;
+            this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "kua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "kua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

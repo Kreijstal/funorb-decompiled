@@ -16,113 +16,134 @@ final class caa implements Runnable {
 
     final static void a(ff param0, la param1, int param2) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
         String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         try {
           L0: {
             L1: {
-              if (vpa.a(54)) {
+              if (param2 > 90) {
                 break L1;
+              } else {
+                caa.a(-49, -51, -30, 34, 111, -46);
+                break L1;
+              }
+            }
+            L2: {
+              if (vpa.a(54)) {
+                break L2;
               } else {
                 if (!param0.k(-25319)) {
                   if (0 > param1.q((byte) -82)) {
-                    return;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
                     ql.field_k.k(97, -2988);
                     ql.field_k.f(-1477662136, param1.q((byte) -82));
                     ql.field_k.f(-1477662136, param1.a((byte) 107));
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 } else {
-                  break L1;
+                  break L2;
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) runtimeException;
-            stackOut_9_1 = new StringBuilder().append("caa.A(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
-            if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L2;
-            } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L2;
-            }
-          }
           L3: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
-            if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+            runtimeException = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) (runtimeException);
+            stackOut_11_1 = new StringBuilder().append("caa.A(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + 108 + ')');
+          L4: {
+            stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param1 == null) {
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L4;
+            } else {
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -132,48 +153,48 @@ final class caa implements Runnable {
         java.net.Socket var4 = null;
         CharSequence var5 = null;
         Throwable decompiledCaughtException = null;
-        if (((caa) this).field_f < 2) {
+        if (-3 < (this.field_f ^ -1)) {
           L0: {
-            if (((caa) this).field_f != 0) {
+            if (this.field_f != 0) {
               break L0;
             } else {
               L1: {
-                if (((caa) this).field_c != null) {
+                if (this.field_c != null) {
                   break L1;
                 } else {
-                  ((caa) this).field_c = ((caa) this).field_g.a(((caa) this).field_b, 74);
+                  this.field_c = this.field_g.a(this.field_b, 74);
                   break L1;
                 }
               }
-              if (((caa) this).field_c.field_b == 0) {
+              if (this.field_c.field_b == 0) {
                 return false;
               } else {
-                if (((caa) this).field_c.field_b == 1) {
+                if ((this.field_c.field_b ^ -1) == -2) {
                   break L0;
                 } else {
-                  ((caa) this).field_c = null;
-                  ((caa) this).field_f = ((caa) this).field_f + 1;
+                  this.field_c = null;
+                  this.field_f = this.field_f + 1;
                   return false;
                 }
               }
             }
           }
           L2: {
-            if (((caa) this).field_f == 1) {
+            if (-2 == (this.field_f ^ -1)) {
               L3: {
-                if (null == ((caa) this).field_e) {
-                  ((caa) this).field_e = ((caa) this).field_g.a(-24818, ((caa) this).field_b.getHost(), 443);
+                if (null == this.field_e) {
+                  this.field_e = this.field_g.a(-24818, this.field_b.getHost(), 443);
                   break L3;
                 } else {
                   break L3;
                 }
               }
-              if (((caa) this).field_e.field_b == 0) {
+              if (this.field_e.field_b == 0) {
                 return false;
               } else {
-                if (((caa) this).field_e.field_b != 1) {
-                  ((caa) this).field_f = ((caa) this).field_f + 1;
-                  ((caa) this).field_e = null;
+                if (this.field_e.field_b != 1) {
+                  this.field_f = this.field_f + 1;
+                  this.field_e = null;
                   return false;
                 } else {
                   break L2;
@@ -183,55 +204,55 @@ final class caa implements Runnable {
               break L2;
             }
           }
-          if (((caa) this).field_a == null) {
+          if (this.field_a == null) {
             try {
               L4: {
                 L5: {
-                  if (0 == ((caa) this).field_f) {
-                    ((caa) this).field_a = (DataInputStream) ((caa) this).field_c.field_f;
+                  if (0 == this.field_f) {
+                    this.field_a = (DataInputStream) (this.field_c.field_f);
                     break L5;
                   } else {
                     break L5;
                   }
                 }
                 L6: {
-                  if (1 != ((caa) this).field_f) {
+                  if (1 != this.field_f) {
                     break L6;
                   } else {
-                    var4 = (java.net.Socket) ((caa) this).field_e.field_f;
+                    var4 = (java.net.Socket) (this.field_e.field_f);
                     var4.setSoTimeout(10000);
                     var3 = var4.getOutputStream();
                     var3.write(17);
-                    var5 = (CharSequence) (Object) ("JAGGRAB " + ((caa) this).field_b.getFile() + "\n\n");
+                    var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_b.getFile() + "\n\n"));
                     var3.write(us.a(var5, param0));
-                    ((caa) this).field_a = new DataInputStream(var4.getInputStream());
+                    this.field_a = new DataInputStream(var4.getInputStream());
                     break L6;
                   }
                 }
-                ((caa) this).field_h.field_h = 0;
+                this.field_h.field_h = 0;
                 break L4;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
+            } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L7: {
                 var2 = (IOException) (Object) decompiledCaughtException;
-                ((caa) this).finalize();
-                ((caa) this).field_f = ((caa) this).field_f + 1;
-                if (null == ((caa) this).field_d) {
-                  ((caa) this).field_d = ((caa) this).field_g.a((Runnable) this, 425, 5);
+                this.finalize();
+                this.field_f = this.field_f + 1;
+                if (null == this.field_d) {
+                  this.field_d = this.field_g.a((Runnable) (this), 425, 5);
                   break L7;
                 } else {
                   break L7;
                 }
               }
               if (!param0) {
-                if (((caa) this).field_d.field_b == 0) {
+                if (this.field_d.field_b == 0) {
                   return false;
                 } else {
                   L8: {
-                    if (((caa) this).field_d.field_b != 1) {
-                      ((caa) this).finalize();
-                      ((caa) this).field_f = ((caa) this).field_f + 1;
+                    if (-2 != (this.field_d.field_b ^ -1)) {
+                      this.finalize();
+                      this.field_f = this.field_f + 1;
                       break L8;
                     } else {
                       break L8;
@@ -240,14 +261,14 @@ final class caa implements Runnable {
                   return false;
                 }
               } else {
-                ((caa) this).field_a = null;
-                if (((caa) this).field_d.field_b == 0) {
+                this.field_a = (DataInputStream) null;
+                if (this.field_d.field_b == 0) {
                   return false;
                 } else {
                   L9: {
-                    if (((caa) this).field_d.field_b != 1) {
-                      ((caa) this).finalize();
-                      ((caa) this).field_f = ((caa) this).field_f + 1;
+                    if (-2 != (this.field_d.field_b ^ -1)) {
+                      this.finalize();
+                      this.field_f = this.field_f + 1;
                       break L9;
                     } else {
                       break L9;
@@ -258,8 +279,8 @@ final class caa implements Runnable {
               }
             }
             L10: {
-              if (null == ((caa) this).field_d) {
-                ((caa) this).field_d = ((caa) this).field_g.a((Runnable) this, 425, 5);
+              if (null == this.field_d) {
+                this.field_d = this.field_g.a((Runnable) (this), 425, 5);
                 break L10;
               } else {
                 break L10;
@@ -269,17 +290,17 @@ final class caa implements Runnable {
               if (!param0) {
                 break L11;
               } else {
-                ((caa) this).field_a = null;
+                this.field_a = (DataInputStream) null;
                 break L11;
               }
             }
-            if (((caa) this).field_d.field_b == 0) {
+            if (this.field_d.field_b == 0) {
               return false;
             } else {
               L12: {
-                if (((caa) this).field_d.field_b != 1) {
-                  ((caa) this).finalize();
-                  ((caa) this).field_f = ((caa) this).field_f + 1;
+                if (-2 != (this.field_d.field_b ^ -1)) {
+                  this.finalize();
+                  this.field_f = this.field_f + 1;
                   break L12;
                 } else {
                   break L12;
@@ -289,8 +310,8 @@ final class caa implements Runnable {
             }
           } else {
             L13: {
-              if (null == ((caa) this).field_d) {
-                ((caa) this).field_d = ((caa) this).field_g.a((Runnable) this, 425, 5);
+              if (null == this.field_d) {
+                this.field_d = this.field_g.a((Runnable) (this), 425, 5);
                 break L13;
               } else {
                 break L13;
@@ -300,18 +321,18 @@ final class caa implements Runnable {
               if (!param0) {
                 break L14;
               } else {
-                ((caa) this).field_a = null;
+                this.field_a = (DataInputStream) null;
                 break L14;
               }
             }
-            if (((caa) this).field_d.field_b == 0) {
+            if (this.field_d.field_b == 0) {
               return false;
             } else {
-              if (((caa) this).field_d.field_b != 1) {
-                ((caa) this).finalize();
-                ((caa) this).field_f = ((caa) this).field_f + 1;
+              if (-2 == (this.field_d.field_b ^ -1)) {
                 return false;
               } else {
+                this.finalize();
+                this.field_f = this.field_f + 1;
                 return false;
               }
             }
@@ -329,32 +350,32 @@ final class caa implements Runnable {
     }
 
     protected final void finalize() {
-        if (null != ((caa) this).field_c) {
-            if (!(((caa) this).field_c.field_f == null)) {
+        if (null != this.field_c) {
+            if (!(this.field_c.field_f == null)) {
                 try {
-                    ((DataInputStream) ((caa) this).field_c.field_f).close();
+                    ((DataInputStream) (this.field_c.field_f)).close();
                 } catch (Exception exception) {
                 }
             }
-            ((caa) this).field_c = null;
+            this.field_c = null;
         }
-        if (((caa) this).field_e != null) {
-            if (!(null == ((caa) this).field_e.field_f)) {
+        if (this.field_e != null) {
+            if (!(null == this.field_e.field_f)) {
                 try {
-                    ((java.net.Socket) ((caa) this).field_e.field_f).close();
+                    ((java.net.Socket) (this.field_e.field_f)).close();
                 } catch (Exception exception) {
                 }
             }
-            ((caa) this).field_e = null;
+            this.field_e = null;
         }
-        if (!(((caa) this).field_a == null)) {
+        if (!(this.field_a == null)) {
             try {
-                ((caa) this).field_a.close();
+                this.field_a.close();
             } catch (Exception exception) {
             }
-            ((caa) this).field_a = null;
+            this.field_a = null;
         }
-        ((caa) this).field_d = null;
+        this.field_d = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -365,73 +386,114 @@ final class caa implements Runnable {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
+            L1: {
+              if (param5 == 0) {
+                break L1;
+              } else {
+                field_i = 59;
+                break L1;
+              }
+            }
             var6_int = param3;
-            L1: while (true) {
+            L2: while (true) {
               if (param4 < var6_int) {
                 break L0;
               } else {
                 nra.a((byte) -55, param0, param1, vaa.field_a[var6_int], param2);
                 var6_int++;
-                continue L1;
+                if (var7 == 0) {
+                  continue L2;
+                } else {
+                  return;
+                }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var6, "caa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + 0 + ')');
+          throw tba.a((Throwable) ((Object) var6), "caa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     public final void run() {
         try {
             int var1_int = 0;
-            Object var1 = null;
-            Exception var1_ref = null;
+            Exception var1 = null;
+            Object var1_ref = null;
             Throwable var2 = null;
             Object var2_ref = null;
             Throwable var3 = null;
             int var4 = 0;
+            int var5 = 0;
+            int var6 = 0;
             Throwable decompiledCaughtException = null;
             var4 = TombRacer.field_G ? 1 : 0;
             try {
               L0: while (true) {
                 L1: {
-                  if (((caa) this).field_h.field_g.length <= ((caa) this).field_h.field_h) {
-                    break L1;
-                  } else {
-                    var1_int = ((caa) this).field_a.read(((caa) this).field_h.field_g, ((caa) this).field_h.field_h, -((caa) this).field_h.field_h + ((caa) this).field_h.field_g.length);
-                    if (var1_int >= 0) {
-                      ((caa) this).field_h.field_h = ((caa) this).field_h.field_h + var1_int;
-                      continue L0;
-                    } else {
+                  L2: {
+                    L3: {
+                      if (this.field_h.field_g.length <= this.field_h.field_h) {
+                        break L3;
+                      } else {
+                        var1_int = this.field_a.read(this.field_h.field_g, this.field_h.field_h, -this.field_h.field_h + this.field_h.field_g.length);
+                        var6 = -1;
+                        var5 = var1_int ^ -1;
+                        if (var4 != 0) {
+                          if (var5 == var6) {
+                            break L1;
+                          } else {
+                            break L2;
+                          }
+                        } else {
+                          L4: {
+                            if (var5 <= var6) {
+                              break L4;
+                            } else {
+                              if (var4 == 0) {
+                                break L3;
+                              } else {
+                                break L4;
+                              }
+                            }
+                          }
+                          this.field_h.field_h = this.field_h.field_h + var1_int;
+                          if (var4 == 0) {
+                            continue L0;
+                          } else {
+                            break L3;
+                          }
+                        }
+                      }
+                    }
+                    if (this.field_h.field_g.length == this.field_h.field_h) {
                       break L1;
+                    } else {
+                      break L2;
                     }
                   }
-                }
-                if (((caa) this).field_h.field_g.length == ((caa) this).field_h.field_h) {
-                  throw caa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((caa) this).field_h.field_g.length + " " + (Object) (Object) ((caa) this).field_b));
-                } else {
-                  var1 = this;
-                  synchronized (var1) {
-                    L2: {
-                      ((caa) this).finalize();
-                      ((caa) this).field_f = 3;
-                      break L2;
+                  var1_ref = this;
+                  synchronized (var1_ref) {
+                    L5: {
+                      this.finalize();
+                      this.field_f = 3;
+                      break L5;
                     }
                   }
                   return;
                 }
+                throw caa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.field_g.length + " " + this.field_b));
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var1_ref = (Exception) (Object) decompiledCaughtException;
+              var1 = (Exception) (Object) decompiledCaughtException;
               var2_ref = this;
               synchronized (var2_ref) {
-                L3: {
-                  ((caa) this).finalize();
-                  ((caa) this).field_f = ((caa) this).field_f + 1;
-                  break L3;
+                L6: {
+                  this.finalize();
+                  this.field_f = this.field_f + 1;
+                  break L6;
                 }
               }
               return;
@@ -444,34 +506,31 @@ final class caa implements Runnable {
     }
 
     final uia b(byte param0) {
+        uia discarded$9 = null;
         if (param0 >= -115) {
-            uia discarded$9 = ((caa) this).b((byte) 71);
-            if (!(((caa) this).field_f != 3)) {
-                return ((caa) this).field_h;
+            discarded$9 = this.b((byte) 71);
+            if (!(this.field_f != 3)) {
+                return this.field_h;
             }
             return null;
         }
-        if (!(((caa) this).field_f != 3)) {
-            return ((caa) this).field_h;
+        if (!(this.field_f != 3)) {
+            return this.field_h;
         }
         return null;
     }
 
     caa(fia param0, java.net.URL param1, int param2) {
         try {
-            ((caa) this).field_b = param1;
-            ((caa) this).field_g = param0;
-            ((caa) this).field_h = new uia(param2);
+            this.field_b = param1;
+            this.field_g = param0;
+            this.field_h = new uia(param2);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "caa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "caa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = 2;
     }
 

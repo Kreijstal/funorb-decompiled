@@ -22,19 +22,23 @@ final class rc {
         if (!rc.a(-126)) {
             mb.a(var7, 4, 0);
         } else {
-            so.field_h.b(0, (jb) (Object) var7);
+            so.field_h.b(0, var7);
         }
-        fk.field_s = fk.field_s + (1 << param5);
+        fk.field_s = fk.field_s + (param0 << param5);
         pc.field_y = pc.field_y + (1 << param5);
         ge.field_c = ge.field_c + (1 << param5);
     }
 
     public static void a(boolean param0) {
+        if (param0) {
+            field_a = (Vector) null;
+        }
         field_a = null;
         field_b = null;
     }
 
     final static dl[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        dl[] discarded$1 = null;
         int var9 = 0;
         dl[] var10 = null;
         dl[] var11_ref_dl__ = null;
@@ -58,7 +62,7 @@ final class rc {
                   if (param7 == 2958) {
                     break L2;
                   } else {
-                    dl[] discarded$1 = rc.a(-44, -87, 63, -114, -113, -87, 75, -11, 77);
+                    discarded$1 = rc.a(-44, -87, 63, -114, -113, -87, 75, -11, 77);
                     break L2;
                   }
                 }
@@ -70,7 +74,7 @@ final class rc {
                       if (var11 >= param0) {
                         var11 = 0;
                         L5: while (true) {
-                          if (var11 >= param0 >> 1) {
+                          if (var11 >= param0 >> -1140107775) {
                             return var10;
                           } else {
                             var12 = 0;
@@ -164,6 +168,9 @@ final class rc {
 
     final static void a(int param0, int param1) {
         pl.field_g = param1;
+        if (param0 != -25537) {
+            field_a = (Vector) null;
+        }
     }
 
     static {

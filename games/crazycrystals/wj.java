@@ -14,12 +14,12 @@ final class wj extends wi {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((wj) this).field_g;
-          param1 = param1 + ((wj) this).field_d;
+          param0 = param0 + this.field_g;
+          param1 = param1 + this.field_d;
           var3 = param0 + param1 * kh.field_l;
           var4 = 0;
-          var5 = ((wj) this).field_e;
-          var6 = ((wj) this).field_f;
+          var5 = this.field_e;
+          var6 = this.field_f;
           var7 = kh.field_l - var6;
           var8 = 0;
           if (param1 >= kh.field_b) {
@@ -71,7 +71,7 @@ final class wj extends wi {
             break L4;
           } else {
             if (var5 > 0) {
-              wj.b(kh.field_i, ((wj) this).field_j, ((wj) this).field_i, 0, var4, var3, var6, var5, var7, var8);
+              wj.b(kh.field_i, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
               return;
             } else {
               break L4;
@@ -81,17 +81,27 @@ final class wj extends wi {
     }
 
     wj(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        ((wj) this).field_a = param0;
-        ((wj) this).field_c = param1;
-        ((wj) this).field_g = param2;
-        ((wj) this).field_d = param3;
-        ((wj) this).field_f = param4;
-        ((wj) this).field_e = param5;
-        ((wj) this).field_j = param6;
-        ((wj) this).field_i = param7;
+        this.field_a = param0;
+        this.field_c = param1;
+        this.field_g = param2;
+        this.field_d = param3;
+        this.field_f = param4;
+        this.field_e = param5;
+        this.field_j = param6;
+        this.field_i = param7;
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -113,7 +123,7 @@ final class wj extends wi {
                     var11++;
                     continue L0;
                   } else {
-                    int incrementValue$10 = param4;
+                    incrementValue$10 = param4;
                     param4++;
                     param3 = param1[incrementValue$10];
                     if (param3 == 0) {
@@ -121,7 +131,7 @@ final class wj extends wi {
                       var12++;
                       continue L2;
                     } else {
-                      int incrementValue$11 = param5;
+                      incrementValue$11 = param5;
                       param5++;
                       param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
@@ -131,48 +141,48 @@ final class wj extends wi {
                 }
               } else {
                 L3: {
-                  int incrementValue$12 = param4;
+                  incrementValue$12 = param4;
                   param4++;
                   param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
-                    int incrementValue$13 = param5;
+                    incrementValue$13 = param5;
                     param5++;
                     param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$14 = param4;
+                  incrementValue$14 = param4;
                   param4++;
                   param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$16 = param4;
+                  incrementValue$16 = param4;
                   param4++;
                   param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
-                    int incrementValue$17 = param5;
+                    incrementValue$17 = param5;
                     param5++;
                     param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
-                int incrementValue$18 = param4;
+                incrementValue$18 = param4;
                 param4++;
                 param3 = param1[incrementValue$18];
                 if (param3 == 0) {
@@ -180,7 +190,7 @@ final class wj extends wi {
                   var12++;
                   continue L1;
                 } else {
-                  int incrementValue$19 = param5;
+                  incrementValue$19 = param5;
                   param5++;
                   param0[incrementValue$19] = param2[param3 & 255];
                   var12++;
@@ -193,6 +203,8 @@ final class wj extends wi {
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -212,7 +224,7 @@ final class wj extends wi {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 var13 = param1[incrementValue$66];
                 if (var13 == 0) {
@@ -222,7 +234,7 @@ final class wj extends wi {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -243,12 +255,12 @@ final class wj extends wi {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((wj) this).field_g;
-          param1 = param1 + ((wj) this).field_d;
+          param0 = param0 + this.field_g;
+          param1 = param1 + this.field_d;
           var4 = param0 + param1 * kh.field_l;
           var5 = 0;
-          var6 = ((wj) this).field_e;
-          var7 = ((wj) this).field_f;
+          var6 = this.field_e;
+          var7 = this.field_f;
           var8 = kh.field_l - var7;
           var9 = 0;
           if (param1 >= kh.field_b) {
@@ -300,7 +312,7 @@ final class wj extends wi {
             break L4;
           } else {
             if (var6 > 0) {
-              wj.a(kh.field_i, ((wj) this).field_j, ((wj) this).field_i, var5, var4, var7, var6, var8, var9, param2);
+              wj.a(kh.field_i, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               break L4;
@@ -310,13 +322,13 @@ final class wj extends wi {
     }
 
     wj(int param0, int param1, int param2) {
-        ((wj) this).field_f = param0;
-        ((wj) this).field_a = param0;
-        ((wj) this).field_e = param1;
-        ((wj) this).field_c = param1;
-        ((wj) this).field_d = 0;
-        ((wj) this).field_g = 0;
-        ((wj) this).field_j = new byte[param0 * param1];
-        ((wj) this).field_i = new int[param2];
+        this.field_f = param0;
+        this.field_a = param0;
+        this.field_e = param1;
+        this.field_c = param1;
+        this.field_d = 0;
+        this.field_g = 0;
+        this.field_j = new byte[param0 * param1];
+        this.field_i = new int[param2];
     }
 }

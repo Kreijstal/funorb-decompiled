@@ -7,7 +7,7 @@ final class eh extends wf {
     int[] field_f;
 
     eh() {
-        ((eh) this).field_g = false;
+        this.field_g = false;
     }
 
     final static String a(String param0, int param1, String param2, String param3) {

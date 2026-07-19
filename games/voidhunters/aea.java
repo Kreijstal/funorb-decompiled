@@ -12,6 +12,7 @@ final class aea {
         int var3 = 0;
         int stackIn_3_0 = 0;
         int stackIn_67_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_66_0 = 0;
         int stackOut_2_0 = 0;
@@ -186,26 +187,28 @@ final class aea {
               }
               stackOut_66_0 = var2_int;
               stackIn_67_0 = stackOut_66_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_2_0 = 32;
               stackIn_3_0 = stackOut_2_0;
-              return (byte) stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var2, field_z + param0 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) var2), field_z + param0 + ',' + param1 + ')');
         }
-        return (byte) stackIn_67_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (byte) stackIn_3_0;
+        } else {
+          return (byte) stackIn_67_0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "aea.A(";
         field_b = 600;
         field_a = 0;

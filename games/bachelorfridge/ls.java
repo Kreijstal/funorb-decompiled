@@ -24,10 +24,6 @@ final class ls {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ls.A(";
         field_b = new String[]{"meaty", "dairy", "sweet", "bread", "spooky", "bouncy", "fizzy", "fishy", "spicy", "savoury"};
         field_d = "You won! Here are your battle-stats.";

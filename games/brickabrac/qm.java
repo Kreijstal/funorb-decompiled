@@ -12,18 +12,24 @@ final class qm {
         field_b = null;
         field_d = null;
         field_c = null;
+        if (param0 > -100) {
+            field_b = (String) null;
+            field_e = null;
+            return;
+        }
         field_e = null;
     }
 
     final static void a(int param0, int param1) {
         try {
+            Object discarded$1 = null;
             int var2 = 0;
             Throwable var3 = null;
             Throwable decompiledCaughtException = null;
-            var2 = -25;
+            var2 = 25 / ((42 - param0) / 40);
             try {
               L0: {
-                Object discarded$1 = ne.a(new Object[1], 78, uc.e((byte) -82), "resizing");
+                discarded$1 = ne.a(new Object[]{new Integer(param1)}, 78, uc.e((byte) -82), "resizing");
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -41,10 +47,6 @@ final class qm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Send private Quick Chat to <%0>";
         field_e = "Loading extra data";
         field_c = "Accept unrated rematch";

@@ -13,10 +13,10 @@ final class wi {
     static String field_i;
 
     wi(int param0, int param1, int param2, int param3) {
-        ((wi) this).field_e = new ed(param0, param1);
-        ((wi) this).field_b = param2;
-        ((wi) this).field_a = param3;
-        ((wi) this).field_g = true;
+        this.field_e = new ed(param0, param1);
+        this.field_b = param2;
+        this.field_a = param3;
+        this.field_g = true;
     }
 
     public static void a(int param0) {
@@ -37,10 +37,6 @@ final class wi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Username: ";
         field_h = new int[]{64, 40, 48, 64, 64};
         field_f = new java.awt.Color(10040319);

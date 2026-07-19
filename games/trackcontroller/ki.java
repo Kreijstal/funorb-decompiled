@@ -40,24 +40,32 @@ final class ki {
     public static void a(int param0) {
         field_a = null;
         field_e = null;
-        field_f = null;
-        field_c = null;
+        if (param0 != 49) {
+          field_e = (Calendar) null;
+          field_f = null;
+          field_c = null;
+          return;
+        } else {
+          field_f = null;
+          field_c = null;
+          return;
+        }
     }
 
     final ob a(int param0, int param1) {
         ob var3 = null;
         byte[] var4 = null;
         ob var5 = null;
-        var3 = (ob) ((ki) this).field_d.a((long)param1, (byte) 102);
+        var3 = (ob) (this.field_d.a((long)param1, (byte) 102));
         if (var3 != null) {
           return var3;
         } else {
           L0: {
-            if (param1 < 32768) {
-              var4 = ((ki) this).field_g.a(1, param1, (byte) -23);
+            if ((param1 ^ -1) > -32769) {
+              var4 = this.field_g.a(1, param1, (byte) -23);
               break L0;
             } else {
-              var4 = ((ki) this).field_b.a(1, param1 & 32767, (byte) -67);
+              var4 = this.field_b.a(1, param1 & 32767, (byte) -67);
               break L0;
             }
           }
@@ -73,7 +81,7 @@ final class ki {
                   break L1;
                 }
               }
-              ((ki) this).field_d.a(-60, (Object) (Object) var5, (long)param1);
+              this.field_d.a(-60, var5, (long)param1);
               return var5;
             } else {
               L2: {
@@ -84,11 +92,11 @@ final class ki {
                   break L2;
                 }
               }
-              ((ki) this).field_d.a(-60, (Object) (Object) var5, (long)param1);
+              this.field_d.a(-60, var5, (long)param1);
               return var5;
             }
           } else {
-            field_c = null;
+            field_c = (int[]) null;
             if (var4 == null) {
               L3: {
                 if (param1 >= 32768) {
@@ -98,7 +106,7 @@ final class ki {
                   break L3;
                 }
               }
-              ((ki) this).field_d.a(-60, (Object) (Object) var5, (long)param1);
+              this.field_d.a(-60, var5, (long)param1);
               return var5;
             } else {
               L4: {
@@ -110,7 +118,7 @@ final class ki {
                   break L4;
                 }
               }
-              ((ki) this).field_d.a(-60, (Object) (Object) var5, (long)param1);
+              this.field_d.a(-60, var5, (long)param1);
               return var5;
             }
           }
@@ -122,10 +130,6 @@ final class ki {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[]{45, 46, 47, 48, 49};
         field_e = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
         field_a = "There's more than one space large enough for this exhibit, but only one place it can go. Think carefully.";

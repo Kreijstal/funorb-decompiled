@@ -11,7 +11,54 @@ abstract class jc extends ib {
     boolean field_N;
 
     private final int h(byte param0) {
-        return !((jc) this).field_N ? 0 : (Object) (Object) ((jc) this).field_I.g(-125) == this ? 256 : 0;
+        int stackIn_6_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_2_0 = 0;
+        if (param0 != 90) {
+          L0: {
+            field_M = (vl) null;
+            if (this.field_N) {
+              if (this.field_I.g(-125) != this) {
+                stackOut_11_0 = 0;
+                stackIn_12_0 = stackOut_11_0;
+                break L0;
+              } else {
+                stackOut_10_0 = 256;
+                stackIn_12_0 = stackOut_10_0;
+                break L0;
+              }
+            } else {
+              stackOut_8_0 = 0;
+              stackIn_12_0 = stackOut_8_0;
+              break L0;
+            }
+          }
+          return stackIn_12_0;
+        } else {
+          L1: {
+            if (this.field_N) {
+              if (this.field_I.g(-125) != this) {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                break L1;
+              } else {
+                stackOut_4_0 = 256;
+                stackIn_6_0 = stackOut_4_0;
+                break L1;
+              }
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_6_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_6_0;
+        }
     }
 
     boolean h(int param0) {
@@ -30,19 +77,19 @@ abstract class jc extends ib {
         int stackOut_5_0 = 0;
         int stackOut_6_0 = 0;
         var2 = this.h((byte) 90);
-        var3 = var2 - ((jc) this).field_L;
-        if (var3 <= 0) {
+        var3 = var2 - this.field_L;
+        if ((var3 ^ -1) >= -1) {
           if (param0 > var3) {
             L0: {
               L1: {
-                ((jc) this).field_L = ((jc) this).field_L + (1 + (-16 + var3)) / 16;
-                if (((jc) this).field_L != 0) {
+                this.field_L = this.field_L + (1 + (-16 + var3)) / 16;
+                if (this.field_L != 0) {
                   break L1;
                 } else {
                   if (var2 != 0) {
                     break L1;
                   } else {
-                    if (((jc) this).field_N) {
+                    if (this.field_N) {
                       break L1;
                     } else {
                       stackOut_27_0 = 1;
@@ -60,13 +107,13 @@ abstract class jc extends ib {
           } else {
             L2: {
               L3: {
-                if (((jc) this).field_L != 0) {
+                if (this.field_L != 0) {
                   break L3;
                 } else {
                   if (var2 != 0) {
                     break L3;
                   } else {
-                    if (((jc) this).field_N) {
+                    if (this.field_N) {
                       break L3;
                     } else {
                       stackOut_21_0 = 1;
@@ -83,14 +130,14 @@ abstract class jc extends ib {
             return stackIn_23_0 != 0;
           }
         } else {
-          ((jc) this).field_L = ((jc) this).field_L + (-1 + var3 + 8) / 8;
+          this.field_L = this.field_L + (-1 + var3 + 8) / 8;
           if (param0 <= var3) {
-            if (((jc) this).field_L == 0) {
+            if (this.field_L == 0) {
               if (var2 != 0) {
                 return false;
               } else {
                 L4: {
-                  if (((jc) this).field_N) {
+                  if (this.field_N) {
                     stackOut_13_0 = 0;
                     stackIn_14_0 = stackOut_13_0;
                     break L4;
@@ -108,14 +155,14 @@ abstract class jc extends ib {
           } else {
             L5: {
               L6: {
-                ((jc) this).field_L = ((jc) this).field_L + (1 + (-16 + var3)) / 16;
-                if (((jc) this).field_L != 0) {
+                this.field_L = this.field_L + (1 + (-16 + var3)) / 16;
+                if (this.field_L != 0) {
                   break L6;
                 } else {
                   if (var2 != 0) {
                     break L6;
                   } else {
-                    if (((jc) this).field_N) {
+                    if (this.field_N) {
                       break L6;
                     } else {
                       stackOut_5_0 = 1;
@@ -138,58 +185,58 @@ abstract class jc extends ib {
         field_J = null;
         field_M = null;
         if (param0 != -17) {
-            field_M = null;
+            field_M = (vl) null;
         }
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
-        if (0 != ((jc) this).field_L) {
-          if (((jc) this).field_L < 256) {
+        if (0 != this.field_L) {
+          if ((this.field_L ^ -1) > -257) {
             if (nl.field_e != null) {
-              if (((jc) this).field_t <= nl.field_e.field_D) {
-                if (((jc) this).field_s <= nl.field_e.field_C) {
+              if (this.field_t <= nl.field_e.field_D) {
+                if (this.field_s <= nl.field_e.field_C) {
                   fc.a(-109, nl.field_e);
                   lb.d();
-                  ((jc) this).b(0, param3 ^ -281, 0);
-                  super.a(-param0 - ((jc) this).field_w, -param1 - ((jc) this).field_o, param2, param3);
+                  this.b(0, param3 ^ -281, 0);
+                  super.a(-param0 - this.field_w, -param1 - this.field_o, param2, param3);
                   sc.b(-117);
-                  nl.field_e.b(param1 + ((jc) this).field_o, param0 + ((jc) this).field_w, ((jc) this).field_L);
+                  nl.field_e.b(param1 + this.field_o, param0 + this.field_w, this.field_L);
                   return;
                 } else {
-                  nl.field_e = new jp(((jc) this).field_t, ((jc) this).field_s);
+                  nl.field_e = new jp(this.field_t, this.field_s);
                   fc.a(-109, nl.field_e);
                   lb.d();
-                  ((jc) this).b(0, param3 ^ -281, 0);
-                  super.a(-param0 - ((jc) this).field_w, -param1 - ((jc) this).field_o, param2, param3);
+                  this.b(0, param3 ^ -281, 0);
+                  super.a(-param0 - this.field_w, -param1 - this.field_o, param2, param3);
                   sc.b(-117);
-                  nl.field_e.b(param1 + ((jc) this).field_o, param0 + ((jc) this).field_w, ((jc) this).field_L);
+                  nl.field_e.b(param1 + this.field_o, param0 + this.field_w, this.field_L);
                   return;
                 }
               } else {
-                nl.field_e = new jp(((jc) this).field_t, ((jc) this).field_s);
+                nl.field_e = new jp(this.field_t, this.field_s);
                 fc.a(-109, nl.field_e);
                 lb.d();
-                ((jc) this).b(0, param3 ^ -281, 0);
-                super.a(-param0 - ((jc) this).field_w, -param1 - ((jc) this).field_o, param2, param3);
+                this.b(0, param3 ^ -281, 0);
+                super.a(-param0 - this.field_w, -param1 - this.field_o, param2, param3);
                 sc.b(-117);
-                nl.field_e.b(param1 + ((jc) this).field_o, param0 + ((jc) this).field_w, ((jc) this).field_L);
+                nl.field_e.b(param1 + this.field_o, param0 + this.field_w, this.field_L);
                 return;
               }
             } else {
-              nl.field_e = new jp(((jc) this).field_t, ((jc) this).field_s);
+              nl.field_e = new jp(this.field_t, this.field_s);
               fc.a(-109, nl.field_e);
               lb.d();
-              ((jc) this).b(0, param3 ^ -281, 0);
-              super.a(-param0 - ((jc) this).field_w, -param1 - ((jc) this).field_o, param2, param3);
+              this.b(0, param3 ^ -281, 0);
+              super.a(-param0 - this.field_w, -param1 - this.field_o, param2, param3);
               sc.b(-117);
-              nl.field_e.b(param1 + ((jc) this).field_o, param0 + ((jc) this).field_w, ((jc) this).field_L);
+              nl.field_e.b(param1 + this.field_o, param0 + this.field_w, this.field_L);
               return;
             }
           } else {
             if (0 != param2) {
               return;
             } else {
-              ((jc) this).b(((jc) this).field_o + param1, 274, ((jc) this).field_w + param0);
+              this.b(this.field_o + param1, 274, this.field_w + param0);
               super.a(param0, param1, param2, (byte) -11);
               return;
             }
@@ -204,27 +251,27 @@ abstract class jc extends ib {
         if (!(var2 == null)) {
             return var2;
         }
-        return (oc) this;
+        return (oc) (this);
     }
 
     jc(cp param0, int param1, int param2) {
-        super(mn.field_y + -param1 >> 1, -param2 + r.field_w >> 1, param1, param2, (ub) null);
+        super(mn.field_y + -param1 >> -760386143, -param2 + r.field_w >> 2106355233, param1, param2, (ub) null);
         try {
-            ((jc) this).field_N = false;
-            ((jc) this).field_I = param0;
-            ((jc) this).field_L = 0;
+            this.field_N = false;
+            this.field_I = param0;
+            this.field_L = 0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "jc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "jc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final void a(boolean param0, int param1, int param2) {
         if (!param0) {
           field_H = false;
-          ((jc) this).a(param1, -param2 + mn.field_y >> 1, r.field_w - param1 >> 1, (byte) -119, param2);
+          this.a(param1, -param2 + mn.field_y >> -1851391839, r.field_w - param1 >> 1731502913, (byte) -119, param2);
           return;
         } else {
-          ((jc) this).a(param1, -param2 + mn.field_y >> 1, r.field_w - param1 >> 1, (byte) -119, param2);
+          this.a(param1, -param2 + mn.field_y >> -1851391839, r.field_w - param1 >> 1731502913, (byte) -119, param2);
           return;
         }
     }
@@ -234,17 +281,20 @@ abstract class jc extends ib {
     final static void a(java.applet.Applet param0, byte param1) {
         try {
             da.a("", 121, param0);
+            if (param1 != 97) {
+                jc.a((byte) -100);
+            }
             mi.a((byte) -111, param0);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "jc.PB(" + (param0 != null ? "{...}" : "null") + ',' + 97 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "jc.PB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     boolean a(int param0) {
         if (param0 <= -22) {
-          ((jc) this).field_L = this.h((byte) 90);
-          if (((jc) this).field_L == 0) {
-            if (((jc) this).field_N) {
+          this.field_L = this.h((byte) 90);
+          if (this.field_L == 0) {
+            if (this.field_N) {
               return false;
             } else {
               return true;
@@ -253,10 +303,10 @@ abstract class jc extends ib {
             return false;
           }
         } else {
-          ((jc) this).field_L = 90;
-          ((jc) this).field_L = this.h((byte) 90);
-          if (((jc) this).field_L == 0) {
-            if (((jc) this).field_N) {
+          this.field_L = 90;
+          this.field_L = this.h((byte) 90);
+          if (this.field_L == 0) {
+            if (this.field_N) {
               return false;
             } else {
               return true;
@@ -274,7 +324,7 @@ abstract class jc extends ib {
           L0: {
             jc.a((byte) 8);
             if (0 == param1) {
-              if (pp.field_a != 14) {
+              if ((pp.field_a ^ -1) != -15) {
                 if (pp.field_a == 0) {
                   if ((4 & param0) != 0) {
                     ga.field_i = 2;
@@ -292,7 +342,7 @@ abstract class jc extends ib {
                       if (ga.field_i == 0) {
                         if (param0 != 0) {
                           L1: {
-                            if ((param0 & 4) != 0) {
+                            if (-1 != (param0 & 4 ^ -1)) {
                               pp.field_a = 2;
                               jl.field_a = 25;
                               ga.field_i = 2;
@@ -308,7 +358,7 @@ abstract class jc extends ib {
                         }
                       } else {
                         L2: {
-                          if (ga.field_i == 1) {
+                          if (-2 == (ga.field_i ^ -1)) {
                             break L2;
                           } else {
                             if (ga.field_i == 12) {
@@ -364,16 +414,10 @@ abstract class jc extends ib {
             } else {
               if (1 == param1) {
                 ab.field_E = ab.field_E + 1;
-                if ((param0 & 2) == 0) {
+                if (-1 == (param0 & 2 ^ -1)) {
                   if (pp.field_a == 3) {
-                    if (ab.field_E > 2) {
-                      mn.field_v = de.field_x;
-                      ga.field_i = 4;
-                      tb.field_eb = o.field_a;
-                      pp.field_a = -1;
-                      return;
-                    } else {
-                      if (dj.field_d > 0) {
+                    if ((ab.field_E ^ -1) >= -3) {
+                      if (-1 > (dj.field_d ^ -1)) {
                         mn.field_v = de.field_x;
                         ga.field_i = 4;
                         tb.field_eb = o.field_a;
@@ -382,6 +426,12 @@ abstract class jc extends ib {
                       } else {
                         return;
                       }
+                    } else {
+                      mn.field_v = de.field_x;
+                      ga.field_i = 4;
+                      tb.field_eb = o.field_a;
+                      pp.field_a = -1;
+                      return;
                     }
                   } else {
                     return;
@@ -390,14 +440,14 @@ abstract class jc extends ib {
                   L3: {
                     dj.field_d = dj.field_d + 1;
                     if (pp.field_a == 3) {
-                      if (ab.field_E > 2) {
+                      if ((ab.field_E ^ -1) < -3) {
                         mn.field_v = de.field_x;
                         ga.field_i = 4;
                         tb.field_eb = o.field_a;
                         pp.field_a = -1;
                         break L3;
                       } else {
-                        if (dj.field_d > 0) {
+                        if (-1 > (dj.field_d ^ -1)) {
                           mn.field_v = de.field_x;
                           ga.field_i = 4;
                           tb.field_eb = o.field_a;
@@ -414,8 +464,8 @@ abstract class jc extends ib {
                   return;
                 }
               } else {
-                if (param1 == 2) {
-                  if ((pi.field_q & 1 << param0) == 0) {
+                if ((param1 ^ -1) == -3) {
+                  if (-1 == (pi.field_q & 1 << param0 ^ -1)) {
                     L4: {
                       L5: {
                         kf.field_k = param0;
@@ -445,12 +495,12 @@ abstract class jc extends ib {
                     break L0;
                   }
                 } else {
-                  if (param1 == 3) {
-                    if (pp.field_a == 5) {
+                  if (-4 == (param1 ^ -1)) {
+                    if ((pp.field_a ^ -1) == -6) {
                       ga.field_i = 8;
                       jl.field_a = 250;
                       pp.field_a = -1;
-                      tb.field_eb = rd.a(kq.field_n, new String[1], (byte) 103);
+                      tb.field_eb = rd.a(kq.field_n, new String[]{ui.field_b}, (byte) 103);
                       wc.field_b = true;
                       break L0;
                     } else {
@@ -458,11 +508,11 @@ abstract class jc extends ib {
                     }
                   } else {
                     if (4 == param1) {
-                      if (pp.field_a == 5) {
+                      if ((pp.field_a ^ -1) == -6) {
                         ga.field_i = 9;
                         pp.field_a = -1;
                         jl.field_a = 250;
-                        tb.field_eb = rd.a(tl.field_c, new String[1], (byte) 103);
+                        tb.field_eb = rd.a(tl.field_c, new String[]{ui.field_b}, (byte) 103);
                         wc.field_b = true;
                         break L0;
                       } else {
@@ -471,7 +521,7 @@ abstract class jc extends ib {
                     } else {
                       if (5 != param1) {
                         if (param1 == 6) {
-                          if (pp.field_a == 11) {
+                          if (-12 == (pp.field_a ^ -1)) {
                             if (!cm.field_s) {
                               ga.field_i = 12;
                               pp.field_a = -1;
@@ -488,7 +538,7 @@ abstract class jc extends ib {
                           break L0;
                         }
                       } else {
-                        if (pp.field_a != 5) {
+                        if (-6 != (pp.field_a ^ -1)) {
                           if (!rf.field_f) {
                             if (!wl.field_N) {
                               da.field_G = pp.field_a;
@@ -507,7 +557,7 @@ abstract class jc extends ib {
                           ga.field_i = 9;
                           jl.field_a = 250;
                           pp.field_a = -1;
-                          tb.field_eb = rd.a(tl.field_c, new String[1], (byte) 103);
+                          tb.field_eb = rd.a(tl.field_c, new String[]{ui.field_b}, (byte) 103);
                           wc.field_b = true;
                           break L0;
                         }
@@ -522,25 +572,25 @@ abstract class jc extends ib {
         } else {
           L6: {
             if (0 == param1) {
-              if (pp.field_a != 14) {
+              if ((pp.field_a ^ -1) != -15) {
                 if (pp.field_a == 0) {
-                  if ((4 & param0) != 0) {
+                  if ((4 & param0) == 0) {
+                    return;
+                  } else {
                     ga.field_i = 2;
                     pp.field_a = 2;
                     jl.field_a = 25;
                     return;
-                  } else {
-                    return;
                   }
                 } else {
                   if (pp.field_a != 1) {
-                    if (!ka.a((byte) 91)) {
-                      break L6;
-                    } else {
+                    if (ka.a((byte) 91)) {
                       if (ga.field_i == 0) {
-                        if (param0 != 0) {
+                        if (param0 == 0) {
+                          return;
+                        } else {
                           L7: {
-                            if ((param0 & 4) != 0) {
+                            if (-1 != (param0 & 4 ^ -1)) {
                               pp.field_a = 2;
                               jl.field_a = 25;
                               ga.field_i = 2;
@@ -550,13 +600,11 @@ abstract class jc extends ib {
                             }
                           }
                           im.b(-8);
-                          break L6;
-                        } else {
                           return;
                         }
                       } else {
                         L8: {
-                          if (ga.field_i == 1) {
+                          if (-2 == (ga.field_i ^ -1)) {
                             break L8;
                           } else {
                             if (ga.field_i == 12) {
@@ -566,13 +614,15 @@ abstract class jc extends ib {
                             }
                           }
                         }
-                        if (0 == (param0 & 4)) {
-                          break L6;
-                        } else {
+                        if (0 != (param0 & 4)) {
                           im.b(-8);
+                          return;
+                        } else {
                           return;
                         }
                       }
+                    } else {
+                      return;
                     }
                   } else {
                     L9: {
@@ -612,7 +662,7 @@ abstract class jc extends ib {
               if (1 == param1) {
                 L11: {
                   ab.field_E = ab.field_E + 1;
-                  if ((param0 & 2) == 0) {
+                  if (-1 == (param0 & 2 ^ -1)) {
                     break L11;
                   } else {
                     dj.field_d = dj.field_d + 1;
@@ -620,14 +670,14 @@ abstract class jc extends ib {
                   }
                 }
                 if (pp.field_a == 3) {
-                  if (ab.field_E > 2) {
+                  if ((ab.field_E ^ -1) < -3) {
                     mn.field_v = de.field_x;
                     ga.field_i = 4;
                     tb.field_eb = o.field_a;
                     pp.field_a = -1;
                     break L6;
                   } else {
-                    if (dj.field_d > 0) {
+                    if (-1 > (dj.field_d ^ -1)) {
                       mn.field_v = de.field_x;
                       ga.field_i = 4;
                       tb.field_eb = o.field_a;
@@ -641,8 +691,8 @@ abstract class jc extends ib {
                   break L6;
                 }
               } else {
-                if (param1 == 2) {
-                  if ((pi.field_q & 1 << param0) == 0) {
+                if ((param1 ^ -1) == -3) {
+                  if (-1 == (pi.field_q & 1 << param0 ^ -1)) {
                     L12: {
                       L13: {
                         kf.field_k = param0;
@@ -672,24 +722,24 @@ abstract class jc extends ib {
                     break L6;
                   }
                 } else {
-                  if (param1 == 3) {
-                    if (pp.field_a != 5) {
-                      break L6;
-                    } else {
+                  if (-4 == (param1 ^ -1)) {
+                    if ((pp.field_a ^ -1) == -6) {
                       ga.field_i = 8;
                       jl.field_a = 250;
                       pp.field_a = -1;
-                      tb.field_eb = rd.a(kq.field_n, new String[1], (byte) 103);
+                      tb.field_eb = rd.a(kq.field_n, new String[]{ui.field_b}, (byte) 103);
                       wc.field_b = true;
                       break L6;
+                    } else {
+                      return;
                     }
                   } else {
                     if (4 == param1) {
-                      if (pp.field_a == 5) {
+                      if ((pp.field_a ^ -1) == -6) {
                         ga.field_i = 9;
                         pp.field_a = -1;
                         jl.field_a = 250;
-                        tb.field_eb = rd.a(tl.field_c, new String[1], (byte) 103);
+                        tb.field_eb = rd.a(tl.field_c, new String[]{ui.field_b}, (byte) 103);
                         wc.field_b = true;
                         break L6;
                       } else {
@@ -698,9 +748,7 @@ abstract class jc extends ib {
                     } else {
                       if (5 != param1) {
                         if (param1 == 6) {
-                          if (pp.field_a != 11) {
-                            break L6;
-                          } else {
+                          if (-12 == (pp.field_a ^ -1)) {
                             if (!cm.field_s) {
                               ga.field_i = 12;
                               pp.field_a = -1;
@@ -710,15 +758,15 @@ abstract class jc extends ib {
                             } else {
                               break L6;
                             }
+                          } else {
+                            return;
                           }
                         } else {
                           break L6;
                         }
                       } else {
-                        if (pp.field_a != 5) {
-                          if (rf.field_f) {
-                            break L6;
-                          } else {
+                        if (-6 != (pp.field_a ^ -1)) {
+                          if (!rf.field_f) {
                             if (!wl.field_N) {
                               da.field_G = pp.field_a;
                               ga.field_i = 10;
@@ -729,12 +777,14 @@ abstract class jc extends ib {
                             } else {
                               break L6;
                             }
+                          } else {
+                            return;
                           }
                         } else {
                           ga.field_i = 9;
                           jl.field_a = 250;
                           pp.field_a = -1;
-                          tb.field_eb = rd.a(tl.field_c, new String[1], (byte) 103);
+                          tb.field_eb = rd.a(tl.field_c, new String[]{ui.field_b}, (byte) 103);
                           wc.field_b = true;
                           break L6;
                         }
@@ -750,10 +800,6 @@ abstract class jc extends ib {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = 4;
         field_M = null;
     }

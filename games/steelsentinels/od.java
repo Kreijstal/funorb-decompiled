@@ -24,27 +24,37 @@ final class od extends RuntimeException {
         field_b = null;
         field_j = null;
         field_d = null;
-        field_f = null;
-        field_g = null;
+        if (param0) {
+          return;
+        } else {
+          field_f = null;
+          field_g = null;
+          return;
+        }
     }
 
     final static c a(int param0, boolean param1) {
-        c var2 = new c();
-        fg.field_Ub.a(3, (ck) (Object) var2);
-        tc.a(87, 6);
-        return var2;
+        c var2 = null;
+        if (!param1) {
+          field_m = 46;
+          var2 = new c();
+          fg.field_Ub.a(3, var2);
+          tc.a(87, param0);
+          return var2;
+        } else {
+          var2 = new c();
+          fg.field_Ub.a(3, var2);
+          tc.a(87, param0);
+          return var2;
+        }
     }
 
     od(Throwable param0, String param1) {
-        ((od) this).field_a = param1;
-        ((od) this).field_l = param0;
+        this.field_a = param1;
+        this.field_l = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "od.A(";
         field_f = "Shortcut Reference";
         field_k = new int[]{17, 18, 22, -1, -1, 8};

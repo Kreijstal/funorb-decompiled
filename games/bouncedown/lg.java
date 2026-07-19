@@ -11,12 +11,17 @@ final class lg {
     }
 
     public static void a(int param0) {
-        int var1 = -25;
+        int var1 = 25 / ((param0 - 33) / 55);
         field_c = null;
         field_b = null;
     }
 
     final static void a(boolean param0, boolean param1) {
+        if (param0) {
+            field_a = 117;
+            pb.field_k.a(param1, (byte) -112);
+            return;
+        }
         pb.field_k.a(param1, (byte) -112);
     }
 
@@ -53,7 +58,7 @@ final class lg {
                     var4 = var2;
                     var3 = var2.indexOf('?');
                     var4 = "reload.ws";
-                    if (0 > var3) {
+                    if (param0 > var3) {
                       break L1;
                     } else {
                       var4 = var4 + var2.substring(var3);
@@ -75,23 +80,23 @@ final class lg {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("lg.B(").append(0).append(',');
+                stackOut_6_0 = (RuntimeException) (var2_ref2);
+                stackOut_6_1 = new StringBuilder().append("lg.B(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
@@ -99,7 +104,7 @@ final class lg {
                   break L2;
                 }
               }
-              throw ii.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+              throw ii.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

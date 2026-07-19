@@ -15,6 +15,15 @@ final class ea extends sl {
 
     ea(int param0, String param1) {
         super(true, 0, 0);
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        char dupTemp$12 = 0;
+        StringBuilder discarded$13 = null;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -52,7 +61,7 @@ final class ea extends sl {
         try {
           L0: {
             L1: {
-              ((ea) this).field_x = param0;
+              this.field_x = param0;
               var3_int = 16;
               var4 = 16;
               var5 = 0;
@@ -60,10 +69,10 @@ final class ea extends sl {
                 break L1;
               } else {
                 var5++;
-                int incrementValue$9 = var5;
+                incrementValue$9 = var5;
                 var5++;
                 var3_int = fj.b(-48, (int) param1.charAt(incrementValue$9));
-                int incrementValue$10 = var5;
+                incrementValue$10 = var5;
                 var5++;
                 var4 = fj.b(-48, (int) param1.charAt(incrementValue$10));
                 break L1;
@@ -77,25 +86,25 @@ final class ea extends sl {
                 var24 = new int[8][6];
                 var9_int = 0;
                 L3: while (true) {
-                  if (var9_int >= 8) {
-                    ((ea) this).a(var23, (byte) 50, var24, var22);
+                  if ((var9_int ^ -1) <= -9) {
+                    this.a(var23, (byte) 50, var24, var22);
                     var9 = new StringBuilder(12);
                     L4: while (true) {
-                      int incrementValue$11 = var5;
+                      incrementValue$11 = var5;
                       var5++;
-                      char dupTemp$12 = param1.charAt(incrementValue$11);
+                      dupTemp$12 = param1.charAt(incrementValue$11);
                       var10 = dupTemp$12;
                       if (dupTemp$12 == 32) {
-                        ((ea) this).field_q = var9.toString();
+                        this.field_q = var9.toString();
                         var11 = param1.substring(var5);
                         var5 = var11.indexOf('/');
-                        var27 = (CharSequence) (Object) var11.substring(0, var5);
-                        ((ea) this).field_r = uk.a(var27, 10);
-                        var28 = (CharSequence) (Object) var11.substring(1 + var5);
-                        ((ea) this).field_v = uk.a(var28, 10);
+                        var27 = (CharSequence) ((Object) var11.substring(0, var5));
+                        this.field_r = uk.a(var27, 10);
+                        var28 = (CharSequence) ((Object) var11.substring(1 + var5));
+                        this.field_v = uk.a(var28, 10);
                         break L0;
                       } else {
-                        StringBuilder discarded$13 = var9.append((char) var10);
+                        discarded$13 = var9.append((char) var10);
                         continue L4;
                       }
                     }
@@ -106,7 +115,7 @@ final class ea extends sl {
                         var9_int++;
                         continue L3;
                       } else {
-                        int incrementValue$14 = var5;
+                        incrementValue$14 = var5;
                         var5++;
                         var24[var9_int][var10] = fh.a(0, (int) param1.charAt(incrementValue$14));
                         var10++;
@@ -123,18 +132,18 @@ final class ea extends sl {
                     continue L2;
                   } else {
                     L7: {
-                      int incrementValue$15 = var5;
+                      incrementValue$15 = var5;
                       var5++;
                       var10 = fj.b(-48, (int) param1.charAt(incrementValue$15));
-                      var22[var8][var9_int] = (byte)(var10 >> 3);
-                      int incrementValue$16 = var5;
+                      var22[var8][var9_int] = (byte)(var10 >> -161321277);
+                      incrementValue$16 = var5;
                       var5++;
                       var23[var8][var9_int] = fh.a(0, (int) param1.charAt(incrementValue$16));
                       if (var4 <= 1 + var9_int) {
                         break L7;
                       } else {
                         var22[var8][var9_int - -1] = (byte)tc.a(7, var10);
-                        int incrementValue$17 = var5;
+                        incrementValue$17 = var5;
                         var5++;
                         var23[var8][var9_int - -1] = fh.a(0, (int) param1.charAt(incrementValue$17));
                         break L7;
@@ -151,23 +160,23 @@ final class ea extends sl {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var3;
+            stackOut_22_0 = (RuntimeException) (var3);
             stackOut_22_1 = new StringBuilder().append("ea.<init>(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L8;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -175,7 +184,7 @@ final class ea extends sl {
               break L8;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
     }
 
@@ -189,35 +198,43 @@ final class ea extends sl {
         var4 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
+            L1: {
+              if (!param0) {
+                break L1;
+              } else {
+                field_p = (String) null;
+                break L1;
+              }
+            }
             ig.a();
             wi.field_b = 11;
             ec.field_d = new int[260];
             var1_int = 0;
-            L1: while (true) {
+            L2: while (true) {
               if (256 <= var1_int) {
                 var5 = 256;
                 var1_int = var5;
-                L2: while (true) {
+                L3: while (true) {
                   if (var5 >= ec.field_d.length) {
                     break L0;
                   } else {
                     ec.field_d[var5] = 255;
                     var5++;
-                    continue L2;
+                    continue L3;
                   }
                 }
               } else {
                 var2 = 15.0;
                 ec.field_d[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
                 var1_int++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var1, "ea.O(" + false + ')');
+          throw sl.a((Throwable) ((Object) var1), "ea.O(" + param0 + ')');
         }
     }
 
@@ -229,8 +246,8 @@ final class ea extends sl {
             return 116;
         }
         for (var2 = 0; 16 > var2; var2++) {
-            for (var3 = 0; var3 < 16; var3++) {
-                if (((ea) this).field_d[var2][var3] == 38) {
+            for (var3 = 0; (var3 ^ -1) > -17; var3++) {
+                if (-39 == (this.field_d[var2][var3] ^ -1)) {
                     return var3;
                 }
             }
@@ -239,15 +256,16 @@ final class ea extends sl {
     }
 
     final int a(int param0) {
+        int discarded$0 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = TrackController.field_F ? 1 : 0;
         if (param0 != -8299) {
-            int discarded$0 = ea.b(true, 12);
+            discarded$0 = ea.b(true, 12);
         }
         for (var2 = 0; 16 > var2; var2++) {
-            for (var3 = 0; var3 < 16; var3++) {
-                if (!(38 != ((ea) this).field_d[var2][var3])) {
+            for (var3 = 0; -17 < (var3 ^ -1); var3++) {
+                if (!(38 != this.field_d[var2][var3])) {
                     return var2;
                 }
             }
@@ -271,7 +289,7 @@ final class ea extends sl {
             if (0 > param1) {
               break L2;
             } else {
-              if (param1 < 65536) {
+              if (-65537 < (param1 ^ -1)) {
                 break L1;
               } else {
                 break L2;
@@ -283,7 +301,7 @@ final class ea extends sl {
           break L1;
         }
         L3: {
-          if (param1 < 256) {
+          if (-257 < (param1 ^ -1)) {
             break L3;
           } else {
             param1 = param1 >>> 8;
@@ -301,7 +319,7 @@ final class ea extends sl {
           }
         }
         L5: {
-          if (param1 < 4) {
+          if (-5 < (param1 ^ -1)) {
             break L5;
           } else {
             var2 += 2;
@@ -334,10 +352,6 @@ final class ea extends sl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
         field_w = new int[8192];
         field_y = "To server list";

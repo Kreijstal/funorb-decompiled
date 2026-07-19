@@ -9,12 +9,12 @@ final class ak {
 
     final static op a(int param0, byte param1, int param2, int param3) {
         op var4 = null;
-        Object var5 = null;
+        java.applet.Applet var5 = null;
         if (param1 >= -35) {
           L0: {
-            var5 = null;
+            var5 = (java.applet.Applet) null;
             ak.a(88, (java.applet.Applet) null);
-            var4 = (op) (Object) mi.field_Kb.g(72);
+            var4 = (op) ((Object) mi.field_Kb.g(72));
             if (var4 == null) {
               var4 = new op();
               break L0;
@@ -26,7 +26,7 @@ final class ak {
           return var4;
         } else {
           L1: {
-            var4 = (op) (Object) mi.field_Kb.g(72);
+            var4 = (op) ((Object) mi.field_Kb.g(72));
             if (var4 == null) {
               var4 = new op();
               break L1;
@@ -67,11 +67,21 @@ final class ak {
     }
 
     final static int a(int param0, int param1, boolean param2, int param3) {
+        if (param1 != -5) {
+            field_a = (int[]) null;
+            return lk.b(false);
+        }
         return lk.b(false);
     }
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
+            Object discarded$6 = null;
+            Object discarded$7 = null;
+            Object discarded$8 = null;
+            Object discarded$9 = null;
+            Object discarded$10 = null;
+            Object discarded$11 = null;
             Throwable var2 = null;
             RuntimeException var2_ref = null;
             String var3 = null;
@@ -98,19 +108,19 @@ final class ak {
                   L1: {
                     var4 = param1.getCodeBase();
                     var3 = gf.a(param1, true, var4).getFile();
-                    Object discarded$6 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
-                    Object discarded$7 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
+                    discarded$6 = fo.a(param1, "updatelinks", (byte) 23, new Object[]{"home", var3 + "home.ws"});
+                    discarded$7 = fo.a(param1, "updatelinks", (byte) 23, new Object[]{"gamelist", var3 + "togamelist.ws"});
                     if (param0 == 14158) {
                       break L1;
                     } else {
-                      field_a = null;
+                      field_a = (int[]) null;
                       break L1;
                     }
                   }
-                  Object discarded$8 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
-                  Object discarded$9 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
-                  Object discarded$10 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
-                  Object discarded$11 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
+                  discarded$8 = fo.a(param1, "updatelinks", (byte) 23, new Object[]{"serverlist", var3 + "toserverlist.ws"});
+                  discarded$9 = fo.a(param1, "updatelinks", (byte) 23, new Object[]{"options", var3 + "options.ws"});
+                  discarded$10 = fo.a(param1, "updatelinks", (byte) 23, new Object[]{"terms", var3 + "terms.ws"});
+                  discarded$11 = fo.a(param1, "updatelinks", (byte) 23, new Object[]{"privacy", var3 + "privacy.ws"});
                   break L0;
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -123,23 +133,23 @@ final class ak {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref;
+                stackOut_6_0 = (RuntimeException) (var2_ref);
                 stackOut_6_1 = new StringBuilder().append("ak.F(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
@@ -147,7 +157,7 @@ final class ak {
                   break L2;
                 }
               }
-              throw fa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+              throw fa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -157,9 +167,18 @@ final class ak {
     }
 
     public static void a(int param0) {
-        field_c = null;
-        field_a = null;
-        field_d = null;
+        if (param0 != -5937) {
+          field_a = (int[]) null;
+          field_c = null;
+          field_a = null;
+          field_d = null;
+          return;
+        } else {
+          field_c = null;
+          field_a = null;
+          field_d = null;
+          return;
+        }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -169,7 +188,7 @@ final class ak {
         tb.field_s.a(param0 + param3 + -5, param4, param1);
         rp.field_r[0].c(param3, param4);
         rp.field_r[1].c(param0 + param3 + -5, param4);
-        rp.field_r[2].c(param3, -5 + param4 - -param1);
+        rp.field_r[2].c(param3, param2 + param4 - -param1);
         rp.field_r[3].c(param3 + param0 - 5, -5 + param4 + param1);
     }
 
@@ -178,10 +197,6 @@ final class ak {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new int[12];
         field_c = "Join";
         field_b = 0;

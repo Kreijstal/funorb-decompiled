@@ -20,15 +20,11 @@ final class td {
         int var13 = 0;
         int[] var14 = null;
         int[] var15 = null;
-        int[] var16 = null;
-        int[] var17 = null;
         var2 = param0.field_I;
         var3 = param0.field_p;
         var4 = param0.field_b;
         var5 = param0.field_o;
-        var17 = wb.field_Zb;
-        var16 = var17;
-        var15 = var16;
+        var15 = wb.field_Zb;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_z;
@@ -89,34 +85,34 @@ final class td {
             L5: while (true) {
               if (var4 != var12) {
                 L6: {
-                  var17 = var16;
+                  var15 = var14;
                   var2 = (byte)var5;
-                  var7 = var17[var7];
+                  var7 = var15[var7];
                   var1 = (byte)var7;
                   var7 = var7 >> 8;
                   var4++;
                   if (var1 == var5) {
                     if (var4 != var12) {
                       var3 = 2;
-                      var7 = var17[var7];
+                      var7 = var15[var7];
                       var1 = (byte)var7;
                       var7 = var7 >> 8;
                       var4++;
                       if (var4 != var12) {
                         if (var1 == var5) {
                           var3 = 3;
-                          var7 = var17[var7];
+                          var7 = var15[var7];
                           var1 = (byte)var7;
                           var7 = var7 >> 8;
                           var4++;
                           if (var4 != var12) {
                             if (var1 == var5) {
-                              var7 = var17[var7];
+                              var7 = var15[var7];
                               var1 = (byte)var7;
                               var7 = var7 >> 8;
                               var4++;
                               var3 = (var1 & 255) + 4;
-                              var7 = var17[var7];
+                              var7 = var15[var7];
                               var5 = (byte)var7;
                               var7 = var7 >> 8;
                               var4++;
@@ -224,8 +220,6 @@ final class td {
         int var35 = 0;
         byte[] var36 = null;
         byte[] var37 = null;
-        byte[] var38 = null;
-        byte[] var39 = null;
         L0: {
           var4 = 0;
           var5 = 0;
@@ -304,9 +298,7 @@ final class td {
                           var4 = 0;
                           L6: while (true) {
                             if (var4 >= var9) {
-                              var39 = new byte[6];
-                              var38 = var39;
-                              var37 = var38;
+                              var37 = new byte[6];
                               var36 = var37;
                               var27_ref_byte__ = var36;
                               var29 = 0;
@@ -406,7 +398,7 @@ final class td {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_t[var31] = param0.field_t[var31] - 1;
-                                                                                param0.field_h[param0.field_t[var31]] = param0.field_h[param0.field_t[var31 - 1] + 15];
+                                                                                param0.field_h[param0.field_t[var31]] = param0.field_h[param0.field_t[var31 - 1] + 16 - 1];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -492,7 +484,7 @@ final class td {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + var16;
+                                                                    var15 = var15 + 1 * var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -689,7 +681,7 @@ final class td {
                                       }
                                     } else {
                                       var29 = param0.field_a[var4];
-                                      var28 = var39[var29];
+                                      var28 = var37[var29];
                                       L40: while (true) {
                                         if (var29 <= 0) {
                                           var27_ref_byte__[0] = (byte)var28;
@@ -904,7 +896,7 @@ final class td {
         synchronized (var5) {
           L0: {
             field_a.field_j = param2;
-            field_a.field_r = 9;
+            field_a.field_r = param4;
             field_a.field_w = param0;
             field_a.field_E = 0;
             field_a.field_e = param1;

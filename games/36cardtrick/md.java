@@ -10,11 +10,17 @@ final class md {
     int field_a;
 
     final static boolean a(byte param0) {
+        boolean discarded$0 = false;
+        if (param0 > -6) {
+            discarded$0 = md.a(122, false);
+            return qe.a(mk.g(-122), (byte) -98);
+        }
         return qe.a(mk.g(-122), (byte) -98);
     }
 
     final static boolean a(int param0, boolean param1) {
         try {
+            long dupTemp$2 = 0L;
             IOException var2 = null;
             w var4 = null;
             w var5 = null;
@@ -34,14 +40,14 @@ final class md {
               if (0 == fe.field_c.field_a) {
                 return false;
               } else {
-                long dupTemp$2 = id.a(94);
+                dupTemp$2 = id.a(94);
                 ua.field_E = dupTemp$2;
                 uk.field_a = dupTemp$2;
-                if (fe.field_c.field_a == 1) {
+                if (-2 == (fe.field_c.field_a ^ -1)) {
                   try {
                     L1: {
                       L2: {
-                        cb.field_j = new jd((java.net.Socket) fe.field_c.field_e, td.field_b);
+                        cb.field_j = new jd((java.net.Socket) (fe.field_c.field_e), td.field_b);
                         var4 = rd.field_j;
                         var5 = var4;
                         na.field_r.field_i = 0;
@@ -60,7 +66,7 @@ final class md {
                       hc.field_f = stackIn_13_0;
                       sb.field_a = stackIn_13_0;
                       ra.field_b = vf.field_a;
-                      nf.a((pb) (Object) na.field_r, false, ag.field_d, kh.field_g, kj.field_t);
+                      nf.a(na.field_r, false, ag.field_d, kh.field_g, kj.field_t);
                       fe.a((byte) -36, -1);
                       break L1;
                     }

@@ -20,11 +20,11 @@ final class pk {
         int stackOut_8_0 = 0;
         int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
-        if (param1 != 0) {
+        if ((param1 ^ -1) != 0) {
           if (param0 != -12663) {
             L0: {
-              field_f = null;
-              if (-1 == (pl.field_U & 1 << param1)) {
+              field_f = (String) null;
+              if (-1 == (pl.field_U & 1 << param1 ^ -1)) {
                 stackOut_9_0 = 0;
                 stackIn_10_0 = stackOut_9_0;
                 break L0;
@@ -37,7 +37,7 @@ final class pk {
             return stackIn_10_0 != 0;
           } else {
             L1: {
-              if ((pl.field_U & 1 << param1) == 0) {
+              if (-1 == (pl.field_U & 1 << param1 ^ -1)) {
                 stackOut_5_0 = 0;
                 stackIn_6_0 = stackOut_5_0;
                 break L1;
@@ -95,9 +95,9 @@ final class pk {
         var5 = stellarshard.field_B;
         try {
           o.field_l = ta.field_m;
-          var4_int = -31;
+          var4_int = 63 / ((-39 - param3) / 62);
           if (255 != param2) {
-            if (param2 < 100) {
+            if (-101 < (param2 ^ -1)) {
               hi.field_d = fb.a(param2, true, param0);
               return;
             } else {
@@ -128,23 +128,23 @@ final class pk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var4;
+            stackOut_13_0 = (RuntimeException) (var4);
             stackOut_13_1 = new StringBuilder().append("pk.A(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L1;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -153,23 +153,23 @@ final class pk {
             }
           }
           L2: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L2;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -177,26 +177,47 @@ final class pk {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param2 + ',' + 125 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static void a(int param0) {
-        if (10 != eg.field_d) {
-          if (fa.a(-72)) {
+        boolean discarded$6 = false;
+        boolean discarded$7 = false;
+        boolean discarded$8 = false;
+        if (10 == eg.field_d) {
+          ki.f(107);
+          eg.field_d = 11;
+          if (param0 == 4) {
             b.field_v = true;
             return;
           } else {
-            ki.f(107);
-            eg.field_d = 11;
+            discarded$6 = pk.a(105, -118);
             b.field_v = true;
             return;
           }
         } else {
-          ki.f(107);
-          eg.field_d = 11;
-          b.field_v = true;
-          return;
+          if (!fa.a(-72)) {
+            ki.f(107);
+            eg.field_d = 11;
+            if (param0 != 4) {
+              discarded$7 = pk.a(105, -118);
+              b.field_v = true;
+              return;
+            } else {
+              b.field_v = true;
+              return;
+            }
+          } else {
+            if (param0 == 4) {
+              b.field_v = true;
+              return;
+            } else {
+              discarded$8 = pk.a(105, -118);
+              b.field_v = true;
+              return;
+            }
+          }
         }
     }
 
@@ -205,16 +226,21 @@ final class pk {
         field_j = null;
         field_b = null;
         field_i = null;
-        field_a = null;
-        field_f = null;
-        field_d = null;
+        if (param0 <= 25) {
+          pk.a(75);
+          field_a = null;
+          field_f = null;
+          field_d = null;
+          return;
+        } else {
+          field_a = null;
+          field_f = null;
+          field_d = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Passwords can only contain letters and numbers";
         field_h = 100;
         field_i = new int[4];

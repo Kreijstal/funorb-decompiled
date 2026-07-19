@@ -13,9 +13,9 @@ class wk implements si {
 
     public final un a(int param0, byte param1) {
         if (param1 != 98) {
-            return null;
+            return (un) null;
         }
-        return ((wk) this).field_b[param0];
+        return this.field_b[param0];
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -70,7 +70,7 @@ class wk implements si {
         try {
           L0: {
             L1: {
-              var8_int = 0;
+              var8_int = param6;
               var9 = param7;
               var10 = 0;
               var11 = param5 - param0;
@@ -79,20 +79,20 @@ class wk implements si {
               var14 = param7 * param7;
               var15 = var11 * var11;
               var16 = var12 * var12;
-              var17 = var14 << 1;
-              var18 = var13 << 1;
-              var19 = var16 << 1;
-              var20 = var15 << 1;
-              var21 = param7 << 1;
-              var22 = var12 << 1;
+              var17 = var14 << -1282675551;
+              var18 = var13 << -730242783;
+              var19 = var16 << 1639087201;
+              var20 = var15 << -1084898975;
+              var21 = param7 << -1299616831;
+              var22 = var12 << 1173889633;
               var23 = var17 + var13 * (-var21 + 1);
               var24 = var14 + -(var18 * (-1 + var21));
               var25 = (1 + -var22) * var15 + var19;
               var26 = -((var22 + -1) * var20) + var16;
-              var27 = var13 << 2;
-              var28 = var14 << 2;
-              var29 = var15 << 2;
-              var30 = var16 << 2;
+              var27 = var13 << -1839832542;
+              var28 = var14 << 2062129314;
+              var29 = var15 << 476592962;
+              var30 = var16 << -1813483454;
               var31 = 3 * var17;
               var32 = (var21 + -3) * var18;
               var33 = var19 * 3;
@@ -110,7 +110,7 @@ class wk implements si {
                   var57 = qd.field_a[param3];
                   var40 = ln.a(qg.field_z, kn.field_e, param4 + -param5, 87);
                   var41 = ln.a(qg.field_z, kn.field_e, param4 + param5, 105);
-                  var42 = ln.a(qg.field_z, kn.field_e, param4 + -var11, 88);
+                  var42 = ln.a(qg.field_z, kn.field_e, param4 + -var11, param6 + 88);
                   var43 = ln.a(qg.field_z, kn.field_e, param4 + var11, 85);
                   di.a(var40, (byte) 92, param1, var57, var42);
                   di.a(var42, (byte) 30, param2, var57, var43);
@@ -120,7 +120,7 @@ class wk implements si {
               }
             }
             L2: while (true) {
-              if (var9 <= 0) {
+              if ((var9 ^ -1) >= -1) {
                 break L0;
               } else {
                 L3: {
@@ -144,7 +144,7 @@ class wk implements si {
                         break L5;
                       } else {
                         L6: while (true) {
-                          if (var25 >= 0) {
+                          if ((var25 ^ -1) <= -1) {
                             break L5;
                           } else {
                             var25 = var25 + var33;
@@ -181,7 +181,7 @@ class wk implements si {
                     break L8;
                   } else {
                     L9: while (true) {
-                      if (var23 >= 0) {
+                      if (-1 >= (var23 ^ -1)) {
                         break L8;
                       } else {
                         var24 = var24 + var35;
@@ -268,17 +268,20 @@ class wk implements si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var8, "wk.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + 0 + ',' + param7 + ')');
+          throw rb.a((Throwable) ((Object) var8), "wk.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     final static void a(int param0, t[] param1, t[] param2, int param3, int param4, int param5, int param6, boolean param7, int param8, int param9, int param10, uc param11, int param12, int param13, uc param14) {
-        Object var16 = null;
-        pl.a(param12, 0, param4, (t[]) null, param13, param1, cc.field_c, qa.field_l, param14, param2, 0, param11, 0, 0, 240, param6, 0, 480, uf.field_c, 320, 127);
+        t[] var16 = (t[]) null;
+        pl.a(param12, 0, param4, (t[]) null, param13, param1, cc.field_c, qa.field_l, param14, param2, param3, param11, param0, 0, param9, param6, param10, 480, uf.field_c, param5, 127);
+        if (param8 <= 109) {
+            return;
+        }
         try {
             Torquing.a(-49, param7);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "wk.G(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + 0 + ',' + param4 + ',' + 320 + ',' + param6 + ',' + param7 + ',' + 112 + ',' + 240 + ',' + 0 + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + (param14 != null ? "{...}" : "null") + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "wk.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + (param14 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -290,11 +293,11 @@ class wk implements si {
         if (param1 == 3) {
           L0: {
             L1: {
-              var3 = ((wk) this).a((byte) 100, param0);
+              var3 = this.a((byte) 100, param0);
               if (var3 == null) {
                 break L1;
               } else {
-                if (!var3.a(param1 + 43, ((wk) this).field_c, (si) this)) {
+                if (!var3.a(param1 + 43, this.field_c, (si) (this))) {
                   break L1;
                 } else {
                   stackOut_4_0 = 1;
@@ -315,33 +318,52 @@ class wk implements si {
 
     public final int[] a(byte param0, int param1, boolean param2, float param3, int param4, int param5) {
         if (param0 >= -2) {
-            return null;
+            return (int[]) null;
         }
-        return ((wk) this).a((byte) 52, param4).a(((wk) this).field_b[param4].field_e, ((wk) this).field_c, param1, (double)param3, param2, 0, (si) this, param5);
+        return this.a((byte) 52, param4).a(this.field_b[param4].field_e, this.field_c, param1, (double)param3, param2, 0, (si) (this), param5);
     }
 
     public static void a(byte param0) {
+        if (param0 > -63) {
+            uc var2 = (uc) null;
+            wk.a(102, (t[]) null, (t[]) null, -29, -22, -52, 122, false, 50, -59, -118, (uc) null, -35, 64, (uc) null);
+        }
         field_a = null;
     }
 
     wd a(byte param0, int param1) {
-        ta var3 = ((wk) this).field_e.a((long)param1, 4604);
+        un discarded$0 = null;
+        ta var3 = this.field_e.a((long)param1, 4604);
         if (var3 != null) {
-            return (wd) (Object) var3;
+            return (wd) ((Object) var3);
         }
-        byte[] var4 = ((wk) this).field_f.b(param1, (byte) 89);
+        byte[] var4 = this.field_f.b(param1, (byte) 89);
         if (param0 < 19) {
-            un discarded$0 = ((wk) this).a(60, (byte) 74);
+            discarded$0 = this.a(60, (byte) 74);
         }
         if (var4 == null) {
             return null;
         }
         wd var5 = new wd(new fj(var4));
-        ((wk) this).field_e.a((long)param1, (ta) (Object) var5, 0);
+        this.field_e.a((long)param1, var5, 0);
         return var5;
     }
 
     wk(la param0, la param1, la param2) {
+        int discarded$14 = 0;
+        int discarded$15 = 0;
+        int discarded$16 = 0;
+        int discarded$17 = 0;
+        int discarded$18 = 0;
+        byte discarded$19 = 0;
+        int discarded$20 = 0;
+        byte discarded$21 = 0;
+        byte discarded$22 = 0;
+        byte discarded$23 = 0;
+        byte discarded$24 = 0;
+        byte discarded$25 = 0;
+        byte discarded$26 = 0;
+        int discarded$27 = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         fj var7 = null;
@@ -418,81 +440,81 @@ class wk implements si {
         RuntimeException stackOut_118_0 = null;
         StringBuilder stackOut_118_1 = null;
         String stackOut_118_2 = null;
-        ((wk) this).field_e = new cf(256);
+        this.field_e = new cf(256);
         try {
           L0: {
-            ((wk) this).field_c = param2;
-            ((wk) this).field_f = param1;
+            this.field_c = param2;
+            this.field_f = param1;
             var7 = new fj(param0.a(0, 100, 0));
-            ((wk) this).field_g = var7.i(7088);
-            ((wk) this).field_b = new un[((wk) this).field_g];
+            this.field_g = var7.i(7088);
+            this.field_b = new un[this.field_g];
             var5 = 0;
             L1: while (true) {
-              if (var5 >= ((wk) this).field_g) {
+              if (var5 >= this.field_g) {
                 var5 = 0;
                 L2: while (true) {
-                  if (var5 >= ((wk) this).field_g) {
+                  if (var5 >= this.field_g) {
                     var5 = 0;
                     L3: while (true) {
-                      if (((wk) this).field_g <= var5) {
+                      if (this.field_g <= var5) {
                         var5 = 0;
                         L4: while (true) {
-                          if (var5 >= ((wk) this).field_g) {
+                          if (var5 >= this.field_g) {
                             var5 = 0;
                             L5: while (true) {
-                              if (var5 >= ((wk) this).field_g) {
+                              if (var5 >= this.field_g) {
                                 var5 = 0;
                                 L6: while (true) {
-                                  if (((wk) this).field_g <= var5) {
+                                  if (this.field_g <= var5) {
                                     var5 = 0;
                                     L7: while (true) {
-                                      if (((wk) this).field_g <= var5) {
+                                      if (this.field_g <= var5) {
                                         var5 = 0;
                                         L8: while (true) {
-                                          if (((wk) this).field_g <= var5) {
+                                          if (this.field_g <= var5) {
                                             var5 = 0;
                                             L9: while (true) {
-                                              if (((wk) this).field_g <= var5) {
+                                              if (this.field_g <= var5) {
                                                 var5 = 0;
                                                 L10: while (true) {
-                                                  if (var5 >= ((wk) this).field_g) {
+                                                  if (var5 >= this.field_g) {
                                                     var5 = 0;
                                                     L11: while (true) {
-                                                      if (((wk) this).field_g <= var5) {
+                                                      if (this.field_g <= var5) {
                                                         var5 = 0;
                                                         L12: while (true) {
-                                                          if (((wk) this).field_g <= var5) {
+                                                          if (this.field_g <= var5) {
                                                             var5 = 0;
                                                             L13: while (true) {
-                                                              if (((wk) this).field_g <= var5) {
+                                                              if (this.field_g <= var5) {
                                                                 var5 = 0;
                                                                 L14: while (true) {
-                                                                  if (((wk) this).field_g <= var5) {
+                                                                  if (this.field_g <= var5) {
                                                                     var5 = 0;
                                                                     L15: while (true) {
-                                                                      if (var5 >= ((wk) this).field_g) {
+                                                                      if (var5 >= this.field_g) {
                                                                         var5 = 0;
                                                                         L16: while (true) {
-                                                                          if (((wk) this).field_g <= var5) {
+                                                                          if (this.field_g <= var5) {
                                                                             var5 = 0;
                                                                             L17: while (true) {
-                                                                              if (((wk) this).field_g <= var5) {
+                                                                              if (this.field_g <= var5) {
                                                                                 var5 = 0;
                                                                                 L18: while (true) {
-                                                                                  if (var5 >= ((wk) this).field_g) {
+                                                                                  if (var5 >= this.field_g) {
                                                                                     var5 = 0;
                                                                                     L19: while (true) {
-                                                                                      if (var5 >= ((wk) this).field_g) {
+                                                                                      if (var5 >= this.field_g) {
                                                                                         var5 = 0;
                                                                                         L20: while (true) {
-                                                                                          if (var5 >= ((wk) this).field_g) {
+                                                                                          if (var5 >= this.field_g) {
                                                                                             break L0;
                                                                                           } else {
                                                                                             L21: {
-                                                                                              if (((wk) this).field_b[var5] == null) {
+                                                                                              if (this.field_b[var5] == null) {
                                                                                                 break L21;
                                                                                               } else {
-                                                                                                ((wk) this).field_b[var5].field_j = var7.i((byte) -101);
+                                                                                                this.field_b[var5].field_j = var7.i((byte) -101);
                                                                                                 break L21;
                                                                                               }
                                                                                             }
@@ -502,10 +524,10 @@ class wk implements si {
                                                                                         }
                                                                                       } else {
                                                                                         L22: {
-                                                                                          if (null == ((wk) this).field_b[var5]) {
+                                                                                          if (null == this.field_b[var5]) {
                                                                                             break L22;
                                                                                           } else {
-                                                                                            int discarded$14 = var7.c((byte) -56);
+                                                                                            discarded$14 = var7.c((byte) -56);
                                                                                             break L22;
                                                                                           }
                                                                                         }
@@ -515,10 +537,10 @@ class wk implements si {
                                                                                     }
                                                                                   } else {
                                                                                     L23: {
-                                                                                      if (null == ((wk) this).field_b[var5]) {
+                                                                                      if (null == this.field_b[var5]) {
                                                                                         break L23;
                                                                                       } else {
-                                                                                        int discarded$15 = var7.i((byte) -101);
+                                                                                        discarded$15 = var7.i((byte) -101);
                                                                                         break L23;
                                                                                       }
                                                                                     }
@@ -528,10 +550,10 @@ class wk implements si {
                                                                                 }
                                                                               } else {
                                                                                 L24: {
-                                                                                  if (null == ((wk) this).field_b[var5]) {
+                                                                                  if (null == this.field_b[var5]) {
                                                                                     break L24;
                                                                                   } else {
-                                                                                    int discarded$16 = var7.i((byte) -101);
+                                                                                    discarded$16 = var7.i((byte) -101);
                                                                                     break L24;
                                                                                   }
                                                                                 }
@@ -541,10 +563,10 @@ class wk implements si {
                                                                             }
                                                                           } else {
                                                                             L25: {
-                                                                              if (null == ((wk) this).field_b[var5]) {
+                                                                              if (null == this.field_b[var5]) {
                                                                                 break L25;
                                                                               } else {
-                                                                                int discarded$17 = var7.i((byte) -101);
+                                                                                discarded$17 = var7.i((byte) -101);
                                                                                 break L25;
                                                                               }
                                                                             }
@@ -554,10 +576,10 @@ class wk implements si {
                                                                         }
                                                                       } else {
                                                                         L26: {
-                                                                          if (((wk) this).field_b[var5] == null) {
+                                                                          if (this.field_b[var5] == null) {
                                                                             break L26;
                                                                           } else {
-                                                                            int discarded$18 = var7.i((byte) -101);
+                                                                            discarded$18 = var7.i((byte) -101);
                                                                             break L26;
                                                                           }
                                                                         }
@@ -567,10 +589,10 @@ class wk implements si {
                                                                     }
                                                                   } else {
                                                                     L27: {
-                                                                      if (((wk) this).field_b[var5] == null) {
+                                                                      if (this.field_b[var5] == null) {
                                                                         break L27;
                                                                       } else {
-                                                                        byte discarded$19 = var7.f((byte) 104);
+                                                                        discarded$19 = var7.f((byte) 104);
                                                                         break L27;
                                                                       }
                                                                     }
@@ -580,21 +602,21 @@ class wk implements si {
                                                                 }
                                                               } else {
                                                                 L28: {
-                                                                  if (null == ((wk) this).field_b[var5]) {
+                                                                  if (null == this.field_b[var5]) {
                                                                     break L28;
                                                                   } else {
                                                                     L29: {
-                                                                      stackOut_70_0 = ((wk) this).field_b[var5];
+                                                                      stackOut_70_0 = this.field_b[var5];
                                                                       stackIn_72_0 = stackOut_70_0;
                                                                       stackIn_71_0 = stackOut_70_0;
-                                                                      if (var7.i((byte) -101) != 1) {
-                                                                        stackOut_72_0 = (un) (Object) stackIn_72_0;
+                                                                      if (-2 != (var7.i((byte) -101) ^ -1)) {
+                                                                        stackOut_72_0 = (un) ((Object) stackIn_72_0);
                                                                         stackOut_72_1 = 0;
                                                                         stackIn_73_0 = stackOut_72_0;
                                                                         stackIn_73_1 = stackOut_72_1;
                                                                         break L29;
                                                                       } else {
-                                                                        stackOut_71_0 = (un) (Object) stackIn_71_0;
+                                                                        stackOut_71_0 = (un) ((Object) stackIn_71_0);
                                                                         stackOut_71_1 = 1;
                                                                         stackIn_73_0 = stackOut_71_0;
                                                                         stackIn_73_1 = stackOut_71_1;
@@ -611,10 +633,10 @@ class wk implements si {
                                                             }
                                                           } else {
                                                             L30: {
-                                                              if (null == ((wk) this).field_b[var5]) {
+                                                              if (null == this.field_b[var5]) {
                                                                 break L30;
                                                               } else {
-                                                                int discarded$20 = var7.i((byte) -101);
+                                                                discarded$20 = var7.i((byte) -101);
                                                                 break L30;
                                                               }
                                                             }
@@ -624,10 +646,10 @@ class wk implements si {
                                                         }
                                                       } else {
                                                         L31: {
-                                                          if (null == ((wk) this).field_b[var5]) {
+                                                          if (null == this.field_b[var5]) {
                                                             break L31;
                                                           } else {
-                                                            byte discarded$21 = var7.f((byte) 30);
+                                                            discarded$21 = var7.f((byte) 30);
                                                             break L31;
                                                           }
                                                         }
@@ -637,10 +659,10 @@ class wk implements si {
                                                     }
                                                   } else {
                                                     L32: {
-                                                      if (null == ((wk) this).field_b[var5]) {
+                                                      if (null == this.field_b[var5]) {
                                                         break L32;
                                                       } else {
-                                                        byte discarded$22 = var7.f((byte) 93);
+                                                        discarded$22 = var7.f((byte) 93);
                                                         break L32;
                                                       }
                                                     }
@@ -650,10 +672,10 @@ class wk implements si {
                                                 }
                                               } else {
                                                 L33: {
-                                                  if (null == ((wk) this).field_b[var5]) {
+                                                  if (null == this.field_b[var5]) {
                                                     break L33;
                                                   } else {
-                                                    ((wk) this).field_b[var5].field_d = (short)var7.i(7088);
+                                                    this.field_b[var5].field_d = (short)var7.i(7088);
                                                     break L33;
                                                   }
                                                 }
@@ -663,10 +685,10 @@ class wk implements si {
                                             }
                                           } else {
                                             L34: {
-                                              if (null == ((wk) this).field_b[var5]) {
+                                              if (null == this.field_b[var5]) {
                                                 break L34;
                                               } else {
-                                                byte discarded$23 = var7.f((byte) 73);
+                                                discarded$23 = var7.f((byte) 73);
                                                 break L34;
                                               }
                                             }
@@ -676,10 +698,10 @@ class wk implements si {
                                         }
                                       } else {
                                         L35: {
-                                          if (null == ((wk) this).field_b[var5]) {
+                                          if (null == this.field_b[var5]) {
                                             break L35;
                                           } else {
-                                            byte discarded$24 = var7.f((byte) 80);
+                                            discarded$24 = var7.f((byte) 80);
                                             break L35;
                                           }
                                         }
@@ -689,10 +711,10 @@ class wk implements si {
                                     }
                                   } else {
                                     L36: {
-                                      if (null == ((wk) this).field_b[var5]) {
+                                      if (null == this.field_b[var5]) {
                                         break L36;
                                       } else {
-                                        byte discarded$25 = var7.f((byte) 106);
+                                        discarded$25 = var7.f((byte) 106);
                                         break L36;
                                       }
                                     }
@@ -702,10 +724,10 @@ class wk implements si {
                                 }
                               } else {
                                 L37: {
-                                  if (null == ((wk) this).field_b[var5]) {
+                                  if (null == this.field_b[var5]) {
                                     break L37;
                                   } else {
-                                    byte discarded$26 = var7.f((byte) 113);
+                                    discarded$26 = var7.f((byte) 113);
                                     break L37;
                                   }
                                 }
@@ -715,10 +737,10 @@ class wk implements si {
                             }
                           } else {
                             L38: {
-                              if (((wk) this).field_b[var5] == null) {
+                              if (this.field_b[var5] == null) {
                                 break L38;
                               } else {
-                                int discarded$27 = var7.i((byte) -101);
+                                discarded$27 = var7.i((byte) -101);
                                 break L38;
                               }
                             }
@@ -728,21 +750,21 @@ class wk implements si {
                         }
                       } else {
                         L39: {
-                          if (((wk) this).field_b[var5] == null) {
+                          if (this.field_b[var5] == null) {
                             break L39;
                           } else {
                             L40: {
-                              stackOut_17_0 = ((wk) this).field_b[var5];
+                              stackOut_17_0 = this.field_b[var5];
                               stackIn_19_0 = stackOut_17_0;
                               stackIn_18_0 = stackOut_17_0;
                               if (1 != var7.i((byte) -101)) {
-                                stackOut_19_0 = (un) (Object) stackIn_19_0;
+                                stackOut_19_0 = (un) ((Object) stackIn_19_0);
                                 stackOut_19_1 = 0;
                                 stackIn_20_0 = stackOut_19_0;
                                 stackIn_20_1 = stackOut_19_1;
                                 break L40;
                               } else {
-                                stackOut_18_0 = (un) (Object) stackIn_18_0;
+                                stackOut_18_0 = (un) ((Object) stackIn_18_0);
                                 stackOut_18_1 = 1;
                                 stackIn_20_0 = stackOut_18_0;
                                 stackIn_20_1 = stackOut_18_1;
@@ -759,21 +781,21 @@ class wk implements si {
                     }
                   } else {
                     L41: {
-                      if (((wk) this).field_b[var5] == null) {
+                      if (this.field_b[var5] == null) {
                         break L41;
                       } else {
                         L42: {
-                          stackOut_9_0 = ((wk) this).field_b[var5];
+                          stackOut_9_0 = this.field_b[var5];
                           stackIn_11_0 = stackOut_9_0;
                           stackIn_10_0 = stackOut_9_0;
-                          if (var7.i((byte) -101) != 0) {
-                            stackOut_11_0 = (un) (Object) stackIn_11_0;
+                          if (-1 != (var7.i((byte) -101) ^ -1)) {
+                            stackOut_11_0 = (un) ((Object) stackIn_11_0);
                             stackOut_11_1 = 0;
                             stackIn_12_0 = stackOut_11_0;
                             stackIn_12_1 = stackOut_11_1;
                             break L42;
                           } else {
-                            stackOut_10_0 = (un) (Object) stackIn_10_0;
+                            stackOut_10_0 = (un) ((Object) stackIn_10_0);
                             stackOut_10_1 = 1;
                             stackIn_12_0 = stackOut_10_0;
                             stackIn_12_1 = stackOut_10_1;
@@ -793,7 +815,7 @@ class wk implements si {
                   if (1 != var7.i((byte) -101)) {
                     break L43;
                   } else {
-                    ((wk) this).field_b[var5] = new un();
+                    this.field_b[var5] = new un();
                     break L43;
                   }
                 }
@@ -806,23 +828,23 @@ class wk implements si {
           decompiledCaughtException = decompiledCaughtParameter0;
           L44: {
             var4 = decompiledCaughtException;
-            stackOut_111_0 = (RuntimeException) var4;
+            stackOut_111_0 = (RuntimeException) (var4);
             stackOut_111_1 = new StringBuilder().append("wk.<init>(");
             stackIn_113_0 = stackOut_111_0;
             stackIn_113_1 = stackOut_111_1;
             stackIn_112_0 = stackOut_111_0;
             stackIn_112_1 = stackOut_111_1;
             if (param0 == null) {
-              stackOut_113_0 = (RuntimeException) (Object) stackIn_113_0;
-              stackOut_113_1 = (StringBuilder) (Object) stackIn_113_1;
+              stackOut_113_0 = (RuntimeException) ((Object) stackIn_113_0);
+              stackOut_113_1 = (StringBuilder) ((Object) stackIn_113_1);
               stackOut_113_2 = "null";
               stackIn_114_0 = stackOut_113_0;
               stackIn_114_1 = stackOut_113_1;
               stackIn_114_2 = stackOut_113_2;
               break L44;
             } else {
-              stackOut_112_0 = (RuntimeException) (Object) stackIn_112_0;
-              stackOut_112_1 = (StringBuilder) (Object) stackIn_112_1;
+              stackOut_112_0 = (RuntimeException) ((Object) stackIn_112_0);
+              stackOut_112_1 = (StringBuilder) ((Object) stackIn_112_1);
               stackOut_112_2 = "{...}";
               stackIn_114_0 = stackOut_112_0;
               stackIn_114_1 = stackOut_112_1;
@@ -831,23 +853,23 @@ class wk implements si {
             }
           }
           L45: {
-            stackOut_114_0 = (RuntimeException) (Object) stackIn_114_0;
+            stackOut_114_0 = (RuntimeException) ((Object) stackIn_114_0);
             stackOut_114_1 = ((StringBuilder) (Object) stackIn_114_1).append(stackIn_114_2).append(',');
             stackIn_116_0 = stackOut_114_0;
             stackIn_116_1 = stackOut_114_1;
             stackIn_115_0 = stackOut_114_0;
             stackIn_115_1 = stackOut_114_1;
             if (param1 == null) {
-              stackOut_116_0 = (RuntimeException) (Object) stackIn_116_0;
-              stackOut_116_1 = (StringBuilder) (Object) stackIn_116_1;
+              stackOut_116_0 = (RuntimeException) ((Object) stackIn_116_0);
+              stackOut_116_1 = (StringBuilder) ((Object) stackIn_116_1);
               stackOut_116_2 = "null";
               stackIn_117_0 = stackOut_116_0;
               stackIn_117_1 = stackOut_116_1;
               stackIn_117_2 = stackOut_116_2;
               break L45;
             } else {
-              stackOut_115_0 = (RuntimeException) (Object) stackIn_115_0;
-              stackOut_115_1 = (StringBuilder) (Object) stackIn_115_1;
+              stackOut_115_0 = (RuntimeException) ((Object) stackIn_115_0);
+              stackOut_115_1 = (StringBuilder) ((Object) stackIn_115_1);
               stackOut_115_2 = "{...}";
               stackIn_117_0 = stackOut_115_0;
               stackIn_117_1 = stackOut_115_1;
@@ -856,23 +878,23 @@ class wk implements si {
             }
           }
           L46: {
-            stackOut_117_0 = (RuntimeException) (Object) stackIn_117_0;
+            stackOut_117_0 = (RuntimeException) ((Object) stackIn_117_0);
             stackOut_117_1 = ((StringBuilder) (Object) stackIn_117_1).append(stackIn_117_2).append(',');
             stackIn_119_0 = stackOut_117_0;
             stackIn_119_1 = stackOut_117_1;
             stackIn_118_0 = stackOut_117_0;
             stackIn_118_1 = stackOut_117_1;
             if (param2 == null) {
-              stackOut_119_0 = (RuntimeException) (Object) stackIn_119_0;
-              stackOut_119_1 = (StringBuilder) (Object) stackIn_119_1;
+              stackOut_119_0 = (RuntimeException) ((Object) stackIn_119_0);
+              stackOut_119_1 = (StringBuilder) ((Object) stackIn_119_1);
               stackOut_119_2 = "null";
               stackIn_120_0 = stackOut_119_0;
               stackIn_120_1 = stackOut_119_1;
               stackIn_120_2 = stackOut_119_2;
               break L46;
             } else {
-              stackOut_118_0 = (RuntimeException) (Object) stackIn_118_0;
-              stackOut_118_1 = (StringBuilder) (Object) stackIn_118_1;
+              stackOut_118_0 = (RuntimeException) ((Object) stackIn_118_0);
+              stackOut_118_1 = (StringBuilder) ((Object) stackIn_118_1);
               stackOut_118_2 = "{...}";
               stackIn_120_0 = stackOut_118_0;
               stackIn_120_1 = stackOut_118_1;
@@ -880,15 +902,11 @@ class wk implements si {
               break L46;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_120_0, stackIn_120_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_120_0), stackIn_120_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = -1;
         field_a = new ei();
     }

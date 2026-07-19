@@ -14,7 +14,7 @@ final class fja extends rqa {
     public static void e(byte param0) {
         field_p = null;
         field_r = null;
-        int var1 = -21;
+        int var1 = 42 / ((param0 - 0) / 43);
         field_q = null;
     }
 
@@ -80,7 +80,7 @@ final class fja extends rqa {
               if (param1 == 2) {
                 break L3;
               } else {
-                field_q = null;
+                field_q = (caa[]) null;
                 break L3;
               }
             }
@@ -95,7 +95,7 @@ final class fja extends rqa {
                     break L5;
                   }
                 }
-                stackOut_14_0 = (fs[]) var3;
+                stackOut_14_0 = (fs[]) (var3);
                 stackIn_15_0 = stackOut_14_0;
                 break L0;
               } else {
@@ -109,23 +109,23 @@ final class fja extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var2;
+            stackOut_16_0 = (RuntimeException) (var2);
             stackOut_16_1 = new StringBuilder().append("fja.C(");
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -133,47 +133,47 @@ final class fja extends rqa {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
         }
         return stackIn_15_0;
     }
 
     final static void a(int param0) {
         pca.field_i = new uj[13];
-        pca.field_i[0] = (uj) (Object) new nfa();
-        pca.field_i[1] = (uj) (Object) new rea();
-        pca.field_i[2] = (uj) (Object) new mcb();
+        pca.field_i[0] = (uj) ((Object) new nfa());
+        pca.field_i[1] = (uj) ((Object) new rea());
+        pca.field_i[2] = (uj) ((Object) new mcb());
         if (param0 != 11) {
           fja.a(-61);
-          pca.field_i[3] = (uj) (Object) new qsb();
-          pca.field_i[4] = (uj) (Object) new gb();
-          pca.field_i[5] = (uj) (Object) new uw();
-          pca.field_i[6] = (uj) (Object) new vdb();
-          pca.field_i[7] = (uj) (Object) new lg();
-          pca.field_i[8] = (uj) (Object) new nnb();
-          pca.field_i[9] = (uj) (Object) new kib();
-          pca.field_i[10] = (uj) (Object) new pva();
-          pca.field_i[11] = (uj) (Object) new fpa();
-          pca.field_i[12] = (uj) (Object) new hka();
+          pca.field_i[3] = (uj) ((Object) new qsb());
+          pca.field_i[4] = (uj) ((Object) new gb());
+          pca.field_i[5] = (uj) ((Object) new uw());
+          pca.field_i[6] = (uj) ((Object) new vdb());
+          pca.field_i[7] = (uj) ((Object) new lg());
+          pca.field_i[8] = (uj) ((Object) new nnb());
+          pca.field_i[9] = (uj) ((Object) new kib());
+          pca.field_i[10] = (uj) ((Object) new pva());
+          pca.field_i[11] = (uj) ((Object) new fpa());
+          pca.field_i[12] = (uj) ((Object) new hka());
           return;
         } else {
-          pca.field_i[3] = (uj) (Object) new qsb();
-          pca.field_i[4] = (uj) (Object) new gb();
-          pca.field_i[5] = (uj) (Object) new uw();
-          pca.field_i[6] = (uj) (Object) new vdb();
-          pca.field_i[7] = (uj) (Object) new lg();
-          pca.field_i[8] = (uj) (Object) new nnb();
-          pca.field_i[9] = (uj) (Object) new kib();
-          pca.field_i[10] = (uj) (Object) new pva();
-          pca.field_i[11] = (uj) (Object) new fpa();
-          pca.field_i[12] = (uj) (Object) new hka();
+          pca.field_i[3] = (uj) ((Object) new qsb());
+          pca.field_i[4] = (uj) ((Object) new gb());
+          pca.field_i[5] = (uj) ((Object) new uw());
+          pca.field_i[6] = (uj) ((Object) new vdb());
+          pca.field_i[7] = (uj) ((Object) new lg());
+          pca.field_i[8] = (uj) ((Object) new nnb());
+          pca.field_i[9] = (uj) ((Object) new kib());
+          pca.field_i[10] = (uj) ((Object) new pva());
+          pca.field_i[11] = (uj) ((Object) new fpa());
+          pca.field_i[12] = (uj) ((Object) new hka());
           return;
         }
     }
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -182,9 +182,10 @@ final class fja extends rqa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         nc stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        nc stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -196,36 +197,38 @@ final class fja extends rqa {
         try {
           L0: {
             if (param1 <= -119) {
-              stackOut_3_0 = new nc((Object) (Object) frb.a(231, 107));
+              stackOut_3_0 = new nc(frb.a(231, 107));
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (nc) null;
               stackIn_2_0 = stackOut_1_0;
-              return (nc) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("fja.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -233,16 +236,16 @@ final class fja extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Cancel";
         field_o = 50;
     }

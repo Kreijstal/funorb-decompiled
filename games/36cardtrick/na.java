@@ -11,17 +11,17 @@ final class na extends la {
 
     final byte[] b(boolean param0) {
         if (param0) {
-          if (!((na) this).field_n) {
-            if (((na) this).field_s.field_i < -((na) this).field_u + ((na) this).field_s.field_g.length) {
+          if (!this.field_n) {
+            if (this.field_s.field_i < -this.field_u + this.field_s.field_g.length) {
               throw new RuntimeException();
             } else {
-              return ((na) this).field_s.field_g;
+              return this.field_s.field_g;
             }
           } else {
             throw new RuntimeException();
           }
         } else {
-          return null;
+          return (byte[]) null;
         }
     }
 
@@ -40,6 +40,7 @@ final class na extends la {
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
@@ -111,7 +112,7 @@ final class na extends la {
                     break L5;
                   } else {
                     var11 = param4 + var8 * vj.field_l;
-                    var12 = 1 + (var10 - var8) >> 1;
+                    var12 = 1 + (var10 - var8) >> 1972588481;
                     L6: while (true) {
                       var12--;
                       if (0 > var12) {
@@ -131,7 +132,7 @@ final class na extends la {
                 } else {
                   if (vj.field_b > var6) {
                     var11 = var7 + param0 * vj.field_l;
-                    var12 = var9 + (1 + -var7) >> 1;
+                    var12 = var9 + (1 + -var7) >> 1471198849;
                     L8: while (true) {
                       var12--;
                       if (var12 < 0) {
@@ -155,10 +156,10 @@ final class na extends la {
                     break L9;
                   } else {
                     var11 = var5_int + vj.field_l * (var8 + (1 & var5_int - param4));
-                    var12 = 1 - (-var10 - -var8) >> 1;
+                    var12 = 1 - (-var10 - -var8) >> 1271853441;
                     L10: while (true) {
                       var12--;
-                      if (var12 < 0) {
+                      if ((var12 ^ -1) > -1) {
                         break L9;
                       } else {
                         vj.field_j[var11] = 16777215;
@@ -175,7 +176,7 @@ final class na extends la {
                 } else {
                   if (vj.field_b > var6) {
                     var11 = var7 + (vj.field_l * var6 - -(-param0 + var6 & 1));
-                    var12 = 1 + var9 + -var7 >> 1;
+                    var12 = 1 + var9 + -var7 >> 1371536097;
                     L12: while (true) {
                       var12--;
                       if (0 > var12) {
@@ -191,27 +192,34 @@ final class na extends la {
                   }
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var5, "na.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ma.a((Throwable) ((Object) var5), "na.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final int a(boolean param0) {
-        if (null == ((na) this).field_s) {
+        if (null == this.field_s) {
           return 0;
         } else {
           if (param0) {
             na.c(true);
-            return 100 * ((na) this).field_s.field_i / (((na) this).field_s.field_g.length - ((na) this).field_u);
+            return 100 * this.field_s.field_i / (this.field_s.field_g.length - this.field_u);
           } else {
-            return 100 * ((na) this).field_s.field_i / (((na) this).field_s.field_g.length - ((na) this).field_u);
+            return 100 * this.field_s.field_i / (this.field_s.field_g.length - this.field_u);
           }
         }
     }
@@ -220,7 +228,7 @@ final class na extends la {
         field_r = null;
         field_p = null;
         if (param0) {
-            field_q = null;
+            field_q = (int[]) null;
             field_q = null;
             return;
         }
@@ -231,10 +239,6 @@ final class na extends la {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "Reload game";
     }
 }

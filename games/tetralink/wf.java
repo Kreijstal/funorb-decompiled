@@ -9,17 +9,17 @@ final class wf extends ff {
     boolean field_p;
 
     wf(int param0, byte[] param1, int param2, int param3) {
-        ((wf) this).field_o = param0;
-        ((wf) this).field_s = param1;
-        ((wf) this).field_q = param2;
-        ((wf) this).field_r = param3;
+        this.field_o = param0;
+        this.field_s = param1;
+        this.field_q = param2;
+        this.field_r = param3;
     }
 
     wf(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((wf) this).field_o = param0;
-        ((wf) this).field_s = param1;
-        ((wf) this).field_q = param2;
-        ((wf) this).field_r = param3;
-        ((wf) this).field_p = param4 ? true : false;
+        this.field_o = param0;
+        this.field_s = param1;
+        this.field_q = param2;
+        this.field_r = param3;
+        this.field_p = param4 ? true : false;
     }
 }

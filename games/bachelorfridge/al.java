@@ -7,18 +7,19 @@ final class al {
 
     final hs a(int param0) {
         try {
+            oha discarded$1 = null;
             IllegalAccessException var2 = null;
             java.lang.reflect.InvocationTargetException var2_ref = null;
-            Object var3 = null;
+            Object[] var3 = null;
             hs stackIn_3_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             hs stackOut_2_0 = null;
-            if (!(((al) this).field_b instanceof hs)) {
+            if (!(this.field_b instanceof hs)) {
               try {
                 L0: {
-                  var3 = null;
-                  stackOut_2_0 = (hs) vb.field_n.invoke(((al) this).field_b, (Object[]) null);
+                  var3 = (Object[]) null;
+                  stackOut_2_0 = (hs) (vb.field_n.invoke(this.field_b, (Object[]) null));
                   stackIn_3_0 = stackOut_2_0;
                   decompiledRegionSelector0 = 0;
                   break L0;
@@ -44,12 +45,12 @@ final class al {
                 if (param0 == 0) {
                   return null;
                 } else {
-                  oha discarded$1 = al.a(-107, -17);
+                  discarded$1 = al.a(-107, -17);
                   return null;
                 }
               }
             } else {
-              return (hs) ((al) this).field_b;
+              return (hs) (this.field_b);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -81,12 +82,12 @@ final class al {
             StringBuilder stackOut_11_1 = null;
             String stackOut_11_2 = null;
             try {
-              ((al) this).field_b = (Object) (Object) param0;
+              this.field_b = param0;
               if (null != vb.field_g) {
-                lv.field_m[0] = (Object) (Object) param0;
+                lv.field_m[0] = param0;
                 try {
                   L0: {
-                    ((al) this).field_b = vb.field_g.newInstance(lv.field_m);
+                    this.field_b = vb.field_g.newInstance(lv.field_m);
                     break L0;
                   }
                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter0) {
@@ -110,23 +111,23 @@ final class al {
               decompiledCaughtException = decompiledCaughtParameter3;
               L1: {
                 var2_ref3 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_10_0 = (RuntimeException) var2_ref3;
+                stackOut_10_0 = (RuntimeException) (var2_ref3);
                 stackOut_10_1 = new StringBuilder().append("al.<init>(");
                 stackIn_12_0 = stackOut_10_0;
                 stackIn_12_1 = stackOut_10_1;
                 stackIn_11_0 = stackOut_10_0;
                 stackIn_11_1 = stackOut_10_1;
                 if (param0 == null) {
-                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+                  stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+                  stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
                   stackOut_12_2 = "null";
                   stackIn_13_0 = stackOut_12_0;
                   stackIn_13_1 = stackOut_12_1;
                   stackIn_13_2 = stackOut_12_2;
                   break L1;
                 } else {
-                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+                  stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
                   stackOut_11_2 = "{...}";
                   stackIn_13_0 = stackOut_11_0;
                   stackIn_13_1 = stackOut_11_1;
@@ -134,7 +135,7 @@ final class al {
                   break L1;
                 }
               }
-              throw pe.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+              throw pe.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -144,8 +145,11 @@ final class al {
     }
 
     final static void b(int param0) {
+        if (param0 != -18073) {
+            return;
+        }
         eha.field_s = null;
-        baa.field_P = null;
+        baa.field_P = (byte[][]) null;
         fd.field_D = null;
         hk.field_f = null;
         lq.field_A = null;
@@ -161,19 +165,16 @@ final class al {
         var3 = 0;
         L0: while (true) {
           if (ur.field_e.length > var3) {
-            if (null == ur.field_e[var3]) {
-              var3++;
-              var3++;
-              var3++;
-              continue L0;
-            } else {
+            if (null != ur.field_e[var3]) {
               if (param1 == ur.field_e[var3].field_j) {
                 return ur.field_e[var3];
               } else {
                 var3++;
-                var3++;
                 continue L0;
               }
+            } else {
+              var3++;
+              continue L0;
             }
           } else {
             return null;

@@ -9,17 +9,17 @@ final class ji {
     static bi field_a;
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
-        di.a(param3, ((ji) this).field_c, (byte) -38, param1, param4, param0);
+        di.a(param3, this.field_c, (byte) -38, param1, param4, param0);
         if (param2 != 103) {
-            ((ji) this).a(40, -110, (byte) -1, -54, 112);
+            this.a(40, -110, (byte) -1, -54, 112);
         }
     }
 
     ji(nf[] param0) {
         try {
-            ((ji) this).field_c = param0;
+            this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ji.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "ji.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,8 +37,7 @@ final class ji {
         hb var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var8 = Confined.field_J ? 1 : 0;
         try {
@@ -48,22 +47,21 @@ final class ji {
               var2 = var10.c(32);
               var3 = var10.c(32);
               if (var2 == 0) {
-                var4_ref_ca = (ca) (Object) dl.field_b.a(-117);
+                var4_ref_ca = (ca) ((Object) dl.field_b.a(-117));
                 if (var4_ref_ca == null) {
                   dc.d(107);
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 } else {
                   L2: {
                     var5 = ai.field_i - var10.field_n;
-                    var14 = var4_ref_ca.field_p;
-                    var13 = var14;
-                    var12 = var13;
+                    var12 = var4_ref_ca.field_p;
                     var11 = var12;
                     var6 = var11;
-                    if (var5 <= var14.length << 2) {
+                    if (var5 <= var12.length << 1966147426) {
                       break L2;
                     } else {
-                      var5 = var14.length << 2;
+                      var5 = var12.length << -1998254462;
                       break L2;
                     }
                   }
@@ -73,16 +71,16 @@ final class ji {
                       var4_ref_ca.a(true);
                       break L1;
                     } else {
-                      var6[var7 >> 2] = var6[var7 >> 2] + (var10.c(32) << va.a(768, var7 << 8));
+                      var6[var7 >> -507586014] = var6[var7 >> -507586014] + (var10.c(32) << va.a(768, var7 << -745540088));
                       var7++;
                       continue L3;
                     }
                   }
                 }
               } else {
-                if (var2 == 1) {
+                if ((var2 ^ -1) == -2) {
                   var4 = var10.b(1647);
-                  var5_ref_om = (om) (Object) jd.field_f.a(-116);
+                  var5_ref_om = (om) ((Object) jd.field_f.a(-116));
                   L4: while (true) {
                     L5: {
                       if (var5_ref_om == null) {
@@ -99,7 +97,7 @@ final class ji {
                             }
                           }
                         }
-                        var5_ref_om = (om) (Object) jd.field_f.d(2123);
+                        var5_ref_om = (om) ((Object) jd.field_f.d(2123));
                         continue L4;
                       }
                     }
@@ -108,7 +106,8 @@ final class ji {
                       break L1;
                     } else {
                       dc.d(101);
-                      return;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   }
                 } else {
@@ -118,28 +117,37 @@ final class ji {
                 }
               }
             }
-            var4 = 0;
+            var4 = 68 % ((-55 - param0) / 52);
+            decompiledRegionSelector0 = 2;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1, "ji.C(" + 54 + ')');
+          throw sd.a((Throwable) ((Object) var1), "ji.C(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     public static void a(byte param0) {
         field_d = null;
         field_a = null;
+        if (param0 <= 51) {
+            field_a = (bi) null;
+        }
         field_e = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
     }
 }

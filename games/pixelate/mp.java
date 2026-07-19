@@ -12,16 +12,21 @@ final class mp {
 
     public static void a(boolean param0) {
         field_c = null;
-        field_d = null;
-        field_a = null;
-        field_e = null;
+        if (!param0) {
+          field_e = (String) null;
+          field_d = null;
+          field_a = null;
+          field_e = null;
+          return;
+        } else {
+          field_d = null;
+          field_a = null;
+          field_e = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mp.A(";
         field_a = new StringBuilder(80);
         field_d = "Confirm Email:";

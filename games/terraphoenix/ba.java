@@ -15,17 +15,13 @@ final class ba {
 
     public static void a(int param0) {
         field_e = null;
-        int var1 = -14;
+        int var1 = -14 / ((-15 - param0) / 60);
         field_g = null;
         field_b = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ba.A(";
         field_c = "Continue";
         field_b = new o();

@@ -15,13 +15,13 @@ final class ub extends ne {
     static String field_l;
 
     public static void a(byte param0) {
-        field_q = null;
+        field_q = (byte[][]) null;
         field_o = null;
         field_r = null;
         field_m = null;
         field_s = null;
         field_i = null;
-        int var1 = 35;
+        int var1 = 35 / ((param0 - 65) / 36);
         field_k = null;
         field_n = null;
         field_l = null;
@@ -29,35 +29,39 @@ final class ub extends ne {
     }
 
     final static int a(byte param0, int param1) {
-        int stackIn_7_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_1_0 = 0;
-        L0: {
-          if (param1 != 0) {
-            if (param1 == 1) {
-              stackOut_6_0 = 3;
-              stackIn_7_0 = stackOut_6_0;
-              break L0;
-            } else {
-              if (param1 != 2) {
-                stackOut_5_0 = 9;
-                stackIn_7_0 = stackOut_5_0;
+        int stackOut_2_0 = 0;
+        if (param0 != 15) {
+          return 34;
+        } else {
+          L0: {
+            if (param1 != 0) {
+              if (param1 == 1) {
+                stackOut_7_0 = 3;
+                stackIn_8_0 = stackOut_7_0;
                 break L0;
               } else {
-                stackOut_4_0 = 6;
-                stackIn_7_0 = stackOut_4_0;
-                break L0;
+                if ((param1 ^ -1) != -3) {
+                  stackOut_6_0 = 9;
+                  stackIn_8_0 = stackOut_6_0;
+                  break L0;
+                } else {
+                  stackOut_5_0 = 6;
+                  stackIn_8_0 = stackOut_5_0;
+                  break L0;
+                }
               }
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_8_0 = stackOut_2_0;
+              break L0;
             }
-          } else {
-            stackOut_1_0 = 0;
-            stackIn_7_0 = stackOut_1_0;
-            break L0;
           }
+          return stackIn_8_0;
         }
-        return stackIn_7_0;
     }
 
     private ub() throws Throwable {
@@ -65,10 +69,6 @@ final class ub extends ne {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "Play Tutorial";
         field_m = "<col=FF0000>Defence -2</col>";
         field_s = new od();

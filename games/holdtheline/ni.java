@@ -6,12 +6,16 @@ final class ni {
     static ql field_a;
 
     final static String a(char param0, byte param1, int param2) {
-        int var4 = 0;
         int var5 = HoldTheLine.field_D;
         char[] var6 = new char[param2];
         char[] var3 = var6;
-        for (var4 = 0; var4 < param2; var4++) {
-            var6[var4] = '*';
+        int var4 = 0;
+        if (param1 != -125) {
+            return (String) null;
+        }
+        while (var4 < param2) {
+            var6[var4] = param0;
+            var4++;
         }
         return new String(var6);
     }
@@ -24,15 +28,16 @@ final class ni {
     }
 
     final static int a(byte param0) {
+        int discarded$1 = 0;
         L0: {
           if (param0 < -54) {
             break L0;
           } else {
-            int discarded$1 = ni.a((byte) -3);
+            discarded$1 = ni.a((byte) -3);
             break L0;
           }
         }
-        if (pf.field_d < 2) {
+        if (-3 < (pf.field_d ^ -1)) {
           return 0;
         } else {
           L1: {

@@ -33,36 +33,36 @@ final class dm {
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          var4_float = (float)param2 / (float)100 + (float)(1 + ((dm) this).field_e);
-          ((dm) this).field_c = (float)((dm) this).field_a * var4_float / (float)(1 + ((dm) this).field_i);
+          var4_float = (float)param2 / (float)param1 + (float)(1 + this.field_e);
+          this.field_c = (float)this.field_a * var4_float / (float)(1 + this.field_i);
           if (param2 != 0) {
-            ((dm) this).field_g = param0.field_l + " - " + param2 + "%";
+            this.field_g = param0.field_l + " - " + param2 + "%";
             return;
           } else {
-            ((dm) this).field_g = param0.field_m;
+            this.field_g = param0.field_m;
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_0 = (RuntimeException) (var4);
             stackOut_4_1 = new StringBuilder().append("dm.B(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L0;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -70,7 +70,7 @@ final class dm {
               break L0;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + 100 + ',' + param2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -89,33 +89,31 @@ final class dm {
         hj var2 = null;
         int var3 = 0;
         hj var4 = null;
-        hj var5 = null;
         var3 = MinerDisturbance.field_ab;
         if (param0) {
           L0: while (true) {
-            if (((dm) this).field_e < ((dm) this).field_i) {
-              var5 = ((dm) this).field_h[((dm) this).field_e];
-              var4 = var5;
+            if (this.field_e < this.field_i) {
+              var4 = this.field_h[this.field_e];
               var2 = var4;
-              if (var5.field_j.a((byte) 102)) {
+              if (var4.field_j.a((byte) 102)) {
                 L1: {
-                  if (0 > var5.field_d) {
+                  if (0 > var4.field_d) {
                     break L1;
                   } else {
-                    if (var5.field_j.d(var5.field_d, 0)) {
+                    if (var4.field_j.d(var4.field_d, 0)) {
                       break L1;
                     } else {
-                      this.a(var2, 100, var5.field_j.a(var5.field_d, true));
+                      this.a(var2, 100, var4.field_j.a(var4.field_d, true));
                       return false;
                     }
                   }
                 }
                 L2: {
-                  if (null == var5.field_g) {
+                  if (null == var4.field_g) {
                     break L2;
                   } else {
-                    if (!var5.field_j.a(false, var5.field_g)) {
-                      this.a(var2, 100, var5.field_j.a(var5.field_g, -128));
+                    if (!var4.field_j.a(false, var4.field_g)) {
+                      this.a(var2, 100, var4.field_j.a(var4.field_g, -128));
                       return false;
                     } else {
                       break L2;
@@ -123,29 +121,29 @@ final class dm {
                   }
                 }
                 L3: {
-                  if (var5.field_d >= 0) {
+                  if ((var4.field_d ^ -1) <= -1) {
                     break L3;
                   } else {
-                    if (var5.field_g != null) {
+                    if (var4.field_g != null) {
                       break L3;
                     } else {
-                      if (var5.field_l == null) {
+                      if (var4.field_l == null) {
                         break L3;
                       } else {
-                        if (var5.field_j.b(-1)) {
+                        if (var4.field_j.b(-1)) {
                           break L3;
                         } else {
-                          this.a(var2, 100, var5.field_j.c(-14858));
+                          this.a(var2, 100, var4.field_j.c(-14858));
                           return false;
                         }
                       }
                     }
                   }
                 }
-                ((dm) this).field_e = ((dm) this).field_e + 1;
+                this.field_e = this.field_e + 1;
                 continue L0;
               } else {
-                this.a(var5, 100, 0);
+                this.a(var4, 100, 0);
                 return false;
               }
             } else {
@@ -162,10 +160,6 @@ final class dm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = -1;
         field_b = 0;
         field_d = new int[8192];

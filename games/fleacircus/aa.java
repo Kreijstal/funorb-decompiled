@@ -10,14 +10,14 @@ class aa extends e {
     public final void a(int param0, int param1, boolean param2, qa param3, int param4) {
         try {
             if (param0 >= -36) {
-                field_s = null;
+                field_s = (String) null;
             }
             if (!(!param2)) {
                 pj.a((byte) 127, param3.field_u, param3.field_z + param4, param3.field_y + param1, param3.field_j);
             }
             super.a(-59, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "aa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+            throw pf.a((Throwable) ((Object) runtimeException), "aa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -31,39 +31,74 @@ class aa extends e {
 
     final static void c(byte param0) {
         dd var1 = null;
+        RuntimeException var1_ref = null;
         dd var2 = null;
         int var3 = 0;
-        int var4 = fleas.field_A ? 1 : 0;
+        int var4 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = fleas.field_A ? 1 : 0;
         try {
-            var1 = new dd(540, 140);
-            r.a(var1, 45);
-            bl.b();
-            gb.c();
-            vg.field_z = 0;
-            mj.a(-515966495);
-            var2 = var1.c();
-            for (var3 = 0; var3 < 15; var3++) {
-                var2.b(-2, -2, 16777215);
-                gb.h(4, 4, 0, 0, 540, 140);
+          L0: {
+            if (param0 == -65) {
+              var1 = new dd(540, 140);
+              r.a(var1, 45);
+              bl.b();
+              gb.c();
+              vg.field_z = 0;
+              mj.a(param0 ^ 515966558);
+              var2 = var1.c();
+              var3 = 0;
+              L1: while (true) {
+                L2: {
+                  if (var3 >= 15) {
+                    uc.field_d.f();
+                    var1.e(0, 0);
+                    ia.a(param0 + -41);
+                    break L2;
+                  } else {
+                    var2.b(-2, -2, 16777215);
+                    gb.h(4, 4, 0, 0, 540, 140);
+                    var3++;
+                    if (var4 != 0) {
+                      break L2;
+                    } else {
+                      continue L1;
+                    }
+                  }
+                }
+                decompiledRegionSelector0 = 1;
+                break L0;
+              }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-            uc.field_d.f();
-            var1.e(0, 0);
-            ia.a(-106);
-        } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "aa.L(" + -65 + ')');
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw pf.a((Throwable) ((Object) var1_ref), "aa.L(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(int param0) {
+        if (param0 > -118) {
+            field_s = (String) null;
+            field_r = null;
+            field_s = null;
+            return;
+        }
         field_r = null;
         field_s = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = null;
         field_t = -1;
     }

@@ -11,11 +11,14 @@ final class oaa extends mnb implements uq {
         if (!param0) {
             return 121;
         }
-        return ((oaa) this).field_f;
+        return this.field_f;
     }
 
     public static void c(int param0) {
         field_k = null;
+        if (param0 < 78) {
+            return;
+        }
         field_j = null;
         field_h = null;
     }
@@ -25,22 +28,26 @@ final class oaa extends mnb implements uq {
     }
 
     final void a(int param0) {
-        ((oaa) this).field_c.a(param0, (uq) this);
+        this.field_c.a(param0, (uq) (this));
     }
 
     final static boolean a(byte param0) {
-        return ola.field_p != null;
+        if (param0 > -33) {
+            return false;
+        }
+        return ola.field_p != null ? true : false;
     }
 
     final static double b(byte param0) {
+        boolean discarded$0 = false;
+        if (param0 >= -43) {
+            discarded$0 = oaa.a((byte) 83);
+            return npa.field_c;
+        }
         return npa.field_c;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new ij();
         field_h = new lla();
         field_i = 100;

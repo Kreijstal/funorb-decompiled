@@ -2,7 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.io.*;
-import java.net.URL;
 
 final class jl extends ll {
     static kl field_u;
@@ -17,70 +16,99 @@ final class jl extends ll {
 
     final static void b(int param0) {
         try {
+            java.net.URL discarded$2 = null;
+            IOException iOException = null;
             int var1_int = 0;
             RuntimeException var1 = null;
+            IOException var2 = null;
             int var3 = 0;
+            java.applet.Applet var4 = null;
             Throwable decompiledCaughtException = null;
             var3 = wizardrun.field_H;
             try {
               L0: {
                 L1: {
-                  if (null != ii.field_f) {
-                    ii.field_f.a((byte) -96);
+                  if (param0 == 1) {
                     break L1;
                   } else {
+                    var4 = (java.applet.Applet) null;
+                    discarded$2 = jl.a(74, (java.net.URL) null, (java.applet.Applet) null);
                     break L1;
                   }
                 }
                 L2: {
-                  if (null == ig.field_q) {
+                  if (null != ii.field_f) {
+                    ii.field_f.a((byte) -96);
                     break L2;
                   } else {
-                    ig.field_q.a((byte) 79);
                     break L2;
                   }
                 }
                 L3: {
-                  if (null != ld.field_e) {
-                    {
-                      L4: {
-                        ld.field_e.a(-1);
-                        break L4;
-                      }
-                    }
+                  if (null == ig.field_q) {
                     break L3;
                   } else {
+                    ig.field_q.a((byte) 79);
                     break L3;
                   }
                 }
-                L6: {
+                L4: {
+                  if (null != ld.field_e) {
+                    try {
+                      L5: {
+                        ld.field_e.a(-1);
+                        break L5;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L6: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        break L6;
+                      }
+                    }
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+                L7: {
                   if (sl.field_o != null) {
                     var1_int = 0;
-                    L7: while (true) {
+                    L8: while (true) {
                       if (var1_int >= sl.field_o.length) {
-                        break L6;
+                        break L7;
                       } else {
-                        L8: {
-                          if (null == sl.field_o[var1_int]) {
-                            break L8;
-                          } else {
-                            break L8;
+                        if (null != sl.field_o[var1_int]) {
+                          try {
+                            L9: {
+                              sl.field_o[var1_int].a(-1);
+                              break L9;
+                            }
+                          } catch (java.io.IOException decompiledCaughtParameter1) {
+                            decompiledCaughtException = decompiledCaughtParameter1;
+                            L10: {
+                              var2 = (IOException) (Object) decompiledCaughtException;
+                              break L10;
+                            }
                           }
+                          var1_int++;
+                          continue L8;
+                        } else {
+                          var1_int++;
+                          continue L8;
                         }
-                        var1_int++;
-                        continue L7;
                       }
                     }
                   } else {
-                    break L6;
+                    break L7;
                   }
                 }
                 break L0;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+              decompiledCaughtException = decompiledCaughtParameter2;
               var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw bd.a((Throwable) (Object) var1, "jl.V(" + 1 + ')');
+              throw bd.a((Throwable) ((Object) var1), "jl.V(" + param0 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -133,8 +161,8 @@ final class jl extends ll {
               if (null == pa.field_f) {
                 break L1;
               } else {
-                if (!pa.field_f.equals((Object) (Object) param2.getParameter("settings"))) {
-                  var3 = (Object) (Object) pa.field_f;
+                if (!pa.field_f.equals(param2.getParameter("settings"))) {
+                  var3 = pa.field_f;
                   var4 = var3;
                   var4 = var3;
                   break L1;
@@ -147,8 +175,8 @@ final class jl extends ll {
               if (null == nk.field_M) {
                 break L2;
               } else {
-                if (!nk.field_M.equals((Object) (Object) param2.getParameter("session"))) {
-                  var4 = (Object) (Object) nk.field_M;
+                if (!nk.field_M.equals(param2.getParameter("session"))) {
+                  var4 = nk.field_M;
                   break L2;
                 } else {
                   break L2;
@@ -163,14 +191,14 @@ final class jl extends ll {
                 break L3;
               }
             }
-            stackOut_10_0 = da.a(121, -1, (String) var4, param1, (String) var3);
+            stackOut_10_0 = da.a(121, -1, (String) (var4), param1, (String) (var3));
             stackIn_11_0 = stackOut_10_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var3 = (Object) (Object) decompiledCaughtException;
+            var3 = decompiledCaughtException;
             stackOut_12_0 = var3;
             stackOut_12_1 = new StringBuilder().append("jl.BA(").append(param0).append(',');
             stackIn_14_0 = stackOut_12_0;
@@ -179,7 +207,7 @@ final class jl extends ll {
             stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
               stackOut_14_0 = stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
@@ -187,7 +215,7 @@ final class jl extends ll {
               break L4;
             } else {
               stackOut_13_0 = stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -204,7 +232,7 @@ final class jl extends ll {
             stackIn_16_1 = stackOut_15_1;
             if (param2 == null) {
               stackOut_17_0 = stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
@@ -212,7 +240,7 @@ final class jl extends ll {
               break L5;
             } else {
               stackOut_16_0 = stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -220,29 +248,36 @@ final class jl extends ll {
               break L5;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
         return stackIn_11_0;
     }
 
     final static void a(int param0, int param1, int param2, qj param3, qj param4, int param5) {
+        java.net.URL discarded$0 = null;
         try {
             og.field_N = param4;
-            e.field_d = 12;
-            na.field_e = 12;
-            vl.field_h = 12;
+            if (param0 > -104) {
+                java.applet.Applet var7 = (java.applet.Applet) null;
+                discarded$0 = jl.a(4, (java.net.URL) null, (java.applet.Applet) null);
+            }
+            e.field_d = param2;
+            na.field_e = param1;
+            vl.field_h = param5;
             og.field_S = param3;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "jl.AA(" + -122 + ',' + 12 + ',' + 12 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + 12 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "jl.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
     public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
+        java.net.URL discarded$2 = null;
+        int discarded$3 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
+        java.applet.Applet var9 = null;
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -294,8 +329,8 @@ final class jl extends ll {
               if (param3) {
                 break L2;
               } else {
-                var9 = null;
-                java.net.URL discarded$2 = jl.a(83, (java.net.URL) null, (java.applet.Applet) null);
+                var9 = (java.applet.Applet) null;
+                discarded$2 = jl.a(83, (java.net.URL) null, (java.applet.Applet) null);
                 break L2;
               }
             }
@@ -303,22 +338,22 @@ final class jl extends ll {
               if (!(param2 instanceof pl)) {
                 break L3;
               } else {
-                param4 = param4 & ((pl) (Object) param2).field_B;
+                param4 = param4 & ((pl) ((Object) param2)).field_B;
                 break L3;
               }
             }
             L4: {
               if (!param4) {
-                stackOut_14_0 = ((jl) this).field_t;
+                stackOut_14_0 = this.field_t;
                 stackIn_15_0 = stackOut_14_0;
                 break L4;
               } else {
                 if (var6_int == 0) {
-                  stackOut_13_0 = ((jl) this).field_p;
+                  stackOut_13_0 = this.field_p;
                   stackIn_15_0 = stackOut_13_0;
                   break L4;
                 } else {
-                  stackOut_12_0 = ((jl) this).field_q;
+                  stackOut_12_0 = this.field_q;
                   stackIn_15_0 = stackOut_12_0;
                   break L4;
                 }
@@ -337,31 +372,31 @@ final class jl extends ll {
               }
             }
             var8 = stackIn_18_0;
-            e.a(((jl) this).field_x, (param2.field_n + -((jl) this).field_x[0].field_s >> 1) + (param2.field_l + param1), var7, (byte) 118, param0 + param2.field_o, param2.field_r);
-            int discarded$3 = ((jl) this).field_k.a(param2.field_k, param0 + param2.field_o, -2 + param2.field_l + param1, param2.field_r, param2.field_n, var8, -1, 1, 1, ((jl) this).field_k.field_M);
+            e.a(this.field_x, (param2.field_n + -this.field_x[0].field_s >> 1646345857) + (param2.field_l + param1), var7, (byte) 118, param0 + param2.field_o, param2.field_r);
+            discarded$3 = this.field_k.a(param2.field_k, param0 + param2.field_o, -2 + param2.field_l + param1, param2.field_r, param2.field_n, var8, -1, 1, 1, this.field_k.field_M);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var6;
+            stackOut_20_0 = (RuntimeException) (var6);
             stackOut_20_1 = new StringBuilder().append("jl.B(").append(param0).append(',').append(param1).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param2 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -369,7 +404,7 @@ final class jl extends ll {
               break L6;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param3 + ',' + param4 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -386,12 +421,15 @@ final class jl extends ll {
             s.field_b.field_i = 5;
             s.field_b.field_r = 0;
         }
+        if (param0 != 4) {
+            field_w = (o) null;
+        }
         return s.field_b;
     }
 
     public static void d(int param0) {
         if (param0 != 2763306) {
-            field_w = null;
+            field_w = (o) null;
         }
         field_w = null;
         field_u = null;
@@ -399,11 +437,11 @@ final class jl extends ll {
     }
 
     private jl(int param0, int param1, int param2) {
-        ((jl) this).field_k = va.field_i;
-        ((jl) this).field_t = param2;
-        ((jl) this).field_p = param0;
-        ((jl) this).field_q = param1;
-        ((jl) this).field_x = vf.field_j;
+        this.field_k = va.field_i;
+        this.field_t = param2;
+        this.field_p = param0;
+        this.field_q = param1;
+        this.field_x = vf.field_j;
     }
 
     public jl() {
@@ -411,10 +449,6 @@ final class jl extends ll {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = 20;
         field_v = "Account created successfully!";
     }

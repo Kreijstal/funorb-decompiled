@@ -16,33 +16,35 @@ abstract class ag extends wt {
         dl var3 = null;
         try {
             var3 = q.field_p;
-            var3.g(64, 3);
-            var3.b(-1336879960, 5);
+            var3.g(64, param0);
+            var3.b(-1336879960, param1);
             var3.b(-1336879960, 0);
-            var3.a(param2.field_n, 23385);
+            var3.a(param2.field_n, param1 ^ 23388);
             var3.b(-1336879960, param2.field_j);
             var3.b(-1336879960, param2.field_m);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "ag.E(" + 3 + ',' + 5 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "ag.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     abstract int e(int param0);
 
     ag() {
-        ((ag) this).field_p = true;
+        this.field_p = true;
     }
 
     public static void a(byte param0) {
+        if (param0 != 34) {
+            field_r = -109;
+            field_n = null;
+            field_o = null;
+            return;
+        }
         field_n = null;
         field_o = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Return to game";
     }
 }

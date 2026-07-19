@@ -32,19 +32,15 @@ final class tc extends mc {
 
     tc(long param0, int param1, byte[] param2) {
         try {
-            ((tc) this).field_r = param0;
-            ((tc) this).field_u = param1;
-            ((tc) this).field_o = param2;
+            this.field_r = param0;
+            this.field_u = param1;
+            this.field_o = param2;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "tc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "tc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = "Accept rematch";
         field_n = "<%0> is already on your friend list.";
         field_p = new je();

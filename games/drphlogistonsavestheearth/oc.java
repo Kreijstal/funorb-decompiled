@@ -43,33 +43,36 @@ final class oc {
         gf.field_o = null;
         vi.field_b = null;
         aj.field_a = null;
-        a.field_e = null;
+        if (param0 != -21) {
+          field_B = -28;
+          a.field_e = (byte[][]) null;
+          return;
+        } else {
+          a.field_e = (byte[][]) null;
+          return;
+        }
     }
 
     oc() {
-        ((oc) this).field_A = new int[6][258];
-        ((oc) this).field_w = new byte[18002];
-        ((oc) this).field_a = new int[6];
-        ((oc) this).field_o = new int[257];
-        ((oc) this).field_z = new int[6][258];
-        ((oc) this).field_f = 0;
-        ((oc) this).field_D = new int[256];
-        ((oc) this).field_q = new int[6][258];
-        ((oc) this).field_E = new byte[4096];
-        ((oc) this).field_r = new int[16];
-        ((oc) this).field_l = 0;
-        ((oc) this).field_g = new byte[256];
-        ((oc) this).field_b = new byte[18002];
-        ((oc) this).field_v = new byte[6][258];
-        ((oc) this).field_e = new boolean[256];
-        ((oc) this).field_i = new boolean[16];
+        this.field_A = new int[6][258];
+        this.field_w = new byte[18002];
+        this.field_a = new int[6];
+        this.field_o = new int[257];
+        this.field_z = new int[6][258];
+        this.field_f = 0;
+        this.field_D = new int[256];
+        this.field_q = new int[6][258];
+        this.field_E = new byte[4096];
+        this.field_r = new int[16];
+        this.field_l = 0;
+        this.field_g = new byte[256];
+        this.field_b = new byte[18002];
+        this.field_v = new byte[6][258];
+        this.field_e = new boolean[256];
+        this.field_i = new boolean[16];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_H = "oc.A(";
         field_B = -1;
     }

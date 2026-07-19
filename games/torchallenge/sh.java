@@ -50,6 +50,7 @@ abstract class sh extends w {
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         String stackIn_36_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_27_0 = null;
         StringBuilder stackOut_27_1 = null;
@@ -80,25 +81,31 @@ abstract class sh extends w {
           L0: {
             var7_int = param5[param3][1] - param5[param3][0];
             var8 = 64;
-            var9 = param2[var7_int - 1] + param2[0] >> 1;
+            var9 = param2[var7_int - 1] + param2[0] >> -1026292095;
             var10 = 0;
             L1: while (true) {
-              if (var10 >= 3) {
+              if ((var10 ^ -1) <= -4) {
                 var12 = 0;
                 var10 = var12;
                 L2: while (true) {
                   if (var12 > 1) {
                     la.field_f.a(-27);
-                    break L0;
+                    if (param1 <= -98) {
+                      decompiledRegionSelector0 = 0;
+                      break L0;
+                    } else {
+                      decompiledRegionSelector0 = 1;
+                      break L0;
+                    }
                   } else {
                     L3: {
                       L4: {
                         re.field_v[var12][param3].d();
                         qg.a(ae.field_y);
-                        if (var12 != 0) {
+                        if (-1 != (var12 ^ -1)) {
                           break L4;
                         } else {
-                          if (param0 == 0) {
+                          if (-1 == (param0 ^ -1)) {
                             var7_int = param5[param3][1] + -param4[param3][0];
                             break L3;
                           } else {
@@ -119,7 +126,7 @@ abstract class sh extends w {
                         }
                       }
                       L6: {
-                        if (var12 != 1) {
+                        if (-2 != (var12 ^ -1)) {
                           break L6;
                         } else {
                           if (param0 == 0) {
@@ -134,7 +141,7 @@ abstract class sh extends w {
                       break L3;
                     }
                     L7: {
-                      if (var7_int > 0) {
+                      if (-1 > (var7_int ^ -1)) {
                         qg.a(0, 0, var7_int, var8);
                         od.a(fh.field_a[param0][var7_int - 1], var9);
                         qg.b(ae.field_y);
@@ -171,23 +178,23 @@ abstract class sh extends w {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var7 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var7;
-            stackOut_27_1 = new StringBuilder().append("sh.K(").append(param0).append(',').append(-100).append(',');
+            stackOut_27_0 = (RuntimeException) (var7);
+            stackOut_27_1 = new StringBuilder().append("sh.K(").append(param0).append(',').append(param1).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
             stackIn_28_1 = stackOut_27_1;
             if (param2 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "null";
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
               break L9;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "{...}";
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
@@ -196,23 +203,23 @@ abstract class sh extends w {
             }
           }
           L10: {
-            stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+            stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
             stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',').append(param3).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param4 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "null";
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
               break L10;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_33_0 = stackOut_31_0;
               stackIn_33_1 = stackOut_31_1;
@@ -221,23 +228,23 @@ abstract class sh extends w {
             }
           }
           L11: {
-            stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+            stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
             stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(',');
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
             stackIn_34_1 = stackOut_33_1;
             if (param5 == null) {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackOut_35_2 = "null";
               stackIn_36_0 = stackOut_35_0;
               stackIn_36_1 = stackOut_35_1;
               stackIn_36_2 = stackOut_35_2;
               break L11;
             } else {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "{...}";
               stackIn_36_0 = stackOut_34_0;
               stackIn_36_1 = stackOut_34_1;
@@ -245,36 +252,44 @@ abstract class sh extends w {
               break L11;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + ',' + param6 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void b(boolean param0) {
+        ge discarded$0 = null;
         field_q = null;
         field_t = null;
         field_w = null;
+        if (!param0) {
+            discarded$0 = sh.d(99);
+        }
         field_u = null;
     }
 
     abstract int f(int param0);
 
     final static ge d(int param0) {
+        if (param0 >= -121) {
+            field_r = 30;
+        }
         ge var1 = new ge(ij.field_B, le.field_g, ug.field_e[0], dd.field_t[0], pg.field_r[0], lg.field_e[0], h.field_a[0], td.field_m);
         p.a(0);
         return var1;
     }
 
     sh() {
-        ((sh) this).field_v = true;
+        this.field_v = true;
     }
 
     abstract byte[] e(int param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = 256;
         field_t = new cf();
         field_w = new int[4];

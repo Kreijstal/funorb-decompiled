@@ -18,7 +18,7 @@ final class da extends l {
         field_g = null;
         field_i = null;
         if (param0 != 8355711) {
-            field_h = null;
+            field_h = (mg) null;
         }
         field_h = null;
         field_n = null;
@@ -26,6 +26,7 @@ final class da extends l {
     }
 
     final static cj a(int param0, int param1, int param2, int param3) {
+        cj discarded$1 = null;
         Object var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -47,7 +48,7 @@ final class da extends l {
           if (param0 == -1403) {
             break L0;
           } else {
-            cj discarded$1 = da.a(100, 27, 28, 13);
+            discarded$1 = da.a(100, 27, 28, 13);
             break L0;
           }
         }
@@ -119,7 +120,7 @@ final class da extends l {
                   }
                 }
                 uf.field_i = stackIn_44_0 != 0;
-                return (cj) var4;
+                return (cj) (var4);
               } else {
                 var9_ref_cj = el.field_s[var8];
                 if (null != var9_ref_cj.field_t) {
@@ -127,7 +128,7 @@ final class da extends l {
                   var9_ref_cj.field_t.a(param2, param3, var9_ref_cj.field_t.c((byte) 81), (byte) -44, var7);
                   var7 = var7 + param3;
                   if (var9_ref_cj.field_t.field_nb != 0) {
-                    var4 = (Object) (Object) var9_ref_cj;
+                    var4 = var9_ref_cj;
                     var8++;
                     continue L2;
                   } else {
@@ -202,8 +203,8 @@ final class da extends l {
               var12 = qd.a(param0 ^ -18302, var8_ref_cj);
               var8_ref_cj.field_t = new km(0L, wh.field_d, var11);
               var6 = var6 + param3;
-              var8_ref_cj.field_t.field_ab = ((wh.field_d.field_ab & 16711422) >> 1) + -(8355711 & var12 >> 1) + var12;
-              var8_ref_cj.field_t.field_A = -(var12 >> 1 & 8355711) + var12 + (wh.field_d.field_A >> 1 & 8355711);
+              var8_ref_cj.field_t.field_ab = ((wh.field_d.field_ab & 16711422) >> 266162529) + -(8355711 & var12 >> 918370913) + var12;
+              var8_ref_cj.field_t.field_A = -(var12 >> 1495010849 & 8355711) + var12 + (wh.field_d.field_A >> 582344545 & 8355711);
               var8_ref_cj.field_t.field_E = var12;
               var8_ref_cj.field_t.field_C = hk.field_Ob;
               var5++;
@@ -219,10 +220,6 @@ final class da extends l {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new int[1024];
         field_i = "Type your age in years";
     }

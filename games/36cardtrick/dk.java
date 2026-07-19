@@ -20,9 +20,9 @@ public class dk {
     }
 
     public static File a(boolean param0, String param1) {
-        Object var3 = null;
+        String var3 = null;
         if (param0) {
-          var3 = null;
+          var3 = (String) null;
           dk.a((String) null, -87, (byte) -32);
           return dk.a(field_d, field_c, (byte) 117, param1);
         } else {
@@ -32,7 +32,7 @@ public class dk {
 
     public static void a(String param0, int param1, byte param2) {
         Exception var3 = null;
-        Object var4 = null;
+        String var4 = null;
         Throwable decompiledCaughtException = null;
         field_c = param1;
         field_d = param0;
@@ -42,7 +42,7 @@ public class dk {
               if (param2 >= 28) {
                 break L1;
               } else {
-                var4 = null;
+                var4 = (String) null;
                 dk.a((String) null, -40, (byte) 13);
                 break L1;
               }
@@ -85,10 +85,6 @@ public class dk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_a = new Hashtable(16);
     }

@@ -16,9 +16,9 @@ final class va {
             Object var6 = null;
             Object var7 = null;
             oa var8 = null;
-            eh stackIn_14_0 = null;
+            eh stackIn_17_0 = null;
             Throwable decompiledCaughtException = null;
-            eh stackOut_13_0 = null;
+            eh stackOut_16_0 = null;
             try {
               L0: {
                 L1: {
@@ -27,7 +27,7 @@ final class va {
                   if (null != ii.field_a.field_c) {
                     dj.field_l = new nh(ii.field_a.field_c, 5200, 0);
                     ii.field_a.field_c = null;
-                    var6 = (Object) (Object) new gl(255, dj.field_l, new nh(ii.field_a.field_j, 12000, 0), 2097152);
+                    var6 = new gl(255, dj.field_l, new nh(ii.field_a.field_j, 12000, 0), 2097152);
                     break L1;
                   } else {
                     break L1;
@@ -37,7 +37,7 @@ final class va {
                   if (param3 <= -56) {
                     break L2;
                   } else {
-                    field_f = null;
+                    field_f = (String) null;
                     break L2;
                   }
                 }
@@ -60,23 +60,31 @@ final class va {
                         break L5;
                       }
                     }
-                    var7 = (Object) (Object) new gl(param2, dj.field_l, ij.field_n[param2], 2097152);
+                    var7 = new gl(param2, dj.field_l, ij.field_n[param2], 2097152);
                     break L3;
                   } else {
                     break L3;
                   }
                 }
-                var8 = ql.field_q.a(72, param2, false, (gl) var6, (gl) var7);
-                stackOut_13_0 = new eh((ba) (Object) var8, true, 1);
-                stackIn_14_0 = stackOut_13_0;
+                L6: {
+                  var8 = ql.field_q.a(72, param2, param1, (gl) (var6), (gl) (var7));
+                  if (param5) {
+                    var8.a(true);
+                    break L6;
+                  } else {
+                    break L6;
+                  }
+                }
+                stackOut_16_0 = new eh(var8, param4, param0);
+                stackIn_17_0 = stackOut_16_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (Object) (Object) decompiledCaughtException;
-              throw new RuntimeException(((IOException) var6).toString());
+              var6 = (IOException) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) (var6)).toString());
             }
-            return stackIn_14_0;
+            return stackIn_17_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -88,13 +96,19 @@ final class va {
         field_e = null;
         field_f = null;
         field_c = null;
+        if (param0 > -42) {
+            return;
+        }
         field_d = null;
         field_a = null;
     }
 
     final static void a(boolean param0) {
         tk.field_b = new qh();
-        fi.field_t.b((fi) (Object) tk.field_b, (byte) -53);
+        fi.field_t.b(tk.field_b, (byte) -53);
+        if (param0) {
+            field_d = (String) null;
+        }
     }
 
     final static byte[] a(byte[] param0, int param1) {
@@ -123,8 +137,8 @@ final class va {
           L0: {
             var2_int = param0.length;
             var3 = new byte[var2_int];
-            ek.a(param0, 0, var3, 0, var2_int);
-            stackOut_0_0 = (byte[]) var3;
+            ek.a(param0, param1, var3, 0, var2_int);
+            stackOut_0_0 = (byte[]) (var3);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -132,23 +146,23 @@ final class va {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_0 = (RuntimeException) (var2);
             stackOut_2_1 = new StringBuilder().append("va.D(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -156,19 +170,15 @@ final class va {
               break L1;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + 0 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "<%0> has declined the invitation.";
         field_f = "Confirm Password: ";
-        field_e = new char[]{' ', ' ', '_', '-', 'à', 'á', 'â', 'ä', 'ã', 'À', 'Á', 'Â', 'Ä', 'Ã', 'è', 'é', 'ê', 'ë', 'È', 'É', 'Ê', 'Ë', 'í', 'î', 'ï', 'Í', 'Î', 'Ï', 'ò', 'ó', 'ô', 'ö', 'õ', 'Ò', 'Ó', 'Ô', 'Ö', 'Õ', 'ù', 'ú', 'û', 'ü', 'Ù', 'Ú', 'Û', 'Ü', 'ç', 'Ç', 'ÿ', 'Ÿ', 'ñ', 'Ñ', 'ß'};
+        field_e = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
         field_a = "Game options changed (<%0>)";
     }
 }

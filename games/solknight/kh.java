@@ -30,10 +30,6 @@ final class kh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = null;
         field_e = "EARTH<br>SAVED";
         field_b = "Connection lost - attempting to reconnect";

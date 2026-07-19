@@ -8,23 +8,26 @@ final class vg {
     private kc[] field_b;
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
-        uk.a(((vg) this).field_b, (byte) -104, param2, param1, param4, param3);
+        uk.a(this.field_b, (byte) -104, param2, param1, param4, param3);
         if (param0 > -69) {
-            Object var7 = null;
+            vk var7 = (vk) null;
             vg.a((vk) null, 11);
         }
     }
 
     vg(kc[] param0) {
         try {
-            ((vg) this).field_b = param0;
+            this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "vg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ma.a((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 != -72) {
+            return;
+        }
         field_c = null;
     }
 
@@ -40,6 +43,7 @@ final class vg {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_18_0 = null;
         StringBuilder stackOut_18_1 = null;
@@ -53,11 +57,12 @@ final class vg {
         try {
           L0: {
             if (null == param0.field_i) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 L2: {
-                  if (~param0.field_c != param1) {
+                  if ((param0.field_c ^ -1) != param1) {
                     break L2;
                   } else {
                     if (param0.field_h == 0) {
@@ -74,14 +79,15 @@ final class vg {
                   } else {
                     L4: {
                       var3 = me.field_b[var2_int];
-                      if (var3.field_k != 2) {
+                      if ((var3.field_k ^ -1) != -3) {
                         break L4;
                       } else {
                         if (param0.field_c != var3.field_c) {
                           break L4;
                         } else {
                           if (var3.field_h == param0.field_h) {
-                            return;
+                            decompiledRegionSelector0 = 1;
+                            break L0;
                           } else {
                             break L4;
                           }
@@ -101,6 +107,7 @@ final class vg {
                 }
               }
               lh.a(7743, param0);
+              decompiledRegionSelector0 = 2;
               break L0;
             }
           }
@@ -108,23 +115,23 @@ final class vg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var2 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var2;
+            stackOut_18_0 = (RuntimeException) (var2);
             stackOut_18_1 = new StringBuilder().append("vg.B(");
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L6;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -132,15 +139,20 @@ final class vg {
               break L6;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = true;
         field_c = "Warning: if you quit, you will lose any game you are in the middle of!";
         field_a = new cc();

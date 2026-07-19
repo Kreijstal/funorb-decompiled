@@ -101,8 +101,8 @@ final class hk {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        hk.a(field_l, 0, 0 * field_j, 4, 0, 540, field_j - 540, 140);
-        hk.a(field_l, 0, 0 * field_j, 4, 0, 140, field_j - 540, 0, 540);
+        hk.a(field_l, 0, param2 + param3 * field_j, param0, param2, param4, field_j - param4, param5);
+        hk.a(field_l, 0, param2 + param3 * field_j, param1, param3, param5, field_j - param4, param2, param4);
     }
 
     final static void g(int param0, int param1, int param2, int param3) {
@@ -238,8 +238,8 @@ final class hk {
         int var22 = 0;
         int var23 = 0;
         L0: {
-          var8 = 1820;
-          var9 = -535;
+          var8 = 16384 / (2 * param3 + 1);
+          var9 = 1 + param3 - param5 - param4;
           if (0 >= var9) {
             break L0;
           } else {
@@ -248,7 +248,7 @@ final class hk {
           }
         }
         L1: {
-          var10 = field_j - 544;
+          var10 = field_j - param4 - param5 - param3;
           if (0 >= var10) {
             break L1;
           } else {
@@ -258,7 +258,7 @@ final class hk {
         }
         L2: {
           var11 = 0;
-          var12 = 5;
+          var12 = param4 + param3 + 1;
           if (field_j >= var12) {
             break L2;
           } else {
@@ -267,7 +267,7 @@ final class hk {
             break L2;
           }
         }
-        var13 = -140;
+        var13 = -param7;
         L3: while (true) {
           if (var13 >= 0) {
             return;
@@ -276,9 +276,9 @@ final class hk {
               var14 = 0;
               var15 = 0;
               var16 = 0;
-              var17 = param2 - 4;
-              var18 = var17 - 9;
-              var19 = -4;
+              var17 = param2 - param3;
+              var18 = var17 - (param3 << 1) - 1;
+              var19 = param4 - param3;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -295,7 +295,7 @@ final class hk {
                 incrementValue$6 = param2;
                 param2++;
                 param0[incrementValue$6] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
-                var19 = -539;
+                var19 = 1 - param5;
                 L6: while (true) {
                   if (var19 >= var9) {
                     L7: while (true) {
@@ -435,7 +435,7 @@ final class hk {
                   } else {
                     L18: {
                       var18++;
-                      if (540 + var19 + 4 >= field_g) {
+                      if (param4 + param5 + var19 + param3 >= field_g) {
                         break L18;
                       } else {
                         param1 = param0[var17];
@@ -545,9 +545,9 @@ final class hk {
                 param2 = field_b - param1;
             }
             var5 = 256 - param4;
-            var6 = 85 * param4;
-            var7 = 85 * param4;
-            var8 = 85 * param4;
+            var6 = (param3 >> 16 & 255) * param4;
+            var7 = (param3 >> 8 & 255) * param4;
+            var8 = (param3 & 255) * param4;
             var12 = param0 + param1 * field_j;
             for (var13 = 0; var13 < param2; var13++) {
                 var9 = (field_l[var12] >> 16 & 255) * var5;
@@ -940,12 +940,6 @@ final class hk {
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
-        int[] var30 = null;
-        int[] var31 = null;
-        int[] var32 = null;
-        int[] var33 = null;
-        int[] var34 = null;
-        int[] var35 = null;
         int[] stackIn_37_0 = null;
         int stackIn_37_1 = 0;
         int[] stackIn_38_0 = null;
@@ -996,39 +990,33 @@ final class hk {
             if (field_d == null) {
               break L1;
             } else {
-              if (field_d.length >= 540) {
+              if (field_d.length >= param8) {
                 break L0;
               } else {
                 break L1;
               }
             }
           }
-          field_d = new int[540];
-          field_e = new int[540];
-          field_a = new int[540];
+          field_d = new int[param8];
+          field_e = new int[param8];
+          field_a = new int[param8];
           break L0;
         }
         L2: {
-          var33 = field_d;
-          var30 = var33;
-          var27 = var30;
+          var27 = field_d;
           var24 = var27;
           var9 = var24;
-          var34 = field_e;
-          var31 = var34;
-          var28 = var31;
+          var28 = field_e;
           var25 = var28;
           var10 = var25;
-          var35 = field_a;
-          var32 = var35;
-          var29 = var32;
+          var29 = field_a;
           var26 = var29;
           var11 = var26;
-          an.a(var33, 0, 540);
-          an.a(var34, 0, 540);
-          an.a(var35, 0, 540);
-          var12 = 1820;
-          var13 = -4;
+          an.a(var27, 0, param8);
+          an.a(var28, 0, param8);
+          an.a(var29, 0, param8);
+          var12 = 16384 / (2 * param3 + 1);
+          var13 = param4 - param3;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -1037,8 +1025,8 @@ final class hk {
           }
         }
         L3: {
-          var14 = var13 * field_j;
-          var15 = 4;
+          var14 = param7 + var13 * field_j;
+          var15 = param4 + param3;
           var16 = 0;
           if (var15 < field_i) {
             break L3;
@@ -1054,11 +1042,11 @@ final class hk {
             var14 = var14 + var16 * field_j;
             var18 = 0;
             L5: while (true) {
-              if (var18 >= 540) {
+              if (var18 >= param8) {
                 L6: {
                   param2 = param2 + param6;
-                  var13 = -139;
-                  var18 = -135;
+                  var13 = 1 - param5;
+                  var18 = 1 + param3 - param5 - param4;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -1067,7 +1055,7 @@ final class hk {
                   }
                 }
                 L7: {
-                  var19 = -4 * field_j;
+                  var19 = param7 + (param4 - param3) * field_j;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -1078,7 +1066,7 @@ final class hk {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_i - 144;
+                      var18 = field_i - param4 - param5 - param3;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -1094,20 +1082,20 @@ final class hk {
                           } else {
                             var20 = 0;
                             L12: while (true) {
-                              if (var20 >= 540) {
+                              if (var20 >= param8) {
                                 var19 = var19 + param6;
                                 var17--;
                                 var20 = 0;
                                 L13: while (true) {
-                                  if (var20 >= 540) {
+                                  if (var20 >= param8) {
                                     param2 = param2 + param6;
                                     var13++;
                                     continue L11;
                                   } else {
                                     L14: {
-                                      var21 = var33[var20] / var17;
-                                      var22 = var34[var20] / var17;
-                                      var23 = var35[var20] / var17;
+                                      var21 = var27[var20] / var17;
+                                      var22 = var28[var20] / var17;
+                                      var23 = var29[var20] / var17;
                                       if (var21 >= 0) {
                                         if (var21 <= 255) {
                                           break L14;
@@ -1169,23 +1157,23 @@ final class hk {
                       } else {
                         var20 = 0;
                         L17: while (true) {
-                          if (var20 >= 540) {
+                          if (var20 >= param8) {
                             var19 = var19 + param6;
                             var20 = 0;
                             L18: while (true) {
-                              if (var20 >= 540) {
+                              if (var20 >= param8) {
                                 var14 = var14 + param6;
                                 var20 = 0;
                                 L19: while (true) {
-                                  if (var20 >= 540) {
+                                  if (var20 >= param8) {
                                     param2 = param2 + param6;
                                     var13++;
                                     continue L10;
                                   } else {
                                     L20: {
-                                      var21 = var33[var20] * var12 >> 14;
-                                      var22 = var34[var20] * var12 >> 14;
-                                      var23 = var35[var20] * var12 >> 14;
+                                      var21 = var27[var20] * var12 >> 14;
+                                      var22 = var28[var20] * var12 >> 14;
+                                      var23 = var29[var20] * var12 >> 14;
                                       if (var21 <= 255) {
                                         break L20;
                                       } else {
@@ -1232,7 +1220,7 @@ final class hk {
                               incrementValue$13 = var19;
                               var19++;
                               param1 = param0[incrementValue$13];
-                              var21 = var33[var20] - (param1 >> 16 & 255);
+                              var21 = var27[var20] - (param1 >> 16 & 255);
                               stackOut_36_0 = (int[]) (var9);
                               stackOut_36_1 = var20;
                               stackIn_38_0 = stackOut_36_0;
@@ -1259,7 +1247,7 @@ final class hk {
                             }
                             L24: {
                               stackIn_39_0[stackIn_39_1] = stackIn_39_2;
-                              var21 = var34[var20] - (param1 >> 8 & 255);
+                              var21 = var28[var20] - (param1 >> 8 & 255);
                               stackOut_39_0 = (int[]) (var10);
                               stackOut_39_1 = var20;
                               stackIn_41_0 = stackOut_39_0;
@@ -1286,7 +1274,7 @@ final class hk {
                             }
                             L25: {
                               stackIn_42_0[stackIn_42_1] = stackIn_42_2;
-                              var21 = var35[var20] - (param1 & 255);
+                              var21 = var29[var20] - (param1 & 255);
                               stackOut_42_0 = (int[]) (var11);
                               stackOut_42_1 = var20;
                               stackIn_44_0 = stackOut_42_0;
@@ -1320,13 +1308,13 @@ final class hk {
                     }
                   } else {
                     L26: {
-                      if (var13 + 144 >= field_b) {
+                      if (var13 + param4 + param5 + param3 >= field_b) {
                         var14 = var14 + field_j;
                         break L26;
                       } else {
                         var20 = 0;
                         L27: while (true) {
-                          if (var20 >= 540) {
+                          if (var20 >= param8) {
                             var14 = var14 + param6;
                             var17++;
                             break L26;
@@ -1345,14 +1333,14 @@ final class hk {
                     }
                     var20 = 0;
                     L28: while (true) {
-                      if (var20 >= 540) {
+                      if (var20 >= param8) {
                         param2 = param2 + param6;
                         var13++;
                         continue L8;
                       } else {
-                        var21 = var33[var20] / var17;
-                        var22 = var34[var20] / var17;
-                        var23 = var35[var20] / var17;
+                        var21 = var27[var20] / var17;
+                        var22 = var28[var20] / var17;
+                        var23 = var29[var20] / var17;
                         incrementValue$15 = param2;
                         param2++;
                         param0[incrementValue$15] = (var21 << 16) + (var22 << 8) + var23;
@@ -1365,7 +1353,7 @@ final class hk {
               } else {
                 incrementValue$16 = param2;
                 param2++;
-                param0[incrementValue$16] = (var33[var18] / var17 << 16) + (var34[var18] / var17 << 8) + var35[var18] / var17;
+                param0[incrementValue$16] = (var27[var18] / var17 << 16) + (var28[var18] / var17 << 8) + var29[var18] / var17;
                 var18++;
                 continue L5;
               }
@@ -1373,7 +1361,7 @@ final class hk {
           } else {
             var18 = 0;
             L29: while (true) {
-              if (var18 >= 540) {
+              if (var18 >= param8) {
                 var14 = var14 + param6;
                 var13++;
                 continue L4;
@@ -2076,8 +2064,8 @@ final class hk {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            hk.c(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
-            hk.e(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
+            hk.c(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+            hk.e(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 

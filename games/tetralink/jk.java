@@ -6,6 +6,9 @@ final class jk {
 
     public static void a(byte param0) {
         field_a = null;
+        if (param0 != 77) {
+            field_a = (String) null;
+        }
     }
 
     public final String toString() {
@@ -13,10 +16,6 @@ final class jk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Send private message to <%0>";
     }
 }

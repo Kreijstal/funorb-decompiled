@@ -17,37 +17,40 @@ final class qb implements Runnable {
     private java.net.URL field_b;
 
     protected final void finalize() {
-        if (!(((qb) this).field_j == null)) {
-            if (!(null == ((qb) this).field_j.field_g)) {
+        if (!(this.field_j == null)) {
+            if (!(null == this.field_j.field_g)) {
                 try {
-                    ((DataInputStream) ((qb) this).field_j.field_g).close();
+                    ((DataInputStream) (this.field_j.field_g)).close();
                 } catch (Exception exception) {
                 }
             }
-            ((qb) this).field_j = null;
+            this.field_j = null;
         }
-        if (!(((qb) this).field_d == null)) {
-            if (((qb) this).field_d.field_g != null) {
+        if (!(this.field_d == null)) {
+            if (this.field_d.field_g != null) {
                 try {
-                    ((java.net.Socket) ((qb) this).field_d.field_g).close();
+                    ((java.net.Socket) (this.field_d.field_g)).close();
                 } catch (Exception exception) {
                 }
             }
-            ((qb) this).field_d = null;
+            this.field_d = null;
         }
-        if (((qb) this).field_g != null) {
+        if (this.field_g != null) {
             try {
-                ((qb) this).field_g.close();
+                this.field_g.close();
             } catch (Exception exception) {
             }
-            ((qb) this).field_g = null;
+            this.field_g = null;
         }
-        ((qb) this).field_e = null;
+        this.field_e = null;
     }
 
     public static void a(byte param0) {
         field_f = null;
         field_a = null;
+        if (param0 != -62) {
+            field_k = -124L;
+        }
     }
 
     final synchronized boolean a(int param0) {
@@ -56,25 +59,25 @@ final class qb implements Runnable {
         java.net.Socket var4 = null;
         CharSequence var5 = null;
         Throwable decompiledCaughtException = null;
-        if (((qb) this).field_c >= 2) {
+        if ((this.field_c ^ -1) <= -3) {
           return true;
         } else {
           L0: {
-            if (((qb) this).field_c == param0) {
+            if (this.field_c == param0) {
               L1: {
-                if (null != ((qb) this).field_j) {
+                if (null != this.field_j) {
                   break L1;
                 } else {
-                  ((qb) this).field_j = ((qb) this).field_i.a(-21377, ((qb) this).field_b);
+                  this.field_j = this.field_i.a(-21377, this.field_b);
                   break L1;
                 }
               }
-              if (((qb) this).field_j.field_c != 0) {
-                if (((qb) this).field_j.field_c == 1) {
+              if (this.field_j.field_c != 0) {
+                if (-2 == (this.field_j.field_c ^ -1)) {
                   break L0;
                 } else {
-                  ((qb) this).field_j = null;
-                  ((qb) this).field_c = ((qb) this).field_c + 1;
+                  this.field_j = null;
+                  this.field_c = this.field_c + 1;
                   return false;
                 }
               } else {
@@ -85,23 +88,23 @@ final class qb implements Runnable {
             }
           }
           L2: {
-            if (((qb) this).field_c != 1) {
+            if (-2 != (this.field_c ^ -1)) {
               break L2;
             } else {
               L3: {
-                if (null != ((qb) this).field_d) {
+                if (null != this.field_d) {
                   break L3;
                 } else {
-                  ((qb) this).field_d = ((qb) this).field_i.a(88, ((qb) this).field_b.getHost(), 443);
+                  this.field_d = this.field_i.a(88, this.field_b.getHost(), 443);
                   break L3;
                 }
               }
-              if (((qb) this).field_d.field_c == 0) {
+              if (this.field_d.field_c == 0) {
                 return false;
               } else {
-                if (((qb) this).field_d.field_c != 1) {
-                  ((qb) this).field_d = null;
-                  ((qb) this).field_c = ((qb) this).field_c + 1;
+                if (this.field_d.field_c != 1) {
+                  this.field_d = null;
+                  this.field_c = this.field_c + 1;
                   return false;
                 } else {
                   break L2;
@@ -109,83 +112,83 @@ final class qb implements Runnable {
               }
             }
           }
-          if (((qb) this).field_g == null) {
+          if (this.field_g == null) {
             try {
               L4: {
                 L5: {
-                  if (((qb) this).field_c == 0) {
-                    ((qb) this).field_g = (DataInputStream) ((qb) this).field_j.field_g;
+                  if (-1 == (this.field_c ^ -1)) {
+                    this.field_g = (DataInputStream) (this.field_j.field_g);
                     break L5;
                   } else {
                     break L5;
                   }
                 }
                 L6: {
-                  if (((qb) this).field_c != 1) {
+                  if (this.field_c != 1) {
                     break L6;
                   } else {
-                    var4 = (java.net.Socket) ((qb) this).field_d.field_g;
+                    var4 = (java.net.Socket) (this.field_d.field_g);
                     var4.setSoTimeout(10000);
                     var3 = var4.getOutputStream();
                     var3.write(17);
-                    var5 = (CharSequence) (Object) ("JAGGRAB " + ((qb) this).field_b.getFile() + "\n\n");
+                    var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_b.getFile() + "\n\n"));
                     var3.write(uk.a(14122, var5));
-                    ((qb) this).field_g = new DataInputStream(var4.getInputStream());
+                    this.field_g = new DataInputStream(var4.getInputStream());
                     break L6;
                   }
                 }
-                ((qb) this).field_h.field_h = 0;
+                this.field_h.field_h = 0;
                 break L4;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
+            } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              ((qb) this).finalize();
-              ((qb) this).field_c = ((qb) this).field_c + 1;
-              if (null != ((qb) this).field_e) {
-                if (0 == ((qb) this).field_e.field_c) {
+              this.finalize();
+              this.field_c = this.field_c + 1;
+              if (null != this.field_e) {
+                if (0 == this.field_e.field_c) {
                   return false;
                 } else {
-                  if (((qb) this).field_e.field_c == 1) {
+                  if ((this.field_e.field_c ^ -1) != -2) {
+                    this.finalize();
+                    this.field_c = this.field_c + 1;
                     return false;
                   } else {
-                    ((qb) this).finalize();
-                    ((qb) this).field_c = ((qb) this).field_c + 1;
                     return false;
                   }
                 }
               } else {
-                ((qb) this).field_e = ((qb) this).field_i.a((Runnable) this, 5, 65535);
-                if (0 == ((qb) this).field_e.field_c) {
+                this.field_e = this.field_i.a((Runnable) (this), 5, 65535);
+                if (0 == this.field_e.field_c) {
                   return false;
                 } else {
-                  if (((qb) this).field_e.field_c != 1) {
-                    ((qb) this).finalize();
-                    ((qb) this).field_c = ((qb) this).field_c + 1;
+                  if ((this.field_e.field_c ^ -1) == -2) {
                     return false;
                   } else {
+                    this.finalize();
+                    this.field_c = this.field_c + 1;
                     return false;
                   }
                 }
               }
             }
             L7: {
-              if (null != ((qb) this).field_e) {
+              if (null != this.field_e) {
                 break L7;
               } else {
-                ((qb) this).field_e = ((qb) this).field_i.a((Runnable) this, 5, 65535);
+                this.field_e = this.field_i.a((Runnable) (this), 5, 65535);
                 break L7;
               }
             }
-            if (0 == ((qb) this).field_e.field_c) {
+            if (0 == this.field_e.field_c) {
               return false;
             } else {
               L8: {
-                if (((qb) this).field_e.field_c == 1) {
+                if ((this.field_e.field_c ^ -1) == -2) {
                   break L8;
                 } else {
-                  ((qb) this).finalize();
-                  ((qb) this).field_c = ((qb) this).field_c + 1;
+                  this.finalize();
+                  this.field_c = this.field_c + 1;
                   break L8;
                 }
               }
@@ -193,21 +196,21 @@ final class qb implements Runnable {
             }
           } else {
             L9: {
-              if (null != ((qb) this).field_e) {
+              if (null != this.field_e) {
                 break L9;
               } else {
-                ((qb) this).field_e = ((qb) this).field_i.a((Runnable) this, 5, 65535);
+                this.field_e = this.field_i.a((Runnable) (this), 5, 65535);
                 break L9;
               }
             }
-            if (0 == ((qb) this).field_e.field_c) {
+            if (0 == this.field_e.field_c) {
               return false;
             } else {
-              if (((qb) this).field_e.field_c == 1) {
+              if ((this.field_e.field_c ^ -1) != -2) {
+                this.finalize();
+                this.field_c = this.field_c + 1;
                 return false;
               } else {
-                ((qb) this).finalize();
-                ((qb) this).field_c = ((qb) this).field_c + 1;
                 return false;
               }
             }
@@ -217,8 +220,8 @@ final class qb implements Runnable {
 
     final oa b(int param0) {
         int var2 = 68 / ((param0 - 56) / 56);
-        if (!(((qb) this).field_c != 3)) {
-            return ((qb) this).field_h;
+        if (!(-4 != (this.field_c ^ -1))) {
+            return this.field_h;
         }
         return null;
     }
@@ -227,37 +230,62 @@ final class qb implements Runnable {
         try {
             int var1_int = 0;
             Object var1 = null;
-            Exception var1_ref = null;
-            Throwable var2 = null;
-            Object var2_ref = null;
+            Object var2 = null;
             Throwable var3 = null;
             int var4 = 0;
+            int stackIn_3_0 = 0;
+            int stackIn_9_0 = 0;
             Throwable decompiledCaughtException = null;
+            int stackOut_2_0 = 0;
+            int stackOut_8_0 = 0;
             var4 = Transmogrify.field_A ? 1 : 0;
             try {
               L0: while (true) {
                 L1: {
-                  if (((qb) this).field_h.field_h >= ((qb) this).field_h.field_g.length) {
-                    break L1;
-                  } else {
-                    var1_int = ((qb) this).field_g.read(((qb) this).field_h.field_g, ((qb) this).field_h.field_h, ((qb) this).field_h.field_g.length - ((qb) this).field_h.field_h);
-                    if (var1_int >= 0) {
-                      ((qb) this).field_h.field_h = ((qb) this).field_h.field_h + var1_int;
-                      continue L0;
+                  L2: {
+                    if (this.field_h.field_h >= this.field_h.field_g.length) {
+                      break L2;
                     } else {
-                      break L1;
+                      var1_int = this.field_g.read(this.field_h.field_g, this.field_h.field_h, this.field_h.field_g.length - this.field_h.field_h);
+                      stackOut_2_0 = var1_int;
+                      stackIn_9_0 = stackOut_2_0;
+                      stackIn_3_0 = stackOut_2_0;
+                      if (var4 != 0) {
+                        break L1;
+                      } else {
+                        L3: {
+                          if (stackIn_3_0 >= 0) {
+                            break L3;
+                          } else {
+                            if (var4 == 0) {
+                              break L2;
+                            } else {
+                              break L3;
+                            }
+                          }
+                        }
+                        this.field_h.field_h = this.field_h.field_h + var1_int;
+                        if (var4 == 0) {
+                          continue L0;
+                        } else {
+                          break L2;
+                        }
+                      }
                     }
                   }
+                  stackOut_8_0 = this.field_h.field_g.length;
+                  stackIn_9_0 = stackOut_8_0;
+                  break L1;
                 }
-                if (((qb) this).field_h.field_g.length == ((qb) this).field_h.field_h) {
-                  throw qb.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + ((qb) this).field_h.field_g.length + " " + (Object) (Object) ((qb) this).field_b));
+                if (stackIn_9_0 == this.field_h.field_h) {
+                  throw qb.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.field_g.length + " " + this.field_b));
                 } else {
                   var1 = this;
                   synchronized (var1) {
-                    L2: {
-                      ((qb) this).finalize();
-                      ((qb) this).field_c = 3;
-                      break L2;
+                    L4: {
+                      this.finalize();
+                      this.field_c = 3;
+                      break L4;
                     }
                   }
                   return;
@@ -265,13 +293,13 @@ final class qb implements Runnable {
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var1_ref = (Exception) (Object) decompiledCaughtException;
-              var2_ref = this;
-              synchronized (var2_ref) {
-                L3: {
-                  ((qb) this).finalize();
-                  ((qb) this).field_c = ((qb) this).field_c + 1;
-                  break L3;
+              var1 = (Exception) (Object) decompiledCaughtException;
+              var2 = this;
+              synchronized (var2) {
+                L5: {
+                  this.finalize();
+                  this.field_c = this.field_c + 1;
+                  break L5;
                 }
               }
               return;
@@ -285,11 +313,11 @@ final class qb implements Runnable {
 
     qb(fe param0, java.net.URL param1, int param2) {
         try {
-            ((qb) this).field_b = param1;
-            ((qb) this).field_i = param0;
-            ((qb) this).field_h = new oa(param2);
+            this.field_b = param1;
+            this.field_i = param0;
+            this.field_h = new oa(param2);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "qb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw ch.a((Throwable) ((Object) runtimeException), "qb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -332,23 +360,23 @@ final class qb implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("qb.C(").append(param0).append(',').append(param1).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param2 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -356,15 +384,11 @@ final class qb implements Runnable {
               break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param3 + ',' + param4 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Reload game";
     }
 

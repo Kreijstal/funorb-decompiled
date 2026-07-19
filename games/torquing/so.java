@@ -7,6 +7,9 @@ final class so extends am {
     static cd field_u;
 
     public static void g(byte param0) {
+        if (param0 <= 104) {
+            field_s = (cd) null;
+        }
         field_t = null;
         field_s = null;
         field_u = null;
@@ -14,11 +17,11 @@ final class so extends am {
 
     final int[] a(byte param0, int param1) {
         if (param0 <= 86) {
-            field_s = null;
+            field_s = (cd) null;
         }
-        int[] var4 = ((so) this).field_l.a(param1, 25657);
+        int[] var4 = this.field_l.a(param1, 25657);
         int[] var3 = var4;
-        if (((so) this).field_l.field_b) {
+        if (this.field_l.field_b) {
             dk.a(var4, 0, ci.field_c, dp.field_a[param1]);
         }
         return var4;
@@ -54,30 +57,27 @@ final class so extends am {
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
-        int[] var22 = null;
-        int[] var23 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var19 = Torquing.field_u;
         try {
           L0: {
             od.field_t = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
             var1_int = db.field_a.length;
-            var23 = new int[var1_int];
-            var22 = var23;
-            var21 = var22;
+            var21 = new int[var1_int];
             var20 = var21;
             var2 = var20;
             var3 = 0;
             L1: while (true) {
               if (var1_int <= var3) {
                 L2: {
-                  var3 = od.field_t[9] >> 8;
-                  var4 = od.field_t[10] >> 8;
-                  var5 = od.field_t[11] >> 8;
-                  var6 = jh.field_z << 4;
+                  var3 = od.field_t[9] >> 1831576520;
+                  var4 = od.field_t[10] >> -257335256;
+                  var5 = od.field_t[11] >> -1792177752;
+                  var6 = jh.field_z << 1854167108;
                   var7 = 0;
-                  var8 = ah.a((byte) 127, var6) >> 8;
-                  var9 = ao.b(2048, var6) >> 8;
+                  var8 = ah.a((byte) 127, var6) >> 1772937864;
+                  var9 = ao.b(2048, var6) >> -1333977048;
                   if (n.field_t == -1) {
                     break L2;
                   } else {
@@ -106,13 +106,14 @@ final class so extends am {
                   var15 = 0;
                   L3: while (true) {
                     if (db.field_a.length <= var15) {
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       var16 = 0;
                       var17_int = 1;
                       L4: while (true) {
                         if (var17_int >= db.field_a.length) {
-                          var23[var16] = -2147483648;
+                          var21[var16] = -2147483648;
                           var17 = db.field_a[var16];
                           tn.a(-127, var16);
                           var18 = 0;
@@ -129,36 +130,36 @@ final class so extends am {
                             }
                           }
                         } else {
-                          L6: {
-                            if (var23[var16] >= var23[var17_int]) {
-                              break L6;
-                            } else {
-                              break L6;
-                            }
+                          if (var21[var16] < var21[var17_int]) {
+                            var16 = var17_int;
+                            var17_int++;
+                            continue L4;
+                          } else {
+                            var17_int++;
+                            continue L4;
                           }
-                          var17_int++;
-                          continue L4;
                         }
                       }
                     }
                   }
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               } else {
                 var4_ref_of = db.field_a[var3];
                 var4_ref_of.a(32767);
                 tn.a(-105, var3);
-                var5 = var4_ref_of.field_A + var4_ref_of.field_g >> 1;
-                var6 = var4_ref_of.field_H + var4_ref_of.field_x >> 1;
-                var7 = var4_ref_of.field_p - -var4_ref_of.field_e >> 1;
-                var8 = od.field_t[9] >> 2;
-                var9 = od.field_t[10] >> 2;
-                var10_int = od.field_t[11] >> 2;
-                var11 = var10_int * mo.field_B[5] + (mo.field_B[4] * var9 + mo.field_B[3] * var8) >> 14;
-                var12 = var9 * mo.field_B[7] + mo.field_B[6] * var8 + mo.field_B[8] * var10_int >> 14;
-                var13 = var10_int * mo.field_B[11] + mo.field_B[10] * var9 + mo.field_B[9] * var8 >> 14;
-                var2[var3] = var11 * var5 + var12 * var6 + var7 * var13 >> 16;
+                var5 = var4_ref_of.field_A + var4_ref_of.field_g >> 124812769;
+                var6 = var4_ref_of.field_H + var4_ref_of.field_x >> 468363361;
+                var7 = var4_ref_of.field_p - -var4_ref_of.field_e >> 424674913;
+                var8 = od.field_t[9] >> -1832766718;
+                var9 = od.field_t[10] >> -921688062;
+                var10_int = od.field_t[11] >> -1902956702;
+                var11 = var10_int * mo.field_B[5] + (mo.field_B[4] * var9 + mo.field_B[3] * var8) >> -1999520658;
+                var12 = var9 * mo.field_B[7] + mo.field_B[6] * var8 + mo.field_B[8] * var10_int >> 703936174;
+                var13 = var10_int * mo.field_B[11] + mo.field_B[10] * var9 + mo.field_B[9] * var8 >> -659974482;
+                var2[var3] = var11 * var5 + var12 * var6 + var7 * var13 >> -1282774032;
                 var3++;
                 continue L1;
               }
@@ -167,15 +168,16 @@ final class so extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1, "so.A(" + param0 + ')');
+          throw rb.a((Throwable) ((Object) var1), "so.A(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = new ei();
         field_s = new cd();
         field_u = new cd();

@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class ve extends qe {
     static String[] field_r;
     static String field_z;
@@ -23,7 +21,7 @@ final class ve extends qe {
     final String a(int param0, String param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
-        Object stackIn_6_0 = null;
+        String stackIn_6_0 = null;
         String stackIn_8_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -32,10 +30,11 @@ final class ve extends qe {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_2_0 = null;
         String stackOut_7_0 = null;
-        Object stackOut_5_0 = null;
+        String stackOut_5_0 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         RuntimeException stackOut_11_0 = null;
@@ -46,19 +45,22 @@ final class ve extends qe {
         String stackOut_10_2 = null;
         try {
           L0: {
-            if (((ve) this).a(param1, true) == ee.field_c) {
+            if (this.a(param1, true) == ee.field_c) {
               stackOut_2_0 = ma.field_a;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param0 == -26358) {
                 stackOut_7_0 = bk.field_c;
                 stackIn_8_0 = stackOut_7_0;
+                decompiledRegionSelector0 = 2;
                 break L0;
               } else {
-                stackOut_5_0 = null;
+                stackOut_5_0 = (String) null;
                 stackIn_6_0 = stackOut_5_0;
-                return (String) (Object) stackIn_6_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -66,23 +68,23 @@ final class ve extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("ve.H(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L1;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -90,12 +92,21 @@ final class ve extends qe {
               break L1;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
-        return stackIn_8_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0;
+          } else {
+            return stackIn_8_0;
+          }
+        }
     }
 
     final static int a(int param0, int param1, byte param2) {
+        int discarded$2 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -105,6 +116,7 @@ final class ve extends qe {
         int var8 = 0;
         int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_11_0 = 0;
         int stackOut_7_0 = 0;
@@ -117,7 +129,7 @@ final class ve extends qe {
               if (param2 == 66) {
                 break L1;
               } else {
-                int discarded$2 = ve.a(38, -113, (byte) -85);
+                discarded$2 = ve.a(38, -113, (byte) -85);
                 break L1;
               }
             }
@@ -125,21 +137,23 @@ final class ve extends qe {
               if (var3_int >= vg.field_F.length) {
                 stackOut_11_0 = -1;
                 stackIn_12_0 = stackOut_11_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 L3: {
                   var5 = wf.field_f[var3_int];
-                  if (var5 >= 0) {
+                  if (-1 >= (var5 ^ -1)) {
                     var6 = an.a(true, (byte) 114, vg.field_F[var3_int]);
                     var4 = var4 + hd.field_e;
-                    var7 = mh.field_g - (var6 >> 1);
-                    if (!wf.a(var7 + -dj.field_e, param1, var6 + (dj.field_e << 1), true, var4, param0, (ng.field_P << 1) + di.field_o)) {
-                      var4 = var4 + (di.field_o + (ng.field_P << 1) + hd.field_e);
+                    var7 = mh.field_g - (var6 >> 1816767009);
+                    if (!wf.a(var7 + -dj.field_e, param1, var6 + (dj.field_e << -1329871103), true, var4, param0, (ng.field_P << -1082834719) + di.field_o)) {
+                      var4 = var4 + (di.field_o + (ng.field_P << -1903879359) + hd.field_e);
                       break L3;
                     } else {
                       stackOut_7_0 = var5;
                       stackIn_8_0 = stackOut_7_0;
-                      return stackIn_8_0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   } else {
                     var4 = var4 + bn.field_b;
@@ -154,14 +168,21 @@ final class ve extends qe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var3, "ve.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw kg.a((Throwable) ((Object) var3), "ve.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_12_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_8_0;
+        } else {
+          return stackIn_12_0;
+        }
     }
 
     public static void c(boolean param0) {
         field_q = null;
         field_u = null;
+        if (!param0) {
+            return;
+        }
         field_v = null;
         field_w = null;
         field_A = null;
@@ -181,7 +202,7 @@ final class ve extends qe {
         int var1 = 0;
         L0: {
           L1: {
-            if (j.field_l == 10) {
+            if ((j.field_l ^ -1) == -11) {
               break L1;
             } else {
               if (md.a(11265)) {
@@ -229,7 +250,7 @@ final class ve extends qe {
               if (param1) {
                 break L1;
               } else {
-                field_B = null;
+                field_B = (int[]) null;
                 break L1;
               }
             }
@@ -257,23 +278,23 @@ final class ve extends qe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("ve.E(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -281,16 +302,12 @@ final class ve extends qe {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
         return stackIn_8_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "Passwords can only contain letters and numbers";
         field_t = 20;
         field_r = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};

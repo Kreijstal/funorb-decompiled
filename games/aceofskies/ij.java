@@ -12,11 +12,11 @@ final class ij extends hh {
 
     final void a(int param0, boolean param1) {
         if (param0 != 4096) {
-          field_i = null;
-          ((ij) this).field_a.a(260, -26625, 8448);
+          field_i = (String) null;
+          this.field_a.a(260, -26625, 8448);
           return;
         } else {
-          ((ij) this).field_a.a(260, -26625, 8448);
+          this.field_a.a(260, -26625, 8448);
           return;
         }
     }
@@ -55,23 +55,23 @@ final class ij extends hh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ij.J(").append(param0).append(',').append(param1).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param2 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -79,7 +79,7 @@ final class ij extends hh {
               break L2;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -87,147 +87,163 @@ final class ij extends hh {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ll stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        ll stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ll stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        ll stackOut_2_0 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         try {
           L0: {
+            L1: {
+              if (param3 == 1) {
+                break L1;
+              } else {
+                field_g = (nf) null;
+                break L1;
+              }
+            }
             var4_int = param0.b(param2, 0);
             var5 = param0.a(-122, var4_int, param1);
-            stackOut_0_0 = hj.a(false, var5, var4_int, param0);
-            stackIn_1_0 = stackOut_0_0;
+            stackOut_2_0 = hj.a(false, var5, var4_int, param0);
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4;
-            stackOut_2_1 = new StringBuilder().append("ij.H(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
-            } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
-            }
-          }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+            var4 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) (var4);
+            stackOut_4_1 = new StringBuilder().append("ij.H(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L2;
             }
           }
           L3: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
               break L3;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 1 + ')');
+          L4: {
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param2 == null) {
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw pn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param3 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     final static tf c(int param0) {
-        return (tf) (Object) new cr();
+        ll discarded$2 = null;
+        String var2 = null;
+        if (param0 != 8194) {
+          var2 = (String) null;
+          discarded$2 = ij.a((gk) null, (String) null, (String) null, 105);
+          return (tf) ((Object) new cr());
+        } else {
+          return (tf) ((Object) new cr());
+        }
     }
 
     final void a(byte param0, int param1, int param2) {
@@ -235,49 +251,49 @@ final class ij extends hh {
         int var5 = 0;
         var5 = AceOfSkies.field_G ? 1 : 0;
         if ((1 & param1) != 1) {
-          if (((ij) this).field_f.field_d) {
-            ((ij) this).field_a.a((rt) (Object) ((ij) this).field_f.field_j, 1);
+          if (this.field_f.field_d) {
+            this.field_a.a(this.field_f.field_j, 1);
             wl.field_Ub[3] = 0.0f;
             wl.field_Ub[1] = 0.0f;
             wl.field_Ub[2] = 0.0f;
             wl.field_Ub[0] = 0.0f;
             jaggl.OpenGL.glTexGenfv(8194, 9473, wl.field_Ub, 0);
             if (param0 != -65) {
-              ((ij) this).b((byte) -110);
+              this.b((byte) -110);
               return;
             } else {
               return;
             }
           } else {
-            ((ij) this).field_a.a((rt) (Object) ((ij) this).field_f.field_h[0], param0 ^ -66);
+            this.field_a.a(this.field_f.field_h[0], param0 ^ -66);
             if (param0 != -65) {
-              ((ij) this).b((byte) -110);
+              this.b((byte) -110);
               return;
             } else {
               return;
             }
           }
         } else {
-          if (((ij) this).field_f.field_d) {
-            ((ij) this).field_a.a((rt) (Object) ((ij) this).field_f.field_j, param0 + 66);
+          if (this.field_f.field_d) {
+            this.field_a.a(this.field_f.field_j, param0 + 66);
             wl.field_Ub[2] = 0.0f;
             wl.field_Ub[0] = 0.0f;
-            wl.field_Ub[3] = (float)(((ij) this).field_a.field_hb % 4000) / 4000.0f;
+            wl.field_Ub[3] = (float)(this.field_a.field_hb % 4000) / 4000.0f;
             wl.field_Ub[1] = 0.0f;
             jaggl.OpenGL.glTexGenfv(8194, 9473, wl.field_Ub, 0);
             if (param0 == -65) {
               return;
             } else {
-              ((ij) this).b((byte) -110);
+              this.b((byte) -110);
               return;
             }
           } else {
-            var4 = ((ij) this).field_a.field_hb % 4000 * 16 / 4000;
-            ((ij) this).field_a.a((rt) (Object) ((ij) this).field_f.field_h[var4], 1);
+            var4 = this.field_a.field_hb % 4000 * 16 / 4000;
+            this.field_a.a(this.field_f.field_h[var4], 1);
             if (param0 == -65) {
               return;
             } else {
-              ((ij) this).b((byte) -110);
+              this.b((byte) -110);
               return;
             }
           }
@@ -287,26 +303,26 @@ final class ij extends hh {
     final void a(boolean param0, boolean param1) {
         float var3 = 0.0f;
         L0: {
-          if (((ij) this).field_a.field_C > 0) {
-            var3 = -0.5f / (float)((ij) this).field_a.field_C;
-            ((ij) this).field_a.a(false, 1);
+          if (-1 > (this.field_a.field_C ^ -1)) {
+            var3 = -0.5f / (float)this.field_a.field_C;
+            this.field_a.a(false, 1);
             wl.field_Ub[0] = 0.0f;
-            wl.field_Ub[3] = ((ij) this).field_a.field_Tb * var3 + 0.25f;
+            wl.field_Ub[3] = this.field_a.field_Tb * var3 + 0.25f;
             wl.field_Ub[2] = var3;
             wl.field_Ub[1] = 0.0f;
             jaggl.OpenGL.glPushMatrix();
             jaggl.OpenGL.glLoadIdentity();
             jaggl.OpenGL.glTexGenfv(8192, 9474, wl.field_Ub, 0);
             jaggl.OpenGL.glPopMatrix();
-            ((ij) this).field_a.a(0.5f, (float)((ij) this).field_a.field_C, 61);
-            ((ij) this).field_a.a((rt) (Object) ((ij) this).field_d, 1);
-            ((ij) this).field_a.a(false, 0);
+            this.field_a.a(0.5f, (float)this.field_a.field_C, 61);
+            this.field_a.a(this.field_d, 1);
+            this.field_a.a(false, 0);
             break L0;
           } else {
             break L0;
           }
         }
-        ((ij) this).field_e.a(-23085, ' ');
+        this.field_e.a(-23085, ' ');
         jaggl.OpenGL.glMatrixMode(5890);
         jaggl.OpenGL.glPushMatrix();
         jaggl.OpenGL.glScalef(0.25f, 0.25f, 1.0f);
@@ -327,49 +343,49 @@ final class ij extends hh {
     ij(wl param0, qe param1) {
         super(param0);
         try {
-            ((ij) this).field_f = param1;
+            this.field_f = param1;
             this.c((byte) 118);
-            ((ij) this).field_d = new ju(((ij) this).field_a, 6406, 2, new byte[2], 6406);
-            ((ij) this).field_d.b(false, false);
+            this.field_d = new ju(this.field_a, 6406, 2, new byte[]{(byte) 0, (byte)-1}, 6406);
+            this.field_d.b(false, false);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "ij.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "ij.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(byte param0) {
         if (param0 <= 5) {
           L0: {
-            ((ij) this).a(89, true);
-            ((ij) this).field_e.a(-23085, '');
-            if (((ij) this).field_a.field_C > 0) {
-              ((ij) this).field_a.a(false, 1);
-              ((ij) this).field_a.a((rt) null, 1);
-              ((ij) this).field_a.a(1.0f, 0.0f, 62);
-              ((ij) this).field_a.a(false, 0);
+            this.a(89, true);
+            this.field_e.a(-23085, '');
+            if ((this.field_a.field_C ^ -1) < -1) {
+              this.field_a.a(false, 1);
+              this.field_a.a((rt) null, 1);
+              this.field_a.a(1.0f, 0.0f, 62);
+              this.field_a.a(false, 0);
               break L0;
             } else {
               break L0;
             }
           }
-          ((ij) this).field_a.a(8448, -26625, 8448);
+          this.field_a.a(8448, -26625, 8448);
           jaggl.OpenGL.glMatrixMode(5890);
           jaggl.OpenGL.glPopMatrix();
           jaggl.OpenGL.glMatrixMode(5888);
           return;
         } else {
           L1: {
-            ((ij) this).field_e.a(-23085, '');
-            if (((ij) this).field_a.field_C > 0) {
-              ((ij) this).field_a.a(false, 1);
-              ((ij) this).field_a.a((rt) null, 1);
-              ((ij) this).field_a.a(1.0f, 0.0f, 62);
-              ((ij) this).field_a.a(false, 0);
+            this.field_e.a(-23085, '');
+            if ((this.field_a.field_C ^ -1) < -1) {
+              this.field_a.a(false, 1);
+              this.field_a.a((rt) null, 1);
+              this.field_a.a(1.0f, 0.0f, 62);
+              this.field_a.a(false, 0);
               break L1;
             } else {
               break L1;
             }
           }
-          ((ij) this).field_a.a(8448, -26625, 8448);
+          this.field_a.a(8448, -26625, 8448);
           jaggl.OpenGL.glMatrixMode(5890);
           jaggl.OpenGL.glPopMatrix();
           jaggl.OpenGL.glMatrixMode(5888);
@@ -382,7 +398,7 @@ final class ij extends hh {
         field_g = null;
         field_h = null;
         if (param0 != 1822) {
-            field_h = null;
+            field_h = (gk) null;
             field_j = null;
             return;
         }
@@ -390,64 +406,98 @@ final class ij extends hh {
     }
 
     private final void c(byte param0) {
-        ((ij) this).field_e = new si(((ij) this).field_a, 2);
-        ((ij) this).field_e.a((byte) -125, 0);
-        ((ij) this).field_a.a(false, 1);
-        ((ij) this).field_a.a(7681, -26625, 260);
-        ((ij) this).field_a.a(34168, 768, 34176, 0);
+        this.field_e = new si(this.field_a, 2);
+        this.field_e.a((byte) -125, 0);
+        this.field_a.a(false, 1);
+        this.field_a.a(7681, -26625, 260);
+        this.field_a.a(34168, 768, 34176, 0);
         jaggl.OpenGL.glTexGeni(8192, 9472, 9216);
         jaggl.OpenGL.glEnable(3168);
-        ((ij) this).field_a.a(false, 0);
+        this.field_a.a(false, 0);
         jaggl.OpenGL.glTexEnvf(8960, 34163, 2.0f);
-        if (!((ij) this).field_f.field_d) {
-          ((ij) this).field_e.b(false);
-          ((ij) this).field_e.a((byte) 66, 1);
-          ((ij) this).field_a.a(false, 1);
-          ((ij) this).field_a.a(8448, -26625, 8448);
-          ((ij) this).field_a.a(5890, 768, 34176, 0);
-          jaggl.OpenGL.glDisable(3168);
-          ((ij) this).field_a.a(false, 0);
-          jaggl.OpenGL.glTexEnvf(8960, 34163, 1.0f);
-          if (!((ij) this).field_f.field_d) {
-            ((ij) this).field_e.b(false);
-            return;
+        if (!this.field_f.field_d) {
+          this.field_e.b(false);
+          this.field_e.a((byte) 66, 1);
+          if (param0 >= 100) {
+            this.field_a.a(false, 1);
+            this.field_a.a(8448, -26625, 8448);
+            this.field_a.a(5890, 768, 34176, 0);
+            jaggl.OpenGL.glDisable(3168);
+            this.field_a.a(false, 0);
+            jaggl.OpenGL.glTexEnvf(8960, 34163, 1.0f);
+            if (!this.field_f.field_d) {
+              this.field_e.b(false);
+              return;
+            } else {
+              jaggl.OpenGL.glDisable(3170);
+              jaggl.OpenGL.glDisable(3171);
+              this.field_e.b(false);
+              return;
+            }
           } else {
-            jaggl.OpenGL.glDisable(3170);
-            jaggl.OpenGL.glDisable(3171);
-            ((ij) this).field_e.b(false);
-            return;
+            field_j = (qm) null;
+            this.field_a.a(false, 1);
+            this.field_a.a(8448, -26625, 8448);
+            this.field_a.a(5890, 768, 34176, 0);
+            jaggl.OpenGL.glDisable(3168);
+            this.field_a.a(false, 0);
+            jaggl.OpenGL.glTexEnvf(8960, 34163, 1.0f);
+            if (!this.field_f.field_d) {
+              this.field_e.b(false);
+              return;
+            } else {
+              jaggl.OpenGL.glDisable(3170);
+              jaggl.OpenGL.glDisable(3171);
+              this.field_e.b(false);
+              return;
+            }
           }
         } else {
           jaggl.OpenGL.glTexGeni(8194, 9472, 9217);
           jaggl.OpenGL.glTexGeni(8195, 9472, 9217);
-          jaggl.OpenGL.glTexGenfv(8195, 9473, new float[4], 0);
+          jaggl.OpenGL.glTexGenfv(8195, 9473, new float[]{0.0f, 0.0f, 0.0f, 1.0f}, 0);
           jaggl.OpenGL.glEnable(3170);
           jaggl.OpenGL.glEnable(3171);
-          ((ij) this).field_e.b(false);
-          ((ij) this).field_e.a((byte) 66, 1);
-          ((ij) this).field_a.a(false, 1);
-          ((ij) this).field_a.a(8448, -26625, 8448);
-          ((ij) this).field_a.a(5890, 768, 34176, 0);
-          jaggl.OpenGL.glDisable(3168);
-          ((ij) this).field_a.a(false, 0);
-          jaggl.OpenGL.glTexEnvf(8960, 34163, 1.0f);
-          if (!((ij) this).field_f.field_d) {
-            ((ij) this).field_e.b(false);
-            return;
+          this.field_e.b(false);
+          this.field_e.a((byte) 66, 1);
+          if (param0 < 100) {
+            field_j = (qm) null;
+            this.field_a.a(false, 1);
+            this.field_a.a(8448, -26625, 8448);
+            this.field_a.a(5890, 768, 34176, 0);
+            jaggl.OpenGL.glDisable(3168);
+            this.field_a.a(false, 0);
+            jaggl.OpenGL.glTexEnvf(8960, 34163, 1.0f);
+            if (!this.field_f.field_d) {
+              this.field_e.b(false);
+              return;
+            } else {
+              jaggl.OpenGL.glDisable(3170);
+              jaggl.OpenGL.glDisable(3171);
+              this.field_e.b(false);
+              return;
+            }
           } else {
-            jaggl.OpenGL.glDisable(3170);
-            jaggl.OpenGL.glDisable(3171);
-            ((ij) this).field_e.b(false);
-            return;
+            this.field_a.a(false, 1);
+            this.field_a.a(8448, -26625, 8448);
+            this.field_a.a(5890, 768, 34176, 0);
+            jaggl.OpenGL.glDisable(3168);
+            this.field_a.a(false, 0);
+            jaggl.OpenGL.glTexEnvf(8960, 34163, 1.0f);
+            if (!this.field_f.field_d) {
+              this.field_e.b(false);
+              return;
+            } else {
+              jaggl.OpenGL.glDisable(3170);
+              jaggl.OpenGL.glDisable(3171);
+              this.field_e.b(false);
+              return;
+            }
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new nf();
         field_i = "If you do nothing the game will revert to normal view in <%0> second.";
     }

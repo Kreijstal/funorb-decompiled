@@ -10,23 +10,23 @@ final class hg extends um {
     private final void a(rl param0) {
         param0.b(34);
         param0.a();
-        pi var2 = ((hg) this).field_r.field_c.field_f;
-        if (var2 == ((hg) this).field_r.field_c) {
-            ((hg) this).field_s = -1;
+        pi var2 = this.field_r.field_c.field_f;
+        if (var2 == this.field_r.field_c) {
+            this.field_s = -1;
         } else {
-            ((hg) this).field_s = ((rl) (Object) var2).field_n;
+            this.field_s = ((rl) ((Object) var2)).field_n;
         }
     }
 
     final synchronized void b(um param0) {
-        ((hg) this).field_u.a((pi) (Object) param0, 27862);
+        this.field_u.a(param0, 27862);
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        um var4 = (um) (Object) ((hg) this).field_u.b(73);
+        um var4 = (um) ((Object) this.field_u.b(73));
         while (var4 != null) {
             var4.b(param0, param1, param2);
-            var4 = (um) (Object) ((hg) this).field_u.b((byte) 56);
+            var4 = (um) ((Object) this.field_u.b((byte) 56));
         }
     }
 
@@ -38,20 +38,20 @@ final class hg extends um {
         Throwable var8 = null;
         Throwable decompiledCaughtException = null;
         L0: while (true) {
-          if (((hg) this).field_s >= 0) {
-            if (((hg) this).field_t + param2 >= ((hg) this).field_s) {
-              var4 = ((hg) this).field_s - ((hg) this).field_t;
+          if (this.field_s >= 0) {
+            if (this.field_t + param2 >= this.field_s) {
+              var4 = this.field_s - this.field_t;
               this.c(param0, param1, var4);
               param1 = param1 + var4;
               param2 = param2 - var4;
-              ((hg) this).field_t = ((hg) this).field_t + var4;
+              this.field_t = this.field_t + var4;
               this.e();
-              var5 = (rl) (Object) ((hg) this).field_r.b(91);
-              var6 = (Object) (Object) var5;
+              var5 = (rl) ((Object) this.field_r.b(91));
+              var6 = var5;
               synchronized (var6) {
                 L1: {
                   L2: {
-                    var7 = var5.a((hg) this);
+                    var7 = var5.a((hg) (this));
                     if (var7 >= 0) {
                       var5.field_n = var7;
                       this.a(var5.field_f, var5);
@@ -71,7 +71,7 @@ final class hg extends um {
                 return;
               }
             } else {
-              ((hg) this).field_t = ((hg) this).field_t + param2;
+              this.field_t = this.field_t + param2;
               this.c(param0, param1, param2);
               return;
             }
@@ -87,40 +87,40 @@ final class hg extends um {
     }
 
     final um b() {
-        return (um) (Object) ((hg) this).field_u.b(123);
+        return (um) ((Object) this.field_u.b(123));
     }
 
     final um c() {
-        return (um) (Object) ((hg) this).field_u.b((byte) 56);
+        return (um) ((Object) this.field_u.b((byte) 56));
     }
 
     private final void e() {
         rl var1 = null;
-        if (((hg) this).field_t > 0) {
-            var1 = (rl) (Object) ((hg) this).field_r.b(96);
+        if (this.field_t > 0) {
+            var1 = (rl) ((Object) this.field_r.b(96));
             while (var1 != null) {
-                var1.field_n = var1.field_n - ((hg) this).field_t;
-                var1 = (rl) (Object) ((hg) this).field_r.b((byte) 56);
+                var1.field_n = var1.field_n - this.field_t;
+                var1 = (rl) ((Object) this.field_r.b((byte) 56));
             }
-            ((hg) this).field_s = ((hg) this).field_s - ((hg) this).field_t;
-            ((hg) this).field_t = 0;
+            this.field_s = this.field_s - this.field_t;
+            this.field_t = 0;
         }
     }
 
     private final void a(pi param0, rl param1) {
         L0: while (true) {
-          if (param0 != ((hg) this).field_r.field_c) {
-            if (((rl) (Object) param0).field_n <= param1.field_n) {
+          if (param0 != this.field_r.field_c) {
+            if (((rl) ((Object) param0)).field_n <= param1.field_n) {
               param0 = param0.field_f;
               continue L0;
             } else {
-              oj.a((pi) (Object) param1, param0, (byte) -117);
-              ((hg) this).field_s = ((rl) (Object) ((hg) this).field_r.field_c.field_f).field_n;
+              oj.a(param1, param0, (byte) -117);
+              this.field_s = ((rl) ((Object) this.field_r.field_c.field_f)).field_n;
               return;
             }
           } else {
-            oj.a((pi) (Object) param1, param0, (byte) -117);
-            ((hg) this).field_s = ((rl) (Object) ((hg) this).field_r.field_c.field_f).field_n;
+            oj.a(param1, param0, (byte) -117);
+            this.field_s = ((rl) ((Object) this.field_r.field_c.field_f)).field_n;
             return;
           }
         }
@@ -134,19 +134,19 @@ final class hg extends um {
         Throwable var6 = null;
         Throwable decompiledCaughtException = null;
         L0: while (true) {
-          if (((hg) this).field_s >= 0) {
-            if (((hg) this).field_t + param0 >= ((hg) this).field_s) {
-              var2 = ((hg) this).field_s - ((hg) this).field_t;
+          if (this.field_s >= 0) {
+            if (this.field_t + param0 >= this.field_s) {
+              var2 = this.field_s - this.field_t;
               this.e(var2);
               param0 = param0 - var2;
-              ((hg) this).field_t = ((hg) this).field_t + var2;
+              this.field_t = this.field_t + var2;
               this.e();
-              var3 = (rl) (Object) ((hg) this).field_r.b(125);
-              var4 = (Object) (Object) var3;
+              var3 = (rl) ((Object) this.field_r.b(125));
+              var4 = var3;
               synchronized (var4) {
                 L1: {
                   L2: {
-                    var5 = var3.a((hg) this);
+                    var5 = var3.a((hg) (this));
                     if (var5 >= 0) {
                       var3.field_n = var5;
                       this.a(var3.field_f, var3);
@@ -166,7 +166,7 @@ final class hg extends um {
                 return;
               }
             } else {
-              ((hg) this).field_t = ((hg) this).field_t + param0;
+              this.field_t = this.field_t + param0;
               this.e(param0);
               return;
             }
@@ -182,17 +182,17 @@ final class hg extends um {
     }
 
     private final void e(int param0) {
-        um var2 = (um) (Object) ((hg) this).field_u.b(111);
+        um var2 = (um) ((Object) this.field_u.b(111));
         while (var2 != null) {
             var2.a(param0);
-            var2 = (um) (Object) ((hg) this).field_u.b((byte) 56);
+            var2 = (um) ((Object) this.field_u.b((byte) 56));
         }
     }
 
     public hg() {
-        ((hg) this).field_u = new ta();
-        ((hg) this).field_r = new ta();
-        ((hg) this).field_s = -1;
-        ((hg) this).field_t = 0;
+        this.field_u = new ta();
+        this.field_r = new ta();
+        this.field_s = -1;
+        this.field_t = 0;
     }
 }

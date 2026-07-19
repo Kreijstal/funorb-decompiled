@@ -16,9 +16,13 @@ class r extends um {
         field_v = null;
         field_y = null;
         field_B = null;
+        if (param0 < 50) {
+            field_v = (String) null;
+        }
     }
 
     final static String a(byte param0, String param1) {
+        int discarded$2 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_8_0 = null;
@@ -45,13 +49,13 @@ class r extends um {
               if (param0 >= 72) {
                 break L1;
               } else {
-                int discarded$2 = r.a((byte) 33, 79);
+                discarded$2 = r.a((byte) 33, 79);
                 break L1;
               }
             }
             L2: {
               var2_int = qp.a(kb.field_Yb, gh.field_f, (byte) -22);
-              if (var2_int != 1) {
+              if ((var2_int ^ -1) != -2) {
                 break L2;
               } else {
                 param1 = "<img=0>" + param1;
@@ -66,7 +70,7 @@ class r extends um {
                 break L3;
               }
             }
-            stackOut_7_0 = (String) param1;
+            stackOut_7_0 = (String) (param1);
             stackIn_8_0 = stackOut_7_0;
             break L0;
           }
@@ -74,23 +78,23 @@ class r extends um {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var2;
+            stackOut_9_0 = (RuntimeException) (var2);
             stackOut_9_1 = new StringBuilder().append("r.EA(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -98,7 +102,7 @@ class r extends um {
               break L4;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
         }
         return stackIn_8_0;
     }
@@ -108,6 +112,7 @@ class r extends um {
     }
 
     final static boolean c(byte param0) {
+        boolean discarded$5 = false;
         if (param0 < -80) {
           if (qg.field_A >= 20) {
             if (kb.i(7457)) {
@@ -127,7 +132,7 @@ class r extends um {
             return true;
           }
         } else {
-          boolean discarded$5 = r.c((byte) 16);
+          discarded$5 = r.c((byte) 16);
           if (qg.field_A >= 20) {
             if (kb.i(7457)) {
               if (fp.field_x > 0) {
@@ -154,21 +159,21 @@ class r extends um {
 
     final static int a(byte param0, int param1) {
         int var2 = 0;
-        var2 = param1 >>> 1;
-        var2 = var2 | var2 >>> 1;
+        var2 = param1 >>> -1879900607;
+        var2 = var2 | var2 >>> -1868646719;
         if (param0 != -82) {
-          field_B = null;
-          var2 = var2 | var2 >>> 2;
-          var2 = var2 | var2 >>> 4;
-          var2 = var2 | var2 >>> 8;
-          var2 = var2 | var2 >>> 16;
-          return ~var2 & param1;
+          field_B = (String) null;
+          var2 = var2 | var2 >>> 92808482;
+          var2 = var2 | var2 >>> -2046828252;
+          var2 = var2 | var2 >>> -411973752;
+          var2 = var2 | var2 >>> -1182260144;
+          return (var2 ^ -1) & param1;
         } else {
-          var2 = var2 | var2 >>> 2;
-          var2 = var2 | var2 >>> 4;
-          var2 = var2 | var2 >>> 8;
-          var2 = var2 | var2 >>> 16;
-          return ~var2 & param1;
+          var2 = var2 | var2 >>> 92808482;
+          var2 = var2 | var2 >>> -2046828252;
+          var2 = var2 | var2 >>> -411973752;
+          var2 = var2 | var2 >>> -1182260144;
+          return (var2 ^ -1) & param1;
         }
     }
 
@@ -180,17 +185,13 @@ class r extends um {
             if (!(!param0)) {
                 ig.b(param3.field_s, param3.field_o + param2, param3.field_t, param4 + param3.field_w, -17634);
             }
-            super.a(param0, param1, param2, param3, param4);
+            super.a(param0, param1 ^ 0, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "r.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "r.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = -1;
         field_w = 480;
         field_y = "You are invited to <%0>'s game.";

@@ -8,6 +8,9 @@ final class id extends ai {
 
     public static void b(byte param0) {
         field_i = null;
+        if (param0 != -72) {
+            field_i = (uf) null;
+        }
     }
 
     private id() throws Throwable {
@@ -15,10 +18,6 @@ final class id extends ai {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new uf();
     }
 }

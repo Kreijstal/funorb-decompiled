@@ -6,6 +6,7 @@ final class hj {
     static int field_b;
 
     final static void a(boolean param0, byte param1, jk param2, int param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -76,7 +77,7 @@ final class hj {
               if (param1 < -127) {
                 break L1;
               } else {
-                int discarded$1 = hj.a(23);
+                discarded$1 = hj.a(23);
                 break L1;
               }
             }
@@ -97,7 +98,7 @@ final class hj {
             L3: while (true) {
               L4: {
                 L5: {
-                  if (~var8 <= ~param2.field_L) {
+                  if ((var8 ^ -1) <= (param2.field_L ^ -1)) {
                     break L5;
                   } else {
                     var9 = param2.field_O[var8];
@@ -145,7 +146,7 @@ final class hj {
                         }
                         L9: {
                           var13 = r.field_c[var10];
-                          if (var13 != -2147483648) {
+                          if (2147483647 != (var13 ^ -1)) {
                             break L9;
                           } else {
                             if (var19 == 0) {
@@ -156,7 +157,7 @@ final class hj {
                           }
                         }
                         var14 = r.field_c[var11];
-                        if (var14 == -2147483648) {
+                        if (2147483647 == (var14 ^ -1)) {
                           break L6;
                         } else {
                           L10: {
@@ -167,7 +168,7 @@ final class hj {
                             stackIn_33_1 = stackOut_30_1;
                             stackIn_31_0 = stackOut_30_0;
                             stackIn_31_1 = stackOut_30_1;
-                            if (var7 < 0) {
+                            if (-1 < (var7 ^ -1)) {
                               stackOut_33_0 = stackIn_33_0;
                               stackOut_33_1 = stackIn_33_1;
                               stackOut_33_2 = var15 << -var7;
@@ -190,12 +191,12 @@ final class hj {
                           L11: while (true) {
                             L12: {
                               L13: {
-                                if (var17 >> 4 == 0) {
+                                if ((var17 >> 899036036 ^ -1) == -1) {
                                   break L13;
                                 } else {
                                   var16--;
                                   stackOut_36_0 = -1;
-                                  stackOut_36_1 = ~var16;
+                                  stackOut_36_1 = var16 ^ -1;
                                   stackIn_45_0 = stackOut_36_0;
                                   stackIn_45_1 = stackOut_36_1;
                                   stackIn_37_0 = stackOut_36_0;
@@ -224,7 +225,7 @@ final class hj {
                                   }
                                 }
                               }
-                              stackOut_44_0 = var16 << 4;
+                              stackOut_44_0 = var16 << -1112307772;
                               stackOut_44_1 = -var17;
                               stackIn_45_0 = stackOut_44_0;
                               stackIn_45_1 = stackOut_44_1;
@@ -234,7 +235,7 @@ final class hj {
                               var18 = stackIn_45_0 - stackIn_45_1;
                               lb.field_c[var18] = var8;
                               ja.field_c[var16] = 1 + var17;
-                              if (param2.field_w <= 0) {
+                              if (-1 <= (param2.field_w ^ -1)) {
                                 break L15;
                               } else {
                                 if (null != param2.field_v) {
@@ -259,7 +260,7 @@ final class hj {
                     }
                   }
                 }
-                stackOut_54_0 = ~param2.field_w;
+                stackOut_54_0 = param2.field_w ^ -1;
                 stackIn_55_0 = stackOut_54_0;
                 break L4;
               }
@@ -304,23 +305,23 @@ final class hj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L19: {
             var5 = decompiledCaughtException;
-            stackOut_68_0 = (RuntimeException) var5;
+            stackOut_68_0 = (RuntimeException) (var5);
             stackOut_68_1 = new StringBuilder().append("hj.B(").append(param0).append(',').append(param1).append(',');
             stackIn_71_0 = stackOut_68_0;
             stackIn_71_1 = stackOut_68_1;
             stackIn_69_0 = stackOut_68_0;
             stackIn_69_1 = stackOut_68_1;
             if (param2 == null) {
-              stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
-              stackOut_71_1 = (StringBuilder) (Object) stackIn_71_1;
+              stackOut_71_0 = (RuntimeException) ((Object) stackIn_71_0);
+              stackOut_71_1 = (StringBuilder) ((Object) stackIn_71_1);
               stackOut_71_2 = "null";
               stackIn_72_0 = stackOut_71_0;
               stackIn_72_1 = stackOut_71_1;
               stackIn_72_2 = stackOut_71_2;
               break L19;
             } else {
-              stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
-              stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
+              stackOut_69_0 = (RuntimeException) ((Object) stackIn_69_0);
+              stackOut_69_1 = (StringBuilder) ((Object) stackIn_69_1);
               stackOut_69_2 = "{...}";
               stackIn_72_0 = stackOut_69_0;
               stackIn_72_1 = stackOut_69_1;
@@ -328,7 +329,7 @@ final class hj {
               break L19;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + ',' + param3 + ',' + param4 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_72_0), stackIn_72_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -354,16 +355,12 @@ final class hj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1, "hj.A(" + param0 + ')');
+          throw ii.a((Throwable) ((Object) var1), "hj.A(" + param0 + ')');
         }
         return stackIn_4_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0;
     }
 }

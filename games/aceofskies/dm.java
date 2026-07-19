@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import jagdx.IDirect3DDevice;
-
 final class dm implements ti {
     private kr field_f;
     private int field_b;
@@ -14,30 +12,30 @@ final class dm implements ti {
 
     public final jaclib.memory.Buffer a(boolean param0, int param1) {
         if (param1 != 32570) {
-            ((dm) this).a(75, -106);
-            if (((dm) this).field_g == null) {
+            this.a(75, -106);
+            if (this.field_g == null) {
                 return null;
             }
-            param0 = param0 & ((dm) this).field_c;
-            if (((dm) this).field_d) {
+            param0 = param0 & this.field_c;
+            if (this.field_d) {
                 return null;
             }
-            if (!(!jagdx.gf.a((byte) 94, ((dm) this).field_g.Lock(0, ((dm) this).field_b, param0 ? 8192 : 0, ((dm) this).field_f.field_vc)))) {
-                ((dm) this).field_d = true;
-                return (jaclib.memory.Buffer) (Object) ((dm) this).field_f.field_vc;
+            if (!(!jagdx.gf.a((byte) 94, this.field_g.Lock(0, this.field_b, param0 ? 8192 : 0, this.field_f.field_vc)))) {
+                this.field_d = true;
+                return (jaclib.memory.Buffer) ((Object) this.field_f.field_vc);
             }
             return null;
         }
-        if (((dm) this).field_g == null) {
+        if (this.field_g == null) {
             return null;
         }
-        param0 = param0 & ((dm) this).field_c;
-        if (((dm) this).field_d) {
+        param0 = param0 & this.field_c;
+        if (this.field_d) {
             return null;
         }
-        if (!(!jagdx.gf.a((byte) 94, ((dm) this).field_g.Lock(0, ((dm) this).field_b, param0 ? 8192 : 0, ((dm) this).field_f.field_vc)))) {
-            ((dm) this).field_d = true;
-            return (jaclib.memory.Buffer) (Object) ((dm) this).field_f.field_vc;
+        if (!(!jagdx.gf.a((byte) 94, this.field_g.Lock(0, this.field_b, param0 ? 8192 : 0, this.field_f.field_vc)))) {
+            this.field_d = true;
+            return (jaclib.memory.Buffer) ((Object) this.field_f.field_vc);
         }
         return null;
     }
@@ -45,11 +43,11 @@ final class dm implements ti {
     public final boolean a(byte param0) {
         int var2 = 0;
         var2 = 31 % ((-61 - param0) / 59);
-        if (((dm) this).field_d) {
-          if (!jagdx.gf.a((byte) 72, ((dm) this).field_g.Unlock())) {
+        if (this.field_d) {
+          if (!jagdx.gf.a((byte) 72, this.field_g.Unlock())) {
             return false;
           } else {
-            ((dm) this).field_d = false;
+            this.field_d = false;
             return true;
           }
         } else {
@@ -115,11 +113,11 @@ final class dm implements ti {
         int stackOut_7_3 = 0;
         int stackOut_7_4 = 0;
         L0: {
-          ((dm) this).field_a = ((dm) this).field_e.field_c * param1;
-          if (((dm) this).field_a > ((dm) this).field_b) {
+          this.field_a = this.field_e.field_c * param1;
+          if (this.field_a > this.field_b) {
             L1: {
               var4 = 8;
-              if (!((dm) this).field_c) {
+              if (!this.field_c) {
                 var3 = 1;
                 break L1;
               } else {
@@ -128,11 +126,11 @@ final class dm implements ti {
                 break L1;
               }
             }
-            if (((dm) this).field_g == null) {
+            if (this.field_g == null) {
               L2: {
                 stackOut_13_0 = this;
-                stackOut_13_1 = ((dm) this).field_f.field_Rc;
-                stackOut_13_2 = ((dm) this).field_a;
+                stackOut_13_1 = this.field_f.field_Rc;
+                stackOut_13_2 = this.field_a;
                 stackOut_13_3 = var4;
                 stackIn_15_0 = stackOut_13_0;
                 stackIn_15_1 = stackOut_13_1;
@@ -142,9 +140,9 @@ final class dm implements ti {
                 stackIn_14_1 = stackOut_13_1;
                 stackIn_14_2 = stackOut_13_2;
                 stackIn_14_3 = stackOut_13_3;
-                if (((dm) this).field_e == la.field_b) {
+                if (this.field_e == la.field_b) {
                   stackOut_15_0 = this;
-                  stackOut_15_1 = (jagdx.IDirect3DDevice) (Object) stackIn_15_1;
+                  stackOut_15_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_15_1);
                   stackOut_15_2 = stackIn_15_2;
                   stackOut_15_3 = stackIn_15_3;
                   stackOut_15_4 = 101;
@@ -156,7 +154,7 @@ final class dm implements ti {
                   break L2;
                 } else {
                   stackOut_14_0 = this;
-                  stackOut_14_1 = (jagdx.IDirect3DDevice) (Object) stackIn_14_1;
+                  stackOut_14_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_14_1);
                   stackOut_14_2 = stackIn_14_2;
                   stackOut_14_3 = stackIn_14_3;
                   stackOut_14_4 = 102;
@@ -168,14 +166,14 @@ final class dm implements ti {
                   break L2;
                 }
               }
-              ((dm) this).field_g = ((jagdx.IDirect3DDevice) (Object) stackIn_16_1).a(stackIn_16_2, stackIn_16_3, stackIn_16_4, var3, ((dm) this).field_g);
-              ((dm) this).field_b = ((dm) this).field_a;
+              ((dm) (this)).field_g = ((jagdx.IDirect3DDevice) (Object) stackIn_16_1).a(stackIn_16_2, stackIn_16_3, stackIn_16_4, var3, this.field_g);
+              this.field_b = this.field_a;
               break L0;
             } else {
               L3: {
                 stackOut_6_0 = this;
-                stackOut_6_1 = ((dm) this).field_f.field_Rc;
-                stackOut_6_2 = ((dm) this).field_a;
+                stackOut_6_1 = this.field_f.field_Rc;
+                stackOut_6_2 = this.field_a;
                 stackOut_6_3 = var4;
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
@@ -185,9 +183,9 @@ final class dm implements ti {
                 stackIn_7_1 = stackOut_6_1;
                 stackIn_7_2 = stackOut_6_2;
                 stackIn_7_3 = stackOut_6_3;
-                if (((dm) this).field_e == la.field_b) {
+                if (this.field_e == la.field_b) {
                   stackOut_8_0 = this;
-                  stackOut_8_1 = (jagdx.IDirect3DDevice) (Object) stackIn_8_1;
+                  stackOut_8_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_8_1);
                   stackOut_8_2 = stackIn_8_2;
                   stackOut_8_3 = stackIn_8_3;
                   stackOut_8_4 = 101;
@@ -199,7 +197,7 @@ final class dm implements ti {
                   break L3;
                 } else {
                   stackOut_7_0 = this;
-                  stackOut_7_1 = (jagdx.IDirect3DDevice) (Object) stackIn_7_1;
+                  stackOut_7_1 = (jagdx.IDirect3DDevice) ((Object) stackIn_7_1);
                   stackOut_7_2 = stackIn_7_2;
                   stackOut_7_3 = stackIn_7_3;
                   stackOut_7_4 = 102;
@@ -211,10 +209,10 @@ final class dm implements ti {
                   break L3;
                 }
               }
-              ((dm) this).field_g = ((jagdx.IDirect3DDevice) (Object) stackIn_9_1).a(stackIn_9_2, stackIn_9_3, stackIn_9_4, var3, ((dm) this).field_g);
-              ((dm) this).field_b = ((dm) this).field_a;
+              ((dm) (this)).field_g = ((jagdx.IDirect3DDevice) (Object) stackIn_9_1).a(stackIn_9_2, stackIn_9_3, stackIn_9_4, var3, this.field_g);
+              this.field_b = this.field_a;
               if (param0 != -12880) {
-                ((dm) this).field_a = -21;
+                this.field_a = -21;
                 return;
               } else {
                 return;
@@ -225,7 +223,7 @@ final class dm implements ti {
           }
         }
         if (param0 != -12880) {
-          ((dm) this).field_a = -21;
+          this.field_a = -21;
           return;
         } else {
           return;
@@ -233,32 +231,34 @@ final class dm implements ti {
     }
 
     public final void a(int param0) {
-        if (null == ((dm) this).field_g) {
-          ((dm) this).field_b = 0;
-          ((dm) this).field_a = 0;
+        boolean discarded$4 = false;
+        boolean discarded$5 = false;
+        if (null == this.field_g) {
+          this.field_b = 0;
+          this.field_a = 0;
           if (param0 != 4665) {
-            boolean discarded$4 = ((dm) this).a((byte) 35);
+            discarded$4 = this.a((byte) 35);
             return;
           } else {
             return;
           }
         } else {
-          ((dm) this).field_g = null;
-          ((dm) this).field_b = 0;
-          ((dm) this).field_a = 0;
+          this.field_g = null;
+          this.field_b = 0;
+          this.field_a = 0;
           if (param0 == 4665) {
             return;
           } else {
-            boolean discarded$5 = ((dm) this).a((byte) 35);
+            discarded$5 = this.a((byte) 35);
             return;
           }
         }
     }
 
     dm(kr param0, la param1, boolean param2) {
-        ((dm) this).field_d = false;
-        ((dm) this).field_e = param1;
-        ((dm) this).field_f = param0;
-        ((dm) this).field_c = param2 ? true : false;
+        this.field_d = false;
+        this.field_e = param1;
+        this.field_f = param0;
+        this.field_c = param2 ? true : false;
     }
 }

@@ -77,14 +77,13 @@ abstract class ni {
 
     public static void a(int param0) {
         field_c = null;
+        if (param0 != -66) {
+            return;
+        }
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = -5;
         field_b = "Mission Selection";
         field_c = "Unequip";

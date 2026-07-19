@@ -116,7 +116,7 @@ final class kj {
             }
             L5: {
               var7 = stackIn_12_0;
-              var9 = -72;
+              var9 = 72 / ((param0 - -12) / 62);
               if (0 == (var3 & 16)) {
                 stackOut_14_0 = 0;
                 stackIn_15_0 = stackOut_14_0;
@@ -160,23 +160,23 @@ final class kj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var2;
-            stackOut_23_1 = new StringBuilder().append("kj.A(").append(-85).append(',');
+            stackOut_23_0 = (RuntimeException) (var2);
+            stackOut_23_1 = new StringBuilder().append("kj.A(").append(param0).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L8;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -184,7 +184,7 @@ final class kj {
               break L8;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
         }
         return stackIn_22_0;
     }
@@ -205,14 +205,10 @@ final class kj {
     }
 
     kj(boolean param0) {
-        ((kj) this).field_h = param0 ? true : false;
+        this.field_h = param0 ? true : false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Orb points: ";
         field_e = "Resource output";
     }

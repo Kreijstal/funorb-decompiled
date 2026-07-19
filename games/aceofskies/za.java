@@ -6,6 +6,7 @@ abstract class za extends wf {
     }
 
     final static boolean a(byte param0, char param1) {
+        boolean discarded$6 = false;
         int stackIn_8_0 = 0;
         int stackIn_20_0 = 0;
         int stackOut_18_0 = 0;
@@ -31,7 +32,7 @@ abstract class za extends wf {
             return true;
           }
         } else {
-          boolean discarded$6 = za.a((byte) -61, '￑');
+          discarded$6 = za.a((byte) -61, '￑');
           if (160 != param1) {
             if (param1 != 32) {
               if (param1 != 95) {
@@ -63,7 +64,7 @@ abstract class za extends wf {
             bk.field_e[param4] = param2;
             oo.field_Y[param4] = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "za.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "za.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

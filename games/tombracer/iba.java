@@ -13,7 +13,7 @@ public class iba {
 
     public static File a(String param0, byte param1) {
         if (param1 > -67) {
-            return null;
+            return (File) null;
         }
         return iba.a(field_e, param0, 0, field_a);
     }
@@ -66,10 +66,6 @@ public class iba {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_d = new Hashtable(16);
     }

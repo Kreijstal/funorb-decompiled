@@ -12,8 +12,9 @@ final class fpa extends uj {
     }
 
     final boolean c(byte param0) {
+        boolean discarded$0 = false;
         if (param0 >= -104) {
-            boolean discarded$0 = ((fpa) this).c((byte) -63);
+            discarded$0 = this.c((byte) -63);
             return true;
         }
         return true;
@@ -21,7 +22,7 @@ final class fpa extends uj {
 
     final int b(byte param0) {
         if (param0 < 79) {
-            field_d = null;
+            field_d = (String) null;
             return 110;
         }
         return 110;
@@ -46,12 +47,22 @@ final class fpa extends uj {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {
-        if (li.field_i) {
-          feb.a(og.field_r, true).a(param4, param3, param0, param1, (byte) -45);
-          return;
-        } else {
+        if (!li.field_i) {
           qca.a(param3, param1, param4, true, param0);
-          return;
+          if (param2) {
+            return;
+          } else {
+            fpa.a(117, -125, true, -70, 61);
+            return;
+          }
+        } else {
+          feb.a(og.field_r, true).a(param4, param3, param0, param1, (byte) -45);
+          if (param2) {
+            return;
+          } else {
+            fpa.a(117, -125, true, -70, 61);
+            return;
+          }
         }
     }
 
@@ -72,10 +83,6 @@ final class fpa extends uj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Music: ";
     }
 }

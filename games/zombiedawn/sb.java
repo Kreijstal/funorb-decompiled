@@ -15,10 +15,6 @@ final class sb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "sb.A(";
     }
 }

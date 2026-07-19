@@ -16,7 +16,7 @@ final class ik {
         try {
             fm.field_a = dg.field_H;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "ik.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "ik.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -46,15 +46,11 @@ final class ik {
         try {
             uo.a(256, -1 + param2.length, param2, param0, 0);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "ik.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "ik.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "The dark fetishes hanging from the shaman's robes indicate he has been taking power from his enemies for some time. His connection to the spirits of his home far in the north grants him speed and strength in combat.";
         field_b = new ef();
         field_d = "Orc Shaman";

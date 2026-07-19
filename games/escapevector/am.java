@@ -10,11 +10,12 @@ final class am extends hg {
     int field_i;
 
     final static int a(byte param0, int param1) {
+        int discarded$2 = 0;
         int var2 = 0;
         int var3 = 0;
         if (param0 != 57) {
           L0: {
-            int discarded$2 = am.a((byte) 123, -70);
+            discarded$2 = am.a((byte) 123, -70);
             var2 = 0;
             if ((param1 & 7) != 0) {
               var2 = -(param1 & 7) + 8;
@@ -41,9 +42,9 @@ final class am extends hg {
     }
 
     am(int param0, int param1, int param2) {
-        ((am) this).field_j = param2;
-        ((am) this).field_h = param1;
-        ((am) this).field_i = param0;
+        this.field_j = param2;
+        this.field_h = param1;
+        this.field_i = param0;
     }
 
     public static void a(byte param0) {
@@ -56,10 +57,6 @@ final class am extends hg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = 0;
         field_l = new ed(540, 140);
     }

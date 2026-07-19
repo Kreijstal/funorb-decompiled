@@ -20,31 +20,43 @@ final class mk extends ag {
         field_K = null;
         field_O = null;
         field_N = null;
-        field_L = null;
-        field_R = null;
-        field_J = null;
-        field_M = null;
-        field_I = null;
-        field_P = null;
+        if (param0 >= -89) {
+          field_O = (gk) null;
+          field_L = null;
+          field_R = null;
+          field_J = null;
+          field_M = null;
+          field_I = null;
+          field_P = null;
+          return;
+        } else {
+          field_L = null;
+          field_R = null;
+          field_J = null;
+          field_M = null;
+          field_I = null;
+          field_P = null;
+          return;
+        }
     }
 
     final String b(boolean param0) {
-        if (!(!((mk) this).field_w)) {
-            return ((mk) this).field_T.c(26146);
+        if (!(!this.field_w)) {
+            return this.field_T.c(26146);
         }
         if (!param0) {
             return null;
         }
-        field_N = null;
+        field_N = (String) null;
         return null;
     }
 
     final void a(qm param0, int param1, int param2, int param3) {
         try {
-            ((mk) this).field_H = ((mk) this).field_H + 1;
+            this.field_H = this.field_H + 1;
             super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "mk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "mk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -62,29 +74,29 @@ final class mk extends ag {
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         super.a((byte) -58, param1, param2, param3);
         if (param0 < -52) {
-          if (param2 != 0) {
+          if (-1 != (param2 ^ -1)) {
             return;
           } else {
-            var5 = param1 + (((mk) this).field_n - -(((mk) this).field_v >> 1));
-            var6 = ((mk) this).field_j + param3 - -(((mk) this).field_k >> 1);
-            var8 = ((mk) this).field_T.a(-116);
+            var5 = param1 + (this.field_n - -(this.field_v >> 1146269633));
+            var6 = this.field_j + param3 - -(this.field_k >> 475725313);
+            var8 = this.field_T.a(-116);
             if (da.field_f == var8) {
               var16 = qk.field_lb[0];
-              var9 = var16.field_n << 1;
-              var10 = var16.field_w << 1;
+              var9 = var16.field_n << 473192737;
+              var10 = var16.field_w << 1824118977;
               if (jk.field_o != null) {
                 if (jk.field_o.field_q >= var9) {
                   if (var10 <= jk.field_o.field_y) {
                     fk.a(jk.field_o, -23095);
                     de.b();
-                    var16.b(112, 144, var16.field_n << 4, var16.field_w << 4, -((mk) this).field_H << 10, 4096);
+                    var16.b(112, 144, var16.field_n << -134715804, var16.field_w << 1010939556, -this.field_H << 793288330, 4096);
                     oo.c(-15405);
                     jk.field_o.b(var5 - var16.field_n, var6 - var16.field_w, 256);
                     return;
                   } else {
                     jk.field_o = new qb(var9, var10);
                     fk.a(jk.field_o, -23095);
-                    var16.b(112, 144, var16.field_n << 4, var16.field_w << 4, -((mk) this).field_H << 10, 4096);
+                    var16.b(112, 144, var16.field_n << -134715804, var16.field_w << 1010939556, -this.field_H << 793288330, 4096);
                     oo.c(-15405);
                     jk.field_o.b(var5 - var16.field_n, var6 - var16.field_w, 256);
                     return;
@@ -92,7 +104,7 @@ final class mk extends ag {
                 } else {
                   jk.field_o = new qb(var9, var10);
                   fk.a(jk.field_o, -23095);
-                  var16.b(112, 144, var16.field_n << 4, var16.field_w << 4, -((mk) this).field_H << 10, 4096);
+                  var16.b(112, 144, var16.field_n << -134715804, var16.field_w << 1010939556, -this.field_H << 793288330, 4096);
                   oo.c(-15405);
                   jk.field_o.b(var5 - var16.field_n, var6 - var16.field_w, 256);
                   return;
@@ -100,7 +112,7 @@ final class mk extends ag {
               } else {
                 jk.field_o = new qb(var9, var10);
                 fk.a(jk.field_o, -23095);
-                var16.b(112, 144, var16.field_n << 4, var16.field_w << 4, -((mk) this).field_H << 10, 4096);
+                var16.b(112, 144, var16.field_n << -134715804, var16.field_w << 1010939556, -this.field_H << 793288330, 4096);
                 oo.c(-15405);
                 jk.field_o.b(var5 - var16.field_n, var6 - var16.field_w, 256);
                 return;
@@ -112,31 +124,31 @@ final class mk extends ag {
                     return;
                   } else {
                     var13 = qk.field_lb[1];
-                    var13.b(-(var13.field_q >> 1) + var5, -(var13.field_y >> 1) + var6, 256);
+                    var13.b(-(var13.field_q >> 99219553) + var5, -(var13.field_y >> 958765089) + var6, 256);
                     return;
                   }
                 } else {
                   var14 = qk.field_lb[2];
-                  var14.b(-(var14.field_q >> 1) + var5, -(var14.field_y >> 1) + var6, 256);
+                  var14.b(-(var14.field_q >> -266678463) + var5, -(var14.field_y >> 2106987041) + var6, 256);
                   return;
                 }
               } else {
                 var15 = qk.field_lb[0];
-                var9 = var15.field_n << 1;
-                var10 = var15.field_w << 1;
+                var9 = var15.field_n << 473192737;
+                var10 = var15.field_w << 1824118977;
                 if (jk.field_o != null) {
                   if (jk.field_o.field_q >= var9) {
                     if (var10 <= jk.field_o.field_y) {
                       fk.a(jk.field_o, -23095);
                       de.b();
-                      var15.b(112, 144, var15.field_n << 4, var15.field_w << 4, -((mk) this).field_H << 10, 4096);
+                      var15.b(112, 144, var15.field_n << -134715804, var15.field_w << 1010939556, -this.field_H << 793288330, 4096);
                       oo.c(-15405);
                       jk.field_o.b(var5 - var15.field_n, var6 - var15.field_w, 256);
                       return;
                     } else {
                       jk.field_o = new qb(var9, var10);
                       fk.a(jk.field_o, -23095);
-                      var15.b(112, 144, var15.field_n << 4, var15.field_w << 4, -((mk) this).field_H << 10, 4096);
+                      var15.b(112, 144, var15.field_n << -134715804, var15.field_w << 1010939556, -this.field_H << 793288330, 4096);
                       oo.c(-15405);
                       jk.field_o.b(var5 - var15.field_n, var6 - var15.field_w, 256);
                       return;
@@ -144,7 +156,7 @@ final class mk extends ag {
                   } else {
                     jk.field_o = new qb(var9, var10);
                     fk.a(jk.field_o, -23095);
-                    var15.b(112, 144, var15.field_n << 4, var15.field_w << 4, -((mk) this).field_H << 10, 4096);
+                    var15.b(112, 144, var15.field_n << -134715804, var15.field_w << 1010939556, -this.field_H << 793288330, 4096);
                     oo.c(-15405);
                     jk.field_o.b(var5 - var15.field_n, var6 - var15.field_w, 256);
                     return;
@@ -152,7 +164,7 @@ final class mk extends ag {
                 } else {
                   jk.field_o = new qb(var9, var10);
                   fk.a(jk.field_o, -23095);
-                  var15.b(112, 144, var15.field_n << 4, var15.field_w << 4, -((mk) this).field_H << 10, 4096);
+                  var15.b(112, 144, var15.field_n << -134715804, var15.field_w << 1010939556, -this.field_H << 793288330, 4096);
                   oo.c(-15405);
                   jk.field_o.b(var5 - var15.field_n, var6 - var15.field_w, 256);
                   return;
@@ -176,6 +188,7 @@ final class mk extends ag {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
@@ -192,34 +205,36 @@ final class mk extends ag {
             if (param0 == 0) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 0;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("mk.A(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -227,24 +242,24 @@ final class mk extends ag {
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
-        return stackIn_4_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_4_0 != 0;
+        }
     }
 
     mk(pd param0) {
         try {
-            ((mk) this).field_T = param0;
+            this.field_T = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "mk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_I = "Decline invitation to <%0>'s game";
         field_K = "You are offering an unrated rematch.";
         field_M = "Minions can only be summoned when the summoning circle is green; you cannot summon over terrain or too far away from yourself.<br>Click to summon your Imps!";

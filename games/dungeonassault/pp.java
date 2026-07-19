@@ -17,14 +17,14 @@ final class pp extends rj {
     final void a(cn param0, cn param1, cn param2, cn param3, int param4) {
         try {
             this.a(-66, param0);
-            ((pp) this).field_C = param1;
+            this.field_C = param1;
             if (param4 <= 15) {
-                field_E = null;
+                field_E = (String[]) null;
             }
-            ((pp) this).field_A = param3;
-            ((pp) this).field_z = param2;
+            this.field_A = param3;
+            this.field_z = param2;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "pp.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "pp.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -40,24 +40,24 @@ final class pp extends rj {
         int stackOut_8_0 = 0;
         var9 = DungeonAssault.field_K;
         if (param1 == 8187) {
-          if (!((pp) this).field_D) {
+          if (!this.field_D) {
             return;
           } else {
-            if (((pp) this).field_w) {
+            if (this.field_w) {
               L0: {
-                if (this == (Object) (Object) wi.field_ob) {
+                if (this == wi.field_ob) {
                   stackOut_9_0 = mo.field_a;
                   stackIn_10_0 = stackOut_9_0;
                   break L0;
                 } else {
-                  stackOut_8_0 = ((pp) this).field_p;
+                  stackOut_8_0 = this.field_p;
                   stackIn_10_0 = stackOut_8_0;
                   break L0;
                 }
               }
               L1: {
                 var4 = stackIn_10_0;
-                var5 = var4 - ((pp) this).field_m >> 2;
+                var5 = var4 - this.field_m >> -1531244126;
                 if (var5 <= 64) {
                   break L1;
                 } else {
@@ -65,19 +65,19 @@ final class pp extends rj {
                   break L1;
                 }
               }
-              var6 = var5 + (((pp) this).field_p + -mo.field_a);
-              if (!((pp) this).field_G) {
-                if (this != (Object) (Object) wi.field_ob) {
-                  if (var6 > 0) {
+              var6 = var5 + (this.field_p + -mo.field_a);
+              if (!this.field_G) {
+                if (this != wi.field_ob) {
+                  if ((var6 ^ -1) < -1) {
                     L2: {
-                      if ((Object) (Object) wi.field_ob != this) {
-                        ((pp) this).field_B.h(((pp) this).field_t - -param0, param2 + ((pp) this).field_i);
+                      if (wi.field_ob != this) {
+                        this.field_B.h(this.field_t - -param0, param2 + this.field_i);
                         var7 = var6;
-                        ((pp) this).field_z.d(param0 + ((pp) this).field_t, param2 + ((pp) this).field_i, 4 * var7);
+                        this.field_z.d(param0 + this.field_t, param2 + this.field_i, 4 * var7);
                         break L2;
                       } else {
                         var7 = var5;
-                        ((pp) this).field_z.h(((pp) this).field_t - -param0, param2 + ((pp) this).field_i);
+                        this.field_z.h(this.field_t - -param0, param2 + this.field_i);
                         break L2;
                       }
                     }
@@ -90,22 +90,22 @@ final class pp extends rj {
                         break L3;
                       }
                     }
-                    ((pp) this).field_C.b(((pp) this).field_t - -param0, ((pp) this).field_i - -param2, var8);
+                    this.field_C.b(this.field_t - -param0, this.field_i - -param2, var8);
                     return;
                   } else {
-                    ((pp) this).field_B.h(param0 + ((pp) this).field_t, param2 + ((pp) this).field_i);
+                    this.field_B.h(param0 + this.field_t, param2 + this.field_i);
                     return;
                   }
                 } else {
                   L4: {
-                    if ((Object) (Object) wi.field_ob != this) {
-                      ((pp) this).field_B.h(((pp) this).field_t - -param0, param2 + ((pp) this).field_i);
+                    if (wi.field_ob != this) {
+                      this.field_B.h(this.field_t - -param0, param2 + this.field_i);
                       var7 = var6;
-                      ((pp) this).field_z.d(param0 + ((pp) this).field_t, param2 + ((pp) this).field_i, 4 * var7);
+                      this.field_z.d(param0 + this.field_t, param2 + this.field_i, 4 * var7);
                       break L4;
                     } else {
                       var7 = var5;
-                      ((pp) this).field_z.h(((pp) this).field_t - -param0, param2 + ((pp) this).field_i);
+                      this.field_z.h(this.field_t - -param0, param2 + this.field_i);
                       break L4;
                     }
                   }
@@ -118,19 +118,19 @@ final class pp extends rj {
                       break L5;
                     }
                   }
-                  ((pp) this).field_C.b(((pp) this).field_t - -param0, ((pp) this).field_i - -param2, var8);
+                  this.field_C.b(this.field_t - -param0, this.field_i - -param2, var8);
                   return;
                 }
               } else {
                 L6: {
-                  if ((Object) (Object) wi.field_ob != this) {
-                    ((pp) this).field_B.h(((pp) this).field_t - -param0, param2 + ((pp) this).field_i);
+                  if (wi.field_ob != this) {
+                    this.field_B.h(this.field_t - -param0, param2 + this.field_i);
                     var7 = var6;
-                    ((pp) this).field_z.d(param0 + ((pp) this).field_t, param2 + ((pp) this).field_i, 4 * var7);
+                    this.field_z.d(param0 + this.field_t, param2 + this.field_i, 4 * var7);
                     break L6;
                   } else {
                     var7 = var5;
-                    ((pp) this).field_z.h(((pp) this).field_t - -param0, param2 + ((pp) this).field_i);
+                    this.field_z.h(this.field_t - -param0, param2 + this.field_i);
                     break L6;
                   }
                 }
@@ -143,11 +143,11 @@ final class pp extends rj {
                     break L7;
                   }
                 }
-                ((pp) this).field_C.b(((pp) this).field_t - -param0, ((pp) this).field_i - -param2, var8);
+                this.field_C.b(this.field_t - -param0, this.field_i - -param2, var8);
                 return;
               }
             } else {
-              ((pp) this).field_A.h(param0 + ((pp) this).field_t, ((pp) this).field_i + param2);
+              this.field_A.h(param0 + this.field_t, this.field_i + param2);
               return;
             }
           }
@@ -159,19 +159,19 @@ final class pp extends rj {
     private pp(cn param0, cn param1, cn param2, cn param3, int param4, int param5, int param6) {
         super(param4, param5, param0.field_y, param0.field_v, param6);
         try {
-            ((pp) this).field_D = true;
-            ((pp) this).field_z = param2;
-            ((pp) this).field_A = param1;
-            ((pp) this).field_B = param0;
-            ((pp) this).field_C = param3;
+            this.field_D = true;
+            this.field_z = param2;
+            this.field_A = param1;
+            this.field_B = param0;
+            this.field_C = param3;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "pp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "pp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     final void a(boolean param0, int param1, int param2) {
         if (param0) {
-            ((pp) this).field_C = null;
+            this.field_C = (cn) null;
             throw new RuntimeException("Unsupported");
         }
         throw new RuntimeException("Unsupported");
@@ -183,11 +183,14 @@ final class pp extends rj {
 
     private final void a(int param0, cn param1) {
         try {
-            ((pp) this).field_z = param1;
-            ((pp) this).field_B = param1;
-            super.a(false, ((pp) this).field_B.field_y, ((pp) this).field_B.field_v);
+            this.field_z = param1;
+            this.field_B = param1;
+            if (param0 != -66) {
+                this.field_D = true;
+            }
+            super.a(false, this.field_B.field_y, this.field_B.field_v);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "pp.B(" + -66 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "pp.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -195,6 +198,11 @@ final class pp extends rj {
         field_F = null;
         field_E = null;
         field_K = null;
+        if (param0 <= 42) {
+            field_F = (String[]) null;
+            field_I = null;
+            return;
+        }
         field_I = null;
     }
 
@@ -301,7 +309,7 @@ final class pp extends rj {
             }
           }
         } else {
-          field_F = null;
+          field_F = (String[]) null;
           if (param1 >= 48) {
             if (param1 > 57) {
               if (param1 < 65) {
@@ -375,10 +383,6 @@ final class pp extends rj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_F = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_I = "Go Back";
         field_E = new String[]{"Rooms", "Rooms you have not yet visited are dark. Your raiders will light torches in each new room as they enter."};

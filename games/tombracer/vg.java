@@ -9,14 +9,14 @@ class vg {
     static String[] field_c;
 
     final void p(int param0) {
-        if (((vg) this).field_e != null) {
+        if (this.field_e != null) {
           if (param0 < 0) {
             return;
           } else {
-            ((vg) this).field_e.field_a = ((vg) this).field_a;
-            ((vg) this).field_a.field_e = ((vg) this).field_e;
-            ((vg) this).field_a = null;
-            ((vg) this).field_e = null;
+            this.field_e.field_a = this.field_a;
+            this.field_a.field_e = this.field_e;
+            this.field_a = null;
+            this.field_e = null;
             return;
           }
         } else {
@@ -33,12 +33,14 @@ class vg {
     }
 
     final static void q(int param0) {
-        Object var2 = null;
-        pr.a(0, faa.field_g, (String) null);
+        pr.a(param0 + -30497, faa.field_g, (String) null);
+        if (param0 != 30497) {
+            field_c = (String[]) null;
+        }
     }
 
     final boolean l(byte param0) {
-        if (((vg) this).field_e == null) {
+        if (this.field_e == null) {
             return false;
         }
         int var2 = -24 / ((-27 - param0) / 56);
@@ -46,10 +48,6 @@ class vg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Feng";
         field_c = new String[]{"Showing by rating", "Showing by win percentage"};
     }

@@ -17,16 +17,19 @@ final class cb {
     final static void a(int param0, String param1, String param2) {
         try {
             i.a(false, param2, -5136, param1);
-            int var3_int = 0;
+            int var3_int = 59 % ((param0 - 43) / 38);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "cb.C(" + 82 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "cb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
+        if (param0 != -1) {
+            return;
+        }
         field_e = null;
         field_k = null;
-        field_h = null;
+        field_h = (int[][]) null;
     }
 
     final static void a(byte param0) {
@@ -39,7 +42,7 @@ final class cb {
         var4 = Chess.field_G;
         try {
           L0: {
-            var1 = (Object) (Object) lg.field_d;
+            var1 = lg.field_d;
             synchronized (var1) {
               L1: {
                 L2: {
@@ -56,7 +59,7 @@ final class cb {
                           ok.field_Jb[var2] = true;
                           continue L3;
                         } else {
-                          ok.field_Jb[~var2] = false;
+                          ok.field_Jb[var2 ^ -1] = false;
                           continue L3;
                         }
                       }
@@ -75,7 +78,15 @@ final class cb {
                     }
                   }
                 }
-                ta.field_y = ce.field_e;
+                L5: {
+                  ta.field_y = ce.field_e;
+                  if (param0 == 12) {
+                    break L5;
+                  } else {
+                    field_k = (int[]) null;
+                    break L5;
+                  }
+                }
                 break L1;
               }
             }
@@ -84,15 +95,11 @@ final class cb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var1_ref, "cb.B(" + 12 + ')');
+          throw fk.a((Throwable) ((Object) var1_ref), "cb.B(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = -1;
         field_a = 360;
         field_e = null;

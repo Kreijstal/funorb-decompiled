@@ -24,6 +24,9 @@ final class bh extends fe {
     public static void n(int param0) {
         field_ub = null;
         field_qb = null;
+        if (param0 < 26) {
+            return;
+        }
         field_tb = null;
         field_rb = null;
         field_sb = null;
@@ -36,15 +39,11 @@ final class bh extends fe {
         try {
             super.b((byte) 120, param1);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "bh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "bh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_rb = "You do not have a suitable number of players for the current options.";
         field_sb = "This entry doesn't match";
         field_ub = "Oh dear!";

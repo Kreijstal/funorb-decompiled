@@ -50,6 +50,7 @@ final class hc {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
@@ -83,6 +84,7 @@ final class hc {
                     L2: while (true) {
                       if (param0 >= var9) {
                         ll.b(kk.field_g);
+                        decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
                         param3[1].e(param0, param1);
@@ -91,34 +93,36 @@ final class hc {
                       }
                     }
                   } else {
-                    return;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var5;
+            stackOut_12_0 = (RuntimeException) (var5);
             stackOut_12_1 = new StringBuilder().append("hc.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param3 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -126,27 +130,36 @@ final class hc {
               break L3;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param4 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     hc() {
-        ((hc) this).field_m = new byte[4096];
-        ((hc) this).field_x = new int[257];
-        ((hc) this).field_l = new int[6][258];
-        ((hc) this).field_k = new byte[18002];
-        ((hc) this).field_n = new int[256];
-        ((hc) this).field_z = 0;
-        ((hc) this).field_E = new byte[6][258];
-        ((hc) this).field_F = new boolean[16];
-        ((hc) this).field_o = new int[6];
-        ((hc) this).field_h = new byte[256];
-        ((hc) this).field_y = new boolean[256];
-        ((hc) this).field_c = new int[6][258];
-        ((hc) this).field_u = new int[6][258];
-        ((hc) this).field_j = new byte[18002];
-        ((hc) this).field_s = 0;
-        ((hc) this).field_q = new int[16];
+        this.field_m = new byte[4096];
+        this.field_x = new int[257];
+        this.field_l = new int[6][258];
+        this.field_k = new byte[18002];
+        this.field_n = new int[256];
+        this.field_z = 0;
+        this.field_E = new byte[6][258];
+        this.field_F = new boolean[16];
+        this.field_o = new int[6];
+        this.field_h = new byte[256];
+        this.field_y = new boolean[256];
+        this.field_c = new int[6][258];
+        this.field_u = new int[6][258];
+        this.field_j = new byte[18002];
+        this.field_s = 0;
+        this.field_q = new int[16];
     }
 
     static {

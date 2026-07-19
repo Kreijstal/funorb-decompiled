@@ -19,10 +19,6 @@ final class ud {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ud.A(";
         field_d = "to return to the normal view.";
         field_c = new lc(9, 0, 4, 1);

@@ -18,15 +18,11 @@ final class jk {
 
     public static void a(int param0) {
         field_c = null;
-        int var1 = 0;
+        int var1 = -100 % ((param0 - -51) / 40);
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = null;
         field_a = false;
         field_b = "Do the same for this block.";

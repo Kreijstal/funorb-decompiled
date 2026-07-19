@@ -16,12 +16,12 @@ final class pf implements Iterable {
 
     final ri a(boolean param0) {
         ri var2 = null;
-        Object var3 = null;
-        var2 = ((pf) this).field_e.field_h;
-        if (((pf) this).field_e != var2) {
+        ri var3 = null;
+        var2 = this.field_e.field_h;
+        if (this.field_e != var2) {
           if (param0) {
-            var3 = null;
-            ((pf) this).a(true, (ri) null);
+            var3 = (ri) null;
+            this.a(true, (ri) null);
             var2.b((byte) -74);
             return var2;
           } else {
@@ -34,16 +34,23 @@ final class pf implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new wg((pf) this);
+        return (Iterator) ((Object) new wg((pf) (this)));
     }
 
     public static void a(int param0) {
         field_c = null;
         field_h = null;
         field_f = null;
-        field_a = null;
+        field_a = (byte[][]) null;
         field_i = null;
-        field_d = null;
+        if (param0 != 17205) {
+          field_h = (ti[]) null;
+          field_d = null;
+          return;
+        } else {
+          field_d = null;
+          return;
+        }
     }
 
     private pf() throws Throwable {
@@ -51,6 +58,7 @@ final class pf implements Iterable {
     }
 
     final void a(boolean param0, ri param1) {
+        ri discarded$2 = null;
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -78,14 +86,14 @@ final class pf implements Iterable {
                 break L1;
               }
             }
-            param1.field_g = ((pf) this).field_e.field_g;
-            param1.field_h = ((pf) this).field_e;
+            param1.field_g = this.field_e.field_g;
+            param1.field_h = this.field_e;
             param1.field_g.field_h = param1;
             param1.field_h.field_g = param1;
             if (!param0) {
               break L0;
             } else {
-              ri discarded$2 = ((pf) this).a(true);
+              discarded$2 = this.a(true);
               return;
             }
           }
@@ -93,23 +101,23 @@ final class pf implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("pf.C(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -117,15 +125,11 @@ final class pf implements Iterable {
               break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new byte[1000][];
         field_g = -2147483648;
         field_f = "Sound: ";

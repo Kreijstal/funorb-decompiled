@@ -5,6 +5,8 @@ final class un extends us {
     static int[] field_h;
 
     final static void a(phb param0, int param1) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -21,6 +23,7 @@ final class un extends us {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
@@ -34,7 +37,8 @@ final class un extends us {
         try {
           L0: {
             if ((3 & (param0.field_l | (param0.field_k | (param0.field_q | param0.field_p)))) == 0) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 var2_int = (param0.field_k & 3) + param0.field_q;
@@ -47,7 +51,7 @@ final class un extends us {
                 if (param1 >= 111) {
                   break L1;
                 } else {
-                  field_h = null;
+                  field_h = (int[]) null;
                   break L1;
                 }
               }
@@ -59,6 +63,7 @@ final class un extends us {
                   param0.field_k = param0.field_k & -4;
                   param0.field_q = var2_int;
                   param0.field_p = var3;
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   var8 = 0;
@@ -68,9 +73,9 @@ final class un extends us {
                       var7++;
                       continue L2;
                     } else {
-                      int incrementValue$2 = var6;
+                      incrementValue$2 = var6;
                       var6++;
-                      int incrementValue$3 = var5;
+                      incrementValue$3 = var5;
                       var5++;
                       var4[incrementValue$2] = param0.field_r[incrementValue$3];
                       var8++;
@@ -85,23 +90,23 @@ final class un extends us {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_0 = (RuntimeException) (var2);
             stackOut_14_1 = new StringBuilder().append("un.E(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -109,11 +114,20 @@ final class un extends us {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(boolean param0) {
+        if (param0) {
+            phb var2 = (phb) null;
+            un.a((phb) null, 3);
+        }
         field_h = null;
     }
 

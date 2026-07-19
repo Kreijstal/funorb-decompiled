@@ -19,6 +19,7 @@ final class rj {
     private String field_m;
 
     final void a(boolean param0, int param1) {
+        String discarded$2 = null;
         Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
@@ -46,47 +47,47 @@ final class rj {
             break L0;
           }
         }
-        ((rj) this).field_e = stackIn_3_1 != 0;
+        ((rj) (this)).field_e = stackIn_3_1 != 0;
         if (param1 != 8) {
-          String discarded$2 = ((rj) this).a((byte) 28);
-          ((rj) this).field_k = true;
+          discarded$2 = this.a((byte) 28);
+          this.field_k = true;
           return;
         } else {
-          ((rj) this).field_k = true;
+          this.field_k = true;
           return;
         }
     }
 
     final boolean c(boolean param0) {
         if (param0) {
-            ((rj) this).field_k = false;
-            return ((rj) this).field_k;
+            this.field_k = false;
+            return this.field_k;
         }
-        return ((rj) this).field_k;
+        return this.field_k;
     }
 
     final String a(byte param0) {
         if (param0 != 72) {
-            field_i = null;
-            return ((rj) this).field_m;
+            field_i = (int[]) null;
+            return this.field_m;
         }
-        return ((rj) this).field_m;
+        return this.field_m;
     }
 
     final boolean a(boolean param0) {
         if (!param0) {
             return false;
         }
-        return ((rj) this).field_e;
+        return this.field_e;
     }
 
     rj(String param0) {
-        ((rj) this).field_k = false;
-        ((rj) this).field_e = false;
+        this.field_k = false;
+        this.field_e = false;
         try {
-            ((rj) this).field_m = param0;
+            this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "rj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "rj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -100,14 +101,17 @@ final class rj {
         field_i = null;
         field_b = null;
         field_l = null;
-        field_h = null;
+        if (!param0) {
+          field_o = (int[]) null;
+          field_h = null;
+          return;
+        } else {
+          field_h = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Cancel";
         field_a = "Macroing or use of bots";
         field_o = new int[8];

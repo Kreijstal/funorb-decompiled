@@ -39,24 +39,30 @@ final class tm {
           }
         }
         dk.e(param0, -7579);
-        if (sa.field_f) {
+        if (!sa.field_f) {
+          if (param1) {
+            field_a = (String[]) null;
+            an.a(1, param0);
+            return;
+          } else {
+            an.a(1, param0);
+            return;
+          }
+        } else {
           oo.f(em.field_U.field_c.field_x, em.field_U.field_c.field_Q, em.field_U.field_c.field_zb, em.field_U.field_c.field_z);
           em.field_U.field_c.c(param0, -1);
-          field_a = null;
-          an.a(1, param0);
-          return;
-        } else {
-          field_a = null;
-          an.a(1, param0);
-          return;
+          if (!param1) {
+            an.a(1, param0);
+            return;
+          } else {
+            field_a = (String[]) null;
+            an.a(1, param0);
+            return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Match over";
         field_d = "ESC - cancel private message";
         field_a = new String[]{"The Mall", "Power Plant", "Precinct", "White House", "Locked"};

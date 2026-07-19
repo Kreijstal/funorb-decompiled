@@ -8,14 +8,15 @@ final class ve {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != -9746) {
+            field_a = (pb) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ve.A(";
         field_b = "Waiting for extra data";
     }

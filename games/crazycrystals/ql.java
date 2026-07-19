@@ -3,30 +3,37 @@
  */
 final class ql extends ta {
     final int c(int param0) {
+        l discarded$0 = null;
         if (param0 != -1) {
-            l discarded$0 = ((ql) this).b(true);
+            discarded$0 = this.b(true);
             return 0;
         }
         return 0;
     }
 
     final static wj d(int param0) {
-        wj var1 = new wj(km.field_c, bo.field_o, uo.field_k[0], jm.field_a[0], uo.field_l[0], je.field_c[0], ui.field_c[0], gh.field_z);
-        ok.a(2188450);
-        return var1;
+        wj var1 = null;
+        if (param0 > -33) {
+          return (wj) null;
+        } else {
+          var1 = new wj(km.field_c, bo.field_o, uo.field_k[0], jm.field_a[0], uo.field_l[0], je.field_c[0], ui.field_c[0], gh.field_z);
+          ok.a(2188450);
+          return var1;
+        }
     }
 
     final l b(boolean param0) {
+        l discarded$2 = null;
         if (param0) {
-          l discarded$2 = ((ql) this).b(true);
-          return (l) (Object) new o(60, (l) (Object) new il());
+          discarded$2 = this.b(true);
+          return (l) ((Object) new o(60, new il()));
         } else {
-          return (l) (Object) new o(60, (l) (Object) new il());
+          return (l) ((Object) new o(60, new il()));
         }
     }
 
     ql() {
-        super((pb) (Object) new ad());
+        super(new ad());
     }
 
     static {

@@ -19,12 +19,18 @@ final class lo extends le {
         field_i = null;
         field_r = null;
         field_n = null;
+        if (param0 > -31) {
+            return;
+        }
         field_p = null;
         field_s = null;
         field_q = null;
     }
 
     final static int a(boolean param0) {
+        if (param0) {
+            return -30;
+        }
         return 1;
     }
 
@@ -32,10 +38,6 @@ final class lo extends le {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "Loading extra data";
         field_l = 64;
         field_s = new cg(8, 0, 4, 1);

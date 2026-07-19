@@ -104,7 +104,7 @@ final class fe {
                   if (0L != var2_long % 37L) {
                     break L8;
                   } else {
-                    if (var2_long == 0L) {
+                    if ((var2_long ^ -1L) == -1L) {
                       break L8;
                     } else {
                       var2_long = var2_long / 37L;
@@ -122,23 +122,23 @@ final class fe {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_0 = (RuntimeException) (var2);
             stackOut_22_1 = new StringBuilder().append("fe.A(");
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L9;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -146,7 +146,7 @@ final class fe {
               break L9;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
         }
         return stackIn_21_0;
     }
@@ -209,11 +209,18 @@ final class fe {
                 if (na.field_r.field_i <= 0) {
                   break L2;
                 } else {
-                  {
+                  try {
                     L3: {
                       cb.field_j.a(0, (byte) -89, na.field_r.field_i, na.field_r.field_g);
                       ua.field_E = id.a(125);
                       break L3;
+                    }
+                  } catch (java.io.IOException decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L4: {
+                      var2 = (IOException) (Object) decompiledCaughtException;
+                      mc.a((byte) -126);
+                      break L4;
                     }
                   }
                   na.field_r.field_i = 0;
@@ -230,19 +237,18 @@ final class fe {
     }
 
     fe(int param0) {
-        ((fe) this).field_b = param0;
+        this.field_b = param0;
     }
 
     public static void a(int param0) {
         field_d = null;
         field_c = null;
+        if (param0 != 17449) {
+            fe.a((byte) 108, 62);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
         field_a = 80;
     }

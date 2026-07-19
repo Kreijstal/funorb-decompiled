@@ -14,7 +14,7 @@ final class ce {
 
     public static void a(byte param0) {
         field_f = null;
-        field_i = null;
+        field_i = (boolean[][]) null;
         if (param0 <= 7) {
             ce.a((byte) -74);
         }
@@ -35,10 +35,6 @@ final class ce {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         double var1 = 0.0;
         field_a = new int[65536];

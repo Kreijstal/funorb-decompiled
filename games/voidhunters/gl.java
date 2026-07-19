@@ -12,19 +12,18 @@ final class gl {
     }
 
     gl(int param0) {
-        ((gl) this).field_a = param0;
+        this.field_a = param0;
     }
 
     public static void a(int param0) {
+        if (param0 != 0) {
+            return;
+        }
         field_b = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Shields";
         field_b = "<%0> won the match by a mere <%1>!";
         field_d = 0;

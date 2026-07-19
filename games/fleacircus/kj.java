@@ -13,7 +13,7 @@ public class kj {
 
     public static File a(int param0, String param1) {
         if (param0 != 20926) {
-            field_e = null;
+            field_e = (String) null;
             return kj.a(field_e, -2, field_a, param1);
         }
         return kj.a(field_e, -2, field_a, param1);
@@ -72,10 +72,6 @@ public class kj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = false;
         field_b = new Hashtable(16);
     }

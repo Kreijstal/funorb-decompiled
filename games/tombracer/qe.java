@@ -9,13 +9,16 @@ abstract class qe {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != -18318) {
+            field_b = (String) null;
+        }
     }
 
     qe(cka param0) {
         try {
-            ((qe) this).field_a = param0;
+            this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "qe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "qe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,10 +33,6 @@ abstract class qe {
     abstract void a(int param0, int param1, int param2);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Only show lobby chat from my friends";
     }
 }

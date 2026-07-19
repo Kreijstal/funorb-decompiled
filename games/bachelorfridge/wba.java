@@ -14,7 +14,7 @@ final class wba {
         field_e = null;
         field_d = null;
         field_a = null;
-        int var1 = 0;
+        int var1 = 2 % ((-21 - param0) / 33);
         field_g = null;
         field_f = null;
     }
@@ -24,14 +24,10 @@ final class wba {
     }
 
     wba(int param0) {
-        ((wba) this).field_b = param0;
+        this.field_b = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new eaa();
         field_c = 0;
         field_e = new kia[3];

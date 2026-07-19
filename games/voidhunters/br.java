@@ -11,14 +11,15 @@ final class br extends ksa {
     }
 
     public static void a(boolean param0) {
+        if (!param0) {
+            br.a(true);
+            field_f = null;
+            return;
+        }
         field_f = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new lkb();
     }
 }

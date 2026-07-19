@@ -36,7 +36,7 @@ abstract class mk extends pa {
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
-        if (!((mk) this).field_D.h()) {
+        if (!this.field_D.h()) {
           if (this.a(param0, param1, param2, param3, param4, param5)) {
             field_d = param7;
             if (param6 != 1) {
@@ -67,15 +67,15 @@ abstract class mk extends pa {
                               if (param8 != 2) {
                                 break L1;
                               } else {
-                                ((mk) this).b(2, 2);
+                                this.b(2, 2);
                                 return;
                               }
                             } else {
-                              ((mk) this).b(2, 1);
+                              this.b(2, 1);
                               return;
                             }
                           } else {
-                            ((mk) this).b(2, 0);
+                            this.b(2, 0);
                             return;
                           }
                         }
@@ -85,15 +85,15 @@ abstract class mk extends pa {
                             if (param8 != 2) {
                               break L1;
                             } else {
-                              ((mk) this).b(3, 2);
+                              this.b(3, 2);
                               return;
                             }
                           } else {
-                            ((mk) this).b(3, 1);
+                            this.b(3, 1);
                             return;
                           }
                         } else {
-                          ((mk) this).b(3, 0);
+                          this.b(3, 0);
                           return;
                         }
                       }
@@ -103,15 +103,15 @@ abstract class mk extends pa {
                           if (param8 != 2) {
                             break L1;
                           } else {
-                            ((mk) this).b(0, 2);
+                            this.b(0, 2);
                             return;
                           }
                         } else {
-                          ((mk) this).b(0, 1);
+                          this.b(0, 1);
                           return;
                         }
                       } else {
-                        ((mk) this).b(0, 0);
+                        this.b(0, 0);
                         return;
                       }
                     }
@@ -121,17 +121,17 @@ abstract class mk extends pa {
                   if (param8 != 0) {
                     if (param8 != 1) {
                       if (param8 == 2) {
-                        ((mk) this).b(1, 2);
+                        this.b(1, 2);
                         return;
                       } else {
                         return;
                       }
                     } else {
-                      ((mk) this).b(1, 1);
+                      this.b(1, 1);
                       return;
                     }
                   } else {
-                    ((mk) this).b(1, 0);
+                    this.b(1, 0);
                     return;
                   }
                 }
@@ -146,17 +146,17 @@ abstract class mk extends pa {
                         if (param8 != 0) {
                           if (param8 != 1) {
                             if (param8 == 2) {
-                              ((mk) this).b(2, 2);
+                              this.b(2, 2);
                               return;
                             } else {
                               return;
                             }
                           } else {
-                            ((mk) this).b(2, 1);
+                            this.b(2, 1);
                             return;
                           }
                         } else {
-                          ((mk) this).b(2, 0);
+                          this.b(2, 0);
                           return;
                         }
                       } else {
@@ -166,17 +166,17 @@ abstract class mk extends pa {
                       if (param8 != 0) {
                         if (param8 != 1) {
                           if (param8 == 2) {
-                            ((mk) this).b(3, 2);
+                            this.b(3, 2);
                             return;
                           } else {
                             return;
                           }
                         } else {
-                          ((mk) this).b(3, 1);
+                          this.b(3, 1);
                           return;
                         }
                       } else {
-                        ((mk) this).b(3, 0);
+                        this.b(3, 0);
                         return;
                       }
                     }
@@ -184,17 +184,17 @@ abstract class mk extends pa {
                     if (param8 != 0) {
                       if (param8 != 1) {
                         if (param8 == 2) {
-                          ((mk) this).b(0, 2);
+                          this.b(0, 2);
                           return;
                         } else {
                           return;
                         }
                       } else {
-                        ((mk) this).b(0, 1);
+                        this.b(0, 1);
                         return;
                       }
                     } else {
-                      ((mk) this).b(0, 0);
+                      this.b(0, 0);
                       return;
                     }
                   }
@@ -204,15 +204,15 @@ abstract class mk extends pa {
                       if (param8 != 2) {
                         return;
                       } else {
-                        ((mk) this).b(1, 2);
+                        this.b(1, 2);
                         return;
                       }
                     } else {
-                      ((mk) this).b(1, 1);
+                      this.b(1, 1);
                       return;
                     }
                   } else {
-                    ((mk) this).b(1, 0);
+                    this.b(1, 0);
                     return;
                   }
                 }
@@ -225,17 +225,17 @@ abstract class mk extends pa {
                       if (param8 != 0) {
                         if (param8 != 1) {
                           if (param8 == 2) {
-                            ((mk) this).b(2, 2);
+                            this.b(2, 2);
                             return;
                           } else {
                             return;
                           }
                         } else {
-                          ((mk) this).b(2, 1);
+                          this.b(2, 1);
                           return;
                         }
                       } else {
-                        ((mk) this).b(2, 0);
+                        this.b(2, 0);
                         return;
                       }
                     } else {
@@ -245,17 +245,17 @@ abstract class mk extends pa {
                     if (param8 != 0) {
                       if (param8 != 1) {
                         if (param8 == 2) {
-                          ((mk) this).b(3, 2);
+                          this.b(3, 2);
                           return;
                         } else {
                           return;
                         }
                       } else {
-                        ((mk) this).b(3, 1);
+                        this.b(3, 1);
                         return;
                       }
                     } else {
-                      ((mk) this).b(3, 0);
+                      this.b(3, 0);
                       return;
                     }
                   }
@@ -265,15 +265,15 @@ abstract class mk extends pa {
                       if (param8 != 2) {
                         return;
                       } else {
-                        ((mk) this).b(0, 2);
+                        this.b(0, 2);
                         return;
                       }
                     } else {
-                      ((mk) this).b(0, 1);
+                      this.b(0, 1);
                       return;
                     }
                   } else {
-                    ((mk) this).b(0, 0);
+                    this.b(0, 0);
                     return;
                   }
                 }
@@ -283,15 +283,15 @@ abstract class mk extends pa {
                     if (param8 != 2) {
                       return;
                     } else {
-                      ((mk) this).b(1, 2);
+                      this.b(1, 2);
                       return;
                     }
                   } else {
-                    ((mk) this).b(1, 1);
+                    this.b(1, 1);
                     return;
                   }
                 } else {
-                  ((mk) this).b(1, 0);
+                  this.b(1, 0);
                   return;
                 }
               }
@@ -305,7 +305,7 @@ abstract class mk extends pa {
     }
 
     final int d() {
-        return ((mk) this).field_g + ((mk) this).field_o + ((mk) this).field_m;
+        return this.field_g + this.field_o + this.field_m;
     }
 
     private final boolean a(float param0, float param1, float param2, float param3, float param4, float param5) {
@@ -324,21 +324,21 @@ abstract class mk extends pa {
         float var19 = 0.0f;
         float var20 = 0.0f;
         L0: {
-          var7 = ((mk) this).field_g + ((mk) this).field_o + ((mk) this).field_m;
-          var8 = ((mk) this).field_z + ((mk) this).field_p + ((mk) this).field_l;
-          if (var7 != ((mk) this).field_o) {
+          var7 = this.field_g + this.field_o + this.field_m;
+          var8 = this.field_z + this.field_p + this.field_l;
+          if (var7 != this.field_o) {
             var9 = (param2 - param0) / (float)var7;
             var10 = (param3 - param1) / (float)var7;
             var11 = (param4 - param0) / (float)var8;
             var12 = (param5 - param1) / (float)var8;
-            var13 = var11 * (float)((mk) this).field_z;
-            var14 = var12 * (float)((mk) this).field_z;
-            var15 = var9 * (float)((mk) this).field_g;
-            var16 = var10 * (float)((mk) this).field_g;
-            var17 = -var9 * (float)((mk) this).field_m;
-            var18 = -var10 * (float)((mk) this).field_m;
-            var19 = -var11 * (float)((mk) this).field_l;
-            var20 = -var12 * (float)((mk) this).field_l;
+            var13 = var11 * (float)this.field_z;
+            var14 = var12 * (float)this.field_z;
+            var15 = var9 * (float)this.field_g;
+            var16 = var10 * (float)this.field_g;
+            var17 = -var9 * (float)this.field_m;
+            var18 = -var10 * (float)this.field_m;
+            var19 = -var11 * (float)this.field_l;
+            var20 = -var12 * (float)this.field_l;
             param0 = param0 + (var15 + var13);
             param1 = param1 + (var16 + var14);
             param2 = param2 + (var17 + var13);
@@ -347,7 +347,7 @@ abstract class mk extends pa {
             param5 = param5 + (var16 + var20);
             break L0;
           } else {
-            if (var8 == ((mk) this).field_p) {
+            if (var8 == this.field_p) {
               break L0;
             } else {
               L1: {
@@ -355,14 +355,14 @@ abstract class mk extends pa {
                 var10 = (param3 - param1) / (float)var7;
                 var11 = (param4 - param0) / (float)var8;
                 var12 = (param5 - param1) / (float)var8;
-                var13 = var11 * (float)((mk) this).field_z;
-                var14 = var12 * (float)((mk) this).field_z;
-                var15 = var9 * (float)((mk) this).field_g;
-                var16 = var10 * (float)((mk) this).field_g;
-                var17 = -var9 * (float)((mk) this).field_m;
-                var18 = -var10 * (float)((mk) this).field_m;
-                var19 = -var11 * (float)((mk) this).field_l;
-                var20 = -var12 * (float)((mk) this).field_l;
+                var13 = var11 * (float)this.field_z;
+                var14 = var12 * (float)this.field_z;
+                var15 = var9 * (float)this.field_g;
+                var16 = var10 * (float)this.field_g;
+                var17 = -var9 * (float)this.field_m;
+                var18 = -var10 * (float)this.field_m;
+                var19 = -var11 * (float)this.field_l;
+                var20 = -var12 * (float)this.field_l;
                 param0 = param0 + (var15 + var13);
                 param1 = param1 + (var16 + var14);
                 param2 = param2 + (var17 + var13);
@@ -457,34 +457,34 @@ abstract class mk extends pa {
                 }
               }
               L11: {
-                if (var11 >= (float)((mk) this).field_D.field_z) {
+                if (var11 >= (float)this.field_D.field_z) {
                   break L11;
                 } else {
-                  var11 = (float)((mk) this).field_D.field_z;
+                  var11 = (float)this.field_D.field_z;
                   break L11;
                 }
               }
               L12: {
-                if (var12 <= (float)((mk) this).field_D.field_k) {
+                if (var12 <= (float)this.field_D.field_k) {
                   break L12;
                 } else {
-                  var12 = (float)((mk) this).field_D.field_k;
+                  var12 = (float)this.field_D.field_k;
                   break L12;
                 }
               }
               L13: {
-                if (var13 >= (float)((mk) this).field_D.field_w) {
+                if (var13 >= (float)this.field_D.field_w) {
                   break L13;
                 } else {
-                  var13 = (float)((mk) this).field_D.field_w;
+                  var13 = (float)this.field_D.field_w;
                   break L13;
                 }
               }
               L14: {
-                if (var14 <= (float)((mk) this).field_D.field_D) {
+                if (var14 <= (float)this.field_D.field_D) {
                   break L14;
                 } else {
-                  var14 = (float)((mk) this).field_D.field_D;
+                  var14 = (float)this.field_D.field_D;
                   break L14;
                 }
               }
@@ -494,18 +494,18 @@ abstract class mk extends pa {
                 if (var14 >= 0.0f) {
                   return false;
                 } else {
-                  field_r = ((mk) this).field_D.field_f;
+                  field_r = this.field_D.field_f;
                   field_w = (int)((float)((int)var13 * field_r) + var11);
                   var15 = (param2 - param0) * (param5 - param1) - (param3 - param1) * (param4 - param0);
                   var16 = (param4 - param0) * (param3 - param1) - (param5 - param1) * (param2 - param0);
-                  field_A = (int)((param5 - param1) * 4096.0f * (float)((mk) this).field_o / var15);
-                  field_f = (int)((param3 - param1) * 4096.0f * (float)((mk) this).field_p / var16);
-                  field_q = (int)((param4 - param0) * 4096.0f * (float)((mk) this).field_o / var16);
-                  field_v = (int)((param2 - param0) * 4096.0f * (float)((mk) this).field_p / var15);
+                  field_A = (int)((param5 - param1) * 4096.0f * (float)this.field_o / var15);
+                  field_f = (int)((param3 - param1) * 4096.0f * (float)this.field_p / var16);
+                  field_q = (int)((param4 - param0) * 4096.0f * (float)this.field_o / var16);
+                  field_v = (int)((param2 - param0) * 4096.0f * (float)this.field_p / var15);
                   field_y = (int)(var11 * 16.0f + 8.0f - (param0 + param2 + param4 + var9) / 4.0f * 16.0f);
                   field_u = (int)(var13 * 16.0f + 8.0f - (param1 + param3 + param5 + var10) / 4.0f * 16.0f);
-                  field_j = (((mk) this).field_o >> 1 << 12) + (field_u * field_q >> 4);
-                  field_h = (((mk) this).field_p >> 1 << 12) + (field_u * field_v >> 4);
+                  field_j = (this.field_o >> 1 << 12) + (field_u * field_q >> 4);
+                  field_h = (this.field_p >> 1 << 12) + (field_u * field_v >> 4);
                   field_x = field_y * field_A >> 4;
                   field_c = field_y * field_f >> 4;
                   field_k = (int)var12;
@@ -607,34 +607,34 @@ abstract class mk extends pa {
           }
         }
         L25: {
-          if (var11 >= (float)((mk) this).field_D.field_z) {
+          if (var11 >= (float)this.field_D.field_z) {
             break L25;
           } else {
-            var11 = (float)((mk) this).field_D.field_z;
+            var11 = (float)this.field_D.field_z;
             break L25;
           }
         }
         L26: {
-          if (var12 <= (float)((mk) this).field_D.field_k) {
+          if (var12 <= (float)this.field_D.field_k) {
             break L26;
           } else {
-            var12 = (float)((mk) this).field_D.field_k;
+            var12 = (float)this.field_D.field_k;
             break L26;
           }
         }
         L27: {
-          if (var13 >= (float)((mk) this).field_D.field_w) {
+          if (var13 >= (float)this.field_D.field_w) {
             break L27;
           } else {
-            var13 = (float)((mk) this).field_D.field_w;
+            var13 = (float)this.field_D.field_w;
             break L27;
           }
         }
         L28: {
-          if (var14 <= (float)((mk) this).field_D.field_D) {
+          if (var14 <= (float)this.field_D.field_D) {
             break L28;
           } else {
-            var14 = (float)((mk) this).field_D.field_D;
+            var14 = (float)this.field_D.field_D;
             break L28;
           }
         }
@@ -644,18 +644,18 @@ abstract class mk extends pa {
           if (var14 >= 0.0f) {
             return false;
           } else {
-            field_r = ((mk) this).field_D.field_f;
+            field_r = this.field_D.field_f;
             field_w = (int)((float)((int)var13 * field_r) + var11);
             var15 = (param2 - param0) * (param5 - param1) - (param3 - param1) * (param4 - param0);
             var16 = (param4 - param0) * (param3 - param1) - (param5 - param1) * (param2 - param0);
-            field_A = (int)((param5 - param1) * 4096.0f * (float)((mk) this).field_o / var15);
-            field_f = (int)((param3 - param1) * 4096.0f * (float)((mk) this).field_p / var16);
-            field_q = (int)((param4 - param0) * 4096.0f * (float)((mk) this).field_o / var16);
-            field_v = (int)((param2 - param0) * 4096.0f * (float)((mk) this).field_p / var15);
+            field_A = (int)((param5 - param1) * 4096.0f * (float)this.field_o / var15);
+            field_f = (int)((param3 - param1) * 4096.0f * (float)this.field_p / var16);
+            field_q = (int)((param4 - param0) * 4096.0f * (float)this.field_o / var16);
+            field_v = (int)((param2 - param0) * 4096.0f * (float)this.field_p / var15);
             field_y = (int)(var11 * 16.0f + 8.0f - (param0 + param2 + param4 + var9) / 4.0f * 16.0f);
             field_u = (int)(var13 * 16.0f + 8.0f - (param1 + param3 + param5 + var10) / 4.0f * 16.0f);
-            field_j = (((mk) this).field_o >> 1 << 12) + (field_u * field_q >> 4);
-            field_h = (((mk) this).field_p >> 1 << 12) + (field_u * field_v >> 4);
+            field_j = (this.field_o >> 1 << 12) + (field_u * field_q >> 4);
+            field_h = (this.field_p >> 1 << 12) + (field_u * field_v >> 4);
             field_x = field_y * field_A >> 4;
             field_c = field_y * field_f >> 4;
             field_k = (int)var12;
@@ -670,7 +670,7 @@ abstract class mk extends pa {
     abstract void b(int param0, int param1);
 
     final int a() {
-        return ((mk) this).field_o;
+        return this.field_o;
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
@@ -678,31 +678,27 @@ abstract class mk extends pa {
     abstract void a(int param0, int param1, int param2, int param3, int param4);
 
     final void a(int param0, int param1, int param2, int param3) {
-        ((mk) this).field_g = param0;
-        ((mk) this).field_z = param1;
-        ((mk) this).field_m = param2;
-        ((mk) this).field_l = param3;
+        this.field_g = param0;
+        this.field_z = param1;
+        this.field_m = param2;
+        this.field_l = param3;
     }
 
     final int b() {
-        return ((mk) this).field_p;
+        return this.field_p;
     }
 
     mk(kj param0, int param1, int param2) {
-        ((mk) this).field_D = param0;
-        ((mk) this).field_o = param1;
-        ((mk) this).field_p = param2;
+        this.field_D = param0;
+        this.field_o = param1;
+        this.field_p = param2;
     }
 
     final int c() {
-        return ((mk) this).field_z + ((mk) this).field_p + ((mk) this).field_l;
+        return this.field_z + this.field_p + this.field_l;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = 0;
         field_s = 0;
         field_n = 0;

@@ -18,73 +18,88 @@ final class qj {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        StringBuilder stackIn_6_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
+        StringBuilder stackIn_3_0 = null;
+        StringBuilder stackIn_7_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        StringBuilder stackOut_5_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
+        StringBuilder stackOut_6_0 = null;
+        StringBuilder stackOut_2_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
             var4_int = param1.length();
             param1.setLength(param0);
             var5 = var4_int;
-            L1: while (true) {
-              if (var5 >= param0) {
-                stackOut_5_0 = (StringBuilder) param1;
-                stackIn_6_0 = stackOut_5_0;
-                break L0;
-              } else {
-                param1.setCharAt(var5, ' ');
-                var5++;
-                continue L1;
+            if (!param3) {
+              L1: while (true) {
+                if (var5 >= param0) {
+                  stackOut_6_0 = (StringBuilder) (param1);
+                  stackIn_7_0 = stackOut_6_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  param1.setCharAt(var5, param2);
+                  var5++;
+                  continue L1;
+                }
               }
+            } else {
+              stackOut_2_0 = (StringBuilder) null;
+              stackIn_3_0 = stackOut_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("qj.D(").append(param0).append(',');
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_8_0 = (RuntimeException) (var4);
+            stackOut_8_1 = new StringBuilder().append("qj.D(").append(param0).append(',');
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + ' ' + ',' + false + ')');
+          throw aa.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_6_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          return stackIn_7_0;
+        }
     }
 
     final static hh a(byte param0) {
@@ -96,8 +111,8 @@ final class qj {
             hh stackOut_0_0 = null;
             try {
               L0: {
-                var1_int = 0;
-                stackOut_0_0 = (hh) Class.forName("po").newInstance();
+                var1_int = -52 % ((param0 - 15) / 60);
+                stackOut_0_0 = (hh) (Class.forName("po").newInstance());
                 stackIn_1_0 = stackOut_0_0;
                 break L0;
               }
@@ -127,6 +142,8 @@ final class qj {
     }
 
     final static String a(int param0) {
+        if (param0 != 10040319) {
+        }
         return df.field_z.l(-1);
     }
 
@@ -136,15 +153,14 @@ final class qj {
         field_i = null;
         field_j = null;
         field_f = null;
+        if (param0 != -13019) {
+            return;
+        }
         field_d = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Personal and Arena spells:";
         field_e = "Report abuse";
         field_h = new java.awt.Color(10040319);

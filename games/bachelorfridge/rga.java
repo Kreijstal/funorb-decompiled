@@ -11,16 +11,21 @@ final class rga {
     }
 
     public static void a(byte param0) {
-        field_a = null;
-        field_b = null;
-        field_c = null;
+        if (param0 != -84) {
+          field_a = (ad[]) null;
+          field_a = null;
+          field_b = null;
+          field_c = null;
+          return;
+        } else {
+          field_a = null;
+          field_b = null;
+          field_c = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new String[]{"Bakery", "Dairy", "Drinks", "Fish", "Fruit n Veg", "Meat", "Misc", "Ready Meal"};
         field_c = new qia();
     }

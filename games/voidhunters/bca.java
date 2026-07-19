@@ -6,25 +6,26 @@ final class bca implements dja {
 
     public final tv a(byte param0) {
         int var2 = -86 % ((-64 - param0) / 50);
-        return (tv) (Object) new be();
+        return (tv) ((Object) new be());
     }
 
     public static void a(int param0) {
+        if (param0 > -73) {
+            field_a = (dpb) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            return null;
+            return (tv[]) null;
         }
-        return (tv[]) (Object) new be[param1];
+        return (tv[]) ((Object) new be[param1]);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new dpb();
         spa discarded$0 = new spa();
     }

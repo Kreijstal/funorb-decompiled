@@ -2,7 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.io.*;
-import java.lang.String;
 
 final class vj extends al {
     static String field_s;
@@ -22,34 +21,34 @@ final class vj extends al {
           if (param0 == -31645) {
             break L0;
           } else {
-            field_s = null;
+            field_s = (String) null;
             break L0;
           }
         }
         L1: {
           if (kg.field_i == 98) {
-            if (((vj) this).field_b.field_d < 2) {
-              if (0 >= ((vj) this).field_b.field_d) {
+            if ((this.field_b.field_d ^ -1) > -3) {
+              if (0 >= this.field_b.field_d) {
                 break L1;
               } else {
-                ((vj) this).field_b.b(((vj) this).field_b.field_d - 1, param0 ^ 31727);
+                this.field_b.b(this.field_b.field_d - 1, param0 ^ 31727);
                 break L1;
               }
             } else {
-              ((vj) this).field_b.b(1, 64);
+              this.field_b.b(1, 64);
               break L1;
             }
           } else {
             if (99 != kg.field_i) {
-              if (kg.field_i != 96) {
+              if ((kg.field_i ^ -1) != -97) {
                 if (97 != kg.field_i) {
                   super.a(-31645);
                   break L1;
                 } else {
-                  if (((vj) this).field_b.field_d < 2) {
+                  if (-3 < (this.field_b.field_d ^ -1)) {
                     break L1;
                   } else {
-                    if (-1 + ((vj) this).field_b.field_h > ((vj) this).field_b.field_d) {
+                    if (-1 + this.field_b.field_h > this.field_b.field_d) {
                       super.a(-31645);
                       break L1;
                     } else {
@@ -58,7 +57,7 @@ final class vj extends al {
                   }
                 }
               } else {
-                if (((vj) this).field_b.field_d >= 3) {
+                if (this.field_b.field_d >= 3) {
                   super.a(-31645);
                   break L1;
                 } else {
@@ -66,8 +65,8 @@ final class vj extends al {
                 }
               }
             } else {
-              if (((vj) this).field_b.field_d < 2) {
-                ((vj) this).field_b.b(((vj) this).field_b.field_d - -1, param0 + 31551);
+              if (-3 < (this.field_b.field_d ^ -1)) {
+                this.field_b.b(this.field_b.field_d - -1, param0 + 31551);
                 break L1;
               } else {
                 break L1;
@@ -99,7 +98,7 @@ final class vj extends al {
         L0: {
           var14 = ZombieDawn.field_J;
           if (param0 instanceof aj) {
-            var15 = (aj) (Object) param0;
+            var15 = (aj) ((Object) param0);
             var2 = var15.field_b + " | ";
             var12 = var2;
             var2 = var12;
@@ -112,15 +111,15 @@ final class vj extends al {
           }
         }
         var16 = new StringWriter();
-        var4 = new PrintWriter((Writer) (Object) var16);
+        var4 = new PrintWriter((Writer) ((Object) var16));
         param0.printStackTrace(var4);
         var4.close();
         var5 = var16.toString();
         var12 = var5;
         var2 = var12;
         var12 = var5;
-        var7 = 1;
-        var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
+        var7 = 25 % ((13 - param1) / 47);
+        var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
         var8 = var6.readLine();
         var12 = var8;
         var2 = var12;
@@ -137,7 +136,7 @@ final class vj extends al {
             L2: {
               var10 = var9.indexOf('(');
               var11 = var9.indexOf(')', 1 + var10);
-              if (var10 == -1) {
+              if (0 == (var10 ^ -1)) {
                 var12 = var9;
                 var2 = var12;
                 var2 = var12;
@@ -160,12 +159,13 @@ final class vj extends al {
               var20 = var2 + var19;
               var2 = var20;
               var2 = var20;
+              var2 = var20;
               if (var10 == -1) {
                 break L3;
               } else {
                 if (-1 != var11) {
                   var13 = var9.indexOf(".java:", var10);
-                  if (var13 < 0) {
+                  if ((var13 ^ -1) > -1) {
                     break L3;
                   } else {
                     var2 = var20 + var9.substring(5 + var13, var11);
@@ -188,27 +188,28 @@ final class vj extends al {
             return -21;
         }
         if (po.w(13296)) {
-            if (param1 != 0) {
-                return ((vj) this).c(param1, 6) - -100;
+            if (-1 != (param1 ^ -1)) {
+                return this.c(param1, 6) - -100;
             }
-            return 350 + ((vj) this).c(param1, 6);
+            return 350 + this.c(param1, 6);
         }
-        if (param1 < 2) {
+        if (-3 < (param1 ^ -1)) {
             return jb.field_a[1].field_w + (vh.field_b - -30);
         }
-        return 180 + ((vj) this).c(param1, 6);
+        return 180 + this.c(param1, 6);
     }
 
     final static void d(int param0) {
         ng.field_a = new fk();
-        bm.field_d.b(20, (ga) (Object) ng.field_a);
+        bm.field_d.b(20, ng.field_a);
         int var1 = 54 / ((-28 - param0) / 39);
     }
 
     final int b(int param0, boolean param1) {
+        v discarded$0 = null;
         if (!param1) {
-            Object var4 = null;
-            v discarded$0 = vj.a((dj) null, (String) null, (String) null, -46);
+            String var4 = (String) null;
+            discarded$0 = vj.a((dj) null, (String) null, (String) null, -46);
         }
         if (!po.w(13296)) {
             if (param0 < 2) {
@@ -219,7 +220,10 @@ final class vj extends al {
     }
 
     public static void e(byte param0) {
-        field_m = null;
+        field_m = (byte[][]) null;
+        if (param0 != 112) {
+            field_t = (int[]) null;
+        }
         field_s = null;
         field_p = null;
         field_t = null;
@@ -254,9 +258,9 @@ final class vj extends al {
           var14 = ZombieDawn.field_J;
           super.a((byte) -51);
           li.a(false);
-          if (((vj) this).field_r == null) {
-            ((vj) this).field_r = new vn(100, 100);
-            ki.a((byte) -92, ((vj) this).field_r);
+          if (this.field_r == null) {
+            this.field_r = new vn(100, 100);
+            ki.a((byte) -92, this.field_r);
             bi.d();
             jb.field_a[1].b(25, 25);
             var3 = 0;
@@ -264,8 +268,8 @@ final class vj extends al {
               if (var3 >= 5) {
                 bi.h(2, 2, 0, 0, 100, 100);
                 pa.a(-21189);
-                ((vj) this).field_u = new vn(100, 100);
-                ki.a((byte) -94, ((vj) this).field_u);
+                this.field_u = new vn(100, 100);
+                ki.a((byte) -94, this.field_u);
                 bi.d();
                 jb.field_a[1].b(25, 25);
                 var3 = 0;
@@ -397,21 +401,21 @@ final class vj extends al {
               } else {
                 if (qm.field_b == var5_int) {
                   L10: {
-                    if (var5_int != ((vj) this).field_b.field_d) {
+                    if (var5_int != this.field_b.field_d) {
                       break L10;
                     } else {
-                      ((vj) this).field_u.b(var4 - 25, var3 - 25);
+                      this.field_u.b(var4 - 25, var3 - 25);
                       break L10;
                     }
                   }
-                  ((vj) this).field_r.b(var4 - 25, var3 - 25, 240);
+                  this.field_r.b(var4 - 25, var3 - 25, 240);
                   jb.field_a[var5_int - -1].b(var4, var3);
                   var3 += 90;
                   var5_int++;
                   continue L4;
                 } else {
-                  if (((vj) this).field_b.field_d == var5_int) {
-                    ((vj) this).field_u.b(-25 + var4, -25 + var3);
+                  if (this.field_b.field_d == var5_int) {
+                    this.field_u.b(-25 + var4, -25 + var3);
                     jb.field_a[1 + var5_int].d(var4, var3, 240);
                     var3 += 90;
                     var5_int++;
@@ -433,7 +437,7 @@ final class vj extends al {
           if (param0 <= -35) {
             break L11;
           } else {
-            ((vj) this).field_u = null;
+            this.field_u = (vn) null;
             break L11;
           }
         }
@@ -454,7 +458,7 @@ final class vj extends al {
 
     final int a(int param0, int param1) {
         if (po.w(13296)) {
-            return id.field_M + ((vj) this).field_k;
+            return id.field_M + this.field_k;
         }
         if (2 > param0) {
             return 90 * param0 + (-90 + nh.field_G - -45);
@@ -462,10 +466,13 @@ final class vj extends al {
         if (param1 != -1) {
             vj.d(63);
         }
-        return id.field_M + ((vj) this).field_k;
+        return id.field_M + this.field_k;
     }
 
     final static void c(int param0) {
+        hn discarded$9 = null;
+        hn discarded$10 = null;
+        hn discarded$11 = null;
         le var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -479,24 +486,32 @@ final class vj extends al {
                 var1 = se.field_m.b((byte) 26);
                 L2: while (true) {
                   if (!(var1 instanceof tm)) {
-                    var1 = rm.field_e.b((byte) 26);
-                    L3: while (true) {
+                    L3: {
+                      var1 = rm.field_e.b((byte) 26);
+                      if (param0 >= 8) {
+                        break L3;
+                      } else {
+                        vj.d(4);
+                        break L3;
+                      }
+                    }
+                    L4: while (true) {
                       if (!(var1 instanceof tm)) {
                         break L0;
                       } else {
-                        hn discarded$9 = aa.a(48, ((tm) (Object) var1).field_j);
+                        discarded$9 = aa.a(48, ((tm) ((Object) var1)).field_j);
                         var1 = var1.field_b;
-                        continue L3;
+                        continue L4;
                       }
                     }
                   } else {
-                    hn discarded$10 = aa.a(10, ((tm) (Object) var1).field_j);
+                    discarded$10 = aa.a(10, ((tm) ((Object) var1)).field_j);
                     var1 = var1.field_b;
                     continue L2;
                   }
                 }
               } else {
-                hn discarded$11 = aa.a(119, ((tm) (Object) var1).field_j);
+                discarded$11 = aa.a(119, ((tm) ((Object) var1)).field_j);
                 var1 = var1.field_b;
                 continue L1;
               }
@@ -505,13 +520,13 @@ final class vj extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1_ref, "vj.D(" + 74 + ')');
+          throw sh.a((Throwable) ((Object) var1_ref), "vj.D(" + param0 + ')');
         }
     }
 
     final void d(byte param0) {
-        if (qm.field_b != ((vj) this).field_b.field_d) {
-            qm.field_b = ((vj) this).field_b.field_d;
+        if (qm.field_b != this.field_b.field_d) {
+            qm.field_b = this.field_b.field_d;
             bd.field_m = null;
         }
         int var2 = -113 % ((param0 - -78) / 35);
@@ -523,14 +538,14 @@ final class vj extends al {
             field_q = -82;
         }
         if (!po.w(13296)) {
-            if (!(param0 >= 2)) {
+            if (!((param0 ^ -1) <= -3)) {
                 return 30 + vh.field_b;
             }
             param0 -= 2;
-            var3 = vh.field_b - (-((vj) this).field_g - param0 * 176);
+            var3 = vh.field_b - (-this.field_g - param0 * 176);
             return param0 != 3 ? var3 : -32 + var3;
         }
-        return (param0 == 0 ? 50 : 470) + vh.field_b;
+        return (-1 == (param0 ^ -1) ? 50 : 470) + vh.field_b;
     }
 
     final static v a(dj param0, String param1, String param2, int param3) {
@@ -593,7 +608,7 @@ final class vj extends al {
               if (param3 == 4424743) {
                 break L1;
               } else {
-                field_t = null;
+                field_t = (int[]) null;
                 break L1;
               }
             }
@@ -605,23 +620,23 @@ final class vj extends al {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_0 = (RuntimeException) (var4);
             stackOut_4_1 = new StringBuilder().append("vj.C(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -630,23 +645,23 @@ final class vj extends al {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -655,23 +670,23 @@ final class vj extends al {
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -679,16 +694,12 @@ final class vj extends al {
               break L4;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param3 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param3 + ')');
         }
         return stackIn_3_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = new int[4];
         field_p = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
         field_s = "Retry (<%0> Left)";

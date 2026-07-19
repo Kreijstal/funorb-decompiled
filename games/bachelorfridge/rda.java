@@ -6,45 +6,49 @@ final class rda {
     static byte[] field_b;
 
     final static void a(byte param0, int param1, int param2, sga param3, int param4, ema param5, int param6) {
-        ik var7 = null;
+        ik var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        mna.a(-1, (int[]) null, param5.field_Eb, param5.field_Nb, param5.field_Hb, -1, -111, param3, (sna) (Object) param5);
-        ms.field_u.a(116, true);
+        mna.a(-1, (int[]) null, param5.field_Eb, param5.field_Nb, param5.field_Hb, -1, param0 + -7, param3, param5);
+        ms.field_u.a(param0 + 220, true);
         ms.field_u.a((int[]) null, (byte) -117, 0);
         ms.field_u.a(21654);
+        if (param0 != -104) {
+            return;
+        }
         try {
-            var7 = ms.field_u;
+            var12 = ms.field_u;
             var8 = param6;
             var9 = param4;
-            var10 = 0;
-            var11 = 0;
-            var7.field_a.a(var10, false, var8, var11, var9);
+            var10 = param2;
+            var11 = param1;
+            var12.field_a.a(var10, false, var8, var11, var9);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "rda.B(" + -104 + ',' + 0 + ',' + 0 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "rda.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
     final static void a(int param0, boolean param1, boolean param2) {
-        L0: {
-          if (!param2) {
-            dg.d();
-            dg.d();
-            dg.d();
-            break L0;
+        if (!param2) {
+          dg.d();
+          pja.a((byte) 111, param2);
+          if (param0 == 0) {
+            return;
           } else {
-            dg.f(0, 0, dg.field_i, dg.field_c, 0, 192);
-            break L0;
+            rda.a(125, false, true);
+            return;
           }
-        }
-        pja.a((byte) 111, param2);
-        if (param0 != 0) {
-          rda.a(125, false, true);
-          return;
         } else {
-          return;
+          dg.f(0, 0, dg.field_i, dg.field_c, 0, 192);
+          pja.a((byte) 111, param2);
+          if (param0 == 0) {
+            return;
+          } else {
+            rda.a(125, false, true);
+            return;
+          }
         }
     }
 
@@ -62,7 +66,7 @@ final class rda {
             var2 = 8192 * var3 * var3 / 1100;
             var4 = 1;
             var5 = 0;
-            if (param0 == 1) {
+            if (-2 == (param0 ^ -1)) {
               var5 = 1;
               break L0;
             } else {
@@ -70,7 +74,7 @@ final class rda {
             }
           }
           L1: {
-            if (param0 == 3) {
+            if ((param0 ^ -1) == -4) {
               var4 = -1;
               break L1;
             } else {
@@ -110,7 +114,7 @@ final class rda {
               var5 = -1;
               break L5;
             } else {
-              if (param0 != 8) {
+              if ((param0 ^ -1) != -9) {
                 break L5;
               } else {
                 L6: {
@@ -124,7 +128,7 @@ final class rda {
                   }
                 }
                 L7: {
-                  if (param0 != 12) {
+                  if ((param0 ^ -1) != -13) {
                     break L7;
                   } else {
                     var5 = -1;
@@ -133,7 +137,7 @@ final class rda {
                   }
                 }
                 L8: {
-                  if (param0 != 13) {
+                  if (-14 != (param0 ^ -1)) {
                     break L8;
                   } else {
                     var5 = -1;
@@ -142,7 +146,7 @@ final class rda {
                   }
                 }
                 L9: {
-                  if (param0 == 14) {
+                  if (-15 == (param0 ^ -1)) {
                     var4 = -1;
                     var5 = 1;
                     break L9;
@@ -150,17 +154,21 @@ final class rda {
                     break L9;
                   }
                 }
-                L10: {
-                  if (param0 == 15) {
-                    var5 = 1;
-                    var4 = 1;
-                    break L10;
-                  } else {
-                    break L10;
+                if (param1 != 11259) {
+                  return;
+                } else {
+                  L10: {
+                    if (param0 == 15) {
+                      var5 = 1;
+                      var4 = 1;
+                      break L10;
+                    } else {
+                      break L10;
+                    }
                   }
+                  dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+                  return;
                 }
-                dl.field_j = ek.a(var4 * var2, var5 * var2, false);
-                return;
               }
             }
           }
@@ -173,7 +181,7 @@ final class rda {
             }
           }
           L12: {
-            if (param0 != 12) {
+            if ((param0 ^ -1) != -13) {
               break L12;
             } else {
               var5 = -1;
@@ -182,7 +190,7 @@ final class rda {
             }
           }
           L13: {
-            if (param0 != 13) {
+            if (-14 != (param0 ^ -1)) {
               break L13;
             } else {
               var5 = -1;
@@ -191,7 +199,7 @@ final class rda {
             }
           }
           L14: {
-            if (param0 == 14) {
+            if (-15 == (param0 ^ -1)) {
               var4 = -1;
               var5 = 1;
               break L14;
@@ -199,26 +207,30 @@ final class rda {
               break L14;
             }
           }
-          L15: {
-            if (param0 == 15) {
-              var5 = 1;
-              var4 = 1;
-              break L15;
-            } else {
-              break L15;
+          if (param1 != 11259) {
+            return;
+          } else {
+            L15: {
+              if (param0 == 15) {
+                var5 = 1;
+                var4 = 1;
+                break L15;
+              } else {
+                break L15;
+              }
             }
+            dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+            return;
           }
-          dl.field_j = ek.a(var4 * var2, var5 * var2, false);
-          return;
         } else {
           if (var3 >= 105) {
-            if (var3 < 120) {
+            if ((var3 ^ -1) > -121) {
               L16: {
                 var3 = -var3 + 120;
                 var2 = -(8192 * var3 * var3 / 3300) + 8192;
                 var4 = 1;
                 var5 = 0;
-                if (param0 == 1) {
+                if (-2 == (param0 ^ -1)) {
                   var5 = 1;
                   break L16;
                 } else {
@@ -226,7 +238,7 @@ final class rda {
                 }
               }
               L17: {
-                if (param0 == 3) {
+                if ((param0 ^ -1) == -4) {
                   var4 = -1;
                   break L17;
                 } else {
@@ -266,7 +278,7 @@ final class rda {
                   var5 = -1;
                   break L21;
                 } else {
-                  if (param0 != 8) {
+                  if ((param0 ^ -1) != -9) {
                     break L21;
                   } else {
                     L22: {
@@ -280,7 +292,7 @@ final class rda {
                       }
                     }
                     L23: {
-                      if (param0 != 12) {
+                      if ((param0 ^ -1) != -13) {
                         break L23;
                       } else {
                         var5 = -1;
@@ -289,7 +301,7 @@ final class rda {
                       }
                     }
                     L24: {
-                      if (param0 != 13) {
+                      if (-14 != (param0 ^ -1)) {
                         break L24;
                       } else {
                         var5 = -1;
@@ -298,7 +310,7 @@ final class rda {
                       }
                     }
                     L25: {
-                      if (param0 == 14) {
+                      if (-15 == (param0 ^ -1)) {
                         var4 = -1;
                         var5 = 1;
                         break L25;
@@ -306,17 +318,21 @@ final class rda {
                         break L25;
                       }
                     }
-                    L26: {
-                      if (param0 == 15) {
-                        var5 = 1;
-                        var4 = 1;
-                        break L26;
-                      } else {
-                        break L26;
+                    if (param1 != 11259) {
+                      return;
+                    } else {
+                      L26: {
+                        if (param0 == 15) {
+                          var5 = 1;
+                          var4 = 1;
+                          break L26;
+                        } else {
+                          break L26;
+                        }
                       }
+                      dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+                      return;
                     }
-                    dl.field_j = ek.a(var4 * var2, var5 * var2, false);
-                    return;
                   }
                 }
               }
@@ -329,7 +345,7 @@ final class rda {
                 }
               }
               L28: {
-                if (param0 != 12) {
+                if ((param0 ^ -1) != -13) {
                   break L28;
                 } else {
                   var5 = -1;
@@ -338,7 +354,7 @@ final class rda {
                 }
               }
               L29: {
-                if (param0 != 13) {
+                if (-14 != (param0 ^ -1)) {
                   break L29;
                 } else {
                   var5 = -1;
@@ -347,7 +363,7 @@ final class rda {
                 }
               }
               L30: {
-                if (param0 == 14) {
+                if (-15 == (param0 ^ -1)) {
                   var4 = -1;
                   var5 = 1;
                   break L30;
@@ -355,22 +371,26 @@ final class rda {
                   break L30;
                 }
               }
-              L31: {
-                if (param0 == 15) {
-                  var5 = 1;
-                  var4 = 1;
-                  break L31;
-                } else {
-                  break L31;
+              if (param1 != 11259) {
+                return;
+              } else {
+                L31: {
+                  if (param0 == 15) {
+                    var5 = 1;
+                    var4 = 1;
+                    break L31;
+                  } else {
+                    break L31;
+                  }
                 }
+                dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+                return;
               }
-              dl.field_j = ek.a(var4 * var2, var5 * var2, false);
-              return;
             } else {
               L32: {
                 var4 = 1;
                 var5 = 0;
-                if (param0 == 1) {
+                if (-2 == (param0 ^ -1)) {
                   var5 = 1;
                   break L32;
                 } else {
@@ -378,7 +398,7 @@ final class rda {
                 }
               }
               L33: {
-                if (param0 == 3) {
+                if ((param0 ^ -1) == -4) {
                   var4 = -1;
                   break L33;
                 } else {
@@ -414,7 +434,7 @@ final class rda {
               }
               if (param0 != 7) {
                 L37: {
-                  if (param0 != 8) {
+                  if ((param0 ^ -1) != -9) {
                     break L37;
                   } else {
                     var4 = -1;
@@ -431,7 +451,7 @@ final class rda {
                   }
                 }
                 L39: {
-                  if (param0 != 12) {
+                  if ((param0 ^ -1) != -13) {
                     break L39;
                   } else {
                     var5 = -1;
@@ -440,7 +460,7 @@ final class rda {
                   }
                 }
                 L40: {
-                  if (param0 != 13) {
+                  if (-14 != (param0 ^ -1)) {
                     break L40;
                   } else {
                     var5 = -1;
@@ -449,7 +469,7 @@ final class rda {
                   }
                 }
                 L41: {
-                  if (param0 == 14) {
+                  if (-15 == (param0 ^ -1)) {
                     var4 = -1;
                     var5 = 1;
                     break L41;
@@ -457,17 +477,21 @@ final class rda {
                     break L41;
                   }
                 }
-                L42: {
-                  if (param0 == 15) {
-                    var5 = 1;
-                    var4 = 1;
-                    break L42;
-                  } else {
-                    break L42;
+                if (param1 != 11259) {
+                  return;
+                } else {
+                  L42: {
+                    if (param0 == 15) {
+                      var5 = 1;
+                      var4 = 1;
+                      break L42;
+                    } else {
+                      break L42;
+                    }
                   }
+                  dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+                  return;
                 }
-                dl.field_j = ek.a(var4 * var2, var5 * var2, false);
-                return;
               } else {
                 L43: {
                   var4 = -1;
@@ -480,7 +504,7 @@ final class rda {
                   }
                 }
                 L44: {
-                  if (param0 != 12) {
+                  if ((param0 ^ -1) != -13) {
                     break L44;
                   } else {
                     var5 = -1;
@@ -489,7 +513,7 @@ final class rda {
                   }
                 }
                 L45: {
-                  if (param0 != 13) {
+                  if (-14 != (param0 ^ -1)) {
                     break L45;
                   } else {
                     var5 = -1;
@@ -498,7 +522,7 @@ final class rda {
                   }
                 }
                 L46: {
-                  if (param0 == 14) {
+                  if (-15 == (param0 ^ -1)) {
                     var4 = -1;
                     var5 = 1;
                     break L46;
@@ -506,17 +530,21 @@ final class rda {
                     break L46;
                   }
                 }
-                L47: {
-                  if (param0 == 15) {
-                    var5 = 1;
-                    var4 = 1;
-                    break L47;
-                  } else {
-                    break L47;
+                if (param1 != 11259) {
+                  return;
+                } else {
+                  L47: {
+                    if (param0 == 15) {
+                      var5 = 1;
+                      var4 = 1;
+                      break L47;
+                    } else {
+                      break L47;
+                    }
                   }
+                  dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+                  return;
                 }
-                dl.field_j = ek.a(var4 * var2, var5 * var2, false);
-                return;
               }
             }
           } else {
@@ -524,7 +552,7 @@ final class rda {
               var2 = (var3 * 16384 - 40960) / 220;
               var4 = 1;
               var5 = 0;
-              if (param0 == 1) {
+              if (-2 == (param0 ^ -1)) {
                 var5 = 1;
                 break L48;
               } else {
@@ -532,7 +560,7 @@ final class rda {
               }
             }
             L49: {
-              if (param0 == 3) {
+              if ((param0 ^ -1) == -4) {
                 var4 = -1;
                 break L49;
               } else {
@@ -568,7 +596,7 @@ final class rda {
             }
             if (param0 != 7) {
               L53: {
-                if (param0 != 8) {
+                if ((param0 ^ -1) != -9) {
                   break L53;
                 } else {
                   var4 = -1;
@@ -585,7 +613,7 @@ final class rda {
                 }
               }
               L55: {
-                if (param0 != 12) {
+                if ((param0 ^ -1) != -13) {
                   break L55;
                 } else {
                   var5 = -1;
@@ -594,7 +622,7 @@ final class rda {
                 }
               }
               L56: {
-                if (param0 != 13) {
+                if (-14 != (param0 ^ -1)) {
                   break L56;
                 } else {
                   var5 = -1;
@@ -603,7 +631,7 @@ final class rda {
                 }
               }
               L57: {
-                if (param0 == 14) {
+                if (-15 == (param0 ^ -1)) {
                   var4 = -1;
                   var5 = 1;
                   break L57;
@@ -611,17 +639,21 @@ final class rda {
                   break L57;
                 }
               }
-              L58: {
-                if (param0 == 15) {
-                  var5 = 1;
-                  var4 = 1;
-                  break L58;
-                } else {
-                  break L58;
+              if (param1 != 11259) {
+                return;
+              } else {
+                L58: {
+                  if (param0 == 15) {
+                    var5 = 1;
+                    var4 = 1;
+                    break L58;
+                  } else {
+                    break L58;
+                  }
                 }
+                dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+                return;
               }
-              dl.field_j = ek.a(var4 * var2, var5 * var2, false);
-              return;
             } else {
               L59: {
                 var4 = -1;
@@ -634,7 +666,7 @@ final class rda {
                 }
               }
               L60: {
-                if (param0 != 12) {
+                if ((param0 ^ -1) != -13) {
                   break L60;
                 } else {
                   var5 = -1;
@@ -643,7 +675,7 @@ final class rda {
                 }
               }
               L61: {
-                if (param0 != 13) {
+                if (-14 != (param0 ^ -1)) {
                   break L61;
                 } else {
                   var5 = -1;
@@ -652,7 +684,7 @@ final class rda {
                 }
               }
               L62: {
-                if (param0 == 14) {
+                if (-15 == (param0 ^ -1)) {
                   var4 = -1;
                   var5 = 1;
                   break L62;
@@ -660,32 +692,38 @@ final class rda {
                   break L62;
                 }
               }
-              L63: {
-                if (param0 == 15) {
-                  var5 = 1;
-                  var4 = 1;
-                  break L63;
-                } else {
-                  break L63;
+              if (param1 != 11259) {
+                return;
+              } else {
+                L63: {
+                  if (param0 == 15) {
+                    var5 = 1;
+                    var4 = 1;
+                    break L63;
+                  } else {
+                    break L63;
+                  }
                 }
+                dl.field_j = ek.a(var4 * var2, var5 * var2, false);
+                return;
               }
-              dl.field_j = ek.a(var4 * var2, var5 * var2, false);
-              return;
             }
           }
         }
     }
 
     public static void a(boolean param0) {
+        if (!param0) {
+            field_b = (byte[]) null;
+            field_a = null;
+            field_b = null;
+            return;
+        }
         field_a = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new byte[520];
     }
 }

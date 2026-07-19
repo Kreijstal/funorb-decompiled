@@ -23,6 +23,9 @@ final class qc extends gg {
         field_s = null;
         field_i = null;
         field_o = null;
+        if (param0) {
+            field_h = (String[]) null;
+        }
     }
 
     final static void a(boolean param0, int param1) {
@@ -86,27 +89,24 @@ final class qc extends gg {
     }
 
     qc(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+        int fieldTemp$0 = 0;
         try {
-            ((qc) this).field_r = param6;
-            ((qc) this).field_q = param5;
-            ((qc) this).field_p = param1;
-            ((qc) this).field_j = param3;
-            ((qc) this).field_k = param2;
-            int fieldTemp$0 = l.field_c;
+            this.field_r = param6;
+            this.field_q = param5;
+            this.field_p = param1;
+            this.field_j = param3;
+            this.field_k = param2;
+            fieldTemp$0 = l.field_c;
             l.field_c = l.field_c + 1;
-            ((qc) this).field_u = fieldTemp$0 & 65535;
-            ((qc) this).field_m = param0;
-            ((qc) this).field_t = param4;
+            this.field_u = fieldTemp$0 & 65535;
+            this.field_m = param0;
+            this.field_t = param4;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "qc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw fc.a((Throwable) ((Object) runtimeException), "qc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new int[6];
         field_l = new int[36];
         field_o[4] = 220;

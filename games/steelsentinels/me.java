@@ -16,7 +16,7 @@ abstract class me {
         field_b = null;
         field_c = null;
         field_f = null;
-        int var1 = 0;
+        int var1 = 47 % ((param0 - -55) / 54);
         field_a = null;
         field_g = null;
     }
@@ -25,19 +25,15 @@ abstract class me {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (!((param0 & 7) == 0)) {
+        if (!(-1 == (param0 & 7 ^ -1))) {
             var2 = 8 - (7 & param0);
         }
-        int var3 = 1;
+        int var3 = 39 % ((36 - param1) / 56);
         int var4 = var2 + param0;
         return var4;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = 0;
         field_g = new int[4];
         field_a = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};

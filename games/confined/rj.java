@@ -10,7 +10,7 @@ final class rj {
     static String field_d;
 
     public static void a(int param0) {
-        field_f = null;
+        field_f = (byte[][]) null;
         field_c = null;
         field_b = null;
         field_d = null;
@@ -25,7 +25,7 @@ final class rj {
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
         if (param0 == 28404) {
-          if (rk.field_e >= 10) {
+          if (-11 >= (rk.field_e ^ -1)) {
             if (fd.field_j) {
               return false;
             } else {
@@ -47,7 +47,7 @@ final class rj {
           }
         } else {
           rj.a(58);
-          if (rk.field_e >= 10) {
+          if (-11 >= (rk.field_e ^ -1)) {
             if (fd.field_j) {
               return false;
             } else {
@@ -71,10 +71,6 @@ final class rj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = null;
         field_a = 0;
         field_d = "<col=FFFFFF>Ready energy:</col> depleted when you use your energy weapons. If it runs out, your weapons will stop firing for a moment to allow it to recharge.";

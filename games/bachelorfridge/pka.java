@@ -10,6 +10,8 @@ final class pka implements qda {
     private int field_e;
 
     public final void a(int param0, wj param1, int param2, int param3, boolean param4) {
+        int discarded$2 = 0;
+        nga discarded$3 = null;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -17,7 +19,7 @@ final class pka implements qda {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        Object var12 = null;
+        lu var12 = null;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -60,18 +62,18 @@ final class pka implements qda {
             }
             L3: {
               var6_int = stackIn_6_0;
-              int discarded$2 = ((pka) this).field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_w + "</u>", param0 - -param1.field_s, param3 + param1.field_v, param1.field_p, param1.field_q, var6_int, -1, ((pka) this).field_d, ((pka) this).field_e, ((pka) this).field_c.field_u + ((pka) this).field_c.field_B);
+              discarded$2 = this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_w + "</u>", param0 - -param1.field_s, param3 + param1.field_v, param1.field_p, param1.field_q, var6_int, -1, this.field_d, this.field_e, this.field_c.field_u + this.field_c.field_B);
               if (param1.e(1023)) {
                 L4: {
-                  var7 = ((pka) this).field_c.a(param1.field_w);
-                  var8 = ((pka) this).field_c.field_u + ((pka) this).field_c.field_B;
+                  var7 = this.field_c.a(param1.field_w);
+                  var8 = this.field_c.field_u + this.field_c.field_B;
                   var9 = param1.field_s + param0;
                   var10 = param3 + param1.field_v;
-                  if (2 != ((pka) this).field_d) {
-                    if (-2 != ((pka) this).field_d) {
+                  if (2 != this.field_d) {
+                    if (-2 != (this.field_d ^ -1)) {
                       break L4;
                     } else {
-                      var9 = var9 + (param1.field_p + -var7 >> 1);
+                      var9 = var9 + (param1.field_p + -var7 >> -838780895);
                       break L4;
                     }
                   } else {
@@ -80,11 +82,11 @@ final class pka implements qda {
                   }
                 }
                 L5: {
-                  if (-3 != ((pka) this).field_e) {
-                    if (((pka) this).field_e != 1) {
+                  if (-3 != (this.field_e ^ -1)) {
+                    if ((this.field_e ^ -1) != -2) {
                       break L5;
                     } else {
-                      var10 = var10 + (param1.field_q - var8 >> 1);
+                      var10 = var10 + (param1.field_q - var8 >> 966027233);
                       break L5;
                     }
                   } else {
@@ -101,8 +103,8 @@ final class pka implements qda {
             if (param2 == 32679) {
               break L0;
             } else {
-              var12 = null;
-              nga discarded$3 = pka.a((lu) null, true);
+              var12 = (lu) null;
+              discarded$3 = pka.a((lu) null, true);
               return;
             }
           }
@@ -110,23 +112,23 @@ final class pka implements qda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var6;
+            stackOut_20_0 = (RuntimeException) (var6);
             stackOut_20_1 = new StringBuilder().append("pka.A(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -134,7 +136,7 @@ final class pka implements qda {
               break L6;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -164,7 +166,7 @@ final class pka implements qda {
               if (!param1) {
                 break L1;
               } else {
-                field_a = null;
+                field_a = (String) null;
                 break L1;
               }
             }
@@ -176,23 +178,23 @@ final class pka implements qda {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("pka.E(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -200,65 +202,84 @@ final class pka implements qda {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     final static void a(kia param0, boolean param1, byte param2) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
+        nga discarded$2 = null;
+        RuntimeException runtimeException = null;
+        lu var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
         try {
-          hda.a(-1, param0, param1, 256);
-          return;
+          L0: {
+            L1: {
+              hda.a(-1, param0, param1, 256);
+              if (param2 == 73) {
+                break L1;
+              } else {
+                var4 = (lu) null;
+                discarded$2 = pka.a((lu) null, false);
+                break L1;
+              }
+            }
+            break L0;
+          }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L0: {
-            var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("pka.B(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
+            stackOut_3_1 = new StringBuilder().append("pka.B(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L0;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L0;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + 73 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void a(int param0) {
+        if (param0 != -8155) {
+            field_f = false;
+            field_a = null;
+            field_b = null;
+            return;
+        }
         field_a = null;
         field_b = null;
     }
@@ -277,26 +298,22 @@ final class pka implements qda {
     }
 
     public pka() {
-        ((pka) this).field_d = 1;
-        ((pka) this).field_c = jca.field_a;
-        ((pka) this).field_e = 1;
+        this.field_d = 1;
+        this.field_c = jca.field_a;
+        this.field_e = 1;
     }
 
     pka(po param0, int param1, int param2) {
         try {
-            ((pka) this).field_c = param0;
-            ((pka) this).field_e = param2;
-            ((pka) this).field_d = param1;
+            this.field_c = param0;
+            this.field_e = param2;
+            this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "pka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "pka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = true;
         field_a = "This password is part of your Player Name, and would be easy to guess";
     }

@@ -8,35 +8,39 @@ abstract class ra implements dm {
     static String field_b;
 
     public static void b(boolean param0) {
+        if (!param0) {
+            field_c = (mn) null;
+        }
         field_d = null;
         field_b = null;
         field_c = null;
     }
 
     public final fi a(int param0) {
-        if (!(!((ra) this).a(true))) {
+        String discarded$0 = null;
+        if (!(!this.a(true))) {
             return gi.field_bb;
         }
-        if (!(~(((ra) this).field_a + 350L) >= ~ri.a(-3))) {
+        if (!((this.field_a + 350L ^ -1L) >= (ri.a(-3) ^ -1L))) {
             return ab.field_b;
         }
         if (param0 != -3621) {
-            String discarded$0 = ((ra) this).b((byte) 22);
+            discarded$0 = this.b((byte) 22);
         }
-        return ((ra) this).c(true);
+        return this.c(true);
     }
 
     public final String a(byte param0) {
         if (param0 < 65) {
-            ((ra) this).field_a = -60L;
+            this.field_a = -60L;
         }
-        if (((ra) this).a(true)) {
+        if (this.a(true)) {
             return null;
         }
-        if (~ri.a(-3) > ~(350L + ((ra) this).field_a)) {
+        if ((ri.a(-3) ^ -1L) > (350L + this.field_a ^ -1L)) {
             return null;
         }
-        return ((ra) this).b((byte) 126);
+        return this.b((byte) 126);
     }
 
     final static long a(CharSequence param0, int param1) {
@@ -46,7 +50,7 @@ abstract class ra implements dm {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        Object var8 = null;
+        CharSequence var8 = null;
         long stackIn_22_0 = 0L;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -75,7 +79,7 @@ abstract class ra implements dm {
               if (param1 >= 115) {
                 break L1;
               } else {
-                var8 = null;
+                var8 = (CharSequence) null;
                 break L1;
               }
             }
@@ -153,23 +157,23 @@ abstract class ra implements dm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var2;
+            stackOut_23_0 = (RuntimeException) (var2);
             stackOut_23_1 = new StringBuilder().append("ra.K(");
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L9;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -177,16 +181,16 @@ abstract class ra implements dm {
               break L9;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
         }
         return stackIn_22_0;
     }
 
     public final void b(int param0) {
         if (param0 > -46) {
-            ((ra) this).field_a = -58L;
+            this.field_a = -58L;
         }
-        ((ra) this).field_a = ri.a(-3);
+        this.field_a = ri.a(-3);
     }
 
     abstract fi c(boolean param0);
@@ -194,10 +198,6 @@ abstract class ra implements dm {
     abstract String b(byte param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new mn();
         field_d = new mn();
         field_b = "Enter the name you'd prefer. This is the name displayed to other players.";

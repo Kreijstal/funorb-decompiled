@@ -24,17 +24,13 @@ abstract class dl {
     final java.net.Socket a(byte param0) throws IOException {
         if (param0 != -76) {
           dl.b(53);
-          return new java.net.Socket(((dl) this).field_a, ((dl) this).field_c);
+          return new java.net.Socket(this.field_a, this.field_c);
         } else {
-          return new java.net.Socket(((dl) this).field_a, ((dl) this).field_c);
+          return new java.net.Socket(this.field_a, this.field_c);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 0;
     }
 }

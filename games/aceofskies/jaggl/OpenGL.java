@@ -18,12 +18,12 @@ public class OpenGL {
     public final native static void glPixelStorei(int param0, int param1);
 
     public final synchronized boolean a() {
-        if (((jaggl.OpenGL) this).a != Thread.currentThread()) {
+        if (this.a != Thread.currentThread()) {
             return false;
         }
         this.detachPeer();
-        Object discarded$0 = b.remove((Object) (Object) ((jaggl.OpenGL) this).a);
-        ((jaggl.OpenGL) this).a = null;
+        Object discarded$0 = b.remove(this.a);
+        this.a = null;
         return true;
     }
 
@@ -100,30 +100,32 @@ public class OpenGL {
     public final native static void glTexCoord2f(float param0, float param1);
 
     public final boolean a(String param0) {
+        Object discarded$2 = null;
+        Object discarded$3 = null;
         String var2 = null;
         int var3 = 0;
         int var4_int = 0;
         String var4 = null;
         String var5 = null;
-        if (null == ((jaggl.OpenGL) this).c) {
-          ((jaggl.OpenGL) this).c = new Hashtable();
-          var2 = OpenGL.glGetString(7939);
+        if (null == this.c) {
+          this.c = new Hashtable();
+          var2 = jaggl.OpenGL.glGetString(7939);
           var3 = 0;
           L0: while (true) {
             var4_int = var2.indexOf(' ', var3);
-            if (var4_int == -1) {
+            if (0 == (var4_int ^ -1)) {
               var4 = var2.substring(var3).trim();
               if (var4.length() != 0) {
-                Object discarded$2 = ((jaggl.OpenGL) this).c.put((Object) (Object) var4, (Object) (Object) var4);
-                return ((jaggl.OpenGL) this).c.containsKey((Object) (Object) param0);
+                discarded$2 = this.c.put(var4, var4);
+                return this.c.containsKey(param0);
               } else {
-                return ((jaggl.OpenGL) this).c.containsKey((Object) (Object) param0);
+                return this.c.containsKey(param0);
               }
             } else {
               var5 = var2.substring(var3, var4_int).trim();
               var3 = 1 + var4_int;
               if (var5.length() != 0) {
-                Object discarded$3 = ((jaggl.OpenGL) this).c.put((Object) (Object) var5, (Object) (Object) var5);
+                discarded$3 = this.c.put(var5, var5);
                 continue L0;
               } else {
                 continue L0;
@@ -131,7 +133,7 @@ public class OpenGL {
             }
           }
         } else {
-          return ((jaggl.OpenGL) this).c.containsKey((Object) (Object) param0);
+          return this.c.containsKey(param0);
         }
     }
 
@@ -377,7 +379,7 @@ public class OpenGL {
           return false;
         } else {
           L0: {
-            var3 = (jaggl.OpenGL) b.put((Object) (Object) var1, this);
+            var3 = (jaggl.OpenGL) (b.put(var1, this));
             if (var3 != null) {
               var3.a = null;
               break L0;
@@ -385,7 +387,7 @@ public class OpenGL {
               break L0;
             }
           }
-          ((jaggl.OpenGL) this).a = var1;
+          this.a = var1;
           return true;
         }
     }
@@ -439,10 +441,6 @@ public class OpenGL {
     public final native static void glReadPixelsub(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         b = new Hashtable();
     }
 }

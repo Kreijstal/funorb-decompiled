@@ -14,15 +14,15 @@ final class si extends ic {
     final void g(byte param0) {
         int var4 = TorChallenge.field_F ? 1 : 0;
         if (param0 != -37) {
-            field_L = null;
+            field_L = (int[]) null;
         }
-        nj var2 = new nj(((si) this).field_G);
-        b var3 = (b) (Object) var2.c(0);
+        nj var2 = new nj(this.field_G);
+        b var3 = (b) ((Object) var2.c(0));
         while (var3 != null) {
             if (var3.h(124)) {
                 var3.a(true);
             }
-            var3 = (b) (Object) var2.a(false);
+            var3 = (b) ((Object) var2.a(false));
         }
     }
 
@@ -53,7 +53,7 @@ final class si extends ic {
               if (param0 == 125) {
                 break L1;
               } else {
-                field_K = null;
+                field_K = (int[]) null;
                 break L1;
               }
             }
@@ -62,10 +62,10 @@ final class si extends ic {
             var3 = lg.field_d[var2][8];
             var4 = ef.field_j[0];
             var5 = ef.field_j[1];
-            var6 = var4 - var1_int >> 1;
-            var7 = var4 - (var1_int + (var6 << 1) - var6);
-            var8 = var5 + -var3 >> 1;
-            var9 = var8 + -(var8 << 1) + var5 - var3;
+            var6 = var4 - var1_int >> 1457670689;
+            var7 = var4 - (var1_int + (var6 << 1695363393) - var6);
+            var8 = var5 + -var3 >> -1920367167;
+            var9 = var8 + -(var8 << 1363238785) + var5 - var3;
             rj.a(2, var2, var3, ba.field_b, var1_int);
             ji.field_p = new ka[9];
             var12 = de.field_a;
@@ -80,28 +80,26 @@ final class si extends ic {
                   L4: {
                     var16 = var15;
                     if (var16 != 0) {
-                      if (var16 == 2) {
+                      if ((var16 ^ -1) == -3) {
                         break L4;
                       } else {
-                        if (var16 == 6) {
+                        if ((var16 ^ -1) == -7) {
                           break L4;
                         } else {
-                          if (var16 == 8) {
+                          if ((var16 ^ -1) == -9) {
                             break L4;
                           } else {
                             L5: {
                               if (var16 == 1) {
                                 break L5;
                               } else {
-                                if (var16 != 7) {
+                                if ((var16 ^ -1) != -8) {
                                   L6: {
-                                    if (var16 == 3) {
+                                    if (-4 == (var16 ^ -1)) {
                                       break L6;
                                     } else {
                                       if (5 != var16) {
-                                        if (var16 != 4) {
-                                          break L3;
-                                        } else {
+                                        if ((var16 ^ -1) == -5) {
                                           var13 = var12.field_q;
                                           var14 = var12.field_v;
                                           var1_int = -var7 + (var13 + -var6) - ba.field_b[var15].field_q * 2;
@@ -114,6 +112,9 @@ final class si extends ic {
                                           var11 = -var3 + -var8;
                                           var12.g(var10, var11);
                                           break L3;
+                                        } else {
+                                          var15++;
+                                          continue L2;
                                         }
                                       } else {
                                         break L6;
@@ -180,7 +181,7 @@ final class si extends ic {
                       if (0 == var15) {
                         break L10;
                       } else {
-                        if (var15 == 2) {
+                        if ((var15 ^ -1) == -3) {
                           break L10;
                         } else {
                           var11 = var9 + -var14 - -var3;
@@ -196,7 +197,7 @@ final class si extends ic {
                       if (var15 == 0) {
                         break L12;
                       } else {
-                        if (var15 == 6) {
+                        if (-7 == (var15 ^ -1)) {
                           break L12;
                         } else {
                           var10 = var1_int + -var13 + var7;
@@ -219,23 +220,23 @@ final class si extends ic {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "si.F(" + param0 + ')');
+          throw oj.a((Throwable) ((Object) var1), "si.F(" + param0 + ')');
         }
     }
 
     final void a(int param0, int param1, boolean param2, int param3) {
         int var7 = TorChallenge.field_F ? 1 : 0;
-        if (null != ((si) this).field_q) {
-            ((si) this).field_q.a((ee) this, param0, param1, (byte) 97, true);
+        if (null != this.field_q) {
+            this.field_q.a((ee) (this), param0, param1, (byte) 97, true);
         }
-        nj var5 = new nj(((si) this).field_G);
-        ee var6 = (ee) (Object) var5.a(-107);
+        nj var5 = new nj(this.field_G);
+        ee var6 = (ee) ((Object) var5.a(-107));
         if (param2) {
             return;
         }
         while (var6 != null) {
-            var6.a(((si) this).field_i + param0, ((si) this).field_m + param1, false, param3);
-            var6 = (ee) (Object) var5.c((byte) -13);
+            var6.a(this.field_i + param0, this.field_m + param1, false, param3);
+            var6 = (ee) ((Object) var5.c((byte) -13));
         }
     }
 
@@ -255,7 +256,7 @@ final class si extends ic {
 
     final static vh a(String param0, int param1) {
         RuntimeException var2 = null;
-        Object var3 = null;
+        ka[] var3 = null;
         vh stackIn_7_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -280,7 +281,7 @@ final class si extends ic {
               if (param1 >= 22) {
                 break L1;
               } else {
-                var3 = null;
+                var3 = (ka[]) null;
                 si.a(true, (ka[]) null, -120, -97);
                 break L1;
               }
@@ -289,7 +290,7 @@ final class si extends ic {
               if (!ji.field_k.b(0)) {
                 break L2;
               } else {
-                if (!param0.equals((Object) (Object) ji.field_k.a(0))) {
+                if (!param0.equals(ji.field_k.a(0))) {
                   ji.field_k = og.a(param0, true);
                   break L2;
                 } else {
@@ -305,23 +306,23 @@ final class si extends ic {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_0 = (RuntimeException) (var2);
             stackOut_8_1 = new StringBuilder().append("si.S(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -329,7 +330,7 @@ final class si extends ic {
               break L3;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
         }
         return stackIn_7_0;
     }
@@ -337,11 +338,14 @@ final class si extends ic {
     final static void a(boolean param0, ka[] param1, int param2, int param3) {
         try {
             gb.field_f = new h(param1);
+            if (!param0) {
+                si.a(-13, (int[][]) null, 101, (int[][][]) null, -87, 90);
+            }
             i.field_m = param3;
             mg.field_d = param2;
             rf.m(62);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "si.B(" + true + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "si.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -351,21 +355,21 @@ final class si extends ic {
         int var4 = 0;
         L0: {
           var4 = TorChallenge.field_F ? 1 : 0;
-          var2 = new nj(((si) this).field_G);
+          var2 = new nj(this.field_G);
           if (param0 <= -24) {
             break L0;
           } else {
-            field_L = null;
+            field_L = (int[]) null;
             break L0;
           }
         }
-        var3 = (b) (Object) var2.c(0);
+        var3 = (b) ((Object) var2.c(0));
         L1: while (true) {
           if (var3 != null) {
             if (var3.field_K) {
               return var3.d((byte) 107);
             } else {
-              var3 = (b) (Object) var2.a(false);
+              var3 = (b) ((Object) var2.a(false));
               continue L1;
             }
           } else {
@@ -420,32 +424,40 @@ final class si extends ic {
             var9 = 0;
             L1: while (true) {
               if (2 <= var9) {
-                la.field_f.a(105);
+                L2: {
+                  la.field_f.a(param5 + 104);
+                  if (param5 == 1) {
+                    break L2;
+                  } else {
+                    field_L = (int[]) null;
+                    break L2;
+                  }
+                }
                 break L0;
               } else {
                 var10 = 0;
-                L2: while (true) {
+                L3: while (true) {
                   if (var10 > 1) {
                     var9++;
                     continue L1;
                   } else {
-                    L3: {
+                    L4: {
                       sf.field_d[var9][param2][var10].d();
                       qg.a(ae.field_y);
                       var6_int = param3[param2][var10][1] - param3[param2][var10][0];
-                      if (var6_int > 0) {
+                      if ((var6_int ^ -1) < -1) {
                         qg.a(0, 0, var6_int, var7);
                         var8 = param1[var10][param2];
                         od.a(nj.field_e[var9][var6_int + -1], var8);
                         qg.b(ae.field_y);
                         la.field_f.a(-38);
-                        break L3;
+                        break L4;
                       } else {
-                        break L3;
+                        break L4;
                       }
                     }
                     var10++;
-                    continue L2;
+                    continue L3;
                   }
                 }
               }
@@ -453,100 +465,100 @@ final class si extends ic {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L5: {
             var6 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var6;
+            stackOut_13_0 = (RuntimeException) (var6);
             stackOut_13_1 = new StringBuilder().append("si.DA(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L4;
+              break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
               stackIn_16_2 = stackOut_14_2;
-              break L4;
+              break L5;
             }
           }
-          L5: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+          L6: {
+            stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
             stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param2).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param3 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
-              break L5;
+              break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
               stackIn_19_2 = stackOut_17_2;
-              break L5;
+              break L6;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ',' + param4 + ',' + 1 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final void j(int param0) {
         int var4 = TorChallenge.field_F ? 1 : 0;
-        nj var2 = new nj(((si) this).field_G);
-        b var3 = (b) (Object) var2.c(0);
+        nj var2 = new nj(this.field_G);
+        b var3 = (b) ((Object) var2.c(0));
         while (var3 != null) {
             if (!(!var3.j(1))) {
                 var3.a(true);
             }
-            var3 = (b) (Object) var2.a(false);
+            var3 = (b) ((Object) var2.a(false));
         }
         if (param0 > -38) {
-            ((si) this).field_G = null;
+            this.field_G = (sl) null;
         }
-        ((si) this).field_A = (ee) (Object) ((si) this).f((byte) 123);
+        this.field_A = (ee) ((Object) this.f((byte) 123));
     }
 
     final b f(byte param0) {
         nj var2 = null;
         b var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        ee var5 = null;
         L0: {
           var4 = TorChallenge.field_F ? 1 : 0;
-          var2 = new nj(((si) this).field_G);
+          var2 = new nj(this.field_G);
           if (param0 == 123) {
             break L0;
           } else {
-            var5 = null;
-            ((si) this).a((byte) -70, (ee) null);
+            var5 = (ee) null;
+            this.a((byte) -70, (ee) null);
             break L0;
           }
         }
-        var3 = (b) (Object) var2.c(0);
+        var3 = (b) ((Object) var2.c(0));
         L1: while (true) {
           if (var3 != null) {
             if (var3.field_K) {
               return var3;
             } else {
-              var3 = (b) (Object) var2.a(false);
+              var3 = (b) ((Object) var2.a(false));
               continue L1;
             }
           } else {
@@ -556,6 +568,7 @@ final class si extends ic {
     }
 
     final static String a(boolean param0, int param1, boolean param2, boolean param3) {
+        String discarded$0 = null;
         int var4 = 0;
         if (!(!param3)) {
             var4 += 4;
@@ -563,17 +576,20 @@ final class si extends ic {
         if (!(!param2)) {
             var4 += 2;
         }
+        if (!(!param0)) {
+            var4++;
+        }
         if (param1 != 8586514) {
-            String discarded$0 = si.a(false, 58, false, false);
+            discarded$0 = si.a(false, 58, false, false);
         }
         return ii.field_g[var4];
     }
 
     public static void d(byte param0) {
         field_K = null;
-        int var1 = 0;
+        int var1 = 74 % ((param0 - 15) / 51);
         field_H = null;
-        field_I = null;
+        field_I = (ka[][][]) null;
         field_F = null;
         field_M = null;
         field_L = null;
@@ -581,13 +597,13 @@ final class si extends ic {
 
     final void i(int param0) {
         int var4 = TorChallenge.field_F ? 1 : 0;
-        nj var2 = new nj(((si) this).field_G);
-        b var3 = (b) (Object) var2.c(0);
+        nj var2 = new nj(this.field_G);
+        b var3 = (b) ((Object) var2.c(0));
         while (var3 != null) {
             var3.field_K = false;
-            var3 = (b) (Object) var2.a(false);
+            var3 = (b) ((Object) var2.a(false));
         }
-        ((si) this).field_A = null;
+        this.field_A = null;
         if (param0 != 8389905) {
             si.e((byte) 49);
         }
@@ -595,6 +611,7 @@ final class si extends ic {
 
     final void a(byte param0, ee param1) {
         b var3 = null;
+        boolean discarded$0 = false;
         if (param0 < 52) {
             return;
         }
@@ -602,25 +619,21 @@ final class si extends ic {
             if (!(param1 instanceof b)) {
                 throw new IllegalArgumentException();
             }
-            var3 = (b) (Object) param1;
-            ((si) this).field_G.a((byte) 119, (da) (Object) var3);
+            var3 = (b) ((Object) param1);
+            this.field_G.a((byte) 119, var3);
             var3.field_K = true;
-            boolean discarded$0 = var3.a((ee) this, 0);
+            discarded$0 = var3.a((ee) (this), 0);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "si.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "si.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public si() {
         super(0, 0, TorChallenge.field_G, md.field_h, (j) null, (gg) null);
-        ((si) this).field_G = new sl();
+        this.field_G = new sl();
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_H = new int[]{6882317, 8389905, 8586514, 6882317};
         field_L = new int[2];
         field_M = "Start Game";

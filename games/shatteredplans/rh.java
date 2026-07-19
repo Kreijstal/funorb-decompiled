@@ -43,9 +43,9 @@ final class rh implements jk {
               }
             }
             L3: {
-              if (qd.field_a >= 18) {
+              if ((qd.field_a ^ -1) <= -19) {
                 qd.field_a = 18;
-                var2_ref_tm = (tm) (Object) ld.field_p.h(35);
+                var2_ref_tm = (tm) ((Object) ld.field_p.h(35));
                 if (var2_ref_tm == null) {
                   break L3;
                 } else {
@@ -56,28 +56,36 @@ final class rh implements jk {
                 break L3;
               }
             }
+            L4: {
+              if (param0 <= -126) {
+                break L4;
+              } else {
+                field_g = (mp) null;
+                break L4;
+              }
+            }
             var2 = 0;
-            L4: while (true) {
+            L5: while (true) {
               if (var2 >= hj.field_l.length) {
                 break L0;
               } else {
-                L5: {
+                L6: {
                   if (hj.field_l[var2] == null) {
-                    break L5;
+                    break L6;
                   } else {
                     hj.field_l[var2].a(256);
-                    break L5;
+                    break L6;
                   }
                 }
                 var2++;
-                continue L4;
+                continue L5;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1_ref, "rh.B(" + -127 + ')');
+          throw r.a((Throwable) ((Object) var1_ref), "rh.B(" + param0 + ')');
         }
     }
 
@@ -85,6 +93,9 @@ final class rh implements jk {
         field_f = null;
         field_a = null;
         field_g = null;
+        if (param0 != 5) {
+            field_e = 0.9834237462567611;
+        }
     }
 
     final static void a(byte param0) {
@@ -98,15 +109,11 @@ final class rh implements jk {
     }
 
     public rh() {
-        ((rh) this).field_b = new qk[4];
-        ((rh) this).field_c = new lp[4];
+        this.field_b = new qk[4];
+        this.field_c = new lp[4];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "New Game";
         field_f = new int[]{0, 5, 39, 72, 67, 33};
         field_g = new mp();

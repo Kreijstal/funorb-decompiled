@@ -19,13 +19,16 @@ final class ni extends fa {
         field_o = null;
         field_s = null;
         field_m = null;
+        if (param0 > -4) {
+            field_m = (tf) null;
+        }
     }
 
     final static um a(int param0, int param1) {
         um var2 = new um();
-        bq.field_a.a(22125, (fa) (Object) var2);
-        sd.a(true, 6);
-        int var3 = 31;
+        bq.field_a.a(22125, var2);
+        sd.a(true, param0);
+        int var3 = -62 / ((param1 - 48) / 62);
         return var2;
     }
 
@@ -43,12 +46,12 @@ final class ni extends fa {
             aq.field_a = param6;
             mp.field_f = param4;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ni.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "ni.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ')');
         }
     }
 
     final static void a(int param0) {
-        Object var2 = null;
+        jl var2 = null;
         L0: {
           oc.field_H[5].a(ug.field_n, (byte) -24);
           oc.field_H[6].a(lm.field_s, (byte) -24);
@@ -63,7 +66,7 @@ final class ni extends fa {
           }
         }
         if (param0 != -31470) {
-          var2 = null;
+          var2 = (jl) null;
           ni.a((tf) null, -53, -40, -46, -15, true, 64, 51, (jl) null, -14, -74);
           return;
         } else {
@@ -72,27 +75,27 @@ final class ni extends fa {
     }
 
     final static int a(byte param0, int param1) {
-        param1 = (1431655765 & param1) - -(-715827883 & param1 >>> 1);
-        param1 = (param1 >>> 2 & -214748365) + (858993459 & param1);
-        param1 = (param1 >>> 4) + param1 & 252645135;
-        param1 = param1 + (param1 >>> 8);
-        param1 = param1 + (param1 >>> 16);
-        return param1 & 255;
+        param1 = (1431655765 & param1) - -(-715827883 & param1 >>> 1314130401);
+        param1 = (param1 >>> -543517598 & -214748365) + (858993459 & param1);
+        param1 = (param1 >>> 420709732) + param1 & 252645135;
+        param1 = param1 + (param1 >>> -210269112);
+        if (param0 > -37) {
+          return 116;
+        } else {
+          param1 = param1 + (param1 >>> 1012604144);
+          return param1 & 255;
+        }
     }
 
     ni(int param0, int param1, int param2, int param3, int param4) {
-        ((ni) this).field_u = param4;
-        ((ni) this).field_r = param2;
-        ((ni) this).field_n = param0;
-        ((ni) this).field_k = param1;
-        ((ni) this).field_t = param3;
+        this.field_u = param4;
+        this.field_r = param2;
+        this.field_n = param0;
+        this.field_k = param1;
+        this.field_t = param3;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "Remove <%0> from friend list";
     }
 }

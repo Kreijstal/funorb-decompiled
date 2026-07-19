@@ -21,10 +21,6 @@ final class me {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "me.A(";
         field_c = "Game options";
         field_b = "Loading graphics";

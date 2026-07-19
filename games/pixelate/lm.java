@@ -16,6 +16,9 @@ class lm extends fa {
         field_s = null;
         field_l = null;
         field_o = null;
+        if (param0 != -2575) {
+            return;
+        }
         field_n = null;
         field_k = null;
         field_m = null;
@@ -23,21 +26,21 @@ class lm extends fa {
 
     final long a(boolean param0) {
         if (!param0) {
-            ((lm) this).e(-120);
-            return ((lm) this).field_q;
+            this.e(-120);
+            return this.field_q;
         }
-        return ((lm) this).field_q;
+        return this.field_q;
     }
 
     final void e(int param0) {
-        if (null != ((lm) this).field_r) {
-          ((lm) this).field_r.field_p = ((lm) this).field_p;
+        if (null != this.field_r) {
+          this.field_r.field_p = this.field_p;
           if (param0 != 17) {
             return;
           } else {
-            ((lm) this).field_p.field_r = ((lm) this).field_r;
-            ((lm) this).field_r = null;
-            ((lm) this).field_p = null;
+            this.field_p.field_r = this.field_r;
+            this.field_r = null;
+            this.field_p = null;
             return;
           }
         } else {
@@ -47,14 +50,14 @@ class lm extends fa {
 
     final boolean f(int param0) {
         if (param0 == 0) {
-          if (((lm) this).field_r == null) {
+          if (this.field_r == null) {
             return false;
           } else {
             return true;
           }
         } else {
-          ((lm) this).e(-41);
-          if (((lm) this).field_r == null) {
+          this.e(-41);
+          if (this.field_r == null) {
             return false;
           } else {
             return true;
@@ -63,13 +66,13 @@ class lm extends fa {
     }
 
     final void a(long param0, int param1) {
-        if (null == ((lm) this).field_r) {
+        if (null == this.field_r) {
           if (param1 != 29574) {
-            ((lm) this).field_p = null;
-            ((lm) this).field_q = param0;
+            this.field_p = (lm) null;
+            this.field_q = param0;
             return;
           } else {
-            ((lm) this).field_q = param0;
+            this.field_q = param0;
             return;
           }
         } else {
@@ -81,10 +84,6 @@ class lm extends fa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = new wm(7, 0, 1, 1);
         field_m = "Play rated game";
         field_n = "If you do nothing the game will revert to normal view in <%0> second.";

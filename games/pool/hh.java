@@ -10,13 +10,27 @@ final class hh {
     static int field_e;
 
     final static vh a(byte param0) {
+        if (param0 != 1) {
+            field_a = 112;
+            return vb.field_m.field_Rb;
+        }
         return vb.field_m.field_Rb;
     }
 
     public static void a(int param0) {
-        field_b = null;
-        field_d = null;
-        field_f = null;
+        short discarded$2 = 0;
+        if (param0 != 28882) {
+          discarded$2 = hh.a((byte) -23, -113);
+          field_b = null;
+          field_d = null;
+          field_f = null;
+          return;
+        } else {
+          field_b = null;
+          field_d = null;
+          field_f = null;
+          return;
+        }
     }
 
     final static short a(byte param0, int param1) {
@@ -53,8 +67,8 @@ final class hh {
         try {
           L0: {
             L1: {
-              var2_float = (float)((param1 & 16711680) >> 16) / 255.0f;
-              var3 = (float)((param1 & 65280) >> 8) / 255.0f;
+              var2_float = (float)((param1 & 16711680) >> -952290864) / 255.0f;
+              var3 = (float)((param1 & 65280) >> -64701304) / 255.0f;
               var4 = (float)(255 & param1) / 255.0f;
               if (var3 < var2_float) {
                 if (var4 >= var2_float) {
@@ -157,7 +171,7 @@ final class hh {
                     var11 = (int)(var8 * 63.0f + 0.5f);
                     var12 = (int)(0.5f + var9 * 7.0f);
                     var13 = (int)(0.5f + var10 * 127.0f);
-                    stackOut_34_0 = (short)(var12 << 7 | var11 << 10 | var13);
+                    stackOut_34_0 = (short)(var12 << 453553511 | var11 << -822924790 | var13);
                     stackIn_35_0 = stackOut_34_0;
                     break L0;
                   } else {
@@ -174,16 +188,12 @@ final class hh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var2, "hh.B(" + param0 + ',' + param1 + ')');
+          throw wm.a((Throwable) ((Object) var2), "hh.B(" + param0 + ',' + param1 + ')');
         }
         return stackIn_35_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = true;
         field_a = 0;
         field_b = "Data server full or too many connections from your address. Please try again in a few minutes.";

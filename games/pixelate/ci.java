@@ -11,8 +11,8 @@ final class ci extends jj {
 
     final void c(int param0) {
         super.c(param0);
-        ((ci) this).field_p.a(440, 100, (byte) 116, 120, 0);
-        ((ci) this).field_q.a(440, 100, (byte) 116, 120, 0);
+        this.field_p.a(440, 100, (byte) 116, 120, 0);
+        this.field_q.a(440, 100, (byte) 116, 120, 0);
         lg.field_a = lg.field_a - 4;
         if (!(0 <= lg.field_a)) {
             lg.field_a = 0;
@@ -21,10 +21,10 @@ final class ci extends jj {
 
     final void a(boolean param0) {
         qa.field_g.f(0, 0);
-        int var2 = lg.field_a >> 3;
-        t.f(0, 0, 640, 480, 17, (var2 << 8) + (var2 * 2 + 34) - -(var2 << 16));
-        ((ci) this).field_p.b((byte) -123);
-        ((ci) this).field_q.b((byte) -123);
+        int var2 = lg.field_a >> -1894730653;
+        t.f(0, 0, 640, 480, 17, (var2 << -2067220824) + (var2 * 2 + 34) - -(var2 << 1759534608));
+        this.field_p.b((byte) -123);
+        this.field_q.b((byte) -123);
         Pixelate.field_E.b(0, -Pixelate.field_E.field_B + 480);
         if (param0) {
             return;
@@ -45,9 +45,7 @@ final class ci extends jj {
         int[] var11 = null;
         int[] var12 = null;
         int[] var14 = null;
-        int[] var16 = null;
-        int[] var18 = null;
-        int[] var19 = null;
+        int[] var17 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
@@ -81,21 +79,19 @@ final class ci extends jj {
         String stackOut_33_2 = null;
         try {
           L0: {
-            var18 = new int[255];
-            var16 = var18;
-            var14 = var16;
+            var14 = new int[255];
             var12 = var14;
             var11 = var12;
             var3_array = var11;
             var4 = 0;
             L1: while (true) {
-              if (~var4 <= ~var18.length) {
-                var19 = new int[255];
+              if (var4 >= var14.length) {
+                var17 = new int[255];
                 var5 = 0;
                 L2: while (true) {
-                  if (var19.length <= var5) {
-                    ((ci) this).field_p = new li(2, 47, var18);
-                    ((ci) this).field_q = new li(1, 47, var19);
+                  if (var17.length <= var5) {
+                    this.field_p = new li(2, 47, var14);
+                    this.field_q = new li(1, 47, var17);
                     break L0;
                   } else {
                     L3: {
@@ -105,7 +101,7 @@ final class ci extends jj {
                       var7 = var7 >> 1;
                       var9 = var5;
                       var8 = var8 >> 1;
-                      if (var8 <= 255) {
+                      if ((var8 ^ -1) >= -256) {
                         break L3;
                       } else {
                         var8 = 255;
@@ -130,7 +126,7 @@ final class ci extends jj {
                       }
                     }
                     L6: {
-                      if (var7 >= 0) {
+                      if ((var7 ^ -1) <= -1) {
                         break L6;
                       } else {
                         var7 = 0;
@@ -140,7 +136,7 @@ final class ci extends jj {
                     L7: {
                       var7 = var7 << 16;
                       var8 = var8 << 8;
-                      if (var9 >= 0) {
+                      if ((var9 ^ -1) <= -1) {
                         break L7;
                       } else {
                         var9 = 0;
@@ -148,7 +144,7 @@ final class ci extends jj {
                       }
                     }
                     var6 = var8 | var7 | var9;
-                    var19[var5] = var6;
+                    var17[var5] = var6;
                     var5++;
                     continue L2;
                   }
@@ -170,7 +166,7 @@ final class ci extends jj {
                   }
                 }
                 L9: {
-                  if (var7 >= 0) {
+                  if (-1 >= (var7 ^ -1)) {
                     break L9;
                   } else {
                     var7 = 0;
@@ -178,7 +174,7 @@ final class ci extends jj {
                   }
                 }
                 L10: {
-                  if (var6 >= 0) {
+                  if ((var6 ^ -1) <= -1) {
                     break L10;
                   } else {
                     var6 = 0;
@@ -186,7 +182,7 @@ final class ci extends jj {
                   }
                 }
                 L11: {
-                  if (var8 <= 255) {
+                  if (-256 <= (var8 ^ -1)) {
                     break L11;
                   } else {
                     var8 = 255;
@@ -196,7 +192,7 @@ final class ci extends jj {
                 L12: {
                   var6 = var6 << 16;
                   var7 = var7 << 8;
-                  if (var8 >= 0) {
+                  if ((var8 ^ -1) <= -1) {
                     break L12;
                   } else {
                     var8 = 0;
@@ -204,7 +200,7 @@ final class ci extends jj {
                   }
                 }
                 var5 = var7 | var6 | var8;
-                var18[var4] = var5;
+                var14[var4] = var5;
                 var4++;
                 continue L1;
               }
@@ -214,23 +210,23 @@ final class ci extends jj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L13: {
             var3 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) var3;
+            stackOut_29_0 = (RuntimeException) (var3);
             stackOut_29_1 = new StringBuilder().append("ci.<init>(");
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
             stackIn_30_1 = stackOut_29_1;
             if (param0 == null) {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "null";
               stackIn_32_0 = stackOut_31_0;
               stackIn_32_1 = stackOut_31_1;
               stackIn_32_2 = stackOut_31_2;
               break L13;
             } else {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "{...}";
               stackIn_32_0 = stackOut_30_0;
               stackIn_32_1 = stackOut_30_1;
@@ -239,23 +235,23 @@ final class ci extends jj {
             }
           }
           L14: {
-            stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+            stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
             stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',');
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
             stackIn_33_1 = stackOut_32_1;
             if (param1 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "null";
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
               break L14;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "{...}";
               stackIn_35_0 = stackOut_33_0;
               stackIn_35_1 = stackOut_33_1;
@@ -263,20 +259,19 @@ final class ci extends jj {
               break L14;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ')');
         }
     }
 
     public static void d(int param0) {
+        if (param0 != -12424) {
+            return;
+        }
         field_m = null;
         field_r = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_m = new int[132];
         field_r = "Create unrated game";

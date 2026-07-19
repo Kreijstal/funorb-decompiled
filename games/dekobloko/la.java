@@ -50,28 +50,35 @@ final class la {
               break L0;
             }
           }
-          if (var5 == null) {
-            var7.b((byte) 119);
-            var7.e((byte) 92);
-            this.field_c = this.field_c + var7.field_y;
-            return null;
-          } else {
-            L1: {
-              if (var7.g((byte) -83)) {
+          if (var5 != null) {
+            if (!var7.g((byte) -83)) {
+              this.field_b.a((byte) 4, var7);
+              var7.field_r = 0L;
+              if (!client.field_A) {
+                return var5;
+              } else {
                 var6 = new ua(var5, var7.field_y);
                 this.field_e.a(var7.field_i, false, var6);
                 this.field_b.a((byte) 4, var6);
                 ((vi) ((Object) var6)).field_r = 0L;
                 var7.b((byte) 106);
                 var7.e((byte) 125);
-                break L1;
-              } else {
-                this.field_b.a((byte) 4, var7);
-                var7.field_r = 0L;
-                break L1;
+                return var5;
               }
+            } else {
+              var6 = new ua(var5, var7.field_y);
+              this.field_e.a(var7.field_i, false, var6);
+              this.field_b.a((byte) 4, var6);
+              ((vi) ((Object) var6)).field_r = 0L;
+              var7.b((byte) 106);
+              var7.e((byte) 125);
+              return var5;
             }
-            return var5;
+          } else {
+            var7.b((byte) 119);
+            var7.e((byte) 92);
+            this.field_c = this.field_c + var7.field_y;
+            return null;
           }
         } else {
           return null;
@@ -142,25 +149,93 @@ final class la {
     }
 
     private final void a(long param0, byte param1, int param2, Object param3) {
+        RuntimeException runtimeException = null;
         vi var6 = null;
         ua var6_ref = null;
-        int var7 = client.field_A ? 1 : 0;
+        int var7 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        var7 = client.field_A ? 1 : 0;
         try {
-            if (!(1 <= this.field_f)) {
-                throw new IllegalStateException();
+          L0: {
+            if (param2 > this.field_f) {
+              throw new IllegalStateException();
+            } else {
+              this.a(param1 + -77, param0);
+              this.field_c = this.field_c - param2;
+              L1: while (true) {
+                L2: {
+                  if (this.field_c >= 0) {
+                    break L2;
+                  } else {
+                    var6 = (vi) ((Object) this.field_b.a((byte) 67));
+                    this.a(-122, var6);
+                    if (var7 == 0) {
+                      continue L1;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                L3: {
+                  var6_ref = new ua(param3, param2);
+                  this.field_e.a(param0, false, var6_ref);
+                  this.field_b.a((byte) 4, var6_ref);
+                  if (param1 == 77) {
+                    break L3;
+                  } else {
+                    la.a((byte) -109);
+                    break L3;
+                  }
+                }
+                ((vi) ((Object) var6_ref)).field_r = 0L;
+                break L0;
+              }
             }
-            this.a(0, param0);
-            this.field_c = this.field_c - 1;
-            while (this.field_c < 0) {
-                var6 = (vi) ((Object) this.field_b.a((byte) 67));
-                this.a(-122, var6);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            runtimeException = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) (runtimeException);
+            stackOut_11_1 = new StringBuilder().append("la.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param3 == null) {
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
+            } else {
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
             }
-            var6_ref = new ua(param3, 1);
-            this.field_e.a(param0, false, var6_ref);
-            this.field_b.a((byte) 4, var6_ref);
-            ((vi) ((Object) var6_ref)).field_r = 0L;
-        } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "la.E(" + param0 + ',' + 77 + ',' + 1 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          }
+          throw dh.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
     }
 
@@ -259,6 +334,10 @@ final class la {
     public static void a(byte param0) {
         field_g = null;
         field_h = null;
+        if (param0 < 36) {
+            ji var2 = (ji) null;
+            la.a((ji) null, 120);
+        }
     }
 
     private final void a(int param0, vi param1) {
@@ -270,6 +349,7 @@ final class la {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
@@ -286,12 +366,14 @@ final class la {
                 param1.b((byte) 105);
                 param1.e((byte) 76);
                 this.field_c = this.field_c + param1.field_y;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 return;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -324,27 +406,40 @@ final class la {
           }
           throw dh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
+        }
     }
 
     private la(int param0, int param1) {
         int var3 = 0;
+        int var4 = 0;
+        var4 = client.field_A ? 1 : 0;
         this.field_b = new uh();
         this.field_f = param0;
         this.field_c = param0;
         var3 = 1;
         L0: while (true) {
-          if (param0 > var3 + var3) {
-            if (param1 > var3) {
-              var3 = var3 + var3;
-              continue L0;
+          L1: {
+            if (param0 <= var3 + var3) {
+              break L1;
             } else {
-              this.field_e = new si(var3);
-              return;
+              if (param1 <= var3) {
+                break L1;
+              } else {
+                var3 = var3 + var3;
+                if (var4 == 0) {
+                  continue L0;
+                } else {
+                  break L1;
+                }
+              }
             }
-          } else {
-            this.field_e = new si(var3);
-            return;
           }
+          this.field_e = new si(var3);
+          return;
         }
     }
 

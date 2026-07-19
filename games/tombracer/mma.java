@@ -10,6 +10,9 @@ final class mma {
     public static void a(int param0) {
         field_b = null;
         field_c = null;
+        if (param0 != -1901) {
+            return;
+        }
         field_d = null;
     }
 
@@ -18,15 +21,11 @@ final class mma {
 
     final void a(int param0, int param1) {
         if (param0 != -978) {
-            field_b = null;
+            field_b = (ka[]) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new wm();
         field_d = new hra();
     }

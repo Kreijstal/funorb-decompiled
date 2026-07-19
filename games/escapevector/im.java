@@ -28,7 +28,7 @@ final class im extends IOException {
             }
             L2: while (true) {
               if (param0 == 0) {
-                var3_int = 0;
+                var3_int = 59 % ((-4 - param2) / 49);
                 stackOut_5_0 = param1;
                 stackIn_6_0 = stackOut_5_0;
                 break L0;
@@ -43,7 +43,7 @@ final class im extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var3, "im.A(" + param0 + ',' + param1 + ',' + 62 + ')');
+          throw t.a((Throwable) ((Object) var3), "im.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_6_0;
     }
@@ -57,30 +57,38 @@ final class im extends IOException {
         var3 = EscapeVector.field_A;
         try {
           L0: {
-            var4 = (cc) (Object) vn.field_e.a(false);
-            L1: while (true) {
+            L1: {
+              if (param0 > 48) {
+                break L1;
+              } else {
+                field_a = 28;
+                break L1;
+              }
+            }
+            var4 = (cc) ((Object) vn.field_e.a(false));
+            L2: while (true) {
               if (var4 == null) {
-                var5 = (dc) (Object) en.field_i.a(false);
-                L2: while (true) {
+                var5 = (dc) ((Object) en.field_i.a(false));
+                L3: while (true) {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    oa.a(5, var5, -755);
-                    var5 = (dc) (Object) en.field_i.b((byte) 70);
-                    continue L2;
+                    oa.a(param1, var5, -755);
+                    var5 = (dc) ((Object) en.field_i.b((byte) 70));
+                    continue L3;
                   }
                 }
               } else {
-                hg.a(-121, 5, var4);
-                var4 = (cc) (Object) vn.field_e.b((byte) 70);
-                continue L1;
+                hg.a(-121, param1, var4);
+                var4 = (cc) ((Object) vn.field_e.b((byte) 70));
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "im.B(" + 88 + ',' + 5 + ')');
+          throw t.a((Throwable) ((Object) var2), "im.B(" + param0 + ',' + param1 + ')');
         }
     }
 

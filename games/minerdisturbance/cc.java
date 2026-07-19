@@ -9,53 +9,53 @@ abstract class cc extends kn {
     static int[] field_L;
 
     final void a(byte param0, int param1, int param2, int param3) {
-        if (((cc) this).field_J != -1) {
-          if (-257 > ((cc) this).field_J) {
+        if (this.field_J != 0) {
+          if (-257 < (this.field_J ^ -1)) {
             if (null != mn.field_t) {
-              if (((cc) this).field_v <= mn.field_t.field_y) {
-                if (mn.field_t.field_C < ((cc) this).field_q) {
-                  mn.field_t = new ea(((cc) this).field_v, ((cc) this).field_q);
+              if (this.field_v <= mn.field_t.field_y) {
+                if (mn.field_t.field_C < this.field_q) {
+                  mn.field_t = new ea(this.field_v, this.field_q);
                   vb.a(mn.field_t, 127);
                   eh.d();
-                  ((cc) this).b(21533, 0, 0);
-                  super.a(param0, -param1 - ((cc) this).field_u, -param2 - ((cc) this).field_t, param3);
+                  this.b(21533, 0, 0);
+                  super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
                   tk.b(true);
-                  mn.field_t.f(((cc) this).field_u + param1, ((cc) this).field_t + param2, ((cc) this).field_J);
+                  mn.field_t.f(this.field_u + param1, this.field_t + param2, this.field_J);
                   return;
                 } else {
                   vb.a(mn.field_t, 127);
                   eh.d();
-                  ((cc) this).b(21533, 0, 0);
-                  super.a(param0, -param1 - ((cc) this).field_u, -param2 - ((cc) this).field_t, param3);
+                  this.b(21533, 0, 0);
+                  super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
                   tk.b(true);
-                  mn.field_t.f(((cc) this).field_u + param1, ((cc) this).field_t + param2, ((cc) this).field_J);
+                  mn.field_t.f(this.field_u + param1, this.field_t + param2, this.field_J);
                   return;
                 }
               } else {
-                mn.field_t = new ea(((cc) this).field_v, ((cc) this).field_q);
+                mn.field_t = new ea(this.field_v, this.field_q);
                 vb.a(mn.field_t, 127);
                 eh.d();
-                ((cc) this).b(21533, 0, 0);
-                super.a(param0, -param1 - ((cc) this).field_u, -param2 - ((cc) this).field_t, param3);
+                this.b(21533, 0, 0);
+                super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
                 tk.b(true);
-                mn.field_t.f(((cc) this).field_u + param1, ((cc) this).field_t + param2, ((cc) this).field_J);
+                mn.field_t.f(this.field_u + param1, this.field_t + param2, this.field_J);
                 return;
               }
             } else {
-              mn.field_t = new ea(((cc) this).field_v, ((cc) this).field_q);
+              mn.field_t = new ea(this.field_v, this.field_q);
               vb.a(mn.field_t, 127);
               eh.d();
-              ((cc) this).b(21533, 0, 0);
-              super.a(param0, -param1 - ((cc) this).field_u, -param2 - ((cc) this).field_t, param3);
+              this.b(21533, 0, 0);
+              super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
               tk.b(true);
-              mn.field_t.f(((cc) this).field_u + param1, ((cc) this).field_t + param2, ((cc) this).field_J);
+              mn.field_t.f(this.field_u + param1, this.field_t + param2, this.field_J);
               return;
             }
           } else {
-            if (param3 != 0) {
+            if (-1 != (param3 ^ -1)) {
               return;
             } else {
-              ((cc) this).b(21533, ((cc) this).field_t + param2, ((cc) this).field_u + param1);
+              this.b(21533, this.field_t + param2, this.field_u + param1);
               super.a((byte) 4, param1, param2, param3);
               return;
             }
@@ -90,7 +90,7 @@ abstract class cc extends kn {
         if (param2 != 55) {
           return;
         } else {
-          ((cc) this).a(param0, -101, -param1 + od.field_n >> 1, param1, ae.field_c - param0 >> 1);
+          this.a(param0, -101, -param1 + od.field_n >> -569255487, param1, ae.field_c - param0 >> 217727105);
           return;
         }
     }
@@ -102,14 +102,14 @@ abstract class cc extends kn {
           if (var2 != null) {
             return var2;
           } else {
-            return (fe) this;
+            return (fe) (this);
           }
         } else {
-          ((cc) this).field_I = null;
+          this.field_I = (hm) null;
           if (var2 != null) {
             return var2;
           } else {
-            return (fe) this;
+            return (fe) (this);
           }
         }
     }
@@ -121,48 +121,69 @@ abstract class cc extends kn {
         int var4 = 0;
         int var5 = 0;
         cm var6 = null;
-        var5 = MinerDisturbance.field_ab;
-        var6 = (cm) (Object) ce.field_a.b(94);
-        var1 = var6;
-        if (var1 != null) {
-          var3 = tf.field_a;
-          if (var3 >= 100) {
-            if (var3 >= 250) {
-              var2 = -123 - (-(var3 / 2) + -480) + -58;
-              var4 = ce.field_d.c(ld.field_A[var6.field_s], 640);
-              g.a(var2 + -10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
-              nj.field_c[var6.field_s].c(590, var2);
-              ce.field_d.c(ld.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
-              return;
-            } else {
-              var2 = 424;
-              var4 = ce.field_d.c(ld.field_A[var6.field_s], 640);
-              g.a(var2 + -10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
-              nj.field_c[var6.field_s].c(590, var2);
-              ce.field_d.c(ld.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
-              return;
-            }
+        L0: {
+          var5 = MinerDisturbance.field_ab;
+          var6 = (cm) ((Object) ce.field_a.b(94));
+          var1 = var6;
+          if (var1 == null) {
+            break L0;
           } else {
-            var2 = 480 + (32 + (-var3 / 2 - 38));
-            var4 = ce.field_d.c(ld.field_A[var6.field_s], 640);
-            g.a(var2 + -10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
-            nj.field_c[var6.field_s].c(590, var2);
-            ce.field_d.c(ld.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
-            return;
+            var3 = tf.field_a;
+            if (var3 >= 100) {
+              if (-251 < (var3 ^ -1)) {
+                var2 = 424;
+                var4 = ce.field_d.c(ld.field_A[var6.field_s], 640);
+                g.a(var2 + -10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
+                nj.field_c[var6.field_s].c(590, var2);
+                ce.field_d.c(ld.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
+                break L0;
+              } else {
+                var2 = -123 - (-(var3 / 2) + -480) + -58;
+                var4 = ce.field_d.c(ld.field_A[var6.field_s], 640);
+                g.a(var2 + -10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
+                nj.field_c[var6.field_s].c(590, var2);
+                ce.field_d.c(ld.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
+                if (param0 < -79) {
+                  return;
+                } else {
+                  cc.a(37, 30);
+                  return;
+                }
+              }
+            } else {
+              var2 = 480 + (32 + (-var3 / 2 - 38));
+              var4 = ce.field_d.c(ld.field_A[var6.field_s], 640);
+              g.a(var2 + -10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
+              nj.field_c[var6.field_s].c(590, var2);
+              ce.field_d.c(ld.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
+              if (param0 < -79) {
+                return;
+              } else {
+                cc.a(37, 30);
+                return;
+              }
+            }
           }
+        }
+        if (param0 >= -79) {
+          cc.a(37, 30);
+          return;
         } else {
           return;
         }
     }
 
     public static void e(byte param0) {
+        if (param0 != 15) {
+            return;
+        }
         field_M = null;
         field_L = null;
     }
 
     private final int f(byte param0) {
         int var2 = -108 / ((param0 - 53) / 58);
-        return !((cc) this).field_K ? 0 : (Object) (Object) ((cc) this).field_I.e((byte) 83) == this ? 256 : 0;
+        return !this.field_K ? 0 : this.field_I.e((byte) 83) == this ? 256 : 0;
     }
 
     boolean n(int param0) {
@@ -175,11 +196,11 @@ abstract class cc extends kn {
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
         var2 = this.f((byte) 116);
-        var3 = -((cc) this).field_J + var2;
+        var3 = -this.field_J + var2;
         if (0 >= var3) {
           L0: {
             if (0 > var3) {
-              ((cc) this).field_J = ((cc) this).field_J + (var3 + -15) / 16;
+              this.field_J = this.field_J + (var3 + -15) / 16;
               break L0;
             } else {
               break L0;
@@ -190,13 +211,13 @@ abstract class cc extends kn {
           } else {
             L1: {
               L2: {
-                if (-1 != ((cc) this).field_J) {
+                if (-1 != (this.field_J ^ -1)) {
                   break L2;
                 } else {
                   if (var2 != 0) {
                     break L2;
                   } else {
-                    if (((cc) this).field_K) {
+                    if (this.field_K) {
                       break L2;
                     } else {
                       stackOut_22_0 = 1;
@@ -214,21 +235,21 @@ abstract class cc extends kn {
           }
         } else {
           L3: {
-            ((cc) this).field_J = ((cc) this).field_J + (-1 + var3 - -8) / 8;
+            this.field_J = this.field_J + (-1 + var3 - -8) / 8;
             if (0 > var3) {
-              ((cc) this).field_J = ((cc) this).field_J + (var3 + -15) / 16;
+              this.field_J = this.field_J + (var3 + -15) / 16;
               break L3;
             } else {
               break L3;
             }
           }
           if (param0 == -4) {
-            if (((cc) this).field_J == 0) {
+            if (-1 == (this.field_J ^ -1)) {
               if (var2 != 0) {
                 return false;
               } else {
                 L4: {
-                  if (((cc) this).field_K) {
+                  if (this.field_K) {
                     stackOut_11_0 = 0;
                     stackIn_12_0 = stackOut_11_0;
                     break L4;
@@ -252,10 +273,10 @@ abstract class cc extends kn {
     abstract void b(int param0, int param1, int param2);
 
     boolean a(boolean param0) {
-        ((cc) this).field_J = this.f((byte) -86);
+        this.field_J = this.f((byte) -86);
         if (!param0) {
-          if (((cc) this).field_J == 0) {
-            if (((cc) this).field_K) {
+          if (this.field_J == 0) {
+            if (this.field_K) {
               return false;
             } else {
               return true;
@@ -269,21 +290,17 @@ abstract class cc extends kn {
     }
 
     cc(hm param0, int param1, int param2) {
-        super(-param1 + od.field_n >> 1, ae.field_c - param2 >> 1, param1, param2, (ad) null);
+        super(-param1 + od.field_n >> 1447125505, ae.field_c - param2 >> 136989569, param1, param2, (ad) null);
         try {
-            ((cc) this).field_K = false;
-            ((cc) this).field_J = 0;
-            ((cc) this).field_I = param0;
+            this.field_K = false;
+            this.field_J = 0;
+            this.field_I = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_M = "Music: ";
     }
 }

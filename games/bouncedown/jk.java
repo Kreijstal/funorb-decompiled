@@ -69,7 +69,7 @@ final class jk {
         Object stackOut_4_0 = null;
         int stackOut_4_1 = 0;
         var12 = Bounce.field_N;
-        if (((jk) this).field_t) {
+        if (this.field_t) {
           return;
         } else {
           L0: {
@@ -90,7 +90,7 @@ final class jk {
               break L0;
             }
           }
-          ((jk) this).field_t = stackIn_6_1 != 0;
+          ((jk) (this)).field_t = stackIn_6_1 != 0;
           var2 = 32767;
           var3 = 32767;
           var4 = 32767;
@@ -99,18 +99,18 @@ final class jk {
           var7 = -32768;
           var8 = 0;
           L1: while (true) {
-            if (var8 >= ((jk) this).field_k) {
-              ((jk) this).field_H = var3;
-              ((jk) this).field_e = var2;
-              ((jk) this).field_n = var5;
-              ((jk) this).field_D = var4;
-              ((jk) this).field_R = var7;
-              ((jk) this).field_N = var6;
+            if (var8 >= this.field_k) {
+              this.field_H = var3;
+              this.field_e = var2;
+              this.field_n = var5;
+              this.field_D = var4;
+              this.field_R = var7;
+              this.field_N = var6;
               return;
             } else {
               L2: {
-                var9 = ((jk) this).field_g[var8];
-                var10 = ((jk) this).field_C[var8];
+                var9 = this.field_g[var8];
+                var10 = this.field_C[var8];
                 if (var10 < var3) {
                   var3 = var10;
                   break L2;
@@ -119,7 +119,7 @@ final class jk {
                 }
               }
               L3: {
-                var11 = ((jk) this).field_J[var8];
+                var11 = this.field_J[var8];
                 if (var10 > var6) {
                   var6 = var10;
                   break L3;
@@ -165,29 +165,34 @@ final class jk {
     }
 
     private final void b(int param0) {
-        ((jk) this).field_t = false;
+        this.field_t = false;
         if (param0 >= -106) {
-            ((jk) this).field_e = 73;
+            this.field_e = 73;
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
+        int discarded$0 = 0;
         int var6 = 0;
         int var7 = Bounce.field_N;
         if (param0 != -26) {
-            int discarded$0 = jk.a((byte) 19);
+            discarded$0 = jk.a((byte) 19);
         }
-        for (var6 = 0; ((jk) this).field_k > var6; var6++) {
-            ((jk) this).field_g[var6] = (short)(param3 * ((jk) this).field_g[var6] / param4);
-            ((jk) this).field_C[var6] = (short)(param2 * ((jk) this).field_C[var6] / param4);
-            ((jk) this).field_J[var6] = (short)(((jk) this).field_J[var6] * param1 / param4);
+        for (var6 = 0; this.field_k > var6; var6++) {
+            this.field_g[var6] = (short)(param3 * this.field_g[var6] / param4);
+            this.field_C[var6] = (short)(param2 * this.field_C[var6] / param4);
+            this.field_J[var6] = (short)(this.field_J[var6] * param1 / param4);
         }
         this.b(-120);
     }
 
     public static void a(int param0) {
+        int discarded$0 = 0;
         field_M = null;
         field_a = null;
+        if (param0 != -19800) {
+            discarded$0 = jk.a((byte) -29);
+        }
         field_m = null;
     }
 
@@ -283,16 +288,17 @@ final class jk {
         if (param1 <= 123) {
             return;
         }
-        while (var5 < ((jk) this).field_k) {
-            ((jk) this).field_g[var5] = (short)(((jk) this).field_g[var5] + param3);
-            ((jk) this).field_C[var5] = (short)(((jk) this).field_C[var5] + param0);
-            ((jk) this).field_J[var5] = (short)(((jk) this).field_J[var5] + param2);
+        while (var5 < this.field_k) {
+            this.field_g[var5] = (short)(this.field_g[var5] + param3);
+            this.field_C[var5] = (short)(this.field_C[var5] + param0);
+            this.field_J[var5] = (short)(this.field_J[var5] + param2);
             var5++;
         }
         this.b(-115);
     }
 
     final static tg[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int discarded$1 = 0;
         int var9 = 0;
         tg[] var10 = null;
         tg[] var11_ref_tg__ = null;
@@ -302,8 +308,8 @@ final class jk {
         int var14 = 0;
         int var15 = 0;
         var15 = Bounce.field_N;
-        var9 = 3;
-        var10 = new tg[]{new tg(var9, var9), new tg(3, var9), new tg(var9, var9), new tg(var9, 3), new tg(64, 64), new tg(var9, 3), new tg(var9, var9), new tg(3, var9), new tg(var9, var9)};
+        var9 = param1 + (param5 - -param8);
+        var10 = new tg[]{new tg(var9, var9), new tg(param6, var9), new tg(var9, var9), new tg(var9, param6), new tg(64, 64), new tg(var9, param6), new tg(var9, var9), new tg(param6, var9), new tg(var9, var9)};
         var11_ref_tg__ = var10;
         var12 = 0;
         L0: while (true) {
@@ -311,83 +317,91 @@ final class jk {
             var10 = var11_ref_tg__;
             var11 = 0;
             L1: while (true) {
-              if (var11 >= 1) {
+              if (var11 >= param5) {
+                L2: {
+                  if (param3 == -7139) {
+                    break L2;
+                  } else {
+                    discarded$1 = jk.a((byte) -26);
+                    break L2;
+                  }
+                }
                 var11 = 0;
-                L2: while (true) {
-                  if (var11 >= 1) {
+                L3: while (true) {
+                  if (var11 >= param5) {
                     var11 = 0;
-                    L3: while (true) {
-                      if (var11 >= 3) {
+                    L4: while (true) {
+                      if (var11 >= param6) {
                         var11 = 0;
-                        L4: while (true) {
-                          if (var11 >= 1) {
+                        L5: while (true) {
+                          if (param6 >> -498441599 <= var11) {
                             return var10;
                           } else {
                             var12 = 0;
-                            L5: while (true) {
-                              if (1 <= var12) {
+                            L6: while (true) {
+                              if (param8 <= var12) {
                                 var11++;
-                                continue L4;
-                              } else {
-                                var10[1].field_v[(-1 + var9 + -var12) * 3 + var11] = 65793;
-                                var10[3].field_v[var11 * var9 - 1 - -var9 - var12] = 65793;
-                                var10[7].field_v[var11 + 3 * var12] = 65793;
-                                var10[5].field_v[var9 * var11 - -var12] = 65793;
-                                var12++;
                                 continue L5;
+                              } else {
+                                var10[1].field_v[(-1 + var9 + -var12) * param6 + var11] = param4;
+                                var10[3].field_v[var11 * var9 - 1 - -var9 - var12] = param4;
+                                var10[7].field_v[var11 + param6 * var12] = param4;
+                                var10[5].field_v[var9 * var11 - -var12] = param4;
+                                var12++;
+                                continue L6;
                               }
                             }
                           }
                         }
                       } else {
                         var12 = 0;
-                        L6: while (true) {
-                          if (var12 < 1) {
-                            var10[7].field_v[3 * (-1 + -var12 + var9) + var11] = 0;
-                            var10[5].field_v[var9 * var11 + (-1 + (var9 - var12))] = 0;
-                            var10[1].field_v[var11 + var12 * 3] = 0;
-                            var10[3].field_v[var12 + var9 * var11] = 0;
+                        L7: while (true) {
+                          if (var12 < param5) {
+                            var10[7].field_v[param6 * (-1 + -var12 + var9) + var11] = param0;
+                            var10[5].field_v[var9 * var11 + (-1 + (var9 - var12))] = param0;
+                            var10[1].field_v[var11 + var12 * param6] = param2;
+                            var10[3].field_v[var12 + var9 * var11] = param2;
                             var12++;
-                            continue L6;
+                            continue L7;
                           } else {
                             var11++;
-                            continue L3;
+                            continue L4;
                           }
                         }
                       }
                     }
                   } else {
                     var12 = 0;
-                    L7: while (true) {
+                    L8: while (true) {
                       if (var12 < var9) {
-                        var10[0].field_v[var9 * var11 + var12] = 0;
-                        var10[0].field_v[var11 + var12 * var9] = 0;
+                        var10[0].field_v[var9 * var11 + var12] = param2;
+                        var10[0].field_v[var11 + var12 * var9] = param2;
                         if (-var11 + var9 > var12) {
-                          var10[2].field_v[var11 * var9 + var12] = 0;
-                          var10[6].field_v[var11 + var12 * var9] = 0;
+                          var10[2].field_v[var11 * var9 + var12] = param2;
+                          var10[6].field_v[var11 + var12 * var9] = param2;
                           var12++;
-                          continue L7;
+                          continue L8;
                         } else {
                           var12++;
-                          continue L7;
+                          continue L8;
                         }
                       } else {
                         var11++;
-                        continue L2;
+                        continue L3;
                       }
                     }
                   }
                 }
               } else {
                 var12 = 0;
-                L8: while (true) {
+                L9: while (true) {
                   if (var9 > var12) {
-                    var10[6].field_v[(-1 + (-var11 + var9)) * var9 - -var12] = 0;
-                    var10[8].field_v[var9 * (-var11 + (var9 - 1)) + var12] = 0;
-                    var10[2].field_v[var12 * var9 - var11 - (-var9 - -1)] = 0;
-                    var10[8].field_v[-var11 + (-1 + (var9 + var9 * var12))] = 0;
+                    var10[6].field_v[(-1 + (-var11 + var9)) * var9 - -var12] = param0;
+                    var10[8].field_v[var9 * (-var11 + (var9 - 1)) + var12] = param0;
+                    var10[2].field_v[var12 * var9 - var11 - (-var9 - -1)] = param0;
+                    var10[8].field_v[-var11 + (-1 + (var9 + var9 * var12))] = param0;
                     var12++;
-                    continue L8;
+                    continue L9;
                   } else {
                     var11++;
                     continue L1;
@@ -398,14 +412,14 @@ final class jk {
           } else {
             var13 = var11_ref_tg__[var12];
             var14 = 0;
-            L9: while (true) {
+            L10: while (true) {
               if (var13.field_v.length <= var14) {
                 var12++;
                 continue L0;
               } else {
-                var13.field_v[var14] = 0;
+                var13.field_v[var14] = param7;
                 var14++;
-                continue L9;
+                continue L10;
               }
             }
           }
@@ -413,15 +427,11 @@ final class jk {
     }
 
     jk() {
-        ((jk) this).field_t = false;
-        ((jk) this).field_w = (byte) 0;
+        this.field_t = false;
+        this.field_w = (byte) 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_M = new eh(7, 0, 1, 1);
         field_m = "High score service unavailable";
         field_K = 10;

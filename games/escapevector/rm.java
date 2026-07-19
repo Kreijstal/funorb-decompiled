@@ -13,61 +13,66 @@ final class rm implements Iterator {
     private fl field_d;
 
     final static void a(java.awt.Component param0, byte param1) {
+        if (param1 != 38) {
+            return;
+        }
         try {
-            param0.addMouseListener((java.awt.event.MouseListener) (Object) om.field_b);
-            param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) om.field_b);
-            param0.addFocusListener((java.awt.event.FocusListener) (Object) om.field_b);
+            param0.addMouseListener(om.field_b);
+            param0.addMouseMotionListener(om.field_b);
+            param0.addFocusListener(om.field_b);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "rm.A(" + (param0 != null ? "{...}" : "null") + ',' + 38 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "rm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final boolean hasNext() {
-        return ((rm) this).field_f.field_c != ((rm) this).field_b;
+        return this.field_f.field_c != this.field_b;
     }
 
     public static void a(boolean param0) {
         field_a = null;
+        if (!param0) {
+            field_c = false;
+            field_e = null;
+            field_g = null;
+            return;
+        }
         field_e = null;
         field_g = null;
     }
 
     public final void remove() {
-        if (!(null != ((rm) this).field_d)) {
+        if (!(null != this.field_d)) {
             throw new IllegalStateException();
         }
-        ((rm) this).field_d.d(103);
-        ((rm) this).field_d = null;
+        this.field_d.d(103);
+        this.field_d = null;
     }
 
     rm(vb param0) {
-        ((rm) this).field_d = null;
+        this.field_d = null;
         try {
-            ((rm) this).field_f = param0;
-            ((rm) this).field_b = ((rm) this).field_f.field_c.field_j;
-            ((rm) this).field_d = null;
+            this.field_f = param0;
+            this.field_b = this.field_f.field_c.field_j;
+            this.field_d = null;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "rm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "rm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final Object next() {
-        fl var1 = ((rm) this).field_b;
-        if (((rm) this).field_f.field_c != var1) {
-            ((rm) this).field_b = var1.field_j;
+        fl var1 = this.field_b;
+        if (this.field_f.field_c != var1) {
+            this.field_b = var1.field_j;
         } else {
-            ((rm) this).field_b = null;
+            this.field_b = null;
             var1 = null;
         }
-        ((rm) this).field_d = var1;
-        return (Object) (Object) var1;
+        this.field_d = var1;
+        return var1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Passwords must be between 5 and 20 letters and numbers";
     }
 }

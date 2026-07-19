@@ -12,6 +12,7 @@ final class bo extends ok {
     static String[] field_Gb;
 
     final static void a(int param0, gn param1, int param2, int param3) {
+        int discarded$2 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
         String[] var5 = null;
@@ -26,6 +27,7 @@ final class bo extends ok {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
@@ -39,12 +41,13 @@ final class bo extends ok {
         try {
           L0: {
             if (param1 == null) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 var4_int = param2;
                 if (null != param1.field_b) {
-                  int discarded$2 = ne.field_c.a(param1.field_b, param3 + 3, var4_int, 194, 0, 0, -1, 1, 0, ne.field_c.field_H);
+                  discarded$2 = ne.field_c.a(param1.field_b, param3 + 3, var4_int, 194, 0, 0, -1, 1, 0, ne.field_c.field_H);
                   var4_int = var4_int + param1.field_g;
                   var4_int += 7;
                   gf.b(param3, var4_int, 200, 0);
@@ -54,12 +57,13 @@ final class bo extends ok {
                   break L1;
                 }
               }
-              var5 = jn.a(param1.field_f, new int[1], -65, (se) (Object) la.field_b);
-              var4_int = var4_int + (5 + la.field_b.field_H);
+              var5 = jn.a(param1.field_f, new int[]{194}, -65, la.field_b);
+              var4_int = var4_int + (param0 + la.field_b.field_H);
               var6 = var5;
               var7 = 0;
               L2: while (true) {
                 if (var7 >= var6.length) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   var8 = var6[var7];
@@ -75,23 +79,23 @@ final class bo extends ok {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var4;
-            stackOut_11_1 = new StringBuilder().append("bo.D(").append(5).append(',');
+            stackOut_11_0 = (RuntimeException) (var4);
+            stackOut_11_1 = new StringBuilder().append("bo.D(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -99,7 +103,12 @@ final class bo extends ok {
               break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ',' + param3 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -121,7 +130,7 @@ final class bo extends ok {
           tl.field_k = mk.a(15, (byte) 34);
           bl.field_t = mk.a(16, (byte) 34);
           be.field_s = new wk(75);
-          var1 = 17;
+          var1 = -17 / ((3 - param0) / 44);
           be.field_s.a(sa.field_w, "basic", qk.field_c, uc.field_I, -108);
           be.field_s.a(sa.field_w, "lobby", qk.field_c, uc.field_I, -110);
           be.field_s.a(sa.field_w, "lobby", qk.field_c, gh.field_c, -83);
@@ -155,7 +164,7 @@ final class bo extends ok {
           tl.field_k = mk.a(15, (byte) 34);
           bl.field_t = mk.a(16, (byte) 34);
           be.field_s = new wk(75);
-          var1 = 17;
+          var1 = -17 / ((3 - param0) / 44);
           be.field_s.a(sa.field_w, "basic", qk.field_c, uc.field_I, -108);
           be.field_s.a(sa.field_w, "lobby", qk.field_c, uc.field_I, -110);
           be.field_s.a(sa.field_w, "lobby", qk.field_c, gh.field_c, -83);
@@ -181,12 +190,26 @@ final class bo extends ok {
         field_Lb = null;
         field_Mb = null;
         field_Kb = null;
+        if (param0 != -36) {
+            field_Jb = (wm) null;
+            field_Gb = null;
+            field_Jb = null;
+            return;
+        }
         field_Gb = null;
         field_Jb = null;
     }
 
     final static void g(int param0) {
         mc.a((byte) 86, 8, gb.field_e);
+        if (param0 != 1) {
+            field_Gb = (String[]) null;
+            if (ve.a(false)) {
+                return;
+            }
+            mc.a((byte) 37, 1, in.field_B);
+            return;
+        }
         if (!ve.a(false)) {
             mc.a((byte) 37, 1, in.field_B);
             return;
@@ -194,10 +217,6 @@ final class bo extends ok {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_Mb = "Zealot";
         field_Gb = new String[]{"Harden Raider", "The <%0> imbues another raider with the resilience of oak, doubling their <%defence> in the next room. (Single use)"};
     }

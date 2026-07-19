@@ -11,7 +11,7 @@ final class sla {
 
     public static void a(int param0) {
         if (param0 != -11536) {
-          field_b = null;
+          field_b = (String[]) null;
           field_a = null;
           field_e = null;
           field_f = null;
@@ -72,10 +72,6 @@ final class sla {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Create";
         field_e = "Public chat is unavailable while setting up a rated game.";
         field_f = new float[]{0.0f, -1.0f, 0.0f, 0.0f};

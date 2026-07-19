@@ -20,6 +20,7 @@ final class eg extends rqa {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
@@ -36,7 +37,7 @@ final class eg extends rqa {
               if (param2 == null) {
                 break L1;
               } else {
-                if (param4 <= 0) {
+                if (-1 <= (param4 ^ -1)) {
                   break L1;
                 } else {
                   var5_int = param2[0].field_m;
@@ -52,6 +53,7 @@ final class eg extends rqa {
                   L2: while (true) {
                     if (param3 >= var9) {
                       dma.b(ola.field_o);
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       param2[1].a(param3, param1);
@@ -62,29 +64,30 @@ final class eg extends rqa {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) runtimeException;
+            stackOut_10_0 = (RuntimeException) (runtimeException);
             stackOut_10_1 = new StringBuilder().append("eg.C(").append(param0).append(',').append(param1).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -92,7 +95,12 @@ final class eg extends rqa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param3 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -126,11 +134,11 @@ final class eg extends rqa {
               if (param1 < -119) {
                 break L1;
               } else {
-                field_p = null;
+                field_p = (rbb) null;
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) frb.a(71, 96));
+            stackOut_2_0 = new nc(frb.a(71, 96));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -138,23 +146,23 @@ final class eg extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("eg.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -162,16 +170,20 @@ final class eg extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     public static void a(int param0) {
         field_p = null;
+        if (param0 > -43) {
+            field_o = -91;
+        }
     }
 
     final static void e(byte param0) {
+        dnb discarded$0 = null;
         if (fda.e((byte) 104)) {
             return;
         }
@@ -184,35 +196,29 @@ final class eg extends rqa {
         }
         if (!(!bqa.a(false))) {
             var1 = new kc();
-            es.field_b.b((byte) 87, (tv) (Object) var1);
+            es.field_b.b((byte) 87, var1);
             var1.field_f = null;
         }
-        byte[] var20 = dab.a(-30234, (tv) (Object) var1);
-        byte[] var11 = var20;
-        byte[] var2 = var11;
+        byte[] var2 = dab.a(-30234, var1);
         if (var2 == null) {
             nkb.a(false, "Failed to write player gamedata");
             return;
         }
-        if (var20.length > 200) {
+        if (-201 > (var2.length ^ -1)) {
             nkb.a(false, "Failed to write player gamedata");
             return;
         }
-        nkb.a(false, "Submitting " + var20.length + " bytes to clientdata");
+        nkb.a(false, "Submitting " + var2.length + " bytes to clientdata");
         if (param0 > -35) {
             field_o = -50;
         } else {
-            dnb discarded$0 = jla.a(var20, (byte) 64, 6);
+            discarded$0 = jla.a(var2, (byte) 64, 6);
             return;
         }
-        dnb discarded$1 = jla.a(var20, (byte) 64, 6);
+        dnb discarded$1 = jla.a(var2, (byte) 64, 6);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = 2;
     }
 }

@@ -2,7 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.util.*;
-import java.awt.Canvas;
 import java.io.PrintStream;
 
 public final class Lexicominos extends nk {
@@ -17,6 +16,11 @@ public final class Lexicominos extends nk {
     public static boolean field_L;
 
     private final boolean a(byte param0, boolean param1) {
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        db dupTemp$7 = null;
+        db dupTemp$8 = null;
+        boolean discarded$9 = false;
         RuntimeException var3 = null;
         int var3_int = 0;
         db[] var3_array = null;
@@ -98,6 +102,7 @@ public final class Lexicominos extends nk {
         int stackIn_266_0 = 0;
         int stackIn_269_0 = 0;
         int stackIn_278_0 = 0;
+        int decompiledRegionSelector0 = 0;
         Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
         eb[] stackOut_232_0 = null;
@@ -179,7 +184,7 @@ public final class Lexicominos extends nk {
                         break L2;
                       } else {
                         al.a(16, qa.field_b, 93.0f);
-                        ((Lexicominos) this).d(param0 + 18466);
+                        this.d(param0 + 18466);
                         ib.field_a = ig.a(hh.field_L.a((byte) 127, "introanim.acp", ""), -66);
                         hh.field_L = null;
                         break L2;
@@ -189,7 +194,7 @@ public final class Lexicominos extends nk {
                       L3: {
                         L4: {
                           al.a(16, we.field_j, 99.0f);
-                          ((Lexicominos) this).d(param0 ^ -18330);
+                          this.d(param0 ^ -18330);
                           if (id.field_w != null) {
                             break L4;
                           } else {
@@ -199,10 +204,10 @@ public final class Lexicominos extends nk {
                             L5: while (true) {
                               L6: {
                                 L7: {
-                                  if (~var3_array2.length >= ~var5_int) {
+                                  if ((var3_array2.length ^ -1) >= (var5_int ^ -1)) {
                                     break L7;
                                   } else {
-                                    stackOut_232_0 = (eb[]) var3_array2;
+                                    stackOut_232_0 = (eb[]) (var3_array2);
                                     stackIn_241_0 = stackOut_232_0;
                                     stackIn_233_0 = stackOut_232_0;
                                     if (var17 != 0) {
@@ -225,7 +230,7 @@ public final class Lexicominos extends nk {
                                     }
                                   }
                                 }
-                                int incrementValue$5 = var4;
+                                incrementValue$5 = var4;
                                 var4--;
                                 stackOut_240_0 = new eb[incrementValue$5];
                                 stackIn_241_0 = stackOut_240_0;
@@ -236,10 +241,10 @@ public final class Lexicominos extends nk {
                               L9: while (true) {
                                 L10: {
                                   L11: {
-                                    if (var6 < 0) {
+                                    if ((var6 ^ -1) > -1) {
                                       break L11;
                                     } else {
-                                      stackOut_243_0 = (eb[]) var3_array2;
+                                      stackOut_243_0 = (eb[]) (var3_array2);
                                       stackIn_251_0 = stackOut_243_0;
                                       stackIn_244_0 = stackOut_243_0;
                                       if (var17 != 0) {
@@ -249,7 +254,7 @@ public final class Lexicominos extends nk {
                                           if (stackIn_244_0[var6] == null) {
                                             break L12;
                                           } else {
-                                            int incrementValue$6 = var4;
+                                            incrementValue$6 = var4;
                                             var4--;
                                             var5[incrementValue$6] = var3_array2[var6];
                                             break L12;
@@ -264,7 +269,7 @@ public final class Lexicominos extends nk {
                                       }
                                     }
                                   }
-                                  stackOut_250_0 = (eb[]) var5;
+                                  stackOut_250_0 = (eb[]) (var5);
                                   stackIn_251_0 = stackOut_250_0;
                                   break L10;
                                 }
@@ -275,7 +280,7 @@ public final class Lexicominos extends nk {
                                     break L4;
                                   } else {
                                     id.field_w[var6] = new oj(dl.field_d, ci.field_e, var5[var6]);
-                                    stackOut_253_0 = ug.field_s.equals((Object) (Object) id.field_w[var6].field_k);
+                                    stackOut_253_0 = ug.field_s.equals(id.field_w[var6].field_k);
                                     stackIn_261_0 = stackOut_253_0 ? 1 : 0;
                                     stackIn_254_0 = stackOut_253_0;
                                     if (var17 != 0) {
@@ -310,7 +315,8 @@ public final class Lexicominos extends nk {
                         stackIn_261_0 = stackOut_260_0;
                         break L3;
                       }
-                      return stackIn_261_0 != 0;
+                      decompiledRegionSelector0 = 18;
+                      break L0;
                     } else {
                       if (qc.field_d == null) {
                         qc.field_d = el.a(0, ia.field_H);
@@ -318,7 +324,8 @@ public final class Lexicominos extends nk {
                         dl.b(5);
                         stackOut_265_0 = 0;
                         stackIn_266_0 = stackOut_265_0;
-                        return stackIn_266_0 != 0;
+                        decompiledRegionSelector0 = 19;
+                        break L0;
                       } else {
                         if (null != ne.field_b) {
                           var3_int = 0;
@@ -328,7 +335,7 @@ public final class Lexicominos extends nk {
                                 if (var3_int >= 15) {
                                   break L17;
                                 } else {
-                                  vg.field_d[var3_int] = new sg((Lexicominos) this, var3_int);
+                                  vg.field_d[var3_int] = new sg((Lexicominos) (this), var3_int);
                                   var3_int++;
                                   if (var17 != 0) {
                                     break L16;
@@ -349,6 +356,7 @@ public final class Lexicominos extends nk {
                             }
                             stackOut_277_0 = 1;
                             stackIn_278_0 = stackOut_277_0;
+                            decompiledRegionSelector0 = 21;
                             break L0;
                           }
                         } else {
@@ -357,18 +365,20 @@ public final class Lexicominos extends nk {
                           dl.b(param0 ^ -81);
                           stackOut_268_0 = 0;
                           stackIn_269_0 = stackOut_268_0;
-                          return stackIn_269_0 != 0;
+                          decompiledRegionSelector0 = 20;
+                          break L0;
                         }
                       }
                     }
                   } else {
                     stackOut_221_0 = 1;
                     stackIn_222_0 = stackOut_221_0;
-                    return stackIn_222_0 != 0;
+                    decompiledRegionSelector0 = 17;
+                    break L0;
                   }
                 } else {
                   al.a(param0 ^ -70, gf.field_q, 92.0f);
-                  ((Lexicominos) this).d(18380);
+                  this.d(18380);
                   cb.field_n = df.a("", "bookbg", dl.field_d, (byte) -69);
                   pa.field_a = df.a("", "leftpage", dl.field_d, (byte) -83);
                   va.field_m = df.a("", "rightpage", dl.field_d, (byte) -64);
@@ -378,7 +388,7 @@ public final class Lexicominos extends nk {
                   var6_ref_db = new db(var4, var5_int);
                   var6_ref_db.b();
                   va.field_m.b(-104, -198);
-                  var3_array[4] = new db(var4 << 1, var5_int << 1);
+                  var3_array[4] = new db(var4 << 668183681, var5_int << -930153823);
                   var3_array[4].b();
                   var6_ref_db.b(0, 0);
                   var6_ref_db.g(var4, 0);
@@ -392,11 +402,11 @@ public final class Lexicominos extends nk {
                     L19: {
                       L20: {
                         L21: {
-                          if (var7_int >= 9) {
+                          if ((var7_int ^ -1) <= -10) {
                             break L21;
                           } else {
                             stackOut_115_0 = -5;
-                            stackOut_115_1 = ~var7_int;
+                            stackOut_115_1 = var7_int ^ -1;
                             stackIn_127_0 = stackOut_115_0;
                             stackIn_127_1 = stackOut_115_1;
                             stackIn_116_0 = stackOut_115_0;
@@ -411,7 +421,7 @@ public final class Lexicominos extends nk {
                                   } else {
                                     L23: {
                                       L24: {
-                                        if (var7_int != 4) {
+                                        if (-5 != (var7_int ^ -1)) {
                                           break L24;
                                         } else {
                                           jh.field_b[var7_int] = null;
@@ -430,7 +440,7 @@ public final class Lexicominos extends nk {
                                     var7_int++;
                                     if (var17 == 0) {
                                       stackOut_126_0 = -10;
-                                      stackOut_126_1 = ~var7_int;
+                                      stackOut_126_1 = var7_int ^ -1;
                                       stackIn_127_0 = stackOut_126_0;
                                       stackIn_127_1 = stackOut_126_1;
                                       continue L22;
@@ -477,7 +487,7 @@ public final class Lexicominos extends nk {
                         var7_int = 0;
                         L27: while (true) {
                           stackOut_126_0 = -10;
-                          stackOut_126_1 = ~var7_int;
+                          stackOut_126_1 = var7_int ^ -1;
                           stackIn_127_0 = stackOut_126_0;
                           stackIn_127_1 = stackOut_126_1;
                           if (stackIn_127_0 >= stackIn_127_1) {
@@ -488,7 +498,7 @@ public final class Lexicominos extends nk {
                             } else {
                               L28: {
                                 L29: {
-                                  if (var7_int != 4) {
+                                  if (-5 != (var7_int ^ -1)) {
                                     break L29;
                                   } else {
                                     jh.field_b[var7_int] = null;
@@ -526,7 +536,7 @@ public final class Lexicominos extends nk {
                     L30: while (true) {
                       L31: {
                         L32: {
-                          if (var10_int >= 16384) {
+                          if ((var10_int ^ -1) <= -16385) {
                             break L32;
                           } else {
                             var11_int = var8_ref_int__[var10_int];
@@ -540,12 +550,12 @@ public final class Lexicominos extends nk {
                                 if (stackIn_144_0 == var11_int) {
                                   break L33;
                                 } else {
-                                  var12 = var11_int >> 3 & 31 | var11_int >> 6 & 1020;
+                                  var12 = var11_int >> 462656835 & 31 | var11_int >> -2070198650 & 1020;
                                   var13 = 256 + -var12;
                                   var14 = var9[var10_int];
                                   var15 = var14 & 16711935;
                                   var16 = 65280 & var14;
-                                  var9[var10_int] = tb.a(vg.a(var13 * var15 + var12 * 16711935 >> 8, 16711935), vg.a(65280, var13 * var16 + var12 * 65280 >> 8));
+                                  var9[var10_int] = tb.a(vg.a(var13 * var15 + var12 * 16711935 >> 1286219176, 16711935), vg.a(65280, var13 * var16 + var12 * 65280 >> -2121242232));
                                   break L33;
                                 }
                               }
@@ -603,7 +613,7 @@ public final class Lexicominos extends nk {
                                   fc.field_e[var7_int] = this.a(-128, ef.field_d[var7_int]);
                                   md.field_A[var7_int] = fc.field_e[var7_int].c();
                                   var8_ref_int__ = md.field_A[var7_int].field_y;
-                                  stackOut_160_0 = (int[]) var8_ref_int__;
+                                  stackOut_160_0 = (int[]) (var8_ref_int__);
                                   stackIn_170_0 = stackOut_160_0;
                                   stackIn_161_0 = stackOut_160_0;
                                   if (var17 != 0) {
@@ -662,7 +672,7 @@ public final class Lexicominos extends nk {
                             L44: while (true) {
                               L45: {
                                 L46: {
-                                  if (var8 < 0) {
+                                  if ((var8 ^ -1) > -1) {
                                     break L46;
                                   } else {
                                     stackOut_172_0 = var7_array[var8];
@@ -697,7 +707,7 @@ public final class Lexicominos extends nk {
                               L48: while (true) {
                                 L49: {
                                   L50: {
-                                    if (~var7_int <= ~fg.field_e.length) {
+                                    if ((var7_int ^ -1) <= (fg.field_e.length ^ -1)) {
                                       break L50;
                                     } else {
                                       fg.field_e[var7_int] = new db(32, 32);
@@ -728,13 +738,13 @@ public final class Lexicominos extends nk {
                                   ij.field_n[2] = df.a("", "pauseleft", dl.field_d, (byte) -97);
                                   ij.field_n[14] = ij.field_n[2];
                                   ij.field_n[1] = df.a("", "hsleft", dl.field_d, (byte) -117);
-                                  db dupTemp$7 = df.a("", "instleft", dl.field_d, (byte) -104);
+                                  dupTemp$7 = df.a("", "instleft", dl.field_d, (byte) -104);
                                   ij.field_n[3] = dupTemp$7;
                                   ij.field_n[12] = dupTemp$7;
                                   ij.field_n[5] = df.a("", "achleft", dl.field_d, (byte) -91);
                                   ij.field_n[7] = df.a("", "achgameleft", dl.field_d, (byte) -93);
                                   ij.field_n[6] = ij.field_n[0];
-                                  db dupTemp$8 = df.a("", "instright", dl.field_d, (byte) -40);
+                                  dupTemp$8 = df.a("", "instright", dl.field_d, (byte) -40);
                                   na.field_a[3] = dupTemp$8;
                                   na.field_a[12] = dupTemp$8;
                                   break L49;
@@ -744,8 +754,8 @@ public final class Lexicominos extends nk {
                                 ej.field_b = new db[var7_array2.length];
                                 var8 = 0;
                                 L51: while (true) {
-                                  stackOut_188_0 = ~var8;
-                                  stackOut_188_1 = ~var7_array2.length;
+                                  stackOut_188_0 = var8 ^ -1;
+                                  stackOut_188_1 = var7_array2.length ^ -1;
                                   stackIn_189_0 = stackOut_188_0;
                                   stackIn_189_1 = stackOut_188_1;
                                   L52: while (true) {
@@ -771,7 +781,7 @@ public final class Lexicominos extends nk {
                                                 if (var12 < 0) {
                                                   break L56;
                                                 } else {
-                                                  stackOut_193_0 = ~var9[var12];
+                                                  stackOut_193_0 = var9[var12] ^ -1;
                                                   stackOut_193_1 = -16777216;
                                                   stackIn_189_0 = stackOut_193_0;
                                                   stackIn_189_1 = stackOut_193_1;
@@ -825,8 +835,8 @@ public final class Lexicominos extends nk {
                                     }
                                     var8 = stackIn_203_0;
                                     L59: while (true) {
-                                      stackOut_204_0 = ~var7_array2.length;
-                                      stackOut_204_1 = ~var8;
+                                      stackOut_204_0 = var7_array2.length ^ -1;
+                                      stackOut_204_1 = var8 ^ -1;
                                       stackIn_205_0 = stackOut_204_0;
                                       stackIn_205_1 = stackOut_204_1;
                                       L60: while (true) {
@@ -849,10 +859,10 @@ public final class Lexicominos extends nk {
                                                 var12 = stackIn_207_0;
                                                 L63: while (true) {
                                                   L64: {
-                                                    if (var12 < 0) {
+                                                    if (-1 < (var12 ^ -1)) {
                                                       break L64;
                                                     } else {
-                                                      stackOut_209_0 = ~var9[var12];
+                                                      stackOut_209_0 = var9[var12] ^ -1;
                                                       stackOut_209_1 = -16777216;
                                                       stackIn_205_0 = stackOut_209_0;
                                                       stackIn_205_1 = stackOut_209_1;
@@ -904,7 +914,8 @@ public final class Lexicominos extends nk {
                                           stackIn_219_0 = stackOut_218_0;
                                           break L61;
                                         }
-                                        return stackIn_219_0 != 0;
+                                        decompiledRegionSelector0 = 16;
+                                        break L0;
                                       }
                                     }
                                   }
@@ -919,7 +930,7 @@ public final class Lexicominos extends nk {
                 }
               } else {
                 al.a(16, pl.field_b, 91.0f);
-                ((Lexicominos) this).d(param0 + 18466);
+                this.d(param0 + 18466);
                 hc.field_gb = null;
                 gl.field_a = null;
                 aa.field_i[0] = ih.a(ec.field_b, "", "game");
@@ -944,7 +955,7 @@ public final class Lexicominos extends nk {
                             if (aa.field_i[var3_int] == null) {
                               break L70;
                             } else {
-                              boolean discarded$9 = uh.field_n.field_A.a(0, aa.field_i[var3_int], (byte) 102, vb.field_r, ga.field_a);
+                              discarded$9 = uh.field_n.field_A.a(0, aa.field_i[var3_int], (byte) 102, vb.field_r, ga.field_a);
                               break L70;
                             }
                           }
@@ -966,7 +977,8 @@ public final class Lexicominos extends nk {
                   }
                   stackOut_107_0 = 0;
                   stackIn_108_0 = stackOut_107_0;
-                  return stackIn_108_0 != 0;
+                  decompiledRegionSelector0 = 15;
+                  break L0;
                 }
               }
             } else {
@@ -979,13 +991,15 @@ public final class Lexicominos extends nk {
                       al.a(16, rh.a(th.field_p, (byte) 68, "roman20", v.field_t, li.field_P), 0.0f);
                       stackOut_13_0 = 0;
                       stackIn_14_0 = stackOut_13_0;
-                      return stackIn_14_0 != 0;
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     } else {
                       if (!th.field_p.a("roman12", 10762)) {
                         al.a(16, rh.a(th.field_p, (byte) 94, "roman12", v.field_t, li.field_P), 0.0f);
                         stackOut_18_0 = 0;
                         stackIn_19_0 = stackOut_18_0;
-                        return stackIn_19_0 != 0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
                       } else {
                         L72: {
                           if (!gg.field_d.c(106)) {
@@ -1046,11 +1060,12 @@ public final class Lexicominos extends nk {
                                                                             } else {
                                                                               if (ci.field_a.a((byte) 15)) {
                                                                                 al.a(param0 + 102, qk.field_b, 90.0f);
-                                                                                ((Lexicominos) this).d(18380);
+                                                                                this.d(18380);
                                                                                 if (!param1) {
                                                                                   stackOut_92_0 = 0;
                                                                                   stackIn_93_0 = stackOut_92_0;
-                                                                                  return stackIn_93_0 != 0;
+                                                                                  decompiledRegionSelector0 = 13;
+                                                                                  break L0;
                                                                                 } else {
                                                                                   kj.c(true);
                                                                                   kc.field_m[0] = sd.a(gl.field_a, "", "turnover_page").c();
@@ -1070,7 +1085,8 @@ public final class Lexicominos extends nk {
                                                                                   dl.b(5);
                                                                                   stackOut_94_0 = 0;
                                                                                   stackIn_95_0 = stackOut_94_0;
-                                                                                  return stackIn_95_0 != 0;
+                                                                                  decompiledRegionSelector0 = 14;
+                                                                                  break L0;
                                                                                 }
                                                                               } else {
                                                                                 break L80;
@@ -1080,14 +1096,16 @@ public final class Lexicominos extends nk {
                                                                           al.a(16, rh.a(ci.field_a, (byte) 97, "index", fg.field_a, sg.field_f), 86.0f);
                                                                           stackOut_87_0 = 0;
                                                                           stackIn_88_0 = stackOut_87_0;
-                                                                          return stackIn_88_0 != 0;
+                                                                          decompiledRegionSelector0 = 12;
+                                                                          break L0;
                                                                         }
                                                                       }
                                                                     }
                                                                     al.a(16, rh.a(hh.field_L, (byte) 119, "", ia.field_F, ee.field_e), (float)(10 + hh.field_L.b("", (byte) 112) * 76 / 100));
                                                                     stackOut_81_0 = 0;
                                                                     stackIn_82_0 = stackOut_81_0;
-                                                                    return stackIn_82_0 != 0;
+                                                                    decompiledRegionSelector0 = 11;
+                                                                    break L0;
                                                                   } else {
                                                                     break L78;
                                                                   }
@@ -1096,35 +1114,40 @@ public final class Lexicominos extends nk {
                                                               al.a(16, rh.a(ci.field_e, (byte) 113, "", v.field_t, li.field_P), 10.0f);
                                                               stackOut_73_0 = 0;
                                                               stackIn_74_0 = stackOut_73_0;
-                                                              return stackIn_74_0 != 0;
+                                                              decompiledRegionSelector0 = 10;
+                                                              break L0;
                                                             }
                                                           }
                                                         }
                                                         al.a(16, rh.a(dl.field_d, (byte) 98, "", pe.field_e, qf.field_s), 9.0f);
                                                         stackOut_67_0 = 0;
                                                         stackIn_68_0 = stackOut_67_0;
-                                                        return stackIn_68_0 != 0;
+                                                        decompiledRegionSelector0 = 9;
+                                                        break L0;
                                                       }
                                                     }
                                                   }
                                                   al.a(16, rh.a(ec.field_b, (byte) 42, "", ni.field_d, fj.field_y), 6.0f);
                                                   stackOut_59_0 = 0;
                                                   stackIn_60_0 = stackOut_59_0;
-                                                  return stackIn_60_0 != 0;
+                                                  decompiledRegionSelector0 = 8;
+                                                  break L0;
                                                 }
                                               }
                                             }
                                             al.a(16, qg.a((byte) 100, ga.field_a, ni.field_d, 0, fj.field_y), 5.0f);
                                             stackOut_51_0 = 0;
                                             stackIn_52_0 = stackOut_51_0;
-                                            return stackIn_52_0 != 0;
+                                            decompiledRegionSelector0 = 7;
+                                            break L0;
                                           }
                                         }
                                       }
                                       al.a(param0 + 102, rh.a(hc.field_gb, (byte) 37, "", kj.field_p, e.field_h), 4.0f);
                                       stackOut_43_0 = 0;
                                       stackIn_44_0 = stackOut_43_0;
-                                      return stackIn_44_0 != 0;
+                                      decompiledRegionSelector0 = 6;
+                                      break L0;
                                     } else {
                                       break L73;
                                     }
@@ -1133,12 +1156,14 @@ public final class Lexicominos extends nk {
                                 al.a(param0 + 102, rh.a(gl.field_a, (byte) 122, "", kj.field_p, e.field_h), 1.0f);
                                 stackOut_35_0 = 0;
                                 stackIn_36_0 = stackOut_35_0;
-                                return stackIn_36_0 != 0;
+                                decompiledRegionSelector0 = 5;
+                                break L0;
                               } else {
                                 al.a(16, rh.a(gg.field_d, (byte) 124, "roman12", v.field_t, li.field_P), 0.0f);
                                 stackOut_29_0 = 0;
                                 stackIn_30_0 = stackOut_29_0;
-                                return stackIn_30_0 != 0;
+                                decompiledRegionSelector0 = 4;
+                                break L0;
                               }
                             }
                           }
@@ -1146,7 +1171,8 @@ public final class Lexicominos extends nk {
                         al.a(16, rh.a(gg.field_d, (byte) 37, "roman20", v.field_t, li.field_P), 0.0f);
                         stackOut_26_0 = 0;
                         stackIn_27_0 = stackOut_26_0;
-                        return stackIn_27_0 != 0;
+                        decompiledRegionSelector0 = 3;
+                        break L0;
                       }
                     }
                   } else {
@@ -1157,15 +1183,100 @@ public final class Lexicominos extends nk {
               al.a(16, rh.a(th.field_p, (byte) 55, "basic", pe.field_e, qf.field_s), 0.0f);
               stackOut_8_0 = 0;
               stackIn_9_0 = stackOut_8_0;
-              return stackIn_9_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var3, "Lexicominos.BB(" + param0 + ',' + param1 + ')');
+          throw ld.a((Throwable) ((Object) var3), "Lexicominos.BB(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_278_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_9_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_14_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_19_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_27_0 != 0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_30_0 != 0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_36_0 != 0;
+                  } else {
+                    if (decompiledRegionSelector0 == 6) {
+                      return stackIn_44_0 != 0;
+                    } else {
+                      if (decompiledRegionSelector0 == 7) {
+                        return stackIn_52_0 != 0;
+                      } else {
+                        if (decompiledRegionSelector0 == 8) {
+                          return stackIn_60_0 != 0;
+                        } else {
+                          if (decompiledRegionSelector0 == 9) {
+                            return stackIn_68_0 != 0;
+                          } else {
+                            if (decompiledRegionSelector0 == 10) {
+                              return stackIn_74_0 != 0;
+                            } else {
+                              if (decompiledRegionSelector0 == 11) {
+                                return stackIn_82_0 != 0;
+                              } else {
+                                if (decompiledRegionSelector0 == 12) {
+                                  return stackIn_88_0 != 0;
+                                } else {
+                                  if (decompiledRegionSelector0 == 13) {
+                                    return stackIn_93_0 != 0;
+                                  } else {
+                                    if (decompiledRegionSelector0 == 14) {
+                                      return stackIn_95_0 != 0;
+                                    } else {
+                                      if (decompiledRegionSelector0 == 15) {
+                                        return stackIn_108_0 != 0;
+                                      } else {
+                                        if (decompiledRegionSelector0 == 16) {
+                                          return stackIn_219_0 != 0;
+                                        } else {
+                                          if (decompiledRegionSelector0 == 17) {
+                                            return stackIn_222_0 != 0;
+                                          } else {
+                                            if (decompiledRegionSelector0 == 18) {
+                                              return stackIn_261_0 != 0;
+                                            } else {
+                                              if (decompiledRegionSelector0 == 19) {
+                                                return stackIn_266_0 != 0;
+                                              } else {
+                                                if (decompiledRegionSelector0 == 20) {
+                                                  return stackIn_269_0 != 0;
+                                                } else {
+                                                  return stackIn_278_0 != 0;
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -1188,7 +1299,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var3, "Lexicominos.AB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ld.a((Throwable) ((Object) var3), "Lexicominos.AB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1239,7 +1350,7 @@ public final class Lexicominos extends nk {
                 var7 = lf.field_a;
                 param2.b();
                 pa.field_a.b(0, 0);
-                if (param3 < 0) {
+                if ((param3 ^ -1) > -1) {
                   break L2;
                 } else {
                   vg.field_d[param3].d(48);
@@ -1286,23 +1397,23 @@ public final class Lexicominos extends nk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             runtimeException = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) runtimeException;
+            stackOut_18_0 = (RuntimeException) (runtimeException);
             stackOut_18_1 = new StringBuilder().append("Lexicominos.KA(").append(param0).append(',');
             stackIn_21_0 = stackOut_18_0;
             stackIn_21_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L6;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_22_0 = stackOut_19_0;
               stackIn_22_1 = stackOut_19_1;
@@ -1311,23 +1422,23 @@ public final class Lexicominos extends nk {
             }
           }
           L7: {
-            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+            stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
             stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
             stackIn_25_0 = stackOut_22_0;
             stackIn_25_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param2 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_26_0 = stackOut_23_0;
               stackIn_26_1 = stackOut_23_1;
@@ -1335,7 +1446,7 @@ public final class Lexicominos extends nk {
               break L7;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param3 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param3 + ')');
         }
     }
 
@@ -1379,6 +1490,7 @@ public final class Lexicominos extends nk {
         RuntimeException stackIn_122_0 = null;
         StringBuilder stackIn_122_1 = null;
         String stackIn_122_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_59_0 = 0;
         byte stackOut_101_0 = 0;
@@ -1418,31 +1530,31 @@ public final class Lexicominos extends nk {
         try {
           L0: {
             L1: {
-              if (((Lexicominos) this).field_J != 2) {
+              if (-3 != (this.field_J ^ -1)) {
                 break L1;
               } else {
-                if (tj.field_i >= 20) {
+                if ((tj.field_i ^ -1) <= -21) {
                   break L1;
                 } else {
-                  ((Lexicominos) this).field_J = 1;
+                  this.field_J = 1;
                   break L1;
                 }
               }
             }
             L2: {
-              if (((Lexicominos) this).field_J == 1) {
+              if (this.field_J == 1) {
                 L3: {
-                  if (tj.field_i >= 12) {
+                  if (-13 >= (tj.field_i ^ -1)) {
                     break L3;
                   } else {
-                    ((Lexicominos) this).field_J = 0;
+                    this.field_J = 0;
                     break L3;
                   }
                 }
                 if (tj.field_i <= 28) {
                   break L2;
                 } else {
-                  ((Lexicominos) this).field_J = 2;
+                  this.field_J = 2;
                   break L2;
                 }
               } else {
@@ -1450,18 +1562,18 @@ public final class Lexicominos extends nk {
               }
             }
             L4: {
-              if (0 != ((Lexicominos) this).field_J) {
+              if (0 != this.field_J) {
                 break L4;
               } else {
                 if (16 < tj.field_i) {
-                  ((Lexicominos) this).field_J = 1;
+                  this.field_J = 1;
                   break L4;
                 } else {
                   break L4;
                 }
               }
             }
-            if (0 == ((Lexicominos) this).field_J) {
+            if (0 == this.field_J) {
               param5 = 307199;
               L5: while (true) {
                 L6: {
@@ -1470,12 +1582,12 @@ public final class Lexicominos extends nk {
                   } else {
                     L7: {
                       var10_int = param6[param5];
-                      if (var10_int == -1) {
+                      if (0 == (var10_int ^ -1)) {
                         break L7;
                       } else {
                         L8: {
-                          param3 = 311 * ((2044 & var10_int) >> 2) + (var10_int >> 13 & 511);
-                          if (var10_int >= 0) {
+                          param3 = 311 * ((2044 & var10_int) >> -1103444990) + (var10_int >> 375933229 & 511);
+                          if ((var10_int ^ -1) <= -1) {
                             break L8;
                           } else {
                             param4[param5] = param1[param3];
@@ -1498,10 +1610,11 @@ public final class Lexicominos extends nk {
                     }
                   }
                 }
-                return;
+                decompiledRegionSelector0 = 0;
+                break L0;
               }
             } else {
-              if (((Lexicominos) this).field_J != 1) {
+              if (this.field_J != 1) {
                 param5 = 307199;
                 L9: while (true) {
                   L10: {
@@ -1510,7 +1623,7 @@ public final class Lexicominos extends nk {
                         break L11;
                       } else {
                         var10_int = param6[param5];
-                        stackOut_59_0 = ~var10_int;
+                        stackOut_59_0 = var10_int ^ -1;
                         stackIn_102_0 = stackOut_59_0;
                         stackIn_60_0 = stackOut_59_0;
                         if (var17 != 0) {
@@ -1522,9 +1635,9 @@ public final class Lexicominos extends nk {
                             } else {
                               L13: {
                                 param0 = 3 & var10_int;
-                                param2 = var10_int >> 11 & 3;
-                                param3 = ((var10_int & 4186687) >> 13) + ((2044 & var10_int) >> 2) * 311;
-                                if (var10_int >= 0) {
+                                param2 = var10_int >> 1824052683 & 3;
+                                param3 = ((var10_int & 4186687) >> 190414509) + ((2044 & var10_int) >> 520261154) * 311;
+                                if ((var10_int ^ -1) <= -1) {
                                   break L13;
                                 } else {
                                   L14: {
@@ -1538,8 +1651,8 @@ public final class Lexicominos extends nk {
                                         var12 = param1[param3 + 1];
                                         var13 = param1[param3 + 311];
                                         var14 = param1[312 + param3];
-                                        var15 = param0 * ((16711935 & var14) * param2 + (-param2 + 4) * (var13 & 16711935)) + ((16711935 & var11) * (4 + -param2) - -(param2 * (var12 & 16711935))) * (4 + -param0) >> 4;
-                                        var16 = (4 - param0) * ((var11 & 65280) * (-param2 + 4) - -(param2 * (var12 & 65280))) - -(param0 * (param2 * (var14 & 65280) + (4 - param2) * (var13 & 65280))) >> 4;
+                                        var15 = param0 * ((16711935 & var14) * param2 + (-param2 + 4) * (var13 & 16711935)) + ((16711935 & var11) * (4 + -param2) - -(param2 * (var12 & 16711935))) * (4 + -param0) >> -1389752412;
+                                        var16 = (4 - param0) * ((var11 & 65280) * (-param2 + 4) - -(param2 * (var12 & 65280))) - -(param0 * (param2 * (var14 & 65280) + (4 - param2) * (var13 & 65280))) >> 149256836;
                                         param4[param5] = tb.a(vg.a(65280, var16), vg.a(16711935, var15));
                                         if (var17 == 0) {
                                           break L12;
@@ -1550,7 +1663,7 @@ public final class Lexicominos extends nk {
                                     }
                                   }
                                   L15: {
-                                    if (param2 != 0) {
+                                    if (-1 != (param2 ^ -1)) {
                                       break L15;
                                     } else {
                                       L16: {
@@ -1567,8 +1680,8 @@ public final class Lexicominos extends nk {
                                       }
                                       var11 = param1[param3];
                                       var12 = param1[param3 + 311];
-                                      var13 = (16711935 & var11) * (-param0 + 4) + param0 * (var12 & 16711935) >> 2;
-                                      var14 = param0 * (var12 & 65280) + (65280 & var11) * (-param0 + 4) >> 2;
+                                      var13 = (16711935 & var11) * (-param0 + 4) + param0 * (var12 & 16711935) >> 901625026;
+                                      var14 = param0 * (var12 & 65280) + (65280 & var11) * (-param0 + 4) >> -1684271422;
                                       param4[param5] = tb.a(vg.a(var14, 65280), vg.a(var13, 16711935));
                                       if (var17 == 0) {
                                         break L12;
@@ -1579,8 +1692,8 @@ public final class Lexicominos extends nk {
                                   }
                                   var11 = param1[param3];
                                   var12 = param1[param3 + 1];
-                                  var13 = (16711935 & var12) * param2 + (4 + -param2) * (16711935 & var11) >> 2;
-                                  var14 = (65280 & var12) * param2 + (65280 & var11) * (4 + -param2) >> 2;
+                                  var13 = (16711935 & var12) * param2 + (4 + -param2) * (16711935 & var11) >> -575889438;
+                                  var14 = (65280 & var12) * param2 + (65280 & var11) * (4 + -param2) >> -62624510;
                                   param4[param5] = tb.a(vg.a(var13, 16711935), vg.a(var14, 65280));
                                   if (var17 == 0) {
                                     break L12;
@@ -1602,17 +1715,17 @@ public final class Lexicominos extends nk {
                                   }
                                 }
                                 L19: {
-                                  if (param2 != 0) {
+                                  if (-1 != (param2 ^ -1)) {
                                     break L19;
                                   } else {
                                     L20: {
-                                      if (param0 == 0) {
+                                      if ((param0 ^ -1) == -1) {
                                         break L20;
                                       } else {
                                         var11 = param8[param3];
                                         var12 = param8[311 + param3];
-                                        var13 = (16711935 & var11) * (4 + -param0) - -((var12 & 16711935) * param0) >> 2;
-                                        var14 = (65280 & var11) * (-param0 + 4) - -(param0 * (65280 & var12)) >> 2;
+                                        var13 = (16711935 & var11) * (4 + -param0) - -((var12 & 16711935) * param0) >> 1075790434;
+                                        var14 = (65280 & var11) * (-param0 + 4) - -(param0 * (65280 & var12)) >> -919400478;
                                         param4[param5] = tb.a(vg.a(65280, var14), vg.a(16711935, var13));
                                         if (var17 == 0) {
                                           break L12;
@@ -1631,8 +1744,8 @@ public final class Lexicominos extends nk {
                                 }
                                 var11 = param8[param3];
                                 var12 = param8[1 + param3];
-                                var13 = param2 * (var12 & 16711935) + (16711935 & var11) * (-param2 + 4) >> 2;
-                                var14 = (-param2 + 4) * (var11 & 65280) + param2 * (var12 & 65280) >> 2;
+                                var13 = param2 * (var12 & 16711935) + (16711935 & var11) * (-param2 + 4) >> 1269091458;
+                                var14 = (-param2 + 4) * (var11 & 65280) + param2 * (var12 & 65280) >> 1806435714;
                                 param4[param5] = tb.a(vg.a(var14, 65280), vg.a(16711935, var13));
                                 if (var17 == 0) {
                                   break L12;
@@ -1644,8 +1757,8 @@ public final class Lexicominos extends nk {
                               var12 = param8[param3 - -1];
                               var13 = param8[311 + param3];
                               var14 = param8[311 + param3 - -1];
-                              var15 = (4 - param0) * (param2 * (16711935 & var12) + (4 - param2) * (var11 & 16711935)) + param0 * ((16711935 & var13) * (4 - param2) - -((16711935 & var14) * param2)) >> 4;
-                              var16 = ((var13 & 65280) * (4 + -param2) + (65280 & var14) * param2) * param0 + ((4 - param2) * (65280 & var11) - -(param2 * (var12 & 65280))) * (-param0 + 4) >> 4;
+                              var15 = (4 - param0) * (param2 * (16711935 & var12) + (4 - param2) * (var11 & 16711935)) + param0 * ((16711935 & var13) * (4 - param2) - -((16711935 & var14) * param2)) >> 899412868;
+                              var16 = ((var13 & 65280) * (4 + -param2) + (65280 & var14) * param2) * param0 + ((4 - param2) * (65280 & var11) - -(param2 * (var12 & 65280))) * (-param0 + 4) >> 360688932;
                               param4[param5] = tb.a(vg.a(var16, 65280), vg.a(var15, 16711935));
                               break L12;
                             }
@@ -1671,6 +1784,7 @@ public final class Lexicominos extends nk {
                       break L21;
                     }
                   }
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 }
               } else {
@@ -1682,23 +1796,23 @@ public final class Lexicominos extends nk {
                     } else {
                       L24: {
                         var10_int = param6[param5];
-                        if (var10_int == -1) {
+                        if ((var10_int ^ -1) == 0) {
                           break L24;
                         } else {
                           L25: {
-                            param2 = var10_int >> 11 & 3;
-                            param3 = 311 * ((var10_int & 2044) >> 2) + ((var10_int & 4193849) >> 13);
+                            param2 = var10_int >> 2120236907 & 3;
+                            param3 = 311 * ((var10_int & 2044) >> -636547966) + ((var10_int & 4193849) >> 1018580429);
                             if (0 > var10_int) {
                               break L25;
                             } else {
                               L26: {
-                                if (param2 == 0) {
+                                if (-1 == (param2 ^ -1)) {
                                   break L26;
                                 } else {
                                   var11 = param8[param3];
                                   var12 = param8[1 + param3];
-                                  var13 = param2 * (16711935 & var12) + (4 + -param2) * (var11 & 16711935) >> 2;
-                                  var14 = (var11 & 65280) * (4 - param2) - -(param2 * (var12 & 65280)) >> 2;
+                                  var13 = param2 * (16711935 & var12) + (4 + -param2) * (var11 & 16711935) >> 1609487170;
+                                  var14 = (var11 & 65280) * (4 - param2) - -(param2 * (var12 & 65280)) >> 584790690;
                                   param4[param5] = tb.a(vg.a(var14, 65280), vg.a(16711935, var13));
                                   if (var17 == 0) {
                                     break L24;
@@ -1716,13 +1830,13 @@ public final class Lexicominos extends nk {
                             }
                           }
                           L27: {
-                            if (param2 == 0) {
+                            if ((param2 ^ -1) == -1) {
                               break L27;
                             } else {
                               var11 = param1[param3];
                               var12 = param1[1 + param3];
-                              var13 = (4 + -param2) * (var11 & 16711935) - -((var12 & 16711935) * param2) >> 2;
-                              var14 = (65280 & var12) * param2 + (4 - param2) * (var11 & 65280) >> 2;
+                              var13 = (4 + -param2) * (var11 & 16711935) - -((var12 & 16711935) * param2) >> -384903454;
+                              var14 = (65280 & var12) * param2 + (4 - param2) * (var11 & 65280) >> -1599835070;
                               param4[param5] = tb.a(vg.a(16711935, var13), vg.a(65280, var14));
                               if (var17 == 0) {
                                 break L24;
@@ -1743,7 +1857,8 @@ public final class Lexicominos extends nk {
                       }
                     }
                   }
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
             }
@@ -1752,23 +1867,23 @@ public final class Lexicominos extends nk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L28: {
             var10 = decompiledCaughtException;
-            stackOut_106_0 = (RuntimeException) var10;
+            stackOut_106_0 = (RuntimeException) (var10);
             stackOut_106_1 = new StringBuilder().append("Lexicominos.WA(").append(param0).append(',');
             stackIn_109_0 = stackOut_106_0;
             stackIn_109_1 = stackOut_106_1;
             stackIn_107_0 = stackOut_106_0;
             stackIn_107_1 = stackOut_106_1;
             if (param1 == null) {
-              stackOut_109_0 = (RuntimeException) (Object) stackIn_109_0;
-              stackOut_109_1 = (StringBuilder) (Object) stackIn_109_1;
+              stackOut_109_0 = (RuntimeException) ((Object) stackIn_109_0);
+              stackOut_109_1 = (StringBuilder) ((Object) stackIn_109_1);
               stackOut_109_2 = "null";
               stackIn_110_0 = stackOut_109_0;
               stackIn_110_1 = stackOut_109_1;
               stackIn_110_2 = stackOut_109_2;
               break L28;
             } else {
-              stackOut_107_0 = (RuntimeException) (Object) stackIn_107_0;
-              stackOut_107_1 = (StringBuilder) (Object) stackIn_107_1;
+              stackOut_107_0 = (RuntimeException) ((Object) stackIn_107_0);
+              stackOut_107_1 = (StringBuilder) ((Object) stackIn_107_1);
               stackOut_107_2 = "{...}";
               stackIn_110_0 = stackOut_107_0;
               stackIn_110_1 = stackOut_107_1;
@@ -1777,23 +1892,23 @@ public final class Lexicominos extends nk {
             }
           }
           L29: {
-            stackOut_110_0 = (RuntimeException) (Object) stackIn_110_0;
+            stackOut_110_0 = (RuntimeException) ((Object) stackIn_110_0);
             stackOut_110_1 = ((StringBuilder) (Object) stackIn_110_1).append(stackIn_110_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_113_0 = stackOut_110_0;
             stackIn_113_1 = stackOut_110_1;
             stackIn_111_0 = stackOut_110_0;
             stackIn_111_1 = stackOut_110_1;
             if (param4 == null) {
-              stackOut_113_0 = (RuntimeException) (Object) stackIn_113_0;
-              stackOut_113_1 = (StringBuilder) (Object) stackIn_113_1;
+              stackOut_113_0 = (RuntimeException) ((Object) stackIn_113_0);
+              stackOut_113_1 = (StringBuilder) ((Object) stackIn_113_1);
               stackOut_113_2 = "null";
               stackIn_114_0 = stackOut_113_0;
               stackIn_114_1 = stackOut_113_1;
               stackIn_114_2 = stackOut_113_2;
               break L29;
             } else {
-              stackOut_111_0 = (RuntimeException) (Object) stackIn_111_0;
-              stackOut_111_1 = (StringBuilder) (Object) stackIn_111_1;
+              stackOut_111_0 = (RuntimeException) ((Object) stackIn_111_0);
+              stackOut_111_1 = (StringBuilder) ((Object) stackIn_111_1);
               stackOut_111_2 = "{...}";
               stackIn_114_0 = stackOut_111_0;
               stackIn_114_1 = stackOut_111_1;
@@ -1802,23 +1917,23 @@ public final class Lexicominos extends nk {
             }
           }
           L30: {
-            stackOut_114_0 = (RuntimeException) (Object) stackIn_114_0;
+            stackOut_114_0 = (RuntimeException) ((Object) stackIn_114_0);
             stackOut_114_1 = ((StringBuilder) (Object) stackIn_114_1).append(stackIn_114_2).append(',').append(param5).append(',');
             stackIn_117_0 = stackOut_114_0;
             stackIn_117_1 = stackOut_114_1;
             stackIn_115_0 = stackOut_114_0;
             stackIn_115_1 = stackOut_114_1;
             if (param6 == null) {
-              stackOut_117_0 = (RuntimeException) (Object) stackIn_117_0;
-              stackOut_117_1 = (StringBuilder) (Object) stackIn_117_1;
+              stackOut_117_0 = (RuntimeException) ((Object) stackIn_117_0);
+              stackOut_117_1 = (StringBuilder) ((Object) stackIn_117_1);
               stackOut_117_2 = "null";
               stackIn_118_0 = stackOut_117_0;
               stackIn_118_1 = stackOut_117_1;
               stackIn_118_2 = stackOut_117_2;
               break L30;
             } else {
-              stackOut_115_0 = (RuntimeException) (Object) stackIn_115_0;
-              stackOut_115_1 = (StringBuilder) (Object) stackIn_115_1;
+              stackOut_115_0 = (RuntimeException) ((Object) stackIn_115_0);
+              stackOut_115_1 = (StringBuilder) ((Object) stackIn_115_1);
               stackOut_115_2 = "{...}";
               stackIn_118_0 = stackOut_115_0;
               stackIn_118_1 = stackOut_115_1;
@@ -1827,23 +1942,23 @@ public final class Lexicominos extends nk {
             }
           }
           L31: {
-            stackOut_118_0 = (RuntimeException) (Object) stackIn_118_0;
+            stackOut_118_0 = (RuntimeException) ((Object) stackIn_118_0);
             stackOut_118_1 = ((StringBuilder) (Object) stackIn_118_1).append(stackIn_118_2).append(',').append(param7).append(',');
             stackIn_121_0 = stackOut_118_0;
             stackIn_121_1 = stackOut_118_1;
             stackIn_119_0 = stackOut_118_0;
             stackIn_119_1 = stackOut_118_1;
             if (param8 == null) {
-              stackOut_121_0 = (RuntimeException) (Object) stackIn_121_0;
-              stackOut_121_1 = (StringBuilder) (Object) stackIn_121_1;
+              stackOut_121_0 = (RuntimeException) ((Object) stackIn_121_0);
+              stackOut_121_1 = (StringBuilder) ((Object) stackIn_121_1);
               stackOut_121_2 = "null";
               stackIn_122_0 = stackOut_121_0;
               stackIn_122_1 = stackOut_121_1;
               stackIn_122_2 = stackOut_121_2;
               break L31;
             } else {
-              stackOut_119_0 = (RuntimeException) (Object) stackIn_119_0;
-              stackOut_119_1 = (StringBuilder) (Object) stackIn_119_1;
+              stackOut_119_0 = (RuntimeException) ((Object) stackIn_119_0);
+              stackOut_119_1 = (StringBuilder) ((Object) stackIn_119_1);
               stackOut_119_2 = "{...}";
               stackIn_122_0 = stackOut_119_0;
               stackIn_122_1 = stackOut_119_1;
@@ -1851,7 +1966,16 @@ public final class Lexicominos extends nk {
               break L31;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_122_0, stackIn_122_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_122_0), stackIn_122_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -1953,7 +2077,7 @@ public final class Lexicominos extends nk {
               if (param0 == 79) {
                 break L1;
               } else {
-                ((Lexicominos) this).field_K = false;
+                this.field_K = false;
                 break L1;
               }
             }
@@ -2098,13 +2222,13 @@ public final class Lexicominos extends nk {
             sc.a(-70);
             ri.c((byte) 117);
             tf.a(-3082);
-            ((Lexicominos) this).field_B = null;
+            this.field_B = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2, "Lexicominos.I(" + param0 + ')');
+          throw ld.a((Throwable) ((Object) var2), "Lexicominos.I(" + param0 + ')');
         }
         L2: {
           if (!qb.field_k) {
@@ -2147,7 +2271,7 @@ public final class Lexicominos extends nk {
               if (param0 == -83) {
                 break L2;
               } else {
-                ((Lexicominos) this).b(true);
+                this.b(true);
                 break L2;
               }
             }
@@ -2157,29 +2281,29 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2, "Lexicominos.PA(" + param0 + ')');
+          throw ld.a((Throwable) ((Object) var2), "Lexicominos.PA(" + param0 + ')');
         }
     }
 
     final void b(boolean param0) {
         try {
-            ((Lexicominos) this).a(12, 13, false, 10, 5000, 0, 11, 2);
+            this.a(12, 13, false, 10, 5000, 0, 11, 2);
             b.a(22050, true, 10);
-            ce.field_b = b.a(jh.field_a, (java.awt.Component) (Object) ug.field_y, 0, 4096);
-            ik.field_h = b.a(jh.field_a, (java.awt.Component) (Object) ug.field_y, 1, 2048);
+            ce.field_b = b.a(jh.field_a, (java.awt.Component) ((Object) ug.field_y), 0, 4096);
+            ik.field_h = b.a(jh.field_a, (java.awt.Component) ((Object) ug.field_y), 1, 2048);
             wj.field_j = new hk();
-            ik.field_h.b((lk) (Object) wj.field_j);
+            ik.field_h.b(wj.field_j);
             uh.field_n = new uh();
             uh.field_n.field_s = new hl(uh.field_n.field_A);
             uh.field_n.field_A.a(128, true, 9);
             uh.field_n.field_s.a(128, true, 9);
-            ce.field_b.b((lk) (Object) uh.field_n);
-            ((Lexicominos) this).a(false, param0, true, (byte) 18, false);
+            ce.field_b.b(uh.field_n);
+            this.a(false, param0, true, (byte) 18, false);
             ea.field_b = 0;
             g.field_n = 10640990;
             ec.field_c = 3941155;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "Lexicominos.F(" + param0 + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "Lexicominos.F(" + param0 + ')');
         }
     }
 
@@ -2187,6 +2311,7 @@ public final class Lexicominos extends nk {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_10_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_7_0 = 0;
@@ -2199,7 +2324,7 @@ public final class Lexicominos extends nk {
                   if (ki.a((byte) -120)) {
                     break L2;
                   } else {
-                    if (!((Lexicominos) this).field_K) {
+                    if (!this.field_K) {
                       stackOut_9_0 = 0;
                       stackIn_10_0 = stackOut_9_0;
                       break L1;
@@ -2212,19 +2337,25 @@ public final class Lexicominos extends nk {
                 stackIn_10_0 = stackOut_7_0;
                 break L1;
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2, "Lexicominos.TA(" + param0 + ')');
+          throw ld.a((Throwable) ((Object) var2), "Lexicominos.TA(" + param0 + ')');
         }
-        return stackIn_10_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_10_0 != 0;
+        }
     }
 
     private final void c(boolean param0) {
@@ -2244,7 +2375,7 @@ public final class Lexicominos extends nk {
                 L2: while (true) {
                   L3: {
                     L4: {
-                      var2 = (vb) (Object) rb.field_b.a((byte) 56);
+                      var2 = (vb) ((Object) rb.field_b.a((byte) 56));
                       if (var2 != null) {
                         break L4;
                       } else {
@@ -2276,7 +2407,7 @@ public final class Lexicominos extends nk {
                   if (!td.a(fg.field_f, param0)) {
                     break L7;
                   } else {
-                    ((Lexicominos) this).m(-6721);
+                    this.m(-6721);
                     if (var4 != 0) {
                       break L6;
                     } else {
@@ -2296,7 +2427,7 @@ public final class Lexicominos extends nk {
                 if (!d.a((byte) -56)) {
                   break L8;
                 } else {
-                  var3 = ((Lexicominos) this).n(6);
+                  var3 = this.n(6);
                   if (var3 != 2) {
                     break L8;
                   } else {
@@ -2307,7 +2438,7 @@ public final class Lexicominos extends nk {
               }
               L9: {
                 if (var2_int != 0) {
-                  wi.a(12, bi.field_a.field_E * 3 >> 1, (byte) -123, (le) (Object) bi.field_a, 4, 4, bi.field_a.field_E - -1, 240, 320, jh.field_b, nh.field_c);
+                  wi.a(12, bi.field_a.field_E * 3 >> -1883778623, (byte) -123, bi.field_a, 4, 4, bi.field_a.field_E - -1, 240, 320, jh.field_b, nh.field_c);
                   break L9;
                 } else {
                   break L9;
@@ -2319,11 +2450,12 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) runtimeException, "Lexicominos.NA(" + param0 + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "Lexicominos.NA(" + param0 + ')');
         }
     }
 
     private final void h(byte param0) {
+        boolean discarded$2 = false;
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -2348,7 +2480,7 @@ public final class Lexicominos extends nk {
               if (param0 > 77) {
                 break L2;
               } else {
-                boolean discarded$2 = this.p(71);
+                discarded$2 = this.p(71);
                 break L2;
               }
             }
@@ -2359,11 +2491,12 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2, "Lexicominos.RA(" + param0 + ')');
+          throw ld.a((Throwable) ((Object) var2), "Lexicominos.RA(" + param0 + ')');
         }
     }
 
     final void a(byte param0) {
+        boolean discarded$2 = false;
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -2372,7 +2505,7 @@ public final class Lexicominos extends nk {
               if (param0 == 40) {
                 break L1;
               } else {
-                boolean discarded$2 = this.p(56);
+                discarded$2 = this.p(56);
                 break L1;
               }
             }
@@ -2392,20 +2525,19 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2, "Lexicominos.K(" + param0 + ')');
+          throw ld.a((Throwable) ((Object) var2), "Lexicominos.K(" + param0 + ')');
         }
     }
 
     public final void init() {
         try {
-            ((Lexicominos) this).a(14, "lexicominos", (byte) -107);
+            this.a(14, "lexicominos", (byte) -107);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "Lexicominos.init()");
+            throw ld.a((Throwable) ((Object) runtimeException), "Lexicominos.init()");
         }
     }
 
     final void d(int param0) {
-        Object var2_ref = null;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -2420,6 +2552,7 @@ public final class Lexicominos extends nk {
         int stackIn_87_0 = 0;
         int stackIn_88_0 = 0;
         int stackIn_88_1 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ra stackOut_4_0 = null;
         java.awt.Canvas stackOut_2_0 = null;
@@ -2436,18 +2569,18 @@ public final class Lexicominos extends nk {
         int stackOut_83_0 = 0;
         int stackOut_85_0 = 0;
         boolean stackOut_85_1 = false;
-        var2_ref = null;
+        Object var2_ref = null;
         var4 = field_L ? 1 : 0;
         try {
           L0: {
             L1: {
               if (ff.field_b != null) {
                 stackOut_4_0 = ff.field_b;
-                stackIn_5_0 = (Object) (Object) stackOut_4_0;
+                stackIn_5_0 = stackOut_4_0;
                 break L1;
               } else {
                 stackOut_2_0 = ug.field_y;
-                stackIn_5_0 = (Object) (Object) stackOut_2_0;
+                stackIn_5_0 = stackOut_2_0;
                 break L1;
               }
             }
@@ -2471,16 +2604,17 @@ public final class Lexicominos extends nk {
                   break L2;
                 }
               }
-              ga.a((byte) stackIn_12_0, stackIn_12_1 != 0, (java.awt.Canvas) var2_ref);
-              return;
+              ga.a((byte) stackIn_12_0, stackIn_12_1 != 0, (java.awt.Canvas) (var2_ref));
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (oj.field_g) {
                 if (this.p(param0 + -18380)) {
                   L3: {
-                    if (aa.field_j == -2) {
+                    if ((aa.field_j ^ -1) == 1) {
                       break L3;
                     } else {
-                      if (th.field_r != -2) {
+                      if (1 != (th.field_r ^ -1)) {
                         lf.g(0, 0, 640, 20);
                         cb.field_n.b(0, 0);
                         lf.g(0, 460, 640, 480);
@@ -2498,14 +2632,14 @@ public final class Lexicominos extends nk {
                   }
                   L4: {
                     L5: {
-                      if (aa.field_j == -2) {
+                      if (1 == (aa.field_j ^ -1)) {
                         break L5;
                       } else {
-                        if (th.field_r == -2) {
+                        if (1 == (th.field_r ^ -1)) {
                           break L5;
                         } else {
                           L6: {
-                            if (~aa.field_j != ~th.field_r) {
+                            if ((aa.field_j ^ -1) != (th.field_r ^ -1)) {
                               break L6;
                             } else {
                               this.a(param0 + 3730, cl.field_S, jf.field_O, aa.field_j);
@@ -2519,7 +2653,7 @@ public final class Lexicominos extends nk {
                           }
                           L7: {
                             L8: {
-                              if (cg.field_j <= 0) {
+                              if ((cg.field_j ^ -1) >= -1) {
                                 break L8;
                               } else {
                                 this.a(param0 ^ 4498, cl.field_S, jf.field_O, aa.field_j);
@@ -2548,7 +2682,7 @@ public final class Lexicominos extends nk {
                             }
                           }
                           L10: {
-                            if (ed.field_v == 40) {
+                            if ((ed.field_v ^ -1) == -41) {
                               break L10;
                             } else {
                               this.a(jf.field_O.field_y, v.field_z.field_y, false);
@@ -2571,7 +2705,7 @@ public final class Lexicominos extends nk {
                     }
                     L11: {
                       this.a(22110, v.field_z, jf.field_O, 0);
-                      if (ed.field_v > 40) {
+                      if (-41 > (ed.field_v ^ -1)) {
                         stackOut_63_0 = 40;
                         stackIn_64_0 = stackOut_63_0;
                         break L11;
@@ -2604,9 +2738,9 @@ public final class Lexicominos extends nk {
                     }
                   }
                   L14: {
-                    if (je.field_a != 0) {
-                      var3 = ed.field_v << 3;
-                      if (var3 <= 0) {
+                    if ((je.field_a ^ -1) != -1) {
+                      var3 = ed.field_v << -2006446333;
+                      if ((var3 ^ -1) >= -1) {
                         break L14;
                       } else {
                         lf.c(0, 0, lf.field_f, lf.field_a, 0, var3);
@@ -2649,25 +2783,46 @@ public final class Lexicominos extends nk {
                     }
                   }
                   if (param0 == 18380) {
-                    lj.a(0, (java.awt.Canvas) var2_ref, 0, (byte) -128);
+                    lj.a(0, (java.awt.Canvas) (var2_ref), 0, (byte) -128);
+                    decompiledRegionSelector0 = 4;
                     break L0;
                   } else {
-                    return;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   }
                 } else {
-                  uj.a(-101, (java.awt.Canvas) var2_ref);
-                  return;
+                  uj.a(-101, (java.awt.Canvas) (var2_ref));
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               } else {
-                uj.a(106, (java.awt.Canvas) var2_ref);
-                return;
+                uj.a(106, (java.awt.Canvas) (var2_ref));
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2, "Lexicominos.D(" + param0 + ')');
+          throw ld.a((Throwable) ((Object) var2), "Lexicominos.D(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                return;
+              }
+            }
+          }
         }
     }
 
@@ -2711,7 +2866,7 @@ public final class Lexicominos extends nk {
               if (!param2) {
                 break L1;
               } else {
-                field_I = null;
+                field_I = (db) null;
                 break L1;
               }
             }
@@ -2721,23 +2876,23 @@ public final class Lexicominos extends nk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("Lexicominos.MA(");
             stackIn_6_0 = stackOut_3_0;
             stackIn_6_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_7_0 = stackOut_4_0;
               stackIn_7_1 = stackOut_4_1;
@@ -2746,23 +2901,23 @@ public final class Lexicominos extends nk {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_10_0 = stackOut_7_0;
             stackIn_10_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_11_0 = stackOut_8_0;
               stackIn_11_1 = stackOut_8_1;
@@ -2770,11 +2925,19 @@ public final class Lexicominos extends nk {
               break L3;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ')');
         }
     }
 
     final void a(boolean param0) {
+        boolean discarded$8 = false;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        StringBuilder discarded$11 = null;
+        StringBuilder discarded$12 = null;
+        StringBuilder discarded$13 = null;
+        StringBuilder discarded$14 = null;
+        StringBuilder discarded$15 = null;
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -2812,6 +2975,7 @@ public final class Lexicominos extends nk {
         int stackIn_334_1 = 0;
         int stackIn_336_0 = 0;
         int stackIn_336_1 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_8_0 = null;
         Object stackOut_11_0 = null;
@@ -2890,7 +3054,7 @@ public final class Lexicominos extends nk {
               }
             }
             L3: {
-              ((Lexicominos) this).c(stackIn_12_1 != 0, -1);
+              this.c(stackIn_12_1 != 0, -1);
               if (ne.field_e) {
                 this.h((byte) 121);
                 ne.field_e = false;
@@ -2903,7 +3067,7 @@ public final class Lexicominos extends nk {
               if (!lh.b(-24921)) {
                 break L4;
               } else {
-                ((Lexicominos) this).e((byte) 49);
+                this.e((byte) 49);
                 if (lh.b(-24921)) {
                   L5: {
                     if (!ha.a(89)) {
@@ -2912,12 +3076,13 @@ public final class Lexicominos extends nk {
                       if (oj.field_g) {
                         break L5;
                       } else {
-                        boolean discarded$8 = this.a((byte) -86, false);
+                        discarded$8 = this.a((byte) -86, false);
                         break L5;
                       }
                     }
                   }
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   break L4;
                 }
@@ -2941,9 +3106,9 @@ public final class Lexicominos extends nk {
                             break L9;
                           } else {
                             L10: {
-                              ((Lexicominos) this).field_K = true;
+                              this.field_K = true;
                               sc.field_g = sc.field_g | vc.field_D.field_i;
-                              ee.field_a = ee.field_a & ~vc.field_D.field_i;
+                              ee.field_a = ee.field_a & (vc.field_D.field_i ^ -1);
                               vc.field_D = null;
                               if (param0) {
                                 stackOut_44_0 = 0;
@@ -2956,8 +3121,8 @@ public final class Lexicominos extends nk {
                               }
                             }
                             kj.c(stackIn_45_0 != 0);
-                            qf.a((Lexicominos) this, 117);
-                            if (aa.field_j != 7) {
+                            qf.a((Lexicominos) (this), 117);
+                            if (-8 != (aa.field_j ^ -1)) {
                               break L6;
                             } else {
                               if (ee.field_a != 0) {
@@ -3006,7 +3171,7 @@ public final class Lexicominos extends nk {
                       L13: {
                         L14: {
                           var3 = lb.b(-30187);
-                          if (var3 == 3) {
+                          if (-4 == (var3 ^ -1)) {
                             break L14;
                           } else {
                             L15: {
@@ -3033,7 +3198,7 @@ public final class Lexicominos extends nk {
                             }
                           }
                         }
-                        kl.a(bi.field_a.field_E * 3 >> 1, 4, 320, jh.field_b, 12, (le) (Object) bi.field_a, 4, (byte) -103, nh.field_c, true, 1 + bi.field_a.field_E, 240);
+                        kl.a(bi.field_a.field_E * 3 >> -991828927, 4, 320, jh.field_b, 12, bi.field_a, 4, (byte) -103, nh.field_c, true, 1 + bi.field_a.field_E, 240);
                         break L13;
                       }
                       L16: {
@@ -3077,8 +3242,8 @@ public final class Lexicominos extends nk {
                       }
                       L19: {
                         L20: {
-                          var3 = aa.a((nk) this, stackIn_94_1 != 0, -96);
-                          if (var3 != 2364824) {
+                          var3 = aa.a((nk) (this), stackIn_94_1 != 0, -96);
+                          if ((var3 ^ -1) != -2364825) {
                             break L20;
                           } else {
                             bg.a(482);
@@ -3093,7 +3258,7 @@ public final class Lexicominos extends nk {
                           if (1 == var3) {
                             break L21;
                           } else {
-                            if (var3 != 2) {
+                            if ((var3 ^ -1) != -3) {
                               break L19;
                             } else {
                               break L21;
@@ -3108,7 +3273,7 @@ public final class Lexicominos extends nk {
                             break L22;
                           }
                         }
-                        if (var3 == 2) {
+                        if ((var3 ^ -1) == -3) {
                           ge.a(0, kk.c(-14047));
                           break L19;
                         } else {
@@ -3157,16 +3322,16 @@ public final class Lexicominos extends nk {
                 break L24;
               } else {
                 L25: {
-                  if (je.field_a == 0) {
+                  if (-1 == (je.field_a ^ -1)) {
                     break L25;
                   } else {
                     L26: {
-                      if (je.field_a != 1) {
+                      if (-2 != (je.field_a ^ -1)) {
                         break L26;
                       } else {
-                        int fieldTemp$9 = ed.field_v + 1;
+                        fieldTemp$9 = ed.field_v + 1;
                         ed.field_v = ed.field_v + 1;
-                        if (fieldTemp$9 == 32) {
+                        if (-33 == (fieldTemp$9 ^ -1)) {
                           L27: {
                             L28: {
                               if (!ra.a(-17977)) {
@@ -3198,9 +3363,9 @@ public final class Lexicominos extends nk {
                       if (2 == je.field_a) {
                         break L29;
                       } else {
-                        int fieldTemp$10 = ed.field_v - 1;
+                        fieldTemp$10 = ed.field_v - 1;
                         ed.field_v = ed.field_v - 1;
-                        if (fieldTemp$10 != 0) {
+                        if (-1 != (fieldTemp$10 ^ -1)) {
                           break L24;
                         } else {
                           je.field_a = 0;
@@ -3227,7 +3392,7 @@ public final class Lexicominos extends nk {
                                 if (el.field_c.field_h) {
                                   break L32;
                                 } else {
-                                  ki.field_d = gl.a(65526, 9, el.field_c.field_i, 3, el.field_c.field_f, (byte) 56, el.field_c.field_R, new int[1], el.field_c.field_a);
+                                  ki.field_d = gl.a(65526, 9, el.field_c.field_i, 3, el.field_c.field_f, (byte) 56, el.field_c.field_R, new int[]{el.field_c.field_J * 64 - -el.field_c.field_m.field_i}, el.field_c.field_a);
                                   break L32;
                                 }
                               }
@@ -3239,7 +3404,7 @@ public final class Lexicominos extends nk {
                             if (7 != aa.field_j) {
                               break L33;
                             } else {
-                              if (ee.field_a != 0) {
+                              if (-1 != (ee.field_a ^ -1)) {
                                 break L33;
                               } else {
                                 aa.field_j = 1;
@@ -3259,11 +3424,11 @@ public final class Lexicominos extends nk {
                       break L30;
                     }
                     L34: {
-                      if (aa.field_j != -3) {
+                      if (2 != (aa.field_j ^ -1)) {
                         break L34;
                       } else {
                         aa.field_j = 0;
-                        kl.a(3 * bi.field_a.field_E >> 1, 4, 320, jh.field_b, 12, (le) (Object) bi.field_a, 4, (byte) 86, nh.field_c, false, 1 + bi.field_a.field_E, 240);
+                        kl.a(3 * bi.field_a.field_E >> 1806035777, 4, 320, jh.field_b, 12, bi.field_a, 4, (byte) 86, nh.field_c, false, 1 + bi.field_a.field_E, 240);
                         break L34;
                       }
                     }
@@ -3276,7 +3441,7 @@ public final class Lexicominos extends nk {
                     }
                   }
                 }
-                if (~th.field_r == ~aa.field_j) {
+                if ((th.field_r ^ -1) == (aa.field_j ^ -1)) {
                   L35: {
                     if (aa.field_j == -1) {
                       break L35;
@@ -3301,18 +3466,18 @@ public final class Lexicominos extends nk {
                           break L38;
                         } else {
                           L39: {
-                            if (da.field_b != 13) {
+                            if ((da.field_b ^ -1) != -14) {
                               break L39;
                             } else {
                               L40: {
-                                if (vb.field_i >= 2) {
-                                  StringBuilder discarded$11 = ob.a(0, sk.field_a, (byte) 22, ' ');
+                                if (-3 >= (vb.field_i ^ -1)) {
+                                  discarded$11 = ob.a(0, sk.field_a, (byte) 22, ' ');
                                   break L40;
                                 } else {
                                   break L40;
                                 }
                               }
-                              ((Lexicominos) this).a((byte) -77, false, 2, -1);
+                              this.a((byte) -77, false, 2, -1);
                               if (var4 == 0) {
                                 continue L36;
                               } else {
@@ -3337,7 +3502,7 @@ public final class Lexicominos extends nk {
                                   if (stackIn_247_0 != stackIn_247_1) {
                                     break L42;
                                   } else {
-                                    StringBuilder discarded$12 = ob.a(0, sk.field_a, (byte) 22, ' ');
+                                    discarded$12 = ob.a(0, sk.field_a, (byte) 22, ' ');
                                     if (var4 == 0) {
                                       break L41;
                                     } else {
@@ -3349,8 +3514,8 @@ public final class Lexicominos extends nk {
                                   break L41;
                                 } else {
                                   L43: {
-                                    StringBuilder discarded$13 = sk.field_a.append(pe.field_b);
-                                    if (na.a(1048576, (CharSequence) (Object) sk.field_a) != -26658124) {
+                                    discarded$13 = sk.field_a.append(pe.field_b);
+                                    if (na.a(1048576, (CharSequence) ((Object) sk.field_a)) != -26658124) {
                                       break L43;
                                     } else {
                                       L44: {
@@ -3365,7 +3530,7 @@ public final class Lexicominos extends nk {
                                         }
                                       }
                                       mg.field_B = stackIn_265_0 != 0;
-                                      StringBuilder discarded$14 = ob.a(0, sk.field_a, (byte) 22, ' ');
+                                      discarded$14 = ob.a(0, sk.field_a, (byte) 22, ' ');
                                       if (var4 == 0) {
                                         break L41;
                                       } else {
@@ -3373,11 +3538,11 @@ public final class Lexicominos extends nk {
                                       }
                                     }
                                   }
-                                  if (na.a(1048576, (CharSequence) (Object) sk.field_a) != -1039745817) {
+                                  if (1039745816 != (na.a(1048576, (CharSequence) ((Object) sk.field_a)) ^ -1)) {
                                     break L41;
                                   } else {
                                     mg.field_B = false;
-                                    StringBuilder discarded$15 = ob.a(0, sk.field_a, (byte) 22, ' ');
+                                    discarded$15 = ob.a(0, sk.field_a, (byte) 22, ' ');
                                     break L41;
                                   }
                                 }
@@ -3386,12 +3551,12 @@ public final class Lexicominos extends nk {
                                 if (null == el.field_c) {
                                   break L45;
                                 } else {
-                                  if (da.field_b != 50) {
+                                  if (-51 != (da.field_b ^ -1)) {
                                     break L45;
                                   } else {
-                                    if (el.field_c.field_d < 16) {
+                                    if ((el.field_c.field_d ^ -1) > -17) {
                                       el.field_c.field_t = el.field_c.field_t + 8;
-                                      var3 = (el.field_c.field_t >> 3) + 1;
+                                      var3 = (el.field_c.field_t >> 691519107) + 1;
                                       if (el.field_c.field_d < var3) {
                                         el.field_c.field_d = el.field_c.field_d + 1;
                                         el.field_c.field_s = 0;
@@ -3428,8 +3593,8 @@ public final class Lexicominos extends nk {
                                       stackIn_292_1 = stackOut_291_1;
                                       stackIn_292_2 = stackOut_291_2;
                                       if (param0) {
-                                        stackOut_296_0 = (PrintStream) (Object) stackIn_296_0;
-                                        stackOut_296_1 = (StringBuilder) (Object) stackIn_296_1;
+                                        stackOut_296_0 = (PrintStream) ((Object) stackIn_296_0);
+                                        stackOut_296_1 = (StringBuilder) ((Object) stackIn_296_1);
                                         stackOut_296_2 = stackIn_296_2;
                                         stackOut_296_3 = 0;
                                         stackIn_297_0 = stackOut_296_0;
@@ -3438,14 +3603,14 @@ public final class Lexicominos extends nk {
                                         stackIn_297_3 = stackOut_296_3;
                                         break L47;
                                       } else {
-                                        stackOut_292_0 = (PrintStream) (Object) stackIn_292_0;
-                                        stackOut_292_1 = (StringBuilder) (Object) stackIn_292_1;
+                                        stackOut_292_0 = (PrintStream) ((Object) stackIn_292_0);
+                                        stackOut_292_1 = (StringBuilder) ((Object) stackIn_292_1);
                                         stackOut_292_2 = stackIn_292_2;
                                         stackIn_294_0 = stackOut_292_0;
                                         stackIn_294_1 = stackOut_292_1;
                                         stackIn_294_2 = stackOut_292_2;
-                                        stackOut_294_0 = (PrintStream) (Object) stackIn_294_0;
-                                        stackOut_294_1 = (StringBuilder) (Object) stackIn_294_1;
+                                        stackOut_294_0 = (PrintStream) ((Object) stackIn_294_0);
+                                        stackOut_294_1 = (StringBuilder) ((Object) stackIn_294_1);
                                         stackOut_294_2 = stackIn_294_2;
                                         stackOut_294_3 = 1;
                                         stackIn_297_0 = stackOut_294_0;
@@ -3460,14 +3625,14 @@ public final class Lexicominos extends nk {
                                       if (65 > pe.field_b) {
                                         break L48;
                                       } else {
-                                        if (pe.field_b > 90) {
+                                        if ((pe.field_b ^ -1) < -91) {
                                           break L48;
                                         } else {
                                           var3 = 0;
                                           L49: while (true) {
                                             L50: {
                                               L51: {
-                                                if (var3 >= 4) {
+                                                if ((var3 ^ -1) <= -5) {
                                                   break L51;
                                                 } else {
                                                   el.field_c.field_Q.field_h[var3] = pe.field_b;
@@ -3495,7 +3660,7 @@ public final class Lexicominos extends nk {
                                         }
                                       }
                                     }
-                                    if (pe.field_b < 49) {
+                                    if (-50 < (pe.field_b ^ -1)) {
                                       break L46;
                                     } else {
                                       if (55 >= pe.field_b) {
@@ -3517,7 +3682,7 @@ public final class Lexicominos extends nk {
                                 if (null == el.field_c) {
                                   break L52;
                                 } else {
-                                  if (pe.field_b != 102) {
+                                  if ((pe.field_b ^ -1) != -103) {
                                     break L52;
                                   } else {
                                     el.field_c.field_T = true;
@@ -3529,7 +3694,7 @@ public final class Lexicominos extends nk {
                                 if (el.field_c == null) {
                                   break L53;
                                 } else {
-                                  if (pe.field_b != 117) {
+                                  if ((pe.field_b ^ -1) != -118) {
                                     break L53;
                                   } else {
                                     el.field_c.field_T = false;
@@ -3548,13 +3713,13 @@ public final class Lexicominos extends nk {
                                     stackIn_333_0 = stackOut_330_0;
                                     stackIn_331_0 = stackOut_330_0;
                                     if (el.field_c.field_D) {
-                                      stackOut_333_0 = (fc) (Object) stackIn_333_0;
+                                      stackOut_333_0 = (fc) ((Object) stackIn_333_0);
                                       stackOut_333_1 = 0;
                                       stackIn_334_0 = stackOut_333_0;
                                       stackIn_334_1 = stackOut_333_1;
                                       break L54;
                                     } else {
-                                      stackOut_331_0 = (fc) (Object) stackIn_331_0;
+                                      stackOut_331_0 = (fc) ((Object) stackIn_331_0);
                                       stackOut_331_1 = 1;
                                       stackIn_334_0 = stackOut_331_0;
                                       stackIn_334_1 = stackOut_331_1;
@@ -3589,7 +3754,7 @@ public final class Lexicominos extends nk {
                 } else {
                   L55: {
                     ed.field_v = ed.field_v + cg.field_j;
-                    if (aa.field_j < 0) {
+                    if ((aa.field_j ^ -1) > -1) {
                       break L55;
                     } else {
                       if (vg.field_d[aa.field_j].field_m == null) {
@@ -3601,7 +3766,7 @@ public final class Lexicominos extends nk {
                     }
                   }
                   L56: {
-                    if (aa.field_j < 0) {
+                    if (-1 < (aa.field_j ^ -1)) {
                       break L56;
                     } else {
                       if (el.field_c != null) {
@@ -3612,7 +3777,7 @@ public final class Lexicominos extends nk {
                       }
                     }
                   }
-                  if ((ed.field_v + -20) * cg.field_j < 20) {
+                  if (((ed.field_v + -20) * cg.field_j ^ -1) > -21) {
                     break L24;
                   } else {
                     L57: {
@@ -3632,7 +3797,7 @@ public final class Lexicominos extends nk {
                       }
                     }
                     L58: {
-                      if (aa.field_j < 0) {
+                      if (-1 < (aa.field_j ^ -1)) {
                         break L58;
                       } else {
                         if (vg.field_d[aa.field_j].field_m == null) {
@@ -3648,7 +3813,7 @@ public final class Lexicominos extends nk {
                       if (6 != aa.field_j) {
                         break L59;
                       } else {
-                        if (th.field_r == 0) {
+                        if ((th.field_r ^ -1) == -1) {
                           sc.field_g = 0;
                           ee.field_a = 0;
                           rb.field_b.g(-105);
@@ -3669,12 +3834,18 @@ public final class Lexicominos extends nk {
               }
             }
             this.c(param0);
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2, "Lexicominos.M(" + param0 + ')');
+          throw ld.a((Throwable) ((Object) var2), "Lexicominos.M(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -3810,12 +3981,12 @@ public final class Lexicominos extends nk {
                           }
                         }
                         var17 = var12 - -1;
-                        var18 = var10 << 20;
-                        var19 = (var15 << 20) / var16;
-                        var20 = var7 << 20;
-                        var21 = (var13 + -var7 << 20) / var16;
-                        var22 = 1 + -var7 + var9 << 20;
-                        var23 = (-var9 - (-var7 - (-var13 + var14)) << 20) / var16;
+                        var18 = var10 << -941368812;
+                        var19 = (var15 << -876279052) / var16;
+                        var20 = var7 << -1813240812;
+                        var21 = (var13 + -var7 << 436799476) / var16;
+                        var22 = 1 + -var7 + var9 << -557216908;
+                        var23 = (-var9 - (-var7 - (-var13 + var14)) << -1727712492) / var16;
                         var7 = var13;
                         var6_int = var12;
                         L6: while (true) {
@@ -3824,12 +3995,12 @@ public final class Lexicominos extends nk {
                               if (0 >= var16) {
                                 break L8;
                               } else {
-                                var24 = var20 >> 20;
-                                var25 = var22 >> 20;
+                                var24 = var20 >> -153043628;
+                                var25 = var22 >> 1205238292;
                                 var26 = 0;
                                 var27 = 471859200 / var25;
-                                stackOut_12_0 = ~lf.field_h;
-                                stackOut_12_1 = ~(var24 + var25);
+                                stackOut_12_0 = lf.field_h ^ -1;
+                                stackOut_12_1 = var24 + var25 ^ -1;
                                 stackIn_21_0 = stackOut_12_0;
                                 stackIn_21_1 = stackOut_12_1;
                                 stackIn_13_0 = stackOut_12_0;
@@ -3857,7 +4028,7 @@ public final class Lexicominos extends nk {
                                       break L10;
                                     }
                                   }
-                                  hd.a(param2.field_y, var28, var26, var25, 0, lf.field_f, lf.field_b, var18 >> 20, 311, var27);
+                                  hd.a(param2.field_y, var28, var26, var25, 0, lf.field_f, lf.field_b, var18 >> -1791734956, 311, var27);
                                   var18 = var18 + var19;
                                   var20 = var20 + var21;
                                   var22 = var22 + var23;
@@ -3899,23 +4070,23 @@ public final class Lexicominos extends nk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var6 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var6;
+            stackOut_24_0 = (RuntimeException) (var6);
             stackOut_24_1 = new StringBuilder().append("Lexicominos.UA(").append(param0).append(',');
             stackIn_27_0 = stackOut_24_0;
             stackIn_27_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L11;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_28_0 = stackOut_25_0;
               stackIn_28_1 = stackOut_25_1;
@@ -3924,23 +4095,23 @@ public final class Lexicominos extends nk {
             }
           }
           L12: {
-            stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+            stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
             stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(',');
             stackIn_31_0 = stackOut_28_0;
             stackIn_31_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
             stackIn_29_1 = stackOut_28_1;
             if (param2 == null) {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "null";
               stackIn_32_0 = stackOut_31_0;
               stackIn_32_1 = stackOut_31_1;
               stackIn_32_2 = stackOut_31_2;
               break L12;
             } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "{...}";
               stackIn_32_0 = stackOut_29_0;
               stackIn_32_1 = stackOut_29_1;
@@ -3949,23 +4120,23 @@ public final class Lexicominos extends nk {
             }
           }
           L13: {
-            stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+            stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
             stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',');
             stackIn_35_0 = stackOut_32_0;
             stackIn_35_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
             stackIn_33_1 = stackOut_32_1;
             if (param3 == null) {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
               stackOut_35_2 = "null";
               stackIn_36_0 = stackOut_35_0;
               stackIn_36_1 = stackOut_35_1;
               stackIn_36_2 = stackOut_35_2;
               break L13;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "{...}";
               stackIn_36_0 = stackOut_33_0;
               stackIn_36_1 = stackOut_33_1;
@@ -3974,23 +4145,23 @@ public final class Lexicominos extends nk {
             }
           }
           L14: {
-            stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
+            stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
             stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(',');
             stackIn_39_0 = stackOut_36_0;
             stackIn_39_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
             stackIn_37_1 = stackOut_36_1;
             if (param4 == null) {
-              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
               stackOut_39_2 = "null";
               stackIn_40_0 = stackOut_39_0;
               stackIn_40_1 = stackOut_39_1;
               stackIn_40_2 = stackOut_39_2;
               break L14;
             } else {
-              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
               stackOut_37_2 = "{...}";
               stackIn_40_0 = stackOut_37_0;
               stackIn_40_1 = stackOut_37_1;
@@ -3998,11 +4169,13 @@ public final class Lexicominos extends nk {
               break L14;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_40_0), stackIn_40_2 + ')');
         }
     }
 
     private final db a(int param0, db param1) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -4092,10 +4265,10 @@ public final class Lexicominos extends nk {
                             if (param1.field_p <= var8) {
                               break L6;
                             } else {
-                              int incrementValue$2 = var6;
+                              incrementValue$2 = var6;
                               var6++;
                               stackOut_7_0 = -1;
-                              stackOut_7_1 = ~param1.field_y[incrementValue$2];
+                              stackOut_7_1 = param1.field_y[incrementValue$2] ^ -1;
                               stackIn_3_0 = stackOut_7_0;
                               stackIn_3_1 = stackOut_7_1;
                               stackIn_8_0 = stackOut_7_0;
@@ -4152,9 +4325,9 @@ public final class Lexicominos extends nk {
                             if (var8 >= param1.field_p) {
                               break L12;
                             } else {
-                              int incrementValue$3 = var6;
+                              incrementValue$3 = var6;
                               var6++;
-                              stackOut_19_0 = ~param1.field_y[incrementValue$3];
+                              stackOut_19_0 = param1.field_y[incrementValue$3] ^ -1;
                               stackOut_19_1 = -1;
                               stackIn_16_0 = stackOut_19_0;
                               stackIn_16_1 = stackOut_19_1;
@@ -4194,10 +4367,10 @@ public final class Lexicominos extends nk {
                     L14: while (true) {
                       L15: {
                         L16: {
-                          if (var8 < 0) {
+                          if (-1 < (var8 ^ -1)) {
                             break L16;
                           } else {
-                            stackOut_27_0 = ~var7[var8];
+                            stackOut_27_0 = var7[var8] ^ -1;
                             stackOut_27_1 = -8421505;
                             stackIn_35_0 = stackOut_27_0;
                             stackIn_35_1 = stackOut_27_1;
@@ -4230,7 +4403,7 @@ public final class Lexicominos extends nk {
                         break L15;
                       }
                       var8 = stackIn_35_0 % stackIn_35_1;
-                      stackOut_35_0 = (db) var5;
+                      stackOut_35_0 = (db) (var5);
                       stackIn_36_0 = stackOut_35_0;
                       break L0;
                     }
@@ -4243,23 +4416,23 @@ public final class Lexicominos extends nk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L18: {
             var3 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) var3;
+            stackOut_37_0 = (RuntimeException) (var3);
             stackOut_37_1 = new StringBuilder().append("Lexicominos.SA(").append(param0).append(',');
             stackIn_40_0 = stackOut_37_0;
             stackIn_40_1 = stackOut_37_1;
             stackIn_38_0 = stackOut_37_0;
             stackIn_38_1 = stackOut_37_1;
             if (param1 == null) {
-              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
-              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_0 = (RuntimeException) ((Object) stackIn_40_0);
+              stackOut_40_1 = (StringBuilder) ((Object) stackIn_40_1);
               stackOut_40_2 = "null";
               stackIn_41_0 = stackOut_40_0;
               stackIn_41_1 = stackOut_40_1;
               stackIn_41_2 = stackOut_40_2;
               break L18;
             } else {
-              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
               stackOut_38_2 = "{...}";
               stackIn_41_0 = stackOut_38_0;
               stackIn_41_1 = stackOut_38_1;
@@ -4267,7 +4440,7 @@ public final class Lexicominos extends nk {
               break L18;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_41_0), stackIn_41_2 + ')');
         }
         return stackIn_36_0;
     }
@@ -4281,7 +4454,7 @@ public final class Lexicominos extends nk {
               if (param0 == 2) {
                 break L1;
               } else {
-                field_F = null;
+                field_F = (String) null;
                 break L1;
               }
             }
@@ -4293,7 +4466,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var1, "Lexicominos.LA(" + param0 + ')');
+          throw ld.a((Throwable) ((Object) var1), "Lexicominos.LA(" + param0 + ')');
         }
     }
 
@@ -4458,7 +4631,7 @@ public final class Lexicominos extends nk {
             L1: {
               var5_int = 22 / ((16 - param0) / 59);
               th.field_r = param2;
-              if (param2 < 0) {
+              if (-1 < (param2 ^ -1)) {
                 break L1;
               } else {
                 vg.field_d[param2].field_g = param3;
@@ -4498,7 +4671,7 @@ public final class Lexicominos extends nk {
                           if (var6 >= id.field_w.length) {
                             break L8;
                           } else {
-                            stackOut_16_0 = ug.field_s.equals((Object) (Object) id.field_w[var6].field_k);
+                            stackOut_16_0 = ug.field_s.equals(id.field_w[var6].field_k);
                             stackIn_57_0 = stackOut_16_0 ? 1 : 0;
                             stackIn_17_0 = stackOut_16_0;
                             if (var8 != 0) {
@@ -4524,7 +4697,7 @@ public final class Lexicominos extends nk {
                             }
                           }
                         }
-                        vg.field_d[th.field_r].field_m = new fc((Lexicominos) this, id.field_w[var6], new Random());
+                        vg.field_d[th.field_r].field_m = new fc((Lexicominos) (this), id.field_w[var6], new Random());
                         vg.field_d[th.field_r].field_m.b(-71, th.field_r + -8);
                         vg.field_d[th.field_r].field_m.field_M = -92;
                         vg.field_d[th.field_r].field_b = 0;
@@ -4538,7 +4711,7 @@ public final class Lexicominos extends nk {
                   }
                 }
                 L10: {
-                  if (th.field_r != 1) {
+                  if ((th.field_r ^ -1) != -2) {
                     break L10;
                   } else {
                     if (ki.a((byte) -127)) {
@@ -4568,7 +4741,7 @@ public final class Lexicominos extends nk {
                     stackIn_40_1 = stackOut_39_1;
                     if (0 == ee.field_a) {
                       stackOut_42_0 = stackIn_42_0;
-                      stackOut_42_1 = (cd) (Object) stackIn_42_1;
+                      stackOut_42_1 = (cd) ((Object) stackIn_42_1);
                       stackOut_42_2 = 0;
                       stackIn_43_0 = stackOut_42_0;
                       stackIn_43_1 = stackOut_42_1;
@@ -4576,7 +4749,7 @@ public final class Lexicominos extends nk {
                       break L11;
                     } else {
                       stackOut_40_0 = stackIn_40_0;
-                      stackOut_40_1 = (cd) (Object) stackIn_40_1;
+                      stackOut_40_1 = (cd) ((Object) stackIn_40_1);
                       stackOut_40_2 = 1;
                       stackIn_43_0 = stackOut_40_0;
                       stackIn_43_1 = stackOut_40_1;
@@ -4586,7 +4759,7 @@ public final class Lexicominos extends nk {
                   }
                   L12: {
                     stackOut_43_0 = stackIn_43_0;
-                    stackOut_43_1 = (cd) (Object) stackIn_43_1;
+                    stackOut_43_1 = (cd) ((Object) stackIn_43_1);
                     stackOut_43_2 = stackIn_43_2;
                     stackOut_43_3 = 0;
                     stackOut_43_4 = 52;
@@ -4600,9 +4773,9 @@ public final class Lexicominos extends nk {
                     stackIn_44_2 = stackOut_43_2;
                     stackIn_44_3 = stackOut_43_3;
                     stackIn_44_4 = stackOut_43_4;
-                    if (el.field_c.field_J == 0) {
+                    if ((el.field_c.field_J ^ -1) == -1) {
                       stackOut_46_0 = stackIn_46_0;
-                      stackOut_46_1 = (cd) (Object) stackIn_46_1;
+                      stackOut_46_1 = (cd) ((Object) stackIn_46_1);
                       stackOut_46_2 = stackIn_46_2;
                       stackOut_46_3 = stackIn_46_3;
                       stackOut_46_4 = stackIn_46_4;
@@ -4616,7 +4789,7 @@ public final class Lexicominos extends nk {
                       break L12;
                     } else {
                       stackOut_44_0 = stackIn_44_0;
-                      stackOut_44_1 = (cd) (Object) stackIn_44_1;
+                      stackOut_44_1 = (cd) ((Object) stackIn_44_1);
                       stackOut_44_2 = stackIn_44_2;
                       stackOut_44_3 = stackIn_44_3;
                       stackOut_44_4 = stackIn_44_4;
@@ -4655,11 +4828,11 @@ public final class Lexicominos extends nk {
                     stackIn_48_5 = stackOut_47_5;
                     stackIn_48_6 = stackOut_47_6;
                     if (ee.field_a == 0) {
-                      stackOut_50_0 = (int[]) (Object) stackIn_50_0;
+                      stackOut_50_0 = (int[]) ((Object) stackIn_50_0);
                       stackOut_50_1 = stackIn_50_1;
                       stackOut_50_2 = stackIn_50_2;
                       stackOut_50_3 = stackIn_50_3;
-                      stackOut_50_4 = (cd) (Object) stackIn_50_4;
+                      stackOut_50_4 = (cd) ((Object) stackIn_50_4);
                       stackOut_50_5 = stackIn_50_5;
                       stackOut_50_6 = stackIn_50_6;
                       stackOut_50_7 = 0;
@@ -4673,11 +4846,11 @@ public final class Lexicominos extends nk {
                       stackIn_51_7 = stackOut_50_7;
                       break L13;
                     } else {
-                      stackOut_48_0 = (int[]) (Object) stackIn_48_0;
+                      stackOut_48_0 = (int[]) ((Object) stackIn_48_0);
                       stackOut_48_1 = stackIn_48_1;
                       stackOut_48_2 = stackIn_48_2;
                       stackOut_48_3 = stackIn_48_3;
-                      stackOut_48_4 = (cd) (Object) stackIn_48_4;
+                      stackOut_48_4 = (cd) ((Object) stackIn_48_4);
                       stackOut_48_5 = stackIn_48_5;
                       stackOut_48_6 = stackIn_48_6;
                       stackOut_48_7 = 1;
@@ -4693,11 +4866,11 @@ public final class Lexicominos extends nk {
                     }
                   }
                   L14: {
-                    stackOut_51_0 = (int[]) (Object) stackIn_51_0;
+                    stackOut_51_0 = (int[]) ((Object) stackIn_51_0);
                     stackOut_51_1 = stackIn_51_1;
                     stackOut_51_2 = stackIn_51_2;
                     stackOut_51_3 = stackIn_51_3;
-                    stackOut_51_4 = (cd) (Object) stackIn_51_4;
+                    stackOut_51_4 = (cd) ((Object) stackIn_51_4);
                     stackOut_51_5 = stackIn_51_5;
                     stackOut_51_6 = stackIn_51_6;
                     stackOut_51_7 = stackIn_51_7;
@@ -4718,11 +4891,11 @@ public final class Lexicominos extends nk {
                     stackIn_52_6 = stackOut_51_6;
                     stackIn_52_7 = stackOut_51_7;
                     if (0 == el.field_c.field_J) {
-                      stackOut_54_0 = (int[]) (Object) stackIn_54_0;
+                      stackOut_54_0 = (int[]) ((Object) stackIn_54_0);
                       stackOut_54_1 = stackIn_54_1;
                       stackOut_54_2 = stackIn_54_2;
                       stackOut_54_3 = stackIn_54_3;
-                      stackOut_54_4 = (cd) (Object) stackIn_54_4;
+                      stackOut_54_4 = (cd) ((Object) stackIn_54_4);
                       stackOut_54_5 = stackIn_54_5;
                       stackOut_54_6 = stackIn_54_6;
                       stackOut_54_7 = stackIn_54_7;
@@ -4738,11 +4911,11 @@ public final class Lexicominos extends nk {
                       stackIn_55_8 = stackOut_54_8;
                       break L14;
                     } else {
-                      stackOut_52_0 = (int[]) (Object) stackIn_52_0;
+                      stackOut_52_0 = (int[]) ((Object) stackIn_52_0);
                       stackOut_52_1 = stackIn_52_1;
                       stackOut_52_2 = stackIn_52_2;
                       stackOut_52_3 = stackIn_52_3;
-                      stackOut_52_4 = (cd) (Object) stackIn_52_4;
+                      stackOut_52_4 = (cd) ((Object) stackIn_52_4);
                       stackOut_52_5 = stackIn_52_5;
                       stackOut_52_6 = stackIn_52_6;
                       stackOut_52_7 = stackIn_52_7;
@@ -4763,7 +4936,7 @@ public final class Lexicominos extends nk {
                   break L5;
                 }
               }
-              stackOut_56_0 = ~th.field_r;
+              stackOut_56_0 = th.field_r ^ -1;
               stackIn_57_0 = stackOut_56_0;
               break L4;
             }
@@ -4780,7 +4953,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var5, "Lexicominos.OA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ld.a((Throwable) ((Object) var5), "Lexicominos.OA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -4810,7 +4983,7 @@ public final class Lexicominos extends nk {
               if (param0 == -17800) {
                 break L1;
               } else {
-                field_F = null;
+                field_F = (String) null;
                 break L1;
               }
             }
@@ -4823,23 +4996,23 @@ public final class Lexicominos extends nk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) runtimeException;
+            stackOut_5_0 = (RuntimeException) (runtimeException);
             stackOut_5_1 = new StringBuilder().append("Lexicominos.VA(").append(param0).append(',');
             stackIn_8_0 = stackOut_5_0;
             stackIn_8_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
@@ -4847,7 +5020,7 @@ public final class Lexicominos extends nk {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ')');
         }
     }
 
@@ -4935,7 +5108,7 @@ public final class Lexicominos extends nk {
             var9 = 1;
             L2: while (true) {
               stackOut_5_0 = -11;
-              stackOut_5_1 = ~var9;
+              stackOut_5_1 = var9 ^ -1;
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               L3: while (true) {
@@ -4958,12 +5131,12 @@ public final class Lexicominos extends nk {
                               break L7;
                             } else {
                               var15 = param3;
-                              var18 = var6 << 20;
+                              var18 = var6 << 279813204;
                               var16 = var10 + 1;
-                              var20 = var7 << 20;
-                              var19 = (-var6 + var11 << 20) / var14;
-                              var21 = (var12 + -var7 << 20) / var14;
-                              var17 = var8 << 20;
+                              var20 = var7 << -1246929068;
+                              var19 = (-var6 + var11 << 600342196) / var14;
+                              var21 = (var12 + -var7 << -175862476) / var14;
+                              var17 = var8 << 412633300;
                               if (var29 == 0) {
                                 break L6;
                               } else {
@@ -4971,31 +5144,31 @@ public final class Lexicominos extends nk {
                               }
                             }
                           }
-                          var18 = var11 << 20;
-                          var17 = -var8 + (311 + -var13) << 20;
+                          var18 = var11 << 878980308;
+                          var17 = -var8 + (311 + -var13) << -1573550252;
                           var14 = 1 + (var5_int - var10);
                           var16 = var5_int - -1;
                           var15 = param1;
-                          var21 = (var7 - var12 << 20) / var14;
-                          var20 = var12 << 20;
-                          var19 = (-var11 + var6 << 20) / var14;
+                          var21 = (var7 - var12 << -1784577900) / var14;
+                          var20 = var12 << -526181132;
+                          var19 = (-var11 + var6 << 259594324) / var14;
                           break L6;
                         }
-                        var22 = (var13 << 20) / var14;
+                        var22 = (var13 << -919598828) / var14;
                         var7 = var12;
                         var8 = var8 + var13;
                         var6 = var11;
                         L8: while (true) {
                           L9: {
-                            if (var14 <= 0) {
+                            if ((var14 ^ -1) >= -1) {
                               break L9;
                             } else {
-                              var23 = var18 >> 20;
-                              var24 = -var23 + ((var20 >> 20) + 1);
+                              var23 = var18 >> 1101679156;
+                              var24 = -var23 + ((var20 >> 2128682900) + 1);
                               var25 = 0;
                               var26 = 471859200 / var24;
-                              stackOut_15_0 = ~lf.field_h;
-                              stackOut_15_1 = ~(var24 + var23);
+                              stackOut_15_0 = lf.field_h ^ -1;
+                              stackOut_15_1 = var24 + var23 ^ -1;
                               stackIn_6_0 = stackOut_15_0;
                               stackIn_6_1 = stackOut_15_1;
                               stackIn_16_0 = stackOut_15_0;
@@ -5023,7 +5196,7 @@ public final class Lexicominos extends nk {
                                     break L11;
                                   }
                                 }
-                                hd.a(var15.field_y, var27, var25, var24, 0, lf.field_f, lf.field_b, var17 >> 20, 311, var26);
+                                hd.a(var15.field_y, var27, var25, var24, 0, lf.field_f, lf.field_b, var17 >> 1101871732, 311, var26);
                                 var18 = var18 + var19;
                                 var17 = var17 + var22;
                                 var20 = var20 + var21;
@@ -5057,23 +5230,23 @@ public final class Lexicominos extends nk {
           decompiledCaughtException = decompiledCaughtParameter0;
           L12: {
             var5 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var5;
+            stackOut_25_0 = (RuntimeException) (var5);
             stackOut_25_1 = new StringBuilder().append("Lexicominos.QA(").append(param0).append(',');
             stackIn_28_0 = stackOut_25_0;
             stackIn_28_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param1 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L12;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_29_0 = stackOut_26_0;
               stackIn_29_1 = stackOut_26_1;
@@ -5082,23 +5255,23 @@ public final class Lexicominos extends nk {
             }
           }
           L13: {
-            stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+            stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
             stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(',').append(param2).append(',');
             stackIn_32_0 = stackOut_29_0;
             stackIn_32_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
             stackIn_30_1 = stackOut_29_1;
             if (param3 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "null";
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
               break L13;
             } else {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "{...}";
               stackIn_33_0 = stackOut_30_0;
               stackIn_33_1 = stackOut_30_1;
@@ -5106,19 +5279,15 @@ public final class Lexicominos extends nk {
               break L13;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ')');
         }
     }
 
     public Lexicominos() {
-        ((Lexicominos) this).field_J = 2;
+        this.field_J = 2;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_G = 0;
         field_F = "Connection lost. <%0>";
     }

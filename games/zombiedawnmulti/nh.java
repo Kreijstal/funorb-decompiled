@@ -45,14 +45,14 @@ final class nh extends br {
               }
             }
             L2: {
-              if (var2_int == 2) {
+              if (var2_int == param0) {
                 param1 = "<img=1>" + param1;
                 break L2;
               } else {
                 break L2;
               }
             }
-            stackOut_5_0 = (String) param1;
+            stackOut_5_0 = (String) (param1);
             stackIn_6_0 = stackOut_5_0;
             break L0;
           }
@@ -60,23 +60,23 @@ final class nh extends br {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("nh.A(").append(2).append(',');
+            stackOut_7_0 = (RuntimeException) (var2);
+            stackOut_7_1 = new StringBuilder().append("nh.A(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -84,17 +84,23 @@ final class nh extends br {
               break L3;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_6_0;
     }
 
     final static boolean c(byte param0) {
+        if (param0 >= -25) {
+            return true;
+        }
         return ab.field_k;
     }
 
     public static void a(byte param0) {
         field_j = null;
+        if (param0 != 48) {
+            return;
+        }
         field_i = null;
         field_g = null;
         field_n = null;
@@ -106,10 +112,6 @@ final class nh extends br {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new int[8192];
         field_j = "Release a mist that makes it harder for your opponents to see.";
         field_m = true;

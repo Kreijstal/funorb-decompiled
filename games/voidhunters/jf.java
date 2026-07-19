@@ -7,9 +7,9 @@ final class jf extends ora implements hdb {
 
     final jagdx.IDirect3DBaseTexture c(int param0) {
         if (param0 != 24971) {
-            ((jf) this).b(102);
+            this.b(102);
         }
-        return (jagdx.IDirect3DBaseTexture) (Object) ((jf) this).field_g;
+        return (jagdx.IDirect3DBaseTexture) ((Object) this.field_g);
     }
 
     public final void a(tu param0, int param1) {
@@ -18,6 +18,7 @@ final class jf extends ora implements hdb {
 
     jf(nla param0, int param1, boolean param2, int[][] param3) {
         super(param0, qua.field_d, mj.field_f, false, param1 * (param1 * 6));
+        boolean discarded$1 = false;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -62,7 +63,7 @@ final class jf extends ora implements hdb {
         L0: {
           L1: {
             stackOut_0_0 = this;
-            stackOut_0_1 = (nla) param0;
+            stackOut_0_1 = (nla) (param0);
             stackOut_0_2 = qua.field_d;
             stackOut_0_3 = mj.field_f;
             stackIn_3_0 = stackOut_0_0;
@@ -77,9 +78,9 @@ final class jf extends ora implements hdb {
               break L1;
             } else {
               stackOut_1_0 = this;
-              stackOut_1_1 = (nla) (Object) stackIn_1_1;
-              stackOut_1_2 = (kb) (Object) stackIn_1_2;
-              stackOut_1_3 = (mj) (Object) stackIn_1_3;
+              stackOut_1_1 = (nla) ((Object) stackIn_1_1);
+              stackOut_1_2 = (kb) ((Object) stackIn_1_2);
+              stackOut_1_3 = (mj) ((Object) stackIn_1_3);
               stackIn_3_0 = stackOut_1_0;
               stackIn_3_1 = stackOut_1_1;
               stackIn_3_2 = stackOut_1_2;
@@ -92,9 +93,9 @@ final class jf extends ora implements hdb {
                 break L1;
               } else {
                 stackOut_2_0 = this;
-                stackOut_2_1 = (nla) (Object) stackIn_2_1;
-                stackOut_2_2 = (kb) (Object) stackIn_2_2;
-                stackOut_2_3 = (mj) (Object) stackIn_2_3;
+                stackOut_2_1 = (nla) ((Object) stackIn_2_1);
+                stackOut_2_2 = (kb) ((Object) stackIn_2_2);
+                stackOut_2_3 = (mj) ((Object) stackIn_2_3);
                 stackOut_2_4 = 1;
                 stackIn_4_0 = stackOut_2_0;
                 stackIn_4_1 = stackOut_2_1;
@@ -106,9 +107,9 @@ final class jf extends ora implements hdb {
             }
           }
           stackOut_3_0 = this;
-          stackOut_3_1 = (nla) (Object) stackIn_3_1;
-          stackOut_3_2 = (kb) (Object) stackIn_3_2;
-          stackOut_3_3 = (mj) (Object) stackIn_3_3;
+          stackOut_3_1 = (nla) ((Object) stackIn_3_1);
+          stackOut_3_2 = (kb) ((Object) stackIn_3_2);
+          stackOut_3_3 = (mj) ((Object) stackIn_3_3);
           stackOut_3_4 = 0;
           stackIn_4_0 = stackOut_3_0;
           stackIn_4_1 = stackOut_3_1;
@@ -118,43 +119,43 @@ final class jf extends ora implements hdb {
           break L0;
         }
         L2: {
-          ((jf) this).field_f = param1;
-          if (((jf) this).field_b) {
-            ((jf) this).field_g = ((jf) this).field_d.field_Mc.a(((jf) this).field_f, 0, 1024, 21, 1);
+          this.field_f = param1;
+          if (this.field_b) {
+            this.field_g = this.field_d.field_Mc.a(this.field_f, 0, 1024, 21, 1);
             break L2;
           } else {
-            ((jf) this).field_g = ((jf) this).field_d.field_Mc.a(((jf) this).field_f, 1, 0, 21, 1);
+            this.field_g = this.field_d.field_Mc.a(this.field_f, 1, 0, 21, 1);
             break L2;
           }
         }
-        var10 = ((jf) this).field_d.field_zc;
+        var10 = this.field_d.field_zc;
         var11 = var10;
         var6 = 0;
         L3: while (true) {
           if (var6 >= 6) {
             return;
           } else {
-            var7 = ((jf) this).field_g.LockRect(var6, 0, 0, 0, ((jf) this).field_f, ((jf) this).field_f, 0, var11);
+            var7 = this.field_g.LockRect(var6, 0, 0, 0, this.field_f, this.field_f, 0, var11);
             if (jagdx.hea.b(var7, (byte) 114)) {
               L4: {
                 var8 = var11.getRowPitch();
-                if (((jf) this).field_f * 4 == var8) {
-                  var10.a(param3[var6], 0, 0, ((jf) this).field_f * ((jf) this).field_f);
+                if (this.field_f * 4 == var8) {
+                  var10.a(param3[var6], 0, 0, this.field_f * this.field_f);
                   break L4;
                 } else {
                   var9 = 0;
                   L5: while (true) {
-                    if (var9 >= ((jf) this).field_f) {
+                    if (var9 >= this.field_f) {
                       break L4;
                     } else {
-                      var10.a(param3[var6], ((jf) this).field_f * var9, var8 * var9, ((jf) this).field_f);
+                      var10.a(param3[var6], this.field_f * var9, var8 * var9, this.field_f);
                       var9++;
                       continue L5;
                     }
                   }
                 }
               }
-              boolean discarded$1 = ((jf) this).field_g.UnlockRect(var6, 0);
+              discarded$1 = this.field_g.UnlockRect(var6, 0);
               var6++;
               continue L3;
             } else {
@@ -169,6 +170,6 @@ final class jf extends ora implements hdb {
         if (param0 != -27445) {
             return;
         }
-        ((jf) this).field_d.a(56, (ora) this);
+        this.field_d.a(56, (ora) (this));
     }
 }

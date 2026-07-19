@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class na extends ug {
     private boolean field_P;
     private vb field_R;
@@ -15,21 +13,22 @@ final class na extends ug {
     final void a(int param0, int param1, int param2, byte param3, int param4) {
         int var6 = 0;
         super.a(param0, param1, param2, (byte) -119, param4);
-        var6 = -130 + param4 >> 1;
-        if (((na) this).field_P) {
-          ((na) this).field_M.a(param0, var6, 0, (byte) -119, 25);
-          ((na) this).field_R.a(param0, 45 + var6, 0, (byte) -119, 25);
-          ((na) this).field_O.a(param0, 90 + var6, 0, param3, 40);
+        var6 = -130 + param4 >> 1701124769;
+        if (this.field_P) {
+          this.field_M.a(param0, var6, 0, (byte) -119, 25);
+          this.field_R.a(param0, 45 + var6, 0, (byte) -119, 25);
+          this.field_O.a(param0, 90 + var6, 0, param3, 40);
           return;
         } else {
-          ((na) this).field_R.a(param0, var6, 0, (byte) -119, 25);
-          ((na) this).field_M.a(param0, var6 - -45, 0, (byte) -119, 25);
-          ((na) this).field_O.a(param0, 90 + var6, 0, param3, 40);
+          this.field_R.a(param0, var6, 0, (byte) -119, 25);
+          this.field_M.a(param0, var6 - -45, 0, (byte) -119, 25);
+          this.field_O.a(param0, 90 + var6, 0, param3, 40);
           return;
         }
     }
 
     final String d(int param0) {
+        boolean discarded$6 = false;
         String var2 = null;
         String stackIn_8_0 = null;
         String stackIn_15_0 = null;
@@ -37,21 +36,21 @@ final class na extends ug {
         String stackOut_13_0 = null;
         String stackOut_7_0 = null;
         String stackOut_6_0 = null;
-        var2 = ((na) this).field_M.d(77);
+        var2 = this.field_M.d(77);
         if (var2 != null) {
           return var2;
         } else {
           if (param0 > 6) {
-            if (!((na) this).field_q) {
+            if (!this.field_q) {
               return null;
             } else {
               L0: {
-                if (((na) this).field_z != null) {
-                  stackOut_14_0 = ((na) this).field_z;
+                if (this.field_z != null) {
+                  stackOut_14_0 = this.field_z;
                   stackIn_15_0 = stackOut_14_0;
                   break L0;
                 } else {
-                  stackOut_13_0 = ((na) this).field_A;
+                  stackOut_13_0 = this.field_A;
                   stackIn_15_0 = stackOut_13_0;
                   break L0;
                 }
@@ -59,17 +58,17 @@ final class na extends ug {
               return stackIn_15_0;
             }
           } else {
-            boolean discarded$6 = na.j((byte) -82);
-            if (!((na) this).field_q) {
+            discarded$6 = na.j((byte) -82);
+            if (!this.field_q) {
               return null;
             } else {
               L1: {
-                if (((na) this).field_z != null) {
-                  stackOut_7_0 = ((na) this).field_z;
+                if (this.field_z != null) {
+                  stackOut_7_0 = this.field_z;
                   stackIn_8_0 = stackOut_7_0;
                   break L1;
                 } else {
-                  stackOut_6_0 = ((na) this).field_A;
+                  stackOut_6_0 = this.field_A;
                   stackIn_8_0 = stackOut_6_0;
                   break L1;
                 }
@@ -83,11 +82,11 @@ final class na extends ug {
     final void a(an param0, byte param1) {
         try {
             super.a(param0, param1);
-            ((na) this).field_R.field_i = (uh) (Object) param0;
-            ((na) this).field_M.field_i = (uh) (Object) param0;
-            ((na) this).field_O.field_i = (uh) (Object) param0;
+            this.field_R.field_i = (uh) ((Object) param0);
+            this.field_M.field_i = (uh) ((Object) param0);
+            this.field_O.field_i = (uh) ((Object) param0);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "na.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "na.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -100,17 +99,17 @@ final class na extends ug {
           if (param0 == 5390) {
             break L0;
           } else {
-            ((na) this).field_M = null;
+            this.field_M = (vb) null;
             break L0;
           }
         }
         try {
           L1: {
-            stackOut_2_0 = Integer.parseInt(((na) this).field_O.field_A);
+            stackOut_2_0 = Integer.parseInt(this.field_O.field_A);
             stackIn_3_0 = stackOut_2_0;
             break L1;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return -1;
@@ -119,6 +118,7 @@ final class na extends ug {
     }
 
     final static jp[] a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
+        jp[] discarded$1 = null;
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -132,12 +132,8 @@ final class na extends ug {
         jp var16 = null;
         int[] var17 = null;
         int[] var18 = null;
-        int[] var19 = null;
-        int[] var20 = null;
         L0: {
-          var20 = lb.field_l;
-          var19 = var20;
-          var18 = var19;
+          var18 = lb.field_l;
           var17 = var18;
           var15 = var17;
           var6 = var15;
@@ -163,45 +159,46 @@ final class na extends ug {
             break L0;
           } else {
             var16 = new jp(16, 16);
-            var14 = (Object) (Object) var16;
+            var14 = var16;
             var16.g();
             lb.g(0, 0, 16, 16, param5);
             break L0;
           }
         }
-        lb.a(var20, var7, var8);
+        lb.a(var18, var7, var8);
         if (param0) {
-          jp[] discarded$1 = na.a(false, 118, 124, -92, 47, -40);
-          return new jp[]{var10, var11, var10, var9, (jp) var14, var9, var12, var13, var12};
+          discarded$1 = na.a(false, 118, 124, -92, 47, -40);
+          return new jp[]{var10, var11, var10, var9, (jp) (var14), var9, var12, var13, var12};
         } else {
-          return new jp[]{var10, var11, var10, var9, (jp) var14, var9, var12, var13, var12};
+          return new jp[]{var10, var11, var10, var9, (jp) (var14), var9, var12, var13, var12};
         }
     }
 
     private na(ub param0, boolean param1) {
         super(0, 0, 0, 0, (ub) null);
         try {
-            ((na) this).field_R = (vb) (Object) new sf("", (uh) null, 2);
-            ((na) this).field_M = (vb) (Object) new sf("", (uh) null, 2);
-            ((na) this).field_O = (vb) (Object) new sf("", (uh) null, 4);
-            ((na) this).field_O.field_l = param0;
-            ((na) this).field_M.field_l = param0;
-            ((na) this).field_R.field_l = param0;
-            ((na) this).field_P = param1 ? true : false;
-            if (!((na) this).field_P) {
-                ((na) this).a((oc) (Object) ((na) this).field_R, true);
-                ((na) this).a((oc) (Object) ((na) this).field_M, true);
+            this.field_R = (vb) ((Object) new sf("", (uh) null, 2));
+            this.field_M = (vb) ((Object) new sf("", (uh) null, 2));
+            this.field_O = (vb) ((Object) new sf("", (uh) null, 4));
+            this.field_O.field_l = param0;
+            this.field_M.field_l = param0;
+            this.field_R.field_l = param0;
+            this.field_P = param1 ? true : false;
+            if (!this.field_P) {
+                this.a(this.field_R, true);
+                this.a(this.field_M, true);
             } else {
-                ((na) this).a((oc) (Object) ((na) this).field_M, true);
-                ((na) this).a((oc) (Object) ((na) this).field_R, true);
+                this.a(this.field_M, true);
+                this.a(this.field_R, true);
             }
-            ((na) this).a((oc) (Object) ((na) this).field_O, true);
+            this.a(this.field_O, true);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean j(byte param0) {
+        jp[] discarded$10 = null;
         if (param0 == -60) {
           if (tn.field_m != null) {
             if (!tn.field_m.h(param0 ^ -55)) {
@@ -213,7 +210,7 @@ final class na extends ug {
             return false;
           }
         } else {
-          jp[] discarded$10 = na.a(true, 76, -125, -71, 104, -123);
+          discarded$10 = na.a(true, 76, -125, -71, 104, -123);
           if (tn.field_m != null) {
             if (!tn.field_m.h(param0 ^ -55)) {
               return false;
@@ -227,16 +224,16 @@ final class na extends ug {
     }
 
     final boolean h(byte param0) {
-        if (null != ((na) this).field_R.field_A) {
-          if (0 != ((na) this).field_R.field_A.length()) {
-            if (((na) this).field_M.field_A != null) {
-              if (((na) this).field_M.field_A.length() != 0) {
+        if (null != this.field_R.field_A) {
+          if (0 != this.field_R.field_A.length()) {
+            if (this.field_M.field_A != null) {
+              if (this.field_M.field_A.length() != 0) {
                 if (param0 == -124) {
                   L0: {
-                    if (((na) this).field_O.field_A == null) {
+                    if (this.field_O.field_A == null) {
                       break L0;
                     } else {
-                      if (((na) this).field_O.field_A.length() == 0) {
+                      if (this.field_O.field_A.length() == 0) {
                         break L0;
                       } else {
                         return false;
@@ -246,11 +243,11 @@ final class na extends ug {
                   return true;
                 } else {
                   L1: {
-                    field_Q = null;
-                    if (((na) this).field_O.field_A == null) {
+                    field_Q = (vl) null;
+                    if (this.field_O.field_A == null) {
                       break L1;
                     } else {
-                      if (((na) this).field_O.field_A.length() == 0) {
+                      if (this.field_O.field_A.length() == 0) {
                         break L1;
                       } else {
                         return false;
@@ -275,10 +272,10 @@ final class na extends ug {
 
     private final void a(oc param0, String param1, byte param2, int param3, int param4) {
         try {
-            og.field_Yb.b(param1, param3 - -param0.field_o + (param0.field_t >> 1), param0.field_w + (param4 + -5), 16777215, -1);
+            og.field_Yb.b(param1, param3 - -param0.field_o + (param0.field_t >> 475251105), param0.field_w + (param4 + -5), 16777215, -1);
             int var6_int = -127 % ((-2 - param2) / 59);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "na.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "na.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -289,14 +286,14 @@ final class na extends ug {
             g.field_n.field_Mb = param2;
             g.field_n.field_Ib = g.field_n.field_Ib + ap.field_e.field_Ib;
             ap.field_e.field_P = ap.field_e.field_P + ap.field_e.field_Ib;
-            ap.field_e.field_Ib = 0;
+            ap.field_e.field_Ib = param3;
             if (param0 >= -72) {
                 na.a(true, true, 77, -47);
             }
             g.field_n.field_Ib = g.field_n.field_Ib - ap.field_e.field_Ib;
             ap.field_e.field_P = ap.field_e.field_P - ap.field_e.field_Ib;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "na.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + 0 + ',' + param4 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "na.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -397,10 +394,10 @@ final class na extends ug {
         mh stackOut_19_0 = null;
         int stackOut_19_1 = 0;
         on.e(-79);
-        if (m.field_h >= 0) {
+        if ((m.field_h ^ -1) <= -1) {
           L0: {
             L1: {
-              dn.field_N.field_Mb = rd.a(rm.field_c, new String[1], (byte) 103);
+              dn.field_N.field_Mb = rd.a(rm.field_c, new String[]{Integer.toString(m.field_h)}, (byte) 103);
               var4 = 34 / ((-10 - param2) / 53);
               stackOut_42_0 = fe.field_gb;
               stackIn_48_0 = stackOut_42_0;
@@ -408,31 +405,31 @@ final class na extends ug {
               if (!param0) {
                 break L1;
               } else {
-                stackOut_43_0 = (mh) (Object) stackIn_43_0;
+                stackOut_43_0 = (mh) ((Object) stackIn_43_0);
                 stackIn_48_0 = stackOut_43_0;
                 stackIn_44_0 = stackOut_43_0;
                 if (param1) {
                   break L1;
                 } else {
-                  stackOut_44_0 = (mh) (Object) stackIn_44_0;
+                  stackOut_44_0 = (mh) ((Object) stackIn_44_0);
                   stackIn_48_0 = stackOut_44_0;
                   stackIn_45_0 = stackOut_44_0;
                   if (sc.field_c) {
                     break L1;
                   } else {
-                    stackOut_45_0 = (mh) (Object) stackIn_45_0;
+                    stackOut_45_0 = (mh) ((Object) stackIn_45_0);
                     stackIn_48_0 = stackOut_45_0;
                     stackIn_46_0 = stackOut_45_0;
                     if (null != o.field_e) {
                       break L1;
                     } else {
-                      stackOut_46_0 = (mh) (Object) stackIn_46_0;
+                      stackOut_46_0 = (mh) ((Object) stackIn_46_0);
                       stackIn_48_0 = stackOut_46_0;
                       stackIn_47_0 = stackOut_46_0;
                       if (nl.field_f != null) {
                         break L1;
                       } else {
-                        stackOut_47_0 = (mh) (Object) stackIn_47_0;
+                        stackOut_47_0 = (mh) ((Object) stackIn_47_0);
                         stackOut_47_1 = 1;
                         stackIn_49_0 = stackOut_47_0;
                         stackIn_49_1 = stackOut_47_1;
@@ -443,7 +440,7 @@ final class na extends ug {
                 }
               }
             }
-            stackOut_48_0 = (mh) (Object) stackIn_48_0;
+            stackOut_48_0 = (mh) ((Object) stackIn_48_0);
             stackOut_48_1 = 0;
             stackIn_49_0 = stackOut_48_0;
             stackIn_49_1 = stackOut_48_1;
@@ -458,31 +455,31 @@ final class na extends ug {
               if (!param0) {
                 break L3;
               } else {
-                stackOut_50_0 = (mh) (Object) stackIn_50_0;
+                stackOut_50_0 = (mh) ((Object) stackIn_50_0);
                 stackIn_55_0 = stackOut_50_0;
                 stackIn_51_0 = stackOut_50_0;
                 if (param1) {
                   break L3;
                 } else {
-                  stackOut_51_0 = (mh) (Object) stackIn_51_0;
+                  stackOut_51_0 = (mh) ((Object) stackIn_51_0);
                   stackIn_55_0 = stackOut_51_0;
                   stackIn_52_0 = stackOut_51_0;
                   if (sc.field_c) {
                     break L3;
                   } else {
-                    stackOut_52_0 = (mh) (Object) stackIn_52_0;
+                    stackOut_52_0 = (mh) ((Object) stackIn_52_0);
                     stackIn_55_0 = stackOut_52_0;
                     stackIn_53_0 = stackOut_52_0;
                     if (o.field_e != null) {
                       break L3;
                     } else {
-                      stackOut_53_0 = (mh) (Object) stackIn_53_0;
+                      stackOut_53_0 = (mh) ((Object) stackIn_53_0);
                       stackIn_55_0 = stackOut_53_0;
                       stackIn_54_0 = stackOut_53_0;
                       if (null != nl.field_f) {
                         break L3;
                       } else {
-                        stackOut_54_0 = (mh) (Object) stackIn_54_0;
+                        stackOut_54_0 = (mh) ((Object) stackIn_54_0);
                         stackOut_54_1 = 1;
                         stackIn_56_0 = stackOut_54_0;
                         stackIn_56_1 = stackOut_54_1;
@@ -493,7 +490,7 @@ final class na extends ug {
                 }
               }
             }
-            stackOut_55_0 = (mh) (Object) stackIn_55_0;
+            stackOut_55_0 = (mh) ((Object) stackIn_55_0);
             stackOut_55_1 = 0;
             stackIn_56_0 = stackOut_55_0;
             stackIn_56_1 = stackOut_55_1;
@@ -508,19 +505,19 @@ final class na extends ug {
               if (!param0) {
                 break L5;
               } else {
-                stackOut_57_0 = (mh) (Object) stackIn_57_0;
+                stackOut_57_0 = (mh) ((Object) stackIn_57_0);
                 stackIn_60_0 = stackOut_57_0;
                 stackIn_58_0 = stackOut_57_0;
                 if (param1) {
                   break L5;
                 } else {
-                  stackOut_58_0 = (mh) (Object) stackIn_58_0;
+                  stackOut_58_0 = (mh) ((Object) stackIn_58_0);
                   stackIn_60_0 = stackOut_58_0;
                   stackIn_59_0 = stackOut_58_0;
                   if (!sc.field_c) {
                     break L5;
                   } else {
-                    stackOut_59_0 = (mh) (Object) stackIn_59_0;
+                    stackOut_59_0 = (mh) ((Object) stackIn_59_0);
                     stackOut_59_1 = 1;
                     stackIn_61_0 = stackOut_59_0;
                     stackIn_61_1 = stackOut_59_1;
@@ -529,7 +526,7 @@ final class na extends ug {
                 }
               }
             }
-            stackOut_60_0 = (mh) (Object) stackIn_60_0;
+            stackOut_60_0 = (mh) ((Object) stackIn_60_0);
             stackOut_60_1 = 0;
             stackIn_61_0 = stackOut_60_0;
             stackIn_61_1 = stackOut_60_1;
@@ -538,7 +535,7 @@ final class na extends ug {
           L6: {
             ((mh) (Object) stackIn_61_0).a(stackIn_61_1 != 0, -15211);
             ap.field_b.field_d.i(0);
-            if (-1 == jf.field_k.field_L) {
+            if (-1 == (jf.field_k.field_L ^ -1)) {
               break L6;
             } else {
               tq.field_c = true;
@@ -553,7 +550,7 @@ final class na extends ug {
                 ml.a(param3, -1);
                 break L7;
               } else {
-                if (-1 < go.field_c) {
+                if (-1 > (go.field_c ^ -1)) {
                   ml.a(param3, -1);
                   break L7;
                 } else {
@@ -610,31 +607,31 @@ final class na extends ug {
               if (!param0) {
                 break L11;
               } else {
-                stackOut_2_0 = (mh) (Object) stackIn_2_0;
+                stackOut_2_0 = (mh) ((Object) stackIn_2_0);
                 stackIn_7_0 = stackOut_2_0;
                 stackIn_3_0 = stackOut_2_0;
                 if (param1) {
                   break L11;
                 } else {
-                  stackOut_3_0 = (mh) (Object) stackIn_3_0;
+                  stackOut_3_0 = (mh) ((Object) stackIn_3_0);
                   stackIn_7_0 = stackOut_3_0;
                   stackIn_4_0 = stackOut_3_0;
                   if (sc.field_c) {
                     break L11;
                   } else {
-                    stackOut_4_0 = (mh) (Object) stackIn_4_0;
+                    stackOut_4_0 = (mh) ((Object) stackIn_4_0);
                     stackIn_7_0 = stackOut_4_0;
                     stackIn_5_0 = stackOut_4_0;
                     if (null != o.field_e) {
                       break L11;
                     } else {
-                      stackOut_5_0 = (mh) (Object) stackIn_5_0;
+                      stackOut_5_0 = (mh) ((Object) stackIn_5_0);
                       stackIn_7_0 = stackOut_5_0;
                       stackIn_6_0 = stackOut_5_0;
                       if (nl.field_f != null) {
                         break L11;
                       } else {
-                        stackOut_6_0 = (mh) (Object) stackIn_6_0;
+                        stackOut_6_0 = (mh) ((Object) stackIn_6_0);
                         stackOut_6_1 = 1;
                         stackIn_8_0 = stackOut_6_0;
                         stackIn_8_1 = stackOut_6_1;
@@ -645,7 +642,7 @@ final class na extends ug {
                 }
               }
             }
-            stackOut_7_0 = (mh) (Object) stackIn_7_0;
+            stackOut_7_0 = (mh) ((Object) stackIn_7_0);
             stackOut_7_1 = 0;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
@@ -660,31 +657,31 @@ final class na extends ug {
               if (!param0) {
                 break L13;
               } else {
-                stackOut_9_0 = (mh) (Object) stackIn_9_0;
+                stackOut_9_0 = (mh) ((Object) stackIn_9_0);
                 stackIn_14_0 = stackOut_9_0;
                 stackIn_10_0 = stackOut_9_0;
                 if (param1) {
                   break L13;
                 } else {
-                  stackOut_10_0 = (mh) (Object) stackIn_10_0;
+                  stackOut_10_0 = (mh) ((Object) stackIn_10_0);
                   stackIn_14_0 = stackOut_10_0;
                   stackIn_11_0 = stackOut_10_0;
                   if (sc.field_c) {
                     break L13;
                   } else {
-                    stackOut_11_0 = (mh) (Object) stackIn_11_0;
+                    stackOut_11_0 = (mh) ((Object) stackIn_11_0);
                     stackIn_14_0 = stackOut_11_0;
                     stackIn_12_0 = stackOut_11_0;
                     if (o.field_e != null) {
                       break L13;
                     } else {
-                      stackOut_12_0 = (mh) (Object) stackIn_12_0;
+                      stackOut_12_0 = (mh) ((Object) stackIn_12_0);
                       stackIn_14_0 = stackOut_12_0;
                       stackIn_13_0 = stackOut_12_0;
                       if (null != nl.field_f) {
                         break L13;
                       } else {
-                        stackOut_13_0 = (mh) (Object) stackIn_13_0;
+                        stackOut_13_0 = (mh) ((Object) stackIn_13_0);
                         stackOut_13_1 = 1;
                         stackIn_15_0 = stackOut_13_0;
                         stackIn_15_1 = stackOut_13_1;
@@ -695,7 +692,7 @@ final class na extends ug {
                 }
               }
             }
-            stackOut_14_0 = (mh) (Object) stackIn_14_0;
+            stackOut_14_0 = (mh) ((Object) stackIn_14_0);
             stackOut_14_1 = 0;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
@@ -710,19 +707,19 @@ final class na extends ug {
               if (!param0) {
                 break L15;
               } else {
-                stackOut_16_0 = (mh) (Object) stackIn_16_0;
+                stackOut_16_0 = (mh) ((Object) stackIn_16_0);
                 stackIn_19_0 = stackOut_16_0;
                 stackIn_17_0 = stackOut_16_0;
                 if (param1) {
                   break L15;
                 } else {
-                  stackOut_17_0 = (mh) (Object) stackIn_17_0;
+                  stackOut_17_0 = (mh) ((Object) stackIn_17_0);
                   stackIn_19_0 = stackOut_17_0;
                   stackIn_18_0 = stackOut_17_0;
                   if (!sc.field_c) {
                     break L15;
                   } else {
-                    stackOut_18_0 = (mh) (Object) stackIn_18_0;
+                    stackOut_18_0 = (mh) ((Object) stackIn_18_0);
                     stackOut_18_1 = 1;
                     stackIn_20_0 = stackOut_18_0;
                     stackIn_20_1 = stackOut_18_1;
@@ -731,7 +728,7 @@ final class na extends ug {
                 }
               }
             }
-            stackOut_19_0 = (mh) (Object) stackIn_19_0;
+            stackOut_19_0 = (mh) ((Object) stackIn_19_0);
             stackOut_19_1 = 0;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
@@ -740,7 +737,7 @@ final class na extends ug {
           L16: {
             ((mh) (Object) stackIn_20_0).a(stackIn_20_1 != 0, -15211);
             ap.field_b.field_d.i(0);
-            if (-1 == jf.field_k.field_L) {
+            if (-1 == (jf.field_k.field_L ^ -1)) {
               break L16;
             } else {
               tq.field_c = true;
@@ -755,7 +752,7 @@ final class na extends ug {
                 ml.a(param3, -1);
                 break L17;
               } else {
-                if (-1 < go.field_c) {
+                if (-1 > (go.field_c ^ -1)) {
                   ml.a(param3, -1);
                   break L17;
                 } else {
@@ -809,11 +806,11 @@ final class na extends ug {
         if (param2 != 0) {
           return;
         } else {
-          param0 = param0 + ((na) this).field_w;
-          param1 = param1 + ((na) this).field_o;
-          this.a((oc) (Object) ((na) this).field_R, ej.field_M, (byte) 127, param1, param0);
-          this.a((oc) (Object) ((na) this).field_M, rl.field_f, (byte) 123, param1, param0);
-          this.a((oc) (Object) ((na) this).field_O, kk.field_f, (byte) -86, param1, param0);
+          param0 = param0 + this.field_w;
+          param1 = param1 + this.field_o;
+          this.a(this.field_R, ej.field_M, (byte) 127, param1, param0);
+          this.a(this.field_M, rl.field_f, (byte) 123, param1, param0);
+          this.a(this.field_O, kk.field_f, (byte) -86, param1, param0);
           return;
         }
     }
@@ -821,9 +818,9 @@ final class na extends ug {
     na(ub param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-            ((na) this).a(param5, param2, param3, (byte) -119, param4);
+            this.a(param5, param2, param3, (byte) -119, param4);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -841,35 +838,59 @@ final class na extends ug {
                 } else {
                   if (param1 == 8364) {
                     var2 = -128;
-                    return (byte) var2;
+                    if (param0 == -8250) {
+                      return (byte) var2;
+                    } else {
+                      return (byte) 9;
+                    }
                   } else {
                     if (8218 != param1) {
                       if (param1 != 402) {
                         if (param1 == 8222) {
                           var2 = -124;
-                          return (byte) var2;
+                          if (param0 == -8250) {
+                            return (byte) var2;
+                          } else {
+                            return (byte) 9;
+                          }
                         } else {
                           if (param1 != 8230) {
                             if (8224 != param1) {
                               if (8225 != param1) {
                                 if (param1 == 710) {
                                   var2 = -120;
-                                  return (byte) var2;
+                                  if (param0 == -8250) {
+                                    return (byte) var2;
+                                  } else {
+                                    return (byte) 9;
+                                  }
                                 } else {
                                   if (param1 != 8240) {
                                     if (param1 == 352) {
                                       var2 = -118;
-                                      return (byte) var2;
+                                      if (param0 == -8250) {
+                                        return (byte) var2;
+                                      } else {
+                                        return (byte) 9;
+                                      }
                                     } else {
                                       if (param1 != 8249) {
                                         if (param1 == 338) {
                                           var2 = -116;
-                                          return (byte) var2;
+                                          if (param0 == -8250) {
+                                            return (byte) var2;
+                                          } else {
+                                            return (byte) 9;
+                                          }
                                         } else {
                                           if (381 != param1) {
                                             if (param1 == 8216) {
                                               var2 = -111;
-                                              return (byte) var2;
+                                              if (param0 == -8250) {
+                                                return (byte) var2;
+                                              } else {
+                                                return (byte) 9;
+                                              }
                                             } else {
                                               if (param1 != 8217) {
                                                 if (param1 != 8220) {
@@ -880,31 +901,59 @@ final class na extends ug {
                                                           if (param1 != 732) {
                                                             if (param1 == 8482) {
                                                               var2 = -103;
-                                                              return (byte) var2;
+                                                              if (param0 == -8250) {
+                                                                return (byte) var2;
+                                                              } else {
+                                                                return (byte) 9;
+                                                              }
                                                             } else {
                                                               if (param1 == 353) {
                                                                 var2 = -102;
-                                                                return (byte) var2;
+                                                                if (param0 == -8250) {
+                                                                  return (byte) var2;
+                                                                } else {
+                                                                  return (byte) 9;
+                                                                }
                                                               } else {
                                                                 if (param1 == 8250) {
                                                                   var2 = -101;
-                                                                  return (byte) var2;
+                                                                  if (param0 == -8250) {
+                                                                    return (byte) var2;
+                                                                  } else {
+                                                                    return (byte) 9;
+                                                                  }
                                                                 } else {
                                                                   if (param1 == 339) {
                                                                     var2 = -100;
-                                                                    return (byte) var2;
+                                                                    if (param0 == -8250) {
+                                                                      return (byte) var2;
+                                                                    } else {
+                                                                      return (byte) 9;
+                                                                    }
                                                                   } else {
                                                                     if (param1 != 382) {
                                                                       if (param1 == 376) {
                                                                         var2 = -97;
-                                                                        return (byte) var2;
+                                                                        if (param0 == -8250) {
+                                                                          return (byte) var2;
+                                                                        } else {
+                                                                          return (byte) 9;
+                                                                        }
                                                                       } else {
                                                                         var2 = 63;
-                                                                        return (byte) var2;
+                                                                        if (param0 == -8250) {
+                                                                          return (byte) var2;
+                                                                        } else {
+                                                                          return (byte) 9;
+                                                                        }
                                                                       }
                                                                     } else {
                                                                       var2 = -98;
-                                                                      return (byte) var2;
+                                                                      if (param0 == -8250) {
+                                                                        return (byte) var2;
+                                                                      } else {
+                                                                        return (byte) 9;
+                                                                      }
                                                                     }
                                                                   }
                                                                 }
@@ -912,23 +961,43 @@ final class na extends ug {
                                                             }
                                                           } else {
                                                             var2 = -104;
-                                                            return (byte) var2;
+                                                            if (param0 == -8250) {
+                                                              return (byte) var2;
+                                                            } else {
+                                                              return (byte) 9;
+                                                            }
                                                           }
                                                         } else {
                                                           var2 = -105;
-                                                          return (byte) var2;
+                                                          if (param0 == -8250) {
+                                                            return (byte) var2;
+                                                          } else {
+                                                            return (byte) 9;
+                                                          }
                                                         }
                                                       } else {
                                                         var2 = -106;
-                                                        return (byte) var2;
+                                                        if (param0 == -8250) {
+                                                          return (byte) var2;
+                                                        } else {
+                                                          return (byte) 9;
+                                                        }
                                                       }
                                                     } else {
                                                       var2 = -107;
-                                                      return (byte) var2;
+                                                      if (param0 == -8250) {
+                                                        return (byte) var2;
+                                                      } else {
+                                                        return (byte) 9;
+                                                      }
                                                     }
                                                   } else {
                                                     var2 = -108;
-                                                    return (byte) var2;
+                                                    if (param0 == -8250) {
+                                                      return (byte) var2;
+                                                    } else {
+                                                      return (byte) 9;
+                                                    }
                                                   }
                                                 } else {
                                                   var2 = -109;
@@ -978,23 +1047,69 @@ final class na extends ug {
                   }
                 }
               }
-              return (byte) var2;
+              if (param0 == -8250) {
+                return (byte) var2;
+              } else {
+                return (byte) 9;
+              }
             } else {
-              if (param1 != 8364) {
+              if (param1 == 8364) {
+                var2 = -128;
+                if (param0 == -8250) {
+                  return (byte) var2;
+                } else {
+                  return (byte) 9;
+                }
+              } else {
                 L1: {
                   if (8218 != param1) {
                     if (param1 != 402) {
-                      if (param1 != 8222) {
+                      if (param1 == 8222) {
+                        var2 = -124;
+                        if (param0 == -8250) {
+                          return (byte) var2;
+                        } else {
+                          return (byte) 9;
+                        }
+                      } else {
                         if (param1 != 8230) {
                           if (8224 != param1) {
                             if (8225 != param1) {
-                              if (param1 != 710) {
+                              if (param1 == 710) {
+                                var2 = -120;
+                                if (param0 == -8250) {
+                                  return (byte) var2;
+                                } else {
+                                  return (byte) 9;
+                                }
+                              } else {
                                 if (param1 != 8240) {
-                                  if (param1 != 352) {
+                                  if (param1 == 352) {
+                                    var2 = -118;
+                                    if (param0 == -8250) {
+                                      return (byte) var2;
+                                    } else {
+                                      return (byte) 9;
+                                    }
+                                  } else {
                                     if (param1 != 8249) {
-                                      if (param1 != 338) {
+                                      if (param1 == 338) {
+                                        var2 = -116;
+                                        if (param0 == -8250) {
+                                          return (byte) var2;
+                                        } else {
+                                          return (byte) 9;
+                                        }
+                                      } else {
                                         if (381 != param1) {
-                                          if (param1 != 8216) {
+                                          if (param1 == 8216) {
+                                            var2 = -111;
+                                            if (param0 == -8250) {
+                                              return (byte) var2;
+                                            } else {
+                                              return (byte) 9;
+                                            }
+                                          } else {
                                             if (param1 != 8217) {
                                               if (param1 != 8220) {
                                                 if (param1 != 8221) {
@@ -1002,26 +1117,53 @@ final class na extends ug {
                                                     if (8211 != param1) {
                                                       if (param1 != 8212) {
                                                         if (param1 != 732) {
-                                                          if (param1 != 8482) {
+                                                          if (param1 == 8482) {
+                                                            var2 = -103;
+                                                            if (param0 == -8250) {
+                                                              return (byte) var2;
+                                                            } else {
+                                                              return (byte) 9;
+                                                            }
+                                                          } else {
                                                             if (param1 == 353) {
                                                               var2 = -102;
-                                                              return (byte) var2;
+                                                              if (param0 == -8250) {
+                                                                return (byte) var2;
+                                                              } else {
+                                                                return (byte) 9;
+                                                              }
                                                             } else {
                                                               if (param1 == 8250) {
                                                                 var2 = -101;
-                                                                return (byte) var2;
+                                                                if (param0 == -8250) {
+                                                                  return (byte) var2;
+                                                                } else {
+                                                                  return (byte) 9;
+                                                                }
                                                               } else {
                                                                 if (param1 == 339) {
                                                                   var2 = -100;
-                                                                  return (byte) var2;
+                                                                  if (param0 == -8250) {
+                                                                    return (byte) var2;
+                                                                  } else {
+                                                                    return (byte) 9;
+                                                                  }
                                                                 } else {
                                                                   if (param1 != 382) {
                                                                     if (param1 == 376) {
                                                                       var2 = -97;
-                                                                      return (byte) var2;
+                                                                      if (param0 == -8250) {
+                                                                        return (byte) var2;
+                                                                      } else {
+                                                                        return (byte) 9;
+                                                                      }
                                                                     } else {
                                                                       var2 = 63;
-                                                                      return (byte) var2;
+                                                                      if (param0 == -8250) {
+                                                                        return (byte) var2;
+                                                                      } else {
+                                                                        return (byte) 9;
+                                                                      }
                                                                     }
                                                                   } else {
                                                                     var2 = -98;
@@ -1030,9 +1172,6 @@ final class na extends ug {
                                                                 }
                                                               }
                                                             }
-                                                          } else {
-                                                            var2 = -103;
-                                                            return (byte) var2;
                                                           }
                                                         } else {
                                                           var2 = -104;
@@ -1062,33 +1201,21 @@ final class na extends ug {
                                               var2 = -110;
                                               break L1;
                                             }
-                                          } else {
-                                            var2 = -111;
-                                            return (byte) var2;
                                           }
                                         } else {
                                           var2 = -114;
                                           break L1;
                                         }
-                                      } else {
-                                        var2 = -116;
-                                        return (byte) var2;
                                       }
                                     } else {
                                       var2 = -117;
                                       break L1;
                                     }
-                                  } else {
-                                    var2 = -118;
-                                    return (byte) var2;
                                   }
                                 } else {
                                   var2 = -119;
                                   break L1;
                                 }
-                              } else {
-                                var2 = -120;
-                                return (byte) var2;
                               }
                             } else {
                               var2 = -121;
@@ -1102,9 +1229,6 @@ final class na extends ug {
                           var2 = -123;
                           break L1;
                         }
-                      } else {
-                        var2 = -124;
-                        return (byte) var2;
                       }
                     } else {
                       var2 = -125;
@@ -1115,36 +1239,83 @@ final class na extends ug {
                     break L1;
                   }
                 }
-                return (byte) var2;
-              } else {
-                var2 = -128;
-                return (byte) var2;
+                if (param0 == -8250) {
+                  return (byte) var2;
+                } else {
+                  return (byte) 9;
+                }
               }
             }
           } else {
             var2 = (byte)param1;
-            return (byte) var2;
+            if (param0 == -8250) {
+              return (byte) var2;
+            } else {
+              return (byte) 9;
+            }
           }
         } else {
           if (param1 >= 160) {
-            if (param1 > 255) {
-              if (param1 != 8364) {
-                L2: {
+            L2: {
+              if (param1 <= 255) {
+                var2 = (byte)param1;
+                break L2;
+              } else {
+                if (param1 == 8364) {
+                  var2 = -128;
+                  if (param0 == -8250) {
+                    return (byte) var2;
+                  } else {
+                    return (byte) 9;
+                  }
+                } else {
                   if (8218 != param1) {
                     if (param1 != 402) {
-                      if (param1 != 8222) {
+                      if (param1 == 8222) {
+                        var2 = -124;
+                        if (param0 == -8250) {
+                          return (byte) var2;
+                        } else {
+                          return (byte) 9;
+                        }
+                      } else {
                         if (param1 != 8230) {
                           if (8224 != param1) {
                             if (8225 != param1) {
-                              if (param1 != 710) {
+                              if (param1 == 710) {
+                                var2 = -120;
+                                if (param0 == -8250) {
+                                  return (byte) var2;
+                                } else {
+                                  return (byte) 9;
+                                }
+                              } else {
                                 if (param1 != 8240) {
-                                  if (param1 != 352) {
+                                  if (param1 == 352) {
+                                    var2 = -118;
+                                    if (param0 == -8250) {
+                                      return (byte) var2;
+                                    } else {
+                                      return (byte) 9;
+                                    }
+                                  } else {
                                     if (param1 != 8249) {
-                                      if (param1 != 338) {
+                                      if (param1 == 338) {
+                                        var2 = -116;
+                                        if (param0 == -8250) {
+                                          return (byte) var2;
+                                        } else {
+                                          return (byte) 9;
+                                        }
+                                      } else {
                                         if (381 != param1) {
                                           if (param1 == 8216) {
                                             var2 = -111;
-                                            return (byte) var2;
+                                            if (param0 == -8250) {
+                                              return (byte) var2;
+                                            } else {
+                                              return (byte) 9;
+                                            }
                                           } else {
                                             if (param1 != 8217) {
                                               if (param1 != 8220) {
@@ -1218,25 +1389,16 @@ final class na extends ug {
                                           var2 = -114;
                                           break L2;
                                         }
-                                      } else {
-                                        var2 = -116;
-                                        return (byte) var2;
                                       }
                                     } else {
                                       var2 = -117;
                                       break L2;
                                     }
-                                  } else {
-                                    var2 = -118;
-                                    return (byte) var2;
                                   }
                                 } else {
                                   var2 = -119;
                                   break L2;
                                 }
-                              } else {
-                                var2 = -120;
-                                return (byte) var2;
                               }
                             } else {
                               var2 = -121;
@@ -1250,9 +1412,6 @@ final class na extends ug {
                           var2 = -123;
                           break L2;
                         }
-                      } else {
-                        var2 = -124;
-                        return (byte) var2;
                       }
                     } else {
                       var2 = -125;
@@ -1263,33 +1422,70 @@ final class na extends ug {
                     break L2;
                   }
                 }
-                return (byte) var2;
+              }
+            }
+            if (param0 == -8250) {
+              return (byte) var2;
+            } else {
+              return (byte) 9;
+            }
+          } else {
+            if (param1 == 8364) {
+              var2 = -128;
+              if (param0 != -8250) {
+                return (byte) 9;
               } else {
-                var2 = -128;
                 return (byte) var2;
               }
             } else {
-              var2 = (byte)param1;
-              return (byte) var2;
-            }
-          } else {
-            if (param1 != 8364) {
               L3: {
                 if (8218 != param1) {
                   if (param1 != 402) {
-                    if (param1 != 8222) {
+                    if (param1 == 8222) {
+                      var2 = -124;
+                      if (param0 != -8250) {
+                        return (byte) 9;
+                      } else {
+                        return (byte) var2;
+                      }
+                    } else {
                       if (param1 != 8230) {
                         if (8224 != param1) {
                           if (8225 != param1) {
-                            if (param1 != 710) {
+                            if (param1 == 710) {
+                              var2 = -120;
+                              if (param0 != -8250) {
+                                return (byte) 9;
+                              } else {
+                                return (byte) var2;
+                              }
+                            } else {
                               if (param1 != 8240) {
-                                if (param1 != 352) {
+                                if (param1 == 352) {
+                                  var2 = -118;
+                                  if (param0 != -8250) {
+                                    return (byte) 9;
+                                  } else {
+                                    return (byte) var2;
+                                  }
+                                } else {
                                   if (param1 != 8249) {
-                                    if (param1 != 338) {
+                                    if (param1 == 338) {
+                                      var2 = -116;
+                                      if (param0 != -8250) {
+                                        return (byte) 9;
+                                      } else {
+                                        return (byte) var2;
+                                      }
+                                    } else {
                                       if (381 != param1) {
                                         if (param1 == 8216) {
                                           var2 = -111;
-                                          return (byte) var2;
+                                          if (param0 != -8250) {
+                                            return (byte) 9;
+                                          } else {
+                                            return (byte) var2;
+                                          }
                                         } else {
                                           if (param1 != 8217) {
                                             if (param1 != 8220) {
@@ -1363,25 +1559,16 @@ final class na extends ug {
                                         var2 = -114;
                                         break L3;
                                       }
-                                    } else {
-                                      var2 = -116;
-                                      return (byte) var2;
                                     }
                                   } else {
                                     var2 = -117;
                                     break L3;
                                   }
-                                } else {
-                                  var2 = -118;
-                                  return (byte) var2;
                                 }
                               } else {
                                 var2 = -119;
                                 break L3;
                               }
-                            } else {
-                              var2 = -120;
-                              return (byte) var2;
                             }
                           } else {
                             var2 = -121;
@@ -1395,9 +1582,6 @@ final class na extends ug {
                         var2 = -123;
                         break L3;
                       }
-                    } else {
-                      var2 = -124;
-                      return (byte) var2;
                     }
                   } else {
                     var2 = -125;
@@ -1408,17 +1592,18 @@ final class na extends ug {
                   break L3;
                 }
               }
-              return (byte) var2;
-            } else {
-              var2 = -128;
-              return (byte) var2;
+              if (param0 != -8250) {
+                return (byte) 9;
+              } else {
+                return (byte) var2;
+              }
             }
           }
         }
     }
 
     public static void k(byte param0) {
-        int var1 = -6;
+        int var1 = 13 / ((-32 - param0) / 57);
         field_L = null;
         field_Q = null;
         field_N = null;
@@ -1433,17 +1618,17 @@ final class na extends ug {
           if (param0 <= -79) {
             break L0;
           } else {
-            ((na) this).field_P = true;
+            this.field_P = true;
             break L0;
           }
         }
         try {
           L1: {
-            stackOut_2_0 = Integer.parseInt(((na) this).field_R.field_A);
+            stackOut_2_0 = Integer.parseInt(this.field_R.field_A);
             stackIn_3_0 = stackOut_2_0;
             break L1;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return -1;
@@ -1462,15 +1647,15 @@ final class na extends ug {
               if (param0 == -117) {
                 break L1;
               } else {
-                field_N = null;
+                field_N = (String) null;
                 break L1;
               }
             }
-            stackOut_2_0 = Integer.parseInt(((na) this).field_M.field_A) - 1;
+            stackOut_2_0 = Integer.parseInt(this.field_M.field_A) - 1;
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return -1;
@@ -1479,10 +1664,6 @@ final class na extends ug {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_N = "Create a free account to start using this feature";
         field_Q = new vl();
     }

@@ -17,6 +17,9 @@ final class gh implements Iterable {
     static java.awt.Font field_f;
 
     final static int a(boolean param0) {
+        if (!param0) {
+            return -80;
+        }
         return nh.field_b;
     }
 
@@ -25,20 +28,20 @@ final class gh implements Iterable {
         rk var5 = null;
         int var6 = 0;
         var6 = Confined.field_J ? 1 : 0;
-        var4 = ((gh) this).field_j[(int)((long)(((gh) this).field_i - param0) & param1)];
-        ((gh) this).field_g = var4.field_h;
+        var4 = this.field_j[(int)((long)(this.field_i - param0) & param1)];
+        this.field_g = var4.field_h;
         L0: while (true) {
-          if (((gh) this).field_g != var4) {
-            if (~param1 != ~((gh) this).field_g.field_i) {
-              ((gh) this).field_g = ((gh) this).field_g.field_h;
+          if (this.field_g != var4) {
+            if ((param1 ^ -1L) != (this.field_g.field_i ^ -1L)) {
+              this.field_g = this.field_g.field_h;
               continue L0;
             } else {
-              var5 = ((gh) this).field_g;
-              ((gh) this).field_g = ((gh) this).field_g.field_h;
+              var5 = this.field_g;
+              this.field_g = this.field_g.field_h;
               return var5;
             }
           } else {
-            ((gh) this).field_g = null;
+            this.field_g = null;
             return null;
           }
         }
@@ -65,19 +68,19 @@ final class gh implements Iterable {
             if (!(null == param0.field_a)) {
                 param0.a(true);
             }
-            var5 = ((gh) this).field_j[(int)((long)(((gh) this).field_i + param2) & param1)];
+            var5 = this.field_j[(int)((long)(this.field_i + param2) & param1)];
             param0.field_h = var5;
             param0.field_a = var5.field_a;
             param0.field_a.field_h = param0;
             param0.field_h.field_a = param0;
             param0.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "gh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "gh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new o((gh) this);
+        return (Iterator) ((Object) new o((gh) (this)));
     }
 
     private gh() throws Throwable {
@@ -85,10 +88,6 @@ final class gh implements Iterable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[]{0, 64, 256, 128};
         field_a = new si(3);
         field_b = "Name";

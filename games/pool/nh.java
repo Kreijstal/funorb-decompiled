@@ -13,7 +13,7 @@ public class nh {
 
     public static File a(String param0, int param1) {
         if (param1 >= -125) {
-            field_c = null;
+            field_c = (String) null;
             return nh.a(param0, field_b, field_e, (byte) 110);
         }
         return nh.a(param0, field_b, field_e, (byte) 110);
@@ -82,10 +82,6 @@ public class nh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = false;
         field_d = new Hashtable(16);
     }

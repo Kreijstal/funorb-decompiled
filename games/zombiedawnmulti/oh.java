@@ -11,13 +11,13 @@ final class oh extends br {
     int field_l;
 
     final void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        ((oh) this).field_g = param0;
-        ((oh) this).field_i = param1;
-        ((oh) this).field_h = param2;
-        ((oh) this).field_l = param3;
-        ((oh) this).field_j = param5;
-        ((oh) this).field_f = param4;
-        ((oh) this).field_k = param6;
+        this.field_g = param0;
+        this.field_i = param1;
+        this.field_h = param2;
+        this.field_l = param3;
+        this.field_j = param5;
+        this.field_f = param4;
+        this.field_k = param6;
     }
 
     oh() {

@@ -65,23 +65,23 @@ final class uu extends ms {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("uu.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -89,7 +89,7 @@ final class uu extends ms {
               break L2;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -107,26 +107,34 @@ final class uu extends ms {
         if (param0 != 0) {
             return;
         }
-        ((uu) this).field_B = null;
-        ((uu) this).field_w = null;
-        ((uu) this).field_z = null;
-        ((uu) this).field_A = null;
+        this.field_B = null;
+        this.field_w = null;
+        this.field_z = null;
+        this.field_A = null;
     }
 
     final static void c(boolean param0) {
+        int discarded$8 = 0;
+        int discarded$9 = 0;
+        int discarded$10 = 0;
+        int discarded$11 = 0;
         pd var1 = null;
         pl var2 = null;
-        var1 = (pd) (Object) vu.field_g.b(103);
-        if (var1 == null) {
-          kk.a((byte) -110);
-          return;
+        if (!param0) {
+          var1 = (pd) ((Object) vu.field_g.b(103));
+          if (var1 == null) {
+            kk.a((byte) -110);
+            return;
+          } else {
+            var2 = ig.field_a;
+            discarded$8 = var2.c(true);
+            discarded$9 = var2.c(true);
+            discarded$10 = var2.c(true);
+            discarded$11 = var2.c(true);
+            var1.b(param0);
+            return;
+          }
         } else {
-          var2 = ig.field_a;
-          int discarded$8 = var2.c(true);
-          int discarded$9 = var2.c(true);
-          int discarded$10 = var2.c(true);
-          int discarded$11 = var2.c(true);
-          var1.b(false);
           return;
         }
     }
@@ -135,10 +143,6 @@ final class uu extends ms {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = new qr();
         field_s = "???";
     }

@@ -40,6 +40,9 @@ final class l {
 
     public static void a(int param0) {
         field_D = null;
+        if (param0 != 0) {
+            field_f = -53;
+        }
     }
 
     final static void a(java.applet.Applet param0, int param1) {
@@ -99,23 +102,23 @@ final class l {
               decompiledCaughtException = decompiledCaughtParameter1;
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_0 = (RuntimeException) (var2_ref2);
                 stackOut_6_1 = new StringBuilder().append("l.B(");
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param0 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
                   break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
@@ -123,7 +126,7 @@ final class l {
                   break L2;
                 }
               }
-              throw la.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+              throw la.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -133,22 +136,22 @@ final class l {
     }
 
     l() {
-        ((l) this).field_g = 0;
-        ((l) this).field_C = new byte[6][258];
-        ((l) this).field_b = new byte[256];
-        ((l) this).field_a = new int[6][258];
-        ((l) this).field_j = new boolean[256];
-        ((l) this).field_d = new byte[18002];
-        ((l) this).field_h = new byte[4096];
-        ((l) this).field_o = new boolean[16];
-        ((l) this).field_y = new byte[18002];
-        ((l) this).field_n = 0;
-        ((l) this).field_v = new int[16];
-        ((l) this).field_x = new int[6][258];
-        ((l) this).field_s = new int[256];
-        ((l) this).field_r = new int[257];
-        ((l) this).field_e = new int[6];
-        ((l) this).field_k = new int[6][258];
+        this.field_g = 0;
+        this.field_C = new byte[6][258];
+        this.field_b = new byte[256];
+        this.field_a = new int[6][258];
+        this.field_j = new boolean[256];
+        this.field_d = new byte[18002];
+        this.field_h = new byte[4096];
+        this.field_o = new boolean[16];
+        this.field_y = new byte[18002];
+        this.field_n = 0;
+        this.field_v = new int[16];
+        this.field_x = new int[6][258];
+        this.field_s = new int[256];
+        this.field_r = new int[257];
+        this.field_e = new int[6];
+        this.field_k = new int[6][258];
     }
 
     static {

@@ -12,9 +12,11 @@ final class ed {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_8_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_9_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_8_0 = 0;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
@@ -22,7 +24,7 @@ final class ed {
               if (param2 == 0) {
                 break L1;
               } else {
-                field_a = null;
+                field_a = (String) null;
                 break L1;
               }
             }
@@ -37,51 +39,72 @@ final class ed {
               }
             }
             L3: while (true) {
-              if (0 == param1) {
-                stackOut_7_0 = param0;
-                stackIn_8_0 = stackOut_7_0;
-                break L0;
-              } else {
-                var3_int = param0 % param1;
-                param0 = param1;
-                param1 = var3_int;
-                continue L3;
+              L4: {
+                L5: {
+                  if (0 == param1) {
+                    break L5;
+                  } else {
+                    var3_int = param0 % param1;
+                    param0 = param1;
+                    stackOut_6_0 = var3_int;
+                    stackIn_9_0 = stackOut_6_0;
+                    stackIn_7_0 = stackOut_6_0;
+                    if (var4 != 0) {
+                      break L4;
+                    } else {
+                      param1 = stackIn_7_0;
+                      if (var4 == 0) {
+                        continue L3;
+                      } else {
+                        break L5;
+                      }
+                    }
+                  }
+                }
+                stackOut_8_0 = param0;
+                stackIn_9_0 = stackOut_8_0;
+                break L4;
               }
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var3, "ed.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw la.a((Throwable) ((Object) var3), "ed.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_8_0;
+        return stackIn_9_0;
     }
 
     final static void a(ad param0, int param1) {
+        int discarded$0 = 0;
         sf var2 = null;
+        td discarded$1 = null;
         try {
             sf.a(param0.a("", "headers.packvorbis", 30));
             if (param1 < 44) {
-                int discarded$0 = ed.a(-96, -76, 44);
+                discarded$0 = ed.a(-96, -76, 44);
             }
             var2 = sf.a(param0, "jagex logo2.packvorbis", "");
-            td discarded$1 = var2.a();
+            discarded$1 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "ed.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw la.a((Throwable) ((Object) runtimeException), "ed.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_b = null;
+        if (param0) {
+            field_a = (String) null;
+            field_c = null;
+            field_a = null;
+            return;
+        }
         field_c = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Loading graphics";
         field_b = new ib();
         field_d = 20000000L;

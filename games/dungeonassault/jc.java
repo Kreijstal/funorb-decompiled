@@ -51,7 +51,7 @@ final class jc {
                   }
                 }
                 L5: {
-                  if (param5 == 2) {
+                  if ((param5 ^ -1) == -3) {
                     ac.field_w.h(param1, param0 + param2);
                     break L5;
                   } else {
@@ -77,7 +77,7 @@ final class jc {
                 if (1 == param5) {
                   var7 = 0;
                   L8: while (true) {
-                    if (var7 >= 8) {
+                    if (-9 >= (var7 ^ -1)) {
                       break L0;
                     } else {
                       gf.d(param1, param2 + (param0 - 1) - var7, 8, 0, 192 - var7 * 24);
@@ -98,7 +98,7 @@ final class jc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var6, "jc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw vk.a((Throwable) ((Object) var6), "jc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -134,13 +134,12 @@ final class jc {
         field_c = null;
         field_b = null;
         field_d = null;
+        if (param0 != 0) {
+            field_c = (cn) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "<col=8B8B2E>Flee</col> - Attempt to avoid combat";
         field_d = new java.awt.Color(10040319);
         field_e = 0;

@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 class sg extends ki implements hh {
     static boolean field_ib;
     static int[] field_kb;
@@ -18,8 +16,9 @@ class sg extends ki implements hh {
     static int[] field_fb;
 
     public void a(int param0, int param1, an param2, int param3, int param4) {
+        boolean discarded$2 = false;
         RuntimeException var6 = null;
-        Object var7 = null;
+        ga var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -39,9 +38,9 @@ class sg extends ki implements hh {
         try {
           L0: {
             L1: {
-              if (((sg) this).field_mb) {
+              if (this.field_mb) {
                 og.b(-118, 3);
-                ((sg) this).h((byte) 52);
+                this.h((byte) 52);
                 break L1;
               } else {
                 qi.a("tochangedisplayname.ws", hc.a(0), param1 ^ 80);
@@ -51,8 +50,8 @@ class sg extends ki implements hh {
             if (param1 == -6) {
               break L0;
             } else {
-              var7 = null;
-              boolean discarded$2 = ((sg) this).a(105, -54, (ga) null, 'ﾵ');
+              var7 = (ga) null;
+              discarded$2 = this.a(105, -54, (ga) null, 'ﾵ');
               return;
             }
           }
@@ -60,23 +59,23 @@ class sg extends ki implements hh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var6;
+            stackOut_6_0 = (RuntimeException) (var6);
             stackOut_6_1 = new StringBuilder().append("sg.K(").append(param0).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -84,24 +83,24 @@ class sg extends ki implements hh {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param3 + ',' + param4 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void m(int param0) {
         e var2 = null;
         if (param0 <= 88) {
-          field_jb = null;
-          ((sg) this).field_ob.c(-102, 4210752, 2121792);
-          var2 = new e((sg) this, ((sg) this).field_nb, kj.field_a);
+          field_jb = (tj) null;
+          this.field_ob.c(-102, 4210752, 2121792);
+          var2 = new e((sg) (this), this.field_nb, kj.field_a);
           var2.a((byte) 95, fe.field_F, 15);
-          ((sg) this).b(20, (ga) (Object) var2);
+          this.b(20, var2);
           return;
         } else {
-          ((sg) this).field_ob.c(-102, 4210752, 2121792);
-          var2 = new e((sg) this, ((sg) this).field_nb, kj.field_a);
+          this.field_ob.c(-102, 4210752, 2121792);
+          var2 = new e((sg) (this), this.field_nb, kj.field_a);
           var2.a((byte) 95, fe.field_F, 15);
-          ((sg) this).b(20, (ga) (Object) var2);
+          this.b(20, var2);
           return;
         }
     }
@@ -118,6 +117,7 @@ class sg extends ki implements hh {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_3_0 = false;
         int stackOut_1_0 = 0;
@@ -135,35 +135,37 @@ class sg extends ki implements hh {
               var5_int = 11 / ((param0 - -83) / 32);
               stackOut_3_0 = super.a(-115, param1, param2, param3);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              ((sg) this).h((byte) -8);
+              this.h((byte) -8);
               stackOut_1_0 = 1;
               stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var5;
+            stackOut_5_0 = (RuntimeException) (var5);
             stackOut_5_1 = new StringBuilder().append("sg.I(").append(param0).append(',').append(param1).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -171,12 +173,18 @@ class sg extends ki implements hh {
               break L1;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param3 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param3 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0 != 0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     final void a(String param0, int param1, int param2) {
+        an discarded$2 = null;
+        an discarded$3 = null;
         RuntimeException var4 = null;
         e var4_ref = null;
         int var5 = 0;
@@ -199,6 +207,7 @@ class sg extends ki implements hh {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
         Object stackOut_5_0 = null;
@@ -224,12 +233,12 @@ class sg extends ki implements hh {
         var5 = ZombieDawn.field_J;
         try {
           L0: {
-            if (!((sg) this).field_gb) {
+            if (!this.field_gb) {
               L1: {
                 stackOut_3_0 = this;
                 stackIn_5_0 = stackOut_3_0;
                 stackIn_4_0 = stackOut_3_0;
-                if (param1 != 256) {
+                if (-257 != (param1 ^ -1)) {
                   stackOut_5_0 = this;
                   stackOut_5_1 = 0;
                   stackIn_6_0 = stackOut_5_0;
@@ -244,22 +253,22 @@ class sg extends ki implements hh {
                 }
               }
               L2: {
-                ((sg) this).field_mb = stackIn_6_1 != 0;
-                ((sg) this).field_gb = true;
-                ((sg) this).field_ob.c(param2 + -115, 4210752, 8405024);
-                var6 = new e((sg) this, ((sg) this).field_nb, param0);
+                ((sg) (this)).field_mb = stackIn_6_1 != 0;
+                this.field_gb = true;
+                this.field_ob.c(param2 + -115, 4210752, 8405024);
+                var6 = new e((sg) (this), this.field_nb, param0);
                 var4_ref = var6;
-                if (param1 != 5) {
-                  if (param1 != 256) {
+                if ((param1 ^ -1) != -6) {
+                  if (-257 != (param1 ^ -1)) {
                     L3: {
-                      stackOut_10_0 = (e) var6;
+                      stackOut_10_0 = (e) (var6);
                       stackOut_10_1 = 89;
                       stackIn_12_0 = stackOut_10_0;
                       stackIn_12_1 = stackOut_10_1;
                       stackIn_11_0 = stackOut_10_0;
                       stackIn_11_1 = stackOut_10_1;
-                      if (!((sg) this).field_lb) {
-                        stackOut_12_0 = (e) (Object) stackIn_12_0;
+                      if (!this.field_lb) {
+                        stackOut_12_0 = (e) ((Object) stackIn_12_0);
                         stackOut_12_1 = stackIn_12_1;
                         stackOut_12_2 = jk.field_g;
                         stackIn_13_0 = stackOut_12_0;
@@ -267,7 +276,7 @@ class sg extends ki implements hh {
                         stackIn_13_2 = stackOut_12_2;
                         break L3;
                       } else {
-                        stackOut_11_0 = (e) (Object) stackIn_11_0;
+                        stackOut_11_0 = (e) ((Object) stackIn_11_0);
                         stackOut_11_1 = stackIn_11_1;
                         stackOut_11_2 = el.field_i;
                         stackIn_13_0 = stackOut_11_0;
@@ -279,7 +288,7 @@ class sg extends ki implements hh {
                     ((e) (Object) stackIn_13_0).a((byte) stackIn_13_1, stackIn_13_2, -1);
                     break L2;
                   } else {
-                    an discarded$2 = var6.a(el.field_i, 115, (sk) this);
+                    discarded$2 = var6.a(el.field_i, 115, (sk) (this));
                     break L2;
                   }
                 } else {
@@ -289,7 +298,7 @@ class sg extends ki implements hh {
                 }
               }
               L4: {
-                if (param1 == 3) {
+                if (-4 == (param1 ^ -1)) {
                   var6.a((byte) 92, rf.field_b, 7);
                   break L4;
                 } else {
@@ -304,45 +313,47 @@ class sg extends ki implements hh {
                       if (9 != param1) {
                         break L4;
                       } else {
-                        an discarded$3 = var6.a(r.field_J, 113, (sk) this);
+                        discarded$3 = var6.a(r.field_J, 113, (sk) (this));
                         break L4;
                       }
                     }
                   }
                 }
               }
-              ((sg) this).b(param2 + 3, (ga) (Object) var6);
+              this.b(param2 + 3, var6);
               if (param2 == 17) {
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                field_jb = null;
+                field_jb = (tj) null;
                 return;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var4;
+            stackOut_25_0 = (RuntimeException) (var4);
             stackOut_25_1 = new StringBuilder().append("sg.G(");
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L5;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -350,23 +361,28 @@ class sg extends ki implements hh {
               break L5;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ',' + param2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ',' + param2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     sg(dn param0, rb param1, String param2, boolean param3, boolean param4) {
-        super(param0, (ga) (Object) new e((sg) null, param1, param2), 77, 10, 10);
+        super(param0, new e((sg) null, param1, param2), 77, 10, 10);
         try {
-            ((sg) this).field_nb = param1;
-            ((sg) this).field_mb = false;
-            ((sg) this).field_hb = param4 ? true : false;
-            ((sg) this).field_gb = false;
-            ((sg) this).field_lb = param3 ? true : false;
-            ((sg) this).field_ob = new hb(13, 50, 274, 30, 15, 2113632, 4210752);
-            ((sg) this).field_ob.field_F = true;
-            ((sg) this).a((ga) (Object) ((sg) this).field_ob, 10);
+            this.field_nb = param1;
+            this.field_mb = false;
+            this.field_hb = param4 ? true : false;
+            this.field_gb = false;
+            this.field_lb = param3 ? true : false;
+            this.field_ob = new hb(13, 50, 274, 30, 15, 2113632, 4210752);
+            this.field_ob.field_F = true;
+            this.a(this.field_ob, 10);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -385,10 +401,10 @@ class sg extends ki implements hh {
     final void h(byte param0) {
         int var2 = 0;
         var2 = -89 / ((param0 - -92) / 34);
-        if (((sg) this).field_H) {
-          ((sg) this).field_H = false;
-          if (!((sg) this).field_lb) {
-            if (!((sg) this).field_hb) {
+        if (this.field_H) {
+          this.field_H = false;
+          if (!this.field_lb) {
+            if (!this.field_hb) {
               return;
             } else {
               ub.b((byte) 50);
@@ -404,10 +420,6 @@ class sg extends ki implements hh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_ib = false;
         field_fb = new int[]{12263987, 11184691, 4491485};
     }

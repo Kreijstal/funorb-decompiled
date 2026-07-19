@@ -8,9 +8,14 @@ final class ve {
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != 0) {
+            field_a = (ci) null;
+        }
     }
 
     final static String a(int param0, CharSequence[] param1, int param2, int param3) {
+        StringBuilder discarded$5 = null;
+        StringBuilder discarded$6 = null;
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -24,67 +29,79 @@ final class ve {
         CharSequence var10 = null;
         String stackIn_3_0 = null;
         String stackIn_9_0 = null;
-        String stackIn_25_0 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
+        String stackIn_18_0 = null;
+        String stackIn_26_0 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String stackOut_8_0 = null;
-        String stackOut_24_0 = null;
+        String stackOut_25_0 = null;
+        String stackOut_17_0 = null;
         String stackOut_2_0 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
         RuntimeException stackOut_28_0 = null;
         StringBuilder stackOut_28_1 = null;
         String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
         var9 = Terraphoenix.field_V;
         try {
           L0: {
             if (param2 != 0) {
               if (param2 == 1) {
-                var10 = param1[0];
+                var10 = param1[param3];
                 var4 = var10;
                 if (var4 == null) {
                   stackOut_8_0 = "null";
                   stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 } else {
-                  return ((Object) (Object) var10).toString();
+                  return var10.toString();
                 }
               } else {
-                var4_int = param2;
+                var4_int = param3 + param2;
                 var5 = 0;
-                var6_int = 0;
+                var6_int = param3;
                 L1: while (true) {
                   if (var4_int <= var6_int) {
                     var6 = new StringBuilder(var5);
-                    var7 = 0;
-                    L2: while (true) {
-                      if (var7 >= var4_int) {
-                        stackOut_24_0 = var6.toString();
-                        stackIn_25_0 = stackOut_24_0;
-                        break L0;
-                      } else {
-                        L3: {
-                          var8 = param1[var7];
-                          if (var8 != null) {
-                            StringBuilder discarded$5 = var6.append(var8);
-                            break L3;
-                          } else {
-                            StringBuilder discarded$6 = var6.append("null");
-                            break L3;
+                    if (param0 == -10537) {
+                      var7 = param3;
+                      L2: while (true) {
+                        if (var7 >= var4_int) {
+                          stackOut_25_0 = var6.toString();
+                          stackIn_26_0 = stackOut_25_0;
+                          decompiledRegionSelector0 = 3;
+                          break L0;
+                        } else {
+                          L3: {
+                            var8 = param1[var7];
+                            if (var8 != null) {
+                              discarded$5 = var6.append(var8);
+                              break L3;
+                            } else {
+                              discarded$6 = var6.append("null");
+                              break L3;
+                            }
                           }
+                          var7++;
+                          continue L2;
                         }
-                        var7++;
-                        continue L2;
                       }
+                    } else {
+                      stackOut_17_0 = (String) null;
+                      stackIn_18_0 = stackOut_17_0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     }
                   } else {
                     L4: {
@@ -105,58 +122,85 @@ final class ve {
             } else {
               stackOut_2_0 = "";
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var4_ref;
-            stackOut_26_1 = new StringBuilder().append("ve.D(").append(-10537).append(',');
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackOut_27_0 = (RuntimeException) (var4_ref);
+            stackOut_27_1 = new StringBuilder().append("ve.D(").append(param0).append(',');
+            stackIn_29_0 = stackOut_27_0;
+            stackIn_29_1 = stackOut_27_1;
+            stackIn_28_0 = stackOut_27_0;
+            stackIn_28_1 = stackOut_27_1;
             if (param1 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackOut_29_2 = "null";
+              stackIn_30_0 = stackOut_29_0;
+              stackIn_30_1 = stackOut_29_1;
+              stackIn_30_2 = stackOut_29_2;
               break L5;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackOut_28_2 = "{...}";
+              stackIn_30_0 = stackOut_28_0;
+              stackIn_30_1 = stackOut_28_1;
+              stackIn_30_2 = stackOut_28_2;
               break L5;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ',' + param2 + ',' + 0 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_25_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_18_0;
+            } else {
+              return stackIn_26_0;
+            }
+          }
+        }
     }
 
     final static void a(int param0, int param1) {
-        wf.field_l = (59 & param1) >> 4;
+        wf.field_l = (59 & param1) >> 2143030436;
         if (2 < wf.field_l) {
             wf.field_l = 2;
         }
-        di.field_e = 3 & param1 >> 2;
-        if (!(2 >= di.field_e)) {
+        di.field_e = 3 & param1 >> -430683646;
+        if (!(param0 >= di.field_e)) {
             di.field_e = 2;
         }
         lb.field_f = param1 & 3;
-        if (!(lb.field_f <= 2)) {
+        if (!(-3 <= (lb.field_f ^ -1))) {
             lb.field_f = 2;
         }
     }
 
     final static void a(ci param0, int param1, int param2, int param3, int param4) {
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -179,6 +223,7 @@ final class ve {
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         String stackIn_53_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_50_0 = null;
         StringBuilder stackOut_50_1 = null;
@@ -255,13 +300,14 @@ final class ve {
                 if (0 >= var10) {
                   break L5;
                 } else {
-                  if (var9 > 0) {
+                  if ((var9 ^ -1) < -1) {
                     var13 = var7;
-                    var15 = -(var10 >> 2);
+                    var15 = -(var10 >> -1458551678);
                     var10 = -(3 & var10);
                     var16 = -var9;
                     L6: while (true) {
                       if (var16 >= 0) {
+                        decompiledRegionSelector0 = 2;
                         break L0;
                       } else {
                         var17 = var15;
@@ -286,14 +332,14 @@ final class ve {
                                 continue L6;
                               } else {
                                 L10: {
-                                  int incrementValue$14 = var6;
+                                  incrementValue$14 = var6;
                                   var6++;
                                   var14 = param0.field_z[incrementValue$14];
                                   if (var14 == 0) {
                                     var5_int++;
                                     break L10;
                                   } else {
-                                    int incrementValue$15 = var5_int;
+                                    incrementValue$15 = var5_int;
                                     var5_int++;
                                     l.field_i[incrementValue$15] = var14;
                                     break L10;
@@ -306,17 +352,17 @@ final class ve {
                           } else {
                             L11: {
                               L12: {
-                                int incrementValue$16 = var6;
+                                incrementValue$16 = var6;
                                 var6++;
                                 var14 = param0.field_z[incrementValue$16];
-                                if (var14 == 0) {
+                                if (-1 == (var14 ^ -1)) {
                                   break L12;
                                 } else {
                                   if (gd.field_a[var7][var8] <= param2) {
-                                    int incrementValue$17 = var7;
+                                    incrementValue$17 = var7;
                                     var7++;
                                     gd.field_a[incrementValue$17][var8] = param2;
-                                    int incrementValue$18 = var5_int;
+                                    incrementValue$18 = var5_int;
                                     var5_int++;
                                     l.field_i[incrementValue$18] = var14;
                                     break L11;
@@ -331,17 +377,17 @@ final class ve {
                             }
                             L13: {
                               L14: {
-                                int incrementValue$19 = var6;
+                                incrementValue$19 = var6;
                                 var6++;
                                 var14 = param0.field_z[incrementValue$19];
                                 if (0 == var14) {
                                   break L14;
                                 } else {
                                   if (param2 >= gd.field_a[var7][var8]) {
-                                    int incrementValue$20 = var7;
+                                    incrementValue$20 = var7;
                                     var7++;
                                     gd.field_a[incrementValue$20][var8] = param2;
-                                    int incrementValue$21 = var5_int;
+                                    incrementValue$21 = var5_int;
                                     var5_int++;
                                     l.field_i[incrementValue$21] = var14;
                                     break L13;
@@ -356,7 +402,7 @@ final class ve {
                             }
                             L15: {
                               L16: {
-                                int incrementValue$22 = var6;
+                                incrementValue$22 = var6;
                                 var6++;
                                 var14 = param0.field_z[incrementValue$22];
                                 if (0 == var14) {
@@ -365,10 +411,10 @@ final class ve {
                                   if (param2 < gd.field_a[var7][var8]) {
                                     break L16;
                                   } else {
-                                    int incrementValue$23 = var7;
+                                    incrementValue$23 = var7;
                                     var7++;
                                     gd.field_a[incrementValue$23][var8] = param2;
-                                    int incrementValue$24 = var5_int;
+                                    incrementValue$24 = var5_int;
                                     var5_int++;
                                     l.field_i[incrementValue$24] = var14;
                                     break L15;
@@ -381,17 +427,17 @@ final class ve {
                             }
                             L17: {
                               L18: {
-                                int incrementValue$25 = var6;
+                                incrementValue$25 = var6;
                                 var6++;
                                 var14 = param0.field_z[incrementValue$25];
                                 if (0 == var14) {
                                   break L18;
                                 } else {
                                   if (param2 >= gd.field_a[var7][var8]) {
-                                    int incrementValue$26 = var7;
+                                    incrementValue$26 = var7;
                                     var7++;
                                     gd.field_a[incrementValue$26][var8] = param2;
-                                    int incrementValue$27 = var5_int;
+                                    incrementValue$27 = var5_int;
                                     var5_int++;
                                     l.field_i[incrementValue$27] = var14;
                                     break L17;
@@ -415,32 +461,34 @@ final class ve {
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L19: {
             var5 = decompiledCaughtException;
-            stackOut_50_0 = (RuntimeException) var5;
+            stackOut_50_0 = (RuntimeException) (var5);
             stackOut_50_1 = new StringBuilder().append("ve.C(");
             stackIn_52_0 = stackOut_50_0;
             stackIn_52_1 = stackOut_50_1;
             stackIn_51_0 = stackOut_50_0;
             stackIn_51_1 = stackOut_50_1;
             if (param0 == null) {
-              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
-              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
+              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
               stackOut_52_2 = "null";
               stackIn_53_0 = stackOut_52_0;
               stackIn_53_1 = stackOut_52_1;
               stackIn_53_2 = stackOut_52_2;
               break L19;
             } else {
-              stackOut_51_0 = (RuntimeException) (Object) stackIn_51_0;
-              stackOut_51_1 = (StringBuilder) (Object) stackIn_51_1;
+              stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
+              stackOut_51_1 = (StringBuilder) ((Object) stackIn_51_1);
               stackOut_51_2 = "{...}";
               stackIn_53_0 = stackOut_51_0;
               stackIn_53_1 = stackOut_51_1;
@@ -448,15 +496,20 @@ final class ve {
               break L19;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_53_0), stackIn_53_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = true;
     }
 }

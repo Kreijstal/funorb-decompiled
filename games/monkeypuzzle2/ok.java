@@ -10,6 +10,10 @@ final class ok {
     static int field_b;
 
     final static boolean a(boolean param0) {
+        if (param0) {
+            ok.a(-101);
+            return ha.field_db;
+        }
         return ha.field_db;
     }
 
@@ -17,7 +21,7 @@ final class ok {
         field_c = null;
         field_a = null;
         field_f = null;
-        int var1 = 60;
+        int var1 = -60 / ((76 - param0) / 41);
     }
 
     final static boolean a(int param0, char param1) {
@@ -109,14 +113,16 @@ final class ok {
     }
 
     final static void a(int param0) {
+        boolean discarded$0 = false;
+        if (param0 != 15376) {
+            discarded$0 = ok.a(-54, '>');
+            qh.a(4, true);
+            return;
+        }
         qh.a(4, true);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = false;
         field_d = false;
         field_c = new int[256];

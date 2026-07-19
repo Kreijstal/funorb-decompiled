@@ -11,6 +11,6 @@ public class op {
     int field_a;
 
     op() {
-        ((op) this).field_f = 0;
+        this.field_f = 0;
     }
 }

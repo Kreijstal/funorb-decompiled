@@ -8,7 +8,7 @@ final class fga extends kj {
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-            ((fga) this).field_g = null;
+            this.field_g = (vca) null;
         }
     }
 
@@ -16,23 +16,32 @@ final class fga extends kj {
         if (param0 <= 21) {
             return true;
         }
-        return ((fga) this).field_g.b(false);
+        return this.field_g.b(false);
     }
 
     final static void a(int param0, byte param1) {
         try {
+            Object discarded$1 = null;
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                Object discarded$1 = ac.a(nia.d(-31768), "resizing", new Object[1], (byte) 73);
+            L0: {
+              if (param1 == -2) {
                 break L0;
+              } else {
+                field_f = -112;
+                break L0;
+              }
+            }
+            try {
+              L1: {
+                discarded$1 = ac.a(nia.d(param1 + -31766), "resizing", new Object[]{new Integer(param0)}, (byte) 73);
+                break L1;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
+              L2: {
                 var2 = decompiledCaughtException;
-                break L1;
+                break L2;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -45,24 +54,29 @@ final class fga extends kj {
     fga(gj param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
         try {
-            ((fga) this).field_g = new vca((po) (Object) taa.field_u, Integer.toString(param3), 16736256, 20, 30, 50);
+            this.field_g = new vca(taa.field_u, Integer.toString(param3), 16736256, 20, 30, 50);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "fga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "fga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2) {
         if (param1 != 0) {
-          ((fga) this).a(112, -105, -15);
-          ((fga) this).field_g.a(32 + param0, param2 - -64, false);
+          this.a(112, -105, -15);
+          this.field_g.a(32 + param0, param2 - -64, false);
           return;
         } else {
-          ((fga) this).field_g.a(32 + param0, param2 - -64, false);
+          this.field_g.a(32 + param0, param2 - -64, false);
           return;
         }
     }
 
     public static void a(boolean param0) {
+        if (param0) {
+            fga.a(126, (byte) -89);
+            field_h = null;
+            return;
+        }
         field_h = null;
     }
 

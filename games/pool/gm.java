@@ -40,8 +40,8 @@ final class gm extends ma {
     private byte[][] field_B;
 
     final static int a(int param0) {
-        int var3 = 0;
         int var4 = 0;
+        int var3 = 0;
         int var1 = 0;
         int var2 = 0;
         while (param0 >= 8 - field_p) {
@@ -62,6 +62,7 @@ final class gm extends ma {
     }
 
     private final float[] d(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -121,13 +122,7 @@ final class gm extends ma {
         int[] var48 = null;
         float[] var49 = null;
         float[] var50 = null;
-        int[] var52 = null;
-        float[] var53 = null;
-        float[] var54 = null;
-        float[] var55 = null;
-        int[] var56 = null;
-        float[] var57 = null;
-        float[] var58 = null;
+        float[] var52 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -162,8 +157,8 @@ final class gm extends ma {
         Object stackOut_109_0 = null;
         int stackOut_109_1 = 0;
         L0: {
-          gm.a(((gm) this).field_B[param0], 0);
-          int discarded$1 = gm.c();
+          gm.a(this.field_B[param0], 0);
+          discarded$1 = gm.c();
           var2 = gm.a(gi.a(field_G.length - 1, 0));
           var3 = field_l[var2] ? 1 : 0;
           if (var3 == 0) {
@@ -285,9 +280,7 @@ final class gm extends ma {
                 var17_int = var4 >> 1;
                 var18_int = var4 >> 2;
                 var19 = var4 >> 3;
-                var57 = field_R;
-                var53 = var57;
-                var49 = var53;
+                var49 = field_R;
                 var45 = var49;
                 var20_ref_float__ = var45;
                 var21_int = 0;
@@ -299,11 +292,11 @@ final class gm extends ma {
                       if (var41 >= var4) {
                         L14: {
                           if (var3 == 0) {
-                            stackOut_39_0 = (float[]) field_z;
+                            stackOut_39_0 = (float[]) (field_z);
                             stackIn_40_0 = stackOut_39_0;
                             break L14;
                           } else {
-                            stackOut_38_0 = (float[]) field_F;
+                            stackOut_38_0 = (float[]) (field_F);
                             stackIn_40_0 = stackOut_38_0;
                             break L14;
                           }
@@ -311,11 +304,11 @@ final class gm extends ma {
                         L15: {
                           var21 = stackIn_40_0;
                           if (var3 == 0) {
-                            stackOut_42_0 = (float[]) field_P;
+                            stackOut_42_0 = (float[]) (field_P);
                             stackIn_43_0 = stackOut_42_0;
                             break L15;
                           } else {
-                            stackOut_41_0 = (float[]) field_w;
+                            stackOut_41_0 = (float[]) (field_w);
                             stackIn_43_0 = stackOut_41_0;
                             break L15;
                           }
@@ -323,11 +316,11 @@ final class gm extends ma {
                         L16: {
                           var22 = stackIn_43_0;
                           if (var3 == 0) {
-                            stackOut_45_0 = (float[]) field_N;
+                            stackOut_45_0 = (float[]) (field_N);
                             stackIn_46_0 = stackOut_45_0;
                             break L16;
                           } else {
-                            stackOut_44_0 = (float[]) field_K;
+                            stackOut_44_0 = (float[]) (field_K);
                             stackIn_46_0 = stackOut_44_0;
                             break L16;
                           }
@@ -335,18 +328,16 @@ final class gm extends ma {
                         L17: {
                           var23 = stackIn_46_0;
                           if (var3 == 0) {
-                            stackOut_48_0 = (int[]) field_n;
+                            stackOut_48_0 = (int[]) (field_n);
                             stackIn_49_0 = stackOut_48_0;
                             break L17;
                           } else {
-                            stackOut_47_0 = (int[]) field_Q;
+                            stackOut_47_0 = (int[]) (field_Q);
                             stackIn_49_0 = stackOut_47_0;
                             break L17;
                           }
                         }
-                        var56 = stackIn_49_0;
-                        var52 = var56;
-                        var48 = var52;
+                        var48 = stackIn_49_0;
                         var44 = var48;
                         var24 = var44;
                         var25 = 0;
@@ -426,7 +417,7 @@ final class gm extends ma {
                                                               }
                                                             }
                                                           } else {
-                                                            var20_ref_float__[var4 - var18_int + var26] = -var57[var26];
+                                                            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
                                                             var26++;
                                                             continue L26;
                                                           }
@@ -471,7 +462,7 @@ final class gm extends ma {
                                           }
                                         }
                                       } else {
-                                        var27_int = var56[var26];
+                                        var27_int = var48[var26];
                                         if (var26 < var27_int) {
                                           var28_int = 8 * var26;
                                           var29_int = 8 * var27_int;
@@ -584,27 +575,25 @@ final class gm extends ma {
             }
             L35: {
               var17 = null;
-              if (((gm) this).field_y <= 0) {
+              if (this.field_y <= 0) {
                 break L35;
               } else {
                 L36: {
-                  var18_int = ((gm) this).field_y + var4 >> 2;
-                  var58 = new float[var18_int];
-                  var54 = var58;
-                  var50 = var54;
+                  var18_int = this.field_y + var4 >> 2;
+                  var50 = new float[var18_int];
                   var46 = var50;
                   var40 = var46;
-                  var17 = (Object) (Object) var40;
-                  if (((gm) this).field_D) {
+                  var17 = var40;
+                  if (this.field_D) {
                     break L36;
                   } else {
                     var19 = 0;
                     L37: while (true) {
-                      if (var19 >= ((gm) this).field_u) {
+                      if (var19 >= this.field_u) {
                         break L36;
                       } else {
-                        var20 = (((gm) this).field_y >> 1) + var19;
-                        var40[var19] = var40[var19] + ((gm) this).field_A[var20];
+                        var20 = (this.field_y >> 1) + var19;
+                        var40[var19] = var40[var19] + this.field_A[var20];
                         var19++;
                         continue L37;
                       }
@@ -619,7 +608,7 @@ final class gm extends ma {
                     if (var19 >= var4 >> 1) {
                       break L35;
                     } else {
-                      var20 = var58.length - (var4 >> 1) + var19;
+                      var20 = var50.length - (var4 >> 1) + var19;
                       var40[var20] = var40[var20] + field_R[var19];
                       var19++;
                       continue L38;
@@ -629,11 +618,11 @@ final class gm extends ma {
               }
             }
             L39: {
-              var18 = ((gm) this).field_A;
-              ((gm) this).field_A = field_R;
+              var18 = this.field_A;
+              this.field_A = field_R;
               field_R = var18;
-              ((gm) this).field_y = var4;
-              ((gm) this).field_u = var12 - (var4 >> 1);
+              this.field_y = var4;
+              this.field_u = var12 - (var4 >> 1);
               stackOut_108_0 = this;
               stackIn_110_0 = stackOut_108_0;
               stackIn_109_0 = stackOut_108_0;
@@ -651,12 +640,12 @@ final class gm extends ma {
                 break L39;
               }
             }
-            ((gm) this).field_D = stackIn_111_1 != 0;
-            return (float[]) var17;
+            ((gm) (this)).field_D = stackIn_111_1 != 0;
+            return (float[]) (var17);
           } else {
             var42 = field_v[var14.field_c[var17_int]];
-            var55 = field_R;
-            var42.a(var55, var4 >> 1, var16 != 0);
+            var52 = field_R;
+            var42.a(var52, var4 >> 1, var16 != 0);
             var17_int++;
             continue L9;
           }
@@ -710,19 +699,19 @@ final class gm extends ma {
         int var6_int = 0;
         byte[] var6 = null;
         ge var2 = new ge(param0);
-        ((gm) this).field_x = var2.b(true);
-        ((gm) this).field_o = var2.b(true);
-        ((gm) this).field_s = var2.b(true);
-        ((gm) this).field_M = var2.b(true);
-        if (((gm) this).field_M < 0) {
-            ((gm) this).field_M = ~((gm) this).field_M;
-            ((gm) this).field_T = true;
+        this.field_x = var2.b(true);
+        this.field_o = var2.b(true);
+        this.field_s = var2.b(true);
+        this.field_M = var2.b(true);
+        if (this.field_M < 0) {
+            this.field_M = this.field_M ^ -1;
+            this.field_T = true;
         }
         int var3 = var2.b(true);
         if (var3 < 0) {
             throw new IOException();
         }
-        ((gm) this).field_B = new byte[var3][];
+        this.field_B = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
             var5 = 0;
             do {
@@ -731,19 +720,18 @@ final class gm extends ma {
             } while (var6_int >= 255);
             var6 = new byte[var5];
             var2.a(0, (byte) -116, var6, var5);
-            ((gm) this).field_B[var4] = var6;
+            this.field_B[var4] = var6;
         }
     }
 
     final jg a(int[] param0) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         float[] var7 = null;
-        float[] var11 = null;
-        float[] var13 = null;
-        byte[] var14 = null;
+        byte[] var12 = null;
         L0: {
           if (param0 == null) {
             break L0;
@@ -756,23 +744,23 @@ final class gm extends ma {
           }
         }
         L1: {
-          if (((gm) this).field_S != null) {
+          if (this.field_S != null) {
             break L1;
           } else {
-            ((gm) this).field_y = 0;
-            ((gm) this).field_A = new float[field_I];
-            ((gm) this).field_S = new byte[((gm) this).field_o];
-            ((gm) this).field_q = 0;
-            ((gm) this).field_m = 0;
+            this.field_y = 0;
+            this.field_A = new float[field_I];
+            this.field_S = new byte[this.field_o];
+            this.field_q = 0;
+            this.field_m = 0;
             break L1;
           }
         }
         L2: while (true) {
-          if (((gm) this).field_m >= ((gm) this).field_B.length) {
-            ((gm) this).field_A = null;
-            var14 = ((gm) this).field_S;
-            ((gm) this).field_S = null;
-            return new jg(((gm) this).field_x, var14, ((gm) this).field_s, ((gm) this).field_M, ((gm) this).field_T);
+          if (this.field_m >= this.field_B.length) {
+            this.field_A = null;
+            var12 = this.field_S;
+            this.field_S = null;
+            return new jg(this.field_x, var12, this.field_s, this.field_M, this.field_T);
           } else {
             L3: {
               if (param0 == null) {
@@ -786,19 +774,17 @@ final class gm extends ma {
               }
             }
             L4: {
-              var13 = this.d(((gm) this).field_m);
-              var11 = var13;
-              var7 = var11;
+              var7 = this.d(this.field_m);
               if (var7 == null) {
                 break L4;
               } else {
                 L5: {
-                  var3 = ((gm) this).field_q;
-                  var4 = var13.length;
-                  if (var4 <= ((gm) this).field_o - var3) {
+                  var3 = this.field_q;
+                  var4 = var7.length;
+                  if (var4 <= this.field_o - var3) {
                     break L5;
                   } else {
-                    var4 = ((gm) this).field_o - var3;
+                    var4 = this.field_o - var3;
                     break L5;
                   }
                 }
@@ -809,38 +795,41 @@ final class gm extends ma {
                       if (param0 == null) {
                         break L7;
                       } else {
-                        param0[0] = param0[0] - (var3 - ((gm) this).field_q);
+                        param0[0] = param0[0] - (var3 - this.field_q);
                         break L7;
                       }
                     }
-                    ((gm) this).field_q = var3;
+                    this.field_q = var3;
                     break L4;
                   } else {
                     L8: {
-                      var6 = (int)(128.0f + var13[var5] * 128.0f);
+                      var6 = (int)(128.0f + var7[var5] * 128.0f);
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = ~var6 >> 31;
+                        var6 = (var6 ^ -1) >> 31;
                         break L8;
                       }
                     }
-                    int incrementValue$1 = var3;
+                    incrementValue$1 = var3;
                     var3++;
-                    ((gm) this).field_S[incrementValue$1] = (byte)(var6 - 128);
+                    this.field_S[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
                 }
               }
             }
-            ((gm) this).field_m = ((gm) this).field_m + 1;
+            this.field_m = this.field_m + 1;
             continue L2;
           }
         }
     }
 
     final static void b(byte[] param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -915,14 +904,14 @@ final class gm extends ma {
                                     return;
                                   } else {
                                     L7: {
-                                      stackOut_37_0 = (boolean[]) field_l;
+                                      stackOut_37_0 = (boolean[]) (field_l);
                                       stackOut_37_1 = var6;
                                       stackIn_39_0 = stackOut_37_0;
                                       stackIn_39_1 = stackOut_37_1;
                                       stackIn_38_0 = stackOut_37_0;
                                       stackIn_38_1 = stackOut_37_1;
                                       if (gm.c() == 0) {
-                                        stackOut_39_0 = (boolean[]) (Object) stackIn_39_0;
+                                        stackOut_39_0 = (boolean[]) ((Object) stackIn_39_0);
                                         stackOut_39_1 = stackIn_39_1;
                                         stackOut_39_2 = 0;
                                         stackIn_40_0 = stackOut_39_0;
@@ -930,7 +919,7 @@ final class gm extends ma {
                                         stackIn_40_2 = stackOut_39_2;
                                         break L7;
                                       } else {
-                                        stackOut_38_0 = (boolean[]) (Object) stackIn_38_0;
+                                        stackOut_38_0 = (boolean[]) ((Object) stackIn_38_0);
                                         stackOut_38_1 = stackIn_38_1;
                                         stackOut_38_2 = 1;
                                         stackIn_40_0 = stackOut_38_0;
@@ -940,8 +929,8 @@ final class gm extends ma {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = gm.a(16);
-                                    int discarded$4 = gm.a(16);
+                                    discarded$3 = gm.a(16);
+                                    discarded$4 = gm.a(16);
                                     field_G[var6] = gm.a(8);
                                     var6++;
                                     continue L6;
@@ -966,7 +955,7 @@ final class gm extends ma {
                       }
                     }
                   } else {
-                    int discarded$5 = gm.a(16);
+                    discarded$5 = gm.a(16);
                     var3++;
                     continue L2;
                   }
@@ -1066,15 +1055,16 @@ final class gm extends ma {
 
     private final static void a(byte[] param0, int param1) {
         field_H = param0;
-        field_O = 0;
+        field_O = param1;
         field_p = 0;
     }
 
     final static gm a(di param0, int param1, int param2) {
         try {
+            boolean discarded$0 = false;
             gm var4_ref = null;
             if (!gm.a(param0)) {
-                boolean discarded$0 = param0.b(param2, param1, 30);
+                discarded$0 = param0.b(param2, param1, 30);
                 return null;
             }
             byte[] var3 = param0.a(121, param2, param1);
@@ -1082,8 +1072,10 @@ final class gm extends ma {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new gm(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1094,6 +1086,7 @@ final class gm extends ma {
     }
 
     final jg b() {
+        int incrementValue$1 = 0;
         byte[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -1101,24 +1094,24 @@ final class gm extends ma {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ((gm) this).field_y = 0;
-        ((gm) this).field_A = new float[field_I];
-        var1 = new byte[((gm) this).field_o];
+        this.field_y = 0;
+        this.field_A = new float[field_I];
+        var1 = new byte[this.field_o];
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((gm) this).field_B.length) {
-            ((gm) this).field_A = null;
-            return new jg(((gm) this).field_x, var1, ((gm) this).field_s, ((gm) this).field_M, ((gm) this).field_T);
+          if (var3 >= this.field_B.length) {
+            this.field_A = null;
+            return new jg(this.field_x, var1, this.field_s, this.field_M, this.field_T);
           } else {
             var4 = this.d(var3);
             if (var4 != null) {
               L1: {
                 var5 = var4.length;
-                if (var5 <= ((gm) this).field_o - var2) {
+                if (var5 <= this.field_o - var2) {
                   break L1;
                 } else {
-                  var5 = ((gm) this).field_o - var2;
+                  var5 = this.field_o - var2;
                   break L1;
                 }
               }
@@ -1130,11 +1123,11 @@ final class gm extends ma {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = ~var7 >> 31;
+                      var7 = (var7 ^ -1) >> 31;
                       break L3;
                     }
                   }
-                  int incrementValue$1 = var2;
+                  incrementValue$1 = var2;
                   var2++;
                   var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
@@ -1154,9 +1147,10 @@ final class gm extends ma {
 
     final static gm a(di param0, String param1, String param2) {
         try {
+            boolean discarded$0 = false;
             gm var4_ref = null;
             if (!gm.a(param0)) {
-                boolean discarded$0 = param0.a(param2, 121, param1);
+                discarded$0 = param0.a(param2, 121, param1);
                 return null;
             }
             byte[] var3 = param0.a(false, param2, param1);
@@ -1164,8 +1158,10 @@ final class gm extends ma {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new gm(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1180,10 +1176,6 @@ final class gm extends ma {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = false;
     }
 }

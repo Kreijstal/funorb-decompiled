@@ -31,6 +31,7 @@ final class bb extends pj {
     short[] field_i;
 
     final void b() {
+        e dupTemp$1 = null;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -50,25 +51,25 @@ final class bb extends pj {
         dj var17 = null;
         dj var18 = null;
         dj var19 = null;
-        if (((bb) this).field_j == null) {
-          ((bb) this).field_j = new dj[((bb) this).field_b];
+        if (this.field_j == null) {
+          this.field_j = new dj[this.field_b];
           var1 = 0;
           L0: while (true) {
-            if (var1 >= ((bb) this).field_b) {
+            if (var1 >= this.field_b) {
               var1 = 0;
               L1: while (true) {
-                if (var1 >= ((bb) this).field_y) {
+                if (var1 >= this.field_y) {
                   return;
                 } else {
-                  var2 = ((bb) this).field_h[var1];
-                  var3 = ((bb) this).field_v[var1];
-                  var4 = ((bb) this).field_q[var1];
-                  var5 = ((bb) this).field_w[var3] - ((bb) this).field_w[var2];
-                  var6 = ((bb) this).field_e[var3] - ((bb) this).field_e[var2];
-                  var7 = ((bb) this).field_u[var3] - ((bb) this).field_u[var2];
-                  var8 = ((bb) this).field_w[var4] - ((bb) this).field_w[var2];
-                  var9 = ((bb) this).field_e[var4] - ((bb) this).field_e[var2];
-                  var10 = ((bb) this).field_u[var4] - ((bb) this).field_u[var2];
+                  var2 = this.field_h[var1];
+                  var3 = this.field_v[var1];
+                  var4 = this.field_q[var1];
+                  var5 = this.field_w[var3] - this.field_w[var2];
+                  var6 = this.field_e[var3] - this.field_e[var2];
+                  var7 = this.field_u[var3] - this.field_u[var2];
+                  var8 = this.field_w[var4] - this.field_w[var2];
+                  var9 = this.field_e[var4] - this.field_e[var2];
+                  var10 = this.field_u[var4] - this.field_u[var2];
                   var11 = var6 * var10 - var9 * var7;
                   var12 = var7 * var8 - var10 * var5;
                   var13 = var5 * var9 - var8 * var6;
@@ -103,8 +104,8 @@ final class bb extends pj {
                                     var11 = var11 * 256 / var14;
                                     var12 = var12 * 256 / var14;
                                     var13 = var13 * 256 / var14;
-                                    if (((bb) this).field_o != null) {
-                                      var15 = ((bb) this).field_o[var1];
+                                    if (this.field_o != null) {
+                                      var15 = this.field_o[var1];
                                       break L5;
                                     } else {
                                       var15 = 0;
@@ -114,15 +115,15 @@ final class bb extends pj {
                                   if (var15 != 0) {
                                     if (var15 == 1) {
                                       L6: {
-                                        if (((bb) this).field_n != null) {
+                                        if (this.field_n != null) {
                                           break L6;
                                         } else {
-                                          ((bb) this).field_n = new e[((bb) this).field_y];
+                                          this.field_n = new e[this.field_y];
                                           break L6;
                                         }
                                       }
-                                      e dupTemp$1 = new e();
-                                      ((bb) this).field_n[var1] = dupTemp$1;
+                                      dupTemp$1 = new e();
+                                      this.field_n[var1] = dupTemp$1;
                                       var16 = dupTemp$1;
                                       var16.field_g = var11;
                                       var16.field_h = var12;
@@ -134,17 +135,17 @@ final class bb extends pj {
                                       continue L1;
                                     }
                                   } else {
-                                    var17 = ((bb) this).field_j[var2];
+                                    var17 = this.field_j[var2];
                                     var17.field_g = var17.field_g + var11;
                                     var17.field_b = var17.field_b + var12;
                                     var17.field_c = var17.field_c + var13;
                                     var17.field_d = var17.field_d + 1;
-                                    var18 = ((bb) this).field_j[var3];
+                                    var18 = this.field_j[var3];
                                     var18.field_g = var18.field_g + var11;
                                     var18.field_b = var18.field_b + var12;
                                     var18.field_c = var18.field_c + var13;
                                     var18.field_d = var18.field_d + 1;
-                                    var19 = ((bb) this).field_j[var4];
+                                    var19 = this.field_j[var4];
                                     var19.field_g = var19.field_g + var11;
                                     var19.field_b = var19.field_b + var12;
                                     var19.field_c = var19.field_c + var13;
@@ -169,7 +170,7 @@ final class bb extends pj {
                 }
               }
             } else {
-              ((bb) this).field_j[var1] = new dj();
+              this.field_j[var1] = new dj();
               var1++;
               continue L0;
             }
@@ -180,69 +181,66 @@ final class bb extends pj {
     }
 
     final m a(int param0, int param1, int param2, int param3, int param4) {
-        return (m) (Object) new ik((bb) this, param0, param1, param2, param3, param4);
+        return (m) ((Object) new ik((bb) (this), param0, param1, param2, param3, param4));
     }
 
     final byte a(short param0, short param1, short param2) {
-        if (((bb) this).field_f >= 255) {
+        if (this.field_f >= 255) {
             throw new IllegalStateException();
         }
-        ((bb) this).field_x[((bb) this).field_f] = (byte) 0;
-        ((bb) this).field_d[((bb) this).field_f] = (short)param0;
-        ((bb) this).field_B[((bb) this).field_f] = (short)param1;
-        ((bb) this).field_z[((bb) this).field_f] = (short)param2;
-        int fieldTemp$0 = ((bb) this).field_f;
-        ((bb) this).field_f = ((bb) this).field_f + 1;
+        this.field_x[this.field_f] = (byte) 0;
+        this.field_d[this.field_f] = (short)param0;
+        this.field_B[this.field_f] = (short)param1;
+        this.field_z[this.field_f] = (short)param2;
+        int fieldTemp$0 = this.field_f;
+        this.field_f = this.field_f + 1;
         return (byte)fieldTemp$0;
     }
 
     final void a() {
+        int[] array$2 = null;
+        int[] array$3 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
         L0: {
-          if (((bb) this).field_g == null) {
+          if (this.field_g == null) {
             break L0;
           } else {
-            var9 = new int[256];
-            var7 = var9;
-            var5 = var7;
+            var5 = new int[256];
             var2 = 0;
             var3 = 0;
             L1: while (true) {
-              if (var3 >= ((bb) this).field_r) {
-                ((bb) this).field_m = new int[var2 + 1][];
+              if (var3 >= this.field_r) {
+                this.field_m = new int[var2 + 1][];
                 var3 = 0;
                 L2: while (true) {
                   if (var3 > var2) {
                     var3 = 0;
                     L3: while (true) {
-                      if (var3 >= ((bb) this).field_r) {
-                        ((bb) this).field_g = null;
+                      if (var3 >= this.field_r) {
+                        this.field_g = null;
                         break L0;
                       } else {
-                        var4 = ((bb) this).field_g[var3];
+                        var4 = this.field_g[var3];
                         var5[var4] = var5[var4] + 1;
-                        ((bb) this).field_m[var4][var5[var4]] = var3;
+                        this.field_m[var4][var5[var4]] = var3;
                         var3++;
                         continue L3;
                       }
                     }
                   } else {
-                    ((bb) this).field_m[var3] = new int[var9[var3]];
-                    var9[var3] = 0;
+                    array$2 = new int[var5[var3]];
+                    this.field_m[var3] = array$2;
+                    var5[var3] = 0;
                     var3++;
                     continue L2;
                   }
                 }
               } else {
-                var4 = ((bb) this).field_g[var3];
+                var4 = this.field_g[var3];
                 var5[var4] = var5[var4] + 1;
                 if (var4 > var2) {
                   var2 = var4;
@@ -257,42 +255,41 @@ final class bb extends pj {
           }
         }
         L4: {
-          if (((bb) this).field_s == null) {
+          if (this.field_s == null) {
             break L4;
           } else {
-            var10 = new int[256];
-            var8 = var10;
-            var6 = var8;
+            var6 = new int[256];
             var2 = 0;
             var3 = 0;
             L5: while (true) {
-              if (var3 >= ((bb) this).field_y) {
-                ((bb) this).field_A = new int[var2 + 1][];
+              if (var3 >= this.field_y) {
+                this.field_A = new int[var2 + 1][];
                 var3 = 0;
                 L6: while (true) {
                   if (var3 > var2) {
                     var3 = 0;
                     L7: while (true) {
-                      if (var3 >= ((bb) this).field_y) {
-                        ((bb) this).field_s = null;
+                      if (var3 >= this.field_y) {
+                        this.field_s = null;
                         break L4;
                       } else {
-                        var4 = ((bb) this).field_s[var3];
+                        var4 = this.field_s[var3];
                         var6[var4] = var6[var4] + 1;
-                        ((bb) this).field_A[var4][var6[var4]] = var3;
+                        this.field_A[var4][var6[var4]] = var3;
                         var3++;
                         continue L7;
                       }
                     }
                   } else {
-                    ((bb) this).field_A[var3] = new int[var10[var3]];
-                    var10[var3] = 0;
+                    array$3 = new int[var6[var3]];
+                    this.field_A[var3] = array$3;
+                    var6[var3] = 0;
                     var3++;
                     continue L6;
                   }
                 }
               } else {
-                var4 = ((bb) this).field_s[var3];
+                var4 = this.field_s[var3];
                 var6[var4] = var6[var4] + 1;
                 if (var4 > var2) {
                   var2 = var4;
@@ -309,34 +306,35 @@ final class bb extends pj {
     }
 
     final int a(int param0, int param1, int param2, byte param3, byte param4, short param5, short param6) {
-        ((bb) this).field_h[((bb) this).field_y] = param0;
-        ((bb) this).field_v[((bb) this).field_y] = param1;
-        ((bb) this).field_q[((bb) this).field_y] = param2;
-        ((bb) this).field_o[((bb) this).field_y] = (byte)param3;
-        ((bb) this).field_c[((bb) this).field_y] = (byte)param4;
-        ((bb) this).field_l[((bb) this).field_y] = (short)param5;
-        ((bb) this).field_i[((bb) this).field_y] = (short)param6;
-        int fieldTemp$0 = ((bb) this).field_y;
-        ((bb) this).field_y = ((bb) this).field_y + 1;
+        this.field_h[this.field_y] = param0;
+        this.field_v[this.field_y] = param1;
+        this.field_q[this.field_y] = param2;
+        this.field_o[this.field_y] = (byte)param3;
+        this.field_c[this.field_y] = (byte)param4;
+        this.field_l[this.field_y] = (short)param5;
+        this.field_i[this.field_y] = (short)param6;
+        int fieldTemp$0 = this.field_y;
+        this.field_y = this.field_y + 1;
         return fieldTemp$0;
     }
 
     final int a(int param0, int param1, int param2) {
+        int fieldTemp$1 = 0;
         int var4 = 0;
         var4 = 0;
         L0: while (true) {
-          if (var4 >= ((bb) this).field_r) {
-            ((bb) this).field_w[((bb) this).field_r] = param0;
-            ((bb) this).field_e[((bb) this).field_r] = param1;
-            ((bb) this).field_u[((bb) this).field_r] = param2;
-            int fieldTemp$1 = ((bb) this).field_r + 1;
-            ((bb) this).field_r = ((bb) this).field_r + 1;
-            ((bb) this).field_b = fieldTemp$1;
-            return ((bb) this).field_r - 1;
+          if (var4 >= this.field_r) {
+            this.field_w[this.field_r] = param0;
+            this.field_e[this.field_r] = param1;
+            this.field_u[this.field_r] = param2;
+            fieldTemp$1 = this.field_r + 1;
+            this.field_r = this.field_r + 1;
+            this.field_b = fieldTemp$1;
+            return this.field_r - 1;
           } else {
-            if (((bb) this).field_w[var4] == param0) {
-              if (((bb) this).field_e[var4] == param1) {
-                if (((bb) this).field_u[var4] == param2) {
+            if (this.field_w[var4] == param0) {
+              if (this.field_e[var4] == param1) {
+                if (this.field_u[var4] == param2) {
                   return var4;
                 } else {
                   var4++;
@@ -355,28 +353,28 @@ final class bb extends pj {
     }
 
     bb(int param0, int param1, int param2) {
-        ((bb) this).field_y = 0;
-        ((bb) this).field_b = 0;
-        ((bb) this).field_r = 0;
-        ((bb) this).field_w = new int[param0];
-        ((bb) this).field_e = new int[param0];
-        ((bb) this).field_u = new int[param0];
-        ((bb) this).field_g = new int[param0];
-        ((bb) this).field_h = new int[param1];
-        ((bb) this).field_v = new int[param1];
-        ((bb) this).field_q = new int[param1];
-        ((bb) this).field_o = new byte[param1];
-        ((bb) this).field_p = new byte[param1];
-        ((bb) this).field_k = new byte[param1];
-        ((bb) this).field_l = new short[param1];
-        ((bb) this).field_i = new short[param1];
-        ((bb) this).field_c = new byte[param1];
-        ((bb) this).field_s = new int[param1];
+        this.field_y = 0;
+        this.field_b = 0;
+        this.field_r = 0;
+        this.field_w = new int[param0];
+        this.field_e = new int[param0];
+        this.field_u = new int[param0];
+        this.field_g = new int[param0];
+        this.field_h = new int[param1];
+        this.field_v = new int[param1];
+        this.field_q = new int[param1];
+        this.field_o = new byte[param1];
+        this.field_p = new byte[param1];
+        this.field_k = new byte[param1];
+        this.field_l = new short[param1];
+        this.field_i = new short[param1];
+        this.field_c = new byte[param1];
+        this.field_s = new int[param1];
         if (param2 > 0) {
-            ((bb) this).field_x = new byte[param2];
-            ((bb) this).field_d = new short[param2];
-            ((bb) this).field_B = new short[param2];
-            ((bb) this).field_z = new short[param2];
+            this.field_x = new byte[param2];
+            this.field_d = new short[param2];
+            this.field_B = new short[param2];
+            this.field_z = new short[param2];
         }
     }
 }

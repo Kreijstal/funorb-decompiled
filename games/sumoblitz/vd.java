@@ -8,15 +8,11 @@ final class vd {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = -62;
+        int var1 = 62 / ((param0 - -37) / 46);
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "vd.A(";
         field_a = new String[]{"Yes", "Return to level select"};
         field_b = new ts(10, 2, 2, 0);

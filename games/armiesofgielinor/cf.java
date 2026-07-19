@@ -25,17 +25,17 @@ final class cf extends tc {
 
     final boolean c(byte param0) {
         if (param0 != -45) {
-            ((cf) this).field_s = 54;
-            return ei.a(((cf) this).field_r, 11906);
+            this.field_s = 54;
+            return ei.a(this.field_r, 11906);
         }
-        return ei.a(((cf) this).field_r, 11906);
+        return ei.a(this.field_r, 11906);
     }
 
     cf(String param0) {
         try {
-            ((cf) this).field_k = param0;
+            this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "cf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "cf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

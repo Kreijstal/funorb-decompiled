@@ -19,18 +19,8 @@ final class cs {
     }
 
     final static boolean a(char param0, int param1) {
-        if (param0 < 65) {
-          if (97 <= param0) {
-            if (param0 <= 122) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
-          if (param0 > 90) {
+        if (param1 == 0) {
+          if (param0 < 65) {
             if (97 <= param0) {
               if (param0 > 122) {
                 return false;
@@ -41,22 +31,66 @@ final class cs {
               return false;
             }
           } else {
-            return true;
+            if (param0 > 90) {
+              if (97 <= param0) {
+                if (param0 > 122) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
+                return false;
+              }
+            } else {
+              return true;
+            }
+          }
+        } else {
+          field_a = (tu) null;
+          if (param0 >= 65) {
+            if (param0 > 90) {
+              if (97 <= param0) {
+                if (param0 > 122) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
+                return false;
+              }
+            } else {
+              return true;
+            }
+          } else {
+            if (97 <= param0) {
+              if (param0 > 122) {
+                return false;
+              } else {
+                return true;
+              }
+            } else {
+              return false;
+            }
           }
         }
     }
 
     public static void a(byte param0) {
-        field_c = null;
-        field_b = null;
-        field_a = null;
+        if (param0 != 111) {
+          cs.b((byte) -34);
+          field_c = null;
+          field_b = null;
+          field_a = null;
+          return;
+        } else {
+          field_c = null;
+          field_b = null;
+          field_a = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new ehb(16);
         field_b = "More armour";
         field_a = new tu();

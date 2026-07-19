@@ -8,11 +8,12 @@ final class ooa extends wka {
     static jea field_f;
 
     final static String a(byte param0) {
+        String discarded$8 = null;
         String var1 = null;
         var1 = "";
         if (param0 >= -46) {
           L0: {
-            String discarded$8 = ooa.a((byte) -83);
+            discarded$8 = ooa.a((byte) -83);
             if (null != vn.field_b) {
               var1 = vn.field_b.a(39);
               break L0;
@@ -70,7 +71,7 @@ final class ooa extends wka {
         field_f = null;
         field_h = null;
         field_e = null;
-        int var1 = 0;
+        int var1 = -88 % ((70 - param0) / 47);
     }
 
     final static boolean a(int param0, int param1, int param2) {
@@ -81,7 +82,7 @@ final class ooa extends wka {
           return true;
         } else {
           L0: {
-            if ((param1 & 8192) == 0) {
+            if (-1 == (param1 & 8192 ^ -1)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -96,10 +97,6 @@ final class ooa extends wka {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Create a free account to start using this feature";
     }
 }

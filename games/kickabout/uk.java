@@ -17,10 +17,6 @@ final class uk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "uk.A(";
         field_c = new r();
     }

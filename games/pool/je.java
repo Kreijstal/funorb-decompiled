@@ -16,28 +16,49 @@ final class je {
             om.field_v = param7;
             fe.field_M = param0;
             wn.field_h = param3;
-            sq.field_c = (no) (Object) new ug();
+            if (param5 >= -61) {
+                field_b = (String) null;
+            }
+            sq.field_c = (no) ((Object) new ug());
             ri.field_U = new rn(param0);
             nk.field_m = new qd(sq.field_c, ri.field_U);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "je.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + -96 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "je.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     final static boolean b(byte param0) {
-        if (fk.field_gb == null) {
+        if (param0 >= 95) {
+          if (fk.field_gb != null) {
+            if (!fk.field_gb.e(100)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (!fk.field_gb.e(100)) {
+          }
+        } else {
+          je.a((byte) -44);
+          if (fk.field_gb != null) {
+            if (!fk.field_gb.e(100)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     public static void a(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;
+        if (param0 > -122) {
+            field_c = (String) null;
+        }
     }
 
     final static void a(int param0, int param1, boolean param2, byte[] param3, int param4, boolean param5) {
@@ -46,26 +67,24 @@ final class je {
         int var8 = 0;
         try {
             var6 = ej.field_j;
-            var6.b(false, 11);
+            var6.b(param5, param0);
             var6.field_v = var6.field_v + 1;
             var7 = var6.field_v;
             var6.a(4, false);
-            var6.a(param1, false);
-            var8 = 0;
-            var8 += 128;
-            var6.a(var8, false);
+            var6.a(param1, param5);
+            var8 = param4;
+            if (param2) {
+                var8 += 128;
+            }
+            var6.a(var8, param5);
             var6.a(param3, (byte) 0, 0, param3.length);
-            var6.b(var6.field_v - var7, true);
+            var6.b(var6.field_v - var7, !param5 ? true : false);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "je.D(" + 11 + ',' + param1 + ',' + true + ',' + (param3 != null ? "{...}" : "null") + ',' + 0 + ',' + false + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "je.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Click or press F10 to open Quick Chat";
         field_b = "Tips";
         field_a = "To enter <u=ffffff>shot mode</u>: <col=99ff99>Press</col> <img=4>, or <img=0> click on the cue ball once.";

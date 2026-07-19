@@ -7,6 +7,9 @@ final class bc {
     private static String[] field_c;
 
     final static boolean a(boolean param0) {
+        if (!param0) {
+            return false;
+        }
         if (bl.field_a == null) {
             return false;
         }
@@ -17,16 +20,18 @@ final class bc {
     }
 
     public static void a(int param0) {
+        boolean discarded$0 = false;
         field_b = null;
         field_a = null;
+        if (param0 <= 71) {
+            discarded$0 = bc.a(true);
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new String[5];
         field_c[3] = "Flower";
         field_c[2] = "T2";

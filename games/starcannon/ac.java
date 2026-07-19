@@ -12,18 +12,17 @@ final class ac {
     private static String field_z;
 
     public static void a(byte param0) {
+        if (param0 != -77) {
+            return;
+        }
         field_a = null;
-        field_d = null;
+        field_d = (byte[][]) null;
         field_b = null;
         field_c = null;
         field_g = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ac.A(";
         field_a = new o(6, 0, 4, 2);
         field_c = "Shooting a power orb will change its type, allowing you to customise your ship.";

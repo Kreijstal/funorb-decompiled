@@ -12,6 +12,14 @@ final class rj {
     private static int field_g;
 
     private final static void a(int[] param0, int param1, int param2) {
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
+        int fieldTemp$15 = 0;
         int var3 = 0;
         int[] var4_ref_int__ = null;
         int var4 = 0;
@@ -45,9 +53,9 @@ final class rj {
             }
           }
         }
-        param2 = param2;
+        param2 = param2 + param1;
         var4 = param2 - 2;
-        var8 = 0;
+        var8 = param1;
         var5 = var8;
         L3: while (true) {
           if (var8 >= param2) {
@@ -60,25 +68,33 @@ final class rj {
                 if (var7 >= var6) {
                   break L4;
                 } else {
+                  fieldTemp$8 = field_c;
                   field_c = field_c + 1;
-                  field_e[field_c] = param0[var8];
+                  field_e[fieldTemp$8] = param0[var8];
+                  fieldTemp$9 = field_c;
                   field_c = field_c + 1;
-                  field_e[field_c] = var7;
+                  field_e[fieldTemp$9] = var7;
+                  fieldTemp$10 = field_c;
                   field_c = field_c + 1;
-                  field_e[field_c] = param0[var4];
+                  field_e[fieldTemp$10] = param0[var4];
+                  fieldTemp$11 = field_c;
                   field_c = field_c + 1;
-                  field_e[field_c] = var6;
+                  field_e[fieldTemp$11] = var6;
                   break L4;
                 }
               } else {
+                fieldTemp$12 = field_c;
                 field_c = field_c + 1;
-                field_e[field_c] = param0[var4];
+                field_e[fieldTemp$12] = param0[var4];
+                fieldTemp$13 = field_c;
                 field_c = field_c + 1;
-                field_e[field_c] = var6;
+                field_e[fieldTemp$13] = var6;
+                fieldTemp$14 = field_c;
                 field_c = field_c + 1;
-                field_e[field_c] = param0[var8];
+                field_e[fieldTemp$14] = param0[var8];
+                fieldTemp$15 = field_c;
                 field_c = field_c + 1;
-                field_e[field_c] = var7;
+                field_e[fieldTemp$15] = var7;
                 break L4;
               }
             }
@@ -90,19 +106,19 @@ final class rj {
     }
 
     final static void a(ha param0, int[] param1, int param2, int param3, int param4) {
-        Object var6 = null;
-        Object var5 = null;
-        rj.a(param0, param1, 0, param3, param4, (int[]) null, (int[]) null);
+        int[] var6 = (int[]) null;
+        int[] var5 = (int[]) null;
+        rj.a(param0, param1, param2, param3, param4, (int[]) null, (int[]) null);
     }
 
     private final static void a(int param0) {
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
+        int var3 = 0;
         if (field_c < 0) {
             field_b = 0;
             field_f = 0;
@@ -347,7 +363,7 @@ final class rj {
           }
         }
         rj.b();
-        rj.a(param1, 0, param3);
+        rj.a(param1, param2, param3);
         rj.a(var15[1]);
         L1: while (true) {
           if (!rj.b(var15[3])) {

@@ -14,17 +14,24 @@ final class kg {
             }
             wi.field_c = new rg(param1, param0, false, true, true);
             if (param2 != 92) {
-                Object var4 = null;
+                String var4 = (String) null;
                 kg.a((String) null, (String) null, (byte) 89);
             }
-            t.field_h.c(20317, (uj) (Object) wi.field_c);
+            t.field_h.c(20317, wi.field_c);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "kg.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "kg.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static long b(byte param0) {
-        return dd.b(79) - ik.field_p;
+        String var2 = null;
+        if (param0 != -71) {
+          var2 = (String) null;
+          kg.a((String) null, (String) null, (byte) 108);
+          return dd.b(param0 + 150) - ik.field_p;
+        } else {
+          return dd.b(param0 + 150) - ik.field_p;
+        }
     }
 
     public static void a(byte param0) {
@@ -45,15 +52,11 @@ final class kg {
             fi.c((byte) -96);
             qb.field_h = -mh.field_k + param1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "kg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "kg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_a = 0;
     }

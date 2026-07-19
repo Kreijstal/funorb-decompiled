@@ -13,10 +13,6 @@ abstract class pj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "pj.K(";
     }
 }

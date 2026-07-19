@@ -13,14 +13,14 @@ final class sf {
     final lh a(int param0, byte param1) {
         lh var3 = null;
         byte[] var4 = null;
-        var3 = (lh) ((sf) this).field_e.a((long)param0, 0);
+        var3 = (lh) (this.field_e.a((long)param0, 0));
         if (var3 == null) {
           L0: {
             if (param0 >= 32768) {
-              var4 = ((sf) this).field_g.c(1, param0 & 32767, 0);
+              var4 = this.field_g.c(1, param0 & 32767, 0);
               break L0;
             } else {
-              var4 = ((sf) this).field_f.c(1, param0, 0);
+              var4 = this.field_f.c(1, param0, 0);
               break L0;
             }
           }
@@ -35,9 +35,9 @@ final class sf {
               }
             }
             if (param1 > -8) {
-              return null;
+              return (lh) null;
             } else {
-              ((sf) this).field_e.a((Object) (Object) var3, (byte) 96, (long)param0);
+              this.field_e.a(var3, (byte) 96, (long)param0);
               return var3;
             }
           } else {
@@ -51,9 +51,9 @@ final class sf {
               }
             }
             if (param1 > -8) {
-              return null;
+              return (lh) null;
             } else {
-              ((sf) this).field_e.a((Object) (Object) var3, (byte) 96, (long)param0);
+              this.field_e.a(var3, (byte) 96, (long)param0);
               return var3;
             }
           }
@@ -68,51 +68,59 @@ final class sf {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
-            var7_int = param4 + (param5 - 1);
-            var8 = -1 + (param3 + param2);
-            var9 = param1[0].field_q;
-            var10 = param1[0].field_v;
-            param0.d();
-            param1[0].g(param4, param2);
-            param1[2].g(-var9 + var7_int, param2);
-            param1[6].g(param4, var8 + -var10);
-            param1[8].g(var7_int + -var9, -var10 + var8);
-            param1[1].d(var9 + param4, param2, -(2 * var9) + param5, var10);
-            param1[7].d(param4 + var9, var8 - var10, param5 - var9 * 2, var10);
-            param1[3].d(param4, param2 + var10, var9, param3 - var10 * 2);
+            L1: {
+              var7_int = param4 + (param5 - 1);
+              var8 = -1 + (param3 + param2);
+              var9 = param1[0].field_q;
+              var10 = param1[0].field_v;
+              param0.d();
+              param1[0].g(param4, param2);
+              param1[2].g(-var9 + var7_int, param2);
+              param1[6].g(param4, var8 + -var10);
+              param1[8].g(var7_int + -var9, -var10 + var8);
+              param1[1].d(var9 + param4, param2, -(2 * var9) + param5, var10);
+              param1[7].d(param4 + var9, var8 - var10, param5 - var9 * 2, var10);
+              param1[3].d(param4, param2 + var10, var9, param3 - var10 * 2);
+              if (param6 == -55) {
+                break L1;
+              } else {
+                field_a = (lj) null;
+                break L1;
+              }
+            }
             param1[5].d(var7_int + -var9, param2 - -var10, var9, param3 - var10 * 2);
             param1[4].d(param4 - -var9, param2 + var10, -(var9 * 2) + param5, -(2 * var10) + param3);
             la.field_f.a(-47);
@@ -120,58 +128,58 @@ final class sf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var7 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var7;
-            stackOut_2_1 = new StringBuilder().append("sf.C(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
-            } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
-            }
-          }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+            var7 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) (var7);
+            stackOut_4_1 = new StringBuilder().append("sf.C(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L2;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + -55 + ')');
+          L3: {
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw oj.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -188,7 +196,7 @@ final class sf {
           var1 = -1;
           var3 = rj.field_g;
           var4 = cj.field_b ? 1 : 0;
-          if (pg.field_q > 0) {
+          if ((pg.field_q ^ -1) < -1) {
             pg.field_q = pg.field_q - 1;
             break L0;
           } else {
@@ -200,27 +208,27 @@ final class sf {
             L1: {
               if (!ad.field_j) {
                 L2: {
-                  if (bc.field_o != -1) {
+                  if ((bc.field_o ^ -1) != 0) {
                     break L2;
                   } else {
                     if (var4 != 0) {
                       break L2;
                     } else {
-                      if (ea.field_e < 0) {
+                      if ((ea.field_e ^ -1) > -1) {
                         break L2;
                       } else {
                         if (wb.field_p == null) {
                           break L2;
                         } else {
-                          if (gl.field_k <= 0) {
+                          if ((gl.field_k ^ -1) >= -1) {
                             break L2;
                           } else {
                             if (0 != ea.field_e) {
-                              if (ea.field_e == 1) {
+                              if (-2 == (ea.field_e ^ -1)) {
                                 var1 = 1;
-                                if (~ag.field_d != ~var1) {
+                                if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                                   bd.d(1);
-                                  if (var1 == -1) {
+                                  if (0 == (var1 ^ -1)) {
                                     ag.field_d = var1;
                                     return;
                                   } else {
@@ -230,7 +238,7 @@ final class sf {
                                   }
                                 } else {
                                   L3: {
-                                    if (pg.field_q != 0) {
+                                    if (-1 != (pg.field_q ^ -1)) {
                                       break L3;
                                     } else {
                                       pg.field_q = -1;
@@ -246,13 +254,13 @@ final class sf {
                                   return;
                                 }
                               } else {
-                                if (ea.field_e != 2) {
-                                  if (ea.field_e != 3) {
-                                    if (ea.field_e == 4) {
+                                if ((ea.field_e ^ -1) != -3) {
+                                  if ((ea.field_e ^ -1) != -4) {
+                                    if (-5 == (ea.field_e ^ -1)) {
                                       var1 = 4;
-                                      if (~ag.field_d != ~var1) {
+                                      if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                                         bd.d(1);
-                                        if (var1 == -1) {
+                                        if (0 == (var1 ^ -1)) {
                                           ag.field_d = var1;
                                           return;
                                         } else {
@@ -262,7 +270,7 @@ final class sf {
                                         }
                                       } else {
                                         L4: {
-                                          if (pg.field_q != 0) {
+                                          if (-1 != (pg.field_q ^ -1)) {
                                             break L4;
                                           } else {
                                             pg.field_q = -1;
@@ -278,12 +286,12 @@ final class sf {
                                         return;
                                       }
                                     } else {
-                                      if (ea.field_e == 5) {
+                                      if ((ea.field_e ^ -1) == -6) {
                                         var1 = 5;
                                         break L1;
                                       } else {
-                                        if (ea.field_e != 6) {
-                                          if (ea.field_e == 7) {
+                                        if (-7 != (ea.field_e ^ -1)) {
+                                          if (-8 == (ea.field_e ^ -1)) {
                                             var1 = 6;
                                             break L1;
                                           } else {
@@ -291,9 +299,9 @@ final class sf {
                                               var1 = 6;
                                               break L1;
                                             } else {
-                                              if (~ag.field_d != ~var1) {
+                                              if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                                                 bd.d(1);
-                                                if (var1 == -1) {
+                                                if (0 == (var1 ^ -1)) {
                                                   ag.field_d = var1;
                                                   return;
                                                 } else {
@@ -303,7 +311,7 @@ final class sf {
                                                 }
                                               } else {
                                                 L5: {
-                                                  if (pg.field_q != 0) {
+                                                  if (-1 != (pg.field_q ^ -1)) {
                                                     break L5;
                                                   } else {
                                                     pg.field_q = -1;
@@ -350,10 +358,10 @@ final class sf {
                     break L6;
                   } else {
                     L7: {
-                      if (var3 == 2) {
+                      if (-3 == (var3 ^ -1)) {
                         break L7;
                       } else {
-                        if (var3 == 1) {
+                        if ((var3 ^ -1) == -2) {
                           break L7;
                         } else {
                           if (3 != var3) {
@@ -365,9 +373,9 @@ final class sf {
                       }
                     }
                     var1 = 9;
-                    if (~ag.field_d != ~var1) {
+                    if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                       bd.d(1);
-                      if (var1 == -1) {
+                      if (0 == (var1 ^ -1)) {
                         ag.field_d = var1;
                         return;
                       } else {
@@ -377,7 +385,7 @@ final class sf {
                       }
                     } else {
                       L8: {
-                        if (pg.field_q != 0) {
+                        if (-1 != (pg.field_q ^ -1)) {
                           break L8;
                         } else {
                           pg.field_q = -1;
@@ -395,16 +403,16 @@ final class sf {
                   }
                 }
                 L9: {
-                  if (bc.field_o != 13) {
+                  if ((bc.field_o ^ -1) != -14) {
                     break L9;
                   } else {
                     if (var3 != 4) {
                       break L9;
                     } else {
                       var1 = -1;
-                      if (~ag.field_d != ~var1) {
+                      if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                         bd.d(1);
-                        if (var1 == -1) {
+                        if (0 == (var1 ^ -1)) {
                           ag.field_d = var1;
                           return;
                         } else {
@@ -414,7 +422,7 @@ final class sf {
                         }
                       } else {
                         L10: {
-                          if (pg.field_q != 0) {
+                          if (-1 != (pg.field_q ^ -1)) {
                             break L10;
                           } else {
                             pg.field_q = -1;
@@ -436,14 +444,14 @@ final class sf {
                   if (13 != bc.field_o) {
                     break L11;
                   } else {
-                    if (var3 != 5) {
+                    if (-6 != (var3 ^ -1)) {
                       break L11;
                     } else {
                       if (gh.field_x) {
                         var1 = 11;
-                        if (~ag.field_d != ~var1) {
+                        if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                           bd.d(1);
-                          if (var1 == -1) {
+                          if (0 == (var1 ^ -1)) {
                             ag.field_d = var1;
                             return;
                           } else {
@@ -453,7 +461,7 @@ final class sf {
                           }
                         } else {
                           L12: {
-                            if (pg.field_q != 0) {
+                            if (-1 != (pg.field_q ^ -1)) {
                               break L12;
                             } else {
                               pg.field_q = -1;
@@ -470,9 +478,9 @@ final class sf {
                         }
                       } else {
                         var1 = 10;
-                        if (~ag.field_d != ~var1) {
+                        if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                           bd.d(1);
-                          if (var1 == -1) {
+                          if (0 == (var1 ^ -1)) {
                             ag.field_d = var1;
                             return;
                           } else {
@@ -482,7 +490,7 @@ final class sf {
                           }
                         } else {
                           L13: {
-                            if (pg.field_q != 0) {
+                            if (-1 != (pg.field_q ^ -1)) {
                               break L13;
                             } else {
                               pg.field_q = -1;
@@ -505,13 +513,13 @@ final class sf {
                   if (13 != bc.field_o) {
                     break L14;
                   } else {
-                    if (var3 != 7) {
+                    if ((var3 ^ -1) != -8) {
                       break L14;
                     } else {
                       var1 = 13;
-                      if (~ag.field_d != ~var1) {
+                      if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                         bd.d(1);
-                        if (var1 == -1) {
+                        if (0 == (var1 ^ -1)) {
                           ag.field_d = var1;
                           return;
                         } else {
@@ -521,7 +529,7 @@ final class sf {
                         }
                       } else {
                         L15: {
-                          if (pg.field_q != 0) {
+                          if (-1 != (pg.field_q ^ -1)) {
                             break L15;
                           } else {
                             pg.field_q = -1;
@@ -539,13 +547,13 @@ final class sf {
                     }
                   }
                 }
-                if (bc.field_o == 15) {
+                if (-16 == (bc.field_o ^ -1)) {
                   var1 = 13;
                   break L1;
                 } else {
                   if (13 != bc.field_o) {
                     L16: {
-                      if (bc.field_o == 0) {
+                      if ((bc.field_o ^ -1) == -1) {
                         break L16;
                       } else {
                         if (12 == bc.field_o) {
@@ -557,14 +565,14 @@ final class sf {
                             if (2 == bc.field_o) {
                               break L16;
                             } else {
-                              if (bc.field_o != 4) {
+                              if ((bc.field_o ^ -1) != -5) {
                                 if (-1 == bc.field_o) {
                                   break L1;
                                 } else {
                                   var1 = 8;
-                                  if (~ag.field_d != ~var1) {
+                                  if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                                     bd.d(1);
-                                    if (var1 == -1) {
+                                    if (0 == (var1 ^ -1)) {
                                       ag.field_d = var1;
                                       return;
                                     } else {
@@ -574,7 +582,7 @@ final class sf {
                                     }
                                   } else {
                                     L17: {
-                                      if (pg.field_q != 0) {
+                                      if (-1 != (pg.field_q ^ -1)) {
                                         break L17;
                                       } else {
                                         pg.field_q = -1;
@@ -592,9 +600,9 @@ final class sf {
                                 }
                               } else {
                                 var1 = 7;
-                                if (~ag.field_d != ~var1) {
+                                if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                                   bd.d(1);
-                                  if (var1 == -1) {
+                                  if (0 == (var1 ^ -1)) {
                                     ag.field_d = var1;
                                     return;
                                   } else {
@@ -604,7 +612,7 @@ final class sf {
                                   }
                                 } else {
                                   L18: {
-                                    if (pg.field_q != 0) {
+                                    if (-1 != (pg.field_q ^ -1)) {
                                       break L18;
                                     } else {
                                       pg.field_q = -1;
@@ -626,9 +634,9 @@ final class sf {
                       }
                     }
                     var1 = 7;
-                    if (~ag.field_d != ~var1) {
+                    if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                       bd.d(1);
-                      if (var1 == -1) {
+                      if (0 == (var1 ^ -1)) {
                         ag.field_d = var1;
                         return;
                       } else {
@@ -638,7 +646,7 @@ final class sf {
                       }
                     } else {
                       L19: {
-                        if (pg.field_q != 0) {
+                        if (-1 != (pg.field_q ^ -1)) {
                           break L19;
                         } else {
                           pg.field_q = -1;
@@ -656,9 +664,9 @@ final class sf {
                   } else {
                     if (6 == var3) {
                       var1 = 12;
-                      if (~ag.field_d != ~var1) {
+                      if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                         bd.d(1);
-                        if (var1 == -1) {
+                        if (0 == (var1 ^ -1)) {
                           ag.field_d = var1;
                           return;
                         } else {
@@ -668,7 +676,7 @@ final class sf {
                         }
                       } else {
                         L20: {
-                          if (pg.field_q != 0) {
+                          if (-1 != (pg.field_q ^ -1)) {
                             break L20;
                           } else {
                             pg.field_q = -1;
@@ -686,7 +694,7 @@ final class sf {
                     } else {
                       L21: {
                         L22: {
-                          if (bc.field_o == 0) {
+                          if ((bc.field_o ^ -1) == -1) {
                             break L22;
                           } else {
                             if (12 == bc.field_o) {
@@ -698,14 +706,14 @@ final class sf {
                                 if (2 == bc.field_o) {
                                   break L22;
                                 } else {
-                                  if (bc.field_o != 4) {
+                                  if ((bc.field_o ^ -1) != -5) {
                                     if (-1 == bc.field_o) {
                                       break L21;
                                     } else {
                                       var1 = 8;
-                                      if (~ag.field_d != ~var1) {
+                                      if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                                         bd.d(1);
-                                        if (var1 == -1) {
+                                        if (0 == (var1 ^ -1)) {
                                           ag.field_d = var1;
                                           return;
                                         } else {
@@ -715,7 +723,7 @@ final class sf {
                                         }
                                       } else {
                                         L23: {
-                                          if (pg.field_q != 0) {
+                                          if (-1 != (pg.field_q ^ -1)) {
                                             break L23;
                                           } else {
                                             pg.field_q = -1;
@@ -742,9 +750,9 @@ final class sf {
                         var1 = 7;
                         break L21;
                       }
-                      if (~ag.field_d != ~var1) {
+                      if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                         bd.d(1);
-                        if (var1 == -1) {
+                        if (0 == (var1 ^ -1)) {
                           ag.field_d = var1;
                           return;
                         } else {
@@ -754,7 +762,7 @@ final class sf {
                         }
                       } else {
                         L24: {
-                          if (pg.field_q != 0) {
+                          if (-1 != (pg.field_q ^ -1)) {
                             break L24;
                           } else {
                             pg.field_q = -1;
@@ -777,9 +785,9 @@ final class sf {
                 break L1;
               }
             }
-            if (~ag.field_d != ~var1) {
+            if ((ag.field_d ^ -1) != (var1 ^ -1)) {
               bd.d(1);
-              if (var1 == -1) {
+              if (0 == (var1 ^ -1)) {
                 ag.field_d = var1;
                 return;
               } else {
@@ -789,7 +797,7 @@ final class sf {
               }
             } else {
               L25: {
-                if (pg.field_q != 0) {
+                if (-1 != (pg.field_q ^ -1)) {
                   break L25;
                 } else {
                   pg.field_q = -1;
@@ -807,38 +815,38 @@ final class sf {
           } else {
             L26: {
               L27: {
-                if (bc.field_o != -1) {
+                if ((bc.field_o ^ -1) != 0) {
                   break L27;
                 } else {
                   if (var4 != 0) {
                     break L27;
                   } else {
-                    if (ea.field_e < 0) {
+                    if ((ea.field_e ^ -1) > -1) {
                       break L27;
                     } else {
                       if (wb.field_p == null) {
                         break L27;
                       } else {
-                        if (gl.field_k <= 0) {
+                        if ((gl.field_k ^ -1) >= -1) {
                           break L27;
                         } else {
                           if (0 != ea.field_e) {
-                            if (ea.field_e == 1) {
+                            if (-2 == (ea.field_e ^ -1)) {
                               var1 = 1;
                               break L26;
                             } else {
-                              if (ea.field_e != 2) {
-                                if (ea.field_e != 3) {
-                                  if (ea.field_e == 4) {
+                              if ((ea.field_e ^ -1) != -3) {
+                                if ((ea.field_e ^ -1) != -4) {
+                                  if (-5 == (ea.field_e ^ -1)) {
                                     var1 = 4;
                                     break L26;
                                   } else {
-                                    if (ea.field_e == 5) {
+                                    if ((ea.field_e ^ -1) == -6) {
                                       var1 = 5;
                                       break L26;
                                     } else {
-                                      if (ea.field_e != 6) {
-                                        if (ea.field_e == 7) {
+                                      if (-7 != (ea.field_e ^ -1)) {
+                                        if (-8 == (ea.field_e ^ -1)) {
                                           var1 = 6;
                                           break L26;
                                         } else {
@@ -879,10 +887,10 @@ final class sf {
                   break L28;
                 } else {
                   L29: {
-                    if (var3 == 2) {
+                    if (-3 == (var3 ^ -1)) {
                       break L29;
                     } else {
-                      if (var3 == 1) {
+                      if ((var3 ^ -1) == -2) {
                         break L29;
                       } else {
                         if (3 != var3) {
@@ -898,7 +906,7 @@ final class sf {
                 }
               }
               L30: {
-                if (bc.field_o != 13) {
+                if ((bc.field_o ^ -1) != -14) {
                   break L30;
                 } else {
                   if (var3 != 4) {
@@ -913,7 +921,7 @@ final class sf {
                 if (13 != bc.field_o) {
                   break L31;
                 } else {
-                  if (var3 != 5) {
+                  if (-6 != (var3 ^ -1)) {
                     break L31;
                   } else {
                     if (gh.field_x) {
@@ -931,19 +939,19 @@ final class sf {
                   if (13 != bc.field_o) {
                     break L33;
                   } else {
-                    if (var3 == 7) {
+                    if ((var3 ^ -1) == -8) {
                       break L32;
                     } else {
                       break L33;
                     }
                   }
                 }
-                if (bc.field_o == 15) {
+                if (-16 == (bc.field_o ^ -1)) {
                   break L32;
                 } else {
                   if (13 != bc.field_o) {
                     L34: {
-                      if (bc.field_o == 0) {
+                      if ((bc.field_o ^ -1) == -1) {
                         break L34;
                       } else {
                         if (12 == bc.field_o) {
@@ -955,14 +963,14 @@ final class sf {
                             if (2 == bc.field_o) {
                               break L34;
                             } else {
-                              if (bc.field_o != 4) {
+                              if ((bc.field_o ^ -1) != -5) {
                                 if (-1 == bc.field_o) {
                                   break L26;
                                 } else {
                                   var1 = 8;
-                                  if (~ag.field_d != ~var1) {
+                                  if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                                     bd.d(1);
-                                    if (var1 == -1) {
+                                    if (0 == (var1 ^ -1)) {
                                       ag.field_d = var1;
                                       return;
                                     } else {
@@ -972,7 +980,7 @@ final class sf {
                                     }
                                   } else {
                                     L35: {
-                                      if (pg.field_q != 0) {
+                                      if (-1 != (pg.field_q ^ -1)) {
                                         break L35;
                                       } else {
                                         pg.field_q = -1;
@@ -990,9 +998,9 @@ final class sf {
                                 }
                               } else {
                                 var1 = 7;
-                                if (~ag.field_d != ~var1) {
+                                if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                                   bd.d(1);
-                                  if (var1 == -1) {
+                                  if (0 == (var1 ^ -1)) {
                                     ag.field_d = var1;
                                     return;
                                   } else {
@@ -1002,7 +1010,7 @@ final class sf {
                                   }
                                 } else {
                                   L36: {
-                                    if (pg.field_q != 0) {
+                                    if (-1 != (pg.field_q ^ -1)) {
                                       break L36;
                                     } else {
                                       pg.field_q = -1;
@@ -1024,9 +1032,9 @@ final class sf {
                       }
                     }
                     var1 = 7;
-                    if (~ag.field_d != ~var1) {
+                    if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                       bd.d(1);
-                      if (var1 == -1) {
+                      if (0 == (var1 ^ -1)) {
                         ag.field_d = var1;
                         return;
                       } else {
@@ -1036,7 +1044,7 @@ final class sf {
                       }
                     } else {
                       L37: {
-                        if (pg.field_q != 0) {
+                        if (-1 != (pg.field_q ^ -1)) {
                           break L37;
                         } else {
                           pg.field_q = -1;
@@ -1054,9 +1062,9 @@ final class sf {
                   } else {
                     if (6 == var3) {
                       var1 = 12;
-                      if (~ag.field_d != ~var1) {
+                      if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                         bd.d(1);
-                        if (var1 == -1) {
+                        if (0 == (var1 ^ -1)) {
                           ag.field_d = var1;
                           return;
                         } else {
@@ -1066,7 +1074,7 @@ final class sf {
                         }
                       } else {
                         L38: {
-                          if (pg.field_q != 0) {
+                          if (-1 != (pg.field_q ^ -1)) {
                             break L38;
                           } else {
                             pg.field_q = -1;
@@ -1084,7 +1092,7 @@ final class sf {
                     } else {
                       L39: {
                         L40: {
-                          if (bc.field_o == 0) {
+                          if ((bc.field_o ^ -1) == -1) {
                             break L40;
                           } else {
                             if (12 == bc.field_o) {
@@ -1096,7 +1104,7 @@ final class sf {
                                 if (2 == bc.field_o) {
                                   break L40;
                                 } else {
-                                  if (bc.field_o != 4) {
+                                  if ((bc.field_o ^ -1) != -5) {
                                     if (-1 == bc.field_o) {
                                       break L39;
                                     } else {
@@ -1114,9 +1122,9 @@ final class sf {
                         var1 = 7;
                         break L39;
                       }
-                      if (~ag.field_d != ~var1) {
+                      if ((ag.field_d ^ -1) != (var1 ^ -1)) {
                         bd.d(1);
-                        if (var1 == -1) {
+                        if (0 == (var1 ^ -1)) {
                           ag.field_d = var1;
                           return;
                         } else {
@@ -1126,7 +1134,7 @@ final class sf {
                         }
                       } else {
                         L41: {
-                          if (pg.field_q != 0) {
+                          if (-1 != (pg.field_q ^ -1)) {
                             break L41;
                           } else {
                             pg.field_q = -1;
@@ -1148,9 +1156,9 @@ final class sf {
               var1 = 13;
               break L26;
             }
-            if (~ag.field_d != ~var1) {
+            if ((ag.field_d ^ -1) != (var1 ^ -1)) {
               bd.d(1);
-              if (var1 == -1) {
+              if (0 == (var1 ^ -1)) {
                 ag.field_d = var1;
                 return;
               } else {
@@ -1160,7 +1168,7 @@ final class sf {
               }
             } else {
               L42: {
-                if (pg.field_q != 0) {
+                if (-1 != (pg.field_q ^ -1)) {
                   break L42;
                 } else {
                   pg.field_q = -1;
@@ -1178,9 +1186,9 @@ final class sf {
           }
         } else {
           var1 = ag.field_d;
-          if (~ag.field_d != ~var1) {
+          if ((ag.field_d ^ -1) != (var1 ^ -1)) {
             bd.d(1);
-            if (var1 == -1) {
+            if (0 == (var1 ^ -1)) {
               ag.field_d = var1;
               return;
             } else {
@@ -1190,7 +1198,7 @@ final class sf {
             }
           } else {
             L43: {
-              if (pg.field_q != 0) {
+              if (-1 != (pg.field_q ^ -1)) {
                 break L43;
               } else {
                 pg.field_q = -1;
@@ -1209,9 +1217,18 @@ final class sf {
     }
 
     public static void a(boolean param0) {
-        field_d = null;
-        field_b = null;
-        field_a = null;
+        if (param0) {
+          field_c = 84;
+          field_d = (ka[][][]) null;
+          field_b = null;
+          field_a = null;
+          return;
+        } else {
+          field_d = (ka[][][]) null;
+          field_b = null;
+          field_a = null;
+          return;
+        }
     }
 
     private sf() throws Throwable {
@@ -1219,10 +1236,6 @@ final class sf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 0;
         field_b = new int[12];
         field_d = new ka[4][2][2];

@@ -109,7 +109,7 @@ final class ho extends ma {
 
     final static void c(byte param0) {
         wa.l(23323);
-        int var1 = -95;
+        int var1 = 95 / ((param0 - 47) / 60);
         af.a(sg.field_M[0].field_w, kj.field_j, ad.field_x, nk.field_n, (byte) 36, tk.field_i);
     }
 
@@ -117,16 +117,15 @@ final class ho extends ma {
         field_s = null;
         field_u = null;
         field_l = null;
+        if (!param0) {
+            field_s = (int[]) null;
+        }
     }
 
     ho() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = new String[]{"<col=ffffff>Cue ball</col>", "<col=ffff99>1: Spots</col>", "<col=9999ff>2: Spots</col>", "<col=ff9999>3: Spots</col>", "<col=cc99ff>4: Spots</col>", "<col=ffcc99>5: Spots</col>", "<col=99ff99>6: Spots</col>", "<col=cc9966>7: Spots</col>", "<col=999999>8: Black</col>", "<col=ffff99>9: Stripes</col>", "<col=9999ff>10: Stripes</col>", "<col=ff9999>11: Stripes</col>", "<col=cc99ff>12: Stripes</col>", "<col=ffcc99>13: Stripes</col>", "<col=99ff99>14: Stripes</col>", "<col=cc9966>15: Stripes</col>"};
         field_s = new int[4];
         field_v = 0;

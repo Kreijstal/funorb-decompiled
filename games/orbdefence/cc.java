@@ -19,7 +19,10 @@ final class cc extends ca {
     static String field_i;
 
     final static void a(boolean param0, int param1) {
-        vc.field_j = 20000000L;
+        vc.field_j = 1000000000L / (long)param1;
+        if (param0) {
+            field_j = (int[]) null;
+        }
     }
 
     public static void a(byte param0) {
@@ -30,22 +33,25 @@ final class cc extends ca {
         field_h = null;
         field_m = null;
         field_k = null;
-        field_j = null;
+        if (param0 < 3) {
+          field_f = (od) null;
+          field_j = null;
+          return;
+        } else {
+          field_j = null;
+          return;
+        }
     }
 
     cc(int param0, int param1, int param2, int param3, int param4) {
-        ((cc) this).field_q = param0;
-        ((cc) this).field_o = param1;
-        ((cc) this).field_g = param2;
-        ((cc) this).field_n = param4;
-        ((cc) this).field_s = param3;
+        this.field_q = param0;
+        this.field_o = param1;
+        this.field_g = param2;
+        this.field_n = param4;
+        this.field_s = param3;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
         field_r = "Norbsome";
         field_m = "Tutorial ON";

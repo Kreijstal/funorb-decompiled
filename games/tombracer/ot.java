@@ -15,20 +15,21 @@ final class ot extends lba {
         field_w = null;
         field_t = null;
         if (param0 > -66) {
-            field_w = null;
+            field_w = (String) null;
         }
     }
 
     final byte[] a(int param0, boolean param1, int param2, int param3) {
-        Object var6 = null;
-        ((ot) this).field_u = new byte[param3 * (param0 * (param2 * 2))];
-        ((ot) this).a(param0, param2, param3, (byte) -93);
+        iu discarded$2 = null;
+        cn var6 = null;
+        this.field_u = new byte[param3 * (param0 * (param2 * 2))];
+        this.a(param0, param2, param3, (byte) -93);
         if (!param1) {
-          var6 = null;
-          iu discarded$2 = ot.a(13, 72, (cn) null, false);
-          return ((ot) this).field_u;
+          var6 = (cn) null;
+          discarded$2 = ot.a(13, 72, (cn) null, false);
+          return this.field_u;
         } else {
-          return ((ot) this).field_u;
+          return this.field_u;
         }
     }
 
@@ -38,9 +39,9 @@ final class ot extends lba {
         var4 = param2 * 2;
         int incrementValue$2 = var4;
         var4++;
-        ((ot) this).field_u[incrementValue$2] = (byte) -1;
+        this.field_u[incrementValue$2] = (byte)-1;
         var5 = 255 & param1;
-        ((ot) this).field_u[var4] = (byte)(var5 * 3 >> 5);
+        this.field_u[var4] = (byte)(var5 * 3 >> -1328451387);
         if (param0) {
           ot.b((byte) 20);
           return;
@@ -51,7 +52,7 @@ final class ot extends lba {
 
     final static iu a(int param0, int param1, cn param2, boolean param3) {
         RuntimeException var4 = null;
-        Object stackIn_5_0 = null;
+        iu stackIn_5_0 = null;
         iu stackIn_7_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -60,9 +61,10 @@ final class ot extends lba {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         iu stackOut_6_0 = null;
-        Object stackOut_4_0 = null;
+        iu stackOut_4_0 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_10_0 = null;
@@ -77,11 +79,13 @@ final class ot extends lba {
               if (param3) {
                 stackOut_6_0 = je.a((byte) 69);
                 stackIn_7_0 = stackOut_6_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
-                stackOut_4_0 = null;
+                stackOut_4_0 = (iu) null;
                 stackIn_5_0 = stackOut_4_0;
-                return (iu) (Object) stackIn_5_0;
+                decompiledRegionSelector0 = 0;
+                break L0;
               }
             } else {
               return null;
@@ -91,23 +95,23 @@ final class ot extends lba {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_0 = (RuntimeException) (var4);
             stackOut_8_1 = new StringBuilder().append("ot.J(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -115,16 +119,16 @@ final class ot extends lba {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param3 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ')');
         }
-        return stackIn_7_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0;
+        } else {
+          return stackIn_7_0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = "Accept rematch";
         field_v = 256;
         field_w = "Hide game chat";

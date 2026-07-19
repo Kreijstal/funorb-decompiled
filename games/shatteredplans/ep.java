@@ -8,6 +8,7 @@ final class ep {
     static String field_c;
 
     final static boolean a(int param0) {
+        boolean discarded$5 = false;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         int stackOut_9_0 = 0;
@@ -26,7 +27,7 @@ final class ep {
             return stackIn_11_0 != 0;
           }
         } else {
-          boolean discarded$5 = ep.a(78);
+          discarded$5 = ep.a(78);
           if (null != bq.field_h) {
             return true;
           } else {
@@ -48,15 +49,17 @@ final class ep {
 
     public static void b(int param0) {
         field_d = null;
+        if (param0 != 640) {
+            field_a = -116;
+            field_c = null;
+            field_b = null;
+            return;
+        }
         field_c = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Options Menu";
         field_b = "Click to hide the Production window.";
         field_c = "Secret achievement";

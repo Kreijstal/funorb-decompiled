@@ -12,17 +12,17 @@ final class hb {
 
     final String a(byte param0) {
         if (param0 >= -48) {
-            return null;
+            return (String) null;
         }
-        return ((hb) this).field_b;
+        return this.field_b;
     }
 
     final boolean a(int param0) {
         if (param0 != 0) {
-            ((hb) this).field_b = null;
-            return ((hb) this).field_g;
+            this.field_b = (String) null;
+            return this.field_g;
         }
-        return ((hb) this).field_g;
+        return this.field_g;
     }
 
     hb(String param0, boolean param1) {
@@ -55,11 +55,11 @@ final class hb {
         try {
           L0: {
             L1: {
-              ((hb) this).field_b = param0;
-              if (null != ((hb) this).field_b) {
+              this.field_b = param0;
+              if (null != this.field_b) {
                 break L1;
               } else {
-                ((hb) this).field_b = "";
+                this.field_b = "";
                 break L1;
               }
             }
@@ -81,11 +81,11 @@ final class hb {
                 break L2;
               }
             }
-            ((hb) this).field_g = stackIn_6_1 != 0;
-            if (0 != ((hb) this).field_b.length()) {
+            ((hb) (this)).field_g = stackIn_6_1 != 0;
+            if (0 != this.field_b.length()) {
               break L0;
             } else {
-              ((hb) this).field_g = false;
+              this.field_g = false;
               return;
             }
           }
@@ -93,23 +93,23 @@ final class hb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_0 = (RuntimeException) (var3);
             stackOut_9_1 = new StringBuilder().append("hb.<init>(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -117,7 +117,7 @@ final class hb {
               break L3;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
         }
     }
 
@@ -126,17 +126,62 @@ final class hb {
     }
 
     final static String c(int param0) {
-        String var1 = "";
-        if (!(ao.field_c == null)) {
-            var1 = ao.field_c.e(false);
+        String var1 = null;
+        var1 = "";
+        if (param0 != -8927) {
+          L0: {
+            hb.b(75);
+            if (ao.field_c != null) {
+              var1 = ao.field_c.e(false);
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          L1: {
+            if (0 != var1.length()) {
+              break L1;
+            } else {
+              var1 = bd.a(6);
+              break L1;
+            }
+          }
+          L2: {
+            if (var1.length() != 0) {
+              break L2;
+            } else {
+              var1 = pm.field_a;
+              break L2;
+            }
+          }
+          return var1;
+        } else {
+          L3: {
+            if (ao.field_c != null) {
+              var1 = ao.field_c.e(false);
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          L4: {
+            if (0 != var1.length()) {
+              break L4;
+            } else {
+              var1 = bd.a(6);
+              break L4;
+            }
+          }
+          L5: {
+            if (var1.length() != 0) {
+              break L5;
+            } else {
+              var1 = pm.field_a;
+              break L5;
+            }
+          }
+          return var1;
         }
-        if (0 == var1.length()) {
-            var1 = bd.a(6);
-        }
-        if (var1.length() == 0) {
-            var1 = pm.field_a;
-        }
-        return var1;
     }
 
     public static void b(int param0) {
@@ -144,13 +189,12 @@ final class hb {
         field_a = null;
         field_e = null;
         field_f = null;
+        if (param0 >= -107) {
+            field_f = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
         field_a = new of(1);
         field_f = "Please select an option in the '<%0>' row.";

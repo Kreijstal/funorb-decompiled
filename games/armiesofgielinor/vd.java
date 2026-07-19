@@ -18,10 +18,6 @@ final class vd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "vd.A(";
         field_b = new vh(256);
         field_a = "Are you sure you wish to restart this mission from the beginning?";

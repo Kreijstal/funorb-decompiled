@@ -7,7 +7,7 @@ final class bk extends mc {
 
     final void a(int param0) {
         int var2 = 43 / ((-80 - param0) / 42);
-        ((bk) this).field_t.a(false);
+        this.field_t.a(false);
     }
 
     final void b(int param0, int param1, int param2, int param3) {
@@ -15,18 +15,18 @@ final class bk extends mc {
           if (param1 != 0) {
             break L0;
           } else {
-            if (null != ((bk) this).field_q) {
-              ((bk) this).field_q.a(92, (shb) this, param0, param3, true);
+            if (null != this.field_q) {
+              this.field_q.a(92, (shb) (this), param0, param3, true);
               break L0;
             } else {
               if (param2 >= 47) {
-                if (((bk) this).field_h != 0) {
-                  if (((bk) this).field_f != 0) {
-                    msa.field_s.a(((bk) this).field_r + param3 - -((bk) this).field_f, (byte) 123, ((bk) this).field_h + ((bk) this).field_g + param0, param3 + ((bk) this).field_r, param0 - -((bk) this).field_g);
-                    ((bk) this).field_t.b(param0 + ((bk) this).field_g, param1, 63, param3 + ((bk) this).field_r);
-                    msa.field_s.a((byte) 92);
+                if (-1 != (this.field_h ^ -1)) {
+                  if (-1 == (this.field_f ^ -1)) {
                     return;
                   } else {
+                    msa.field_s.a(this.field_r + param3 - -this.field_f, (byte) 123, this.field_h + this.field_g + param0, param3 + this.field_r, param0 - -this.field_g);
+                    this.field_t.b(param0 + this.field_g, param1, 63, param3 + this.field_r);
+                    msa.field_s.a((byte) 92);
                     return;
                   }
                 } else {
@@ -39,13 +39,13 @@ final class bk extends mc {
           }
         }
         if (param2 >= 47) {
-          if (((bk) this).field_h != 0) {
-            if (((bk) this).field_f != 0) {
-              msa.field_s.a(((bk) this).field_r + param3 - -((bk) this).field_f, (byte) 123, ((bk) this).field_h + ((bk) this).field_g + param0, param3 + ((bk) this).field_r, param0 - -((bk) this).field_g);
-              ((bk) this).field_t.b(param0 + ((bk) this).field_g, param1, 63, param3 + ((bk) this).field_r);
-              msa.field_s.a((byte) 92);
+          if (-1 != (this.field_h ^ -1)) {
+            if (-1 == (this.field_f ^ -1)) {
               return;
             } else {
+              msa.field_s.a(this.field_r + param3 - -this.field_f, (byte) 123, this.field_h + this.field_g + param0, param3 + this.field_r, param0 - -this.field_g);
+              this.field_t.b(param0 + this.field_g, param1, 63, param3 + this.field_r);
+              msa.field_s.a((byte) 92);
               return;
             }
           } else {
@@ -93,13 +93,13 @@ final class bk extends mc {
               if (param6 < -17) {
                 break L1;
               } else {
-                ((bk) this).b(90, -56, -39, 108);
+                this.b(90, -56, -39, 108);
                 break L1;
               }
             }
             L2: {
               L3: {
-                if (!((bk) this).a(param2, param1, param0, param5, (byte) 22)) {
+                if (!this.a(param2, param1, param0, param5, (byte) 22)) {
                   break L3;
                 } else {
                   if (!super.a(param0, param1, param2, param3, param4, param5, (byte) -123)) {
@@ -121,23 +121,23 @@ final class bk extends mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var8 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var8;
+            stackOut_7_0 = (RuntimeException) (var8);
             stackOut_7_1 = new StringBuilder().append("bk.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param4 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L4;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -145,7 +145,7 @@ final class bk extends mc {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param5 + ',' + param6 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param5 + ',' + param6 + ')');
         }
         return stackIn_6_0 != 0;
     }
@@ -153,17 +153,13 @@ final class bk extends mc {
     bk(int param0, int param1, int param2, int param3, wwa param4, shb param5) {
         super(param0, param1, param2, param3, param4, (sba) null);
         try {
-            ((bk) this).field_t = param5;
+            this.field_t = param5;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "bk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_w = new faa(1048576);
         field_v = new jra();
     }

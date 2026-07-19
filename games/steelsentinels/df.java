@@ -10,18 +10,19 @@ final class df extends fe {
     byte[] field_L;
 
     final byte[] d(byte param0) {
+        int discarded$5 = 0;
         if (param0 < -49) {
-          if (((df) this).field_z) {
+          if (this.field_z) {
             throw new RuntimeException();
           } else {
-            return ((df) this).field_L;
+            return this.field_L;
           }
         } else {
-          int discarded$5 = df.h(-48);
-          if (((df) this).field_z) {
+          discarded$5 = df.h(-48);
+          if (this.field_z) {
             throw new RuntimeException();
           } else {
-            return ((df) this).field_L;
+            return this.field_L;
           }
         }
     }
@@ -50,7 +51,7 @@ final class df extends fe {
         try {
           L0: {
             L1: {
-              if (nj.field_Q < 10) {
+              if ((nj.field_Q ^ -1) > -11) {
                 L2: {
                   var3_int = 0;
                   if (dd.field_e) {
@@ -81,30 +82,30 @@ final class df extends fe {
                 }
               }
             }
-            var3_int = 0;
+            var3_int = 89 % ((param0 - -66) / 44);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("df.B(").append(-111).append(',');
+            stackOut_13_0 = (RuntimeException) (var3);
+            stackOut_13_1 = new StringBuilder().append("df.B(").append(param0).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -112,7 +113,7 @@ final class df extends fe {
               break L3;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ')');
         }
     }
 
@@ -122,31 +123,49 @@ final class df extends fe {
     }
 
     final static int a(int param0, int param1) {
-        if (param1 < 0) {
-          if (-65536 > param1) {
-            return vn.field_m[134217728 / -param1] + -2048;
+        if (param0 == -3720) {
+          if (-1 < (param1 ^ -1)) {
+            if (-65536 > param1) {
+              return vn.field_m[134217728 / -param1] + -2048;
+            } else {
+              return -vn.field_m[-param1 >> 206538725];
+            }
           } else {
-            return -vn.field_m[-param1 >> 5];
+            if (param1 <= 65536) {
+              return vn.field_m[param1 >> 1282746501];
+            } else {
+              return 2048 + -vn.field_m[134217728 / param1];
+            }
           }
         } else {
-          if (param1 <= 65536) {
-            return vn.field_m[param1 >> 5];
+          field_J = (String) null;
+          if (-1 < (param1 ^ -1)) {
+            if (-65536 > param1) {
+              return vn.field_m[134217728 / -param1] + -2048;
+            } else {
+              return -vn.field_m[-param1 >> 206538725];
+            }
           } else {
-            return 2048 + -vn.field_m[134217728 / param1];
+            if (param1 <= 65536) {
+              return vn.field_m[param1 >> 1282746501];
+            } else {
+              return 2048 + -vn.field_m[134217728 / param1];
+            }
           }
         }
     }
 
     final int g(int param0) {
+        int discarded$6 = 0;
         if (param0 == 16) {
-          if (((df) this).field_z) {
+          if (this.field_z) {
             return 0;
           } else {
             return 100;
           }
         } else {
-          int discarded$6 = ((df) this).g(65);
-          if (((df) this).field_z) {
+          discarded$6 = this.g(65);
+          if (this.field_z) {
             return 0;
           } else {
             return 100;
@@ -156,16 +175,15 @@ final class df extends fe {
 
     public static void i(int param0) {
         field_J = null;
+        if (param0 >= -20) {
+            field_K = true;
+        }
     }
 
     df() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = false;
         field_J = "You have <%0> unread messages!";
     }

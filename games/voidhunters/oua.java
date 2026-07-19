@@ -14,12 +14,8 @@ final class oua {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "oua.A(";
-        field_b = (dja) (Object) new osb();
+        field_b = (dja) ((Object) new osb());
         field_a = false;
     }
 }

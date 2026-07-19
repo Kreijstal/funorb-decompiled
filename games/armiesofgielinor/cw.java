@@ -22,7 +22,8 @@ final class cw {
         int var18 = 0;
         int stackIn_19_0 = 0;
         int stackIn_29_0 = 0;
-        int stackIn_38_0 = 0;
+        int stackIn_40_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_18_0 = 0;
         int stackOut_17_0 = 0;
@@ -31,8 +32,8 @@ final class cw {
         int stackOut_24_0 = 0;
         int stackOut_22_0 = 0;
         int stackOut_20_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_36_0 = 0;
+        int stackOut_38_0 = 0;
+        int stackOut_39_0 = 0;
         var18 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -41,7 +42,7 @@ final class cw {
               if (param3 <= -116) {
                 break L1;
               } else {
-                field_b = null;
+                field_b = (String) null;
                 break L1;
               }
             }
@@ -60,234 +61,245 @@ final class cw {
                     }
                   }
                 }
-                if (jf.field_C.field_T.field_B <= 0) {
+                if ((jf.field_C.field_T.field_B ^ -1) >= -1) {
                   break L2;
                 } else {
                   L4: {
-                    if (jf.field_C.field_T.field_s) {
-                      break L4;
-                    } else {
-                      if (jf.field_C.field_T.field_O != jf.field_C.field_q) {
-                        break L4;
-                      } else {
-                        if (jf.field_C.field_T.h(-13494)) {
-                          break L4;
+                    L5: {
+                      L6: {
+                        if (jf.field_C.field_T.field_s) {
+                          break L6;
                         } else {
-                          L5: {
-                            var7 = jf.field_C.field_T.B(3257);
-                            var8 = jf.field_C.field_T.l((byte) -79);
-                            var9 = jf.field_C.field_vb.field_n;
-                            var10 = jf.field_C.field_vb.field_b;
-                            if (jf.field_C.field_T.o(-28467)) {
-                              var9 = jf.field_C.field_T.a(false);
-                              var10 = jf.field_C.field_T.D(-65);
-                              break L5;
-                            } else {
-                              break L5;
-                            }
-                          }
-                          var11 = Math.abs(var9 - param4);
-                          var12 = Math.abs(var10 + -param5);
-                          if (var11 + var12 > var7) {
-                            break L4;
+                          if (jf.field_C.field_T.field_O != jf.field_C.field_q) {
+                            break L6;
                           } else {
-                            if (var8 > var11 - -var12) {
-                              break L4;
+                            if (jf.field_C.field_T.h(-13494)) {
+                              break L6;
                             } else {
-                              L6: {
-                                if (var12 + var11 != 1) {
-                                  stackOut_18_0 = 0;
-                                  stackIn_19_0 = stackOut_18_0;
-                                  break L6;
-                                } else {
-                                  stackOut_17_0 = 1;
-                                  stackIn_19_0 = stackOut_17_0;
-                                  break L6;
-                                }
-                              }
                               L7: {
-                                var13 = stackIn_19_0;
-                                if (var13 == 0) {
-                                  if ((bv.field_w.b(31, var10, var9, jf.field_C.field_T.field_O) & 2) == 0) {
-                                    if ((2 & bv.field_w.b(31, param5, param4, jf.field_C.field_T.field_O)) == 0) {
-                                      if (bv.field_w.field_j.a(var10, param4, var9, jf.field_C.field_T.x(-111), var7, param5, (byte) 62)) {
-                                        stackOut_27_0 = 1;
-                                        stackIn_29_0 = stackOut_27_0;
-                                        break L7;
-                                      } else {
-                                        stackOut_26_0 = 0;
-                                        stackIn_29_0 = stackOut_26_0;
-                                        break L7;
-                                      }
-                                    } else {
-                                      stackOut_24_0 = 0;
-                                      stackIn_29_0 = stackOut_24_0;
-                                      break L7;
-                                    }
-                                  } else {
-                                    stackOut_22_0 = 0;
-                                    stackIn_29_0 = stackOut_22_0;
-                                    break L7;
-                                  }
+                                var7 = jf.field_C.field_T.B(3257);
+                                var8 = jf.field_C.field_T.l((byte) -79);
+                                var9 = jf.field_C.field_vb.field_n;
+                                var10 = jf.field_C.field_vb.field_b;
+                                if (jf.field_C.field_T.o(-28467)) {
+                                  var9 = jf.field_C.field_T.a(false);
+                                  var10 = jf.field_C.field_T.D(-65);
+                                  break L7;
                                 } else {
-                                  stackOut_20_0 = 0;
-                                  stackIn_29_0 = stackOut_20_0;
                                   break L7;
                                 }
                               }
-                              L8: {
-                                var14 = stackIn_29_0;
-                                if (var13 != 0) {
-                                  break L8;
+                              var11 = Math.abs(var9 - param4);
+                              var12 = Math.abs(var10 + -param5);
+                              if (var11 + var12 > var7) {
+                                break L6;
+                              } else {
+                                if (var8 > var11 - -var12) {
+                                  break L6;
                                 } else {
-                                  if (var14 != 0) {
-                                    break L8;
-                                  } else {
-                                    break L4;
+                                  L8: {
+                                    if (var12 + var11 != 1) {
+                                      stackOut_18_0 = 0;
+                                      stackIn_19_0 = stackOut_18_0;
+                                      break L8;
+                                    } else {
+                                      stackOut_17_0 = 1;
+                                      stackIn_19_0 = stackOut_17_0;
+                                      break L8;
+                                    }
+                                  }
+                                  L9: {
+                                    var13 = stackIn_19_0;
+                                    if (var13 == 0) {
+                                      if ((bv.field_w.b(31, var10, var9, jf.field_C.field_T.field_O) & 2) == 0) {
+                                        if ((2 & bv.field_w.b(31, param5, param4, jf.field_C.field_T.field_O)) == 0) {
+                                          if (bv.field_w.field_j.a(var10, param4, var9, jf.field_C.field_T.x(-111), var7, param5, (byte) 62)) {
+                                            stackOut_27_0 = 1;
+                                            stackIn_29_0 = stackOut_27_0;
+                                            break L9;
+                                          } else {
+                                            stackOut_26_0 = 0;
+                                            stackIn_29_0 = stackOut_26_0;
+                                            break L9;
+                                          }
+                                        } else {
+                                          stackOut_24_0 = 0;
+                                          stackIn_29_0 = stackOut_24_0;
+                                          break L9;
+                                        }
+                                      } else {
+                                        stackOut_22_0 = 0;
+                                        stackIn_29_0 = stackOut_22_0;
+                                        break L9;
+                                      }
+                                    } else {
+                                      stackOut_20_0 = 0;
+                                      stackIn_29_0 = stackOut_20_0;
+                                      break L9;
+                                    }
+                                  }
+                                  L10: {
+                                    var14 = stackIn_29_0;
+                                    if (var13 != 0) {
+                                      break L10;
+                                    } else {
+                                      if (var14 != 0) {
+                                        break L10;
+                                      } else {
+                                        break L6;
+                                      }
+                                    }
+                                  }
+                                  var15 = 1;
+                                  L11: while (true) {
+                                    if ((var15 ^ -1) <= -41) {
+                                      break L6;
+                                    } else {
+                                      var16 = Math.abs(-(var15 * 2) + 40);
+                                      var17 = -20 + (param1 + var15);
+                                      qn.d(-40 + param2 + var16, var17, -1 + -var16 + param2 - -40, var17, 16711680, var6_int);
+                                      var15 += 2;
+                                      if (var18 != 0) {
+                                        break L5;
+                                      } else {
+                                        if (var18 == 0) {
+                                          continue L11;
+                                        } else {
+                                          break L6;
+                                        }
+                                      }
+                                    }
                                   }
                                 }
                               }
-                              var15 = 1;
-                              L9: while (true) {
-                                if (var15 >= 40) {
-                                  break L4;
-                                } else {
-                                  var16 = Math.abs(-(var15 * 2) + 40);
-                                  var17 = -20 + (param1 + var15);
-                                  qn.d(-40 + param2 + var16, var17, -1 + -var16 + param2 - -40, var17, 16711680, var6_int);
-                                  var15 += 2;
-                                  continue L9;
-                                }
-                              }
                             }
                           }
                         }
                       }
+                      if (jf.field_C.field_T.field_s) {
+                        break L5;
+                      } else {
+                        stackOut_38_0 = 3;
+                        stackIn_40_0 = stackOut_38_0;
+                        break L4;
+                      }
                     }
+                    stackOut_39_0 = 1;
+                    stackIn_40_0 = stackOut_39_0;
+                    break L4;
                   }
-                  L10: {
-                    if (jf.field_C.field_T.field_s) {
-                      stackOut_37_0 = 1;
-                      stackIn_38_0 = stackOut_37_0;
-                      break L10;
-                    } else {
-                      stackOut_36_0 = 3;
-                      stackIn_38_0 = stackOut_36_0;
-                      break L10;
-                    }
-                  }
-                  L11: {
-                    var7 = stackIn_38_0;
+                  L12: {
+                    var7 = stackIn_40_0;
                     var8 = jf.field_C.field_vb.c(27732);
                     if ((jf.field_C.field_vb.field_e[param0] & var7) == 0) {
-                      break L11;
+                      break L12;
                     } else {
-                      L12: {
+                      L13: {
                         if (jf.field_C.field_T.field_s) {
-                          break L12;
+                          break L13;
                         } else {
                           if (jf.field_C.field_vb.field_q[param0] <= var8) {
-                            break L11;
-                          } else {
                             break L12;
+                          } else {
+                            break L13;
                           }
                         }
                       }
-                      L13: {
-                        L14: {
+                      L14: {
+                        L15: {
                           if (param5 == 0) {
-                            break L14;
+                            break L15;
                           } else {
-                            L15: {
+                            L16: {
                               if (var8 < jf.field_C.field_vb.field_q[-bv.field_w.field_v + param0]) {
-                                break L15;
+                                break L16;
                               } else {
                                 if (!jf.field_C.field_T.field_s) {
-                                  break L13;
+                                  break L14;
                                 } else {
-                                  break L15;
+                                  break L16;
                                 }
                               }
                             }
-                            if ((var7 & jf.field_C.field_vb.field_e[param0 + -ks.field_y]) != 0) {
-                              break L13;
-                            } else {
+                            if (-1 != (var7 & jf.field_C.field_vb.field_e[param0 + -ks.field_y] ^ -1)) {
                               break L14;
+                            } else {
+                              break L15;
                             }
                           }
                         }
                         qn.d(-40 + param2, param1, param2, -20 + param1, 16711680, var6_int);
-                        break L13;
+                        break L14;
                       }
-                      L16: {
-                        L17: {
+                      L17: {
+                        L18: {
                           if (param5 == -1 + ef.field_c) {
-                            break L17;
+                            break L18;
                           } else {
-                            L18: {
+                            L19: {
                               if (var8 < jf.field_C.field_vb.field_q[ks.field_y + param0]) {
-                                break L18;
+                                break L19;
                               } else {
                                 if (!jf.field_C.field_T.field_s) {
-                                  break L16;
+                                  break L17;
                                 } else {
-                                  break L18;
+                                  break L19;
                                 }
                               }
                             }
                             if ((jf.field_C.field_vb.field_e[ks.field_y + param0] & var7) == 0) {
-                              break L17;
+                              break L18;
                             } else {
-                              break L16;
+                              break L17;
                             }
                           }
                         }
                         qn.d(40 + param2, param1, param2, param1 - -20, 16711680, var6_int);
-                        break L16;
+                        break L17;
                       }
-                      L19: {
-                        L20: {
+                      L20: {
+                        L21: {
                           if (0 == param4) {
-                            break L20;
+                            break L21;
                           } else {
-                            L21: {
+                            L22: {
                               if (jf.field_C.field_vb.field_q[-1 + param0] > var8) {
-                                break L21;
+                                break L22;
                               } else {
                                 if (!jf.field_C.field_T.field_s) {
-                                  break L19;
+                                  break L20;
                                 } else {
-                                  break L21;
+                                  break L22;
                                 }
                               }
                             }
                             if ((var7 & jf.field_C.field_vb.field_e[param0 - 1]) != 0) {
-                              break L19;
-                            } else {
                               break L20;
+                            } else {
+                              break L21;
                             }
                           }
                         }
                         qn.d(param2 + -40, param1, param2, 20 + param1, 16711680, var6_int);
-                        break L19;
+                        break L20;
                       }
-                      L22: {
+                      L23: {
                         if (param4 == -1 + ks.field_y) {
-                          break L22;
+                          break L23;
                         } else {
-                          L23: {
+                          L24: {
                             if (var8 < jf.field_C.field_vb.field_q[1 + param0]) {
-                              break L23;
+                              break L24;
                             } else {
                               if (!jf.field_C.field_T.field_s) {
                                 break L2;
                               } else {
-                                break L23;
+                                break L24;
                               }
                             }
                           }
                           if ((var7 & jf.field_C.field_vb.field_e[param0 - -1]) == 0) {
-                            break L22;
+                            break L23;
                           } else {
                             break L2;
                           }
@@ -297,29 +309,35 @@ final class cw {
                       break L2;
                     }
                   }
-                  return;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
               }
             }
+            decompiledRegionSelector0 = 0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var6, "cw.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.a((Throwable) ((Object) var6), "cw.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(byte param0) {
+        if (param0 > -91) {
+            cw.a(-12, 36, -105, 64, -39, -61);
+        }
         field_b = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Options";
         field_a = "This unit has an attack range of <%0> to <%1>";
     }

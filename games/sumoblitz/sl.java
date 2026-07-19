@@ -20,51 +20,82 @@ final class sl extends ln implements fk {
     public static void b(int param0) {
         field_e = null;
         field_c = null;
+        if (param0 >= -83) {
+            field_e = (String) null;
+        }
     }
 
     final static boolean a(byte param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
+        int stackIn_3_0 = 0;
+        boolean stackIn_7_0 = false;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_6_0 = 0;
+        int stackOut_11_0 = 0;
+        boolean stackOut_6_0 = false;
+        int stackOut_8_0 = 0;
+        int stackOut_2_0 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
-            var2_int = 0;
-            L1: while (true) {
-              if (var2_int >= param1) {
-                stackOut_9_0 = 1;
-                stackIn_10_0 = stackOut_9_0;
-                break L0;
-              } else {
-                if (up.field_g[var2_int]) {
-                  var2_int++;
-                  continue L1;
-                } else {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  return stackIn_7_0 != 0;
+            if (param0 == 90) {
+              var2_int = 0;
+              L1: while (true) {
+                L2: {
+                  if (var2_int >= param1) {
+                    stackOut_11_0 = 1;
+                    stackIn_12_0 = stackOut_11_0;
+                    break L2;
+                  } else {
+                    stackOut_6_0 = up.field_g[var2_int];
+                    stackIn_12_0 = stackOut_6_0 ? 1 : 0;
+                    stackIn_7_0 = stackOut_6_0;
+                    if (var3 != 0) {
+                      break L2;
+                    } else {
+                      if (stackIn_7_0) {
+                        var2_int++;
+                        continue L1;
+                      } else {
+                        stackOut_8_0 = 0;
+                        stackIn_9_0 = stackOut_8_0;
+                        decompiledRegionSelector0 = 2;
+                        break L0;
+                      }
+                    }
+                  }
                 }
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var2, "sl.C(" + 90 + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) var2), "sl.C(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_10_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_12_0 != 0;
+          } else {
+            return stackIn_9_0 != 0;
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[]{1, 1, 1, 10, 3, 1, 1, 1, 2, 1, 5, 2, 3, 5, 2, 3, 1, 2, 2, 3, 2, 3, 1, 2, 3, 2, 3, 10};
         field_d = false;
         field_e = "Large screen sizes and high resolutions may cause the game to run slowly. If so, try using lower resolutions or screen sizes.";

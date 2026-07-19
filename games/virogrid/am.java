@@ -17,7 +17,7 @@ final class am {
         int stackOut_2_0 = 0;
         if (param0 != -56) {
           L0: {
-            field_d = null;
+            field_d = (String) null;
             if (param1 != (-param1 & param1)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
@@ -46,11 +46,12 @@ final class am {
     }
 
     final static void a(byte param0) {
+        boolean discarded$2 = false;
         if (ih.field_b == null) {
           return;
         } else {
           L0: {
-            af.a((byte) -67, (java.awt.Canvas) (Object) ih.field_b);
+            af.a((byte) -67, ih.field_b);
             ih.field_b.a(109, ei.field_c);
             ih.field_b = null;
             if (null != kk.field_q) {
@@ -62,7 +63,7 @@ final class am {
           }
           fi.field_v.requestFocus();
           if (param0 != -16) {
-            boolean discarded$2 = am.a((byte) -28, 121);
+            discarded$2 = am.a((byte) -28, 121);
             return;
           } else {
             return;
@@ -71,7 +72,7 @@ final class am {
     }
 
     public static void b(byte param0) {
-        int var1 = 0;
+        int var1 = 106 % ((51 - param0) / 33);
         field_c = null;
         field_a = null;
         field_b = null;
@@ -80,10 +81,6 @@ final class am {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Unable to delete friend - system busy";
         field_a = "Some players haven't unlocked the currently selected game options.<br>Please see the player list on the left for details.";
         field_d = "You appear to be telling someone your password - please don't!";

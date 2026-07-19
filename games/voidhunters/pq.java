@@ -12,13 +12,13 @@ final class pq {
           return;
         } else {
           L0: {
-            if (field_b <= 0) {
+            if (field_b <= param0) {
               param1.w(false);
               break L0;
             } else {
               var2 = new naa();
               var2.field_d = param1;
-              field_a.b(-10258, (ksa) (Object) var2);
+              field_a.b(param0 + -10258, var2);
               break L0;
             }
           }
@@ -28,24 +28,49 @@ final class pq {
 
     final synchronized static void b(byte param0) {
         field_b = field_b + 1;
+        if (param0 == -76) {
+            return;
+        }
+        field_b = -71;
     }
 
     final synchronized static void a(boolean param0) {
-        field_b = field_b - 1;
-        if (0 != field_b) {
+        if (param0) {
+          field_b = field_b - 1;
+          if (0 != field_b) {
             return;
+          } else {
+            pq.a((byte) -128);
+            return;
+          }
+        } else {
+          field_c = false;
+          field_b = field_b - 1;
+          if (0 != field_b) {
+            return;
+          } else {
+            pq.a((byte) -128);
+            return;
+          }
         }
-        pq.a((byte) -128);
     }
 
     final synchronized static void a(byte param0) {
         naa var1 = null;
-        L0: while (true) {
-          var1 = (naa) (Object) field_a.a(true);
+        L0: {
+          if (param0 == -128) {
+            break L0;
+          } else {
+            field_c = true;
+            break L0;
+          }
+        }
+        L1: while (true) {
+          var1 = (naa) ((Object) field_a.a(true));
           if (var1 != null) {
             var1.field_d.w(true);
             var1.b(-3846);
-            continue L0;
+            continue L1;
           } else {
             return;
           }
@@ -53,10 +78,6 @@ final class pq {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0;
         field_c = false;
         field_a = new ij();

@@ -12,32 +12,39 @@ final class tj {
     va field_d;
 
     final static java.awt.Container b(int param0) {
-        if (null != rla.field_x) {
-            return (java.awt.Container) (Object) rla.field_x;
+        if (null == rla.field_x) {
+          if (param0 != 25128) {
+            field_c = -12;
+            return (java.awt.Container) ((Object) di.a(param0 + -25099));
+          } else {
+            return (java.awt.Container) ((Object) di.a(param0 + -25099));
+          }
+        } else {
+          return (java.awt.Container) ((Object) rla.field_x);
         }
-        return (java.awt.Container) (Object) di.a(29);
     }
 
     public static void a(int param0) {
+        if (param0 != 360) {
+            field_a = 58;
+            field_h = null;
+            return;
+        }
         field_h = null;
     }
 
     tj(va param0, int param1, int param2, int param3) {
         try {
-            ((tj) this).field_g = (byte)param3;
-            ((tj) this).field_e = (short)param1;
-            ((tj) this).field_d = param0;
-            ((tj) this).field_f = (byte)param2;
+            this.field_g = (byte)param3;
+            this.field_e = (short)param1;
+            this.field_d = param0;
+            this.field_f = (byte)param2;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
         field_b = 360;
         field_a = 4;

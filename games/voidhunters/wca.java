@@ -56,7 +56,7 @@ final class wca extends mfb {
 
     final int c(int param0) {
         if (param0 != 0) {
-            field_b = null;
+            field_b = (dla) null;
             return nnb.field_e;
         }
         return nnb.field_e;
@@ -64,7 +64,7 @@ final class wca extends mfb {
 
     final int g(byte param0) {
         if (param0 >= -12) {
-            field_c = null;
+            field_c = (String) null;
             return itb.field_o;
         }
         return itb.field_o;
@@ -78,8 +78,9 @@ final class wca extends mfb {
     }
 
     final int b(boolean param0) {
+        int discarded$0 = 0;
         if (param0) {
-            int discarded$0 = ((wca) this).g(-21);
+            discarded$0 = this.g(-21);
             return fj.field_b;
         }
         return fj.field_b;
@@ -93,10 +94,6 @@ final class wca extends mfb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Scale down map zone";
     }
 }

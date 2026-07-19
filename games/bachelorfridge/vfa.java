@@ -19,16 +19,19 @@ final class vfa extends td {
 
     final static jla a(int param0, int param1) {
         if (!(param1 != 5)) {
-            return (jla) (Object) new eca();
+            return (jla) ((Object) new eca());
         }
         if (!(7 != param1)) {
-            return (jla) (Object) new ina(false);
+            return (jla) ((Object) new ina(false));
         }
-        if (!(param1 != 8)) {
-            return (jla) (Object) new ina(true);
+        if (param0 != 19341) {
+            field_p = (vr) null;
+        }
+        if (!((param1 ^ -1) != -9)) {
+            return (jla) ((Object) new ina(true));
         }
         if (param1 == 3) {
-            return (jla) (Object) new dl();
+            return (jla) ((Object) new dl());
         }
         return new jla(param1);
     }
@@ -36,10 +39,10 @@ final class vfa extends td {
     vfa(int param0, aga param1, int param2, int param3) {
         super(param0, param1);
         try {
-            ((vfa) this).field_k = param2;
-            ((vfa) this).field_n = param3;
+            this.field_k = param2;
+            this.field_n = param3;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vfa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "vfa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -62,8 +65,6 @@ final class vfa extends td {
         int[][] var19 = null;
         int[][] var21 = null;
         int[][] var23 = null;
-        int[][] var24 = null;
-        int[][] var25 = null;
         bea stackIn_24_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -86,9 +87,9 @@ final class vfa extends td {
         try {
           L0: {
             L1: {
-              var17 = ((vfa) this).field_h.a(93, param0);
-              var4 = new bea(((vfa) this).field_g, new nq(var17));
-              var4.field_t = ((vfa) this).field_n;
+              var17 = this.field_h.a(93, param0);
+              var4 = new bea(this.field_g, new nq(var17));
+              var4.field_t = this.field_n;
               if (param1 == 3) {
                 break L1;
               } else {
@@ -96,12 +97,12 @@ final class vfa extends td {
                 break L1;
               }
             }
-            var4.field_q = ((vfa) this).field_k;
-            var24 = var4.c(false);
+            var4.field_q = this.field_k;
+            var23 = var4.c(false);
             var6 = 17;
             var7 = 17;
-            var8 = var6 + -1 >> 1;
-            var9 = -1 + var7 >> 1;
+            var8 = var6 + -1 >> -26217023;
+            var9 = -1 + var7 >> 528665089;
             var10 = 0;
             var11_int = 0;
             L2: while (true) {
@@ -110,27 +111,25 @@ final class vfa extends td {
                   if (var10 >= 12) {
                     break L3;
                   } else {
-                    var25 = new int[var10][2];
-                    var23 = var25;
-                    var21 = var23;
+                    var21 = new int[var10][2];
                     var19 = var21;
                     var11 = var19;
                     var16 = 0;
                     var12 = var16;
                     L4: while (true) {
-                      if (var16 >= var25.length) {
+                      if (var16 >= var21.length) {
                         var4.field_r = var11;
                         break L3;
                       } else {
-                        var25[var16][0] = var4.field_r[var16][0];
-                        var25[var16][1] = var4.field_r[var16][1];
+                        var21[var16][0] = var4.field_r[var16][0];
+                        var21[var16][1] = var4.field_r[var16][1];
                         var16++;
                         continue L4;
                       }
                     }
                   }
                 }
-                stackOut_23_0 = (bea) var4;
+                stackOut_23_0 = (bea) (var4);
                 stackIn_24_0 = stackOut_23_0;
                 break L0;
               } else {
@@ -141,12 +140,12 @@ final class vfa extends td {
                     continue L2;
                   } else {
                     L6: {
-                      if (var24[var11_int][var12] != 1) {
+                      if (var23[var11_int][var12] != 1) {
                         break L6;
                       } else {
-                        var13 = -var8 + (var11_int + ((vfa) this).field_k);
-                        var14 = ((vfa) this).field_n + (var12 + -var9);
-                        if (var13 < 0) {
+                        var13 = -var8 + (var11_int + this.field_k);
+                        var14 = this.field_n + (var12 + -var9);
+                        if ((var13 ^ -1) > -1) {
                           break L6;
                         } else {
                           if (param0.field_z <= var13) {
@@ -187,23 +186,23 @@ final class vfa extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var3;
+            stackOut_25_0 = (RuntimeException) (var3);
             stackOut_25_1 = new StringBuilder().append("vfa.A(");
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L7;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -211,9 +210,9 @@ final class vfa extends td {
               break L7;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ')');
         }
-        return (ii) (Object) stackIn_24_0;
+        return (ii) ((Object) stackIn_24_0);
     }
 
     final static fea a(String param0, vr param1, int param2, String param3, vr param4) {
@@ -297,23 +296,23 @@ final class vfa extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var5;
+            stackOut_2_0 = (RuntimeException) (var5);
             stackOut_2_1 = new StringBuilder().append("vfa.C(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -322,23 +321,23 @@ final class vfa extends td {
             }
           }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
             stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -347,23 +346,23 @@ final class vfa extends td {
             }
           }
           L3: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
             stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param2).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param3 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -372,23 +371,23 @@ final class vfa extends td {
             }
           }
           L4: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
             stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param4 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -396,16 +395,12 @@ final class vfa extends td {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
         return stackIn_1_0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "All players have left <%0>'s game.";
         field_q = "Invalid password.";
     }

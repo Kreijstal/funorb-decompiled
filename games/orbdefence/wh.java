@@ -22,6 +22,7 @@ final class wh {
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
@@ -84,34 +85,142 @@ final class wh {
               }
             }
             L5: {
-              var10 = stackIn_13_0;
-              if (ul.field_i > param2) {
+              L6: {
+                var10 = stackIn_13_0;
+                if (ul.field_i > param2) {
+                  break L6;
+                } else {
+                  if (param2 < ul.field_e) {
+                    var11 = param2 + var8 * ul.field_f;
+                    var12 = 1 - -var10 + -var8 >> 2046957089;
+                    L7: while (true) {
+                      var12--;
+                      if ((var12 ^ -1) > -1) {
+                        break L6;
+                      } else {
+                        ul.field_b[var11] = 16777215;
+                        var11 = var11 + 2 * ul.field_f;
+                        if (var13 != 0) {
+                          break L5;
+                        } else {
+                          if (var13 == 0) {
+                            continue L7;
+                          } else {
+                            break L6;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    break L6;
+                  }
+                }
+              }
+              if (!param1) {
                 break L5;
               } else {
-                if (param2 < ul.field_e) {
-                  var11 = param2 + var8 * ul.field_f;
-                  var12 = 1 - -var10 + -var8 >> 1;
-                  L6: while (true) {
+                decompiledRegionSelector0 = 0;
+                break L0;
+              }
+            }
+            L8: {
+              L9: {
+                L10: {
+                  if (ul.field_d > param4) {
+                    break L10;
+                  } else {
+                    if (ul.field_a > var6) {
+                      var11 = var7 + param4 * ul.field_f;
+                      var12 = var9 + 1 + -var7 >> -191030719;
+                      L11: while (true) {
+                        var12--;
+                        if (-1 < (var12 ^ -1)) {
+                          break L10;
+                        } else {
+                          ul.field_b[var11] = 16777215;
+                          var11 += 2;
+                          if (var13 != 0) {
+                            break L9;
+                          } else {
+                            if (var13 == 0) {
+                              continue L11;
+                            } else {
+                              break L10;
+                            }
+                          }
+                        }
+                      }
+                    } else {
+                      break L10;
+                    }
+                  }
+                }
+                if (var5_int < ul.field_i) {
+                  break L9;
+                } else {
+                  if (var5_int >= ul.field_e) {
+                    break L9;
+                  } else {
+                    var11 = ((var5_int - param2 & 1) + var8) * ul.field_f - -var5_int;
+                    var12 = -var8 + var10 + 1 >> 462028897;
+                    L12: while (true) {
+                      var12--;
+                      if ((var12 ^ -1) > -1) {
+                        break L9;
+                      } else {
+                        ul.field_b[var11] = 16777215;
+                        var11 = var11 + ul.field_f * 2;
+                        if (var13 != 0) {
+                          break L8;
+                        } else {
+                          if (var13 == 0) {
+                            continue L12;
+                          } else {
+                            break L9;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              if (ul.field_d > param4) {
+                break L8;
+              } else {
+                if (var6 < ul.field_a) {
+                  var11 = ul.field_f * var6 + (var7 - -(1 & var6 - param4));
+                  var12 = -var7 + (1 - -var9) >> -553679807;
+                  L13: while (true) {
                     var12--;
                     if (var12 < 0) {
-                      break L5;
+                      break L8;
                     } else {
                       ul.field_b[var11] = 16777215;
-                      var11 = var11 + 2 * ul.field_f;
-                      continue L6;
+                      var11 += 2;
+                      if (var13 == 0) {
+                        continue L13;
+                      } else {
+                        return;
+                      }
                     }
                   }
                 } else {
-                  break L5;
+                  return;
                 }
               }
             }
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var5, "wh.B(" + param0 + ',' + false + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw dd.a((Throwable) ((Object) var5), "wh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -119,15 +228,11 @@ final class wh {
         field_d = null;
         field_b = null;
         field_a = null;
-        int var1 = 0;
+        int var1 = 0 % ((param0 - -53) / 61);
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "start free game";
         field_a = new int[]{8, 5, 8, 10, 8, 8, 8, 10, 12, 8, 8, 6};
         field_c = new tl();

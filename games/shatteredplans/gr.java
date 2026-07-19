@@ -83,7 +83,7 @@ final class gr extends oh {
                   if (var8 <= var9) {
                     continue L1;
                   } else {
-                    gf.field_h[var10] = we.a(16711935, we.a(16711935, gf.field_h[var10]) * var4_int + var5 * param0 >>> 8) - -(we.a(we.a(65280, gf.field_h[var10]) * var4_int + var6 * param0, 16711680) >>> 8);
+                    gf.field_h[var10] = we.a(16711935, we.a(16711935, gf.field_h[var10]) * var4_int + var5 * param0 >>> 900751112) - -(we.a(we.a(65280, gf.field_h[var10]) * var4_int + var6 * param0, 16711680) >>> -724347832);
                     var10 += 8;
                     var9 += 8;
                     continue L4;
@@ -96,23 +96,23 @@ final class gr extends oh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var4;
+            stackOut_14_0 = (RuntimeException) (var4);
             stackOut_14_1 = new StringBuilder().append("gr.B(").append(param0).append(',').append(param1).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -120,11 +120,17 @@ final class gr extends oh {
               break L5;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ',' + param3 + ')');
+          throw r.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param3 + ')');
         }
     }
 
     public static void a(int param0) {
+        bi discarded$0 = null;
+        if (param0 >= -25) {
+            discarded$0 = gr.a((byte) -99, 47, -15);
+            field_p = null;
+            return;
+        }
         field_p = null;
     }
 
@@ -146,7 +152,7 @@ final class gr extends oh {
             }
           }
         } else {
-          field_p = null;
+          field_p = (pf) null;
           L1: while (true) {
             if (var3.field_B.length <= var4) {
               return var3;

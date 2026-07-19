@@ -17,8 +17,11 @@ final class cm {
 
     final static ji a(byte param0) {
         String var1 = we.p((byte) 115);
+        if (param0 != -8) {
+            field_a = (String) null;
+        }
         if (var1 != null) {
-            if (var1.indexOf('@') >= 0) {
+            if (-1 >= (var1.indexOf('@') ^ -1)) {
                 var1 = "";
             }
         }
@@ -26,10 +29,6 @@ final class cm {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_b = new km[255];
         for (var0 = 0; var0 < field_b.length; var0++) {

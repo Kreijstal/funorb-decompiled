@@ -10,24 +10,30 @@ final class ok {
     public static void a(int param0) {
         field_d = null;
         field_b = null;
-        int var1 = -1;
+        int var1 = -67 % ((param0 - 81) / 38);
         field_a = null;
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5, int param6, int param7, boolean param8, int param9, int param10, boolean param11, int param12, int param13) {
         ko.field_S = null;
         hm.g(74);
-        param11 = ve.a(14, 15, 11, 21911, param11, 0, 13);
-        in.a(param8, param3, 16777215, param11, true, 11, param10, 16777215, (byte) -66, param4);
-        ho.a(24285, param3, param10);
-        ko.a(param11, param10, 0, true);
+        if (param7 != 12423) {
+          field_a = (String) null;
+          param11 = ve.a(param1, param0, param9, param7 + 9488, param11, param12, param2);
+          in.a(param8, param3, param6, param11, param5, param9, param10, param13, (byte) -66, param4);
+          ho.a(24285, param3, param10);
+          ko.a(param11, param10, param12, true);
+          return;
+        } else {
+          param11 = ve.a(param1, param0, param9, param7 + 9488, param11, param12, param2);
+          in.a(param8, param3, param6, param11, param5, param9, param10, param13, (byte) -66, param4);
+          ho.a(24285, param3, param10);
+          ko.a(param11, param10, param12, true);
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Exploiting a bug";
         field_d = new int[256];
         field_c = 0;

@@ -36,13 +36,13 @@ abstract class qd extends hr {
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
 
     final int c() {
-        return ((qd) this).field_z;
+        return this.field_z;
     }
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
-        if (!((qd) this).field_B.f()) {
+        if (!this.field_B.f()) {
           if (this.a(param0, param1, param2, param3, param4, param5)) {
             field_u = param7;
             if (param6 != 1) {
@@ -73,15 +73,15 @@ abstract class qd extends hr {
                               if (param8 != 2) {
                                 break L1;
                               } else {
-                                ((qd) this).b(2, 2);
+                                this.b(2, 2);
                                 return;
                               }
                             } else {
-                              ((qd) this).b(2, 1);
+                              this.b(2, 1);
                               return;
                             }
                           } else {
-                            ((qd) this).b(2, 0);
+                            this.b(2, 0);
                             return;
                           }
                         }
@@ -91,15 +91,15 @@ abstract class qd extends hr {
                             if (param8 != 2) {
                               break L1;
                             } else {
-                              ((qd) this).b(3, 2);
+                              this.b(3, 2);
                               return;
                             }
                           } else {
-                            ((qd) this).b(3, 1);
+                            this.b(3, 1);
                             return;
                           }
                         } else {
-                          ((qd) this).b(3, 0);
+                          this.b(3, 0);
                           return;
                         }
                       }
@@ -109,15 +109,15 @@ abstract class qd extends hr {
                           if (param8 != 2) {
                             break L1;
                           } else {
-                            ((qd) this).b(0, 2);
+                            this.b(0, 2);
                             return;
                           }
                         } else {
-                          ((qd) this).b(0, 1);
+                          this.b(0, 1);
                           return;
                         }
                       } else {
-                        ((qd) this).b(0, 0);
+                        this.b(0, 0);
                         return;
                       }
                     }
@@ -127,17 +127,17 @@ abstract class qd extends hr {
                   if (param8 != 0) {
                     if (param8 != 1) {
                       if (param8 == 2) {
-                        ((qd) this).b(1, 2);
+                        this.b(1, 2);
                         return;
                       } else {
                         return;
                       }
                     } else {
-                      ((qd) this).b(1, 1);
+                      this.b(1, 1);
                       return;
                     }
                   } else {
-                    ((qd) this).b(1, 0);
+                    this.b(1, 0);
                     return;
                   }
                 }
@@ -152,17 +152,17 @@ abstract class qd extends hr {
                         if (param8 != 0) {
                           if (param8 != 1) {
                             if (param8 == 2) {
-                              ((qd) this).b(2, 2);
+                              this.b(2, 2);
                               return;
                             } else {
                               return;
                             }
                           } else {
-                            ((qd) this).b(2, 1);
+                            this.b(2, 1);
                             return;
                           }
                         } else {
-                          ((qd) this).b(2, 0);
+                          this.b(2, 0);
                           return;
                         }
                       } else {
@@ -172,17 +172,17 @@ abstract class qd extends hr {
                       if (param8 != 0) {
                         if (param8 != 1) {
                           if (param8 == 2) {
-                            ((qd) this).b(3, 2);
+                            this.b(3, 2);
                             return;
                           } else {
                             return;
                           }
                         } else {
-                          ((qd) this).b(3, 1);
+                          this.b(3, 1);
                           return;
                         }
                       } else {
-                        ((qd) this).b(3, 0);
+                        this.b(3, 0);
                         return;
                       }
                     }
@@ -190,17 +190,17 @@ abstract class qd extends hr {
                     if (param8 != 0) {
                       if (param8 != 1) {
                         if (param8 == 2) {
-                          ((qd) this).b(0, 2);
+                          this.b(0, 2);
                           return;
                         } else {
                           return;
                         }
                       } else {
-                        ((qd) this).b(0, 1);
+                        this.b(0, 1);
                         return;
                       }
                     } else {
-                      ((qd) this).b(0, 0);
+                      this.b(0, 0);
                       return;
                     }
                   }
@@ -210,15 +210,15 @@ abstract class qd extends hr {
                       if (param8 != 2) {
                         return;
                       } else {
-                        ((qd) this).b(1, 2);
+                        this.b(1, 2);
                         return;
                       }
                     } else {
-                      ((qd) this).b(1, 1);
+                      this.b(1, 1);
                       return;
                     }
                   } else {
-                    ((qd) this).b(1, 0);
+                    this.b(1, 0);
                     return;
                   }
                 }
@@ -231,17 +231,17 @@ abstract class qd extends hr {
                       if (param8 != 0) {
                         if (param8 != 1) {
                           if (param8 == 2) {
-                            ((qd) this).b(2, 2);
+                            this.b(2, 2);
                             return;
                           } else {
                             return;
                           }
                         } else {
-                          ((qd) this).b(2, 1);
+                          this.b(2, 1);
                           return;
                         }
                       } else {
-                        ((qd) this).b(2, 0);
+                        this.b(2, 0);
                         return;
                       }
                     } else {
@@ -251,17 +251,17 @@ abstract class qd extends hr {
                     if (param8 != 0) {
                       if (param8 != 1) {
                         if (param8 == 2) {
-                          ((qd) this).b(3, 2);
+                          this.b(3, 2);
                           return;
                         } else {
                           return;
                         }
                       } else {
-                        ((qd) this).b(3, 1);
+                        this.b(3, 1);
                         return;
                       }
                     } else {
-                      ((qd) this).b(3, 0);
+                      this.b(3, 0);
                       return;
                     }
                   }
@@ -271,15 +271,15 @@ abstract class qd extends hr {
                       if (param8 != 2) {
                         return;
                       } else {
-                        ((qd) this).b(0, 2);
+                        this.b(0, 2);
                         return;
                       }
                     } else {
-                      ((qd) this).b(0, 1);
+                      this.b(0, 1);
                       return;
                     }
                   } else {
-                    ((qd) this).b(0, 0);
+                    this.b(0, 0);
                     return;
                   }
                 }
@@ -289,15 +289,15 @@ abstract class qd extends hr {
                     if (param8 != 2) {
                       return;
                     } else {
-                      ((qd) this).b(1, 2);
+                      this.b(1, 2);
                       return;
                     }
                   } else {
-                    ((qd) this).b(1, 1);
+                    this.b(1, 1);
                     return;
                   }
                 } else {
-                  ((qd) this).b(1, 0);
+                  this.b(1, 0);
                   return;
                 }
               }
@@ -311,11 +311,11 @@ abstract class qd extends hr {
     }
 
     final int d() {
-        return ((qd) this).field_A + ((qd) this).field_q + ((qd) this).field_k;
+        return this.field_A + this.field_q + this.field_k;
     }
 
     final int b() {
-        return ((qd) this).field_t + ((qd) this).field_z + ((qd) this).field_y;
+        return this.field_t + this.field_z + this.field_y;
     }
 
     abstract void b(int param0, int param1);
@@ -336,21 +336,21 @@ abstract class qd extends hr {
         float var19 = 0.0f;
         float var20 = 0.0f;
         L0: {
-          var7 = ((qd) this).field_t + ((qd) this).field_z + ((qd) this).field_y;
-          var8 = ((qd) this).field_A + ((qd) this).field_q + ((qd) this).field_k;
-          if (var7 != ((qd) this).field_z) {
+          var7 = this.field_t + this.field_z + this.field_y;
+          var8 = this.field_A + this.field_q + this.field_k;
+          if (var7 != this.field_z) {
             var9 = (param2 - param0) / (float)var7;
             var10 = (param3 - param1) / (float)var7;
             var11 = (param4 - param0) / (float)var8;
             var12 = (param5 - param1) / (float)var8;
-            var13 = var11 * (float)((qd) this).field_A;
-            var14 = var12 * (float)((qd) this).field_A;
-            var15 = var9 * (float)((qd) this).field_t;
-            var16 = var10 * (float)((qd) this).field_t;
-            var17 = -var9 * (float)((qd) this).field_y;
-            var18 = -var10 * (float)((qd) this).field_y;
-            var19 = -var11 * (float)((qd) this).field_k;
-            var20 = -var12 * (float)((qd) this).field_k;
+            var13 = var11 * (float)this.field_A;
+            var14 = var12 * (float)this.field_A;
+            var15 = var9 * (float)this.field_t;
+            var16 = var10 * (float)this.field_t;
+            var17 = -var9 * (float)this.field_y;
+            var18 = -var10 * (float)this.field_y;
+            var19 = -var11 * (float)this.field_k;
+            var20 = -var12 * (float)this.field_k;
             param0 = param0 + (var15 + var13);
             param1 = param1 + (var16 + var14);
             param2 = param2 + (var17 + var13);
@@ -359,7 +359,7 @@ abstract class qd extends hr {
             param5 = param5 + (var16 + var20);
             break L0;
           } else {
-            if (var8 == ((qd) this).field_q) {
+            if (var8 == this.field_q) {
               break L0;
             } else {
               L1: {
@@ -367,14 +367,14 @@ abstract class qd extends hr {
                 var10 = (param3 - param1) / (float)var7;
                 var11 = (param4 - param0) / (float)var8;
                 var12 = (param5 - param1) / (float)var8;
-                var13 = var11 * (float)((qd) this).field_A;
-                var14 = var12 * (float)((qd) this).field_A;
-                var15 = var9 * (float)((qd) this).field_t;
-                var16 = var10 * (float)((qd) this).field_t;
-                var17 = -var9 * (float)((qd) this).field_y;
-                var18 = -var10 * (float)((qd) this).field_y;
-                var19 = -var11 * (float)((qd) this).field_k;
-                var20 = -var12 * (float)((qd) this).field_k;
+                var13 = var11 * (float)this.field_A;
+                var14 = var12 * (float)this.field_A;
+                var15 = var9 * (float)this.field_t;
+                var16 = var10 * (float)this.field_t;
+                var17 = -var9 * (float)this.field_y;
+                var18 = -var10 * (float)this.field_y;
+                var19 = -var11 * (float)this.field_k;
+                var20 = -var12 * (float)this.field_k;
                 param0 = param0 + (var15 + var13);
                 param1 = param1 + (var16 + var14);
                 param2 = param2 + (var17 + var13);
@@ -469,34 +469,34 @@ abstract class qd extends hr {
                 }
               }
               L11: {
-                if (var11 >= (float)((qd) this).field_B.field_v) {
+                if (var11 >= (float)this.field_B.field_v) {
                   break L11;
                 } else {
-                  var11 = (float)((qd) this).field_B.field_v;
+                  var11 = (float)this.field_B.field_v;
                   break L11;
                 }
               }
               L12: {
-                if (var12 <= (float)((qd) this).field_B.field_D) {
+                if (var12 <= (float)this.field_B.field_D) {
                   break L12;
                 } else {
-                  var12 = (float)((qd) this).field_B.field_D;
+                  var12 = (float)this.field_B.field_D;
                   break L12;
                 }
               }
               L13: {
-                if (var13 >= (float)((qd) this).field_B.field_H) {
+                if (var13 >= (float)this.field_B.field_H) {
                   break L13;
                 } else {
-                  var13 = (float)((qd) this).field_B.field_H;
+                  var13 = (float)this.field_B.field_H;
                   break L13;
                 }
               }
               L14: {
-                if (var14 <= (float)((qd) this).field_B.field_C) {
+                if (var14 <= (float)this.field_B.field_C) {
                   break L14;
                 } else {
-                  var14 = (float)((qd) this).field_B.field_C;
+                  var14 = (float)this.field_B.field_C;
                   break L14;
                 }
               }
@@ -506,18 +506,18 @@ abstract class qd extends hr {
                 if (var14 >= 0.0f) {
                   return false;
                 } else {
-                  field_r = ((qd) this).field_B.field_k;
+                  field_r = this.field_B.field_k;
                   field_e = (int)((float)((int)var13 * field_r) + var11);
                   var15 = (param2 - param0) * (param5 - param1) - (param3 - param1) * (param4 - param0);
                   var16 = (param4 - param0) * (param3 - param1) - (param5 - param1) * (param2 - param0);
-                  field_w = (int)((param5 - param1) * 4096.0f * (float)((qd) this).field_z / var15);
-                  field_d = (int)((param3 - param1) * 4096.0f * (float)((qd) this).field_q / var16);
-                  field_p = (int)((param4 - param0) * 4096.0f * (float)((qd) this).field_z / var16);
-                  field_b = (int)((param2 - param0) * 4096.0f * (float)((qd) this).field_q / var15);
+                  field_w = (int)((param5 - param1) * 4096.0f * (float)this.field_z / var15);
+                  field_d = (int)((param3 - param1) * 4096.0f * (float)this.field_q / var16);
+                  field_p = (int)((param4 - param0) * 4096.0f * (float)this.field_z / var16);
+                  field_b = (int)((param2 - param0) * 4096.0f * (float)this.field_q / var15);
                   field_l = (int)(var11 * 16.0f + 8.0f - (param0 + param2 + param4 + var9) / 4.0f * 16.0f);
                   field_C = (int)(var13 * 16.0f + 8.0f - (param1 + param3 + param5 + var10) / 4.0f * 16.0f);
-                  field_s = (((qd) this).field_z >> 1 << 12) + (field_C * field_p >> 4);
-                  field_m = (((qd) this).field_q >> 1 << 12) + (field_C * field_b >> 4);
+                  field_s = (this.field_z >> 1 << 12) + (field_C * field_p >> 4);
+                  field_m = (this.field_q >> 1 << 12) + (field_C * field_b >> 4);
                   field_g = field_l * field_w >> 4;
                   field_a = field_l * field_d >> 4;
                   field_h = (int)var12;
@@ -619,34 +619,34 @@ abstract class qd extends hr {
           }
         }
         L25: {
-          if (var11 >= (float)((qd) this).field_B.field_v) {
+          if (var11 >= (float)this.field_B.field_v) {
             break L25;
           } else {
-            var11 = (float)((qd) this).field_B.field_v;
+            var11 = (float)this.field_B.field_v;
             break L25;
           }
         }
         L26: {
-          if (var12 <= (float)((qd) this).field_B.field_D) {
+          if (var12 <= (float)this.field_B.field_D) {
             break L26;
           } else {
-            var12 = (float)((qd) this).field_B.field_D;
+            var12 = (float)this.field_B.field_D;
             break L26;
           }
         }
         L27: {
-          if (var13 >= (float)((qd) this).field_B.field_H) {
+          if (var13 >= (float)this.field_B.field_H) {
             break L27;
           } else {
-            var13 = (float)((qd) this).field_B.field_H;
+            var13 = (float)this.field_B.field_H;
             break L27;
           }
         }
         L28: {
-          if (var14 <= (float)((qd) this).field_B.field_C) {
+          if (var14 <= (float)this.field_B.field_C) {
             break L28;
           } else {
-            var14 = (float)((qd) this).field_B.field_C;
+            var14 = (float)this.field_B.field_C;
             break L28;
           }
         }
@@ -656,18 +656,18 @@ abstract class qd extends hr {
           if (var14 >= 0.0f) {
             return false;
           } else {
-            field_r = ((qd) this).field_B.field_k;
+            field_r = this.field_B.field_k;
             field_e = (int)((float)((int)var13 * field_r) + var11);
             var15 = (param2 - param0) * (param5 - param1) - (param3 - param1) * (param4 - param0);
             var16 = (param4 - param0) * (param3 - param1) - (param5 - param1) * (param2 - param0);
-            field_w = (int)((param5 - param1) * 4096.0f * (float)((qd) this).field_z / var15);
-            field_d = (int)((param3 - param1) * 4096.0f * (float)((qd) this).field_q / var16);
-            field_p = (int)((param4 - param0) * 4096.0f * (float)((qd) this).field_z / var16);
-            field_b = (int)((param2 - param0) * 4096.0f * (float)((qd) this).field_q / var15);
+            field_w = (int)((param5 - param1) * 4096.0f * (float)this.field_z / var15);
+            field_d = (int)((param3 - param1) * 4096.0f * (float)this.field_q / var16);
+            field_p = (int)((param4 - param0) * 4096.0f * (float)this.field_z / var16);
+            field_b = (int)((param2 - param0) * 4096.0f * (float)this.field_q / var15);
             field_l = (int)(var11 * 16.0f + 8.0f - (param0 + param2 + param4 + var9) / 4.0f * 16.0f);
             field_C = (int)(var13 * 16.0f + 8.0f - (param1 + param3 + param5 + var10) / 4.0f * 16.0f);
-            field_s = (((qd) this).field_z >> 1 << 12) + (field_C * field_p >> 4);
-            field_m = (((qd) this).field_q >> 1 << 12) + (field_C * field_b >> 4);
+            field_s = (this.field_z >> 1 << 12) + (field_C * field_p >> 4);
+            field_m = (this.field_q >> 1 << 12) + (field_C * field_b >> 4);
             field_g = field_l * field_w >> 4;
             field_a = field_l * field_d >> 4;
             field_h = (int)var12;
@@ -680,29 +680,25 @@ abstract class qd extends hr {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        ((qd) this).field_t = param0;
-        ((qd) this).field_A = param1;
-        ((qd) this).field_y = param2;
-        ((qd) this).field_k = param3;
+        this.field_t = param0;
+        this.field_A = param1;
+        this.field_y = param2;
+        this.field_k = param3;
     }
 
     qd(qa param0, int param1, int param2) {
-        ((qd) this).field_B = param0;
-        ((qd) this).field_z = param1;
-        ((qd) this).field_q = param2;
+        this.field_B = param0;
+        this.field_z = param1;
+        this.field_q = param2;
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4);
 
     final int a() {
-        return ((qd) this).field_q;
+        return this.field_q;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 0;
         field_x = 0;
         field_v = 0;

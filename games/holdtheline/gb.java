@@ -45,37 +45,36 @@ final class gb {
         field_J = null;
         field_x = null;
         field_a = null;
+        if (param0 >= -73) {
+            return;
+        }
         field_q = null;
     }
 
     final static void a(int param0, boolean param1) {
-        ka.field_b.a(-81, 0, 0);
+        ka.field_b.a(-81, param0, 0);
     }
 
     gb() {
-        ((gb) this).field_p = new int[6][258];
-        ((gb) this).field_m = new byte[256];
-        ((gb) this).field_G = new byte[18002];
-        ((gb) this).field_E = 0;
-        ((gb) this).field_c = new byte[18002];
-        ((gb) this).field_b = new boolean[16];
-        ((gb) this).field_H = new int[16];
-        ((gb) this).field_g = new int[6][258];
-        ((gb) this).field_w = new int[256];
-        ((gb) this).field_D = new int[257];
-        ((gb) this).field_n = new int[6][258];
-        ((gb) this).field_v = new byte[4096];
-        ((gb) this).field_t = new byte[6][258];
-        ((gb) this).field_C = new int[6];
-        ((gb) this).field_j = new boolean[256];
-        ((gb) this).field_y = 0;
+        this.field_p = new int[6][258];
+        this.field_m = new byte[256];
+        this.field_G = new byte[18002];
+        this.field_E = 0;
+        this.field_c = new byte[18002];
+        this.field_b = new boolean[16];
+        this.field_H = new int[16];
+        this.field_g = new int[6][258];
+        this.field_w = new int[256];
+        this.field_D = new int[257];
+        this.field_n = new int[6][258];
+        this.field_v = new byte[4096];
+        this.field_t = new byte[6][258];
+        this.field_C = new int[6];
+        this.field_j = new boolean[256];
+        this.field_y = 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = new int[8192];
         field_x = new int[4];
         field_d = "To Customer Support";

@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 abstract class mc extends ij {
     static long[] field_p;
     int field_o;
@@ -17,143 +15,84 @@ abstract class mc extends ij {
     int field_v;
 
     public static void b(byte param0) {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            L1: {
-              if (param0 > 104) {
-                break L1;
-              } else {
-                mc.b((byte) 31);
-                break L1;
-              }
-            }
+        if (param0 <= 104) {
+            mc.b((byte) 31);
             field_m = null;
             field_p = null;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1, "mc.B(" + param0 + ')');
+            return;
         }
+        field_m = null;
+        field_p = null;
     }
 
     final static String a(byte param0) {
-        RuntimeException var1 = null;
-        String stackIn_8_0 = null;
-        Object stackIn_11_0 = null;
-        Object stackIn_13_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        String stackOut_7_0 = null;
-        Object stackOut_12_0 = null;
-        Object stackOut_10_0 = null;
-        try {
-          L0: {
-            L1: {
-              if (co.field_F) {
-                break L1;
+        if (!co.field_F) {
+          if (cl.field_o >= ih.field_a) {
+            if (cl.field_o >= ih.field_a + u.field_a) {
+              if (param0 == 6) {
+                return null;
               } else {
-                if (~cl.field_o > ~ih.field_a) {
-                  break L1;
-                } else {
-                  if (~cl.field_o <= ~(ih.field_a + u.field_a)) {
-                    break L1;
-                  } else {
-                    stackOut_7_0 = kf.field_f;
-                    stackIn_8_0 = stackOut_7_0;
-                    return stackIn_8_0;
-                  }
-                }
+                return (String) null;
               }
-            }
-            if (param0 == 6) {
-              stackOut_12_0 = null;
-              stackIn_13_0 = stackOut_12_0;
-              break L0;
             } else {
-              stackOut_10_0 = null;
-              stackIn_11_0 = stackOut_10_0;
-              return (String) (Object) stackIn_11_0;
+              return kf.field_f;
+            }
+          } else {
+            if (param0 == 6) {
+              return null;
+            } else {
+              return (String) null;
             }
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1, "mc.C(" + param0 + ')');
+        } else {
+          if (param0 == 6) {
+            return null;
+          } else {
+            return (String) null;
+          }
         }
-        return (String) (Object) stackIn_13_0;
     }
 
     final static dl a(int param0, int param1, int param2) {
         dl var3 = null;
-        RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        dl stackIn_7_0 = null;
-        dl stackIn_11_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        dl stackOut_6_0 = null;
-        dl stackOut_10_0 = null;
+        dl var6 = null;
         var5 = CrazyCrystals.field_B;
-        try {
-          L0: {
-            L1: {
-              if (param1 < -10) {
-                break L1;
-              } else {
-                field_m = null;
-                break L1;
-              }
-            }
-            var3 = new dl(param0, param0);
-            var4 = 0;
-            L2: while (true) {
-              L3: {
-                L4: {
-                  if (~var3.field_w.length >= ~var4) {
-                    break L4;
-                  } else {
-                    stackOut_6_0 = (dl) var3;
-                    stackIn_11_0 = stackOut_6_0;
-                    stackIn_7_0 = stackOut_6_0;
-                    if (var5 != 0) {
-                      break L3;
-                    } else {
-                      stackIn_7_0.field_w[var4] = param2;
-                      var4++;
-                      if (var5 == 0) {
-                        continue L2;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
-                }
-                stackOut_10_0 = (dl) var3;
-                stackIn_11_0 = stackOut_10_0;
-                break L3;
-              }
-              break L0;
+        if (param1 < -10) {
+          var6 = new dl(param0, param0);
+          var3 = var6;
+          var4 = 0;
+          L0: while (true) {
+            if (var3.field_w.length <= var4) {
+              return var3;
+            } else {
+              var6.field_w[var4] = param2;
+              var4++;
+              continue L0;
             }
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var3_ref, "mc.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+        } else {
+          field_m = (int[]) null;
+          var6 = new dl(param0, param0);
+          var3 = var6;
+          var4 = 0;
+          L1: while (true) {
+            if (var3.field_w.length <= var4) {
+              return var3;
+            } else {
+              var6.field_w[var4] = param2;
+              var4++;
+              continue L1;
+            }
+          }
         }
-        return stackIn_11_0;
     }
 
     mc() {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = new long[32];
         field_m = new int[4];
     }

@@ -49,7 +49,7 @@ abstract class dg extends vg implements fo, noa {
               if (param1 == -2159) {
                 break L1;
               } else {
-                ((dg) this).h(80);
+                this.h(80);
                 break L1;
               }
             }
@@ -59,23 +59,23 @@ abstract class dg extends vg implements fo, noa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("dg.C(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -84,23 +84,23 @@ abstract class dg extends vg implements fo, noa {
             }
           }
           L3: {
-            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -108,20 +108,23 @@ abstract class dg extends vg implements fo, noa {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
     final void a(int param0, int param1) {
         if (param1 <= 96) {
-            ((dg) this).e(72);
-            ((dg) this).field_f = param0;
+            this.e(72);
+            this.field_f = param0;
             return;
         }
-        ((dg) this).field_f = param0;
+        this.field_f = param0;
     }
 
     final static boolean b(int param0) {
+        if (param0 != -1) {
+            return false;
+        }
         return true;
     }
 
@@ -129,8 +132,8 @@ abstract class dg extends vg implements fo, noa {
         if (param0 < 91) {
             return -69;
         }
-        if (null != ((dg) this).field_h) {
-            return ((dg) this).field_h.e(9648);
+        if (null != this.field_h) {
+            return this.field_h.e(9648);
         }
         return 0;
     }
@@ -138,16 +141,16 @@ abstract class dg extends vg implements fo, noa {
     public final int b(byte param0) {
         int var2 = 0;
         var2 = 19 % ((param0 - -23) / 53);
-        if (null == ((dg) this).field_h) {
+        if (null == this.field_h) {
           return 0;
         } else {
-          return ((dg) this).field_h.d(3);
+          return this.field_h.d(3);
         }
     }
 
     int m(byte param0) {
         if (param0 > -63) {
-            ((dg) this).a(-26, -105);
+            this.a(-26, -105);
             return -1;
         }
         return -1;
@@ -155,15 +158,15 @@ abstract class dg extends vg implements fo, noa {
 
     void b(int param0, uw param1) {
         int var3_int = 0;
-        if (!(~((dg) this).field_i == param0)) {
+        if (!((this.field_i ^ -1) == param0)) {
             return;
         }
         try {
-            var3_int = ((dg) this).k((byte) -99);
-            ((dg) this).a((byte) 66, var3_int, param1);
-            ((dg) this).field_i = var3_int;
+            var3_int = this.k((byte) -99);
+            this.a((byte) 66, var3_int, param1);
+            this.field_i = var3_int;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "dg.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "dg.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -238,13 +241,13 @@ abstract class dg extends vg implements fo, noa {
         int stackOut_31_0 = 0;
         int stackOut_30_0 = 0;
         int stackOut_28_0 = 0;
-        if (((dg) this).field_h == null) {
+        if (this.field_h == null) {
           return;
         } else {
-          if (!((dg) this).field_h.b(true)) {
-            var2 = ((dg) this).m((byte) -88);
-            var3 = ((dg) this).f((byte) -108);
-            if (var2 != -1) {
+          if (!this.field_h.b(true)) {
+            var2 = this.m((byte) -88);
+            var3 = this.f((byte) -108);
+            if (0 != (var2 ^ -1)) {
               if (param0 == -12663) {
                 L0: {
                   var4 = 0;
@@ -253,14 +256,14 @@ abstract class dg extends vg implements fo, noa {
                     stackIn_218_0 = stackOut_216_0;
                     break L0;
                   } else {
-                    if (((dg) this).field_h.h(param0 + 31070)) {
+                    if (this.field_h.h(param0 + 31070)) {
                       L1: {
                         var5 = 1;
-                        if (((dg) this).field_k != null) {
+                        if (this.field_k != null) {
                           if (var5 == 0) {
-                            if (((dg) this).field_k.a(param0 ^ 12575)) {
+                            if (this.field_k.a(param0 ^ 12575)) {
                               L2: {
-                                if (!((dg) this).field_k.a((byte) 87)) {
+                                if (!this.field_k.a((byte) 87)) {
                                   stackOut_184_0 = 0;
                                   stackIn_185_0 = stackOut_184_0;
                                   break L2;
@@ -295,13 +298,13 @@ abstract class dg extends vg implements fo, noa {
                               if (var6 == 0) {
                                 if (var5 != 0) {
                                   L4: {
-                                    var7 = ((dg) this).field_h.c(-49);
-                                    var8 = ((dg) this).field_h.a((byte) 55);
-                                    var9 = ((dg) this).field_h.f((byte) 79);
+                                    var7 = this.field_h.c(-49);
+                                    var8 = this.field_h.a((byte) 55);
+                                    var9 = this.field_h.f((byte) 79);
                                     if (var5 != 0) {
-                                      if (((dg) this).field_j) {
-                                        var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                                        ((dg) this).field_j = false;
+                                      if (this.field_j) {
+                                        var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                                        this.field_j = false;
                                         break L4;
                                       } else {
                                         break L4;
@@ -314,9 +317,9 @@ abstract class dg extends vg implements fo, noa {
                                     if (var6 == 0) {
                                       break L5;
                                     } else {
-                                      if (!((dg) this).field_j) {
-                                        var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                        ((dg) this).field_j = true;
+                                      if (!this.field_j) {
+                                        var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                        this.field_j = true;
                                         break L5;
                                       } else {
                                         break L5;
@@ -329,13 +332,13 @@ abstract class dg extends vg implements fo, noa {
                                 }
                               } else {
                                 L6: {
-                                  var7 = ((dg) this).field_h.c(-49);
-                                  var8 = ((dg) this).field_h.a((byte) 55);
-                                  var9 = ((dg) this).field_h.f((byte) 79);
+                                  var7 = this.field_h.c(-49);
+                                  var8 = this.field_h.a((byte) 55);
+                                  var9 = this.field_h.f((byte) 79);
                                   if (var5 != 0) {
-                                    if (((dg) this).field_j) {
-                                      var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                                      ((dg) this).field_j = false;
+                                    if (this.field_j) {
+                                      var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                                      this.field_j = false;
                                       break L6;
                                     } else {
                                       break L6;
@@ -348,9 +351,9 @@ abstract class dg extends vg implements fo, noa {
                                   if (var6 == 0) {
                                     break L7;
                                   } else {
-                                    if (!((dg) this).field_j) {
-                                      var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                      ((dg) this).field_j = true;
+                                    if (!this.field_j) {
+                                      var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                      this.field_j = true;
                                       break L7;
                                     } else {
                                       break L7;
@@ -389,13 +392,13 @@ abstract class dg extends vg implements fo, noa {
                                 return;
                               } else {
                                 L10: {
-                                  var7 = ((dg) this).field_h.c(-49);
-                                  var8 = ((dg) this).field_h.a((byte) 55);
-                                  var9 = ((dg) this).field_h.f((byte) 79);
+                                  var7 = this.field_h.c(-49);
+                                  var8 = this.field_h.a((byte) 55);
+                                  var9 = this.field_h.f((byte) 79);
                                   if (var5 != 0) {
-                                    if (((dg) this).field_j) {
-                                      var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                                      ((dg) this).field_j = false;
+                                    if (this.field_j) {
+                                      var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                                      this.field_j = false;
                                       break L10;
                                     } else {
                                       break L10;
@@ -408,9 +411,9 @@ abstract class dg extends vg implements fo, noa {
                                   if (var6 == 0) {
                                     break L11;
                                   } else {
-                                    if (!((dg) this).field_j) {
-                                      var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                      ((dg) this).field_j = true;
+                                    if (!this.field_j) {
+                                      var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                      this.field_j = true;
                                       break L11;
                                     } else {
                                       break L11;
@@ -421,13 +424,13 @@ abstract class dg extends vg implements fo, noa {
                               }
                             } else {
                               L12: {
-                                var7 = ((dg) this).field_h.c(-49);
-                                var8 = ((dg) this).field_h.a((byte) 55);
-                                var9 = ((dg) this).field_h.f((byte) 79);
+                                var7 = this.field_h.c(-49);
+                                var8 = this.field_h.a((byte) 55);
+                                var9 = this.field_h.f((byte) 79);
                                 if (var5 != 0) {
-                                  if (((dg) this).field_j) {
-                                    var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                                    ((dg) this).field_j = false;
+                                  if (this.field_j) {
+                                    var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                                    this.field_j = false;
                                     break L12;
                                   } else {
                                     break L12;
@@ -440,9 +443,9 @@ abstract class dg extends vg implements fo, noa {
                                 if (var6 == 0) {
                                   break L13;
                                 } else {
-                                  if (!((dg) this).field_j) {
-                                    var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                    ((dg) this).field_j = true;
+                                  if (!this.field_j) {
+                                    var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                    this.field_j = true;
                                     break L13;
                                   } else {
                                     break L13;
@@ -477,13 +480,13 @@ abstract class dg extends vg implements fo, noa {
                       if (var6 == 0) {
                         if (var5 != 0) {
                           L15: {
-                            var7 = ((dg) this).field_h.c(-49);
-                            var8 = ((dg) this).field_h.a((byte) 55);
-                            var9 = ((dg) this).field_h.f((byte) 79);
+                            var7 = this.field_h.c(-49);
+                            var8 = this.field_h.a((byte) 55);
+                            var9 = this.field_h.f((byte) 79);
                             if (var5 != 0) {
-                              if (((dg) this).field_j) {
-                                var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                                ((dg) this).field_j = false;
+                              if (this.field_j) {
+                                var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                                this.field_j = false;
                                 break L15;
                               } else {
                                 break L15;
@@ -496,9 +499,9 @@ abstract class dg extends vg implements fo, noa {
                             if (var6 == 0) {
                               break L16;
                             } else {
-                              if (!((dg) this).field_j) {
-                                var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                ((dg) this).field_j = true;
+                              if (!this.field_j) {
+                                var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                this.field_j = true;
                                 break L16;
                               } else {
                                 break L16;
@@ -511,13 +514,13 @@ abstract class dg extends vg implements fo, noa {
                         }
                       } else {
                         L17: {
-                          var7 = ((dg) this).field_h.c(-49);
-                          var8 = ((dg) this).field_h.a((byte) 55);
-                          var9 = ((dg) this).field_h.f((byte) 79);
+                          var7 = this.field_h.c(-49);
+                          var8 = this.field_h.a((byte) 55);
+                          var9 = this.field_h.f((byte) 79);
                           if (var5 != 0) {
-                            if (((dg) this).field_j) {
-                              var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                              ((dg) this).field_j = false;
+                            if (this.field_j) {
+                              var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                              this.field_j = false;
                               break L17;
                             } else {
                               break L17;
@@ -530,9 +533,9 @@ abstract class dg extends vg implements fo, noa {
                           if (var6 == 0) {
                             break L18;
                           } else {
-                            if (!((dg) this).field_j) {
-                              var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                              ((dg) this).field_j = true;
+                            if (!this.field_j) {
+                              var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                              this.field_j = true;
                               break L18;
                             } else {
                               break L18;
@@ -550,10 +553,10 @@ abstract class dg extends vg implements fo, noa {
                 }
                 L19: {
                   var5 = stackIn_218_0;
-                  if (((dg) this).field_k != null) {
+                  if (this.field_k != null) {
                     if (var5 == 0) {
-                      if (((dg) this).field_k.a(param0 ^ 12575)) {
-                        if (!((dg) this).field_k.a((byte) 87)) {
+                      if (this.field_k.a(param0 ^ 12575)) {
+                        if (!this.field_k.a((byte) 87)) {
                           var5 = 0;
                           break L19;
                         } else {
@@ -592,13 +595,13 @@ abstract class dg extends vg implements fo, noa {
                             }
                           }
                           L23: {
-                            var7 = ((dg) this).field_h.c(-49);
-                            var8 = ((dg) this).field_h.a((byte) 55);
-                            var9 = ((dg) this).field_h.f((byte) 79);
+                            var7 = this.field_h.c(-49);
+                            var8 = this.field_h.a((byte) 55);
+                            var9 = this.field_h.f((byte) 79);
                             if (var5 != 0) {
-                              if (((dg) this).field_j) {
-                                var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                                ((dg) this).field_j = false;
+                              if (this.field_j) {
+                                var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                                this.field_j = false;
                                 break L23;
                               } else {
                                 break L23;
@@ -611,9 +614,9 @@ abstract class dg extends vg implements fo, noa {
                             if (var6 == 0) {
                               break L24;
                             } else {
-                              if (!((dg) this).field_j) {
-                                var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                ((dg) this).field_j = true;
+                              if (!this.field_j) {
+                                var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                this.field_j = true;
                                 break L24;
                               } else {
                                 break L24;
@@ -639,20 +642,20 @@ abstract class dg extends vg implements fo, noa {
                                   }
                                 }
                               }
-                              var7 = ((dg) this).field_h.c(-49);
-                              var8 = ((dg) this).field_h.a((byte) 55);
-                              var9 = ((dg) this).field_h.f((byte) 79);
+                              var7 = this.field_h.c(-49);
+                              var8 = this.field_h.a((byte) 55);
+                              var9 = this.field_h.f((byte) 79);
                               if (var5 != 0) {
-                                if (((dg) this).field_j) {
+                                if (this.field_j) {
                                   L27: {
-                                    var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                                    ((dg) this).field_j = false;
+                                    var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                                    this.field_j = false;
                                     if (var6 == 0) {
                                       break L27;
                                     } else {
-                                      if (!((dg) this).field_j) {
-                                        var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                        ((dg) this).field_j = true;
+                                      if (!this.field_j) {
+                                        var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                        this.field_j = true;
                                         break L27;
                                       } else {
                                         return;
@@ -665,9 +668,9 @@ abstract class dg extends vg implements fo, noa {
                                     if (var6 == 0) {
                                       break L28;
                                     } else {
-                                      if (!((dg) this).field_j) {
-                                        var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                        ((dg) this).field_j = true;
+                                      if (!this.field_j) {
+                                        var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                        this.field_j = true;
                                         break L28;
                                       } else {
                                         break L28;
@@ -681,9 +684,9 @@ abstract class dg extends vg implements fo, noa {
                                   if (var6 == 0) {
                                     break L29;
                                   } else {
-                                    if (!((dg) this).field_j) {
-                                      var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                      ((dg) this).field_j = true;
+                                    if (!this.field_j) {
+                                      var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                      this.field_j = true;
                                       break L29;
                                     } else {
                                       break L29;
@@ -715,20 +718,20 @@ abstract class dg extends vg implements fo, noa {
                             }
                           }
                         }
-                        var7 = ((dg) this).field_h.c(-49);
-                        var8 = ((dg) this).field_h.a((byte) 55);
-                        var9 = ((dg) this).field_h.f((byte) 79);
+                        var7 = this.field_h.c(-49);
+                        var8 = this.field_h.a((byte) 55);
+                        var9 = this.field_h.f((byte) 79);
                         if (var5 != 0) {
-                          if (((dg) this).field_j) {
+                          if (this.field_j) {
                             L31: {
-                              var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                              ((dg) this).field_j = false;
+                              var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                              this.field_j = false;
                               if (var6 == 0) {
                                 break L31;
                               } else {
-                                if (!((dg) this).field_j) {
-                                  var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                  ((dg) this).field_j = true;
+                                if (!this.field_j) {
+                                  var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                  this.field_j = true;
                                   break L31;
                                 } else {
                                   return;
@@ -741,9 +744,9 @@ abstract class dg extends vg implements fo, noa {
                               if (var6 == 0) {
                                 break L32;
                               } else {
-                                if (!((dg) this).field_j) {
-                                  var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                  ((dg) this).field_j = true;
+                                if (!this.field_j) {
+                                  var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                  this.field_j = true;
                                   break L32;
                                 } else {
                                   break L32;
@@ -757,9 +760,9 @@ abstract class dg extends vg implements fo, noa {
                             if (var6 == 0) {
                               break L33;
                             } else {
-                              if (!((dg) this).field_j) {
-                                var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                ((dg) this).field_j = true;
+                              if (!this.field_j) {
+                                var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                this.field_j = true;
                                 break L33;
                               } else {
                                 break L33;
@@ -786,17 +789,17 @@ abstract class dg extends vg implements fo, noa {
                                 }
                               }
                             }
-                            var7 = ((dg) this).field_h.c(-49);
-                            var8 = ((dg) this).field_h.a((byte) 55);
-                            var9 = ((dg) this).field_h.f((byte) 79);
+                            var7 = this.field_h.c(-49);
+                            var8 = this.field_h.a((byte) 55);
+                            var9 = this.field_h.f((byte) 79);
                             if (var5 != 0) {
-                              if (((dg) this).field_j) {
-                                var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                                ((dg) this).field_j = false;
+                              if (this.field_j) {
+                                var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                                this.field_j = false;
                                 if (var6 != 0) {
-                                  if (!((dg) this).field_j) {
-                                    var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                    ((dg) this).field_j = true;
+                                  if (!this.field_j) {
+                                    var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                    this.field_j = true;
                                     return;
                                   } else {
                                     return;
@@ -809,9 +812,9 @@ abstract class dg extends vg implements fo, noa {
                                   if (var6 == 0) {
                                     break L36;
                                   } else {
-                                    if (!((dg) this).field_j) {
-                                      var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                      ((dg) this).field_j = true;
+                                    if (!this.field_j) {
+                                      var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                      this.field_j = true;
                                       break L36;
                                     } else {
                                       break L36;
@@ -825,9 +828,9 @@ abstract class dg extends vg implements fo, noa {
                                 if (var6 == 0) {
                                   break L37;
                                 } else {
-                                  if (!((dg) this).field_j) {
-                                    var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                    ((dg) this).field_j = true;
+                                  if (!this.field_j) {
+                                    var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                    this.field_j = true;
                                     break L37;
                                   } else {
                                     break L37;
@@ -859,19 +862,19 @@ abstract class dg extends vg implements fo, noa {
                           }
                         }
                       }
-                      var7 = ((dg) this).field_h.c(-49);
-                      var8 = ((dg) this).field_h.a((byte) 55);
-                      var9 = ((dg) this).field_h.f((byte) 79);
+                      var7 = this.field_h.c(-49);
+                      var8 = this.field_h.a((byte) 55);
+                      var9 = this.field_h.f((byte) 79);
                       if (var5 != 0) {
-                        if (((dg) this).field_j) {
-                          var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                          ((dg) this).field_j = false;
+                        if (this.field_j) {
+                          var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                          this.field_j = false;
                           if (var6 != 0) {
-                            if (((dg) this).field_j) {
+                            if (this.field_j) {
                               return;
                             } else {
-                              var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                              ((dg) this).field_j = true;
+                              var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                              this.field_j = true;
                               return;
                             }
                           } else {
@@ -882,9 +885,9 @@ abstract class dg extends vg implements fo, noa {
                             if (var6 == 0) {
                               break L39;
                             } else {
-                              if (!((dg) this).field_j) {
-                                var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                ((dg) this).field_j = true;
+                              if (!this.field_j) {
+                                var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                this.field_j = true;
                                 break L39;
                               } else {
                                 break L39;
@@ -898,9 +901,9 @@ abstract class dg extends vg implements fo, noa {
                           if (var6 == 0) {
                             break L40;
                           } else {
-                            if (!((dg) this).field_j) {
-                              var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                              ((dg) this).field_j = true;
+                            if (!this.field_j) {
+                              var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                              this.field_j = true;
                               break L40;
                             } else {
                               break L40;
@@ -929,20 +932,20 @@ abstract class dg extends vg implements fo, noa {
                           }
                         }
                       }
-                      var7 = ((dg) this).field_h.c(-49);
-                      var8 = ((dg) this).field_h.a((byte) 55);
-                      var9 = ((dg) this).field_h.f((byte) 79);
+                      var7 = this.field_h.c(-49);
+                      var8 = this.field_h.a((byte) 55);
+                      var9 = this.field_h.f((byte) 79);
                       if (var5 != 0) {
-                        if (((dg) this).field_j) {
+                        if (this.field_j) {
                           L43: {
-                            var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                            ((dg) this).field_j = false;
+                            var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                            this.field_j = false;
                             if (var6 == 0) {
                               break L43;
                             } else {
-                              if (!((dg) this).field_j) {
-                                var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                ((dg) this).field_j = true;
+                              if (!this.field_j) {
+                                var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                this.field_j = true;
                                 break L43;
                               } else {
                                 return;
@@ -955,9 +958,9 @@ abstract class dg extends vg implements fo, noa {
                             if (var6 == 0) {
                               break L44;
                             } else {
-                              if (!((dg) this).field_j) {
-                                var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                                ((dg) this).field_j = true;
+                              if (!this.field_j) {
+                                var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                                this.field_j = true;
                                 break L44;
                               } else {
                                 break L44;
@@ -971,9 +974,9 @@ abstract class dg extends vg implements fo, noa {
                           if (var6 == 0) {
                             break L45;
                           } else {
-                            if (!((dg) this).field_j) {
-                              var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                              ((dg) this).field_j = true;
+                            if (!this.field_j) {
+                              var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                              this.field_j = true;
                               break L45;
                             } else {
                               break L45;
@@ -1005,20 +1008,20 @@ abstract class dg extends vg implements fo, noa {
                     }
                   }
                 }
-                var7 = ((dg) this).field_h.c(-49);
-                var8 = ((dg) this).field_h.a((byte) 55);
-                var9 = ((dg) this).field_h.f((byte) 79);
+                var7 = this.field_h.c(-49);
+                var8 = this.field_h.a((byte) 55);
+                var9 = this.field_h.f((byte) 79);
                 if (var5 != 0) {
-                  if (((dg) this).field_j) {
+                  if (this.field_j) {
                     L47: {
-                      var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                      ((dg) this).field_j = false;
+                      var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                      this.field_j = false;
                       if (var6 == 0) {
                         break L47;
                       } else {
-                        if (!((dg) this).field_j) {
-                          var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                          ((dg) this).field_j = true;
+                        if (!this.field_j) {
+                          var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                          this.field_j = true;
                           break L47;
                         } else {
                           return;
@@ -1031,9 +1034,9 @@ abstract class dg extends vg implements fo, noa {
                       if (var6 == 0) {
                         break L48;
                       } else {
-                        if (!((dg) this).field_j) {
-                          var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                          ((dg) this).field_j = true;
+                        if (!this.field_j) {
+                          var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                          this.field_j = true;
                           break L48;
                         } else {
                           return;
@@ -1047,9 +1050,9 @@ abstract class dg extends vg implements fo, noa {
                     if (var6 == 0) {
                       break L49;
                     } else {
-                      if (!((dg) this).field_j) {
-                        var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                        ((dg) this).field_j = true;
+                      if (!this.field_j) {
+                        var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                        this.field_j = true;
                         break L49;
                       } else {
                         return;
@@ -1060,14 +1063,14 @@ abstract class dg extends vg implements fo, noa {
                 }
               } else {
                 L50: {
-                  ((dg) this).field_f = -42;
+                  this.field_f = -42;
                   var4 = 0;
                   if (var4 != 0) {
                     stackOut_62_0 = 1;
                     stackIn_64_0 = stackOut_62_0;
                     break L50;
                   } else {
-                    if (((dg) this).field_h.h(param0 + 31070)) {
+                    if (this.field_h.h(param0 + 31070)) {
                       stackOut_61_0 = 1;
                       stackIn_64_0 = stackOut_61_0;
                       break L50;
@@ -1080,11 +1083,11 @@ abstract class dg extends vg implements fo, noa {
                 }
                 L51: {
                   var5 = stackIn_64_0;
-                  if (((dg) this).field_k != null) {
+                  if (this.field_k != null) {
                     if (var5 == 0) {
-                      if (((dg) this).field_k.a(param0 ^ 12575)) {
+                      if (this.field_k.a(param0 ^ 12575)) {
                         L52: {
-                          if (((dg) this).field_k.a((byte) 87)) {
+                          if (this.field_k.a((byte) 87)) {
                             stackOut_76_0 = 1;
                             stackIn_78_0 = stackOut_76_0;
                             break L52;
@@ -1139,13 +1142,13 @@ abstract class dg extends vg implements fo, noa {
                     return;
                   } else {
                     L55: {
-                      var7 = ((dg) this).field_h.c(-49);
-                      var8 = ((dg) this).field_h.a((byte) 55);
-                      var9 = ((dg) this).field_h.f((byte) 79);
+                      var7 = this.field_h.c(-49);
+                      var8 = this.field_h.a((byte) 55);
+                      var9 = this.field_h.f((byte) 79);
                       if (var5 != 0) {
-                        if (((dg) this).field_j) {
-                          var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                          ((dg) this).field_j = false;
+                        if (this.field_j) {
+                          var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                          this.field_j = false;
                           break L55;
                         } else {
                           break L55;
@@ -1158,9 +1161,9 @@ abstract class dg extends vg implements fo, noa {
                       if (var6 == 0) {
                         break L56;
                       } else {
-                        if (!((dg) this).field_j) {
-                          var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                          ((dg) this).field_j = true;
+                        if (!this.field_j) {
+                          var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                          this.field_j = true;
                           break L56;
                         } else {
                           break L56;
@@ -1171,13 +1174,13 @@ abstract class dg extends vg implements fo, noa {
                   }
                 } else {
                   L57: {
-                    var7 = ((dg) this).field_h.c(-49);
-                    var8 = ((dg) this).field_h.a((byte) 55);
-                    var9 = ((dg) this).field_h.f((byte) 79);
+                    var7 = this.field_h.c(-49);
+                    var8 = this.field_h.a((byte) 55);
+                    var9 = this.field_h.f((byte) 79);
                     if (var5 != 0) {
-                      if (((dg) this).field_j) {
-                        var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                        ((dg) this).field_j = false;
+                      if (this.field_j) {
+                        var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                        this.field_j = false;
                         break L57;
                       } else {
                         break L57;
@@ -1190,9 +1193,9 @@ abstract class dg extends vg implements fo, noa {
                     if (var6 == 0) {
                       break L58;
                     } else {
-                      if (!((dg) this).field_j) {
-                        var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                        ((dg) this).field_j = true;
+                      if (!this.field_j) {
+                        var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                        this.field_j = true;
                         break L58;
                       } else {
                         break L58;
@@ -1203,19 +1206,19 @@ abstract class dg extends vg implements fo, noa {
                 }
               }
             } else {
-              if (var3 != -1) {
+              if ((var3 ^ -1) != 0) {
                 L59: {
                   if (param0 == -12663) {
                     break L59;
                   } else {
-                    ((dg) this).field_f = -42;
+                    this.field_f = -42;
                     break L59;
                   }
                 }
                 L60: {
                   var4 = 0;
                   if (var4 == 0) {
-                    if (((dg) this).field_h.h(param0 + 31070)) {
+                    if (this.field_h.h(param0 + 31070)) {
                       stackOut_14_0 = 1;
                       stackIn_16_0 = stackOut_14_0;
                       break L60;
@@ -1232,11 +1235,11 @@ abstract class dg extends vg implements fo, noa {
                 }
                 L61: {
                   var5 = stackIn_16_0;
-                  if (((dg) this).field_k != null) {
+                  if (this.field_k != null) {
                     L62: {
                       if (var5 == 0) {
-                        if (((dg) this).field_k.a(param0 ^ 12575)) {
-                          if (((dg) this).field_k.a((byte) 87)) {
+                        if (this.field_k.a(param0 ^ 12575)) {
+                          if (this.field_k.a((byte) 87)) {
                             stackOut_24_0 = 1;
                             stackIn_26_0 = stackOut_24_0;
                             break L62;
@@ -1285,13 +1288,13 @@ abstract class dg extends vg implements fo, noa {
                     return;
                   } else {
                     L64: {
-                      var7 = ((dg) this).field_h.c(-49);
-                      var8 = ((dg) this).field_h.a((byte) 55);
-                      var9 = ((dg) this).field_h.f((byte) 79);
+                      var7 = this.field_h.c(-49);
+                      var8 = this.field_h.a((byte) 55);
+                      var9 = this.field_h.f((byte) 79);
                       if (var5 != 0) {
-                        if (((dg) this).field_j) {
-                          var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                          ((dg) this).field_j = false;
+                        if (this.field_j) {
+                          var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                          this.field_j = false;
                           break L64;
                         } else {
                           break L64;
@@ -1304,9 +1307,9 @@ abstract class dg extends vg implements fo, noa {
                       if (var6 == 0) {
                         break L65;
                       } else {
-                        if (!((dg) this).field_j) {
-                          var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                          ((dg) this).field_j = true;
+                        if (!this.field_j) {
+                          var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                          this.field_j = true;
                           break L65;
                         } else {
                           break L65;
@@ -1317,13 +1320,13 @@ abstract class dg extends vg implements fo, noa {
                   }
                 } else {
                   L66: {
-                    var7 = ((dg) this).field_h.c(-49);
-                    var8 = ((dg) this).field_h.a((byte) 55);
-                    var9 = ((dg) this).field_h.f((byte) 79);
+                    var7 = this.field_h.c(-49);
+                    var8 = this.field_h.a((byte) 55);
+                    var9 = this.field_h.f((byte) 79);
                     if (var5 != 0) {
-                      if (((dg) this).field_j) {
-                        var9.b(var2, var8, var7, ((dg) this).field_h.e(9648), -119, ((dg) this).field_h.d(3), var3);
-                        ((dg) this).field_j = false;
+                      if (this.field_j) {
+                        var9.b(var2, var8, var7, this.field_h.e(9648), -119, this.field_h.d(3), var3);
+                        this.field_j = false;
                         break L66;
                       } else {
                         break L66;
@@ -1336,9 +1339,9 @@ abstract class dg extends vg implements fo, noa {
                     if (var6 == 0) {
                       break L67;
                     } else {
-                      if (!((dg) this).field_j) {
-                        var9.a(var3, var2, ((dg) this).field_h.d(3), ((dg) this).field_h.e(9648), var7, var8, 121);
-                        ((dg) this).field_j = true;
+                      if (!this.field_j) {
+                        var9.a(var3, var2, this.field_h.d(3), this.field_h.e(9648), var7, var8, 121);
+                        this.field_j = true;
                         break L67;
                       } else {
                         break L67;
@@ -1363,39 +1366,98 @@ abstract class dg extends vg implements fo, noa {
     }
 
     void a(byte param0, kh param1) {
+        RuntimeException runtimeException = null;
+        int var3_int = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         try {
-            if (0 < ((dg) this).field_f) {
-                param1.a((byte) 12, 1, 1);
-                param1.a((byte) -128, ((dg) this).field_f, 8);
-            } else {
-                param1.a((byte) -125, 0, 1);
+          L0: {
+            L1: {
+              L2: {
+                if (0 >= this.field_f) {
+                  break L2;
+                } else {
+                  param1.a((byte) 12, 1, 1);
+                  param1.a((byte) -128, this.field_f, 8);
+                  if (!TombRacer.field_G) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              param1.a((byte) -125, 0, 1);
+              break L1;
             }
-            int var3_int = -48 / ((-8 - param0) / 40);
-        } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "dg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            var3_int = -48 / ((-8 - param0) / 40);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            runtimeException = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) (runtimeException);
+            stackOut_6_1 = new StringBuilder().append("dg.A(").append(param0).append(',');
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
     final gr c(int param0) {
         if (param0 > -73) {
-            ((dg) this).field_l = -95;
-            return ((dg) this).field_k;
+            this.field_l = -95;
+            return this.field_k;
         }
-        return ((dg) this).field_k;
+        return this.field_k;
     }
 
     public void f(int param0) {
         if (param0 != -4366) {
-            ((dg) this).field_f = -35;
+            this.field_f = -35;
         }
     }
 
     final int h(byte param0) {
         if (param0 <= 1) {
-            ((dg) this).a((byte) -62, -88);
-            return ((dg) this).field_l;
+            this.a((byte) -62, -88);
+            return this.field_l;
         }
-        return ((dg) this).field_l;
+        return this.field_l;
     }
 
     public final boolean d(byte param0) {
@@ -1407,26 +1469,26 @@ abstract class dg extends vg implements fo, noa {
 
     void a(gr param0, gma param1, byte param2) {
         try {
-            ((dg) this).field_k = param0;
+            this.field_k = param0;
             if (param2 != 36) {
-                Object var5 = null;
-                ((dg) this).a(-31, (iq) null);
+                iq var5 = (iq) null;
+                this.a(-31, (iq) null);
             }
-            ((dg) this).field_h = param1;
+            this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "dg.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "dg.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void i(byte param0) {
         if (param0 != -30) {
-          ((dg) this).field_h = null;
+          this.field_h = (gma) null;
           this.g(param0 + -12633);
-          ((dg) this).field_h = null;
+          this.field_h = null;
           return;
         } else {
           this.g(param0 + -12633);
-          ((dg) this).field_h = null;
+          this.field_h = null;
           return;
         }
     }
@@ -1435,14 +1497,14 @@ abstract class dg extends vg implements fo, noa {
 
     private final boolean g(byte param0) {
         int var2 = 0;
-        var2 = 0;
-        if (((dg) this).a((byte) 74)) {
-          if (null == ((dg) this).field_k) {
+        var2 = -58 % ((-38 - param0) / 60);
+        if (this.a((byte) 74)) {
+          if (null == this.field_k) {
             L0: {
-              if (null == ((dg) this).field_h) {
+              if (null == this.field_h) {
                 break L0;
               } else {
-                if (((dg) this).field_h.h(18407)) {
+                if (this.field_h.h(18407)) {
                   break L0;
                 } else {
                   return false;
@@ -1451,12 +1513,12 @@ abstract class dg extends vg implements fo, noa {
             }
             return true;
           } else {
-            if (!((dg) this).field_k.a((byte) 87)) {
+            if (!this.field_k.a((byte) 87)) {
               L1: {
-                if (null == ((dg) this).field_h) {
+                if (null == this.field_h) {
                   break L1;
                 } else {
-                  if (((dg) this).field_h.h(18407)) {
+                  if (this.field_h.h(18407)) {
                     break L1;
                   } else {
                     return false;
@@ -1469,10 +1531,10 @@ abstract class dg extends vg implements fo, noa {
             }
           }
         } else {
-          if (((dg) this).field_k != null) {
-            if (!((dg) this).field_k.a((byte) 87)) {
-              if (null != ((dg) this).field_h) {
-                if (((dg) this).field_h.h(18407)) {
+          if (this.field_k != null) {
+            if (!this.field_k.a((byte) 87)) {
+              if (null != this.field_h) {
+                if (this.field_h.h(18407)) {
                   return true;
                 } else {
                   return false;
@@ -1499,6 +1561,7 @@ abstract class dg extends vg implements fo, noa {
         Object stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
@@ -1511,29 +1574,30 @@ abstract class dg extends vg implements fo, noa {
         try {
           L0: {
             L1: {
-              if (null == ((dg) this).field_h) {
+              if (null == this.field_h) {
                 break L1;
               } else {
-                if (!((dg) this).field_h.l(0)) {
+                if (!this.field_h.l(0)) {
                   L2: {
                     var3 = null;
-                    if (!(((dg) this).field_h instanceof fsa)) {
+                    if (!(this.field_h instanceof fsa)) {
                       break L2;
                     } else {
-                      var3 = (Object) (Object) (fsa) (Object) ((dg) this).field_h;
+                      var3 = (fsa) ((Object) this.field_h);
                       break L2;
                     }
                   }
-                  var4 = (((dg) this).field_f << 16) - -((dg) this).field_h.g((byte) 115);
-                  ((dg) this).a(param1, ((dg) this).field_h.e(9648), ((dg) this).field_h.d(3), var4, (byte) 46);
+                  var4 = (this.field_f << -2067928400) - -this.field_h.g((byte) 115);
+                  this.a(param1, this.field_h.e(9648), this.field_h.d(3), var4, (byte) 46);
                   if (var3 != null) {
-                    ((fsa) var3).a(param1, -10425);
+                    ((fsa) (var3)).a(param1, -10425);
                     break L1;
                   } else {
                     break L1;
                   }
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             }
@@ -1541,16 +1605,17 @@ abstract class dg extends vg implements fo, noa {
               if (param0 > 103) {
                 break L3;
               } else {
-                ((dg) this).field_f = 112;
+                this.field_f = 112;
                 break L3;
               }
             }
+            decompiledRegionSelector0 = 1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
-            var3 = (Object) (Object) decompiledCaughtException;
+            var3 = decompiledCaughtException;
             stackOut_11_0 = var3;
             stackOut_11_1 = new StringBuilder().append("dg.DB(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
@@ -1559,7 +1624,7 @@ abstract class dg extends vg implements fo, noa {
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
               stackOut_13_0 = stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
@@ -1567,7 +1632,7 @@ abstract class dg extends vg implements fo, noa {
               break L4;
             } else {
               stackOut_12_0 = stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -1575,13 +1640,19 @@ abstract class dg extends vg implements fo, noa {
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final void e(int param0) {
+        la discarded$0 = null;
         if (param0 >= -16) {
-            la discarded$0 = ((dg) this).a(-26);
+            discarded$0 = this.a(-26);
             this.g(-12663);
             return;
         }
@@ -1595,53 +1666,54 @@ abstract class dg extends vg implements fo, noa {
     dg(int param0, la param1, kh param2) {
         this(param0);
         try {
-            ((dg) this).a(125, param1, param2);
+            this.a(125, param1, param2);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "dg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "dg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     void h(int param0) {
         if (param0 < 0) {
-            ((dg) this).field_f = 78;
+            this.field_f = 78;
         }
     }
 
     final la a(int param0) {
+        boolean discarded$6 = false;
         if (param0 >= 12) {
-          if (((dg) this).field_h == null) {
+          if (this.field_h == null) {
             return null;
           } else {
-            return ((dg) this).field_h.f((byte) 116);
+            return this.field_h.f((byte) 116);
           }
         } else {
-          boolean discarded$6 = ((dg) this).a((byte) -118);
-          if (((dg) this).field_h == null) {
+          discarded$6 = this.a((byte) -118);
+          if (this.field_h == null) {
             return null;
           } else {
-            return ((dg) this).field_h.f((byte) 116);
+            return this.field_h.f((byte) 116);
           }
         }
     }
 
     final gma j(byte param0) {
         if (param0 != 16) {
-            ((dg) this).field_k = null;
-            return ((dg) this).field_h;
+            this.field_k = (gr) null;
+            return this.field_h;
         }
-        return ((dg) this).field_h;
+        return this.field_h;
     }
 
     int k(byte param0) {
         if (param0 == -99) {
-          if (((dg) this).field_h.j(param0 + 98)) {
+          if (this.field_h.j(param0 + 98)) {
             return 2;
           } else {
             return 7;
           }
         } else {
-          ((dg) this).field_j = true;
-          if (((dg) this).field_h.j(param0 + 98)) {
+          this.field_j = true;
+          if (this.field_h.j(param0 + 98)) {
             return 2;
           } else {
             return 7;
@@ -1652,150 +1724,158 @@ abstract class dg extends vg implements fo, noa {
     void a(int param0, uw param1, byte param2) {
         try {
             if (param2 < 40) {
-                ((dg) this).a((byte) -28, 26);
+                this.a((byte) -28, 26);
             }
-            param1.a(param0, (fo) this, (byte) -33);
+            param1.a(param0, (fo) (this), (byte) -33);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "dg.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "dg.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     void a(int param0, la param1, kh param2) {
         RuntimeException var4 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
         String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
         String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
             L1: {
-              if (param1.field_E >= 15) {
-                if (param2.b((byte) 44, 1) != 1) {
-                  ((dg) this).field_f = 0;
-                  break L1;
-                } else {
-                  ((dg) this).field_f = param2.b((byte) 44, 8);
-                  break L1;
+              if ((param1.field_E ^ -1) <= -16) {
+                L2: {
+                  if ((param2.b((byte) 44, 1) ^ -1) != -2) {
+                    break L2;
+                  } else {
+                    this.field_f = param2.b((byte) 44, 8);
+                    if (!TombRacer.field_G) {
+                      break L1;
+                    } else {
+                      break L2;
+                    }
+                  }
                 }
+                this.field_f = 0;
+                break L1;
               } else {
                 break L1;
               }
             }
-            L2: {
+            L3: {
               if (param0 >= 119) {
-                break L2;
+                break L3;
               } else {
-                ((dg) this).d(14);
-                break L2;
+                this.d(14);
+                break L3;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("dg.G(").append(param0).append(',');
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L3;
-            } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L3;
-            }
-          }
           L4: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
-            if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+            var4 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) (var4);
+            stackOut_9_1 = new StringBuilder().append("dg.G(").append(param0).append(',');
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param1 == null) {
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
               break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          L5: {
+            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param2 == null) {
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L5;
+            } else {
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L5;
+            }
+          }
+          throw tba.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
     }
 
     public int e(byte param0) {
+        int discarded$7 = 0;
         if (param0 <= -86) {
-          if (null == ((dg) this).field_h) {
+          if (null == this.field_h) {
             return 0;
           } else {
-            return ((dg) this).field_h.g((byte) 115) - -(((dg) this).field_f << 16);
+            return this.field_h.g((byte) 115) - -(this.field_f << -1904502352);
           }
         } else {
-          int discarded$7 = ((dg) this).k((byte) -84);
-          if (null == ((dg) this).field_h) {
+          discarded$7 = this.k((byte) -84);
+          if (null == this.field_h) {
             return 0;
           } else {
-            return ((dg) this).field_h.g((byte) 115) - -(((dg) this).field_f << 16);
+            return this.field_h.g((byte) 115) - -(this.field_f << -1904502352);
           }
         }
     }
 
     final void a(int param0, byte param1) {
-        ((dg) this).field_f = ((dg) this).field_f + param0;
+        this.field_f = this.field_f + param0;
         if (param1 <= 112) {
-            ((dg) this).field_f = -110;
+            this.field_f = -110;
         }
     }
 
@@ -1805,13 +1885,14 @@ abstract class dg extends vg implements fo, noa {
     }
 
     void a(byte param0, int param1, uw param2) {
+        int discarded$0 = 0;
         try {
             if (param0 <= 50) {
-                int discarded$0 = ((dg) this).m((byte) 49);
+                discarded$0 = this.m((byte) 49);
             }
-            param2.a((byte) -99, param1, (fo) this);
+            param2.a((byte) -99, param1, (fo) (this));
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "dg.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "dg.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1831,6 +1912,7 @@ abstract class dg extends vg implements fo, noa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
@@ -1842,43 +1924,45 @@ abstract class dg extends vg implements fo, noa {
         String stackOut_6_2 = null;
         try {
           L0: {
-            if (((dg) this).field_i != -1) {
+            if ((this.field_i ^ -1) != 0) {
               L1: {
-                param0.a(((dg) this).field_i, (fo) this, (byte) -33);
-                ((dg) this).field_i = -1;
+                param0.a(this.field_i, (fo) (this), (byte) -33);
+                this.field_i = -1;
                 if (param1 >= 82) {
                   break L1;
                 } else {
-                  ((dg) this).d(-6);
+                  this.d(-6);
                   break L1;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) runtimeException;
+            stackOut_5_0 = (RuntimeException) (runtimeException);
             stackOut_5_1 = new StringBuilder().append("dg.RA(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -1886,34 +1970,39 @@ abstract class dg extends vg implements fo, noa {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     void a(int param0, uw param1) {
-        if (!(((dg) this).field_i != -1)) {
+        if (!(this.field_i != -1)) {
             return;
         }
         if (param0 > -39) {
-            ((dg) this).field_g = 41;
+            this.field_g = 41;
         }
-        int var3_int = ((dg) this).k((byte) -99);
-        if (!(((dg) this).field_i != var3_int)) {
+        int var3_int = this.k((byte) -99);
+        if (!(this.field_i != var3_int)) {
             return;
         }
         try {
-            ((dg) this).a(((dg) this).field_i, param1, (byte) 53);
-            ((dg) this).a((byte) 86, var3_int, param1);
-            ((dg) this).field_i = var3_int;
+            this.a(this.field_i, param1, (byte) 53);
+            this.a((byte) 86, var3_int, param1);
+            this.field_i = var3_int;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "dg.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "dg.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     dg(int param0) {
-        ((dg) this).field_j = false;
-        ((dg) this).field_i = -1;
-        ((dg) this).field_l = param0;
+        this.field_j = false;
+        this.field_i = -1;
+        this.field_l = param0;
     }
 
     static {

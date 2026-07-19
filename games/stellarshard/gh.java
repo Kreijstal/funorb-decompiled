@@ -8,6 +8,9 @@ final class gh {
     static int field_c;
 
     final static int a(boolean param0) {
+        if (!param0) {
+            return 109;
+        }
         return ac.field_e;
     }
 
@@ -15,7 +18,7 @@ final class gh {
         if (param0 < 31) {
             return true;
         }
-        return ni.field_d > 250 ? true : false;
+        return -251 > (ni.field_d ^ -1) ? true : false;
     }
 
     public static void a(byte param0) {
@@ -27,10 +30,6 @@ final class gh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "To server list";
         field_c = 0;
     }

@@ -13,11 +13,11 @@ final class fi extends ki {
         pb var8 = null;
         pb var9 = null;
         if (param1 < -84) {
-          if (((fi) this).b((byte) -111)) {
-            var9 = kd.a(((fi) this).field_m, param3, (byte) 107);
-            if (!var9.a((byte) -84, param3, ((fi) this).field_m)) {
+          if (this.b((byte) -111)) {
+            var9 = kd.a(this.field_m, param3, (byte) 107);
+            if (!var9.a((byte) -84, param3, this.field_m)) {
               dk.a(2, param3, var9, -35, 23275, on.field_K);
-              var9.a(((fi) this).field_m, param3, (byte) 78);
+              var9.a(this.field_m, param3, (byte) 78);
               mn.a(var9.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
               return;
             } else {
@@ -29,15 +29,15 @@ final class fi extends ki {
             return;
           }
         } else {
-          ((fi) this).a(false, 56, -90, -99, 75);
-          if (((fi) this).b((byte) -111)) {
-            var8 = kd.a(((fi) this).field_m, param3, (byte) 107);
-            if (var8.a((byte) -84, param3, ((fi) this).field_m)) {
+          this.a(false, 56, -90, -99, 75);
+          if (this.b((byte) -111)) {
+            var8 = kd.a(this.field_m, param3, (byte) 107);
+            if (var8.a((byte) -84, param3, this.field_m)) {
               mn.a(var8.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
               return;
             } else {
               dk.a(2, param3, var8, -35, 23275, on.field_K);
-              var8.a(((fi) this).field_m, param3, (byte) 78);
+              var8.a(this.field_m, param3, (byte) 78);
               mn.a(var8.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
               return;
             }
@@ -51,9 +51,9 @@ final class fi extends ki {
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
         var5 = 22 % ((param0 - -28) / 43);
-        if (param1 <= -1) {
+        if ((param1 ^ -1) >= 0) {
           lb.g(param2, param3, 153, 240, 16777215, 11184810);
-          if (!((fi) this).b((byte) -107)) {
+          if (!this.b((byte) -107)) {
             return;
           } else {
             be.field_d.c(param2, param3);
@@ -61,7 +61,7 @@ final class fi extends ki {
           }
         } else {
           lb.g(param2, param3, 160, 238, pf.field_b[param1], 16777215);
-          if (!((fi) this).b((byte) -107)) {
+          if (!this.b((byte) -107)) {
             return;
           } else {
             be.field_d.c(param2, param3);
@@ -90,7 +90,7 @@ final class fi extends ki {
             return false;
           }
         } else {
-          field_v = null;
+          field_v = (String) null;
           if (null != s.field_d) {
             if (kc.field_r != null) {
               if (null != hk.field_I) {
@@ -118,12 +118,15 @@ final class fi extends ki {
             ao.field_o = new jp[2][];
             ja.field_a = new jp[2][];
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "fi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "fi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     public static void d(byte param0) {
         field_v = null;
+        if (param0 != -31) {
+            return;
+        }
         field_u = null;
         field_r = null;
         field_s = null;
@@ -132,7 +135,7 @@ final class fi extends ki {
 
     final jp[] a(int param0, boolean param1) {
         if (!param1) {
-            field_u = null;
+            field_u = (String) null;
             return ja.field_a[param0 - 1];
         }
         return ja.field_a[param0 - 1];
@@ -145,7 +148,7 @@ final class fi extends ki {
 
     final jp a(boolean param0, int param1) {
         if (!param0) {
-          ((fi) this).a(true, -66, 69, -83, 51);
+          this.a(true, -66, 69, -83, 51);
           return ga.field_k[-1 + param1];
         } else {
           return ga.field_k[-1 + param1];
@@ -153,23 +156,26 @@ final class fi extends ki {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
+        boolean discarded$6 = false;
+        boolean discarded$7 = false;
+        boolean discarded$8 = false;
         pb var6 = null;
-        if (((fi) this).b((byte) -125)) {
-          var6 = ge.a(((fi) this).field_m, param3, -20777);
-          if (var6.a((byte) -84, param3, ((fi) this).field_m)) {
+        if (this.b((byte) -125)) {
+          var6 = ge.a(this.field_m, param3, -20777);
+          if (var6.a((byte) -84, param3, this.field_m)) {
             mn.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
             if (param0) {
               return;
             } else {
-              boolean discarded$6 = ((fi) this).a(false);
+              discarded$6 = this.a(false);
               return;
             }
           } else {
             dk.a(1, param3, var6, 0, 23275, hk.field_I);
-            var6.a(((fi) this).field_m, param3, (byte) 78);
+            var6.a(this.field_m, param3, (byte) 78);
             mn.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
             if (!param0) {
-              boolean discarded$7 = ((fi) this).a(false);
+              discarded$7 = this.a(false);
               return;
             } else {
               return;
@@ -180,7 +186,7 @@ final class fi extends ki {
           if (param0) {
             return;
           } else {
-            boolean discarded$8 = ((fi) this).a(false);
+            discarded$8 = this.a(false);
             return;
           }
         }
@@ -208,10 +214,6 @@ final class fi extends ki {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = new re(1);
         field_w = new int[1024];
         field_u = "Lobby";

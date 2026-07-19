@@ -39,36 +39,36 @@ final class fj {
         String stackOut_5_2 = null;
         try {
           var4_int = 72 % ((6 - param2) / 39);
-          var5 = (float)(1 + ((fj) this).field_h) + (float)param0 / 100.0f;
-          ((fj) this).field_a = var5 * (float)((fj) this).field_e / (float)(((fj) this).field_c - -1);
-          if (param0 != 0) {
-            ((fj) this).field_g = param1.field_c + " - " + param0 + "%";
+          var5 = (float)(1 + this.field_h) + (float)param0 / 100.0f;
+          this.field_a = var5 * (float)this.field_e / (float)(this.field_c - -1);
+          if (-1 != (param0 ^ -1)) {
+            this.field_g = param1.field_c + " - " + param0 + "%";
             return;
           } else {
-            ((fj) this).field_g = param1.field_d;
+            this.field_g = param1.field_d;
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
             var4 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_0 = (RuntimeException) (var4);
             stackOut_4_1 = new StringBuilder().append("fj.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L0;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -76,24 +76,25 @@ final class fj {
               break L0;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param2 + ')');
         }
     }
 
     final boolean a(boolean param0) {
+        boolean discarded$1 = false;
         int var3 = 0;
         vc var4 = null;
         var3 = stellarshard.field_B;
         L0: while (true) {
-          if (((fj) this).field_c <= ((fj) this).field_h) {
+          if (this.field_c <= this.field_h) {
             if (!param0) {
-              boolean discarded$1 = ((fj) this).a(false);
+              discarded$1 = this.a(false);
               return true;
             } else {
               return true;
             }
           } else {
-            var4 = ((fj) this).field_d[((fj) this).field_h];
+            var4 = this.field_d[this.field_h];
             if (!var4.field_e.a((byte) -36)) {
               this.a(0, var4, (byte) -68);
               return false;
@@ -123,7 +124,7 @@ final class fj {
                 }
               }
               L3: {
-                if (var4.field_i >= 0) {
+                if (-1 >= (var4.field_i ^ -1)) {
                   break L3;
                 } else {
                   if (var4.field_j != null) {
@@ -142,7 +143,7 @@ final class fj {
                   }
                 }
               }
-              ((fj) this).field_h = ((fj) this).field_h + 1;
+              this.field_h = this.field_h + 1;
               continue L0;
             }
           }
@@ -169,10 +170,6 @@ final class fj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
         field_i = new rd();
         field_l = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");

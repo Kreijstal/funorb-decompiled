@@ -11,15 +11,17 @@ final class lk {
     private static String field_z;
 
     public static void a(boolean param0) {
+        if (!param0) {
+            lk.a(true);
+            field_a = null;
+            field_d = null;
+            return;
+        }
         field_a = null;
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "lk.A(";
         field_a = "Service unavailable";
         field_d = "Account created successfully!";

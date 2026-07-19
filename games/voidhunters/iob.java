@@ -8,14 +8,13 @@ final class iob extends vhb {
     private static String field_z;
 
     public static void c(int param0) {
+        if (param0 != -5509) {
+            return;
+        }
         field_e = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "iob.B(";
         field_f = 9;
         field_e = "Large defence chassis";

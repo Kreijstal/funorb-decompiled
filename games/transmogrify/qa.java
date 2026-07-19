@@ -39,33 +39,45 @@ final class qa extends h {
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
-            var1_int = mh.field_b[0];
+            L1: {
+              var1_int = mh.field_b[0];
+              if (param0 == 1702) {
+                break L1;
+              } else {
+                field_u = 119;
+                break L1;
+              }
+            }
             var2 = 1;
-            L1: while (true) {
+            L2: while (true) {
               if (mh.field_b.length <= var2) {
                 break L0;
               } else {
                 var3 = mh.field_b[var2];
-                ji.a(i.field_b, var2 << 4, i.field_b, var1_int, var3);
+                ji.a(i.field_b, var2 << -821295740, i.field_b, var1_int, var3);
                 var1_int = var1_int + var3;
                 var2++;
-                continue L1;
+                if (var4 == 0) {
+                  continue L2;
+                } else {
+                  return;
+                }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var1, "qa.D(" + 1702 + ')');
+          throw ch.a((Throwable) ((Object) var1), "qa.D(" + param0 + ')');
         }
     }
 
     private qa(int param0, int param1, int param2) {
-        ((qa) this).field_t = param1;
-        ((qa) this).field_i = rh.field_q;
-        ((qa) this).field_q = mc.field_b;
-        ((qa) this).field_s = param0;
-        ((qa) this).field_o = param2;
+        this.field_t = param1;
+        this.field_i = rh.field_q;
+        this.field_q = mc.field_b;
+        this.field_s = param0;
+        this.field_o = param2;
     }
 
     public qa() {
@@ -73,6 +85,7 @@ final class qa extends h {
     }
 
     public final void a(int param0, int param1, boolean param2, byte param3, qg param4) {
+        int discarded$1 = 0;
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -130,22 +143,22 @@ final class qa extends h {
               if (!(param4 instanceof lj)) {
                 break L2;
               } else {
-                param2 = param2 & ((lj) (Object) param4).field_t;
+                param2 = param2 & ((lj) ((Object) param4)).field_t;
                 break L2;
               }
             }
             L3: {
               if (!param2) {
-                stackOut_12_0 = ((qa) this).field_o;
+                stackOut_12_0 = this.field_o;
                 stackIn_13_0 = stackOut_12_0;
                 break L3;
               } else {
                 if (var7 != 0) {
-                  stackOut_11_0 = ((qa) this).field_t;
+                  stackOut_11_0 = this.field_t;
                   stackIn_13_0 = stackOut_11_0;
                   break L3;
                 } else {
-                  stackOut_10_0 = ((qa) this).field_s;
+                  stackOut_10_0 = this.field_s;
                   stackIn_13_0 = stackOut_10_0;
                   break L3;
                 }
@@ -153,7 +166,7 @@ final class qa extends h {
             }
             L4: {
               var8 = stackIn_13_0;
-              te.a(((qa) this).field_q, var8, (param4.field_h + -((qa) this).field_q[0].field_s >> 1) + (param1 - -param4.field_n), param4.field_l, (byte) 15, param4.field_p + param0);
+              te.a(this.field_q, var8, (param4.field_h + -this.field_q[0].field_s >> 506172609) + (param1 - -param4.field_n), param4.field_l, (byte) 15, param4.field_p + param0);
               if (!param2) {
                 stackOut_15_0 = 7105644;
                 stackIn_16_0 = stackOut_15_0;
@@ -165,30 +178,30 @@ final class qa extends h {
               }
             }
             var9 = stackIn_16_0;
-            int discarded$1 = ((qa) this).field_i.a(param4.field_k, param0 - -param4.field_p, param4.field_n + (param1 - 2), param4.field_l, param4.field_h, var9, -1, 1, 1, ((qa) this).field_i.field_y);
+            discarded$1 = this.field_i.a(param4.field_k, param0 - -param4.field_p, param4.field_n + (param1 - 2), param4.field_l, param4.field_h, var9, -1, 1, 1, this.field_i.field_y);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var6;
+            stackOut_18_0 = (RuntimeException) (var6);
             stackOut_18_1 = new StringBuilder().append("qa.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param4 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L5;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -196,15 +209,11 @@ final class qa extends h {
               break L5;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = 64;
     }
 }

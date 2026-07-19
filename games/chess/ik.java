@@ -16,65 +16,77 @@ final class ik implements Iterator {
     static ld[] field_i;
 
     private final void a(int param0) {
-        ((ik) this).field_h = 1;
-        int var2 = 7;
-        ((ik) this).field_c = ((ik) this).field_j.field_e[0].field_h;
-        ((ik) this).field_d = null;
+        this.field_h = 1;
+        int var2 = -7 / ((12 - param0) / 54);
+        this.field_c = this.field_j.field_e[0].field_h;
+        this.field_d = null;
     }
 
     public final Object next() {
+        int fieldTemp$2 = 0;
         int var2 = 0;
         Object var3 = null;
         o var3_ref = null;
         o var4 = null;
         var2 = Chess.field_G;
-        if (((ik) this).field_j.field_e[((ik) this).field_h + -1] == ((ik) this).field_c) {
+        if (this.field_j.field_e[this.field_h + -1] == this.field_c) {
           L0: while (true) {
-            if (((ik) this).field_j.field_f > ((ik) this).field_h) {
-              int fieldTemp$2 = ((ik) this).field_h;
-              ((ik) this).field_h = ((ik) this).field_h + 1;
-              var3_ref = ((ik) this).field_j.field_e[fieldTemp$2].field_h;
-              if (var3_ref == ((ik) this).field_j.field_e[-1 + ((ik) this).field_h]) {
+            if (this.field_j.field_f > this.field_h) {
+              fieldTemp$2 = this.field_h;
+              this.field_h = this.field_h + 1;
+              var3_ref = this.field_j.field_e[fieldTemp$2].field_h;
+              if (var3_ref == this.field_j.field_e[-1 + this.field_h]) {
                 continue L0;
               } else {
-                ((ik) this).field_d = var3_ref;
-                ((ik) this).field_c = var3_ref.field_h;
-                return (Object) (Object) var3_ref;
+                this.field_d = var3_ref;
+                this.field_c = var3_ref.field_h;
+                return var3_ref;
               }
             } else {
               return null;
             }
           }
         } else {
-          var4 = ((ik) this).field_c;
-          ((ik) this).field_c = var4.field_h;
-          ((ik) this).field_d = var4;
-          return (Object) (Object) var4;
+          var4 = this.field_c;
+          this.field_c = var4.field_h;
+          this.field_d = var4;
+          return var4;
         }
     }
 
     public static void a(byte param0) {
         field_g = null;
         field_b = null;
-        field_a = null;
-        field_i = null;
-        field_e = null;
-        field_f = null;
+        if (param0 > -64) {
+          field_a = (String[]) null;
+          field_a = null;
+          field_i = null;
+          field_e = null;
+          field_f = null;
+          return;
+        } else {
+          field_a = null;
+          field_i = null;
+          field_e = null;
+          field_f = null;
+          return;
+        }
     }
 
     public final boolean hasNext() {
+        int fieldTemp$1 = 0;
         int var2 = 0;
         var2 = Chess.field_G;
-        if (((ik) this).field_j.field_e[-1 + ((ik) this).field_h] == ((ik) this).field_c) {
+        if (this.field_j.field_e[-1 + this.field_h] == this.field_c) {
           L0: while (true) {
-            if (((ik) this).field_j.field_f > ((ik) this).field_h) {
-              int fieldTemp$1 = ((ik) this).field_h;
-              ((ik) this).field_h = ((ik) this).field_h + 1;
-              if (((ik) this).field_j.field_e[fieldTemp$1].field_h == ((ik) this).field_j.field_e[-1 + ((ik) this).field_h]) {
-                ((ik) this).field_c = ((ik) this).field_j.field_e[-1 + ((ik) this).field_h];
+            if (this.field_j.field_f > this.field_h) {
+              fieldTemp$1 = this.field_h;
+              this.field_h = this.field_h + 1;
+              if (this.field_j.field_e[fieldTemp$1].field_h == this.field_j.field_e[-1 + this.field_h]) {
+                this.field_c = this.field_j.field_e[-1 + this.field_h];
                 continue L0;
               } else {
-                ((ik) this).field_c = ((ik) this).field_j.field_e[-1 + ((ik) this).field_h].field_h;
+                this.field_c = this.field_j.field_e[-1 + this.field_h].field_h;
                 return true;
               }
             } else {
@@ -87,41 +99,44 @@ final class ik implements Iterator {
     }
 
     final static aj b(int param0) {
-        if (g.field_a == ji.field_T) {
-            throw new IllegalStateException();
-        }
-        if (!(kn.field_D != g.field_a)) {
+        if (g.field_a != ji.field_T) {
+          if (kn.field_D == g.field_a) {
             g.field_a = ji.field_T;
             return lg.field_a;
+          } else {
+            if (param0 == 6792) {
+              return null;
+            } else {
+              field_b = (String) null;
+              return null;
+            }
+          }
+        } else {
+          throw new IllegalStateException();
         }
-        return null;
     }
 
     ik(bl param0) {
-        ((ik) this).field_d = null;
+        this.field_d = null;
         try {
-            ((ik) this).field_j = param0;
+            this.field_j = param0;
             this.a(90);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void remove() {
-        if (!(null != ((ik) this).field_d)) {
+        if (!(null != this.field_d)) {
             throw new IllegalStateException();
         }
-        ((ik) this).field_d.c(-2193);
-        ((ik) this).field_d = null;
+        this.field_d.c(-2193);
+        this.field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Unable to delete friend - system busy";
-        field_g = new short[]{(short) 16288, (short) 6792};
+        field_g = new short[]{(short)16288, (short)6792};
         field_f = "3D MODE";
         field_e = new tk();
     }

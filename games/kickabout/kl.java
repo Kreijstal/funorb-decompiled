@@ -24,36 +24,40 @@ final class kl {
     lf[] field_s;
 
     final static boolean b(int param0) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          L1: {
-            if (wt.field_x < 0) {
-              break L1;
-            } else {
-              if (640 <= wt.field_x) {
+        int stackIn_9_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
+        if (param0 == 640) {
+          L0: {
+            L1: {
+              if (-1 < (wt.field_x ^ -1)) {
                 break L1;
               } else {
-                if (us.field_j < 0) {
+                if (640 <= wt.field_x) {
                   break L1;
                 } else {
-                  if (g.field_a.field_T >= us.field_j) {
-                    stackOut_6_0 = 0;
-                    stackIn_7_0 = stackOut_6_0;
-                    break L0;
-                  } else {
+                  if (-1 < (us.field_j ^ -1)) {
                     break L1;
+                  } else {
+                    if (g.field_a.field_T >= us.field_j) {
+                      stackOut_8_0 = 0;
+                      stackIn_9_0 = stackOut_8_0;
+                      break L0;
+                    } else {
+                      break L1;
+                    }
                   }
                 }
               }
             }
+            stackOut_7_0 = 1;
+            stackIn_9_0 = stackOut_7_0;
+            break L0;
           }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
-          break L0;
+          return stackIn_9_0 != 0;
+        } else {
+          return false;
         }
-        return stackIn_7_0 != 0;
     }
 
     public static void a(int param0) {
@@ -71,10 +75,17 @@ final class kl {
         if (32 <= fieldTemp$0) {
             va.field_J = 0;
         }
-        int var1 = -125;
+        int var1 = -125 / ((param0 - 27) / 54);
     }
 
     private final void a(int param0, byte[] param1) {
+        int dupTemp$7 = 0;
+        int dupTemp$8 = 0;
+        int[] array$9 = null;
+        int dupTemp$10 = 0;
+        int[] array$11 = null;
+        int dupTemp$12 = 0;
+        int[] array$13 = null;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -123,21 +134,21 @@ final class kl {
               if (5 > var4) {
                 break L1;
               } else {
-                if (var4 > 7) {
+                if (-8 > (var4 ^ -1)) {
                   break L1;
                 } else {
                   L2: {
-                    if (var4 < 6) {
-                      ((kl) this).field_p = 0;
+                    if ((var4 ^ -1) > -7) {
+                      this.field_p = 0;
                       break L2;
                     } else {
-                      ((kl) this).field_p = var18.k(4);
+                      this.field_p = var18.k(4);
                       break L2;
                     }
                   }
                   L3: {
                     var5 = var18.h((byte) -116);
-                    if (-1 == (1 & var5)) {
+                    if (-1 == (1 & var5 ^ -1)) {
                       stackOut_10_0 = 0;
                       stackIn_11_0 = stackOut_10_0;
                       break L3;
@@ -149,11 +160,11 @@ final class kl {
                   }
                   L4: {
                     var6 = stackIn_11_0;
-                    if (-8 <= var4) {
-                      ((kl) this).field_n = var18.f((byte) 117);
+                    if (-8 >= (var4 ^ -1)) {
+                      this.field_n = var18.f((byte) 117);
                       break L4;
                     } else {
-                      ((kl) this).field_n = var18.a((byte) 81);
+                      this.field_n = var18.a((byte) 81);
                       break L4;
                     }
                   }
@@ -172,292 +183,293 @@ final class kl {
                     var7 = stackIn_17_0;
                     var8 = 0;
                     var9 = -1;
-                    ((kl) this).field_b = new int[((kl) this).field_n];
+                    this.field_b = new int[this.field_n];
                     if (var4 < 7) {
                       var10 = 0;
                       L7: while (true) {
-                        if (((kl) this).field_n <= var10) {
+                        if (this.field_n <= var10) {
                           break L6;
                         } else {
-                          L8: {
-                            int dupTemp$4 = var8 + var18.a((byte) 81);
-                            var8 = dupTemp$4;
-                            ((kl) this).field_b[var10] = dupTemp$4;
-                            if (((kl) this).field_b[var10] <= var9) {
-                              break L8;
-                            } else {
-                              break L8;
-                            }
+                          dupTemp$7 = var8 + var18.a((byte) 81);
+                          var8 = dupTemp$7;
+                          this.field_b[var10] = dupTemp$7;
+                          if (this.field_b[var10] > var9) {
+                            var9 = this.field_b[var10];
+                            var10++;
+                            continue L7;
+                          } else {
+                            var10++;
+                            continue L7;
                           }
-                          var10++;
-                          continue L7;
                         }
                       }
                     } else {
                       var10 = 0;
-                      L9: while (true) {
-                        if (((kl) this).field_n <= var10) {
+                      L8: while (true) {
+                        if (this.field_n <= var10) {
                           break L6;
                         } else {
-                          L10: {
-                            int dupTemp$5 = var8 + var18.f((byte) -27);
-                            var8 = dupTemp$5;
-                            ((kl) this).field_b[var10] = dupTemp$5;
-                            if (((kl) this).field_b[var10] <= var9) {
-                              break L10;
-                            } else {
-                              break L10;
-                            }
+                          dupTemp$8 = var8 + var18.f((byte) -27);
+                          var8 = dupTemp$8;
+                          this.field_b[var10] = dupTemp$8;
+                          if (this.field_b[var10] > var9) {
+                            var9 = this.field_b[var10];
+                            var10++;
+                            continue L8;
+                          } else {
+                            var10++;
+                            continue L8;
                           }
-                          var10++;
-                          continue L9;
                         }
                       }
                     }
                   }
-                  L11: {
-                    ((kl) this).field_d = var9 - -1;
+                  L9: {
+                    this.field_d = var9 - -1;
                     if (var7 == 0) {
-                      break L11;
+                      break L9;
                     } else {
-                      ((kl) this).field_k = new byte[((kl) this).field_d][];
-                      break L11;
+                      this.field_k = new byte[this.field_d][];
+                      break L9;
                     }
                   }
-                  L12: {
-                    ((kl) this).field_r = new int[((kl) this).field_d][];
-                    ((kl) this).field_i = new int[((kl) this).field_d];
-                    ((kl) this).field_c = new int[((kl) this).field_d];
-                    ((kl) this).field_e = new int[((kl) this).field_d];
-                    var10 = 48;
-                    ((kl) this).field_f = new int[((kl) this).field_d];
+                  L10: {
+                    this.field_r = new int[this.field_d][];
+                    this.field_i = new int[this.field_d];
+                    this.field_c = new int[this.field_d];
+                    this.field_e = new int[this.field_d];
+                    var10 = 48 / ((param0 - -40) / 37);
+                    this.field_f = new int[this.field_d];
                     if (var6 != 0) {
-                      ((kl) this).field_l = new int[((kl) this).field_d];
+                      this.field_l = new int[this.field_d];
                       var11 = 0;
-                      L13: while (true) {
-                        if (((kl) this).field_d <= var11) {
+                      L11: while (true) {
+                        if (this.field_d <= var11) {
                           var11 = 0;
-                          L14: while (true) {
-                            if (var11 >= ((kl) this).field_n) {
-                              ((kl) this).field_q = new lf(((kl) this).field_l);
-                              break L12;
+                          L12: while (true) {
+                            if (var11 >= this.field_n) {
+                              this.field_q = new lf(this.field_l);
+                              break L10;
                             } else {
-                              ((kl) this).field_l[((kl) this).field_b[var11]] = var18.k(4);
+                              this.field_l[this.field_b[var11]] = var18.k(4);
                               var11++;
-                              continue L14;
+                              continue L12;
                             }
                           }
                         } else {
-                          ((kl) this).field_l[var11] = -1;
+                          this.field_l[var11] = -1;
                           var11++;
-                          continue L13;
+                          continue L11;
                         }
                       }
                     } else {
-                      break L12;
+                      break L10;
                     }
                   }
                   var11 = 0;
-                  L15: while (true) {
-                    if (var11 >= ((kl) this).field_n) {
-                      L16: {
+                  L13: while (true) {
+                    if (var11 >= this.field_n) {
+                      L14: {
                         if (var7 != 0) {
                           var11 = 0;
-                          L17: while (true) {
-                            if (var11 >= ((kl) this).field_n) {
+                          L15: while (true) {
+                            if (var11 >= this.field_n) {
                               var11 = 0;
-                              L18: while (true) {
-                                if (var11 >= ((kl) this).field_n) {
-                                  break L16;
+                              L16: while (true) {
+                                if (var11 >= this.field_n) {
+                                  break L14;
                                 } else {
-                                  ((kl) this).field_f[((kl) this).field_b[var11]] = var18.k(4);
+                                  this.field_f[this.field_b[var11]] = var18.k(4);
                                   var11++;
-                                  continue L18;
+                                  continue L16;
                                 }
                               }
                             } else {
                               var22 = new byte[64];
                               var18.a(var22, 0, (byte) -6, 64);
-                              ((kl) this).field_k[((kl) this).field_b[var11]] = var22;
+                              this.field_k[this.field_b[var11]] = var22;
+                              var11++;
+                              continue L15;
+                            }
+                          }
+                        } else {
+                          var11 = 0;
+                          L17: while (true) {
+                            if (var11 >= this.field_n) {
+                              break L14;
+                            } else {
+                              this.field_f[this.field_b[var11]] = var18.k(4);
                               var11++;
                               continue L17;
                             }
                           }
-                        } else {
+                        }
+                      }
+                      L18: {
+                        if (-8 >= (var4 ^ -1)) {
                           var11 = 0;
                           L19: while (true) {
-                            if (var11 >= ((kl) this).field_n) {
-                              break L16;
+                            if (this.field_n <= var11) {
+                              var11 = 0;
+                              L20: while (true) {
+                                if (var11 >= this.field_n) {
+                                  break L18;
+                                } else {
+                                  var12 = this.field_b[var11];
+                                  var8 = 0;
+                                  var13 = this.field_i[var12];
+                                  array$9 = new int[var13];
+                                  this.field_r[var12] = array$9;
+                                  var14 = -1;
+                                  var15 = 0;
+                                  L21: while (true) {
+                                    if (var15 >= var13) {
+                                      L22: {
+                                        this.field_e[var12] = var14 - -1;
+                                        if (var14 - -1 != var13) {
+                                          break L22;
+                                        } else {
+                                          this.field_r[var12] = null;
+                                          break L22;
+                                        }
+                                      }
+                                      var11++;
+                                      continue L20;
+                                    } else {
+                                      L23: {
+                                        dupTemp$10 = var8 + var18.f((byte) -96);
+                                        var8 = dupTemp$10;
+                                        this.field_r[var12][var15] = dupTemp$10;
+                                        var16 = dupTemp$10;
+                                        if (var14 < var16) {
+                                          var14 = var16;
+                                          break L23;
+                                        } else {
+                                          break L23;
+                                        }
+                                      }
+                                      var15++;
+                                      continue L21;
+                                    }
+                                  }
+                                }
+                              }
                             } else {
-                              ((kl) this).field_f[((kl) this).field_b[var11]] = var18.k(4);
+                              this.field_i[this.field_b[var11]] = var18.f((byte) -104);
                               var11++;
                               continue L19;
                             }
                           }
-                        }
-                      }
-                      L20: {
-                        if (var4 >= 7) {
-                          var11 = 0;
-                          L21: while (true) {
-                            if (((kl) this).field_n <= var11) {
-                              var11 = 0;
-                              L22: while (true) {
-                                if (var11 >= ((kl) this).field_n) {
-                                  break L20;
-                                } else {
-                                  var12 = ((kl) this).field_b[var11];
-                                  var8 = 0;
-                                  var13 = ((kl) this).field_i[var12];
-                                  ((kl) this).field_r[var12] = new int[var13];
-                                  var14 = -1;
-                                  var15 = 0;
-                                  L23: while (true) {
-                                    if (var15 >= var13) {
-                                      L24: {
-                                        ((kl) this).field_e[var12] = var14 - -1;
-                                        if (var14 - -1 != var13) {
-                                          break L24;
-                                        } else {
-                                          ((kl) this).field_r[var12] = null;
-                                          break L24;
-                                        }
-                                      }
-                                      var11++;
-                                      continue L22;
-                                    } else {
-                                      L25: {
-                                        int dupTemp$6 = var8 + var18.f((byte) -96);
-                                        var8 = dupTemp$6;
-                                        ((kl) this).field_r[var12][var15] = dupTemp$6;
-                                        var16 = dupTemp$6;
-                                        if (var14 < var16) {
-                                          var14 = var16;
-                                          break L25;
-                                        } else {
-                                          break L25;
-                                        }
-                                      }
-                                      var15++;
-                                      continue L23;
-                                    }
-                                  }
-                                }
-                              }
-                            } else {
-                              ((kl) this).field_i[((kl) this).field_b[var11]] = var18.f((byte) -104);
-                              var11++;
-                              continue L21;
-                            }
-                          }
                         } else {
                           var11 = 0;
-                          L26: while (true) {
-                            if (((kl) this).field_n <= var11) {
+                          L24: while (true) {
+                            if (this.field_n <= var11) {
                               var11 = 0;
-                              L27: while (true) {
-                                if (((kl) this).field_n <= var11) {
-                                  break L20;
+                              L25: while (true) {
+                                if (this.field_n <= var11) {
+                                  break L18;
                                 } else {
-                                  var12 = ((kl) this).field_b[var11];
+                                  var12 = this.field_b[var11];
                                   var8 = 0;
-                                  var13 = ((kl) this).field_i[var12];
-                                  ((kl) this).field_r[var12] = new int[var13];
+                                  var13 = this.field_i[var12];
+                                  array$11 = new int[var13];
+                                  this.field_r[var12] = array$11;
                                   var14 = -1;
                                   var15 = 0;
-                                  L28: while (true) {
+                                  L26: while (true) {
                                     if (var15 >= var13) {
-                                      L29: {
-                                        ((kl) this).field_e[var12] = var14 - -1;
+                                      L27: {
+                                        this.field_e[var12] = var14 - -1;
                                         if (var14 - -1 != var13) {
-                                          break L29;
+                                          break L27;
                                         } else {
-                                          ((kl) this).field_r[var12] = null;
-                                          break L29;
+                                          this.field_r[var12] = null;
+                                          break L27;
                                         }
                                       }
                                       var11++;
-                                      continue L27;
+                                      continue L25;
                                     } else {
-                                      L30: {
-                                        int dupTemp$7 = var8 + var18.a((byte) 81);
-                                        var8 = dupTemp$7;
-                                        ((kl) this).field_r[var12][var15] = dupTemp$7;
-                                        var16 = dupTemp$7;
+                                      L28: {
+                                        dupTemp$12 = var8 + var18.a((byte) 81);
+                                        var8 = dupTemp$12;
+                                        this.field_r[var12][var15] = dupTemp$12;
+                                        var16 = dupTemp$12;
                                         if (var16 > var14) {
                                           var14 = var16;
-                                          break L30;
+                                          break L28;
                                         } else {
-                                          break L30;
+                                          break L28;
                                         }
                                       }
                                       var15++;
-                                      continue L28;
+                                      continue L26;
                                     }
                                   }
                                 }
                               }
                             } else {
-                              ((kl) this).field_i[((kl) this).field_b[var11]] = var18.a((byte) 81);
+                              this.field_i[this.field_b[var11]] = var18.a((byte) 81);
                               var11++;
-                              continue L26;
+                              continue L24;
                             }
                           }
                         }
                       }
-                      L31: {
+                      L29: {
                         if (var6 != 0) {
-                          ((kl) this).field_s = new lf[var9 + 1];
-                          ((kl) this).field_j = new int[1 + var9][];
+                          this.field_s = new lf[var9 + 1];
+                          this.field_j = new int[1 + var9][];
                           var11 = 0;
-                          L32: while (true) {
-                            if (((kl) this).field_n <= var11) {
-                              break L31;
+                          L30: while (true) {
+                            if (this.field_n <= var11) {
+                              break L29;
                             } else {
-                              var12 = ((kl) this).field_b[var11];
-                              var13 = ((kl) this).field_i[var12];
-                              ((kl) this).field_j[var12] = new int[((kl) this).field_e[var12]];
+                              var12 = this.field_b[var11];
+                              var13 = this.field_i[var12];
+                              array$13 = new int[this.field_e[var12]];
+                              this.field_j[var12] = array$13;
                               var14 = 0;
-                              L33: while (true) {
-                                if (var14 >= ((kl) this).field_e[var12]) {
+                              L31: while (true) {
+                                if (var14 >= this.field_e[var12]) {
                                   var14 = 0;
-                                  L34: while (true) {
+                                  L32: while (true) {
                                     if (var13 <= var14) {
-                                      ((kl) this).field_s[var12] = new lf(((kl) this).field_j[var12]);
+                                      this.field_s[var12] = new lf(this.field_j[var12]);
                                       var11++;
-                                      continue L32;
+                                      continue L30;
                                     } else {
-                                      L35: {
-                                        if (((kl) this).field_r[var12] != null) {
-                                          var15 = ((kl) this).field_r[var12][var14];
-                                          break L35;
+                                      L33: {
+                                        if (this.field_r[var12] != null) {
+                                          var15 = this.field_r[var12][var14];
+                                          break L33;
                                         } else {
                                           var15 = var14;
-                                          break L35;
+                                          break L33;
                                         }
                                       }
-                                      ((kl) this).field_j[var12][var15] = var18.k(4);
+                                      this.field_j[var12][var15] = var18.k(4);
                                       var14++;
-                                      continue L34;
+                                      continue L32;
                                     }
                                   }
                                 } else {
-                                  ((kl) this).field_j[var12][var14] = -1;
+                                  this.field_j[var12][var14] = -1;
                                   var14++;
-                                  continue L33;
+                                  continue L31;
                                 }
                               }
                             }
                           }
                         } else {
-                          break L31;
+                          break L29;
                         }
                       }
                       break L0;
                     } else {
-                      ((kl) this).field_c[((kl) this).field_b[var11]] = var18.k(4);
+                      this.field_c[this.field_b[var11]] = var18.k(4);
                       var11++;
-                      continue L15;
+                      continue L13;
                     }
                   }
                 }
@@ -467,65 +479,61 @@ final class kl {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L36: {
+          L34: {
             var3 = decompiledCaughtException;
-            stackOut_96_0 = (RuntimeException) var3;
-            stackOut_96_1 = new StringBuilder().append("kl.A(").append(26).append(',');
+            stackOut_96_0 = (RuntimeException) (var3);
+            stackOut_96_1 = new StringBuilder().append("kl.A(").append(param0).append(',');
             stackIn_98_0 = stackOut_96_0;
             stackIn_98_1 = stackOut_96_1;
             stackIn_97_0 = stackOut_96_0;
             stackIn_97_1 = stackOut_96_1;
             if (param1 == null) {
-              stackOut_98_0 = (RuntimeException) (Object) stackIn_98_0;
-              stackOut_98_1 = (StringBuilder) (Object) stackIn_98_1;
+              stackOut_98_0 = (RuntimeException) ((Object) stackIn_98_0);
+              stackOut_98_1 = (StringBuilder) ((Object) stackIn_98_1);
               stackOut_98_2 = "null";
               stackIn_99_0 = stackOut_98_0;
               stackIn_99_1 = stackOut_98_1;
               stackIn_99_2 = stackOut_98_2;
-              break L36;
+              break L34;
             } else {
-              stackOut_97_0 = (RuntimeException) (Object) stackIn_97_0;
-              stackOut_97_1 = (StringBuilder) (Object) stackIn_97_1;
+              stackOut_97_0 = (RuntimeException) ((Object) stackIn_97_0);
+              stackOut_97_1 = (StringBuilder) ((Object) stackIn_97_1);
               stackOut_97_2 = "{...}";
               stackIn_99_0 = stackOut_97_0;
               stackIn_99_1 = stackOut_97_1;
               stackIn_99_2 = stackOut_97_2;
-              break L36;
+              break L34;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_99_0, stackIn_99_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_99_0), stackIn_99_2 + ')');
         }
     }
 
     kl(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-            ((kl) this).field_g = er.a(false, param0.length, param0);
-            if (((kl) this).field_g != param1) {
+            this.field_g = er.a(false, param0.length, param0);
+            if (this.field_g != param1) {
                 throw new RuntimeException();
             }
             if (param2 != null) {
                 if (param2.length != 64) {
                     throw new RuntimeException();
                 }
-                ((kl) this).field_o = jj.a(param0.length, param0, (byte) 91, 0);
+                this.field_o = jj.a(param0.length, param0, (byte) 91, 0);
                 for (var4_int = 0; 64 > var4_int; var4_int++) {
-                    if (param2[var4_int] != ((kl) this).field_o[var4_int]) {
+                    if (param2[var4_int] != this.field_o[var4_int]) {
                         throw new RuntimeException();
                     }
                 }
             }
             this.a(26, param0);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = null;
         field_t = true;
     }

@@ -16,7 +16,7 @@ final class vl extends ch implements vo {
     public static void a(int param0) {
         field_R = null;
         if (param0 != 0) {
-            field_J = null;
+            field_J = (ak) null;
         }
         field_Q = null;
         field_L = null;
@@ -25,43 +25,44 @@ final class vl extends ch implements vo {
 
     final void a(int param0, int param1, int param2, byte param3) {
         super.a(param0, param1, param2, (byte) -24);
-        int discarded$0 = ((vl) this).field_O.a(((vl) this).field_N, 14 + (((vl) this).field_z + param2), ((vl) this).field_p + param0 - -10, ((vl) this).field_E + -28, ((vl) this).field_C, 16777215, -1, 0, 0, ((vl) this).field_O.field_w);
+        int discarded$0 = this.field_O.a(this.field_N, 14 + (this.field_z + param2), this.field_p + param0 - -10, this.field_E + -28, this.field_C, 16777215, -1, 0, 0, this.field_O.field_w);
         int var5 = -57 / ((param3 - 70) / 49);
     }
 
     private final void a(int param0, int param1) {
         int var5 = 0;
+        boolean discarded$0 = false;
         int var6 = Pixelate.field_H ? 1 : 0;
-        if (!(param1 > ((vl) this).field_P)) {
+        if (!(param1 > this.field_P)) {
             return;
         }
         qm[] var7 = new qm[param1];
         qm[] var3 = var7;
         int[] var4 = new int[param1];
-        for (var5 = 0; var5 < ((vl) this).field_P; var5++) {
-            var7[var5] = ((vl) this).field_S[var5];
-            var4[var5] = ((vl) this).field_I[var5];
+        for (var5 = 0; var5 < this.field_P; var5++) {
+            var7[var5] = this.field_S[var5];
+            var4[var5] = this.field_I[var5];
         }
-        ((vl) this).field_I = var4;
-        ((vl) this).field_S = var3;
-        ((vl) this).field_P = param1;
+        this.field_I = var4;
+        this.field_S = var3;
+        this.field_P = param1;
         if (param0 > -57) {
-            boolean discarded$0 = vl.b(94, 86, 20);
+            discarded$0 = vl.b(94, 86, 20);
         }
     }
 
     vl(vk param0, jl param1, String param2) {
         super(0, 0, 288, 0, (eb) null);
         int var4_int = 0;
-        ((vl) this).field_P = 0;
+        this.field_P = 0;
         try {
-            ((vl) this).field_M = param0;
-            ((vl) this).field_O = param1;
-            ((vl) this).field_N = param2;
-            var4_int = ((vl) this).field_N == null ? 0 : ((vl) this).field_O.a(((vl) this).field_N, 260, ((vl) this).field_O.field_w);
-            ((vl) this).a(288, (byte) 55, 0, 0, 22 - -var4_int);
+            this.field_M = param0;
+            this.field_O = param1;
+            this.field_N = param2;
+            var4_int = this.field_N == null ? 0 : this.field_O.a(this.field_N, 260, this.field_O.field_w);
+            this.a(288, (byte) 55, 0, 0, 22 - -var4_int);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -93,23 +94,23 @@ final class vl extends ch implements vo {
               if (param2 == 11) {
                 break L1;
               } else {
-                field_R = null;
+                field_R = (String) null;
                 break L1;
               }
             }
             var6_int = 0;
             L2: while (true) {
               L3: {
-                if (var6_int >= ((vl) this).field_P) {
+                if (var6_int >= this.field_P) {
                   break L3;
                 } else {
-                  if (((vl) this).field_S[var6_int] == param0) {
-                    var7 = ((vl) this).field_I[var6_int];
+                  if (this.field_S[var6_int] == param0) {
+                    var7 = this.field_I[var6_int];
                     if (var7 != -1) {
-                      te.a(((vl) this).field_I[var6_int], -2671);
+                      te.a(this.field_I[var6_int], -2671);
                       break L3;
                     } else {
-                      ((vl) this).field_M.p(-121);
+                      this.field_M.p(-121);
                       break L3;
                     }
                   } else {
@@ -125,23 +126,23 @@ final class vl extends ch implements vo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var6;
+            stackOut_12_0 = (RuntimeException) (var6);
             stackOut_12_1 = new StringBuilder().append("vl.Q(");
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -149,19 +150,19 @@ final class vl extends ch implements vo {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void a(int param0, int param1, String param2) {
         int var4_int = 0;
         try {
-            var4_int = ((vl) this).field_P;
+            var4_int = this.field_P;
             this.a(param1 ^ 114, var4_int - param1);
-            ((vl) this).field_S[var4_int] = ((vl) this).a(1707, (fn) this, param2);
-            ((vl) this).field_I[var4_int] = param0;
+            this.field_S[var4_int] = this.a(1707, (fn) (this), param2);
+            this.field_I[var4_int] = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "vl.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "vl.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -206,19 +207,19 @@ final class vl extends ch implements vo {
           L0: {
             L1: {
               var4 = new qm(param2, param1);
-              var4.field_y = (eb) (Object) new ad();
+              var4.field_y = (eb) ((Object) new ad());
               if (param0 == 1707) {
                 break L1;
               } else {
-                ((vl) this).field_P = 66;
+                this.field_P = 66;
                 break L1;
               }
             }
-            var5 = -2 + ((vl) this).field_C;
-            ((vl) this).a(((vl) this).field_E, (byte) 63, 0, 0, ((vl) this).field_C + 34);
-            var4.a(-14 + ((vl) this).field_E, (byte) 81, var5, 7, 30);
-            ((vl) this).b((ng) (Object) var4, 80);
-            stackOut_2_0 = (qm) var4;
+            var5 = -2 + this.field_C;
+            this.a(this.field_E, (byte) 63, 0, 0, this.field_C + 34);
+            var4.a(-14 + this.field_E, (byte) 81, var5, 7, 30);
+            this.b(var4, 80);
+            stackOut_2_0 = (qm) (var4);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -226,23 +227,23 @@ final class vl extends ch implements vo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var4_ref;
+            stackOut_4_0 = (RuntimeException) (var4_ref);
             stackOut_4_1 = new StringBuilder().append("vl.B(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -251,23 +252,23 @@ final class vl extends ch implements vo {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -275,7 +276,7 @@ final class vl extends ch implements vo {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -284,7 +285,7 @@ final class vl extends ch implements vo {
         int stackIn_9_0 = 0;
         int stackOut_7_0 = 0;
         int stackOut_8_0 = 0;
-        if (ke.field_a != 13) {
+        if ((ke.field_a ^ -1) != -14) {
           if (param0 == ke.field_a) {
             bo.field_h.l(17872);
             return true;
@@ -316,10 +317,6 @@ final class vl extends ch implements vo {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_R = "<%0> is not on your friend list.";
     }
 }

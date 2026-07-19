@@ -15,7 +15,7 @@ final class ec extends ln {
         try {
             java.net.MalformedURLException var4 = null;
             RuntimeException var4_ref = null;
-            Object var5 = null;
+            java.applet.Applet var5 = null;
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             RuntimeException stackIn_10_0 = null;
@@ -30,6 +30,7 @@ final class ec extends ln {
             RuntimeException stackIn_14_0 = null;
             StringBuilder stackIn_14_1 = null;
             String stackIn_14_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_8_0 = null;
             StringBuilder stackOut_8_1 = null;
@@ -56,7 +57,8 @@ final class ec extends ln {
                     if (!re.a(false, param1)) {
                       break L1;
                     } else {
-                      return;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   }
                 }
@@ -66,7 +68,7 @@ final class ec extends ln {
                     if (param3 == -17) {
                       break L2;
                     } else {
-                      var5 = null;
+                      var5 = (java.applet.Applet) null;
                       ec.a(true, (String) null, (java.applet.Applet) null, (byte) 126);
                       return;
                     }
@@ -77,29 +79,30 @@ final class ec extends ln {
                   wp.a((Throwable) null, "MGR1: " + param1, 21862);
                   return;
                 }
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_8_0 = (RuntimeException) var4_ref;
+                stackOut_8_0 = (RuntimeException) (var4_ref);
                 stackOut_8_1 = new StringBuilder().append("ec.B(").append(param0).append(',');
                 stackIn_10_0 = stackOut_8_0;
                 stackIn_10_1 = stackOut_8_1;
                 stackIn_9_0 = stackOut_8_0;
                 stackIn_9_1 = stackOut_8_1;
                 if (param1 == null) {
-                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
                   stackOut_10_2 = "null";
                   stackIn_11_0 = stackOut_10_0;
                   stackIn_11_1 = stackOut_10_1;
                   stackIn_11_2 = stackOut_10_2;
                   break L3;
                 } else {
-                  stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-                  stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+                  stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+                  stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
                   stackOut_9_2 = "{...}";
                   stackIn_11_0 = stackOut_9_0;
                   stackIn_11_1 = stackOut_9_1;
@@ -108,23 +111,23 @@ final class ec extends ln {
                 }
               }
               L4: {
-                stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+                stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
                 stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
                 stackIn_13_0 = stackOut_11_0;
                 stackIn_13_1 = stackOut_11_1;
                 stackIn_12_0 = stackOut_11_0;
                 stackIn_12_1 = stackOut_11_1;
                 if (param2 == null) {
-                  stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-                  stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+                  stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+                  stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
                   stackOut_13_2 = "null";
                   stackIn_14_0 = stackOut_13_0;
                   stackIn_14_1 = stackOut_13_1;
                   stackIn_14_2 = stackOut_13_2;
                   break L4;
                 } else {
-                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+                  stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+                  stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
                   stackOut_12_2 = "{...}";
                   stackIn_14_0 = stackOut_12_0;
                   stackIn_14_1 = stackOut_12_1;
@@ -132,7 +135,12 @@ final class ec extends ln {
                   break L4;
                 }
               }
-              throw dn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param3 + ')');
+              throw dn.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param3 + ')');
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -165,7 +173,7 @@ final class ec extends ln {
         int stackIn_3_0 = 0;
         int stackOut_1_0 = 0;
         var3 = 111 / ((55 - param1) / 50);
-        if (((ec) this).field_c > 1) {
+        if (this.field_c > 1) {
           if (q.field_a[param0].field_h) {
             return 0;
           } else {
@@ -179,10 +187,6 @@ final class ec extends ln {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new int[4];
         field_n = "Spider";
         field_l = new wb();

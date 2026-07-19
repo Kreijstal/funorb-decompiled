@@ -14,15 +14,18 @@ final class vo extends mu {
     final void a(byte param0, fd param1) {
         try {
             if (param0 > -117) {
-                field_cb = null;
+                field_cb = (ut) null;
             }
             super.a((byte) -127, param1);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "vo.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "vo.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String a(byte param0, String param1, String[] param2) {
+        StringBuilder discarded$3 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$5 = null;
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -76,7 +79,7 @@ final class vo extends mu {
             var5 = 0;
             L1: while (true) {
               var6_int = param1.indexOf("<%", var5);
-              if (var6_int >= 0) {
+              if (-1 >= (var6_int ^ -1)) {
                 var5 = 2 + var6_int;
                 L2: while (true) {
                   L3: {
@@ -92,13 +95,13 @@ final class vo extends mu {
                     }
                   }
                   var7_ref_String = param1.substring(var6_int - -2, var5);
-                  if (gr.a((byte) 15, (CharSequence) (Object) var7_ref_String)) {
+                  if (gr.a((byte) 15, (CharSequence) ((Object) var7_ref_String))) {
                     if (var5 >= var3_int) {
                       continue L1;
                     } else {
                       if (62 == param1.charAt(var5)) {
                         var5++;
-                        var8 = rr.a(10, (CharSequence) (Object) var7_ref_String);
+                        var8 = rr.a(10, (CharSequence) ((Object) var7_ref_String));
                         var4 = var4 + (param2[var8].length() + (var6_int + -var5));
                         continue L1;
                       } else {
@@ -139,7 +142,7 @@ final class vo extends mu {
                         }
                       }
                       var9 = param1.substring(var8 - -2, var5);
-                      if (!gr.a((byte) 15, (CharSequence) (Object) var9)) {
+                      if (!gr.a((byte) 15, (CharSequence) ((Object) var9))) {
                         continue L5;
                       } else {
                         if (var3_int <= var5) {
@@ -149,9 +152,9 @@ final class vo extends mu {
                             continue L5;
                           } else {
                             var5++;
-                            var10 = rr.a(10, (CharSequence) (Object) var9);
-                            StringBuilder discarded$3 = var6.append(param1.substring(var7, var8));
-                            StringBuilder discarded$4 = var6.append(param2[var10]);
+                            var10 = rr.a(10, (CharSequence) ((Object) var9));
+                            discarded$3 = var6.append(param1.substring(var7, var8));
+                            discarded$4 = var6.append(param2[var10]);
                             var7 = var5;
                             continue L5;
                           }
@@ -159,7 +162,7 @@ final class vo extends mu {
                       }
                     }
                   } else {
-                    StringBuilder discarded$5 = var6.append(param1.substring(var7));
+                    discarded$5 = var6.append(param1.substring(var7));
                     stackOut_27_0 = var6.toString();
                     stackIn_28_0 = stackOut_27_0;
                     break L0;
@@ -172,23 +175,23 @@ final class vo extends mu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var3 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) var3;
+            stackOut_29_0 = (RuntimeException) (var3);
             stackOut_29_1 = new StringBuilder().append("vo.VA(").append(param0).append(',');
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
             stackIn_30_1 = stackOut_29_1;
             if (param1 == null) {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "null";
               stackIn_32_0 = stackOut_31_0;
               stackIn_32_1 = stackOut_31_1;
               stackIn_32_2 = stackOut_31_2;
               break L8;
             } else {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
               stackOut_30_2 = "{...}";
               stackIn_32_0 = stackOut_30_0;
               stackIn_32_1 = stackOut_30_1;
@@ -197,23 +200,23 @@ final class vo extends mu {
             }
           }
           L9: {
-            stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+            stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
             stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(',');
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
             stackIn_33_1 = stackOut_32_1;
             if (param2 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "null";
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
               break L9;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "{...}";
               stackIn_35_0 = stackOut_33_0;
               stackIn_35_1 = stackOut_33_1;
@@ -221,7 +224,7 @@ final class vo extends mu {
               break L9;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ')');
         }
         return stackIn_28_0;
     }
@@ -229,13 +232,15 @@ final class vo extends mu {
     public static void j(byte param0) {
         field_cb = null;
         field_db = null;
-        field_eb = null;
+        field_eb = (int[][]) null;
         if (param0 <= 29) {
             vo.j((byte) -47);
         }
     }
 
     final static void a(byte param0, byte[] param1) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -256,10 +261,6 @@ final class vo extends mu {
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        byte[] var22 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        byte[] var25 = null;
         int stackIn_30_0 = 0;
         int stackIn_31_0 = 0;
         int stackIn_32_0 = 0;
@@ -333,28 +334,24 @@ final class vo extends mu {
                                 var4 = 0;
                                 L6: while (true) {
                                   if (var4 >= io.field_l) {
-                                    var5 = 0;
+                                    var5 = 111 % ((param0 - 11) / 61);
                                     break L0;
                                   } else {
                                     L7: {
                                       var5 = ku.field_c[var4];
                                       var6 = lo.field_j[var4];
                                       var7 = var6 * var5;
-                                      var24 = new byte[var7];
-                                      var22 = var24;
-                                      var20 = var22;
+                                      var20 = new byte[var7];
                                       var18 = var20;
                                       var8 = var18;
-                                      pq.field_O[var4] = var24;
-                                      var25 = new byte[var7];
-                                      var23 = var25;
-                                      var21 = var23;
+                                      pq.field_O[var4] = var20;
+                                      var21 = new byte[var7];
                                       var19 = var21;
                                       var9 = var19;
-                                      es.field_e[var4] = var25;
+                                      es.field_e[var4] = var21;
                                       var10 = 0;
                                       var11 = var17.h((byte) -127);
-                                      if ((var11 & 1) != 0) {
+                                      if (-1 != (var11 & 1 ^ -1)) {
                                         var12 = 0;
                                         L8: while (true) {
                                           if (var5 <= var12) {
@@ -371,7 +368,7 @@ final class vo extends mu {
                                                       continue L9;
                                                     } else {
                                                       L11: {
-                                                        byte dupTemp$2 = var17.j((byte) -74);
+                                                        dupTemp$2 = var17.j((byte) -74);
                                                         var9[var12 - -(var13 * var5)] = dupTemp$2;
                                                         var14 = dupTemp$2;
                                                         stackOut_45_0 = var10;
@@ -426,13 +423,13 @@ final class vo extends mu {
                                                   break L7;
                                                 } else {
                                                   L15: {
-                                                    byte dupTemp$3 = var17.j((byte) -49);
+                                                    dupTemp$3 = var17.j((byte) -49);
                                                     var9[var12] = dupTemp$3;
                                                     var13 = dupTemp$3;
                                                     stackOut_29_0 = var10;
                                                     stackIn_31_0 = stackOut_29_0;
                                                     stackIn_30_0 = stackOut_29_0;
-                                                    if (var13 == -1) {
+                                                    if (0 == (var13 ^ -1)) {
                                                       stackOut_31_0 = stackIn_31_0;
                                                       stackOut_31_1 = 0;
                                                       stackIn_32_0 = stackOut_31_0;
@@ -470,7 +467,7 @@ final class vo extends mu {
                               } else {
                                 L16: {
                                   lt.field_a[var4] = var17.i(-123);
-                                  if (lt.field_a[var4] == 0) {
+                                  if (-1 == (lt.field_a[var4] ^ -1)) {
                                     lt.field_a[var4] = 1;
                                     break L16;
                                   } else {
@@ -510,23 +507,23 @@ final class vo extends mu {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var2 = decompiledCaughtException;
-            stackOut_53_0 = (RuntimeException) var2;
-            stackOut_53_1 = new StringBuilder().append("vo.WA(").append(-77).append(',');
+            stackOut_53_0 = (RuntimeException) (var2);
+            stackOut_53_1 = new StringBuilder().append("vo.WA(").append(param0).append(',');
             stackIn_55_0 = stackOut_53_0;
             stackIn_55_1 = stackOut_53_1;
             stackIn_54_0 = stackOut_53_0;
             stackIn_54_1 = stackOut_53_1;
             if (param1 == null) {
-              stackOut_55_0 = (RuntimeException) (Object) stackIn_55_0;
-              stackOut_55_1 = (StringBuilder) (Object) stackIn_55_1;
+              stackOut_55_0 = (RuntimeException) ((Object) stackIn_55_0);
+              stackOut_55_1 = (StringBuilder) ((Object) stackIn_55_1);
               stackOut_55_2 = "null";
               stackIn_56_0 = stackOut_55_0;
               stackIn_56_1 = stackOut_55_1;
               stackIn_56_2 = stackOut_55_2;
               break L17;
             } else {
-              stackOut_54_0 = (RuntimeException) (Object) stackIn_54_0;
-              stackOut_54_1 = (StringBuilder) (Object) stackIn_54_1;
+              stackOut_54_0 = (RuntimeException) ((Object) stackIn_54_0);
+              stackOut_54_1 = (StringBuilder) ((Object) stackIn_54_1);
               stackOut_54_2 = "{...}";
               stackIn_56_0 = stackOut_54_0;
               stackIn_56_1 = stackOut_54_1;
@@ -534,15 +531,11 @@ final class vo extends mu {
               break L17;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_56_0, stackIn_56_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_56_0), stackIn_56_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_db = "Message game";
         field_bb = 0;
         field_eb = new int[7][4];

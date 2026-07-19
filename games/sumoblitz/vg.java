@@ -17,6 +17,7 @@ final class vg implements mh {
     private int field_h;
 
     public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -47,16 +48,16 @@ final class vg implements mh {
             L1: {
               if (!(param0 instanceof wr)) {
                 stackOut_2_0 = null;
-                stackIn_3_0 = (pk) (Object) stackOut_2_0;
+                stackIn_3_0 = (pk) ((Object) stackOut_2_0);
                 break L1;
               } else {
-                stackOut_1_0 = (pk) param0;
+                stackOut_1_0 = (pk) (param0);
                 stackIn_3_0 = stackOut_1_0;
                 break L1;
               }
             }
             L2: {
-              var11 = (wr) (Object) stackIn_3_0;
+              var11 = (wr) ((Object) stackIn_3_0);
               if (var11 == null) {
                 break L2;
               } else {
@@ -74,25 +75,25 @@ final class vg implements mh {
               }
             }
             L4: {
-              lk.d(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, ((vg) this).field_e);
-              var8 = ((vg) this).field_h + param4 - -param0.field_r;
-              var9 = ((vg) this).field_g + param0.field_v + param1;
-              lk.f(var8, var9, ((vg) this).field_c, ((vg) this).field_j, param2);
-              lk.d(var8, var9, ((vg) this).field_c, ((vg) this).field_j, var7);
+              lk.d(param0.field_r + param4, param0.field_v + param1, param0.field_q, param0.field_p, this.field_e);
+              var8 = this.field_h + param4 - -param0.field_r;
+              var9 = this.field_g + param0.field_v + param1;
+              lk.f(var8, var9, this.field_c, this.field_j, param2);
+              lk.d(var8, var9, this.field_c, this.field_j, var7);
               if (!var11.field_C) {
                 break L4;
               } else {
-                lk.e(var8, var9, var8 - -((vg) this).field_c, var9 + ((vg) this).field_j, 1);
-                lk.e(((vg) this).field_c + var8, var9, var8, ((vg) this).field_j + var9, 1);
+                lk.e(var8, var9, var8 - -this.field_c, var9 + this.field_j, 1);
+                lk.e(this.field_c + var8, var9, var8, this.field_j + var9, 1);
                 break L4;
               }
             }
             L5: {
-              if (null == ((vg) this).field_m) {
+              if (null == this.field_m) {
                 break L5;
               } else {
-                var10 = ((vg) this).field_c - (-((vg) this).field_h - ((vg) this).field_l);
-                int discarded$1 = ((vg) this).field_m.a(param0.field_m, param4 - (-param0.field_r - var10), ((vg) this).field_i + param0.field_v + param1, -var10 + -((vg) this).field_l + param0.field_q, -(((vg) this).field_l << 1) + param0.field_p, ((vg) this).field_a, ((vg) this).field_f, ((vg) this).field_d, ((vg) this).field_b, 0);
+                var10 = this.field_c - (-this.field_h - this.field_l);
+                discarded$1 = this.field_m.a(param0.field_m, param4 - (-param0.field_r - var10), this.field_i + param0.field_v + param1, -var10 + -this.field_l + param0.field_q, -(this.field_l << 2086782145) + param0.field_p, this.field_a, this.field_f, this.field_d, this.field_b, 0);
                 break L5;
               }
             }
@@ -102,23 +103,23 @@ final class vg implements mh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var6;
+            stackOut_13_0 = (RuntimeException) (var6);
             stackOut_13_1 = new StringBuilder().append("vg.A(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L6;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -126,30 +127,33 @@ final class vg implements mh {
               break L6;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_k = null;
+        if (param0) {
+            vg.a(false);
+        }
     }
 
     vg(vn param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        ((vg) this).field_b = 1;
-        ((vg) this).field_d = 1;
+        this.field_b = 1;
+        this.field_d = 1;
         try {
-            ((vg) this).field_h = param5;
-            ((vg) this).field_i = param2;
-            ((vg) this).field_g = param6;
-            ((vg) this).field_m = param0;
-            ((vg) this).field_e = param9;
-            ((vg) this).field_c = param8;
-            ((vg) this).field_f = param4;
-            ((vg) this).field_l = param1;
-            ((vg) this).field_a = param3;
-            ((vg) this).field_j = param7;
+            this.field_h = param5;
+            this.field_i = param2;
+            this.field_g = param6;
+            this.field_m = param0;
+            this.field_e = param9;
+            this.field_c = param8;
+            this.field_f = param4;
+            this.field_l = param1;
+            this.field_a = param3;
+            this.field_j = param7;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

@@ -10,21 +10,21 @@ final class cf implements b {
 
     public final int[] a(int param0, byte param1, float param2) {
         int var4 = 68 / ((10 - param1) / 37);
-        if (param0 < 0) {
+        if (-1 < (param0 ^ -1)) {
             return null;
         }
-        if (((cf) this).field_e.length <= param0) {
+        if (this.field_e.length <= param0) {
             return null;
         }
-        if (null == ((cf) this).field_e[param0]) {
+        if (null == this.field_e[param0]) {
             return null;
         }
-        return ((cf) this).field_e[param0];
+        return this.field_e[param0];
     }
 
     public static void a(byte param0) {
         field_a = null;
-        field_b = null;
+        field_b = (byte[][]) null;
         if (param0 <= 3) {
             cf.a((byte) -30);
         }
@@ -78,7 +78,7 @@ final class cf implements b {
 
     final static void a(Main param0, byte param1) {
         RuntimeException var2 = null;
-        Object var3 = null;
+        Main var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -99,19 +99,19 @@ final class cf implements b {
           L0: {
             L1: {
               cj.field_l[5] = 373 - kb.field_b[5];
-              fh.field_G[5] = new int[4];
+              fh.field_G[5] = new int[]{18, 19, 20, 17};
               param0.field_E[5] = new re(param0, 5);
               if (param1 >= 34) {
                 break L1;
               } else {
-                var3 = null;
+                var3 = (Main) null;
                 cf.a((Main) null, (byte) 68);
                 break L1;
               }
             }
             L2: {
               cj.field_l[4] = 428;
-              fh.field_G[4] = new int[1];
+              fh.field_G[4] = new int[]{17};
               param0.field_E[4] = new re(param0, 4);
               if (d.field_c <= 0) {
                 break L2;
@@ -119,7 +119,7 @@ final class cf implements b {
                 if (!hl.a(jk.field_a, -1)) {
                   break L2;
                 } else {
-                  fh.field_G[1] = new int[6];
+                  fh.field_G[1] = new int[]{7, 3, 4, 8, 5, 10};
                   param0.field_E[1] = new re(param0, 1);
                   break L2;
                 }
@@ -131,23 +131,23 @@ final class cf implements b {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_0 = (RuntimeException) (var2);
             stackOut_6_1 = new StringBuilder().append("cf.F(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -155,7 +155,7 @@ final class cf implements b {
               break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
     }
 
@@ -174,8 +174,9 @@ final class cf implements b {
     }
 
     public final int c(int param0, int param1) {
+        boolean discarded$0 = false;
         if (param1 > -92) {
-            boolean discarded$0 = cf.a((byte) 1, '￩');
+            discarded$0 = cf.a((byte) 1, '￩');
             return 0;
         }
         return 0;
@@ -207,36 +208,36 @@ final class cf implements b {
         String stackOut_12_2 = null;
         try {
           L0: {
-            ((cf) this).field_e = new int[param0.length / 2][65536];
+            this.field_e = new int[param0.length / 2][65536];
             var2_int = 0;
             L1: while (true) {
-              if (var2_int >= ((cf) this).field_e.length) {
+              if (var2_int >= this.field_e.length) {
                 break L0;
               } else {
                 var15 = param0[2 * var2_int].field_r;
                 var16 = param0[1 + 2 * var2_int].field_r;
                 var5 = 0;
                 L2: while (true) {
-                  if (var5 >= 64) {
+                  if (-65 >= (var5 ^ -1)) {
                     var8 = 0;
                     var5 = var8;
                     L3: while (true) {
-                      if (var8 >= 16384) {
+                      if ((var8 ^ -1) <= -16385) {
                         var2_int++;
                         continue L1;
                       } else {
-                        ((cf) this).field_e[var2_int][var8] = bc.a(((cf) this).field_e[var2_int][var8], 16316671);
-                        var6 = ((cf) this).field_e[var2_int][var8];
-                        ((cf) this).field_e[var2_int][16384 + var8] = bc.a(var6 + -(var6 >>> 3), 16316671);
-                        ((cf) this).field_e[var2_int][16384 + (var8 + 16384)] = bc.a(-(var6 >>> 2) + var6, 16316671);
-                        ((cf) this).field_e[var2_int][32768 + (var8 + 16384)] = bc.a(16316671, -(var6 >>> 3) + (-(var6 >>> 2) + var6));
+                        this.field_e[var2_int][var8] = bc.a(this.field_e[var2_int][var8], 16316671);
+                        var6 = this.field_e[var2_int][var8];
+                        this.field_e[var2_int][16384 + var8] = bc.a(var6 + -(var6 >>> 35381891), 16316671);
+                        this.field_e[var2_int][16384 + (var8 + 16384)] = bc.a(-(var6 >>> 1658564930) + var6, 16316671);
+                        this.field_e[var2_int][32768 + (var8 + 16384)] = bc.a(16316671, -(var6 >>> 1492932483) + (-(var6 >>> 694836130) + var6));
                         var8++;
                         continue L3;
                       }
                     }
                   } else {
-                    og.a(var15, var5 << 6, ((cf) this).field_e[var2_int], var5 << 7, 64);
-                    og.a(var16, var5 << 6, ((cf) this).field_e[var2_int], (var5 << 7) + 8192, 64);
+                    og.a(var15, var5 << 777897222, this.field_e[var2_int], var5 << 744039911, 64);
+                    og.a(var16, var5 << 191724582, this.field_e[var2_int], (var5 << 165201735) + 8192, 64);
                     var5++;
                     continue L2;
                   }
@@ -248,23 +249,23 @@ final class cf implements b {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var2 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var2;
+            stackOut_11_0 = (RuntimeException) (var2);
             stackOut_11_1 = new StringBuilder().append("cf.<init>(");
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L4;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -272,15 +273,11 @@ final class cf implements b {
               break L4;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Email (Login):";
         field_b = new byte[250][];
     }

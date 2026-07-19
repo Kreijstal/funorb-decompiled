@@ -11,6 +11,7 @@ final class nha {
     final static void a(int param0, bga param1, byte param2) {
         pf var6 = null;
         int var4 = 0;
+        int discarded$0 = 0;
         try {
             var6 = sja.field_fb;
             pf var3 = var6;
@@ -24,28 +25,33 @@ final class nha {
             } else {
                 var6.d(0, 0);
             }
-            int discarded$0 = var6.a(var4, 19);
+            discarded$0 = var6.a(var4, 19);
             var6.field_g = var6.field_g - 4;
             if (param2 >= -22) {
-                Object var5 = null;
+                bga var5 = (bga) null;
                 nha.a(-98, (bga) null, (byte) 0);
             }
             param1.field_i = var6.f(-76);
             var6.b((byte) 117, var6.field_g - var4);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nha.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "nha.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public static void a(int param0) {
         field_a = null;
         field_d = null;
+        if (param0 != -18307) {
+            nha.a(91, -69, -16, true, -30, -112);
+        }
         field_b = null;
         field_e = null;
         field_c = null;
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -54,8 +60,6 @@ final class nha {
         int var10 = 0;
         int[] var11 = null;
         int[] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
         RuntimeException decompiledCaughtException = null;
         var10 = BachelorFridge.field_y;
         try {
@@ -102,7 +106,7 @@ final class nha {
                       param2 = an.field_q;
                       break L4;
                     } else {
-                      int incrementValue$2 = param2;
+                      incrementValue$2 = param2;
                       param2++;
                       hba.a(param0, param4, tj.field_b[incrementValue$2], 7, param5);
                       break L4;
@@ -110,7 +114,7 @@ final class nha {
                   }
                   L5: {
                     if (ha.field_n >= param1) {
-                      int incrementValue$3 = param1;
+                      incrementValue$3 = param1;
                       param1--;
                       hba.a(param0, param4, tj.field_b[incrementValue$3], 7, param5);
                       break L5;
@@ -131,12 +135,10 @@ final class nha {
                           if (var8 > param1) {
                             break L1;
                           } else {
-                            var14 = tj.field_b[var8];
-                            var13 = var14;
-                            var12 = var13;
+                            var12 = tj.field_b[var8];
                             var11 = var12;
                             var9 = var11;
-                            var14[param5] = param0;
+                            var12[param5] = param0;
                             var9[param4] = param0;
                             var8++;
                             continue L7;
@@ -177,20 +179,24 @@ final class nha {
                 }
               }
             }
+            L10: {
+              if (param3) {
+                break L10;
+              } else {
+                field_b = (String) null;
+                break L10;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var6, "nha.C(" + param0 + ',' + param1 + ',' + param2 + ',' + true + ',' + param4 + ',' + param5 + ')');
+          throw pe.a((Throwable) ((Object) var6), "nha.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Menu";
         field_d = "Unable to delete friend - system busy";
     }

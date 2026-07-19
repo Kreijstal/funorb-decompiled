@@ -19,7 +19,7 @@ abstract class nb {
         var6 = new ci(param0, param0);
         var3 = var6;
         if (param2 < 117) {
-          return null;
+          return (ci) null;
         } else {
           var4 = 0;
           L0: while (true) {
@@ -35,6 +35,11 @@ abstract class nb {
     }
 
     final static void a(boolean param0, byte param1) {
+        if (param1 != -126) {
+            field_e = 80;
+            qc.a(param0, false, 115);
+            return;
+        }
         qc.a(param0, false, 115);
     }
 
@@ -44,7 +49,7 @@ abstract class nb {
         }
         wd.field_b = true;
         nb.a(true, (byte) -126);
-        q.field_Jb = 0;
+        q.field_Jb = param0;
     }
 
     abstract void a(byte param0, dh param1);
@@ -56,14 +61,15 @@ abstract class nb {
         field_f = null;
         field_c = null;
         field_b = null;
+        if (param0 != 0) {
+            nb.a(25);
+            field_d = null;
+            return;
+        }
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new int[8192];
         field_a = "Password is valid";
     }

@@ -29,37 +29,38 @@ class se extends re {
 
     final void a(byte param0, ge param1) {
         try {
-            param1.a(((se) this).field_j, (byte) -90);
+            param1.a(this.field_j, (byte) -90);
             int var3_int = 6 % ((param0 - 22) / 51);
-            param1.a(((se) this).field_g, 103);
+            param1.a(this.field_g, 103);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "se.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "se.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int a(boolean param0, int param1) {
-        param1 = (1431655765 & param1) + ((param1 & -1431655766) >>> 1);
-        param1 = (param1 & 858993459) + (-1288490189 & param1 >>> 2);
-        param1 = 252645135 & (param1 >>> 4) + param1;
-        param1 = param1 + (param1 >>> 8);
-        param1 = param1 + (param1 >>> 16);
-        return 255 & param1;
+        param1 = (1431655765 & param1) + ((param1 & -1431655766) >>> -1118350591);
+        param1 = (param1 & 858993459) + (-1288490189 & param1 >>> -781252286);
+        param1 = 252645135 & (param1 >>> 1836330372) + param1;
+        param1 = param1 + (param1 >>> 749537320);
+        param1 = param1 + (param1 >>> -647104976);
+        if (param0) {
+          field_k = (String) null;
+          return 255 & param1;
+        } else {
+          return 255 & param1;
+        }
     }
 
     se(long param0, String param1) {
         try {
-            ((se) this).field_j = param0;
-            ((se) this).field_g = param1;
+            this.field_j = param0;
+            this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "se.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw wm.a((Throwable) ((Object) runtimeException), "se.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = 50;
         field_k = "Player names can be up to 12 letters, numbers and underscores";
         field_i = new int[]{291, 363, 428, 486, 548};

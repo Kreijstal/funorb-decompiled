@@ -12,12 +12,15 @@ final class jc implements eb {
     final static void a(byte param0, int param1, m param2) {
         pc var3 = null;
         try {
+            if (param0 != -31) {
+                jc.a(-63);
+            }
             var3 = aa.field_f;
-            var3.g(2, 15514);
+            var3.g(param1, 15514);
             var3.e(160, param2.field_m);
-            var3.b(1276387944, param2.field_k);
+            var3.b(param0 + 1276387975, param2.field_k);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "jc.C(" + -31 + ',' + 2 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "jc.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,7 +30,7 @@ final class jc implements eb {
             oo.field_a = param0;
             te.a(12, -2671);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "jc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "jc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -58,7 +61,7 @@ final class jc implements eb {
               if (param1 == -124) {
                 break L1;
               } else {
-                field_e = null;
+                field_e = (String) null;
                 break L1;
               }
             }
@@ -70,8 +73,8 @@ final class jc implements eb {
               if (!(param0 instanceof qm)) {
                 break L2;
               } else {
-                if (((qm) (Object) param0).field_M) {
-                  var8.b((-var8.field_A + param0.field_E >> 1) + var6_int - -1, var7 + (1 + (-var8.field_B + param0.field_C >> 1)), 256);
+                if (((qm) ((Object) param0)).field_M) {
+                  var8.b((-var8.field_A + param0.field_E >> 1628434529) + var6_int - -1, var7 + (1 + (-var8.field_B + param0.field_C >> -1661029663)), 256);
                   break L2;
                 } else {
                   break L2;
@@ -89,23 +92,23 @@ final class jc implements eb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var6;
+            stackOut_9_0 = (RuntimeException) (var6);
             stackOut_9_1 = new StringBuilder().append("jc.A(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -113,21 +116,20 @@ final class jc implements eb {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(int param0) {
         field_f = null;
+        if (param0 != 14518) {
+            return;
+        }
         field_e = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = true;
         field_e = "Email address is unavailable";
     }

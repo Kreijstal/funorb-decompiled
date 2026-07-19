@@ -34,10 +34,6 @@ final class pf extends fk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new int[8192];
         field_l = "Accept";
     }

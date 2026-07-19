@@ -25,6 +25,7 @@ final class fb extends l {
         cm var9 = null;
         hg var10 = null;
         byte[] var14 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var6 = Virogrid.field_F ? 1 : 0;
         try {
@@ -39,11 +40,12 @@ final class fb extends l {
             }
             var10 = sh.field_qb;
             var2 = var10.g(11132);
-            if (var2 == 0) {
-              var9 = (cm) (Object) di.field_v.a((byte) -51);
+            if (-1 == (var2 ^ -1)) {
+              var9 = (cm) ((Object) di.field_v.a((byte) -51));
               if (var9 == null) {
                 tn.a(false);
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 L2: {
                   var4 = var10.g(11132);
@@ -59,10 +61,12 @@ final class fb extends l {
                 var10.field_l = var10.field_l + 4;
                 if (var10.e(-29449)) {
                   var9.a(false);
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
                   tn.a(false);
-                  return;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               }
             } else {
@@ -72,7 +76,7 @@ final class fb extends l {
                 return;
               } else {
                 var3 = var10.d((byte) 122);
-                var4_ref_fa = (fa) (Object) oi.field_a.a((byte) -65);
+                var4_ref_fa = (fa) ((Object) oi.field_a.a((byte) -65));
                 L3: while (true) {
                   L4: {
                     if (var4_ref_fa == null) {
@@ -81,7 +85,7 @@ final class fb extends l {
                       if (var3 == var4_ref_fa.field_i) {
                         break L4;
                       } else {
-                        var4_ref_fa = (fa) (Object) oi.field_a.a(16213);
+                        var4_ref_fa = (fa) ((Object) oi.field_a.a(16213));
                         continue L3;
                       }
                     }
@@ -91,7 +95,8 @@ final class fb extends l {
                     return;
                   } else {
                     tn.a(false);
-                    return;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   }
                 }
               }
@@ -100,7 +105,20 @@ final class fb extends l {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "fb.A(" + param0 + ')');
+          throw kg.a((Throwable) ((Object) var1), "fb.A(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -122,31 +140,27 @@ final class fb extends l {
     }
 
     fb(int param0, int param1, boolean param2) {
-        ((fb) this).field_j = 0;
-        ((fb) this).field_g = param1;
-        ((fb) this).field_q = param2 ? true : false;
-        ((fb) this).field_h = 0;
-        ((fb) this).field_k = param0;
+        this.field_j = 0;
+        this.field_g = param1;
+        this.field_q = param2 ? true : false;
+        this.field_h = 0;
+        this.field_k = param0;
     }
 
     fb(bi param0, boolean param1) {
         try {
-            ((fb) this).field_q = param1 ? true : false;
-            ((fb) this).field_j = 0;
-            ((fb) this).field_g = param0.field_b;
-            ((fb) this).field_h = 0;
-            ((fb) this).field_n = 0;
-            ((fb) this).field_k = param0.field_a;
+            this.field_q = param1 ? true : false;
+            this.field_j = 0;
+            this.field_g = param0.field_b;
+            this.field_h = 0;
+            this.field_n = 0;
+            this.field_k = param0.field_a;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = new String[16];
         field_p = new int[8192];
     }

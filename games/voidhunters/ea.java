@@ -24,10 +24,6 @@ final class ea extends ksa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = 10;
     }
 }

@@ -9,7 +9,7 @@ abstract class oga extends vg {
     abstract void a(rt param0, int param1, byte param2, rt param3);
 
     final static void a(boolean param0) {
-        nfa.field_p = false;
+        nfa.field_p = param0 ? true : false;
         jf.field_r = false;
         jsa.a(false, -1);
         kl.field_a = fta.field_c;
@@ -19,24 +19,25 @@ abstract class oga extends vg {
     final boolean b(byte param0) {
         if (param0 > -91) {
             field_f = 125L;
-            return ((oga) this).field_h;
+            return this.field_h;
         }
-        return ((oga) this).field_h;
+        return this.field_h;
     }
 
     abstract void a(int param0, byte param1);
 
     final boolean a(int param0) {
         if (param0 != 1) {
-            ((oga) this).field_h = true;
+            this.field_h = true;
             return false;
         }
         return false;
     }
 
     int b(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 13727) {
-            boolean discarded$0 = ((oga) this).a((byte) 63);
+            discarded$0 = this.a((byte) 63);
             return 0;
         }
         return 0;
@@ -59,9 +60,9 @@ abstract class oga extends vg {
 
     oga(cka param0) {
         try {
-            ((oga) this).field_g = param0;
+            this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "oga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "oga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

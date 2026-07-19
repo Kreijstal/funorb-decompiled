@@ -16,8 +16,8 @@ abstract class rl extends ee implements bn {
         int stackIn_5_0 = 0;
         int stackOut_3_0 = 0;
         if (param0 < -72) {
-          if (((rl) this).field_k.field_g != null) {
-            if (((rl) this).field_k.field_g.length() == 0) {
+          if (this.field_k.field_g != null) {
+            if (this.field_k.field_g.length() == 0) {
               return true;
             } else {
               return false;
@@ -66,23 +66,23 @@ abstract class rl extends ee implements bn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("rl.H(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -90,28 +90,70 @@ abstract class rl extends ee implements bn {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     final String a(boolean param0) {
         if (!param0) {
-            return null;
+            return (String) null;
         }
-        return ((rl) this).a(((rl) this).field_k.field_g, (byte) -120);
+        return this.a(this.field_k.field_g, (byte) -120);
     }
 
     final static boolean d(boolean param0) {
-        return 250 < gi.field_a;
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        if (!param0) {
+          L0: {
+            field_h = (int[]) null;
+            if (250 >= gi.field_a) {
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = 1;
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+          return stackIn_8_0 != 0;
+        } else {
+          L1: {
+            if (250 >= gi.field_a) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
+        }
     }
 
     public static void c(byte param0) {
+        boolean discarded$2 = false;
         field_h = null;
         field_j = null;
         field_n = null;
-        field_p = null;
-        field_i = null;
-        field_l = null;
+        field_p = (boolean[][]) null;
+        if (param0 > -65) {
+          discarded$2 = rl.d(true);
+          field_i = null;
+          field_l = null;
+          return;
+        } else {
+          field_i = null;
+          field_l = null;
+          return;
+        }
     }
 
     public final void a(rn param0, int param1) {
@@ -135,11 +177,11 @@ abstract class rl extends ee implements bn {
         try {
           L0: {
             L1: {
-              ((rl) this).b(-17444);
+              this.b(-17444);
               if (param1 == -20626) {
                 break L1;
               } else {
-                field_h = null;
+                field_h = (int[]) null;
                 break L1;
               }
             }
@@ -149,23 +191,23 @@ abstract class rl extends ee implements bn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("rl.G(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -173,7 +215,7 @@ abstract class rl extends ee implements bn {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -181,7 +223,7 @@ abstract class rl extends ee implements bn {
 
     final static int a(int param0, int param1, int param2) {
         if (param2 > -70) {
-            field_l = null;
+            field_l = (long[]) null;
             return -1;
         }
         return -1;
@@ -189,13 +231,15 @@ abstract class rl extends ee implements bn {
 
     rl(rn param0) {
         try {
-            ((rl) this).field_k = param0;
+            this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "rl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String a(long param0, int param1) {
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;
@@ -205,18 +249,24 @@ abstract class rl extends ee implements bn {
         int var11 = 0;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 > 0L) {
-          if (param0 < 6582952005840035281L) {
-            if (param0 % 37L != 0L) {
+          if ((param0 ^ -1L) > -6582952005840035282L) {
+            if ((param0 % 37L ^ -1L) != -1L) {
               var3 = 0;
               var4 = param0;
               L0: while (true) {
-                if (var4 == 0L) {
+                if ((var4 ^ -1L) == -1L) {
                   var6 = new StringBuilder(var3);
                   L1: while (true) {
                     if (0L == param0) {
-                      StringBuilder discarded$2 = var6.reverse();
-                      var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
-                      return var6.toString();
+                      discarded$2 = var6.reverse();
+                      if (param1 != 29424) {
+                        rl.c((byte) 46);
+                        var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
+                        return var6.toString();
+                      } else {
+                        var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
+                        return var6.toString();
+                      }
                     } else {
                       L2: {
                         var7 = param0;
@@ -231,7 +281,7 @@ abstract class rl extends ee implements bn {
                           break L2;
                         }
                       }
-                      StringBuilder discarded$3 = var6.append((char) var9);
+                      discarded$3 = var6.append((char) var9);
                       continue L1;
                     }
                   }
@@ -256,16 +306,12 @@ abstract class rl extends ee implements bn {
 
     final eh b(byte param0) {
         if (param0 != -66) {
-            return null;
+            return (eh) null;
         }
-        return ((rl) this).a(((rl) this).field_k.field_g, -108);
+        return this.a(this.field_k.field_g, -108);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
         field_h = new int[]{17, 18, 8};
         field_i = "Play Rated games to win wands.<br>Wands can be used to buy more spells.";

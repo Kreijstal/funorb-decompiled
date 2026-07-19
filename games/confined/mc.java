@@ -9,9 +9,10 @@ final class mc {
     static double[] field_b;
 
     final static boolean a(int param0, int param1, mi param2, byte param3) {
+        boolean discarded$2 = false;
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        Object var5 = null;
+        mi var5 = null;
         byte[] var6 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
@@ -22,6 +23,7 @@ final class mc {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_6_0 = 0;
@@ -40,20 +42,22 @@ final class mc {
             if (var6 == null) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 if (param3 == 119) {
                   break L1;
                 } else {
-                  var5 = null;
-                  boolean discarded$2 = mc.a(68, 108, (mi) null, (byte) -5);
+                  var5 = (mi) null;
+                  discarded$2 = mc.a(68, 108, (mi) null, (byte) -5);
                   break L1;
                 }
               }
               lc.a(false, var6);
               stackOut_6_0 = 1;
               stackIn_7_0 = stackOut_6_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -61,23 +65,23 @@ final class mc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var4_ref;
+            stackOut_8_0 = (RuntimeException) (var4_ref);
             stackOut_8_1 = new StringBuilder().append("mc.A(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -85,9 +89,13 @@ final class mc {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ')');
         }
-        return stackIn_7_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          return stackIn_7_0 != 0;
+        }
     }
 
     final static String a(int param0) {
@@ -101,7 +109,7 @@ final class mc {
               return ee.field_F;
             } else {
               if (param0 != 16) {
-                return null;
+                return (String) null;
               } else {
                 return kj.field_c;
               }
@@ -111,16 +119,21 @@ final class mc {
     }
 
     public static void a(byte param0) {
-        field_b = null;
-        field_d = null;
-        field_e = null;
+        if (param0 != 58) {
+          field_a = -117L;
+          field_b = null;
+          field_d = null;
+          field_e = null;
+          return;
+        } else {
+          field_b = null;
+          field_d = null;
+          field_e = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new boolean[112];
         field_d = new ln();
         field_b = new double[]{16.0, -672.0, -16.0};

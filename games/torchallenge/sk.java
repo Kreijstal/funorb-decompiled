@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import javax.sound.sampled.AudioFormat;
-
 final class sk extends kh {
     private byte[] field_y;
     private javax.sound.sampled.SourceDataLine field_v;
@@ -12,7 +10,7 @@ final class sk extends kh {
     private static String field_A;
 
     final int e() {
-        return ((sk) this).field_x - (((sk) this).field_v.available() >> (field_g ? 2 : 1));
+        return this.field_x - (this.field_v.available() >> (field_g ? 2 : 1));
     }
 
     final void f() {
@@ -24,14 +22,14 @@ final class sk extends kh {
                 var1 = var1 << 1;
             }
             for (var2 = 0; var2 < var1; var2++) {
-                var3 = ((sk) this).field_b[var2];
+                var3 = this.field_b[var2];
                 if ((var3 + 8388608 & -16777216) != 0) {
                     var3 = 8388607 ^ var3 >> 31;
                 }
-                ((sk) this).field_y[var2 * 2] = (byte)(var3 >> 8);
-                ((sk) this).field_y[var2 * 2 + 1] = (byte)(var3 >> 16);
+                this.field_y[var2 * 2] = (byte)(var3 >> 8);
+                this.field_y[var2 * 2 + 1] = (byte)(var3 >> 16);
             }
-            int discarded$0 = ((sk) this).field_v.write(((sk) this).field_y, 0, var1 << 1);
+            int discarded$0 = this.field_v.write(this.field_y, 0, var1 << 1);
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -40,26 +38,26 @@ final class sk extends kh {
     }
 
     final void d() {
-        if (((sk) this).field_v != null) {
-            ((sk) this).field_v.close();
-            ((sk) this).field_v = null;
+        if (this.field_v != null) {
+            this.field_v.close();
+            this.field_v = null;
         }
     }
 
     sk() {
-        ((sk) this).field_w = false;
+        this.field_w = false;
     }
 
     final void c() throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var1 = null;
-        ((sk) this).field_v.flush();
-        if (((sk) this).field_w) {
-            ((sk) this).field_v.close();
-            ((sk) this).field_v = null;
-            var1 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((sk) this).field_z, ((sk) this).field_x << (field_g ? 2 : 1));
-            ((sk) this).field_v = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var1);
-            ((sk) this).field_v.open();
-            ((sk) this).field_v.start();
+        this.field_v.flush();
+        if (this.field_w) {
+            this.field_v.close();
+            this.field_v = null;
+            var1 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_z, this.field_x << (field_g ? 2 : 1));
+            this.field_v = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) var1)));
+            this.field_v.open();
+            this.field_v.start();
         }
     }
 
@@ -133,7 +131,7 @@ final class sk extends kh {
                   var6 = var5.getName();
                   if (var6 != null) {
                     if (var6.toLowerCase().indexOf(field_A) >= 0) {
-                      ((sk) this).field_w = true;
+                      this.field_w = true;
                       var4++;
                       continue L1;
                     } else {
@@ -199,7 +197,7 @@ final class sk extends kh {
           }
         }
         L3: {
-          ((sk) this).field_z = new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
+          ((sk) (this)).field_z = new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
           stackOut_13_0 = this;
           stackOut_13_1 = 256;
           stackIn_15_0 = stackOut_13_0;
@@ -224,25 +222,28 @@ final class sk extends kh {
             break L3;
           }
         }
-        ((sk) this).field_y = new byte[stackIn_16_1 << stackIn_16_2];
+        ((sk) (this)).field_y = new byte[stackIn_16_1 << stackIn_16_2];
     }
 
     final void b(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        {
-            var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((sk) this).field_z, param0 << (field_g ? 2 : 1));
-            ((sk) this).field_v = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
-            ((sk) this).field_v.open();
-            ((sk) this).field_v.start();
-            ((sk) this).field_x = param0;
+        try {
+            var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_z, param0 << (field_g ? 2 : 1));
+            this.field_v = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) var2)));
+            this.field_v.open();
+            this.field_v.start();
+            this.field_x = param0;
+        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
+            if (ah.a(param0, -715827883) != 1) {
+                this.b(ll.a(true, param0));
+                return;
+            }
+            this.field_v = null;
+            throw lineUnavailableException;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = "soundmax";
     }
 }

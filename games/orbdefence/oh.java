@@ -20,10 +20,6 @@ final class oh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "oh.A(";
         field_e = new e();
         field_d = "Click the mouse or press 'ESC' to continue.";

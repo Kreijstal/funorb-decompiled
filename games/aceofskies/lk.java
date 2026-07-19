@@ -6,11 +6,11 @@ final class lk extends fu implements fq {
 
     final void a(byte param0) {
         if (param0 <= 32) {
-            ((lk) this).a((byte) -14);
-            ((lk) this).field_b.a((byte) -120, (fq) this);
+            this.a((byte) -14);
+            this.field_b.a((byte) -120, (fq) (this));
             return;
         }
-        ((lk) this).field_b.a((byte) -120, (fq) this);
+        this.field_b.a((byte) -120, (fq) (this));
     }
 
     lk(wl param0, int param1, byte[] param2, int param3, boolean param4) {
@@ -18,22 +18,22 @@ final class lk extends fu implements fq {
     }
 
     public final int a(int param0) {
+        int discarded$0 = 0;
         if (param0 != 6530) {
-            int discarded$0 = ((lk) this).a(60);
-            return ((lk) this).field_f;
+            discarded$0 = this.a(60);
+            return this.field_f;
         }
-        return ((lk) this).field_f;
+        return this.field_f;
     }
 
     public static void c(int param0) {
         field_g = null;
+        if (param0 != 34962) {
+            field_g = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "Password is valid";
     }
 }

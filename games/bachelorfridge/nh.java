@@ -27,7 +27,7 @@ final class nh extends td {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var3_int = 0;
+            var3_int = 116 % ((param2 - 31) / 60);
             stackOut_0_0 = new hba(param1, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -36,23 +36,23 @@ final class nh extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_0 = (RuntimeException) (var3);
             stackOut_2_1 = new StringBuilder().append("nh.E(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -60,17 +60,22 @@ final class nh extends td {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + -116 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_1_0;
     }
 
     final static void a(int param0, jc param1) {
+        hba discarded$0 = null;
         try {
-            param1.field_o = new char[]{'?'};
+            param1.field_o = new char[]{(char)63};
+            if (param0 != 0) {
+                lu var3 = (lu) null;
+                discarded$0 = nh.a((lu) null, 9, (byte) 2);
+            }
             param1.field_q = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nh.D(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "nh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -116,8 +121,8 @@ final class nh extends td {
         try {
           L0: {
             L1: {
-              var9 = ((nh) this).field_h.a(25, param0);
-              var4 = new lk(((nh) this).field_g, new nq(var9));
+              var9 = this.field_h.a(25, param0);
+              var4 = new lk(this.field_g, new nq(var9));
               var5 = 0;
               if (param1 == 3) {
                 break L1;
@@ -128,7 +133,7 @@ final class nh extends td {
             }
             L2: while (true) {
               if (var5 >= param0.field_z) {
-                stackOut_11_0 = (lk) var4;
+                stackOut_11_0 = (lk) (var4);
                 stackIn_12_0 = stackOut_11_0;
                 break L0;
               } else {
@@ -141,7 +146,7 @@ final class nh extends td {
                     L4: {
                       if (null != param0.field_a[var5][var6].field_l) {
                         var7 = param0.field_a[var5][var6].field_l;
-                        var4.field_o.a((bw) (Object) new iv(new nq(var7), false, 1, 0, 17), true);
+                        var4.field_o.a(new iv(new nq(var7), false, 1, 0, 17), true);
                         break L4;
                       } else {
                         break L4;
@@ -158,23 +163,23 @@ final class nh extends td {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_0 = (RuntimeException) (var3);
             stackOut_13_1 = new StringBuilder().append("nh.A(");
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L5;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -182,9 +187,9 @@ final class nh extends td {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ')');
         }
-        return (ii) (Object) stackIn_12_0;
+        return (ii) ((Object) stackIn_12_0);
     }
 
     nh(int param0, aga param1) {
@@ -192,10 +197,6 @@ final class nh extends td {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "Enter name of player to add to list";
     }
 }

@@ -15,18 +15,19 @@ final class bb {
     public static void a(int param0) {
         field_c = null;
         field_h = null;
-        field_e = null;
-        field_b = null;
-        field_a = null;
-        field_g = null;
-        field_d = null;
+        if (param0 > -50) {
+          return;
+        } else {
+          field_e = null;
+          field_b = null;
+          field_a = null;
+          field_g = null;
+          field_d = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bb.A(";
         field_a = new boolean[29];
         field_b = new String[255];

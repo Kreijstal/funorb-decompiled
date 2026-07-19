@@ -47,32 +47,36 @@ final class ea {
                 break L2;
               }
             }
+            L3: {
+              if (param0) {
+                break L3;
+              } else {
+                field_a = 105;
+                break L3;
+              }
+            }
             var7 = var5_int;
-            L3: while (true) {
+            L4: while (true) {
               if (var6 <= var7) {
                 break L0;
               } else {
                 var8 = var7 * 48 / param3 + 152;
-                var9 = var8 << 8 | var8 << 16 | var8;
+                var9 = var8 << -1512370776 | var8 << -2000090640 | var8;
                 fn.field_h[(var7 + param1) * fn.field_g + param2] = var9;
                 fn.field_h[param4 + param2 + (var7 + param1) * fn.field_g] = var9;
                 var7++;
-                continue L3;
+                continue L4;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var5, "ea.A(" + true + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw sd.a((Throwable) ((Object) var5), "ea.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Watch Introduction";
     }
 }

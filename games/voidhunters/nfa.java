@@ -41,8 +41,9 @@ final class nfa extends uj {
     }
 
     final int a(int param0) {
+        int discarded$0 = 0;
         if (param0 != -1) {
-            int discarded$0 = ((nfa) this).b((byte) 92);
+            discarded$0 = this.b((byte) 92);
             return tnb.field_o;
         }
         return tnb.field_o;
@@ -57,10 +58,6 @@ final class nfa extends uj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = new int[4];
     }
 }

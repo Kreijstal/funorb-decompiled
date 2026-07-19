@@ -19,13 +19,12 @@ final class ok {
         field_d = null;
         field_h = null;
         field_e = null;
+        if (!param0) {
+            field_d = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ok.A(";
         field_i = "Type your email address again to make sure it's correct";
         field_d = "Just play";

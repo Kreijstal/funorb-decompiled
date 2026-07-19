@@ -82,7 +82,7 @@ public class gh {
 
     public static File a(int param0, String param1) {
         if (param0 >= -2) {
-            return null;
+            return (File) null;
         }
         return gh.a(field_d, field_c, (byte) 21, param1);
     }
@@ -92,10 +92,6 @@ public class gh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_e = new Hashtable(16);
     }

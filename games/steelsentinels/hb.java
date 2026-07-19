@@ -17,12 +17,12 @@ final class hb implements Iterable {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-            param1.removeMouseListener((java.awt.event.MouseListener) (Object) ub.field_e);
-            param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ub.field_e);
-            param1.removeFocusListener((java.awt.event.FocusListener) (Object) ub.field_e);
-            wn.field_d = 0;
+            param1.removeMouseListener(ub.field_e);
+            param1.removeMouseMotionListener(ub.field_e);
+            param1.removeFocusListener(ub.field_e);
+            wn.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "hb.E(" + 0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "hb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,8 +36,8 @@ final class hb implements Iterable {
             break L0;
           }
         }
-        var2 = ((hb) this).field_a.field_o;
-        if (((hb) this).field_a == var2) {
+        var2 = this.field_a.field_o;
+        if (this.field_a == var2) {
           return null;
         } else {
           var2.e(480);
@@ -48,22 +48,22 @@ final class hb implements Iterable {
     final void a(byte param0, kd param1) {
         try {
             if (param0 <= 16) {
-                field_i = null;
+                field_i = (pn) null;
             }
             if (!(param1.field_v == null)) {
                 param1.e(480);
             }
-            param1.field_o = ((hb) this).field_a;
-            param1.field_v = ((hb) this).field_a.field_v;
+            param1.field_o = this.field_a;
+            param1.field_v = this.field_a.field_v;
             param1.field_v.field_o = param1;
             param1.field_o.field_v = param1;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "hb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "hb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new wh((hb) this);
+        return (Iterator) ((Object) new wh((hb) (this)));
     }
 
     final static void a(int param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7, int param8) {
@@ -87,6 +87,7 @@ final class hb implements Iterable {
         RuntimeException stackIn_92_0 = null;
         StringBuilder stackIn_92_1 = null;
         String stackIn_92_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_89_0 = null;
         StringBuilder stackOut_89_1 = null;
@@ -112,10 +113,11 @@ final class hb implements Iterable {
                       if (param5 >= 0) {
                         break L2;
                       } else {
-                        if (param0 >= 0) {
+                        if (-1 >= (param0 ^ -1)) {
                           break L2;
                         } else {
-                          return;
+                          decompiledRegionSelector0 = 1;
+                          break L0;
                         }
                       }
                     }
@@ -128,7 +130,8 @@ final class hb implements Iterable {
                         break L3;
                       } else {
                         if (lf.field_g <= param0) {
-                          return;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         } else {
                           break L3;
                         }
@@ -139,11 +142,11 @@ final class hb implements Iterable {
                     var15 = -param7 + param4;
                     if (param6 != param7) {
                       L5: {
-                        var11 = param2 << 16;
-                        var10 = param2 << 16;
+                        var11 = param2 << 1267305840;
+                        var10 = param2 << 1267305840;
                         var16 = -param7 + param6;
-                        var13 = (-param2 + param0 << 16) / var15;
-                        var12 = (-param2 + param5 << 16) / var16;
+                        var13 = (-param2 + param0 << 696865424) / var15;
+                        var12 = (-param2 + param5 << 1517472624) / var16;
                         if (var13 > var12) {
                           var14 = 0;
                           break L5;
@@ -174,12 +177,12 @@ final class hb implements Iterable {
                                 break L6;
                               } else {
                                 L8: {
-                                  var18 = var10 >> 16;
+                                  var18 = var10 >> 1231345296;
                                   if (var18 >= lf.field_g) {
                                     break L8;
                                   } else {
-                                    var19 = (var11 >> 16) - (var10 >> 16);
-                                    if (var19 != 0) {
+                                    var19 = (var11 >> 564464912) - (var10 >> -2072930480);
+                                    if (-1 != (var19 ^ -1)) {
                                       L9: {
                                         if (var19 + var18 < lf.field_g) {
                                           break L9;
@@ -196,7 +199,7 @@ final class hb implements Iterable {
                                         break L8;
                                       }
                                     } else {
-                                      if (var18 < 0) {
+                                      if ((var18 ^ -1) > -1) {
                                         break L8;
                                       } else {
                                         if (var18 < lf.field_g) {
@@ -216,7 +219,8 @@ final class hb implements Iterable {
                                   var10 = var10 + var12;
                                   continue L7;
                                 } else {
-                                  return;
+                                  decompiledRegionSelector0 = 3;
+                                  break L0;
                                 }
                               }
                             }
@@ -228,12 +232,12 @@ final class hb implements Iterable {
                               break L6;
                             } else {
                               L11: {
-                                var18 = var10 >> 16;
+                                var18 = var10 >> 1231345296;
                                 if (var18 >= lf.field_g) {
                                   break L11;
                                 } else {
-                                  var19 = (var11 >> 16) - (var10 >> 16);
-                                  if (var19 != 0) {
+                                  var19 = (var11 >> 564464912) - (var10 >> -2072930480);
+                                  if (-1 != (var19 ^ -1)) {
                                     L12: {
                                       if (var19 + var18 < lf.field_g) {
                                         break L12;
@@ -250,7 +254,7 @@ final class hb implements Iterable {
                                       break L11;
                                     }
                                   } else {
-                                    if (var18 < 0) {
+                                    if ((var18 ^ -1) > -1) {
                                       break L11;
                                     } else {
                                       if (var18 < lf.field_g) {
@@ -277,14 +281,14 @@ final class hb implements Iterable {
                         }
                       }
                       var17 = param4 - param6;
-                      if (var17 != 0) {
+                      if (-1 != (var17 ^ -1)) {
                         L13: {
-                          var18 = param0 << 16;
+                          var18 = param0 << 1901343184;
                           if (var14 == 0) {
-                            var10 = param5 << 16;
+                            var10 = param5 << 1965706384;
                             break L13;
                           } else {
-                            var11 = param5 << 16;
+                            var11 = param5 << 1121623184;
                             break L13;
                           }
                         }
@@ -301,28 +305,28 @@ final class hb implements Iterable {
                         if (param4 != param7) {
                           var16 = -param6 + param4;
                           if (param5 <= param2) {
-                            var13 = (param0 + -param2 << 16) / var15;
-                            var12 = (param0 - param5 << 16) / var16;
-                            var11 = param2 << 16;
-                            var10 = param5 << 16;
+                            var13 = (param0 + -param2 << -1520475472) / var15;
+                            var12 = (param0 - param5 << -537537584) / var16;
+                            var11 = param2 << 1741891920;
+                            var10 = param5 << -1519884656;
                             break L14;
                           } else {
-                            var11 = param5 << 16;
-                            var10 = param2 << 16;
-                            var12 = (param0 + -param2 << 16) / var15;
-                            var13 = (-param5 + param0 << 16) / var16;
+                            var11 = param5 << -38451312;
+                            var10 = param2 << -1392061104;
+                            var12 = (param0 + -param2 << -1303604016) / var15;
+                            var13 = (-param5 + param0 << -601132720) / var16;
                             break L14;
                           }
                         } else {
-                          var10 = param2 << 16;
+                          var10 = param2 << -1203320208;
                           var13 = 0;
-                          var11 = param5 << 16;
+                          var11 = param5 << -1956048752;
                           var12 = 0;
                           break L14;
                         }
                       }
                       var14 = 0;
-                      if (param7 < 0) {
+                      if ((param7 ^ -1) > -1) {
                         param7 = Math.min(-param7, param6 - param7);
                         var11 = var11 + var13 * param7;
                         var10 = var10 + var12 * param7;
@@ -347,14 +351,15 @@ final class hb implements Iterable {
                   var16 = lf.field_c[param7];
                   L16: while (true) {
                     if (param4 <= param7) {
+                      decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       L17: {
-                        var17 = var10 >> 16;
+                        var17 = var10 >> 1274736176;
                         if (lf.field_g <= var17) {
                           break L17;
                         } else {
-                          var18 = -(var10 >> 16) + (var11 >> 16);
+                          var18 = -(var10 >> 2004680432) + (var11 >> -1547207632);
                           if (var18 != 0) {
                             L18: {
                               if (var17 - -var18 >= lf.field_g) {
@@ -364,7 +369,7 @@ final class hb implements Iterable {
                                 break L18;
                               }
                             }
-                            if (var17 < 0) {
+                            if ((var17 ^ -1) > -1) {
                               k.a(true, param3, var17 + var18, var16, param8);
                               break L17;
                             } else {
@@ -387,7 +392,8 @@ final class hb implements Iterable {
                       }
                       param7++;
                       if (param7 >= lf.field_h) {
-                        return;
+                        decompiledRegionSelector0 = 5;
+                        break L0;
                       } else {
                         var10 = var10 + var12;
                         var16 = var16 + pb.field_c;
@@ -401,29 +407,30 @@ final class hb implements Iterable {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L19: {
             var9 = decompiledCaughtException;
-            stackOut_89_0 = (RuntimeException) var9;
+            stackOut_89_0 = (RuntimeException) (var9);
             stackOut_89_1 = new StringBuilder().append("hb.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_91_0 = stackOut_89_0;
             stackIn_91_1 = stackOut_89_1;
             stackIn_90_0 = stackOut_89_0;
             stackIn_90_1 = stackOut_89_1;
             if (param3 == null) {
-              stackOut_91_0 = (RuntimeException) (Object) stackIn_91_0;
-              stackOut_91_1 = (StringBuilder) (Object) stackIn_91_1;
+              stackOut_91_0 = (RuntimeException) ((Object) stackIn_91_0);
+              stackOut_91_1 = (StringBuilder) ((Object) stackIn_91_1);
               stackOut_91_2 = "null";
               stackIn_92_0 = stackOut_91_0;
               stackIn_92_1 = stackOut_91_1;
               stackIn_92_2 = stackOut_91_2;
               break L19;
             } else {
-              stackOut_90_0 = (RuntimeException) (Object) stackIn_90_0;
-              stackOut_90_1 = (StringBuilder) (Object) stackIn_90_1;
+              stackOut_90_0 = (RuntimeException) ((Object) stackIn_90_0);
+              stackOut_90_1 = (StringBuilder) ((Object) stackIn_90_1);
               stackOut_90_2 = "{...}";
               stackIn_92_0 = stackOut_90_0;
               stackIn_92_1 = stackOut_90_1;
@@ -431,11 +438,35 @@ final class hb implements Iterable {
               break L19;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_92_0, stackIn_92_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_92_0), stackIn_92_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return;
+                } else {
+                  return;
+                }
+              }
+            }
+          }
         }
     }
 
     public static void a(boolean param0) {
+        if (!param0) {
+            hb.a(true);
+        }
         field_g = null;
         field_j = null;
         field_h = null;
@@ -445,9 +476,9 @@ final class hb implements Iterable {
     }
 
     hb() {
-        ((hb) this).field_a = new kd();
-        ((hb) this).field_a.field_o = ((hb) this).field_a;
-        ((hb) this).field_a.field_v = ((hb) this).field_a;
+        this.field_a = new kd();
+        this.field_a.field_o = this.field_a;
+        this.field_a.field_v = this.field_a;
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -512,64 +543,72 @@ final class hb implements Iterable {
           break L6;
         }
         L8: {
-          L9: {
+          if (param0 < -118) {
+            break L8;
+          } else {
+            field_j = (wk[]) null;
+            break L8;
+          }
+        }
+        L9: {
+          L10: {
             if (mb.field_T == null) {
-              break L9;
+              break L10;
             } else {
               if (mb.field_T.length < param1) {
-                break L9;
+                break L10;
               } else {
-                break L8;
+                break L9;
               }
             }
           }
           mb.field_T = new int[2 * param1];
-          break L8;
+          break L9;
         }
-        L10: {
-          L11: {
+        L11: {
+          L12: {
             if (null == eb.field_u) {
-              break L11;
+              break L12;
             } else {
               if (param1 <= eb.field_u.length) {
-                break L10;
-              } else {
                 break L11;
+              } else {
+                break L12;
               }
             }
           }
           eb.field_u = new int[2 * param1];
-          break L10;
+          break L11;
         }
-        L12: {
-          L13: {
+        L13: {
+          L14: {
             if (un.field_j == null) {
-              break L13;
+              break L14;
             } else {
               if (param2 + param1 <= un.field_j.length) {
-                break L12;
-              } else {
                 break L13;
+              } else {
+                break L14;
               }
             }
           }
           un.field_j = new int[(param2 + param1) * 2];
-          break L12;
+          break L13;
         }
-        L14: {
-          L15: {
+        L15: {
+          L16: {
             if (null == vd.field_g) {
-              break L15;
+              break L16;
             } else {
               if (vd.field_g.length >= param1) {
-                break L14;
-              } else {
                 break L15;
+              } else {
+                break L16;
               }
             }
           }
           vd.field_g = new boolean[param1 * 2];
-          break L14;
+          break L15;
         }
         k.field_Lb = -2147483648;
         nj.field_S = 2147483647;
@@ -609,6 +648,7 @@ final class hb implements Iterable {
         RuntimeException stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
         String stackIn_77_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
@@ -631,7 +671,7 @@ final class hb implements Iterable {
           L0: {
             if (param1 != null) {
               L1: {
-                if (param2 <= 0) {
+                if ((param2 ^ -1) >= -1) {
                   break L1;
                 } else {
                   if (param5 <= 0) {
@@ -877,36 +917,39 @@ final class hb implements Iterable {
                         }
                       }
                     }
+                    decompiledRegionSelector0 = 2;
                     break L0;
                   }
                 }
               }
-              return;
+              decompiledRegionSelector0 = 1;
+              break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L23: {
             var6 = decompiledCaughtException;
-            stackOut_74_0 = (RuntimeException) var6;
+            stackOut_74_0 = (RuntimeException) (var6);
             stackOut_74_1 = new StringBuilder().append("hb.C(").append(param0).append(',');
             stackIn_76_0 = stackOut_74_0;
             stackIn_76_1 = stackOut_74_1;
             stackIn_75_0 = stackOut_74_0;
             stackIn_75_1 = stackOut_74_1;
             if (param1 == null) {
-              stackOut_76_0 = (RuntimeException) (Object) stackIn_76_0;
-              stackOut_76_1 = (StringBuilder) (Object) stackIn_76_1;
+              stackOut_76_0 = (RuntimeException) ((Object) stackIn_76_0);
+              stackOut_76_1 = (StringBuilder) ((Object) stackIn_76_1);
               stackOut_76_2 = "null";
               stackIn_77_0 = stackOut_76_0;
               stackIn_77_1 = stackOut_76_1;
               stackIn_77_2 = stackOut_76_2;
               break L23;
             } else {
-              stackOut_75_0 = (RuntimeException) (Object) stackIn_75_0;
-              stackOut_75_1 = (StringBuilder) (Object) stackIn_75_1;
+              stackOut_75_0 = (RuntimeException) ((Object) stackIn_75_0);
+              stackOut_75_1 = (StringBuilder) ((Object) stackIn_75_1);
               stackOut_75_2 = "{...}";
               stackIn_77_0 = stackOut_75_0;
               stackIn_77_1 = stackOut_75_1;
@@ -914,15 +957,20 @@ final class hb implements Iterable {
               break L23;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_77_0), stackIn_77_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = false;
         field_d = -1;
         field_h = "Rankings";

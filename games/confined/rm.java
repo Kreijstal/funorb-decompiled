@@ -48,10 +48,10 @@ final class rm {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = Confined.field_J ? 1 : 0;
-        for (var5 = 0; ((rm) this).field_b > var5; var5++) {
-            ((rm) this).field_x[var5] = (short)(((rm) this).field_x[var5] + param3);
-            ((rm) this).field_v[var5] = (short)(((rm) this).field_v[var5] + param0);
-            ((rm) this).field_F[var5] = (short)(((rm) this).field_F[var5] + param1);
+        for (var5 = 0; this.field_b > var5; var5++) {
+            this.field_x[var5] = (short)(this.field_x[var5] + param3);
+            this.field_v[var5] = (short)(this.field_v[var5] + param0);
+            this.field_F[var5] = (short)(this.field_F[var5] + param1);
         }
         var5 = 104 % ((67 - param2) / 37);
         this.a((byte) 67);
@@ -70,10 +70,10 @@ final class rm {
         int var11 = 0;
         int var12 = 0;
         var12 = Confined.field_J ? 1 : 0;
-        if (((rm) this).field_p) {
+        if (this.field_p) {
           return;
         } else {
-          ((rm) this).field_p = true;
+          this.field_p = true;
           var2 = 32767;
           var3 = 32767;
           var4 = 32767;
@@ -82,26 +82,26 @@ final class rm {
           var7 = -32768;
           var8 = 0;
           L0: while (true) {
-            if (var8 >= ((rm) this).field_b) {
+            if (var8 >= this.field_b) {
               L1: {
-                ((rm) this).field_t = var4;
+                this.field_t = var4;
                 if (param0 == 27915) {
                   break L1;
                 } else {
-                  ((rm) this).field_m = null;
+                  this.field_m = (short[]) null;
                   break L1;
                 }
               }
-              ((rm) this).field_s = var7;
-              ((rm) this).field_I = var5;
-              ((rm) this).field_O = var2;
-              ((rm) this).field_e = var6;
-              ((rm) this).field_L = var3;
+              this.field_s = var7;
+              this.field_I = var5;
+              this.field_O = var2;
+              this.field_e = var6;
+              this.field_L = var3;
               return;
             } else {
               L2: {
-                var9 = ((rm) this).field_x[var8];
-                var10 = ((rm) this).field_v[var8];
+                var9 = this.field_x[var8];
+                var10 = this.field_v[var8];
                 if (var9 >= var2) {
                   break L2;
                 } else {
@@ -110,7 +110,7 @@ final class rm {
                 }
               }
               L3: {
-                var11 = ((rm) this).field_F[var8];
+                var11 = this.field_F[var8];
                 if (var10 > var6) {
                   var6 = var10;
                   break L3;
@@ -195,7 +195,7 @@ final class rm {
               if (param1 == 38) {
                 break L1;
               } else {
-                field_f = null;
+                field_f = (eg) null;
                 break L1;
               }
             }
@@ -205,23 +205,23 @@ final class rm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("rm.F(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -230,23 +230,23 @@ final class rm {
             }
           }
           L3: {
-            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
             stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(',').append(param1).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -254,7 +254,7 @@ final class rm {
               break L3;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
         }
     }
 
@@ -268,34 +268,33 @@ final class rm {
     }
 
     private final void a(byte param0) {
-        ((rm) this).field_p = false;
+        if (param0 != 67) {
+            this.a(-14, 92, -74, (byte) 120, -21);
+        }
+        this.field_p = false;
     }
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
         int var6 = 0;
         int var7 = Confined.field_J ? 1 : 0;
-        for (var6 = 0; ((rm) this).field_b > var6; var6++) {
-            ((rm) this).field_x[var6] = (short)(param4 * ((rm) this).field_x[var6] / param1);
-            ((rm) this).field_v[var6] = (short)(((rm) this).field_v[var6] * param2 / param1);
-            ((rm) this).field_F[var6] = (short)(param0 * ((rm) this).field_F[var6] / param1);
+        for (var6 = 0; this.field_b > var6; var6++) {
+            this.field_x[var6] = (short)(param4 * this.field_x[var6] / param1);
+            this.field_v[var6] = (short)(this.field_v[var6] * param2 / param1);
+            this.field_F[var6] = (short)(param0 * this.field_F[var6] / param1);
         }
         if (param3 != 56) {
-            Object var8 = null;
+            String var8 = (String) null;
             rm.a((String) null, (byte) -76, (String) null);
         }
         this.a((byte) 67);
     }
 
     rm() {
-        ((rm) this).field_A = (byte) 0;
-        ((rm) this).field_p = false;
+        this.field_A = (byte) 0;
+        this.field_p = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_D = "Type your age in years";
     }
 }

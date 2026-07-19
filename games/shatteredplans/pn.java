@@ -16,55 +16,56 @@ final class pn {
 
     final void a(ob param0) {
         int var2 = 0;
-        ((pn) this).field_a = param0.j(-126);
-        ((pn) this).field_k = new int[((pn) this).field_a];
-        ((pn) this).field_c = new int[((pn) this).field_a];
-        for (var2 = 0; var2 < ((pn) this).field_a; var2++) {
-            ((pn) this).field_k[var2] = param0.f(-20976);
-            ((pn) this).field_c[var2] = param0.f(-20976);
+        this.field_a = param0.j(-126);
+        this.field_k = new int[this.field_a];
+        this.field_c = new int[this.field_a];
+        for (var2 = 0; var2 < this.field_a; var2++) {
+            this.field_k[var2] = param0.f(-20976);
+            this.field_c[var2] = param0.f(-20976);
         }
     }
 
     final int a(int param0) {
-        if (((pn) this).field_g >= ((pn) this).field_e) {
-            int fieldTemp$0 = ((pn) this).field_h;
-            ((pn) this).field_h = ((pn) this).field_h + 1;
-            ((pn) this).field_j = ((pn) this).field_c[fieldTemp$0] << 15;
-            if (((pn) this).field_h >= ((pn) this).field_a) {
-                ((pn) this).field_h = ((pn) this).field_a - 1;
+        int fieldTemp$0 = 0;
+        if (this.field_g >= this.field_e) {
+            fieldTemp$0 = this.field_h;
+            this.field_h = this.field_h + 1;
+            this.field_j = this.field_c[fieldTemp$0] << 15;
+            if (this.field_h >= this.field_a) {
+                this.field_h = this.field_a - 1;
             }
-            ((pn) this).field_e = (int)((double)((pn) this).field_k[((pn) this).field_h] / 65536.0 * (double)param0);
-            if (((pn) this).field_e > ((pn) this).field_g) {
-                ((pn) this).field_b = ((((pn) this).field_c[((pn) this).field_h] << 15) - ((pn) this).field_j) / (((pn) this).field_e - ((pn) this).field_g);
+            this.field_e = (int)((double)this.field_k[this.field_h] / 65536.0 * (double)param0);
+            if (this.field_e > this.field_g) {
+                this.field_b = ((this.field_c[this.field_h] << 15) - this.field_j) / (this.field_e - this.field_g);
             }
         }
-        ((pn) this).field_j = ((pn) this).field_j + ((pn) this).field_b;
-        ((pn) this).field_g = ((pn) this).field_g + 1;
-        return ((pn) this).field_j - ((pn) this).field_b >> 15;
+        this.field_j = this.field_j + this.field_b;
+        this.field_g = this.field_g + 1;
+        return this.field_j - this.field_b >> 15;
     }
 
     pn() {
-        ((pn) this).field_a = 2;
-        ((pn) this).field_k = new int[2];
-        ((pn) this).field_c = new int[2];
-        ((pn) this).field_k[0] = 0;
-        ((pn) this).field_k[1] = 65535;
-        ((pn) this).field_c[0] = 0;
-        ((pn) this).field_c[1] = 65535;
+        this.field_a = 2;
+        this.field_k = new int[2];
+        this.field_c = new int[2];
+        this.field_k[0] = 0;
+        this.field_k[1] = 65535;
+        this.field_c[0] = 0;
+        this.field_c[1] = 65535;
     }
 
     final void a() {
-        ((pn) this).field_e = 0;
-        ((pn) this).field_h = 0;
-        ((pn) this).field_b = 0;
-        ((pn) this).field_j = 0;
-        ((pn) this).field_g = 0;
+        this.field_e = 0;
+        this.field_h = 0;
+        this.field_b = 0;
+        this.field_j = 0;
+        this.field_g = 0;
     }
 
     final void b(ob param0) {
-        ((pn) this).field_f = param0.j(-121);
-        ((pn) this).field_d = param0.a(16711680);
-        ((pn) this).field_i = param0.a(16711680);
-        ((pn) this).a(param0);
+        this.field_f = param0.j(-121);
+        this.field_d = param0.a(16711680);
+        this.field_i = param0.a(16711680);
+        this.a(param0);
     }
 }

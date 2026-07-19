@@ -128,7 +128,7 @@ public class PixelBuffer extends jaclib.peer.sw implements jaclib.memory.Buffer 
           stackIn_10_0 = stackOut_9_0;
           stackIn_10_1 = stackOut_9_1;
           stackIn_10_2 = stackOut_9_2;
-          if (param1 >= 0) {
+          if ((param1 ^ -1) <= -1) {
             stackOut_11_0 = stackIn_11_0;
             stackOut_11_1 = stackIn_11_1;
             stackOut_11_2 = stackIn_11_2;
@@ -151,7 +151,7 @@ public class PixelBuffer extends jaclib.peer.sw implements jaclib.memory.Buffer 
           }
         }
         if ((stackIn_12_0 | (stackIn_12_1 | (stackIn_12_2 | stackIn_12_3))) == 0) {
-          if (param3 + param2 > ((jagdx.PixelBuffer) this).getSize()) {
+          if (param3 + param2 > this.getSize()) {
             throw new jagdx.fg();
           } else {
             this.putub(param0, param1, param2, param3);
@@ -208,7 +208,7 @@ public class PixelBuffer extends jaclib.peer.sw implements jaclib.memory.Buffer 
         int stackOut_10_1 = 0;
         int stackOut_10_2 = 0;
         L0: {
-          if (param2 >= 0) {
+          if ((param2 ^ -1) <= -1) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -287,7 +287,7 @@ public class PixelBuffer extends jaclib.peer.sw implements jaclib.memory.Buffer 
           }
         }
         if ((stackIn_12_0 | (stackIn_12_1 | stackIn_12_2)) == 0) {
-          if (4 * param3 + param2 > ((jagdx.PixelBuffer) this).getSize()) {
+          if (4 * param3 + param2 > this.getSize()) {
             throw new jagdx.fg();
           } else {
             this.puti(param0, param1, param2, param3);

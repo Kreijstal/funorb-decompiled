@@ -10,15 +10,14 @@ final class oc {
     private static String field_z;
 
     public static void a(int param0) {
+        if (param0 != 0) {
+            return;
+        }
         field_a = null;
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "oc.A(";
         field_b = 0;
         field_e = 0;

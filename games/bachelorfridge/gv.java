@@ -22,6 +22,7 @@ final class gv extends kj {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
@@ -46,13 +47,15 @@ final class gv extends kj {
               var3 = param1.a(param2, false);
               L2: while (true) {
                 if (var3.field_f != 0) {
-                  if (var3.field_f == 1) {
+                  if ((var3.field_f ^ -1) == -2) {
                     if (param0 < -84) {
                       param2.setVisible(false);
                       param2.dispose();
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
-                      return;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   } else {
                     gda.a(false, 100L);
@@ -69,23 +72,23 @@ final class gv extends kj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3_ref;
+            stackOut_10_0 = (RuntimeException) (var3_ref);
             stackOut_10_1 = new StringBuilder().append("gv.C(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -94,23 +97,23 @@ final class gv extends kj {
             }
           }
           L4: {
-            stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+            stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
             stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -118,13 +121,18 @@ final class gv extends kj {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final void a(int param0, int param1, int param2) {
         if (param1 != 0) {
-            ((gv) this).a(-85, true, -42);
+            this.a(-85, true, -42);
         }
     }
 
@@ -133,9 +141,9 @@ final class gv extends kj {
     }
 
     final boolean b(int param0) {
-        int fieldTemp$2 = ((gv) this).field_f + 1;
-        ((gv) this).field_f = ((gv) this).field_f + 1;
-        if (fieldTemp$2 >= 60) {
+        int fieldTemp$2 = this.field_f + 1;
+        this.field_f = this.field_f + 1;
+        if ((fieldTemp$2 ^ -1) <= -61) {
           return true;
         } else {
           if (param0 <= 21) {
@@ -147,22 +155,26 @@ final class gv extends kj {
     }
 
     final void a(int param0, boolean param1, int param2) {
+        boolean discarded$8 = false;
+        boolean discarded$9 = false;
+        boolean discarded$10 = false;
+        boolean discarded$11 = false;
         int var4 = 0;
         int var5 = 0;
         var5 = BachelorFridge.field_y;
-        if (((gv) this).field_f >= 10) {
-          if (30 >= ((gv) this).field_f) {
+        if (this.field_f >= 10) {
+          if (30 >= this.field_f) {
             gha.field_h.a(-128 + param2, param0 - 64);
             if (!param1) {
-              boolean discarded$8 = ((gv) this).b(-37);
+              discarded$8 = this.b(-37);
               return;
             } else {
               return;
             }
           } else {
-            if ((2 & ((gv) this).field_f) != 0) {
+            if ((2 & this.field_f) != 0) {
               if (!param1) {
-                boolean discarded$9 = ((gv) this).b(-37);
+                discarded$9 = this.b(-37);
                 return;
               } else {
                 return;
@@ -172,18 +184,18 @@ final class gv extends kj {
               if (param1) {
                 return;
               } else {
-                boolean discarded$10 = ((gv) this).b(-37);
+                discarded$10 = this.b(-37);
                 return;
               }
             }
           }
         } else {
-          var4 = (int)((double)param0 / 10.0) * ((gv) this).field_f;
+          var4 = (int)((double)param0 / 10.0) * this.field_f;
           gha.field_h.a(-128 + param2, var4 + -64);
           if (param1) {
             return;
           } else {
-            boolean discarded$11 = ((gv) this).b(-37);
+            discarded$11 = this.b(-37);
             return;
           }
         }

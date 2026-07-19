@@ -14,10 +14,18 @@ final class kg {
     public static void a(boolean param0) {
         field_b = null;
         field_f = null;
+        if (param0) {
+            field_f = (ff) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     final static void a(int param0) {
+        if (param0 != -15617) {
+            field_c = 24;
+        }
     }
 
     public kg() {
@@ -29,9 +37,10 @@ final class kg {
 
     final void a(byte param0, gb param1, byte[] param2) {
         try {
+            int discarded$2 = 0;
             Exception exception = null;
             RuntimeException runtimeException = null;
-            Object var5 = null;
+            byte[] var5 = null;
             RuntimeException stackIn_14_0 = null;
             StringBuilder stackIn_14_1 = null;
             RuntimeException stackIn_15_0 = null;
@@ -71,10 +80,10 @@ final class kg {
                   } else {
                     if (-117 == param1.field_l[param1.field_m + 1]) {
                       L2: {
-                        if (null != ((kg) this).field_d) {
+                        if (null != this.field_d) {
                           break L2;
                         } else {
-                          ((kg) this).field_d = new java.util.zip.Inflater(true);
+                          this.field_d = new java.util.zip.Inflater(true);
                           break L2;
                         }
                       }
@@ -82,24 +91,24 @@ final class kg {
                         if (param0 == 97) {
                           break L3;
                         } else {
-                          var5 = null;
-                          ((kg) this).a((byte) 118, (gb) null, (byte[]) null);
+                          var5 = (byte[]) null;
+                          this.a((byte) 118, (gb) null, (byte[]) null);
                           break L3;
                         }
                       }
                       try {
                         L4: {
-                          ((kg) this).field_d.setInput(param1.field_l, 10 + param1.field_m, -param1.field_m + (-10 + (-8 + param1.field_l.length)));
-                          int discarded$2 = ((kg) this).field_d.inflate(param2);
+                          this.field_d.setInput(param1.field_l, 10 + param1.field_m, -param1.field_m + (-10 + (-8 + param1.field_l.length)));
+                          discarded$2 = this.field_d.inflate(param2);
                           break L4;
                         }
                       } catch (java.lang.Exception decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
                         exception = (Exception) (Object) decompiledCaughtException;
-                        ((kg) this).field_d.reset();
+                        this.field_d.reset();
                         throw new RuntimeException("");
                       }
-                      ((kg) this).field_d.reset();
+                      this.field_d.reset();
                       break L0;
                     } else {
                       break L1;
@@ -112,23 +121,23 @@ final class kg {
               decompiledCaughtException = decompiledCaughtParameter1;
               L5: {
                 runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_13_0 = (RuntimeException) runtimeException;
+                stackOut_13_0 = (RuntimeException) (runtimeException);
                 stackOut_13_1 = new StringBuilder().append("kg.C(").append(param0).append(',');
                 stackIn_15_0 = stackOut_13_0;
                 stackIn_15_1 = stackOut_13_1;
                 stackIn_14_0 = stackOut_13_0;
                 stackIn_14_1 = stackOut_13_1;
                 if (param1 == null) {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+                  stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
                   stackOut_15_2 = "null";
                   stackIn_16_0 = stackOut_15_0;
                   stackIn_16_1 = stackOut_15_1;
                   stackIn_16_2 = stackOut_15_2;
                   break L5;
                 } else {
-                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+                  stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
                   stackOut_14_2 = "{...}";
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_16_1 = stackOut_14_1;
@@ -137,23 +146,23 @@ final class kg {
                 }
               }
               L6: {
-                stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+                stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
                 stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;
                 stackIn_17_1 = stackOut_16_1;
                 if (param2 == null) {
-                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
                   stackOut_18_2 = "null";
                   stackIn_19_0 = stackOut_18_0;
                   stackIn_19_1 = stackOut_18_1;
                   stackIn_19_2 = stackOut_18_2;
                   break L6;
                 } else {
-                  stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-                  stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                  stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+                  stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
                   stackOut_17_2 = "{...}";
                   stackIn_19_0 = stackOut_17_0;
                   stackIn_19_1 = stackOut_17_1;
@@ -161,7 +170,7 @@ final class kg {
                   break L6;
                 }
               }
-              throw fc.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+              throw fc.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -171,10 +180,6 @@ final class kg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Mouse over an icon for details";
         field_e = 50;
         field_f = new ff(13, 0, 1, 0);

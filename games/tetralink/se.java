@@ -19,60 +19,73 @@ abstract class se {
         km var8 = null;
         bc var9 = null;
         byte[] var13 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var6 = TetraLink.field_J;
         try {
           L0: {
+            L1: {
+              if (!param0) {
+                break L1;
+              } else {
+                field_c = (wf) null;
+                break L1;
+              }
+            }
             var9 = kb.field_q;
             var2 = var9.d((byte) -99);
             if (0 == var2) {
-              var8 = (km) (Object) ph.field_F.c(false);
+              var8 = (km) ((Object) ph.field_F.c(false));
               if (var8 == null) {
                 mk.a(false);
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
-                L1: {
+                L2: {
                   var4 = var9.d((byte) -99);
                   if (0 == var4) {
                     var5 = null;
-                    break L1;
+                    break L2;
                   } else {
                     var13 = new byte[var4];
                     var9.b(var4, 0, var13, 126);
-                    break L1;
+                    break L2;
                   }
                 }
                 var9.field_t = var9.field_t + 4;
                 if (!var9.h(4)) {
-                  mk.a(false);
-                  return;
+                  mk.a(param0);
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 } else {
                   var8.b(false);
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 }
               }
             } else {
-              if (var2 == 1) {
+              if ((var2 ^ -1) == -2) {
                 var3 = var9.f(-122);
-                var4_ref_hc = (hc) (Object) nc.field_f.c(false);
-                L2: while (true) {
-                  L3: {
+                var4_ref_hc = (hc) ((Object) nc.field_f.c(false));
+                L3: while (true) {
+                  L4: {
                     if (var4_ref_hc == null) {
-                      break L3;
+                      break L4;
                     } else {
                       if (var4_ref_hc.field_t == var3) {
-                        break L3;
+                        break L4;
                       } else {
-                        var4_ref_hc = (hc) (Object) nc.field_f.a((byte) -70);
-                        continue L2;
+                        var4_ref_hc = (hc) ((Object) nc.field_f.a((byte) -70));
+                        continue L3;
                       }
                     }
                   }
                   if (var4_ref_hc == null) {
                     mk.a(false);
-                    return;
+                    decompiledRegionSelector0 = 0;
+                    break L0;
                   } else {
-                    var4_ref_hc.b(false);
+                    var4_ref_hc.b(param0);
                     return;
                   }
                 }
@@ -86,7 +99,20 @@ abstract class se {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1, "se.E(" + false + ')');
+          throw oi.a((Throwable) ((Object) var1), "se.E(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -94,16 +120,17 @@ abstract class se {
 
     public static void b(int param0) {
         field_c = null;
+        if (param0 != -1) {
+            se.a(true);
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     abstract int a(int param0);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Waiting for music";
         field_b = -1;
     }

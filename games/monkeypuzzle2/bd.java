@@ -11,7 +11,7 @@ final class bd {
         field_a = null;
         field_c = null;
         if (param0 >= -4) {
-            Object var2 = null;
+            String var2 = (String) null;
             bd.a(true, (byte) 37, false, (String) null);
         }
     }
@@ -28,28 +28,30 @@ final class bd {
             cd.a(param1 ^ -99);
             wg.field_j.k(param1 ^ 25);
             j.field_e = new qi(bh.field_b, (String) null, fk.field_a, param0, param2);
-            jh.field_C = new ra(wg.field_j, (we) (Object) j.field_e);
-            wg.field_j.b((byte) -101, (we) (Object) jh.field_C);
+            jh.field_C = new ra(wg.field_j, j.field_e);
+            wg.field_j.b((byte) -101, jh.field_C);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "bd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw la.a((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(int param0) {
-        if (null == ol.field_g) {
+        if (param0 == 25951) {
+          if (null != ol.field_g) {
+            if (!dk.field_h.b(param0 + -25949)) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
+        } else {
+          return true;
         }
-        if (!dk.field_h.b(2)) {
-            return false;
-        }
-        return true;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new pj();
         field_c = new pj();
         field_a = "Unpacking sound effects";

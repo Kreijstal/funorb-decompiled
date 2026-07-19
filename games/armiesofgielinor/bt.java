@@ -47,9 +47,9 @@ final class bt {
         } else {
           var2 = kr.field_E.h((byte) 94);
           if (var2 != null) {
-            var3 = 0;
+            var3 = 9 % ((param0 - -41) / 55);
             var4 = kr.field_E.h(-10754);
-            if (var4 < 0) {
+            if ((var4 ^ -1) > -1) {
               return;
             } else {
               if (null != kr.field_E.field_N) {
@@ -70,10 +70,6 @@ final class bt {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
         field_b = "<%0> rune";
         field_a = "You need to play 1 more rated game to unlock this option.";

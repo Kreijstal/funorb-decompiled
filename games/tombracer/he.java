@@ -8,17 +8,17 @@ final class he extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            ((he) this).field_a.paint(param0);
+            this.field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "he.paint(" + (param0 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "he.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void update(java.awt.Graphics param0) {
         try {
-            ((he) this).field_a.update(param0);
+            this.field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "he.update(" + (param0 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "he.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,17 +34,13 @@ final class he extends java.awt.Canvas {
 
     he(java.awt.Component param0) {
         try {
-            ((he) this).field_a = param0;
+            this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Game options changed (<%0>)";
         field_c = null;
     }

@@ -16,6 +16,7 @@ final class bd {
     }
 
     final static void a(byte param0, boolean param1, int param2, int param3) {
+        boolean discarded$1 = false;
         RuntimeException var4 = null;
         int var4_int = 0;
         ak var5 = null;
@@ -23,6 +24,7 @@ final class bd {
         int var7 = 0;
         String var8 = null;
         aa var9 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
@@ -45,7 +47,7 @@ final class bd {
                   break L2;
                 }
               }
-              if (oh.field_b > 0) {
+              if ((oh.field_b ^ -1) < -1) {
                 L3: {
                   r.b(-96);
                   ui.field_i.a(-28476, param1);
@@ -56,7 +58,7 @@ final class bd {
                       td.field_b = null;
                       break L3;
                     } else {
-                      boolean discarded$1 = td.field_b.a(ui.field_i.field_gb, param1, (byte) 99, ui.field_i.field_tb);
+                      discarded$1 = td.field_b.a(ui.field_i.field_gb, param1, (byte) 99, ui.field_i.field_tb);
                       break L3;
                     }
                   }
@@ -84,6 +86,7 @@ final class bd {
                     var8 = pk.a((byte) 88);
                     if (var8 != null) {
                       up.field_o = var8;
+                      decompiledRegionSelector0 = 2;
                       break L0;
                     } else {
                       return;
@@ -93,7 +96,7 @@ final class bd {
                       var5 = fm.field_f[var4_int];
                       if (var5 != null) {
                         L8: {
-                          if (var5.field_P == 0) {
+                          if (-1 == (var5.field_P ^ -1)) {
                             break L8;
                           } else {
                             cg.a((byte) -13, var5, var4_int);
@@ -103,10 +106,8 @@ final class bd {
                         var6 = kl.a(var4_int, 0);
                         fm.field_h[var4_int].field_H = h.field_V[var6];
                         hk.field_e[var4_int].field_cb = rg.field_a[var6];
-                        var4_int++;
                         break L7;
                       } else {
-                        var4_int++;
                         break L7;
                       }
                     }
@@ -115,56 +116,76 @@ final class bd {
                   }
                 }
               } else {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var4, "bd.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) var4), "bd.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            return;
+          }
         }
     }
 
     final static boolean a(boolean param0) {
-        if (!param0) {
-            field_a = null;
-            if (hf.field_q < 20) {
-                return true;
-            }
-            if (!re.a(106)) {
-                return true;
-            }
-            if (ra.field_g <= 0) {
+        if (param0) {
+          if ((hf.field_q ^ -1) <= -21) {
+            if (re.a(106)) {
+              if (-1 > (ra.field_g ^ -1)) {
+                if (ri.a(-81)) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
                 return false;
+              }
+            } else {
+              return true;
             }
-            if (ri.a(-81)) {
+          } else {
+            return true;
+          }
+        } else {
+          field_a = (tf) null;
+          if ((hf.field_q ^ -1) <= -21) {
+            if (re.a(106)) {
+              if (-1 > (ra.field_g ^ -1)) {
+                if (ri.a(-81)) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
                 return false;
+              }
+            } else {
+              return true;
             }
+          } else {
             return true;
+          }
         }
-        if (hf.field_q < 20) {
-            return true;
-        }
-        if (!re.a(106)) {
-            return true;
-        }
-        if (ra.field_g <= 0) {
-            return false;
-        }
-        if (ri.a(-81)) {
-            return false;
-        }
-        return true;
     }
 
     final boolean b(int param0) {
         if (param0 == -21) {
-          if ((Object) (Object) kk.field_b != this) {
-            if ((Object) (Object) e.field_d != this) {
-              if ((Object) (Object) Pixelate.field_G == this) {
+          if (kk.field_b != this) {
+            if (e.field_d != this) {
+              if (Pixelate.field_G == this) {
                 return true;
               } else {
                 return false;
@@ -187,7 +208,10 @@ final class bd {
             aj.field_t = 0;
             f.field_q = 0;
             qp.field_L = null;
-            vp.field_Hb.e(-111);
+            if (param0 != -1) {
+                field_c = 75;
+            }
+            vp.field_Hb.e(param0 + -110);
             bq.field_b.e(-127);
             var1 = vm.field_b.a(-89);
             while (var1 != null) {
@@ -201,7 +225,7 @@ final class bd {
             }
             gk.field_db = 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "bd.A(" + -1 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ')');
         }
     }
 
@@ -210,10 +234,6 @@ final class bd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new tf(270, 70);
     }
 }

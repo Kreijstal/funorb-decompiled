@@ -8,8 +8,8 @@ final class im {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = -48;
-        field_c = null;
+        int var1 = -48 / ((34 - param0) / 57);
+        field_c = (boolean[][]) null;
         field_b = null;
     }
 
@@ -186,11 +186,12 @@ final class im {
     }
 
     final static pp a(int param0, lu param1) {
+        pp discarded$2 = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        Object var5 = null;
+        lu var5 = null;
         sl stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -216,8 +217,8 @@ final class im {
               if (param0 == -22833) {
                 break L1;
               } else {
-                var5 = null;
-                pp discarded$2 = im.a(9, (lu) null);
+                var5 = (lu) null;
+                discarded$2 = im.a(9, (lu) null);
                 break L1;
               }
             }
@@ -231,23 +232,23 @@ final class im {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("im.A(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -255,16 +256,12 @@ final class im {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
-        return (pp) (Object) stackIn_3_0;
+        return (pp) ((Object) stackIn_3_0);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Please log in as a subscribing member to access this feature.";
         field_b = "Reject";
     }

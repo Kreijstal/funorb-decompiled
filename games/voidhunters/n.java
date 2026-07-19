@@ -7,15 +7,15 @@ final class n extends da implements e {
     private final native void PA(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7);
 
     protected final void finalize() {
-        if (((n) this).field_nativeid != 0L) {
-            pq.a(0, (e) this);
+        if (this.field_nativeid != 0L) {
+            pq.a(0, (e) (this));
         }
     }
 
     public final native void w(boolean param0);
 
     n(oa param0, ya param1, sw param2, ima[] param3, aja[] param4) {
-        super((ha) (Object) param0, param2);
+        super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];
         int[] var7 = new int[param3.length];

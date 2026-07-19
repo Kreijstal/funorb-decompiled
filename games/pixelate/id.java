@@ -13,11 +13,12 @@ final class id {
     static int field_b;
 
     public static void c(int param0) {
-        int var1 = 64;
+        int var1 = 64 / ((-80 - param0) / 37);
         field_d = null;
     }
 
     final static void a(byte param0, hf param1, int param2) {
+        int discarded$0 = 0;
         pc var5 = aa.field_f;
         var5.g(param2, 15514);
         var5.field_m = var5.field_m + 1;
@@ -33,19 +34,19 @@ final class id {
             var5.d(param1.field_r, -102);
             var5.d(param1.field_l, -112);
             var5.d(param1.field_p, -120);
-            int discarded$0 = var5.b(var4, (byte) 84);
+            discarded$0 = var5.b(var4, (byte) 84);
             var5.f(var5.field_m - var4, -1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "id.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void a(int param0) {
         if (param0 < 40) {
-            field_d = null;
+            field_d = (bb) null;
         }
         fm.field_b = new pl();
-        ph.field_l.c((ng) (Object) fm.field_b, -121);
+        ph.field_l.c(fm.field_b, -121);
     }
 
     final static void b(int param0) {
@@ -60,7 +61,7 @@ final class id {
             im.field_Hb = new tf[param0];
             var1_int = 0;
             L1: while (true) {
-              if (var1_int >= 2) {
+              if ((var1_int ^ -1) <= -3) {
                 eg.a((byte) 99);
                 qa.field_f.a(19692);
                 ii.field_p = new hh[10];
@@ -109,13 +110,16 @@ final class id {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "id.D(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) var1), "id.D(" + param0 + ')');
         }
     }
 
     final static void a(boolean param0, byte param1) {
         qk.field_e = 0;
         ae.field_b = 0;
+        if (param1 <= 104) {
+            return;
+        }
         oe.field_Sb = 0;
         jn.field_q = ui.field_k;
         a.field_I = new pf(2);
@@ -123,7 +127,7 @@ final class id {
     }
 
     id(boolean param0) {
-        ((id) this).field_g = param0 ? true : false;
+        this.field_g = param0 ? true : false;
     }
 
     static {

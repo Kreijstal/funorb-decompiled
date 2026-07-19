@@ -10,6 +10,7 @@ final class ra implements Iterable {
     static tf field_a;
 
     final void a(int param0, rc param1) {
+        Iterator discarded$2 = null;
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -37,14 +38,14 @@ final class ra implements Iterable {
                 break L1;
               }
             }
-            param1.field_l = ((ra) this).field_c.field_l;
-            param1.field_k = ((ra) this).field_c;
+            param1.field_l = this.field_c.field_l;
+            param1.field_k = this.field_c;
             param1.field_l.field_k = param1;
             param1.field_k.field_l = param1;
             if (param0 == -1) {
               break L0;
             } else {
-              Iterator discarded$2 = ((ra) this).iterator();
+              discarded$2 = this.iterator();
               return;
             }
           }
@@ -52,23 +53,23 @@ final class ra implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("ra.C(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -76,28 +77,29 @@ final class ra implements Iterable {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
         }
     }
 
     final static void a(int param0, rf param1) {
         RuntimeException runtimeException = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
@@ -105,48 +107,62 @@ final class ra implements Iterable {
                 break L1;
               } else {
                 if (fe.field_e != param1) {
-                  field_d = -114;
+                  L2: {
+                    if (param0 == 0) {
+                      break L2;
+                    } else {
+                      field_d = -114;
+                      break L2;
+                    }
+                  }
                   uh.field_y.d(-9268);
                   fj.field_p.a();
                   fe.field_e = param1;
                   uh.field_y.a(false, fe.field_e, -1706);
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   break L1;
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) runtimeException;
-            stackOut_5_1 = new StringBuilder().append("ra.A(").append(0).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_7_0 = (RuntimeException) (runtimeException);
+            stackOut_7_1 = new StringBuilder().append("ra.A(").append(param0).append(',');
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L2;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
-              break L2;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -178,7 +194,7 @@ final class ra implements Iterable {
               ug.field_c = ug.field_c | var3;
               el.field_o.field_e = el.field_o.field_e + 1;
               var4 = param2;
-              if ((1 << var4 & dc.field_a) == 0) {
+              if (-1 == (1 << var4 & dc.field_a ^ -1)) {
                 stackOut_7_0 = 0;
                 stackIn_8_0 = stackOut_7_0;
                 break L0;
@@ -207,7 +223,7 @@ final class ra implements Iterable {
                 }
                 L2: {
                   var4 = stackIn_45_0;
-                  pb.field_t.a(-35, (hf) (Object) new nj(param2));
+                  pb.field_t.a(-35, new nj(param2));
                   if (var4 != 0) {
                     gf.a((byte) -122);
                     break L2;
@@ -217,7 +233,7 @@ final class ra implements Iterable {
                 }
                 L3: {
                   if (!el.field_o.field_K) {
-                    ja.field_A.a(-44, (hf) (Object) new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
+                    ja.field_A.a(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
                     break L3;
                   } else {
                     break L3;
@@ -239,7 +255,7 @@ final class ra implements Iterable {
                 }
                 L5: {
                   var4 = stackIn_35_0;
-                  pb.field_t.a(-35, (hf) (Object) new nj(param2));
+                  pb.field_t.a(-35, new nj(param2));
                   if (var4 != 0) {
                     gf.a((byte) -122);
                     break L5;
@@ -249,7 +265,7 @@ final class ra implements Iterable {
                 }
                 L6: {
                   if (!el.field_o.field_K) {
-                    ja.field_A.a(-44, (hf) (Object) new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
+                    ja.field_A.a(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
                     break L6;
                   } else {
                     break L6;
@@ -258,7 +274,7 @@ final class ra implements Iterable {
                 return;
               }
             } else {
-              field_b = null;
+              field_b = (String) null;
               if (var5 != 0) {
                 L7: {
                   vl.field_p = vl.field_p | var3;
@@ -274,7 +290,7 @@ final class ra implements Iterable {
                 }
                 L8: {
                   var4 = stackIn_23_0;
-                  pb.field_t.a(-35, (hf) (Object) new nj(param2));
+                  pb.field_t.a(-35, new nj(param2));
                   if (var4 != 0) {
                     gf.a((byte) -122);
                     break L8;
@@ -284,7 +300,7 @@ final class ra implements Iterable {
                 }
                 L9: {
                   if (!el.field_o.field_K) {
-                    ja.field_A.a(-44, (hf) (Object) new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
+                    ja.field_A.a(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
                     break L9;
                   } else {
                     break L9;
@@ -308,7 +324,7 @@ final class ra implements Iterable {
                 }
                 L11: {
                   var4 = stackIn_13_0;
-                  pb.field_t.a(-35, (hf) (Object) new nj(param2));
+                  pb.field_t.a(-35, new nj(param2));
                   if (var4 != 0) {
                     gf.a((byte) -122);
                     break L11;
@@ -318,7 +334,7 @@ final class ra implements Iterable {
                 }
                 L12: {
                   if (!el.field_o.field_K) {
-                    ja.field_A.a(-44, (hf) (Object) new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
+                    ja.field_A.a(-44, new p(param2, param0, dc.field_a, el.field_g, sc.field_f, lb.field_b));
                     break L12;
                   } else {
                     break L12;
@@ -334,11 +350,12 @@ final class ra implements Iterable {
     }
 
     final static boolean a(int param0, String param1) {
+        boolean discarded$2 = false;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        Object var5 = null;
+        String var5 = null;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -348,6 +365,7 @@ final class ra implements Iterable {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
         int stackOut_6_0 = 0;
@@ -367,8 +385,8 @@ final class ra implements Iterable {
               if (param0 == 18725) {
                 break L1;
               } else {
-                var5 = null;
-                boolean discarded$2 = ra.a(20, (String) null);
+                var5 = (String) null;
+                discarded$2 = ra.a(20, (String) null);
                 break L1;
               }
             }
@@ -377,6 +395,7 @@ final class ra implements Iterable {
               if (param1.length() <= var3) {
                 stackOut_9_0 = 1;
                 stackIn_10_0 = stackOut_9_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (var2_int == param1.charAt(var3)) {
@@ -385,7 +404,8 @@ final class ra implements Iterable {
                 } else {
                   stackOut_6_0 = 0;
                   stackIn_7_0 = stackOut_6_0;
-                  return stackIn_7_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             }
@@ -394,23 +414,23 @@ final class ra implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var2;
+            stackOut_11_0 = (RuntimeException) (var2);
             stackOut_11_1 = new StringBuilder().append("ra.E(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -418,13 +438,17 @@ final class ra implements Iterable {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
         }
-        return stackIn_10_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_7_0 != 0;
+        } else {
+          return stackIn_10_0 != 0;
+        }
     }
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new ef((ra) this);
+        return (Iterator) ((Object) new ef((ra) (this)));
     }
 
     public static void a(int param0) {
@@ -438,9 +462,9 @@ final class ra implements Iterable {
     final rc a(byte param0) {
         rc var2 = null;
         int var3 = 0;
-        var2 = ((ra) this).field_c.field_k;
+        var2 = this.field_c.field_k;
         var3 = -14 % ((72 - param0) / 46);
-        if (((ra) this).field_c == var2) {
+        if (this.field_c == var2) {
           return null;
         } else {
           var2.a((byte) 126);
@@ -453,10 +477,6 @@ final class ra implements Iterable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "You have <%0> unread messages!";
         field_a = new tf();
     }

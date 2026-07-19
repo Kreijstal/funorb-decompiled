@@ -10,7 +10,7 @@ final class uf {
     private int field_b;
 
     final float[] c() {
-        return ((uf) this).field_a[((uf) this).a()];
+        return this.field_a[this.a()];
     }
 
     private final void b() {
@@ -28,33 +28,29 @@ final class uf {
         int var11 = 0;
         int[] var12 = null;
         int[] var14 = null;
-        int[] var16 = null;
-        int[] var18 = null;
-        int[] var19 = null;
-        var19 = new int[((uf) this).field_b];
-        var18 = new int[33];
-        var16 = var18;
-        var14 = var16;
+        int[] var17 = null;
+        var17 = new int[this.field_b];
+        var14 = new int[33];
         var12 = var14;
         var2_ref_int__ = var12;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((uf) this).field_b) {
-            ((uf) this).field_d = new int[8];
+          if (var3 >= this.field_b) {
+            this.field_d = new int[8];
             var2 = 0;
             var3 = 0;
             L1: while (true) {
-              if (var3 >= ((uf) this).field_b) {
+              if (var3 >= this.field_b) {
                 return;
               } else {
-                var4 = ((uf) this).field_f[var3];
+                var4 = this.field_f[var3];
                 if (var4 != 0) {
-                  var5 = var19[var3];
+                  var5 = var17[var3];
                   var6 = 0;
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((uf) this).field_d[var6] = ~var3;
+                      this.field_d[var6] = var3 ^ -1;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -71,30 +67,30 @@ final class uf {
                           break L3;
                         } else {
                           L4: {
-                            if (((uf) this).field_d[var6] != 0) {
+                            if (this.field_d[var6] != 0) {
                               break L4;
                             } else {
-                              ((uf) this).field_d[var6] = var2;
+                              this.field_d[var6] = var2;
                               break L4;
                             }
                           }
-                          var6 = ((uf) this).field_d[var6];
+                          var6 = this.field_d[var6];
                           break L3;
                         }
                       }
                       L5: {
-                        if (var6 < ((uf) this).field_d.length) {
+                        if (var6 < this.field_d.length) {
                           break L5;
                         } else {
-                          var9 = new int[((uf) this).field_d.length * 2];
+                          var9 = new int[this.field_d.length * 2];
                           var11 = 0;
                           var10 = var11;
                           L6: while (true) {
-                            if (var11 >= ((uf) this).field_d.length) {
-                              ((uf) this).field_d = var9;
+                            if (var11 >= this.field_d.length) {
+                              this.field_d = var9;
                               break L5;
                             } else {
-                              var9[var11] = ((uf) this).field_d[var11];
+                              var9[var11] = this.field_d[var11];
                               var11++;
                               continue L6;
                             }
@@ -113,12 +109,12 @@ final class uf {
               }
             }
           } else {
-            var4 = ((uf) this).field_f[var3];
+            var4 = this.field_f[var3];
             if (var4 != 0) {
               L7: {
                 var5 = 1 << 32 - var4;
-                var6 = var18[var4];
-                var19[var3] = var6;
+                var6 = var14[var4];
+                var17[var3] = var6;
                 if ((var6 & var5) == 0) {
                   var7 = var6 | var5;
                   var8 = var4 - 1;
@@ -126,7 +122,7 @@ final class uf {
                     if (var8 < 1) {
                       break L7;
                     } else {
-                      var9_int = var18[var8];
+                      var9_int = var14[var8];
                       if (var9_int != var6) {
                         break L7;
                       } else {
@@ -147,13 +143,13 @@ final class uf {
                   break L7;
                 }
               }
-              var18[var4] = var7;
+              var14[var4] = var7;
               var8 = var4 + 1;
               L9: while (true) {
                 if (var8 <= 32) {
-                  var9_int = var18[var8];
+                  var9_int = var14[var8];
                   if (var9_int == var6) {
-                    var18[var8] = var7;
+                    var14[var8] = var7;
                     var8++;
                     continue L9;
                   } else {
@@ -182,13 +178,15 @@ final class uf {
 
     final int a() {
         int var1 = 0;
-        while (((uf) this).field_d[var1] >= 0) {
-            var1 = hi.b() != 0 ? ((uf) this).field_d[var1] : var1 + 1;
+        while (this.field_d[var1] >= 0) {
+            var1 = hi.b() != 0 ? this.field_d[var1] : var1 + 1;
         }
-        return ~((uf) this).field_d[var1];
+        return this.field_d[var1] ^ -1;
     }
 
     uf() {
+        int discarded$2 = 0;
+        int incrementValue$3 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3_int = 0;
@@ -216,10 +214,10 @@ final class uf {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$2 = hi.d(24);
-          ((uf) this).field_c = hi.d(16);
-          ((uf) this).field_b = hi.d(24);
-          ((uf) this).field_f = new int[((uf) this).field_b];
+          discarded$2 = hi.d(24);
+          this.field_c = hi.d(16);
+          this.field_b = hi.d(24);
+          this.field_f = new int[this.field_b];
           if (hi.b() == 0) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -248,7 +246,7 @@ final class uf {
             var14 = 0;
             var3_int = var14;
             L3: while (true) {
-              if (var14 >= ((uf) this).field_b) {
+              if (var14 >= this.field_b) {
                 break L1;
               } else {
                 L4: {
@@ -258,13 +256,13 @@ final class uf {
                     if (hi.b() != 0) {
                       break L4;
                     } else {
-                      ((uf) this).field_f[var14] = 0;
+                      this.field_f[var14] = 0;
                       var14++;
                       continue L3;
                     }
                   }
                 }
-                ((uf) this).field_f[var14] = hi.d(5) + 1;
+                this.field_f[var14] = hi.d(5) + 1;
                 var14++;
                 continue L3;
               }
@@ -273,19 +271,19 @@ final class uf {
             var2 = 0;
             var3_int = hi.d(5) + 1;
             L5: while (true) {
-              if (var2 >= ((uf) this).field_b) {
+              if (var2 >= this.field_b) {
                 break L1;
               } else {
-                var4_int = hi.d(ql.a(-128, ((uf) this).field_b - var2));
+                var4_int = hi.d(ql.a(-128, this.field_b - var2));
                 var5 = 0;
                 L6: while (true) {
                   if (var5 >= var4_int) {
                     var3_int++;
                     continue L5;
                   } else {
-                    int incrementValue$3 = var2;
+                    incrementValue$3 = var2;
                     var2++;
-                    ((uf) this).field_f[incrementValue$3] = var3_int;
+                    this.field_f[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }
@@ -317,34 +315,34 @@ final class uf {
             L9: {
               var6 = stackIn_23_0;
               if (var2 != 1) {
-                var7 = ((uf) this).field_b * ((uf) this).field_c;
+                var7 = this.field_b * this.field_c;
                 break L9;
               } else {
-                var7 = uf.a(((uf) this).field_b, ((uf) this).field_c);
+                var7 = uf.a(this.field_b, this.field_c);
                 break L9;
               }
             }
-            ((uf) this).field_e = new int[var7];
+            this.field_e = new int[var7];
             var8 = 0;
             L10: while (true) {
               if (var8 >= var7) {
-                ((uf) this).field_a = new float[((uf) this).field_b][((uf) this).field_c];
+                this.field_a = new float[this.field_b][this.field_c];
                 if (var2 != 1) {
                   var8 = 0;
                   L11: while (true) {
-                    if (var8 >= ((uf) this).field_b) {
+                    if (var8 >= this.field_b) {
                       break L7;
                     } else {
                       var9 = 0.0f;
-                      var10 = var8 * ((uf) this).field_c;
+                      var10 = var8 * this.field_c;
                       var11 = 0;
                       L12: while (true) {
-                        if (var11 >= ((uf) this).field_c) {
+                        if (var11 >= this.field_c) {
                           var8++;
                           continue L11;
                         } else {
-                          var12 = (float)((uf) this).field_e[var10] * var4 + var3 + var9;
-                          ((uf) this).field_a[var8][var11] = var12;
+                          var12 = (float)this.field_e[var10] * var4 + var3 + var9;
+                          this.field_a[var8][var11] = var12;
                           if (var6 != 0) {
                             var9 = var12;
                             var10++;
@@ -362,21 +360,21 @@ final class uf {
                 } else {
                   var8 = 0;
                   L13: while (true) {
-                    if (var8 >= ((uf) this).field_b) {
+                    if (var8 >= this.field_b) {
                       break L7;
                     } else {
                       var9 = 0.0f;
                       var10 = 1;
                       var11 = 0;
                       L14: while (true) {
-                        if (var11 >= ((uf) this).field_c) {
+                        if (var11 >= this.field_c) {
                           var8++;
                           continue L13;
                         } else {
                           L15: {
                             var12_int = var8 / var10 % var7;
-                            var13 = (float)((uf) this).field_e[var12_int] * var4 + var3 + var9;
-                            ((uf) this).field_a[var8][var11] = var13;
+                            var13 = (float)this.field_e[var12_int] * var4 + var3 + var9;
+                            this.field_a[var8][var11] = var13;
                             if (var6 == 0) {
                               break L15;
                             } else {
@@ -393,7 +391,7 @@ final class uf {
                   }
                 }
               } else {
-                ((uf) this).field_e[var8] = hi.d(var5);
+                this.field_e[var8] = hi.d(var5);
                 var8++;
                 continue L10;
               }

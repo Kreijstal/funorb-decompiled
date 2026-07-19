@@ -49,10 +49,10 @@ final class id {
     final void a(int param0, int param1, boolean param2, int param3, int param4) {
         int var6 = 0;
         int var7 = TetraLink.field_J;
-        for (var6 = 0; var6 < ((id) this).field_q; var6++) {
-            ((id) this).field_D[var6] = (short)(param3 * ((id) this).field_D[var6] / param0);
-            ((id) this).field_i[var6] = (short)(param4 * ((id) this).field_i[var6] / param0);
-            ((id) this).field_R[var6] = (short)(param1 * ((id) this).field_R[var6] / param0);
+        for (var6 = 0; var6 < this.field_q; var6++) {
+            this.field_D[var6] = (short)(param3 * this.field_D[var6] / param0);
+            this.field_i[var6] = (short)(param4 * this.field_i[var6] / param0);
+            this.field_R[var6] = (short)(param1 * this.field_R[var6] / param0);
         }
         this.a(param2);
     }
@@ -60,14 +60,14 @@ final class id {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = TetraLink.field_J;
-        for (var5 = 0; var5 < ((id) this).field_q; var5++) {
-            ((id) this).field_D[var5] = (short)(((id) this).field_D[var5] + param2);
-            ((id) this).field_i[var5] = (short)(((id) this).field_i[var5] + param3);
-            ((id) this).field_R[var5] = (short)(((id) this).field_R[var5] + param0);
+        for (var5 = 0; var5 < this.field_q; var5++) {
+            this.field_D[var5] = (short)(this.field_D[var5] + param2);
+            this.field_i[var5] = (short)(this.field_i[var5] + param3);
+            this.field_R[var5] = (short)(this.field_R[var5] + param0);
         }
         this.a(true);
         if (param1 != 5336) {
-            ((id) this).field_C = null;
+            this.field_C = (int[]) null;
         }
     }
 
@@ -86,6 +86,7 @@ final class id {
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
@@ -157,7 +158,7 @@ final class id {
                     break L5;
                   } else {
                     var11 = param4 + var8 * ra.field_f;
-                    var12 = -var8 + 1 + var10 >> 1;
+                    var12 = -var8 + 1 + var10 >> -1227857887;
                     L6: while (true) {
                       var12--;
                       if (var12 < 0) {
@@ -177,7 +178,7 @@ final class id {
                 } else {
                   if (var6 < ra.field_g) {
                     var11 = var7 + ra.field_f * param1;
-                    var12 = -var7 + var9 + 1 >> 1;
+                    var12 = -var7 + var9 + 1 >> 292682017;
                     L8: while (true) {
                       var12--;
                       if (0 > var12) {
@@ -199,7 +200,7 @@ final class id {
                 } else {
                   if (ra.field_l > var5_int) {
                     var11 = var5_int + ((1 & var5_int + -param4) + var8) * ra.field_f;
-                    var12 = var10 + 1 - var8 >> 1;
+                    var12 = var10 + 1 - var8 >> -202459839;
                     L10: while (true) {
                       var12--;
                       if (0 > var12) {
@@ -221,7 +222,7 @@ final class id {
                 } else {
                   if (var6 < ra.field_g) {
                     var11 = var6 * ra.field_f + var7 - -(var6 + -param1 & 1);
-                    var12 = 1 - -var9 - var7 >> 1;
+                    var12 = 1 - -var9 - var7 >> 965384033;
                     L12: while (true) {
                       var12--;
                       if (var12 < 0) {
@@ -237,19 +238,30 @@ final class id {
                   }
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var5, "id.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oi.a((Throwable) ((Object) var5), "id.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static boolean a(boolean param0, char param1) {
+        boolean discarded$0 = false;
+        if (param0) {
+            discarded$0 = id.a(false, 'V');
+        }
         if (param1 >= 32) {
             if (126 >= param1) {
                 return true;
@@ -277,13 +289,16 @@ final class id {
     public static void a(int param0) {
         field_w = null;
         field_M = null;
+        if (param0 != 338) {
+            field_n = (String) null;
+        }
         field_n = null;
     }
 
     private final void a(boolean param0) {
-        ((id) this).field_r = false;
+        this.field_r = false;
         if (!param0) {
-            ((id) this).field_l = null;
+            this.field_l = (short[]) null;
         }
     }
 
@@ -300,10 +315,10 @@ final class id {
         int var11 = 0;
         int var12 = 0;
         var12 = TetraLink.field_J;
-        if (((id) this).field_r) {
+        if (this.field_r) {
           return;
         } else {
-          ((id) this).field_r = true;
+          this.field_r = true;
           var2 = 32767;
           var3 = 32767;
           var4 = 32767;
@@ -312,14 +327,14 @@ final class id {
           var7 = -32768;
           var8 = 0;
           L0: while (true) {
-            if (var8 >= ((id) this).field_q) {
+            if (var8 >= this.field_q) {
               L1: {
-                ((id) this).field_m = var7;
-                ((id) this).field_P = var4;
-                ((id) this).field_L = var3;
-                ((id) this).field_f = var6;
-                ((id) this).field_j = var5;
-                ((id) this).field_a = var2;
+                this.field_m = var7;
+                this.field_P = var4;
+                this.field_L = var3;
+                this.field_f = var6;
+                this.field_j = var5;
+                this.field_a = var2;
                 if (!param0) {
                   break L1;
                 } else {
@@ -330,8 +345,8 @@ final class id {
               return;
             } else {
               L2: {
-                var9 = ((id) this).field_D[var8];
-                var10 = ((id) this).field_i[var8];
+                var9 = this.field_D[var8];
+                var10 = this.field_i[var8];
                 if (var2 <= var9) {
                   break L2;
                 } else {
@@ -364,7 +379,7 @@ final class id {
                 }
               }
               L6: {
-                var11 = ((id) this).field_R[var8];
+                var11 = this.field_R[var8];
                 if (var11 < var4) {
                   var4 = var11;
                   break L6;
@@ -386,15 +401,11 @@ final class id {
     }
 
     id() {
-        ((id) this).field_r = false;
-        ((id) this).field_Q = (byte) 0;
+        this.field_r = false;
+        this.field_Q = (byte) 0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = "Connection lost - attempting to reconnect";
         field_w = "Your opponent is <%0>.";
     }

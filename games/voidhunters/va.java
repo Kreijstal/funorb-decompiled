@@ -3,8 +3,9 @@
  */
 final class va extends rqa {
     final static phb[] a(int param0, int param1, int param2) {
+        phb[] discarded$2 = null;
         if (param0 != -26998) {
-          phb[] discarded$2 = va.a(25, -128, -53);
+          discarded$2 = va.a(25, -128, -53);
           return kga.a(param2, param1, 1, true);
         } else {
           return kga.a(param2, param1, 1, true);
@@ -14,6 +15,8 @@ final class va extends rqa {
     final static void a(String param0, int param1, int param2, int param3, int param4, String param5) {
         faa var8 = null;
         int var7 = 0;
+        phb[] discarded$0 = null;
+        int discarded$1 = 0;
         try {
             var8 = dpa.field_p;
             faa var6 = var8;
@@ -21,26 +24,26 @@ final class va extends rqa {
             var8.field_e = var8.field_e + 1;
             var7 = var8.field_e;
             var8.c(0, param4);
-            if (!(param4 != 2)) {
+            if (!(-3 != (param4 ^ -1))) {
                 var8.a(true, param5);
             }
             if (param1 != -25719) {
-                phb[] discarded$0 = va.a(124, -32, -6);
+                discarded$0 = va.a(124, -32, -6);
             }
             if (param0 == null) {
                 var8.a(param2, true);
             } else {
-                int discarded$1 = mla.a(param0, (ds) (Object) var8, -113);
+                discarded$1 = mla.a(param0, var8, -113);
             }
             var8.e(-var7 + var8.field_e, -129);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "va.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "va.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
+        String var4 = null;
         nc stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -66,12 +69,12 @@ final class va extends rqa {
               if (param1 <= -119) {
                 break L1;
               } else {
-                var4 = null;
+                var4 = (String) null;
                 va.a((String) null, 24, 98, -9, 52, (String) null);
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackOut_2_0 = new nc("void");
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -79,23 +82,23 @@ final class va extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("va.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -103,7 +106,7 @@ final class va extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }

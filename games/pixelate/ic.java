@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class ic extends ka implements vo {
     static String[] field_bb;
     private qm field_ab;
@@ -11,108 +9,116 @@ final class ic extends ka implements vo {
         qm var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        qm stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        qm stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qm stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        qm stackOut_2_0 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
-            var4 = new qm(param0, param2);
-            var4.field_y = (eb) (Object) new ad();
-            var5 = ((ic) this).field_C + -6;
-            ((ic) this).field_C = ((ic) this).field_C + 38;
-            var4.a(-16 + (((ic) this).field_E - 14), (byte) 64, var5, 15, 30);
-            ((ic) this).b((ng) (Object) var4, 80);
-            ((ic) this).c((byte) 121);
-            stackOut_0_0 = (qm) var4;
-            stackIn_1_0 = stackOut_0_0;
+            L1: {
+              var4 = new qm(param0, param2);
+              var4.field_y = (eb) ((Object) new ad());
+              var5 = this.field_C + -6;
+              this.field_C = this.field_C + 38;
+              var4.a(-16 + (this.field_E - 14), (byte) 64, var5, 15, 30);
+              if (param1 <= -111) {
+                break L1;
+              } else {
+                field_bb = (String[]) null;
+                break L1;
+              }
+            }
+            this.b(var4, 80);
+            this.c((byte) 121);
+            stackOut_2_0 = (qm) (var4);
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var4_ref;
-            stackOut_2_1 = new StringBuilder().append("ic.M(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
-            } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
-            }
-          }
           L2: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(-126).append(',');
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
+            var4_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) (var4_ref);
+            stackOut_4_1 = new StringBuilder().append("ic.M(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          L3: {
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param2 == null) {
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw aa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     public final void a(qm param0, int param1, int param2, int param3, int param4) {
@@ -136,7 +142,7 @@ final class ic extends ka implements vo {
         try {
           L0: {
             L1: {
-              if (param0 == ((ic) this).field_ab) {
+              if (param0 == this.field_ab) {
                 this.g(true);
                 break L1;
               } else {
@@ -157,23 +163,23 @@ final class ic extends ka implements vo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var6;
+            stackOut_6_0 = (RuntimeException) (var6);
             stackOut_6_1 = new StringBuilder().append("ic.Q(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -181,15 +187,18 @@ final class ic extends ka implements vo {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     private final void g(boolean param0) {
-        if (!(((ic) this).field_N)) {
+        if (!param0) {
+            this.field_ab = (qm) null;
+        }
+        if (!(this.field_N)) {
             return;
         }
-        ((ic) this).field_N = false;
+        this.field_N = false;
     }
 
     ic(kn param0, fp param1) {
@@ -232,44 +241,44 @@ final class ic extends ka implements vo {
             L1: {
               var3 = null;
               if (jg.field_F == param1) {
-                var3 = (Object) (Object) mn.field_a;
+                var3 = mn.field_a;
                 break L1;
               } else {
                 if (ia.field_c != param1) {
                   if (param1 != fh.field_Q) {
                     break L1;
                   } else {
-                    var3 = (Object) (Object) ha.field_k;
-                    ((ic) this).field_C = ((ic) this).field_C + 30;
+                    var3 = ha.field_k;
+                    this.field_C = this.field_C + 30;
                     break L1;
                   }
                 } else {
-                  ((ic) this).field_C = ((ic) this).field_C + 10;
-                  var3 = (Object) (Object) l.field_o;
+                  this.field_C = this.field_C + 10;
+                  var3 = l.field_o;
                   if (!ke.a(false)) {
                     break L1;
                   } else {
-                    ((ic) this).field_C = ((ic) this).field_C + 20;
-                    var3 = (Object) (Object) co.field_e;
+                    this.field_C = this.field_C + 20;
+                    var3 = co.field_e;
                     break L1;
                   }
                 }
               }
             }
-            var4 = new ng((String) var3, (fn) null);
+            var4 = new ng((String) (var3), (fn) null);
             var4.field_z = 0;
-            var4.field_E = ((ic) this).field_E;
+            var4.field_E = this.field_E;
             var4.field_C = 80;
             var4.field_p = 50;
-            var4.field_y = (eb) (Object) new uc(ep.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
-            ((ic) this).b(var4, 80);
-            ((ic) this).field_ab = this.a(od.field_Hb, (byte) -126, (fn) this);
+            var4.field_y = (eb) ((Object) new uc(ep.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+            this.b(var4, 80);
+            this.field_ab = this.a(od.field_Hb, (byte) -126, (fn) (this));
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
-            var3 = (Object) (Object) decompiledCaughtException;
+            var3 = decompiledCaughtException;
             stackOut_10_0 = var3;
             stackOut_10_1 = new StringBuilder().append("ic.<init>(");
             stackIn_12_0 = stackOut_10_0;
@@ -278,7 +287,7 @@ final class ic extends ka implements vo {
             stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
               stackOut_12_0 = stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
@@ -286,7 +295,7 @@ final class ic extends ka implements vo {
               break L2;
             } else {
               stackOut_11_0 = stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -303,7 +312,7 @@ final class ic extends ka implements vo {
             stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
               stackOut_15_0 = stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
@@ -311,7 +320,7 @@ final class ic extends ka implements vo {
               break L3;
             } else {
               stackOut_14_0 = stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -319,7 +328,7 @@ final class ic extends ka implements vo {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
         }
     }
 
@@ -456,7 +465,7 @@ final class ic extends ka implements vo {
                     var7 = (ai.field_A.field_K + 2) / 2;
                     nk.field_e.a(ai.field_A.field_nb - 40, 40, 0, 256, -2 + var7);
                     ep.field_a.a(ai.field_A.field_nb - 40, 40, var7, 256, ai.field_A.field_K + -var7);
-                    if (ia.field_a.length != 1) {
+                    if (-2 != (ia.field_a.length ^ -1)) {
                       break L3;
                     } else {
                       if (ia.field_a[0] != 2) {
@@ -476,7 +485,7 @@ final class ic extends ka implements vo {
                         break L5;
                       } else {
                         L6: {
-                          if ((qm.field_J[var10 / 8] & 1 << (7 & var10)) == 0) {
+                          if (-1 == (qm.field_J[var10 / 8] & 1 << (7 & var10) ^ -1)) {
                             stackOut_10_0 = 0;
                             stackIn_11_0 = stackOut_10_0;
                             break L6;
@@ -526,13 +535,13 @@ final class ic extends ka implements vo {
                     stackIn_34_0 = stackOut_32_0;
                     stackIn_33_0 = stackOut_32_0;
                     if (var8 == 0) {
-                      stackOut_34_0 = (ak) (Object) stackIn_34_0;
+                      stackOut_34_0 = (ak) ((Object) stackIn_34_0);
                       stackOut_34_1 = bc.field_n;
                       stackIn_35_0 = stackOut_34_0;
                       stackIn_35_1 = stackOut_34_1;
                       break L9;
                     } else {
-                      stackOut_33_0 = (ak) (Object) stackIn_33_0;
+                      stackOut_33_0 = (ak) ((Object) stackIn_33_0);
                       stackOut_33_1 = qo.field_x;
                       stackIn_35_0 = stackOut_33_0;
                       stackIn_35_1 = stackOut_33_1;
@@ -545,13 +554,13 @@ final class ic extends ka implements vo {
                     stackIn_37_0 = stackOut_35_0;
                     stackIn_36_0 = stackOut_35_0;
                     if (var8 != 0) {
-                      stackOut_37_0 = (ak) (Object) stackIn_37_0;
+                      stackOut_37_0 = (ak) ((Object) stackIn_37_0);
                       stackOut_37_1 = oh.field_d;
                       stackIn_38_0 = stackOut_37_0;
                       stackIn_38_1 = stackOut_37_1;
                       break L10;
                     } else {
-                      stackOut_36_0 = (ak) (Object) stackIn_36_0;
+                      stackOut_36_0 = (ak) ((Object) stackIn_36_0);
                       stackOut_36_1 = vk.field_sb;
                       stackIn_38_0 = stackOut_36_0;
                       stackIn_38_1 = stackOut_36_1;
@@ -559,7 +568,7 @@ final class ic extends ka implements vo {
                     }
                   }
                   L11: {
-                    stackIn_38_0.field_cb = sd.a(stackIn_38_1, 59, new String[1]);
+                    stackIn_38_0.field_cb = sd.a(stackIn_38_1, 59, new String[]{ep.field_a.field_cb});
                     gk.field_kb.field_rb = true;
                     nk.field_e.field_cb = dn.field_b;
                     pb.field_f = true;
@@ -580,7 +589,7 @@ final class ic extends ka implements vo {
                       L13: while (true) {
                         if (fj.field_b <= var13) {
                           no.a(fj.field_b, 0, (byte) 91, true, -1, -1, bn.field_S, -1);
-                          if (wo.field_h < 2) {
+                          if (-3 < (wo.field_h ^ -1)) {
                             break L11;
                           } else {
                             if (bc.field_m[12]) {
@@ -608,7 +617,7 @@ final class ic extends ka implements vo {
                         if (!ib.field_b) {
                           break L14;
                         } else {
-                          var9 = (Object) (Object) ("<col=A00000>" + pk.field_e + "</col>");
+                          var9 = "<col=A00000>" + pk.field_e + "</col>";
                           var11 = var9;
                           var9 = var11;
                           var11 = var9;
@@ -619,19 +628,19 @@ final class ic extends ka implements vo {
                       var10 = 0;
                       L15: while (true) {
                         if (var10 >= fj.field_b) {
-                          up.field_o = "<col=A00000>" + lo.field_Gb + "<br>" + ij.field_p + (String) var9;
+                          up.field_o = "<col=A00000>" + lo.field_Gb + "<br>" + ij.field_p + (String) (var9);
                           break L1;
                         } else {
                           L16: {
                             if (lc.field_t[var10]) {
                               var11_ref = "<col=A00000>" + jk.field_e[var10] + "</col>";
-                              var9 = (Object) (Object) var11_ref;
-                              var9 = (Object) (Object) var11_ref;
+                              var9 = var11_ref;
+                              var9 = var11_ref;
                               if (var9 != null) {
-                                var9 = (Object) (Object) ((String) var9 + ", " + var11_ref);
+                                var9 = (String) (var9) + ", " + var11_ref;
                                 break L16;
                               } else {
-                                var9 = (Object) (Object) var11_ref;
+                                var9 = var11_ref;
                                 break L16;
                               }
                             } else {
@@ -664,24 +673,24 @@ final class ic extends ka implements vo {
                   }
                   L18: {
                     var16 = stackIn_25_0;
-                    var9 = (Object) (Object) var16;
-                    var9 = (Object) (Object) var16;
-                    var9 = (Object) (Object) var16;
+                    var9 = var16;
+                    var9 = var16;
+                    var9 = var16;
                     var10 = nk.field_e.field_Db.c(var16) + nk.field_e.field_Db.a('.') * 3;
                     if (16 != (48 & rb.field_o)) {
                       break L18;
                     } else {
-                      var9 = (Object) (Object) (var16 + ".");
+                      var9 = var16 + ".";
                       break L18;
                     }
                   }
                   L19: {
                     nk.field_e.field_C = (nk.field_e.field_K - var10) / 2;
                     nk.field_e.field_Bb = 0;
-                    if ((rb.field_o & 48) != 32) {
+                    if (-33 != (rb.field_o & 48 ^ -1)) {
                       break L19;
                     } else {
-                      var9 = (Object) (Object) ((String) var9 + "..");
+                      var9 = (String) (var9) + "..";
                       break L19;
                     }
                   }
@@ -689,11 +698,11 @@ final class ic extends ka implements vo {
                     if ((rb.field_o & 48) != 48) {
                       break L20;
                     } else {
-                      var9 = (Object) (Object) ((String) var9 + "...");
+                      var9 = (String) (var9) + "...";
                       break L20;
                     }
                   }
-                  nk.field_e.field_cb = (String) var9;
+                  nk.field_e.field_cb = (String) (var9);
                   ep.field_a.field_cb = fa.field_f.toUpperCase();
                   break L1;
                 }
@@ -712,7 +721,7 @@ final class ic extends ka implements vo {
                 if (!param1) {
                   break L22;
                 } else {
-                  stackOut_66_0 = (ak) (Object) stackIn_66_0;
+                  stackOut_66_0 = (ak) ((Object) stackIn_66_0);
                   stackOut_66_1 = stackIn_66_1;
                   stackIn_69_0 = stackOut_66_0;
                   stackIn_69_1 = stackOut_66_1;
@@ -721,7 +730,7 @@ final class ic extends ka implements vo {
                   if (param3) {
                     break L22;
                   } else {
-                    stackOut_67_0 = (ak) (Object) stackIn_67_0;
+                    stackOut_67_0 = (ak) ((Object) stackIn_67_0);
                     stackOut_67_1 = stackIn_67_1;
                     stackIn_69_0 = stackOut_67_0;
                     stackIn_69_1 = stackOut_67_1;
@@ -730,7 +739,7 @@ final class ic extends ka implements vo {
                     if (bm.field_o) {
                       break L22;
                     } else {
-                      stackOut_68_0 = (ak) (Object) stackIn_68_0;
+                      stackOut_68_0 = (ak) ((Object) stackIn_68_0);
                       stackOut_68_1 = stackIn_68_1;
                       stackOut_68_2 = 1;
                       stackIn_70_0 = stackOut_68_0;
@@ -741,7 +750,7 @@ final class ic extends ka implements vo {
                   }
                 }
               }
-              stackOut_69_0 = (ak) (Object) stackIn_69_0;
+              stackOut_69_0 = (ak) ((Object) stackIn_69_0);
               stackOut_69_1 = stackIn_69_1;
               stackOut_69_2 = 0;
               stackIn_70_0 = stackOut_69_0;
@@ -761,7 +770,7 @@ final class ic extends ka implements vo {
                 if (!param1) {
                   break L24;
                 } else {
-                  stackOut_71_0 = (ak) (Object) stackIn_71_0;
+                  stackOut_71_0 = (ak) ((Object) stackIn_71_0);
                   stackOut_71_1 = stackIn_71_1;
                   stackIn_74_0 = stackOut_71_0;
                   stackIn_74_1 = stackOut_71_1;
@@ -770,7 +779,7 @@ final class ic extends ka implements vo {
                   if (param3) {
                     break L24;
                   } else {
-                    stackOut_72_0 = (ak) (Object) stackIn_72_0;
+                    stackOut_72_0 = (ak) ((Object) stackIn_72_0);
                     stackOut_72_1 = stackIn_72_1;
                     stackIn_74_0 = stackOut_72_0;
                     stackIn_74_1 = stackOut_72_1;
@@ -779,7 +788,7 @@ final class ic extends ka implements vo {
                     if (bm.field_o) {
                       break L24;
                     } else {
-                      stackOut_73_0 = (ak) (Object) stackIn_73_0;
+                      stackOut_73_0 = (ak) ((Object) stackIn_73_0);
                       stackOut_73_1 = stackIn_73_1;
                       stackOut_73_2 = 1;
                       stackIn_75_0 = stackOut_73_0;
@@ -790,7 +799,7 @@ final class ic extends ka implements vo {
                   }
                 }
               }
-              stackOut_74_0 = (ak) (Object) stackIn_74_0;
+              stackOut_74_0 = (ak) ((Object) stackIn_74_0);
               stackOut_74_1 = stackIn_74_1;
               stackOut_74_2 = 0;
               stackIn_75_0 = stackOut_74_0;
@@ -803,7 +812,7 @@ final class ic extends ka implements vo {
               if (param2 == 3) {
                 break L25;
               } else {
-                field_bb = null;
+                field_bb = (String[]) null;
                 break L25;
               }
             }
@@ -818,7 +827,7 @@ final class ic extends ka implements vo {
                 if (!param1) {
                   break L27;
                 } else {
-                  stackOut_78_0 = (ak) (Object) stackIn_78_0;
+                  stackOut_78_0 = (ak) ((Object) stackIn_78_0);
                   stackOut_78_1 = stackIn_78_1;
                   stackIn_81_0 = stackOut_78_0;
                   stackIn_81_1 = stackOut_78_1;
@@ -827,7 +836,7 @@ final class ic extends ka implements vo {
                   if (param3) {
                     break L27;
                   } else {
-                    stackOut_79_0 = (ak) (Object) stackIn_79_0;
+                    stackOut_79_0 = (ak) ((Object) stackIn_79_0);
                     stackOut_79_1 = stackIn_79_1;
                     stackIn_81_0 = stackOut_79_0;
                     stackIn_81_1 = stackOut_79_1;
@@ -836,7 +845,7 @@ final class ic extends ka implements vo {
                     if (!bm.field_o) {
                       break L27;
                     } else {
-                      stackOut_80_0 = (ak) (Object) stackIn_80_0;
+                      stackOut_80_0 = (ak) ((Object) stackIn_80_0);
                       stackOut_80_1 = stackIn_80_1;
                       stackOut_80_2 = 1;
                       stackIn_82_0 = stackOut_80_0;
@@ -847,7 +856,7 @@ final class ic extends ka implements vo {
                   }
                 }
               }
-              stackOut_81_0 = (ak) (Object) stackIn_81_0;
+              stackOut_81_0 = (ak) ((Object) stackIn_81_0);
               stackOut_81_1 = stackIn_81_1;
               stackOut_81_2 = 0;
               stackIn_82_0 = stackOut_81_0;
@@ -870,7 +879,7 @@ final class ic extends ka implements vo {
                   }
                 }
                 L30: {
-                  if (ep.field_a.field_P == 0) {
+                  if (-1 == (ep.field_a.field_P ^ -1)) {
                     break L30;
                   } else {
                     if (!rl.field_r) {
@@ -891,20 +900,16 @@ final class ic extends ka implements vo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var4, "ic.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) var4), "ic.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void e(byte param0) {
         field_bb = null;
-        int var1 = -30;
+        int var1 = 90 / ((param0 - 62) / 41);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_bb = new String[]{"Online head-to-head rated games", "Unlimited Challenge Mode levels", "Complete all fifty puzzles", "Full screen mode"};
     }
 }

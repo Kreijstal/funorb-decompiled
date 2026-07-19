@@ -12,18 +12,18 @@ class da {
     da field_f;
 
     final void a(boolean param0) {
-        if (null == ((da) this).field_h) {
+        if (null == this.field_h) {
           return;
         } else {
           L0: {
-            ((da) this).field_h.field_f = ((da) this).field_f;
-            ((da) this).field_f.field_h = ((da) this).field_h;
-            ((da) this).field_h = null;
-            ((da) this).field_f = null;
+            this.field_h.field_f = this.field_f;
+            this.field_f.field_h = this.field_h;
+            this.field_h = null;
+            this.field_f = null;
             if (param0) {
               break L0;
             } else {
-              ((da) this).field_h = null;
+              this.field_h = (da) null;
               break L0;
             }
           }
@@ -40,24 +40,25 @@ class da {
             int var7_int = -98 / ((9 - param3) / 48);
             ea.field_d[param5] = param2;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "da.SB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "da.SB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean b(int param0) {
+        boolean discarded$6 = false;
         int stackIn_4_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
         if (param0 != 11163) {
-          boolean discarded$6 = ((da) this).b(-32);
-          if (null != ((da) this).field_h) {
+          discarded$6 = this.b(-32);
+          if (null != this.field_h) {
             return true;
           } else {
             return false;
           }
         } else {
           L0: {
-            if (null == ((da) this).field_h) {
+            if (null == this.field_h) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -75,14 +76,15 @@ class da {
         field_a = null;
         field_g = null;
         field_b = null;
+        if (param0 > -87) {
+            field_b = (ka) null;
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new e[2];
         field_a = "Not yet achieved";
     }

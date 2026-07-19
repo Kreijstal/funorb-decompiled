@@ -29,29 +29,29 @@ final class co extends vf {
             }
           }
         } else {
-          return null;
+          return (String) null;
         }
     }
 
     final byte[] b(boolean param0) {
         if (param0) {
-          if (((co) this).field_v) {
+          if (this.field_v) {
             throw new RuntimeException();
           } else {
-            return ((co) this).field_D;
+            return this.field_D;
           }
         } else {
-          field_E = null;
-          if (((co) this).field_v) {
+          field_E = (String) null;
+          if (this.field_v) {
             throw new RuntimeException();
           } else {
-            return ((co) this).field_D;
+            return this.field_D;
           }
         }
     }
 
     public static void e(int param0) {
-        int var1 = 99;
+        int var1 = 99 / ((param0 - 6) / 54);
         field_I = null;
         field_J = null;
         field_G = null;
@@ -64,7 +64,7 @@ final class co extends vf {
         if (param0 <= 98) {
             return -12;
         }
-        if (!(!((co) this).field_v)) {
+        if (!(!this.field_v)) {
             return 0;
         }
         return 100;
@@ -74,10 +74,6 @@ final class co extends vf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_I = new md();
         field_E = "Use postcombat abilities.";
         field_G = null;

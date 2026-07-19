@@ -16,12 +16,12 @@ final class qf {
         int var5 = 0;
         int var6 = 0;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        var3 = (((qf) this).field_f.length >> 1) + param1;
+        var3 = (this.field_f.length >> -1500775551) + param1;
         var4 = param0 & var3;
         L0: while (true) {
-          var5 = ((qf) this).field_f[1 + (var4 - -var4)];
+          var5 = this.field_f[1 + (var4 - -var4)];
           if (-1 != var5) {
-            if (((qf) this).field_f[var4 + var4] != param0) {
+            if (this.field_f[var4 + var4] != param0) {
               var4 = 1 + var4 & var3;
               continue L0;
             } else {
@@ -58,8 +58,8 @@ final class qf {
           L0: {
             var2_int = 1;
             L1: while (true) {
-              if (param0.length - -(param0.length >> 1) < var2_int) {
-                ((qf) this).field_f = new int[var2_int - -var2_int];
+              if (param0.length - -(param0.length >> -468706367) < var2_int) {
+                this.field_f = new int[var2_int - -var2_int];
                 var3 = 0;
                 L2: while (true) {
                   if (var2_int + var2_int <= var3) {
@@ -70,9 +70,9 @@ final class qf {
                       } else {
                         var4 = param0[var3] & -1 + var2_int;
                         L4: while (true) {
-                          if (-1 == ((qf) this).field_f[1 + var4 + var4]) {
-                            ((qf) this).field_f[var4 + var4] = param0[var3];
-                            ((qf) this).field_f[1 + var4 + var4] = var3;
+                          if (-1 == this.field_f[1 + var4 + var4]) {
+                            this.field_f[var4 + var4] = param0[var3];
+                            this.field_f[1 + var4 + var4] = var3;
                             var3++;
                             continue L3;
                           } else {
@@ -83,7 +83,7 @@ final class qf {
                       }
                     }
                   } else {
-                    ((qf) this).field_f[var3] = -1;
+                    this.field_f[var3] = -1;
                     var3++;
                     continue L2;
                   }
@@ -98,23 +98,23 @@ final class qf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_0 = (RuntimeException) (var2);
             stackOut_14_1 = new StringBuilder().append("qf.<init>(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -122,7 +122,7 @@ final class qf {
               break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
     }
 
@@ -138,10 +138,6 @@ final class qf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Password: ";
     }
 }

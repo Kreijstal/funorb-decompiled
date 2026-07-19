@@ -24,11 +24,11 @@ final class nk extends pg {
         field_n = null;
         if (param0 != 30025) {
           nk.a(68);
-          field_m = null;
+          field_m = (qb[][]) null;
           field_o = null;
           return;
         } else {
-          field_m = null;
+          field_m = (qb[][]) null;
           field_o = null;
           return;
         }
@@ -38,10 +38,6 @@ final class nk extends pg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "nk.A(";
         field_j = "Type your password again to make sure it's correct";
         field_o = "Offline";

@@ -7,25 +7,24 @@ final class pn implements dja {
 
     public final tv a(byte param0) {
         int var2 = 124 % ((param0 - -64) / 50);
-        return (tv) (Object) new qjb();
+        return (tv) ((Object) new qjb());
     }
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != -30938) {
+            field_b = 84;
+        }
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            return null;
+            return (tv[]) null;
         }
-        return (tv[]) (Object) new qjb[param1];
+        return (tv[]) ((Object) new qjb[param1]);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Hull hexagon";
     }
 }

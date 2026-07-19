@@ -8,7 +8,7 @@ final class ue {
     long field_d;
 
     protected final void finalize() throws Throwable {
-        ((ue) this).field_b.a(((ue) this).field_d, 0);
+        this.field_b.a(this.field_d, 0);
         super.finalize();
     }
 
@@ -77,7 +77,7 @@ final class ue {
             }
             L3: {
               var7_int = pu.a((byte) -120, param2);
-              var8 = 0;
+              var8 = param1;
               if (param6 > param5) {
                 stackOut_10_0 = param5;
                 stackIn_11_0 = stackOut_10_0;
@@ -89,8 +89,8 @@ final class ue {
               }
             }
             var9 = stackIn_11_0;
-            var10 = param5 >> 1;
-            var11 = param6 >> 1;
+            var10 = param5 >> 1299943137;
+            var11 = param6 >> -949862623;
             var12 = param0;
             var13 = new byte[var10 * (var11 * var7_int)];
             L4: while (true) {
@@ -138,7 +138,7 @@ final class ue {
                             var20 = var20 + var7_int;
                             var15 = var15 + param0[var20];
                             var20 = var20 + var7_int;
-                            var13[var18] = (byte)(var15 >> 2);
+                            var13[var18] = (byte)(var15 >> 92680482);
                             var18 = var18 + var7_int;
                             var22++;
                             continue L7;
@@ -155,23 +155,23 @@ final class ue {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var7 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var7;
+            stackOut_24_0 = (RuntimeException) (var7);
             stackOut_24_1 = new StringBuilder().append("ue.A(");
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
               break L8;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
@@ -179,38 +179,41 @@ final class ue {
               break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + 0 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     final static void a(int param0, byte param1, bc param2, int param3) {
         try {
+            if (param1 != 111) {
+                byte[] var5 = (byte[]) null;
+                ue.a((byte[]) null, -33, -97, 6, -100, 46, -12);
+            }
             eh.field_p = param0;
             skb.field_o = param2;
             ag.field_p = param3;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ue.C(" + param0 + ',' + 111 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ue.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     public static void a(byte param0) {
+        if (param0 != 124) {
+            return;
+        }
         field_c = null;
     }
 
     ue(jp param0, long param1, int param2) {
         try {
-            ((ue) this).field_b = param0;
-            ((ue) this).field_d = param1;
+            this.field_b = param0;
+            this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ue.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "ue.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Ask to join <%0>'s game";
         field_a = 200;
     }

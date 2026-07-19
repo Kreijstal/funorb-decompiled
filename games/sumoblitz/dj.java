@@ -14,7 +14,7 @@ final class dj extends ms {
     final static boolean a(int param0, int param1) {
         int var2 = 0;
         var2 = 90 / ((30 - param0) / 44);
-        if (param1 != 1) {
+        if (-2 != (param1 ^ -1)) {
           if (param1 == 7) {
             return false;
           } else {
@@ -26,28 +26,34 @@ final class dj extends ms {
     }
 
     public static void a(int param0) {
+        boolean discarded$2 = false;
         field_l = null;
-        field_o = null;
-        field_m = null;
-        field_r = null;
+        if (param0 != 1022768328) {
+          discarded$2 = dj.a(-56, -102);
+          field_o = null;
+          field_m = null;
+          field_r = null;
+          return;
+        } else {
+          field_o = null;
+          field_m = null;
+          field_r = null;
+          return;
+        }
     }
 
     dj(mf param0, ms param1) {
         try {
-            ((dj) this).field_q = param0;
-            ((dj) this).field_p = param0.g();
-            ((dj) this).field_k = param1;
-            ((dj) this).field_q.f(128 + ((dj) this).field_p * kr.field_c >> 8);
+            this.field_q = param0;
+            this.field_p = param0.g();
+            this.field_k = param1;
+            this.field_q.f(128 + this.field_p * kr.field_c >> 1022768328);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qo.a((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Full screen";
         field_r = new String[]{"All scores", "My scores", "Best each"};
     }

@@ -74,7 +74,7 @@ public class ul {
 
     public static File a(byte param0, String param1) {
         if (param0 >= -49) {
-            field_e = null;
+            field_e = (Hashtable) null;
             return ul.a(field_a, field_c, param1, (byte) 86);
         }
         return ul.a(field_a, field_c, param1, (byte) 86);
@@ -85,10 +85,6 @@ public class ul {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_e = new Hashtable(16);
     }

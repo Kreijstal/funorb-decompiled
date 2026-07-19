@@ -9,10 +9,11 @@ final class gm {
     public static void a(int param0) {
         field_b = null;
         field_c = null;
-        int var1 = 0;
+        int var1 = 77 % ((58 - param0) / 41);
     }
 
     final static void b(int param0) {
+        sa discarded$7 = null;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -30,7 +31,7 @@ final class gm {
             }
             var1_int = 0;
             L2: while (true) {
-              if (var1_int >= 3) {
+              if (-4 >= (var1_int ^ -1)) {
                 break L0;
               } else {
                 L3: {
@@ -39,7 +40,6 @@ final class gm {
                   } else {
                     if (!pa.field_a[var1_int].k()) {
                       var1_int++;
-                      var1_int++;
                       continue L2;
                     } else {
                       break L3;
@@ -47,7 +47,7 @@ final class gm {
                   }
                 }
                 pa.field_a[var1_int] = rc.a(re.field_a[ll.a((byte) -73, 5) + 25], 100, oc.field_f);
-                sa discarded$7 = mg.a(1963987425, pa.field_a[var1_int]);
+                discarded$7 = mg.a(1963987425, pa.field_a[var1_int]);
                 return;
               }
             }
@@ -55,15 +55,11 @@ final class gm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "gm.B(" + param0 + ')');
+          throw lj.a((Throwable) ((Object) var1), "gm.B(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = false;
         field_c = "Loading music";
         field_b = "ON";

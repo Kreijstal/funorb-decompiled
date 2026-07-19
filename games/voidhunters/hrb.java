@@ -12,7 +12,7 @@ abstract class hrb {
           return 36;
         } else {
           L0: {
-            var4 = ((hrb) this).a((byte) -81);
+            var4 = this.a((byte) -81);
             if (0L < var4) {
               gdb.b(-96, var4);
               break L0;
@@ -20,7 +20,7 @@ abstract class hrb {
               break L0;
             }
           }
-          return ((hrb) this).a(0, param1);
+          return this.a(0, param1);
         }
     }
 
@@ -31,10 +31,6 @@ abstract class hrb {
     abstract int a(int param0, long param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "hrb.C(";
         field_a = 92;
     }

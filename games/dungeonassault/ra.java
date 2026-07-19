@@ -13,13 +13,13 @@ final class ra {
         int var5 = 0;
         int var6 = 0;
         var6 = DungeonAssault.field_K;
-        var3 = -1 + (((ra) this).field_d.length >> 1);
+        var3 = -1 + (this.field_d.length >> 95952545);
         var4 = var3 & param0;
         if (param1 <= -115) {
           L0: while (true) {
-            var5 = ((ra) this).field_d[1 + var4 + var4];
-            if (var5 != -1) {
-              if (((ra) this).field_d[var4 - -var4] != param0) {
+            var5 = this.field_d[1 + var4 + var4];
+            if (0 != (var5 ^ -1)) {
+              if (this.field_d[var4 - -var4] != param0) {
                 var4 = var3 & var4 + 1;
                 continue L0;
               } else {
@@ -37,6 +37,9 @@ final class ra {
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
+        if (param0 > -38) {
+            ra.a(-90);
+        }
         field_c = null;
     }
 
@@ -62,24 +65,31 @@ final class ra {
           }
         }
         L1: {
-          ra.b(-102);
+          if (param0 == 0) {
+            break L1;
+          } else {
+            ra.b(-102);
+            break L1;
+          }
+        }
+        L2: {
           if (1 == no.field_d) {
             var2 = lc.a(lc.field_c, (byte) -94, hm.field_k);
             if (var2 == kg.field_f) {
               um.field_g = null;
               kg.field_f = -1;
-              break L1;
+              break L2;
             } else {
-              if (var2 != -1) {
+              if (0 != (var2 ^ -1)) {
                 kg.field_f = var2;
                 um.field_g = new rh(0, 0, 40, 80, 16711680, 768, 224);
-                break L1;
+                break L2;
               } else {
-                break L1;
+                break L2;
               }
             }
           } else {
-            break L1;
+            break L2;
           }
         }
     }
@@ -92,6 +102,7 @@ final class ra {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var6 = DungeonAssault.field_K;
         try {
@@ -114,10 +125,16 @@ final class ra {
               if (var1_int >= 7) {
                 var1_int = 7;
                 L3: while (true) {
-                  if (var1_int >= 13) {
+                  if ((var1_int ^ -1) <= -14) {
                     gf.d(2, 2, 0, 0, im.field_e.field_y, im.field_e.field_v);
-                    jh.b();
-                    break L0;
+                    if (param0 == 8) {
+                      jh.b();
+                      decompiledRegionSelector0 = 1;
+                      break L0;
+                    } else {
+                      decompiledRegionSelector0 = 0;
+                      break L0;
+                    }
                   } else {
                     var2 = 27 * (-6 + var1_int) + 8;
                     var3 = var1_int * 20 + 8;
@@ -160,7 +177,12 @@ final class ra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var1, "ra.A(" + 8 + ')');
+          throw vk.a((Throwable) ((Object) var1), "ra.A(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -189,8 +211,8 @@ final class ra {
           L0: {
             var2_int = 1;
             L1: while (true) {
-              if (var2_int > param0.length - -(param0.length >> 1)) {
-                ((ra) this).field_d = new int[var2_int - -var2_int];
+              if (var2_int > param0.length - -(param0.length >> -690493279)) {
+                this.field_d = new int[var2_int - -var2_int];
                 var3 = 0;
                 L2: while (true) {
                   if (var3 >= var2_int + var2_int) {
@@ -201,9 +223,9 @@ final class ra {
                       } else {
                         var4 = var2_int + -1 & param0[var3];
                         L4: while (true) {
-                          if (((ra) this).field_d[var4 + (var4 - -1)] == -1) {
-                            ((ra) this).field_d[var4 + var4] = param0[var3];
-                            ((ra) this).field_d[var4 + (var4 + 1)] = var3;
+                          if ((this.field_d[var4 + (var4 - -1)] ^ -1) == 0) {
+                            this.field_d[var4 + var4] = param0[var3];
+                            this.field_d[var4 + (var4 + 1)] = var3;
                             var3++;
                             continue L3;
                           } else {
@@ -214,7 +236,7 @@ final class ra {
                       }
                     }
                   } else {
-                    ((ra) this).field_d[var3] = -1;
+                    this.field_d[var3] = -1;
                     var3++;
                     continue L2;
                   }
@@ -229,23 +251,23 @@ final class ra {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_0 = (RuntimeException) (var2);
             stackOut_14_1 = new StringBuilder().append("ra.<init>(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -253,21 +275,21 @@ final class ra {
               break L5;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
     }
 
     final static void b(int param0) {
         ha.field_k = new lc(ia.field_W, ll.field_r);
         cf discarded$0 = hd.a(false, 30, "menu_select");
-        sa.field_v = sh.a(-77, "da_ambience_drip", new int[5]);
-        hp.field_c = sh.a(-95, "da_ambience_insect", new int[3]);
-        dc.field_q = sh.a(-83, "da_door_open", new int[2]);
+        sa.field_v = sh.a(-77, "da_ambience_drip", new int[]{110, 110, 110, 110, 140});
+        hp.field_c = sh.a(-95, "da_ambience_insect", new int[]{256, 256, 168});
+        dc.field_q = sh.a(param0 ^ -92, "da_door_open", new int[]{110, 100});
         om.field_b = hd.a(false, 140, "da_ambience_burning_torches_loop_4000ms");
         k.field_f = hd.a(false, 256, "da_ambience_running_water_loop_1000ms");
         mh.field_f = hd.a(false, 51, "da_menu_fire");
         qm.field_n = hd.a(false, 256, "da_gold_stealing");
-        eb.field_O = sh.a(-62, "da_gold_bar", new int[4]);
+        eb.field_O = sh.a(-62, "da_gold_bar", new int[]{125, 125, 125, 125});
         bc.field_b = hd.a(false, 256, "da_dice_roll_dry");
         ef.field_d = hd.a(false, 171, "da_hoardroom_angry_dragon");
         u.field_T = new cf[9];
@@ -288,28 +310,28 @@ final class ra {
         bf.a(125, 6, 115, -18228, "beastman");
         kn.a(256, "saurus_defeat", 7, 256, 124, 256, "saurus_reveal", "saurus_reveal");
         bf.a(146, 8, 197, -18228, "mercenary_knight");
-        to.a(150, -78, 150, 146, "priest", 9);
+        to.a(150, -78, 150, 146, "priest", param0);
         bf.a(170, 10, 197, -18228, "ork");
         kn.a(140, "goblin_defeat", 11, 139, 126, 138, "goblin_scout_special", "goblin_scout_reveal");
-        to.a(120, -126, 120, 159, "necromancer", 12);
+        to.a(120, param0 ^ -117, 120, 159, "necromancer", 12);
         bf.a(200, 13, 200, -18228, "ogre");
         to.a(138, -110, 214, 134, "enchantress", 14);
         bf.a(256, 15, 256, -18228, "saurus");
         ed.a("ork_defeat", 197, 16, 31353, "ork_reveal", 170);
         kn.a(165, "troll_defeat", 17, 149, 127, 165, "troll_reveal", "troll_reveal");
-        to.a(160, -128, 134, 130, "northman_ranger", 18);
+        to.a(160, param0 ^ -119, 134, 130, "northman_ranger", 18);
         to.a(100, -120, 146, 134, "dwarf_renegade", 19);
         bf.a(139, 20, 200, -18228, "thief");
         bf.a(171, 21, 156, -18228, "zealot");
-        bf.a(156, 22, 125, -18228, "darkelf_assassin");
+        bf.a(156, 22, 125, param0 + -18237, "darkelf_assassin");
         bf.a(138, 23, 148, -18228, "baerserker");
         bf.a(200, 24, 200, -18228, "ogre");
         bf.a(200, 25, 155, -18228, "spy");
         to.a(138, -93, 137, 135, "shapeshifter", 26);
-        bf.a(150, 27, 164, -18228, "black_knight");
-        bf.a(186, 28, 196, -18228, "minotaur");
+        bf.a(150, 27, 164, param0 + -18237, "black_knight");
+        bf.a(186, 28, 196, param0 ^ -18235, "minotaur");
         to.a(119, -126, 136, 140, "warlock", 29);
-        bf.a(172, 30, 173, -18228, "death_knight");
+        bf.a(172, 30, 173, param0 + -18237, "death_knight");
         bf.a(147, 31, 200, -18228, "chaos_champion");
         bf.a(74, 33, 73, -18228, "daemonette");
         to.a(190, -99, 198, 197, "dryad", 34);
@@ -319,7 +341,7 @@ final class ra {
         ki.a(110, 18, 110, "giant_snake", -1);
         ki.a(89, 19, 89, "giant_spider", -1);
         ki.a(201, 20, 102, "skeleton_sentinals", -1);
-        ki.a(150, 21, 141, "corrosive_slime", -1);
+        ki.a(150, 21, 141, "corrosive_slime", param0 ^ -10);
         ki.a(100, 22, 83, "razor_construct", -1);
         ki.a(135, 23, 120, "rabid_wolf", -1);
         ki.a(112, 24, 109, "vampire_bat", -1);
@@ -350,10 +372,6 @@ final class ra {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "There is a bounty on this dungeon of <%0> Treasure.<br>(Dragon wakes: +<%1>%)<br>(Renown gambled: <%2>)";
         field_b = new int[8192];
     }

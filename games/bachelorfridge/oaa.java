@@ -43,35 +43,41 @@ final class oaa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var4, "oaa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) var4), "oaa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != -3681) {
+            field_b = (vr) null;
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     final static int a(int param0, int param1) {
+        int discarded$2 = 0;
         String var2 = null;
         if (param0 <= -66) {
           var2 = lka.field_E[param1][17];
           var2 = var2.trim();
           var2 = var2.toLowerCase();
-          if (var2.equals((Object) (Object) "")) {
+          if (var2.equals("")) {
             return -1;
           } else {
-            return ((ji) (Object) me.field_t.a(true, (long)var2.hashCode())).field_h;
+            return ((ji) ((Object) me.field_t.a(true, (long)var2.hashCode()))).field_h;
           }
         } else {
-          int discarded$2 = oaa.a(84, -6);
+          discarded$2 = oaa.a(84, -6);
           var2 = lka.field_E[param1][17];
           var2 = var2.trim();
           var2 = var2.toLowerCase();
-          if (var2.equals((Object) (Object) "")) {
+          if (var2.equals("")) {
             return -1;
           } else {
-            return ((ji) (Object) me.field_t.a(true, (long)var2.hashCode())).field_h;
+            return ((ji) ((Object) me.field_t.a(true, (long)var2.hashCode()))).field_h;
           }
         }
     }

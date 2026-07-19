@@ -20,16 +20,20 @@ abstract class pp extends bw {
             jba.field_A.field_sb = jba.field_A.field_sb - ts.field_r.field_sb;
             ts.field_r.field_kb = ts.field_r.field_kb - ts.field_r.field_sb;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "pp.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "pp.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(String param0, int param1, kv param2) {
         try {
             rr.field_r = param0;
+            if (param1 > -81) {
+                String var4 = (String) null;
+                pp.a(-97, -115, (String) null, -107, (String) null);
+            }
             vh.field_x = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "pp.J(" + (param0 != null ? "{...}" : "null") + ',' + -84 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "pp.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -143,23 +147,23 @@ abstract class pp extends bw {
           decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
             var3 = decompiledCaughtException;
-            stackOut_35_0 = (RuntimeException) var3;
+            stackOut_35_0 = (RuntimeException) (var3);
             stackOut_35_1 = new StringBuilder().append("pp.A(");
             stackIn_37_0 = stackOut_35_0;
             stackIn_37_1 = stackOut_35_1;
             stackIn_36_0 = stackOut_35_0;
             stackIn_36_1 = stackOut_35_1;
             if (param0 == null) {
-              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_0 = (RuntimeException) ((Object) stackIn_37_0);
+              stackOut_37_1 = (StringBuilder) ((Object) stackIn_37_1);
               stackOut_37_2 = "null";
               stackIn_38_0 = stackOut_37_0;
               stackIn_38_1 = stackOut_37_1;
               stackIn_38_2 = stackOut_37_2;
               break L0;
             } else {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+              stackOut_36_0 = (RuntimeException) ((Object) stackIn_36_0);
+              stackOut_36_1 = (StringBuilder) ((Object) stackIn_36_1);
               stackOut_36_2 = "{...}";
               stackIn_38_0 = stackOut_36_0;
               stackIn_38_1 = stackOut_36_1;
@@ -167,7 +171,7 @@ abstract class pp extends bw {
               break L0;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_38_0), stackIn_38_2 + ',' + param1 + ')');
         }
     }
 
@@ -177,16 +181,12 @@ abstract class pp extends bw {
     public static void c(byte param0) {
         field_g = null;
         if (param0 != -75) {
-            Object var2 = null;
+            String var2 = (String) null;
             pp.a(-77, 19, (String) null, 41, (String) null);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new String[]{"Livin' in the Fridge", "A Fridge Too Far", "Use Your Loaf", "10-second Rule", "Mighty Meaty", "Who Dairies Wins", "Green Machine", "Don't Put That In Your Mouth", "Do You Have Any...?", "Pick-up or Delivery?", "You Drink, You Fight, You Spill", "A Bit Fishy", "Om Nom Nom", "Full English", "Clerical Error", "Just Desserts", "Cowabunga", "I Love the Smell of Curry in the Morning", "Coup de Grease", "The Spices Must Flow", "Don't Play With Your Food", "Leftovers", "Lord of the Flies", "Exterminate, Annihilate", "Maggots to Go", "Superfly", "Tough as Old Boots", "Happy Maggot Appreciation Society", "Omnivore", "Play With Your Food", "Splort, Eater of Worlds", "The Devastator", "Not the Face!", "The Creature With the Lamp", "Medic!", "Generalist", "Monstrous Regiment", "The Devourer", "Sandpit Lord", "Specialist", "Frequent Flier", "To Live is to Fly", "Gross Points", "La Reine Maggot", "Pigs Might Fly", "Multiple Personalities", "Mass Effect", "You're in a Bit of a State", "Only Thing That Can Kill a Vindaloony", "Order of the Golden Sporx"};
     }
 }

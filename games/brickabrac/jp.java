@@ -8,19 +8,19 @@ class jp extends mn {
         int stackIn_11_0 = 0;
         int stackOut_10_0 = 0;
         int stackOut_9_0 = 0;
-        param2 = param2 - (param0 + ((jp) this).field_E);
+        param2 = param2 - (param0 + this.field_E);
         if (param2 < 0) {
           return false;
         } else {
-          if (param2 < ((jp) this).field_D) {
+          if (param2 < this.field_D) {
             L0: {
-              param3 = param3 - (param1 + ((jp) this).field_F);
+              param3 = param3 - (param1 + this.field_F);
               if (param3 < 0) {
                 break L0;
               } else {
-                if (param3 < ((jp) this).field_C) {
+                if (param3 < this.field_C) {
                   L1: {
-                    if (((jp) this).field_G[param3 * ((jp) this).field_D + param2] == 0) {
+                    if (this.field_G[param3 * this.field_D + param2] == 0) {
                       stackOut_10_0 = 0;
                       stackIn_11_0 = stackOut_10_0;
                       break L1;
@@ -47,7 +47,7 @@ class jp extends mn {
         int var1 = 0;
         int var2 = 0;
         var1 = -1;
-        var2 = ((jp) this).field_D * ((jp) this).field_C - 4;
+        var2 = this.field_D * this.field_C - 4;
         L0: while (true) {
           if (var1 >= var2) {
             var2 += 3;
@@ -56,10 +56,10 @@ class jp extends mn {
                 return;
               } else {
                 var1++;
-                if (((jp) this).field_G[var1] != 0) {
+                if (this.field_G[var1] != 0) {
                   continue L1;
                 } else {
-                  ((jp) this).field_G[var1] = 1;
+                  this.field_G[var1] = 1;
                   continue L1;
                 }
               }
@@ -67,36 +67,36 @@ class jp extends mn {
           } else {
             L2: {
               var1++;
-              if (((jp) this).field_G[var1] != 0) {
+              if (this.field_G[var1] != 0) {
                 break L2;
               } else {
-                ((jp) this).field_G[var1] = 1;
+                this.field_G[var1] = 1;
                 break L2;
               }
             }
             L3: {
               var1++;
-              if (((jp) this).field_G[var1] != 0) {
+              if (this.field_G[var1] != 0) {
                 break L3;
               } else {
-                ((jp) this).field_G[var1] = 1;
+                this.field_G[var1] = 1;
                 break L3;
               }
             }
             L4: {
               var1++;
-              if (((jp) this).field_G[var1] != 0) {
+              if (this.field_G[var1] != 0) {
                 break L4;
               } else {
-                ((jp) this).field_G[var1] = 1;
+                this.field_G[var1] = 1;
                 break L4;
               }
             }
             var1++;
-            if (((jp) this).field_G[var1] != 0) {
+            if (this.field_G[var1] != 0) {
               continue L0;
             } else {
-              ((jp) this).field_G[var1] = 1;
+              this.field_G[var1] = 1;
               continue L0;
             }
           }
@@ -112,12 +112,12 @@ class jp extends mn {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((jp) this).field_E;
-          param1 = param1 + ((jp) this).field_F;
+          param0 = param0 + this.field_E;
+          param1 = param1 + this.field_F;
           var4 = param0 + param1 * lb.field_c;
           var5 = 0;
-          var6 = ((jp) this).field_C;
-          var7 = ((jp) this).field_D;
+          var6 = this.field_C;
+          var7 = this.field_D;
           var8 = lb.field_c - var7;
           var9 = 0;
           if (param1 >= lb.field_b) {
@@ -168,7 +168,7 @@ class jp extends mn {
           return;
         } else {
           if (var6 > 0) {
-            jp.b(lb.field_l, ((jp) this).field_G, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+            jp.b(lb.field_l, this.field_G, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -185,12 +185,12 @@ class jp extends mn {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((jp) this).field_E;
-          param1 = param1 + (((jp) this).field_z - ((jp) this).field_C - ((jp) this).field_F);
-          var3 = param0 + (param1 + ((jp) this).field_C - 1) * lb.field_c;
+          param0 = param0 + this.field_E;
+          param1 = param1 + (this.field_z - this.field_C - this.field_F);
+          var3 = param0 + (param1 + this.field_C - 1) * lb.field_c;
           var4 = 0;
-          var5 = ((jp) this).field_C;
-          var6 = ((jp) this).field_D;
+          var5 = this.field_C;
+          var6 = this.field_D;
           var7 = -lb.field_c - var6;
           var8 = 0;
           if (param1 >= lb.field_b) {
@@ -241,7 +241,7 @@ class jp extends mn {
           return;
         } else {
           if (var5 > 0) {
-            jp.b(lb.field_l, ((jp) this).field_G, 0, var4, var3, var6, var5, var7, var8);
+            jp.b(lb.field_l, this.field_G, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -250,6 +250,10 @@ class jp extends mn {
     }
 
     void b(int param0, int param1, int param2, int param3) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -263,12 +267,12 @@ class jp extends mn {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        if (((jp) this).field_C != 0) {
+        if (this.field_C != 0) {
           L0: {
-            param0 = param0 + ((jp) this).field_E;
-            param1 = param1 + ((jp) this).field_F;
-            var5 = ((jp) this).field_C;
-            var6 = ((jp) this).field_D;
+            param0 = param0 + this.field_E;
+            param1 = param1 + this.field_F;
+            var5 = this.field_C;
+            var6 = this.field_D;
             var7 = param2 << 8;
             var8 = (param3 - param2 << 8) / var5;
             var9 = 0;
@@ -287,7 +291,7 @@ class jp extends mn {
             } else {
               var7 = var7 + (lb.field_b - param1) * var8;
               var5 = var5 - (lb.field_b - param1);
-              var9 = var9 + (lb.field_b - param1) * ((jp) this).field_D;
+              var9 = var9 + (lb.field_b - param1) * this.field_D;
               param1 = lb.field_b;
               break L1;
             }
@@ -309,7 +313,7 @@ class jp extends mn {
             }
           }
           var10 = lb.field_c - var6;
-          var11 = ((jp) this).field_D - var6;
+          var11 = this.field_D - var6;
           var12 = param0 + param1 * lb.field_c;
           param1 = -var5;
           L4: while (true) {
@@ -326,9 +330,9 @@ class jp extends mn {
                       if (param0 >= 0) {
                         break L5;
                       } else {
-                        int incrementValue$4 = var9;
+                        incrementValue$4 = var9;
                         var9++;
-                        var15 = ((jp) this).field_G[incrementValue$4];
+                        var15 = this.field_G[incrementValue$4];
                         if (var15 == 0) {
                           var12++;
                           param0++;
@@ -336,7 +340,7 @@ class jp extends mn {
                         } else {
                           var16 = lb.field_l[var12];
                           var17 = (var16 & 16711935) * var14 + (var15 & 16711935) * var13 >> 8 & 16711935;
-                          int incrementValue$5 = var12;
+                          incrementValue$5 = var12;
                           var12++;
                           lb.field_l[incrementValue$5] = var17 + ((var16 & 65280) * var14 + (var15 & 65280) * var13 >> 8 & 65280);
                           param0++;
@@ -350,15 +354,15 @@ class jp extends mn {
                       if (param0 >= 0) {
                         break L5;
                       } else {
-                        int incrementValue$6 = var9;
+                        incrementValue$6 = var9;
                         var9++;
-                        var15 = ((jp) this).field_G[incrementValue$6];
+                        var15 = this.field_G[incrementValue$6];
                         if (var15 == 0) {
                           var12++;
                           param0++;
                           continue L7;
                         } else {
-                          int incrementValue$7 = var12;
+                          incrementValue$7 = var12;
                           var12++;
                           lb.field_l[incrementValue$7] = var15;
                           param0++;
@@ -385,6 +389,7 @@ class jp extends mn {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int incrementValue$1 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -457,7 +462,7 @@ class jp extends mn {
                     break L5;
                   }
                 }
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 lb.field_l[incrementValue$1] = (var13 & 66847740 | var14 & 261120) >> 2;
                 var9++;
@@ -474,10 +479,10 @@ class jp extends mn {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int[] var1 = ((jp) this).field_G;
-        for (var2 = ((jp) this).field_C - 1; var2 >= 0; var2--) {
-            var3 = var2 * ((jp) this).field_D;
-            var4 = (var2 + 1) * ((jp) this).field_D;
+        int[] var1 = this.field_G;
+        for (var2 = this.field_C - 1; var2 >= 0; var2--) {
+            var3 = var2 * this.field_D;
+            var4 = (var2 + 1) * this.field_D;
             while (var3 < var4) {
                 var4--;
                 var5 = var1[var3];
@@ -486,10 +491,12 @@ class jp extends mn {
                 var3++;
             }
         }
-        ((jp) this).field_E = ((jp) this).field_x - ((jp) this).field_D - ((jp) this).field_E;
+        this.field_E = this.field_x - this.field_D - this.field_E;
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -508,7 +515,7 @@ class jp extends mn {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -517,7 +524,7 @@ class jp extends mn {
                   continue L1;
                 } else {
                   var13 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -530,6 +537,8 @@ class jp extends mn {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -543,7 +552,7 @@ class jp extends mn {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -555,7 +564,7 @@ class jp extends mn {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -576,12 +585,12 @@ class jp extends mn {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((jp) this).field_E;
-          param1 = param1 + ((jp) this).field_F;
+          param0 = param0 + this.field_E;
+          param1 = param1 + this.field_F;
           var4 = param0 + param1 * lb.field_c;
           var5 = 0;
-          var6 = ((jp) this).field_C;
-          var7 = ((jp) this).field_D;
+          var6 = this.field_C;
+          var7 = this.field_D;
           var8 = lb.field_c - var7;
           var9 = 0;
           if (param1 >= lb.field_b) {
@@ -634,10 +643,10 @@ class jp extends mn {
           if (var6 > 0) {
             L4: {
               if (param2 != 256) {
-                jp.a(0, 0, 0, lb.field_l, ((jp) this).field_G, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+                jp.a(0, 0, 0, lb.field_l, this.field_G, var5, 0, var4, 0, var7, var6, var8, var9, param2);
                 break L4;
               } else {
-                jp.a(0, 0, 0, lb.field_l, ((jp) this).field_G, var5, 0, var4, 0, var7, var6, var8, var9);
+                jp.a(0, 0, 0, lb.field_l, this.field_G, var5, 0, var4, 0, var7, var6, var8, var9);
                 break L4;
               }
             }
@@ -652,6 +661,7 @@ class jp extends mn {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
+        int incrementValue$0 = 0;
         int var18 = 0;
         int var13 = 256 - param12;
         int var14 = param3;
@@ -661,7 +671,7 @@ class jp extends mn {
                 param2 = param1[(param3 >> 16) + var16];
                 if (param2 != 0) {
                     var18 = param0[param5];
-                    int incrementValue$0 = param5;
+                    incrementValue$0 = param5;
                     param5++;
                     param0[incrementValue$0] = ((param2 & 16711935) * param12 + (var18 & 16711935) * var13 & -16711936) + ((param2 & 65280) * param12 + (var18 & 65280) * var13 & 16711680) >> 8;
                 } else {
@@ -676,6 +686,16 @@ class jp extends mn {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -697,7 +717,7 @@ class jp extends mn {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     param2 = param1[incrementValue$218];
                     if (param2 == 0) {
@@ -705,7 +725,7 @@ class jp extends mn {
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -715,48 +735,48 @@ class jp extends mn {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 param2 = param1[incrementValue$226];
                 if (param2 == 0) {
@@ -764,7 +784,7 @@ class jp extends mn {
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -785,12 +805,12 @@ class jp extends mn {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((jp) this).field_E;
-          param1 = param1 + ((jp) this).field_F;
+          param0 = param0 + this.field_E;
+          param1 = param1 + this.field_F;
           var4 = param0 + param1 * lb.field_c;
           var5 = 0;
-          var6 = ((jp) this).field_C;
-          var7 = ((jp) this).field_D;
+          var6 = this.field_C;
+          var7 = this.field_D;
           var8 = lb.field_c - var7;
           var9 = 0;
           if (param1 >= lb.field_b) {
@@ -841,7 +861,7 @@ class jp extends mn {
           return;
         } else {
           if (var6 > 0) {
-            jp.a(lb.field_l, ((jp) this).field_G, 0, var5, var4, var7, var6, var8, var9, param2);
+            jp.a(lb.field_l, this.field_G, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -866,30 +886,30 @@ class jp extends mn {
         } else {
           if (param3 > 0) {
             L0: {
-              var5 = ((jp) this).field_D;
-              var6 = ((jp) this).field_C;
+              var5 = this.field_D;
+              var6 = this.field_C;
               var7 = 0;
               var8 = 0;
-              var9 = ((jp) this).field_x;
-              var10 = ((jp) this).field_z;
+              var9 = this.field_x;
+              var10 = this.field_z;
               var11 = (var9 << 16) / param2;
               var12 = (var10 << 16) / param3;
-              if (((jp) this).field_E <= 0) {
+              if (this.field_E <= 0) {
                 break L0;
               } else {
-                var13 = ((((jp) this).field_E << 16) + var11 - 1) / var11;
+                var13 = ((this.field_E << 16) + var11 - 1) / var11;
                 param0 = param0 + var13;
-                var7 = var7 + (var13 * var11 - (((jp) this).field_E << 16));
+                var7 = var7 + (var13 * var11 - (this.field_E << 16));
                 break L0;
               }
             }
             L1: {
-              if (((jp) this).field_F <= 0) {
+              if (this.field_F <= 0) {
                 break L1;
               } else {
-                var13 = ((((jp) this).field_F << 16) + var12 - 1) / var12;
+                var13 = ((this.field_F << 16) + var12 - 1) / var12;
                 param1 = param1 + var13;
-                var8 = var8 + (var13 * var12 - (((jp) this).field_F << 16));
+                var8 = var8 + (var13 * var12 - (this.field_F << 16));
                 break L1;
               }
             }
@@ -952,7 +972,7 @@ class jp extends mn {
                 break L7;
               }
             }
-            jp.a(lb.field_l, ((jp) this).field_G, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+            jp.a(lb.field_l, this.field_G, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
             return;
           } else {
             return;
@@ -990,15 +1010,15 @@ class jp extends mn {
         int var31 = 0;
         int var32 = 0;
         L0: {
-          if (param2 > ((jp) this).field_x) {
+          if (param2 > this.field_x) {
             break L0;
           } else {
-            if (param3 <= ((jp) this).field_z) {
+            if (param3 <= this.field_z) {
               L1: {
-                var5 = param0 + ((jp) this).field_E * param2 / ((jp) this).field_x;
-                var6 = param0 + ((((jp) this).field_E + ((jp) this).field_D) * param2 + ((jp) this).field_x - 1) / ((jp) this).field_x;
-                var7 = param1 + ((jp) this).field_F * param3 / ((jp) this).field_z;
-                var8 = param1 + ((((jp) this).field_F + ((jp) this).field_C) * param3 + ((jp) this).field_z - 1) / ((jp) this).field_z;
+                var5 = param0 + this.field_E * param2 / this.field_x;
+                var6 = param0 + ((this.field_E + this.field_D) * param2 + this.field_x - 1) / this.field_x;
+                var7 = param1 + this.field_F * param3 / this.field_z;
+                var8 = param1 + ((this.field_F + this.field_C) * param3 + this.field_z - 1) / this.field_z;
                 if (var5 >= lb.field_i) {
                   break L1;
                 } else {
@@ -1050,10 +1070,10 @@ class jp extends mn {
                         } else {
                           var13 = var12 - param0 << 4;
                           var14 = var11 - param1 << 4;
-                          var15 = var13 * ((jp) this).field_x / param2 - (((jp) this).field_E << 4);
-                          var16 = (var13 + 16) * ((jp) this).field_x / param2 - (((jp) this).field_E << 4);
-                          var17 = var14 * ((jp) this).field_z / param3 - (((jp) this).field_F << 4);
-                          var18 = (var14 + 16) * ((jp) this).field_z / param3 - (((jp) this).field_F << 4);
+                          var15 = var13 * this.field_x / param2 - (this.field_E << 4);
+                          var16 = (var13 + 16) * this.field_x / param2 - (this.field_E << 4);
+                          var17 = var14 * this.field_z / param3 - (this.field_F << 4);
+                          var18 = (var14 + 16) * this.field_z / param3 - (this.field_F << 4);
                           var19 = (var16 - var15) * (var18 - var17) >> 1;
                           if (var19 != 0) {
                             L7: {
@@ -1065,10 +1085,10 @@ class jp extends mn {
                               }
                             }
                             L8: {
-                              if (var16 <= ((jp) this).field_D << 4) {
+                              if (var16 <= this.field_D << 4) {
                                 break L8;
                               } else {
-                                var16 = ((jp) this).field_D << 4;
+                                var16 = this.field_D << 4;
                                 break L8;
                               }
                             }
@@ -1081,10 +1101,10 @@ class jp extends mn {
                               }
                             }
                             L10: {
-                              if (var18 <= ((jp) this).field_C << 4) {
+                              if (var18 <= this.field_C << 4) {
                                 break L10;
                               } else {
-                                var18 = ((jp) this).field_C << 4;
+                                var18 = this.field_C << 4;
                                 break L10;
                               }
                             }
@@ -1148,7 +1168,7 @@ class jp extends mn {
                                     var28++;
                                     continue L11;
                                   } else {
-                                    var31 = ((jp) this).field_G[var28 * ((jp) this).field_D + var30];
+                                    var31 = this.field_G[var28 * this.field_D + var30];
                                     if (var31 != 0) {
                                       L16: {
                                         var32 = var29;
@@ -1234,19 +1254,19 @@ class jp extends mn {
         int var40 = 0;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((jp) this).field_E << 4);
-            param1 = param1 - (((jp) this).field_F << 4);
+            param0 = param0 - (this.field_E << 4);
+            param1 = param1 - (this.field_F << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((jp) this).field_D << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((jp) this).field_D << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((jp) this).field_C << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((jp) this).field_C << 4) - param1) * var10;
-            var17 = ((((jp) this).field_D << 4) - param0) * var10 + ((((jp) this).field_C << 4) - param1) * var9;
-            var18 = -((((jp) this).field_D << 4) - param0) * var9 + ((((jp) this).field_C << 4) - param1) * var10;
+            var13 = ((this.field_D << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_D << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_C << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_C << 4) - param1) * var10;
+            var17 = ((this.field_D << 4) - param0) * var10 + ((this.field_C << 4) - param1) * var9;
+            var18 = -((this.field_D << 4) - param0) * var9 + ((this.field_C << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -1455,11 +1475,11 @@ class jp extends mn {
                                     break L20;
                                   } else {
                                     var33 = var37 >> 12;
-                                    if (var37 >> 12 >= ((jp) this).field_D) {
+                                    if (var37 >> 12 >= this.field_D) {
                                       break L20;
                                     } else {
                                       var34 = var38 >> 12;
-                                      if (var38 >> 12 < ((jp) this).field_C) {
+                                      if (var38 >> 12 < this.field_C) {
                                         this.a(var23, var33, var34, var37, var38);
                                         var39++;
                                         var37 = var37 + var28;
@@ -1521,7 +1541,7 @@ class jp extends mn {
                           } else {
                             L24: {
                               var40 = 0;
-                              var35 = var38 - (((jp) this).field_C << 12);
+                              var35 = var38 - (this.field_C << 12);
                               if (var35 >= 0) {
                                 if (var27 != 0) {
                                   var35 = (var27 - var35) / var27;
@@ -1552,7 +1572,7 @@ class jp extends mn {
                                       break L26;
                                     } else {
                                       var33 = var37 >> 12;
-                                      if (var37 >> 12 < ((jp) this).field_D) {
+                                      if (var37 >> 12 < this.field_D) {
                                         var34 = var38 >> 12;
                                         this.a(var23, var33, var34, var37, var38);
                                         var39++;
@@ -1592,7 +1612,7 @@ class jp extends mn {
                           var38 = var32 + (var29 * var27 >> 4);
                           var39 = var20;
                           var40 = 0;
-                          var35 = var37 - (((jp) this).field_D << 12);
+                          var35 = var37 - (this.field_D << 12);
                           if (var35 >= 0) {
                             if (var28 != 0) {
                               var35 = (var28 - var35) / var28;
@@ -1648,7 +1668,7 @@ class jp extends mn {
                                       break L32;
                                     } else {
                                       var34 = var38 >> 12;
-                                      if (var38 >> 12 < ((jp) this).field_C) {
+                                      if (var38 >> 12 < this.field_C) {
                                         var33 = var37 >> 12;
                                         this.a(var23, var33, var34, var37, var38);
                                         var39++;
@@ -1686,7 +1706,7 @@ class jp extends mn {
                           var38 = var32 + (var29 * var27 >> 4);
                           var39 = var20;
                           var40 = 0;
-                          var35 = var37 - (((jp) this).field_D << 12);
+                          var35 = var37 - (this.field_D << 12);
                           if (var35 >= 0) {
                             if (var28 != 0) {
                               var35 = (var28 - var35) / var28;
@@ -1711,7 +1731,7 @@ class jp extends mn {
                           } else {
                             L36: {
                               var40 = 0;
-                              var35 = var38 - (((jp) this).field_C << 12);
+                              var35 = var38 - (this.field_C << 12);
                               if (var35 >= 0) {
                                 if (var27 != 0) {
                                   var35 = (var27 - var35) / var27;
@@ -1787,35 +1807,45 @@ class jp extends mn {
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
             var9 = param3 + param4 - 3;
             while (param3 < var9) {
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 param0[incrementValue$0] = param1[incrementValue$1];
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
-                int incrementValue$3 = param2;
+                incrementValue$3 = param2;
                 param2++;
                 param0[incrementValue$2] = param1[incrementValue$3];
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
-                int incrementValue$5 = param2;
+                incrementValue$5 = param2;
                 param2++;
                 param0[incrementValue$4] = param1[incrementValue$5];
-                int incrementValue$6 = param3;
+                incrementValue$6 = param3;
                 param3++;
-                int incrementValue$7 = param2;
+                incrementValue$7 = param2;
                 param2++;
                 param0[incrementValue$6] = param1[incrementValue$7];
             }
             var9 += 3;
             while (param3 < var9) {
-                int incrementValue$8 = param3;
+                incrementValue$8 = param3;
                 param3++;
-                int incrementValue$9 = param2;
+                incrementValue$9 = param2;
                 param2++;
                 param0[incrementValue$8] = param1[incrementValue$9];
             }
@@ -1825,13 +1855,13 @@ class jp extends mn {
     }
 
     jp(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        ((jp) this).field_x = param0;
-        ((jp) this).field_z = param1;
-        ((jp) this).field_E = param2;
-        ((jp) this).field_F = param3;
-        ((jp) this).field_D = param4;
-        ((jp) this).field_C = param5;
-        ((jp) this).field_G = param6;
+        this.field_x = param0;
+        this.field_z = param1;
+        this.field_E = param2;
+        this.field_F = param3;
+        this.field_D = param4;
+        this.field_C = param5;
+        this.field_G = param6;
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -1861,7 +1891,7 @@ class jp extends mn {
         int stackOut_24_0 = 0;
         int stackOut_23_0 = 0;
         L0: {
-          var6 = param2 * ((jp) this).field_D + param1;
+          var6 = param2 * this.field_D + param1;
           param3 = param3 & 4095;
           param4 = param4 & 4095;
           if (param2 < 0) {
@@ -1878,7 +1908,7 @@ class jp extends mn {
                 break L1;
               } else {
                 L2: {
-                  var7 = ((jp) this).field_G[var6];
+                  var7 = this.field_G[var6];
                   if (var7 == 0) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
@@ -1893,13 +1923,13 @@ class jp extends mn {
                 break L1;
               }
             }
-            if (param1 >= ((jp) this).field_D - 1) {
+            if (param1 >= this.field_D - 1) {
               var12 = 0;
               var8 = 0;
               break L0;
             } else {
               L3: {
-                var8 = ((jp) this).field_G[var6 + 1];
+                var8 = this.field_G[var6 + 1];
                 if (var8 == 0) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
@@ -1916,7 +1946,7 @@ class jp extends mn {
           }
         }
         L4: {
-          if (param2 >= ((jp) this).field_C - 1) {
+          if (param2 >= this.field_C - 1) {
             var14 = 0;
             var13 = 0;
             var10 = 0;
@@ -1930,7 +1960,7 @@ class jp extends mn {
                 break L5;
               } else {
                 L6: {
-                  var9 = ((jp) this).field_G[var6 + ((jp) this).field_D];
+                  var9 = this.field_G[var6 + this.field_D];
                   if (var9 == 0) {
                     stackOut_18_0 = 0;
                     stackIn_19_0 = stackOut_18_0;
@@ -1945,13 +1975,13 @@ class jp extends mn {
                 break L5;
               }
             }
-            if (param1 >= ((jp) this).field_D - 1) {
+            if (param1 >= this.field_D - 1) {
               var14 = 0;
               var10 = 0;
               break L4;
             } else {
               L7: {
-                var10 = ((jp) this).field_G[var6 + ((jp) this).field_D + 1];
+                var10 = this.field_G[var6 + this.field_D + 1];
                 if (var10 == 0) {
                   stackOut_24_0 = 0;
                   stackIn_25_0 = stackOut_24_0;
@@ -2017,13 +2047,14 @@ class jp extends mn {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
             var14 = (param4 >> 16) * param11;
             for (var15 = -param7; var15 < 0; var15++) {
                 param2 = param1[(param3 >> 16) + var14];
                 if (param2 != 0) {
-                    int incrementValue$1 = param5;
+                    incrementValue$1 = param5;
                     param5++;
                     param0[incrementValue$1] = param2;
                 } else {
@@ -2038,14 +2069,24 @@ class jp extends mn {
     }
 
     final void e(int param0, int param1, int param2, int param3) {
-        int var5 = ((jp) this).field_x << 3;
-        int var6 = ((jp) this).field_z << 3;
+        int var5 = this.field_x << 3;
+        int var6 = this.field_z << 3;
         param0 = (param0 << 4) + (var5 & 15);
         param1 = (param1 << 4) + (var6 & 15);
-        ((jp) this).a(var5, var6, param0, param1, param2, param3);
+        this.a(var5, var6, param0, param1, param2, param3);
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -2067,14 +2108,14 @@ class jp extends mn {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     if (param1[incrementValue$218] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -2084,52 +2125,52 @@ class jp extends mn {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   if (param1[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   if (param1[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   if (param1[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 if (param1[incrementValue$226] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -2142,6 +2183,8 @@ class jp extends mn {
     }
 
     private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -2160,7 +2203,7 @@ class jp extends mn {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$14 = param4;
+                incrementValue$14 = param4;
                 param4++;
                 param3 = param2[incrementValue$14];
                 if (param3 != 0) {
@@ -2169,7 +2212,7 @@ class jp extends mn {
                     var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
                     var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
                     var14 = (param3 & 255) * (param0 & 255) >>> 8;
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param1[incrementValue$15] = (var12 << 16) + (var13 << 8) + var14;
                     var11++;
@@ -2191,13 +2234,13 @@ class jp extends mn {
     }
 
     void a(int param0, int param1) {
-        param0 = param0 + (((jp) this).field_E >> 1);
-        param1 = param1 + (((jp) this).field_F >> 1);
+        param0 = param0 + (this.field_E >> 1);
+        param1 = param1 + (this.field_F >> 1);
         int var3 = param0 < lb.field_i ? lb.field_i - param0 << 1 : 0;
-        int var4 = param0 + (((jp) this).field_D >> 1) > lb.field_f ? lb.field_f - param0 << 1 : ((jp) this).field_D;
+        int var4 = param0 + (this.field_D >> 1) > lb.field_f ? lb.field_f - param0 << 1 : this.field_D;
         int var5 = param1 < lb.field_b ? lb.field_b - param1 << 1 : 0;
-        int var6 = param1 + (((jp) this).field_C >> 1) > lb.field_j ? lb.field_j - param1 << 1 : ((jp) this).field_C;
-        jp.a(((jp) this).field_G, var5 * ((jp) this).field_D + var3, (param1 + (var5 >> 1)) * lb.field_c + (param0 + (var3 >> 1)), (((jp) this).field_D << 1) - (var4 - var3) + (((jp) this).field_D & 1), lb.field_c - (var4 - var3 >> 1), ((jp) this).field_D, var4 - var3 >> 1, var6 - var5 >> 1);
+        int var6 = param1 + (this.field_C >> 1) > lb.field_j ? lb.field_j - param1 << 1 : this.field_C;
+        jp.a(this.field_G, var5 * this.field_D + var3, (param1 + (var5 >> 1)) * lb.field_c + (param0 + (var3 >> 1)), (this.field_D << 1) - (var4 - var3) + (this.field_D & 1), lb.field_c - (var4 - var3 >> 1), this.field_D, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     void f(int param0, int param1) {
@@ -2209,12 +2252,12 @@ class jp extends mn {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + (((jp) this).field_x - ((jp) this).field_D - ((jp) this).field_E);
-          param1 = param1 + ((jp) this).field_F;
+          param0 = param0 + (this.field_x - this.field_D - this.field_E);
+          param1 = param1 + this.field_F;
           var3 = param0 + param1 * lb.field_c;
-          var4 = ((jp) this).field_D - 1;
-          var5 = ((jp) this).field_C;
-          var6 = ((jp) this).field_D;
+          var4 = this.field_D - 1;
+          var5 = this.field_C;
+          var6 = this.field_D;
           var7 = lb.field_c - var6;
           var8 = var6 + var6;
           if (param1 >= lb.field_b) {
@@ -2265,7 +2308,7 @@ class jp extends mn {
           return;
         } else {
           if (var5 > 0) {
-            jp.a(lb.field_l, ((jp) this).field_G, 0, var4, var3, var6, var5, var7, var8);
+            jp.a(lb.field_l, this.field_G, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -2274,6 +2317,9 @@ class jp extends mn {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$403 = 0;
+        int incrementValue$404 = 0;
+        int incrementValue$405 = 0;
         int var12 = 0;
         int var13 = 0;
         var12 = param11 & 16711935;
@@ -2291,7 +2337,7 @@ class jp extends mn {
                 param6++;
                 continue L0;
               } else {
-                int incrementValue$403 = param3;
+                incrementValue$403 = param3;
                 param3++;
                 param2 = param1[incrementValue$403];
                 if (param2 == 0) {
@@ -2300,14 +2346,14 @@ class jp extends mn {
                   continue L1;
                 } else {
                   if (param2 >> 8 != (param2 & 65535)) {
-                    int incrementValue$404 = param4;
+                    incrementValue$404 = param4;
                     param4++;
                     param0[incrementValue$404] = param2;
                     param5++;
                     continue L1;
                   } else {
                     param2 = param2 & 255;
-                    int incrementValue$405 = param4;
+                    incrementValue$405 = param4;
                     param4++;
                     param0[incrementValue$405] = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
                     param5++;
@@ -2337,30 +2383,30 @@ class jp extends mn {
         } else {
           if (param3 > 0) {
             L0: {
-              var6 = ((jp) this).field_D;
-              var7 = ((jp) this).field_C;
+              var6 = this.field_D;
+              var7 = this.field_C;
               var8 = 0;
               var9 = 0;
-              var10 = ((jp) this).field_x;
-              var11 = ((jp) this).field_z;
+              var10 = this.field_x;
+              var11 = this.field_z;
               var12 = (var10 << 16) / param2;
               var13 = (var11 << 16) / param3;
-              if (((jp) this).field_E <= 0) {
+              if (this.field_E <= 0) {
                 break L0;
               } else {
-                var14 = ((((jp) this).field_E << 16) + var12 - 1) / var12;
+                var14 = ((this.field_E << 16) + var12 - 1) / var12;
                 param0 = param0 + var14;
-                var8 = var8 + (var14 * var12 - (((jp) this).field_E << 16));
+                var8 = var8 + (var14 * var12 - (this.field_E << 16));
                 break L0;
               }
             }
             L1: {
-              if (((jp) this).field_F <= 0) {
+              if (this.field_F <= 0) {
                 break L1;
               } else {
-                var14 = ((((jp) this).field_F << 16) + var13 - 1) / var13;
+                var14 = ((this.field_F << 16) + var13 - 1) / var13;
                 param1 = param1 + var14;
-                var9 = var9 + (var14 * var13 - (((jp) this).field_F << 16));
+                var9 = var9 + (var14 * var13 - (this.field_F << 16));
                 break L1;
               }
             }
@@ -2423,7 +2469,7 @@ class jp extends mn {
                 break L7;
               }
             }
-            jp.a(lb.field_l, ((jp) this).field_G, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
+            jp.a(lb.field_l, this.field_G, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
             return;
           } else {
             return;
@@ -2440,12 +2486,12 @@ class jp extends mn {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((jp) this).field_E;
-          param1 = param1 + ((jp) this).field_F;
+          param0 = param0 + this.field_E;
+          param1 = param1 + this.field_F;
           var4 = param0 + param1 * lb.field_c;
           var5 = 0;
-          var6 = ((jp) this).field_C;
-          var7 = ((jp) this).field_D;
+          var6 = this.field_C;
+          var7 = this.field_D;
           var8 = lb.field_c - var7;
           var9 = 0;
           if (param1 >= lb.field_b) {
@@ -2496,7 +2542,7 @@ class jp extends mn {
           return;
         } else {
           if (var6 > 0) {
-            jp.c(lb.field_l, ((jp) this).field_G, param2, var5, var4, var7, var6, var8, var9);
+            jp.c(lb.field_l, this.field_G, param2, var5, var4, var7, var6, var8, var9);
             return;
           } else {
             return;
@@ -2505,6 +2551,8 @@ class jp extends mn {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -2522,7 +2570,7 @@ class jp extends mn {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -2532,7 +2580,7 @@ class jp extends mn {
                 } else {
                   var12 = (param2 & 16711935) * param9 & -16711936;
                   var13 = (param2 & 65280) * param9 & 16711680;
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (var12 | var13) >>> 8;
                   var11++;
@@ -2553,12 +2601,12 @@ class jp extends mn {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((jp) this).field_E;
-          param1 = param1 + ((jp) this).field_F;
+          param0 = param0 + this.field_E;
+          param1 = param1 + this.field_F;
           var3 = param0 + param1 * lb.field_c;
           var4 = 0;
-          var5 = ((jp) this).field_C;
-          var6 = ((jp) this).field_D;
+          var5 = this.field_C;
+          var6 = this.field_D;
           var7 = lb.field_c - var6;
           var8 = 0;
           if (param1 >= lb.field_b) {
@@ -2609,7 +2657,7 @@ class jp extends mn {
           return;
         } else {
           if (var5 > 0) {
-            jp.b(lb.field_l, ((jp) this).field_G, 0, var4, var3, var6, var5, var7, var8);
+            jp.b(lb.field_l, this.field_G, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -2646,10 +2694,10 @@ class jp extends mn {
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
         L0: {
-          var3 = ((jp) this).field_D >> 2;
-          var4 = ((jp) this).field_C >> 2;
-          param0 = param0 + ((jp) this).field_E / 4;
-          param1 = param1 + ((jp) this).field_F / 4;
+          var3 = this.field_D >> 2;
+          var4 = this.field_C >> 2;
+          param0 = param0 + this.field_E / 4;
+          param1 = param1 + this.field_F / 4;
           if (param0 >= lb.field_i) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -2663,7 +2711,7 @@ class jp extends mn {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= lb.field_f) {
-            stackOut_5_0 = ((jp) this).field_D - 4;
+            stackOut_5_0 = this.field_D - 4;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -2687,7 +2735,7 @@ class jp extends mn {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= lb.field_j) {
-            stackOut_11_0 = ((jp) this).field_C - 4;
+            stackOut_11_0 = this.field_C - 4;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -2702,7 +2750,7 @@ class jp extends mn {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((jp) this).field_D + var5;
+            var10 = var9 * this.field_D + var5;
             var11 = (param1 + (var9 >> 2)) * lb.field_c + (param0 + (var5 >> 2));
             var12 = var5;
             L5: while (true) {
@@ -2729,7 +2777,7 @@ class jp extends mn {
                         continue L6;
                       } else {
                         L8: {
-                          var13 = ((jp) this).field_G[var10 + var16 * ((jp) this).field_D + var17];
+                          var13 = this.field_G[var10 + var16 * this.field_D + var17];
                           if (var13 != 0) {
                             break L8;
                           } else {
@@ -2754,14 +2802,14 @@ class jp extends mn {
     final jp c() {
         int var2 = 0;
         int var3 = 0;
-        jp var1 = new jp(((jp) this).field_D, ((jp) this).field_C);
-        var1.field_x = ((jp) this).field_x;
-        var1.field_z = ((jp) this).field_z;
-        var1.field_E = ((jp) this).field_x - ((jp) this).field_D - ((jp) this).field_E;
-        var1.field_F = ((jp) this).field_F;
-        for (var2 = 0; var2 < ((jp) this).field_C; var2++) {
-            for (var3 = 0; var3 < ((jp) this).field_D; var3++) {
-                var1.field_G[var2 * ((jp) this).field_D + var3] = ((jp) this).field_G[var2 * ((jp) this).field_D + ((jp) this).field_D - 1 - var3];
+        jp var1 = new jp(this.field_D, this.field_C);
+        var1.field_x = this.field_x;
+        var1.field_z = this.field_z;
+        var1.field_E = this.field_x - this.field_D - this.field_E;
+        var1.field_F = this.field_F;
+        for (var2 = 0; var2 < this.field_C; var2++) {
+            for (var3 = 0; var3 < this.field_D; var3++) {
+                var1.field_G[var2 * this.field_D + var3] = this.field_G[var2 * this.field_D + this.field_D - 1 - var3];
             }
         }
         return var1;
@@ -2776,12 +2824,12 @@ class jp extends mn {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((jp) this).field_E;
-          param1 = param1 + ((jp) this).field_F;
+          param0 = param0 + this.field_E;
+          param1 = param1 + this.field_F;
           var4 = param0 + param1 * lb.field_c;
           var5 = 0;
-          var6 = ((jp) this).field_C;
-          var7 = ((jp) this).field_D;
+          var6 = this.field_C;
+          var7 = this.field_D;
           var8 = lb.field_c - var7;
           var9 = 0;
           if (param1 >= lb.field_b) {
@@ -2832,7 +2880,7 @@ class jp extends mn {
           return;
         } else {
           if (var6 > 0) {
-            jp.c(lb.field_l, ((jp) this).field_G, 0, var5, var4, var7, var6, var8, var9, param2);
+            jp.c(lb.field_l, this.field_G, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -2849,12 +2897,12 @@ class jp extends mn {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((jp) this).field_E;
-          param1 = param1 + ((jp) this).field_F;
+          param0 = param0 + this.field_E;
+          param1 = param1 + this.field_F;
           var3 = param0 + param1 * lb.field_c;
           var4 = 0;
-          var5 = ((jp) this).field_C;
-          var6 = ((jp) this).field_D;
+          var5 = this.field_C;
+          var6 = this.field_D;
           var7 = lb.field_c - var6;
           var8 = 0;
           if (param1 >= lb.field_b) {
@@ -2905,7 +2953,7 @@ class jp extends mn {
           return;
         } else {
           if (var5 > 0) {
-            jp.a(0, lb.field_l, ((jp) this).field_G, 0, var4, var3, var6, var5, var7, var8);
+            jp.a(0, lb.field_l, this.field_G, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -2914,6 +2962,16 @@ class jp extends mn {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -2935,7 +2993,7 @@ class jp extends mn {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3--;
                     param2 = param1[incrementValue$218];
                     if (param2 == 0) {
@@ -2943,7 +3001,7 @@ class jp extends mn {
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -2953,48 +3011,48 @@ class jp extends mn {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3--;
                   param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3--;
                   param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3--;
                   param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3--;
                 param2 = param1[incrementValue$226];
                 if (param2 == 0) {
@@ -3002,7 +3060,7 @@ class jp extends mn {
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -3024,12 +3082,12 @@ class jp extends mn {
         int var10 = 0;
         if (param2 != 256) {
           L0: {
-            param0 = param0 + ((jp) this).field_E;
-            param1 = param1 + ((jp) this).field_F;
+            param0 = param0 + this.field_E;
+            param1 = param1 + this.field_F;
             var4 = param0 + param1 * lb.field_c;
             var5 = 0;
-            var6 = ((jp) this).field_C;
-            var7 = ((jp) this).field_D;
+            var6 = this.field_C;
+            var7 = this.field_D;
             var8 = lb.field_c - var7;
             var9 = 0;
             if (param1 >= lb.field_b) {
@@ -3080,19 +3138,21 @@ class jp extends mn {
             return;
           } else {
             if (var6 > 0) {
-              jp.b(lb.field_l, ((jp) this).field_G, 0, var5, var4, var7, var6, var8, var9, param2);
+              jp.b(lb.field_l, this.field_G, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               return;
             }
           }
         } else {
-          ((jp) this).c(param0, param1);
+          this.c(param0, param1);
           return;
         }
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -3106,7 +3166,7 @@ class jp extends mn {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -3120,7 +3180,7 @@ class jp extends mn {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -3133,40 +3193,45 @@ class jp extends mn {
     }
 
     final void f() {
-        int var3 = 0;
         int var4 = 0;
-        int[] var1 = new int[((jp) this).field_D * ((jp) this).field_C];
+        int incrementValue$0 = 0;
+        int var3 = 0;
+        int[] var1 = new int[this.field_D * this.field_C];
         int var2 = 0;
-        for (var3 = 0; var3 < ((jp) this).field_D; var3++) {
-            for (var4 = ((jp) this).field_C - 1; var4 >= 0; var4--) {
-                int incrementValue$0 = var2;
+        for (var3 = 0; var3 < this.field_D; var3++) {
+            for (var4 = this.field_C - 1; var4 >= 0; var4--) {
+                incrementValue$0 = var2;
                 var2++;
-                var1[incrementValue$0] = ((jp) this).field_G[var3 + var4 * ((jp) this).field_D];
+                var1[incrementValue$0] = this.field_G[var3 + var4 * this.field_D];
             }
         }
-        ((jp) this).field_G = var1;
-        var3 = ((jp) this).field_F;
-        ((jp) this).field_F = ((jp) this).field_E;
-        ((jp) this).field_E = ((jp) this).field_z - ((jp) this).field_C - var3;
-        var3 = ((jp) this).field_C;
-        ((jp) this).field_C = ((jp) this).field_D;
-        ((jp) this).field_D = var3;
-        var3 = ((jp) this).field_z;
-        ((jp) this).field_z = ((jp) this).field_x;
-        ((jp) this).field_x = var3;
+        this.field_G = var1;
+        var3 = this.field_F;
+        this.field_F = this.field_E;
+        this.field_E = this.field_z - this.field_C - var3;
+        var3 = this.field_C;
+        this.field_C = this.field_D;
+        this.field_D = var3;
+        var3 = this.field_z;
+        this.field_z = this.field_x;
+        this.field_x = var3;
     }
 
     jp(int param0, int param1) {
-        ((jp) this).field_G = new int[param0 * param1];
-        ((jp) this).field_x = param0;
-        ((jp) this).field_D = param0;
-        ((jp) this).field_z = param1;
-        ((jp) this).field_C = param1;
-        ((jp) this).field_F = 0;
-        ((jp) this).field_E = 0;
+        this.field_G = new int[param0 * param1];
+        this.field_x = param0;
+        this.field_D = param0;
+        this.field_z = param1;
+        this.field_C = param1;
+        this.field_F = 0;
+        this.field_E = 0;
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -3196,7 +3261,7 @@ class jp extends mn {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
                 param2 = param1[incrementValue$4];
                 if (param2 == 0) {
@@ -3215,13 +3280,13 @@ class jp extends mn {
                         break L2;
                       } else {
                         if (var17 > 128) {
-                          int incrementValue$5 = param4;
+                          incrementValue$5 = param4;
                           param4++;
                           param0[incrementValue$5] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
                           var16++;
                           continue L1;
                         } else {
-                          int incrementValue$6 = param4;
+                          incrementValue$6 = param4;
                           param4++;
                           param0[incrementValue$6] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
                           var16++;
@@ -3230,7 +3295,7 @@ class jp extends mn {
                       }
                     }
                   }
-                  int incrementValue$7 = param4;
+                  incrementValue$7 = param4;
                   param4++;
                   param0[incrementValue$7] = param2;
                   var16++;
@@ -3252,20 +3317,20 @@ class jp extends mn {
         int[] var7 = null;
         int var8 = 0;
         int var9 = 0;
-        var1 = ((jp) this).field_C - 1;
+        var1 = this.field_C - 1;
         L0: while (true) {
           L1: {
             if (var1 < 0) {
               break L1;
             } else {
-              var2 = var1 * ((jp) this).field_D;
+              var2 = var1 * this.field_D;
               var3 = 0;
               L2: while (true) {
-                if (var3 >= ((jp) this).field_D) {
+                if (var3 >= this.field_D) {
                   var1--;
                   continue L0;
                 } else {
-                  if (((jp) this).field_G[var2 + var3] == 0) {
+                  if (this.field_G[var2 + var3] == 0) {
                     var3++;
                     continue L2;
                   } else {
@@ -3281,14 +3346,14 @@ class jp extends mn {
               if (var2 >= var1) {
                 break L4;
               } else {
-                var3 = var2 * ((jp) this).field_D;
+                var3 = var2 * this.field_D;
                 var4 = 0;
                 L5: while (true) {
-                  if (var4 >= ((jp) this).field_D) {
+                  if (var4 >= this.field_D) {
                     var2++;
                     continue L3;
                   } else {
-                    if (((jp) this).field_G[var3 + var4] == 0) {
+                    if (this.field_G[var3 + var4] == 0) {
                       var4++;
                       continue L5;
                     } else {
@@ -3298,7 +3363,7 @@ class jp extends mn {
                 }
               }
             }
-            var3 = ((jp) this).field_D - 1;
+            var3 = this.field_D - 1;
             L6: while (true) {
               L7: {
                 if (var3 < 0) {
@@ -3310,7 +3375,7 @@ class jp extends mn {
                       var3--;
                       continue L6;
                     } else {
-                      if (((jp) this).field_G[var4 * ((jp) this).field_D + var3] == 0) {
+                      if (this.field_G[var4 * this.field_D + var3] == 0) {
                         var4++;
                         continue L8;
                       } else {
@@ -3332,7 +3397,7 @@ class jp extends mn {
                         var4++;
                         continue L9;
                       } else {
-                        if (((jp) this).field_G[var5 * ((jp) this).field_D + var4] == 0) {
+                        if (this.field_G[var5 * this.field_D + var4] == 0) {
                           var5++;
                           continue L11;
                         } else {
@@ -3346,13 +3411,13 @@ class jp extends mn {
                   if (var4 != 0) {
                     break L12;
                   } else {
-                    if (var3 != ((jp) this).field_D - 1) {
+                    if (var3 != this.field_D - 1) {
                       break L12;
                     } else {
                       if (var2 != 0) {
                         break L12;
                       } else {
-                        if (var1 != ((jp) this).field_C - 1) {
+                        if (var1 != this.field_C - 1) {
                           break L12;
                         } else {
                           return;
@@ -3367,11 +3432,11 @@ class jp extends mn {
                 var8 = 0;
                 L13: while (true) {
                   if (var8 >= var6) {
-                    ((jp) this).field_G = var7;
-                    ((jp) this).field_D = var5;
-                    ((jp) this).field_C = var6;
-                    ((jp) this).field_E = ((jp) this).field_E + var4;
-                    ((jp) this).field_F = ((jp) this).field_F + var2;
+                    this.field_G = var7;
+                    this.field_D = var5;
+                    this.field_C = var6;
+                    this.field_E = this.field_E + var4;
+                    this.field_F = this.field_F + var2;
                     return;
                   } else {
                     var9 = 0;
@@ -3380,7 +3445,7 @@ class jp extends mn {
                         var8++;
                         continue L13;
                       } else {
-                        var7[var8 * var5 + var9] = ((jp) this).field_G[(var8 + var2) * ((jp) this).field_D + (var9 + var4)];
+                        var7[var8 * var5 + var9] = this.field_G[(var8 + var2) * this.field_D + (var9 + var4)];
                         var9++;
                         continue L14;
                       }
@@ -3394,6 +3459,7 @@ class jp extends mn {
     }
 
     jp(byte[] param0, java.awt.Component param1) {
+        boolean discarded$1 = false;
         InterruptedException var3 = null;
         java.awt.Image var3_ref = null;
         java.awt.MediaTracker var4 = null;
@@ -3405,18 +3471,18 @@ class jp extends mn {
             var4 = new java.awt.MediaTracker(param1);
             var4.addImage(var3_ref, 0);
             var4.waitForAll();
-            ((jp) this).field_D = var3_ref.getWidth((java.awt.image.ImageObserver) (Object) param1);
-            ((jp) this).field_C = var3_ref.getHeight((java.awt.image.ImageObserver) (Object) param1);
-            ((jp) this).field_x = ((jp) this).field_D;
-            ((jp) this).field_z = ((jp) this).field_C;
-            ((jp) this).field_E = 0;
-            ((jp) this).field_F = 0;
-            ((jp) this).field_G = new int[((jp) this).field_D * ((jp) this).field_C];
-            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, ((jp) this).field_D, ((jp) this).field_C, ((jp) this).field_G, 0, ((jp) this).field_D);
-            boolean discarded$1 = var5.grabPixels();
+            this.field_D = var3_ref.getWidth((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_C = var3_ref.getHeight((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_x = this.field_D;
+            this.field_z = this.field_C;
+            this.field_E = 0;
+            this.field_F = 0;
+            this.field_G = new int[this.field_D * this.field_C];
+            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, this.field_D, this.field_C, this.field_G, 0, this.field_D);
+            discarded$1 = var5.grabPixels();
             break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = (InterruptedException) (Object) decompiledCaughtException;
@@ -3434,12 +3500,12 @@ class jp extends mn {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((jp) this).field_E;
-          param1 = param1 + ((jp) this).field_F;
+          param0 = param0 + this.field_E;
+          param1 = param1 + this.field_F;
           var3 = param0 + param1 * lb.field_c;
           var4 = 0;
-          var5 = ((jp) this).field_C;
-          var6 = ((jp) this).field_D;
+          var5 = this.field_C;
+          var6 = this.field_D;
           var7 = lb.field_c - var6;
           var8 = 0;
           if (param1 >= lb.field_b) {
@@ -3490,7 +3556,7 @@ class jp extends mn {
           return;
         } else {
           if (var5 > 0) {
-            jp.a(lb.field_l, ((jp) this).field_G, var4, var3, var6, var5, var7, var8);
+            jp.a(lb.field_l, this.field_G, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -3499,43 +3565,44 @@ class jp extends mn {
     }
 
     final void g() {
-        lb.a(((jp) this).field_G, ((jp) this).field_D, ((jp) this).field_C);
+        lb.a(this.field_G, this.field_D, this.field_C);
     }
 
     final void b() {
-        int var3 = 0;
         int var4 = 0;
-        int[] var1 = new int[((jp) this).field_D * ((jp) this).field_C];
+        int incrementValue$0 = 0;
+        int var3 = 0;
+        int[] var1 = new int[this.field_D * this.field_C];
         int var2 = 0;
-        for (var3 = ((jp) this).field_D - 1; var3 >= 0; var3--) {
-            for (var4 = 0; var4 < ((jp) this).field_C; var4++) {
-                int incrementValue$0 = var2;
+        for (var3 = this.field_D - 1; var3 >= 0; var3--) {
+            for (var4 = 0; var4 < this.field_C; var4++) {
+                incrementValue$0 = var2;
                 var2++;
-                var1[incrementValue$0] = ((jp) this).field_G[var3 + var4 * ((jp) this).field_D];
+                var1[incrementValue$0] = this.field_G[var3 + var4 * this.field_D];
             }
         }
-        ((jp) this).field_G = var1;
-        var3 = ((jp) this).field_E;
-        ((jp) this).field_E = ((jp) this).field_F;
-        ((jp) this).field_F = ((jp) this).field_x - ((jp) this).field_D - var3;
-        var3 = ((jp) this).field_C;
-        ((jp) this).field_C = ((jp) this).field_D;
-        ((jp) this).field_D = var3;
-        var3 = ((jp) this).field_z;
-        ((jp) this).field_z = ((jp) this).field_x;
-        ((jp) this).field_x = var3;
+        this.field_G = var1;
+        var3 = this.field_E;
+        this.field_E = this.field_F;
+        this.field_F = this.field_x - this.field_D - var3;
+        var3 = this.field_C;
+        this.field_C = this.field_D;
+        this.field_D = var3;
+        var3 = this.field_z;
+        this.field_z = this.field_x;
+        this.field_x = var3;
     }
 
     final jp e() {
         int var3 = 0;
-        jp var1 = new jp(((jp) this).field_D, ((jp) this).field_C);
-        var1.field_x = ((jp) this).field_x;
-        var1.field_z = ((jp) this).field_z;
-        var1.field_E = ((jp) this).field_E;
-        var1.field_F = ((jp) this).field_F;
-        int var2 = ((jp) this).field_G.length;
+        jp var1 = new jp(this.field_D, this.field_C);
+        var1.field_x = this.field_x;
+        var1.field_z = this.field_z;
+        var1.field_E = this.field_E;
+        var1.field_F = this.field_F;
+        int var2 = this.field_G.length;
         for (var3 = 0; var3 < var2; var3++) {
-            var1.field_G[var3] = ((jp) this).field_G[var3];
+            var1.field_G[var3] = this.field_G[var3];
         }
         return var1;
     }

@@ -13,7 +13,7 @@ final class rl extends td {
         wia var5 = null;
         aga var6 = null;
         iv var7 = null;
-        Object stackIn_2_0 = null;
+        ii stackIn_2_0 = null;
         me stackIn_6_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -22,9 +22,10 @@ final class rl extends td {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         me stackOut_5_0 = null;
-        Object stackOut_1_0 = null;
+        ii stackOut_1_0 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
         RuntimeException stackOut_9_0 = null;
@@ -35,52 +36,54 @@ final class rl extends td {
         String stackOut_8_2 = null;
         try {
           L0: {
-            var3 = ((rl) this).field_h.a(param1 + 47, param0);
+            var3 = this.field_h.a(param1 + 47, param0);
             if (param1 == 3) {
               L1: {
-                var4 = new me(((rl) this).field_g, new nq(var3));
-                var4.field_u = ((rl) this).field_n;
-                var4.field_r = ((rl) this).field_k;
-                var5 = param0.field_a[((rl) this).field_k][((rl) this).field_n];
+                var4 = new me(this.field_g, new nq(var3));
+                var4.field_u = this.field_n;
+                var4.field_r = this.field_k;
+                var5 = param0.field_a[this.field_k][this.field_n];
                 var6 = var5.field_l;
                 if (var6 == null) {
                   break L1;
                 } else {
                   var7 = new iv(new nq(var6), false, 1, 200, 0);
-                  var4.field_o.a((bw) (Object) var7, true);
+                  var4.field_o.a(var7, true);
                   break L1;
                 }
               }
-              stackOut_5_0 = (me) var4;
+              stackOut_5_0 = (me) (var4);
               stackIn_6_0 = stackOut_5_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (ii) null;
               stackIn_2_0 = stackOut_1_0;
-              return (ii) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var3_ref;
+            stackOut_7_0 = (RuntimeException) (var3_ref);
             stackOut_7_1 = new StringBuilder().append("rl.A(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -88,9 +91,13 @@ final class rl extends td {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
         }
-        return (ii) (Object) stackIn_6_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return (ii) ((Object) stackIn_6_0);
+        }
     }
 
     public static void b(int param0) {
@@ -106,18 +113,14 @@ final class rl extends td {
     rl(int param0, aga param1, int param2, int param3) {
         super(param0, param1);
         try {
-            ((rl) this).field_k = param2;
-            ((rl) this).field_n = param3;
+            this.field_k = param2;
+            this.field_n = param3;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "rl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "rl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = 100;
         field_r = new kv(540, 140);
     }

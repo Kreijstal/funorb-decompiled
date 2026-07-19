@@ -14,22 +14,29 @@ final class e {
         field_b = null;
         field_f = null;
         field_a = null;
+        if (param0 <= 70) {
+            return;
+        }
         field_c = null;
         field_d = null;
     }
 
     final static void a(int param0, byte param1, int param2, oh[] param3) {
+        if (param1 != -92) {
+            return;
+        }
         try {
             nm.field_o = new ve(param3);
-            ng.field_D = 8;
-            fl.field_b = 12;
+            ng.field_D = param0;
+            fl.field_b = param2;
             ca.b(-69);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "e.B(" + 8 + ',' + -92 + ',' + 12 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw oi.a((Throwable) ((Object) runtimeException), "e.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static kh[] a(byte param0) {
+        kh[] discarded$2 = null;
         kh[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -39,7 +46,7 @@ final class e {
         L0: while (true) {
           if (vj.field_n <= var2) {
             if (param0 < 98) {
-              kh[] discarded$2 = e.a((byte) 60);
+              discarded$2 = e.a((byte) 60);
               an.b(-125);
               return var1;
             } else {
@@ -55,10 +62,6 @@ final class e {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Lost";
         field_e = new db(6, 0, 4, 2);
         field_b = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};

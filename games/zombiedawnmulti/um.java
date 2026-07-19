@@ -19,30 +19,31 @@ final class um {
             return;
         }
         try {
-            param2.e(-16 + (int)((um) this).field_d + param5, -16 + (int)((um) this).field_e + param0, param4);
-            param2.c(param5 + (int)((um) this).field_d - 16, (int)((um) this).field_e + (param0 - 16), param3);
+            param2.e(-16 + (int)this.field_d + param5, -16 + (int)this.field_e + param0, param4);
+            param2.c(param5 + (int)this.field_d - 16, (int)this.field_e + (param0 - 16), param3);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "um.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "um.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final void a(int param0, int param1, byte param2) {
-        ((um) this).field_d = ((um) this).field_d + ((um) this).field_j;
-        ((um) this).field_e = ((um) this).field_e + ((um) this).field_k;
+        boolean discarded$1 = false;
+        this.field_d = this.field_d + this.field_j;
+        this.field_e = this.field_e + this.field_k;
         if (param2 < -51) {
-          if (0.0f != ((um) this).field_j) {
-            if (fb.field_e.field_u.a(59, (int)(((um) this).field_e + (float)param0), (int)((float)param1 + ((um) this).field_d))) {
+          if (0.0f != this.field_j) {
+            if (fb.field_e.field_u.a(59, (int)(this.field_e + (float)param0), (int)((float)param1 + this.field_d))) {
               return;
             } else {
-              ((um) this).field_j = 0.0f;
-              ((um) this).field_k = 0.0f;
+              this.field_j = 0.0f;
+              this.field_k = 0.0f;
               return;
             }
           } else {
-            if (0.0f != ((um) this).field_k) {
-              if (!fb.field_e.field_u.a(59, (int)(((um) this).field_e + (float)param0), (int)((float)param1 + ((um) this).field_d))) {
-                ((um) this).field_j = 0.0f;
-                ((um) this).field_k = 0.0f;
+            if (0.0f != this.field_k) {
+              if (!fb.field_e.field_u.a(59, (int)(this.field_e + (float)param0), (int)((float)param1 + this.field_d))) {
+                this.field_j = 0.0f;
+                this.field_k = 0.0f;
                 return;
               } else {
                 return;
@@ -52,12 +53,12 @@ final class um {
             }
           }
         } else {
-          boolean discarded$1 = um.b(-91);
-          if (0.0f == ((um) this).field_j) {
-            if (0.0f != ((um) this).field_k) {
-              if (!fb.field_e.field_u.a(59, (int)(((um) this).field_e + (float)param0), (int)((float)param1 + ((um) this).field_d))) {
-                ((um) this).field_j = 0.0f;
-                ((um) this).field_k = 0.0f;
+          discarded$1 = um.b(-91);
+          if (0.0f == this.field_j) {
+            if (0.0f != this.field_k) {
+              if (!fb.field_e.field_u.a(59, (int)(this.field_e + (float)param0), (int)((float)param1 + this.field_d))) {
+                this.field_j = 0.0f;
+                this.field_k = 0.0f;
                 return;
               } else {
                 return;
@@ -66,9 +67,9 @@ final class um {
               return;
             }
           } else {
-            if (!fb.field_e.field_u.a(59, (int)(((um) this).field_e + (float)param0), (int)((float)param1 + ((um) this).field_d))) {
-              ((um) this).field_j = 0.0f;
-              ((um) this).field_k = 0.0f;
+            if (!fb.field_e.field_u.a(59, (int)(this.field_e + (float)param0), (int)((float)param1 + this.field_d))) {
+              this.field_j = 0.0f;
+              this.field_k = 0.0f;
               return;
             } else {
               return;
@@ -91,26 +92,22 @@ final class um {
     }
 
     public static void a(int param0) {
-        int var1 = -48;
+        int var1 = 48 / ((param0 - -1) / 58);
         field_c = null;
         field_b = null;
         field_i = null;
-        field_g = null;
+        field_g = (ja[][]) null;
         field_f = null;
     }
 
     um(float param0, float param1) {
-        ((um) this).field_d = 0.0f;
-        ((um) this).field_k = param1;
-        ((um) this).field_j = param0;
-        ((um) this).field_e = 0.0f;
+        this.field_d = 0.0f;
+        this.field_k = param1;
+        this.field_j = param0;
+        this.field_e = 0.0f;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Names can only contain letters, numbers, spaces and underscores";
         field_f = "members-only content";
         field_h = 50;

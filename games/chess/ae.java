@@ -22,12 +22,12 @@ final class ae extends RuntimeException {
         field_i = null;
         if (param0 < 108) {
           ae.a(83);
-          field_b = null;
+          field_b = (km[][]) null;
           field_d = null;
           field_f = null;
           return;
         } else {
-          field_b = null;
+          field_b = (km[][]) null;
           field_d = null;
           field_f = null;
           return;
@@ -35,15 +35,11 @@ final class ae extends RuntimeException {
     }
 
     ae(Throwable param0, String param1) {
-        ((ae) this).field_g = param0;
-        ((ae) this).field_h = param1;
+        this.field_g = param0;
+        this.field_h = param1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Unpacking sound effects";
         field_e = new aa[12];
         field_d = "Show all lobby chat";

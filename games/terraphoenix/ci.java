@@ -5,6 +5,7 @@ class ci extends oj {
     int[] field_z;
 
     private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+        int incrementValue$0 = 0;
         int var17 = param3;
         while (param8 < 0) {
             param7 = (param9 >> 16) * param15;
@@ -17,7 +18,7 @@ class ci extends oj {
                     param2 = param0 + param1;
                     param0 = (param0 & 16711935) + (param1 & 16711935);
                     param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                    int incrementValue$0 = param10;
+                    incrementValue$0 = param10;
                     param10++;
                     param5[incrementValue$0] = param2 - param1 | param1 - (param1 >>> 8);
                 } else {
@@ -33,6 +34,8 @@ class ci extends oj {
     }
 
     private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -51,7 +54,7 @@ class ci extends oj {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$14 = param4;
+                incrementValue$14 = param4;
                 param4++;
                 param3 = param2[incrementValue$14];
                 if (param3 != 0) {
@@ -60,7 +63,7 @@ class ci extends oj {
                     var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
                     var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
                     var14 = (param3 & 255) * (param0 & 255) >>> 8;
-                    int incrementValue$15 = param5;
+                    incrementValue$15 = param5;
                     param5++;
                     param1[incrementValue$15] = (var12 << 16) + (var13 << 8) + var14;
                     var11++;
@@ -82,6 +85,8 @@ class ci extends oj {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -95,7 +100,7 @@ class ci extends oj {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -107,7 +112,7 @@ class ci extends oj {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -128,12 +133,12 @@ class ci extends oj {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ci) this).field_p;
-          param1 = param1 + ((ci) this).field_v;
+          param0 = param0 + this.field_p;
+          param1 = param1 + this.field_v;
           var3 = param0 + param1 * l.field_k;
           var4 = 0;
-          var5 = ((ci) this).field_t;
-          var6 = ((ci) this).field_r;
+          var5 = this.field_t;
+          var6 = this.field_r;
           var7 = l.field_k - var6;
           var8 = 0;
           if (param1 >= l.field_d) {
@@ -184,7 +189,7 @@ class ci extends oj {
           return;
         } else {
           if (var5 > 0) {
-            ci.a(l.field_i, ((ci) this).field_z, 0, var4, var3, var6, var5, var7, var8);
+            ci.a(l.field_i, this.field_z, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -201,12 +206,12 @@ class ci extends oj {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ci) this).field_p;
-          param1 = param1 + ((ci) this).field_v;
+          param0 = param0 + this.field_p;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * l.field_k;
           var5 = 0;
-          var6 = ((ci) this).field_t;
-          var7 = ((ci) this).field_r;
+          var6 = this.field_t;
+          var7 = this.field_r;
           var8 = l.field_k - var7;
           var9 = 0;
           if (param1 >= l.field_d) {
@@ -259,10 +264,10 @@ class ci extends oj {
           if (var6 > 0) {
             L4: {
               if (param2 != 256) {
-                ci.a(0, 0, 0, l.field_i, ((ci) this).field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+                ci.a(0, 0, 0, l.field_i, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
                 break L4;
               } else {
-                ci.a(0, 0, 0, l.field_i, ((ci) this).field_z, var5, 0, var4, 0, var7, var6, var8, var9);
+                ci.a(0, 0, 0, l.field_i, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9);
                 break L4;
               }
             }
@@ -277,13 +282,14 @@ class ci extends oj {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        int incrementValue$1 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
             var14 = (param4 >> 16) * param11;
             for (var15 = -param7; var15 < 0; var15++) {
                 param2 = param1[(param3 >> 16) + var14];
                 if (param2 != 0) {
-                    int incrementValue$1 = param5;
+                    incrementValue$1 = param5;
                     param5++;
                     param0[incrementValue$1] = param2;
                 } else {
@@ -300,14 +306,14 @@ class ci extends oj {
     final ci e() {
         int var2 = 0;
         int var3 = 0;
-        ci var1 = new ci(((ci) this).field_r, ((ci) this).field_t);
-        var1.field_q = ((ci) this).field_q;
-        var1.field_u = ((ci) this).field_u;
-        var1.field_p = ((ci) this).field_q - ((ci) this).field_r - ((ci) this).field_p;
-        var1.field_v = ((ci) this).field_v;
-        for (var2 = 0; var2 < ((ci) this).field_t; var2++) {
-            for (var3 = 0; var3 < ((ci) this).field_r; var3++) {
-                var1.field_z[var2 * ((ci) this).field_r + var3] = ((ci) this).field_z[var2 * ((ci) this).field_r + ((ci) this).field_r - 1 - var3];
+        ci var1 = new ci(this.field_r, this.field_t);
+        var1.field_q = this.field_q;
+        var1.field_u = this.field_u;
+        var1.field_p = this.field_q - this.field_r - this.field_p;
+        var1.field_v = this.field_v;
+        for (var2 = 0; var2 < this.field_t; var2++) {
+            for (var3 = 0; var3 < this.field_r; var3++) {
+                var1.field_z[var2 * this.field_r + var3] = this.field_z[var2 * this.field_r + this.field_r - 1 - var3];
             }
         }
         return var1;
@@ -316,35 +322,45 @@ class ci extends oj {
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int incrementValue$8 = 0;
+        int incrementValue$9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
             var9 = param3 + param4 - 3;
             while (param3 < var9) {
-                int incrementValue$0 = param3;
+                incrementValue$0 = param3;
                 param3++;
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 param0[incrementValue$0] = param1[incrementValue$1];
-                int incrementValue$2 = param3;
+                incrementValue$2 = param3;
                 param3++;
-                int incrementValue$3 = param2;
+                incrementValue$3 = param2;
                 param2++;
                 param0[incrementValue$2] = param1[incrementValue$3];
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
-                int incrementValue$5 = param2;
+                incrementValue$5 = param2;
                 param2++;
                 param0[incrementValue$4] = param1[incrementValue$5];
-                int incrementValue$6 = param3;
+                incrementValue$6 = param3;
                 param3++;
-                int incrementValue$7 = param2;
+                incrementValue$7 = param2;
                 param2++;
                 param0[incrementValue$6] = param1[incrementValue$7];
             }
             var9 += 3;
             while (param3 < var9) {
-                int incrementValue$8 = param3;
+                incrementValue$8 = param3;
                 param3++;
-                int incrementValue$9 = param2;
+                incrementValue$9 = param2;
                 param2++;
                 param0[incrementValue$8] = param1[incrementValue$9];
             }
@@ -354,6 +370,8 @@ class ci extends oj {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+        int incrementValue$770 = 0;
+        int incrementValue$771 = 0;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -399,7 +417,7 @@ class ci extends oj {
                         if (var21 != var22) {
                           break L3;
                         } else {
-                          int incrementValue$770 = param5;
+                          incrementValue$770 = param5;
                           param5++;
                           param0[incrementValue$770] = (var20 * var13 >> 8 << 16) + (var21 * var14 >> 8 << 8) + (var22 * var15 >> 8);
                           param3 = param3 + param9;
@@ -408,7 +426,7 @@ class ci extends oj {
                         }
                       }
                     }
-                    int incrementValue$771 = param5;
+                    incrementValue$771 = param5;
                     param5++;
                     param0[incrementValue$771] = param2;
                     break L2;
@@ -424,6 +442,16 @@ class ci extends oj {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -445,7 +473,7 @@ class ci extends oj {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     param2 = param1[incrementValue$218];
                     if (param2 == 0) {
@@ -453,7 +481,7 @@ class ci extends oj {
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -463,48 +491,48 @@ class ci extends oj {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 param2 = param1[incrementValue$226];
                 if (param2 == 0) {
@@ -512,7 +540,7 @@ class ci extends oj {
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -525,6 +553,7 @@ class ci extends oj {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int incrementValue$1 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -597,7 +626,7 @@ class ci extends oj {
                     break L5;
                   }
                 }
-                int incrementValue$1 = param2;
+                incrementValue$1 = param2;
                 param2++;
                 l.field_i[incrementValue$1] = (var13 & 66847740 | var14 & 261120) >> 2;
                 var9++;
@@ -618,12 +647,12 @@ class ci extends oj {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ci) this).field_p;
-          param1 = param1 + ((ci) this).field_v;
+          param0 = param0 + this.field_p;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * l.field_k;
           var5 = 0;
-          var6 = ((ci) this).field_t;
-          var7 = ((ci) this).field_r;
+          var6 = this.field_t;
+          var7 = this.field_r;
           var8 = l.field_k - var7;
           var9 = 0;
           if (param1 >= l.field_d) {
@@ -674,7 +703,7 @@ class ci extends oj {
           return;
         } else {
           if (var6 > 0) {
-            ci.b(l.field_i, ((ci) this).field_z, param2, var5, var4, var7, var6, var8, var9);
+            ci.b(l.field_i, this.field_z, param2, var5, var4, var7, var6, var8, var9);
             return;
           } else {
             return;
@@ -683,6 +712,8 @@ class ci extends oj {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -701,7 +732,7 @@ class ci extends oj {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -710,7 +741,7 @@ class ci extends oj {
                   continue L1;
                 } else {
                   var13 = param0[param4];
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
                   var12++;
@@ -731,12 +762,12 @@ class ci extends oj {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ci) this).field_p;
-          param1 = param1 + ((ci) this).field_v;
+          param0 = param0 + this.field_p;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * l.field_k;
           var5 = 0;
-          var6 = ((ci) this).field_t;
-          var7 = ((ci) this).field_r;
+          var6 = this.field_t;
+          var7 = this.field_r;
           var8 = l.field_k - var7;
           var9 = 0;
           if (param1 >= l.field_d) {
@@ -787,7 +818,7 @@ class ci extends oj {
           return;
         } else {
           if (var6 > 0) {
-            ci.b(l.field_i, ((ci) this).field_z, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+            ci.b(l.field_i, this.field_z, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -796,11 +827,11 @@ class ci extends oj {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        int var5 = ((ci) this).field_q << 3;
-        int var6 = ((ci) this).field_u << 3;
+        int var5 = this.field_q << 3;
+        int var6 = this.field_u << 3;
         param0 = (param0 << 4) + (var5 & 15);
         param1 = (param1 << 4) + (var6 & 15);
-        ((ci) this).b(var5, var6, param0, param1, param2, param3);
+        this.b(var5, var6, param0, param1, param2, param3);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -820,30 +851,30 @@ class ci extends oj {
         } else {
           if (param3 > 0) {
             L0: {
-              var6 = ((ci) this).field_r;
-              var7 = ((ci) this).field_t;
+              var6 = this.field_r;
+              var7 = this.field_t;
               var8 = 0;
               var9 = 0;
-              var10 = ((ci) this).field_q;
-              var11 = ((ci) this).field_u;
+              var10 = this.field_q;
+              var11 = this.field_u;
               var12 = (var10 << 16) / param2;
               var13 = (var11 << 16) / param3;
-              if (((ci) this).field_p <= 0) {
+              if (this.field_p <= 0) {
                 break L0;
               } else {
-                var14 = ((((ci) this).field_p << 16) + var12 - 1) / var12;
+                var14 = ((this.field_p << 16) + var12 - 1) / var12;
                 param0 = param0 + var14;
-                var8 = var8 + (var14 * var12 - (((ci) this).field_p << 16));
+                var8 = var8 + (var14 * var12 - (this.field_p << 16));
                 break L0;
               }
             }
             L1: {
-              if (((ci) this).field_v <= 0) {
+              if (this.field_v <= 0) {
                 break L1;
               } else {
-                var14 = ((((ci) this).field_v << 16) + var13 - 1) / var13;
+                var14 = ((this.field_v << 16) + var13 - 1) / var13;
                 param1 = param1 + var14;
-                var9 = var9 + (var14 * var13 - (((ci) this).field_v << 16));
+                var9 = var9 + (var14 * var13 - (this.field_v << 16));
                 break L1;
               }
             }
@@ -908,10 +939,10 @@ class ci extends oj {
             }
             L8: {
               if (param4 != 256) {
-                ci.a(0, 0, 0, var8, ((ci) this).field_z, l.field_i, 0, 0, -param3, var9, var14, var15, param2, var12, var13, var6, param4);
+                ci.a(0, 0, 0, var8, this.field_z, l.field_i, 0, 0, -param3, var9, var14, var15, param2, var12, var13, var6, param4);
                 break L8;
               } else {
-                ci.a(0, 0, 0, var8, ((ci) this).field_z, l.field_i, 0, 0, -param3, var9, var14, var15, param2, var12, var13, var6);
+                ci.a(0, 0, 0, var8, this.field_z, l.field_i, 0, 0, -param3, var9, var14, var15, param2, var12, var13, var6);
                 break L8;
               }
             }
@@ -923,13 +954,13 @@ class ci extends oj {
     }
 
     ci(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        ((ci) this).field_q = param0;
-        ((ci) this).field_u = param1;
-        ((ci) this).field_p = param2;
-        ((ci) this).field_v = param3;
-        ((ci) this).field_r = param4;
-        ((ci) this).field_t = param5;
-        ((ci) this).field_z = param6;
+        this.field_q = param0;
+        this.field_u = param1;
+        this.field_p = param2;
+        this.field_v = param3;
+        this.field_r = param4;
+        this.field_t = param5;
+        this.field_z = param6;
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
@@ -949,30 +980,30 @@ class ci extends oj {
         } else {
           if (param3 > 0) {
             L0: {
-              var6 = ((ci) this).field_r;
-              var7 = ((ci) this).field_t;
+              var6 = this.field_r;
+              var7 = this.field_t;
               var8 = 0;
               var9 = 0;
-              var10 = ((ci) this).field_q;
-              var11 = ((ci) this).field_u;
+              var10 = this.field_q;
+              var11 = this.field_u;
               var12 = (var10 << 16) / param2;
               var13 = (var11 << 16) / param3;
-              if (((ci) this).field_p <= 0) {
+              if (this.field_p <= 0) {
                 break L0;
               } else {
-                var14 = ((((ci) this).field_p << 16) + var12 - 1) / var12;
+                var14 = ((this.field_p << 16) + var12 - 1) / var12;
                 param0 = param0 + var14;
-                var8 = var8 + (var14 * var12 - (((ci) this).field_p << 16));
+                var8 = var8 + (var14 * var12 - (this.field_p << 16));
                 break L0;
               }
             }
             L1: {
-              if (((ci) this).field_v <= 0) {
+              if (this.field_v <= 0) {
                 break L1;
               } else {
-                var14 = ((((ci) this).field_v << 16) + var13 - 1) / var13;
+                var14 = ((this.field_v << 16) + var13 - 1) / var13;
                 param1 = param1 + var14;
-                var9 = var9 + (var14 * var13 - (((ci) this).field_v << 16));
+                var9 = var9 + (var14 * var13 - (this.field_v << 16));
                 break L1;
               }
             }
@@ -1035,7 +1066,7 @@ class ci extends oj {
                 break L7;
               }
             }
-            ci.a(l.field_i, ((ci) this).field_z, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
+            ci.a(l.field_i, this.field_z, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
             return;
           } else {
             return;
@@ -1044,6 +1075,8 @@ class ci extends oj {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1061,7 +1094,7 @@ class ci extends oj {
                 var10++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -1071,7 +1104,7 @@ class ci extends oj {
                 } else {
                   var12 = (param2 & 16711935) * param9 & -16711936;
                   var13 = (param2 & 65280) * param9 & 16711680;
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (var12 | var13) >>> 8;
                   var11++;
@@ -1084,6 +1117,16 @@ class ci extends oj {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$218 = 0;
+        int incrementValue$219 = 0;
+        int incrementValue$220 = 0;
+        int incrementValue$221 = 0;
+        int incrementValue$222 = 0;
+        int incrementValue$223 = 0;
+        int incrementValue$224 = 0;
+        int incrementValue$225 = 0;
+        int incrementValue$226 = 0;
+        int incrementValue$227 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -1105,14 +1148,14 @@ class ci extends oj {
                     var10++;
                     continue L0;
                   } else {
-                    int incrementValue$218 = param3;
+                    incrementValue$218 = param3;
                     param3++;
                     if (param1[incrementValue$218] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
-                      int incrementValue$219 = param4;
+                      incrementValue$219 = param4;
                       param4++;
                       param0[incrementValue$219] = param2;
                       var11++;
@@ -1122,52 +1165,52 @@ class ci extends oj {
                 }
               } else {
                 L3: {
-                  int incrementValue$220 = param3;
+                  incrementValue$220 = param3;
                   param3++;
                   if (param1[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
-                    int incrementValue$221 = param4;
+                    incrementValue$221 = param4;
                     param4++;
                     param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
-                  int incrementValue$222 = param3;
+                  incrementValue$222 = param3;
                   param3++;
                   if (param1[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
-                    int incrementValue$223 = param4;
+                    incrementValue$223 = param4;
                     param4++;
                     param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
-                  int incrementValue$224 = param3;
+                  incrementValue$224 = param3;
                   param3++;
                   if (param1[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
-                    int incrementValue$225 = param4;
+                    incrementValue$225 = param4;
                     param4++;
                     param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
-                int incrementValue$226 = param3;
+                incrementValue$226 = param3;
                 param3++;
                 if (param1[incrementValue$226] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
-                  int incrementValue$227 = param4;
+                  incrementValue$227 = param4;
                   param4++;
                   param0[incrementValue$227] = param2;
                   var11++;
@@ -1180,30 +1223,32 @@ class ci extends oj {
     }
 
     final void b() {
-        int var3 = 0;
         int var4 = 0;
-        int[] var1 = new int[((ci) this).field_r * ((ci) this).field_t];
+        int incrementValue$0 = 0;
+        int var3 = 0;
+        int[] var1 = new int[this.field_r * this.field_t];
         int var2 = 0;
-        for (var3 = 0; var3 < ((ci) this).field_r; var3++) {
-            for (var4 = ((ci) this).field_t - 1; var4 >= 0; var4--) {
-                int incrementValue$0 = var2;
+        for (var3 = 0; var3 < this.field_r; var3++) {
+            for (var4 = this.field_t - 1; var4 >= 0; var4--) {
+                incrementValue$0 = var2;
                 var2++;
-                var1[incrementValue$0] = ((ci) this).field_z[var3 + var4 * ((ci) this).field_r];
+                var1[incrementValue$0] = this.field_z[var3 + var4 * this.field_r];
             }
         }
-        ((ci) this).field_z = var1;
-        var3 = ((ci) this).field_v;
-        ((ci) this).field_v = ((ci) this).field_p;
-        ((ci) this).field_p = ((ci) this).field_u - ((ci) this).field_t - var3;
-        var3 = ((ci) this).field_t;
-        ((ci) this).field_t = ((ci) this).field_r;
-        ((ci) this).field_r = var3;
-        var3 = ((ci) this).field_u;
-        ((ci) this).field_u = ((ci) this).field_q;
-        ((ci) this).field_q = var3;
+        this.field_z = var1;
+        var3 = this.field_v;
+        this.field_v = this.field_p;
+        this.field_p = this.field_u - this.field_t - var3;
+        var3 = this.field_t;
+        this.field_t = this.field_r;
+        this.field_r = var3;
+        var3 = this.field_u;
+        this.field_u = this.field_q;
+        this.field_q = var3;
     }
 
     private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+        int incrementValue$0 = 0;
         int var16 = param3;
         while (param8 < 0) {
             param7 = (param9 >> 16) * param15;
@@ -1214,7 +1259,7 @@ class ci extends oj {
                     param2 = param0 + param1;
                     param0 = (param0 & 16711935) + (param1 & 16711935);
                     param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                    int incrementValue$0 = param10;
+                    incrementValue$0 = param10;
                     param10++;
                     param5[incrementValue$0] = param2 - param1 | param1 - (param1 >>> 8);
                 } else {
@@ -1231,14 +1276,14 @@ class ci extends oj {
 
     final ci d() {
         int var3 = 0;
-        ci var1 = new ci(((ci) this).field_r, ((ci) this).field_t);
-        var1.field_q = ((ci) this).field_q;
-        var1.field_u = ((ci) this).field_u;
-        var1.field_p = ((ci) this).field_p;
-        var1.field_v = ((ci) this).field_v;
-        int var2 = ((ci) this).field_z.length;
+        ci var1 = new ci(this.field_r, this.field_t);
+        var1.field_q = this.field_q;
+        var1.field_u = this.field_u;
+        var1.field_p = this.field_p;
+        var1.field_v = this.field_v;
+        int var2 = this.field_z.length;
         for (var3 = 0; var3 < var2; var3++) {
-            var1.field_z[var3] = ((ci) this).field_z[var3];
+            var1.field_z[var3] = this.field_z[var3];
         }
         return var1;
     }
@@ -1246,25 +1291,27 @@ class ci extends oj {
     final void f() {
         int var2 = 0;
         int var3 = 0;
-        if (((ci) this).field_r == ((ci) this).field_q) {
-            if (((ci) this).field_t == ((ci) this).field_u) {
+        if (this.field_r == this.field_q) {
+            if (this.field_t == this.field_u) {
                 return;
             }
         }
-        int[] var1 = new int[((ci) this).field_q * ((ci) this).field_u];
-        for (var2 = 0; var2 < ((ci) this).field_t; var2++) {
-            for (var3 = 0; var3 < ((ci) this).field_r; var3++) {
-                var1[(var2 + ((ci) this).field_v) * ((ci) this).field_q + (var3 + ((ci) this).field_p)] = ((ci) this).field_z[var2 * ((ci) this).field_r + var3];
+        int[] var1 = new int[this.field_q * this.field_u];
+        for (var2 = 0; var2 < this.field_t; var2++) {
+            for (var3 = 0; var3 < this.field_r; var3++) {
+                var1[(var2 + this.field_v) * this.field_q + (var3 + this.field_p)] = this.field_z[var2 * this.field_r + var3];
             }
         }
-        ((ci) this).field_z = var1;
-        ((ci) this).field_r = ((ci) this).field_q;
-        ((ci) this).field_t = ((ci) this).field_u;
-        ((ci) this).field_p = 0;
-        ((ci) this).field_v = 0;
+        this.field_z = var1;
+        this.field_r = this.field_q;
+        this.field_t = this.field_u;
+        this.field_p = 0;
+        this.field_v = 0;
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         param8 = -param10;
         L0: while (true) {
           if (param8 >= 0) {
@@ -1278,7 +1325,7 @@ class ci extends oj {
                 param8++;
                 continue L0;
               } else {
-                int incrementValue$66 = param5;
+                incrementValue$66 = param5;
                 param5++;
                 param0 = param4[incrementValue$66];
                 if (param0 == 0) {
@@ -1292,7 +1339,7 @@ class ci extends oj {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  int incrementValue$67 = param7;
+                  incrementValue$67 = param7;
                   param7++;
                   param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
@@ -1305,7 +1352,7 @@ class ci extends oj {
     }
 
     final void a() {
-        l.a(((ci) this).field_z, ((ci) this).field_r, ((ci) this).field_t);
+        l.a(this.field_z, this.field_r, this.field_t);
     }
 
     void a(int param0, int param1, int param2, int param3) {
@@ -1325,30 +1372,30 @@ class ci extends oj {
         } else {
           if (param3 > 0) {
             L0: {
-              var5 = ((ci) this).field_r;
-              var6 = ((ci) this).field_t;
+              var5 = this.field_r;
+              var6 = this.field_t;
               var7 = 0;
               var8 = 0;
-              var9 = ((ci) this).field_q;
-              var10 = ((ci) this).field_u;
+              var9 = this.field_q;
+              var10 = this.field_u;
               var11 = (var9 << 16) / param2;
               var12 = (var10 << 16) / param3;
-              if (((ci) this).field_p <= 0) {
+              if (this.field_p <= 0) {
                 break L0;
               } else {
-                var13 = ((((ci) this).field_p << 16) + var11 - 1) / var11;
+                var13 = ((this.field_p << 16) + var11 - 1) / var11;
                 param0 = param0 + var13;
-                var7 = var7 + (var13 * var11 - (((ci) this).field_p << 16));
+                var7 = var7 + (var13 * var11 - (this.field_p << 16));
                 break L0;
               }
             }
             L1: {
-              if (((ci) this).field_v <= 0) {
+              if (this.field_v <= 0) {
                 break L1;
               } else {
-                var13 = ((((ci) this).field_v << 16) + var12 - 1) / var12;
+                var13 = ((this.field_v << 16) + var12 - 1) / var12;
                 param1 = param1 + var13;
-                var8 = var8 + (var13 * var12 - (((ci) this).field_v << 16));
+                var8 = var8 + (var13 * var12 - (this.field_v << 16));
                 break L1;
               }
             }
@@ -1411,7 +1458,7 @@ class ci extends oj {
                 break L7;
               }
             }
-            ci.a(l.field_i, ((ci) this).field_z, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+            ci.a(l.field_i, this.field_z, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
             return;
           } else {
             return;
@@ -1420,6 +1467,15 @@ class ci extends oj {
     }
 
     void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int incrementValue$9 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
         double var7 = 0.0;
         int var9 = 0;
         int var10 = 0;
@@ -1452,19 +1508,19 @@ class ci extends oj {
         int var38 = 0;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((ci) this).field_p << 4);
-            param1 = param1 - (((ci) this).field_v << 4);
+            param0 = param0 - (this.field_p << 4);
+            param1 = param1 - (this.field_v << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((ci) this).field_r << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((ci) this).field_r << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((ci) this).field_t << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((ci) this).field_t << 4) - param1) * var10;
-            var17 = ((((ci) this).field_r << 4) - param0) * var10 + ((((ci) this).field_t << 4) - param1) * var9;
-            var18 = -((((ci) this).field_r << 4) - param0) * var9 + ((((ci) this).field_t << 4) - param1) * var10;
+            var13 = ((this.field_r << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_r << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_t << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_t << 4) - param1) * var10;
+            var17 = ((this.field_r << 4) - param0) * var10 + ((this.field_t << 4) - param1) * var9;
+            var18 = -((this.field_r << 4) - param0) * var9 + ((this.field_t << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -1633,8 +1689,8 @@ class ci extends oj {
                               }
                             }
                             L17: {
-                              var32 = (1 + var35 - (((ci) this).field_r << 12) - var27) / var27;
-                              if ((1 + var35 - (((ci) this).field_r << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_r << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_r << 12) - var27) / var27 <= var37) {
                                 break L17;
                               } else {
                                 var37 = var32;
@@ -1654,8 +1710,8 @@ class ci extends oj {
                               }
                             }
                             L19: {
-                              var32 = (1 + var36 - (((ci) this).field_t << 12) - var26) / var26;
-                              if ((1 + var36 - (((ci) this).field_t << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_t << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_t << 12) - var26) / var26 <= var37) {
                                 break L19;
                               } else {
                                 var37 = var32;
@@ -1671,12 +1727,12 @@ class ci extends oj {
                                 continue L15;
                               } else {
                                 L21: {
-                                  var38 = ((ci) this).field_z[(var36 >> 12) * ((ci) this).field_r + (var35 >> 12)];
+                                  var38 = this.field_z[(var36 >> 12) * this.field_r + (var35 >> 12)];
                                   if (var38 == 0) {
                                     var34++;
                                     break L21;
                                   } else {
-                                    int incrementValue$9 = var34;
+                                    incrementValue$9 = var34;
                                     var34++;
                                     l.field_i[incrementValue$9] = var38;
                                     break L21;
@@ -1713,8 +1769,8 @@ class ci extends oj {
                               }
                             }
                             L24: {
-                              var32 = (1 + var35 - (((ci) this).field_r << 12) - var27) / var27;
-                              if ((1 + var35 - (((ci) this).field_r << 12) - var27) / var27 <= var37) {
+                              var32 = (1 + var35 - (this.field_r << 12) - var27) / var27;
+                              if ((1 + var35 - (this.field_r << 12) - var27) / var27 <= var37) {
                                 break L24;
                               } else {
                                 var37 = var32;
@@ -1722,8 +1778,8 @@ class ci extends oj {
                               }
                             }
                             L25: {
-                              var32 = var36 - (((ci) this).field_t << 12);
-                              if (var36 - (((ci) this).field_t << 12) < 0) {
+                              var32 = var36 - (this.field_t << 12);
+                              if (var36 - (this.field_t << 12) < 0) {
                                 break L25;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -1752,12 +1808,12 @@ class ci extends oj {
                                 continue L22;
                               } else {
                                 L28: {
-                                  var38 = ((ci) this).field_z[(var36 >> 12) * ((ci) this).field_r + (var35 >> 12)];
+                                  var38 = this.field_z[(var36 >> 12) * this.field_r + (var35 >> 12)];
                                   if (var38 == 0) {
                                     var34++;
                                     break L28;
                                   } else {
-                                    int incrementValue$10 = var34;
+                                    incrementValue$10 = var34;
                                     var34++;
                                     l.field_i[incrementValue$10] = var38;
                                     break L28;
@@ -1784,7 +1840,7 @@ class ci extends oj {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((ci) this).field_t << 12) < 0) {
+                              if (var36 - (this.field_t << 12) < 0) {
                                 L31: {
                                   if (var35 >= 0) {
                                     break L31;
@@ -1797,8 +1853,8 @@ class ci extends oj {
                                   }
                                 }
                                 L32: {
-                                  var32 = (1 + var35 - (((ci) this).field_r << 12) - var27) / var27;
-                                  if ((1 + var35 - (((ci) this).field_r << 12) - var27) / var27 <= var37) {
+                                  var32 = (1 + var35 - (this.field_r << 12) - var27) / var27;
+                                  if ((1 + var35 - (this.field_r << 12) - var27) / var27 <= var37) {
                                     break L32;
                                   } else {
                                     var37 = var32;
@@ -1810,12 +1866,12 @@ class ci extends oj {
                                     break L30;
                                   } else {
                                     L34: {
-                                      var38 = ((ci) this).field_z[(var36 >> 12) * ((ci) this).field_r + (var35 >> 12)];
+                                      var38 = this.field_z[(var36 >> 12) * this.field_r + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         break L34;
                                       } else {
-                                        int incrementValue$11 = var34;
+                                        incrementValue$11 = var34;
                                         var34++;
                                         l.field_i[incrementValue$11] = var38;
                                         break L34;
@@ -1853,8 +1909,8 @@ class ci extends oj {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((ci) this).field_r << 12);
-                              if (var35 - (((ci) this).field_r << 12) < 0) {
+                              var32 = var35 - (this.field_r << 12);
+                              if (var35 - (this.field_r << 12) < 0) {
                                 break L36;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -1887,8 +1943,8 @@ class ci extends oj {
                               }
                             }
                             L39: {
-                              var32 = (1 + var36 - (((ci) this).field_t << 12) - var26) / var26;
-                              if ((1 + var36 - (((ci) this).field_t << 12) - var26) / var26 <= var37) {
+                              var32 = (1 + var36 - (this.field_t << 12) - var26) / var26;
+                              if ((1 + var36 - (this.field_t << 12) - var26) / var26 <= var37) {
                                 break L39;
                               } else {
                                 var37 = var32;
@@ -1904,12 +1960,12 @@ class ci extends oj {
                                 continue L35;
                               } else {
                                 L41: {
-                                  var38 = ((ci) this).field_z[(var36 >> 12) * ((ci) this).field_r + (var35 >> 12)];
+                                  var38 = this.field_z[(var36 >> 12) * this.field_r + (var35 >> 12)];
                                   if (var38 == 0) {
                                     var34++;
                                     break L41;
                                   } else {
-                                    int incrementValue$12 = var34;
+                                    incrementValue$12 = var34;
                                     var34++;
                                     l.field_i[incrementValue$12] = var38;
                                     break L41;
@@ -1934,8 +1990,8 @@ class ci extends oj {
                               var35 = var30 + (var28 * var27 >> 4);
                               var36 = var31 + (var28 * var26 >> 4);
                               var37 = var20;
-                              var32 = var35 - (((ci) this).field_r << 12);
-                              if (var35 - (((ci) this).field_r << 12) < 0) {
+                              var32 = var35 - (this.field_r << 12);
+                              if (var35 - (this.field_r << 12) < 0) {
                                 break L43;
                               } else {
                                 var32 = (var27 - var32) / var27;
@@ -1956,8 +2012,8 @@ class ci extends oj {
                               }
                             }
                             L45: {
-                              var32 = var36 - (((ci) this).field_t << 12);
-                              if (var36 - (((ci) this).field_t << 12) < 0) {
+                              var32 = var36 - (this.field_t << 12);
+                              if (var36 - (this.field_t << 12) < 0) {
                                 break L45;
                               } else {
                                 var32 = (var26 - var32) / var26;
@@ -1986,12 +2042,12 @@ class ci extends oj {
                                 continue L42;
                               } else {
                                 L48: {
-                                  var38 = ((ci) this).field_z[(var36 >> 12) * ((ci) this).field_r + (var35 >> 12)];
+                                  var38 = this.field_z[(var36 >> 12) * this.field_r + (var35 >> 12)];
                                   if (var38 == 0) {
                                     var34++;
                                     break L48;
                                   } else {
-                                    int incrementValue$13 = var34;
+                                    incrementValue$13 = var34;
                                     var34++;
                                     l.field_i[incrementValue$13] = var38;
                                     break L48;
@@ -2018,10 +2074,10 @@ class ci extends oj {
                             var36 = var31;
                             var37 = var20;
                             if (var36 >= 0) {
-                              if (var36 - (((ci) this).field_t << 12) < 0) {
+                              if (var36 - (this.field_t << 12) < 0) {
                                 L51: {
-                                  var32 = var35 - (((ci) this).field_r << 12);
-                                  if (var35 - (((ci) this).field_r << 12) < 0) {
+                                  var32 = var35 - (this.field_r << 12);
+                                  if (var35 - (this.field_r << 12) < 0) {
                                     break L51;
                                   } else {
                                     var32 = (var27 - var32) / var27;
@@ -2045,12 +2101,12 @@ class ci extends oj {
                                     break L50;
                                   } else {
                                     L54: {
-                                      var38 = ((ci) this).field_z[(var36 >> 12) * ((ci) this).field_r + (var35 >> 12)];
+                                      var38 = this.field_z[(var36 >> 12) * this.field_r + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         break L54;
                                       } else {
-                                        int incrementValue$14 = var34;
+                                        incrementValue$14 = var34;
                                         var34++;
                                         l.field_i[incrementValue$14] = var38;
                                         break L54;
@@ -2090,7 +2146,7 @@ class ci extends oj {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((ci) this).field_r << 12) < 0) {
+                              if (var35 - (this.field_r << 12) < 0) {
                                 L57: {
                                   if (var36 >= 0) {
                                     break L57;
@@ -2103,8 +2159,8 @@ class ci extends oj {
                                   }
                                 }
                                 L58: {
-                                  var32 = (1 + var36 - (((ci) this).field_t << 12) - var26) / var26;
-                                  if ((1 + var36 - (((ci) this).field_t << 12) - var26) / var26 <= var37) {
+                                  var32 = (1 + var36 - (this.field_t << 12) - var26) / var26;
+                                  if ((1 + var36 - (this.field_t << 12) - var26) / var26 <= var37) {
                                     break L58;
                                   } else {
                                     var37 = var32;
@@ -2116,12 +2172,12 @@ class ci extends oj {
                                     break L56;
                                   } else {
                                     L60: {
-                                      var38 = ((ci) this).field_z[(var36 >> 12) * ((ci) this).field_r + (var35 >> 12)];
+                                      var38 = this.field_z[(var36 >> 12) * this.field_r + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         break L60;
                                       } else {
-                                        int incrementValue$15 = var34;
+                                        incrementValue$15 = var34;
                                         var34++;
                                         l.field_i[incrementValue$15] = var38;
                                         break L60;
@@ -2157,10 +2213,10 @@ class ci extends oj {
                             var36 = var31 + (var28 * var26 >> 4);
                             var37 = var20;
                             if (var35 >= 0) {
-                              if (var35 - (((ci) this).field_r << 12) < 0) {
+                              if (var35 - (this.field_r << 12) < 0) {
                                 L63: {
-                                  var32 = var36 - (((ci) this).field_t << 12);
-                                  if (var36 - (((ci) this).field_t << 12) < 0) {
+                                  var32 = var36 - (this.field_t << 12);
+                                  if (var36 - (this.field_t << 12) < 0) {
                                     break L63;
                                   } else {
                                     var32 = (var26 - var32) / var26;
@@ -2184,12 +2240,12 @@ class ci extends oj {
                                     break L62;
                                   } else {
                                     L66: {
-                                      var38 = ((ci) this).field_z[(var36 >> 12) * ((ci) this).field_r + (var35 >> 12)];
+                                      var38 = this.field_z[(var36 >> 12) * this.field_r + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         break L66;
                                       } else {
-                                        int incrementValue$16 = var34;
+                                        incrementValue$16 = var34;
                                         var34++;
                                         l.field_i[incrementValue$16] = var38;
                                         break L66;
@@ -2230,19 +2286,19 @@ class ci extends oj {
                         if (var35 >= 0) {
                           L68: {
                             if (var36 >= 0) {
-                              if (var35 - (((ci) this).field_r << 12) < 0) {
-                                if (var36 - (((ci) this).field_t << 12) < 0) {
+                              if (var35 - (this.field_r << 12) < 0) {
+                                if (var36 - (this.field_t << 12) < 0) {
                                   L69: while (true) {
                                     if (var37 >= 0) {
                                       break L68;
                                     } else {
-                                      var38 = ((ci) this).field_z[(var36 >> 12) * ((ci) this).field_r + (var35 >> 12)];
+                                      var38 = this.field_z[(var36 >> 12) * this.field_r + (var35 >> 12)];
                                       if (var38 == 0) {
                                         var34++;
                                         var37++;
                                         continue L69;
                                       } else {
-                                        int incrementValue$17 = var34;
+                                        incrementValue$17 = var34;
                                         var34++;
                                         l.field_i[incrementValue$17] = var38;
                                         var37++;
@@ -2294,12 +2350,12 @@ class ci extends oj {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ci) this).field_p;
-          param1 = param1 + ((ci) this).field_v;
+          param0 = param0 + this.field_p;
+          param1 = param1 + this.field_v;
           var3 = param0 + param1 * l.field_k;
           var4 = 0;
-          var5 = ((ci) this).field_t;
-          var6 = ((ci) this).field_r;
+          var5 = this.field_t;
+          var6 = this.field_r;
           var7 = l.field_k - var6;
           var8 = 0;
           if (param1 >= l.field_d) {
@@ -2350,7 +2406,7 @@ class ci extends oj {
           return;
         } else {
           if (var5 > 0) {
-            ci.a(0, l.field_i, ((ci) this).field_z, 0, var4, var3, var6, var5, var7, var8);
+            ci.a(0, l.field_i, this.field_z, 0, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -2368,20 +2424,20 @@ class ci extends oj {
         int[] var7 = null;
         int var8 = 0;
         int var9 = 0;
-        var1 = ((ci) this).field_t - 1;
+        var1 = this.field_t - 1;
         L0: while (true) {
           L1: {
             if (var1 < 0) {
               break L1;
             } else {
-              var2 = var1 * ((ci) this).field_r;
+              var2 = var1 * this.field_r;
               var3 = 0;
               L2: while (true) {
-                if (var3 >= ((ci) this).field_r) {
+                if (var3 >= this.field_r) {
                   var1--;
                   continue L0;
                 } else {
-                  if (((ci) this).field_z[var2 + var3] == 0) {
+                  if (this.field_z[var2 + var3] == 0) {
                     var3++;
                     continue L2;
                   } else {
@@ -2397,14 +2453,14 @@ class ci extends oj {
               if (var2 >= var1) {
                 break L4;
               } else {
-                var3 = var2 * ((ci) this).field_r;
+                var3 = var2 * this.field_r;
                 var4 = 0;
                 L5: while (true) {
-                  if (var4 >= ((ci) this).field_r) {
+                  if (var4 >= this.field_r) {
                     var2++;
                     continue L3;
                   } else {
-                    if (((ci) this).field_z[var3 + var4] == 0) {
+                    if (this.field_z[var3 + var4] == 0) {
                       var4++;
                       continue L5;
                     } else {
@@ -2414,7 +2470,7 @@ class ci extends oj {
                 }
               }
             }
-            var3 = ((ci) this).field_r - 1;
+            var3 = this.field_r - 1;
             L6: while (true) {
               L7: {
                 if (var3 < 0) {
@@ -2426,7 +2482,7 @@ class ci extends oj {
                       var3--;
                       continue L6;
                     } else {
-                      if (((ci) this).field_z[var4 * ((ci) this).field_r + var3] == 0) {
+                      if (this.field_z[var4 * this.field_r + var3] == 0) {
                         var4++;
                         continue L8;
                       } else {
@@ -2448,7 +2504,7 @@ class ci extends oj {
                         var4++;
                         continue L9;
                       } else {
-                        if (((ci) this).field_z[var5 * ((ci) this).field_r + var4] == 0) {
+                        if (this.field_z[var5 * this.field_r + var4] == 0) {
                           var5++;
                           continue L11;
                         } else {
@@ -2462,13 +2518,13 @@ class ci extends oj {
                   if (var4 != 0) {
                     break L12;
                   } else {
-                    if (var3 != ((ci) this).field_r - 1) {
+                    if (var3 != this.field_r - 1) {
                       break L12;
                     } else {
                       if (var2 != 0) {
                         break L12;
                       } else {
-                        if (var1 != ((ci) this).field_t - 1) {
+                        if (var1 != this.field_t - 1) {
                           break L12;
                         } else {
                           return;
@@ -2483,11 +2539,11 @@ class ci extends oj {
                 var8 = 0;
                 L13: while (true) {
                   if (var8 >= var6) {
-                    ((ci) this).field_z = var7;
-                    ((ci) this).field_r = var5;
-                    ((ci) this).field_t = var6;
-                    ((ci) this).field_p = ((ci) this).field_p + var4;
-                    ((ci) this).field_v = ((ci) this).field_v + var2;
+                    this.field_z = var7;
+                    this.field_r = var5;
+                    this.field_t = var6;
+                    this.field_p = this.field_p + var4;
+                    this.field_v = this.field_v + var2;
                     return;
                   } else {
                     var9 = 0;
@@ -2496,7 +2552,7 @@ class ci extends oj {
                         var8++;
                         continue L13;
                       } else {
-                        var7[var8 * var5 + var9] = ((ci) this).field_z[(var8 + var2) * ((ci) this).field_r + (var9 + var4)];
+                        var7[var8 * var5 + var9] = this.field_z[(var8 + var2) * this.field_r + (var9 + var4)];
                         var9++;
                         continue L14;
                       }
@@ -2544,19 +2600,19 @@ class ci extends oj {
         int var40 = 0;
         if (param5 != 0) {
           L0: {
-            param0 = param0 - (((ci) this).field_p << 4);
-            param1 = param1 - (((ci) this).field_v << 4);
+            param0 = param0 - (this.field_p << 4);
+            param1 = param1 - (this.field_v << 4);
             var7 = (double)(param4 & 65535) * 0.00009587379924285257;
             var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
             var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
             var11 = -param0 * var10 + -param1 * var9;
             var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((((ci) this).field_r << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((((ci) this).field_r << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((((ci) this).field_t << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((((ci) this).field_t << 4) - param1) * var10;
-            var17 = ((((ci) this).field_r << 4) - param0) * var10 + ((((ci) this).field_t << 4) - param1) * var9;
-            var18 = -((((ci) this).field_r << 4) - param0) * var9 + ((((ci) this).field_t << 4) - param1) * var10;
+            var13 = ((this.field_r << 4) - param0) * var10 + -param1 * var9;
+            var14 = -((this.field_r << 4) - param0) * var9 + -param1 * var10;
+            var15 = -param0 * var10 + ((this.field_t << 4) - param1) * var9;
+            var16 = --param0 * var9 + ((this.field_t << 4) - param1) * var10;
+            var17 = ((this.field_r << 4) - param0) * var10 + ((this.field_t << 4) - param1) * var9;
+            var18 = -((this.field_r << 4) - param0) * var9 + ((this.field_t << 4) - param1) * var10;
             if (var11 >= var13) {
               var19 = var13;
               var20 = var11;
@@ -2765,11 +2821,11 @@ class ci extends oj {
                                     break L20;
                                   } else {
                                     var33 = var37 >> 12;
-                                    if (var37 >> 12 >= ((ci) this).field_r) {
+                                    if (var37 >> 12 >= this.field_r) {
                                       break L20;
                                     } else {
                                       var34 = var38 >> 12;
-                                      if (var38 >> 12 < ((ci) this).field_t) {
+                                      if (var38 >> 12 < this.field_t) {
                                         this.c(var23, var33, var34, var37, var38);
                                         var39++;
                                         var37 = var37 + var28;
@@ -2831,7 +2887,7 @@ class ci extends oj {
                           } else {
                             L24: {
                               var40 = 0;
-                              var35 = var38 - (((ci) this).field_t << 12);
+                              var35 = var38 - (this.field_t << 12);
                               if (var35 >= 0) {
                                 if (var27 != 0) {
                                   var35 = (var27 - var35) / var27;
@@ -2862,7 +2918,7 @@ class ci extends oj {
                                       break L26;
                                     } else {
                                       var33 = var37 >> 12;
-                                      if (var37 >> 12 < ((ci) this).field_r) {
+                                      if (var37 >> 12 < this.field_r) {
                                         var34 = var38 >> 12;
                                         this.c(var23, var33, var34, var37, var38);
                                         var39++;
@@ -2902,7 +2958,7 @@ class ci extends oj {
                           var38 = var32 + (var29 * var27 >> 4);
                           var39 = var20;
                           var40 = 0;
-                          var35 = var37 - (((ci) this).field_r << 12);
+                          var35 = var37 - (this.field_r << 12);
                           if (var35 >= 0) {
                             if (var28 != 0) {
                               var35 = (var28 - var35) / var28;
@@ -2958,7 +3014,7 @@ class ci extends oj {
                                       break L32;
                                     } else {
                                       var34 = var38 >> 12;
-                                      if (var38 >> 12 < ((ci) this).field_t) {
+                                      if (var38 >> 12 < this.field_t) {
                                         var33 = var37 >> 12;
                                         this.c(var23, var33, var34, var37, var38);
                                         var39++;
@@ -2996,7 +3052,7 @@ class ci extends oj {
                           var38 = var32 + (var29 * var27 >> 4);
                           var39 = var20;
                           var40 = 0;
-                          var35 = var37 - (((ci) this).field_r << 12);
+                          var35 = var37 - (this.field_r << 12);
                           if (var35 >= 0) {
                             if (var28 != 0) {
                               var35 = (var28 - var35) / var28;
@@ -3021,7 +3077,7 @@ class ci extends oj {
                           } else {
                             L36: {
                               var40 = 0;
-                              var35 = var38 - (((ci) this).field_t << 12);
+                              var35 = var38 - (this.field_t << 12);
                               if (var35 >= 0) {
                                 if (var27 != 0) {
                                   var35 = (var27 - var35) / var27;
@@ -3103,12 +3159,12 @@ class ci extends oj {
         int var8 = 0;
         int var9 = 0;
         L0: {
-          param0 = param0 + ((ci) this).field_p;
-          param1 = param1 + ((ci) this).field_v;
+          param0 = param0 + this.field_p;
+          param1 = param1 + this.field_v;
           var3 = param0 + param1 * l.field_k;
           var4 = 0;
-          var5 = ((ci) this).field_t;
-          var6 = ((ci) this).field_r;
+          var5 = this.field_t;
+          var6 = this.field_r;
           var7 = l.field_k - var6;
           var8 = 0;
           if (param1 >= l.field_d) {
@@ -3159,7 +3215,7 @@ class ci extends oj {
           return;
         } else {
           if (var5 > 0) {
-            ci.a(l.field_i, ((ci) this).field_z, var4, var3, var6, var5, var7, var8);
+            ci.a(l.field_i, this.field_z, var4, var3, var6, var5, var7, var8);
             return;
           } else {
             return;
@@ -3168,16 +3224,19 @@ class ci extends oj {
     }
 
     ci(int param0, int param1) {
-        ((ci) this).field_z = new int[param0 * param1];
-        ((ci) this).field_q = param0;
-        ((ci) this).field_r = param0;
-        ((ci) this).field_u = param1;
-        ((ci) this).field_t = param1;
-        ((ci) this).field_v = 0;
-        ((ci) this).field_p = 0;
+        this.field_z = new int[param0 * param1];
+        this.field_q = param0;
+        this.field_r = param0;
+        this.field_u = param1;
+        this.field_t = param1;
+        this.field_v = 0;
+        this.field_p = 0;
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+        int incrementValue$403 = 0;
+        int incrementValue$404 = 0;
+        int incrementValue$405 = 0;
         int var12 = 0;
         int var13 = 0;
         var12 = param11 & 16711935;
@@ -3195,7 +3254,7 @@ class ci extends oj {
                 param6++;
                 continue L0;
               } else {
-                int incrementValue$403 = param3;
+                incrementValue$403 = param3;
                 param3++;
                 param2 = param1[incrementValue$403];
                 if (param2 == 0) {
@@ -3204,14 +3263,14 @@ class ci extends oj {
                   continue L1;
                 } else {
                   if (param2 >> 8 != (param2 & 65535)) {
-                    int incrementValue$404 = param4;
+                    incrementValue$404 = param4;
                     param4++;
                     param0[incrementValue$404] = param2;
                     param5++;
                     continue L1;
                   } else {
                     param2 = param2 & 255;
-                    int incrementValue$405 = param4;
+                    incrementValue$405 = param4;
                     param4++;
                     param0[incrementValue$405] = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
                     param5++;
@@ -3233,12 +3292,12 @@ class ci extends oj {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ci) this).field_p;
-          param1 = param1 + ((ci) this).field_v;
+          param0 = param0 + this.field_p;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * l.field_k;
           var5 = 0;
-          var6 = ((ci) this).field_t;
-          var7 = ((ci) this).field_r;
+          var6 = this.field_t;
+          var7 = this.field_r;
           var8 = l.field_k - var7;
           var9 = 0;
           if (param1 >= l.field_d) {
@@ -3289,7 +3348,7 @@ class ci extends oj {
           return;
         } else {
           if (var6 > 0) {
-            ci.b(l.field_i, ((ci) this).field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+            ci.b(l.field_i, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -3298,6 +3357,7 @@ class ci extends oj {
     }
 
     ci(byte[] param0, java.awt.Component param1) {
+        boolean discarded$1 = false;
         InterruptedException var3 = null;
         java.awt.Image var3_ref = null;
         java.awt.MediaTracker var4 = null;
@@ -3309,18 +3369,18 @@ class ci extends oj {
             var4 = new java.awt.MediaTracker(param1);
             var4.addImage(var3_ref, 0);
             var4.waitForAll();
-            ((ci) this).field_r = var3_ref.getWidth((java.awt.image.ImageObserver) (Object) param1);
-            ((ci) this).field_t = var3_ref.getHeight((java.awt.image.ImageObserver) (Object) param1);
-            ((ci) this).field_q = ((ci) this).field_r;
-            ((ci) this).field_u = ((ci) this).field_t;
-            ((ci) this).field_p = 0;
-            ((ci) this).field_v = 0;
-            ((ci) this).field_z = new int[((ci) this).field_r * ((ci) this).field_t];
-            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, ((ci) this).field_r, ((ci) this).field_t, ((ci) this).field_z, 0, ((ci) this).field_r);
-            boolean discarded$1 = var5.grabPixels();
+            this.field_r = var3_ref.getWidth((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_t = var3_ref.getHeight((java.awt.image.ImageObserver) ((Object) param1));
+            this.field_q = this.field_r;
+            this.field_u = this.field_t;
+            this.field_p = 0;
+            this.field_v = 0;
+            this.field_z = new int[this.field_r * this.field_t];
+            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, this.field_r, this.field_t, this.field_z, 0, this.field_r);
+            discarded$1 = var5.grabPixels();
             break L0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
+        } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = (InterruptedException) (Object) decompiledCaughtException;
@@ -3356,7 +3416,7 @@ class ci extends oj {
         int stackOut_24_0 = 0;
         int stackOut_23_0 = 0;
         L0: {
-          var6 = param2 * ((ci) this).field_r + param1;
+          var6 = param2 * this.field_r + param1;
           param3 = param3 & 4095;
           param4 = param4 & 4095;
           if (param2 < 0) {
@@ -3373,7 +3433,7 @@ class ci extends oj {
                 break L1;
               } else {
                 L2: {
-                  var7 = ((ci) this).field_z[var6];
+                  var7 = this.field_z[var6];
                   if (var7 == 0) {
                     stackOut_4_0 = 0;
                     stackIn_5_0 = stackOut_4_0;
@@ -3388,13 +3448,13 @@ class ci extends oj {
                 break L1;
               }
             }
-            if (param1 >= ((ci) this).field_r - 1) {
+            if (param1 >= this.field_r - 1) {
               var12 = 0;
               var8 = 0;
               break L0;
             } else {
               L3: {
-                var8 = ((ci) this).field_z[var6 + 1];
+                var8 = this.field_z[var6 + 1];
                 if (var8 == 0) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
@@ -3411,7 +3471,7 @@ class ci extends oj {
           }
         }
         L4: {
-          if (param2 >= ((ci) this).field_t - 1) {
+          if (param2 >= this.field_t - 1) {
             var14 = 0;
             var13 = 0;
             var10 = 0;
@@ -3425,7 +3485,7 @@ class ci extends oj {
                 break L5;
               } else {
                 L6: {
-                  var9 = ((ci) this).field_z[var6 + ((ci) this).field_r];
+                  var9 = this.field_z[var6 + this.field_r];
                   if (var9 == 0) {
                     stackOut_18_0 = 0;
                     stackIn_19_0 = stackOut_18_0;
@@ -3440,13 +3500,13 @@ class ci extends oj {
                 break L5;
               }
             }
-            if (param1 >= ((ci) this).field_r - 1) {
+            if (param1 >= this.field_r - 1) {
               var14 = 0;
               var10 = 0;
               break L4;
             } else {
               L7: {
-                var10 = ((ci) this).field_z[var6 + ((ci) this).field_r + 1];
+                var10 = this.field_z[var6 + this.field_r + 1];
                 if (var10 == 0) {
                   stackOut_24_0 = 0;
                   stackIn_25_0 = stackOut_24_0;
@@ -3518,12 +3578,12 @@ class ci extends oj {
         int var10 = 0;
         if (param2 != 256) {
           L0: {
-            param0 = param0 + ((ci) this).field_p;
-            param1 = param1 + ((ci) this).field_v;
+            param0 = param0 + this.field_p;
+            param1 = param1 + this.field_v;
             var4 = param0 + param1 * l.field_k;
             var5 = 0;
-            var6 = ((ci) this).field_t;
-            var7 = ((ci) this).field_r;
+            var6 = this.field_t;
+            var7 = this.field_r;
             var8 = l.field_k - var7;
             var9 = 0;
             if (param1 >= l.field_d) {
@@ -3574,14 +3634,14 @@ class ci extends oj {
             return;
           } else {
             if (var6 > 0) {
-              ci.a(l.field_i, ((ci) this).field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+              ci.a(l.field_i, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
               return;
             } else {
               return;
             }
           }
         } else {
-          ((ci) this).b(param0, param1);
+          this.b(param0, param1);
           return;
         }
     }
@@ -3595,12 +3655,12 @@ class ci extends oj {
         int var9 = 0;
         int var10 = 0;
         L0: {
-          param0 = param0 + ((ci) this).field_p;
-          param1 = param1 + ((ci) this).field_v;
+          param0 = param0 + this.field_p;
+          param1 = param1 + this.field_v;
           var4 = param0 + param1 * l.field_k;
           var5 = 0;
-          var6 = ((ci) this).field_t;
-          var7 = ((ci) this).field_r;
+          var6 = this.field_t;
+          var7 = this.field_r;
           var8 = l.field_k - var7;
           var9 = 0;
           if (param1 >= l.field_d) {
@@ -3651,7 +3711,7 @@ class ci extends oj {
           return;
         } else {
           if (var6 > 0) {
-            ci.c(l.field_i, ((ci) this).field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+            ci.c(l.field_i, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
             return;
           } else {
             return;
@@ -3660,6 +3720,10 @@ class ci extends oj {
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -3689,7 +3753,7 @@ class ci extends oj {
                 var15++;
                 continue L0;
               } else {
-                int incrementValue$4 = param3;
+                incrementValue$4 = param3;
                 param3++;
                 param2 = param1[incrementValue$4];
                 if (param2 == 0) {
@@ -3708,13 +3772,13 @@ class ci extends oj {
                         break L2;
                       } else {
                         if (var17 > 128) {
-                          int incrementValue$5 = param4;
+                          incrementValue$5 = param4;
                           param4++;
                           param0[incrementValue$5] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
                           var16++;
                           continue L1;
                         } else {
-                          int incrementValue$6 = param4;
+                          incrementValue$6 = param4;
                           param4++;
                           param0[incrementValue$6] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
                           var16++;
@@ -3723,7 +3787,7 @@ class ci extends oj {
                       }
                     }
                   }
-                  int incrementValue$7 = param4;
+                  incrementValue$7 = param4;
                   param4++;
                   param0[incrementValue$7] = param2;
                   var16++;
@@ -3764,10 +3828,10 @@ class ci extends oj {
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
         L0: {
-          var3 = ((ci) this).field_r >> 2;
-          var4 = ((ci) this).field_t >> 2;
-          param0 = param0 + ((ci) this).field_p / 4;
-          param1 = param1 + ((ci) this).field_v / 4;
+          var3 = this.field_r >> 2;
+          var4 = this.field_t >> 2;
+          param0 = param0 + this.field_p / 4;
+          param1 = param1 + this.field_v / 4;
           if (param0 >= l.field_b) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -3781,7 +3845,7 @@ class ci extends oj {
         L1: {
           var5 = stackIn_3_0;
           if (param0 + var3 <= l.field_f) {
-            stackOut_5_0 = ((ci) this).field_r - 4;
+            stackOut_5_0 = this.field_r - 4;
             stackIn_6_0 = stackOut_5_0;
             break L1;
           } else {
@@ -3805,7 +3869,7 @@ class ci extends oj {
         L3: {
           var7 = stackIn_9_0;
           if (param1 + var4 <= l.field_c) {
-            stackOut_11_0 = ((ci) this).field_t - 4;
+            stackOut_11_0 = this.field_t - 4;
             stackIn_12_0 = stackOut_11_0;
             break L3;
           } else {
@@ -3820,7 +3884,7 @@ class ci extends oj {
           if (var9 > var8) {
             return;
           } else {
-            var10 = var9 * ((ci) this).field_r + var5;
+            var10 = var9 * this.field_r + var5;
             var11 = (param1 + (var9 >> 2)) * l.field_k + (param0 + (var5 >> 2));
             var12 = var5;
             L5: while (true) {
@@ -3847,7 +3911,7 @@ class ci extends oj {
                         continue L6;
                       } else {
                         L8: {
-                          var13 = ((ci) this).field_z[var10 + var16 * ((ci) this).field_r + var17];
+                          var13 = this.field_z[var10 + var16 * this.field_r + var17];
                           if (var13 != 0) {
                             break L8;
                           } else {
@@ -3870,12 +3934,12 @@ class ci extends oj {
     }
 
     void f(int param0, int param1) {
-        param0 = param0 + (((ci) this).field_p >> 1);
-        param1 = param1 + (((ci) this).field_v >> 1);
+        param0 = param0 + (this.field_p >> 1);
+        param1 = param1 + (this.field_v >> 1);
         int var3 = param0 < l.field_b ? l.field_b - param0 << 1 : 0;
-        int var4 = param0 + (((ci) this).field_r >> 1) > l.field_f ? l.field_f - param0 << 1 : ((ci) this).field_r;
+        int var4 = param0 + (this.field_r >> 1) > l.field_f ? l.field_f - param0 << 1 : this.field_r;
         int var5 = param1 < l.field_d ? l.field_d - param1 << 1 : 0;
-        int var6 = param1 + (((ci) this).field_t >> 1) > l.field_c ? l.field_c - param1 << 1 : ((ci) this).field_t;
-        ci.a(((ci) this).field_z, var5 * ((ci) this).field_r + var3, (param1 + (var5 >> 1)) * l.field_k + (param0 + (var3 >> 1)), (((ci) this).field_r << 1) - (var4 - var3) + (((ci) this).field_r & 1), l.field_k - (var4 - var3 >> 1), ((ci) this).field_r, var4 - var3 >> 1, var6 - var5 >> 1);
+        int var6 = param1 + (this.field_t >> 1) > l.field_c ? l.field_c - param1 << 1 : this.field_t;
+        ci.a(this.field_z, var5 * this.field_r + var3, (param1 + (var5 >> 1)) * l.field_k + (param0 + (var3 >> 1)), (this.field_r << 1) - (var4 - var3) + (this.field_r & 1), l.field_k - (var4 - var3 >> 1), this.field_r, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 }

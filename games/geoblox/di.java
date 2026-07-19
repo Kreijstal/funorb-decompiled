@@ -14,17 +14,17 @@ final class di {
         og var3 = null;
         int var4 = 0;
         byte[] var5 = null;
-        var3 = (og) ((di) this).field_f.a((byte) 106, (long)param1);
+        var3 = (og) (this.field_f.a((byte) 106, (long)param1));
         if (var3 != null) {
           return var3;
         } else {
           L0: {
             var4 = 3 % ((param0 - 57) / 42);
             if (param1 >= 32768) {
-              var5 = ((di) this).field_b.a(1, -28153, 32767 & param1);
+              var5 = this.field_b.a(1, -28153, 32767 & param1);
               break L0;
             } else {
-              var5 = ((di) this).field_d.a(1, -28153, param1);
+              var5 = this.field_d.a(1, -28153, param1);
               break L0;
             }
           }
@@ -45,13 +45,13 @@ final class di {
               break L2;
             }
           }
-          ((di) this).field_f.a(-126, (long)param1, (Object) (Object) var3);
+          this.field_f.a(-126, (long)param1, var3);
           return var3;
         }
     }
 
     public static void a(byte param0) {
-        int var1 = -52;
+        int var1 = 52 / ((25 - param0) / 54);
         field_e = null;
         field_c = null;
     }
@@ -65,7 +65,7 @@ final class di {
         var3 = Geoblox.field_C;
         try {
           L0: {
-            var4 = (wc) (Object) l.field_g.g(param1 ^ param1);
+            var4 = (wc) ((Object) l.field_g.g(param1 ^ param1));
             L1: while (true) {
               if (var4 == null) {
                 var2 = qa.field_e.g(0);
@@ -73,14 +73,14 @@ final class di {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    gf.a(6, 125);
+                    gf.a(param0, 125);
                     var2 = qa.field_e.d(1);
                     continue L2;
                   }
                 }
               } else {
-                o.a(6, var4, param1 + -21718);
-                var4 = (wc) (Object) l.field_g.d(1);
+                o.a(param0, var4, param1 + -21718);
+                var4 = (wc) ((Object) l.field_g.d(1));
                 continue L1;
               }
             }
@@ -88,7 +88,7 @@ final class di {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2_ref, "di.B(" + 6 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) var2_ref), "di.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -97,10 +97,6 @@ final class di {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
         field_c = "Create";
     }

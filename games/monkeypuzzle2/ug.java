@@ -9,6 +9,9 @@ class ug {
 
     public static void b(int param0) {
         field_b = null;
+        if (param0 != -1733) {
+            field_b = (String) null;
+        }
     }
 
     final boolean d(int param0) {
@@ -16,15 +19,15 @@ class ug {
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
         if (param0 != -3548) {
-          ((ug) this).field_d = null;
-          if (((ug) this).field_c != null) {
+          this.field_d = (ug) null;
+          if (this.field_c != null) {
             return true;
           } else {
             return false;
           }
         } else {
           L0: {
-            if (((ug) this).field_c == null) {
+            if (this.field_c == null) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -39,20 +42,20 @@ class ug {
     }
 
     final void c(int param0) {
-        if (null == ((ug) this).field_c) {
+        if (null == this.field_c) {
           return;
         } else {
-          ((ug) this).field_c.field_d = ((ug) this).field_d;
+          this.field_c.field_d = this.field_d;
           if (param0 != -19822) {
-            ((ug) this).field_a = -48L;
-            ((ug) this).field_d.field_c = ((ug) this).field_c;
-            ((ug) this).field_d = null;
-            ((ug) this).field_c = null;
+            this.field_a = -48L;
+            this.field_d.field_c = this.field_c;
+            this.field_d = null;
+            this.field_c = null;
             return;
           } else {
-            ((ug) this).field_d.field_c = ((ug) this).field_c;
-            ((ug) this).field_d = null;
-            ((ug) this).field_c = null;
+            this.field_d.field_c = this.field_c;
+            this.field_d = null;
+            this.field_c = null;
             return;
           }
         }

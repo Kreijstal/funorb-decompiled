@@ -33,6 +33,8 @@ final class so {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -50,7 +52,7 @@ final class so {
                 var11++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -60,7 +62,7 @@ final class so {
                 } else {
                   var9 = param0[param4];
                   var10 = 256 - (param2 & 255);
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (var9 & 16711935) * var10 >> 8 & 16711935 | (var9 & 65280) * var10 >> 8 & 65280;
                   var12++;
@@ -163,7 +165,7 @@ final class so {
                 } else {
                   L2: {
                     var2 = var1_ref.field_b;
-                    if (((fb) (Object) var1_ref).field_x <= ((fb) (Object) var2).field_x) {
+                    if (((fb) ((Object) var1_ref)).field_x <= ((fb) ((Object) var2)).field_x) {
                       break L2;
                     } else {
                       var1_ref.b(-27598);
@@ -258,6 +260,8 @@ final class so {
     }
 
     final static void a(int param0) {
+        int incrementValue$7877 = 0;
+        int incrementValue$7878 = 0;
         int var1 = 0;
         int[] var2 = null;
         int var3 = 0;
@@ -332,14 +336,14 @@ final class so {
                         }
                       }
                     }
-                    int incrementValue$7877 = var1;
+                    incrementValue$7877 = var1;
                     var1++;
                     var6[incrementValue$7877] = param0;
                     var8++;
                     continue L1;
                   }
                 }
-                int incrementValue$7878 = var1;
+                incrementValue$7878 = var1;
                 var1++;
                 var6[incrementValue$7878] = var2[incrementValue$7878];
                 var8++;
@@ -351,6 +355,8 @@ final class so {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -368,7 +374,7 @@ final class so {
                 var12++;
                 continue L0;
               } else {
-                int incrementValue$66 = param3;
+                incrementValue$66 = param3;
                 param3++;
                 param2 = param1[incrementValue$66];
                 if (param2 == 0) {
@@ -378,7 +384,7 @@ final class so {
                 } else {
                   var10 = param0[param4];
                   var11 = 256 - ((param2 & 255) * param9 >> 8);
-                  int incrementValue$67 = param4;
+                  incrementValue$67 = param4;
                   param4++;
                   param0[incrementValue$67] = (var10 & 16711935) * var11 >> 8 & 16711935 | (var10 & 65280) * var11 >> 8 & 65280;
                   var13++;
@@ -480,7 +486,7 @@ final class so {
               if (!(var1.field_b instanceof fb)) {
                 break L1;
               } else {
-                if (((fb) (Object) var1).field_x <= ((fb) (Object) var1.field_b).field_x) {
+                if (((fb) ((Object) var1)).field_x <= ((fb) ((Object) var1.field_b)).field_x) {
                   var1 = var1.field_b;
                   continue L0;
                 } else {
@@ -494,6 +500,9 @@ final class so {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$403 = 0;
+        int incrementValue$404 = 0;
+        int incrementValue$405 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -513,7 +522,7 @@ final class so {
                 var12++;
                 continue L0;
               } else {
-                int incrementValue$403 = param3;
+                incrementValue$403 = param3;
                 param3--;
                 param2 = param1[incrementValue$403];
                 if (param2 == 0) {
@@ -522,14 +531,14 @@ final class so {
                   continue L1;
                 } else {
                   if (param2 >> 8 != (param2 & 65535)) {
-                    int incrementValue$404 = param4;
+                    incrementValue$404 = param4;
                     param4++;
                     param0[incrementValue$404] = param2;
                     var13++;
                     continue L1;
                   } else {
                     param2 = param2 & 255;
-                    int incrementValue$405 = param4;
+                    incrementValue$405 = param4;
                     param4++;
                     param0[incrementValue$405] = (param2 * var10 >> 8 & 16711934) + (param2 * var11 & 65280) + 1;
                     var13++;
@@ -687,10 +696,6 @@ final class so {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new Random();
     }
 }

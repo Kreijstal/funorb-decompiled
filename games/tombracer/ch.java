@@ -9,79 +9,121 @@ final class ch implements Runnable {
     volatile boolean field_a;
 
     public final void run() {
+        Exception exception = null;
         int var1_int = 0;
-        Exception var1 = null;
         kta var2 = null;
         Throwable var3 = null;
         int var4 = 0;
         Object var5 = null;
-        Object var6 = null;
+        String var6 = null;
+        int decompiledRegionSelector0 = 0;
+        int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
         var4 = TombRacer.field_G ? 1 : 0;
-        ((ch) this).field_b = true;
+        this.field_b = true;
         try {
-          L0: while (true) {
-            if (((ch) this).field_a) {
-              ((ch) this).field_b = false;
-              return;
-            } else {
-              var1_int = 0;
-              L1: while (true) {
-                if (2 <= var1_int) {
-                  vja.a(0, 10L);
-                  var5 = null;
-                  kla.a(((ch) this).field_d, (byte) 50, (Object) null);
-                  continue L0;
-                } else {
-                  L2: {
-                    var2 = ((ch) this).field_c[var1_int];
-                    if (var2 == null) {
-                      var1_int++;
-                      var1_int++;
-                      break L2;
+          L0: {
+            try {
+              L1: {
+                L2: while (true) {
+                  L3: {
+                    if (this.field_a) {
+                      break L3;
                     } else {
-                      var2.c();
-                      var1_int++;
-                      break L2;
+                      if (var4 != 0) {
+                        decompiledRegionSelector0 = 1;
+                        break L1;
+                      } else {
+                        var1_int = 0;
+                        L4: while (true) {
+                          L5: {
+                            L6: {
+                              if (2 <= var1_int) {
+                                break L6;
+                              } else {
+                                var2 = this.field_c[var1_int];
+                                if (var4 != 0) {
+                                  break L5;
+                                } else {
+                                  L7: {
+                                    if (var2 == null) {
+                                      break L7;
+                                    } else {
+                                      var2.c();
+                                      break L7;
+                                    }
+                                  }
+                                  var1_int++;
+                                  if (var4 == 0) {
+                                    continue L4;
+                                  } else {
+                                    break L6;
+                                  }
+                                }
+                              }
+                            }
+                            vja.a(0, 10L);
+                            var5 = (Object) null;
+                            kla.a(this.field_d, (byte) 50, (Object) null);
+                            break L5;
+                          }
+                          if (var4 == 0) {
+                            continue L2;
+                          } else {
+                            break L3;
+                          }
+                        }
+                      }
                     }
                   }
-                  var1_int++;
-                  continue L1;
+                  decompiledRegionSelector0 = 0;
+                  break L1;
                 }
               }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              exception = (Exception) (Object) decompiledCaughtException;
+              var6 = (String) null;
+              ssa.a((String) null, (byte) 121, (Throwable) ((Object) exception));
+              this.field_b = false;
+              return;
+            }
+            if (decompiledRegionSelector0 == 0) {
+              decompiledRegionSelector1 = 0;
+              break L0;
+            } else {
+              decompiledRegionSelector1 = 1;
+              break L0;
             }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Exception) (Object) decompiledCaughtException;
-          var6 = null;
-          ssa.a((String) null, (byte) 121, (Throwable) (Object) var1);
-          ((ch) this).field_b = false;
-          return;
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
-          ((ch) this).field_b = false;
+          this.field_b = false;
           throw ch.<RuntimeException>$cfr$sneakyThrow(var3);
+        }
+        L8: {
+          if (decompiledRegionSelector1 == 0) {
+            this.field_b = false;
+            break L8;
+          } else {
+            break L8;
+          }
         }
     }
 
     public static void a(byte param0) {
         field_e = null;
-        int var1 = 56;
+        int var1 = 56 / ((31 - param0) / 61);
     }
 
     ch() {
-        ((ch) this).field_c = new kta[2];
-        ((ch) this).field_a = false;
-        ((ch) this).field_b = false;
+        this.field_c = new kta[2];
+        this.field_a = false;
+        this.field_b = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Suggested names: ";
     }
 

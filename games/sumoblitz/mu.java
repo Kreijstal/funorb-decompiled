@@ -15,14 +15,17 @@ abstract class mu extends pj {
     static hr[] field_B;
 
     final static void e(int param0) {
-        Object var2 = null;
+        String var2 = (String) null;
         wv.a((byte) 77, "", (String) null);
+        if (param0 != 0) {
+            field_r = (String) null;
+        }
     }
 
     public static void a(int param0) {
         field_t = null;
         field_r = null;
-        int var1 = -2;
+        int var1 = -35 % ((param0 - -7) / 32);
         field_B = null;
         field_y = null;
     }
@@ -31,10 +34,6 @@ abstract class mu extends pj {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_r = "MY HISCORES";
         field_y = new int[4096];

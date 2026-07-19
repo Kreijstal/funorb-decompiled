@@ -7,22 +7,23 @@ abstract class eca extends sc implements en {
     private uf field_c;
 
     final String d(int param0) {
-        Object var3 = null;
+        qrb discarded$2 = null;
+        String var3 = null;
         if (param0 != 16384) {
-          var3 = null;
-          qrb discarded$2 = ((eca) this).a((String) null, -101);
-          return ((eca) this).b(((eca) this).field_c.field_j, -1);
+          var3 = (String) null;
+          discarded$2 = this.a((String) null, -101);
+          return this.b(this.field_c.field_j, -1);
         } else {
-          return ((eca) this).b(((eca) this).field_c.field_j, -1);
+          return this.b(this.field_c.field_j, -1);
         }
     }
 
     final qrb b(int param0) {
         if (param0 != -1) {
-          field_d = null;
-          return ((eca) this).a(((eca) this).field_c.field_j, 16384);
+          field_d = (String) null;
+          return this.a(this.field_c.field_j, 16384);
         } else {
-          return ((eca) this).a(((eca) this).field_c.field_j, 16384);
+          return this.a(this.field_c.field_j, 16384);
         }
     }
 
@@ -31,9 +32,9 @@ abstract class eca extends sc implements en {
             return;
         }
         try {
-            ((eca) this).a(20);
+            this.a(20);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "eca.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "eca.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -44,8 +45,8 @@ abstract class eca extends sc implements en {
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
         if (param0 <= -100) {
-          if (((eca) this).field_c.field_j != null) {
-            if (((eca) this).field_c.field_j.length() == 0) {
+          if (this.field_c.field_j != null) {
+            if (this.field_c.field_j.length() == 0) {
               return true;
             } else {
               return false;
@@ -56,12 +57,12 @@ abstract class eca extends sc implements en {
             return stackIn_11_0 != 0;
           }
         } else {
-          ((eca) this).field_c = null;
-          if (((eca) this).field_c.field_j == null) {
+          this.field_c = (uf) null;
+          if (this.field_c.field_j == null) {
             return true;
           } else {
             L0: {
-              if (((eca) this).field_c.field_j.length() != 0) {
+              if (this.field_c.field_j.length() != 0) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
@@ -77,12 +78,17 @@ abstract class eca extends sc implements en {
     }
 
     public static void e(int param0) {
+        if (param0 != -27183) {
+            field_d = (String) null;
+            field_d = null;
+            return;
+        }
         field_d = null;
     }
 
     public final void a(int param0, uf param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        uf var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -105,8 +111,8 @@ abstract class eca extends sc implements en {
               if (param0 == -12409) {
                 break L1;
               } else {
-                var4 = null;
-                ((eca) this).a((uf) null, (byte) 43);
+                var4 = (uf) null;
+                this.a((uf) null, (byte) 43);
                 break L1;
               }
             }
@@ -116,23 +122,23 @@ abstract class eca extends sc implements en {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("eca.I(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -140,15 +146,15 @@ abstract class eca extends sc implements en {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     eca(uf param0) {
         try {
-            ((eca) this).field_c = param0;
+            this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "eca.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw rta.a((Throwable) ((Object) runtimeException), "eca.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -157,10 +163,6 @@ abstract class eca extends sc implements en {
     abstract String b(String param0, int param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Halve custom variables";
         field_e = 16384;
     }

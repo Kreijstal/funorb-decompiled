@@ -27,6 +27,7 @@ final class pf extends mi {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_21_0 = 0;
         int stackOut_19_0 = 0;
@@ -44,12 +45,13 @@ final class pf extends mi {
             if (!super.a((int) (char)param0, param1, param2, param3, param4, param5, param6)) {
               stackOut_21_0 = 0;
               stackIn_22_0 = stackOut_21_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               L1: {
-                var8_int = -((pf) this).field_B + (param2 - param1);
-                var9 = ((pf) this).field_q + -(2 * ((pf) this).field_B);
-                if (~var9 > ~var8_int) {
+                var8_int = -this.field_B + (param2 - param1);
+                var9 = this.field_q + -(2 * this.field_B);
+                if (var9 < var8_int) {
                   var8_int = var9;
                   break L1;
                 } else {
@@ -57,7 +59,7 @@ final class pf extends mi {
                 }
               }
               L2: {
-                if (var8_int >= 0) {
+                if ((var8_int ^ -1) <= -1) {
                   break L2;
                 } else {
                   var8_int = 0;
@@ -65,25 +67,25 @@ final class pf extends mi {
                 }
               }
               L3: {
-                var8_int = var8_int * ((pf) this).field_y / var9;
-                if (param3 != 1) {
-                  if (param3 == 2) {
+                var8_int = var8_int * this.field_y / var9;
+                if ((param3 ^ -1) != -2) {
+                  if (-3 == (param3 ^ -1)) {
                     var10 = 2147483647;
                     var11 = -1;
                     var12 = 0;
                     L4: while (true) {
-                      if (~((pf) this).field_w.a((byte) 123) >= ~var12) {
-                        if (var11 < 0) {
+                      if (this.field_w.a((byte) 123) <= var12) {
+                        if (-1 < (var11 ^ -1)) {
                           break L3;
                         } else {
-                          ((pf) this).field_w.a(var11, (byte) -58);
+                          this.field_w.a(var11, (byte) -58);
                           break L3;
                         }
                       } else {
                         L5: {
-                          var13 = -var8_int + ((pf) this).field_w.b(var12, 1);
+                          var13 = -var8_int + this.field_w.b(var12, 1);
                           var13 = var13 * var13;
-                          if (~var13 > ~var10) {
+                          if (var13 < var10) {
                             var11 = var12;
                             var10 = var13;
                             break L5;
@@ -99,36 +101,37 @@ final class pf extends mi {
                     return true;
                   }
                 } else {
-                  ((pf) this).field_w.a((byte) -50, var8_int);
+                  this.field_w.a((byte) -50, var8_int);
                   break L3;
                 }
               }
               stackOut_19_0 = 1;
               stackIn_20_0 = stackOut_19_0;
-              return stackIn_20_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var8 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var8;
+            stackOut_23_0 = (RuntimeException) (var8);
             stackOut_23_1 = new StringBuilder().append("pf.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param5 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L6;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -136,32 +139,36 @@ final class pf extends mi {
               break L6;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param6 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param6 + ')');
         }
-        return stackIn_22_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_20_0 != 0;
+        } else {
+          return stackIn_22_0 != 0;
+        }
     }
 
     final int c(boolean param0) {
         if (!param0) {
             return 16;
         }
-        return ((pf) this).field_w.a((byte) -114);
+        return this.field_w.a((byte) -114);
     }
 
     final int a(int param0) {
         if (param0 != -3) {
             return -123;
         }
-        return ((pf) this).field_y;
+        return this.field_y;
     }
 
     final int a(boolean param0, int param1) {
-        if (param1 >= 0) {
-          if (((pf) this).field_w.a((byte) -32) > param1) {
+        if (-1 >= (param1 ^ -1)) {
+          if (this.field_w.a((byte) -32) > param1) {
             if (param0) {
               return -3;
             } else {
-              return ((pf) this).field_w.b(param1, 1);
+              return this.field_w.b(param1, 1);
             }
           } else {
             return -1;
@@ -176,14 +183,15 @@ final class pf extends mi {
     }
 
     public static void b(boolean param0) {
+        if (!param0) {
+            field_A = (int[]) null;
+            field_A = null;
+            return;
+        }
         field_A = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_A = new int[8192];
     }
 }

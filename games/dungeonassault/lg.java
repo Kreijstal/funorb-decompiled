@@ -36,30 +36,30 @@ final class lg {
     final void a(int param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
-        Object var5 = null;
+        cn var5 = null;
         var4 = DungeonAssault.field_K;
-        var3 = -1 + ((lg) this).field_g.length;
+        var3 = -1 + this.field_g.length;
         L0: while (true) {
           if (var3 < 0) {
             L1: {
               if (!param1) {
                 break L1;
               } else {
-                var5 = null;
+                var5 = (cn) null;
                 lg.a(54, -127, 107, -64, -29, (cn) null);
                 break L1;
               }
             }
             return;
           } else {
-            if (((lg) this).field_k[var3] <= 0) {
+            if (this.field_k[var3] <= 0) {
               param0--;
               if (0 <= param0) {
-                ((lg) this).field_g[var3] = ((lg) this).field_t + uj.a(((lg) this).field_o, 37, ((lg) this).field_f);
-                ((lg) this).field_i[var3] = ((lg) this).field_j + uj.a(((lg) this).field_o, 37, ((lg) this).field_B);
-                ((lg) this).field_q[var3] = ((lg) this).field_b - -uj.a(((lg) this).field_o, 37, ((lg) this).field_y);
-                ((lg) this).field_p[var3] = ((lg) this).field_A - -uj.a(((lg) this).field_o, 37, ((lg) this).field_z);
-                ((lg) this).field_k[var3] = 50;
+                this.field_g[var3] = this.field_t + uj.a(this.field_o, 37, this.field_f);
+                this.field_i[var3] = this.field_j + uj.a(this.field_o, 37, this.field_B);
+                this.field_q[var3] = this.field_b - -uj.a(this.field_o, 37, this.field_y);
+                this.field_p[var3] = this.field_A - -uj.a(this.field_o, 37, this.field_z);
+                this.field_k[var3] = 50;
                 var3--;
                 continue L0;
               } else {
@@ -67,11 +67,11 @@ final class lg {
                 continue L0;
               }
             } else {
-              ((lg) this).field_k[var3] = ((lg) this).field_k[var3] - 1;
-              ((lg) this).field_g[var3] = ((lg) this).field_g[var3] + ((lg) this).field_q[var3];
-              ((lg) this).field_i[var3] = ((lg) this).field_i[var3] + ((lg) this).field_p[var3];
-              ((lg) this).field_q[var3] = ((lg) this).field_q[var3] + ((lg) this).field_c;
-              ((lg) this).field_p[var3] = ((lg) this).field_p[var3] + ((lg) this).field_a;
+              this.field_k[var3] = this.field_k[var3] - 1;
+              this.field_g[var3] = this.field_g[var3] + this.field_q[var3];
+              this.field_i[var3] = this.field_i[var3] + this.field_p[var3];
+              this.field_q[var3] = this.field_q[var3] + this.field_c;
+              this.field_p[var3] = this.field_p[var3] + this.field_a;
               var3--;
               continue L0;
             }
@@ -86,13 +86,16 @@ final class lg {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
         if (128 <= var2) {
-            if (!(var2 >= 160)) {
+            if (!((var2 ^ -1) <= -161)) {
                 var3 = mh.field_d[-128 + var2];
                 if (!(0 != var3)) {
                     var3 = 63;
                 }
                 var2 = var3;
             }
+        }
+        if (param1 <= 92) {
+            lg.a(-80);
         }
         return (char)var2;
     }
@@ -109,41 +112,37 @@ final class lg {
         int var10 = 0;
         byte[] var11 = null;
         byte[] var12 = null;
-        byte[] var13 = null;
-        byte[] var14 = null;
         L0: {
           var10 = DungeonAssault.field_K;
-          var2 = ((lg) this).field_v.field_h;
-          var3 = ((lg) this).field_v.field_e;
-          ((lg) this).field_v.b();
-          var14 = ((lg) this).field_v.field_j;
-          var13 = var14;
-          var12 = var13;
+          var2 = this.field_v.field_h;
+          var3 = this.field_v.field_e;
+          this.field_v.b();
+          var12 = this.field_v.field_j;
           var11 = var12;
           var4 = var11;
           if (param0 == 486513968) {
             break L0;
           } else {
-            ((lg) this).field_o = null;
+            this.field_o = (Random) null;
             break L0;
           }
         }
-        var5 = -1 + ((lg) this).field_g.length;
+        var5 = -1 + this.field_g.length;
         L1: while (true) {
           if (0 > var5) {
             return;
           } else {
-            if (((lg) this).field_k[var5] > 0) {
-              var6 = ((lg) this).field_g[var5] >> 16;
-              var7 = ((lg) this).field_i[var5] >> 16;
-              if (var6 >= 0) {
+            if ((this.field_k[var5] ^ -1) < -1) {
+              var6 = this.field_g[var5] >> -156659184;
+              var7 = this.field_i[var5] >> 486513968;
+              if ((var6 ^ -1) <= -1) {
                 if (var2 > var6) {
                   if (var7 >= 0) {
                     if (var3 > var7) {
                       L2: {
                         var8 = var6 + var2 * var7;
-                        var9 = (((lg) this).field_k[var5] >> 2) + var14[var8];
-                        if (var9 > 255) {
+                        var9 = (this.field_k[var5] >> -656788510) + var12[var8];
+                        if (-256 > (var9 ^ -1)) {
                           var9 = 255;
                           break L2;
                         } else {
@@ -178,7 +177,7 @@ final class lg {
     }
 
     final static void a(int param0) {
-        jd var1 = (jd) (Object) ta.field_f.e(-24172);
+        jd var1 = (jd) ((Object) ta.field_f.e(-24172));
         if (!(var1 != null)) {
             tl.a(-63);
             return;
@@ -188,7 +187,7 @@ final class lg {
         int discarded$1 = var2.h(-122);
         int discarded$2 = var2.h(-38);
         int discarded$3 = var2.h(-39);
-        int var3 = -71;
+        int var3 = 71 / ((33 - param0) / 33);
         var1.a(false);
     }
 
@@ -205,25 +204,31 @@ final class lg {
         field_u = null;
         field_m = null;
         if (!param0) {
-            field_l = null;
+            field_l = (String) null;
         }
     }
 
     final static void a(int param0, int param1, String param2, int param3) {
+        char discarded$0 = 0;
+        cf dupTemp$1 = null;
+        if (param0 != 63) {
+            discarded$0 = lg.a((byte) 23, 52);
+        }
         ac var4 = gh.field_i[param3];
         if (var4 == null) {
             return;
         }
         try {
-            cf dupTemp$0 = hd.a(false, param1, "da_trap_" + param2);
-            var4.field_a = dupTemp$0;
-            var4.field_x = dupTemp$0;
+            dupTemp$1 = hd.a(false, param1, "da_trap_" + param2);
+            var4.field_a = dupTemp$1;
+            var4.field_x = dupTemp$1;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "lg.F(" + 63 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "lg.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, cn param5) {
+        int incrementValue$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -247,6 +252,7 @@ final class lg {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_35_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_32_0 = null;
         StringBuilder stackOut_32_1 = null;
@@ -260,7 +266,7 @@ final class lg {
         try {
           L0: {
             L1: {
-              var6_int = (-param2 + param0 << 8) / param5.field_E;
+              var6_int = (-param2 + param0 << -477385784) / param5.field_E;
               param3 = param3 + param5.field_A;
               if (param1 == 65280) {
                 break L1;
@@ -270,7 +276,7 @@ final class lg {
               }
             }
             L2: {
-              var7 = var6_int * param5.field_w + (param2 << 8);
+              var7 = var6_int * param5.field_w + (param2 << 1640939400);
               param4 = param4 + param5.field_w;
               var8 = param4 - -(param3 * gf.field_i);
               var9 = 0;
@@ -290,7 +296,7 @@ final class lg {
               }
             }
             L3: {
-              if (~(param3 + var10) < ~gf.field_e) {
+              if (param3 + var10 > gf.field_e) {
                 var10 = var10 - (-gf.field_e + param3 - -var10);
                 break L3;
               } else {
@@ -324,15 +330,16 @@ final class lg {
               }
             }
             L6: {
-              if (var11 <= 0) {
+              if ((var11 ^ -1) >= -1) {
                 break L6;
               } else {
-                if (var10 <= 0) {
+                if ((var10 ^ -1) >= -1) {
                   break L6;
                 } else {
                   param3 = -var10;
                   L7: while (true) {
                     if (0 <= param3) {
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       var14 = var7;
@@ -345,21 +352,21 @@ final class lg {
                           continue L7;
                         } else {
                           L9: {
-                            var15 = var14 >> 8;
+                            var15 = var14 >> 922957128;
                             var16 = -var15 + 256;
                             var14 = var14 + var6_int;
-                            if (var15 >= 0) {
+                            if (-1 >= (var15 ^ -1)) {
                               L10: {
-                                int incrementValue$1 = var9;
+                                incrementValue$1 = var9;
                                 var9++;
                                 var17 = param5.field_B[incrementValue$1];
                                 if (var17 == 0) {
                                   break L10;
                                 } else {
-                                  if (var15 <= 255) {
+                                  if (-256 <= (var15 ^ -1)) {
                                     var18 = gf.field_b[var8];
-                                    var19 = 16711935 & var15 * (16711935 & var17) + var16 * (var18 & 16711935) >> 8;
-                                    gf.field_b[var8] = (nb.a(16711772, nb.a(var17, 65280) * var15 + nb.a(65280, var18) * var16) >> 8) + var19;
+                                    var19 = 16711935 & var15 * (16711935 & var17) + var16 * (var18 & 16711935) >> -1359584920;
+                                    gf.field_b[var8] = (nb.a(16711772, nb.a(var17, 65280) * var15 + nb.a(65280, var18) * var16) >> 396430984) + var19;
                                     break L10;
                                   } else {
                                     gf.field_b[var8] = var17;
@@ -384,29 +391,30 @@ final class lg {
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var6 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) var6;
+            stackOut_32_0 = (RuntimeException) (var6);
             stackOut_32_1 = new StringBuilder().append("lg.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
             stackIn_33_1 = stackOut_32_1;
             if (param5 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
               stackOut_34_2 = "null";
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
               break L11;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "{...}";
               stackIn_35_0 = stackOut_33_0;
               stackIn_35_1 = stackOut_33_1;
@@ -414,35 +422,36 @@ final class lg {
               break L11;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     lg(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        ((lg) this).field_B = param3;
-        ((lg) this).field_k = new int[10000];
-        ((lg) this).field_f = param2;
-        ((lg) this).field_c = param8;
-        ((lg) this).field_p = new int[10000];
-        ((lg) this).field_t = param0;
-        ((lg) this).field_g = new int[10000];
-        ((lg) this).field_q = new int[10000];
-        ((lg) this).field_z = param7;
-        ((lg) this).field_i = new int[10000];
-        ((lg) this).field_y = param6;
-        ((lg) this).field_a = param9;
-        ((lg) this).field_A = param5;
-        ((lg) this).field_b = param4;
-        ((lg) this).field_j = param1;
-        ((lg) this).field_o = new Random(100L);
-        ((lg) this).field_v = new q(param10, param11, 256);
+        this.field_B = param3;
+        this.field_k = new int[10000];
+        this.field_f = param2;
+        this.field_c = param8;
+        this.field_p = new int[10000];
+        this.field_t = param0;
+        this.field_g = new int[10000];
+        this.field_q = new int[10000];
+        this.field_z = param7;
+        this.field_i = new int[10000];
+        this.field_y = param6;
+        this.field_a = param9;
+        this.field_A = param5;
+        this.field_b = param4;
+        this.field_j = param1;
+        this.field_o = new Random(100L);
+        this.field_v = new q(param10, param11, 256);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_s = "<col=FF0000>Lethal</col>";
         field_n = new ad(15, 0, 1, 0);

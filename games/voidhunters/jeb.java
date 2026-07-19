@@ -8,8 +8,9 @@ final class jeb extends mfb {
     static int[] field_c;
 
     final int c(int param0) {
+        int discarded$0 = 0;
         if (param0 != 0) {
-            int discarded$0 = ((jeb) this).a(true);
+            discarded$0 = this.a(true);
             return ava.field_a;
         }
         return ava.field_a;
@@ -29,7 +30,7 @@ final class jeb extends mfb {
 
     final int a(int param0) {
         if (param0 != 0) {
-            field_b = null;
+            field_b = (Random) null;
             return m.field_p;
         }
         return m.field_p;
@@ -48,16 +49,18 @@ final class jeb extends mfb {
     }
 
     final int k(int param0) {
+        int discarded$0 = 0;
         if (param0 != 0) {
-            int discarded$0 = ((jeb) this).k(108);
+            discarded$0 = this.k(108);
             return 6;
         }
         return 6;
     }
 
     final int a(boolean param0) {
+        boolean discarded$0 = false;
         if (param0) {
-            boolean discarded$0 = ((jeb) this).h((byte) 61);
+            discarded$0 = this.h((byte) 61);
             return 71;
         }
         return 71;
@@ -71,9 +74,10 @@ final class jeb extends mfb {
     }
 
     final int b(boolean param0) {
+        boolean discarded$0 = false;
         if (param0) {
-            Object var3 = null;
-            boolean discarded$0 = jeb.a(31, (int[]) null, 36L, (String) null, (byte) 17);
+            String var3 = (String) null;
+            discarded$0 = jeb.a(31, (int[]) null, 36L, (String) null, (byte) 17);
             return r.field_k;
         }
         return r.field_k;
@@ -84,7 +88,7 @@ final class jeb extends mfb {
 
     public static void i(byte param0) {
         field_c = null;
-        int var1 = 1;
+        int var1 = 29 % ((14 - param0) / 44);
         field_b = null;
     }
 
@@ -130,7 +134,7 @@ final class jeb extends mfb {
               if (param4 <= -3) {
                 break L1;
               } else {
-                field_b = null;
+                field_b = (Random) null;
                 break L1;
               }
             }
@@ -140,7 +144,7 @@ final class jeb extends mfb {
                   break L3;
                 } else {
                   L4: {
-                    if (param0 != 2) {
+                    if (-3 != (param0 ^ -1)) {
                       break L4;
                     } else {
                       if (!ira.a(param2, param3, 41)) {
@@ -165,23 +169,23 @@ final class jeb extends mfb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var6;
+            stackOut_9_0 = (RuntimeException) (var6);
             stackOut_9_1 = new StringBuilder().append("jeb.C(").append(param0).append(',');
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L5;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -190,23 +194,23 @@ final class jeb extends mfb {
             }
           }
           L6: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
             stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param3 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L6;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -214,24 +218,20 @@ final class jeb extends mfb {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param4 + ')');
         }
         return stackIn_8_0 != 0;
     }
 
     final int g(byte param0) {
         if (param0 >= -12) {
-            field_c = null;
+            field_c = (int[]) null;
             return cp.field_f;
         }
         return cp.field_f;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new Random();
     }
 }

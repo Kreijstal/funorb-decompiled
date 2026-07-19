@@ -17,10 +17,10 @@ final class fk extends oh {
             jh.field_D = param2;
             mg.field_C = true;
             ji.field_G = new ns(le.field_e, sl.field_p, param0, el.field_b, jh.field_D);
-            le.field_e.a(true, (vg) (Object) ji.field_G);
+            le.field_e.a(true, ji.field_G);
             int var3_int = -116 / ((-1 - param1) / 54);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "fk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "fk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -30,13 +30,13 @@ final class fk extends oh {
         if (param0 < 76) {
           fk.a((byte) 91);
           field_m = null;
-          field_p = null;
+          field_p = (sg[][]) null;
           field_h = null;
           field_i = null;
           return;
         } else {
           field_m = null;
-          field_p = null;
+          field_p = (sg[][]) null;
           field_h = null;
           field_i = null;
           return;
@@ -45,17 +45,13 @@ final class fk extends oh {
 
     fk(byte[] param0) {
         try {
-            ((fk) this).field_n = param0;
+            this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "fk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Remove <%0> from ignore list";
         field_l = "C: Show Chat";
         field_h = new int[8192];

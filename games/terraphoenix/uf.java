@@ -24,14 +24,14 @@ class uf {
         int stackOut_2_0 = 0;
         if (param0 > -21) {
           uf.a(55, -98);
-          if (null != ((uf) this).field_a) {
+          if (null != this.field_a) {
             return true;
           } else {
             return false;
           }
         } else {
           L0: {
-            if (null == ((uf) this).field_a) {
+            if (null == this.field_a) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -54,7 +54,7 @@ class uf {
         var3 = Terraphoenix.field_V;
         try {
           L0: {
-            var4 = (eg) (Object) ic.field_s.d(param0 + -11568);
+            var4 = (eg) ((Object) ic.field_s.d(param0 + -11568));
             L1: while (true) {
               if (var4 == null) {
                 L2: {
@@ -62,7 +62,7 @@ class uf {
                   if (param0 == 20840) {
                     break L2;
                   } else {
-                    field_f = null;
+                    field_f = (ci) null;
                     break L2;
                   }
                 }
@@ -77,7 +77,7 @@ class uf {
                 }
               } else {
                 qc.a(param1, var4, (byte) -110);
-                var4 = (eg) (Object) ic.field_s.e((byte) -119);
+                var4 = (eg) ((Object) ic.field_s.e((byte) -119));
                 continue L1;
               }
             }
@@ -85,31 +85,27 @@ class uf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var2_ref, "uf.JB(" + param0 + ',' + param1 + ')');
+          throw qk.a((Throwable) ((Object) var2_ref), "uf.JB(" + param0 + ',' + param1 + ')');
         }
     }
 
     final void b(byte param0) {
-        if (((uf) this).field_a == null) {
+        if (this.field_a == null) {
           return;
         } else {
-          ((uf) this).field_a.field_d = ((uf) this).field_d;
-          ((uf) this).field_d.field_a = ((uf) this).field_a;
+          this.field_a.field_d = this.field_d;
+          this.field_d.field_a = this.field_a;
           if (param0 != 12) {
             return;
           } else {
-            ((uf) this).field_d = null;
-            ((uf) this).field_a = null;
+            this.field_d = null;
+            this.field_a = null;
             return;
           }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 71;
     }
 }

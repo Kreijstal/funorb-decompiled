@@ -12,12 +12,12 @@ final class ei {
     final static void a(int param0, sc param1) {
         try {
             if (param0 != 0) {
-                Object var3 = null;
+                sc var3 = (sc) null;
                 ei.a(-102, (sc) null);
             }
             di.a(param1, param0 ^ 109, true);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "ei.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "ei.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -26,13 +26,12 @@ final class ei {
         field_c = null;
         field_e = null;
         field_d = null;
+        if (param0 > -54) {
+            field_a = false;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Offer unrated rematch";
         field_f = 0;
         field_a = false;

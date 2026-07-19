@@ -22,7 +22,7 @@ final class id {
         int var7 = 0;
         var6 = 24;
         var7 = 5;
-        ((id) this).field_a.a((byte) -86, param2, param0, param1, var7, var6, param3);
+        this.field_a.a((byte) -86, param2, param0, param1, var7, var6, param3);
         if (!param4) {
           id.a((byte) 117);
           oj.field_c.a(0, hb.field_a.field_M, -2147483648, fe.field_g, 0);
@@ -46,31 +46,30 @@ final class id {
         ci[] var4 = null;
         try {
             var3 = new String[]{param0, gg.field_g, ke.field_b};
-            var4 = new ci[]{param1, hb.field_a, (ci) (Object) fg.field_d};
-            ((id) this).field_a = new d(0L, ao.field_a, var3, hd.field_b, var4, 0);
+            var4 = new ci[]{param1, hb.field_a, (ci) ((Object) fg.field_d)};
+            this.field_a = new d(0L, ao.field_a, var3, hd.field_b, var4, 0);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "id.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, km[] param3, boolean param4, byte param5, lh param6, int param7, km[] param8, int param9, int param10, int param11) {
         try {
-            int var12_int = 1;
-            n.a(param6, 8, param4, param3, 320, 2, param10, param11, 240, param6, 8, 126, param10, param11, param8);
+            int var12_int = 19 % ((-8 - param5) / 42);
+            n.a(param6, param7, param4, param3, param1, param2, param10, param11, param0, param6, param9, 126, param10, param11, param8);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "id.A(" + 240 + ',' + 320 + ',' + 2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + -105 + ',' + (param6 != null ? "{...}" : "null") + ',' + 8 + ',' + (param8 != null ? "{...}" : "null") + ',' + 8 + ',' + param10 + ',' + param11 + ')');
+            throw fk.a((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ')');
         }
     }
 
     public static void a(int param0) {
+        if (param0 != 23111) {
+            return;
+        }
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Sorry, you were removed from the game you were in. This can happen if you are disconnected for too long or if the server is updated.";
     }
 }

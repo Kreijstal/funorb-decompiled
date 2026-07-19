@@ -20,9 +20,9 @@ final class gs {
           }
         }
         if (dr.field_a) {
-          if (wt.field_x == -1) {
+          if (0 == (wt.field_x ^ -1)) {
             if (us.field_j != -1) {
-              bw.field_e[2].c(us.field_k + (-re.field_k + wt.field_x - 5), -1 + (us.field_j - kw.field_h));
+              bw.field_e[2].c(us.field_k + (-re.field_k + wt.field_x - 6 - -1), -1 + (us.field_j - kw.field_h));
               bw.field_e[3].c(wt.field_x + 6 + -us.field_k, -kw.field_h + (us.field_j - 1));
               bw.field_e[0].c(-kw.field_h + (wt.field_x + -1), 1 + (us.field_k + -6) + (-re.field_k + us.field_j));
               bw.field_e[1].c(-kw.field_h + (wt.field_x + -1), -us.field_k + 6 + us.field_j);
@@ -31,7 +31,7 @@ final class gs {
               return;
             }
           } else {
-            bw.field_e[2].c(us.field_k + (-re.field_k + wt.field_x - 5), -1 + (us.field_j - kw.field_h));
+            bw.field_e[2].c(us.field_k + (-re.field_k + wt.field_x - 6 - -1), -1 + (us.field_j - kw.field_h));
             bw.field_e[3].c(wt.field_x + 6 + -us.field_k, -kw.field_h + (us.field_j - 1));
             bw.field_e[0].c(-kw.field_h + (wt.field_x + -1), 1 + (us.field_k + -6) + (-re.field_k + us.field_j));
             bw.field_e[1].c(-kw.field_h + (wt.field_x + -1), -us.field_k + 6 + us.field_j);
@@ -47,15 +47,31 @@ final class gs {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (nr.field_q != null) {
-          var1 = (Object) (Object) nr.field_q;
+          var1 = nr.field_q;
           synchronized (var1) {
             L0: {
               nr.field_q = null;
               break L0;
             }
           }
+          L1: {
+            if (param0 == 98) {
+              break L1;
+            } else {
+              gs.a(65);
+              break L1;
+            }
+          }
           return;
         } else {
+          L2: {
+            if (param0 == 98) {
+              break L2;
+            } else {
+              gs.a(65);
+              break L2;
+            }
+          }
           return;
         }
     }
@@ -68,7 +84,7 @@ final class gs {
         var2 = Kickabout.field_G;
         try {
           L0: {
-            var1_int = 0;
+            var1_int = param0;
             L1: while (true) {
               if (e.field_n.length <= var1_int) {
                 break L0;
@@ -82,13 +98,33 @@ final class gs {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "gs.D(" + 0 + ')');
+          throw nb.a((Throwable) ((Object) var1), "gs.D(" + param0 + ')');
         }
     }
 
     final static void c(int param0) {
-        iw.field_l = false;
-        kb.field_C = un.field_e.h((byte) -111) == 0 ? true : false;
+        int stackIn_3_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        L0: {
+          iw.field_l = false;
+          if (-1 != (un.field_e.h((byte) -111) ^ -1)) {
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = 1;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
+          }
+        }
+        kb.field_C = stackIn_3_0 != 0;
+        if (param0 != 25957) {
+          field_c = (sj) null;
+          return;
+        } else {
+          return;
+        }
     }
 
     final static void a(int param0) {
@@ -100,16 +136,15 @@ final class gs {
 
     public static void b(byte param0) {
         field_f = null;
+        if (param0 > -80) {
+            return;
+        }
         field_a = null;
         field_c = null;
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = "Join <%0>'s game";
         field_a = new int[]{0, 5, 31, 49, 57, 58, 64, 67, 75, 76, 92, 98, 98, 100};
         field_b = false;

@@ -6,6 +6,9 @@ final class mj extends qd {
 
     mj(qa param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
         super(param0, param4, param5);
+        int incrementValue$178 = 0;
+        int incrementValue$179 = 0;
+        int incrementValue$180 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -27,14 +30,14 @@ final class mj extends qd {
         int stackOut_9_2 = 0;
         L0: {
           if (!param6) {
-            ((mj) this).field_E = param1;
+            this.field_E = param1;
             break L0;
           } else {
-            ((mj) this).field_E = new int[param4 * param5];
+            this.field_E = new int[param4 * param5];
             break L0;
           }
         }
-        param3 = param3 - ((mj) this).field_z;
+        param3 = param3 - this.field_z;
         var8 = 0;
         var9 = 0;
         L1: while (true) {
@@ -48,27 +51,27 @@ final class mj extends qd {
                 var9++;
                 continue L1;
               } else {
-                int incrementValue$178 = param2;
+                incrementValue$178 = param2;
                 param2++;
                 var11 = param1[incrementValue$178];
                 if (var11 >>> 24 != 255) {
-                  int incrementValue$179 = var8;
+                  incrementValue$179 = var8;
                   var8++;
-                  ((mj) this).field_E[incrementValue$179] = 0;
+                  this.field_E[incrementValue$179] = 0;
                   var10++;
                   continue L2;
                 } else {
                   L3: {
-                    int incrementValue$180 = var8;
+                    incrementValue$180 = var8;
                     var8++;
-                    stackOut_8_0 = ((mj) this).field_E;
+                    stackOut_8_0 = this.field_E;
                     stackOut_8_1 = incrementValue$180;
                     stackIn_10_0 = stackOut_8_0;
                     stackIn_10_1 = stackOut_8_1;
                     stackIn_9_0 = stackOut_8_0;
                     stackIn_9_1 = stackOut_8_1;
                     if ((var11 & 16777215) != 0) {
-                      stackOut_10_0 = (int[]) (Object) stackIn_10_0;
+                      stackOut_10_0 = (int[]) ((Object) stackIn_10_0);
                       stackOut_10_1 = stackIn_10_1;
                       stackOut_10_2 = var11;
                       stackIn_11_0 = stackOut_10_0;
@@ -76,7 +79,7 @@ final class mj extends qd {
                       stackIn_11_2 = stackOut_10_2;
                       break L3;
                     } else {
-                      stackOut_9_0 = (int[]) (Object) stackIn_9_0;
+                      stackOut_9_0 = (int[]) ((Object) stackIn_9_0);
                       stackOut_9_1 = stackIn_9_1;
                       stackOut_9_2 = -16777215;
                       stackIn_11_0 = stackOut_9_0;
@@ -96,6 +99,20 @@ final class mj extends qd {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int incrementValue$26 = 0;
+        int incrementValue$27 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -123,9 +140,7 @@ final class mj extends qd {
         int var32 = 0;
         int[] var33 = null;
         int[] var34 = null;
-        int[] var35 = null;
-        int[] var36 = null;
-        if (!((mj) this).field_B.f()) {
+        if (!this.field_B.f()) {
           L0: {
             if (param2 <= 0) {
               break L0;
@@ -134,61 +149,61 @@ final class mj extends qd {
                 L1: {
                   var9 = 0;
                   var10 = 0;
-                  var11 = ((mj) this).field_B.field_k;
-                  var12 = ((mj) this).field_t + ((mj) this).field_z + ((mj) this).field_y;
-                  var13 = ((mj) this).field_A + ((mj) this).field_q + ((mj) this).field_k;
+                  var11 = this.field_B.field_k;
+                  var12 = this.field_t + this.field_z + this.field_y;
+                  var13 = this.field_A + this.field_q + this.field_k;
                   var14 = (var12 << 16) / param2;
                   var15 = (var13 << 16) / param3;
-                  if (((mj) this).field_t <= 0) {
+                  if (this.field_t <= 0) {
                     break L1;
                   } else {
-                    var16 = ((((mj) this).field_t << 16) + var14 - 1) / var14;
+                    var16 = ((this.field_t << 16) + var14 - 1) / var14;
                     param0 = param0 + var16;
-                    var9 = var9 + (var16 * var14 - (((mj) this).field_t << 16));
+                    var9 = var9 + (var16 * var14 - (this.field_t << 16));
                     break L1;
                   }
                 }
                 L2: {
-                  if (((mj) this).field_A <= 0) {
+                  if (this.field_A <= 0) {
                     break L2;
                   } else {
-                    var16 = ((((mj) this).field_A << 16) + var15 - 1) / var15;
+                    var16 = ((this.field_A << 16) + var15 - 1) / var15;
                     param1 = param1 + var16;
-                    var10 = var10 + (var16 * var15 - (((mj) this).field_A << 16));
+                    var10 = var10 + (var16 * var15 - (this.field_A << 16));
                     break L2;
                   }
                 }
                 L3: {
-                  if (((mj) this).field_z >= var12) {
+                  if (this.field_z >= var12) {
                     break L3;
                   } else {
-                    param2 = ((((mj) this).field_z << 16) - var9 + var14 - 1) / var14;
+                    param2 = ((this.field_z << 16) - var9 + var14 - 1) / var14;
                     break L3;
                   }
                 }
                 L4: {
-                  if (((mj) this).field_q >= var13) {
+                  if (this.field_q >= var13) {
                     break L4;
                   } else {
-                    param3 = ((((mj) this).field_q << 16) - var10 + var15 - 1) / var15;
+                    param3 = ((this.field_q << 16) - var10 + var15 - 1) / var15;
                     break L4;
                   }
                 }
                 L5: {
                   var16 = param0 + param1 * var11;
                   var17 = var11 - param2;
-                  if (param1 + param3 <= ((mj) this).field_B.field_C) {
+                  if (param1 + param3 <= this.field_B.field_C) {
                     break L5;
                   } else {
-                    param3 = param3 - (param1 + param3 - ((mj) this).field_B.field_C);
+                    param3 = param3 - (param1 + param3 - this.field_B.field_C);
                     break L5;
                   }
                 }
                 L6: {
-                  if (param1 >= ((mj) this).field_B.field_H) {
+                  if (param1 >= this.field_B.field_H) {
                     break L6;
                   } else {
-                    var18_int = ((mj) this).field_B.field_H - param1;
+                    var18_int = this.field_B.field_H - param1;
                     param3 = param3 - var18_int;
                     var16 = var16 + var18_int * var11;
                     var10 = var10 + var15 * var18_int;
@@ -196,20 +211,20 @@ final class mj extends qd {
                   }
                 }
                 L7: {
-                  if (param0 + param2 <= ((mj) this).field_B.field_D) {
+                  if (param0 + param2 <= this.field_B.field_D) {
                     break L7;
                   } else {
-                    var18_int = param0 + param2 - ((mj) this).field_B.field_D;
+                    var18_int = param0 + param2 - this.field_B.field_D;
                     param2 = param2 - var18_int;
                     var17 = var17 + var18_int;
                     break L7;
                   }
                 }
                 L8: {
-                  if (param0 >= ((mj) this).field_B.field_v) {
+                  if (param0 >= this.field_B.field_v) {
                     break L8;
                   } else {
-                    var18_int = ((mj) this).field_B.field_v - param0;
+                    var18_int = this.field_B.field_v - param0;
                     param2 = param2 - var18_int;
                     var16 = var16 + var18_int;
                     var9 = var9 + var14 * var18_int;
@@ -218,9 +233,7 @@ final class mj extends qd {
                   }
                 }
                 L9: {
-                  var36 = ((mj) this).field_B.field_o;
-                  var35 = var36;
-                  var34 = var35;
+                  var34 = this.field_B.field_o;
                   var33 = var34;
                   var18 = var33;
                   if (param6 != 0) {
@@ -245,7 +258,7 @@ final class mj extends qd {
                                   if (var24 >= 0) {
                                     break L9;
                                   } else {
-                                    var25 = (var10 >> 16) * ((mj) this).field_z;
+                                    var25 = (var10 >> 16) * this.field_z;
                                     var26 = -param2;
                                     L11: while (true) {
                                       if (var26 >= 0) {
@@ -256,7 +269,7 @@ final class mj extends qd {
                                         continue L10;
                                       } else {
                                         L12: {
-                                          var27 = ((mj) this).field_E[(var9 >> 16) + var25];
+                                          var27 = this.field_E[(var9 >> 16) + var25];
                                           if (var27 == 0) {
                                             var16++;
                                             break L12;
@@ -264,11 +277,11 @@ final class mj extends qd {
                                             var21 = (var27 & 16711935) * var19 & -16711936;
                                             var22 = (var27 & 65280) * var19 & 16711680;
                                             var27 = ((var21 | var22) >>> 8) + param5;
-                                            var28 = var36[var16];
+                                            var28 = var34[var16];
                                             var29 = var27 + var28;
                                             var30 = (var27 & 16711935) + (var28 & 16711935);
                                             var28 = (var30 & 16777472) + (var29 - var30 & 65536);
-                                            int incrementValue$14 = var16;
+                                            incrementValue$14 = var16;
                                             var16++;
                                             var18[incrementValue$14] = var29 - var28 | var28 - (var28 >>> 8);
                                             break L12;
@@ -289,7 +302,7 @@ final class mj extends qd {
                                 if (var20 >= 0) {
                                   break L9;
                                 } else {
-                                  var21 = (var10 >> 16) * ((mj) this).field_z;
+                                  var21 = (var10 >> 16) * this.field_z;
                                   var22 = -param2;
                                   L14: while (true) {
                                     if (var22 >= 0) {
@@ -299,16 +312,16 @@ final class mj extends qd {
                                       var20++;
                                       continue L13;
                                     } else {
-                                      var23 = ((mj) this).field_E[(var9 >> 16) + var21];
+                                      var23 = this.field_E[(var9 >> 16) + var21];
                                       var24 = var23 + param5;
                                       var25 = (var23 & 16711935) + (param5 & 16711935);
                                       var26 = (var25 & 16777472) + (var24 - var25 & 65536);
                                       var23 = var24 - var26 | var26 - (var26 >>> 8);
-                                      var26 = var36[var16];
+                                      var26 = var34[var16];
                                       var24 = var23 + var26;
                                       var25 = (var23 & 16711935) + (var26 & 16711935);
                                       var26 = (var25 & 16777472) + (var24 - var25 & 65536);
-                                      int incrementValue$15 = var16;
+                                      incrementValue$15 = var16;
                                       var16++;
                                       var18[incrementValue$15] = var24 - var26 | var26 - (var26 >>> 8);
                                       var9 = var9 + var14;
@@ -329,7 +342,7 @@ final class mj extends qd {
                               if (var23 >= 0) {
                                 break L9;
                               } else {
-                                var24 = (var10 >> 16) * ((mj) this).field_z;
+                                var24 = (var10 >> 16) * this.field_z;
                                 var25 = -param2;
                                 L16: while (true) {
                                   if (var25 >= 0) {
@@ -340,7 +353,7 @@ final class mj extends qd {
                                     continue L15;
                                   } else {
                                     L17: {
-                                      var26 = ((mj) this).field_E[(var9 >> 16) + var24];
+                                      var26 = this.field_E[(var9 >> 16) + var24];
                                       if (var26 == 0) {
                                         var16++;
                                         break L17;
@@ -349,11 +362,11 @@ final class mj extends qd {
                                         var28 = (var26 & 65280) * var21 & 16711680;
                                         var29 = (var26 & 255) * var22 & 65280;
                                         var26 = (var27 | var28 | var29) >>> 8;
-                                        var30 = var36[var16];
+                                        var30 = var34[var16];
                                         var31 = var26 + var30;
                                         var32 = (var26 & 16711935) + (var30 & 16711935);
                                         var30 = (var32 & 16777472) + (var31 - var32 & 65536);
-                                        int incrementValue$16 = var16;
+                                        incrementValue$16 = var16;
                                         var16++;
                                         var18[incrementValue$16] = var31 - var30 | var30 - (var30 >>> 8);
                                         break L17;
@@ -374,7 +387,7 @@ final class mj extends qd {
                             if (var20 >= 0) {
                               break L9;
                             } else {
-                              var21 = (var10 >> 16) * ((mj) this).field_z;
+                              var21 = (var10 >> 16) * this.field_z;
                               var22 = -param2;
                               L19: while (true) {
                                 if (var22 >= 0) {
@@ -385,16 +398,16 @@ final class mj extends qd {
                                   continue L18;
                                 } else {
                                   L20: {
-                                    var23 = ((mj) this).field_E[(var9 >> 16) + var21];
+                                    var23 = this.field_E[(var9 >> 16) + var21];
                                     if (var23 == 0) {
                                       var16++;
                                       break L20;
                                     } else {
-                                      var24 = var36[var16];
+                                      var24 = var34[var16];
                                       var25 = var23 + var24;
                                       var26 = (var23 & 16711935) + (var24 & 16711935);
                                       var24 = (var26 & 16777472) + (var25 - var26 & 65536);
-                                      int incrementValue$17 = var16;
+                                      incrementValue$17 = var16;
                                       var16++;
                                       var18[incrementValue$17] = var25 - var24 | var24 - (var24 >>> 8);
                                       break L20;
@@ -427,7 +440,7 @@ final class mj extends qd {
                                 if (var24 >= 0) {
                                   break L9;
                                 } else {
-                                  var25 = (var10 >> 16) * ((mj) this).field_z;
+                                  var25 = (var10 >> 16) * this.field_z;
                                   var26 = -param2;
                                   L22: while (true) {
                                     if (var26 >= 0) {
@@ -438,14 +451,14 @@ final class mj extends qd {
                                       continue L21;
                                     } else {
                                       L23: {
-                                        var27 = ((mj) this).field_E[(var9 >> 16) + var25];
+                                        var27 = this.field_E[(var9 >> 16) + var25];
                                         if (var27 == 0) {
                                           var16++;
                                           break L23;
                                         } else {
                                           var21 = (var27 & 16711935) * var19 & -16711936;
                                           var22 = (var27 & 65280) * var19 & 16711680;
-                                          int incrementValue$18 = var16;
+                                          incrementValue$18 = var16;
                                           var16++;
                                           var18[incrementValue$18] = ((var21 | var22) >>> 8) + param5;
                                           break L23;
@@ -468,7 +481,7 @@ final class mj extends qd {
                               if (var22 >= 0) {
                                 break L9;
                               } else {
-                                var23 = (var10 >> 16) * ((mj) this).field_z;
+                                var23 = (var10 >> 16) * this.field_z;
                                 var24 = -param2;
                                 L25: while (true) {
                                   if (var24 >= 0) {
@@ -479,7 +492,7 @@ final class mj extends qd {
                                     continue L24;
                                   } else {
                                     L26: {
-                                      var25 = ((mj) this).field_E[(var9 >> 16) + var23];
+                                      var25 = this.field_E[(var9 >> 16) + var23];
                                       var26 = var25 + param5;
                                       var27 = (var25 & 16711935) + (param5 & 16711935);
                                       var28 = (var27 & 16777472) + (var26 - var27 & 65536);
@@ -491,13 +504,13 @@ final class mj extends qd {
                                           break L26;
                                         } else {
                                           var25 = var28;
-                                          var28 = var36[var16];
+                                          var28 = var34[var16];
                                           var28 = ((var25 & 16711935) * var20 + (var28 & 16711935) * var21 & -16711936) + ((var25 & 65280) * var20 + (var28 & 65280) * var21 & 16711680) >> 8;
                                           break L26;
                                         }
                                       }
                                     }
-                                    int incrementValue$19 = var16;
+                                    incrementValue$19 = var16;
                                     var16++;
                                     var18[incrementValue$19] = var28;
                                     var9 = var9 + var14;
@@ -521,7 +534,7 @@ final class mj extends qd {
                               if (var25 >= 0) {
                                 break L9;
                               } else {
-                                var26 = (var10 >> 16) * ((mj) this).field_z;
+                                var26 = (var10 >> 16) * this.field_z;
                                 var27 = -param2;
                                 L28: while (true) {
                                   if (var27 >= 0) {
@@ -532,7 +545,7 @@ final class mj extends qd {
                                     continue L27;
                                   } else {
                                     L29: {
-                                      var28 = ((mj) this).field_E[(var9 >> 16) + var26];
+                                      var28 = this.field_E[(var9 >> 16) + var26];
                                       if (var28 == 0) {
                                         var16++;
                                         break L29;
@@ -541,7 +554,7 @@ final class mj extends qd {
                                           var29 = (var28 & 16711680) * var20 & -16777216;
                                           var30 = (var28 & 65280) * var21 & 16711680;
                                           var31 = (var28 & 255) * var22 & 65280;
-                                          int incrementValue$20 = var16;
+                                          incrementValue$20 = var16;
                                           var16++;
                                           var18[incrementValue$20] = (var29 | var30 | var31) >>> 8;
                                           break L29;
@@ -550,8 +563,8 @@ final class mj extends qd {
                                           var30 = (var28 & 65280) * var21 & 16711680;
                                           var31 = (var28 & 255) * var22 & 65280;
                                           var28 = (var29 | var30 | var31) >>> 8;
-                                          var32 = var36[var16];
-                                          int incrementValue$21 = var16;
+                                          var32 = var34[var16];
+                                          incrementValue$21 = var16;
                                           var16++;
                                           var18[incrementValue$21] = ((var28 & 16711935) * var23 + (var32 & 16711935) * var24 & -16711936) + ((var28 & 65280) * var23 + (var32 & 65280) * var24 & 16711680) >> 8;
                                           var9 = var9 + var14;
@@ -575,7 +588,7 @@ final class mj extends qd {
                               if (var22 >= 0) {
                                 break L9;
                               } else {
-                                var23 = (var10 >> 16) * ((mj) this).field_z;
+                                var23 = (var10 >> 16) * this.field_z;
                                 var24 = -param2;
                                 L31: while (true) {
                                   if (var24 >= 0) {
@@ -586,13 +599,13 @@ final class mj extends qd {
                                     continue L30;
                                   } else {
                                     L32: {
-                                      var25 = ((mj) this).field_E[(var9 >> 16) + var23];
+                                      var25 = this.field_E[(var9 >> 16) + var23];
                                       if (var25 == 0) {
                                         var16++;
                                         break L32;
                                       } else {
-                                        var26 = var36[var16];
-                                        int incrementValue$22 = var16;
+                                        var26 = var34[var16];
+                                        incrementValue$22 = var16;
                                         var16++;
                                         var18[incrementValue$22] = ((var25 & 16711935) * var20 + (var26 & 16711935) * var21 & -16711936) + ((var25 & 65280) * var20 + (var26 & 65280) * var21 & 16711680) >> 8;
                                         break L32;
@@ -614,7 +627,7 @@ final class mj extends qd {
                           if (var20 >= 0) {
                             break L9;
                           } else {
-                            var21 = (var10 >> 16) * ((mj) this).field_z;
+                            var21 = (var10 >> 16) * this.field_z;
                             var22 = -param2;
                             L34: while (true) {
                               if (var22 >= 0) {
@@ -625,12 +638,12 @@ final class mj extends qd {
                                 continue L33;
                               } else {
                                 L35: {
-                                  var23 = ((mj) this).field_E[(var9 >> 16) + var21];
+                                  var23 = this.field_E[(var9 >> 16) + var21];
                                   if (var23 == 0) {
                                     var16++;
                                     break L35;
                                   } else {
-                                    int incrementValue$23 = var16;
+                                    incrementValue$23 = var16;
                                     var16++;
                                     var18[incrementValue$23] = var23;
                                     break L35;
@@ -663,7 +676,7 @@ final class mj extends qd {
                               if (var24 >= 0) {
                                 break L9;
                               } else {
-                                var25 = (var10 >> 16) * ((mj) this).field_z;
+                                var25 = (var10 >> 16) * this.field_z;
                                 var26 = -param2;
                                 L37: while (true) {
                                   if (var26 >= 0) {
@@ -673,10 +686,10 @@ final class mj extends qd {
                                     var24++;
                                     continue L36;
                                   } else {
-                                    var27 = ((mj) this).field_E[(var9 >> 16) + var25];
+                                    var27 = this.field_E[(var9 >> 16) + var25];
                                     var21 = (var27 & 16711935) * var19 & -16711936;
                                     var22 = (var27 & 65280) * var19 & 16711680;
-                                    int incrementValue$24 = var16;
+                                    incrementValue$24 = var16;
                                     var16++;
                                     var18[incrementValue$24] = ((var21 | var22) >>> 8) + param5;
                                     var9 = var9 + var14;
@@ -694,7 +707,7 @@ final class mj extends qd {
                             if (var20 >= 0) {
                               break L9;
                             } else {
-                              var21 = (var10 >> 16) * ((mj) this).field_z;
+                              var21 = (var10 >> 16) * this.field_z;
                               var22 = -param2;
                               L39: while (true) {
                                 if (var22 >= 0) {
@@ -704,11 +717,11 @@ final class mj extends qd {
                                   var20++;
                                   continue L38;
                                 } else {
-                                  var23 = ((mj) this).field_E[(var9 >> 16) + var21];
+                                  var23 = this.field_E[(var9 >> 16) + var21];
                                   var24 = var23 + param5;
                                   var25 = (var23 & 16711935) + (param5 & 16711935);
                                   var26 = (var25 & 16777472) + (var24 - var25 & 65536);
-                                  int incrementValue$25 = var16;
+                                  incrementValue$25 = var16;
                                   var16++;
                                   var18[incrementValue$25] = var24 - var26 | var26 - (var26 >>> 8);
                                   var9 = var9 + var14;
@@ -729,7 +742,7 @@ final class mj extends qd {
                           if (var23 >= 0) {
                             break L9;
                           } else {
-                            var24 = (var10 >> 16) * ((mj) this).field_z;
+                            var24 = (var10 >> 16) * this.field_z;
                             var25 = -param2;
                             L41: while (true) {
                               if (var25 >= 0) {
@@ -739,11 +752,11 @@ final class mj extends qd {
                                 var23++;
                                 continue L40;
                               } else {
-                                var26 = ((mj) this).field_E[(var9 >> 16) + var24];
+                                var26 = this.field_E[(var9 >> 16) + var24];
                                 var27 = (var26 & 16711680) * var19 & -16777216;
                                 var28 = (var26 & 65280) * var20 & 16711680;
                                 var29 = (var26 & 255) * var21 & 65280;
-                                int incrementValue$26 = var16;
+                                incrementValue$26 = var16;
                                 var16++;
                                 var18[incrementValue$26] = (var27 | var28 | var29) >>> 8;
                                 var9 = var9 + var14;
@@ -761,7 +774,7 @@ final class mj extends qd {
                         if (var20 >= 0) {
                           break L0;
                         } else {
-                          var21 = (var10 >> 16) * ((mj) this).field_z;
+                          var21 = (var10 >> 16) * this.field_z;
                           var22 = -param2;
                           L43: while (true) {
                             if (var22 >= 0) {
@@ -771,9 +784,9 @@ final class mj extends qd {
                               var20++;
                               continue L42;
                             } else {
-                              int incrementValue$27 = var16;
+                              incrementValue$27 = var16;
                               var16++;
-                              var18[incrementValue$27] = ((mj) this).field_E[(var9 >> 16) + var21];
+                              var18[incrementValue$27] = this.field_E[(var9 >> 16) + var21];
                               var9 = var9 + var14;
                               var22++;
                               continue L43;
@@ -797,6 +810,49 @@ final class mj extends qd {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
+        int incrementValue$48 = 0;
+        int incrementValue$49 = 0;
+        int incrementValue$50 = 0;
+        int incrementValue$51 = 0;
+        int incrementValue$52 = 0;
+        int incrementValue$53 = 0;
+        int incrementValue$54 = 0;
+        int incrementValue$55 = 0;
+        int incrementValue$56 = 0;
+        int incrementValue$57 = 0;
+        int incrementValue$58 = 0;
+        int incrementValue$59 = 0;
+        int incrementValue$60 = 0;
+        int incrementValue$61 = 0;
+        int incrementValue$62 = 0;
+        int incrementValue$63 = 0;
+        int incrementValue$64 = 0;
+        int incrementValue$65 = 0;
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
+        int incrementValue$68 = 0;
+        int incrementValue$69 = 0;
+        int incrementValue$70 = 0;
+        int incrementValue$71 = 0;
+        int incrementValue$72 = 0;
+        int incrementValue$73 = 0;
+        int incrementValue$74 = 0;
+        int incrementValue$75 = 0;
+        int incrementValue$76 = 0;
+        int incrementValue$77 = 0;
+        int incrementValue$78 = 0;
+        int incrementValue$79 = 0;
+        int incrementValue$80 = 0;
+        int incrementValue$81 = 0;
+        int incrementValue$82 = 0;
+        int incrementValue$83 = 0;
+        int incrementValue$84 = 0;
+        int incrementValue$85 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -820,45 +876,43 @@ final class mj extends qd {
         int var25 = 0;
         int[] var26 = null;
         int[] var27 = null;
-        int[] var28 = null;
-        int[] var29 = null;
-        if (!((mj) this).field_B.f()) {
+        if (!this.field_B.f()) {
           L0: {
-            var6 = ((mj) this).field_B.field_k;
-            param0 = param0 + ((mj) this).field_t;
-            param1 = param1 + ((mj) this).field_A;
+            var6 = this.field_B.field_k;
+            param0 = param0 + this.field_t;
+            param1 = param1 + this.field_A;
             var7 = param1 * var6 + param0;
             var8 = 0;
-            var9 = ((mj) this).field_q;
-            var10 = ((mj) this).field_z;
+            var9 = this.field_q;
+            var10 = this.field_z;
             var11 = var6 - var10;
             var12 = 0;
-            if (param1 >= ((mj) this).field_B.field_H) {
+            if (param1 >= this.field_B.field_H) {
               break L0;
             } else {
-              var13_int = ((mj) this).field_B.field_H - param1;
+              var13_int = this.field_B.field_H - param1;
               var9 = var9 - var13_int;
-              param1 = ((mj) this).field_B.field_H;
+              param1 = this.field_B.field_H;
               var8 = var8 + var13_int * var10;
               var7 = var7 + var13_int * var6;
               break L0;
             }
           }
           L1: {
-            if (param1 + var9 <= ((mj) this).field_B.field_C) {
+            if (param1 + var9 <= this.field_B.field_C) {
               break L1;
             } else {
-              var9 = var9 - (param1 + var9 - ((mj) this).field_B.field_C);
+              var9 = var9 - (param1 + var9 - this.field_B.field_C);
               break L1;
             }
           }
           L2: {
-            if (param0 >= ((mj) this).field_B.field_v) {
+            if (param0 >= this.field_B.field_v) {
               break L2;
             } else {
-              var13_int = ((mj) this).field_B.field_v - param0;
+              var13_int = this.field_B.field_v - param0;
               var10 = var10 - var13_int;
-              param0 = ((mj) this).field_B.field_v;
+              param0 = this.field_B.field_v;
               var8 = var8 + var13_int;
               var7 = var7 + var13_int;
               var12 = var12 + var13_int;
@@ -867,10 +921,10 @@ final class mj extends qd {
             }
           }
           L3: {
-            if (param0 + var10 <= ((mj) this).field_B.field_D) {
+            if (param0 + var10 <= this.field_B.field_D) {
               break L3;
             } else {
-              var13_int = param0 + var10 - ((mj) this).field_B.field_D;
+              var13_int = param0 + var10 - this.field_B.field_D;
               var10 = var10 - var13_int;
               var12 = var12 + var13_int;
               var11 = var11 + var13_int;
@@ -883,9 +937,7 @@ final class mj extends qd {
             } else {
               if (var9 > 0) {
                 L5: {
-                  var29 = ((mj) this).field_B.field_o;
-                  var28 = var29;
-                  var27 = var28;
+                  var27 = this.field_B.field_o;
                   var26 = var27;
                   var13 = var26;
                   if (param4 != 0) {
@@ -917,9 +969,9 @@ final class mj extends qd {
                                         var18++;
                                         continue L6;
                                       } else {
-                                        int incrementValue$43 = var8;
+                                        incrementValue$43 = var8;
                                         var8++;
-                                        var20 = ((mj) this).field_E[incrementValue$43];
+                                        var20 = this.field_E[incrementValue$43];
                                         if (var20 == 0) {
                                           var7++;
                                           var19++;
@@ -928,11 +980,11 @@ final class mj extends qd {
                                           var16 = (var20 & 16711935) * var14 & -16711936;
                                           var17 = (var20 & 65280) * var14 & 16711680;
                                           var20 = ((var16 | var17) >>> 8) + param3;
-                                          var21 = var29[var7];
+                                          var21 = var27[var7];
                                           var22 = var20 + var21;
                                           var23 = (var20 & 16711935) + (var21 & 16711935);
                                           var21 = (var23 & 16777472) + (var22 - var23 & 65536);
-                                          int incrementValue$44 = var7;
+                                          incrementValue$44 = var7;
                                           var7++;
                                           var13[incrementValue$44] = var22 - var21 | var21 - (var21 >>> 8);
                                           var19++;
@@ -957,18 +1009,18 @@ final class mj extends qd {
                                       var14++;
                                       continue L8;
                                     } else {
-                                      int incrementValue$45 = var8;
+                                      incrementValue$45 = var8;
                                       var8++;
-                                      var16 = ((mj) this).field_E[incrementValue$45];
+                                      var16 = this.field_E[incrementValue$45];
                                       var17 = var16 + param3;
                                       var18 = (var16 & 16711935) + (param3 & 16711935);
                                       var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                       var16 = var17 - var19 | var19 - (var19 >>> 8);
-                                      var19 = var29[var7];
+                                      var19 = var27[var7];
                                       var17 = var16 + var19;
                                       var18 = (var16 & 16711935) + (var19 & 16711935);
                                       var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                      int incrementValue$46 = var7;
+                                      incrementValue$46 = var7;
                                       var7++;
                                       var13[incrementValue$46] = var17 - var19 | var19 - (var19 >>> 8);
                                       var15++;
@@ -995,9 +1047,9 @@ final class mj extends qd {
                                     var17++;
                                     continue L10;
                                   } else {
-                                    int incrementValue$47 = var8;
+                                    incrementValue$47 = var8;
                                     var8++;
-                                    var19 = ((mj) this).field_E[incrementValue$47];
+                                    var19 = this.field_E[incrementValue$47];
                                     if (var19 == 0) {
                                       var7++;
                                       var18++;
@@ -1007,11 +1059,11 @@ final class mj extends qd {
                                       var21 = (var19 & 65280) * var15 & 16711680;
                                       var22 = (var19 & 255) * var16 & 65280;
                                       var19 = (var20 | var21 | var22) >>> 8;
-                                      var23 = var29[var7];
+                                      var23 = var27[var7];
                                       var24 = var19 + var23;
                                       var25 = (var19 & 16711935) + (var23 & 16711935);
                                       var23 = (var25 & 16777472) + (var24 - var25 & 65536);
-                                      int incrementValue$48 = var7;
+                                      incrementValue$48 = var7;
                                       var7++;
                                       var13[incrementValue$48] = var24 - var23 | var23 - (var23 >>> 8);
                                       var18++;
@@ -1036,19 +1088,19 @@ final class mj extends qd {
                                   var14++;
                                   continue L12;
                                 } else {
-                                  int incrementValue$49 = var8;
+                                  incrementValue$49 = var8;
                                   var8++;
-                                  var16 = ((mj) this).field_E[incrementValue$49];
+                                  var16 = this.field_E[incrementValue$49];
                                   if (var16 == 0) {
                                     var7++;
                                     var15++;
                                     continue L13;
                                   } else {
-                                    var17 = var29[var7];
+                                    var17 = var27[var7];
                                     var18 = var16 + var17;
                                     var19 = (var16 & 16711935) + (var17 & 16711935);
                                     var17 = (var19 & 16777472) + (var18 - var19 & 65536);
-                                    int incrementValue$50 = var7;
+                                    incrementValue$50 = var7;
                                     var7++;
                                     var13[incrementValue$50] = var18 - var17 | var17 - (var17 >>> 8);
                                     var15++;
@@ -1085,9 +1137,9 @@ final class mj extends qd {
                                       var18++;
                                       continue L14;
                                     } else {
-                                      int incrementValue$51 = var8;
+                                      incrementValue$51 = var8;
                                       var8++;
-                                      var20 = ((mj) this).field_E[incrementValue$51];
+                                      var20 = this.field_E[incrementValue$51];
                                       if (var20 == 0) {
                                         var7++;
                                         var19++;
@@ -1095,7 +1147,7 @@ final class mj extends qd {
                                       } else {
                                         var16 = (var20 & 16711935) * var14 & -16711936;
                                         var17 = (var20 & 65280) * var14 & 16711680;
-                                        int incrementValue$52 = var7;
+                                        incrementValue$52 = var7;
                                         var7++;
                                         var13[incrementValue$52] = ((var16 | var17) >>> 8) + param3;
                                         var19++;
@@ -1123,9 +1175,9 @@ final class mj extends qd {
                                     continue L16;
                                   } else {
                                     L18: {
-                                      int incrementValue$53 = var8;
+                                      incrementValue$53 = var8;
                                       var8++;
-                                      var18 = ((mj) this).field_E[incrementValue$53];
+                                      var18 = this.field_E[incrementValue$53];
                                       var19 = var18 + param3;
                                       var20 = (var18 & 16711935) + (param3 & 16711935);
                                       var21 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -1137,13 +1189,13 @@ final class mj extends qd {
                                           break L18;
                                         } else {
                                           var18 = var21;
-                                          var21 = var29[var7];
+                                          var21 = var27[var7];
                                           var21 = ((var18 & 16711935) * var14 + (var21 & 16711935) * var15 & -16711936) + ((var18 & 65280) * var14 + (var21 & 65280) * var15 & 16711680) >> 8;
                                           break L18;
                                         }
                                       }
                                     }
-                                    int incrementValue$54 = var7;
+                                    incrementValue$54 = var7;
                                     var7++;
                                     var13[incrementValue$54] = var21;
                                     var17++;
@@ -1173,9 +1225,9 @@ final class mj extends qd {
                                     var19++;
                                     continue L19;
                                   } else {
-                                    int incrementValue$55 = var8;
+                                    incrementValue$55 = var8;
                                     var8++;
-                                    var21 = ((mj) this).field_E[incrementValue$55];
+                                    var21 = this.field_E[incrementValue$55];
                                     if (var21 == 0) {
                                       var7++;
                                       var20++;
@@ -1185,7 +1237,7 @@ final class mj extends qd {
                                         var22 = (var21 & 16711680) * var14 & -16777216;
                                         var23 = (var21 & 65280) * var15 & 16711680;
                                         var24 = (var21 & 255) * var16 & 65280;
-                                        int incrementValue$56 = var7;
+                                        incrementValue$56 = var7;
                                         var7++;
                                         var13[incrementValue$56] = (var22 | var23 | var24) >>> 8;
                                         var20++;
@@ -1195,8 +1247,8 @@ final class mj extends qd {
                                         var23 = (var21 & 65280) * var15 & 16711680;
                                         var24 = (var21 & 255) * var16 & 65280;
                                         var21 = (var22 | var23 | var24) >>> 8;
-                                        var25 = var29[var7];
-                                        int incrementValue$57 = var7;
+                                        var25 = var27[var7];
+                                        incrementValue$57 = var7;
                                         var7++;
                                         var13[incrementValue$57] = ((var21 & 16711935) * var17 + (var25 & 16711935) * var18 & -16711936) + ((var21 & 65280) * var17 + (var25 & 65280) * var18 & 16711680) >> 8;
                                         var20++;
@@ -1223,16 +1275,16 @@ final class mj extends qd {
                                     var16++;
                                     continue L21;
                                   } else {
-                                    int incrementValue$58 = var8;
+                                    incrementValue$58 = var8;
                                     var8++;
-                                    var18 = ((mj) this).field_E[incrementValue$58];
+                                    var18 = this.field_E[incrementValue$58];
                                     if (var18 == 0) {
                                       var7++;
                                       var17++;
                                       continue L22;
                                     } else {
-                                      var19 = var29[var7];
-                                      int incrementValue$59 = var7;
+                                      var19 = var27[var7];
+                                      incrementValue$59 = var7;
                                       var7++;
                                       var13[incrementValue$59] = ((var18 & 16711935) * var14 + (var19 & 16711935) * var15 & -16711936) + ((var18 & 65280) * var14 + (var19 & 65280) * var15 & 16711680) >> 8;
                                       var17++;
@@ -1261,14 +1313,14 @@ final class mj extends qd {
                                     var14++;
                                     continue L23;
                                   } else {
-                                    int incrementValue$60 = var8;
+                                    incrementValue$60 = var8;
                                     var8++;
-                                    var16 = ((mj) this).field_E[incrementValue$60];
+                                    var16 = this.field_E[incrementValue$60];
                                     if (var16 == 0) {
                                       var7++;
                                       continue L25;
                                     } else {
-                                      int incrementValue$61 = var7;
+                                      incrementValue$61 = var7;
                                       var7++;
                                       var13[incrementValue$61] = var16;
                                       continue L25;
@@ -1277,55 +1329,55 @@ final class mj extends qd {
                                 }
                               } else {
                                 L26: {
-                                  int incrementValue$62 = var8;
+                                  incrementValue$62 = var8;
                                   var8++;
-                                  var16 = ((mj) this).field_E[incrementValue$62];
+                                  var16 = this.field_E[incrementValue$62];
                                   if (var16 == 0) {
                                     var7++;
                                     break L26;
                                   } else {
-                                    int incrementValue$63 = var7;
+                                    incrementValue$63 = var7;
                                     var7++;
                                     var13[incrementValue$63] = var16;
                                     break L26;
                                   }
                                 }
                                 L27: {
-                                  int incrementValue$64 = var8;
+                                  incrementValue$64 = var8;
                                   var8++;
-                                  var16 = ((mj) this).field_E[incrementValue$64];
+                                  var16 = this.field_E[incrementValue$64];
                                   if (var16 == 0) {
                                     var7++;
                                     break L27;
                                   } else {
-                                    int incrementValue$65 = var7;
+                                    incrementValue$65 = var7;
                                     var7++;
                                     var13[incrementValue$65] = var16;
                                     break L27;
                                   }
                                 }
                                 L28: {
-                                  int incrementValue$66 = var8;
+                                  incrementValue$66 = var8;
                                   var8++;
-                                  var16 = ((mj) this).field_E[incrementValue$66];
+                                  var16 = this.field_E[incrementValue$66];
                                   if (var16 == 0) {
                                     var7++;
                                     break L28;
                                   } else {
-                                    int incrementValue$67 = var7;
+                                    incrementValue$67 = var7;
                                     var7++;
                                     var13[incrementValue$67] = var16;
                                     break L28;
                                   }
                                 }
-                                int incrementValue$68 = var8;
+                                incrementValue$68 = var8;
                                 var8++;
-                                var16 = ((mj) this).field_E[incrementValue$68];
+                                var16 = this.field_E[incrementValue$68];
                                 if (var16 == 0) {
                                   var7++;
                                   continue L24;
                                 } else {
-                                  int incrementValue$69 = var7;
+                                  incrementValue$69 = var7;
                                   var7++;
                                   var13[incrementValue$69] = var16;
                                   continue L24;
@@ -1361,12 +1413,12 @@ final class mj extends qd {
                                     var18++;
                                     continue L29;
                                   } else {
-                                    int incrementValue$70 = var8;
+                                    incrementValue$70 = var8;
                                     var8++;
-                                    var20 = ((mj) this).field_E[incrementValue$70];
+                                    var20 = this.field_E[incrementValue$70];
                                     var16 = (var20 & 16711935) * var14 & -16711936;
                                     var17 = (var20 & 65280) * var14 & 16711680;
-                                    int incrementValue$71 = var7;
+                                    incrementValue$71 = var7;
                                     var7++;
                                     var13[incrementValue$71] = ((var16 | var17) >>> 8) + param3;
                                     var19++;
@@ -1390,13 +1442,13 @@ final class mj extends qd {
                                   var14++;
                                   continue L31;
                                 } else {
-                                  int incrementValue$72 = var8;
+                                  incrementValue$72 = var8;
                                   var8++;
-                                  var16 = ((mj) this).field_E[incrementValue$72];
+                                  var16 = this.field_E[incrementValue$72];
                                   var17 = var16 + param3;
                                   var18 = (var16 & 16711935) + (param3 & 16711935);
                                   var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                                  int incrementValue$73 = var7;
+                                  incrementValue$73 = var7;
                                   var7++;
                                   var13[incrementValue$73] = var17 - var19 | var19 - (var19 >>> 8);
                                   var15++;
@@ -1423,13 +1475,13 @@ final class mj extends qd {
                                 var17++;
                                 continue L33;
                               } else {
-                                int incrementValue$74 = var8;
+                                incrementValue$74 = var8;
                                 var8++;
-                                var19 = ((mj) this).field_E[incrementValue$74];
+                                var19 = this.field_E[incrementValue$74];
                                 var20 = (var19 & 16711680) * var14 & -16777216;
                                 var21 = (var19 & 65280) * var15 & 16711680;
                                 var22 = (var19 & 255) * var16 & 65280;
-                                int incrementValue$75 = var7;
+                                incrementValue$75 = var7;
                                 var7++;
                                 var13[incrementValue$75] = (var20 | var21 | var22) >>> 8;
                                 var18++;
@@ -1456,35 +1508,35 @@ final class mj extends qd {
                                   var14++;
                                   continue L35;
                                 } else {
-                                  int incrementValue$76 = var7;
+                                  incrementValue$76 = var7;
                                   var7++;
-                                  int incrementValue$77 = var8;
+                                  incrementValue$77 = var8;
                                   var8++;
-                                  var13[incrementValue$76] = ((mj) this).field_E[incrementValue$77];
+                                  var13[incrementValue$76] = this.field_E[incrementValue$77];
                                   continue L37;
                                 }
                               }
                             } else {
-                              int incrementValue$78 = var7;
+                              incrementValue$78 = var7;
                               var7++;
-                              int incrementValue$79 = var8;
+                              incrementValue$79 = var8;
                               var8++;
-                              var13[incrementValue$78] = ((mj) this).field_E[incrementValue$79];
-                              int incrementValue$80 = var7;
+                              var13[incrementValue$78] = this.field_E[incrementValue$79];
+                              incrementValue$80 = var7;
                               var7++;
-                              int incrementValue$81 = var8;
+                              incrementValue$81 = var8;
                               var8++;
-                              var13[incrementValue$80] = ((mj) this).field_E[incrementValue$81];
-                              int incrementValue$82 = var7;
+                              var13[incrementValue$80] = this.field_E[incrementValue$81];
+                              incrementValue$82 = var7;
                               var7++;
-                              int incrementValue$83 = var8;
+                              incrementValue$83 = var8;
                               var8++;
-                              var13[incrementValue$82] = ((mj) this).field_E[incrementValue$83];
-                              int incrementValue$84 = var7;
+                              var13[incrementValue$82] = this.field_E[incrementValue$83];
+                              incrementValue$84 = var7;
                               var7++;
-                              int incrementValue$85 = var8;
+                              incrementValue$85 = var8;
                               var8++;
-                              var13[incrementValue$84] = ((mj) this).field_E[incrementValue$85];
+                              var13[incrementValue$84] = this.field_E[incrementValue$85];
                               continue L36;
                             }
                           }
@@ -1507,10 +1559,46 @@ final class mj extends qd {
 
     mj(qa param0, int[] param1, int param2, int param3) {
         super(param0, param2, param3);
-        ((mj) this).field_E = param1;
+        this.field_E = param1;
     }
 
     final void b(int param0, int param1) {
+        int incrementValue$36 = 0;
+        int incrementValue$37 = 0;
+        int incrementValue$38 = 0;
+        int incrementValue$39 = 0;
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
+        int incrementValue$48 = 0;
+        int incrementValue$49 = 0;
+        int incrementValue$50 = 0;
+        int incrementValue$51 = 0;
+        int incrementValue$52 = 0;
+        int incrementValue$53 = 0;
+        int incrementValue$54 = 0;
+        int incrementValue$55 = 0;
+        int incrementValue$56 = 0;
+        int incrementValue$57 = 0;
+        int incrementValue$58 = 0;
+        int incrementValue$59 = 0;
+        int incrementValue$60 = 0;
+        int incrementValue$61 = 0;
+        int incrementValue$62 = 0;
+        int incrementValue$63 = 0;
+        int incrementValue$64 = 0;
+        int incrementValue$65 = 0;
+        int incrementValue$66 = 0;
+        int incrementValue$67 = 0;
+        int incrementValue$68 = 0;
+        int incrementValue$69 = 0;
+        int incrementValue$70 = 0;
+        int incrementValue$71 = 0;
         int[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -1548,26 +1636,8 @@ final class mj extends qd {
         int[] var37 = null;
         int[] var38 = null;
         int[] var39 = null;
-        int[] var40 = null;
-        int[] var41 = null;
-        int[] var42 = null;
-        int[] var43 = null;
-        int[] var44 = null;
-        int[] var45 = null;
-        int[] var46 = null;
-        int[] var47 = null;
-        int[] var48 = null;
-        int[] var49 = null;
-        int[] var50 = null;
-        int[] var51 = null;
-        int[] var52 = null;
-        int[] var53 = null;
-        int[] var54 = null;
-        int[] var55 = null;
-        int[] var56 = null;
-        int[] var57 = null;
         L0: {
-          var3 = ((mj) this).field_B.field_o;
+          var3 = this.field_B.field_o;
           if (field_w != 0) {
             if (field_w >= 0) {
               if (field_d != 0) {
@@ -1594,8 +1664,8 @@ final class mj extends qd {
                         }
                       }
                       L3: {
-                        var4 = (1 + var7 - (((mj) this).field_z << 12) - field_w) / field_w;
-                        if ((1 + var7 - (((mj) this).field_z << 12) - field_w) / field_w <= var9) {
+                        var4 = (1 + var7 - (this.field_z << 12) - field_w) / field_w;
+                        if ((1 + var7 - (this.field_z << 12) - field_w) / field_w <= var9) {
                           break L3;
                         } else {
                           var9 = var4;
@@ -1615,8 +1685,8 @@ final class mj extends qd {
                         }
                       }
                       L5: {
-                        var4 = (1 + var8 - (((mj) this).field_q << 12) - field_d) / field_d;
-                        if ((1 + var8 - (((mj) this).field_q << 12) - field_d) / field_d <= var9) {
+                        var4 = (1 + var8 - (this.field_q << 12) - field_d) / field_d;
+                        if ((1 + var8 - (this.field_q << 12) - field_d) / field_d <= var9) {
                           break L5;
                         } else {
                           var9 = var4;
@@ -1632,13 +1702,11 @@ final class mj extends qd {
                           continue L1;
                         } else {
                           L7: {
-                            var10 = (var8 >> 12) * ((mj) this).field_z + (var7 >> 12);
-                            int incrementValue$36 = var6;
+                            var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                            incrementValue$36 = var6;
                             var6++;
                             var11 = incrementValue$36;
-                            var57 = var3;
-                            var48 = var57;
-                            var39 = var48;
+                            var39 = var3;
                             var30 = var39;
                             var12 = var30;
                             var13 = param0;
@@ -1654,14 +1722,14 @@ final class mj extends qd {
                                         if (var13 != 2) {
                                           break L7;
                                         } else {
-                                          var15 = ((mj) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L7;
                                           } else {
                                             var16 = (var15 & 16711935) * field_f & -16711936;
                                             var17 = (var15 & 65280) * field_f & 16711680;
                                             var15 = ((var16 | var17) >>> 8) + field_D;
-                                            var18 = var57[var11];
+                                            var18 = var39[var11];
                                             var19 = var15 + var18;
                                             var20 = (var15 & 16711935) + (var18 & 16711935);
                                             var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -1670,13 +1738,13 @@ final class mj extends qd {
                                           }
                                         }
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_u;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                         var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                        var19 = var57[var11];
+                                        var19 = var39[var11];
                                         var17 = var15 + var19;
                                         var18 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -1684,7 +1752,7 @@ final class mj extends qd {
                                         break L7;
                                       }
                                     } else {
-                                      var15 = ((mj) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L7;
                                       } else {
@@ -1692,7 +1760,7 @@ final class mj extends qd {
                                         var17 = (var15 & 65280) * field_v & 16711680;
                                         var18 = (var15 & 255) * field_i & 65280;
                                         var15 = (var16 | var17 | var18) >>> 8;
-                                        var19 = var57[var11];
+                                        var19 = var39[var11];
                                         var20 = var15 + var19;
                                         var21 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -1701,11 +1769,11 @@ final class mj extends qd {
                                       }
                                     }
                                   } else {
-                                    var15 = ((mj) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L7;
                                     } else {
-                                      var16 = var57[var11];
+                                      var16 = var39[var11];
                                       var17 = var15 + var16;
                                       var18 = (var15 & 16711935) + (var16 & 16711935);
                                       var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -1721,13 +1789,13 @@ final class mj extends qd {
                                       if (var13 != 2) {
                                         throw new IllegalArgumentException();
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L7;
                                         } else {
                                           var16 = (var15 & 16711935) * field_f & -16711936;
                                           var17 = (var15 & 65280) * field_f & 16711680;
-                                          int incrementValue$37 = var11;
+                                          incrementValue$37 = var11;
                                           var11++;
                                           var12[incrementValue$37] = ((var16 | var17) >>> 8) + field_D;
                                           break L7;
@@ -1735,7 +1803,7 @@ final class mj extends qd {
                                       }
                                     } else {
                                       L8: {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_u;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1748,17 +1816,17 @@ final class mj extends qd {
                                             break L8;
                                           } else {
                                             var15 = var19;
-                                            var19 = var57[var11];
+                                            var19 = var39[var11];
                                             var19 = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                             break L8;
                                           }
                                         }
                                       }
-                                      var57[var11] = var19;
+                                      var39[var11] = var19;
                                       break L7;
                                     }
                                   } else {
-                                    var15 = ((mj) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L7;
                                     } else {
@@ -1774,25 +1842,25 @@ final class mj extends qd {
                                           var17 = (var15 & 65280) * field_v & 16711680;
                                           var18 = (var15 & 255) * field_i & 65280;
                                           var15 = (var16 | var17 | var18) >>> 8;
-                                          var19 = var57[var11];
+                                          var19 = var39[var11];
                                           var12[var11] = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                           break L7;
                                         }
                                       } else {
                                         var16 = field_u >>> 24;
                                         var17 = 256 - var16;
-                                        var18 = var57[var11];
+                                        var18 = var39[var11];
                                         var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                         break L7;
                                       }
                                     }
                                   }
                                 } else {
-                                  var15 = ((mj) this).field_E[var10];
+                                  var15 = this.field_E[var10];
                                   if (var15 == 0) {
                                     break L7;
                                   } else {
-                                    var57[var11] = var15;
+                                    var39[var11] = var15;
                                     break L7;
                                   }
                                 }
@@ -1804,16 +1872,16 @@ final class mj extends qd {
                                     if (var13 != 2) {
                                       throw new IllegalArgumentException();
                                     } else {
-                                      var15 = ((mj) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       var16 = (var15 & 16711935) * field_f & -16711936;
                                       var17 = (var15 & 65280) * field_f & 16711680;
                                       var12[var11] = ((var16 | var17) >>> 8) + field_D;
                                       break L7;
                                     }
                                   } else {
-                                    int incrementValue$38 = var10;
+                                    incrementValue$38 = var10;
                                     var10++;
-                                    var15 = ((mj) this).field_E[incrementValue$38];
+                                    var15 = this.field_E[incrementValue$38];
                                     var16 = field_u;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1822,9 +1890,9 @@ final class mj extends qd {
                                     break L7;
                                   }
                                 } else {
-                                  int incrementValue$39 = var10;
+                                  incrementValue$39 = var10;
                                   var10++;
-                                  var15 = ((mj) this).field_E[incrementValue$39];
+                                  var15 = this.field_E[incrementValue$39];
                                   var16 = (var15 & 16711680) * field_j & -16777216;
                                   var17 = (var15 & 65280) * field_v & 16711680;
                                   var18 = (var15 & 255) * field_i & 65280;
@@ -1832,7 +1900,7 @@ final class mj extends qd {
                                   break L7;
                                 }
                               } else {
-                                var12[var11] = ((mj) this).field_E[var10];
+                                var12[var11] = this.field_E[var10];
                                 break L7;
                               }
                             }
@@ -1868,8 +1936,8 @@ final class mj extends qd {
                         }
                       }
                       L11: {
-                        var4 = (1 + var7 - (((mj) this).field_z << 12) - field_w) / field_w;
-                        if ((1 + var7 - (((mj) this).field_z << 12) - field_w) / field_w <= var9) {
+                        var4 = (1 + var7 - (this.field_z << 12) - field_w) / field_w;
+                        if ((1 + var7 - (this.field_z << 12) - field_w) / field_w <= var9) {
                           break L11;
                         } else {
                           var9 = var4;
@@ -1877,8 +1945,8 @@ final class mj extends qd {
                         }
                       }
                       L12: {
-                        var4 = var8 - (((mj) this).field_q << 12);
-                        if (var8 - (((mj) this).field_q << 12) < 0) {
+                        var4 = var8 - (this.field_q << 12);
+                        if (var8 - (this.field_q << 12) < 0) {
                           break L12;
                         } else {
                           var4 = (field_d - var4) / field_d;
@@ -1907,13 +1975,11 @@ final class mj extends qd {
                           continue L9;
                         } else {
                           L15: {
-                            var10 = (var8 >> 12) * ((mj) this).field_z + (var7 >> 12);
-                            int incrementValue$40 = var6;
+                            var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                            incrementValue$40 = var6;
                             var6++;
                             var11 = incrementValue$40;
-                            var56 = var3;
-                            var47 = var56;
-                            var38 = var47;
+                            var38 = var3;
                             var29 = var38;
                             var12 = var29;
                             var13 = param0;
@@ -1929,14 +1995,14 @@ final class mj extends qd {
                                         if (var13 != 2) {
                                           break L15;
                                         } else {
-                                          var15 = ((mj) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L15;
                                           } else {
                                             var16 = (var15 & 16711935) * field_f & -16711936;
                                             var17 = (var15 & 65280) * field_f & 16711680;
                                             var15 = ((var16 | var17) >>> 8) + field_D;
-                                            var18 = var56[var11];
+                                            var18 = var38[var11];
                                             var19 = var15 + var18;
                                             var20 = (var15 & 16711935) + (var18 & 16711935);
                                             var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -1945,13 +2011,13 @@ final class mj extends qd {
                                           }
                                         }
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_u;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                         var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                        var19 = var56[var11];
+                                        var19 = var38[var11];
                                         var17 = var15 + var19;
                                         var18 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -1959,7 +2025,7 @@ final class mj extends qd {
                                         break L15;
                                       }
                                     } else {
-                                      var15 = ((mj) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L15;
                                       } else {
@@ -1967,7 +2033,7 @@ final class mj extends qd {
                                         var17 = (var15 & 65280) * field_v & 16711680;
                                         var18 = (var15 & 255) * field_i & 65280;
                                         var15 = (var16 | var17 | var18) >>> 8;
-                                        var19 = var56[var11];
+                                        var19 = var38[var11];
                                         var20 = var15 + var19;
                                         var21 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -1976,11 +2042,11 @@ final class mj extends qd {
                                       }
                                     }
                                   } else {
-                                    var15 = ((mj) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L15;
                                     } else {
-                                      var16 = var56[var11];
+                                      var16 = var38[var11];
                                       var17 = var15 + var16;
                                       var18 = (var15 & 16711935) + (var16 & 16711935);
                                       var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -1996,13 +2062,13 @@ final class mj extends qd {
                                       if (var13 != 2) {
                                         throw new IllegalArgumentException();
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L15;
                                         } else {
                                           var16 = (var15 & 16711935) * field_f & -16711936;
                                           var17 = (var15 & 65280) * field_f & 16711680;
-                                          int incrementValue$41 = var11;
+                                          incrementValue$41 = var11;
                                           var11++;
                                           var12[incrementValue$41] = ((var16 | var17) >>> 8) + field_D;
                                           break L15;
@@ -2010,7 +2076,7 @@ final class mj extends qd {
                                       }
                                     } else {
                                       L16: {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_u;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2023,17 +2089,17 @@ final class mj extends qd {
                                             break L16;
                                           } else {
                                             var15 = var19;
-                                            var19 = var56[var11];
+                                            var19 = var38[var11];
                                             var19 = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                             break L16;
                                           }
                                         }
                                       }
-                                      var56[var11] = var19;
+                                      var38[var11] = var19;
                                       break L15;
                                     }
                                   } else {
-                                    var15 = ((mj) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L15;
                                     } else {
@@ -2049,25 +2115,25 @@ final class mj extends qd {
                                           var17 = (var15 & 65280) * field_v & 16711680;
                                           var18 = (var15 & 255) * field_i & 65280;
                                           var15 = (var16 | var17 | var18) >>> 8;
-                                          var19 = var56[var11];
+                                          var19 = var38[var11];
                                           var12[var11] = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                           break L15;
                                         }
                                       } else {
                                         var16 = field_u >>> 24;
                                         var17 = 256 - var16;
-                                        var18 = var56[var11];
+                                        var18 = var38[var11];
                                         var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                         break L15;
                                       }
                                     }
                                   }
                                 } else {
-                                  var15 = ((mj) this).field_E[var10];
+                                  var15 = this.field_E[var10];
                                   if (var15 == 0) {
                                     break L15;
                                   } else {
-                                    var56[var11] = var15;
+                                    var38[var11] = var15;
                                     break L15;
                                   }
                                 }
@@ -2079,16 +2145,16 @@ final class mj extends qd {
                                     if (var13 != 2) {
                                       throw new IllegalArgumentException();
                                     } else {
-                                      var15 = ((mj) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       var16 = (var15 & 16711935) * field_f & -16711936;
                                       var17 = (var15 & 65280) * field_f & 16711680;
                                       var12[var11] = ((var16 | var17) >>> 8) + field_D;
                                       break L15;
                                     }
                                   } else {
-                                    int incrementValue$42 = var10;
+                                    incrementValue$42 = var10;
                                     var10++;
-                                    var15 = ((mj) this).field_E[incrementValue$42];
+                                    var15 = this.field_E[incrementValue$42];
                                     var16 = field_u;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2097,9 +2163,9 @@ final class mj extends qd {
                                     break L15;
                                   }
                                 } else {
-                                  int incrementValue$43 = var10;
+                                  incrementValue$43 = var10;
                                   var10++;
-                                  var15 = ((mj) this).field_E[incrementValue$43];
+                                  var15 = this.field_E[incrementValue$43];
                                   var16 = (var15 & 16711680) * field_j & -16777216;
                                   var17 = (var15 & 65280) * field_v & 16711680;
                                   var18 = (var15 & 255) * field_i & 65280;
@@ -2107,7 +2173,7 @@ final class mj extends qd {
                                   break L15;
                                 }
                               } else {
-                                var12[var11] = ((mj) this).field_E[var10];
+                                var12[var11] = this.field_E[var10];
                                 break L15;
                               }
                             }
@@ -2133,7 +2199,7 @@ final class mj extends qd {
                       var8 = field_m;
                       var9 = field_h;
                       if (var8 >= 0) {
-                        if (var8 - (((mj) this).field_q << 12) < 0) {
+                        if (var8 - (this.field_q << 12) < 0) {
                           L19: {
                             if (var7 >= 0) {
                               break L19;
@@ -2146,8 +2212,8 @@ final class mj extends qd {
                             }
                           }
                           L20: {
-                            var4 = (1 + var7 - (((mj) this).field_z << 12) - field_w) / field_w;
-                            if ((1 + var7 - (((mj) this).field_z << 12) - field_w) / field_w <= var9) {
+                            var4 = (1 + var7 - (this.field_z << 12) - field_w) / field_w;
+                            if ((1 + var7 - (this.field_z << 12) - field_w) / field_w <= var9) {
                               break L20;
                             } else {
                               var9 = var4;
@@ -2159,13 +2225,11 @@ final class mj extends qd {
                               break L18;
                             } else {
                               L22: {
-                                var10 = (var8 >> 12) * ((mj) this).field_z + (var7 >> 12);
-                                int incrementValue$44 = var6;
+                                var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                                incrementValue$44 = var6;
                                 var6++;
                                 var11 = incrementValue$44;
-                                var55 = var3;
-                                var46 = var55;
-                                var37 = var46;
+                                var37 = var3;
                                 var28 = var37;
                                 var12 = var28;
                                 var13 = param0;
@@ -2181,14 +2245,14 @@ final class mj extends qd {
                                             if (var13 != 2) {
                                               break L22;
                                             } else {
-                                              var15 = ((mj) this).field_E[var10];
+                                              var15 = this.field_E[var10];
                                               if (var15 == 0) {
                                                 break L22;
                                               } else {
                                                 var16 = (var15 & 16711935) * field_f & -16711936;
                                                 var17 = (var15 & 65280) * field_f & 16711680;
                                                 var15 = ((var16 | var17) >>> 8) + field_D;
-                                                var18 = var55[var11];
+                                                var18 = var37[var11];
                                                 var19 = var15 + var18;
                                                 var20 = (var15 & 16711935) + (var18 & 16711935);
                                                 var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -2197,13 +2261,13 @@ final class mj extends qd {
                                               }
                                             }
                                           } else {
-                                            var15 = ((mj) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_u;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                             var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                            var19 = var55[var11];
+                                            var19 = var37[var11];
                                             var17 = var15 + var19;
                                             var18 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -2211,7 +2275,7 @@ final class mj extends qd {
                                             break L22;
                                           }
                                         } else {
-                                          var15 = ((mj) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L22;
                                           } else {
@@ -2219,7 +2283,7 @@ final class mj extends qd {
                                             var17 = (var15 & 65280) * field_v & 16711680;
                                             var18 = (var15 & 255) * field_i & 65280;
                                             var15 = (var16 | var17 | var18) >>> 8;
-                                            var19 = var55[var11];
+                                            var19 = var37[var11];
                                             var20 = var15 + var19;
                                             var21 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -2228,11 +2292,11 @@ final class mj extends qd {
                                           }
                                         }
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L22;
                                         } else {
-                                          var16 = var55[var11];
+                                          var16 = var37[var11];
                                           var17 = var15 + var16;
                                           var18 = (var15 & 16711935) + (var16 & 16711935);
                                           var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -2248,13 +2312,13 @@ final class mj extends qd {
                                           if (var13 != 2) {
                                             throw new IllegalArgumentException();
                                           } else {
-                                            var15 = ((mj) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             if (var15 == 0) {
                                               break L22;
                                             } else {
                                               var16 = (var15 & 16711935) * field_f & -16711936;
                                               var17 = (var15 & 65280) * field_f & 16711680;
-                                              int incrementValue$45 = var11;
+                                              incrementValue$45 = var11;
                                               var11++;
                                               var12[incrementValue$45] = ((var16 | var17) >>> 8) + field_D;
                                               break L22;
@@ -2262,7 +2326,7 @@ final class mj extends qd {
                                           }
                                         } else {
                                           L23: {
-                                            var15 = ((mj) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_u;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2275,17 +2339,17 @@ final class mj extends qd {
                                                 break L23;
                                               } else {
                                                 var15 = var19;
-                                                var19 = var55[var11];
+                                                var19 = var37[var11];
                                                 var19 = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                                 break L23;
                                               }
                                             }
                                           }
-                                          var55[var11] = var19;
+                                          var37[var11] = var19;
                                           break L22;
                                         }
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L22;
                                         } else {
@@ -2301,25 +2365,25 @@ final class mj extends qd {
                                               var17 = (var15 & 65280) * field_v & 16711680;
                                               var18 = (var15 & 255) * field_i & 65280;
                                               var15 = (var16 | var17 | var18) >>> 8;
-                                              var19 = var55[var11];
+                                              var19 = var37[var11];
                                               var12[var11] = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                               break L22;
                                             }
                                           } else {
                                             var16 = field_u >>> 24;
                                             var17 = 256 - var16;
-                                            var18 = var55[var11];
+                                            var18 = var37[var11];
                                             var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                             break L22;
                                           }
                                         }
                                       }
                                     } else {
-                                      var15 = ((mj) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L22;
                                       } else {
-                                        var55[var11] = var15;
+                                        var37[var11] = var15;
                                         break L22;
                                       }
                                     }
@@ -2331,16 +2395,16 @@ final class mj extends qd {
                                         if (var13 != 2) {
                                           throw new IllegalArgumentException();
                                         } else {
-                                          var15 = ((mj) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           var16 = (var15 & 16711935) * field_f & -16711936;
                                           var17 = (var15 & 65280) * field_f & 16711680;
                                           var12[var11] = ((var16 | var17) >>> 8) + field_D;
                                           break L22;
                                         }
                                       } else {
-                                        int incrementValue$46 = var10;
+                                        incrementValue$46 = var10;
                                         var10++;
-                                        var15 = ((mj) this).field_E[incrementValue$46];
+                                        var15 = this.field_E[incrementValue$46];
                                         var16 = field_u;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2349,9 +2413,9 @@ final class mj extends qd {
                                         break L22;
                                       }
                                     } else {
-                                      int incrementValue$47 = var10;
+                                      incrementValue$47 = var10;
                                       var10++;
-                                      var15 = ((mj) this).field_E[incrementValue$47];
+                                      var15 = this.field_E[incrementValue$47];
                                       var16 = (var15 & 16711680) * field_j & -16777216;
                                       var17 = (var15 & 65280) * field_v & 16711680;
                                       var18 = (var15 & 255) * field_i & 65280;
@@ -2359,7 +2423,7 @@ final class mj extends qd {
                                       break L22;
                                     }
                                   } else {
-                                    var12[var11] = ((mj) this).field_E[var10];
+                                    var12[var11] = this.field_E[var10];
                                     break L22;
                                   }
                                 }
@@ -2397,8 +2461,8 @@ final class mj extends qd {
                         var7 = field_s + field_g;
                         var8 = field_m + field_a;
                         var9 = field_h;
-                        var4 = var7 - (((mj) this).field_z << 12);
-                        if (var7 - (((mj) this).field_z << 12) < 0) {
+                        var4 = var7 - (this.field_z << 12);
+                        if (var7 - (this.field_z << 12) < 0) {
                           break L25;
                         } else {
                           var4 = (field_w - var4) / field_w;
@@ -2431,8 +2495,8 @@ final class mj extends qd {
                         }
                       }
                       L28: {
-                        var4 = (1 + var8 - (((mj) this).field_q << 12) - field_d) / field_d;
-                        if ((1 + var8 - (((mj) this).field_q << 12) - field_d) / field_d <= var9) {
+                        var4 = (1 + var8 - (this.field_q << 12) - field_d) / field_d;
+                        if ((1 + var8 - (this.field_q << 12) - field_d) / field_d <= var9) {
                           break L28;
                         } else {
                           var9 = var4;
@@ -2448,13 +2512,11 @@ final class mj extends qd {
                           continue L24;
                         } else {
                           L30: {
-                            var10 = (var8 >> 12) * ((mj) this).field_z + (var7 >> 12);
-                            int incrementValue$48 = var6;
+                            var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                            incrementValue$48 = var6;
                             var6++;
                             var11 = incrementValue$48;
-                            var54 = var3;
-                            var45 = var54;
-                            var36 = var45;
+                            var36 = var3;
                             var27 = var36;
                             var12 = var27;
                             var13 = param0;
@@ -2470,14 +2532,14 @@ final class mj extends qd {
                                         if (var13 != 2) {
                                           break L30;
                                         } else {
-                                          var15 = ((mj) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L30;
                                           } else {
                                             var16 = (var15 & 16711935) * field_f & -16711936;
                                             var17 = (var15 & 65280) * field_f & 16711680;
                                             var15 = ((var16 | var17) >>> 8) + field_D;
-                                            var18 = var54[var11];
+                                            var18 = var36[var11];
                                             var19 = var15 + var18;
                                             var20 = (var15 & 16711935) + (var18 & 16711935);
                                             var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -2486,13 +2548,13 @@ final class mj extends qd {
                                           }
                                         }
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_u;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                         var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                        var19 = var54[var11];
+                                        var19 = var36[var11];
                                         var17 = var15 + var19;
                                         var18 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -2500,7 +2562,7 @@ final class mj extends qd {
                                         break L30;
                                       }
                                     } else {
-                                      var15 = ((mj) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L30;
                                       } else {
@@ -2508,7 +2570,7 @@ final class mj extends qd {
                                         var17 = (var15 & 65280) * field_v & 16711680;
                                         var18 = (var15 & 255) * field_i & 65280;
                                         var15 = (var16 | var17 | var18) >>> 8;
-                                        var19 = var54[var11];
+                                        var19 = var36[var11];
                                         var20 = var15 + var19;
                                         var21 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -2517,11 +2579,11 @@ final class mj extends qd {
                                       }
                                     }
                                   } else {
-                                    var15 = ((mj) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L30;
                                     } else {
-                                      var16 = var54[var11];
+                                      var16 = var36[var11];
                                       var17 = var15 + var16;
                                       var18 = (var15 & 16711935) + (var16 & 16711935);
                                       var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -2537,13 +2599,13 @@ final class mj extends qd {
                                       if (var13 != 2) {
                                         throw new IllegalArgumentException();
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L30;
                                         } else {
                                           var16 = (var15 & 16711935) * field_f & -16711936;
                                           var17 = (var15 & 65280) * field_f & 16711680;
-                                          int incrementValue$49 = var11;
+                                          incrementValue$49 = var11;
                                           var11++;
                                           var12[incrementValue$49] = ((var16 | var17) >>> 8) + field_D;
                                           break L30;
@@ -2551,7 +2613,7 @@ final class mj extends qd {
                                       }
                                     } else {
                                       L31: {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_u;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2564,17 +2626,17 @@ final class mj extends qd {
                                             break L31;
                                           } else {
                                             var15 = var19;
-                                            var19 = var54[var11];
+                                            var19 = var36[var11];
                                             var19 = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                             break L31;
                                           }
                                         }
                                       }
-                                      var54[var11] = var19;
+                                      var36[var11] = var19;
                                       break L30;
                                     }
                                   } else {
-                                    var15 = ((mj) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L30;
                                     } else {
@@ -2590,25 +2652,25 @@ final class mj extends qd {
                                           var17 = (var15 & 65280) * field_v & 16711680;
                                           var18 = (var15 & 255) * field_i & 65280;
                                           var15 = (var16 | var17 | var18) >>> 8;
-                                          var19 = var54[var11];
+                                          var19 = var36[var11];
                                           var12[var11] = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                           break L30;
                                         }
                                       } else {
                                         var16 = field_u >>> 24;
                                         var17 = 256 - var16;
-                                        var18 = var54[var11];
+                                        var18 = var36[var11];
                                         var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                         break L30;
                                       }
                                     }
                                   }
                                 } else {
-                                  var15 = ((mj) this).field_E[var10];
+                                  var15 = this.field_E[var10];
                                   if (var15 == 0) {
                                     break L30;
                                   } else {
-                                    var54[var11] = var15;
+                                    var36[var11] = var15;
                                     break L30;
                                   }
                                 }
@@ -2620,16 +2682,16 @@ final class mj extends qd {
                                     if (var13 != 2) {
                                       throw new IllegalArgumentException();
                                     } else {
-                                      var15 = ((mj) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       var16 = (var15 & 16711935) * field_f & -16711936;
                                       var17 = (var15 & 65280) * field_f & 16711680;
                                       var12[var11] = ((var16 | var17) >>> 8) + field_D;
                                       break L30;
                                     }
                                   } else {
-                                    int incrementValue$50 = var10;
+                                    incrementValue$50 = var10;
                                     var10++;
-                                    var15 = ((mj) this).field_E[incrementValue$50];
+                                    var15 = this.field_E[incrementValue$50];
                                     var16 = field_u;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2638,9 +2700,9 @@ final class mj extends qd {
                                     break L30;
                                   }
                                 } else {
-                                  int incrementValue$51 = var10;
+                                  incrementValue$51 = var10;
                                   var10++;
-                                  var15 = ((mj) this).field_E[incrementValue$51];
+                                  var15 = this.field_E[incrementValue$51];
                                   var16 = (var15 & 16711680) * field_j & -16777216;
                                   var17 = (var15 & 65280) * field_v & 16711680;
                                   var18 = (var15 & 255) * field_i & 65280;
@@ -2648,7 +2710,7 @@ final class mj extends qd {
                                   break L30;
                                 }
                               } else {
-                                var12[var11] = ((mj) this).field_E[var10];
+                                var12[var11] = this.field_E[var10];
                                 break L30;
                               }
                             }
@@ -2672,8 +2734,8 @@ final class mj extends qd {
                         var7 = field_s + field_g;
                         var8 = field_m + field_a;
                         var9 = field_h;
-                        var4 = var7 - (((mj) this).field_z << 12);
-                        if (var7 - (((mj) this).field_z << 12) < 0) {
+                        var4 = var7 - (this.field_z << 12);
+                        if (var7 - (this.field_z << 12) < 0) {
                           break L33;
                         } else {
                           var4 = (field_w - var4) / field_w;
@@ -2694,8 +2756,8 @@ final class mj extends qd {
                         }
                       }
                       L35: {
-                        var4 = var8 - (((mj) this).field_q << 12);
-                        if (var8 - (((mj) this).field_q << 12) < 0) {
+                        var4 = var8 - (this.field_q << 12);
+                        if (var8 - (this.field_q << 12) < 0) {
                           break L35;
                         } else {
                           var4 = (field_d - var4) / field_d;
@@ -2724,13 +2786,11 @@ final class mj extends qd {
                           continue L32;
                         } else {
                           L38: {
-                            var10 = (var8 >> 12) * ((mj) this).field_z + (var7 >> 12);
-                            int incrementValue$52 = var6;
+                            var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                            incrementValue$52 = var6;
                             var6++;
                             var11 = incrementValue$52;
-                            var53 = var3;
-                            var44 = var53;
-                            var35 = var44;
+                            var35 = var3;
                             var26 = var35;
                             var12 = var26;
                             var13 = param0;
@@ -2746,14 +2806,14 @@ final class mj extends qd {
                                         if (var13 != 2) {
                                           break L38;
                                         } else {
-                                          var15 = ((mj) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L38;
                                           } else {
                                             var16 = (var15 & 16711935) * field_f & -16711936;
                                             var17 = (var15 & 65280) * field_f & 16711680;
                                             var15 = ((var16 | var17) >>> 8) + field_D;
-                                            var18 = var53[var11];
+                                            var18 = var35[var11];
                                             var19 = var15 + var18;
                                             var20 = (var15 & 16711935) + (var18 & 16711935);
                                             var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -2762,13 +2822,13 @@ final class mj extends qd {
                                           }
                                         }
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_u;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                         var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                        var19 = var53[var11];
+                                        var19 = var35[var11];
                                         var17 = var15 + var19;
                                         var18 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -2776,7 +2836,7 @@ final class mj extends qd {
                                         break L38;
                                       }
                                     } else {
-                                      var15 = ((mj) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L38;
                                       } else {
@@ -2784,7 +2844,7 @@ final class mj extends qd {
                                         var17 = (var15 & 65280) * field_v & 16711680;
                                         var18 = (var15 & 255) * field_i & 65280;
                                         var15 = (var16 | var17 | var18) >>> 8;
-                                        var19 = var53[var11];
+                                        var19 = var35[var11];
                                         var20 = var15 + var19;
                                         var21 = (var15 & 16711935) + (var19 & 16711935);
                                         var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -2793,11 +2853,11 @@ final class mj extends qd {
                                       }
                                     }
                                   } else {
-                                    var15 = ((mj) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L38;
                                     } else {
-                                      var16 = var53[var11];
+                                      var16 = var35[var11];
                                       var17 = var15 + var16;
                                       var18 = (var15 & 16711935) + (var16 & 16711935);
                                       var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -2813,13 +2873,13 @@ final class mj extends qd {
                                       if (var13 != 2) {
                                         throw new IllegalArgumentException();
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L38;
                                         } else {
                                           var16 = (var15 & 16711935) * field_f & -16711936;
                                           var17 = (var15 & 65280) * field_f & 16711680;
-                                          int incrementValue$53 = var11;
+                                          incrementValue$53 = var11;
                                           var11++;
                                           var12[incrementValue$53] = ((var16 | var17) >>> 8) + field_D;
                                           break L38;
@@ -2827,7 +2887,7 @@ final class mj extends qd {
                                       }
                                     } else {
                                       L39: {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         var16 = field_u;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2840,17 +2900,17 @@ final class mj extends qd {
                                             break L39;
                                           } else {
                                             var15 = var19;
-                                            var19 = var53[var11];
+                                            var19 = var35[var11];
                                             var19 = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                             break L39;
                                           }
                                         }
                                       }
-                                      var53[var11] = var19;
+                                      var35[var11] = var19;
                                       break L38;
                                     }
                                   } else {
-                                    var15 = ((mj) this).field_E[var10];
+                                    var15 = this.field_E[var10];
                                     if (var15 == 0) {
                                       break L38;
                                     } else {
@@ -2866,25 +2926,25 @@ final class mj extends qd {
                                           var17 = (var15 & 65280) * field_v & 16711680;
                                           var18 = (var15 & 255) * field_i & 65280;
                                           var15 = (var16 | var17 | var18) >>> 8;
-                                          var19 = var53[var11];
+                                          var19 = var35[var11];
                                           var12[var11] = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                           break L38;
                                         }
                                       } else {
                                         var16 = field_u >>> 24;
                                         var17 = 256 - var16;
-                                        var18 = var53[var11];
+                                        var18 = var35[var11];
                                         var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                         break L38;
                                       }
                                     }
                                   }
                                 } else {
-                                  var15 = ((mj) this).field_E[var10];
+                                  var15 = this.field_E[var10];
                                   if (var15 == 0) {
                                     break L38;
                                   } else {
-                                    var53[var11] = var15;
+                                    var35[var11] = var15;
                                     break L38;
                                   }
                                 }
@@ -2896,16 +2956,16 @@ final class mj extends qd {
                                     if (var13 != 2) {
                                       throw new IllegalArgumentException();
                                     } else {
-                                      var15 = ((mj) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       var16 = (var15 & 16711935) * field_f & -16711936;
                                       var17 = (var15 & 65280) * field_f & 16711680;
                                       var12[var11] = ((var16 | var17) >>> 8) + field_D;
                                       break L38;
                                     }
                                   } else {
-                                    int incrementValue$54 = var10;
+                                    incrementValue$54 = var10;
                                     var10++;
-                                    var15 = ((mj) this).field_E[incrementValue$54];
+                                    var15 = this.field_E[incrementValue$54];
                                     var16 = field_u;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2914,9 +2974,9 @@ final class mj extends qd {
                                     break L38;
                                   }
                                 } else {
-                                  int incrementValue$55 = var10;
+                                  incrementValue$55 = var10;
                                   var10++;
-                                  var15 = ((mj) this).field_E[incrementValue$55];
+                                  var15 = this.field_E[incrementValue$55];
                                   var16 = (var15 & 16711680) * field_j & -16777216;
                                   var17 = (var15 & 65280) * field_v & 16711680;
                                   var18 = (var15 & 255) * field_i & 65280;
@@ -2924,7 +2984,7 @@ final class mj extends qd {
                                   break L38;
                                 }
                               } else {
-                                var12[var11] = ((mj) this).field_E[var10];
+                                var12[var11] = this.field_E[var10];
                                 break L38;
                               }
                             }
@@ -2950,10 +3010,10 @@ final class mj extends qd {
                       var8 = field_m;
                       var9 = field_h;
                       if (var8 >= 0) {
-                        if (var8 - (((mj) this).field_q << 12) < 0) {
+                        if (var8 - (this.field_q << 12) < 0) {
                           L42: {
-                            var4 = var7 - (((mj) this).field_z << 12);
-                            if (var7 - (((mj) this).field_z << 12) < 0) {
+                            var4 = var7 - (this.field_z << 12);
+                            if (var7 - (this.field_z << 12) < 0) {
                               break L42;
                             } else {
                               var4 = (field_w - var4) / field_w;
@@ -2977,13 +3037,11 @@ final class mj extends qd {
                               break L41;
                             } else {
                               L45: {
-                                var10 = (var8 >> 12) * ((mj) this).field_z + (var7 >> 12);
-                                int incrementValue$56 = var6;
+                                var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                                incrementValue$56 = var6;
                                 var6++;
                                 var11 = incrementValue$56;
-                                var52 = var3;
-                                var43 = var52;
-                                var34 = var43;
+                                var34 = var3;
                                 var25 = var34;
                                 var12 = var25;
                                 var13 = param0;
@@ -2999,14 +3057,14 @@ final class mj extends qd {
                                             if (var13 != 2) {
                                               break L45;
                                             } else {
-                                              var15 = ((mj) this).field_E[var10];
+                                              var15 = this.field_E[var10];
                                               if (var15 == 0) {
                                                 break L45;
                                               } else {
                                                 var16 = (var15 & 16711935) * field_f & -16711936;
                                                 var17 = (var15 & 65280) * field_f & 16711680;
                                                 var15 = ((var16 | var17) >>> 8) + field_D;
-                                                var18 = var52[var11];
+                                                var18 = var34[var11];
                                                 var19 = var15 + var18;
                                                 var20 = (var15 & 16711935) + (var18 & 16711935);
                                                 var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -3015,13 +3073,13 @@ final class mj extends qd {
                                               }
                                             }
                                           } else {
-                                            var15 = ((mj) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_u;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                             var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                            var19 = var52[var11];
+                                            var19 = var34[var11];
                                             var17 = var15 + var19;
                                             var18 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3029,7 +3087,7 @@ final class mj extends qd {
                                             break L45;
                                           }
                                         } else {
-                                          var15 = ((mj) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L45;
                                           } else {
@@ -3037,7 +3095,7 @@ final class mj extends qd {
                                             var17 = (var15 & 65280) * field_v & 16711680;
                                             var18 = (var15 & 255) * field_i & 65280;
                                             var15 = (var16 | var17 | var18) >>> 8;
-                                            var19 = var52[var11];
+                                            var19 = var34[var11];
                                             var20 = var15 + var19;
                                             var21 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -3046,11 +3104,11 @@ final class mj extends qd {
                                           }
                                         }
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L45;
                                         } else {
-                                          var16 = var52[var11];
+                                          var16 = var34[var11];
                                           var17 = var15 + var16;
                                           var18 = (var15 & 16711935) + (var16 & 16711935);
                                           var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3066,13 +3124,13 @@ final class mj extends qd {
                                           if (var13 != 2) {
                                             throw new IllegalArgumentException();
                                           } else {
-                                            var15 = ((mj) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             if (var15 == 0) {
                                               break L45;
                                             } else {
                                               var16 = (var15 & 16711935) * field_f & -16711936;
                                               var17 = (var15 & 65280) * field_f & 16711680;
-                                              int incrementValue$57 = var11;
+                                              incrementValue$57 = var11;
                                               var11++;
                                               var12[incrementValue$57] = ((var16 | var17) >>> 8) + field_D;
                                               break L45;
@@ -3080,7 +3138,7 @@ final class mj extends qd {
                                           }
                                         } else {
                                           L46: {
-                                            var15 = ((mj) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_u;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3093,17 +3151,17 @@ final class mj extends qd {
                                                 break L46;
                                               } else {
                                                 var15 = var19;
-                                                var19 = var52[var11];
+                                                var19 = var34[var11];
                                                 var19 = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                                 break L46;
                                               }
                                             }
                                           }
-                                          var52[var11] = var19;
+                                          var34[var11] = var19;
                                           break L45;
                                         }
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L45;
                                         } else {
@@ -3119,25 +3177,25 @@ final class mj extends qd {
                                               var17 = (var15 & 65280) * field_v & 16711680;
                                               var18 = (var15 & 255) * field_i & 65280;
                                               var15 = (var16 | var17 | var18) >>> 8;
-                                              var19 = var52[var11];
+                                              var19 = var34[var11];
                                               var12[var11] = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                               break L45;
                                             }
                                           } else {
                                             var16 = field_u >>> 24;
                                             var17 = 256 - var16;
-                                            var18 = var52[var11];
+                                            var18 = var34[var11];
                                             var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                             break L45;
                                           }
                                         }
                                       }
                                     } else {
-                                      var15 = ((mj) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L45;
                                       } else {
-                                        var52[var11] = var15;
+                                        var34[var11] = var15;
                                         break L45;
                                       }
                                     }
@@ -3149,16 +3207,16 @@ final class mj extends qd {
                                         if (var13 != 2) {
                                           throw new IllegalArgumentException();
                                         } else {
-                                          var15 = ((mj) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           var16 = (var15 & 16711935) * field_f & -16711936;
                                           var17 = (var15 & 65280) * field_f & 16711680;
                                           var12[var11] = ((var16 | var17) >>> 8) + field_D;
                                           break L45;
                                         }
                                       } else {
-                                        int incrementValue$58 = var10;
+                                        incrementValue$58 = var10;
                                         var10++;
-                                        var15 = ((mj) this).field_E[incrementValue$58];
+                                        var15 = this.field_E[incrementValue$58];
                                         var16 = field_u;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3167,9 +3225,9 @@ final class mj extends qd {
                                         break L45;
                                       }
                                     } else {
-                                      int incrementValue$59 = var10;
+                                      incrementValue$59 = var10;
                                       var10++;
-                                      var15 = ((mj) this).field_E[incrementValue$59];
+                                      var15 = this.field_E[incrementValue$59];
                                       var16 = (var15 & 16711680) * field_j & -16777216;
                                       var17 = (var15 & 65280) * field_v & 16711680;
                                       var18 = (var15 & 255) * field_i & 65280;
@@ -3177,7 +3235,7 @@ final class mj extends qd {
                                       break L45;
                                     }
                                   } else {
-                                    var12[var11] = ((mj) this).field_E[var10];
+                                    var12[var11] = this.field_E[var10];
                                     break L45;
                                   }
                                 }
@@ -3216,7 +3274,7 @@ final class mj extends qd {
                       var8 = field_m + field_a;
                       var9 = field_h;
                       if (var7 >= 0) {
-                        if (var7 - (((mj) this).field_z << 12) < 0) {
+                        if (var7 - (this.field_z << 12) < 0) {
                           L49: {
                             if (var8 >= 0) {
                               break L49;
@@ -3229,8 +3287,8 @@ final class mj extends qd {
                             }
                           }
                           L50: {
-                            var4 = (1 + var8 - (((mj) this).field_q << 12) - field_d) / field_d;
-                            if ((1 + var8 - (((mj) this).field_q << 12) - field_d) / field_d <= var9) {
+                            var4 = (1 + var8 - (this.field_q << 12) - field_d) / field_d;
+                            if ((1 + var8 - (this.field_q << 12) - field_d) / field_d <= var9) {
                               break L50;
                             } else {
                               var9 = var4;
@@ -3242,13 +3300,11 @@ final class mj extends qd {
                               break L48;
                             } else {
                               L52: {
-                                var10 = (var8 >> 12) * ((mj) this).field_z + (var7 >> 12);
-                                int incrementValue$60 = var6;
+                                var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                                incrementValue$60 = var6;
                                 var6++;
                                 var11 = incrementValue$60;
-                                var51 = var3;
-                                var42 = var51;
-                                var33 = var42;
+                                var33 = var3;
                                 var24 = var33;
                                 var12 = var24;
                                 var13 = param0;
@@ -3264,14 +3320,14 @@ final class mj extends qd {
                                             if (var13 != 2) {
                                               break L52;
                                             } else {
-                                              var15 = ((mj) this).field_E[var10];
+                                              var15 = this.field_E[var10];
                                               if (var15 == 0) {
                                                 break L52;
                                               } else {
                                                 var16 = (var15 & 16711935) * field_f & -16711936;
                                                 var17 = (var15 & 65280) * field_f & 16711680;
                                                 var15 = ((var16 | var17) >>> 8) + field_D;
-                                                var18 = var51[var11];
+                                                var18 = var33[var11];
                                                 var19 = var15 + var18;
                                                 var20 = (var15 & 16711935) + (var18 & 16711935);
                                                 var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -3280,13 +3336,13 @@ final class mj extends qd {
                                               }
                                             }
                                           } else {
-                                            var15 = ((mj) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_u;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                             var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                            var19 = var51[var11];
+                                            var19 = var33[var11];
                                             var17 = var15 + var19;
                                             var18 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3294,7 +3350,7 @@ final class mj extends qd {
                                             break L52;
                                           }
                                         } else {
-                                          var15 = ((mj) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L52;
                                           } else {
@@ -3302,7 +3358,7 @@ final class mj extends qd {
                                             var17 = (var15 & 65280) * field_v & 16711680;
                                             var18 = (var15 & 255) * field_i & 65280;
                                             var15 = (var16 | var17 | var18) >>> 8;
-                                            var19 = var51[var11];
+                                            var19 = var33[var11];
                                             var20 = var15 + var19;
                                             var21 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -3311,11 +3367,11 @@ final class mj extends qd {
                                           }
                                         }
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L52;
                                         } else {
-                                          var16 = var51[var11];
+                                          var16 = var33[var11];
                                           var17 = var15 + var16;
                                           var18 = (var15 & 16711935) + (var16 & 16711935);
                                           var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3331,13 +3387,13 @@ final class mj extends qd {
                                           if (var13 != 2) {
                                             throw new IllegalArgumentException();
                                           } else {
-                                            var15 = ((mj) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             if (var15 == 0) {
                                               break L52;
                                             } else {
                                               var16 = (var15 & 16711935) * field_f & -16711936;
                                               var17 = (var15 & 65280) * field_f & 16711680;
-                                              int incrementValue$61 = var11;
+                                              incrementValue$61 = var11;
                                               var11++;
                                               var12[incrementValue$61] = ((var16 | var17) >>> 8) + field_D;
                                               break L52;
@@ -3345,7 +3401,7 @@ final class mj extends qd {
                                           }
                                         } else {
                                           L53: {
-                                            var15 = ((mj) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_u;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3358,17 +3414,17 @@ final class mj extends qd {
                                                 break L53;
                                               } else {
                                                 var15 = var19;
-                                                var19 = var51[var11];
+                                                var19 = var33[var11];
                                                 var19 = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                                 break L53;
                                               }
                                             }
                                           }
-                                          var51[var11] = var19;
+                                          var33[var11] = var19;
                                           break L52;
                                         }
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L52;
                                         } else {
@@ -3384,25 +3440,25 @@ final class mj extends qd {
                                               var17 = (var15 & 65280) * field_v & 16711680;
                                               var18 = (var15 & 255) * field_i & 65280;
                                               var15 = (var16 | var17 | var18) >>> 8;
-                                              var19 = var51[var11];
+                                              var19 = var33[var11];
                                               var12[var11] = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                               break L52;
                                             }
                                           } else {
                                             var16 = field_u >>> 24;
                                             var17 = 256 - var16;
-                                            var18 = var51[var11];
+                                            var18 = var33[var11];
                                             var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                             break L52;
                                           }
                                         }
                                       }
                                     } else {
-                                      var15 = ((mj) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L52;
                                       } else {
-                                        var51[var11] = var15;
+                                        var33[var11] = var15;
                                         break L52;
                                       }
                                     }
@@ -3414,16 +3470,16 @@ final class mj extends qd {
                                         if (var13 != 2) {
                                           throw new IllegalArgumentException();
                                         } else {
-                                          var15 = ((mj) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           var16 = (var15 & 16711935) * field_f & -16711936;
                                           var17 = (var15 & 65280) * field_f & 16711680;
                                           var12[var11] = ((var16 | var17) >>> 8) + field_D;
                                           break L52;
                                         }
                                       } else {
-                                        int incrementValue$62 = var10;
+                                        incrementValue$62 = var10;
                                         var10++;
-                                        var15 = ((mj) this).field_E[incrementValue$62];
+                                        var15 = this.field_E[incrementValue$62];
                                         var16 = field_u;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3432,9 +3488,9 @@ final class mj extends qd {
                                         break L52;
                                       }
                                     } else {
-                                      int incrementValue$63 = var10;
+                                      incrementValue$63 = var10;
                                       var10++;
-                                      var15 = ((mj) this).field_E[incrementValue$63];
+                                      var15 = this.field_E[incrementValue$63];
                                       var16 = (var15 & 16711680) * field_j & -16777216;
                                       var17 = (var15 & 65280) * field_v & 16711680;
                                       var18 = (var15 & 255) * field_i & 65280;
@@ -3442,7 +3498,7 @@ final class mj extends qd {
                                       break L52;
                                     }
                                   } else {
-                                    var12[var11] = ((mj) this).field_E[var10];
+                                    var12[var11] = this.field_E[var10];
                                     break L52;
                                   }
                                 }
@@ -3477,10 +3533,10 @@ final class mj extends qd {
                       var8 = field_m + field_a;
                       var9 = field_h;
                       if (var7 >= 0) {
-                        if (var7 - (((mj) this).field_z << 12) < 0) {
+                        if (var7 - (this.field_z << 12) < 0) {
                           L56: {
-                            var4 = var8 - (((mj) this).field_q << 12);
-                            if (var8 - (((mj) this).field_q << 12) < 0) {
+                            var4 = var8 - (this.field_q << 12);
+                            if (var8 - (this.field_q << 12) < 0) {
                               break L56;
                             } else {
                               var4 = (field_d - var4) / field_d;
@@ -3504,13 +3560,11 @@ final class mj extends qd {
                               break L55;
                             } else {
                               L59: {
-                                var10 = (var8 >> 12) * ((mj) this).field_z + (var7 >> 12);
-                                int incrementValue$64 = var6;
+                                var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                                incrementValue$64 = var6;
                                 var6++;
                                 var11 = incrementValue$64;
-                                var50 = var3;
-                                var41 = var50;
-                                var32 = var41;
+                                var32 = var3;
                                 var23 = var32;
                                 var12 = var23;
                                 var13 = param0;
@@ -3526,14 +3580,14 @@ final class mj extends qd {
                                             if (var13 != 2) {
                                               break L59;
                                             } else {
-                                              var15 = ((mj) this).field_E[var10];
+                                              var15 = this.field_E[var10];
                                               if (var15 == 0) {
                                                 break L59;
                                               } else {
                                                 var16 = (var15 & 16711935) * field_f & -16711936;
                                                 var17 = (var15 & 65280) * field_f & 16711680;
                                                 var15 = ((var16 | var17) >>> 8) + field_D;
-                                                var18 = var50[var11];
+                                                var18 = var32[var11];
                                                 var19 = var15 + var18;
                                                 var20 = (var15 & 16711935) + (var18 & 16711935);
                                                 var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -3542,13 +3596,13 @@ final class mj extends qd {
                                               }
                                             }
                                           } else {
-                                            var15 = ((mj) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_u;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                             var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                            var19 = var50[var11];
+                                            var19 = var32[var11];
                                             var17 = var15 + var19;
                                             var18 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3556,7 +3610,7 @@ final class mj extends qd {
                                             break L59;
                                           }
                                         } else {
-                                          var15 = ((mj) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L59;
                                           } else {
@@ -3564,7 +3618,7 @@ final class mj extends qd {
                                             var17 = (var15 & 65280) * field_v & 16711680;
                                             var18 = (var15 & 255) * field_i & 65280;
                                             var15 = (var16 | var17 | var18) >>> 8;
-                                            var19 = var50[var11];
+                                            var19 = var32[var11];
                                             var20 = var15 + var19;
                                             var21 = (var15 & 16711935) + (var19 & 16711935);
                                             var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -3573,11 +3627,11 @@ final class mj extends qd {
                                           }
                                         }
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L59;
                                         } else {
-                                          var16 = var50[var11];
+                                          var16 = var32[var11];
                                           var17 = var15 + var16;
                                           var18 = (var15 & 16711935) + (var16 & 16711935);
                                           var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3593,13 +3647,13 @@ final class mj extends qd {
                                           if (var13 != 2) {
                                             throw new IllegalArgumentException();
                                           } else {
-                                            var15 = ((mj) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             if (var15 == 0) {
                                               break L59;
                                             } else {
                                               var16 = (var15 & 16711935) * field_f & -16711936;
                                               var17 = (var15 & 65280) * field_f & 16711680;
-                                              int incrementValue$65 = var11;
+                                              incrementValue$65 = var11;
                                               var11++;
                                               var12[incrementValue$65] = ((var16 | var17) >>> 8) + field_D;
                                               break L59;
@@ -3607,7 +3661,7 @@ final class mj extends qd {
                                           }
                                         } else {
                                           L60: {
-                                            var15 = ((mj) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = field_u;
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3620,17 +3674,17 @@ final class mj extends qd {
                                                 break L60;
                                               } else {
                                                 var15 = var19;
-                                                var19 = var50[var11];
+                                                var19 = var32[var11];
                                                 var19 = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                                 break L60;
                                               }
                                             }
                                           }
-                                          var50[var11] = var19;
+                                          var32[var11] = var19;
                                           break L59;
                                         }
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L59;
                                         } else {
@@ -3646,25 +3700,25 @@ final class mj extends qd {
                                               var17 = (var15 & 65280) * field_v & 16711680;
                                               var18 = (var15 & 255) * field_i & 65280;
                                               var15 = (var16 | var17 | var18) >>> 8;
-                                              var19 = var50[var11];
+                                              var19 = var32[var11];
                                               var12[var11] = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                               break L59;
                                             }
                                           } else {
                                             var16 = field_u >>> 24;
                                             var17 = 256 - var16;
-                                            var18 = var50[var11];
+                                            var18 = var32[var11];
                                             var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                             break L59;
                                           }
                                         }
                                       }
                                     } else {
-                                      var15 = ((mj) this).field_E[var10];
+                                      var15 = this.field_E[var10];
                                       if (var15 == 0) {
                                         break L59;
                                       } else {
-                                        var50[var11] = var15;
+                                        var32[var11] = var15;
                                         break L59;
                                       }
                                     }
@@ -3676,16 +3730,16 @@ final class mj extends qd {
                                         if (var13 != 2) {
                                           throw new IllegalArgumentException();
                                         } else {
-                                          var15 = ((mj) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           var16 = (var15 & 16711935) * field_f & -16711936;
                                           var17 = (var15 & 65280) * field_f & 16711680;
                                           var12[var11] = ((var16 | var17) >>> 8) + field_D;
                                           break L59;
                                         }
                                       } else {
-                                        int incrementValue$66 = var10;
+                                        incrementValue$66 = var10;
                                         var10++;
-                                        var15 = ((mj) this).field_E[incrementValue$66];
+                                        var15 = this.field_E[incrementValue$66];
                                         var16 = field_u;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3694,9 +3748,9 @@ final class mj extends qd {
                                         break L59;
                                       }
                                     } else {
-                                      int incrementValue$67 = var10;
+                                      incrementValue$67 = var10;
                                       var10++;
-                                      var15 = ((mj) this).field_E[incrementValue$67];
+                                      var15 = this.field_E[incrementValue$67];
                                       var16 = (var15 & 16711680) * field_j & -16777216;
                                       var17 = (var15 & 65280) * field_v & 16711680;
                                       var18 = (var15 & 255) * field_i & 65280;
@@ -3704,7 +3758,7 @@ final class mj extends qd {
                                       break L59;
                                     }
                                   } else {
-                                    var12[var11] = ((mj) this).field_E[var10];
+                                    var12[var11] = this.field_E[var10];
                                     break L59;
                                   }
                                 }
@@ -3741,20 +3795,18 @@ final class mj extends qd {
                     var9 = field_h;
                     if (var7 >= 0) {
                       if (var8 >= 0) {
-                        if (var7 - (((mj) this).field_z << 12) < 0) {
-                          if (var8 - (((mj) this).field_q << 12) < 0) {
+                        if (var7 - (this.field_z << 12) < 0) {
+                          if (var8 - (this.field_q << 12) < 0) {
                             L63: while (true) {
                               if (var9 >= 0) {
                                 break L62;
                               } else {
                                 L64: {
-                                  var10 = (var8 >> 12) * ((mj) this).field_z + (var7 >> 12);
-                                  int incrementValue$68 = var6;
+                                  var10 = (var8 >> 12) * this.field_z + (var7 >> 12);
+                                  incrementValue$68 = var6;
                                   var6++;
                                   var11 = incrementValue$68;
-                                  var49 = var3;
-                                  var40 = var49;
-                                  var31 = var40;
+                                  var31 = var3;
                                   var22 = var31;
                                   var12 = var22;
                                   var13 = param0;
@@ -3770,14 +3822,14 @@ final class mj extends qd {
                                               if (var13 != 2) {
                                                 break L64;
                                               } else {
-                                                var15 = ((mj) this).field_E[var10];
+                                                var15 = this.field_E[var10];
                                                 if (var15 == 0) {
                                                   break L64;
                                                 } else {
                                                   var16 = (var15 & 16711935) * field_f & -16711936;
                                                   var17 = (var15 & 65280) * field_f & 16711680;
                                                   var15 = ((var16 | var17) >>> 8) + field_D;
-                                                  var18 = var49[var11];
+                                                  var18 = var31[var11];
                                                   var19 = var15 + var18;
                                                   var20 = (var15 & 16711935) + (var18 & 16711935);
                                                   var18 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -3786,13 +3838,13 @@ final class mj extends qd {
                                                 }
                                               }
                                             } else {
-                                              var15 = ((mj) this).field_E[var10];
+                                              var15 = this.field_E[var10];
                                               var16 = field_u;
                                               var17 = var15 + var16;
                                               var18 = (var15 & 16711935) + (var16 & 16711935);
                                               var19 = (var18 & 16777472) + (var17 - var18 & 65536);
                                               var15 = var17 - var19 | var19 - (var19 >>> 8);
-                                              var19 = var49[var11];
+                                              var19 = var31[var11];
                                               var17 = var15 + var19;
                                               var18 = (var15 & 16711935) + (var19 & 16711935);
                                               var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3800,7 +3852,7 @@ final class mj extends qd {
                                               break L64;
                                             }
                                           } else {
-                                            var15 = ((mj) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             if (var15 == 0) {
                                               break L64;
                                             } else {
@@ -3808,7 +3860,7 @@ final class mj extends qd {
                                               var17 = (var15 & 65280) * field_v & 16711680;
                                               var18 = (var15 & 255) * field_i & 65280;
                                               var15 = (var16 | var17 | var18) >>> 8;
-                                              var19 = var49[var11];
+                                              var19 = var31[var11];
                                               var20 = var15 + var19;
                                               var21 = (var15 & 16711935) + (var19 & 16711935);
                                               var19 = (var21 & 16777472) + (var20 - var21 & 65536);
@@ -3817,11 +3869,11 @@ final class mj extends qd {
                                             }
                                           }
                                         } else {
-                                          var15 = ((mj) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L64;
                                           } else {
-                                            var16 = var49[var11];
+                                            var16 = var31[var11];
                                             var17 = var15 + var16;
                                             var18 = (var15 & 16711935) + (var16 & 16711935);
                                             var16 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -3837,13 +3889,13 @@ final class mj extends qd {
                                             if (var13 != 2) {
                                               throw new IllegalArgumentException();
                                             } else {
-                                              var15 = ((mj) this).field_E[var10];
+                                              var15 = this.field_E[var10];
                                               if (var15 == 0) {
                                                 break L64;
                                               } else {
                                                 var16 = (var15 & 16711935) * field_f & -16711936;
                                                 var17 = (var15 & 65280) * field_f & 16711680;
-                                                int incrementValue$69 = var11;
+                                                incrementValue$69 = var11;
                                                 var11++;
                                                 var12[incrementValue$69] = ((var16 | var17) >>> 8) + field_D;
                                                 break L64;
@@ -3851,7 +3903,7 @@ final class mj extends qd {
                                             }
                                           } else {
                                             L65: {
-                                              var15 = ((mj) this).field_E[var10];
+                                              var15 = this.field_E[var10];
                                               var16 = field_u;
                                               var17 = var15 + var16;
                                               var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3864,17 +3916,17 @@ final class mj extends qd {
                                                   break L65;
                                                 } else {
                                                   var15 = var19;
-                                                  var19 = var49[var11];
+                                                  var19 = var31[var11];
                                                   var19 = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                                   break L65;
                                                 }
                                               }
                                             }
-                                            var49[var11] = var19;
+                                            var31[var11] = var19;
                                             break L64;
                                           }
                                         } else {
-                                          var15 = ((mj) this).field_E[var10];
+                                          var15 = this.field_E[var10];
                                           if (var15 == 0) {
                                             break L64;
                                           } else {
@@ -3890,25 +3942,25 @@ final class mj extends qd {
                                                 var17 = (var15 & 65280) * field_v & 16711680;
                                                 var18 = (var15 & 255) * field_i & 65280;
                                                 var15 = (var16 | var17 | var18) >>> 8;
-                                                var19 = var49[var11];
+                                                var19 = var31[var11];
                                                 var12[var11] = ((var15 & 16711935) * field_f + (var19 & 16711935) * field_c & -16711936) + ((var15 & 65280) * field_f + (var19 & 65280) * field_c & 16711680) >> 8;
                                                 break L64;
                                               }
                                             } else {
                                               var16 = field_u >>> 24;
                                               var17 = 256 - var16;
-                                              var18 = var49[var11];
+                                              var18 = var31[var11];
                                               var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
                                               break L64;
                                             }
                                           }
                                         }
                                       } else {
-                                        var15 = ((mj) this).field_E[var10];
+                                        var15 = this.field_E[var10];
                                         if (var15 == 0) {
                                           break L64;
                                         } else {
-                                          var49[var11] = var15;
+                                          var31[var11] = var15;
                                           break L64;
                                         }
                                       }
@@ -3920,16 +3972,16 @@ final class mj extends qd {
                                           if (var13 != 2) {
                                             throw new IllegalArgumentException();
                                           } else {
-                                            var15 = ((mj) this).field_E[var10];
+                                            var15 = this.field_E[var10];
                                             var16 = (var15 & 16711935) * field_f & -16711936;
                                             var17 = (var15 & 65280) * field_f & 16711680;
                                             var12[var11] = ((var16 | var17) >>> 8) + field_D;
                                             break L64;
                                           }
                                         } else {
-                                          int incrementValue$70 = var10;
+                                          incrementValue$70 = var10;
                                           var10++;
-                                          var15 = ((mj) this).field_E[incrementValue$70];
+                                          var15 = this.field_E[incrementValue$70];
                                           var16 = field_u;
                                           var17 = var15 + var16;
                                           var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3938,9 +3990,9 @@ final class mj extends qd {
                                           break L64;
                                         }
                                       } else {
-                                        int incrementValue$71 = var10;
+                                        incrementValue$71 = var10;
                                         var10++;
-                                        var15 = ((mj) this).field_E[incrementValue$71];
+                                        var15 = this.field_E[incrementValue$71];
                                         var16 = (var15 & 16711680) * field_j & -16777216;
                                         var17 = (var15 & 65280) * field_v & 16711680;
                                         var18 = (var15 & 255) * field_i & 65280;
@@ -3948,7 +4000,7 @@ final class mj extends qd {
                                         break L64;
                                       }
                                     } else {
-                                      var12[var11] = ((mj) this).field_E[var10];
+                                      var12[var11] = this.field_E[var10];
                                       break L64;
                                     }
                                   }

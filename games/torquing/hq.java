@@ -16,21 +16,25 @@ final class hq {
         int var3 = 0;
         int var4 = 0;
         var4 = Torquing.field_u;
-        var3 = ((hq) this).field_f.length;
-        L0: while (true) {
-          if (var3 > param1) {
-            return var3;
-          } else {
-            if (!((hq) this).field_g) {
-              var3 = var3 + ((hq) this).field_b;
-              continue L0;
+        if (param0 != -6) {
+          return -92;
+        } else {
+          var3 = this.field_f.length;
+          L0: while (true) {
+            if (var3 > param1) {
+              return var3;
             } else {
-              if (var3 != 0) {
-                var3 = var3 * ((hq) this).field_b;
+              if (!this.field_g) {
+                var3 = var3 + this.field_b;
                 continue L0;
               } else {
-                var3 = 1;
-                continue L0;
+                if (-1 != (var3 ^ -1)) {
+                  var3 = var3 * this.field_b;
+                  continue L0;
+                } else {
+                  var3 = 1;
+                  continue L0;
+                }
               }
             }
           }
@@ -39,14 +43,14 @@ final class hq {
 
     final void c(int param0, int param1) {
         if (param1 == 17424) {
-          if (param0 >= 0) {
-            if (param0 <= ((hq) this).field_i) {
-              if (param0 != ((hq) this).field_i) {
-                dk.a(((hq) this).field_f, param0 + 1, ((hq) this).field_f, param0, ((hq) this).field_i - param0);
-                ((hq) this).field_i = ((hq) this).field_i - 1;
+          if ((param0 ^ -1) <= -1) {
+            if (param0 <= this.field_i) {
+              if (param0 != this.field_i) {
+                dk.a(this.field_f, param0 + 1, this.field_f, param0, this.field_i - param0);
+                this.field_i = this.field_i - 1;
                 return;
               } else {
-                ((hq) this).field_i = ((hq) this).field_i - 1;
+                this.field_i = this.field_i - 1;
                 return;
               }
             } else {
@@ -79,27 +83,53 @@ final class hq {
     }
 
     private final void a(int param0, boolean param1, int param2) {
-        if (!(((hq) this).field_i >= param2)) {
-            ((hq) this).field_i = param2;
+        L0: {
+          if (this.field_i < param2) {
+            this.field_i = param2;
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        if (!(((hq) this).field_f.length > param2)) {
-            this.a(0, param2);
+        if (!param1) {
+          L1: {
+            this.field_g = true;
+            if (this.field_f.length <= param2) {
+              this.a(0, param2);
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          this.field_f[param2] = param0;
+          return;
+        } else {
+          L2: {
+            if (this.field_f.length <= param2) {
+              this.a(0, param2);
+              break L2;
+            } else {
+              break L2;
+            }
+          }
+          this.field_f[param2] = param0;
+          return;
         }
-        ((hq) this).field_f[param2] = param0;
     }
 
     final void d(int param0, int param1) {
-        this.a(param0, true, 1 + ((hq) this).field_i);
+        int discarded$0 = 0;
+        this.a(param0, true, 1 + this.field_i);
         if (param1 != -8673) {
-            int discarded$0 = ((hq) this).a(true);
+            discarded$0 = this.a(true);
         }
     }
 
     private final void a(int param0, int param1) {
         int[] var4 = new int[this.a((byte) -6, param1)];
         int[] var3 = var4;
-        dk.a(((hq) this).field_f, 0, var4, 0, ((hq) this).field_f.length);
-        ((hq) this).field_f = var4;
+        dk.a(this.field_f, param0, var4, 0, this.field_f.length);
+        this.field_f = var4;
     }
 
     private hq() throws Throwable {
@@ -107,11 +137,11 @@ final class hq {
     }
 
     final int b(int param0, int param1) {
-        if (param1 <= ((hq) this).field_i) {
+        if (param1 <= this.field_i) {
           if (param0 < 29) {
             return 94;
           } else {
-            return ((hq) this).field_f[param1];
+            return this.field_f[param1];
           }
         } else {
           throw new ArrayIndexOutOfBoundsException(param1);
@@ -122,14 +152,10 @@ final class hq {
         if (!param0) {
             return 105;
         }
-        return ((hq) this).field_i + 1;
+        return this.field_i + 1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Login: ";
         field_d = new String[3];
         field_e = "Error connecting to server. Please try using a different server.";

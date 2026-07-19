@@ -48,7 +48,7 @@ final class mj {
           stackIn_1_2 = stackOut_0_2;
           stackIn_1_3 = stackOut_0_3;
           if (fh.field_c) {
-            stackOut_2_0 = (je) (Object) stackIn_2_0;
+            stackOut_2_0 = (je) ((Object) stackIn_2_0);
             stackOut_2_1 = stackIn_2_1;
             stackOut_2_2 = stackIn_2_2;
             stackOut_2_3 = stackIn_2_3;
@@ -60,7 +60,7 @@ final class mj {
             stackIn_3_4 = stackOut_2_4;
             break L0;
           } else {
-            stackOut_1_0 = (je) (Object) stackIn_1_0;
+            stackOut_1_0 = (je) ((Object) stackIn_1_0);
             stackOut_1_1 = stackIn_1_1;
             stackOut_1_2 = stackIn_1_2;
             stackOut_1_3 = stackIn_1_3;
@@ -120,14 +120,15 @@ final class mj {
     }
 
     public static void c(byte param0) {
+        if (param0 >= -23) {
+            mj.b((byte) 115);
+            field_a = null;
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 480;
         field_c = 20;
         field_a = "This option cannot be combined with the current settings for:  ";

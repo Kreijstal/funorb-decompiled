@@ -30,10 +30,6 @@ final class sl {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "sl.A(";
         field_h = "Spectate <%0>'s game";
         field_b = "Join";

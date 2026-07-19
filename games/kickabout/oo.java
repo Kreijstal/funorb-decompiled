@@ -19,7 +19,7 @@ final class oo {
         field_d = null;
         field_b = null;
         if (param0 != -18178) {
-          field_e = null;
+          field_e = (int[]) null;
           field_a = null;
           field_h = null;
           return;
@@ -31,10 +31,6 @@ final class oo {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "oo.A(";
         field_g = "Create unrated game";
         field_a = "space";

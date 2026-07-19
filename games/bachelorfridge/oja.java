@@ -11,24 +11,28 @@ final class oja {
     static String field_e;
 
     public static void a(int param0) {
+        String discarded$2 = null;
         field_e = null;
         field_d = null;
         field_b = null;
         field_g = null;
         field_f = null;
-        field_a = null;
+        if (param0 != -32341) {
+          discarded$2 = oja.a((byte) 92, 'R');
+          field_a = null;
+          return;
+        } else {
+          field_a = null;
+          return;
+        }
     }
 
     final static String a(byte param0, char param1) {
-        int var2 = 0;
+        int var2 = 31 % ((-50 - param0) / 44);
         return String.valueOf(param1);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var1 = 0;
         field_d = "Clan";
         field_g = new int[]{75, 75, 75, 75, 75};
@@ -37,7 +41,7 @@ final class oja {
         field_a[0] = 50;
         int var0 = 590;
         field_a[6] = var0;
-        for (var1 = 5; var1 > 0; var1--) {
+        for (var1 = 5; (var1 ^ -1) < -1; var1--) {
             var0 = var0 - field_g[-1 + var1];
             field_a[var1] = var0;
         }

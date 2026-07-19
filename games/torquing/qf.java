@@ -15,10 +15,6 @@ class qf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "qf.F(";
         field_a = new ei();
     }

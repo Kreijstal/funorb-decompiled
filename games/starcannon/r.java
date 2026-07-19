@@ -9,6 +9,11 @@ final class r {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 > -43) {
+            field_d = -40;
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
@@ -18,13 +23,13 @@ final class r {
 
     final static void a(int param0, long param1) {
         try {
-            InterruptedException var3 = null;
-            Throwable decompiledCaughtException = null;
-            {
-              L0: {
+            try {
                 Thread.sleep(param1);
-                break L0;
-              }
+            } catch (InterruptedException interruptedException) {
+            }
+            if (param0 != 18780) {
+                r.a(82);
+                return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

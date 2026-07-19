@@ -22,7 +22,7 @@ final class we {
             Throwable var2 = null;
             Runtime var2_ref = null;
             Long var3 = null;
-            Object var4 = null;
+            Object[] var4 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             L0: {
@@ -36,15 +36,15 @@ final class we {
             try {
               L1: {
                 L2: {
-                  var1_ref = Runtime.class.getMethod("maxMemory", new Class[0]);
+                  var1_ref = Runtime.class.getMethod("maxMemory", new Class[]{});
                   if (var1_ref == null) {
                     break L2;
                   } else {
                     try {
                       L3: {
                         var2_ref = Runtime.getRuntime();
-                        var4 = null;
-                        var3 = (Long) var1_ref.invoke((Object) (Object) var2_ref, (Object[]) null);
+                        var4 = (Object[]) null;
+                        var3 = (Long) (var1_ref.invoke((Object) (var2_ref), (Object[]) null));
                         qk.field_b = 1 + (int)(var3.longValue() / 1048576L);
                         decompiledRegionSelector0 = 0;
                         break L3;
@@ -82,19 +82,42 @@ final class we {
 
     public static void a(byte param0) {
         field_b = null;
-        field_c = null;
-        field_e = null;
-        field_j = null;
-        field_f = null;
-        field_i = null;
+        if (param0 != -104) {
+          field_b = (String) null;
+          field_c = null;
+          field_e = null;
+          field_j = null;
+          field_f = null;
+          field_i = null;
+          return;
+        } else {
+          field_c = null;
+          field_e = null;
+          field_j = null;
+          field_f = null;
+          field_i = null;
+          return;
+        }
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (!(!ag.c(-116))) {
+        L0: {
+          if (ag.c(-116)) {
             param1 = false;
+            break L0;
+          } else {
+            break L0;
+          }
         }
         vm.a((byte) 32, param1);
-        rn.a(-26808);
+        if (param0) {
+          field_k = -1.6507269144058228f;
+          rn.a(-26808);
+          return;
+        } else {
+          rn.a(-26808);
+          return;
+        }
     }
 
     final static boolean a(byte param0, String param1) {
@@ -150,23 +173,23 @@ final class we {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_0 = (RuntimeException) (var2);
             stackOut_8_1 = new StringBuilder().append("we.A(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -174,7 +197,7 @@ final class we {
               break L3;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
         return stackIn_7_0 != 0;
     }
@@ -183,22 +206,21 @@ final class we {
         try {
             di.field_n.field_K = di.field_n.field_K + wa.field_I.field_K;
             di.field_n.field_eb = param4;
+            if (param1 != 21) {
+                we.a(-38);
+            }
             di.field_n.field_V = param2;
             di.field_n.field_E = param0;
             wa.field_I.field_tb = wa.field_I.field_tb + wa.field_I.field_K;
-            wa.field_I.field_K = 0;
+            wa.field_I.field_K = param3;
             di.field_n.field_K = di.field_n.field_K - wa.field_I.field_K;
             wa.field_I.field_tb = wa.field_I.field_tb - wa.field_I.field_K;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "we.C(" + param0 + ',' + 21 + ',' + (param2 != null ? "{...}" : "null") + ',' + 0 + ',' + (param4 != null ? "{...}" : "null") + ')');
+            throw kg.a((Throwable) ((Object) runtimeException), "we.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Report abuse";
         field_b = "Graphics: ";
         field_k = 0.0f;

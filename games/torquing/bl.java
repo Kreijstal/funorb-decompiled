@@ -15,13 +15,12 @@ final class bl {
         field_b = null;
         field_e = null;
         field_g = null;
+        if (param0 > -87) {
+            field_g = (String) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bl.A(";
         field_b = new hh();
         field_g = "You are unable to access this world yet.";

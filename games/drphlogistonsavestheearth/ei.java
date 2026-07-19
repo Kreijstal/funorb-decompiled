@@ -35,7 +35,7 @@ abstract class ei extends dc implements kd {
               if (param1 == 83) {
                 break L1;
               } else {
-                field_k = null;
+                field_k = (he[]) null;
                 break L1;
               }
             }
@@ -45,23 +45,23 @@ abstract class ei extends dc implements kd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ei.A(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -69,7 +69,7 @@ abstract class ei extends dc implements kd {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
@@ -78,9 +78,9 @@ abstract class ei extends dc implements kd {
             return;
         }
         try {
-            ((ei) this).a((byte) 87);
+            this.a((byte) 87);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "ei.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "ei.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -88,27 +88,28 @@ abstract class ei extends dc implements kd {
 
     final String b(byte param0) {
         if (param0 != -66) {
-          field_j = null;
-          return ((ei) this).a((byte) 57, ((ei) this).field_l.field_p);
+          field_j = (String) null;
+          return this.a((byte) 57, this.field_l.field_p);
         } else {
-          return ((ei) this).a((byte) 57, ((ei) this).field_l.field_p);
+          return this.a((byte) 57, this.field_l.field_p);
         }
     }
 
     final vh c(byte param0) {
+        boolean discarded$2 = false;
         if (param0 > -64) {
-          boolean discarded$2 = ((ei) this).a(true);
-          return ((ei) this).a(8192, ((ei) this).field_l.field_p);
+          discarded$2 = this.a(true);
+          return this.a(8192, this.field_l.field_p);
         } else {
-          return ((ei) this).a(8192, ((ei) this).field_l.field_p);
+          return this.a(8192, this.field_l.field_p);
         }
     }
 
     ei(kl param0) {
         try {
-            ((ei) this).field_l = param0;
+            this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "ei.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "ei.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -119,8 +120,8 @@ abstract class ei extends dc implements kd {
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
         if (!param0) {
-          if (null != ((ei) this).field_l.field_p) {
-            if (((ei) this).field_l.field_p.length() == 0) {
+          if (null != this.field_l.field_p) {
+            if (this.field_l.field_p.length() == 0) {
               return true;
             } else {
               return false;
@@ -131,12 +132,12 @@ abstract class ei extends dc implements kd {
             return stackIn_11_0 != 0;
           }
         } else {
-          field_h = null;
-          if (null == ((ei) this).field_l.field_p) {
+          field_h = (String) null;
+          if (null == this.field_l.field_p) {
             return true;
           } else {
             L0: {
-              if (((ei) this).field_l.field_p.length() != 0) {
+              if (this.field_l.field_p.length() != 0) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
@@ -155,9 +156,18 @@ abstract class ei extends dc implements kd {
         field_k = null;
         field_m = null;
         field_h = null;
-        field_n = null;
-        field_j = null;
-        field_i = null;
+        if (param0 != 1) {
+          field_i = (mg) null;
+          field_n = null;
+          field_j = null;
+          field_i = null;
+          return;
+        } else {
+          field_n = null;
+          field_j = null;
+          field_i = null;
+          return;
+        }
     }
 
     final static void a(boolean param0, java.applet.Applet param1) {
@@ -172,6 +182,7 @@ abstract class ei extends dc implements kd {
             RuntimeException stackIn_9_0 = null;
             StringBuilder stackIn_9_1 = null;
             String stackIn_9_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_6_0 = null;
             StringBuilder stackOut_6_1 = null;
@@ -182,45 +193,60 @@ abstract class ei extends dc implements kd {
             StringBuilder stackOut_7_1 = null;
             String stackOut_7_2 = null;
             try {
-              try {
-                var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                param1.getAppletContext().showDocument(kk.a(var2, param1, 4767999), "_top");
-                return;
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = (Exception) (Object) decompiledCaughtException;
-                var2_ref.printStackTrace();
-                return;
+              L0: {
+                try {
+                  L1: {
+                    if (!param0) {
+                      var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
+                      param1.getAppletContext().showDocument(kk.a(var2, param1, 4767999), "_top");
+                      decompiledRegionSelector0 = 1;
+                      break L1;
+                    } else {
+                      decompiledRegionSelector0 = 0;
+                      break L1;
+                    }
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2_ref = (Exception) (Object) decompiledCaughtException;
+                  var2_ref.printStackTrace();
+                  return;
+                }
+                if (decompiledRegionSelector0 == 0) {
+                  break L0;
+                } else {
+                  return;
+                }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L0: {
+              L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("ei.S(").append(false).append(',');
+                stackOut_6_0 = (RuntimeException) (var2_ref2);
+                stackOut_6_1 = new StringBuilder().append("ei.S(").append(param0).append(',');
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
                 stackIn_7_1 = stackOut_6_1;
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+                  stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
                   stackOut_8_2 = "null";
                   stackIn_9_0 = stackOut_8_0;
                   stackIn_9_1 = stackOut_8_1;
                   stackIn_9_2 = stackOut_8_2;
-                  break L0;
+                  break L2;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "{...}";
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
                   stackIn_9_2 = stackOut_7_2;
-                  break L0;
+                  break L2;
                 }
               }
-              throw ie.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ')');
+              throw ie.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -232,10 +258,6 @@ abstract class ei extends dc implements kd {
     abstract String a(byte param0, String param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new mg();
         field_h = "Close";
         field_n = new sa(1, 2, 2, 0);

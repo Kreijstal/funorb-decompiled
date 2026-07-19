@@ -8,6 +8,9 @@ final class ii {
 
     public static void a(byte param0) {
         field_c = null;
+        if (param0 != -1) {
+            return;
+        }
         field_a = null;
     }
 
@@ -17,10 +20,6 @@ final class ii {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "To report a player, click on the most suitable option from the Rules of Conduct. Please do not abuse this form.";
     }
 }

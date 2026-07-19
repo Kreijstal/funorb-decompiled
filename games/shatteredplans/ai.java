@@ -9,6 +9,7 @@ final class ai {
     static int field_e;
 
     final static void a(int param0, boolean param1, int param2, int param3, byte param4, int param5, int param6) {
+        int incrementValue$1 = 0;
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -18,15 +19,17 @@ final class ai {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_26_0 = 0;
+        int stackIn_25_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_25_0 = 0;
         int stackOut_24_0 = 0;
+        int stackOut_23_0 = 0;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
             if (param0 <= param2) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param3 > param2 + 1) {
                 L1: {
@@ -36,107 +39,114 @@ final class ai {
                     if (param5 == param6) {
                       break L1;
                     } else {
-                      L2: {
-                        var7_int = (param6 >> 1) + ((param5 >> 1) - -(1 & (param5 & param6)));
-                        var8 = param2;
-                        var9 = param6;
-                        var10 = param5;
-                        var11 = param2;
+                      var7_int = (param6 >> -1824567167) + ((param5 >> 1133010977) - -(1 & (param5 & param6)));
+                      var8 = param2;
+                      var9 = param6;
+                      var10 = param5;
+                      var11 = param2;
+                      L2: while (true) {
                         if (param3 <= var11) {
-                          break L2;
+                          ai.a(param0, param1, param2, var8, param4, var9, param6);
+                          ai.a(param0, param1, var8, param3, (byte) -60, param5, var10);
+                          decompiledRegionSelector0 = 3;
+                          break L0;
                         } else {
                           L3: {
                             var12 = lg.field_d[var11];
                             if (!param1) {
-                              stackOut_25_0 = dc.field_c[var12];
-                              stackIn_26_0 = stackOut_25_0;
+                              stackOut_24_0 = dc.field_c[var12];
+                              stackIn_25_0 = stackOut_24_0;
                               break L3;
                             } else {
-                              stackOut_24_0 = kf.field_f[var12];
-                              stackIn_26_0 = stackOut_24_0;
+                              stackOut_23_0 = kf.field_f[var12];
+                              stackIn_25_0 = stackOut_23_0;
                               break L3;
                             }
                           }
                           L4: {
-                            L5: {
-                              var13 = stackIn_26_0;
-                              if (var7_int >= var13) {
-                                if (var10 < var13) {
-                                  var10 = var13;
-                                  break L4;
+                            var13 = stackIn_25_0;
+                            if (var7_int >= var13) {
+                              if (var10 < var13) {
+                                var10 = var13;
+                                break L4;
+                              } else {
+                                break L4;
+                              }
+                            } else {
+                              L5: {
+                                lg.field_d[var11] = lg.field_d[var8];
+                                if (var13 < var9) {
+                                  var9 = var13;
+                                  break L5;
                                 } else {
                                   break L5;
                                 }
-                              } else {
-                                L6: {
-                                  lg.field_d[var11] = lg.field_d[var8];
-                                  if (var13 < var9) {
-                                    var9 = var13;
-                                    break L6;
-                                  } else {
-                                    break L6;
-                                  }
-                                }
-                                int incrementValue$1 = var8;
-                                var8++;
-                                lg.field_d[incrementValue$1] = var12;
-                                var11++;
-                                break L5;
                               }
+                              incrementValue$1 = var8;
+                              var8++;
+                              lg.field_d[incrementValue$1] = var12;
+                              break L4;
                             }
-                            var11++;
-                            break L4;
                           }
                           var11++;
-                          var11++;
-                          break L2;
+                          continue L2;
                         }
                       }
-                      ai.a(param0, param1, param2, var8, param4, var9, param6);
-                      ai.a(param0, param1, var8, param3, (byte) -60, param5, var10);
-                      break L0;
                     }
                   }
                 }
                 var7_int = param3 - 1;
-                L7: while (true) {
+                L6: while (true) {
                   if (param2 >= var7_int) {
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     var8 = param2;
-                    L8: while (true) {
+                    L7: while (true) {
                       if (var7_int <= var8) {
                         var7_int--;
-                        continue L7;
+                        continue L6;
                       } else {
-                        L9: {
+                        L8: {
                           var9 = lg.field_d[var8];
                           var10 = lg.field_d[var8 + 1];
                           if (aq.a(var10, true, var9, param1)) {
                             lg.field_d[var8] = var10;
                             lg.field_d[var8 - -1] = var9;
-                            var8++;
-                            break L9;
+                            break L8;
                           } else {
-                            var8++;
-                            break L9;
+                            break L8;
                           }
                         }
                         var8++;
-                        continue L8;
+                        continue L7;
                       }
                     }
                   }
                 }
               } else {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var7, "ai.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw r.a((Throwable) ((Object) var7), "ai.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -173,11 +183,14 @@ final class ai {
 
     final static void a(boolean param0, int param1, String param2, String param3) {
         try {
+            if (param1 != -1) {
+                ai.a((byte) -80);
+            }
             oj.field_Ib = param3;
             qh.field_B = param2;
-            fk.a(rg.field_c, 79, param0);
+            fk.a(rg.field_c, param1 ^ -80, param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ai.B(" + param0 + ',' + -1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "ai.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -188,7 +201,7 @@ final class ai {
             hp.field_l = null;
             hp.field_m = null;
             if (param0 != 3) {
-              field_b = null;
+              field_b = (int[]) null;
               return;
             } else {
               return;
@@ -197,7 +210,7 @@ final class ai {
             hp.field_l = null;
             hp.field_m = null;
             if (param0 != 3) {
-              field_b = null;
+              field_b = (int[]) null;
               return;
             } else {
               return;
@@ -207,7 +220,7 @@ final class ai {
           hp.field_l = null;
           hp.field_m = null;
           if (param0 != 3) {
-            field_b = null;
+            field_b = (int[]) null;
             return;
           } else {
             return;
@@ -216,10 +229,6 @@ final class ai {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
     }
 }

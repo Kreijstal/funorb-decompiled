@@ -7,12 +7,12 @@ final class mq {
 
     final void a() {
         int var1 = 0;
-        for (var1 = 0; var1 < ((mq) this).field_a.length; var1++) {
-            ((mq) this).field_a[var1] = 0;
+        for (var1 = 0; var1 < this.field_a.length; var1++) {
+            this.field_a[var1] = 0;
         }
     }
 
     mq(int param0) {
-        ((mq) this).field_a = new int[param0];
+        this.field_a = new int[param0];
     }
 }

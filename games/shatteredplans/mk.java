@@ -33,10 +33,6 @@ final class mk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mk.A(";
         field_b = "Rating";
         field_a = 500;

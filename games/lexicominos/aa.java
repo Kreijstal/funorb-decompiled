@@ -14,12 +14,13 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final void a(int param0, java.awt.Graphics param1, byte param2, int param3) {
+        boolean discarded$0 = false;
         try {
             int var5_int = 91 % ((param2 - 26) / 52);
             this.c((byte) -95);
-            boolean discarded$0 = param1.drawImage(((aa) this).field_e, param0, param3, (java.awt.image.ImageObserver) this);
+            discarded$0 = param1.drawImage(this.field_e, param0, param3, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -53,23 +54,23 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var7;
+            stackOut_2_0 = (RuntimeException) (var7);
             stackOut_2_1 = new StringBuilder().append("aa.imageUpdate(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -77,7 +78,7 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
@@ -85,17 +86,20 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
     public static void b(byte param0) {
         field_g = null;
         field_i = null;
+        if (param0 > -125) {
+            field_i = (ih[]) null;
+        }
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            ((aa) this).field_h = param0;
-            param0.setDimensions(((aa) this).field_a, ((aa) this).field_c);
+            this.field_h = param0;
+            param0.setDimensions(this.field_a, this.field_c);
             param0.setProperties((Hashtable) null);
-            param0.setColorModel(((aa) this).field_k);
+            param0.setColorModel(this.field_k);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "aa.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "aa.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -125,7 +129,7 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
               if (param2 < -41) {
                 break L1;
               } else {
-                field_i = null;
+                field_i = (ih[]) null;
                 break L1;
               }
             }
@@ -137,23 +141,23 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("aa.C(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -161,7 +165,7 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_3_0;
     }
@@ -175,26 +179,26 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
         int var6 = 0;
         char[] var7 = null;
         char[] var8 = null;
-        char[] var9 = null;
-        char[] var10 = null;
-        String stackIn_21_0 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        int var9 = 0;
+        int var10 = 0;
+        String stackIn_27_0 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_20_0 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        String stackOut_26_0 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
         var6 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
@@ -207,122 +211,162 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
                 break L1;
               }
             }
-            var10 = new char[var2_int];
-            var9 = var10;
-            var8 = var9;
+            var8 = new char[var2_int];
             var7 = var8;
             var3 = var7;
             var4 = 0;
             L2: while (true) {
-              if (var4 >= var2_int) {
-                stackOut_20_0 = new String(var10);
-                stackIn_21_0 = stackOut_20_0;
-                break L0;
-              } else {
-                L3: {
-                  L4: {
-                    var5 = param0.charAt(var4);
-                    if (var5 < 65) {
-                      break L4;
-                    } else {
-                      if (var5 <= 90) {
-                        var3[var4] = (char)(-65 + var5 - -97);
-                        break L3;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
+              L3: {
+                L4: {
                   L5: {
-                    L6: {
-                      if (97 > var5) {
-                        break L6;
-                      } else {
-                        if (var5 <= 122) {
-                          break L5;
+                    if (var4 >= var2_int) {
+                      break L5;
+                    } else {
+                      var5 = param0.charAt(var4);
+                      var10 = 65;
+                      var9 = var5;
+                      if (var6 != 0) {
+                        if (var9 <= var10) {
+                          break L3;
                         } else {
+                          break L4;
+                        }
+                      } else {
+                        L6: {
+                          L7: {
+                            L8: {
+                              if (var9 < var10) {
+                                break L8;
+                              } else {
+                                if (var5 <= 90) {
+                                  break L7;
+                                } else {
+                                  break L8;
+                                }
+                              }
+                            }
+                            L9: {
+                              L10: {
+                                if (97 > var5) {
+                                  break L10;
+                                } else {
+                                  if (var5 <= 122) {
+                                    break L9;
+                                  } else {
+                                    break L10;
+                                  }
+                                }
+                              }
+                              L11: {
+                                if (48 > var5) {
+                                  break L11;
+                                } else {
+                                  if (var5 <= 57) {
+                                    break L9;
+                                  } else {
+                                    break L11;
+                                  }
+                                }
+                              }
+                              var3[var4] = (char)95;
+                              if (var6 == 0) {
+                                break L6;
+                              } else {
+                                break L9;
+                              }
+                            }
+                            var3[var4] = (char)var5;
+                            if (var6 == 0) {
+                              break L6;
+                            } else {
+                              break L7;
+                            }
+                          }
+                          var3[var4] = (char)(-65 + var5 - -97);
                           break L6;
                         }
-                      }
-                    }
-                    L7: {
-                      if (48 > var5) {
-                        break L7;
-                      } else {
-                        if (var5 <= 57) {
-                          break L5;
+                        var4++;
+                        if (var6 == 0) {
+                          continue L2;
                         } else {
-                          break L7;
+                          break L5;
                         }
                       }
                     }
-                    var3[var4] = '_';
-                    break L3;
                   }
-                  var3[var4] = (char)var5;
-                  break L3;
+                  if (param1 <= -5) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
                 }
-                var4++;
-                continue L2;
+                field_g = (qa) null;
+                break L3;
               }
+              stackOut_26_0 = new String(var8);
+              stackIn_27_0 = stackOut_26_0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L12: {
             var2 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("aa.B(");
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_28_0 = (RuntimeException) (var2);
+            stackOut_28_1 = new StringBuilder().append("aa.B(");
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              break L8;
+              stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
+              stackOut_30_1 = (StringBuilder) ((Object) stackIn_30_1);
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L12;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
-              break L8;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
+              break L12;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + -20 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ',' + param1 + ')');
         }
-        return stackIn_21_0;
+        return stackIn_27_0;
     }
 
     public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
-        return ((aa) this).field_h == param0;
+        return this.field_h == param0;
     }
 
     final void a(boolean param0, int param1, int param2, java.awt.Component param3) {
-        ((aa) this).field_b = new int[1 + param1 * param2];
+        boolean discarded$0 = false;
+        boolean discarded$1 = false;
+        boolean discarded$2 = false;
+        this.field_b = new int[1 + param1 * param2];
         if (param0) {
             return;
         }
         try {
-            ((aa) this).field_c = param1;
-            ((aa) this).field_a = param2;
-            ((aa) this).field_k = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-            ((aa) this).field_e = param3.createImage((java.awt.image.ImageProducer) this);
+            this.field_c = param1;
+            this.field_a = param2;
+            this.field_k = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+            this.field_e = param3.createImage((java.awt.image.ImageProducer) (this));
             this.c((byte) -113);
-            boolean discarded$0 = param3.prepareImage(((aa) this).field_e, (java.awt.image.ImageObserver) this);
+            discarded$0 = param3.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
             this.c((byte) -104);
-            boolean discarded$1 = param3.prepareImage(((aa) this).field_e, (java.awt.image.ImageObserver) this);
+            discarded$1 = param3.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
             this.c((byte) -115);
-            boolean discarded$2 = param3.prepareImage(((aa) this).field_e, (java.awt.image.ImageObserver) this);
-            ((aa) this).b(1);
+            discarded$2 = param3.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
+            this.b(1);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "aa.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "aa.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -347,10 +391,10 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             L1: {
-              if (((aa) this).field_h != param0) {
+              if (this.field_h != param0) {
                 break L1;
               } else {
-                ((aa) this).field_h = null;
+                this.field_h = null;
                 break L1;
               }
             }
@@ -360,23 +404,23 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("aa.removeConsumer(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -384,59 +428,80 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
     final static int a(byte param0) {
-        if (wf.field_i < 2) {
-          return 0;
-        } else {
-          L0: {
+        if (param0 >= 73) {
+          if (wf.field_i < 2) {
+            return 0;
+          } else {
             if (ri.field_e != 0) {
-              L1: {
-                if (eh.field_d != null) {
-                  if (!eh.field_d.c(-43)) {
-                    return 14;
-                  } else {
-                    if (eh.field_d.a("", (byte) -124)) {
-                      if (!eh.field_d.a("", 10762)) {
-                        return 29;
+              if (eh.field_d != null) {
+                if (!eh.field_d.c(-43)) {
+                  return 14;
+                } else {
+                  if (eh.field_d.a("", (byte) -124)) {
+                    if (eh.field_d.a("", 10762)) {
+                      if (we.field_h.c(-52)) {
+                        if (we.field_h.a("commonui", 10762)) {
+                          if (!gk.field_a.c(-91)) {
+                            return 71;
+                          } else {
+                            if (gk.field_a.a("commonui", 10762)) {
+                              if (ej.field_d.c(108)) {
+                                if (!ej.field_d.a((byte) 119)) {
+                                  return 86;
+                                } else {
+                                  return 100;
+                                }
+                              } else {
+                                return 82;
+                              }
+                            } else {
+                              return 80;
+                            }
+                          }
+                        } else {
+                          return 57;
+                        }
                       } else {
-                        break L1;
+                        return 43;
                       }
                     } else {
                       return 29;
                     }
-                  }
-                } else {
-                  break L1;
-                }
-              }
-              if (we.field_h.c(-52)) {
-                if (we.field_h.a("commonui", 10762)) {
-                  if (!gk.field_a.c(-91)) {
-                    return 71;
                   } else {
-                    if (gk.field_a.a("commonui", 10762)) {
-                      if (ej.field_d.c(108)) {
-                        if (ej.field_d.a((byte) 119)) {
-                          break L0;
-                        } else {
-                          return 86;
-                        }
-                      } else {
-                        return 82;
-                      }
-                    } else {
-                      return 80;
-                    }
+                    return 29;
                   }
-                } else {
-                  return 57;
                 }
               } else {
-                return 43;
+                if (we.field_h.c(-52)) {
+                  if (we.field_h.a("commonui", 10762)) {
+                    if (!gk.field_a.c(-91)) {
+                      return 71;
+                    } else {
+                      if (gk.field_a.a("commonui", 10762)) {
+                        if (ej.field_d.c(108)) {
+                          if (!ej.field_d.a((byte) 119)) {
+                            return 86;
+                          } else {
+                            return 100;
+                          }
+                        } else {
+                          return 82;
+                        }
+                      } else {
+                        return 80;
+                      }
+                    }
+                  } else {
+                    return 57;
+                  }
+                } else {
+                  return 43;
+                }
               }
             } else {
               if (we.field_h.c(94)) {
@@ -448,10 +513,10 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
                   } else {
                     if (gk.field_a.a("commonui", 10762)) {
                       if (ej.field_d.c(-84)) {
-                        if (!ej.field_d.a((byte) 23)) {
-                          return 80;
+                        if (ej.field_d.a((byte) 23)) {
+                          return 100;
                         } else {
-                          break L0;
+                          return 80;
                         }
                       } else {
                         return 70;
@@ -466,26 +531,30 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
               }
             }
           }
-          return 100;
+        } else {
+          return 125;
         }
     }
 
     private final synchronized void c(byte param0) {
-        if (param0 > -93) {
+        if (param0 <= -93) {
+          if (null == this.field_h) {
             return;
-        }
-        if (null == ((aa) this).field_h) {
+          } else {
+            this.field_h.setPixels(0, 0, this.field_a, this.field_c, this.field_k, this.field_b, 0, this.field_a);
+            this.field_h.imageComplete(2);
             return;
+          }
+        } else {
+          return;
         }
-        ((aa) this).field_h.setPixels(0, 0, ((aa) this).field_a, ((aa) this).field_c, ((aa) this).field_k, ((aa) this).field_b, 0, ((aa) this).field_a);
-        ((aa) this).field_h.imageComplete(2);
     }
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
         try {
-            ((aa) this).addConsumer(param0);
+            this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "aa.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ld.a((Throwable) ((Object) runtimeException), "aa.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -493,10 +562,6 @@ final class aa extends dd implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = new ih[8];
     }
 }

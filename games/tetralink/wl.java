@@ -10,16 +10,12 @@ final class wl {
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = 0;
-        field_c = null;
+        int var1 = 65 % ((param0 - -36) / 35);
+        field_c = (String[][]) null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "wl.A(";
         field_a = "Log in";
         field_d = false;

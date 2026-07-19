@@ -8,10 +8,11 @@ final class se extends nm {
     static jp field_k;
 
     final static jp[] a(int param0, byte param1, int param2) {
-        Object var4 = null;
+        boolean discarded$2 = false;
+        CharSequence var4 = null;
         if (param1 != -18) {
-          var4 = null;
-          boolean discarded$2 = se.a(21, (CharSequence) null);
+          var4 = (CharSequence) null;
+          discarded$2 = se.a(21, (CharSequence) null);
           return hn.a(param2, param0, 1, param1 ^ 24);
         } else {
           return hn.a(param2, param0, 1, param1 ^ 24);
@@ -20,12 +21,13 @@ final class se extends nm {
 
     public static void a(int param0) {
         field_j = null;
-        int var1 = 3;
+        int var1 = 10 / ((param0 - -33) / 35);
         field_k = null;
         field_l = null;
     }
 
     final static boolean a(int param0, CharSequence param1) {
+        jp[] discarded$2 = null;
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -51,7 +53,7 @@ final class se extends nm {
               if (param0 == 17165) {
                 break L1;
               } else {
-                jp[] discarded$2 = se.a(-74, (byte) 25, 127);
+                discarded$2 = se.a(-74, (byte) 25, 127);
                 break L1;
               }
             }
@@ -63,23 +65,23 @@ final class se extends nm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("se.C(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -87,24 +89,20 @@ final class se extends nm {
               break L2;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     se(byte[] param0) {
         try {
-            ((se) this).field_i = param0;
+            this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "se.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "se.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new int[]{17, 18, 8};
         field_l = "Go Back";
     }

@@ -14,6 +14,9 @@ final class q {
     }
 
     final static void a(int param0) {
+        if (param0 != 13151) {
+            return;
+        }
         va.field_a = 0;
         lp.a((byte) 48);
     }
@@ -50,6 +53,12 @@ final class q {
     }
 
     public static void a(byte param0) {
+        if (param0 != -109) {
+            field_b = true;
+            field_a = null;
+            field_c = null;
+            return;
+        }
         field_a = null;
         field_c = null;
     }

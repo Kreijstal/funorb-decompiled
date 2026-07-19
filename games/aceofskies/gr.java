@@ -14,36 +14,36 @@ final class gr {
     int field_c;
 
     final void a(boolean param0) {
-        ((gr) this).field_e = 0;
+        this.field_e = 0;
         if (param0) {
           L0: {
-            ((gr) this).field_a = 0;
-            if (((gr) this).field_d != 0) {
+            this.field_a = 0;
+            if (-1 != (this.field_d ^ -1)) {
               break L0;
             } else {
               if (98 == bk.field_f) {
                 L1: {
-                  if (((gr) this).field_g <= 0) {
-                    ((gr) this).field_g = ((gr) this).field_c;
+                  if (this.field_g <= 0) {
+                    this.field_g = this.field_c;
                     break L1;
                   } else {
                     break L1;
                   }
                 }
-                ((gr) this).field_g = ((gr) this).field_g - 1;
-                ((gr) this).field_f = false;
+                this.field_g = this.field_g - 1;
+                this.field_f = false;
                 break L0;
               } else {
-                if (((gr) this).field_d != 0) {
+                if (this.field_d != 0) {
                   L2: {
-                    if (0 != ((gr) this).field_d) {
+                    if (0 != this.field_d) {
                       break L2;
                     } else {
                       if (99 == bk.field_f) {
-                        ((gr) this).field_g = ((gr) this).field_g + 1;
-                        ((gr) this).field_f = false;
-                        if (((gr) this).field_c <= ((gr) this).field_g) {
-                          ((gr) this).field_g = 0;
+                        this.field_g = this.field_g + 1;
+                        this.field_f = false;
+                        if (this.field_c <= this.field_g) {
+                          this.field_g = 0;
                           break L2;
                         } else {
                           return;
@@ -56,15 +56,15 @@ final class gr {
                   return;
                 } else {
                   L3: {
-                    ((gr) this).field_e = bk.field_f;
-                    if (0 != ((gr) this).field_d) {
+                    this.field_e = bk.field_f;
+                    if (0 != this.field_d) {
                       break L3;
                     } else {
                       if (99 == bk.field_f) {
-                        ((gr) this).field_g = ((gr) this).field_g + 1;
-                        ((gr) this).field_f = false;
-                        if (((gr) this).field_c <= ((gr) this).field_g) {
-                          ((gr) this).field_g = 0;
+                        this.field_g = this.field_g + 1;
+                        this.field_f = false;
+                        if (this.field_c <= this.field_g) {
+                          this.field_g = 0;
                           break L3;
                         } else {
                           return;
@@ -79,16 +79,16 @@ final class gr {
               }
             }
           }
-          if (((gr) this).field_d != 0) {
+          if (this.field_d != 0) {
             L4: {
-              if (0 != ((gr) this).field_d) {
+              if (0 != this.field_d) {
                 break L4;
               } else {
                 if (99 == bk.field_f) {
-                  ((gr) this).field_g = ((gr) this).field_g + 1;
-                  ((gr) this).field_f = false;
-                  if (((gr) this).field_c <= ((gr) this).field_g) {
-                    ((gr) this).field_g = 0;
+                  this.field_g = this.field_g + 1;
+                  this.field_f = false;
+                  if (this.field_c <= this.field_g) {
+                    this.field_g = 0;
                     break L4;
                   } else {
                     return;
@@ -101,15 +101,15 @@ final class gr {
             return;
           } else {
             L5: {
-              ((gr) this).field_e = bk.field_f;
-              if (0 != ((gr) this).field_d) {
+              this.field_e = bk.field_f;
+              if (0 != this.field_d) {
                 break L5;
               } else {
                 if (99 == bk.field_f) {
-                  ((gr) this).field_g = ((gr) this).field_g + 1;
-                  ((gr) this).field_f = false;
-                  if (((gr) this).field_c <= ((gr) this).field_g) {
-                    ((gr) this).field_g = 0;
+                  this.field_g = this.field_g + 1;
+                  this.field_f = false;
+                  if (this.field_c <= this.field_g) {
+                    this.field_g = 0;
                     break L5;
                   } else {
                     return;
@@ -122,35 +122,35 @@ final class gr {
             return;
           }
         } else {
-          ((gr) this).a(true);
-          ((gr) this).field_a = 0;
-          if (((gr) this).field_d == 0) {
+          this.a(true);
+          this.field_a = 0;
+          if (-1 == (this.field_d ^ -1)) {
             L6: {
               if (98 == bk.field_f) {
                 L7: {
-                  if (((gr) this).field_g <= 0) {
-                    ((gr) this).field_g = ((gr) this).field_c;
+                  if (this.field_g <= 0) {
+                    this.field_g = this.field_c;
                     break L7;
                   } else {
                     break L7;
                   }
                 }
-                ((gr) this).field_g = ((gr) this).field_g - 1;
-                ((gr) this).field_f = false;
+                this.field_g = this.field_g - 1;
+                this.field_f = false;
                 break L6;
               } else {
                 break L6;
               }
             }
-            if (((gr) this).field_d == 0) {
-              ((gr) this).field_e = bk.field_f;
-              if (0 == ((gr) this).field_d) {
+            if (this.field_d == 0) {
+              this.field_e = bk.field_f;
+              if (0 == this.field_d) {
                 L8: {
                   if (99 == bk.field_f) {
-                    ((gr) this).field_g = ((gr) this).field_g + 1;
-                    ((gr) this).field_f = false;
-                    if (((gr) this).field_c <= ((gr) this).field_g) {
-                      ((gr) this).field_g = 0;
+                    this.field_g = this.field_g + 1;
+                    this.field_f = false;
+                    if (this.field_c <= this.field_g) {
+                      this.field_g = 0;
                       break L8;
                     } else {
                       return;
@@ -164,12 +164,12 @@ final class gr {
                 return;
               }
             } else {
-              if (0 == ((gr) this).field_d) {
+              if (0 == this.field_d) {
                 if (99 == bk.field_f) {
-                  ((gr) this).field_g = ((gr) this).field_g + 1;
-                  ((gr) this).field_f = false;
-                  if (((gr) this).field_c <= ((gr) this).field_g) {
-                    ((gr) this).field_g = 0;
+                  this.field_g = this.field_g + 1;
+                  this.field_f = false;
+                  if (this.field_c <= this.field_g) {
+                    this.field_g = 0;
                     return;
                   } else {
                     return;
@@ -183,21 +183,21 @@ final class gr {
             }
           } else {
             L9: {
-              if (((gr) this).field_d != 0) {
+              if (this.field_d != 0) {
                 break L9;
               } else {
-                ((gr) this).field_e = bk.field_f;
+                this.field_e = bk.field_f;
                 break L9;
               }
             }
-            if (0 == ((gr) this).field_d) {
+            if (0 == this.field_d) {
               if (99 == bk.field_f) {
-                ((gr) this).field_g = ((gr) this).field_g + 1;
-                ((gr) this).field_f = false;
-                if (((gr) this).field_c > ((gr) this).field_g) {
+                this.field_g = this.field_g + 1;
+                this.field_f = false;
+                if (this.field_c > this.field_g) {
                   return;
                 } else {
-                  ((gr) this).field_g = 0;
+                  this.field_g = 0;
                   return;
                 }
               } else {
@@ -211,6 +211,7 @@ final class gr {
     }
 
     final boolean d(int param0) {
+        boolean discarded$10 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -219,8 +220,8 @@ final class gr {
         int stackOut_2_0 = 0;
         if (param0 <= 50) {
           L0: {
-            boolean discarded$10 = ((gr) this).a(-96);
-            if (102 != ((gr) this).field_e) {
+            discarded$10 = this.a(-96);
+            if (102 != this.field_e) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -233,7 +234,7 @@ final class gr {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (102 != ((gr) this).field_e) {
+            if (102 != this.field_e) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -252,9 +253,9 @@ final class gr {
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
         if (param0 > 80) {
-          if (-1 == ((gr) this).field_a) {
-            if (((gr) this).field_e != 84) {
-              if (((gr) this).field_e == 83) {
+          if (-1 == (this.field_a ^ -1)) {
+            if ((this.field_e ^ -1) != -85) {
+              if (this.field_e == 83) {
                 return true;
               } else {
                 return false;
@@ -266,13 +267,13 @@ final class gr {
             return true;
           }
         } else {
-          ((gr) this).field_c = -21;
-          if (((gr) this).field_a == 0) {
-            if (((gr) this).field_e == -85) {
+          this.field_c = -21;
+          if (-1 == (this.field_a ^ -1)) {
+            if ((this.field_e ^ -1) == -85) {
               return true;
             } else {
               L0: {
-                if (((gr) this).field_e != 83) {
+                if (this.field_e != 83) {
                   stackOut_6_0 = 0;
                   stackIn_7_0 = stackOut_6_0;
                   break L0;
@@ -291,7 +292,7 @@ final class gr {
     }
 
     final void a(byte param0, int param1) {
-        if (0 != ((gr) this).field_d) {
+        if (0 != this.field_d) {
           if (param0 >= -98) {
             field_h = 4;
             return;
@@ -299,8 +300,8 @@ final class gr {
             return;
           }
         } else {
-          ((gr) this).field_f = false;
-          ((gr) this).field_g = param1;
+          this.field_f = false;
+          this.field_g = param1;
           if (param0 < -98) {
             return;
           } else {
@@ -312,68 +313,68 @@ final class gr {
 
     final boolean a(int param0) {
         int var2 = 39 / ((71 - param0) / 37);
-        return ((gr) this).field_e == 96 ? true : false;
+        return -97 == (this.field_e ^ -1) ? true : false;
     }
 
     final void d(byte param0) {
-        ((gr) this).field_a = 0;
-        ((gr) this).field_e = 0;
-        if (((gr) this).field_d != 0) {
+        this.field_a = 0;
+        this.field_e = 0;
+        if (-1 != (this.field_d ^ -1)) {
           if (param0 <= 122) {
-            field_b = null;
+            field_b = (en) null;
             return;
           } else {
             return;
           }
         } else {
-          ((gr) this).field_e = bk.field_f;
+          this.field_e = bk.field_f;
           if (param0 > 122) {
             return;
           } else {
-            field_b = null;
+            field_b = (en) null;
             return;
           }
         }
     }
 
     final void c(byte param0) {
-        ((gr) this).field_e = 0;
+        this.field_e = 0;
         if (param0 <= -47) {
           L0: {
-            ((gr) this).field_a = 0;
-            if (((gr) this).field_d == 0) {
-              ((gr) this).field_e = bk.field_f;
+            this.field_a = 0;
+            if (this.field_d == 0) {
+              this.field_e = bk.field_f;
               break L0;
             } else {
               break L0;
             }
           }
           L1: {
-            if (0 != ((gr) this).field_d) {
+            if (0 != this.field_d) {
               break L1;
             } else {
-              if (bk.field_f == 96) {
+              if (-97 == (bk.field_f ^ -1)) {
                 L2: {
-                  if (((gr) this).field_g <= 0) {
-                    ((gr) this).field_g = ((gr) this).field_c;
+                  if (this.field_g <= 0) {
+                    this.field_g = this.field_c;
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                ((gr) this).field_g = ((gr) this).field_g - 1;
-                ((gr) this).field_f = false;
+                this.field_g = this.field_g - 1;
+                this.field_f = false;
                 break L1;
               } else {
-                if (((gr) this).field_d == 0) {
+                if (this.field_d == 0) {
                   if (bk.field_f == 97) {
-                    ((gr) this).field_g = ((gr) this).field_g + 1;
-                    if (((gr) this).field_c > ((gr) this).field_g) {
-                      ((gr) this).field_f = false;
+                    this.field_g = this.field_g + 1;
+                    if (this.field_c > this.field_g) {
+                      this.field_f = false;
                       return;
                     } else {
-                      ((gr) this).field_g = 0;
-                      ((gr) this).field_f = false;
+                      this.field_g = 0;
+                      this.field_f = false;
                       return;
                     }
                   } else {
@@ -385,15 +386,15 @@ final class gr {
               }
             }
           }
-          if (((gr) this).field_d == 0) {
+          if (this.field_d == 0) {
             if (bk.field_f == 97) {
-              ((gr) this).field_g = ((gr) this).field_g + 1;
-              if (((gr) this).field_c > ((gr) this).field_g) {
-                ((gr) this).field_f = false;
+              this.field_g = this.field_g + 1;
+              if (this.field_c > this.field_g) {
+                this.field_f = false;
                 return;
               } else {
-                ((gr) this).field_g = 0;
-                ((gr) this).field_f = false;
+                this.field_g = 0;
+                this.field_f = false;
                 return;
               }
             } else {
@@ -404,42 +405,42 @@ final class gr {
           }
         } else {
           L3: {
-            ((gr) this).field_e = 73;
-            ((gr) this).field_a = 0;
-            if (((gr) this).field_d == 0) {
-              ((gr) this).field_e = bk.field_f;
+            this.field_e = 73;
+            this.field_a = 0;
+            if (this.field_d == 0) {
+              this.field_e = bk.field_f;
               break L3;
             } else {
               break L3;
             }
           }
-          if (0 == ((gr) this).field_d) {
+          if (0 == this.field_d) {
             L4: {
-              if (bk.field_f == 96) {
+              if (-97 == (bk.field_f ^ -1)) {
                 L5: {
-                  if (((gr) this).field_g <= 0) {
-                    ((gr) this).field_g = ((gr) this).field_c;
+                  if (this.field_g <= 0) {
+                    this.field_g = this.field_c;
                     break L5;
                   } else {
                     break L5;
                   }
                 }
-                ((gr) this).field_g = ((gr) this).field_g - 1;
-                ((gr) this).field_f = false;
+                this.field_g = this.field_g - 1;
+                this.field_f = false;
                 break L4;
               } else {
                 break L4;
               }
             }
-            if (((gr) this).field_d == 0) {
+            if (this.field_d == 0) {
               if (bk.field_f == 97) {
-                ((gr) this).field_g = ((gr) this).field_g + 1;
-                if (((gr) this).field_c > ((gr) this).field_g) {
-                  ((gr) this).field_f = false;
+                this.field_g = this.field_g + 1;
+                if (this.field_c > this.field_g) {
+                  this.field_f = false;
                   return;
                 } else {
-                  ((gr) this).field_g = 0;
-                  ((gr) this).field_f = false;
+                  this.field_g = 0;
+                  this.field_f = false;
                   return;
                 }
               } else {
@@ -449,15 +450,15 @@ final class gr {
               return;
             }
           } else {
-            if (((gr) this).field_d == 0) {
+            if (this.field_d == 0) {
               if (bk.field_f == 97) {
-                ((gr) this).field_g = ((gr) this).field_g + 1;
-                if (((gr) this).field_c > ((gr) this).field_g) {
-                  ((gr) this).field_f = false;
+                this.field_g = this.field_g + 1;
+                if (this.field_c > this.field_g) {
+                  this.field_f = false;
                   return;
                 } else {
-                  ((gr) this).field_g = 0;
-                  ((gr) this).field_f = false;
+                  this.field_g = 0;
+                  this.field_f = false;
                   return;
                 }
               } else {
@@ -471,6 +472,7 @@ final class gr {
     }
 
     final boolean a(byte param0) {
+        boolean discarded$11 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -479,8 +481,8 @@ final class gr {
         int stackOut_2_0 = 0;
         if (param0 < 22) {
           L0: {
-            boolean discarded$11 = ((gr) this).d(-16);
-            if (((gr) this).field_d == 0) {
+            discarded$11 = this.d(-16);
+            if (this.field_d == 0) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -493,7 +495,7 @@ final class gr {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((gr) this).field_d == 0) {
+            if (this.field_d == 0) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -535,13 +537,13 @@ final class gr {
             break L0;
           }
         }
-        ((gr) this).field_f = stackIn_3_1 != 0;
-        ((gr) this).field_d = param2;
-        if (!((gr) this).field_f) {
-          ((gr) this).field_g = param3;
+        ((gr) (this)).field_f = stackIn_3_1 != 0;
+        this.field_d = param2;
+        if (!this.field_f) {
+          this.field_g = param3;
           return;
         } else {
-          ((gr) this).field_g = param1;
+          this.field_g = param1;
           return;
         }
     }
@@ -549,43 +551,46 @@ final class gr {
     public static void c(int param0) {
         field_i = null;
         field_b = null;
+        if (param0 >= -117) {
+            field_b = (en) null;
+        }
     }
 
     final void a(int param0, int param1, int param2) {
-        if (((gr) this).field_c <= param1) {
+        if (this.field_c <= param1) {
           throw new IllegalArgumentException();
         } else {
-          if (((gr) this).field_c > param0) {
+          if (this.field_c > param0) {
             L0: {
-              ((gr) this).field_a = 0;
-              ((gr) this).field_e = 0;
+              this.field_a = 0;
+              this.field_e = 0;
               if (0 != vj.field_d) {
-                ((gr) this).field_j = pn.field_d;
-                ((gr) this).field_a = vj.field_d;
-                ((gr) this).field_f = true;
-                ((gr) this).field_d = vj.field_d;
-                ((gr) this).field_g = param0;
+                this.field_j = pn.field_d;
+                this.field_a = vj.field_d;
+                this.field_f = true;
+                this.field_d = vj.field_d;
+                this.field_g = param0;
                 break L0;
               } else {
                 break L0;
               }
             }
             if (param2 == -24702) {
-              if (((gr) this).field_d != 0) {
+              if (-1 != (this.field_d ^ -1)) {
                 if (0 != vu.field_f) {
-                  if (((gr) this).field_j > 0) {
+                  if (-1 > (this.field_j ^ -1)) {
                     L1: {
-                      ((gr) this).field_j = ((gr) this).field_j - 1;
+                      this.field_j = this.field_j - 1;
                       if (0 != vj.field_d) {
                         break L1;
                       } else {
                         if (vu.field_f == 0) {
-                          ((gr) this).field_d = 0;
+                          this.field_d = 0;
                           break L1;
                         } else {
-                          if (0 == ((gr) this).field_d) {
+                          if (0 == this.field_d) {
                             L2: {
-                              if (((gr) this).field_f) {
+                              if (this.field_f) {
                                 break L2;
                               } else {
                                 if (uu.field_e) {
@@ -596,20 +601,20 @@ final class gr {
                               }
                             }
                             if (0 > param1) {
-                              if (((gr) this).field_f) {
-                                ((gr) this).field_g = -1;
+                              if (this.field_f) {
+                                this.field_g = -1;
                                 return;
                               } else {
                                 return;
                               }
                             } else {
-                              if (((gr) this).field_g == param1) {
-                                ((gr) this).field_g = param1;
-                                ((gr) this).field_f = true;
+                              if (this.field_g == param1) {
+                                this.field_g = param1;
+                                this.field_f = true;
                                 return;
                               } else {
-                                ((gr) this).field_g = param1;
-                                ((gr) this).field_f = true;
+                                this.field_g = param1;
+                                this.field_f = true;
                                 return;
                               }
                             }
@@ -619,9 +624,9 @@ final class gr {
                         }
                       }
                     }
-                    if (0 == ((gr) this).field_d) {
+                    if (0 == this.field_d) {
                       L3: {
-                        if (((gr) this).field_f) {
+                        if (this.field_f) {
                           break L3;
                         } else {
                           if (uu.field_e) {
@@ -632,20 +637,20 @@ final class gr {
                         }
                       }
                       if (0 > param1) {
-                        if (!((gr) this).field_f) {
+                        if (!this.field_f) {
                           return;
                         } else {
-                          ((gr) this).field_g = -1;
+                          this.field_g = -1;
                           return;
                         }
                       } else {
-                        if (((gr) this).field_g == param1) {
-                          ((gr) this).field_g = param1;
-                          ((gr) this).field_f = true;
+                        if (this.field_g == param1) {
+                          this.field_g = param1;
+                          this.field_f = true;
                           return;
                         } else {
-                          ((gr) this).field_g = param1;
-                          ((gr) this).field_f = true;
+                          this.field_g = param1;
+                          this.field_f = true;
                           return;
                         }
                       }
@@ -653,23 +658,23 @@ final class gr {
                       return;
                     }
                   } else {
-                    ((gr) this).field_j = wm.field_h;
-                    ((gr) this).field_j = ((gr) this).field_j - 1;
+                    this.field_j = wm.field_h;
+                    this.field_j = this.field_j - 1;
                     if (0 == vj.field_d) {
                       L4: {
                         if (vu.field_f == 0) {
-                          ((gr) this).field_d = 0;
+                          this.field_d = 0;
                           break L4;
                         } else {
                           break L4;
                         }
                       }
                       L5: {
-                        if (0 != ((gr) this).field_d) {
+                        if (0 != this.field_d) {
                           break L5;
                         } else {
                           L6: {
-                            if (((gr) this).field_f) {
+                            if (this.field_f) {
                               break L6;
                             } else {
                               if (uu.field_e) {
@@ -680,20 +685,20 @@ final class gr {
                             }
                           }
                           if (0 > param1) {
-                            if (!((gr) this).field_f) {
+                            if (!this.field_f) {
                               break L5;
                             } else {
-                              ((gr) this).field_g = -1;
+                              this.field_g = -1;
                               return;
                             }
                           } else {
-                            if (((gr) this).field_g == param1) {
-                              ((gr) this).field_g = param1;
-                              ((gr) this).field_f = true;
+                            if (this.field_g == param1) {
+                              this.field_g = param1;
+                              this.field_f = true;
                               return;
                             } else {
-                              ((gr) this).field_g = param1;
-                              ((gr) this).field_f = true;
+                              this.field_g = param1;
+                              this.field_f = true;
                               return;
                             }
                           }
@@ -701,9 +706,9 @@ final class gr {
                       }
                       return;
                     } else {
-                      if (0 == ((gr) this).field_d) {
+                      if (0 == this.field_d) {
                         L7: {
-                          if (((gr) this).field_f) {
+                          if (this.field_f) {
                             break L7;
                           } else {
                             if (uu.field_e) {
@@ -714,20 +719,20 @@ final class gr {
                           }
                         }
                         if (0 > param1) {
-                          if (!((gr) this).field_f) {
+                          if (!this.field_f) {
                             return;
                           } else {
-                            ((gr) this).field_g = -1;
+                            this.field_g = -1;
                             return;
                           }
                         } else {
-                          if (((gr) this).field_g == param1) {
-                            ((gr) this).field_g = param1;
-                            ((gr) this).field_f = true;
+                          if (this.field_g == param1) {
+                            this.field_g = param1;
+                            this.field_f = true;
                             return;
                           } else {
-                            ((gr) this).field_g = param1;
-                            ((gr) this).field_f = true;
+                            this.field_g = param1;
+                            this.field_f = true;
                             return;
                           }
                         }
@@ -742,12 +747,12 @@ final class gr {
                       break L8;
                     } else {
                       if (vu.field_f == 0) {
-                        ((gr) this).field_d = 0;
+                        this.field_d = 0;
                         break L8;
                       } else {
-                        if (0 == ((gr) this).field_d) {
+                        if (0 == this.field_d) {
                           L9: {
-                            if (((gr) this).field_f) {
+                            if (this.field_f) {
                               break L9;
                             } else {
                               if (uu.field_e) {
@@ -758,20 +763,20 @@ final class gr {
                             }
                           }
                           if (0 > param1) {
-                            if (((gr) this).field_f) {
-                              ((gr) this).field_g = -1;
+                            if (this.field_f) {
+                              this.field_g = -1;
                               return;
                             } else {
                               return;
                             }
                           } else {
-                            if (((gr) this).field_g == param1) {
-                              ((gr) this).field_g = param1;
-                              ((gr) this).field_f = true;
+                            if (this.field_g == param1) {
+                              this.field_g = param1;
+                              this.field_f = true;
                               return;
                             } else {
-                              ((gr) this).field_g = param1;
-                              ((gr) this).field_f = true;
+                              this.field_g = param1;
+                              this.field_f = true;
                               return;
                             }
                           }
@@ -781,9 +786,9 @@ final class gr {
                       }
                     }
                   }
-                  if (0 == ((gr) this).field_d) {
+                  if (0 == this.field_d) {
                     L10: {
-                      if (((gr) this).field_f) {
+                      if (this.field_f) {
                         break L10;
                       } else {
                         if (uu.field_e) {
@@ -794,20 +799,20 @@ final class gr {
                       }
                     }
                     if (0 > param1) {
-                      if (((gr) this).field_f) {
-                        ((gr) this).field_g = -1;
+                      if (this.field_f) {
+                        this.field_g = -1;
                         return;
                       } else {
                         return;
                       }
                     } else {
-                      if (((gr) this).field_g == param1) {
-                        ((gr) this).field_g = param1;
-                        ((gr) this).field_f = true;
+                      if (this.field_g == param1) {
+                        this.field_g = param1;
+                        this.field_f = true;
                         return;
                       } else {
-                        ((gr) this).field_g = param1;
-                        ((gr) this).field_f = true;
+                        this.field_g = param1;
+                        this.field_f = true;
                         return;
                       }
                     }
@@ -821,15 +826,15 @@ final class gr {
                     break L11;
                   } else {
                     if (vu.field_f == 0) {
-                      ((gr) this).field_d = 0;
+                      this.field_d = 0;
                       break L11;
                     } else {
                       L12: {
-                        if (0 != ((gr) this).field_d) {
+                        if (0 != this.field_d) {
                           break L12;
                         } else {
                           L13: {
-                            if (((gr) this).field_f) {
+                            if (this.field_f) {
                               break L13;
                             } else {
                               if (uu.field_e) {
@@ -840,20 +845,20 @@ final class gr {
                             }
                           }
                           if (0 > param1) {
-                            if (!((gr) this).field_f) {
+                            if (!this.field_f) {
                               break L12;
                             } else {
-                              ((gr) this).field_g = -1;
+                              this.field_g = -1;
                               break L12;
                             }
                           } else {
-                            if (((gr) this).field_g == param1) {
-                              ((gr) this).field_g = param1;
-                              ((gr) this).field_f = true;
+                            if (this.field_g == param1) {
+                              this.field_g = param1;
+                              this.field_f = true;
                               break L12;
                             } else {
-                              ((gr) this).field_g = param1;
-                              ((gr) this).field_f = true;
+                              this.field_g = param1;
+                              this.field_f = true;
                               break L12;
                             }
                           }
@@ -863,9 +868,9 @@ final class gr {
                     }
                   }
                 }
-                if (0 == ((gr) this).field_d) {
+                if (0 == this.field_d) {
                   L14: {
-                    if (((gr) this).field_f) {
+                    if (this.field_f) {
                       break L14;
                     } else {
                       if (uu.field_e) {
@@ -876,20 +881,20 @@ final class gr {
                     }
                   }
                   if (0 > param1) {
-                    if (((gr) this).field_f) {
-                      ((gr) this).field_g = -1;
+                    if (this.field_f) {
+                      this.field_g = -1;
                       return;
                     } else {
                       return;
                     }
                   } else {
-                    if (((gr) this).field_g == param1) {
-                      ((gr) this).field_g = param1;
-                      ((gr) this).field_f = true;
+                    if (this.field_g == param1) {
+                      this.field_g = param1;
+                      this.field_f = true;
                       return;
                     } else {
-                      ((gr) this).field_g = param1;
-                      ((gr) this).field_f = true;
+                      this.field_g = param1;
+                      this.field_f = true;
                       return;
                     }
                   }
@@ -910,13 +915,13 @@ final class gr {
         if (param0 > -9) {
             return false;
         }
-        return ((gr) this).field_e == 103 ? true : false;
+        return this.field_e == 103 ? true : false;
     }
 
     gr(int param0) {
-        ((gr) this).field_g = 0;
-        ((gr) this).field_f = false;
-        ((gr) this).field_c = param0;
+        this.field_g = 0;
+        this.field_f = false;
+        this.field_c = param0;
     }
 
     final boolean b(byte param0) {
@@ -928,8 +933,8 @@ final class gr {
         int stackOut_2_0 = 0;
         if (param0 != -102) {
           L0: {
-            ((gr) this).field_f = true;
-            if (((gr) this).field_e != 97) {
+            this.field_f = true;
+            if ((this.field_e ^ -1) != -98) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -942,7 +947,7 @@ final class gr {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((gr) this).field_e != 97) {
+            if ((this.field_e ^ -1) != -98) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -957,10 +962,6 @@ final class gr {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = 0;
     }
 }

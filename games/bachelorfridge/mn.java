@@ -11,14 +11,10 @@ final class mn extends pu {
         field_l = null;
         field_m = null;
         field_n = null;
-        int var1 = 77;
+        int var1 = -77 / ((17 - param0) / 62);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "mn.A(";
         field_m = new qia();
         field_n = "Show game chat from my friends";

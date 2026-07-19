@@ -10,18 +10,31 @@ final class ub {
 
     public static void a(byte param0) {
         field_a = null;
-        field_c = null;
-        field_d = null;
-        field_e = null;
-        field_b = null;
+        if (param0 != -104) {
+          field_b = (qc) null;
+          field_c = null;
+          field_d = null;
+          field_e = null;
+          field_b = null;
+          return;
+        } else {
+          field_c = null;
+          field_d = null;
+          field_e = null;
+          field_b = null;
+          return;
+        }
     }
 
     final static void a(byte param0, gk param1) {
         tg var2 = null;
         int var3 = 0;
         int var4 = 0;
+        if (param0 != -32) {
+            return;
+        }
         try {
-            var2 = new tg(param1.b("final_frame.jpg", "", -90), (java.awt.Component) (Object) ch.field_h);
+            var2 = new tg(param1.b("final_frame.jpg", "", -90), (java.awt.Component) ((Object) ch.field_h));
             var3 = var2.field_s;
             var4 = var2.field_q;
             wa.a(true);
@@ -32,17 +45,13 @@ final class ub {
             bf.field_o.d();
             var2.b(0, -jl.field_c.field_q);
             bf.field_o.field_p = jl.field_c.field_q;
-            ve.a(-124);
+            ve.a(param0 ^ 100);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ub.A(" + -32 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "ub.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
         field_e = "Names should contain a maximum of 12 characters";
         field_c = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";

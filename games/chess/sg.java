@@ -40,7 +40,7 @@ final class sg {
           L0: {
             var3_int = 0;
             var4 = param0.length();
-            var6 = 83;
+            var6 = -83 / ((75 - param1) / 49);
             var5 = 0;
             L1: while (true) {
               if (var5 >= var4) {
@@ -65,23 +65,23 @@ final class sg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_0 = (RuntimeException) (var3);
             stackOut_8_1 = new StringBuilder().append("sg.C(");
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L3;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -89,7 +89,7 @@ final class sg {
               break L3;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + 124 + ',' + param2 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ')');
         }
         return stackIn_7_0;
     }
@@ -98,7 +98,7 @@ final class sg {
         if (!(wb.field_c < param2 + param0 + param1)) {
             return param2 + param0;
         }
-        if (!(-param1 + param0 < 0)) {
+        if (!(-param1 + param0 < param3)) {
             return param0 - param1;
         }
         return -param1 + wb.field_c;
@@ -108,7 +108,7 @@ final class sg {
         try {
             java.net.URL var3 = null;
             if (param1 <= 118) {
-                field_a = null;
+                field_a = (String) null;
             }
             try {
                 var3 = new java.net.URL(param0.getCodeBase(), param2);
@@ -131,14 +131,10 @@ final class sg {
         field_e = null;
         field_f = null;
         field_g = null;
-        int var1 = -49;
+        int var1 = 98 / ((25 - param0) / 38);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Game";
         field_a = "<u=000001>General information</u>";
         field_e = "Continue";

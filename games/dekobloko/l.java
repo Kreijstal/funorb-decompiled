@@ -14,24 +14,64 @@ final class l {
     static int[] field_g;
 
     final static w a(int param0) {
+        if (param0 > -72) {
+            return (w) null;
+        }
         return wf.c(-122);
     }
 
     final static int[] c(int param0) {
+        w discarded$2 = null;
+        int[] var1 = null;
         int var2 = 0;
-        int var3 = client.field_A ? 1 : 0;
-        int[] var4 = new int[4];
-        int[] var1 = var4;
-        for (var2 = 0; var2 < 4; var2++) {
-            var4[var2] = bf.field_y.nextInt();
+        int var3 = 0;
+        int[] var4 = null;
+        int[] stackIn_5_0 = null;
+        int[] stackIn_8_0 = null;
+        int[] stackOut_7_0 = null;
+        int[] stackOut_4_0 = null;
+        L0: {
+          var3 = client.field_A ? 1 : 0;
+          if (param0 == 4) {
+            break L0;
+          } else {
+            discarded$2 = l.a(64);
+            break L0;
+          }
         }
-        return var1;
+        var4 = new int[4];
+        var1 = var4;
+        var2 = 0;
+        L1: while (true) {
+          L2: {
+            if (var2 >= 4) {
+              stackOut_7_0 = (int[]) (var4);
+              stackIn_8_0 = stackOut_7_0;
+              break L2;
+            } else {
+              stackOut_4_0 = (int[]) (var4);
+              stackIn_8_0 = stackOut_4_0;
+              stackIn_5_0 = stackOut_4_0;
+              if (var3 != 0) {
+                break L2;
+              } else {
+                stackIn_5_0[var2] = bf.field_y.nextInt();
+                var2++;
+                continue L1;
+              }
+            }
+          }
+          return stackIn_8_0;
+        }
     }
 
     public static void b(int param0) {
         field_a = null;
         field_e = null;
         field_j = null;
+        if (param0 < 118) {
+            field_h = -47L;
+        }
         field_i = null;
         field_b = null;
         field_d = null;

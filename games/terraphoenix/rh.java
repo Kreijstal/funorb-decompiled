@@ -10,6 +10,9 @@ final class rh {
 
     public static void a(int param0) {
         field_b = null;
+        if (param0 != 33) {
+            field_b = (ci[]) null;
+        }
     }
 
     public final String toString() {
@@ -17,15 +20,11 @@ final class rh {
     }
 
     rh(int param0, int param1, int param2, int param3) {
-        ((rh) this).field_a = param3;
-        ((rh) this).field_e = param0;
+        this.field_a = param3;
+        this.field_e = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 33;
     }
 }

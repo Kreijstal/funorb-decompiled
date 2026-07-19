@@ -15,25 +15,26 @@ abstract class wn {
     public static void b(boolean param0) {
         field_d = null;
         field_b = null;
+        if (param0) {
+            field_d = (int[]) null;
+            field_g = null;
+            return;
+        }
         field_g = null;
     }
 
     final java.net.Socket a(boolean param0) throws IOException {
         if (!param0) {
-          field_g = null;
-          return new java.net.Socket(((wn) this).field_a, ((wn) this).field_c);
+          field_g = (String) null;
+          return new java.net.Socket(this.field_a, this.field_c);
         } else {
-          return new java.net.Socket(((wn) this).field_a, ((wn) this).field_c);
+          return new java.net.Socket(this.field_a, this.field_c);
         }
     }
 
     abstract java.net.Socket a(byte param0) throws IOException;
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = true;
         field_g = "Loading extra data";
     }

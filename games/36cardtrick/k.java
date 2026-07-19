@@ -2,8 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.io.*;
-import java.net.URL;
-import java.lang.String;
 
 abstract class k implements ba {
     static double field_a;
@@ -25,24 +23,25 @@ abstract class k implements ba {
     }
 
     public final sg a(boolean param0) {
-        if (!(!((k) this).a((byte) -31))) {
+        if (!(!this.a((byte) -31))) {
             return il.field_e;
         }
         if (!param0) {
-            ((k) this).field_d = 73L;
-            if (!(id.a(43) >= ((k) this).field_d + 350L)) {
+            this.field_d = 73L;
+            if (!(id.a(43) >= this.field_d + 350L)) {
                 return tb.field_b;
             }
-            return ((k) this).e(14);
+            return this.e(14);
         }
-        if (!(id.a(43) >= ((k) this).field_d + 350L)) {
+        if (!(id.a(43) >= this.field_d + 350L)) {
             return tb.field_b;
         }
-        return ((k) this).e(14);
+        return this.e(14);
     }
 
     final static void a(Throwable param0, byte param1, String param2) {
         try {
+            int discarded$1 = 0;
             Exception var3 = null;
             String var3_ref = null;
             int var4 = 0;
@@ -69,6 +68,7 @@ abstract class k implements ba {
             java.net.URL stackIn_12_3 = null;
             StringBuilder stackIn_12_4 = null;
             String stackIn_12_5 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             le stackOut_9_0 = null;
             java.net.URL stackOut_9_1 = null;
@@ -139,11 +139,11 @@ abstract class k implements ba {
                     stackIn_10_3 = stackOut_9_3;
                     stackIn_10_4 = stackOut_9_4;
                     if (fk.field_o == null) {
-                      stackOut_11_0 = (le) (Object) stackIn_11_0;
+                      stackOut_11_0 = (le) ((Object) stackIn_11_0);
                       stackOut_11_1 = null;
                       stackOut_11_2 = null;
-                      stackOut_11_3 = (java.net.URL) (Object) stackIn_11_3;
-                      stackOut_11_4 = (StringBuilder) (Object) stackIn_11_4;
+                      stackOut_11_3 = (java.net.URL) ((Object) stackIn_11_3);
+                      stackOut_11_4 = (StringBuilder) ((Object) stackIn_11_4);
                       stackOut_11_5 = "" + kb.field_f;
                       stackIn_12_0 = stackOut_11_0;
                       stackIn_12_1 = stackOut_11_1;
@@ -153,11 +153,11 @@ abstract class k implements ba {
                       stackIn_12_5 = stackOut_11_5;
                       break L4;
                     } else {
-                      stackOut_10_0 = (le) (Object) stackIn_10_0;
+                      stackOut_10_0 = (le) ((Object) stackIn_10_0);
                       stackOut_10_1 = null;
                       stackOut_10_2 = null;
-                      stackOut_10_3 = (java.net.URL) (Object) stackIn_10_3;
-                      stackOut_10_4 = (StringBuilder) (Object) stackIn_10_4;
+                      stackOut_10_3 = (java.net.URL) ((Object) stackIn_10_3);
+                      stackOut_10_4 = (StringBuilder) ((Object) stackIn_10_4);
                       stackOut_10_5 = fk.field_o;
                       stackIn_12_0 = stackOut_10_0;
                       stackIn_12_1 = stackOut_10_1;
@@ -175,12 +175,13 @@ abstract class k implements ba {
                         if (1 != var5.field_a) {
                           break L6;
                         } else {
-                          var6 = (DataInputStream) var5.field_e;
-                          int discarded$1 = var6.read();
+                          var6 = (DataInputStream) (var5.field_e);
+                          discarded$1 = var6.read();
                           var6.close();
                           break L6;
                         }
                       }
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       wk.a((byte) -97, 1L);
@@ -188,15 +189,22 @@ abstract class k implements ba {
                     }
                   }
                 } else {
-                  return;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L7: {
                 var3 = (Exception) (Object) decompiledCaughtException;
+                decompiledRegionSelector0 = 1;
                 break L7;
               }
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -208,28 +216,28 @@ abstract class k implements ba {
     public final void a(int param0) {
         if (param0 >= -96) {
             k.c(58);
-            ((k) this).field_d = id.a(111);
+            this.field_d = id.a(111);
             return;
         }
-        ((k) this).field_d = id.a(111);
+        this.field_d = id.a(111);
     }
 
     abstract sg e(int param0);
 
     public final String b(int param0) {
-        if (!((k) this).a((byte) -60)) {
+        if (!this.a((byte) -60)) {
           if (param0 == 26766) {
-            if (~id.a(46) > ~(350L + ((k) this).field_d)) {
+            if ((id.a(46) ^ -1L) > (350L + this.field_d ^ -1L)) {
               return null;
             } else {
-              return ((k) this).d(-5777);
+              return this.d(-5777);
             }
           } else {
-            ((k) this).field_d = 5L;
-            if (~id.a(46) > ~(350L + ((k) this).field_d)) {
+            this.field_d = 5L;
+            if ((id.a(46) ^ -1L) > (350L + this.field_d ^ -1L)) {
               return null;
             } else {
-              return ((k) this).d(-5777);
+              return this.d(-5777);
             }
           }
         } else {
@@ -238,10 +246,6 @@ abstract class k implements ba {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0.0;
         field_b = false;
         field_c = 0;

@@ -26,7 +26,7 @@ final class je extends hf {
                   if (vk.field_b.field_f) {
                     ra.field_d = vk.field_b.field_j;
                     hj.field_c = true;
-                    ug.field_c = ug.field_c & ~ra.field_d;
+                    ug.field_c = ug.field_c & (ra.field_d ^ -1);
                     vl.field_p = vl.field_p | ra.field_d;
                     break L1;
                   } else {
@@ -36,16 +36,24 @@ final class je extends hf {
               }
             }
             L2: {
-              if (fh.c(-91)) {
+              if (param0 < -119) {
                 break L2;
               } else {
-                L3: while (true) {
-                  var1 = (p) (Object) ja.field_A.b((byte) -118);
+                field_j = (wl) null;
+                break L2;
+              }
+            }
+            L3: {
+              if (fh.c(-91)) {
+                break L3;
+              } else {
+                L4: while (true) {
+                  var1 = (p) ((Object) ja.field_A.b((byte) -118));
                   if (var1 == null) {
-                    break L2;
+                    break L3;
                   } else {
                     sj.a(var1, -56, 4);
-                    continue L3;
+                    continue L4;
                   }
                 }
               }
@@ -55,13 +63,13 @@ final class je extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var1_ref, "je.C(" + -122 + ')');
+          throw t.a((Throwable) ((Object) var1_ref), "je.C(" + param0 + ')');
         }
     }
 
     final static rh a(int param0, boolean param1, boolean param2, boolean param3, byte param4) {
-        int var5 = -55;
-        return am.a(-128, 1, param2, 1, true, false);
+        int var5 = 55 / ((param4 - -65) / 46);
+        return am.a(-128, param0, param2, !param1 ? 0 : 1, param3, false);
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
@@ -102,30 +110,30 @@ final class je extends hf {
                     break L2;
                   }
                 }
-                var2_int = 0;
+                var2_int = 91 % ((50 - param0) / 49);
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_5_0 = (RuntimeException) var2_ref2;
-                stackOut_5_1 = new StringBuilder().append("je.D(").append(114).append(',');
+                stackOut_5_0 = (RuntimeException) (var2_ref2);
+                stackOut_5_1 = new StringBuilder().append("je.D(").append(param0).append(',');
                 stackIn_7_0 = stackOut_5_0;
                 stackIn_7_1 = stackOut_5_1;
                 stackIn_6_0 = stackOut_5_0;
                 stackIn_6_1 = stackOut_5_1;
                 if (param1 == null) {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+                  stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
                   stackOut_7_2 = "null";
                   stackIn_8_0 = stackOut_7_0;
                   stackIn_8_1 = stackOut_7_1;
                   stackIn_8_2 = stackOut_7_2;
                   break L3;
                 } else {
-                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+                  stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
                   stackOut_6_2 = "{...}";
                   stackIn_8_0 = stackOut_6_0;
                   stackIn_8_1 = stackOut_6_1;
@@ -133,7 +141,7 @@ final class je extends hf {
                   break L3;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+              throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -144,25 +152,26 @@ final class je extends hf {
 
     public static void a(byte param0) {
         field_j = null;
+        if (param0 <= 49) {
+            je.c((byte) -123);
+            field_h = null;
+            return;
+        }
         field_h = null;
     }
 
     je(kl param0, hf param1) {
         try {
-            ((je) this).field_g = param0;
-            ((je) this).field_i = param0.i();
-            ((je) this).field_f = param1;
-            ((je) this).field_g.f(((je) this).field_i * j.field_gb / 80);
+            this.field_g = param0;
+            this.field_i = param0.i();
+            this.field_f = param1;
+            this.field_g.f(this.field_i * j.field_gb / 80);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "je.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "je.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = new wl();
     }
 }

@@ -28,10 +28,10 @@ final class ei {
                 if (var4 >= 10) {
                   return var3;
                 } else {
-                  if (((ei) this).field_a[var4] != null) {
-                    var5 = ((ei) this).field_a[var4].field_n * 22050 / 1000;
-                    var6 = ((ei) this).field_a[var4].field_f * 22050 / 1000;
-                    var13 = ((ei) this).field_a[var4].a(var5, ((ei) this).field_a[var4].field_n);
+                  if (this.field_a[var4] != null) {
+                    var5 = this.field_a[var4].field_n * 22050 / 1000;
+                    var6 = this.field_a[var4].field_f * 22050 / 1000;
+                    var13 = this.field_a[var4].a(var5, this.field_a[var4].field_n);
                     var8 = 0;
                     L2: while (true) {
                       if (var8 < var5) {
@@ -62,9 +62,9 @@ final class ei {
               return new byte[]{};
             }
           } else {
-            if (((ei) this).field_a[var2] != null) {
-              if (((ei) this).field_a[var2].field_n + ((ei) this).field_a[var2].field_f > var1) {
-                var1 = ((ei) this).field_a[var2].field_n + ((ei) this).field_a[var2].field_f;
+            if (this.field_a[var2] != null) {
+              if (this.field_a[var2].field_n + this.field_a[var2].field_f > var1) {
+                var1 = this.field_a[var2].field_n + this.field_a[var2].field_f;
                 var2++;
                 continue L0;
               } else {
@@ -89,7 +89,7 @@ final class ei {
 
     final ue b() {
         byte[] var1 = this.a();
-        return new ue(22050, var1, 22050 * ((ei) this).field_b / 1000, 22050 * ((ei) this).field_c / 1000);
+        return new ue(22050, var1, 22050 * this.field_b / 1000, 22050 * this.field_c / 1000);
     }
 
     final static ei a(gk param0, String param1, String param2) {
@@ -103,19 +103,19 @@ final class ei {
     private ei(wi param0) {
         int var2 = 0;
         int var3 = 0;
-        ((ei) this).field_a = new gg[10];
+        this.field_a = new gg[10];
         var2 = 0;
         L0: while (true) {
           if (var2 >= 10) {
-            ((ei) this).field_b = param0.a(-1640531527);
-            ((ei) this).field_c = param0.a(-1640531527);
+            this.field_b = param0.a(-1640531527);
+            this.field_c = param0.a(-1640531527);
             return;
           } else {
             var3 = param0.d((byte) -67);
             if (var3 != 0) {
               param0.field_h = param0.field_h - 1;
-              ((ei) this).field_a[var2] = new gg();
-              ((ei) this).field_a[var2].a(param0);
+              this.field_a[var2] = new gg();
+              this.field_a[var2].a(param0);
               var2++;
               continue L0;
             } else {

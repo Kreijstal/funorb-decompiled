@@ -21,10 +21,6 @@ final class vb extends ca {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new int[9];
         field_h = new im();
         field_i = -1;

@@ -25,10 +25,6 @@ final class bk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bk.A(";
         field_b = "Player 3";
         field_d = "Highscores";

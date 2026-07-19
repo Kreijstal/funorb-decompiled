@@ -2,7 +2,6 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.util.*;
-import java.lang.Class;
 
 final class ge extends qd implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     static hh field_p;
@@ -18,6 +17,7 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final static void a(String param0, int param1, boolean param2, int param3, java.awt.Color param4) {
+        boolean discarded$1 = false;
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
@@ -98,7 +98,7 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
                     }
                     var10 = rm.field_a.getGraphics();
                     var10.setColor(param4);
-                    var10.drawRect(0, 0, 303, 33);
+                    var10.drawRect(0, param3, 303, 33);
                     var10.fillRect(2, 2, 3 * param1, 30);
                     var10.setColor(java.awt.Color.black);
                     var10.drawRect(1, 1, 301, 31);
@@ -106,7 +106,7 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
                     var10.setFont(ha.field_a);
                     var10.setColor(java.awt.Color.white);
                     var10.drawString(param0, (-(6 * param0.length()) + 304) / 2, 22);
-                    boolean discarded$1 = var9.drawImage(rm.field_a, me.field_e / 2 - 152, -18 + nn.field_b / 2, (java.awt.image.ImageObserver) null);
+                    discarded$1 = var9.drawImage(rm.field_a, me.field_e / 2 - 152, -18 + nn.field_b / 2, (java.awt.image.ImageObserver) null);
                     break L5;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -153,23 +153,23 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter2;
           L10: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var5_ref;
+            stackOut_19_0 = (RuntimeException) (var5_ref);
             stackOut_19_1 = new StringBuilder().append("ge.F(");
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L10;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -178,23 +178,23 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
             }
           }
           L11: {
-            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(0).append(',');
+            stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param4 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L11;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -202,11 +202,13 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
               break L11;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
     }
 
     final static void a(int[] param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int incrementValue$2 = 0;
+        int incrementValue$3 = 0;
         RuntimeException var10 = null;
         int var10_int = 0;
         int var11 = 0;
@@ -270,7 +272,7 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
                   } else {
                     L4: {
                       L5: {
-                        int incrementValue$2 = param1;
+                        incrementValue$2 = param1;
                         param1++;
                         param3 = param0[incrementValue$2];
                         if (param3 == 0) {
@@ -279,9 +281,9 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
                           if (255 != param3) {
                             var11 = 255 & param3;
                             var10_int = param2[param6];
-                            int incrementValue$3 = param6;
+                            incrementValue$3 = param6;
                             param6++;
-                            param2[incrementValue$3] = ee.a(we.a(16711935, we.a(16711935, var10_int) * var11 >> 8), we.a(16711920, we.a(var10_int, 65280) * var11) >> 8);
+                            param2[incrementValue$3] = ee.a(we.a(16711935, we.a(16711935, var10_int) * var11 >> -2103339224), we.a(16711920, we.a(var10_int, 65280) * var11) >> -28786776);
                             break L4;
                           } else {
                             break L5;
@@ -302,23 +304,23 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var10 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var10;
+            stackOut_15_0 = (RuntimeException) (var10);
             stackOut_15_1 = new StringBuilder().append("ge.I(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L6;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -327,23 +329,23 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
             }
           }
           L7: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
             stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',').append(param1).append(',');
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param2 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L7;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -351,12 +353,12 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
               break L7;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw r.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
     public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
-        return param0 == ((ge) this).field_o;
+        return param0 == this.field_o;
     }
 
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
@@ -389,23 +391,23 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var7 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var7;
+            stackOut_2_0 = (RuntimeException) (var7);
             stackOut_2_1 = new StringBuilder().append("ge.imageUpdate(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -413,24 +415,27 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
               break L1;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw r.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
         return stackIn_1_0 != 0;
     }
 
     private final synchronized void b(int param0) {
-        if (((ge) this).field_o == null) {
+        if (this.field_o == null) {
             return;
         }
         if (param0 < 23) {
-            Object var3 = null;
-            ((ge) this).startProduction((java.awt.image.ImageConsumer) null);
+            java.awt.image.ImageConsumer var3 = (java.awt.image.ImageConsumer) null;
+            this.startProduction((java.awt.image.ImageConsumer) null);
         }
-        ((ge) this).field_o.setPixels(0, 0, ((ge) this).field_g, ((ge) this).field_d, ((ge) this).field_j, ((ge) this).field_c, 0, ((ge) this).field_g);
-        ((ge) this).field_o.imageComplete(2);
+        this.field_o.setPixels(0, 0, this.field_g, this.field_d, this.field_j, this.field_c, 0, this.field_g);
+        this.field_o.imageComplete(2);
     }
 
     final void a(int param0, java.awt.Component param1, byte param2, int param3) {
+        boolean discarded$6 = false;
+        boolean discarded$7 = false;
+        boolean discarded$8 = false;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -451,22 +456,22 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             L1: {
-              ((ge) this).field_d = param0;
-              ((ge) this).field_g = param3;
-              ((ge) this).field_c = new int[param0 * param3 + 1];
-              ((ge) this).field_j = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-              ((ge) this).field_b = param1.createImage((java.awt.image.ImageProducer) this);
+              this.field_d = param0;
+              this.field_g = param3;
+              this.field_c = new int[param0 * param3 + 1];
+              this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+              this.field_b = param1.createImage((java.awt.image.ImageProducer) (this));
               this.b(88);
-              boolean discarded$6 = param1.prepareImage(((ge) this).field_b, (java.awt.image.ImageObserver) this);
+              discarded$6 = param1.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
               this.b(111);
-              boolean discarded$7 = param1.prepareImage(((ge) this).field_b, (java.awt.image.ImageObserver) this);
+              discarded$7 = param1.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
               this.b(49);
-              boolean discarded$8 = param1.prepareImage(((ge) this).field_b, (java.awt.image.ImageObserver) this);
-              ((ge) this).a((byte) 109);
+              discarded$8 = param1.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
+              this.a((byte) 109);
               if (param2 <= -91) {
                 break L1;
               } else {
-                field_m = null;
+                field_m = (String) null;
                 break L1;
               }
             }
@@ -476,23 +481,23 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("ge.A(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -500,93 +505,113 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param2 + ',' + param3 + ')');
+          throw r.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static Class a(int param0, String param1) throws ClassNotFoundException {
         RuntimeException var2 = null;
+        java.awt.Color var3 = null;
         Class stackIn_3_0 = null;
-        Class stackIn_7_0 = null;
-        Class stackIn_11_0 = null;
-        Class stackIn_15_0 = null;
-        Class stackIn_19_0 = null;
-        Class stackIn_22_0 = null;
-        Class stackIn_25_0 = null;
-        Class stackIn_28_0 = null;
+        Class stackIn_9_0 = null;
+        Class stackIn_13_0 = null;
+        Class stackIn_17_0 = null;
+        Class stackIn_21_0 = null;
+        Class stackIn_24_0 = null;
+        Class stackIn_27_0 = null;
         Class stackIn_30_0 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
+        Class stackIn_32_0 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
-        String stackIn_34_2 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        RuntimeException stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
+        String stackIn_36_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Class stackOut_2_0 = null;
-        Class stackOut_6_0 = null;
-        Class stackOut_10_0 = null;
-        Class stackOut_14_0 = null;
-        Class stackOut_18_0 = null;
+        Class stackOut_8_0 = null;
+        Class stackOut_12_0 = null;
+        Class stackOut_16_0 = null;
+        Class stackOut_20_0 = null;
+        Class stackOut_31_0 = null;
         Class stackOut_29_0 = null;
-        Class stackOut_27_0 = null;
-        Class stackOut_24_0 = null;
-        Class stackOut_21_0 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
+        Class stackOut_26_0 = null;
+        Class stackOut_23_0 = null;
         RuntimeException stackOut_33_0 = null;
         StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        RuntimeException stackOut_35_0 = null;
+        StringBuilder stackOut_35_1 = null;
+        String stackOut_35_2 = null;
+        RuntimeException stackOut_34_0 = null;
+        StringBuilder stackOut_34_1 = null;
+        String stackOut_34_2 = null;
         try {
           L0: {
-            if (param1.equals((Object) (Object) "B")) {
+            if (param1.equals("B")) {
               stackOut_2_0 = Byte.TYPE;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              if (param1.equals((Object) (Object) "I")) {
-                stackOut_6_0 = Integer.TYPE;
-                stackIn_7_0 = stackOut_6_0;
-                return stackIn_7_0;
-              } else {
-                if (param1.equals((Object) (Object) "S")) {
-                  stackOut_10_0 = Short.TYPE;
-                  stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0;
+              L1: {
+                if (param0 == -134) {
+                  break L1;
                 } else {
-                  if (param1.equals((Object) (Object) "J")) {
-                    stackOut_14_0 = Long.TYPE;
-                    stackIn_15_0 = stackOut_14_0;
-                    return stackIn_15_0;
+                  var3 = (java.awt.Color) null;
+                  ge.a((String) null, -93, true, -3, (java.awt.Color) null);
+                  break L1;
+                }
+              }
+              if (param1.equals("I")) {
+                stackOut_8_0 = Integer.TYPE;
+                stackIn_9_0 = stackOut_8_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
+              } else {
+                if (param1.equals("S")) {
+                  stackOut_12_0 = Short.TYPE;
+                  stackIn_13_0 = stackOut_12_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
+                } else {
+                  if (param1.equals("J")) {
+                    stackOut_16_0 = Long.TYPE;
+                    stackIn_17_0 = stackOut_16_0;
+                    decompiledRegionSelector0 = 3;
+                    break L0;
                   } else {
-                    if (param1.equals((Object) (Object) "Z")) {
-                      stackOut_18_0 = Boolean.TYPE;
-                      stackIn_19_0 = stackOut_18_0;
-                      return stackIn_19_0;
+                    if (param1.equals("Z")) {
+                      stackOut_20_0 = Boolean.TYPE;
+                      stackIn_21_0 = stackOut_20_0;
+                      decompiledRegionSelector0 = 4;
+                      break L0;
                     } else {
-                      if (!param1.equals((Object) (Object) "F")) {
-                        if (!param1.equals((Object) (Object) "D")) {
-                          if (!param1.equals((Object) (Object) "C")) {
-                            stackOut_29_0 = Class.forName(param1);
-                            stackIn_30_0 = stackOut_29_0;
+                      if (!param1.equals("F")) {
+                        if (!param1.equals("D")) {
+                          if (!param1.equals("C")) {
+                            stackOut_31_0 = Class.forName(param1);
+                            stackIn_32_0 = stackOut_31_0;
+                            decompiledRegionSelector0 = 8;
                             break L0;
                           } else {
-                            stackOut_27_0 = Character.TYPE;
-                            stackIn_28_0 = stackOut_27_0;
-                            return stackIn_28_0;
+                            stackOut_29_0 = Character.TYPE;
+                            stackIn_30_0 = stackOut_29_0;
+                            decompiledRegionSelector0 = 7;
+                            break L0;
                           }
                         } else {
-                          stackOut_24_0 = Double.TYPE;
-                          stackIn_25_0 = stackOut_24_0;
-                          return stackIn_25_0;
+                          stackOut_26_0 = Double.TYPE;
+                          stackIn_27_0 = stackOut_26_0;
+                          decompiledRegionSelector0 = 6;
+                          break L0;
                         }
                       } else {
-                        stackOut_21_0 = Float.TYPE;
-                        stackIn_22_0 = stackOut_21_0;
-                        return stackIn_22_0;
+                        stackOut_23_0 = Float.TYPE;
+                        stackIn_24_0 = stackOut_23_0;
+                        decompiledRegionSelector0 = 5;
+                        break L0;
                       }
                     }
                   }
@@ -596,40 +621,72 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var2;
-            stackOut_31_1 = new StringBuilder().append("ge.H(").append(-134).append(',');
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackOut_33_0 = (RuntimeException) (var2);
+            stackOut_33_1 = new StringBuilder().append("ge.H(").append(param0).append(',');
+            stackIn_35_0 = stackOut_33_0;
+            stackIn_35_1 = stackOut_33_1;
+            stackIn_34_0 = stackOut_33_0;
+            stackIn_34_1 = stackOut_33_1;
             if (param1 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
-              break L1;
+              stackOut_35_0 = (RuntimeException) ((Object) stackIn_35_0);
+              stackOut_35_1 = (StringBuilder) ((Object) stackIn_35_1);
+              stackOut_35_2 = "null";
+              stackIn_36_0 = stackOut_35_0;
+              stackIn_36_1 = stackOut_35_1;
+              stackIn_36_2 = stackOut_35_2;
+              break L2;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
-              break L1;
+              stackOut_34_0 = (RuntimeException) ((Object) stackIn_34_0);
+              stackOut_34_1 = (StringBuilder) ((Object) stackIn_34_1);
+              stackOut_34_2 = "{...}";
+              stackIn_36_0 = stackOut_34_0;
+              stackIn_36_1 = stackOut_34_1;
+              stackIn_36_2 = stackOut_34_2;
+              break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_36_0), stackIn_36_2 + ')');
         }
-        return stackIn_30_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_13_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_17_0;
+              } else {
+                if (decompiledRegionSelector0 == 4) {
+                  return stackIn_21_0;
+                } else {
+                  if (decompiledRegionSelector0 == 5) {
+                    return stackIn_24_0;
+                  } else {
+                    if (decompiledRegionSelector0 == 6) {
+                      return stackIn_27_0;
+                    } else {
+                      if (decompiledRegionSelector0 == 7) {
+                        return stackIn_30_0;
+                      } else {
+                        return stackIn_32_0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
     }
 
     public static void a(int param0) {
         if (param0 != 6) {
-            Object var2 = null;
+            int[] var2 = (int[]) null;
             ge.a((int[]) null, -98, (int[]) null, -45, 88, 3, -20, 17, 70, -82);
         }
         field_p = null;
@@ -659,8 +716,8 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             L1: {
-              if (param0 == ((ge) this).field_o) {
-                ((ge) this).field_o = null;
+              if (param0 == this.field_o) {
+                this.field_o = null;
                 break L1;
               } else {
                 break L1;
@@ -672,23 +729,23 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("ge.removeConsumer(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -696,39 +753,40 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
     }
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
         try {
-            ((ge) this).addConsumer(param0);
+            this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ge.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "ge.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            ((ge) this).field_o = param0;
-            param0.setDimensions(((ge) this).field_g, ((ge) this).field_d);
+            this.field_o = param0;
+            param0.setDimensions(this.field_g, this.field_d);
             param0.setProperties((Hashtable) null);
-            param0.setColorModel(((ge) this).field_j);
+            param0.setColorModel(this.field_j);
             param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ge.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "ge.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(java.awt.Graphics param0, int param1, byte param2, int param3) {
+        boolean discarded$0 = false;
         try {
             this.b(101);
             if (param2 >= -56) {
                 ge.a(-40);
             }
-            boolean discarded$0 = param0.drawImage(((ge) this).field_b, param1, param3, (java.awt.image.ImageObserver) this);
+            discarded$0 = param0.drawImage(this.field_b, param1, param3, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ge.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "ge.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -736,10 +794,6 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "to return to the normal view.";
         field_n = true;
     }

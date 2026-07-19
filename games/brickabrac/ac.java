@@ -13,23 +13,29 @@ final class ac {
     public static void c(int param0) {
         field_b = null;
         field_d = null;
+        if (param0 != 0) {
+            field_f = 58;
+        }
     }
 
     final boolean b(int param0) {
         if (param0 != 96) {
             field_e = -42;
-            return ((ac) this).field_a;
+            return this.field_a;
         }
-        return ((ac) this).field_a;
+        return this.field_a;
     }
 
     final static id a(long param0, int param1) {
-        return (id) (Object) BrickABrac.field_F.a(param0, -1);
+        if (param1 != 2) {
+            return (id) null;
+        }
+        return (id) ((Object) BrickABrac.field_F.a(param0, -1));
     }
 
     final void a(boolean param0, int param1) {
-        ((ac) this).field_c = param0 ? true : false;
-        ((ac) this).field_a = true;
+        this.field_c = param0 ? true : false;
+        this.field_a = true;
         if (param1 != 20892) {
             field_f = -25;
         }
@@ -37,26 +43,32 @@ final class ac {
 
     final String a(int param0) {
         if (param0 != 0) {
-            return null;
+            return (String) null;
         }
-        return ((ac) this).field_g;
+        return this.field_g;
     }
 
     final boolean a(boolean param0) {
+        String discarded$0 = null;
         if (param0) {
-            String discarded$0 = ((ac) this).a(62);
-            return ((ac) this).field_c;
+            discarded$0 = this.a(62);
+            return this.field_c;
         }
-        return ((ac) this).field_c;
+        return this.field_c;
     }
 
     final static void a(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5, boolean param6, int param7, int param8, byte param9, boolean param10, int param11, int param12, int param13) {
         ep.field_e = null;
         bl.f(0);
         param3 = h.a(param11, param0, param1, (byte) -126, param8, param3, param7);
-        c.a(param13, 16777215, param11, param6, param2, (byte) 126, param4, param10, param3, param5);
+        c.a(param13, param12, param11, param6, param2, (byte) 126, param4, param10, param3, param5);
         sq.a(param2, param13, -126);
-        wg.a(param13, param7, -1, param3);
+        if (param9 != -113) {
+          return;
+        } else {
+          wg.a(param13, param7, -1, param3);
+          return;
+        }
     }
 
     final static void a(jp[] param0, int param1, int param2, int param3, int param4, byte param5) {
@@ -67,22 +79,23 @@ final class ac {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -93,78 +106,89 @@ final class ac {
                 if (param3 <= 0) {
                   break L1;
                 } else {
-                  var6_int = param0[0].field_x;
-                  var7 = param0[2].field_x;
-                  var8 = param0[1].field_x;
-                  param0[0].e(param2, param1, param4);
-                  param0[2].e(param3 + (param2 - var7), param1, param4);
-                  lb.a(pb.field_n);
-                  lb.d(param2 + var6_int, param1, -var7 + param2 + param3, param1 - -param0[1].field_z);
-                  var9 = param2 - -var6_int;
-                  var10 = -var7 + param3 + param2;
+                  L2: {
+                    var6_int = param0[0].field_x;
+                    var7 = param0[2].field_x;
+                    var8 = param0[1].field_x;
+                    param0[0].e(param2, param1, param4);
+                    param0[2].e(param3 + (param2 - var7), param1, param4);
+                    lb.a(pb.field_n);
+                    lb.d(param2 + var6_int, param1, -var7 + param2 + param3, param1 - -param0[1].field_z);
+                    var9 = param2 - -var6_int;
+                    var10 = -var7 + param3 + param2;
+                    if (param5 > 121) {
+                      break L2;
+                    } else {
+                      field_f = 55;
+                      break L2;
+                    }
+                  }
                   param2 = var9;
-                  L2: while (true) {
+                  L3: while (true) {
                     if (param2 >= var10) {
                       lb.b(pb.field_n);
+                      decompiledRegionSelector0 = 1;
                       break L0;
                     } else {
                       param0[1].e(param2, param1, param4);
                       param2 = param2 + var8;
-                      continue L2;
+                      continue L3;
                     }
                   }
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var6 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var6;
-            stackOut_10_1 = new StringBuilder().append("ac.A(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackOut_12_0 = (RuntimeException) (var6);
+            stackOut_12_1 = new StringBuilder().append("ac.A(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              break L3;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
-              break L3;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L4;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + 122 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     ac(String param0) {
-        ((ac) this).field_a = false;
-        ((ac) this).field_c = false;
+        this.field_a = false;
+        this.field_c = false;
         try {
-            ((ac) this).field_g = param0;
+            this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ac.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw qb.a((Throwable) ((Object) runtimeException), "ac.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = 0;
         field_f = 96;
         field_b = "Hide private chat and appear offline to friends";

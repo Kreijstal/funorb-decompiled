@@ -15,9 +15,9 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            ((gj) this).field_f = true;
+            this.field_f = true;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "gj.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "gj.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -26,9 +26,9 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
             return;
         }
         try {
-            si.a(((gj) this).field_e, param1, true);
+            si.a(this.field_e, param1, true);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "gj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,6 +36,9 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_d = null;
         field_g = null;
         field_c = null;
+        if (param0 > -40) {
+            return;
+        }
         field_b = null;
         field_a = null;
     }
@@ -52,8 +55,8 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
     final static void a(String param0, boolean param1, String[] param2, int param3) {
         RuntimeException var4 = null;
         int var5 = 0;
-        Object var6 = null;
-        Object var7 = null;
+        String[] var6 = null;
+        String[] var7 = null;
         String[] var8 = null;
         int stackIn_8_0 = 0;
         int stackIn_9_0 = 0;
@@ -120,7 +123,7 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
                   }
                 }
                 lm.field_e = jj.a((byte) stackIn_10_0, stackIn_10_1 != 0);
-                var7 = null;
+                var7 = (String[]) null;
                 fc.a(-7212, (String[]) null);
                 break L1;
               } else {
@@ -143,7 +146,7 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
             if (param1) {
               break L0;
             } else {
-              var6 = null;
+              var6 = (String[]) null;
               gj.a((String) null, false, (String[]) null, -96);
               return;
             }
@@ -152,23 +155,23 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var4;
+            stackOut_14_0 = (RuntimeException) (var4);
             stackOut_14_1 = new StringBuilder().append("gj.A(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -177,23 +180,23 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
             }
           }
           L4: {
-            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+            stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
             stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param1).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param2 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L4;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -201,15 +204,11 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L4;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param3 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new mn();
         field_c = "Please try again in a few minutes.";
         field_g = "You have <%0> unread messages!";

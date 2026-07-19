@@ -15,6 +15,9 @@ final class jd {
         field_e = null;
         field_b = null;
         field_d = null;
+        if (param0 != -38) {
+            field_b = (mi) null;
+        }
         field_f = null;
         field_a = null;
         field_h = null;
@@ -23,25 +26,28 @@ final class jd {
     final static nf[] a(int param0, int param1, int param2, int param3, boolean param4) {
         nf[] var6 = new nf[9];
         nf[] var5 = var6;
-        nf dupTemp$0 = wm.a(1, true, param2);
+        nf dupTemp$0 = wm.a(param3, true, param2);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        nf dupTemp$1 = wm.a(1, true, param0);
+        nf dupTemp$1 = wm.a(param3, param4, param0);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
-        if (!(param1 == 0)) {
+        if (!(-1 == (param1 ^ -1))) {
             var6[4] = wm.a(64, true, param1);
         }
         return var5;
     }
 
     final static void a(int param0, long param1) {
-        if (!(param1 > 0L)) {
+        if (!((param1 ^ -1L) < -1L)) {
             return;
+        }
+        if (param0 != 1) {
+            field_c = true;
         }
         if (param1 % 10L == 0L) {
             wd.a(-1L + param1, -1);
@@ -52,15 +58,11 @@ final class jd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         double var1 = 0.0;
         field_d = new int[65536];
         field_h = new int[65536];
-        for (var0 = 0; var0 < 65536; var0++) {
+        for (var0 = 0; -65537 < (var0 ^ -1); var0++) {
             var1 = -Math.sqrt((double)var0) + 256.0;
             field_d[var0] = (int)(0.5 + var1 * var1);
         }

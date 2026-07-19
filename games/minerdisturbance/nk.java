@@ -16,23 +16,28 @@ final class nk extends pi {
     int field_n;
 
     public static void a(int param0) {
-        field_v = null;
+        if (param0 != 0) {
+            field_x = -23;
+            field_v = (String[][]) null;
+            return;
+        }
+        field_v = (String[][]) null;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7) {
-        ((nk) this).field_q = param5;
-        ((nk) this).field_s = param0;
-        ((nk) this).field_o = param6;
-        ((nk) this).field_r = param1;
+        this.field_q = param5;
+        this.field_s = param0;
+        this.field_o = param6;
+        this.field_r = param1;
         if (param3 != 0) {
             return;
         }
         try {
-            ((nk) this).field_y = param7;
-            ((nk) this).field_t = param2;
-            ((nk) this).field_n = param4;
+            this.field_y = param7;
+            this.field_t = param2;
+            this.field_n = param4;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "nk.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
+            throw lj.a((Throwable) ((Object) runtimeException), "nk.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,11 +45,7 @@ final class nk extends pi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
-        field_v = new String[][]{new String[1]};
+        field_v = new String[][]{new String[]{"Gas is poisonous - without a gas mask, Moin will choke if he is exposed to it. Gas is also highly explosive, so be careful!"}};
         field_w = 0;
         field_p = false;
     }

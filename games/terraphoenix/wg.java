@@ -19,17 +19,17 @@ final class wg {
         float var4_float = 0.0f;
         try {
             if (param2 < 105) {
-                field_k = null;
+                field_k = (String) null;
             }
-            var4_float = (float)param0 / 100.0f + (float)(((wg) this).field_a - -1);
+            var4_float = (float)param0 / 100.0f + (float)(this.field_a - -1);
             if (param0 != 0) {
-                ((wg) this).field_e = param1.field_b + " - " + param0 + "%";
+                this.field_e = param1.field_b + " - " + param0 + "%";
             } else {
-                ((wg) this).field_e = param1.field_c;
+                this.field_e = param1.field_c;
             }
-            ((wg) this).field_c = (float)((wg) this).field_j * var4_float / (float)(1 + ((wg) this).field_i);
+            this.field_c = (float)this.field_j * var4_float / (float)(1 + this.field_i);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "wg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw qk.a((Throwable) ((Object) runtimeException), "wg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -38,20 +38,20 @@ final class wg {
         bb var4 = null;
         var3 = Terraphoenix.field_V;
         L0: while (true) {
-          if (((wg) this).field_a >= ((wg) this).field_i) {
+          if (this.field_a >= this.field_i) {
             if (param0 != 0) {
               return false;
             } else {
               return true;
             }
           } else {
-            var4 = ((wg) this).field_d[((wg) this).field_a];
+            var4 = this.field_d[this.field_a];
             if (!var4.field_a.a(0)) {
               this.a(0, var4, param0 ^ 111);
               return false;
             } else {
               L1: {
-                if (var4.field_e < 0) {
+                if (-1 < (var4.field_e ^ -1)) {
                   break L1;
                 } else {
                   if (var4.field_a.e(var4.field_e, 4)) {
@@ -94,7 +94,7 @@ final class wg {
                   }
                 }
               }
-              ((wg) this).field_a = ((wg) this).field_a + 1;
+              this.field_a = this.field_a + 1;
               continue L0;
             }
           }
@@ -105,6 +105,9 @@ final class wg {
         field_k = null;
         field_g = null;
         field_l = null;
+        if (param0 != 113) {
+            return;
+        }
         field_b = null;
         field_f = null;
         field_h = null;
@@ -115,10 +118,6 @@ final class wg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "Left click to move to destination";
         field_b = new rh(15, 0, 1, 0);
         field_g = "Select grenades";

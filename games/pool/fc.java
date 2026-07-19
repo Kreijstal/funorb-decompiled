@@ -10,17 +10,23 @@ final class fc {
     private static String field_z;
 
     public static void a(byte param0) {
-        field_d = null;
-        field_a = null;
-        field_b = null;
-        field_e = null;
+        if (param0 != -43) {
+          field_d = (String) null;
+          field_d = null;
+          field_a = null;
+          field_b = null;
+          field_e = null;
+          return;
+        } else {
+          field_d = null;
+          field_a = null;
+          field_b = null;
+          field_e = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "fc.A(";
         field_d = "Create your own free Jagex account";
         field_a = "Play rated game";

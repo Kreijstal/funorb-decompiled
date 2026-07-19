@@ -41,11 +41,11 @@ final class ju extends rqa {
               if (param1 < -119) {
                 break L1;
               } else {
-                field_o = null;
+                field_o = (String) null;
                 break L1;
               }
             }
-            stackOut_2_0 = new nc((Object) (Object) frb.a(187, 101));
+            stackOut_2_0 = new nc(frb.a(187, 101));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -53,23 +53,23 @@ final class ju extends rqa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("ju.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -77,21 +77,27 @@ final class ju extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
 
     final static int a(boolean param0, int param1, String param2, byte param3, boolean param4, String param5) {
         try {
+            int discarded$6 = 0;
+            int discarded$7 = 0;
+            int discarded$8 = 0;
+            Object discarded$9 = null;
+            Object discarded$10 = null;
+            int discarded$11 = 0;
             RuntimeException var6 = null;
             int var6_int = 0;
             int var7 = 0;
             Throwable var8_ref_Throwable = null;
             int var8 = 0;
             int var9 = 0;
-            Object var10 = null;
-            Object var11 = null;
+            String var10 = null;
+            String var11 = null;
             String var12 = null;
             CharSequence var13 = null;
             int stackIn_4_0 = 0;
@@ -119,6 +125,7 @@ final class ju extends rqa {
             RuntimeException stackIn_109_0 = null;
             StringBuilder stackIn_109_1 = null;
             String stackIn_109_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             int stackOut_3_0 = 0;
             int stackOut_27_0 = 0;
@@ -163,7 +170,8 @@ final class ju extends rqa {
                     } else {
                       stackOut_3_0 = -1;
                       stackIn_4_0 = stackOut_3_0;
-                      return stackIn_4_0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   }
                 }
@@ -176,7 +184,7 @@ final class ju extends rqa {
                         qva.field_j = fe.a(param2, param5, false, (byte) -70);
                         break L3;
                       } else {
-                        var11 = null;
+                        var11 = (String) null;
                         qva.field_j = sia.a(96, sta.field_p, (String) null, false, param5);
                         break L3;
                       }
@@ -238,18 +246,19 @@ final class ju extends rqa {
                         ow.field_a = var6_int;
                         qga.field_b.field_e = 0;
                         vda.field_o = null;
-                        if (var6_int == 0) {
+                        if (-1 == (var6_int ^ -1)) {
                           break L8;
                         } else {
                           if (var6_int == 1) {
                             break L8;
                           } else {
-                            if (var6_int == 8) {
+                            if ((var6_int ^ -1) == -9) {
                               ifb.l(-122);
                               hha.field_o = false;
                               stackOut_27_0 = var6_int;
                               stackIn_28_0 = stackOut_27_0;
-                              return stackIn_28_0;
+                              decompiledRegionSelector0 = 1;
+                              break L0;
                             } else {
                               vja.field_a = -1;
                               tc.field_c = kw.field_xb;
@@ -279,7 +288,7 @@ final class ju extends rqa {
                         hcb.field_o = qga.field_b.e(param3 + 1856);
                         var12 = qga.field_b.m(0);
                         var7 = qga.field_b.e((byte) -106);
-                        if ((var7 & 1) == -1) {
+                        if ((var7 & 1) == 0) {
                           break L10;
                         } else {
                           hq.d((byte) 111);
@@ -291,7 +300,7 @@ final class ju extends rqa {
                           break L11;
                         } else {
                           L12: {
-                            if (-1 == (8 & var7)) {
+                            if (-1 == (8 & var7 ^ -1)) {
                               stackOut_38_0 = 0;
                               stackIn_39_0 = stackOut_38_0;
                               break L12;
@@ -303,7 +312,7 @@ final class ju extends rqa {
                           }
                           L13: {
                             erb.field_p = stackIn_39_0 != 0;
-                            if ((var7 & 2) == 0) {
+                            if (-1 == (var7 & 2 ^ -1)) {
                               stackOut_41_0 = 0;
                               stackIn_42_0 = stackOut_41_0;
                               break L13;
@@ -350,9 +359,9 @@ final class ju extends rqa {
                         if (!js.field_q) {
                           break L16;
                         } else {
-                          int discarded$6 = qga.field_b.e((byte) -117);
-                          int discarded$7 = qga.field_b.e((byte) -91);
-                          int discarded$8 = qga.field_b.h(86);
+                          discarded$6 = qga.field_b.e((byte) -117);
+                          discarded$7 = qga.field_b.e((byte) -91);
+                          discarded$8 = qga.field_b.h(86);
                           om.field_e = qga.field_b.e(1869);
                           ap.field_o = new byte[om.field_e];
                           var8 = 0;
@@ -369,7 +378,7 @@ final class ju extends rqa {
                       }
                       L18: {
                         kca.field_a = qga.field_b.a(param3 ^ -14);
-                        var13 = (CharSequence) (Object) kca.field_a;
+                        var13 = (CharSequence) ((Object) kca.field_a);
                         ffb.field_e = jwa.a(false, var13);
                         jl.field_p = qga.field_b.e((byte) -94);
                         tc.field_c = sp.field_o;
@@ -396,7 +405,7 @@ final class ju extends rqa {
                       }
                       L20: {
                         L21: {
-                          if (hcb.field_o > 0) {
+                          if (-1 > (hcb.field_o ^ -1)) {
                             break L21;
                           } else {
                             if (era.field_r) {
@@ -404,7 +413,7 @@ final class ju extends rqa {
                             } else {
                               try {
                                 L22: {
-                                  Object discarded$9 = ia.a(vpa.b((byte) -87), "unzap", param3 ^ 12337);
+                                  discarded$9 = ia.a(vpa.b((byte) -87), "unzap", param3 ^ 12337);
                                   break L22;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -420,7 +429,7 @@ final class ju extends rqa {
                         }
                         try {
                           L24: {
-                            Object discarded$10 = ia.a(new Object[1], vpa.b((byte) -92), "zap", (byte) 108);
+                            discarded$10 = ia.a(new Object[]{vga.a(sta.field_p, -127)}, vpa.b((byte) -92), "zap", (byte) 108);
                             break L24;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -447,7 +456,8 @@ final class ju extends rqa {
                           qga.field_b.a(18794, nfa.field_e);
                           stackOut_76_0 = ow.field_a;
                           stackIn_77_0 = stackOut_76_0;
-                          return stackIn_77_0;
+                          decompiledRegionSelector0 = 2;
+                          break L0;
                         } else {
                           nfa.field_e[var8] = nfa.field_e[var8] + 50;
                           var8++;
@@ -466,14 +476,15 @@ final class ju extends rqa {
                     } else {
                       L29: {
                         ifb.l(-117);
-                        if (ow.field_a != 7) {
+                        if (-8 != (ow.field_a ^ -1)) {
                           break L29;
                         } else {
                           if (!hha.field_o) {
                             hha.field_o = true;
                             stackOut_88_0 = -1;
                             stackIn_89_0 = stackOut_88_0;
-                            return stackIn_89_0;
+                            decompiledRegionSelector0 = 4;
+                            break L0;
                           } else {
                             break L29;
                           }
@@ -491,7 +502,8 @@ final class ju extends rqa {
                       hha.field_o = false;
                       stackOut_86_0 = ow.field_a;
                       stackIn_87_0 = stackOut_86_0;
-                      return stackIn_87_0;
+                      decompiledRegionSelector0 = 3;
+                      break L0;
                     }
                   } else {
                     break L28;
@@ -501,8 +513,8 @@ final class ju extends rqa {
                   if (param3 == 13) {
                     break L31;
                   } else {
-                    var10 = null;
-                    int discarded$11 = ju.a(true, 44, (String) null, (byte) 29, true, (String) null);
+                    var10 = (String) null;
+                    discarded$11 = ju.a(true, 44, (String) null, (byte) 29, true, (String) null);
                     break L31;
                   }
                 }
@@ -521,7 +533,8 @@ final class ju extends rqa {
                       hha.field_o = false;
                       stackOut_99_0 = 3;
                       stackIn_100_0 = stackOut_99_0;
-                      return stackIn_100_0;
+                      decompiledRegionSelector0 = 5;
+                      break L0;
                     } else {
                       var6_int = pcb.field_p;
                       pcb.field_p = bia.field_d;
@@ -535,29 +548,30 @@ final class ju extends rqa {
                 }
                 stackOut_101_0 = -1;
                 stackIn_102_0 = stackOut_101_0;
+                decompiledRegionSelector0 = 6;
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               L34: {
                 var6 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_103_0 = (RuntimeException) var6;
+                stackOut_103_0 = (RuntimeException) (var6);
                 stackOut_103_1 = new StringBuilder().append("ju.C(").append(param0).append(',').append(param1).append(',');
                 stackIn_105_0 = stackOut_103_0;
                 stackIn_105_1 = stackOut_103_1;
                 stackIn_104_0 = stackOut_103_0;
                 stackIn_104_1 = stackOut_103_1;
                 if (param2 == null) {
-                  stackOut_105_0 = (RuntimeException) (Object) stackIn_105_0;
-                  stackOut_105_1 = (StringBuilder) (Object) stackIn_105_1;
+                  stackOut_105_0 = (RuntimeException) ((Object) stackIn_105_0);
+                  stackOut_105_1 = (StringBuilder) ((Object) stackIn_105_1);
                   stackOut_105_2 = "null";
                   stackIn_106_0 = stackOut_105_0;
                   stackIn_106_1 = stackOut_105_1;
                   stackIn_106_2 = stackOut_105_2;
                   break L34;
                 } else {
-                  stackOut_104_0 = (RuntimeException) (Object) stackIn_104_0;
-                  stackOut_104_1 = (StringBuilder) (Object) stackIn_104_1;
+                  stackOut_104_0 = (RuntimeException) ((Object) stackIn_104_0);
+                  stackOut_104_1 = (StringBuilder) ((Object) stackIn_104_1);
                   stackOut_104_2 = "{...}";
                   stackIn_106_0 = stackOut_104_0;
                   stackIn_106_1 = stackOut_104_1;
@@ -566,23 +580,23 @@ final class ju extends rqa {
                 }
               }
               L35: {
-                stackOut_106_0 = (RuntimeException) (Object) stackIn_106_0;
+                stackOut_106_0 = (RuntimeException) ((Object) stackIn_106_0);
                 stackOut_106_1 = ((StringBuilder) (Object) stackIn_106_1).append(stackIn_106_2).append(',').append(param3).append(',').append(param4).append(',');
                 stackIn_108_0 = stackOut_106_0;
                 stackIn_108_1 = stackOut_106_1;
                 stackIn_107_0 = stackOut_106_0;
                 stackIn_107_1 = stackOut_106_1;
                 if (param5 == null) {
-                  stackOut_108_0 = (RuntimeException) (Object) stackIn_108_0;
-                  stackOut_108_1 = (StringBuilder) (Object) stackIn_108_1;
+                  stackOut_108_0 = (RuntimeException) ((Object) stackIn_108_0);
+                  stackOut_108_1 = (StringBuilder) ((Object) stackIn_108_1);
                   stackOut_108_2 = "null";
                   stackIn_109_0 = stackOut_108_0;
                   stackIn_109_1 = stackOut_108_1;
                   stackIn_109_2 = stackOut_108_2;
                   break L35;
                 } else {
-                  stackOut_107_0 = (RuntimeException) (Object) stackIn_107_0;
-                  stackOut_107_1 = (StringBuilder) (Object) stackIn_107_1;
+                  stackOut_107_0 = (RuntimeException) ((Object) stackIn_107_0);
+                  stackOut_107_1 = (StringBuilder) ((Object) stackIn_107_1);
                   stackOut_107_2 = "{...}";
                   stackIn_109_0 = stackOut_107_0;
                   stackIn_109_1 = stackOut_107_1;
@@ -590,9 +604,33 @@ final class ju extends rqa {
                   break L35;
                 }
               }
-              throw rta.a((Throwable) (Object) stackIn_109_0, stackIn_109_2 + ')');
+              throw rta.a((Throwable) ((Object) stackIn_109_0), stackIn_109_2 + ')');
             }
-            return stackIn_102_0;
+            if (decompiledRegionSelector0 == 0) {
+              return stackIn_4_0;
+            } else {
+              if (decompiledRegionSelector0 == 1) {
+                return stackIn_28_0;
+              } else {
+                if (decompiledRegionSelector0 == 2) {
+                  return stackIn_77_0;
+                } else {
+                  if (decompiledRegionSelector0 == 3) {
+                    return stackIn_87_0;
+                  } else {
+                    if (decompiledRegionSelector0 == 4) {
+                      return stackIn_89_0;
+                    } else {
+                      if (decompiledRegionSelector0 == 5) {
+                        return stackIn_100_0;
+                      } else {
+                        return stackIn_102_0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -601,10 +639,6 @@ final class ju extends rqa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "Press CTRL-R to reconnect";
     }
 }

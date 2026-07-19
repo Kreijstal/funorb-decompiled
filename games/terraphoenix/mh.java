@@ -7,10 +7,14 @@ final class mh {
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 != 1) {
+            field_a = (o) null;
+        }
         field_b = null;
     }
 
     final static void a(fb param0, int param1, int param2) {
+        int discarded$1 = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -50,10 +54,10 @@ final class mh {
             var8.e(param0.field_j, 8959);
             var8.e(param0.field_o, 8959);
             var8.i(param0.field_r.length, -99);
-            var5 = 0;
+            var5 = param2;
             L1: while (true) {
               if (var5 >= param0.field_r.length) {
-                int discarded$1 = var8.d(var4, 8600);
+                discarded$1 = var8.d(var4, 8600);
                 var8.j(-var4 + var8.field_k, -119);
                 break L0;
               } else {
@@ -67,23 +71,23 @@ final class mh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_0 = (RuntimeException) (var3);
             stackOut_6_1 = new StringBuilder().append("mh.B(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -91,11 +95,12 @@ final class mh {
               break L2;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ',' + 0 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(byte param0, int param1, int param2) {
+        eg discarded$1 = null;
         if (param0 <= 111) {
             return;
         }
@@ -105,17 +110,20 @@ final class mh {
         }
         ef.field_i = ef.field_i | var3;
         kl.field_a = kl.field_a | var3;
-        ga.field_k.a((uf) (Object) new hd(param1), -16611);
+        ga.field_k.a(new hd(param1), -16611);
         if (!kg.field_q) {
             if (!bk.c(-25704)) {
-                eg discarded$1 = cl.a(4, -ge.field_e + oe.field_c, oh.field_e, param1, km.field_e, bh.field_a, param2, (byte) 43);
+                discarded$1 = cl.a(4, -ge.field_e + oe.field_c, oh.field_e, param1, km.field_e, bh.field_a, param2, (byte) 43);
             } else {
-                u.field_c.a((uf) (Object) new eg(param1, param2, -ge.field_e + oe.field_c, km.field_e, oh.field_e, bh.field_a), -16611);
+                u.field_c.a(new eg(param1, param2, -ge.field_e + oe.field_c, km.field_e, oh.field_e, bh.field_a), -16611);
             }
         }
     }
 
     final static void a(byte param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         RuntimeException var1 = null;
         int var2_int = 0;
         Object var2 = null;
@@ -125,6 +133,7 @@ final class mh {
         ci var6 = null;
         ci var7 = null;
         ci var8 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Terraphoenix.field_V;
         try {
@@ -134,13 +143,14 @@ final class mh {
             if (rk.field_f == null) {
               L1: {
                 if (null != ja.field_m) {
-                  int discarded$3 = ja.field_m.a(hh.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                  discarded$3 = ja.field_m.a(hh.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                   break L1;
                 } else {
                   break L1;
                 }
               }
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L2: {
                 var6 = rk.field_f[vi.field_q];
@@ -148,7 +158,7 @@ final class mh {
                   if (null == ja.field_m) {
                     break L2;
                   } else {
-                    int discarded$4 = ja.field_m.a(hh.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                    discarded$4 = ja.field_m.a(hh.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                     break L2;
                   }
                 } else {
@@ -188,39 +198,63 @@ final class mh {
                       if (var2 == null) {
                         break L4;
                       } else {
-                        int discarded$5 = ja.field_m.a("Screenshot(s) " + (String) var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        discarded$5 = ja.field_m.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L4;
                       }
                     } else {
-                      L6: {
-                        var8 = rk.field_f[var5];
-                        if (var8 == null) {
-                          break L6;
-                        } else {
-                          break L6;
+                      var8 = rk.field_f[var5];
+                      if (var8 != null) {
+                        L6: {
+                          L7: {
+                            if ((var8.field_q ^ -1) != -366) {
+                              break L7;
+                            } else {
+                              if (var8.field_u != 139) {
+                                break L7;
+                              } else {
+                                break L6;
+                              }
+                            }
+                          }
+                          if (var2 != null) {
+                            var2 = (String) (var2) + ", " + var5;
+                            break L6;
+                          } else {
+                            var2 = Integer.toString(var5);
+                            break L6;
+                          }
                         }
+                        var5++;
+                        continue L5;
+                      } else {
+                        var5++;
+                        continue L5;
                       }
-                      var5++;
-                      continue L5;
                     }
                   }
                 }
               }
-              L7: {
+              L8: {
                 if (param0 <= -52) {
-                  break L7;
+                  break L8;
                 } else {
                   mh.a((byte) -23);
-                  break L7;
+                  break L8;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var1, "mh.C(" + param0 + ')');
+          throw qk.a((Throwable) ((Object) var1), "mh.C(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 

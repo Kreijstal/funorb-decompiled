@@ -18,37 +18,40 @@ final class cp extends ev {
 
     cp(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         super(-1, param8, param9);
-        ((cp) this).field_k = param6;
-        ((cp) this).field_r = param1;
-        ((cp) this).field_i = param2;
-        ((cp) this).field_o = param7;
-        ((cp) this).field_h = param3;
-        ((cp) this).field_m = param5;
-        ((cp) this).field_p = param4;
-        ((cp) this).field_l = param0;
+        this.field_k = param6;
+        this.field_r = param1;
+        this.field_i = param2;
+        this.field_o = param7;
+        this.field_h = param3;
+        this.field_m = param5;
+        this.field_p = param4;
+        this.field_l = param0;
     }
 
     final void a(byte param0, int param1, int param2) {
-        int var4 = ((cp) this).field_l * param2 >> 12;
-        int var5 = param1 * ((cp) this).field_r >> 12;
-        int var6 = param2 * ((cp) this).field_i >> 12;
-        int var7 = param1 * ((cp) this).field_h >> 12;
-        int var8 = ((cp) this).field_p * param2 >> 12;
-        int var9 = param1 * ((cp) this).field_m >> 12;
+        int var4 = this.field_l * param2 >> -63330516;
+        int var5 = param1 * this.field_r >> -1346969460;
+        int var6 = param2 * this.field_i >> 1345789132;
+        int var7 = param1 * this.field_h >> 1384563692;
+        int var8 = this.field_p * param2 >> -1128074164;
+        int var9 = param1 * this.field_m >> 1291727468;
         int var12 = -88 / ((param0 - -48) / 40);
-        int var10 = param2 * ((cp) this).field_k >> 12;
-        int var11 = ((cp) this).field_o * param1 >> 12;
-        pqa.a(var9, var5, var4, ((cp) this).field_d, var6, var7, var8, 88, var11, var10);
+        int var10 = param2 * this.field_k >> -1817053140;
+        int var11 = this.field_o * param1 >> 945022412;
+        pqa.a(var9, var5, var4, this.field_d, var6, var7, var8, 88, var11, var10);
     }
 
     final void a(int param0, byte param1, int param2) {
         if (param1 != 110) {
-            ((cp) this).b((byte) 79, 23, -77);
+            this.b((byte) 79, 23, -77);
         }
     }
 
     public static void a(byte param0) {
         field_g = null;
+        if (param0 > -121) {
+            return;
+        }
         field_j = null;
         field_n = null;
         field_q = null;
@@ -56,15 +59,11 @@ final class cp extends ev {
 
     final void b(byte param0, int param1, int param2) {
         if (param0 != -112) {
-            ((cp) this).field_l = -85;
+            this.field_l = -85;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_q = new gl(6);
         field_g = "Please select an option in the '<%0>' row.";
         field_j = "<%0> would need a rating of <%1> to play with the current options.";

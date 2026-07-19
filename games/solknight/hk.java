@@ -45,10 +45,6 @@ final class hk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         int var0 = 0;
         field_c = new int[2048];
         field_d = new int[1024];

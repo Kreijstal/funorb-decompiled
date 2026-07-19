@@ -9,16 +9,19 @@ final class ik {
         pk var3 = fj.field_q;
         var3.a(param1, (byte) -77);
         var3.d((byte) 123, param0.field_k);
+        if (param2 < 80) {
+            return;
+        }
         try {
             var3.d((byte) -49, param0.field_g);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ik.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + 107 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "ik.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int var5_int = 0;
         RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -48,32 +51,45 @@ final class ik {
                 break L2;
               }
             }
-            var7 = var5_int;
-            L3: while (true) {
+            L3: {
+              var7 = var5_int;
+              if (param4 == -1540604944) {
+                break L3;
+              } else {
+                field_b = (String) null;
+                break L3;
+              }
+            }
+            L4: while (true) {
               if (var7 >= var6) {
                 break L0;
               } else {
                 var8 = 152 - -(48 * var7 / param1);
-                var9 = var8 << 8 | var8 << 16 | var8;
+                var9 = var8 << -1623895256 | var8 << -1540604944 | var8;
                 vb.field_c[param0 + vb.field_f * (var7 + param2)] = var9;
                 vb.field_c[param3 + (param2 + var7) * vb.field_f + param0] = var9;
                 var7++;
-                continue L3;
+                continue L4;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var5, "ik.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + -1540604944 + ')');
+          throw t.a((Throwable) ((Object) var5), "ik.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(int param0) {
+        if (param0 != 48) {
+            field_a = -51;
+        }
         field_b = null;
     }
 
     final static boolean a(ja param0, ja param1, boolean param2) {
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -103,6 +119,7 @@ final class ik {
         RuntimeException stackIn_84_0 = null;
         StringBuilder stackIn_84_1 = null;
         String stackIn_84_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_13_0 = 0;
         int stackOut_12_0 = 0;
@@ -134,15 +151,15 @@ final class ik {
           L0: {
             var3_int = 0;
             L1: while (true) {
-              if (~var3_int <= ~param1.field_L) {
+              if (var3_int >= param1.field_L) {
                 L2: {
                   L3: {
-                    var3_int = 0;
+                    var3_int = param2 ? 1 : 0;
                     var4 = 0;
-                    int fieldTemp$2 = param1.field_L;
+                    fieldTemp$2 = param1.field_L;
                     param1.field_L = param1.field_L + 1;
                     param1.field_n[fieldTemp$2] = param0;
-                    int fieldTemp$3 = param0.field_L;
+                    fieldTemp$3 = param0.field_L;
                     param0.field_L = param0.field_L + 1;
                     param0.field_n[fieldTemp$3] = param1;
                     if (param1.field_z != 0) {
@@ -158,7 +175,7 @@ final class ik {
                   L4: {
                     var5_int = 0;
                     var6_int = 0;
-                    if (param1.field_z != 1) {
+                    if (-2 != (param1.field_z ^ -1)) {
                       stackOut_13_0 = 0;
                       stackIn_14_0 = stackOut_13_0;
                       break L4;
@@ -172,7 +189,7 @@ final class ik {
                     stackOut_14_0 = stackIn_14_0;
                     stackIn_16_0 = stackOut_14_0;
                     stackIn_15_0 = stackOut_14_0;
-                    if (param0.field_z != 1) {
+                    if ((param0.field_z ^ -1) != -2) {
                       stackOut_16_0 = stackIn_16_0;
                       stackOut_16_1 = 0;
                       stackIn_17_0 = stackOut_16_0;
@@ -189,7 +206,7 @@ final class ik {
                   L6: {
                     if ((stackIn_17_0 ^ stackIn_17_1) != 0) {
                       L7: {
-                        if (param1.field_z != 1) {
+                        if (-2 != (param1.field_z ^ -1)) {
                           break L7;
                         } else {
                           if (param0.field_z == 0) {
@@ -216,7 +233,7 @@ final class ik {
                         if (param0.field_z != 2) {
                           break L9;
                         } else {
-                          if (param1.field_z != 1) {
+                          if (-2 != (param1.field_z ^ -1)) {
                             break L9;
                           } else {
                             var3_int = 1;
@@ -230,7 +247,7 @@ final class ik {
                       if (1 != param0.field_z) {
                         break L6;
                       } else {
-                        if (param1.field_z != 2) {
+                        if (-3 != (param1.field_z ^ -1)) {
                           break L6;
                         } else {
                           param1.a(320, param0.field_C, param1.field_M, 0);
@@ -244,7 +261,7 @@ final class ik {
                         if (2 == param1.field_z) {
                           break L10;
                         } else {
-                          if (param0.field_z == 2) {
+                          if ((param0.field_z ^ -1) == -3) {
                             break L10;
                           } else {
                             break L6;
@@ -252,7 +269,7 @@ final class ik {
                         }
                       }
                       L11: {
-                        if (param1.field_z != 2) {
+                        if ((param1.field_z ^ -1) != -3) {
                           break L11;
                         } else {
                           if (2 != param0.field_z) {
@@ -264,7 +281,7 @@ final class ik {
                           }
                         }
                       }
-                      if (param0.field_z != 2) {
+                      if (-3 != (param0.field_z ^ -1)) {
                         break L6;
                       } else {
                         if (2 != param1.field_z) {
@@ -295,7 +312,7 @@ final class ik {
                     break L12;
                   }
                   L14: {
-                    if (param1.field_z != 1) {
+                    if (-2 != (param1.field_z ^ -1)) {
                       break L14;
                     } else {
                       if (param0.field_z != 1) {
@@ -331,7 +348,7 @@ final class ik {
                   if (param1.field_z != 0) {
                     break L15;
                   } else {
-                    if (param0.field_z == 0) {
+                    if (-1 == (param0.field_z ^ -1)) {
                       L16: {
                         if (param1.field_C != param0.field_C) {
                           break L16;
@@ -380,7 +397,7 @@ final class ik {
                   if (var4 != 0) {
                     var5_int = 0;
                     L20: while (true) {
-                      if (~param0.field_L >= ~var5_int) {
+                      if (param0.field_L <= var5_int) {
                         var5 = param0;
                         param0.field_N = 0;
                         var6 = param0;
@@ -402,12 +419,14 @@ final class ik {
                 }
                 stackOut_76_0 = var3_int;
                 stackIn_77_0 = stackOut_76_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 if (param1.field_n[var3_int] == param0) {
                   stackOut_5_0 = 0;
                   stackIn_6_0 = stackOut_5_0;
-                  return stackIn_6_0 != 0;
+                  decompiledRegionSelector0 = 0;
+                  break L0;
                 } else {
                   var3_int++;
                   continue L1;
@@ -419,23 +438,23 @@ final class ik {
           decompiledCaughtException = decompiledCaughtParameter0;
           L21: {
             var3 = decompiledCaughtException;
-            stackOut_78_0 = (RuntimeException) var3;
+            stackOut_78_0 = (RuntimeException) (var3);
             stackOut_78_1 = new StringBuilder().append("ik.D(");
             stackIn_80_0 = stackOut_78_0;
             stackIn_80_1 = stackOut_78_1;
             stackIn_79_0 = stackOut_78_0;
             stackIn_79_1 = stackOut_78_1;
             if (param0 == null) {
-              stackOut_80_0 = (RuntimeException) (Object) stackIn_80_0;
-              stackOut_80_1 = (StringBuilder) (Object) stackIn_80_1;
+              stackOut_80_0 = (RuntimeException) ((Object) stackIn_80_0);
+              stackOut_80_1 = (StringBuilder) ((Object) stackIn_80_1);
               stackOut_80_2 = "null";
               stackIn_81_0 = stackOut_80_0;
               stackIn_81_1 = stackOut_80_1;
               stackIn_81_2 = stackOut_80_2;
               break L21;
             } else {
-              stackOut_79_0 = (RuntimeException) (Object) stackIn_79_0;
-              stackOut_79_1 = (StringBuilder) (Object) stackIn_79_1;
+              stackOut_79_0 = (RuntimeException) ((Object) stackIn_79_0);
+              stackOut_79_1 = (StringBuilder) ((Object) stackIn_79_1);
               stackOut_79_2 = "{...}";
               stackIn_81_0 = stackOut_79_0;
               stackIn_81_1 = stackOut_79_1;
@@ -444,23 +463,23 @@ final class ik {
             }
           }
           L22: {
-            stackOut_81_0 = (RuntimeException) (Object) stackIn_81_0;
+            stackOut_81_0 = (RuntimeException) ((Object) stackIn_81_0);
             stackOut_81_1 = ((StringBuilder) (Object) stackIn_81_1).append(stackIn_81_2).append(',');
             stackIn_83_0 = stackOut_81_0;
             stackIn_83_1 = stackOut_81_1;
             stackIn_82_0 = stackOut_81_0;
             stackIn_82_1 = stackOut_81_1;
             if (param1 == null) {
-              stackOut_83_0 = (RuntimeException) (Object) stackIn_83_0;
-              stackOut_83_1 = (StringBuilder) (Object) stackIn_83_1;
+              stackOut_83_0 = (RuntimeException) ((Object) stackIn_83_0);
+              stackOut_83_1 = (StringBuilder) ((Object) stackIn_83_1);
               stackOut_83_2 = "null";
               stackIn_84_0 = stackOut_83_0;
               stackIn_84_1 = stackOut_83_1;
               stackIn_84_2 = stackOut_83_2;
               break L22;
             } else {
-              stackOut_82_0 = (RuntimeException) (Object) stackIn_82_0;
-              stackOut_82_1 = (StringBuilder) (Object) stackIn_82_1;
+              stackOut_82_0 = (RuntimeException) ((Object) stackIn_82_0);
+              stackOut_82_1 = (StringBuilder) ((Object) stackIn_82_1);
               stackOut_82_2 = "{...}";
               stackIn_84_0 = stackOut_82_0;
               stackIn_84_1 = stackOut_82_1;
@@ -468,16 +487,16 @@ final class ik {
               break L22;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_84_0, stackIn_84_2 + ',' + false + ')');
+          throw t.a((Throwable) ((Object) stackIn_84_0), stackIn_84_2 + ',' + param2 + ')');
         }
-        return stackIn_77_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0 != 0;
+        } else {
+          return stackIn_77_0 != 0;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Waiting for fonts";
     }
 }

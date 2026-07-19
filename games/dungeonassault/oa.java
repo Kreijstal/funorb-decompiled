@@ -13,6 +13,7 @@ final class oa implements ca {
     static String[] field_c;
 
     public final void a(byte param0, lm param1, int param2, int param3, boolean param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -70,20 +71,20 @@ final class oa implements ca {
               }
             }
             L4: {
-              int discarded$1 = ((oa) this).field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_w + "</u>", param1.field_q + param2, param1.field_v + param3, param1.field_x, param1.field_s, var6_int, -1, ((oa) this).field_a, ((oa) this).field_f, ((oa) this).field_b.field_H + ((oa) this).field_b.field_E);
+              discarded$1 = this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_w + "</u>", param1.field_q + param2, param1.field_v + param3, param1.field_x, param1.field_s, var6_int, -1, this.field_a, this.field_f, this.field_b.field_H + this.field_b.field_E);
               if (!param1.a((byte) 20)) {
                 break L4;
               } else {
                 L5: {
-                  var7 = ((oa) this).field_b.b(param1.field_w);
-                  var8 = ((oa) this).field_b.field_E + ((oa) this).field_b.field_H;
+                  var7 = this.field_b.b(param1.field_w);
+                  var8 = this.field_b.field_E + this.field_b.field_H;
                   var9 = param2 - -param1.field_q;
                   var10 = param1.field_v + param3;
-                  if (((oa) this).field_a != 2) {
-                    if (1 != ((oa) this).field_a) {
+                  if ((this.field_a ^ -1) != -3) {
+                    if (1 != this.field_a) {
                       break L5;
                     } else {
-                      var9 = var9 + (param1.field_x - var7 >> 1);
+                      var9 = var9 + (param1.field_x - var7 >> 1422585281);
                       break L5;
                     }
                   } else {
@@ -92,11 +93,11 @@ final class oa implements ca {
                   }
                 }
                 L6: {
-                  if (2 != ((oa) this).field_f) {
-                    if (1 != ((oa) this).field_f) {
+                  if (2 != this.field_f) {
+                    if (1 != this.field_f) {
                       break L6;
                     } else {
-                      var10 = var10 + (-var8 + param1.field_s >> 1);
+                      var10 = var10 + (-var8 + param1.field_s >> 1077514401);
                       break L6;
                     }
                   } else {
@@ -114,23 +115,23 @@ final class oa implements ca {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var6 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var6;
+            stackOut_19_0 = (RuntimeException) (var6);
             stackOut_19_1 = new StringBuilder().append("oa.B(").append(param0).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -138,7 +139,7 @@ final class oa implements ca {
               break L7;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -153,26 +154,22 @@ final class oa implements ca {
     }
 
     public oa() {
-        ((oa) this).field_b = lp.field_C;
-        ((oa) this).field_a = 1;
-        ((oa) this).field_f = 1;
+        this.field_b = lp.field_C;
+        this.field_a = 1;
+        this.field_f = 1;
     }
 
     oa(se param0, int param1, int param2) {
         try {
-            ((oa) this).field_b = param0;
-            ((oa) this).field_f = param2;
-            ((oa) this).field_a = param1;
+            this.field_b = param0;
+            this.field_f = param2;
+            this.field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "oa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw vk.a((Throwable) ((Object) runtimeException), "oa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new String[]{"Gift of the Trees", "The <%0> channels the power of the great forests that were once her home to double the <%sneak> of a raider in the next room. (Single use)"};
         field_e = new int[]{5, 4};
         field_i = "Ranger of the North";

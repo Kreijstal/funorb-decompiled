@@ -15,14 +15,14 @@ final class mh {
         try {
             int var4 = -117 % ((-28 - param1) / 32);
             var3 = nj.field_p;
-            var3.d(3, -18392);
+            var3.d(param0, -18392);
             var3.c(5, (byte) -99);
             var3.c(0, (byte) -88);
             var3.c(param2.field_i, -17402);
             var3.c(param2.field_h, (byte) -127);
             var3.c(param2.field_m, (byte) -99);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "mh.A(" + 3 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ie.a((Throwable) ((Object) runtimeException), "mh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,14 +30,15 @@ final class mh {
         field_e = null;
         field_a = null;
         field_c = null;
+        if (param0 != -9) {
+            field_g = (he[]) null;
+            field_g = null;
+            return;
+        }
         field_g = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 0;
         field_e = "More suggestions";
     }

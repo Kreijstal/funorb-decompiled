@@ -13,19 +13,19 @@ final class ha {
         int var4 = 0;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!param0) {
-          if (null != ((ha) this).field_b) {
-            if (((ha) this).field_b.length != 0) {
+          if (null != this.field_b) {
+            if (this.field_b.length != 0) {
               var3 = 1;
               L0: while (true) {
-                if (((ha) this).field_b.length > var3) {
-                  if (param1 >= ((ha) this).field_b[var3] + ((ha) this).field_b[-1 + var3] >> 1) {
+                if (this.field_b.length > var3) {
+                  if (param1 >= this.field_b[var3] + this.field_b[-1 + var3] >> -838636703) {
                     var3++;
                     continue L0;
                   } else {
                     return var3 - 1;
                   }
                 } else {
-                  return ((ha) this).field_b.length + -1;
+                  return this.field_b.length + -1;
                 }
               }
             } else {
@@ -43,11 +43,11 @@ final class ha {
         int stackIn_5_0 = 0;
         int stackOut_3_0 = 0;
         if (param0 >= 20) {
-          if (null != ((ha) this).field_b) {
-            if (((ha) this).field_b.length == 0) {
+          if (null != this.field_b) {
+            if (this.field_b.length == 0) {
               return 0;
             } else {
-              return ((ha) this).field_b[-1 + ((ha) this).field_b.length];
+              return this.field_b[-1 + this.field_b.length];
             }
           } else {
             stackOut_3_0 = 0;
@@ -71,6 +71,7 @@ final class ha {
     }
 
     final static boolean a(byte param0) {
+        boolean discarded$5 = false;
         if (!sr.field_h) {
           return false;
         } else {
@@ -81,7 +82,7 @@ final class ha {
               return true;
             }
           } else {
-            boolean discarded$5 = ha.a((byte) 11);
+            discarded$5 = ha.a((byte) 11);
             if (em.field_h != 0) {
               return false;
             } else {
@@ -92,16 +93,12 @@ final class ha {
     }
 
     ha(int param0, int param1, int param2) {
-        ((ha) this).field_e = param0;
-        ((ha) this).field_c = param1;
-        ((ha) this).field_b = new int[1 + param2];
+        this.field_e = param0;
+        this.field_c = param1;
+        this.field_b = new int[1 + param2];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "Pause Menu";
     }
 }

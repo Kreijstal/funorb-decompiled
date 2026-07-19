@@ -7,17 +7,13 @@ final class ncb {
     private static String field_z;
 
     public static void a(int param0) {
-        field_a = null;
+        field_a = (int[][]) null;
         if (param0 != 500) {
             ncb.a(-91);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ncb.A(";
         field_b = 500;
     }

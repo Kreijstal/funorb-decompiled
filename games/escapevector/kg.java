@@ -19,28 +19,28 @@ final class kg {
           if (param0 == -9949) {
             break L0;
           } else {
-            ((kg) this).field_c = null;
+            this.field_c = (vd) null;
             break L0;
           }
         }
-        if (((kg) this).a(-19836)) {
+        if (this.a(-19836)) {
           return true;
         } else {
-          ((kg) this).field_c.b(104);
-          var6 = ((kg) this).field_d;
+          this.field_c.b(104);
+          var6 = this.field_d;
           var2 = var6;
           var3 = 0;
           L1: while (true) {
             if (var3 >= var6.length) {
               L2: {
-                if (((kg) this).field_e == null) {
+                if (this.field_e == null) {
                   break L2;
                 } else {
-                  ((kg) this).field_e.c(5);
+                  this.field_e.c(5);
                   break L2;
                 }
               }
-              return ((kg) this).a(param0 + -9887);
+              return this.a(param0 + -9887);
             } else {
               var4 = var6[var3];
               if (var4 != null) {
@@ -58,7 +58,7 @@ final class kg {
 
     public static void f(int param0) {
         field_a = null;
-        int var1 = 1;
+        int var1 = 91 % ((param0 - -58) / 38);
         field_b = null;
     }
 
@@ -69,8 +69,8 @@ final class kg {
         int var7 = 0;
         gn[] var8 = null;
         var7 = EscapeVector.field_A;
-        if (null != ((kg) this).field_d) {
-          var8 = ((kg) this).field_d;
+        if (null != this.field_d) {
+          var8 = this.field_d;
           var4 = var8;
           if (param0) {
             var5 = 0;
@@ -104,19 +104,19 @@ final class kg {
         int var4 = 0;
         int var5 = 0;
         int var7 = EscapeVector.field_A;
-        if (!(null != ((kg) this).field_e)) {
+        if (!(null != this.field_e)) {
             return false;
         }
         if (param0 < 110) {
             return false;
         }
-        int var2 = ((kg) this).field_e.field_j;
+        int var2 = this.field_e.field_j;
         int var3 = je.a(false, var2);
-        if (var3 <= 0) {
+        if ((var3 ^ -1) >= -1) {
             return false;
         }
         for (var4 = 0; var3 > var4; var4++) {
-            var5 = ((kg) this).field_e.b(var4, 74);
+            var5 = this.field_e.b(var4, 74);
             if (!(nl.a((byte) 111, var5))) {
                 return false;
             }
@@ -125,10 +125,11 @@ final class kg {
     }
 
     final void a(int param0, int param1, int param2) {
+        int discarded$0 = 0;
         if (param2 != -22357) {
-            int discarded$0 = ((kg) this).a(-119, 57);
+            discarded$0 = this.a(-119, 57);
         }
-        ((kg) this).field_c.a(param0, param1, true);
+        this.field_c.a(param0, param1, true);
     }
 
     final boolean a(int param0, boolean param1) {
@@ -140,7 +141,7 @@ final class kg {
             return false;
         }
         for (var4 = 0; var4 < var3; var4++) {
-            var5 = ((kg) this).a(true, param0, var4);
+            var5 = this.a(true, param0, var4);
             if (!nl.a((byte) 98, var5)) {
                 return false;
             }
@@ -149,10 +150,11 @@ final class kg {
     }
 
     final boolean e(int param0) {
+        boolean discarded$0 = false;
         if (param0 != 0) {
-            boolean discarded$0 = ((kg) this).e(45);
+            discarded$0 = this.e(45);
         }
-        return ((kg) this).field_c.d((byte) -83);
+        return this.field_c.d((byte) -83);
     }
 
     final int b(int param0, int param1) {
@@ -161,8 +163,8 @@ final class kg {
         gn var5 = null;
         int var6 = 0;
         var6 = EscapeVector.field_A;
-        if (null != ((kg) this).field_d) {
-          var3 = ((kg) this).field_d;
+        if (null != this.field_d) {
+          var3 = this.field_d;
           var4 = param1;
           L0: while (true) {
             if (var4 >= var3.length) {
@@ -194,18 +196,18 @@ final class kg {
         int var7 = 0;
         gn[] var8 = null;
         var7 = EscapeVector.field_A;
-        if (((kg) this).field_d == null) {
+        if (this.field_d == null) {
           return 0;
         } else {
           L0: {
             if (param0 == 29386) {
               break L0;
             } else {
-              ((kg) this).field_e = null;
+              this.field_e = (gn) null;
               break L0;
             }
           }
-          var8 = ((kg) this).field_d;
+          var8 = this.field_d;
           var4 = 0;
           L1: while (true) {
             if (var8.length <= var4) {
@@ -215,7 +217,7 @@ final class kg {
               if (var5 != null) {
                 if (param1 == var5.field_j) {
                   if (0 != var5.field_d) {
-                    if (var5.field_d == 1) {
+                    if (-2 == (var5.field_d ^ -1)) {
                       var6 = je.a(false, param1);
                       if (0 >= var6) {
                         return 0;
@@ -286,6 +288,7 @@ final class kg {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
@@ -301,53 +304,57 @@ final class kg {
               if (param2 == null) {
                 break L1;
               } else {
-                if (param2.length != 4) {
+                if ((param2.length ^ -1) != -5) {
                   break L1;
                 } else {
-                  if (null == ((kg) this).field_e) {
-                    return;
+                  if (null == this.field_e) {
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   } else {
-                    if (((kg) this).field_e.field_j == param1) {
+                    if (this.field_e.field_j == param1) {
                       L2: {
-                        ((kg) this).field_e.a((byte) -15, param3, param2);
+                        this.field_e.a((byte) -15, param3, param2);
                         if (param0 == -64) {
                           break L2;
                         } else {
-                          ((kg) this).field_d = null;
+                          this.field_d = (gn[]) null;
                           break L2;
                         }
                       }
+                      decompiledRegionSelector0 = 3;
                       break L0;
                     } else {
-                      return;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     }
                   }
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             runtimeException = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) runtimeException;
+            stackOut_12_0 = (RuntimeException) (runtimeException);
             stackOut_12_1 = new StringBuilder().append("kg.K(").append(param0).append(',').append(param1).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -355,7 +362,20 @@ final class kg {
               break L3;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -372,6 +392,7 @@ final class kg {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
@@ -389,12 +410,13 @@ final class kg {
                 break L1;
               } else {
                 if (param3.length == 4) {
-                  if (((kg) this).field_d != null) {
+                  if (this.field_d != null) {
                     if (param0 == -15748) {
-                      var5 = ((kg) this).field_d;
+                      var5 = this.field_d;
                       var6 = 0;
                       L2: while (true) {
                         if (var5.length <= var6) {
+                          decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
                           L3: {
@@ -415,39 +437,42 @@ final class kg {
                         }
                       }
                     } else {
-                      return;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     }
                   } else {
-                    return;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
                   }
                 } else {
                   break L1;
                 }
               }
             }
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5_ref = decompiledCaughtException;
-            stackOut_17_0 = (RuntimeException) var5_ref;
+            stackOut_17_0 = (RuntimeException) (var5_ref);
             stackOut_17_1 = new StringBuilder().append("kg.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
             if (param3 == null) {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "null";
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
               break L4;
             } else {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "{...}";
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
@@ -455,7 +480,20 @@ final class kg {
               break L4;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -466,17 +504,17 @@ final class kg {
         gn var5 = null;
         int var6 = 0;
         var6 = EscapeVector.field_A;
-        if (((kg) this).field_d == null) {
+        if (this.field_d == null) {
           return;
         } else {
           var2 = 127 % ((67 - param0) / 42);
-          var3 = ((kg) this).field_d;
+          var3 = this.field_d;
           var4 = 0;
           L0: while (true) {
             if (var3.length <= var4) {
               L1: {
-                if (null != ((kg) this).field_e) {
-                  ((kg) this).field_e.b(7108);
+                if (null != this.field_e) {
+                  this.field_e.b(7108);
                   break L1;
                 } else {
                   break L1;
@@ -505,10 +543,10 @@ final class kg {
         int var5 = 0;
         gn[] var6 = null;
         var5 = EscapeVector.field_A;
-        if (null == ((kg) this).field_d) {
+        if (null == this.field_d) {
           return false;
         } else {
-          var6 = ((kg) this).field_d;
+          var6 = this.field_d;
           var2 = var6;
           var3 = 0;
           L0: while (true) {
@@ -516,7 +554,7 @@ final class kg {
               if (param0 == 17523) {
                 return false;
               } else {
-                ((kg) this).field_d = null;
+                this.field_d = (gn[]) null;
                 return false;
               }
             } else {
@@ -543,25 +581,25 @@ final class kg {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        ((kg) this).field_c = new vd();
+        this.field_c = new vd();
         int var1 = 4;
-        ((kg) this).field_d = new gn[var1];
+        this.field_d = new gn[var1];
         for (var2 = 0; var1 > var2; var2++) {
             var3 = pc.field_f[var2];
             var4 = -1;
-            if (var3 == 1) {
+            if ((var3 ^ -1) == -2) {
                 var4 = 1;
             }
             var5 = fl.field_m[var2];
-            var6 = nk.a(1, var2) == 2 ? 1 : 0;
-            ((kg) this).field_d[var2] = new gn(var2, var3, var4, var5, var6 != 0, (kg) this);
+            var6 = (nk.a(1, var2) ^ -1) == -3 ? 1 : 0;
+            this.field_d[var2] = new gn(var2, var3, var4, var5, var6 != 0, (kg) (this));
         }
         var2 = 2;
         var3 = 1;
         var4 = 0;
         var5 = 1;
         var6 = 1;
-        ((kg) this).field_e = new gn(var2, var3, var4, var5, var6 != 0, (kg) this);
+        this.field_e = new gn(var2, var3, var4, var5, var6 != 0, (kg) (this));
     }
 
     final boolean a(int param0, boolean param1, int param2) {
@@ -572,25 +610,26 @@ final class kg {
             return false;
         }
         if (!(0 != param2)) {
-            return ((kg) this).field_c.a(1, param0);
+            return this.field_c.a(1, param0);
         }
         if (1 != param2) {
             return false;
         }
-        return ((kg) this).field_c.a(param0, (byte) -113);
+        return this.field_c.a(param0, (byte) -113);
     }
 
     final boolean a(int param0) {
+        boolean discarded$1 = false;
         gn[] var2 = null;
         int var3 = 0;
         gn var4 = null;
         int var5 = 0;
         gn[] var6 = null;
         var5 = EscapeVector.field_A;
-        if (!((kg) this).field_c.d((byte) -83)) {
+        if (!this.field_c.d((byte) -83)) {
           return false;
         } else {
-          var6 = ((kg) this).field_d;
+          var6 = this.field_d;
           var2 = var6;
           var3 = 0;
           L0: while (true) {
@@ -598,12 +637,12 @@ final class kg {
               if (param0 == -19836) {
                 return true;
               } else {
-                boolean discarded$1 = ((kg) this).g(80);
+                discarded$1 = this.g(80);
                 return true;
               }
             } else {
               var4 = var6[var3];
-              if (var4.field_d != 1) {
+              if ((var4.field_d ^ -1) != -2) {
                 if (!var4.field_i) {
                   return false;
                 } else {
@@ -625,14 +664,14 @@ final class kg {
         gn var6 = null;
         int var7 = 0;
         var7 = EscapeVector.field_A;
-        if (((kg) this).field_d != null) {
+        if (this.field_d != null) {
           L0: {
-            var4 = ((kg) this).field_d;
+            var4 = this.field_d;
             var5 = 0;
             if (param0 == 15954) {
               break L0;
             } else {
-              ((kg) this).field_e = null;
+              this.field_e = (gn) null;
               break L0;
             }
           }
@@ -660,10 +699,6 @@ final class kg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Orb points: ";
         field_b = "Email: ";
     }

@@ -13,9 +13,12 @@ final class de extends hg {
                 be.field_b.o(-18861);
             }
             dd.field_d = new h(param0, param1, false, true, true);
-            rd.field_c.a((hm) (Object) dd.field_d, 30);
+            if (param2 != 63) {
+                field_h = (String[]) null;
+            }
+            rd.field_c.a(dd.field_d, 30);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "de.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + 63 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "de.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -34,6 +37,7 @@ final class de extends hg {
             RuntimeException stackIn_12_0 = null;
             StringBuilder stackIn_12_1 = null;
             String stackIn_12_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_9_0 = null;
             StringBuilder stackOut_9_1 = null;
@@ -44,56 +48,71 @@ final class de extends hg {
             StringBuilder stackOut_10_1 = null;
             String stackOut_10_2 = null;
             try {
-              try {
-                var2 = param1.getDocumentBase().getFile();
-                L0: {
-                  var3 = var2.indexOf('?');
-                  var4 = "reload.ws";
-                  if (var3 >= 0) {
-                    var4 = var4 + var2.substring(var3);
-                    break L0;
-                  } else {
-                    break L0;
+              L0: {
+                try {
+                  L1: {
+                    var2 = param1.getDocumentBase().getFile();
+                    if (!param0) {
+                      L2: {
+                        var3 = var2.indexOf('?');
+                        var4 = "reload.ws";
+                        if ((var3 ^ -1) <= -1) {
+                          var4 = var4 + var2.substring(var3);
+                          break L2;
+                        } else {
+                          break L2;
+                        }
+                      }
+                      var5 = new java.net.URL(param1.getCodeBase(), var4);
+                      param1.getAppletContext().showDocument(sh.a((byte) 12, param1, var5), "_self");
+                      decompiledRegionSelector0 = 1;
+                      break L1;
+                    } else {
+                      decompiledRegionSelector0 = 0;
+                      break L1;
+                    }
                   }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2_ref = (Exception) (Object) decompiledCaughtException;
+                  var2_ref.printStackTrace();
+                  return;
                 }
-                var5 = new java.net.URL(param1.getCodeBase(), var4);
-                param1.getAppletContext().showDocument(sh.a((byte) 12, param1, var5), "_self");
-                return;
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = (Exception) (Object) decompiledCaughtException;
-                var2_ref.printStackTrace();
-                return;
+                if (decompiledRegionSelector0 == 0) {
+                  break L0;
+                } else {
+                  return;
+                }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L1: {
+              L3: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_9_0 = (RuntimeException) var2_ref2;
-                stackOut_9_1 = new StringBuilder().append("de.C(").append(false).append(',');
+                stackOut_9_0 = (RuntimeException) (var2_ref2);
+                stackOut_9_1 = new StringBuilder().append("de.C(").append(param0).append(',');
                 stackIn_11_0 = stackOut_9_0;
                 stackIn_11_1 = stackOut_9_1;
                 stackIn_10_0 = stackOut_9_0;
                 stackIn_10_1 = stackOut_9_1;
                 if (param1 == null) {
-                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+                  stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
                   stackOut_11_2 = "null";
                   stackIn_12_0 = stackOut_11_0;
                   stackIn_12_1 = stackOut_11_1;
                   stackIn_12_2 = stackOut_11_2;
-                  break L1;
+                  break L3;
                 } else {
-                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
                   stackOut_10_2 = "{...}";
                   stackIn_12_0 = stackOut_10_0;
                   stackIn_12_1 = stackOut_10_1;
                   stackIn_12_2 = stackOut_10_2;
-                  break L1;
+                  break L3;
                 }
               }
-              throw t.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ')');
+              throw t.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -104,11 +123,14 @@ final class de extends hg {
 
     public static void a(boolean param0) {
         field_h = null;
+        if (!param0) {
+            return;
+        }
         field_i = null;
     }
 
     de(int param0) {
-        ((de) this).field_g = param0;
+        this.field_g = param0;
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -120,7 +142,7 @@ final class de extends hg {
         ma.field_a = new oe(ld.field_h[param0], var3, param0, param1);
         ma.field_a.y((byte) -40);
         if (param2 < 77) {
-          field_h = null;
+          field_h = (String[]) null;
           return;
         } else {
           return;
@@ -128,10 +150,6 @@ final class de extends hg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = new String[]{"Congratulations, commander. Your mission has been an overwhelming success.", "You have exceeded all expectations and single-handedly brought about the destruction of the alien war machine.", "Their military infrastructure lies in ruins ... ", " ... in the wake of your successful undercover strikes", "Earth is safe once again, thanks to you."};
     }
 }

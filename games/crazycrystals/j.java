@@ -20,6 +20,7 @@ final class j implements Runnable {
     static int[] field_i;
 
     final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+        boolean discarded$1 = false;
         RuntimeException var5 = null;
         Object var5_ref = null;
         int var6 = 0;
@@ -43,120 +44,125 @@ final class j implements Runnable {
         String stackOut_25_2 = null;
         var8 = CrazyCrystals.field_B;
         try {
-          if (!((j) this).field_k) {
-            if (!((j) this).field_m) {
-              L0: {
-                if (((j) this).field_a == null) {
-                  ((j) this).field_a = new byte[((j) this).field_d];
-                  break L0;
-                } else {
-                  break L0;
+          L0: {
+            if (!this.field_k) {
+              if (!this.field_m) {
+                L1: {
+                  if (this.field_a == null) {
+                    this.field_a = new byte[this.field_d];
+                    break L1;
+                  } else {
+                    break L1;
+                  }
                 }
-              }
-              L1: {
-                if (param1 >= 85) {
-                  break L1;
-                } else {
-                  boolean discarded$1 = j.c((byte) -1);
-                  break L1;
-                }
-              }
-              var5_ref = this;
-              synchronized (var5_ref) {
                 L2: {
-                  var6 = 0;
-                  L3: while (true) {
-                    if (param3 <= var6) {
-                      L4: {
-                        if (null != ((j) this).field_l) {
-                          break L4;
-                        } else {
-                          ((j) this).field_l = ((j) this).field_b.a((Runnable) this, 2, 3);
-                          break L4;
+                  if (param1 >= 85) {
+                    break L2;
+                  } else {
+                    discarded$1 = j.c((byte) -1);
+                    break L2;
+                  }
+                }
+                var5_ref = this;
+                synchronized (var5_ref) {
+                  L3: {
+                    var6 = 0;
+                    L4: while (true) {
+                      if (param3 <= var6) {
+                        L5: {
+                          if (null != this.field_l) {
+                            break L5;
+                          } else {
+                            this.field_l = this.field_b.a((Runnable) (this), 2, 3);
+                            break L5;
+                          }
                         }
-                      }
-                      this.notifyAll();
-                      break L2;
-                    } else {
-                      ((j) this).field_a[((j) this).field_g] = param2[var6 + param0];
-                      ((j) this).field_g = (((j) this).field_g + 1) % ((j) this).field_d;
-                      if ((-100 + (((j) this).field_d + ((j) this).field_f)) % ((j) this).field_d == ((j) this).field_g) {
-                        throw new IOException();
+                        this.notifyAll();
+                        break L3;
                       } else {
-                        var6++;
-                        continue L3;
+                        this.field_a[this.field_g] = param2[var6 + param0];
+                        this.field_g = (this.field_g + 1) % this.field_d;
+                        if ((-100 + (this.field_d + this.field_f)) % this.field_d == this.field_g) {
+                          throw new IOException();
+                        } else {
+                          var6++;
+                          continue L4;
+                        }
                       }
                     }
                   }
                 }
+                return;
+              } else {
+                this.field_m = false;
+                throw new IOException();
               }
-              return;
             } else {
-              ((j) this).field_m = false;
-              throw new IOException();
+              break L0;
             }
-          } else {
-            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L6: {
             var5 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var5;
+            stackOut_24_0 = (RuntimeException) (var5);
             stackOut_24_1 = new StringBuilder().append("j.E(").append(param0).append(',').append(param1).append(',');
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
             stackIn_25_1 = stackOut_24_1;
             if (param2 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "null";
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
-              break L5;
+              break L6;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "{...}";
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
               stackIn_27_2 = stackOut_25_2;
-              break L5;
+              break L6;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param3 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param3 + ')');
         }
     }
 
     final static void a(ak param0, int param1, boolean param2) {
         md var3 = tp.field_f;
+        if (param2) {
+            return;
+        }
         try {
-            var3.d(8, 3);
+            var3.d(8, param1);
             var3.a(true, 5);
-            var3.a(true, 0);
+            var3.a(!param2 ? true : false, 0);
             var3.c(-161478600, param0.field_g);
             var3.a(true, param0.field_h);
-            var3.a(true, param0.field_j);
+            var3.a(!param2 ? true : false, param0.field_j);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "j.I(" + (param0 != null ? "{...}" : "null") + ',' + 3 + ',' + false + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "j.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final int b(int param0) throws IOException {
         if (param0 == 5) {
-          if (((j) this).field_k) {
+          if (this.field_k) {
             return 0;
           } else {
-            return ((j) this).field_n.read();
+            return this.field_n.read();
           }
         } else {
-          ((j) this).field_m = true;
-          if (((j) this).field_k) {
+          this.field_m = true;
+          if (this.field_k) {
             return 0;
           } else {
-            return ((j) this).field_n.read();
+            return this.field_n.read();
           }
         }
     }
@@ -168,9 +174,9 @@ final class j implements Runnable {
     final void a(int param0) throws IOException {
         int var2 = 0;
         var2 = 0 % ((param0 - -23) / 37);
-        if (!((j) this).field_k) {
-          if (((j) this).field_m) {
-            ((j) this).field_m = false;
+        if (!this.field_k) {
+          if (this.field_m) {
+            this.field_m = false;
             throw new IOException();
           } else {
             return;
@@ -181,61 +187,67 @@ final class j implements Runnable {
     }
 
     final void b(byte param0) {
-        Object var2 = null;
-        InterruptedException var2_ref = null;
-        Throwable var3 = null;
-        int var4 = 0;
-        Throwable decompiledCaughtException = null;
-        var4 = CrazyCrystals.field_B;
-        if (((j) this).field_k) {
-          return;
-        } else {
-          var2 = this;
-          synchronized (var2) {
-            L0: {
-              L1: {
-                ((j) this).field_k = true;
-                this.notifyAll();
-                if (param0 == -118) {
-                  break L1;
-                } else {
-                  ((j) this).field_g = -44;
-                  break L1;
+        try {
+            InterruptedException var2 = null;
+            Object var2_ref = null;
+            Throwable var3 = null;
+            int var4 = 0;
+            Throwable decompiledCaughtException = null;
+            var4 = CrazyCrystals.field_B;
+            if (this.field_k) {
+              return;
+            } else {
+              var2_ref = this;
+              synchronized (var2_ref) {
+                L0: {
+                  L1: {
+                    this.field_k = true;
+                    this.notifyAll();
+                    if (param0 == -118) {
+                      break L1;
+                    } else {
+                      this.field_g = -44;
+                      break L1;
+                    }
+                  }
+                  break L0;
                 }
               }
-              break L0;
-            }
-          }
-          if (null != ((j) this).field_l) {
-            L2: while (true) {
-              if (((j) this).field_l.field_a != 0) {
-                if (((j) this).field_l.field_a == 1) {
-                  try {
-                    L3: {
-                      ((Thread) ((j) this).field_l.field_b).join();
-                      break L3;
+              if (null != this.field_l) {
+                L2: while (true) {
+                  if (this.field_l.field_a != 0) {
+                    if (this.field_l.field_a == 1) {
+                      try {
+                        L3: {
+                          ((Thread) (this.field_l.field_b)).join();
+                          break L3;
+                        }
+                      } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        var2 = (InterruptedException) (Object) decompiledCaughtException;
+                        this.field_l = null;
+                        return;
+                      }
+                      this.field_l = null;
+                      return;
+                    } else {
+                      this.field_l = null;
+                      return;
                     }
-                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    var2_ref = (InterruptedException) (Object) decompiledCaughtException;
-                    ((j) this).field_l = null;
-                    return;
+                  } else {
+                    fh.a(true, 1L);
+                    continue L2;
                   }
-                  ((j) this).field_l = null;
-                  return;
-                } else {
-                  ((j) this).field_l = null;
-                  return;
                 }
               } else {
-                fh.a(true, 1L);
-                continue L2;
+                this.field_l = null;
+                return;
               }
             }
-          } else {
-            ((j) this).field_l = null;
-            return;
-          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -250,7 +262,7 @@ final class j implements Runnable {
             InterruptedException var4 = null;
             Throwable var5 = null;
             int var6 = 0;
-            Object var7 = null;
+            String var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var6 = CrazyCrystals.field_B;
@@ -261,15 +273,21 @@ final class j implements Runnable {
                   synchronized (var3_ref) {
                     L2: {
                       L3: {
-                        if (((j) this).field_g == ((j) this).field_f) {
-                          if (((j) this).field_k) {
+                        if (this.field_g == this.field_f) {
+                          if (this.field_k) {
                             decompiledRegionSelector0 = 0;
                             break L2;
                           } else {
-                            {
+                            try {
                               L4: {
                                 this.wait();
                                 break L4;
+                              }
+                            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                              decompiledCaughtException = decompiledCaughtParameter0;
+                              L5: {
+                                var4 = (InterruptedException) (Object) decompiledCaughtException;
+                                break L5;
                               }
                             }
                             break L3;
@@ -279,15 +297,15 @@ final class j implements Runnable {
                         }
                       }
                       L6: {
-                        if (((j) this).field_f <= ((j) this).field_g) {
-                          var1_int = ((j) this).field_g + -((j) this).field_f;
+                        if (this.field_f <= this.field_g) {
+                          var1_int = this.field_g + -this.field_f;
                           break L6;
                         } else {
-                          var1_int = -((j) this).field_f + ((j) this).field_d;
+                          var1_int = -this.field_f + this.field_d;
                           break L6;
                         }
                       }
-                      var2 = ((j) this).field_f;
+                      var2 = this.field_f;
                       decompiledRegionSelector0 = 1;
                       break L2;
                     }
@@ -296,24 +314,24 @@ final class j implements Runnable {
                     try {
                       L7: {
                         L8: {
-                          if (((j) this).field_n == null) {
+                          if (this.field_n == null) {
                             break L8;
                           } else {
-                            ((j) this).field_n.close();
+                            this.field_n.close();
                             break L8;
                           }
                         }
                         L9: {
-                          if (null == ((j) this).field_e) {
+                          if (null == this.field_e) {
                             break L9;
                           } else {
-                            ((j) this).field_e.close();
+                            this.field_e.close();
                             break L9;
                           }
                         }
                         L10: {
-                          if (null != ((j) this).field_c) {
-                            ((j) this).field_c.close();
+                          if (null != this.field_c) {
+                            this.field_c.close();
                             break L10;
                           } else {
                             break L10;
@@ -328,7 +346,7 @@ final class j implements Runnable {
                         break L11;
                       }
                     }
-                    ((j) this).field_a = null;
+                    this.field_a = null;
                     break L0;
                   } else {
                     if (var1_int <= 0) {
@@ -336,35 +354,35 @@ final class j implements Runnable {
                     } else {
                       try {
                         L12: {
-                          ((j) this).field_e.write(((j) this).field_a, var2, var1_int);
+                          this.field_e.write(this.field_a, var2, var1_int);
                           break L12;
                         }
-                      } catch (java.lang.Exception decompiledCaughtParameter2) {
+                      } catch (java.io.IOException decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
                         L13: {
                           var3 = (IOException) (Object) decompiledCaughtException;
-                          ((j) this).field_m = true;
+                          this.field_m = true;
                           break L13;
                         }
                       }
-                      ((j) this).field_f = (((j) this).field_f - -var1_int) % ((j) this).field_d;
+                      this.field_f = (this.field_f - -var1_int) % this.field_d;
                       try {
                         L14: {
                           L15: {
-                            if (((j) this).field_f != ((j) this).field_g) {
+                            if (this.field_f != this.field_g) {
                               break L15;
                             } else {
-                              ((j) this).field_e.flush();
+                              this.field_e.flush();
                               break L15;
                             }
                           }
                           break L14;
                         }
-                      } catch (java.lang.Exception decompiledCaughtParameter3) {
+                      } catch (java.io.IOException decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         L16: {
                           var3 = (IOException) (Object) decompiledCaughtException;
-                          ((j) this).field_m = true;
+                          this.field_m = true;
                           break L16;
                         }
                       }
@@ -377,8 +395,8 @@ final class j implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter4;
               L17: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
-                var7 = null;
-                wp.a((Throwable) (Object) var1_ref, (String) null, 21862);
+                var7 = (String) null;
+                wp.a((Throwable) ((Object) var1_ref), (String) null, 21862);
                 break L17;
               }
             }
@@ -390,7 +408,7 @@ final class j implements Runnable {
     }
 
     protected final void finalize() {
-        ((j) this).b((byte) -118);
+        this.b((byte) -118);
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
@@ -404,6 +422,7 @@ final class j implements Runnable {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
@@ -416,19 +435,21 @@ final class j implements Runnable {
         var6 = CrazyCrystals.field_B;
         try {
           L0: {
-            if (((j) this).field_k) {
-              return;
+            if (this.field_k) {
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: while (true) {
                 if (param1 <= 0) {
                   if (param2 == 2034) {
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
-                    ((j) this).field_f = -31;
+                    this.field_f = -31;
                     return;
                   }
                 } else {
-                  var5_int = ((j) this).field_n.read(param0, param3, param1);
+                  var5_int = this.field_n.read(param0, param3, param1);
                   if (var5_int <= 0) {
                     throw new EOFException();
                   } else {
@@ -444,23 +465,23 @@ final class j implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var5;
+            stackOut_12_0 = (RuntimeException) (var5);
             stackOut_12_1 = new StringBuilder().append("j.B(");
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -468,40 +489,49 @@ final class j implements Runnable {
               break L2;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(byte param0) {
         field_i = null;
         field_h = null;
+        if (param0 == 45) {
+            return;
+        }
+        field_h = (String) null;
     }
 
     final int c(int param0) throws IOException {
-        if (((j) this).field_k) {
+        if (this.field_k) {
             return 0;
         }
         if (param0 != 0) {
             return -14;
         }
-        return ((j) this).field_n.available();
+        return this.field_n.available();
     }
 
     private j(java.net.Socket param0, un param1, int param2) throws IOException {
-        ((j) this).field_f = 0;
-        ((j) this).field_g = 0;
-        ((j) this).field_k = false;
-        ((j) this).field_m = false;
+        this.field_f = 0;
+        this.field_g = 0;
+        this.field_k = false;
+        this.field_m = false;
         try {
-            ((j) this).field_b = param1;
-            ((j) this).field_c = param0;
-            ((j) this).field_c.setSoTimeout(30000);
-            ((j) this).field_c.setTcpNoDelay(true);
-            ((j) this).field_n = ((j) this).field_c.getInputStream();
-            ((j) this).field_e = ((j) this).field_c.getOutputStream();
-            ((j) this).field_d = param2;
+            this.field_b = param1;
+            this.field_c = param0;
+            this.field_c.setSoTimeout(30000);
+            this.field_c.setTcpNoDelay(true);
+            this.field_n = this.field_c.getInputStream();
+            this.field_e = this.field_c.getOutputStream();
+            this.field_d = param2;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "j.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw dn.a((Throwable) ((Object) runtimeException), "j.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -530,10 +560,6 @@ final class j implements Runnable {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_h = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
     }
 }

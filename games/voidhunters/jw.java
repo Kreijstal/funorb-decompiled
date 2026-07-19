@@ -11,13 +11,12 @@ final class jw {
     public static void a(boolean param0) {
         field_d = null;
         field_a = null;
+        if (param0) {
+            jw.a(false);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "jw.A(";
         field_c = false;
         field_b = 0;

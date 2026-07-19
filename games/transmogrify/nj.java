@@ -36,112 +36,237 @@ final class nj extends wf {
         ti var13 = null;
         int var14 = 0;
         int var15 = 0;
-        var15 = Transmogrify.field_A ? 1 : 0;
-        var9 = 3;
-        var10 = new ti[]{new ti(var9, var9), new ti(3, var9), new ti(var9, var9), new ti(var9, 3), new ti(64, 64), new ti(var9, 3), new ti(var9, var9), new ti(3, var9), new ti(var9, var9)};
-        var11_ref_ti__ = var10;
-        var12 = 0;
-        L0: while (true) {
-          if (~var12 <= ~var11_ref_ti__.length) {
-            var11 = 0;
-            L1: while (true) {
-              if (var11 >= 1) {
-                var11 = 0;
-                L2: while (true) {
-                  if (var11 >= 1) {
-                    var11 = 0;
-                    L3: while (true) {
-                      if (var11 >= 3) {
-                        var11 = 0;
-                        L4: while (true) {
-                          if (var11 >= 1) {
-                            return var10;
+        int stackIn_4_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_25_1 = 0;
+        int stackIn_27_0 = 0;
+        int stackIn_32_0 = 0;
+        int stackIn_35_0 = 0;
+        int stackIn_43_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_24_0 = 0;
+        int stackOut_24_1 = 0;
+        int stackOut_31_0 = 0;
+        int stackOut_26_0 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_28_1 = 0;
+        int stackOut_42_0 = 0;
+        int stackOut_34_0 = 0;
+        L0: {
+          var15 = Transmogrify.field_A ? 1 : 0;
+          var9 = param4 + param7 + param0;
+          var10 = new ti[]{new ti(var9, var9), new ti(param3, var9), new ti(var9, var9), new ti(var9, param3), new ti(64, 64), new ti(var9, param3), new ti(var9, var9), new ti(param3, var9), new ti(var9, var9)};
+          var11_ref_ti__ = var10;
+          var12 = 0;
+          if (param6 >= 42) {
+            break L0;
+          } else {
+            nj.d(-32);
+            break L0;
+          }
+        }
+        L1: while (true) {
+          L2: {
+            L3: {
+              if (var12 >= var11_ref_ti__.length) {
+                break L3;
+              } else {
+                var13 = var11_ref_ti__[var12];
+                stackOut_3_0 = 0;
+                stackIn_12_0 = stackOut_3_0;
+                stackIn_4_0 = stackOut_3_0;
+                if (var15 != 0) {
+                  break L2;
+                } else {
+                  var14 = stackIn_4_0;
+                  L4: while (true) {
+                    L5: {
+                      L6: {
+                        if (var13.field_w.length <= var14) {
+                          break L6;
+                        } else {
+                          var13.field_w[var14] = param5;
+                          var14++;
+                          if (var15 != 0) {
+                            break L5;
                           } else {
-                            var12 = 0;
-                            L5: while (true) {
-                              if (var12 >= 1) {
-                                var11++;
-                                continue L4;
-                              } else {
-                                var10[1].field_w[var11 + 3 * (-1 + (var9 - var12))] = 65793;
-                                var10[3].field_w[var11 * var9 - var12 - -var9 + -1] = 65793;
-                                var10[7].field_w[var11 + var12 * 3] = 65793;
-                                var10[5].field_w[var12 + var9 * var11] = 65793;
-                                var12++;
-                                continue L5;
-                              }
+                            if (var15 == 0) {
+                              continue L4;
+                            } else {
+                              break L6;
                             }
                           }
                         }
-                      } else {
-                        var12 = 0;
-                        L6: while (true) {
-                          if (var12 >= 1) {
-                            var11++;
-                            continue L3;
-                          } else {
-                            var10[7].field_w[(-1 + -var12 + var9) * 3 + var11] = 0;
-                            var10[5].field_w[var9 + -1 + (-var12 + var11 * var9)] = 0;
-                            var10[1].field_w[var11 + var12 * 3] = 0;
-                            var10[3].field_w[var9 * var11 + var12] = 0;
-                            var12++;
-                            continue L6;
-                          }
-                        }
                       }
+                      var12++;
+                      break L5;
                     }
-                  } else {
-                    var12 = 0;
-                    L7: while (true) {
-                      if (~var12 <= ~var9) {
-                        var11++;
-                        continue L2;
-                      } else {
-                        L8: {
-                          var10[0].field_w[var12 + var9 * var11] = 0;
-                          var10[0].field_w[var9 * var12 - -var11] = 0;
-                          if (~(var9 + -var11) < ~var12) {
-                            var10[2].field_w[var12 + var11 * var9] = 0;
-                            var10[6].field_w[var11 + var12 * var9] = 0;
-                            break L8;
-                          } else {
-                            break L8;
-                          }
-                        }
-                        var12++;
-                        continue L7;
-                      }
+                    if (var15 == 0) {
+                      continue L1;
+                    } else {
+                      break L3;
                     }
-                  }
-                }
-              } else {
-                var12 = 0;
-                L9: while (true) {
-                  if (~var9 >= ~var12) {
-                    var11++;
-                    continue L1;
-                  } else {
-                    var10[6].field_w[(-1 + -var11 + var9) * var9 + var12] = 0;
-                    var10[8].field_w[var12 + (-var11 + (var9 - 1)) * var9] = 0;
-                    var10[2].field_w[var12 * var9 - -var9 + (-1 - var11)] = 0;
-                    var10[8].field_w[var12 * var9 + var9 - 1 + -var11] = 0;
-                    var12++;
-                    continue L9;
                   }
                 }
               }
             }
-          } else {
-            var13 = var11_ref_ti__[var12];
-            var14 = 0;
-            L10: while (true) {
-              if (~var13.field_w.length >= ~var14) {
-                var12++;
-                continue L0;
+            stackOut_11_0 = 0;
+            stackIn_12_0 = stackOut_11_0;
+            break L2;
+          }
+          var11 = stackIn_12_0;
+          L7: while (true) {
+            L8: {
+              if (param0 <= var11) {
+                stackOut_22_0 = 0;
+                stackIn_23_0 = stackOut_22_0;
+                break L8;
               } else {
-                var13.field_w[var14] = 0;
-                var14++;
-                continue L10;
+                stackOut_14_0 = 0;
+                stackIn_23_0 = stackOut_14_0;
+                stackIn_15_0 = stackOut_14_0;
+                if (var15 != 0) {
+                  break L8;
+                } else {
+                  var12 = stackIn_15_0;
+                  L9: while (true) {
+                    L10: {
+                      if (var9 <= var12) {
+                        var11++;
+                        break L10;
+                      } else {
+                        var10[6].field_w[(-1 + -var11 + var9) * var9 + var12] = param2;
+                        var10[8].field_w[var12 + (-var11 + (var9 - 1)) * var9] = param2;
+                        var10[2].field_w[var12 * var9 - -var9 + (-1 - var11)] = param2;
+                        var10[8].field_w[var12 * var9 + var9 - 1 + -var11] = param2;
+                        var12++;
+                        if (var15 != 0) {
+                          break L10;
+                        } else {
+                          continue L9;
+                        }
+                      }
+                    }
+                    continue L7;
+                  }
+                }
+              }
+            }
+            var11 = stackIn_23_0;
+            L11: while (true) {
+              stackOut_24_0 = param0;
+              stackOut_24_1 = var11;
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              L12: while (true) {
+                L13: {
+                  if (stackIn_25_0 <= stackIn_25_1) {
+                    stackOut_31_0 = 0;
+                    stackIn_32_0 = stackOut_31_0;
+                    break L13;
+                  } else {
+                    stackOut_26_0 = 0;
+                    stackIn_32_0 = stackOut_26_0;
+                    stackIn_27_0 = stackOut_26_0;
+                    if (var15 != 0) {
+                      break L13;
+                    } else {
+                      var12 = stackIn_27_0;
+                      if (var12 >= var9) {
+                        var11++;
+                        continue L11;
+                      } else {
+                        var10[0].field_w[var12 + var9 * var11] = param1;
+                        var10[0].field_w[var9 * var12 - -var11] = param1;
+                        stackOut_28_0 = var9 + -var11 ^ -1;
+                        stackOut_28_1 = var12 ^ -1;
+                        stackIn_25_0 = stackOut_28_0;
+                        stackIn_25_1 = stackOut_28_1;
+                        continue L12;
+                      }
+                    }
+                  }
+                }
+                var11 = stackIn_32_0;
+                L14: while (true) {
+                  L15: {
+                    if (var11 >= param3) {
+                      stackOut_42_0 = 0;
+                      stackIn_43_0 = stackOut_42_0;
+                      break L15;
+                    } else {
+                      stackOut_34_0 = 0;
+                      stackIn_43_0 = stackOut_34_0;
+                      stackIn_35_0 = stackOut_34_0;
+                      if (var15 != 0) {
+                        break L15;
+                      } else {
+                        var12 = stackIn_35_0;
+                        L16: while (true) {
+                          L17: {
+                            if (var12 >= param0) {
+                              var11++;
+                              break L17;
+                            } else {
+                              var10[7].field_w[(-1 + -var12 + var9) * param3 + var11] = param2;
+                              var10[5].field_w[var9 + -1 + (-var12 + var11 * var9)] = param2;
+                              var10[1].field_w[var11 + var12 * param3] = param1;
+                              var10[3].field_w[var9 * var11 + var12] = param1;
+                              var12++;
+                              if (var15 != 0) {
+                                break L17;
+                              } else {
+                                continue L16;
+                              }
+                            }
+                          }
+                          continue L14;
+                        }
+                      }
+                    }
+                  }
+                  var11 = stackIn_43_0;
+                  L18: while (true) {
+                    L19: {
+                      if (var11 >= param3 >> 80973185) {
+                        break L19;
+                      } else {
+                        var12 = 0;
+                        L20: while (true) {
+                          L21: {
+                            if (param4 <= var12) {
+                              var11++;
+                              break L21;
+                            } else {
+                              var10[1].field_w[var11 + param3 * (-1 + (var9 - var12))] = param8;
+                              var10[3].field_w[var11 * var9 - var12 - -var9 + -1] = param8;
+                              var10[7].field_w[var11 + var12 * param3] = param8;
+                              var10[5].field_w[var12 + var9 * var11] = param8;
+                              var12++;
+                              if (var15 != 0) {
+                                break L21;
+                              } else {
+                                continue L20;
+                              }
+                            }
+                          }
+                          if (var15 == 0) {
+                            continue L18;
+                          } else {
+                            break L19;
+                          }
+                        }
+                      }
+                    }
+                    return var10;
+                  }
+                }
               }
             }
           }
@@ -149,18 +274,14 @@ final class nj extends wf {
     }
 
     nj(int param0, int param1, int param2, int param3, int param4) {
-        ((nj) this).field_i = param1;
-        ((nj) this).field_o = param4;
-        ((nj) this).field_n = param0;
-        ((nj) this).field_q = param3;
-        ((nj) this).field_h = param2;
+        this.field_i = param1;
+        this.field_o = param4;
+        this.field_n = param0;
+        this.field_q = param3;
+        this.field_h = param2;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Unfortunately we are unable to create an account for you at this time.";
         field_k = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
         field_p = "More suggestions";

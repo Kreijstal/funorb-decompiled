@@ -11,6 +11,7 @@ final class md {
     static int field_c;
 
     final static String a(byte param0, long param1) {
+        String discarded$1 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -21,7 +22,7 @@ final class md {
         ul.field_c.setTime(new Date(param1));
         var3 = ul.field_c.get(7);
         if (param0 > -43) {
-          String discarded$1 = md.a((byte) -70, -99L);
+          discarded$1 = md.a((byte) -70, -99L);
           var4 = ul.field_c.get(5);
           var5 = ul.field_c.get(2);
           var6 = ul.field_c.get(1);
@@ -50,10 +51,6 @@ final class md {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
         field_a = new tf();
     }

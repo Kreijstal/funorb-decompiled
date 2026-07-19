@@ -58,10 +58,6 @@ final class gl extends pi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = new rc[25];
         field_t = "More suggestions";
         field_x = new String[]{"This more than doubles the time you can spend underwater, and volcanoes are full of water. Where do you think all the mineral water comes from?", "This more than doubles the time you can spend underwater, and the Super Volcano has plenty of ice, which is made of water. Might be some water about, don't ya think?"};

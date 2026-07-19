@@ -16,16 +16,15 @@ final class ai {
     public static void a(byte param0) {
         field_a = null;
         field_c = null;
+        if (param0 <= 85) {
+            return;
+        }
         field_g = null;
         field_i = null;
         field_e = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ai.A(";
         field_g = new long[32];
         field_i = "Login: ";

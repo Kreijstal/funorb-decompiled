@@ -22,12 +22,12 @@ final class du {
         cma.field_m = 0;
         var3 = field_d;
         field_d = ko.field_d;
-        if (param0 == 51) {
+        if (-52 == (param0 ^ -1)) {
           L0: {
             wg.field_l.field_n = 2;
             ko.field_d = var3;
             wg.field_l.field_a = wg.field_l.field_a + 1;
-            if (wg.field_l.field_a < 2) {
+            if (-3 < (wg.field_l.field_a ^ -1)) {
               break L0;
             } else {
               if (51 != param0) {
@@ -48,85 +48,184 @@ final class du {
               }
             }
           }
-          if (wg.field_l.field_a >= 4) {
+          if ((wg.field_l.field_a ^ -1) <= -5) {
             return 1;
           } else {
             return -1;
           }
         } else {
-          if (param0 == 50) {
-            L2: {
-              wg.field_l.field_n = 5;
-              ko.field_d = var3;
-              wg.field_l.field_a = wg.field_l.field_a + 1;
-              if (wg.field_l.field_a < 2) {
-                break L2;
-              } else {
-                if (51 != param0) {
+          if (-51 == (param0 ^ -1)) {
+            wg.field_l.field_n = 5;
+            if (var4 == 0) {
+              L2: {
+                ko.field_d = var3;
+                wg.field_l.field_a = wg.field_l.field_a + 1;
+                if (-3 < (wg.field_l.field_a ^ -1)) {
                   break L2;
                 } else {
-                  return 2;
+                  if (51 != param0) {
+                    break L2;
+                  } else {
+                    return 2;
+                  }
                 }
               }
-            }
-            L3: {
-              if (wg.field_l.field_a < 2) {
-                break L3;
-              } else {
-                if (param0 != 50) {
+              L3: {
+                if (wg.field_l.field_a < 2) {
                   break L3;
                 } else {
-                  return 5;
+                  if (param0 != 50) {
+                    break L3;
+                  } else {
+                    return 5;
+                  }
                 }
               }
-            }
-            if (wg.field_l.field_a >= 4) {
-              return 1;
+              if ((wg.field_l.field_a ^ -1) <= -5) {
+                return 1;
+              } else {
+                return -1;
+              }
             } else {
-              return -1;
+              L4: {
+                wg.field_l.field_n = 2;
+                ko.field_d = var3;
+                wg.field_l.field_a = wg.field_l.field_a + 1;
+                if (-3 < (wg.field_l.field_a ^ -1)) {
+                  break L4;
+                } else {
+                  if (51 != param0) {
+                    break L4;
+                  } else {
+                    return 2;
+                  }
+                }
+              }
+              L5: {
+                if (wg.field_l.field_a < 2) {
+                  break L5;
+                } else {
+                  if (param0 != 50) {
+                    break L5;
+                  } else {
+                    return 5;
+                  }
+                }
+              }
+              if ((wg.field_l.field_a ^ -1) <= -5) {
+                return 1;
+              } else {
+                return -1;
+              }
             }
           } else {
             wg.field_l.field_n = 1;
-            ko.field_d = var3;
-            wg.field_l.field_a = wg.field_l.field_a + 1;
-            if (wg.field_l.field_a >= 2) {
-              if (51 == param0) {
-                return 2;
-              } else {
-                if (wg.field_l.field_a >= 2) {
-                  if (param0 == 50) {
-                    return 5;
+            if (var4 != 0) {
+              wg.field_l.field_n = 5;
+              if (var4 != 0) {
+                L6: {
+                  wg.field_l.field_n = 2;
+                  ko.field_d = var3;
+                  wg.field_l.field_a = wg.field_l.field_a + 1;
+                  if (-3 < (wg.field_l.field_a ^ -1)) {
+                    break L6;
                   } else {
-                    if (wg.field_l.field_a >= 4) {
+                    if (51 != param0) {
+                      break L6;
+                    } else {
+                      return 2;
+                    }
+                  }
+                }
+                L7: {
+                  if (wg.field_l.field_a < 2) {
+                    break L7;
+                  } else {
+                    if (param0 != 50) {
+                      break L7;
+                    } else {
+                      return 5;
+                    }
+                  }
+                }
+                if ((wg.field_l.field_a ^ -1) <= -5) {
+                  return 1;
+                } else {
+                  return -1;
+                }
+              } else {
+                L8: {
+                  ko.field_d = var3;
+                  wg.field_l.field_a = wg.field_l.field_a + 1;
+                  if (-3 < (wg.field_l.field_a ^ -1)) {
+                    break L8;
+                  } else {
+                    if (51 != param0) {
+                      break L8;
+                    } else {
+                      return 2;
+                    }
+                  }
+                }
+                L9: {
+                  if (wg.field_l.field_a < 2) {
+                    break L9;
+                  } else {
+                    if (param0 != 50) {
+                      break L9;
+                    } else {
+                      return 5;
+                    }
+                  }
+                }
+                if ((wg.field_l.field_a ^ -1) <= -5) {
+                  return 1;
+                } else {
+                  return -1;
+                }
+              }
+            } else {
+              ko.field_d = var3;
+              wg.field_l.field_a = wg.field_l.field_a + 1;
+              if (-3 >= (wg.field_l.field_a ^ -1)) {
+                if (51 != param0) {
+                  if (wg.field_l.field_a >= 2) {
+                    if (param0 != 50) {
+                      if ((wg.field_l.field_a ^ -1) <= -5) {
+                        return 1;
+                      } else {
+                        return -1;
+                      }
+                    } else {
+                      return 5;
+                    }
+                  } else {
+                    if ((wg.field_l.field_a ^ -1) <= -5) {
                       return 1;
                     } else {
                       return -1;
                     }
                   }
                 } else {
-                  if (wg.field_l.field_a >= 4) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
-                }
-              }
-            } else {
-              if (wg.field_l.field_a >= 2) {
-                if (param0 == 50) {
-                  return 5;
-                } else {
-                  if (wg.field_l.field_a >= 4) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
+                  return 2;
                 }
               } else {
-                if (wg.field_l.field_a >= 4) {
-                  return 1;
+                if (wg.field_l.field_a >= 2) {
+                  if (param0 != 50) {
+                    if ((wg.field_l.field_a ^ -1) <= -5) {
+                      return 1;
+                    } else {
+                      return -1;
+                    }
+                  } else {
+                    return 5;
+                  }
                 } else {
-                  return -1;
+                  if ((wg.field_l.field_a ^ -1) <= -5) {
+                    return 1;
+                  } else {
+                    return -1;
+                  }
                 }
               }
             }
@@ -137,15 +236,14 @@ final class du {
     public static void a(int param0) {
         field_c = null;
         field_b = null;
+        if (param0 != -6884) {
+            return;
+        }
         field_f = null;
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Players";
         field_b = "These walls enjoy going for walkies. Wallflowers they aren't.";
         field_f = "You can't slay these septic serpents, so steer clear. Hold <img=10><img=11> as you step over the snakes to sneak by.";

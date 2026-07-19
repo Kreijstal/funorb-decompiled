@@ -6,7 +6,7 @@ final class bn implements dja {
 
     public final tv a(byte param0) {
         int var2 = 95 % ((param0 - -64) / 50);
-        return (tv) (Object) new hna();
+        return (tv) ((Object) new hna());
     }
 
     final static void a(int param0, int param1, byte param2, int param3) {
@@ -29,18 +29,15 @@ final class bn implements dja {
     }
 
     public final tv[] a(int param0, int param1) {
+        tv discarded$0 = null;
         if (param0 != 11995) {
-            tv discarded$0 = ((bn) this).a((byte) 20);
-            return (tv[]) (Object) new hna[param1];
+            discarded$0 = this.a((byte) 20);
+            return (tv[]) ((Object) new hna[param1]);
         }
-        return (tv[]) (Object) new hna[param1];
+        return (tv[]) ((Object) new hna[param1]);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 128;
         lp discarded$0 = new lp();
     }

@@ -16,6 +16,9 @@ final class ai {
     public static void a(int param0) {
         field_i = null;
         field_a = null;
+        if (param0 != 134217727) {
+            return;
+        }
         field_d = null;
         field_f = null;
         field_b = null;
@@ -23,10 +26,6 @@ final class ai {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ai.A(";
         field_h = false;
         field_d = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};

@@ -17,7 +17,7 @@ public class ri {
 
     public static File a(String param0, int param1) {
         if (param1 != 1) {
-            field_e = null;
+            field_e = (String) null;
             return ri.a(-126, field_c, field_b, param0);
         }
         return ri.a(-126, field_c, field_b, param0);
@@ -85,10 +85,6 @@ public class ri {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = false;
         field_a = new Hashtable(16);
     }

@@ -13,11 +13,11 @@ final class oua {
             ha stackOut_4_0 = null;
             try {
               L0: {
-                if (mja.a((byte) -50)) {
+                if (mja.a(param2)) {
                   if (in.a("jagdx", 480)) {
                     var5 = Class.forName("cta");
-                    var6 = var5.getDeclaredMethod("createToolkit", new Class[4]);
-                    stackOut_4_0 = (ha) var6.invoke((Object) null, new Object[4]);
+                    var6 = var5.getDeclaredMethod("createToolkit", new Class[]{Class.forName("java.awt.Canvas"), Class.forName("d"), Class.forName("cn"), Class.forName("java.lang.Integer")});
+                    stackOut_4_0 = (ha) (var6.invoke((Object) null, new Object[]{param4, param0, param3, new Integer(param1)}));
                     stackIn_5_0 = stackOut_4_0;
                     break L0;
                   } else {
@@ -27,8 +27,12 @@ final class oua {
                   throw new RuntimeException("");
                 }
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
+              var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+              throw var5_ref;
+            } catch (java.lang.Throwable decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
               var5_ref2 = decompiledCaughtException;
               throw new RuntimeException("");
             }

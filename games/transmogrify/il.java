@@ -7,15 +7,16 @@ final class il {
     static String field_b;
 
     final static int b(byte param0) {
+        int discarded$0 = 0;
         if (param0 != -20) {
-            int discarded$0 = il.b((byte) 61);
+            discarded$0 = il.b((byte) 61);
             return vd.field_a;
         }
         return vd.field_a;
     }
 
     public static void a(byte param0) {
-        field_c = null;
+        field_c = (int[][]) null;
         field_b = null;
         if (param0 != -24) {
             il.a((byte) -33);
@@ -26,10 +27,6 @@ final class il {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Okay";
         field_b = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
     }

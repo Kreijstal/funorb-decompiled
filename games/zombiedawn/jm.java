@@ -5,19 +5,20 @@ final class jm extends tc {
     static ec field_B;
 
     final static int a(int param0, int param1) {
+        int discarded$2 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        var2 = param0 * (param0 * param0 >> 12) >> 12;
+        var2 = param0 * (param0 * param0 >> -901373652) >> 285548268;
         if (param1 <= 63) {
-          int discarded$2 = jm.a(-123, 65);
+          discarded$2 = jm.a(-123, 65);
           var3 = 6 * param0 + -61440;
-          var4 = (var3 * param0 >> 12) + 40960;
-          return var2 * var4 >> 12;
+          var4 = (var3 * param0 >> -123943188) + 40960;
+          return var2 * var4 >> -1975494484;
         } else {
           var3 = 6 * param0 + -61440;
-          var4 = (var3 * param0 >> 12) + 40960;
-          return var2 * var4 >> 12;
+          var4 = (var3 * param0 >> -123943188) + 40960;
+          return var2 * var4 >> -1975494484;
         }
     }
 
@@ -26,10 +27,13 @@ final class jm extends tc {
             kk.field_i.h((byte) -34);
         }
         he.field_a = new ih(param1, param0, false, true, true);
+        if (param2 != -901373652) {
+            return;
+        }
         try {
-            bm.field_d.b(20, (ga) (Object) he.field_a);
+            bm.field_d.b(20, he.field_a);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "jm.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + -901373652 + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "jm.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -59,7 +63,7 @@ final class jm extends tc {
               if (param0 == 12307) {
                 break L1;
               } else {
-                field_B = null;
+                field_B = (ec) null;
                 break L1;
               }
             }
@@ -71,23 +75,23 @@ final class jm extends tc {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("jm.B(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -95,7 +99,7 @@ final class jm extends tc {
               break L2;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -111,7 +115,7 @@ final class jm extends tc {
     public static void a(boolean param0) {
         field_B = null;
         if (param0) {
-            field_B = null;
+            field_B = (ec) null;
         }
     }
 

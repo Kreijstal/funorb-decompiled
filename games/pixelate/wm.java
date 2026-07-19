@@ -13,15 +13,21 @@ final class wm {
         try {
             var2_int = param1[0] ? 1 : 0;
             param1[0] = param1[2];
+            if (param0 != -11825) {
+                field_a = (ge) null;
+            }
             param1[2] = param1[3];
             param1[3] = param1[1];
             param1[1] = var2_int != 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "wm.A(" + -11825 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw aa.a((Throwable) ((Object) runtimeException), "wm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_d = null;
         field_a = null;
     }
@@ -31,15 +37,11 @@ final class wm {
     }
 
     wm(int param0, int param1, int param2, int param3) {
-        ((wm) this).field_b = param0;
-        ((wm) this).field_e = param3;
+        this.field_b = param0;
+        this.field_e = param3;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 0;
         field_a = new ge();
     }

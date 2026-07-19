@@ -17,13 +17,13 @@ abstract class m extends wb implements ib {
     final void a(ug param0, byte param1) {
         try {
             pf.field_b = param0;
-            ((m) this).b((byte) 116, true);
-            ((m) this).i(12);
-            ((m) this).f(param1 + -15);
-            ((m) this).h((byte) 63);
-            ((m) this).d(false);
-            ((m) this).g((byte) 122);
-            ((m) this).k(-113);
+            this.b((byte) 116, true);
+            this.i(12);
+            this.f(param1 + -15);
+            this.h((byte) 63);
+            this.d(false);
+            this.g((byte) 122);
+            this.k(-113);
             if (param1 != 14) {
                 return;
             }
@@ -31,9 +31,9 @@ abstract class m extends wb implements ib {
                 wh.field_d[10] = -1;
                 wh.field_d[9] = -1;
                 cf.field_eb = new Vector();
-                on.a((byte) 6, (ib) this);
+                on.a((byte) 6, (ib) (this));
             } catch (RuntimeException runtimeException) {
-                throw sh.a((Throwable) (Object) runtimeException, "m.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+                throw sh.a((Throwable) ((Object) runtimeException), "m.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -44,6 +44,7 @@ abstract class m extends wb implements ib {
 
     final void c(byte param0) {
         int var3 = 0;
+        boolean discarded$1 = false;
         int var5 = ZombieDawn.field_J;
         java.awt.Canvas var2 = uh.e(-122);
         if (uk.a((byte) -44)) {
@@ -62,12 +63,12 @@ abstract class m extends wb implements ib {
             }
         }
         wn.field_b = true;
-        for (var3 = -1 + cf.field_eb.size(); var3 >= 0; var3--) {
-            ((ib) cf.field_eb.elementAt(var3)).a(-14964);
+        for (var3 = -1 + cf.field_eb.size(); -1 >= (var3 ^ -1); var3--) {
+            ((ib) (cf.field_eb.elementAt(var3))).a(-14964);
         }
         int var4 = 35 / ((param0 - -27) / 44);
         if (wn.field_b) {
-            boolean discarded$1 = rm.a(false);
+            discarded$1 = rm.a(false);
             uh.a(-126, 0, 0, var2);
         } else {
             this.l(29268);
@@ -91,10 +92,10 @@ abstract class m extends wb implements ib {
         Object stackIn_29_0 = null;
         int stackIn_29_1 = 0;
         int stackIn_29_2 = 0;
-        int stackIn_52_0 = 0;
-        int stackIn_53_0 = 0;
-        int stackIn_54_0 = 0;
-        int stackIn_54_1 = 0;
+        int stackIn_57_0 = 0;
+        int stackIn_58_0 = 0;
+        int stackIn_59_0 = 0;
+        int stackIn_59_1 = 0;
         Object stackOut_26_0 = null;
         int stackOut_26_1 = 0;
         Object stackOut_28_0 = null;
@@ -103,11 +104,11 @@ abstract class m extends wb implements ib {
         Object stackOut_27_0 = null;
         int stackOut_27_1 = 0;
         int stackOut_27_2 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_53_1 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_52_1 = 0;
+        int stackOut_56_0 = 0;
+        int stackOut_58_0 = 0;
+        int stackOut_58_1 = 0;
+        int stackOut_57_0 = 0;
+        int stackOut_57_1 = 0;
         L0: {
           var5 = ZombieDawn.field_J;
           var2 = 0;
@@ -117,32 +118,31 @@ abstract class m extends wb implements ib {
                 dh.c(256);
                 break L0;
               } else {
-                L1: {
-                  var3 = va.a(true);
-                  if (var3 != 2) {
-                    if (3 == var3) {
-                      cn.a(true, false);
-                      break L1;
-                    } else {
-                      if (var3 != 4) {
-                        break L1;
-                      } else {
-                        mn.a(-1, hi.field_Y, false);
-                        hp.field_C = true;
-                        break L1;
-                      }
-                    }
+                var3 = va.a(true);
+                if (var3 != 2) {
+                  if (3 == var3) {
+                    cn.a(true, false);
+                    this.a(false, false);
+                    break L0;
                   } else {
-                    re.a((byte) -71);
-                    break L1;
+                    if ((var3 ^ -1) != -5) {
+                      this.a(false, false);
+                      break L0;
+                    } else {
+                      mn.a(-1, hi.field_Y, false);
+                      hp.field_C = true;
+                      this.a(false, false);
+                      break L0;
+                    }
                   }
+                } else {
+                  re.a((byte) -71);
+                  break L0;
                 }
-                ((m) this).a(false, false);
-                break L0;
               }
             } else {
               if (nk.b(15000)) {
-                L2: {
+                L1: {
                   stackOut_26_0 = this;
                   stackOut_26_1 = -27698;
                   stackIn_28_0 = stackOut_26_0;
@@ -156,7 +156,7 @@ abstract class m extends wb implements ib {
                     stackIn_29_0 = stackOut_28_0;
                     stackIn_29_1 = stackOut_28_1;
                     stackIn_29_2 = stackOut_28_2;
-                    break L2;
+                    break L1;
                   } else {
                     stackOut_27_0 = this;
                     stackOut_27_1 = stackIn_27_1;
@@ -164,52 +164,51 @@ abstract class m extends wb implements ib {
                     stackIn_29_0 = stackOut_27_0;
                     stackIn_29_1 = stackOut_27_1;
                     stackIn_29_2 = stackOut_27_2;
+                    break L1;
+                  }
+                }
+                L2: {
+                  var3 = this.a(stackIn_29_1, stackIn_29_2 != 0);
+                  if (var3 == 1) {
                     break L2;
+                  } else {
+                    if (var3 == 2) {
+                      break L2;
+                    } else {
+                      this.a(false, false);
+                      break L0;
+                    }
                   }
                 }
                 L3: {
-                  L4: {
-                    var3 = ((m) this).a(stackIn_29_1, stackIn_29_2 != 0);
-                    if (var3 == 1) {
-                      break L4;
-                    } else {
-                      if (var3 == 2) {
-                        break L4;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  L5: {
-                    if (null != cn.field_b) {
-                      re.a((byte) -71);
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  if (var3 != 2) {
+                  if (null != cn.field_b) {
+                    re.a((byte) -71);
                     break L3;
                   } else {
-                    bo.a(param0 ^ -1869, hc.a(0));
                     break L3;
                   }
                 }
-                ((m) this).a(false, false);
-                break L0;
+                if (-3 != (var3 ^ -1)) {
+                  this.a(false, false);
+                  break L0;
+                } else {
+                  bo.a(param0 ^ -1869, hc.a(0));
+                  this.a(false, false);
+                  break L0;
+                }
               } else {
                 if (ac.d(param0 ^ 1813)) {
                   if (!bg.a(2)) {
-                    L6: {
+                    L4: {
                       var3 = cg.a(param0 + -1831);
-                      if (var3 == 1) {
+                      if ((var3 ^ -1) == -2) {
                         mn.a(-1, vd.field_e, true);
-                        break L6;
+                        break L4;
                       } else {
-                        break L6;
+                        break L4;
                       }
                     }
-                    ((m) this).a(false, false);
+                    this.a(false, false);
                     break L0;
                   } else {
                     dh.c(256);
@@ -222,47 +221,44 @@ abstract class m extends wb implements ib {
                   } else {
                     var2 = 1;
                     var3 = -1;
-                    L7: while (true) {
+                    L5: while (true) {
                       if (!on.b(param0 ^ -1902)) {
                         break L0;
                       } else {
-                        L8: {
-                          if (kg.field_i == -1) {
-                            if (kg.field_i != -1) {
-                              break L8;
+                        L6: {
+                          if ((kg.field_i ^ -1) == 0) {
+                            if (0 != (kg.field_i ^ -1)) {
+                              break L6;
                             } else {
                               if (-1 == var3) {
-                                break L8;
+                                break L6;
                               } else {
                                 kg.field_i = var3;
                                 var3 = -1;
-                                break L8;
+                                break L6;
                               }
                             }
                           } else {
                             if (!dg.a((byte) -116, kg.field_i)) {
-                              break L8;
+                              break L6;
                             } else {
                               var3 = kg.field_i;
-                              continue L7;
+                              continue L5;
                             }
                           }
                         }
                         var4 = 0;
-                        L9: while (true) {
-                          L10: {
-                            if (cf.field_eb.size() <= var4) {
-                              break L10;
+                        L7: while (true) {
+                          if (cf.field_eb.size() <= var4) {
+                            continue L5;
+                          } else {
+                            if (((ib) (cf.field_eb.elementAt(var4))).a(lc.field_c, kg.field_i, 20)) {
+                              continue L5;
                             } else {
-                              if (((ib) cf.field_eb.elementAt(var4)).a(lc.field_c, kg.field_i, 20)) {
-                                break L10;
-                              } else {
-                                var4++;
-                                continue L9;
-                              }
+                              var4++;
+                              continue L7;
                             }
                           }
-                          continue L7;
                         }
                       }
                     }
@@ -271,39 +267,39 @@ abstract class m extends wb implements ib {
               }
             }
           } else {
-            ((m) this).a(false, false);
+            this.a(false, false);
             break L0;
           }
         }
         if (param0 == 1831) {
           var3 = 0;
-          L11: while (true) {
-            if (~cf.field_eb.size() >= ~var3) {
+          L8: while (true) {
+            if (cf.field_eb.size() <= var3) {
               return;
             } else {
-              L12: {
-                var6 = (ib) cf.field_eb.elementAt(var3);
+              L9: {
+                var6 = (ib) (cf.field_eb.elementAt(var3));
                 var6.a(var2 != 0, false);
-                stackOut_51_0 = var2;
-                stackIn_53_0 = stackOut_51_0;
-                stackIn_52_0 = stackOut_51_0;
+                stackOut_56_0 = var2;
+                stackIn_58_0 = stackOut_56_0;
+                stackIn_57_0 = stackOut_56_0;
                 if (var6.a((byte) 119)) {
-                  stackOut_53_0 = stackIn_53_0;
-                  stackOut_53_1 = 0;
-                  stackIn_54_0 = stackOut_53_0;
-                  stackIn_54_1 = stackOut_53_1;
-                  break L12;
+                  stackOut_58_0 = stackIn_58_0;
+                  stackOut_58_1 = 0;
+                  stackIn_59_0 = stackOut_58_0;
+                  stackIn_59_1 = stackOut_58_1;
+                  break L9;
                 } else {
-                  stackOut_52_0 = stackIn_52_0;
-                  stackOut_52_1 = 1;
-                  stackIn_54_0 = stackOut_52_0;
-                  stackIn_54_1 = stackOut_52_1;
-                  break L12;
+                  stackOut_57_0 = stackIn_57_0;
+                  stackOut_57_1 = 1;
+                  stackIn_59_0 = stackOut_57_0;
+                  stackIn_59_1 = stackOut_57_1;
+                  break L9;
                 }
               }
-              var2 = stackIn_54_0 & stackIn_54_1;
+              var2 = stackIn_59_0 & stackIn_59_1;
               var3++;
-              continue L11;
+              continue L8;
             }
           }
         } else {
@@ -316,12 +312,20 @@ abstract class m extends wb implements ib {
         var3 = ZombieDawn.field_J;
         L0: while (true) {
           if (!gf.a(wh.field_d, (byte) 44)) {
+            L1: {
+              if (param0 >= 65) {
+                break L1;
+              } else {
+                field_A = (vn) null;
+                break L1;
+              }
+            }
             return;
           } else {
-            if (((m) this).a(fj.field_g, l.field_d, 2)) {
+            if (this.a(fj.field_g, l.field_d, 2)) {
               continue L0;
             } else {
-              ((m) this).e(-12);
+              this.e(-12);
               continue L0;
             }
           }
@@ -331,11 +335,15 @@ abstract class m extends wb implements ib {
     abstract boolean a(am param0, int param1, int param2);
 
     private final void l(int param0) {
+        if (param0 != 29268) {
+            field_C = (String) null;
+        }
     }
 
     public abstract boolean a(char param0, int param1, int param2);
 
     final void e(byte param0) {
+        lo discarded$1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -354,7 +362,7 @@ abstract class m extends wb implements ib {
           if (param0 == 15) {
             break L0;
           } else {
-            lo discarded$1 = m.a((byte) 91, 77, -4, -72);
+            discarded$1 = m.a((byte) 91, 77, -4, -72);
             break L0;
           }
         }
@@ -390,7 +398,7 @@ abstract class m extends wb implements ib {
           }
         }
         L3: {
-          ((m) this).b(stackIn_9_1 != 0, false);
+          this.b(stackIn_9_1 != 0, false);
           if (!di.field_K) {
             break L3;
           } else {
@@ -401,7 +409,7 @@ abstract class m extends wb implements ib {
         }
         L4: {
           if (uk.a((byte) -44)) {
-            ((m) this).i((byte) 20);
+            this.i((byte) 20);
             if (uk.a((byte) -44)) {
               return;
             } else {
@@ -421,7 +429,7 @@ abstract class m extends wb implements ib {
                 if (!po.w(13296)) {
                   if (pf.field_b.a((byte) 19)) {
                     dg.field_b = true;
-                    ((m) this).o(1235);
+                    this.o(1235);
                     oh.d((byte) -118);
                     break L5;
                   } else {
@@ -450,7 +458,7 @@ abstract class m extends wb implements ib {
             break L7;
           } else {
             L8: while (true) {
-              var5 = (bo) (Object) kk.field_j.f(117);
+              var5 = (bo) ((Object) kk.field_j.f(117));
               if (var5 == null) {
                 break L7;
               } else {
@@ -468,7 +476,7 @@ abstract class m extends wb implements ib {
           } else {
             L10: {
               L11: {
-                var2 = ((m) this).h(99);
+                var2 = this.h(99);
                 if (0 == var2) {
                   break L11;
                 } else {
@@ -479,7 +487,7 @@ abstract class m extends wb implements ib {
                   }
                 }
               }
-              ((m) this).a(var2, param0 + 95);
+              this.a(var2, param0 + 95);
               break L10;
             }
             L12: {
@@ -492,7 +500,7 @@ abstract class m extends wb implements ib {
               }
             }
             L13: {
-              if (((m) this).n(10)) {
+              if (this.n(10)) {
                 var3 = 1;
                 break L13;
               } else {
@@ -519,17 +527,18 @@ abstract class m extends wb implements ib {
 
     public final boolean a(byte param0) {
         if (param0 < 118) {
-            Object var3 = null;
-            ((m) this).a((ug) null, (byte) 96);
+            ug var3 = (ug) null;
+            this.a((ug) null, (byte) 96);
         }
         return true;
     }
 
     public static void j(byte param0) {
+        lo discarded$0 = null;
         field_C = null;
         field_B = null;
         if (param0 > -121) {
-            lo discarded$0 = m.a((byte) -29, 125, -97, 86);
+            discarded$0 = m.a((byte) -29, 125, -97, 86);
         }
         field_A = null;
     }
@@ -543,7 +552,7 @@ abstract class m extends wb implements ib {
         lo var4 = new lo();
         var4.field_k = param3;
         var4.field_o = new int[param1];
-        c.field_b.a(0, (le) (Object) var4);
+        c.field_b.a(0, var4);
         ga.a(param2, 0, var4);
         return var4;
     }
@@ -551,10 +560,6 @@ abstract class m extends wb implements ib {
     abstract void a(int param0, int param1);
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = 0;
         field_C = "Mouse-over an icon for details";
         field_A = new vn(664, 504);

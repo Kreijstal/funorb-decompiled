@@ -44,23 +44,23 @@ abstract class gg implements ip {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_0 = (RuntimeException) (var2);
             stackOut_2_1 = new StringBuilder().append("gg.I(").append(param0).append(',');
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -68,7 +68,7 @@ abstract class gg implements ip {
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
         }
         return stackIn_1_0;
     }
@@ -76,7 +76,7 @@ abstract class gg implements ip {
     final static boolean a(boolean param0) {
         if (param0) {
           if (10 <= fk.field_ab) {
-            if (-14 > sf.field_y) {
+            if (-14 < (sf.field_y ^ -1)) {
               return false;
             } else {
               return true;
@@ -87,7 +87,7 @@ abstract class gg implements ip {
         } else {
           gg.e(39);
           if (10 <= fk.field_ab) {
-            if (-14 < sf.field_y) {
+            if (-14 < (sf.field_y ^ -1)) {
               return false;
             } else {
               return true;
@@ -100,11 +100,11 @@ abstract class gg implements ip {
 
     public final void b(int param0) {
         if (param0 != 11755) {
-            ((gg) this).field_e = 87L;
-            ((gg) this).field_e = rl.a((byte) -109);
+            this.field_e = 87L;
+            this.field_e = rl.a((byte) -109);
             return;
         }
-        ((gg) this).field_e = rl.a((byte) -109);
+        this.field_e = rl.a((byte) -109);
     }
 
     public static void e(int param0) {
@@ -120,82 +120,92 @@ abstract class gg implements ip {
     final static wc a(int param0, boolean param1, String param2) {
         wc var3 = null;
         RuntimeException var3_ref = null;
-        wc stackIn_1_0 = null;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
+        java.applet.Applet var4 = null;
+        wc stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        wc stackOut_0_0 = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
+        wc stackOut_2_0 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            var3 = new wc(false);
+            L1: {
+              var3 = new wc(false);
+              if (param1) {
+                break L1;
+              } else {
+                var4 = (java.applet.Applet) null;
+                gg.a((java.applet.Applet) null, (byte) 49);
+                break L1;
+              }
+            }
             var3.field_g = param0;
             var3.field_b = param2;
-            stackOut_0_0 = (wc) var3;
-            stackIn_1_0 = stackOut_0_0;
+            stackOut_2_0 = (wc) (var3);
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L2: {
             var3_ref = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("gg.H(").append(param0).append(',').append(true).append(',');
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
+            stackOut_4_0 = (RuntimeException) (var3_ref);
+            stackOut_4_1 = new StringBuilder().append("gg.H(").append(param0).append(',').append(param1).append(',');
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param2 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
-        return stackIn_1_0;
+        return stackIn_3_0;
     }
 
     public final na c(int param0) {
-        if (((gg) this).d(-3)) {
+        if (this.d(-3)) {
           return wm.field_Pb;
         } else {
           if (param0 == -31873) {
-            if (~(350L + ((gg) this).field_e) < ~rl.a((byte) -101)) {
+            if ((350L + this.field_e ^ -1L) < (rl.a((byte) -101) ^ -1L)) {
               return ji.field_h;
             } else {
-              return ((gg) this).g(param0 ^ 17779);
+              return this.g(param0 ^ 17779);
             }
           } else {
             field_g = -106;
-            if (~(350L + ((gg) this).field_e) < ~rl.a((byte) -101)) {
+            if ((350L + this.field_e ^ -1L) < (rl.a((byte) -101) ^ -1L)) {
               return ji.field_h;
             } else {
-              return ((gg) this).g(param0 ^ 17779);
+              return this.g(param0 ^ 17779);
             }
           }
         }
@@ -203,6 +213,7 @@ abstract class gg implements ip {
 
     final static void a(java.applet.Applet param0, byte param1) {
         try {
+            boolean discarded$2 = false;
             String var2 = null;
             RuntimeException var2_ref = null;
             Exception var2_ref2 = null;
@@ -235,7 +246,7 @@ abstract class gg implements ip {
                       var4 = var2;
                       var3 = var2.indexOf('?');
                       var4 = "reload.ws";
-                      if (var3 < 0) {
+                      if (-1 < (var3 ^ -1)) {
                         break L2;
                       } else {
                         var4 = var4 + var2.substring(var3);
@@ -257,7 +268,7 @@ abstract class gg implements ip {
                 if (param1 < -45) {
                   break L0;
                 } else {
-                  boolean discarded$2 = gg.a(false);
+                  discarded$2 = gg.a(false);
                   return;
                 }
               }
@@ -265,23 +276,23 @@ abstract class gg implements ip {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_8_0 = (RuntimeException) var2_ref;
+                stackOut_8_0 = (RuntimeException) (var2_ref);
                 stackOut_8_1 = new StringBuilder().append("gg.D(");
                 stackIn_10_0 = stackOut_8_0;
                 stackIn_10_1 = stackOut_8_1;
                 stackIn_9_0 = stackOut_8_0;
                 stackIn_9_1 = stackOut_8_1;
                 if (param0 == null) {
-                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+                  stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
                   stackOut_10_2 = "null";
                   stackIn_11_0 = stackOut_10_0;
                   stackIn_11_1 = stackOut_10_1;
                   stackIn_11_2 = stackOut_10_2;
                   break L4;
                 } else {
-                  stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-                  stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+                  stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+                  stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
                   stackOut_9_2 = "{...}";
                   stackIn_11_0 = stackOut_9_0;
                   stackIn_11_1 = stackOut_9_1;
@@ -289,7 +300,7 @@ abstract class gg implements ip {
                   break L4;
                 }
               }
-              throw wm.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param1 + ')');
+              throw wm.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -301,13 +312,13 @@ abstract class gg implements ip {
     abstract na g(int param0);
 
     public final String a(int param0) {
-        if (!((gg) this).d(-3)) {
-          if (rl.a((byte) -123) >= ((gg) this).field_e - -350L) {
+        if (!this.d(-3)) {
+          if (rl.a((byte) -123) >= this.field_e - -350L) {
             if (param0 <= 61) {
-              field_c = null;
-              return ((gg) this).f(-120);
+              field_c = (String) null;
+              return this.f(-120);
             } else {
-              return ((gg) this).f(-120);
+              return this.f(-120);
             }
           } else {
             return null;
@@ -318,10 +329,6 @@ abstract class gg implements ip {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = 0;
         field_c = "You can join this game";
         field_a = "Logging in...";

@@ -10,10 +10,6 @@ final class qrb {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "qrb.toString()";
         field_a = 0;
     }

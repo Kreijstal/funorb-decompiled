@@ -51,9 +51,10 @@ final class sd extends kd {
 
     final static sd a(sh param0, String param1, String param2) {
         try {
+            boolean discarded$0 = false;
             sd var4_ref = null;
             if (!sd.a(param0)) {
-                boolean discarded$0 = param0.a(param2, param1, -1);
+                discarded$0 = param0.a(param2, param1, -1);
                 return null;
             }
             byte[] var3 = param0.a((byte) 127, param2, param1);
@@ -61,8 +62,10 @@ final class sd extends kd {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new sd(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -74,7 +77,7 @@ final class sd extends kd {
 
     private final static void a(byte[] param0, int param1) {
         field_x = param0;
-        field_D = 0;
+        field_D = param1;
         field_J = 0;
     }
 
@@ -96,19 +99,19 @@ final class sd extends kd {
         int var6_int = 0;
         byte[] var6 = null;
         wf var2 = new wf(param0);
-        ((sd) this).field_n = var2.d((byte) 19);
-        ((sd) this).field_z = var2.d((byte) 19);
-        ((sd) this).field_r = var2.d((byte) 19);
-        ((sd) this).field_I = var2.d((byte) 19);
-        if (((sd) this).field_I < 0) {
-            ((sd) this).field_I = ~((sd) this).field_I;
-            ((sd) this).field_y = true;
+        this.field_n = var2.d((byte) 19);
+        this.field_z = var2.d((byte) 19);
+        this.field_r = var2.d((byte) 19);
+        this.field_I = var2.d((byte) 19);
+        if (this.field_I < 0) {
+            this.field_I = this.field_I ^ -1;
+            this.field_y = true;
         }
         int var3 = var2.d((byte) 19);
         if (var3 < 0) {
             throw new IOException();
         }
-        ((sd) this).field_G = new byte[var3][];
+        this.field_G = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
             var5 = 0;
             do {
@@ -117,11 +120,12 @@ final class sd extends kd {
             } while (var6_int >= 255);
             var6 = new byte[var5];
             var2.a(126, var5, 0, var6);
-            ((sd) this).field_G[var4] = var6;
+            this.field_G[var4] = var6;
         }
     }
 
     private final float[] c(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -181,13 +185,7 @@ final class sd extends kd {
         int[] var48 = null;
         float[] var49 = null;
         float[] var50 = null;
-        int[] var52 = null;
-        float[] var53 = null;
-        float[] var54 = null;
-        float[] var55 = null;
-        int[] var56 = null;
-        float[] var57 = null;
-        float[] var58 = null;
+        float[] var52 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -222,8 +220,8 @@ final class sd extends kd {
         Object stackOut_109_0 = null;
         int stackOut_109_1 = 0;
         L0: {
-          sd.a(((sd) this).field_G[param0], 0);
-          int discarded$1 = sd.a();
+          sd.a(this.field_G[param0], 0);
+          discarded$1 = sd.a();
           var2 = sd.a(kb.a(field_w.length - 1, 16));
           var3 = field_M[var2] ? 1 : 0;
           if (var3 == 0) {
@@ -345,9 +343,7 @@ final class sd extends kd {
                 var17_int = var4 >> 1;
                 var18_int = var4 >> 2;
                 var19 = var4 >> 3;
-                var57 = field_t;
-                var53 = var57;
-                var49 = var53;
+                var49 = field_t;
                 var45 = var49;
                 var20_ref_float__ = var45;
                 var21_int = 0;
@@ -359,11 +355,11 @@ final class sd extends kd {
                       if (var41 >= var4) {
                         L14: {
                           if (var3 == 0) {
-                            stackOut_39_0 = (float[]) field_P;
+                            stackOut_39_0 = (float[]) (field_P);
                             stackIn_40_0 = stackOut_39_0;
                             break L14;
                           } else {
-                            stackOut_38_0 = (float[]) field_j;
+                            stackOut_38_0 = (float[]) (field_j);
                             stackIn_40_0 = stackOut_38_0;
                             break L14;
                           }
@@ -371,11 +367,11 @@ final class sd extends kd {
                         L15: {
                           var21 = stackIn_40_0;
                           if (var3 == 0) {
-                            stackOut_42_0 = (float[]) field_A;
+                            stackOut_42_0 = (float[]) (field_A);
                             stackIn_43_0 = stackOut_42_0;
                             break L15;
                           } else {
-                            stackOut_41_0 = (float[]) field_o;
+                            stackOut_41_0 = (float[]) (field_o);
                             stackIn_43_0 = stackOut_41_0;
                             break L15;
                           }
@@ -383,11 +379,11 @@ final class sd extends kd {
                         L16: {
                           var22 = stackIn_43_0;
                           if (var3 == 0) {
-                            stackOut_45_0 = (float[]) field_K;
+                            stackOut_45_0 = (float[]) (field_K);
                             stackIn_46_0 = stackOut_45_0;
                             break L16;
                           } else {
-                            stackOut_44_0 = (float[]) field_s;
+                            stackOut_44_0 = (float[]) (field_s);
                             stackIn_46_0 = stackOut_44_0;
                             break L16;
                           }
@@ -395,18 +391,16 @@ final class sd extends kd {
                         L17: {
                           var23 = stackIn_46_0;
                           if (var3 == 0) {
-                            stackOut_48_0 = (int[]) field_q;
+                            stackOut_48_0 = (int[]) (field_q);
                             stackIn_49_0 = stackOut_48_0;
                             break L17;
                           } else {
-                            stackOut_47_0 = (int[]) field_h;
+                            stackOut_47_0 = (int[]) (field_h);
                             stackIn_49_0 = stackOut_47_0;
                             break L17;
                           }
                         }
-                        var56 = stackIn_49_0;
-                        var52 = var56;
-                        var48 = var52;
+                        var48 = stackIn_49_0;
                         var44 = var48;
                         var24 = var44;
                         var25 = 0;
@@ -486,7 +480,7 @@ final class sd extends kd {
                                                               }
                                                             }
                                                           } else {
-                                                            var20_ref_float__[var4 - var18_int + var26] = -var57[var26];
+                                                            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
                                                             var26++;
                                                             continue L26;
                                                           }
@@ -531,7 +525,7 @@ final class sd extends kd {
                                           }
                                         }
                                       } else {
-                                        var27_int = var56[var26];
+                                        var27_int = var48[var26];
                                         if (var26 < var27_int) {
                                           var28_int = 8 * var26;
                                           var29_int = 8 * var27_int;
@@ -644,27 +638,25 @@ final class sd extends kd {
             }
             L35: {
               var17 = null;
-              if (((sd) this).field_i <= 0) {
+              if (this.field_i <= 0) {
                 break L35;
               } else {
                 L36: {
-                  var18_int = ((sd) this).field_i + var4 >> 2;
-                  var58 = new float[var18_int];
-                  var54 = var58;
-                  var50 = var54;
+                  var18_int = this.field_i + var4 >> 2;
+                  var50 = new float[var18_int];
                   var46 = var50;
                   var40 = var46;
-                  var17 = (Object) (Object) var40;
-                  if (((sd) this).field_H) {
+                  var17 = var40;
+                  if (this.field_H) {
                     break L36;
                   } else {
                     var19 = 0;
                     L37: while (true) {
-                      if (var19 >= ((sd) this).field_l) {
+                      if (var19 >= this.field_l) {
                         break L36;
                       } else {
-                        var20 = (((sd) this).field_i >> 1) + var19;
-                        var40[var19] = var40[var19] + ((sd) this).field_O[var20];
+                        var20 = (this.field_i >> 1) + var19;
+                        var40[var19] = var40[var19] + this.field_O[var20];
                         var19++;
                         continue L37;
                       }
@@ -679,7 +671,7 @@ final class sd extends kd {
                     if (var19 >= var4 >> 1) {
                       break L35;
                     } else {
-                      var20 = var58.length - (var4 >> 1) + var19;
+                      var20 = var50.length - (var4 >> 1) + var19;
                       var40[var20] = var40[var20] + field_t[var19];
                       var19++;
                       continue L38;
@@ -689,11 +681,11 @@ final class sd extends kd {
               }
             }
             L39: {
-              var18 = ((sd) this).field_O;
-              ((sd) this).field_O = field_t;
+              var18 = this.field_O;
+              this.field_O = field_t;
               field_t = var18;
-              ((sd) this).field_i = var4;
-              ((sd) this).field_l = var12 - (var4 >> 1);
+              this.field_i = var4;
+              this.field_l = var12 - (var4 >> 1);
               stackOut_108_0 = this;
               stackIn_110_0 = stackOut_108_0;
               stackIn_109_0 = stackOut_108_0;
@@ -711,12 +703,12 @@ final class sd extends kd {
                 break L39;
               }
             }
-            ((sd) this).field_H = stackIn_111_1 != 0;
-            return (float[]) var17;
+            ((sd) (this)).field_H = stackIn_111_1 != 0;
+            return (float[]) (var17);
           } else {
             var42 = field_v[var14.field_a[var17_int]];
-            var55 = field_t;
-            var42.a(var55, var4 >> 1, var16 != 0);
+            var52 = field_t;
+            var42.a(var52, var4 >> 1, var16 != 0);
             var17_int++;
             continue L9;
           }
@@ -724,8 +716,8 @@ final class sd extends kd {
     }
 
     final static int a(int param0) {
-        int var3 = 0;
         int var4 = 0;
+        int var3 = 0;
         int var1 = 0;
         int var2 = 0;
         while (param0 >= 8 - field_J) {
@@ -746,6 +738,9 @@ final class sd extends kd {
     }
 
     final static void b(byte[] param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -820,14 +815,14 @@ final class sd extends kd {
                                     return;
                                   } else {
                                     L7: {
-                                      stackOut_37_0 = (boolean[]) field_M;
+                                      stackOut_37_0 = (boolean[]) (field_M);
                                       stackOut_37_1 = var6;
                                       stackIn_39_0 = stackOut_37_0;
                                       stackIn_39_1 = stackOut_37_1;
                                       stackIn_38_0 = stackOut_37_0;
                                       stackIn_38_1 = stackOut_37_1;
                                       if (sd.a() == 0) {
-                                        stackOut_39_0 = (boolean[]) (Object) stackIn_39_0;
+                                        stackOut_39_0 = (boolean[]) ((Object) stackIn_39_0);
                                         stackOut_39_1 = stackIn_39_1;
                                         stackOut_39_2 = 0;
                                         stackIn_40_0 = stackOut_39_0;
@@ -835,7 +830,7 @@ final class sd extends kd {
                                         stackIn_40_2 = stackOut_39_2;
                                         break L7;
                                       } else {
-                                        stackOut_38_0 = (boolean[]) (Object) stackIn_38_0;
+                                        stackOut_38_0 = (boolean[]) ((Object) stackIn_38_0);
                                         stackOut_38_1 = stackIn_38_1;
                                         stackOut_38_2 = 1;
                                         stackIn_40_0 = stackOut_38_0;
@@ -845,8 +840,8 @@ final class sd extends kd {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = sd.a(16);
-                                    int discarded$4 = sd.a(16);
+                                    discarded$3 = sd.a(16);
+                                    discarded$4 = sd.a(16);
                                     field_w[var6] = sd.a(8);
                                     var6++;
                                     continue L6;
@@ -871,7 +866,7 @@ final class sd extends kd {
                       }
                     }
                   } else {
-                    int discarded$5 = sd.a(16);
+                    discarded$5 = sd.a(16);
                     var3++;
                     continue L2;
                   }
@@ -963,9 +958,10 @@ final class sd extends kd {
 
     final static sd a(sh param0, int param1, int param2) {
         try {
+            boolean discarded$0 = false;
             sd var4_ref = null;
             if (!sd.a(param0)) {
-                boolean discarded$0 = param0.a(param1, (byte) 78, param2);
+                discarded$0 = param0.a(param1, (byte) 78, param2);
                 return null;
             }
             byte[] var3 = param0.a(param1, -27493, param2);
@@ -973,8 +969,10 @@ final class sd extends kd {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new sd(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -985,14 +983,13 @@ final class sd extends kd {
     }
 
     final ke a(int[] param0) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         float[] var7 = null;
-        float[] var11 = null;
-        float[] var13 = null;
-        byte[] var14 = null;
+        byte[] var12 = null;
         L0: {
           if (param0 == null) {
             break L0;
@@ -1005,23 +1002,23 @@ final class sd extends kd {
           }
         }
         L1: {
-          if (((sd) this).field_C != null) {
+          if (this.field_C != null) {
             break L1;
           } else {
-            ((sd) this).field_i = 0;
-            ((sd) this).field_O = new float[field_F];
-            ((sd) this).field_C = new byte[((sd) this).field_z];
-            ((sd) this).field_u = 0;
-            ((sd) this).field_B = 0;
+            this.field_i = 0;
+            this.field_O = new float[field_F];
+            this.field_C = new byte[this.field_z];
+            this.field_u = 0;
+            this.field_B = 0;
             break L1;
           }
         }
         L2: while (true) {
-          if (((sd) this).field_B >= ((sd) this).field_G.length) {
-            ((sd) this).field_O = null;
-            var14 = ((sd) this).field_C;
-            ((sd) this).field_C = null;
-            return new ke(((sd) this).field_n, var14, ((sd) this).field_r, ((sd) this).field_I, ((sd) this).field_y);
+          if (this.field_B >= this.field_G.length) {
+            this.field_O = null;
+            var12 = this.field_C;
+            this.field_C = null;
+            return new ke(this.field_n, var12, this.field_r, this.field_I, this.field_y);
           } else {
             L3: {
               if (param0 == null) {
@@ -1035,19 +1032,17 @@ final class sd extends kd {
               }
             }
             L4: {
-              var13 = this.c(((sd) this).field_B);
-              var11 = var13;
-              var7 = var11;
+              var7 = this.c(this.field_B);
               if (var7 == null) {
                 break L4;
               } else {
                 L5: {
-                  var3 = ((sd) this).field_u;
-                  var4 = var13.length;
-                  if (var4 <= ((sd) this).field_z - var3) {
+                  var3 = this.field_u;
+                  var4 = var7.length;
+                  if (var4 <= this.field_z - var3) {
                     break L5;
                   } else {
-                    var4 = ((sd) this).field_z - var3;
+                    var4 = this.field_z - var3;
                     break L5;
                   }
                 }
@@ -1058,38 +1053,39 @@ final class sd extends kd {
                       if (param0 == null) {
                         break L7;
                       } else {
-                        param0[0] = param0[0] - (var3 - ((sd) this).field_u);
+                        param0[0] = param0[0] - (var3 - this.field_u);
                         break L7;
                       }
                     }
-                    ((sd) this).field_u = var3;
+                    this.field_u = var3;
                     break L4;
                   } else {
                     L8: {
-                      var6 = (int)(128.0f + var13[var5] * 128.0f);
+                      var6 = (int)(128.0f + var7[var5] * 128.0f);
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = ~var6 >> 31;
+                        var6 = (var6 ^ -1) >> 31;
                         break L8;
                       }
                     }
-                    int incrementValue$1 = var3;
+                    incrementValue$1 = var3;
                     var3++;
-                    ((sd) this).field_C[incrementValue$1] = (byte)(var6 - 128);
+                    this.field_C[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
                 }
               }
             }
-            ((sd) this).field_B = ((sd) this).field_B + 1;
+            this.field_B = this.field_B + 1;
             continue L2;
           }
         }
     }
 
     final ke c() {
+        int incrementValue$1 = 0;
         byte[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -1097,24 +1093,24 @@ final class sd extends kd {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ((sd) this).field_i = 0;
-        ((sd) this).field_O = new float[field_F];
-        var1 = new byte[((sd) this).field_z];
+        this.field_i = 0;
+        this.field_O = new float[field_F];
+        var1 = new byte[this.field_z];
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((sd) this).field_G.length) {
-            ((sd) this).field_O = null;
-            return new ke(((sd) this).field_n, var1, ((sd) this).field_r, ((sd) this).field_I, ((sd) this).field_y);
+          if (var3 >= this.field_G.length) {
+            this.field_O = null;
+            return new ke(this.field_n, var1, this.field_r, this.field_I, this.field_y);
           } else {
             var4 = this.c(var3);
             if (var4 != null) {
               L1: {
                 var5 = var4.length;
-                if (var5 <= ((sd) this).field_z - var2) {
+                if (var5 <= this.field_z - var2) {
                   break L1;
                 } else {
-                  var5 = ((sd) this).field_z - var2;
+                  var5 = this.field_z - var2;
                   break L1;
                 }
               }
@@ -1126,11 +1122,11 @@ final class sd extends kd {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = ~var7 >> 31;
+                      var7 = (var7 ^ -1) >> 31;
                       break L3;
                     }
                   }
-                  int incrementValue$1 = var2;
+                  incrementValue$1 = var2;
                   var2++;
                   var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
@@ -1180,10 +1176,6 @@ final class sd extends kd {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = false;
     }
 }

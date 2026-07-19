@@ -15,13 +15,23 @@ final class vi {
     }
 
     public static void a(int param0) {
-        field_e = null;
-        field_f = null;
-        field_a = null;
+        if (param0 != -25590) {
+          field_f = (cd) null;
+          field_e = null;
+          field_f = null;
+          field_a = null;
+          return;
+        } else {
+          field_e = null;
+          field_f = null;
+          field_a = null;
+          return;
+        }
     }
 
     final void a(byte param0, byte[] param1, be param2) {
         try {
+            int discarded$2 = 0;
             Exception exception = null;
             RuntimeException runtimeException = null;
             RuntimeException stackIn_15_0 = null;
@@ -38,6 +48,7 @@ final class vi {
             RuntimeException stackIn_20_0 = null;
             StringBuilder stackIn_20_1 = null;
             String stackIn_20_2 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             RuntimeException stackOut_14_0 = null;
             StringBuilder stackOut_14_1 = null;
@@ -61,10 +72,10 @@ final class vi {
                   if (param2.field_j[param2.field_k] != 31) {
                     break L1;
                   } else {
-                    if (param2.field_j[param2.field_k + 1] == -117) {
+                    if (116 == (param2.field_j[param2.field_k + 1] ^ -1)) {
                       L2: {
-                        if (((vi) this).field_b == null) {
-                          ((vi) this).field_b = new java.util.zip.Inflater(true);
+                        if (this.field_b == null) {
+                          this.field_b = new java.util.zip.Inflater(true);
                           break L2;
                         } else {
                           break L2;
@@ -72,21 +83,23 @@ final class vi {
                       }
                       try {
                         L3: {
-                          ((vi) this).field_b.setInput(param2.field_j, 10 + param2.field_k, -10 - (param2.field_k + (8 - param2.field_j.length)));
-                          int discarded$2 = ((vi) this).field_b.inflate(param1);
+                          this.field_b.setInput(param2.field_j, 10 + param2.field_k, -10 - (param2.field_k + (8 - param2.field_j.length)));
+                          discarded$2 = this.field_b.inflate(param1);
                           break L3;
                         }
                       } catch (java.lang.Exception decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
                         exception = (Exception) (Object) decompiledCaughtException;
-                        ((vi) this).field_b.reset();
+                        this.field_b.reset();
                         throw new RuntimeException("");
                       }
                       if (param0 >= 4) {
-                        ((vi) this).field_b.reset();
+                        this.field_b.reset();
+                        decompiledRegionSelector0 = 1;
                         break L0;
                       } else {
-                        return;
+                        decompiledRegionSelector0 = 0;
+                        break L0;
                       }
                     } else {
                       break L1;
@@ -99,23 +112,23 @@ final class vi {
               decompiledCaughtException = decompiledCaughtParameter1;
               L4: {
                 runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_14_0 = (RuntimeException) runtimeException;
+                stackOut_14_0 = (RuntimeException) (runtimeException);
                 stackOut_14_1 = new StringBuilder().append("vi.B(").append(param0).append(',');
                 stackIn_16_0 = stackOut_14_0;
                 stackIn_16_1 = stackOut_14_1;
                 stackIn_15_0 = stackOut_14_0;
                 stackIn_15_1 = stackOut_14_1;
                 if (param1 == null) {
-                  stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                  stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+                  stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+                  stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
                   stackOut_16_2 = "null";
                   stackIn_17_0 = stackOut_16_0;
                   stackIn_17_1 = stackOut_16_1;
                   stackIn_17_2 = stackOut_16_2;
                   break L4;
                 } else {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+                  stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
                   stackOut_15_2 = "{...}";
                   stackIn_17_0 = stackOut_15_0;
                   stackIn_17_1 = stackOut_15_1;
@@ -124,23 +137,23 @@ final class vi {
                 }
               }
               L5: {
-                stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+                stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
                 stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',');
                 stackIn_19_0 = stackOut_17_0;
                 stackIn_19_1 = stackOut_17_1;
                 stackIn_18_0 = stackOut_17_0;
                 stackIn_18_1 = stackOut_17_1;
                 if (param2 == null) {
-                  stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-                  stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+                  stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+                  stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
                   stackOut_19_2 = "null";
                   stackIn_20_0 = stackOut_19_0;
                   stackIn_20_1 = stackOut_19_1;
                   stackIn_20_2 = stackOut_19_2;
                   break L5;
                 } else {
-                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                  stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+                  stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
                   stackOut_18_2 = "{...}";
                   stackIn_20_0 = stackOut_18_0;
                   stackIn_20_1 = stackOut_18_1;
@@ -148,7 +161,12 @@ final class vi {
                   break L5;
                 }
               }
-              throw sl.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + ')');
+              throw sl.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
+            }
+            if (decompiledRegionSelector0 == 0) {
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -162,10 +180,6 @@ final class vi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new cd(1);
         field_e = "Invalid password.";
     }

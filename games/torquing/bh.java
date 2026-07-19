@@ -30,10 +30,6 @@ final class bh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = new ei();
     }
 }

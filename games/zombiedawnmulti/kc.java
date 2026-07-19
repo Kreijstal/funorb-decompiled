@@ -16,10 +16,6 @@ final class kc {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "kc.A(";
         field_a = 480;
         field_b = "This password contains your Player Name, and would be easy to guess";

@@ -10,6 +10,13 @@ final class cg extends gn {
     static pb field_H;
 
     final static String b(boolean param0) {
+        if (param0) {
+            field_F = -79;
+            if (null == kn.field_J) {
+                return "";
+            }
+            return kn.field_J;
+        }
         if (null == kn.field_J) {
             return "";
         }
@@ -17,15 +24,18 @@ final class cg extends gn {
     }
 
     public static void i(int param0) {
+        if (param0 != 100) {
+            return;
+        }
         field_H = null;
     }
 
     final int g(int param0) {
-        if (((cg) this).field_v) {
+        if (this.field_v) {
             return 0;
         }
         if (param0 >= -92) {
-            ((cg) this).field_C = -114;
+            this.field_C = -114;
             return 100;
         }
         return 100;
@@ -129,7 +139,7 @@ final class cg extends gn {
               }
             }
             L3: {
-              if (param2 != 2) {
+              if ((param2 ^ -1) != -3) {
                 break L3;
               } else {
                 var29 = eg.field_n;
@@ -156,7 +166,7 @@ final class cg extends gn {
               if (param0 == -13) {
                 break L4;
               } else {
-                field_H = null;
+                field_H = (pb) null;
                 break L4;
               }
             }
@@ -167,23 +177,23 @@ final class cg extends gn {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_0 = (RuntimeException) (var3);
             stackOut_11_1 = new StringBuilder().append("cg.A(").append(param0).append(',');
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
             stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "null";
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
               break L5;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "{...}";
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
@@ -191,25 +201,25 @@ final class cg extends gn {
               break L5;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ')');
         }
     }
 
     final byte[] h(int param0) {
-        Object var3 = null;
+        ak var3 = null;
         if (param0 == 0) {
-          if (((cg) this).field_v) {
+          if (this.field_v) {
             throw new RuntimeException();
           } else {
-            return ((cg) this).field_D;
+            return this.field_D;
           }
         } else {
-          var3 = null;
+          var3 = (ak) null;
           cg.a((byte) 66, (ak) null, -96);
-          if (((cg) this).field_v) {
+          if (this.field_v) {
             throw new RuntimeException();
           } else {
-            return ((cg) this).field_D;
+            return this.field_D;
           }
         }
     }
@@ -218,10 +228,6 @@ final class cg extends gn {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_F = 48;
     }
 }

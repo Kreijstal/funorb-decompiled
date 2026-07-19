@@ -12,9 +12,9 @@ public class lh {
     private static Hashtable field_b;
 
     public static File a(String param0, int param1) {
-        Object var3 = null;
+        String var3 = null;
         if (param1 > -77) {
-          var3 = null;
+          var3 = (String) null;
           lh.a(-79, (String) null, -22);
           return lh.a(field_c, 6234, param0, field_a);
         } else {
@@ -32,7 +32,7 @@ public class lh {
 
     public static void a(int param0, String param1, int param2) {
         Exception var3 = null;
-        Object var4 = null;
+        String var4 = null;
         Throwable decompiledCaughtException = null;
         field_a = param2;
         field_c = param1;
@@ -50,7 +50,7 @@ public class lh {
             if (param0 < -87) {
               break L0;
             } else {
-              var4 = null;
+              var4 = (String) null;
               lh.a(-52, (String) null, -39);
               if (null != field_e) {
                 field_d = true;
@@ -80,10 +80,6 @@ public class lh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = false;
         field_b = new Hashtable(16);
     }

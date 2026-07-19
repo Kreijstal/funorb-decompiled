@@ -11,6 +11,9 @@ final class an {
     public static void a(byte param0) {
         field_d = null;
         field_a = null;
+        if (param0 >= -103) {
+            return;
+        }
         field_b = null;
     }
 
@@ -24,7 +27,7 @@ final class an {
           L0: {
             lf.field_S = param0;
             ka.field_a.a(lf.field_S * 64 / 80, (byte) -100);
-            var2 = (tn) (Object) ef.field_n.g(-18110);
+            var2 = (tn) ((Object) ef.field_n.g(-18110));
             L1: while (true) {
               if (var2 == null) {
                 if (param1 >= 80) {
@@ -43,7 +46,7 @@ final class an {
                     break L2;
                   }
                 }
-                var2 = (tn) (Object) ef.field_n.a((byte) -119);
+                var2 = (tn) ((Object) ef.field_n.a((byte) -119));
                 continue L1;
               }
             }
@@ -51,15 +54,11 @@ final class an {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var2_ref, "an.A(" + param0 + ',' + param1 + ')');
+          throw fk.a((Throwable) ((Object) var2_ref), "an.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_d = "To play a multiplayer game, please log in or create a free account.";
         field_c = false;
         field_b = new hg(6, 0, 4, 2);

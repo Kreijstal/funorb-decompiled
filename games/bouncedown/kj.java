@@ -7,22 +7,21 @@ final class kj extends ai {
     static int field_i;
 
     public static void a(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_g = null;
     }
 
     kj(byte[] param0) {
         try {
-            ((kj) this).field_h = param0;
+            this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = "More suggestions";
     }
 }

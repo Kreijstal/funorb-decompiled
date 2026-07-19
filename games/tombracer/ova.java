@@ -7,6 +7,9 @@ final class ova extends me {
 
     public static void d(byte param0) {
         field_k = null;
+        if (param0 > -35) {
+            return;
+        }
         field_j = null;
     }
 
@@ -29,9 +32,9 @@ final class ova extends me {
           tp.a(200, (byte) -85, var3, 5242880, 2, 160, 240);
           oka.a("Room Completed", var2, eda.field_f, -1, var3 + 40, 320, 0);
           var4 = 240;
-          var5 = ((ova) this).field_g.field_G[0].field_b[0];
+          var5 = this.field_g.field_G[0].field_b[0];
           var4 += 20;
-          oka.a("Total Time: " + dea.a(((ova) this).field_g.field_G[0].field_c, (byte) -8), var2, kn.field_p, -1, var4, 320, 0);
+          oka.a("Total Time: " + dea.a(this.field_g.field_G[0].field_c, (byte) -8), var2, kn.field_p, -1, var4, 320, 0);
           var4 += 20;
           oka.a("Deaths: " + var5.v(0), var2, kn.field_p, -1, var4, 320, 0);
           return;
@@ -39,12 +42,17 @@ final class ova extends me {
     }
 
     final static int a(int param0, int param1, boolean param2, int param3, int param4) {
-        return et.b(param1, param0, -81) - iia.d(param3, param4, 2);
+        if (!param2) {
+          field_j = (String) null;
+          return et.b(param1, param0, -81) - iia.d(param3, param4, 2);
+        } else {
+          return et.b(param1, param0, -81) - iia.d(param3, param4, 2);
+        }
     }
 
     final void a(byte param0) {
         if (param0 > -107) {
-            Object var3 = null;
+            lu var3 = (lu) null;
             ova.a((byte) 21, true, 36, (lu) null, true);
         }
     }
@@ -76,29 +84,30 @@ final class ova extends me {
         int var5_int = 0;
         int var6 = 0;
         String var7 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
         RuntimeException stackOut_26_0 = null;
         StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
         try {
           L0: {
             qi.field_K[0] = lpa.field_p.nextInt();
             qi.field_K[1] = lpa.field_p.nextInt();
             jg.field_a.field_h = 0;
             qi.field_K[3] = (int)ra.field_L;
-            qi.field_K[2] = (int)(ra.field_L >> 32);
+            qi.field_K[2] = (int)(ra.field_L >> -1919320224);
             jg.field_a.a(qi.field_K[0], (byte) 80);
             jg.field_a.a(qi.field_K[1], (byte) 124);
             jg.field_a.a(qi.field_K[2], (byte) -28);
@@ -114,7 +123,12 @@ final class ova extends me {
                   break L1;
                 } else {
                   ql.field_k.i(18, 0);
-                  break L1;
+                  if (!TombRacer.field_G) {
+                    break L1;
+                  } else {
+                    ql.field_k.i(16, 0);
+                    break L1;
+                  }
                 }
               }
               L2: {
@@ -173,51 +187,54 @@ final class ova extends me {
                   break L7;
                 }
               }
-              bna.a(oca.field_a, false, c.field_f, (uia) (Object) ql.field_k, jg.field_a);
+              bna.a(oca.field_a, false, c.field_f, ql.field_k, jg.field_a);
               ql.field_k.b(ql.field_k.field_h - var5_int, (byte) 114);
               bl.a(-1, -1);
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var5;
-            stackOut_24_1 = new StringBuilder().append("ova.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackOut_26_0 = (RuntimeException) (var5);
+            stackOut_26_1 = new StringBuilder().append("ova.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+            stackIn_28_0 = stackOut_26_0;
+            stackIn_28_1 = stackOut_26_1;
+            stackIn_27_0 = stackOut_26_0;
+            stackIn_27_1 = stackOut_26_1;
             if (param3 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
+              stackOut_28_2 = "null";
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              stackIn_29_2 = stackOut_28_2;
               break L8;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
+              stackOut_27_2 = "{...}";
+              stackIn_29_0 = stackOut_27_0;
+              stackIn_29_1 = stackOut_27_1;
+              stackIn_29_2 = stackOut_27_2;
               break L8;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "This game option has not yet been unlocked for use.";
         field_k = "Who can join";
     }

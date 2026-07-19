@@ -15,12 +15,12 @@ final class vc {
         int var3 = 0;
         java.awt.DisplayMode[] var4 = this.field_a.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << 2];
+        int[] var2 = new int[var4.length << -328200030];
         for (var3 = 0; var3 < var4.length; var3++) {
-            var2[var3 << 2] = var4[var3].getWidth();
-            var2[(var3 << 2) + 1] = var4[var3].getHeight();
-            var2[2 + (var3 << 2)] = var4[var3].getBitDepth();
-            var2[3 + (var3 << 2)] = var4[var3].getRefreshRate();
+            var2[var3 << -1813773502] = var4[var3].getWidth();
+            var2[(var3 << 373556130) + 1] = var4[var3].getHeight();
+            var2[2 + (var3 << 840954370)] = var4[var3].getBitDepth();
+            var2[3 + (var3 << 975549314)] = var4[var3].getRefreshRate();
         }
         return var2;
     }
@@ -39,7 +39,7 @@ final class vc {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
             this.a(param0, 127);
-            if (param4 != 0) {
+            if (-1 != (param4 ^ -1)) {
               break L0;
             } else {
               var6 = this.field_b.getRefreshRate();

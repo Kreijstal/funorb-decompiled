@@ -40,6 +40,7 @@ final class jp extends ne {
     private static float[] field_J;
 
     final va c() {
+        int incrementValue$1 = 0;
         byte[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -47,24 +48,24 @@ final class jp extends ne {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ((jp) this).field_M = 0;
-        ((jp) this).field_t = new float[field_K];
-        var1 = new byte[((jp) this).field_m];
+        this.field_M = 0;
+        this.field_t = new float[field_K];
+        var1 = new byte[this.field_m];
         var2 = 0;
         var3 = 0;
         L0: while (true) {
-          if (var3 >= ((jp) this).field_L.length) {
-            ((jp) this).field_t = null;
-            return new va(((jp) this).field_C, var1, ((jp) this).field_r, ((jp) this).field_G, ((jp) this).field_z);
+          if (var3 >= this.field_L.length) {
+            this.field_t = null;
+            return new va(this.field_C, var1, this.field_r, this.field_G, this.field_z);
           } else {
             var4 = this.e(var3);
             if (var4 != null) {
               L1: {
                 var5 = var4.length;
-                if (var5 <= ((jp) this).field_m - var2) {
+                if (var5 <= this.field_m - var2) {
                   break L1;
                 } else {
-                  var5 = ((jp) this).field_m - var2;
+                  var5 = this.field_m - var2;
                   break L1;
                 }
               }
@@ -76,11 +77,11 @@ final class jp extends ne {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = ~var7 >> 31;
+                      var7 = (var7 ^ -1) >> 31;
                       break L3;
                     }
                   }
-                  int incrementValue$1 = var2;
+                  incrementValue$1 = var2;
                   var2++;
                   var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
@@ -99,6 +100,7 @@ final class jp extends ne {
     }
 
     private final float[] e(int param0) {
+        int discarded$1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -158,13 +160,7 @@ final class jp extends ne {
         int[] var48 = null;
         float[] var49 = null;
         float[] var50 = null;
-        int[] var52 = null;
-        float[] var53 = null;
-        float[] var54 = null;
-        float[] var55 = null;
-        int[] var56 = null;
-        float[] var57 = null;
-        float[] var58 = null;
+        float[] var52 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -199,8 +195,8 @@ final class jp extends ne {
         Object stackOut_109_0 = null;
         int stackOut_109_1 = 0;
         L0: {
-          jp.a(((jp) this).field_L[param0], 0);
-          int discarded$1 = jp.b();
+          jp.a(this.field_L[param0], 0);
+          discarded$1 = jp.b();
           var2 = jp.a(ue.a(field_I.length - 1, -715));
           var3 = field_N[var2] ? 1 : 0;
           if (var3 == 0) {
@@ -322,9 +318,7 @@ final class jp extends ne {
                 var17_int = var4 >> 1;
                 var18_int = var4 >> 2;
                 var19 = var4 >> 3;
-                var57 = field_p;
-                var53 = var57;
-                var49 = var53;
+                var49 = field_p;
                 var45 = var49;
                 var20_ref_float__ = var45;
                 var21_int = 0;
@@ -336,11 +330,11 @@ final class jp extends ne {
                       if (var41 >= var4) {
                         L14: {
                           if (var3 == 0) {
-                            stackOut_39_0 = (float[]) field_j;
+                            stackOut_39_0 = (float[]) (field_j);
                             stackIn_40_0 = stackOut_39_0;
                             break L14;
                           } else {
-                            stackOut_38_0 = (float[]) field_O;
+                            stackOut_38_0 = (float[]) (field_O);
                             stackIn_40_0 = stackOut_38_0;
                             break L14;
                           }
@@ -348,11 +342,11 @@ final class jp extends ne {
                         L15: {
                           var21 = stackIn_40_0;
                           if (var3 == 0) {
-                            stackOut_42_0 = (float[]) field_J;
+                            stackOut_42_0 = (float[]) (field_J);
                             stackIn_43_0 = stackOut_42_0;
                             break L15;
                           } else {
-                            stackOut_41_0 = (float[]) field_E;
+                            stackOut_41_0 = (float[]) (field_E);
                             stackIn_43_0 = stackOut_41_0;
                             break L15;
                           }
@@ -360,11 +354,11 @@ final class jp extends ne {
                         L16: {
                           var22 = stackIn_43_0;
                           if (var3 == 0) {
-                            stackOut_45_0 = (float[]) field_B;
+                            stackOut_45_0 = (float[]) (field_B);
                             stackIn_46_0 = stackOut_45_0;
                             break L16;
                           } else {
-                            stackOut_44_0 = (float[]) field_H;
+                            stackOut_44_0 = (float[]) (field_H);
                             stackIn_46_0 = stackOut_44_0;
                             break L16;
                           }
@@ -372,18 +366,16 @@ final class jp extends ne {
                         L17: {
                           var23 = stackIn_46_0;
                           if (var3 == 0) {
-                            stackOut_48_0 = (int[]) field_D;
+                            stackOut_48_0 = (int[]) (field_D);
                             stackIn_49_0 = stackOut_48_0;
                             break L17;
                           } else {
-                            stackOut_47_0 = (int[]) field_l;
+                            stackOut_47_0 = (int[]) (field_l);
                             stackIn_49_0 = stackOut_47_0;
                             break L17;
                           }
                         }
-                        var56 = stackIn_49_0;
-                        var52 = var56;
-                        var48 = var52;
+                        var48 = stackIn_49_0;
                         var44 = var48;
                         var24 = var44;
                         var25 = 0;
@@ -463,7 +455,7 @@ final class jp extends ne {
                                                               }
                                                             }
                                                           } else {
-                                                            var20_ref_float__[var4 - var18_int + var26] = -var57[var26];
+                                                            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
                                                             var26++;
                                                             continue L26;
                                                           }
@@ -508,7 +500,7 @@ final class jp extends ne {
                                           }
                                         }
                                       } else {
-                                        var27_int = var56[var26];
+                                        var27_int = var48[var26];
                                         if (var26 < var27_int) {
                                           var28_int = 8 * var26;
                                           var29_int = 8 * var27_int;
@@ -621,27 +613,25 @@ final class jp extends ne {
             }
             L35: {
               var17 = null;
-              if (((jp) this).field_M <= 0) {
+              if (this.field_M <= 0) {
                 break L35;
               } else {
                 L36: {
-                  var18_int = ((jp) this).field_M + var4 >> 2;
-                  var58 = new float[var18_int];
-                  var54 = var58;
-                  var50 = var54;
+                  var18_int = this.field_M + var4 >> 2;
+                  var50 = new float[var18_int];
                   var46 = var50;
                   var40 = var46;
-                  var17 = (Object) (Object) var40;
-                  if (((jp) this).field_v) {
+                  var17 = var40;
+                  if (this.field_v) {
                     break L36;
                   } else {
                     var19 = 0;
                     L37: while (true) {
-                      if (var19 >= ((jp) this).field_o) {
+                      if (var19 >= this.field_o) {
                         break L36;
                       } else {
-                        var20 = (((jp) this).field_M >> 1) + var19;
-                        var40[var19] = var40[var19] + ((jp) this).field_t[var20];
+                        var20 = (this.field_M >> 1) + var19;
+                        var40[var19] = var40[var19] + this.field_t[var20];
                         var19++;
                         continue L37;
                       }
@@ -656,7 +646,7 @@ final class jp extends ne {
                     if (var19 >= var4 >> 1) {
                       break L35;
                     } else {
-                      var20 = var58.length - (var4 >> 1) + var19;
+                      var20 = var50.length - (var4 >> 1) + var19;
                       var40[var20] = var40[var20] + field_p[var19];
                       var19++;
                       continue L38;
@@ -666,11 +656,11 @@ final class jp extends ne {
               }
             }
             L39: {
-              var18 = ((jp) this).field_t;
-              ((jp) this).field_t = field_p;
+              var18 = this.field_t;
+              this.field_t = field_p;
               field_p = var18;
-              ((jp) this).field_M = var4;
-              ((jp) this).field_o = var12 - (var4 >> 1);
+              this.field_M = var4;
+              this.field_o = var12 - (var4 >> 1);
               stackOut_108_0 = this;
               stackIn_110_0 = stackOut_108_0;
               stackIn_109_0 = stackOut_108_0;
@@ -688,12 +678,12 @@ final class jp extends ne {
                 break L39;
               }
             }
-            ((jp) this).field_v = stackIn_111_1 != 0;
-            return (float[]) var17;
+            ((jp) (this)).field_v = stackIn_111_1 != 0;
+            return (float[]) (var17);
           } else {
             var42 = field_n[var14.field_b[var17_int]];
-            var55 = field_p;
-            var42.a(var55, var4 >> 1, var16 != 0);
+            var52 = field_p;
+            var42.a(var52, var4 >> 1, var16 != 0);
             var17_int++;
             continue L9;
           }
@@ -702,9 +692,10 @@ final class jp extends ne {
 
     final static jp a(nh param0, int param1, int param2) {
         try {
+            boolean discarded$0 = false;
             jp var4_ref = null;
             if (!jp.a(param0)) {
-                boolean discarded$0 = param0.a(param2, 2, param1);
+                discarded$0 = param0.a(param2, 2, param1);
                 return null;
             }
             byte[] var3 = param0.b(5, param1, param2);
@@ -712,8 +703,10 @@ final class jp extends ne {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new jp(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -733,9 +726,10 @@ final class jp extends ne {
 
     final static jp a(nh param0, String param1, String param2) {
         try {
+            boolean discarded$0 = false;
             jp var4_ref = null;
             if (!jp.a(param0)) {
-                boolean discarded$0 = param0.a(-13703, param2, param1);
+                discarded$0 = param0.a(-13703, param2, param1);
                 return null;
             }
             byte[] var3 = param0.a(param1, param2, (byte) -110);
@@ -743,8 +737,10 @@ final class jp extends ne {
                 return null;
             }
             Object var4 = null;
-            {
+            try {
                 var4_ref = new jp(var3);
+            } catch (IOException iOException) {
+                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -796,8 +792,8 @@ final class jp extends ne {
     }
 
     final static int a(int param0) {
-        int var3 = 0;
         int var4 = 0;
+        int var3 = 0;
         int var1 = 0;
         int var2 = 0;
         while (param0 >= 8 - field_F) {
@@ -818,6 +814,9 @@ final class jp extends ne {
     }
 
     final static void a(byte[] param0) {
+        int discarded$3 = 0;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -892,14 +891,14 @@ final class jp extends ne {
                                     return;
                                   } else {
                                     L7: {
-                                      stackOut_37_0 = (boolean[]) field_N;
+                                      stackOut_37_0 = (boolean[]) (field_N);
                                       stackOut_37_1 = var6;
                                       stackIn_39_0 = stackOut_37_0;
                                       stackIn_39_1 = stackOut_37_1;
                                       stackIn_38_0 = stackOut_37_0;
                                       stackIn_38_1 = stackOut_37_1;
                                       if (jp.b() == 0) {
-                                        stackOut_39_0 = (boolean[]) (Object) stackIn_39_0;
+                                        stackOut_39_0 = (boolean[]) ((Object) stackIn_39_0);
                                         stackOut_39_1 = stackIn_39_1;
                                         stackOut_39_2 = 0;
                                         stackIn_40_0 = stackOut_39_0;
@@ -907,7 +906,7 @@ final class jp extends ne {
                                         stackIn_40_2 = stackOut_39_2;
                                         break L7;
                                       } else {
-                                        stackOut_38_0 = (boolean[]) (Object) stackIn_38_0;
+                                        stackOut_38_0 = (boolean[]) ((Object) stackIn_38_0);
                                         stackOut_38_1 = stackIn_38_1;
                                         stackOut_38_2 = 1;
                                         stackIn_40_0 = stackOut_38_0;
@@ -917,8 +916,8 @@ final class jp extends ne {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = jp.a(16);
-                                    int discarded$4 = jp.a(16);
+                                    discarded$3 = jp.a(16);
+                                    discarded$4 = jp.a(16);
                                     field_I[var6] = jp.a(8);
                                     var6++;
                                     continue L6;
@@ -943,7 +942,7 @@ final class jp extends ne {
                       }
                     }
                   } else {
-                    int discarded$5 = jp.a(16);
+                    discarded$5 = jp.a(16);
                     var3++;
                     continue L2;
                   }
@@ -1035,7 +1034,7 @@ final class jp extends ne {
 
     private final static void a(byte[] param0, int param1) {
         field_s = param0;
-        field_P = 0;
+        field_P = param1;
         field_F = 0;
     }
 
@@ -1045,19 +1044,19 @@ final class jp extends ne {
         int var6_int = 0;
         byte[] var6 = null;
         ec var2 = new ec(param0);
-        ((jp) this).field_C = var2.h(-45);
-        ((jp) this).field_m = var2.h(-48);
-        ((jp) this).field_r = var2.h(-34);
-        ((jp) this).field_G = var2.h(-42);
-        if (((jp) this).field_G < 0) {
-            ((jp) this).field_G = ~((jp) this).field_G;
-            ((jp) this).field_z = true;
+        this.field_C = var2.h(-45);
+        this.field_m = var2.h(-48);
+        this.field_r = var2.h(-34);
+        this.field_G = var2.h(-42);
+        if (this.field_G < 0) {
+            this.field_G = this.field_G ^ -1;
+            this.field_z = true;
         }
         int var3 = var2.h(-125);
         if (var3 < 0) {
             throw new IOException();
         }
-        ((jp) this).field_L = new byte[var3][];
+        this.field_L = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
             var5 = 0;
             do {
@@ -1066,19 +1065,18 @@ final class jp extends ne {
             } while (var6_int >= 255);
             var6 = new byte[var5];
             var2.a((byte) -88, 0, var5, var6);
-            ((jp) this).field_L[var4] = var6;
+            this.field_L[var4] = var6;
         }
     }
 
     final va a(int[] param0) {
+        int incrementValue$1 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         float[] var7 = null;
-        float[] var11 = null;
-        float[] var13 = null;
-        byte[] var14 = null;
+        byte[] var12 = null;
         L0: {
           if (param0 == null) {
             break L0;
@@ -1091,23 +1089,23 @@ final class jp extends ne {
           }
         }
         L1: {
-          if (((jp) this).field_w != null) {
+          if (this.field_w != null) {
             break L1;
           } else {
-            ((jp) this).field_M = 0;
-            ((jp) this).field_t = new float[field_K];
-            ((jp) this).field_w = new byte[((jp) this).field_m];
-            ((jp) this).field_k = 0;
-            ((jp) this).field_u = 0;
+            this.field_M = 0;
+            this.field_t = new float[field_K];
+            this.field_w = new byte[this.field_m];
+            this.field_k = 0;
+            this.field_u = 0;
             break L1;
           }
         }
         L2: while (true) {
-          if (((jp) this).field_u >= ((jp) this).field_L.length) {
-            ((jp) this).field_t = null;
-            var14 = ((jp) this).field_w;
-            ((jp) this).field_w = null;
-            return new va(((jp) this).field_C, var14, ((jp) this).field_r, ((jp) this).field_G, ((jp) this).field_z);
+          if (this.field_u >= this.field_L.length) {
+            this.field_t = null;
+            var12 = this.field_w;
+            this.field_w = null;
+            return new va(this.field_C, var12, this.field_r, this.field_G, this.field_z);
           } else {
             L3: {
               if (param0 == null) {
@@ -1121,19 +1119,17 @@ final class jp extends ne {
               }
             }
             L4: {
-              var13 = this.e(((jp) this).field_u);
-              var11 = var13;
-              var7 = var11;
+              var7 = this.e(this.field_u);
               if (var7 == null) {
                 break L4;
               } else {
                 L5: {
-                  var3 = ((jp) this).field_k;
-                  var4 = var13.length;
-                  if (var4 <= ((jp) this).field_m - var3) {
+                  var3 = this.field_k;
+                  var4 = var7.length;
+                  if (var4 <= this.field_m - var3) {
                     break L5;
                   } else {
-                    var4 = ((jp) this).field_m - var3;
+                    var4 = this.field_m - var3;
                     break L5;
                   }
                 }
@@ -1144,32 +1140,32 @@ final class jp extends ne {
                       if (param0 == null) {
                         break L7;
                       } else {
-                        param0[0] = param0[0] - (var3 - ((jp) this).field_k);
+                        param0[0] = param0[0] - (var3 - this.field_k);
                         break L7;
                       }
                     }
-                    ((jp) this).field_k = var3;
+                    this.field_k = var3;
                     break L4;
                   } else {
                     L8: {
-                      var6 = (int)(128.0f + var13[var5] * 128.0f);
+                      var6 = (int)(128.0f + var7[var5] * 128.0f);
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = ~var6 >> 31;
+                        var6 = (var6 ^ -1) >> 31;
                         break L8;
                       }
                     }
-                    int incrementValue$1 = var3;
+                    incrementValue$1 = var3;
                     var3++;
-                    ((jp) this).field_w[incrementValue$1] = (byte)(var6 - 128);
+                    this.field_w[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
                 }
               }
             }
-            ((jp) this).field_u = ((jp) this).field_u + 1;
+            this.field_u = this.field_u + 1;
             continue L2;
           }
         }
@@ -1180,10 +1176,6 @@ final class jp extends ne {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_y = false;
     }
 }

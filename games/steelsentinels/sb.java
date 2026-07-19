@@ -33,18 +33,18 @@ final class sb extends oa {
     sb(String param0, tn param1, boolean param2) {
         this(param0, param1);
         try {
-            ((sb) this).field_T = param2 ? true : false;
+            this.field_T = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private sb(String param0, qk param1, tn param2) {
         super(param0, param1, param2);
         try {
-            ((sb) this).field_p = ad.field_j.field_x;
+            this.field_p = ad.field_j.field_x;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class sb extends oa {
           stackOut_0_0 = this;
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
-          if (((sb) this).field_T) {
+          if (this.field_T) {
             stackOut_2_0 = this;
             stackOut_2_1 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -76,10 +76,10 @@ final class sb extends oa {
             break L0;
           }
         }
-        ((sb) this).field_T = stackIn_3_1 != 0;
+        ((sb) (this)).field_T = stackIn_3_1 != 0;
         super.b(param0, (byte) -127, param2, param3);
         if (param1 >= -122) {
-          ((sb) this).b(-25, (byte) 43, -53, 29);
+          this.b(-25, (byte) 43, -53, 29);
           return;
         } else {
           return;
@@ -87,24 +87,20 @@ final class sb extends oa {
     }
 
     final static void a(boolean param0) {
-        nn.a(false);
+        nn.a(param0);
         fg.a(10, db.field_b, dh.field_y[0].field_z, da.field_g, ua.field_G, te.field_b);
     }
 
     private sb(String param0, tn param1) {
         this(param0, ad.field_j.field_f, param1);
         try {
-            ((sb) this).field_p = ad.field_j.field_x;
+            this.field_p = ad.field_j.field_x;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_V = new int[8192];
     }
 }

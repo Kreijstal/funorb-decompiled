@@ -80,12 +80,12 @@ final class pwa implements ntb {
         try {
           L0: {
             L1: {
-              var5 = (pwa) (Object) param0;
-              if (null == ((pwa) this).field_e) {
+              var5 = (pwa) ((Object) param0);
+              if (null == this.field_e) {
                 break L1;
               } else {
                 if (var5.field_e != null) {
-                  ((pwa) this).field_e.a((tv) (Object) var5.field_e, -63);
+                  this.field_e.a(var5.field_e, -63);
                   break L1;
                 } else {
                   break L1;
@@ -93,11 +93,11 @@ final class pwa implements ntb {
               }
             }
             L2: {
-              if (((pwa) this).field_d == null) {
+              if (this.field_d == null) {
                 break L2;
               } else {
                 if (var5.field_d != null) {
-                  ((pwa) this).field_d.a((tv) (Object) var5.field_d, -125);
+                  this.field_d.a(var5.field_d, -125);
                   break L2;
                 } else {
                   break L2;
@@ -105,20 +105,20 @@ final class pwa implements ntb {
               }
             }
             L3: {
-              if (((pwa) this).field_f == null) {
+              if (this.field_f == null) {
                 break L3;
               } else {
                 if (var5.field_f == null) {
                   break L3;
                 } else {
-                  ((pwa) this).field_f.a((tv) (Object) var5.field_f, -39);
+                  this.field_f.a(var5.field_f, -39);
                   break L3;
                 }
               }
             }
             L4: {
               var4 = 0;
-              if (((pwa) this).field_e != null) {
+              if (this.field_e != null) {
                 stackOut_13_0 = 0;
                 stackIn_14_0 = stackOut_13_0;
                 break L4;
@@ -151,10 +151,10 @@ final class pwa implements ntb {
                 if ((stackIn_17_0 ^ stackIn_17_1) != 0) {
                   break L7;
                 } else {
-                  if (null == ((pwa) this).field_e) {
+                  if (null == this.field_e) {
                     break L6;
                   } else {
-                    if (((pwa) this).field_e.a((byte) 115, (tv) (Object) var5.field_e)) {
+                    if (this.field_e.a((byte) 115, var5.field_e)) {
                       break L7;
                     } else {
                       break L6;
@@ -162,12 +162,12 @@ final class pwa implements ntb {
                   }
                 }
               }
-              iva.a(-6940, "PlayerJoin join has changed. before=" + (Object) (Object) var5.field_e + ", now=" + (Object) (Object) ((pwa) this).field_e);
+              iva.a(-6940, "PlayerJoin join has changed. before=" + var5.field_e + ", now=" + this.field_e);
               var4 = 1;
               break L6;
             }
             L8: {
-              if (((pwa) this).field_d != null) {
+              if (this.field_d != null) {
                 stackOut_24_0 = 0;
                 stackIn_25_0 = stackOut_24_0;
                 break L8;
@@ -200,10 +200,10 @@ final class pwa implements ntb {
                 if ((stackIn_28_0 ^ stackIn_28_1) != 0) {
                   break L11;
                 } else {
-                  if (((pwa) this).field_d == null) {
+                  if (this.field_d == null) {
                     break L10;
                   } else {
-                    if (!((pwa) this).field_d.a((byte) -51, (tv) (Object) var5.field_d)) {
+                    if (!this.field_d.a((byte) -51, var5.field_d)) {
                       break L10;
                     } else {
                       break L11;
@@ -211,12 +211,12 @@ final class pwa implements ntb {
                   }
                 }
               }
-              iva.a(-6940, "PlayerLeave leave has changed. before=" + (Object) (Object) var5.field_d + ", now=" + (Object) (Object) ((pwa) this).field_d);
+              iva.a(-6940, "PlayerLeave leave has changed. before=" + var5.field_d + ", now=" + this.field_d);
               var4 = 1;
               break L10;
             }
             L12: {
-              if (((pwa) this).field_f != null) {
+              if (this.field_f != null) {
                 stackOut_35_0 = 0;
                 stackIn_36_0 = stackOut_35_0;
                 break L12;
@@ -249,10 +249,10 @@ final class pwa implements ntb {
                 if ((stackIn_39_0 ^ stackIn_39_1) != 0) {
                   break L15;
                 } else {
-                  if (((pwa) this).field_f == null) {
+                  if (this.field_f == null) {
                     break L14;
                   } else {
-                    if (!((pwa) this).field_f.a((byte) -121, (tv) (Object) var5.field_f)) {
+                    if (!this.field_f.a((byte) -121, var5.field_f)) {
                       break L14;
                     } else {
                       break L15;
@@ -261,11 +261,11 @@ final class pwa implements ntb {
                 }
               }
               var4 = 1;
-              iva.a(-6940, "PlayerReady ready has changed. before=" + (Object) (Object) var5.field_f + ", now=" + (Object) (Object) ((pwa) this).field_f);
+              iva.a(-6940, "PlayerReady ready has changed. before=" + var5.field_f + ", now=" + this.field_f);
               break L14;
             }
             L16: {
-              if (((pwa) this).field_c) {
+              if (this.field_c) {
                 stackOut_46_0 = 0;
                 stackIn_47_0 = stackOut_46_0;
                 break L16;
@@ -297,7 +297,7 @@ final class pwa implements ntb {
               if (stackIn_50_0 == stackIn_50_1) {
                 break L18;
               } else {
-                iva.a(-6940, "boolean event_cancellation has changed. before=" + var5.field_c + ", now=" + ((pwa) this).field_c);
+                iva.a(-6940, "boolean event_cancellation has changed. before=" + var5.field_c + ", now=" + this.field_c);
                 var4 = 1;
                 break L18;
               }
@@ -313,7 +313,7 @@ final class pwa implements ntb {
             if (param1 <= -19) {
               break L0;
             } else {
-              ((pwa) this).field_e = null;
+              this.field_e = (gqa) null;
               return;
             }
           }
@@ -321,23 +321,23 @@ final class pwa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L20: {
             var3 = decompiledCaughtException;
-            stackOut_58_0 = (RuntimeException) var3;
+            stackOut_58_0 = (RuntimeException) (var3);
             stackOut_58_1 = new StringBuilder().append("pwa.F(");
             stackIn_60_0 = stackOut_58_0;
             stackIn_60_1 = stackOut_58_1;
             stackIn_59_0 = stackOut_58_0;
             stackIn_59_1 = stackOut_58_1;
             if (param0 == null) {
-              stackOut_60_0 = (RuntimeException) (Object) stackIn_60_0;
-              stackOut_60_1 = (StringBuilder) (Object) stackIn_60_1;
+              stackOut_60_0 = (RuntimeException) ((Object) stackIn_60_0);
+              stackOut_60_1 = (StringBuilder) ((Object) stackIn_60_1);
               stackOut_60_2 = "null";
               stackIn_61_0 = stackOut_60_0;
               stackIn_61_1 = stackOut_60_1;
               stackIn_61_2 = stackOut_60_2;
               break L20;
             } else {
-              stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
-              stackOut_59_1 = (StringBuilder) (Object) stackIn_59_1;
+              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
+              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
               stackOut_59_2 = "{...}";
               stackIn_61_0 = stackOut_59_0;
               stackIn_61_1 = stackOut_59_1;
@@ -345,11 +345,13 @@ final class pwa implements ntb {
               break L20;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_61_0, stackIn_61_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_61_0), stackIn_61_2 + ',' + param1 + ')');
         }
     }
 
     public final void b(faa param0, int param1) {
+        boolean discarded$10 = false;
+        String discarded$11 = null;
         RuntimeException var3 = null;
         faa stackIn_1_0 = null;
         int stackIn_1_1 = 0;
@@ -415,14 +417,14 @@ final class pwa implements ntb {
         try {
           L0: {
             L1: {
-              stackOut_0_0 = (faa) param0;
+              stackOut_0_0 = (faa) (param0);
               stackOut_0_1 = -81;
               stackIn_2_0 = stackOut_0_0;
               stackIn_2_1 = stackOut_0_1;
               stackIn_1_0 = stackOut_0_0;
               stackIn_1_1 = stackOut_0_1;
-              if (((pwa) this).field_e == null) {
-                stackOut_2_0 = (faa) (Object) stackIn_2_0;
+              if (this.field_e == null) {
+                stackOut_2_0 = (faa) ((Object) stackIn_2_0);
                 stackOut_2_1 = stackIn_2_1;
                 stackOut_2_2 = 0;
                 stackIn_3_0 = stackOut_2_0;
@@ -430,7 +432,7 @@ final class pwa implements ntb {
                 stackIn_3_2 = stackOut_2_2;
                 break L1;
               } else {
-                stackOut_1_0 = (faa) (Object) stackIn_1_0;
+                stackOut_1_0 = (faa) ((Object) stackIn_1_0);
                 stackOut_1_1 = stackIn_1_1;
                 stackOut_1_2 = 1;
                 stackIn_3_0 = stackOut_1_0;
@@ -443,19 +445,19 @@ final class pwa implements ntb {
               if (vq.a(stackIn_3_0, stackIn_3_1, stackIn_3_2 == 0)) {
                 break L2;
               } else {
-                ((pwa) this).field_e.b(param0, -119);
+                this.field_e.b(param0, -119);
                 break L2;
               }
             }
             L3: {
-              stackOut_5_0 = (faa) param0;
+              stackOut_5_0 = (faa) (param0);
               stackOut_5_1 = -59;
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
-              if (null == ((pwa) this).field_d) {
-                stackOut_7_0 = (faa) (Object) stackIn_7_0;
+              if (null == this.field_d) {
+                stackOut_7_0 = (faa) ((Object) stackIn_7_0);
                 stackOut_7_1 = stackIn_7_1;
                 stackOut_7_2 = 0;
                 stackIn_8_0 = stackOut_7_0;
@@ -463,7 +465,7 @@ final class pwa implements ntb {
                 stackIn_8_2 = stackOut_7_2;
                 break L3;
               } else {
-                stackOut_6_0 = (faa) (Object) stackIn_6_0;
+                stackOut_6_0 = (faa) ((Object) stackIn_6_0);
                 stackOut_6_1 = stackIn_6_1;
                 stackOut_6_2 = 1;
                 stackIn_8_0 = stackOut_6_0;
@@ -476,19 +478,19 @@ final class pwa implements ntb {
               if (vq.a(stackIn_8_0, stackIn_8_1, stackIn_8_2 == 0)) {
                 break L4;
               } else {
-                ((pwa) this).field_d.b(param0, -110);
+                this.field_d.b(param0, -110);
                 break L4;
               }
             }
             L5: {
-              stackOut_10_0 = (faa) param0;
+              stackOut_10_0 = (faa) (param0);
               stackOut_10_1 = -43;
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
-              if (((pwa) this).field_f == null) {
-                stackOut_12_0 = (faa) (Object) stackIn_12_0;
+              if (this.field_f == null) {
+                stackOut_12_0 = (faa) ((Object) stackIn_12_0);
                 stackOut_12_1 = stackIn_12_1;
                 stackOut_12_2 = 0;
                 stackIn_13_0 = stackOut_12_0;
@@ -496,7 +498,7 @@ final class pwa implements ntb {
                 stackIn_13_2 = stackOut_12_2;
                 break L5;
               } else {
-                stackOut_11_0 = (faa) (Object) stackIn_11_0;
+                stackOut_11_0 = (faa) ((Object) stackIn_11_0);
                 stackOut_11_1 = stackIn_11_1;
                 stackOut_11_2 = 1;
                 stackIn_13_0 = stackOut_11_0;
@@ -507,17 +509,17 @@ final class pwa implements ntb {
             }
             L6: {
               if (vq.a(stackIn_13_0, stackIn_13_1, stackIn_13_2 != 0)) {
-                ((pwa) this).field_f.b(param0, -115);
+                this.field_f.b(param0, -115);
                 break L6;
               } else {
                 break L6;
               }
             }
-            boolean discarded$10 = vq.a(param0, -107, ((pwa) this).field_c);
+            discarded$10 = vq.a(param0, -107, this.field_c);
             if (param1 < -109) {
               break L0;
             } else {
-              String discarded$11 = ((pwa) this).toString();
+              discarded$11 = this.toString();
               return;
             }
           }
@@ -525,23 +527,23 @@ final class pwa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var3;
+            stackOut_19_0 = (RuntimeException) (var3);
             stackOut_19_1 = new StringBuilder().append("pwa.B(");
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L7;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -549,18 +551,21 @@ final class pwa implements ntb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param1 + ')');
         }
     }
 
     public static void a(int param0) {
         field_a = null;
+        if (param0 >= -89) {
+            field_b = -102;
+        }
     }
 
     public final void b(byte param0, tv param1) {
         RuntimeException var3 = null;
         int var4 = 0;
-        Object var5 = null;
+        tv var5 = null;
         pwa var6 = null;
         pwa var7 = null;
         RuntimeException stackIn_23_0 = null;
@@ -583,9 +588,9 @@ final class pwa implements ntb {
         try {
           L0: {
             L1: {
-              var6 = (pwa) (Object) param1;
+              var6 = (pwa) ((Object) param1);
               var7 = var6;
-              if (null != ((pwa) this).field_e) {
+              if (null != this.field_e) {
                 L2: {
                   if (null == var7.field_e) {
                     var7.field_e = new gqa();
@@ -594,7 +599,7 @@ final class pwa implements ntb {
                     break L2;
                   }
                 }
-                ((pwa) this).field_e.b((byte) 110, (tv) (Object) var7.field_e);
+                this.field_e.b((byte) 110, var7.field_e);
                 break L1;
               } else {
                 var6.field_e = null;
@@ -602,7 +607,7 @@ final class pwa implements ntb {
               }
             }
             L3: {
-              if (((pwa) this).field_d == null) {
+              if (this.field_d == null) {
                 var7.field_d = null;
                 break L3;
               } else {
@@ -614,12 +619,12 @@ final class pwa implements ntb {
                     break L4;
                   }
                 }
-                ((pwa) this).field_d.b((byte) 65, (tv) (Object) var7.field_d);
+                this.field_d.b((byte) 65, var7.field_d);
                 break L3;
               }
             }
             L5: {
-              if (((pwa) this).field_f == null) {
+              if (this.field_f == null) {
                 var7.field_f = null;
                 break L5;
               } else {
@@ -631,16 +636,16 @@ final class pwa implements ntb {
                     break L6;
                   }
                 }
-                ((pwa) this).field_f.b((byte) 99, (tv) (Object) var7.field_f);
+                this.field_f.b((byte) 99, var7.field_f);
                 break L5;
               }
             }
-            var7.field_c = ((pwa) this).field_c;
+            var7.field_c = this.field_c;
             if (param0 > 54) {
               break L0;
             } else {
-              var5 = null;
-              ((pwa) this).b((byte) 53, (tv) null);
+              var5 = (tv) null;
+              this.b((byte) 53, (tv) null);
               return;
             }
           }
@@ -648,23 +653,23 @@ final class pwa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var3;
+            stackOut_22_0 = (RuntimeException) (var3);
             stackOut_22_1 = new StringBuilder().append("pwa.D(").append(param0).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L7;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -672,12 +677,12 @@ final class pwa implements ntb {
               break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
     }
 
     public final String toString() {
-        return "join=" + (Object) (Object) ((pwa) this).field_e + ", leave=" + (Object) (Object) ((pwa) this).field_d + ", ready=" + (Object) (Object) ((pwa) this).field_f + ", event_cancellation=" + ((pwa) this).field_c;
+        return "join=" + this.field_e + ", leave=" + this.field_d + ", ready=" + this.field_f + ", event_cancellation=" + this.field_c;
     }
 
     public final boolean a(byte param0, tv param1) {
@@ -752,7 +757,7 @@ final class pwa implements ntb {
           L0: {
             L1: {
               var3_int = 105 % ((22 - param0) / 59);
-              var4 = (pwa) (Object) param1;
+              var4 = (pwa) ((Object) param1);
               if (var4.field_e != null) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
@@ -767,7 +772,7 @@ final class pwa implements ntb {
               stackOut_3_0 = stackIn_3_0;
               stackIn_5_0 = stackOut_3_0;
               stackIn_4_0 = stackOut_3_0;
-              if (null != ((pwa) this).field_e) {
+              if (null != this.field_e) {
                 stackOut_5_0 = stackIn_5_0;
                 stackOut_5_1 = 0;
                 stackIn_6_0 = stackOut_5_0;
@@ -787,10 +792,10 @@ final class pwa implements ntb {
                   break L4;
                 } else {
                   L5: {
-                    if (null == ((pwa) this).field_e) {
+                    if (null == this.field_e) {
                       break L5;
                     } else {
-                      if (((pwa) this).field_e.a((byte) 90, (tv) (Object) var4.field_e)) {
+                      if (this.field_e.a((byte) 90, var4.field_e)) {
                         break L4;
                       } else {
                         break L5;
@@ -812,7 +817,7 @@ final class pwa implements ntb {
                     stackOut_13_0 = stackIn_13_0;
                     stackIn_15_0 = stackOut_13_0;
                     stackIn_14_0 = stackOut_13_0;
-                    if (null != ((pwa) this).field_d) {
+                    if (null != this.field_d) {
                       stackOut_15_0 = stackIn_15_0;
                       stackOut_15_1 = 0;
                       stackIn_16_0 = stackOut_15_0;
@@ -830,10 +835,10 @@ final class pwa implements ntb {
                     break L4;
                   } else {
                     L8: {
-                      if (null == ((pwa) this).field_d) {
+                      if (null == this.field_d) {
                         break L8;
                       } else {
-                        if (((pwa) this).field_d.a((byte) -57, (tv) (Object) var4.field_d)) {
+                        if (this.field_d.a((byte) -57, var4.field_d)) {
                           break L4;
                         } else {
                           break L8;
@@ -841,7 +846,7 @@ final class pwa implements ntb {
                       }
                     }
                     L9: {
-                      if (((pwa) this).field_f != null) {
+                      if (this.field_f != null) {
                         stackOut_22_0 = 0;
                         stackIn_23_0 = stackOut_22_0;
                         break L9;
@@ -873,10 +878,10 @@ final class pwa implements ntb {
                       break L4;
                     } else {
                       L11: {
-                        if (((pwa) this).field_f == null) {
+                        if (this.field_f == null) {
                           break L11;
                         } else {
-                          if (((pwa) this).field_f.a((byte) 122, (tv) (Object) var4.field_f)) {
+                          if (this.field_f.a((byte) 122, var4.field_f)) {
                             break L4;
                           } else {
                             break L11;
@@ -884,7 +889,7 @@ final class pwa implements ntb {
                         }
                       }
                       L12: {
-                        stackOut_30_0 = ((pwa) this).field_c;
+                        stackOut_30_0 = this.field_c;
                         stackIn_32_0 = stackOut_30_0;
                         stackIn_31_0 = stackOut_30_0;
                         if (var4.field_c) {
@@ -922,23 +927,23 @@ final class pwa implements ntb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L13: {
             var3 = decompiledCaughtException;
-            stackOut_37_0 = (RuntimeException) var3;
+            stackOut_37_0 = (RuntimeException) (var3);
             stackOut_37_1 = new StringBuilder().append("pwa.C(").append(param0).append(',');
             stackIn_39_0 = stackOut_37_0;
             stackIn_39_1 = stackOut_37_1;
             stackIn_38_0 = stackOut_37_0;
             stackIn_38_1 = stackOut_37_1;
             if (param1 == null) {
-              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
-              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_0 = (RuntimeException) ((Object) stackIn_39_0);
+              stackOut_39_1 = (StringBuilder) ((Object) stackIn_39_1);
               stackOut_39_2 = "null";
               stackIn_40_0 = stackOut_39_0;
               stackIn_40_1 = stackOut_39_1;
               stackIn_40_2 = stackOut_39_2;
               break L13;
             } else {
-              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_0 = (RuntimeException) ((Object) stackIn_38_0);
+              stackOut_38_1 = (StringBuilder) ((Object) stackIn_38_1);
               stackOut_38_2 = "{...}";
               stackIn_40_0 = stackOut_38_0;
               stackIn_40_1 = stackOut_38_1;
@@ -946,7 +951,7 @@ final class pwa implements ntb {
               break L13;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_40_0), stackIn_40_2 + ')');
         }
         return stackIn_36_0 != 0;
     }
@@ -975,75 +980,75 @@ final class pwa implements ntb {
           L0: {
             L1: {
               if (!kv.a(false, param0)) {
-                ((pwa) this).field_e = null;
+                this.field_e = null;
                 break L1;
               } else {
                 L2: {
-                  if (null == ((pwa) this).field_e) {
-                    ((pwa) this).field_e = new gqa();
+                  if (null == this.field_e) {
+                    this.field_e = new gqa();
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                ((pwa) this).field_e.a(param0, false);
+                this.field_e.a(param0, false);
                 break L1;
               }
             }
             L3: {
               if (!kv.a(param1, param0)) {
-                ((pwa) this).field_d = null;
+                this.field_d = null;
                 break L3;
               } else {
-                if (((pwa) this).field_d != null) {
-                  ((pwa) this).field_d.a(param0, param1);
+                if (this.field_d != null) {
+                  this.field_d.a(param0, param1);
                   break L3;
                 } else {
-                  ((pwa) this).field_d = new hg();
-                  ((pwa) this).field_d.a(param0, param1);
+                  this.field_d = new hg();
+                  this.field_d.a(param0, param1);
                   break L3;
                 }
               }
             }
             L4: {
               if (!kv.a(param1, param0)) {
-                ((pwa) this).field_f = null;
+                this.field_f = null;
                 break L4;
               } else {
-                if (((pwa) this).field_f != null) {
-                  ((pwa) this).field_f.a(param0, param1);
+                if (this.field_f != null) {
+                  this.field_f.a(param0, param1);
                   break L4;
                 } else {
-                  ((pwa) this).field_f = new gtb();
-                  ((pwa) this).field_f.a(param0, param1);
+                  this.field_f = new gtb();
+                  this.field_f.a(param0, param1);
                   break L4;
                 }
               }
             }
-            ((pwa) this).field_c = kv.a(false, param0);
+            this.field_c = kv.a(false, param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var3 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var3;
+            stackOut_21_0 = (RuntimeException) (var3);
             stackOut_21_1 = new StringBuilder().append("pwa.H(");
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L5;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -1051,15 +1056,11 @@ final class pwa implements ntb {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Good vs everything";
         field_b = 192;
     }

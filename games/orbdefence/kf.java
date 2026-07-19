@@ -12,14 +12,15 @@ final class kf {
     public static void a(int param0) {
         field_b = null;
         field_a = null;
+        if (param0 != -17218) {
+            field_b = (String) null;
+            field_d = null;
+            return;
+        }
         field_d = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "kf.A(";
         field_e = -1;
         field_d = new va();

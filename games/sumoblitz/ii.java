@@ -16,10 +16,6 @@ final class ii {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ii.A(";
         field_b = "Retry";
     }

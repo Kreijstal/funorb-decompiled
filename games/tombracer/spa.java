@@ -9,7 +9,7 @@ final class spa extends wda {
         if (param0 != 0) {
             return -115;
         }
-        param1 = fs.a((byte) 23, param1, ((spa) this).field_p);
+        param1 = fs.a((byte) 23, param1, this.field_p);
         return param1;
     }
 
@@ -17,61 +17,65 @@ final class spa extends wda {
         try {
             super.a(param0, (byte) -109);
             if (param1 >= -78) {
-                ((spa) this).b(-41);
+                this.b(-41);
             }
-            param0.a((byte) -128, dqa.a(true, ((spa) this).field_p, 12), 12);
+            param0.a((byte) -128, dqa.a(true, this.field_p, 12), 12);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "spa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "spa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(byte param0, int param1) {
         if (param0 > -121) {
-            ((spa) this).field_p = -76;
-            ((spa) this).field_p = param1;
+            this.field_p = -76;
+            this.field_p = param1;
             return;
         }
-        ((spa) this).field_p = param1;
+        this.field_p = param1;
     }
 
     spa(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
         try {
-            ((spa) this).field_p = bla.a(true, 12, param1.b((byte) 44, 12));
+            this.field_p = bla.a(true, 12, param1.b((byte) 44, 12));
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "spa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "spa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     spa(la param0, boolean param1) {
         super(param0, param1);
         try {
-            ((spa) this).field_p = 16;
+            this.field_p = 16;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "spa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "spa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void b(byte param0) {
-        ((spa) this).field_n.c(false, ((spa) this).field_p);
+        this.field_n.c(false, this.field_p);
         int var2 = 24 % ((param0 - -69) / 42);
     }
 
     final void b(int param0) {
         if (param0 != 1) {
-            ((spa) this).a((byte) 79, 28);
+            this.a((byte) 79, 28);
         }
     }
 
     final int c(int param0) {
+        int discarded$0 = 0;
         if (param0 != 1) {
-            int discarded$0 = ((spa) this).a(40, 31);
+            discarded$0 = this.a(40, 31);
             return 6;
         }
         return 6;
     }
 
     public static void d(boolean param0) {
+        if (!param0) {
+            return;
+        }
         field_o = null;
     }
 
@@ -80,7 +84,7 @@ final class spa extends wda {
         if (param0 >= -116) {
             return;
         }
-        ((spa) this).field_p = -((spa) this).field_p;
+        this.field_p = -this.field_p;
     }
 
     static {

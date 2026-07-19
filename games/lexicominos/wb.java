@@ -21,10 +21,10 @@ abstract class wb {
 
     final int c(byte param0) {
         if (param0 != 67) {
-          ((wb) this).field_p = -101;
-          return ((wb) this).field_l.b(97) + ((wb) this).field_k.b(109);
+          this.field_p = -101;
+          return this.field_l.b(97) + this.field_k.b(109);
         } else {
-          return ((wb) this).field_l.b(97) + ((wb) this).field_k.b(109);
+          return this.field_l.b(97) + this.field_k.b(109);
         }
     }
 
@@ -36,37 +36,110 @@ abstract class wb {
         field_m = null;
         field_c = null;
         field_g = null;
+        if (param0 != 5) {
+            field_m = (java.math.BigInteger) null;
+        }
     }
 
     final static void b(byte param0) {
         int var1 = 0;
         int var2 = 0;
-        var2 = Lexicominos.field_L ? 1 : 0;
-        jj.field_d = null;
-        gb.field_d = false;
-        if (!ca.field_k) {
-          var1 = be.field_l;
-          if (var1 > 0) {
-            if (var1 == 1) {
-              jj.field_d = oj.field_d;
-              jj.field_d = ef.a(new CharSequence[3], 0);
-              jj.field_a.g(true);
-              vg.a(113);
-              return;
-            } else {
-              jj.field_d = da.a(new String[1], mc.field_m, false);
-              jj.field_d = ef.a(new CharSequence[3], 0);
-              jj.field_a.g(true);
-              vg.a(113);
-              return;
-            }
+        L0: {
+          var2 = Lexicominos.field_L ? 1 : 0;
+          jj.field_d = null;
+          gb.field_d = false;
+          if (ca.field_k) {
+            break L0;
           } else {
-            jj.field_a.g(true);
-            vg.a(113);
-            return;
+            var1 = be.field_l;
+            if (var1 <= 0) {
+              jj.field_a.g(true);
+              vg.a(113);
+              if (var2 == 0) {
+                if (param0 != 50) {
+                  field_g = (java.awt.Image) null;
+                  return;
+                } else {
+                  return;
+                }
+              } else {
+                break L0;
+              }
+            } else {
+              if ((var1 ^ -1) == -2) {
+                jj.field_d = oj.field_d;
+                jj.field_d = ef.a(new CharSequence[]{(CharSequence) ((Object) jj.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) gj.field_u)}, 0);
+                jj.field_a.g(true);
+                vg.a(113);
+                if (var2 == 0) {
+                  if (param0 != 50) {
+                    field_g = (java.awt.Image) null;
+                    return;
+                  } else {
+                    return;
+                  }
+                } else {
+                  jj.field_a.i(15);
+                  if (param0 != 50) {
+                    field_g = (java.awt.Image) null;
+                    return;
+                  } else {
+                    return;
+                  }
+                }
+              } else {
+                jj.field_d = da.a(new String[]{Integer.toString(var1)}, mc.field_m, false);
+                if (var2 == 0) {
+                  jj.field_d = ef.a(new CharSequence[]{(CharSequence) ((Object) jj.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) gj.field_u)}, 0);
+                  jj.field_a.g(true);
+                  vg.a(113);
+                  if (var2 != 0) {
+                    jj.field_a.i(15);
+                    if (param0 == 50) {
+                      return;
+                    } else {
+                      field_g = (java.awt.Image) null;
+                      return;
+                    }
+                  } else {
+                    if (param0 == 50) {
+                      return;
+                    } else {
+                      field_g = (java.awt.Image) null;
+                      return;
+                    }
+                  }
+                } else {
+                  jj.field_d = oj.field_d;
+                  jj.field_d = ef.a(new CharSequence[]{(CharSequence) ((Object) jj.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) gj.field_u)}, 0);
+                  jj.field_a.g(true);
+                  vg.a(113);
+                  if (var2 == 0) {
+                    if (param0 != 50) {
+                      field_g = (java.awt.Image) null;
+                      return;
+                    } else {
+                      return;
+                    }
+                  } else {
+                    jj.field_a.i(15);
+                    if (param0 != 50) {
+                      field_g = (java.awt.Image) null;
+                      return;
+                    } else {
+                      return;
+                    }
+                  }
+                }
+              }
+            }
           }
+        }
+        jj.field_a.i(15);
+        if (param0 != 50) {
+          field_g = (java.awt.Image) null;
+          return;
         } else {
-          jj.field_a.i(15);
           return;
         }
     }
@@ -76,13 +149,13 @@ abstract class wb {
     final static db[] a(int param0, int param1, int param2, int param3, int param4) {
         db[] var6 = new db[9];
         db[] var5 = var6;
-        db dupTemp$0 = gf.a((byte) -76, 1, param0);
+        db dupTemp$0 = gf.a((byte) -76, param2, param0);
         var6[6] = dupTemp$0;
-        var5[3] = dupTemp$0;
+        var5[param4] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        db dupTemp$1 = gf.a((byte) -76, 1, param3);
+        db dupTemp$1 = gf.a((byte) -76, param2, param3);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -93,15 +166,17 @@ abstract class wb {
     }
 
     final int a(boolean param0) {
+        dc discarded$2 = null;
         if (!param0) {
-          dc discarded$2 = ((wb) this).a(-12, 71, 119, (byte) 102, true);
-          return ((wb) this).field_d.b(97) + ((wb) this).field_f.b(111);
+          discarded$2 = this.a(-12, 71, 119, (byte) 102, true);
+          return this.field_d.b(97) + this.field_f.b(111);
         } else {
-          return ((wb) this).field_d.b(97) + ((wb) this).field_f.b(111);
+          return this.field_d.b(97) + this.field_f.b(111);
         }
     }
 
     final boolean e(int param0) {
+        boolean discarded$10 = false;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
@@ -110,8 +185,8 @@ abstract class wb {
         int stackOut_2_0 = 0;
         if (param0 != 20) {
           L0: {
-            boolean discarded$10 = ((wb) this).e(-75);
-            if (20 > ((wb) this).c((byte) 67)) {
+            discarded$10 = this.e(-75);
+            if (20 > this.c((byte) 67)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -124,7 +199,7 @@ abstract class wb {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (20 > ((wb) this).c((byte) 67)) {
+            if (20 > this.c((byte) 67)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -140,24 +215,26 @@ abstract class wb {
 
     final dc a(int param0, int param1, int param2, byte param3, boolean param4) {
         if (param0 != 5) {
-            return null;
+            return (dc) null;
         }
-        long var6 = (long)param2 + ((long)param1 << 32);
+        long var6 = (long)param2 + ((long)param1 << 306764576);
         dc var8 = new dc();
         var8.field_j = var6;
         var8.field_p = param4 ? true : false;
         var8.field_A = param3;
         if (!param4) {
-            if (!(((wb) this).a(true) < 20)) {
+            if (!(-21 < (this.a(true) ^ -1))) {
                 throw new RuntimeException();
             }
-            ((wb) this).field_d.a(83, (ca) (Object) var8);
-        } else {
-            if (!(((wb) this).c((byte) 67) < 20)) {
-                throw new RuntimeException();
+            this.field_d.a(83, var8);
+            if (!Lexicominos.field_L) {
+                return var8;
             }
-            ((wb) this).field_l.a(param0 + -74, (ca) (Object) var8);
         }
+        if (!(this.c((byte) 67) < 20)) {
+            throw new RuntimeException();
+        }
+        this.field_l.a(param0 + -74, var8);
         return var8;
     }
 
@@ -167,26 +244,22 @@ abstract class wb {
         if (param0 != 9172) {
             return true;
         }
-        return ((wb) this).a(true) >= 20 ? true : false;
+        return (this.a(true) ^ -1) <= -21 ? true : false;
     }
 
     wb() {
-        ((wb) this).field_l = new ci();
-        ((wb) this).field_k = new ci();
-        ((wb) this).field_d = new ci();
-        ((wb) this).field_f = new ci();
-        ((wb) this).field_b = new wf(6);
-        ((wb) this).field_p = 0;
-        ((wb) this).field_a = (byte) 0;
-        ((wb) this).field_j = 0;
-        ((wb) this).field_h = new wf(10);
+        this.field_l = new ci();
+        this.field_k = new ci();
+        this.field_d = new ci();
+        this.field_f = new ci();
+        this.field_b = new wf(6);
+        this.field_p = 0;
+        this.field_a = (byte) 0;
+        this.field_j = 0;
+        this.field_h = new wf(10);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = 0;
         field_c = "Updates will sent to the email address you've given";
         field_m = new java.math.BigInteger("65537");

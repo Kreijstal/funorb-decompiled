@@ -27,27 +27,28 @@ final class sb implements Runnable {
         int var1_int = 0;
         dk var2 = null;
         int var4 = Confined.field_J ? 1 : 0;
-        ((sb) this).field_j = true;
+        this.field_j = true;
         try {
-            while (!((sb) this).field_d) {
+            while (!this.field_d) {
                 for (var1_int = 0; 2 > var1_int; var1_int++) {
-                    var2 = ((sb) this).field_k[var1_int];
+                    var2 = this.field_k[var1_int];
                     if (var2 != null) {
                         var2.c();
                     }
                 }
                 jd.a(1, 10L);
-                mb.a((Object) null, 1001, ((sb) this).field_c);
+                mb.a((Object) null, 1001, this.field_c);
             }
         } catch (Exception exception) {
-            Object var5 = null;
-            mb.a((String) null, true, (Throwable) (Object) exception);
+            String var5 = (String) null;
+            mb.a((String) null, true, (Throwable) ((Object) exception));
         } finally {
-            ((sb) this).field_j = false;
+            this.field_j = false;
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5, boolean param6) {
+        int incrementValue$1 = 0;
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -58,6 +59,7 @@ final class sb implements Runnable {
         int var13 = 0;
         int var14 = 0;
         int stackIn_23_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
@@ -66,14 +68,15 @@ final class sb implements Runnable {
           L0: {
             if (param0 < param5) {
               if (1 + param0 >= param3) {
-                return;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 L1: {
                   if (5 + param0 >= param3) {
                     break L1;
                   } else {
                     if (param1 != param2) {
-                      var7_int = (param2 & param1 & 1) + ((param2 >> 1) + (param1 >> 1));
+                      var7_int = (param2 & param1 & 1) + ((param2 >> -2032674431) + (param1 >> -1887026655));
                       var8 = param0;
                       var9 = param2;
                       var10 = param1;
@@ -82,6 +85,7 @@ final class sb implements Runnable {
                         if (var11 >= param3) {
                           sb.a(param0, var9, param2, var8, param4, param5, param6);
                           sb.a(var8, param1, var10, param3, (byte) 92, param5, param6);
+                          decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
                           L3: {
@@ -100,7 +104,7 @@ final class sb implements Runnable {
                             var13 = stackIn_23_0;
                             if (var7_int < var13) {
                               sj.field_rb[var11] = sj.field_rb[var8];
-                              int incrementValue$1 = var8;
+                              incrementValue$1 = var8;
                               var8++;
                               sj.field_rb[incrementValue$1] = var12;
                               if (var9 > var13) {
@@ -130,7 +134,8 @@ final class sb implements Runnable {
                 var7_int = param3 - 1;
                 L5: while (true) {
                   if (param0 >= var7_int) {
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     var8 = param0;
                     L6: while (true) {
@@ -157,27 +162,37 @@ final class sb implements Runnable {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var7, "sb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw sd.a((Throwable) ((Object) var7), "sb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
     sb() {
-        ((sb) this).field_k = new dk[2];
-        ((sb) this).field_d = false;
-        ((sb) this).field_j = false;
+        this.field_k = new dk[2];
+        this.field_d = false;
+        this.field_j = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = "Cancel";
         field_b = new int[]{100, 100, 100, 200, 200, 300, 500, 100, 300, 1000, 100, 100, 200, 300, 100, 100, 300, 500, 1000, 200};
         field_a = new double[]{8.0, 8.0, 5.0, 5.0};

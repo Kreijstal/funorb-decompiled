@@ -10,13 +10,12 @@ final class bk {
 
     public static void a(byte param0) {
         field_c = null;
+        if (param0 < 27) {
+            field_d = -70;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "bk.A(";
         field_b = 0;
     }

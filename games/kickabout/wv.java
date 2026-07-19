@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 class wv extends mu implements vh {
     static int field_ib;
     private boolean field_db;
@@ -61,7 +59,7 @@ class wv extends mu implements vh {
                   if (param0 == -108) {
                     break L2;
                   } else {
-                    field_bb = null;
+                    field_bb = (String) null;
                     break L2;
                   }
                 }
@@ -79,23 +77,23 @@ class wv extends mu implements vh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
+            stackOut_7_0 = (RuntimeException) (var4);
             stackOut_7_1 = new StringBuilder().append("wv.TB(").append(param0).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -104,23 +102,23 @@ class wv extends mu implements vh {
             }
           }
           L4: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -128,7 +126,7 @@ class wv extends mu implements vh {
               break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
     }
 
@@ -139,16 +137,16 @@ class wv extends mu implements vh {
     }
 
     final void q(int param0) {
-        if (!((wv) this).field_C) {
+        if (!this.field_C) {
           return;
         } else {
           L0: {
-            ((wv) this).field_C = false;
-            if (((wv) this).field_gb) {
+            this.field_C = false;
+            if (this.field_gb) {
               uj.b(true);
               break L0;
             } else {
-              if (!((wv) this).field_db) {
+              if (!this.field_db) {
                 break L0;
               } else {
                 vr.c(-3);
@@ -170,7 +168,7 @@ class wv extends mu implements vh {
 
     public void a(int param0, wi param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
-        Object var7 = null;
+        wi var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -193,18 +191,18 @@ class wv extends mu implements vh {
               if (param3 > 64) {
                 break L1;
               } else {
-                var7 = null;
-                ((wv) this).a(-123, (wi) null, 56, (byte) 64, 43);
+                var7 = (wi) null;
+                this.a(-123, (wi) null, 56, (byte) 64, 43);
                 break L1;
               }
             }
             L2: {
-              if (!((wv) this).field_cb) {
+              if (!this.field_cb) {
                 im.a(so.a(-79), 126, "tochangedisplayname.ws");
                 break L2;
               } else {
                 qd.b(38, 3);
-                ((wv) this).q(-97);
+                this.q(-97);
                 break L2;
               }
             }
@@ -214,23 +212,23 @@ class wv extends mu implements vh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var6 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var6;
+            stackOut_6_0 = (RuntimeException) (var6);
             stackOut_6_1 = new StringBuilder().append("wv.C(").append(param0).append(',');
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -238,15 +236,15 @@ class wv extends mu implements vh {
               break L3;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void r(int param0) {
-        ((wv) this).field_jb.a((byte) 21, 4210752, param0);
-        qp var2 = new qp((wv) this, ((wv) this).field_eb, ii.field_m);
+        this.field_jb.a((byte) 21, 4210752, param0);
+        qp var2 = new qp((wv) (this), this.field_eb, ii.field_m);
         var2.a((byte) 99, 15, ta.field_E);
-        ((wv) this).a((byte) -124, (fd) (Object) var2);
+        this.a((byte) -124, (fd) (var2));
     }
 
     final boolean a(char param0, byte param1, fd param2, int param3) {
@@ -260,6 +258,7 @@ class wv extends mu implements vh {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_4_0 = 0;
         boolean stackOut_6_0 = false;
@@ -281,14 +280,16 @@ class wv extends mu implements vh {
                 break L1;
               }
             }
-            if (param3 == 13) {
-              ((wv) this).q(-115);
+            if ((param3 ^ -1) == -14) {
+              this.q(-115);
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               stackOut_6_0 = super.a(param0, (byte) -94, param2, param3);
               stackIn_7_0 = stackOut_6_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
@@ -296,23 +297,23 @@ class wv extends mu implements vh {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var5;
+            stackOut_8_0 = (RuntimeException) (var5);
             stackOut_8_1 = new StringBuilder().append("wv.E(").append(param0).append(',').append(param1).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -320,16 +321,22 @@ class wv extends mu implements vh {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ',' + param3 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ')');
         }
-        return stackIn_7_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0 != 0;
+        } else {
+          return stackIn_7_0;
+        }
     }
 
     final void a(int param0, int param1, String param2) {
+        wi discarded$2 = null;
+        wi discarded$3 = null;
         RuntimeException var4 = null;
         qp var4_ref = null;
         int var5 = 0;
-        Object var6 = null;
+        java.awt.Point[] var6 = null;
         qp var7 = null;
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
@@ -352,6 +359,7 @@ class wv extends mu implements vh {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_3_0 = null;
         Object stackOut_5_0 = null;
@@ -380,7 +388,7 @@ class wv extends mu implements vh {
         var5 = Kickabout.field_G;
         try {
           L0: {
-            if (!((wv) this).field_hb) {
+            if (!this.field_hb) {
               L1: {
                 stackOut_3_0 = this;
                 stackIn_5_0 = stackOut_3_0;
@@ -400,22 +408,22 @@ class wv extends mu implements vh {
                 }
               }
               L2: {
-                ((wv) this).field_cb = stackIn_6_1 != 0;
-                ((wv) this).field_hb = true;
-                ((wv) this).field_jb.a((byte) 21, 4210752, 8405024);
-                var7 = new qp((wv) this, ((wv) this).field_eb, param2);
+                ((wv) (this)).field_cb = stackIn_6_1 != 0;
+                this.field_hb = true;
+                this.field_jb.a((byte) 21, 4210752, 8405024);
+                var7 = new qp((wv) (this), this.field_eb, param2);
                 var4_ref = var7;
                 if (param0 == 5) {
                   var7.a((byte) 72, 11, ql.field_d);
                   var7.a((byte) 104, 17, bv.field_o);
                   break L2;
                 } else {
-                  if (param0 == 256) {
-                    wi discarded$2 = var7.a(bt.field_d, (jv) this, (byte) 79);
+                  if (-257 == (param0 ^ -1)) {
+                    discarded$2 = var7.a(bt.field_d, (jv) (this), (byte) 79);
                     break L2;
                   } else {
                     L3: {
-                      stackOut_8_0 = (qp) var7;
+                      stackOut_8_0 = (qp) (var7);
                       stackOut_8_1 = 111;
                       stackOut_8_2 = -1;
                       stackIn_10_0 = stackOut_8_0;
@@ -424,8 +432,8 @@ class wv extends mu implements vh {
                       stackIn_9_0 = stackOut_8_0;
                       stackIn_9_1 = stackOut_8_1;
                       stackIn_9_2 = stackOut_8_2;
-                      if (((wv) this).field_gb) {
-                        stackOut_10_0 = (qp) (Object) stackIn_10_0;
+                      if (this.field_gb) {
+                        stackOut_10_0 = (qp) ((Object) stackIn_10_0);
                         stackOut_10_1 = stackIn_10_1;
                         stackOut_10_2 = stackIn_10_2;
                         stackOut_10_3 = bt.field_d;
@@ -435,7 +443,7 @@ class wv extends mu implements vh {
                         stackIn_11_3 = stackOut_10_3;
                         break L3;
                       } else {
-                        stackOut_9_0 = (qp) (Object) stackIn_9_0;
+                        stackOut_9_0 = (qp) ((Object) stackIn_9_0);
                         stackOut_9_1 = stackIn_9_1;
                         stackOut_9_2 = stackIn_9_2;
                         stackOut_9_3 = is.field_f;
@@ -452,19 +460,19 @@ class wv extends mu implements vh {
                 }
               }
               L4: {
-                if (param0 != 3) {
-                  if (param0 == 4) {
+                if ((param0 ^ -1) != -4) {
+                  if ((param0 ^ -1) == -5) {
                     var7.a((byte) 96, 8, ra.field_O);
                     break L4;
                   } else {
-                    if (param0 == 6) {
+                    if ((param0 ^ -1) == -7) {
                       var7.a((byte) 92, 9, bv.field_p);
                       break L4;
                     } else {
                       if (9 != param0) {
                         break L4;
                       } else {
-                        wi discarded$3 = var7.a(ir.field_C, (jv) this, (byte) 79);
+                        discarded$3 = var7.a(ir.field_C, (jv) (this), (byte) 79);
                         break L4;
                       }
                     }
@@ -478,38 +486,40 @@ class wv extends mu implements vh {
                 if (param1 >= 96) {
                   break L5;
                 } else {
-                  var6 = null;
+                  var6 = (java.awt.Point[]) null;
                   wv.a((byte) -60, 109, (tf) null, (java.awt.Point[]) null);
                   break L5;
                 }
               }
-              ((wv) this).a((byte) -120, (fd) (Object) var7);
+              this.a((byte) -120, (fd) (var7));
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var4;
+            stackOut_26_0 = (RuntimeException) (var4);
             stackOut_26_1 = new StringBuilder().append("wv.SB(").append(param0).append(',').append(param1).append(',');
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
             stackIn_27_1 = stackOut_26_1;
             if (param2 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "null";
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
               break L6;
             } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "{...}";
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
@@ -517,31 +527,32 @@ class wv extends mu implements vh {
               break L6;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     wv(se param0, hu param1, String param2, boolean param3, boolean param4) {
-        super(param0, (fd) (Object) new qp((wv) null, param1, param2), 77, 10, 10);
+        super(param0, new qp((wv) null, param1, param2), 77, 10, 10);
         try {
-            ((wv) this).field_cb = false;
-            ((wv) this).field_eb = param1;
-            ((wv) this).field_hb = false;
-            ((wv) this).field_db = param4 ? true : false;
-            ((wv) this).field_gb = param3 ? true : false;
-            ((wv) this).field_jb = new ou(13, 50, 274, 30, 15, 2113632, 4210752);
-            ((wv) this).field_jb.field_w = true;
-            ((wv) this).a(-42, (fd) (Object) ((wv) this).field_jb);
+            this.field_cb = false;
+            this.field_eb = param1;
+            this.field_hb = false;
+            this.field_db = param4 ? true : false;
+            this.field_gb = param3 ? true : false;
+            this.field_jb = new ou(13, 50, 274, 30, 15, 2113632, 4210752);
+            this.field_jb.field_w = true;
+            this.a(-42, this.field_jb);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "wv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "wv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_bb = "This game option has not yet been unlocked for use.";
         field_fb = new r();
     }

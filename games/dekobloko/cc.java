@@ -12,10 +12,16 @@ final class cc {
     static String field_e;
 
     final static f a(int param0, byte param1) {
-        f var2 = new f();
+        f var2 = null;
+        var2 = new f();
         rc.field_e.a(var2, 2777);
-        gm.b(4, 65);
-        return var2;
+        gm.b(param0, 65);
+        if (param1 > -81) {
+          field_a = 118;
+          return var2;
+        } else {
+          return var2;
+        }
     }
 
     public static void a(byte param0) {
@@ -24,11 +30,21 @@ final class cc {
         field_h = null;
         field_e = null;
         field_b = null;
-        field_f = (pi[][]) null;
+        if (param0 != -94) {
+          field_g = (String) null;
+          field_f = (pi[][]) null;
+          return;
+        } else {
+          field_f = (pi[][]) null;
+          return;
+        }
     }
 
     final static void a(int param0) {
         kb.field_i = new bk(ui.field_x, tg.field_h, ib.field_nb, ua.field_H, al.field_h, df.field_ab);
+        if (param0 != 8) {
+            cc.a((byte) 88);
+        }
     }
 
     cc(ck[] param0) {

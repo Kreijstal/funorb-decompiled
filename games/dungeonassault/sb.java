@@ -15,19 +15,27 @@ final class sb {
     }
 
     final static void a(int param0) {
-        hg.field_t = null;
-        uo.field_b = null;
-        jn.field_k = null;
-        jc.field_f = null;
-        fe.field_g = null;
-        ub.field_q = null;
+        if (param0 != 500) {
+          field_a = (nh) null;
+          hg.field_t = null;
+          uo.field_b = null;
+          jn.field_k = null;
+          jc.field_f = null;
+          fe.field_g = null;
+          ub.field_q = (byte[][]) null;
+          return;
+        } else {
+          hg.field_t = null;
+          uo.field_b = null;
+          jn.field_k = null;
+          jc.field_f = null;
+          fe.field_g = null;
+          ub.field_q = (byte[][]) null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 500;
     }
 }

@@ -13,7 +13,7 @@ final class sf {
         if (param0 == -1) {
           if (20 <= b.field_x) {
             if (la.a(true)) {
-              if (pa.field_c > 0) {
+              if ((pa.field_c ^ -1) < -1) {
                 if (s.h((byte) 52)) {
                   return false;
                 } else {
@@ -32,7 +32,7 @@ final class sf {
           field_a = -56;
           if (20 <= b.field_x) {
             if (la.a(true)) {
-              if (pa.field_c > 0) {
+              if ((pa.field_c ^ -1) < -1) {
                 if (s.h((byte) 52)) {
                   return false;
                 } else {
@@ -51,10 +51,6 @@ final class sf {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "sf.A(";
     }
 }

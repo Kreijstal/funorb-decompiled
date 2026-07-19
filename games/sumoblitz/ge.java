@@ -9,17 +9,16 @@ final class ge extends ms {
     public static void a(int param0) {
         field_l = null;
         field_k = null;
+        if (param0 != 6334) {
+            field_l = (String) null;
+        }
     }
 
     ge(int param0) {
-        ((ge) this).field_m = param0;
+        this.field_m = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = new String[]{"Normal", "Hard"};
         field_l = "Click to continue";
     }

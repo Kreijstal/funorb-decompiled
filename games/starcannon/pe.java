@@ -11,6 +11,9 @@ final class pe {
     private static String field_z;
 
     public static void a(byte param0) {
+        if (param0 <= 82) {
+            return;
+        }
         field_e = null;
         field_a = null;
         field_b = null;
@@ -18,10 +21,6 @@ final class pe {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "pe.A(";
         field_f = "Please enter your age in years";
         field_a = new o(15, 0, 1, 0);

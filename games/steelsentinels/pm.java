@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class pm extends dl implements fd, ae {
     static int field_S;
     static String field_P;
@@ -28,16 +26,17 @@ final class pm extends dl implements fd, ae {
         String var5 = null;
         try {
             int var3_int = 65 / ((param1 - 81) / 42);
-            var4 = ((pm) this).field_V;
+            var4 = this.field_V;
             var5 = param0;
             var4.a(var5, 29597, false);
-            ((pm) this).field_Q.i(-8521);
+            this.field_Q.i(-8521);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "pm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw ci.a((Throwable) ((Object) runtimeException), "pm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void a(boolean param0, jf param1) {
+        boolean discarded$2 = false;
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -58,15 +57,15 @@ final class pm extends dl implements fd, ae {
         try {
           L0: {
             L1: {
-              if (param1 == ((pm) this).field_V) {
-                boolean discarded$2 = ((pm) this).field_Q.a(1, (lh) this);
+              if (param1 == this.field_V) {
+                discarded$2 = this.field_Q.a(1, (lh) (this));
                 break L1;
               } else {
                 break L1;
               }
             }
             L2: {
-              if (param1 != ((pm) this).field_Q) {
+              if (param1 != this.field_Q) {
                 break L2;
               } else {
                 this.i(0);
@@ -77,7 +76,7 @@ final class pm extends dl implements fd, ae {
               if (param0) {
                 break L3;
               } else {
-                field_W = null;
+                field_W = (jj[]) null;
                 break L3;
               }
             }
@@ -87,23 +86,23 @@ final class pm extends dl implements fd, ae {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_0 = (RuntimeException) (var3);
             stackOut_8_1 = new StringBuilder().append("pm.C(").append(param0).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L4;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -111,7 +110,7 @@ final class pm extends dl implements fd, ae {
               break L4;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
     }
 
@@ -119,7 +118,7 @@ final class pm extends dl implements fd, ae {
         if (param0 < 11) {
             field_S = 121;
         }
-        if (jg.field_f == -1) {
+        if ((jg.field_f ^ -1) == 0) {
             if (!(ve.a((byte) -116, 1))) {
                 return false;
             }
@@ -149,6 +148,7 @@ final class pm extends dl implements fd, ae {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_10_0 = 0;
@@ -167,22 +167,26 @@ final class pm extends dl implements fd, ae {
             if (super.a(param0, param1, param2, param3)) {
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               if (param1 != 98) {
-                if (param1 != 99) {
+                if ((param1 ^ -1) != -100) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
+                  decompiledRegionSelector0 = 3;
                   break L0;
                 } else {
-                  stackOut_8_0 = ((pm) this).b(-11963, param3);
+                  stackOut_8_0 = this.b(-11963, param3);
                   stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               } else {
-                stackOut_5_0 = ((pm) this).b(param3, 74);
+                stackOut_5_0 = this.b(param3, 74);
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             }
           }
@@ -190,23 +194,23 @@ final class pm extends dl implements fd, ae {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var5;
+            stackOut_12_0 = (RuntimeException) (var5);
             stackOut_12_1 = new StringBuilder().append("pm.R(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param3 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L1;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -214,9 +218,21 @@ final class pm extends dl implements fd, ae {
               break L1;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
         }
-        return stackIn_11_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_9_0;
+            } else {
+              return stackIn_11_0 != 0;
+            }
+          }
+        }
     }
 
     public final void a(int param0, byte param1, int param2, oa param3, int param4) {
@@ -244,19 +260,19 @@ final class pm extends dl implements fd, ae {
           L0: {
             L1: {
               var6_int = -6 / ((-85 - param1) / 36);
-              if (((pm) this).field_bb == param3) {
+              if (this.field_bb == param3) {
                 this.i(0);
                 break L1;
               } else {
-                if (param3 == ((pm) this).field_X) {
+                if (param3 == this.field_X) {
                   nj.h((byte) 45);
                   break L1;
                 } else {
-                  if (param3 != ((pm) this).field_R) {
+                  if (param3 != this.field_R) {
                     break L1;
                   } else {
-                    if (!((pm) this).field_eb) {
-                      if (!((pm) this).field_cb) {
+                    if (!this.field_eb) {
+                      if (!this.field_cb) {
                         se.a(110);
                         break L1;
                       } else {
@@ -277,23 +293,23 @@ final class pm extends dl implements fd, ae {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var6;
+            stackOut_12_0 = (RuntimeException) (var6);
             stackOut_12_1 = new StringBuilder().append("pm.BA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
             stackIn_13_1 = stackOut_12_1;
             if (param3 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "null";
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
               break L2;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_0 = (RuntimeException) ((Object) stackIn_13_0);
+              stackOut_13_1 = (StringBuilder) ((Object) stackIn_13_1);
               stackOut_13_2 = "{...}";
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
@@ -301,7 +317,7 @@ final class pm extends dl implements fd, ae {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param4 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param4 + ')');
         }
     }
 
@@ -311,10 +327,15 @@ final class pm extends dl implements fd, ae {
         field_db = null;
         field_gb = null;
         field_W = null;
+        if (param0 != 320) {
+            pm.m(-108);
+        }
     }
 
     pm(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (qk) null);
+        hc dupTemp$2 = null;
+        hc dupTemp$3 = null;
         RuntimeException var6 = null;
         kh var6_ref = null;
         mi var7 = null;
@@ -422,7 +443,7 @@ final class pm extends dl implements fd, ae {
               }
             }
             L2: {
-              ((pm) this).field_cb = stackIn_4_1 != 0;
+              ((pm) (this)).field_cb = stackIn_4_1 != 0;
               stackOut_4_0 = this;
               stackIn_6_0 = stackOut_4_0;
               stackIn_5_0 = stackOut_4_0;
@@ -441,7 +462,7 @@ final class pm extends dl implements fd, ae {
               }
             }
             L3: {
-              ((pm) this).field_ab = stackIn_7_1 != 0;
+              ((pm) (this)).field_ab = stackIn_7_1 != 0;
               stackOut_7_0 = this;
               stackIn_9_0 = stackOut_7_0;
               stackIn_8_0 = stackOut_7_0;
@@ -460,16 +481,16 @@ final class pm extends dl implements fd, ae {
               }
             }
             L4: {
-              ((pm) this).field_eb = stackIn_10_1 != 0;
-              ((pm) this).field_fb = param1;
-              if (!((pm) this).field_eb) {
+              ((pm) (this)).field_eb = stackIn_10_1 != 0;
+              this.field_fb = param1;
+              if (!this.field_eb) {
                 break L4;
               } else {
                 L5: {
-                  if (((pm) this).field_ab) {
+                  if (this.field_ab) {
                     break L5;
                   } else {
-                    if (!((pm) this).field_cb) {
+                    if (!this.field_cb) {
                       break L4;
                     } else {
                       break L5;
@@ -480,16 +501,16 @@ final class pm extends dl implements fd, ae {
               }
             }
             L6: {
-              ((pm) this).field_V = (jf) (Object) new bc(param0, (tn) this, 100);
-              ((pm) this).field_Q = (jf) (Object) new bc("", (tn) this, 20);
-              if (((pm) this).field_eb) {
-                ((pm) this).field_bb = new oa(sl.field_c, (tn) null);
-                ((pm) this).field_R = new oa(qe.field_b, (tn) null);
-                ((pm) this).field_V.field_K = false;
+              this.field_V = (jf) ((Object) new bc(param0, (tn) (this), 100));
+              this.field_Q = (jf) ((Object) new bc("", (tn) (this), 20));
+              if (this.field_eb) {
+                this.field_bb = new oa(sl.field_c, (tn) null);
+                this.field_R = new oa(qe.field_b, (tn) null);
+                this.field_V.field_K = false;
                 break L6;
               } else {
                 L7: {
-                  ((pm) this).field_bb = new oa(lb.field_cc, (tn) null);
+                  this.field_bb = new oa(lb.field_cc, (tn) null);
                   stackOut_15_0 = this;
                   stackOut_15_1 = null;
                   stackOut_15_2 = null;
@@ -499,7 +520,7 @@ final class pm extends dl implements fd, ae {
                   stackIn_16_0 = stackOut_15_0;
                   stackIn_16_1 = stackOut_15_1;
                   stackIn_16_2 = stackOut_15_2;
-                  if (!((pm) this).field_cb) {
+                  if (!this.field_cb) {
                     stackOut_17_0 = this;
                     stackOut_17_1 = null;
                     stackOut_17_2 = null;
@@ -521,66 +542,66 @@ final class pm extends dl implements fd, ae {
                     break L7;
                   }
                 }
-                ((pm) this).field_R = new oa(stackIn_18_3, (tn) null);
-                if (!((pm) this).field_ab) {
+                ((pm) (this)).field_R = new oa(stackIn_18_3, (tn) null);
+                if (!this.field_ab) {
                   break L6;
                 } else {
-                  ((pm) this).field_X = new oa(tk.field_n, (tn) this);
+                  this.field_X = new oa(tk.field_n, (tn) (this));
                   break L6;
                 }
               }
             }
             L8: {
-              ((pm) this).field_V.field_p = (qk) (Object) new ag(10000536);
-              ((pm) this).field_Q.field_p = (qk) (Object) new li(10000536);
+              this.field_V.field_p = (qk) ((Object) new ag(10000536));
+              this.field_Q.field_p = (qk) ((Object) new li(10000536));
               var6_ref = new kh();
-              ((pm) this).field_bb.field_p = (qk) (Object) var6_ref;
-              if (null == ((pm) this).field_R) {
+              this.field_bb.field_p = (qk) ((Object) var6_ref);
+              if (null == this.field_R) {
                 break L8;
               } else {
-                ((pm) this).field_R.field_p = (qk) (Object) var6_ref;
+                this.field_R.field_p = (qk) ((Object) var6_ref);
                 break L8;
               }
             }
             L9: {
-              if (((pm) this).field_X == null) {
+              if (this.field_X == null) {
                 break L9;
               } else {
-                ((pm) this).field_X.field_p = (qk) (Object) var6_ref;
+                this.field_X.field_p = (qk) ((Object) var6_ref);
                 break L9;
               }
             }
             L10: {
-              ((pm) this).field_V.field_v = pa.field_i;
-              if (((pm) this).field_X == null) {
+              this.field_V.field_v = pa.field_i;
+              if (this.field_X == null) {
                 break L10;
               } else {
-                ((pm) this).field_X.field_v = r.field_m;
+                this.field_X.field_v = r.field_m;
                 break L10;
               }
             }
             L11: {
-              if (!((pm) this).field_eb) {
-                if (!((pm) this).field_cb) {
-                  ((pm) this).field_R.field_p = (qk) (Object) new bl();
+              if (!this.field_eb) {
+                if (!this.field_cb) {
+                  this.field_R.field_p = (qk) ((Object) new bl());
                   break L11;
                 } else {
-                  ((pm) this).field_R.field_v = rg.field_g;
-                  ((pm) this).field_R.field_p = (qk) (Object) new bl();
+                  this.field_R.field_v = rg.field_g;
+                  this.field_R.field_p = (qk) ((Object) new bl());
                   break L11;
                 }
               } else {
-                ((pm) this).field_R.field_v = bb.field_P;
+                this.field_R.field_v = bb.field_P;
                 break L11;
               }
             }
             L12: {
-              ((pm) this).field_z = 15;
+              this.field_z = 15;
               var7 = tj.field_e;
-              if (null == ((pm) this).field_fb) {
+              if (null == this.field_fb) {
                 break L12;
               } else {
-                ((pm) this).field_z = ((pm) this).field_z + (5 + var7.a(((pm) this).field_fb, -40 + ((pm) this).field_x, var7.field_G));
+                this.field_z = this.field_z + (5 + var7.a(this.field_fb, -40 + this.field_x, var7.field_G));
                 break L12;
               }
             }
@@ -600,87 +621,87 @@ final class pm extends dl implements fd, ae {
               }
             }
             L14: {
-              hc dupTemp$2 = new hc(10, ((pm) this).field_z, ((pm) this).field_x + -20, 25, (lh) (Object) ((pm) this).field_V, false, 80, 3, var7, 16777215, var8);
+              dupTemp$2 = new hc(10, this.field_z, this.field_x + -20, 25, this.field_V, false, 80, 3, var7, 16777215, var8);
               var12 = dupTemp$2;
-              ((pm) this).a((lh) (Object) dupTemp$2, -100);
-              ((pm) this).field_z = ((pm) this).field_z + (5 + ((lh) (Object) var12).field_E);
-              hc dupTemp$3 = new hc(10, ((pm) this).field_z, ((pm) this).field_x + -20, 25, (lh) (Object) ((pm) this).field_Q, false, 80, 3, var7, 16777215, jh.field_c);
+              this.a(dupTemp$2, -100);
+              this.field_z = this.field_z + (5 + ((lh) ((Object) var12)).field_E);
+              dupTemp$3 = new hc(10, this.field_z, this.field_x + -20, 25, this.field_Q, false, 80, 3, var7, 16777215, jh.field_c);
               var13 = dupTemp$3;
-              ((pm) this).a((lh) (Object) dupTemp$3, -120);
-              ((pm) this).field_bb.field_A = (tn) this;
-              ((pm) this).field_z = ((pm) this).field_z + (((lh) (Object) var13).field_E - -5);
-              if (null == ((pm) this).field_X) {
+              this.a(dupTemp$3, -120);
+              this.field_bb.field_A = (tn) (this);
+              this.field_z = this.field_z + (((lh) ((Object) var13)).field_E - -5);
+              if (null == this.field_X) {
                 break L14;
               } else {
-                ((pm) this).field_X.field_A = (tn) this;
+                this.field_X.field_A = (tn) (this);
                 break L14;
               }
             }
             L15: {
-              if (((pm) this).field_R == null) {
+              if (this.field_R == null) {
                 break L15;
               } else {
-                ((pm) this).field_R.field_A = (tn) this;
+                this.field_R.field_A = (tn) (this);
                 break L15;
               }
             }
             L16: {
-              if (null != ((pm) this).field_X) {
-                ((pm) this).field_bb.a(85, (byte) -94, ((pm) this).field_z, -95 + ((pm) this).field_x, 30);
-                ((pm) this).field_z = ((pm) this).field_z + 60;
+              if (null != this.field_X) {
+                this.field_bb.a(85, (byte) -94, this.field_z, -95 + this.field_x, 30);
+                this.field_z = this.field_z + 60;
                 break L16;
               } else {
-                ((pm) this).field_bb.a(8, (byte) -95, ((pm) this).field_z, ((pm) this).field_x - 16, 30);
-                ((pm) this).field_z = ((pm) this).field_z + 35;
+                this.field_bb.a(8, (byte) -95, this.field_z, this.field_x - 6 + -10, 30);
+                this.field_z = this.field_z + 35;
                 break L16;
               }
             }
             L17: {
-              if (((pm) this).field_X == null) {
+              if (this.field_X == null) {
                 break L17;
               } else {
-                ((pm) this).field_X.a(8, (byte) -85, ((pm) this).field_z, -6 + (((pm) this).field_x - 10), 30);
-                ((pm) this).field_z = ((pm) this).field_z + 35;
+                this.field_X.a(8, (byte) -85, this.field_z, -6 + (this.field_x - 10), 30);
+                this.field_z = this.field_z + 35;
                 break L17;
               }
             }
             L18: {
-              if (((pm) this).field_R == null) {
+              if (this.field_R == null) {
                 break L18;
               } else {
                 L19: {
-                  if (((pm) this).field_eb) {
+                  if (this.field_eb) {
                     break L19;
                   } else {
-                    if (!((pm) this).field_cb) {
-                      ((pm) this).field_R.a(8, (byte) -127, ((pm) this).field_z, 40, 20);
-                      ((pm) this).field_z = ((pm) this).field_z + 25;
+                    if (!this.field_cb) {
+                      this.field_R.a(8, (byte) -127, this.field_z, 40, 20);
+                      this.field_z = this.field_z + 25;
                       break L18;
                     } else {
                       break L19;
                     }
                   }
                 }
-                ((pm) this).field_R.a(8, (byte) -106, ((pm) this).field_z, ((pm) this).field_x + -16, 30);
-                ((pm) this).field_z = ((pm) this).field_z + 35;
+                this.field_R.a(8, (byte) -106, this.field_z, this.field_x + -16, 30);
+                this.field_z = this.field_z + 35;
                 break L18;
               }
             }
             L20: {
-              ((pm) this).a(0, (byte) -117, 0, ((pm) this).field_x, ((pm) this).field_z + 3);
-              ((pm) this).a((lh) (Object) ((pm) this).field_bb, -123);
-              if (((pm) this).field_X == null) {
+              this.a(0, (byte) -117, 0, this.field_x, this.field_z + 3);
+              this.a(this.field_bb, -123);
+              if (this.field_X == null) {
                 break L20;
               } else {
-                ((pm) this).a((lh) (Object) ((pm) this).field_X, -123);
+                this.a(this.field_X, -123);
                 break L20;
               }
             }
             L21: {
-              if (((pm) this).field_R == null) {
+              if (this.field_R == null) {
                 break L21;
               } else {
-                ((pm) this).a((lh) (Object) ((pm) this).field_R, -124);
+                this.a(this.field_R, -124);
                 break L21;
               }
             }
@@ -690,23 +711,23 @@ final class pm extends dl implements fd, ae {
           decompiledCaughtException = decompiledCaughtParameter0;
           L22: {
             var6 = decompiledCaughtException;
-            stackOut_57_0 = (RuntimeException) var6;
+            stackOut_57_0 = (RuntimeException) (var6);
             stackOut_57_1 = new StringBuilder().append("pm.<init>(");
             stackIn_59_0 = stackOut_57_0;
             stackIn_59_1 = stackOut_57_1;
             stackIn_58_0 = stackOut_57_0;
             stackIn_58_1 = stackOut_57_1;
             if (param0 == null) {
-              stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
-              stackOut_59_1 = (StringBuilder) (Object) stackIn_59_1;
+              stackOut_59_0 = (RuntimeException) ((Object) stackIn_59_0);
+              stackOut_59_1 = (StringBuilder) ((Object) stackIn_59_1);
               stackOut_59_2 = "null";
               stackIn_60_0 = stackOut_59_0;
               stackIn_60_1 = stackOut_59_1;
               stackIn_60_2 = stackOut_59_2;
               break L22;
             } else {
-              stackOut_58_0 = (RuntimeException) (Object) stackIn_58_0;
-              stackOut_58_1 = (StringBuilder) (Object) stackIn_58_1;
+              stackOut_58_0 = (RuntimeException) ((Object) stackIn_58_0);
+              stackOut_58_1 = (StringBuilder) ((Object) stackIn_58_1);
               stackOut_58_2 = "{...}";
               stackIn_60_0 = stackOut_58_0;
               stackIn_60_1 = stackOut_58_1;
@@ -715,23 +736,23 @@ final class pm extends dl implements fd, ae {
             }
           }
           L23: {
-            stackOut_60_0 = (RuntimeException) (Object) stackIn_60_0;
+            stackOut_60_0 = (RuntimeException) ((Object) stackIn_60_0);
             stackOut_60_1 = ((StringBuilder) (Object) stackIn_60_1).append(stackIn_60_2).append(',');
             stackIn_62_0 = stackOut_60_0;
             stackIn_62_1 = stackOut_60_1;
             stackIn_61_0 = stackOut_60_0;
             stackIn_61_1 = stackOut_60_1;
             if (param1 == null) {
-              stackOut_62_0 = (RuntimeException) (Object) stackIn_62_0;
-              stackOut_62_1 = (StringBuilder) (Object) stackIn_62_1;
+              stackOut_62_0 = (RuntimeException) ((Object) stackIn_62_0);
+              stackOut_62_1 = (StringBuilder) ((Object) stackIn_62_1);
               stackOut_62_2 = "null";
               stackIn_63_0 = stackOut_62_0;
               stackIn_63_1 = stackOut_62_1;
               stackIn_63_2 = stackOut_62_2;
               break L23;
             } else {
-              stackOut_61_0 = (RuntimeException) (Object) stackIn_61_0;
-              stackOut_61_1 = (StringBuilder) (Object) stackIn_61_1;
+              stackOut_61_0 = (RuntimeException) ((Object) stackIn_61_0);
+              stackOut_61_1 = (StringBuilder) ((Object) stackIn_61_1);
               stackOut_61_2 = "{...}";
               stackIn_63_0 = stackOut_61_0;
               stackIn_63_1 = stackOut_61_1;
@@ -739,7 +760,7 @@ final class pm extends dl implements fd, ae {
               break L23;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_63_0, stackIn_63_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_63_0), stackIn_63_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -751,54 +772,65 @@ final class pm extends dl implements fd, ae {
     }
 
     final void j(int param0) {
-        ((pm) this).field_V.i(-8521);
-        ((pm) this).field_Q.i(-8521);
+        this.field_V.i(-8521);
+        this.field_Q.i(-8521);
         int var2 = -123 % ((11 - param0) / 41);
     }
 
     private final void i(int param0) {
+        oa var3 = null;
         L0: {
-          L1: {
+          if (param0 == 0) {
+            break L0;
+          } else {
+            var3 = (oa) null;
+            this.a(-117, (byte) 35, 73, (oa) null, -5);
+            break L0;
+          }
+        }
+        L1: {
+          L2: {
             if (nn.a((byte) 42)) {
-              break L1;
+              break L2;
             } else {
-              if (((pm) this).field_V.field_y.length() <= 0) {
-                break L0;
+              if ((this.field_V.field_y.length() ^ -1) >= -1) {
+                break L1;
               } else {
-                if (((pm) this).field_Q.field_y.length() > 0) {
-                  break L1;
+                if ((this.field_Q.field_y.length() ^ -1) < -1) {
+                  break L2;
                 } else {
-                  break L0;
+                  break L1;
                 }
               }
             }
           }
-          hh.a(((pm) this).field_V.field_y, ((pm) this).field_Q.field_y, 50);
-          break L0;
+          hh.a(this.field_V.field_y, this.field_Q.field_y, 50);
+          break L1;
         }
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        if (null != ((pm) this).field_fb) {
-            int discarded$0 = tj.field_e.a(((pm) this).field_fb, 20 + ((pm) this).field_o + param2, ((pm) this).field_z + param0 - -15, -40 + ((pm) this).field_x, ((pm) this).field_E, 16777215, -1, 1, 0, tj.field_e.field_G);
+        int discarded$0 = 0;
+        if (null != this.field_fb) {
+            discarded$0 = tj.field_e.a(this.field_fb, 20 + this.field_o + param2, this.field_z + param0 - -15, -40 + this.field_x, this.field_E, 16777215, -1, 1, 0, tj.field_e.field_G);
         }
-        if (!(((pm) this).field_X == null)) {
-            pb.g(10 + param2, 134 + param0, ((pm) this).field_x - 20, 4210752);
+        if (!(this.field_X == null)) {
+            pb.g(10 + param2, 134 + param0, this.field_x - 20, 4210752);
         }
         super.a(param0, (byte) -124, param2, param3);
         if (param1 > -99) {
-            ((pm) this).field_V = null;
+            this.field_V = (jf) null;
         }
     }
 
     final String h(byte param0) {
-        if (null == ((pm) this).field_V.field_y) {
+        if (null == this.field_V.field_y) {
             return "";
         }
         if (param0 > -48) {
-            field_Y = null;
+            field_Y = (String) null;
         }
-        return ((pm) this).field_V.field_y;
+        return this.field_V.field_y;
     }
 
     public final void a(jf param0, byte param1) {
@@ -825,7 +857,7 @@ final class pm extends dl implements fd, ae {
               if (param1 == 89) {
                 break L1;
               } else {
-                ((pm) this).field_Q = null;
+                this.field_Q = (jf) null;
                 break L1;
               }
             }
@@ -835,23 +867,23 @@ final class pm extends dl implements fd, ae {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("pm.K(");
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -859,11 +891,13 @@ final class pm extends dl implements fd, ae {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ',' + param1 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
         }
     }
 
     final static void k(int param0) {
+        String[][] dupTemp$2 = null;
+        int[][] dupTemp$3 = null;
         RuntimeException var1 = null;
         int var2 = 0;
         ud var3 = null;
@@ -881,6 +915,7 @@ final class pm extends dl implements fd, ae {
         int var14 = 0;
         int var15 = 0;
         kj var16 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var12 = SteelSentinels.field_G;
         try {
@@ -888,8 +923,8 @@ final class pm extends dl implements fd, ae {
             var13 = rf.field_d;
             var16 = var13;
             var2 = var16.f((byte) -67);
-            var4 = -121;
-            var3 = (ud) (Object) uf.field_f.e(13058);
+            var4 = 121 / ((40 - param0) / 53);
+            var3 = (ud) ((Object) uf.field_f.e(13058));
             L1: while (true) {
               L2: {
                 if (var3 == null) {
@@ -898,18 +933,19 @@ final class pm extends dl implements fd, ae {
                   if (var3.field_t == var2) {
                     break L2;
                   } else {
-                    var3 = (ud) (Object) uf.field_f.a((byte) -33);
+                    var3 = (ud) ((Object) uf.field_f.a((byte) -33));
                     continue L1;
                   }
                 }
               }
               if (var3 == null) {
                 pm.m(81);
-                return;
+                decompiledRegionSelector0 = 0;
+                break L0;
               } else {
                 L3: {
                   var4 = var16.f((byte) -63);
-                  if (var4 != 0) {
+                  if (-1 != (var4 ^ -1)) {
                     ua.field_M[0] = g.field_l;
                     var5 = var3.field_u;
                     var6_int = 1;
@@ -920,10 +956,10 @@ final class pm extends dl implements fd, ae {
                         L5: while (true) {
                           if (var4 <= var6_int) {
                             bc.a(var5, (byte) 98);
-                            String[][] dupTemp$2 = new String[2][var5];
+                            dupTemp$2 = new String[2][var5];
                             var3.field_z = dupTemp$2;
                             var6 = dupTemp$2;
-                            int[][] dupTemp$3 = new int[2][var5 * 4];
+                            dupTemp$3 = new int[2][var5 * 4];
                             var3.field_x = dupTemp$3;
                             var7 = dupTemp$3;
                             var8 = kc.field_z;
@@ -990,7 +1026,7 @@ final class pm extends dl implements fd, ae {
                             }
                           } else {
                             L10: {
-                              nk.a((byte) -80, (gi) (Object) var16);
+                              nk.a((byte) -80, var16);
                               if (var6_int == 0) {
                                 var3.field_B = uf.field_h;
                                 var3.field_s = um.field_W;
@@ -1019,6 +1055,7 @@ final class pm extends dl implements fd, ae {
                 }
                 var3.field_r = true;
                 var3.b(4);
+                decompiledRegionSelector0 = 1;
                 break L0;
               }
             }
@@ -1026,7 +1063,12 @@ final class pm extends dl implements fd, ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1, "pm.FA(" + 113 + ')');
+          throw ci.a((Throwable) ((Object) var1), "pm.FA(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -1056,34 +1098,30 @@ final class pm extends dl implements fd, ae {
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
-        int[] var22 = null;
-        int[] var23 = null;
         RuntimeException decompiledCaughtException = null;
         var19 = SteelSentinels.field_G;
         try {
           L0: {
             nm.field_s = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
             var1_int = nn.field_h.length;
-            var23 = new int[var1_int];
-            var22 = var23;
-            var21 = var22;
+            var21 = new int[var1_int];
             var20 = var21;
             var2 = var20;
             var3 = 0;
             L1: while (true) {
               if (var1_int <= var3) {
                 L2: {
-                  var3 = nm.field_s[9] >> 8;
-                  var4 = nm.field_s[10] >> 8;
-                  var5 = nm.field_s[11] >> 8;
-                  var6 = vn.field_h << 4;
+                  var3 = nm.field_s[9] >> 1951769704;
+                  var4 = nm.field_s[10] >> 429128136;
+                  var5 = nm.field_s[11] >> 112730344;
+                  var6 = vn.field_h << -2017120156;
                   var7 = 0;
-                  var8 = jh.a(var6, 4096) >> 8;
-                  var9 = kg.a(var6, (byte) -84) >> 8;
+                  var8 = jh.a(var6, 4096) >> -2082800472;
+                  var9 = kg.a(var6, (byte) -84) >> -52554968;
                   if (-1 == oh.field_f) {
                     break L2;
                   } else {
-                    if (pi.field_c != -1) {
+                    if (0 != (pi.field_c ^ -1)) {
                       var8 = -pi.field_c + 240;
                       var9 = -128;
                       var7 = oh.field_f - 320;
@@ -1091,6 +1129,14 @@ final class pm extends dl implements fd, ae {
                     } else {
                       break L2;
                     }
+                  }
+                }
+                L3: {
+                  if (param0) {
+                    break L3;
+                  } else {
+                    field_gb = (gh) null;
+                    break L3;
                   }
                 }
                 var10 = 256.0 / Math.sqrt((double)(var7 * var7 + var8 * var8 - -(var9 * var9)));
@@ -1105,41 +1151,41 @@ final class pm extends dl implements fd, ae {
                 var13 = (int)((double)var13 * var10);
                 var12 = (int)((double)var12 * var10);
                 var15 = 0;
-                L3: while (true) {
+                L4: while (true) {
                   if (var15 >= nn.field_h.length) {
                     break L0;
                   } else {
                     var16 = 0;
                     var17_int = 1;
-                    L4: while (true) {
+                    L5: while (true) {
                       if (var17_int >= nn.field_h.length) {
                         var2[var16] = -2147483648;
                         var17 = nn.field_h[var16];
                         pe.a(var16, -124);
                         var18 = 0;
-                        L5: while (true) {
+                        L6: while (true) {
                           if (3 <= var18) {
                             ul.a(true, (byte) -128, false, bl.field_e, var17, false, nm.field_s);
                             ch.a(var9, var8, var14, -125, var12, var17, var7, var13);
                             var15++;
-                            continue L3;
+                            continue L4;
                           } else {
                             bl.field_e[var18] = bl.field_e[var18] + cl.field_f[var15][var18];
                             var18++;
-                            continue L5;
+                            continue L6;
                           }
                         }
                       } else {
-                        L6: {
-                          if (var23[var16] < var23[var17_int]) {
+                        L7: {
+                          if (var21[var16] < var21[var17_int]) {
                             var16 = var17_int;
-                            break L6;
+                            break L7;
                           } else {
-                            break L6;
+                            break L7;
                           }
                         }
                         var17_int++;
-                        continue L4;
+                        continue L5;
                       }
                     }
                   }
@@ -1148,16 +1194,16 @@ final class pm extends dl implements fd, ae {
                 var4_ref_pe = nn.field_h[var3];
                 var4_ref_pe.b(32767);
                 pe.a(var3, -106);
-                var5 = var4_ref_pe.field_J + var4_ref_pe.field_c >> 1;
-                var6 = var4_ref_pe.field_p - -var4_ref_pe.field_W >> 1;
-                var7 = var4_ref_pe.field_n + var4_ref_pe.field_s >> 1;
-                var8 = nm.field_s[9] >> 2;
-                var9 = nm.field_s[10] >> 2;
-                var10_int = nm.field_s[11] >> 2;
-                var11 = bl.field_e[5] * var10_int + var8 * bl.field_e[3] - -(bl.field_e[4] * var9) >> 14;
-                var12 = var8 * bl.field_e[6] - -(bl.field_e[7] * var9) + var10_int * bl.field_e[8] >> 14;
-                var13 = bl.field_e[11] * var10_int + bl.field_e[9] * var8 - -(bl.field_e[10] * var9) >> 14;
-                var2[var3] = var12 * var6 + var11 * var5 + var7 * var13 >> 16;
+                var5 = var4_ref_pe.field_J + var4_ref_pe.field_c >> 362577121;
+                var6 = var4_ref_pe.field_p - -var4_ref_pe.field_W >> 776487329;
+                var7 = var4_ref_pe.field_n + var4_ref_pe.field_s >> 2005930401;
+                var8 = nm.field_s[9] >> -510207390;
+                var9 = nm.field_s[10] >> 2009913506;
+                var10_int = nm.field_s[11] >> 1611463714;
+                var11 = bl.field_e[5] * var10_int + var8 * bl.field_e[3] - -(bl.field_e[4] * var9) >> 1759201038;
+                var12 = var8 * bl.field_e[6] - -(bl.field_e[7] * var9) + var10_int * bl.field_e[8] >> 2070824142;
+                var13 = bl.field_e[11] * var10_int + bl.field_e[9] * var8 - -(bl.field_e[10] * var9) >> 1392871726;
+                var2[var3] = var12 * var6 + var11 * var5 + var7 * var13 >> -928418544;
                 var3++;
                 continue L1;
               }
@@ -1166,7 +1212,7 @@ final class pm extends dl implements fd, ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1, "pm.M(" + true + ')');
+          throw ci.a((Throwable) ((Object) var1), "pm.M(" + param0 + ')');
         }
     }
 
@@ -1179,10 +1225,6 @@ final class pm extends dl implements fd, ae {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_P = "Expert Training";
         field_Y = "Change display name";
     }

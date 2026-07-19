@@ -15,8 +15,9 @@ final class od extends hl {
     int field_j;
 
     public static void a(int param0) {
+        w discarded$2 = null;
         if (param0 <= 22) {
-          w discarded$2 = od.a(true);
+          discarded$2 = od.a(true);
           field_q = null;
           field_o = null;
           field_i = null;
@@ -36,24 +37,20 @@ final class od extends hl {
     final static w a(boolean param0) {
         if (param0) {
             od.a(-87);
-            return (w) (Object) new mk();
+            return (w) ((Object) new mk());
         }
-        return (w) (Object) new mk();
+        return (w) ((Object) new mk());
     }
 
     od(int param0, int param1, int param2, int param3, int param4) {
-        ((od) this).field_s = param2;
-        ((od) this).field_l = param4;
-        ((od) this).field_n = param3;
-        ((od) this).field_j = param1;
-        ((od) this).field_k = param0;
+        this.field_s = param2;
+        this.field_l = param4;
+        this.field_n = param3;
+        this.field_j = param1;
+        this.field_k = param0;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_r = "Names can only contain letters, numbers, spaces and underscores";
         field_i = new String[]{"The Championship", "The Championship II", "Power-ups", "Power-ups II", "Power-ups III", "Two-player", "Other modes"};
         field_o = "Passwords must be between 5 and 20 letters and numbers";

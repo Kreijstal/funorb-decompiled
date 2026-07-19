@@ -21,11 +21,14 @@ class wka extends eta {
         bba.field_c[91] = 42;
         bba.field_c[192] = 28;
         bba.field_c[222] = 58;
-        bba.field_c[520] = 59;
+        bba.field_c[param0] = 59;
     }
 
     public static void c(int param0) {
         field_c = null;
+        if (param0 != -31068) {
+            field_b = 0.14074614644050598f;
+        }
     }
 
     static {

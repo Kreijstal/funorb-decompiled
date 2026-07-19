@@ -22,14 +22,14 @@ abstract class eb extends mc {
     abstract eb b();
 
     final void a(int[] param0, int param1, int param2) {
-        if (((eb) this).field_q) {
-            ((eb) this).b(param0, param1, param2);
+        if (this.field_q) {
+            this.b(param0, param1, param2);
         } else {
-            ((eb) this).a(param2);
+            this.a(param2);
         }
     }
 
     protected eb() {
-        ((eb) this).field_q = true;
+        this.field_q = true;
     }
 }

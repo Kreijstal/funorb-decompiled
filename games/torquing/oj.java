@@ -18,6 +18,7 @@ final class oj implements el {
     static String field_a;
 
     public final void a(int param0, int param1, int param2, boolean param3, gm param4) {
+        int discarded$1 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -32,6 +33,7 @@ final class oj implements el {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         gm stackOut_2_0 = null;
         Object stackOut_1_0 = null;
@@ -47,17 +49,17 @@ final class oj implements el {
           L0: {
             L1: {
               if (param4 instanceof ok) {
-                stackOut_2_0 = (gm) param4;
+                stackOut_2_0 = (gm) (param4);
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
               } else {
                 stackOut_1_0 = null;
-                stackIn_3_0 = (gm) (Object) stackOut_1_0;
+                stackIn_3_0 = (gm) ((Object) stackOut_1_0);
                 break L1;
               }
             }
             L2: {
-              var11 = (ok) (Object) stackIn_3_0;
+              var11 = (ok) ((Object) stackIn_3_0);
               if (var11 == null) {
                 break L2;
               } else {
@@ -67,7 +69,7 @@ final class oj implements el {
             }
             L3: {
               var7 = 5592405;
-              ph.d(param4.field_w + param2, param4.field_k + param1, param4.field_p, param4.field_o, ((oj) this).field_d);
+              ph.d(param4.field_w + param2, param4.field_k + param1, param4.field_p, param4.field_o, this.field_d);
               if (param3) {
                 var7 = 16777215;
                 break L3;
@@ -75,55 +77,57 @@ final class oj implements el {
                 break L3;
               }
             }
-            var8 = param4.field_w + param2 - -((oj) this).field_k;
-            var9 = ((oj) this).field_j + param4.field_k + param1;
-            ph.e(var8, var9, ((oj) this).field_i, ((oj) this).field_e, 5592405);
+            var8 = param4.field_w + param2 - -this.field_k;
+            var9 = this.field_j + param4.field_k + param1;
+            ph.e(var8, var9, this.field_i, this.field_e, 5592405);
             if (param0 > 89) {
               L4: {
-                ph.d(var8, var9, ((oj) this).field_i, ((oj) this).field_e, var7);
+                ph.d(var8, var9, this.field_i, this.field_e, var7);
                 if (var11.field_A) {
-                  ph.a(var8, var9, var8 - -((oj) this).field_i, ((oj) this).field_e + var9, 1);
-                  ph.a(((oj) this).field_i + var8, var9, var8, ((oj) this).field_e + var9, 1);
+                  ph.a(var8, var9, var8 - -this.field_i, this.field_e + var9, 1);
+                  ph.a(this.field_i + var8, var9, var8, this.field_e + var9, 1);
                   break L4;
                 } else {
                   break L4;
                 }
               }
               L5: {
-                if (null == ((oj) this).field_c) {
+                if (null == this.field_c) {
                   break L5;
                 } else {
-                  var10 = ((oj) this).field_i - -((oj) this).field_k - -((oj) this).field_b;
-                  int discarded$1 = ((oj) this).field_c.a(param4.field_m, var10 + (param2 - -param4.field_w), param4.field_k + (param1 + ((oj) this).field_g), param4.field_p - var10 + -((oj) this).field_b, -(((oj) this).field_b << 1) + param4.field_o, ((oj) this).field_f, ((oj) this).field_n, ((oj) this).field_m, ((oj) this).field_h, 0);
+                  var10 = this.field_i - -this.field_k - -this.field_b;
+                  discarded$1 = this.field_c.a(param4.field_m, var10 + (param2 - -param4.field_w), param4.field_k + (param1 + this.field_g), param4.field_p - var10 + -this.field_b, -(this.field_b << 72407521) + param4.field_o, this.field_f, this.field_n, this.field_m, this.field_h, 0);
                   break L5;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var6 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var6;
+            stackOut_16_0 = (RuntimeException) (var6);
             stackOut_16_1 = new StringBuilder().append("oj.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
             stackIn_17_1 = stackOut_16_1;
             if (param4 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+              stackOut_18_1 = (StringBuilder) ((Object) stackIn_18_1);
               stackOut_18_2 = "null";
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
               break L6;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "{...}";
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
@@ -131,7 +135,12 @@ final class oj implements el {
               break L6;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -193,7 +202,7 @@ final class oj implements el {
               if (param4) {
                 break L1;
               } else {
-                field_l = null;
+                field_l = (bp) null;
                 break L1;
               }
             }
@@ -270,7 +279,7 @@ final class oj implements el {
                         var26_int = 3680;
                         var27 = param2;
                         if (0 != var27) {
-                          if (var27 != 1) {
+                          if (-2 != (var27 ^ -1)) {
                             if (2 != var27) {
                               if (var27 == 3) {
                                 var24 = dj.a(param6, param8, var26_int, var30, var26_int, var25, var25, param5, var26_int, 1, var26_int);
@@ -295,7 +304,7 @@ final class oj implements el {
                       }
                     }
                     pm.a(param9, -27226, 1);
-                    var25 = var30.a(param5, param6, param8, (byte)(param0 & 1), (byte)(var24 >> 24), param1, param7);
+                    var25 = var30.a(param5, param6, param8, (byte)(param0 & 1), (byte)(var24 >> -1143861352), param1, param7);
                     var26 = param9.field_q;
                     if (var26 != null) {
                       var26.field_q[var25] = (short)var24;
@@ -364,23 +373,23 @@ final class oj implements el {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var10 = decompiledCaughtException;
-            stackOut_49_0 = (RuntimeException) var10;
+            stackOut_49_0 = (RuntimeException) (var10);
             stackOut_49_1 = new StringBuilder().append("oj.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
             stackIn_51_0 = stackOut_49_0;
             stackIn_51_1 = stackOut_49_1;
             stackIn_50_0 = stackOut_49_0;
             stackIn_50_1 = stackOut_49_1;
             if (param9 == null) {
-              stackOut_51_0 = (RuntimeException) (Object) stackIn_51_0;
-              stackOut_51_1 = (StringBuilder) (Object) stackIn_51_1;
+              stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
+              stackOut_51_1 = (StringBuilder) ((Object) stackIn_51_1);
               stackOut_51_2 = "null";
               stackIn_52_0 = stackOut_51_0;
               stackIn_52_1 = stackOut_51_1;
               stackIn_52_2 = stackOut_51_2;
               break L8;
             } else {
-              stackOut_50_0 = (RuntimeException) (Object) stackIn_50_0;
-              stackOut_50_1 = (StringBuilder) (Object) stackIn_50_1;
+              stackOut_50_0 = (RuntimeException) ((Object) stackIn_50_0);
+              stackOut_50_1 = (StringBuilder) ((Object) stackIn_50_1);
               stackOut_50_2 = "{...}";
               stackIn_52_0 = stackOut_50_0;
               stackIn_52_1 = stackOut_50_1;
@@ -388,42 +397,38 @@ final class oj implements el {
               break L8;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_52_0), stackIn_52_2 + ')');
         }
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 != 1) {
-            field_a = null;
+            field_a = (String) null;
         }
         field_l = null;
     }
 
     oj(uc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        ((oj) this).field_m = 1;
-        ((oj) this).field_h = 1;
+        this.field_m = 1;
+        this.field_h = 1;
         try {
-            ((oj) this).field_n = param4;
-            ((oj) this).field_f = param3;
-            ((oj) this).field_e = param7;
-            ((oj) this).field_j = param6;
-            ((oj) this).field_d = param9;
-            ((oj) this).field_i = param8;
-            ((oj) this).field_g = param2;
-            ((oj) this).field_k = param5;
-            ((oj) this).field_c = param0;
-            ((oj) this).field_b = param1;
+            this.field_n = param4;
+            this.field_f = param3;
+            this.field_e = param7;
+            this.field_j = param6;
+            this.field_d = param9;
+            this.field_i = param8;
+            this.field_g = param2;
+            this.field_k = param5;
+            this.field_c = param0;
+            this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+            throw rb.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = new bp();
         field_a = "Please enter your age in years";
     }

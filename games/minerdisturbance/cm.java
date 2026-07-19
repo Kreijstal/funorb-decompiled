@@ -21,6 +21,7 @@ final class cm extends pi {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
@@ -36,7 +37,7 @@ final class cm extends pi {
               v.field_b[0] = dk.field_a.nextInt();
               v.field_b[1] = dk.field_a.nextInt();
               rf.field_c.field_o = 0;
-              v.field_b[2] = (int)(gd.field_s >> 32);
+              v.field_b[2] = (int)(gd.field_s >> -2078212512);
               v.field_b[3] = (int)gd.field_s;
               rf.field_c.a((byte) 81, v.field_b[0]);
               rf.field_c.a((byte) 125, v.field_b[1]);
@@ -84,59 +85,64 @@ final class cm extends pi {
               }
             }
             L5: {
-              if (ag.field_d != null) {
+              if (ag.field_d == null) {
+                break L5;
+              } else {
                 var6 = var6 | 16;
-                sn.field_c.c(var6, 25564);
-                break L5;
-              } else {
-                sn.field_c.c(var6, 25564);
                 break L5;
               }
             }
-            L6: {
-              var7 = ag.a(bm.c(-90), true);
-              if (var7 == null) {
-                var7 = "";
-                break L6;
-              } else {
-                break L6;
+            sn.field_c.c(var6, 25564);
+            if (param0 == 6) {
+              L6: {
+                var7 = ag.a(bm.c(-90), true);
+                if (var7 == null) {
+                  var7 = "";
+                  break L6;
+                } else {
+                  break L6;
+                }
               }
-            }
-            L7: {
-              sn.field_c.b(23446, var7);
-              if (null == ag.field_d) {
-                break L7;
-              } else {
-                sn.field_c.a(8, ag.field_d);
-                break L7;
+              L7: {
+                sn.field_c.b(23446, var7);
+                if (null == ag.field_d) {
+                  break L7;
+                } else {
+                  sn.field_c.a(8, ag.field_d);
+                  break L7;
+                }
               }
+              jg.a(kc.field_b, param0 + -108, rf.field_c, ph.field_g, sn.field_c);
+              sn.field_c.b(sn.field_c.field_o - var5_int, param0 + -506270862);
+              bk.a((byte) -64, -1);
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
-            jg.a(kc.field_b, -102, rf.field_c, ph.field_g, (sb) (Object) sn.field_c);
-            sn.field_c.b(sn.field_c.field_o - var5_int, -506270856);
-            bk.a((byte) -64, -1);
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var5;
-            stackOut_22_1 = new StringBuilder().append("cm.D(").append(6).append(',').append(param1).append(',').append(param2).append(',');
+            stackOut_22_0 = (RuntimeException) (var5);
+            stackOut_22_1 = new StringBuilder().append("cm.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param3 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L8;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -144,23 +150,34 @@ final class cm extends pi {
               break L8;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param4 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param4 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final static boolean a(boolean param0) {
+        if (!param0) {
+            field_o = -3;
+            return rd.a((byte) 27, bm.c(-118));
+        }
         return rd.a((byte) 27, bm.c(-118));
     }
 
     cm(int param0) {
-        ((cm) this).field_s = param0;
+        this.field_s = param0;
     }
 
     final static void e(int param0) {
+        int fieldTemp$5 = 0;
         ld var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = MinerDisturbance.field_ab;
         try {
@@ -169,10 +186,11 @@ final class cm extends pi {
               var1 = sn.field_c;
               L1: while (true) {
                 if (!ub.a(14921)) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   var1.d((byte) -51, 8);
-                  int fieldTemp$5 = var1.field_o + 1;
+                  fieldTemp$5 = var1.field_o + 1;
                   var1.field_o = var1.field_o + 1;
                   var2 = fieldTemp$5;
                   pj.a((byte) 119, var1);
@@ -181,28 +199,30 @@ final class cm extends pi {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1_ref, "cm.A(" + param0 + ')');
+          throw lj.a((Throwable) ((Object) var1_ref), "cm.A(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void a(int param0) {
         field_p = null;
         if (param0 != 18) {
-            field_p = null;
+            field_p = (ae) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = new ae();
         field_n = 0;
     }

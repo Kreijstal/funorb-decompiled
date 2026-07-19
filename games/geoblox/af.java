@@ -12,13 +12,12 @@ final class af {
         field_a = null;
         field_b = null;
         field_d = null;
+        if (param0 > -86) {
+            field_d = (sk) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "af.A(";
         field_c = 0;
         field_a = new dm(320, 240);

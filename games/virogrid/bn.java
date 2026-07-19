@@ -8,7 +8,7 @@ final class bn {
     static String field_a;
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = param0 >>> 31;
+        int var3 = param0 >>> 1346386079;
         if (param1 <= 118) {
             return 121;
         }
@@ -16,8 +16,12 @@ final class bn {
     }
 
     public static void a(byte param0) {
+        int discarded$0 = 0;
         field_c = null;
         field_a = null;
+        if (param0 > -108) {
+            discarded$0 = bn.a(-84, (byte) 74, -123);
+        }
     }
 
     final static boolean a(int param0, char param1) {
@@ -33,6 +37,7 @@ final class bn {
         int stackIn_11_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_20_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_19_0 = 0;
         int stackOut_16_0 = 0;
@@ -56,6 +61,7 @@ final class bn {
                       if (var4 >= var3.length) {
                         stackOut_19_0 = 0;
                         stackIn_20_0 = stackOut_19_0;
+                        decompiledRegionSelector0 = 4;
                         break L0;
                       } else {
                         var5 = var3[var4];
@@ -65,7 +71,8 @@ final class bn {
                         } else {
                           stackOut_16_0 = 1;
                           stackIn_17_0 = stackOut_16_0;
-                          return stackIn_17_0 != 0;
+                          decompiledRegionSelector0 = 3;
+                          break L0;
                         }
                       }
                     }
@@ -77,34 +84,49 @@ final class bn {
                     } else {
                       stackOut_10_0 = 1;
                       stackIn_11_0 = stackOut_10_0;
-                      return stackIn_11_0 != 0;
+                      decompiledRegionSelector0 = 2;
+                      break L0;
                     }
                   }
                 }
               } else {
                 stackOut_5_0 = 1;
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0 != 0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var2, "bn.B(" + param0 + ',' + param1 + ')');
+          throw kg.a((Throwable) ((Object) var2), "bn.B(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_20_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_11_0 != 0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_17_0 != 0;
+              } else {
+                return stackIn_20_0 != 0;
+              }
+            }
+          }
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Please enter your date of birth to enable chat:";
         field_a = "Logging in...";
     }

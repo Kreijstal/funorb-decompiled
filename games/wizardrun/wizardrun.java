@@ -23,6 +23,11 @@ public final class wizardrun extends u {
     public static int field_H;
 
     private final void a(boolean param0, int param1) {
+        o discarded$5 = null;
+        boolean discarded$6 = false;
+        boolean discarded$7 = false;
+        boolean discarded$8 = false;
+        boolean discarded$9 = false;
         o var4 = null;
         int var5_int = 0;
         Object var5 = null;
@@ -62,7 +67,7 @@ public final class wizardrun extends u {
                 if (!mh.field_jb.b(17820)) {
                   break L2;
                 } else {
-                  if (mh.field_jb.d(-116)) {
+                  if (mh.field_jb.d(param1 ^ -94)) {
                     L3: {
                       if (!mi.field_y.b(17820)) {
                         break L3;
@@ -76,7 +81,7 @@ public final class wizardrun extends u {
                             } else {
                               if (jl.field_u.d(-85)) {
                                 L5: {
-                                  if (!eg.field_u.b(17820)) {
+                                  if (!eg.field_u.b(param1 ^ 17842)) {
                                     break L5;
                                   } else {
                                     if (eg.field_u.d(-67)) {
@@ -91,7 +96,7 @@ public final class wizardrun extends u {
                                               } else {
                                                 if (bb.field_h.a((byte) 29, "basic")) {
                                                   L8: {
-                                                    if (!bc.field_a.b(17820)) {
+                                                    if (!bc.field_a.b(param1 ^ 17842)) {
                                                       break L8;
                                                     } else {
                                                       if (!bc.field_a.d(-85)) {
@@ -102,13 +107,13 @@ public final class wizardrun extends u {
                                                           return;
                                                         } else {
                                                           cf.a((byte) 79);
-                                                          ((wizardrun) this).f(-98);
+                                                          this.f(-98);
                                                           a.field_a = ti.a(800863586, "", mi.field_E, "b12", bc.field_a);
                                                           hj.field_g = ti.a(800863586, "", mi.field_E, "wizfont", bc.field_a);
-                                                          jj.field_b = ti.a(800863586, "", mi.field_E, "wizfont2", bc.field_a);
+                                                          jj.field_b = ti.a(param1 + 800863540, "", mi.field_E, "wizfont2", bc.field_a);
                                                           lk.field_b = new o[16];
                                                           bc.field_a = null;
-                                                          field_D = pe.a("", mi.field_E, "numbers", 91);
+                                                          field_D = pe.a("", mi.field_E, "numbers", param1 + 45);
                                                           jj.field_a = pe.a("", mi.field_E, "gems", 114);
                                                           oc.field_c = pe.a("", mi.field_E, "playerintro", 117);
                                                           lg.field_a = pe.a("", mi.field_E, "highwizard", 100);
@@ -120,17 +125,17 @@ public final class wizardrun extends u {
                                                           pk.a(var12, false);
                                                           tk.a(0, var4, var4.field_x, 0, 2500, 0, 2, var4.field_s, 0);
                                                           ui.a(true, fa.field_b);
-                                                          ck.a((java.applet.Applet) this, l.field_O, 0, 34, 16777215, 255);
+                                                          ck.a((java.applet.Applet) (this), l.field_O, 0, 34, 16777215, 255);
                                                           md.field_c = null;
-                                                          oe.field_a = vg.a(15, "paused", mi.field_E, "");
+                                                          oe.field_a = vg.a(param1 + -31, "paused", mi.field_E, "");
                                                           ok.field_d[0] = vg.a(15, "selstar", mi.field_E, "");
                                                           ok.field_d[1] = vg.a(15, "selstar2", mi.field_E, "");
                                                           ok.field_d[2] = vg.a(15, "selstar3", mi.field_E, "");
-                                                          o discarded$5 = vg.a(15, "gameover", mi.field_E, "");
+                                                          discarded$5 = vg.a(15, "gameover", mi.field_E, "");
                                                           mg.field_s = vg.a(15, "bosshealth2", mi.field_E, "");
                                                           ve.field_c = pe.a("", mi.field_E, "wizard", 95);
-                                                          ra.field_m = pe.a("", mi.field_E, "wizardnohat", 88);
-                                                          rk.field_m = vg.a(15, "explosion", mi.field_E, "");
+                                                          ra.field_m = pe.a("", mi.field_E, "wizardnohat", param1 + 42);
+                                                          rk.field_m = vg.a(param1 ^ 33, "explosion", mi.field_E, "");
                                                           ui.field_a = pe.a("", mi.field_E, "achievements", 108);
                                                           sk.field_z = vg.a(15, "unachieved", bb.field_h, "basic");
                                                           wc.field_f = vg.a(15, "orbcoin", bb.field_h, "basic");
@@ -138,8 +143,8 @@ public final class wizardrun extends u {
                                                           kk.field_Bb = new o[5];
                                                           kk.field_Bb[0] = vg.a(15, "highscore", mi.field_E, "");
                                                           kk.field_Bb[1] = vg.a(15, "highscorebar", mi.field_E, "");
-                                                          kk.field_Bb[2] = vg.a(15, "stage", mi.field_E, "");
-                                                          kk.field_Bb[3] = vg.a(sg.a(46, 33), "score", mi.field_E, "");
+                                                          kk.field_Bb[2] = vg.a(param1 + -31, "stage", mi.field_E, "");
+                                                          kk.field_Bb[3] = vg.a(sg.a(param1, 33), "score", mi.field_E, "");
                                                           kk.field_Bb[4] = field_D[10];
                                                           pd.field_H = pe.a("", mi.field_E, "frame", 91);
                                                           qc.field_E = pe.a("", mi.field_E, "buttonframe", 119);
@@ -150,36 +155,36 @@ public final class wizardrun extends u {
                                                           ec.field_b = new o(64, 64);
                                                           ec.field_b.b();
                                                           ed.a(32, 32, 30, 16777215);
-                                                          hl.field_b.b(63);
+                                                          hl.field_b.b(param1 + 17);
                                                           gf.field_bb = ve.field_c[1];
-                                                          ld.field_d = vg.a(15, "selector", mi.field_E, "");
-                                                          u.field_x = vg.a(15, "bosshealth", mi.field_E, "");
-                                                          jl.field_w = vg.a(15, "title", mi.field_E, "");
+                                                          ld.field_d = vg.a(param1 + -31, "selector", mi.field_E, "");
+                                                          u.field_x = vg.a(param1 + -31, "bosshealth", mi.field_E, "");
+                                                          jl.field_w = vg.a(param1 + -31, "title", mi.field_E, "");
                                                           wh.field_d = vg.a(15, "highscorescreen", mi.field_E, "");
-                                                          l.field_M = vg.a(15, "achievementscreen", mi.field_E, "");
-                                                          bk.field_b = vg.a(15, "controlscreen", mi.field_E, "");
+                                                          l.field_M = vg.a(param1 ^ 33, "achievementscreen", mi.field_E, "");
+                                                          bk.field_b = vg.a(param1 ^ 33, "controlscreen", mi.field_E, "");
                                                           bk.field_b.b();
-                                                          var5_int = 46;
-                                                          var13 = di.a(new String[2], (byte) 112, og.field_P);
-                                                          this.b(-12926, var13, 15583488, jj.field_b.b(var13) / 2 + 165, 180 + var5_int);
-                                                          var14 = di.a(new String[2], (byte) 49, qj.field_a);
+                                                          var5_int = param1;
+                                                          var13 = di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 112, og.field_P);
+                                                          this.b(param1 ^ -12884, var13, 15583488, jj.field_b.b(var13) / 2 + 165, 180 + var5_int);
+                                                          var14 = di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 49, qj.field_a);
                                                           this.b(-12926, var14, 15583488, jj.field_b.b(var14) / 2 + 165, var5_int * 2 + 180);
-                                                          var15 = di.a(new String[2], (byte) 94, kj.field_e);
+                                                          var15 = di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 94, kj.field_e);
                                                           this.b(-12926, var15, 15583488, 165 - -(jj.field_b.b(var15) / 2), 180 + 3 * var5_int);
-                                                          var16 = di.a(new String[2], (byte) 124, oi.field_d);
+                                                          var16 = di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 124, oi.field_d);
                                                           this.b(-12926, var16, 15583488, jj.field_b.b(var16) / 2 + 165, -15 + var5_int * 4 + 180);
-                                                          var17 = di.a(new String[2], (byte) 97, sk.field_C);
+                                                          var17 = di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 97, sk.field_C);
                                                           this.b(-12926, var17, 15583488, jj.field_b.b(var17) / 2 + 165, 5 * var5_int + 180);
                                                           hl.field_b.b(106);
                                                           kb.field_jb = vg.a(15, "optionscreen", mi.field_E, "");
-                                                          we.field_b = vg.a(15, "endscreen", mi.field_E, "");
-                                                          il.a(240, (vd) (Object) jj.field_b, pd.field_H, (byte) -113, pd.field_H, 16777215, 16777088, 12, 12, 16776960, 320, 12, pd.field_H, 12, 12);
+                                                          we.field_b = vg.a(param1 + -31, "endscreen", mi.field_E, "");
+                                                          il.a(240, jj.field_b, pd.field_H, (byte) -113, pd.field_H, 16777215, 16777088, 12, 12, 16776960, 320, 12, pd.field_H, 12, 12);
                                                           ug.a((byte) -94);
                                                           fl.field_T = new byte[6][6][];
                                                           mi.field_E = null;
                                                           var5_int = 0;
                                                           L9: while (true) {
-                                                            if (var5_int > 5) {
+                                                            if ((var5_int ^ -1) < -6) {
                                                               mh.field_jb = null;
                                                               var10 = new i(22050, c.field_l);
                                                               si.field_j[0] = b.a(mi.field_y, "", "spell").b().a(var10);
@@ -277,15 +282,15 @@ public final class wizardrun extends u {
                                                               var7_int = 0;
                                                               L10: while (true) {
                                                                 if (7 <= var7_int) {
-                                                                  boolean discarded$6 = mi.field_D.a(eg.field_u, -1, var18, bh.field_e, 0);
-                                                                  boolean discarded$7 = mi.field_D.a(eg.field_u, -1, var18, qj.field_e, 0);
-                                                                  boolean discarded$8 = mi.field_D.a(eg.field_u, -1, var18, fb.field_a, 0);
+                                                                  discarded$6 = mi.field_D.a(eg.field_u, -1, var18, bh.field_e, 0);
+                                                                  discarded$7 = mi.field_D.a(eg.field_u, -1, var18, qj.field_e, 0);
+                                                                  discarded$8 = mi.field_D.a(eg.field_u, param1 ^ -47, var18, fb.field_a, 0);
                                                                   mi.field_D.b(true);
                                                                   eg.field_u = null;
                                                                   var6 = null;
                                                                   var7_int = 0;
                                                                   L11: while (true) {
-                                                                    if (var7_int >= 1000) {
+                                                                    if (-1001 >= (var7_int ^ -1)) {
                                                                       L12: {
                                                                         wi.field_K = 1;
                                                                         cd.field_e = 500;
@@ -300,7 +305,7 @@ public final class wizardrun extends u {
                                                                         ga.field_e = sl.field_q[6];
                                                                         mi.field_D.a(-1, hc.field_o);
                                                                         if (tl.field_e) {
-                                                                          mi.field_D.a(true, -106, ga.field_e);
+                                                                          mi.field_D.a(true, param1 ^ -72, ga.field_e);
                                                                           break L12;
                                                                         } else {
                                                                           break L12;
@@ -308,7 +313,7 @@ public final class wizardrun extends u {
                                                                       }
                                                                       var8 = 0;
                                                                       L13: while (true) {
-                                                                        if (var8 >= 300) {
+                                                                        if ((var8 ^ -1) <= -301) {
                                                                           th.field_h = true;
                                                                           sf.field_h = 0;
                                                                           wg.field_e = jl.field_w;
@@ -331,7 +336,7 @@ public final class wizardrun extends u {
                                                                     }
                                                                   }
                                                                 } else {
-                                                                  boolean discarded$9 = mi.field_D.a(eg.field_u, -1, var11, sl.field_q[var7_int], 0);
+                                                                  discarded$9 = mi.field_D.a(eg.field_u, -1, var11, sl.field_q[var7_int], 0);
                                                                   var7_int++;
                                                                   continue L10;
                                                                 }
@@ -339,7 +344,7 @@ public final class wizardrun extends u {
                                                             } else {
                                                               var6_int = 0;
                                                               L14: while (true) {
-                                                                if (var6_int > 5) {
+                                                                if (-6 > (var6_int ^ -1)) {
                                                                   var5_int++;
                                                                   continue L9;
                                                                 } else {
@@ -361,7 +366,7 @@ public final class wizardrun extends u {
                                                 }
                                               }
                                             }
-                                            ok.a(oh.a(qb.field_q, tk.field_e, bb.field_h, -120, "basic"), 85.0f, 0);
+                                            ok.a(oh.a(qb.field_q, tk.field_e, bb.field_h, param1 ^ -90, "basic"), 85.0f, param1 ^ 46);
                                             return;
                                           } else {
                                             break L6;
@@ -387,7 +392,7 @@ public final class wizardrun extends u {
                         }
                       }
                     }
-                    ok.a(de.a(-40, ge.field_i, mi.field_y, il.field_d), 50.0f, 0);
+                    ok.a(de.a(-40, ge.field_i, mi.field_y, il.field_d), 50.0f, param1 + -46);
                     return;
                   } else {
                     break L2;
@@ -399,7 +404,7 @@ public final class wizardrun extends u {
             }
           }
         }
-        ok.a(de.a(-40, tk.field_e, mi.field_E, qb.field_q), 30.0f, 0);
+        ok.a(de.a(-40, tk.field_e, mi.field_E, qb.field_q), 30.0f, param1 ^ 46);
     }
 
     private final void s(int param0) {
@@ -444,7 +449,7 @@ public final class wizardrun extends u {
           }
         }
         L2: {
-          ((wizardrun) this).field_J = stackIn_6_1 != 0;
+          ((wizardrun) (this)).field_J = stackIn_6_1 != 0;
           rf.field_b = 0;
           tc.field_j = false;
           wg.field_e = wh.field_d;
@@ -456,64 +461,69 @@ public final class wizardrun extends u {
             break L2;
           }
         }
-        L3: {
-          ga.field_e = pj.field_G;
-          hg.field_a = 500;
-          if (e.a(-96)) {
-            sf.field_h = 6;
-            break L3;
-          } else {
-            break L3;
+        ga.field_e = pj.field_G;
+        if (param0 == 208) {
+          L3: {
+            hg.field_a = 500;
+            if (e.a(-96)) {
+              sf.field_h = 6;
+              break L3;
+            } else {
+              break L3;
+            }
           }
-        }
-        L4: {
-          if (sg.field_f != 0) {
-            break L4;
-          } else {
-            if (qf.field_l != 0) {
+          L4: {
+            if (-1 != (sg.field_f ^ -1)) {
               break L4;
             } else {
-              if (!ke.field_u.f(8192)) {
+              if (qf.field_l != 0) {
                 break L4;
               } else {
-                sf.field_h = 0;
-                ((wizardrun) this).field_J = true;
-                hi.field_a = -350;
-                break L4;
+                if (!ke.field_u.f(8192)) {
+                  break L4;
+                } else {
+                  sf.field_h = 0;
+                  this.field_J = true;
+                  hi.field_a = -350;
+                  break L4;
+                }
               }
             }
           }
-        }
-        L5: {
-          if (!e.a(-90)) {
-            hi.field_c = hi.field_c - (ql.field_c - 6);
-            wg.field_b = wg.field_b - (sg.field_f << 6);
-            me.field_f = me.field_f + (qh.field_l * 6 - -6);
-            qh.field_l = -1;
-            sg.field_f = 0;
-            ql.field_c = 6;
-            break L5;
-          } else {
-            break L5;
+          L5: {
+            if (!e.a(-90)) {
+              hi.field_c = hi.field_c - (ql.field_c - 6);
+              wg.field_b = wg.field_b - (sg.field_f << 696469926);
+              me.field_f = me.field_f + (qh.field_l * 6 - -6);
+              qh.field_l = -1;
+              sg.field_f = 0;
+              ql.field_c = 6;
+              break L5;
+            } else {
+              break L5;
+            }
           }
-        }
-        L6: {
-          hi.field_c = hi.field_c + qh.field_g;
-          wg.field_b = wg.field_b - 5;
-          od.field_k = 0;
-          ga.field_e = sl.field_q[6];
-          wi.field_K = 1;
-          cd.field_e = 500;
-          qh.field_g = 5;
-          if (!tl.field_e) {
-            break L6;
-          } else {
-            mi.field_D.a(true, -106, ga.field_e);
-            break L6;
+          L6: {
+            hi.field_c = hi.field_c + qh.field_g;
+            wg.field_b = wg.field_b - 5;
+            od.field_k = 0;
+            ga.field_e = sl.field_q[6];
+            wi.field_K = 1;
+            cd.field_e = 500;
+            qh.field_g = 5;
+            if (!tl.field_e) {
+              break L6;
+            } else {
+              mi.field_D.a(true, param0 + -314, ga.field_e);
+              break L6;
+            }
           }
+          tj.field_I = 255;
+          hi.field_a = -350;
+          return;
+        } else {
+          return;
         }
-        tj.field_I = 255;
-        hi.field_a = -350;
     }
 
     final void i(int param0) {
@@ -594,7 +604,7 @@ public final class wizardrun extends u {
           }
         }
         L2: {
-          ((wizardrun) this).c(stackIn_7_1, stackIn_7_2 != 0);
+          this.c(stackIn_7_1, stackIn_7_2 != 0);
           if (!f.field_c) {
             break L2;
           } else {
@@ -608,7 +618,7 @@ public final class wizardrun extends u {
             break L3;
           } else {
             L4: {
-              ((wizardrun) this).d((byte) -122);
+              this.d((byte) -122);
               if (th.field_h) {
                 break L4;
               } else {
@@ -682,11 +692,11 @@ public final class wizardrun extends u {
                     }
                   }
                   L7: {
-                    var2 = ((wizardrun) this).a((byte) stackIn_24_1, stackIn_24_2 != 0);
+                    var2 = this.a((byte) stackIn_24_1, stackIn_24_2 != 0);
                     if (var2 == 1) {
                       break L7;
                     } else {
-                      if (var2 == 2) {
+                      if (-3 == (var2 ^ -1)) {
                         break L7;
                       } else {
                         break L5;
@@ -694,7 +704,7 @@ public final class wizardrun extends u {
                     }
                   }
                   di.a((byte) 60);
-                  if (var2 != 2) {
+                  if (-3 != (var2 ^ -1)) {
                     break L5;
                   } else {
                     bc.a(127, jg.f(1));
@@ -711,13 +721,13 @@ public final class wizardrun extends u {
         L8: {
           if (!e.a(-81)) {
             L9: while (true) {
-              var5 = (pg) (Object) ie.field_l.b(114);
+              var5 = (pg) ((Object) ie.field_l.b(114));
               if (var5 != null) {
                 hc.a(var5, false, 4);
                 continue L9;
               } else {
                 L10: while (true) {
-                  var6 = (dc) (Object) ke.field_u.b(109);
+                  var6 = (dc) ((Object) ke.field_u.b(109));
                   if (var6 == null) {
                     break L8;
                   } else {
@@ -737,7 +747,7 @@ public final class wizardrun extends u {
             L12: {
               id.a((byte) -67, 0);
               if (h.b(true)) {
-                var3 = ((wizardrun) this).o(-10618);
+                var3 = this.o(-10618);
                 if (var3 == 2) {
                   ci.a((byte) -124);
                   break L12;
@@ -750,7 +760,7 @@ public final class wizardrun extends u {
             }
             return;
           } else {
-            ((wizardrun) this).b(true);
+            this.b(true);
             continue L11;
           }
         }
@@ -788,17 +798,17 @@ public final class wizardrun extends u {
         int stackOut_50_0 = 0;
         int stackOut_49_0 = 0;
         var6 = field_H;
-        if (pa.field_c > 0) {
+        if ((pa.field_c ^ -1) < -1) {
           return;
         } else {
           L0: {
             if (param1 != 2) {
               break L0;
             } else {
-              if (param2 == 2) {
+              if ((param2 ^ -1) == -3) {
                 break L0;
               } else {
-                if (param2 == 3) {
+                if ((param2 ^ -1) == -4) {
                   break L0;
                 } else {
                   param1 = 0;
@@ -810,9 +820,9 @@ public final class wizardrun extends u {
           L1: {
             var4 = 43 % ((-44 - param0) / 58);
             var5 = param2;
-            if (var5 != 0) {
+            if (-1 != (var5 ^ -1)) {
               if (1 == var5) {
-                if (param1 != 0) {
+                if ((param1 ^ -1) != -1) {
                   break L1;
                 } else {
                   th.field_i = 1;
@@ -829,10 +839,10 @@ public final class wizardrun extends u {
                   if (var5 != 2) {
                     if (3 != var5) {
                       if (4 != var5) {
-                        if (var5 != 5) {
+                        if (-6 != (var5 ^ -1)) {
                           if (6 != var5) {
-                            if (var5 == 7) {
-                              if (param1 == 0) {
+                            if ((var5 ^ -1) == -8) {
+                              if (-1 == (param1 ^ -1)) {
                                 L3: {
                                   if (pk.field_s) {
                                     tl.field_a.a(si.field_j[0], 100, ee.field_p * 256 / 100);
@@ -878,7 +888,7 @@ public final class wizardrun extends u {
                           }
                         }
                       } else {
-                        if (param1 != 0) {
+                        if (-1 != (param1 ^ -1)) {
                           break L1;
                         } else {
                           if (null == ki.field_E) {
@@ -900,7 +910,7 @@ public final class wizardrun extends u {
                         }
                       }
                       L5: {
-                        if (param1 == 1) {
+                        if ((param1 ^ -1) == -2) {
                           param1 = 25;
                           break L5;
                         } else {
@@ -926,7 +936,7 @@ public final class wizardrun extends u {
                       L8: {
                         if (param1 == 2) {
                           L9: {
-                            if (pg.field_n < 144) {
+                            if (-145 < (pg.field_n ^ -1)) {
                               break L9;
                             } else {
                               if (!tl.field_e) {
@@ -934,7 +944,7 @@ public final class wizardrun extends u {
                               } else {
                                 L10: {
                                   param1 = 0;
-                                  if (~pg.field_n <= ~(168 - -(108 * hc.field_o / 200))) {
+                                  if ((pg.field_n ^ -1) <= (168 - -(108 * hc.field_o / 200) ^ -1)) {
                                     break L10;
                                   } else {
                                     param1 = 200 * (pg.field_n - (hc.field_o * 108 / 200 + 172)) / 108;
@@ -1009,9 +1019,9 @@ public final class wizardrun extends u {
                         }
                       }
                       L14: {
-                        if (param1 <= -1) {
+                        if (0 <= (param1 ^ -1)) {
                           hc.field_o = hc.field_o + param1;
-                          if (hc.field_o > 0) {
+                          if (-1 > (hc.field_o ^ -1)) {
                             mi.field_D.a(-1, hc.field_o);
                             break L14;
                           } else {
@@ -1047,7 +1057,7 @@ public final class wizardrun extends u {
                         }
                       }
                       L16: {
-                        if (param1 < 1) {
+                        if (-2 < (param1 ^ -1)) {
                           break L16;
                         } else {
                           L17: {
@@ -1073,7 +1083,7 @@ public final class wizardrun extends u {
                         break L2;
                       } else {
                         L18: {
-                          if (nl.field_y <= 0) {
+                          if (-1 <= (nl.field_y ^ -1)) {
                             tl.field_a.a(si.field_j[0], 100, ee.field_p * 256 / 100);
                             nl.field_y = 25;
                             break L18;
@@ -1086,7 +1096,7 @@ public final class wizardrun extends u {
                     }
                   } else {
                     L19: {
-                      if (param1 != -1) {
+                      if (0 != (param1 ^ -1)) {
                         break L19;
                       } else {
                         param1 = -13;
@@ -1094,7 +1104,7 @@ public final class wizardrun extends u {
                       }
                     }
                     L20: {
-                      if (param1 != 1) {
+                      if ((param1 ^ -1) != -2) {
                         break L20;
                       } else {
                         param1 = 13;
@@ -1102,7 +1112,7 @@ public final class wizardrun extends u {
                       }
                     }
                     L21: {
-                      if (param1 != -3) {
+                      if (2 != (param1 ^ -1)) {
                         break L21;
                       } else {
                         param1 = -104;
@@ -1118,7 +1128,7 @@ public final class wizardrun extends u {
                       }
                     }
                     L23: {
-                      if (param1 != 2) {
+                      if (-3 != (param1 ^ -1)) {
                         if (param1 != 0) {
                           break L23;
                         } else {
@@ -1138,7 +1148,7 @@ public final class wizardrun extends u {
                         }
                       } else {
                         L25: {
-                          if (pg.field_n < 144) {
+                          if ((pg.field_n ^ -1) > -145) {
                             break L25;
                           } else {
                             if (!pk.field_s) {
@@ -1146,14 +1156,14 @@ public final class wizardrun extends u {
                             } else {
                               L26: {
                                 param1 = 0;
-                                if (~pg.field_n > ~(-1 + (172 - -(ee.field_p * 108 / 104)))) {
+                                if ((pg.field_n ^ -1) > (-1 + (172 - -(ee.field_p * 108 / 104)) ^ -1)) {
                                   param1 = (-(108 * ee.field_p / 104) - 172 + pg.field_n) * 104 / 108;
                                   break L26;
                                 } else {
                                   break L26;
                                 }
                               }
-                              if (108 * ee.field_p / 104 + 173 >= pg.field_n) {
+                              if (108 * ee.field_p / 104 + 172 + 1 >= pg.field_n) {
                                 break L23;
                               } else {
                                 param1 = 104 * (pg.field_n - (172 + ee.field_p * 108 / 104)) / 108;
@@ -1181,7 +1191,7 @@ public final class wizardrun extends u {
                     L28: {
                       if (-1 >= param1) {
                         ee.field_p = ee.field_p + param1;
-                        if (ee.field_p <= 0) {
+                        if ((ee.field_p ^ -1) >= -1) {
                           pk.field_s = false;
                           ee.field_p = 0;
                           break L28;
@@ -1226,7 +1236,7 @@ public final class wizardrun extends u {
               }
             } else {
               nj.field_r = 255;
-              wg.field_b = wg.field_b - (sg.field_f << 6);
+              wg.field_b = wg.field_b - (sg.field_f << -30995034);
               sg.field_f = 0;
               if (param1 == 0) {
                 th.field_i = 5;
@@ -1246,7 +1256,7 @@ public final class wizardrun extends u {
             if (!pk.field_s) {
               break L31;
             } else {
-              if (param1 == 2) {
+              if ((param1 ^ -1) == -3) {
                 break L31;
               } else {
                 tl.field_a.a(si.field_j[0], 100, 256 * ee.field_p / 100);
@@ -1259,6 +1269,45 @@ public final class wizardrun extends u {
     }
 
     final void f(int param0) {
+        int incrementValue$39 = 0;
+        int incrementValue$40 = 0;
+        int discarded$41 = 0;
+        int discarded$42 = 0;
+        int discarded$43 = 0;
+        int discarded$44 = 0;
+        int discarded$45 = 0;
+        int discarded$46 = 0;
+        int discarded$47 = 0;
+        int discarded$48 = 0;
+        int discarded$49 = 0;
+        int discarded$50 = 0;
+        int discarded$51 = 0;
+        int discarded$52 = 0;
+        int discarded$53 = 0;
+        int discarded$54 = 0;
+        int discarded$55 = 0;
+        int incrementValue$56 = 0;
+        int discarded$57 = 0;
+        int discarded$58 = 0;
+        int discarded$59 = 0;
+        int discarded$60 = 0;
+        int discarded$61 = 0;
+        int discarded$62 = 0;
+        int discarded$63 = 0;
+        int discarded$64 = 0;
+        int discarded$65 = 0;
+        int discarded$66 = 0;
+        int discarded$67 = 0;
+        int discarded$68 = 0;
+        int discarded$69 = 0;
+        int discarded$70 = 0;
+        int discarded$71 = 0;
+        int incrementValue$72 = 0;
+        int incrementValue$73 = 0;
+        int discarded$74 = 0;
+        int discarded$75 = 0;
+        int discarded$76 = 0;
+        boolean discarded$77 = false;
         int var3 = 0;
         String[] var3_ref_String__ = null;
         String var3_ref_String = null;
@@ -1479,7 +1528,7 @@ public final class wizardrun extends u {
                 if (wi.field_K != 1) {
                   L1: {
                     fe.c((byte) 108);
-                    if (ql.field_c >= 5) {
+                    if (-6 >= (ql.field_c ^ -1)) {
                       var3 = 0;
                       var4_int = 0;
                       var5 = 1;
@@ -1487,7 +1536,7 @@ public final class wizardrun extends u {
                         if (od.field_k <= var5) {
                           L3: {
                             var5 = 50;
-                            if (qh.field_l == 2) {
+                            if (-3 == (qh.field_l ^ -1)) {
                               var5 = 75;
                               break L3;
                             } else {
@@ -1495,7 +1544,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L4: {
-                            if (qh.field_l != 3) {
+                            if ((qh.field_l ^ -1) != -4) {
                               break L4;
                             } else {
                               var5 = 75;
@@ -1560,7 +1609,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L12: {
-                            if (qh.field_l != 5) {
+                            if (-6 != (qh.field_l ^ -1)) {
                               break L12;
                             } else {
                               var6 = 64;
@@ -1568,7 +1617,7 @@ public final class wizardrun extends u {
                             }
                           }
                           mg.field_s.e(320 + -(u.field_x.field_x / 2), var6);
-                          if (var4_int != 0) {
+                          if ((var4_int ^ -1) != -1) {
                             ed.c(1 + (320 - u.field_x.field_x / 2), 0, 320 + -(u.field_x.field_x / 2) - -((-2 + u.field_x.field_x) * ii.field_e[var4_int].field_p / var5), 480);
                             u.field_x.e(320 + -(u.field_x.field_x / 2), var6);
                             ed.c();
@@ -1581,7 +1630,7 @@ public final class wizardrun extends u {
                             if (ii.field_e[var5].field_d != var3) {
                               break L13;
                             } else {
-                              if (~ii.field_e[var5].field_p < ~ii.field_e[var4_int].field_p) {
+                              if ((ii.field_e[var5].field_p ^ -1) < (ii.field_e[var4_int].field_p ^ -1)) {
                                 var3 = ii.field_e[var5].field_d;
                                 var4_int = var5;
                                 break L13;
@@ -1607,7 +1656,7 @@ public final class wizardrun extends u {
                       break L1;
                     }
                   }
-                  if (qh.field_l > -1) {
+                  if ((qh.field_l ^ -1) < 0) {
                     L15: {
                       if (pg.field_q) {
                         break L15;
@@ -1620,7 +1669,7 @@ public final class wizardrun extends u {
                             var4_int = 0;
                             var5 = 440;
                             L17: while (true) {
-                              if (var5 > 610) {
+                              if ((var5 ^ -1) < -611) {
                                 ed.c(440, 0, 440 - -(2 * fi.field_x), 64);
                                 var4_int = 0;
                                 var5 = 440;
@@ -1631,10 +1680,10 @@ public final class wizardrun extends u {
                                   } else {
                                     L19: {
                                       ok.field_d[0].a(var5, 0, 30, 30);
-                                      int incrementValue$39 = var4_int;
+                                      incrementValue$39 = var4_int;
                                       var4_int++;
                                       jj.field_b.b(var3_ref_String__[incrementValue$39], var5 + 15, 25, 0, -1);
-                                      if (fi.field_x <= 100) {
+                                      if (-101 <= (fi.field_x ^ -1)) {
                                         break L19;
                                       } else {
                                         if (fi.field_x >= 110) {
@@ -1655,7 +1704,7 @@ public final class wizardrun extends u {
                                 jj.field_b.b(var26[var4_int], var5 + 15, 26, 0, -1);
                                 jj.field_b.b(var26[var4_int], -1 + (15 + var5), 25, 0, -1);
                                 jj.field_b.b(var26[var4_int], 1 + (var5 - -15), 25, 0, -1);
-                                int incrementValue$40 = var4_int;
+                                incrementValue$40 = var4_int;
                                 var4_int++;
                                 jj.field_b.b(var3_ref_String__[incrementValue$40], var5 - -15, 25, 16777215, -1);
                                 var5 += 20;
@@ -1686,8 +1735,8 @@ public final class wizardrun extends u {
                           } else {
                             L22: {
                               if (qh.field_g <= 25 + var4_int) {
-                                if (~qh.field_g >= ~(var4_int - -10)) {
-                                  if (~(var4_int - -5) <= ~qh.field_g) {
+                                if ((qh.field_g ^ -1) >= (var4_int - -10 ^ -1)) {
+                                  if ((var4_int - -5 ^ -1) <= (qh.field_g ^ -1)) {
                                     ok.field_d[0].a(var3, 446, 24, 24);
                                     gf.field_bb.a(var3, 446, 24, 24);
                                     var3 += 24;
@@ -1726,7 +1775,7 @@ public final class wizardrun extends u {
                       }
                     }
                     L23: {
-                      if (sg.field_f > 0) {
+                      if ((sg.field_f ^ -1) < -1) {
                         var27 = tf.field_d + sg.field_f;
                         jj.field_b.c(var27, 8, jj.field_b.field_M - 1, 0, -1);
                         jj.field_b.c(var27, 8, jj.field_b.field_M - -1, 0, -1);
@@ -1739,7 +1788,7 @@ public final class wizardrun extends u {
                       }
                     }
                     L24: {
-                      if (wi.field_K != 2) {
+                      if ((wi.field_K ^ -1) != -3) {
                         break L24;
                       } else {
                         L25: {
@@ -1751,15 +1800,15 @@ public final class wizardrun extends u {
                             } else {
                               if (5 <= ql.field_c) {
                                 L26: {
-                                  ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
-                                  if (((wizardrun) this).field_Q < 40) {
+                                  this.field_Q = this.field_Q + 1;
+                                  if (-41 < (this.field_Q ^ -1)) {
                                     break L26;
                                   } else {
-                                    ((wizardrun) this).field_Q = 0;
+                                    this.field_Q = 0;
                                     break L26;
                                   }
                                 }
-                                lg.field_a[12 + ((wizardrun) this).field_Q / 10 % 4].e(512, 0);
+                                lg.field_a[12 + this.field_Q / 10 % 4].e(512, 0);
                                 break L25;
                               } else {
                                 break L25;
@@ -1783,20 +1832,20 @@ public final class wizardrun extends u {
                       break L0;
                     } else {
                       L28: {
-                        if (((wizardrun) this).field_R == 11) {
+                        if (-12 == (this.field_R ^ -1)) {
                           L29: {
-                            ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
-                            if (((wizardrun) this).field_Q < 40) {
+                            this.field_Q = this.field_Q + 1;
+                            if (-41 < (this.field_Q ^ -1)) {
                               break L29;
                             } else {
-                              ((wizardrun) this).field_Q = 0;
+                              this.field_Q = 0;
                               break L29;
                             }
                           }
-                          lg.field_a[12 + ((wizardrun) this).field_Q / 10 % 4].e(512, 0);
+                          lg.field_a[12 + this.field_Q / 10 % 4].e(512, 0);
                           var4_int = -32 + ((15 - ii.field_e[0].field_i.field_a + -1) * 32 - ii.field_e[0].field_f.field_a * 32 / 240);
                           var3 = ii.field_e[0].field_i.field_b * 32 - -(ii.field_e[0].field_f.field_b * 32 / 240);
-                          if (ii.field_e[0].field_h != -1) {
+                          if ((ii.field_e[0].field_h ^ -1) != 0) {
                             ve.field_c[ii.field_e[0].field_n].d(var3, var4_int);
                             break L28;
                           } else {
@@ -1808,18 +1857,18 @@ public final class wizardrun extends u {
                         }
                       }
                       L30: {
-                        if (((wizardrun) this).field_R == 12) {
+                        if ((this.field_R ^ -1) == -13) {
                           L31: {
                             var4_int = 352;
-                            lg.field_a[12 + (2 + ((wizardrun) this).field_Q / 10) % 4].e(512, 0);
+                            lg.field_a[12 + (2 + this.field_Q / 10) % 4].e(512, 0);
                             var3 = 64;
-                            if (((wizardrun) this).field_Q < 10) {
+                            if (this.field_Q < 10) {
                               var4_int = -64 + -(ii.field_e[0].field_i.field_a * 32) + (480 - ii.field_e[0].field_f.field_a * 32 / 240);
                               var3 = 32 * ii.field_e[0].field_f.field_b / 240 + ii.field_e[0].field_i.field_b * 32;
                               var5 = -var3 + 64;
-                              var3 = var3 + var5 * ((wizardrun) this).field_Q / 10;
+                              var3 = var3 + var5 * this.field_Q / 10;
                               var6 = -var4_int + 352;
-                              var4_int = var4_int + var6 * ((wizardrun) this).field_Q / 10;
+                              var4_int = var4_int + var6 * this.field_Q / 10;
                               break L31;
                             } else {
                               break L31;
@@ -1827,7 +1876,7 @@ public final class wizardrun extends u {
                           }
                           L32: {
                             var5 = 15;
-                            if (((wizardrun) this).field_Q > 50) {
+                            if ((this.field_Q ^ -1) < -51) {
                               var5 = 16;
                               break L32;
                             } else {
@@ -1835,7 +1884,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L33: {
-                            if (((wizardrun) this).field_Q > 60) {
+                            if (this.field_Q > 60) {
                               var5 = 12;
                               break L33;
                             } else {
@@ -1844,15 +1893,15 @@ public final class wizardrun extends u {
                           }
                           L34: {
                             oc.field_c[var5].d(var3, var4_int);
-                            if (50 > ((wizardrun) this).field_Q) {
-                              var6 = ((wizardrun) this).field_Q * 256 / 50;
+                            if (50 > this.field_Q) {
+                              var6 = this.field_Q * 256 / 50;
                               var7_double = 0.0;
                               var9 = 0;
                               L35: while (true) {
                                 if (var9 >= 5) {
                                   break L34;
                                 } else {
-                                  var7_double = (double)((wizardrun) this).field_Q + 6.28 * (double)var9 / 5.0;
+                                  var7_double = (double)this.field_Q + 6.28 * (double)var9 / 5.0;
                                   ob.field_c.d(-6 + ((int)(32.0 + 32.0 * Math.cos(var7_double)) + var3), var4_int - (-(int)(32.0 + Math.sin(var7_double) * 32.0) - -6), 12, 12, var6);
                                   var9++;
                                   continue L35;
@@ -1862,23 +1911,23 @@ public final class wizardrun extends u {
                               break L34;
                             }
                           }
-                          if (((wizardrun) this).field_Q < 50) {
+                          if ((this.field_Q ^ -1) > -51) {
                             break L30;
                           } else {
-                            if (((wizardrun) this).field_Q >= 90) {
+                            if ((this.field_Q ^ -1) <= -91) {
                               break L30;
                             } else {
                               var6 = 576 - (64 + var3);
                               var7 = 64 + -var4_int;
-                              var8 = var6 * (-50 + ((wizardrun) this).field_Q) / 40 + var3;
-                              var9 = var7 * (((wizardrun) this).field_Q + -50) / 40 + var4_int;
-                              ob.field_c.a(var8, var9, -123, 128, 2 * ((wizardrun) this).field_Q);
-                              var8 = var3 + (int)(Math.sin(3.14 * (double)(((wizardrun) this).field_Q + -50) / 80.0) * (double)var6);
-                              var9 = var4_int - -(var7 * (-50 + ((wizardrun) this).field_Q) / 40);
-                              ob.field_c.a(var8, var9, -118, 128, ((wizardrun) this).field_Q * 2);
-                              var8 = var6 * (((wizardrun) this).field_Q + -50) / 40 + var3;
-                              var9 = (int)((double)var7 * Math.sin((double)(-50 + ((wizardrun) this).field_Q) * 3.14 / 80.0)) + var4_int;
-                              ob.field_c.a(var8, var9, -115, 128, 2 * ((wizardrun) this).field_Q);
+                              var8 = var6 * (-50 + this.field_Q) / 40 + var3;
+                              var9 = var7 * (this.field_Q + -50) / 40 + var4_int;
+                              ob.field_c.a(var8, var9, -123, 128, 2 * this.field_Q);
+                              var8 = var3 + (int)(Math.sin(3.14 * (double)(this.field_Q + -50) / 80.0) * (double)var6);
+                              var9 = var4_int - -(var7 * (-50 + this.field_Q) / 40);
+                              ob.field_c.a(var8, var9, -118, 128, this.field_Q * 2);
+                              var8 = var6 * (this.field_Q + -50) / 40 + var3;
+                              var9 = (int)((double)var7 * Math.sin((double)(-50 + this.field_Q) * 3.14 / 80.0)) + var4_int;
+                              ob.field_c.a(var8, var9, -115, 128, 2 * this.field_Q);
                               break L30;
                             }
                           }
@@ -1887,12 +1936,12 @@ public final class wizardrun extends u {
                         }
                       }
                       L36: {
-                        if (((wizardrun) this).field_R == 13) {
+                        if (-14 == (this.field_R ^ -1)) {
                           L37: {
                             var3 = 64;
                             var4_int = 352;
-                            var5 = ((wizardrun) this).field_Q / 5 % 2 + 13;
-                            if (((wizardrun) this).field_Q > 70) {
+                            var5 = this.field_Q / 5 % 2 + 13;
+                            if ((this.field_Q ^ -1) < -71) {
                               var5 = 12;
                               break L37;
                             } else {
@@ -1900,7 +1949,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L38: {
-                            if (((wizardrun) this).field_Q <= 80) {
+                            if (this.field_Q <= 80) {
                               break L38;
                             } else {
                               var5 = 11;
@@ -1908,7 +1957,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L39: {
-                            if (((wizardrun) this).field_Q <= 90) {
+                            if (this.field_Q <= 90) {
                               break L39;
                             } else {
                               var5 = 10;
@@ -1916,11 +1965,11 @@ public final class wizardrun extends u {
                             }
                           }
                           oc.field_c[var5].d(var3, var4_int);
-                          if (((wizardrun) this).field_Q >= 50) {
-                            lg.field_a[((wizardrun) this).field_Q / 10 % 4 - -22].e(512, 288);
+                          if (-51 >= (this.field_Q ^ -1)) {
+                            lg.field_a[this.field_Q / 10 % 4 - -22].e(512, 288);
                             break L36;
                           } else {
-                            lg.field_a[((wizardrun) this).field_Q / 10 % 4 - -18].e(512, ((wizardrun) this).field_Q * 288 / 50);
+                            lg.field_a[this.field_Q / 10 % 4 - -18].e(512, this.field_Q * 288 / 50);
                             break L36;
                           }
                         } else {
@@ -1928,11 +1977,11 @@ public final class wizardrun extends u {
                         }
                       }
                       L40: {
-                        if (14 == ((wizardrun) this).field_R) {
-                          lg.field_a[22 + (2 + ((wizardrun) this).field_Q / 10) % 4].e(512, 288);
-                          var3 = ((wizardrun) this).field_Q + 64;
+                        if (14 == this.field_R) {
+                          lg.field_a[22 + (2 + this.field_Q / 10) % 4].e(512, 288);
+                          var3 = this.field_Q + 64;
                           var4_int = 352;
-                          var5 = 2 - -(((wizardrun) this).field_Q / 10 % 4);
+                          var5 = 2 - -(this.field_Q / 10 % 4);
                           oc.field_c[var5].d(var3, var4_int);
                           break L40;
                         } else {
@@ -1940,19 +1989,19 @@ public final class wizardrun extends u {
                         }
                       }
                       L41: {
-                        if (((wizardrun) this).field_R == 15) {
+                        if ((this.field_R ^ -1) == -16) {
                           L42: {
                             var3 = 164;
-                            if (((wizardrun) this).field_Q < 50) {
-                              lg.field_a[22 + ((wizardrun) this).field_Q / 10 % 4].e(512, 288);
+                            if (this.field_Q < 50) {
+                              lg.field_a[22 + this.field_Q / 10 % 4].e(512, 288);
                               break L42;
                             } else {
-                              lg.field_a[((wizardrun) this).field_Q / 10 % 4 - -26].e(512, 288);
+                              lg.field_a[this.field_Q / 10 % 4 - -26].e(512, 288);
                               break L42;
                             }
                           }
                           var4_int = 352;
-                          var5 = ((wizardrun) this).field_Q / 5 % 2 + 19;
+                          var5 = this.field_Q / 5 % 2 + 19;
                           oc.field_c[var5].d(var3, var4_int);
                           break L41;
                         } else {
@@ -1960,13 +2009,13 @@ public final class wizardrun extends u {
                         }
                       }
                       L43: {
-                        if (((wizardrun) this).field_R == 16) {
+                        if (-17 == (this.field_R ^ -1)) {
                           L44: {
                             var4_int = 352;
-                            lg.field_a[26 + (2 + ((wizardrun) this).field_Q / 10) % 4].e(512, 288);
+                            lg.field_a[26 + (2 + this.field_Q / 10) % 4].e(512, 288);
                             var3 = 164;
                             var5 = 10;
-                            if (((wizardrun) this).field_Q > 10) {
+                            if ((this.field_Q ^ -1) < -11) {
                               var5 = 11;
                               break L44;
                             } else {
@@ -1974,7 +2023,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L45: {
-                            if (25 >= ((wizardrun) this).field_Q) {
+                            if (25 >= this.field_Q) {
                               break L45;
                             } else {
                               var5 = 12;
@@ -1982,7 +2031,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L46: {
-                            if (50 > ((wizardrun) this).field_Q) {
+                            if (50 > this.field_Q) {
                               break L46;
                             } else {
                               var5 = 13;
@@ -1996,19 +2045,19 @@ public final class wizardrun extends u {
                         }
                       }
                       L47: {
-                        if (((wizardrun) this).field_R == 17) {
-                          lg.field_a[(((wizardrun) this).field_Q / 10 - -2) % 4 + 30].e(512, 288);
-                          oc.field_c[(((wizardrun) this).field_Q / 5 - -2) % 2 - -17].e(164, 352);
+                        if (this.field_R == 17) {
+                          lg.field_a[(this.field_Q / 10 - -2) % 4 + 30].e(512, 288);
+                          oc.field_c[(this.field_Q / 5 - -2) % 2 - -17].e(164, 352);
                           break L47;
                         } else {
                           break L47;
                         }
                       }
                       L48: {
-                        if (((wizardrun) this).field_R == 1) {
+                        if ((this.field_R ^ -1) == -2) {
                           var3 = 256;
                           var4_int = 288;
-                          var5 = ((wizardrun) this).field_Q / 10 % 8;
+                          var5 = this.field_Q / 10 % 8 - 0;
                           lg.field_a[var5].e(var3, var4_int);
                           break L48;
                         } else {
@@ -2016,14 +2065,14 @@ public final class wizardrun extends u {
                         }
                       }
                       L49: {
-                        if (2 == ((wizardrun) this).field_R) {
-                          var5 = ((wizardrun) this).field_Q / 10 % 8;
+                        if (2 == this.field_R) {
+                          var5 = this.field_Q / 10 % 8 - 0;
                           var3 = 256;
                           var4_int = 288;
                           lg.field_a[var5].e(var3, var4_int);
-                          var4_int = var4_int - (32 + -((wizardrun) this).field_Q + 100);
-                          var5 = ((wizardrun) this).field_Q / 5 % 4 + 6;
-                          var3 = var3 - (-64 + (100 - ((wizardrun) this).field_Q) * 5);
+                          var4_int = var4_int - (32 + -this.field_Q + 100);
+                          var5 = this.field_Q / 5 % 4 + 6;
+                          var3 = var3 - (-64 + (100 - this.field_Q) * 5);
                           ok.field_e[5][3][var5].d(var3, var4_int);
                           break L49;
                         } else {
@@ -2031,12 +2080,12 @@ public final class wizardrun extends u {
                         }
                       }
                       L50: {
-                        if (((wizardrun) this).field_R == 3) {
+                        if (this.field_R == 3) {
                           var4_int = 288;
-                          var5 = ((wizardrun) this).field_Q / 10 % 4 - -8;
+                          var5 = this.field_Q / 10 % 4 - -8;
                           var3 = 256;
-                          var4_int = var4_int - ((wizardrun) this).field_Q;
-                          var3 = var3 + 5 * ((wizardrun) this).field_Q;
+                          var4_int = var4_int - this.field_Q;
+                          var3 = var3 + 5 * this.field_Q;
                           lg.field_a[var5].e(var3, var4_int);
                           break L50;
                         } else {
@@ -2044,31 +2093,31 @@ public final class wizardrun extends u {
                         }
                       }
                       L51: {
-                        if (((wizardrun) this).field_R != 4) {
+                        if (-5 != (this.field_R ^ -1)) {
                           break L51;
                         } else {
-                          var3 = 2 * ((wizardrun) this).field_Q - 64;
-                          var5 = 6 + ((wizardrun) this).field_Q / 10 % 4;
+                          var3 = 2 * this.field_Q - 64;
+                          var5 = 6 + this.field_Q / 10 % 4;
                           var4_int = 352;
                           oc.field_c[var5].d(var3, var4_int);
                           break L51;
                         }
                       }
                       L52: {
-                        if (((wizardrun) this).field_R != 5) {
+                        if (this.field_R != 5) {
                           break L52;
                         } else {
                           L53: {
-                            var5 = 6 + (2 + ((wizardrun) this).field_Q / 10) % 4;
+                            var5 = 6 + (2 + this.field_Q / 10) % 4;
                             var4_int = 352;
-                            if (((wizardrun) this).field_Q < 100) {
-                              var3 = -64 + (2 * ((wizardrun) this).field_Q - -200);
+                            if ((this.field_Q ^ -1) > -101) {
+                              var3 = -64 + (2 * this.field_Q - -200);
                               oc.field_c[var5].d(var3, var4_int);
                               break L53;
                             } else {
                               var3 = 336;
                               var5 = 7;
-                              if (((wizardrun) this).field_Q < 150) {
+                              if (this.field_Q < 150) {
                                 oc.field_c[var5].d(var3, var4_int);
                                 break L53;
                               } else {
@@ -2077,10 +2126,10 @@ public final class wizardrun extends u {
                               }
                             }
                           }
-                          if (100 < ((wizardrun) this).field_Q) {
-                            var3 = 64 + (int)(Math.sin(3.14 * (double)((wizardrun) this).field_Q / 100.0) * 32.0);
-                            var4_int = -448 + 2 * ((wizardrun) this).field_Q;
-                            var5 = 36 + ((wizardrun) this).field_Q / 25 % 2;
+                          if (100 < this.field_Q) {
+                            var3 = 64 + (int)(Math.sin(3.14 * (double)this.field_Q / 100.0) * 32.0);
+                            var4_int = -448 + 2 * this.field_Q;
+                            var5 = 36 + this.field_Q / 25 % 2;
                             oc.field_c[var5].e(var3, var4_int);
                             break L52;
                           } else {
@@ -2089,13 +2138,13 @@ public final class wizardrun extends u {
                         }
                       }
                       L54: {
-                        if (6 == ((wizardrun) this).field_R) {
+                        if (6 == this.field_R) {
                           L55: {
                             var4_int = 352;
-                            var5 = 6 + ((wizardrun) this).field_Q / 10 % 4;
+                            var5 = 6 + this.field_Q / 10 % 4;
                             var3 = 336;
                             var5 = 7;
-                            if (((wizardrun) this).field_Q > 20) {
+                            if ((this.field_Q ^ -1) < -21) {
                               var5 = 28;
                               break L55;
                             } else {
@@ -2103,7 +2152,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L56: {
-                            if (((wizardrun) this).field_Q <= 40) {
+                            if (this.field_Q <= 40) {
                               break L56;
                             } else {
                               var5 = 27;
@@ -2111,7 +2160,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L57: {
-                            if (((wizardrun) this).field_Q <= 150) {
+                            if (-151 <= (this.field_Q ^ -1)) {
                               break L57;
                             } else {
                               var5 = 28;
@@ -2119,7 +2168,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L58: {
-                            if (((wizardrun) this).field_Q <= 175) {
+                            if ((this.field_Q ^ -1) >= -176) {
                               break L58;
                             } else {
                               var5 = 29;
@@ -2127,9 +2176,9 @@ public final class wizardrun extends u {
                             }
                           }
                           oc.field_c[var5].e(var3, var4_int);
-                          var3 = (int)(Math.sin((double)((wizardrun) this).field_Q * 3.14 / 100.0) * 32.0) + 64;
-                          var5 = 36 + ((wizardrun) this).field_Q / 25 % 2;
-                          var4_int = 2 * ((wizardrun) this).field_Q + -48;
+                          var3 = (int)(Math.sin((double)this.field_Q * 3.14 / 100.0) * 32.0) + 64;
+                          var5 = 36 + this.field_Q / 25 % 2;
+                          var4_int = 2 * this.field_Q + -48;
                           oc.field_c[var5].e(var3, var4_int);
                           break L54;
                         } else {
@@ -2137,13 +2186,13 @@ public final class wizardrun extends u {
                         }
                       }
                       L59: {
-                        if (((wizardrun) this).field_R != 7) {
+                        if (this.field_R != 7) {
                           break L59;
                         } else {
-                          if (((wizardrun) this).field_Q >= 50) {
+                          if (this.field_Q >= 50) {
                             var4_int = 352;
                             var3 = 64;
-                            if (((wizardrun) this).field_Q >= 75) {
+                            if (this.field_Q >= 75) {
                               oc.field_c[10].e(var3, var4_int);
                               break L59;
                             } else {
@@ -2152,11 +2201,11 @@ public final class wizardrun extends u {
                               break L59;
                             }
                           } else {
-                            var5 = ((wizardrun) this).field_Q / 5 % 4 + 6;
+                            var5 = this.field_Q / 5 % 4 + 6;
                             var3 = 336;
                             var4_int = 352;
                             var6 = 64 + -var3;
-                            var3 = var3 + var6 * ((wizardrun) this).field_Q / 50;
+                            var3 = var3 + var6 * this.field_Q / 50;
                             oc.field_c[var5].e(var3, var4_int);
                             var5 = 36;
                             var3 = 64;
@@ -2167,23 +2216,23 @@ public final class wizardrun extends u {
                         }
                       }
                       L60: {
-                        if (((wizardrun) this).field_R == 8) {
+                        if (this.field_R == 8) {
                           L61: {
-                            var5 = ((wizardrun) this).field_Q / 5 % 4 + 2;
+                            var5 = this.field_Q / 5 % 4 + 2;
                             var4_int = 352;
-                            if (40 <= ((wizardrun) this).field_Q) {
+                            if (40 <= this.field_Q) {
                               break L61;
                             } else {
-                              var3 = 64 - -(((wizardrun) this).field_Q * 3);
+                              var3 = 64 - -(this.field_Q * 3);
                               oc.field_c[var5].d(var3, var4_int);
                               break L61;
                             }
                           }
                           L62: {
-                            if (((wizardrun) this).field_Q < 40) {
+                            if ((this.field_Q ^ -1) > -41) {
                               break L62;
                             } else {
-                              if (((wizardrun) this).field_Q < 60) {
+                              if (this.field_Q < 60) {
                                 var3 = 184;
                                 oc.field_c[3].d(var3, var4_int);
                                 break L62;
@@ -2192,13 +2241,13 @@ public final class wizardrun extends u {
                               }
                             }
                           }
-                          if (((wizardrun) this).field_Q < 60) {
+                          if (this.field_Q < 60) {
                             break L60;
                           } else {
-                            if (((wizardrun) this).field_Q > 100) {
+                            if (-101 > (this.field_Q ^ -1)) {
                               break L60;
                             } else {
-                              var3 = 364 + -(((wizardrun) this).field_Q * 3);
+                              var3 = 364 + -(this.field_Q * 3);
                               oc.field_c[var5].e(var3, var4_int);
                               break L60;
                             }
@@ -2207,12 +2256,12 @@ public final class wizardrun extends u {
                           break L60;
                         }
                       }
-                      if (((wizardrun) this).field_R == 9) {
+                      if ((this.field_R ^ -1) == -10) {
                         L63: {
                           var4_int = 352;
                           var5 = 10;
                           var3 = 64;
-                          if (((wizardrun) this).field_Q <= 25) {
+                          if ((this.field_Q ^ -1) >= -26) {
                             break L63;
                           } else {
                             var5 = 11;
@@ -2220,7 +2269,7 @@ public final class wizardrun extends u {
                           }
                         }
                         L64: {
-                          if (((wizardrun) this).field_Q > 50) {
+                          if ((this.field_Q ^ -1) < -51) {
                             var5 = 12;
                             break L64;
                           } else {
@@ -2243,11 +2292,11 @@ public final class wizardrun extends u {
                   }
                 } else {
                   L65: {
-                    if (sf.field_h == 0) {
+                    if (-1 == (sf.field_h ^ -1)) {
                       var3 = 208;
                       var5 = 0;
                       L66: while (true) {
-                        if (~rc.field_a >= ~var5) {
+                        if ((rc.field_a ^ -1) >= (var5 ^ -1)) {
                           var5 = 0;
                           L67: while (true) {
                             if (var5 >= 100) {
@@ -2282,7 +2331,7 @@ public final class wizardrun extends u {
                               var4_int = stackIn_15_0;
                               var20 = og.field_R[var5];
                               var7 = 177;
-                              if (var5 == 2) {
+                              if ((var5 ^ -1) == -3) {
                                 break L71;
                               } else {
                                 if (var5 != 3) {
@@ -2297,7 +2346,7 @@ public final class wizardrun extends u {
                           }
                           L72: {
                             this.b(-12926, var20, var4_int, var7, var3);
-                            if (var5 == 2) {
+                            if (-3 == (var5 ^ -1)) {
                               L73: {
                                 if (!pk.field_s) {
                                   stackOut_23_0 = 0;
@@ -2322,7 +2371,7 @@ public final class wizardrun extends u {
                                   ed.c(0, 0, 174 + var8 * 108 / 104, 480);
                                   var9 = 172;
                                   L75: while (true) {
-                                    if (var9 >= 268) {
+                                    if ((var9 ^ -1) <= -269) {
                                       ed.c();
                                       ok.field_d[0].a(var8 * 108 / 104 + 174, -10 + (var3 - 6), -103, 30, 0);
                                       ok.field_d[0].a(174 + 108 * var8 / 104, -6 + var3 + 10, -99, 30, 0);
@@ -2367,10 +2416,10 @@ public final class wizardrun extends u {
                               var9 = 172;
                               L78: while (true) {
                                 if (var9 >= 268) {
-                                  ed.c(0, 0, 108 * var8 / 200 + 174, 480);
+                                  ed.c(0, 0, 108 * var8 / 200 + 172 - -2, 480);
                                   var9 = 172;
                                   L79: while (true) {
-                                    if (var9 >= 268) {
+                                    if ((var9 ^ -1) <= -269) {
                                       ed.c();
                                       ok.field_d[0].a(2 + var8 * 108 / 200 + 172, -6 + var3 - 10, -112, 30, 0);
                                       ok.field_d[0].a(2 + (var8 * 108 / 200 + 172), 10 + (-6 + var3), -114, 30, 0);
@@ -2410,7 +2459,7 @@ public final class wizardrun extends u {
                         ig.a(pd.field_H, 16, (byte) -110, 311, 608, 153);
                         jj.field_b.b(uh.field_b, 320, jj.field_b.field_M + 169, 16777215, -1);
                         var3 = 96;
-                        if (qh.field_l < 0) {
+                        if (-1 < (qh.field_l ^ -1)) {
                           hi.field_c = hi.field_c - qh.field_l * 6;
                           qh.field_l = 0;
                           break L81;
@@ -2420,7 +2469,7 @@ public final class wizardrun extends u {
                       }
                       L82: {
                         var4_int = var3 * 96 / 128;
-                        if (qh.field_l <= 5) {
+                        if ((qh.field_l ^ -1) >= -6) {
                           break L82;
                         } else {
                           wg.field_b = wg.field_b + 30;
@@ -2431,14 +2480,14 @@ public final class wizardrun extends u {
                       }
                       var5 = 0;
                       L83: while (true) {
-                        if (var5 >= 6) {
+                        if (-7 >= (var5 ^ -1)) {
                           L84: {
                             L85: {
                               var5 = 16777215;
                               if (qh.field_l > pl.field_A) {
                                 break L85;
                               } else {
-                                if (qh.field_l <= 1) {
+                                if (-2 <= (qh.field_l ^ -1)) {
                                   break L84;
                                 } else {
                                   if (hl.field_a <= 0) {
@@ -2450,7 +2499,7 @@ public final class wizardrun extends u {
                               }
                             }
                             var5 = 16777088;
-                            if (qh.field_l <= 1) {
+                            if (-2 <= (qh.field_l ^ -1)) {
                               break L84;
                             } else {
                               if (hl.field_a > 0) {
@@ -2479,7 +2528,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L88: {
-                            if (qh.field_l != 2) {
+                            if ((qh.field_l ^ -1) != -3) {
                               break L88;
                             } else {
                               var6_ref_String = ra.field_l;
@@ -2503,7 +2552,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L91: {
-                            if (qh.field_l == 5) {
+                            if ((qh.field_l ^ -1) == -6) {
                               var6_ref_String = kk.field_vb;
                               break L91;
                             } else {
@@ -2513,7 +2562,7 @@ public final class wizardrun extends u {
                           L92: {
                             jj.field_b.b(qj.field_c + (qh.field_l - -1), 320, var4_int + 192 + (16 + jj.field_b.field_M), var5, -1);
                             jj.field_b.b(var6_ref_String, 320, 2 * jj.field_b.field_M + (208 - -var4_int), var5, -1);
-                            if (var5 == 16777088) {
+                            if (-16777089 == (var5 ^ -1)) {
                               jj.field_b.b(si.field_g, 320, 192 - -var4_int - -16 + 3 * jj.field_b.field_M, var5, -1);
                               break L92;
                             } else {
@@ -2530,7 +2579,7 @@ public final class wizardrun extends u {
                           }
                           L94: {
                             if (!e.a(-109)) {
-                              if (var5 != 16777215) {
+                              if ((var5 ^ -1) != -16777216) {
                                 break L94;
                               } else {
                                 if (this.a(400, 128, 65535, sc.field_l, 1)) {
@@ -2556,7 +2605,7 @@ public final class wizardrun extends u {
                                       od.field_k = 0;
                                       tj.field_I = 5;
                                       sj.field_l = 0;
-                                      if (qh.field_l > 0) {
+                                      if (-1 > (qh.field_l ^ -1)) {
                                         nk.field_T = 400;
                                         break L94;
                                       } else {
@@ -2571,7 +2620,7 @@ public final class wizardrun extends u {
                             } else {
                               L96: {
                                 var7 = 98;
-                                if (mh.field_tb != 2) {
+                                if (-3 != (mh.field_tb ^ -1)) {
                                   break L96;
                                 } else {
                                   var7 += 20;
@@ -2585,7 +2634,7 @@ public final class wizardrun extends u {
                                   if (tj.field_I >= 5) {
                                     break L97;
                                   } else {
-                                    if (pa.field_c > 0) {
+                                    if ((pa.field_c ^ -1) < -1) {
                                       break L97;
                                     } else {
                                       sl.a(11, 11, -127);
@@ -2594,10 +2643,10 @@ public final class wizardrun extends u {
                                   }
                                 }
                               }
-                              if (var5 == 16777215) {
+                              if ((var5 ^ -1) == -16777216) {
                                 L98: {
                                   var7 = 320;
-                                  if (mh.field_tb != 2) {
+                                  if (-3 != (mh.field_tb ^ -1)) {
                                     break L98;
                                   } else {
                                     var7 += 30;
@@ -2606,10 +2655,10 @@ public final class wizardrun extends u {
                                 }
                                 if (this.a(400, var7, 65535, sc.field_l, 1)) {
                                   L99: {
-                                    if (tj.field_I >= 5) {
+                                    if ((tj.field_I ^ -1) <= -6) {
                                       break L99;
                                     } else {
-                                      if (pa.field_c > 0) {
+                                      if ((pa.field_c ^ -1) < -1) {
                                         break L99;
                                       } else {
                                         L100: {
@@ -2628,7 +2677,7 @@ public final class wizardrun extends u {
                                         L101: {
                                           od.field_k = 0;
                                           nk.field_T = 0;
-                                          if (qh.field_l > 0) {
+                                          if ((qh.field_l ^ -1) < -1) {
                                             nk.field_T = 400;
                                             break L101;
                                           } else {
@@ -2669,10 +2718,10 @@ public final class wizardrun extends u {
                               var6 = var3 * var5 - -32;
                               var7 = 208;
                               bd.field_c[var5].a(var3 * var5 + 32, 208, var3, var4_int);
-                              if (~var5 < ~pl.field_A) {
+                              if ((var5 ^ -1) < (pl.field_A ^ -1)) {
                                 break L103;
                               } else {
-                                if (hl.field_a > 0) {
+                                if (-1 > (hl.field_a ^ -1)) {
                                   break L102;
                                 } else {
                                   if (1 < var5) {
@@ -2687,7 +2736,7 @@ public final class wizardrun extends u {
                             if (hl.field_a > 0) {
                               break L102;
                             } else {
-                              if (var5 > 1) {
+                              if (-2 > (var5 ^ -1)) {
                                 fa.field_c.c(var3 / 2 + (32 + (var5 * var3 - var4_int / 2)), 208, var4_int, var4_int);
                                 break L102;
                               } else {
@@ -2711,16 +2760,16 @@ public final class wizardrun extends u {
                             }
                           }
                           L105: {
-                            if (~pg.field_n > ~var6) {
+                            if ((pg.field_n ^ -1) > (var6 ^ -1)) {
                               break L105;
                             } else {
-                              if (~(var6 - -var3) >= ~pg.field_n) {
+                              if ((var6 - -var3 ^ -1) >= (pg.field_n ^ -1)) {
                                 break L105;
                               } else {
-                                if (~fi.field_B > ~var7) {
+                                if ((fi.field_B ^ -1) > (var7 ^ -1)) {
                                   break L105;
                                 } else {
-                                  if (~(var7 - -var4_int) >= ~fi.field_B) {
+                                  if ((var7 - -var4_int ^ -1) >= (fi.field_B ^ -1)) {
                                     break L105;
                                   } else {
                                     ed.a(var3 * var5 + 32, 208, var3, var4_int, 16777215);
@@ -2792,7 +2841,7 @@ public final class wizardrun extends u {
                             break L106;
                           } else {
                             L111: {
-                              if (qf.field_l > 0) {
+                              if (-1 > (qf.field_l ^ -1)) {
                                 jj.field_b.b(rb.field_b, 440, 230 + jj.field_b.field_M, 0, 0);
                                 jj.field_b.b(rb.field_b, 439, 231 + jj.field_b.field_M, 0, 0);
                                 jj.field_b.b(rb.field_b, 440, jj.field_b.field_M + 231, 16777215, -1);
@@ -2803,13 +2852,13 @@ public final class wizardrun extends u {
                             }
                             var9 = jj.field_b.field_M * 5 / 2 + 231;
                             var9 = var9 + jj.field_b.field_M;
-                            int discarded$41 = jj.field_b.a(gk.field_r, 260, -1 + (var9 + -32), 360, 480, 0, 0, 1, 0, jj.field_b.field_M);
-                            int discarded$42 = jj.field_b.a(gk.field_r, 259, -32 + var9, 360, 480, 0, 0, 1, 0, jj.field_b.field_M);
-                            int discarded$43 = jj.field_b.a(gk.field_r, 260, -32 + var9, 360, 480, 16777215, -1, 1, 0, jj.field_b.field_M);
+                            discarded$41 = jj.field_b.a(gk.field_r, 260, -1 + (var9 + -32), 360, 480, 0, 0, 1, 0, jj.field_b.field_M);
+                            discarded$42 = jj.field_b.a(gk.field_r, 259, -32 + var9, 360, 480, 0, 0, 1, 0, jj.field_b.field_M);
+                            discarded$43 = jj.field_b.a(gk.field_r, 260, -32 + var9, 360, 480, 16777215, -1, 1, 0, jj.field_b.field_M);
                             if (e.a(-86)) {
-                              int discarded$44 = jj.field_b.a(vl.field_n, 260, -1 + var9 - -32, 360, 480, 0, 0, 1, 0, jj.field_b.field_M);
-                              int discarded$45 = jj.field_b.a(vl.field_n, 259, 32 + var9, 360, 480, 0, 0, 1, 0, jj.field_b.field_M);
-                              int discarded$46 = jj.field_b.a(vl.field_n, 260, 32 + var9, 360, 480, 16777215, -1, 1, 0, jj.field_b.field_M);
+                              discarded$44 = jj.field_b.a(vl.field_n, 260, -1 + var9 - -32, 360, 480, 0, 0, 1, 0, jj.field_b.field_M);
+                              discarded$45 = jj.field_b.a(vl.field_n, 259, 32 + var9, 360, 480, 0, 0, 1, 0, jj.field_b.field_M);
+                              discarded$46 = jj.field_b.a(vl.field_n, 260, 32 + var9, 360, 480, 16777215, -1, 1, 0, jj.field_b.field_M);
                               break L106;
                             } else {
                               break L106;
@@ -2818,11 +2867,11 @@ public final class wizardrun extends u {
                         } else {
                           L112: {
                             var10 = 1;
-                            if (var9 != 11) {
+                            if ((var9 ^ -1) != -12) {
                               break L112;
                             } else {
                               L113: {
-                                if ((1 << var9 & var5) != 0) {
+                                if (-1 != (1 << var9 & var5 ^ -1)) {
                                   break L113;
                                 } else {
                                   if (ve.a((byte) 103, 0)) {
@@ -2851,7 +2900,7 @@ public final class wizardrun extends u {
                                 }
                               }
                               L116: {
-                                if (~pg.field_n > ~var3) {
+                                if ((pg.field_n ^ -1) > (var3 ^ -1)) {
                                   break L116;
                                 } else {
                                   if (pg.field_n > var3 - -32) {
@@ -2860,7 +2909,7 @@ public final class wizardrun extends u {
                                     if (fi.field_B < var4_int) {
                                       break L116;
                                     } else {
-                                      if (~fi.field_B < ~(32 + var4_int)) {
+                                      if ((fi.field_B ^ -1) < (32 + var4_int ^ -1)) {
                                         break L116;
                                       } else {
                                         L117: {
@@ -2876,7 +2925,7 @@ public final class wizardrun extends u {
                                         }
                                         L118: {
                                           var11 = 2;
-                                          if (~tk.field_a != ~var9) {
+                                          if ((tk.field_a ^ -1) != (var9 ^ -1)) {
                                             ok.field_d[0].d(-4 + var3, var4_int + -4, 40, 40, 128);
                                             break L118;
                                           } else {
@@ -2896,19 +2945,19 @@ public final class wizardrun extends u {
                                     break L114;
                                   } else {
                                     L120: {
-                                      if (hl.field_a > 0) {
+                                      if ((hl.field_a ^ -1) < -1) {
                                         break L120;
                                       } else {
                                         if (1 == var9) {
                                           break L120;
                                         } else {
-                                          if (var9 == 2) {
+                                          if (-3 == (var9 ^ -1)) {
                                             break L120;
                                           } else {
-                                            if (var9 == 5) {
+                                            if (-6 == (var9 ^ -1)) {
                                               break L120;
                                             } else {
-                                              if (var9 == 6) {
+                                              if (-7 == (var9 ^ -1)) {
                                                 break L120;
                                               } else {
                                                 fa.field_c.c(-var11 + var3, var4_int - var11, var11 * 2 + 32, 2 * var11 + 32);
@@ -2929,22 +2978,22 @@ public final class wizardrun extends u {
                               }
                               L121: {
                                 L122: {
-                                  if (~var9 == ~tk.field_a) {
+                                  if ((var9 ^ -1) == (tk.field_a ^ -1)) {
                                     break L122;
                                   } else {
-                                    if (~pg.field_n > ~var3) {
+                                    if ((pg.field_n ^ -1) > (var3 ^ -1)) {
                                       break L121;
                                     } else {
-                                      if (~pg.field_n < ~(var3 - -32)) {
+                                      if ((pg.field_n ^ -1) < (var3 - -32 ^ -1)) {
                                         break L121;
                                       } else {
-                                        if (~var4_int < ~fi.field_B) {
+                                        if ((var4_int ^ -1) < (fi.field_B ^ -1)) {
                                           break L121;
                                         } else {
                                           if (32 + var4_int < fi.field_B) {
                                             break L121;
                                           } else {
-                                            if (tk.field_a == -1) {
+                                            if (0 == (tk.field_a ^ -1)) {
                                               break L122;
                                             } else {
                                               break L121;
@@ -2972,24 +3021,24 @@ public final class wizardrun extends u {
                                 }
                                 L124: {
                                   var12 = jj.field_b.field_M * 5 / 2 + 231;
-                                  if ((1 << var9 & var5) != 0) {
+                                  if (-1 != (1 << var9 & var5 ^ -1)) {
                                     ui.field_a[var9].e(260, var12);
                                     break L124;
                                   } else {
                                     L125: {
-                                      if (hl.field_a > 0) {
+                                      if (-1 > (hl.field_a ^ -1)) {
                                         break L125;
                                       } else {
-                                        if (var9 == 1) {
+                                        if (-2 == (var9 ^ -1)) {
                                           break L125;
                                         } else {
-                                          if (var9 == 2) {
+                                          if ((var9 ^ -1) == -3) {
                                             break L125;
                                           } else {
-                                            if (var9 == 5) {
+                                            if (-6 == (var9 ^ -1)) {
                                               break L125;
                                             } else {
-                                              if (var9 != 6) {
+                                              if ((var9 ^ -1) != -7) {
                                                 fa.field_c.e(260, var12);
                                                 break L124;
                                               } else {
@@ -3015,27 +3064,27 @@ public final class wizardrun extends u {
                                       if (var9 == 11) {
                                         break L126;
                                       } else {
-                                        int discarded$47 = a.field_a.a(f.field_f, 398, var12 - 1, 222, 480, 0, 0, 0, 0, var8);
-                                        int discarded$48 = a.field_a.a(f.field_f, 397, var12, 222, 480, 0, 0, 0, 0, var8);
+                                        discarded$47 = a.field_a.a(f.field_f, 398, var12 - 1, 222, 480, 0, 0, 0, 0, var8);
+                                        discarded$48 = a.field_a.a(f.field_f, 397, var12, 222, 480, 0, 0, 0, 0, var8);
                                         var12 = var12 + (var8 * 3 + 0 * a.field_a.a(f.field_f, 398, var12, 222, 480, 16777215, -1, 0, 0, var8));
                                         break L121;
                                       }
                                     }
                                   }
                                 }
-                                int discarded$49 = a.field_a.a(mh.field_sb[var9], 397, -a.field_a.field_M + var12, 222, 480, 0, 0, 0, 0, var8);
-                                int discarded$50 = a.field_a.a(mh.field_sb[var9], 398, -a.field_a.field_M + (-1 + var12), 222, 480, 0, 0, 0, 0, var8);
+                                discarded$49 = a.field_a.a(mh.field_sb[var9], 397, -a.field_a.field_M + var12, 222, 480, 0, 0, 0, 0, var8);
+                                discarded$50 = a.field_a.a(mh.field_sb[var9], 398, -a.field_a.field_M + (-1 + var12), 222, 480, 0, 0, 0, 0, var8);
                                 var12 = var12 + (3 * var8 - -(a.field_a.a(mh.field_sb[var9], 398, var12 + -a.field_a.field_M, 222, 480, 16777215, -1, 0, 0, var8) * 0));
-                                int discarded$51 = jj.field_b.a(kl.field_e + u.field_m[var9], 397, var12 - a.field_a.field_M, 222, 480, 0, 0, 0, 0, jj.field_b.field_M);
-                                int discarded$52 = jj.field_b.a(kl.field_e + u.field_m[var9], 398, -a.field_a.field_M + (-1 + var12), 222, 480, 0, 0, 0, 0, jj.field_b.field_M);
+                                discarded$51 = jj.field_b.a(kl.field_e + u.field_m[var9], 397, var12 - a.field_a.field_M, 222, 480, 0, 0, 0, 0, jj.field_b.field_M);
+                                discarded$52 = jj.field_b.a(kl.field_e + u.field_m[var9], 398, -a.field_a.field_M + (-1 + var12), 222, 480, 0, 0, 0, 0, jj.field_b.field_M);
                                 var12 = var12 + jj.field_b.field_M * jj.field_b.a(kl.field_e + u.field_m[var9], 398, -a.field_a.field_M + var12, 222, 480, 16777215, -1, 0, 0, jj.field_b.field_M);
-                                int discarded$53 = jj.field_b.a(nf.field_a, 397, var12 + -a.field_a.field_M, 222, 480, 0, 0, 0, 0, jj.field_b.field_M);
-                                int discarded$54 = jj.field_b.a(nf.field_a, 398, -a.field_a.field_M + -1 - -var12, 222, 480, 0, 0, 0, 0, jj.field_b.field_M);
-                                int discarded$55 = jj.field_b.a(nf.field_a, 398, -a.field_a.field_M + var12, 222, 480, 16777215, -1, 0, 0, jj.field_b.field_M);
+                                discarded$53 = jj.field_b.a(nf.field_a, 397, var12 + -a.field_a.field_M, 222, 480, 0, 0, 0, 0, jj.field_b.field_M);
+                                discarded$54 = jj.field_b.a(nf.field_a, 398, -a.field_a.field_M + -1 - -var12, 222, 480, 0, 0, 0, 0, jj.field_b.field_M);
+                                discarded$55 = jj.field_b.a(nf.field_a, 398, -a.field_a.field_M + var12, 222, 480, 16777215, -1, 0, 0, jj.field_b.field_M);
                                 var13 = md.field_e[var9];
                                 var14 = 0;
                                 L127: while (true) {
-                                  if (~var14 <= ~var13) {
+                                  if ((var14 ^ -1) <= (var13 ^ -1)) {
                                     break L121;
                                   } else {
                                     wc.field_f.b(jj.field_b.b(nf.field_a) + -(var13 * 3 / 2) + (8 * var14 + 398), 4 + var12 + -a.field_a.field_M);
@@ -3044,7 +3093,7 @@ public final class wizardrun extends u {
                                   }
                                 }
                               }
-                              int incrementValue$56 = var6;
+                              incrementValue$56 = var6;
                               var6++;
                               if (4 == incrementValue$56) {
                                 var3 = 325;
@@ -3071,9 +3120,9 @@ public final class wizardrun extends u {
                     var5_ref_String = var21.toString();
                     if (!e.a(-122)) {
                       L128: {
-                        int discarded$57 = a.field_a.a(we.field_e, 289, 370, 340, 64, 0, 0, 1, 1, a.field_a.field_M);
-                        int discarded$58 = a.field_a.a(we.field_e, 290, 369, 340, 64, 0, 0, 1, 1, a.field_a.field_M);
-                        int discarded$59 = a.field_a.a(we.field_e, 290, 370, 340, 64, 16744448, -1, 1, 1, a.field_a.field_M);
+                        discarded$57 = a.field_a.a(we.field_e, 289, 370, 340, 64, 0, 0, 1, 1, a.field_a.field_M);
+                        discarded$58 = a.field_a.a(we.field_e, 290, 369, 340, 64, 0, 0, 1, 1, a.field_a.field_M);
+                        discarded$59 = a.field_a.a(we.field_e, 290, 370, 340, 64, 16744448, -1, 1, 1, a.field_a.field_M);
                         if (null != th.field_g) {
                           break L128;
                         } else {
@@ -3098,7 +3147,7 @@ public final class wizardrun extends u {
                               } else {
                                 L131: {
                                   var13 = 16744448;
-                                  if (var12 >= 10) {
+                                  if ((var12 ^ -1) <= -11) {
                                     break L131;
                                   } else {
                                     if (var9 != 0) {
@@ -3140,7 +3189,7 @@ public final class wizardrun extends u {
                                       }
                                     }
                                     L135: {
-                                      if (var12 != 10) {
+                                      if (-11 != (var12 ^ -1)) {
                                         break L135;
                                       } else {
                                         if (ei.field_k <= 0) {
@@ -3158,10 +3207,10 @@ public final class wizardrun extends u {
                                       L136: {
                                         var3 = 24 * var12 + 144;
                                         var5_ref_String = 1 + var12 + ".";
-                                        if (var12 != 0) {
+                                        if (-1 != (var12 ^ -1)) {
                                           break L136;
                                         } else {
-                                          if (cd.field_c == 1) {
+                                          if ((cd.field_c ^ -1) == -2) {
                                             break L136;
                                           } else {
                                             if (var11 == 0) {
@@ -3174,7 +3223,7 @@ public final class wizardrun extends u {
                                         }
                                       }
                                       L137: {
-                                        if (var12 != 1) {
+                                        if (-2 != (var12 ^ -1)) {
                                           break L137;
                                         } else {
                                           if (cd.field_c == 1) {
@@ -3190,7 +3239,7 @@ public final class wizardrun extends u {
                                         }
                                       }
                                       L138: {
-                                        if (var12 != 0) {
+                                        if ((var12 ^ -1) != -1) {
                                           break L138;
                                         } else {
                                           if (cd.field_c != 1) {
@@ -3206,10 +3255,10 @@ public final class wizardrun extends u {
                                         }
                                       }
                                       L139: {
-                                        if (var12 != 1) {
+                                        if (-2 != (var12 ^ -1)) {
                                           break L139;
                                         } else {
-                                          if (cd.field_c != 1) {
+                                          if (-2 != (cd.field_c ^ -1)) {
                                             break L139;
                                           } else {
                                             if (var11 == 0) {
@@ -3247,7 +3296,7 @@ public final class wizardrun extends u {
                                   }
                                   L140: {
                                     var11 = 1;
-                                    if (var12 != 0) {
+                                    if (-1 != (var12 ^ -1)) {
                                       break L140;
                                     } else {
                                       a.field_a.c(bb.field_l, 299, 16 + var3, 0, 0);
@@ -3256,13 +3305,13 @@ public final class wizardrun extends u {
                                       a.field_a.a(qj.field_f, 620, -1 + (var3 - -16), 0, 0);
                                       a.field_a.c(bb.field_l, 300, var3 - -16, 16777215, -1);
                                       a.field_a.a(qj.field_f, 620, var3 + 16, 16777215, -1);
-                                      if (~(a.field_a.b(nj.field_p) / 2 + 510) > ~(620 - (a.field_a.b(qj.field_f) - -8))) {
+                                      if ((a.field_a.b(nj.field_p) / 2 + 510 ^ -1) > (620 - (a.field_a.b(qj.field_f) - -8) ^ -1)) {
                                         a.field_a.b(nj.field_p, 509, 16 + var3, 0, 0);
                                         a.field_a.b(nj.field_p, 510, -1 + var3 - -16, 0, 0);
                                         a.field_a.b(nj.field_p, 510, 16 + var3, 16777215, -1);
                                         break L140;
                                       } else {
-                                        var14 = -a.field_a.b(qj.field_f) + 612;
+                                        var14 = -a.field_a.b(qj.field_f) + 620 - 8;
                                         a.field_a.a(nj.field_p, var14 - 1, var3 + 16, 0, 0);
                                         a.field_a.a(nj.field_p, var14, 16 + (var3 - 1), 0, 0);
                                         a.field_a.a(nj.field_p, var14, var3 - -16, 16777215, -1);
@@ -3273,7 +3322,7 @@ public final class wizardrun extends u {
                                   L141: {
                                     L142: {
                                       var14 = 0;
-                                      if (var12 >= 10) {
+                                      if (-11 >= (var12 ^ -1)) {
                                         break L142;
                                       } else {
                                         if (null == var22[var12]) {
@@ -3285,10 +3334,10 @@ public final class wizardrun extends u {
                                         }
                                       }
                                     }
-                                    if (var12 != 10) {
+                                    if ((var12 ^ -1) != -11) {
                                       break L141;
                                     } else {
-                                      if (ei.field_k <= 0) {
+                                      if (-1 <= (ei.field_k ^ -1)) {
                                         break L141;
                                       } else {
                                         if (var9 != 0) {
@@ -3316,13 +3365,13 @@ public final class wizardrun extends u {
                                   L144: {
                                     L145: {
                                       var3 = 154 + var12 * 22;
-                                      if (var12 < 10) {
+                                      if (-11 < (var12 ^ -1)) {
                                         break L145;
                                       } else {
                                         if (var9 != 0) {
                                           break L144;
                                         } else {
-                                          if (ei.field_k > 0) {
+                                          if (-1 > (ei.field_k ^ -1)) {
                                             break L145;
                                           } else {
                                             break L132;
@@ -3404,7 +3453,7 @@ public final class wizardrun extends u {
                   if (-350 < hi.field_a) {
                     break L149;
                   } else {
-                    if (qh.field_l != 0) {
+                    if ((qh.field_l ^ -1) != -1) {
                       break L148;
                     } else {
                       break L149;
@@ -3435,7 +3484,7 @@ public final class wizardrun extends u {
                   }
                 }
                 L152: {
-                  if (hi.field_a < 240) {
+                  if (-241 < (hi.field_a ^ -1)) {
                     hi.field_a = hi.field_a + 250;
                     if (hi.field_a > 240) {
                       hi.field_a = 240;
@@ -3449,7 +3498,7 @@ public final class wizardrun extends u {
                 }
                 L153: {
                   var4_int = (-240 + hi.field_a) * (-240 + hi.field_a) / 120;
-                  if (hi.field_a >= 240) {
+                  if (-241 >= (hi.field_a ^ -1)) {
                     break L153;
                   } else {
                     var4_int = -var4_int;
@@ -3458,13 +3507,13 @@ public final class wizardrun extends u {
                 }
                 L154: {
                   var4_int += 240;
-                  ed.c(5 + (-(jj.field_b.b(bb.field_j) / 2) + 304), -11 + -jj.field_b.field_M + var4_int, jj.field_b.b(bb.field_j) + 22, -10 + hj.field_g.field_M - -16, 13158);
+                  ed.c(5 + (-(jj.field_b.b(bb.field_j) / 2) + 320 - 16), -11 + -jj.field_b.field_M + var4_int, jj.field_b.b(bb.field_j) - -32 - 10, -10 + hj.field_g.field_M - -16, 13158);
                   ig.a(pd.field_H, -16 + -(jj.field_b.b(bb.field_j) / 2) + 320, (byte) -110, 16 + hj.field_g.field_M, 32 + jj.field_b.b(bb.field_j), var4_int - jj.field_b.field_M + -16);
                   this.a(var4_int, bb.field_j, 16777215, -57, 319);
-                  if (qh.field_l != 0) {
+                  if (-1 != (qh.field_l ^ -1)) {
                     break L154;
                   } else {
-                    if (qh.field_g >= 0) {
+                    if ((qh.field_g ^ -1) <= -1) {
                       L155: {
                         var5 = 64 + var4_int;
                         if (0 != ql.field_c) {
@@ -3472,13 +3521,13 @@ public final class wizardrun extends u {
                         } else {
                           if (ef.field_F != bb.field_j) {
                             var6 = jj.field_b.b(ol.field_d);
-                            ed.c(5 + (320 - var6 / 2 - 16), 5 + (-jj.field_b.field_M + (var5 + -16)), var6 + 22, 118 + hj.field_g.field_M, 13158);
+                            ed.c(5 + (320 - var6 / 2 - 16), 5 + (-jj.field_b.field_M + (var5 + -16)), var6 - -32 + -10, 118 + hj.field_g.field_M, 13158);
                             ig.a(pd.field_H, -16 + (320 + -(var6 / 2)), (byte) -110, hj.field_g.field_M + 128, var6 + 32, var5 - jj.field_b.field_M - 16);
                             this.a(var5, r.field_c, 16777215, 123, 319);
                             var5 += 32;
-                            this.a(var5, di.a(new String[2], (byte) 45, i.field_c), 16777215, -83, 319);
+                            this.a(var5, di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 45, i.field_c), 16777215, -83, 319);
                             var5 += 32;
-                            this.a(var5, di.a(new String[2], (byte) 126, pb.field_i), 16777215, -91, 319);
+                            this.a(var5, di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 126, pb.field_i), 16777215, -91, 319);
                             var5 += 32;
                             break L155;
                           } else {
@@ -3491,11 +3540,11 @@ public final class wizardrun extends u {
                           break L156;
                         } else {
                           var6 = 500;
-                          ed.c(304 - var6 / 2 - -5, -jj.field_b.field_M + (var5 - 11), -10 + var6 + 32, 96 + (hj.field_g.field_M + -10), 13158);
+                          ed.c(304 - var6 / 2 - -5, -jj.field_b.field_M + (var5 - 16 - -5), -10 + var6 + 32, 96 + (hj.field_g.field_M + -10), 13158);
                           ig.a(pd.field_H, -16 + (-(var6 / 2) + 320), (byte) -110, hj.field_g.field_M + 96, var6 + 32, -16 + (var5 - jj.field_b.field_M));
-                          int discarded$60 = jj.field_b.a(fa.field_d + " " + ta.field_f, -(var6 / 2) + 319, 5 + (-16 + var5 - (-4 - (-jj.field_b.field_M + -1))), var6, 480, 0, 0, 1, 0, jj.field_b.field_M);
-                          int discarded$61 = jj.field_b.a(fa.field_d + " " + ta.field_f, -(var6 / 2) + 319, 5 + -jj.field_b.field_M + 4 + (var5 - 16) - 1, var6, 480, 0, 0, 1, 0, jj.field_b.field_M);
-                          int discarded$62 = jj.field_b.a(fa.field_d + " " + ta.field_f, 320 + -(var6 / 2), -16 + -jj.field_b.field_M + 4 + (var5 + 5), var6, 480, 16777215, -1, 1, 0, jj.field_b.field_M);
+                          discarded$60 = jj.field_b.a(fa.field_d + " " + ta.field_f, -(var6 / 2) + 320 + -1, 5 + (-16 + var5 - (-4 - (-jj.field_b.field_M + -1))), var6, 480, 0, 0, 1, 0, jj.field_b.field_M);
+                          discarded$61 = jj.field_b.a(fa.field_d + " " + ta.field_f, -(var6 / 2) + 320 + -1, 5 + -jj.field_b.field_M + 4 + (var5 - 16) - 1, var6, 480, 0, 0, 1, 0, jj.field_b.field_M);
+                          discarded$62 = jj.field_b.a(fa.field_d + " " + ta.field_f, 320 + -(var6 / 2), -16 + -jj.field_b.field_M + 4 + (var5 + 5), var6, 480, 16777215, -1, 1, 0, jj.field_b.field_M);
                           var5 += 64;
                           break L156;
                         }
@@ -3506,7 +3555,7 @@ public final class wizardrun extends u {
                         } else {
                           L158: {
                             var6 = jj.field_b.b(vl.field_a);
-                            if (~jj.field_b.b(ol.field_d) >= ~var6) {
+                            if ((jj.field_b.b(ol.field_d) ^ -1) >= (var6 ^ -1)) {
                               break L158;
                             } else {
                               var6 = jj.field_b.b(ol.field_d);
@@ -3515,7 +3564,7 @@ public final class wizardrun extends u {
                           }
                           L159: {
                             if (608 >= var6) {
-                              ed.c(5 + -(var6 / 2) + 304, -11 + (-jj.field_b.field_M + var5), -10 + (32 + var6), hj.field_g.field_M - -150, 13158);
+                              ed.c(5 + -(var6 / 2) + 320 - 16, -11 + (-jj.field_b.field_M + var5), -10 + (32 + var6), hj.field_g.field_M - -150, 13158);
                               ig.a(pd.field_H, 304 - var6 / 2, (byte) -110, hj.field_g.field_M + 160, var6 + 32, var5 - jj.field_b.field_M + -16);
                               this.a(var5, cd.field_h, 16777215, -102, 319);
                               var5 += 32;
@@ -3526,12 +3575,12 @@ public final class wizardrun extends u {
                               break L159;
                             } else {
                               var6 = 608;
-                              ed.c(5 + -(var6 / 2) + 304, -jj.field_b.field_M + var5 - 11, -10 + (32 + var6), 128 + (hj.field_g.field_M + -10), 13158);
+                              ed.c(5 + -(var6 / 2) + 320 - 16, -jj.field_b.field_M + var5 - 16 + 5, -10 + (32 + var6), 128 + (hj.field_g.field_M + -10), 13158);
                               ig.a(pd.field_H, 304 - var6 / 2, (byte) -110, hj.field_g.field_M + 128, 32 + var6, -jj.field_b.field_M + var5 + -16);
                               var28 = cd.field_h + " " + vl.field_a + " " + ld.field_a;
-                              int discarded$63 = a.field_a.a(var28, 32, -20 + var5, 575, 48, 0, 0, 1, 1, 14);
-                              int discarded$64 = a.field_a.a(var28, 32, -20 + var5 - 1, 576, 48, 0, 0, 1, 1, 14);
-                              int discarded$65 = a.field_a.a(var28, 32, var5 - 20, 576, 48, 16777215, -1, 1, 1, 14);
+                              discarded$63 = a.field_a.a(var28, 32, -20 + var5, 575, 48, 0, 0, 1, 1, 14);
+                              discarded$64 = a.field_a.a(var28, 32, -20 + var5 - 1, 576, 48, 0, 0, 1, 1, 14);
+                              discarded$65 = a.field_a.a(var28, 32, var5 - 20, 576, 48, 16777215, -1, 1, 1, 14);
                               var5 += 48;
                               break L159;
                             }
@@ -3547,24 +3596,24 @@ public final class wizardrun extends u {
                         }
                       }
                       L160: {
-                        if (ql.field_c == 3) {
+                        if ((ql.field_c ^ -1) == -4) {
                           var6 = 600;
                           ed.c(-11 + (-(var6 / 2) + 320), -11 + (-jj.field_b.field_M + var5), 22 + var6, 160 + (hj.field_g.field_M + -10), 13158);
                           ig.a(pd.field_H, -16 + -(var6 / 2) + 320, (byte) -110, 160 + hj.field_g.field_M, 32 + var6, -16 + var5 + -jj.field_b.field_M);
-                          int discarded$66 = jj.field_b.a(di.a(new String[2], (byte) 102, ag.field_w), -(var6 / 2) + 319, var5 - 24, var6, 480, 0, 0, 0, 0, 20);
-                          int discarded$67 = jj.field_b.a(di.a(new String[2], (byte) 61, ag.field_w), -(var6 / 2) + 320, -25 + var5, var6, 480, 0, 0, 0, 0, 20);
-                          int discarded$68 = jj.field_b.a(di.a(new String[2], (byte) 107, ag.field_w), -(var6 / 2) + 320, -24 + var5, var6, 480, 16777215, -1, 0, 0, 20);
+                          discarded$66 = jj.field_b.a(di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 102, ag.field_w), -(var6 / 2) + 319, var5 - 24, var6, 480, 0, 0, 0, 0, 20);
+                          discarded$67 = jj.field_b.a(di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 61, ag.field_w), -(var6 / 2) + 320, -25 + var5, var6, 480, 0, 0, 0, 0, 20);
+                          discarded$68 = jj.field_b.a(di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 107, ag.field_w), -(var6 / 2) + 320, -24 + var5, var6, 480, 16777215, -1, 0, 0, 20);
                           var5 += 32;
                           var5 -= 24;
                           var29 = new String[9];
                           var7_ref_String__ = var29;
                           var8 = 0;
                           L161: while (true) {
-                            if (var8 >= 9) {
+                            if ((var8 ^ -1) <= -10) {
                               L162: {
                                 var8 = 0;
                                 var9 = 0;
-                                if (mh.field_tb != 1) {
+                                if ((mh.field_tb ^ -1) != -2) {
                                   break L162;
                                 } else {
                                   var9 = -80;
@@ -3582,21 +3631,21 @@ public final class wizardrun extends u {
                                       ed.c();
                                       var5 += 24;
                                       var5 += 32;
-                                      int discarded$69 = jj.field_b.a(lc.field_c + " " + sd.field_e, -(var6 / 2) + 320, -25 + var5, var6, 480, 0, 0, 1, 0, 20);
-                                      int discarded$70 = jj.field_b.a(lc.field_c + " " + sd.field_e, 319 + -(var6 / 2), var5 - 24, var6, 480, 0, 0, 1, 0, 20);
-                                      int discarded$71 = jj.field_b.a(lc.field_c + " " + sd.field_e, 320 + -(var6 / 2), var5 - 24, var6, 480, 16777215, -1, 1, 0, 20);
+                                      discarded$69 = jj.field_b.a(lc.field_c + " " + sd.field_e, -(var6 / 2) + 320, -25 + var5, var6, 480, 0, 0, 1, 0, 20);
+                                      discarded$70 = jj.field_b.a(lc.field_c + " " + sd.field_e, 319 + -(var6 / 2), var5 - 24, var6, 480, 0, 0, 1, 0, 20);
+                                      discarded$71 = jj.field_b.a(lc.field_c + " " + sd.field_e, 320 + -(var6 / 2), var5 - 24, var6, 480, 16777215, -1, 1, 0, 20);
                                       var5 += 64;
                                       break L160;
                                     } else {
                                       L165: {
-                                        ok.field_d[0].a(-140 + var10, var5, 30, 30);
-                                        int incrementValue$72 = var8;
+                                        ok.field_d[0].a(-140 + var10, var5 + 0, 30, 30);
+                                        incrementValue$72 = var8;
                                         var8++;
                                         jj.field_b.b(var7_ref_String__[incrementValue$72], 15 + var10 + -140, var5 + 25, 0, -1);
-                                        if (fi.field_x <= 100) {
+                                        if ((fi.field_x ^ -1) >= -101) {
                                           break L165;
                                         } else {
-                                          if (fi.field_x >= 110) {
+                                          if ((fi.field_x ^ -1) <= -111) {
                                             break L165;
                                           } else {
                                             ok.field_d[0].a(-140 + (var10 - -5), 5 + var5, 20, 20);
@@ -3609,14 +3658,14 @@ public final class wizardrun extends u {
                                     }
                                   }
                                 } else {
-                                  ok.field_d[0].b(-140 + var10, var5, 30, 30, 64);
-                                  jj.field_b.b(var29[var8], var10 - 125, var5 + 24, 0, -1);
+                                  ok.field_d[0].b(-140 + var10, 0 + var5, 30, 30, 64);
+                                  jj.field_b.b(var29[var8], var10 + -140 + 15, var5 + 24, 0, -1);
                                   jj.field_b.b(var29[var8], var10 + -125, 26 - -var5, 0, -1);
-                                  jj.field_b.b(var29[var8], -1 + (var10 - 125), 25 + var5, 0, -1);
-                                  jj.field_b.b(var29[var8], 15 + var10 - 139, var5 + 25, 0, -1);
-                                  int incrementValue$73 = var8;
+                                  jj.field_b.b(var29[var8], -1 + (var10 - 140 + 15), 25 + var5, 0, -1);
+                                  jj.field_b.b(var29[var8], 15 + var10 + -140 - -1, var5 + 25, 0, -1);
+                                  incrementValue$73 = var8;
                                   var8++;
-                                  jj.field_b.b(var7_ref_String__[incrementValue$73], var10 - 125, var5 + 25, 16777215, -1);
+                                  jj.field_b.b(var7_ref_String__[incrementValue$73], var10 + -140 + 15, var5 + 25, 16777215, -1);
                                   var10 += 20;
                                   continue L163;
                                 }
@@ -3632,21 +3681,21 @@ public final class wizardrun extends u {
                         }
                       }
                       L166: {
-                        if (ql.field_c != 4) {
+                        if (-5 != (ql.field_c ^ -1)) {
                           break L166;
                         } else {
                           var6 = jj.field_b.b(ab.field_b);
                           ed.c(-11 + -(var6 / 2) + 320, -jj.field_b.field_M + var5 + -11, 22 + var6, 96 + (hj.field_g.field_M + -10), 13158);
                           ig.a(pd.field_H, -16 + (-(var6 / 2) + 320), (byte) -110, hj.field_g.field_M - -96, var6 + 32, -16 + var5 - jj.field_b.field_M);
-                          int discarded$74 = jj.field_b.a(ab.field_b + " " + he.field_r, 320 + -(var6 / 2), -25 + var5, var6, 480, 0, 0, 1, 0, 22);
-                          int discarded$75 = jj.field_b.a(ab.field_b + " " + he.field_r, -(var6 / 2) + 319, -24 + var5, var6, 480, 0, 0, 1, 0, 22);
-                          int discarded$76 = jj.field_b.a(ab.field_b + " " + he.field_r, 320 + -(var6 / 2), var5 + -24, var6, 480, 16777215, -1, 1, 0, 22);
+                          discarded$74 = jj.field_b.a(ab.field_b + " " + he.field_r, 320 + -(var6 / 2), -25 + var5, var6, 480, 0, 0, 1, 0, 22);
+                          discarded$75 = jj.field_b.a(ab.field_b + " " + he.field_r, -(var6 / 2) + 319, -24 + var5, var6, 480, 0, 0, 1, 0, 22);
+                          discarded$76 = jj.field_b.a(ab.field_b + " " + he.field_r, 320 + -(var6 / 2), var5 + -24, var6, 480, 16777215, -1, 1, 0, 22);
                           var5 += 64;
                           break L166;
                         }
                       }
                       L167: {
-                        if (ql.field_c != 5) {
+                        if ((ql.field_c ^ -1) != -6) {
                           break L167;
                         } else {
                           var6 = jj.field_b.b(ol.field_d);
@@ -3703,7 +3752,7 @@ public final class wizardrun extends u {
                     if (sf.field_h == 2) {
                       break L171;
                     } else {
-                      if (sf.field_h == 5) {
+                      if ((sf.field_h ^ -1) == -6) {
                         break L171;
                       } else {
                         break L170;
@@ -3716,10 +3765,10 @@ public final class wizardrun extends u {
                     var30 = ne.field_a;
                     ig.a(qc.field_E, 0, (byte) -110, 44, 88, 436);
                     var4_int = 16776960;
-                    if (((wizardrun) this).field_N == 0) {
+                    if ((this.field_N ^ -1) == -1) {
                       break L173;
                     } else {
-                      if (((wizardrun) this).field_N != -1) {
+                      if ((this.field_N ^ -1) != 0) {
                         break L172;
                       } else {
                         if (0 > pg.field_n) {
@@ -3740,7 +3789,7 @@ public final class wizardrun extends u {
                   }
                   L174: {
                     var4_int = 16777215;
-                    if (sh.field_c == 1) {
+                    if (-2 == (sh.field_c ^ -1)) {
                       break L174;
                     } else {
                       if (!hi.field_p[84]) {
@@ -3750,7 +3799,7 @@ public final class wizardrun extends u {
                       }
                     }
                   }
-                  if (pa.field_c >= 32) {
+                  if (-33 >= (pa.field_c ^ -1)) {
                     break L172;
                   } else {
                     pa.field_c = 32;
@@ -3759,7 +3808,7 @@ public final class wizardrun extends u {
                 }
                 L175: {
                   this.b(-12926, var30, var4_int, 44, 458 + jj.field_b.field_M / 4);
-                  if (sf.field_h != 5) {
+                  if (-6 != (sf.field_h ^ -1)) {
                     break L175;
                   } else {
                     if (qf.field_l <= 0) {
@@ -3772,19 +3821,19 @@ public final class wizardrun extends u {
                           var4_int = var4_int - (jj.field_b.b(var31) + 32);
                           ig.a(qc.field_E, var4_int, (byte) -110, 44, 32 + jj.field_b.b(var31), 436);
                           var5 = 16776960;
-                          if (((wizardrun) this).field_N == 1) {
+                          if (-2 == (this.field_N ^ -1)) {
                             break L177;
                           } else {
-                            if (~pg.field_n > ~var4_int) {
+                            if ((pg.field_n ^ -1) > (var4_int ^ -1)) {
                               break L176;
                             } else {
-                              if (~pg.field_n <= ~(jj.field_b.b(var31) + 32 + var4_int)) {
+                              if ((pg.field_n ^ -1) <= (jj.field_b.b(var31) + 32 + var4_int ^ -1)) {
                                 break L176;
                               } else {
                                 if (436 > fi.field_B) {
                                   break L176;
                                 } else {
-                                  if (((wizardrun) this).field_N != -1) {
+                                  if (this.field_N != -1) {
                                     break L176;
                                   } else {
                                     break L177;
@@ -3823,7 +3872,7 @@ public final class wizardrun extends u {
                   }
                 }
                 L180: {
-                  if (sf.field_h != 2) {
+                  if (-3 != (sf.field_h ^ -1)) {
                     break L180;
                   } else {
                     if (!e.a(-108)) {
@@ -3839,7 +3888,7 @@ public final class wizardrun extends u {
                             var3_ref_String = wh.field_l[var5];
                             ig.a(qc.field_E, var4_int, (byte) -110, 44, var6, 436);
                             var7 = 16776960;
-                            if (~cd.field_c == ~var5) {
+                            if ((cd.field_c ^ -1) == (var5 ^ -1)) {
                               var7 = 16711680;
                               break L182;
                             } else {
@@ -3848,19 +3897,19 @@ public final class wizardrun extends u {
                           }
                           L183: {
                             L184: {
-                              if (((wizardrun) this).field_N == var5 + 1) {
+                              if (this.field_N == var5 + 1) {
                                 break L184;
                               } else {
-                                if (((wizardrun) this).field_N != -1) {
+                                if (0 != (this.field_N ^ -1)) {
                                   break L183;
                                 } else {
-                                  if (~pg.field_n > ~var4_int) {
+                                  if ((pg.field_n ^ -1) > (var4_int ^ -1)) {
                                     break L183;
                                   } else {
                                     if (pg.field_n >= var6 + var4_int) {
                                       break L183;
                                     } else {
-                                      if (fi.field_B < 436) {
+                                      if ((fi.field_B ^ -1) > -437) {
                                         break L183;
                                       } else {
                                         break L184;
@@ -3872,7 +3921,7 @@ public final class wizardrun extends u {
                             }
                             L185: {
                               L186: {
-                                if (sh.field_c != 0) {
+                                if (-1 != (sh.field_c ^ -1)) {
                                   break L186;
                                 } else {
                                   if (!hi.field_p[84]) {
@@ -3885,7 +3934,7 @@ public final class wizardrun extends u {
                               cd.field_c = var5;
                               break L185;
                             }
-                            if (var7 != 16711680) {
+                            if ((var7 ^ -1) != -16711681) {
                               var7 = 16777215;
                               break L183;
                             } else {
@@ -3923,19 +3972,19 @@ public final class wizardrun extends u {
                       var3_ref_String = ue.field_b;
                       ig.a(qc.field_E, 96, (byte) -110, 44, 176, 436);
                       var4_int = 16776960;
-                      if (((wizardrun) this).field_N == 1) {
+                      if (this.field_N == 1) {
                         break L189;
                       } else {
                         if (96 >= pg.field_n) {
                           break L188;
                         } else {
-                          if (pg.field_n >= 264) {
+                          if ((pg.field_n ^ -1) <= -265) {
                             break L188;
                           } else {
-                            if (fi.field_B < 436) {
+                            if (-437 < (fi.field_B ^ -1)) {
                               break L188;
                             } else {
-                              if (-1 != ((wizardrun) this).field_N) {
+                              if (-1 != this.field_N) {
                                 break L188;
                               } else {
                                 break L189;
@@ -3947,7 +3996,7 @@ public final class wizardrun extends u {
                     }
                     L190: {
                       L191: {
-                        if (sh.field_c != 0) {
+                        if (-1 != (sh.field_c ^ -1)) {
                           break L191;
                         } else {
                           if (hi.field_p[84]) {
@@ -3968,7 +4017,7 @@ public final class wizardrun extends u {
                 }
               }
               L192: {
-                if (sf.field_h == 9) {
+                if (-10 == (sf.field_h ^ -1)) {
                   ed.c(0, 0, 640, 480, 0);
                   df.a(2);
                   break L192;
@@ -3978,7 +4027,7 @@ public final class wizardrun extends u {
               }
               L193: {
                 var3 = 8 / ((param0 - -43) / 50);
-                if (sf.field_h != 6) {
+                if ((sf.field_h ^ -1) != -7) {
                   break L193;
                 } else {
                   L194: {
@@ -3988,17 +4037,17 @@ public final class wizardrun extends u {
                     ed.d(40, 170, 560, 20 + (120 + 5 * var6), 0, 192);
                     ig.a(pd.field_H, 31, (byte) -110, 14 + (20 + (5 * var6 - -120)), 578, 163);
                     var32.b(vg.field_U, 320, var5, 16777215, -1);
-                    stackOut_637_0 = (gb) var32;
+                    stackOut_637_0 = (gb) (var32);
                     stackIn_639_0 = stackOut_637_0;
                     stackIn_638_0 = stackOut_637_0;
                     if (0 == qf.field_l) {
-                      stackOut_639_0 = (gb) (Object) stackIn_639_0;
+                      stackOut_639_0 = (gb) ((Object) stackIn_639_0);
                       stackOut_639_1 = 0;
                       stackIn_640_0 = stackOut_639_0;
                       stackIn_640_1 = stackOut_639_1;
                       break L194;
                     } else {
-                      stackOut_638_0 = (gb) (Object) stackIn_638_0;
+                      stackOut_638_0 = (gb) ((Object) stackIn_638_0);
                       stackOut_638_1 = 1;
                       stackIn_640_0 = stackOut_638_0;
                       stackIn_640_1 = stackOut_638_1;
@@ -4006,14 +4055,14 @@ public final class wizardrun extends u {
                     }
                   }
                   L195: {
-                    stackOut_640_0 = (gb) (Object) stackIn_640_0;
+                    stackOut_640_0 = (gb) ((Object) stackIn_640_0);
                     stackOut_640_1 = stackIn_640_1;
                     stackIn_642_0 = stackOut_640_0;
                     stackIn_642_1 = stackOut_640_1;
                     stackIn_641_0 = stackOut_640_0;
                     stackIn_641_1 = stackOut_640_1;
                     if (ke.field_u.f(8192)) {
-                      stackOut_642_0 = (gb) (Object) stackIn_642_0;
+                      stackOut_642_0 = (gb) ((Object) stackIn_642_0);
                       stackOut_642_1 = stackIn_642_1;
                       stackOut_642_2 = 0;
                       stackIn_643_0 = stackOut_642_0;
@@ -4021,7 +4070,7 @@ public final class wizardrun extends u {
                       stackIn_643_2 = stackOut_642_2;
                       break L195;
                     } else {
-                      stackOut_641_0 = (gb) (Object) stackIn_641_0;
+                      stackOut_641_0 = (gb) ((Object) stackIn_641_0);
                       stackOut_641_1 = stackIn_641_1;
                       stackOut_641_2 = 1;
                       stackIn_643_0 = stackOut_641_0;
@@ -4031,7 +4080,7 @@ public final class wizardrun extends u {
                     }
                   }
                   L196: {
-                    stackOut_643_0 = (gb) (Object) stackIn_643_0;
+                    stackOut_643_0 = (gb) ((Object) stackIn_643_0);
                     stackOut_643_1 = stackIn_643_1;
                     stackOut_643_2 = stackIn_643_2;
                     stackIn_645_0 = stackOut_643_0;
@@ -4040,8 +4089,8 @@ public final class wizardrun extends u {
                     stackIn_644_0 = stackOut_643_0;
                     stackIn_644_1 = stackOut_643_1;
                     stackIn_644_2 = stackOut_643_2;
-                    if (sg.field_f == 0) {
-                      stackOut_645_0 = (gb) (Object) stackIn_645_0;
+                    if ((sg.field_f ^ -1) == -1) {
+                      stackOut_645_0 = (gb) ((Object) stackIn_645_0);
                       stackOut_645_1 = stackIn_645_1;
                       stackOut_645_2 = stackIn_645_2;
                       stackOut_645_3 = 0;
@@ -4051,7 +4100,7 @@ public final class wizardrun extends u {
                       stackIn_646_3 = stackOut_645_3;
                       break L196;
                     } else {
-                      stackOut_644_0 = (gb) (Object) stackIn_644_0;
+                      stackOut_644_0 = (gb) ((Object) stackIn_644_0);
                       stackOut_644_1 = stackIn_644_1;
                       stackOut_644_2 = stackIn_644_2;
                       stackOut_644_3 = 1;
@@ -4071,17 +4120,17 @@ public final class wizardrun extends u {
                     }
                   }
                   L198: {
-                    stackOut_647_0 = (gb) var32;
+                    stackOut_647_0 = (gb) (var32);
                     stackIn_649_0 = stackOut_647_0;
                     stackIn_648_0 = stackOut_647_0;
-                    if (qf.field_l == 0) {
-                      stackOut_649_0 = (gb) (Object) stackIn_649_0;
+                    if ((qf.field_l ^ -1) == -1) {
+                      stackOut_649_0 = (gb) ((Object) stackIn_649_0);
                       stackOut_649_1 = 0;
                       stackIn_650_0 = stackOut_649_0;
                       stackIn_650_1 = stackOut_649_1;
                       break L198;
                     } else {
-                      stackOut_648_0 = (gb) (Object) stackIn_648_0;
+                      stackOut_648_0 = (gb) ((Object) stackIn_648_0);
                       stackOut_648_1 = 1;
                       stackIn_650_0 = stackOut_648_0;
                       stackIn_650_1 = stackOut_648_1;
@@ -4089,7 +4138,7 @@ public final class wizardrun extends u {
                     }
                   }
                   L199: {
-                    stackOut_650_0 = (gb) (Object) stackIn_650_0;
+                    stackOut_650_0 = (gb) ((Object) stackIn_650_0);
                     stackOut_650_1 = stackIn_650_1;
                     stackOut_650_2 = 2;
                     stackIn_652_0 = stackOut_650_0;
@@ -4098,8 +4147,8 @@ public final class wizardrun extends u {
                     stackIn_651_0 = stackOut_650_0;
                     stackIn_651_1 = stackOut_650_1;
                     stackIn_651_2 = stackOut_650_2;
-                    if (sg.field_f == 0) {
-                      stackOut_652_0 = (gb) (Object) stackIn_652_0;
+                    if (-1 == (sg.field_f ^ -1)) {
+                      stackOut_652_0 = (gb) ((Object) stackIn_652_0);
                       stackOut_652_1 = stackIn_652_1;
                       stackOut_652_2 = stackIn_652_2;
                       stackOut_652_3 = 0;
@@ -4109,7 +4158,7 @@ public final class wizardrun extends u {
                       stackIn_653_3 = stackOut_652_3;
                       break L199;
                     } else {
-                      stackOut_651_0 = (gb) (Object) stackIn_651_0;
+                      stackOut_651_0 = (gb) ((Object) stackIn_651_0);
                       stackOut_651_1 = stackIn_651_1;
                       stackOut_651_2 = stackIn_651_2;
                       stackOut_651_3 = 1;
@@ -4121,7 +4170,7 @@ public final class wizardrun extends u {
                     }
                   }
                   L200: {
-                    stackOut_653_0 = (gb) (Object) stackIn_653_0;
+                    stackOut_653_0 = (gb) ((Object) stackIn_653_0);
                     stackOut_653_1 = stackIn_653_1;
                     stackOut_653_2 = stackIn_653_2;
                     stackOut_653_3 = stackIn_653_3;
@@ -4134,7 +4183,7 @@ public final class wizardrun extends u {
                     stackIn_654_2 = stackOut_653_2;
                     stackIn_654_3 = stackOut_653_3;
                     if (ke.field_u.f(8192)) {
-                      stackOut_655_0 = (gb) (Object) stackIn_655_0;
+                      stackOut_655_0 = (gb) ((Object) stackIn_655_0);
                       stackOut_655_1 = stackIn_655_1;
                       stackOut_655_2 = stackIn_655_2;
                       stackOut_655_3 = stackIn_655_3;
@@ -4146,7 +4195,7 @@ public final class wizardrun extends u {
                       stackIn_656_4 = stackOut_655_4;
                       break L200;
                     } else {
-                      stackOut_654_0 = (gb) (Object) stackIn_654_0;
+                      stackOut_654_0 = (gb) ((Object) stackIn_654_0);
                       stackOut_654_1 = stackIn_654_1;
                       stackOut_654_2 = stackIn_654_2;
                       stackOut_654_3 = stackIn_654_3;
@@ -4161,18 +4210,18 @@ public final class wizardrun extends u {
                   }
                   L201: {
                     ((gb) (Object) stackIn_656_0).b(ka.a(stackIn_656_1 != 0, stackIn_656_2, stackIn_656_3 != 0, stackIn_656_4 != 0), 320, (int)(2.5 * (double)var6) + var5 + 60, 16777215, -1);
-                    boolean discarded$77 = this.a(60 + (var6 / 2 + var6 * 5 + var5), 320, 65535, gf.field_X, 1);
-                    stackOut_656_0 = (gb) var32;
+                    discarded$77 = this.a(60 + (var6 / 2 + var6 * 5 + var5), 320, 65535, gf.field_X, 1);
+                    stackOut_656_0 = (gb) (var32);
                     stackIn_658_0 = stackOut_656_0;
                     stackIn_657_0 = stackOut_656_0;
                     if (0 == sg.field_f) {
-                      stackOut_658_0 = (gb) (Object) stackIn_658_0;
+                      stackOut_658_0 = (gb) ((Object) stackIn_658_0);
                       stackOut_658_1 = 0;
                       stackIn_659_0 = stackOut_658_0;
                       stackIn_659_1 = stackOut_658_1;
                       break L201;
                     } else {
-                      stackOut_657_0 = (gb) (Object) stackIn_657_0;
+                      stackOut_657_0 = (gb) ((Object) stackIn_657_0);
                       stackOut_657_1 = 1;
                       stackIn_659_0 = stackOut_657_0;
                       stackIn_659_1 = stackOut_657_1;
@@ -4180,7 +4229,7 @@ public final class wizardrun extends u {
                     }
                   }
                   L202: {
-                    stackOut_659_0 = (gb) (Object) stackIn_659_0;
+                    stackOut_659_0 = (gb) ((Object) stackIn_659_0);
                     stackOut_659_1 = stackIn_659_1;
                     stackOut_659_2 = -3567;
                     stackOut_659_3 = 0;
@@ -4193,7 +4242,7 @@ public final class wizardrun extends u {
                     stackIn_660_2 = stackOut_659_2;
                     stackIn_660_3 = stackOut_659_3;
                     if (0 == qf.field_l) {
-                      stackOut_661_0 = (gb) (Object) stackIn_661_0;
+                      stackOut_661_0 = (gb) ((Object) stackIn_661_0);
                       stackOut_661_1 = stackIn_661_1;
                       stackOut_661_2 = stackIn_661_2;
                       stackOut_661_3 = stackIn_661_3;
@@ -4205,7 +4254,7 @@ public final class wizardrun extends u {
                       stackIn_662_4 = stackOut_661_4;
                       break L202;
                     } else {
-                      stackOut_660_0 = (gb) (Object) stackIn_660_0;
+                      stackOut_660_0 = (gb) ((Object) stackIn_660_0);
                       stackOut_660_1 = stackIn_660_1;
                       stackOut_660_2 = stackIn_660_2;
                       stackOut_660_3 = stackIn_660_3;
@@ -4237,7 +4286,7 @@ public final class wizardrun extends u {
                       if (sf.field_h == 10) {
                         L204: {
                           da.a(7775, ql.field_c - -(qh.field_l * 6) + sg.field_f * 64);
-                          ic.field_a = ic.field_a + (sg.field_f << 6);
+                          ic.field_a = ic.field_a + (sg.field_f << -125900922);
                           me.field_f = me.field_f + (-6 + ql.field_c);
                           wg.field_b = wg.field_b - (6 * qh.field_l + 1);
                           stackOut_669_0 = this;
@@ -4257,7 +4306,7 @@ public final class wizardrun extends u {
                             break L204;
                           }
                         }
-                        ((wizardrun) this).field_J = stackIn_672_1 != 0;
+                        ((wizardrun) (this)).field_J = stackIn_672_1 != 0;
                         sg.field_f = 0;
                         qh.field_l = -1;
                         ql.field_c = 6;
@@ -4278,7 +4327,7 @@ public final class wizardrun extends u {
                 }
               }
               L205: {
-                if (((wizardrun) this).field_I <= 0) {
+                if ((this.field_I ^ -1) >= -1) {
                   break L205;
                 } else {
                   if (da.field_e != null) {
@@ -4290,7 +4339,7 @@ public final class wizardrun extends u {
                 }
               }
               L206: {
-                if (se.field_a > 0) {
+                if (-1 > (se.field_a ^ -1)) {
                   ed.d(0, 0, 640, 480, 0, se.field_a);
                   break L206;
                 } else {
@@ -4301,7 +4350,7 @@ public final class wizardrun extends u {
                 if (pa.field_c <= 0) {
                   break L207;
                 } else {
-                  if (pa.field_c < 256) {
+                  if ((pa.field_c ^ -1) > -257) {
                     ed.d(0, 0, 640, 480, 0, pa.field_c);
                     break L207;
                   } else {
@@ -4320,13 +4369,13 @@ public final class wizardrun extends u {
                       var4 = ne.field_a;
                       ig.a(qc.field_E, 0, (byte) -110, 44, 88, 436);
                       var5 = 16776960;
-                      if (0 == ((wizardrun) this).field_N) {
+                      if (0 == this.field_N) {
                         break L210;
                       } else {
-                        if (((wizardrun) this).field_N != -1) {
+                        if (0 != (this.field_N ^ -1)) {
                           break L209;
                         } else {
-                          if (pg.field_n < 0) {
+                          if (-1 < (pg.field_n ^ -1)) {
                             break L209;
                           } else {
                             if (88 <= pg.field_n) {
@@ -4344,7 +4393,7 @@ public final class wizardrun extends u {
                     }
                     L211: {
                       L212: {
-                        if (sh.field_c == 1) {
+                        if (-2 == (sh.field_c ^ -1)) {
                           break L212;
                         } else {
                           if (!hi.field_p[84]) {
@@ -4365,10 +4414,10 @@ public final class wizardrun extends u {
                 }
               }
               L213: {
-                var33_ref = (ra) (Object) uc.field_b.b((byte) 87);
+                var33_ref = (ra) ((Object) uc.field_b.b((byte) 87));
                 if (var33_ref != null) {
                   L214: {
-                    var6 = ((wizardrun) this).field_M;
+                    var6 = this.field_M;
                     if (80 > var6) {
                       var5 = var6 / 2 + -32;
                       break L214;
@@ -4437,7 +4486,7 @@ public final class wizardrun extends u {
         mh.field_jb = si.a(92, 2);
         mi.field_y = si.a(-117, 3);
         jl.field_u = si.a(-118, 4);
-        int var2 = 30;
+        int var2 = -60 / ((param0 - 39) / 38);
         eg.field_u = si.a(-106, 6);
         md.field_b = si.a(-90, 5);
         bc.field_a = si.a(84, 7);
@@ -4450,7 +4499,7 @@ public final class wizardrun extends u {
         if (param1 < 4096) {
             return 2048 > param1 ? sb.field_b[2048 - param1] : -sb.field_b[param1 - 2048];
         }
-        return param1 < 6144 ? -sb.field_b[6144 + -param1] : sb.field_b[param1 + -6144];
+        return -6145 < (param1 ^ -1) ? -sb.field_b[6144 + -param1] : sb.field_b[param1 + -6144];
     }
 
     private final boolean a(int param0, int param1, int param2, String param3, int param4) {
@@ -4465,6 +4514,7 @@ public final class wizardrun extends u {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_17_0 = 0;
         int stackOut_15_0 = 0;
@@ -4485,7 +4535,7 @@ public final class wizardrun extends u {
               if (param4 == 1) {
                 break L1;
               } else {
-                ((wizardrun) this).field_R = 17;
+                this.field_R = 17;
                 break L1;
               }
             }
@@ -4496,7 +4546,7 @@ public final class wizardrun extends u {
                 if (16 + param1 < pg.field_n) {
                   break L2;
                 } else {
-                  if (~fi.field_B >= ~(-jj.field_b.field_M + param0 + -16)) {
+                  if ((fi.field_B ^ -1) >= (-jj.field_b.field_M + param0 + -16 ^ -1)) {
                     break L2;
                   } else {
                     if (16 + param0 >= fi.field_B) {
@@ -4515,7 +4565,7 @@ public final class wizardrun extends u {
               }
             }
             L3: {
-              if (param2 != 65535) {
+              if ((param2 ^ -1) != -65536) {
                 break L3;
               } else {
                 param2 = 15583488;
@@ -4526,12 +4576,14 @@ public final class wizardrun extends u {
             if (param2 != 16777215) {
               stackOut_17_0 = 0;
               stackIn_18_0 = stackOut_17_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              if (sh.field_c != 0) {
+              if ((sh.field_c ^ -1) != -1) {
                 stackOut_15_0 = 1;
                 stackIn_16_0 = stackOut_15_0;
-                return stackIn_16_0 != 0;
+                decompiledRegionSelector0 = 0;
+                break L0;
               } else {
                 return false;
               }
@@ -4541,23 +4593,23 @@ public final class wizardrun extends u {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var6;
+            stackOut_19_0 = (RuntimeException) (var6);
             stackOut_19_1 = new StringBuilder().append("wizardrun.AB(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param3 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L4;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -4565,19 +4617,45 @@ public final class wizardrun extends u {
               break L4;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ',' + param4 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param4 + ')');
         }
-        return stackIn_18_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_16_0 != 0;
+        } else {
+          return stackIn_18_0 != 0;
+        }
     }
 
     private final void t(int param0) {
         try {
+            int fieldTemp$21 = 0;
+            wl discarded$22 = null;
+            int fieldTemp$23 = 0;
+            int fieldTemp$24 = 0;
+            int fieldTemp$25 = 0;
+            int fieldTemp$26 = 0;
+            int fieldTemp$27 = 0;
+            int fieldTemp$28 = 0;
+            int fieldTemp$29 = 0;
+            int fieldTemp$30 = 0;
+            int fieldTemp$31 = 0;
+            int fieldTemp$32 = 0;
+            int fieldTemp$33 = 0;
+            int fieldTemp$34 = 0;
+            int fieldTemp$35 = 0;
+            int fieldTemp$36 = 0;
+            int fieldTemp$37 = 0;
+            int fieldTemp$38 = 0;
+            int incrementValue$39 = 0;
+            int incrementValue$40 = 0;
+            int incrementValue$41 = 0;
             int var2 = 0;
             ob var2_ref_ob = null;
             int var3 = 0;
             int var4 = 0;
             byte[] var4_ref_byte__ = null;
             int var5 = 0;
+            Exception var6 = null;
             int var6_int = 0;
             int var7 = 0;
             int var8 = 0;
@@ -4588,8 +4666,6 @@ public final class wizardrun extends u {
             ob var13 = null;
             ob var14 = null;
             byte[] var15 = null;
-            byte[] var16 = null;
-            byte[] var17 = null;
             gb stackIn_29_0 = null;
             gb stackIn_30_0 = null;
             gb stackIn_31_0 = null;
@@ -4611,16 +4687,18 @@ public final class wizardrun extends u {
             int stackIn_38_0 = 0;
             int stackIn_39_0 = 0;
             int stackIn_39_1 = 0;
-            int stackIn_581_0 = 0;
-            int stackIn_582_0 = 0;
-            int stackIn_583_0 = 0;
-            int stackIn_583_1 = 0;
-            int stackIn_749_0 = 0;
-            int stackIn_750_0 = 0;
-            int stackIn_751_0 = 0;
-            int stackIn_751_1 = 0;
-            int stackIn_761_0 = 0;
-            int stackIn_802_0 = 0;
+            int stackIn_585_0 = 0;
+            int stackIn_586_0 = 0;
+            int stackIn_587_0 = 0;
+            int stackIn_587_1 = 0;
+            int stackIn_753_0 = 0;
+            int stackIn_754_0 = 0;
+            int stackIn_755_0 = 0;
+            int stackIn_755_1 = 0;
+            int stackIn_765_0 = 0;
+            int stackIn_806_0 = 0;
+            Throwable caughtException = null;
+            Throwable decompiledCaughtException = null;
             gb stackOut_28_0 = null;
             gb stackOut_30_0 = null;
             int stackOut_30_1 = 0;
@@ -4645,23 +4723,23 @@ public final class wizardrun extends u {
             int stackOut_38_1 = 0;
             int stackOut_37_0 = 0;
             int stackOut_37_1 = 0;
-            int stackOut_580_0 = 0;
-            int stackOut_582_0 = 0;
-            int stackOut_582_1 = 0;
-            int stackOut_581_0 = 0;
-            int stackOut_581_1 = 0;
-            int stackOut_748_0 = 0;
-            int stackOut_750_0 = 0;
-            int stackOut_750_1 = 0;
-            int stackOut_749_0 = 0;
-            int stackOut_749_1 = 0;
-            int stackOut_801_0 = 0;
-            int stackOut_800_0 = 0;
-            int stackOut_760_0 = 0;
-            int stackOut_759_0 = 0;
+            int stackOut_584_0 = 0;
+            int stackOut_586_0 = 0;
+            int stackOut_586_1 = 0;
+            int stackOut_585_0 = 0;
+            int stackOut_585_1 = 0;
+            int stackOut_752_0 = 0;
+            int stackOut_754_0 = 0;
+            int stackOut_754_1 = 0;
+            int stackOut_753_0 = 0;
+            int stackOut_753_1 = 0;
+            int stackOut_805_0 = 0;
+            int stackOut_804_0 = 0;
+            int stackOut_764_0 = 0;
+            int stackOut_763_0 = 0;
             L0: {
               var8 = field_H;
-              if (sf.field_h != 2) {
+              if (-3 != (sf.field_h ^ -1)) {
                 break L0;
               } else {
                 if (0 >= qf.field_l) {
@@ -4682,9 +4760,9 @@ public final class wizardrun extends u {
             }
             L2: {
               if (sf.field_h == 0) {
-                ((wizardrun) this).field_N = 0;
-                ((wizardrun) this).field_K = pg.field_n;
-                ((wizardrun) this).field_S = fi.field_B;
+                this.field_N = 0;
+                this.field_K = pg.field_n;
+                this.field_S = fi.field_B;
                 break L2;
               } else {
                 break L2;
@@ -4692,13 +4770,13 @@ public final class wizardrun extends u {
             }
             L3: {
               L4: {
-                if (pg.field_n != ((wizardrun) this).field_K) {
+                if (pg.field_n != this.field_K) {
                   break L4;
                 } else {
-                  if (~fi.field_B != ~((wizardrun) this).field_S) {
+                  if ((fi.field_B ^ -1) != (this.field_S ^ -1)) {
                     break L4;
                   } else {
-                    if (sh.field_c == 1) {
+                    if ((sh.field_c ^ -1) == -2) {
                       break L4;
                     } else {
                       break L3;
@@ -4706,9 +4784,9 @@ public final class wizardrun extends u {
                   }
                 }
               }
-              ((wizardrun) this).field_K = pg.field_n;
-              ((wizardrun) this).field_S = fi.field_B;
-              ((wizardrun) this).field_N = -1;
+              this.field_K = pg.field_n;
+              this.field_S = fi.field_B;
+              this.field_N = -1;
               break L3;
             }
             L5: {
@@ -4726,10 +4804,10 @@ public final class wizardrun extends u {
                   if (-16 + -var5 + var6_int >= pg.field_n) {
                     break L6;
                   } else {
-                    if (~pg.field_n < ~(16 + var6_int)) {
+                    if ((pg.field_n ^ -1) < (16 + var6_int ^ -1)) {
                       break L6;
                     } else {
-                      if (~(-jj.field_b.field_M + var7 + -16) <= ~fi.field_B) {
+                      if ((-jj.field_b.field_M + var7 + -16 ^ -1) <= (fi.field_B ^ -1)) {
                         break L6;
                       } else {
                         if (fi.field_B <= var7 + 16) {
@@ -4751,19 +4829,19 @@ public final class wizardrun extends u {
                   var5 = jj.field_b.b(gf.field_X);
                   var7 = 60 + (var4 / 2 + var3) - -(var4 * 5);
                   var6_int = var6_int + var5 / 2;
-                  if (~(-var5 + var6_int + -16) <= ~pg.field_n) {
+                  if ((-var5 + var6_int + -16 ^ -1) <= (pg.field_n ^ -1)) {
                     break L7;
                   } else {
-                    if (~pg.field_n < ~(var6_int + 16)) {
+                    if ((pg.field_n ^ -1) < (var6_int + 16 ^ -1)) {
                       break L7;
                     } else {
-                      if (~fi.field_B >= ~(-16 + (-jj.field_b.field_M + var7))) {
+                      if ((fi.field_B ^ -1) >= (-16 + (-jj.field_b.field_M + var7) ^ -1)) {
                         break L7;
                       } else {
                         if (16 + var7 < fi.field_B) {
                           break L7;
                         } else {
-                          if (w.field_c == 1) {
+                          if (-2 == (w.field_c ^ -1)) {
                             ei.field_k = 0;
                             qf.field_l = 0;
                             ke.field_u.a(false);
@@ -4782,17 +4860,17 @@ public final class wizardrun extends u {
                   }
                 }
                 L8: {
-                  stackOut_28_0 = (gb) var11;
+                  stackOut_28_0 = (gb) (var11);
                   stackIn_30_0 = stackOut_28_0;
                   stackIn_29_0 = stackOut_28_0;
-                  if (sg.field_f == 0) {
-                    stackOut_30_0 = (gb) (Object) stackIn_30_0;
+                  if (-1 == (sg.field_f ^ -1)) {
+                    stackOut_30_0 = (gb) ((Object) stackIn_30_0);
                     stackOut_30_1 = 0;
                     stackIn_31_0 = stackOut_30_0;
                     stackIn_31_1 = stackOut_30_1;
                     break L8;
                   } else {
-                    stackOut_29_0 = (gb) (Object) stackIn_29_0;
+                    stackOut_29_0 = (gb) ((Object) stackIn_29_0);
                     stackOut_29_1 = 1;
                     stackIn_31_0 = stackOut_29_0;
                     stackIn_31_1 = stackOut_29_1;
@@ -4800,7 +4878,7 @@ public final class wizardrun extends u {
                   }
                 }
                 L9: {
-                  stackOut_31_0 = (gb) (Object) stackIn_31_0;
+                  stackOut_31_0 = (gb) ((Object) stackIn_31_0);
                   stackOut_31_1 = stackIn_31_1;
                   stackOut_31_2 = -3567;
                   stackOut_31_3 = 0;
@@ -4813,7 +4891,7 @@ public final class wizardrun extends u {
                   stackIn_32_2 = stackOut_31_2;
                   stackIn_32_3 = stackOut_31_3;
                   if (qf.field_l == 0) {
-                    stackOut_33_0 = (gb) (Object) stackIn_33_0;
+                    stackOut_33_0 = (gb) ((Object) stackIn_33_0);
                     stackOut_33_1 = stackIn_33_1;
                     stackOut_33_2 = stackIn_33_2;
                     stackOut_33_3 = stackIn_33_3;
@@ -4825,7 +4903,7 @@ public final class wizardrun extends u {
                     stackIn_34_4 = stackOut_33_4;
                     break L9;
                   } else {
-                    stackOut_32_0 = (gb) (Object) stackIn_32_0;
+                    stackOut_32_0 = (gb) ((Object) stackIn_32_0);
                     stackOut_32_1 = stackIn_32_1;
                     stackOut_32_2 = stackIn_32_2;
                     stackOut_32_3 = stackIn_32_3;
@@ -4847,7 +4925,7 @@ public final class wizardrun extends u {
                 break L10;
               } else {
                 L11: {
-                  stackOut_36_0 = 586;
+                  stackOut_36_0 = param0 + -54;
                   stackIn_38_0 = stackOut_36_0;
                   stackIn_37_0 = stackOut_36_0;
                   if (dg.b(98)) {
@@ -4866,8 +4944,8 @@ public final class wizardrun extends u {
                 }
                 L12: {
                   var2 = kd.a(stackIn_39_0, stackIn_39_1 != 0);
-                  if (var2 == 3) {
-                    nl.a(jg.f(1), true);
+                  if (-4 == (var2 ^ -1)) {
+                    nl.a(jg.f(param0 ^ 641), true);
                     break L12;
                   } else {
                     break L12;
@@ -4878,18 +4956,18 @@ public final class wizardrun extends u {
                     break L13;
                   } else {
                     L14: {
-                      if (pa.field_c <= 0) {
+                      if ((pa.field_c ^ -1) >= -1) {
                         pa.field_c = pa.field_c + 32;
                         break L14;
                       } else {
                         break L14;
                       }
                     }
-                    ((wizardrun) this).field_N = 0;
+                    this.field_N = 0;
                     break L13;
                   }
                 }
-                ((wizardrun) this).field_J = true;
+                this.field_J = true;
                 if (var2 == 2) {
                   L15: {
                     if (pa.field_c > 0) {
@@ -4899,7 +4977,7 @@ public final class wizardrun extends u {
                       break L15;
                     }
                   }
-                  ((wizardrun) this).field_N = -1;
+                  this.field_N = -1;
                   break L10;
                 } else {
                   break L10;
@@ -4908,11 +4986,11 @@ public final class wizardrun extends u {
             }
             L16: {
               if (5 == sf.field_h) {
-                if (w.field_c == 0) {
+                if (-1 == (w.field_c ^ -1)) {
                   break L16;
                 } else {
                   if (cb.field_f != -1) {
-                    if (~tk.field_a == ~cb.field_f) {
+                    if ((tk.field_a ^ -1) == (cb.field_f ^ -1)) {
                       tk.field_a = -1;
                       break L16;
                     } else {
@@ -4940,7 +5018,7 @@ public final class wizardrun extends u {
                     }
                   } else {
                     L19: {
-                      if (pa.field_c <= 0) {
+                      if (-1 <= (pa.field_c ^ -1)) {
                         break L19;
                       } else {
                         pa.field_c = pa.field_c - 32;
@@ -4957,11 +5035,11 @@ public final class wizardrun extends u {
                   }
                 }
                 L20: while (true) {
-                  if (!ae.a(66)) {
+                  if (!ae.a(param0 ^ 706)) {
                     break L17;
                   } else {
                     L21: {
-                      if (vk.field_r == 13) {
+                      if ((vk.field_r ^ -1) == -14) {
                         break L21;
                       } else {
                         if (!hi.field_p[84]) {
@@ -4977,11 +5055,11 @@ public final class wizardrun extends u {
                 }
               } else {
                 L22: {
-                  if (hi.field_a >= 240) {
+                  if (-241 >= (hi.field_a ^ -1)) {
                     hi.field_a = hi.field_a - 8;
-                    if (hi.field_a < 240) {
+                    if (-241 < (hi.field_a ^ -1)) {
                       L23: {
-                        if (qh.field_l != 0) {
+                        if ((qh.field_l ^ -1) != -1) {
                           break L23;
                         } else {
                           if (pg.field_q) {
@@ -5017,7 +5095,7 @@ public final class wizardrun extends u {
                       break L22;
                     }
                   } else {
-                    if (hi.field_a <= -1000) {
+                    if ((hi.field_a ^ -1) >= 999) {
                       break L22;
                     } else {
                       hi.field_a = hi.field_a - 8;
@@ -5029,11 +5107,11 @@ public final class wizardrun extends u {
                   if (uc.field_b.b((byte) 55) == null) {
                     break L25;
                   } else {
-                    int fieldTemp$21 = ((wizardrun) this).field_M + 1;
-                    ((wizardrun) this).field_M = ((wizardrun) this).field_M + 1;
+                    fieldTemp$21 = this.field_M + 1;
+                    this.field_M = this.field_M + 1;
                     if (335 == fieldTemp$21) {
-                      ((wizardrun) this).field_M = 0;
-                      wl discarded$22 = uc.field_b.b(-40);
+                      this.field_M = 0;
+                      discarded$22 = uc.field_b.b(-40);
                       break L25;
                     } else {
                       break L25;
@@ -5041,10 +5119,10 @@ public final class wizardrun extends u {
                   }
                 }
                 L26: {
-                  if (((wizardrun) this).field_I <= 0) {
+                  if (-1 <= (this.field_I ^ -1)) {
                     break L26;
                   } else {
-                    ((wizardrun) this).field_I = ((wizardrun) this).field_I - 1;
+                    this.field_I = this.field_I - 1;
                     break L26;
                   }
                 }
@@ -5053,7 +5131,7 @@ public final class wizardrun extends u {
                     L28: {
                       pa.field_c = pa.field_c + 32;
                       if (256 == pa.field_c) {
-                        if (sf.field_h == 0) {
+                        if ((sf.field_h ^ -1) == -1) {
                           L29: {
                             if (th.field_i != 1) {
                               break L29;
@@ -5063,7 +5141,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L30: {
-                            if (th.field_i == 3) {
+                            if ((th.field_i ^ -1) == -4) {
                               sf.field_h = 2;
                               break L30;
                             } else {
@@ -5078,7 +5156,7 @@ public final class wizardrun extends u {
                               break L31;
                             }
                           }
-                          if (th.field_i == 5) {
+                          if ((th.field_i ^ -1) == -6) {
                             sf.field_h = 11;
                             break L28;
                           } else {
@@ -5092,7 +5170,7 @@ public final class wizardrun extends u {
                               if (qf.field_l <= 0) {
                                 break L32;
                               } else {
-                                if (th.field_i != 3) {
+                                if ((th.field_i ^ -1) != -4) {
                                   break L32;
                                 } else {
                                   qf.field_l = 0;
@@ -5111,7 +5189,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L34: {
-                            if (sf.field_h == 2) {
+                            if (-3 == (sf.field_h ^ -1)) {
                               th.field_g = null;
                               break L34;
                             } else {
@@ -5119,9 +5197,9 @@ public final class wizardrun extends u {
                             }
                           }
                           sf.field_h = 0;
-                          if (!((wizardrun) this).field_J) {
+                          if (!this.field_J) {
                             tb.a(0, true);
-                            ((wizardrun) this).field_J = true;
+                            this.field_J = true;
                             sf.field_h = 9;
                             break L28;
                           } else {
@@ -5139,7 +5217,7 @@ public final class wizardrun extends u {
                       break L27;
                     }
                   } else {
-                    if (sf.field_h != 0) {
+                    if ((sf.field_h ^ -1) != -1) {
                       break L27;
                     } else {
                       if (null != da.field_e) {
@@ -5149,7 +5227,7 @@ public final class wizardrun extends u {
                           break L27;
                         } else {
                           L35: {
-                            if (~og.field_R.length < ~rc.field_a) {
+                            if ((og.field_R.length ^ -1) < (rc.field_a ^ -1)) {
                               rf.field_b = rf.field_b - 1;
                               break L35;
                             } else {
@@ -5161,7 +5239,7 @@ public final class wizardrun extends u {
                               rf.field_b = 8;
                               var2 = 0;
                               L37: while (true) {
-                                if (var2 >= 25) {
+                                if ((var2 ^ -1) <= -26) {
                                   rc.field_a = rc.field_a + 1;
                                   if (!pk.field_s) {
                                     break L36;
@@ -5172,7 +5250,7 @@ public final class wizardrun extends u {
                                 } else {
                                   L38: {
                                     pb.field_k = pb.field_k + 1;
-                                    if (pb.field_k >= 100) {
+                                    if (-101 >= (pb.field_k ^ -1)) {
                                       pb.field_k = 0;
                                       break L38;
                                     } else {
@@ -5192,7 +5270,7 @@ public final class wizardrun extends u {
                           }
                           L39: {
                             var2 = 0;
-                            if (~pg.field_n == ~le.field_i) {
+                            if ((pg.field_n ^ -1) == (le.field_i ^ -1)) {
                               break L39;
                             } else {
                               le.field_i = pg.field_n;
@@ -5210,7 +5288,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L41: {
-                            if (rc.field_a < 2) {
+                            if (-3 < (rc.field_a ^ -1)) {
                               var2 = 0;
                               break L41;
                             } else {
@@ -5226,7 +5304,7 @@ public final class wizardrun extends u {
                             }
                           }
                           L43: {
-                            if (qh.field_g < 0) {
+                            if ((qh.field_g ^ -1) > -1) {
                               break L43;
                             } else {
                               L44: {
@@ -5235,17 +5313,17 @@ public final class wizardrun extends u {
                                     if (2 == si.field_h) {
                                       break L45;
                                     } else {
-                                      if (si.field_h != 3) {
+                                      if (-4 != (si.field_h ^ -1)) {
                                         break L44;
                                       } else {
                                         break L45;
                                       }
                                     }
                                   }
-                                  if (pg.field_n <= 144) {
+                                  if (-145 <= (pg.field_n ^ -1)) {
                                     break L44;
                                   } else {
-                                    if (sh.field_c == 1) {
+                                    if ((sh.field_c ^ -1) == -2) {
                                       this.a(-114, 2, si.field_h);
                                       break L44;
                                     } else {
@@ -5257,11 +5335,11 @@ public final class wizardrun extends u {
                                   var3 = 208;
                                   var4 = 0;
                                   L46: while (true) {
-                                    if (~var4 <= ~rc.field_a) {
+                                    if ((var4 ^ -1) <= (rc.field_a ^ -1)) {
                                       L47: {
                                         L48: {
                                           L49: {
-                                            if (si.field_h == 2) {
+                                            if ((si.field_h ^ -1) == -3) {
                                               break L49;
                                             } else {
                                               if (3 != si.field_h) {
@@ -5271,10 +5349,10 @@ public final class wizardrun extends u {
                                               }
                                             }
                                           }
-                                          if (pg.field_n < 144) {
+                                          if ((pg.field_n ^ -1) > -145) {
                                             break L48;
                                           } else {
-                                            if (sh.field_c != 1) {
+                                            if (-2 != (sh.field_c ^ -1)) {
                                               break L47;
                                             } else {
                                               this.a(-123, 2, si.field_h);
@@ -5298,7 +5376,7 @@ public final class wizardrun extends u {
                                           if (pg.field_n > 327) {
                                             break L50;
                                           } else {
-                                            if (~fi.field_B > ~(-24 + var3)) {
+                                            if ((fi.field_B ^ -1) > (-24 + var3 ^ -1)) {
                                               break L50;
                                             } else {
                                               if (fi.field_B <= 8 + var3) {
@@ -5331,11 +5409,11 @@ public final class wizardrun extends u {
                                   }
                                 }
                                 L52: {
-                                  if (pb.field_k % 25 == 0) {
+                                  if (-1 == (pb.field_k % 25 ^ -1)) {
                                     L53: {
                                       md.field_a[0][0] = 161 + -(jj.field_b.b(og.field_R[si.field_h]) / 2);
                                       md.field_a[0][1] = -jj.field_b.field_M / 2 + 208 - -(32 * si.field_h);
-                                      if (si.field_h != 2) {
+                                      if (-3 != (si.field_h ^ -1)) {
                                         break L53;
                                       } else {
                                         md.field_a[0][0] = 27;
@@ -5343,7 +5421,7 @@ public final class wizardrun extends u {
                                       }
                                     }
                                     L54: {
-                                      if (si.field_h != 3) {
+                                      if (-4 != (si.field_h ^ -1)) {
                                         break L54;
                                       } else {
                                         md.field_a[0][0] = 27;
@@ -5402,7 +5480,7 @@ public final class wizardrun extends u {
                         }
                       }
                     }
-                    if (!((wizardrun) this).field_P) {
+                    if (!this.field_P) {
                       L60: {
                         if (0 >= se.field_a) {
                           break L60;
@@ -5441,11 +5519,11 @@ public final class wizardrun extends u {
                     break L57;
                   } else {
                     L63: {
-                      if (!((wizardrun) this).field_P) {
+                      if (!this.field_P) {
                         break L63;
                       } else {
                         if (wi.field_K != 1) {
-                          ((wizardrun) this).field_P = false;
+                          this.field_P = false;
                           da.field_e = new ph();
                           rf.field_b = 0;
                           rc.field_a = 0;
@@ -5456,7 +5534,7 @@ public final class wizardrun extends u {
                       }
                     }
                     L64: {
-                      ((wizardrun) this).field_P = false;
+                      this.field_P = false;
                       if (sf.field_h == 2) {
                         th.field_g = null;
                         break L64;
@@ -5484,211 +5562,219 @@ public final class wizardrun extends u {
                 var2 = 0;
                 L66: while (true) {
                   if (100 <= var2) {
-                    if (!((wizardrun) this).field_L) {
+                    if (!this.field_L) {
                       L67: {
+                        if (param0 == 640) {
+                          break L67;
+                        } else {
+                          field_D = (o[]) null;
+                          break L67;
+                        }
+                      }
+                      L68: {
                         if (null != da.field_e) {
-                          ((wizardrun) this).field_I = 5;
+                          this.field_I = 5;
                           sf.field_h = 3;
-                          L68: while (true) {
+                          L69: while (true) {
                             if (!ae.a(-120)) {
-                              L69: {
+                              L70: {
                                 if (da.field_e == null) {
-                                  break L69;
+                                  break L70;
                                 } else {
-                                  da.field_e.a(-2);
-                                  break L69;
+                                  da.field_e.a(param0 ^ -642);
+                                  break L70;
                                 }
                               }
                               if (null != da.field_e) {
-                                break L67;
+                                break L68;
                               } else {
                                 sf.field_h = 0;
                                 return;
                               }
                             } else {
-                              if (vk.field_r != 13) {
-                                if (vk.field_r == 102) {
-                                  L70: {
-                                    if (da.field_e.field_a == 2) {
+                              if (-14 != (vk.field_r ^ -1)) {
+                                if ((vk.field_r ^ -1) == -103) {
+                                  L71: {
+                                    if ((da.field_e.field_a ^ -1) == -3) {
                                       this.a(19, -3, 2);
-                                      break L70;
+                                      break L71;
                                     } else {
-                                      break L70;
+                                      break L71;
                                     }
                                   }
-                                  if (da.field_e.field_a == 3) {
+                                  if (-4 == (da.field_e.field_a ^ -1)) {
                                     this.a(54, -3, 3);
-                                    continue L68;
+                                    continue L69;
                                   } else {
-                                    continue L68;
+                                    continue L69;
                                   }
                                 } else {
-                                  if (vk.field_r != 103) {
+                                  if ((vk.field_r ^ -1) != -104) {
                                     if (null != da.field_e) {
                                       da.field_e.b(0);
-                                      continue L68;
+                                      continue L69;
                                     } else {
-                                      continue L68;
+                                      continue L69;
                                     }
                                   } else {
-                                    L71: {
+                                    L72: {
                                       if (da.field_e.field_a != 2) {
-                                        break L71;
+                                        break L72;
                                       } else {
                                         this.a(-127, 3, 2);
-                                        break L71;
+                                        break L72;
                                       }
                                     }
                                     if (da.field_e.field_a != 3) {
-                                      continue L68;
+                                      continue L69;
                                     } else {
                                       this.a(93, 3, 3);
-                                      continue L68;
+                                      continue L69;
                                     }
                                   }
                                 }
                               } else {
                                 da.field_e.field_p = true;
-                                continue L68;
+                                continue L69;
                               }
                             }
                           }
                         } else {
-                          L72: {
-                            if (~sg.field_f >= ~ia.field_n) {
-                              break L72;
-                            } else {
-                              ia.field_n = sg.field_f;
-                              break L72;
-                            }
-                          }
                           L73: {
-                            if (wi.field_K != 1) {
+                            if ((sg.field_f ^ -1) >= (ia.field_n ^ -1)) {
                               break L73;
                             } else {
-                              L74: while (true) {
+                              ia.field_n = sg.field_f;
+                              break L73;
+                            }
+                          }
+                          L74: {
+                            if ((wi.field_K ^ -1) != -2) {
+                              break L74;
+                            } else {
+                              L75: while (true) {
                                 if (!ae.a(-65)) {
-                                  L75: {
-                                    if (sf.field_h == 0) {
-                                      wg.field_e = jl.field_w;
-                                      break L75;
-                                    } else {
-                                      break L75;
-                                    }
-                                  }
                                   L76: {
-                                    if (1 != sf.field_h) {
+                                    if ((sf.field_h ^ -1) == -1) {
+                                      wg.field_e = jl.field_w;
                                       break L76;
                                     } else {
-                                      wg.field_e = bk.field_b;
                                       break L76;
                                     }
                                   }
                                   L77: {
-                                    if (sf.field_h == 2) {
-                                      wg.field_e = wh.field_d;
+                                    if (1 != sf.field_h) {
                                       break L77;
                                     } else {
+                                      wg.field_e = bk.field_b;
                                       break L77;
                                     }
                                   }
                                   L78: {
-                                    if (5 != sf.field_h) {
+                                    if ((sf.field_h ^ -1) == -3) {
+                                      wg.field_e = wh.field_d;
                                       break L78;
                                     } else {
-                                      wg.field_e = l.field_M;
                                       break L78;
                                     }
                                   }
                                   L79: {
-                                    if (tj.field_I > 0) {
-                                      tj.field_I = tj.field_I + 5;
+                                    if (5 != sf.field_h) {
                                       break L79;
                                     } else {
+                                      wg.field_e = l.field_M;
                                       break L79;
                                     }
                                   }
                                   L80: {
-                                    if (4 == sf.field_h) {
-                                      wg.field_e = we.field_b;
+                                    if (-1 > (tj.field_I ^ -1)) {
+                                      tj.field_I = tj.field_I + 5;
                                       break L80;
                                     } else {
                                       break L80;
                                     }
                                   }
                                   L81: {
-                                    if (tj.field_I != 255) {
+                                    if (4 == sf.field_h) {
+                                      wg.field_e = we.field_b;
                                       break L81;
                                     } else {
-                                      L82: {
+                                      break L81;
+                                    }
+                                  }
+                                  L82: {
+                                    if ((tj.field_I ^ -1) != -256) {
+                                      break L82;
+                                    } else {
+                                      L83: {
                                         th.field_g = null;
                                         od.field_k = 0;
                                         if (pl.field_A >= qh.field_l) {
-                                          break L82;
+                                          break L83;
                                         } else {
-                                          if (qh.field_l <= 1) {
-                                            break L82;
+                                          if ((qh.field_l ^ -1) >= -2) {
+                                            break L83;
                                           } else {
                                             wg.field_b = wg.field_b - 3 * qh.field_l;
                                             hi.field_c = hi.field_c - 3 * qh.field_l;
                                             qh.field_l = 0;
-                                            break L82;
+                                            break L83;
                                           }
                                         }
                                       }
-                                      L83: {
-                                        L84: {
+                                      L84: {
+                                        L85: {
                                           wi.field_K = 2;
                                           fa.field_a = null;
                                           hi.field_c = hi.field_c - ql.field_c;
                                           ql.field_c = 0;
                                           vk.a((byte) -43);
-                                          ni.b(7530);
-                                          if (qh.field_l != 0) {
-                                            break L84;
+                                          ni.b(param0 ^ 8170);
+                                          if (-1 != (qh.field_l ^ -1)) {
+                                            break L85;
                                           } else {
-                                            if (ql.field_c != 0) {
-                                              break L84;
+                                            if ((ql.field_c ^ -1) != -1) {
+                                              break L85;
                                             } else {
                                               hi.field_a = 580;
                                               bb.field_j = ef.field_F;
-                                              break L83;
+                                              break L84;
                                             }
                                           }
                                         }
                                         hi.field_a = 580;
                                         bb.field_j = wg.field_f + (1 + qh.field_l) + eh.field_i + (1 + ql.field_c);
-                                        break L83;
+                                        break L84;
                                       }
-                                      L85: {
+                                      L86: {
                                         var9 = new ob();
                                         var13 = var9;
                                         var13.field_b = 2;
                                         if (4 != qh.field_l) {
-                                          break L85;
+                                          break L86;
                                         } else {
-                                          if (ql.field_c == 5) {
+                                          if (-6 == (ql.field_c ^ -1)) {
                                             var13.field_b = var13.field_b + 1;
-                                            break L85;
+                                            break L86;
                                           } else {
-                                            break L85;
+                                            break L86;
                                           }
                                         }
                                       }
-                                      L86: {
+                                      L87: {
                                         var9.field_a = 2;
                                         ii.field_e[od.field_k].a(9147, 0, var13);
                                         od.field_k = od.field_k + 1;
-                                        vj.c(-122);
+                                        vj.c(param0 + -762);
                                         da.field_g = false;
-                                        if (qh.field_l == 0) {
-                                          ((wizardrun) this).field_Q = 0;
+                                        if (-1 == (qh.field_l ^ -1)) {
+                                          this.field_Q = 0;
                                           pg.field_q = true;
-                                          ((wizardrun) this).field_R = 1;
-                                          break L86;
+                                          this.field_R = 1;
+                                          break L87;
                                         } else {
                                           pg.field_q = false;
-                                          break L86;
+                                          break L87;
                                         }
                                       }
                                       gd.field_b = false;
@@ -5696,341 +5782,341 @@ public final class wizardrun extends u {
                                       cd.field_e = 100;
                                       ol.field_e = false;
                                       if (!tl.field_e) {
-                                        break L81;
+                                        break L82;
                                       } else {
                                         if (pg.field_q) {
                                           mi.field_D.a(true, -115, bh.field_e);
-                                          break L81;
+                                          break L82;
                                         } else {
-                                          break L81;
+                                          break L82;
                                         }
                                       }
                                     }
                                   }
-                                  L87: {
+                                  L88: {
                                     if (510 < tj.field_I) {
                                       tj.field_I = 0;
-                                      break L87;
+                                      break L88;
                                     } else {
-                                      break L87;
+                                      break L88;
                                     }
                                   }
                                   cd.field_e = cd.field_e - 1;
-                                  if (cd.field_e < 0) {
+                                  if (-1 < (cd.field_e ^ -1)) {
                                     cd.field_e = 0;
-                                    break L73;
+                                    break L74;
                                   } else {
-                                    break L73;
+                                    break L74;
                                   }
                                 } else {
-                                  L88: {
+                                  L89: {
                                     if (13 != vk.field_r) {
-                                      break L88;
+                                      break L89;
                                     } else {
-                                      if (sf.field_h != 0) {
-                                        ((wizardrun) this).field_P = true;
-                                        if (sf.field_h != 6) {
-                                          break L67;
+                                      if (-1 != (sf.field_h ^ -1)) {
+                                        this.field_P = true;
+                                        if ((sf.field_h ^ -1) != -7) {
+                                          break L68;
                                         } else {
-                                          ((wizardrun) this).field_P = false;
+                                          this.field_P = false;
                                           tb.a(0, true);
-                                          ((wizardrun) this).field_J = true;
+                                          this.field_J = true;
                                           sf.field_h = 9;
                                           return;
                                         }
                                       } else {
-                                        break L88;
+                                        break L89;
                                       }
                                     }
                                   }
-                                  L89: {
-                                    if (vk.field_r != 96) {
-                                      break L89;
+                                  L90: {
+                                    if ((vk.field_r ^ -1) != -97) {
+                                      break L90;
                                     } else {
-                                      if (sh.field_c != 0) {
-                                        break L89;
+                                      if ((sh.field_c ^ -1) != -1) {
+                                        break L90;
                                       } else {
-                                        L90: {
+                                        L91: {
                                           if (2 != sf.field_h) {
-                                            break L90;
+                                            break L91;
                                           } else {
-                                            if (!e.a(-115)) {
-                                              ((wizardrun) this).field_N = ((wizardrun) this).field_N - 1;
-                                              if (((wizardrun) this).field_N < 0) {
-                                                ((wizardrun) this).field_N = 0;
-                                                break L90;
+                                            if (!e.a(param0 + -755)) {
+                                              this.field_N = this.field_N - 1;
+                                              if (this.field_N < 0) {
+                                                this.field_N = 0;
+                                                break L91;
                                               } else {
-                                                break L90;
+                                                break L91;
                                               }
                                             } else {
-                                              ((wizardrun) this).field_N = ((wizardrun) this).field_N - 1;
-                                              if (((wizardrun) this).field_N < 0) {
-                                                ((wizardrun) this).field_N = 0;
-                                                break L90;
+                                              this.field_N = this.field_N - 1;
+                                              if (-1 < (this.field_N ^ -1)) {
+                                                this.field_N = 0;
+                                                break L91;
                                               } else {
-                                                break L90;
+                                                break L91;
                                               }
                                             }
                                           }
                                         }
-                                        L91: {
-                                          if (sf.field_h == 5) {
-                                            L92: {
-                                              if (e.a(-99)) {
-                                                break L92;
+                                        L92: {
+                                          if (-6 == (sf.field_h ^ -1)) {
+                                            L93: {
+                                              if (e.a(param0 ^ -739)) {
+                                                break L93;
                                               } else {
-                                                if (qf.field_l <= 0) {
-                                                  ((wizardrun) this).field_N = 0;
-                                                  break L91;
-                                                } else {
+                                                if (-1 <= (qf.field_l ^ -1)) {
+                                                  this.field_N = 0;
                                                   break L92;
+                                                } else {
+                                                  break L93;
                                                 }
                                               }
                                             }
-                                            ((wizardrun) this).field_N = ((wizardrun) this).field_N - 1;
-                                            if (((wizardrun) this).field_N >= 0) {
-                                              break L91;
+                                            this.field_N = this.field_N - 1;
+                                            if ((this.field_N ^ -1) <= -1) {
+                                              break L92;
                                             } else {
-                                              ((wizardrun) this).field_N = 0;
-                                              break L91;
+                                              this.field_N = 0;
+                                              break L92;
                                             }
                                           } else {
-                                            break L91;
+                                            break L92;
                                           }
                                         }
-                                        L93: {
-                                          if (sf.field_h != 11) {
-                                            break L93;
+                                        L94: {
+                                          if (-12 != (sf.field_h ^ -1)) {
+                                            break L94;
                                           } else {
                                             if (qh.field_l <= 0) {
-                                              break L93;
+                                              break L94;
                                             } else {
-                                              if (tj.field_I < 5) {
+                                              if (-6 < (tj.field_I ^ -1)) {
                                                 qh.field_l = qh.field_l - 1;
                                                 wg.field_b = wg.field_b - 6;
-                                                break L93;
+                                                break L94;
                                               } else {
-                                                break L93;
+                                                break L94;
                                               }
                                             }
                                           }
                                         }
-                                        if (sf.field_h != 1) {
-                                          break L89;
+                                        if (-2 != (sf.field_h ^ -1)) {
+                                          break L90;
                                         } else {
-                                          ((wizardrun) this).field_N = 0;
-                                          break L89;
+                                          this.field_N = 0;
+                                          break L90;
                                         }
                                       }
                                     }
                                   }
-                                  L94: {
+                                  L95: {
                                     if (97 != vk.field_r) {
-                                      break L94;
+                                      break L95;
                                     } else {
                                       if (0 == sh.field_c) {
-                                        L95: {
-                                          if (sf.field_h != 2) {
-                                            break L95;
+                                        L96: {
+                                          if ((sf.field_h ^ -1) != -3) {
+                                            break L96;
                                           } else {
-                                            if (e.a(-87)) {
-                                              ((wizardrun) this).field_N = ((wizardrun) this).field_N + 1;
-                                              if (((wizardrun) this).field_N > 1) {
-                                                ((wizardrun) this).field_N = 1;
-                                                break L95;
+                                            if (e.a(param0 + -727)) {
+                                              this.field_N = this.field_N + 1;
+                                              if (-2 > (this.field_N ^ -1)) {
+                                                this.field_N = 1;
+                                                break L96;
                                               } else {
-                                                break L95;
+                                                break L96;
                                               }
                                             } else {
-                                              ((wizardrun) this).field_N = ((wizardrun) this).field_N + 1;
-                                              if (((wizardrun) this).field_N > 3) {
-                                                ((wizardrun) this).field_N = 3;
-                                                break L95;
+                                              this.field_N = this.field_N + 1;
+                                              if (-4 > (this.field_N ^ -1)) {
+                                                this.field_N = 3;
+                                                break L96;
                                               } else {
-                                                break L95;
+                                                break L96;
                                               }
                                             }
                                           }
                                         }
-                                        L96: {
+                                        L97: {
                                           if (sf.field_h == 5) {
-                                            L97: {
-                                              if (e.a(-111)) {
-                                                break L97;
+                                            L98: {
+                                              if (e.a(param0 + -751)) {
+                                                break L98;
                                               } else {
                                                 if (0 < qf.field_l) {
-                                                  break L97;
+                                                  break L98;
                                                 } else {
-                                                  ((wizardrun) this).field_N = 0;
-                                                  break L96;
+                                                  this.field_N = 0;
+                                                  break L97;
                                                 }
                                               }
                                             }
-                                            ((wizardrun) this).field_N = ((wizardrun) this).field_N + 1;
-                                            if (((wizardrun) this).field_N <= 1) {
-                                              break L96;
+                                            this.field_N = this.field_N + 1;
+                                            if ((this.field_N ^ -1) >= -2) {
+                                              break L97;
                                             } else {
-                                              ((wizardrun) this).field_N = 1;
-                                              break L96;
+                                              this.field_N = 1;
+                                              break L97;
                                             }
                                           } else {
-                                            break L96;
+                                            break L97;
                                           }
                                         }
-                                        L98: {
+                                        L99: {
                                           if (11 != sf.field_h) {
-                                            break L98;
+                                            break L99;
                                           } else {
                                             if (5 <= qh.field_l) {
-                                              break L98;
+                                              break L99;
                                             } else {
                                               if (5 <= tj.field_I) {
-                                                break L98;
+                                                break L99;
                                               } else {
                                                 qh.field_l = qh.field_l + 1;
                                                 me.field_f = me.field_f - 6;
-                                                break L98;
+                                                break L99;
                                               }
                                             }
                                           }
                                         }
-                                        if (sf.field_h == 1) {
-                                          ((wizardrun) this).field_N = 0;
-                                          break L94;
+                                        if (-2 == (sf.field_h ^ -1)) {
+                                          this.field_N = 0;
+                                          break L95;
                                         } else {
-                                          break L94;
+                                          break L95;
                                         }
                                       } else {
-                                        break L94;
+                                        break L95;
                                       }
                                     }
                                   }
-                                  if (sf.field_h == 0) {
-                                    L99: {
+                                  if ((sf.field_h ^ -1) == -1) {
+                                    L100: {
                                       if (98 == vk.field_r) {
-                                        L100: {
+                                        L101: {
                                           if (si.field_h == -1) {
                                             si.field_h = 0;
-                                            break L100;
+                                            break L101;
                                           } else {
-                                            break L100;
+                                            break L101;
                                           }
                                         }
-                                        int fieldTemp$23 = si.field_h - 1;
+                                        fieldTemp$23 = si.field_h - 1;
                                         si.field_h = si.field_h - 1;
-                                        if (fieldTemp$23 < 0) {
+                                        if (-1 < (fieldTemp$23 ^ -1)) {
                                           si.field_h = si.field_h + rc.field_a;
-                                          break L99;
+                                          break L100;
                                         } else {
-                                          break L99;
+                                          break L100;
                                         }
                                       } else {
-                                        break L99;
-                                      }
-                                    }
-                                    L101: {
-                                      if (vk.field_r != 99) {
-                                        break L101;
-                                      } else {
-                                        int fieldTemp$24 = si.field_h + 1;
-                                        si.field_h = si.field_h + 1;
-                                        if (~rc.field_a >= ~fieldTemp$24) {
-                                          si.field_h = si.field_h - rc.field_a;
-                                          break L101;
-                                        } else {
-                                          break L101;
-                                        }
+                                        break L100;
                                       }
                                     }
                                     L102: {
-                                      if (vk.field_r == 96) {
-                                        this.a(89, -1, si.field_h);
+                                      if ((vk.field_r ^ -1) != -100) {
                                         break L102;
                                       } else {
-                                        break L102;
+                                        fieldTemp$24 = si.field_h + 1;
+                                        si.field_h = si.field_h + 1;
+                                        if ((rc.field_a ^ -1) >= (fieldTemp$24 ^ -1)) {
+                                          si.field_h = si.field_h - rc.field_a;
+                                          break L102;
+                                        } else {
+                                          break L102;
+                                        }
                                       }
                                     }
                                     L103: {
-                                      if (vk.field_r == 97) {
-                                        this.a(26, 1, si.field_h);
+                                      if (-97 == (vk.field_r ^ -1)) {
+                                        this.a(89, -1, si.field_h);
                                         break L103;
                                       } else {
                                         break L103;
                                       }
                                     }
                                     L104: {
-                                      if (102 != vk.field_r) {
+                                      if (vk.field_r == 97) {
+                                        this.a(param0 + -614, 1, si.field_h);
                                         break L104;
                                       } else {
-                                        this.a(91, -3, si.field_h);
                                         break L104;
                                       }
                                     }
                                     L105: {
-                                      if (vk.field_r == 103) {
-                                        this.a(110, 3, si.field_h);
+                                      if (102 != vk.field_r) {
                                         break L105;
                                       } else {
+                                        this.a(91, -3, si.field_h);
                                         break L105;
                                       }
                                     }
-                                    if (vk.field_r != 84) {
-                                      continue L74;
+                                    L106: {
+                                      if (vk.field_r == 103) {
+                                        this.a(param0 + -530, 3, si.field_h);
+                                        break L106;
+                                      } else {
+                                        break L106;
+                                      }
+                                    }
+                                    if ((vk.field_r ^ -1) != -85) {
+                                      continue L75;
                                     } else {
-                                      this.a(120, 0, si.field_h);
-                                      continue L74;
+                                      this.a(param0 ^ 760, 0, si.field_h);
+                                      continue L75;
                                     }
                                   } else {
-                                    if (pa.field_c > 0) {
-                                      continue L74;
+                                    if (-1 > (pa.field_c ^ -1)) {
+                                      continue L75;
                                     } else {
                                       if (84 != vk.field_r) {
-                                        continue L74;
+                                        continue L75;
                                       } else {
-                                        if (sf.field_h != 11) {
-                                          if (sf.field_h == 2) {
-                                            continue L74;
+                                        if (-12 != (sf.field_h ^ -1)) {
+                                          if (-3 == (sf.field_h ^ -1)) {
+                                            continue L75;
                                           } else {
                                             if (sf.field_h != 5) {
                                               pa.field_c = 32;
-                                              continue L74;
+                                              continue L75;
                                             } else {
-                                              continue L74;
+                                              continue L75;
                                             }
                                           }
                                         } else {
                                           if (qh.field_l > pl.field_A) {
-                                            continue L74;
+                                            continue L75;
                                           } else {
-                                            if (tj.field_I >= 5) {
-                                              continue L74;
+                                            if ((tj.field_I ^ -1) <= -6) {
+                                              continue L75;
                                             } else {
-                                              L106: {
+                                              L107: {
                                                 hi.field_c = hi.field_c + qh.field_g;
                                                 qh.field_g = 0;
                                                 nk.field_T = 0;
                                                 od.field_k = 0;
                                                 if (0 >= qh.field_l) {
                                                   gd.field_b = false;
-                                                  break L106;
+                                                  break L107;
                                                 } else {
                                                   gd.field_b = true;
                                                   me.field_f = me.field_f + 5;
                                                   qh.field_g = 5;
-                                                  break L106;
+                                                  break L107;
                                                 }
                                               }
-                                              L107: {
+                                              L108: {
                                                 tj.field_I = 5;
                                                 if ((4 & ti.field_a) <= 0) {
-                                                  break L107;
+                                                  break L108;
                                                 } else {
                                                   nk.field_T = 400;
-                                                  break L107;
+                                                  break L108;
                                                 }
                                               }
                                               sj.field_l = 0;
-                                              continue L74;
+                                              continue L75;
                                             }
                                           }
                                         }
@@ -6041,104 +6127,104 @@ public final class wizardrun extends u {
                               }
                             }
                           }
-                          L108: {
+                          L109: {
                             if (2 == wi.field_K) {
-                              L109: {
-                                L110: {
-                                  L111: {
-                                    L112: {
+                              L110: {
+                                L111: {
+                                  L112: {
+                                    L113: {
                                       if (ql.field_c != 0) {
-                                        break L112;
+                                        break L113;
                                       } else {
-                                        if (qh.field_l == 0) {
-                                          break L111;
-                                        } else {
+                                        if ((qh.field_l ^ -1) == -1) {
                                           break L112;
+                                        } else {
+                                          break L113;
                                         }
                                       }
                                     }
                                     if (sg.field_f > hg.field_a) {
-                                      break L110;
-                                    } else {
                                       break L111;
+                                    } else {
+                                      break L112;
                                     }
                                   }
-                                  if (ql.field_c != 0) {
-                                    break L109;
+                                  if ((ql.field_c ^ -1) != -1) {
+                                    break L110;
                                   } else {
                                     if (qh.field_l != 0) {
-                                      break L109;
+                                      break L110;
                                     } else {
                                       if (qh.field_g >= 5) {
-                                        break L109;
+                                        break L110;
                                       } else {
                                         if (qh.field_g <= 0) {
-                                          break L109;
-                                        } else {
                                           break L110;
+                                        } else {
+                                          break L111;
                                         }
                                       }
                                     }
                                   }
                                 }
                                 if (!pg.field_q) {
-                                  L113: {
-                                    L114: {
+                                  L114: {
+                                    L115: {
                                       qh.field_g = qh.field_g + 1;
                                       if (ql.field_c != 0) {
-                                        break L114;
+                                        break L115;
                                       } else {
-                                        if (qh.field_l == 0) {
-                                          break L113;
-                                        } else {
+                                        if (-1 == (qh.field_l ^ -1)) {
                                           break L114;
+                                        } else {
+                                          break L115;
                                         }
                                       }
                                     }
-                                    L115: {
+                                    L116: {
                                       if (hg.field_a >= 10000) {
                                         hg.field_a = hg.field_a + 10000;
-                                        break L115;
-                                      } else {
-                                        break L115;
-                                      }
-                                    }
-                                    L116: {
-                                      if (hg.field_a != 5000) {
                                         break L116;
                                       } else {
-                                        hg.field_a = 10000;
                                         break L116;
                                       }
                                     }
                                     L117: {
-                                      if (hg.field_a == 2000) {
-                                        hg.field_a = 5000;
+                                      if ((hg.field_a ^ -1) != -5001) {
                                         break L117;
                                       } else {
+                                        hg.field_a = 10000;
                                         break L117;
                                       }
                                     }
                                     L118: {
-                                      if (1000 == hg.field_a) {
-                                        hg.field_a = 2000;
+                                      if (-2001 == (hg.field_a ^ -1)) {
+                                        hg.field_a = 5000;
                                         break L118;
                                       } else {
                                         break L118;
                                       }
                                     }
+                                    L119: {
+                                      if (1000 == hg.field_a) {
+                                        hg.field_a = 2000;
+                                        break L119;
+                                      } else {
+                                        break L119;
+                                      }
+                                    }
                                     if (hg.field_a > 500) {
-                                      break L113;
+                                      break L114;
                                     } else {
                                       hg.field_a = 1000;
-                                      break L113;
+                                      break L114;
                                     }
                                   }
                                   ic.field_a = ic.field_a + 1;
                                   var2 = 0;
-                                  L119: while (true) {
+                                  L120: while (true) {
                                     if (var2 >= 5) {
-                                      break L109;
+                                      break L110;
                                     } else {
                                       fi.field_x = 0;
                                       ii.field_e[od.field_k].a(9147, 1, ii.field_e[0].field_i);
@@ -6149,366 +6235,366 @@ public final class wizardrun extends u {
                                       ii.field_e[od.field_k].field_e = var2 * 20;
                                       fi.field_x = 0;
                                       od.field_k = od.field_k + 1;
-                                      ii.field_e[od.field_k].a(9147, 1, ii.field_e[0].field_i);
-                                      ii.field_e[od.field_k].field_f.a(-106, ii.field_e[0].field_f);
+                                      ii.field_e[od.field_k].a(param0 + 8507, 1, ii.field_e[0].field_i);
+                                      ii.field_e[od.field_k].field_f.a(param0 + -746, ii.field_e[0].field_f);
                                       ii.field_e[od.field_k].field_f.field_a = 0;
                                       ii.field_e[od.field_k].field_h = 1;
                                       ii.field_e[od.field_k].field_f.field_b = ii.field_e[od.field_k].field_f.field_b + 80;
                                       ii.field_e[od.field_k].field_e = 20 * var2;
                                       od.field_k = od.field_k + 1;
                                       var2++;
-                                      continue L119;
+                                      continue L120;
                                     }
                                   }
                                 } else {
-                                  break L109;
+                                  break L110;
                                 }
                               }
-                              L120: {
+                              L121: {
                                 if (pg.field_q) {
-                                  break L120;
+                                  break L121;
                                 } else {
                                   var2 = 0;
                                   var3 = 0;
-                                  L121: while (true) {
+                                  L122: while (true) {
                                     if (od.field_k <= var3) {
                                       if (var2 != 0) {
-                                        break L120;
+                                        break L121;
                                       } else {
                                         if (0 > qh.field_g) {
-                                          break L120;
+                                          break L121;
                                         } else {
-                                          if (tj.field_I == 0) {
-                                            L122: {
+                                          if (-1 == (tj.field_I ^ -1)) {
+                                            L123: {
                                               if (5 != qh.field_l) {
-                                                break L122;
+                                                break L123;
                                               } else {
                                                 if (ql.field_c <= 5) {
-                                                  break L122;
+                                                  break L123;
                                                 } else {
-                                                  ((wizardrun) this).field_R = 11;
+                                                  this.field_R = 11;
                                                   pg.field_q = true;
                                                   ql.a(1, 255, 0);
-                                                  break L120;
+                                                  break L121;
                                                 }
                                               }
                                             }
                                             tj.field_I = tj.field_I + 5;
-                                            break L120;
+                                            break L121;
                                           } else {
-                                            break L120;
+                                            break L121;
                                           }
                                         }
                                       }
                                     } else {
-                                      L123: {
+                                      L124: {
                                         if (ii.field_e[var3].field_B <= 2) {
-                                          break L123;
+                                          break L124;
                                         } else {
                                           var2 = 1;
-                                          break L123;
+                                          break L124;
                                         }
                                       }
                                       var3++;
-                                      continue L121;
+                                      continue L122;
                                     }
                                   }
                                 }
                               }
-                              L124: {
+                              L125: {
                                 if (dd.field_m < 2) {
-                                  break L124;
+                                  break L125;
                                 } else {
-                                  L125: {
+                                  L126: {
                                     if (hi.field_p[66]) {
                                       ke.field_w = true;
-                                      break L125;
+                                      break L126;
                                     } else {
-                                      break L125;
+                                      break L126;
                                     }
                                   }
-                                  L126: {
+                                  L127: {
                                     if (hi.field_p[67]) {
                                       ke.field_w = false;
-                                      break L126;
+                                      break L127;
                                     } else {
-                                      break L126;
+                                      break L127;
                                     }
                                   }
                                   if (ke.field_w) {
                                     return;
                                   } else {
-                                    L127: {
+                                    L128: {
                                       if (hi.field_p[55]) {
                                         tc.field_j = true;
                                         tj.field_I = 5;
                                         pg.field_q = false;
                                         ql.field_c = 4;
-                                        break L127;
-                                      } else {
-                                        break L127;
-                                      }
-                                    }
-                                    L128: {
-                                      if (!hi.field_p[40]) {
                                         break L128;
                                       } else {
-                                        pg.field_q = false;
-                                        tc.field_j = true;
-                                        tj.field_I = 5;
                                         break L128;
                                       }
                                     }
                                     L129: {
-                                      if (!hi.field_p[39]) {
+                                      if (!hi.field_p[40]) {
                                         break L129;
                                       } else {
+                                        pg.field_q = false;
+                                        tc.field_j = true;
+                                        tj.field_I = 5;
+                                        break L129;
+                                      }
+                                    }
+                                    L130: {
+                                      if (!hi.field_p[39]) {
+                                        break L130;
+                                      } else {
                                         if (5 <= qh.field_l) {
-                                          break L129;
+                                          break L130;
                                         } else {
                                           pg.field_q = false;
                                           tj.field_I = 5;
                                           ql.field_c = 6;
                                           tc.field_j = true;
-                                          break L129;
+                                          break L130;
                                         }
                                       }
                                     }
-                                    L130: {
+                                    L131: {
                                       if (!hi.field_p[68]) {
-                                        break L130;
+                                        break L131;
                                       } else {
-                                        break L130;
+                                        break L131;
                                       }
                                     }
-                                    L131: {
+                                    L132: {
                                       if (!hi.field_p[56]) {
-                                        break L131;
+                                        break L132;
                                       } else {
                                         if (qh.field_g > 50) {
                                           qh.field_g = 5;
                                           tc.field_j = true;
-                                          break L131;
+                                          break L132;
                                         } else {
                                           qh.field_g = 100;
                                           tc.field_j = true;
-                                          break L131;
+                                          break L132;
                                         }
                                       }
                                     }
                                     if (!hi.field_p[38]) {
-                                      break L124;
+                                      break L125;
                                     } else {
                                       tc.field_j = false;
                                       sg.field_f = (int)(Math.random() * 1000.0 + 500.0);
-                                      break L124;
+                                      break L125;
                                     }
-                                  }
-                                }
-                              }
-                              L132: {
-                                if (50 >= qh.field_g) {
-                                  break L132;
-                                } else {
-                                  if (tc.field_j) {
-                                    qh.field_g = 100;
-                                    break L132;
-                                  } else {
-                                    break L132;
                                   }
                                 }
                               }
                               L133: {
-                                if (0 < tj.field_I) {
-                                  tj.field_I = tj.field_I + 5;
+                                if (50 >= qh.field_g) {
                                   break L133;
                                 } else {
-                                  break L133;
+                                  if (tc.field_j) {
+                                    qh.field_g = 100;
+                                    break L133;
+                                  } else {
+                                    break L133;
+                                  }
                                 }
                               }
                               L134: {
-                                if (tj.field_I <= 510) {
+                                if (0 < tj.field_I) {
+                                  tj.field_I = tj.field_I + 5;
                                   break L134;
                                 } else {
-                                  tj.field_I = 0;
                                   break L134;
                                 }
                               }
                               L135: {
-                                if (!pg.field_q) {
+                                if ((tj.field_I ^ -1) >= -511) {
                                   break L135;
                                 } else {
-                                  L136: {
-                                    if (((wizardrun) this).field_R != 11) {
-                                      break L136;
+                                  tj.field_I = 0;
+                                  break L135;
+                                }
+                              }
+                              L136: {
+                                if (!pg.field_q) {
+                                  break L136;
+                                } else {
+                                  L137: {
+                                    if ((this.field_R ^ -1) != -12) {
+                                      break L137;
                                     } else {
-                                      L137: {
-                                        if (ii.field_e[0].field_i.field_a <= 2) {
-                                          L138: {
+                                      L138: {
+                                        if (-3 <= (ii.field_e[0].field_i.field_a ^ -1)) {
+                                          L139: {
                                             if (2 >= ii.field_e[0].field_i.field_b) {
-                                              break L138;
+                                              break L139;
                                             } else {
                                               sc.field_m.field_b = -1;
-                                              break L138;
+                                              break L139;
                                             }
                                           }
                                           if (ii.field_e[0].field_i.field_b >= 2) {
-                                            break L137;
+                                            break L138;
                                           } else {
                                             sc.field_m.field_b = 1;
-                                            break L137;
+                                            break L138;
                                           }
                                         } else {
                                           sc.field_m.field_b = -1;
-                                          break L137;
+                                          break L138;
                                         }
                                       }
                                       ii.field_e[0].a((byte) -123, tc.field_l);
                                       if (ii.field_e[0].field_i.field_b != 2) {
-                                        break L136;
+                                        break L137;
                                       } else {
                                         if (2 == ii.field_e[0].field_i.field_a) {
-                                          ((wizardrun) this).field_R = 12;
-                                          ((wizardrun) this).field_Q = 0;
+                                          this.field_R = 12;
+                                          this.field_Q = 0;
                                           if (!tl.field_e) {
-                                            break L136;
+                                            break L137;
                                           } else {
-                                            mi.field_D.a(true, -87, qj.field_e);
-                                            break L136;
+                                            mi.field_D.a(true, param0 ^ -727, qj.field_e);
+                                            break L137;
                                           }
                                         } else {
-                                          break L136;
+                                          break L137;
                                         }
                                       }
                                     }
                                   }
-                                  L139: {
-                                    if (((wizardrun) this).field_R == 12) {
-                                      L140: {
-                                        if (((wizardrun) this).field_Q < 90) {
-                                          break L140;
+                                  L140: {
+                                    if ((this.field_R ^ -1) == -13) {
+                                      L141: {
+                                        if (this.field_Q < 90) {
+                                          break L141;
                                         } else {
                                           var10 = new ob();
                                           var2_ref_ob = var10;
                                           var2_ref_ob.field_b = 16 + (int)(4.0 * Math.random());
                                           var2_ref_ob.field_a = (int)(Math.random() * 4.0) + 11;
-                                          ii.field_e[od.field_k].a(9147, 20, var10);
+                                          ii.field_e[od.field_k].a(param0 + 8507, 20, var10);
                                           ii.field_e[od.field_k].field_f.field_b = (int)(Math.random() * 240.0);
                                           ii.field_e[od.field_k].field_f.field_a = (int)(Math.random() * 240.0);
                                           ii.field_e[od.field_k].field_w = 4;
                                           od.field_k = od.field_k + 1;
-                                          break L140;
+                                          break L141;
                                         }
                                       }
-                                      L141: {
-                                        if (90 != ((wizardrun) this).field_Q) {
-                                          break L141;
+                                      L142: {
+                                        if (90 != this.field_Q) {
+                                          break L142;
                                         } else {
-                                          L142: {
-                                            stackOut_580_0 = 0;
-                                            stackIn_582_0 = stackOut_580_0;
-                                            stackIn_581_0 = stackOut_580_0;
+                                          L143: {
+                                            stackOut_584_0 = 0;
+                                            stackIn_586_0 = stackOut_584_0;
+                                            stackIn_585_0 = stackOut_584_0;
                                             if (pk.field_s) {
-                                              stackOut_582_0 = stackIn_582_0;
-                                              stackOut_582_1 = 0;
-                                              stackIn_583_0 = stackOut_582_0;
-                                              stackIn_583_1 = stackOut_582_1;
-                                              break L142;
+                                              stackOut_586_0 = stackIn_586_0;
+                                              stackOut_586_1 = 0;
+                                              stackIn_587_0 = stackOut_586_0;
+                                              stackIn_587_1 = stackOut_586_1;
+                                              break L143;
                                             } else {
-                                              stackOut_581_0 = stackIn_581_0;
-                                              stackOut_581_1 = 1;
-                                              stackIn_583_0 = stackOut_581_0;
-                                              stackIn_583_1 = stackOut_581_1;
-                                              break L142;
+                                              stackOut_585_0 = stackIn_585_0;
+                                              stackOut_585_1 = 1;
+                                              stackIn_587_0 = stackOut_585_0;
+                                              stackIn_587_1 = stackOut_585_1;
+                                              break L143;
                                             }
                                           }
-                                          if (stackIn_583_0 == stackIn_583_1) {
+                                          if (stackIn_587_0 == stackIn_587_1) {
                                             tl.field_a.a(nl.field_q[1], 100, ee.field_p * 256 / 100);
-                                            break L141;
+                                            break L142;
                                           } else {
-                                            break L141;
+                                            break L142;
                                           }
                                         }
                                       }
-                                      int fieldTemp$25 = ((wizardrun) this).field_Q;
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
-                                      if (fieldTemp$25 > 100) {
-                                        ((wizardrun) this).field_R = 13;
-                                        ((wizardrun) this).field_Q = 0;
-                                        break L139;
+                                      fieldTemp$25 = this.field_Q;
+                                      this.field_Q = this.field_Q + 1;
+                                      if (-101 > (fieldTemp$25 ^ -1)) {
+                                        this.field_R = 13;
+                                        this.field_Q = 0;
+                                        break L140;
                                       } else {
-                                        break L139;
+                                        break L140;
                                       }
                                     } else {
-                                      break L139;
+                                      break L140;
                                     }
                                   }
-                                  L143: {
-                                    if (((wizardrun) this).field_R == 13) {
-                                      L144: {
-                                        if (50 != ((wizardrun) this).field_Q) {
-                                          break L144;
+                                  L144: {
+                                    if (this.field_R == 13) {
+                                      L145: {
+                                        if (50 != this.field_Q) {
+                                          break L145;
                                         } else {
                                           if (pk.field_s) {
                                             tl.field_a.a(nl.field_q[2], 100, 256 * ee.field_p / 100);
-                                            break L144;
+                                            break L145;
                                           } else {
-                                            break L144;
+                                            break L145;
                                           }
                                         }
                                       }
-                                      int fieldTemp$26 = ((wizardrun) this).field_Q;
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
-                                      if (fieldTemp$26 <= 100) {
-                                        break L143;
+                                      fieldTemp$26 = this.field_Q;
+                                      this.field_Q = this.field_Q + 1;
+                                      if ((fieldTemp$26 ^ -1) >= -101) {
+                                        break L144;
                                       } else {
-                                        ((wizardrun) this).field_R = 14;
-                                        ((wizardrun) this).field_Q = 0;
-                                        break L143;
+                                        this.field_R = 14;
+                                        this.field_Q = 0;
+                                        break L144;
                                       }
                                     } else {
-                                      break L143;
-                                    }
-                                  }
-                                  L145: {
-                                    if (((wizardrun) this).field_R != 14) {
-                                      break L145;
-                                    } else {
-                                      int fieldTemp$27 = ((wizardrun) this).field_Q;
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
-                                      if (100 < fieldTemp$27) {
-                                        ((wizardrun) this).field_Q = 0;
-                                        ((wizardrun) this).field_R = 15;
-                                        break L145;
-                                      } else {
-                                        break L145;
-                                      }
+                                      break L144;
                                     }
                                   }
                                   L146: {
-                                    if (((wizardrun) this).field_R != 15) {
+                                    if ((this.field_R ^ -1) != -15) {
                                       break L146;
                                     } else {
-                                      int fieldTemp$28 = ((wizardrun) this).field_Q;
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
-                                      if (100 >= fieldTemp$28) {
+                                      fieldTemp$27 = this.field_Q;
+                                      this.field_Q = this.field_Q + 1;
+                                      if (100 < fieldTemp$27) {
+                                        this.field_Q = 0;
+                                        this.field_R = 15;
                                         break L146;
                                       } else {
-                                        ((wizardrun) this).field_R = 16;
-                                        ((wizardrun) this).field_Q = 0;
                                         break L146;
                                       }
                                     }
                                   }
                                   L147: {
-                                    if (16 != ((wizardrun) this).field_R) {
+                                    if (-16 != (this.field_R ^ -1)) {
                                       break L147;
                                     } else {
-                                      L148: {
-                                        if (((wizardrun) this).field_Q != 75) {
-                                          break L148;
+                                      fieldTemp$28 = this.field_Q;
+                                      this.field_Q = this.field_Q + 1;
+                                      if (100 >= fieldTemp$28) {
+                                        break L147;
+                                      } else {
+                                        this.field_R = 16;
+                                        this.field_Q = 0;
+                                        break L147;
+                                      }
+                                    }
+                                  }
+                                  L148: {
+                                    if (16 != this.field_R) {
+                                      break L148;
+                                    } else {
+                                      L149: {
+                                        if (this.field_Q != 75) {
+                                          break L149;
                                         } else {
-                                          if (qh.field_g > 0) {
+                                          if (-1 > (qh.field_g ^ -1)) {
                                             ic.field_a = ic.field_a - 64000;
                                             hi.field_c = hi.field_c + 1;
                                             qh.field_g = qh.field_g - 1;
@@ -6529,29 +6615,29 @@ public final class wizardrun extends u {
                                             ii.field_e[od.field_k].field_h = 1;
                                             ii.field_e[od.field_k].field_f.field_b = ii.field_e[od.field_k].field_f.field_b + 790;
                                             ii.field_e[od.field_k].field_e = 20 * var2;
-                                            ((wizardrun) this).field_Q = 70;
+                                            this.field_Q = 70;
                                             od.field_k = od.field_k + 1;
-                                            break L148;
+                                            break L149;
                                           } else {
-                                            break L148;
+                                            break L149;
                                           }
                                         }
                                       }
-                                      int fieldTemp$29 = ((wizardrun) this).field_Q;
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
+                                      fieldTemp$29 = this.field_Q;
+                                      this.field_Q = this.field_Q + 1;
                                       if (fieldTemp$29 <= 100) {
-                                        break L147;
+                                        break L148;
                                       } else {
-                                        ((wizardrun) this).field_R = 17;
-                                        ((wizardrun) this).field_Q = 0;
-                                        break L147;
+                                        this.field_R = 17;
+                                        this.field_Q = 0;
+                                        break L148;
                                       }
                                     }
                                   }
-                                  L149: {
-                                    if (((wizardrun) this).field_R == 17) {
-                                      int fieldTemp$30 = ((wizardrun) this).field_Q;
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
+                                  L150: {
+                                    if (-18 == (this.field_R ^ -1)) {
+                                      fieldTemp$30 = this.field_Q;
+                                      this.field_Q = this.field_Q + 1;
                                       if (200 < fieldTemp$30) {
                                         hi.field_c = hi.field_c + (qh.field_g + 1);
                                         me.field_f = me.field_f - 36;
@@ -6559,20 +6645,6 @@ public final class wizardrun extends u {
                                         qh.field_g = -1;
                                         ql.field_c = 0;
                                         qh.field_l = 6;
-                                        break L149;
-                                      } else {
-                                        break L149;
-                                      }
-                                    } else {
-                                      break L149;
-                                    }
-                                  }
-                                  L150: {
-                                    if (((wizardrun) this).field_R == 1) {
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
-                                      if (0 == tj.field_I) {
-                                        ((wizardrun) this).field_Q = 0;
-                                        ((wizardrun) this).field_R = 2;
                                         break L150;
                                       } else {
                                         break L150;
@@ -6582,151 +6654,165 @@ public final class wizardrun extends u {
                                     }
                                   }
                                   L151: {
-                                    if (((wizardrun) this).field_R != 2) {
-                                      break L151;
-                                    } else {
-                                      int fieldTemp$31 = ((wizardrun) this).field_Q;
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
-                                      if (100 < fieldTemp$31) {
-                                        ((wizardrun) this).field_Q = 0;
-                                        ((wizardrun) this).field_R = 3;
+                                    if (this.field_R == 1) {
+                                      this.field_Q = this.field_Q + 1;
+                                      if (0 == tj.field_I) {
+                                        this.field_Q = 0;
+                                        this.field_R = 2;
                                         break L151;
                                       } else {
                                         break L151;
                                       }
+                                    } else {
+                                      break L151;
                                     }
                                   }
                                   L152: {
-                                    if (((wizardrun) this).field_R != 3) {
+                                    if ((this.field_R ^ -1) != -3) {
                                       break L152;
                                     } else {
-                                      L153: {
-                                        if (((wizardrun) this).field_Q != 5) {
-                                          break L153;
+                                      fieldTemp$31 = this.field_Q;
+                                      this.field_Q = this.field_Q + 1;
+                                      if (100 < fieldTemp$31) {
+                                        this.field_Q = 0;
+                                        this.field_R = 3;
+                                        break L152;
+                                      } else {
+                                        break L152;
+                                      }
+                                    }
+                                  }
+                                  L153: {
+                                    if (this.field_R != 3) {
+                                      break L153;
+                                    } else {
+                                      L154: {
+                                        if (-6 != (this.field_Q ^ -1)) {
+                                          break L154;
                                         } else {
                                           if (pk.field_s) {
                                             tl.field_a.a(nl.field_q[0], 100, 256 * ee.field_p / 100);
-                                            break L153;
+                                            break L154;
                                           } else {
-                                            break L153;
+                                            break L154;
                                           }
                                         }
                                       }
-                                      int fieldTemp$32 = ((wizardrun) this).field_Q;
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
-                                      if (fieldTemp$32 > 100) {
-                                        ((wizardrun) this).field_Q = 0;
-                                        ((wizardrun) this).field_R = 4;
-                                        break L152;
+                                      fieldTemp$32 = this.field_Q;
+                                      this.field_Q = this.field_Q + 1;
+                                      if (-101 > (fieldTemp$32 ^ -1)) {
+                                        this.field_Q = 0;
+                                        this.field_R = 4;
+                                        break L153;
                                       } else {
-                                        break L152;
+                                        break L153;
                                       }
-                                    }
-                                  }
-                                  L154: {
-                                    if (((wizardrun) this).field_R == 4) {
-                                      int fieldTemp$33 = ((wizardrun) this).field_Q;
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
-                                      if (fieldTemp$33 > 100) {
-                                        ((wizardrun) this).field_R = 5;
-                                        ((wizardrun) this).field_Q = 0;
-                                        break L154;
-                                      } else {
-                                        break L154;
-                                      }
-                                    } else {
-                                      break L154;
                                     }
                                   }
                                   L155: {
-                                    if (((wizardrun) this).field_R != 5) {
-                                      break L155;
-                                    } else {
-                                      int fieldTemp$34 = ((wizardrun) this).field_Q;
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
-                                      if (fieldTemp$34 <= 200) {
+                                    if (-5 == (this.field_R ^ -1)) {
+                                      fieldTemp$33 = this.field_Q;
+                                      this.field_Q = this.field_Q + 1;
+                                      if ((fieldTemp$33 ^ -1) < -101) {
+                                        this.field_R = 5;
+                                        this.field_Q = 0;
                                         break L155;
                                       } else {
-                                        ((wizardrun) this).field_Q = 0;
-                                        ((wizardrun) this).field_R = 6;
                                         break L155;
                                       }
+                                    } else {
+                                      break L155;
                                     }
                                   }
                                   L156: {
-                                    if (((wizardrun) this).field_R == 6) {
-                                      int fieldTemp$35 = ((wizardrun) this).field_Q;
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
-                                      if (200 >= fieldTemp$35) {
+                                    if (-6 != (this.field_R ^ -1)) {
+                                      break L156;
+                                    } else {
+                                      fieldTemp$34 = this.field_Q;
+                                      this.field_Q = this.field_Q + 1;
+                                      if (fieldTemp$34 <= 200) {
                                         break L156;
                                       } else {
-                                        ((wizardrun) this).field_Q = 0;
-                                        ((wizardrun) this).field_R = 7;
+                                        this.field_Q = 0;
+                                        this.field_R = 6;
                                         break L156;
                                       }
-                                    } else {
-                                      break L156;
                                     }
                                   }
                                   L157: {
-                                    if (7 != ((wizardrun) this).field_R) {
-                                      break L157;
-                                    } else {
-                                      int fieldTemp$36 = ((wizardrun) this).field_Q;
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
-                                      if (100 >= fieldTemp$36) {
+                                    if (-7 == (this.field_R ^ -1)) {
+                                      fieldTemp$35 = this.field_Q;
+                                      this.field_Q = this.field_Q + 1;
+                                      if (200 >= fieldTemp$35) {
                                         break L157;
                                       } else {
-                                        ((wizardrun) this).field_Q = 0;
-                                        ((wizardrun) this).field_R = 8;
+                                        this.field_Q = 0;
+                                        this.field_R = 7;
                                         break L157;
                                       }
+                                    } else {
+                                      break L157;
                                     }
                                   }
                                   L158: {
-                                    if (8 != ((wizardrun) this).field_R) {
+                                    if (7 != this.field_R) {
                                       break L158;
                                     } else {
-                                      int fieldTemp$37 = ((wizardrun) this).field_Q;
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
-                                      if (fieldTemp$37 > 100) {
-                                        ((wizardrun) this).field_R = 9;
-                                        ((wizardrun) this).field_Q = 0;
+                                      fieldTemp$36 = this.field_Q;
+                                      this.field_Q = this.field_Q + 1;
+                                      if (100 >= fieldTemp$36) {
                                         break L158;
                                       } else {
+                                        this.field_Q = 0;
+                                        this.field_R = 8;
                                         break L158;
                                       }
                                     }
                                   }
                                   L159: {
-                                    if (((wizardrun) this).field_R != 9) {
+                                    if (8 != this.field_R) {
                                       break L159;
                                     } else {
-                                      L160: {
-                                        if (50 != ((wizardrun) this).field_Q) {
-                                          break L160;
+                                      fieldTemp$37 = this.field_Q;
+                                      this.field_Q = this.field_Q + 1;
+                                      if (fieldTemp$37 > 100) {
+                                        this.field_R = 9;
+                                        this.field_Q = 0;
+                                        break L159;
+                                      } else {
+                                        break L159;
+                                      }
+                                    }
+                                  }
+                                  L160: {
+                                    if (this.field_R != 9) {
+                                      break L160;
+                                    } else {
+                                      L161: {
+                                        if (50 != this.field_Q) {
+                                          break L161;
                                         } else {
                                           if (tl.field_e) {
-                                            mi.field_D.a(true, -100, ga.field_e);
-                                            break L160;
+                                            mi.field_D.a(true, param0 ^ -740, ga.field_e);
+                                            break L161;
                                           } else {
-                                            break L160;
+                                            break L161;
                                           }
                                         }
                                       }
-                                      L161: {
-                                        if (75 != ((wizardrun) this).field_Q) {
-                                          break L161;
+                                      L162: {
+                                        if (75 != this.field_Q) {
+                                          break L162;
                                         } else {
-                                          if (qh.field_g >= 5) {
-                                            break L161;
+                                          if (-6 >= (qh.field_g ^ -1)) {
+                                            break L162;
                                           } else {
                                             wg.field_b = wg.field_b - 1;
                                             qh.field_g = qh.field_g + 1;
                                             fi.field_x = 0;
                                             var2 = qh.field_g;
-                                            ii.field_e[od.field_k].a(9147, 1, ii.field_e[0].field_i);
-                                            ii.field_e[od.field_k].field_f.a(-111, ii.field_e[0].field_f);
+                                            ii.field_e[od.field_k].a(param0 ^ 8507, 1, ii.field_e[0].field_i);
+                                            ii.field_e[od.field_k].field_f.a(param0 ^ -751, ii.field_e[0].field_f);
                                             ii.field_e[od.field_k].field_f.field_a = 0;
                                             ii.field_e[od.field_k].field_h = -1;
                                             ii.field_e[od.field_k].field_f.field_b = ii.field_e[od.field_k].field_f.field_b + 40;
@@ -6740,221 +6826,221 @@ public final class wizardrun extends u {
                                             ii.field_e[od.field_k].field_f.field_b = ii.field_e[od.field_k].field_f.field_b + 40;
                                             ii.field_e[od.field_k].field_e = 20 * (var2 % 3);
                                             od.field_k = od.field_k + 1;
-                                            ((wizardrun) this).field_Q = 70;
-                                            break L161;
+                                            this.field_Q = 70;
+                                            break L162;
                                           }
                                         }
                                       }
-                                      int fieldTemp$38 = ((wizardrun) this).field_Q;
-                                      ((wizardrun) this).field_Q = ((wizardrun) this).field_Q + 1;
+                                      fieldTemp$38 = this.field_Q;
+                                      this.field_Q = this.field_Q + 1;
                                       if (100 >= fieldTemp$38) {
-                                        break L159;
+                                        break L160;
                                       } else {
-                                        ((wizardrun) this).field_R = 10;
-                                        ((wizardrun) this).field_Q = 0;
-                                        break L159;
+                                        this.field_R = 10;
+                                        this.field_Q = 0;
+                                        break L160;
                                       }
                                     }
                                   }
-                                  L162: {
-                                    if (((wizardrun) this).field_R == 10) {
+                                  L163: {
+                                    if (this.field_R == 10) {
                                       pg.field_q = false;
                                       hi.field_a = 580;
                                       bb.field_j = l.field_Q;
-                                      break L162;
+                                      break L163;
                                     } else {
-                                      break L162;
+                                      break L163;
                                     }
                                   }
                                   var2 = 0;
-                                  L163: while (true) {
+                                  L164: while (true) {
                                     if (od.field_k <= var2) {
-                                      break L135;
+                                      break L136;
                                     } else {
-                                      L164: {
-                                        L165: {
-                                          if (var2 != 0) {
-                                            break L165;
+                                      L165: {
+                                        L166: {
+                                          if (-1 != (var2 ^ -1)) {
+                                            break L166;
                                           } else {
                                             if (!pg.field_q) {
-                                              break L165;
+                                              break L166;
                                             } else {
-                                              break L164;
+                                              break L165;
                                             }
                                           }
                                         }
                                         ii.field_e[var2].a((byte) -123, tc.field_l);
-                                        break L164;
+                                        break L165;
                                       }
                                       var2++;
-                                      continue L163;
+                                      continue L164;
                                     }
                                   }
                                 }
                               }
-                              L166: {
+                              L167: {
                                 if (!pg.field_q) {
                                   if (tj.field_I == 255) {
-                                    L167: {
+                                    L168: {
                                       od.field_k = 0;
                                       ql.field_c = ql.field_c + 1;
                                       wg.field_b = wg.field_b + 1;
-                                      if (ql.field_c != 5) {
-                                        break L167;
+                                      if (-6 != (ql.field_c ^ -1)) {
+                                        break L168;
                                       } else {
-                                        if (qh.field_l != 0) {
-                                          break L167;
+                                        if (-1 != (qh.field_l ^ -1)) {
+                                          break L168;
                                         } else {
                                           if (!ol.field_e) {
                                             ql.a(1, 254, 1);
-                                            break L167;
+                                            break L168;
                                           } else {
-                                            break L167;
+                                            break L168;
                                           }
                                         }
                                       }
                                     }
-                                    L168: {
+                                    L169: {
                                       fi.field_x = 0;
                                       if (5 == ql.field_c) {
-                                        L169: {
+                                        L170: {
                                           w.field_b = 0;
                                           ga.field_e = fb.field_a;
                                           if (!tl.field_e) {
-                                            break L169;
+                                            break L170;
                                           } else {
                                             mi.field_D.a(true, -127, ga.field_e);
-                                            break L169;
+                                            break L170;
                                           }
                                         }
                                         da.field_g = false;
-                                        break L168;
+                                        break L169;
                                       } else {
-                                        break L168;
+                                        break L169;
                                       }
                                     }
-                                    L170: {
+                                    L171: {
                                       if (ql.field_c < 6) {
-                                        break L170;
+                                        break L171;
                                       } else {
-                                        L171: {
+                                        L172: {
                                           if (da.field_g) {
-                                            break L171;
+                                            break L172;
                                           } else {
-                                            L172: {
+                                            L173: {
                                               if (qh.field_l == 0) {
                                                 ql.a(1, 250, 5);
-                                                break L172;
-                                              } else {
-                                                break L172;
-                                              }
-                                            }
-                                            L173: {
-                                              if (1 == qh.field_l) {
-                                                ql.a(1, 249, 6);
                                                 break L173;
                                               } else {
                                                 break L173;
                                               }
                                             }
                                             L174: {
-                                              if (qh.field_l != 2) {
+                                              if (1 == qh.field_l) {
+                                                ql.a(1, 249, 6);
                                                 break L174;
                                               } else {
-                                                ql.a(1, 248, 7);
                                                 break L174;
                                               }
                                             }
                                             L175: {
-                                              if (qh.field_l != 3) {
+                                              if (-3 != (qh.field_l ^ -1)) {
                                                 break L175;
                                               } else {
-                                                ql.a(1, 247, 8);
+                                                ql.a(1, 248, 7);
                                                 break L175;
                                               }
                                             }
-                                            if (qh.field_l == 4) {
+                                            L176: {
+                                              if (-4 != (qh.field_l ^ -1)) {
+                                                break L176;
+                                              } else {
+                                                ql.a(1, 247, 8);
+                                                break L176;
+                                              }
+                                            }
+                                            if (-5 == (qh.field_l ^ -1)) {
                                               ql.a(1, 246, 9);
-                                              break L171;
+                                              break L172;
                                             } else {
-                                              break L171;
+                                              break L172;
                                             }
                                           }
                                         }
-                                        L176: {
+                                        L177: {
                                           if (!gd.field_b) {
-                                            L177: {
+                                            L178: {
                                               if (2 != qh.field_l) {
-                                                break L177;
+                                                break L178;
                                               } else {
-                                                ql.a(1, 252, 3);
-                                                break L177;
+                                                ql.a(param0 ^ 641, 252, 3);
+                                                break L178;
                                               }
                                             }
                                             if (qh.field_l != 4) {
-                                              break L176;
+                                              break L177;
                                             } else {
                                               ql.a(1, 251, 4);
-                                              break L176;
+                                              break L177;
                                             }
                                           } else {
-                                            break L176;
-                                          }
-                                        }
-                                        L178: {
-                                          if (qh.field_l != 0) {
-                                            break L178;
-                                          } else {
-                                            ql.a(1, 253, 2);
-                                            break L178;
+                                            break L177;
                                           }
                                         }
                                         L179: {
+                                          if ((qh.field_l ^ -1) != -1) {
+                                            break L179;
+                                          } else {
+                                            ql.a(1, 253, 2);
+                                            break L179;
+                                          }
+                                        }
+                                        L180: {
                                           hi.field_c = hi.field_c - (ql.field_c + -6);
                                           qh.field_l = qh.field_l + 1;
                                           ql.field_c = 0;
                                           if (pl.field_A < qh.field_l) {
-                                            ke.field_u.a((wl) (Object) new dc(0, qh.field_l + -1, 0, 0, 0, 0), false);
+                                            ke.field_u.a(new dc(0, qh.field_l + -1, 0, 0, 0, 0), false);
                                             pl.field_A = qh.field_l;
-                                            break L179;
+                                            break L180;
                                           } else {
-                                            break L179;
+                                            break L180;
                                           }
                                         }
-                                        if (qh.field_l >= 6) {
-                                          break L170;
+                                        if (-7 >= (qh.field_l ^ -1)) {
+                                          break L171;
                                         } else {
                                           vk.a((byte) -71);
-                                          break L170;
+                                          break L171;
                                         }
                                       }
                                     }
-                                    L180: {
+                                    L181: {
                                       hi.field_a = 580;
                                       bb.field_j = wg.field_f + (qh.field_l - -1) + eh.field_i + (1 + ql.field_c);
                                       if (-1 >= qh.field_g) {
-                                        break L180;
+                                        break L181;
                                       } else {
-                                        L181: {
+                                        L182: {
                                           if (qh.field_l < 6) {
                                             ni.b(7530);
-                                            break L181;
+                                            break L182;
                                           } else {
-                                            break L181;
+                                            break L182;
                                           }
                                         }
-                                        L182: {
+                                        L183: {
                                           var14 = new ob();
                                           var14.field_a = 2;
                                           var14.field_b = 2;
-                                          if (qh.field_l != 4) {
-                                            break L182;
+                                          if ((qh.field_l ^ -1) != -5) {
+                                            break L183;
                                           } else {
-                                            if (ql.field_c == 5) {
+                                            if ((ql.field_c ^ -1) == -6) {
                                               var14.field_b = var14.field_b + 1;
-                                              break L182;
+                                              break L183;
                                             } else {
-                                              break L182;
+                                              break L183;
                                             }
                                           }
                                         }
@@ -6963,60 +7049,60 @@ public final class wizardrun extends u {
                                         vj.c(69);
                                         ia.field_n = 0;
                                         cd.field_e = 100;
-                                        break L180;
+                                        break L181;
                                       }
                                     }
-                                    if (qh.field_l != 2) {
-                                      break L166;
+                                    if ((qh.field_l ^ -1) != -3) {
+                                      break L167;
                                     } else {
-                                      L183: {
+                                      L184: {
                                         if (0 >= hl.field_a) {
-                                          break L183;
+                                          break L184;
                                         } else {
-                                          if (!e.a(-126)) {
-                                            break L166;
+                                          if (!e.a(param0 ^ -766)) {
+                                            break L167;
                                           } else {
-                                            break L183;
+                                            break L184;
                                           }
                                         }
                                       }
                                       this.s(208);
-                                      break L166;
+                                      break L167;
                                     }
                                   } else {
-                                    break L166;
+                                    break L167;
                                   }
                                 } else {
-                                  break L166;
-                                }
-                              }
-                              L184: {
-                                if (qh.field_g >= 0) {
-                                  break L184;
-                                } else {
-                                  if (hi.field_a < -350) {
-                                    tj.field_I = 100;
-                                    this.s(208);
-                                    break L184;
-                                  } else {
-                                    break L184;
-                                  }
+                                  break L167;
                                 }
                               }
                               L185: {
+                                if ((qh.field_g ^ -1) <= -1) {
+                                  break L185;
+                                } else {
+                                  if ((hi.field_a ^ -1) > 349) {
+                                    tj.field_I = 100;
+                                    this.s(208);
+                                    break L185;
+                                  } else {
+                                    break L185;
+                                  }
+                                }
+                              }
+                              L186: {
                                 sc.field_m.field_d = false;
                                 sc.field_m.field_f = false;
                                 sc.field_m.field_b = 0;
                                 if (!pg.field_q) {
-                                  break L185;
+                                  break L186;
                                 } else {
                                   if (0 != qh.field_l) {
-                                    break L185;
+                                    break L186;
                                   } else {
-                                    if (ql.field_c == 0) {
-                                      L186: while (true) {
+                                    if ((ql.field_c ^ -1) == -1) {
+                                      L187: while (true) {
                                         if (!ae.a(125)) {
-                                          if (w.field_c == 1) {
+                                          if ((w.field_c ^ -1) == -2) {
                                             pg.field_q = false;
                                             me.field_f = me.field_f - qh.field_g;
                                             hi.field_a = 580;
@@ -7024,228 +7110,228 @@ public final class wizardrun extends u {
                                             qh.field_g = 5;
                                             bb.field_j = cc.field_b;
                                             if (!tl.field_e) {
-                                              break L185;
+                                              break L186;
                                             } else {
                                               mi.field_D.a(true, -86, ga.field_e);
-                                              break L185;
+                                              break L186;
                                             }
                                           } else {
-                                            break L185;
+                                            break L186;
                                           }
                                         } else {
-                                          L187: {
+                                          L188: {
                                             if (13 == vk.field_r) {
-                                              break L187;
+                                              break L188;
                                             } else {
-                                              if (vk.field_r == 84) {
-                                                break L187;
+                                              if ((vk.field_r ^ -1) == -85) {
+                                                break L188;
                                               } else {
-                                                continue L186;
+                                                continue L187;
                                               }
                                             }
                                           }
-                                          L188: {
+                                          L189: {
                                             bb.field_j = cc.field_b;
                                             hi.field_a = 580;
                                             pg.field_q = false;
                                             if (!tl.field_e) {
-                                              break L188;
+                                              break L189;
                                             } else {
                                               mi.field_D.a(true, -93, ga.field_e);
-                                              break L188;
+                                              break L189;
                                             }
                                           }
                                           me.field_f = me.field_f - qh.field_g;
                                           wg.field_b = wg.field_b - 5;
                                           qh.field_g = 5;
-                                          continue L186;
+                                          continue L187;
                                         }
                                       }
                                     } else {
-                                      break L185;
+                                      break L186;
                                     }
                                   }
                                 }
                               }
                               if (0 != tj.field_I) {
-                                break L108;
+                                break L109;
                               } else {
-                                L189: {
-                                  stackOut_748_0 = 0;
-                                  stackIn_750_0 = stackOut_748_0;
-                                  stackIn_749_0 = stackOut_748_0;
-                                  if (pg.field_q) {
-                                    stackOut_750_0 = stackIn_750_0;
-                                    stackOut_750_1 = 0;
-                                    stackIn_751_0 = stackOut_750_0;
-                                    stackIn_751_1 = stackOut_750_1;
-                                    break L189;
-                                  } else {
-                                    stackOut_749_0 = stackIn_749_0;
-                                    stackOut_749_1 = 1;
-                                    stackIn_751_0 = stackOut_749_0;
-                                    stackIn_751_1 = stackOut_749_1;
-                                    break L189;
-                                  }
-                                }
                                 L190: {
-                                  if (stackIn_751_0 == stackIn_751_1) {
+                                  stackOut_752_0 = 0;
+                                  stackIn_754_0 = stackOut_752_0;
+                                  stackIn_753_0 = stackOut_752_0;
+                                  if (pg.field_q) {
+                                    stackOut_754_0 = stackIn_754_0;
+                                    stackOut_754_1 = 0;
+                                    stackIn_755_0 = stackOut_754_0;
+                                    stackIn_755_1 = stackOut_754_1;
                                     break L190;
                                   } else {
-                                    L191: while (true) {
+                                    stackOut_753_0 = stackIn_753_0;
+                                    stackOut_753_1 = 1;
+                                    stackIn_755_0 = stackOut_753_0;
+                                    stackIn_755_1 = stackOut_753_1;
+                                    break L190;
+                                  }
+                                }
+                                L191: {
+                                  if (stackIn_755_0 == stackIn_755_1) {
+                                    break L191;
+                                  } else {
+                                    L192: while (true) {
                                       if (!ae.a(88)) {
-                                        L192: {
+                                        L193: {
                                           if (hi.field_a > -350) {
-                                            break L192;
+                                            break L193;
                                           } else {
-                                            L193: {
-                                              if (nk.field_T >= 300) {
-                                                break L193;
-                                              } else {
-                                                if (sj.field_l >= 500) {
-                                                  break L193;
-                                                } else {
-                                                  sj.field_l = sj.field_l + 1;
-                                                  break L193;
-                                                }
-                                              }
-                                            }
                                             L194: {
-                                              uc.field_g = uc.field_g + 1;
-                                              if (!hi.field_p[96]) {
+                                              if (nk.field_T >= 300) {
                                                 break L194;
                                               } else {
-                                                sc.field_m.field_b = -1;
-                                                if (nk.field_T < 25) {
-                                                  nk.field_T = 50;
-                                                  sj.field_l = 0;
-                                                  nk.field_T = nk.field_T + 1;
+                                                if (sj.field_l >= 500) {
                                                   break L194;
                                                 } else {
+                                                  sj.field_l = sj.field_l + 1;
                                                   break L194;
                                                 }
                                               }
                                             }
                                             L195: {
-                                              if (uc.field_g <= 40) {
+                                              uc.field_g = uc.field_g + 1;
+                                              if (!hi.field_p[96]) {
                                                 break L195;
                                               } else {
-                                                uc.field_g = uc.field_g - 40;
-                                                break L195;
+                                                sc.field_m.field_b = -1;
+                                                if (-26 < (nk.field_T ^ -1)) {
+                                                  nk.field_T = 50;
+                                                  sj.field_l = 0;
+                                                  nk.field_T = nk.field_T + 1;
+                                                  break L195;
+                                                } else {
+                                                  break L195;
+                                                }
                                               }
                                             }
                                             L196: {
-                                              if (hi.field_p[97]) {
-                                                L197: {
-                                                  if (nk.field_T < 25) {
-                                                    nk.field_T = 50;
-                                                    nk.field_T = nk.field_T + 1;
-                                                    sj.field_l = 0;
-                                                    break L197;
-                                                  } else {
-                                                    break L197;
-                                                  }
-                                                }
-                                                sc.field_m.field_b = 1;
+                                              if (-41 <= (uc.field_g ^ -1)) {
                                                 break L196;
                                               } else {
+                                                uc.field_g = uc.field_g - 40;
                                                 break L196;
                                               }
                                             }
-                                            L198: {
-                                              L199: {
-                                                if (hi.field_p[nf.field_d]) {
-                                                  break L199;
-                                                } else {
-                                                  if (!hi.field_p[98]) {
+                                            L197: {
+                                              if (hi.field_p[97]) {
+                                                L198: {
+                                                  if ((nk.field_T ^ -1) > -26) {
+                                                    nk.field_T = 50;
+                                                    nk.field_T = nk.field_T + 1;
+                                                    sj.field_l = 0;
                                                     break L198;
                                                   } else {
+                                                    break L198;
+                                                  }
+                                                }
+                                                sc.field_m.field_b = 1;
+                                                break L197;
+                                              } else {
+                                                break L197;
+                                              }
+                                            }
+                                            L199: {
+                                              L200: {
+                                                if (hi.field_p[nf.field_d]) {
+                                                  break L200;
+                                                } else {
+                                                  if (!hi.field_p[98]) {
                                                     break L199;
+                                                  } else {
+                                                    break L200;
                                                   }
                                                 }
                                               }
                                               sc.field_m.field_f = true;
-                                              if (nk.field_T < 100) {
-                                                break L198;
+                                              if (-101 < (nk.field_T ^ -1)) {
+                                                break L199;
                                               } else {
-                                                if (nk.field_T >= 150) {
-                                                  break L198;
+                                                if ((nk.field_T ^ -1) <= -151) {
+                                                  break L199;
                                                 } else {
                                                   sj.field_l = 0;
                                                   nk.field_T = 250;
-                                                  break L198;
+                                                  break L199;
                                                 }
                                               }
                                             }
-                                            L200: {
+                                            L201: {
                                               if (hi.field_p[hh.field_S]) {
-                                                break L200;
+                                                break L201;
                                               } else {
                                                 if (!hi.field_p[83]) {
-                                                  break L192;
+                                                  break L193;
                                                 } else {
-                                                  break L200;
+                                                  break L201;
                                                 }
                                               }
                                             }
                                             sc.field_m.field_d = true;
                                             if (50 > nk.field_T) {
-                                              break L192;
+                                              break L193;
                                             } else {
-                                              if (nk.field_T >= 100) {
-                                                break L192;
+                                              if (-101 >= (nk.field_T ^ -1)) {
+                                                break L193;
                                               } else {
                                                 nk.field_T = 100;
                                                 sj.field_l = 0;
-                                                break L192;
+                                                break L193;
                                               }
                                             }
                                           }
                                         }
-                                        L201: {
+                                        L202: {
                                           if (!il.field_e) {
-                                            stackOut_801_0 = 0;
-                                            stackIn_802_0 = stackOut_801_0;
-                                            break L201;
+                                            stackOut_805_0 = 0;
+                                            stackIn_806_0 = stackOut_805_0;
+                                            break L202;
                                           } else {
-                                            stackOut_800_0 = 1;
-                                            stackIn_802_0 = stackOut_800_0;
-                                            break L201;
+                                            stackOut_804_0 = 1;
+                                            stackIn_806_0 = stackOut_804_0;
+                                            break L202;
                                           }
                                         }
-                                        var3 = stackIn_802_0;
+                                        var3 = stackIn_806_0;
                                         var2 = 0;
-                                        L202: while (true) {
-                                          if (~var2 <= ~od.field_k) {
-                                            L203: {
+                                        L203: while (true) {
+                                          if ((var2 ^ -1) <= (od.field_k ^ -1)) {
+                                            L204: {
                                               if (!il.field_e) {
-                                                break L203;
+                                                break L204;
                                               } else {
-                                                L204: {
+                                                L205: {
                                                   if (0 >= hi.field_a) {
                                                     ge.field_f = ge.field_f + 1;
-                                                    break L204;
-                                                  } else {
-                                                    break L204;
-                                                  }
-                                                }
-                                                L205: {
-                                                  if (ql.field_c != 5) {
                                                     break L205;
                                                   } else {
-                                                    if (qh.field_l != 1) {
-                                                      break L205;
+                                                    break L205;
+                                                  }
+                                                }
+                                                L206: {
+                                                  if ((ql.field_c ^ -1) != -6) {
+                                                    break L206;
+                                                  } else {
+                                                    if (-2 != (qh.field_l ^ -1)) {
+                                                      break L206;
                                                     } else {
                                                       if (hl.field_a > 0) {
-                                                        break L205;
+                                                        break L206;
                                                       } else {
-                                                        if (ge.field_f == 370) {
+                                                        if (-371 == (ge.field_f ^ -1)) {
                                                           ge.field_f = ge.field_f + 1;
                                                           bb.field_j = i.field_d;
                                                           hi.field_a = 580;
-                                                          break L205;
+                                                          break L206;
                                                         } else {
-                                                          break L205;
+                                                          break L206;
                                                         }
                                                       }
                                                     }
@@ -7254,47 +7340,47 @@ public final class wizardrun extends u {
                                                 if (375 < ge.field_f) {
                                                   var4 = od.field_k;
                                                   var2 = 0;
-                                                  L206: while (true) {
-                                                    if (~var4 >= ~var2) {
-                                                      break L203;
+                                                  L207: while (true) {
+                                                    if ((var4 ^ -1) >= (var2 ^ -1)) {
+                                                      break L204;
                                                     } else {
-                                                      L207: {
+                                                      L208: {
                                                         if (21 == ii.field_e[var2].field_B) {
                                                           ii.field_e[var2].field_k = 1;
-                                                          break L207;
+                                                          break L208;
                                                         } else {
-                                                          break L207;
+                                                          break L208;
                                                         }
                                                       }
                                                       var2++;
-                                                      continue L206;
+                                                      continue L207;
                                                     }
                                                   }
                                                 } else {
-                                                  break L203;
+                                                  break L204;
                                                 }
                                               }
                                             }
-                                            L208: {
+                                            L209: {
                                               if (var3 != 0) {
-                                                break L208;
+                                                break L209;
                                               } else {
                                                 if (il.field_e) {
-                                                  break L208;
+                                                  break L209;
                                                 } else {
                                                   ra.a(2);
-                                                  break L208;
+                                                  break L209;
                                                 }
                                               }
                                             }
                                             var2 = -1 + od.field_k;
-                                            L209: while (true) {
-                                              if (var2 < 0) {
-                                                break L190;
+                                            L210: while (true) {
+                                              if ((var2 ^ -1) > -1) {
+                                                break L191;
                                               } else {
-                                                L210: {
+                                                L211: {
                                                   if (ii.field_e[var2].field_k != 1) {
-                                                    break L210;
+                                                    break L211;
                                                   } else {
                                                     od.field_k = od.field_k - 1;
                                                     ii.field_e[var2].field_w = ii.field_e[od.field_k].field_w;
@@ -7315,106 +7401,106 @@ public final class wizardrun extends u {
                                                     ii.field_e[var2].field_y = ii.field_e[od.field_k].field_y;
                                                     ii.field_e[var2].field_A = ii.field_e[od.field_k].field_A;
                                                     ii.field_e[var2].field_q = ii.field_e[od.field_k].field_q;
-                                                    break L210;
+                                                    break L211;
                                                   }
                                                 }
                                                 var2--;
-                                                continue L209;
+                                                continue L210;
                                               }
                                             }
                                           } else {
-                                            L211: {
+                                            L212: {
                                               if (2 >= ii.field_e[var2].field_B) {
-                                                break L211;
+                                                break L212;
                                               } else {
-                                                if (ii.field_e[var2].field_B == 21) {
-                                                  break L211;
+                                                if (-22 == (ii.field_e[var2].field_B ^ -1)) {
+                                                  break L212;
                                                 } else {
                                                   if (44 == ii.field_e[var2].field_B) {
-                                                    break L211;
+                                                    break L212;
                                                   } else {
                                                     var3 = 1;
-                                                    break L211;
-                                                  }
-                                                }
-                                              }
-                                            }
-                                            L212: {
-                                              L213: {
-                                                if (hi.field_a <= -350) {
-                                                  break L213;
-                                                } else {
-                                                  if (0 > qh.field_g) {
-                                                    break L213;
-                                                  } else {
                                                     break L212;
                                                   }
                                                 }
                                               }
+                                            }
+                                            L213: {
+                                              L214: {
+                                                if (349 <= (hi.field_a ^ -1)) {
+                                                  break L214;
+                                                } else {
+                                                  if (0 > qh.field_g) {
+                                                    break L214;
+                                                  } else {
+                                                    break L213;
+                                                  }
+                                                }
+                                              }
                                               ii.field_e[var2].a((byte) -123, tc.field_l);
-                                              break L212;
+                                              break L213;
                                             }
                                             var2++;
-                                            continue L202;
+                                            continue L203;
                                           }
                                         }
                                       } else {
-                                        L214: {
-                                          if (vk.field_r == 49) {
-                                            L215: {
+                                        L215: {
+                                          if (-50 == (vk.field_r ^ -1)) {
+                                            L216: {
                                               if (pk.field_s) {
-                                                stackOut_760_0 = 0;
-                                                stackIn_761_0 = stackOut_760_0;
-                                                break L215;
+                                                stackOut_764_0 = 0;
+                                                stackIn_765_0 = stackOut_764_0;
+                                                break L216;
                                               } else {
-                                                stackOut_759_0 = 1;
-                                                stackIn_761_0 = stackOut_759_0;
-                                                break L215;
+                                                stackOut_763_0 = 1;
+                                                stackIn_765_0 = stackOut_763_0;
+                                                break L216;
                                               }
                                             }
-                                            pk.field_s = stackIn_761_0 != 0;
-                                            break L214;
+                                            pk.field_s = stackIn_765_0 != 0;
+                                            break L215;
                                           } else {
                                             if (vk.field_r != 70) {
-                                              break L214;
+                                              break L215;
                                             } else {
                                               if (tl.field_e) {
                                                 tl.field_e = false;
                                                 mi.field_D.d(-94);
-                                                break L214;
+                                                break L215;
                                               } else {
                                                 tl.field_e = true;
                                                 mi.field_D.a(true, -101, ga.field_e);
-                                                break L214;
+                                                break L215;
                                               }
                                             }
                                           }
                                         }
                                         if (13 != vk.field_r) {
-                                          continue L191;
+                                          continue L192;
                                         } else {
-                                          L216: {
-                                            ((wizardrun) this).field_P = true;
-                                            if (wi.field_K != 1) {
-                                              break L216;
+                                          L217: {
+                                            this.field_P = true;
+                                            if (-2 != (wi.field_K ^ -1)) {
+                                              break L217;
                                             } else {
                                               if (sf.field_h == 0) {
-                                                ((wizardrun) this).field_P = false;
-                                                break L216;
+                                                this.field_P = false;
+                                                break L217;
                                               } else {
-                                                break L216;
+                                                break L217;
                                               }
                                             }
                                           }
-                                          L217: {
+                                          L218: {
                                             if (sf.field_h == 6) {
-                                              ((wizardrun) this).field_P = false;
+                                              this.field_P = false;
                                               tb.a(0, true);
                                               sf.field_h = 9;
-                                              ((wizardrun) this).field_J = true;
-                                              break L217;
+                                              this.field_J = true;
+                                              break L218;
                                             } else {
-                                              break L217;
+                                              break L218;
                                             }
                                           }
                                           return;
@@ -7423,10 +7509,10 @@ public final class wizardrun extends u {
                                     }
                                   }
                                 }
-                                break L108;
+                                break L109;
                               }
                             } else {
-                              break L108;
+                              break L109;
                             }
                           }
                           return;
@@ -7436,195 +7522,178 @@ public final class wizardrun extends u {
                     } else {
                       var2 = pg.field_n / 32;
                       var3 = -(fi.field_B / 32) - -14;
-                      L218: while (true) {
+                      L219: while (true) {
                         if (!ae.a(-75)) {
                           break L17;
                         } else {
-                          L219: {
-                            if (vk.field_r == 13) {
-                              ((wizardrun) this).field_L = false;
-                              wi.field_K = 1;
-                              break L219;
-                            } else {
-                              break L219;
-                            }
-                          }
                           L220: {
-                            if (vk.field_r == 41) {
-                              var17 = new byte[900];
-                              var16 = var17;
-                              var15 = var16;
-                              var12 = var15;
-                              var4_ref_byte__ = var12;
-                              var5 = 0;
-                              var6_int = 0;
-                              L221: while (true) {
-                                if (var6_int >= 300) {
-                                  fl.field_T[qh.field_l][ql.field_c] = var17;
-                                  var5 = 0;
-                                  bk.a(var4_ref_byte__, var17.length, true, new File("level" + qh.field_l + ql.field_c + ".dat"));
-                                  break L220;
-                                } else {
-                                  int incrementValue$39 = var5;
-                                  var5++;
-                                  var4_ref_byte__[incrementValue$39] = (byte)tc.field_l.field_j[var6_int];
-                                  int incrementValue$40 = var5;
-                                  var5++;
-                                  var4_ref_byte__[incrementValue$40] = (byte)tc.field_l.field_f[var6_int];
-                                  int incrementValue$41 = var5;
-                                  var5++;
-                                  var4_ref_byte__[incrementValue$41] = (byte)tc.field_l.field_a[var6_int];
-                                  var6_int++;
-                                  continue L221;
-                                }
-                              }
+                            if ((vk.field_r ^ -1) == -14) {
+                              this.field_L = false;
+                              wi.field_K = 1;
+                              break L220;
                             } else {
                               break L220;
                             }
                           }
-                          L222: {
-                            if (16 == vk.field_r) {
-                              tc.field_l.field_a[var3 * 20 + var2] = 1;
-                              break L222;
+                          L221: {
+                            if (-42 == (vk.field_r ^ -1)) {
+                              var15 = new byte[900];
+                              var12 = var15;
+                              var4_ref_byte__ = var12;
+                              var5 = 0;
+                              var6_int = 0;
+                              L222: while (true) {
+                                if (-301 >= (var6_int ^ -1)) {
+                                  fl.field_T[qh.field_l][ql.field_c] = var15;
+                                  try {
+                                    L223: {
+                                      var5 = 0;
+                                      bk.a(var4_ref_byte__, var15.length, true, new File("level" + qh.field_l + ql.field_c + ".dat"));
+                                      break L223;
+                                    }
+                                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                                    decompiledCaughtException = decompiledCaughtParameter0;
+                                    L224: {
+                                      var6 = (Exception) (Object) decompiledCaughtException;
+                                      System.out.println(var6);
+                                      break L224;
+                                    }
+                                  }
+                                  break L221;
+                                } else {
+                                  incrementValue$39 = var5;
+                                  var5++;
+                                  var4_ref_byte__[incrementValue$39] = (byte)tc.field_l.field_j[var6_int];
+                                  incrementValue$40 = var5;
+                                  var5++;
+                                  var4_ref_byte__[incrementValue$40] = (byte)tc.field_l.field_f[var6_int];
+                                  incrementValue$41 = var5;
+                                  var5++;
+                                  var4_ref_byte__[incrementValue$41] = (byte)tc.field_l.field_a[var6_int];
+                                  var6_int++;
+                                  continue L222;
+                                }
+                              }
                             } else {
-                              break L222;
-                            }
-                          }
-                          L223: {
-                            if (vk.field_r != 17) {
-                              break L223;
-                            } else {
-                              tc.field_l.field_a[var2 + var3 * 20] = 2;
-                              break L223;
-                            }
-                          }
-                          L224: {
-                            if (vk.field_r != 18) {
-                              break L224;
-                            } else {
-                              tc.field_l.field_a[var2 - -(var3 * 20)] = 3;
-                              break L224;
+                              break L221;
                             }
                           }
                           L225: {
-                            if (vk.field_r == 19) {
-                              tc.field_l.field_a[20 * var3 + var2] = 4;
+                            if (16 == vk.field_r) {
+                              tc.field_l.field_a[var3 * 20 + var2] = 1;
                               break L225;
                             } else {
                               break L225;
                             }
                           }
                           L226: {
-                            if (20 == vk.field_r) {
-                              tc.field_l.field_a[var2 - -(20 * var3)] = 5;
+                            if ((vk.field_r ^ -1) != -18) {
                               break L226;
                             } else {
+                              tc.field_l.field_a[var2 + var3 * 20] = 2;
                               break L226;
                             }
                           }
                           L227: {
-                            if (vk.field_r != 35) {
+                            if (-19 != (vk.field_r ^ -1)) {
                               break L227;
                             } else {
-                              tc.field_l.field_j[var2 - -(20 * var3)] = 0;
-                              tc.field_l.field_f[20 * var3 + var2] = 0;
-                              tc.field_l.field_a[20 * var3 + var2] = 0;
+                              tc.field_l.field_a[var2 - -(var3 * 20)] = 3;
                               break L227;
                             }
                           }
                           L228: {
-                            if (vk.field_r == 32) {
-                              tc.field_l.field_j[var2 - -(20 * var3)] = 1;
-                              tc.field_l.field_f[var2 + var3 * 20] = 1;
+                            if (-20 == (vk.field_r ^ -1)) {
+                              tc.field_l.field_a[20 * var3 + var2] = 4;
                               break L228;
                             } else {
                               break L228;
                             }
                           }
                           L229: {
-                            if (vk.field_r != 33) {
+                            if (20 == vk.field_r) {
+                              tc.field_l.field_a[var2 - -(20 * var3)] = 5;
                               break L229;
                             } else {
-                              tc.field_l.field_j[20 * var3 + var2] = 2;
-                              tc.field_l.field_f[20 * var3 + var2] = 1;
                               break L229;
                             }
                           }
                           L230: {
-                            if (34 != vk.field_r) {
+                            if ((vk.field_r ^ -1) != -36) {
                               break L230;
                             } else {
-                              tc.field_l.field_j[20 * var3 + var2] = 3;
-                              tc.field_l.field_f[var2 - -(var3 * 20)] = 1;
+                              tc.field_l.field_j[var2 - -(20 * var3)] = 0;
+                              tc.field_l.field_f[20 * var3 + var2] = 0;
+                              tc.field_l.field_a[20 * var3 + var2] = 0;
                               break L230;
                             }
                           }
                           L231: {
-                            if (vk.field_r == 48) {
-                              tc.field_l.field_j[var2 + var3 * 20] = 4;
-                              tc.field_l.field_f[var2 + var3 * 20] = 0;
+                            if ((vk.field_r ^ -1) == -33) {
+                              tc.field_l.field_j[var2 - -(20 * var3)] = 1;
+                              tc.field_l.field_f[var2 + var3 * 20] = 1;
                               break L231;
                             } else {
                               break L231;
                             }
                           }
                           L232: {
-                            if (vk.field_r == 49) {
-                              tc.field_l.field_j[var3 * 20 + var2] = 5;
-                              tc.field_l.field_f[var2 - -(var3 * 20)] = 0;
+                            if (-34 != (vk.field_r ^ -1)) {
                               break L232;
                             } else {
+                              tc.field_l.field_j[20 * var3 + var2] = 2;
+                              tc.field_l.field_f[20 * var3 + var2] = 1;
                               break L232;
                             }
                           }
                           L233: {
-                            if (50 == vk.field_r) {
-                              tc.field_l.field_j[20 * var3 + var2] = 6;
-                              tc.field_l.field_f[var2 + var3 * 20] = 0;
+                            if (34 != vk.field_r) {
                               break L233;
                             } else {
+                              tc.field_l.field_j[20 * var3 + var2] = 3;
+                              tc.field_l.field_f[var2 - -(var3 * 20)] = 1;
                               break L233;
                             }
                           }
                           L234: {
-                            if (vk.field_r != 64) {
+                            if (vk.field_r == 48) {
+                              tc.field_l.field_j[var2 + var3 * 20] = 4;
+                              tc.field_l.field_f[var2 + var3 * 20] = 0;
                               break L234;
                             } else {
-                              tc.field_l.field_j[var3 * 20 + var2] = 7;
-                              tc.field_l.field_f[var3 * 20 + var2] = 0;
                               break L234;
                             }
                           }
                           L235: {
-                            if (vk.field_r == 65) {
-                              tc.field_l.field_j[var2 - -(20 * var3)] = 8;
-                              tc.field_l.field_f[20 * var3 + var2] = 0;
+                            if (-50 == (vk.field_r ^ -1)) {
+                              tc.field_l.field_j[var3 * 20 + var2] = 5;
+                              tc.field_l.field_f[var2 - -(var3 * 20)] = 0;
                               break L235;
                             } else {
                               break L235;
                             }
                           }
                           L236: {
-                            if (vk.field_r != 66) {
+                            if (50 == vk.field_r) {
+                              tc.field_l.field_j[20 * var3 + var2] = 6;
+                              tc.field_l.field_f[var2 + var3 * 20] = 0;
                               break L236;
                             } else {
-                              tc.field_l.field_j[var3 * 20 + var2] = 9;
-                              tc.field_l.field_f[20 * var3 + var2] = 0;
                               break L236;
                             }
                           }
                           L237: {
-                            if (vk.field_r == 67) {
-                              tc.field_l.field_j[var2 - -(20 * var3)] = 10;
-                              tc.field_l.field_f[var2 - -(20 * var3)] = 0;
+                            if ((vk.field_r ^ -1) != -65) {
                               break L237;
                             } else {
+                              tc.field_l.field_j[var3 * 20 + var2] = 7;
+                              tc.field_l.field_f[var3 * 20 + var2] = 0;
                               break L237;
                             }
                           }
                           L238: {
-                            if (vk.field_r == 68) {
-                              tc.field_l.field_j[var2 + var3 * 20] = 11;
+                            if ((vk.field_r ^ -1) == -66) {
+                              tc.field_l.field_j[var2 - -(20 * var3)] = 8;
                               tc.field_l.field_f[20 * var3 + var2] = 0;
                               break L238;
                             } else {
@@ -7632,34 +7701,61 @@ public final class wizardrun extends u {
                             }
                           }
                           L239: {
-                            if (vk.field_r != 69) {
+                            if ((vk.field_r ^ -1) != -67) {
                               break L239;
                             } else {
-                              tc.field_l.field_j[var2 - -(var3 * 20)] = 12;
-                              tc.field_l.field_f[var2 - -(var3 * 20)] = 0;
+                              tc.field_l.field_j[var3 * 20 + var2] = 9;
+                              tc.field_l.field_f[20 * var3 + var2] = 0;
                               break L239;
                             }
                           }
                           L240: {
-                            if (vk.field_r != 43) {
+                            if (-68 == (vk.field_r ^ -1)) {
+                              tc.field_l.field_j[var2 - -(20 * var3)] = 10;
+                              tc.field_l.field_f[var2 - -(20 * var3)] = 0;
                               break L240;
                             } else {
-                              L241: {
+                              break L240;
+                            }
+                          }
+                          L241: {
+                            if (-69 == (vk.field_r ^ -1)) {
+                              tc.field_l.field_j[var2 + var3 * 20] = 11;
+                              tc.field_l.field_f[20 * var3 + var2] = 0;
+                              break L241;
+                            } else {
+                              break L241;
+                            }
+                          }
+                          L242: {
+                            if ((vk.field_r ^ -1) != -70) {
+                              break L242;
+                            } else {
+                              tc.field_l.field_j[var2 - -(var3 * 20)] = 12;
+                              tc.field_l.field_f[var2 - -(var3 * 20)] = 0;
+                              break L242;
+                            }
+                          }
+                          L243: {
+                            if (vk.field_r != 43) {
+                              break L243;
+                            } else {
+                              L244: {
                                 hi.field_c = hi.field_c + 1;
                                 ql.field_c = ql.field_c + 1;
-                                if (ql.field_c != 5) {
-                                  break L241;
+                                if ((ql.field_c ^ -1) != -6) {
+                                  break L244;
                                 } else {
                                   ga.field_e = fb.field_a;
                                   if (tl.field_e) {
                                     mi.field_D.a(true, -101, ga.field_e);
-                                    break L241;
+                                    break L244;
                                   } else {
-                                    break L241;
+                                    break L244;
                                   }
                                 }
                               }
-                              L242: {
+                              L245: {
                                 if (ql.field_c >= 6) {
                                   hi.field_c = hi.field_c - ql.field_c;
                                   wg.field_b = wg.field_b + 6;
@@ -7667,87 +7763,87 @@ public final class wizardrun extends u {
                                   ql.field_c = 0;
                                   if (5 >= qh.field_l) {
                                     vk.a((byte) -75);
-                                    break L242;
+                                    break L245;
                                   } else {
                                     wg.field_b = wg.field_b - qh.field_l * 6;
                                     me.field_f = me.field_f - 30;
                                     qh.field_l = 5;
-                                    break L242;
+                                    break L245;
                                   }
                                 } else {
-                                  break L242;
+                                  break L245;
                                 }
                               }
                               ni.b(7530);
                               if (2 != qh.field_l) {
-                                break L240;
+                                break L243;
                               } else {
-                                L243: {
-                                  if (hl.field_a <= 0) {
-                                    break L243;
+                                L246: {
+                                  if (-1 <= (hl.field_a ^ -1)) {
+                                    break L246;
                                   } else {
-                                    if (e.a(-111)) {
-                                      break L243;
+                                    if (e.a(param0 + -751)) {
+                                      break L246;
                                     } else {
-                                      break L240;
+                                      break L243;
                                     }
                                   }
                                 }
                                 this.s(208);
-                                break L240;
+                                break L243;
                               }
                             }
                           }
-                          if (vk.field_r == 42) {
-                            L244: {
+                          if ((vk.field_r ^ -1) == -43) {
+                            L247: {
                               ql.field_c = ql.field_c - 1;
                               hi.field_c = hi.field_c + 1;
-                              if (ql.field_c != 4) {
-                                break L244;
+                              if ((ql.field_c ^ -1) != -5) {
+                                break L247;
                               } else {
                                 vk.a((byte) -59);
-                                break L244;
+                                break L247;
                               }
                             }
-                            L245: {
-                              if (ql.field_c >= 0) {
-                                break L245;
+                            L248: {
+                              if ((ql.field_c ^ -1) <= -1) {
+                                break L248;
                               } else {
-                                L246: {
+                                L249: {
                                   ql.field_c = 5;
                                   qh.field_l = qh.field_l - 1;
-                                  if (qh.field_l < 0) {
+                                  if ((qh.field_l ^ -1) > -1) {
                                     qh.field_l = 0;
-                                    break L246;
+                                    break L249;
                                   } else {
                                     vk.a((byte) -118);
-                                    break L246;
+                                    break L249;
                                   }
                                 }
                                 ga.field_e = fb.field_a;
                                 if (!tl.field_e) {
-                                  break L245;
+                                  break L248;
                                 } else {
-                                  mi.field_D.a(true, -100, ga.field_e);
-                                  break L245;
+                                  mi.field_D.a(true, param0 + -740, ga.field_e);
+                                  break L248;
                                 }
                               }
                             }
                             ni.b(7530);
-                            continue L218;
+                            continue L219;
                           } else {
-                            continue L218;
+                            continue L219;
                           }
                         }
                       }
                     }
                   } else {
-                    L247: {
+                    L250: {
                       if (0 >= md.field_a[var2][2]) {
-                        break L247;
+                        break L250;
                       } else {
                         md.field_a[var2][2] = md.field_a[var2][2] - 5;
-                        break L247;
+                        break L250;
                       }
                     }
                     var2++;
@@ -7777,11 +7873,12 @@ public final class wizardrun extends u {
             jj.field_b.b(var6, 1 + param4, param0, 0, -1);
             jj.field_b.b(param1, param4, param0, param2, -1);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "wizardrun.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "wizardrun.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void a(boolean param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
+        int incrementValue$1 = 0;
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -7792,26 +7889,29 @@ public final class wizardrun extends u {
         int var13 = 0;
         int var14 = 0;
         int stackIn_24_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_23_0 = 0;
         int stackOut_22_0 = 0;
         var14 = field_H;
         try {
           L0: {
-            if (~param6 <= ~param2) {
-              return;
+            if ((param6 ^ -1) <= (param2 ^ -1)) {
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              if (~param3 >= ~(1 + param6)) {
-                return;
+              if ((param3 ^ -1) >= (1 + param6 ^ -1)) {
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 L1: {
-                  if (~param3 >= ~(param6 + 5)) {
+                  if ((param3 ^ -1) >= (param6 + 5 ^ -1)) {
                     break L1;
                   } else {
-                    if (~param4 == ~param5) {
+                    if ((param4 ^ -1) == (param5 ^ -1)) {
                       break L1;
                     } else {
-                      var7_int = (param4 >> 1) + ((param5 >> 1) - -(param4 & param5 & 1));
+                      var7_int = (param4 >> -417938591) + ((param5 >> -16643615) - -(param4 & param5 & 1));
                       var8 = param6;
                       var9 = param5;
                       var10 = param4;
@@ -7820,6 +7920,7 @@ public final class wizardrun extends u {
                         if (var11 >= param3) {
                           wizardrun.a(param0, param1, param2, var8, var9, param5, param6);
                           wizardrun.a(param0, (byte) 11, param2, param3, param4, var10, var8);
+                          decompiledRegionSelector0 = 3;
                           break L0;
                         } else {
                           L3: {
@@ -7837,7 +7938,7 @@ public final class wizardrun extends u {
                           L4: {
                             var13 = stackIn_24_0;
                             if (var7_int >= var13) {
-                              if (~var10 <= ~var13) {
+                              if ((var10 ^ -1) <= (var13 ^ -1)) {
                                 break L4;
                               } else {
                                 var10 = var13;
@@ -7845,7 +7946,7 @@ public final class wizardrun extends u {
                               }
                             } else {
                               sj.field_m[var11] = sj.field_m[var8];
-                              int incrementValue$1 = var8;
+                              incrementValue$1 = var8;
                               var8++;
                               sj.field_m[incrementValue$1] = var12;
                               if (var13 >= var9) {
@@ -7866,7 +7967,8 @@ public final class wizardrun extends u {
                 var7_int = -1 + param3;
                 L5: while (true) {
                   if (var7_int <= param6) {
-                    return;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   } else {
                     var8 = param6;
                     L6: while (true) {
@@ -7897,22 +7999,35 @@ public final class wizardrun extends u {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var7, "wizardrun.CB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw bd.a((Throwable) ((Object) var7), "wizardrun.CB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return;
+            } else {
+              return;
+            }
+          }
         }
     }
 
     final void a(int param0) {
         int var2 = 0;
         int var3 = field_H;
-        ((wizardrun) this).a(11, false, 8, 10, false, 9, param0, 0);
+        this.a(11, false, 8, 10, false, 9, param0, 0);
         c.a(22050, false, 10);
-        wh.field_k = c.a(ld.field_g, (java.awt.Component) (Object) field_G, 0, 512);
-        pc.field_d = c.a(ld.field_g, (java.awt.Component) (Object) field_G, 1, 22050);
+        wh.field_k = c.a(ld.field_g, (java.awt.Component) ((Object) field_G), 0, 512);
+        pc.field_d = c.a(ld.field_g, (java.awt.Component) ((Object) field_G), 1, 22050);
         tl.field_a = new vi();
-        wh.field_k.a((k) (Object) tl.field_a);
+        wh.field_k.a(tl.field_a);
         mi.field_D = new fl();
         mi.field_D.a(128, 9, (byte) 108);
-        pc.field_d.a((k) (Object) mi.field_D);
+        pc.field_d.a(mi.field_D);
         hg.field_a = 500;
         hi.field_c = hi.field_c - sg.field_f * 64;
         wg.field_b = wg.field_b - ql.field_c;
@@ -7926,7 +8041,7 @@ public final class wizardrun extends u {
             oe.field_d[var2] = new ol();
         }
         ia.field_n = oe.field_d[0].field_a;
-        ((wizardrun) this).a(false, true, true, true, false);
+        this.a(false, true, true, true, false);
     }
 
     public static void c(boolean param0) {
@@ -7940,7 +8055,7 @@ public final class wizardrun extends u {
     }
 
     public final void init() {
-        ((wizardrun) this).a(12, (byte) 49, "wizardrun");
+        this.a(12, (byte) 49, "wizardrun");
     }
 
     private final void b(int param0, String param1, int param2, int param3, int param4) {
@@ -7957,7 +8072,7 @@ public final class wizardrun extends u {
             jj.field_b.b(param1, param3 - 2, param4, 1377125, -1);
             jj.field_b.b(param1, param3, param4, param2, 1377125);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "wizardrun.GB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+            throw bd.a((Throwable) ((Object) runtimeException), "wizardrun.GB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -8224,20 +8339,16 @@ public final class wizardrun extends u {
         tc.a((byte) -100);
         ie.c(-1);
         ae.b(-2076560510);
-        ((wizardrun) this).field_y = null;
+        this.field_y = null;
     }
 
     public wizardrun() {
-        ((wizardrun) this).field_M = 0;
-        ((wizardrun) this).field_J = true;
-        ((wizardrun) this).field_N = -1;
+        this.field_M = 0;
+        this.field_J = true;
+        this.field_N = -1;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_O = new byte[520];
         field_T = -1;
         field_F = "Close";

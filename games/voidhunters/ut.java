@@ -9,7 +9,7 @@ final class ut {
         var4.h(24335, param2);
         var4.field_e = var4.field_e + 1;
         int var5 = var4.field_e;
-        var4.c(0, 6);
+        var4.c(0, param0);
         var4.a(param1, 105);
         var4.e(var4.field_e + -var5, -129);
     }
@@ -24,10 +24,6 @@ final class ut {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Cancel draw";
     }
 }

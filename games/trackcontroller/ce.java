@@ -11,6 +11,6 @@ public class ce {
     public int field_b;
 
     ce() {
-        ((ce) this).field_f = 0;
+        this.field_f = 0;
     }
 }

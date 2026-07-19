@@ -17,10 +17,10 @@ final class qr extends jq {
 
     qr(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         super(param4, param5, param6);
-        ((qr) this).field_i = param0;
-        ((qr) this).field_s = param2;
-        ((qr) this).field_r = param3;
-        ((qr) this).field_p = param1;
+        this.field_i = param0;
+        this.field_s = param2;
+        this.field_r = param3;
+        this.field_p = param1;
     }
 
     final static tn a(int param0, int param1, int param2, int param3) {
@@ -37,9 +37,9 @@ final class qr extends jq {
         String var11 = null;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_39_0 = 0;
-        int stackOut_38_0 = 0;
-        int stackOut_37_0 = 0;
+        int stackIn_41_0 = 0;
+        int stackOut_40_0 = 0;
+        int stackOut_39_0 = 0;
         var13 = Vertigo2.field_L ? 1 : 0;
         mg.field_R.field_Nb.field_M.c(0);
         var4 = null;
@@ -52,72 +52,76 @@ final class qr extends jq {
             var8 = 0;
             L1: while (true) {
               if (var8 >= no.field_d) {
-                L2: {
-                  var8 = -var7 - (-var6 - mg.field_R.field_Nb.field_kb - mg.field_R.field_Nb.field_db);
-                  mg.field_R.field_Nb.field_db = mg.field_R.field_Nb.field_db - var8;
-                  mg.field_R.field_Nb.field_N = mg.field_R.field_Nb.field_N + var8;
-                  if (!dc.field_B) {
-                    break L2;
-                  } else {
-                    mg.field_R.field_Nb.field_db = var7;
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (!dc.field_B) {
-                    break L3;
-                  } else {
-                    dc.field_B = false;
-                    mg.field_R.field_Nb.field_L = 0;
-                    nb.field_z = true;
-                    mg.field_R.field_Nb.field_N = mg.field_R.field_Lb.field_db + -mg.field_R.field_Nb.field_db;
-                    break L3;
-                  }
-                }
-                L4: {
-                  mg.field_R.field_Nb.field_kb = var7 + -mg.field_R.field_Nb.field_db;
-                  if (!il.field_a) {
-                    break L4;
-                  } else {
-                    if (null != gk.field_c) {
-                      nb.field_z = true;
-                      break L4;
+                var8 = -var7 - (-var6 - mg.field_R.field_Nb.field_kb - mg.field_R.field_Nb.field_db);
+                if (param1 >= 4) {
+                  L2: {
+                    mg.field_R.field_Nb.field_db = mg.field_R.field_Nb.field_db - var8;
+                    mg.field_R.field_Nb.field_N = mg.field_R.field_Nb.field_N + var8;
+                    if (!dc.field_B) {
+                      break L2;
                     } else {
-                      break L4;
+                      mg.field_R.field_Nb.field_db = var7;
+                      break L2;
                     }
                   }
-                }
-                L5: {
-                  var9 = -mg.field_R.field_Nb.field_db + (-mg.field_R.field_Nb.field_kb + mg.field_R.field_Lb.field_db);
-                  if (!nb.field_z) {
-                    break L5;
-                  } else {
-                    mg.field_R.field_Nb.field_L = -mg.field_R.field_Nb.field_N + var9;
-                    break L5;
+                  L3: {
+                    if (!dc.field_B) {
+                      break L3;
+                    } else {
+                      dc.field_B = false;
+                      mg.field_R.field_Nb.field_L = 0;
+                      nb.field_z = true;
+                      mg.field_R.field_Nb.field_N = mg.field_R.field_Lb.field_db + -mg.field_R.field_Nb.field_db;
+                      break L3;
+                    }
                   }
-                }
-                L6: {
-                  mg.field_R.a(param3, true, -1, param2 * 2 * param3);
-                  if (mg.field_R.field_Nb.field_L + mg.field_R.field_Nb.field_N != var9) {
-                    stackOut_38_0 = 0;
-                    stackIn_39_0 = stackOut_38_0;
-                    break L6;
-                  } else {
-                    stackOut_37_0 = 1;
-                    stackIn_39_0 = stackOut_37_0;
-                    break L6;
+                  L4: {
+                    mg.field_R.field_Nb.field_kb = var7 + -mg.field_R.field_Nb.field_db;
+                    if (!il.field_a) {
+                      break L4;
+                    } else {
+                      if (null != gk.field_c) {
+                        nb.field_z = true;
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
                   }
+                  L5: {
+                    var9 = -mg.field_R.field_Nb.field_db + (-mg.field_R.field_Nb.field_kb + mg.field_R.field_Lb.field_db);
+                    if (!nb.field_z) {
+                      break L5;
+                    } else {
+                      mg.field_R.field_Nb.field_L = -mg.field_R.field_Nb.field_N + var9;
+                      break L5;
+                    }
+                  }
+                  L6: {
+                    mg.field_R.a(param3, true, -1, param2 * 2 * param3);
+                    if (mg.field_R.field_Nb.field_L + mg.field_R.field_Nb.field_N != var9) {
+                      stackOut_40_0 = 0;
+                      stackIn_41_0 = stackOut_40_0;
+                      break L6;
+                    } else {
+                      stackOut_39_0 = 1;
+                      stackIn_41_0 = stackOut_39_0;
+                      break L6;
+                    }
+                  }
+                  nb.field_z = stackIn_41_0 != 0;
+                  return (tn) (var4);
+                } else {
+                  return (tn) null;
                 }
-                nb.field_z = stackIn_39_0 != 0;
-                return (tn) var4;
               } else {
                 var9_ref_tn = eo.field_l[var8];
                 if (null != var9_ref_tn.field_e) {
                   mg.field_R.field_Nb.b(var9_ref_tn.field_e, 127);
                   var9_ref_tn.field_e.a(73, var9_ref_tn.field_e.j(-21391), param3, var7, param0);
                   var7 = var7 + param3;
-                  if (var9_ref_tn.field_e.field_tb != 0) {
-                    var4 = (Object) (Object) var9_ref_tn;
+                  if (-1 != (var9_ref_tn.field_e.field_tb ^ -1)) {
+                    var4 = var9_ref_tn;
                     var8++;
                     continue L1;
                   } else {
@@ -192,9 +196,9 @@ final class qr extends jq {
               var12 = mm.a(var8_ref_tn, 0);
               var8_ref_tn.field_e = new cr(0L, np.field_Ib, var11);
               var8_ref_tn.field_e.field_A = var12;
-              var8_ref_tn.field_e.field_B = (np.field_Ib.field_B >> 1 & 8355711) + var12 + -(8355711 & var12 >> 1);
+              var8_ref_tn.field_e.field_B = (np.field_Ib.field_B >> 538621665 & 8355711) + var12 + -(8355711 & var12 >> 1873163297);
               var8_ref_tn.field_e.field_z = cg.field_f;
-              var8_ref_tn.field_e.field_H = var12 + (-((var12 & 16711423) >> 1) - -(8355711 & np.field_Ib.field_H >> 1));
+              var8_ref_tn.field_e.field_H = var12 + (-((var12 & 16711423) >> -1352879679) - -(8355711 & np.field_Ib.field_H >> 1574166849));
               var6 = var6 + param3;
               var7--;
               continue L0;
@@ -204,52 +208,51 @@ final class qr extends jq {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = ((qr) this).field_i * param1 >> 12;
-        int var5 = ((qr) this).field_s * param1 >> 12;
-        int var6 = ((qr) this).field_p * param0 >> 12;
-        int var7 = param0 * ((qr) this).field_r >> 12;
+        int var4 = this.field_i * param1 >> 1325702604;
+        int var5 = this.field_s * param1 >> 739224556;
+        int var6 = this.field_p * param0 >> 1317767948;
+        int var7 = param0 * this.field_r >> 863026028;
         if (param2 != 45) {
-            ((qr) this).field_p = 90;
+            this.field_p = 90;
         }
-        ng.a(((qr) this).field_a, var4, var7, var5, ((qr) this).field_f, param2 + -131, var6);
+        ng.a(this.field_a, var4, var7, var5, this.field_f, param2 + -131, var6);
     }
 
     public static void a(boolean param0) {
         field_k = null;
         field_l = null;
         field_q = null;
+        if (param0) {
+            field_h = (er) null;
+        }
         field_o = null;
         field_m = null;
         field_h = null;
     }
 
     final void a(int param0, byte param1, int param2) {
-        int var4 = ((qr) this).field_i * param2 >> 12;
-        int var5 = ((qr) this).field_s * param2 >> 12;
+        int var4 = this.field_i * param2 >> -725766644;
+        int var5 = this.field_s * param2 >> -669168052;
         if (param1 >= -31) {
-            ((qr) this).field_p = -29;
+            this.field_p = -29;
         }
-        int var6 = param0 * ((qr) this).field_p >> 12;
-        int var7 = ((qr) this).field_r * param0 >> 12;
-        ml.a(((qr) this).field_g, var4, var7, var6, var5, -109);
+        int var6 = param0 * this.field_p >> -576572532;
+        int var7 = this.field_r * param0 >> 1559621388;
+        ml.a(this.field_g, var4, var7, var6, var5, -109);
     }
 
     final void b(int param0, byte param1, int param2) {
-        int var4 = ((qr) this).field_i * param0 >> 12;
-        int var5 = ((qr) this).field_s * param0 >> 12;
+        int var4 = this.field_i * param0 >> 624199148;
+        int var5 = this.field_s * param0 >> -1710931764;
         if (param1 < 26) {
             return;
         }
-        int var6 = param2 * ((qr) this).field_p >> 12;
-        int var7 = ((qr) this).field_r * param2 >> 12;
-        aq.a(var5, ((qr) this).field_f, ((qr) this).field_g, ((qr) this).field_a, var7, var4, 0, var6);
+        int var6 = param2 * this.field_p >> 1087987148;
+        int var7 = this.field_r * param2 >> 1673735052;
+        aq.a(var5, this.field_f, this.field_g, this.field_a, var7, var4, 0, var6);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = 4;
         field_o = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
         field_k = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};

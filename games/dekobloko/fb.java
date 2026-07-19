@@ -11,11 +11,22 @@ final class fb {
     static int field_e;
 
     public static void a(byte param0) {
+        boolean discarded$2 = false;
+        int[] var2 = null;
         field_a = null;
         field_b = null;
         field_g = null;
-        field_d = null;
-        field_c = (ck[][]) null;
+        if (param0 <= 66) {
+          var2 = (int[]) null;
+          discarded$2 = fb.a(-7, 19, (int[]) null);
+          field_d = null;
+          field_c = (ck[][]) null;
+          return;
+        } else {
+          field_d = null;
+          field_c = (ck[][]) null;
+          return;
+        }
     }
 
     final static boolean a(int param0, int param1, int[] param2) {
@@ -53,7 +64,7 @@ final class fb {
               }
             }
             L2: {
-              if ((param2[param0 >> 5] & 1 << (31 & param0)) != 0) {
+              if ((param2[param0 >> -1825332859] & 1 << (31 & param0)) != 0) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;

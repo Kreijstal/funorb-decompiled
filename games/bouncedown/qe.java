@@ -14,7 +14,7 @@ final class qe extends ng {
 
     final sb b(byte param0) {
         if (param0 > -57) {
-            field_c = null;
+            field_c = (String) null;
         }
         return jf.field_h;
     }
@@ -29,6 +29,7 @@ final class qe extends ng {
         int var8 = 0;
         int stackIn_8_0 = 0;
         int stackIn_13_0 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_12_0 = 0;
         int stackOut_7_0 = 0;
@@ -40,7 +41,7 @@ final class qe extends ng {
               if (param1 < -91) {
                 break L1;
               } else {
-                field_j = null;
+                field_j = (String) null;
                 break L1;
               }
             }
@@ -49,24 +50,26 @@ final class qe extends ng {
               if (var3_int >= se.field_E.length) {
                 stackOut_12_0 = -1;
                 stackIn_13_0 = stackOut_12_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 L3: {
                   var5 = m.field_a[var3_int];
-                  if (var5 < 0) {
+                  if (-1 < (var5 ^ -1)) {
                     var4 = var4 + k.field_D;
                     break L3;
                   } else {
                     var6 = vh.a(true, se.field_E[var3_int], true);
                     var4 = var4 + hj.field_a;
-                    var7 = bi.field_h + -(var6 >> 1);
-                    if (!ef.a(var4, -kk.field_z + var7, -78, (cl.field_m << 1) + pb.field_j, (kk.field_z << 1) + var6, param0, param2)) {
-                      var4 = var4 + (pb.field_j + (cl.field_m << 1) + hj.field_a);
+                    var7 = bi.field_h + -(var6 >> 651544929);
+                    if (!ef.a(var4, -kk.field_z + var7, -78, (cl.field_m << 443111233) + pb.field_j, (kk.field_z << 1540176769) + var6, param0, param2)) {
+                      var4 = var4 + (pb.field_j + (cl.field_m << 930887105) + hj.field_a);
                       break L3;
                     } else {
                       stackOut_7_0 = var5;
                       stackIn_8_0 = stackOut_7_0;
-                      return stackIn_8_0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   }
                 }
@@ -78,9 +81,13 @@ final class qe extends ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var3, "qe.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ii.a((Throwable) ((Object) var3), "qe.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_13_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_8_0;
+        } else {
+          return stackIn_13_0;
+        }
     }
 
     final static void a(byte param0, int param1) {
@@ -90,13 +97,13 @@ final class qe extends ng {
 
     final void a(boolean param0, wi param1) {
         try {
-            param1.a(((qe) this).field_h, (byte) -67);
+            param1.a(this.field_h, (byte) -67);
             if (param0) {
-                field_j = null;
+                field_j = (String) null;
             }
-            param1.b(((qe) this).field_d, (byte) -103);
+            param1.b(this.field_d, (byte) -103);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "qe.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "qe.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -121,6 +128,7 @@ final class qe extends ng {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         lj stackOut_17_0 = null;
         lj stackOut_14_0 = null;
@@ -140,23 +148,25 @@ final class qe extends ng {
           L0: {
             var2_int = param1.length();
             if (0 != var2_int) {
-              if (var2_int <= 255) {
+              if (var2_int <= param0) {
                 var3 = di.a(-108, '.', param1);
-                if (var3.length >= 2) {
+                if (-3 >= (var3.length ^ -1)) {
                   var4 = var3;
                   var5 = 0;
                   L1: while (true) {
                     if (var5 >= var4.length) {
                       stackOut_17_0 = uk.a(-58, var3[var3.length - 1]);
                       stackIn_18_0 = stackOut_17_0;
+                      decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       var6 = var4[var5];
                       var7 = dk.a(-64, var6);
                       if (var7 != null) {
-                        stackOut_14_0 = (lj) var7;
+                        stackOut_14_0 = (lj) (var7);
                         stackIn_15_0 = stackOut_14_0;
-                        return stackIn_15_0;
+                        decompiledRegionSelector0 = 3;
+                        break L0;
                       } else {
                         var5++;
                         continue L1;
@@ -166,40 +176,43 @@ final class qe extends ng {
                 } else {
                   stackOut_8_0 = uc.field_E;
                   stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0;
+                  decompiledRegionSelector0 = 2;
+                  break L0;
                 }
               } else {
                 stackOut_5_0 = lk.field_t;
                 stackIn_6_0 = stackOut_5_0;
-                return stackIn_6_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               }
             } else {
               stackOut_2_0 = uc.field_E;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var2;
-            stackOut_19_1 = new StringBuilder().append("qe.K(").append(255).append(',');
+            stackOut_19_0 = (RuntimeException) (var2);
+            stackOut_19_1 = new StringBuilder().append("qe.K(").append(param0).append(',');
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "null";
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
               stackIn_22_2 = stackOut_21_2;
               break L2;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "{...}";
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
@@ -207,9 +220,25 @@ final class qe extends ng {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
         }
-        return stackIn_18_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_6_0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_9_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_15_0;
+              } else {
+                return stackIn_18_0;
+              }
+            }
+          }
+        }
     }
 
     final static ie a(int param0, gk param1, int param2, int param3, gk param4) {
@@ -231,6 +260,7 @@ final class qe extends ng {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ie stackOut_3_0 = null;
         Object stackOut_1_0 = null;
@@ -253,37 +283,39 @@ final class qe extends ng {
         try {
           L0: {
             if (c.a(param1, false, param2, param3)) {
-              var5_int = 9;
+              var5_int = 9 / ((param0 - -58) / 59);
               stackOut_3_0 = ea.a(param4.b(-122, param3, param2), (byte) 71);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
-              return (ie) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var5;
-            stackOut_5_1 = new StringBuilder().append("qe.A(").append(39).append(',');
+            stackOut_5_0 = (RuntimeException) (var5);
+            stackOut_5_1 = new StringBuilder().append("qe.A(").append(param0).append(',');
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -292,23 +324,23 @@ final class qe extends ng {
             }
           }
           L2: {
-            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
             stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',');
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
             stackIn_9_1 = stackOut_8_1;
             if (param4 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "null";
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "{...}";
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
@@ -316,9 +348,13 @@ final class qe extends ng {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (ie) ((Object) stackIn_2_0);
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     public static void c(byte param0) {
@@ -326,27 +362,29 @@ final class qe extends ng {
         field_g = null;
         field_c = null;
         field_j = null;
+        if (param0 > -7) {
+            field_c = (String) null;
+        }
     }
 
     qe(String param0, String param1) {
         try {
-            ((qe) this).field_h = param0;
-            ((qe) this).field_d = param1;
+            this.field_h = param0;
+            this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "qe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw ii.a((Throwable) ((Object) runtimeException), "qe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void c(int param0) {
+        if (param0 != 443111233) {
+            qe.a((byte) -62, -23);
+        }
         pa.field_a = null;
         nb.field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_j = "Instructions";
         field_c = "Log in / Create account";
         field_g = new int[8192];

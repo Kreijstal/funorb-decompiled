@@ -58,23 +58,23 @@ final class lf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("lf.A(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -82,13 +82,19 @@ final class lf {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0 != 0;
     }
 
     public static void a(byte param0) {
+        int discarded$0 = 0;
         field_b = null;
+        if (param0 != 94) {
+            discarded$0 = lf.a((byte) -22, 76);
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
@@ -130,8 +136,8 @@ final class lf {
           L0: {
             var2_int = 1;
             L1: while (true) {
-              if (param0.length - -(param0.length >> 1) < var2_int) {
-                ((lf) this).field_a = new int[var2_int + var2_int];
+              if (param0.length - -(param0.length >> -1958199871) < var2_int) {
+                this.field_a = new int[var2_int + var2_int];
                 var3 = 0;
                 L2: while (true) {
                   if (var2_int + var2_int <= var3) {
@@ -142,9 +148,9 @@ final class lf {
                       } else {
                         var4 = param0[var3] & var2_int + -1;
                         L4: while (true) {
-                          if (((lf) this).field_a[1 + (var4 - -var4)] == -1) {
-                            ((lf) this).field_a[var4 - -var4] = param0[var3];
-                            ((lf) this).field_a[1 + var4 + var4] = var3;
+                          if ((this.field_a[1 + (var4 - -var4)] ^ -1) == 0) {
+                            this.field_a[var4 - -var4] = param0[var3];
+                            this.field_a[1 + var4 + var4] = var3;
                             var3++;
                             continue L3;
                           } else {
@@ -155,7 +161,7 @@ final class lf {
                       }
                     }
                   } else {
-                    ((lf) this).field_a[var3] = -1;
+                    this.field_a[var3] = -1;
                     var3++;
                     continue L2;
                   }
@@ -170,23 +176,23 @@ final class lf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var2 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_0 = (RuntimeException) (var2);
             stackOut_14_1 = new StringBuilder().append("lf.<init>(");
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -194,7 +200,7 @@ final class lf {
               break L5;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
     }
 
@@ -204,13 +210,13 @@ final class lf {
         int var5 = 0;
         int var6 = 0;
         var6 = Kickabout.field_G;
-        var3 = -1 + (((lf) this).field_a.length >> 1);
+        var3 = -1 + (this.field_a.length >> 1325328769);
         if (param1 < -37) {
           var4 = param0 & var3;
           L0: while (true) {
-            var5 = ((lf) this).field_a[var4 + (var4 + 1)];
+            var5 = this.field_a[var4 + (var4 + 1)];
             if (-1 != var5) {
-              if (param0 == ((lf) this).field_a[var4 + var4]) {
+              if (param0 == this.field_a[var4 + var4]) {
                 return var5;
               } else {
                 var4 = var4 + 1 & var3;
@@ -224,9 +230,9 @@ final class lf {
           lf.a(-22);
           var4 = param0 & var3;
           L1: while (true) {
-            var5 = ((lf) this).field_a[var4 + (var4 + 1)];
+            var5 = this.field_a[var4 + (var4 + 1)];
             if (-1 != var5) {
-              if (param0 == ((lf) this).field_a[var4 + var4]) {
+              if (param0 == this.field_a[var4 + var4]) {
                 return var5;
               } else {
                 var4 = var4 + 1 & var3;

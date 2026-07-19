@@ -13,7 +13,7 @@ final class jf extends n {
         try {
             super.c(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "jf.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw oj.a((Throwable) ((Object) runtimeException), "jf.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -23,8 +23,8 @@ final class jf extends n {
 
     public static void n(int param0) {
         field_pb = null;
-        int var1 = 110;
-        field_ob = null;
+        int var1 = -110 / ((param0 - -30) / 55);
+        field_ob = (String[][]) null;
         field_qb = null;
     }
 
@@ -37,6 +37,7 @@ final class jf extends n {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
@@ -48,10 +49,11 @@ final class jf extends n {
               var10 = 0;
               L1: while (true) {
                 if (512 <= var10) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   L2: {
-                    if (var9 < 0) {
+                    if (-1 < (var9 ^ -1)) {
                       L3: {
                         var3 = (double)var10;
                         var1_double = var3 / var7;
@@ -66,7 +68,7 @@ final class jf extends n {
                       if (2048.0 > var5 * 64.0 + var3) {
                         break L2;
                       } else {
-                        if (var9 < 0) {
+                        if ((var9 ^ -1) > -1) {
                           var9 = var10;
                           break L2;
                         } else {
@@ -85,25 +87,27 @@ final class jf extends n {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1, "jf.R(" + param0 + ')');
+          throw oj.a((Throwable) ((Object) var1), "jf.R(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_tb = -1;
         field_pb = new int[]{34, 34, 36};
         field_rb = false;
-        field_ob = new String[][]{new String[1], new String[1], new String[1], new String[2]};
+        field_ob = new String[][]{new String[]{"Move left and right"}, new String[]{"Jump"}, new String[]{"Hold to attack"}, new String[]{"Hold while not attacking to duck", "Hold while not attacking to block"}};
         field_qb = new ka(0, 0);
     }
 }

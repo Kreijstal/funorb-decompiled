@@ -18,13 +18,8 @@ final class ic extends hg {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        RuntimeException stackIn_3_0 = null;
-        StringBuilder stackIn_3_1 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        String stackIn_5_2 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
@@ -32,15 +27,17 @@ final class ic extends hg {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_2_0 = null;
-        StringBuilder stackOut_2_1 = null;
-        RuntimeException stackOut_4_0 = null;
-        StringBuilder stackOut_4_1 = null;
-        String stackOut_4_2 = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        String stackOut_3_2 = null;
+        int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -49,56 +46,51 @@ final class ic extends hg {
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         try {
-          var3_int = hn.a(param2, 0);
-          var4 = 4 * var3_int + param2.b(param0);
-          return var4;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
-            var3 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("ic.C(");
-            stackIn_4_0 = stackOut_2_0;
-            stackIn_4_1 = stackOut_2_1;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "null";
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              stackIn_5_2 = stackOut_4_2;
+            var3_int = hn.a(param2, param1 + -16777215);
+            var4 = 4 * var3_int + param2.b(param0);
+            if (param1 == 16777215) {
+              stackOut_3_0 = var4;
+              stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
-              stackOut_3_2 = "{...}";
-              stackIn_5_0 = stackOut_3_0;
-              stackIn_5_1 = stackOut_3_1;
-              stackIn_5_2 = stackOut_3_2;
+              stackOut_1_0 = 56;
+              stackIn_2_0 = stackOut_1_0;
+              decompiledRegionSelector0 = 0;
               break L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
-            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(16777215).append(',');
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) (var3);
+            stackOut_5_1 = new StringBuilder().append("ic.C(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
-            if (param2 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -106,7 +98,37 @@ final class ic extends hg {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ')');
+          L2: {
+            stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(',');
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw t.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
         }
     }
 
@@ -130,6 +152,9 @@ final class ic extends hg {
     }
 
     final static void a(int param0, int param1) {
+        if (param0 > -97) {
+            return;
+        }
         oe.c((byte) -14);
         hi.field_q = param1;
     }
@@ -165,8 +190,8 @@ final class ic extends hg {
                 break L1;
               }
             }
-            var3 = (CharSequence) (Object) param0;
-            stackOut_2_0 = cc.field_k.equals((Object) (Object) sf.a(-67, var3));
+            var3 = (CharSequence) ((Object) param0);
+            stackOut_2_0 = cc.field_k.equals(sf.a(-67, var3));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -174,23 +199,23 @@ final class ic extends hg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("ic.E(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -198,7 +223,7 @@ final class ic extends hg {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -216,17 +241,17 @@ final class ic extends hg {
         int var13 = 0;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_12_0 = 0;
         int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_13_0 = 0;
         var13 = EscapeVector.field_A;
         try {
           L0: {
@@ -257,112 +282,120 @@ final class ic extends hg {
             }
             L3: {
               var8 = stackIn_7_0;
-              if (em.field_b > var5_int) {
-                stackOut_9_0 = var5_int;
-                stackIn_10_0 = stackOut_9_0;
+              if (!param0) {
                 break L3;
               } else {
-                stackOut_8_0 = em.field_b;
-                stackIn_10_0 = stackOut_8_0;
+                field_k = (String[]) null;
                 break L3;
               }
             }
             L4: {
-              var9 = stackIn_10_0;
-              if (var6 >= em.field_j) {
-                stackOut_12_0 = em.field_j;
-                stackIn_13_0 = stackOut_12_0;
+              if (em.field_b > var5_int) {
+                stackOut_11_0 = var5_int;
+                stackIn_12_0 = stackOut_11_0;
                 break L4;
               } else {
-                stackOut_11_0 = var6;
-                stackIn_13_0 = stackOut_11_0;
+                stackOut_10_0 = em.field_b;
+                stackIn_12_0 = stackOut_10_0;
                 break L4;
               }
             }
             L5: {
-              var10 = stackIn_13_0;
-              if (param2 < em.field_a) {
+              var9 = stackIn_12_0;
+              if (var6 >= em.field_j) {
+                stackOut_14_0 = em.field_j;
+                stackIn_15_0 = stackOut_14_0;
                 break L5;
+              } else {
+                stackOut_13_0 = var6;
+                stackIn_15_0 = stackOut_13_0;
+                break L5;
+              }
+            }
+            L6: {
+              var10 = stackIn_15_0;
+              if (param2 < em.field_a) {
+                break L6;
               } else {
                 if (param2 < em.field_b) {
                   var11 = param2 + em.field_l * var8;
-                  var12 = -var8 + (1 - -var10) >> 1;
-                  L6: while (true) {
+                  var12 = -var8 + (1 - -var10) >> -571096095;
+                  L7: while (true) {
                     var12--;
-                    if (var12 < 0) {
-                      break L5;
+                    if (-1 < (var12 ^ -1)) {
+                      break L6;
                     } else {
                       em.field_i[var11] = 16777215;
                       var11 = var11 + em.field_l * 2;
-                      continue L6;
+                      continue L7;
                     }
                   }
                 } else {
-                  break L5;
+                  break L6;
                 }
               }
             }
-            L7: {
+            L8: {
               if (param4 < em.field_k) {
-                break L7;
+                break L8;
               } else {
                 if (var6 >= em.field_j) {
-                  break L7;
+                  break L8;
                 } else {
                   var11 = var7 + em.field_l * param4;
-                  var12 = -var7 + var9 + 1 >> 1;
-                  L8: while (true) {
+                  var12 = -var7 + var9 + 1 >> -823102751;
+                  L9: while (true) {
                     var12--;
                     if (0 > var12) {
-                      break L7;
+                      break L8;
                     } else {
                       em.field_i[var11] = 16777215;
                       var11 += 2;
-                      continue L8;
+                      continue L9;
                     }
                   }
                 }
               }
             }
-            L9: {
+            L10: {
               if (em.field_a > var5_int) {
-                break L9;
+                break L10;
               } else {
                 if (var5_int < em.field_b) {
                   var11 = em.field_l * (var8 - -(1 & var5_int - param2)) - -var5_int;
-                  var12 = 1 - (-var10 - -var8) >> 1;
-                  L10: while (true) {
+                  var12 = 1 - (-var10 - -var8) >> 851503265;
+                  L11: while (true) {
                     var12--;
-                    if (var12 < 0) {
-                      break L9;
+                    if (-1 < (var12 ^ -1)) {
+                      break L10;
                     } else {
                       em.field_i[var11] = 16777215;
                       var11 = var11 + 2 * em.field_l;
-                      continue L10;
+                      continue L11;
                     }
                   }
                 } else {
-                  break L9;
+                  break L10;
                 }
               }
             }
-            L11: {
+            L12: {
               if (em.field_k > param4) {
-                break L11;
+                break L12;
               } else {
                 if (var6 >= em.field_j) {
-                  break L11;
+                  break L12;
                 } else {
                   var11 = var7 + var6 * em.field_l - -(1 & -param4 + var6);
-                  var12 = -var7 + (var9 + 1) >> 1;
-                  L12: while (true) {
+                  var12 = -var7 + (var9 + 1) >> 535621697;
+                  L13: while (true) {
                     var12--;
                     if (var12 < 0) {
-                      break L11;
+                      break L12;
                     } else {
                       em.field_i[var11] = 16777215;
                       var11 += 2;
-                      continue L12;
+                      continue L13;
                     }
                   }
                 }
@@ -373,7 +406,7 @@ final class ic extends hg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var5, "ic.B(" + false + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) var5), "ic.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -381,10 +414,6 @@ final class ic extends hg {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_n = new int[]{23, 1, 2, 3, 4, 24, 6, 7, 9, 10};
         field_k = new String[]{"Welcome to the mothership's practice area.", "Press the 'UP' arrow to blast off. Easy does it.", "", "Now land again.", "Keep tapping the 'UP' arrow to limit your speed and land softly.", "", "Blast off and use the 'LEFT' and 'RIGHT' arrow keys to rotate your ship. Try thrusting in different directions.", "Your ship has momentum. To stop moving, thrust against the direction of movement.", "When you are comfortable and confident, proceed upwards.", "Use the 'LEFT' and 'RIGHT' arrow keys to rotate your ship. Try thrusting in different directions.", "Your ship has momentum. To stop moving, thrust against the direction of movement.", "When you are comfortable and confident, proceed upwards.", "Press 'SPACE' or 'SHIFT' to activate your shield. The mothership will power your shield for you.", "Warning: after you leave the mothership, you only have three seconds' worth of shield per level!", "", "Land next to the container to attach your tether.", "", "", "Now blast off, and keep the container away from any walls!", "Practise managing the container's momentum as well as your own in the auto-shield area.", "When you are ready to start the first mission, fly up and out into space.", "Shoot the barrier to open the exit.", "Press 'CTRL' to shoot.", "", "If you are ready to start the first mission, fly up and out into space.", "", "", "Practise managing the container's momentum as well as your own in the auto-shield area.", "When you are ready to start the first mission, fly up and out into space.", ""};
     }

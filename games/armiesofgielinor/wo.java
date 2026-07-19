@@ -11,6 +11,6 @@ public class wo {
     wo field_a;
 
     wo() {
-        ((wo) this).field_g = 0;
+        this.field_g = 0;
     }
 }

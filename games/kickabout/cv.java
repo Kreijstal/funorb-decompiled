@@ -11,6 +11,33 @@ abstract class cv {
     static hu field_f;
 
     final static void a(int param0) {
+        int incrementValue$27 = 0;
+        int incrementValue$28 = 0;
+        int incrementValue$29 = 0;
+        int incrementValue$30 = 0;
+        int incrementValue$31 = 0;
+        int incrementValue$32 = 0;
+        int incrementValue$33 = 0;
+        int incrementValue$34 = 0;
+        int incrementValue$35 = 0;
+        int incrementValue$36 = 0;
+        int incrementValue$37 = 0;
+        int incrementValue$38 = 0;
+        int incrementValue$39 = 0;
+        int incrementValue$40 = 0;
+        int incrementValue$41 = 0;
+        int incrementValue$42 = 0;
+        int incrementValue$43 = 0;
+        int incrementValue$44 = 0;
+        int incrementValue$45 = 0;
+        int incrementValue$46 = 0;
+        int incrementValue$47 = 0;
+        int incrementValue$48 = 0;
+        int incrementValue$49 = 0;
+        int incrementValue$50 = 0;
+        int incrementValue$51 = 0;
+        int incrementValue$52 = 0;
+        int incrementValue$53 = 0;
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -43,12 +70,12 @@ abstract class cv {
           L0: {
             L1: {
               if (rm.field_C != 0) {
-                if (rm.field_C == 1) {
+                if (-2 == (rm.field_C ^ -1)) {
                   oi.field_e = new oh[26];
                   var1_int = 0;
                   var2 = 0;
                   L2: while (true) {
-                    if (var2 >= 14) {
+                    if (-15 >= (var2 ^ -1)) {
                       var2 = -40;
                       var3 = 0;
                       L3: while (true) {
@@ -60,7 +87,7 @@ abstract class cv {
                               break L1;
                             } else {
                               L5: {
-                                int incrementValue$27 = var1_int;
+                                incrementValue$27 = var1_int;
                                 var1_int++;
                                 oi.field_e[incrementValue$27] = new oh(ku.field_g[p.a((byte) -24, 2)], var2, -90);
                                 stackOut_21_0 = var2;
@@ -87,7 +114,7 @@ abstract class cv {
                           }
                         } else {
                           L6: {
-                            int incrementValue$28 = var1_int;
+                            incrementValue$28 = var1_int;
                             var1_int++;
                             oi.field_e[incrementValue$28] = new oh(ku.field_g[p.a((byte) -24, 2)], var2, 1394);
                             stackOut_15_0 = var2;
@@ -124,7 +151,7 @@ abstract class cv {
                           break L7;
                         }
                       }
-                      int incrementValue$29 = var1_int;
+                      incrementValue$29 = var1_int;
                       var1_int++;
                       oi.field_e[incrementValue$29] = new oh(var3_ref_ut, var4, var5);
                       var2++;
@@ -135,24 +162,24 @@ abstract class cv {
                   if (rm.field_C == 2) {
                     oi.field_e = new oh[5];
                     var1_int = 0;
-                    int incrementValue$30 = var1_int;
+                    incrementValue$30 = var1_int;
                     var1_int++;
                     oi.field_e[incrementValue$30] = new oh(oo.field_b[1], 1002, -229);
-                    int incrementValue$31 = var1_int;
+                    incrementValue$31 = var1_int;
                     var1_int++;
                     oi.field_e[incrementValue$31] = new oh(oo.field_b[2], 1126, -206);
-                    int incrementValue$32 = var1_int;
+                    incrementValue$32 = var1_int;
                     var1_int++;
                     oi.field_e[incrementValue$32] = new oh(oo.field_b[0], -332, 200);
-                    int incrementValue$33 = var1_int;
+                    incrementValue$33 = var1_int;
                     var1_int++;
                     oi.field_e[incrementValue$33] = new oh(oo.field_b[0], -170, 1428);
-                    int incrementValue$34 = var1_int;
+                    incrementValue$34 = var1_int;
                     var1_int++;
                     oi.field_e[incrementValue$34] = new oh(oo.field_b[1], -296, 1415);
                     break L1;
                   } else {
-                    if (rm.field_C != 3) {
+                    if ((rm.field_C ^ -1) != -4) {
                       break L1;
                     } else {
                       oi.field_e = new oh[]{};
@@ -163,64 +190,72 @@ abstract class cv {
               } else {
                 oi.field_e = new oh[19];
                 var1_int = 0;
-                int incrementValue$35 = var1_int;
+                incrementValue$35 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$35] = new oh(oo.field_b[0], -156, -31);
-                int incrementValue$36 = var1_int;
+                incrementValue$36 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$36] = new oh(oo.field_b[2], 933, 763);
-                int incrementValue$37 = var1_int;
+                incrementValue$37 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$37] = new oh(oo.field_b[0], 943, -36);
-                int incrementValue$38 = var1_int;
+                incrementValue$38 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$38] = new oh(oo.field_b[0], -141, 1275);
-                int incrementValue$39 = var1_int;
+                incrementValue$39 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$39] = new oh(ku.field_g[0], -390, 629);
-                int incrementValue$40 = var1_int;
+                incrementValue$40 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$40] = new oh(ku.field_g[1], -264, 584);
-                int incrementValue$41 = var1_int;
+                incrementValue$41 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$41] = new oh(ku.field_g[1], -357, 447);
-                int incrementValue$42 = var1_int;
+                incrementValue$42 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$42] = new oh(ku.field_g[0], -259, 379);
-                int incrementValue$43 = var1_int;
+                incrementValue$43 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$43] = new oh(oo.field_b[0], 180, 1371);
-                int incrementValue$44 = var1_int;
+                incrementValue$44 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$44] = new oh(oo.field_b[1], 566, 1422);
-                int incrementValue$45 = var1_int;
+                incrementValue$45 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$45] = new oh(oo.field_b[0], 750, 1353);
-                int incrementValue$46 = var1_int;
+                incrementValue$46 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$46] = new oh(oo.field_b[2], 51, 1415);
-                int incrementValue$47 = var1_int;
+                incrementValue$47 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$47] = new oh(oo.field_b[1], 1014, 211);
-                int incrementValue$48 = var1_int;
+                incrementValue$48 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$48] = new oh(oo.field_b[2], 775, -174);
-                int incrementValue$49 = var1_int;
+                incrementValue$49 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$49] = new oh(oo.field_b[1], 570, -220);
-                int incrementValue$50 = var1_int;
+                incrementValue$50 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$50] = new oh(oo.field_b[0], 211, -199);
-                int incrementValue$51 = var1_int;
+                incrementValue$51 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$51] = new oh(oo.field_b[2], -31, -163);
-                int incrementValue$52 = var1_int;
+                incrementValue$52 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$52] = new oh(oo.field_b[1], -288, 1213);
-                int incrementValue$53 = var1_int;
+                incrementValue$53 = var1_int;
                 var1_int++;
                 oi.field_e[incrementValue$53] = new oh(oo.field_b[2], -200, 1041);
                 break L1;
+              }
+            }
+            L8: {
+              if (param0 == 11383) {
+                break L8;
+              } else {
+                field_e = true;
+                break L8;
               }
             }
             break L0;
@@ -228,7 +263,7 @@ abstract class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "cv.J(" + 11383 + ')');
+          throw nb.a((Throwable) ((Object) var1), "cv.J(" + param0 + ')');
         }
     }
 
@@ -244,16 +279,14 @@ abstract class cv {
         int[] var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = Kickabout.field_G;
         try {
           L0: {
             if (null == ra.field_G) {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 if (cq.field_h instanceof rm) {
@@ -295,35 +328,31 @@ abstract class cv {
                 } else {
                   vs.field_g = null;
                   ve.field_R = new tf();
-                  var13 = bh.field_f;
-                  var11 = var13;
-                  var9 = var11;
+                  var9 = bh.field_f;
                   var7 = var9;
                   var4 = var7;
                   var1_array = var4;
                   var2 = 0;
                   L5: while (true) {
-                    if (var2 >= 8) {
-                      var14 = ha.field_F;
-                      var12 = var14;
-                      var10 = var12;
+                    if ((var2 ^ -1) <= -9) {
+                      var10 = ha.field_F;
                       var8 = var10;
                       var5 = var8;
                       var1_array = var5;
                       var6 = 0;
                       var2 = var6;
                       L6: while (true) {
-                        if (var6 >= 8) {
+                        if (-9 >= (var6 ^ -1)) {
                           mc.field_j = false;
                           break L4;
                         } else {
-                          var14[var6] = 0;
+                          var10[var6] = 0;
                           var6++;
                           continue L6;
                         }
                       }
                     } else {
-                      var13[var2] = 0;
+                      var9[var2] = 0;
                       var2++;
                       continue L5;
                     }
@@ -345,17 +374,23 @@ abstract class cv {
                 if (param0 >= 42) {
                   break L8;
                 } else {
-                  field_a = null;
+                  field_a = (int[]) null;
                   break L8;
                 }
               }
+              decompiledRegionSelector0 = 1;
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "cv.I(" + param0 + ')');
+          throw nb.a((Throwable) ((Object) var1), "cv.I(" + param0 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -364,14 +399,13 @@ abstract class cv {
         field_f = null;
         field_c = null;
         field_a = null;
-        field_b = null;
+        field_b = (ut[][]) null;
+        if (param0 > -5) {
+            cv.a(117);
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = true;
         field_b = new ut[3][4];
         field_a = new int[6];

@@ -11,10 +11,10 @@ abstract class pj extends nb {
 
     final static void a(wj param0, byte param1, int param2, int param3, boolean param4) {
         try {
-            nc.field_p.a(1048576, !param4 ? true : false, 256, 1000000, -93, param0);
-            int var5_int = 2;
+            nc.field_p.a(param3, !param4 ? true : false, param2, 1000000, -93, param0);
+            int var5_int = 2 % ((param1 - -11) / 36);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "pj.A(" + (param0 != null ? "{...}" : "null") + ',' + 113 + ',' + 256 + ',' + 1048576 + ',' + param4 + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "pj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -26,31 +26,31 @@ abstract class pj extends nb {
         if (param0 == 0) {
           return 0;
         } else {
-          if (param0 < 0) {
+          if (-1 < (param0 ^ -1)) {
             throw new IllegalArgumentException("");
           } else {
             var2 = 103 % ((12 - param1) / 36);
             if (param0 >= 32768) {
               if (131072 <= param0) {
-                if (param0 < 33554432) {
+                if ((param0 ^ -1) > -33554433) {
                   if (2097152 <= param0) {
                     if (8388608 > param0) {
                       var3 = 3;
-                      param0 = param0 >> (var3 << 1);
+                      param0 = param0 >> (var3 << 1881480033);
                       return ld.field_n[param0 - 32768] << var3;
                     } else {
                       var3 = 4;
-                      param0 = param0 >> (var3 << 1);
+                      param0 = param0 >> (var3 << 1881480033);
                       return ld.field_n[param0 - 32768] << var3;
                     }
                   } else {
                     if (524288 <= param0) {
                       var3 = 2;
-                      param0 = param0 >> (var3 << 1);
+                      param0 = param0 >> (var3 << 1881480033);
                       return ld.field_n[param0 - 32768] << var3;
                     } else {
                       var3 = 1;
-                      param0 = param0 >> (var3 << 1);
+                      param0 = param0 >> (var3 << 1881480033);
                       return ld.field_n[param0 - 32768] << var3;
                     }
                   }
@@ -58,16 +58,16 @@ abstract class pj extends nb {
                   if (536870912 > param0) {
                     if (param0 >= 134217728) {
                       var3 = 6;
-                      param0 = param0 >> (var3 << 1);
+                      param0 = param0 >> (var3 << 1881480033);
                       return ld.field_n[param0 - 32768] << var3;
                     } else {
                       var3 = 5;
-                      param0 = param0 >> (var3 << 1);
+                      param0 = param0 >> (var3 << 1881480033);
                       return ld.field_n[param0 - 32768] << var3;
                     }
                   } else {
                     var3 = 7;
-                    param0 = param0 >> (var3 << 1);
+                    param0 = param0 >> (var3 << 1881480033);
                     return ld.field_n[param0 - 32768] << var3;
                   }
                 }
@@ -76,10 +76,10 @@ abstract class pj extends nb {
               }
             } else {
               if (param0 < 128) {
-                if (param0 < 8) {
+                if ((param0 ^ -1) > -9) {
                   if (param0 >= 2) {
                     var3 = 7;
-                    param0 = param0 << (var3 << 1);
+                    param0 = param0 << (var3 << -832391999);
                     return ld.field_n[param0 - 32768] >> var3;
                   } else {
                     return 256;
@@ -87,33 +87,33 @@ abstract class pj extends nb {
                 } else {
                   if (32 > param0) {
                     var3 = 6;
-                    param0 = param0 << (var3 << 1);
+                    param0 = param0 << (var3 << -832391999);
                     return ld.field_n[param0 - 32768] >> var3;
                   } else {
                     var3 = 5;
-                    param0 = param0 << (var3 << 1);
+                    param0 = param0 << (var3 << -832391999);
                     return ld.field_n[param0 - 32768] >> var3;
                   }
                 }
               } else {
                 if (2048 <= param0) {
-                  if (param0 >= 8192) {
+                  if ((param0 ^ -1) <= -8193) {
                     var3 = 1;
-                    param0 = param0 << (var3 << 1);
+                    param0 = param0 << (var3 << -832391999);
                     return ld.field_n[param0 - 32768] >> var3;
                   } else {
                     var3 = 2;
-                    param0 = param0 << (var3 << 1);
+                    param0 = param0 << (var3 << -832391999);
                     return ld.field_n[param0 - 32768] >> var3;
                   }
                 } else {
-                  if (param0 >= 512) {
+                  if (-513 >= (param0 ^ -1)) {
                     var3 = 3;
-                    param0 = param0 << (var3 << 1);
+                    param0 = param0 << (var3 << -832391999);
                     return ld.field_n[param0 - 32768] >> var3;
                   } else {
                     var3 = 4;
-                    param0 = param0 << (var3 << 1);
+                    param0 = param0 << (var3 << -832391999);
                     return ld.field_n[param0 - 32768] >> var3;
                   }
                 }
@@ -133,12 +133,12 @@ abstract class pj extends nb {
         } else {
           L0: {
             var3 = 1024 - so.b((param0 + -240) * (-240 + param0) + (param2 - 320) * (-320 + param2));
-            if (var3 < 0) {
+            if (-1 < (var3 ^ -1)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
-              stackOut_2_0 = var3 >> 2;
+              stackOut_2_0 = var3 >> 1829753090;
               stackIn_4_0 = stackOut_2_0;
               break L0;
             }
@@ -153,20 +153,21 @@ abstract class pj extends nb {
     abstract byte[] d(int param0);
 
     pj() {
-        ((pj) this).field_q = true;
+        this.field_q = true;
     }
 
     public static void f(int param0) {
         field_p = null;
         field_u = null;
+        if (param0 != 32) {
+            field_p = (java.math.BigInteger) null;
+            field_s = null;
+            return;
+        }
         field_s = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_s = new int[8192];
         field_u = new int[]{135, 135, 90, 120};
         field_p = new java.math.BigInteger("65537");

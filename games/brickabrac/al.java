@@ -13,6 +13,9 @@ final class al extends nm {
         field_j = null;
         field_n = null;
         field_l = null;
+        if (param0 != 28391) {
+            return;
+        }
         field_m = null;
     }
 
@@ -22,18 +25,14 @@ final class al extends nm {
     }
 
     final static void a(int param0, int param1) {
-        gj.field_c[param0].c((640 + -gj.field_c[param0].field_x) / 2, 19);
+        gj.field_c[param0].c((640 + -gj.field_c[param0].field_x) / 2, param1);
     }
 
     al() {
-        ((al) this).field_i = false;
+        this.field_i = false;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_l = "Add <%0> to friend list";
     }
 }

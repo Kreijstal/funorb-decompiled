@@ -25,13 +25,12 @@ final class rl {
         field_i = null;
         field_h = null;
         field_g = null;
+        if (param0 <= 41) {
+            field_h = (md) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "rl.A(";
         field_f = 0;
         field_b = field_f;

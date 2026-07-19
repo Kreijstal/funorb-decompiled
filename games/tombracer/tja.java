@@ -9,38 +9,39 @@ final class tja extends pb {
     public static void a(boolean param0) {
         field_p = null;
         field_q = null;
+        if (param0) {
+            tja.a(false);
+        }
     }
 
     final boolean a(int param0) {
+        Object discarded$0 = null;
         if (param0 != 14646) {
-            Object discarded$0 = ((tja) this).f(6);
+            discarded$0 = this.f(6);
             return false;
         }
         return false;
     }
 
     final Object f(int param0) {
+        Object discarded$0 = null;
         if (param0 != 29243) {
-            Object discarded$0 = ((tja) this).f(77);
-            return ((tja) this).field_o;
+            discarded$0 = this.f(77);
+            return this.field_o;
         }
-        return ((tja) this).field_o;
+        return this.field_o;
     }
 
     tja(Object param0, int param1) {
         super(param1);
         try {
-            ((tja) this).field_o = param0;
+            this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "tja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "tja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "+2 Loot Bags";
     }
 }

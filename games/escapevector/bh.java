@@ -16,25 +16,29 @@ final class bh extends vj {
     }
 
     final static void c(int param0) {
-        int var1 = -59;
+        int var1 = -59 / ((-15 - param0) / 40);
         if (!(bk.field_r == null)) {
             bk.field_r.a((byte) 87);
         }
     }
 
     final void a(n param0, byte param1) {
+        String discarded$0 = null;
         try {
             if (param1 >= -15) {
-                String discarded$0 = bh.a(29, -33L);
+                discarded$0 = bh.a(29, -33L);
             }
-            param0.a((byte) 100, ((bh) this).field_g);
-            param0.a(((bh) this).field_f, (byte) 111);
+            param0.a((byte) 100, this.field_g);
+            param0.a(this.field_f, (byte) 111);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "bh.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "bh.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void d(int param0) {
+        if (param0 != 11) {
+            return;
+        }
         field_e = null;
     }
 
@@ -55,7 +59,7 @@ final class bh extends vj {
         int var8 = 0;
         int var9 = 0;
         if (param0 >= -73) {
-          return null;
+          return (String) null;
         } else {
           he.field_s.setTime(new Date(param1));
           var3 = he.field_s.get(7);
@@ -71,18 +75,14 @@ final class bh extends vj {
 
     bh(String param0, String param1) {
         try {
-            ((bh) this).field_f = param1;
-            ((bh) this).field_g = param0;
+            this.field_f = param1;
+            this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw t.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_e = "Auto-shield deactivated";
     }
 }

@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class po {
     int field_h;
     String field_g;
@@ -14,26 +12,33 @@ final class po {
     String field_f;
 
     final static void a(boolean param0) {
-        sq.field_c = new kb(re.field_m, rf.field_c, am.field_Zb, ad.field_l, (mh) (Object) of.field_k, tk.field_t);
+        if (!param0) {
+            return;
+        }
+        sq.field_c = new kb(re.field_m, rf.field_c, am.field_Zb, ad.field_l, of.field_k, tk.field_t);
     }
 
     public static void b(int param0) {
         field_e = null;
         field_c = null;
-        int var1 = 0;
+        int var1 = -88 % ((param0 - 44) / 45);
     }
 
     final static void a(int param0) {
         int var1 = 0;
+        if (param0 != 13) {
+            return;
+        }
         if (224 <= ul.field_p) {
             wp.a(1, 256);
         } else {
             var1 = ul.field_p % 32;
-            wp.a(1, 32 + (ul.field_p - var1));
+            wp.a(param0 ^ 12, 32 + (ul.field_p - var1));
         }
     }
 
     final static void a(String param0, java.awt.Color param1, int param2, boolean param3, int param4) {
+        boolean discarded$1 = false;
         Exception var5 = null;
         RuntimeException var5_ref = null;
         Exception var6 = null;
@@ -114,7 +119,7 @@ final class po {
                     }
                     var10 = oj.field_r.getGraphics();
                     var10.setColor(param1);
-                    var10.drawRect(0, 0, 303, 33);
+                    var10.drawRect(0, param4, 303, 33);
                     var10.fillRect(2, 2, param2 * 3, 30);
                     var10.setColor(java.awt.Color.black);
                     var10.drawRect(1, 1, 301, 31);
@@ -122,7 +127,7 @@ final class po {
                     var10.setFont(eo.field_g);
                     var10.setColor(java.awt.Color.white);
                     var10.drawString(param0, (-(param0.length() * 6) + 304) / 2, 22);
-                    boolean discarded$1 = var9.drawImage(oj.field_r, to.field_b / 2 - 152, be.field_g / 2 + -18, (java.awt.image.ImageObserver) null);
+                    discarded$1 = var9.drawImage(oj.field_r, to.field_b / 2 - 152, be.field_g / 2 + -18, (java.awt.image.ImageObserver) null);
                     break L5;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -169,23 +174,23 @@ final class po {
           decompiledCaughtException = decompiledCaughtParameter2;
           L10: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var5_ref;
+            stackOut_18_0 = (RuntimeException) (var5_ref);
             stackOut_18_1 = new StringBuilder().append("po.B(");
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
             stackIn_19_1 = stackOut_18_1;
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
               stackOut_20_2 = "null";
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
               break L10;
             } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
               stackOut_19_2 = "{...}";
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
@@ -194,23 +199,23 @@ final class po {
             }
           }
           L11: {
-            stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+            stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
             stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',');
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
             stackIn_22_1 = stackOut_21_1;
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "null";
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
               break L11;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "{...}";
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
@@ -218,7 +223,7 @@ final class po {
               break L11;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + ',' + param2 + ',' + param3 + ',' + 0 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -335,7 +340,7 @@ final class po {
                         }
                         L9: {
                           sj.field_c = stackIn_25_0;
-                          var2 = 1;
+                          var2 = 57 % ((-7 - param0) / 42);
                           if (sk.field_I == 2) {
                             stackOut_27_0 = me.field_a;
                             stackIn_28_0 = stackOut_27_0;
@@ -370,15 +375,11 @@ final class po {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var1, "po.A(" + -97 + ')');
+          throw qb.a((Throwable) ((Object) var1), "po.A(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = 0;
         field_c = "Not yet achieved";
     }

@@ -22,6 +22,7 @@ final class wnb extends rqa {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
@@ -34,46 +35,52 @@ final class wnb extends rqa {
         var6 = VoidHunters.field_G;
         try {
           L0: {
-            var7 = new int[]{27, 43, 27, 43};
-            var2 = var7;
-            var3 = 0;
-            L1: while (true) {
-              if (4 <= var3) {
-                break L0;
-              } else {
-                var4 = new ml(29);
-                var5 = new ml(32);
-                var5.a(1, 2, new ml(var7[var3]));
-                var5.a(1, 3, new ml(var7[var3]));
-                var5.a(1, 4, new ml(var7[var3]));
-                var4.a(1, 0, var5);
-                param0.a(1, var3, var4);
-                var3++;
-                continue L1;
+            if (param1 == -10) {
+              var7 = new int[]{27, 43, 27, 43};
+              var2 = var7;
+              var3 = 0;
+              L1: while (true) {
+                if (4 <= var3) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  var4 = new ml(29);
+                  var5 = new ml(32);
+                  var5.a(param1 ^ -9, 2, new ml(var7[var3]));
+                  var5.a(1, 3, new ml(var7[var3]));
+                  var5.a(1, 4, new ml(var7[var3]));
+                  var4.a(1, 0, var5);
+                  param0.a(1, var3, var4);
+                  var3++;
+                  continue L1;
+                }
               }
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2_ref;
+            stackOut_7_0 = (RuntimeException) (var2_ref);
             stackOut_7_1 = new StringBuilder().append("wnb.D(");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -81,14 +88,30 @@ final class wnb extends rqa {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + -10 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     public static void e(int param0) {
-        field_o = null;
-        field_r = null;
-        field_p = null;
+        ml var2 = null;
+        if (param0 != 0) {
+          var2 = (ml) null;
+          wnb.a((ml) null, (byte) 45);
+          field_o = null;
+          field_r = null;
+          field_p = null;
+          return;
+        } else {
+          field_o = null;
+          field_r = null;
+          field_p = null;
+          return;
+        }
     }
 
     final static String a(int param0) {
@@ -99,7 +122,7 @@ final class wnb extends rqa {
             return vsa.field_q;
         }
         if (param0 < 54) {
-            field_o = null;
+            field_o = (phb[]) null;
             if (!(wba.field_p.a(4))) {
                 return vsa.field_q;
             }
@@ -113,7 +136,7 @@ final class wnb extends rqa {
 
     final nc a(nc[] param0, int param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
+        nc stackIn_2_0 = null;
         nc stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -122,9 +145,10 @@ final class wnb extends rqa {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         nc stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        nc stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -137,36 +161,38 @@ final class wnb extends rqa {
           L0: {
             rma.a(param0[0].a(25), (byte) 47);
             if (param1 <= -119) {
-              stackOut_3_0 = new nc((Object) (Object) "void");
+              stackOut_3_0 = new nc("void");
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (nc) null;
               stackIn_2_0 = stackOut_1_0;
-              return (nc) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_0 = (RuntimeException) (var3);
             stackOut_5_1 = new StringBuilder().append("wnb.A(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -174,9 +200,13 @@ final class wnb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return stackIn_4_0;
+        }
     }
 
     wnb(String param0, Class[] param1, String param2) {
@@ -184,10 +214,6 @@ final class wnb extends rqa {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_p = "Destroy the base with blueprint ships. No respawns.";
         field_q = 0;
         field_r = "Loading sound effects";

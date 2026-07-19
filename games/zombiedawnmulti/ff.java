@@ -15,33 +15,33 @@ class ff extends qa {
         int var2 = 0;
         var1 = bl.c(-42);
         if (param0 != -4604) {
-          field_t = null;
+          field_t = (String) null;
           var2 = ii.b((byte) -126);
-          qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << 1) + var1, var2 - -(ic.field_g << 1), 12018);
+          qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << -1406805983) + var1, var2 - -(ic.field_g << -1130232991), 12018);
           up.b(-125);
           return;
         } else {
           var2 = ii.b((byte) -126);
-          qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << 1) + var1, var2 - -(ic.field_g << 1), 12018);
+          qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << -1406805983) + var1, var2 - -(ic.field_g << -1130232991), 12018);
           up.b(-125);
           return;
         }
     }
 
     final void c(byte param0) {
-        if (null != ((ff) this).field_w) {
+        if (null != this.field_w) {
           if (param0 != -70) {
             ff.f(-48);
-            ((ff) this).field_w.field_v = ((ff) this).field_v;
-            ((ff) this).field_v.field_w = ((ff) this).field_w;
-            ((ff) this).field_w = null;
-            ((ff) this).field_v = null;
+            this.field_w.field_v = this.field_v;
+            this.field_v.field_w = this.field_w;
+            this.field_w = null;
+            this.field_v = null;
             return;
           } else {
-            ((ff) this).field_w.field_v = ((ff) this).field_v;
-            ((ff) this).field_v.field_w = ((ff) this).field_w;
-            ((ff) this).field_w = null;
-            ((ff) this).field_v = null;
+            this.field_w.field_v = this.field_v;
+            this.field_v.field_w = this.field_w;
+            this.field_w = null;
+            this.field_v = null;
             return;
           }
         } else {
@@ -89,21 +89,33 @@ class ff extends qa {
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            var4 = (vg) (Object) ag.field_i.c(52);
-            L1: while (true) {
+            L1: {
+              if (param0 == 126) {
+                break L1;
+              } else {
+                ff.a(-116, -3);
+                break L1;
+              }
+            }
+            var4 = (vg) ((Object) ag.field_i.c(param0 + -74));
+            L2: while (true) {
               if (var4 == null) {
                 break L0;
               } else {
-                vi.a(7, var4, (byte) -123);
-                var4 = (vg) (Object) ag.field_i.b(6);
-                continue L1;
+                vi.a(param1, var4, (byte) -123);
+                var4 = (vg) ((Object) ag.field_i.b(6));
+                if (var3 == 0) {
+                  continue L2;
+                } else {
+                  return;
+                }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "ff.IA(" + 126 + ',' + 7 + ')');
+          throw fa.a((Throwable) ((Object) var2), "ff.IA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -111,14 +123,15 @@ class ff extends qa {
         field_q = null;
         field_u = null;
         field_t = null;
+        if (param0 != -1130232991) {
+            field_r = (ca) null;
+            field_r = null;
+            return;
+        }
         field_r = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_u = "Auto-respond to <%0>";
         field_q = "Extra knowledge is extra power. Get yourself yet another powerup slot with this trait.";
         field_t = "Create unrated game";

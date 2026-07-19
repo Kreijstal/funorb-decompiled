@@ -17,8 +17,16 @@ final class rk extends oh {
         field_m = null;
         field_o = null;
         field_j = null;
-        field_l = null;
-        field_n = null;
+        if (param0 != -13095) {
+          field_j = (bi) null;
+          field_l = null;
+          field_n = null;
+          return;
+        } else {
+          field_l = null;
+          field_n = null;
+          return;
+        }
     }
 
     private rk() throws Throwable {
@@ -26,10 +34,6 @@ final class rk extends oh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_m = "Total number of fleets built.";
         field_h = "Unfortunately, the exotic physics involved were not fully understood. At some point in 2137, a catastrophic test flight destabilised Earth's sun.";
         field_o = "Click to show the Diplomacy window.";

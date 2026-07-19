@@ -14,19 +14,45 @@ final class li extends ag {
     static wk[][] field_D;
 
     final static boolean c(int param0) {
-        if (!qb.g(2)) {
+        if (param0 == 8) {
+          if (qb.g(2)) {
+            if ((8 & a.field_c) != 0) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if ((8 & a.field_c) != 0) {
+          }
+        } else {
+          li.d(28);
+          if (qb.g(2)) {
+            if ((8 & a.field_c) != 0) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
+          }
         }
-        return true;
     }
 
     final static void e(int param0) {
-        if (!(!vb.field_e)) {
+        L0: {
+          if (vb.field_e) {
             pb.f(pb.field_i, pb.field_l, pb.field_b - pb.field_i, -pb.field_l + pb.field_d);
             qf.field_c.a(false, (byte) 127);
+            break L0;
+          } else {
+            break L0;
+          }
+        }
+        if (param0 != 0) {
+          field_D = (wk[][]) null;
+          return;
+        } else {
+          return;
         }
     }
 
@@ -60,7 +86,7 @@ final class li extends ag {
               if (param0 == -1) {
                 break L1;
               } else {
-                field_y = null;
+                field_y = (String) null;
                 break L1;
               }
             }
@@ -72,23 +98,23 @@ final class li extends ag {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("li.G(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -96,7 +122,7 @@ final class li extends ag {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -106,7 +132,7 @@ final class li extends ag {
         field_y = null;
         field_C = null;
         field_z = null;
-        field_D = null;
+        field_D = (wk[][]) null;
         if (param0 != -30874) {
           li.d(-15);
           field_E = null;
@@ -124,10 +150,6 @@ final class li extends ag {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = new fm(11, 0, 1, 2);
         field_B = new String[]{"Close assault guns", "Flak cannons", "Explosive cannons", "Rifled cannons", "Artillery", "Bombs", "Energised kinetic weapons", "Laser weapons", "Super laser weapons", "Plasma weapons", "EMP weapons", "Rapier missiles", "Air death missiles", "Piercer rockets", "EMP rockets", "Airburst rockets", "Multirockets", "Heavy rockets", "Destructor rockets", "Atomics"};
         field_C = "This game has started.";

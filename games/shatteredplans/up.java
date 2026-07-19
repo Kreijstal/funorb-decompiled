@@ -11,7 +11,7 @@ final class up implements Iterable {
     static String field_e;
 
     public final Iterator iterator() {
-        return (Iterator) (Object) new ip((up) this);
+        return (Iterator) ((Object) new ip((up) (this)));
     }
 
     public static void a(int param0) {
@@ -22,37 +22,38 @@ final class up implements Iterable {
     }
 
     final void a(df param0, int param1) {
+        df discarded$0 = null;
         try {
             if (null != param0.field_j) {
                 param0.a(param1 ^ 22);
             }
-            param0.field_j = ((up) this).field_a.field_j;
+            param0.field_j = this.field_a.field_j;
             if (param1 != 6) {
-                df discarded$0 = ((up) this).a((byte) 95);
+                discarded$0 = this.a((byte) 95);
             }
-            param0.field_h = ((up) this).field_a;
+            param0.field_h = this.field_a;
             param0.field_j.field_h = param0;
             param0.field_h.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "up.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "up.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final df a(byte param0) {
         df var2 = null;
-        Object var3 = null;
-        var2 = ((up) this).field_a.field_h;
+        df var3 = null;
+        var2 = this.field_a.field_h;
         if (param0 == -20) {
-          if (((up) this).field_a == var2) {
+          if (this.field_a == var2) {
             return null;
           } else {
             var2.a(16);
             return var2;
           }
         } else {
-          var3 = null;
-          ((up) this).a((df) null, 90);
-          if (((up) this).field_a == var2) {
+          var3 = (df) null;
+          this.a((df) null, 90);
+          if (this.field_a == var2) {
             return null;
           } else {
             var2.a(16);
@@ -62,16 +63,12 @@ final class up implements Iterable {
     }
 
     up() {
-        ((up) this).field_a = new df();
-        ((up) this).field_a.field_j = ((up) this).field_a;
-        ((up) this).field_a.field_h = ((up) this).field_a;
+        this.field_a = new df();
+        this.field_a.field_j = this.field_a;
+        this.field_a.field_h = this.field_a;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = new int[]{2, 21, 22, 7, 6, 11, 12, 14};
         field_c = "Hide private chat and appear offline to friends";
         field_e = "The game options are not all set.";

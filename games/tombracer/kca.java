@@ -14,9 +14,9 @@ abstract class kca extends kma implements cd {
     final String e(int param0) {
         if (param0 != 1890) {
           field_h = -23;
-          return ((kca) this).a(-1, ((kca) this).field_i.field_o);
+          return this.a(-1, this.field_i.field_o);
         } else {
-          return ((kca) this).a(-1, ((kca) this).field_i.field_o);
+          return this.a(-1, this.field_i.field_o);
         }
     }
 
@@ -27,8 +27,8 @@ abstract class kca extends kma implements cd {
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
         if (param0) {
-          if (null != ((kca) this).field_i.field_o) {
-            if (((kca) this).field_i.field_o.length() == 0) {
+          if (null != this.field_i.field_o) {
+            if (this.field_i.field_o.length() == 0) {
               return true;
             } else {
               return false;
@@ -40,11 +40,11 @@ abstract class kca extends kma implements cd {
           }
         } else {
           field_g = 101;
-          if (null == ((kca) this).field_i.field_o) {
+          if (null == this.field_i.field_o) {
             return true;
           } else {
             L0: {
-              if (((kca) this).field_i.field_o.length() != 0) {
+              if (this.field_i.field_o.length() != 0) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
@@ -61,7 +61,7 @@ abstract class kca extends kma implements cd {
 
     public final void a(int param0, tra param1) {
         RuntimeException runtimeException = null;
-        Object var4 = null;
+        tra var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -84,8 +84,8 @@ abstract class kca extends kma implements cd {
               if (param0 == -6038) {
                 break L1;
               } else {
-                var4 = null;
-                ((kca) this).a(46, (tra) null);
+                var4 = (tra) null;
+                this.a(46, (tra) null);
                 break L1;
               }
             }
@@ -95,23 +95,23 @@ abstract class kca extends kma implements cd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("kca.KA(").append(param0).append(',');
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "null";
               stackIn_6_0 = stackOut_5_0;
               stackIn_6_1 = stackOut_5_1;
               stackIn_6_2 = stackOut_5_2;
               break L2;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
@@ -119,7 +119,7 @@ abstract class kca extends kma implements cd {
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
         }
     }
 
@@ -128,34 +128,31 @@ abstract class kca extends kma implements cd {
             return;
         }
         try {
-            ((kca) this).c(-99);
+            this.c(-99);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "kca.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "kca.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     kca(tra param0) {
         try {
-            ((kca) this).field_i = param0;
+            this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "kca.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            throw tba.a((Throwable) ((Object) runtimeException), "kca.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final it d(int param0) {
+        it discarded$2 = null;
         if (param0 != -1891) {
-          it discarded$2 = ((kca) this).d(102);
-          return ((kca) this).a((byte) 14, ((kca) this).field_i.field_o);
+          discarded$2 = this.d(102);
+          return this.a((byte) 14, this.field_i.field_o);
         } else {
-          return ((kca) this).a((byte) 14, ((kca) this).field_i.field_o);
+          return this.a((byte) 14, this.field_i.field_o);
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = -1;
         field_f = 0;
     }

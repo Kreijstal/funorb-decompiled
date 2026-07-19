@@ -7,6 +7,9 @@ final class ko {
     static String field_a;
 
     public static void b(int param0) {
+        if (param0 <= 108) {
+            return;
+        }
         field_c = null;
         field_a = null;
     }
@@ -18,7 +21,7 @@ final class ko {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        Object var8 = null;
+        CharSequence var8 = null;
         long stackIn_22_0 = 0L;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -46,7 +49,7 @@ final class ko {
               if (param1 == -13820) {
                 break L1;
               } else {
-                var8 = null;
+                var8 = (CharSequence) null;
                 break L1;
               }
             }
@@ -94,7 +97,7 @@ final class ko {
                       }
                     }
                   }
-                  if (var2_long >= 177917621779460413L) {
+                  if (-177917621779460414L >= (var2_long ^ -1L)) {
                     break L3;
                   } else {
                     var5++;
@@ -104,7 +107,7 @@ final class ko {
               }
               L7: while (true) {
                 L8: {
-                  if (var2_long % 37L != 0L) {
+                  if (-1L != (var2_long % 37L ^ -1L)) {
                     break L8;
                   } else {
                     if (var2_long == 0L) {
@@ -125,23 +128,23 @@ final class ko {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var2;
+            stackOut_23_0 = (RuntimeException) (var2);
             stackOut_23_1 = new StringBuilder().append("ko.E(");
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
             stackIn_24_1 = stackOut_23_1;
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_0 = (RuntimeException) ((Object) stackIn_25_0);
+              stackOut_25_1 = (StringBuilder) ((Object) stackIn_25_1);
               stackOut_25_2 = "null";
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
               break L9;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "{...}";
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
@@ -149,13 +152,13 @@ final class ko {
               break L9;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + ',' + param1 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
         }
         return stackIn_22_0;
     }
 
     final static mf[] a(int param0) {
-        int var1 = 0;
+        int var1 = -36 % ((param0 - -55) / 43);
         return new mf[]{ja.field_Wb, gj.field_s, ho.field_n};
     }
 
@@ -163,18 +166,18 @@ final class ko {
         int var1 = 0;
         int var4 = HoldTheLine.field_D;
         hj[] var2 = new hj[28];
-        hj var3 = dl.a(fb.field_i, "overlayfont", false, "");
-        for (var1 = 0; var1 < 10; var1++) {
-            var2[var1] = fj.a(0, 30 * var1, var3, 50, 0, 30);
+        hj var3 = dl.a(fb.field_i, "overlayfont", param0, "");
+        for (var1 = 0; (var1 ^ -1) > -11; var1++) {
+            var2[var1 + 0] = fj.a(0, 30 * var1, var3, 50, 0, 30);
         }
         var2[24] = fj.a(0, 300, var3, 20, 0, 40);
         var2[26] = fj.a(0, 340, var3, 20, 0, 40);
-        for (var1 = 0; var1 < 10; var1++) {
+        for (var1 = 0; -11 < (var1 ^ -1); var1++) {
             var2[var1 + 10] = fj.a(0, 20 * var1, var3, 20, 60, 20);
         }
         var2[27] = fj.a(0, 300, var3, 20, 70, 15);
         var2[25] = fj.a(0, 320, var3, 30, 60, 75);
-        for (var1 = 0; var1 < 4; var1++) {
+        for (var1 = 0; (var1 ^ -1) > -5; var1++) {
             var2[20 - -var1] = fj.a(0, var1 * 60, var3, 30, 90, 60);
         }
         return var2;
@@ -184,22 +187,22 @@ final class ko {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var4 = HoldTheLine.field_D;
         try {
           L0: {
@@ -235,45 +238,49 @@ final class ko {
                 }
               }
             }
+            L3: {
+              if (param0 < -19) {
+                break L3;
+              } else {
+                field_a = (String) null;
+                break L3;
+              }
+            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L4: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("ko.D(").append(-63).append(',');
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_14_0 = (RuntimeException) (var3);
+            stackOut_14_1 = new StringBuilder().append("ko.D(").append(param0).append(',');
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L3;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L3;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L4;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + ',' + param2 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = 0;
         field_a = "<col=2>You are not currently logged in.</col><br><br>To store your score, progress or achievements, you must log in or register by clicking <col=1>Log in/Register</col> above.<br><br>Otherwise, click <col=1>Discard</col> to lose them and continue.";
         field_c = fc.a(-117, 25, 4);

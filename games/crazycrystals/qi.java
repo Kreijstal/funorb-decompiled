@@ -7,13 +7,12 @@ final class qi {
 
     public static void a(boolean param0) {
         field_a = null;
+        if (!param0) {
+            field_a = (dl) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "qi.A(";
     }
 }

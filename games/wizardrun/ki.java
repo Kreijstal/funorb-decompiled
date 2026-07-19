@@ -24,6 +24,7 @@ final class ki extends pe implements qd {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         boolean stackOut_8_0 = false;
@@ -41,24 +42,27 @@ final class ki extends pe implements qd {
             if (super.a(param0, param1, (byte) -105, param3)) {
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
               L1: {
                 if (param2 < -96) {
                   break L1;
                 } else {
-                  ((ki) this).field_J = null;
+                  this.field_J = (pl) null;
                   break L1;
                 }
               }
               if (param1 == 98) {
-                stackOut_8_0 = ((ki) this).a((byte) -117, param3);
+                stackOut_8_0 = this.a((byte) -117, param3);
                 stackIn_9_0 = stackOut_8_0;
-                return stackIn_9_0;
+                decompiledRegionSelector0 = 1;
+                break L0;
               } else {
                 if (99 == param1) {
-                  stackOut_12_0 = ((ki) this).b(param3, 1);
+                  stackOut_12_0 = this.b(param3, 1);
                   stackIn_13_0 = stackOut_12_0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   return false;
@@ -70,23 +74,23 @@ final class ki extends pe implements qd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var5;
+            stackOut_14_0 = (RuntimeException) (var5);
             stackOut_14_1 = new StringBuilder().append("ki.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             if (param3 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "null";
               stackIn_17_0 = stackOut_16_0;
               stackIn_17_1 = stackOut_16_1;
               stackIn_17_2 = stackOut_16_2;
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "{...}";
               stackIn_17_0 = stackOut_15_0;
               stackIn_17_1 = stackOut_15_1;
@@ -94,34 +98,42 @@ final class ki extends pe implements qd {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
         }
-        return stackIn_13_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0;
+          } else {
+            return stackIn_13_0;
+          }
+        }
     }
 
     public ki() {
         super(0, 0, 476, 225, (bf) null);
-        ((ki) this).field_K = new pl(qk.field_h, (ce) null);
-        ((ki) this).field_H = new pl(v.field_c, (ce) null);
-        ((ki) this).field_J = new pl(th.field_b, (ce) null);
+        this.field_K = new pl(qk.field_h, (ce) null);
+        this.field_H = new pl(v.field_c, (ce) null);
+        this.field_J = new pl(th.field_b, (ce) null);
         jl var1 = new jl();
-        ((ki) this).field_K.field_w = (bf) (Object) var1;
-        ((ki) this).field_H.field_w = (bf) (Object) var1;
-        ((ki) this).field_J.field_w = (bf) (Object) var1;
+        this.field_K.field_w = (bf) ((Object) var1);
+        this.field_H.field_w = (bf) ((Object) var1);
+        this.field_J.field_w = (bf) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
-        int var4 = var3 + -var2 >> 1;
-        ((ki) this).field_H.a(120, -48 + (((ki) this).field_n - var2), 30, var4, ((ki) this).field_r + -var3 >> 1);
-        ((ki) this).field_J.a(117, -48 + ((ki) this).field_n - var2, 30, var4, (-var3 + ((ki) this).field_r >> 1) - (-var4 - var2));
-        ((ki) this).field_K.a(120, ((ki) this).field_n - (78 + 2 * var2), 30, var3, -var3 + ((ki) this).field_r >> 1);
-        ((ki) this).field_H.field_s = (ce) this;
-        ((ki) this).field_K.field_s = (ce) this;
-        ((ki) this).field_J.field_s = (ce) this;
-        ((ki) this).field_K.field_p = hb.field_i;
-        ((ki) this).field_J.field_p = hf.field_a;
-        ((ki) this).a((ub) (Object) ((ki) this).field_H, (byte) 101);
-        ((ki) this).a((ub) (Object) ((ki) this).field_K, (byte) 47);
-        ((ki) this).a((ub) (Object) ((ki) this).field_J, (byte) 46);
+        int var4 = var3 + -var2 >> 66502817;
+        this.field_H.a(120, -48 + (this.field_n - var2), 30, var4, this.field_r + -var3 >> -1162633919);
+        this.field_J.a(117, -48 + this.field_n - var2, 30, var4, (-var3 + this.field_r >> -471601983) - (-var4 - var2));
+        this.field_K.a(120, this.field_n - (78 + 2 * var2), 30, var3, -var3 + this.field_r >> -1946047935);
+        this.field_H.field_s = (ce) (this);
+        this.field_K.field_s = (ce) (this);
+        this.field_J.field_s = (ce) (this);
+        this.field_K.field_p = hb.field_i;
+        this.field_J.field_p = hf.field_a;
+        this.a((ub) (this.field_H), (byte) 101);
+        this.a((ub) (this.field_K), (byte) 47);
+        this.a((ub) (this.field_J), (byte) 46);
     }
 
     public static void g(byte param0) {
@@ -133,9 +145,9 @@ final class ki extends pe implements qd {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = ((ki) this).field_o - -param0;
-        int var6 = ((ki) this).field_l + param3;
-        int discarded$0 = gh.field_b.a(ci.field_c, var5 + 20, 20 + var6, ((ki) this).field_r + -40, ((ki) this).field_n + -50, 16777215, -1, 1, 0, gh.field_b.field_M);
+        int var5 = this.field_o - -param0;
+        int var6 = this.field_l + param3;
+        int discarded$0 = gh.field_b.a(ci.field_c, var5 + 20, 20 + var6, this.field_r + -40, this.field_n + -50, 16777215, -1, 1, 0, gh.field_b.field_M);
         super.a(param0, param1, param2, param3);
     }
 
@@ -177,15 +189,15 @@ final class ki extends pe implements qd {
         try {
           L0: {
             L1: {
-              if (((ki) this).field_H == param1) {
+              if (this.field_H == param1) {
                 pc.a(-1);
                 break L1;
               } else {
-                if (param1 == ((ki) this).field_K) {
+                if (param1 == this.field_K) {
                   w.b(-1);
                   break L1;
                 } else {
-                  if (param1 != ((ki) this).field_J) {
+                  if (param1 != this.field_J) {
                     break L1;
                   } else {
                     jf.a(55);
@@ -205,23 +217,23 @@ final class ki extends pe implements qd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var6 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var6;
+            stackOut_10_0 = (RuntimeException) (var6);
             stackOut_10_1 = new StringBuilder().append("ki.DA(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L2;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -229,16 +241,12 @@ final class ki extends pe implements qd {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_L = "This game has been updated! Please reload this page.";
-        field_G = new char[]{'€', ' ', '‚', 'ƒ', '„', '…', '†', '‡', 'ˆ', '‰', 'Š', '‹', 'Œ', ' ', 'Ž', ' ', ' ', '‘', '’', '“', '”', '•', '–', '—', '˜', '™', 'š', '›', 'œ', ' ', 'ž', 'Ÿ'};
+        field_G = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
     }
 }

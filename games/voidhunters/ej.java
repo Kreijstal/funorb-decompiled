@@ -11,28 +11,24 @@ final class ej implements dja {
         field_a = null;
         field_c = null;
         if (param0 < 102) {
-            field_b = null;
+            field_b = (String) null;
         }
     }
 
     public final tv a(byte param0) {
         int var2 = -12 % ((-64 - param0) / 50);
-        return (tv) (Object) new nbb();
+        return (tv) ((Object) new nbb());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
             ej.b((byte) 12);
-            return (tv[]) (Object) new nbb[param1];
+            return (tv[]) ((Object) new nbb[param1]);
         }
-        return (tv[]) (Object) new nbb[param1];
+        return (tv[]) ((Object) new nbb[param1]);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "Releases powerful homing ordnance";
     }
 }

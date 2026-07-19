@@ -14,6 +14,9 @@ final class o extends mc {
 
     public static void a(int param0) {
         field_p = null;
+        if (param0 != -11961) {
+            return;
+        }
         field_r = null;
         field_o = null;
         field_n = null;
@@ -21,21 +24,29 @@ final class o extends mc {
 
     final static void b(byte param0) {
         int var1 = 0;
-        om.field_Rb = mk.field_b.b(cd.field_c[14]);
-        var1 = mk.field_b.b(cd.field_c[15]);
-        if (om.field_Rb < var1) {
-          om.field_Rb = var1;
-          return;
+        if (param0 <= 0) {
+          om.field_Rb = mk.field_b.b(cd.field_c[14]);
+          var1 = mk.field_b.b(cd.field_c[15]);
+          if (om.field_Rb < var1) {
+            om.field_Rb = var1;
+            return;
+          } else {
+            return;
+          }
         } else {
-          return;
+          field_p = (String) null;
+          om.field_Rb = mk.field_b.b(cd.field_c[14]);
+          var1 = mk.field_b.b(cd.field_c[15]);
+          if (om.field_Rb >= var1) {
+            return;
+          } else {
+            om.field_Rb = var1;
+            return;
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "<%0> has not yet unlocked this option for use.";
         field_n = "Click";
         field_p = "Invite more players, or alternatively try changing the following settings:  ";

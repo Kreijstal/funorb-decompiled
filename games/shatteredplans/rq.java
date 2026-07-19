@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class rq implements iq {
     static String field_c;
     static int[] field_j;
@@ -26,11 +24,13 @@ final class rq implements iq {
             field_j = null;
             field_b = null;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "rq.B(" + param0 + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "rq.B(" + param0 + ')');
         }
     }
 
     public final void a(vg param0, int param1, boolean param2, int param3, byte param4) {
+        int discarded$2 = 0;
+        ve discarded$3 = null;
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -80,16 +80,16 @@ final class rq implements iq {
             }
             L3: {
               var6_int = stackIn_8_0;
-              int discarded$2 = ((rq) this).field_f.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_s + "</u>", param1 - -param0.field_m, param3 - -param0.field_q, param0.field_x, param0.field_n, var6_int, -1, ((rq) this).field_a, ((rq) this).field_d, ((rq) this).field_f.field_q + ((rq) this).field_f.field_J);
+              discarded$2 = this.field_f.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_s + "</u>", param1 - -param0.field_m, param3 - -param0.field_q, param0.field_x, param0.field_n, var6_int, -1, this.field_a, this.field_d, this.field_f.field_q + this.field_f.field_J);
               if (!param0.f(1)) {
                 break L3;
               } else {
                 L4: {
                   L5: {
-                    var7 = ((rq) this).field_f.c(param0.field_s);
-                    var8 = ((rq) this).field_f.field_J + ((rq) this).field_f.field_q;
+                    var7 = this.field_f.c(param0.field_s);
+                    var8 = this.field_f.field_J + this.field_f.field_q;
                     var9 = param0.field_m + param1;
-                    if (((rq) this).field_a != 2) {
+                    if (-3 != (this.field_a ^ -1)) {
                       break L5;
                     } else {
                       var9 = var9 + (-var7 + param0.field_x);
@@ -100,8 +100,8 @@ final class rq implements iq {
                       }
                     }
                   }
-                  if (((rq) this).field_a == 1) {
-                    var9 = var9 + (-var7 + param0.field_x >> 1);
+                  if ((this.field_a ^ -1) == -2) {
+                    var9 = var9 + (-var7 + param0.field_x >> 2024047073);
                     break L4;
                   } else {
                     break L4;
@@ -110,11 +110,11 @@ final class rq implements iq {
                 L6: {
                   L7: {
                     var10 = param0.field_q + param3;
-                    if (((rq) this).field_d == 2) {
+                    if (-3 == (this.field_d ^ -1)) {
                       break L7;
                     } else {
-                      if (((rq) this).field_d == 1) {
-                        var10 = var10 + (-var8 + param0.field_n >> 1);
+                      if (-2 == (this.field_d ^ -1)) {
+                        var10 = var10 + (-var8 + param0.field_n >> -57161311);
                         if (var11 == 0) {
                           break L6;
                         } else {
@@ -136,7 +136,7 @@ final class rq implements iq {
               if (param4 == 12) {
                 break L8;
               } else {
-                ve discarded$3 = rq.a(true, -120, true);
+                discarded$3 = rq.a(true, -120, true);
                 break L8;
               }
             }
@@ -146,23 +146,23 @@ final class rq implements iq {
           decompiledCaughtException = decompiledCaughtParameter0;
           L9: {
             var6 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var6;
+            stackOut_30_0 = (RuntimeException) (var6);
             stackOut_30_1 = new StringBuilder().append("rq.E(");
             stackIn_33_0 = stackOut_30_0;
             stackIn_33_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param0 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_0 = (RuntimeException) ((Object) stackIn_33_0);
+              stackOut_33_1 = (StringBuilder) ((Object) stackIn_33_1);
               stackOut_33_2 = "null";
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
               break L9;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_34_0 = stackOut_31_0;
               stackIn_34_1 = stackOut_31_1;
@@ -170,7 +170,7 @@ final class rq implements iq {
               break L9;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw r.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -214,7 +214,7 @@ final class rq implements iq {
                       L4: while (true) {
                         L5: {
                           L6: {
-                            if (~var6 <= ~var3) {
+                            if ((var6 ^ -1) <= (var3 ^ -1)) {
                               break L6;
                             } else {
                               var5[var6] = eo.field_fb[we.a(255, (int) var4[var6])];
@@ -248,7 +248,7 @@ final class rq implements iq {
                 break L2;
               }
               pd.a(stackIn_13_0);
-              stackOut_13_0 = (bi[]) var1;
+              stackOut_13_0 = (bi[]) (var1);
               stackIn_14_0 = stackOut_13_0;
               break L0;
             }
@@ -256,7 +256,7 @@ final class rq implements iq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1_ref, "rq.C(" + param0 + ')');
+          throw r.a((Throwable) ((Object) var1_ref), "rq.C(" + param0 + ')');
         }
         return stackIn_14_0;
     }
@@ -342,7 +342,7 @@ final class rq implements iq {
               stackIn_2_1 = stackOut_1_1;
               stackIn_2_2 = stackOut_1_2;
               if (hp.field_l != d.field_a.field_Db) {
-                stackOut_4_0 = (ub) (Object) stackIn_4_0;
+                stackOut_4_0 = (ub) ((Object) stackIn_4_0);
                 stackOut_4_1 = stackIn_4_1;
                 stackOut_4_2 = stackIn_4_2;
                 stackOut_4_3 = 0;
@@ -352,7 +352,7 @@ final class rq implements iq {
                 stackIn_5_3 = stackOut_4_3;
                 break L1;
               } else {
-                stackOut_2_0 = (ub) (Object) stackIn_2_0;
+                stackOut_2_0 = (ub) ((Object) stackIn_2_0);
                 stackOut_2_1 = stackIn_2_1;
                 stackOut_2_2 = stackIn_2_2;
                 stackOut_2_3 = 1;
@@ -383,7 +383,7 @@ final class rq implements iq {
                     L6: {
                       cg.field_A.field_s = false;
                       rj.field_p.field_z = ea.field_d;
-                      if (po.field_b != 1) {
+                      if (-2 != (po.field_b ^ -1)) {
                         break L6;
                       } else {
                         d.field_a.field_Db.field_zb.field_z = km.field_X;
@@ -417,10 +417,10 @@ final class rq implements iq {
                 }
               }
               cg.field_A.field_s = true;
-              rj.field_p.field_z = re.a(af.field_b, 4371, new String[1]);
+              rj.field_p.field_z = re.a(af.field_b, 4371, new String[]{jo.field_d});
               d.field_a.field_Db.field_zb.field_z = null;
               var6 = null;
-              var7 = (ve) (Object) var4.d(0);
+              var7 = (ve) ((Object) var4.d(0));
               L8: while (true) {
                 L9: {
                   L10: {
@@ -485,7 +485,7 @@ final class rq implements iq {
                           if (var7.field_Bb == null) {
                             break L15;
                           } else {
-                            if (var7.field_Bb.equals((Object) (Object) "")) {
+                            if (var7.field_Bb.equals("")) {
                               break L15;
                             } else {
                               var7.field_Db.field_pb = ke.field_i;
@@ -520,13 +520,13 @@ final class rq implements iq {
                           stackIn_46_0 = stackOut_43_0;
                           stackIn_44_0 = stackOut_43_0;
                           if (var14 > 0) {
-                            stackOut_46_0 = (qr) (Object) stackIn_46_0;
+                            stackOut_46_0 = (qr) ((Object) stackIn_46_0);
                             stackOut_46_1 = nq.a(var7.field_Cb.field_nb, var7.field_Ab, var14);
                             stackIn_47_0 = stackOut_46_0;
                             stackIn_47_1 = stackOut_46_1;
                             break L17;
                           } else {
-                            stackOut_44_0 = (qr) (Object) stackIn_44_0;
+                            stackOut_44_0 = (qr) ((Object) stackIn_44_0);
                             stackOut_44_1 = var7.field_Ab;
                             stackIn_47_0 = stackOut_44_0;
                             stackIn_47_1 = stackOut_44_1;
@@ -540,13 +540,13 @@ final class rq implements iq {
                           stackIn_50_0 = stackOut_47_0;
                           stackIn_48_0 = stackOut_47_0;
                           if (null != var7.field_xb) {
-                            stackOut_50_0 = (qr) (Object) stackIn_50_0;
+                            stackOut_50_0 = (qr) ((Object) stackIn_50_0);
                             stackOut_50_1 = var7.field_xb;
                             stackIn_51_0 = stackOut_50_0;
                             stackIn_51_1 = stackOut_50_1;
                             break L18;
                           } else {
-                            stackOut_48_0 = (qr) (Object) stackIn_48_0;
+                            stackOut_48_0 = (qr) ((Object) stackIn_48_0);
                             stackOut_48_1 = jj.field_p;
                             stackIn_51_0 = stackOut_48_0;
                             stackIn_51_1 = stackOut_48_1;
@@ -556,7 +556,7 @@ final class rq implements iq {
                         L19: {
                           stackIn_51_0.field_z = stackIn_51_1;
                           var7.field_Fb.a(80, cr.field_c, (byte) 109, var9, -80 + var7.field_K);
-                          if (var7.field_Cb.field_z.equals((Object) (Object) var7.field_Ab)) {
+                          if (var7.field_Cb.field_z.equals(var7.field_Ab)) {
                             stackOut_54_0 = 0;
                             stackIn_55_0 = stackOut_54_0;
                             break L19;
@@ -580,7 +580,7 @@ final class rq implements iq {
                           if (var8 == 0) {
                             break L21;
                           } else {
-                            d.field_a.field_Eb.a(2, (qr) var6, (qr) (Object) var7, (byte) 98);
+                            d.field_a.field_Eb.a(2, (qr) (var6), var7, (byte) 98);
                             break L21;
                           }
                         }
@@ -598,12 +598,12 @@ final class rq implements iq {
                               }
                             }
                             L25: {
-                              if (var7.field_rb == 0) {
+                              if ((var7.field_rb ^ -1) == -1) {
                                 break L25;
                               } else {
                                 L26: {
                                   var16 = var7.field_Ab;
-                                  tp.a((int[]) null, 0L, (String) null, var16, 293, d.field_a.field_Db, (qr) (Object) var7, -1, -1);
+                                  tp.a((int[]) null, 0L, (String) null, var16, 293, d.field_a.field_Db, var7, -1, -1);
                                   if (null == var7.field_xb) {
                                     break L26;
                                   } else {
@@ -614,7 +614,7 @@ final class rq implements iq {
                                         L27: {
                                           if (!ae.field_b) {
                                             var17 = hp.field_m;
-                                            var18 = re.a(tk.field_B, 4371, new String[1]);
+                                            var18 = re.a(tk.field_B, 4371, new String[]{var16});
                                             var17.field_j.a(1, 8, var18);
                                             break L27;
                                           } else {
@@ -622,7 +622,7 @@ final class rq implements iq {
                                           }
                                         }
                                         var17 = hp.field_m;
-                                        var18 = re.a(se.field_e, 4371, new String[1]);
+                                        var18 = re.a(se.field_e, 4371, new String[]{var16});
                                         var17.field_j.a(1, 18, var18);
                                         break L26;
                                       } else {
@@ -631,7 +631,7 @@ final class rq implements iq {
                                     }
                                   }
                                 }
-                                var5 = (Object) (Object) var7;
+                                var5 = var7;
                                 if (var19 == 0) {
                                   break L22;
                                 } else {
@@ -657,8 +657,8 @@ final class rq implements iq {
                           dn.field_k = var7.field_Bb;
                           break L22;
                         }
-                        var6 = (Object) (Object) var7;
-                        var7 = (ve) (Object) var4.a((byte) -71);
+                        var6 = var7;
+                        var7 = (ve) ((Object) var4.a((byte) -71));
                         if (var19 == 0) {
                           continue L8;
                         } else {
@@ -667,7 +667,7 @@ final class rq implements iq {
                       }
                     }
                   }
-                  if (d.field_a.field_Fb.field_rb == 0) {
+                  if (-1 == (d.field_a.field_Fb.field_rb ^ -1)) {
                     break L9;
                   } else {
                     lg.field_e = new jp(d.field_a.field_Fb.field_B, d.field_a.field_Fb.field_N, d.field_a.field_Fb.field_K, d.field_a.field_Fb.field_mb, km.field_A, h.field_v, ii.field_u, ii.field_u);
@@ -691,18 +691,18 @@ final class rq implements iq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var3, "rq.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw r.a((Throwable) ((Object) var3), "rq.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return (ve) (Object) stackIn_102_0;
+        return (ve) ((Object) stackIn_102_0);
     }
 
     public rq() {
         try {
-            ((rq) this).field_f = gn.field_u;
-            ((rq) this).field_a = 1;
-            ((rq) this).field_d = 1;
+            this.field_f = gn.field_u;
+            this.field_a = 1;
+            this.field_d = 1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "rq.<init>()");
+            throw r.a((Throwable) ((Object) runtimeException), "rq.<init>()");
         }
     }
 
@@ -726,32 +726,32 @@ final class rq implements iq {
         String stackOut_4_2 = null;
         try {
           L0: {
-            ((rq) this).field_f = param0;
-            ((rq) this).field_a = param1;
-            ((rq) this).field_d = param2;
+            this.field_f = param0;
+            this.field_a = param1;
+            this.field_d = param2;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_0 = (RuntimeException) (runtimeException);
             stackOut_3_1 = new StringBuilder().append("rq.<init>(");
             stackIn_6_0 = stackOut_3_0;
             stackIn_6_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
             stackIn_4_1 = stackOut_3_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "{...}";
               stackIn_7_0 = stackOut_4_0;
               stackIn_7_1 = stackOut_4_1;
@@ -759,7 +759,7 @@ final class rq implements iq {
               break L1;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -790,7 +790,7 @@ final class rq implements iq {
               }
               L3: {
                 var2 = tf.field_n;
-                if (var2 <= 0) {
+                if ((var2 ^ -1) >= -1) {
                   break L3;
                 } else {
                   L4: {
@@ -798,7 +798,7 @@ final class rq implements iq {
                       if (1 == var2) {
                         break L5;
                       } else {
-                        tl.field_z = re.a(ia.field_M, 4371, new String[1]);
+                        tl.field_z = re.a(ia.field_M, 4371, new String[]{Integer.toString(var2)});
                         if (var3 == 0) {
                           break L4;
                         } else {
@@ -809,7 +809,7 @@ final class rq implements iq {
                     tl.field_z = kf.field_h;
                     break L4;
                   }
-                  tl.field_z = lr.a(88, new CharSequence[3]);
+                  tl.field_z = lr.a(88, new CharSequence[]{(CharSequence) ((Object) tl.field_z), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) pr.field_b)});
                   break L3;
                 }
               }
@@ -822,15 +822,11 @@ final class rq implements iq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw r.a((Throwable) (Object) runtimeException, "rq.A(" + param0 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "rq.A(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_i = 0;
         field_e = 0;
         field_j = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};

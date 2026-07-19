@@ -13,11 +13,23 @@ final class aq extends oh {
     static double field_h;
 
     final static boolean a(int param0, boolean param1, int param2, boolean param3) {
+        boolean discarded$1 = false;
         int var4 = 0;
         int var5 = 0;
-        int stackIn_37_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_35_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_41_0 = 0;
+        int stackOut_29_0 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_40_0 = 0;
+        int stackOut_39_0 = 0;
+        L0: {
+          if (param1) {
+            break L0;
+          } else {
+            discarded$1 = aq.a(-82);
+            break L0;
+          }
+        }
         if (!param3) {
           if (dc.field_c[param0] <= dc.field_c[param2]) {
             if (dc.field_c[param0] < dc.field_c[param2]) {
@@ -33,18 +45,18 @@ final class aq extends oh {
                     if (var5 < var4) {
                       return false;
                     } else {
-                      L0: {
+                      L1: {
                         if (param0 <= param2) {
-                          stackOut_36_0 = 0;
-                          stackIn_37_0 = stackOut_36_0;
-                          break L0;
+                          stackOut_29_0 = 0;
+                          stackIn_30_0 = stackOut_29_0;
+                          break L1;
                         } else {
-                          stackOut_35_0 = 1;
-                          stackIn_37_0 = stackOut_35_0;
-                          break L0;
+                          stackOut_28_0 = 1;
+                          stackIn_30_0 = stackOut_28_0;
+                          break L1;
                         }
                       }
-                      return stackIn_37_0 != 0;
+                      return stackIn_30_0 != 0;
                     }
                   }
                 } else {
@@ -61,7 +73,9 @@ final class aq extends oh {
           if (kf.field_f[param0] <= kf.field_f[param2]) {
             if (kf.field_f[param2] <= kf.field_f[param0]) {
               if (dc.field_c[param2] >= dc.field_c[param0]) {
-                if (dc.field_c[param2] <= dc.field_c[param0]) {
+                if (dc.field_c[param2] > dc.field_c[param0]) {
+                  return false;
+                } else {
                   var4 = aj.field_d[param2] + fb.field_zb[param2] + f.field_y[param2];
                   var5 = f.field_y[param0] + fb.field_zb[param0] - -aj.field_d[param0];
                   if (var4 < var5) {
@@ -70,15 +84,20 @@ final class aq extends oh {
                     if (var5 < var4) {
                       return false;
                     } else {
-                      if (param0 <= param2) {
-                        return false;
-                      } else {
-                        return true;
+                      L2: {
+                        if (param0 <= param2) {
+                          stackOut_40_0 = 0;
+                          stackIn_41_0 = stackOut_40_0;
+                          break L2;
+                        } else {
+                          stackOut_39_0 = 1;
+                          stackIn_41_0 = stackOut_39_0;
+                          break L2;
+                        }
                       }
+                      return stackIn_41_0 != 0;
                     }
                   }
-                } else {
-                  return false;
                 }
               } else {
                 return true;
@@ -99,9 +118,16 @@ final class aq extends oh {
         field_n = null;
         field_p = null;
         field_k = null;
+        if (param0 < 71) {
+            bi var2 = (bi) null;
+            aq.a((byte) 4, (bi) null);
+        }
     }
 
     final static boolean a(int param0) {
+        if (param0 < 2) {
+            return false;
+        }
         return np.field_m;
     }
 
@@ -111,7 +137,7 @@ final class aq extends oh {
             wh.a(false);
             gf.a(param1.field_B, param1.field_o, param1.field_p);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "aq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw r.a((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -123,7 +149,7 @@ final class aq extends oh {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         var5 = dn.a(4);
         var2 = var5;
-        var3 = 0;
+        var3 = param1;
         L0: while (true) {
           if (var5.length > var3) {
             if (var5[var3].field_c == param0) {
@@ -143,10 +169,6 @@ final class aq extends oh {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_k = "When ready, press <col=2F5FBF>'ENTER'</col> to continue.";
         field_n = "this resource.";
         field_h = 0.0;

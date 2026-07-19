@@ -59,7 +59,7 @@ final class ui {
             L1: while (true) {
               L2: {
                 L3: {
-                  if (~var12 <= ~var11_ref_er__.length) {
+                  if ((var12 ^ -1) <= (var11_ref_er__.length ^ -1)) {
                     break L3;
                   } else {
                     var13 = var11_ref_er__[var12];
@@ -117,7 +117,7 @@ final class ui {
               L8: while (true) {
                 L9: {
                   L10: {
-                    if (~var11 <= ~param0) {
+                    if ((var11 ^ -1) <= (param0 ^ -1)) {
                       break L10;
                     } else {
                       stackOut_18_0 = 0;
@@ -130,7 +130,7 @@ final class ui {
                         L11: while (true) {
                           L12: {
                             L13: {
-                              if (~var9_int >= ~var12) {
+                              if ((var9_int ^ -1) >= (var12 ^ -1)) {
                                 break L13;
                               } else {
                                 var10[6].field_F[var12 + (-1 + (var9_int - var11)) * var9_int] = param2;
@@ -236,7 +236,7 @@ final class ui {
                     L21: while (true) {
                       L22: {
                         L23: {
-                          if (~param8 >= ~var11) {
+                          if ((param8 ^ -1) >= (var11 ^ -1)) {
                             break L23;
                           } else {
                             stackOut_43_0 = 0;
@@ -249,7 +249,7 @@ final class ui {
                               L24: while (true) {
                                 L25: {
                                   L26: {
-                                    if (~param0 >= ~var12) {
+                                    if ((param0 ^ -1) >= (var12 ^ -1)) {
                                       break L26;
                                     } else {
                                       var10[7].field_F[var11 + (-var12 + (var9_int + -1)) * param8] = param2;
@@ -287,7 +287,7 @@ final class ui {
                       var11 = stackIn_53_0;
                       L27: while (true) {
                         L28: {
-                          if (param8 >> 1 <= var11) {
+                          if (param8 >> -351733375 <= var11) {
                             break L28;
                           } else {
                             var12 = 0;
@@ -324,7 +324,7 @@ final class ui {
                             }
                           }
                         }
-                        stackOut_63_0 = (er[]) var10;
+                        stackOut_63_0 = (er[]) (var10);
                         stackIn_64_0 = stackOut_63_0;
                         break L0;
                       }
@@ -337,12 +337,13 @@ final class ui {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var9, "ui.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw wn.a((Throwable) ((Object) var9), "ui.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
         return stackIn_64_0;
     }
 
     final static boolean c(int param0) {
+        er[] discarded$2 = null;
         RuntimeException var1 = null;
         int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -354,7 +355,7 @@ final class ui {
               if (param0 <= -100) {
                 break L1;
               } else {
-                er[] discarded$2 = ui.a(-32, -26, -60, -33, 84, -75, 106, 100, 13);
+                discarded$2 = ui.a(-32, -26, -60, -33, 84, -75, 106, 100, 13);
                 break L1;
               }
             }
@@ -381,7 +382,7 @@ final class ui {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var1, "ui.E(" + param0 + ')');
+          throw wn.a((Throwable) ((Object) var1), "ui.E(" + param0 + ')');
         }
         return stackIn_10_0 != 0;
     }
@@ -394,7 +395,7 @@ final class ui {
             field_e = null;
             field_b = null;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ui.C(" + param0 + ')');
+            throw wn.a((Throwable) ((Object) runtimeException), "ui.C(" + param0 + ')');
         }
     }
 
@@ -414,7 +415,7 @@ final class ui {
               if (param2 >= 85) {
                 break L1;
               } else {
-                field_b = null;
+                field_b = (cr) null;
                 break L1;
               }
             }
@@ -425,7 +426,7 @@ final class ui {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) runtimeException, "ui.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "ui.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -456,7 +457,7 @@ final class ui {
                 break L1;
               } else {
                 if (null != sj.field_d) {
-                  var2 = (Object) (Object) w.field_E;
+                  var2 = w.field_E;
                   break L1;
                 } else {
                   break L1;
@@ -475,7 +476,7 @@ final class ui {
                       if (c.a(sm.field_Kb, (byte) -125)) {
                         break L4;
                       } else {
-                        var2 = (Object) (Object) Vertigo2.a(new String[1], bj.field_b, param0 ^ 410);
+                        var2 = Vertigo2.a(new String[]{ea.field_b}, bj.field_b, param0 ^ 410);
                         if (var10 == 0) {
                           break L3;
                         } else {
@@ -483,13 +484,13 @@ final class ui {
                         }
                       }
                     }
-                    var2 = (Object) (Object) Vertigo2.a(new String[1], qo.field_E, 91);
+                    var2 = Vertigo2.a(new String[]{ea.field_b}, qo.field_E, 91);
                     break L3;
                   }
                   if (!pm.field_a) {
                     break L2;
                   } else {
-                    dh.a((byte) -114, (String) var2, 2, (String) null, 0, (String) null);
+                    dh.a((byte) -114, (String) (var2), 2, (String) null, 0, (String) null);
                     on.a(9110);
                     break L2;
                   }
@@ -506,7 +507,7 @@ final class ui {
                   if (null != gk.field_c) {
                     break L5;
                   } else {
-                    var2 = (Object) (Object) na.field_l;
+                    var2 = na.field_l;
                     break L5;
                   }
                 }
@@ -516,13 +517,13 @@ final class ui {
               if (param0 == -485) {
                 break L6;
               } else {
-                field_b = null;
+                field_b = (cr) null;
                 break L6;
               }
             }
             L7: {
               if (null != var2) {
-                ir.a((String) null, lj.field_p, (String) var2, 0, 0);
+                ir.a((String) null, lj.field_p, (String) (var2), 0, 0);
                 break L7;
               } else {
                 L8: {
@@ -533,10 +534,10 @@ final class ui {
                   var6 = field_g;
                   var7 = 0;
                   if (var6 == 2) {
-                    var4 = Vertigo2.a(new String[1], di.field_B, -114);
-                    var8 = Vertigo2.a(new String[1], af.field_L, -128);
+                    var4 = Vertigo2.a(new String[]{ea.field_b}, di.field_B, -114);
+                    var8 = Vertigo2.a(new String[]{var3}, af.field_L, -128);
                     var7 = -485 + (dj.field_d.field_Fb - -field_b.field_Fb) - (-cg.field_f.c(var8) + cg.field_f.c(var4));
-                    if (var7 < 0) {
+                    if ((var7 ^ -1) > -1) {
                       var7 = 0;
                       break L8;
                     } else {
@@ -577,7 +578,7 @@ final class ui {
                                 }
                               }
                             }
-                            var4 = "[" + Vertigo2.a(new String[1], ie.field_Rb, param0 ^ 411) + "] ";
+                            var4 = "[" + Vertigo2.a(new String[]{gd.field_j.field_Nb}, ie.field_Rb, param0 ^ 411) + "] ";
                             break L11;
                           }
                           var6 = 1;
@@ -631,20 +632,20 @@ final class ui {
                           if (!dj.field_d.field_pb) {
                             break L17;
                           } else {
-                            if (~var9 >= ~(-dj.field_d.field_ob + ed.field_n)) {
+                            if ((var9 ^ -1) >= (-dj.field_d.field_ob + ed.field_n ^ -1)) {
                               break L17;
                             } else {
                               if (!pe.field_r) {
-                                var1 = (Object) (Object) pb.field_c;
+                                var1 = pb.field_c;
                                 break L17;
                               } else {
-                                var1 = (Object) (Object) "Broken!";
+                                var1 = "Broken!";
                                 break L17;
                               }
                             }
                           }
                         }
-                        if (dj.field_d.field_tb == 0) {
+                        if (-1 == (dj.field_d.field_tb ^ -1)) {
                           break L16;
                         } else {
                           if (dj.field_d.field_ub >= var9) {
@@ -674,7 +675,7 @@ final class ui {
                 }
                 L19: {
                   if (field_b.field_pb) {
-                    var1 = (Object) (Object) Vertigo2.a(new String[2], bd.field_g, -113);
+                    var1 = Vertigo2.a(new String[]{var3, ea.field_b}, bd.field_g, -113);
                     break L19;
                   } else {
                     break L19;
@@ -689,17 +690,13 @@ final class ui {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (Object) (Object) decompiledCaughtException;
-          throw wn.a((Throwable) var1, "ui.A(" + param0 + ')');
+          var1 = decompiledCaughtException;
+          throw wn.a((Throwable) (var1), "ui.A(" + param0 + ')');
         }
-        return (String) (Object) stackIn_105_0;
+        return (String) ((Object) stackIn_105_0);
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = 0;
     }
 }

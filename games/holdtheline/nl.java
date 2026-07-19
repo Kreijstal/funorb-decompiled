@@ -18,13 +18,12 @@ final class nl {
         field_i = null;
         field_c = null;
         field_h = null;
+        if (param0 > -85) {
+            field_h = (hj[]) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "nl.A(";
         field_e = "ON";
         field_f = 0;

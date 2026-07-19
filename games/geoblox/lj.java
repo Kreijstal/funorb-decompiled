@@ -10,16 +10,21 @@ final class lj {
     private static String field_z;
 
     public static void a(int param0) {
-        field_d = null;
-        field_e = null;
-        field_c = null;
+        if (param0 != -1) {
+          field_b = -112;
+          field_d = null;
+          field_e = null;
+          field_c = null;
+          return;
+        } else {
+          field_d = null;
+          field_e = null;
+          field_c = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "lj.A(";
         field_b = -1;
         field_e = new ck(6, 0, 4, 2);

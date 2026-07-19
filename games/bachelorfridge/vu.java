@@ -13,10 +13,14 @@ final class vu extends pv {
     static String field_l;
 
     private final int c(boolean param0) {
+        if (param0) {
+            return 86;
+        }
         return 100;
     }
 
     final boolean b(boolean param0) {
+        boolean discarded$4 = false;
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -24,22 +28,22 @@ final class vu extends pv {
           if (param0) {
             break L0;
           } else {
-            boolean discarded$4 = ((vu) this).b(false);
+            discarded$4 = this.b(false);
             break L0;
           }
         }
-        int fieldTemp$5 = ((vu) this).field_g + 1;
-        ((vu) this).field_g = ((vu) this).field_g + 1;
+        int fieldTemp$5 = this.field_g + 1;
+        this.field_g = this.field_g + 1;
         if (fieldTemp$5 > this.c(false)) {
           this.d((byte) -125);
           return true;
         } else {
           L1: {
-            if (((vu) this).field_g != 1) {
+            if (this.field_g != 1) {
               break L1;
             } else {
-              ((vu) this).field_f.field_v.a((byte) 57, ((vu) this).field_f.field_g.field_o.field_b, 0);
-              if (((vu) this).field_n) {
+              this.field_f.field_v.a((byte) 57, this.field_f.field_g.field_o.field_b, 0);
+              if (this.field_n) {
                 qm.a(29, 7758);
                 break L1;
               } else {
@@ -49,15 +53,15 @@ final class vu extends pv {
             }
           }
           L2: {
-            if (40 < ((vu) this).field_g) {
+            if (40 < this.field_g) {
               break L2;
             } else {
-              if (0 == ((vu) this).field_g % 8) {
-                ((vu) this).field_m[((vu) this).field_j][0] = kla.a(15, m.field_a, -2147483648);
-                ((vu) this).field_m[((vu) this).field_j][1] = kla.a(15, m.field_a, -2147483648);
-                ((vu) this).field_m[((vu) this).field_j][2] = kla.a(10, m.field_a, -2147483648) + 20;
-                ((vu) this).field_m[((vu) this).field_j][3] = 2;
-                ((vu) this).field_j = ((vu) this).field_j + 1;
+              if (0 == this.field_g % 8) {
+                this.field_m[this.field_j][0] = kla.a(15, m.field_a, -2147483648);
+                this.field_m[this.field_j][1] = kla.a(15, m.field_a, -2147483648);
+                this.field_m[this.field_j][2] = kla.a(10, m.field_a, -2147483648) + 20;
+                this.field_m[this.field_j][3] = 2;
+                this.field_j = this.field_j + 1;
                 break L2;
               } else {
                 break L2;
@@ -66,21 +70,21 @@ final class vu extends pv {
           }
           var2 = 0;
           L3: while (true) {
-            if (((vu) this).field_m.length <= var2) {
-              if (((vu) this).field_g >= 40) {
+            if (this.field_m.length <= var2) {
+              if ((this.field_g ^ -1) <= -41) {
                 return false;
               } else {
-                ((vu) this).field_f.field_k = ((vu) this).field_f.field_k + (((vu) this).field_g % 3 + -1);
+                this.field_f.field_k = this.field_f.field_k + (this.field_g % 3 + -1);
                 return false;
               }
             } else {
-              if (((vu) this).field_j >= var2) {
-                if (((vu) this).field_g % 2 != 0) {
-                  ((vu) this).field_m[var2][0] = ((vu) this).field_m[var2][0] + 1;
-                  ((vu) this).field_m[var2][1] = ((vu) this).field_m[var2][1] + 1;
-                  ((vu) this).field_m[var2][2] = ((vu) this).field_m[var2][2] - 1;
-                  if (((vu) this).field_m[var2][3] < 6) {
-                    ((vu) this).field_m[var2][3] = ((vu) this).field_m[var2][3] + 1;
+              if (this.field_j >= var2) {
+                if (-1 != (this.field_g % 2 ^ -1)) {
+                  this.field_m[var2][0] = this.field_m[var2][0] + 1;
+                  this.field_m[var2][1] = this.field_m[var2][1] + 1;
+                  this.field_m[var2][2] = this.field_m[var2][2] - 1;
+                  if ((this.field_m[var2][3] ^ -1) > -7) {
+                    this.field_m[var2][3] = this.field_m[var2][3] + 1;
                     var2++;
                     continue L3;
                   } else {
@@ -92,7 +96,6 @@ final class vu extends pv {
                   continue L3;
                 }
               } else {
-                var2++;
                 var2++;
                 continue L3;
               }
@@ -135,17 +138,26 @@ final class vu extends pv {
     }
 
     private final void d(byte param0) {
-        ((vu) this).field_f.field_n = ((vu) this).field_f.c((byte) -115);
-        ((vu) this).field_f.field_k = ((vu) this).field_f.b(true);
+        boolean discarded$2 = false;
+        if (param0 > -3) {
+          discarded$2 = vu.a((byte) 18, '￨');
+          this.field_f.field_n = this.field_f.c((byte) -115);
+          this.field_f.field_k = this.field_f.b(true);
+          return;
+        } else {
+          this.field_f.field_n = this.field_f.c((byte) -115);
+          this.field_f.field_k = this.field_f.b(true);
+          return;
+        }
     }
 
     vu(jfa param0, boolean param1) {
         try {
-            ((vu) this).field_f = param0;
-            ((vu) this).field_n = param1 ? true : false;
-            ((vu) this).field_m = new int[5][4];
+            this.field_f = param0;
+            this.field_n = param1 ? true : false;
+            this.field_m = new int[5][4];
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -155,15 +167,11 @@ final class vu extends pv {
         field_k = null;
         field_o = null;
         if (param0 != 106) {
-            field_l = null;
+            field_l = (String) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = "You must have at least one creature in your fridge to enter the arena.";
         field_l = " <%0>/<%1>";
     }

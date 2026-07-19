@@ -15,7 +15,7 @@ final class ng {
         field_e = null;
         field_b = null;
         field_f = null;
-        field_g = null;
+        field_g = (byte[][]) null;
         if (param0 != 0) {
             ng.a(-31);
         }
@@ -26,10 +26,6 @@ final class ng {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_g = new byte[1000][];
         field_e = "Start Game";
         field_b = new int[8192];

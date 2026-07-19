@@ -21,8 +21,8 @@ final class sk {
         if (!param0) {
           sk.a((byte) 43);
           L0: while (true) {
-            if (((sk) this).field_f < ((sk) this).field_c) {
-              var6 = ((sk) this).field_d[((sk) this).field_f];
+            if (this.field_f < this.field_c) {
+              var6 = this.field_d[this.field_f];
               if (!var6.field_c.c(113)) {
                 this.a(-1, 0, var6);
                 return false;
@@ -52,7 +52,7 @@ final class sk {
                   }
                 }
                 L3: {
-                  if (var6.field_h >= 0) {
+                  if (-1 >= (var6.field_h ^ -1)) {
                     break L3;
                   } else {
                     if (null != var6.field_f) {
@@ -71,7 +71,7 @@ final class sk {
                     }
                   }
                 }
-                ((sk) this).field_f = ((sk) this).field_f + 1;
+                this.field_f = this.field_f + 1;
                 continue L0;
               }
             } else {
@@ -80,8 +80,8 @@ final class sk {
           }
         } else {
           L4: while (true) {
-            if (((sk) this).field_f < ((sk) this).field_c) {
-              var5 = ((sk) this).field_d[((sk) this).field_f];
+            if (this.field_f < this.field_c) {
+              var5 = this.field_d[this.field_f];
               if (!var5.field_c.c(113)) {
                 this.a(-1, 0, var5);
                 return false;
@@ -111,7 +111,7 @@ final class sk {
                   }
                 }
                 L7: {
-                  if (var5.field_h >= 0) {
+                  if (-1 >= (var5.field_h ^ -1)) {
                     break L7;
                   } else {
                     if (null != var5.field_f) {
@@ -130,7 +130,7 @@ final class sk {
                     }
                   }
                 }
-                ((sk) this).field_f = ((sk) this).field_f + 1;
+                this.field_f = this.field_f + 1;
                 continue L4;
               }
             } else {
@@ -144,7 +144,7 @@ final class sk {
         field_j = null;
         field_h = null;
         if (param0 <= 99) {
-            field_g = null;
+            field_g = (String) null;
             field_g = null;
             return;
         }
@@ -154,22 +154,23 @@ final class sk {
     private final void a(int param0, int param1, sg param2) {
         float var4_float = 0.0f;
         try {
-            var4_float = (float)(1 + ((sk) this).field_f) + (float)param1 / 100.0f;
-            if (param1 != 0) {
-                ((sk) this).field_a = param2.field_b + " - " + param1 + "%";
+            var4_float = (float)(1 + this.field_f) + (float)param1 / 100.0f;
+            if (param0 != (param1 ^ -1)) {
+                this.field_a = param2.field_b + " - " + param1 + "%";
             } else {
-                ((sk) this).field_a = param2.field_g;
+                this.field_a = param2.field_g;
             }
-            ((sk) this).field_i = var4_float * (float)((sk) this).field_e / (float)(1 + ((sk) this).field_c);
+            this.field_i = var4_float * (float)this.field_e / (float)(1 + this.field_c);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "sk.D(" + -1 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw sl.a((Throwable) ((Object) runtimeException), "sk.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(int param0, kk param1, int param2, int param3) {
+        boolean discarded$2 = false;
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        Object var5 = null;
+        kk var5 = null;
         byte[] var6 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -180,6 +181,7 @@ final class sk {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_3_0 = 0;
@@ -199,8 +201,8 @@ final class sk {
               if (param2 == 1) {
                 break L1;
               } else {
-                var5 = null;
-                boolean discarded$2 = sk.a(-44, (kk) null, 17, 118);
+                var5 = (kk) null;
+                discarded$2 = sk.a(-44, (kk) null, 17, 118);
                 break L1;
               }
             }
@@ -208,34 +210,36 @@ final class sk {
               ve.a((byte) -28, var6);
               stackOut_5_0 = 1;
               stackIn_6_0 = stackOut_5_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4_ref;
+            stackOut_7_0 = (RuntimeException) (var4_ref);
             stackOut_7_1 = new StringBuilder().append("sk.A(").append(param0).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -243,9 +247,13 @@ final class sk {
               break L2;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_6_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          return stackIn_6_0 != 0;
+        }
     }
 
     private sk() throws Throwable {
@@ -253,10 +261,6 @@ final class sk {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_g = "Finish the exhibit with the blocks at the top.";
     }

@@ -12,10 +12,10 @@ final class gp extends ana {
 
     final boolean c(byte param0) {
         int var2 = 0;
-        int fieldTemp$2 = ((gp) this).field_l - 1;
-        ((gp) this).field_l = ((gp) this).field_l - 1;
-        if (-1 >= fieldTemp$2) {
-          if (-26 == ((gp) this).field_l) {
+        int fieldTemp$2 = this.field_l - 1;
+        this.field_l = this.field_l - 1;
+        if (-1 >= (fieldTemp$2 ^ -1)) {
+          if (-26 == (this.field_l ^ -1)) {
             jja.a(256, -1, 52);
             this.e(44);
             return false;
@@ -35,7 +35,7 @@ final class gp extends ana {
         field_B = null;
         field_v = null;
         if (param0 != -13837) {
-            Object var2 = null;
+            String var2 = (String) null;
             gp.b(-16, (String) null);
         }
     }
@@ -43,18 +43,21 @@ final class gp extends ana {
     private final void e(int param0) {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
-        aga var2 = ((gp) this).field_w.field_l.a(76, ((gp) this).field_q.field_h);
+        if (param0 != 44) {
+            return;
+        }
+        aga var2 = this.field_w.field_l.a(76, this.field_q.field_h);
         if (!(!var2.i(69))) {
             return;
         }
-        iv var3 = (iv) (Object) ((gp) this).field_w.field_o.b((byte) 90);
-        oha discarded$6 = al.a(107, ((gp) this).field_w.field_k);
+        iv var3 = (iv) ((Object) this.field_w.field_o.b((byte) 90));
+        oha discarded$6 = al.a(107, this.field_w.field_k);
         while (var3 != null) {
-            var3.a(var2, ((gp) this).field_q.field_h, 12);
-            var4 = var3.field_h.a(-27449, ((gp) this).field_q);
+            var3.a(var2, this.field_q.field_h, 12);
+            var4 = var3.field_h.a(-27449, this.field_q);
             var4.b(-1, 18);
             var4.a(24831, 110, kna.field_g[44]);
-            var3 = (iv) (Object) ((gp) this).field_w.field_o.c(0);
+            var3 = (iv) ((Object) this.field_w.field_o.c(param0 ^ 44));
         }
     }
 
@@ -66,6 +69,7 @@ final class gp extends ana {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        int discarded$0 = 0;
         try {
             var2_int = mk.field_p;
             var3 = gd.field_m;
@@ -79,44 +83,55 @@ final class gp extends ana {
             var8 = nga.a(var6, var3, (byte) 126, 20);
             dg.a(var7, var8, var5, var6, 0);
             dg.c(1 + var7, 1 + var8, var5 - 2, var6 - 2, 16777088);
-            int discarded$0 = qs.field_m.field_jb.a(param1, 3 + var7, -qs.field_m.field_jb.field_u + (df.field_r + 1 + var8), 500, 1000, 0, -1, 0, 0, rg.field_h);
+            discarded$0 = qs.field_m.field_jb.a(param1, 3 + var7, -qs.field_m.field_jb.field_u + (df.field_r + 1 + var8), 500, 1000, 0, -1, 0, 0, rg.field_h);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "gp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "gp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     gp(gj param0, bt param1) {
-        super(param0, (bca) (Object) param1);
+        super(param0, param1);
         try {
-            ((gp) this).field_w = param1;
+            this.field_w = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "gp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "gp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void f(int param0) {
-        int var2 = 0;
+        int var2 = -38 % ((-11 - param0) / 52);
     }
 
     final static void a(boolean param0, int param1) {
-        if (it.field_l != null) {
-          if (it.field_l.length < param1) {
-            it.field_l = new int[param1];
+        if (it.field_l == null) {
+          it.field_l = new int[param1];
+          if (param0) {
             return;
           } else {
+            field_v = (String) null;
             return;
           }
         } else {
-          it.field_l = new int[param1];
-          return;
+          if (it.field_l.length >= param1) {
+            if (!param0) {
+              field_v = (String) null;
+              return;
+            } else {
+              return;
+            }
+          } else {
+            it.field_l = new int[param1];
+            if (param0) {
+              return;
+            } else {
+              field_v = (String) null;
+              return;
+            }
+          }
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "Players";
         field_y = "Please enter your date of birth to enable chat:";
         field_B = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};

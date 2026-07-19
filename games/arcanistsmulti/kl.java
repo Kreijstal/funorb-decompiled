@@ -16,135 +16,155 @@ abstract class kl extends qm implements a {
     static String field_D;
 
     private final void a(int param0, int param1, StringBuilder param2, Hashtable param3) {
-        qm[] var5 = null;
-        RuntimeException var5_ref = null;
+        StringBuilder discarded$29 = null;
+        StringBuilder discarded$30 = null;
+        StringBuilder discarded$31 = null;
+        StringBuilder discarded$32 = null;
+        RuntimeException var5 = null;
         int var6 = 0;
         qm var7 = null;
         int var8 = 0;
         int var9 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
+        qm[] var10 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
         RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
         String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            if (null != ((kl) this).field_z) {
-              var5 = ((kl) this).field_z;
+            L1: {
+              if (param0 == 31115) {
+                break L1;
+              } else {
+                this.field_z = (qm[]) null;
+                break L1;
+              }
+            }
+            if (null != this.field_z) {
+              var10 = this.field_z;
               var6 = 0;
-              L1: while (true) {
-                if (var5.length <= var6) {
+              L2: while (true) {
+                if (var10.length <= var6) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
-                  var7 = var5[var6];
-                  StringBuilder discarded$29 = param2.append('\n');
+                  var7 = var10[var6];
+                  discarded$29 = param2.append('\n');
                   var8 = 0;
-                  L2: while (true) {
+                  L3: while (true) {
                     if (var8 > param1) {
-                      L3: {
+                      L4: {
                         if (var7 != null) {
-                          StringBuilder discarded$30 = var7.a(param2, param1 - -1, param3, (byte) 110);
-                          break L3;
+                          discarded$30 = var7.a(param2, param1 - -1, param3, (byte) 110);
+                          break L4;
                         } else {
-                          StringBuilder discarded$31 = param2.append("null");
-                          break L3;
+                          discarded$31 = param2.append("null");
+                          break L4;
                         }
                       }
                       var6++;
-                      continue L1;
-                    } else {
-                      StringBuilder discarded$32 = param2.append(' ');
-                      var8++;
                       continue L2;
+                    } else {
+                      discarded$32 = param2.append(' ');
+                      var8++;
+                      continue L3;
                     }
                   }
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var5_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var5_ref;
-            stackOut_13_1 = new StringBuilder().append("kl.KA(").append(31115).append(',').append(param1).append(',');
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
-            if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L4;
-            } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              break L4;
-            }
-          }
           L5: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
-            if (param3 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
+            var5 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) (var5);
+            stackOut_15_1 = new StringBuilder().append("kl.KA(").append(param0).append(',').append(param1).append(',');
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param2 == null) {
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
               break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
               break L5;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + ')');
+          L6: {
+            stackOut_18_0 = (RuntimeException) ((Object) stackIn_18_0);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param3 == null) {
+              stackOut_20_0 = (RuntimeException) ((Object) stackIn_20_0);
+              stackOut_20_1 = (StringBuilder) ((Object) stackIn_20_1);
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L6;
+            } else {
+              stackOut_19_0 = (RuntimeException) ((Object) stackIn_19_0);
+              stackOut_19_1 = (StringBuilder) ((Object) stackIn_19_1);
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L6;
+            }
+          }
+          throw aa.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -164,6 +184,7 @@ abstract class kl extends qm implements a {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_18_0 = 0;
         int stackOut_14_0 = 0;
@@ -183,20 +204,21 @@ abstract class kl extends qm implements a {
               if (param2 == 9) {
                 break L1;
               } else {
-                field_F = null;
+                field_F = (String) null;
                 break L1;
               }
             }
-            if (((kl) this).field_z != null) {
-              var4_int = ((kl) this).field_z.length + -1;
+            if (this.field_z != null) {
+              var4_int = this.field_z.length + -1;
               L2: while (true) {
-                if (var4_int < 0) {
+                if ((var4_int ^ -1) > -1) {
                   stackOut_18_0 = 0;
                   stackIn_19_0 = stackOut_18_0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   L3: {
-                    var5 = ((kl) this).field_z[var4_int];
+                    var5 = this.field_z[var4_int];
                     if (var5 == null) {
                       break L3;
                     } else {
@@ -205,11 +227,11 @@ abstract class kl extends qm implements a {
                       } else {
                         var4_int = var4_int - param0;
                         L4: while (true) {
-                          if (var4_int < 0) {
+                          if ((var4_int ^ -1) > -1) {
                             break L3;
                           } else {
                             L5: {
-                              var6 = ((kl) this).field_z[var4_int];
+                              var6 = this.field_z[var4_int];
                               if (var6 == null) {
                                 break L5;
                               } else {
@@ -218,7 +240,8 @@ abstract class kl extends qm implements a {
                                 } else {
                                   stackOut_14_0 = 1;
                                   stackIn_15_0 = stackOut_14_0;
-                                  return stackIn_15_0 != 0;
+                                  decompiledRegionSelector0 = 1;
+                                  break L0;
                                 }
                               }
                             }
@@ -236,30 +259,31 @@ abstract class kl extends qm implements a {
             } else {
               stackOut_4_0 = 0;
               stackIn_5_0 = stackOut_4_0;
-              return stackIn_5_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var4;
+            stackOut_20_0 = (RuntimeException) (var4);
             stackOut_20_1 = new StringBuilder().append("kl.CA(").append(param0).append(',');
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_0 = (RuntimeException) ((Object) stackIn_22_0);
+              stackOut_22_1 = (StringBuilder) ((Object) stackIn_22_1);
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
               break L6;
             } else {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_0 = (RuntimeException) ((Object) stackIn_21_0);
+              stackOut_21_1 = (StringBuilder) ((Object) stackIn_21_1);
               stackOut_21_2 = "{...}";
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
@@ -267,9 +291,17 @@ abstract class kl extends qm implements a {
               break L6;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param2 + ')');
         }
-        return stackIn_19_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_5_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_15_0 != 0;
+          } else {
+            return stackIn_19_0 != 0;
+          }
+        }
     }
 
     boolean a(int param0, qm param1) {
@@ -288,6 +320,7 @@ abstract class kl extends qm implements a {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_8_0 = 0;
         int stackOut_5_0 = 0;
@@ -302,13 +335,14 @@ abstract class kl extends qm implements a {
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            var7 = ((kl) this).field_z;
+            var7 = this.field_z;
             var3 = var7;
             var4 = param0;
             L1: while (true) {
               if (var4 >= var7.length) {
                 stackOut_8_0 = 0;
                 stackIn_9_0 = stackOut_8_0;
+                decompiledRegionSelector0 = 1;
                 break L0;
               } else {
                 L2: {
@@ -321,7 +355,8 @@ abstract class kl extends qm implements a {
                     } else {
                       stackOut_5_0 = 1;
                       stackIn_6_0 = stackOut_5_0;
-                      return stackIn_6_0 != 0;
+                      decompiledRegionSelector0 = 0;
+                      break L0;
                     }
                   }
                 }
@@ -334,23 +369,23 @@ abstract class kl extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3_ref;
+            stackOut_10_0 = (RuntimeException) (var3_ref);
             stackOut_10_1 = new StringBuilder().append("kl.A(").append(param0).append(',');
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_0 = (RuntimeException) ((Object) stackIn_12_0);
+              stackOut_12_1 = (StringBuilder) ((Object) stackIn_12_1);
               stackOut_12_2 = "null";
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "{...}";
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
@@ -358,14 +393,18 @@ abstract class kl extends qm implements a {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
         }
-        return stackIn_9_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_6_0 != 0;
+        } else {
+          return stackIn_9_0 != 0;
+        }
     }
 
     final boolean a(qm param0, int param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
+        qm var4 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -390,12 +429,12 @@ abstract class kl extends qm implements a {
               if (param1 < -8) {
                 break L1;
               } else {
-                var4 = null;
-                ((kl) this).a((qm) null, 31, -110, 42);
+                var4 = (qm) null;
+                this.a((qm) null, 31, -110, 42);
                 break L1;
               }
             }
-            stackOut_2_0 = ((kl) this).a(1, param0, (byte) 9);
+            stackOut_2_0 = this.a(1, param0, (byte) 9);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -403,23 +442,23 @@ abstract class kl extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("kl.OA(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -427,7 +466,7 @@ abstract class kl extends qm implements a {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
         }
         return stackIn_3_0;
     }
@@ -445,24 +484,24 @@ abstract class kl extends qm implements a {
           if (0 != param2) {
             break L0;
           } else {
-            if (null == ((kl) this).field_r) {
+            if (null == this.field_r) {
               break L0;
             } else {
-              ((kl) this).field_r.a((qm) this, 5592405, param1, param3, true);
+              this.field_r.a((qm) (this), 5592405, param1, param3, true);
               break L0;
             }
           }
         }
         L1: {
-          if (null != ((kl) this).field_z) {
-            var5 = ((kl) this).field_z.length + -1;
+          if (null != this.field_z) {
+            var5 = this.field_z.length + -1;
             L2: while (true) {
               if (0 > var5) {
                 break L1;
               } else {
-                var6 = ((kl) this).field_z[var5];
+                var6 = this.field_z[var5];
                 if (var6 != null) {
-                  var6.a((byte) -112, param1 + ((kl) this).field_n, param2, param3 - -((kl) this).field_j);
+                  var6.a((byte) -112, param1 + this.field_n, param2, param3 - -this.field_j);
                   var5--;
                   continue L2;
                 } else {
@@ -475,6 +514,14 @@ abstract class kl extends qm implements a {
             break L1;
           }
         }
+        L3: {
+          if (param0 < -52) {
+            break L3;
+          } else {
+            field_D = (String) null;
+            break L3;
+          }
+        }
     }
 
     private final qm a(int param0) {
@@ -484,10 +531,10 @@ abstract class kl extends qm implements a {
         int var5 = 0;
         qm[] var6 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
-        if (null != ((kl) this).field_z) {
-          var6 = ((kl) this).field_z;
+        if (null != this.field_z) {
+          var6 = this.field_z;
           var2 = var6;
-          var3 = 0;
+          var3 = param0;
           L0: while (true) {
             if (var3 < var6.length) {
               var4 = var6[var3];
@@ -525,6 +572,7 @@ abstract class kl extends qm implements a {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
@@ -538,12 +586,13 @@ abstract class kl extends qm implements a {
         try {
           L0: {
             super.a(param0, param1, param2, param3);
-            if (((kl) this).field_z != null) {
-              var9 = ((kl) this).field_z;
+            if (this.field_z != null) {
+              var9 = this.field_z;
               var5 = var9;
               var6 = 0;
               L1: while (true) {
                 if (var9.length <= var6) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   L2: {
@@ -551,7 +600,7 @@ abstract class kl extends qm implements a {
                     if (var7 == null) {
                       break L2;
                     } else {
-                      var7.a(param0, param1 - -((kl) this).field_n, 170, param3 - -((kl) this).field_j);
+                      var7.a(param0, param1 - -this.field_n, 170, param3 - -this.field_j);
                       break L2;
                     }
                   }
@@ -560,30 +609,31 @@ abstract class kl extends qm implements a {
                 }
               }
             } else {
-              return;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var5_ref = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var5_ref;
+            stackOut_9_0 = (RuntimeException) (var5_ref);
             stackOut_9_1 = new StringBuilder().append("kl.E(");
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
             stackIn_10_1 = stackOut_9_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_0 = (RuntimeException) ((Object) stackIn_11_0);
+              stackOut_11_1 = (StringBuilder) ((Object) stackIn_11_1);
               stackOut_11_2 = "null";
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_0 = (RuntimeException) ((Object) stackIn_10_0);
+              stackOut_10_1 = (StringBuilder) ((Object) stackIn_10_1);
               stackOut_10_2 = "{...}";
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
@@ -591,7 +641,12 @@ abstract class kl extends qm implements a {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -611,6 +666,7 @@ abstract class kl extends qm implements a {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_20_0 = 0;
         int stackOut_16_0 = 0;
@@ -626,7 +682,7 @@ abstract class kl extends qm implements a {
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            if (((kl) this).field_z != null) {
+            if (this.field_z != null) {
               L1: {
                 if (param0 == 29787) {
                   break L1;
@@ -637,13 +693,14 @@ abstract class kl extends qm implements a {
               }
               var4_int = 0;
               L2: while (true) {
-                if (var4_int >= ((kl) this).field_z.length) {
+                if (var4_int >= this.field_z.length) {
                   stackOut_20_0 = 0;
                   stackIn_21_0 = stackOut_20_0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   L3: {
-                    var5 = ((kl) this).field_z[var4_int];
+                    var5 = this.field_z[var4_int];
                     var6 = var5;
                     var6 = var5;
                     if (var5 == null) {
@@ -652,18 +709,19 @@ abstract class kl extends qm implements a {
                       if (var5.d(param0 + -31903)) {
                         var4_int = var4_int + param1;
                         L4: while (true) {
-                          if (var4_int >= ((kl) this).field_z.length) {
+                          if (var4_int >= this.field_z.length) {
                             break L3;
                           } else {
                             L5: {
-                              var6 = ((kl) this).field_z[var4_int];
+                              var6 = this.field_z[var4_int];
                               if (var6 != null) {
                                 if (!var6.a(0, param2)) {
                                   break L5;
                                 } else {
                                   stackOut_16_0 = 1;
                                   stackIn_17_0 = stackOut_16_0;
-                                  return stackIn_17_0 != 0;
+                                  decompiledRegionSelector0 = 1;
+                                  break L0;
                                 }
                               } else {
                                 break L5;
@@ -685,30 +743,31 @@ abstract class kl extends qm implements a {
             } else {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var4;
+            stackOut_22_0 = (RuntimeException) (var4);
             stackOut_22_1 = new StringBuilder().append("kl.V(").append(param0).append(',').append(param1).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param2 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -716,14 +775,23 @@ abstract class kl extends qm implements a {
               break L6;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
         }
-        return stackIn_21_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_17_0 != 0;
+          } else {
+            return stackIn_21_0 != 0;
+          }
+        }
     }
 
     final static boolean a(String param0, int param1) {
+        boolean discarded$2 = false;
         RuntimeException var2 = null;
-        Object var3 = null;
+        String var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -749,8 +817,8 @@ abstract class kl extends qm implements a {
               if (param1 == 1) {
                 break L1;
               } else {
-                var3 = null;
-                boolean discarded$2 = kl.a((String) null, -51);
+                var3 = (String) null;
+                discarded$2 = kl.a((String) null, -51);
                 break L1;
               }
             }
@@ -771,23 +839,23 @@ abstract class kl extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_0 = (RuntimeException) (var2);
             stackOut_6_1 = new StringBuilder().append("kl.LA(");
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
             stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "null";
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
               break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "{...}";
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -795,7 +863,7 @@ abstract class kl extends qm implements a {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
         }
         return stackIn_5_0 != 0;
     }
@@ -809,7 +877,7 @@ abstract class kl extends qm implements a {
         int var7 = 0;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         var2 = 0;
-        var3 = ((kl) this).field_z;
+        var3 = this.field_z;
         var4 = param0;
         L0: while (true) {
           if (var3.length <= var4) {
@@ -873,16 +941,16 @@ abstract class kl extends qm implements a {
         try {
           L0: {
             L1: {
-              if (!((kl) this).a(param0, (byte) -90, param2, param1)) {
+              if (!this.a(param0, (byte) -90, param2, param1)) {
                 break L1;
               } else {
-                ((kl) this).a(param0, param1, param2, 1);
+                this.a(param0, param1, param2, 1);
                 this.a(31115, param1, param0, param2);
                 break L1;
               }
             }
             var5_int = 76 % ((50 - param3) / 60);
-            stackOut_2_0 = (StringBuilder) param0;
+            stackOut_2_0 = (StringBuilder) (param0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -890,23 +958,23 @@ abstract class kl extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var5;
+            stackOut_4_0 = (RuntimeException) (var5);
             stackOut_4_1 = new StringBuilder().append("kl.FA(");
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -915,23 +983,23 @@ abstract class kl extends qm implements a {
             }
           }
           L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
             stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',').append(param1).append(',');
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_0 = (RuntimeException) ((Object) stackIn_9_0);
+              stackOut_9_1 = (StringBuilder) ((Object) stackIn_9_1);
               stackOut_9_2 = "null";
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
               break L3;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_0 = (RuntimeException) ((Object) stackIn_8_0);
+              stackOut_8_1 = (StringBuilder) ((Object) stackIn_8_1);
               stackOut_8_2 = "{...}";
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
@@ -939,7 +1007,7 @@ abstract class kl extends qm implements a {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ')');
         }
         return stackIn_3_0;
     }
@@ -961,6 +1029,7 @@ abstract class kl extends qm implements a {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_13_0 = 0;
@@ -976,18 +1045,20 @@ abstract class kl extends qm implements a {
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            if (((kl) this).field_z == null) {
+            if (this.field_z == null) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
-              return stackIn_4_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              var12 = ((kl) this).field_z;
+              var12 = this.field_z;
               var8 = var12;
               var9 = param5;
               L1: while (true) {
                 if (var12.length <= var9) {
                   stackOut_13_0 = 0;
                   stackIn_14_0 = stackOut_13_0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   L2: {
@@ -1003,7 +1074,8 @@ abstract class kl extends qm implements a {
                         } else {
                           stackOut_10_0 = 1;
                           stackIn_11_0 = stackOut_10_0;
-                          return stackIn_11_0 != 0;
+                          decompiledRegionSelector0 = 1;
+                          break L0;
                         }
                       }
                     }
@@ -1018,23 +1090,23 @@ abstract class kl extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var8_ref = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var8_ref;
+            stackOut_15_0 = (RuntimeException) (var8_ref);
             stackOut_15_1 = new StringBuilder().append("kl.HA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
             if (param6 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_0 = (RuntimeException) ((Object) stackIn_17_0);
+              stackOut_17_1 = (StringBuilder) ((Object) stackIn_17_1);
               stackOut_17_2 = "null";
               stackIn_18_0 = stackOut_17_0;
               stackIn_18_1 = stackOut_17_1;
               stackIn_18_2 = stackOut_17_2;
               break L3;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_0 = (RuntimeException) ((Object) stackIn_16_0);
+              stackOut_16_1 = (StringBuilder) ((Object) stackIn_16_1);
               stackOut_16_2 = "{...}";
               stackIn_18_0 = stackOut_16_0;
               stackIn_18_1 = stackOut_16_1;
@@ -1042,9 +1114,17 @@ abstract class kl extends qm implements a {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
         }
-        return stackIn_14_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_4_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_11_0 != 0;
+          } else {
+            return stackIn_14_0 != 0;
+          }
+        }
     }
 
     boolean a(qm param0, byte param1, char param2, int param3) {
@@ -1067,6 +1147,7 @@ abstract class kl extends qm implements a {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_20_0 = 0;
         int stackOut_18_0 = 0;
@@ -1085,8 +1166,8 @@ abstract class kl extends qm implements a {
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            if (((kl) this).field_z != null) {
-              var9 = ((kl) this).field_z;
+            if (this.field_z != null) {
+              var9 = this.field_z;
               var5 = var9;
               var6 = 0;
               L1: while (true) {
@@ -1096,25 +1177,28 @@ abstract class kl extends qm implements a {
                     if (param1 < -120) {
                       stackOut_20_0 = 0;
                       stackIn_21_0 = stackOut_20_0;
+                      decompiledRegionSelector0 = 4;
                       break L0;
                     } else {
                       stackOut_18_0 = 1;
                       stackIn_19_0 = stackOut_18_0;
-                      return stackIn_19_0 != 0;
+                      decompiledRegionSelector0 = 3;
+                      break L0;
                     }
                   } else {
                     L2: {
                       if (!ri.field_b[81]) {
-                        stackOut_15_0 = ((kl) this).a((byte) -127, param0);
+                        stackOut_15_0 = this.a((byte) -127, param0);
                         stackIn_16_0 = stackOut_15_0;
                         break L2;
                       } else {
-                        stackOut_14_0 = ((kl) this).a(param0, -55);
+                        stackOut_14_0 = this.a(param0, -55);
                         stackIn_16_0 = stackOut_14_0;
                         break L2;
                       }
                     }
-                    return stackIn_16_0;
+                    decompiledRegionSelector0 = 2;
+                    break L0;
                   }
                 } else {
                   L3: {
@@ -1130,7 +1214,8 @@ abstract class kl extends qm implements a {
                         } else {
                           stackOut_9_0 = 1;
                           stackIn_10_0 = stackOut_9_0;
-                          return stackIn_10_0 != 0;
+                          decompiledRegionSelector0 = 1;
+                          break L0;
                         }
                       }
                     }
@@ -1142,30 +1227,31 @@ abstract class kl extends qm implements a {
             } else {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var5_ref = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var5_ref;
+            stackOut_22_0 = (RuntimeException) (var5_ref);
             stackOut_22_1 = new StringBuilder().append("kl.N(");
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param0 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L4;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -1173,14 +1259,33 @@ abstract class kl extends qm implements a {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        return stackIn_21_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_10_0 != 0;
+          } else {
+            if (decompiledRegionSelector0 == 2) {
+              return stackIn_16_0;
+            } else {
+              if (decompiledRegionSelector0 == 3) {
+                return stackIn_19_0 != 0;
+              } else {
+                return stackIn_21_0 != 0;
+              }
+            }
+          }
+        }
     }
 
     public static void a(byte param0) {
         field_D = null;
         field_F = null;
+        if (param0 != -90) {
+            field_C = (String) null;
+        }
         field_y = null;
         field_G = null;
         field_C = null;
@@ -1207,6 +1312,7 @@ abstract class kl extends qm implements a {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_11_0 = 0;
         int stackOut_8_0 = 0;
@@ -1222,15 +1328,16 @@ abstract class kl extends qm implements a {
         var12 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            if (null != ((kl) this).field_z) {
-              var13 = ((kl) this).field_z;
+            if (null != this.field_z) {
+              var13 = this.field_z;
               var8 = var13;
               var9 = 0;
-              var10 = 41;
+              var10 = -123 / ((-42 - param4) / 35);
               L1: while (true) {
                 if (var9 >= var13.length) {
                   stackOut_11_0 = 0;
                   stackIn_12_0 = stackOut_11_0;
+                  decompiledRegionSelector0 = 2;
                   break L0;
                 } else {
                   L2: {
@@ -1238,12 +1345,13 @@ abstract class kl extends qm implements a {
                     if (var11 == null) {
                       break L2;
                     } else {
-                      if (!var11.a(param0, param1, param2, ((kl) this).field_j + param3, 34, param5, ((kl) this).field_n + param6)) {
+                      if (!var11.a(param0, param1, param2, this.field_j + param3, 34, param5, this.field_n + param6)) {
                         break L2;
                       } else {
                         stackOut_8_0 = 1;
                         stackIn_9_0 = stackOut_8_0;
-                        return stackIn_9_0 != 0;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
                       }
                     }
                   }
@@ -1254,30 +1362,31 @@ abstract class kl extends qm implements a {
             } else {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0 != 0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var8_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var8_ref;
+            stackOut_13_0 = (RuntimeException) (var8_ref);
             stackOut_13_1 = new StringBuilder().append("kl.DA(").append(param0).append(',').append(param1).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -1285,14 +1394,23 @@ abstract class kl extends qm implements a {
               break L3;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ',' + param3 + ',' + 91 + ',' + param5 + ',' + param6 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
-        return stackIn_12_0 != 0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_3_0 != 0;
+        } else {
+          if (decompiledRegionSelector0 == 1) {
+            return stackIn_9_0 != 0;
+          } else {
+            return stackIn_12_0 != 0;
+          }
+        }
     }
 
     final boolean a(byte param0, qm param1) {
+        boolean discarded$2 = false;
         RuntimeException var3 = null;
-        Object var4 = null;
+        qm var4 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -1317,12 +1435,12 @@ abstract class kl extends qm implements a {
               if (param0 <= -126) {
                 break L1;
               } else {
-                var4 = null;
-                boolean discarded$2 = ((kl) this).a(-118, 91, 35, -86, 59, 78, (qm) null);
+                var4 = (qm) null;
+                discarded$2 = this.a(-118, 91, 35, -86, 59, 78, (qm) null);
                 break L1;
               }
             }
-            stackOut_2_0 = ((kl) this).a(29787, 1, param1);
+            stackOut_2_0 = this.a(29787, 1, param1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -1330,23 +1448,23 @@ abstract class kl extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_0 = (RuntimeException) (var3);
             stackOut_4_1 = new StringBuilder().append("kl.NA(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -1354,7 +1472,7 @@ abstract class kl extends qm implements a {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
@@ -1375,6 +1493,7 @@ abstract class kl extends qm implements a {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
@@ -1391,24 +1510,26 @@ abstract class kl extends qm implements a {
               if (param1 == -20592) {
                 break L1;
               } else {
-                field_D = null;
+                field_D = (String) null;
                 break L1;
               }
             }
-            if (null == ((kl) this).field_z) {
-              return;
+            if (null == this.field_z) {
+              decompiledRegionSelector0 = 0;
+              break L0;
             } else {
-              var11 = ((kl) this).field_z;
+              var11 = this.field_z;
               var7 = var11;
               var8 = 0;
               L2: while (true) {
                 if (var11.length <= var8) {
+                  decompiledRegionSelector0 = 1;
                   break L0;
                 } else {
                   L3: {
                     var9 = var11[var8];
                     if (var9 != null) {
-                      var9.a(param0, -20592, param2, ((kl) this).field_j + param3, param4 + ((kl) this).field_n, param5);
+                      var9.a(param0, -20592, param2, this.field_j + param3, param4 + this.field_n, param5);
                       break L3;
                     } else {
                       break L3;
@@ -1424,23 +1545,23 @@ abstract class kl extends qm implements a {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var7_ref = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var7_ref;
+            stackOut_13_0 = (RuntimeException) (var7_ref);
             stackOut_13_1 = new StringBuilder().append("kl.IA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
             if (param5 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_0 = (RuntimeException) ((Object) stackIn_15_0);
+              stackOut_15_1 = (StringBuilder) ((Object) stackIn_15_1);
               stackOut_15_2 = "null";
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_0 = (RuntimeException) ((Object) stackIn_14_0);
+              stackOut_14_1 = (StringBuilder) ((Object) stackIn_14_1);
               stackOut_14_2 = "{...}";
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
@@ -1448,26 +1569,32 @@ abstract class kl extends qm implements a {
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
     final String b(boolean param0) {
+        boolean discarded$1 = false;
         qm[] var2 = null;
         int var3 = 0;
         qm var4 = null;
         String var5 = null;
         int var6 = 0;
-        Object var7 = null;
+        String var7 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
-        if (null != ((kl) this).field_z) {
-          var2 = ((kl) this).field_z;
+        if (null != this.field_z) {
+          var2 = this.field_z;
           var3 = 0;
           L0: while (true) {
             if (var2.length <= var3) {
               if (param0) {
-                var7 = null;
-                boolean discarded$1 = kl.a((String) null, 33);
+                var7 = (String) null;
+                discarded$1 = kl.a((String) null, 33);
                 return null;
               } else {
                 return null;
@@ -1498,25 +1625,26 @@ abstract class kl extends qm implements a {
             return;
         }
         super.a(param0, param1, param2, param3, -57);
-        ((kl) this).e(106);
+        this.e(106);
     }
 
     final boolean d(int param0) {
         if (param0 != -2116) {
-            field_D = null;
+            field_D = (String) null;
         }
         return null != this.a(0) ? true : false;
     }
 
     final void d(byte param0) {
+        boolean discarded$1 = false;
         qm[] var2 = null;
         int var3 = 0;
         qm var4 = null;
         int var5 = 0;
-        Object var6 = null;
+        qm var6 = null;
         qm[] var7 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
-        var7 = ((kl) this).field_z;
+        var7 = this.field_z;
         var2 = var7;
         var3 = 0;
         L0: while (true) {
@@ -1525,8 +1653,8 @@ abstract class kl extends qm implements a {
               if (param0 == 29) {
                 break L1;
               } else {
-                var6 = null;
-                boolean discarded$1 = ((kl) this).a(-1, (qm) null, (byte) -103);
+                var6 = (qm) null;
+                discarded$1 = this.a(-1, (qm) null, (byte) -103);
                 break L1;
               }
             }
@@ -1546,10 +1674,6 @@ abstract class kl extends qm implements a {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_x = "Playing";
         field_y = "You require the '<%0>' Achievement to select this item";
         field_F = "  When summoning or increasing the power of your familiar you channel 20 of your health into it. The more life the familiar has the more powerful are the effects it provides. You can channel as much life as you wish each turn into it up to a maximum of 100 health.";

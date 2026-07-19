@@ -10,7 +10,7 @@ final class qq extends vg {
     int field_f;
 
     final int[] b() {
-        return ((qq) this).field_k;
+        return this.field_k;
     }
 
     final void a(int param0, int param1) {
@@ -41,39 +41,39 @@ final class qq extends vg {
             if (field_h == null) {
               break L2;
             } else {
-              if (field_h.length == ((qq) this).field_k.length) {
+              if (field_h.length == this.field_k.length) {
                 break L1;
               } else {
                 break L2;
               }
             }
           }
-          field_h = new int[((qq) this).field_k.length];
+          field_h = new int[this.field_k.length];
           break L1;
         }
-        var3 = ((qq) this).field_k.length;
+        var3 = this.field_k.length;
         var4 = param0;
-        var5 = ((qq) this).field_i - 1;
-        var6 = ((qq) this).field_i * param1;
+        var5 = this.field_i - 1;
+        var6 = this.field_i * param1;
         var7 = var3 - 1;
         var8_int = 0;
         L3: while (true) {
           if (var8_int >= var3) {
-            var8 = ((qq) this).field_k;
-            ((qq) this).field_k = field_h;
+            var8 = this.field_k;
+            this.field_k = field_h;
             field_h = var8;
             return;
           } else {
             var9 = var8_int + var6 & var7;
             var10 = 0;
             L4: while (true) {
-              if (var10 >= ((qq) this).field_i) {
-                var8_int = var8_int + ((qq) this).field_i;
+              if (var10 >= this.field_i) {
+                var8_int = var8_int + this.field_i;
                 continue L3;
               } else {
                 var11 = var8_int + var10;
                 var12 = var9 + (var10 + var4 & var5);
-                field_h[var11] = ((qq) this).field_k[var12];
+                field_h[var11] = this.field_k[var12];
                 var10++;
                 continue L4;
               }
@@ -123,63 +123,47 @@ final class qq extends vg {
         int[] var37 = null;
         int[] var38 = null;
         int[] var39 = null;
-        int[] var40 = null;
-        int[] var41 = null;
-        int[] var42 = null;
-        int[] var43 = null;
-        int[] var44 = null;
-        int[] var45 = null;
-        int[] var46 = null;
-        int[] var47 = null;
         L0: {
-          ((qq) this).field_f = param0;
-          ((qq) this).field_i = param1;
-          ((qq) this).field_k = param2;
+          this.field_f = param0;
+          this.field_i = param1;
+          this.field_k = param2;
           if (!param3) {
             break L0;
           } else {
             L1: {
               L2: {
-                var44 = new int[((qq) this).field_i];
-                var40 = var44;
-                var36 = var40;
+                var36 = new int[this.field_i];
                 var32 = var36;
                 var5 = var32;
-                var45 = new int[((qq) this).field_i];
-                var41 = var45;
-                var37 = var41;
+                var37 = new int[this.field_i];
                 var33 = var37;
                 var6 = var33;
-                var46 = new int[((qq) this).field_i];
-                var42 = var46;
-                var38 = var42;
+                var38 = new int[this.field_i];
                 var34 = var38;
                 var7 = var34;
-                var47 = new int[((qq) this).field_i];
-                var43 = var47;
-                var39 = var43;
+                var39 = new int[this.field_i];
                 var35 = var39;
                 var8 = var35;
                 if (field_h == null) {
                   break L2;
                 } else {
-                  if (field_h.length == ((qq) this).field_k.length) {
+                  if (field_h.length == this.field_k.length) {
                     break L1;
                   } else {
                     break L2;
                   }
                 }
               }
-              field_h = new int[((qq) this).field_k.length];
+              field_h = new int[this.field_k.length];
               break L1;
             }
-            var13 = ((qq) this).field_i;
-            var14 = ((qq) this).field_i;
+            var13 = this.field_i;
+            var14 = this.field_i;
             var15 = var13 - 1;
             var16 = var14 - 1;
             var17 = var13 * var14;
-            var12 = var13;
-            var11 = var13;
+            var12 = 1 * var13;
+            var11 = 1 * var13;
             var18 = 2;
             L3: while (true) {
               if (var18 < 0) {
@@ -187,8 +171,8 @@ final class qq extends vg {
                 var31_int = var16;
                 L4: while (true) {
                   if (var31_int < 0) {
-                    var31 = ((qq) this).field_k;
-                    ((qq) this).field_k = field_h;
+                    var31 = this.field_k;
+                    this.field_k = field_h;
                     field_h = var31;
                     break L0;
                   } else {
@@ -225,9 +209,9 @@ final class qq extends vg {
                                 }
                               } else {
                                 var12--;
-                                var23 = ((qq) this).field_k[var12];
+                                var23 = this.field_k[var12];
                                 var11--;
-                                var22 = ((qq) this).field_k[var11];
+                                var22 = this.field_k[var11];
                                 var5[var9] = var5[var9] + ((var23 >> 24 & 255) - (var22 >> 24 & 255));
                                 var6[var9] = var6[var9] + ((var23 >> 16 & 255) - (var22 >> 16 & 255));
                                 var7[var9] = var7[var9] + ((var23 >> 8 & 255) - (var22 >> 8 & 255));
@@ -246,10 +230,10 @@ final class qq extends vg {
                               var21 = var29 / 9;
                               var24--;
                               field_h[var24] = var18 << 24 | var19 << 16 | var20 << 8 | var21;
-                              var27 = var27 + (var44[var26] - var44[var25]);
-                              var28 = var28 + (var45[var26] - var45[var25]);
-                              var29 = var29 + (var47[var26] - var47[var25]);
-                              var30 = var30 + (var46[var26] - var46[var25]);
+                              var27 = var27 + (var36[var26] - var36[var25]);
+                              var28 = var28 + (var37[var26] - var37[var25]);
+                              var29 = var29 + (var39[var26] - var39[var25]);
+                              var30 = var30 + (var38[var26] - var38[var25]);
                               if (var26 != 0) {
                                 break L9;
                               } else {
@@ -269,10 +253,10 @@ final class qq extends vg {
                         }
                       } else {
                         var26--;
-                        var27 = var27 + var44[var26];
-                        var28 = var28 + var45[var26];
-                        var30 = var30 + var46[var26];
-                        var29 = var29 + var47[var26];
+                        var27 = var27 + var36[var26];
+                        var28 = var28 + var37[var26];
+                        var30 = var30 + var38[var26];
+                        var29 = var29 + var39[var26];
                         if (var26 == 0) {
                           var26 = var13;
                           var9--;
@@ -299,7 +283,7 @@ final class qq extends vg {
                     }
                   } else {
                     var12--;
-                    var10 = ((qq) this).field_k[var12];
+                    var10 = this.field_k[var12];
                     var5[var9] = var5[var9] + (var10 >> 24 & 255);
                     var6[var9] = var6[var9] + (var10 >> 16 & 255);
                     var7[var9] = var7[var9] + (var10 >> 8 & 255);

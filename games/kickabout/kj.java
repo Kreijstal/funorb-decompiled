@@ -7,7 +7,10 @@ final class kj {
     static byte[][] field_b;
 
     final static void a(int param0, int param1) {
-        np.field_Jb.a((gn) (Object) new pv(param1), 3);
+        np.field_Jb.a(new pv(param1), 3);
+        if (param0 != 63) {
+            field_c = (String) null;
+        }
     }
 
     final static ot a(int param0, int param1, up param2, int param3, int param4, boolean param5) {
@@ -29,6 +32,7 @@ final class kj {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         ot stackOut_20_0 = null;
         boolean stackOut_7_0 = false;
@@ -48,17 +52,18 @@ final class kj {
         var8 = Kickabout.field_G;
         try {
           L0: {
-            var6_int = 0;
+            var6_int = param1;
             L1: while (true) {
-              if (var6_int >= 64) {
+              if ((var6_int ^ -1) <= -65) {
                 var6_long = nj.a(-53);
                 if (-bk.field_b + var6_long >= 80L) {
                   if (ra.field_G == null) {
                     bk.field_b = var6_long;
-                    ue.field_f[63].a(184, param3, param0, param2, param5, param4);
+                    ue.field_f[63].a(param1 + 184, param3, param0, param2, param5, param4);
                     dc.a(63, (byte) 88);
                     stackOut_20_0 = ue.field_f[0].field_h;
                     stackIn_21_0 = stackOut_20_0;
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     return null;
@@ -103,7 +108,8 @@ final class kj {
                             dc.a(var6_int, (byte) 46);
                             stackOut_12_0 = ue.field_f[0].field_h;
                             stackIn_13_0 = stackOut_12_0;
-                            return stackIn_13_0;
+                            decompiledRegionSelector0 = 0;
+                            break L0;
                           } else {
                             break L2;
                           }
@@ -121,23 +127,23 @@ final class kj {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             var6 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var6;
-            stackOut_22_1 = new StringBuilder().append("kj.B(").append(param0).append(',').append(0).append(',');
+            stackOut_22_0 = (RuntimeException) (var6);
+            stackOut_22_1 = new StringBuilder().append("kj.B(").append(param0).append(',').append(param1).append(',');
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
             stackIn_23_1 = stackOut_22_1;
             if (param2 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_0 = (RuntimeException) ((Object) stackIn_24_0);
+              stackOut_24_1 = (StringBuilder) ((Object) stackIn_24_1);
               stackOut_24_2 = "null";
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
               break L4;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_0 = (RuntimeException) ((Object) stackIn_23_0);
+              stackOut_23_1 = (StringBuilder) ((Object) stackIn_23_1);
               stackOut_23_2 = "{...}";
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
@@ -145,9 +151,13 @@ final class kj {
               break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
-        return stackIn_21_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_13_0;
+        } else {
+          return stackIn_21_0;
+        }
     }
 
     final static void a(byte param0) {
@@ -160,11 +170,14 @@ final class kj {
     }
 
     kj(int param0) {
-        ((kj) this).field_a = param0;
+        this.field_a = param0;
     }
 
     public static void b(byte param0) {
-        field_b = null;
+        field_b = (byte[][]) null;
+        if (param0 >= -35) {
+            field_c = (String) null;
+        }
         field_c = null;
     }
 
@@ -182,7 +195,7 @@ final class kj {
           L0: {
             L1: {
               on.f(param2, param1, 1 + param4, 10000536);
-              on.f(param2, param3 + param1, param4 + 1, 12105912);
+              on.f(param2, param3 + param1, param4 + 1, param0);
               var5_int = 1;
               if (param1 - -var5_int < on.field_e) {
                 var5_int = -param1 + on.field_e;
@@ -206,7 +219,7 @@ final class kj {
                 break L0;
               } else {
                 var8 = 152 + var7 * 48 / param3;
-                var9 = var8 | (var8 << 8 | var8 << 16);
+                var9 = var8 | (var8 << 1054704968 | var8 << -1218881264);
                 on.field_a[(param1 + var7) * on.field_g - -param2] = var9;
                 on.field_a[param4 + (param2 + (var7 + param1) * on.field_g)] = var9;
                 var7++;
@@ -217,15 +230,11 @@ final class kj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var5, "kj.D(" + 12105912 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw nb.a((Throwable) ((Object) var5), "kj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = "Online Auctions";
     }
 }

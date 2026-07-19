@@ -9,14 +9,25 @@ final class tg extends ol {
     int field_pb;
 
     public static void h(int param0) {
+        jh discarded$0 = null;
+        if (param0 != 0) {
+            discarded$0 = tg.b(-28, 85);
+            field_nb = null;
+            return;
+        }
         field_nb = null;
     }
 
     final static jh b(int param0, int param1) {
-        jh var2 = new jh();
-        bc.field_b.a(-12328, (hg) (Object) var2);
-        km.a(4, -22);
-        return var2;
+        jh var2 = null;
+        if (param1 < 89) {
+          return (jh) null;
+        } else {
+          var2 = new jh();
+          bc.field_b.a(-12328, var2);
+          km.a(param0, -22);
+          return var2;
+        }
     }
 
     tg() {
@@ -24,8 +35,9 @@ final class tg extends ol {
     }
 
     final static boolean a(int param0, CharSequence param1) {
+        boolean discarded$2 = false;
         RuntimeException var2 = null;
-        Object var3 = null;
+        CharSequence var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -50,8 +62,8 @@ final class tg extends ol {
               if (param0 >= 51) {
                 break L1;
               } else {
-                var3 = null;
-                boolean discarded$2 = tg.a(-9, (CharSequence) null);
+                var3 = (CharSequence) null;
+                discarded$2 = tg.a(-9, (CharSequence) null);
                 break L1;
               }
             }
@@ -63,23 +75,23 @@ final class tg extends ol {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_0 = (RuntimeException) (var2);
             stackOut_4_1 = new StringBuilder().append("tg.I(").append(param0).append(',');
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
             stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "null";
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_0 = (RuntimeException) ((Object) stackIn_5_0);
+              stackOut_5_1 = (StringBuilder) ((Object) stackIn_5_1);
               stackOut_5_2 = "{...}";
               stackIn_7_0 = stackOut_5_0;
               stackIn_7_1 = stackOut_5_1;
@@ -87,12 +99,15 @@ final class tg extends ol {
               break L2;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
         }
         return stackIn_3_0;
     }
 
     final static String i(int param0) {
+        if (param0 != 0) {
+            return (String) null;
+        }
         if (!(null != ck.field_r)) {
             return "";
         }

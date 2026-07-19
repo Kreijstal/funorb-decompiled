@@ -15,26 +15,58 @@ final class dr extends ah {
     dr(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3);
         int var5 = 0;
-        var5 = ((dr) this).field_Q;
-        if (var5 == 6) {
-          ((dr) this).field_T = 0;
-          return;
-        } else {
-          if (var5 != 7) {
-            ((dr) this).field_T = -1;
-            return;
-          } else {
-            ((dr) this).field_T = 1;
-            return;
+        int var6 = 0;
+        L0: {
+          L1: {
+            L2: {
+              L3: {
+                L4: {
+                  var6 = Sumoblitz.field_L ? 1 : 0;
+                  var5 = this.field_Q;
+                  if ((var5 ^ -1) != -7) {
+                    break L4;
+                  } else {
+                    if (var6 == 0) {
+                      break L3;
+                    } else {
+                      break L4;
+                    }
+                  }
+                }
+                if (-8 != (var5 ^ -1)) {
+                  break L1;
+                } else {
+                  if (var6 == 0) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              this.field_T = 0;
+              if (var6 == 0) {
+                break L0;
+              } else {
+                break L2;
+              }
+            }
+            this.field_T = 1;
+            if (var6 == 0) {
+              break L0;
+            } else {
+              break L1;
+            }
           }
+          this.field_T = -1;
+          break L0;
         }
     }
 
     final void d(int param0) {
         super.d(-104);
-        if (-1 != ((dr) this).field_T) {
-          if ((((dr) this).field_r - 100) % 250 == 0) {
-            oc.a(uj.a(((dr) this).field_T, ((dr) this).field_C - ((dr) this).field_E, 0, (byte) 84, ((dr) this).field_z + -((dr) this).field_A), false);
+        if (-1 != this.field_T) {
+          if (-1 == ((this.field_r - 100) % 250 ^ -1)) {
+            oc.a(uj.a(this.field_T, this.field_C - this.field_E, 0, (byte) 84, this.field_z + -this.field_A), false);
             if (param0 >= -55) {
               dr.c(true);
               return;

@@ -8,15 +8,16 @@ class ot extends iga {
 
     wba a(byte param0) {
         if (param0 != -106) {
-            return null;
+            return (wba) null;
         }
         return bna.field_x;
     }
 
     final static boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, byte param6) {
+        boolean discarded$1 = false;
         if (param6 <= 43) {
           L0: {
-            boolean discarded$1 = ot.a(-115, -104, true, 1, -88, -103, (byte) -27);
+            discarded$1 = ot.a(-115, -104, true, 1, -88, -103, (byte) -27);
             if (!lb.g((byte) -96)) {
               break L0;
             } else {
@@ -72,26 +73,31 @@ class ot extends iga {
 
     ot(long param0, String param1) {
         try {
-            ((ot) this).field_f = param0;
-            ((ot) this).field_g = param1;
+            this.field_f = param0;
+            this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ot.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ot.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(lu param0, boolean param1) {
         try {
-            param0.b(1686281208, ((ot) this).field_f);
+            param0.b(1686281208, this.field_f);
             if (param1) {
-                ((ot) this).field_f = -1L;
+                this.field_f = -1L;
             }
-            param0.a(26, ((ot) this).field_g);
+            param0.a(26, this.field_g);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ot.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw pe.a((Throwable) ((Object) runtimeException), "ot.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void b(byte param0) {
+        if (param0 >= -36) {
+            field_e = (kv) null;
+            field_e = null;
+            return;
+        }
         field_e = null;
     }
 

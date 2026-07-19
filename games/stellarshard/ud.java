@@ -9,40 +9,41 @@ final class ud extends gb {
     int field_p;
 
     final ud a(qh param0) {
-        ((ud) this).field_n = param0.a(85, ((ud) this).field_n);
-        ((ud) this).field_m = param0.a(((ud) this).field_m, 15);
-        if (((ud) this).field_l == ((ud) this).field_p) {
-          int dupTemp$2 = param0.b(((ud) this).field_l, -10689);
-          ((ud) this).field_p = dupTemp$2;
-          ((ud) this).field_l = dupTemp$2;
-          return (ud) this;
+        int dupTemp$2 = 0;
+        this.field_n = param0.a(85, this.field_n);
+        this.field_m = param0.a(this.field_m, 15);
+        if (this.field_l == this.field_p) {
+          dupTemp$2 = param0.b(this.field_l, -10689);
+          this.field_p = dupTemp$2;
+          this.field_l = dupTemp$2;
+          return (ud) (this);
         } else {
           L0: {
-            ((ud) this).field_l = param0.b(((ud) this).field_l, -10689);
-            ((ud) this).field_p = param0.b(((ud) this).field_p, -10689);
-            if (((ud) this).field_l != ((ud) this).field_p) {
+            this.field_l = param0.b(this.field_l, -10689);
+            this.field_p = param0.b(this.field_p, -10689);
+            if (this.field_l != this.field_p) {
               break L0;
             } else {
-              ((ud) this).field_l = ((ud) this).field_l - 1;
+              this.field_l = this.field_l - 1;
               break L0;
             }
           }
-          return (ud) this;
+          return (ud) (this);
         }
     }
 
     ud(int param0, byte[] param1, int param2, int param3) {
-        ((ud) this).field_m = param0;
-        ((ud) this).field_n = param1;
-        ((ud) this).field_l = param2;
-        ((ud) this).field_p = param3;
+        this.field_m = param0;
+        this.field_n = param1;
+        this.field_l = param2;
+        this.field_p = param3;
     }
 
     ud(int param0, byte[] param1, int param2, int param3, boolean param4) {
-        ((ud) this).field_m = param0;
-        ((ud) this).field_n = param1;
-        ((ud) this).field_l = param2;
-        ((ud) this).field_p = param3;
-        ((ud) this).field_o = param4 ? true : false;
+        this.field_m = param0;
+        this.field_n = param1;
+        this.field_l = param2;
+        this.field_p = param3;
+        this.field_o = param4 ? true : false;
     }
 }

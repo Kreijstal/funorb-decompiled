@@ -38,8 +38,6 @@ final class jlb extends le {
         int var17 = 0;
         int[] var18 = null;
         int[] var19 = null;
-        int[] var20 = null;
-        int[] var21 = null;
         int stackIn_14_0 = 0;
         int stackIn_21_0 = 0;
         int stackOut_13_0 = 0;
@@ -47,28 +45,26 @@ final class jlb extends le {
         int stackOut_20_0 = 0;
         int stackOut_19_0 = 0;
         var17 = VoidHunters.field_G;
-        var21 = ((jlb) this).field_f.a((byte) 40, param0);
-        var20 = var21;
-        var19 = var20;
+        var19 = this.field_f.a((byte) 40, param0);
         var18 = var19;
         var3 = var18;
         if (param1) {
           L0: {
-            if (!((jlb) this).field_f.field_e) {
+            if (!this.field_f.field_e) {
               break L0;
             } else {
               var7 = 0;
-              var9 = ((jlb) this).field_p + sj.field_p[param0];
+              var9 = this.field_p + sj.field_p[param0];
               L1: while (true) {
                 if (0 <= var9) {
                   L2: while (true) {
                     if (4096 >= var9) {
                       L3: while (true) {
                         L4: {
-                          if (var7 >= ((jlb) this).field_s) {
+                          if (var7 >= this.field_s) {
                             break L4;
                           } else {
-                            if (var9 < ((jlb) this).field_v[var7]) {
+                            if (var9 < this.field_v[var7]) {
                               break L4;
                             } else {
                               var7++;
@@ -90,12 +86,12 @@ final class jlb extends le {
                         }
                         L6: {
                           var12 = stackIn_14_0;
-                          var15 = ((jlb) this).field_v[var7];
-                          var16 = ((jlb) this).field_v[-1 + var7];
-                          if (((jlb) this).field_o + var16 >= var9) {
+                          var15 = this.field_v[var7];
+                          var16 = this.field_v[-1 + var7];
+                          if (this.field_o + var16 >= var9) {
                             break L6;
                           } else {
-                            if (var15 + -((jlb) this).field_o <= var9) {
+                            if (var15 + -this.field_o <= var9) {
                               break L6;
                             } else {
                               var4 = 0;
@@ -106,27 +102,27 @@ final class jlb extends le {
                                   L8: {
                                     var6 = 0;
                                     if (var12 == 0) {
-                                      stackOut_20_0 = -((jlb) this).field_j;
+                                      stackOut_20_0 = -this.field_j;
                                       stackIn_21_0 = stackOut_20_0;
                                       break L8;
                                     } else {
-                                      stackOut_19_0 = ((jlb) this).field_j;
+                                      stackOut_19_0 = this.field_j;
                                       stackIn_21_0 = stackOut_19_0;
                                       break L8;
                                     }
                                   }
                                   var5 = stackIn_21_0;
-                                  var8 = (var5 * ((jlb) this).field_m >> 12) + grb.field_l[var4];
+                                  var8 = (var5 * this.field_m >> -671452020) + grb.field_l[var4];
                                   L9: while (true) {
-                                    if (var8 >= 0) {
+                                    if ((var8 ^ -1) <= -1) {
                                       L10: while (true) {
-                                        if (var8 <= 4096) {
+                                        if ((var8 ^ -1) >= -4097) {
                                           L11: while (true) {
                                             L12: {
-                                              if (var6 >= ((jlb) this).field_q) {
+                                              if (var6 >= this.field_q) {
                                                 break L12;
                                               } else {
-                                                if (((jlb) this).field_w[var11][var6] <= var8) {
+                                                if (this.field_w[var11][var6] <= var8) {
                                                   var6++;
                                                   continue L11;
                                                 } else {
@@ -136,13 +132,13 @@ final class jlb extends le {
                                             }
                                             L13: {
                                               var10 = -1 + var6;
-                                              var14 = ((jlb) this).field_w[var11][var6];
-                                              var13 = ((jlb) this).field_w[var11][var10];
-                                              if (var8 <= ((jlb) this).field_o + var13) {
+                                              var14 = this.field_w[var11][var6];
+                                              var13 = this.field_w[var11][var10];
+                                              if (var8 <= this.field_o + var13) {
                                                 break L13;
                                               } else {
-                                                if (-((jlb) this).field_o + var14 > var8) {
-                                                  var3[var4] = ((jlb) this).field_i[var11][var10];
+                                                if (-this.field_o + var14 > var8) {
+                                                  var3[var4] = this.field_i[var11][var10];
                                                   var4++;
                                                   continue L7;
                                                 } else {
@@ -150,8 +146,8 @@ final class jlb extends le {
                                                 }
                                               }
                                             }
-                                            var21 = var20;
-                                            var21[var4] = 0;
+                                            var19 = var18;
+                                            var19[var4] = 0;
                                             var4++;
                                             continue L7;
                                           }
@@ -170,8 +166,8 @@ final class jlb extends le {
                             }
                           }
                         }
-                        var21 = var20;
-                        cua.a(var21, 0, hob.field_d, 0);
+                        var19 = var18;
+                        cua.a(var19, 0, hob.field_d, 0);
                         break L0;
                       }
                     } else {
@@ -188,7 +184,7 @@ final class jlb extends le {
           }
           return var3;
         } else {
-          return null;
+          return (int[]) null;
         }
     }
 
@@ -221,20 +217,20 @@ final class jlb extends le {
     final void c(byte param0) {
         this.e((byte) -34);
         if (param0 >= -35) {
-            ((jlb) this).field_p = -6;
+            this.field_p = -6;
         }
     }
 
     public jlb() {
         super(0, true);
-        ((jlb) this).field_p = 0;
-        ((jlb) this).field_u = 1024;
-        ((jlb) this).field_j = 1024;
-        ((jlb) this).field_l = 204;
-        ((jlb) this).field_k = 81;
-        ((jlb) this).field_q = 4;
-        ((jlb) this).field_r = 409;
-        ((jlb) this).field_s = 8;
+        this.field_p = 0;
+        this.field_u = 1024;
+        this.field_j = 1024;
+        this.field_l = 204;
+        this.field_k = 81;
+        this.field_q = 4;
+        this.field_r = 409;
+        this.field_s = 8;
     }
 
     private final void e(byte param0) {
@@ -246,103 +242,108 @@ final class jlb extends le {
         int var8 = 0;
         int var9 = 0;
         Random var10 = null;
-        int[] stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        int[] stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
         int[] stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        int stackIn_13_2 = 0;
-        int[] stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
+        int[] stackIn_14_0 = null;
+        int stackIn_14_1 = 0;
+        int[] stackIn_15_0 = null;
+        int stackIn_15_1 = 0;
+        int stackIn_15_2 = 0;
         int[] stackOut_12_0 = null;
         int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        int[] stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
+        int[] stackOut_14_0 = null;
+        int stackOut_14_1 = 0;
+        int stackOut_14_2 = 0;
+        int[] stackOut_13_0 = null;
+        int stackOut_13_1 = 0;
+        int stackOut_13_2 = 0;
         var9 = VoidHunters.field_G;
-        var10 = new Random((long)((jlb) this).field_s);
-        ((jlb) this).field_m = 4096 / ((jlb) this).field_q;
-        ((jlb) this).field_o = ((jlb) this).field_k / 2;
-        ((jlb) this).field_n = 4096 / ((jlb) this).field_s;
-        var3 = ((jlb) this).field_m / 2;
-        ((jlb) this).field_w = new int[((jlb) this).field_s][1 + ((jlb) this).field_q];
-        ((jlb) this).field_i = new int[((jlb) this).field_s][((jlb) this).field_q];
-        var4 = ((jlb) this).field_n / 2;
-        ((jlb) this).field_v = new int[((jlb) this).field_s - -1];
-        ((jlb) this).field_v[0] = 0;
-        var5 = 0;
-        L0: while (true) {
-          if (var5 >= ((jlb) this).field_s) {
-            ((jlb) this).field_v[((jlb) this).field_s] = 4096;
-            return;
-          } else {
-            L1: {
-              if (var5 > 0) {
-                var6 = ((jlb) this).field_n;
-                var7 = (-2048 + hob.a(var10, 4096, 123)) * ((jlb) this).field_l >> 12;
-                var6 = var6 + (var7 * var4 >> 12);
-                ((jlb) this).field_v[var5] = var6 + ((jlb) this).field_v[-1 + var5];
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            ((jlb) this).field_w[var5][0] = 0;
-            var6 = 0;
-            L2: while (true) {
-              if (((jlb) this).field_q <= var6) {
-                ((jlb) this).field_w[var5][((jlb) this).field_q] = 4096;
-                var5++;
-                continue L0;
-              } else {
-                L3: {
-                  if (var6 > 0) {
-                    var7 = ((jlb) this).field_m;
-                    var8 = (hob.a(var10, 4096, 123) + -2048) * ((jlb) this).field_r >> 12;
-                    var7 = var7 + (var8 * var3 >> 12);
-                    ((jlb) this).field_w[var5][var6] = ((jlb) this).field_w[var5][var6 + -1] - -var7;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
+        var10 = new Random((long)this.field_s);
+        this.field_m = 4096 / this.field_q;
+        this.field_o = this.field_k / 2;
+        this.field_n = 4096 / this.field_s;
+        var3 = this.field_m / 2;
+        if (param0 == -34) {
+          this.field_w = new int[this.field_s][1 + this.field_q];
+          this.field_i = new int[this.field_s][this.field_q];
+          var4 = this.field_n / 2;
+          this.field_v = new int[this.field_s - -1];
+          this.field_v[0] = 0;
+          var5 = 0;
+          L0: while (true) {
+            if (var5 >= this.field_s) {
+              this.field_v[this.field_s] = 4096;
+              return;
+            } else {
+              L1: {
+                if ((var5 ^ -1) < -1) {
+                  var6 = this.field_n;
+                  var7 = (-2048 + hob.a(var10, 4096, 123)) * this.field_l >> -447181460;
+                  var6 = var6 + (var7 * var4 >> 2202668);
+                  this.field_v[var5] = var6 + this.field_v[-1 + var5];
+                  break L1;
+                } else {
+                  break L1;
                 }
-                L4: {
-                  stackOut_10_0 = ((jlb) this).field_i[var5];
-                  stackOut_10_1 = var6;
-                  stackIn_12_0 = stackOut_10_0;
-                  stackIn_12_1 = stackOut_10_1;
-                  stackIn_11_0 = stackOut_10_0;
-                  stackIn_11_1 = stackOut_10_1;
-                  if (((jlb) this).field_u <= 0) {
-                    stackOut_12_0 = (int[]) (Object) stackIn_12_0;
-                    stackOut_12_1 = stackIn_12_1;
-                    stackOut_12_2 = 4096;
+              }
+              this.field_w[var5][0] = 0;
+              var6 = 0;
+              L2: while (true) {
+                if (this.field_q <= var6) {
+                  this.field_w[var5][this.field_q] = 4096;
+                  var5++;
+                  continue L0;
+                } else {
+                  L3: {
+                    if (var6 > 0) {
+                      var7 = this.field_m;
+                      var8 = (hob.a(var10, 4096, param0 ^ -91) + -2048) * this.field_r >> -1492058836;
+                      var7 = var7 + (var8 * var3 >> 1923576748);
+                      this.field_w[var5][var6] = this.field_w[var5][var6 + -1] - -var7;
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
+                  L4: {
+                    stackOut_12_0 = this.field_i[var5];
+                    stackOut_12_1 = var6;
+                    stackIn_14_0 = stackOut_12_0;
+                    stackIn_14_1 = stackOut_12_1;
                     stackIn_13_0 = stackOut_12_0;
                     stackIn_13_1 = stackOut_12_1;
-                    stackIn_13_2 = stackOut_12_2;
-                    break L4;
-                  } else {
-                    stackOut_11_0 = (int[]) (Object) stackIn_11_0;
-                    stackOut_11_1 = stackIn_11_1;
-                    stackOut_11_2 = -hob.a(var10, ((jlb) this).field_u, 123) + 4096;
-                    stackIn_13_0 = stackOut_11_0;
-                    stackIn_13_1 = stackOut_11_1;
-                    stackIn_13_2 = stackOut_11_2;
-                    break L4;
+                    if ((this.field_u ^ -1) >= -1) {
+                      stackOut_14_0 = (int[]) ((Object) stackIn_14_0);
+                      stackOut_14_1 = stackIn_14_1;
+                      stackOut_14_2 = 4096;
+                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_1 = stackOut_14_1;
+                      stackIn_15_2 = stackOut_14_2;
+                      break L4;
+                    } else {
+                      stackOut_13_0 = (int[]) ((Object) stackIn_13_0);
+                      stackOut_13_1 = stackIn_13_1;
+                      stackOut_13_2 = -hob.a(var10, this.field_u, 123) + 4096;
+                      stackIn_15_0 = stackOut_13_0;
+                      stackIn_15_1 = stackOut_13_1;
+                      stackIn_15_2 = stackOut_13_2;
+                      break L4;
+                    }
                   }
+                  stackIn_15_0[stackIn_15_1] = stackIn_15_2;
+                  var6++;
+                  continue L2;
                 }
-                stackIn_13_0[stackIn_13_1] = stackIn_13_2;
-                var6++;
-                continue L2;
               }
             }
           }
+        } else {
+          return;
         }
     }
 
     final void a(int param0, int param1, ds param2) {
+        boolean discarded$1 = false;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -369,43 +370,43 @@ final class jlb extends le {
               var4_int = param0;
               if (var4_int != 0) {
                 if (var4_int == 1) {
-                  ((jlb) this).field_s = param2.e((byte) -118);
+                  this.field_s = param2.e((byte) -118);
                   break L1;
                 } else {
                   if (2 == var4_int) {
-                    ((jlb) this).field_r = param2.e(1869);
+                    this.field_r = param2.e(1869);
                     break L1;
                   } else {
                     if (var4_int != 3) {
                       if (var4_int == 4) {
-                        ((jlb) this).field_j = param2.e(1869);
+                        this.field_j = param2.e(1869);
                         break L1;
                       } else {
                         if (var4_int != 5) {
-                          if (var4_int != 6) {
+                          if ((var4_int ^ -1) != -7) {
                             if (7 != var4_int) {
                               break L1;
                             } else {
-                              ((jlb) this).field_u = param2.e(1869);
+                              this.field_u = param2.e(1869);
                               break L1;
                             }
                           } else {
-                            ((jlb) this).field_k = param2.e(1869);
+                            this.field_k = param2.e(1869);
                             break L1;
                           }
                         } else {
-                          ((jlb) this).field_p = param2.e(1869);
+                          this.field_p = param2.e(1869);
                           break L1;
                         }
                       }
                     } else {
-                      ((jlb) this).field_l = param2.e(1869);
+                      this.field_l = param2.e(1869);
                       break L1;
                     }
                   }
                 }
               } else {
-                ((jlb) this).field_q = param2.e((byte) -101);
+                this.field_q = param2.e((byte) -101);
                 break L1;
               }
             }
@@ -413,7 +414,7 @@ final class jlb extends le {
               if (param1 < -60) {
                 break L2;
               } else {
-                boolean discarded$1 = jlb.b(-48, 83, 33, 63);
+                discarded$1 = jlb.b(-48, 83, 33, 63);
                 break L2;
               }
             }
@@ -423,23 +424,23 @@ final class jlb extends le {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var4;
+            stackOut_25_0 = (RuntimeException) (var4);
             stackOut_25_1 = new StringBuilder().append("jlb.F(").append(param0).append(',').append(param1).append(',');
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
             stackIn_26_1 = stackOut_25_1;
             if (param2 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_0 = (RuntimeException) ((Object) stackIn_27_0);
+              stackOut_27_1 = (StringBuilder) ((Object) stackIn_27_1);
               stackOut_27_2 = "null";
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
               break L3;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_0 = (RuntimeException) ((Object) stackIn_26_0);
+              stackOut_26_1 = (StringBuilder) ((Object) stackIn_26_1);
               stackOut_26_2 = "{...}";
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
@@ -447,22 +448,18 @@ final class jlb extends le {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_t = null;
         if (!param0) {
-            field_t = null;
+            field_t = (String) null;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_t = "Destroy the enemy VIP";
     }
 }

@@ -6,7 +6,7 @@ final class ih extends lw {
 
     final static cj a(lu param0, int param1) {
         RuntimeException var2 = null;
-        Object stackIn_2_0 = null;
+        cj stackIn_2_0 = null;
         df stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -15,9 +15,10 @@ final class ih extends lw {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         df stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
+        cj stackOut_1_0 = null;
         RuntimeException stackOut_5_0 = null;
         StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
@@ -31,34 +32,36 @@ final class ih extends lw {
             if (param1 == 290) {
               stackOut_3_0 = new df(param0);
               stackIn_4_0 = stackOut_3_0;
+              decompiledRegionSelector0 = 1;
               break L0;
             } else {
-              stackOut_1_0 = null;
+              stackOut_1_0 = (cj) null;
               stackIn_2_0 = stackOut_1_0;
-              return (cj) (Object) stackIn_2_0;
+              decompiledRegionSelector0 = 0;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_0 = (RuntimeException) (var2);
             stackOut_5_1 = new StringBuilder().append("ih.F(");
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_0 = (RuntimeException) ((Object) stackIn_7_0);
+              stackOut_7_1 = (StringBuilder) ((Object) stackIn_7_1);
               stackOut_7_2 = "null";
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_0 = (RuntimeException) ((Object) stackIn_6_0);
+              stackOut_6_1 = (StringBuilder) ((Object) stackIn_6_1);
               stackOut_6_2 = "{...}";
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
@@ -66,13 +69,17 @@ final class ih extends lw {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
         }
-        return (cj) (Object) stackIn_4_0;
+        if (decompiledRegionSelector0 == 0) {
+          return stackIn_2_0;
+        } else {
+          return (cj) ((Object) stackIn_4_0);
+        }
     }
 
     final void a(int param0) {
-        ((ih) this).b((byte) 112);
+        this.b((byte) 112);
         int var2 = 113 % ((59 - param0) / 33);
     }
 
@@ -96,34 +103,37 @@ final class ih extends lw {
     }
 
     final void a(int param0, byte param1) {
-        Object var4 = null;
+        cj discarded$6 = null;
+        cj discarded$7 = null;
+        cj discarded$8 = null;
+        lu var4 = null;
         if (34 == param0) {
-          ((ih) this).b((byte) 112);
+          this.b((byte) 112);
           if (param1 != 73) {
-            var4 = null;
-            cj discarded$6 = ih.a((lu) null, 104);
+            var4 = (lu) null;
+            discarded$6 = ih.a((lu) null, 104);
             return;
           } else {
             return;
           }
         } else {
-          if (param0 == 29) {
+          if (-30 == (param0 ^ -1)) {
             fla.b(param1 + 23548);
             dj.field_c.field_h.a(true, 0);
             dj.field_c.e(-60);
             if (param1 == 73) {
               return;
             } else {
-              var4 = null;
-              cj discarded$7 = ih.a((lu) null, 104);
+              var4 = (lu) null;
+              discarded$7 = ih.a((lu) null, 104);
               return;
             }
           } else {
             if (param1 == 73) {
               return;
             } else {
-              var4 = null;
-              cj discarded$8 = ih.a((lu) null, 104);
+              var4 = (lu) null;
+              discarded$8 = ih.a((lu) null, 104);
               return;
             }
           }
@@ -131,8 +141,8 @@ final class ih extends lw {
     }
 
     ih() {
-        super(false, new String[3], eb.field_r);
-        ((ih) this).field_c = new int[][]{new int[2], new int[2], new int[2]};
+        super(false, new String[]{kk.field_q, we.field_a, gea.field_l}, eb.field_r);
+        this.field_c = new int[][]{new int[]{150, 300}, new int[]{150, 300}, new int[]{150, 290}};
     }
 
     final static void d(byte param0) {
@@ -144,6 +154,9 @@ final class ih extends lw {
     }
 
     final static void d(int param0) {
+        if (param0 != 15366) {
+            field_l = 45;
+        }
     }
 
     final void a(byte param0) {

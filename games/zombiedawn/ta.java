@@ -14,47 +14,54 @@ final class ta {
         var4 = ZombieDawn.field_J;
         try {
           L0: {
-            en.c();
-            jj.field_H = new int[260];
-            f.field_a = 11;
+            L1: {
+              en.c();
+              jj.field_H = new int[260];
+              f.field_a = 11;
+              if (param0 == 255) {
+                break L1;
+              } else {
+                field_a = (String) null;
+                break L1;
+              }
+            }
             var1_int = 0;
-            L1: while (true) {
-              if (var1_int >= 256) {
+            L2: while (true) {
+              if (-257 >= (var1_int ^ -1)) {
                 var5 = 256;
                 var1_int = var5;
-                L2: while (true) {
+                L3: while (true) {
                   if (jj.field_H.length <= var5) {
                     break L0;
                   } else {
                     jj.field_H[var5] = 255;
                     var5++;
-                    continue L2;
+                    continue L3;
                   }
                 }
               } else {
                 var2 = 15.0;
                 jj.field_H[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
                 var1_int++;
-                continue L1;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1, "ta.A(" + 255 + ')');
+          throw sh.a((Throwable) ((Object) var1), "ta.A(" + param0 + ')');
         }
     }
 
     public static void a(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_a = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = "Player";
     }
 }

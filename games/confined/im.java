@@ -8,6 +8,9 @@ final class im {
     static he[] field_a;
 
     public static void a(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_a = null;
     }
 
@@ -47,8 +50,8 @@ final class im {
         try {
           L0: {
             var2_int = 100 / ((param1 - -63) / 45);
-            var3 = (CharSequence) (Object) param0;
-            stackOut_0_0 = dc.field_J.equals((Object) (Object) hh.a(0, var3));
+            var3 = (CharSequence) ((Object) param0);
+            stackOut_0_0 = dc.field_J.equals(hh.a(0, var3));
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -56,23 +59,23 @@ final class im {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_0 = (RuntimeException) (var2);
             stackOut_2_1 = new StringBuilder().append("im.B(");
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
-              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
-              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_0 = (RuntimeException) ((Object) stackIn_4_0);
+              stackOut_4_1 = (StringBuilder) ((Object) stackIn_4_1);
               stackOut_4_2 = "null";
               stackIn_5_0 = stackOut_4_0;
               stackIn_5_1 = stackOut_4_1;
               stackIn_5_2 = stackOut_4_2;
               break L1;
             } else {
-              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
-              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_0 = (RuntimeException) ((Object) stackIn_3_0);
+              stackOut_3_1 = (StringBuilder) ((Object) stackIn_3_1);
               stackOut_3_2 = "{...}";
               stackIn_5_0 = stackOut_3_0;
               stackIn_5_1 = stackOut_3_1;
@@ -80,7 +83,7 @@ final class im {
               break L1;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
         }
         return stackIn_1_0;
     }
@@ -94,7 +97,7 @@ final class im {
             var1 = new nf(540, 140);
             vm.a(var1, -8409);
             ti.b();
-            int var2 = 56;
+            int var2 = -113 / ((param0 - 32) / 49);
             fn.d();
             tg.field_H = 0;
             of.a(false);
@@ -107,7 +110,7 @@ final class im {
             var1.b(0, 0);
             ib.b(false);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "im.D(" + -85 + ')');
+            throw sd.a((Throwable) ((Object) runtimeException), "im.D(" + param0 + ')');
         }
     }
 

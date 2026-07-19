@@ -66,6 +66,9 @@ final class eb {
     }
 
     public static void a(int param0) {
+        if (param0 <= 12) {
+            return;
+        }
         field_b = null;
         field_o = null;
         field_j = null;
@@ -73,29 +76,25 @@ final class eb {
     }
 
     eb() {
-        ((eb) this).field_p = 0;
-        ((eb) this).field_m = 0;
-        ((eb) this).field_C = new byte[256];
-        ((eb) this).field_I = new byte[18002];
-        ((eb) this).field_g = new int[6];
-        ((eb) this).field_k = new int[256];
-        ((eb) this).field_r = new int[6][258];
-        ((eb) this).field_s = new int[16];
-        ((eb) this).field_x = new int[257];
-        ((eb) this).field_y = new boolean[256];
-        ((eb) this).field_H = new byte[4096];
-        ((eb) this).field_D = new byte[18002];
-        ((eb) this).field_a = new boolean[16];
-        ((eb) this).field_w = new byte[6][258];
-        ((eb) this).field_l = new int[6][258];
-        ((eb) this).field_q = new int[6][258];
+        this.field_p = 0;
+        this.field_m = 0;
+        this.field_C = new byte[256];
+        this.field_I = new byte[18002];
+        this.field_g = new int[6];
+        this.field_k = new int[256];
+        this.field_r = new int[6][258];
+        this.field_s = new int[16];
+        this.field_x = new int[257];
+        this.field_y = new boolean[256];
+        this.field_H = new byte[4096];
+        this.field_D = new byte[18002];
+        this.field_a = new boolean[16];
+        this.field_w = new byte[6][258];
+        this.field_l = new int[6][258];
+        this.field_q = new int[6][258];
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_o = new e(7, 0, 1, 1);
         field_b = null;
         field_j = "The alien inhabitants have some highly advanced#technology - but unlike us, they have yet#to master long-distance space travel.";

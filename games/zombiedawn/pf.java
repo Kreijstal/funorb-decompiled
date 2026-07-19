@@ -16,45 +16,41 @@ final class pf {
         nb var4 = null;
         nb var5 = null;
         int var6 = 0;
-        nb var7 = null;
-        nb var8 = null;
         var6 = ZombieDawn.field_J;
-        ((pf) this).field_e = param1;
+        this.field_e = param1;
         if (param0 == 93) {
-          var7 = ((pf) this).field_i[(int)((long)(((pf) this).field_a + -1) & param1)];
-          var4 = var7;
-          ((pf) this).field_d = var7.field_i;
+          var4 = this.field_i[(int)((long)(this.field_a + -1) & param1)];
+          this.field_d = var4.field_i;
           L0: while (true) {
-            if (var4 == ((pf) this).field_d) {
-              ((pf) this).field_d = null;
+            if (var4 == this.field_d) {
+              this.field_d = null;
               return null;
             } else {
-              if (((pf) this).field_d.field_n != param1) {
-                ((pf) this).field_d = ((pf) this).field_d.field_i;
+              if (this.field_d.field_n != param1) {
+                this.field_d = this.field_d.field_i;
                 continue L0;
               } else {
-                var5 = ((pf) this).field_d;
-                ((pf) this).field_d = ((pf) this).field_d.field_i;
+                var5 = this.field_d;
+                this.field_d = this.field_d.field_i;
                 return var5;
               }
             }
           }
         } else {
           pf.a((byte) -112);
-          var8 = ((pf) this).field_i[(int)((long)(((pf) this).field_a + -1) & param1)];
-          var4 = var8;
-          ((pf) this).field_d = var8.field_i;
+          var4 = this.field_i[(int)((long)(this.field_a + -1) & param1)];
+          this.field_d = var4.field_i;
           L1: while (true) {
-            if (var4 == ((pf) this).field_d) {
-              ((pf) this).field_d = null;
+            if (var4 == this.field_d) {
+              this.field_d = null;
               return null;
             } else {
-              if (((pf) this).field_d.field_n != param1) {
-                ((pf) this).field_d = ((pf) this).field_d.field_i;
+              if (this.field_d.field_n != param1) {
+                this.field_d = this.field_d.field_i;
                 continue L1;
               } else {
-                var5 = ((pf) this).field_d;
-                ((pf) this).field_d = ((pf) this).field_d.field_i;
+                var5 = this.field_d;
+                this.field_d = this.field_d.field_i;
                 return var5;
               }
             }
@@ -76,24 +72,24 @@ final class pf {
     final nb b(byte param0) {
         nb var3 = null;
         int var4 = ZombieDawn.field_J;
-        if (null == ((pf) this).field_d) {
+        if (null == this.field_d) {
             return null;
         }
-        nb var2 = ((pf) this).field_i[(int)((long)(-1 + ((pf) this).field_a) & ((pf) this).field_e)];
-        while (((pf) this).field_d != var2) {
-            if (((pf) this).field_d.field_n == ((pf) this).field_e) {
-                var3 = ((pf) this).field_d;
-                ((pf) this).field_d = ((pf) this).field_d.field_i;
+        nb var2 = this.field_i[(int)((long)(-1 + this.field_a) & this.field_e)];
+        while (this.field_d != var2) {
+            if (this.field_d.field_n == this.field_e) {
+                var3 = this.field_d;
+                this.field_d = this.field_d.field_i;
                 return var3;
             }
-            ((pf) this).field_d = ((pf) this).field_d.field_i;
+            this.field_d = this.field_d.field_i;
         }
         if (param0 >= -96) {
-            ((pf) this).field_a = 125;
-            ((pf) this).field_d = null;
+            this.field_a = 125;
+            this.field_d = null;
             return null;
         }
-        ((pf) this).field_d = null;
+        this.field_d = null;
         return null;
     }
 
@@ -103,37 +99,34 @@ final class pf {
             if (!(null == param2.field_h)) {
                 param2.c((byte) -53);
             }
-            var5 = ((pf) this).field_i[(int)((long)(((pf) this).field_a - param0) & param1)];
+            var5 = this.field_i[(int)((long)(this.field_a - param0) & param1)];
             param2.field_h = var5.field_h;
             param2.field_i = var5;
             param2.field_h.field_i = param2;
             param2.field_n = param1;
             param2.field_i.field_h = param2;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "pf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw sh.a((Throwable) ((Object) runtimeException), "pf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     pf(int param0) {
         int var2 = 0;
+        nb dupTemp$0 = null;
         nb var3 = null;
-        ((pf) this).field_i = new nb[param0];
-        ((pf) this).field_a = param0;
+        this.field_i = new nb[param0];
+        this.field_a = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            nb dupTemp$0 = new nb();
+            dupTemp$0 = new nb();
             var3 = dupTemp$0;
-            ((pf) this).field_i[var2] = dupTemp$0;
+            this.field_i[var2] = dupTemp$0;
             var3.field_i = var3;
             var3.field_h = var3;
         }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_c = 0;
-        field_h = new char[]{'[', ']', '#'};
+        field_h = new char[]{(char)91, (char)93, (char)35};
     }
 }

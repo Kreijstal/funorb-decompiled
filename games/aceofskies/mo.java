@@ -31,6 +31,7 @@ final class mo {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
+        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_23_0 = null;
         io stackOut_25_0 = null;
@@ -63,7 +64,7 @@ final class mo {
                     L3: {
                       jaggl.OpenGL.glLinkProgramARB(var3_long);
                       jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, ee.field_d, 0);
-                      if (ee.field_d[0] == 0) {
+                      if (ee.field_d[param0] == 0) {
                         L4: {
                           if (ee.field_d[0] == 0) {
                             System.out.println("Shader linking failed:");
@@ -83,7 +84,7 @@ final class mo {
                             break L5;
                           }
                         }
-                        if (ee.field_d[0] != 0) {
+                        if (-1 != (ee.field_d[0] ^ -1)) {
                           break L3;
                         } else {
                           var7 = 0;
@@ -93,7 +94,8 @@ final class mo {
                               jaggl.OpenGL.glDeleteObjectARB(var3_long);
                               stackOut_23_0 = null;
                               stackIn_24_0 = stackOut_23_0;
-                              return (io) (Object) stackIn_24_0;
+                              decompiledRegionSelector0 = 0;
+                              break L0;
                             } else {
                               jaggl.OpenGL.glDetachObjectARB(var3_long, param2[var7].field_c);
                               var7++;
@@ -107,6 +109,7 @@ final class mo {
                     }
                     stackOut_25_0 = new io(param1, var3_long, param2);
                     stackIn_26_0 = stackOut_25_0;
+                    decompiledRegionSelector0 = 1;
                     break L0;
                   } else {
                     jaggl.OpenGL.glAttachObjectARB(var3_long, param2[var5].field_c);
@@ -132,23 +135,23 @@ final class mo {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var3 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var3;
-            stackOut_27_1 = new StringBuilder().append("mo.C(").append(0).append(',');
+            stackOut_27_0 = (RuntimeException) (var3);
+            stackOut_27_1 = new StringBuilder().append("mo.C(").append(param0).append(',');
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
             stackIn_28_1 = stackOut_27_1;
             if (param1 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_0 = (RuntimeException) ((Object) stackIn_29_0);
+              stackOut_29_1 = (StringBuilder) ((Object) stackIn_29_1);
               stackOut_29_2 = "null";
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
               break L7;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_0 = (RuntimeException) ((Object) stackIn_28_0);
+              stackOut_28_1 = (StringBuilder) ((Object) stackIn_28_1);
               stackOut_28_2 = "{...}";
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
@@ -157,23 +160,23 @@ final class mo {
             }
           }
           L8: {
-            stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+            stackOut_30_0 = (RuntimeException) ((Object) stackIn_30_0);
             stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',');
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
             stackIn_31_1 = stackOut_30_1;
             if (param2 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_0 = (RuntimeException) ((Object) stackIn_32_0);
+              stackOut_32_1 = (StringBuilder) ((Object) stackIn_32_1);
               stackOut_32_2 = "null";
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
               break L8;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_0 = (RuntimeException) ((Object) stackIn_31_0);
+              stackOut_31_1 = (StringBuilder) ((Object) stackIn_31_1);
               stackOut_31_2 = "{...}";
               stackIn_33_0 = stackOut_31_0;
               stackIn_33_1 = stackOut_31_1;
@@ -181,9 +184,13 @@ final class mo {
               break L8;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ')');
         }
-        return stackIn_26_0;
+        if (decompiledRegionSelector0 == 0) {
+          return (io) ((Object) stackIn_24_0);
+        } else {
+          return stackIn_26_0;
+        }
     }
 
     final static void a(int param0) {
@@ -191,35 +198,31 @@ final class mo {
             throw new IllegalStateException();
         }
         nq.field_a = true;
-        ep.a(false, 0);
+        ep.a(false, param0 ^ param0);
         ob.field_d = 0;
     }
 
     public static void b(int param0) {
         field_a = null;
         field_c = null;
-        int var1 = -16;
+        int var1 = -16 / ((param0 - -33) / 39);
     }
 
     mo(jc param0, int param1, int param2) {
         try {
-            ((mo) this).field_d = param2;
-            ((mo) this).field_b = param0;
+            this.field_d = param2;
+            this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "mo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+            throw pn.a((Throwable) ((Object) runtimeException), "mo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     protected final void finalize() throws Throwable {
-        ((mo) this).field_b.c(110, ((mo) this).field_d);
+        this.field_b.c(110, this.field_d);
         super.finalize();
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_a = new w();
     }
 }

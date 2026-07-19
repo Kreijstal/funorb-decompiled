@@ -11,6 +11,10 @@ final class qq extends i {
     static String field_J;
 
     final static hd h(byte param0) {
+        if (param0 >= -39) {
+            qq.g(-104);
+            return ei.field_d.field_yb;
+        }
         return ei.field_d.field_yb;
     }
 
@@ -18,14 +22,17 @@ final class qq extends i {
         int var7_int = 15 + un.field_d.a(param3);
         pt.a(640, -22914, 630, 480, 0);
         on.a(-20 + (param5 - -160), -17 + param4, var7_int + 20, 21, 8, 65793, 128);
+        if (param1 != -101) {
+            return;
+        }
         try {
             ta.e(117);
             pt.a(640, -22914, param5 + 160, 480, 0);
-            on.a(-20 + param5 + 160, -17 + param4, 20 + var7_int, 21, 8, 14492194, 110);
+            on.a(-20 + param5 + 160, -17 + param4, 20 + var7_int, 21, 8, param6, param0);
             ta.e(119);
-            un.field_d.a(param3, 10 + (param5 + 160), param4, 13421772, -1);
+            un.field_d.a(param3, 10 + (param5 + 160), param4, param2, -1);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "qq.A(" + 110 + ',' + -101 + ',' + 13421772 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + 14492194 + ')');
+            throw nb.a((Throwable) ((Object) runtimeException), "qq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -52,7 +59,7 @@ final class qq extends i {
     }
 
     final static int g(byte param0) {
-        int var1 = 0;
+        int var1 = -2 % ((param0 - 47) / 61);
         return tn.field_b;
     }
 
@@ -61,10 +68,6 @@ final class qq extends i {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_K = new kj(3);
         field_F = "<%0> might change the options - wait and see.";
         field_J = "AWAY <%1> - <%0>  HOME";

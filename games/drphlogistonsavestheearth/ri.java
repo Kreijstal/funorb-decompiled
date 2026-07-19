@@ -43,10 +43,6 @@ final class ri {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "ri.A(";
         field_c = "Age:";
         field_e = 38;

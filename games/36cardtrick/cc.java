@@ -14,12 +14,16 @@ final class cc {
     }
 
     final static char a(byte param0, int param1) {
+        boolean discarded$0 = false;
         int var3 = 0;
         int var2 = 255 & param0;
         if (var2 == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
-        if (var2 >= 128) {
+        if (param1 != 63) {
+            discarded$0 = cc.a(0);
+        }
+        if ((var2 ^ -1) <= -129) {
             if (var2 < 160) {
                 var3 = se.field_K[-128 + var2];
                 if (var3 == 0) {
@@ -45,10 +49,18 @@ final class cc {
             var2 = 1;
             L1: while (true) {
               if (var2 >= mb.field_c.length) {
+                L2: {
+                  if (param0 > 34) {
+                    break L2;
+                  } else {
+                    field_a = 35;
+                    break L2;
+                  }
+                }
                 break L0;
               } else {
                 var3 = mb.field_c[var2];
-                og.a(lf.field_a, var2 << 4, lf.field_a, var1_int, var3);
+                og.a(lf.field_a, var2 << -718198940, lf.field_a, var1_int, var3);
                 var1_int = var1_int + var3;
                 var2++;
                 continue L1;
@@ -58,7 +70,7 @@ final class cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "cc.B(" + 124 + ')');
+          throw ma.a((Throwable) ((Object) var1), "cc.B(" + param0 + ')');
         }
     }
 
@@ -70,19 +82,19 @@ final class cc {
           if (param0 == 0) {
             break L0;
           } else {
-            field_b = null;
+            field_b = (String) null;
             break L0;
           }
         }
         L1: {
           L2: {
-            if (this == (Object) (Object) rk.field_eb) {
+            if (this == rk.field_eb) {
               break L2;
             } else {
-              if ((Object) (Object) vg.field_a == this) {
+              if (vg.field_a == this) {
                 break L2;
               } else {
-                if ((Object) (Object) ad.field_q != this) {
+                if (ad.field_q != this) {
                   stackOut_7_0 = 0;
                   stackIn_8_0 = stackOut_7_0;
                   break L1;
@@ -100,20 +112,19 @@ final class cc {
     }
 
     final static boolean a(int param0) {
-        int var1 = 1;
+        int var1 = 100 % ((param0 - -57) / 42);
         return ei.field_e;
     }
 
     public static void a(byte param0) {
+        if (param0 <= 98) {
+            field_e = -118;
+        }
         field_f = null;
         field_b = null;
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_f = new ge();
         field_b = "Type your age in years";
         field_a = 0;

@@ -7,12 +7,12 @@ final class lc {
 
     final void a() {
         int var1 = 0;
-        for (var1 = 0; var1 < ((lc) this).field_b.length; var1++) {
-            ((lc) this).field_b[var1] = 0;
+        for (var1 = 0; var1 < this.field_b.length; var1++) {
+            this.field_b[var1] = 0;
         }
     }
 
     lc(int param0) {
-        ((lc) this).field_b = new int[param0];
+        this.field_b = new int[param0];
     }
 }

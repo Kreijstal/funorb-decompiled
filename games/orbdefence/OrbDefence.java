@@ -7,6 +7,7 @@ public final class OrbDefence extends ph {
     public static boolean field_D;
 
     final void a(byte param0) {
+        boolean discarded$1 = false;
         int var2 = 0;
         ha var3_ref_ha = null;
         int var3 = 0;
@@ -76,7 +77,7 @@ public final class OrbDefence extends ph {
           }
         }
         L2: {
-          ((OrbDefence) this).b(stackIn_6_1, stackIn_6_2 != 0);
+          this.b(stackIn_6_1, stackIn_6_2 != 0);
           if (!gi.field_b) {
             break L2;
           } else {
@@ -89,14 +90,14 @@ public final class OrbDefence extends ph {
           if (!eg.c((byte) -126)) {
             break L3;
           } else {
-            ((OrbDefence) this).c(false);
+            this.c(false);
             if (!eg.c((byte) -126)) {
               break L3;
             } else {
               if (!fe.c((byte) -117)) {
                 return;
               } else {
-                boolean discarded$1 = this.a(false, (byte) 97);
+                discarded$1 = this.a(false, (byte) 97);
                 return;
               }
             }
@@ -133,7 +134,7 @@ public final class OrbDefence extends ph {
                 if (!rl.a((byte) 125)) {
                   break L4;
                 } else {
-                  ud.a(8, bk.field_d, true, ob.field_I.field_B + ob.field_I.field_E, 6, 6, (kc) (Object) ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
+                  ud.a(8, bk.field_d, true, ob.field_I.field_B + ob.field_I.field_E, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
                   break L4;
                 }
               } else {
@@ -161,11 +162,11 @@ public final class OrbDefence extends ph {
                     }
                   }
                   L7: {
-                    var2 = ((OrbDefence) this).a(stackIn_31_1 != 0, false);
-                    if (var2 == 1) {
+                    var2 = this.a(stackIn_31_1 != 0, false);
+                    if ((var2 ^ -1) == -2) {
                       break L7;
                     } else {
-                      if (var2 == 2) {
+                      if (-3 == (var2 ^ -1)) {
                         break L7;
                       } else {
                         break L4;
@@ -191,25 +192,25 @@ public final class OrbDefence extends ph {
                   break L4;
                 }
               } else {
-                if (lc.field_r != 0) {
+                if ((lc.field_r ^ -1) != -1) {
                   this.e(false);
                   break L4;
                 } else {
                   L9: {
                     var2 = hi.i(0);
-                    if (var2 == 2) {
+                    if (-3 == (var2 ^ -1)) {
                       lb.a(true);
                       break L9;
                     } else {
-                      if (var2 != 3) {
-                        if (var2 == 4) {
+                      if ((var2 ^ -1) != -4) {
+                        if (-5 == (var2 ^ -1)) {
                           n.a((byte) -110);
                           break L9;
                         } else {
                           break L9;
                         }
                       } else {
-                        ud.a(8, bk.field_d, true, ob.field_I.field_E + ob.field_I.field_B, 6, 6, (kc) (Object) ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
+                        ud.a(8, bk.field_d, true, ob.field_I.field_E + ob.field_I.field_B, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
                         break L9;
                       }
                     }
@@ -229,7 +230,7 @@ public final class OrbDefence extends ph {
           var2 = -59 / ((54 - param0) / 39);
           if (!n.b((byte) -70)) {
             L11: while (true) {
-              var3_ref_ha = (ha) (Object) pe.field_b.e(0);
+              var3_ref_ha = (ha) ((Object) pe.field_b.e(0));
               if (var3_ref_ha != null) {
                 f.a(4, var3_ref_ha, (byte) -4);
                 continue L11;
@@ -246,7 +247,7 @@ public final class OrbDefence extends ph {
             L13: {
               bh.a(0, -1);
               if (sg.c(true)) {
-                var3 = ((OrbDefence) this).j(7);
+                var3 = this.j(7);
                 if (2 == var3) {
                   md.b((byte) -121);
                   break L13;
@@ -259,7 +260,7 @@ public final class OrbDefence extends ph {
             }
             return;
           } else {
-            ((OrbDefence) this).e((byte) -115);
+            this.e((byte) -115);
             continue L12;
           }
         }
@@ -279,7 +280,7 @@ public final class OrbDefence extends ph {
               if (!param0) {
                 break L1;
               } else {
-                field_C = null;
+                field_C = (String) null;
                 break L1;
               }
             }
@@ -292,7 +293,7 @@ public final class OrbDefence extends ph {
                 var5 = 256;
                 var1_int = var5;
                 L3: while (true) {
-                  if (~var5 <= ~dk.field_c.length) {
+                  if ((var5 ^ -1) <= (dk.field_c.length ^ -1)) {
                     break L0;
                   } else {
                     dk.field_c[var5] = 255;
@@ -311,7 +312,7 @@ public final class OrbDefence extends ph {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var1, "OrbDefence.B(" + param0 + ')');
+          throw dd.a((Throwable) ((Object) var1), "OrbDefence.B(" + param0 + ')');
         }
     }
 
@@ -325,13 +326,15 @@ public final class OrbDefence extends ph {
         pd.field_r = qk.a(5, -32585);
         kd.field_q = qk.a(6, -32585);
         ig.field_hb = qk.a(7, -32585);
-        int var2 = 13;
+        int var2 = 13 / ((-73 - param0) / 49);
         hl.field_N = qk.a(8, -32585);
         lg.field_c = qk.a(9, -32585);
         mc.a(j.field_b, -29608, tf.field_d);
     }
 
     final static void a(byte[] param0, byte param1) {
+        byte dupTemp$2 = 0;
+        byte dupTemp$3 = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -353,10 +356,6 @@ public final class OrbDefence extends ph {
         byte[] var20 = null;
         byte[] var21 = null;
         byte[] var22 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        byte[] var25 = null;
-        byte[] var26 = null;
         int stackIn_33_0 = 0;
         int stackIn_34_0 = 0;
         int stackIn_35_0 = 0;
@@ -415,60 +414,56 @@ public final class OrbDefence extends ph {
               if (ec.field_K <= var5) {
                 var5 = 0;
                 L2: while (true) {
-                  if (~var5 <= ~ec.field_K) {
+                  if ((var5 ^ -1) <= (ec.field_K ^ -1)) {
                     var5 = 0;
                     L3: while (true) {
-                      if (~ec.field_K >= ~var5) {
+                      if ((ec.field_K ^ -1) >= (var5 ^ -1)) {
                         var5 = 0;
                         L4: while (true) {
-                          if (~ec.field_K >= ~var5) {
+                          if ((ec.field_K ^ -1) >= (var5 ^ -1)) {
                             var18.field_i = -(3 * (-1 + var4)) + -(8 * ec.field_K) + param0.length + -7;
                             vc.field_g = new int[var4];
                             var5 = 1;
                             L5: while (true) {
-                              if (~var5 <= ~var4) {
+                              if ((var5 ^ -1) <= (var4 ^ -1)) {
                                 var18.field_i = 0;
                                 var5 = 0;
                                 L6: while (true) {
-                                  if (~var5 <= ~ec.field_K) {
+                                  if ((var5 ^ -1) <= (ec.field_K ^ -1)) {
                                     break L0;
                                   } else {
                                     L7: {
                                       var6 = wh.field_b[var5];
                                       var7 = m.field_a[var5];
                                       var8 = var7 * var6;
-                                      var25 = new byte[var8];
-                                      var23 = var25;
-                                      var21 = var23;
+                                      var21 = new byte[var8];
                                       var19 = var21;
                                       var9 = var19;
-                                      fl.field_a[var5] = var25;
-                                      var26 = new byte[var8];
-                                      var24 = var26;
-                                      var22 = var24;
+                                      fl.field_a[var5] = var21;
+                                      var22 = new byte[var8];
                                       var20 = var22;
                                       var10 = var20;
-                                      md.field_i[var5] = var26;
+                                      md.field_i[var5] = var22;
                                       var11 = 0;
                                       var12 = var18.b((byte) 90);
-                                      if ((1 & var12) == 0) {
+                                      if ((1 & var12 ^ -1) == -1) {
                                         var13 = 0;
                                         L8: while (true) {
                                           if (var8 <= var13) {
-                                            if ((var12 & 2) != 0) {
+                                            if (-1 != (var12 & 2 ^ -1)) {
                                               var13 = 0;
                                               L9: while (true) {
                                                 if (var13 >= var8) {
                                                   break L7;
                                                 } else {
                                                   L10: {
-                                                    byte dupTemp$2 = var18.d(-20398);
+                                                    dupTemp$2 = var18.d(-20398);
                                                     var10[var13] = dupTemp$2;
                                                     var14 = dupTemp$2;
                                                     stackOut_44_0 = var11;
                                                     stackIn_46_0 = stackOut_44_0;
                                                     stackIn_45_0 = stackOut_44_0;
-                                                    if (var14 == -1) {
+                                                    if ((var14 ^ -1) == 0) {
                                                       stackOut_46_0 = stackIn_46_0;
                                                       stackOut_46_1 = 0;
                                                       stackIn_47_0 = stackOut_46_0;
@@ -515,13 +510,13 @@ public final class OrbDefence extends ph {
                                                       continue L12;
                                                     } else {
                                                       L14: {
-                                                        byte dupTemp$3 = var18.d(-20398);
+                                                        dupTemp$3 = var18.d(-20398);
                                                         var10[var14 * var6 + var13] = dupTemp$3;
                                                         var15 = dupTemp$3;
                                                         stackOut_32_0 = var11;
                                                         stackIn_34_0 = stackOut_32_0;
                                                         stackIn_33_0 = stackOut_32_0;
-                                                        if (var15 == -1) {
+                                                        if ((var15 ^ -1) == 0) {
                                                           stackOut_34_0 = stackIn_34_0;
                                                           stackOut_34_1 = 0;
                                                           stackIn_35_0 = stackOut_34_0;
@@ -546,7 +541,7 @@ public final class OrbDefence extends ph {
                                           } else {
                                             var14 = 0;
                                             L15: while (true) {
-                                              if (~var7 >= ~var14) {
+                                              if ((var7 ^ -1) >= (var14 ^ -1)) {
                                                 var13++;
                                                 continue L11;
                                               } else {
@@ -567,7 +562,7 @@ public final class OrbDefence extends ph {
                               } else {
                                 L16: {
                                   vc.field_g[var5] = var18.a((byte) -30);
-                                  if (vc.field_g[var5] != 0) {
+                                  if ((vc.field_g[var5] ^ -1) != -1) {
                                     break L16;
                                   } else {
                                     vc.field_g[var5] = 1;
@@ -607,23 +602,23 @@ public final class OrbDefence extends ph {
           decompiledCaughtException = decompiledCaughtParameter0;
           L17: {
             var2 = decompiledCaughtException;
-            stackOut_50_0 = (RuntimeException) var2;
+            stackOut_50_0 = (RuntimeException) (var2);
             stackOut_50_1 = new StringBuilder().append("OrbDefence.I(");
             stackIn_52_0 = stackOut_50_0;
             stackIn_52_1 = stackOut_50_1;
             stackIn_51_0 = stackOut_50_0;
             stackIn_51_1 = stackOut_50_1;
             if (param0 == null) {
-              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
-              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
+              stackOut_52_0 = (RuntimeException) ((Object) stackIn_52_0);
+              stackOut_52_1 = (StringBuilder) ((Object) stackIn_52_1);
               stackOut_52_2 = "null";
               stackIn_53_0 = stackOut_52_0;
               stackIn_53_1 = stackOut_52_1;
               stackIn_53_2 = stackOut_52_2;
               break L17;
             } else {
-              stackOut_51_0 = (RuntimeException) (Object) stackIn_51_0;
-              stackOut_51_1 = (StringBuilder) (Object) stackIn_51_1;
+              stackOut_51_0 = (RuntimeException) ((Object) stackIn_51_0);
+              stackOut_51_1 = (StringBuilder) ((Object) stackIn_51_1);
               stackOut_51_2 = "{...}";
               stackIn_53_0 = stackOut_51_0;
               stackIn_53_1 = stackOut_51_1;
@@ -631,7 +626,7 @@ public final class OrbDefence extends ph {
               break L17;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_53_0, stackIn_53_2 + ',' + param1 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_53_0), stackIn_53_2 + ',' + param1 + ')');
         }
     }
 
@@ -641,7 +636,7 @@ public final class OrbDefence extends ph {
     final void d(int param0) {
         am.a(-4062);
         if (param0 != 176400) {
-            field_E = null;
+            field_E = (String) null;
         }
         if (!(mg.field_k == null)) {
             lb.a(true);
@@ -938,7 +933,7 @@ public final class OrbDefence extends ph {
         qd.a(-96);
         wb.f(7312);
         e.a((byte) -14);
-        ((OrbDefence) this).field_n = null;
+        this.field_n = null;
     }
 
     final void d(byte param0) {
@@ -964,12 +959,12 @@ public final class OrbDefence extends ph {
             if (ad.a((byte) -72)) {
               L0: {
                 ul.d();
-                if (~kk.field_S != ~kf.field_c) {
+                if ((kk.field_S ^ -1) != (kf.field_c ^ -1)) {
                   if (5 <= te.field_O) {
                     L1: {
-                      if (kk.field_S != -1) {
+                      if (0 != (kk.field_S ^ -1)) {
                         L2: {
-                          if (kk.field_S != 1) {
+                          if (-2 != (kk.field_S ^ -1)) {
                             break L2;
                           } else {
                             if (il.field_f == null) {
@@ -991,9 +986,9 @@ public final class OrbDefence extends ph {
                     break L0;
                   } else {
                     L3: {
-                      if (kf.field_c != -1) {
+                      if ((kf.field_c ^ -1) != 0) {
                         L4: {
-                          if (kf.field_c != 1) {
+                          if (-2 != (kf.field_c ^ -1)) {
                             break L4;
                           } else {
                             if (null != il.field_f) {
@@ -1046,7 +1041,7 @@ public final class OrbDefence extends ph {
                 }
               }
               L7: {
-                if (lc.field_r == 0) {
+                if (-1 == (lc.field_r ^ -1)) {
                   break L7;
                 } else {
                   var3_int = 256 * te.field_O / 10;
@@ -1100,17 +1095,17 @@ public final class OrbDefence extends ph {
                 if (param0 < -72) {
                   break L11;
                 } else {
-                  field_C = null;
+                  field_C = (String) null;
                   break L11;
                 }
               }
               L12: {
-                var3 = (kg) (Object) oj.field_r.b((byte) 120);
+                var3 = (kg) ((Object) oj.field_r.b((byte) 120));
                 if (var3 != null) {
                   L13: {
                     var5 = lc.field_x;
-                    if (var5 >= 80) {
-                      if (var5 < 230) {
+                    if (-81 >= (var5 ^ -1)) {
+                      if (-231 < (var5 ^ -1)) {
                         var4 = 96;
                         break L13;
                       } else {
@@ -1153,18 +1148,25 @@ public final class OrbDefence extends ph {
     }
 
     final void c(byte param0) {
-        ((OrbDefence) this).a(false, (byte) 88, 10, 3, 1, 0, 2, 60);
+        this.a(false, (byte) 88, 10, 3, 1, 0, 2, 60);
         int var3 = 112 / ((param0 - -4) / 39);
         lj var2 = new lj();
         var2.a(128, 9, (byte) 125);
-        gj.a(22050, var2, true, 1024, (java.awt.Component) (Object) tf.field_f, wc.field_c);
+        gj.a(22050, var2, true, 1024, (java.awt.Component) ((Object) tf.field_f), wc.field_c);
         he.field_C = 16777215;
         lf.field_e = 15632639;
         mf.field_c = 16777215;
-        ((OrbDefence) this).a(false, true, true, false, false);
+        this.a(false, true, true, false, false);
     }
 
     private final boolean a(boolean param0, byte param1) {
+        hj discarded$14 = null;
+        int[] array$15 = null;
+        hj discarded$16 = null;
+        hj[] discarded$17 = null;
+        hj[] discarded$18 = null;
+        hj[] discarded$19 = null;
+        hj[] discarded$20 = null;
         int var3 = 0;
         int[] var3_ref_int__ = null;
         int var4_int = 0;
@@ -1180,83 +1182,88 @@ public final class OrbDefence extends ph {
         hj var12 = null;
         hj var13 = null;
         int[] var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
         var9 = field_D ? 1 : 0;
-        bl.a(117);
+        bl.a(param1 ^ 20);
         if (null == kd.field_q) {
           if (null == ig.field_hb) {
             if (lg.field_c == null) {
               if (hl.field_N == null) {
                 if (null == j.field_b) {
                   if (null == bh.field_d) {
-                    if (gl.b(10489)) {
-                      var3 = 0;
-                      L0: while (true) {
-                        if (var3 >= 9) {
-                          kf.field_c = 0;
-                          cc.a(false, 50);
-                          km.a((byte) -62, 50);
-                          hi.a(ee.field_b[12], 2, false, 1, true, 2);
-                          bl.field_p = 0;
-                          return true;
-                        } else {
-                          nc.field_cb[var3] = new ja(var3);
-                          var3++;
-                          continue L0;
+                    L0: {
+                      if (gl.b(10489)) {
+                        var3 = 0;
+                        L1: while (true) {
+                          if (var3 >= 9) {
+                            kf.field_c = 0;
+                            cc.a(false, 50);
+                            km.a((byte) -62, 50);
+                            hi.a(ee.field_b[12], param1 ^ 99, false, 1, true, 2);
+                            bl.field_p = 0;
+                            break L0;
+                          } else {
+                            nc.field_cb[var3] = new ja(var3);
+                            var3++;
+                            continue L1;
+                          }
                         }
+                      } else {
+                        break L0;
                       }
+                    }
+                    if (param1 == 97) {
+                      return true;
                     } else {
+                      field_E = (String) null;
                       return true;
                     }
                   } else {
-                    hj discarded$12 = fk.a(bh.field_d, "background", -117, "");
+                    discarded$14 = fk.a(bh.field_d, "background", -117, "");
                     cc.field_t = sf.a("", pd.field_r, -1, "aafont", bh.field_d);
-                    var16 = cc.field_t.field_J[0];
-                    var15 = var16;
-                    var14 = var15;
+                    var14 = cc.field_t.field_J[0];
                     var11 = var14;
                     var10 = var11;
                     var3_ref_int__ = var10;
                     cc.field_t.field_J = new int[2][];
-                    cc.field_t.field_J[0] = var16;
-                    cc.field_t.field_J[1] = new int[var16.length];
+                    cc.field_t.field_J[0] = var14;
+                    array$15 = new int[var14.length];
+                    cc.field_t.field_J[1] = array$15;
                     var4_int = 0;
-                    L1: while (true) {
-                      if (~var16.length >= ~var4_int) {
+                    L2: while (true) {
+                      if ((var14.length ^ -1) >= (var4_int ^ -1)) {
                         var4 = fl.a(-9945, bh.field_d, "", "keys");
                         var5 = new int[]{14, 14, 14, 15, 15};
                         var6 = 0;
-                        L2: while (true) {
-                          if (~var4.length >= ~var6) {
-                            ob.field_I.a((ia[]) (Object) var4, var5);
-                            jd.field_c.a((ia[]) (Object) var4, var5);
+                        L3: while (true) {
+                          if ((var4.length ^ -1) >= (var6 ^ -1)) {
+                            ob.field_I.a(var4, var5);
+                            jd.field_c.a(var4, var5);
                             pj.field_u = p.a(13863, "", bh.field_d, "menu_overlays");
                             am.field_d = new hj[6];
                             am.field_d[0] = fk.a(bh.field_d, "baseimage", -83, "");
                             am.field_d[1] = fk.a(bh.field_d, "baseimage2", 79, "");
-                            am.field_d[2] = fk.a(bh.field_d, "baseimage3", gi.a(97, -84), "");
-                            am.field_d[3] = fk.a(bh.field_d, "baseimage4", gi.a(97, -95), "");
+                            am.field_d[2] = fk.a(bh.field_d, "baseimage3", gi.a((int) param1, -84), "");
+                            am.field_d[3] = fk.a(bh.field_d, "baseimage4", gi.a((int) param1, -95), "");
                             am.field_d[4] = fk.a(bh.field_d, "baseimage5", -72, "");
                             am.field_d[5] = fk.a(bh.field_d, "baseimage6", -58, "");
                             hi.field_g = new hj[6];
                             var6 = 0;
-                            L3: while (true) {
-                              if (~hi.field_g.length >= ~var6) {
-                                hg.field_ab = fk.a(bh.field_d, "anorb", -95, "");
+                            L4: while (true) {
+                              if ((hi.field_g.length ^ -1) >= (var6 ^ -1)) {
+                                hg.field_ab = fk.a(bh.field_d, "anorb", param1 ^ -64, "");
                                 ab.field_g = p.a(13863, "", bh.field_d, "walk_norb");
                                 hf.field_g = p.a(13863, "", bh.field_d, "turrettest");
                                 cj.a(105);
                                 fk.field_b = fk.a(bh.field_d, "titleimage", 46, "");
-                                hj discarded$13 = fk.a(bh.field_d, "orbpilon", 120, "");
-                                hj[] discarded$14 = p.a(13863, "", bh.field_d, "wall");
+                                discarded$16 = fk.a(bh.field_d, "orbpilon", 120, "");
+                                discarded$17 = p.a(param1 + 13766, "", bh.field_d, "wall");
                                 bc.field_q = p.a(13863, "", bh.field_d, "edging");
                                 mf.field_b = p.a(13863, "", bh.field_d, "floors_1");
-                                hj[] discarded$15 = p.a(13863, "", bh.field_d, "turrets");
+                                discarded$18 = p.a(param1 ^ 13894, "", bh.field_d, "turrets");
                                 gd.field_b = p.a(13863, "", bh.field_d, "explosion");
-                                hj[] discarded$16 = p.a(13863, "", bh.field_d, "bosses");
+                                discarded$19 = p.a(13863, "", bh.field_d, "bosses");
                                 gk.field_a = fk.a(bh.field_d, "in_game_shine", -79, "");
-                                ad.field_e = fk.a(bh.field_d, "in_game_swarm_bar", -103, "");
+                                ad.field_e = fk.a(bh.field_d, "in_game_swarm_bar", param1 ^ -8, "");
                                 dh.field_X = fk.a(bh.field_d, "in_game_topbar_center", 38, "");
                                 ck.field_c = new hj[2];
                                 ck.field_c[0] = fk.a(bh.field_d, "in_game_turret_unavailable", -119, "");
@@ -1268,7 +1275,7 @@ public final class OrbDefence extends ph {
                                 f.field_w = p.a(13863, "", bh.field_d, "frame");
                                 bk.field_d = p.a(13863, "", bh.field_d, "button_frame");
                                 qc.field_f = p.a(13863, "", bh.field_d, "button_raised");
-                                hj[] discarded$17 = p.a(13863, "", bh.field_d, "button_depressed");
+                                discarded$20 = p.a(param1 ^ 13894, "", bh.field_d, "button_depressed");
                                 bd.field_o = new hj[24];
                                 bd.field_o[0] = fk.a(bh.field_d, "achievements_icon_1", -99, "");
                                 bd.field_o[1] = fk.a(bh.field_d, "achievements_icon_2", -71, "");
@@ -1276,7 +1283,7 @@ public final class OrbDefence extends ph {
                                 bd.field_o[3] = fk.a(bh.field_d, "achievements_icon_4", 92, "");
                                 bd.field_o[4] = fk.a(bh.field_d, "achievements_icon_5", -100, "");
                                 bd.field_o[5] = fk.a(bh.field_d, "achievements_icon_6", -115, "");
-                                bd.field_o[6] = fk.a(bh.field_d, "achievements_icon_7", gi.a(97, 55), "");
+                                bd.field_o[6] = fk.a(bh.field_d, "achievements_icon_7", gi.a((int) param1, 55), "");
                                 bd.field_o[7] = fk.a(bh.field_d, "achievements_icon_8", 72, "");
                                 bd.field_o[8] = fk.a(bh.field_d, "achievements_icon_9", 58, "");
                                 bd.field_o[9] = fk.a(bh.field_d, "achievements_icon_10", -116, "");
@@ -1285,10 +1292,10 @@ public final class OrbDefence extends ph {
                                 bd.field_o[12] = fk.a(bh.field_d, "achievements_icon_13", 38, "");
                                 bd.field_o[13] = fk.a(bh.field_d, "achievements_icon_14", 87, "");
                                 bd.field_o[14] = fk.a(bh.field_d, "achievements_icon_15", 98, "");
-                                bd.field_o[15] = fk.a(bh.field_d, "achievements_icon_16", gi.a(97, 62), "");
+                                bd.field_o[15] = fk.a(bh.field_d, "achievements_icon_16", gi.a((int) param1, 62), "");
                                 bd.field_o[16] = fk.a(bh.field_d, "achievements_icon_17", 51, "");
-                                bd.field_o[17] = fk.a(bh.field_d, "achievements_icon_18", gi.a(97, -29), "");
-                                bd.field_o[18] = fk.a(bh.field_d, "achievements_icon_19", -105, "");
+                                bd.field_o[17] = fk.a(bh.field_d, "achievements_icon_18", gi.a((int) param1, -29), "");
+                                bd.field_o[18] = fk.a(bh.field_d, "achievements_icon_19", param1 + -202, "");
                                 bd.field_o[19] = fk.a(bh.field_d, "achievements_icon_20", 87, "");
                                 bd.field_o[20] = fk.a(bh.field_d, "achievements_icon_21", -70, "");
                                 bd.field_o[21] = fk.a(bh.field_d, "achievements_icon_22", -125, "");
@@ -1297,18 +1304,18 @@ public final class OrbDefence extends ph {
                                 ba.a((byte) -27);
                                 var6_ref_hj__ = bd.field_o;
                                 var7_int = 0;
-                                L4: while (true) {
-                                  if (~var7_int <= ~var6_ref_hj__.length) {
+                                L5: while (true) {
+                                  if ((var7_int ^ -1) <= (var6_ref_hj__.length ^ -1)) {
                                     var6 = ob.field_I.field_H - -ob.field_I.field_B;
                                     ba.field_e = new hj(var6, var6);
                                     ba.field_e.d();
                                     jm.field_b.d(0, 0, var6, var6);
                                     jm.field_b = null;
                                     cb.field_a.a(-40);
-                                    o.a(80, (byte) -38, (java.applet.Applet) this, tk.field_r, 0, 255);
-                                    var7 = fk.a(bh.field_d, "mb_frames", 71, "");
+                                    o.a(80, (byte) -38, (java.applet.Applet) (this), tk.field_r, 0, 255);
+                                    var7 = fk.a(bh.field_d, "mb_frames", param1 ^ 38, "");
                                     ij.a(-63, ui.field_e, var7);
-                                    pj.a(0, fk.a(bh.field_d, "mb_logo", 40, ""));
+                                    pj.a(param1 + -97, fk.a(bh.field_d, "mb_logo", 40, ""));
                                     bk.a(90, p.a(13863, "", bh.field_d, "mb_sshots"));
                                     var13 = fk.a(bh.field_d, "mb_pricing_bg", 60, "");
                                     kj.a(var13, 80, (byte) 45, 10, 10, 10, 140, 1500, 10);
@@ -1320,48 +1327,48 @@ public final class OrbDefence extends ph {
                                     var12 = var6_ref_hj__[var7_int];
                                     sl.a(2408, var12);
                                     var7_int++;
-                                    continue L4;
+                                    continue L5;
                                   }
                                 }
                               } else {
                                 hi.field_g[var6] = new hj(160, 120);
                                 var6++;
-                                continue L3;
+                                continue L4;
                               }
                             }
                           } else {
                             var4[var6].field_c = 2 + var4[var6].field_h;
                             var4[var6].field_b = 1;
                             var6++;
-                            continue L2;
+                            continue L3;
                           }
                         }
                       } else {
-                        cc.field_t.field_J[1][var4_int] = vi.a(var16[var4_int], 16711935);
+                        cc.field_t.field_J[1][var4_int] = vi.a(var14[var4_int], 16711935);
                         var4_int++;
-                        continue L1;
+                        continue L2;
                       }
                     }
                   }
                 } else {
                   j.a(90.0f, ek.field_c, (byte) 119);
-                  ((OrbDefence) this).d((byte) -113);
+                  this.d((byte) -113);
                   al.field_d = fk.a(j.field_b, "unachieved", 45, "basic");
                   me.field_n = fk.a(j.field_b, "locked", -90, "basic");
                   jm.field_b = fk.a(j.field_b, "orbcoin", 105, "basic");
                   sl.a(2408, al.field_d);
-                  sl.a(2408, me.field_n);
-                  sl.a(2408, jm.field_b);
-                  ob.field_I = b.a("", "arialbold14", -105, tf.field_d, j.field_b);
+                  sl.a(param1 ^ 2313, me.field_n);
+                  sl.a(param1 ^ 2313, jm.field_b);
+                  ob.field_I = b.a("", "arialbold14", param1 + -202, tf.field_d, j.field_b);
                   jd.field_c = b.a("", "arial13", 90, tf.field_d, j.field_b);
                   tf.field_d = null;
                   j.field_b = null;
-                  vd.a(90);
+                  vd.a(param1 ^ 59);
                   return false;
                 }
               } else {
                 var3 = 0;
-                L5: while (true) {
+                L6: while (true) {
                   if (15 <= var3) {
                     ml.field_c.b((byte) 27);
                     hl.field_N = null;
@@ -1369,27 +1376,27 @@ public final class OrbDefence extends ph {
                     vd.a(64);
                     return false;
                   } else {
-                    L6: {
+                    L7: {
                       if (null == ee.field_b[var3]) {
-                        break L6;
+                        break L7;
                       } else {
                         if (ml.field_c.a(hl.field_N, cj.field_b, (byte) 31, ee.field_b[var3], 176400)) {
-                          break L6;
+                          break L7;
                         } else {
-                          vd.a(97);
+                          vd.a(param1 ^ 0);
                           return false;
                         }
                       }
                     }
                     var3++;
-                    continue L5;
+                    continue L6;
                   }
                 }
               }
             } else {
               ee.field_b = new fj[15];
               j.a(75.0f, m.field_e, (byte) 125);
-              ((OrbDefence) this).d((byte) -116);
+              this.d((byte) -116);
               ee.field_b[0] = fj.a(lg.field_c, "", "Orb_defence_level_1_construction");
               ee.field_b[1] = fj.a(lg.field_c, "", "Orb_defence_level_1_waves");
               ee.field_b[2] = fj.a(lg.field_c, "", "Orb_defence_level_1_boss");
@@ -1405,12 +1412,12 @@ public final class OrbDefence extends ph {
               ee.field_b[12] = fj.a(lg.field_c, "", "Orb_defence_titlescreen_1");
               ee.field_b[14] = fj.a(lg.field_c, "", "Orb_defence_gameover");
               lg.field_c = null;
-              vd.a(26);
+              vd.a(param1 + -71);
               return false;
             }
           } else {
             j.a(70.0f, me.field_i, (byte) 120);
-            ((OrbDefence) this).d((byte) -82);
+            this.d((byte) -82);
             mh.field_a[31] = nj.a(ig.field_hb, "", "orb_defence_normo_boss_arrive").a();
             mh.field_a[32] = nj.a(ig.field_hb, "", "orb_defence_swarmo_boss_arrive").a();
             mh.field_a[33] = nj.a(ig.field_hb, "", "orb_defence_zoomo_boss_arrive").a();
@@ -1425,81 +1432,81 @@ public final class OrbDefence extends ph {
             mh.field_a[57] = nj.a(ig.field_hb, "", "orb_defence_Barrier_Norb_Electrocute").a();
             mh.field_a[58] = nj.a(ig.field_hb, "", "orb_defence_Electro_Turret_shoot").a();
             ig.field_hb = null;
-            vd.a(89);
+            vd.a(param1 + -8);
             return false;
           }
         } else {
-          L7: {
+          L8: {
             if (!j.field_b.b(-1)) {
-              break L7;
+              break L8;
             } else {
               if (!j.field_b.b((byte) 102, "basic")) {
-                break L7;
+                break L8;
               } else {
                 if (j.field_b.b((byte) 99, "arialbold14")) {
-                  L8: {
+                  L9: {
                     if (!tf.field_d.b(-1)) {
-                      break L8;
+                      break L9;
                     } else {
                       if (!tf.field_d.b((byte) 121, "arialbold14")) {
-                        break L8;
+                        break L9;
                       } else {
                         if (!j.field_b.b((byte) 81, "arial13")) {
-                          j.a(4.0f, ed.a(hi.field_e, j.field_b, -14416, bk.field_a, "arial13"), (byte) 112);
+                          j.a(4.0f, ed.a(hi.field_e, j.field_b, param1 + -14513, bk.field_a, "arial13"), (byte) 112);
                           return false;
                         } else {
-                          L9: {
-                            if (!tf.field_d.b(-1)) {
-                              break L9;
+                          L10: {
+                            if (!tf.field_d.b(param1 + -98)) {
+                              break L10;
                             } else {
                               if (tf.field_d.b((byte) -84, "arial13")) {
-                                L10: {
+                                L11: {
                                   if (!kd.field_q.b(-1)) {
-                                    break L10;
+                                    break L11;
                                   } else {
                                     if (!kd.field_q.c(7715)) {
-                                      break L10;
+                                      break L11;
                                     } else {
-                                      L11: {
+                                      L12: {
                                         if (!ig.field_hb.b(-1)) {
-                                          break L11;
+                                          break L12;
                                         } else {
                                           if (!ig.field_hb.c(7715)) {
-                                            break L11;
+                                            break L12;
                                           } else {
-                                            L12: {
+                                            L13: {
                                               if (!hl.field_N.b(-1)) {
-                                                break L12;
+                                                break L13;
                                               } else {
-                                                if (!hl.field_N.c(7715)) {
-                                                  break L12;
+                                                if (!hl.field_N.c(param1 + 7618)) {
+                                                  break L13;
                                                 } else {
-                                                  L13: {
+                                                  L14: {
                                                     if (!lg.field_c.b(-1)) {
-                                                      break L13;
+                                                      break L14;
                                                     } else {
-                                                      if (!lg.field_c.c(7715)) {
-                                                        break L13;
+                                                      if (!lg.field_c.c(param1 + 7618)) {
+                                                        break L14;
                                                       } else {
-                                                        L14: {
+                                                        L15: {
                                                           if (!bh.field_d.b(-1)) {
-                                                            break L14;
+                                                            break L15;
                                                           } else {
                                                             if (!bh.field_d.c(7715)) {
-                                                              break L14;
+                                                              break L15;
                                                             } else {
-                                                              L15: {
-                                                                if (!pd.field_r.b(-1)) {
-                                                                  break L15;
+                                                              L16: {
+                                                                if (!pd.field_r.b(param1 ^ -98)) {
+                                                                  break L16;
                                                                 } else {
-                                                                  if (pd.field_r.c(7715)) {
+                                                                  if (pd.field_r.c(param1 + 7618)) {
                                                                     j.a(65.0f, me.field_i, (byte) 122);
-                                                                    ((OrbDefence) this).d((byte) -80);
+                                                                    this.d((byte) -80);
                                                                     if (!param0) {
                                                                       return false;
                                                                     } else {
                                                                       mh.field_a = new dl[60];
-                                                                      bg.a(-2027485778);
+                                                                      bg.a(param1 + -2027485875);
                                                                       cj.field_b = new vd(kd.field_q, ig.field_hb);
                                                                       mh.field_a[0] = cm.a(kd.field_q, "", "Orb_defence_select_menu_item").a();
                                                                       mh.field_a[30] = cm.a(kd.field_q, "", "Orb_defence_mouseover_options").a();
@@ -1549,16 +1556,16 @@ public final class OrbDefence extends ph {
                                                                       return false;
                                                                     }
                                                                   } else {
-                                                                    break L15;
+                                                                    break L16;
                                                                   }
                                                                 }
                                                               }
-                                                              j.a(55.0f, ed.a(hi.field_e, pd.field_r, -14416, bk.field_a, ""), (byte) 105);
+                                                              j.a(55.0f, ed.a(hi.field_e, pd.field_r, param1 ^ -14383, bk.field_a, ""), (byte) 105);
                                                               return false;
                                                             }
                                                           }
                                                         }
-                                                        j.a(45.0f, ed.a(kj.field_z, bh.field_d, -14416, jj.field_B, ""), (byte) 120);
+                                                        j.a(45.0f, ed.a(kj.field_z, bh.field_d, param1 + -14513, jj.field_B, ""), (byte) 120);
                                                         return false;
                                                       }
                                                     }
@@ -1581,7 +1588,7 @@ public final class OrbDefence extends ph {
                                 j.a(10.0f, ed.a(hb.field_b, kd.field_q, -14416, vg.field_u, ""), (byte) 114);
                                 return false;
                               } else {
-                                break L9;
+                                break L10;
                               }
                             }
                           }
@@ -1600,28 +1607,149 @@ public final class OrbDefence extends ph {
               }
             }
           }
-          j.a(3.0f, ed.a(kj.field_z, j.field_b, -14416, jj.field_B, "basic"), (byte) 120);
+          j.a(3.0f, ed.a(kj.field_z, j.field_b, param1 + -14513, jj.field_B, "basic"), (byte) 120);
           return false;
         }
     }
 
     public final void init() {
-        ((OrbDefence) this).a(11, "orbdefence", (byte) 20);
+        this.a(11, "orbdefence", (byte) 20);
     }
 
     private final void e(boolean param0) {
-        int var3 = field_D ? 1 : 0;
-        if (va.field_d >= 2) {
-            if (!(!ek.field_a[41])) {
-                lb.field_g = 16777215;
-                fc.field_d = true;
+        int fieldTemp$2 = 0;
+        ca discarded$3 = null;
+        int var3 = 0;
+        L0: {
+          var3 = field_D ? 1 : 0;
+          if ((va.field_d ^ -1) > -3) {
+            break L0;
+          } else {
+            if (ek.field_a[41]) {
+              lb.field_g = 16777215;
+              fc.field_d = true;
+              break L0;
+            } else {
+              break L0;
             }
+          }
         }
-        if (df.field_f) {
-            jg.field_n[25] = cc.field_m;
-        } else {
+        L1: {
+          if (!df.field_f) {
             jg.field_n[25] = db.field_c;
-            return;
+            break L1;
+          } else {
+            jg.field_n[25] = cc.field_m;
+            break L1;
+          }
+        }
+        if (!param0) {
+          L2: {
+            if (oj.field_r.b((byte) -55) == null) {
+              break L2;
+            } else {
+              fieldTemp$2 = lc.field_x + 1;
+              lc.field_x = lc.field_x + 1;
+              if (-336 == (fieldTemp$2 ^ -1)) {
+                lc.field_x = 0;
+                discarded$3 = oj.field_r.e(0);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+          }
+          L3: {
+            if (0 != lc.field_r) {
+              if (-2 != (lc.field_r ^ -1)) {
+                if (lc.field_r != 2) {
+                  te.field_O = te.field_O - 1;
+                  if (0 == te.field_O) {
+                    lc.field_r = 0;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                } else {
+                  L4: {
+                    if (!n.b((byte) 102)) {
+                      L5: {
+                        oh.field_c = lg.a(4, param0);
+                        if (null != il.field_f) {
+                          il.field_f.c(-1);
+                          break L5;
+                        } else {
+                          break L5;
+                        }
+                      }
+                      kf.field_c = da.field_B;
+                      if ((kf.field_c ^ -1) == 1) {
+                        kf.field_c = 0;
+                        ud.a(8, bk.field_d, false, ob.field_I.field_E + ob.field_I.field_B, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    } else {
+                      kf.field_c = dm.field_a;
+                      break L4;
+                    }
+                  }
+                  kk.field_S = kf.field_c;
+                  te.field_O = 9;
+                  lc.field_r = 3;
+                  break L3;
+                }
+              } else {
+                te.field_O = te.field_O + 1;
+                if (-11 == (te.field_O ^ -1)) {
+                  L6: {
+                    if (rl.a((byte) 108)) {
+                      n.a((byte) -110);
+                      break L6;
+                    } else {
+                      ji.a((byte) 104);
+                      break L6;
+                    }
+                  }
+                  lc.field_r = 2;
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
+            } else {
+              if ((kf.field_c ^ -1) == (kk.field_S ^ -1)) {
+                if (0 != (kf.field_c ^ -1)) {
+                  nc.field_cb[kf.field_c].b(param0);
+                  break L3;
+                } else {
+                  il.field_f.b(28803, true);
+                  break L3;
+                }
+              } else {
+                te.field_O = te.field_O + 1;
+                if ((te.field_O ^ -1) != -11) {
+                  break L3;
+                } else {
+                  L7: {
+                    if ((kf.field_c ^ -1) == -3) {
+                      kj.field_x = null;
+                      break L7;
+                    } else {
+                      break L7;
+                    }
+                  }
+                  kf.field_c = kk.field_S;
+                  te.field_O = 0;
+                  break L3;
+                }
+              }
+            }
+          }
+          return;
+        } else {
+          return;
         }
     }
 
@@ -1634,10 +1762,6 @@ public final class OrbDefence extends ph {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_C = "Updates will sent to the email address you've given";
         field_E = "???";
     }

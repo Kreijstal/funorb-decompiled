@@ -15,7 +15,7 @@ final class oi {
     static String field_e;
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1 = 21 % ((27 - param0) / 47);
         fb.a(17, 115);
     }
 
@@ -24,11 +24,11 @@ final class oi {
             al.j(-1);
             nb.field_a.h(-92);
             b.field_c = new qm(fa.field_Ib, (String) null, ch.field_e, param1, param3);
-            wj.field_i = new ub(nb.field_a, (cf) (Object) b.field_c);
+            wj.field_i = new ub(nb.field_a, b.field_c);
             int var4_int = 120 / ((64 - param2) / 61);
-            nb.field_a.b(3016, (cf) (Object) wj.field_i);
+            nb.field_a.b(3016, wj.field_i);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+            throw fa.a((Throwable) ((Object) runtimeException), "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -39,14 +39,17 @@ final class oi {
         field_h = null;
         field_b = null;
         field_k = null;
-        field_f = null;
+        if (param0 != 5378) {
+          field_h = (ja[]) null;
+          field_f = null;
+          return;
+        } else {
+          field_f = null;
+          return;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = "<%0> wants to join";
         field_f = "Passwords must be between 5 and 20 letters and numbers";
         field_j = new ak();

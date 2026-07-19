@@ -21,7 +21,7 @@ public class wi {
 
     public static File a(String param0, boolean param1) {
         if (param1) {
-            return null;
+            return (File) null;
         }
         return wi.a(field_e, false, field_d, param0);
     }
@@ -68,10 +68,6 @@ public class wi {
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_b = false;
         field_c = new Hashtable(16);
     }

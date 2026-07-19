@@ -12,13 +12,12 @@ class kg extends rc {
 
     public static void e(byte param0) {
         field_m = null;
+        if (param0 < 54) {
+            field_m = (java.applet.Applet) null;
+        }
     }
 
     static {
-        $cfr$clinit();
-    }
-
-    private static void $cfr$clinit() {
         field_z = "kg.C(";
         field_n = -1;
         field_o = false;

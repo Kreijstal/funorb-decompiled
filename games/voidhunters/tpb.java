@@ -14,8 +14,8 @@ final class tpb {
         int stackOut_2_0 = 0;
         if (param0 < 61) {
           L0: {
-            ((tpb) this).a(33);
-            if (((tpb) this).field_b == null) {
+            this.a(33);
+            if (this.field_b == null) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -28,7 +28,7 @@ final class tpb {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (((tpb) this).field_b == null) {
+            if (this.field_b == null) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -43,12 +43,12 @@ final class tpb {
     }
 
     final void a(int param0) {
-        ((tpb) this).field_a = param0;
-        ((tpb) this).field_b = null;
+        this.field_a = param0;
+        this.field_b = null;
     }
 
     public tpb() {
-        ((tpb) this).a(2147483647);
+        this.a(2147483647);
     }
 
     static {
